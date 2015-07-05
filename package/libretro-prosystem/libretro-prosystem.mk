@@ -1,18 +1,18 @@
 ################################################################################
 #
-# PRBOOM
+# PROSYSTEM
 #
 ################################################################################
-LIBRETRO_PRBOOM_VERSION = db4e58d31601e2a3331435bd4ab21a2b83befa91
-LIBRETRO_PRBOOM_SITE = $(call github,libretro,libretro-prboom,$(LIBRETRO_PRBOOM_VERSION))
+LIBRETRO_PROSYSTEM_VERSION = d37def24de1a2d686f510977297bd5557507391c
+LIBRETRO_PROSYSTEM_SITE = $(call github,libretro,prosystem-libretro,$(LIBRETRO_PROSYSTEM_VERSION))
 
-define LIBRETRO_PRBOOM_BUILD_CMDS
+define LIBRETRO_PROSYSTEM_BUILD_CMDS
 	CFLAGS="$(TARGET_CFLAGS)" CXXFLAGS="$(TARGET_CXXFLAGS)" $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile platform="$(LIBRETRO_PLATFORM)"
 endef
 
-define LIBRETRO_PRBOOM_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/prboom_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/prboom_libretro.so
+define LIBRETRO_PROSYSTEM_INSTALL_TARGET_CMDS
+	$(INSTALL) -D $(@D)/prosystem_libretro.so \
+		$(TARGET_DIR)/usr/lib/libretro/prosystem_libretro.so
 endef
 
 $(eval $(generic-package))
