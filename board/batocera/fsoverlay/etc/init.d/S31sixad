@@ -1,0 +1,36 @@
+#!/bin/sh
+
+systemsetting="python /usr/lib/python2.7/site-packages/configgen/settings/recalboxSettings.pyc"
+
+case "$1" in
+  start)
+        enabled="`$systemsetting  -command load -key controllers.ps3.enabled`"
+        if [ "$enabled" == "1" ];then
+                settings_version="`$systemsetting -command load -key controllers.ps3.driver`"
+                [ "$settings_version" == "bluez" ] && exit 0
+                if [ "$settings_version" == "" ];then
+                        settings_version="official"
+                fi
+                #bluetoothd -u
+                #sleep 2
+                #killall bluetoothd
+                #echo "ok"
+                /usr/sixad/$settings_version/sixad-bin 0 0 0 &
+        fi
+        ;;
+  stop)
+	killall sixad-bin
+	killall sixad-sixaxis
+	;;
+  restart|reload)
+        "$0" stop
+        "$0" start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?
+
+

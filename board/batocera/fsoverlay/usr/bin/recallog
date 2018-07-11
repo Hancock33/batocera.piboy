@@ -1,0 +1,9 @@
+#!/bin/sh
+log="/recalbox/share/system/logs/recalbox.log"
+if [[ "$1" == "-e" ]];then
+  shift
+  echo "`logtime` : $@" >> $log
+  echo "$@"
+else
+  echo "`logtime` : $@" >> $log
+fi

@@ -1,0 +1,46 @@
+#!/bin/sh
+
+matchbox-window-manager -use_cursor no -use_titlebar no -use_desktop_mode no -use_lowlight no &
+
+# set the keyboard
+systemsetting="python /usr/lib/python2.7/site-packages/configgen/settings/recalboxSettings.pyc"
+settings_lang="`$systemsetting -command load -key system.language`"
+
+# not always true (en_US for us), but it's really better than always english
+map_name=$(echo $settings_lang | cut -c 1-2)
+setxkbmap "${map_name}"
+
+# disable dpms to prevent screen from blanking
+xset -dpms
+xset s off
+
+#
+export HOME=/recalbox/share/system
+export LC_ALL="${settings_lang}.UTF-8"
+export LANG=${LC_ALL}
+
+# because of xinerama braking es, enable only one screen at a time
+systemsetting="python /usr/lib/python2.7/site-packages/configgen/settings/recalboxSettings.pyc"
+settings_output="`$systemsetting -command load -key global.videooutput`"
+/recalbox/scripts/recalbox-config.sh setoutput "${settings_output}"
+
+#####################
+## CUSTOMISATIONS ###
+# to customize your display, you can copy this file to ~/.xinitrc and then modify it
+
+# rotate the screen
+# xrandr -o left
+# xrandr -o right
+# xrandr -o inverted
+
+# change the resolution
+# xrandr -s 640x480
+
+# change the resolution and the Hz
+# xrandr -s 640x480 -r 60
+
+#####################
+#####################
+
+# without windowed, time must be sleeped to wait that matchbox ended to initialize :-(
+exec emulationstation --windowed
