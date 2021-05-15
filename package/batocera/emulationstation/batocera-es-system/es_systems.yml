@@ -884,6 +884,21 @@ tyrquake:
   comment_fr: |
     Placez ici vos fichiers .PAK pour Quake 1.
 
+xrick:
+  name:       xrick
+  manufacturer: Ports
+  release:
+  hardware: port
+  extensions: [zip]
+  group: ports
+  emulators:
+    libretro:
+      xrick: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_XRICK] }
+  comment_en: |
+    Put the data.zip in this directory.
+  comment_fr: |
+    Placez ici vos fichiers data.zip pour xrick.
+
 mrboom:
   name:       MrBoom
   manufacturer: Ports
