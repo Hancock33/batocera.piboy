@@ -12,6 +12,16 @@ then
 	echo "${DT}"
     fi
     exit 0
+
+    BATT=$(cat /sys/kernel/xpi_gamecon/percent 2>/dev/null)
+    DT=$(date +%H:%M)
+    if test -n "${BATT}"
+    then
+	echo "Battery: ${BATT}% - ${DT}"
+    else
+	echo "${DT}"
+    fi
+    exit 0
 fi
 ###
 ### full version (not on login, otherwise you can't log when OpenGL/Vulkan are out of order)
@@ -52,6 +62,12 @@ echo "Disk format: ${INTERNALDEVICETYPE}"
 
 # battery
 BATT=$(cat /sys/class/power_supply/{BAT,bat}*/uevent 2>/dev/null | grep -E "^POWER_SUPPLY_CAPACITY=" | sed -e s+'^POWER_SUPPLY_CAPACITY='++ | sort -rn | head -1)
+if test -n "${BATT}"
+then
+    echo "Battery: ${BATT}%"
+fi
+
+BATT=$(cat /sys/kernel/xpi_gamecon/percent 2>/dev/null)
 if test -n "${BATT}"
 then
     echo "Battery: ${BATT}%"
