@@ -67,8 +67,6 @@ hdmi_drive=2
 
 # if you plug your tv at the same time as your rpi and that the rpi switches from the hdmi or give a low resolution because tv had no enough time to initialize it
 boot_delay=0
-initial_turbo=60
-force_eeprom_read=0
 
 # uncomment to enable composite output via 4 pole TRRS ("headphone") socket.
 # note: slightly slows down the entire system on Pi 4 models.
