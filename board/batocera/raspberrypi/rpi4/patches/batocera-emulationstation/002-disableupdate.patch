@@ -1,0 +1,21 @@
+diff -Naur batocera-emulationstation-8b27646e930c65a1514d39e8b1d27cb410e896d8.org/es-app/src/guis/GuiMenu.cpp batocera-emulationstation-8b27646e930c65a1514d39e8b1d27cb410e896d8/es-app/src/guis/GuiMenu.cpp
+--- batocera-emulationstation-8b27646e930c65a1514d39e8b1d27cb410e896d8.org/es-app/src/guis/GuiMenu.cpp	2021-05-17 06:51:05.000000000 +0100
++++ batocera-emulationstation-8b27646e930c65a1514d39e8b1d27cb410e896d8/es-app/src/guis/GuiMenu.cpp	2021-05-18 07:16:27.725494424 +0100
+@@ -1095,7 +1095,7 @@
+ 		});
+ 	}
+ 
+-	updateGui->addGroup(_("SOFTWARE UPDATES"));
++	/*updateGui->addGroup(_("SOFTWARE UPDATES"));
+ 
+ 	// Enable updates
+ 	auto updates_enabled = std::make_shared<SwitchComponent>(mWindow);
+@@ -1143,7 +1143,7 @@
+ 
+ 			mWindow->pushGui(new GuiUpdate(mWindow));
+ 		}
+-	});
++	});*/
+ 
+ 	mWindow->pushGui(updateGui);
+ }
