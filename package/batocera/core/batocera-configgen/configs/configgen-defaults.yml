@@ -295,6 +295,9 @@ psx:
 pygame:
   emulator: pygame
   core:     pygame
+reminiscence:
+  emulator: libretro
+  core:     reminiscence
 satellaview:
   emulator: libretro
   core:     snes9x
