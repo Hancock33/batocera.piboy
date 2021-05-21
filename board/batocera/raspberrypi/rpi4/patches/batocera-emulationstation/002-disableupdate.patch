@@ -1,6 +1,24 @@
-diff -Naur batocera-emulationstation-8b27646e930c65a1514d39e8b1d27cb410e896d8.org/es-app/src/guis/GuiMenu.cpp batocera-emulationstation-8b27646e930c65a1514d39e8b1d27cb410e896d8/es-app/src/guis/GuiMenu.cpp
---- batocera-emulationstation-8b27646e930c65a1514d39e8b1d27cb410e896d8.org/es-app/src/guis/GuiMenu.cpp	2021-05-17 06:51:05.000000000 +0100
-+++ batocera-emulationstation-8b27646e930c65a1514d39e8b1d27cb410e896d8/es-app/src/guis/GuiMenu.cpp	2021-05-18 07:16:27.725494424 +0100
+diff -ruN batocera-emulationstation-d19e2cfc9f40743bc134a5a6a7786fd7c41c6f85.orig/es-app/src/guis/GuiMenu.cpp batocera-emulationstation-d19e2cfc9f40743bc134a5a6a7786fd7c41c6f85/es-app/src/guis/GuiMenu.cpp
+--- batocera-emulationstation-d19e2cfc9f40743bc134a5a6a7786fd7c41c6f85.orig/es-app/src/guis/GuiMenu.cpp	2021-05-17 18:13:47.000000000 +0100
++++ batocera-emulationstation-d19e2cfc9f40743bc134a5a6a7786fd7c41c6f85/es-app/src/guis/GuiMenu.cpp	2021-05-21 22:48:00.791572427 +0100
+@@ -152,7 +152,7 @@
+ #endif
+ 
+ 		addEntry(_("SCRAPE").c_str(), true, [this] { openScraperSettings(); }, "iconScraper");		
+-		addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
++		addEntry(_("DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
+ 		addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings_batocera(); }, "iconSystem");
+ 	}
+ 	else
+@@ -1055,7 +1055,7 @@
+ 
+ void GuiMenu::openUpdatesSettings()
+ {
+-	GuiSettings *updateGui = new GuiSettings(mWindow, _("UPDATES & DOWNLOADS").c_str());
++	GuiSettings *updateGui = new GuiSettings(mWindow, _("DOWNLOADS").c_str());
+ 
+ 	updateGui->addGroup(_("DOWNLOADS"));
+ 
 @@ -1095,7 +1095,7 @@
  		});
  	}
