@@ -1,0 +1,11 @@
+config BR2_PACKAGE_LIBRETRO_ECWOLF
+	bool "libretro-ecwolf"
+	depends on BR2_PACKAGE_RETROARCH
+	depends on BR2_INSTALL_LIBSTDCPP
+	help	
+	  A libretro Wolfenstein 3D source port game engine.
+	  
+	  http://www.libretro.com
+
+comment "LIBRETRO_ECWOLF needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP
