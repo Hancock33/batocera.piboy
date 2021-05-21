@@ -927,6 +927,29 @@ xrick:
     Put the data.zip in this directory.
   comment_fr: |
     Placez ici vos fichiers data.zip pour xrick.
+    
+reminiscence:
+  name:       reminiscence
+  manufacturer: Ports
+  release:
+  hardware: port
+  extensions: [map,MAP]
+  group: ports
+  emulators:
+    libretro:
+      reminiscence: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_REMINISCENCE] }
+  comment_en: |
+    Copy your flashback game into thos folder
+    Allowed versions
+    - DOS Demo (disk)
+    - DOS Full version (disk)
+    - DOS Full version (CD)
+  comment_fr: |
+    Copiez votre jeu flashback ici
+    Versions reconnues
+    - DOS Demo (disquette)
+    - DOS Full version (disquette)
+    - DOS Full version (CD)
 
 mrboom:
   name:       MrBoom

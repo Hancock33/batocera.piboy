@@ -640,6 +640,9 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 	# Wolfenstein 3D
 	select BR2_PACKAGE_LIBRETRO_ECWOLF          # ALL
 
+	# Flashback
+	select BR2_PACKAGE_LIBRETRO_REMINISCENCE    # ALL
+	
 	help
 		Ports
 

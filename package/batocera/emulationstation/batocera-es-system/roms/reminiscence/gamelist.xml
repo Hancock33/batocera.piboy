@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./Level1.map</path>
+    <name>Flashback</name>
+    <desc>The year is 2142. The player takes control of Conrad B. Hart, a man who has lost his memory. After barely escaping from hostile aliens, Conrad's bike crashes on an unknown planet. Conrad finds himself in the jungle, and from that moment on his quest for survival and his lost identity begins.Flashback: The Quest for Identity incorporates elements of platforming, shooting, and problem-solving. The game can be described as a ''cinematic platformer'' (commonly referred to as  Prince of Persia-style), following a design philosophy that was also manifested in Delphine Software's previous work,  Another World. Compared to that game, Flashback focuses more on platforming and exploration of large levels.While a large bulk of the gameplay is dedicated to running, jumping, and shooting enemies, there is also a considerable exploration element in the game, as well as some puzzle-solving. The player navigates Conrad through platform structures, performing various moves. It is possible to simply jump or do a longer run-and-jump, run, climb, hang off ledges, and pick up objects lying on the ground. To defend himself, Conrad can shoot enemies with his gun and also use various objects (such as stones) to harm or distract them. Crouching and rolling are possible (and often essential) moves that can be executed during combat. The gun has unlimited ammunition; however, shields that Conrad uses to protect himself from attacks are depleted when he is hit, and can be recharged at special stations. Though most environments in the game are hostile, there are a few locations that are devoid of enemies. The player is usually required to talk to characters, gather information and compete tasks in an adventure-like fashion in these areas. Most of the versions utilize cutscenes with polygonal vector graphics. The CD versions replace those with pre-rendered 3D animations. The Sega CD version also features voice-overs.
+</desc>
+    <releasedate>19930101T000000</releasedate>
+    <developer>Delphine Software International</developer>
+    <publisher>Strategic Simulations</publisher>
+    <genre>Platform-Shooter-Platform / Shooter Scrolling-Shooter / Run and Gun</genre>
+    <players>1</players>
+    <image>./images/Flashback.png</image>
+    <video>./videos/Flashback.mp4</video>
+    <genreid>257</genreid>
+  </game>
+</gameList>
