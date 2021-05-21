@@ -635,6 +635,9 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 
 	# Rick Dangerous
 	select BR2_PACKAGE_LIBRETRO_XRICK           # ALL
+	
+	# Wolfenstein 3D
+	select BR2_PACKAGE_LIBRETRO_ECWOLF          # ALL
 
 	help
 		Ports
