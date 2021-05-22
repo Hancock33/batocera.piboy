@@ -3,9 +3,9 @@
 # XPI_GAMECON_RPI
 #
 ################################################################################
-# Commits on 13 Dec 2020
-XPI_GAMECON_RPI_VERSION = cc96ca5777c2a17b9b44c1bbc15f37cfbcdd465f
-XPI_GAMECON_RPI_SITE = $(call github,losernator,PiBoyControls,$(XPI_GAMECON_RPI_VERSION))
+# Commits on May 22, 20212020
+XPI_GAMECON_RPI_VERSION = 295e715561d2801c7b77e2ffedeabff88b05eedc
+XPI_GAMECON_RPI_SITE = $(call github,hancock33,piboycontrols,$(XPI_GAMECON_RPI_VERSION))
 XPI_GAMECON_RPI_DEPENDENCIES = linux
 XPI_GAMECON_LINUX_VER = $(shell dirname $(TARGET_DIR)/lib/modules/*/build)
 
