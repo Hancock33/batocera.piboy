@@ -164,10 +164,6 @@ dtparam=pwr_led_activelow=off
 dtparam=eth_led0=4
 dtparam=eth_led1=4
 
-##Auto detect HDMI
-[edid=*]
-enable_dpi_lcd=0
-
 # Overclock
 # https://www.raspberrypi.org/documentation/configuration/config-txt/memory.md
 #over_voltage=2
@@ -176,6 +172,10 @@ enable_dpi_lcd=0
 initial_turbo=60
 force_eeprom_read=0
 avoid_warnings=2
+
+##Auto detect HDMI
+[edid=*]
+enable_dpi_lcd=0
 
 [DPI]
 # Put any DPI required display code here
