@@ -35,11 +35,11 @@ try:
                 fanFile.close()
             elif cpuTemp >= 55:
                 fanFile = open("/sys/kernel/xpi_gamecon/fan", "w")
-                fanFile.write("75")
+                fanFile.write("90")
                 fanFile.close()
             else:
                 fanFile = open("/sys/kernel/xpi_gamecon/fan", "w")
-                fanFile.write("20")
+                fanFile.write("75")
                 fanFile.close()
         cpuTempOld = cpuTemp
         # Wait until next refresh
