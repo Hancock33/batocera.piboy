@@ -3,8 +3,8 @@
 # libretro-picodrive
 #
 ################################################################################
-# Version.: Commits on Apr 2, 2021
-LIBRETRO_PICODRIVE_VERSION = v1.98
+# Version.: Commits on Jun 03, 2021
+LIBRETRO_PICODRIVE_VERSION = a5a230e0d83807f82727cc7d3bb6ce37507606e6
 LIBRETRO_PICODRIVE_SITE = https://github.com/irixxxx/picodrive.git
 LIBRETRO_PICODRIVE_SITE_METHOD=git
 LIBRETRO_PICODRIVE_GIT_SUBMODULES=YES
@@ -37,4 +37,3 @@ define LIBRETRO_PICODRIVE_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
-

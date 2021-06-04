@@ -3,7 +3,7 @@
 # devilutionx
 #
 ################################################################################
-
+# Version.: Commits on Apr 13, 2021
 DEVILUTIONX_VERSION = 1.2.1
 DEVILUTIONX_SITE = $(call github,diasurgical,devilutionx,$(DEVILUTIONX_VERSION))
 DEVILUTIONX_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf libsodium
