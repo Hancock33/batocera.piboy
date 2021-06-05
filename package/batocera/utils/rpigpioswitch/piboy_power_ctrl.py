@@ -18,6 +18,8 @@ try:
         if abs(pwrctrl - pwrctrlOld) > hyst:
             if pwrctrl == 6:
                 os.system("shutdown -h now")
+            if pwrctrl == 134:
+                os.system("shutdown -h now")
 
         pwrctrlOld = pwrctrl
         # Wait until next refresh

@@ -1,6 +1,6 @@
-diff -ruN batocera-emulationstation-f333689ef0383b917dd7d3806940ce14f92e0828.orig/es-core/src/platform.cpp batocera-emulationstation-f333689ef0383b917dd7d3806940ce14f92e0828/es-core/src/platform.cpp
---- batocera-emulationstation-f333689ef0383b917dd7d3806940ce14f92e0828.orig/es-core/src/platform.cpp	2021-05-11 20:16:34.000000000 +0100
-+++ batocera-emulationstation-f333689ef0383b917dd7d3806940ce14f92e0828/es-core/src/platform.cpp	2021-05-15 14:36:06.223926542 +0100
+diff -Naur batocera-emulationstation-a63a5ed2abff3a58947a22c5f1f2d8f531f8cd07.orig/es-core/src/platform.cpp batocera-emulationstation-a63a5ed2abff3a58947a22c5f1f2d8f531f8cd07/es-core/src/platform.cpp
+--- batocera-emulationstation-a63a5ed2abff3a58947a22c5f1f2d8f531f8cd07.orig/es-core/src/platform.cpp	2021-06-04 19:33:36.000000000 +0100
++++ batocera-emulationstation-a63a5ed2abff3a58947a22c5f1f2d8f531f8cd07/es-core/src/platform.cpp	2021-06-06 00:19:13.385616574 +0100
 @@ -333,10 +333,10 @@
  	{
  		std::string batteryRootPath;
@@ -14,11 +14,13 @@ diff -ruN batocera-emulationstation-f333689ef0383b917dd7d3806940ce14f92e0828.ori
  			{
  				batteryRootPath = file;
  				break;
-@@ -348,7 +348,7 @@
+@@ -347,8 +347,8 @@
+ 			batteryStatusPath = ".";
  		else
  		{
- 			batteryStatusPath = batteryRootPath + "/status";
+-			batteryStatusPath = batteryRootPath + "/status";
 -			batteryCapacityPath = batteryRootPath + "/capacity";
++			batteryStatusPath = batteryRootPath + "/battery";
 +			batteryCapacityPath = batteryRootPath + "/percent";
  		}
  	}
@@ -28,7 +30,7 @@ diff -ruN batocera-emulationstation-f333689ef0383b917dd7d3806940ce14f92e0828.ori
  	{
  		ret.hasBattery = true;
 -		ret.isCharging = (Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "") != "Discharging");
-+		ret.isCharging = (Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "") == "198");
++		ret.isCharging = (Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "") > "3700");
  		ret.level = atoi(Utils::FileSystem::readAllText(batteryCapacityPath).c_str());
  	}
  
