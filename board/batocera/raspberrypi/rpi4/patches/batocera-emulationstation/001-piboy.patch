@@ -28,7 +28,7 @@ diff -ruN batocera-emulationstation-f333689ef0383b917dd7d3806940ce14f92e0828.ori
  	{
  		ret.hasBattery = true;
 -		ret.isCharging = (Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "") != "Discharging");
-+		ret.isCharging = (Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "") != "70");
++		ret.isCharging = (Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "") == "198");
  		ret.level = atoi(Utils::FileSystem::readAllText(batteryCapacityPath).c_str());
  	}
  
