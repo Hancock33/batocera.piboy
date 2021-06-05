@@ -3,8 +3,8 @@
 # cannonball
 #
 ################################################################################
-# Version.: Commits on Jun 24, 2020
-CANNONBALL_VERSION = b6aa525ddd552f96b43b3b3a6f69326a277206bd
+# Version.: Commits on Sep 07, 2020 (Build system changed after this commit)
+CANNONBALL_VERSION = a34bbf1fcfc5b5d40d4769a10f57da22683815d9
 CANNONBALL_SITE = $(call github,djyt,cannonball,$(CANNONBALL_VERSION))
 CANNONBALL_LICENSE = GPLv2
 CANNONBALL_DEPENDENCIES = sdl2 boost
@@ -12,13 +12,13 @@ CANNONBALL_DEPENDENCIES = sdl2 boost
 CANNONBALL_TARGET = sdl2gles
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
-        CANNONBALL_TARGET = sdl2gles_rpi
+    CANNONBALL_TARGET = sdl2gles_rpi
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI3),y)
-        CANNONBALL_TARGET = sdl2gles_rpi
+    CANNONBALL_TARGET = sdl2gles_rpi3
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86),y)
-        CANNONBALL_TARGET = sdl2gl
+    CANNONBALL_TARGET = sdl2gl
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64),y)
-        CANNONBALL_TARGET = sdl2gl
+    CANNONBALL_TARGET = sdl2gl
 endif
 
 # Build as release with proper target and paths
@@ -29,8 +29,8 @@ CANNONBALL_CONF_OPTS += -Droms_directory=/userdata/roms/cannonball/ -Dxml_direct
 # Cannonball cmake files are hopelessly broken.
 # Link libmali manually. Ideally we should fix cannonball to use pkg-config instead.
 ifeq ($(BR2_PACKAGE_HAS_LIBMALI),y)
-CANNONBALL_EXE_LINKER_FLAGS += -lmali
-CANNONBALL_SHARED_LINKER_FLAGS += -lmali
+    CANNONBALL_EXE_LINKER_FLAGS += -lmali
+    CANNONBALL_SHARED_LINKER_FLAGS += -lmali
 endif
 
 # Enabling LTO as hires mode tends to be slow, it does help video rendering loops
@@ -43,6 +43,7 @@ CANNONBALL_SUPPORTS_IN_SOURCE_BUILD = NO
 
 define CANNONBALL_SETUP_CMAKE
 	cp $(@D)/cmake/* $(@D)/
+	cp $(@D)/cmake/sdl2gles_rpi.cmake $(@D)/sdl2gles_rpi3.cmake
 	$(SED) "s+../res/config+\./res/config+g" $(@D)/CMakeLists.txt
 	$(SED) "s+../src/main+\./src/main+g" $(@D)/CMakeLists.txt
 	$(SED) "s+../res/tilemap.bin+\./res/tilemap.bin +g" $(@D)/CMakeLists.txt
@@ -52,15 +53,8 @@ define CANNONBALL_SETUP_CMAKE
         $(SED) "s+/usr+$(STAGING_DIR)/usr+g" $(@D)/sdl2gl.cmake
         $(SED) "s+/usr+$(STAGING_DIR)/usr+g" $(@D)/sdl2gles.cmake
         $(SED) "s+/usr+$(STAGING_DIR)/usr+g" $(@D)/sdl2gles_rpi.cmake
-
-	# Rpi4 64-bit compilation
-	$(SED) "s+-mfpu=neon-fp-armv8++g" $(@D)/sdl2gles_rpi.cmake
-	$(SED) "s+-mfloat-abi=hard++g" $(@D)/sdl2gles_rpi.cmake
-
-        #$(SED) "s+set(xml+#set(xml+g" $(@D)/sdl2.cmake
-        #$(SED) "s+set(xml+#set(xml+g" $(@D)/sdl2gl.cmake
-        #$(SED) "s+set(xml+#set(xml+g" $(@D)/sdl2gles.cmake
-        #$(SED) "s+set(xml+#set(xml+g" $(@D)/sdl2gles_rpi.cmake
+        $(SED) 's/-march=armv6 -mfpu=vfp -mfloat-abi=hard/-mtune=cortex-a72/g' $(@D)/sdl2gles_rpi.cmake
+        $(SED) 's/-march=armv6 -mfpu=vfp -mfloat-abi=hard/-mtune=cortex-a53/g' $(@D)/sdl2gles_rpi3.cmake
 endef
 
 CANNONBALL_PRE_CONFIGURE_HOOKS += CANNONBALL_SETUP_CMAKE
