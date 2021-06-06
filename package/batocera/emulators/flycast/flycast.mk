@@ -3,8 +3,8 @@
 # FLYCAST
 #
 ################################################################################
-# Version.: Commits on Jun 04, 2021
-FLYCAST_VERSION = 293761bdf53bc63d5da0b3268e1565276d2d3779
+# Version.: Commits on Jun 06, 2021
+FLYCAST_VERSION = c73bbc85bd80eca28af177fc8841b2bb373642ad
 FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 
 FLYCAST_DEPENDENCIES = sdl2 libpng libzip
