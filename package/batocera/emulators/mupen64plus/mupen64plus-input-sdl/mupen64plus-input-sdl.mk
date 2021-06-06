@@ -3,7 +3,7 @@
 # mupen64plus input sdl
 #
 ################################################################################
-# Version.: Commits on Apr 28, 2021
+# Version.: Commits on Apr 29, 2021
 MUPEN64PLUS_INPUT_SDL_VERSION = 4340d306b7dd3e8a45d00129bced5f43fda5933c
 MUPEN64PLUS_INPUT_SDL_SITE = $(call github,mupen64plus,mupen64plus-input-sdl,$(MUPEN64PLUS_INPUT_SDL_VERSION))
 MUPEN64PLUS_INPUT_SDL_LICENSE = GPLv2
