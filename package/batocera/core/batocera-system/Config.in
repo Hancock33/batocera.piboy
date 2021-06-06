@@ -642,9 +642,6 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 
 	# Commander Genius (Commander Keen series)
 	#select BR2_PACKAGE_CGENIUS                 # ALL
-
-	# Rick Dangerous
-	select BR2_PACKAGE_LIBRETRO_OPENLARA        # if BR2_PACKAGE_BATOCERA_TARGET_X86_64 || BR2_PACKAGE_BATOCERA_TARGET_RPI4 
 	
 	# Rick Dangerous
 	select BR2_PACKAGE_LIBRETRO_XRICK           # ALL
