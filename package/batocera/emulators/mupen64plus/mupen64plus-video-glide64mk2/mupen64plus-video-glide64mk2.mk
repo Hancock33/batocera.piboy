@@ -3,7 +3,7 @@
 # mupen64plus video video-glide64mk2
 #
 ################################################################################
-# Version.: Commits on Dec 16, 2020
+# Version.: Commits on Dec 15, 2020
 MUPEN64PLUS_VIDEO_GLIDE64MK2_VERSION = f0c92d93a29633ca7d9bcbb93a79baaca1f3f353
 MUPEN64PLUS_VIDEO_GLIDE64MK2_SITE = $(call github,mupen64plus,mupen64plus-video-glide64mk2,$(MUPEN64PLUS_VIDEO_GLIDE64MK2_VERSION))
 MUPEN64PLUS_VIDEO_GLIDE64MK2_LICENSE = GPLv2
