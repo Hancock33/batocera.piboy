@@ -127,7 +127,9 @@ initramfs boot/initrd.gz
 # Additional overlays and parameters are documented /boot/overlays/README
 
 # Enable audio (loads snd_bcm2835)
-#dtparam=audio=on
+dtparam=audio=on
+audio_pwm_mode=2
+dtoverlay=audremap,pins_18_19
 
 [rpi3]
 # Enable DRM VC4 V3D driver on top of the dispmanx display stack
@@ -150,7 +152,7 @@ dtoverlay=audremap,pins_18_19
 dpi_group=2
 dpi_mode=87
 dpi_output_format=0x070016 
-dpi_timings=640 1 44 2 42 480 1 19 2 17 0 0 0 60 0 24000000 1
+dpi_timings=640 1 44 2 42 480 1 19 2 17 0 0 0 85 0 32000000 1
 enable_dpi_lcd=1
 
 ##Disable ACT LED
