@@ -183,8 +183,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 
 	# vulkan
 	select BR2_PACKAGE_BATOCERA_VULKAN      if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     || \
-                                                BR2_PACKAGE_BATOCERA_TARGET_RPI4        || \
-                                                BR2_PACKAGE_BATOCERA_TARGET_ODROIDGOA
+                                                BR2_PACKAGE_BATOCERA_TARGET_RPI4
 
 	# wireless drivers
 	select BR2_PACKAGE_RTL8821AU            if  !BR2_PACKAGE_BATOCERA_TARGET_RPI1           && \
@@ -203,7 +202,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                 !BR2_PACKAGE_BATOCERA_TARGET_RPI2               && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_RPI3               && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_S812               && \
-                                                !BR2_PACKAGE_BATOCERA_TARGET_ODROIDGOA          && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_TRITIUM_H5       && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_ZERO2     && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_PC        && \
@@ -219,7 +217,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 						!BR2_PACKAGE_BATOCERA_TARGET_RPI2		&& \
 						!BR2_PACKAGE_BATOCERA_TARGET_RPI3		&& \
 						!BR2_PACKAGE_BATOCERA_TARGET_S812		&& \
-						!BR2_PACKAGE_BATOCERA_TARGET_ODROIDGOA		&& \
 						!BR2_PACKAGE_BATOCERA_TARGET_TRITIUM_H5	&& \
 						!BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_ZERO2	&& \
 						!BR2_PACKAGE_BATOCERA_TARGET_MIQI		&& \
@@ -286,6 +283,7 @@ config BR2_PACKAGE_BATOCERA_DEBUG
 	select BR2_PACKAGE_GDB
 	select BR2_PACKAGE_GDB_DEBUGGER
 	select BR2_PACKAGE_LINUX_TOOLS_PERF
+	select BR2_PACKAGE_LINUX_TOOLS_PERF_TUI
 	select BR2_PACKAGE_VULKAN_SAMPLES       if BR2_PACKAGE_BATOCERA_VULKAN
 
 	help
@@ -473,10 +471,10 @@ config BR2_PACKAGE_BATOCERA_HOMEBREW_SYSTEMS
 	select BR2_PACKAGE_OPENBOR6510	# ALL
 
 	# Lutro Engine / LÖVE
-	select BR2_PACKAGE_LIBRETRO_LUTRO   # ALL
+	select BR2_PACKAGE_LIBRETRO_LUTRO   if !BR2_PACKAGE_BATOCERA_TARGET_CHA
 
 	# PyGAME
-	select BR2_PACKAGE_BATOCERA_PYGAME
+	select BR2_PACKAGE_BATOCERA_PYGAME if !BR2_PACKAGE_BATOCERA_TARGET_CHA
 
 	# RPG engine : Solarus
 	select BR2_PACKAGE_LUAJIT           if !BR2_aarch64 # for performance
@@ -548,8 +546,8 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
 
 	# GBA
 	select BR2_PACKAGE_LIBRETRO_MGBA            # ALL
-	select BR2_PACKAGE_LIBRETRO_VBA_M           # ALL
-	select BR2_PACKAGE_LIBRETRO_GPSP            if BR2_PACKAGE_BATOCERA_TARGET_RPI1 # for slow machines
+	select BR2_PACKAGE_LIBRETRO_VBA_M           if !BR2_PACKAGE_BATOCERA_TARGET_CHA
+	select BR2_PACKAGE_LIBRETRO_GPSP            if BR2_PACKAGE_BATOCERA_TARGET_RPI1 || BR2_PACKAGE_BATOCERA_TARGET_CHA # for slow machines
 
 	# NDS
 	select BR2_PACKAGE_LIBRETRO_DESMUME         if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
@@ -612,7 +610,7 @@ config BR2_PACKAGE_BATOCERA_MSDOS_SYSTEMS
 
 	select BR2_PACKAGE_DOSBOX_STAGING           if  !BR2_PACKAGE_BATOCERA_TARGET_CHA
 
-	select BR2_PACKAGE_LIBRETRO_DOSBOX_PURE     if  !BR2_PACKAGE_BATOCERA_TARGET_CHA
+	select BR2_PACKAGE_LIBRETRO_DOSBOX_PURE     # ALL
 
 	help
 		MS/DOS cores/emulators
