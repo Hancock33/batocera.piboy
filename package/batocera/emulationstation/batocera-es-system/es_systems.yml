@@ -934,7 +934,7 @@ reminiscence:
     - DOS Full version (CD)
 
 2048:
-  name:       2048
+  name:       twentyfourtyeight
   manufacturer: Ports
   release:
   hardware: port
