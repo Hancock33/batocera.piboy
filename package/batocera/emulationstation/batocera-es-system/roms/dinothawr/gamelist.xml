@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./dinothawr/dinothawr.game</path>
+    <name>Dinothawr</name>
+    <desc>Dinothawr is a block pushing puzzle game on slippery surfaces. Our hero is a dinosaur whose friends are trapped in ice. Through puzzles it is your task to free the dinos from their ice prison.</desc>
+    <rating>0.6</rating>
+    <releasedate>20130901T000000</releasedate>
+    <developer>Agnes Heyer &amp; Hans-Kristian Arntzen</developer>
+    <publisher>Libretro</publisher>
+    <genre>Puzzle-Game-Puzzle-Game / Glide</genre>
+    <players>1</players>
+    <hash>DBABB733</hash>
+    <image>./images/dinothawr/dinothawr.png</image>
+    <genreid>2816</genreid>
+  </game>
+</gameList>

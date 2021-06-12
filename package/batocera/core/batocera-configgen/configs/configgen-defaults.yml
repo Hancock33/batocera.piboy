@@ -11,7 +11,9 @@ default:
     forceNoBezel:   false
 
 # 0-C
-
+2048:
+   emulator: libretro
+   core:     2048
 3do:
   emulator: libretro
   core:     opera
@@ -69,7 +71,7 @@ c20:
   emulator: libretro
   core:     vice_xvic
 cannonball:
-  emulator: cannonball
+  emulator: libretro
   core:     cannonball
 cavestory:
   emulator: libretro
@@ -80,6 +82,9 @@ channelf:
 colecovision:
   emulator: libretro
   core:     bluemsx
+craft:
+   emulator: libretro
+   core:     craft
 
 # D-L
 
@@ -89,6 +94,9 @@ daphne:
 devilutionx:
   emulator: devilutionx
   core:     devilutionx
+dinothawr:
+   emulator: libretro
+   core:     dinothawr
 dos:
   emulator: libretro
   core:     dosbox_pure

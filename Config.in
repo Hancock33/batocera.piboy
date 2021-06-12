@@ -185,6 +185,10 @@ menu "Emulators"
       source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-watara/Config.in"
       source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-genesisplusgx-wide/Config.in"
       source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-swanstation/Config.in"
+	  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-2048/Config.in"
+	  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-cannonball/Config.in"
+	  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-craft/Config.in"
+	  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-dinothawr/Config.in"
      endmenu
   endmenu
 
