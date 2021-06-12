@@ -620,7 +620,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 
 	# Cannonball (OutRun)
 	select BR2_PACKAGE_CANNONBALL               # ALL
-
+	select BR2_PACKAGE_LIBRETRO_CANNONBALL		# ALL
 	# PrBoom (Doom)
 	select BR2_PACKAGE_LIBRETRO_PRBOOM          if  !BR2_PACKAGE_BATOCERA_TARGET_CHA
 
@@ -650,6 +650,13 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 
 	# Flashback
 	select BR2_PACKAGE_LIBRETRO_REMINISCENCE    # ALL
+	
+	select BR2_PACKAGE_LIBRETRO_DINOTHAWR       # ALL
+	select BR2_PACKAGE_LIBRETRO_2048            # ALL
+	select BR2_PACKAGE_LIBRETRO_CRAFT           if  !BR2_PACKAGE_BATOCERA_TARGET_ODROIDGOA	&& \
+                                                    !BR2_PACKAGE_BATOCERA_TARGET_RPI1		&& \
+                                                    !BR2_PACKAGE_BATOCERA_TARGET_RPI2		&& \
+                                                    !BR2_PACKAGE_BATOCERA_TARGET_CHA		
 
 	help
 		Ports
