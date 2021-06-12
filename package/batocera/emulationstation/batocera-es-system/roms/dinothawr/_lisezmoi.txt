@@ -1,6 +1,0 @@
-## RECALBOX - SYSTEM DINOTHAWR ##
-
-Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
-
-Consultez la documentation à cette adresse :
-https://recalbox.gitbook.io/documentation/v/francais/emulateurs/ports/dynothawr
