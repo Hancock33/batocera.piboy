@@ -1,0 +1,11 @@
+config BR2_PACKAGE_LIBRETRO_CANNONBALL
+	bool "libretro-cannonball"
+	depends on BR2_PACKAGE_RETROARCH
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  Cannonball: An Enhanced OutRun Engine.
+
+	  http://www.libretro.com
+
+comment "LIBRETRO_CANNONBALL needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP
