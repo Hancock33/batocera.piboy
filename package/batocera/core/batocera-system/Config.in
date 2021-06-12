@@ -656,6 +656,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 	select BR2_PACKAGE_LIBRETRO_CRAFT           if  !BR2_PACKAGE_BATOCERA_TARGET_ODROIDGOA	&& \
                                                     !BR2_PACKAGE_BATOCERA_TARGET_RPI1		&& \
                                                     !BR2_PACKAGE_BATOCERA_TARGET_RPI2		&& \
+                                                    !BR2_PACKAGE_BATOCERA_TARGET_RPI3		&& \
                                                     !BR2_PACKAGE_BATOCERA_TARGET_CHA		
 
 	help
