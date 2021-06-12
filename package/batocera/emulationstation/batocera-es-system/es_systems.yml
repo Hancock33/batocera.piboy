@@ -933,16 +933,16 @@ reminiscence:
     - DOS Full version (disquette)
     - DOS Full version (CD)
 
-2048:
+twentyfourtyeight:
   name:       twentyfourtyeight
   manufacturer: Ports
   release:
   hardware: port
   extensions: [game]
-   group: ports
+  group: ports
   emulators:
     libretro:
-      2048: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_2048] }
+      twentyfourtyeight: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_2048] }
   comment_en: |
     This system is the first standalone libretro game. No rom required.
   comment_fr: |
@@ -954,7 +954,7 @@ dinothawr:
   release:
   hardware: port
   extensions: [game]
-   group: ports
+  group: ports
   emulators:
     libretro:
       dinothawr: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DINOTHAWR] }
@@ -962,14 +962,14 @@ dinothawr:
     This system is a port of 2048. No rom required.
   comment_fr: |
     Ce système est un port de 2048. Aucune rom n'est requise.
-    
+
 craft:
   name:       craft
   manufacturer: Ports
   release:
   hardware: port
   extensions: [game]
-   group: ports
+  group: ports
   emulators:
     libretro:
       craft: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CRAFT] }
@@ -977,7 +977,7 @@ craft:
     This system is a port of a Minecraft clone. No rom required.
   comment_fr: |
     Ce système est un port d'un clone de Minecraft. Aucune rom n'est requise.
-    
+
 mrboom:
   name:       MrBoom
   manufacturer: Ports
