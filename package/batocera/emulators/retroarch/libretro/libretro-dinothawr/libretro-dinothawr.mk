@@ -17,8 +17,8 @@ endef
 define LIBRETRO_DINOTHAWR_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/dinothawr_libretro.so \
 		$(TARGET_DIR)/usr/lib/libretro/dinothawr_libretro.so
-	mkdir -p $(TARGET_DIR)/recalbox/share_init/roms/ports/Dinothawr/dinothawr
-	cp -R $(@D)/dinothawr/* $(TARGET_DIR)/recalbox/share_init/roms/ports/Dinothawr/dinothawr
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/dinothawr
+	cp -R $(@D)/dinothawr/* $(TARGET_DIR)/usr/share/batocera/datainit/roms/dinothawr/dinothawr
 endef
 
 $(eval $(generic-package))
