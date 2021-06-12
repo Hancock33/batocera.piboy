@@ -42,8 +42,8 @@ CANNONBALL_CONF_OPTS += -DCMAKE_CXX_FLAGS=-flto -DCMAKE_EXE_LINKER_FLAGS="$(CANN
 CANNONBALL_SUPPORTS_IN_SOURCE_BUILD = NO
 
 define CANNONBALL_SETUP_CMAKE
+	cp $(@D)/cmake/sdl2gles_rpi.cmake $(@D)/cmake/sdl2gles_rpi3.cmake
 	cp $(@D)/cmake/* $(@D)/
-	cp $(@D)/cmake/sdl2gles_rpi.cmake $(@D)/sdl2gles_rpi3.cmake
 	$(SED) "s+../res/config+\./res/config+g" $(@D)/CMakeLists.txt
 	$(SED) "s+../src/main+\./src/main+g" $(@D)/CMakeLists.txt
 	$(SED) "s+../res/tilemap.bin+\./res/tilemap.bin +g" $(@D)/CMakeLists.txt
@@ -53,6 +53,7 @@ define CANNONBALL_SETUP_CMAKE
         $(SED) "s+/usr+$(STAGING_DIR)/usr+g" $(@D)/sdl2gl.cmake
         $(SED) "s+/usr+$(STAGING_DIR)/usr+g" $(@D)/sdl2gles.cmake
         $(SED) "s+/usr+$(STAGING_DIR)/usr+g" $(@D)/sdl2gles_rpi.cmake
+        $(SED) "s+/usr+$(STAGING_DIR)/usr+g" $(@D)/sdl2gles_rpi3.cmake
         $(SED) 's/-march=armv6 -mfpu=vfp -mfloat-abi=hard/-mtune=cortex-a72/g' $(@D)/sdl2gles_rpi.cmake
         $(SED) 's/-march=armv6 -mfpu=vfp -mfloat-abi=hard/-mtune=cortex-a53/g' $(@D)/sdl2gles_rpi3.cmake
 endef
