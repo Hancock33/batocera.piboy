@@ -1,0 +1,41 @@
+diff -Naur xrick-libretro-f281911d5b5f99770b7fc1f2aee7dff29a9754c1.orig/Makefile.libretro xrick-libretro-f281911d5b5f99770b7fc1f2aee7dff29a9754c1/Makefile.libretro
+--- xrick-libretro-f281911d5b5f99770b7fc1f2aee7dff29a9754c1.orig/Makefile.libretro	2021-05-12 15:54:04.000000000 +0100
++++ xrick-libretro-f281911d5b5f99770b7fc1f2aee7dff29a9754c1/Makefile.libretro	2021-06-13 00:48:52.725720797 +0100
+@@ -48,6 +48,15 @@
+       SHARED := -shared -Wl,--version-script=$(CORE_DIR)/libretro/core/link.T -Wl,--no-undefined
+    endif
+ 
++# Raspberry Pi 4 (64-bit)
++else ifeq ($(platform), rpi4_64)
++	ARCH = arm
++	TARGET := $(TARGET_NAME)_libretro.so
++	fpic := -fPIC
++	SHARED := -shared -Wl,-version-script=$(CORE_DIR)/libretro/core/link.T -Wl,-no-undefined
++	CFLAGS = -mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math -DARM
++    LDFLAGS += -lz
++
+ # Classic Platforms ####################
+ # Platform affix = classic_<ISA>_<µARCH>
+ # Help at https://modmyclassic.com/comp
+@@ -417,12 +426,6 @@
+ fpic=
+ endif
+ 
+-ifeq ($(DEBUG), 1)
+-   CFLAGS += -O0 -g
+-else
+-   CFLAGS += -O2 -DNDEBUG
+-endif
+-
+ ifneq (,$(findstring msvc,$(platform)))
+ ifeq ($(DEBUG),1)
+    CFLAGS += -MTd
+@@ -432,7 +435,7 @@
+ endif
+ 
+ ifeq ($(WANT_ZLIB), 1)
+-CFLAGS += -DWANT_ZLIB
++CFLAGS += -DWANT_ZLIB -Wdiscarded-qualifiers
+ endif
+ 
+ ifeq (,$(findstring msvc,$(platform)))
