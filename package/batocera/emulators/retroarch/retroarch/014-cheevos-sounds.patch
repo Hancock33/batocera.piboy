@@ -1,7 +1,8 @@
-diff -Naur RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d.orig/configuration.c RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d/configuration.c
---- RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d.orig/configuration.c	2021-06-13 02:07:51.000000000 +0100
-+++ RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d/configuration.c	2021-06-13 07:50:18.729265023 +0100
-@@ -1264,6 +1264,7 @@
+diff --git a/configuration.c b/configuration.c
+index 6850178..d5bb787 100644
+--- a/configuration.c
++++ b/configuration.c
+@@ -1264,6 +1264,7 @@ static struct config_array_setting *populate_settings_array(settings_t *settings
  #ifdef HAVE_CHEEVOS
     SETTING_ARRAY("cheevos_username",         settings->arrays.cheevos_username, false, NULL, true);
     SETTING_ARRAY("cheevos_password",         settings->arrays.cheevos_password, false, NULL, true);
@@ -9,7 +10,7 @@ diff -Naur RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d.orig/configuration
     SETTING_ARRAY("cheevos_token",            settings->arrays.cheevos_token, false, NULL, true);
     SETTING_ARRAY("cheevos_leaderboards_enable", settings->arrays.cheevos_leaderboards_enable, true, "false", true);
  #endif
-@@ -2431,6 +2432,7 @@
+@@ -2431,6 +2432,7 @@ void config_set_defaults(void *data)
  #ifdef HAVE_CHEEVOS
     *settings->arrays.cheevos_username                 = '\0';
     *settings->arrays.cheevos_password                 = '\0';
@@ -17,112 +18,11 @@ diff -Naur RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d.orig/configuration
     *settings->arrays.cheevos_token                    = '\0';
  #endif
  
-@@ -3007,7 +3009,7 @@
- }
- 
- #ifdef RARCH_CONSOLE
--static void video_driver_load_settings(global_t *global, 
-+static void video_driver_load_settings(global_t *global,
-       config_file_t *conf)
- {
-    bool               tmp_bool = false;
-@@ -3176,10 +3178,10 @@
-       size_t tmp = 0;
-       if (config_get_size_t(conf, size_settings[i].ident, &tmp))
-          *size_settings[i].ptr = tmp ;
--      /* Special case for rewind_buffer_size - need to convert 
-+      /* Special case for rewind_buffer_size - need to convert
-        * low values to what they were
-        * intended to be based on the default value in config.def.h
--       * If the value is less than 10000 then multiple by 1MB because if 
-+       * If the value is less than 10000 then multiple by 1MB because if
-        * the retroarch.cfg
-        * file contains rewind_buffer_size = "100",
-        * then that ultimately gets interpreted as
-@@ -3383,7 +3385,7 @@
-          *settings->paths.directory_screenshot = '\0';
-       }
-    }
--   
-+
- #if defined(__APPLE__) && defined(OSX)
- #if defined(__aarch64__)
-    /* Wrong architecture, set it back to arm64 */
-@@ -3629,7 +3631,7 @@
-    fill_pathname_application_special(config_directory, sizeof(config_directory),
-          APPLICATION_SPECIAL_DIRECTORY_CONFIG);
- 
--   /* Concatenate strings into full paths for core_path, game_path, 
-+   /* Concatenate strings into full paths for core_path, game_path,
-     * content_path */
-    fill_pathname_join_special_ext(game_path,
-          config_directory, core_name,
-@@ -3677,7 +3679,7 @@
-       {
-          RARCH_LOG("[Overrides]: Content dir-specific overrides stacking on top of previous overrides.\n");
-          snprintf(temp_path, sizeof(temp_path),
--               "%s|%s", 
-+               "%s|%s",
-                path_get(RARCH_PATH_CONFIG_APPEND),
-                content_path
-                );
-@@ -3709,7 +3711,7 @@
-       {
-          RARCH_LOG("[Overrides]: Game-specific overrides stacking on top of previous overrides.\n");
-          snprintf(temp_path, sizeof(temp_path),
--               "%s|%s", 
-+               "%s|%s",
-                path_get(RARCH_PATH_CONFIG_APPEND),
-                game_path
-                );
-@@ -3968,7 +3970,7 @@
-  * @user              : Controller number to save
-  * Writes a controller autoconf file to disk.
-  **/
--bool config_save_autoconf_profile(const 
-+bool config_save_autoconf_profile(const
-       char *device_name, unsigned user)
- {
-    static const char* invalid_filename_chars[] = {
-@@ -4365,7 +4367,7 @@
- 
-    settings            = (settings_t*)calloc(1, sizeof(settings_t));
- 
--   config_directory[0] = override_directory[0] = core_path[0] = 
-+   config_directory[0] = override_directory[0] = core_path[0] =
-           game_path[0] = '\0';
- 
-    fill_pathname_application_special(config_directory, sizeof(config_directory),
-@@ -4631,14 +4633,14 @@
-       for (j = 0; j < RARCH_FIRST_CUSTOM_BIND + 8; j++)
-       {
-          const char *key_string = key_strings[j];
--         
-+
-          if (j < RARCH_FIRST_CUSTOM_BIND)
-          {
-             int btn_remap = -1;
-             int key_remap = -1;
-             char btn_ident[128];
-             char key_ident[128];
--                           
-+
-             btn_ident[0] = key_ident[0] = '\0';
- 
-             fill_pathname_join_delim(btn_ident, s1,
-@@ -4735,7 +4737,7 @@
- 
-    remap_file[0]                     = '\0';
- 
--   fill_pathname_join_concat(remap_file, dir_input_remapping, path, 
-+   fill_pathname_join_concat(remap_file, dir_input_remapping, path,
-          FILE_PATH_REMAP_EXTENSION,
-          sizeof(remap_file));
- 
-diff -Naur RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d.orig/configuration.h RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d/configuration.h
---- RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d.orig/configuration.h	2021-06-13 02:07:51.000000000 +0100
-+++ RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d/configuration.h	2021-06-13 07:50:18.729265023 +0100
-@@ -365,6 +365,7 @@
+diff --git a/configuration.h b/configuration.h
+index 81a2f3c..cd2d698 100644
+--- a/configuration.h
++++ b/configuration.h
+@@ -365,6 +365,7 @@ typedef struct settings
        char menu_driver[32];
        char cheevos_username[32];
        char cheevos_password[256];
@@ -130,10 +30,11 @@ diff -Naur RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d.orig/configuration
        char cheevos_token[32];
        char cheevos_leaderboards_enable[32];
        char video_context_driver[32];
-diff -Naur RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d.orig/retroarch.c RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d/retroarch.c
---- RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d.orig/retroarch.c	2021-06-13 02:07:51.000000000 +0100
-+++ RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d/retroarch.c	2021-06-13 07:58:39.020142671 +0100
-@@ -29226,8 +29226,8 @@
+diff --git a/retroarch.c b/retroarch.c
+index 4e643c2..d8b0fa8 100644
+--- a/retroarch.c
++++ b/retroarch.c
+@@ -29226,8 +29226,8 @@ static void audio_driver_load_menu_bgm_callback(retro_task_t *task,
  
  void audio_driver_load_system_sounds(void)
  {
@@ -144,7 +45,7 @@ diff -Naur RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d.orig/retroarch.c R
     char basename_noext[PATH_MAX_LENGTH];
     struct rarch_state *p_rarch           = &rarch_st;
     settings_t *settings                  = p_rarch->configuration_settings;
-@@ -29250,20 +29250,6 @@
+@@ -29250,20 +29250,6 @@ void audio_driver_load_system_sounds(void)
     if (!audio_enable_menu && !audio_enable_cheevo_unlock)
        goto end;
  
@@ -165,14 +66,13 @@ diff -Naur RetroArch-6738fa57aad810bc43ebcb4966e00bb37f48609d.orig/retroarch.c R
     list          = dir_list_new(sounds_path, MENU_SOUND_FORMATS, false, false, false, false);
     list_fallback = dir_list_new(sounds_fallback_path, MENU_SOUND_FORMATS, false, false, false, false);
  
-@@ -29306,8 +29292,14 @@
+@@ -29306,8 +29292,13 @@ void audio_driver_load_system_sounds(void)
              path_notice = path;
           else if (string_is_equal_noncase(basename_noext, "bgm"))
              path_bgm = path;
 -         else if (string_is_equal_noncase(basename_noext, "unlock"))
 -            path_cheevo_unlock = path;
-+         else
-+	      if(string_is_empty(settings->arrays.cheevos_unlock_sound)) {
++         else if(string_is_empty(settings->arrays.cheevos_unlock_sound)) {
 +	         if (string_is_equal_noncase(basename_noext, "unlock"))
 +	            path_cheevo_unlock = path;
 +	         } else {
