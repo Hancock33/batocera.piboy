@@ -3,14 +3,14 @@
 # XEMU
 #
 ################################################################################
-
-# Daily build
-XEMU_VERSION = build-202105250704
+# Version.: Commits on Jun 17, 2021
+XEMU_VERSION = a7f3f8f21221174efb65fdc0b8f7e2dd234c7412
 XEMU_SITE = https://github.com/mborgerson/xemu.git
+
+XEMU_DEPENDENCIES = sdl2
 XEMU_SITE_METHOD=git
 XEMU_GIT_SUBMODULES=YES
 XEMU_LICENSE = GPLv2
-XEMU_DEPENDENCIES = sdl2
 
 XEMU_EXTRA_DOWNLOADS = https://github.com/mborgerson/xemu-hdd-image/releases/download/1.0/xbox_hdd.qcow2.zip
 
