@@ -4,3 +4,9 @@ nds:
 psp:
   options:
     frameskip: automatic
+gamecube:
+  emulator: libretro
+  core:     dolphin
+wii:
+  emulator: libretro
+  core:     dolphin
