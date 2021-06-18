@@ -191,6 +191,7 @@ menu "Emulators"
 	  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-cannonball/Config.in"
 	  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-craft/Config.in"
 	  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-dinothawr/Config.in"
+	  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-dolphin/Config.in"
      endmenu
   endmenu
 
