@@ -209,6 +209,7 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI3),y)
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
+	RETROARCH_CONF_OPTS += --enable-opengles3 --enable-opengles3_1
 	LIBRETRO_PLATFORM += rpi4
 endif
 
