@@ -3,8 +3,8 @@
 # tic80 - TIC-80 emulator
 #
 ################################################################################
-# Version.: Commits on Jun 17, 2021
-LIBRETRO_TIC80_VERSION = d81ba5b26bf83c91a6a33e08f1b1f0fdcd36eb34
+# Version.: Commits on Jun 18, 2021
+LIBRETRO_TIC80_VERSION = da18f30f18d6653457f31323158aa1ae41af1e73
 #LIBRETRO_TIC80_SITE = https://github.com/nesbox/TIC-80.git
 #LIBRETRO_TIC80_SITE_METHOD=git
 #LIBRETRO_TIC80_GIT_SUBMODULES=YES
