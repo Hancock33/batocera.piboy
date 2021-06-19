@@ -934,7 +934,7 @@ reminiscence:
     - DOS Full version (CD)
 
 twentyfourtyeight:
-  name:       twentyfourtyeight
+  name:       '2048'
   manufacturer: Ports
   release:
   hardware: port
@@ -942,7 +942,7 @@ twentyfourtyeight:
   group: ports
   emulators:
     libretro:
-      twentyfourtyeight: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_2048] }
+      '2048': { requireAnyOf: [BR2_PACKAGE_LIBRETRO_2048] }
   comment_en: |
     This system is a standalone libretro game. No rom required.
   comment_fr: |
