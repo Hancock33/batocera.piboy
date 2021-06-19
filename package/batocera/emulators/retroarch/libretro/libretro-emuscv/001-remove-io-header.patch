@@ -1,7 +1,6 @@
-diff --git a/src/common.h b/src/common.h
-index 7bf6441..2717ee3 100755
---- a/src/common.h
-+++ b/src/common.h
+diff -Naur libretro-emuscv-eb14596d4f3cefef9ed178cf4eea7aca992e18a6.orig/src/common.h libretro-emuscv-eb14596d4f3cefef9ed178cf4eea7aca992e18a6/src/common.h
+--- libretro-emuscv-eb14596d4f3cefef9ed178cf4eea7aca992e18a6.orig/src/common.h	2021-04-23 17:03:26.000000000 +0100
++++ libretro-emuscv-eb14596d4f3cefef9ed178cf4eea7aca992e18a6/src/common.h	2021-06-19 15:26:58.261754551 +0100
 @@ -122,7 +122,7 @@
  #elif defined(_OSX)
      #include <sys/uio.h>
@@ -11,16 +10,15 @@ index 7bf6441..2717ee3 100755
  #endif
  #ifdef _MSC_VER
  	#include <typeinfo.h>
-diff --git a/src/vm/debugger.cpp b/src/vm/debugger.cpp
-index 222cee5..453529d 100755
---- a/src/vm/debugger.cpp
-+++ b/src/vm/debugger.cpp
+diff -Naur libretro-emuscv-eb14596d4f3cefef9ed178cf4eea7aca992e18a6.orig/src/vm/debugger.cpp libretro-emuscv-eb14596d4f3cefef9ed178cf4eea7aca992e18a6/src/vm/debugger.cpp
+--- libretro-emuscv-eb14596d4f3cefef9ed178cf4eea7aca992e18a6.orig/src/vm/debugger.cpp	2021-04-23 17:03:26.000000000 +0100
++++ libretro-emuscv-eb14596d4f3cefef9ed178cf4eea7aca992e18a6/src/vm/debugger.cpp	2021-06-19 15:27:41.926132579 +0100
 @@ -13,7 +13,7 @@
  #elif defined(_OSX)
      #include <sys/uio.h>
  #else
 -    #include <sys/io.h>
-+    //#include <sys/io.h>
++//    #include <sys/io.h>
  #endif
  #include <fcntl.h>
  
