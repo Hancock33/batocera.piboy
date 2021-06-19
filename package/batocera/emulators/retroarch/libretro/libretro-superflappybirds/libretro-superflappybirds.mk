@@ -9,15 +9,15 @@ LIBRETRO_SUPERFLAPPYBIRDS_SITE = $(call github,IgniparousTempest,libretro-superf
 
 LIBRETRO_SUPERFLAPPYBIRDS_LICENSE = GPL-3.0
 
+LIBRETRO_SUPERFLAPPYBIRDS_SUPPORTS_IN_SOURCE_BUILD = NO
+
+LIBRETRO_SUPERFLAPPYBIRDS_CONF_OPTS = -DCMAKE_BUILD_TYPE=Release
+
 LIBRETRO_SUPERFLAPPYBIRDS_PLATFORM = $(LIBRETRO_PLATFORM)
 
-define LIBRETRO_SUPERFLAPPYBIRDS_BUILD_CMDS
-    $(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile platform="$(LIBRETRO_SUPERFLAPPYBIRDS_PLATFORM)"
-endef
-
 define LIBRETRO_SUPERFLAPPYBIRDS_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/superflappybirds_libretro.so \
-	$(TARGET_DIR)/usr/lib/libretro/superflappybirds_libretro.so
+        $(INSTALL) -D $(@D)/buildroot-build/superflappybirds_libretro.so \
+                $(TARGET_DIR)/usr/lib/libretro/superflappybirds_libretro.so
 endef
 
-$(eval $(generic-package))
+$(eval $(cmake-package))
