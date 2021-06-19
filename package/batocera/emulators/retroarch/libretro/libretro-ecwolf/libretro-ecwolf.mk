@@ -3,8 +3,8 @@
 # ECWOLF
 #
 ################################################################################
-# Version.: Commits on Apr 30, 2021
-LIBRETRO_ECWOLF_VERSION = fe041979e5e51b2ca0c90bb40ea6acf79714c3c7
+# Version.: Commits on Jun 19, 2021
+LIBRETRO_ECWOLF_VERSION = a2c0d7bd158ef086adcd78d498df19233d5ba0c7
 LIBRETRO_ECWOLF_SITE = $(call github,libretro,ecwolf,$(LIBRETRO_ECWOLF_VERSION))
 LIBRETRO_ECWOLF_LICENSE = GPL-2.0, ID-Software, MAME
 LIBRETRO_ECWOLF_LICENSE_FILES = docs/license-gpl.txt docs/license-id.txt docs/license-mame.txt
