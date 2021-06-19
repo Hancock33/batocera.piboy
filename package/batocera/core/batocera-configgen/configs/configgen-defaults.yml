@@ -336,7 +336,7 @@ snes:
 snes-msu1:
   emulator: libretro
   core:     snes9x
- superflappybirds:
+superflappybirds:
   emulator: libretro
   core:     superflappybirds
 supergrafx:
