@@ -312,6 +312,9 @@ saturn:
 scummvm:
   emulator: libretro
   core:     scummvm
+scv:
+  emulator: libretro
+  core:     emuscv
 sdlpop:
   emulator: sdlpop
   core:     sdlpop
