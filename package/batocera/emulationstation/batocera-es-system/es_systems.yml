@@ -944,7 +944,7 @@ twentyfourtyeight:
     libretro:
       twentyfourtyeight: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_2048] }
   comment_en: |
-    This system is the first standalone libretro game. No rom required.
+    This system is a standalone libretro game. No rom required.
   comment_fr: |
     Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
 
@@ -959,10 +959,10 @@ superflappybirds:
     libretro:
       superflappybirds: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SUPERFLAPPYBIRDS] }
   comment_en: |
-    This system is the first standalone libretro game. No rom required.
+    This system is a standalone libretro game. No rom required.
   comment_fr: |
     Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
-    
+
 dinothawr:
   name:       dinothawr
   manufacturer: Ports
@@ -974,9 +974,9 @@ dinothawr:
     libretro:
       dinothawr: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DINOTHAWR] }
   comment_en: |
-    This system is a port of 2048. No rom required.
+    This system is a standalone libretro game. No rom required.
   comment_fr: |
-    Ce système est un port de 2048. Aucune rom n'est requise.
+    Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
 
 craft:
   name:       craft
