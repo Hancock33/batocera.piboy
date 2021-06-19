@@ -2041,3 +2041,13 @@ scv:
   emulators:
     libretro:
       emuscv: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EMUSCV] }
+
+bk:
+  name:       BK
+  manufacturer: Electronica  
+  release: 1984
+  hardware: computer
+  extensions: [bin, zip, 7z]
+  emulators:
+    libretro:
+      bk: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BK_EMULATOR] }

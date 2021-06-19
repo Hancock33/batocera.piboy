@@ -58,6 +58,9 @@ atarist:
 atomiswave:
   emulator: libretro
   core:     flycast
+bk:
+  emulator: libretro
+  core:     bk
 c64:
   emulator: libretro
   core:     vice_x64
