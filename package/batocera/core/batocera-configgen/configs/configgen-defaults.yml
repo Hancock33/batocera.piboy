@@ -11,7 +11,7 @@ default:
     forceNoBezel:   false
 
 # 0-C
-2048:
+twentyfourtyeight:
    emulator: libretro
    core:     2048
 3do:
@@ -336,6 +336,9 @@ snes:
 snes-msu1:
   emulator: libretro
   core:     snes9x
+ superflappybirds:
+  emulator: libretro
+  core:     superflappybirds
 supergrafx:
   emulator: libretro
   core:     mednafen_supergrafx
