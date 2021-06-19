@@ -16,6 +16,7 @@ LIBRETRO_SUPERFLAPPYBIRDS_CONF_OPTS = -DCMAKE_BUILD_TYPE=Release
 LIBRETRO_SUPERFLAPPYBIRDS_PLATFORM = $(LIBRETRO_PLATFORM)
 
 define LIBRETRO_SUPERFLAPPYBIRDS_INSTALL_TARGET_CMDS
+		cp -r $(@D)/resources $(TARGET_DIR)/usr/lib/libretro
         $(INSTALL) -D $(@D)/buildroot-build/superflappybirds_libretro.so \
                 $(TARGET_DIR)/usr/lib/libretro/superflappybirds_libretro.so
 endef
