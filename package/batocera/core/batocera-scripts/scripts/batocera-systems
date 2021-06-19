@@ -255,7 +255,7 @@ systems = {
    # ---------- Super Cassette Vision ---------- #
     "scv":   { "name": "Super Cassette Vision", "biosFiles":  [ { "md5": "635A978FD40DB9A18EE44EFF449FC126", "file": "bios/upd7801g.s01"  } ] },
 
-    # ---------- NEC PC-9800 ---------- #
+    # ---------- Electronica BK ---------- #
     "bk":       { "name": "BK", "biosFiles": [   { "md5": "fe4627d1e3a1535874085050733263e7", "file": "bios/B11M_BOS.ROM" },
                                                  { "md5": "dc52f365d56fa1951f5d35b1101b9e3f", "file": "bios/B11M_EXT.ROM" },
                                                  { "md5": "946f6f23ded03c0e26187f0b3ca75993", "file": "bios/BAS11M_0.ROM" },
