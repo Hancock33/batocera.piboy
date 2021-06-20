@@ -2051,3 +2051,13 @@ bk:
   emulators:
     libretro:
       bk: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BK_EMULATOR] }
+
+uzem:
+  name:       Uzebox
+  manufacturer: Belogic Software  
+  release: 2009
+  hardware: console
+  extensions: [uze]
+  emulators:
+    libretro:
+      bk: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UZEM] }
