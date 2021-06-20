@@ -2060,4 +2060,4 @@ uzem:
   extensions: [uze]
   emulators:
     libretro:
-      bk: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UZEM] }
+      uzem: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UZEM] }
