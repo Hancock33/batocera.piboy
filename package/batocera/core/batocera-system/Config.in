@@ -904,6 +904,9 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 	# Electronica BK 
 	select BR2_PACKAGE_LIBRETRO_BK_EMULATOR			# ALL
 
+	# UZEBOX 
+	select BR2_PACKAGE_LIBRETRO_UZEM				# ALL
+
 	help
 		All avaible systems for the selected architecture
 
