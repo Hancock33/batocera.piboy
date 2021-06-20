@@ -2037,7 +2037,7 @@ scv:
   manufacturer: Epoch Co
   release: 1984
   hardware: console
-  extensions: [bin, zip, 7zip]
+  extensions: [bin, zip, 7zip, cart]
   emulators:
     libretro:
       emuscv: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EMUSCV] }
@@ -2047,7 +2047,7 @@ bk:
   manufacturer: Electronica  
   release: 1984
   hardware: computer
-  extensions: [bin, zip, 7z, cart]
+  extensions: [bin, zip, 7z]
   emulators:
     libretro:
       bk: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BK_EMULATOR] }
