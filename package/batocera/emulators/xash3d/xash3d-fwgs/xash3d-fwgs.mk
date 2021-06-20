@@ -3,8 +3,8 @@
 # xash3d-fwgs
 #
 ################################################################################
-# Version.: Commits on Jun 05, 2021
-XASH3D_FWGS_VERSION = 6ceb101ba1c3d56e83e29c4492840d47c0dd2785
+# Version.: Commits on Jun 20, 2021
+XASH3D_FWGS_VERSION = 91ee9bd32a3dc21e668ca61b3bfe3071a8179532
 XASH3D_FWGS_SITE = https://github.com/FWGS/xash3d-fwgs.git
 XASH3D_FWGS_SITE_METHOD = git
 XASH3D_FWGS_GIT_SUBMODULES = yes
