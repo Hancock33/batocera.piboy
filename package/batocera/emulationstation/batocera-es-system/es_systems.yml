@@ -2047,7 +2047,7 @@ bk:
   manufacturer: Electronica  
   release: 1984
   hardware: computer
-  extensions: [bin, zip, 7z]
+  extensions: [bin, zip, 7z, cart]
   emulators:
     libretro:
       bk: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BK_EMULATOR] }
