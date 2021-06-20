@@ -99,6 +99,13 @@ then
     echo "Temperature: ${TEMPE}°C"
 fi
 
+FANE=$(cat /sys/kernel/xpi_gamecon/fan 2>/dev/null)
+let FANE=(FANE*100)/242
+if test -n "${FANE}"
+then
+    echo "Fan speed: ${FANE}%"
+fi
+
 echo "Architecture: ${V_BOARD}"
 if test -e /sys/firmware/devicetree/base/model
 then
