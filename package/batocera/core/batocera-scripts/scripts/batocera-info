@@ -73,6 +73,22 @@ then
     echo "Battery: ${BATT}%"
 fi
 
+#Piboy Votlage shows estimated open circuit battery votlage
+BATTV=$(cat /sys/kernel/xpi_gamecon/battery 2>/dev/null)
+let BATTV=BATTV
+if test -n "${BATTV}"
+then
+    echo "Battery voltage: ${BATTV}mV"
+fi
+
+#Piboy current shows battery current. Positive current is charging and negative current is discharging
+CURRA=$(cat /sys/kernel/xpi_gamecon/amps 2>/dev/null)
+if test -n "${CURRA}"
+then
+    echo "Battery current: ${CURRA}mA"
+fi
+
+
 # PAD Battery
 for PADBAT in /sys/class/power_supply/*/device/uevent
 do
@@ -166,3 +182,4 @@ if grep -q " avx2" /proc/cpuinfo
 then
     echo "Cpu feature: avx2"
 fi
+
