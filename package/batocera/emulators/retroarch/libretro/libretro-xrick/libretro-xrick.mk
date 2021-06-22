@@ -15,8 +15,6 @@ endef
 define LIBRETRO_XRICK_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/xrick_libretro.so \
     $(TARGET_DIR)/usr/lib/libretro/xrick_libretro.so
-	mkdir -p "$(TARGET_DIR)/usr/share/batocera/datainit/roms/xrick"
-	$(INSTALL) -D $(@D)/data.zip "$(TARGET_DIR)/usr/share/batocera/datainit/roms/xrick/data.zip"
 endef
 
 $(eval $(generic-package))
