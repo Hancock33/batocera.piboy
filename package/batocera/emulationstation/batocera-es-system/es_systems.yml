@@ -1004,6 +1004,17 @@ mrboom:
     libretro:
       mrboom: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MRBOOM] }
 
+chailove:
+  name:       ChaiLove
+  manufacturer: Ports
+  release:
+  hardware: port
+  extensions: [chailove]
+  group: ports
+  emulators:
+    libretro:
+      chailove: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CHAILOVE] }
+
 tic80:
   name:       TIC-80
   manufacturer: Fantasy
