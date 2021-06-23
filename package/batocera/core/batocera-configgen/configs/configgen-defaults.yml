@@ -172,6 +172,9 @@ kodi:
 lightgun:
   emulator: libretro
   core:     mame078plus
+lowresnx:
+  emulator: libretro
+  core:     lowresnx
 lutro:
   emulator: libretro
   core:     lutro
