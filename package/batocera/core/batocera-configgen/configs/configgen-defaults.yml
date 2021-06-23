@@ -64,6 +64,9 @@ bk:
 c64:
   emulator: libretro
   core:     vice_x64
+chailove:
+  emulator: libretro
+  core:     chailove
 cplus4:
   emulator: libretro
   core:     vice_xplus4
