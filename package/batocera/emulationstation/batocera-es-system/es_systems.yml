@@ -1015,6 +1015,17 @@ chailove:
     libretro:
       chailove: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CHAILOVE] }
 
+lowresnx:
+  name:       LowRes-NX
+  manufacturer: Ports
+  release:
+  hardware: port
+  extensions: [nx]
+  group: ports
+  emulators:
+    libretro:
+      chailove: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_LOWRESNX] }
+
 tic80:
   name:       TIC-80
   manufacturer: Fantasy
