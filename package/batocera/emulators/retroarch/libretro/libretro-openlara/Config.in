@@ -1,5 +1,5 @@
 config BR2_PACKAGE_LIBRETRO_OPENLARA
-	bool "libretro-OPENLARA"
+	bool "libretro-openlara"
 	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
 	help

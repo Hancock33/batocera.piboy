@@ -263,7 +263,9 @@ openbor:
   options:
     ratio:  0
     filter: 0
-
+openlara:
+  emulator: libretro
+  core:     openlara
 # P-S
 
 pc88:
