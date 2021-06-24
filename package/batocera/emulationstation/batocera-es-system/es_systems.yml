@@ -1026,6 +1026,17 @@ lowresnx:
     libretro:
       lowresnx: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_LOWRESNX] }
 
+openlara:
+  name:       Tombraider
+  manufacturer: Ports
+  release:
+  hardware: port
+  extensions: [zip]
+  group: ports
+  emulators:
+    libretro:
+      lowresnx: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_OPENLARA] }     
+
 tic80:
   name:       TIC-80
   manufacturer: Fantasy
