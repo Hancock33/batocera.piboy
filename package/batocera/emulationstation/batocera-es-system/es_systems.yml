@@ -1808,7 +1808,7 @@ ports:
           Third party Linux games and apps that can be run from a .sh script.
   comment_fr: |
           Jeux et applications Linux additionnels qui peuvent etre lancés depuis un script .sh.
-  
+
 piboy:
   name:       Piboy Settings
   manufacturer: Experimental Pi
@@ -1817,7 +1817,7 @@ piboy:
   extensions: [sh]
   group: piboy
   path:       /userdata/roms/piboy
-  command:    "/bin/sh %ROM%
+  command:    "/bin/sh %ROM%"
   force:      True
 
 amiga:
