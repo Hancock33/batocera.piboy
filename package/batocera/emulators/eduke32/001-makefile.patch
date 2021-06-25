@@ -1,6 +1,6 @@
 diff -Naur eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6.orig/Common.mak eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6/Common.mak
 --- eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6.orig/Common.mak	2021-06-23 13:29:32.000000000 +0100
-+++ eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6/Common.mak	2021-06-25 06:15:09.832248473 +0100
++++ eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6/Common.mak	2021-06-25 18:47:27.978929185 +0100
 @@ -573,8 +573,8 @@
          else
              ifeq ($(PLATFORM),DARWIN)
@@ -32,15 +32,3 @@ diff -Naur eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6.orig/Common.mak eduk
          else
              ifeq ($(SDL_TARGET),1)
                  COMPILERFLAGS += -D_GNU_SOURCE=1
-diff -Naur eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6.orig/source/build/src/compat.cpp eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6/source/build/src/compat.cpp
---- eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6.orig/source/build/src/compat.cpp	2021-06-23 13:29:32.000000000 +0100
-+++ eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6/source/build/src/compat.cpp	2021-06-25 06:46:42.263647922 +0100
-@@ -121,7 +121,7 @@
-         drv[1] = '\0';
-     return Xstrdup(cwd);
- #else
--    char *e = getenv("HOME");
-+    char *e = "/usrdata/roms/eduke32";
-     if (!e) return NULL;
-     return Xstrdup(e);
- #endif

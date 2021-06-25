@@ -1026,7 +1026,7 @@ lowresnx:
     libretro:
       lowresnx: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_LOWRESNX] }
       
-eduke3d:
+eduke32:
   name:       Duke Nukem 3D
   manufacturer: Ports
   release:
@@ -1034,8 +1034,8 @@ eduke3d:
   extensions: [grp]
   group: ports
   emulators:
-    eduke3d:
-      eduke3d: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }     
+    eduke32:
+      eduke32: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }     
 
 tic80:
   name:       TIC-80
