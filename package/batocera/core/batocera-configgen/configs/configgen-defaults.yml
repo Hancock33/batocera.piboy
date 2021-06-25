@@ -118,9 +118,9 @@ easyrpg:
 ecwolf:
   emulator: libretro
   core:     ecwolf
-eduke3d:
-  emulator: eduke3d
-  core:     eduke3d
+eduke32:
+  emulator: eduke32
+  core:     eduke32
 fbneo:
   emulator: libretro
   core:     fbneo

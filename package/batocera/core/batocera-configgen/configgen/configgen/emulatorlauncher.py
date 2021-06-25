@@ -51,6 +51,7 @@ from generators.drastic.drasticGenerator import DrasticGenerator
 from generators.xemu.xemuGenerator import XemuGenerator
 from generators.cgenius.cgeniusGenerator import CGeniusGenerator
 from generators.flatpak.flatpakGenerator import FlatpakGenerator
+from generators.eduke32.eduke32Generator import Eduke32Generator
 
 import controllersConfig as controllers
 import signal
@@ -105,6 +106,7 @@ generators = {
     'xemu': XemuGenerator(),
     'cgenius': CGeniusGenerator(),
     'flatpak': FlatpakGenerator(),
+    'eduke32': Eduke32Generator(),
 }
 
 def main(args, maxnbplayers):
