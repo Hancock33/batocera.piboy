@@ -1034,8 +1034,8 @@ eduke3d:
   extensions: [grp]
   group: ports
   emulators:
-    libretro:
-      lowresnx: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }     
+    eduke3d:
+      eduke3d: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }     
 
 tic80:
   name:       TIC-80
