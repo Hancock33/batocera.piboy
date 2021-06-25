@@ -1,0 +1,46 @@
+diff -Naur eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6.orig/Common.mak eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6/Common.mak
+--- eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6.orig/Common.mak	2021-06-23 13:29:32.000000000 +0100
++++ eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6/Common.mak	2021-06-25 06:15:09.832248473 +0100
+@@ -573,8 +573,8 @@
+         else
+             ifeq ($(PLATFORM),DARWIN)
+                 OPTOPT := -march=core2 -mmmx -msse -msse2 -msse3 -mssse3
+-            else
+-                OPTOPT := -march=nocona
++#            else
++#                OPTOPT := -march=nocona
+             endif
+         endif
+     endif
+@@ -892,7 +892,7 @@
+ 
+ ifeq ($(RENDERTYPE),SDL)
+     ifeq ($(SDL_TARGET),2)
+-        SDLCONFIG := sdl2-config
++        SDLCONFIG := sdl2
+         SDLNAME := SDL2
+     else ifeq ($(SDL_TARGET),1)
+         SDLCONFIG := sdl-config
+@@ -934,8 +934,8 @@
+             SDLCONFIG_CFLAGS := $(strip $(subst -Dmain=SDL_main,,$(shell $(SDLCONFIG) --cflags)))
+             SDLCONFIG_LIBS := $(strip $(subst -mwindows,,$(shell $(SDLCONFIG) --libs)))
+ 
+-            COMPILERFLAGS += $(SDLCONFIG_CFLAGS)
+-            LIBS += $(SDLCONFIG_LIBS)
++            COMPILERFLAGS += pkg-config sdl2 --cflags`
++            LIBS += `pkg-config sdl2 --libs`
+         else
+             ifeq ($(SDL_TARGET),1)
+                 COMPILERFLAGS += -D_GNU_SOURCE=1
+diff -Naur eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6.orig/source/build/src/compat.cpp eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6/source/build/src/compat.cpp
+--- eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6.orig/source/build/src/compat.cpp	2021-06-23 13:29:32.000000000 +0100
++++ eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6/source/build/src/compat.cpp	2021-06-25 06:46:42.263647922 +0100
+@@ -121,7 +121,7 @@
+         drv[1] = '\0';
+     return Xstrdup(cwd);
+ #else
+-    char *e = getenv("HOME");
++    char *e = "/usrdata/roms/eduke32";
+     if (!e) return NULL;
+     return Xstrdup(e);
+ #endif
