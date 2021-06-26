@@ -4,8 +4,8 @@
 #
 ################################################################################
 
-# Wine Mono addon (required)
-WINE_MONO_PROTON_VERSION = 6.1.2
+# Version.: Commits on Jun 25, 2021
+WINE_MONO_PROTON_VERSION = 0a0b8c9beeb9ec6b15f0685dd8f1e56a4a8db44f
 WINE_MONO_PROTON_SOURCE = wine-mono-$(WINE_MONO_PROTON_VERSION)-x86.tar.xz
 WINE_MONO_PROTON_SITE = https://github.com/madewokherd/wine-mono/releases/download/wine-mono-$(WINE_MONO_PROTON_VERSION)/$(WINE_MONO_PROTON_VERSION)
 
