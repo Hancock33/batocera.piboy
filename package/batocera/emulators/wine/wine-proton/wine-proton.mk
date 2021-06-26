@@ -3,7 +3,7 @@
 # wine-proton
 #
 ################################################################################
-
+#
 WINE_PROTON_VERSION = proton-wine-6.3-5
 WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
