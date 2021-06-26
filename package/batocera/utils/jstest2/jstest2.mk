@@ -3,8 +3,8 @@
 # jstest2
 #
 ################################################################################
-
-JSTEST2_VERSION = 301a0e8cf3f96de4c5e58d9fe4413e5cd2b4e6d4
+# Version.: Commits on Apr 22, 2021
+JSTEST2_VERSION = 6d29d45a06b1b465fe5ee1779b80e1de8c37fff2
 JSTEST2_SITE = $(call github,Grumbel,sdl-jstest,$(JSTEST2_VERSION))
 JSTEST2_DEPENDENCIES = sdl2
 
