@@ -3,8 +3,8 @@
 # FLATPAK
 #
 ################################################################################
-
-FLATPAK_VERSION = 1.10.1
+# Version.: Commits on Jun 17, 2021
+FLATPAK_VERSION = 6ebe33117c90194d6ed776cf33d8e8399a50fbf5
 FLATPAK_SOURCE = flatpak-$(FLATPAK_VERSION).tar.xz
 FLATPAK_SITE = https://github.com/flatpak/flatpak/releases/download/$(FLATPAK_VERSION)
 

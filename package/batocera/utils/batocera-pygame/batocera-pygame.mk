@@ -3,11 +3,10 @@
 # batocera pygame
 #
 ################################################################################
-
-BATOCERA_PYGAME_VERSION = 1.1
-RETROTRIVIA_VERSION = 642cd6035427948ca28088be5dbb398a4d6c2185
+# Version.: Commits on May 04, 2021
+BATOCERA_PYGAME_VERSION = 642cd6035427948ca28088be5dbb398a4d6c2185
 BATOCERA_PYGAME_LICENSE = GPLv3
-BATOCERA_PYGAME_SITE = $(call github,lbrpdx,retrotrivia,$(RETROTRIVIA_VERSION))
+BATOCERA_PYGAME_SITE = $(call github,lbrpdx,retrotrivia,$(BATOCERA_PYGAME_VERSION))
 
 define BATOCERA_PYGAME_INSTALL_SAMPLE
 	mkdir -p $(TARGET_DIR)/usr/bin
