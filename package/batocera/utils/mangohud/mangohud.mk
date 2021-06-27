@@ -3,8 +3,8 @@
 # MangoHud
 #
 ################################################################################
-# Version.: Commits on Jun 24, 2021
-MANGOHUD_VERSION = 88fdaa31fe7af4c2c42b07262da7e8b9f6eb2055
+# Version.: Commits on Mar 15, 2021
+MANGOHUD_VERSION = 87f82215e83eeb805ffcb2c62b521d6f444e8966
 MANGOHUD_SITE = https://github.com/flightlessmango/MangoHud.git
 MANGOHUD_SITE_METHOD = git
 
