@@ -267,7 +267,7 @@ systems = {
 
     # ---------- Palm MU ---------- #
     "mu":       { "name": "Palm OS", "biosFiles": [   { "md5": "83cb1d1c76e568b916dc2e7c0bf669f6", "file": "bios/palmos41-en-m515.rom" },
-                                                      { "md5": "de46ec84d9aabf655eabdf9b00a3845d", "file": "bios/palmos52-en-t3.rom" },
+                                                      { "md5": "de46ec84d9aabf655eabdf9b00a3845d", "file": "bios/palmos52-en-t3.rom" } ] },
 }
 
 class BiosStatus:
