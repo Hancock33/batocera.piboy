@@ -1,13 +1,9 @@
-diff -Naur switchres-d7064ecdf0d6b3716a441f0d395a2c91b34fee8f.orig/makefile switchres-d7064ecdf0d6b3716a441f0d395a2c91b34fee8f/makefile
---- switchres-d7064ecdf0d6b3716a441f0d395a2c91b34fee8f.orig/makefile	2021-05-30 21:02:59.000000000 +0100
-+++ switchres-d7064ecdf0d6b3716a441f0d395a2c91b34fee8f/makefile	2021-06-27 08:38:42.468864518 +0100
-@@ -10,19 +10,21 @@
- CROSS_COMPILE ?=
- CXX ?= g++
- AR ?= ar
--LDFLAGS = -shared
-+LDFLAGS ?=
-+LDFLAGS += -shared
+diff --git a/makefile b/makefile
+index 287aa0a..ebc2902 100644
+--- a/makefile
++++ b/makefile
+@@ -13,7 +13,8 @@ AR ?= ar
+ LDFLAGS = -shared
  FINAL_CXX=$(CROSS_COMPILE)$(CXX)
  FINAL_AR=$(CROSS_COMPILE)$(AR)
 -CPPFLAGS = -O3 -Wall -Wextra
@@ -16,6 +12,7 @@ diff -Naur switchres-d7064ecdf0d6b3716a441f0d395a2c91b34fee8f.orig/makefile swit
  
  PKG_CONFIG=pkg-config
  INSTALL=install
+@@ -21,17 +22,16 @@ SED=sed
  
  DESTDIR ?=
  PREFIX ?= /usr
@@ -28,14 +25,12 @@ diff -Naur switchres-d7064ecdf0d6b3716a441f0d395a2c91b34fee8f.orig/makefile swit
  PKGDIR = $(LIBDIR)/pkgconfig
  
  # Linux
-@@ -52,8 +54,8 @@
- CPPFLAGS += $(shell $(PKG_CONFIG) --cflags $(EXTRA_LIBS))
- endif
- 
+ ifeq  ($(PLATFORM),Linux)
+ EXTRA_LIBS = libdrm
+-CPPFLAGS += $(shell $(PKG_CONFIG) --cflags $(EXTRA_LIBS))
+ SRC += display_linux.cpp custom_video_xrandr.cpp custom_video_drmkms.cpp
 -CPPFLAGS += -fPIC
--LIBS = -ldl
 +CPPFLAGS += -fPIC -I$(INCDIR)
-+LIBS = -ldl -lm -lrt -lstdc++
- REMOVE = rm -f
+ LIBS = -ldl
+ REMOVE = rm -f 
  STATIC_LIB_EXT = a
- DYNAMIC_LIB_EXT = so
