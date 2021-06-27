@@ -3,8 +3,8 @@
 # SwitchRes
 #
 ################################################################################
-# Version.: Commits on May 30, 2021
-SWITCHRES_VERSION = d7064ecdf0d6b3716a441f0d395a2c91b34fee8f
+# Version: Commits from Feb 20th, 2021
+SWITCHRES_VERSION = a73fe3e3587a91327ead48e77f1852376ea07738
 SWITCHRES_SITE = $(call github,antonioginer,switchres,$(SWITCHRES_VERSION))
 
 SWITCHRES_DEPENDENCIES = libdrm xserver_xorg-server
