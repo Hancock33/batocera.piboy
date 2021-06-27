@@ -1,4 +1,3 @@
-################################################################################
 #
 # FLATPAK
 #
@@ -28,3 +27,4 @@ FLATPAK_POST_INSTALL_TARGET_HOOKS += FLATPAK_INSTALL_SCRIPTS
 
 $(eval $(autotools-package))
 $(eval $(host-autotools-package))
+
