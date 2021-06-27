@@ -3,8 +3,8 @@
 # CHEATS
 #
 ################################################################################
-# Version.: Commits on Jun 25, 2021
-LIBRETRO_CHEATS_VERSION = 7b2cc6dff813fcd002df2bc46df9e9669e29407d
+# Version.: Commits on Jun 27, 2021
+LIBRETRO_CHEATS_VERSION = 658a2c2977424f656ecdb3bc6c2f12503e68c68b
 LIBRETRO_CHEATS_SITE = $(call github,libretro,libretro-database,$(LIBRETRO_CHEATS_VERSION))
 
 define LIBRETRO_CHEATS_INSTALL_TARGET_CMDS
