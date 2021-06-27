@@ -600,6 +600,9 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
 	# Watara
 	select BR2_PACKAGE_LIBRETRO_WATARA          # ALL
 
+	# Palm
+	select BR2_PACKAGE_LIBRETRO_MU       		# ALL
+	
 	help
 		Handheld cores/emulators
 

@@ -264,7 +264,10 @@ systems = {
                                                  { "md5": "5015228eeeb238e65da8edcd1b6dfac7", "file": "bios/bk/DISK_327.ROM" },                                                
                                                  { "md5": "5737f972e8638831ab71e9139abae052", "file": "bios/bk/FOCAL10.ROM"  },                                               
                                                  { "md5": "95f8c41c6abf7640e35a6a03cecebd01", "file": "bios/bk/MONIT10.ROM"  } ] },
-                                                 
+
+    # ---------- Palm MU ---------- #
+    "mu":       { "name": "Palm OS", "biosFiles": [   { "md5": "83cb1d1c76e568b916dc2e7c0bf669f6", "file": "bios/palmos41-en-m515.rom" },
+                                                      { "md5": "de46ec84d9aabf655eabdf9b00a3845d", "file": "bios/palmos52-en-t3.rom" },
 }
 
 class BiosStatus:
