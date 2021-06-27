@@ -221,8 +221,8 @@ msxturbor:
   emulator: libretro
   core:     bluemsx
 mu:
-  emulator: mu
-  core:     libretro
+  emulator: libretro
+  core:     mu
 mugen:
   emulator: mugen
   core:     proton
