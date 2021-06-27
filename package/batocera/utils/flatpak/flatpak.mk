@@ -3,9 +3,10 @@
 # FLATPAK
 #
 ################################################################################
-# Version.: Commits on Jun 17, 2021
-FLATPAK_VERSION = 6ebe33117c90194d6ed776cf33d8e8399a50fbf5
-FLATPAK_SITE = $(call github,flatpak,flatpak,$(FLATPAK_VERSION))
+
+FLATPAK_VERSION = 1.10.1
+FLATPAK_SOURCE = flatpak-$(FLATPAK_VERSION).tar.xz
+FLATPAK_SITE = https://github.com/flatpak/flatpak/releases/download/$(FLATPAK_VERSION)
 
 FLATPAK_DEPENDENCIES += pkgconf host-pkgconf libcap libarchive libglib2 libsoup libgpgme polkit
 FLATPAK_DEPENDENCIES += libostree json-glib appstream-glib yaml-cpp
@@ -18,6 +19,7 @@ FLATPAK_CONF_OPTS += --with-run-media-dir="/media"
 FLATPAK_CONF_OPTS += --disable-selinux-module
 
 FLATPAK_CONF_ENV += LDFLAGS=-lpthread
+
 
 define FLATPAK_INSTALL_SCRIPTS
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/flatpak/batocera-flatpak-update $(TARGET_DIR)/usr/bin/
