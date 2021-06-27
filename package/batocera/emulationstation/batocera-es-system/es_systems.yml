@@ -2105,3 +2105,13 @@ uzem:
   emulators:
     libretro:
       uzem: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UZEM] }
+
+mu:
+  name:       Palm OS
+  manufacturer: Palm  
+  release: 2001
+  hardware: portable
+  extensions: [prc, pqa, img]
+  emulators:
+    libretro:
+      mu: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MU] }
