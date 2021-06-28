@@ -677,7 +677,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 	
 	select BR2_PACKAGE_EDUKE32       			# ALL
 	 
-	select BR2_PACKAGE_GONG				        # ALL
+	select BR2_PACKAGE_LIBRETRO_GONG	        # ALL
 		
 	help
 		Ports
