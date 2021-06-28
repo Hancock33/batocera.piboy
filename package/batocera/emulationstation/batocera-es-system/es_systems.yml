@@ -2108,10 +2108,11 @@ mu:
       mu: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MU] }
 gong:
   name:       Pong
-  manufacturer: Atari  
+  manufacturer: Ports  
   release: 1972
   hardware: console
   extensions: [game]
+  group: ports
   emulators:
     libretro:
       gong: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GONG] }
