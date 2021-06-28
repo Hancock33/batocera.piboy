@@ -2,8 +2,8 @@
 <gameList>
   <game>
     <path>./pong.game</path>
-    <name>Pong (Rev E)</name>
-    <desc>Pong is a basic simulation of the racket sport of table tennis. A small square representing a ping pong ball travels across the screen in a linear trajectory. If the square strikes the perimeter of the playing field, or one of the simulated paddles, the square ricochets based on the angle of the impact. 
+    <name>Gong</name>
+    <desc>Gong is a basic simulation of the racket sport of table tennis. A small square representing a ping pong ball travels across the screen in a linear trajectory. If the square strikes the perimeter of the playing field, or one of the simulated paddles, the square ricochets based on the angle of the impact. 
  
 Game play consists of players moving their respective paddles vertically to defend their scoring zones. Players score one point by maneuvering the square past their opponent's paddle. 
  
