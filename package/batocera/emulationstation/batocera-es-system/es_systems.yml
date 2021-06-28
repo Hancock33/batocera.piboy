@@ -2114,7 +2114,7 @@ gong:
   extensions: [game]
   emulators:
     libretro:
-      gong: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GONG }
+      gong: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GONG] }
   comment_en: |
     This system is a standalone libretro game. No rom required.
   comment_fr: |
