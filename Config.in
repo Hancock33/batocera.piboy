@@ -281,6 +281,7 @@ menu "Emulators"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/redream/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/tsugaru/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xemu/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/ecwolf/Config.in"
 endmenu
 
 menu "Kodi"

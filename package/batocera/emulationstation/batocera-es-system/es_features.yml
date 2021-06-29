@@ -2880,6 +2880,9 @@ libretro:
     gong:
       features: [autosave]
 
+ecwolf:
+  features: []
+
 # Standalones
 
 amiberry:
