@@ -858,34 +858,17 @@ tyrquake:
     Placez ici vos fichiers .PAK pour Quake 1.
 
 ecwolf:
-  name:       Wolfenstein 3D
-  manufacturer: Ports
-  release:
+  name:       ECWolf
+  manufacturer: Blzut3
+  release: 2013
   hardware: port
-  extensions: [exe,pk3]
-  group: ports
+  extensions: [ecwolf, exe, pk3, zip, 7zip]
   emulators:
     libretro:
       ecwolf: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ECWOLF] }
-  comment_en: |
-    Put your WOLFENSTEIN 3D games in this directory.
-
-    Wolfenstein 3D games must have a ".pk3/.exe" extension.
-
-    ECWolf can run the following content
-    Wolfenstein 3D
-    Spear of Destiny
-    Super 3D Noah's Ark
-  comment_fr: |
-    Placez ici vos jeux WOLFENSTEIN 3D.
-
-    Les jeux Wolfenstein 3D doivent avoir l'extension ".pk3/.exe"
-
-    ECWolf peut exécuter le contenu suivant
-    Wolfenstein 3D
-    Spear of Destiny
-    Super 3D Noah's Ark
-    
+    ecwolf:
+      ecwolf: { requireAnyOf: [BR2_PACKAGE_ECWOLF] }
+      
 xrick:
   name:       xrick
   manufacturer: Ports
