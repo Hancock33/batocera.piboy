@@ -2880,8 +2880,8 @@ libretro:
     gong:
       features: [autosave]
 
-ecwolf:
-  features: []
+    ecwolf:
+      features: []
 
 # Standalones
 
