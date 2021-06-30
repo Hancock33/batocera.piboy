@@ -657,10 +657,6 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 	# Rick Dangerous
 	select BR2_PACKAGE_LIBRETRO_XRICK           # ALL
 	
-	# Wolfenstein 3D
-	select BR2_PACKAGE_LIBRETRO_ECWOLF          # ALL
-	select BR2_PACKAGE_ECWOLF
-
 	# Flashback
 	select BR2_PACKAGE_LIBRETRO_REMINISCENCE    # ALL
 	
@@ -906,6 +902,10 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 
 	# UZEBOX 
 	select BR2_PACKAGE_LIBRETRO_UZEM				# ALL
+
+	# ECWolf
+	select BR2_PACKAGE_LIBRETRO_ECWOLF              # ALL
+	select BR2_PACKAGE_ECWOLF                       if !BR2_PACKAGE_BATOCERA_RPI_ANY && !BR2_PACKAGE_BATOCERA_TARGET_ROCKCHIP_ANY
 
 	help
 		All avaible systems for the selected architecture
