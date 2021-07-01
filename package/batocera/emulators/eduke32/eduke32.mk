@@ -26,7 +26,7 @@ define EDUKE32_INSTALL_TARGET_CMDS
 	
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ecwolf/port.eduke32.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/eduke32/port.eduke32.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(generic-package))
