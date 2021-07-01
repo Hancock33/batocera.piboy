@@ -23,6 +23,10 @@ define EDUKE32_INSTALL_TARGET_CMDS
     cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/eduke32/eduke32.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/eduke32
     cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/eduke32/settings.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/eduke32
 	$(INSTALL) -m 0755 $(@D)/eduke32 -D $(TARGET_DIR)/usr/bin/eduke32
+	
+	# evmap config
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ecwolf/port.eduke32.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(generic-package))
