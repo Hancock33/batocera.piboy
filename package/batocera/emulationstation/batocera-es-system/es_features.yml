@@ -3941,3 +3941,6 @@ xemu:
                 
 eduke32:
   features: [padtokeyboard]
+
+ecwolf:
+  features: [padtokeyboard]

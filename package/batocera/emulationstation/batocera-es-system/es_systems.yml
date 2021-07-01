@@ -856,18 +856,6 @@ tyrquake:
     Put your Quake 1 .PAK games in this directory.
   comment_fr: |
     Placez ici vos fichiers .PAK pour Quake 1.
-
-ecwolf:
-  name:       ECWolf
-  manufacturer: Blzut3
-  release: 2013
-  hardware: port
-  extensions: [ecwolf, exe, pk3, zip, 7zip]
-  emulators:
-    libretro:
-      ecwolf: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ECWOLF] }
-    ecwolf:
-      ecwolf: { requireAnyOf: [BR2_PACKAGE_ECWOLF] }
       
 xrick:
   name:       xrick
@@ -2103,3 +2091,16 @@ gong:
     This system is a standalone libretro game. No rom required.
   comment_fr: |
     Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
+
+ecwolf:
+  name:       ECWolf
+  manufacturer: Ports
+  release: 2013
+  hardware: port
+  extensions: [ecwolf, exe, pk3, zip, 7zip]
+  group: ports
+  emulators:
+    libretro:
+      ecwolf: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ECWOLF], incompatible_extensions: [ecwolf] }
+    ecwolf:
+      ecwolf: { requireAnyOf: [BR2_PACKAGE_ECWOLF] }
