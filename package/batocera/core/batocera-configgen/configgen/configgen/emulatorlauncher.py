@@ -53,6 +53,7 @@ from generators.cgenius.cgeniusGenerator import CGeniusGenerator
 from generators.flatpak.flatpakGenerator import FlatpakGenerator
 from generators.eduke32.eduke32Generator import Eduke32Generator
 from generators.ecwolf.ecwolfGenerator import ECWolfGenerator
+from generators.lexaloffle.lexaloffleGenerator import LexaloffleGenerator
 
 import controllersConfig as controllers
 import signal
@@ -109,6 +110,7 @@ generators = {
     'flatpak': FlatpakGenerator(),
     'eduke32': Eduke32Generator(),
     'ecwolf': ECWolfGenerator(),
+    'lexaloffle': LexaloffleGenerator(),
 }
 
 def main(args, maxnbplayers):
