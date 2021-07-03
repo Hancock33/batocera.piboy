@@ -387,6 +387,9 @@ vectrex:
 virtualboy:
   emulator: libretro
   core:     vb
+vitaquake2:
+  emulator: libretro
+  core:     vitaquake2
 wii:
   emulator: dolphin
   core:     dolphin

@@ -2104,3 +2104,14 @@ ecwolf:
       ecwolf: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ECWOLF], incompatible_extensions: [ecwolf] }
     ecwolf:
       ecwolf: { requireAnyOf: [BR2_PACKAGE_ECWOLF] }
+
+vitaquake2:
+  name:       Quake II
+  manufacturer: Ports
+  release: 1997
+  hardware: port
+  extensions: [pak, zip, 7zip]
+  group: ports
+  emulators:
+    libretro:
+      vitaquake2: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VITAQUAKE2] }
