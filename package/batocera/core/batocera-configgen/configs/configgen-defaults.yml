@@ -171,6 +171,9 @@ intellivision:
 jaguar:
   emulator: libretro
   core:     virtualjaguar
+java:
+  emulator: libretro
+  core:     squirreljme
 kodi:
   emulator: kodi
   options:
