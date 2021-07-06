@@ -2116,3 +2116,15 @@ vitaquake2:
   emulators:
     libretro:
       vitaquake2: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VITAQUAKE2] }
+
+java:
+  name:       Java ME
+  manufacturer: Ports
+  release: 2001
+  hardware: port
+  extensions: [jar]
+  group: ports
+  emulators:
+    libretro:
+      squirreljme: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SQUIRRELJME] }
+      freej2me: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FREEJ2ME] }
