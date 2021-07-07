@@ -2117,8 +2117,8 @@ vitaquake2:
     libretro:
       vitaquake2: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VITAQUAKE2] }
 
-java:
-  name:       Java ME
+j2me:
+  name:       Java 2 MicroEdition
   manufacturer: Ports
   release: 2001
   hardware: port
@@ -2126,5 +2126,5 @@ java:
   group: ports
   emulators:
     libretro:
-      squirreljme: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SQUIRRELJME] }
-      freej2me: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FREEJ2ME] }
+      squirreljme:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SQUIRRELJME] }
+      freej2me:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FREEJ2ME] }
