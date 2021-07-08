@@ -173,7 +173,7 @@ jaguar:
   core:     virtualjaguar
 j2me:
   emulator: libretro
-  core:     squirreljme
+  core:     freej2me
 kodi:
   emulator: kodi
   options:
