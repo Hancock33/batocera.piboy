@@ -2121,9 +2121,8 @@ j2me:
   name:       Java 2 MicroEdition
   manufacturer: Ports
   release: 2001
-  hardware: port
+  hardware: portable
   extensions: [jar]
-  group: ports
   emulators:
     libretro:
       squirreljme:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SQUIRRELJME] }
