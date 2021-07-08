@@ -1,0 +1,6 @@
+config BR2_PACKAGE_JDK_RPI4
+    bool "jdk-rpi4"
+    help
+      openJDK precompiled for RPI4
+
+      https://github.com/Hancock33/openjdk-batocera
