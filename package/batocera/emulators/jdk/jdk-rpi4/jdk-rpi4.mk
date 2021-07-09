@@ -4,7 +4,7 @@
 #
 ################################################################################
 JDK_RPI4_VERSION = 16.0.1+9
-JDK_RPI4_SOURCE = openjdk-$(JDK_RPI4_VERSION)_aarch64.tar.xz
+JDK_RPI4_SOURCE = openjdk-$(JDK_RPI4_VERSION)_aarch64_rpi4.tar.xz
 
 JDK_RPI4_SITE = https://github.com/Hancock33/openjdk-batocera/releases/download/32-dev
 
