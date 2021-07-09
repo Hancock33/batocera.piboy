@@ -3,8 +3,8 @@
 # MESS
 #
 ################################################################################
-# Version.: Commits on Apr 12, 2021
-LIBRETRO_MESS_VERSION = 98b0ba18a9109339c2ebf4f5945f6c3575301ba9
+# Version.: Commits on Jul 09, 2021
+LIBRETRO_MESS_VERSION = 209cdf44db384e8fa44874753972f71a5f8ca5f9
 LIBRETRO_MESS_SITE = $(call github,libretro,mame,$(LIBRETRO_MESS_VERSION))
 LIBRETRO_MESS_LICENSE = MESS
 LIBRETRO_MESS_DEPENDENCIES = retroarch
