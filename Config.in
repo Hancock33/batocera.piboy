@@ -252,7 +252,8 @@ menu "Emulators"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/mupen64plus/mupen64plus-rsphle/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/mupen64plus/mupen64plus-gliden64/Config.in"
   endmenu
-
+  
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/jdk/jdk-rpi3/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/jdk/jdk-rpi4/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/jdk/jdk-x86_64/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/pcsx2/Config.in"
