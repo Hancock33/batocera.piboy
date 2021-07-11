@@ -5,7 +5,7 @@
 ################################################################################
 # Version.: Commits on Jul 7, 2021
 IONFURY_VERSION = b10f9112e1558582358a8a7ef208f830134a0a72
-IONFURY_SITE = https://voidpoint.io/terminx/eduke32.gut
+IONFURY_SITE = https://voidpoint.io/terminx/eduke32.git
 
 IONFURY_DEPENDENCIES = sdl2 sdl2_image
 IONFURY_SITE_METHOD=git
