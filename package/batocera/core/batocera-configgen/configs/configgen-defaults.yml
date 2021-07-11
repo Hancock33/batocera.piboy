@@ -165,6 +165,9 @@ gong:
 gx4000:
   emulator: libretro
   core:     cap32
+ionfury:
+  emulator: ionfury
+  core:     ionfury
 intellivision:
   emulator: libretro
   core:     freeintv
