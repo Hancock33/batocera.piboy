@@ -992,13 +992,24 @@ lowresnx:
 eduke32:
   name:       Duke Nukem 3D
   manufacturer: Ports
-  release:
+  release: 1996
   hardware: port
   extensions: [grp]
   group: ports
   emulators:
     eduke32:
-      eduke32: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }     
+      eduke32: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
+
+ionfury:
+  name:       Ion Fury
+  manufacturer: Ports
+  release: 2019
+  hardware: port
+  extensions: [grp]
+  group: ports
+  emulators:
+    ionfury:
+      ionfury: { requireAnyOf: [BR2_PACKAGE_IONFURY] }
 
 tic80:
   name:       TIC-80
