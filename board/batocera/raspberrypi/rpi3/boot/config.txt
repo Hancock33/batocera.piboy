@@ -139,10 +139,10 @@ dtoverlay=audremap,pins_18_19
 [rpi3]
 # Enable DRM VC4 V3D driver on top of the dispmanx display stack
 # Preferred 'Full' Kernel Mode Setting (KMS)
-dtoverlay=vc4-kms-v3d
+#dtoverlay=vc4-kms-v3d,noaudio
 
 # Optional 'Fake' KMS for displays that won't work with 'Full' KMS
-#dtoverlay=vc4-fkms-v3d
+dtoverlay=vc4-fkms-v3d
 
 # Ensure only one display output can be used on the Pi4 with batocera
 max_framebuffers=1
