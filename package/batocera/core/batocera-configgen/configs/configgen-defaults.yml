@@ -82,6 +82,9 @@ cannonball:
 cavestory:
   emulator: libretro
   core:     nxengine
+cgenius:
+  emulator: cgenius
+  core:     cgenius
 channelf:
   emulator: libretro
   core:     freechaf
@@ -130,6 +133,9 @@ fds:
 flash:
   emulator: ruffle
   core:     ruffle
+flatpak:
+  emulator: flatpak
+  core:     flatpak
 fmtowns:
   emulator: tsugaru
   core:     tsugaru
@@ -369,6 +375,9 @@ superflappybirds:
 supergrafx:
   emulator: libretro
   core:     mednafen_supergrafx
+supervision:
+  emulator: libretro
+  core:     potator
 
 # T-Z
 
@@ -430,18 +439,12 @@ xrick:
 xbox:
   emulator: xemu
   core:     xemu
+zc210:
+  emulator: libretro
+  core:     zc210
 zx81:
   emulator: libretro
   core:     '81'
 zxspectrum:
   emulator: libretro
   core:     fuse
-cgenius:
-  emulator: cgenius
-  core:     cgenius
-flatpak:
-  emulator: flatpak
-  core:     flatpak
-supervision:
-  emulator: libretro
-  core:     potator

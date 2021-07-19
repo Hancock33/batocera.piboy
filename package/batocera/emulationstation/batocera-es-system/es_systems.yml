@@ -857,7 +857,7 @@ tyrquake:
     Put your Quake 1 .PAK games in this directory.
   comment_fr: |
     Placez ici vos fichiers .PAK pour Quake 1.
-      
+
 xrick:
   name:       xrick
   manufacturer: Ports
@@ -872,7 +872,7 @@ xrick:
     Put the data.zip in this directory.
   comment_fr: |
     Placez ici vos fichiers data.zip pour xrick.
-    
+
 reminiscence:
   name:       reminiscence
   manufacturer: Ports
@@ -988,7 +988,7 @@ lowresnx:
   emulators:
     libretro:
       lowresnx: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_LOWRESNX] }
-      
+
 eduke32:
   name:       Duke Nukem 3D
   manufacturer: Ports
@@ -2039,7 +2039,7 @@ scv:
 
 bk:
   name:       BK
-  manufacturer: Electronica  
+  manufacturer: Electronica
   release: 1984
   hardware: computer
   extensions: [bin, zip, 7z]
@@ -2049,7 +2049,7 @@ bk:
 
 uzem:
   name:       Uzebox
-  manufacturer: Belogic Software  
+  manufacturer: Belogic Software
   release: 2009
   hardware: console
   extensions: [uze]
@@ -2059,7 +2059,7 @@ uzem:
 
 mu:
   name:       Palm OS
-  manufacturer: Palm  
+  manufacturer: Palm
   release: 2001
   hardware: portable
   extensions: [prc, pqa, img]
@@ -2068,7 +2068,7 @@ mu:
       mu: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MU] }
 gong:
   name:       Pong
-  manufacturer: Ports  
+  manufacturer: Ports
   release: 1972
   hardware: console
   extensions: [game]
@@ -2107,7 +2107,7 @@ vitaquake2:
 
 j2me:
   name:       Java 2 MicroEdition
-  manufacturer: Ports
+  manufacturer: Sun
   release: 2001
   hardware: portable
   extensions: [jar]
@@ -2115,3 +2115,13 @@ j2me:
     libretro:
       squirreljme:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SQUIRRELJME] }
       freej2me:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FREEJ2ME] }
+
+zc210:
+  name:       Zelda Classic
+  manufacturer: Ports
+  release: 1999
+  hardware: console
+  extensions: [qst]
+  emulators:
+    libretro:
+      zc210:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ZC210] }
