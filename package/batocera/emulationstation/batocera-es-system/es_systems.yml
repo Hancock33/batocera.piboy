@@ -2144,4 +2144,4 @@ sameduck:
   extensions: [bin]
   emulators:
     libretro:
-      vemulator:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEBOY] }
+      vemulator:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEDUCK] }

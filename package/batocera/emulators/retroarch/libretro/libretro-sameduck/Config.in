@@ -1,4 +1,4 @@
-config BR2_PACKAGE_LIBRETRO_SAMEBOY
+config BR2_PACKAGE_LIBRETRO_SAMEDUCK
 	bool "libretro-sameduck"
 	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
@@ -7,5 +7,5 @@ config BR2_PACKAGE_LIBRETRO_SAMEBOY
 
 	  http://www.libretro.com
 
-comment "LIBRETRO_SAMEBOY needs a toolchain w/ C++"
+comment "LIBRETRO_SAMEDUCK needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP
