@@ -2125,3 +2125,13 @@ zc210:
   emulators:
     libretro:
       zc210:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ZC210] }
+
+vemulator:
+  name:       SEGA Dreamcast VMU
+  manufacturer: Sega
+  release: 1998
+  hardware: console
+  extensions: [vms, dci, bin]
+  emulators:
+    libretro:
+      vemulator:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VEMULATOR] }
