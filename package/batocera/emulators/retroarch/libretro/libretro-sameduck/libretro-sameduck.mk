@@ -13,7 +13,7 @@ define LIBRETRO_SAMEDUCK_BUILD_CMDS
 endef
 
 define LIBRETRO_SAMEDUCK_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/sameduck_libretro.so \
+	$(INSTALL) -D $(@D)/build/bin/sameduck_libretro.so \
     $(TARGET_DIR)/usr/lib/libretro/sameduck_libretro.so
 endef
 
