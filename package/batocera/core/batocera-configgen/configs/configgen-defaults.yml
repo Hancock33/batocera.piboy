@@ -396,6 +396,9 @@ uzem:
 vectrex:
   emulator: libretro
   core:     vecx
+vemulator:
+  emulator: libretro
+  core:     vemulator
 virtualboy:
   emulator: libretro
   core:     vb
