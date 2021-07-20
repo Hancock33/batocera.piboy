@@ -333,6 +333,9 @@ pygame:
 reminiscence:
   emulator: libretro
   core:     reminiscence
+sameduck:
+  emulator: libretro
+  core:     sameduck
 satellaview:
   emulator: libretro
   core:     snes9x
