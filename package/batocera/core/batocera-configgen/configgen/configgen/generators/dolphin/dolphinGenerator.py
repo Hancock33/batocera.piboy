@@ -135,10 +135,10 @@ class DolphinGenerator(Generator):
         if not dolphinGFXSettings.has_section("Hacks"):
             dolphinGFXSettings.add_section("Hacks")
         if not dolphinGFXSettings.has_section("Enhancements"):
-            dolphinGFXSettings.add_section("Enhancements")             
+            dolphinGFXSettings.add_section("Enhancements")
         if not dolphinGFXSettings.has_section("Hardware"):
-            dolphinGFXSettings.add_section("Hardware")  
-            
+            dolphinGFXSettings.add_section("Hardware")
+
         dolphinGFXSettings.set("Settings", "AspectRatio", str(getGfxRatioFromConfig(system.config, gameResolution)))
 
         # Show fps
@@ -157,7 +157,7 @@ class DolphinGenerator(Generator):
 
         # Widescreen Hack
         if system.isOptSet('widescreen_hack') and system.getOptBoolean('widescreen_hack'):
-            # Prefer Cheats than Hack 
+            # Prefer Cheats than Hack
             if system.isOptSet('enable_cheats') and system.getOptBoolean('enable_cheats'):
                 dolphinGFXSettings.set("Settings", "wideScreenHack", '"False"')
             else:
@@ -177,7 +177,7 @@ class DolphinGenerator(Generator):
             dolphinGFXSettings.set("Enhancements", "ForceFiltering", '"True"')
             dolphinGFXSettings.set("Enhancements", "ArbitraryMipmapDetection", '"True"')
             dolphinGFXSettings.set("Enhancements", "DisableCopyFilter", '"True"')
-            dolphinGFXSettings.set("Enhancements", "ForceTrueColor", '"True"')            
+            dolphinGFXSettings.set("Enhancements", "ForceTrueColor", '"True"')
         else:
             if dolphinGFXSettings.has_section("Hacks"):
                 dolphinGFXSettings.remove_option("Hacks", "BBoxEnable")
@@ -191,7 +191,7 @@ class DolphinGenerator(Generator):
                 dolphinGFXSettings.remove_option("Enhancements", "ForceFiltering")
                 dolphinGFXSettings.remove_option("Enhancements", "ArbitraryMipmapDetection")
                 dolphinGFXSettings.remove_option("Enhancements", "DisableCopyFilter")
-                dolphinGFXSettings.remove_option("Enhancements", "ForceTrueColor")  
+                dolphinGFXSettings.remove_option("Enhancements", "ForceTrueColor")
 
         # Internal resolution settings
         if system.isOptSet('internal_resolution'):

@@ -11,13 +11,13 @@ hyst = 1
 # Volume Controller
 try:
     while 1:
-        # Read Volume 
+        # Read Volume
         sndVolFile = open("/sys/kernel/xpi_gamecon/volume", "r")
         sndVol = int(sndVolFile.read())
         sndVolFile.close()
         if abs(sndVol - sndVolOld) > hyst:
             # Set Volume
-            #sndSet = "amixer sset 'Headphone' " + str(sndVol) + "% > /dev/null"          
+            #sndSet = "amixer sset 'Headphone' " + str(sndVol) + "% > /dev/null"
             sndSet ="pactl -- set-sink-volume 0 " + str(sndVol) + "% > /dev/null"
             os.system(sndSet)
 

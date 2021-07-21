@@ -26,7 +26,7 @@ def poweroff():
 if __name__ == "__main__":
 	#initialize GPIO settings
 	init()
-	#create a multiprocessing.Process instance for each function to enable parallelism 
+	#create a multiprocessing.Process instance for each function to enable parallelism
 	powerProcess = Process(target = poweroff)
 	powerProcess.start()
 

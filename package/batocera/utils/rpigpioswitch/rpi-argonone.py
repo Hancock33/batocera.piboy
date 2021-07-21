@@ -8,7 +8,7 @@ Make sure to add in /boot/config.txt:
  dtparam=i2c_arm=on
  dtparam=i2c-1=on
 
-(it should be installed by Batocera when you enable 
+(it should be installed by Batocera when you enable
 Argon One support case)
 
 This daemon is launched through /etc/init.d/S92switch

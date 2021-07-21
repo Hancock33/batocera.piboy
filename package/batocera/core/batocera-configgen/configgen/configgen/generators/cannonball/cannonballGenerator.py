@@ -13,7 +13,7 @@ class CannonballGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
         configFile = batoceraFiles.CONF + '/cannonball/config.xml'
-        
+
         if not os.path.exists(os.path.dirname(configFile)):
             os.makedirs(os.path.dirname(configFile))
 
@@ -58,7 +58,7 @@ class CannonballGenerator(Generator):
         cannonballXml = codecs.open(configFile, "w", "utf-8")
         dom_string = os.linesep.join([s for s in config.toprettyxml().splitlines() if s.strip()]) # remove ugly empty lines while minicom adds them...
         cannonballXml.write(dom_string)
-        
+
         return Command.Command(array=["cannonball"])
 
     @staticmethod
@@ -72,7 +72,7 @@ class CannonballGenerator(Generator):
             xml_section = xml_section[0]
 
         return xml_section
-    
+
     @staticmethod
     def getSection(config, xml_root, name):
         xml_section = xml_root.getElementsByTagName(name)

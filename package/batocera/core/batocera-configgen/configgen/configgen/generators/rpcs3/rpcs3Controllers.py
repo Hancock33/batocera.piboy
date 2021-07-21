@@ -53,7 +53,7 @@ def generateInputConfigs(controllers):
                         f.write("{}: {}\n".format(key, rpcs3_mappingValue(reversedName, input.type, input.code, int(input.value)*-1)))
                     else:
                         eslog.log("no rpcs3 mapping found for {}".format(input.name))
-                    
+
             rpcs3_otherKeys(f, controller)
             f.close()
         nplayer += 1

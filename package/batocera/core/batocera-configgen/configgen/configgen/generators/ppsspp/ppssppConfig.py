@@ -100,7 +100,7 @@ def createPPSSPPConfig(iniConfig, system):
     else:
         iniConfig.set("SystemParam", "NickName", "Batocera")
     # Disable Encrypt Save (permit to exchange save with different machines)
-    iniConfig.set("SystemParam", "EncryptSave", "False")   
+    iniConfig.set("SystemParam", "EncryptSave", "False")
 
 
     ## [GENERAL]

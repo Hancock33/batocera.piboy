@@ -21,16 +21,16 @@ if os.path.isfile('/boot/fan.ini'):
 	from configparser import ConfigParser
 	config_object = ConfigParser()
 	config_object.read("/boot/fan.ini")
-    
+
 	userinfo = config_object["FAN"]
-    
+
 	fphihi = (userinfo["75DegC"])
 	fphi = (userinfo["70DegC"])
 	fpmed = (userinfo["65DegC"])
 	fplo = (userinfo["60DegC"])
 	fplolo = (userinfo["55DegC"])
 	fpdefault = (userinfo["50DegC"])
-    
+
 # Fan Controller
 try:
     while 1:

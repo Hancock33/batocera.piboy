@@ -42,7 +42,7 @@ def setControllersConfig(iniConfig, controllers, systemconfig):
         section = "Input-SDL-Control"+str(x)
         if iniConfig.has_section(section):
             cleanPlayer(nplayer, iniConfig)
-                
+
 def defineControllerKeys(controller, systemconfig):
         mupenmapping = getMupenMapping()
 

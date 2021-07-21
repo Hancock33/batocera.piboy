@@ -240,7 +240,7 @@ def main(args, maxnbplayers):
         # run a script after emulator shuts down
         callExternalScripts("/userdata/system/scripts", "gameStop", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
         callExternalScripts("/usr/share/batocera/configgen/scripts", "gameStop", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
-   
+
     finally:
         # always restore the resolution
         if resolutionChanged:
@@ -314,7 +314,7 @@ if __name__ == '__main__':
         parser.add_argument("-p{}nbbuttons" .format(p), help="player{} controller number of buttons".format(p), type=str, required=False)
         parser.add_argument("-p{}nbhats"    .format(p), help="player{} controller number of hats"   .format(p), type=str, required=False)
         parser.add_argument("-p{}nbaxes"    .format(p), help="player{} controller number of axes"   .format(p), type=str, required=False)
-    
+
     parser.add_argument("-system", help="select the system to launch", type=str, required=True)
     parser.add_argument("-rom", help="rom absolute path", type=str, required=True)
     parser.add_argument("-emulator", help="force emulator", type=str, required=False)

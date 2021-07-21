@@ -16,7 +16,7 @@ def generateMoonlightConfig():
 
     ## Hostname or IP-address of host to connect to
     ## By default host is autodiscovered using mDNS
-    #address = 
+    #address =
 
     ## Video streaming configuration
     moonlightConfig.save('width', '1280')

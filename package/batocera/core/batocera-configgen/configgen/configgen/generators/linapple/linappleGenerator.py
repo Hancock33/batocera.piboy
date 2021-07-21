@@ -17,7 +17,7 @@ from generators.Generator import Generator
 class LinappleGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
-        
+
         # Master.dsk
         if not isfile(batoceraFiles.linappleMasterDSKFile):
             if not isdir(dirname(batoceraFiles.linappleConfigFile)):

@@ -15,7 +15,7 @@ def get_fs_type(mypath):
 
 def bsod(screen, message, error_msg):
     background_color = (0, 0, 170)
-    
+
     # background
     screen.fill(background_color)
 

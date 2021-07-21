@@ -19,14 +19,14 @@ viceJoystick = {
             "x":                "0 1 # 2 7 4",
             "y":                "0 1 # 2 7 7",
             "pagedown":         "0 1 # 2 4 7",
-            "pageup":           "0 1 # 2 3 1"             
+            "pageup":           "0 1 # 2 3 1"
         }
 
 # Create the controller configuration file
 def generateControllerConfig(viceConfigFile, playersControllers):
     # vjm file
     viceFile = viceConfigFile + "/sdl-joymap.vjm"
-                
+
     if not os.path.exists(os.path.dirname(viceFile)):
         os.makedirs(os.path.dirname(viceFile))
 
@@ -34,7 +34,7 @@ def generateControllerConfig(viceConfigFile, playersControllers):
     nplayer = 1
     listVice = [];
     for playercontroller, pad in sorted(playersControllers.items()):
-        if nplayer == 1:    
+        if nplayer == 1:
             listVice.append("!CLEAR")
             # joystick1right
             listVice.append("0 0 0 1 1 8")
@@ -44,7 +44,7 @@ def generateControllerConfig(viceConfigFile, playersControllers):
             listVice.append("0 0 2 1 1 2")
             # joystick1up
             listVice.append("0 0 3 1 1 1")
-            
+
             # joystick2right
             listVice.append("0 0 6 1 1 8")
             # joystick2left
@@ -53,7 +53,7 @@ def generateControllerConfig(viceConfigFile, playersControllers):
             listVice.append("0 0 8 2 0 7")
             # joystick2up
             listVice.append("0 0 9 2 0 7")
-            
+
             for indexName, indexValue in viceJoystick.items():
                 listVice.append(indexValue.replace('#', pad.inputs[indexName].id, 1))
             nplayer += 1

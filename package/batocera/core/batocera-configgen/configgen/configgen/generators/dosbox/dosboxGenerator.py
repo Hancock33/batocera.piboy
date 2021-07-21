@@ -10,7 +10,7 @@ class DosBoxGenerator(Generator):
 
     def getResolutionMode(self, config):
         return 'default'
-    
+
     # Main entry of the module
     # Return command
     def generate(self, system, rom, playersControllers, gameResolution):
@@ -18,11 +18,11 @@ class DosBoxGenerator(Generator):
         gameDir = rom
         batFile = gameDir + "/dosbox.bat"
         gameConfFile = gameDir + "/dosbox.cfg"
-           
+
         commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
 			"-fullscreen",
-			"-userconf", 
-			"-exit", 
+			"-userconf",
+			"-exit",
 			"""{}""".format(batFile),
 			"-c", """set ROOT={}""".format(gameDir)]
         if os.path.isfile(gameConfFile):

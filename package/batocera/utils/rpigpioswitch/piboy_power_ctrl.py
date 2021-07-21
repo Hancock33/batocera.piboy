@@ -11,7 +11,7 @@ hyst = 1
 # Volume Controller
 try:
     while 1:
-        # Read Volume 
+        # Read Volume
         pwrctrlFile = open("/sys/kernel/xpi_gamecon/status", "r")
         pwrctrl = int(pwrctrlFile.read())
         pwrctrlFile.close()
@@ -24,7 +24,7 @@ try:
         pwrctrlOld = pwrctrl
         # Wait until next refresh
         time.sleep(WAIT_TIME)
-        
+
 # If a keyboard interrupt occurs (ctrl   c)
 except KeyboardInterrupt:
     sys.exit()
