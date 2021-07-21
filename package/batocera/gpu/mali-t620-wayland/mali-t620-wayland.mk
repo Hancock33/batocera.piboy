@@ -44,7 +44,7 @@ endef
 
 define MALI_T620_WAYLAND_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib
-	
+
 	cp $(@D)/lib/arm-linux-gnueabihf/libmali-midgard-t620-r12p0-wayland-gbm.so \
 		$(TARGET_DIR)/usr/lib/libmali.so
 

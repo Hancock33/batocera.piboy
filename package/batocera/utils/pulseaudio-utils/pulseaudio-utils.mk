@@ -146,7 +146,7 @@ endif
 define PULSEAUDIO_UTILS_INSTALL_TARGET_CMDS
 	# pactl
 	cp $(@D)/src/pactl $(TARGET_DIR)/usr/bin/
-	
+
 	# libpulse
 	cp $(@D)/src/.libs/libpulse.so $(TARGET_DIR)/usr/lib/
 	ln -sf libpulse.so $(TARGET_DIR)/usr/lib/libpulse.so.0

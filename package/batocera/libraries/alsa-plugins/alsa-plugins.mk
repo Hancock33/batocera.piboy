@@ -14,7 +14,7 @@ ALSA_PLUGINS_CONF_OPTS += --with-plugindir=/usr/lib/alsa-lib \
 	--localstatedir=/var \
 	--disable-jack \
 	--disable-avcodec \
-	--with-speex=builtin 
+	--with-speex=builtin
 
 # define ALSA_PLUGINS_PULSEAUDIO_CONF
 # 	mv $(TARGET_DIR)/etc/alsa/conf.d/99-pulseaudio-default.conf.example \

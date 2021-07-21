@@ -23,7 +23,7 @@ endef
 
 define DOSBOX_X_CONFIGURE_CONFIG
     mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/dosbox
-    
+
     cp -rf $(@D)/dosbox-x.reference.conf \
         $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/dosbox/dosboxx.conf
 endef

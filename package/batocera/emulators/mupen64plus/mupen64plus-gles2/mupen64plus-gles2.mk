@@ -3,7 +3,7 @@
 # mupen64plus video gles2
 #
 ################################################################################
-# Version.: Commits on Aug 8, 2019 
+# Version.: Commits on Aug 8, 2019
 MUPEN64PLUS_GLES2_VERSION = 1f53773f9045f5f18b895fe41f166d272175d72f
 MUPEN64PLUS_GLES2_SITE = $(call github,ricrpi,mupen64plus-video-gles2n64,$(MUPEN64PLUS_GLES2_VERSION))
 MUPEN64PLUS_GLES2_LICENSE = GPL
@@ -34,7 +34,7 @@ define MUPEN64PLUS_GLES2_INSTALL_TARGET_CMDS
 		INSTALL="/usr/bin/install" \
 		INSTALL_STRIP_FLAG="" \
 		-C $(@D)/projects/unix all $(MUPEN64PLUS_PARAMS) OPTFLAGS="$(TARGET_CXXFLAGS)" install
-		
+
 		cp $(@D)/data/gles2n64.conf    "$(TARGET_DIR)/usr/share/mupen64plus/"
 		cp $(@D)/data/gles2n64rom.conf "$(TARGET_DIR)/usr/share/mupen64plus/"
 endef

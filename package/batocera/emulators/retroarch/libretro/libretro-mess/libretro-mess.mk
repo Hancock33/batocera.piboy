@@ -25,7 +25,7 @@ endif
 define LIBRETRO_MESS_BUILD_CMDS
 		#create some dirs while with parallelism, sometimes it fails because this directory is missing
 		mkdir -p $(@D)/build/libretro/obj/x64/libretro/src/osd/libretro/libretro-internal
-	
+
 		$(MAKE) -j$(LIBRETRO_MESS_JOBS) -C $(@D)/ OPENMP=1 REGENIE=1 VERBOSE=1 NOWERROR=1 PYTHON_EXECUTABLE=python3            \
 		CONFIG=libretro LIBRETRO_OS="unix" ARCH="" PROJECT="" ARCHOPTS="$(LIBRETRO_MESS_ARCHOPTS)" \
 		DISTRO="debian-stable" OVERRIDE_CC="$(TARGET_CC)" OVERRIDE_CXX="$(TARGET_CXX)"             \
