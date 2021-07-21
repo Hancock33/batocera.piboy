@@ -363,6 +363,9 @@ sg1000:
 solarus:
   emulator: solarus
   core:     solarus
+steam:
+  emulator: steam
+  core:     steam
 sufami:
   emulator: libretro
   core:     snes9x
