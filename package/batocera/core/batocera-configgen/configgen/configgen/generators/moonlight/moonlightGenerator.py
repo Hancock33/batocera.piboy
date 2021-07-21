@@ -12,7 +12,7 @@ class MoonlightGenerator(Generator):
 
     def getResolutionMode(self, config):
         return 'default'
-    
+
     # Main entry of the module
     # Configure fba and return a command
     def generate(self, system, rom, playersControllers, gameResolution):

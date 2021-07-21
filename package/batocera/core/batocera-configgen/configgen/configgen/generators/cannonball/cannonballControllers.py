@@ -18,7 +18,7 @@ cannonballJoystick = {
 # Create the controller configuration file
 def generateControllerConfig(config, xml_root, playersControllers):
     xml_controls = cannonballGenerator.CannonballGenerator.getSection(config, xml_root, "controls")
-    
+
     nplayer = 1
     for playercontroller, pad in sorted(playersControllers.items()):
         if nplayer == 1:

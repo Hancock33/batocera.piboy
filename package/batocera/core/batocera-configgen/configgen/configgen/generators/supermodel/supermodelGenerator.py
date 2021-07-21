@@ -13,13 +13,13 @@ class SupermodelGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
         commandArray = ["supermodel", "-fullscreen"]
-        
+
         # legacy3d
         if system.isOptSet("engine3D") and system.config["engine3D"] == "legacy3d":
             commandArray.append("-legacy3d")
         else:
             commandArray.append("-new3d")
-        
+
         # widescreen
         if system.isOptSet("wideScreen") and system.getOptBoolean("wideScreen"):
             commandArray.append("-wide-screen")

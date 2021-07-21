@@ -30,7 +30,7 @@ class LexaloffleGenerator(Generator):
         else:
                 commandArray.extend(["-show_fps", "0"])
 
-        rombase=os.path.basename(rom) 
+        rombase=os.path.basename(rom)
         idx=rombase.index('.')
         rombase=rombase[:idx]
         if (rombase.lower() == "splore" or rombase.lower() == "console"):

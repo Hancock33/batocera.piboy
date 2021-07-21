@@ -123,9 +123,9 @@ class LibretroGenerator(Generator):
         # The libretro core for EasyRPG requires to launch the RPG_RT.ldb file inside the .easyrpg folder
         if system.name == 'easyrpg' and system.config['core'] == "easyrpg":
             rom = rom + '/RPG_RT.ldb'
-        
+
         if system.name == 'scummvm':
             rom = os.path.dirname(rom) + '/' + romName[0:-8]
-        
+
         commandArray.append(rom)
         return Command.Command(array=commandArray)

@@ -69,7 +69,7 @@ def generateControllerConfig(daphneConfigFile, playersControllers):
 
     for indexController in playersControllers:
         controller = playersControllers[indexController]
-       
+
         for indexName, indexValue in daphneKeyboard.items():
             buttonValue = str(0)
             if(daphneJoystick[indexName] != ""):

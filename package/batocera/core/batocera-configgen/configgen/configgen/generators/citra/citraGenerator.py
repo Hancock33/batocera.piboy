@@ -92,7 +92,7 @@ class CitraGenerator(Generator):
         ## [UI]
         if not citraConfig.has_section("UI"):
             citraConfig.add_section("UI")
-        
+
         # Start Fullscreen
         citraConfig.set("UI", "fullscreen",       "true")
         citraConfig.set("UI", "displayTitleBars", "false")
@@ -158,7 +158,7 @@ class CitraGenerator(Generator):
         # Options required to load the functions when the configuration file is created
         if not citraConfig.has_option("Controls", "profiles\\size"):
             citraConfig.set("Controls", "profile", 0)
-            citraConfig.set("Controls", "profile\\default", "true")    
+            citraConfig.set("Controls", "profile\\default", "true")
             citraConfig.set("Controls", "profiles\\1\\name", "default")
             citraConfig.set("Controls", "profiles\\1\\name\\default", "true")
             citraConfig.set("Controls", "profiles\\size", 1)

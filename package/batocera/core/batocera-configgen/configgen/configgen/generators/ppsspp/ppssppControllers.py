@@ -131,17 +131,17 @@ def generateControllerConfig(controller):
         input = controller.inputs[index]
         if input.name not in ppssppMapping or input.type not in ppssppMapping[input.name]:
             continue
-        
+
         var = ppssppMapping[input.name][input.type]
         padnum = controller.index
-        
+
         code = input.code
         if input.type == 'button':
             pspcode = sdlNameToNKCode[input.name]
             val = "{}-{}".format( DEVICE_ID_PAD_0 + padnum, pspcode )
             val = optionValue(Config, section, var, val)
             Config.set(section, var, val)
-            
+
         elif input.type == 'axis':
             # Get the axis code
             nkAxisId = SDLJoyAxisMap[input.id]
@@ -151,7 +151,7 @@ def generateControllerConfig(controller):
             val = optionValue(Config, section, var, val)
             print("Adding {} to {}".format(var, val))
             Config.set(section, var, val)
-            
+
             # Skip the rest if it's an axis dpad
             if input.name in [ 'up', 'down', 'left', 'right' ] : continue
             # Also need to do the opposite direction manually. The input.id is the same as up/left, but the direction is opposite
@@ -163,12 +163,12 @@ def generateControllerConfig(controller):
                 var = ppssppMapping['joystick2down'][input.type]
             elif input.name == 'joystick2left':
                 var = ppssppMapping['joystick2right'][input.type]
-                
+
             pspcode = axisToCode(nkAxisId, -int(input.value))
             val = "{}-{}".format( DEVICE_ID_PAD_0 + padnum, pspcode )
             val = optionValue(Config, section, var, val)
             Config.set(section, var, val)
-        
+
         elif input.type == 'hat' and input.name in SDLHatMap:
             var = ppssppMapping[input.name][input.type]
             pspcode = SDLHatMap[input.name]

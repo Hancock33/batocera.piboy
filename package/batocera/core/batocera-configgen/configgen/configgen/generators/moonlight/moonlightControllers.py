@@ -63,7 +63,7 @@ def writeControllersConfig(system, rom, controllers):
 # ex : ['btn_select'] = 296
 def generateControllerConfig(player, controller):
     config = dict()
-   
+
     for index in controller.inputs:
         input = controller.inputs[index]
         if input.name not in mlMapping:
@@ -79,7 +79,7 @@ def generateControllerConfig(player, controller):
             else:
                 code = input.code
         config[var] = code
-    
+
     # Add unhandled params
     config['reverse_x']         = "false"
     config['reverse_y']         = "true"

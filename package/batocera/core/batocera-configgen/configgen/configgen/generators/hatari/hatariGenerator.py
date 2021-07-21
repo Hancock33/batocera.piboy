@@ -24,7 +24,7 @@ class HatariGenerator(Generator):
             "megaste_205":  { "machine": "megaste", "tos": "205"  },
             "megaste_206":  { "machine": "megaste", "tos": "206"  },
         }
-        
+
 	# Start emulator fullscreen
         commandArray = ["hatari", "--fullscreen"]
 
@@ -143,7 +143,7 @@ class HatariGenerator(Generator):
             "ste":     ["162", "106"],
             "megaste": ["206", "205"]
         }
-        
+
         if machine in all_machines_bios:
             l_tos = []
             if tos_version != "auto":

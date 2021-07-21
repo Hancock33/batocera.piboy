@@ -39,7 +39,7 @@ def setMupenConfig(iniConfig, system, controllers, gameResolution):
     iniConfig.set("Video-General", "ScreenHeight", str(gameResolution["height"]))
     iniConfig.set("Video-General", "Fullscreen", "True") # required at least for drm boards
     iniConfig.set("Video-General", "VerticalSync", "True")
-    
+
     # Graphic Plugins
     # DOC : https://github.com/mupen64plus/mupen64plus-video-glide64mk2/blob/master/src/Glide64/Main.cpp
     if not iniConfig.has_section("Video-Glide64mk2"):
@@ -137,7 +137,7 @@ def setMupenConfig(iniConfig, system, controllers, gameResolution):
     else:
         iniConfig.set("64DD", "IPL-ROM", "")
     iniConfig.set("64DD", "Disk", "")
-    
+
 
     # Display FPS
     if system.config['showFPS'] == 'true':

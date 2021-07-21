@@ -44,7 +44,7 @@ class DosBoxxGenerator(Generator):
 
         # -fullscreen removed as it crashes on N2
         commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
-			"-exit", 
+			"-exit",
 			"-c", """mount c {}""".format(gameDir),
                         "-c", "c:",
                         "-c", "dosbox.bat",

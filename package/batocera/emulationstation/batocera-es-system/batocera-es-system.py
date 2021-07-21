@@ -133,7 +133,7 @@ class EsSystemConf:
             systemTxt += "        <platform>%s</platform>\n"   % (platformValue)
         systemTxt += "        <theme>%s</theme>\n"         % (EsSystemConf.themeName(system, data))
         if groupValue != "":
-            systemTxt += "        <group>%s</group>\n" % (groupValue)        
+            systemTxt += "        <group>%s</group>\n" % (groupValue)
         systemTxt += listEmulatorsTxt
         systemTxt += "  </system>\n"
         return systemTxt
@@ -162,7 +162,7 @@ class EsSystemConf:
                 else:
                     return data["path"]
         return system
-        
+
     # Returns the path to the rom folder for the emulator
     @staticmethod
     def systemPlatform(system, data):
@@ -179,7 +179,7 @@ class EsSystemConf:
           return data["theme"]
         return system
 
-    # In case you need to specify a different command line 
+    # In case you need to specify a different command line
     @staticmethod
     def commandName(data):
         if "command" in data:
