@@ -5,4 +5,4 @@ config BR2_PACKAGE_LIBXMP
 	  over 90 mainstream and obscure module formats including Protracker (MOD),
 	  Scream Tracker 3 (S3M), Fast Tracker II (XM), and Impulse Tracker (IT).
 
-	  https://github.com/libxmp/libxmp	  
+	  https://github.com/libxmp/libxmp

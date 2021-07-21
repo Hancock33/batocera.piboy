@@ -30,7 +30,7 @@ define QTSIXA_SHANWAN_BUILD_CMDS
 endef
 
 define QTSIXA_SHANWAN_INSTALL_TARGET_CMDS
-	$(MAKE) INSTALLDIR="shanwan" BINDIR="shanwan" DESTDIR=$(TARGET_DIR) -C $(@D)/sixad install 
+	$(MAKE) INSTALLDIR="shanwan" BINDIR="shanwan" DESTDIR=$(TARGET_DIR) -C $(@D)/sixad install
 endef
 
 define QTSIXA_SHANWAN_RPI_FIXUP
