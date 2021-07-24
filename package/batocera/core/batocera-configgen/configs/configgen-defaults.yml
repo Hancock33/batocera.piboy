@@ -281,6 +281,9 @@ openbor:
   options:
     ratio:  0
     filter: 0
+opentyrian:
+  emulator: opentyrian
+  core:     opentyrian
 
 # P-S
 

@@ -56,6 +56,7 @@ from generators.steam.steamGenerator import SteamGenerator
 from generators.ecwolf.ecwolfGenerator import ECWolfGenerator
 from generators.lexaloffle.lexaloffleGenerator import LexaloffleGenerator
 from generators.ionfury.ionfuryGenerator import IonfuryGenerator
+from generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
 
 import controllersConfig as controllers
 import signal
