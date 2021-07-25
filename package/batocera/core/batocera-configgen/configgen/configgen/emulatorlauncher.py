@@ -116,6 +116,7 @@ generators = {
     'ecwolf': ECWolfGenerator(),
     'lexaloffle': LexaloffleGenerator(),
     'ionfury': IonfuryGenerator(),
+    'opentyrian': OpentyrianGenerator(),
 }
 
 def main(args, maxnbplayers):
