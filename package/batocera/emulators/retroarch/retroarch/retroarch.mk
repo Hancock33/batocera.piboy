@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version.: Commits on Jul 24, 2021
-RETROARCH_VERSION = 73342af8b6b2f503286bd44bed266625fbbe371f
+# Version.: Commits on Jul 25, 2021
+RETROARCH_VERSION = 8373ac67460cd0e092453bad6bb83e674b5af31a
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac
@@ -115,6 +115,10 @@ ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
 	RETROARCH_DEPENDENCIES += libgl
 endif
 
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
+	RETROARCH_CONF_OPTS += --enable-opengles3 --enable-opengles3_1
+endif
+
 ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),)
 	ifeq ($(BR2_PACKAGE_MESA3D_OPENGL_EGL),y)
 		RETROARCH_TARGET_CFLAGS += -DEGL_NO_X11
@@ -209,7 +213,6 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI3),y)
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
-	RETROARCH_CONF_OPTS += --enable-opengles3 --enable-opengles3_1
 	LIBRETRO_PLATFORM += rpi4
 endif
 
