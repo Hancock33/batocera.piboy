@@ -3963,3 +3963,9 @@ lexaloffle:
 
 ecwolf:
   features: [padtokeyboard]
+
+ionfury:
+  features: [padtokeyboard]
+
+opentyrian:
+  features: [padtokeyboard]
