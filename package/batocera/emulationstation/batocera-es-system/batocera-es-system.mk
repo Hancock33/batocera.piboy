@@ -8,6 +8,12 @@ BATOCERA_ES_SYSTEM_DEPENDENCIES = host-python3 host-python-pyyaml batocera-confi
 BATOCERA_ES_SYSTEM_SOURCE=
 BATOCERA_ES_SYSTEM_VERSION=1.03
 
+ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI),y)
+ PYBOY_INSTALL=y
+else
+ PYBOY_INSTALL=n
+endif
+
 define BATOCERA_ES_SYSTEM_BUILD_CMDS
 	$(HOST_DIR)/bin/python \
 		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/batocera-es-system.py \
@@ -24,12 +30,12 @@ endef
 
 define BATOCERA_ES_SYSTEM_INSTALL_TARGET_CMDS
         mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit
-	$(INSTALL) -m 0644 -D $(@D)/es_systems.cfg $(TARGET_DIR)/usr/share/emulationstation/es_systems.cfg
-	$(INSTALL) -m 0644 -D $(@D)/es_features.cfg $(TARGET_DIR)/usr/share/emulationstation/es_features.cfg
+	    $(INSTALL) -m 0644 -D $(@D)/es_systems.cfg $(TARGET_DIR)/usr/share/emulationstation/es_systems.cfg
+	    $(INSTALL) -m 0644 -D $(@D)/es_features.cfg $(TARGET_DIR)/usr/share/emulationstation/es_features.cfg
         mkdir -p $(@D)/roms # in case there is no rom
-	cp -pr $(@D)/roms $(TARGET_DIR)/usr/share/batocera/datainit/
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/roms/piboy $(TARGET_DIR)/usr/share/batocera/datainit/roms
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/bios $(TARGET_DIR)/usr/share/batocera/datainit/
+	    cp -pr $(@D)/roms $(TARGET_DIR)/usr/share/batocera/datainit/
+	    cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/bios $(TARGET_DIR)/usr/share/batocera/datainit/    
+	    @if [ "$(PYBOY_INSTALL)" = "y" ]; then cp -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/roms/piboy $(TARGET_DIR)/usr/share/batocera/datainit/roms ; fi
 endef
 
 $(eval $(generic-package))
