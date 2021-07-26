@@ -55,6 +55,7 @@ from generators.eduke32.eduke32Generator import Eduke32Generator
 from generators.steam.steamGenerator import SteamGenerator
 from generators.ecwolf.ecwolfGenerator import ECWolfGenerator
 from generators.lexaloffle.lexaloffleGenerator import LexaloffleGenerator
+from generators.model2emu.model2emuGenerator import Model2EmuGenerator
 from generators.ionfury.ionfuryGenerator import IonfuryGenerator
 from generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
 
@@ -115,6 +116,7 @@ generators = {
     'steam': SteamGenerator(),
     'ecwolf': ECWolfGenerator(),
     'lexaloffle': LexaloffleGenerator(),
+    'model2emu': Model2EmuGenerator(),
     'ionfury': IonfuryGenerator(),
     'opentyrian': OpentyrianGenerator(),
 }
