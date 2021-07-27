@@ -744,6 +744,9 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
 
 	# Sinclair ZX Spectrum
 	select BR2_PACKAGE_LIBRETRO_FUSE        # ALL
+	
+	# Sam Coupe
+	select BR2_PACKAGE_SIMCOUPE		        # ALL
 
 	# Amstrad CPC
 	select BR2_PACKAGE_LIBRETRO_CAP32       # ALL

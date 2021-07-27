@@ -3980,3 +3980,6 @@ ionfury:
 
 opentyrian:
   features: [padtokeyboard]
+
+simcoupe:
+  features: [padtokeyboard]
