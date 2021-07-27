@@ -4,18 +4,24 @@
 #
 ################################################################################
 # Version.: Commits on Jul 7, 2021
-EDUKE32_VERSION = b10f9112e1558582358a8a7ef208f830134a0a72
+EDUKE32_VERSION = f3fea8c15f877cfd52490f79dfff7357d5e3462c
 EDUKE32_SITE = https://voidpoint.io/terminx/eduke32.git
 
 EDUKE32_DEPENDENCIES = sdl2 sdl2_image
 EDUKE32_SITE_METHOD=git
 EDUKE32_LICENSE = GPLv3
 
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
+EDUKE32_CONF_OPTS=USE_OPENGL=1 POLYMER=1
+else
+EDUKE32_CONF_OPTS=USE_OPENGL=0
+endif
+
 define EDUKE32_BUILD_CMDS
 		$(TARGET_CONFIGURE_OPTS) $(MAKE) \
 		CPP="$(TARGET_CPP)" CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
 		AS="$(TARGET_CC)" LD="$(TARGET_LD)" STRIP="$(TARGET_STRIP)" \
-		-C $(@D) -f GNUmakefile HAVE_GTK2=0 USE_OPENGL=0
+		-C $(@D) -f GNUmakefile HAVE_GTK2=0 $(EDUKE32_CONF_OPTS)
 endef
 
 define EDUKE32_INSTALL_TARGET_CMDS
