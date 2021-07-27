@@ -2184,3 +2184,13 @@ opentyrian:
     This system is a standalone  game. No rom required.
   comment_fr: |
     Ce système est le premier jeu de autonome. Aucune rom n'est requise.
+
+simcoupe:
+  name:       SAM Coupé
+  manufacturer: Miles Gordon Technology
+  release: 1989
+  hardware: computer
+  extensions: [cpm, dsk, sad, mgt, sdf, td0, sbt]
+  emulators:
+    simcoupe:
+      simcoupe:  { requireAnyOf: [BR2_PACKAGE_SIMCOUPE] }
