@@ -2194,3 +2194,13 @@ simcoupe:
   emulators:
     simcoupe:
       simcoupe:  { requireAnyOf: [BR2_PACKAGE_SIMCOUPE] }
+
+gmaster:
+  name:       Game Master
+  manufacturer: Hartung
+  release: 1990
+  hardware: portable
+  extensions: [zip, 7z]
+  emulators:
+    libretro:
+      mess:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESS] }
