@@ -2204,3 +2204,13 @@ gmaster:
   emulators:
     libretro:
       mess:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESS] }
+
+gamecom:
+  name:       Game.com
+  manufacturer: Tiger Electronics
+  release: 1999 
+  hardware: portable
+  extensions: [zip, 7z]
+  emulators:
+    libretro:
+      mess:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESS] }

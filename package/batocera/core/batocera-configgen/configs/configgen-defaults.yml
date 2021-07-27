@@ -144,6 +144,9 @@ gameandwatch:
   core:     gw
   options:
     forceNoBezel: true
+gamecom:
+  emulator: libretro
+  core:     mess
 gamecube:
   emulator: dolphin
   core:     dolphin
