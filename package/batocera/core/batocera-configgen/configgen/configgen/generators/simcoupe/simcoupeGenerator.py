@@ -8,7 +8,7 @@ import controllersConfig
 class SimcoupeGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
-        commandArray = ["simcoupe", "-fullscreen", "autoboot", "-disk1", rom]
+        commandArray = ["simcoupe", "autoboot", "-disk1", rom]
         return Command.Command(
             array=commandArray,
             env={
