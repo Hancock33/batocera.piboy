@@ -208,6 +208,9 @@ mastersystem:
 megadrive:
   emulator: libretro
   core:     genesisplusgx
+mess:
+  emulator: libretro
+  core:     mess
 model2:
   emulator: model2emu
   core:     model2emu
