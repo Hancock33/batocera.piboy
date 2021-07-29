@@ -1,0 +1,5 @@
+## SYSTEM VISUAL TECHNOLOGY VISUAL 1050 DISKETTES ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".zip .7z"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".zip .7z"

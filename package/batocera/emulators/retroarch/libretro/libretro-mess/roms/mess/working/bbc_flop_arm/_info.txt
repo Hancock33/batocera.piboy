@@ -1,0 +1,5 @@
+## SYSTEM ACORN ARM CO-PROCESSOR DISCS ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".zip .7z"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".zip .7z"

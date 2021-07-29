@@ -1,0 +1,5 @@
+## SYSTEM NCR DECISION MATE V DISK IMAGES ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".zip .7z"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".zip .7z"

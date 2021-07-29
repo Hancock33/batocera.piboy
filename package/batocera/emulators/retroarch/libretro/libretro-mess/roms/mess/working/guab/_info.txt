@@ -1,0 +1,5 @@
+## SYSTEM JPM GIVE US A BREAK FLOPPY DISKS ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".zip .7z"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".zip .7z"
