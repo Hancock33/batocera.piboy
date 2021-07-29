@@ -54,6 +54,10 @@ define LIBRETRO_MESS_INSTALL_TARGET_CMDS
 		$(TARGET_DIR)/usr/lib/libretro/mess_libretro.so
 		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/mame/samples
 		cp -r $(@D)/hash $(TARGET_DIR)/usr/share/batocera/datainit/bios/mame
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms
+		cp -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-mess/roms/mess $(TARGET_DIR)/usr/share/batocera/datainit/roms
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
+		cp -avr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-mess/es_systems_mess_*.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
 endef
 
 define LIBRETRO_MESS_INSTALL_STAGING_CMDS

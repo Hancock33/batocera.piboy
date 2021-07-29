@@ -144,9 +144,6 @@ gameandwatch:
   core:     gw
   options:
     forceNoBezel: true
-gamecom:
-  emulator: libretro
-  core:     mess
 gamecube:
   emulator: dolphin
   core:     dolphin
@@ -168,9 +165,6 @@ gbc:
 gbc2players:
   emulator: libretro
   core:     tgbdual
-gmaster:
-  emulator: libretro
-  core:     mess
 gong:
   emulator: libretro
   core:     gong
@@ -214,9 +208,6 @@ mastersystem:
 megadrive:
   emulator: libretro
   core:     genesisplusgx
-mess:
-  emulator: libretro
-  core:     mess
 model2:
   emulator: model2emu
   core:     model2emu
