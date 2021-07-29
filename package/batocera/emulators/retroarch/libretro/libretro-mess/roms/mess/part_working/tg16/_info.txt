@@ -1,0 +1,5 @@
+## SYSTEM NEC TURBOGRAFX 16 CARTRIDGES ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".zip .7z"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".zip .7z"

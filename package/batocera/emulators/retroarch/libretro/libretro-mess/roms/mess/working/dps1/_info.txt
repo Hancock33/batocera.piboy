@@ -1,0 +1,5 @@
+## SYSTEM ITHACA INTERSYSTEMS DPS-1 DISKETTES ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".zip .7z"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".zip .7z"
