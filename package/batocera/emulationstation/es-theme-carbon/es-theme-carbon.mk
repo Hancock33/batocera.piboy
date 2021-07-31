@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version.: Commits on Jul 30, 2021
-ES_THEME_CARBON_VERSION = dd8aee26d6c6c2928cb36341efeeb3c59abe824a
+ES_THEME_CARBON_VERSION = 916664844f754f7bcf867079f16b43cdb7856e47
 ES_THEME_CARBON_SITE = $(call github,hancock33,es-theme-carbon,$(ES_THEME_CARBON_VERSION))
 
 define ES_THEME_CARBON_INSTALL_TARGET_CMDS
