@@ -376,9 +376,6 @@ cgenie_cass:
 cgenie_flop_rom:
   emulator: libretro
   core:     mess
-channelf:
-  emulator: libretro
-  core:     mess
 chessmstdm:
   emulator: libretro
   core:     mess
@@ -616,9 +613,6 @@ gameboy:
 gamecom:
   emulator: libretro
   core:     mess
-gamegear:
-  emulator: libretro
-  core:     mess
 gameking:
   emulator: libretro
   core:     mess
@@ -626,9 +620,6 @@ gameking3:
   emulator: libretro
   core:     mess
 gamepock:
-  emulator: libretro
-  core:     mess
-gba:
   emulator: libretro
   core:     mess
 gba_ereader:
@@ -683,9 +674,6 @@ gtfore:
   emulator: libretro
   core:     mess
 guab:
-  emulator: libretro
-  core:     mess
-gx4000:
   emulator: libretro
   core:     mess
 h21:
@@ -811,9 +799,6 @@ iqunlim_cart:
 itt3030:
   emulator: libretro
   core:     mess
-jaguar:
-  emulator: libretro
-  core:     mess
 jakks_gamekey_dp:
   emulator: libretro
   core:     mess
@@ -917,9 +902,6 @@ lisa2:
   emulator: libretro
   core:     mess
 lviv:
-  emulator: libretro
-  core:     mess
-lynx:
   emulator: libretro
   core:     mess
 m20:
@@ -1123,12 +1105,6 @@ mz700_cass:
 mz800_cass:
   emulator: libretro
   core:     mess
-n64:
-  emulator: libretro
-  core:     mess
-n64dd:
-  emulator: libretro
-  core:     mess
 nascom_flop:
   emulator: libretro
   core:     mess
@@ -1139,12 +1115,6 @@ nascom_socket:
   emulator: libretro
   core:     mess
 neocd:
-  emulator: libretro
-  core:     mess
-neogeo:
-  emulator: libretro
-  core:     mess
-nes:
   emulator: libretro
   core:     mess
 nes_ade:
@@ -1166,12 +1136,6 @@ next_cdrom:
   emulator: libretro
   core:     mess
 next_hdd:
-  emulator: libretro
-  core:     mess
-ngp:
-  emulator: libretro
-  core:     mess
-ngpc:
   emulator: libretro
   core:     mess
 nimbus:
@@ -1255,9 +1219,6 @@ pc8801_flop:
 pc88va:
   emulator: libretro
   core:     mess
-pc98:
-  emulator: libretro
-  core:     mess
 pc98_cd:
   emulator: libretro
   core:     mess
@@ -1271,9 +1232,6 @@ pce_tourvision:
   emulator: libretro
   core:     mess
 pcecd:
-  emulator: libretro
-  core:     mess
-pcfx:
   emulator: libretro
   core:     mess
 pcw:
@@ -1357,9 +1315,6 @@ pofo:
 poisk1_flop:
   emulator: libretro
   core:     mess
-pokemini:
-  emulator: libretro
-  core:     mess
 poly_flop:
   emulator: libretro
   core:     mess
@@ -1391,9 +1346,6 @@ psion1:
   emulator: libretro
   core:     mess
 psion2:
-  emulator: libretro
-  core:     mess
-psx:
   emulator: libretro
   core:     mess
 pt68k2:
@@ -1477,9 +1429,6 @@ sat_cart:
 sat_vccart:
   emulator: libretro
   core:     mess
-saturn:
-  emulator: libretro
-  core:     mess
 sawatte:
   emulator: libretro
   core:     mess
@@ -1492,22 +1441,13 @@ sc3000_cart:
 sc3000_cass:
   emulator: libretro
   core:     mess
-scv:
-  emulator: libretro
-  core:     mess
 sdk85:
   emulator: libretro
   core:     mess
 sega_beena_cart:
   emulator: libretro
   core:     mess
-segacd:
-  emulator: libretro
-  core:     mess
 sf7000:
-  emulator: libretro
-  core:     mess
-sg1000:
   emulator: libretro
   core:     mess
 sgi_mips:
@@ -1532,9 +1472,6 @@ smc777:
   emulator: libretro
   core:     mess
 sms:
-  emulator: libretro
-  core:     mess
-snes:
   emulator: libretro
   core:     mess
 snes_bspack:
@@ -1687,9 +1624,6 @@ tek4052_cart:
 telestory_cart:
   emulator: libretro
   core:     mess
-tg16:
-  emulator: libretro
-  core:     mess
 ti74_cart:
   emulator: libretro
   core:     mess
@@ -1798,9 +1732,6 @@ vector06_cart:
 vector06_flop:
   emulator: libretro
   core:     mess
-vectrex:
-  emulator: libretro
-  core:     mess
 vg5k:
   emulator: libretro
   core:     mess
@@ -1882,25 +1813,10 @@ wizard_cart:
 wmbullet:
   emulator: libretro
   core:     mess
-wscolor:
-  emulator: libretro
-  core:     mess
-wswan:
-  emulator: libretro
-  core:     mess
 x07_card:
   emulator: libretro
   core:     mess
 x07_cass:
-  emulator: libretro
-  core:     mess
-x1_cass:
-  emulator: libretro
-  core:     mess
-x1_flop:
-  emulator: libretro
-  core:     mess
-x68k_flop:
   emulator: libretro
   core:     mess
 xegs:
