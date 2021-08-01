@@ -444,7 +444,7 @@ psp:
       ppsspp:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PPSSPP] }
 
 pspmini:
-  name:       Sony Playstation Portable
+  name:       Sony Playstation Portable Mini
   manufacturer: Sony
   release: 2004
   hardware: portable
