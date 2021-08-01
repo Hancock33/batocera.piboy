@@ -130,7 +130,9 @@ amigacd32:
   manufacturer: Commodore
   release: 1994
   hardware: console
-  extensions: [bin, cue, iso, chd]
+  extensions: [bin, cue, iso, chd, lha]
+  platform:   amiga
+  group:      amiga
   emulators:
     fsuae:
       CD32:   { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
@@ -144,13 +146,31 @@ amigacdtv:
   manufacturer: Commodore
   release: 1991
   hardware: console
-  extensions: [bin, cue, iso, chd]
+  extensions: [bin, cue, iso, chd, lha]
+  platform:   amiga
+  group:      amiga
   emulators:
     fsuae:
       CDTV:   { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
     libretro:
       puae:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
 
+amigademo:
+  name:       Amiga Demoscene
+  manufacturer: Commodore
+  release: 1987
+  hardware: computer
+  extensions: [adf, uae, ipf, dms, dmz, adz, lha, hdf, exe, m3u, zip]
+  platform:   amiga
+  group:      amiga
+  emulators:
+    fsuae:
+      CD32:   { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+    amiberry:
+      CD32:   { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [chd] }
+    libretro:
+      puae:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      
 nes:
   name:       Nintendo Entertainment System
   manufacturer: Nintendo
@@ -416,6 +436,20 @@ psp:
   release: 2004
   hardware: portable
   extensions: [iso, cso, pbp]
+  group:      psp
+  emulators:
+    ppsspp:
+      ppsspp: { requireAnyOf: [BR2_PACKAGE_PPSSPP]  }
+    libretro:
+      ppsspp:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PPSSPP] }
+
+pspmini:
+  name:       Sony Playstation Portable
+  manufacturer: Sony
+  release: 2004
+  hardware: portable
+  extensions: [iso, cso, pbp]
+  group:      psp
   emulators:
     ppsspp:
       ppsspp: { requireAnyOf: [BR2_PACKAGE_PPSSPP]  }
@@ -454,6 +488,30 @@ pcenginecd:
   hardware: console
   extensions: [pce, cue, ccd, iso, img, chd]
   theme:      pce-cd
+  emulators:
+    libretro:
+      pce:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE] }
+      pce_fast: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE_FAST] }
+      
+tg16:
+  name:       Turbo Grafx 16
+  manufacturer: NEC
+  release: 1987
+  hardware: console
+  extensions: [pce, bin, zip, 7z]
+  theme:      tg16
+  emulators:
+    libretro:
+      pce:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE] }
+      pce_fast: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE_FAST] }
+
+tg-cd:
+  name:       Turbo Grafx CD
+  manufacturer: NEC
+  release: 1988
+  hardware: console
+  extensions: [pce, cue, ccd, iso, img, chd]
+  theme:      tg-cd
   emulators:
     libretro:
       pce:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE] }
