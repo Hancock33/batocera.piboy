@@ -1,0 +1,41 @@
+From 0a3a2ad00909fa14f6ab85229b94b17ff257fa5b Mon Sep 17 00:00:00 2001
+From: RSDuck <RSDuck@users.noreply.github.com>
+Date: Thu, 29 Apr 2021 15:15:16 +0200
+Subject: [PATCH] fix aarch64 build with gcc 11
+
+---
+ src/ARMJIT_A64/ARMJIT_Compiler.cpp | 4 ++--
+ src/dolphin/Arm64Emitter.cpp       | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/src/ARMJIT_A64/ARMJIT_Compiler.cpp b/src/ARMJIT_A64/ARMJIT_Compiler.cpp
+index ef93905d5..4fbb804be 100644
+--- a/src/ARMJIT_A64/ARMJIT_Compiler.cpp
++++ b/src/ARMJIT_A64/ARMJIT_Compiler.cpp
+@@ -483,12 +483,12 @@ void Compiler::LoadReg(int reg, ARM64Reg nativeReg)
+     if (reg == 15)
+         MOVI2R(nativeReg, R15);
+     else
+-        LDR(INDEX_UNSIGNED, nativeReg, RCPU, offsetof(ARM, R[reg]));
++        LDR(INDEX_UNSIGNED, nativeReg, RCPU, offsetof(ARM, R) + reg*4);
+ }
+ 
+ void Compiler::SaveReg(int reg, ARM64Reg nativeReg)
+ {
+-    STR(INDEX_UNSIGNED, nativeReg, RCPU, offsetof(ARM, R[reg]));
++    STR(INDEX_UNSIGNED, nativeReg, RCPU, offsetof(ARM, R) + reg*4);
+ }
+ 
+ void Compiler::LoadCPSR()
+diff --git a/src/dolphin/Arm64Emitter.cpp b/src/dolphin/Arm64Emitter.cpp
+index ae6258d39..408411c53 100644
+--- a/src/dolphin/Arm64Emitter.cpp
++++ b/src/dolphin/Arm64Emitter.cpp
+@@ -7,6 +7,7 @@
+ #include <cinttypes>
+ #include <cstring>
+ #include <vector>
++#include <limits>
+ 
+ #include "Compat.h"
+ #include "Align.h"
