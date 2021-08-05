@@ -1,0 +1,850 @@
+diff -Naur batocera-emulationstation.orig/es-app/src/PlatformId.cpp batocera-emulationstation/es-app/src/PlatformId.cpp
+--- batocera-emulationstation.orig/es-app/src/PlatformId.cpp	2021-08-03 22:31:22.000000000 +0100
++++ batocera-emulationstation/es-app/src/PlatformId.cpp	2021-08-05 21:28:38.000000000 +0100
+@@ -10,153 +10,156 @@
+ 	{
+ 		{ "unknown",				PLATFORM_UNKNOWN },
+ 		{ "3do",					THREEDO },
++		{ "3ds",					NINTENDO_3DS },
++		{ "adam",					ADAM },
+ 		{ "amiga",					AMIGA },
++		{ "amigacd32",				AMIGACD32 },
++		{ "amigacdtv",				AMIGACDTV },
+ 		{ "amstradcpc",				AMSTRAD_CPC },
+ 		{ "apple2",					APPLE_II },
++		{ "apple2gs",				APPLE2GS },
+ 		{ "arcade",					ARCADE },
+-		{ "atari800",				ATARI_800 },
++		{ "archimedes",				ARCHIMEDES },
++		{ "astrocade",				ASTROCADE },
+ 		{ "atari2600",				ATARI_2600 },
+ 		{ "atari5200",				ATARI_5200 },
+ 		{ "atari7800",				ATARI_7800 },
+-		{ "atarilynx",				ATARI_LYNX },
+-		{ "atarist",				ATARI_ST },
+-		{ "jaguar",					ATARI_JAGUAR },
++		{ "atari800",				ATARI_800 },
+ 		{ "atarijaguar",			ATARI_JAGUAR },
+ 		{ "atarijaguarcd",			ATARI_JAGUAR_CD },
++		{ "atarilynx",				ATARI_LYNX },
++		{ "lynx",					ATARI_LYNX },
++		{ "atarist",				ATARI_ST },
+ 		{ "atarixe",				ATARI_XE },
+-		{ "colecovision",			COLECOVISION },
++		{ "atom",					ACORN_ATOM },
++		{ "atomiswave",				ATOMISWAVE },
++		{ "bbcmicro",				ACORN_BBC_MICRO },
++		{ "bk",						BK },		
++		{ "c20",					VIC20 },
+ 		{ "c64",					COMMODORE_64 },
++		{ "c128",					COMMODORE_128 },
++		{ "cplus4",					PLUS_4 },
++		{ "cannonball",				CANNONBALL },
++		{ "cavestory",				CAVESTORY },
++		{ "cdi",					PHILIPS_CDI },
++		{ "channelf",				CHANNELF },
++		{ "coco",					TANDY },
++		{ "colecovision",			COLECOVISION },
++		{ "cpet",					COMMODORE_PET },
++		{ "daphne",					DAPHNE },
++		{ "dreamcast",				SEGA_DREAMCAST },
++		{ "easyrpg",				EASYRPG },
++		{ "electron",				ACORN_ELECTRON },
++		{ "fds",					FAMICOM_DISK_SYSTEM },
++		{ "fmtowns",				FMTOWNS },
++		{ "fpinball",				FUTUREPINBALL },
++		{ "gameandwatch",			NINTENDO_GAME_AND_WATCH },
++		{ "gamegear",				SEGA_GAME_GEAR },
++		{ "gb",						GAME_BOY },
++		{ "gb2players",				GAME_BOY },
++		{ "gba",					GAME_BOY_ADVANCE },
++		{ "gbc",					GAME_BOY_COLOR },
++		{ "gbc2players",			GAME_BOY_COLOR },
++		{ "gc",						NINTENDO_GAMECUBE },
++		{ "genesis",				SEGA_GENESIS },
++		{ "gx4000",					GX4000 },
++		{ "imageviewer",			IMAGEVIEWER },
+ 		{ "intellivision",			INTELLIVISION },
++		{ "jaguar",					ATARI_JAGUAR },
++		{ "lowresnx",				LOWRESNX },		
++		{ "lutro",					LUTRO },
+ 		{ "macintosh",				MAC_OS },
+-		{ "xbox",					XBOX },
+-		{ "xbox360",				XBOX_360 },
++		{ "mastersystem",			SEGA_MASTER_SYSTEM },
++		{ "megadrive",				SEGA_MEGA_DRIVE },
++		{ "model3",					MODEL3 },
++		{ "moonlight",				MOONLIGHT },
++		{ "mrboom",					MRBOOM },
++		{ "msx1",					MSX },
+ 		{ "msx",					MSX },
+-		{ "neogeo",					NEOGEO },
+-		{ "ngp",					NEOGEO_POCKET },
+-		{ "ngpc",					NEOGEO_POCKET_COLOR },
++		{ "msxturbor",				MSXR },
++		{ "msx2",					MSX2 },
++		{ "msx2+",					MSX2_PLUS },
+ 		{ "n3ds",					NINTENDO_3DS },
+ 		{ "n64",					NINTENDO_64 },
++		{ "naomi",					NAOMI },
+ 		{ "nds",					NINTENDO_DS },
+-		{ "fds",					FAMICOM_DISK_SYSTEM },
++		{ "neogeo",					NEOGEO },
++		{ "neogeocd",				NEOGEO_CD },
+ 		{ "nes",					NINTENDO_ENTERTAINMENT_SYSTEM },
+-		{ "gb",						GAME_BOY },
+-		{ "gba",					GAME_BOY_ADVANCE },
+-		{ "gbc",					GAME_BOY_COLOR },
+-		{ "gc",						NINTENDO_GAMECUBE },
+-		{ "wii",					NINTENDO_WII },
+-		{ "wiiu",					NINTENDO_WII_U },
+-		{ "switch",					NINTENDO_SWITCH },
+-		{ "virtualboy",				NINTENDO_VIRTUAL_BOY },
+-		{ "gameandwatch",			NINTENDO_GAME_AND_WATCH },
++		{ "ngage",					NOKIA_NGAGE },
++		{ "ngp",					NEOGEO_POCKET },
++		{ "ngpc",					NEOGEO_POCKET_COLOR },
++		{ "o2em",					VIDEOPAC_ODYSSEY2 },
++		{ "odyssey2",				VIDEOPAC_ODYSSEY2 },
++		{ "openbor",				OPENBOR },
++		{ "oric",					ORICATMOS },
++		{ "oricatmos",				ORICATMOS },
++		{ "palm",					PALMOS },
++		{ "mu",						PALMOS },
+ 		{ "pc",						PC },
+ 		{ "pc88",					PC_88 },
+ 		{ "pc98",					PC_98 },
+-		{ "sega32x",				SEGA_32X },
+-		{ "segacd",					SEGA_CD },
+-		{ "dreamcast",				SEGA_DREAMCAST },
+-		{ "gamegear",				SEGA_GAME_GEAR },
+-		{ "genesis",				SEGA_GENESIS },
+-		{ "mastersystem",			SEGA_MASTER_SYSTEM },
+-		{ "megadrive",				SEGA_MEGA_DRIVE },
+-		{ "saturn",					SEGA_SATURN },
+-		{ "sg-1000",				SEGA_SG1000 },
+-		{ "psx",					PLAYSTATION },
+-		{ "ps2",					PLAYSTATION_2 },
+-		{ "ps3",					PLAYSTATION_3 },
+-		{ "ps4",					PLAYSTATION_4 },
+-		{ "psvita",					PLAYSTATION_VITA },
+-		{ "psp",					PLAYSTATION_PORTABLE },
+-		{ "snes",					SUPER_NINTENDO },
+-		{ "scummvm",				SCUMMVM },
+-		{ "x1",						SHARP_X1 },
+-		{ "x68000",					SHARP_X6800 },
+ 		{ "pcengine",				TURBOGRAFX_16 }, // (aka PC Engine) HuCards onlyy
+ 		{ "pcenginecd",				TURBOGRAFX_CD }, // (aka PC Engine) CD-ROMs onlynly
+-		{ "wonderswan",				WONDERSWAN },
+-		{ "wonderswancolor",		WONDERSWAN_COLOR },
+-		{ "zxspectrum",				ZX_SPECTRUM },
+-		{ "videopac",				VIDEOPAC_ODYSSEY2 },
+-		{ "vectrex",				VECTREX },
+-		{ "trs-80",					TRS80_COLOR_COMPUTER },
+-		{ "coco",					TANDY },
+-		{ "supergrafx",				SUPERGRAFX },
+-		{ "amigacd32",				AMIGACD32 },
+-		{ "amigacdtv",				AMIGACDTV },
+-		{ "atomiswave",				ATOMISWAVE },
+-		{ "cavestory",				CAVESTORY },
+-		{ "gx4000",					GX4000 },
+-		{ "lutro",					LUTRO },
+-		{ "moonlight",				MOONLIGHT },
+-		{ "naomi",					NAOMI },
+-		{ "neogeocd",				NEOGEO_CD },
+ 		{ "pcfx",					PCFX },
++		{ "pet",					COMMODORE_PET },
++		{ "pico8",					PICO8 },
+ 		{ "pokemini",				POKEMINI },
+ 		{ "prboom",					PRBOOM },
++		{ "ps2",					PLAYSTATION_2 },
++		{ "ps3",					PLAYSTATION_3 },
++		{ "ps4",					PLAYSTATION_4 },
++		{ "psp",					PLAYSTATION_PORTABLE },
++		{ "pspmini",				PLAYSTATION_PORTABLE },
++		{ "psvita",					PLAYSTATION_VITA },
++		{ "psx",					PLAYSTATION },
++		{ "samcoupe",				SAMCOUPE },
++		{ "sameduck",				MEGADUCK },
++		{ "megaduck",				MEGADUCK },
+ 		{ "satellaview",			SATELLAVIEW },
++		{ "saturn",					SEGA_SATURN },
++		{ "scummvm",				SCUMMVM },
++		{ "scv",					SUPER_CASSETTE_VISION },
++		{ "sega32x",				SEGA_32X },
++		{ "segacd",					SEGA_CD },
++		{ "sg1000",					SEGA_SG1000 },
++		{ "sg-1000",				SEGA_SG1000 },
++		{ "sgb",					SUPER_GAME_BOY },
++		{ "snes",					SUPER_NINTENDO },
++		{ "snes-msu1",				SUPER_NINTENDO_MSU1 },
++		{ "solarus",				SOLARUS },
++		{ "spectravideo",			SPECTRAVIDEO },
+ 		{ "sufami",					SUFAMITURBO },
+-		{ "zx81",					ZX81 },
++		{ "supergrafx",				SUPERGRAFX },
++		{ "supervision",			WATARA_SUPERVISION },
++		{ "switch",					NINTENDO_SWITCH },
++		{ "tg16",					TURBOGRAFX_16 }, // (aka PC Engine) HuCards onlyy
++		{ "tg-cd",					TURBOGRAFX_CD }, // (aka PC Engine) CD-ROMs onlynly
++		{ "thomson",				THOMSON_TO_MO },
++		{ "ti99",					TI99 },
++		{ "ti99_4a",				TI99 },
+ 		{ "tic80",					TIC80 },
+-
+-		// batocera specific names
+-		{ "gb2players",				GAME_BOY },
+-		{ "gbc2players",			GAME_BOY_COLOR },
+-		{ "3ds",					NINTENDO_3DS },
+-		{ "sg1000",					SEGA_SG1000 },
+-		{ "odyssey2",				VIDEOPAC_ODYSSEY2 },
+-		{ "oricatmos",				ORICATMOS },
++		{ "trs-80",					TRS80_COLOR_COMPUTER },
+ 		{ "tyrquake",				QUAKE },
+-		{ "mrboom",					MRBOOM },
+-		{ "cannonball",					CANNONBALL },
+-
+-		// windows specific systems & names
+-		{ "windows",				MOONLIGHT },
+-		{ "vpinball",				VISUALPINBALL },
+-		{ "fpinball",				FUTUREPINBALL },
+-		{ "o2em",					VIDEOPAC_ODYSSEY2 },
+-
+-		// Misc systems
+-		{ "channelf",				CHANNELF },
+-		{ "oric",					ORICATMOS },
+-		{ "thomson",				THOMSON_TO_MO },
+-		{ "samcoupe",				SAMCOUPE },
+-		{ "openbor",				OPENBOR },
+ 		{ "uzebox",					UZEBOX },
+-		{ "apple2gs",				APPLE2GS },
+-		{ "spectravideo",			SPECTRAVIDEO },
+-		{ "palm",					PALMOS },
+-		{ "daphne",					DAPHNE },
+-		{ "solarus",				SOLARUS },
+-
++		{ "uzem",					UZEBOX },
++		{ "vectrex",				VECTREX },
+ 		{ "vic20",					VIC20 },
+-		{ "c20",					VIC20 },
+-		{ "ti99",					TI99 },
+-		{ "ti99_4a",				TI99 },
+-		{ "pico8",					PICO8 },
+-		{ "sgb",					SUPER_GAME_BOY },
+-
++		{ "videopac",				VIDEOPAC_ODYSSEY2 },
++		{ "virtualboy",				NINTENDO_VIRTUAL_BOY },
++		{ "vpinball",				VISUALPINBALL },
+ 		{ "watara",					WATARA_SUPERVISION },
+-		{ "supervision",			WATARA_SUPERVISION },
+-
+-		{ "model3",					MODEL3 },
+-			
+-		{ "imageviewer",			IMAGEVIEWER },
+-			
+-		{ "scv",					SUPER_CASSETTE_VISION },
+-		{ "easyrpg",				EASYRPG },			
+-		{ "pet",					COMMODORE_PET },
+-		{ "cpet",					COMMODORE_PET },
+-		{ "atom",					ACORN_ATOM },
+-		{ "bbcmicro",				ACORN_BBC_MICRO },
+-		{ "electron",				ACORN_ELECTRON },
+-		{ "ngage",					NOKIA_NGAGE },
+-		{ "astrocade",				ASTROCADE },
+-		{ "archimedes",				ARCHIMEDES },			
+-		{ "adam",					ADAM },
+-
+-		{ "fmtowns",				FMTOWNS },
+-		{ "cdi",					PHILIPS_CDI },			
+-
+-		{ "snes-msu1",				SUPER_NINTENDO_MSU1 },
++		{ "wii",					NINTENDO_WII },
++		{ "wiiu",					NINTENDO_WII_U },
++		{ "windows",				MOONLIGHT },
++		{ "wonderswan",				WONDERSWAN },
++		{ "wonderswancolor",		WONDERSWAN_COLOR },
++		{ "x1",						SHARP_X1 },
++		{ "x68000",					SHARP_X6800 },
++		{ "xbox",					XBOX },
++		{ "xbox360",				XBOX_360 },
++		{ "zx81",					ZX81 },
++		{ "zxspectrum",				ZX_SPECTRUM },
+ 
+ 		{ "ignore",					PLATFORM_IGNORE },
+ 		{ "invalid",				PLATFORM_COUNT }
+@@ -182,7 +185,7 @@
+ 
+ 		return "unknown";
+ 	}
+-	
++
+ 	std::map<unsigned short, std::pair<std::string, std::string>> ArcadeSystems
+ 	{
+ 		{ 6,   { "cps1", "CPS-1" } },
+@@ -190,7 +193,7 @@
+ 		{ 8,   { "cps3", "CPS-3" } },
+ 		{ 35,  { "aae", "Another Arcade Emulator" } },
+ 		{ 47,  { "cave", "Cave" } },
+-		{ 49,  { "daphne", "Daphne" } },		
++		{ 49,  { "daphne", "Daphne" } },
+ 		{ 53,  { "atomiswave", "Atomiswave" } },
+ 		{ 54,  { "model2", "Sega Model 2" } },
+ 		{ 55,  { "model3", "Sega Model 3" } },
+@@ -204,7 +207,7 @@
+ 		{ 148, { "seta", "Seta" } },
+ 		{ 150, { "midway", "Midway" } },
+ 		{ 151, { "capcom", "Capcom" } },
+-		{ 152, { "eighting", "Eighting / Raizing" } },		
++		{ 152, { "eighting", "Eighting / Raizing" } },
+ 		{ 153, { "tecmo", "Tecmo" } },
+ 		{ 154, { "snk", "SNK" } },
+ 		{ 155, { "namco", "Namco" } },
+@@ -235,7 +238,7 @@
+ 		{ 183, { "coleco", "Coleco" } },
+ 		{ 184, { "playchoice", "PlayChoice" } },
+ 		{ 185, { "atlus", "Atlus" } },
+-		{ 186, { "banpresto", "Banpresto" } },		
++		{ 186, { "banpresto", "Banpresto" } },
+ 		{ 187, { "semicom", "SemiCom" } },
+ 		{ 188, { "universal", "Universal" } },
+ 		{ 189, { "mitchell", "Mitchell" } },
+diff -Naur batocera-emulationstation.orig/es-app/src/PlatformId.h batocera-emulationstation/es-app/src/PlatformId.h
+--- batocera-emulationstation.orig/es-app/src/PlatformId.h	2021-08-03 22:31:22.000000000 +0100
++++ batocera-emulationstation/es-app/src/PlatformId.h	2021-08-05 21:28:38.000000000 +0100
+@@ -11,48 +11,98 @@
+ 	{
+ 		PLATFORM_UNKNOWN = 0,
+ 
+-		THREEDO, // name can't start with a constant
++		THREEDO,
++		ACORN_ATOM,
++		ACORN_BBC_MICRO,
++		ACORN_ELECTRON,
++		ADAM,
+ 		AMIGA,
++		AMIGACD32,
++		AMIGACDTV,
+ 		AMSTRAD_CPC,
+ 		APPLE_II,
++		APPLE2GS,
+ 		ARCADE,
+-		ATARI_800,
++		ARCHIMEDES,
++		ASTROCADE,
+ 		ATARI_2600,
+ 		ATARI_5200,
+ 		ATARI_7800,
+-		ATARI_LYNX,
+-		ATARI_ST, // Atari ST/STE/Falcon
++		ATARI_800,
+ 		ATARI_JAGUAR,
+ 		ATARI_JAGUAR_CD,
++		ATARI_LYNX,
++		ATARI_ST,
+ 		ATARI_XE,
++		ATOMISWAVE,
++		BK,
++		CANNONBALL,
++		CAVESTORY,
++		CHANNELF,
+ 		COLECOVISION,
+ 		COMMODORE_64,
++		COMMODORE_128,
++		COMMODORE_PET,
++		DAPHNE,
++		EASYRPG,
++		FAMICOM_DISK_SYSTEM,
++		FMTOWNS,
++		FUTUREPINBALL,
++		GAME_BOY,
++		GAME_BOY_ADVANCE,
++		GAME_BOY_COLOR,
++		GX4000,
++		IMAGEVIEWER,
+ 		INTELLIVISION,
++		LOWRESNX,
++		LUTRO,
+ 		MAC_OS,
+-		XBOX,
+-		XBOX_360,
++		MEGADUCK,
++		MODEL3,
++		MOONLIGHT,
++		MRBOOM,
+ 		MSX,
++		MSXR,
++		MSX2,
++		MSX2_PLUS,		
++		NAOMI,
+ 		NEOGEO,
++		NEOGEO_CD,
+ 		NEOGEO_POCKET,
+ 		NEOGEO_POCKET_COLOR,
+ 		NINTENDO_3DS,
+ 		NINTENDO_64,
+ 		NINTENDO_DS,
+-		FAMICOM_DISK_SYSTEM,
+ 		NINTENDO_ENTERTAINMENT_SYSTEM,
+-		GAME_BOY,
+-		GAME_BOY_ADVANCE,
+-		GAME_BOY_COLOR,
+-		SUPER_GAME_BOY,
++		NINTENDO_GAME_AND_WATCH,
+ 		NINTENDO_GAMECUBE,
+-		NINTENDO_WII,
+-		NINTENDO_WII_U,
+ 		NINTENDO_SWITCH,
+ 		NINTENDO_VIRTUAL_BOY,
+-		NINTENDO_GAME_AND_WATCH,
++		NINTENDO_WII,
++		NINTENDO_WII_U,
++		NOKIA_NGAGE,
++		OPENBOR,
++		ORICATMOS,
++		PALMOS,
+ 		PC,
+ 		PC_88,
+ 		PC_98,
++		PCFX,
++		PHILIPS_CDI,
++		PICO8,
++		PLAYSTATION,
++		PLAYSTATION_2,
++		PLAYSTATION_3,
++		PLAYSTATION_4,
++		PLAYSTATION_PORTABLE,
++		PLAYSTATION_VITA,
++		PLUS_4,
++		POKEMINI,
++		PRBOOM,
++		QUAKE,
++		SAMCOUPE,
++		SATELLAVIEW,
++		SCUMMVM,
+ 		SEGA_32X,
+ 		SEGA_CD,
+ 		SEGA_DREAMCAST,
+@@ -62,82 +112,35 @@
+ 		SEGA_MEGA_DRIVE,
+ 		SEGA_SATURN,
+ 		SEGA_SG1000,
+-		PLAYSTATION,
+-		PLAYSTATION_2,
+-		PLAYSTATION_3,
+-		PLAYSTATION_4,
+-		PLAYSTATION_VITA,
+-		PLAYSTATION_PORTABLE,
+-		QUAKE,
+-		SUPER_NINTENDO,
+-		SCUMMVM,
+ 		SHARP_X1,
+ 		SHARP_X6800,
+-		TURBOGRAFX_16, // (aka PC Engine) HuCards only
+-		TURBOGRAFX_CD, // (aka PC Engine) CD-ROMs only
+-		WONDERSWAN,
+-		WONDERSWAN_COLOR,
+-		ZX_SPECTRUM,
+-		VIDEOPAC_ODYSSEY2,
+-		VECTREX,
+-		TRS80_COLOR_COMPUTER,
+-		TANDY,		
+-		SUPERGRAFX,
+-		AMIGACD32,
+-		AMIGACDTV,
+-		ATOMISWAVE,
+-		CAVESTORY,
+-		GX4000,
+-		LUTRO,
+-		MOONLIGHT,
+-		MRBOOM,
+-		CANNONBALL,
+-		NAOMI,
+-		NEOGEO_CD,
+-		PCFX,
+-		POKEMINI,
+-		PRBOOM,
+-		SATELLAVIEW,
++		SOLARUS,
++		SPECTRAVIDEO,
+ 		SUFAMITURBO,
+-		ZX81,
+-		TIC80,
+-		MODEL3,
+-		IMAGEVIEWER,
+-
+-		// Windows Specific
+-		VISUALPINBALL,
+-		FUTUREPINBALL,
+-
+-		// Misc systems
+-		CHANNELF,
+-		ORICATMOS,
++		SUPER_CASSETTE_VISION,
++		SUPER_GAME_BOY,
++		SUPER_NINTENDO,
++		SUPER_NINTENDO_MSU1,
++		SUPERGRAFX,
++		TANDY,
+ 		THOMSON_TO_MO,
+-		SAMCOUPE,
+-		OPENBOR,
++		TI99,
++		TIC80,
++		TRS80_COLOR_COMPUTER,
++		TURBOGRAFX_16,
++		TURBOGRAFX_CD,
+ 		UZEBOX,
+-		APPLE2GS,
+-		SPECTRAVIDEO,
+-		PALMOS,
+-		DAPHNE,
+-		SOLARUS,
+-		PICO8,
+-		WATARA_SUPERVISION,
+-
++		VECTREX,
+ 		VIC20,
+-		TI99,
+-		SUPER_CASSETTE_VISION,
+-		EASYRPG,
+-		COMMODORE_PET,
+-		ACORN_ATOM,
+-		ACORN_BBC_MICRO,
+-		ACORN_ELECTRON,		
+-		NOKIA_NGAGE,
+-		ASTROCADE,
+-		ARCHIMEDES,
+-		ADAM,
+-		FMTOWNS,		
+-		PHILIPS_CDI,
+-		SUPER_NINTENDO_MSU1,
++		VIDEOPAC_ODYSSEY2,
++		VISUALPINBALL,
++		WATARA_SUPERVISION,
++		WONDERSWAN,
++		WONDERSWAN_COLOR,
++		XBOX,
++		XBOX_360,
++		ZX_SPECTRUM,
++		ZX81,
+ 
+ 		PLATFORM_IGNORE, // do not allow scraping for this system
+ 		PLATFORM_COUNT
+diff -Naur batocera-emulationstation.orig/es-app/src/scrapers/GamesDBJSONScraper.cpp batocera-emulationstation/es-app/src/scrapers/GamesDBJSONScraper.cpp
+--- batocera-emulationstation.orig/es-app/src/scrapers/GamesDBJSONScraper.cpp	2021-08-03 22:31:22.000000000 +0100
++++ batocera-emulationstation/es-app/src/scrapers/GamesDBJSONScraper.cpp	2021-08-05 21:28:38.000000000 +0100
+@@ -38,8 +38,9 @@
+ 	{ ATARI_LYNX, "4924" },
+ 	{ ATARI_ST, "4937" },
+ 	{ ATARI_XE, "30" },
+-	{ COLECOVISION, "31" },	
++	{ COLECOVISION, "31" },
+ 	{ COMMODORE_64, "40" },
++	{ COMMODORE_128, "4946" },
+ 	{ INTELLIVISION, "32" },
+ 	{ MAC_OS, "37" },
+ 	{ XBOX, "14" },
+@@ -85,12 +86,12 @@
+ 	{ VIDEOPAC_ODYSSEY2, "4927" },
+ 	{ VECTREX, "4939" },
+ 	{ TRS80_COLOR_COMPUTER, "4941" },
+-	{ TANDY, "4941" },	
++	{ TANDY, "4941" },
+ 	{ SUPERGRAFX, "34" }, // The code is TurboGrafx 16, but they manage SUPERGRAFX into this one....
+-	{ AMIGACD32, "4947" },	
++	{ AMIGACD32, "4947" },
+ 	{ NEOGEO_CD, "4956" },
+ 	{ PCFX, "4930" },
+-	{ POKEMINI, "4957" },	
++	{ POKEMINI, "4957" },
+ 	{ SATELLAVIEW, "6" },
+ 	{ SUFAMITURBO, "6" },
+ 	{ PC_88, "4933" },
+@@ -109,6 +110,7 @@
+ 	{ FMTOWNS, "4932" },
+ 	{ PHILIPS_CDI, "4917" },
+ 	{ WATARA_SUPERVISION, "4959" },
++	{ MEGADUCK, "4948" },
+ 
+ 	// 1 = PC
+ 	{ PC, "1" },
+@@ -193,7 +195,7 @@
+ 				"include=boxart&id=" +
+ 				HttpReq::urlEncode(gameID);
+ 		usingGameID = true;
+-	} 
++	}
+ 	else
+ 	{
+ 		if (cleanName.empty())
+@@ -210,7 +212,7 @@
+ 	{
+ 		// if we have the ID already, we don't need the GetGameList request
+ 		requests.push(std::unique_ptr<ScraperRequest>(new TheGamesDBJSONRequest(results, path)));
+-	} 
++	}
+ 	else
+ 	{
+ 		std::string platformQueryParam;
+@@ -229,7 +231,7 @@
+ 
+ 					platformQueryParam += HttpReq::urlEncode(mapIt->second);
+ 					first = false;
+-				} 
++				}
+ 				else
+ 				{
+ 					LOG(LogWarning) << "TheGamesDB scraper warning - no support for platform "
+@@ -520,7 +522,7 @@
+ 			if (!art.empty())
+ 				result.urls[MetaDataId::FanArt] = ScraperSearchItem(art);
+ 		}
+-		
++
+ 		if (Settings::getInstance()->getBool("ScrapeBoxBack"))
+ 		{
+ 			auto art = findMedia(medias, "box-2D-back");
+@@ -575,7 +577,7 @@
+ 	}
+ 
+ 	resources.ensureResources();
+-	
++
+ 	for (int i = 0; i < (int)games.Size(); ++i)
+ 	{
+ 		auto& v = games[i];
+diff -Naur batocera-emulationstation.orig/es-app/src/scrapers/ScreenScraper.cpp batocera-emulationstation/es-app/src/scrapers/ScreenScraper.cpp
+--- batocera-emulationstation.orig/es-app/src/scrapers/ScreenScraper.cpp	2021-08-03 22:31:22.000000000 +0100
++++ batocera-emulationstation/es-app/src/scrapers/ScreenScraper.cpp	2021-08-05 21:28:38.000000000 +0100
+@@ -49,11 +49,15 @@
+ 	// missing Atari XE ?
+ 	{ COLECOVISION, 48 },
+ 	{ COMMODORE_64, 66 },
++	{ PLUS_4, 99 },
+ 	{ INTELLIVISION, 115 },
+ 	{ MAC_OS, 146 },
+ 	{ XBOX, 32 },
+ 	{ XBOX_360, 33 },
+ 	{ MSX, 113 },
++	{ MSXR, 118 },
++	{ MSX2, 116 },
++	{ MSX2_PLUS, 117 },
+ 	{ NEOGEO, 142 },
+ 	{ NEOGEO_POCKET, 25},
+ 	{ NEOGEO_POCKET_COLOR, 82 },
+@@ -127,7 +131,7 @@
+ 	// Windows
+ 	{ VISUALPINBALL, 198 },
+ 	{ FUTUREPINBALL, 199 },
+-	
++
+ 	// Misc
+ 	{ VIC20, 73 },
+ 	{ ORICATMOS, 131 },
+@@ -154,7 +158,10 @@
+ 	{ ACORN_ELECTRON, 85 },
+ 	{ ADAM, 89 },
+ 	{ PHILIPS_CDI, 133 },
+-	{ SUPER_NINTENDO_MSU1, 210 }
++	{ SUPER_NINTENDO_MSU1, 210 },
++	{ MEGADUCK, 90 },
++	{ BK, 93 },
++	{ LOWRESNX, 244 }
+ };
+ 
+ // Help XML parsing method, finding an direct child XML node starting from the parent and filtering by an attribute value list.
+@@ -229,7 +236,7 @@
+ 	{
+ 		if (Utils::FileSystem::isDirectory(params.game->getPath()))
+ 			path = ssConfig.getGameSearchUrl(params.game->getDisplayName());
+-		else 
++		else
+ 			path = ssConfig.getGameSearchUrl(params.game->getFileName());
+ 
+ 		path += "&romtype=rom";
+@@ -254,7 +261,7 @@
+ 
+ 			// Use md5 to search scrapped game
+ 			if (length > 0 && length <= 131072 * 1024) // 128 Mb max
+-			{		
++			{
+ 				std::string val = ApiSystem::getInstance()->getMD5(fileNameToHash, params.system->shouldExtractHashesFromArchives());
+ 				if (!val.empty())
+ 				{
+@@ -271,11 +278,11 @@
+ 	else
+ 	{
+ 		std::string name = Utils::String::replace(params.nameOverride, "_", " ");
+-		name = Utils::String::replace(name, "-", " ");		
++		name = Utils::String::replace(name, "-", " ");
+ 
+ 		path = ssConfig.getGameSearchUrl(name, true);
+ 	}
+-	
++
+ 	auto& platforms = params.system->getPlatformIds();
+ 	std::vector<unsigned short> p_ids;
+ 
+@@ -329,12 +336,12 @@
+ 		std::stringstream ss;
+ 		ss << "ScreenScraperRequest - Error parsing XML." << std::endl << parseResult.description() << "";
+ 		std::string err = ss.str();
+-		//setError(err); Don't consider it an error -> Request is a success. Simply : Game is not found		
++		//setError(err); Don't consider it an error -> Request is a success. Simply : Game is not found
+ 		LOG(LogWarning) << err;
+-				
++
+ 		if (Utils::String::toLower(content).find("maximum threads per minute reached") != std::string::npos)
+ 			return false;
+-		
++
+ 		return true;
+ 	}
+ 
+@@ -360,7 +367,7 @@
+ 
+ 	// Do an XPath query for media[type='$media_type'], then filter by region
+ 	// We need to do this because any child of 'medias' has the form
+-	// <media type="..." region="..." format="..."> 
++	// <media type="..." region="..." format="...">
+ 	// and we need to find the right media for the region.
+ 
+ 	pugi::xpath_node_set results = media_list.select_nodes((static_cast<std::string>("media[@type='") + mediaName + "']").c_str());
+@@ -391,11 +398,11 @@
+ 	if (imageSource == "ss")
+ 		return { "ss", "sstitle" };
+ 	if (imageSource == "sstitle")
+-		return { "sstitle", "ss" };	
++		return { "sstitle", "ss" };
+ 	if (imageSource == "mixrbv1" || imageSource == "mixrbv")
+-		return { "mixrbv1", "mixrbv2" };	
++		return { "mixrbv1", "mixrbv2" };
+ 	if (imageSource == "mixrbv2")
+-		return { "mixrbv2", "mixrbv1" };	
++		return { "mixrbv2", "mixrbv1" };
+ 	if (imageSource == "box-2D")
+ 		return { "box-2D", "box-3D" };
+ 	if (imageSource == "box-3D")
+@@ -409,7 +416,7 @@
+ 
+ 	//if (imageSource == "box-2D-back")
+ 	//	return{ "box-2D-back" };
+-		
++
+ 	return { imageSource };
+ }
+ 
+@@ -473,7 +480,7 @@
+ 		else
+ 			result.mdl.set(MetaDataId::ScraperId, "");
+ 
+-		// Name fallback: US, WOR(LD). ( Xpath: Data/jeu[0]/noms/nom[*] ). 
++		// Name fallback: US, WOR(LD). ( Xpath: Data/jeu[0]/noms/nom[*] ).
+ 		if (region == "jp" && language != "jp")
+ 			result.mdl.set(MetaDataId::Name, find_child_by_attribute_list(game.child("noms"), "nom", "region", { region, "wor", "us" , "ss", "eu", "jp" }).text().get());
+ 		else
+@@ -485,7 +492,7 @@
+ 		if (!description.empty())
+ 			result.mdl.set(MetaDataId::Desc, Utils::String::decodeXmlString(description));
+ 
+-		// Genre fallback language: EN. ( Xpath: Data/jeu[0]/genres/genre[*] )		
++		// Genre fallback language: EN. ( Xpath: Data/jeu[0]/genres/genre[*] )
+ 		if (game.child("genres"))
+ 		{
+ 			bool adultGame = false;
+@@ -518,7 +525,7 @@
+ 
+ 				if (strcmp(node.attribute("principale").value(), "1") == 0 && strcmp(node.attribute("langue").value(), language.c_str()) == 0)
+ 					genre = node.text().get();
+-			
++
+ 				if (strcmp(node.attribute("principale").value(), "0") == 0 && strcmp(node.attribute("langue").value(), language.c_str()) == 0)
+ 					subgenre = node.text().get();
+ 			}
+@@ -627,7 +634,7 @@
+         if(game.child("systeme").attribute("id"))
+         {
+             int systemId = game.child("systeme").attribute("id").as_int();
+-			
++
+ 			auto arcadeSystem = ArcadeSystems.find(systemId);
+             if(arcadeSystem != ArcadeSystems.cend())
+                 result.mdl.set(MetaDataId::ArcadeSystemName, arcadeSystem->second.first);
+@@ -641,7 +648,7 @@
+ 			ss << ratingVal;
+ 			result.mdl.set(MetaDataId::Rating, ss.str());
+ 		}
+-		else 
++		else
+ 			result.mdl.set(MetaDataId::Rating, "-1");
+ 
+ 		if (Settings::getInstance()->getBool("ScrapePadToKey") && game.child("sp2kcfg"))
+@@ -658,7 +665,7 @@
+ 				pugi::xml_node art = findMedia(media_list, ripList, romlang, region);
+ 				if (art)
+ 				{
+-					// Sending a 'softname' containing space will make the image URLs returned by the API also contain the space. 
++					// Sending a 'softname' containing space will make the image URLs returned by the API also contain the space.
+ 					//  Escape any spaces in the URL here
+ 					result.urls[MetaDataId::Image] = ScraperSearchItem(ensureUrl(art.text().get()), art.attribute("format") ? "." + std::string(art.attribute("format").value()) : "");
+ 
+@@ -721,7 +728,7 @@
+ 						LOG(LogDebug) << "Failed to find media XML node for video";
+ 				}
+ 			}
+-			
++
+ 			if (Settings::getInstance()->getBool("ScrapeBoxBack"))
+ 			{
+ 				ripList = getRipList("box-2D-back");
+@@ -783,7 +790,7 @@
+ }
+ 
+ std::string ScreenScraperRequest::ScreenScraperConfig::getGameSearchUrl(const std::string gameName, bool jeuRecherche) const
+-{	
++{
+ 	std::string ret = API_URL_BASE
+ 		+ "/jeuInfos.php?" + std::string(SCREENSCRAPER_DEV_LOGIN) +
+ 		+ "&softname=" + HttpReq::urlEncode(VERSIONED_SOFT_NAME)
+@@ -833,7 +840,7 @@
+ 	pugi::xml_node data = xmldoc.child("Data");
+ 	if (!data.child("ssuser"))
+ 		return user;
+-		
++
+ 	data = data.child("ssuser");
+ 
+ 	if (data.child("id"))
+@@ -856,7 +863,7 @@
+ 
+ 	if (data.child("maxrequestskoperday"))
+ 		user.maxRequestsKoPerDay = data.child("maxrequestskoperday").text().as_int();
+-	
++
+ 	return user;
+ }
+ 
+@@ -867,7 +874,7 @@
+ 
+ 	HttpReq httpreq(url);
+ 	httpreq.wait();
+-	
++
+ 	if (httpreq.status() != HttpReq::REQ_SUCCESS)
+ 	{
+ 		result = httpreq.getErrorMsg();
+@@ -882,12 +889,12 @@
+ 	if (parseResult)
+ 	{
+ 		auto userInfo = ScreenScraperRequest::processUserInfo(doc);
+-		
++
+ 		// userInfo.maxRequestsPerMin / userInfo.maxthreads;
+ 
+ 		if (userInfo.maxthreads > 0)
+ 			return userInfo.maxthreads;
+-	}	
++	}
+ 
+ 	return 1;
+ }
