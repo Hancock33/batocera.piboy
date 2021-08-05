@@ -170,7 +170,7 @@ amigademo:
       CD32:   { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [chd] }
     libretro:
       puae:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
-      
+
 nes:
   name:       Nintendo Entertainment System
   manufacturer: Nintendo
@@ -492,7 +492,7 @@ pcenginecd:
     libretro:
       pce:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE] }
       pce_fast: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE_FAST] }
-      
+
 tg16:
   name:       Turbo Grafx 16
   manufacturer: NEC

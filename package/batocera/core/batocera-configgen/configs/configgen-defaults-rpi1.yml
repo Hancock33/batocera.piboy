@@ -3,7 +3,7 @@ default:
     videomode:      CEA 4 HDMI
     video_threaded: true
     smooth:         false
-    
+
 amiga500:
   emulator: amiberry
   core:     A500

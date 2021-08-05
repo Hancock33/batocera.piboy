@@ -1417,12 +1417,6 @@ saitek_kso:
 saitek_schess:
   emulator: libretro
   core:     mess
-samcoupe_cass:
-  emulator: libretro
-  core:     mess
-samcoupe_flop:
-  emulator: libretro
-  core:     mess
 sat_cart:
   emulator: libretro
   core:     mess

@@ -4,5 +4,5 @@ config BR2_PACKAGE_DESKPIPRO_CASE
 
 	help
 	  Enable front USB, fan control & infrared on the DeskPi Pro Case.
-      
+
 	  https://deskpi.com/products/deskpi-pro-for-raspberry-pi-4

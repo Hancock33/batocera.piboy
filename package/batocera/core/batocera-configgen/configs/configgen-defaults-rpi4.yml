@@ -10,7 +10,7 @@ gamecube:
 wii:
   emulator: libretro
   core:     dolphin
-  
+
 # Libretro-mess
 
 32x:
@@ -1412,12 +1412,6 @@ saitek_kso:
   emulator: libretro
   core:     mess
 saitek_schess:
-  emulator: libretro
-  core:     mess
-samcoupe_cass:
-  emulator: libretro
-  core:     mess
-samcoupe_flop:
   emulator: libretro
   core:     mess
 sat_cart:
