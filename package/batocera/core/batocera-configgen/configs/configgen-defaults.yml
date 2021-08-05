@@ -372,9 +372,9 @@ segacd:
 sg1000:
   emulator: libretro
   core:     genesisplusgx
-simcoupe:
-  emulator: simcoupe
-  core:     simcoupe
+samcoupe:
+  emulator: samcoupe
+  core:     samcoupe
 solarus:
   emulator: solarus
   core:     solarus

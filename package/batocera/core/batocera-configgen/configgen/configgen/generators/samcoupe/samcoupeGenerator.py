@@ -5,7 +5,7 @@ from generators.Generator import Generator
 import controllersConfig
 
 
-class SimcoupeGenerator(Generator):
+class SamcoupeGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
         commandArray = ["simcoupe", "autoboot", "-disk1", rom]

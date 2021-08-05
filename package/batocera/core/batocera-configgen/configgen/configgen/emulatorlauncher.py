@@ -58,7 +58,7 @@ from generators.lexaloffle.lexaloffleGenerator import LexaloffleGenerator
 from generators.model2emu.model2emuGenerator import Model2EmuGenerator
 from generators.ionfury.ionfuryGenerator import IonfuryGenerator
 from generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
-from generators.simcoupe.simcoupeGenerator import SimcoupeGenerator
+from generators.samcoupe.samcoupeGenerator import SamcoupeGenerator
 
 import controllersConfig as controllers
 import signal
@@ -120,7 +120,7 @@ generators = {
     'model2emu': Model2EmuGenerator(),
     'ionfury': IonfuryGenerator(),
     'opentyrian': OpentyrianGenerator(),
-    'simcoupe': SimcoupeGenerator(),
+    'samcoupe': SamcoupeGenerator(),
 }
 
 def main(args, maxnbplayers):
