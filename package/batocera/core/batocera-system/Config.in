@@ -696,7 +696,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 
 	select BR2_PACKAGE_EDUKE32       			# ALL
 	select BR2_PACKAGE_IONFURY       			# ALL
-	
+
 	select BR2_PACKAGE_OPENTYRIAN		        # ALL
 
 	select BR2_PACKAGE_LIBRETRO_GONG	        # ALL
@@ -744,7 +744,7 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
 
 	# Sinclair ZX Spectrum
 	select BR2_PACKAGE_LIBRETRO_FUSE        # ALL
-	
+
 	# Sam Coupe
 	select BR2_PACKAGE_SIMCOUPE		        # ALL
 

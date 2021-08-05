@@ -3953,7 +3953,7 @@ drastic:
             choices:
                 "Off": 0
                 "On":  1
-                
+
 xemu:
   features: []
   cfeatures:
@@ -3970,7 +3970,7 @@ xemu:
             choices:
                 "Normal Boot":        "false"
                 "Skipped-Logo Boot":  "true"
-                
+
 eduke32:
   features: [padtokeyboard]
 

@@ -34,7 +34,7 @@ define BATOCERA_ES_SYSTEM_INSTALL_TARGET_CMDS
 	    $(INSTALL) -m 0644 -D $(@D)/es_features.cfg $(TARGET_DIR)/usr/share/emulationstation/es_features.cfg
         mkdir -p $(@D)/roms # in case there is no rom
 	    cp -pr $(@D)/roms $(TARGET_DIR)/usr/share/batocera/datainit/
-	    cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/bios $(TARGET_DIR)/usr/share/batocera/datainit/    
+	    cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/bios $(TARGET_DIR)/usr/share/batocera/datainit/
 	    @if [ "$(PYBOY_INSTALL)" = "y" ]; then cp -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/roms/piboy $(TARGET_DIR)/usr/share/batocera/datainit/roms ; fi
 endef
 
