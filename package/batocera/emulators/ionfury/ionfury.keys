@@ -62,8 +62,8 @@
         },
 		{
             "trigger": ["hotkey", "start"],
-            "type": "key",
-            "target": [ "KEY_LEFTALT", "KEY_F4" ]
+            "type": "exec",
+            "target": "batocera-es-swissknife --emukill"
 		}
     ]
 }
