@@ -59,6 +59,7 @@ from generators.model2emu.model2emuGenerator import Model2EmuGenerator
 from generators.ionfury.ionfuryGenerator import IonfuryGenerator
 from generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
 from generators.samcoupe.samcoupeGenerator import SamcoupeGenerator
+from generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
 
 import controllersConfig as controllers
 import signal
@@ -121,6 +122,8 @@ generators = {
     'ionfury': IonfuryGenerator(),
     'opentyrian': OpentyrianGenerator(),
     'samcoupe': SamcoupeGenerator(),
+    'sonic2013': SonicRetroGenerator(),
+    'soniccd': SonicRetroGenerator(),
 }
 
 def main(args, maxnbplayers):
