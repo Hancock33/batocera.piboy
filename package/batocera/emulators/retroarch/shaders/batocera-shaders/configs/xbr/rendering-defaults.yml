@@ -1,7 +1,7 @@
 ## XBR
 default:
   # shader affects retroarch shaders
-    shader: xbr/2xBR-lv1-multipass
+  shader: xbr/2xBR-lv1-multipass
   # scanline affect fba2x
   scanline: false
 twentyfourtyeight:
