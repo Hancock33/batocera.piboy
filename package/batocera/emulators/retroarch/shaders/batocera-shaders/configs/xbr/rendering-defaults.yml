@@ -1,0 +1,212 @@
+## XBR
+default:
+  # shader affects retroarch shaders
+    shader: xbr/2xBR-lv1-multipass
+  # scanline affect fba2x
+  scanline: false
+twentyfourtyeight:
+  shader: xbr/2xBR-lv1-multipass
+3do:
+  shader: xbr/2xBR-lv1-multipass
+amiga500:
+  shader: xbr/2xBR-lv1-multipass
+amiga1200:
+  shader: xbr/2xBR-lv1-multipass
+amigacd32:
+  shader: xbr/2xBR-lv1-multipass
+amigacdtv:
+  shader: xbr/2xBR-lv1-multipass
+amigademo:
+  shader: xbr/2xBR-lv1-multipass
+amstradcpc:
+  shader: xbr/2xBR-lv1-multipass
+atari2600:
+  shader: xbr/2xBR-lv1-multipass
+atari5200:
+  shader: xbr/2xBR-lv1-multipass
+atari7800:
+  shader: xbr/2xBR-lv1-multipass
+atari800:
+  shader: xbr/2xBR-lv1-multipass
+atarist:
+  shader: xbr/2xBR-lv1-multipass
+atomiswave:
+  shader: xbr/2xBR-lv1-multipass
+bk:
+  shader: xbr/2xBR-lv1-multipass
+c64:
+  shader: xbr/2xBR-lv1-multipass
+chailove:
+  shader: xbr/2xBR-lv1-multipass
+cannonball:
+  shader: xbr/2xBR-lv1-multipass
+cavestory:
+  shader: xbr/2xBR-lv1-multipass
+channelf:
+  shader: xbr/2xBR-lv1-multipass
+colecovision:
+  shader: xbr/2xBR-lv1-multipass
+craft:
+  shader: xbr/2xBR-lv1-multipass
+dinothawr:
+  shader: xbr/2xBR-lv1-multipass
+dos:
+  shader: xbr/2xBR-lv1-multipass
+dreamcast:
+  shader: xbr/2xBR-lv1-multipass
+ecwolf:
+  shader: xbr/2xBR-lv1-multipass
+fbneo:
+  shader: xbr/2xBR-lv1-multipass
+fds:
+  shader: xbr/2xBR-lv1-multipass
+gameandwatch:
+  shader: xbr/2xBR-lv1-multipass
+gamegear:
+  shader: xbr/2xBR-lv1-multipass
+gb:
+  shader: xbr/2xBR-lv1-multipass
+gb2players:
+  shader: xbr/2xBR-lv1-multipass
+gba:
+  shader: xbr/2xBR-lv1-multipass
+gbc:
+  shader: xbr/2xBR-lv1-multipass
+gbc2players:
+  shader: xbr/2xBR-lv1-multipass
+gong:
+  shader: xbr/2xBR-lv1-multipass
+gx4000:
+  shader: xbr/2xBR-lv1-multipass
+intellivision:
+  shader: xbr/2xBR-lv1-multipass
+jaguar:
+  shader: xbr/2xBR-lv1-multipass
+j2me:
+  shader: xbr/2xBR-lv1-multipass
+lowresnx:
+  shader: xbr/2xBR-lv1-multipass
+lutro:
+  shader: xbr/2xBR-lv1-multipass
+lynx:
+  shader: xbr/2xBR-lv1-multipass
+mame:
+  shader: xbr/2xBR-lv1-multipass
+mastersystem:
+  shader: xbr/2xBR-lv1-multipass
+megadrive:
+  shader: xbr/2xBR-lv1-multipass
+mess:
+  shader: xbr/2xBR-lv1-multipass
+mrboom:
+  shader: xbr/2xBR-lv1-multipass
+msx1:
+  shader: xbr/2xBR-lv1-multipass
+msx2:
+  shader: xbr/2xBR-lv1-multipass
+msx2+:
+  shader: xbr/2xBR-lv1-multipass
+msxturbor:
+  shader: xbr/2xBR-lv1-multipass
+mu:
+  shader: xbr/2xBR-lv1-multipass
+naomi:
+  shader: xbr/2xBR-lv1-multipass
+nds:
+  shader: xbr/2xBR-lv1-multipass
+neogeo:
+  shader: xbr/2xBR-lv1-multipass
+neogeocd:
+  shader: xbr/2xBR-lv1-multipass
+nes:
+  shader: xbr/2xBR-lv1-multipass
+ngp:
+  shader: xbr/2xBR-lv1-multipass
+ngpc:
+  shader: xbr/2xBR-lv1-multipass
+odyssey2:
+  shader: xbr/2xBR-lv1-multipass
+pc88:
+  shader: xbr/2xBR-lv1-multipass
+pc98:
+  shader: xbr/2xBR-lv1-multipass
+pcengine:
+  shader: xbr/2xBR-lv1-multipass
+pcenginecd:
+  shader: xbr/2xBR-lv1-multipass
+pcfx:
+  shader: xbr/2xBR-lv1-multipass
+pico8:
+  shader: xbr/2xBR-lv1-multipass
+pokemini:
+  shader: xbr/2xBR-lv1-multipass
+prboom:
+  shader: xbr/2xBR-lv1-multipass
+psx:
+  shader: xbr/2xBR-lv1-multipass
+reminiscence:
+  shader: xbr/2xBR-lv1-multipass
+sameduck:
+  shader: xbr/2xBR-lv1-multipass
+satellaview:
+  shader: xbr/2xBR-lv1-multipass
+saturn:
+  shader: xbr/2xBR-lv1-multipass
+scummvm:
+  shader: xbr/2xBR-lv1-multipass
+scv:
+  shader: xbr/2xBR-lv1-multipass
+sega32x:
+  shader: xbr/2xBR-lv1-multipass
+segacd:
+  shader: xbr/2xBR-lv1-multipass
+sg1000:
+  shader: xbr/2xBR-lv1-multipass
+sufami:
+  shader: xbr/2xBR-lv1-multipass
+snes:
+  shader: xbr/2xBR-lv1-multipass
+snes-msu1:
+  shader: xbr/2xBR-lv1-multipass
+superflappybirds:
+  shader: xbr/2xBR-lv1-multipass
+supergrafx:
+  shader: xbr/2xBR-lv1-multipass
+supervision:
+  shader: xbr/2xBR-lv1-multipass
+tg16:
+  shader: xbr/2xBR-lv1-multipass
+tg-cd:
+  shader: xbr/2xBR-lv1-multipass
+thomson:
+  shader: xbr/2xBR-lv1-multipass
+tic80:
+  shader: xbr/2xBR-lv1-multipass
+tyrquake:
+  shader: xbr/2xBR-lv1-multipass
+uzem:
+  shader: xbr/2xBR-lv1-multipass
+vectrex:
+  shader: xbr/2xBR-lv1-multipass
+vemulator:
+  shader: xbr/2xBR-lv1-multipass
+virtualboy:
+  shader: xbr/2xBR-lv1-multipass
+vitaquake2:
+  shader: xbr/2xBR-lv1-multipass
+wswan:
+  shader: xbr/2xBR-lv1-multipass
+wswanc:
+  shader: xbr/2xBR-lv1-multipass
+x1:
+  shader: xbr/2xBR-lv1-multipass
+x68000:
+  shader: xbr/2xBR-lv1-multipass
+xrick:
+  shader: xbr/2xBR-lv1-multipass
+zc210:
+  shader: xbr/2xBR-lv1-multipass
+zx81:
+  shader: xbr/2xBR-lv1-multipass
+zxspectrum:
+  shader: xbr/2xBR-lv1-multipass
