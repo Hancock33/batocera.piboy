@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version.: Commits on Aug 7, 2021
-EDUKE32_VERSION = 50795ed5cda6f282f0f64385945fd6430082f9d3
+IONFURY_VERSION = 50795ed5cda6f282f0f64385945fd6430082f9d3
 IONFURY_SITE = https://voidpoint.io/terminx/eduke32.git
 
 IONFURY_DEPENDENCIES = sdl2 sdl2_image
