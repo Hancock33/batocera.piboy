@@ -345,6 +345,9 @@ pygame:
 reminiscence:
   emulator: libretro
   core:     reminiscence
+samcoupe:
+  emulator: samcoupe
+  core:     samcoupe
 sameduck:
   emulator: libretro
   core:     sameduck
@@ -372,9 +375,9 @@ segacd:
 sg1000:
   emulator: libretro
   core:     genesisplusgx
-samcoupe:
-  emulator: samcoupe
-  core:     samcoupe
+sgb:
+  emulator: libretro
+  core:     mgba
 solarus:
   emulator: solarus
   core:     solarus
