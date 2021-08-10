@@ -3,8 +3,8 @@
 # LIGHTSPARK
 #
 ################################################################################
-# Version.: Commits on Jul 29, 2021
-LIGHTSPARK_VERSION = 0f1bc7887021705746d41537883b4ea8277e62b9
+# Version.: Commits on Aug 10, 2021
+LIGHTSPARK_VERSION = 1b2e0c29a8e809c7efd2da89522d830ee4da91e6
 
 LIGHTSPARK_SITE = $(call github,lightspark,lightspark,$(LIGHTSPARK_VERSION))
 LIGHTSPARK_LICENSE = LGPLv3
