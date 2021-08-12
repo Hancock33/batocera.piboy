@@ -3,8 +3,8 @@
 # LIBRETRO_EASYRPG
 #
 ################################################################################
-# Version.: Release 0.6.2.3
-LIBRETRO_EASYRPG_VERSION = 0.6.2.3
+# Version.: Commits on Aug 08, 2021
+LIBRETRO_EASYRPG_VERSION = 538cf74e6d4adaae1d0d2bd3b855e7c4b272d95f
 LIBRETRO_EASYRPG_DEPENDENCIES = sdl2 zlib fmt libpng freetype mpg123 libvorbis opusfile sdl2_mixer pixman speexdsp libxmp wildmidi liblcf
 LIBRETRO_EASYRPG_LICENSE = MIT
 LIBRETRO_EASYRPG_SITE = https://github.com/EasyRPG/Player.git
