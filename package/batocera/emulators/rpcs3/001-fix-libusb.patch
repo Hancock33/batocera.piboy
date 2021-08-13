@@ -1,13 +1,12 @@
-diff --git a/3rdparty/hidapi/libusb/hid.c b/3rdparty/hidapi/libusb/hid.c
-index 0ac85b0..d7c4ba6 100644
---- a/3rdparty/hidapi/libusb/hid.c
-+++ b/3rdparty/hidapi/libusb/hid.c
+diff -Naur rpcs3-063df64108e53de55531e718d770c6ace619e9df.orig/3rdparty/hidapi/hidapi/libusb/hid.c rpcs3-063df64108e53de55531e718d770c6ace619e9df/3rdparty/hidapi/hidapi/libusb/hid.c
+--- rpcs3-063df64108e53de55531e718d770c6ace619e9df.orig/3rdparty/hidapi/hidapi/libusb/hid.c	2021-08-13 06:58:09.000000000 +0100
++++ rpcs3-063df64108e53de55531e718d770c6ace619e9df/3rdparty/hidapi/hidapi/libusb/hid.c	2021-08-13 13:23:35.686906796 +0100
 @@ -44,7 +44,7 @@
  #include <wchar.h>
  
  /* GNU / LibUSB */
 -#include <libusb.h>
 +#include <libusb-1.0/libusb.h>
- #ifndef __ANDROID__
+ #if !defined(__ANDROID__) && !defined(NO_ICONV)
  #include <iconv.h>
  #endif
