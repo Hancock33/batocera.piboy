@@ -3,8 +3,8 @@
 # Hypseus + Singe (a fork of Daphne)
 #
 ################################################################################
-# Version.: Commits on Aug 12, 2021
-DAPHNE_VERSION = 82f584739e3d39e5d2baef63afed8eec8daa4ec5
+# Version.: Commits on Aug 14, 2021
+DAPHNE_VERSION = 0865e65e82784f10c2689483f58363919cbd5059
 
 DAPHNE_SITE = https://github.com/DirtBagXon/hypseus-singe
 DAPHNE_SITE_METHOD=git
