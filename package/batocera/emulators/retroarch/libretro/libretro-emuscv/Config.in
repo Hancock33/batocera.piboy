@@ -7,5 +7,5 @@ config BR2_PACKAGE_LIBRETRO_EMUSCV
 
 	  http://www.libretro.com
 
-comment "LIBRETRO_EMUSCV needs a toolchain w/ C"
+comment "LIBRETRO_EMUSCV needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP
