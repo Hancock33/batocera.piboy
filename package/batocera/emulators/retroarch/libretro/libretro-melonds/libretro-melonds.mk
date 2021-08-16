@@ -3,8 +3,8 @@
 # MELONDS
 #
 ################################################################################
-# Version.: Commits on Aug 13, 2021
-LIBRETRO_MELONDS_VERSION = 49d31a84a2883f42e4fd8cb0376a8947c2db1a4e
+# Version.: Commits on Aug 16, 2021
+LIBRETRO_MELONDS_VERSION = 8d2cef7c2126ac79de30c595c0b82959413c32d9
 LIBRETRO_MELONDS_SITE = $(call github,libretro,melonds,$(LIBRETRO_MELONDS_VERSION))
 LIBRETRO_MELONDS_LICENSE = GPLv2
 LIBRETRO_MELONDS_DEPENDENCIES = libpcap retroarch
