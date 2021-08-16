@@ -2960,8 +2960,8 @@ libretro:
     ecwolf:
       features: []
 
-scv:
-    features: [cheevos]
+    emuscv:
+      features: [rewind, autosave, latency_reduction]
 
 # Standalones
 
