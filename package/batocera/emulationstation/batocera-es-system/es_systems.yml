@@ -2107,7 +2107,7 @@ supervision:
   manufacturer: Watara
   release: 1992
   hardware: portable
-  extensions: [sv, zip, 7zip]
+  extensions: [sv, zip, 7z]
   emulators:
     libretro:
       potator: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_WATARA] }
@@ -2171,8 +2171,7 @@ ecwolf:
   manufacturer: Ports
   release: 2013
   hardware: port
-  extensions: [ecwolf, exe, pk3, zip, 7zip]
-  group: ports
+  extensions: [ecwolf, pk3, zip, 7z]
   emulators:
     libretro:
       ecwolf: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ECWOLF], incompatible_extensions: [ecwolf] }
