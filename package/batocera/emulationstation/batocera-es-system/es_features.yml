@@ -4170,3 +4170,6 @@ opentyrian:
 
 simcoupe:
   features: [padtokeyboard]
+  
+gsplus:
+  features: [padtokeyboard]

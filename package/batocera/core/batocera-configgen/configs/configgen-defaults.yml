@@ -43,6 +43,9 @@ apple2:
   core:     linapple
   options:
     videomode: default
+apple2gs:
+  emulator: gsplus
+  core:     gsplus
 atari2600:
   emulator: libretro
   core:     stella
