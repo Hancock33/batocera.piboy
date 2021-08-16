@@ -60,6 +60,7 @@ from generators.ionfury.ionfuryGenerator import IonfuryGenerator
 from generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
 from generators.samcoupe.samcoupeGenerator import SamcoupeGenerator
 from generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
+from generators.gsplus.gsplusGenerator import GSplusGenerator
 
 import controllersConfig as controllers
 import signal
@@ -124,6 +125,7 @@ generators = {
     'samcoupe': SamcoupeGenerator(),
     'sonic2013': SonicRetroGenerator(),
     'soniccd': SonicRetroGenerator(),
+    'gsplus': GSplusGenerator(),
 }
 
 def main(args, maxnbplayers):

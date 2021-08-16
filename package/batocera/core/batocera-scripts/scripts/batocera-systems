@@ -276,6 +276,9 @@ systems = {
     # ---------- Java ME ---------- #
     "squirreljme":  { "name": "Java ME", "biosFiles": [   { "md5": "8e98b0c8e5c96c191a8b2a9d29d0454b", "file": "bios/squirreljme.sqc" } ] },
     "freej2me":  { "name": "Java ME", "biosFiles": [   { "md5": "03a5c2997118f4b6fd88c0268d016d82", "file": "bios/freej2me-lr.jar" } ] },
+
+    # ---------- Apple 2 GS ---------- #
+    "gsplus":   { "name": "Apple 2 GS", "biosFiles":  [ { "md5": "20a0334c447cb069a040ae5be1d938df", "file": "bios/ROM1"  } ] },
 }
 
 class BiosStatus:

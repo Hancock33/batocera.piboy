@@ -957,6 +957,9 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 	select BR2_PACKAGE_SONIC2013                    # ALL
 	select BR2_PACKAGE_SONICCD                      # ALL
 
+	# Apple 2 GS
+	select BR2_PACKAGE_GSPLUS                       # ALL
+
 	help
 		All avaible systems for the selected architecture
 
