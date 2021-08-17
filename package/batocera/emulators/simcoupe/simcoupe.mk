@@ -22,9 +22,9 @@ SIMCOUPE_PRE_CONFIGURE_HOOKS += SIMCOUPE_SETUP_CMAKE
 
 define SIMCOUPE_INSTALL_TARGET_CMDS
 		$(INSTALL) -D $(@D)/simcoupe $(TARGET_DIR)/usr/bin/simcoupe
-		$(INSTALL) -D $(@D)/Extern/saasound/libSAASound* $(TARGET_DIR)/usr/lib/
-		$(INSTALL) -D $(@D)/Extern/resid/libresid* $(TARGET_DIR)/usr/lib/
-		$(INSTALL) -D $(@D)/Extern/fmt/libfmt* $(TARGET_DIR)/usr/lib/
+		$(INSTALL) -D $(@D)/_deps/saasound-build/libSAASound* $(TARGET_DIR)/usr/lib/
+		$(INSTALL) -D $(@D)/_deps/resid-build/libresid* $(TARGET_DIR)/usr/lib/
+		$(INSTALL) -D $(@D)/_deps/fmt-build/libfmt* $(TARGET_DIR)/usr/lib/
 		mkdir -p $(TARGET_DIR)$(SIMCOUPE_BIOS_AND_RESOURCES)
 		cp -R $(@D)/Resource/* $(TARGET_DIR)$(SIMCOUPE_BIOS_AND_RESOURCES)
 		cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/simcoupe/samcoupe.keys $(TARGET_DIR)/usr/share/evmapy
