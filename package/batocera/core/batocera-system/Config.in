@@ -960,6 +960,9 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 	# Apple 2 GS
 	select BR2_PACKAGE_GSPLUS                       # ALL
 
+	# Apple 2 GS
+	select BR2_PACKAGE_GSPLUS                       # ALL
+
 	help
 		All avaible systems for the selected architecture
 
