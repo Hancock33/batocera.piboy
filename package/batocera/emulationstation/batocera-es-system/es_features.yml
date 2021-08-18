@@ -130,7 +130,7 @@ libretro:
                     "RGB (Blargg)":        RGB (Blargg)
                     "Monochrome (Blargg)": Monochrome (Blargg)
             mesen-s_blend_high_res:
-                prompt:      BLEND HIGH-RES MODES  
+                prompt:      BLEND HIGH-RES MODES
                 description: Enable pseudo-transparency, may cause blurriness
                 choices:
                     "On":  enabled
@@ -4170,6 +4170,6 @@ opentyrian:
 
 simcoupe:
   features: [padtokeyboard]
-  
+
 gsplus:
   features: [padtokeyboard]
