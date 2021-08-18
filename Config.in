@@ -297,9 +297,6 @@ menu "Emulators"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xash3d/hlsdk-xash3d-opfor/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xash3d/xash3d-fwgs/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xemu/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/ecwolf/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/sonic2013/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/soniccd/Config.in"
 endmenu
 
 menu "Kodi"
