@@ -2372,7 +2372,7 @@ samcoupe:
     samcoupe:
       samcoupe:  { requireAnyOf: [BR2_PACKAGE_SIMCOUPE] }
 
-apple2gs:
+gsplus:
   name:      Apple IIGS
   manufacturer: Apple
   release: 1986

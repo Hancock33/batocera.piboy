@@ -43,7 +43,7 @@ apple2:
   core:     linapple
   options:
     videomode: default
-apple2gs:
+gsplus:
   emulator: gsplus
   core:     gsplus
 atari2600:
