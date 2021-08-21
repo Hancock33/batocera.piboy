@@ -9,7 +9,7 @@ diff -Nur SquirrelJME-4138ef9e33c2d8971503e7f4e57aacf90287be6b.orig/ratufacoat/l
 +#########################
 +# Check the host platform
 +
-+include $(BUILD_DIR)/Makefile.common.hostcheck
++include Makefile.common.hostcheck
 +
 +#########################
 +# Set the target platform
