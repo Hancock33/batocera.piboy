@@ -3,8 +3,8 @@
 # EDUKE32
 #
 ################################################################################
-# Version.: Commits on Aug 7, 2021
-EDUKE32_VERSION = 50795ed5cda6f282f0f64385945fd6430082f9d3
+# Version.: Commits on Aug 16, 2021
+EDUKE32_VERSION = d032a9949f4be84599e042ca223c5377bd7a7e72
 EDUKE32_SITE = https://voidpoint.io/terminx/eduke32.git
 
 EDUKE32_DEPENDENCIES = sdl2 sdl2_image
