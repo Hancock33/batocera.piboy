@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./openjazz.game</path>
+    <name>Jazz Jackrabbit</name>
+    <desc>Jazz Jackrabbit is a series of platform video games featuring the eponymous character, Jazz Jackrabbit, a green anthropomorphic hare, who fights with his nemesis, Devan Shell, in a science fiction parody of the fable, The Tortoise and the Hare. Created by Arjan Brussee and Cliff Bleszinski and developed by Epic Games, the series debuted on MS-DOS in 1994 with Jazz Jackrabbit.</desc>
+    <releasedate>19940801T000000</releasedate>
+    <developer>Epic MegaGames</developer>
+    <publisher>Epic Games</publisher>
+    <genre>Platform-Platform / Shooter Scrolling</genre>
+    <players>1</players>
+    <image>./images/openjazz.png</image>
+    <genreid>257</genreid>
+  </game>
+</gameList>

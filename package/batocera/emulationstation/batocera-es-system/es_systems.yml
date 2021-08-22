@@ -2362,6 +2362,17 @@ opentyrian:
   comment_fr: |
     Ce système est le premier jeu de autonome. Aucune rom n'est requise.
 
+openjazz:
+  name:       Jazz Jackrabbit
+  manufacturer: Ports
+  release: 1994
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    openjazz:
+      openjazz: { requireAnyOf: [BR2_PACKAGE_OPENJAZZ] }
+
 samcoupe:
   name:       SAM Coupé
   manufacturer: Miles Gordon Technology
