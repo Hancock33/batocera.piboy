@@ -1,0 +1,12 @@
+diff -Naur hydracastlelabyrinth.orig/CMakeLists.txt hydracastlelabyrinth/CMakeLists.txt
+--- hydracastlelabyrinth.orig/CMakeLists.txt	2021-04-16 21:05:06.000000000 +0100
++++ hydracastlelabyrinth/CMakeLists.txt	2021-08-08 00:24:57.865398270 +0100
+@@ -63,7 +63,7 @@
+ 
+ if(USE_SDL2)
+ 	add_definitions(-D_SDL -D_SDL2)
+-	find_package(SDL2 REQUIRED)
++	#find_package(SDL2 REQUIRED)
+ 	#find_package(SDL2_mixer REQUIRED)
+ 	
+ 	INCLUDE_DIRECTORIES(${SDL2_INCLUDE_DIRS})
