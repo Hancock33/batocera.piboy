@@ -290,6 +290,9 @@ openbor:
   options:
     ratio:  0
     filter: 0
+openjazz:
+  emulator: openjazz
+  core:     openjazz   
 opentyrian:
   emulator: opentyrian
   core:     opentyrian

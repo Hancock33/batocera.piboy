@@ -4171,6 +4171,9 @@ ionfury:
 
 opentyrian:
   features: [padtokeyboard]
+  
+openjazz:
+  features: [padtokeyboard]
 
 simcoupe:
   features: [padtokeyboard]

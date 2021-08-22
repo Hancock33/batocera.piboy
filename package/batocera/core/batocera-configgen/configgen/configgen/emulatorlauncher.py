@@ -61,6 +61,7 @@ from generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
 from generators.samcoupe.samcoupeGenerator import SamcoupeGenerator
 from generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
 from generators.gsplus.gsplusGenerator import GSplusGenerator
+from generators.openjazz.openjazzGenerator import OpenJazzGenerator
 
 import controllersConfig as controllers
 import signal
@@ -126,6 +127,8 @@ generators = {
     'sonic2013': SonicRetroGenerator(),
     'soniccd': SonicRetroGenerator(),
     'gsplus': GSplusGenerator(),
+    'openjazz': OpenJazzGenerator(),
+
 }
 
 def main(args, maxnbplayers):
