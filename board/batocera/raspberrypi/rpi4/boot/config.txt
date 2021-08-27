@@ -128,7 +128,7 @@ initramfs boot/initrd.gz
 
 # Configure GPU memory based on SDRAM size
 # Default GPU memory split - at least 288M is needed for some 4k HEVC files
-gpu_mem=384
+#gpu_mem=256
 
 # Enable audio (loads snd_bcm2835)
 dtparam=audio=on
