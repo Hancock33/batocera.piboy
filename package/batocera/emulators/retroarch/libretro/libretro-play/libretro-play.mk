@@ -3,7 +3,7 @@
 # PLAY
 #
 ################################################################################
-
+# Version.: Commits on Aug 25, 2021
 LIBRETRO_PLAY_VERSION = 67a826fed6d96c3acc0c5a3d1d75b05a12fb865d
 LIBRETRO_PLAY_SITE = https://github.com/jpd002/Play-.git
 LIBRETRO_PLAY_LICENSE = BSD

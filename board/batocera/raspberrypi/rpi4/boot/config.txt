@@ -152,14 +152,14 @@ dtoverlay=audremap,pins_18_19
 ##DPI LCD settings
 dpi_group=2
 dpi_mode=87
-dpi_output_format=0x070016 
+dpi_output_format=0x070016
 dpi_timings=640 1 44 2 42 480 1 19 2 17 0 0 0 60 0 24000000 1
 enable_dpi_lcd=1
 
 ##Disable ACT LED
 dtparam=act_led_trigger=none
 dtparam=act_led_activelow=off
-  
+
 ##Disable PWR LED
 dtparam=pwr_led_trigger=none
 dtparam=pwr_led_activelow=off
