@@ -4,18 +4,18 @@ diff -Naur batocera-emulationstation-a63a5ed2abff3a58947a22c5f1f2d8f531f8cd07.or
 @@ -28,7 +28,7 @@
  #ifdef WIN32 // windows
  	return system("shutdown -s -t 0");
- #else // osx / linux
+ #else // osx / linux	
 -	return system("shutdown -h now");
 +	return system("echo 0 > /sys/kernel/xpi_gamecon/flags && /sbin/rmmod xpi_gamecon && shutdown -h now");
  #endif
  }
-
+ 
 @@ -37,7 +37,7 @@
- #ifdef WIN32 // windows
+ #ifdef WIN32 // windows	
  	return system("shutdown -r -t 0");
- #else // osx / linux
+ #else // osx / linux	
 -	return system("shutdown -r now");
 +	return system("echo 129 > /sys/kernel/xpi_gamecon/flags && shutdown -r now");
  #endif
  }
-
+ 
