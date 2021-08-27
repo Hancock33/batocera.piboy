@@ -62,7 +62,7 @@ from generators.samcoupe.samcoupeGenerator import SamcoupeGenerator
 from generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
 from generators.gsplus.gsplusGenerator import GSplusGenerator
 from generators.openjazz.openjazzGenerator import OpenJazzGenerator
-from generators.play.playGenerator import PlayGenerator
+#from generators.play.playGenerator import PlayGenerator
 
 import controllersConfig as controllers
 import signal
@@ -131,7 +131,7 @@ generators = {
     'soniccd': SonicRetroGenerator(),
     'gsplus': GSplusGenerator(),
     'openjazz': OpenJazzGenerator(),
-    'play': PlayGenerator(),
+    #'play': PlayGenerator(),
 }
 
 def main(args, maxnbplayers):
