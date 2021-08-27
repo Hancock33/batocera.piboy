@@ -3,8 +3,8 @@
 # MESS
 #
 ################################################################################
-# Version.: Commits on Aug 24, 2021
-LIBRETRO_MESS_VERSION = 015dc4f5bd8a1cc347e00e08ec575a4b0e60016d
+# Version.: Commits on Aug 27, 2021
+LIBRETRO_MESS_VERSION = cee17226e5ea397b67e18a49ea643816d1aa8f68
 LIBRETRO_MESS_SITE = $(call github,libretro,mame,$(LIBRETRO_MESS_VERSION))
 LIBRETRO_MESS_LICENSE = MESS
 LIBRETRO_MESS_DEPENDENCIES = retroarch zlib flac sqlite expat
