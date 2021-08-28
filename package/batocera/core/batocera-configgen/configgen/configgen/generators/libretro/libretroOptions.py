@@ -1014,51 +1014,51 @@ def generateCoreSettings(coreSettings, system, rom):
     # TODO: Add CORE options for BSnes and PocketSNES
 
     # Nintendo SNES/GB/GBC/SGB
-    if (system.config['core'] == 'mesen-s'):
+    if (system.config['core'] == 'mesens'):
         # Force appropriate Game Boy mode for the system (unless overriden)
-        if (system.name == 'sgb') and not system.isOptSet('mesen-s_gbmodel'):
-            coreSettings.save('mesen-s_gbmodel', '"Super Game Boy"')
-        elif (system.name == 'gb') and not system.isOptSet('mesen-s_gbmodel'):
-            coreSettings.save('mesen-s_gbmodel', '"Game Boy"')
-        elif (system.name == 'gbc') and not system.isOptSet('mesen-s_gbmodel'):
-            coreSettings.save('mesen-s_gbmodel', '"Game Boy Color"')
-        elif system.isOptSet('mesen-s_gbmodel'):
-            coreSettings.save('mesen-s_gbmodel', '"' + system.config['mesen-s_gbmodel'] + '"')
+        if (system.name == 'sgb') and not system.isOptSet('mesens_gbmodel'):
+            coreSettings.save('mesens_gbmodel', '"Super Game Boy"')
+        elif (system.name == 'gb') and not system.isOptSet('mesens_gbmodel'):
+            coreSettings.save('mesens_gbmodel', '"Game Boy"')
+        elif (system.name == 'gbc') and not system.isOptSet('mesens_gbmodel'):
+            coreSettings.save('mesens_gbmodel', '"Game Boy Color"')
+        elif system.isOptSet('mesens_gbmodel'):
+            coreSettings.save('mesens_gbmodel', '"' + system.config['mesens_gbmodel'] + '"')
         else:
-            coreSettings.save('mesen-s_gbmodel', '"Auto"')
+            coreSettings.save('mesens_gbmodel', '"Auto"')
         # SGB2 Enable
-        if system.isOptSet('mesen-s_sgb2'):
-            coreSettings.save('mesen-s_sgb2', '"' + system.config['mesen-s_sgb2'] + '"')
+        if system.isOptSet('mesens_sgb2'):
+            coreSettings.save('mesens_sgb2', '"' + system.config['mesens_sgb2'] + '"')
         else:
             coreSettings.save('msesn-s_sgb2', '"enabled"')
         # NTSC Filter
-        if system.isOptSet('mesen-s_ntsc_filter'):
-            coreSettings.save('mesen-s_ntsc_filter', '"' + system.config['mesen-s_ntsc_filter'] + '"')
+        if system.isOptSet('mesens_ntsc_filter'):
+            coreSettings.save('mesens_ntsc_filter', '"' + system.config['mesens_ntsc_filter'] + '"')
         else:
             coreSettings.save('msesn-s_ntsc_filter', '"disabled"')
         # Blending for high-res mode (Kirby's Dream Land 3 pseudo-transparency)
-        if system.isOptSet('mesen-s_blend_high_res'):
-            coreSettings.save('mesen-s_blend_high_res', '"' + system.config['mesen-s_blend_high_res'] + '"')
+        if system.isOptSet('mesens_blend_high_res'):
+            coreSettings.save('mesens_blend_high_res', '"' + system.config['mesens_blend_high_res'] + '"')
         else:
             coreSettings.save('msesn-s_blend_high_res', '"disabled"')
         # Change sound interpolation to cubic
-        if system.isOptSet('mesen-s_cubic_interpolation'):
-            coreSettings.save('mesen-s_cubic_interpolation', '"' + system.config['mesen-s_cubic_interpolation'] + '"')
+        if system.isOptSet('mesens_cubic_interpolation'):
+            coreSettings.save('mesens_cubic_interpolation', '"' + system.config['mesens_cubic_interpolation'] + '"')
         else:
             coreSettings.save('msesn-s_cubic_interpolation', '"disabled"')
         # SNES CPU Overclock
-        if system.isOptSet('mesen-s_overclock'):
-            coreSettings.save('mesen-s_overclock', '"' + system.config['mesen-s_overclock'] + '"')
+        if system.isOptSet('mesens_overclock'):
+            coreSettings.save('mesens_overclock', '"' + system.config['mesens_overclock'] + '"')
         else:
             coreSettings.save('msesn-s_overclock', '"None"')
         # Overclocking type (compatibility)
-        if system.isOptSet('mesen-s_overclock_type'):
-            coreSettings.save('mesen-s_overclock_type', '"' + system.config['mesen-s_overclock_type'] + '"')
+        if system.isOptSet('mesens_overclock_type'):
+            coreSettings.save('mesens_overclock_type', '"' + system.config['mesens_overclock_type'] + '"')
         else:
             coreSettings.save('msesn-s_overclock_type', '"Before NMI"')
         # SuperFX Overclock
-        if system.isOptSet('mesen-s_superfx_overclock'):
-            coreSettings.save('mesen-s_superfx_overclock', '"' + system.config['mesen-s_superfx_overclock'] + '"')
+        if system.isOptSet('mesens_superfx_overclock'):
+            coreSettings.save('mesens_superfx_overclock', '"' + system.config['mesens_superfx_overclock'] + '"')
         else:
             coreSettings.save('msesn-s_superfx_overclock', '"100%"')
 

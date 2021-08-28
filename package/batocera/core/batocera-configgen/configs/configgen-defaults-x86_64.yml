@@ -15,4 +15,4 @@ n64dd:
     videomode: max-1920x1080
 sgb:
   emulator: libretro
-  core:     mesen-s
+  core:     mesens
