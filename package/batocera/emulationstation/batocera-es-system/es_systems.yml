@@ -2377,6 +2377,17 @@ openjazz:
     openjazz:
       openjazz: { requireAnyOf: [BR2_PACKAGE_OPENJAZZ] }
 
+hcl:
+  name:       Hydra Castle Labyrinth
+  manufacturer: Ports
+  release: 2011
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    hcl:
+      hcl: { requireAnyOf: [BR2_PACKAGE_HCL] }
+
 samcoupe:
   name:       SAM Coupé
   manufacturer: Miles Gordon Technology

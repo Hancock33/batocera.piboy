@@ -177,6 +177,9 @@ gong:
 gx4000:
   emulator: libretro
   core:     cap32
+hcl:
+  emulator: hcl
+  core:     hcl
 ionfury:
   emulator: ionfury
   core:     ionfury
