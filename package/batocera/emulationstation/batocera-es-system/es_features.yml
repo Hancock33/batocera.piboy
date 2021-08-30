@@ -4186,9 +4186,6 @@ ionfury:
 opentyrian:
   features: [padtokeyboard]
 
-hcl:
-  features: [padtokeyboard]
-
 openjazz:
   features: [padtokeyboard]
 
