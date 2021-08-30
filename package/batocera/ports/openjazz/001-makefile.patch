@@ -1,6 +1,6 @@
-diff -Naur openjazz-ff36254abe1c094f69e445e698c043aeb1d577cd.orig/Makefile openjazz-ff36254abe1c094f69e445e698c043aeb1d577cd/Makefile
---- openjazz-ff36254abe1c094f69e445e698c043aeb1d577cd.orig/Makefile	2021-07-08 00:11:25.000000000 +0100
-+++ openjazz-ff36254abe1c094f69e445e698c043aeb1d577cd/Makefile	2021-08-22 11:17:25.449516495 +0100
+diff -Naur openjazz-8108082394a2ca1007b2444b4099d9f18afcb530.orig/Makefile openjazz-8108082394a2ca1007b2444b4099d9f18afcb530/Makefile
+--- openjazz-8108082394a2ca1007b2444b4099d9f18afcb530.orig/Makefile	2021-08-28 21:23:57.000000000 +0100
++++ openjazz-8108082394a2ca1007b2444b4099d9f18afcb530/Makefile	2021-08-30 12:16:22.861589774 +0100
 @@ -14,8 +14,8 @@
  endif
  
@@ -11,68 +11,3 @@ diff -Naur openjazz-ff36254abe1c094f69e445e698c043aeb1d577cd.orig/Makefile openj
 +LIBS += `pkg-config sdl --libs`
  
  LIBS += -lm
- 
-diff -Naur openjazz-ff36254abe1c094f69e445e698c043aeb1d577cd.orig/src/main.cpp openjazz-ff36254abe1c094f69e445e698c043aeb1d577cd/src/main.cpp
---- openjazz-ff36254abe1c094f69e445e698c043aeb1d577cd.orig/src/main.cpp	2021-07-08 00:11:25.000000000 +0100
-+++ openjazz-ff36254abe1c094f69e445e698c043aeb1d577cd/src/main.cpp	2021-08-22 11:31:37.338008165 +0100
-@@ -84,29 +84,29 @@
-  * @param argv Array of argument strings, as passed to main function
-  */
- void startUp (int argc, char *argv[]) {
--
-+     SDL_ShowCursor(SDL_DISABLE);
- 	File* file;
- 	unsigned char* pixels = NULL;
- 	int count;
- 	int screenW = DEFAULT_SCREEN_WIDTH;
- 	int screenH = DEFAULT_SCREEN_HEIGHT;
- 	int scaleFactor = 1;
--#ifdef FULLSCREEN_ONLY
-+//#ifdef FULLSCREEN_ONLY
- 	bool fullscreen = true;
--#else
--	bool fullscreen = false;
--#endif
-+//#else
-+//	bool fullscreen = false;
-+//#endif
- 
- 
- 	// Determine paths
- 
- 	// Use hard-coded paths, if available
- 
--#ifdef DATAPATH
--	firstPath = new Path(NULL, createString(DATAPATH));
--#else
--	firstPath = NULL;
--#endif
-+//#ifdef DATAPATH
-+	firstPath = new Path(NULL, createString("/userdata/roms/openjazz"));
-+//#else
-+//	firstPath = NULL;
-+//#endif
- 
- #ifdef __HAIKU__
- 	dev_t volume = dev_for_path("/boot");
-@@ -194,13 +194,13 @@
- 
- 	// Use the user's home directory, if available
- 
--#ifdef HOMEDIR
--	#ifdef _WIN32
--	firstPath = new Path(firstPath, createString(getenv("HOME"), "\\"));
--	#else
--	firstPath = new Path(firstPath, createString(getenv("HOME"), "/."));
--	#endif
--#endif
-+//#ifdef HOMEDIR
-+//	#ifdef _WIN32
-+//	firstPath = new Path(firstPath, createString(getenv("HOME"), "\\"));
-+//	#else
-+//	firstPath = new Path(NULL, createString("/userdata/system/configs/openjazz"));
-+//	#endif
-+//#endif
- 
- 
- 	// Use the current working directory
