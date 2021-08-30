@@ -13,18 +13,18 @@ diff -Naur hydracastlelabyrinth-ab43945c27577a418636c92f9ae2a44ce9588f0b.orig/sr
 -		case  5: jR = w; break;
 -		case  6: jSelect = w; break;
 -		case  7: jStart = w; break;
-+	//5  Piboy A
-+	//6  Piboy B
-+	//7  Piboy C
-+	//8  Piboy X
-+	//9  Piboy Y
-+	//10 Piboy Z
-+	//11 Piboy Right Trigger
-+    //12 Piboy Left Trigger
-+    //13 Piboy Select
-+    //14 Piboy Start
++		//5  Piboy A
++		//6  Piboy B
++		//7  Piboy C
++		//8  Piboy X
++		//9  Piboy Y
++		//10 Piboy Z
++		//11 Piboy Right Trigger
++    	//12 Piboy Left Trigger
++    	//13 Piboy Select
++    	//14 Piboy Start
 +		
-+        case  5: jFaceLeft = w; break; // Fire
++       case  5: jFaceLeft = w; break; // Fire
 +	    case  6: jFaceDown = w; break; //Jump
 +		case  9: jFaceRight = w; break; //secondary
 +		case  7: jFaceUp = w; break; 
