@@ -30,7 +30,7 @@ diff -Naur hydracastlelabyrinth-ab43945c27577a418636c92f9ae2a44ce9588f0b.orig/sr
 +		case  7: jFaceUp = w; break; 
 +		case  11: jR = w; break;
 +		case  12: jL = w; break; 
-+	    case  14: jStart = w; break;		
-+		case  13: jSelect = w; break;
++	    case  13: jStart = w; break;		
++		case  14: jSelect = w; break;
  	}
  }
