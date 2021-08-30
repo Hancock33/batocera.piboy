@@ -20,8 +20,6 @@ define HCL_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/hcl
 	$(INSTALL) -D $(@D)/buildroot-build/hcl $(TARGET_DIR)/usr/share/hcl/hcl
 	chmod 0755 $(TARGET_DIR)/usr/share/hcl/hcl
-	echo cd /usr/share/hcl/ && ./hcl > $(TARGET_DIR)/usr/bin/hcl
-	chmod 0755 $(TARGET_DIR)/usr/bin/hcl
     cp -pvr $(@D)/data $(TARGET_DIR)/usr/share/hcl/
 
 	# evmap config

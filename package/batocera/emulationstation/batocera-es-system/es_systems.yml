@@ -2382,11 +2382,11 @@ hcl:
   manufacturer: Ports
   release: 2011
   hardware: port
-  extensions: [game]
+  extensions: [sh]
   group: ports
-  emulators:
-    hcl:
-      hcl: { requireAnyOf: [BR2_PACKAGE_HCL] }
+  path:       /userdata/roms/hcl
+  command:    "/bin/sh %ROM%"
+  force:      True
 
 samcoupe:
   name:       SAM Coupé
