@@ -17,7 +17,8 @@ else
 CGENIUS_CONF_OPTS += -DUSE_OPENGL=OFF
 endif
 
-CGENIUS_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
+CGENIUS_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release 
+CGENIUS_CONF_OPTS += -DGAMES_SHAREDIR=/userdata/roms/cgenius
 
 define CGENIUS_INSTALL_TARGET_SHARED_LIBRARIES
 	mkdir -p $(TARGET_DIR)/usr/lib
@@ -30,6 +31,10 @@ define CGENIUS_INSTALL_TARGET_SHARED_LIBRARIES
 	cp $(@D)/GsKit/graphics/libGsKit_graphics.so $(TARGET_DIR)/usr/lib
 	cp $(@D)/GsKit/widgets/libGsKit_widgets.so $(TARGET_DIR)/usr/lib
 	cp $(@D)/GsKit/libGsKit.so $(TARGET_DIR)/usr/lib
+	
+	# evmap config
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/cgenius/cgenius.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 CGENIUS_POST_INSTALL_TARGET_HOOKS += CGENIUS_INSTALL_TARGET_SHARED_LIBRARIES

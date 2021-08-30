@@ -3791,7 +3791,7 @@ supermodel:
                 "150":          150
 
 cgenius:
-  features: []
+  features: [padtokeyboard]
 
 vice:
   features: [ratio, padtokeyboard]
