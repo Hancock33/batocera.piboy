@@ -1,0 +1,13 @@
+--- a/src/CMakeLists.txt	2021-07-17 12:57:21.270474666 +0200
++++ b/src/CMakeLists.txt	2021-07-17 12:57:37.543807393 +0200
+@@ -42,8 +42,8 @@
+ 
+ 
+ #Alignment error report is important for android builds
+-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror=cast-align")
+-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Werror=cast-align")
++set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
++set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}")
+ 
+ # Main includes
+ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR})
