@@ -1,0 +1,54 @@
+diff -Naur stuntcarremake-f90f3851a44872c874baade0aad7206ce860f1c8.orig/Makefile stuntcarremake-f90f3851a44872c874baade0aad7206ce860f1c8/Makefile
+--- stuntcarremake-f90f3851a44872c874baade0aad7206ce860f1c8.orig/Makefile	2021-07-18 14:49:34.000000000 +0100
++++ stuntcarremake-f90f3851a44872c874baade0aad7206ce860f1c8/Makefile	2021-08-31 15:07:44.155407799 +0100
+@@ -2,14 +2,20 @@
+ # General Compiler Settings
+ #
+ 
+-CC=g++
++CXX=g++
+ #PANDORA=1
+-DEBUG=1
++DEBUG=0
+ 
+ # general compiler settings
+ ifeq ($(M32),1)
+ 	FLAGS= -m32
+ endif
++ifeq ($(RPI4),1)
++	FLAGS= -mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math -DARM -fpic
++	FLAGS+= -DODROID
++	LDFLAGS= -shared -lm -Wl,-no-undefined
++	#HAVE_GLES=1
++endif	
+ ifeq ($(PANDORA),1)
+ 	FLAGS= -mcpu=cortex-a8 -mfpu=neon -mfloat-abi=softfp -march=armv7-a -fsingle-precision-constant -mno-unaligned-access -fdiagnostics-color=auto -O3 -fsigned-char
+ 	FLAGS+= -DPANDORA
+@@ -162,15 +168,15 @@
+ all: $(BIN)
+ 
+ $(BIN): $(OBJ)
+-	$(CC) -o $(BIN) $(OBJ) $(CFLAGS) $(LDFLAGS) $(LIB)
++	$(CXX) -o $(BIN) $(OBJ) $(CFLAGS) $(LDFLAGS) $(LIB)
+ 
+ $(OBJ): $(INC)
+ 
+ %.o: %.cpp
+-	$(CC) -o $@ -c $< $(CFLAGS)
++	$(CXX) -o $@ -c $< $(CFLAGS)
+ 
+ %.bc: %.cpp
+-	$(CC) -o $@ -c $< $(CFLAGS)
++	$(CXX) -o $@ -c $< $(CFLAGS)
+ 
+ clean:
+ 	$(RM) $(OBJ) $(BIN)
+@@ -192,7 +198,7 @@
+ 	@echo "SDL = $(SDL)"
+ 	@echo "SDL_ = $(SDL_)"
+ 	@echo
+-	@echo "CC = $(CC)"
++	@echo "CX = $(CXX)"
+ 	@echo "BIN = $(BIN)"
+ 	@echo "CFLAGS = $(CFLAGS)"
+ 	@echo "LDFLAGS = $(LDFLAGS)"
