@@ -1148,6 +1148,50 @@ ionfury:
     ionfury:
       ionfury: { requireAnyOf: [BR2_PACKAGE_IONFURY] }
 
+nblood:
+  name:       Blood
+  manufacturer: Ports
+  release: 1997
+  hardware: port
+  extensions: [grp]
+  group: ports
+  emulators:
+    nblood:
+      nblood: { requireAnyOf: [BR2_PACKAGE_nblood] }
+
+pcexhumed:
+  name:       Exhumed/PowerSlave
+  manufacturer: Ports
+  release: 1999
+  hardware: port
+  extensions: [grp]
+  group: ports
+  emulators:
+    pcexhumed:
+      pcexhumed: { requireAnyOf: [BR2_PACKAGE_pcexhumed] }
+
+etekwar:
+  name:       TekWar
+  manufacturer: Ports
+  release: 1995
+  hardware: port
+  extensions: [grp]
+  group: ports
+  emulators:
+    etekwar:
+      etekwar: { requireAnyOf: [BR2_PACKAGE_etekwar] }
+
+voidsw:
+  name:       Shadow Warrior
+  manufacturer: Ports
+  release: 1997
+  hardware: port
+  extensions: [grp]
+  group: ports
+  emulators:
+    voidsw:
+      voidsw: { requireAnyOf: [BR2_PACKAGE_voidsw] }
+
 tic80:
   name:       TIC-80
   manufacturer: Fantasy

@@ -25,10 +25,15 @@ define IONFURY_BUILD_CMDS
 endef
 
 define IONFURY_INSTALL_TARGET_CMDS
+	$(INSTALL) -m 0755 $(@D)/fury -D $(TARGET_DIR)/usr/bin/ionfury
+
+	#copy settings
     mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/fury
     cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/ionfury/ionfury.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/fury
     cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/ionfury/settings.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/fury
-	$(INSTALL) -m 0755 $(@D)/fury -D $(TARGET_DIR)/usr/bin/ionfury
+
+	#copy sdl game contoller info
+	cp $(@D)/package/common/gamecontrollerdb.txt $(TARGET_DIR)/usr/share/gamecontrollerdb.txt
 
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

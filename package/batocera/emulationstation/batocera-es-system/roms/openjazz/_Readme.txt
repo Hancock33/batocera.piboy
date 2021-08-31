@@ -1,11 +1,11 @@
 This port requires a copy of one of the following 1994/1995 Jazz Jackrabbit games:
-  
+
   - Jazz Jackrabbit (available for purchase from GOG)
   - Jazz Jackrabbit Shareware Edition (free download)
   - Jazz Jackrabbit Christmas Edition (free download)
   - Jazz Jackrabbit Holiday Hare (free download)
 
-Extract to the connents to this folder, you should the following files ...
+Extract to the contents to this folder, you should the following files ...
 
 BLOCKS.00*
 BONUS.00*
