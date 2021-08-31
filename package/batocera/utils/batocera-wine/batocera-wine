@@ -40,10 +40,10 @@ G_ROMS_DIR="/userdata/roms/${SYSTEM}"
 
 ## Export Wine libs
 PATH=$PATH:PATH=$PATH:${DIR}/${WINE_VERSION}/bin
-export LD_LIBRARY_PATH="/usr/lib32:${DIR}/${WINE_VERSION}/lib/wine:/lib:/usr/lib:${DIR}/${WINE_VERSION}/lib64/wine"
-export GST_PLUGIN_SYSTEM_PATH_1_0="/usr/lib/gstreamer-1.0:/usr/lib32/gstreamer-1.0"
+export LD_LIBRARY_PATH="/lib32:${DIR}/${WINE_VERSION}/lib/wine:/lib:/usr/lib:${DIR}/${WINE_VERSION}/lib64/wine"
+export GST_PLUGIN_SYSTEM_PATH_1_0="/usr/lib/gstreamer-1.0:/lib32/gstreamer-1.0"
 export GST_REGISTRY_1_0="/userdata/system/.cache/gstreamer-1.0/registry.x86_64.bin"
-export LIBGL_DRIVERS_PATH="/usr/lib32/dri:/usr/lib/dri"
+export LIBGL_DRIVERS_PATH="/lib32/dri:/usr/lib/dri"
 export WINEDLLPATH="${DIR}/${WINE_VERSION}/lib/wine/fakedlls:${DIR}/${WINE_VERSION}/lib64/wine/fakedlls"
 
 usage() {
@@ -124,13 +124,13 @@ wine_options() {
     test "${NO_WRITE_WATCH}" = 1 && WINE_DISABLE_WRITE_WATCH=1
 
     export WINE_LARGE_ADDRESS_AWARE=0
-    test "${FORCE_LARGE_ADRESS}" = 1 && export WINE_LARGE_ADDRESS_AWARE=1
+    test "${FORCE_LARGE_ADRESS}" = 1 && WINE_LARGE_ADDRESS_AWARE=1
 
     export WINE_HEAP_DELAY_FREE=0
-    test "${HEAP_DELAY_FREE}" = 1 && export WINE_HEAP_DELAY_FREE=1
+    test "${HEAP_DELAY_FREE}" = 1 && WINE_HEAP_DELAY_FREE=1
 
     export WINE_HIDE_NVIDIA_GPU=0
-    test "${HIDE_NVIDIA_GPU}" = 1 && export WINE_HIDE_NVIDIA_GPU=1
+    test "${HIDE_NVIDIA_GPU}" = 1 && WINE_HIDE_NVIDIA_GPU=1
 
     export STAGING_SHARED_MEMORY=1
     export ULIMIT_SIZE=1048576
