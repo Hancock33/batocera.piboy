@@ -5,7 +5,7 @@
 ################################################################################
 
 # Version.: Commits on Aug 31, 2021
-LIBRETRO_PCSX2_VERSION = 22678e4e0ca2f7a33c3ad6f6edf4276479997c5e
+LIBRETRO_PCSX2_VERSION = 6ee5b17c6b7df276c10991e64b68b412d414fb24
 LIBRETRO_PCSX2_SITE = https://github.com/libretro/pcsx2.git
 LIBRETRO_PCSX2_LICENSE = GPLv2
 LIBRETRO_PCSX2_DEPENDENCIES = libaio xz
