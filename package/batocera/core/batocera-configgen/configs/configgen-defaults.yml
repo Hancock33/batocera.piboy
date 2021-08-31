@@ -130,6 +130,9 @@ ecwolf:
 eduke32:
   emulator: eduke32
   core:     eduke32
+etekwar:
+  emulator: etekwar
+  core:     etekwar
 fbneo:
   emulator: libretro
   core:     fbneo
@@ -263,6 +266,9 @@ n64dd:
 naomi:
   emulator: libretro
   core:     flycast
+nblood:
+  emulator: nblood
+  core:     nblood
 nds:
   emulator: libretro
   core:     desmume
@@ -311,6 +317,9 @@ pcengine:
 pcenginecd:
   emulator: libretro
   core:     pce_fast
+pcexhumed:
+  emulator: pcexhumed
+  core:     pcexhumed
 pcfx:
   emulator: libretro
   core:     pcfx
@@ -444,6 +453,9 @@ virtualboy:
 vitaquake2:
   emulator: libretro
   core:     vitaquake2
+voidsw:
+  emulator: voidsw
+  core:     voidsw
 wii:
   emulator: dolphin
   core:     dolphin
@@ -490,3 +502,4 @@ zx81:
 zxspectrum:
   emulator: libretro
   core:     fuse
+

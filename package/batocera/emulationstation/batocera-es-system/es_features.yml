@@ -4045,6 +4045,21 @@ xemu:
 eduke32:
   features: [padtokeyboard]
 
+ionfury:
+  features: [padtokeyboard]
+
+nblood:
+  features: [padtokeyboard]
+
+pcexhumed:
+  features: [padtokeyboard]
+
+etekwar:
+  features: [padtokeyboard]
+
+voidsw:
+  features: [padtokeyboard]
+
 lexaloffle:
   features: [padtokeyboard]
 
@@ -4212,9 +4227,6 @@ model2emu:
             choices:
                 "Off":      0
                 "On":       1
-
-ionfury:
-  features: [padtokeyboard]
 
 opentyrian:
   features: [padtokeyboard]

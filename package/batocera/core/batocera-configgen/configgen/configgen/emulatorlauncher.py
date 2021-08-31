@@ -52,6 +52,10 @@ from generators.xemu.xemuGenerator import XemuGenerator
 from generators.cgenius.cgeniusGenerator import CGeniusGenerator
 from generators.flatpak.flatpakGenerator import FlatpakGenerator
 from generators.eduke32.eduke32Generator import Eduke32Generator
+from generators.nblood.nbloodGenerator import NbloodGenerator
+from generators.pcexhumed.pcexhumedGenerator import PcexhumGedenerator
+from generators.etekwar.etekwarGenerator import EtekwarGenerator
+from generators.voidsw.voidswGenerator import VoidswGenerator
 from generators.steam.steamGenerator import SteamGenerator
 from generators.ecwolf.ecwolfGenerator import ECWolfGenerator
 from generators.lexaloffle.lexaloffleGenerator import LexaloffleGenerator
@@ -120,6 +124,10 @@ generators = {
     'cgenius': CGeniusGenerator(),
     'flatpak': FlatpakGenerator(),
     'eduke32': Eduke32Generator(),
+    'nblood': NbloodGenerator(),
+    'pcexhumed': PcexhumGedenerator(),
+    'etekwar': EtekwarGenerator(),
+    'voidsw': VoidswGenerator(),
     'steam': SteamGenerator(),
     'ecwolf': ECWolfGenerator(),
     'lexaloffle': LexaloffleGenerator(),
