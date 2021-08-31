@@ -1,7 +1,0 @@
-config BR2_PACKAGE_GLU
-  bool "glu"
-  help
-    Graphics Library Utilities (GLU)y
-
-    https://github.com/ptitSeb/GLU
-
