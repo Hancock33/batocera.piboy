@@ -5,7 +5,7 @@ from generators.Generator import Generator
 import controllersConfig
 
 
-class Voidsw32Generator(Generator):
+class VoidswGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
         commandArray = ["voidsw", rom]
