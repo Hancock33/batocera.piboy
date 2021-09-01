@@ -628,6 +628,14 @@ libretro:
                 choices:
                     "Off":                  disabled
                     "On":                   enabled
+            fceumm_cropoverscan:
+                prompt:      CROP OVERSCAN
+                description: Crops out video edge hidden under bezel of analog TV
+                choices:
+                    "None":                 none
+                    "Horizontal":           h
+                    "Vertical":             v
+                    "Both":                 both
             fceumm_palette:
                 prompt:      COLOR PALETTE
                 description: Choose which color palette is going to be used
@@ -1500,6 +1508,14 @@ libretro:
                 choices:
                     "Off":                  disabled
                     "On":                   enabled
+            nestopia_cropoverscan:
+                prompt:      CROP OVERSCAN
+                description: Crops out video edge hidden under bezel of analog TV
+                choices:
+                    "None":                 none
+                    "Horizontal":           h
+                    "Vertical":             v
+                    "Both":                 both
             nestopia_palette:
                 prompt:      COLOR PALETTE
                 description: Choose which color palette is going to be used
