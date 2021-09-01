@@ -43,11 +43,11 @@ define EDUKE32_INSTALL_TARGET_CMDS
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/eduke32.keys $(TARGET_DIR)/usr/share/evmapy/eduke32.keys
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/eduke32.keys $(TARGET_DIR)/usr/share/evmapy/nblood.keys
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/eduke32.keys $(TARGET_DIR)/usr/share/evmapy/pcexhumed.keys
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/nblood.keys $(TARGET_DIR)/usr/share/evmapy/nblood.keys
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/pcexhumed.keys $(TARGET_DIR)/usr/share/evmapy/pcexhumed.keys
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/eduke32.keys $(TARGET_DIR)/usr/share/evmapy/etekwar.keys
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/eduke32.keys $(TARGET_DIR)/usr/share/evmapy/rednukem.keys
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/eduke32.keys $(TARGET_DIR)/usr/share/evmapy/voidsw.keys
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/voidsw.keys $(TARGET_DIR)/usr/share/evmapy/voidsw.keys
 endef
 
 $(eval $(generic-package))
