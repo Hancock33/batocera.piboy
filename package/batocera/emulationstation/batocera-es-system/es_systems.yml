@@ -1157,7 +1157,7 @@ nblood:
   group: ports
   emulators:
     nblood:
-      nblood: { requireAnyOf: [BR2_PACKAGE_nblood] }
+      nblood: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
 
 pcexhumed:
   name:       Exhumed/PowerSlave
@@ -1168,7 +1168,7 @@ pcexhumed:
   group: ports
   emulators:
     pcexhumed:
-      pcexhumed: { requireAnyOf: [BR2_PACKAGE_pcexhumed] }
+      pcexhumed: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
 
 etekwar:
   name:       TekWar
@@ -1179,7 +1179,7 @@ etekwar:
   group: ports
   emulators:
     etekwar:
-      etekwar: { requireAnyOf: [BR2_PACKAGE_etekwar] }
+      etekwar: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
 
 voidsw:
   name:       Shadow Warrior
@@ -1190,7 +1190,7 @@ voidsw:
   group: ports
   emulators:
     voidsw:
-      voidsw: { requireAnyOf: [BR2_PACKAGE_voidsw] }
+      voidsw: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
 
 tic80:
   name:       TIC-80
