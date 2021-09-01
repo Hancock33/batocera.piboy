@@ -8,7 +8,7 @@ import controllersConfig
 class RednukemGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
-        commandArray = ["rednukem", "-j", "/userdata/roms/rednukem"]
+        commandArray = ["rednukem", "-j", "/userdata/roms/rednukem", "-g", rom]
 
         return Command.Command(
             array=commandArray,
