@@ -1,7 +1,7 @@
-diff -Naur eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6.orig/Common.mak eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6/Common.mak
---- eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6.orig/Common.mak	2021-06-23 13:29:32.000000000 +0100
-+++ eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6/Common.mak	2021-06-25 18:47:27.978929185 +0100
-@@ -573,8 +573,8 @@
+diff -Naur eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08.orig/Common.mak eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08/Common.mak
+--- eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08.orig/Common.mak	2021-08-27 04:30:07.000000000 +0100
++++ eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08/Common.mak	2021-09-01 14:25:16.998777545 +0100
+@@ -575,8 +575,8 @@
          else
              ifeq ($(PLATFORM),DARWIN)
                  OPTOPT := -march=core2 -mmmx -msse -msse2 -msse3 -mssse3
@@ -12,7 +12,7 @@ diff -Naur eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6.orig/Common.mak eduk
              endif
          endif
      endif
-@@ -892,7 +892,7 @@
+@@ -897,7 +897,7 @@
  
  ifeq ($(RENDERTYPE),SDL)
      ifeq ($(SDL_TARGET),2)
@@ -21,14 +21,30 @@ diff -Naur eduke32-39e8f1852a9bd967145808d18c7597d47dc8d4a6.orig/Common.mak eduk
          SDLNAME := SDL2
      else ifeq ($(SDL_TARGET),1)
          SDLCONFIG := sdl-config
-@@ -934,8 +934,8 @@
+@@ -939,8 +939,8 @@
              SDLCONFIG_CFLAGS := $(strip $(subst -Dmain=SDL_main,,$(shell $(SDLCONFIG) --cflags)))
              SDLCONFIG_LIBS := $(strip $(subst -mwindows,,$(shell $(SDLCONFIG) --libs)))
  
 -            COMPILERFLAGS += $(SDLCONFIG_CFLAGS)
 -            LIBS += $(SDLCONFIG_LIBS)
-+            COMPILERFLAGS += pkg-config sdl2 --cflags`
++            COMPILERFLAGS += `pkg-config sdl2 --cflags`
 +            LIBS += `pkg-config sdl2 --libs`
          else
              ifeq ($(SDL_TARGET),1)
                  COMPILERFLAGS += -D_GNU_SOURCE=1
+diff -Naur eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08.orig/GNUmakefile eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08/GNUmakefile
+--- eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08.orig/GNUmakefile	2021-08-27 04:30:07.000000000 +0100
++++ eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08/GNUmakefile	2021-09-01 14:30:18.343320946 +0100
+@@ -1383,9 +1383,12 @@
+ #### Targets
+ 
+ all: \
++    duke3d \
+     blood \
+     rr \
++    sw \
+     exhumed \
++	tekwar \
+ 
+ start:
+ 	$(BUILD_STARTED)
