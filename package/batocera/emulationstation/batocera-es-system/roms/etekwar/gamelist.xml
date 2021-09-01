@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./SAVEGAM1.TEK</path>
+        <name>William Shatner's Tekwar</name>
+    <desc>The game's narrative takes place using cutscenes at the beginning and end of each level, featuring Shatner himself (in character as Walter Bascom) as the narrator. Cutscenes vary depending on the player's performance during missions: if the player does not shoot any innocent non-player characters (NPCs), kills the TekLord in the mission, and does not raise any tension (i.e. walking with his gun drawn), Bascom delivers praise. On the other hand, shooting innocent characters or aborting the mission causes him to threaten to have you put back into cryo-storage.</desc>
+    <rating>0.8</rating>
+    <releasedate>19950101T000000</releasedate>
+    <developer>	Capstone Software</developer>
+    <publisher>U.S. Gold</publisher>
+    <genre>Shooter-Action-Shooter / 1st person</genre>
+    <image>./images/etekwar.png</image>
+  </game>
+</gameList>
