@@ -5,10 +5,10 @@ from generators.Generator import Generator
 import controllersConfig
 
 
-class IonfuryGenerator(Generator):
+class RednukemGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
-        commandArray = ["ionfury", "-game_dir", "/userdata/roms/ionfury", "-g", rom]
+        commandArray = ["rednukem", "-j", "/userdata/roms/rednukem"]
 
         return Command.Command(
             array=commandArray,

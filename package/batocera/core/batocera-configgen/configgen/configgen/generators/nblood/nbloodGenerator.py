@@ -8,7 +8,7 @@ import controllersConfig
 class NbloodGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
-        commandArray = ["nblood", rom]
+        commandArray = ["nblood", "-j=/userdata/roms/nblood"]
 
         return Command.Command(
             array=commandArray,
