@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./Ionfury.grp</path>
+    <name>Ion Fury</name>
+    <desc>In Ion Fury, the player assumes the role of Shelly Bombshell Harrison, a bomb disposal expert aligned to the Global Defense Force. Dr. Jadus Heskel, a transhumanist cult leader, unleashes an army of cybernetically-enhanced soldiers on the futuristic dystopian city of Neo D.C., which Shelly is tasked with fighting through</desc>
+    <rating>0.85</rating>
+    <releasedate>20190129T000000</releasedate>
+    <developer>Voidpoint</developer>
+    <publisher>3D Realms</publisher>
+    <genre>Shooter / 1st person-Shooter</genre>
+    <players>1</players>
+    <image>./images/ionfury.png</image>
+  </game>
+</gameList>
