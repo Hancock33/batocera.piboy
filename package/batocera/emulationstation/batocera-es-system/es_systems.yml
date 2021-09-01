@@ -1153,7 +1153,7 @@ nblood:
   manufacturer: Ports
   release: 1997
   hardware: port
-  extensions: [grp]
+  extensions: [pk3]
   group: ports
   emulators:
     nblood:
@@ -1169,6 +1169,17 @@ pcexhumed:
   emulators:
     pcexhumed:
       pcexhumed: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
+
+rednukem:
+  name:       Redneck Rampage
+  manufacturer: Ports
+  release: 1997
+  hardware: port
+  extensions: [grp]
+  group: ports
+  emulators:
+    rednukem:
+      rednukem: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
 
 etekwar:
   name:       TekWar
