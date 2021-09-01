@@ -125,7 +125,7 @@ generators = {
     'flatpak': FlatpakGenerator(),
     'eduke32': Eduke32Generator(),
     'nblood': NbloodGenerator(),
-    'pcexhumed': pcexhumedGenerator(),
+    'pcexhumed': PcexhumedGenerator(),
     'etekwar': EtekwarGenerator(),
     'voidsw': VoidswGenerator(),
     'steam': SteamGenerator(),
