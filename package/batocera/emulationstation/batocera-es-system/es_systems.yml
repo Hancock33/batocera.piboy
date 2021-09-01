@@ -1164,7 +1164,7 @@ pcexhumed:
   manufacturer: Ports
   release: 1999
   hardware: port
-  extensions: [grp]
+  extensions: [mov]
   group: ports
   emulators:
     pcexhumed:

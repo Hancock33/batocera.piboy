@@ -357,6 +357,9 @@ psx:
 pygame:
   emulator: pygame
   core:     pygame
+rednukem:
+  emulator: rednukem
+  core:     rednukem
 reminiscence:
   emulator: libretro
   core:     reminiscence
