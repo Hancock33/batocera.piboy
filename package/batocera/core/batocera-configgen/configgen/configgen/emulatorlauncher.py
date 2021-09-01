@@ -53,7 +53,7 @@ from generators.cgenius.cgeniusGenerator import CGeniusGenerator
 from generators.flatpak.flatpakGenerator import FlatpakGenerator
 from generators.eduke32.eduke32Generator import Eduke32Generator
 from generators.nblood.nbloodGenerator import NbloodGenerator
-from generators.pcexhumed.pcexhumedGenerator import PcexhumGedenerator
+from generators.pcexhumed.pcexhumedGenerator import PcexhumedGenerator
 from generators.etekwar.etekwarGenerator import EtekwarGenerator
 from generators.voidsw.voidswGenerator import VoidswGenerator
 from generators.steam.steamGenerator import SteamGenerator
@@ -125,7 +125,7 @@ generators = {
     'flatpak': FlatpakGenerator(),
     'eduke32': Eduke32Generator(),
     'nblood': NbloodGenerator(),
-    'pcexhumed': PcexhumGedenerator(),
+    'pcexhumed': pcexhumedGenerator(),
     'etekwar': EtekwarGenerator(),
     'voidsw': VoidswGenerator(),
     'steam': SteamGenerator(),
