@@ -34,8 +34,8 @@ define EDUKE32_INSTALL_TARGET_CMDS
 
 	#copy settings
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/eduke32
-    cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/ionfury/eduke32.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/eduke32
-    cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/ionfury/settings.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/eduke32
+    cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/eduke32.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/eduke32
+    cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/settings.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/eduke32
 
 	#copy sdl game contoller info
 	cp $(@D)/package/common/gamecontrollerdb.txt $(TARGET_DIR)/usr/share/gamecontrollerdb.txt
