@@ -1265,10 +1265,13 @@ def generateCoreSettings(coreSettings, system, rom):
         # Reduce sprite flickering
         if system.isOptSet('picodrive_sprlim') and system.config['picodrive_sprlim'] == 'disabled':
             coreSettings.save('picodrive_sprlim',   '"disabled"')
-            coreSettings.save('picodrive_overscan', '"disabled"')
         else:
             coreSettings.save('picodrive_sprlim',   '"enabled"')
+        # Crop Overscan: the setting in picodrive shows overscan when enabled
+        if system.isOptSet('picodrive_cropoverscan') and system.config['picodrive_cropoverscan'] == 'disabled':
             coreSettings.save('picodrive_overscan', '"enabled"')
+        else:
+            coreSettings.save('picodrive_overscan', '"disabled"')
         # 6 Button Controller 1
         if system.isOptSet('picodrive_controller1'):
             coreSettings.save('picodrive_sprlim', '"' + system.config['picodrive_controller1'] + '"')
@@ -1490,7 +1493,7 @@ def generateCoreSettings(coreSettings, system, rom):
             coreSettings.save('beetle_psx_enable_multitap_port1', '"disabled"')
             coreSettings.save('beetle_psx_enable_multitap_port2', '"disabled"')
 
-    if (system.config['core'] == 'swanstation'):
+    if (system.config['core'] == 'swanstation' or system.config['core'] == 'duckstation'):
         # renderer
         if system.isOptSet("gpu_software") and system.getOptBoolean("gpu_software") == True:
             coreSettings.save('duckstation_GPU.Renderer', "Software")
@@ -1537,16 +1540,6 @@ def generateCoreSettings(coreSettings, system, rom):
             coreSettings.save('duckstation_Display.CropMode', system.config['duckstation_CropMode'])
         else:
             coreSettings.save('duckstation_Display.CropMode', '"Overscan"')
-        # Controller 1 Type
-        if system.isOptSet('duckstation_Controller1'):
-            coreSettings.save('duckstation_Controller1.Type', system.config['duckstation_Controller1'])
-        else:
-            coreSettings.save('duckstation_Controller1.Type', '"DigitalController"')
-        # Controller 2 Type
-        if system.isOptSet('duckstation_Controller2'):
-            coreSettings.save('duckstation_Controller2.Type', system.config['duckstation_Controller2'])
-        else:
-            coreSettings.save('duckstation_Controller2.Type', '"DigitalController"')
 
     if (system.config['core'] == 'pcsx_rearmed'):
         # Display Games Hack Options
