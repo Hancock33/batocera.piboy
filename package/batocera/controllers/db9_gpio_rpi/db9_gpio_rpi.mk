@@ -3,7 +3,7 @@
 # DB9_GPIO_RPI
 #
 ################################################################################
-# Version.: Commits on Feb 1, 2021
+# Version.: Commits on Feb 01, 2021
 DB9_GPIO_RPI_VERSION = a3c16921a812ec2cf24a043a184cf445813bac08
 DB9_GPIO_RPI_SITE = $(call github,marqs85,db9_gpio_rpi,$(DB9_GPIO_RPI_VERSION))
 

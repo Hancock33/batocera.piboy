@@ -52,7 +52,7 @@ define BATOCERA_AUDIO_INSTALL_TARGET_CMDS
 
 	# pipewire-alsa
 	ln -sft $(TARGET_DIR)/etc/alsa/conf.d \
-		/usr/share/alsa/alsa.conf.d/{50-pipewire,99-pipewire-default}.conf 
+		/usr/share/alsa/alsa.conf.d/{50-pipewire,99-pipewire-default}.conf
 	install -Dm644 /dev/null $(TARGET_DIR)/usr/share/pipewire/media-session.d/with-alsa
 
 	# pipewire-media-session config: disable dbus device reservation

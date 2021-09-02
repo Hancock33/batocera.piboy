@@ -3,6 +3,7 @@
 # qtsixa-shanwan
 #
 ################################################################################
+# Version.: Commits on 01 May 2016
 QTSIXA_SHANWAN_VERSION = shanwan
 QTSIXA_SHANWAN_SITE = $(call github,batocera-linux,qtsixa,$(QTSIXA_SHANWAN_VERSION))
 QTSIXA_SHANWAN_DEPENDENCIES = linux-headers qtsixa libusb-compat bluez5_utils
