@@ -37,7 +37,7 @@ define MALI_G52_INSTALL_STAGING_CMDS
 	(cd $(STAGING_DIR)/usr/lib && ln -sf libmali.so libGLESv1_CM.so.1)
 	(cd $(STAGING_DIR)/usr/lib && ln -sf libmali.so libGLESv2.so)
 	(cd $(STAGING_DIR)/usr/lib && ln -sf libmali.so libGLESv2.so.2)
-	
+
 	cp -pr $(@D)/include    $(STAGING_DIR)/usr
 
 	# Use GBM wrapper

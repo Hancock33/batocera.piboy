@@ -3,6 +3,7 @@
 # qtsixa
 #
 ################################################################################
+# Version.: Commits on 01 May 2016
 QTSIXA_VERSION = gasia
 QTSIXA_SITE = $(call github,batocera-linux,qtsixa,$(QTSIXA_VERSION))
 QTSIXA_DEPENDENCIES = linux-headers libusb-compat bluez5_utils
