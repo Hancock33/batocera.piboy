@@ -3,8 +3,8 @@
 # Sonic-CD Decompilation
 #
 ################################################################################
-# Version.: Commits on Sep 01, 2021
-SONICCD_VERSION = 92ea97fe25174ed57fd8ab3fefda6dbe64dccf98
+# Version.: Commits on Sep 03, 2021
+SONICCD_VERSION = 5b1444e022c71ee802cf53ebb6dcacdad2fda118
 SONICCD_SITE = $(call github,Rubberduckycooly,Sonic-CD-11-Decompilation,$(SONICCD_VERSION))
 SONICCD_DEPENDENCIES = sdl2 libvorbis libogg libtheora
 SONICCD_LICENSE = Custom
