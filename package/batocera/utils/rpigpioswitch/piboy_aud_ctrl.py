@@ -18,7 +18,7 @@ try:
         if abs(sndVol - sndVolOld) > hyst:
             # Set Volume
             #sndSet = "amixer sset 'Headphone' " + str(sndVol) + "% > /dev/null"
-            sndSet ="pactl -- set-sink-volume 0 " + str(sndVol) + "% > /dev/null"
+            sndSet = "batocera-audio setSystemVolume " + str(sndVol)
             os.system(sndSet)
 
         sndVolOld = sndVol
