@@ -158,7 +158,7 @@ amigacdtv:
   manufacturer: Commodore
   release: 1991
   hardware: console
-  extensions: [bin, cue, iso, chd, lha]
+  extensions: [bin, cue, iso, chd, m3u]
   platform:   amiga
   group:      amiga
   emulators:
@@ -1687,6 +1687,8 @@ apple2:
   hardware: computer
   extensions: [nib, do, po, dsk]
   emulators:
+    gsplus:
+      gsplus: { requireAnyOf: [BR2_PACKAGE_GSPLUS] }
     linapple:
       linapple: { requireAnyOf: [BR2_PACKAGE_LINAPPLE] }
 
@@ -2461,7 +2463,7 @@ gsplus:
   manufacturer: Apple
   release: 1986
   hardware: computer
-  extensions: [2mg, po, dsk]
+  extensions: [2mg, do, nib, po, dsk]
   emulators:
     gsplus:
       gsplus: { requireAnyOf: [BR2_PACKAGE_GSPLUS] }

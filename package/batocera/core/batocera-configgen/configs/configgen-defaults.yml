@@ -39,10 +39,8 @@ amstradcpc:
   emulator: libretro
   core:     cap32
 apple2:
-  emulator: linapple
-  core:     linapple
-  options:
-    videomode: default
+  emulator: gsplus
+  core:     gsplus
 gsplus:
   emulator: gsplus
   core:     gsplus
