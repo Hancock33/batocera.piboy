@@ -1,3 +1,8 @@
+default:
+  options:
+    retroarch.menu_driver: rgui
+    retroarch.audio_out_rate: 44100
+    
 nds:
   emulator: drastic
   core:     drastic
