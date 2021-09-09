@@ -3,8 +3,8 @@
 # Sonic 1,2,3 Decompilation
 #
 ################################################################################
-# Version.: Commits on Aug 20, 2021
-SONIC2013_VERSION = bff61dff624ee986ace719583b00baab22a40d52
+# Version.: Commits on Sep 05, 2021
+SONIC2013_VERSION = 1f3f245faca59a2a1414fe4556c6c89949041244
 SONIC2013_SITE = $(call github,Rubberduckycooly,Sonic-1-2-2013-Decompilation,$(SONIC2013_VERSION))
 SONIC2013_DEPENDENCIES = sdl2 libogg libvorbis
 SONIC2013_LICENSE = Custom

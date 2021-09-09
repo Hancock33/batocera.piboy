@@ -3,8 +3,8 @@
 # HYDRACASTLELABYRINTH
 #
 ################################################################################
-# Version.: Commits on Apr 16, 2021
-HCL_VERSION = ab43945c27577a418636c92f9ae2a44ce9588f0b
+# Version.: Commits on Sep 06, 2021
+HCL_VERSION = 29cdf17f5b48dfda57345a15e891b0abb01f0e08
 HCL_SITE = $(call github,ptitSeb,hydracastlelabyrinth,$(HCL_VERSION))
 
 HCL_DEPENDENCIES = sdl2 sdl2_mixer
