@@ -6,7 +6,6 @@
 # Version.: Commits on Jan 13, 2021
 GSPLUS_VERSION = dc1835d62bb485f69faf3fd50a2550629393ee38
 GSPLUS_SITE = $(call github,applemu,gsplus,$(GSPLUS_VERSION))
-
 GSPLUS_LICENSE = GPLv2
 GSPLUS_DEPENDENCIES = sdl2 libpcap host-re2c
 
