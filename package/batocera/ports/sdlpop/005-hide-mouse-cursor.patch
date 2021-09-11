@@ -1,11 +1,58 @@
-diff -Naur SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022.orig/src/seg000.c SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022/src/seg000.c
---- SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022.orig/src/seg000.c	2021-09-04 15:31:51.000000000 +0100
-+++ SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022/src/seg000.c	2021-09-11 11:48:59.527295266 +0100
-@@ -150,6 +150,7 @@
+diff -Naur SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022.orig/src/menu.c SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022/src/menu.c
+--- SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022.orig/src/menu.c	2021-09-04 15:31:51.000000000 +0100
++++ SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022/src/menu.c	2021-09-11 12:26:44.287292203 +0100
+@@ -1972,15 +1972,15 @@
+ 	have_mouse_input = (mouse_moved || mouse_clicked || mouse_button_clicked_right || menu_control_scroll_y);
  
- // seg000:024F
- void __pascal far init_game_main() {
-+    SDL_ShowCursor(SDL_DISABLE);
- 	doorlink1_ad = /*&*/level.doorlinks1;
- 	doorlink2_ad = /*&*/level.doorlinks2;
- 	prandom(1);
+ 	dword flags = SDL_GetWindowFlags(window_);
+-	if (flags & SDL_WINDOW_FULLSCREEN_DESKTOP) {
+-		if (have_mouse_input) {
+-			SDL_ShowCursor(SDL_ENABLE);
+-		} else if (have_keyboard_or_controller_input) {
++//	if (flags & SDL_WINDOW_FULLSCREEN_DESKTOP) {
++//		if (have_mouse_input) {
++//			SDL_ShowCursor(SDL_ENABLE);
++//		} else if (have_keyboard_or_controller_input) {
+ 			SDL_ShowCursor(SDL_DISABLE);
+-		}
+-	} else {
+-		SDL_ShowCursor(SDL_ENABLE);
+-	}
++//		}
++//	} else {
++//		SDL_ShowCursor(SDL_ENABLE);
++//	}
+ }
+ 
+ bool joy_ABXY_buttons_released;
+@@ -2246,11 +2246,11 @@
+ 	}
+ 	// In fullscreen mode, hide the mouse cursor (because it is only needed in the menu).
+ 	dword flags = SDL_GetWindowFlags(window_);
+-	if (flags & SDL_WINDOW_FULLSCREEN_DESKTOP) {
++//	if (flags & SDL_WINDOW_FULLSCREEN_DESKTOP) {
+ 		SDL_ShowCursor(SDL_DISABLE);
+-	} else {
+-		SDL_ShowCursor(SDL_ENABLE);
+-	}
++//	} else {
++//		SDL_ShowCursor(SDL_ENABLE);
++//	}
+ }
+ 
+ 
+diff -Naur SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022.orig/src/seg009.c SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022/src/seg009.c
+--- SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022.orig/src/seg009.c	2021-09-04 15:31:51.000000000 +0100
++++ SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022/src/seg009.c	2021-09-11 12:27:26.359804579 +0100
+@@ -2520,9 +2520,9 @@
+ 	}
+ 	init_overlay();
+ 	init_scaling();
+-	if (start_fullscreen) {
++//	if (start_fullscreen) {
+ 		SDL_ShowCursor(SDL_DISABLE);
+-	}
++//	}
+ 
+ 
+ 	//SDL_WM_SetCaption(WINDOW_TITLE, NULL);
