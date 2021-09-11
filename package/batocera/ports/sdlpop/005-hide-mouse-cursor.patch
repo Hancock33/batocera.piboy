@@ -1,0 +1,11 @@
+diff -Naur SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022.orig/src/seg000.c SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022/src/seg000.c
+--- SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022.orig/src/seg000.c	2021-09-04 15:31:51.000000000 +0100
++++ SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022/src/seg000.c	2021-09-11 11:48:59.527295266 +0100
+@@ -150,6 +150,7 @@
+ 
+ // seg000:024F
+ void __pascal far init_game_main() {
++    SDL_ShowCursor(SDL_DISABLE);
+ 	doorlink1_ad = /*&*/level.doorlinks1;
+ 	doorlink2_ad = /*&*/level.doorlinks2;
+ 	prandom(1);
