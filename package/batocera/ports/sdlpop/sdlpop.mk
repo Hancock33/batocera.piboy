@@ -10,6 +10,13 @@ SDLPOP_SUBDIR = src
 SDLPOP_LICENSE = GPLv3
 SDLPOP_DEPENDENCIES = sdl2 sdl2_image
 
+define SDLPOP_BUILD_CMDS
+		$(TARGET_CONFIGURE_OPTS) $(MAKE) \
+		CPP="$(TARGET_CPP)" CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
+		AS="$(TARGET_CC)" LD="$(TARGET_LD)" STRIP="$(TARGET_STRIP)" \
+		-C $(@D)/src -f Makefile
+endef	
+
 define SDLPOP_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/sdlpop
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
@@ -21,4 +28,4 @@ define SDLPOP_INSTALL_TARGET_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sdlpop/sdlpop.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-$(eval $(cmake-package))
+$(eval $(generic-package))
