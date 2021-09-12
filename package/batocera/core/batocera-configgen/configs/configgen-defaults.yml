@@ -123,7 +123,7 @@ easyrpg:
   emulator: easyrpg
   core:     easyrpg
 ecwolf:
-  emulator: ecwolf
+  emulator: libretro
   core:     ecwolf
 eduke32:
   emulator: eduke32
