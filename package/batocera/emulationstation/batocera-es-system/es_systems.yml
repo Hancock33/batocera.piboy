@@ -2331,8 +2331,9 @@ ecwolf:
   extensions: [ecwolf, pk3, zip, 7z]
   group: ports
   emulators:
-    ecwolf:
+    libretro:
       ecwolf: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ECWOLF]
+    ecwolf:
       ecwolf: { requireAnyOf: [BR2_PACKAGE_ECWOLF] }
 
 sonicretro:
