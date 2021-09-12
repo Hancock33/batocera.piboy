@@ -2328,10 +2328,11 @@ ecwolf:
   manufacturer: Ports
   release: 2013
   hardware: port
-  extensions: [ecwolf, pk3]
+  extensions: [ecwolf, pk3, zip, 7z]
   group: ports
   emulators:
     ecwolf:
+      ecwolf: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ECWOLF]
       ecwolf: { requireAnyOf: [BR2_PACKAGE_ECWOLF] }
 
 sonicretro:
