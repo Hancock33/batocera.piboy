@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index 2987e4a3..12c161fe 100644
+index 8deb8629..a51cdb1e 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -10,154 +10,157 @@ namespace PlatformIds
+@@ -10,155 +10,158 @@ namespace PlatformIds
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
  		{ "3do",					THREEDO },
@@ -181,6 +181,7 @@ index 2987e4a3..12c161fe 100644
 +		{ "snes",					SUPER_NINTENDO },
 +		{ "snes-msu1",				SUPER_NINTENDO_MSU1 },
 +		{ "solarus",				SOLARUS },
++		{ "sonicretro",				SONIC },
 +		{ "spectravideo",			SPECTRAVIDEO },
  		{ "sufami",					SUFAMITURBO },
 -		{ "zx81",					ZX81 },
@@ -204,6 +205,7 @@ index 2987e4a3..12c161fe 100644
 +		{ "trs-80",					TRS80_COLOR_COMPUTER },
  		{ "tyrquake",				QUAKE },
 -		{ "mrboom",					MRBOOM },
+-		{ "sonicretro",					SONIC },
 -		{ "cannonball",					CANNONBALL },
 -
 -		// windows specific systems & names
@@ -274,7 +276,7 @@ index 2987e4a3..12c161fe 100644
  
  		{ "ignore",					PLATFORM_IGNORE },
  		{ "invalid",				PLATFORM_COUNT }
-@@ -183,7 +186,7 @@ namespace PlatformIds
+@@ -184,7 +187,7 @@ namespace PlatformIds
  
  		return "unknown";
  	}
@@ -283,7 +285,7 @@ index 2987e4a3..12c161fe 100644
  	std::map<unsigned short, std::pair<std::string, std::string>> ArcadeSystems
  	{
  		{ 6,   { "cps1", "CPS-1" } },
-@@ -191,7 +194,7 @@ namespace PlatformIds
+@@ -192,7 +195,7 @@ namespace PlatformIds
  		{ 8,   { "cps3", "CPS-3" } },
  		{ 35,  { "aae", "Another Arcade Emulator" } },
  		{ 47,  { "cave", "Cave" } },
@@ -292,7 +294,7 @@ index 2987e4a3..12c161fe 100644
  		{ 53,  { "atomiswave", "Atomiswave" } },
  		{ 54,  { "model2", "Sega Model 2" } },
  		{ 55,  { "model3", "Sega Model 3" } },
-@@ -205,7 +208,7 @@ namespace PlatformIds
+@@ -206,7 +209,7 @@ namespace PlatformIds
  		{ 148, { "seta", "Seta" } },
  		{ 150, { "midway", "Midway" } },
  		{ 151, { "capcom", "Capcom" } },
@@ -301,7 +303,7 @@ index 2987e4a3..12c161fe 100644
  		{ 153, { "tecmo", "Tecmo" } },
  		{ 154, { "snk", "SNK" } },
  		{ 155, { "namco", "Namco" } },
-@@ -236,7 +239,7 @@ namespace PlatformIds
+@@ -237,7 +240,7 @@ namespace PlatformIds
  		{ 183, { "coleco", "Coleco" } },
  		{ 184, { "playchoice", "PlayChoice" } },
  		{ 185, { "atlus", "Atlus" } },
@@ -311,7 +313,7 @@ index 2987e4a3..12c161fe 100644
  		{ 188, { "universal", "Universal" } },
  		{ 189, { "mitchell", "Mitchell" } },
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index 85618f1d..5ce2c617 100644
+index c9e2d349..636a547a 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
 @@ -11,49 +11,99 @@ namespace PlatformIds
@@ -428,7 +430,7 @@ index 85618f1d..5ce2c617 100644
  		SEGA_32X,
  		SEGA_CD,
  		SEGA_DREAMCAST,
-@@ -63,82 +113,35 @@ namespace PlatformIds
+@@ -63,83 +113,36 @@ namespace PlatformIds
  		SEGA_MEGA_DRIVE,
  		SEGA_SATURN,
  		SEGA_SG1000,
@@ -461,6 +463,8 @@ index 85618f1d..5ce2c617 100644
 -		LUTRO,
 -		MOONLIGHT,
 -		MRBOOM,
++		SOLARUS,
+ 		SONIC,
 -		CANNONBALL,
 -		NAOMI,
 -		NEOGEO_CD,
@@ -468,7 +472,6 @@ index 85618f1d..5ce2c617 100644
 -		POKEMINI,
 -		PRBOOM,
 -		SATELLAVIEW,
-+		SOLARUS,
 +		SPECTRAVIDEO,
  		SUFAMITURBO,
 -		ZX81,
@@ -534,8 +537,15 @@ index 85618f1d..5ce2c617 100644
  
  		PLATFORM_IGNORE, // do not allow scraping for this system
  		PLATFORM_COUNT
+@@ -151,4 +154,4 @@ namespace PlatformIds
+ 	extern std::map<unsigned short, std::pair<std::string, std::string>> ArcadeSystems;
+ }
+ 
+-#endif // ES_APP_PLATFORM_ID_H
++#endif // ES_APP_PLATFORM_ID_H
+\ No newline at end of file
 diff --git a/es-app/src/scrapers/GamesDBJSONScraper.cpp b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-index f479c67f..94e3460a 100644
+index c247e5b1..0f4211ba 100644
 --- a/es-app/src/scrapers/GamesDBJSONScraper.cpp
 +++ b/es-app/src/scrapers/GamesDBJSONScraper.cpp
 @@ -38,8 +38,9 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
@@ -570,10 +580,10 @@ index f479c67f..94e3460a 100644
  	{ PHILIPS_CDI, "4917" },
  	{ WATARA_SUPERVISION, "4959" },
 +	{ MEGADUCK, "4948" },
+ 	{ SONIC, "36,21" }, // Sega Mega Drive & Sega CD
  
  	// 1 = PC
- 	{ PC, "1" },
-@@ -193,7 +195,7 @@ void TheGamesDBScraper::generateRequests(const ScraperSearchParams& params,
+@@ -195,7 +197,7 @@ void TheGamesDBScraper::generateRequests(const ScraperSearchParams& params,
  				"include=boxart&id=" +
  				HttpReq::urlEncode(gameID);
  		usingGameID = true;
@@ -582,7 +592,7 @@ index f479c67f..94e3460a 100644
  	else
  	{
  		if (cleanName.empty())
-@@ -210,7 +212,7 @@ void TheGamesDBScraper::generateRequests(const ScraperSearchParams& params,
+@@ -212,7 +214,7 @@ void TheGamesDBScraper::generateRequests(const ScraperSearchParams& params,
  	{
  		// if we have the ID already, we don't need the GetGameList request
  		requests.push(std::unique_ptr<ScraperRequest>(new TheGamesDBJSONRequest(results, path)));
@@ -591,7 +601,7 @@ index f479c67f..94e3460a 100644
  	else
  	{
  		std::string platformQueryParam;
-@@ -229,7 +231,7 @@ void TheGamesDBScraper::generateRequests(const ScraperSearchParams& params,
+@@ -231,7 +233,7 @@ void TheGamesDBScraper::generateRequests(const ScraperSearchParams& params,
  
  					platformQueryParam += HttpReq::urlEncode(mapIt->second);
  					first = false;
@@ -600,7 +610,7 @@ index f479c67f..94e3460a 100644
  				else
  				{
  					LOG(LogWarning) << "TheGamesDB scraper warning - no support for platform "
-@@ -520,7 +522,7 @@ namespace
+@@ -522,7 +524,7 @@ namespace
  			if (!art.empty())
  				result.urls[MetaDataId::FanArt] = ScraperSearchItem(art);
  		}
@@ -609,7 +619,7 @@ index f479c67f..94e3460a 100644
  		if (Settings::getInstance()->getBool("ScrapeBoxBack"))
  		{
  			auto art = findMedia(medias, "box-2D-back");
-@@ -575,7 +577,7 @@ bool TheGamesDBJSONRequest::process(HttpReq* request, std::vector<ScraperSearchR
+@@ -577,7 +579,7 @@ bool TheGamesDBJSONRequest::process(HttpReq* request, std::vector<ScraperSearchR
  	}
  
  	resources.ensureResources();
@@ -619,7 +629,7 @@ index f479c67f..94e3460a 100644
  	{
  		auto& v = games[i];
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index dcf3803c..e3b6eeab 100644
+index 1f4bf92f..b57ff8cd 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
 @@ -49,11 +49,15 @@ const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
@@ -647,7 +657,7 @@ index dcf3803c..e3b6eeab 100644
  	// Misc
  	{ VIC20, 73 },
  	{ ORICATMOS, 131 },
-@@ -155,7 +159,10 @@ const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
+@@ -157,7 +161,10 @@ const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
  	{ ACORN_ELECTRON, 85 },
  	{ ADAM, 89 },
  	{ PHILIPS_CDI, 133 },
@@ -659,7 +669,7 @@ index dcf3803c..e3b6eeab 100644
  };
  
  // Help XML parsing method, finding an direct child XML node starting from the parent and filtering by an attribute value list.
-@@ -230,7 +237,7 @@ void ScreenScraperScraper::generateRequests(const ScraperSearchParams& params,
+@@ -232,7 +239,7 @@ void ScreenScraperScraper::generateRequests(const ScraperSearchParams& params,
  	{
  		if (Utils::FileSystem::isDirectory(params.game->getPath()))
  			path = ssConfig.getGameSearchUrl(params.game->getDisplayName());
@@ -668,7 +678,7 @@ index dcf3803c..e3b6eeab 100644
  			path = ssConfig.getGameSearchUrl(params.game->getFileName());
  
  		path += "&romtype=rom";
-@@ -255,7 +262,7 @@ void ScreenScraperScraper::generateRequests(const ScraperSearchParams& params,
+@@ -257,7 +264,7 @@ void ScreenScraperScraper::generateRequests(const ScraperSearchParams& params,
  
  			// Use md5 to search scrapped game
  			if (length > 0 && length <= 131072 * 1024) // 128 Mb max
@@ -677,7 +687,7 @@ index dcf3803c..e3b6eeab 100644
  				std::string val = ApiSystem::getInstance()->getMD5(fileNameToHash, params.system->shouldExtractHashesFromArchives());
  				if (!val.empty())
  				{
-@@ -272,11 +279,11 @@ void ScreenScraperScraper::generateRequests(const ScraperSearchParams& params,
+@@ -274,11 +281,11 @@ void ScreenScraperScraper::generateRequests(const ScraperSearchParams& params,
  	else
  	{
  		std::string name = Utils::String::replace(params.nameOverride, "_", " ");
@@ -691,7 +701,7 @@ index dcf3803c..e3b6eeab 100644
  	auto& platforms = params.system->getPlatformIds();
  	std::vector<unsigned short> p_ids;
  
-@@ -330,12 +337,12 @@ bool ScreenScraperRequest::process(HttpReq* request, std::vector<ScraperSearchRe
+@@ -332,12 +339,12 @@ bool ScreenScraperRequest::process(HttpReq* request, std::vector<ScraperSearchRe
  		std::stringstream ss;
  		ss << "ScreenScraperRequest - Error parsing XML." << std::endl << parseResult.description() << "";
  		std::string err = ss.str();
@@ -707,7 +717,7 @@ index dcf3803c..e3b6eeab 100644
  		return true;
  	}
  
-@@ -361,7 +368,7 @@ pugi::xml_node ScreenScraperRequest::findMedia(pugi::xml_node media_list, std::s
+@@ -363,7 +370,7 @@ pugi::xml_node ScreenScraperRequest::findMedia(pugi::xml_node media_list, std::s
  
  	// Do an XPath query for media[type='$media_type'], then filter by region
  	// We need to do this because any child of 'medias' has the form
@@ -716,7 +726,7 @@ index dcf3803c..e3b6eeab 100644
  	// and we need to find the right media for the region.
  
  	pugi::xpath_node_set results = media_list.select_nodes((static_cast<std::string>("media[@type='") + mediaName + "']").c_str());
-@@ -392,11 +399,11 @@ std::vector<std::string> ScreenScraperRequest::getRipList(std::string imageSourc
+@@ -394,11 +401,11 @@ std::vector<std::string> ScreenScraperRequest::getRipList(std::string imageSourc
  	if (imageSource == "ss")
  		return { "ss", "sstitle" };
  	if (imageSource == "sstitle")
@@ -731,7 +741,7 @@ index dcf3803c..e3b6eeab 100644
  	if (imageSource == "box-2D")
  		return { "box-2D", "box-3D" };
  	if (imageSource == "box-3D")
-@@ -410,7 +417,7 @@ std::vector<std::string> ScreenScraperRequest::getRipList(std::string imageSourc
+@@ -412,7 +419,7 @@ std::vector<std::string> ScreenScraperRequest::getRipList(std::string imageSourc
  
  	//if (imageSource == "box-2D-back")
  	//	return{ "box-2D-back" };
@@ -740,7 +750,7 @@ index dcf3803c..e3b6eeab 100644
  	return { imageSource };
  }
  
-@@ -474,7 +481,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
+@@ -476,7 +483,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
  		else
  			result.mdl.set(MetaDataId::ScraperId, "");
  
@@ -749,7 +759,7 @@ index dcf3803c..e3b6eeab 100644
  		if (region == "jp" && language != "jp")
  			result.mdl.set(MetaDataId::Name, find_child_by_attribute_list(game.child("noms"), "nom", "region", { region, "wor", "us" , "ss", "eu", "jp" }).text().get());
  		else
-@@ -486,7 +493,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
+@@ -488,7 +495,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
  		if (!description.empty())
  			result.mdl.set(MetaDataId::Desc, Utils::String::decodeXmlString(description));
  
@@ -758,7 +768,7 @@ index dcf3803c..e3b6eeab 100644
  		if (game.child("genres"))
  		{
  			bool adultGame = false;
-@@ -519,7 +526,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
+@@ -521,7 +528,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
  
  				if (strcmp(node.attribute("principale").value(), "1") == 0 && strcmp(node.attribute("langue").value(), language.c_str()) == 0)
  					genre = node.text().get();
@@ -767,7 +777,7 @@ index dcf3803c..e3b6eeab 100644
  				if (strcmp(node.attribute("principale").value(), "0") == 0 && strcmp(node.attribute("langue").value(), language.c_str()) == 0)
  					subgenre = node.text().get();
  			}
-@@ -628,7 +635,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
+@@ -630,7 +637,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
          if(game.child("systeme").attribute("id"))
          {
              int systemId = game.child("systeme").attribute("id").as_int();
@@ -776,7 +786,7 @@ index dcf3803c..e3b6eeab 100644
  			auto arcadeSystem = ArcadeSystems.find(systemId);
              if(arcadeSystem != ArcadeSystems.cend())
                  result.mdl.set(MetaDataId::ArcadeSystemName, arcadeSystem->second.first);
-@@ -642,7 +649,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
+@@ -644,7 +651,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
  			ss << ratingVal;
  			result.mdl.set(MetaDataId::Rating, ss.str());
  		}
@@ -785,7 +795,7 @@ index dcf3803c..e3b6eeab 100644
  			result.mdl.set(MetaDataId::Rating, "-1");
  
  		if (Settings::getInstance()->getBool("ScrapePadToKey") && game.child("sp2kcfg"))
-@@ -659,7 +666,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
+@@ -661,7 +668,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
  				pugi::xml_node art = findMedia(media_list, ripList, romlang, region);
  				if (art)
  				{
@@ -794,7 +804,7 @@ index dcf3803c..e3b6eeab 100644
  					//  Escape any spaces in the URL here
  					result.urls[MetaDataId::Image] = ScraperSearchItem(ensureUrl(art.text().get()), art.attribute("format") ? "." + std::string(art.attribute("format").value()) : "");
  
-@@ -722,7 +729,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
+@@ -724,7 +731,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
  						LOG(LogDebug) << "Failed to find media XML node for video";
  				}
  			}
@@ -803,7 +813,7 @@ index dcf3803c..e3b6eeab 100644
  			if (Settings::getInstance()->getBool("ScrapeBoxBack"))
  			{
  				ripList = getRipList("box-2D-back");
-@@ -784,7 +791,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
+@@ -786,7 +793,7 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc, std::ve
  }
  
  std::string ScreenScraperRequest::ScreenScraperConfig::getGameSearchUrl(const std::string gameName, bool jeuRecherche) const
@@ -812,7 +822,7 @@ index dcf3803c..e3b6eeab 100644
  	std::string ret = API_URL_BASE
  		+ "/jeuInfos.php?" + std::string(SCREENSCRAPER_DEV_LOGIN) +
  		+ "&softname=" + HttpReq::urlEncode(VERSIONED_SOFT_NAME)
-@@ -834,7 +841,7 @@ ScreenScraperUser ScreenScraperRequest::processUserInfo(const pugi::xml_document
+@@ -836,7 +843,7 @@ ScreenScraperUser ScreenScraperRequest::processUserInfo(const pugi::xml_document
  	pugi::xml_node data = xmldoc.child("Data");
  	if (!data.child("ssuser"))
  		return user;
@@ -821,7 +831,7 @@ index dcf3803c..e3b6eeab 100644
  	data = data.child("ssuser");
  
  	if (data.child("id"))
-@@ -857,7 +864,7 @@ ScreenScraperUser ScreenScraperRequest::processUserInfo(const pugi::xml_document
+@@ -859,7 +866,7 @@ ScreenScraperUser ScreenScraperRequest::processUserInfo(const pugi::xml_document
  
  	if (data.child("maxrequestskoperday"))
  		user.maxRequestsKoPerDay = data.child("maxrequestskoperday").text().as_int();
@@ -830,7 +840,7 @@ index dcf3803c..e3b6eeab 100644
  	return user;
  }
  
-@@ -868,7 +875,7 @@ int ScreenScraperScraper::getThreadCount(std::string &result)
+@@ -870,7 +877,7 @@ int ScreenScraperScraper::getThreadCount(std::string &result)
  
  	HttpReq httpreq(url);
  	httpreq.wait();
@@ -839,7 +849,7 @@ index dcf3803c..e3b6eeab 100644
  	if (httpreq.status() != HttpReq::REQ_SUCCESS)
  	{
  		result = httpreq.getErrorMsg();
-@@ -883,12 +890,12 @@ int ScreenScraperScraper::getThreadCount(std::string &result)
+@@ -885,12 +892,12 @@ int ScreenScraperScraper::getThreadCount(std::string &result)
  	if (parseResult)
  	{
  		auto userInfo = ScreenScraperRequest::processUserInfo(doc);
