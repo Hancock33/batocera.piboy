@@ -28,12 +28,6 @@ mastersystem:
 megadrive:
   emulator: libretro
   core:     picodrive
-n64:
-  emulator: mupen64plus
-  core:     gliden64
-n64dd:
-  emulator: mupen64plus
-  core:     gliden64
 snes:
   emulator: libretro
   core:     pocketsnes
