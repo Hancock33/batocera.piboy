@@ -3,11 +3,10 @@
 # Batocera Emulation Station
 #
 ################################################################################
-# Version.: Commits on Sep 15, 2021
-BATOCERA_EMULATIONSTATION_VERSION = 119168d08df6ede0ae3bce8c20716d2a4781539e
+# Version.: Commits on Sep 16, 2021
+BATOCERA_EMULATIONSTATION_VERSION = dad8101867e9aaa9e6d8e1032317f4540bab4f2e
 BATOCERA_EMULATIONSTATION_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_EMULATIONSTATION_SITE_METHOD = git
-BATOCERA_EMULATIONSTATION_LICENSE = MIT
 BATOCERA_EMULATIONSTATION_GIT_SUBMODULES = YES
 BATOCERA_EMULATIONSTATION_LICENSE = MIT, Apache-2.0
 BATOCERA_EMULATIONSTATION_DEPENDENCIES = sdl2 sdl2_mixer freetype alsa-lib libcurl vlc rapidjson pulseaudio-utils
@@ -31,6 +30,11 @@ endif
 
 ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)
 BATOCERA_EMULATIONSTATION_CONF_OPTS += -DBCM=ON
+endif
+
+ifeq ($(BR2_PACKAGE_ESPEAK),y)
+BATOCERA_EMULATIONSTATION_CONF_OPTS += -DENABLE_TTS=ON
+BATOCERA_EMULATIONSTATION_DEPENDENCIES += espeak
 endif
 
 ifeq ($(BR2_PACKAGE_KODI),y)
