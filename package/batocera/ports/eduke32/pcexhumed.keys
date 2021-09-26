@@ -11,22 +11,22 @@
         {
             "trigger": "up",
             "type": "key",
-            "target": "KEY_UP"
+            "target": "KEY_W"
         },
         {
             "trigger": "down",
             "type": "key",
-            "target": "KEY_DOWN"
+            "target": "KEY_S"
         },
         {
             "trigger": "left",
             "type": "key",
-            "target": "KEY_LEFT"
+            "target": "KEY_A"
         },
         {
             "trigger": "right",
             "type": "key",
-            "target": "KEY_RIGHT"
+            "target": "KEY_D"
         },
         {
             "trigger": "start",
@@ -41,12 +41,12 @@
         {
             "trigger": "a",
             "type": "key",
-            "target": "KEY_A"
+            "target": "KEY_LEFTCTRL"
         },
         {
             "trigger": "b",
             "type": "key",
-            "target": "KEY_LEFTCTRL"
+            "target": "KEY_RIGHTCTRL"
         },
         {
             "trigger": "x",
@@ -56,17 +56,42 @@
         {
             "trigger": "pagedown",
             "type": "key",
-            "target": "KEY_LEFTALT"
+            "target": "KEY_APOSTROPHE"
         },
         {
             "trigger": "l2",
             "type": "key",
-            "target": "KEY_LEFTBRACE"
+            "target": "KEY_BACKSLASH"
         },
         {
             "trigger": "r2",
             "type": "key",
-            "target": "KEY_RIGHTBRACE"
+            "target": "KEY_COMMA"
+        },
+        {
+            "trigger": "joystick1up",
+            "type": "key",
+            "target": "KEY_UP"
+        },
+        {
+            "trigger": "joystick1down",
+            "type": "key",
+            "target": "KEY_DOWN"
+        },
+        {
+            "trigger": "joystick1left",
+            "type": "key",
+            "target": "KEY_LEFT"
+        },
+        {
+            "trigger": "joystick1right",
+            "type": "key",
+            "target": "KEY_RIGHT"
+        },
+        {
+            "trigger": "pageup",
+            "type": "key",
+            "target": "KEY_ESC"
         }
     ]
 }
