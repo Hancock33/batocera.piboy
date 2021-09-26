@@ -4223,7 +4223,10 @@ etekwar:
 
 voidsw:
   features: [padtokeyboard]
-
+  
+rednukem:
+  features: [padtokeyboard]
+  
 lexaloffle:
   features: [padtokeyboard]
 
