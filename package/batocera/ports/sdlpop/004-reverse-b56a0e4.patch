@@ -1,7 +1,8 @@
-diff -Naur SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022.orig/src/seg000.c SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022/src/seg000.c
---- SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022.orig/src/seg000.c	2021-09-04 15:31:51.000000000 +0100
-+++ SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022/src/seg000.c	2021-09-11 11:05:43.529204040 +0100
-@@ -93,6 +93,8 @@
+diff --git a/src/seg000.c b/src/seg000.c
+index b6a4ad8..f50f01c 100644
+--- a/src/seg000.c
++++ b/src/seg000.c
+@@ -93,6 +93,8 @@ void far pop_main() {
  	char sprintf_temp[100];
  	int i;
  
@@ -10,20 +11,20 @@ diff -Naur SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022.orig/src/seg000.c SDL
  	/*video_mode =*/ parse_grmode();
  
  	init_timer(BASE_FPS);
-@@ -116,9 +118,6 @@
- 	init_record_replay();
+@@ -117,7 +119,7 @@ void far pop_main() {
  #endif
  
--	// I moved this after init_copyprot_dialog(), so open_dat() can show an error dialog if needed.
--	dathandle = open_dat("PRINCE.DAT", 0);
--
+ 	// I moved this after init_copyprot_dialog(), so open_dat() can show an error dialog if needed.
+-	dathandle = open_dat("PRINCE.DAT", 'G');
++	//dathandle = open_dat("PRINCE.DAT", 'G');
+ 
  	if (cheats_enabled
  		#ifdef USE_REPLAY
- 		|| recording
-diff -Naur SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022.orig/src/seg009.c SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022/src/seg009.c
---- SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022.orig/src/seg009.c	2021-09-04 15:31:51.000000000 +0100
-+++ SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022/src/seg009.c	2021-09-11 11:13:41.181249818 +0100
-@@ -398,9 +398,7 @@
+diff --git a/src/seg009.c b/src/seg009.c
+index 01702d4..432748b 100644
+--- a/src/seg009.c
++++ b/src/seg009.c
+@@ -402,9 +402,7 @@ dat_type *__pascal open_dat(const char *filename, int optional) {
  		pointer->handle = fp;
  		pointer->dat_table = dat_table;
  	} else if (optional == 0) {
@@ -34,7 +35,7 @@ diff -Naur SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022.orig/src/seg009.c SDL
  		// There is no DAT file, verify whether the corresponding directory exists.
  		char filename_no_ext[POP_MAX_PATH];
  		// strip the .DAT file extension from the filename (use folders simply named TITLE, KID, VPALACE, etc.)
-@@ -409,20 +407,20 @@
+@@ -413,20 +411,20 @@ dat_type *__pascal open_dat(const char *filename, int optional) {
  		if (len >= 5 && filename_no_ext[len-4] == '.') {
  			filename_no_ext[len-4] = '\0'; // terminate, so ".DAT" is deleted from the filename
  		}
@@ -60,7 +61,7 @@ diff -Naur SDLPoP-98a3ac7a660e030b39388c9ff6e11d5395c48022.orig/src/seg009.c SDL
  	}
  out:
  	// stub
-@@ -463,7 +461,7 @@
+@@ -467,7 +465,7 @@ chtab_type* __pascal load_sprites_from_file(int resource,int palette_bits, int q
  			char error_message[256];
  			// Unfortunately we don't know at this point which data file is missing. So we use the name of the last opened DAT file.
  			// It's also possible that the DAT file exists and it just doesn't contain the needed resource.
