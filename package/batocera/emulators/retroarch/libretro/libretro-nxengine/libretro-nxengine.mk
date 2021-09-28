@@ -3,8 +3,8 @@
 # NXENGINE
 #
 ################################################################################
-# Version.: Commits on Sept 23, 2021
-LIBRETRO_NXENGINE_VERSION = c56694d9ef56543ae496a6fec4df415d0a292248
+# Version.: Commits on Sept 28, 2021
+LIBRETRO_NXENGINE_VERSION = 05b29110a9878d2ea71a614bf93ba4f87ead5ee5
 LIBRETRO_NXENGINE_SITE = $(call github,libretro,nxengine-libretro,$(LIBRETRO_NXENGINE_VERSION))
 LIBRETRO_NXENGINE_LICENSE = GPLv3
 
