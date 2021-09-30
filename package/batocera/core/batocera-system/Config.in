@@ -524,10 +524,7 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
 	# Final Burn NEO
 	select BR2_PACKAGE_LIBRETRO_FBNEO       # ALL
 
-    # Final Burn Alpha
-    select BR2_PACKAGE_LIBRETRO_FBALPHA     if BR2_PACKAGE_BATOCERA_TARGET_RPI1 || BR2_PACKAGE_BATOCERA_TARGET_RPI2
-
-	# Naomi and Atomiswave
+    # Naomi and Atomiswave
 	select BR2_PACKAGE_BATOCERA_SEGADC
 
 	# Laserdic emulation
@@ -581,6 +578,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
 	select BR2_PACKAGE_LIBRETRO_DESMUME         if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
 	select BR2_PACKAGE_LIBRETRO_MELONDS         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64  	|| \
+													BR2_PACKAGE_BATOCERA_TARGET_S905GEN2    || \
 													BR2_PACKAGE_BATOCERA_TARGET_S905GEN3    || \
 													BR2_PACKAGE_BATOCERA_TARGET_RPI4        || \
 													BR2_PACKAGE_BATOCERA_TARGET_RK3326_ANY  || \
@@ -741,7 +739,7 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
 	select BR2_PACKAGE_LIBCAPSIMAGE         # ALL
 
 	# Commodore 64/128/VIC20/PET/Plus4
-	select BR2_PACKAGE_VICE                 # ALL
+	select BR2_PACKAGE_VICE                 if !BR2_PACKAGE_BATOCERA_TARGET_RPI1
 	select BR2_PACKAGE_LIBRETRO_VICE        # ALL
 
 	# Apple II computers range
@@ -943,10 +941,11 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 	select BR2_PACKAGE_LIBRETRO_NESTOPIA            # ALL
 
 	# Super Nintendo / Super Famicom
-	select BR2_PACKAGE_LIBRETRO_SNES9X              # ALL
-	select BR2_PACKAGE_LIBRETRO_SNES9X_NEXT         # ALL
-	select BR2_PACKAGE_LIBRETRO_POCKETSNES          if  BR2_PACKAGE_BATOCERA_RPI_ANY || \
-	                                                    BR2_PACKAGE_BATOCERA_TARGET_CHA
+	select BR2_PACKAGE_LIBRETRO_SNES9X              if !BR2_PACKAGE_BATOCERA_TARGET_RPI1
+	select BR2_PACKAGE_LIBRETRO_SNES9X_NEXT         if !BR2_PACKAGE_BATOCERA_TARGET_RPI1
+	select BR2_PACKAGE_LIBRETRO_POCKETSNES          if  BR2_PACKAGE_BATOCERA_TARGET_RPI1 || \
+	                                                    BR2_PACKAGE_BATOCERA_TARGET_CHA  || \
+                                                        BR2_PACKAGE_BATOCERA_TARGET_RPI2
 
 	select BR2_PACKAGE_LIBRETRO_BSNES               if BR2_PACKAGE_BATOCERA_TARGET_X86_64
 	select BR2_PACKAGE_LIBRETRO_BSNES_HD            if BR2_PACKAGE_BATOCERA_TARGET_X86_64
@@ -976,7 +975,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 	select BR2_PACKAGE_GSPLUS                       # ALL
 
 	# Uzebox
-	select BR2_PACKAGE_LIBRETRO_UZEM                if !BR2_PACKAGE_BATOCERA_TARGET_RPI1 && !BR2_PACKAGE_BATOCERA_TARGET_CHA # speed issue on weak SBCs
+	select BR2_PACKAGE_LIBRETRO_UZEM                if !BR2_PACKAGE_BATOCERA_TARGET_CHA # speed issue on weak SBCs
 
 	help
 		All avaible systems for the selected architecture
