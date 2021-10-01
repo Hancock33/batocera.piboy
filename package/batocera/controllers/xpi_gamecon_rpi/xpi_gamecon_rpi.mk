@@ -18,6 +18,8 @@ define XPI_GAMECON_RPI_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/piboy_fan_ctrl.py                     $(TARGET_DIR)/usr/bin/piboy_fan_ctrl.py
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/piboy_aud_ctrl.py                     $(TARGET_DIR)/usr/bin/piboy_aud_ctrl.py
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/piboy_power_ctrl.py                   $(TARGET_DIR)/usr/bin/piboy_power_ctrl.py
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms
+	cp -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/roms/piboy $(TARGET_DIR)/usr/share/batocera/datainit/roms
 endef
 
 $(eval $(kernel-module))
