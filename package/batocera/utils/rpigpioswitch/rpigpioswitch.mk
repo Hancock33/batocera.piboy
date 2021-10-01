@@ -17,8 +17,6 @@ define RPIGPIOSWITCH_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/rpi-argonone.py                       $(TARGET_DIR)/usr/bin/rpi-argonone
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/rpi-kintaro-SafeShutdown.py           $(TARGET_DIR)/usr/bin/rpi-kintaro-SafeShutdown
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/S72gpioinput                          $(TARGET_DIR)/etc/init.d/S72gpioinput
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms
-	cp -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/roms/piboy $(TARGET_DIR)/usr/share/batocera/datainit/roms
 endef
 
 $(eval $(generic-package))
