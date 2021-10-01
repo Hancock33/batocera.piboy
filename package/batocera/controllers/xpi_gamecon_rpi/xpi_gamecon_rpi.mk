@@ -14,10 +14,10 @@ define XPI_GAMECON_RPI_BUILD_CMDS
 endef
 
 define XPI_GAMECON_RPI_INSTALL_TARGET_CMDS
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/S19piboy                              $(TARGET_DIR)/etc/init.d/S19piboy
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/piboy_fan_ctrl.py                     $(TARGET_DIR)/usr/bin/piboy_fan_ctrl.py
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/piboy_aud_ctrl.py                     $(TARGET_DIR)/usr/bin/piboy_aud_ctrl.py
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/piboy_power_ctrl.py                   $(TARGET_DIR)/usr/bin/piboy_power_ctrl.py
+	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/S19piboy             	$(TARGET_DIR)/etc/init.d/S19piboy
+	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/piboy_fan_ctrl.py		$(TARGET_DIR)/usr/bin/piboy_fan_ctrl.py
+	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/piboy_aud_ctrl.py		$(TARGET_DIR)/usr/bin/piboy_aud_ctrl.py
+	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/piboy_power_ctrl.py 	$(TARGET_DIR)/usr/bin/piboy_power_ctrl.py
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms
 	cp -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/roms/piboy $(TARGET_DIR)/usr/share/batocera/datainit/roms
 endef
