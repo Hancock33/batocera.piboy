@@ -35,16 +35,16 @@ disable_overscan=1
 # 1 use CEA (Consumer Electronics Association, the standard typically used by TVs) or
 # 2 use DMT (Display Monitor Timings, the standard typically used by monitors).
 # This setting should be used in conjunction with hdmi_mode.
-hdmi_group=2
+#hdmi_group=2
 
 # uncomment to apply an appropriate CEA or DMT mode for your display
 # see the web site below for valid options depending on the hdmi_group setting
 # https://www.raspberrypi.org/documentation/configuration/config-txt/video.md
-hdmi_mode=85
+#hdmi_mode=4
 
 # uncomment to force a HDMI mode rather than DVI. This can make audio work in
 # DMT (computer monitor) modes
-hdmi_drive=2
+#hdmi_drive=2
 
 # uncomment will remove all other modes except the ones specified by hdmi_mode and hdmi_group from the internal list
 # meaning they will not appear in any enumerated lists of modes.
@@ -127,6 +127,7 @@ initramfs boot/initrd.gz
 # Additional overlays and parameters are documented /boot/overlays/README
 
 # Configure GPU memory based on SDRAM size
+# https://www.raspberrypi.org/documentation/configuration/config-txt/memory.md
 # Default GPU memory split - at least 288M is needed for some 4k HEVC files
 #gpu_mem=256
 
@@ -136,50 +137,13 @@ dtparam=audio=on
 [rpi4]
 # Enable DRM VC4 V3D driver on top of the dispmanx display stack
 # Preferred 'Full' Kernel Mode Setting (KMS)
-#dtoverlay=vc4-kms-v3d-pi4,noaudio
+dtoverlay=vc4-kms-v3d-pi4
 
 # Optional 'Fake' KMS for displays that won't work with 'Full' KMS
-dtoverlay=vc4-fkms-v3d
+#dtoverlay=vc4-fkms-v3d
 
 # Ensure only one display output can be used on the Pi4 with batocera
 max_framebuffers=1
-
-##Enable DPI gpio
-gpio=0-9,12-17,20-25=a2
-audio_pwm_mode=2
-dtoverlay=audremap,pins_18_19
-
-##DPI LCD settings
-dpi_group=2
-dpi_mode=87
-dpi_output_format=0x070016
-dpi_timings=640 1 44 2 42 480 1 19 2 17 0 0 0 60 0 24000000 1
-enable_dpi_lcd=1
-
-##Disable ACT LED
-dtparam=act_led_trigger=none
-dtparam=act_led_activelow=off
-
-##Disable PWR LED
-dtparam=pwr_led_trigger=none
-dtparam=pwr_led_activelow=off
-
-##Turn off ethernet port LEDs
-dtparam=eth_led0=4
-dtparam=eth_led1=4
-
-# Overclock
-# https://www.raspberrypi.org/documentation/configuration/config-txt/memory.md
-#over_voltage=2
-#arm_freq=1700
-#gpu_freq=500
-initial_turbo=60
-force_eeprom_read=0
-avoid_warnings=2
-
-##Auto detect HDMI
-[edid=*]
-enable_dpi_lcd=0
 
 [DPI]
 # Put any DPI required display code here

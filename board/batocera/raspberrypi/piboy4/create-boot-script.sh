@@ -20,6 +20,7 @@ cp -pr "${BINARIES_DIR}/rpi-firmware/"* "${BATOCERA_BINARIES_DIR}/boot/" || exit
 cp -f  "${BINARIES_DIR}/"*.dtb          "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
 cp     "${BOARD_DIR}/boot/config.txt"   "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
 cp     "${BOARD_DIR}/boot/config.txt"   "${BATOCERA_BINARIES_DIR}/boot/config64.txt" || exit 1 # create a 64 bit version to help people to migrate from 32 bit (config.txt is not touched when upgrading)
+cp     "${BOARD_DIR}/boot/fan.ini"  "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
 cp     "${BOARD_DIR}/boot/cmdline.txt"  "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
 
 cp "${BINARIES_DIR}/Image"          "${BATOCERA_BINARIES_DIR}/boot/boot/linux"           || exit 1
