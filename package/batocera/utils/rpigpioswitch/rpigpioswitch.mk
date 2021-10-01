@@ -17,10 +17,6 @@ define RPIGPIOSWITCH_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/rpi-argonone.py                       $(TARGET_DIR)/usr/bin/rpi-argonone
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/rpi-kintaro-SafeShutdown.py           $(TARGET_DIR)/usr/bin/rpi-kintaro-SafeShutdown
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/S72gpioinput                          $(TARGET_DIR)/etc/init.d/S72gpioinput
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/S19piboy                              $(TARGET_DIR)/etc/init.d/S19piboy
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/piboy_fan_ctrl.py                     $(TARGET_DIR)/usr/bin/piboy_fan_ctrl.py
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/piboy_aud_ctrl.py                     $(TARGET_DIR)/usr/bin/piboy_aud_ctrl.py
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch/piboy_power_ctrl.py                   $(TARGET_DIR)/usr/bin/piboy_power_ctrl.py
 endef
 
 $(eval $(generic-package))
