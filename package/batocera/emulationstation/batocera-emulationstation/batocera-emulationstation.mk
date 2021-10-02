@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version.: Commits on Sept 29, 2021
-BATOCERA_EMULATIONSTATION_VERSION = 4bd220c1ef5ad58005124e7ab875bf7a1ff190fb
+BATOCERA_EMULATIONSTATION_VERSION = cfa2a2374cf8ae4949ccfec109a325d3daa3cf70
 BATOCERA_EMULATIONSTATION_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_EMULATIONSTATION_SITE_METHOD = git
 BATOCERA_EMULATIONSTATION_GIT_SUBMODULES = YES
@@ -29,7 +29,7 @@ BATOCERA_EMULATIONSTATION_CONF_OPTS += -DEGL=ON
 endif
 
 ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)
-BATOCERA_EMULATIONSTATION_CONF_OPTS += -DBCM=ON
+BATOCERA_EMULATIONSTATION_CONF_OPTS += -DBCM=ON -DRPI=ON
 endif
 
 ifeq ($(BR2_PACKAGE_ESPEAK),y)
@@ -123,11 +123,6 @@ BATOCERA_EMULATIONSTATION_PREFIX =
 BATOCERA_EMULATIONSTATION_CMD = startx
 BATOCERA_EMULATIONSTATION_ARGS = --windowed
 endif
-
-# # on odroidga: set resolution and EGL/GL hack
-#ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_ODROIDGOA),y)
-#	BATOCERA_EMULATIONSTATION_PREFIX += SDL_VIDEO_GL_DRIVER=/usr/lib/libGLESv2.so SDL_VIDEO_EGL_DRIVER=/usr/lib/libGLESv2.so
-#endif
 
 define BATOCERA_EMULATIONSTATION_BOOT
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/S31emulationstation $(TARGET_DIR)/etc/init.d/S31emulationstation
