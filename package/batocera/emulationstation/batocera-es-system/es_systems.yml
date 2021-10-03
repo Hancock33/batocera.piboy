@@ -2447,6 +2447,10 @@ hurrican:
   emulators:
     hurrican:
       hurrican: { requireAnyOf: [BR2_PACKAGE_HURRICAN] }
+  comment_en: |
+    This system is a standalone  game. No rom required.
+  comment_fr: |
+    Ce système est le premier jeu de autonome. Aucune rom n'est requise.
 
 hcl:
   name:       Hydra Castle Labyrinth
@@ -2458,7 +2462,24 @@ hcl:
   path:       /userdata/roms/hcl
   command:    "/bin/sh %ROM%"
   force:      True
+  comment_en: |
+    This system is a standalone  game. No rom required.
+  comment_fr: |
+    Ce système est le premier jeu de autonome. Aucune rom n'est requise.
 
+prototype:
+  name:       Prototype
+  manufacturer: Ports
+  release: 1992
+  hardware: port
+  emulators:
+    prototype:
+      prototype: { requireAnyOf: [BR2_PACKAGE_PROTOTYPE] }
+  comment_en: |
+    This system is a standalone  game. No rom required.
+  comment_fr: |
+    Ce système est le premier jeu de autonome. Aucune rom n'est requise.
+    
 samcoupe:
   name:       SAM Coupé
   manufacturer: Miles Gordon Technology

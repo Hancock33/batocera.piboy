@@ -68,6 +68,7 @@ from generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
 from generators.gsplus.gsplusGenerator import GSplusGenerator
 from generators.openjazz.openjazzGenerator import OpenJazzGenerator
 from generators.hurrican.hurricanGenerator import HurricanGenerator
+from generators.prototype.prototypeGenerator import PrototypeGenerator
 #from generators.play.playGenerator import PlayGenerator
 
 import controllersConfig as controllers
@@ -143,6 +144,7 @@ generators = {
     'gsplus': GSplusGenerator(),
     'openjazz': OpenJazzGenerator(),
     'hurrican': HurricanGenerator(),
+    'prototype': PrototypeGenerator(),    
     #'play': PlayGenerator(),
 }
 

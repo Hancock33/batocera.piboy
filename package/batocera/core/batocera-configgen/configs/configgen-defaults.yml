@@ -338,6 +338,9 @@ pokemini:
 prboom:
   emulator: libretro
   core:     prboom
+prototype:
+  emulator: prototype
+  core:     prototype
 ps2:
   emulator: pcsx2
   core:     pcsx2
