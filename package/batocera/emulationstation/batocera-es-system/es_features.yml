@@ -4413,6 +4413,9 @@ opentyrian:
 openjazz:
   features: [padtokeyboard]
 
+hurrican:
+  features: [padtokeyboard]
+
 simcoupe:
   features: [padtokeyboard]
 
