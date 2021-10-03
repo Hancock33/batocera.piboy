@@ -13,5 +13,7 @@ class PrototypeGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
+                'LIBGL_FB': '4',
+                'LIBGL_NOTEST': '1',
                 'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
