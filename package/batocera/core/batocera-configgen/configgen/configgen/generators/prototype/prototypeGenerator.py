@@ -8,7 +8,7 @@ import controllersConfig
 class PrototypeGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
-        commandArray = ["prototype.sh"]
+        commandArray = ["prototype"]
 
         return Command.Command(
             array=commandArray,
