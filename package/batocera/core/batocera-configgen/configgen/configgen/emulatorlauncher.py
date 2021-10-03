@@ -67,6 +67,7 @@ from generators.samcoupe.samcoupeGenerator import SamcoupeGenerator
 from generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
 from generators.gsplus.gsplusGenerator import GSplusGenerator
 from generators.openjazz.openjazzGenerator import OpenJazzGenerator
+from generators.hurrican.hurricanGenerator import HurricanGenerator
 #from generators.play.playGenerator import PlayGenerator
 
 import controllersConfig as controllers
@@ -141,6 +142,7 @@ generators = {
     'soniccd': SonicRetroGenerator(),
     'gsplus': GSplusGenerator(),
     'openjazz': OpenJazzGenerator(),
+    'hurrican': HurricanGenerator(),
     #'play': PlayGenerator(),
 }
 

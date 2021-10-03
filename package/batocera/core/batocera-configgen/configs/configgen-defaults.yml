@@ -184,6 +184,9 @@ ionfury:
 intellivision:
   emulator: libretro
   core:     freeintv
+hurrican:
+  emulator: hurrican
+  core:     hurrican
 jaguar:
   emulator: libretro
   core:     virtualjaguar
