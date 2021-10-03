@@ -23,8 +23,9 @@ define PROTOTYPE_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/prototype $(TARGET_DIR)/usr/share/prototype/prototype
 	chmod 0755 $(TARGET_DIR)/usr/share/prototype/prototype
     cp -av $(@D)/Data $(TARGET_DIR)/usr/share/prototype
-    echo "cd /usr/share/prototype && LIBGL_FB=4 LIBGL_NOTEST=1 ./prototype" > $(TARGET_DIR)/usr/bin/prototype.sh
-    chmod 0755 $(TARGET_DIR)/usr/bin/prototype.sh
+    echo "cd /usr/share/prototype && LIBGL_FB=4 LIBGL_NOTEST=1 ./prototype" > $(TARGET_DIR)/usr/bin/prototype
+    chmod 0755 $(TARGET_DIR)/usr/bin/prototype
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/prototype/prototype.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(generic-package))
