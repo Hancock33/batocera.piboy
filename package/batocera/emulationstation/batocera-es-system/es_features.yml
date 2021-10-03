@@ -4416,6 +4416,9 @@ openjazz:
 hurrican:
   features: [padtokeyboard]
 
+prototype:
+  features: [padtokeyboard]
+
 simcoupe:
   features: [padtokeyboard]
 
