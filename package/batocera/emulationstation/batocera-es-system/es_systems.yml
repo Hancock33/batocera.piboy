@@ -2457,11 +2457,11 @@ hcl:
   manufacturer: Ports
   release: 2011
   hardware: port
-  extensions: [sh]
+  extensions: [game]
   group: ports
-  path:       /userdata/roms/hcl
-  command:    "/bin/sh %ROM%"
-  force:      True
+  emulators:
+    hcl:
+      hcl: { requireAnyOf: [BR2_PACKAGE_HCL] }
   comment_en: |
     This system is a standalone  game. No rom required.
   comment_fr: |
