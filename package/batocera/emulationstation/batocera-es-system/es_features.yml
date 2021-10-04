@@ -4235,10 +4235,10 @@ etekwar:
 
 voidsw:
   features: [padtokeyboard]
-  
+
 rednukem:
   features: [padtokeyboard]
-  
+
 lexaloffle:
   features: [padtokeyboard]
 
@@ -4406,6 +4406,9 @@ model2emu:
             choices:
                 "Off":      0
                 "On":       1
+
+hcl:
+  features: [padtokeyboard]
 
 opentyrian:
   features: [padtokeyboard]

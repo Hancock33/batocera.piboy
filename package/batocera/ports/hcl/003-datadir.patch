@@ -1,0 +1,94 @@
+diff --git a/src/game.c b/src/game.c
+index 89df254..9d92a70 100644
+--- a/src/game.c
++++ b/src/game.c
+@@ -269,11 +269,11 @@ void game()
+ 		strcat(savename, "/.hydracastlelabyrinth/");
+ 		#endif
+ 		strcpy(savemap, savename);
+-		strcat(savename, "save.tmp");
+-		strcat(savemap, "save.map");
++		strcat(savename, "/userdata/saves/hcl/save.tmp");
++		strcat(savemap, "/userdata/saves/hcl/save.map");
+ 	} else {
+-		strcpy(savename, "data/save.tmp");
+-		strcpy(savemap, savemap);
++		strcpy(savename, "/userdata/saves/hcl/save.tmp");
++		strcpy(savemap, "/userdata/saves/hcl/save.map");
+ 	}
+ #endif
+ 	//Setup services
+@@ -1192,7 +1192,7 @@ void loadScreen()
+ 		#elif defined(__amigaos4__) || defined(__MORPHOS__)
+ 			strcat(dest, "PROGDIR:data/map/");
+ 		#elif defined(_SDL)
+-			strcat(dest, "data/map/");
++			strcat(dest, "/usr/share/hcl/data/map/");
+ 		#else
+ 			strcat(dest, "romfs/map/");
+ 		#endif
+@@ -1287,7 +1287,7 @@ void loadScreen()
+ 	#elif defined(__amigaos4__) || defined(__MORPHOS__)
+ 		strcpy(dest, "PROGDIR:data/obj/");
+ 	#elif defined(_SDL)
+-		strcpy(dest, "data/obj/");
++		strcpy(dest, "/usr/share/hcl/data/obj/");
+ 	#else
+ 		strcpy(dest, "romfs/obj/");
+ 	#endif
+diff --git a/src/game.h b/src/game.h
+index 622895d..bfa3cfc 100644
+--- a/src/game.h
++++ b/src/game.h
+@@ -181,8 +181,8 @@ extern Platform* platforms[MAX_PLATFORMS];
+ extern char savename[4096];
+ extern char savemap[4096];
+ #else
+-#define savename "data/save.tmp"
+-#define savemap "map/018.map"
++#define savename "/userdata/saves/hcl/save.tmp"
++#define savemap "/usr/share/hcl/data/map/018.map"
+ #endif
+ 
+ 
+diff --git a/src/hero.c b/src/hero.c
+index 7a8ed26..954c9d8 100644
+--- a/src/hero.c
++++ b/src/hero.c
+@@ -199,8 +199,8 @@ int heroStep()
+ 		if (timer == 630) {	
+ 			/*
+ 			FILE* f;
+-			if ((f = fopen("data/save.tmp", "rb"))) {					
+-				remove("data/save.tmp");
++			if ((f = fopen("/userdata/saves/hcl/save.tmp", "rb"))) {					
++				remove("/userdata/saves/hcl/save.tmp");
+ 			}
+ 			fclose(f);
+ 			*/
+diff --git a/src/qda.c b/src/qda.c
+index 5b46761..b3a4390 100644
+--- a/src/qda.c
++++ b/src/qda.c
+@@ -16,7 +16,7 @@ int initQDA()
+ 	
+ 	char fullPath[80];
+ 	#ifdef _SDL
+-	strcpy(fullPath, "data/");
++	strcpy(fullPath, "/usr/share/hcl/data");
+ 	#else
+ 	strcpy(fullPath, "");
+ 	#endif
+diff --git a/src/text.c b/src/text.c
+index fcfb428..5a63f76 100644
+--- a/src/text.c
++++ b/src/text.c
+@@ -76,7 +76,7 @@ void loadText()
+ 	#ifdef _3DS
+ 		strcpy(fullPath, "romfs:/");
+ 	#elif defined(_SDL)
+-	strcpy(fullPath, "data/");
++	strcpy(fullPath, "/usr/share/hcl/data");
+ 	#else
+ 		strcpy(fullPath, "romfs/");
+ 	#endif

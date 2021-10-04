@@ -184,6 +184,9 @@ ionfury:
 intellivision:
   emulator: libretro
   core:     freeintv
+hcl:
+  emulator: hcl
+  core:     hcl
 hurrican:
   emulator: hurrican
   core:     hurrican
