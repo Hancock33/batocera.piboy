@@ -1,23 +1,167 @@
 diff --git a/src/game.c b/src/game.c
-index 89df254..9d92a70 100644
+index 89df254..6dc2b5d 100644
 --- a/src/game.c
 +++ b/src/game.c
-@@ -269,11 +269,11 @@ void game()
- 		strcat(savename, "/.hydracastlelabyrinth/");
- 		#endif
- 		strcpy(savemap, savename);
--		strcat(savename, "save.tmp");
--		strcat(savemap, "save.map");
-+		strcat(savename, "/userdata/saves/hcl/save.tmp");
-+		strcat(savemap, "/userdata/saves/hcl/save.map");
- 	} else {
--		strcpy(savename, "data/save.tmp");
--		strcpy(savemap, savemap);
-+		strcpy(savename, "/userdata/saves/hcl/save.tmp");
-+		strcpy(savemap, "/userdata/saves/hcl/save.map");
- 	}
- #endif
- 	//Setup services
+@@ -45,15 +45,15 @@ char tilesetStrings[9][12] = {"stage01.bmp",
+ 							  "stage05.bmp",							  
+ 							  "stage08.bmp" };
+ 							
+-char musicStrings[9][14] = { "midi/main01",
+-							 "midi/main02",
+-							 "midi/main02",
+-							 "midi/main05",
+-							 "midi/main03",							 
+-							 "midi/main05",							 
+-							 "midi/main02",							 
+-							 "midi/main04",							 
+-							 "midi/main06" };
++char musicStrings[9][14] = { "/usr/share/hcl/midi/main01",
++							 "/usr/share/hcl/midi/main02",
++							 "/usr/share/hcl/midi/main02",
++							 "/usr/share/hcl/midi/main05",
++							 "/usr/share/hcl/midi/main03",							 
++							 "/usr/share/hcl/midi/main05",							 
++							 "/usr/share/hcl/midi/main02",							 
++							 "/usr/share/hcl/midi/main04",							 
++							 "/usr/share/hcl/midi/main06" };
+ 							
+ int collisionTiles[16][12];
+ PHL_Surface images[15];
+@@ -371,7 +371,7 @@ void game()
+ 				remove(savename);
+ 				#else
+ 				char fullPath[128];
+-				strcpy(fullPath, "");
++				strcpy(fullPath, "/userdata/saves/hcl");
+ 				#ifdef _3DS
+ 				strcat(fullPath, "sdmc:/3ds/appdata/HydraCastleLabyrinth/");
+ 				#endif
+@@ -425,53 +425,53 @@ void loadResources()
+ 	loadImages();
+ 
+ 	//Load Sounds	
+-	sounds[sndBee01] 	= PHL_LoadSound("wav/bee01.wav");	
+-	sounds[sndBell01] 	= PHL_LoadSound("wav/bell01.wav");
+-	sounds[sndBom01] 	= PHL_LoadSound("wav/bom01.wav");
+-	sounds[sndBom02] 	= PHL_LoadSound("wav/bom02.wav");
+-	sounds[sndBom03] 	= PHL_LoadSound("wav/bom03.wav");
+-	sounds[sndDoor00] 	= PHL_LoadSound("wav/door00.wav");
+-	sounds[sndFire01] 	= PHL_LoadSound("wav/fire01.wav");
+-	sounds[sndGas01] 	= PHL_LoadSound("wav/gas01.wav");
+-	sounds[sndGet01] 	= PHL_LoadSound("wav/get01.wav");
+-	sounds[sndGet02] 	= PHL_LoadSound("wav/get02.wav");
+-	sounds[sndHit01] 	= PHL_LoadSound("wav/hit01.wav");
+-	sounds[sndHit02] 	= PHL_LoadSound("wav/hit02.wav");
+-	sounds[sndHit03] 	= PHL_LoadSound("wav/hit03.wav");
+-	sounds[sndHit04] 	= PHL_LoadSound("wav/hit04.wav");
+-	sounds[sndHit05] 	= PHL_LoadSound("wav/hit05.wav");
+-	sounds[sndHit06] 	= PHL_LoadSound("wav/hit06.wav");
+-	sounds[sndHit07] 	= PHL_LoadSound("wav/hit07.wav");	
+-	sounds[sndJump01] 	= PHL_LoadSound("wav/jump01.wav");
+-	sounds[sndJump02] 	= PHL_LoadSound("wav/jump02.wav");
+-	sounds[sndNg] 		= PHL_LoadSound("wav/ng.wav");
+-	sounds[sndOk]	 	= PHL_LoadSound("wav/ok.wav");
+-	sounds[sndPi01] 	= PHL_LoadSound("wav/pi01.wav");
+-	sounds[sndPi02] 	= PHL_LoadSound("wav/pi02.wav");
+-	sounds[sndPi03] 	= PHL_LoadSound("wav/pi03.wav");
+-	sounds[sndPi04] 	= PHL_LoadSound("wav/pi04.wav");
+-	sounds[sndPi05] 	= PHL_LoadSound("wav/pi05.wav");
+-	sounds[sndPi06] 	= PHL_LoadSound("wav/pi06.wav");
+-	sounds[sndPi07] 	= PHL_LoadSound("wav/pi07.wav");
+-	sounds[sndPi08] 	= PHL_LoadSound("wav/pi08.wav");
+-	sounds[sndPi09] 	= PHL_LoadSound("wav/pi09.wav");
+-	sounds[sndPi10] 	= PHL_LoadSound("wav/pi10.wav");
+-	sounds[sndPower01] 	= PHL_LoadSound("wav/power01.wav");
+-	sounds[sndPower02] 	= PHL_LoadSound("wav/power02.wav");
+-	sounds[sndShot01]  	= PHL_LoadSound("wav/shot01.wav");
+-	sounds[sndShot02]  	= PHL_LoadSound("wav/shot02.wav");
+-	sounds[sndShot03]  	= PHL_LoadSound("wav/shot03.wav");
+-	sounds[sndShot04]  	= PHL_LoadSound("wav/shot04.wav");
+-	sounds[sndShot05]  	= PHL_LoadSound("wav/shot05.wav");
+-	sounds[sndShot06]  	= PHL_LoadSound("wav/shot06.wav");
+-	sounds[sndShot07]  	= PHL_LoadSound("wav/shot07.wav");
+-	sounds[sndStep01]  	= PHL_LoadSound("wav/step01.wav");
+-	sounds[sndWater01] 	= PHL_LoadSound("wav/water01.wav");
+-	sounds[sndWolf01]  	= PHL_LoadSound("wav/wolf01.wav");
++	sounds[sndBee01] 	= PHL_LoadSound("/usr/share/hcl/wav/bee01.wav");	
++	sounds[sndBell01] 	= PHL_LoadSound("/usr/share/hcl/wav/bell01.wav");
++	sounds[sndBom01] 	= PHL_LoadSound("/usr/share/hcl/wav/bom01.wav");
++	sounds[sndBom02] 	= PHL_LoadSound("/usr/share/hcl/wav/bom02.wav");
++	sounds[sndBom03] 	= PHL_LoadSound("/usr/share/hcl/wav/bom03.wav");
++	sounds[sndDoor00] 	= PHL_LoadSound("/usr/share/hcl/wav/door00.wav");
++	sounds[sndFire01] 	= PHL_LoadSound("/usr/share/hcl/wav/fire01.wav");
++	sounds[sndGas01] 	= PHL_LoadSound("/usr/share/hcl/wav/gas01.wav");
++	sounds[sndGet01] 	= PHL_LoadSound("/usr/share/hcl/wav/get01.wav");
++	sounds[sndGet02] 	= PHL_LoadSound("/usr/share/hcl/wav/get02.wav");
++	sounds[sndHit01] 	= PHL_LoadSound("/usr/share/hcl/wav/hit01.wav");
++	sounds[sndHit02] 	= PHL_LoadSound("/usr/share/hcl/wav/hit02.wav");
++	sounds[sndHit03] 	= PHL_LoadSound("/usr/share/hcl/wav/hit03.wav");
++	sounds[sndHit04] 	= PHL_LoadSound("/usr/share/hcl/wav/hit04.wav");
++	sounds[sndHit05] 	= PHL_LoadSound("/usr/share/hcl/wav/hit05.wav");
++	sounds[sndHit06] 	= PHL_LoadSound("/usr/share/hcl/wav/hit06.wav");
++	sounds[sndHit07] 	= PHL_LoadSound("/usr/share/hcl/wav/hit07.wav");	
++	sounds[sndJump01] 	= PHL_LoadSound("/usr/share/hcl/wav/jump01.wav");
++	sounds[sndJump02] 	= PHL_LoadSound("/usr/share/hcl/wav/jump02.wav");
++	sounds[sndNg] 		= PHL_LoadSound("/usr/share/hcl/wav/ng.wav");
++	sounds[sndOk]	 	= PHL_LoadSound("/usr/share/hcl/wav/ok.wav");
++	sounds[sndPi01] 	= PHL_LoadSound("/usr/share/hcl/wav/pi01.wav");
++	sounds[sndPi02] 	= PHL_LoadSound("/usr/share/hcl/wav/pi02.wav");
++	sounds[sndPi03] 	= PHL_LoadSound("/usr/share/hcl/wav/pi03.wav");
++	sounds[sndPi04] 	= PHL_LoadSound("/usr/share/hcl/wav/pi04.wav");
++	sounds[sndPi05] 	= PHL_LoadSound("/usr/share/hcl/wav/pi05.wav");
++	sounds[sndPi06] 	= PHL_LoadSound("/usr/share/hcl/wav/pi06.wav");
++	sounds[sndPi07] 	= PHL_LoadSound("/usr/share/hcl/wav/pi07.wav");
++	sounds[sndPi08] 	= PHL_LoadSound("/usr/share/hcl/wav/pi08.wav");
++	sounds[sndPi09] 	= PHL_LoadSound("/usr/share/hcl/wav/pi09.wav");
++	sounds[sndPi10] 	= PHL_LoadSound("/usr/share/hcl/wav/pi10.wav");
++	sounds[sndPower01] 	= PHL_LoadSound("/usr/share/hcl/wav/power01.wav");
++	sounds[sndPower02] 	= PHL_LoadSound("/usr/share/hcl/wav/power02.wav");
++	sounds[sndShot01]  	= PHL_LoadSound("/usr/share/hcl/wav/shot01.wav");
++	sounds[sndShot02]  	= PHL_LoadSound("/usr/share/hcl/wav/shot02.wav");
++	sounds[sndShot03]  	= PHL_LoadSound("/usr/share/hcl/wav/shot03.wav");
++	sounds[sndShot04]  	= PHL_LoadSound("/usr/share/hcl/wav/shot04.wav");
++	sounds[sndShot05]  	= PHL_LoadSound("/usr/share/hcl/wav/shot05.wav");
++	sounds[sndShot06]  	= PHL_LoadSound("/usr/share/hcl/wav/shot06.wav");
++	sounds[sndShot07]  	= PHL_LoadSound("/usr/share/hcl/wav/shot07.wav");
++	sounds[sndStep01]  	= PHL_LoadSound("/usr/share/hcl/wav/step01.wav");
++	sounds[sndWater01] 	= PHL_LoadSound("/usr/share/hcl/wav/water01.wav");
++	sounds[sndWolf01]  	= PHL_LoadSound("/usr/share/hcl/wav/wolf01.wav");
+ 	
+ 	//Load Music
+-	bgmSecret = PHL_LoadMusic("midi/nazo", 0);
+-	bgmGameover = PHL_LoadMusic("midi/gameover", 0);
++	bgmSecret = PHL_LoadMusic("/usr/share/hcl/midi/nazo", 0);
++	bgmGameover = PHL_LoadMusic("/usr/share/hcl/midi/gameover", 0);
+ }
+ 
+ void freeImages()
+@@ -925,7 +925,7 @@ void gameEnding()
+ 	{
+ 		PHL_StopMusic();
+ 		PHL_FreeMusic(bgmMusic);
+-		bgmMusic = PHL_LoadMusic("midi/allclear", 0);
++		bgmMusic = PHL_LoadMusic("/usr/share/hcl/midi/allclear", 0);
+ 		PHL_PlayMusic(bgmMusic);
+ 		
+ 		//Calculate completion percentage
+@@ -1010,7 +1010,7 @@ void gameEnding()
+ 		
+ 		PHL_StopMusic();
+ 		PHL_FreeMusic(bgmMusic);
+-		bgmMusic = PHL_LoadMusic("midi/ending", 0);
++		bgmMusic = PHL_LoadMusic("/usr/share/hcl/midi/ending", 0);
+ 		PHL_PlayMusic(bgmMusic);
+ 		
+ 		int timer = 0;
+@@ -1126,7 +1126,7 @@ void enterDoor()
+ 		PHL_FreeSurface(images[imgMisc6020]);
+ 		PHL_FreeSurface(images[imgDark]);
+ 	}else{
+-		bgmMusic = PHL_LoadMusic("midi/start", 0);
++		bgmMusic = PHL_LoadMusic("/usr/share/hcl/midi/start", 0);
+ 		PHL_PlayMusic(bgmMusic);
+ 		
+ 		int timer = 125;		
 @@ -1192,7 +1192,7 @@ void loadScreen()
  		#elif defined(__amigaos4__) || defined(__MORPHOS__)
  			strcat(dest, "PROGDIR:data/map/");
@@ -36,8 +180,20 @@ index 89df254..9d92a70 100644
  	#else
  		strcpy(dest, "romfs/obj/");
  	#endif
+@@ -1928,9 +1928,9 @@ void setBossRoom()
+ 	
+ 	PHL_FreeMusic(bgmMusic);
+ 	if (level != 8) {
+-		bgmMusic = PHL_LoadMusic("midi/boss", 1);
++		bgmMusic = PHL_LoadMusic("/usr/share/hcl/midi/boss", 1);
+ 	}else{
+-		bgmMusic = PHL_LoadMusic("midi/lastboss", 1);
++		bgmMusic = PHL_LoadMusic("/usr/share/hcl/midi/lastboss", 1);
+ 	}
+ 	PHL_PlayMusic(bgmMusic);
+ }
 diff --git a/src/game.h b/src/game.h
-index 622895d..bfa3cfc 100644
+index 622895d..a2e686e 100644
 --- a/src/game.h
 +++ b/src/game.h
 @@ -181,8 +181,8 @@ extern Platform* platforms[MAX_PLATFORMS];
@@ -47,40 +203,28 @@ index 622895d..bfa3cfc 100644
 -#define savename "data/save.tmp"
 -#define savemap "map/018.map"
 +#define savename "/userdata/saves/hcl/save.tmp"
-+#define savemap "/usr/share/hcl/data/map/018.map"
++#define savemap "/userdata/saves/hcl/map/018.map"
  #endif
  
  
-diff --git a/src/hero.c b/src/hero.c
-index 7a8ed26..954c9d8 100644
---- a/src/hero.c
-+++ b/src/hero.c
-@@ -199,8 +199,8 @@ int heroStep()
- 		if (timer == 630) {	
- 			/*
- 			FILE* f;
--			if ((f = fopen("data/save.tmp", "rb"))) {					
--				remove("data/save.tmp");
-+			if ((f = fopen("/userdata/saves/hcl/save.tmp", "rb"))) {					
-+				remove("/userdata/saves/hcl/save.tmp");
- 			}
- 			fclose(f);
- 			*/
 diff --git a/src/qda.c b/src/qda.c
-index 5b46761..b3a4390 100644
+index 5b46761..0950f35 100644
 --- a/src/qda.c
 +++ b/src/qda.c
-@@ -16,7 +16,7 @@ int initQDA()
+@@ -16,9 +16,9 @@ int initQDA()
  	
  	char fullPath[80];
  	#ifdef _SDL
 -	strcpy(fullPath, "data/");
-+	strcpy(fullPath, "/usr/share/hcl/data");
++	strcpy(fullPath, "/usr/share/hcl/data/");
  	#else
- 	strcpy(fullPath, "");
+-	strcpy(fullPath, "");
++	strcpy(fullPath, "/usr/share/hcl/data/");
  	#endif
+ 	#ifdef _3DS
+ 		strcat(fullPath, "romfs:/");
 diff --git a/src/text.c b/src/text.c
-index fcfb428..5a63f76 100644
+index fcfb428..3f801f6 100644
 --- a/src/text.c
 +++ b/src/text.c
 @@ -76,7 +76,7 @@ void loadText()
@@ -88,7 +232,7 @@ index fcfb428..5a63f76 100644
  		strcpy(fullPath, "romfs:/");
  	#elif defined(_SDL)
 -	strcpy(fullPath, "data/");
-+	strcpy(fullPath, "/usr/share/hcl/data");
++	strcpy(fullPath, "/usr/share/hcl/data/");
  	#else
  		strcpy(fullPath, "romfs/");
  	#endif
