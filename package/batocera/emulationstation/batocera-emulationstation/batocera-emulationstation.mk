@@ -10,7 +10,7 @@ BATOCERA_EMULATIONSTATION_SITE_METHOD = git
 BATOCERA_EMULATIONSTATION_LICENSE = MIT
 BATOCERA_EMULATIONSTATION_GIT_SUBMODULES = YES
 BATOCERA_EMULATIONSTATION_LICENSE = MIT, Apache-2.0
-BATOCERA_EMULATIONSTATION_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib libcurl vlc rapidjson pulseaudio-utils
+BATOCERA_EMULATIONSTATION_DEPENDENCIES = sdl2 sdl2_mixer freetype alsa-lib libcurl vlc rapidjson pulseaudio-utils
 # install in staging for debugging (gdb)
 BATOCERA_EMULATIONSTATION_INSTALL_STAGING = YES
 # BATOCERA_EMULATIONSTATION_OVERRIDE_SRCDIR = /sources/batocera-emulationstation
@@ -56,10 +56,9 @@ else
 BATOCERA_EMULATIONSTATION_CONF_OPTS += -DENABLE_FILEMANAGER=OFF
 endif
 
-BATOCERA_EMULATIONSTATION_KEY_SCREENSCRAPER_DEV_LOGIN=$(shell grep -E '^SCREENSCRAPER_DEV_LOGIN=' $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/keys.txt | cut -d = -f 2-)
-BATOCERA_EMULATIONSTATION_KEY_GAMESDB_APIKEY=$(shell grep -E '^GAMESDB_APIKEY=' $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/keys.txt | cut -d = -f 2-)
-BATOCERA_EMULATIONSTATION_KEY_CHEEVOS_DEV_LOGIN=$(shell grep -E '^CHEEVOS_DEV_LOGIN=' $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/keys.txt | cut -d = -f 2-)
-
+BATOCERA_EMULATIONSTATION_KEY_SCREENSCRAPER_DEV_LOGIN=$(shell grep -E '^SCREENSCRAPER_DEV_LOGIN=' /home/lee/keys.txt | cut -d = -f 2-)
+BATOCERA_EMULATIONSTATION_KEY_GAMESDB_APIKEY=$(shell grep -E '^GAMESDB_APIKEY=' /home/lee/keys.txt | cut -d = -f 2-)
+BATOCERA_EMULATIONSTATION_KEY_CHEEVOS_DEV_LOGIN=$(shell grep -E '^CHEEVOS_DEV_LOGIN=' /home/lee/keys.txt | cut -d = -f 2-)
 ifneq ($(BATOCERA_EMULATIONSTATION_KEY_SCREENSCRAPER_DEV_LOGIN),)
 BATOCERA_EMULATIONSTATION_CONF_OPTS += "-DSCREENSCRAPER_DEV_LOGIN=$(BATOCERA_EMULATIONSTATION_KEY_SCREENSCRAPER_DEV_LOGIN)"
 endif
