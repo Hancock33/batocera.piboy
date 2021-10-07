@@ -21,7 +21,7 @@ define HCL_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/data $(TARGET_DIR)/usr/share/hcl/
 	$(INSTALL) -D $(@D)/buildroot-build/hcl $(TARGET_DIR)/usr/share/hcl/hcl
 	chmod 0754 $(TARGET_DIR)/usr/share/hcl/hcl
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/hcl/hcl /usr/bin
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/hcl/hcl $(TARGET_DIR)/usr/bin
 	chmod 0754 $(TARGET_DIR)/usr/bin/hcl
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
