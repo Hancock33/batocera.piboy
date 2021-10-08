@@ -47,7 +47,7 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S922X),y)
         # hwdec=yes doesnt work for n2
         BATOCERA_SPLASH_PLAYER_OPTIONS=
 else
-	BATOCERA_SPLASH_PLAYER_OPTIONS=--hwdec=yes
+	BATOCERA_SPLASH_PLAYER_OPTIONS=--hwdec=yes --panscan=1.0
 endif
 endif
 
