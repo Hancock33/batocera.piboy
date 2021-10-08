@@ -1,6 +1,5 @@
-diff -Naur rpcs3-063df64108e53de55531e718d770c6ace619e9df.orig/3rdparty/hidapi/hidapi/libusb/hid.c rpcs3-063df64108e53de55531e718d770c6ace619e9df/3rdparty/hidapi/hidapi/libusb/hid.c
---- rpcs3-063df64108e53de55531e718d770c6ace619e9df.orig/3rdparty/hidapi/hidapi/libusb/hid.c	2021-08-13 06:58:09.000000000 +0100
-+++ rpcs3-063df64108e53de55531e718d770c6ace619e9df/3rdparty/hidapi/hidapi/libusb/hid.c	2021-08-13 13:23:35.686906796 +0100
+--- a/3rdparty/hidapi/hidapi/libusb/hid.c	2021-06-30 21:14:13.000000000 +0200
++++ b/3rdparty/hidapi/hidapi/libusb/hid.c	2021-08-01 19:15:08.124788582 +0200
 @@ -44,7 +44,7 @@
  #include <wchar.h>
  
