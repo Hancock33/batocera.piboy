@@ -20,12 +20,8 @@ try:
         if abs(pwrctrl - pwrctrlOld) > hyst:
             if pwrctrl == 6:
                 os.system("/usr/bin/batocera-es-swissknife --shutdown")
-                os.system("echo 0 > /sys/kernel/xpi_gamecon/flags")
-                os.system("/sbin/rmmod xpi_gamecon")
             if pwrctrl == 134:
                 os.system("/usr/bin/batocera-es-swissknife --shutdown")
-                os.system("echo 0 > /sys/kernel/xpi_gamecon/flags")
-                os.system("/sbin/rmmod xpi_gamecon")
         pwrctrlOld = pwrctrl
         # Read Battery < 5% shutdown
         battctrlFile = open("/sys/kernel/xpi_gamecon/percent", "r")
@@ -34,8 +30,6 @@ try:
         if abs(battctrl - battctrlOld) > hyst:
             if battctrl == 5:
                 os.system("/usr/bin/batocera-es-swissknife --shutdown")
-                os.system("echo 0 > /sys/kernel/xpi_gamecon/flags")
-                os.system("/sbin/rmmod xpi_gamecon")
         battctrlOld = battctrl           
         # Wait until next refresh
         time.sleep(WAIT_TIME)
