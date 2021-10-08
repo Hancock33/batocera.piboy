@@ -8,7 +8,7 @@ import controllersConfig
 class VoidswGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
-        commandArray = ["voidsw", "-j", "/userdata/roms/voidsw"]
+        commandArray = ["voidsw", "-j/userdata/roms/voidsw", "-g", rom]
 
         return Command.Command(
             array=commandArray,
