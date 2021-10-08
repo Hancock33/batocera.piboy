@@ -21,7 +21,7 @@ define HCL_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/data $(TARGET_DIR)/usr/share/hcl/
 	$(INSTALL) -D $(@D)/buildroot-build/hcl $(TARGET_DIR)/usr/share/hcl/hcl
 	chmod 0754 $(TARGET_DIR)/usr/share/hcl/hcl
-	echo "cd /usr/share/hcl && ./hcl" > /usr/share/hcl/hcl.sh
+	echo "cd /usr/share/hcl && ./hcl" > $(TARGET_DIR)/usr/share/hcl/hcl.sh
 	chmod 0754 $(TARGET_DIR)/usr/share/hcl/hcl.sh
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/hcl/hcl $(TARGET_DIR)/usr/bin
 	chmod 0754 $(TARGET_DIR)/usr/bin/hcl
