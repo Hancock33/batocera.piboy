@@ -141,7 +141,7 @@ generators = {
     'sonic2013': SonicRetroGenerator(),
     'soniccd': SonicRetroGenerator(),
     'steam': SteamGenerator(),
-    'steam': StuntcarGenerator(),
+    'stuntcar': StuntcarGenerator(),
     'supermodel': SupermodelGenerator(),
     'tsugaru': TsugaruGenerator(),
     'vice': ViceGenerator(),
