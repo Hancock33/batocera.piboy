@@ -2495,7 +2495,7 @@ samcoupe:
     samcoupe:
       samcoupe:  { requireAnyOf: [BR2_PACKAGE_SIMCOUPE] }
 
-stuncar:
+stuntcar:
   name:       Stunt Car Racer
   manufacturer: MicroStyle
   release: 1989
@@ -2503,8 +2503,8 @@ stuncar:
   extensions: [game]
   group: ports
   emulators:
-    stuncar:
-      stuncar: { requireAnyOf: [BR2_PACKAGE_STUNTCAR] }
+    stuntcar:
+      stuntcar: { requireAnyOf: [BR2_PACKAGE_STUNTCAR] }
   comment_en: |
     This system is a standalone  game. No rom required.
   comment_fr: |
