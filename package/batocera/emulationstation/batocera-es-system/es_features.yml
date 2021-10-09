@@ -4417,10 +4417,11 @@ opentyrian:
   features: [padtokeyboard]
 
 pcexhumed:
-  features: [padtokeyboard
+  features: [padtokeyboard]
 
 play:
   features: []
+
 prototype:
   features: [padtokeyboard]
 
