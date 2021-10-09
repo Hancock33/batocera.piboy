@@ -7,69 +7,70 @@ from sys import exit
 from Emulator import Emulator
 from Evmapy import Evmapy
 import generators
-from generators.kodi.kodiGenerator import KodiGenerator
-from generators.linapple.linappleGenerator import LinappleGenerator
-from generators.libretro.libretroGenerator import LibretroGenerator
-from generators.moonlight.moonlightGenerator import MoonlightGenerator
-from generators.mupen.mupenGenerator import MupenGenerator
-from generators.ppsspp.ppssppGenerator import PPSSPPGenerator
-from generators.flycast.flycastGenerator import FlycastGenerator
+from generators.amiberry.amiberryGenerator import AmiberryGenerator
+from generators.cannonball.cannonballGenerator import CannonballGenerator
+from generators.cemu.cemuGenerator import CemuGenerator
+from generators.cgenius.cgeniusGenerator import CGeniusGenerator
+from generators.citra.citraGenerator import CitraGenerator
+from generators.daphne.daphneGenerator import DaphneGenerator
+from generators.devilutionx.devilutionxGenerator import DevilutionXGenerator
 from generators.dolphin.dolphinGenerator import DolphinGenerator
-from generators.pcsx2.pcsx2Generator import Pcsx2Generator
-from generators.scummvm.scummvmGenerator import ScummVMGenerator
 from generators.dosbox.dosboxGenerator import DosBoxGenerator
 from generators.dosboxstaging.dosboxstagingGenerator import DosBoxStagingGenerator
 from generators.dosboxx.dosboxxGenerator import DosBoxxGenerator
-from generators.vice.viceGenerator import ViceGenerator
-from generators.fsuae.fsuaeGenerator import FsuaeGenerator
-from generators.amiberry.amiberryGenerator import AmiberryGenerator
-from generators.citra.citraGenerator import CitraGenerator
-from generators.daphne.daphneGenerator import DaphneGenerator
-from generators.cannonball.cannonballGenerator import CannonballGenerator
-from generators.sdlpop.sdlpopGenerator import SdlPopGenerator
-from generators.openbor.openborGenerator import OpenborGenerator
-from generators.wine.wineGenerator import WineGenerator
-from generators.cemu.cemuGenerator import CemuGenerator
-from generators.melonds.melondsGenerator import MelonDSGenerator
-from generators.rpcs3.rpcs3Generator import Rpcs3Generator
-from generators.pygame.pygameGenerator import PygameGenerator
-from generators.mame.mameGenerator import MameGenerator
-from generators.devilutionx.devilutionxGenerator import DevilutionXGenerator
-from generators.hatari.hatariGenerator import HatariGenerator
-from generators.solarus.solarusGenerator import SolarusGenerator
-from generators.easyrpg.easyrpgGenerator import EasyRPGGenerator
-from generators.redream.redreamGenerator import RedreamGenerator
-from generators.supermodel.supermodelGenerator import SupermodelGenerator
-from generators.xash3d_fwgs.xash3dFwgsGenerator import Xash3dFwgsGenerator
-from generators.tsugaru.tsugaruGenerator import TsugaruGenerator
-from generators.mugen.mugenGenerator import MugenGenerator
-from generators.fpinball.fpinballGenerator import FpinballGenerator
-from generators.lightspark.lightsparkGenerator import LightsparkGenerator
-from generators.ruffle.ruffleGenerator import RuffleGenerator
-from generators.duckstation.duckstationGenerator import DuckstationGenerator
 from generators.drastic.drasticGenerator import DrasticGenerator
-from generators.xemu.xemuGenerator import XemuGenerator
-from generators.cgenius.cgeniusGenerator import CGeniusGenerator
-from generators.flatpak.flatpakGenerator import FlatpakGenerator
-from generators.eduke32.eduke32Generator import Eduke32Generator
-from generators.nblood.nbloodGenerator import NbloodGenerator
-from generators.pcexhumed.pcexhumedGenerator import PcexhumedGenerator
-from generators.rednukem.rednukemGenerator import RednukemGenerator
-from generators.etekwar.etekwarGenerator import EtekwarGenerator
-from generators.voidsw.voidswGenerator import VoidswGenerator
-from generators.steam.steamGenerator import SteamGenerator
+from generators.duckstation.duckstationGenerator import DuckstationGenerator
+from generators.easyrpg.easyrpgGenerator import EasyRPGGenerator
 from generators.ecwolf.ecwolfGenerator import ECWolfGenerator
-from generators.lexaloffle.lexaloffleGenerator import LexaloffleGenerator
-from generators.model2emu.model2emuGenerator import Model2EmuGenerator
-from generators.ionfury.ionfuryGenerator import IonfuryGenerator
-from generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
-from generators.samcoupe.samcoupeGenerator import SamcoupeGenerator
-from generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
+from generators.eduke32.eduke32Generator import Eduke32Generator
+from generators.etekwar.etekwarGenerator import EtekwarGenerator
+from generators.flatpak.flatpakGenerator import FlatpakGenerator
+from generators.flycast.flycastGenerator import FlycastGenerator
+from generators.fpinball.fpinballGenerator import FpinballGenerator
+from generators.fsuae.fsuaeGenerator import FsuaeGenerator
 from generators.gsplus.gsplusGenerator import GSplusGenerator
-from generators.openjazz.openjazzGenerator import OpenJazzGenerator
-from generators.hurrican.hurricanGenerator import HurricanGenerator
-from generators.prototype.prototypeGenerator import PrototypeGenerator
+from generators.hatari.hatariGenerator import HatariGenerator
 from generators.hcl.hclGenerator import HclGenerator
+from generators.hurrican.hurricanGenerator import HurricanGenerator
+from generators.ionfury.ionfuryGenerator import IonfuryGenerator
+from generators.kodi.kodiGenerator import KodiGenerator
+from generators.lexaloffle.lexaloffleGenerator import LexaloffleGenerator
+from generators.libretro.libretroGenerator import LibretroGenerator
+from generators.lightspark.lightsparkGenerator import LightsparkGenerator
+from generators.linapple.linappleGenerator import LinappleGenerator
+from generators.mame.mameGenerator import MameGenerator
+from generators.melonds.melondsGenerator import MelonDSGenerator
+from generators.model2emu.model2emuGenerator import Model2EmuGenerator
+from generators.moonlight.moonlightGenerator import MoonlightGenerator
+from generators.mugen.mugenGenerator import MugenGenerator
+from generators.mupen.mupenGenerator import MupenGenerator
+from generators.nblood.nbloodGenerator import NbloodGenerator
+from generators.openbor.openborGenerator import OpenborGenerator
+from generators.openjazz.openjazzGenerator import OpenJazzGenerator
+from generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
+from generators.pcexhumed.pcexhumedGenerator import PcexhumedGenerator
+from generators.pcsx2.pcsx2Generator import Pcsx2Generator
+from generators.ppsspp.ppssppGenerator import PPSSPPGenerator
+from generators.prototype.prototypeGenerator import PrototypeGenerator
+from generators.pygame.pygameGenerator import PygameGenerator
+from generators.rednukem.rednukemGenerator import RednukemGenerator
+from generators.redream.redreamGenerator import RedreamGenerator
+from generators.rpcs3.rpcs3Generator import Rpcs3Generator
+from generators.ruffle.ruffleGenerator import RuffleGenerator
+from generators.samcoupe.samcoupeGenerator import SamcoupeGenerator
+from generators.scummvm.scummvmGenerator import ScummVMGenerator
+from generators.sdlpop.sdlpopGenerator import SdlPopGenerator
+from generators.solarus.solarusGenerator import SolarusGenerator
+from generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
+from generators.steam.steamGenerator import SteamGenerator
+from generators.stuntcar.stuntcarGenerator import StuntcarGenerator
+from generators.supermodel.supermodelGenerator import SupermodelGenerator
+from generators.tsugaru.tsugaruGenerator import TsugaruGenerator
+from generators.vice.viceGenerator import ViceGenerator
+from generators.voidsw.voidswGenerator import VoidswGenerator
+from generators.wine.wineGenerator import WineGenerator
+from generators.xash3d_fwgs.xash3dFwgsGenerator import Xash3dFwgsGenerator
+from generators.xemu.xemuGenerator import XemuGenerator
 #from generators.play.playGenerator import PlayGenerator
 
 import controllersConfig as controllers
@@ -83,70 +84,71 @@ from utils.logger import get_logger
 eslog = get_logger(__name__)
 
 generators = {
-    'kodi': KodiGenerator(),
-    'linapple': LinappleGenerator(),
-    'libretro': LibretroGenerator(),
-    'moonlight': MoonlightGenerator(),
-    'scummvm': ScummVMGenerator(),
+    'amiberry': AmiberryGenerator(),
+    'cannonball' : CannonballGenerator(),
+    'cemu' : CemuGenerator(),
+    'cgenius': CGeniusGenerator(),
+    'citra' : CitraGenerator(),
+    'daphne' : DaphneGenerator(),
+    'devilutionx': DevilutionXGenerator(),
+    'dolphin': DolphinGenerator(),
     'dosbox': DosBoxGenerator(),
     'dosbox_staging': DosBoxStagingGenerator(),
     'dosboxx': DosBoxxGenerator(),
-    'mupen64plus': MupenGenerator(),
-    'vice': ViceGenerator(),
-    'fsuae': FsuaeGenerator(),
-    'amiberry': AmiberryGenerator(),
+    'drastic': DrasticGenerator(),
+    'duckstation': DuckstationGenerator(),
+    'easyrpg': EasyRPGGenerator(),
+    'ecwolf': ECWolfGenerator(),
+    'eduke32': Eduke32Generator(),
+    'etekwar': EtekwarGenerator(),
+    'flatpak': FlatpakGenerator(),
     'flycast': FlycastGenerator(),
-    'dolphin': DolphinGenerator(),
+    'fpinball': FpinballGenerator(),
+    'fsuae': FsuaeGenerator(),
+    'gsplus': GSplusGenerator(),
+    'hatari': HatariGenerator(),
+    'hcl': HclGenerator(),
+    'hurrican': HurricanGenerator(),
+    'ionfury': IonfuryGenerator(),
+    'kodi': KodiGenerator(),
+    'lexaloffle': LexaloffleGenerator(),
+    'libretro': LibretroGenerator(),
+    'lightspark': LightsparkGenerator(),
+    'linapple': LinappleGenerator(),
+    'mame' : MameGenerator(),
+    'melonds' : MelonDSGenerator(),
+    'model2emu': Model2EmuGenerator(),
+    'moonlight': MoonlightGenerator(),
+    'mugen': MugenGenerator(),
+    'mupen64plus': MupenGenerator(),
+    'nblood': NbloodGenerator(),
+    'openbor' : OpenborGenerator(),
+    'openjazz': OpenJazzGenerator(),
+    'opentyrian': OpentyrianGenerator(),
+    'pcexhumed': PcexhumedGenerator(),
     'pcsx2': Pcsx2Generator(),
     'ppsspp': PPSSPPGenerator(),
-    'citra' : CitraGenerator(),
-    'daphne' : DaphneGenerator(),
-    'cannonball' : CannonballGenerator(),
-    'sdlpop' : SdlPopGenerator(),
-    'openbor' : OpenborGenerator(),
-    'wine' : WineGenerator(),
-    'cemu' : CemuGenerator(),
-    'melonds' : MelonDSGenerator(),
-    'rpcs3' : Rpcs3Generator(),
-    'mame' : MameGenerator(),
+    'prototype': PrototypeGenerator(),
     'pygame': PygameGenerator(),
-    'devilutionx': DevilutionXGenerator(),
-    'hatari': HatariGenerator(),
-    'solarus': SolarusGenerator(),
-    'easyrpg': EasyRPGGenerator(),
-    'redream': RedreamGenerator(),
-    'supermodel': SupermodelGenerator(),
-    'xash3d_fwgs': Xash3dFwgsGenerator(),
-    'tsugaru': TsugaruGenerator(),
-    'mugen': MugenGenerator(),
-    'fpinball': FpinballGenerator(),
-    'lightspark': LightsparkGenerator(),
-    'ruffle': RuffleGenerator(),
-    'duckstation': DuckstationGenerator(),
-    'drastic': DrasticGenerator(),
-    'xemu': XemuGenerator(),
-    'cgenius': CGeniusGenerator(),
-    'flatpak': FlatpakGenerator(),
-    'eduke32': Eduke32Generator(),
-    'nblood': NbloodGenerator(),
-    'pcexhumed': PcexhumedGenerator(),
-    'etekwar': EtekwarGenerator(),
     'rednukem': RednukemGenerator(),
-    'voidsw': VoidswGenerator(),
-    'steam': SteamGenerator(),
-    'ecwolf': ECWolfGenerator(),
-    'lexaloffle': LexaloffleGenerator(),
-    'model2emu': Model2EmuGenerator(),
-    'ionfury': IonfuryGenerator(),
-    'opentyrian': OpentyrianGenerator(),
+    'redream': RedreamGenerator(),
+    'rpcs3' : Rpcs3Generator(),
+    'ruffle': RuffleGenerator(),
     'samcoupe': SamcoupeGenerator(),
+    'scummvm': ScummVMGenerator(),
+    'sdlpop' : SdlPopGenerator(),
+    'solarus': SolarusGenerator(),
     'sonic2013': SonicRetroGenerator(),
     'soniccd': SonicRetroGenerator(),
-    'gsplus': GSplusGenerator(),
-    'openjazz': OpenJazzGenerator(),
-    'hurrican': HurricanGenerator(),
-    'prototype': PrototypeGenerator(),
-    'hcl': HclGenerator(),
+    'steam': SteamGenerator(),
+    'steam': StuntcarGenerator(),
+    'supermodel': SupermodelGenerator(),
+    'tsugaru': TsugaruGenerator(),
+    'vice': ViceGenerator(),
+    'voidsw': VoidswGenerator(),
+    'wine' : WineGenerator(),
+    'xash3d_fwgs': Xash3dFwgsGenerator(),
+    'xemu': XemuGenerator(),
     #'play': PlayGenerator(),
 }
 

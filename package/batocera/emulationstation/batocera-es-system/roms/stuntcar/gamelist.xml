@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./stuncar.game</path>
+		<name>Stunt Car Racer</name>
+		<desc>Race a single computer opponent for first place on a unique racetrack -- 100 feet in the air! You start in the fourth three-man division of a league, all racing each other twice, and must come top to progress. The action is viewed from within the car throughout the 3-lap races, with the distance between you always on screen. 
+ 
+Jump chasms, jumps, and drawbridges; take banks hard or slow; pass your opponent on the track or while catching mass air. Your car has the ability to burn a limited amount of turbo boost fuel as a way to accelerate faster and achieve higher speeds, but don't use it all up at once or you'll fall behind. Don't damage your engine too much; severe dents will show up during your next race. 
+ 
+Whatever you do, don't fall off the track, as this will cost you time as you are placed back on.</desc>
+		<rating>0.85</rating>
+		<releasedate>20041220T000000</releasedate>
+		<developer>Micro Style</developer>
+		<publisher>Micro Style</publisher>
+		<genre>Race, Driving</genre>
+    <image>./images/stuntcar.png</image>
+		<genreid>1537</genreid>
+  </game>
+</gameList>

@@ -4218,33 +4218,6 @@ xemu:
                 "Normal Boot":        "false"
                 "Skipped Logo Boot":  "true"
 
-eduke32:
-  features: [padtokeyboard]
-
-ionfury:
-  features: [padtokeyboard]
-
-nblood:
-  features: [padtokeyboard]
-
-pcexhumed:
-  features: [padtokeyboard]
-
-etekwar:
-  features: [padtokeyboard]
-
-voidsw:
-  features: [padtokeyboard]
-
-rednukem:
-  features: [padtokeyboard]
-
-lexaloffle:
-  features: [padtokeyboard]
-
-ecwolf:
-  features: [padtokeyboard]
-
 sonic2013:
   features: []
   cfeatures:
@@ -4407,29 +4380,58 @@ model2emu:
                 "Off":      0
                 "On":       1
 
-hcl:
+ecwolf:
   features: [padtokeyboard]
 
-opentyrian:
+eduke32:
   features: [padtokeyboard]
 
-openjazz:
+etekwar:
   features: [padtokeyboard]
 
-hurrican:
-  features: [padtokeyboard]
-
-prototype:
-  features: [padtokeyboard]
-
-simcoupe:
+flatpak:
   features: [padtokeyboard]
 
 gsplus:
   features: [padtokeyboard]
 
+hcl:
+  features: [padtokeyboard]
+
+hurrican:
+  features: [padtokeyboard]
+
+ionfury:
+  features: [padtokeyboard]
+
+lexaloffle:
+  features: [padtokeyboard]
+
+nblood:
+  features: [padtokeyboard]
+
+openjazz:
+  features: [padtokeyboard]
+
+opentyrian:
+  features: [padtokeyboard]
+
+pcexhumed:
+  features: [padtokeyboard
+
 play:
   features: []
+prototype:
+  features: [padtokeyboard]
 
-flatpak:
+rednukem:
+  features: [padtokeyboard]
+
+simcoupe:
+  features: [padtokeyboard]
+
+stuntcar:
+  features: [padtokeyboard]
+
+voidsw:
   features: [padtokeyboard]
