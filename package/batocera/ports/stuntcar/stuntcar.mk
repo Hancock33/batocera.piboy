@@ -24,6 +24,7 @@ define STUNTCAR_INSTALL_TARGET_CMDS
     cp -av $(@D)/Bitmap $(TARGET_DIR)/usr/share/stuntcar/
     cp -av $(@D)/Sounds $(TARGET_DIR)/usr/share/stuntcar/
     cp -av $(@D)/Tracks $(TARGET_DIR)/usr/share/stuntcar/
+	cp -av $(@D)/DejaVuSans-Bold.ttf $(TARGET_DIR)/usr/share/stuntcar/
 endef
 
 $(eval $(generic-package))
