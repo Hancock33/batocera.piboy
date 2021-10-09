@@ -2497,7 +2497,7 @@ samcoupe:
 
 stuntcar:
   name:       Stunt Car Racer
-  manufacturer: MicroStyle
+  manufacturer: Ports
   release: 1989
   hardware: port
   extensions: [game]

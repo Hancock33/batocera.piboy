@@ -32,7 +32,7 @@ define STUNTCAR_INSTALL_TARGET_CMDS
 
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	#cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stuntcar/stuntcar.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stuntcar/stuntcar.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(generic-package))
