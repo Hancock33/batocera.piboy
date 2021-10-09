@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <gameList>
   <game>
-    <path>./stuncar.game</path>
+    <path>./stuntcar.game</path>
 		<name>Stunt Car Racer</name>
 		<desc>Race a single computer opponent for first place on a unique racetrack -- 100 feet in the air! You start in the fourth three-man division of a league, all racing each other twice, and must come top to progress. The action is viewed from within the car throughout the 3-lap races, with the distance between you always on screen. 
  
