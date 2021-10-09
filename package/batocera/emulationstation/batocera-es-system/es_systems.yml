@@ -2495,6 +2495,21 @@ samcoupe:
     samcoupe:
       samcoupe:  { requireAnyOf: [BR2_PACKAGE_SIMCOUPE] }
 
+stuncar:
+  name:       Stunt Car Racer
+  manufacturer: MicroStyle
+  release: 1989
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    prototype:
+      prototype: { requireAnyOf: [BR2_PACKAGE_STUNTCAR] }
+  comment_en: |
+    This system is a standalone  game. No rom required.
+  comment_fr: |
+    Ce système est le premier jeu de autonome. Aucune rom n'est requise.
+
 gsplus:
   name:      Apple IIGS
   manufacturer: Apple

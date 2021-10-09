@@ -25,7 +25,14 @@ define STUNTCAR_INSTALL_TARGET_CMDS
     cp -av $(@D)/Sounds $(TARGET_DIR)/usr/share/stuntcar/
     cp -av $(@D)/Tracks $(TARGET_DIR)/usr/share/stuntcar/
 	cp -av $(@D)/DejaVuSans-Bold.ttf $(TARGET_DIR)/usr/share/stuntcar/
+	echo "cd /usr/share/stuntcar && ./stuntcarracer" > $(TARGET_DIR)/usr/share/stuntcar/stuntcarracer.sh
+	chmod 0754 $(TARGET_DIR)/usr/share/stuntcar/stuntcarracer.sh
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stuntcar/stuntcar.bin $(TARGET_DIR)/usr/bin/stuntcar
+	chmod 0754 $(TARGET_DIR)/usr/bin/stuntcar
+
+	# evmap config
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	#cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stuntcar/stuntcar.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(generic-package))
-
