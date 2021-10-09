@@ -421,6 +421,9 @@ snes:
 snes-msu1:
   emulator: libretro
   core:     snes9x
+stuntcar:
+  emulator: stuntcar
+  core:     stuntcar
 superflappybirds:
   emulator: libretro
   core:     superflappybirds
