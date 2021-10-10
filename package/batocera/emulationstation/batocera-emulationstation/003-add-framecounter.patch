@@ -1,3 +1,29 @@
+diff --git a/es-app/src/SystemData.cpp b/es-app/src/SystemData.cpp
+index d183f756..75f84bb8 100644
+--- a/es-app/src/SystemData.cpp
++++ b/es-app/src/SystemData.cpp
+@@ -483,6 +483,7 @@ EmulatorFeatures::Features EmulatorFeatures::parseFeatures(const std::string fea
+ 
+ 		if (trim == "ratio") ret = ret | EmulatorFeatures::Features::ratio;
+ 		if (trim == "rewind") ret = ret | EmulatorFeatures::Features::rewind;
++		if (trim == "framecount") ret = ret | EmulatorFeatures::Features::framecount;		
+ 		if (trim == "smooth") ret = ret | EmulatorFeatures::Features::smooth;
+ 		if (trim == "shaders") ret = ret | EmulatorFeatures::Features::shaders;
+ 		if (trim == "pixel_perfect") ret = ret | EmulatorFeatures::Features::pixel_perfect;
+diff --git a/es-app/src/SystemData.h b/es-app/src/SystemData.h
+index 8d5cc2c5..1cdfa0ea 100644
+--- a/es-app/src/SystemData.h
++++ b/es-app/src/SystemData.h
+@@ -73,7 +73,8 @@ public:
+ 		padTokeyboard = 65536,
+ 		cheevos = 131072,
+ 		autocontrollers = 262144,
+-
++		framecount = 524288,
++		
+ 		all = 0x0FFFFFFF
+ 	};
+ 
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
 index 13968019..cde61a7b 100644
 --- a/es-app/src/guis/GuiMenu.cpp
