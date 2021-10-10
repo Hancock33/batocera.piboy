@@ -3,8 +3,8 @@
 # STELLA2014
 #
 ################################################################################
-# Version.: Commits on Oct 2, 2021
-LIBRETRO_STELLA2014_VERSION = 29f648b2f88bca6dd4a4c99acdea985e3589c40e
+# Version.: Commits on Oct 09, 2021
+LIBRETRO_STELLA2014_VERSION = 7be394d83454b123bac749654013767956686319
 LIBRETRO_STELLA2014_SITE = $(call github,libretro,stella2014-libretro,$(LIBRETRO_STELLA2014_VERSION))
 LIBRETRO_STELLA2014_LICENSE = GPLv2
 
