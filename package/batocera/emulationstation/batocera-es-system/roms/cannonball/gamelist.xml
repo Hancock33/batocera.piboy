@@ -4,10 +4,9 @@
     <path>./Cannonball.cannonball</path>
     <name>Cannonball</name>
     <desc>Cannonball is an enhanced OutRun engine</desc>
-    <image>./images/Cannonball.png</image>
-    <thumbnail>./images/Cannonball-thumb.png</thumbnail>
-    <marquee>./images/Cannonball-marquee.png</marquee>
-    <video>./videos/Cannonball-video.mp4</video>
+	<image>./media/images/Cannonball - OutRun Engine.png</image>
+	<video>./media/videos/Cannonball - OutRun Engine.mp4</video>
+	<thumbnail>./media/mix/Cannonball - OutRun Engine.png</thumbnail>
     <rating>0.9</rating>
     <developer>Chris White</developer>
     <publisher>Chris White</publisher>

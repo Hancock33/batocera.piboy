@@ -12,6 +12,7 @@
     <players>1</players>
     <image>./images/Flashback.png</image>
     <video>./videos/Flashback.mp4</video>
+	<lang>en</lang>
     <genreid>257</genreid>
   </game>
 </gameList>

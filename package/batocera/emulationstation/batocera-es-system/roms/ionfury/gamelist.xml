@@ -10,6 +10,8 @@
     <publisher>3D Realms</publisher>
     <genre>Shooter / 1st person-Shooter</genre>
     <players>1</players>
-    <image>./images/ionfury.png</image>
+	<image>./images/ionfury.png</image>
+	<video>./videos/ionfury.mp4</video>
+	<lang>en</lang>
   </game>
 </gameList>
