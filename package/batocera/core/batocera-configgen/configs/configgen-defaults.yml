@@ -5,6 +5,7 @@ default:
     videomode:      default
     ratio:          auto
     video_threaded: false
+    framecount:     false         
     smooth:         true
     rewind:         false
     bezel:          default

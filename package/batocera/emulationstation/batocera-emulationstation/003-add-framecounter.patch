@@ -1,0 +1,29 @@
+diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
+index 13968019..cde61a7b 100644
+--- a/es-app/src/guis/GuiMenu.cpp
++++ b/es-app/src/guis/GuiMenu.cpp
+@@ -4000,6 +4000,15 @@ void GuiMenu::popSpecificConfigurationGui(Window* mWindow, std::string title, st
+ 		systemConfiguration->addSaveFunc([configName, videoResolutionMode_choice] { SystemConf::getInstance()->set(configName + ".videomode", videoResolutionMode_choice->getSelected()); });
+ 	}
+ 
++	// Frame Count
++	if (systemData->isFeatureSupported(currentEmulator, currentCore, EmulatorFeatures::framecount))
++	{
++		auto framecount_enabled = std::make_shared<OptionListComponent<std::string>>(mWindow, _("FRAME COUNT"));
++		framecount_enabled->addRange({ { _("AUTO"), "auto" },{ _("ON") , "1" },{ _("OFF"), "0" } }, SystemConf::getInstance()->get(configName + ".framecount"));
++		systemConfiguration->addWithLabel(_("FRAME COUNT"), framecount_enabled);
++		systemConfiguration->addSaveFunc([configName, framecount_enabled] { SystemConf::getInstance()->set(configName + ".framecount", framecount_enabled->getSelected()); });
++	}
++	
+ 	// smoothing
+ 	if (systemData->isFeatureSupported(currentEmulator, currentCore, EmulatorFeatures::smooth))
+ 	{
+@@ -4008,7 +4017,7 @@ void GuiMenu::popSpecificConfigurationGui(Window* mWindow, std::string title, st
+ 		systemConfiguration->addWithLabel(_("SMOOTH GAMES"), smoothing_enabled);
+ 		systemConfiguration->addSaveFunc([configName, smoothing_enabled] { SystemConf::getInstance()->set(configName + ".smooth", smoothing_enabled->getSelected()); });
+ 	}
+-
++	
+ 	// rewind
+ 	if (systemData->isFeatureSupported(currentEmulator, currentCore, EmulatorFeatures::rewind))
+ 	{
