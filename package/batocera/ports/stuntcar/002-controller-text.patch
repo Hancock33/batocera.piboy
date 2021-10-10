@@ -1,8 +1,7 @@
-diff --git a/StuntCarRacer.cpp b/StuntCarRacer.cpp
-index a8cc8a9..4337981 100755
---- a/StuntCarRacer.cpp
-+++ b/StuntCarRacer.cpp
-@@ -1138,8 +1138,7 @@ static void HandleTrackMenu( CDXUTTextHelper &txtHelper )
+diff -Naur stuntcarremake-f90f3851a44872c874baade0aad7206ce860f1c8.orig/StuntCarRacer.cpp stuntcarremake-f90f3851a44872c874baade0aad7206ce860f1c8/StuntCarRacer.cpp
+--- stuntcarremake-f90f3851a44872c874baade0aad7206ce860f1c8.orig/StuntCarRacer.cpp	2021-07-18 14:49:34.000000000 +0100
++++ stuntcarremake-f90f3851a44872c874baade0aad7206ce860f1c8/StuntCarRacer.cpp	2021-10-10 06:29:23.440010410 +0100
+@@ -1138,8 +1138,7 @@
  	// output instructions
  	const D3DSURFACE_DESC *pd3dsdBackBuffer = DXUTGetBackBufferSurfaceDesc();
  	txtHelper.SetInsertionPos( 2+(wideScreen?10:0), pd3dsdBackBuffer->Height-15*8 );
@@ -12,7 +11,7 @@ index a8cc8a9..4337981 100755
  
  	if (((keyPress >= firstMenuOption) && (keyPress <= lastMenuOption)) || (keyPress == LEAGUEMENU))
  		{
-@@ -1196,19 +1195,9 @@ static void HandleTrackPreview( CDXUTTextHelper &txtHelper )
+@@ -1196,19 +1195,9 @@
  	// output instructions
  	const D3DSURFACE_DESC *pd3dsdBackBuffer = DXUTGetBackBufferSurfaceDesc();
  	txtHelper.SetInsertionPos( 2+(wideScreen?10:0), pd3dsdBackBuffer->Height-15*9 );
@@ -33,7 +32,7 @@ index a8cc8a9..4337981 100755
  
  	if (keyPress == STARTMENU)
  		{
-@@ -1346,10 +1335,10 @@ void RenderText( double fTime )
+@@ -1346,10 +1335,10 @@
  					txtHelperLarge.SetInsertionPos( 250+(wideScreen?80:0), pd3dsdBackBuffer->Height-25*13 );
  					txtHelperLarge.DrawTextLine( L"GAME OVER" );
  					txtHelperLarge.SetInsertionPos( 132+(wideScreen?80:0), pd3dsdBackBuffer->Height-25*11 );
@@ -46,3 +45,8 @@ index a8cc8a9..4337981 100755
  #endif
  				}
  				else
+@@ -2304,3 +2293,4 @@
+ 	exit(0);
+ }
+ #endif
++
