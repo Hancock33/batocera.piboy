@@ -19,17 +19,19 @@ try:
         pwrctrlFile.close()
         if abs(pwrctrl - pwrctrlOld) > hyst:
             if pwrctrl == 6:
-                os.system("/usr/bin/batocera-es-swissknife --shutdown")
+                os.system("/etc/init.d/S31emulationstation stop && echo 0 > /sys/kernel/xpi_gamecon/flags && /sbin/rmmod xpi_gamecon && shutdown -h now")
             if pwrctrl == 134:
-                os.system("/usr/bin/batocera-es-swissknife --shutdown")
+                os.system("/etc/init.d/S31emulationstation stop && echo 0 > /sys/kernel/xpi_gamecon/flags && /sbin/rmmod xpi_gamecon && shutdown -h now")
         pwrctrlOld = pwrctrl
         # Read Battery < 5% shutdown
         battctrlFile = open("/sys/kernel/xpi_gamecon/percent", "r")
         battctrl = int(battctrlFile.read())
         battctrlFile.close()
         if abs(battctrl - battctrlOld) > hyst:
-            if battctrl == 5:
-                os.system("/usr/bin/batocera-es-swissknife --shutdown")
+            if battctrl <= 10:
+                os.system("echo 20 > /sys/kernel/xpi_gamecon/green && echo 20 > /sys/kernel/xpi_gamecon/red")
+            if battctrl <= 5:
+                os.system("/etc/init.d/S31emulationstation stop && echo 0 > /sys/kernel/xpi_gamecon/flags && /sbin/rmmod xpi_gamecon && shutdown -h now")
         battctrlOld = battctrl           
         # Wait until next refresh
         time.sleep(WAIT_TIME)
