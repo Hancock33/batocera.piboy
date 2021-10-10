@@ -13,6 +13,7 @@ Blood is a first-person shooter with horror elements, which uses the Build engin
     <genre>Shooter / 1st person-Shooter</genre>
     <players>1-40</players>
     <image>./images/blood.png</image>
+	<lang>en</lang>
     <genreid>259</genreid>
   </game>
 </gameList>

@@ -8,6 +8,7 @@
     <publisher>Epic Games</publisher>
     <genre>Shoot'em Up</genre>
     <players>1</players>
+	<lang>en</lang>
     <image>./images/tyrian.png</image>
   </game>
 </gameList>

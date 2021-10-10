@@ -9,6 +9,7 @@
     <developer>Courtney Pitcher</developer>
     <publisher>Libretro</publisher>
     <players>1</players>
+	<lang>en</lang>
     <image>./images/superflappybirds.png</image>
   </game>
 </gameList>
