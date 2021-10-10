@@ -363,6 +363,12 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution):
         else:
             retroarchConfig['input_libretro_device_p1'] = '1'
 
+    # FPS option
+    if system.isOptSet('framecount') and system.getOptBoolean('framecount') == True:
+        retroarchConfig['framecount_show'] = 'true'
+    else:
+        retroarchConfig['framecount_show'] = 'false'
+
     # Smooth option
     if system.isOptSet('smooth') and system.getOptBoolean('smooth') == True:
         retroarchConfig['video_smooth'] = 'true'
