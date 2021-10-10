@@ -25,7 +25,7 @@ index 8d5cc2c5..8b9684d3 100644
  		all = 0x0FFFFFFF
  	};
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 13968019..2daa93b0 100644
+index 13968019..403475c0 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -4000,6 +4000,24 @@ void GuiMenu::popSpecificConfigurationGui(Window* mWindow, std::string title, st
@@ -33,12 +33,12 @@ index 13968019..2daa93b0 100644
  	}
  
 +	// FPS
-+	if (systemData->isFeatureSupported(currentEmulator, currentCore, EmulatorFeatures::showfs))
++	if (systemData->isFeatureSupported(currentEmulator, currentCore, EmulatorFeatures::showfps))
 +	{
-+		auto showfs_enabled = std::make_shared<OptionListComponent<std::string>>(mWindow, _("FPS"));
-+		showfs_enabled->addRange({ { _("AUTO"), "auto" },{ _("ON") , "1" },{ _("OFF"), "0" } }, SystemConf::getInstance()->get(configName + ".showfs"));
-+		systemConfiguration->addWithLabel(_("FPS"), showfs_enabled);
-+		systemConfiguration->addSaveFunc([configName, showfs_enabled] { SystemConf::getInstance()->set(configName + ".showfs", showfs_enabled->getSelected()); });
++		auto showfps_enabled = std::make_shared<OptionListComponent<std::string>>(mWindow, _("FPS"));
++		showfps_enabled->addRange({ { _("AUTO"), "auto" },{ _("ON") , "1" },{ _("OFF"), "0" } }, SystemConf::getInstance()->get(configName + ".showfps"));
++		systemConfiguration->addWithLabel(_("FPS"), showfps_enabled);
++		systemConfiguration->addSaveFunc([configName, showfps_enabled] { SystemConf::getInstance()->set(configName + ".showfps", showfps_enabled->getSelected()); });
 +	}
 +
 +	// Frame Count
