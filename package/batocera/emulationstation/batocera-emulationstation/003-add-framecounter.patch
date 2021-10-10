@@ -1,37 +1,46 @@
 diff --git a/es-app/src/SystemData.cpp b/es-app/src/SystemData.cpp
-index d183f756..75f84bb8 100644
+index d183f756..2f4f56b9 100644
 --- a/es-app/src/SystemData.cpp
 +++ b/es-app/src/SystemData.cpp
-@@ -483,6 +483,7 @@ EmulatorFeatures::Features EmulatorFeatures::parseFeatures(const std::string fea
+@@ -483,6 +483,8 @@ EmulatorFeatures::Features EmulatorFeatures::parseFeatures(const std::string fea
  
  		if (trim == "ratio") ret = ret | EmulatorFeatures::Features::ratio;
  		if (trim == "rewind") ret = ret | EmulatorFeatures::Features::rewind;
-+		if (trim == "framecount") ret = ret | EmulatorFeatures::Features::framecount;		
++		if (trim == "showfps") ret = ret | EmulatorFeatures::Features::showfps;
++		if (trim == "framecount") ret = ret | EmulatorFeatures::Features::framecount;
  		if (trim == "smooth") ret = ret | EmulatorFeatures::Features::smooth;
  		if (trim == "shaders") ret = ret | EmulatorFeatures::Features::shaders;
  		if (trim == "pixel_perfect") ret = ret | EmulatorFeatures::Features::pixel_perfect;
 diff --git a/es-app/src/SystemData.h b/es-app/src/SystemData.h
-index 8d5cc2c5..1cdfa0ea 100644
+index 8d5cc2c5..8b9684d3 100644
 --- a/es-app/src/SystemData.h
 +++ b/es-app/src/SystemData.h
-@@ -73,7 +73,8 @@ public:
+@@ -73,6 +73,8 @@ public:
  		padTokeyboard = 65536,
  		cheevos = 131072,
  		autocontrollers = 262144,
--
 +		framecount = 524288,
-+		
++		showfps = 1048576,
+ 
  		all = 0x0FFFFFFF
  	};
- 
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 13968019..cde61a7b 100644
+index 13968019..2daa93b0 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
-@@ -4000,6 +4000,15 @@ void GuiMenu::popSpecificConfigurationGui(Window* mWindow, std::string title, st
+@@ -4000,6 +4000,24 @@ void GuiMenu::popSpecificConfigurationGui(Window* mWindow, std::string title, st
  		systemConfiguration->addSaveFunc([configName, videoResolutionMode_choice] { SystemConf::getInstance()->set(configName + ".videomode", videoResolutionMode_choice->getSelected()); });
  	}
  
++	// FPS
++	if (systemData->isFeatureSupported(currentEmulator, currentCore, EmulatorFeatures::showfs))
++	{
++		auto showfs_enabled = std::make_shared<OptionListComponent<std::string>>(mWindow, _("FPS"));
++		showfs_enabled->addRange({ { _("AUTO"), "auto" },{ _("ON") , "1" },{ _("OFF"), "0" } }, SystemConf::getInstance()->get(configName + ".showfs"));
++		systemConfiguration->addWithLabel(_("FPS"), showfs_enabled);
++		systemConfiguration->addSaveFunc([configName, showfs_enabled] { SystemConf::getInstance()->set(configName + ".showfs", showfs_enabled->getSelected()); });
++	}
++
 +	// Frame Count
 +	if (systemData->isFeatureSupported(currentEmulator, currentCore, EmulatorFeatures::framecount))
 +	{
@@ -40,16 +49,7 @@ index 13968019..cde61a7b 100644
 +		systemConfiguration->addWithLabel(_("FRAME COUNT"), framecount_enabled);
 +		systemConfiguration->addSaveFunc([configName, framecount_enabled] { SystemConf::getInstance()->set(configName + ".framecount", framecount_enabled->getSelected()); });
 +	}
-+	
++
  	// smoothing
  	if (systemData->isFeatureSupported(currentEmulator, currentCore, EmulatorFeatures::smooth))
- 	{
-@@ -4008,7 +4017,7 @@ void GuiMenu::popSpecificConfigurationGui(Window* mWindow, std::string title, st
- 		systemConfiguration->addWithLabel(_("SMOOTH GAMES"), smoothing_enabled);
- 		systemConfiguration->addSaveFunc([configName, smoothing_enabled] { SystemConf::getInstance()->set(configName + ".smooth", smoothing_enabled->getSelected()); });
- 	}
--
-+	
- 	// rewind
- 	if (systemData->isFeatureSupported(currentEmulator, currentCore, EmulatorFeatures::rewind))
  	{
