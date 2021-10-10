@@ -5,10 +5,11 @@
 ################################################################################
 # Version.: Commits on Oct 04, 2021
 CGENIUS_VERSION = 7afb8701aba1c370d54af8c93372e9849fd6efe1
-CGENIUS_SITE = https://github.com/gerstrong/Commander-Genius.git
+CGENIUS_SITE = https://github.com/gerstrong/Commander-Genius
 
 CGENIUS_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf boost libcurl
 CGENIUS_SITE_METHOD=git
+CGENIUS_GIT_SUBMODULES=YES
 
 # No OpenGL ES support
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
