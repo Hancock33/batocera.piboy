@@ -1119,11 +1119,10 @@ chailove:
 
 lowresnx:
   name:       LowRes-NX
-  manufacturer: Ports
-  release:
-  hardware: port
+  manufacturer: Timo Kloss
+  release: 2017
+  hardware: portable
   extensions: [nx]
-  group: ports
   emulators:
     libretro:
       lowresnx: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_LOWRESNX] }
