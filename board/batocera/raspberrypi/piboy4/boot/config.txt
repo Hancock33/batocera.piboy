@@ -66,7 +66,7 @@ hdmi_drive=2
 #edid_content_type=4
 
 # if you plug your tv at the same time as your rpi and that the rpi switches from the hdmi or give a low resolution because tv had no enough time to initialize it
-boot_delay=3
+#boot_delay=3
 
 # uncomment to enable composite output via 4 pole TRRS ("headphone") socket.
 # note: slightly slows down the entire system on Pi 4 models.
@@ -87,9 +87,6 @@ boot_delay=3
 # 3	16:9
 #sdtv_aspect=3
 
-# uncomment if you have slow sound issues on composite output
-#audio_pwm_mode=0
-
 # uncomment to pretend that all audio formats are supported by the display
 # allowing passthrough of DTS/AC3 even when this is not reported as supported.
 #hdmi_force_edid_audio=1
@@ -105,7 +102,7 @@ boot_delay=3
 # uncomment for lirc-rpi
 #dtoverlay=lirc-rpi
 
-# uncomment if you don't want the rainbow at startup
+# disable rainbow at startup
 disable_splash=1
 
 kernel=boot/linux
@@ -134,12 +131,8 @@ initramfs boot/initrd.gz
 dtparam=audio=on
 
 [rpi4]
-# Enable DRM VC4 V3D driver on top of the dispmanx display stack
-# Preferred 'Full' Kernel Mode Setting (KMS)
-#dtoverlay=vc4-kms-v3d-pi4,noaudio
-
-# Optional 'Fake' KMS for displays that won't work with 'Full' KMS
 dtoverlay=vc4-fkms-v3d
+dtoverlay=rpivid-v4l2
 
 # Ensure only one display output can be used on the Pi4 with batocera
 max_framebuffers=1
@@ -154,7 +147,8 @@ dpi_group=2
 dpi_mode=87
 dpi_output_format=0x070016
 hvs_set_dither=0x210
-dpi_timings=640 1 44 2 42 480 1 19 2 17 0 0 0 60 0 24000000 1
+#dpi_timings=640 1 44 2 42 480 1 19 2 17 0 0 0 60 0 24000000 1
+dpi_timings=640 1 56 4 42 480 1 16 4 12 0 0 0 60 0 22800000 1 #alternate 60hz setting for Pi4 only.
 enable_dpi_lcd=1
 
 ##Disable ACT LED
@@ -181,9 +175,3 @@ avoid_warnings=2
 ##Auto detect HDMI
 [edid=*]
 enable_dpi_lcd=0
-
-[DPI]
-# Put any DPI required display code here
-# i.e. Official 7" DSI Raspberry Pi Touch Display for 'Full' KMS
-#ignore_lcd=1
-#dtoverlay=vc4-kms-dsi-7inch
