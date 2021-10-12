@@ -3,8 +3,8 @@
 # LIBRETRO ZC210
 #
 ################################################################################
-# Version.: Commits on Jul 23, 2021
-LIBRETRO_ZC210_VERSION = af305d12bcfc6a2b4710e0551b50365d215fdb71
+# Version.: Commits on Oct 12, 2021
+LIBRETRO_ZC210_VERSION = bd32ba8834b082875fe753ffb01b707f47a91530
 LIBRETRO_ZC210_SITE = https://github.com/netux79/zc210-libretro.git
 LIBRETRO_ZC210_SITE_METHOD=git
 LIBRETRO_ZC210_GIT_SUBMODULES=YES
