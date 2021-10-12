@@ -1,6 +1,8 @@
---- a/src/joystick/linux/SDL_sysjoystick.c	2021-08-10 17:34:07.000000000 +0200
-+++ b/src/joystick/linux/SDL_sysjoystick.c	2021-08-11 12:11:08.475403791 +0200
-@@ -1434,6 +1434,9 @@
+diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
+index fc95197..827a7e7 100644
+--- a/src/joystick/linux/SDL_sysjoystick.c
++++ b/src/joystick/linux/SDL_sysjoystick.c
+@@ -1437,6 +1437,9 @@ LINUX_JoystickGetGamepadMapping(int device_index, SDL_GamepadMapping *out)
      SDL_Joystick *joystick;
      SDL_joylist_item *item = JoystickByDevIndex(device_index);
  
