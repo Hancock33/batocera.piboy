@@ -1187,7 +1187,7 @@ etekwar:
   manufacturer: Ports
   release: 1995
   hardware: port
-  extensions: [grp]
+  extensions: [pk3]
   group: ports
   emulators:
     etekwar:
