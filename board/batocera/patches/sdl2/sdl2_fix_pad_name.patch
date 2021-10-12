@@ -1,19 +1,16 @@
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
-index b775079..37a599b 100644
+index 9f82452..af9d10c 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
-@@ -198,10 +198,11 @@ IsJoystick(int fd, char **name_return, SDL_JoystickGUID *guid)
+@@ -195,11 +195,7 @@ IsJoystick(int fd, char **name_return, SDL_JoystickGUID *guid)
+     if (ioctl(fd, EVIOCGNAME(sizeof(product_string)), product_string) < 0) {
          return 0;
      }
- 
+-
 -    name = SDL_CreateJoystickName(inpid.vendor, inpid.product, NULL, product_string);
 -    if (!name) {
 -        return 0;
 -    }
-+    //name = SDL_CreateJoystickName(inpid.vendor, inpid.product, NULL, product_string);
-+    //if (!name) {
-+    //    return 0;
-+    //}
 +    name = SDL_strdup(product_string);
  
  #ifdef SDL_JOYSTICK_HIDAPI
