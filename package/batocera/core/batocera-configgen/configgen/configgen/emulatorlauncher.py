@@ -24,6 +24,7 @@ from generators.easyrpg.easyrpgGenerator import EasyRPGGenerator
 from generators.ecwolf.ecwolfGenerator import ECWolfGenerator
 from generators.eduke32.eduke32Generator import Eduke32Generator
 from generators.etekwar.etekwarGenerator import EtekwarGenerator
+from generators.fba2x.fba2xGenerator import Fba2xGenerator
 from generators.flatpak.flatpakGenerator import FlatpakGenerator
 from generators.flycast.flycastGenerator import FlycastGenerator
 from generators.fpinball.fpinballGenerator import FpinballGenerator
@@ -101,6 +102,7 @@ generators = {
     'ecwolf': ECWolfGenerator(),
     'eduke32': Eduke32Generator(),
     'etekwar': EtekwarGenerator(),
+    'fba2x': Fba2xGenerator(),
     'flatpak': FlatpakGenerator(),
     'flycast': FlycastGenerator(),
     'fpinball': FpinballGenerator(),
