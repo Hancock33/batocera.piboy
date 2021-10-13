@@ -202,6 +202,11 @@ kodi:
   emulator: kodi
   options:
     videomode: default
+lcdgames:
+  emulator: libretro
+  core:     gw
+  options:
+    forceNoBezel: true
 lowresnx:
   emulator: libretro
   core:     lowresnx

@@ -364,15 +364,31 @@ virtualboy:
     libretro:
       vb: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_VB] }
 
+lcdgames:
+  name:       LCD Games
+  manufacturer: Various
+  release: 1979
+  hardware: portable
+  extensions: [mgw, zip, 7z]
+  group:      lcdgames
+  emulators:
+    libretro:
+      gw:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GW]                                   }
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME], incompatible_extensions: [mgw]          }
+
 gameandwatch:
   name:       Game and Watch
   manufacturer: Nintendo
   release: 1980
   hardware: portable
   extensions: [mgw, zip, 7z]
+  group:      lcdgames
   emulators:
     libretro:
-      gw: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GW] }
+      gw:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GW]                                   }
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME], incompatible_extensions: [mgw]          }
 
 dreamcast:
   name:       Sega Dreamcast
@@ -1968,8 +1984,8 @@ pc98:
       np2kai:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PC98] }
 
 fmtowns:
-  name:       Fujistu FM-TOWNS
-  manufacturer: Fujistu
+  name:       Fujitsu FM-TOWNS
+  manufacturer: Fujitsu
   release: 1987
   hardware: computer
   extensions: [bin, m3u, cue, d88, d77, xdf, iso]
@@ -2522,3 +2538,27 @@ gsplus:
   emulators:
     gsplus:
       gsplus: { requireAnyOf: [BR2_PACKAGE_GSPLUS] }
+
+cdi:
+  name:       CD-i
+  manufacturer: Philips
+  release: 1990
+  hardware: console
+  extensions: [chd, cue, toc, nrg, gdi, iso, cdr]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS file cdimono1.zip or .7z in either cdi or BIOS folder.
+
+advision:
+  name:       Adventure Vision
+  manufacturer: Entex
+  release: 1982
+  hardware: console
+  extensions: [bin, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS file advision.zip or .7z in either advision or BIOS folder.
