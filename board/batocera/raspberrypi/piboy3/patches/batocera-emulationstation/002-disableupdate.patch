@@ -1,16 +1,17 @@
-diff -ruN batocera-emulationstation-d19e2cfc9f40743bc134a5a6a7786fd7c41c6f85.orig/es-app/src/guis/GuiMenu.cpp batocera-emulationstation-d19e2cfc9f40743bc134a5a6a7786fd7c41c6f85/es-app/src/guis/GuiMenu.cpp
---- batocera-emulationstation-d19e2cfc9f40743bc134a5a6a7786fd7c41c6f85.orig/es-app/src/guis/GuiMenu.cpp	2021-05-17 18:13:47.000000000 +0100
-+++ batocera-emulationstation-d19e2cfc9f40743bc134a5a6a7786fd7c41c6f85/es-app/src/guis/GuiMenu.cpp	2021-05-21 22:48:00.791572427 +0100
-@@ -152,7 +152,7 @@
+diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
+index d0f7e837..cea42a3e 100644
+--- a/es-app/src/guis/GuiMenu.cpp
++++ b/es-app/src/guis/GuiMenu.cpp
+@@ -168,7 +168,7 @@ GuiMenu::GuiMenu(Window *window, bool animate) : GuiComponent(window), mMenu(win
  #endif
  
- 		addEntry(_("SCRAPE").c_str(), true, [this] { openScraperSettings(); }, "iconScraper");		
+ 		addEntry(_("SCRAPER").c_str(), true, [this] { openScraperSettings(); }, "iconScraper");		
 -		addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
 +		addEntry(_("DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
  		addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings_batocera(); }, "iconSystem");
  	}
  	else
-@@ -1055,7 +1055,7 @@
+@@ -1093,7 +1093,7 @@ void GuiMenu::openDeveloperSettings()
  
  void GuiMenu::openUpdatesSettings()
  {
@@ -19,7 +20,7 @@ diff -ruN batocera-emulationstation-d19e2cfc9f40743bc134a5a6a7786fd7c41c6f85.ori
  
  	updateGui->addGroup(_("DOWNLOADS"));
  
-@@ -1095,7 +1095,7 @@
+@@ -1133,7 +1133,7 @@ void GuiMenu::openUpdatesSettings()
  		});
  	}
  
@@ -28,7 +29,7 @@ diff -ruN batocera-emulationstation-d19e2cfc9f40743bc134a5a6a7786fd7c41c6f85.ori
  
  	// Enable updates
  	auto updates_enabled = std::make_shared<SwitchComponent>(mWindow);
-@@ -1143,7 +1143,7 @@
+@@ -1181,7 +1181,7 @@ void GuiMenu::openUpdatesSettings()
  
  			mWindow->pushGui(new GuiUpdate(mWindow));
  		}
