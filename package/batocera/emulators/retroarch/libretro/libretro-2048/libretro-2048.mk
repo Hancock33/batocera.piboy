@@ -3,8 +3,8 @@
 # 2048
 #
 ################################################################################
-# Version.: Commits on Aug 14, 2021
-LIBRETRO_2048_VERSION = 1ff7d5c3835ad89e5ce5eaa409b91c9a17cc1aa0
+# Version.: Commits on Oct 14, 2021
+LIBRETRO_2048_VERSION = 20051e140346fb56376b59f41f28ef40f8ad7fb8
 LIBRETRO_2048_SITE = $(call github,libretro,libretro-2048,$(LIBRETRO_2048_VERSION))
 LIBRETRO_2048_LICENSE = UNLICENSE
 LIBRETRO_2048_LICENSE_FILES = LICENSE
