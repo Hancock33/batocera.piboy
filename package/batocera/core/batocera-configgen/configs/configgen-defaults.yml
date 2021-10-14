@@ -440,6 +440,9 @@ supergrafx:
 supervision:
   emulator: libretro
   core:     potator
+switch:
+  emulator: yuzu
+  core:     yuzu
 
 # T-Z
 

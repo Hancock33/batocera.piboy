@@ -2004,10 +2004,6 @@ ports:
   path:       /userdata/roms/ports
   command:    "/bin/sh %ROM% %CONTROLLERSCONFIG%"
   force:      True
-  comment_en: |
-          Third party Linux games and apps that can be run from a .sh script.
-  comment_fr: |
-          Jeux et applications Linux additionnels qui peuvent etre lancés depuis un script .sh.
 
 piboy:
   name:       Piboy Settings
@@ -2562,3 +2558,15 @@ advision:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
           Requires MAME BIOS file advision.zip or .7z in either advision or BIOS folder.
+
+switch:
+  name:       Switch
+  manufacturer: Nintendo
+  release: 2017
+  hardware: console
+  platform:   switch
+  theme:      switch
+  extensions: [xci, nsp]
+  emulators:
+    yuzu:
+      yuzu: { requireAnyOf: [BR2_PACKAGE_YUZU] }
