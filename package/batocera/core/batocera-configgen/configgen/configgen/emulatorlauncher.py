@@ -72,6 +72,7 @@ from generators.voidsw.voidswGenerator import VoidswGenerator
 from generators.wine.wineGenerator import WineGenerator
 from generators.xash3d_fwgs.xash3dFwgsGenerator import Xash3dFwgsGenerator
 from generators.xemu.xemuGenerator import XemuGenerator
+from generators.yuzu.yuzuGenerator import YuzuGenerator
 #from generators.play.playGenerator import PlayGenerator
 
 import controllersConfig as controllers
@@ -151,6 +152,7 @@ generators = {
     'wine' : WineGenerator(),
     'xash3d_fwgs': Xash3dFwgsGenerator(),
     'xemu': XemuGenerator(),
+    'yuzu': YuzuGenerator(),
     #'play': PlayGenerator(),
 }
 

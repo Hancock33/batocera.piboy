@@ -317,7 +317,6 @@ menu "Emulators"
 		  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/wine-x86/Config.in"
     endmenu
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/yuzu/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/yuzu-cmd/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xemu/Config.in"
 endmenu
 
