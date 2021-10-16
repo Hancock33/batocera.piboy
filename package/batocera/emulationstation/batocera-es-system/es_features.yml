@@ -4402,6 +4402,9 @@ model2emu:
 
 abuse:
   features: [padtokeyboard]
+
+cdogs:
+  features: [padtokeyboard]
   
 ecwolf:
   features: [padtokeyboard]

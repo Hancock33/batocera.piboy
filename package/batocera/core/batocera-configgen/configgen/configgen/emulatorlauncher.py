@@ -10,6 +10,7 @@ import generators
 from generators.abuse.abuseGenerator import AbuseGenerator
 from generators.amiberry.amiberryGenerator import AmiberryGenerator
 from generators.cannonball.cannonballGenerator import CannonballGenerator
+from generators.cdogs.cdogsGenerator import CdogsGenerator
 from generators.cemu.cemuGenerator import CemuGenerator
 from generators.cgenius.cgeniusGenerator import CGeniusGenerator
 from generators.citra.citraGenerator import CitraGenerator
@@ -90,6 +91,7 @@ generators = {
     'abuse': AbuseGenerator(),
     'amiberry': AmiberryGenerator(),
     'cannonball' : CannonballGenerator(),
+    'cdogs' : CdogsGenerator(),    
     'cemu' : CemuGenerator(),
     'cgenius': CGeniusGenerator(),
     'citra' : CitraGenerator(),

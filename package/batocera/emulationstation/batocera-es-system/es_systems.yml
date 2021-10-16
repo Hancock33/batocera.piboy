@@ -2533,8 +2533,23 @@ abuse:
   extensions: [game]
   group: ports
   emulators:
-    stuntcar:
-      stuntcar: { requireAnyOf: [BR2_PACKAGE_ABUSE] }
+    abuse:
+      abuse: { requireAnyOf: [BR2_PACKAGE_ABUSE] }
+  comment_en: |
+    This system is a standalone  game. No rom required.
+  comment_fr: |
+    Ce système est le premier jeu de autonome. Aucune rom n'est requise.
+
+cdogs:
+  name:       C-Dogs SDL
+  manufacturer: Ports
+  release: 1997
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    cdogs:
+      cdogs: { requireAnyOf: [BR2_PACKAGE_CDOGS] }
   comment_en: |
     This system is a standalone  game. No rom required.
   comment_fr: |
