@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./cdogs.game</path>
+    <name>C-Dogs</name>
+    <desc>The sequel to Cyberdogs, C-Dogs improves the original Cyberdogs gameplay formula. The game involves you taking your character on missions which usually involve shooting anything around using a variety of weapons that can be bought before missions. Many more options are available in this version, one of the most interesting being an editor that allows you to create your own C-Dogs campaigns. 
+</desc>
+    <releasedate />
+    <developer>Freeware</developer>
+    <publisher>Freeware</publisher>
+    <image>./images/cdogs.png</image>
+  </game>
+</gameList>
