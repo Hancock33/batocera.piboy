@@ -87,7 +87,7 @@ from utils.logger import get_logger
 eslog = get_logger(__name__)
 
 generators = {
-    'abuse': abuseGenerator(),
+    'abuse': AbuseGenerator(),
     'amiberry': AmiberryGenerator(),
     'cannonball' : CannonballGenerator(),
     'cemu' : CemuGenerator(),
