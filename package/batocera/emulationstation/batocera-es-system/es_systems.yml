@@ -2525,6 +2525,21 @@ stuntcar:
   comment_fr: |
     Ce système est le premier jeu de autonome. Aucune rom n'est requise.
 
+abuse:
+  name:       Abuse
+  manufacturer: Ports
+  release: 1996
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    stuntcar:
+      stuntcar: { requireAnyOf: [BR2_PACKAGE_ABUSE] }
+  comment_en: |
+    This system is a standalone  game. No rom required.
+  comment_fr: |
+    Ce système est le premier jeu de autonome. Aucune rom n'est requise.
+
 gsplus:
   name:      Apple IIGS
   manufacturer: Apple
