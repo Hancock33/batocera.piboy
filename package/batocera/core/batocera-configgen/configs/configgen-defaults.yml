@@ -91,6 +91,9 @@ cannonball:
 cavestory:
   emulator: libretro
   core:     nxengine
+cdogs:
+  emulator: cdogs
+  core:     cdogs
 cgenius:
   emulator: cgenius
   core:     cgenius
