@@ -7,6 +7,7 @@ from sys import exit
 from Emulator import Emulator
 from Evmapy import Evmapy
 import generators
+from generators.abuse.abuseGenerator import AbuseGenerator
 from generators.amiberry.amiberryGenerator import AmiberryGenerator
 from generators.cannonball.cannonballGenerator import CannonballGenerator
 from generators.cemu.cemuGenerator import CemuGenerator
@@ -86,6 +87,7 @@ from utils.logger import get_logger
 eslog = get_logger(__name__)
 
 generators = {
+    'abuse': abuseGenerator(),
     'amiberry': AmiberryGenerator(),
     'cannonball' : CannonballGenerator(),
     'cemu' : CemuGenerator(),

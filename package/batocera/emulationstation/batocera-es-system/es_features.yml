@@ -4400,6 +4400,9 @@ model2emu:
                 "Off":      0
                 "On":       1
 
+abuse:
+  features: [padtokeyboard]
+  
 ecwolf:
   features: [padtokeyboard]
 

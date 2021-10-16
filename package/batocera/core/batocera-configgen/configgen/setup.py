@@ -7,6 +7,7 @@ setup(name='batocera-configgen',
       packages=[
         'configgen',
         'configgen.generators',
+        'configgen.generators.abuse',
         'configgen.generators.amiberry',
         'configgen.generators.cannonball',
         'configgen.generators.cemu',
