@@ -3,7 +3,7 @@
 # HYDRACASTLELABYRINTH
 #
 ################################################################################
-# Version.: Commits on Sep 12, 2021
+# Version.: Commits on Sept 12, 2021
 HCL_VERSION = e112bdb3185bcb314263543aff87db66795f85ff
 HCL_SITE = $(call github,ptitSeb,hydracastlelabyrinth,$(HCL_VERSION))
 
