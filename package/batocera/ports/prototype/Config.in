@@ -1,5 +1,5 @@
 config BR2_PACKAGE_PROTOTYPE
-	bool "PROTOTYPE"
+	bool "Prototype"
 	depends on BR2_PACKAGE_SDL2
 	depends on BR2_PACKAGE_SDL2_MIXER
 	depends on BR2_PACKAGE_SDL2_IMAGE

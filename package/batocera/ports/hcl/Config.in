@@ -8,5 +8,5 @@ config BR2_PACKAGE_HCL
 
 	  http://ptitseb.github.io/hydracastlelabyrinth
 
-comment "BR2_PACKAGE_hcl needs a toolchain w/ C++"
+comment "BR2_PACKAGE_HCL needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP

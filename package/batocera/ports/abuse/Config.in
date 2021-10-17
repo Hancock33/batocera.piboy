@@ -8,5 +8,5 @@ config BR2_PACKAGE_ABUSE
 
 	  http://github.com/Xenoveritas/abuse
 
-comment "BR2_PACKAGE_hcl needs a toolchain w/ C++"
+comment "BR2_PACKAGE_ABUSE needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP
