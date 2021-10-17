@@ -91,7 +91,7 @@ generators = {
     'abuse': AbuseGenerator(),
     'amiberry': AmiberryGenerator(),
     'cannonball' : CannonballGenerator(),
-    'cdogs' : CdogsGenerator(),    
+    'cdogs' : CdogsGenerator(),
     'cemu' : CemuGenerator(),
     'cgenius': CGeniusGenerator(),
     'citra' : CitraGenerator(),

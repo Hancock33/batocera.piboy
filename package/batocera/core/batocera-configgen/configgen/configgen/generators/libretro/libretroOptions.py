@@ -789,7 +789,7 @@ def generateCoreSettings(coreSettings, system, rom):
                     coreSettings.save('gambatte_gb_colorization',     '"auto"')
                     coreSettings.save('gambatte_gb_internal_palette', '"Special 1"')
                 else:                                                                    #User Selection
-                    coreSettings.save('gambatte_gb_colorization',     '"internal"')           
+                    coreSettings.save('gambatte_gb_colorization',     '"internal"')
                     coreSettings.save('gambatte_gb_internal_palette', '"' + system.config['gb_colorization'] + '"')
             else:
                 coreSettings.save('gambatte_gb_colorization',         '"internal"')      #It's an empty file, set to Classic Green

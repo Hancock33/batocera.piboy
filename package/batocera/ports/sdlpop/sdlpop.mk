@@ -15,7 +15,7 @@ define SDLPOP_BUILD_CMDS
 		CPP="$(TARGET_CPP)" CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
 		AS="$(TARGET_CC)" LD="$(TARGET_LD)" STRIP="$(TARGET_STRIP)" \
 		-C $(@D)/src -f Makefile
-endef	
+endef
 
 define SDLPOP_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/sdlpop

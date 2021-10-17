@@ -9,7 +9,7 @@ ABUSE_SITE = $(call github,Xenoveritas,abuse,$(ABUSE_VERSION))
 
 ABUSE_DEPENDENCIES = sdl2 sdl2_mixer abuse-data
 ABUSE_SUPPORTS_IN_SOURCE_BUILD = NO
-ABUSE_CONF_OPTS += -DASSETDIR=/usr/share/abuse 
+ABUSE_CONF_OPTS += -DASSETDIR=/usr/share/abuse
 
 define ABUSE_INSTALL_TARGET_CMDS
     mkdir -p $(TARGET_DIR)/usr/share/abuse

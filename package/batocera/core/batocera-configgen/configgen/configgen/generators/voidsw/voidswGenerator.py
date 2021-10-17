@@ -11,7 +11,7 @@ class VoidswGenerator(Generator):
         addon = "-addon0"
         if (rom.__contains__("WT")):
             addon = "-addon1"
-        
+
         if (rom.__contains__("TD")):
             addon = "-addon2"
 
