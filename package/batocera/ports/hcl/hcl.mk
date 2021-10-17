@@ -13,8 +13,6 @@ HCL_LICENSE = GPL-2.0
 HCL_SUPPORTS_IN_SOURCE_BUILD = NO
 
 HCL_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DUSE_SDL2=ON
-HCL_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -fcommon -L$(HOST_DIR)/aarch64-buildroot-linux-gnu/sysroot/usr/lib -lSDL2"
-HCL_CONF_OPTS += -DCMAKE_LD_FLAGS="$(TARGET_LDFLAGS) -L$(HOST_DIR)/aarch64-buildroot-linux-gnu/sysroot/usr/lib -lSDL2"
 
 define HCL_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/hcl
