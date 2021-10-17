@@ -26,7 +26,7 @@ class Model2EmuGenerator(Generator):
         if not os.path.exists(emupath):
             shutil.copytree("/usr/model2emu", emupath)
             os.chmod(emupath + "/EMULATOR.INI", stat.S_IRWXO)
-        
+
         # install windows libraries required
         if not os.path.exists(wineprefix + "/d3dcompiler_42.done"):
             cmd = ["/usr/wine/winetricks", "d3dcompiler_42"]
@@ -83,7 +83,7 @@ class Model2EmuGenerator(Generator):
             eslog.error(err.decode())
             with open(wineprefix + "/d3dx9_43.done", "w") as f:
                 f.write("done")
-    
+
         if not os.path.exists(wineprefix + "/d3dx9.done"):
             cmd = ["/usr/wine/winetricks", "d3dx9"]
             env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/lutris/lib/wine", "WINEPREFIX": wineprefix }
@@ -125,7 +125,7 @@ class Model2EmuGenerator(Generator):
             eslog.error(err.decode())
             with open(wineprefix + "/xact_x64.done", "w") as f:
                 f.write("done")
-        
+
         # move to the emulator path to ensure configs are saved etc
         os.chdir(emupath)
 
@@ -184,10 +184,10 @@ class Model2EmuGenerator(Generator):
             Config.set("Input","UseRawInput", format(system.config["useRawInput"]))
         else:
             Config.set("Input","UseRawInput", "0")
-        
+
         with open(configFileName, 'w') as configfile:
             Config.write(configfile)
-        
+
         # now run the emulator
         commandArray = ["/usr/wine/lutris/bin/wine", "explorer", "/desktop=Wine,{}x{}".format(gameResolution["width"], gameResolution["height"]), "/userdata/saves/model2/model2emu/emulator_multicpu.exe"]
         # simplify the rom name (strip the directory & extension)

@@ -50,7 +50,7 @@ class MameGenerator(Generator):
         messSysName = [ "", "", "cdimono1", "advision" ]
         # For systems with a MAME system name, the type of ROM that needs to be passed on the command line (cart, tape, cdrm, etc)
         messRomType = [ "", "", "cdrm", "cart" ]
-        
+
         # Identify the current system, select MAME or MESS as needed.
         try:
             messMode = messSystems.index(system.name)
@@ -60,7 +60,7 @@ class MameGenerator(Generator):
             commandArray =  [ "/usr/bin/mame/mame" ]
         else:
             commandArray =  [ "/usr/bin/mame/mess" ]
-        
+
         # MAME options used here are explained as it's not always straightforward
         # A lot more options can be configured, just run mame -showusage and have a look
         commandArray += [ "-skip_gameinfo" ]
@@ -142,8 +142,8 @@ class MameGenerator(Generator):
                 commandArray += [ messSysName[messMode] ]
                 commandArray += [ "-" + messRomType[messMode] ]
                 commandArray += [ rom ]
-        
-        
+
+
         # config file
         config = minidom.Document()
         configFile = "/userdata/system/configs/mame/default.cfg"
@@ -256,7 +256,7 @@ class MameGenerator(Generator):
                 mappings_use["JOYSTICK_DOWN"] = "down"
                 mappings_use["JOYSTICK_LEFT"] = "left"
                 mappings_use["JOYSTICK_RIGHT"] = "right"
-                
+
             for mapping in mappings_use:
                 if mappings_use[mapping] in pad.inputs:
                     xml_input.appendChild(MameGenerator.generatePortElement(config, nplayer, pad.index, mapping, mappings_use[mapping], pad.inputs[mappings_use[mapping]], False))
@@ -264,7 +264,7 @@ class MameGenerator(Generator):
                     rmapping = MameGenerator.reverseMapping(mappings_use[mapping])
                     if rmapping in pad.inputs:
                         xml_input.appendChild(MameGenerator.generatePortElement(config, nplayer, pad.index, mapping, mappings_use[mapping], pad.inputs[rmapping], True))
-                
+
             # Special case for CD-i - doesn't use default controls, map special controller
             # Keep orginal mapping functions for menus etc, create system-specific config file dor CD-i.
             # Possibly spin this off into another routine if we need to re-use this for other systems with special control configs.
@@ -280,26 +280,26 @@ class MameGenerator(Generator):
                 xml_mameconfig_cdi = MameGenerator.getRoot(config_cdi, "mameconfig")
                 xml_system_cdi = MameGenerator.getSection(config_cdi, xml_mameconfig_cdi, "system")
                 xml_system_cdi.setAttribute("name", "cdimono1")
-                
+
                 MameGenerator.removeSection(config_cdi, xml_system_cdi, "input")
                 xml_input_cdi = config_cdi.createElement("input")
                 xml_system_cdi.appendChild(xml_input_cdi)
-                
+
                 xml_input_cdi.appendChild(MameGenerator.generateSpecialPortElement(config_cdi, ':slave_hle:MOUSEBTN', nplayer, pad.index, "P1_BUTTON1", int(pad.inputs["b"].id) + 1, "1", "0"))
                 xml_input_cdi.appendChild(MameGenerator.generateSpecialPortElement(config_cdi, ':slave_hle:MOUSEBTN', nplayer, pad.index, "P1_BUTTON2", int(pad.inputs["y"].id) + 1, "2", "0"))
                 xml_input_cdi.appendChild(MameGenerator.generateIncDecPortElement(config_cdi, ':slave_hle:MOUSEX', nplayer, pad.index, "P1_MOUSE_X", "JOYCODE_{}_YAXIS_RIGHT_SWITCH OR JOYCODE_{}_HAT1RIGHT OR JOYCODE_{}_BUTTON16", "JOYCODE_{}_YAXIS_LEFT_SWITCH OR JOYCODE_{}_HAT1LEFT OR JOYCODE_{}_BUTTON15", "1023", "0", "10"))
                 xml_input_cdi.appendChild(MameGenerator.generateIncDecPortElement(config_cdi, ':slave_hle:MOUSEY', nplayer, pad.index, "P1_MOUSE_Y", "JOYCODE_{}_YAXIS_DOWN_SWITCH OR JOYCODE_{}_HAT1DOWN OR JOYCODE_{}_BUTTON14", "JOYCODE_{}_YAXIS_UP_SWITCH OR JOYCODE_{}_HAT1UP OR JOYCODE_{}_BUTTON13", "1023", "0", "10"))
-                
+
                 #Hide LCD display
                 MameGenerator.removeSection(config_cdi, xml_system_cdi, "video")
-                xml_video_cdi = config_cdi.createElement("video")                
+                xml_video_cdi = config_cdi.createElement("video")
                 xml_system_cdi.appendChild(xml_video_cdi)
-                
+
                 xml_screencfg_cdi = config_cdi.createElement("target")
                 xml_screencfg_cdi.setAttribute("index", "0")
                 xml_screencfg_cdi.setAttribute("view", "Main Screen Standard (4:3)")
                 xml_video_cdi.appendChild(xml_screencfg_cdi)
-                
+
                 # Write CD-i config
                 mameXml_cdi = codecs.open(configFile_cdi, "w", "utf-8")
                 dom_string_cdi = os.linesep.join([s for s in config_cdi.toprettyxml().splitlines() if s.strip()]) # remove ugly empty lines while minicom adds them...

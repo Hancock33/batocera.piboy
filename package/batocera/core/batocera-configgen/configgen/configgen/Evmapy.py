@@ -50,7 +50,7 @@ class Evmapy():
                     if "actions_player"+str(nplayer) in padActionConfig:
                         configfile = "/var/run/evmapy/{}.json" .format (os.path.basename(pad.dev))
                         eslog.debug("config file for keysfile is {} (from {})" .format (configfile, keysfile))
-    
+
                         # create mapping
                         padConfig = {}
                         padConfig["axes"] = []
