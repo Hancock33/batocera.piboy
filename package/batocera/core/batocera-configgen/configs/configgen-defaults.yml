@@ -422,6 +422,9 @@ solarus:
 sonicretro:
   emulator: sonic2013
   core:     sonic2013
+sorr:
+  emulator: sorr
+  core:     sorr
 steam:
   emulator: steam
   core:     steam
