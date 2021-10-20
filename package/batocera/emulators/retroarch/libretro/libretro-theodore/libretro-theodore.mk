@@ -3,8 +3,8 @@
 # LIBRETRO THEODORE
 #
 ################################################################################
-# Version.: Commits on Oct 16, 2021
-LIBRETRO_THEODORE_VERSION = 3db44fd669f6a7e146cb19fe838846e9d290b7b6
+# Version.: Commits on Oct 19, 2021
+LIBRETRO_THEODORE_VERSION = 6304ab73f812a32d5c1ccf554d9ef4425f5a54f7
 LIBRETRO_THEODORE_SITE = $(call github,Zlika,theodore,$(LIBRETRO_THEODORE_VERSION))
 LIBRETRO_THEODORE_LICENSE = GPLv3
 
