@@ -1,0 +1,5 @@
+config BR2_PACKAGE_LIBTRE
+	bool "libtre"
+	help
+	  The approximate regex matching library and agrep command line tool.
+

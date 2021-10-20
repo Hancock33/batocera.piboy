@@ -65,6 +65,7 @@ from generators.scummvm.scummvmGenerator import ScummVMGenerator
 from generators.sdlpop.sdlpopGenerator import SdlPopGenerator
 from generators.solarus.solarusGenerator import SolarusGenerator
 from generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
+from generators.sorr.sorrGenerator import SorrGenerator
 from generators.steam.steamGenerator import SteamGenerator
 from generators.stuntcar.stuntcarGenerator import StuntcarGenerator
 from generators.supermodel.supermodelGenerator import SupermodelGenerator
@@ -147,6 +148,7 @@ generators = {
     'solarus': SolarusGenerator(),
     'sonic2013': SonicRetroGenerator(),
     'soniccd': SonicRetroGenerator(),
+    'sorr': SorrGenerator(),
     'steam': SteamGenerator(),
     'stuntcar': StuntcarGenerator(),
     'supermodel': SupermodelGenerator(),
