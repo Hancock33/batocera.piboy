@@ -3,8 +3,8 @@
 # VULKAN_LOADER
 #
 ################################################################################
-# Version.: Commits on Oct 18, 2021
-VULKAN_LOADER_VERSION = f5243495184cf45abcde01b50de94c2e6b22e715
+# Version.: Commits on Sept 27, 2021
+VULKAN_LOADER_VERSION = b35527922c54d58e5d2afb1af9cf06bc40cc7fc7
 
 VULKAN_LOADER_SITE =  $(call github,KhronosGroup,Vulkan-Loader,$(VULKAN_LOADER_VERSION))
 VULKAN_LOADER_DEPENDENCIES = vulkan-headers

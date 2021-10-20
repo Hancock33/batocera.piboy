@@ -3,8 +3,8 @@
 # spirv-headers
 #
 ################################################################################
-# Version.: Commits on Oct 08, 2021
-SPIRV_HEADERS_VERSION = 19e8350415ed9516c8afffa19ae2c58559495a67
+# Version.: Commits on Oct 20, 2021
+SPIRV_HEADERS_VERSION = 92f21c9b214178ce67cf1e31a00a33312590403a
 SPIRV_HEADERS_SITE = $(call github,KhronosGroup,SPIRV-Headers,$(SPIRV_HEADERS_VERSION))
 
 # Only installs header files
