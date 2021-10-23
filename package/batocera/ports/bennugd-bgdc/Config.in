@@ -7,5 +7,5 @@ config BR2_PACKAGE_BENNUGD_BGDC
 	help
         BennuGD is an open source video game development language,
         with a modular design designed to facilitate the portability
-        of the projects carried out in it, making this language 
+        of the projects carried out in it, making this language
         one of the best.

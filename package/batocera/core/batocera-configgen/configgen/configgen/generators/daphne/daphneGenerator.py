@@ -41,6 +41,6 @@ class DaphneGenerator(Generator):
         # The folder may have a file with the game name and .commands with extra arguments to run the game.
         if os.path.isfile(commandsFile):
             commandArray.extend(open(commandsFile,'r').read().split())
-        
+
         return Command.Command(array=commandArray)
- 
+
