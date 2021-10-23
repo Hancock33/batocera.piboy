@@ -13,6 +13,9 @@ BENNUGD_BGDI_LICENSE = GPL-2.0
 BENNUGD_BGDI_SUPPORTS_IN_SOURCE_BUILD = NO
 BENNUGD_BGDI_SUBDIR = projects/cmake/bgdi
 
+BENNUGD_BGDI_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release 
+BENNUGD_BGDI_CONF_OPTS += -DCMAKE_TOOLCHAIN_FILE=$(HOST_DIR)/share/buildroot/toolchainfile.cmake
+
 define BENNUGD_BGDI_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/projects/cmake/bgdi/buildroot-build/bgdi $(TARGET_DIR)/usr/bin
 endef
