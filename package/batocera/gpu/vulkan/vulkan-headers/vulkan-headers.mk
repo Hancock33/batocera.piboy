@@ -3,8 +3,8 @@
 # VULKAN_HEADERS
 #
 ################################################################################
-# Version.: Commits on Oct 14, 2021
-VULKAN_HEADERS_VERSION = dd99e0f51fa86210da384d0f17c036fa45475e12
+# Version.: Commits on Oct 19, 2021
+VULKAN_HEADERS_VERSION = d594f70127b4198286b3472a48bee56e341259cd
 
 VULKAN_HEADERS_SITE =  $(call github,KhronosGroup,Vulkan-Headers,$(VULKAN_HEADERS_VERSION))
 VULKAN_HEADERS_DEPENDENCIES =
