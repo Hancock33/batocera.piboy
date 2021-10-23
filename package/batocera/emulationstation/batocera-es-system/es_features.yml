@@ -4422,9 +4422,6 @@ model2emu:
 abuse:
   features: [padtokeyboard]
 
-sorr:
-  features: [padtokeyboard]
-
 cdogs:
   features: [padtokeyboard]
 
@@ -4479,65 +4476,17 @@ rednukem:
 simcoupe:
   features: [padtokeyboard]
 
-stuntcar:
-  features: [padtokeyboard]
-
-voidsw:
+sorr:
   features: [padtokeyboard]
 
 steam:
   features: [padtokeyboard]
 
-yuzu:
-  features: [videomode, padtokeyboard]
-
-prototype:
-  features: [padtokeyboard]
-
-rednukem:
-  features: [padtokeyboard]
-
-simcoupe:
-  features: [padtokeyboard]
-
 stuntcar:
   features: [padtokeyboard]
 
 voidsw:
   features: [padtokeyboard]
 
-hcl:
-  features: [padtokeyboard]
-
-hurrican:
-  features: [padtokeyboard]
-
-ionfury:
-  features: [padtokeyboard]
-
-nblood:
-  features: [padtokeyboard]
-
-openjazz:
-  features: [padtokeyboard]
-
-opentyrian:
-  features: [padtokeyboard]
-
-pcexhumed:
-  features: [padtokeyboard]
-
-eduke32:
-  features: [padtokeyboard]
-
-etekwar:
-  features: [padtokeyboard]
-
-abuse:
-  features: [padtokeyboard]
-
-sorr:
-  features: [padtokeyboard]
-
-cdogs:
-  features: [padtokeyboard]
+yuzu:
+  features: [videomode, padtokeyboard]
