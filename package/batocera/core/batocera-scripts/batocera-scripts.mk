@@ -29,6 +29,14 @@ ifeq ($(BR2_PACKAGE_MALI_G31_GBM),y)
   BATOCERA_SCRIPT_RESOLUTION_TYPE=basic
 endif
 
+ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI3),y)
+ PYBOY_INSTALL=y
+else ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI4),y)
+ PYBOY_INSTALL=y
+else
+ PYBOY_INSTALL=n
+endif
+
 define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-scripts/scripts/bluetooth/bluezutils.py            $(TARGET_DIR)/usr/lib/python3.9/ # any variable ?
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-scripts/scripts/bluetooth/batocera-bluetooth       $(TARGET_DIR)/usr/bin/
@@ -64,6 +72,7 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-scripts/scripts/batocera-screenshot.$(BATOCERA_SCRIPT_SCREENSHOT_TYPE) $(TARGET_DIR)/usr/bin/batocera-screenshot
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-scripts/scripts/batocera-timezone               $(TARGET_DIR)/usr/bin/
     install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-scripts/scripts/batocera-gameforce              $(TARGET_DIR)/usr/bin/
+	@if [ "$(PYBOY_INSTALL)" = "y" ]; then install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-scripts/scripts/batocera-info.piboy $(TARGET_DIR)/usr/bin/batocera-info ; fi
 endef
 
 define BATOCERA_SCRIPTS_INSTALL_XORG

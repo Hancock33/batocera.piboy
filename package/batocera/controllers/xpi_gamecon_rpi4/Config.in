@@ -1,0 +1,8 @@
+config BR2_PACKAGE_XPI_GAMECON_RPI4
+	bool "xpi_gamecon Kernel Module for Piboy"
+	depends on BR2_LINUX_KERNEL
+	help
+	  Kernel module to support hardware from piboy (experimental pi)
+
+comment "xpi_gamecon_rpi needs a kernel and headers"
+	depends on !BR2_LINUX_KERNEL

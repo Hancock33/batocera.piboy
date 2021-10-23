@@ -1,0 +1,21 @@
+diff -Naur batocera-emulationstation-a63a5ed2abff3a58947a22c5f1f2d8f531f8cd07.orig/es-core/src/platform.cpp batocera-emulationstation-a63a5ed2abff3a58947a22c5f1f2d8f531f8cd07/es-core/src/platform.cpp
+--- batocera-emulationstation-a63a5ed2abff3a58947a22c5f1f2d8f531f8cd07.orig/es-core/src/platform.cpp	2021-06-04 19:33:36.000000000 +0100
++++ batocera-emulationstation-a63a5ed2abff3a58947a22c5f1f2d8f531f8cd07/es-core/src/platform.cpp	2021-06-05 10:52:08.401868537 +0100
+@@ -28,7 +28,7 @@
+ #ifdef WIN32 // windows
+ 	return system("shutdown -s -t 0");
+ #else // osx / linux	
+-	return system("shutdown -h now");
++	return system("echo 0 > /sys/kernel/xpi_gamecon/flags && /sbin/rmmod xpi_gamecon && shutdown -h now");
+ #endif
+ }
+ 
+@@ -37,7 +37,7 @@
+ #ifdef WIN32 // windows	
+ 	return system("shutdown -r -t 0");
+ #else // osx / linux	
+-	return system("shutdown -r now");
++	return system("echo 129 > /sys/kernel/xpi_gamecon/flags && shutdown -r now");
+ #endif
+ }
+ 

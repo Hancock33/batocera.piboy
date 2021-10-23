@@ -1,0 +1,4 @@
+#!/bin/sh
+python /usr/bin/piboy_fan_ctrl.py &
+python /usr/bin/piboy_aud_ctrl.py &
+python /usr/bin/piboy_power_ctrl.py &
