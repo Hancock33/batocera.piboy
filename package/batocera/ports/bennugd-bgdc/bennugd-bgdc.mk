@@ -13,12 +13,12 @@ BENNUGD_BGDC_LICENSE = GPL-2.0
 BENNUGD_BGDC_SUPPORTS_IN_SOURCE_BUILD = NO
 BENNUGD_BGDC_SUBDIR = projects/cmake/bgdc
 
-BENNUGD_BGDC_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release 
+BENNUGD_BGDC_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 BENNUGD_BGDC_CONF_OPTS += -DCMAKE_TOOLCHAIN_FILE=$(HOST_DIR)/share/buildroot/toolchainfile.cmake
 
 define BENNUGD_BGDC_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/projects/cmake/bgdc/buildroot-build/bgdc $(TARGET_DIR)/usr/bin
-	
+
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	#cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/bennugd/bennugd.keys $(TARGET_DIR)/usr/share/evmapy
