@@ -201,6 +201,9 @@ hurrican:
 jaguar:
   emulator: libretro
   core:     virtualjaguar
+j2me:
+  emulator: libretro
+  core:     freej2me
 kodi:
   emulator: kodi
   options:
