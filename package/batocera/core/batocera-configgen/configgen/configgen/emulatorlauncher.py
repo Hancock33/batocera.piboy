@@ -76,6 +76,10 @@ from generators.wine.wineGenerator import WineGenerator
 from generators.xash3d_fwgs.xash3dFwgsGenerator import Xash3dFwgsGenerator
 from generators.xemu.xemuGenerator import XemuGenerator
 from generators.yuzu.yuzuGenerator import YuzuGenerator
+from generators.samcoupe.samcoupeGenerator import SamcoupeGenerator
+from generators.abuse.abuseGenerator import AbuseGenerator
+from generators.cdogs.cdogsGenerator import CdogsGenerator
+from generators.hcl.hclGenerator import HclGenerator
 #from generators.play.playGenerator import PlayGenerator
 
 import controllersConfig as controllers
@@ -159,6 +163,10 @@ generators = {
     'xash3d_fwgs': Xash3dFwgsGenerator(),
     'xemu': XemuGenerator(),
     'yuzu': YuzuGenerator(),
+    'samcoupe': SamcoupeGenerator(),
+    'abuse': AbuseGenerator(),
+    'cdogs': CdogsGenerator(),
+    'hcl': HclGenerator(),
     #'play': PlayGenerator(),
 }
 
