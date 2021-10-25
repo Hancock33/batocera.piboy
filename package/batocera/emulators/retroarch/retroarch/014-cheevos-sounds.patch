@@ -30,10 +30,10 @@ index 81a2f3c..cd2d698 100644
        char cheevos_token[32];
        char cheevos_leaderboards_enable[32];
        char video_context_driver[32];
-diff --git a/retroarch.c b/retroarch.c
+diff --git a/audio/audio_driver.c b/audio/audio_driver.c
 index 4e643c2..d8b0fa8 100644
---- a/retroarch.c
-+++ b/retroarch.c
+--- a/audio/audio_driver.c
++++ b/audio/audio_driver.c
 @@ -29226,8 +29226,8 @@ static void audio_driver_load_menu_bgm_callback(retro_task_t *task,
  
  void audio_driver_load_system_sounds(void)
