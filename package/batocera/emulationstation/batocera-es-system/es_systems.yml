@@ -661,7 +661,7 @@ dos:
   manufacturer: Microsoft
   release: 1981
   hardware: computer
-  extensions: [pc, dos, zip]
+  extensions: [pc, dos, zip, squashfs]
   theme:      pc
   platform:   pc
   emulators:
@@ -1806,7 +1806,7 @@ ps3:
   manufacturer: Sony
   release: 2006
   hardware: console
-  extensions: [ps3, psn]
+  extensions: [ps3, psn, squashfs]
   emulators:
     rpcs3:
       rpcs3: { requireAnyOf: [BR2_PACKAGE_RPCS3] }
