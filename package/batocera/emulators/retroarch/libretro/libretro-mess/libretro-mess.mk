@@ -7,7 +7,7 @@
 LIBRETRO_MESS_VERSION = 0eab2fef2835b1ce2d954116287e845c0bacbb21
 LIBRETRO_MESS_SITE = $(call github,libretro,mame,$(LIBRETRO_MESS_VERSION))
 LIBRETRO_MESS_LICENSE = MESS
-LIBRETRO_MESS_DEPENDENCIES = retroarch zlib flac sqlite expat
+LIBRETRO_MESS_DEPENDENCIES = retroarch
 
 # Limit number of jobs not to eat too much RAM....
 LIBRETRO_MESS_JOBS=30
