@@ -3,8 +3,8 @@
 # STELLA
 #
 ################################################################################
-# Version.: Commits on Oct 26, 2021
-LIBRETRO_STELLA_VERSION = ac8acce2290c5a40ba211081a6aacef6acfbb4b8
+# Version.: Commits on Oct 27, 2021
+LIBRETRO_STELLA_VERSION = 81832e80f19b6874bc35aac5c18caacb7200ebcc
 LIBRETRO_STELLA_SITE = $(call github,stella-emu,stella,$(LIBRETRO_STELLA_VERSION))
 LIBRETRO_STELLA_LICENSE = GPLv2
 
