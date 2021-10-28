@@ -2,6 +2,7 @@ config BR2_PACKAGE_LIBRETRO_MESS
         bool "libretro-mess"
 	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_SQLITE
         help
           A libretro mess core for MESS.
 
