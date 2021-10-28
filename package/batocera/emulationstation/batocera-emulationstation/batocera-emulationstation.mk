@@ -93,6 +93,9 @@ define BATOCERA_EMULATIONSTATION_RESOURCES
 
 	# hooks
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/batocera-preupdate-gamelists-hook $(TARGET_DIR)/usr/bin/
+	
+	#piboy logo
+	cp -avr "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/piboy-logo480p.png" "${TARGET_DIR}/usr/share/emulationstation/resources/logo.png"
 endef
 
 ### S31emulationstation
