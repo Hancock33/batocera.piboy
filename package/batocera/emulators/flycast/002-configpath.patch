@@ -1,7 +1,8 @@
-diff -Naur flycast-c73bbc85bd80eca28af177fc8841b2bb373642ad.orig/core/linux-dist/main.cpp flycast-c73bbc85bd80eca28af177fc8841b2bb373642ad/core/linux-dist/main.cpp
---- flycast-c73bbc85bd80eca28af177fc8841b2bb373642ad.orig/core/linux-dist/main.cpp	2021-06-06 10:18:42.000000000 +0100
-+++ flycast-c73bbc85bd80eca28af177fc8841b2bb373642ad/core/linux-dist/main.cpp	2021-06-06 22:19:41.110715379 +0100
-@@ -117,9 +117,8 @@
+diff --git a/core/linux-dist/main.cpp b/core/linux-dist/main.cpp
+index b956005..6fad7c1 100644
+--- a/core/linux-dist/main.cpp
++++ b/core/linux-dist/main.cpp
+@@ -117,9 +117,8 @@ void common_linux_setup();
  
  // Find the user config directory.
  // The following folders are checked in this order:
@@ -12,7 +13,7 @@ diff -Naur flycast-c73bbc85bd80eca28af177fc8841b2bb373642ad.orig/core/linux-dist
  // If no folder exists, $HOME/.config/flycast is created and used.
  std::string find_user_config_dir()
  {
-@@ -127,10 +126,10 @@
+@@ -127,10 +126,10 @@ std::string find_user_config_dir()
  	std::string xdg_home;
  	if (nowide::getenv("HOME") != NULL)
  	{
@@ -26,7 +27,7 @@ diff -Naur flycast-c73bbc85bd80eca28af177fc8841b2bb373642ad.orig/core/linux-dist
  			return legacy_home;
  
  		/* If $XDG_CONFIG_HOME is not set, we're supposed to use "$HOME/.config" instead.
-@@ -149,10 +148,6 @@
+@@ -149,10 +148,6 @@ std::string find_user_config_dir()
  		if (flycast::stat(fullpath.c_str(), &info) == 0 && (info.st_mode & S_IFDIR))
  			// Found .config/flycast
  			return fullpath;
@@ -37,7 +38,7 @@ diff -Naur flycast-c73bbc85bd80eca28af177fc8841b2bb373642ad.orig/core/linux-dist
  
  		// Create .config/flycast
  		fullpath = xdg_home + "/flycast/";
-@@ -167,9 +162,8 @@
+@@ -167,9 +162,8 @@ std::string find_user_config_dir()
  
  // Find the user data directory.
  // The following folders are checked in this order:
@@ -48,7 +49,7 @@ diff -Naur flycast-c73bbc85bd80eca28af177fc8841b2bb373642ad.orig/core/linux-dist
  // If no folder exists, $HOME/.local/share/flycast is created and used.
  std::string find_user_data_dir()
  {
-@@ -177,10 +171,10 @@
+@@ -177,10 +171,10 @@ std::string find_user_data_dir()
  	std::string xdg_home;
  	if (nowide::getenv("HOME") != NULL)
  	{
@@ -62,7 +63,7 @@ diff -Naur flycast-c73bbc85bd80eca28af177fc8841b2bb373642ad.orig/core/linux-dist
  			return legacy_data;
  
  		/* If $XDG_DATA_HOME is not set, we're supposed to use "$HOME/.local/share" instead.
-@@ -199,10 +193,6 @@
+@@ -199,10 +193,6 @@ std::string find_user_data_dir()
  		if (flycast::stat(fullpath.c_str(), &info) == 0 && (info.st_mode & S_IFDIR))
  			// Found .local/share/flycast
  			return fullpath;
@@ -73,7 +74,7 @@ diff -Naur flycast-c73bbc85bd80eca28af177fc8841b2bb373642ad.orig/core/linux-dist
  
  		// Create .local/share/flycast
  		fullpath = xdg_home + "/flycast/";
-@@ -233,12 +223,10 @@
+@@ -233,12 +223,10 @@ static void addDirectoriesFromPath(std::vector<std::string>& dirs, const std::st
  
  // Find a file in the user and system config directories.
  // The following folders are checked in this order:
@@ -87,7 +88,7 @@ diff -Naur flycast-c73bbc85bd80eca28af177fc8841b2bb373642ad.orig/core/linux-dist
  // else
  //   /etc/flycast/
  //   /etc/xdg/flycast/
-@@ -250,8 +238,8 @@
+@@ -250,8 +238,8 @@ std::vector<std::string> find_system_config_dirs()
  	std::string xdg_home;
  	if (nowide::getenv("HOME") != NULL)
  	{
@@ -98,7 +99,7 @@ diff -Naur flycast-c73bbc85bd80eca28af177fc8841b2bb373642ad.orig/core/linux-dist
  		xdg_home = (std::string)nowide::getenv("HOME") + "/.config";
  	}
  	if (nowide::getenv("XDG_CONFIG_HOME") != NULL)
-@@ -261,7 +249,6 @@
+@@ -261,14 +249,12 @@ std::vector<std::string> find_system_config_dirs()
  	{
  		// XDG config locations
  		dirs.push_back(xdg_home + "/flycast/");
@@ -106,7 +107,33 @@ diff -Naur flycast-c73bbc85bd80eca28af177fc8841b2bb373642ad.orig/core/linux-dist
  	}
  
  	if (nowide::getenv("XDG_CONFIG_DIRS") != NULL)
-@@ -303,8 +290,8 @@
+ 	{
+ 		std::string path = (std::string)nowide::getenv("XDG_CONFIG_DIRS");
+ 		addDirectoriesFromPath(dirs, path, "/flycast/");
+-		addDirectoriesFromPath(dirs, path, "/reicast/");
+ 	}
+ 	else
+ 	{
+@@ -282,17 +268,13 @@ std::vector<std::string> find_system_config_dirs()
+ 
+ // Find a file in the user data directories.
+ // The following folders are checked in this order:
+-// $HOME/.reicast/data
++// $HOME/.flycast/data
+ // $HOME/.local/share/flycast
+-// $HOME/.local/share/reicast
+ // if XDG_DATA_DIRS is defined:
+ //   <$XDG_DATA_DIRS>/flycast
+-//   <$XDG_DATA_DIRS>/reicast
+ // else
+ //   /usr/local/share/flycast
+ //   /usr/share/flycast
+-//   /usr/local/share/reicast
+-//   /usr/share/reicast
+ // <$FLYCAST_BIOS_PATH>
+ // ./
+ // ./data
+@@ -303,8 +285,8 @@ std::vector<std::string> find_system_data_dirs()
  	std::string xdg_home;
  	if (nowide::getenv("HOME") != NULL)
  	{
@@ -117,7 +144,7 @@ diff -Naur flycast-c73bbc85bd80eca28af177fc8841b2bb373642ad.orig/core/linux-dist
  		xdg_home = (std::string)nowide::getenv("HOME") + "/.local/share";
  	}
  	if (nowide::getenv("XDG_DATA_HOME") != NULL)
-@@ -314,8 +301,7 @@
+@@ -314,8 +296,7 @@ std::vector<std::string> find_system_data_dirs()
  	{
  		// XDG data locations
  		dirs.push_back(xdg_home + "/flycast/");
@@ -127,3 +154,18 @@ diff -Naur flycast-c73bbc85bd80eca28af177fc8841b2bb373642ad.orig/core/linux-dist
  	}
  
  	if (nowide::getenv("XDG_DATA_DIRS") != NULL)
+@@ -323,14 +304,11 @@ std::vector<std::string> find_system_data_dirs()
+ 		std::string path = (std::string)nowide::getenv("XDG_DATA_DIRS");
+ 
+ 		addDirectoriesFromPath(dirs, path, "/flycast/");
+-		addDirectoriesFromPath(dirs, path, "/reicast/");
+ 	}
+ 	else
+ 	{
+ 		dirs.push_back("/usr/local/share/flycast/");
+ 		dirs.push_back("/usr/share/flycast/");
+-		dirs.push_back("/usr/local/share/reicast/");
+-		dirs.push_back("/usr/share/reicast/");
+ 	}
+ 	if (nowide::getenv("FLYCAST_BIOS_PATH") != NULL)
+ 	{
