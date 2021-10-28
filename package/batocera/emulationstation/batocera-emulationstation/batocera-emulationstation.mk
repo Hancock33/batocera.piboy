@@ -95,7 +95,9 @@ define BATOCERA_EMULATIONSTATION_RESOURCES
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/batocera-preupdate-gamelists-hook $(TARGET_DIR)/usr/bin/
 	
 	#piboy logo
+	ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI3)$(BR2_PACKAGE_XPI_GAMECON_RPI4),y)
 	cp -avr "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/piboy-logo480p.png" "${TARGET_DIR}/usr/share/emulationstation/resources/logo.png"
+	endif
 endef
 
 ### S31emulationstation
