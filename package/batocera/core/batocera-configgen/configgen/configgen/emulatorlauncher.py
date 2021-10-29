@@ -48,6 +48,7 @@ from generators.moonlight.moonlightGenerator import MoonlightGenerator
 from generators.mugen.mugenGenerator import MugenGenerator
 from generators.mupen.mupenGenerator import MupenGenerator
 from generators.nblood.nbloodGenerator import NbloodGenerator
+from generators.nukem2.nukem2Generator import Nukem2Generator
 from generators.openbor.openborGenerator import OpenborGenerator
 from generators.openjazz.openjazzGenerator import OpenJazzGenerator
 from generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
@@ -130,6 +131,7 @@ generators = {
     'mugen': MugenGenerator(),
     'mupen64plus': MupenGenerator(),
     'nblood': NbloodGenerator(),
+    'nukem2': Nukem2Generator(),
     'openbor' : OpenborGenerator(),
     'openjazz': OpenJazzGenerator(),
     'opentyrian': OpentyrianGenerator(),

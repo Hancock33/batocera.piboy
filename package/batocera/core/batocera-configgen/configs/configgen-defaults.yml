@@ -304,6 +304,9 @@ ngp:
 ngpc:
   emulator: libretro
   core:     mednafen_ngp
+nukem2:
+  emulator: nukem2
+  core:     nukem2
 odyssey2:
   emulator: libretro
   core:     o2em

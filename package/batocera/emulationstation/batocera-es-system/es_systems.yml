@@ -1159,6 +1159,17 @@ eduke32:
     eduke32:
       eduke32: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
 
+nukem2:
+  name:       Duke Nukem 2
+  manufacturer: Ports
+  release: 1993
+  hardware: port
+  extensions: [cmp]
+  group: ports
+  emulators:
+    nukem2:
+      nuken2: { requireAnyOf: [BR2_PACKAGE_NUKEM2] }
+
 ionfury:
   name:       Ion Fury
   manufacturer: Ports
