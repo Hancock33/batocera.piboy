@@ -1,0 +1,12 @@
+config BR2_PACKAGE_NUKEM2
+	bool "nukem2"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  A modern re-implementation of the classic DOS game Duke Nukem II.
+
+	  https://github.com/lethal-guitar/RigelEngine
+
+comment "BR2_PACKAGE_NUKEM2 needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

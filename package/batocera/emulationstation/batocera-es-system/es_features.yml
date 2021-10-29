@@ -4455,6 +4455,9 @@ lexaloffle:
 nblood:
   features: [padtokeyboard]
 
+nukem2:
+  features: [padtokeyboard]
+
 openjazz:
   features: [padtokeyboard]
 
