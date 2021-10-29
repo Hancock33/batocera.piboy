@@ -3,8 +3,8 @@
 # IONFURY
 #
 ################################################################################
-# Version.: Commits on 26 Oct, 2021
-IONFURY_VERSION = a835847d6be005eaf945c17a29292acdc4ba69f0
+# Version.: Commits on Sep 04, 2021
+IONFURY_VERSION = 25afea98fc9faac2a2f2adb032a4ec2407b5498b
 IONFURY_SITE = https://voidpoint.io/terminx/eduke32.git
 IONFURY_SITE_METHOD = git
 IONFURY_LICENSE = GPLv2
