@@ -57,6 +57,10 @@ else
 BATOCERA_EMULATIONSTATION_CONF_OPTS += -DENABLE_FILEMANAGER=OFF
 endif
 
+ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI3)$(BR2_PACKAGE_XPI_GAMECON_RPI4),y)
+ PYBOY_INSTALL=y
+endif
+
 BATOCERA_EMULATIONSTATION_KEY_SCREENSCRAPER_DEV_LOGIN=$(shell grep -E '^SCREENSCRAPER_DEV_LOGIN=' /home/lee/keys.txt | cut -d = -f 2-)
 BATOCERA_EMULATIONSTATION_KEY_GAMESDB_APIKEY=$(shell grep -E '^GAMESDB_APIKEY=' /home/lee/keys.txt | cut -d = -f 2-)
 BATOCERA_EMULATIONSTATION_KEY_CHEEVOS_DEV_LOGIN=$(shell grep -E '^CHEEVOS_DEV_LOGIN=' /home/lee/keys.txt | cut -d = -f 2-)
@@ -93,11 +97,9 @@ define BATOCERA_EMULATIONSTATION_RESOURCES
 
 	# hooks
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/batocera-preupdate-gamelists-hook $(TARGET_DIR)/usr/bin/
-	
+
 	#piboy logo
-	ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI3)$(BR2_PACKAGE_XPI_GAMECON_RPI4),y)
-	cp -avr "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/piboy-logo480p.png" "${TARGET_DIR}/usr/share/emulationstation/resources/logo.png"
-	endif
+	@if [ "$(PYBOY_INSTALL)" = "y" ]; then cp -pvr "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/piboy-logo480p.png" "${TARGET_DIR}/usr/share/emulationstation/resources/logo.png" ; fi
 endef
 
 ### S31emulationstation
