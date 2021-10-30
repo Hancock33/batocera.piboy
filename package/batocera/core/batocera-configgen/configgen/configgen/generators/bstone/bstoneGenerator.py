@@ -15,7 +15,7 @@ class BstoneGenerator(Generator):
         if (rom.__contains__("PS")):
             addon = "/userdata/roms/bstone/PS"
 
-        if (rom.__contains__("TD")):
+        if (rom.__contains__("SW")):
             addon = "/userdata/roms/bstone/SW"
 
         commandArray = ["bstone", "--data_dir", addon]
