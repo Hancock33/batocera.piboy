@@ -9,6 +9,7 @@ from Evmapy import Evmapy
 import generators
 from generators.abuse.abuseGenerator import AbuseGenerator
 from generators.amiberry.amiberryGenerator import AmiberryGenerator
+from generators.bstone.bstoneGenerator import BstoneGenerator
 from generators.cannonball.cannonballGenerator import CannonballGenerator
 from generators.cdogs.cdogsGenerator import CdogsGenerator
 from generators.cemu.cemuGenerator import CemuGenerator
@@ -92,6 +93,7 @@ eslog = get_logger(__name__)
 generators = {
     'abuse': AbuseGenerator(),
     'amiberry': AmiberryGenerator(),
+    'bstone' : BstoneGenerator(),
     'cannonball' : CannonballGenerator(),
     'cdogs' : CdogsGenerator(),
     'cemu' : CemuGenerator(),
