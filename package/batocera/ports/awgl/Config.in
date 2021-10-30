@@ -1,0 +1,12 @@
+config BR2_PACKAGE_AWGL
+	bool "awgl"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  awgl is a re-implementation of the engine used in the game Another World.
+
+	  https://github.com/cyxx/rawgl
+
+comment "BR2_PACKAGE_AWGL needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

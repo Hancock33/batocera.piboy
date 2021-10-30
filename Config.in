@@ -99,6 +99,7 @@ endmenu
 menu "Ports"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/abuse-data/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/abuse/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/awgl/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/bstone/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/cannonball/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/bennugd-bgdc/Config.in"
