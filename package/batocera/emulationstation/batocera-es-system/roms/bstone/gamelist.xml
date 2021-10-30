@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./AOG/AOG.game</path>
+    <name>Blake Stone: Aliens of Gold</name>
+    <desc>Aliens of Gold, the first game in the Blake Stone series, pits the space-age British secret agent against Dr. Pyrus Goldfire; a madman bent on world domination. Using a mastery of genetic engineering and a tremendous reserve of wealth, Dr. Goldfire intends to unleash a mutant army upon the Earth.The first chapter begins in Goldfire's S.T.A.R. Institute headquarters building. Each level has Blake fighting through guards to find an elevator keycard for the next level. Dr. Goldfire will personally appear along the way to fire shots at Blake, and his genetic creations also pose a tough challenge. Each chapter lasts 10 levels, and brings Blake closer to reaching Goldfire, only to have the mad doctor escape to a new installation in his network, and the start of a new chapter.Blake Stone uses the Wolfenstein 3-D engine to render its levels. Basic gameplay and enemy AI is similar in most respects. Some of Blake's innovations include silent weapons that can kill guards without alerting others. Alerts are given to the player through text messages on the HUD. Health can be gained through use of wall-mounted vending machines, operated with tokens picked up off dead guards. An automap and stat-tracking are both available during gameplay. Finally, there are friendly AI characters who offer clues and powerups when you speak to them - provided Blake doesn't accidentally shoot them first!
+</desc>
+    <releasedate />
+    <developer>JAM Productions</developer>
+    <publisher>Apogee Software</publisher>
+    <genre>Shooter / 1st person-Shooter</genre>
+    <image>./images/AOG/Blakestone Aliens Of Gold.png</image>
+    <genreid>259</genreid>
+  </game>
+  <game>
+    <path>./SW/SW.game</path>
+    <name>Blake Stone: Aliens of Gold (Shareware)</name>
+    <desc>Aliens of Gold, the first game in the Blake Stone series, pits the space-age British secret agent against Dr. Pyrus Goldfire; a madman bent on world domination. Using a mastery of genetic engineering and a tremendous reserve of wealth, Dr. Goldfire intends to unleash a mutant army upon the Earth.The first chapter begins in Goldfire's S.T.A.R. Institute headquarters building. Each level has Blake fighting through guards to find an elevator keycard for the next level. Dr. Goldfire will personally appear along the way to fire shots at Blake, and his genetic creations also pose a tough challenge. Each chapter lasts 10 levels, and brings Blake closer to reaching Goldfire, only to have the mad doctor escape to a new installation in his network, and the start of a new chapter.Blake Stone uses the Wolfenstein 3-D engine to render its levels. Basic gameplay and enemy AI is similar in most respects. Some of Blake's innovations include silent weapons that can kill guards without alerting others. Alerts are given to the player through text messages on the HUD. Health can be gained through use of wall-mounted vending machines, operated with tokens picked up off dead guards. An automap and stat-tracking are both available during gameplay. Finally, there are friendly AI characters who offer clues and powerups when you speak to them - provided Blake doesn't accidentally shoot them first!
+</desc>
+    <releasedate />
+    <developer>JAM Productions</developer>
+    <publisher>Apogee Software</publisher>
+    <genre>Shooter / 1st person-Shooter</genre>
+    <image>./images/AOG/Blakestone Aliens Of Gold.png</image>
+    <genreid>259</genreid>
+  </game>
+  <game>
+    <path>./PS/PS.game</path>
+    <name>Blake Stone: Planet Strike!</name>
+    <desc>Blake Stone: Planet Strike is the commercial sequel to Blake Stone: Aliens of Gold.An evolution rather than a revolution, Planet Strike doesn't dramatically change things and features everything from the original game except the elevator. In the place of the elevator, the player must now collect a bomb on every map and bring it to a security cube; the bomb will destroy the cube allowing the player to use the exit.It features 24 new levels, played in a single episode in a linear fashion (despite a between level map trying to convince you otherwise), a new weapon, the Plasma Discharger (which functions as the game's ultimate weapon), and several new bad guys and bosses.Though the ''new bad guys'' comment is a little misleading as only one of them is actually all new; the others are the boss aliens from Aliens of Gold (with their stats reduced to non-boss level) or simply slightly edited and re-coloured bad guys from the previous game.
+</desc>
+    <releasedate />
+    <developer>JAM Productions</developer>
+    <publisher>Apogee Software</publisher>
+    <genre>Shooter / 1st person-Shooter</genre>
+    <image>./images/PS/Blakestone Planet Strike.png</image>
+    <genreid>259</genreid>
+  </game>
+</gameList>
