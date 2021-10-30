@@ -67,6 +67,9 @@ atarist:
 atomiswave:
   emulator: libretro
   core:     flycast
+awgl:
+  emulator: awgl
+  core:     awgl
 bk:
   emulator: libretro
   core:     bk

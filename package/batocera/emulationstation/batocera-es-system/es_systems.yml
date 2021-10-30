@@ -2634,3 +2634,15 @@ bstone:
   emulators:
     bstone:
       bstone: { requireAnyOf: [BR2_PACKAGE_BSTONE] }
+
+awgl:
+  name:       Another World
+  manufacturer: Ports
+  release: 1991
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    awgl:
+      awgl: { requireAnyOf: [BR2_PACKAGE_AWGL] }
+

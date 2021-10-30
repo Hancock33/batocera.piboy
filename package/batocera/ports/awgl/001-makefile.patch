@@ -1,0 +1,12 @@
+diff -Naur rawgl-071d98199ec88e5bbc69aa5e7c6a1be1de075e81.orig/Makefile rawgl-071d98199ec88e5bbc69aa5e7c6a1be1de075e81/Makefile
+--- rawgl-071d98199ec88e5bbc69aa5e7c6a1be1de075e81.orig/Makefile	2020-04-18 15:02:23.000000000 +0100
++++ rawgl-071d98199ec88e5bbc69aa5e7c6a1be1de075e81/Makefile	2021-10-30 21:09:14.648168189 +0100
+@@ -1,6 +1,6 @@
+ 
+-SDL_CFLAGS = `sdl2-config --cflags`
+-SDL_LIBS = `sdl2-config --libs` -lSDL2_mixer -lGL
++SDL_CFLAGS = `pkg-config sdl2 --cflags`
++SDL_LIBS = `pkg-config sdl2 --libs` -lSDL2_mixer -lGL
+ 
+ DEFINES = -DBYPASS_PROTECTION -DUSE_GL
+ 

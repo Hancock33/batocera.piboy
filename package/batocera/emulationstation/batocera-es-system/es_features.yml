@@ -4422,6 +4422,9 @@ model2emu:
 abuse:
   features: [padtokeyboard]
 
+awgl:
+  features: [padtokeyboard]
+
 bstone:
   features: [padtokeyboard]
   
