@@ -15,7 +15,7 @@ class BstoneGenerator(Generator):
         if (rom.__contains__("PS")):
             addon = "/userdata/roms/bstone/PS"
 
-        if (rom.__contains__("SW")):
+        if (rom.__contains__("TD")):
             addon = "/userdata/roms/bstone/SW"
 
         commandArray = ["bstone", "--data_dir", addon]
@@ -23,7 +23,5 @@ class BstoneGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(player>
+                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
-
-
