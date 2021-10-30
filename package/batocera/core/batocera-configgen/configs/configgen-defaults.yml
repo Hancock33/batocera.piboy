@@ -70,6 +70,9 @@ atomiswave:
 bk:
   emulator: libretro
   core:     bk
+bstone:
+  emulator: bstone
+  core:     bstone
 c64:
   emulator: libretro
   core:     vice_x64

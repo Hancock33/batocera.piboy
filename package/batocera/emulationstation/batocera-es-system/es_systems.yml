@@ -2623,3 +2623,14 @@ switch:
   emulators:
     yuzu:
       yuzu: { requireAnyOf: [BR2_PACKAGE_YUZU] }
+      
+bstone:
+  name:       Blake Stone Series
+  manufacturer: Ports
+  release: 1993
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    bstone:
+      bstone: { requireAnyOf: [BR2_PACKAGE_BSTONE] }
