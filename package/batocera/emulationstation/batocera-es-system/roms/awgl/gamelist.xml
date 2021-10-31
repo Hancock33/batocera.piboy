@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./20th/Another World (20th Anniversary Edition).game</path>
+    <name>Another World : 20th Anniversary Edition</name>
+    <desc>This is an updated version of Another World for the 20th anniversary of the original game, five years after the updated 15th anniversary edition. It is adapted for mobile devices offering both touch controls and a virtual D-pad. The backgrounds are reworked for higher resolutions with subtler shades of light, and crisper detail and edges to the polygons and animations. It is still possible to switch to the original graphics. This version also contains remastered sound effects and three difficulty modes.</desc>
+    <releasedate>20130404T000000</releasedate>
+    <publisher>Focus Home Interactive</publisher>
+    <image>./images/Another World.png</image>
+  </game>
+  <game>
+    <path>./15th/Another World (15th Anniversary Edition).game</path>
+    <name>Another World: 15th Anniversary Edition</name>
+    <desc>This is an updated version of Another World for the 15th anniversary of the original game, five years after the updated 15th anniversary edition. It is adapted for mobile devices offering both touch controls and a virtual D-pad. The backgrounds are reworked for higher resolutions with subtler shades of light, and crisper detail and edges to the polygons and animations. It is still possible to switch to the original graphics. This version also contains remastered sound effects and three difficulty modes.</desc>
+    <releasedate>20130404T000000</releasedate>
+    <publisher>Focus Home Interactive</publisher>
+    <image>./images/Another World.png</image>
+  </game>
+  <game>
+    <path>./3DO/Another World (3DO).game</path>
+    <name>Another World (3DO)</name>
+    <desc>Another World (Out of This World in the US) combines shooting, platforming, and puzzle-solving elements. The game is divided into stages; some of them are straightforward and can only be accessed one time, while others are connected to each other, constituting a larger environment. Exploration and problem-solving are emphasized. Many levels include challenges not seen in the previous ones. Tasks may involve environmental puzzles, timed sequences, precise jumping, and combat. 
+ 
+Typically, enemies are defeated by using an energy gun found in an early stage. The gun's regular function is shooting energy projectiles. By pressing down and holding the fire button the player can activate an energy shield which protects Lester from regular attacks, allowing him to fire from relative safety until it evaporates. Finally, by holding the fire button even longer the player creates powerful bombs which can disrupt shields. Most enemies are equipped with similar guns and are able to perform the same actions as Lester. Fighting enemies therefore requires tactical usage of regular attacks, shields, and bombs, as well as learning enemy patterns.</desc>
+    <rating>0.8</rating>
+    <releasedate>19930101T000000</releasedate>
+    <developer>Delphine Software International</developer>
+    <publisher>Interplay</publisher>
+    <genre>Adventure</genre>
+    <players>1</players>
+    <image>./images/Another World (3DO).png</image>
+    <genreid>512</genreid>
+  </game>
+  <game>
+    <path>./Amiga/Another World (Amiga).game</path>
+    <name>Another World (Amiga)</name>
+    <desc>Another World, also known as Out of This World in North America and Outer World (ã‚¢ã‚¦ã‚¿ãƒ¼ãƒ¯ãƒ¼ãƒ«ãƒ‰ AutÄ  WÄ rudo?) in Japan, is a 1991 cinematic platformer action-adventure game designed by Ã‰ric Chahi for Delphine Software. The game tells a story of Lester, a young scientist who, as a result of an experiment gone wrong, finds himself in a dangerous alien world where he is forced to fight for his survival. 
+ 
+Originally developed for the Amiga and Atari ST and later released for the Apple IIGS and DOS platforms, the game was widely ported to other contemporary systems. Later efforts resulted in several game engine recreations for the game that permitted it to run on modern computers, consoles and mobile phones. In 2006, Chahi independently released a 15th Anniversary Edition for Windows which allowed the game to be played on modern computers with original or enhanced visuals; following up in 2011 for its 20th anniversary, ports of the game were prepared for iOS and Android based devices. 
+ 
+Another World was highly innovative in its use of cinematic effects in both real-time and cutscenes, which granted the game praise amongst critics and commercial success. It also influenced a number of other video games and designers. 
+ 
+Another World is a platform game, featuring a control scheme wherin the player uses either the keyboard, joystick or gamepad to make the protagonist run, jump, attack and perform other, situation specific actions such as rocking a cage back and forth. In the initial part of the game, Lester is unarmed, as he is able to kick at small creatures but is otherwise defenseless. 
+ 
+Later in the game, the player acquires a laser pistol from a fallen foe. The pistol has three capabilities: a standard fire mode, the ability to create force fields to block enemy fire, and a powerful charged shot that can break through force fields and some walls.[3] Eventually, Lester also gains a plasma ball that can be used like a grenade to defeat foes (not featured in the original Amiga release). Enemies also have the same capabilities, requiring the player to take advantage of the three gun modes and the environment to overcome them. 
+ 
+Lester and his alien ally cannot sustain any damage, and the game ends immediately if either of them is struck by a projectile or comes in contact with an animal or an environmental hazard.[4] However, the game uses numerous checkpoints enabling the player to keep restarting at the last point indefinitely. On the Amiga and older consoles without the ability to save a game, the player can write down an alphanumeric code for these checkpoints and re-enter it when restarting the game later. The game provides no clues as to what to do next, features no HUD (with an exception of oxygen bar during the swimming sequences) and no on-screen text, and the characters the player meets speak in unintelligible alien</desc>
+    <rating>0.95</rating>
+    <releasedate>19910101T000000</releasedate>
+    <developer>Delphine Software International</developer>
+    <publisher>Interplay</publisher>
+    <genre>Adventure</genre>
+    <players>1</players>
+    <image>./images/Another World (Amiga).png</image>
+    <favorite>true</favorite>
+    <genreid>512</genreid>
+  </game>
+  <game>
+    <path>./Atari/Another World (Atari).game</path>
+    <name>Another World (Atari)</name>
+    <desc>San Francisco 2016. A series of earthquakes has damaged several nuclear power plants, and the subsequent nuclear contamination has forced the survivors to flee underground. Their only hope to get off the continent is to use newly developed matter transporters. However, these transporters require certain types of crystals to work. Since men cannot survive on the surface, the task of collecting the crystals is assigned to a cyborg.
+
+You take control of the cyborg and must collect different types of crystals in a number of side-scrolling levels, while fighting off mutated animals. Your cyborg can jump, shoot and use smart bombs that damage everything on screen. From time to time, extras appear that replenish some of your health or improve your weapon. If your weapon is at maximum power, you can also collect additional smart bombs. 
+
+The main task of each level is to collect crystals and use them in one of the teleporters that can be found at each end of a level.
+There are three types of crystals that are used for different purposes. Green crystal teleport you to the other end of a level. Red crystals take you to another level and blue crystals are needed to get to another continent. Usage of the crystals is rather complicated as each crystal has a different charge and they have to be put into the right slot of the teleporters. Not paying attention to the charge may even cause the transporter to explode.</desc>
+    <rating>0.9</rating>
+    <releasedate>19910101T000000</releasedate>
+    <developer>X-Ample</developer>
+    <publisher>CP Verlag</publisher>
+    <genre>Action-Adventure</genre>
+    <image>./images/Another World (Atari).png</image>
+    <favorite>true</favorite>
+    <genreid>512</genreid>
+  </game>
+  <game>
+    <path>./Another World (DOS).game</path>
+    <name>Another World (DOS)</name>
+    <desc>A young physics professor named Lester conducts a particle experiment. Suddenly, something goes wrong, a lightning strikes, and in a moment Lester finds himself in a strange alien world. Now he must fight for his life, first with his bare hands, then with a gun he finds. But what gives him courage is that he is not alone. One of the aliens who escapes from the prison together with him helps him on his dangerous quest. Friendship can overcome all the obstacles.
+
+Out of This World combines shooting, platforming, and puzzle-solving elements. The game is divided into stages; some of them are straightforward and can only be accessed one time, while others are connected to each other, constituting a larger environment. Exploration and problem-solving are emphasized. Many levels include challenges not seen in the previous ones. Tasks may involve environmental puzzles, timed sequences, precise jumping, and combat.
+
+Typically, enemies are defeated by using an energy gun found in an early stage. The gun's regular function is shooting energy projectiles. By pressing down and holding the fire button the player can activate an energy shield which protects Lester from regular attacks, allowing him to fire from relative safety until it evaporates. Finally, by holding the fire button even longer the gun creates powerful blasts which can disrupt shields. Most enemies are equipped with similar guns and are able to perform the same actions as Lester. Fighting enemies therefore requires tactical usage of regular attacks, shields, and bombs, as well as learning enemy patterns.
+
+Each level can be accessed by typing a code the player learns after having completed the level. If Lester dies, the level must be restarted. There is no on-screen interface and no in-game dialogue in the game. Vector graphics are used for creating the game's environments and animated cutscenes.
+</desc>
+    <rating>0.9</rating>
+    <releasedate>19910101T000000</releasedate>
+    <developer>Delphine Software International</developer>
+    <publisher>Interplay</publisher>
+    <genre>Adventure-Adventure / Survival Horror</genre>
+    <players>1</players>
+    <image>./images/Another World (DOS).png</image>
+    <genreid>518</genreid>
+  </game>
+  <game>
+    <path>./Another World (Win31).game</path>
+    <name>Another World (Win31)</name>
+    <desc>A young physics professor named Lester conducts a particle experiment. Suddenly, something goes wrong, a lightning strikes, and in a moment Lester finds himself in a strange alien world. Now he must fight for his life, first with his bare hands, then with a gun he finds. But what gives him courage is that he is not alone. One of the aliens who escapes from the prison together with him helps him on his dangerous quest. Friendship can overcome all the obstacles.
+
+Out of This World combines shooting, platforming, and puzzle-solving elements. The game is divided into stages; some of them are straightforward and can only be accessed one time, while others are connected to each other, constituting a larger environment. Exploration and problem-solving are emphasized. Many levels include challenges not seen in the previous ones. Tasks may involve environmental puzzles, timed sequences, precise jumping, and combat.
+
+Typically, enemies are defeated by using an energy gun found in an early stage. The gun's regular function is shooting energy projectiles. By pressing down and holding the fire button the player can activate an energy shield which protects Lester from regular attacks, allowing him to fire from relative safety until it evaporates. Finally, by holding the fire button even longer the gun creates powerful blasts which can disrupt shields. Most enemies are equipped with similar guns and are able to perform the same actions as Lester. Fighting enemies therefore requires tactical usage of regular attacks, shields, and bombs, as well as learning enemy patterns.
+
+Each level can be accessed by typing a code the player learns after having completed the level. If Lester dies, the level must be restarted. There is no on-screen interface and no in-game dialogue in the game. Vector graphics are used for creating the game's environments and animated cutscenes.
+</desc>
+    <rating>0.9</rating>
+    <releasedate>19910101T000000</releasedate>
+    <developer>Delphine Software International</developer>
+    <publisher>Interplay</publisher>
+    <genre>Adventure-Adventure / Survival Horror</genre>
+    <players>1</players>
+    <image>./images/Another World (DOS).png</image>
+    <genreid>518</genreid>
+  </game>
+</gameList>
