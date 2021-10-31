@@ -169,22 +169,6 @@ amigacdtv:
     libretro:
       puae:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
 
-amigademo:
-  name:       Amiga Demoscene
-  manufacturer: Commodore
-  release: 1987
-  hardware: computer
-  extensions: [adf, uae, ipf, dms, dmz, adz, lha, hdf, exe, m3u, zip]
-  platform:   amiga
-  group:      amiga
-  emulators:
-    fsuae:
-      CD32:   { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
-    amiberry:
-      CD32:   { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [chd] }
-    libretro:
-      puae:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
-
 nes:
   name:       Nintendo Entertainment System
   manufacturer: Nintendo
@@ -515,20 +499,6 @@ psp:
   release: 2004
   hardware: portable
   extensions: [iso, cso, pbp]
-  group:      psp
-  emulators:
-    ppsspp:
-      ppsspp: { requireAnyOf: [BR2_PACKAGE_PPSSPP]  }
-    libretro:
-      ppsspp:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PPSSPP] }
-
-pspmini:
-  name:       Sony Playstation Portable Mini
-  manufacturer: Sony
-  release: 2004
-  hardware: portable
-  extensions: [iso, cso, pbp]
-  group:      psp
   emulators:
     ppsspp:
       ppsspp: { requireAnyOf: [BR2_PACKAGE_PPSSPP]  }
@@ -576,30 +546,6 @@ pcenginecd:
   hardware: console
   extensions: [pce, cue, ccd, iso, img, chd]
   theme:      pce-cd
-  emulators:
-    libretro:
-      pce:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE] }
-      pce_fast: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE_FAST] }
-
-tg16:
-  name:       Turbo Grafx 16
-  manufacturer: NEC
-  release: 1987
-  hardware: console
-  extensions: [pce, bin, zip, 7z]
-  theme:      tg16
-  emulators:
-    libretro:
-      pce:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE] }
-      pce_fast: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE_FAST] }
-
-tg-cd:
-  name:       Turbo Grafx CD
-  manufacturer: NEC
-  release: 1988
-  hardware: console
-  extensions: [pce, cue, ccd, iso, img, chd]
-  theme:      tg-cd
   emulators:
     libretro:
       pce:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE] }
@@ -1014,104 +960,6 @@ tyrquake:
 
     Trouvez la documentation ici: https://wiki.batocera.org/systems:tyrquake
 
-xrick:
-  name:       xrick
-  manufacturer: Ports
-  release:
-  hardware: port
-  extensions: [zip]
-  group: ports
-  emulators:
-    libretro:
-      xrick: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_XRICK] }
-  comment_en: |
-    Put the data.zip in this directory.
-  comment_fr: |
-    Placez ici vos fichiers data.zip pour xrick.
-
-reminiscence:
-  name:       reminiscence
-  manufacturer: Ports
-  release:
-  hardware: port
-  extensions: [map,MAP]
-  group: ports
-  emulators:
-    libretro:
-      reminiscence: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_REMINISCENCE] }
-  comment_en: |
-    Copy your flashback game into thos folder
-    Allowed versions
-    - DOS Demo (disk)
-    - DOS Full version (disk)
-    - DOS Full version (CD)
-  comment_fr: |
-    Copiez votre jeu flashback ici
-    Versions reconnues
-    - DOS Demo (disquette)
-    - DOS Full version (disquette)
-    - DOS Full version (CD)
-
-twentyfourtyeight:
-  name:       '2048'
-  manufacturer: Ports
-  release:
-  hardware: port
-  extensions: [game]
-  group: ports
-  emulators:
-    libretro:
-      '2048': { requireAnyOf: [BR2_PACKAGE_LIBRETRO_2048] }
-  comment_en: |
-    This system is a standalone libretro game. No rom required.
-  comment_fr: |
-    Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
-
-superflappybirds:
-  name:       superflappybirds
-  manufacturer: Ports
-  release:
-  hardware: port
-  extensions: [game]
-  group: ports
-  emulators:
-    libretro:
-      superflappybirds: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SUPERFLAPPYBIRDS] }
-  comment_en: |
-    This system is a standalone libretro game. No rom required.
-  comment_fr: |
-    Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
-
-dinothawr:
-  name:       dinothawr
-  manufacturer: Ports
-  release:
-  hardware: port
-  extensions: [game]
-  group: ports
-  emulators:
-    libretro:
-      dinothawr: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DINOTHAWR] }
-  comment_en: |
-    This system is a standalone libretro game. No rom required.
-  comment_fr: |
-    Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
-
-craft:
-  name:       craft
-  manufacturer: Ports
-  release:
-  hardware: port
-  extensions: [game]
-  group: ports
-  emulators:
-    libretro:
-      craft: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CRAFT] }
-  comment_en: |
-    This system is a port of a Minecraft clone. No rom required.
-  comment_fr: |
-    Ce système est un port d'un clone de Minecraft. Aucune rom n'est requise.
-
 mrboom:
   name:       MrBoom
   manufacturer: Ports
@@ -1126,115 +974,6 @@ mrboom:
     For more info: https://wiki.batocera.org/systems:mrboom
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:mrboom
-
-chailove:
-  name:       ChaiLove
-  manufacturer: Ports
-  release:
-  hardware: port
-  extensions: [chailove]
-  group: ports
-  emulators:
-    libretro:
-      chailove: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CHAILOVE] }
-
-lowresnx:
-  name:       LowRes-NX
-  manufacturer: Timo Kloss
-  release: 2017
-  hardware: portable
-  extensions: [nx]
-  emulators:
-    libretro:
-      lowresnx: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_LOWRESNX] }
-
-eduke32:
-  name:       Duke Nukem 3D
-  manufacturer: Ports
-  release: 1996
-  hardware: port
-  extensions: [grp]
-  group: ports
-  emulators:
-    eduke32:
-      eduke32: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
-
-nukem2:
-  name:       Duke Nukem 2
-  manufacturer: Ports
-  release: 1993
-  hardware: port
-  extensions: [cmp]
-  group: ports
-  emulators:
-    nukem2:
-      nuken2: { requireAnyOf: [BR2_PACKAGE_NUKEM2] }
-
-ionfury:
-  name:       Ion Fury
-  manufacturer: Ports
-  release: 2019
-  hardware: port
-  extensions: [grp]
-  group: ports
-  emulators:
-    ionfury:
-      ionfury: { requireAnyOf: [BR2_PACKAGE_IONFURY] }
-
-nblood:
-  name:       Blood
-  manufacturer: Ports
-  release: 1997
-  hardware: port
-  extensions: [pk3]
-  group: ports
-  emulators:
-    nblood:
-      nblood: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
-
-pcexhumed:
-  name:       Exhumed/PowerSlave
-  manufacturer: Ports
-  release: 1999
-  hardware: port
-  extensions: [mov]
-  group: ports
-  emulators:
-    pcexhumed:
-      pcexhumed: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
-
-rednukem:
-  name:       Redneck Rampage
-  manufacturer: Ports
-  release: 1997
-  hardware: port
-  extensions: [grp]
-  group: ports
-  emulators:
-    rednukem:
-      rednukem: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
-
-etekwar:
-  name:       TekWar
-  manufacturer: Ports
-  release: 1995
-  hardware: port
-  extensions: [pk3]
-  group: ports
-  emulators:
-    etekwar:
-      etekwar: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
-
-voidsw:
-  name:       Shadow Warrior
-  manufacturer: Ports
-  release: 1997
-  hardware: port
-  extensions: [grp]
-  group: ports
-  emulators:
-    voidsw:
-      voidsw: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
 
 tic80:
   name:       TIC-80
@@ -2017,17 +1756,6 @@ ports:
   command:    "/bin/sh %ROM% %CONTROLLERSCONFIG%"
   force:      True
 
-piboy:
-  name:       Piboy Settings
-  manufacturer: Experimental Pi
-  release:
-  hardware: piboy
-  extensions: [sh]
-  group: piboy
-  path:       /userdata/roms/piboy
-  command:    "/bin/sh %ROM%"
-  force:      True
-
 amiga:
   name:       Amiga
   manufacturer: Commodore
@@ -2298,60 +2026,6 @@ supervision:
     libretro:
       potator: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_WATARA] }
 
-scv:
-  name:       Super Cassette Vision
-  manufacturer: Epoch Co
-  release: 1984
-  hardware: console
-  extensions: [bin, zip, 7zip, cart]
-  emulators:
-    libretro:
-      emuscv: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EMUSCV] }
-
-bk:
-  name:       BK
-  manufacturer: Electronica
-  release: 1984
-  hardware: computer
-  extensions: [bin, zip, 7z]
-  emulators:
-    libretro:
-      bk: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BK_EMULATOR] }
-
-uzem:
-  name:       Uzebox
-  manufacturer: Belogic Software
-  release: 2009
-  hardware: console
-  extensions: [uze]
-  emulators:
-    libretro:
-      uzem: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UZEM] }
-
-mu:
-  name:       Palm OS
-  manufacturer: Palm
-  release: 2001
-  hardware: portable
-  extensions: [prc, pqa, img]
-  emulators:
-    libretro:
-      mu: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MU] }
-gong:
-  name:       Pong
-  manufacturer: Ports
-  release: 1972
-  hardware: console
-  extensions: [game]
-  group: ports
-  emulators:
-    libretro:
-      gong: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GONG] }
-  comment_en: |
-    This system is a standalone libretro game. No rom required.
-  comment_fr: |
-    Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
-
 ecwolf:
   name:       ECWolf
   manufacturer: Ports
@@ -2388,6 +2062,272 @@ model2:
   emulators:
     model2emu:
       model2emu: { requireAnyOf: [BR2_PACKAGE_MODEL2EMU] }
+
+scv:
+  name:       Super Cassette Vision
+  manufacturer: Epoch Co
+  release: 1984
+  hardware: console
+  extensions: [bin, zip, 7zip, cart, "0"]
+  emulators:
+    libretro:
+      emuscv: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EMUSCV] }
+
+apple2gs:
+  name:      Apple IIGS
+  manufacturer: Apple
+  release: 1986
+  hardware: computer
+  extensions: [2mg, do, nib, po, dsk]
+  emulators:
+    gsplus:
+      gsplus: { requireAnyOf: [BR2_PACKAGE_GSPLUS] }
+
+uzebox:
+  name:       Uzebox
+  manufacturer: Atmel
+  release: 2008
+  hardware: console
+  extensions: [uze]
+  emulators:
+    libretro:
+      uzem: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UZEM] }
+
+cdi:
+  name:       CD-i
+  manufacturer: Philips
+  release: 1990
+  hardware: console
+  extensions: [chd, cue, toc, nrg, gdi, iso, cdr]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS file cdimono1.zip or .7z in either cdi or BIOS folder.
+
+advision:
+  name:       Adventure Vision
+  manufacturer: Entex
+  release: 1982
+  hardware: console
+  extensions: [bin, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS file advision.zip or .7z in either advision or BIOS folder.
+
+tvgames:
+  name:       TV Games
+  manufacturer: Various
+  release: 2002
+  hardware: console
+  extensions: [zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+megaduck:
+  name:       Mega Duck
+  manufacturer: Welback Holdings
+  release: 1993
+  hardware: portable
+  extensions:  [bin, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+pv1000:
+  name:       PV-1000
+  manufacturer: Casio
+  release: 1983
+  hardware: console
+  extensions: [bin, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+gamate:
+  name:       Gamate
+  manufacturer: Bitcorp
+  release: 1990
+  hardware: portable
+  extensions: [bin, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS file gamate.zip or .7z in either gamate or BIOS folder.
+
+crvision:
+  name:       CreatiVision
+  manufacturer: VTech
+  release: 1982
+  hardware: console
+  extensions: [bin, rom, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS file crvision.zip or .7z in either crvision or BIOS folder.
+
+gamecom:
+  name:       Game.com
+  manufacturer: Tiger Electronics
+  release: 1997
+  hardware: portable
+  extensions: [bin, tgc, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS file gamecom.zip or .7z in either gamecom or BIOS folder.
+
+gamepock:
+  name:       Game Pocket Computer
+  manufacturer: Epoch
+  release: 1984
+  hardware: portable
+  extensions: [bin, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS file gamepock.zip or .7z in either gamepock or BIOS folder.
+
+fm7:
+  name:       FM-7
+  manufacturer: Fujitsu
+  release: 1982
+  hardware: computer
+  extensions: [wav, t77, mfi, dfi, hfe, mfm, td0, imd, d77, d88, 1dd, cqm, cqi, dsk, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS file fm7.zip or .7z in either fm7 or BIOS folder.
+
+apfm1000:
+  name:       APF M-1000
+  manufacturer: APF Electronics
+  release: 1978
+  hardware: console
+  extensions: [bin, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS file apfm1000.zip or .7z in either apfm or BIOS folder.
+
+bbc:
+  name:       BBC Micro
+  manufacturer: Acorn
+  release: 1981
+  hardware: computer
+  extensions: [mfi, dfi, hfe, mfm, td0, imd, d77, d88, 1dd, cqm, cqi, dsk, ima, img, ufi, 360, ipf, ssd, bbc, dsd, adf, ads, adm, adl, fsd, wav, tap, bin, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS files bbcb, bbc_acorn8271, & saa5050.zip or .7z in either bbc or BIOS folder.
+          Also sample pack bbc.zip or .7z in BIOS/mame/samples
+
+adam:
+  name:       Coleco ADAM
+  manufacturer: Coleco
+  release: 1983
+  hardware: computer
+  extensions: [wav, ddp, mfi, dfi, hfe, mfm, td0, imd, d77, d88, 1dd, cqm, cqi, dsk, rom, col, bin, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires the following MAME BIOS files as zip or 7z in the adam or BIOS folder:
+          adam, adam_ddp, adam_fdc, adam_kb, & adam_prn
+
+arcadia:
+  name:       Arcadia 2001
+  manufacturer: Emerson
+  release: 1982
+  hardware: console
+  extensions: [bin, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+gmaster:
+  name:       Game Master
+  manufacturer: Hartung
+  release: 1990
+  hardware: portable
+  extensions: [bin, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS file gmaster.zip or .7z in either gmaster or BIOS folder.
+
+astrocde:
+  name:       Astrocade
+  manufacturer: Bally
+  release: 1978
+  hardware: console
+  extensions: [bin, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS file astrocde.zip or .7z in either astrocde or BIOS folder.
+
+ti99:
+  name:       TI-99
+  manufacturer: Texas Instruments
+  release: 1981
+  hardware: computer
+  extensions: [rpk, wav, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS file ti99_4a.zip or .7z in either ti99 or BIOS folder.
+          Cartridges need to be in .rpk format and unzipped - the MAME software list files (.bin) will not run properly.
+
+tutor:
+  name:       Tomy Tutor
+  manufacturer: Tomy
+  release: 1983
+  hardware: computer
+  extensions: [bin, wav, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS file tutor.zip or .7z in either tutor or BIOS folder.
+          To get through the loading menu, R1 will move down and A/East will select.
+
+coco:
+  name:       Color Computer
+  manufacturer: Tandy Radio Shack
+  release: 1980
+  hardware: computer
+  extensions: [wav, cas, ccc, rom, zip, 7z]
+  emulators:
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS file coco.zip or .7z in either coco or BIOS folder.
+
+switch:
+  name:       Switch
+  manufacturer: Nintendo
+  release: 2017
+  hardware: console
+  platform:   switch
+  theme:      switch
+  extensions: [xci, nsp]
+  emulators:
+    yuzu:
+      yuzu: { requireAnyOf: [BR2_PACKAGE_YUZU] }
 
 vitaquake2:
   name:       Quake II
@@ -2441,21 +2381,6 @@ sameduck:
     libretro:
       sameduck:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEDUCK] }
 
-opentyrian:
-  name:       Tyrian
-  manufacturer: Ports
-  release: 1995
-  hardware: port
-  extensions: [game]
-  group: ports
-  emulators:
-    opentyrian:
-      opentyrian: { requireAnyOf: [BR2_PACKAGE_OPENTYRIAN] }
-  comment_en: |
-    This system is a standalone  game. No rom required.
-  comment_fr: |
-    Ce système est le premier jeu de autonome. Aucune rom n'est requise.
-
 openjazz:
   name:       Jazz Jackrabbit
   manufacturer: Ports
@@ -2497,21 +2422,6 @@ hcl:
   comment_fr: |
     Ce système est le premier jeu de autonome. Aucune rom n'est requise.
 
-prototype:
-  name:       Prototype
-  manufacturer: Ports
-  release: 1992
-  hardware: port
-  extensions: [game]
-  group: ports
-  emulators:
-    prototype:
-      prototype: { requireAnyOf: [BR2_PACKAGE_PROTOTYPE] }
-  comment_en: |
-    This system is a standalone  game. No rom required.
-  comment_fr: |
-    Ce système est le premier jeu de autonome. Aucune rom n'est requise.
-
 samcoupe:
   name:       SAM Coupé
   manufacturer: Miles Gordon Technology
@@ -2521,21 +2431,6 @@ samcoupe:
   emulators:
     samcoupe:
       samcoupe:  { requireAnyOf: [BR2_PACKAGE_SIMCOUPE] }
-
-stuntcar:
-  name:       Stunt Car Racer
-  manufacturer: Ports
-  release: 1989
-  hardware: port
-  extensions: [game]
-  group: ports
-  emulators:
-    stuntcar:
-      stuntcar: { requireAnyOf: [BR2_PACKAGE_STUNTCAR] }
-  comment_en: |
-    This system is a standalone  game. No rom required.
-  comment_fr: |
-    Ce système est le premier jeu de autonome. Aucune rom n'est requise.
 
 abuse:
   name:       Abuse
@@ -2567,73 +2462,36 @@ cdogs:
   comment_fr: |
     Ce système est le premier jeu de autonome. Aucune rom n'est requise.
 
-sorr:
-  name:       Streets of Rage Remake
+xrick:
+  name:       xrick
   manufacturer: Ports
-  release: 2011
+  release:
   hardware: port
-  extensions: [dat]
+  extensions: [zip]
   group: ports
   emulators:
-    sorr:
-      sorr: { requireAnyOf: [BR2_PACKAGE_BENNUGD_BGDI] }
+    libretro:
+      xrick: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_XRICK] }
+  comment_en: |
+    Put the data.zip in this directory.
+  comment_fr: |
+    Placez ici vos fichiers data.zip pour xrick.
 
-gsplus:
-  name:      Apple IIGS
-  manufacturer: Apple
-  release: 1986
+amigademo:
+  name:       Amiga Demoscene
+  manufacturer: Commodore
+  release: 1987
   hardware: computer
-  extensions: [2mg, do, nib, po, dsk]
+  extensions: [adf, uae, ipf, dms, dmz, adz, lha, hdf, exe, m3u, zip]
+  platform:   amiga
+  group:      amiga
   emulators:
-    gsplus:
-      gsplus: { requireAnyOf: [BR2_PACKAGE_GSPLUS] }
-
-cdi:
-  name:       CD-i
-  manufacturer: Philips
-  release: 1990
-  hardware: console
-  extensions: [chd, cue, toc, nrg, gdi, iso, cdr]
-  emulators:
-    mame:
-      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
-  comment_en: |
-          Requires MAME BIOS file cdimono1.zip or .7z in either cdi or BIOS folder.
-
-advision:
-  name:       Adventure Vision
-  manufacturer: Entex
-  release: 1982
-  hardware: console
-  extensions: [bin, zip, 7z]
-  emulators:
-    mame:
-      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
-  comment_en: |
-          Requires MAME BIOS file advision.zip or .7z in either advision or BIOS folder.
-
-switch:
-  name:       Switch
-  manufacturer: Nintendo
-  release: 2017
-  hardware: console
-  platform:   switch
-  theme:      switch
-  extensions: [xci, nsp]
-  emulators:
-    yuzu:
-      yuzu: { requireAnyOf: [BR2_PACKAGE_YUZU] }
-      
-bstone:
-  name:       Blake Stone Series
-  manufacturer: Ports
-  release: 1993
-  hardware: port
-  extensions: [game]
-  group: ports
-  emulators:
-    bstone:
-      bstone: { requireAnyOf: [BR2_PACKAGE_BSTONE] }
+    fsuae:
+      CD32:   { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+    amiberry:
+      CD32:   { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [chd] }
+    libretro:
+      puae:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
 
 awgl:
   name:       Another World
@@ -2646,3 +2504,348 @@ awgl:
     awgl:
       awgl: { requireAnyOf: [BR2_PACKAGE_AWGL] }
 
+bk:
+  name:       BK
+  manufacturer: Electronica
+  release: 1984
+  hardware: computer
+  extensions: [bin, zip, 7z]
+  emulators:
+    libretro:
+      bk: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BK_EMULATOR] }
+
+bstone:
+  name:       Blake Stone Series
+  manufacturer: Ports
+  release: 1993
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    bstone:
+      bstone: { requireAnyOf: [BR2_PACKAGE_BSTONE] }
+
+chailove:
+  name:       ChaiLove
+  manufacturer: Ports
+  release:
+  hardware: port
+  extensions: [chailove]
+  group: ports
+  emulators:
+    libretro:
+      chailove: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CHAILOVE] }
+
+craft:
+  name:       craft
+  manufacturer: Ports
+  release:
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    libretro:
+      craft: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CRAFT] }
+  comment_en: |
+    This system is a port of a Minecraft clone. No rom required.
+  comment_fr: |
+    Ce système est un port d'un clone de Minecraft. Aucune rom n'est requise.
+
+dinothawr:
+  name:       dinothawr
+  manufacturer: Ports
+  release:
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    libretro:
+      dinothawr: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DINOTHAWR] }
+  comment_en: |
+    This system is a standalone libretro game. No rom required.
+  comment_fr: |
+    Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
+
+eduke32:
+  name:       Duke Nukem 3D
+  manufacturer: Ports
+  release: 1996
+  hardware: port
+  extensions: [grp]
+  group: ports
+  emulators:
+    eduke32:
+      eduke32: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
+
+etekwar:
+  name:       TekWar
+  manufacturer: Ports
+  release: 1995
+  hardware: port
+  extensions: [pk3]
+  group: ports
+  emulators:
+    etekwar:
+      etekwar: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
+
+gong:
+  name:       Pong
+  manufacturer: Ports
+  release: 1972
+  hardware: console
+  extensions: [game]
+  group: ports
+  emulators:
+    libretro:
+      gong: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GONG] }
+  comment_en: |
+    This system is a standalone libretro game. No rom required.
+  comment_fr: |
+    Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
+
+ionfury:
+  name:       Ion Fury
+  manufacturer: Ports
+  release: 2019
+  hardware: port
+  extensions: [grp]
+  group: ports
+  emulators:
+    ionfury:
+      ionfury: { requireAnyOf: [BR2_PACKAGE_IONFURY] }
+
+lowresnx:
+  name:       LowRes-NX
+  manufacturer: Timo Kloss
+  release: 2017
+  hardware: portable
+  extensions: [nx]
+  emulators:
+    libretro:
+      lowresnx: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_LOWRESNX] }
+
+mu:
+  name:       Palm OS
+  manufacturer: Palm
+  release: 2001
+  hardware: portable
+  extensions: [prc, pqa, img]
+  emulators:
+    libretro:
+      mu: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MU] }
+
+nblood:
+  name:       Blood
+  manufacturer: Ports
+  release: 1997
+  hardware: port
+  extensions: [pk3]
+  group: ports
+  emulators:
+    nblood:
+      nblood: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
+
+nukem2:
+  name:       Duke Nukem 2
+  manufacturer: Ports
+  release: 1993
+  hardware: port
+  extensions: [cmp]
+  group: ports
+  emulators:
+    nukem2:
+      nuken2: { requireAnyOf: [BR2_PACKAGE_NUKEM2] }
+
+opentyrian:
+  name:       Tyrian
+  manufacturer: Ports
+  release: 1995
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    opentyrian:
+      opentyrian: { requireAnyOf: [BR2_PACKAGE_OPENTYRIAN] }
+  comment_en: |
+    This system is a standalone  game. No rom required.
+  comment_fr: |
+    Ce système est le premier jeu de autonome. Aucune rom n'est requise.
+
+pcexhumed:
+  name:       Exhumed/PowerSlave
+  manufacturer: Ports
+  release: 1999
+  hardware: port
+  extensions: [mov]
+  group: ports
+  emulators:
+    pcexhumed:
+      pcexhumed: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
+
+piboy:
+  name:       Piboy Settings
+  manufacturer: Experimental Pi
+  release:
+  hardware: piboy
+  extensions: [sh]
+  group: piboy
+  path:       /userdata/roms/piboy
+  command:    "/bin/sh %ROM%"
+  force:      True
+
+prototype:
+  name:       Prototype
+  manufacturer: Ports
+  release: 1992
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    prototype:
+      prototype: { requireAnyOf: [BR2_PACKAGE_PROTOTYPE] }
+  comment_en: |
+    This system is a standalone  game. No rom required.
+  comment_fr: |
+    Ce système est le premier jeu de autonome. Aucune rom n'est requise.
+
+pspmini:
+  name:       Sony Playstation Portable Mini
+  manufacturer: Sony
+  release: 2004
+  hardware: portable
+  extensions: [iso, cso, pbp]
+  group:      psp
+  emulators:
+    ppsspp:
+      ppsspp: { requireAnyOf: [BR2_PACKAGE_PPSSPP]  }
+    libretro:
+      ppsspp:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PPSSPP] }
+  comment_en: |
+    For more info: https://wiki.batocera.org/systems:psp
+  comment_fr: |
+    Trouvez la documentation ici: https://wiki.batocera.org/systems:psp
+
+reminiscence:
+  name:       reminiscence
+  manufacturer: Ports
+  release:
+  hardware: port
+  extensions: [map,MAP]
+  group: ports
+  emulators:
+    libretro:
+      reminiscence: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_REMINISCENCE] }
+  comment_en: |
+    Copy your flashback game into thos folder
+    Allowed versions
+    - DOS Demo (disk)
+    - DOS Full version (disk)
+    - DOS Full version (CD)
+  comment_fr: |
+    Copiez votre jeu flashback ici
+    Versions reconnues
+    - DOS Demo (disquette)
+    - DOS Full version (disquette)
+    - DOS Full version (CD)
+
+rednukem:
+  name:       Redneck Rampage
+  manufacturer: Ports
+  release: 1997
+  hardware: port
+  extensions: [grp]
+  group: ports
+  emulators:
+    rednukem:
+      rednukem: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
+
+sorr:
+  name:       Streets of Rage Remake
+  manufacturer: Ports
+  release: 2011
+  hardware: port
+  extensions: [dat]
+  group: ports
+  emulators:
+    sorr:
+      sorr: { requireAnyOf: [BR2_PACKAGE_BENNUGD_BGDI] }
+
+stuntcar:
+  name:       Stunt Car Racer
+  manufacturer: Ports
+  release: 1989
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    stuntcar:
+      stuntcar: { requireAnyOf: [BR2_PACKAGE_STUNTCAR] }
+  comment_en: |
+    This system is a standalone  game. No rom required.
+  comment_fr: |
+    Ce système est le premier jeu de autonome. Aucune rom n'est requise.
+
+superflappybirds:
+  name:       superflappybirds
+  manufacturer: Ports
+  release:
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    libretro:
+      superflappybirds: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SUPERFLAPPYBIRDS] }
+  comment_en: |
+    This system is a standalone libretro game. No rom required.
+  comment_fr: |
+    Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
+
+tg16:
+  name:       Turbo Grafx 16
+  manufacturer: NEC
+  release: 1987
+  hardware: console
+  extensions: [pce, bin, zip, 7z]
+  theme:      tg16
+  emulators:
+    libretro:
+      pce:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE] }
+      pce_fast: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE_FAST] }
+
+tg-cd:
+  name:       Turbo Grafx CD
+  manufacturer: NEC
+  release: 1988
+  hardware: console
+  extensions: [pce, cue, ccd, iso, img, chd]
+  theme:      tg-cd
+  emulators:
+    libretro:
+      pce:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE] }
+      pce_fast: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE_FAST] }
+
+twentyfourtyeight:
+  name:       '2048'
+  manufacturer: Ports
+  release:
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    libretro:
+      '2048': { requireAnyOf: [BR2_PACKAGE_LIBRETRO_2048] }
+  comment_en: |
+    This system is a standalone libretro game. No rom required.
+  comment_fr: |
+    Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
+
+voidsw:
+  name:       Shadow Warrior
+  manufacturer: Ports
+  release: 1997
+  hardware: port
+  extensions: [grp]
+  group: ports
+  emulators:
+    voidsw:
+      voidsw: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
