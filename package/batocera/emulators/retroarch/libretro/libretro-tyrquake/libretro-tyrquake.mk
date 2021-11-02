@@ -3,8 +3,8 @@
 # TYRQUAKE - Quake 1 Engine
 #
 ################################################################################
-# Version.: Commits on Nov 01, 2021
-LIBRETRO_TYRQUAKE_VERSION = 1e960608b31a87ab376997b3eb04508f99947912
+# Version.: Commits on Nov 02, 2021
+LIBRETRO_TYRQUAKE_VERSION = 1b48a56be6b6ca3167bc0b12aca732402c77f0db
 LIBRETRO_TYRQUAKE_SITE = $(call github,libretro,tyrquake,$(LIBRETRO_TYRQUAKE_VERSION))
 LIBRETRO_TYRQUAKE_LICENSE = GPLv2
 
