@@ -28,6 +28,9 @@ endif
 define HLSDK_XASH3D_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 -t $(TARGET_DIR)/usr/lib/xash3d/hlsdk/hl/cl_dlls/ -D $(@D)/build/cl_dll/*.so
 	$(INSTALL) -m 0755 -t $(TARGET_DIR)/usr/lib/xash3d/hlsdk/hl/dlls/ -D $(@D)/build/dlls/*.so
+	# evmap config
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/xash3d/hlsdk-xash3d/hlsdk-xash3d.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(waf-package))
