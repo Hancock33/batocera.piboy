@@ -1864,7 +1864,7 @@ easyrpg:
   manufacturer: EasyRPG Team
   release: 2000
   hardware: port
-  extensions: [easyrpg]
+  extensions: [easyrpg, squashfs]
   emulators:
     easyrpg:
       easyrpg: { requireAnyOf: [BR2_PACKAGE_EASYRPG_PLAYER] }
