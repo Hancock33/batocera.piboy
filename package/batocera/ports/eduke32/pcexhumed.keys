@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 eduke32"
+            "target": "killall -9 pcexhumed"
         },
         {
             "trigger": "up",
