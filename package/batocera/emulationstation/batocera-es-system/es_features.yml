@@ -3052,12 +3052,6 @@ libretro:
     gong:
       features: [autosave]
 
-    gong:
-      features: [autosave]
-
-    ecwolf:
-      features: []
-
     emuscv:
       features: [rewind, autosave, latency_reduction]
 
