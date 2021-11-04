@@ -3,9 +3,9 @@
 # Abuse
 #
 ################################################################################
-# Version.: Commits on Aug 18, 2021
-ABUSE_VERSION = eb33c63145587454d9d6ce9e5d0d535208bc15e5
-ABUSE_SITE = $(call github,Xenoveritas,abuse,$(ABUSE_VERSION))
+# Version.: Commits on Oct 18, 2021
+ABUSE_VERSION = eaeb8932fbc8be33a0ed1daa20be5dd362590380
+ABUSE_SITE = $(call github,romadu,abuse,$(ABUSE_VERSION))
 
 ABUSE_DEPENDENCIES = sdl2 sdl2_mixer abuse-data
 ABUSE_SUPPORTS_IN_SOURCE_BUILD = NO
