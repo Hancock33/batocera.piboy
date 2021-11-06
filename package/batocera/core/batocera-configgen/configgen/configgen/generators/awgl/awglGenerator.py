@@ -8,12 +8,13 @@ import controllersConfig
 class AwglGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
-        game = "--datapath=/userdata/roms/awgl/Amiga"
+        rendr = "--render=software"
         if (rom.__contains__("15th")):
             game = "--datapath=/userdata/roms/awgl/15th"
 
         if (rom.__contains__("20th")):
             game = "--datapath=/userdata/roms/awgl/20th"
+            rendr = "--render=original"
 
         if (rom.__contains__("3DO")):
             game = "--datapath=/userdata/roms/awgl/3DO"
@@ -30,7 +31,7 @@ class AwglGenerator(Generator):
         if (rom.__contains__("Win31")):
             game = "--datapath=/userdata/roms/awgl/Win31"
 
-        commandArray = ["awgl", "--language=us", "--render=original", game]
+        commandArray = ["awgl", game, "--language=us", rendr]
 
         return Command.Command(
             array=commandArray,
