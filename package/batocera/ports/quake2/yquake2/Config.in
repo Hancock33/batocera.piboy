@@ -4,7 +4,7 @@ config BR2_PACKAGE_YQUAKE2
 	select BR2_PACKAGE_SDL2_MIXER
 	depends on BR2_INSTALL_LIBSTDCPP
 	help
-	  Yamagi Quake II is an enhanced client for id Software's Quake II 
+	  Yamagi Quake II is an enhanced client for id Software's Quake II
 
 	  https://github.com/yquake2/yquake2
 

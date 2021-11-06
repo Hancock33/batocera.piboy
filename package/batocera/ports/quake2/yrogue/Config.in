@@ -4,7 +4,7 @@ config BR2_PACKAGE_YROGUE
 	select BR2_PACKAGE_SDL2_MIXER
 	depends on BR2_INSTALL_LIBSTDCPP
 	help
-	  Ground Zero for Yamagi Quake II 
+	  Ground Zero for Yamagi Quake II
 
 	  https://github.com/yquake2/rogue
 
