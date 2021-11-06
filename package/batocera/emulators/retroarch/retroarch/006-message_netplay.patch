@@ -1,8 +1,8 @@
-diff --git a/retroarch.c b/retroarch.c
-index f692376..1931d61 100644
---- a/retroarch.c
-+++ b/retroarch.c
-@@ -2598,7 +2598,7 @@ int generic_menu_entry_action(
+diff --git a/menu/menu_driver.c b/menu/menu_driver.c
+index 87166738e6..1c27a89e15 100644
+--- a/menu/menu_driver.c
++++ b/menu/menu_driver.c
+@@ -7901,7 +7901,7 @@ int generic_menu_entry_action(
                    entry->label, entry->type, i, entry->entry_idx);
           break;
        case MENU_ACTION_SEARCH:
@@ -11,12 +11,16 @@ index f692376..1931d61 100644
           break;
        case MENU_ACTION_SCAN:
           if (cbs && cbs->action_scan)
-@@ -7702,7 +7702,7 @@ static void netplay_announce(struct rarch_state *p_rarch)
+diff --git a/network/netplay/netplay_frontend.c b/network/netplay/netplay_frontend.c
+index 6c186b9e56..c251ba8e3d 100644
+--- a/network/netplay/netplay_frontend.c
++++ b/network/netplay/netplay_frontend.c
+@@ -7158,7 +7158,7 @@ static void netplay_announce(void)
              frontend_architecture_tmp, sizeof(frontend_architecture_tmp));
-    snprintf(frontend_architecture,
+    snprintf(frontend_architecture, 
           sizeof(frontend_architecture),
 -         "%s %s",
 +         "%s %s @BATOCERA",
           frontend_drv->ident,
           frontend_architecture_tmp);
-
+ 
