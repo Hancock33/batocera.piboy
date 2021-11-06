@@ -1,16 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <gameList>
   <game>
-    <path>./openjazz.game</path>
+    <path>./Full/openjazz.game</path>
     <name>Jazz Jackrabbit</name>
+   <desc>Jazz Jackrabbit is a series of platform video games featuring the eponymous character, Jazz Jackrabbit, a green anthropomorphic hare, who fights with his nemesis, Devan Shell, in a science fiction parody of the fable, The Tortoise and the Hare. Created by Arjan Brussee and Cliff Bleszinski and developed by Epic Games, the series debuted on MS-DOS in 1994 with Jazz Jackrabbit.</desc>
+    <releasedate>19940801T000000</releasedate>
+    <developer>Epic Games</developer>
+    <publisher>Epic Games</publisher>
+    <players>1</players>
+    <image>./images/Jazz Jackrabbit.png</image>
+  </game>
+  <game>
+    <path>./Shareware/openjazz.game</path>
+    <name>Jazz Jackrabbit (Shareware)</name>
     <desc>Jazz Jackrabbit is a series of platform video games featuring the eponymous character, Jazz Jackrabbit, a green anthropomorphic hare, who fights with his nemesis, Devan Shell, in a science fiction parody of the fable, The Tortoise and the Hare. Created by Arjan Brussee and Cliff Bleszinski and developed by Epic Games, the series debuted on MS-DOS in 1994 with Jazz Jackrabbit.</desc>
     <releasedate>19940801T000000</releasedate>
     <developer>Epic MegaGames</developer>
     <publisher>Epic Games</publisher>
     <genre>Platform-Platform / Shooter Scrolling</genre>
     <players>1</players>
-    <image>./images/openjazz.png</image>
-	<lang>en</lang>
+    <image>./images/Jazz Jackrabbit.png</image>
     <genreid>257</genreid>
+  </game>
+  <game>
+    <path>./Holiday/openjazz.game</path>
+    <name>Jazz Jackrabbit: Holiday Hare 1994</name>
+    <desc>Jazz Jackrabbit: Holiday Hare 1994 is a side-scrolling platformer starring the titular hare. Jazz must survive three areas of Holidaius using his own weapons to fight mongrels, monkeys, hands, ski turtles, and devils. The graphics have a Christmas theme, meaning that the player will see snow, Christmas trees (with and without decorations), and red-and-white striped poles. Music has been changed, which is basically a remix of Christmas songs, including Jingle Bells, Deck the Halls,  Rudolph, The Twelve Days of Christmas, and Silent Night.The game was released by Epic as freeware, and can be downloaded from the Internet.
+</desc>
+    <releasedate />
+    <developer>Epic Games</developer>
+    <publisher>Epic Games</publisher>
+    <image>./images/Jazz Jackrabbit - Holiday Hare 1994.png</image>
+  </game>
+  <game>
+    <path>./Christmas/openjazz.game</path>
+    <name>Jazz Jackrabbit: Holiday Hare 1995</name>
+    <desc>Played all six episodes of Jazz Jackrabbit and still can't get enough? Then play this special ''Christmas'' edition of Jazz. Featuring four levels with new graphics and sound, including a rap version of Little Drummer Boy.You still have your favorite weapons: RF missiles, toasters, blasters, and launcers, but sadly, there are no bosses in the game. This game is freely downloadable on most freeware/shareware sites. Also, there are three new episodes, which are not included in the game unless you order the Jazz Jackrabbit CD-ROM.
+</desc>
+    <releasedate />
+    <developer>Epic Games</developer>
+    <publisher>Epic Games</publisher>
+    <image>./images/Jazz Jackrabbit - Holiday Hare 1995.png</image>
   </game>
 </gameList>
