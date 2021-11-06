@@ -8,7 +8,8 @@ import controllersConfig
 class OpenJazzGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
-        commandArray = ["OpenJazz", "/userdata/roms/openjazz/"]
+        gamedir = rom.replace('openjazz.game', '')
+        commandArray = ["OpenJazz", gamedir]
 
         return Command.Command(
             array=commandArray,
