@@ -1,5 +1,15 @@
 {
     "actions_player1": [
+        {
+            "trigger": "start",
+            "type": "key",
+            "target": "KEY_ENTER"
+        },
+        {
+            "trigger": "select",
+            "type": "key",
+            "target": "KEY_ESC"
+        },
 	{
             "trigger": ["hotkey", "start"],
             "type": "exec",
