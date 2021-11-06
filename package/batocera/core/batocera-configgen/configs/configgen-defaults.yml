@@ -487,9 +487,6 @@ vemulator:
 virtualboy:
   emulator: libretro
   core:     vb
-vitaquake2:
-  emulator: libretro
-  core:     vitaquake2
 voidsw:
   emulator: voidsw
   core:     voidsw
@@ -526,6 +523,9 @@ xrick:
 xbox:
   emulator: xemu
   core:     xemu
+yquake2:
+  emulator: yquake2
+  core:     yquake2
 zc210:
   emulator: libretro
   core:     zc210

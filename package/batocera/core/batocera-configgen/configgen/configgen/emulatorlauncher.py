@@ -78,6 +78,7 @@ from generators.voidsw.voidswGenerator import VoidswGenerator
 from generators.wine.wineGenerator import WineGenerator
 from generators.xash3d_fwgs.xash3dFwgsGenerator import Xash3dFwgsGenerator
 from generators.xemu.xemuGenerator import XemuGenerator
+from generators.yquake2.yquake2Generator import Yquake2Generator
 from generators.yuzu.yuzuGenerator import YuzuGenerator
 #from generators.play.playGenerator import PlayGenerator
 
@@ -164,6 +165,7 @@ generators = {
     'wine' : WineGenerator(),
     'xash3d_fwgs': Xash3dFwgsGenerator(),
     'xemu': XemuGenerator(),
+    'yquake2': Yquake2Generator(),
     'yuzu': YuzuGenerator(),
     #'play': PlayGenerator(),
 }

@@ -1,0 +1,12 @@
+config BR2_PACKAGE_YQUAKE2
+	bool "yqauke2"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  Yamagi Quake II is an enhanced client for id Software's Quake II 
+
+	  https://github.com/yquake2/yquake2
+
+comment "BR2_PACKAGE_YQUAKE2 needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

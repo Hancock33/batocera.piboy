@@ -2351,16 +2351,16 @@ switch:
     yuzu:
       yuzu: { requireAnyOf: [BR2_PACKAGE_YUZU] }
 
-vitaquake2:
+yquake2:
   name:       Quake II
   manufacturer: Ports
   release: 1997
   hardware: port
-  extensions: [pak, zip, 7zip]
+  extensions: [pak]
   group: ports
   emulators:
-    libretro:
-      vitaquake2: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VITAQUAKE2] }
+    yqauke2:
+      yquake2: { requireAnyOf: [BR2_PACKAGE_YQUAKE2] }
 
 j2me:
   name:       Java 2 MicroEdition
