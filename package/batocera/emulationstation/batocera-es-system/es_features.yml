@@ -4678,6 +4678,9 @@ stuntcar:
 
 voidsw:
   features: [padtokeyboard]
-
+  
+yquake2:
+  features: [padtokeyboard]
+  
 yuzu:
   features: [videomode, padtokeyboard]

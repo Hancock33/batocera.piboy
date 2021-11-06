@@ -12,8 +12,8 @@ diff -Naur vitaquake2-0fc99af0936735198e1788fb943498be78a9e740.org/Makefile vita
 +    SHARED := -shared -Wl,--version-script=$(CORE_DIR)/link.T -Wl,--no-undefined
 +	CFLAGS += -mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math -DARM
 +    CFLAGS += -D_POSIX_C_SOURCE=199309L
-+    GLES := 1
-+    GLES31 := 1
++    GLES := 0
++    GLES31 := 0
 +
 +# Raspberry Pi 3 (64-bit)
 +else ifeq ($(platform), rpi3_64)

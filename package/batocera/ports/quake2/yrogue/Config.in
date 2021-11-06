@@ -1,0 +1,12 @@
+config BR2_PACKAGE_YROGUE
+	bool "Quake2_GZero"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  Ground Zero for Yamagi Quake II 
+
+	  https://github.com/yquake2/rogue
+
+comment "BR2_PACKAGE_YROGUE needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

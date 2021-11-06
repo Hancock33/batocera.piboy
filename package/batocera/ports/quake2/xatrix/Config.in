@@ -1,0 +1,12 @@
+config BR2_PACKAGE_XATRIX
+	bool "Quake2_Reckon"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  The Reckoning for Yamagi Quake II
+
+	  https://github.com/yquake2/yquake2
+
+comment "BR2_PACKAGE_XATRIX needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP
