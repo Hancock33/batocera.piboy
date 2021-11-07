@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./rogue/Ground Zero.game</path>
+    <name>Ground Zero</name>
+    <desc>Take out the Big Gun sounded simple enough, except the Strogg were waiting. You, and a few marines like you, are the lucky ones. You've made it down in one piece and are still able to contact the fleet. The Gravity Well, the Strogg's newest weapon in its arsenal against mankind, is operational.</desc>
+	<rating>0.6</rating>
+    <releasedate>19990930T000000</releasedate>
+    <developer>Activision</developer>
+    <publisher>id Software</publisher>
+    <genre>Shooter / 1st person-Shooter</genre>
+    <players>1-2</players>
+    <image>./images/Ground Zero.png</image>
+    <genreid>259</genreid>
+  </game>
+  <game>
+    <path>./baseq2/Quake II.game</path>
+    <name>Quake 2</name>
+    <desc>A sequel in name only, this follow up to id’s 1996 Quake, is a first-person shooter revolving around the Earth-Strogg war. The Strogg alien race threatens the Earth, but Earth has launched a counter-offensive, Operation Alien Overlord. Overlord takes the battle to the Strogg homeworld with the ultimate objective of securing their capital city and killing their ruler. As a FPS, Quake II contains a variety of weapons including the fall back Blaster, the Railgun, and the secret BFG10K. Health, armor, and ammunition pick-ups can be found during levels, as can the classic Quake’s Quad Damage power-up. Game play involves mowing down alien opponents as the player progresses through levels, completing in-game objectives. Quake II also comes with multiplayer support for Deathmatches.</desc>
+    <rating>0.6</rating>
+    <releasedate>19990930T000000</releasedate>
+    <developer>Activision</developer>
+    <publisher>id Software</publisher>
+    <genre>Shooter / 1st person-Shooter</genre>
+    <players>1-2</players>
+    <image>./images/Quake II.png</image>
+    <genreid>259</genreid>
+  </game>
+  <game>
+    <path>./xatrix/The Reckoning.game</path>
+    <name>The Reckoning</name>
+    <desc>You are part of an elite commando force that must infiltrate a hostile alien cite. Once inside, you must scour industrial landscapes, crawl through waterways and air ducts, navigate treacherous canyons teeming with vicious mutants, stow away on an alien spacecraft, and destroy the enemy's secret moon...</desc>
+	<rating>0.6</rating>
+    <releasedate>19990930T000000</releasedate>
+    <developer>Activision</developer>
+    <publisher>id Software</publisher>
+    <genre>Shooter / 1st person-Shooter</genre>
+    <players>1-2</players>
+    <image>./images/The Reckoning.png</image>
+    <genreid>259</genreid>
+  </game>
+</gameList>

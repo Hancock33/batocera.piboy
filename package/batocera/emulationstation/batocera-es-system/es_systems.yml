@@ -2356,7 +2356,7 @@ yquake2:
   manufacturer: Ports
   release: 1997
   hardware: port
-  extensions: [pak]
+  extensions: [game]
   group: ports
   emulators:
     yqauke2:
