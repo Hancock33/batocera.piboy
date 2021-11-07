@@ -14,13 +14,9 @@ YQUAKE2_SUPPORTS_IN_SOURCE_BUILD = NO
 YQUAKE2_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 
 define YQUAKE2_INSTALL_TARGET_CMDS
-	cp -pvr $(@D)/buildroot-build/release/* $(TARGET_DIR)/usr/bin
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/yquake2
-	mv $(TARGET_DIR)/usr/bin/baseq2 $(TARGET_DIR)/usr/share/batocera/datainit/roms/yquake2
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.yq2/{baseq2,rogue,xatrix}
-	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake2/yquake2/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.yq2/baseq2
-	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake2/yquake2/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.yq2/rogue
-	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake2/yquake2/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.yq2/xatrix	
+	mv $(@D)/buildroot-build/release/baseq2 $(TARGET_DIR)/usr/share/batocera/datainit/roms/yquake2	
+	cp -pvr $(@D)/buildroot-build/release/* $(TARGET_DIR)/usr/bin
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake2/yquake2/yquake2.keys $(TARGET_DIR)/usr/share/evmapy
