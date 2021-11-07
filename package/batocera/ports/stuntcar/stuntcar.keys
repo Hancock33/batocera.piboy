@@ -26,7 +26,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 stuntcar"
+            "target": "batocera-es-swissknife --emukill"
         },
         {
             "trigger": "start",
