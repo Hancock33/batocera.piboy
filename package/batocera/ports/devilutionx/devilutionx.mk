@@ -113,6 +113,7 @@ DEVILUTIONX_POST_EXTRACT_HOOKS += DEVILUTIONX_LIBZT_LWIP_CONTRIB_EXTRACT
 
 
 define DEVILUTIONX_INSTALL_TARGET_CMDS
+    cp -pvr $(@D)/devilutionx $(TARGET_DIR)/usr/bin
 # evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/devilutionx/devilutionx.keys $(TARGET_DIR)/usr/share/evmapy
