@@ -382,6 +382,9 @@ psx:
 pygame:
   emulator: pygame
   core:     pygame
+quake3:
+  emulator: quake3
+  core:     quake3
 rednukem:
   emulator: rednukem
   core:     rednukem

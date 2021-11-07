@@ -1,0 +1,12 @@
+config BR2_PACKAGE_QUAKE3
+	bool "quake3"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  The ioquake3 community effort to continue supporting/developing id's Quake III Arena
+
+	  www.ioquake3.org
+
+comment "BR2_PACKAGE_QUAKE3 needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

@@ -4660,6 +4660,9 @@ play:
 
 prototype:
   features: [padtokeyboard]
+  
+quake3:
+  features: [padtokeyboard]
 
 rednukem:
   features: [padtokeyboard]
