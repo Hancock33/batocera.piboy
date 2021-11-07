@@ -2361,7 +2361,7 @@ yquake2:
   emulators:
     yqauke2:
       yquake2: { requireAnyOf: [BR2_PACKAGE_YQUAKE2] }
-      
+
 quake3:
   name:       Quake 3
   manufacturer: Ports

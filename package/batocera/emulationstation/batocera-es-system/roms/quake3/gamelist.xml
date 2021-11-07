@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./Quake 3.game</path>
+    <name>Quake III</name>
+    <desc>Quake III Arena is a multiplayer oriented first person shooter. A varied and complete arsenal is at your disposal to organize a happy butchery alone or in teams. The classic modes of the genre are all there (Capture The Flag, Possession, Deathmatch ...). The major advantage of this episode on console is the possibility of online play.</desc>
+    <rating>0.85</rating>
+    <releasedate>20001023T000000</releasedate>
+    <developer>	id Software</developer>
+    <publisher>Activision</publisher>
+    <genre>Shooter-Shooter / 1st person</genre>
+    <players>2-4</players>
+    <image>./images/Quake 3.png</image>
+    <favorite>true</favorite>
+    <genreid>259</genreid>
+  </game>
+</gameList>

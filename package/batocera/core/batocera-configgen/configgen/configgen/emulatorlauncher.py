@@ -146,7 +146,7 @@ generators = {
     'ppsspp': PPSSPPGenerator(),
     'prototype': PrototypeGenerator(),
     'pygame': PygameGenerator(),
-    'quake3': Quake3Generator(),   
+    'quake3': Quake3Generator(),
     'rednukem': RednukemGenerator(),
     'redream': RedreamGenerator(),
     'rpcs3' : Rpcs3Generator(),
