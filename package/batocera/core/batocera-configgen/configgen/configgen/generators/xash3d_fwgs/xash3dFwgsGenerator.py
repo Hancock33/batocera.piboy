@@ -124,7 +124,8 @@ class Xash3dFwgsGenerator(Generator):
                 'XASH3D_BASEDIR': _ROMS_DIR,
                 'XASH3D_EXTRAS_PAK1': _ROMS_DIR + '/extras.pak',
                 'LD_LIBRARY_PATH': '/usr/lib/xash3d',
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers),
+                'PIPEWIRE_LATENCY': '1024/48000'
             })
 
     def _maybeInitConfig(self, game):
