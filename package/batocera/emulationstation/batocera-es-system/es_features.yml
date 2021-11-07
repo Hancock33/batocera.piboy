@@ -4660,7 +4660,7 @@ play:
 
 prototype:
   features: [padtokeyboard]
-  
+
 quake3:
   features: [padtokeyboard]
 
