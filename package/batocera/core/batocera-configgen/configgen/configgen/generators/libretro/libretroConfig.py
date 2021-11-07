@@ -92,8 +92,9 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution):
     retroarchConfig['video_driver'] = '"gl"'                    # needed for the ozone menu
     retroarchConfig['audio_latency'] = '192'                    # best balance with audio perf
     retroarchConfig['audio_mixer_volume'] = '0.000000'          # remove distortion on Piboy
-    if (system.isOptSet("audio_latency")):
-        retroarchConfig['audio_latency'] = system.config['audio_latency']
+    retroarchConfig['audio_driver'] = 'tinyalsa'
+    #if (system.isOptSet("audio_latency")):
+    #    retroarchConfig['audio_latency'] = system.config['audio_latency']
 
     with open("/usr/share/batocera/batocera.arch") as fb:
         arch = fb.readline().strip()
