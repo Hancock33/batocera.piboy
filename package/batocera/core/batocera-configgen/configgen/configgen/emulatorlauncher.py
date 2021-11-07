@@ -316,8 +316,10 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
         if "core" in system.config and system.config["core"] is not None:
             effectiveCore = system.config["core"]
         effectiveRom = ""
+        effectiveRomConfiguration = ""
         if rom is not None:
             effectiveRom = rom
+            effectiveRomConfiguration = romConfiguration
 
         # network options
         if args.netplaymode is not None:
@@ -352,7 +354,7 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
 
         # run the emulator
         try:
-            Evmapy.start(systemName, system.config['emulator'], effectiveCore, effectiveRom, playersControllers)
+            Evmapy.start(systemName, system.config['emulator'], effectiveCore, effectiveRomConfiguration, playersControllers)
             # change directory if wanted
             executionDirectory = generators[system.config['emulator']].executionDirectory(system.config, effectiveRom)
             if executionDirectory is not None:
