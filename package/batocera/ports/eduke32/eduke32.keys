@@ -65,12 +65,12 @@
         {
             "trigger": "pageup",
             "type": "key",
-            "target": "KEY_LEFTBRACE"
+            "target": "KEY_APOSTROPHE"
         },
         {
             "trigger": "pagedown",
             "type": "key",
-            "target": "KEY_RIGHTBRACE"
+            "target": "KEY_E"
         },
         {
             "trigger": "l3",
