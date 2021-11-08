@@ -14,5 +14,6 @@ class Eduke32Generator(Generator):
             array=commandArray,
             env={
                 'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers),
+                'SDL_GAMECONTROLLER_IGNORE_DEVICES': '',
                 'PIPEWIRE_LATENCY': '1024/48000'
             })

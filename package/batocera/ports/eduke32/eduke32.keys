@@ -1,9 +1,91 @@
 {
     "actions_player1": [
-		{
-            "trigger": ["hotkey", "start"],
+        {
+            "trigger": [
+                "hotkey",
+                "start"
+            ],
             "type": "exec",
             "target": "killall -9 eduke32"
-		}
+        },
+        {
+            "trigger": "joystick1",
+            "type": "mouse"
+        },
+        {
+            "trigger": "up",
+            "type": "key",
+            "target": "KEY_W"
+        },
+        {
+            "trigger": "down",
+            "type": "key",
+            "target": "KEY_S"
+        },
+        {
+            "trigger": "left",
+            "type": "key",
+            "target": "KEY_LEFT"
+        },
+        {
+            "trigger": "right",
+            "type": "key",
+            "target": "KEY_RIGHT"
+        },
+        {
+            "trigger": "start",
+            "type": "key",
+            "target": "KEY_ENTER"
+        },
+        {
+            "trigger": "select",
+            "type": "key",
+            "target": "KEY_ESC"
+        },
+        {
+            "trigger": "a",
+            "type": "key",
+            "target": "KEY_C"
+        },
+        {
+            "trigger": "b",
+            "type": "key",
+            "target": "KEY_RIGHTCTRL"
+        },
+        {
+            "trigger": "x",
+            "type": "key",
+            "target": "KEY_SPACE"
+        },
+        {
+            "trigger": "y",
+            "type": "key",
+            "target": "KEY_LEFTALT"
+        },
+        {
+            "trigger": "pageup",
+            "type": "key",
+            "target": "KEY_LEFTBRACE"
+        },
+        {
+            "trigger": "pagedown",
+            "type": "key",
+            "target": "KEY_RIGHTBRACE"
+        },
+        {
+            "trigger": "l3",
+            "type": "key",
+            "target": "KEY_TAB"
+        },
+        {
+            "trigger": "r2",
+            "type": "key",
+            "target": "KEY_RIGHTCTRL"
+        },
+        {
+            "trigger": "l2",
+            "type": "key",
+            "target": "KEY_Q"
+        }
     ]
 }
