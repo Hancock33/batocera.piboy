@@ -18,19 +18,20 @@ class Pcsx2Generator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
         isAVX2 = checkAvx2()
-        sseLib = checkSseLib(isAVX2)
+
+        pcsx2ConfigDir = "/userdata/system/configs/PCSX2"
 
         # Config files
-        configureReg(batoceraFiles.pcsx2ConfigDir)
-        configureUI(batoceraFiles.pcsx2ConfigDir, batoceraFiles.BIOS, system.config, gameResolution)
-        configureVM(batoceraFiles.pcsx2ConfigDir, system)
-        configureGFX(batoceraFiles.pcsx2ConfigDir, system)
-        configureAudio(batoceraFiles.pcsx2ConfigDir)
+        configureReg(pcsx2ConfigDir)
+        configureUI(pcsx2ConfigDir, batoceraFiles.BIOS, system.config, gameResolution)
+        configureVM(pcsx2ConfigDir, system)
+        configureGFX(pcsx2ConfigDir, system)
+        configureAudio(pcsx2ConfigDir)
 
         if isAVX2:
-            commandArray = [batoceraFiles.batoceraBins['pcsx2_avx2'], rom]
+            commandArray = ["/usr/PCSX_AVX2/bin/PCSX2", rom]
         else:
-            commandArray = [batoceraFiles.batoceraBins['pcsx2'], rom]
+            commandArray = ["/usr/PCSX/bin/PCSX2", rom]
 
         # Fullscreen
         commandArray.append("--fullscreen")
@@ -43,19 +44,19 @@ class Pcsx2Generator(Generator):
             eslog.debug("Fast Boot and skip BIOS")
         else:
             commandArray.append("--fullboot")
-
-        # Plugins
-        real_pluginsDir = batoceraFiles.pcsx2PluginsDir
-        if isAVX2:
-            real_pluginsDir = batoceraFiles.pcsx2Avx2PluginsDir
-        commandArray.append("--gs="   + real_pluginsDir + "/" + sseLib)
-
+        
         # Arch
         arch = "x86"
         with open('/usr/share/batocera/batocera.arch', 'r') as content_file:
             arch = content_file.read()
 
         env = {}
+
+        if isAVX2:
+            env["LD_LIBRARY_PATH"] = "/usr/PCSX_AVX2/lib"
+        else:
+            env["LD_LIBRARY_PATH"] = "/usr/PCSX/lib"
+
         env["XDG_CONFIG_HOME"] = batoceraFiles.CONF
         env["SDL_GAMECONTROLLERCONFIG"] = controllersConfig.generateSdlGameControllerConfig(playersControllers)
 
@@ -95,28 +96,28 @@ def configureReg(config_directory):
 def configureVM(config_directory, system):
 
     configFileName = "{}/{}".format(config_directory + "/inis", "PCSX2_vm.ini")
-
+    
     if not os.path.exists(config_directory + "/inis"):
         os.makedirs(config_directory + "/inis")
-
+        
     if not os.path.isfile(configFileName):
         f = open(configFileName, "w")
         f.write("[EmuCore]\n")
         f.close()
-
+    
     # This file looks like a .ini
     pcsx2VMConfig = configparser.ConfigParser(interpolation=None)
     # To prevent ConfigParser from converting to lower case
-    pcsx2VMConfig.optionxform = str
-
-    if os.path.isfile(configFileName):
+    pcsx2VMConfig.optionxform = str   
+    
+    if os.path.isfile(configFileName):  
         pcsx2VMConfig.read(configFileName)
-
+    
     ## [EMUCORE/GS]
     if not pcsx2VMConfig.has_section("EmuCore/GS"):
         pcsx2VMConfig.add_section("EmuCore/GS")
 
-    # Some defaults needed on first run
+    # Some defaults needed on first run 
     pcsx2VMConfig.set("EmuCore/GS","VsyncQueueSize", "2")
     pcsx2VMConfig.set("EmuCore/GS","FrameLimitEnable", "1")
     pcsx2VMConfig.set("EmuCore/GS","SynchronousMTGS", "disabled")
@@ -131,7 +132,7 @@ def configureVM(config_directory, system):
     if system.isOptSet('vsync'):
         pcsx2VMConfig.set("EmuCore/GS","VsyncEnable", system.config["vsync"])
     else:
-        pcsx2VMConfig.set("EmuCore/GS","VsyncEnable", "1")
+        pcsx2VMConfig.set("EmuCore/GS","VsyncEnable", "1")    
 
     if not pcsx2VMConfig.has_section("EmuCore/Speedhacks"):
         pcsx2VMConfig.add_section("EmuCore/Speedhacks")
@@ -226,13 +227,13 @@ def configureGFX(config_directory, system):
     configFileName = "{}/{}".format(config_directory + "/inis", "GSdx.ini")
     if not os.path.exists(config_directory):
         os.makedirs(config_directory + "/inis")
-
+    
     # Create the config file if it doesn't exist
     if not os.path.exists(configFileName):
         f = open(configFileName, "w")
         f.write("osd_fontname = /usr/share/fonts/dejavu/DejaVuSans.ttf\n")
         f.close()
-
+    
     # Update settings
     pcsx2GFXSettings = UnixSettings(configFileName, separator=' ')
     pcsx2GFXSettings.save("osd_fontname", "/usr/share/fonts/dejavu/DejaVuSans.ttf")
@@ -320,7 +321,7 @@ def configureUI(config_directory, bios_directory, system_config, gameResolution)
     for section in [ "ProgramLog", "Filenames", "GSWindow", "NO_SECTION" ]:
         if not iniConfig.has_section(section):
             iniConfig.add_section(section)
-
+    
     iniConfig.set("NO_SECTION","EnablePresets","disabled")
     iniConfig.set("ProgramLog", "Visible",     "disabled")
     iniConfig.set("Filenames",  "BIOS",        biosFile)
@@ -365,6 +366,3 @@ def checkAvx2():
         if re.match("^flags[\t ]*:.* avx2", line):
             return True
     return False
-
-def checkSseLib(isAVX2):
-    return "libGSdx.so"

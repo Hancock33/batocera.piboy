@@ -3,8 +3,8 @@
 # PCSX2_AVX2
 #
 ################################################################################
-# Version.: Commits on Jun 09, 2021
-PCSX2_AVX2_VERSION = b5a917fb08f2f2ebd7c79dd38458a4bd85b9d9a4
+
+PCSX2_AVX2_VERSION = v1.7.2015
 PCSX2_AVX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_AVX2_LICENSE = GPLv2 GPLv3 LGPLv2.1 LGPLv3
 PCSX2_AVX2_DEPENDENCIES = xserver_xorg-server alsa-lib freetype zlib libpng wxwidgets libaio portaudio libsoundtouch sdl2 libpcap yaml-cpp libgtk3 libsamplerate fmt
@@ -36,8 +36,9 @@ define PCSX2_AVX2_INSTALL_TARGET_CMDS
 	cp -pr $(@D)/bin/Langs      	$(TARGET_DIR)/usr/PCSX_AVX2/bin
 	cp -p  $(@D)/bin/GameIndex.yaml $(TARGET_DIR)/usr/PCSX_AVX2/bin
 	cp -p  $(@D)/bin/cheats_ws.zip 	$(TARGET_DIR)/usr/PCSX_AVX2/bin
-        mkdir -p $(TARGET_DIR)/usr/PCSX_AVX2/bin/plugins
-	cp -pr $(@D)/plugins/*/*.so $(TARGET_DIR)/usr/PCSX_AVX2/bin/plugins
+	mkdir -p $(TARGET_DIR)/usr/PCSX_AVX2/lib
+	cp -pr $(@D)/common/libcommon.so      $(TARGET_DIR)/usr/PCSX_AVX2/lib
+	cp -pr $(@D)/3rdparty/glad/libglad.so $(TARGET_DIR)/usr/PCSX_AVX2/lib
 endef
 
 $(eval $(cmake-package))
