@@ -1,7 +1,8 @@
-diff -Naur batocera-emulationstation-ded63ed005f31f62038d8f02733ce5936041a008.orig/es-app/src/guis/GuiMenu.cpp batocera-emulationstation-ded63ed005f31f62038d8f02733ce5936041a008/es-app/src/guis/GuiMenu.cpp
---- batocera-emulationstation-ded63ed005f31f62038d8f02733ce5936041a008.orig/es-app/src/guis/GuiMenu.cpp	2021-06-20 10:30:23.000000000 +0100
-+++ batocera-emulationstation-ded63ed005f31f62038d8f02733ce5936041a008/es-app/src/guis/GuiMenu.cpp	2021-06-21 22:05:58.630964954 +0100
-@@ -64,8 +64,11 @@
+diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
+index b9956dc1..994cdf4d 100644
+--- a/es-app/src/guis/GuiMenu.cpp
++++ b/es-app/src/guis/GuiMenu.cpp
+@@ -66,8 +66,11 @@
  #define fake_gettext_architecture _("Architecture")
  #define fake_gettext_diskformat   _("Disk format")
  #define fake_gettext_temperature  _("Temperature")
@@ -10,6 +11,6 @@ diff -Naur batocera-emulationstation-ded63ed005f31f62038d8f02733ce5936041a008.or
  #define fake_gettext_battery      _("Battery")
 +#define fake_gettext_battery      _("Battery voltage")
 +#define fake_gettext_battery      _("Battery current")
+ #define fake_gettext_model        _("Model")
  #define fake_gettext_cpu_model    _("Cpu model")
  #define fake_gettext_cpu_number   _("Cpu number")
- #define fake_gettext_cpu_frequency _("Cpu max frequency")
