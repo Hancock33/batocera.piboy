@@ -3,15 +3,14 @@
 # Batocera Emulation Station
 #
 ################################################################################
-# Version.: Commits on Nov 06, 2021
-BATOCERA_EMULATIONSTATION_VERSION = efb7867ef7457971f8306bac5442553b648f3d56
 
+BATOCERA_EMULATIONSTATION_VERSION = 5573a332e45664686dc26f81b112f766ca9bb8cc
 BATOCERA_EMULATIONSTATION_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_EMULATIONSTATION_SITE_METHOD = git
 BATOCERA_EMULATIONSTATION_LICENSE = MIT
 BATOCERA_EMULATIONSTATION_GIT_SUBMODULES = YES
 BATOCERA_EMULATIONSTATION_LICENSE = MIT, Apache-2.0
-BATOCERA_EMULATIONSTATION_DEPENDENCIES = sdl2 sdl2_mixer freetype alsa-lib libcurl vlc rapidjson pulseaudio-utils
+BATOCERA_EMULATIONSTATION_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib libcurl vlc rapidjson pulseaudio-utils
 # install in staging for debugging (gdb)
 BATOCERA_EMULATIONSTATION_INSTALL_STAGING = YES
 # BATOCERA_EMULATIONSTATION_OVERRIDE_SRCDIR = /sources/batocera-emulationstation
@@ -57,13 +56,11 @@ else
 BATOCERA_EMULATIONSTATION_CONF_OPTS += -DENABLE_FILEMANAGER=OFF
 endif
 
-ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI3)$(BR2_PACKAGE_XPI_GAMECON_RPI4),y)
- PYBOY_INSTALL=y
-endif
+BATOCERA_EMULATIONSTATION_KEY_SCREENSCRAPER_DEV_LOGIN=$(shell grep -E '^SCREENSCRAPER_DEV_LOGIN=' $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/keys.txt | cut -d = -f 2-)
+BATOCERA_EMULATIONSTATION_KEY_GAMESDB_APIKEY=$(shell grep -E '^GAMESDB_APIKEY=' $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/keys.txt | cut -d = -f 2-)
+BATOCERA_EMULATIONSTATION_KEY_CHEEVOS_DEV_LOGIN=$(shell grep -E '^CHEEVOS_DEV_LOGIN=' $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/keys.txt | cut -d = -f 2-)
+BATOCERA_EMULATIONSTATION_KEY_HFS_DEV_LOGIN=$(shell grep -E '^HFS_DEV_LOGIN=' $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/keys.txt | cut -d = -f 2-)
 
-BATOCERA_EMULATIONSTATION_KEY_SCREENSCRAPER_DEV_LOGIN=$(shell grep -E '^SCREENSCRAPER_DEV_LOGIN=' /home/lee/keys.txt | cut -d = -f 2-)
-BATOCERA_EMULATIONSTATION_KEY_GAMESDB_APIKEY=$(shell grep -E '^GAMESDB_APIKEY=' /home/lee/keys.txt | cut -d = -f 2-)
-BATOCERA_EMULATIONSTATION_KEY_CHEEVOS_DEV_LOGIN=$(shell grep -E '^CHEEVOS_DEV_LOGIN=' /home/lee/keys.txt | cut -d = -f 2-)
 ifneq ($(BATOCERA_EMULATIONSTATION_KEY_SCREENSCRAPER_DEV_LOGIN),)
 BATOCERA_EMULATIONSTATION_CONF_OPTS += "-DSCREENSCRAPER_DEV_LOGIN=$(BATOCERA_EMULATIONSTATION_KEY_SCREENSCRAPER_DEV_LOGIN)"
 endif
@@ -72,6 +69,9 @@ BATOCERA_EMULATIONSTATION_CONF_OPTS += "-DGAMESDB_APIKEY=$(BATOCERA_EMULATIONSTA
 endif
 ifneq ($(BATOCERA_EMULATIONSTATION_KEY_CHEEVOS_DEV_LOGIN),)
 BATOCERA_EMULATIONSTATION_CONF_OPTS += "-DCHEEVOS_DEV_LOGIN=$(BATOCERA_EMULATIONSTATION_KEY_CHEEVOS_DEV_LOGIN)"
+endif
+ifneq ($(BATOCERA_EMULATIONSTATION_KEY_HFS_DEV_LOGIN),)
+BATOCERA_EMULATIONSTATION_CONF_OPTS += "-DHFS_DEV_LOGIN=$(BATOCERA_EMULATIONSTATION_KEY_HFS_DEV_LOGIN)"
 endif
 
 define BATOCERA_EMULATIONSTATION_RPI_FIXUP
@@ -97,9 +97,6 @@ define BATOCERA_EMULATIONSTATION_RESOURCES
 
 	# hooks
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/batocera-preupdate-gamelists-hook $(TARGET_DIR)/usr/bin/
-
-	#piboy logo
-	@if [ "$(PYBOY_INSTALL)" = "y" ]; then cp -pvr "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/piboy-logo480p.png" "${TARGET_DIR}/usr/share/emulationstation/resources/logo.png" ; fi
 endef
 
 ### S31emulationstation
@@ -151,4 +148,3 @@ BATOCERA_EMULATIONSTATION_POST_INSTALL_TARGET_HOOKS += BATOCERA_EMULATIONSTATION
 BATOCERA_EMULATIONSTATION_POST_INSTALL_TARGET_HOOKS += BATOCERA_EMULATIONSTATION_BOOT
 
 $(eval $(cmake-package))
-
