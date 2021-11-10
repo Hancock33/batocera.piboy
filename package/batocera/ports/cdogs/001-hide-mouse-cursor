@@ -1,0 +1,82 @@
+diff --git a/src/cdogs/mouse.c b/src/cdogs/mouse.c
+index 9df7e029..1f25af73 100644
+--- a/src/cdogs/mouse.c
++++ b/src/cdogs/mouse.c
+@@ -48,6 +48,7 @@ void MouseInit(Mouse *mouse)
+ 	{
+ 		mouse->cursors[i] = SDL_CreateSystemCursor(i);
+ 	}
++	SDL_ShowCursor(SDL_DISABLE);
+ }
+ void MouseTerminate(Mouse *m)
+ {
+@@ -57,6 +58,7 @@ void MouseTerminate(Mouse *m)
+ 	{
+ 		SDL_FreeCursor(m->cursors[i]);
+ 	}
++	SDL_ShowCursor(SDL_DISABLE);
+ }
+ void MouseReset(Mouse *m)
+ {
+@@ -68,6 +70,7 @@ void MouseReset(Mouse *m)
+ 	m->wheel = svec2i_zero();
+ 	m->repeatedTicks = 0;
+ 	m->mouseMovePos = svec2i_zero();
++	SDL_ShowCursor(SDL_DISABLE);
+ }
+ 
+ void MousePrePoll(Mouse *mouse)
+@@ -83,6 +86,7 @@ void MousePrePoll(Mouse *mouse)
+ 	if (scale == 0)
+ 		scale = 1;
+ 	mouse->currentPos = svec2i_scale_divide(mouse->currentPos, scale);
++    SDL_ShowCursor(SDL_DISABLE);
+ }
+ 
+ void MouseOnButtonDown(Mouse *mouse, Uint8 button)
+@@ -109,6 +113,7 @@ void MouseOnWheel(Mouse *m, const Sint32 x, const Sint32 y)
+ 
+ void MousePostPoll(Mouse *mouse, const Uint32 ticks)
+ {
++	SDL_ShowCursor(SDL_DISABLE);
+ 	int areSameButtonsPressed = 1;
+ 	int i;
+ 	for (i = 0; i < 8; i++)
+@@ -149,11 +154,13 @@ void MousePostPoll(Mouse *mouse, const Uint32 ticks)
+ 				mouse->currentButtons[i] && !mouse->previousButtons[i];
+ 		}
+ 	}
++	SDL_ShowCursor(SDL_DISABLE);
+ }
+ 
+ bool MouseHasMoved(const Mouse *m)
+ {
+ 	return !svec2i_is_equal(m->previousPos, m->currentPos);
++    SDL_ShowCursor(SDL_DISABLE);
+ }
+ 
+ int MouseGetPressed(const Mouse *m)
+@@ -216,6 +223,7 @@ int MouseGetMove(Mouse *mouse, const struct vec2i pos)
+ 		}
+ 	}
+ 	return cmd;
++    SDL_ShowCursor(SDL_DISABLE);
+ }
+ 
+ void MouseSetCursor(Mouse *m, const SDL_SystemCursor sc)
+@@ -223,7 +231,7 @@ void MouseSetCursor(Mouse *m, const SDL_SystemCursor sc)
+ 	SDL_FreeCursor(m->cursor);
+ 	m->cursor = NULL;
+ 	SDL_SetCursor(m->cursors[sc]);
+-	SDL_ShowCursor(SDL_ENABLE);
++	SDL_ShowCursor(SDL_DISABLE);
+ }
+ void MouseSetPicCursor(Mouse *m, const Pic *cursor)
+ {
+@@ -256,5 +264,5 @@ void MouseSetPicCursor(Mouse *m, const Pic *cursor)
+ 		}
+ 		m->cursor = NULL;
+ 	}
+-	SDL_ShowCursor(cursor != NULL ? SDL_ENABLE : SDL_DISABLE);
++	SDL_ShowCursor(SDL_DISABLE);
+ }
