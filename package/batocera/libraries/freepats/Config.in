@@ -1,0 +1,8 @@
+config BR2_PACKAGE_FREEPATS
+    bool "freepats"
+    help
+      Free and Open general MIDI sound set
+
+      https://freepats.zenvoid.org/SoundSets/general-midi.html
+
+

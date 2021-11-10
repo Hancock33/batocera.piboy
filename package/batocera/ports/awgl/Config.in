@@ -2,6 +2,7 @@ config BR2_PACKAGE_AWGL
 	bool "awgl"
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
+	select BR2_PACKAGE_FREEPATS
 	depends on BR2_INSTALL_LIBSTDCPP
 	help
 	  awgl is a re-implementation of the engine used in the game Another World.
