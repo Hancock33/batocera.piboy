@@ -3,8 +3,8 @@
 # FMSX
 #
 ################################################################################
-# Version.: Commits on Nov 06, 2021
-LIBRETRO_FMSX_VERSION = 4f9f1abeb1b924f1da8b420544ab885bc9c3a34e
+# Version.: Commits on Nov 09, 2021
+LIBRETRO_FMSX_VERSION = 01731fc61c9a7c2276dc6a2d5af36323745e581e
 LIBRETRO_FMSX_SITE = $(call github,libretro,fmsx-libretro,$(LIBRETRO_FMSX_VERSION))
 LIBRETRO_FMSX_LICENSE = GPLv2
 
