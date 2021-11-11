@@ -22,6 +22,12 @@ libretro:
         "32":     32
         "16":     16
         "8":      8
+    video_threaded:
+        prompt:      THREADED VIDEO
+        description: Improves performance at the cost of latency and more video stuttering. Use only if full speed cannot be obtained otherwise.
+        choices:
+            "On":   "true"
+            "Off":  "false"
 
   cores:
     '81':
@@ -140,6 +146,7 @@ libretro:
                     "S-Video (Blargg)":    S-Video (Blargg)
                     "RGB (Blargg)":        RGB (Blargg)
                     "Monochrome (Blargg)": Monochrome (Blargg)
+
             mesens_blend_high_res:
                 prompt:      BLEND HIGH-RES MODES
                 description: Enable pseudo-transparency, may cause blurriness
