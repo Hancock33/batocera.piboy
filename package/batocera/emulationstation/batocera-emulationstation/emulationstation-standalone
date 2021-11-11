@@ -115,6 +115,6 @@ do
     #####################
     
     cd /userdata # es need a PWD
-    PS1="\e[0;30m" %BATOCERA_EMULATIONSTATION_PREFIX% emulationstation --exit-on-reboot-required %BATOCERA_EMULATIONSTATION_ARGS% ${CUSTOMESOPTIONS}
+    %BATOCERA_EMULATIONSTATION_PREFIX% emulationstation --exit-on-reboot-required %BATOCERA_EMULATIONSTATION_ARGS% ${CUSTOMESOPTIONS}
 done
 exit 0
