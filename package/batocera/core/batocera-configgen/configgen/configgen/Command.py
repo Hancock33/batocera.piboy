@@ -7,6 +7,7 @@ class Command:
 
     def __str__(self):
         str = list()
+        str.append('PS1="\e[0;30m"')
 
         for varName, varValue in self.env.items():
             str.append("%s=%s" % (varName, varValue))
