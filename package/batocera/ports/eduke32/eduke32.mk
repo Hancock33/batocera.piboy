@@ -32,9 +32,15 @@ define EDUKE32_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/rednukem -D $(TARGET_DIR)/usr/bin/rednukem
 	$(INSTALL) -m 0755 $(@D)/voidsw -D $(TARGET_DIR)/usr/bin/voidsw
 
-	#copy settings
+	#make config dir
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/eduke32
-
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/nblood
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/pcexhumed
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/etekwar
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/rednukem
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/voidsw	
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/ionfury	
+	
 	#copy sdl game contoller info
 	cp $(@D)/package/common/gamecontrollerdb.txt $(TARGET_DIR)/usr/share/gamecontrollerdb.txt
 
@@ -44,7 +50,7 @@ define EDUKE32_INSTALL_TARGET_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/nblood.keys $(TARGET_DIR)/usr/share/evmapy/nblood.keys
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/pcexhumed.keys $(TARGET_DIR)/usr/share/evmapy/pcexhumed.keys
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/eduke32.keys $(TARGET_DIR)/usr/share/evmapy/etekwar.keys
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/eduke32.keys $(TARGET_DIR)/usr/share/evmapy/rednukem.keys
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/rednukem.keys $(TARGET_DIR)/usr/share/evmapy/rednukem.keys
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/voidsw.keys $(TARGET_DIR)/usr/share/evmapy/voidsw.keys
 endef
 

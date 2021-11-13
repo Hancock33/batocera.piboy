@@ -6,27 +6,31 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 nblood"
+            "target": "clear && killall -9 nblood"
+        },
+        {
+            "trigger": "joystick1",
+            "type": "mouse"
         },
         {
             "trigger": "up",
             "type": "key",
-            "target": "KEY_UP"
+            "target": "KEY_KP8"
         },
         {
             "trigger": "down",
             "type": "key",
-            "target": "KEY_DOWN"
+            "target": "KEY_KP2"
         },
         {
             "trigger": "left",
             "type": "key",
-            "target": "KEY_LEFT"
+            "target": "KEY_KP4"
         },
         {
             "trigger": "right",
             "type": "key",
-            "target": "KEY_RIGHT"
+            "target": "KEY_KP6"
         },
         {
             "trigger": "start",
@@ -36,12 +40,12 @@
         {
             "trigger": "select",
             "type": "key",
-            "target": "KEY_TAB"
+            "target": "KEY_ESC"
         },
         {
             "trigger": "a",
             "type": "key",
-            "target": "KEY_SPACE"
+            "target": "KEY_LEFTCTRL"
         },
         {
             "trigger": "b",
@@ -51,32 +55,37 @@
         {
             "trigger": "x",
             "type": "key",
-            "target": "KEY_LEFTCTRL"
+            "target": "KEY_TAB"
+        },
+        {
+            "trigger": "pageup",
+            "type": "key",
+            "target": "KEY_APOSTROPHE"
         },
         {
             "trigger": "pagedown",
+            "type": "key",
+            "target": "KEY_E"
+        },
+        {
+            "trigger": "l3",
+            "type": "key",
+            "target": "KEY_TAB"
+        },
+        {
+            "trigger": "r2",
             "type": "key",
             "target": "KEY_LEFTALT"
         },
         {
             "trigger": "l2",
             "type": "key",
-            "target": "KEY_APOSTROPHE"
-        },
-        {
-            "trigger": "r2",
-            "type": "key",
-            "target": "KEY_SEMICOLON"
+            "target": "KEY_LEFTSHIFT"
         },
         {
             "trigger": "y",
             "type": "key",
-            "target": "KEY_E"
-        },
-        {
-            "trigger": "pageup",
-            "type": "key",
-            "target": "KEY_ESC"
+            "target": "KEY_SPACE"
         }
     ]
 }

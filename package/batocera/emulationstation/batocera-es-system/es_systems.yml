@@ -2359,7 +2359,7 @@ yquake2:
   extensions: [game]
   group: ports
   emulators:
-    yqauke2:
+    yquake2:
       yquake2: { requireAnyOf: [BR2_PACKAGE_YQUAKE2] }
 
 quake3:
