@@ -18,7 +18,7 @@ psx:
 gamecube:
   emulator: libretro
   core:     dolphin
-wii:
+wiiware:
   emulator: libretro
   core:     dolphin
 
