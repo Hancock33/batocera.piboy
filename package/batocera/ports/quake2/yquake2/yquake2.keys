@@ -7,6 +7,80 @@
             ],
             "type": "exec",
             "target": "killall -9 quake2"
+        },
+        {
+            "trigger": "joystick1",
+            "type": "mouse"
+        },
+        {
+            "trigger": "start",
+            "type": "key",
+            "target": "KEY_ENTER"
+        },
+        {
+            "trigger": "select",
+            "type": "key",
+            "target": "KEY_ESC"
+        },
+        {
+            "trigger": "up",
+            "type": "key",
+            "target": "KEY_UP"
+        },
+        {
+            "trigger": "down",
+            "type": "key",
+            "target": "KEY_DOWN"
+        },
+        {
+            "trigger": "left",
+            "type": "key",
+            "target": "KEY_LEFT"
+        },
+        {
+            "trigger": "right",
+            "type": "key",
+            "target": "KEY_RIGHT"
+        },
+        {
+            "trigger": "a",
+            "type": "key",
+            "target": "KEY_C"
+        },
+        {
+            "trigger": "b",
+            "type": "key",
+            "target": "KEY_LEFTCTRL"
+        },
+        {
+            "trigger": "x",
+            "type": "key",
+            "target": "KEY_F1"
+        },
+        {
+            "trigger": "y",
+            "type": "key",
+            "target": "KEY_SPACE"
+        },
+        {
+            "trigger": "pageup",
+            "type": "key",
+            "target": "KEY_SLASH"
+        },
+        {
+            "trigger": "pagedown",
+            "type": "key",
+            "target": "KEY_LEFTBRACE"
+        },
+        {
+            "trigger": "l2",
+            "type": "key",
+            "target": "KEY_LEFTSHIFT"
+        },
+        {
+            "trigger": "r2",
+            "type": "key",
+            "target": "KEY_LEFTALT"
         }
     ]
 }
