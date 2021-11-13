@@ -24,6 +24,6 @@ cp     "${BOARD_DIR}/boot/cmdline.txt"  "${BATOCERA_BINARIES_DIR}/boot/" || exit
 
 cp "${BINARIES_DIR}/Image"          "${BATOCERA_BINARIES_DIR}/boot/boot/linux"           || exit 1
 cp "${BINARIES_DIR}/initrd.gz"       "${BATOCERA_BINARIES_DIR}/boot/boot/"                || exit 1
-cp "${BINARIES_DIR}/rootfs.squashfs" "${BATOCERA_BINARIES_DIR}/boot/boot/batocera" || exit 1
+cp "${BINARIES_DIR}/rootfs.squashfs" "${BATOCERA_BINARIES_DIR}/boot/boot/batocera.update" || exit 1
 
 exit 0
