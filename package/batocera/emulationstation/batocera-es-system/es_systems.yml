@@ -1503,8 +1503,6 @@ gamecube:
   emulators:
     dolphin:
       dolphin:  { requireAnyOf: [BR2_PACKAGE_DOLPHIN_EMU]       }
-    libretro:
-      dolphin: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOLPHIN] }
   comment_en: |
     For more info: https://wiki.batocera.org/systems:gamecube
   comment_fr: |
@@ -1519,8 +1517,6 @@ wii:
   emulators:
     dolphin:
       dolphin:  { requireAnyOf: [BR2_PACKAGE_DOLPHIN_EMU]       }
-    libretro:
-      dolphin: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOLPHIN] }
   comment_en: |
     To use a virtual horizontal wiimote, include ".side." in the filename (for example ".side.iso").
     You can choose the axis controls among i(nfrared), s(wing), t(ilt) or n(unchuk) :
@@ -1537,6 +1533,16 @@ wii:
     Mettez les textures personnalisées dans /userdata/saves/dolphin-emu/Load/Textures/<game id>.
 
     Trouvez la documentation ici: https://wiki.batocera.org/systems:wii
+
+wiiware:
+  name:       Nintendo WiiWare
+  manufacturer: Nintendo
+  release: 2006
+  hardware: console
+  extensions: [wad]
+  emulators:
+    libretro:
+      dolphin: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOLPHIN] }
 
 ps2:
   name:       Sony Playstation 2
