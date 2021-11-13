@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 eduke32"
+            "target": "clear && killall -9 eduke32"
         },
         {
             "trigger": "joystick1",
@@ -15,22 +15,22 @@
         {
             "trigger": "up",
             "type": "key",
-            "target": "KEY_W"
+            "target": "KEY_KP8"
         },
         {
             "trigger": "down",
             "type": "key",
-            "target": "KEY_S"
+            "target": "KEY_KP2"
         },
         {
             "trigger": "left",
             "type": "key",
-            "target": "KEY_LEFT"
+            "target": "KEY_KP4"
         },
         {
             "trigger": "right",
             "type": "key",
-            "target": "KEY_RIGHT"
+            "target": "KEY_KP6"
         },
         {
             "trigger": "start",
@@ -55,12 +55,7 @@
         {
             "trigger": "x",
             "type": "key",
-            "target": "KEY_SPACE"
-        },
-        {
-            "trigger": "y",
-            "type": "key",
-            "target": "KEY_LEFTALT"
+            "target": "KEY_TAB"
         },
         {
             "trigger": "pageup",
@@ -80,12 +75,17 @@
         {
             "trigger": "r2",
             "type": "key",
-            "target": "KEY_RIGHTCTRL"
+            "target": "KEY_LEFTALT"
         },
         {
             "trigger": "l2",
             "type": "key",
             "target": "KEY_Q"
+        },
+        {
+            "trigger": "y",
+            "type": "key",
+            "target": "KEY_SPACE"
         }
     ]
 }

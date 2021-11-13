@@ -6,25 +6,31 @@
                 "start"
             ],
             "type": "exec",
-            "target": "clear && killall -9 pcexhumed"
+            "target": "clear && killall -9 rednukem"
+        },
+        {
+            "trigger": "joystick1",
+            "type": "mouse"
+        },
+        {
+            "trigger": "up",
+            "type": "key",
+            "target": "KEY_KP8"
         },
         {
             "trigger": "down",
             "type": "key",
-            "target": [
-                "KEY_DOWN",
-                "KEY_S"
-            ]
+            "target": "KEY_KP2"
         },
         {
             "trigger": "left",
             "type": "key",
-            "target": "KEY_LEFT"
+            "target": "KEY_KP4"
         },
         {
             "trigger": "right",
             "type": "key",
-            "target": "KEY_RIGHT"
+            "target": "KEY_KP6"
         },
         {
             "trigger": "start",
@@ -39,7 +45,7 @@
         {
             "trigger": "a",
             "type": "key",
-            "target": "KEY_LEFTCTRL"
+            "target": "KEY_C"
         },
         {
             "trigger": "b",
@@ -80,18 +86,6 @@
             "trigger": "y",
             "type": "key",
             "target": "KEY_SPACE"
-        },
-        {
-            "trigger": "joystick1",
-            "type": "mouse"
-        },
-        {
-            "trigger": "up",
-            "type": "key",
-            "target": [
-                "KEY_UP",
-                "KEY_W"
-            ]
         }
     ]
 }
