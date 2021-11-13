@@ -3,8 +3,8 @@
 # Yamagi Quake II - The Reckoning
 #
 ################################################################################
-# Version.: Commits on Nov 06, 2021
-XATRIX_VERSION = a7eb44515190687045ed36e7d2c4a348b4ef74fd
+# Version.: Commits on Nov 13, 2021
+XATRIX_VERSION = dfd2224bbf0582b37d97a745aa2fe0d71f1766c8
 XATRIX_SITE = $(call github,yquake2,xatrix,$(XATRIX_VERSION))
 
 XATRIX_DEPENDENCIES = sdl2 sdl2_mixer yquake2
