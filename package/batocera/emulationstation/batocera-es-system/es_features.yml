@@ -4701,6 +4701,6 @@ voidsw:
 
 yquake2:
   features: [padtokeyboard]
-  
+
 yuzu:
   features: [videomode, padtokeyboard]
