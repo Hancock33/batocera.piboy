@@ -19,12 +19,12 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI2),y)
 CANNONBALL_TARGET = sdl2gles_rpi
 CANNONBALL_RPI = -mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard
 
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI3),y)
-CANNONBALL_TARGET = sdl2gles
+else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI3)$(BR2_PACKAGE_BATOCERA_TARGET_RPIZERO2),y)
+CANNONBALL_TARGET = sdl2gles_rpi
 CANNONBALL_RPI = -march=armv8-a+crc -mcpu=cortex-a53
 
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
-CANNONBALL_TARGET = sdl2gles
+CANNONBALL_TARGET = sdl2gles_rpi
 CANNONBALL_RPI = -march=armv8-a+crc -mcpu=cortex-a72
 
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86),y)
