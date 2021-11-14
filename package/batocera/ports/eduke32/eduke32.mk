@@ -38,9 +38,9 @@ define EDUKE32_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/pcexhumed
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/etekwar
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/rednukem
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/voidsw	
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/ionfury	
-	
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/voidsw
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/ionfury
+
 	#copy sdl game contoller info
 	cp $(@D)/package/common/gamecontrollerdb.txt $(TARGET_DIR)/usr/share/gamecontrollerdb.txt
 
