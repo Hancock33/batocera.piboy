@@ -3,8 +3,8 @@
 # FBNEO
 #
 ################################################################################
-# Version.: Commits on Nov 12, 2021
-LIBRETRO_FBNEO_VERSION = 4f02ebd0ddbf34b22eea93b3824521db48137586
+# Version.: Commits on Oct 17, 2021
+LIBRETRO_FBNEO_VERSION = e5dcae883a4289bcf88b1a02109ce83452c5e8bc
 LIBRETRO_FBNEO_SITE = $(call github,libretro,FBNeo,$(LIBRETRO_FBNEO_VERSION))
 LIBRETRO_FBNEO_LICENSE = Non-commercial
 
@@ -13,10 +13,17 @@ LIBRETRO_FBNEO_EXTRA_ARGS =
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI1),y)
 LIBRETRO_FBNEO_PLATFORM = unix-rpi1
+
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI2),y)
 LIBRETRO_FBNEO_PLATFORM = unix-rpi2
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI3),y)
-LIBRETRO_FBNEO_PLATFORM = unix-rpi3_64
+
+else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI3)$(BR2_PACKAGE_BATOCERA_TARGET_RPIZERO2),y)
+    ifeq ($(BR2_arm),y)
+        LIBRETRO_FBNEO_PLATFORM = unix-rpi3
+    else
+        LIBRETRO_FBNEO_PLATFORM = unix-rpi3_64
+    endif
+
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
 LIBRETRO_FBNEO_PLATFORM = unix-rpi4_64
 endif
