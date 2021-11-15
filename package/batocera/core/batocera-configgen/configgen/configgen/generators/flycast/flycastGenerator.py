@@ -107,6 +107,6 @@ class FlycastGenerator(Generator):
             env={
                 'XDG_CONFIG_HOME': batoceraFiles.CONF,
                 'XDG_DATA_HOME': batoceraFiles.flycastSaves,
-                'XDG_DATA_DIRS': batoceraFiles.flycastBios
+                'XDG_DATA_DIRS': batoceraFiles.flycastBios,
                 'PIPEWIRE_LATENCY': '1024/48000'
         })
