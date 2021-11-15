@@ -16,6 +16,9 @@ class SdlPopGenerator(Generator):
                 commandArray.append("joynum={}".format(pad.index))
             nplayer += 1
 
-        return Command.Command(array=commandArray,env={
-            "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
+        return Command.Command(
+            array=commandArray,
+            env={
+                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'PIPEWIRE_LATENCY': '1024/48000'
         })

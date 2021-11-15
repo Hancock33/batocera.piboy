@@ -30,8 +30,12 @@ class SolarusGenerator(Generator):
         # rom
         commandArray.append(rom)
 
-        return Command.Command(array=commandArray, env={
-                'SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS': '0' })
+        return Command.Command(
+            array=commandArray,
+            env={
+                'SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS': '0',
+                'PIPEWIRE_LATENCY': '1024/48000'
+        })
 
     @staticmethod
     def padConfig(system, playersControllers):

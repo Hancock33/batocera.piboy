@@ -42,5 +42,8 @@ class DaphneGenerator(Generator):
         if os.path.isfile(commandsFile):
             commandArray.extend(open(commandsFile,'r').read().split())
 
-        return Command.Command(array=commandArray)
-
+        return Command.Command(
+            array=commandArray,
+            env={
+                'PIPEWIRE_LATENCY': '1024/48000'
+        })
