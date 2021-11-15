@@ -40,7 +40,11 @@ class EasyRPGGenerator(Generator):
 
         EasyRPGGenerator.padConfig(configdir, playersControllers)
 
-        return Command.Command(array=commandArray)
+        return Command.Command(
+            array=commandArray,
+            env={
+                'PIPEWIRE_LATENCY': '1024/48000'
+        })
 
     @staticmethod
     def padConfig(configdir, playersControllers):

@@ -48,4 +48,10 @@ class MugenGenerator(Generator):
             settings.write(configfile)
 
         commandArray = ["batocera-wine", "mugen", "play", rom]
-        return Command.Command(array=commandArray, env={ "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers) })
+
+        return Command.Command(
+            array=commandArray,
+            env={
+                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers),
+                'PIPEWIRE_LATENCY': '1024/48000'
+        })

@@ -32,4 +32,8 @@ class DosBoxGenerator(Generator):
             commandArray.append("-conf")
             commandArray.append("""{}""".format(batoceraFiles.dosboxConfig))
 
-        return Command.Command(array=commandArray)
+        return Command.Command(
+            array=commandArray,
+            env={
+                'PIPEWIRE_LATENCY': '1024/48000'
+        })

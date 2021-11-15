@@ -279,9 +279,14 @@ class DuckstationGenerator(Generator):
             os.makedirs(os.path.dirname(settings_path))
         with open(settings_path, 'w') as configfile:
             settings.write(configfile)
-        env = {"XDG_DATA_HOME":batoceraFiles.CONF, "QT_QPA_PLATFORM":"xcb"}
-        return Command.Command(array=commandArray, env=env)
 
+        return Command.Command(
+            array=commandArray,
+            env={
+                'XDG_CONFIG_HOME': batoceraFiles.CONF,
+                'QT_QPA_PLATFORM': 'xcb',
+                'PIPEWIRE_LATENCY': '1024/48000'
+        })
 
 def getGfxRatioFromConfig(config, gameResolution):
     #ratioIndexes = ["Auto (Game Native)", "Auto (Match Window)", "4:3", "16:9", "1:1", "1:1 PAR", "2:1 (VRAM 1:1)", "3:2", "5:4", "8:7", "16:10", "19:9", "20:9", "32:9"]

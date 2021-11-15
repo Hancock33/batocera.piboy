@@ -11,4 +11,9 @@ class MelonDSGenerator(Generator):
         romBasename = path.basename(rom)
 
         commandArray = ["/usr/bin/melonDS", rom]
-        return Command.Command(array=commandArray)
+
+        return Command.Command(
+            array=commandArray,
+            env={
+                'PIPEWIRE_LATENCY': '1024/48000'
+        })

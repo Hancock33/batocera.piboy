@@ -51,4 +51,9 @@ class DosBoxxGenerator(Generator):
                         "-fastbioslogo",
                         "-conf {}".format(customConfFile)]
 
-        return Command.Command(array=commandArray, env={"XDG_CONFIG_HOME":batoceraFiles.CONF})
+        return Command.Command(
+            array=commandArray,
+            env={
+                'XDG_CONFIG_HOME':batoceraFiles.CONF,
+                'PIPEWIRE_LATENCY': '1024/48000'
+        })

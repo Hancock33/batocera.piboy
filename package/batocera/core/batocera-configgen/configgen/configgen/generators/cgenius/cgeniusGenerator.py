@@ -17,4 +17,8 @@ class CGeniusGenerator(Generator):
         # rom
         commandArray.append(rom)
 
-        return Command.Command(array=commandArray)
+        return Command.Command(
+            array=commandArray,
+            env={
+                'PIPEWIRE_LATENCY': '1024/48000'
+        })

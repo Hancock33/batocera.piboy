@@ -78,7 +78,11 @@ class OpenborGenerator(Generator):
             commandArray = ["OpenBOR6510", rom]
         else:
             commandArray = ["OpenBOR6510", rom]
-        return Command.Command(array=commandArray)
+        return Command.Command(
+            array=commandArray,
+            env={
+                'PIPEWIRE_LATENCY': '1024/48000'
+        })
 
     @staticmethod
     def guessCore(rom):
