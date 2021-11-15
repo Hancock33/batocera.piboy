@@ -87,6 +87,16 @@
             "trigger": "joystick1right",
             "type": "key",
             "target": "KEY_RIGHT"
+        },
+        {
+            "trigger": "l2",
+            "type": "key",
+            "target": "KEY_ENTER"
+        },
+        {
+            "trigger": "r2",
+            "type": "key",
+            "target": "KEY_ENTER"
         }
     ]
 }
