@@ -16,7 +16,6 @@ define DOSBOX_CONFIGURE_CMDS
                     --enable-dynrec \
                     --enable-unaligned_memory \
                     --prefix=/usr \
-                    --disable-opengl \
                     --with-sdl-prefix="$(STAGING_DIR)/usr";
 endef
 
