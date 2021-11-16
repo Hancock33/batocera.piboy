@@ -3,9 +3,8 @@
 # CITRA
 #
 ################################################################################
-# commit 55ec7031ccb2943c2c507620cf4613a86d160670 is reverted by patch, something wrong in it for perfs (patch 004-perf1-revert-core.patch)
-# patch 002-perf1.patch while NO_CAST_FROM_ASCII is causing perfs issues too
-CITRA_VERSION = 90192124cc644248c5b192e08e96a6bbbe7e0eae
+# Version.: Commits on Nov 06, 2021
+CITRA_VERSION = 8dfd9d344563d9f9c9120318350499f560383650
 CITRA_SITE = https://github.com/citra-emu/citra.git
 CITRA_SITE_METHOD=git
 CITRA_GIT_SUBMODULES=YES
