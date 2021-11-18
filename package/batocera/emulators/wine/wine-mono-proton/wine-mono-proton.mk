@@ -3,6 +3,7 @@
 # wine-mono-proton
 #
 ################################################################################
+
 # Wine Mono addon (required)
 WINE_MONO_PROTON_VERSION = 6.4.1
 WINE_MONO_PROTON_SOURCE = wine-mono-$(WINE_MONO_PROTON_VERSION)-x86.tar.xz

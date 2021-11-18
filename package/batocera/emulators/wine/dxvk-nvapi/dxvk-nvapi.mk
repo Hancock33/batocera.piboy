@@ -3,8 +3,8 @@
 # dxvk-nvapi
 #
 ################################################################################
-# Version.: Commits on Oct 19, 2021
-DXVK_NVAPI_VERSION = 16d36c739d0b0020e470e98a3606594e20bb5200
+
+DXVK_NVAPI_VERSION = 0.4
 DXVK_NVAPI_SOURCE = dxvk-nvapi-v$(DXVK_NVAPI_VERSION).tar.gz
 DXVK_NVAPI_SITE = https://github.com/jp7677/dxvk-nvapi/releases/download/v$(DXVK_NVAPI_VERSION)
 DXVK_NVAPI_LICENSE = zlib/libpng

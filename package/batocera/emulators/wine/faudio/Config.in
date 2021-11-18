@@ -8,7 +8,7 @@ config BR2_PACKAGE_FAUDIO
 	depends on !BR2_STATIC_LIBS
 	help
           Faudio
-
+  
 	  This is FAudio, an XAudio reimplementation that focuses solely on developing
 	  fully accurate DirectX Audio runtime libraries for the FNA project, including
 	  XAudio2, X3DAudio, XAPO, and XACT3.
