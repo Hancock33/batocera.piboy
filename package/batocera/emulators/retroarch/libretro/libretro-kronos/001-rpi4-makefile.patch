@@ -1,0 +1,23 @@
+diff --git a/yabause/src/libretro/Makefile b/yabause/src/libretro/Makefile
+index 2e50ea7b..36c6cb7a 100644
+--- a/yabause/src/libretro/Makefile
++++ b/yabause/src/libretro/Makefile
+@@ -116,7 +116,17 @@ else ifneq (,$(findstring rockpro64,$(platform)))
+ 	HAVE_SSE = 0
+ 	FORCE_GLES = 1
+ 	FLAGS += -march=armv8-a+crc -mcpu=cortex-a72 -mtune=cortex-a72.cortex-a53 -mfloat-abi=hard -mfpu=neon-vfpv4 -mvectorize-with-neon-quad
+-
++#RPI4
++else ifeq ($(platform), rpi4)
++	override platform += unix
++	TARGET := $(TARGET_NAME)_libretro.so
++	fpic := -fPIC
++	SHARED := -shared -Wl,--no-undefined -Wl,--version-script=link.T
++	LDFLAGS += -lpthread -lGL
++	ARCH_IS_LINUX = 1
++	HAVE_SSE = 0
++	FORCE_GLES = 1
++    FLAGS += -mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math
+ # ODROIDs
+ else ifeq ($(platform), odroid-n2)
+ 	override platform += unix
