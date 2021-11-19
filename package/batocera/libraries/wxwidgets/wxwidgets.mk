@@ -3,8 +3,8 @@
 # WXWIDGETS
 #
 ################################################################################
-# Version.: Commits on Sep 04, 2021
-WXWIDGETS_VERSION = b3f609781ecb45d3c1ec671b323df0e0482e8670
+
+WXWIDGETS_VERSION = v3.1.0
 WXWIDGETS_SITE = $(call github,wxWidgets,wxWidgets,$(WXWIDGETS_VERSION))
 WXWIDGETS_DEPENDENCIES = zlib libpng jpeg gdk-pixbuf libgtk3
 WXWIDGETS_INSTALL_STAGING = YES
