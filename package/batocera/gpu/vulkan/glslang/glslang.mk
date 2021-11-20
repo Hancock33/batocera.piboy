@@ -3,8 +3,8 @@
 # GLSLANG
 #
 ################################################################################
-# Version.: Commits on Nov 18, 2021
-GLSLANG_VERSION = dd83c37b986a68d364be2be167362cb9b9427282
+# Version.: Commits on Nov 19, 2021
+GLSLANG_VERSION = 2c54c20813ea2242bb28b7be86bb62e299d55932
 
 GLSLANG_SITE =  $(call github,KhronosGroup,glslang,$(GLSLANG_VERSION))
 GLSLANG_DEPENDENCIES = vulkan-headers vulkan-loader
