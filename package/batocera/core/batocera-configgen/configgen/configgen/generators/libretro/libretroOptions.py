@@ -100,7 +100,7 @@ def generateCoreSettings(coreSettings, system, rom):
         # Enable Datasette Hotkeys
         coreSettings.save('vice_datasette_hotkeys', '"enabled"')
         # Not Read 'vicerc'
-        coreSettings.save('vice_read_vicerc',       '"disabled"')
+        # coreSettings.save('vice_read_vicerc',       '"disabled"')
         # Select Joystick Type
         coreSettings.save('vice_Controller',        '"joystick"')
         # Controller options for c64 are in libretroControllers.py
