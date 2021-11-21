@@ -5,7 +5,7 @@ libretro:
   features: [ratio, framecount, showFPS, smooth, shaders, pixel_perfect, decoration, game_translation]
   cfeatures:
     gfxbackend:
-      archs_include: [x86, x86_64, s922x, rpi4, odroidgoa, gameforce]
+      archs_include: [x86, x86_64, rpi4, odroidgoa, gameforce]
       prompt:      GRAPHICS BACKEND
       description: Choose your graphics rendering
       choices:
@@ -3179,6 +3179,30 @@ citra:
 
 daphne:
   features: [ratio, padtokeyboard]
+  cfeatures:
+        bilinear_filter:
+            prompt:      BILINEAR FILTER
+            choices:
+                "On":                           0
+                "Off":                          1
+        blend_sprites:
+            prompt:      BLEND SPRITES (SINGE)
+            description: Restore BLENDMODE outline on Singe sprites
+            choices:
+                "Off":                          0
+                "On":                           1
+        lightgun_hd:
+            prompt:      OVERSIZE OVERLAY (SINGE)
+            description: Use with Singe HD lightgun games
+            choices:
+                "Off":                          0
+                "On":                           1
+        invert_axis:
+            prompt:      INVERT AXIS
+            description: Invert joystick on flight games
+            choices:
+                "Off":                          0
+                "On":                           1
 
 devilutionx:
   features: [ratio, padtokeyboard]
@@ -3187,7 +3211,7 @@ dolphin:
   features: [ratio]
   cfeatures:
         gfxbackend:
-            archs_include: [x86, x86_64, s922x, rpi4, odroidgoa, gameforce]
+            archs_include: [x86, x86_64, rpi4, odroidgoa, gameforce]
             prompt:      GRAPHICS BACKEND
             description: Choose your graphics rendering
             choices:
@@ -3374,7 +3398,7 @@ duckstation:
                 "90 sec / 450 Mo RAM + 360 Mo VRAM":           90
                 "120 sec / 600 Mo RAM + 480 Mo VRAM":          120
         gfxbackend:
-            archs_include: [x86, x86_64, s922x, rpi4, odroidgoa, gameforce]
+            archs_include: [x86, x86_64, rpi4, odroidgoa, gameforce]
             prompt:      GRAPHICS BACKEND
             description: Choose your graphics rendering
             choices:
@@ -3804,7 +3828,7 @@ ppsspp:
   features: [rewind, ratio]
   cfeatures:
         gfxbackend:
-            archs_include: [x86, x86_64, s922x, rpi4, odroidgoa, gameforce]
+            archs_include: [x86, x86_64, rpi4, odroidgoa, gameforce]
             prompt:      GRAPHICS BACKEND
             description: Choose your graphics rendering
             choices:
@@ -4033,7 +4057,7 @@ mame:
                 "Accel":           accel
                 "OpenGL":          opengl
         bgfxbackend:
-            archs_include: [x86, x86_64, s922x, rpi4, odroidgoa, gameforce]
+            archs_include: [x86, x86_64, rpi4, odroidgoa, gameforce]
             prompt:      BGFX BACKEND
             description: Choose your graphics API
             choices:
