@@ -3,8 +3,8 @@
 # BEETLE_PCFX
 #
 ################################################################################
-# Version.: Commits on Nov 17, 2021
-LIBRETRO_BEETLE_PCFX_VERSION = 19f2b7ce529e70655db04d3dd4faf32b4de14df2
+# Version.: Commits on Nov 24, 2021
+LIBRETRO_BEETLE_PCFX_VERSION = 6d2b11e17ad5a95907c983e7c8a70e75508c2d41
 LIBRETRO_BEETLE_PCFX_SITE = $(call github,libretro,beetle-pcfx-libretro,$(LIBRETRO_BEETLE_PCFX_VERSION))
 LIBRETRO_BEETLE_PCFX_LICENSE = GPLv2
 
