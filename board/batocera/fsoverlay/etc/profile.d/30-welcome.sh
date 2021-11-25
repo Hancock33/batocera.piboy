@@ -4,7 +4,7 @@ echo '
      (  _ \  /__\ (_  _)(  _  )/ __)( ___)(  _ \  /__\  
       ) _ < /(__)\  )(   )(_)(( (__  )__)  )   / /(__)\ 
      (____/(__)(__)(__) (_____)\___)(____)(_)\_)(__)(__)
-                   ONLY CORES THAT MATTER
+                 R E A D Y   T O   R E T R O
 '
 echo
 batocera-info 2>/dev/null
