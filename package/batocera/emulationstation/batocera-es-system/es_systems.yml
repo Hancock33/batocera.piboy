@@ -2776,6 +2776,17 @@ rednukem:
     rednukem:
       rednukem: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
 
+rtcw:
+  name:       Return to Castle Wolfenstein
+  manufacturer: Ports
+  release: 2001
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    rtcw:
+      rtcw: { requireAnyOf: [BR2_PACKAGE_RTCW] }
+
 sorr:
   name:       Streets of Rage Remake
   manufacturer: Ports

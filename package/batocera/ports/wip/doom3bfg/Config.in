@@ -1,0 +1,12 @@
+config BR2_PACKAGE_DOOM3BFG
+	bool "doom3bfg"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  Doom 3 BFG Edition
+
+	  https://github.com/RobertBeckebans/RBDOOM-3-BFG
+
+comment "BR2_PACKAGE_DOOM3BFG needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

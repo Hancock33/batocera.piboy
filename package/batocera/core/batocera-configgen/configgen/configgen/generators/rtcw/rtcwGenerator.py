@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+
+import Command
+from generators.Generator import Generator
+import controllersConfig
+
+
+class RtcwGenerator(Generator):
+
+    def generate(self, system, rom, playersControllers, gameResolution):
+        commandArray = ["iowolfsp"]
+
+        return Command.Command(
+            array=commandArray,
+            env={
+                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers),
+                'PIPEWIRE_LATENCY': '1024/48000'
+            })
