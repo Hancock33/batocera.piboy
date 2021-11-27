@@ -2620,6 +2620,17 @@ etekwar:
     etekwar:
       etekwar: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
 
+freedroid:
+  name:       Paradroid
+  manufacturer: Ports
+  release: 1985
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    freedroid:
+      freedroid: { requireAnyOf: [BR2_PACKAGE_FREEDROID] }
+
 ionfury:
   name:       Ion Fury
   manufacturer: Ports
