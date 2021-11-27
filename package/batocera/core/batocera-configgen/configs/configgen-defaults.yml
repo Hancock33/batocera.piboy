@@ -391,6 +391,9 @@ rednukem:
 reminiscence:
   emulator: libretro
   core:     reminiscence
+rtcw:
+  emulator: rtcw
+  core:     rtcw
 samcoupe:
   emulator: samcoupe
   core:     samcoupe

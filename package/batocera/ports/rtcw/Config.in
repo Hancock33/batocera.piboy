@@ -1,0 +1,12 @@
+config BR2_PACKAGE_RTCW
+	bool "rtcw"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  RTCW - IORTCW source port of Return to Castle Wolfenstein.
+
+	  https://github.com/iortcw/iortcw
+
+comment "BR2_PACKAGE_RTCW needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

@@ -1,0 +1,26 @@
+diff --git a/MP/Makefile b/MP/Makefile
+index d23ada9a..5b759cab 100644
+--- a/MP/Makefile
++++ b/MP/Makefile
+@@ -446,7 +446,7 @@ ifneq (,$(findstring "$(PLATFORM)", "linux" "gnu_kfreebsd" "kfreebsd-gnu" "gnu")
+ 
+   ifeq ($(USE_OPENGLES),1)
+     BUILD_RENDERER_REND2 = 0
+-    BASE_CFLAGS += -DUSE_OPENGLES
++    BASE_CFLAGS += -DUSE_OPENGLES -DEGL_NO_X11
+     CLIENT_LIBS = $(SDL_LIBS)
+     RENDERER_LIBS = $(SDL_LIBS)
+     SERVER_LIBS =
+diff --git a/SP/Makefile b/SP/Makefile
+index dd970c1d..4b8d321b 100644
+--- a/SP/Makefile
++++ b/SP/Makefile
+@@ -435,7 +435,7 @@ ifneq (,$(findstring "$(PLATFORM)", "linux" "gnu_kfreebsd" "kfreebsd-gnu" "gnu")
+ 
+   ifeq ($(USE_OPENGLES),1)
+     BUILD_RENDERER_REND2 = 0
+-    BASE_CFLAGS += -DUSE_OPENGLES
++    BASE_CFLAGS += -DUSE_OPENGLES -DEGL_NO_X11
+     CLIENT_LIBS = $(SDL_LIBS)
+     RENDERER_LIBS = $(SDL_LIBS)
+     SERVER_LIBS =
