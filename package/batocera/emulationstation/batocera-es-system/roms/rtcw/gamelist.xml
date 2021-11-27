@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./rtcw.game</path>
+    <name>Return to Castle Wolfenstein</name>
+    <desc>World War II rages and nations fall. SS head Himmler has Hitler's full backing to twist science and the occult into an army capable of annihilating the Allies once and for all. Battling alone, you're on an intense mission to pierce the black heart of the Third Reich and stop Himmler -- or die trying. Fighting in advanced team-based multiplayer mode, you'll wage your own WWII in an all-out Axis vs. Allies contest for frontline domination.</desc>
+    <rating>0.85</rating>
+    <releasedate>20001023T000000</releasedate>
+    <developer>	id Software</developer>
+    <publisher>Activision</publisher>
+    <genre>Shooter-Shooter / 1st person</genre>
+    <players>2-4</players>
+    <image>./images/rtcw.png</image>
+    <favorite>true</favorite>
+    <genreid>259</genreid>
+  </game>
+</gameList>
