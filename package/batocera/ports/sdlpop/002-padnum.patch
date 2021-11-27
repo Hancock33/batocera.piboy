@@ -81,3 +81,4 @@ index 591430c..8dd5ced 100644
  		SDL_HapticRumbleInit(sdl_haptic); // initialize the device for simple rumble
  	} else {
  		sdl_haptic = NULL;
+
