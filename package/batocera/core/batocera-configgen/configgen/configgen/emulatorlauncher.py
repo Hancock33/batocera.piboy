@@ -31,6 +31,7 @@ from generators.etekwar.etekwarGenerator import EtekwarGenerator
 from generators.fba2x.fba2xGenerator import Fba2xGenerator
 from generators.flatpak.flatpakGenerator import FlatpakGenerator
 from generators.flycast.flycastGenerator import FlycastGenerator
+from generators.freedroid.freedroidGenerator import FreedroidGenerator
 from generators.fpinball.fpinballGenerator import FpinballGenerator
 from generators.fsuae.fsuaeGenerator import FsuaeGenerator
 from generators.gsplus.gsplusGenerator import GSplusGenerator

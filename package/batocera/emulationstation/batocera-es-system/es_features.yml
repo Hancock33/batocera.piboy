@@ -4666,6 +4666,9 @@ etekwar:
 flatpak:
   features: [padtokeyboard]
 
+freedroid:
+  features: [padtokeyboard]
+
 gsplus:
   features: [padtokeyboard]
 

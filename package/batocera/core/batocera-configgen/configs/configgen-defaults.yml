@@ -160,6 +160,9 @@ flatpak:
 fmtowns:
   emulator: tsugaru
   core:     tsugaru
+freedroid:
+  emulator: freedroid
+  core:     freedroid
 gameandwatch:
   emulator: libretro
   core:     gw
