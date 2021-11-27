@@ -1,0 +1,14 @@
+config BR2_PACKAGE_GZDOOM
+	bool "GZDOOM"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	select BR2_PACKAGE_ZMUSIC
+	select BR2_HOST_PACKAGE_ZMUSIC
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  GZDoom is a feature centric port for all Doom engine games, based on ZDoom, adding an OpenGL renderer and powerful scripting capabilities
+
+	  gzdoom.drdteam.org
+
+comment "BR2_PACKAGE_GZDOOM needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

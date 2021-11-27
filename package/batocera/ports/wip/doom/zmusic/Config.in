@@ -1,0 +1,12 @@
+config BR2_PACKAGE_ZMUSIC
+	bool "zmusic"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  GZDoom's music system as a standalone library
+
+	  gzdoom.drdteam.org
+
+comment "BR2_PACKAGE_ZMUSIC needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP
