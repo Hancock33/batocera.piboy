@@ -25,8 +25,8 @@ define FREEDROID_INSTALL_TARGET_CMDS
 		DESTDIR=$(TARGET_DIR) \
 		install
 	# evmap config
-	#mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	#cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/FREEDROID/FREEDROID.keys $(TARGET_DIR)/usr/share/evmapy
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/freedroid/freedroid.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(autotools-package))

@@ -1,0 +1,104 @@
+diff --git a/src/input.c b/src/input.c
+index fd191e8..fd0d344 100644
+--- a/src/input.c
++++ b/src/input.c
+@@ -61,35 +61,19 @@ int input_state[INPUT_LAST];	// array of states (pressed/released) of all keys
+ 
+ int key_cmds[CMD_LAST][3] =  // array of mappings {key1,key2,key3 -> cmd}
+   {
+-#ifdef GCW0
+-    {SDLK_UP, 	  JOY_UP, 	0 },		// CMD_UP
+-    {SDLK_DOWN,	  JOY_DOWN, 	0 },		// CMD_DOWN
+-    {SDLK_LEFT,   JOY_LEFT, 	0 },		// CMD_LEFT
+-    {SDLK_RIGHT,  JOY_RIGHT, 	0 },		// CMD_RIGHT
+-    {SDLK_SPACE,  SDLK_LCTRL,  0 },             // CMD_FIRE
+-    {SDLK_LALT,   JOY_BUTTON2,	0 }, 		// CMD_ACTIVATE
+-    {SDLK_BACKSPACE,  SDLK_TAB,  0 },           // CMD_TAKEOVER
+-    {0, 	  0, 		0  }, 	        // CMD_QUIT,
+-    {SDLK_RETURN, 0, 0  }, 			// CMD_PAUSE,
+-    {0, 0, 0 },  		                // CMD_SCREENSHOT
+-    {0,           0,              0  },		// CMD_FULLSCREEN,
+-    {SDLK_ESCAPE, JOY_BUTTON4,    0 },	        // CMD_MENU,
+-    {SDLK_ESCAPE, JOY_BUTTON2,   MOUSE_BUTTON2 }// CMD_BACK
+-#else
+-    {SDLK_UP, 	  JOY_UP, 	'w' },		// CMD_UP
+-    {SDLK_DOWN,	  JOY_DOWN, 	's' },		// CMD_DOWN
+-    {SDLK_LEFT,   JOY_LEFT, 	'a' },		// CMD_LEFT
+-    {SDLK_RIGHT,  JOY_RIGHT, 	'd' },		// CMD_RIGHT
+-    {SDLK_SPACE,  JOY_BUTTON1,   MOUSE_BUTTON1 },// CMD_FIRE
+-    {SDLK_RETURN, SDLK_RSHIFT, 	'e' }, 		// CMD_ACTIVATE
+-    {SDLK_SPACE,  JOY_BUTTON2,   MOUSE_BUTTON2 },// CMD_TAKEOVER
+-    {'q', 	  0, 		 0  }, 	        // CMD_QUIT,
+-    {SDLK_PAUSE,  'p',           0  },	        // CMD_PAUSE,
+-    {SDLK_F12,    0,             0  }, 	        // CMD_SCREENSHOT
+-    {'f',         0,             0  },		// CMD_FULLSCREEN,
+-    {SDLK_ESCAPE, JOY_BUTTON4,   0  },		// CMD_MENU,
+-    {SDLK_ESCAPE, JOY_BUTTON2,   MOUSE_BUTTON2 }// CMD_BACK
+-#endif
++    {SDLK_UP, 	  SDLK_F15,  SDLK_F15 }, // CMD_UP
++    {SDLK_DOWN,	  SDLK_F15,  SDLK_F15 }, // CMD_DOWN
++    {SDLK_LEFT,   SDLK_F15,  SDLK_F15 }, // CMD_LEFT
++    {SDLK_RIGHT,  SDLK_F15,  SDLK_F15 }, // CMD_RIGHT
++    {SDLK_SPACE,  SDLK_F15,  SDLK_F15 }, // CMD_FIRE
++    {SDLK_LSHIFT, SDLK_F15,  SDLK_F15 }, // CMD_ACTIVATE
++    {SDLK_LCTRL, SDLK_F15,  SDLK_F15 }, // CMD_TAKEOVER
++    {SDLK_F15, 	  SDLK_F15,  SDLK_F15 }, // CMD_QUIT,
++    {SDLK_RETURN, SDLK_F15,  SDLK_F15 }, // CMD_PAUSE,
++    {SDLK_F15,    SDLK_F15,  SDLK_F15 }, // CMD_SCREENSHOT
++    {SDLK_F15,    SDLK_F15,  SDLK_F15 }, // CMD_FULLSCREEN,
++    {SDLK_ESCAPE, SDLK_F15,  SDLK_F15 }, // CMD_MENU,
++    {SDLK_ESCAPE, SDLK_F15,  SDLK_F15 }  // CMD_BACK
+   };
+ 
+ char *keystr[INPUT_LAST];
+@@ -315,35 +299,8 @@ int sgn (int x)
+ 
+ void Init_Joy (void)
+ {
+-  int num_joy;
+-
+-  if (SDL_InitSubSystem (SDL_INIT_JOYSTICK) == -1)
+-    {
+-      fprintf(stderr, "Couldn't initialize SDL-Joystick: %s\n", SDL_GetError());
+-      Terminate(ERR);
+-    } else
+-      DebugPrintf(1, "\nSDL Joystick initialisation successful.\n");
+-
+-
+-  DebugPrintf (1, " %d Joysticks found!\n", num_joy = SDL_NumJoysticks ());
+-
+-  if (num_joy > 0)
+-    joy = SDL_JoystickOpen (0);
+-
+-  if (joy)
+-    {
+-      DebugPrintf (1, "Identifier: %s\n", SDL_JoystickName (0));
+-      DebugPrintf (1, "Number of Axes: %d\n", joy_num_axes = SDL_JoystickNumAxes(joy));
+-      DebugPrintf (1, "Number of Buttons: %d\n", SDL_JoystickNumButtons(joy));
+-
+-      /* aktivate Joystick event handling */
+-      SDL_JoystickEventState (SDL_ENABLE);
+-
+-    }
+-  else
+-    joy = NULL;  /* signals that no yoystick is present */
+-
+-
++   SDL_JoystickEventState (SDL_DISABLE);
++   joy = NULL;  /* signals that no yoystick is present */
+   return;
+ }
+ 
+diff --git a/src/sound.c b/src/sound.c
+index ca6887e..96778e3 100644
+--- a/src/sound.c
++++ b/src/sound.c
+@@ -116,7 +116,7 @@ Init_Audio(void)
+   Uint16 audio_format = MIX_DEFAULT_FORMAT;
+   int audio_channels = 2;	// = stereo
+   //  int audio_buffers = 4096;
+-  int audio_buffers = 100; // higher = less risk of sound skips, but more lag
++  int audio_buffers = 4096; // higher = less risk of sound skips, but more lag
+ 
+   DebugPrintf(1, "\nInitializing SDL Audio Systems....\n");
+ 
