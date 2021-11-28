@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-LIBRETRO_SWANSTATION_VERSION = 3f61918000eafdcc2410feb820cad48c870386a3
+LIBRETRO_SWANSTATION_VERSION = fb31d393d4c079005ad411347e33639756843168
 LIBRETRO_SWANSTATION_SITE = $(call github,kivutar,swanstation,$(LIBRETRO_SWANSTATION_VERSION))
 LIBRETRO_SWANSTATION_LICENSE = GPLv2
 LIBRETRO_SWANSTATION_DEPENDENCIES = fmt boost ffmpeg retroarch
