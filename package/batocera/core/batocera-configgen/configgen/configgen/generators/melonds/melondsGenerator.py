@@ -9,7 +9,7 @@ class MelonDSGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
         romBasename = path.basename(rom)
-        
+
         # Verify the save path exists
         if not os.path.exists("/userdata/saves/melonds"):
             os.mkdir("/userdata/saves/melonds")
