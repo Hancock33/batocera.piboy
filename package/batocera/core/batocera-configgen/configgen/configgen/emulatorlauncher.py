@@ -120,6 +120,7 @@ generators = {
     'fba2x': Fba2xGenerator(),
     'flatpak': FlatpakGenerator(),
     'flycast': FlycastGenerator(),
+    'freedroid': FreedroidGenerator(),
     'fpinball': FpinballGenerator(),
     'fsuae': FsuaeGenerator(),
     'gsplus': GSplusGenerator(),
