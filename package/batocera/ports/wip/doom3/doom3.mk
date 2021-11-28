@@ -14,11 +14,11 @@ DOOM3_SUPPORTS_IN_SOURCE_BUILD = NO
 DOOM3_SUBDIR = neo
 
 DOOM3_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
-DOOM3_CONF_OPTS += -DSDL2=ON 
+DOOM3_CONF_OPTS += -DSDL2=ON
 
 define DOOM3_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/neo/buildroot-build/idlib/libidlib.so $(TARGET_DIR)/usr/lib
-	cp -pvr $(@D)/neo/buildroot-build/RBDoom3BFG $(TARGET_DIR)/usr/bin	
+	cp -pvr $(@D)/neo/buildroot-build/RBDoom3BFG $(TARGET_DIR)/usr/bin
 
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

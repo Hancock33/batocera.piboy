@@ -4715,9 +4715,9 @@ prototype:
 
 quake3:
   features: [padtokeyboard]
-  
+
 rtcw:
-  features: [padtokeyboard] 
+  features: [padtokeyboard]
 
 rednukem:
   features: [padtokeyboard]
