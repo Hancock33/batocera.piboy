@@ -1,8 +1,13 @@
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 5064af0..60c3dd3 100644
+index a68ea0ad..1bb64164 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -269,8 +269,8 @@ endif(WIN32)
+@@ -1,4 +1,3 @@
+-cmake_minimum_required(VERSION 3.9)
+ 
+ option(EGL "Set to ON if targeting an EGL device" ${EGL})
+ option(PANDORA "Set to ON if targeting an OpenPandora" ${PANDORA})
+@@ -308,8 +307,8 @@ endif(WIN32)
  
  if(SDL)
    include(FindPkgConfig)
@@ -13,7 +18,21 @@ index 5064af0..60c3dd3 100644
    add_definitions(
  	-DUSE_SDL
    )
-@@ -487,9 +487,9 @@ if( CMAKE_BUILD_TYPE STREQUAL "Debug")
+@@ -522,13 +521,6 @@ set_target_properties(
+ )
+ 
+ if(GLIDEN64_BUILD_TYPE STREQUAL "Release")
+-  include(CheckIPOSupported)
+-  check_ipo_supported(RESULT result)
+-  if(result)
+-    message("Interprocedural optimizations enabled")
+-    set_property(TARGET ${GLideN64_DLL_NAME} PROPERTY INTERPROCEDURAL_OPTIMIZATION TRUE)
+-    set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -O3")
+-  endif()
+   SET_TARGET_PROPERTIES(
+         ${GLideN64_DLL_NAME}
+         PROPERTIES
+@@ -546,9 +538,9 @@ if(GLIDEN64_BUILD_TYPE STREQUAL "Debug")
  
    if(SDL)
          if (NOHQ)
@@ -25,15 +44,15 @@ index 5064af0..60c3dd3 100644
  	endif (NOHQ)
    else(SDL)
  	if (NOHQ)
-@@ -519,9 +519,9 @@ if( CMAKE_BUILD_TYPE STREQUAL "Release")
- 
+@@ -560,9 +552,9 @@ if(GLIDEN64_BUILD_TYPE STREQUAL "Debug")
+ else(GLIDEN64_BUILD_TYPE STREQUAL "Debug")
    if(SDL)
- 	if (NOHQ)
--	  target_link_libraries(${GLideN64_DLL_NAME} ${OPENGL_LIBRARIES} ${SDL_LIBRARIES} ${FREETYPE_LIBRARIES} ${LOG_LIB} ${GLIDENUI_LIBRARIES} osal )
-+	  target_link_libraries(${GLideN64_DLL_NAME} ${OPENGL_LIBRARIES} ${SDL2_LIBRARIES} ${FREETYPE_LIBRARIES} ${LOG_LIB} ${GLIDENUI_LIBRARIES} osal )
- 	else (NOHQ)
--	  target_link_libraries(${GLideN64_DLL_NAME} ${OPENGL_LIBRARIES} ${SDL_LIBRARIES} ${FREETYPE_LIBRARIES} ${LOG_LIB} ${GLIDENUI_LIBRARIES} osal GLideNHQ )
-+	  target_link_libraries(${GLideN64_DLL_NAME} ${OPENGL_LIBRARIES} ${SDL2_LIBRARIES} ${FREETYPE_LIBRARIES} ${LOG_LIB} ${GLIDENUI_LIBRARIES} osal GLideNHQ )
- 	endif (NOHQ)
+         if (NOHQ)
+-          target_link_libraries(${GLideN64_DLL_NAME} ${OPENGL_LIBRARIES} ${SDL_LIBRARIES} ${FREETYPE_LIBRARIES} ${LOG_LIB} ${GLIDENUI_LIBRARIES} osal )
++          target_link_libraries(${GLideN64_DLL_NAME} ${OPENGL_LIBRARIES} ${SDL2_LIBRARIES} ${FREETYPE_LIBRARIES} ${LOG_LIB} ${GLIDENUI_LIBRARIES} osal )
+         else (NOHQ)
+-          target_link_libraries(${GLideN64_DLL_NAME} ${OPENGL_LIBRARIES} ${SDL_LIBRARIES} ${FREETYPE_LIBRARIES} ${LOG_LIB} ${GLIDENUI_LIBRARIES} osal GLideNHQ )
++          target_link_libraries(${GLideN64_DLL_NAME} ${OPENGL_LIBRARIES} ${SDL2_LIBRARIES} ${FREETYPE_LIBRARIES} ${LOG_LIB} ${GLIDENUI_LIBRARIES} osal GLideNHQ )
+         endif (NOHQ)
    else(SDL)
- 	if (NOHQ)
+         if (NOHQ)
