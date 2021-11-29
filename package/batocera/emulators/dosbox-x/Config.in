@@ -3,7 +3,8 @@ config BR2_PACKAGE_DOSBOX_X
         depends on BR2_INSTALL_LIBSTDCPP
         select BR2_PACKAGE_SDL2
 		select BR2_PACKAGE_SDL2_NET
-		select BR2_PACKAGE_SDL_SOUND
+        select BR2_PACKAGE_FLUIDSYNTH
+        select BR2_PACKAGE_FLUIDSYNTH_SDL2
 		select BR2_PACKAGE_ZLIB
         select BR2_PACKAGE_LIBPNG
         select BR2_PACKAGE_LIBOGG
