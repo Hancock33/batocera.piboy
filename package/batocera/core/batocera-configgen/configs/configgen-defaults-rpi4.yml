@@ -1,5 +1,6 @@
 default:
   options:
+    ratio: "full"
     retroarch.menu_driver: rgui
     retroarch.audio_out_rate: 44100
     retroarch.audio_driver: tinyalsa
