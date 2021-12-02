@@ -18,6 +18,7 @@ global:
 
 libretro:
   features: [ratio, framecount, showFPS, smooth, shaders, pixel_perfect, decoration, game_translation]
+  shared: [hud]
   cfeatures:
     gfxbackend:
       archs_include: [x86, x86_64, rpi4, rk3326, gameforce]
@@ -3091,9 +3092,11 @@ libretro:
 
 amiberry:
   features: [ratio, padtokeyboard]
+  shared: [hud]
 
 cannonball:
   features: [ratio]
+  shared: [hud]
   cfeatures:
         highResolution:
             prompt:      HIGH RESOLUTION
@@ -3103,6 +3106,7 @@ cannonball:
                 "On":  1
 
 cemu:
+  shared: [hud]
   cfeatures:
         gfxbackend:
             prompt:      GRAPHICS BACKEND
@@ -3133,6 +3137,7 @@ cemu:
 
 citra:
   features: [ratio]
+  shared: [hud]
   cfeatures:
         citra_screen_layout:
             prompt:      SCREEN LAYOUT
@@ -3194,6 +3199,7 @@ citra:
 
 daphne:
   features: [ratio, padtokeyboard]
+  shared: [hud]
   cfeatures:
         bilinear_filter:
             prompt:      BILINEAR FILTER
@@ -3221,8 +3227,10 @@ daphne:
 
 devilutionx:
   features: [ratio, padtokeyboard]
+  shared: [hud]
 
 dolphin:
+  shared: [hud]
   cfeatures:
         gfxbackend:
             archs_include: [x86, x86_64, rpi4, rk3326, gameforce]
@@ -3402,15 +3410,19 @@ dolphin:
 
 dosbox:
   features: [ratio, padtokeyboard]
+  shared: [hud]
 
 dosbox_staging:
   features: [ratio, padtokeyboard]
+  shared: [hud]
 
 dosbox-x:
   features: [ratio, padtokeyboard]
+  shared: [hud]
 
 duckstation:
   features: [videomode, ratio]
+  shared: [hud]
   cfeatures:
         duckstation_rewind:
             prompt:      REWIND
@@ -3586,15 +3598,19 @@ duckstation:
 
 flycast:
   features: [ratio]
+  shared: [hud]
 
 fpinball:
   features: [ratio]
+  shared: [hud]
 
 fsuae:
   features: [ratio, padtokeyboard]
+  shared: [hud]
 
 hatari:
   features: [padtokeyboard]
+  shared: [hud]
   cfeatures:
         model:
             prompt:      MODEL
@@ -3634,15 +3650,19 @@ hatari:
 
 linapple:
   features: [ratio, padtokeyboard]
+  shared: [hud]
 
 melonds:
   features: []
+  shared: [hud]
 
 moonlight:
   features: [ratio]
+  shared: [hud]
 
 mupen64plus:
   features: [ratio]
+  shared: [hud]
   cfeatures:
         mupen64plus_frameskip:
             prompt:      FRAME SKIP [GL64MK2 ONLY]
@@ -3710,6 +3730,7 @@ mupen64plus:
 
 openbor:
   features: []
+  shared: [hud]
   cfeatures:
         ratio:
             prompt:      SCREEN RATIO
@@ -3736,6 +3757,7 @@ openbor:
 
 pcsx2:
   features: [ratio]
+  shared: [hud]
   cfeatures:
         gfxbackend:
             prompt:      GRAPHICS BACKEND
@@ -3853,6 +3875,7 @@ pcsx2:
 
 ppsspp:
   features: [rewind, ratio]
+  shared: [hud]
   cfeatures:
         gfxbackend:
             archs_include: [x86, x86_64, rpi4, rk3326, gameforce]
@@ -3935,12 +3958,15 @@ ppsspp:
 
 pygame:
   features: [ratio, padtokeyboard]
+  shared: [hud]
 
 reicast:
   features: [ratio]
+  shared: [hud]
 
 rpcs3:
   features: []
+  shared: [hud]
   cfeatures:
         gui:
             prompt:      GRAPHICAL USER INTERFACE
@@ -3965,9 +3991,11 @@ rpcs3:
 
 scummvm:
   features: [ratio, padtokeyboard]
+  shared: [hud]
 
 easyrpg:
   features: []
+  shared: [hud]
   cfeatures:
         testplay:
             prompt:      TEST PLAY
@@ -3993,12 +4021,16 @@ easyrpg:
 
 redream:
   features: []
+  shared: [hud]
+  shared: [hud]
 
 sdlpop:
   features: [ratio, padtokeyboard]
+  shared: [hud]
 
 supermodel:
   features: []
+  shared: [hud]
   cfeatures:
         engine3D:
             prompt:      3D ENGINE
@@ -4051,9 +4083,11 @@ supermodel:
 
 cgenius:
   features: [padtokeyboard]
+  shared: [hud]
 
 vice:
   features: [ratio, padtokeyboard]
+  shared: [hud]
   cfeatures:
         noborder:
             prompt:      ZOOM (HIDE BORDERS)
@@ -4064,6 +4098,7 @@ vice:
 
 tsugaru:
   features: [pad2keyboard]
+  shared: [hud]
   cfeatures:
         cdrom_speed:
             prompt:      CDROM SPEED
@@ -4083,6 +4118,7 @@ tsugaru:
 
 mame:
   features: [decoration, padtokeyboard]
+  shared: [hud]
   cfeatures:
         video:
             prompt:      GRAPHICS BACKEND
@@ -4314,6 +4350,7 @@ mame:
 
 wine:
   features: [padtokeyboard]
+  shared: [hud]
   cfeatures:
         dxvk:
             prompt:      DXVK
@@ -4420,6 +4457,7 @@ wine:
 
 solarus:
   features: []
+  shared: [hud]
   cfeatures:
         joystick:
             prompt:      CONTROL CHOICE
@@ -4431,6 +4469,7 @@ solarus:
 
 mugen:
   features: [padtokeyboard]
+  shared: [hud]
   cfeatures:
         esync:
             prompt:      ESYNC
@@ -4459,12 +4498,15 @@ mugen:
 
 ruffle:
   features: [padtokeyboard]
+  shared: [hud]
 
 lightspark:
   features: [padtokeyboard]
+  shared: [hud]
 
 drastic:
   features: []
+  shared: [hud]
   cfeatures:
         drastic_hires:
             prompt:      HI-RES
@@ -4487,6 +4529,7 @@ drastic:
 
 xemu:
   features: []
+  shared: [hud]
   cfeatures:
         scaling:
             prompt:      SCALING MODE
@@ -4517,6 +4560,7 @@ xemu:
 
 sonic2013:
   features: []
+  shared: [hud]
   cfeatures:
         language:
             prompt:      LANGUAGE
@@ -4567,6 +4611,7 @@ sonic2013:
 
 soniccd:
   features: []
+  shared: [hud]
   cfeatures:
         language:
             prompt:      LANGUAGE
@@ -4614,6 +4659,7 @@ soniccd:
 
 model2emu:
   features: []
+  shared: [hud]
   cfeatures:
         screenRatio:
             prompt:      SCREEN RATIO
@@ -4679,93 +4725,124 @@ model2emu:
 
 abuse:
   features: [padtokeyboard]
+  shared: [hud]
 
 awgl:
   features: [padtokeyboard]
+  shared: [hud]
 
 bstone:
   features: [padtokeyboard]
+  shared: [hud]
 
 cdogs:
   features: [padtokeyboard]
+  shared: [hud]
 
 ecwolf:
   features: [padtokeyboard]
+  shared: [hud]
 
 eduke32:
   features: [padtokeyboard]
+  shared: [hud]
 
 etekwar:
   features: [padtokeyboard]
+  shared: [hud]
 
 flatpak:
   features: [padtokeyboard]
+  shared: [hud]
 
 freedroid:
   features: [padtokeyboard]
+  shared: [hud]
 
 gsplus:
   features: [padtokeyboard]
+  shared: [hud]
 
 hcl:
   features: [padtokeyboard]
+  shared: [hud]
 
 hurrican:
   features: [padtokeyboard]
+  shared: [hud]
 
 ionfury:
   features: [padtokeyboard]
+  shared: [hud]
 
 lexaloffle:
   features: [padtokeyboard]
+  shared: [hud]
 
 nblood:
   features: [padtokeyboard]
+  shared: [hud]
 
 nukem2:
   features: [padtokeyboard]
+  shared: [hud]
 
 openjazz:
   features: [padtokeyboard]
+  shared: [hud]
 
 opentyrian:
   features: [padtokeyboard]
+  shared: [hud]
 
 pcexhumed:
   features: [padtokeyboard]
+  shared: [hud]
 
 play:
   features: []
+  shared: [hud]
 
 prototype:
   features: [padtokeyboard]
+  shared: [hud]
 
 quake3:
   features: [padtokeyboard]
+  shared: [hud]
 
 rtcw:
   features: [padtokeyboard]
+  shared: [hud]
 
 rednukem:
   features: [padtokeyboard]
+  shared: [hud]
 
 simcoupe:
   features: [padtokeyboard]
+  shared: [hud]
 
 sorr:
   features: [padtokeyboard]
+  shared: [hud]
 
 steam:
   features: [padtokeyboard]
+  shared: [hud]
 
 stuntcar:
   features: [padtokeyboard]
+  shared: [hud]
 
 voidsw:
   features: [padtokeyboard]
+  shared: [hud]
 
 yquake2:
   features: [padtokeyboard]
+  shared: [hud]
 
 yuzu:
   features: [videomode, padtokeyboard]
+  shared: [hud]
