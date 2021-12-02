@@ -3,8 +3,8 @@
 # mupen64plus video GLIDEN64
 #
 ################################################################################
-# Version.: Commits on Nov 28, 2021
-MUPEN64PLUS_GLIDEN64_VERSION = 72062a142e5e72d40a06861ac4da79f95d5c1cff
+# Version.: Commits on Nov 23, 2021
+MUPEN64PLUS_GLIDEN64_VERSION = 4e0a4f700c42054da293e1077281cfe339559396
 MUPEN64PLUS_GLIDEN64_SITE = $(call github,gonetz,GLideN64,$(MUPEN64PLUS_GLIDEN64_VERSION))
 MUPEN64PLUS_GLIDEN64_LICENSE = GPLv2
 MUPEN64PLUS_GLIDEN64_DEPENDENCIES = sdl2 alsa-lib mupen64plus-core
