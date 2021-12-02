@@ -1,0 +1,17 @@
+config BR2_PACKAGE_DROIDPORTS
+	bool "droidports"
+	select BR2_PACKAGE_OPENAL
+	select BR2_PACKAGE_LIBZLIB
+	select BR2_PACKAGE_LIBZIP
+	select BR2_PACKAGE_BZIP2
+	select BR2_PACKAGE_LIBPNG
+	select BR2_PACKAGE_FREETYPE
+	select BR2_PACKAGE_SDL2
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  A repository for experimenting with elf loading and in-place patching of android native libraries on non-android operating systems.
+
+	  https://github.com/JohnnyonFlame/droidports
+
+comment "BR2_PACKAGE_DROIDPORTS needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP
