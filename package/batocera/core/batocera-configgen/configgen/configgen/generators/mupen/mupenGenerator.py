@@ -31,8 +31,9 @@ class MupenGenerator(Generator):
         commandArray = [batoceraFiles.batoceraBins[system.config['emulator']], "--corelib", "/usr/lib/libmupen64plus.so.2.0.0", "--gfx", "/usr/lib/mupen64plus/mupen64plus-video-{}.so".format(system.config['core']), "--configdir", batoceraFiles.mupenConf, "--datadir", batoceraFiles.mupenConf]
         commandArray.append(rom)
 
-        return Command.Command(
-            array=commandArray,
-            env={
-                'PIPEWIRE_LATENCY': '1024/48000'
-        })
+        return Command.Command(array=commandArray)
+
+    def getInGameRatio(self, config, gameResolution):
+        if config["ratio"] == "16/9":
+            return 16/9
+        return 4/3
