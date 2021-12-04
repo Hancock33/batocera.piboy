@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./Tomb Raider.game</path>
+    <name>Tomb Raider</name>
+    <desc>Adventurer Lara Croft has been hired to recover the pieces of an ancient artifact known as the Scion. With her fearless acrobatic style she runs, jumps, swims and climbs her way towards the truth of its origin and powers - leaving only a trail of empty tombs and gun-cartridges in her wake.</desc>
+    <releasedate>19981231T000000</releasedate>
+    <developer>Core Design</developer>
+    <publisher>Eidos Interactive</publisher>
+    <image>./images/Tomb Raider.png</image>
+  </game>
+</gameList>
