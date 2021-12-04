@@ -2824,6 +2824,17 @@ nukem2:
     nukem2:
       nuken2: { requireAnyOf: [BR2_PACKAGE_NUKEM2] }
 
+openlara:
+  name:       Tomb Raider 1
+  manufacturer: Ports
+  release: 1996
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    openlara:
+      openlara: { requireAnyOf: [BR2_PACKAGE_OPENLARA] }
+
 opentyrian:
   name:       Tyrian
   manufacturer: Ports

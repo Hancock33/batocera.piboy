@@ -327,6 +327,9 @@ openbor:
 openjazz:
   emulator: openjazz
   core:     openjazz
+openlara:
+  emulator: openlara
+  core:     openlara
 opentyrian:
   emulator: opentyrian
   core:     opentyrian

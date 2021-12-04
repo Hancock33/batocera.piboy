@@ -1,0 +1,13 @@
+diff --git a/src/platform/sdl2/main.cpp b/src/platform/sdl2/main.cpp
+index 02ac9f8..a23ab28 100644
+--- a/src/platform/sdl2/main.cpp
++++ b/src/platform/sdl2/main.cpp
+@@ -501,6 +501,8 @@ int main(int argc, char **argv) {
+ 
+     cacheDir[0] = saveDir[0] = contentDir[0] = 0;
+ 
++    strcpy(contentDir,  "/userdata/roms/openlara/");
++
+     const char *home;
+     if (!(home = getenv("HOME")))
+         home = getpwuid(getuid())->pw_dir;
