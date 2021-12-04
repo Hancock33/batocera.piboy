@@ -56,6 +56,7 @@ from generators.nblood.nbloodGenerator import NbloodGenerator
 from generators.nukem2.nukem2Generator import Nukem2Generator
 from generators.openbor.openborGenerator import OpenborGenerator
 from generators.openjazz.openjazzGenerator import OpenJazzGenerator
+from generators.openlara.openlaraGenerator import OpenlaraGenerator
 from generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
 from generators.pcexhumed.pcexhumedGenerator import PcexhumedGenerator
 from generators.pcsx2.pcsx2Generator import Pcsx2Generator
@@ -146,6 +147,7 @@ generators = {
     'nukem2': Nukem2Generator(),
     'openbor' : OpenborGenerator(),
     'openjazz': OpenJazzGenerator(),
+    'openlara': OpenlaraGenerator(),
     'opentyrian': OpentyrianGenerator(),
     'pcexhumed': PcexhumedGenerator(),
     'pcsx2': Pcsx2Generator(),

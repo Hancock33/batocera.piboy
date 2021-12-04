@@ -4789,6 +4789,10 @@ nukem2:
 openjazz:
   features: [padtokeyboard]
   shared: [hud]
+  
+openlara:
+  features: [padtokeyboard]
+  shared: [hud]
 
 opentyrian:
   features: [padtokeyboard]
