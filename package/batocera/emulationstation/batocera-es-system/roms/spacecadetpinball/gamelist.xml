@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./spacecadetpinball.game</path>
+    <name>3D Ultra Pinball</name>
+    <desc>Some would call it Impossible Pinball.  Not that it is difficult to play, rather that you could never build a pinball machine that could do the type of things that this game does.  But it seems as though that's the point.  As like any pinball game, there is an underlying plot in which you must achieve certain goals on each of the three pinball tables (you can warp between them).This takes you off into the fantasy pinball world, where anything can happen.  Tanks can attack your ball, comets can fly in and create a crater in the middle of the board.  Who knows what will happen next.</desc>
+    <releasedate />
+    <image>./images/spacecadetpinball.png</image>
+  </game>
+</gameList>
+
