@@ -31,12 +31,12 @@ define SPACECADETPINBALL_INSTALL_TARGET_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/spacecadetpinball/spacecadetpinball.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-defineSPACECADETPINBALL_INSTALL_BOOT_PIBOY
+define SPACECADETPINBALL_INSTALL_BOOT_PIBOY
     cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/spacecadetpinball/SpaceCadetPinball.rpi4 $(TARGET_DIR)/usr/bin/SpaceCadetPinball
 	chmod 0754 $(TARGET_DIR)/usr/bin/SpaceCadetPinball
 endef
 
-defineSPACECADETPINBALL_INSTALL_BOOT_X86
+define SPACECADETPINBALL_INSTALL_BOOT_X86
     cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/spacecadetpinball/SpaceCadetPinball.x86 $(TARGET_DIR)/usr/bin/SpaceCadetPinball
 	chmod 0754 $(TARGET_DIR)/usr/bin/SpaceCadetPinball
 endef
