@@ -443,6 +443,9 @@ sonicretro:
 sorr:
   emulator: sorr
   core:     sorr
+spacecadetpinball:
+  emulator: spacecadetpinball
+  core:     spacecadetpinball
 steam:
   emulator: steam
   core:     steam
