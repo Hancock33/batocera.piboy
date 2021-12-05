@@ -4830,6 +4830,10 @@ sorr:
   features: [padtokeyboard]
   shared: [hud]
 
+spacecadetpinball:
+  features: [padtokeyboard]
+  shared: [hud]
+  
 steam:
   features: [padtokeyboard]
   shared: [hud]

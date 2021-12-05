@@ -75,6 +75,7 @@ from generators.sdlpop.sdlpopGenerator import SdlPopGenerator
 from generators.solarus.solarusGenerator import SolarusGenerator
 from generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
 from generators.sorr.sorrGenerator import SorrGenerator
+from generators.spacecadetpinball.spacecadetpinballGenerator import SpacecadetpinballGenerator
 from generators.steam.steamGenerator import SteamGenerator
 from generators.stuntcar.stuntcarGenerator import StuntcarGenerator
 from generators.supermodel.supermodelGenerator import SupermodelGenerator
@@ -167,6 +168,7 @@ generators = {
     'sonic2013': SonicRetroGenerator(),
     'soniccd': SonicRetroGenerator(),
     'sorr': SorrGenerator(),
+    'spacecadetpinball': SpacecadetpinballGenerator(),
     'steam': SteamGenerator(),
     'stuntcar': StuntcarGenerator(),
     'supermodel': SupermodelGenerator(),
