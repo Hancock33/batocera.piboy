@@ -1,0 +1,53 @@
+{
+    "actions_player1": [
+        {
+            "trigger": [
+                "hotkey",
+                "start"
+            ],
+            "type": "exec",
+            "target": "killall -9 openomf"
+        },
+        {
+            "trigger": "up",
+            "type": "key",
+            "target": "KEY_UP"
+        },
+        {
+            "trigger": "down",
+            "type": "key",
+            "target": "KEY_DOWN"
+        },
+        {
+            "trigger": "left",
+            "type": "key",
+            "target": "KEY_LEFT"
+        },
+        {
+            "trigger": "right",
+            "type": "key",
+            "target": "KEY_RIGHT"
+        },
+        {
+            "trigger": "start",
+            "type": "key",
+            "target": "KEY_ENTER"
+        },
+        {
+            "trigger": "select",
+            "type": "key",
+            "target": "KEY_ESC"
+        },
+        {
+            "trigger": "b",
+            "type": "key",
+            "target": "KEY_ENTER"
+        },
+        {
+            "trigger": "a",
+            "type": "key",
+            "target": "KEY_RIGHTSHIFT"
+        }
+    ]
+}
+

@@ -330,6 +330,9 @@ openjazz:
 openlara:
   emulator: openlara
   core:     openlara
+omf2097:
+  emulator: omf2097
+  core:     omf2097
 opentyrian:
   emulator: opentyrian
   core:     opentyrian

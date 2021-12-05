@@ -4794,6 +4794,10 @@ openlara:
   features: [padtokeyboard]
   shared: [hud]
 
+omf2097:
+  features: [padtokeyboard]
+  shared: [hud]
+
 opentyrian:
   features: [padtokeyboard]
   shared: [hud]
