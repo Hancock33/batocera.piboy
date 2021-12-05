@@ -2835,6 +2835,17 @@ openlara:
     openlara:
       openlara: { requireAnyOf: [BR2_PACKAGE_OPENLARA] }
 
+omf2097:
+  name:       One Must Fall 2097
+  manufacturer: Ports
+  release: 1994
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    omf2097:
+      omf2097: { requireAnyOf: [BR2_PACKAGE_OMF2097] }
+
 opentyrian:
   name:       Tyrian
   manufacturer: Ports

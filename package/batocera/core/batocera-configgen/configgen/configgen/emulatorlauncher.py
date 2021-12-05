@@ -57,6 +57,7 @@ from generators.nukem2.nukem2Generator import Nukem2Generator
 from generators.openbor.openborGenerator import OpenborGenerator
 from generators.openjazz.openjazzGenerator import OpenJazzGenerator
 from generators.openlara.openlaraGenerator import OpenlaraGenerator
+from generators.omf2097.omf2097Generator import Omf2097Generator
 from generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
 from generators.pcexhumed.pcexhumedGenerator import PcexhumedGenerator
 from generators.pcsx2.pcsx2Generator import Pcsx2Generator
@@ -149,6 +150,7 @@ generators = {
     'openbor' : OpenborGenerator(),
     'openjazz': OpenJazzGenerator(),
     'openlara': OpenlaraGenerator(),
+    'omf2097': Omf2097Generator(),
     'opentyrian': OpentyrianGenerator(),
     'pcexhumed': PcexhumedGenerator(),
     'pcsx2': Pcsx2Generator(),
