@@ -321,9 +321,8 @@ openbor:
   emulator: openbor
   core:     openbor6412
   options:
-    hud_support: false
-    ratio:  0
-    filter: 0
+    # none because some games fails by default with textures (street of rage 2x)
+    bezel: none
 openjazz:
   emulator: openjazz
   core:     openjazz
