@@ -54,6 +54,8 @@ define LIBRETRO_MAME2003_PLUS_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2003-plus/samples
 	cp -r $(@D)/metadata/* \
 		$(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2003-plus
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
+		cp -avr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-mame2003-plus/es_systems_arcade.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
 endef
 
 define LIBRETRO_MAME2003_PLUS_NAMCO_QUICK_FIX
