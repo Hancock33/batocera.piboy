@@ -1,0 +1,83 @@
+From 01f3ad92df8cefc3e0a86bd14ac1815ae1832204 Mon Sep 17 00:00:00 2001
+From: Marshall Mohror <mohror64@gmail.com>
+Date: Mon, 20 Sep 2021 22:28:48 -0500
+Subject: [PATCH] Fix `signal_stack_size` for glibc 2.34
+
+`SIGSTKSZ` is now defined as `sysconf(_SC_SIGSTKSZ)` which is not constexpr, and returns a long which throws off the `std::max` template deduction.
+
+Signed-off-by: Enrico Belleri <idesmi@protonmail.com>
+---
+ src/dynarmic/backend/x64/exception_handler_posix.cpp | 2 +-
+ src/dynarmic/backend/A64/exception_handler_posix.cpp | 2 +-
+ 2 file changed, 2 insertion(+), 2 deletion(-)
+
+diff --git a/src/dynarmic/backend/x64/exception_handler_posix.cpp b/src/dynarmic/backend/x64/exception_handler_posix.cpp
+index ff01ab606..bdaac0c3e 100644
+--- a/externals/dynarmic/src/backend/x64/exception_handler_posix.cpp
++++ b/externals/dynarmic/src/backend/x64/exception_handler_posix.cpp
+@@ -64,7 +64,7 @@ class SigHandler {
+ SigHandler sig_handler;
+ 
+ SigHandler::SigHandler() {
+-    constexpr size_t signal_stack_size = std::max(SIGSTKSZ, 2 * 1024 * 1024);
++    const size_t signal_stack_size = std::max<size_t>(SIGSTKSZ, 2 * 1024 * 1024);
+ 
+     signal_stack_memory = std::malloc(signal_stack_size);
+
+--- a/externals/dynarmic/src/backend/A64/exception_handler_posix.cpp	2021-09-11 09:45:54.000000000 +0200
++++ b/externals/dynarmic/src/backend/A64/exception_handler_posix.cpp	2021-12-07 12:59:05.253011697 +0100
+@@ -64,8 +64,7 @@
+ SigHandler::SigHandler() {
+     // Method below from dolphin.
+ 
+-    constexpr std::size_t signal_stack_size =
+-        static_cast<std::size_t>(std::max(SIGSTKSZ, 2 * 1024 * 1024));
++    const size_t signal_stack_size = std::max<size_t>(SIGSTKSZ, 2 * 1024 * 1024);
+ 
+     stack_t signal_stack;
+     signal_stack.ss_sp = malloc(signal_stack_size);
+ 
+--- a/externals/teakra/externals/catch/catch.hpp	2021-09-11 09:45:54.000000000 +0200
++++ b/externals/teakra/externals/catch/catch.hpp	2021-12-07 13:12:50.866262224 +0100
+@@ -8161,7 +8161,7 @@
+ 
+     // 32kb for the alternate stack seems to be sufficient. However, this value
+     // is experimentally determined, so that's not guaranteed.
+-    constexpr static std::size_t sigStackSize = 32768 >= MINSIGSTKSZ ? 32768 : MINSIGSTKSZ;
++    constexpr static std::size_t sigStackSize = 32768;
+ 
+     static SignalDefs signalDefs[] = {
+         { SIGINT,  "SIGINT - Terminal interrupt signal" },
+--- a/externals/dynarmic/externals/catch/catch.hpp	2021-09-11 09:45:54.000000000 +0200
++++ b/externals/dynarmic/externals/catch/catch.hpp	2021-12-07 13:13:56.347634761 +0100
+@@ -10732,7 +10732,7 @@
+ 
+     // 32kb for the alternate stack seems to be sufficient. However, this value
+     // is experimentally determined, so that's not guaranteed.
+-    static constexpr std::size_t sigStackSize = 32768 >= MINSIGSTKSZ ? 32768 : MINSIGSTKSZ;
++    static constexpr std::size_t sigStackSize = 32768;
+ 
+     static SignalDefs signalDefs[] = {
+         { SIGINT,  "SIGINT - Terminal interrupt signal" },
+--- a/externals/catch/include/internal/catch_fatal_condition.cpp	2021-09-11 09:45:54.000000000 +0200
++++ b/externals/catch/include/internal/catch_fatal_condition.cpp	2021-12-07 13:15:01.212994693 +0100
+@@ -97,7 +97,7 @@
+     
+     // 32kb for the alternate stack seems to be sufficient. However, this value
+     // is experimentally determined, so that's not guaranteed.
+-    static constexpr std::size_t sigStackSize = 32768 >= MINSIGSTKSZ ? 32768 : MINSIGSTKSZ;
++    static constexpr std::size_t sigStackSize = 32768;
+ 
+     static SignalDefs signalDefs[] = {
+         { SIGINT,  "SIGINT - Terminal interrupt signal" },
+--- a/externals/catch/single_include/catch2/catch.hpp	2021-09-11 09:45:54.000000000 +0200
++++ b/externals/catch/single_include/catch2/catch.hpp	2021-12-07 13:16:04.558323026 +0100
+@@ -10819,7 +10819,7 @@
+ 
+     // 32kb for the alternate stack seems to be sufficient. However, this value
+     // is experimentally determined, so that's not guaranteed.
+-    static constexpr std::size_t sigStackSize = 32768 >= MINSIGSTKSZ ? 32768 : MINSIGSTKSZ;
++    static constexpr std::size_t sigStackSize = 32768;
+ 
+     static SignalDefs signalDefs[] = {
+         { SIGINT,  "SIGINT - Terminal interrupt signal" },

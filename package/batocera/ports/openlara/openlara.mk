@@ -3,8 +3,8 @@
 # Tomb Raider
 #
 ################################################################################
-# Version.: Commits on Dec 04, 2021
-OPENLARA_VERSION = 2f257faf8206564a12631d2af38daaecea2e8a14
+# Version.: Commits on Dec 05, 2021
+OPENLARA_VERSION = 22307b54fe24c6a66c1c54b97e481dd5910dfab1
 OPENLARA_SITE = $(call github,XProger,OpenLara,$(OPENLARA_VERSION))
 
 OPENLARA_DEPENDENCIES = sdl2 sdl2_mixer openal
