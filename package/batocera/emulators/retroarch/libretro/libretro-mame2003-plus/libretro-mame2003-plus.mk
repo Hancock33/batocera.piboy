@@ -51,11 +51,60 @@ define LIBRETRO_MAME2003_PLUS_INSTALL_TARGET_CMDS
 	# Bios
     # Need to think of another way to use these files.
     # They take up a lot of space on tmpfs.
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2003-plus/samples
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2003-plus/samples
 	cp -r $(@D)/metadata/* \
 		$(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2003-plus
 		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
-		cp -avr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-mame2003-plus/es_systems_arcade.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
+	cp -avr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-mame2003-plus/es_systems_arcade.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/acclaim
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/alg
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/alphadenshi
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/amcoe
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/atari
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/atlus
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/banpresto
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/cave
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/centurye
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/cinematronics
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/comad
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/cps1
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/cps2
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/cps3
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/dataeast
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/dynax
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/eighting
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/exidy
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/gaelco
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/gottlieb
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/igs
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/incredibletech
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/irem
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/jaleco
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/kaneko
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/konami
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/midway
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/mitchell
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/namco
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/nichibutsu
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/nintendo
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/nmk
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/pgm
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/playchoice
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/psikyo
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/sammy
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/sega
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/seibu
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/semicom
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/seta
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/snk
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/taito
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/technos
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/tecmo
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/toaplan
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/unico
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/universal
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/videosystem
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade/visco
 endef
 
 define LIBRETRO_MAME2003_PLUS_NAMCO_QUICK_FIX
