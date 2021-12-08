@@ -3,8 +3,8 @@
 # Return to Castle Wolfenstein
 #
 ################################################################################
-# Version.: Commits on Nov 19, 2021
-RTCW_VERSION = e10e9a429a62e60a0d1cf35d1d2166a6cb7bcc1f
+# Version.: Commits on Dec 06, 2021
+RTCW_VERSION = 54f6cef4f6dea7810780a9e7692767577c45be8f
 RTCW_SITE = $(call github,iortcw,iortcw,$(RTCW_VERSION))
 
 RTCW_DEPENDENCIES = sdl2 sdl2_mixer openal
