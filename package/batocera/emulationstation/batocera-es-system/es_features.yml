@@ -307,8 +307,7 @@ libretro:
                     "hybrid top ratio 3":    Hybrid Top-Ratio3
                     "hybrid bottom ratio 2": Hybrid Bottom-Ratio2
                     "hybrid bottom ratio 3": Hybrid Bottom-Ratio3
-    dolphin:
-      features: []
+
     dosbox:
       features: [latency_reduction, padtokeyboard]
       cfeatures:
@@ -3231,7 +3230,8 @@ devilutionx:
   shared: [hud]
 
 dolphin:
-  shared: [hud, decoration]
+  features: [decoration]
+  shared: [hud]
   cfeatures:
         gfxbackend:
             archs_include: [x86, x86_64, rpi4, rk3326, gameforce]
@@ -3399,15 +3399,6 @@ dolphin:
                     "Wiimote Sideway + Swing":   is
                     "Wiimote Sideway + Tilt":    it
                     "Wiimote Sideway + Nunchuk": in
-
-    gamecube:
-        cfeatures:
-            gamepadtype:
-                prompt:      GAMEPAD TYPE
-                description: Use this option in case you've a special adapter for the gamecube
-                choices:
-                    "Standard controller":         6
-                    "Gamecube adpater for Wii U": 12
 
 dosbox:
   features: [ratio, padtokeyboard, decoration]
@@ -3731,6 +3722,7 @@ mupen64plus:
 
 openbor:
   features: [decoration]
+  shared: [hud]
   cfeatures:
         ratio:
             prompt:      SCREEN RATIO
@@ -4021,7 +4013,6 @@ easyrpg:
 
 redream:
   features: [decoration]
-  shared: [hud]
   shared: [hud]
 
 sdlpop:
@@ -4468,7 +4459,7 @@ solarus:
                 "Right Joystick":   joystick2
 
 mugen:
-  features: [padtokeyboard]
+  features: [padtokeyboard, decoration]
   shared: [hud]
   cfeatures:
         esync:
