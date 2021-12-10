@@ -146,7 +146,7 @@ libretro:
                     "192+KB":  192
                     "512KB":   512
                     "576+KB":  576
-    mesens
+    mesens:
       features: [netplay, rewind, autosave, latency_reduction, padtokeyboard]
       cfeatures:
             mesens_ntsc_filter:
