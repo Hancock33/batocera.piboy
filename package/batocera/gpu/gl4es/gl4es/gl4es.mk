@@ -3,8 +3,8 @@
 # gl4es
 #
 ################################################################################
-# Version.: Commits on Nov 20, 2021
-GL4ES_VERSION = b2d42913871f3c31ff69b243789e5a451f59b44b
+# Version.: Commits on Dec 11, 2021
+GL4ES_VERSION = 6c73d36ae0781bc4e81cbdb0000006bdae7e4a87
 GL4ES_SITE = $(call github,ptitSeb,gl4es,$(GL4ES_VERSION))
 GL4ES_LICENSE = MIT License
 
