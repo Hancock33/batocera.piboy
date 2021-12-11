@@ -12,7 +12,7 @@ snes:
       snes9x:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SNES9X]      }
       bsnes:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES]       }
       bsnes_hd:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES_HD]    }
-      mesen-s:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]      }
+      mesens:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]      }
   comment_en: |
     For more info: https://wiki.batocera.org/systems:snes
   comment_fr: |
@@ -248,7 +248,7 @@ gbc:
       gambatte: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GAMBATTE] }
       mgba:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA] }
       vba-m:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VBA_M] }
-      mesen-s:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS] }
+      mesens:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS] }
   comment_en: |
     For more info: https://wiki.batocera.org/systems:gbc
   comment_fr: |
@@ -265,7 +265,7 @@ gb:
       gambatte: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GAMBATTE] }
       mgba:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA] }
       vba-m:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VBA_M] }
-      mesen-s:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS] }
+      mesens:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS] }
   comment_en: |
     For more info: https://wiki.batocera.org/systems:gb
   comment_fr: |
@@ -281,7 +281,7 @@ sgb:
   emulators:
     libretro:
       mgba:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA] }
-      mesens:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS] }
+      mesens:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS] }
 
 gbc2players:
   name:       Game Boy Color (2 players)
@@ -1660,7 +1660,7 @@ satellaview:
     libretro:
       pocketsnes:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_POCKETSNES] }
       snes9x:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SNES9X]     }
-      mesen-s:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]     }
+      mesens:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]     }
 
 sufami:
   name:       SuFami Turbo
