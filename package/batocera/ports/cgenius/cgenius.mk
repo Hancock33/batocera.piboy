@@ -33,6 +33,8 @@ define CGENIUS_INSTALL_TARGET_SHARED_LIBRARIES
 	cp $(@D)/GsKit/graphics/libGsKit_graphics.so $(TARGET_DIR)/usr/lib
 	cp $(@D)/GsKit/widgets/libGsKit_widgets.so $(TARGET_DIR)/usr/lib
 	cp $(@D)/GsKit/libGsKit.so $(TARGET_DIR)/usr/lib
+	mv $(TARGET_DIR)/userdata/roms/cgenius/commandergenius /usr/share/batocera/datainit/roms/cgenius
+	rm -r $(TARGET_DIR)/userdata
 
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
