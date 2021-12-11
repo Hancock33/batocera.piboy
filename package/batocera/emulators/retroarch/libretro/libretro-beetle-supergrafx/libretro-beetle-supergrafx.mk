@@ -3,8 +3,8 @@
 # BEETLE_SUPERGRAFX
 #
 ################################################################################
-# Version.: Commits on Nov 24, 2021
-LIBRETRO_BEETLE_SUPERGRAFX_VERSION = cd800d701f0b8f4dcb1654a5cb5b24ee09dd9257
+# Version.: Commits on Dec 11, 2021
+LIBRETRO_BEETLE_SUPERGRAFX_VERSION = 18eac95f2cd29360d05d4adbb9f63d4852ca3413
 LIBRETRO_BEETLE_SUPERGRAFX_SITE = $(call github,libretro,beetle-supergrafx-libretro,$(LIBRETRO_BEETLE_SUPERGRAFX_VERSION))
 LIBRETRO_BEETLE_SUPERGRAFX_LICENSE = GPLv2
 
