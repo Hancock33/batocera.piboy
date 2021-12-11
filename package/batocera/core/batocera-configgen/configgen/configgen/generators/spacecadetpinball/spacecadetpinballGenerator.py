@@ -8,7 +8,7 @@ import controllersConfig
 class SpacecadetpinballGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
-        commandArray = ["/userdata/roms/spacecadetpinball/SpaceCadetPinball"]
+        commandArray = ["SpaceCadetPinball"]
 
         return Command.Command(
             array=commandArray,
