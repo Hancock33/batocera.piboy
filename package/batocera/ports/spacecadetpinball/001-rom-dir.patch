@@ -1,0 +1,21 @@
+diff --git a/SpaceCadetPinball/pch.h b/SpaceCadetPinball/pch.h
+index 281dfd1..b970c00 100644
+--- a/SpaceCadetPinball/pch.h
++++ b/SpaceCadetPinball/pch.h
+@@ -95,13 +95,14 @@ inline FILE* fopenu(const char* path, const char* opt)
+ #endif
+ 
+ // Platform specific data paths not found in SDL
+-constexpr const char* PlatformDataPaths[2] = 
++constexpr const char* PlatformDataPaths[3] = 
+ {
+ 	#ifdef _WIN32
+ 	nullptr
+ 	#else
+ 	"/usr/local/share/SpaceCadetPinball/",
+-	"/usr/share/SpaceCadetPinball/"
++	"/usr/share/SpaceCadetPinball/",
++	"/userdata/roms/spacecadetpinball/"
+ 	#endif
+ };
+ 
