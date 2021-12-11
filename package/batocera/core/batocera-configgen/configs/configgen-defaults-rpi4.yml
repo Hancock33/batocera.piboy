@@ -4,7 +4,7 @@ default:
     retroarch.menu_driver: rgui
     retroarch.audio_out_rate: 44100
     retroarch.audio_driver: tinyalsa
-    retroarch.max_swapchain_images: 1
+    retroarch.video_max_swapchain_images: 1
 
 nds:
   emulator: drastic
