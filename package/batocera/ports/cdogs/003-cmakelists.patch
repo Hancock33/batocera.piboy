@@ -1,0 +1,11 @@
+diff -Nur old/src/proto/CMakeLists.txt cdogs-sdl-1.2.0/src/proto/CMakeLists.txt
+--- old/src/proto/CMakeLists.txt        2021-12-02 11:16:04.000000000 +0100
++++ cdogs-sdl-1.2.0/src/proto/CMakeLists.txt    2021-12-03 16:41:53.692774618 +0100
+@@ -10,5 +10,6 @@
+ 
+ include_directories(${CMAKE_CURRENT_BINARY_DIR})
+ set_source_files_properties(${PROTO_SRCS} ${PROTO_HDRS}
++    DIRECTORY .
+     PROPERTIES GENERATED TRUE)
+ add_library(cdogs_proto STATIC ${PROTO_SRCS} ${PROTO_HDRS} msg.options msg.proto)
+
