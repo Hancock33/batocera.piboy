@@ -4,9 +4,8 @@
 #
 ################################################################################
 # Version.: Commits on May 05, 2017
-AVP_VERSION = 20170505
-AVP_SITE = http://icculus.org/avp/files
-AVP_SOURCE = avp-$(AVP_VERSION)-a1.tar.gz
+AVP_VERSION = 76a0169ab4a9226ae0f637fbabbf836447f804e9
+AVP_SITE = $(call github,Rinnegatamante,AvP-Gold-Vita,$(AVP_VERSION))
 
 AVP_DEPENDENCIES = sdl2 sdl2_mixer
 AVP_LICENSE = GPL-2.0
