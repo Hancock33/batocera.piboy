@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-BATOCERA_ES_SYSTEM_DEPENDENCIES = host-python3 host-python-pyyaml batocera-configgen
+BATOCERA_ES_SYSTEM_DEPENDENCIES = host-python3 host-python-pyyaml batocera-configgen host-gettext
 BATOCERA_ES_SYSTEM_SOURCE=
 BATOCERA_ES_SYSTEM_VERSION=1.03
 
@@ -14,6 +14,7 @@ define BATOCERA_ES_SYSTEM_BUILD_CMDS
 		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/es_systems.yml        \
 		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/es_features.yml       \
 		$(@D)/es_external_translations.h \
+		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/locales/blacklisted-words.txt \
 		$(CONFIG_DIR)/.config \
 		$(@D)/es_systems.cfg \
 		$(@D)/es_features.cfg \
@@ -21,6 +22,12 @@ define BATOCERA_ES_SYSTEM_BUILD_CMDS
 		$(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml \
 		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/roms \
 		$(@D)/roms $(BATOCERA_SYSTEM_ARCH)
+		# translations
+		mkdir -p $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/locales
+		echo "$(@D)/es_external_translations.h" | xgettext --language=C --add-comments=TRANSLATION -f - -o $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/locales/batocera-es-system.pot --no-location --keyword=_
+		for PO in $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/locales/*/batocera-es-system.po; do msgmerge -U --no-fuzzy-matching $${PO} $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/locales/batocera-es-system.pot; done
+		mkdir -p $(STAGING_DIR)/usr/share/batocera-es-system/locales
+		cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/locales $(STAGING_DIR)/usr/share/batocera-es-system
 endef
 
 define BATOCERA_ES_SYSTEM_INSTALL_TARGET_CMDS
