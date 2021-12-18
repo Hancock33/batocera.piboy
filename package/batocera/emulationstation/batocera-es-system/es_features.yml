@@ -4112,11 +4112,32 @@ mame:
                 "Off (Default)":    0
                 "DS3 Orientation":  1
                 "X360 Orientation": 2
+        altlayout:
+            prompt:      SPECIAL CONTROL LAYOUTS
+            description: Controls for 5/6 button games and other unique controls
+            choices:
+                "Default Only":                 0
+                "Street Fighter (SNES)":        1
+                "Street Fighter (Modern)":      4
+                "Mortal Kombat (SNES)":         2
+                "Killer Instinct (SNES)":       3
+                "Genesis 6-Button (Retroarch)": 5
+                "Neo Geo (Neo Geo Mini Pad)":   6
+                "Neo Geo (Neo Geo CD Pad)":     7
+                "Neo Geo (Offset Fightstick)":  8
+                "Twin Stick with Triggers":     9
+                "Rotated 4-Way Stick (Q*Bert)": 10
+        customcfg:
+            prompt:      CUSTOM MAME CONFIG
+            description: Don't overwrite default config on launch
+            choices:
+                "On":                                         1
+                "Off (Will erase system config next launch)": 0
   systems:
        apfm1000:
             cfeatures:
                 pergamecfg:
-                    prompt:      CUSTOM CONFIG
+                    prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
                         "On":  1
@@ -4124,7 +4145,7 @@ mame:
        arcadia:
             cfeatures:
                 pergamecfg:
-                    prompt:      CUSTOM CONFIG
+                    prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
                         "On":  1
@@ -4132,7 +4153,7 @@ mame:
        astrocde:
             cfeatures:
                 pergamecfg:
-                    prompt:      CUSTOM CONFIG
+                    prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
                         "On":  1
@@ -4146,7 +4167,7 @@ mame:
                         "Cartridge":   cart
                         "Cassette":    cass
                 pergamecfg:
-                    prompt:      CUSTOM CONFIG
+                    prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
                         "On":  1
@@ -4172,7 +4193,7 @@ mame:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    prompt:      CUSTOM CONFIG
+                    prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
                         "On":  1
@@ -4223,7 +4244,7 @@ mame:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    prompt:      CUSTOM CONFIG
+                    prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
                         "On":  1
@@ -4244,7 +4265,7 @@ mame:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    prompt:      CUSTOM CONFIG
+                    prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
                         "On":  1
@@ -4264,7 +4285,7 @@ mame:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    prompt:      CUSTOM CONFIG
+                    prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
                         "On":  1
@@ -4284,7 +4305,7 @@ mame:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    prompt:      CUSTOM CONFIG
+                    prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
                         "On":  1
