@@ -4241,17 +4241,12 @@ msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
-msgid "Exclusive Ubershaders"
+msgid "Ubershaders (synchronous)"
 msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
-msgid "Hybrid Ubershaders"
-msgstr ""
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "Skip Drawing"
+msgid "Ubershaders (asynchronous)"
 msgstr ""
 
 #. TRANSLATION: dolphin
