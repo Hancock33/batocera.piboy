@@ -3,18 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2021-12-16 08:24+0100\n"
+"PO-Revision-Date: 2021-12-17 13:27+1100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -89,12 +91,12 @@ msgstr ""
 #. TRANSLATION: libretro/81, libretro/gambatte
 msgctxt "game_options"
 msgid "COLORIZATION"
-msgstr ""
+msgstr "COLOURISATION"
 
 #. TRANSLATION: libretro/81
 msgctxt "game_options"
 msgid "Emulate Chroma 81 interface (colorization)."
-msgstr ""
+msgstr "Emulate Chroma 81 interface (colourisation)."
 
 #. TRANSLATION: libretro/81, libretro/81, libretro/fceumm, libretro/fceumm, libretro/genesisplusgx, ...
 msgctxt "game_options"
@@ -154,7 +156,7 @@ msgstr ""
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
 msgid "Emulate NTSC quirks to show more colors in hi-res mode."
-msgstr ""
+msgstr "Emulate NTSC quirks to show more colours in hi-res mode."
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -619,7 +621,7 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Optimized (auto)"
-msgstr ""
+msgstr "Optimised (auto)"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -1314,22 +1316,22 @@ msgstr ""
 #. TRANSLATION: libretro/fceumm, libretro/nestopia, libretro/vice_x64, libretro/vice_x64sc
 msgctxt "game_options"
 msgid "COLOR FILTER"
-msgstr ""
+msgstr "COLOUR FILTER"
 
 #. TRANSLATION: libretro/fceumm, libretro/nestopia, libretro/vice_x64, libretro/vice_x64sc
 msgctxt "game_options"
 msgid "Can be used to simulate colors of particular displays."
-msgstr ""
+msgstr "Can be used to simulate colours of particular displays."
 
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
 msgid "Composite (color bleeding + artifacts)"
-msgstr ""
+msgstr "Composite (colour bleeding + artifacts)"
 
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
 msgid "SVideo (color bleeding only)"
-msgstr ""
+msgstr "SVideo (colour bleeding only)"
 
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
@@ -1519,22 +1521,22 @@ msgstr ""
 #. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
 msgctxt "game_options"
 msgid "COLOR CORRECTION"
-msgstr ""
+msgstr "COLOUR CORRECTION"
 
 #. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
 msgctxt "game_options"
 msgid "Simulate LCD color inaccuracy."
-msgstr ""
+msgstr "Simulate LCD colour inaccuracy."
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "Set the color palette to use."
-msgstr ""
+msgstr "Set the colour palette to use."
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GB - Smart Coloring"
-msgstr ""
+msgstr "GB - Smart Colouring"
 
 #. TRANSLATION: libretro/gambatte, libretro/potator
 msgctxt "game_options"
@@ -1929,7 +1931,7 @@ msgstr ""
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
 msgid "TEAM COLOR MODE"
-msgstr ""
+msgstr "TEAM COLOUR MODE"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -1939,7 +1941,7 @@ msgstr ""
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
 msgid "Color"
-msgstr ""
+msgstr "Colour"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -2576,7 +2578,7 @@ msgstr ""
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Lunar Ignore Brightness Color Fix"
-msgstr ""
+msgstr "Lunar Ignore Brightness Colour Fix"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -2611,7 +2613,7 @@ msgstr ""
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
 msgid "COLOR PALETTE"
-msgstr ""
+msgstr "COLOUR PALETTE"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -3618,7 +3620,7 @@ msgstr ""
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
 msgid "COLOR PALETTE (2D)"
-msgstr ""
+msgstr "COLOUR PALETTE (2D)"
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
@@ -3693,12 +3695,12 @@ msgstr ""
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "GB COLORIZATION"
-msgstr ""
+msgstr "GB COLOURISATION"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "Add color to Game Boy games."
-msgstr ""
+msgstr "Add colour to Game Boy games."
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -4162,7 +4164,7 @@ msgstr ""
 #. TRANSLATION: dolphin/pcsx2
 msgctxt "game_options"
 msgid "CUSTOMIZE WIIMOTE & GAMEPAD"
-msgstr ""
+msgstr "CUSTOMISE WIIMOTE & GAMEPAD"
 
 #. TRANSLATION: dolphin/pcsx2
 msgctxt "game_options"
@@ -5027,7 +5029,7 @@ msgstr ""
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "TEXTURE DEPOSTERIZE"
-msgstr ""
+msgstr "TEXTURE DEPOSTERISE"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
