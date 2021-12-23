@@ -3017,7 +3017,7 @@ sorr:
       sorr: { requireAnyOf: [BR2_PACKAGE_BENNUGD_BGDI] }
 
 spacecadetpinball:
-  name:       3D Pinball Space Cadet 
+  name:       3D Pinball Space Cadet
   manufacturer: Ports
   release: 1995
   hardware: port

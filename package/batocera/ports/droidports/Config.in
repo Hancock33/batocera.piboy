@@ -7,7 +7,7 @@ config BR2_PACKAGE_DROIDPORTS
 	select BR2_PACKAGE_LIBPNG
 	select BR2_PACKAGE_FREETYPE
 	select BR2_PACKAGE_SDL2
-	select BR2_PACKAGE_SDL2_IMAGE	
+	select BR2_PACKAGE_SDL2_IMAGE
 	depends on BR2_INSTALL_LIBSTDCPP
 	help
 	  GMLoader - play GameMaker Studio games for Android on non-Android operating systems.

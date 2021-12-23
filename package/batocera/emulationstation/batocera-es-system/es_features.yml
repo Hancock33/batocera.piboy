@@ -4723,7 +4723,7 @@ awgl:
 bermuda:
   features: [padtokeyboard, decoration]
   shared: [hud]
-  
+
 bstone:
   features: [padtokeyboard, decoration]
   shared: [hud]

@@ -229,8 +229,8 @@ class LibretroGenerator(Generator):
 
         if system.name == 'scummvm':
             rom = os.path.dirname(rom) + '/' + romName[0:-8]
-        
+
         if dontAppendROM == False:
             commandArray.append(rom)
-            
+
         return Command.Command(array=commandArray)
