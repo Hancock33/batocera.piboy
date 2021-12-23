@@ -4764,6 +4764,10 @@ hcl:
   features: [padtokeyboard, decoration]
   shared: [hud]
 
+hode:
+  features: [padtokeyboard, decoration]
+  shared: [hud]
+
 hurrican:
   features: [padtokeyboard, decoration]
   shared: [hud]

@@ -41,6 +41,7 @@ from generators.fsuae.fsuaeGenerator import FsuaeGenerator
 from generators.gsplus.gsplusGenerator import GSplusGenerator
 from generators.hatari.hatariGenerator import HatariGenerator
 from generators.hcl.hclGenerator import HclGenerator
+from generators.hode.hodeGenerator import HodeGenerator
 from generators.hurrican.hurricanGenerator import HurricanGenerator
 from generators.ionfury.ionfuryGenerator import IonfuryGenerator
 from generators.kodi.kodiGenerator import KodiGenerator
@@ -137,6 +138,7 @@ generators = {
     'gsplus': GSplusGenerator(),
     'hatari': HatariGenerator(),
     'hcl': HclGenerator(),
+    'hode': HodeGenerator(),
     'hurrican': HurricanGenerator(),
     'ionfury': IonfuryGenerator(),
     'kodi': KodiGenerator(),

@@ -210,6 +210,9 @@ intellivision:
 hcl:
   emulator: hcl
   core:     hcl
+hode:
+  emulator: hode
+  core:     hode
 hurrican:
   emulator: hurrican
   core:     hurrican

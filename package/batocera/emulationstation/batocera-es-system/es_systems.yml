@@ -2794,6 +2794,17 @@ freedroid:
     freedroid:
       freedroid: { requireAnyOf: [BR2_PACKAGE_FREEDROID] }
 
+hode:
+  name:       Heart of Darkness
+  manufacturer: Ports
+  release: 1998
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    hode:
+      hode: { requireAnyOf: [BR2_PACKAGE_HODE] }
+
 ionfury:
   name:       Ion Fury
   manufacturer: Ports
