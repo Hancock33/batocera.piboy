@@ -4808,11 +4808,15 @@ quake3:
   features: [padtokeyboard, decoration]
   shared: [hud]
 
-rtcw:
+rednukem:
   features: [padtokeyboard, decoration]
   shared: [hud]
 
-rednukem:
+rott:
+  features: [padtokeyboard, decoration]
+  shared: [hud]
+
+rtcw:
   features: [padtokeyboard, decoration]
   shared: [hud]
 
