@@ -1,0 +1,43 @@
+diff --git a/rott/Makefile b/rott/Makefile
+index ea673d8..65ce204 100644
+--- a/rott/Makefile
++++ b/rott/Makefile
+@@ -5,10 +5,12 @@
+ SHAREWARE   ?= 0
+ SUPERROTT   ?= 1
+ SITELICENSE ?= 0
++USEHOMEPATH ?= 1
+ 
+ CPPFLAGS += -DSHAREWARE=$(SHAREWARE)
+ CPPFLAGS += -DSUPERROTT=$(SUPERROTT)
+ CPPFLAGS += -DSITELICENSE=$(SITELICENSE)
++CPPFLAGS += -DUSEHOMEPATH=$(USEHOMEPATH)
+ 
+ ROTT ?= rott
+ 
+diff --git a/rott/rt_ted.c b/rott/rt_ted.c
+index 9b6da98..a105770 100644
+--- a/rott/rt_ted.c
++++ b/rott/rt_ted.c
+@@ -1445,7 +1445,7 @@ void ReadROTTMap
+ 
+ #if (SHAREWARE==0) && (USEHOMEPATH==1)
+    char buf[MAX_PATH];
+-   snprintf(buf, MAX_PATH, "%s/.rott/%s", getenv("HOME"), filename);
++   snprintf(buf, MAX_PATH, "%suserdata/roms/rott/%s", "/", filename);
+ 
+    CheckRTLVersion( buf );
+    filehandle = SafeOpenRead( buf );
+diff --git a/rott/w_wad.c b/rott/w_wad.c
+index 4664c5a..9adc376 100644
+--- a/rott/w_wad.c
++++ b/rott/w_wad.c
+@@ -92,7 +92,7 @@ void W_AddFile (char *_filename)
+         char buf[MAX_PATH+100];//bna++
+ 
+ #if (SHAREWARE==0) && (USEHOMEPATH==1)
+-        snprintf(filename, MAX_PATH, "%s/RetroPie/roms/ports/rott/%s", getenv("HOME"), _filename);
++        snprintf(filename, MAX_PATH, "%suserdata/roms/rott/%s", "/", _filename);
+ 
+         filename[sizeof (filename) - 1] = '\0';
+         FixFilePath(filename);

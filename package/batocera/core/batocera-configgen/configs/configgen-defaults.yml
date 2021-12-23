@@ -400,6 +400,9 @@ rednukem:
 reminiscence:
   emulator: libretro
   core:     reminiscence
+rott:
+  emulator: rott
+  core:     rott
 rtcw:
   emulator: rtcw
   core:     rtcw

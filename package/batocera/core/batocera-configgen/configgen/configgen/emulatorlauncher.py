@@ -68,6 +68,7 @@ from generators.quake3.quake3Generator import Quake3Generator
 from generators.rednukem.rednukemGenerator import RednukemGenerator
 from generators.redream.redreamGenerator import RedreamGenerator
 from generators.rpcs3.rpcs3Generator import Rpcs3Generator
+from generators.rott.rottGenerator import RottGenerator
 from generators.rtcw.rtcwGenerator import RtcwGenerator
 from generators.ruffle.ruffleGenerator import RuffleGenerator
 from generators.samcoupe.samcoupeGenerator import SamcoupeGenerator
@@ -162,6 +163,7 @@ generators = {
     'redream': RedreamGenerator(),
     'rpcs3' : Rpcs3Generator(),
     'rtcw' : RtcwGenerator(),
+    'rott' : RottGenerator(),   
     'ruffle': RuffleGenerator(),
     'samcoupe': SamcoupeGenerator(),
     'scummvm': ScummVMGenerator(),

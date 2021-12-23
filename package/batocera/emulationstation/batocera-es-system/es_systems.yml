@@ -2961,6 +2961,17 @@ rtcw:
     rtcw:
       rtcw: { requireAnyOf: [BR2_PACKAGE_RTCW] }
 
+rott:
+  name:       Rise of the Triad Dark War
+  manufacturer: Ports
+  release: 1994
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    rott:
+      rott: { requireAnyOf: [BR2_PACKAGE_ROTT] }
+
 sorr:
   name:       Streets of Rage Remake
   manufacturer: Ports
