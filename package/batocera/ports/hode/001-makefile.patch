@@ -1,0 +1,13 @@
+diff --git a/Makefile b/Makefile
+index 6e41552..4986ed2 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,6 +1,6 @@
+ 
+-SDL_CFLAGS = `sdl2-config --cflags`
+-SDL_LIBS = `sdl2-config --libs`
++SDL_CFLAGS = `pkg-config sdl2 --cflags`
++SDL_LIBS = `pkg-config sdl2 --libs`
+ 
+ CPPFLAGS += -g -Wall -Wpedantic $(SDL_CFLAGS) $(DEFINES) -MMD
+ 

@@ -1,0 +1,12 @@
+config BR2_PACKAGE_HODE
+	bool "hode"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  Heart of Darkness
+
+	  https://github.com/usineur/hode
+
+comment "BR2_PACKAGE_HODE needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP
