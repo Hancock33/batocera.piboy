@@ -1,0 +1,13 @@
+config BR2_PACKAGE_F2BGL
+	bool "f2bgl"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	select BR2_PACKAGE_FREEPATS
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  Fade To Black.
+
+	  https://github.com/cyxx/f2bgl
+
+comment "BR2_PACKAGE_f2bgl needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

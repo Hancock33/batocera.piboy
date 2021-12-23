@@ -4744,6 +4744,10 @@ etekwar:
   features: [padtokeyboard, decoration]
   shared: [hud]
 
+f2bgl:
+  features: [padtokeyboard, decoration]
+  shared: [hud]
+
 flatpak:
   features: [padtokeyboard, decoration]
   shared: [hud]

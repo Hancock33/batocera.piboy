@@ -148,6 +148,9 @@ eduke32:
 etekwar:
   emulator: etekwar
   core:     etekwar
+f2bgl:
+  emulator: f2bgl
+  core:     f2bgl
 fbneo:
   emulator: libretro
   core:     fbneo
