@@ -61,7 +61,7 @@ class MameGenerator(Generator):
         # If there are multiple ROM types (ie a computer w/disk & tape), select the default or primary type here.
         messRomType = [ "", "", "cdrm", "cart", "", "cart", "cart", "cart", "cart", "cart1", "flop1", "cart", "cart", "flop", "cass", "cart", "flop1", "cass", "cass1", "cart", "cart", "cart", "cart", "cart", "cart", "cart", "cart" ]
         messAutoRun = [ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", 'mload""\\n', "", "", "", "", "", "", "", "", "" ]
-        
+
         # Identify the current system, select MAME or MESS as needed.
         try:
             messMode = messSystems.index(system.name)
@@ -71,7 +71,7 @@ class MameGenerator(Generator):
             commandArray =  [ "/usr/bin/mame/mame" ]
         else:
             commandArray =  [ "/usr/bin/mame/mess" ]
-        
+
         # MAME options used here are explained as it's not always straightforward
         # A lot more options can be configured, just run mame -showusage and have a look
         commandArray += [ "-skip_gameinfo" ]
@@ -159,13 +159,13 @@ class MameGenerator(Generator):
             commandArray += [ "-autoror" ]
         if system.isOptSet("rotation") and system.config["rotation"] == "autorol":
             commandArray += [ "-autorol" ]
-        
+
         # UI enable - for computer systems, the default sends all keys to the emulated system.
         # This will enable hotkeys, but some keys may pass through to MAME and not be usable in the emulated system.
         # Hotkey + D-Pad Up will toggle this when in use (scroll lock key)
         if not (system.isOptSet("enableui") and not system.getOptBoolean("enableui")):
             commandArray += [ "-ui_active" ]
-        
+
         # Finally we pass game name
         # MESS will use the full filename and pass the system & rom type parameters if needed.
         if messMode == -1:
@@ -202,13 +202,13 @@ class MameGenerator(Generator):
                     commandArray += [ "-" + messRomType[messMode] ]
                 # Use the full filename for MESS ROMs
                 commandArray += [ rom ]
-        
+
         # Alternate D-Pad Mode
         if system.isOptSet("altdpad"):
             dpadMode = system.config["altdpad"]
         else:
             dpadMode = 0
-        
+
         # Controls for games with 5-6 buttons or other unusual controls
         if system.isOptSet("altlayout"):
             buttonLayout = system.config["altlayout"] # Option was manually selected
@@ -219,7 +219,7 @@ class MameGenerator(Generator):
             neogeoList = set(open(mameNeogeo).read().split())
             twinstickList = set(open(mameTwinstick).read().split())
             qbertList = set(open(mameRotatedstick).read().split())
-            
+
             romName = os.path.splitext(romBasename)[0]
             if romName in capcomList:
                 buttonLayout = 1 # Capcom 6 button
@@ -235,17 +235,17 @@ class MameGenerator(Generator):
                 buttonLayout = 10 # Q*Bert stick settings
             else:
                 buttonLayout = 0 # Default layout if it's not a recognized game
-        
+
         if system.isOptSet("customcfg"):
             overwriteCfg = system.config["customcfg"]
         else:
             overwriteCfg = 0
-        
+
         if messMode == -1:
             mameControllers.generatePadsConfig(cfgPath, playersControllers, "", dpadMode, buttonLayout, overwriteCfg)
         else:
             mameControllers.generatePadsConfig(cfgPath, playersControllers, messSysName[messMode], dpadMode, buttonLayout, overwriteCfg)
-        
+
         # bezels
         if 'bezel' not in system.config or system.config['bezel'] == '':
             bezel = None

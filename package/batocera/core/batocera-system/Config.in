@@ -811,18 +811,18 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 	select BR2_PACKAGE_OMF2097                  if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
     # Rise of the Triad Dark War
-	select BR2_PACKAGE_ROTT                     if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL	
+	select BR2_PACKAGE_ROTT                     if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
     # Bermuda Syndrome
 	select BR2_PACKAGE_BERMUDA                  if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
-	
+
     # Fade To Black
 	select BR2_PACKAGE_F2BGL                    if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
     # Heart of Darkness
 	select BR2_PACKAGE_HODE                     if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
-    # 
+    #
 	select BR2_PACKAGE_DROIDPORTS               if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
 	help
