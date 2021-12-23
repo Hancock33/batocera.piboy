@@ -2772,6 +2772,17 @@ etekwar:
     etekwar:
       etekwar: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
 
+f2bgl:
+  name:       Fade to Black
+  manufacturer: Ports
+  release: 1995
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    f2bgl:
+      f2bgl: { requireAnyOf: [BR2_PACKAGE_F2BGL] }
+
 freedroid:
   name:       Paradroid
   manufacturer: Ports
