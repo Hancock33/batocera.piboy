@@ -1,0 +1,12 @@
+config BR2_PACKAGE_BERMUDA
+	bool "BERMUDA"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  Bermuda Syndrome - Open Source Engine.
+
+	  https://github.com/cyxx/bermuda
+
+comment "BR2_PACKAGE_BERMUDA needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

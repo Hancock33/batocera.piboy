@@ -12,6 +12,7 @@ import json
 from generators.abuse.abuseGenerator import AbuseGenerator
 from generators.amiberry.amiberryGenerator import AmiberryGenerator
 from generators.awgl.awglGenerator import AwglGenerator
+from generators.bermuda.bermudaGenerator import BermudaGenerator
 from generators.bstone.bstoneGenerator import BstoneGenerator
 from generators.cannonball.cannonballGenerator import CannonballGenerator
 from generators.cdogs.cdogsGenerator import CdogsGenerator
@@ -106,6 +107,7 @@ generators = {
     'abuse': AbuseGenerator(),
     'amiberry': AmiberryGenerator(),
     'awgl': AwglGenerator(),
+    'bermuda': BermudaGenerator(),
     'bstone' : BstoneGenerator(),
     'cannonball' : CannonballGenerator(),
     'cdogs' : CdogsGenerator(),

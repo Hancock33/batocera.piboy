@@ -4720,6 +4720,10 @@ awgl:
   features: [padtokeyboard, decoration]
   shared: [hud]
 
+bermuda:
+  features: [padtokeyboard, decoration]
+  shared: [hud]
+  
 bstone:
   features: [padtokeyboard, decoration]
   shared: [hud]

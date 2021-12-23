@@ -1,9 +1,12 @@
 {
     "actions_player1": [
         {
-            "trigger": ["hotkey", "start"],
+            "trigger": [
+                "hotkey",
+                "start"
+            ],
             "type": "exec",
-            "target": "killall -9 awgl"
+            "target": "killall -9 bermuda"
         },
         {
             "trigger": "up",
@@ -28,17 +31,17 @@
         {
             "trigger": "start",
             "type": "key",
-            "target": "KEY_P"
+            "target": "KEY_L"
         },
         {
             "trigger": "select",
             "type": "key",
-            "target": "KEY_C"
+            "target": "KEY_S"
         },
         {
             "trigger": "a",
             "type": "key",
-            "target": "KEY_SPACE"
+            "target": "KEY_ENTER"
         },
         {
             "trigger": "b",
@@ -55,7 +58,36 @@
                 "KEY_LEFTALT",
                 "KEY_X"
             ]
+        },
+        {
+            "trigger": "joystick1up",
+            "type": "key",
+            "target": "KEY_UP"
+        },
+        {
+            "trigger": "joystick1down",
+            "type": "key",
+            "target": "KEY_DOWN"
+        },
+        {
+            "trigger": "joystick1left",
+            "type": "key",
+            "target": "KEY_LEFT"
+        },
+        {
+            "trigger": "joystick1right",
+            "type": "key",
+            "target": "KEY_RIGHT"
+        },
+        {
+            "trigger": "y",
+            "type": "key",
+            "target": "KEY_RIGHTCTRL"
+        },
+        {
+            "trigger": "x",
+            "type": "key",
+            "target": "KEY_TAB"
         }
     ]
 }
-
