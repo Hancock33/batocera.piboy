@@ -1,5 +1,13 @@
 {
     "actions_player1": [
+        {
+            "trigger": [
+                "hotkey",
+                "start"
+            ],
+            "type": "exec",
+            "target": "clear && killall -9 devilutionx"
+        },
 	{
             "trigger": [
                 "hotkey",
