@@ -2677,6 +2677,17 @@ awgl:
     awgl:
       awgl: { requireAnyOf: [BR2_PACKAGE_AWGL] }
 
+bermuda:
+  name:       Bermuda Syndrome
+  manufacturer: Ports
+  release: 1995
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    bermuda:
+      bermuda: { requireAnyOf: [BR2_PACKAGE_BERMUDA] }
+
 bk:
   name:       BK
   manufacturer: Electronica

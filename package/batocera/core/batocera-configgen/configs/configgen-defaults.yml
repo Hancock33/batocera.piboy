@@ -70,6 +70,9 @@ atomiswave:
 awgl:
   emulator: awgl
   core:     awgl
+bermuda:
+  emulator: bermuda
+  core:     bermuda
 bk:
   emulator: libretro
   core:     bk
