@@ -21,7 +21,7 @@ define ROTT_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/rott-darkwar -D $(TARGET_DIR)/usr/bin/rott-darkwar
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	#cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/rott/rott.keys $(TARGET_DIR)/usr/share/evmapy/rott.keys
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/rott/rott.keys $(TARGET_DIR)/usr/share/evmapy/rott.keys
 endef
 
 $(eval $(generic-package))
