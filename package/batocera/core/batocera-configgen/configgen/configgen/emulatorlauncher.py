@@ -11,6 +11,7 @@ import xml.etree.ElementTree as ET
 import json
 from generators.abuse.abuseGenerator import AbuseGenerator
 from generators.amiberry.amiberryGenerator import AmiberryGenerator
+from generators.alephone.alephoneGenerator import AlephoneGenerator
 from generators.awgl.awglGenerator import AwglGenerator
 from generators.bermuda.bermudaGenerator import BermudaGenerator
 from generators.bstone.bstoneGenerator import BstoneGenerator
@@ -108,6 +109,7 @@ eslog = get_logger(__name__)
 generators = {
     'abuse': AbuseGenerator(),
     'amiberry': AmiberryGenerator(),
+    'alephone': AlephoneGenerator(),    
     'awgl': AwglGenerator(),
     'bermuda': BermudaGenerator(),
     'bstone' : BstoneGenerator(),

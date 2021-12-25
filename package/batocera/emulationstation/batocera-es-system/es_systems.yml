@@ -2666,6 +2666,17 @@ amigademo:
     libretro:
       puae:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
 
+alephone:
+  name:       Marathon Trilogy
+  manufacturer: Ports
+  release: 1994
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    alephone:
+      alephone: { requireAnyOf: [BR2_PACKAGE_ALEPHONE] }
+
 awgl:
   name:       Another World
   manufacturer: Ports
