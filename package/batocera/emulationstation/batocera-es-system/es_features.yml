@@ -4717,6 +4717,10 @@ abuse:
   features: [padtokeyboard, decoration]
   shared: [hud]
 
+alephone:
+  features: [padtokeyboard, decoration]
+  shared: [hud]
+
 awgl:
   features: [padtokeyboard, decoration]
   shared: [hud]

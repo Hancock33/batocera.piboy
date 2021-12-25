@@ -25,6 +25,9 @@ twentyfourtyeight:
 abuse:
   emulator: abuse
   core:     abuse
+alephone:
+  emulator: alephone
+  core:     alephone
 amiga500:
   emulator: libretro
   core:     puae
