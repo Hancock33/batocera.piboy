@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version.: Commits on Dec 24, 2021
-RETROARCH_VERSION = 736ab4c9645fe380c66bbc576986d4f8c045d1c4
+# Version.: Commits on Dec 25, 2021
+RETROARCH_VERSION = f17deb90c7040c648dc901832f0ec476b5cd86c3
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac
