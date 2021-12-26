@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="40826" source="ScreenScraper.fr">
+		<path>./darkwar.zip</path>
+		<name>Dark Warrior</name>
+		<desc>An old shoot'em up that features voice simulation.</desc>
+		<rating>0.3</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Century Electronics</developer>
+		<publisher>Century Electronics</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/darkwar.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40831" source="ScreenScraper.fr">
+		<path>./dazzler.zip</path>
+		<name>Dazzler</name>
+		<desc>An early maze game that features voice simulation. The game is pretty much a cross between "Pac-Man" and "Donkey Kong Junior".</desc>
+		<rating>0.3</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Century Electronics</developer>
+		<publisher>Century Electronics</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dazzler.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="0" source="ScreenScraper.fr">
+		<path>./diggerc.zip</path>
+		<name>diggerc</name>
+		<desc />
+		<releasedate />
+		<developer />
+		<publisher />
+		<genre />
+		<players />
+	</game>
+	<game id="41478" source="ScreenScraper.fr">
+		<path>./goldbug.zip</path>
+		<name>Gold Bug</name>
+		<desc>A "Dig Dug"-style game.</desc>
+		<rating>0.3</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Century Electronics</developer>
+		<publisher>Century Electronics</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/goldbug.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41655" source="ScreenScraper.fr">
+		<path>./heartatk.zip</path>
+		<name>Heart Attack</name>
+		<desc>Fill the maze with dots. Drop a plug to block the enemy or freeze the enemy for five seconds. You must complete the maze before time runs out.</desc>
+		<rating>0.3</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Century Electronics</developer>
+		<publisher>Century Electronics</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/heartatk.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41664" source="ScreenScraper.fr">
+		<path>./hero.zip</path>
+		<name>Hero</name>
+		<desc>Wander through a maze and collect the heart, diamond, spade, club and in later stages 'J' to move to the next level on your way to rescuing Esmeralda. Avoid the fireballs and arrows.</desc>
+		<rating>0.3</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Century Electronics</developer>
+		<publisher>Century Electronics</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hero.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41746" source="ScreenScraper.fr">
+		<path>./hunchbak.zip</path>
+		<name>Hunchback (set 1)</name>
+		<desc>Hunchback is a classic and much-copied platform game in which the player takes on the role of the eponymous bell-ringer, Quasimodo, in his quest to rescue the beautiful Esmeralda from the tower of the castle fortress. 
+ 
+To reach Esmeralda, Quasi must run and jump through a number of screens - each representing part of a castle wall - to reach the tower and complete his rescue. Each screen presents the player with a different set of platform-based obstacles. These range from spear-toting guards, to ramparts and fiery chasms (the latter of which is cleared by carefully timed jumps onto and off a constantly swinging rope). 
+ 
+Most of the game's screens also feature projectiles - in the form of fireballs and arrows - that must be avoided. These can appear from both the left and right-hand side of the screen and can be moving at one of two different heights and speeds. Some of the trickier screens contain more than one of these projectiles and contact with either a projectile or guard will result in Quasi falling from the castle wall, resulting in the loss of a player life. 
+ 
+To complicate matters further, each screen must be completed within a strict time limit. This takes the form of an enemy guard climbing the castle walls; if the guard reaches the top of the wall, he will walk towards Quasi to burn the Hunchback with his torch. If Quasi rings the bell before the guard has scaled the wall, a bonus score is rewarded. If five screens are completed without a life being lost, a 'Super Bonus' is awarded. 
+ 
+A meter at the bottom left corner of the screen - displaying a cutaway of castle ramparts - shows Quasi's progress towards the tower and his beloved Esmeralda. Upon reaching Esmeralda, players must complete a bonus screen - involving using moving ropes to collect bells from a series of platforms - to complete the rescue. 
+ 
+Once completed, the game starts over with a much higher level of difficulty and tighter time limits.</desc>
+		<rating>0.3</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Century Electronics</developer>
+		<publisher>Century Electronics</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hunchbak.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="41747" source="ScreenScraper.fr">
+		<path>./huncholy.zip</path>
+		<name>Hunchback at the Olympics</name>
+		<desc>The Games of the XXIII Olympiad were held in Los Angeles in 1984 and for the first time since the advent of the video game industry, this king of sporting competitions was to be held in a first-world nation. In simpler times, this might have inspired people to head out to a track or gymnasium to try their stuff, but now for the first time an industry was poised to let the hands of the middle-class masses do all the work virtually, through joysticks, needing no facilities or specialised equipment (beyond a video game console) to try the whole gamut of events.</desc>
+		<rating>0.3</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Century Electronics</developer>
+		<publisher>Century Electronics</publisher>
+		<genre>Sports / Running trails-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/huncholy.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42164" source="ScreenScraper.fr">
+		<path>./logger.zip</path>
+		<name>Logger (Rev.3)</name>
+		<desc>A rip-off of Nintendo "Donkey Kong". 
+ 
+Help the unfortunate lumberjack to retrieve his axe and all tools stolen by a giant blue parrot for this you will have to climb the differents levels of the mountain and jump to dodge all the logs to reach the top and go to next level.</desc>
+		<rating>0.1</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Century Electronics</developer>
+		<publisher>Century Electronics</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/logger.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="42674" source="ScreenScraper.fr">
+		<path>./radarzon.zip</path>
+		<name>Radar Zone</name>
+		<desc>El juego trata de ir completando el perímetro de varios polígonos para completar su superficie y sumar puntos, sin chocar con los puntos que te persiguen.</desc>
+		<rating>0.3</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Century Electronics</developer>
+		<publisher>Century Electronics</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/radarzon.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42685" source="ScreenScraper.fr">
+		<path>./raiders.zip</path>
+		<name>Raiders</name>
+		<desc>Raiders es un viejo shooter de disparo horizontal.</desc>
+		<rating>0.3</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Century Electronics</developer>
+		<publisher>Century Electronics</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/raiders.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43197" source="ScreenScraper.fr">
+		<path>./spacefrt.zip</path>
+		<name>Space Fortress (CVS)</name>
+		<desc>You are defender of space fortress 13!", the game announces to you, as play commences. The game features three scenarios. The first stage is reminiscent of asteroids -- you can rotate left and right, fire and thrust -- where the objective is to shoot the aliens (sort of flashing balls). Death takes you to the second section, where you must defend the fortress in the center of the screen. Alien ships (the same flashing balls as before) attempt to crash into it. Watch out for aliens with a tractor beam which suck you towards destruction. In section three, you can only move left and right shooting from the bottom of the screen -- reminiscent of space invaders -- while aliens dive towards the ground. Interesting to play just for novelty value.</desc>
+		<rating>0.3</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Cinematronics</developer>
+		<publisher>Century Electronics</publisher>
+		<genre>Various-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/spacefrt.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43422" source="ScreenScraper.fr">
+		<path>./superbik.zip</path>
+		<name>Superbike</name>
+		<desc>A driving/shooting 'em up game with some resemblance to Moon Patrol.</desc>
+		<rating>0.3</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Century Electronics</developer>
+		<publisher>Century Electronics</publisher>
+		<genre>Shooter / Vehicle, Horizontal-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/superbik.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="39918" source="ScreenScraper.fr">
+		<path>./8ball.zip</path>
+		<name>Video Eight Ball</name>
+		<desc>An exciting Pool Game! 
+Pocket all the coloured balls then go for the black. Cue in the cursor (anywhere on the table) then shoot. It's terrific! It's Video 8 Ball. 
+ 
+TABLE COLOUR CHANGEABLE 
+ 
+TRY FOR TOP RACK BONUS: 5000 POINTS</desc>
+		<rating>0.3</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Century Electronics</developer>
+		<publisher>Century Electronics</publisher>
+		<genre>Sports / Swimming-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/8ball.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="44024" source="ScreenScraper.fr">
+		<path>./wallst.zip</path>
+		<name>Wall Street</name>
+		<desc>Wall Street is a rather odd and unique game consisting of two stages. 
+ 
+Stage one consists of controlling two rescue workers who must prevent suicidal stock brokers from plummeting to their deaths and instead bounce them into a waiting ambulance. 
+ 
+Stage two entails controlling a broker who runs around town collecting money (which they must return to the yellow base) while being chased by tanks, which the player can shoot.</desc>
+		<rating>0.3</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Century Electronics</developer>
+		<publisher>Century Electronics</publisher>
+		<genre>Action</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wallst.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="40688" source="ScreenScraper.fr">
+		<path>./cosmos.zip</path>
+		<name>Cosmos</name>
+		<desc>An early shoot'em up game. Destroy swarms of aliens and asteroids. If there are too many enemies on the screen, use the time warp to slow all your foes down. 
+ 
+This is one of the top candidates for Century's most blatant ripoff. Century copied everything from the laser temperature and fuel gauge to the docking to the mothership.</desc>
+		<image>/userdata/roms/mame/images/cosmos.png</image>
+		<rating>0.3</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Century Electronics</developer>
+		<publisher>Century Electronics</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+</gameList>

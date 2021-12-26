@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <provider>
+    <System>Mame</System>
+    <software>Skraper</software>
+    <database>ScreenScraper.fr</database>
+    <web>http://www.screenscraper.fr</web>
+  </provider>
+  <game id="39947" source="ScreenScraper.fr">
+    <path>./aerofgt.zip</path>
+    <name>Aero Fighters (World / USA + Canada / Korea / Hong Kong / Taiwan,)</name>
+    <desc>A superb vertically scrolling shoot-em-up in which the player chooses an ace fighter pilot from a selection of 4 countries (USA, Japan, Sweden and Britain) and takes to the skies to destroy enemy jets, boats, helicopt</desc>
+    <rating>0.7</rating>
+    <releasedate>19920101T000000</releasedate>
+    <developer>Video System</developer>
+    <publisher>Video System</publisher>
+    <genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/aerofgt.png</image>
+    <genreid>260</genreid>
+  </game>
+  <game id="41151" source="ScreenScraper.fr">
+    <path>./f1gp2.zip</path>
+    <name>F-1 Grand Prix Part II</name>
+    <desc>An overhead-view F-1 racing game.</desc>
+    <rating>0.5</rating>
+    <releasedate>19920101T000000</releasedate>
+    <developer>Video System</developer>
+    <publisher>Video System</publisher>
+    <genre>Race, Driving / Race-Race, Driving</genre>
+    <players>1</players>
+    <image>/userdata/roms/mame/images/f1gp2.png</image>
+    <genreid>1537</genreid>
+  </game>
+  <game id="41150" source="ScreenScraper.fr">
+    <path>./f1gp.zip</path>
+    <name>F-1 Grand Prix</name>
+    <desc>An overhead-view F-1 racing game.</desc>
+    <rating>0.5</rating>
+    <releasedate>19910101T000000</releasedate>
+    <developer>Video System</developer>
+    <publisher>Video System</publisher>
+    <genre>Race, Driving / Race-Race, Driving</genre>
+    <players>1</players>
+    <image>/userdata/roms/mame/images/f1gp.png</image>
+    <genreid>1537</genreid>
+  </game>
+  <game id="41642" source="ScreenScraper.fr">
+    <path>./hatris.zip</path>
+    <name>Hatris (US)</name>
+    <desc>Hatris is a Tetris-type game where instead of blocks descending, there are hats; top hats, wizard hats, beanines and the like. The game is played by making vertical stacks of hats. When a stack of five hats of the same type and color is created, it disappears. The challenge of the game is that different styles of hats will stack differently. The game ends when one of your stacks of hats reaches the top of the screen. Occasionally, a red or a blue flame will appear. One burns just the top type of hat on a stack. The other will burn a stack to the ground.</desc>
+    <rating>0.6</rating>
+    <releasedate>19900101T000000</releasedate>
+    <developer>Video System</developer>
+    <publisher>Video System</publisher>
+    <genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/hatris.png</image>
+    <genreid>2816</genreid>
+  </game>
+  <game id="41952" source="ScreenScraper.fr">
+    <path>./karatblz.zip</path>
+    <name>Karate Blazers (World, set 1)</name>
+    <desc>A horizontally scrolling fighting game for 1 to 4 players. Each playable character (chosen from Mark, Glen, Akira and Gil) kicks and punches their way through a number of enemy-packed levels. In addition to kicking and punching, each character also has their own unique 'special attack'; a move that injures multiple on-screen enemies at the cost of some of the player's health. 
+ 
+While in no way original (drawing most of its inspiration from Capcom's "Final Fight"), Karate Blazers is both hugely playable and very fast and frenetic, with the amount of on-screen enemies at times overwhelming. The graphics are also well drawn and nicely animated.</desc>
+    <rating>0.7</rating>
+    <releasedate>19910101T000000</releasedate>
+    <developer>Video System</developer>
+    <publisher>Video System</publisher>
+    <genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+    <players>1-4</players>
+    <image>/userdata/roms/mame/images/karatblz.png</image>
+    <genreid>263</genreid>
+  </game>
+  <game id="40726" source="ScreenScraper.fr">
+    <path>./crshrace.zip</path>
+    <name>Lethal Crash Race (set 1)</name>
+    <desc>Lethal Crash Race is, as the title suggests, a racing game. The player chooses one of eight international characters then races one-on-one against the other characters (and the recolor of her/his own). Each race takes place in a different location around the world, and each character has her or his own ending, making the character interaction rather similar to that of Sonic Wings. 
+ 
+Lethal Crash Race marks the first appearance of Ellen and Cincia, who later feature in most of the Sonic Wings games.</desc>
+    <rating>0.7</rating>
+    <releasedate>19930101T000000</releasedate>
+    <developer>Video System</developer>
+    <publisher>Video System</publisher>
+    <genre>Race, Driving / Race-Race, Driving</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/crshrace.png</image>
+    <genreid>1537</genreid>
+  </game>
+  <game id="79269" source="ScreenScraper.fr">
+    <path>./pipedrm.zip</path>
+    <name>Pipe Dream (World)</name>
+    <desc>Put your advanced plumbing skills to the maximum test and connect the points on the board in the least moves possible! Use the pieces of pipe supplied to plug the gaps and fix the leaks as quickly as possible. You're against the clock and at the mercy of pipe supply so think fast and lay pipe quickly!</desc>
+    <rating>0.8</rating>
+    <releasedate>19900101T000000</releasedate>
+    <developer>Video System</developer>
+    <publisher>Video System</publisher>
+    <genre>Puzzle-Game / Glide-Puzzle-Game</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/pipedrm.png</image>
+    <genreid>2816</genreid>
+  </game>
+  <game id="42522" source="ScreenScraper.fr">
+    <path>./pspikes.zip</path>
+    <name>Power Spikes (World)</name>
+    <desc>It's the successor to Power Spikes. Released in 1994, this game features a new league of robotic players.</desc>
+    <rating>0.7</rating>
+    <releasedate>19910101T000000</releasedate>
+    <developer>Video System</developer>
+    <publisher>Video System</publisher>
+    <genre>Sports / Volleyball-Sports</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/pspikes.png</image>
+    <genreid>1538</genreid>
+  </game>
+  <game id="39948" source="ScreenScraper.fr">
+    <path>./sncwgltd.zip</path>
+    <name>Sonic Wings Limited (Japan)</name>
+    <desc>A vertical scrolling shooter for 1 or 2 players. Controls are directional and 2 buttons. Button 1 fires your main weapon and button 2 fires your special. 
+ 
+You choose from one of four nation's aircraft: US, Japan, Russia, France, Sweden or The UN. Once chosen you embark on various missions. 
+ 
+During the mission you shoot various baddies and at the end of the level you fight a boss. Power-ups are available during the mission and these either recharge your special weapon or upgrade your main weapon. All main weapon upgrades are lost on death and your special is restored to the default number of uses. 
+ 
+When playing as player 2 you get a different plane type. 2 player mode is co-operative.</desc>
+    <rating>0.7</rating>
+    <releasedate>19960101T000000</releasedate>
+    <developer>Video System</developer>
+    <publisher>Video System</publisher>
+    <genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/sncwgltd.png</image>
+    <genreid>260</genreid>
+  </game>
+  <game id="43250" source="ScreenScraper.fr">
+    <path>./spinlbrk.zip</path>
+    <name>Spinal Breakers (World)</name>
+    <desc>Rare "Cabal" type shoot'em up.</desc>
+    <rating>0.5</rating>
+    <releasedate>19900101T000000</releasedate>
+    <developer>V-System Co.</developer>
+    <publisher>V-System Co.</publisher>
+    <genre>Shooter / 3rd person-Shooter</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/spinlbrk.png</image>
+    <genreid>256</genreid>
+  </game>
+  <game id="43502" source="ScreenScraper.fr">
+    <path>./tail2nos.zip</path>
+    <name>Tail To Nose - Great Championship</name>
+    <desc>Tail to Nose - Great Championship, connu sous le nom de Super Formula: Chijo Saisoku no Battle au Japon, est un des premiers jeux consacré à la Formule 1. Bien que ne possédant pas de licence, les écuries, les pilotes, les sponsors et les 4 circuits disponibles sont fortement inspirés de la réalité.</desc>
+    <rating>0.5</rating>
+    <releasedate>19890101T000000</releasedate>
+    <publisher>V-System Co.</publisher>
+    <genre>Race, Driving / Race-Race, Driving</genre>
+    <players>1</players>
+    <image>/userdata/roms/mame/images/tail2nos.png</image>
+    <genreid>1537</genreid>
+  </game>
+  <game id="43517" source="ScreenScraper.fr">
+    <path>./taotaido.zip</path>
+    <name>Tao Taido (2 button version)</name>
+    <desc>Extremely simplistic fighter with eight selectable characters and a cooperative 2-player feature.</desc>
+    <rating>0.5</rating>
+    <releasedate>19930101T000000</releasedate>
+    <developer>Video System</developer>
+    <publisher>Video System</publisher>
+    <genre>Fight / Versus-Fight</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/taotaido.png</image>
+    <genreid>262</genreid>
+  </game>
+  <game id="43777" source="ScreenScraper.fr">
+    <path>./turbofrc.zip</path>
+    <name>Turbo Force (World)</name>
+    <desc>Turbo Force is even more of a direct predecessor to Sonic Wings than is Rabio Lepus: Turbo Force features vertical scrolling gameplay very similar to that of the Sonic Wings series along with a nearly identical power-up system. The only differences in power-ups are that the vehicle slowly loses power even if not damaged, and that instead of a bomb that can be deployed at the player's discretion, the special weapon detonates as soon as its power-up is touched.</desc>
+    <rating>0.7</rating>
+    <releasedate>19910101T000000</releasedate>
+    <developer>Video System</developer>
+    <publisher>Video System</publisher>
+    <genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+    <players>1-3</players>
+    <image>/userdata/roms/mame/images/turbofrc.png</image>
+    <genreid>260</genreid>
+  </game>
+  <game id="44056" source="ScreenScraper.fr">
+    <path>./welltris.zip</path>
+    <name>Welltris (World?, 2 players)</name>
+    <desc>A fun and addicting puzzle game from the creator of the hugely popular "Tetris".</desc>
+    <rating>0.9</rating>
+    <releasedate>19910101T000000</releasedate>
+    <developer>Video System</developer>
+    <publisher>Video System</publisher>
+    <genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/welltris.png</image>
+    <genreid>2816</genreid>
+  </game>
+</gameList>

@@ -1,0 +1,383 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="39951" source="ScreenScraper.fr">
+		<path>./agress.zip</path>
+		<name>Agress - Missile Daisenryaku (Japan)</name>
+		<desc>Agress - Missile Daisenryaku is an interesting war game with puzzle elements.</desc>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>Palco</publisher>
+		<genre>Puzzle-Game / Glide-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/agress.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40216" source="ScreenScraper.fr">
+		<path>./bigprowr.zip</path>
+		<name>Big Pro Wrestling!, The</name>
+		<desc>An early tag-team wrestling game.</desc>
+		<rating>0.3</rating>
+		<releasedate>19830101T000000</releasedate>
+		<publisher>Tecmo</publisher>
+		<genre>Sports / Wrestling-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bigprowr.png</image>
+		<genreid>1536</genreid>
+	</game>
+	<game id="40279" source="ScreenScraper.fr">
+		<path>./blockout.zip</path>
+		<name>Block Out (set 1)</name>
+		<desc>Block Out is a 1-player or a simultaneous 2 players competitive game of unique dimensional action and strategy. 
+As the blocks drop one-by-one into the three-dimensional pit, rotate them by using the three buttons and joystick. Once the player has decided on the the rotation of the block, use the button to drop the block into place. The objective is to place the blocks into the pit without leaving any empty spaces. Once this is achieved, the layers without empty spaces, will disappear. 
+ 
+The player begins the game by selecting a starting stage. Game start level select can be chosen from stages 1, 5, 10, 15, or 20. There is a total of 100 stages in the game and as the players progress through the game, the stages get more and more difficult. 
+Each stage has a certain number of layers (faces) that must be erased. Once these faces are erased, the player will move on to the next stage. The less blocks the players has left in the pit at the end of the stage, the more points are awarded. 
+ 
+In addition to the one player mode, Block Out offers a competitive simultaneous two player mode. The split screen effect gives each player their own pit with which to play in. They compete against each other in the race to erase the faces. As one player erases a face, that face will be added to the opponent's pit, making their pit rise. This allows less room to work. There are two ways to win in the 2-player mode: 
+1) Force the opponent to the top of their pit and out of the game 
+or 
+2) Erase 21 faces first.</desc>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Technos Japan Corp.</developer>
+		<publisher>Technos Japan Corp.</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/blockout.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40322" source="ScreenScraper.fr">
+		<path>./bogeyman.zip</path>
+		<name>Bogey Manor</name>
+		<desc>You play as a young ghost hunter boy who runs around a haunted house. Your objective is to destroy with your sword all the crystal balls that are in the house, you must go through all the floors and go through the doors guided by the map at the top of the screen in a time limit without getting caught by the ghosts, frankenstein, witches and other creepy creatures. With the help of your magic glove can freeze ghosts for a short period of time to later hit them with the sword. 
+ 
+Once you've destroyed all the crystal balls, the haunted house starts falling apart, and you must run for your life towards the exit to win the stage. You can transform into a super hero, entering through the flashing door to grab special items.</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Technos Japan Corp.</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Fight-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bogeyman.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="150575" source="ScreenScraper.fr">
+		<path>./darktowr.zip</path>
+		<name>Dark Tower</name>
+		<desc>Dark Tower is a simple yet playable platform game which is somewhat unique in that while the game itself is original (i.e. not a direct clone of another game) many of the game's component parts are NOT. See 'Trivia' for further details.</desc>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<genre>Action</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/darktowr.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="40972" source="ScreenScraper.fr">
+		<path>./dommy.zip</path>
+		<name>Dommy</name>
+		<desc>A maze game by pushing oil barrels.</desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Technos Japan Corp.</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dommy.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="149432" source="ScreenScraper.fr">
+		<path>./ddragon.zip</path>
+		<name>Double Dragon (Japan)</name>
+		<desc>Double Dragon is a side-scrolling beat-em-up for one or two players, featuring twin brothers and martial arts masters, "Billy &amp; Jimmy Lee". The brothers must defeat the savage street gang known as the 'Black Warriors' to rescue Billy's kidnapped girlfriend, Marian. Standing between the brothers and Marian are four huge, colorful and varied levels; each populated with a wide variety of thugs. 
+ 
+Many of the game's enemies carry weapons (knives, baseball bats etc.) and should Billy or Jimmy manage to knock the weapons from the enemies' hands, the heroes can pick the weapons up and use them against the enemies. 
+ 
+The Black Warriors is made up of six distinct enemy characters- plus Willy, the game's final boss - with each differing in both physical appearance and fighting style. The members of the Black Warriors consist of the following fighters:  
+Williams - A street punk in a tank top. In addition to the standard punches and jump kicks, his signature technique is a body blow to the stomach. He also wields weapons such as baseball bats, knives and dynamite sticks. 
+Rowper - A punk who wears matching-colored pants and shirtless vest. He wields all the same weapons as Williams, but can also lift and throw heavy objects such as oildrums, boxes and stones. 
+Linda - Female punk who usually carries a whip. She's not very strong, as she falls down to ground with a couple of punches or a single kick (because of this, she is the only regular-sized enemy who cannot be placed on a headlock). 
+Abobo - A tall, big-muscled bald guy. His attacks includes punches, a standing kick and a body toss. He can also lift and throw heavy objects like Rowper. Due to his large size, he cannot be put into a headlock. 
+Boss 1 - The first boss, a head-swap of Abobo with a Mr. T-style mohawk and beard. Fights just like Abobo, only with an added double-handed slap. Unlike Abobo, he does not use weapons. A green version of him appears as the Mission 3 boss. 
+Boss 2 - The second boss. A head swap of the player who uses almost all the same techniques.  
+Willy - The game's final boss, armed, somewhat unfairly, with a machine-gun. 
+ 
+Double Dragon was a huge success due to the many game-play innovations it brought to the genre (see TRIVIA for details), but it demonstrates its final moment of inspired genius at the very end of the game. Should both players still be alive after the final boss has been defeated, they will then have to fight each OTHER. The winner of this fight will be the one who wins Marian's affections.</desc>
+		<rating>0.8</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Technos Japan Corp.</developer>
+		<publisher>Taito</publisher>
+		<genre>Platform-Platform / Fighter Scrolling</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ddragon.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="40863" source="ScreenScraper.fr">
+		<path>./ddragon2.zip</path>
+		<name>Double Dragon 2 - The Revenge (World)</name>
+		<desc>Following his defeat at the end of the original Double Dragon, Willy, the leader of the Black Warriors, retaliates against Billy and Jimmy Lee by murdering their friend, Marian, leaving the brothers with the task to avenge her death. 
+ 
+The sequel to Double Dragon is essentially an upgraded version of the original game, but with with a two-way attacking system similar to one previously used in Technos Japan's 1986 arcade game "Renegade". Many of the attacks and combos from the original "Double Dragon" are retained, as well as new techniques including the invincible Cyclone Kick. 
+ 
+The stages and weapons are redesigned versions of items previously featured in the original game. There are a few new traps such as a bulldozer in the middle of Mission 3 and all of the transition sequences between stages are now done with the character entering the next level via a lift, making it impossible to carry one weapon to the next area. 
+ 
+Most of the enemy characters return from the original Double Dragon, with some given facelifts, but the stage bosses are all new. The enemies are as followed: 
+Williams - Has a wilder face and longer hair. He can now run towards the player and do cartwheels. He throws his knives in mid-air and sometimes carry a shovel which he throws towards the player. 
+Rowper - Has a beard and eye-patch, but otherwise is more or less identical to his original self. He carries shovels and can sometime pick up large objects. 
+Linda - She now has a mohawk and face paint. She can also jump off platforms and do the elbow strike against the player. In addition to the ball and chain, she also carries grenades and knives. 
+Oharra - A strongman with a clean-shaved face. Replaces Abobo from the first game and has the same attacks. 
+Bolo - A head-swap of Oharra with long hair and beard. Replaces the mohawked head-swap of Abobo from the first game. 
+Jeff - Same as his original self, but now carries grenades. 
+Burnov - The boss of Mission 1. An obese wrestler whose face is concealed with a mask. He grabs the player and throws similar punches in the face. After dying, he will stand up and yell, disappearing in front of the player and leaving only his clothes. In later encounters, he will revive himself at least once. 
+Abore - The boss of Mission 2. A huge suspender-wearing strongman with Terminator-like sunglasses. His slaps and shoulder tackles do massive damage to the player. 
+Chin Taimei - The boss of Mission 3. A Chinese martial artists armed with twin kali sticks. In addition to his energy-draining stick combo, he also has a jump kick and sweep kick. 
+Willy - The boss of Mission 4. Looks like he does in the original game, but now dresses in red. He still uses the same machine gun from the first game. 
+The clone - After defeating Willy, the player will have to fight their character's evil self. This clone has all the techniques the player has, but can also throw energy beams and possess the player's body to drain his energy.</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Technos Japan Corp.</developer>
+		<publisher>Technos Japan Corp.</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ddragon2.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="40864" source="ScreenScraper.fr">
+		<path>./ddragon3.zip</path>
+		<name>Double Dragon 3 - The Rosetta Stone (US)</name>
+		<desc>A mysterious fortune teller warns Billy &amp; Jimmy Lee about the rise of a powerful enemy in Egypt. Since the Lee brothers are looking for a true challenge to put their martial arts skills to the ultimate test, they agree to face this mysterious new enemy. They embark on a world quest - joining up with new allies in the process - and try to lay claim to the famous 'Rosetta Stone'. 
+ 
+The 3rd and final arcade entry of the Double Dragon series (not counting the later Neo-Geo fighting game based on the movie) features a completely gameplay system and graphics from the first two installments. The game can played by up to 2 or 3 players, depending on the cabinet and settings. The 3rd player takes control of a yellow-clad Lee brother named Sonny, who is exclusive to this game. Techniques from the previous games such as the hair grab and the elbow punch are gone, but new ones are added such as the belly-to-back throw and the back-to-back hurricane kick, as well as the ability to dash by tapping the joystick left or right twice. 
+ 
+The game features weapon shops that allows the player to purchase power-ups by inserting additional tokens. The power-ups differ between stages differ between stages and are available as followed. 
+Extra Guys - Allows the player to control a new character who replaces the current fighter when he dies. There are three character types in addition to the Lee brothers. 
+The Urquidez Brothers (Roney, Sunny, Jonny) -  Tall European grapplers. They have the most energy of the four character types.  Up to three fighters can be have in reserve. 
+The Chin Brothers (Seimei, Taimei, Sinmei) - Chubby Chinese men with powerful attacks. 
+The Oyama Brothers (Masao, Kunio, Akira) - Japanese karate masters dressed in gis specializing in speedy attacks. 
+? Tricks - The hurricane kick and the one-armed stand head butt are added to the player's move set. If the player's current character dies, then the new techniques will be inherited by the next character in reserve, if there is one. 
+Weapons - A nunchaku or sword are given player. Only the Lees can have purchase and wield weapons. 
+Energy - Restores the current character's life to 150%. 
+Power-Up - Increases the character's agility. 
+ 
+There are 5 stages in the game: 
+ 
+Mission 1 - America - The enemies in this stage are typical thugs and bikers. The first area takes place in a downtown area of city. After defeating the first wave of enemies, the player will enter a warehouse, where they encounter bikers that will try to run over them with their bike. The boss in this is Jim, a red-haired biker wearing a leather jacket. 
+ 
+Mission 2 - China - The enemies are martial artists that specialize in flying kicks. The stage takes place in a single level set in a countryside near the Great Wall of China. The boss at the end of level is Li Cheng-Long, a Shaolin Martial Arts expert who resembles Bruce Lee. When he's down in life, he will wield out his club. 
+ 
+Mission 3 - Japan - The enemies are samurai swordsmen. The first area takes place outside a castle, with bamboo traps and enemies coming out of walls. The second area takes place inside a castle, where the player will face a few more swordsmen before taking out on the boss, Ranzou, a ninja. He attacks with throwing stars and smoke bombs and splits into three forms when he's down on his life. 
+ 
+Mission 4 - Italy - Consists of a single level set in the ruins of a coliseum. The enemies are roman archers. After defeating most of the archers, the boss Giuliano, a man decked in gladiator armor, will attempt to run the player over with his horse. After defeating all the archers, Giuliano will dismount at the end of the level and fight the player. He wields a long hand spear and can block attacks with his shield. 
+ 
+Mission 5 - Egypt - The final stage is composed of seven levels, which includes a desert field, an underground forest, a trap room with stone pillars and giant hands emerging from the floor, a hall with a flying disc. Enemies include living tree men and rock creatures.</desc>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Technos Japan Corp.</developer>
+		<publisher>Technos Japan Corp.</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/ddragon3.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="78955" source="ScreenScraper.fr">
+		<path>./mmonkey.zip</path>
+		<name>Minky Monkey</name>
+		<desc>You control a red boy who must bring fruits to the blank square in order to complete the message.</desc>
+		<rating>0.5</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Technos Japan Corp.</developer>
+		<publisher>Technos Japan Corp.</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mmonkey.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40958" source="ScreenScraper.fr">
+		<path>./dogfgt.zip</path>
+		<name>Acrobatic Dog-Fight</name>
+		<desc>A very funny shoot'em up game. 
+ 
+Hop to New Plane: If your plane becomes damaged, you don't need to waste a parachute to reach the ground for a replacement. You can jump to a new plane by simply flying very close, usually right under or on top of your plane and pressing the jump button. If the other plane is in just the right spot, you'll make it, but otherwise you'll fall. 
+ 
+Destroy UFOs the Easy Way: When you reach the UFO wave of the battle you're in, take your plane down as close to the ground as you can without crashing. Chances are, thanks to the circular pattern of their flight, the UFOs will arc over you and smash themselves into the ground. 
+ 
+Score Big Points: While on the ground, instead of climbing right onto your replacement plane, jump over it. For each time you do this, you'll score 1,000 points. As long as you're careful, you can get a lot of points this way. 
+Enemy Ran Away!!: After destroying 20 aircraft in a wave, the enemy retreats and you are awarded with 20,000 points and a free parachute!</desc>
+		<image>/userdata/roms/mame/images/dogfgt.png</image>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="40766" source="ScreenScraper.fr">
+		<path>./ctribe.zip</path>
+		<name>The Combatribes (US)</name>
+		<desc>Three player simultaneous melee battle in which larger-than-life fighters battle against rival gang members. As well as being able to pick up objects such as motorcycles etc. and throw them at the enemies, players also have a number of interesting fighting moves that can be unleashed upon their opponents. These include picking up unconscious enemies and hitting OTHER enemies with them, as well as banging two enemies' heads together and smashing recumbent enemies' heads into the ground to finish them off.</desc>
+		<image>/userdata/roms/mame/images/ctribe.png</image>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Technos Japan Corp.</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>3</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="79053" source="ScreenScraper.fr">
+		<path>./mystston.zip</path>
+		<name>Mysterious Stones - Dr. John's Adventure</name>
+		<desc>You fly to different locations around the world, exploring old temples and finding stones. Break open as many stones as possible to get artifacts while shooting the temple guards.</desc>
+		<image>/userdata/roms/mame/images/mystston.png</image>
+		<rating>0.6</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="42747" source="ScreenScraper.fr">
+		<path>./renegade.zip</path>
+		<name>Renegade (US)</name>
+		<desc>Classic arcade beat-em-up that would get many ports done for other systems. Pioneered gameplay elements which would become the foundations of the scrolling beat 'em up genre.</desc>
+		<image>/userdata/roms/mame/images/renegade.png</image>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Technos Japan Corp.</developer>
+		<publisher>Technos Japan Corp.</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="42798" source="ScreenScraper.fr">
+		<path>./rockduck.zip</path>
+		<name>Rock Duck (prototype?)</name>
+		<desc>Rock Duck (c) 1983 Datel.  - TECHNICAL -  Main CPU : M6502 (@ 1.5 Mhz) Sound Chips : (2x) AY8910 (@ 1.5 Mhz)  Palette colors : 8  Players : 2 Buttons : 1  - SOURCES -  Game's rom.</desc>
+		<image>/userdata/roms/mame/images/rockduck.png</image>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Datel SAS</developer>
+		<publisher>Datel SAS</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="42931" source="ScreenScraper.fr">
+		<path>./scregg.zip</path>
+		<name>Scrambled Egg</name>
+		<desc>A one or two player maze game published and developed by Technos in 1983. The player must run around a maze kicking Eggs into walls to break them open, revealing chicks. Chicks then must be kicked off the screen.</desc>
+		<image>/userdata/roms/mame/images/scregg.png</image>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Technos Japan Corp.</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43023" source="ScreenScraper.fr">
+		<path>./shadfrce.zip</path>
+		<name>Shadow Force (World, Version 3)</name>
+		<desc>Shadow Force is a side-scrolling platform beat-em-up for one or two players, who choose to play as one of four Ninjas and must use all the means at their disposal to free the world from the grip of the evil Dr. Wong and his terrifying 'Theaser' organization. 
+ 
+Shadow Force has 6 buttons: 2 for punches (low and high) 2 for kicks (low and high) 1 for jumping and 1 for possessing an enemy. Additional attack moves can be utilised by moving the joystick up or down and pressing punch and kick buttons. It's also possible to combine punch and kick attacks to obtain different combos and while the enemies can do the same, the number and variation of their attacks is generally lower than those available to the players. 
+ 
+In addition to being able to possess nearby enemies, Shadow Force also features something else new to the side-scrolling beat-em-up genre; at the end of each stage players take part in a bonus round consisting of a one-on-one fight.  
+ 
+Players can choose to start on any one of the first three stages and the game features 14 different possible endings.</desc>
+		<image>/userdata/roms/mame/images/shadfrce.png</image>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Technos Japan Corp.</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="43322" source="ScreenScraper.fr">
+		<path>./ssozumo.zip</path>
+		<name>Syusse Oozumou (Japan)</name>
+		<desc>A sumo wrestling game.</desc>
+		<image>/userdata/roms/mame/images/ssozumo.png</image>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Technos Japan Corp.</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Sports / Sumo-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1540</genreid>
+	</game>
+	<game id="43920" source="ScreenScraper.fr">
+		<path>./vball.zip</path>
+		<name>U.s. Championship V'ball (US)</name>
+		<desc>The player takes control of a pair of beach bums named George and Michael who make their living playing beach volleyball against locals. One day, they find a flyer for a nationwide beach volleyball tournament offering the winning team a $2,500,000 cash prize. 
+ 
+In single-player mode, one person controls both characters on a team. In two-player mode, the players either cooperate by playing on the same team or compete against each other by controlling opposing teams. The American version allows the game to be played by up to four players (if the cabinet allows it). The single-player mode consists of two cycles with four stages: the Minor Circuit and the Major Circuit. The stages in the game are Daytona Beach, New York, Los Angeles and Hawaii. After completing the Major Circuit, the player faces against the U.S. Navy team, set in a naval base. 
+ 
+The controls consist of an eight directional joystick and two buttons for jumping and receiving. The characters perform several moves including power spiking, back spiking, jump-serving, blocking and diving. 
+ 
+There are a few minor differences between the Japanese and American releases. The Japanese release features an opening cut-scene explaining the plot. Between matches, intermission sequences depict the main characters visiting a car dealership to purchase a vehicle. As the player progresses, the cars increase in quality, shifting from used cars to new cars during the Major Circuit. The American release removes these cut-scenes, but extends the multiplayer support to up to four players with multiple game modes: 1 or 2 players against the computer, 1-on-1, 2-on-1, or 2-on-2.</desc>
+		<image>/userdata/roms/mame/images/vball.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SPS</developer>
+		<publisher>Sharp</publisher>
+		<genre>Sports / Volleyball-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="44146" source="ScreenScraper.fr">
+		<path>./wwfsstar.zip</path>
+		<name>Wwf Superstars (Europe)</name>
+		<desc>A tag-team wrestling game with 6 WWF superstars to choose from.</desc>
+		<image>/userdata/roms/mame/images/wwfsstar.png</image>
+		<rating>0.6</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Technos Japan Corp.</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Sports / Wrestling-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1536</genreid>
+	</game>
+	<game id="44147" source="ScreenScraper.fr">
+		<path>./wwfwfest.zip</path>
+		<name>Wwf Wrestlefest (World)</name>
+		<desc>10 selectable wrestlers fight in a tag team tournament or take part in the Royal Rumble.</desc>
+		<image>/userdata/roms/mame/images/wwfwfest.png</image>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Technos Japan Corp.</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Sports / Wrestling-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1536</genreid>
+	</game>
+</gameList>

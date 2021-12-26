@@ -1,0 +1,673 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="40218" source="ScreenScraper.fr">
+		<path>./bigstrik.zip</path>
+		<name>Big Striker</name>
+		<desc>Big Striker is a football game developed and published by Jaleco in 1992. You have the choice between 8 international teams. The game is seen from the side in 3D. The graphics are correct and the sound effects are nice. We see from time to time, at the bottom left of the screen, the bench that encourages you and even gives you advice.</desc>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bigstrik.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40327" source="ScreenScraper.fr">
+		<path>./bombsa.zip</path>
+		<name>Bombs Away (Prototype)</name>
+		<desc>This game is known in Japan as "Block Buster.</desc>
+		<rating>0.4</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bombsa.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40513" source="ScreenScraper.fr">
+		<path>./chameleo.zip</path>
+		<name>Chameleon</name>
+		<desc>A colourful platform game in which the player controls a long-tongued chameleon that must make around a series of single-screen, platform-strewn levels; stealing chicken eggs from their nests and being careful to avoid contact with angry chickens. 
+ 
+As well as walking along the platforms and poles, the chameleon can use its tongue to pull itself up to higher platforms; and to escape from any nearby chickens. Each level also has a number of bombs placed at various points; the chameleon can hit these with its tongue to send them crashing towards nearby chickens. The player must keep an eye out for projectiles thrown by the chickens, such as flashing eggs. 
+ 
+If the nesting eggs are left for too long, they will hatch into a baby chick. The player can eat the chick for bonus points, but if the chick is left alone for too long, it will grow into an adult chicken and start attacking the player. 
+ 
+A level is over once all of the eggs have been collected and all of the chickens killed.</desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/chameleo.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="40537" source="ScreenScraper.fr">
+		<path>./chimerab.zip</path>
+		<name>Chimera Beast (Japan, prototype)</name>
+		<desc>A horizontally scrolling shoot'em up where 1 or 2 players control creatures known as 'eaters' which are capable of eating other creatures and taking their DNA, thus acquiring their abilities or characteristics. 
+ 
+Chimera Beast takes place on a planet which is described as distant and Earth-like. The planet is overrun by animals known as eaters, capable of eating other creatures and acquiring their abilities or characteristics. The player controls one of these eaters and progresses through the game by means of evolution, consuming microscopic organisms in the first stage, fish in the second, and so on. When the player's creature gets big enough to take on humanity, the goal of the game is revealed. The planet's humans have developed space travel, which the player must thwart, so as not to give the eaters a means of escaping the planet. There are two possible endings: one in which the player is able to stop the eaters from escaping the planet, and one in which the eaters do escape and, we are told, will eventually make their way to Earth. 
+ 
+The chief innovation of Chimera Beast is its power-up system. Instead of collecting gun upgrades as in most games of this genre, the player's eater enhances itself by eating other creatures and assuming their abilities and defenses. Instead of simply having various types of projectile weaponry, the game attempts to make these new abilities as varied as possible. Consuming a crustacean might give the player's eater a hard protective shell, for example, while an insectoid creature might offer a poisonous tail instead. The game even includes the ability to use cancer as a weapon. 
+ 
+Another difference from typical shooter mechanics is that the player's eater does not die after being hit. It has a life bar, which can be charged by consuming enemies. It is even possible to eat enough charge the life bar past its starting position, creating a larger eater which is not only more powerful but can take more damage as well.</desc>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/chimerab.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40562" source="ScreenScraper.fr">
+		<path>./cischeat.zip</path>
+		<name>Cisco Heat</name>
+		<desc>A colourful racing game in which the player takes on the role of a police officer who must race his squad car (from a choice of 2; offering either improved 'Speed' or 'Cornering' respectively) through the undulating, winding streets of San Francisco', in an attempt to win the first ever 'National Championship Police Car Steeplechase'. 
+ 
+Each stage is packed with rival squad cars, as well as civilian traffic such as taxis, trams and fire-engines. Ninety-degree turns must also be negotiated in this tricky driving game. Cisco Heat features five different stages.</desc>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/cischeat.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="40564" source="ScreenScraper.fr">
+		<path>./citycon.zip</path>
+		<name>City Connection (set 1)</name>
+		<desc>The player controls a small red car and must jump between platforms to colour them in as it drives over them. Oil cans can be collected and shot at the police, taxis, ambulances etc. that roam the levels. Flag waving cats must also be avoided.</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/citycon.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="40782" source="ScreenScraper.fr">
+		<path>./cybattlr.zip</path>
+		<name>Cybattler</name>
+		<desc>Aliens are invading and the only hope is a robot warrior fitted with laser cannons and an ultra cool laser sword. So get ready to blast &amp; slash lots of enemies in this exciting action game! Features excellent graphics &amp; sound and fast gameplay that will put blisters on those trigger fingers!</desc>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/cybattlr.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="150185" source="ScreenScraper.fr">
+		<path>./dday.zip</path>
+		<name>D-day</name>
+		<desc>You control a gun that shoots at tanks and other enemies.</desc>
+		<rating>0.6</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dday.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="149901" source="ScreenScraper.fr">
+		<path>./desertwr.zip</path>
+		<name>Desert War / Wangan Sensou</name>
+		<desc>A vertically scrolling shoot'em up game where the mission is to rescue the prisoners of war from enemy battlefields.</desc>
+		<rating>0.8</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/desertwr.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41075" source="ScreenScraper.fr">
+		<path>./dynashot.zip</path>
+		<name>Dynamic Shoot Kyousou</name>
+		<desc>Take up the role as a goal-hungry striker. Run through defenders and shoot past the goalie to score goals.</desc>
+		<rating>0.3</rating>
+		<releasedate>19880101T000000</releasedate>
+		<publisher>Jaleco</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/dynashot.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41084" source="ScreenScraper.fr">
+		<path>./edf.zip</path>
+		<name>E.d.f. - Earth Defense Force (set 1)</name>
+		<desc>A horizontally scrolling shoot'em up.</desc>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/edf.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41137" source="ScreenScraper.fr">
+		<path>./exerion.zip</path>
+		<name>Exerion</name>
+		<desc>Exerion is a vertical shooter that is operated with an 8 direction joystick and two fire buttons. The game's biggest features are the parallax scrolling which occurs in the background, and the sensation of inertia that is applied to the motion of the ship. The ship is equipped with two kinds of weapons. You can fire the dual shot gun which can only release one pair of shots on the screen at a time, but has an unlimited supply, by tapping the first fire button. The single shot gun can fire a rapid stream of shots on the screen at one time by holding the second fire button down, but it is limited in ammo according to the number of charges indicated on the bottom. Each weapon is best used in different situations, in order to defeat the enemies which come flying down from the top part of the screen. 
+ 
+Due to the inertia of the ship, you must input any reverse in direction much sooner in order to cancel the ships momentum. This was not a common feature for similar games that came out around the same time, so it distinguished Exerion from other shooters. Because the Famicom conversion was played on a horizontal screen, the enemies appeared much closer to the player's ship, which changes the feel of the game since you have to react to the enemies' location much sooner.</desc>
+		<rating>0.4</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/exerion.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="149902" source="ScreenScraper.fr">
+		<path>./gametngk.zip</path>
+		<name>Game Paradise - Master Of Shooting! / Game Tengoku - The Game Paradise, The</name>
+		<desc>Game Tengoku - The Game Paradise is a vertically-scrolling shoot-em-up set in a video arcade. Players take on the role of one of five different characters/ships, with each offering different weapons. 
+ 
+The game is an affectionate parody of video games and features many characters from various Jaleco titles (both arcade and home formats) blasting their way through themed stages, All of the game's enemies are also from previous Jaleco games. The five characters players can use are: 
+Exerion 
+Plus Alpha 
+Butasan 
+Formation Z 
+Momoko 120%  
+ 
+Game Tengoku - The Game Paradise offers both 'Standard' and 'Time Attack' modes and features the usual array of weapon power-ups, smart bombs and bonus items.</desc>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gametngk.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41449" source="ScreenScraper.fr">
+		<path>./ginganin.zip</path>
+		<name>Ginga Ninkyouden (set 1)</name>
+		<desc>Fight through enemies to rescue your kidnapped girlfriend.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ginganin.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41152" source="ScreenScraper.fr">
+		<path>./f1gpstar.zip</path>
+		<name>Grand Prix Star (v3.0)</name>
+		<desc>Find yourself at the wheel of a Formula One in this game with fairly neat graphics but fairly sensitive handling.</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/f1gpstar.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41514" source="ScreenScraper.fr">
+		<path>./gratia.zip</path>
+		<name>Gratia - Second Earth (92047-01 version)</name>
+		<desc>Gratia offers a rather particular perspective where the ground fills the whole screen (yes, yes!). This graphic bias is important, since your ship has, in addition to primary fire, an air-to-ground laser. This air-to-air / air-to-ground weaponry, after all very classic, is well highlighted here: there are permanently on the whole screen two types of enemies for which two different types of weapons must be used (nothing to do with Ikaruga however ...) 
+ 
+The game is rather pleasant to play without reaching peaks, and will no doubt appeal to fans of Darius from whom it is quite clearly inspired. Its great strength, however, is its graphics: once past the surprise of this visualization "in-profile-but-with-the-ground-above", we find ourselves in front of a game with colorful backgrounds, fine and varied sprites. and which even allows itself some well-felt zoom effects. No complaints on this point, it's all good.</desc>
+		<rating>0.5</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gratia.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41611" source="ScreenScraper.fr">
+		<path>./hachoo.zip</path>
+		<name>Hachoo!</name>
+		<desc>In ancient China, a wizard named Tyouraidoushi is trying to resurrect some ancient evil and two martial artists must fight their way through his monster-filled army to stop that from happening.</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hachoo.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="41881" source="ScreenScraper.fr">
+		<path>./jitsupro.zip</path>
+		<name>Jitsuryoku!! Pro Yakyuu (Japan)</name>
+		<desc>Japanese professional baseball game with fake player names. This is the arcade version of the popular NES baseball game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>Jaleco</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/jitsupro.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41983" source="ScreenScraper.fr">
+		<path>./kickoff.zip</path>
+		<name>Kick Off (Japan)</name>
+		<desc>The player gets to choose from one of 20 different national football teams. Each team has eleven players including strikers, defenders and one goalkeeper. The rules of the game are very reminiscent of real-life football. Each football round lasts 3 minutes. The player proceeds to compete against another team if he wins against the CPU, otherwise the game is over.</desc>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/kickoff.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42168" source="ScreenScraper.fr">
+		<path>./lomakai.zip</path>
+		<name>Legend of Makai (World)</name>
+		<desc>Legend of Makai is an action/adventure platformer based in a fantasy setting. The player controls a young warrior whose quest is to rescue a princess from an evil wizard. The warrior starts off with only a sword, but can purchase other weapons and magical items from shops. The gameplay consists finding one's way through non-linear levels, using keys to open doors and killing or avoiding various enemies. The player has a fixed amount of time to complete each level.</desc>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Platform-Fight / 2D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/lomakai.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="39964" source="ScreenScraper.fr">
+		<path>./akiss.zip</path>
+		<name>Mahjong Angel Kiss</name>
+		<desc>An adult mahjong game, Mahjong Angel Kiss is unique in that it features quite a few animated strip sequences per girl, instead of the standard three or four. Also unique is that the game does not give a set amount of betting funds for each girl, because of this the player cannot progress quicker through the game by depleting the girl's funds and must play a match for every strip sequence.</desc>
+		<releasedate>19950101T000000</releasedate>
+		<publisher>Jaleco</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/akiss.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="78965" source="ScreenScraper.fr">
+		<path>./momoko.zip</path>
+		<name>Momoko 120% (Japanese text)</name>
+		<desc>A girl must shoot monsters and escape from a burning building. The game starts at preschool and ends at a wedding chapel where she is to collect items and get married, only for the game to begin again.</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/momoko.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="60811" source="ScreenScraper.fr">
+		<path>./naughtyb.zip</path>
+		<name>Naughty Boy</name>
+		<desc>Naughty Boy (c) 1982 Jaleco.  - TECHNICAL -  Main CPU : Z80 (@ 1.5 Mhz) Sound Chips : TMS36XX (@ 0.35 Khz), Custom (@ 0.35 Khz)  Players : 2 Control : 4-way joystick Buttons : 1  - TRIVIA -  Released in March 1982.  This is the first game manufactured by </desc>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/naughtyb.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="60846" source="ScreenScraper.fr">
+		<path>./p47aces.zip</path>
+		<name>P-47 Aces</name>
+		<desc>The battle has reached a stalemate with neither side able to make the final breakthrough. The United World Armies have decided to send in the elite airborne unit to try to break the deadlock.</desc>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/p47aces.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="60845" source="ScreenScraper.fr">
+		<path>./p47.zip</path>
+		<name>P47 Thunderbolt (World)</name>
+		<desc>P-47 is a two-dimensional, scrolling shooter type of game. You play as the pilot of a P-47. Your mission is to basically destroy as many of the enemies as you possibly can. This means eliminating as many air and ground units as you can. You will be going through four missions (each being broken up into two parts) and at the end of each of these parts is an enemy boss for you to tangle with. Although you have unlimited ammunition, the enemy will make you pay for the invasion into their homeland. You will be able to accomplish this with various power-ups and also a second player (if they buy in). Your mission won't be easy but it is necessary so you can secure both the skies and ground for our troops. 
+ 
+The game is broken up into four missions. Within these four missions, there are 2 parts. One part involves going over land and the other part has you either going over water or being up in the air. Regardless of which part you are on, you will still have to deal with the same basic things. After part two of mission four, the missions will repeat again with mission one.</desc>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/p47.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="42542" source="ScreenScraper.fr">
+		<path>./pturn.zip</path>
+		<name>Parallel Turn</name>
+		<desc>A skiing game with six events. The screen scrolls from top to bottom with the player viewed directly from above. Events are: 
+ 
+    Ski Lift - Hit Run to move and Jump to mount the empty ski chair. You have 30 seconds to pick a chair. Each chair passed puts you higher up in the rankings. 
+    Slalom - Control the skier downhill past slalom flags and through the time-bonus gates. Overtake the other skiers to increase your ranking. 
+    Ski Jump - Run to increase your speed and jump to takeoff. 
+    Biathalon - Ski to a set of targets then aim the crosshairs and shoot. Each target gives a one second bonus. 
+    Dog Sled - A 100m distance race against the computer. Hit the run button to move. 
+    Downhill - Similar to the slalom event.</desc>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Sports / Skiing-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pturn.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="79241" source="ScreenScraper.fr">
+		<path>./peekaboo.zip</path>
+		<name>Peek-a-boo!</name>
+		<desc>Utilisez la balle pour détruire le mur de briques. Une fois que toutes les briques sont détruites, vous obtenez une récompense (femme en petite tenue) et avancez d'un niveau.</desc>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/peekaboo.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="79267" source="ScreenScraper.fr">
+		<path>./pinbo.zip</path>
+		<name>Pinbo (set 1)</name>
+		<desc>Pinbo (c) 1984 Jaleco.  - TECHNICAL -  Game ID : PB-8421  Main CPU : M6502 (@ 2 Mhz) Sound CPU : Z80 (@ 3 Mhz) Sound Chips : (2x) AY8910 (@ 1.25 Mhz)  Players : 2 Control : 8-way joystick Buttons : 2  - TRIVIA -  Released in August 1984.  A bootleg of thi</desc>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Pinball</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pinbo.png</image>
+		<genreid>1792</genreid>
+	</game>
+	<game id="42422" source="ScreenScraper.fr">
+		<path>./plusalph.zip</path>
+		<name>Plus Alpha</name>
+		<desc>Plus Alpha is a top-view type shooter game with bright and very childish-looking graphics - but wait, don't judge a game only because it looks childish. Some people don't like games with graphics like this, but you have to know the difference between childish-looking graphics and childish *gameplay*. Plus Alpha never makes you feel like you're playing a game that's meant for children - because it's helluva lot of fun to play, and unlike some other games with graphics similar to Plus Alpha, it's very very hard to beat.</desc>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/plusalph.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="42466" source="ScreenScraper.fr">
+		<path>./popflame.zip</path>
+		<name>Pop Flamer (protected)</name>
+		<desc>Players control a mouse with a flamethrower and must pops all the balloons on the level and burn off all the annoying monsters while avoiding being touched by them, also can get the power drink power-up to transform into the 'Super Mouse' and you can score high points by swallowing the nearby monsters in one gulp! 
+ 
+Once are pops all the balloons on the level, you advance to the next round.</desc>
+		<rating>0.6</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/popflame.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42532" source="ScreenScraper.fr">
+		<path>./psychic5.zip</path>
+		<name>Psychic 5 (World)</name>
+		<desc>Psychic 5 is a 2D action platformer game. It is the prequel to the Famicom game Esper Boukentai. You control one of five Espers, characters with psychic abilities, and have to maneuver through a total of 8 maze-like levels, finding and defeating Satan at the end of each. Players can jump and attack, or slow their descent in mid-air by hovering (holding up).  
+ 
+Two Espers are available at the start, with the rest unlocked by finding and breaking Magic Jars. Each Esper has different attributes; for example, the large Bunta is slow, but extremely powerful and very good at pushing open the many doors that block progress throughout the stages.  
+ 
+Players can switch between Espers at the start of each level, after beginning a new life or by using phone booths scattered throughout the stages. The enemies are possessed objects like clocks and furniture, as well as a witch named Zara who is perpetually flying across the stage; if defeated, she will grant temporary access to a useful broom power-up. 
+</desc>
+		<rating>0.6</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/psychic5.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42808" source="ScreenScraper.fr">
+		<path>./rodland.zip</path>
+		<name>Rod Land (World)</name>
+		<desc>Rod-Land is a cute and colourful platform game for one or two players in which two fairy sisters - 'Tam' and 'Rit' - must rescue their kidnapped mother from the 'Maboots Tower' fortress. 
+ 
+The fairies are armed with the 'Rods of Sheesanomo' - two magical rods that enable the fairies to catch enemies in a force-field and slam them into the platforms to kill them - and must clear each level of enemies to move onto the next and eventually reach and infiltrate the Tower. 
+ 
+As well as the magical rods used for attacking enemies, the fairies can also create a magical ladder - in a fashion very similar to that used in Taito's "Rainbow islands" - which can be utilised anywhere on a level and allows players to reach other platforms or escape from pursuing enemies. Each player can utilise only one magically-created ladder at any one time and the creation of a new ladder removes the previously-created one. 
+ 
+A level is only completed when all enemies have been killed. Some defeated enemies drop bonus items, such as fruit, missiles and bombs. 
+ 
+Each of the game's levels features brightly coloured flowers. If players manage to collect all of these, the 'Extra Game' mode begins. During this time-limited mode all of the level's enemies turn red and move much faster. If the enemies are killed in time, they drop an alphabetic letter that can be collected to spell the word 'EXTRA' and earn players an extra life.</desc>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/rodland.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="43367" source="ScreenScraper.fr">
+		<path>./stdragon.zip</path>
+		<name>Saint Dragon (set 1)</name>
+		<desc>The galaxy is under threat from a malevolent race of cyborgs. Half animal, half machine, the cyborgs have already conquered most of the galaxy and now have their sights set on the galaxy's last hope, 'The Planet of the Golde</desc>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/stdragon.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43765" source="ScreenScraper.fr">
+		<path>./tshingen.zip</path>
+		<name>Shingen Samurai-fighter (Japan, English)</name>
+		<desc>The honorable samurai fights to remove the evil samurai and their hordes of soldiers from Japan.</desc>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shooter-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tshingen.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="43117" source="ScreenScraper.fr">
+		<path>./skyfox.zip</path>
+		<name>Sky Fox</name>
+		<desc>At the player's disposal to fight the approaching enemies, some of them made in pseudo-depth 2.5D graphics with scaled sprites, is a small space fighter capable of firing two types of projectiles: the unlimited but slow rockets and the fast laser shots that are limited by draining the ship's power. The power can be refilled and the ship itself upgraded by collecting the power ups that appear after destroying certain enemies. 
+ 
+Similar to Gorf, the game features several different types of waves. The player progresses through most of them by either destroying all the enemies or alternatively just surviving their attacks for long enough time. For instance, one stage has a Galaga-style gameplay against rows of monsters led by four witches who are vulnerable only when they open their cloaks, while another features enemy warriors saddle perched on either serpent-like Chinese dragons or Western-style winged dragons. The dragons must to be hit repeatedly in the weak point of their heads to be killed, after which the riders themselves can be shot for a bonus.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/skyfox.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43170" source="ScreenScraper.fr">
+		<path>./soldam.zip</path>
+		<name>Soldam</name>
+		<desc>Soldam - Action Puzzle Game (c) 1992 Jaleco.  - TECHNICAL -  Jaleco Mega System 1-A hardware  Main CPU : 68000 (@ 12 Mhz) Sound CPU : 68000 (@ 7 Mhz) Sound Chips : YM2151 (@ 3.5 Mhz), (2x) OKI6295 (@ 30.303 Khz)  Screen orientation : Horizontal Video reso</desc>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/soldam.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="43575" source="ScreenScraper.fr">
+		<path>./tetrisp2.zip</path>
+		<name>Tetris Plus 2 (World)</name>
+		<desc>A puzzle game where you arrange the bricks to make horizontal rows of bricks so an explorer can get to the exit.</desc>
+		<releasedate>19970101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tetrisp2.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="43574" source="ScreenScraper.fr">
+		<path>./tetrisp.zip</path>
+		<name>Tetris Plus</name>
+		<desc>This is yet another updated version of Tetris which was released for PlayStation, Saturn, and Game Boy. This version features Classic mode, Puzzle mode, Versus mode, and Edit mode. In Puzzle mode, you must save the professor who climbs his way to the top. In order to do that, you must clear the blocks away and bring him to the bottom. Versus mode brings you head to head with another player. Edit mode allows you to create and save your own custom levels.</desc>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tetrisp.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41854" source="ScreenScraper.fr">
+		<path>./jajamaru.zip</path>
+		<name>Vs. Ninja Jajamaru Kun (Japan)</name>
+		<desc>A fun platform action game. You control the little red ninja, named  Jajamaru-Kun on his quest to rescue the Princess Sakura kidnapped by the Machiavellian Damazu-Dayuu. You must stop and fight against enemies to save the princess.</desc>
+		<rating>0.3</rating>
+		<releasedate>19850101T000000</releasedate>
+		<publisher>Jaleco</publisher>
+		<genre>Shooter-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/jajamaru.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="44148" source="ScreenScraper.fr">
+		<path>./wwjgtin.zip</path>
+		<name>Wai Wai Jockey Gate-in!</name>
+		<desc>Gate-In! - Wai Wai Jockey (c) 1984 Jaleco.  An early Horse Racing game.  - TECHNICAL -  Main CPU : M6502 (@ 2 Mhz) Sound CPU : M6502 (@ 600 Khz) Sound Chips : (2x) SN76496 (@ 2 Mhz), DAC  Players : 2 Control : 4-way joystick Buttons : 2  - TRIVIA -  Relea</desc>
+		<releasedate>19840101T000000</releasedate>
+		<publisher>Jaleco</publisher>
+		<genre>Sports with Animals-Horses race-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wwjgtin.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="39910" source="ScreenScraper.fr">
+		<path>./64street.zip</path>
+		<name>64th. Street - A Detective Story (World)</name>
+		<desc>Rick. PRIVATE DETECTIVE 
+OCT. 1939 file no. 238 
+The kidnapping of a rich man's daughter. 
+ 
+Beat the bad guys and throw them into the wall! 
+ 
+Rick and Allen's Detective Agency is on 64th st. They have specialized maneuvres to beat the enemy. When you are in trouble... call on a partner to join the game and assist you. A great new action game from Jaleco.</desc>
+		<image>/userdata/roms/mame/images/64street.png</image>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>C.P. Brain</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>2</players>
+		<playcount>3</playcount>
+		<lastplayed>20210518T194427</lastplayed>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="40084" source="ScreenScraper.fr">
+		<path>./astyanax.zip</path>
+		<name>Astyanax, The</name>
+		<desc>The Astyanax is a side-scrolling platform action game set in a fantasy world. The hero sets out to slay the evil wizard terrorizing the land. He is armed with an ax and also has a magic lightning spell that can be powered-up two times. Magic upgrades and health potions can be found in small stone pillars. The player needs to beat monsters in a number of locales, jumping across pits and fighting bosses at the end of stages. Two-palyer co-op is supported, with the second player being palette-swap of Player 1. 
+ 
+The game was designed by Tokuhiro Takemori who previously worked on Legendary Axe, and the basic game mechanic is similar -- in order to deal heavy blow with the axe the player needs to stop swinging it for a while. The NES version released after the Arcade game, while generally having same gameplay, features completely different level layouts, enemy designs and story.</desc>
+		<image>/userdata/roms/mame/images/astyanax.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40118" source="ScreenScraper.fr">
+		<path>./avspirit.zip</path>
+		<name>Avenging Spirit</name>
+		<desc>While walking out with his girlfriend the game's hero is ambushed by unknown enemies who snatch his girlfriend and shoot the hero dead. Now, as a wandering spirit with the ability to possess almost anybody he comes across, the hero is summoned by his girlfriend's father and given a mission to save her from the mysterious crime syndicate that holds her hostage. Only then can the hero rest in peace. 
+ 
+The player's character 'inhabits' a body with which to combat the game's enemies. When that body is killed, providing there is a living enemy nearby (other than that of a boss) the player can posses them and continue playing. Each time this is done, it costs the player some of their 'spirit energy'. Should the hero die when there are no enemies close by for the player to possess; the game is over.</desc>
+		<image>/userdata/roms/mame/images/avspirit.png</image>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40174" source="ScreenScraper.fr">
+		<path>./bbbxing.zip</path>
+		<name>Best Bout Boxing</name>
+		<desc>A horizontal boxing game from Jaleco. Choose one of 7 boxers, each with their own special punch, and win matches to claim the World Freeweight Title.</desc>
+		<image>/userdata/roms/mame/images/bbbxing.png</image>
+		<rating>0.5</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Sports / Boxing-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1540</genreid>
+	</game>
+	<game id="40217" source="ScreenScraper.fr">
+		<path>./bigrun.zip</path>
+		<name>Big Run (11th Rallye version)</name>
+		<desc>A driving game.</desc>
+		<image>/userdata/roms/mame/images/bigrun.png</image>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<playcount>1</playcount>
+		<lastplayed>20210808T215938</lastplayed>
+		<gametime>43</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41267" source="ScreenScraper.fr">
+		<path>./formatz.zip</path>
+		<name>Aeroboto</name>
+		<desc>Taking place in the year 2701, the player controls a robot which can transform into an aero fighter on a mission to stop an alien super weapon from reaching the Earth. The robot may move forwards, backwards and jump, and the aero fighter may travel anywhere on screen but has limited fuel in which to do so. A combination of the two must be used to avoid obstacles, as well as to destroy any on-screen enemies for extra points.</desc>
+		<image>/userdata/roms/mame/images/formatz.png</image>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Jaleco</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shooter / Horizontal-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+</gameList>

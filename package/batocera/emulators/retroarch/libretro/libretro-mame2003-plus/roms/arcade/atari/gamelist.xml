@@ -1,0 +1,1375 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="40284" source="ScreenScraper.fr">
+		<path>./blstroid.zip</path>
+		<name>Blasteroids (rev 4)</name>
+		<desc>Blasteroids is a 1 or 2-player update of Atari's seminal "Asteroids", where the object of the game is to clear all sectors of the asteroids and enemy ships. Once this task is completed, the player goes on to battle Mukor - the "boss" asteroid who rules all galaxies - and destroy him. 
+ 
+The player's ship appears first in the center of four vortices, he or she must chose which vortex they wish to enter, which then transports them to a sector of their chosen star system. 
+ 
+Unlike in "Asteroids", the player ship has a finite amount of fuel which must be replenished as often as possible. This is achieved by destroying specifically-colored asteroids which turn into collectible crystals. Not all sectors contain the crystal-bearing asteroids, however, and if the player runs out of fuel, a ship is lost. The game contains three different ship configurations and the player can switch between them at any time during a level. The three configurations are: Speeder (small and fast, but weak), Fighter (medium speed and strength) and Warrior (large and strong but very slow).  
+ 
+</desc>
+		<rating>0.6</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/blstroid.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="40399" source="ScreenScraper.fr">
+		<path>./buggyboy.zip</path>
+		<name>Buggy Boy/speed Buggy (cockpit)</name>
+		<desc>A colorful buggy racing game with 5 different racetracks : Circuit Off-Road, North Monte Carlo, East Safari, West Paris Dakar and South Southern Cross. Drive through different terrains avoiding other vehic</desc>
+		<rating>0.8</rating>
+		<releasedate>19850101T000000</releasedate>
+		<publisher>Tatsumi</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/buggyboy.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="150405" source="ScreenScraper.fr">
+		<path>./bullsdrt.zip</path>
+		<name>Bulls Eye Darts</name>
+		<desc>Three basic dart games in one: 'High Score', '301', and 'Round the Clock'. The player rolls the trackball to move the player's arm, rolls forward and then presses the fire button to release the dart. Players take turns as in a standard dart game. Winning a free game by getting a good score is possible.</desc>
+		<rating>0.3</rating>
+		<releasedate>19850101T000000</releasedate>
+		<image>/userdata/roms/mame/images/bullsdrt.png</image>
+	</game>
+	<game id="40441" source="ScreenScraper.fr">
+		<path>./canyon.zip</path>
+		<name>Canyon Bomber</name>
+		<desc>Canyon Bomber is a 2-D shooter. You control either the blimp or the plane while dropping bombs on the rocks below. Your goal is to get the highest amount of points (either against the computer or another player). You are allowed so many misses before your game ends. Misses are counted as the times you do not hit any rocks. The scores for the rocks are directly proportional to the difficulty in hitting those rocks. This game boils down to precision bombing and thinking ahead as to where the next bomb will fall. Good luck in taking out all of the rocks in the canyon.</desc>
+		<rating>0.7</rating>
+		<releasedate>19770101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/canyon.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40490" source="ScreenScraper.fr">
+		<path>./millpac.zip</path>
+		<name>Centipede (bootleg of Centipede)</name>
+		<desc>Centipede is a vertically oriented single screen shoot-em-up in which the aim is to use the 'Bug Blaster' to shoot the centipedes that snake down towards the bottom of the screen to amass as high a score as possible.  
+ 
+The play-field is littered with randomly placed mushrooms and the rapidly descending Centipede changes direction when it runs into a mushroom. When a segment of the Centipede is shot, the segment is destroyed and a mushroom appears in its place, the Centipede then breaks into two smaller centipedes, each with its own head, and continues its descent.  
+ 
+Players can move the Bug Blaster vertically as well as horizontally, although only for the lower fifth of the play-field. Mushrooms can also be shot for points and to clear blocked areas. Once a Centipede reaches the bottom of the screen, it starts snaking back up, but remains within the lower section of the play-field near the player's Bug Blaster. 
+ 
+Additionally, any Centipede that reaches the very bottom of the screen without being shot releases its tail section which then becomes a new head. Other new heads also enter the screen from the bottom corners of the play-field as time progresses. 
+ 
+Randomly moving Spiders also appear in the first wave. Spiders can destroy any mushrooms they move over, eliminating many mushroom targets for a player. If the Bug Blaster and a Spider collide, both are destroyed. the Spider either moves at a 45-degree angle or vertically up and down, never simply left or right like the centipede does. 
+ 
+A bombardment of Fleas appears from the second wave onward. As a Flea descends, it leaves a trail of new mushrooms behind it. Fleas appear when a certain number of mushrooms remains at the bottom of the screen. This number increases as the game progresses, meaning Fleas appear more often later on in the game. The Bug Blaster must hit a Flea twice to destroy it; the first shot simply speeds up its descent. 
+ 
+When a Centipede with fewer than eleven segments appears, a Scorpion enters from either side, moving at a relatively slow speed. As the player earns more points, the Scorpion's speed increases. As the Scorpion travels across the screen, it 'poisons' the mushrooms that it moves over and changes their colours. These mushrooms cause any Centipedes that would collide with them to head straight towards the bottom of the screen, rather than continue snaking left and right. The Bug Blaster can stop a poisoned Centipede by shooting its head. 
+ 
+If a player earns at least 60,000 points, two things happen to increase the challenge: the Fleas descend at a faster speed and the Spiders restrict their movement to a smaller area at the bottom of the screen.</desc>
+		<rating>0.7</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/millpac.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40758" source="ScreenScraper.fr">
+		<path>./csprint.zip</path>
+		<name>Championship Sprint (rev 3)</name>
+		<desc>Championship Sprint is an updated version of the old Atari Sprint series, with the added ability for players to upgrade their vehicles as the game progresses. Upgrades are won by collecting the bonus wrenches that appear once during each race, and once players have collected four wrenches, they will be presented with an upgrade screen; allowing them to choose better traction, top speed, acceleration, or a faster helicopter. 
+ 
+Collisions with barriers should, of course, be avoided, as they invariably cost the player valuable time. Also; a direct, head-on collision can cause the players' vehicles to explode - particularly if the player is moving at speed when this happens. In the event of a car exploding, a helicopter will automatically airlift a replacement vehicle to the track; this replacement will retain any previous upgrades made by the player. Waiting for the replacement car takes precious time and allows rival drivers to gain a distinct advantage. Car replacement time can be shortened upgrading the helicopter. 
+ 
+The tracks themselves are all variations on the basic 'oval', with gates, jumps, ramps and crossroads ensuring a demanding, yet incredibly playable game.</desc>
+		<rating>0.8</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/csprint.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="40582" source="ScreenScraper.fr">
+		<path>./cloak.zip</path>
+		<name>Cloak And Dagger (rev 5)</name>
+		<desc>Agent X, complete with trenchcoat, Bogie hat, and briefcase, hurries through a series of adventures and misadventures to retrieve stolen plans and destroy dastardly Dr. Boom's subterranean bomb factory. Our masked hero descends to the depths of Dr. Boom's laboratory in a special elevator. On each floor he encounters a series of conveyor belts that are moving explosives. A giant bomb ticks down the game seconds while devices of Dr. Boom's plotting, such as bomb converters, forklifts deflecting shots back at Agent X, robot guards, acid pits, and crawling eyes shooting death rays, challenge the player(s). 
+ 
+</desc>
+		<rating>0.4</rating>
+		<releasedate>19830101T000000</releasedate>
+		<publisher>Atari</publisher>
+		<genre>Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/cloak.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="40479" source="ScreenScraper.fr">
+		<path>./ccastles.zip</path>
+		<name>Crystal Castles (version 4)</name>
+		<desc>Crystal Castles is an inventive variation on the maze-driven collect-the-dots gameplay first seen in Namco's legendary "Pac-Man". The player takes on the role of 'Bentley Bear', who must run around a number of "castles" - each presented in the form of an isometric forced 3D maze - picking up the gemstones that litter its walkways and platforms, before moving onto the next castle.  
+ 
+Each level is populated by a variety of enemies, including sentient trees, gem eaters, a swarm of bees and Berthilda the Witch. Some enemy types move around the levels randomly, while others will actively chase Bentley. Gem Eaters will devour any gems they reach before the player.  
+ 
+In addition to four-directional walking, Bentley can also jump to avoid pursuing enemies and obstacles. Many levels have platforms that can only be reached via an elevator and some screens also contain hidden secret passages and ramps, as well as 'warps' that move players forward several levels.  
+ 
+Jumping over the trees will shrink and temporarily disable them, while wearing Berthilda's red hat grants the player temporary invincibility, allowing them to kill the witch should they manage to catch her. If Bentley Bear touches a Gem Eater while it's in the process of eating a gem, the Gem Eater dies and 500 points are awarded to the player. However, if the Gem Eater is not eating a gem when touched, Bentley Bear dies.  
+ 
+Some levels contain a large pot of honey. A swarm of bees appears near the honey approximately every five seconds but collecting the honey pot earns the player 1,000 bonus points and causes the bees to appear less frequently. Other enemies, such as the balls, skeletons and ghosts must be avoided.  
+ 
+If Bentley collects all of the gems on a castle, the player receives bonus points. A bonus is also awarded in the event of the player picking up the last gem on the level.  
+ 
+Crystal Castles consists of ten different stages broken down into 37 castle mazes (with four castles making up each stage, apart from 10th, which has only one castle).</desc>
+		<rating>0.8</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ccastles.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40783" source="ScreenScraper.fr">
+		<path>./cyberbal.zip</path>
+		<name>Cyberball (rev 4)</name>
+		<desc>Head to Head... Metal on Metal... It's a Fight to the Finish!! Cyberball is an extremely violent futuristic football game full of colliding metal and exploding shrapnel. Players select from over 100 offensive and defensive plays.</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Sports / Football-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/cyberbal.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40907" source="ScreenScraper.fr">
+		<path>./destryer.zip</path>
+		<name>Destroyer (Cidelsa, set 1)</name>
+		<desc>A "Space Invaders" style shoot'em up.</desc>
+		<rating>0.3</rating>
+		<releasedate>19800101T000000</releasedate>
+		<publisher>Cidelsa</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/destryer.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40971" source="ScreenScraper.fr">
+		<path>./dominos.zip</path>
+		<name>Dominos</name>
+		<desc>An old strategy game where players place dominoes in an attempt to cause their competitor to run into their trail. Play begins slowly, but speeds up as time progresses. Players change direction based upon their button presses.</desc>
+		<rating>0.3</rating>
+		<releasedate>19770101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dominos.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41113" source="ScreenScraper.fr">
+		<path>./eprom.zip</path>
+		<name>Escape From The Planet Of The Robot Monsters (set 1)</name>
+		<desc>Escape From The Planet of the Robot Monsters © 1989 Atari Games Corp.
+
+Escape From The Planet Of The Robot Monsters is a one or two-player game in which the players must rescue Dr. Sarah Bellum from Planet X, where her research facility has been taken over by the evil Reptilons. The game is played from an isometric perspective where players control their avatars using Hall effect joysticks. The Hall effect is the production of a voltage difference (the Hall voltage) across an electrical conductor, transverse to an electric current in the conductor and a magnetic field perpendicular to the current. It was discovered by Edwin Hall in 1879.
+
+The player must shoot their way through a series of simple maze-like levels, releasing the human hostages along the way. Levers must be found and thrown to activate the escalators which allow access to new areas. Gems can be collected to increase the power of the player's ray gun, and food lockers may be broken into for a health boost.
+
+At the end of each level the play switches to an isometric auto-scrolling sequence in which the player controls his character in a small spaceship, and must steer left or right to navigate through a maze of obstacles. If the player reaches the end of this sequence they will progress to the next level.</desc>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/eprom.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="145724" source="ScreenScraper.fr">
+		<path>./firetrk.zip</path>
+		<name>Fire Truck / Smokey Joe</name>
+		<desc> 
+Fire Truck is a simple two-dimensional driving game. Your perspective is from overhead as you navigate through the city streets. The object is to score points by getting as much distance as possible in the least amount of time. Those who are good enough can get bonus time for a specific amount of points. Beware, though, it will not be as easy as it seems.</desc>
+		<rating>0.3</rating>
+		<releasedate>19780101T000000</releasedate>
+		<image>/userdata/roms/mame/images/firetrk.png</image>
+	</game>
+	<game id="41264" source="ScreenScraper.fr">
+		<path>./foodf.zip</path>
+		<name>Food Fight (rev 3)</name>
+		<desc>Food Fight © 1982 Atari.
+
+The player, as Charley Chuck, must dodge all kinds of flying fruit and vegetables and try to eat an ice cream cone before it melts. How many ice cream cones can he eat? Your players will soon find out in this incredible video feast. As an ice cream cone melts on the other side of the screen, Charley Chuck just naturally has to go for it, But he must get past Oscar, Angelo, Jacques and Zorba, four chefs who unexpectedly pop out of holes, chase Charley Chuck and throw food at him. They all have different personalities and they're all out to stop Charley Chuck if he isn't fast enough. There are piles of tomatoes, peas, bananas, pies and watermelon Charley Chuck can use to defend himself from the persistent chefs. The player controls Charley Chuck with an analog joystick which allows 360 degree movement on the playfield, and a Throw button, used when Charley Chuck needs to throw food at one of the chefs.</desc>
+		<rating>0.4</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>General Computer Corporation</publisher>
+		<genre>Shooter-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/foodf.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41276" source="ScreenScraper.fr">
+		<path>./freeze.zip</path>
+		<name>Freeze</name>
+		<desc>Freeze is a highly addictive, head-to-head, 3-D action-puzzle game where players join a wild cast of characters on an underwater fish sorting adventure. Players sort combos out of cute little fishies that swim, smile and wink. Challenge and strategy build as players learn different characters each possessing a unique special weapon. An exciting quiz game offers players an opportunity to race against time solving a multitude of colorful fishie puzzles. Combining these playful characters with the simple addictive gameplay will have players sorting fish in their sleep. The true challenge of any puzzle game.</desc>
+		<rating>0.6</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Cinematronics</developer>
+		<publisher>Atari</publisher>
+		<genre>Action-Action / Labyrinth-Puzzle-Game / Throw-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/freeze.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41263" source="ScreenScraper.fr">
+		<path>./fnkyfish.zip</path>
+		<name>Funky Fish</name>
+		<desc>Funky Fish © 1981 Sun Electronics.
+
+Our 'fishy' protagonist must attack groups of small fish that are defending a monster. Shoot bubbles at the fish until they change to fruit. If you don't eat the fruit it will fall to the seabed and awaken a sleeping seashell that releases a sea horse to attack you.</desc>
+		<rating>0.5</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Sunsoft</developer>
+		<publisher>Sunsoft</publisher>
+		<genre>Shooter / Horizontal-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/fnkyfish.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="145730" source="ScreenScraper.fr">
+		<path>./gauntlet.zip</path>
+		<name>Gauntlet (rev 14)</name>
+		<desc>Gauntlet is a maze-based shoot-em-up for up to four players. Heavily influenced by classic fantasy conventions, players take on the role of either Thor the Warrior, Thyra the Valkyrie, Merlin the Wizard, or Questor the Elf and must play cooperatively as they explore and fight their way through the enemy-packed mazes. Competitive play is encouraged as players must fight for the limited amount of food, treasure, magic potions and power-up items that litter the dungeons.  
+ 
+Each of Gauntlet's four characters have different strengths and weaknesses: Thyra has the strongest armour, Thor is best at hand-to-hand combat, Questor has the fastest speed and Merlin has the most powerful magic attacks. The object of the game is simply to survive as long as possible while exploring Gauntlet's mazes in search of treasure, food, magic potions and, ultimately, the exit that leads to the next dungeon.  
+ 
+The potions - shown as blue bottles - that litter the levels offer either improved character abilities (such as 'speed' or 'extra shot power') or can be used as a 'smart bomb', destroying some or all of the on-screen monsters. Potions are also the only way to kill the game's 'Death' character that appears in many of the stages. Magic potions can be kept and used at the player's discretion by pressing 'Magic' button, although each potion can only be used once.  
+ 
+The first seven mazes are always the same, but from level 8 onwards, players will find themselves on any one of over a hundred different mazes. If players survive for long enough, the mazes will be repeated in a different order. How long a player lasts depends upon the player's 'health' level. Health continually depletes as time progresses and further health is lost by contact with various monsters or their projectiles. Health can be replenished by consuming the food found in the mazes or by inserting more credits. The many treasure chests that litter the levels can be plundered for points, and collecting treasure increases a player's score multiplier when two or more players are playing the game.</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/gauntlet.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41395" source="ScreenScraper.fr">
+		<path>./gaunt2.zip</path>
+		<name>Gauntlet 2</name>
+		<desc>Gauntlet II is a direct sequel to the legendary maze-based fantasy themed shoot-em-up, released a year earlier. Atari chose not to tinker with the core game-play mechanic to any great degree, opting instead to enhance the already excellent multi-player action that had created such a stir upon the original game's release. 
+ 
+As with its prequel, up to four players once again take on the role of either 'Thor the Warrior', 'Thyra the Valkyrie', 'Merlin the Wizard', or 'Questor the Elf' and must play cooperatively as they explore and fight their way through the enemy-packed mazes, collecting potions, food and treasure as they searched for the exit that would lead them to the next dungeon. 
+ 
+Changes to the sequel included the ability for players to play whatever character they wanted, even if that character was already in play. Characters were now colour-coded and players would find themselves taking on the role of 'Blue Elf', 'Green Wizard', etc. New in-game speech was added to allow for the new player definitions. 
+ 
+Other changes included the ability to 'bounce' shots off walls - known as 'Reflective Shots' - providing the correct potion was picked up. As well as new potions, Gauntlet II also featured several new monsters. The most notorious of the new additions was the Fire-breathing Dragon that guards the exit to some dungeons. This powerful creature takes multiple hits to kill and defeating it would see the players rewarded with a permanent potion and a bag of treasure. 
+ 
+Another notable addition was the 'It' monster: any player who was tagged by the creature would suddenly find that all of that level's monsters would ONLY chase the tagged player, completely ignoring the presence of all other players. The only way to remove this curse was to tag another player, thus making them 'it'. 
+ 
+New level elements were also added to further increase variety. These included dungeons with entirely invisible walls, magical walls (which changed into monsters or items when hit), stun tiles (which stunned any player that walked on them) and exits that flashed between functioning and non-functioning.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/gaunt2.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="46391" source="ScreenScraper.fr">
+		<path>./gravitar.zip</path>
+		<name>Gravitar (version 3)</name>
+		<desc>Gravitar is a 1- or 2-player game with a color X-Y video display. This new display, with its three color guns and higher voltage, has the same technology that was used in previous Atari black-and-white X-Y displays. However, the screen now displays dazzling colors and unique visual effects.  
+ 
+The player controls a space ship in three different solar systems. Each solar system consists of a home base, a death star, a red alien planet and four regular planets. Each planet has its own unique terrain.  
+ 
+The red alien planet is the home of shooting alien ships. Some of the regular planets may have flying alien rammers to be avoided or shot down. The four planets all have fuel cells to be retrieved with a tractor beam and alien bunkers that fire shells. Successfully destroying all of the bunkers results in a 'MISSION COMPLETE' message at the top of the screen. Achieving 'MISSION COMPLETE' allows the player to collect bonus if he can evade the rammers when leaving the planet. If successful, he will be placed back in the solar system.  
+ 
+A player has two ways to advance to the next solar system. The first is to successfully complete a mission on all four regular planets. The second way is to complete a mission on the red alien planet, which establishes a link into the next solar system.  
+ 
+</desc>
+		<rating>0.5</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter-Fight-Shoot'em Up</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/gravitar.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41757" source="ScreenScraper.fr">
+		<path>./hydra.zip</path>
+		<name>Hydra</name>
+		<desc>An abstract racing game in which the player takes on the role of a special government courier, who must deliver a number of secret cargoes to their various destinations at the end of each stage. Gameplay consists of piloting a heavily-armed hovercraft over a series of waterways, avoiding or destroying the enemy craft and barriers that litter each level. Progress is hampered by mines, enemy hovercraft, logs and other obstacles. Money bags can be collected as well as extra fuel. 
+ 
+On-board fuel depletes at a steady pace and players must keep a look out for additional fuel cells. In addition to a forward-firing gun, the hovercraft is equipped with a 'Boost' function. Providing the player has enough boost fuel, the craft can be made to fly in the air for a limited time; useful for avoiding enemies and barriers, as well as for gaining access to certain bonus items.</desc>
+		<rating>0.8</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter / Vehicle, 3rd person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/hydra.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="41834" source="ScreenScraper.fr">
+		<path>./irobot.zip</path>
+		<name>I, Robot</name>
+		<desc>I, Robot is a 3-D shoot-em-up in which the player controls the "Unhappy Interface Robot #1984"; a servant robot who has become self-aware and decided to rebel against the all-controlling Big Brother and his ever-watchful 'Evil Eyes'. 
+ 
+The game is set over a series of platform-based stages constructed from solid coloured blocks and to complete a stage, players must "eliminate the red zones". This is achieved by moving the robot over all of a stage's red surfaces, changing their colour to blue. The colour scheme - including target colour - changes every 26 levels, however. So while the target colour is red for the first 26 screens, it becomes yellow from Level 27, blue from Level 53 and magenta from Level 79. 
+ 
+In order to reach all of the platforms and surfaces, the Interface robot will need to jump. This must be carefully timed, however, as jumping is not allowed under Big Brother's strict regime and his Evil eye - sitting atop a pyramid at the back of the playfield - will open at regular intervals to watch over the interface robot. Should the eye be fully open - indicated by it turning red - when the robot is mid-jump, he will be spotted and destroyed, costing the player a life. 
+ 
+Once all of the coloured squares on a stage have been eliminated, the enemy's shield is destroyed and the Interface Robot will need to be guided to a final, previously inaccessible coloured square at the back of the playfield. The Evil Eye is then zapped and destroyed. 
+ 
+Some levels feature different background elements that affect gameplay, such as walls that must be shot and destroyed to reach coloured tiles, or indestructible moving columns that intermittently block access to coloured tiles, making timing difficult. There are also enemies to be shot or avoided, including birds, bombs and flying sharks. 
+ 
+</desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<publisher>Atari</publisher>
+		<genre>Various-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/irobot.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="41802" source="ScreenScraper.fr">
+		<path>./indytemp.zip</path>
+		<name>Indiana Jones And The Temple Of Doom (set 1)</name>
+		<desc>Indiana Jones and the Temple of Doom is an action games based on the movie of the same same in which the player takes on the role of action hero, Indiana Jones. Indy must infiltrate the lair of the evil Thuggee cult and their boss, Mola Ram, armed only with his trademark whip. The goal is to free the children the cult has kidnapped as slaves, recover the stolen relics known as "Sankara Stones" and escape from the temple. 
+ 
+The game that takes place over three different zones; the mines, a mine-cart chase and the temple. Players can choose to start the game on any one of three difficulty levels: easy, medium and hard. These are selected by entering the corresponding door. 
+ 
+The first zone is made up of ledges, ladders, slides and conveyor belts. Indy must free kidnapped children by finding their cages and whipping them open. Rattlesnakes and Thuggee guards patrol the ledges and must be avoided or whipped. Players must be careful to not fall from a ledge or a life is lost. Mola Ram himself occasionally appears and throws flaming hearts at Indy, these must be whipped or avoided. 
+The second zone is a recreation of the famous mine cart chase from the movie and the player must guide Indy's cart to the bottom of the mine, keeping ahead of enemy carts and avoiding dead ends and track-side enemies. The cart can be steered left and right to different tracks to avoid obstacles. 
+The third zone takes place in the temple itself and Indy must make his way to the altar and retrieve the Sankara stone. Indy must avoid guards, rattlesnakes and flaming hearts thrown by Mola Ram. Once a Sankara stone has been retrieved Indy must escape the temple through one of the four doors that opens. 
+ 
+The zones are then repeated twice more to collect the two remaining stones, although the lay-out and difficulty of the zones is different. Once all three Sankara stones have been collected, Indy must work his way through a final mine and mine-cart section, before making his escape on a rope bridge and facing Mola Ram for the final time.  
+ 
+</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Action-Fight-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/indytemp.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41950" source="ScreenScraper.fr">
+		<path>./kangarooa.zip</path>
+		<name>Kangaroo (Atari)</name>
+		<desc>A platform game in which the player controls a mother Kangaroo who must climb through the treetops trying to rescue her captured son. Numerous monkeys, the kidnappers of her child, roam the levels set on stopping the player's progress. The monkeys constantly throw apples at the Kangaroo which must either be avoided (either by ducking or jumping, depending on the height of the approaching apple), or punched away, the latter of which allows the Kangaroo to punch the apple back towards the attacking monkey. 
+ 
+If the player stalls for too long or does not punch either an apple or a monkey, a giant ape will appear and steal the Kangaroo's boxing gloves, leaving the player temporarily defenseless. The gloves are returned after a short time. 
+ 
+Fruit and vegetables litter the levels and can be picked up for bonus points. Each level also has a bell hanging from one of its platforms, which can be punched to make fruit and vegetable items appear. The game consists of 4 different stages, once these are completed the game begins again with an increased level of difficulty.</desc>
+		<rating>0.8</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Sunsoft</developer>
+		<publisher>Sunsoft</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/kangarooa.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="42014" source="ScreenScraper.fr">
+		<path>./klax.zip</path>
+		<name>Klax (set 1)</name>
+		<desc>The tiles klank end over end down the ramp. Catch them on the paddle, or they fall in the pit. Flip them from the paddle into the bins, matching the same-colored tiles horizontally, vertically, or diagonally. Each line of colored tiles is a Klax. When you've made a Klax, you hear a fanfare. When you complete a wave, the crowd cheers. Let a tile fall in the pit, and you hear a scream as it falls in. If you fail to complete a wave, the crowd is disappointed. Stay alive, complete the waves and don't drop any tiles! 
+ 
+Catch the tiles as they come to the end of the ramp on the paddle. Flip a tile into a bin by pressing the start/flip button. Pull the joystick forward to increase the speed of the closest tile as it klanks down the ramp. Push the joystick back and toss the top tile on the paddle back on the ramp and gain a little time. 
+ 
+The paddle can hold up to five tiles. As long as the green light is on below the paddle, you can pile more tiles on the paddle. When the red light appears, you must flip at least one tile in a bin or toss it back on the ramp before you can collect any more tiles. You can flip tiles into a bin as long as the green light is on below the bin. 
+ 
+To succeed in Klax, make points and also complete each wave. Create a horizontal, vertical, or diagonal row of at least three tiles (just like in tic-tac-toe) in the bins to make a Klax and make points. You receive the most points for diagonals, less for horizontals and the least for verticals. When you create a Klax, the tiles in the Klax disappear to make room for more tiles in the bins. 
+ 
+</desc>
+		<rating>0.9</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/klax.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="42147" source="ScreenScraper.fr">
+		<path>./liberatr.zip</path>
+		<name>Liberator (set 1)</name>
+		<desc>The Liberator controls consist of a trackball, fire button, and shield button. The player controls a coordinated attack from four star ships at the corners of the screen. The primary target of the attack are enemy bases on a rotating planet in the center of the screen. The trackball is used to move a cross-shaped cursor. The fire button fires a missile at the cursor's location from your closest ship. The shield button is used to activate force fields around the ships. The shield can only take four hits each round, and the count is shared between all ships. 
+ 
+At the beginning of each level, the player is flying through outer space and spaceships fly on screen from the left and right and leave in an arc. They try to ram into your ships. Note that shields do not work during this stage. 
+ 
+After this stage, the player is taken to a view of a rotating planet. The most prominent enemies are red flashing missile bases. They shoot missiles, fireballs, and star balls at your ships. The enemy bases can also detach from the planet, turn into satellites, and orbit the planet while shooting missiles. Once all missile bases are destroyed, the player moves onto the next level. At higher levels, there is the white master base. It is very intelligent, and it can change the direction or speed of the planet rotation to avoid getting hit.</desc>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter / Missile Command Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/liberatr.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="46394" source="ScreenScraper.fr">
+		<path>./mhavoc.zip</path>
+		<name>Major Havoc (rev 3)</name>
+		<desc>Major Havoc is a vector-based shoot-em-up and platform game in which the evil Vaxxian Empire overran the galaxy many years ago. Most of humanity was enslaved and abducted to the Vaxxian home world, although a few human scientists managed to escape. The Vaxxian Empire has long since collapsed but numerous Vaxxian space stations, all blindly controlled and defended by robots, still remain in the galaxy, mindlessly following their original, pre-programmed orders. 
+ 
+The small band of scientists who initially escaped have cloned the great human hero, 'Major Havoc' and tasked him with flying his 'Catastrofighter' through a wormhole in space so that he may lead a clone army against the dreaded Vaxxian robots and to liberate the remnants of humanity by destroying the enemy reactors. The player controls Major Rex Havoc, the leader of this band of clones. 
+ 
+The game is broken down into two distinct gameplay genres. The first is a shoot-'em-up in which the player controls Major Havoc's spaceship against the numerous robot ships that defend the enemy reactors. The ships are encased in a force-field shield which must first be shot and depleted before the ship itself can be destroyed.  
+ 
+The second section is a platform/maze game in which the player - after first landing on the space-station by centering their ship between a moving white line - enters the station. The object here is to reach the core of the station and sabotage its reactor by setting an explosive charge. Once the charge has been set, the player must quickly escape back to their ship and and reach a minimum safe distance before the space-station explodes.  
+ 
+The Space-station has reduced gravity, making Major Havoc react slowly to players' input. Each station has a maze-like layout and red arrows guide the player towards the station's core. Once the charge has been placed, more arrows guide the player to the station's exit. The mazes of successive space-stations become more complex and harder to navigate as the player progresses. Players also have a limited amount of oxygen in a station but more can be collected by running over the 'O2' symbols scattered throughout the maze. 
+ 
+Major Havoc features a warp system that allows players to skip levels and gain bonus points or extra lives. The warps are activated by a utilizing a Breakout-style mini-game at the bottom-right corner of the screen.  
+ 
+The mini-game is available at the start of each wave and the way it works is this: a two or three-digit number is displayed and players must move the controller until the number matches the one required to warp. For example, the RED WARP requires the number '23', so the player must move the controller left or right until the first digit matches '2', then must press the fire button. The Breakout game begins and must be played while moving the joystick to the '3'. Once players have successfully entered the warp code, they are transported to a higher level.</desc>
+		<rating>0.9</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter-Various-N/A-Shoot'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mhavoc.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="78854" source="ScreenScraper.fr">
+		<path>./marble.zip</path>
+		<name>Marble Madness (set 1)</name>
+		<desc>Marble Madness is an abstract maze game for one or two players. The game's goal is to guide a small glass marble over a three-dimensional maze and reach the finish line before the level's timer has expired. Any seconds that remain on the timer when the finish line is crossed are carried over to the next level.  
+ 
+As well as having to negotiate the marble over treacherous walkways and ramps, numerous obstacles and unfriendly creatures will try to slow the marble's progress or knock it over the edge of a platform, wasting yet more precious seconds until a replacement marble appears. The two-player game has players competing to reach the goal first.  
+ 
+Marble Madness features six different mazes.</desc>
+		<rating>0.9</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/marble.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="78924" source="ScreenScraper.fr">
+		<path>./milliped.zip</path>
+		<name>Millipede</name>
+		<desc> 
+Millipede is a 1- or 2-player game with a color raster-scan video display. The game action takes place on a playfield filled with mushrooms, flowers, and deadly DDT bombs. The player tries to destroy a variety of insects that drop from the top of the screen or enter from the sides of the screen, most of them to attack the player. The player controls a bow-shaped vehicle called the Archer. The object of the game is to shoot and destroy as many objects as possible for a high point score, before the player's lives are all used up. 
+ 
+Player control consists of a Midi Trak-Ball control and a FIRE button. The Archer is moved by rotating the Midi Trak-Ball control. The Archer can be moved in all directions, but only within the bottom fifth of the screen. However, the Archer must move around mushrooms, flowers, and DDT bombs, since these are fixed and not 'transparent' objects. Pressing the FIRE button causes the Archer to emit an arrow that travels upward. The Archer may fire one or many arrows (by holding down the FIRE button constantly). But only one arrow will appear on the screen at a time. 
+ 
+</desc>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/milliped.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="78936" source="ScreenScraper.fr">
+		<path>./missile.zip</path>
+		<name>Missile Command (rev 3)</name>
+		<desc>Missile Command is a one or two-player game depicting the outbreak of a nuclear war. Players must defend six cities from waves of incoming nuclear missiles by launching their own anti-ballistic missiles (ABMs) from one of three missile batteries.  
+ 
+The game is played by moving a cross-hair across the sky and pressing one of three buttons to launch an ABM from the corresponding battery (either Alpha Base, Delta Base or Omega Base). Upon reaching the cross-hair the player's ABM explodes, creating a fireball that lasts for several seconds and destroys any enemy missiles that enter it. Each battery is initially armed with ten anti-ballistic missiles and becomes useless when either all of its missiles have been fired or it's been destroyed by enemy missiles.  
+ 
+</desc>
+		<rating>0.9</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter / Missile Command Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/missile.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="62583" source="ScreenScraper.fr">
+		<path>./montecar.zip</path>
+		<name>Monte Carlo</name>
+		<desc>Atari's Monte Carlo is a 1-player video game that simulates driving in a grand prix race. Various video-display phrase indicate score, time elapsed ('FUEL'), speed and which track was selected at the beginning of the game (eight different ones ranging from easy to hard). Players drive the grand prix car through the streets, while spectators observe from the side. Bales of hay, cola stands, trees, and bushes also line the roadway. 
+ 
+Four computer-controlled cars provide challenge: they pass the player's car at high speed and may cause it to skid or even crash. However, the computer cars are not unfailable and may also skid or crash occasionally. Realistic engine revving, screeching tires and crash sounds accompany game play.</desc>
+		<rating>0.5</rating>
+		<releasedate>19790101T000000</releasedate>
+		<genre>Various-Casino-Casino / Slot machine-Various / Electro- Mechanical</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/montecar.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="79140" source="ScreenScraper.fr">
+		<path>./nitedrvr.zip</path>
+		<name>Night Driver</name>
+		<desc>Night Driver is a simple two-dimensional driving game. Your perspective is from behind the wheel of the car as you drive down the highway.</desc>
+		<rating>0.7</rating>
+		<releasedate>19760101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Race 1st Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/nitedrvr.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="60825" source="ScreenScraper.fr">
+		<path>./offtwall.zip</path>
+		<name>Off The Wall (2/3-player upright)</name>
+		<desc>Off the Wall is an arcade game produced by Atari and released in North America in 1991. A modern remake of Breakout, this game introduces many new gameplay features to the bat-and-ball genre, and it incorporates some elements from Pong as well. It supports up to three players simultaneously (though most cabinets only support two), and the game's graphics include many backgrounds modeled after modern abstract art. 
+ 
+The objective of Off the Wall is to score as many points as possible by destroying square blocks in a never-ending series of levels. The player controls a paddle using an analog knob or a joystick (depending on the machine configuration). The paddle moves along one edge of the playfield, and a ball flies around the playfield and bounces off the walls and the paddle. When a ball hits a block, the block disappears (unless it is indestructible). A square exit is placed on the screen, and directing the ball into this exit causes all remaining blocks on the screen to self-destruct, awarding bonus points and advancing the player(s) to the next level. 
+ 
+The ball occasionally splits in two (in multiplayer games, three balls may be on the screen at once), and the player can put spin on the ball, causing it to move in a curved trajectory. The player loses a life when the last ball on the screen moves past the player's paddle, though in some circumstances, the game gives the player a second chance. The game is over when the player has lost all of his or her lives. 
+ 
+As levels progress, the game introduces new features that make the game more complex and challenging. These features include blocks that move randomly or in circles, various powerups, indestructible blocks and bombs, blocks that parachute or fly in to replace destroyed blocks, objects that change the ball's speed and trajectory, and guns that can shrink the players' paddles. Depending on the number of players in the game, some levels may be skipped due to the exit being along one player's edge of the playfield. In multiplayer games, a bonus round occurs periodically where players compete directly against one another in an exact clone of Pong. The winning player earns an extra life.</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/offtwall.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="79186" source="ScreenScraper.fr">
+		<path>./paperboy.zip</path>
+		<name>Paperboy (rev 3)</name>
+		<desc>Paperboy © 1984 Atari Games.
+
+Paperboy is a one or two-player game in which the objective is to deliver Newspapers to the Paperboy's customers from Monday through to Sunday. 
+
+Each game begins with ten customers and ten non-customers. Paperboy's customers live in the brightly coloured houses, while non-customers live in dark coloured houses. To deliver to a customer, the player must throw a paper either into the customer's mailbox, or onto their front porch. Failure to deliver a paper to a customer results in the loss of that customer for the next day. Any damage done to a customer's property also results in the loss of that customer. Losing all ten of Paperboy's customers will get him fired and the game is over. However, on any day in which all customers have their papers successfully delivered, one of the non-customers will re-subscribe.
+
+Non-customers' houses and yards are loaded with targets at which to throw your extra papers (windows, lamps, statues, etc.). Hitting these targets earns points for the "Breakage Bonus", which is displayed at the top center of the screen. The total Breakage Bonus is awarded to the player at the end of each day (or at the end of the game-whichever comes first). 
+
+If Paperboy loses a customer, that customer's house will be dark coloured the next day. As a non-subscriber, this house now presents more targets at which to throw newspapers for building up the Breakage Bonus. At the start of each day, a map of Paperboy's route is displayed to indicate subscriber and non-subscriber houses. This helps to remind players of what customers they may have lost on the previous day and the location of remaining customers. 
+
+Paperboy can carry a maximum of ten papers at a time, but can restock his supply by riding over paper bundles placed here and there on his route. A paper supply indicator is displayed underneath the player's score. 
+
+While making his deliveries, Paperboy must avoid collisions with all stationary objects and other characters moving about the neighborhood. To avoid collisions, Paperboy can ride his bike anywhere - on the sidewalk, in the street, or into front yards. A collision with anything results in the loss of a life. 
+
+In addition to the obstacles, non-subscribers are hostile towards Paperboy and will attack him and try to knock him down. If Paperboy damages a subscriber's property, that character may also attack. So the more customers that are lost, the more hostile the neighborhood becomes toward Paperboy. 
+
+At the end of each delivery day, players have a chance to sharpen their skills by guiding Paperboy through the Paperboy Training Grounds. This obstacle course is filled with various targets at which to throw newspaper, as well as ramp jumps to be negotiated. This is a bonus round and no lives are lost for failing to reach the finish line.</desc>
+		<rating>0.9</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Action-Race, Driving-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/paperboy.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="145729" source="ScreenScraper.fr">
+		<path>./peterpak.zip</path>
+		<name>Peter Pack Rat</name>
+		<desc>Peter Pack Rat is a platform game in which the player, controlling the game's hero, a rat called Peter; must rush around a platform-filled screen collecting a variety of objects to take back to Peter's nest. These objects include bottles, watches, hats, balls, and cans. 
+ 
+A number of enemy creatures hinder the player's progress; these include rats, cats, dogs, bats and owls. There are 3 different levels to play through; a junkyard, a sewer and a tree. 
+ 
+As well as the objects that must be collected and taken to Peter's nest, additional objects can also be collected and thrown to stun attacking animals. Flying animals that have been stunned can be ridden around the screen for a short period of time. A round ends when all the desired objects have been collected and placed in the nest. Successive rounds add more objects and enemies, as well as changing the patterns of the shortcuts.</desc>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Platform</genre>
+		<image>/userdata/roms/mame/images/peterpak.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="42396" source="ScreenScraper.fr">
+		<path>./pitfight.zip</path>
+		<name>Pit Fighter (rev 9)</name>
+		<desc>Three digitized brawlers face off co-operatively against a variety of street thugs, with gameplay featuring crowd interference and usable weapons. Players also get to fight each other in a 'Grudge Match'. Pit-Fighter featured impressive camera zoom and side-to-side pan but was somewhat flawed as a gameplay experience. On the dedicated cabinet version, up to three players can play simultaneously.</desc>
+		<rating>0.9</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/pitfight.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="42461" source="ScreenScraper.fr">
+		<path>./poolshrk.zip</path>
+		<name>Poolshark</name>
+		<desc>Pocket-Pool video game.</desc>
+		<rating>0.3</rating>
+		<releasedate>19770101T000000</releasedate>
+		<publisher>Atari</publisher>
+		<genre>Sports / Swimming-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/poolshrk.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42506" source="ScreenScraper.fr">
+		<path>./primrage.zip</path>
+		<name>Primal Rage (Version 2.3)</name>
+		<desc>Seven ferocious dinosaurs gnaw, gore and bite each other until they become the winner's dinner. Eat cavemen to regain health! Feature digitized stop-motion animation. Each of the seven characters has an arsenal of nearly seventy moves, including special and finishing moves. Each character has its own ending.</desc>
+		<rating>0.9</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/primrage.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="46397" source="ScreenScraper.fr">
+		<path>./quantum.zip</path>
+		<name>Quantum (rev 2)</name>
+		<desc>Quantum is a reflex-based vector game set in the sub-atomic world of quantum physics, in which the player controls a probe (or 'Sparkler') and must fully encircle atomic particles for points without touching various other particles. Once the particles are surrounded by the probe's tail they are destroyed. 
+ 
+The game features numerous particle types that must be encircled and destroyed or avoided. First, there are nuclei around which electrons orbit. When a nucleus is encircled (snared) and explodes, the Electrons change into Positrons which, if they are encircled before flying off the screen, are worth extra points. 
+ 
+As play progresses, Pulsars appear. These travel towards the player's probe, pulsating their arms in and out as they move. The probe is destroyed if it makes contact with any part of a Pulsar. Other deadly particles include triangular Photons, self-deviding Splitters and diamond-shaped Triphons. 
+ 
+In later stages, the nuclei join together, forming bonds. The player's probe is destroyed if it crosses the bonds when they are red, but can safely cross when they are yellow.</desc>
+		<rating>0.4</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Puzzle-Game-N/A-Various</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/quantum.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="42653" source="ScreenScraper.fr">
+		<path>./qwak.zip</path>
+		<name>Qwak (Prototype)</name>
+		<desc>Qwak (c) 1982 Atari.  - TECHNICAL -  Main CPU : M6502 (@ 1.512 Mhz) Sound Chips : (2x) POKEY (@ 1.512 Mhz)  Screen orientation : Vertical Video resolution : 240 x 256 pixels Screen refresh : 60.00 Hz Palette Colors : 16  Players : 1 Control : 8-way joysti</desc>
+		<rating>0.5</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Puzzle-Game / Glide-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/qwak.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="42693" source="ScreenScraper.fr">
+		<path>./rampart.zip</path>
+		<name>Rampart (Trackball)</name>
+		<desc>Rampart is a superb arcade puzzle game in which up to three players must build up a castle using Tetris shaped pieces to form a castle wall and enclose their keep. Each player must then place a limited number of cannons inside their castle wall before the timer expires. Once the cannons have been placed the battle itself begins. Players must target their cannons onto the enemy's castle (or, in the one-player game, enemy ships and peons) and destroy as much of the enemy army as possible before the time limit expires.  
+ 
+Once the battle is over the players must repair their castles, again using tetris shapes. The players' Keep must be completely encircled with castle wall or the game is over. In the single-player sea attack game, any enemy ships that manage to reach the coast nearest the player will unload peons that will attack the player's castle by land.</desc>
+		<rating>0.9</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Tengen</developer>
+		<publisher>Tengen</publisher>
+		<genre>Shooter / Missile Command Like-Shooter</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/rampart.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="42745" source="ScreenScraper.fr">
+		<path>./relief.zip</path>
+		<name>Relief Pitcher (set 1, 07 Jun 1992 / 28 May 1992)</name>
+		<desc>A baseball game with an option of playing a standard baseball game or playing as a relief pitcher through a series of games.</desc>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/relief.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41877" source="ScreenScraper.fr">
+		<path>./jedi.zip</path>
+		<name>Return of the Jedi</name>
+		<desc>Return of the Jedi is a scrolling shoot-em-up based on the legendary Star Wars trilogy (specifically, the third film, 'Episode VI: Return of the Jedi') and - unlike its vector-based prequel - is rendered in an isometric forced-perspective viewpoint, similar to that pioneered in Sega's 1982 classic, "Zaxxon".  
+ 
+The ultimate aim of the game is to reach and destroy the Death Star and escape alive. Success is achieved by surviving an 'attack wave', which consists of four different scenes. Play switches between Endor and space-based scenes, with each one putting the player in control of a different vehicle from the movie.  
+ 
+The scenes are based on three distinct locations taken from the original movie. They are: The forest moon of Endor, Attack on the Death Star, and Space battle.  
+ 
+SCENE 1: Speeder Bike chase on Endor as Princess Leia. The goal is to reach the Ewok village alive.  
+SCENE 2: Scout Walker chase on Endor as Chewbacca. The goal is to reach the shield generator.  
+SCENE 3: Millennium Falcon attack on Death Star as Lando. The goal is to reach and destroy the Death Star power reactor.  
+SCENE 4: Millennium Falcon escape from exploding Death Star. The goal is to escape the exploding Death Star.  
+SPLIT SCENE: Play switches between scenes 2 and 3.  
+ 
+The scenes loop for as long as the player has lives remaining; although to increase variety, the order in which they appear is randomised as play progresses. Each successive wave increases in difficulty.</desc>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter / Vehicle, Diagonal-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/jedi.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="42781" source="ScreenScraper.fr">
+		<path>./roadblst.zip</path>
+		<name>Road Blasters (upright, rev 4)</name>
+		<desc>Road Blasters © 1987 Atari Games.
+
+Road Blasters is a futuristic driving game in which the player must shoot rival racers and collect fuel globes to top up his ever-diminishing fuel supply. Power-up weapons are dropped from above and and must be 'caught' by the player. Collision with enemy vehicles will result in the destruction of the player's own vehicle. Digitized speech, effects and music play throughout the game.</desc>
+		<rating>0.6</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter / Vehicle, 3rd person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/roadblst.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="42785" source="ScreenScraper.fr">
+		<path>./roadriot.zip</path>
+		<name>Road Riot 4wd (set 1, 04 Dec 1991)</name>
+		<desc>C'est un jeu arcade super fun et qui à l'époque était magnifique ... 
+Traversez tous les pays du monde en 4x4 en shootant vos adversaires. En récompense : des créatures de rêves en bikini à l'arrivée !!! 
+Bref de quoi motiver !
+
+</desc>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Casino-Various-Casino / Slot machine-Various / Electro- Mechanical-Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/roadriot.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="42786" source="ScreenScraper.fr">
+		<path>./roadrunn.zip</path>
+		<name>Road Runner (rev 2)</name>
+		<desc>The player takes on the role of the Road Runner - from the much-loved Warner Bros. cartoon series - and must outrun and outsmart the villainous Wile E. Coyote, in this abstract sidways-scrolling racing game from Atari. 
+ 
+A variety of traps and pitfalls await the Road runner - including cannons, land mines and cliff-top drops - that must be carefully avoided or negotiated. It is possible, however, to lure Wile E. Coyote into these traps to put some valuable distance between the Road Runner and his pursuer. 
+ 
+Piles of birdseed are littered throughout the levels and Road Runner must eat them (by running over them) whenever possible, as missing five seed piles will cause Road Runner to feel faint and stop running, resulting in his being caught by Wile E Cayote. A 'Seed Meter' at the top of the screen indicates Road Runner's seed enery level. 
+ 
+Road Runner's colourful, beautifully-drawn graphics capture the spirit and humour of the legendary cartoons perfectly. The music and sound effects are also faithful to the cartoon series.</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/roadrunn.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="43406" source="ScreenScraper.fr">
+		<path>./stunrun.zip</path>
+		<name>S.T.U.N. Runner (rev 6)</name>
+		<desc>Take a seat, grasp the controls, and enter the world of the S.T.U.N. (Spread Tunnel Underground Network) Runner. Players travel ahead in time to the 21st century and experience the thrill of racing in a futuristic form of competitive driving. At the control of state-of-the-art technology, players pilot a billion-dollar vehicle capable of attaining speeds of over 900 miles per hour! 
+ 
+Players control their vehicles with a return-to-center (RTC) flight controller. Control handles adjust shot elevation and include trigger buttons for firing. The start button is also used as a fire button for 'shock waves'. 
+ 
+</desc>
+		<rating>0.4</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter / Vehicle, 3rd person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/stunrun.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="43073" source="ScreenScraper.fr">
+		<path>./shuuz.zip</path>
+		<name>Shuuz (version 8.0)</name>
+		<desc>A horseshoes game.</desc>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/shuuz.png</image>
+		<genreid>1536</genreid>
+	</game>
+	<game id="43108" source="ScreenScraper.fr">
+		<path>./skullxbo.zip</path>
+		<name>Skull And Crossbones (rev 5)</name>
+		<desc>Skull &amp; Crossbones is a swashbuckling adventure in which players portray two pirates competing for food, drink, booty, and revenge. Players use a joystick and button to control the unique sword-fighting action. 
+ 
+The game begins with an encounter with the evil Wizard, who robs our heroes of all of their booty. The pirates swear revenge and set off on a quest to destroy the Wizard and recover their treasure. 
+ 
+The adventure takes them around the world. The pirates battle the fierce captains and crews of opponent ships. They encounter the soldier guards and the merciless Executioner in the Spanish castle. In the ninja camp they fight the Ninja Master and his followers. On the beach the heroes encounter the dreaded Medusa and a horde of wicked skeletons that rise from the dead. 
+ 
+Finally, the pirates reach the Wizard's Island, where they must again do battle against the shadow figures of the Executioner, the Ninja Master, and the Medusa before they can fight face-to-face with the evil Wizard. If they make it to the throne room and overcome the Wizard, players are rewarded with a room full of treasure. 
+ 
+Players use a joystick and sword button in a combination of defensive and offensive maneuvers to battle the various enemies. Players can learn the lunge and back-slash, two. skilled sword-fighting moves that are the most effective. 
+ 
+In order to increase the long-term appeal of the game, players can select various difficulty levels of easy, medium, and hard to vary their paths through the game. By selecting the longer hard path, players are rewarded with more food, drink, and booty along the way.</desc>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/skullxbo.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="43116" source="ScreenScraper.fr">
+		<path>./skydiver.zip</path>
+		<name>Sky Diver</name>
+		<desc>Skydiver © 1978 Atari.
+
+This is quite a fun game, where you score points for landing on an ever decreasing patch of 'good' land. Why 'good'? As you descend without opening your parachute your landing point becomes smaller, but the points become higher, just don't leave pulling the ripcord too late because the Newtonian laws concerning gravity is working against you. Each time you successfully land the plane goes lower.</desc>
+		<rating>0.7</rating>
+		<releasedate>19780101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Sports / Skydiving-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/skydiver.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43223" source="ScreenScraper.fr">
+		<path>./spclords.zip</path>
+		<name>Space Lords (rev C)</name>
+		<desc>Space Lords is an arcade game released by Atari Games in 1992. It is a first-person perspective space combat video game. The gameplay allows the player to fly in any direction.</desc>
+		<rating>0.6</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter / Plane, 1st person-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/spclords.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43266" source="ScreenScraper.fr">
+		<path>./sprint1.zip</path>
+		<name>Sprint 1</name>
+		<desc>In this game you control a race car on a semi-circular track. You are looking down on the action from above. Your only goal is to drive around the track as many times as possible, and as fast as you can. There will be four cars on the track at all times (the computer lets you know that 'Grey cars drive automatically').You control the white car, while the computer controls a black car and two grey cars. The game will rate you at the end, you can get rated Granny, Rookie, or Pro, and getting a score over 250 points will extend the game an extra 30 seconds. The game has several different tracks available, and they change randomly throughout the game (they literally change while you are still driving). This is different than the original "Sprint 2", which allowed you to select your track manually. The graphics are simple black and white with two shades of gray thrown in for good measure. They are simple, but they get the job done.</desc>
+		<rating>0.7</rating>
+		<releasedate>19780101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/sprint1.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="43267" source="ScreenScraper.fr">
+		<path>./sprint4.zip</path>
+		<name>Sprint 4 (set 1)</name>
+		<desc>In this game you control a race car on a semi-circular track. You are looking down on the action from above. Your only goal is to drive around the track as many times as possible, and as fast as you can. There will be four cars on the track at all times. With the computer controlling cars for missing players. The game will rate you at the end, you can get rated Granny, Rookie, or Pro, and getting a score over 250 points will extend the game an extra 30 seconds. The game has several different tracks available, and you can select them with a button at the start of a match. The graphics are simple black and white with two shades of gray thrown in for good measure. They are simple, but they get the job done.</desc>
+		<rating>0.5</rating>
+		<releasedate>19770101T000000</releasedate>
+		<publisher>Atari</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/sprint4.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="43268" source="ScreenScraper.fr">
+		<path>./sprint8.zip</path>
+		<name>Sprint 8</name>
+		<desc> 
+ 
+In this game you control a race car on a semi-complicated track. You are looking down on the action from above. Your only goal is to drive around the track as many times as possible, and as fast as you can. There will be eight cars on the track at all times. With the computer controlling cars for missing players. The sheer number of cars can make this game a little confusing. All the cars have minor variations to set them apart from the others, but are similar enough that you simply cannot look away from the track for a second. If you are used to the other Sprint games, you will find that this one is a bit different, the graphics are slightly higher in resolution, and the tracks are much more complex, and have a different look to them, not to mention the fact that this version adds a brake pedal that was absent in the other Sprint titles. The game has several different tracks available, and you can select them with a button at the start of a match. The graphics are simple black and white with two shades of gray thrown in for good measure. They are simple, but they get the job done. The game will rate you at the end, you can get rated Granny, Rookie, or Pro, and getting a score over 250 points will extend the game an extra 30 seconds.</desc>
+		<rating>0.5</rating>
+		<releasedate>19770101T000000</releasedate>
+		<publisher>Atari</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1-8</players>
+		<image>/userdata/roms/mame/images/sprint8.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="46407" source="ScreenScraper.fr">
+		<path>./starwars.zip</path>
+		<name>Star Wars (set 1)</name>
+		<desc>Star Wars is a single-player 3-D shoot-em-up based on the legendary movie franchise of the same name. This game is specifically based on the very first Star Wars movie, 'Episode IV: A New Hope'. The player takes on the role of Luke Skywalker (Red Five) whose goal is to blow up the infamous "Death Star" by firing a Proton Torpedo into an exposed exhaust port situated on the Death Star's surface.  
+ 
+Before reaching the exhaust port, players must survive three attack phases.  
+ 
+PHASE 1: The game begins in outer space above the Death Star. Players must engage in a dog fight with Darth Vader and numerous enemy TIE Fighters. All but Vader's fighter can be shot and destroyed. Incoming enemy fire must be avoided or shot to prevent damage to the player's Deflector shields.  
+ 
+PHASE 2: The X-Wing flies down to the surface of the Death Star and is confronted with a barrage of laser turrets and towers as the X-Wing flies across the Death Star's surface. Any collisions with either the towers or incoming enemy shots will cause damage to the player's Deflector Shields.  
+ 
+The laser tower tops have a progressive scoring incentive that is displayed at the top center of the screen, along with the number of remaining laser tower tops that need to be destroyed before the X-Wing enters the exhaust port trench. If the player manages to destroy all of the towers, a sizeable point bonus is awarded.  
+ 
+PHASE 3: The X-Wing begins its approach down the trench of the Death Star, heading for the exhaust port situated at the end of the trench. The trench walls are lined with red laser-gun turrets that fire at the player as he makes his approach. Incoming fire must either be avoided or shot. Trench catwalks of varying shapes and heights also appear in later trench runs. These must be avoided as any collision results in damage to Red 5's deflector shields.  
+ 
+If the player survives the trench run, the voice of 'Han Solo' will advise that 'You're all clear, Kid' and the player must quickly shoot the exhaust port to destroy the Death Star. If a trench run is completed without the player having fired any shots other than the shot into the exhaust port, a sizeable point bonus is awarded for 'using the force'. If the exhaust port is missed, Red 5 will plough through the wall at the end of the trench and lose one deflector shield, after which the trench run will start over.  
+ 
+If the player succeeds in blowing up the Death Star, Red 5 makes its escape before turning to view the colourful explosion. Bonus points for Remaining Shield Energy is now scored.  
+ 
+The player is then returned to the fray and whole process begins again. Each successive Death Star run greatly increases in difficulty; TIE Fighters shoot more often, there are more Laser towers and batteries in successive rounds and there are many more obstacles and laser fire during the trench run.</desc>
+		<rating>0.8</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Atari</publisher>
+		<genre>Fight-Action</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/starwars.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="43411" source="ScreenScraper.fr">
+		<path>./subs.zip</path>
+		<name>Subs</name>
+		<desc>The 2nd arcade release in Konami's beatmaniaIIDX franchise. Wasn't much of an upgrade but it added some popular tracks from the 5-key franchise as well as some new songs that still remain amongst the most notable in the series.</desc>
+		<rating>0.5</rating>
+		<releasedate>19770101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/subs.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="42910" source="ScreenScraper.fr">
+		<path>./sbrkout.zip</path>
+		<name>Super Breakout (rev 04)</name>
+		<desc>Super Breakout allows the player(s) to select any one of three different action-packed Super Breakout games by turning the game select knob on the control panel to the desired game. The three available Super Breakout modes are the following:  
+ 
+Double Breakout: before serving the ball, the Double Breakout playfield contains 52 orange bricks (4x13) at the top of the screen and 52 green bricks (4x13) immediately below the orange brick wall.  
+Two paddles are displayed at the bottom end of the screen. When the Serve pushbutton is pressed, two balls are served. If the first ball served is missed, it counts as a missed serve and goes against the player's allotted serves per game. Otherwise the second ball is served. If the second ball served is missed after striking the first served ball, the player may continue with the first ball.  
+ 
+Cavity Breakout: before serving the ball, the Cavity Breakout playfield contains 44 orange bricks and 52 (4x13) green bricks located immediately below the orange brick wall. At approximately 3 columns in and 2 rows down into the orange brick wall, from both the left and the right side of the wall, two cavities appear. These two cavities occupy the space of 4 bricks (a 2x2 brick area). 
+One paddle is provided in this game, and only one ball is served, unlike in Double Breakout. When enough bricks are removed to release a captive ball from its cavity, the score doubles for each brick removed by any of the two balls in the playfield (as long as the served ball and the freed ball both remain active in the playfield). If the third ball is freed and all three balls are played in the playfield, the score triples. If any one of the balls is missed and lost, the score returns to double points. If the second ball is missed and only one ball remains in the playfield, points are then scored as normal.  
+ 
+Progressive Breakout: before serving the ball, the Progressive Breakout playfield contains 4x13 brick walls (one blue and the other green). The blue brick wall, which consists of 52 bricks, is at the top. Then occurs a space equivalent to this wall. In the middle of the screen is a green brick wall consisting of 52 bricks.  
+The brick walls move or 'scroll' toward the paddle at a rate determined by the number of hits on the ball. As the bricks are knocked out and the walls progressively creep up on the player's paddle, new bricks enter the playfield at a progressively faster rate. Four rows of bricks are always separated by four rows of blanks.  
+As the brick walls scroll down, their colors change, indicating a new point score for that brick at that instant of time.</desc>
+		<rating>0.7</rating>
+		<releasedate>19780101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sbrkout.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43424" source="ScreenScraper.fr">
+		<path>./superbug.zip</path>
+		<name>Super Bug</name>
+		<desc>A great and pioneer top-view racing game.  
+ 
+Super Bug! Super Thrills! 
+ 
+The player drive a bright yellow "modified bug" speeds through tree-lined city streets in a fast moving rally race. The constantly moving streets provide new excitement and driving challenge every time the game is played, as the driver races the clock to cover as much distance as possible for highest score. 
+ 
+Directional arrows appear on the road to warn drivers as they approach turns. Quick reflexes are a must to avoid crashing into curbs and parked cars. And to avoid sliding into oil slicks and sand traps. 
+ 
+Players can select "Novice" or "Expert" tracks, shift into first, step on the accelerator and take off. The roar of acceleration, crash and skid sounds add to the exciment. Score, Fuel (time remaining) and driver Ratings are displayed on the screen, as well as "Crunch" whenever the player crashes.</desc>
+		<rating>0.5</rating>
+		<releasedate>19770101T000000</releasedate>
+		<publisher>Atari</publisher>
+		<genre>Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/superbug.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="43328" source="ScreenScraper.fr">
+		<path>./ssprint.zip</path>
+		<name>Super Sprint (rev 4)</name>
+		<desc>Like "Championship Sprint", released the same year, Super Sprint is an updated version of the old Atari Sprint series; with added the ability to allow players to upgrade their vehicles as the game progresses. Upgrades are won by collecting wrenches that appear once per track. After a player has collected four wrenches, they will be presented with an upgrade screen; giving them the opportunity to choose better traction, increased top speed, faster acceleration, or a faster helicopter. The only discernible difference between this and "Championship Sprint" is the addition of brand new tracks.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/ssprint.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="46411" source="ScreenScraper.fr">
+		<path>./tempest.zip</path>
+		<name>Tempest (rev 3, Revised Hardware)</name>
+		<desc>The objective of Tempest is to survive as long as possible and score as many points as possible by clearing the screen of enemies that have landed on the playing field. The player's ship can rapid-fire shots down the tube, destroying any enemies within the same segment, and is also equipped with a Superzapper, which destroys all enemies currently on the playfield once per level. (A second use of the Superzapper in a level destroys one random enemy.)</desc>
+		<rating>0.9</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter-N/A-Shoot'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tempest.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40094" source="ScreenScraper.fr">
+		<path>./atetris.zip</path>
+		<name>Tetris (set 1)</name>
+		<desc>This shape-based Russian mind-bender set the stage for innumerable puzzle games to follow</desc>
+		<rating>0.9</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>bootleg</developer>
+		<publisher>Atari</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/atetris.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="43605" source="ScreenScraper.fr">
+		<path>./thunderj.zip</path>
+		<name>ThunderJaws (rev 3)</name>
+		<desc>You play as a secret agent, member of the underwater special forces unit, have been selected to infiltrate Madam Q's secret headquarters and stop her evil plans before she destroy the world.  
+ 
+In the levels you must face shooting a variety of enemies like mechanical sharks, mutants, enemy divers and underwater firing turrets. Other scenes include a side-scrolling platformer locations,you must save the hostages while you find weapons, power-ups and health along the way to later confront evil Bosses at the end of each level.</desc>
+		<rating>0.6</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter / Horizontal-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/thunderj.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43670" source="ScreenScraper.fr">
+		<path>./toobin.zip</path>
+		<name>Toobin' (rev 3)</name>
+		<desc>Toobin' involves Biff and Jet racing their way down the rapids of a river, riding on tires. You rotate your tyre left or right, and drift as the current sends you, making sure to avoid the banks of the river, and the dividing lines in the middle. Hazards include crocodiles, stray logs and branches, and fishermen - you are armed with a limited supply of tin cans to take care of these. There are gates to slide through on the way down - these give you a points bonus. Each level has a strict time limit to adhere to, although there's a kickin' party at the end if you succeed.</desc>
+		<rating>0.9</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Domark</publisher>
+		<genre>Sports / Swimming-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/toobin.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43825" source="ScreenScraper.fr">
+		<path>./ultratnk.zip</path>
+		<name>Ultra Tank</name>
+		<desc>Two tanks face off in a maze of blocks. Besides dodging the bullets shot by the opponent, a player must also avoid running into mines. After the game timer expires, the player with the highest score wins. 
+ 
+The game is similar to the original "Tank" except the battlefields can be open or have mines and barriers and the tanks can be visible or invisible depending on how the options are selected.</desc>
+		<rating>0.5</rating>
+		<releasedate>19780101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Fight-Fight / Versus-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ultratnk.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="43963" source="ScreenScraper.fr">
+		<path>./vindictr.zip</path>
+		<name>Vindicators (rev 5)</name>
+		<desc>Vindicators © 1988 Atari Games Corp.
+
+As team commander of the SR-88 Strategic Battle tanks, you must face the evil invading forces of the Tangent Empire. They're invading the galaxy with 14 space stations designed to defeat your team. Turrets and highly mobile armoured tanks are constantly on patrol to protect the fortifications that Tangents have built.
+
+With limited supplies and weapons, you must make a last stand and attempt to defeat the invaders. The most powerful weapon in your arsenal is the SR-88 Battle Tank, but their fuel supply is very volatile. You must constantly replenish its fuel by picking up fuel canisters throughout the stations' many levels.
+
+Battle stars can be found along the way. These are vital to enhancing your tank and adding weapons. Process generators can convert the battle stars into powers and weapons while in transit between levels and stations. Only with these customized tanks can the evil Tangent Empire be conquered.
+
+As you defeat each station, demolish its control room and take the supplies the fleeing Tangents have left behind. Proceed in their mothership to the next station for another battle.</desc>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter / Vehicle, Vertical-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/vindictr.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="43962" source="ScreenScraper.fr">
+		<path>./vindctr2.zip</path>
+		<name>Vindicators Part 2 (rev 3)</name>
+		<desc>A sequel to the arcade version was released the same year as a conversion kit for Gauntlet titled Vindicators Part II. Only approximately 400 units were made. There are only a few minor differences as the gameplay is nearly identical to the first, even keeping 10 of the 14 original stations of the first Vindicators. It even keeps the old graphics, music and sound. Though the in-game voice was changed to a less robotic sounding male, and several tank upgrades were added that are picked up as powerups and expire after a level is finished.</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter / Vehicle, Vertical-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/vindctr2.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="44175" source="ScreenScraper.fr">
+		<path>./xybots.zip</path>
+		<name>Xybots (rev 2)</name>
+		<desc>Xybots is a 3-Dimensional, 3rd-person perspective shoot-em-up for 1 or 2 players. Taking on the role of either 'Major Rock Hardy' or 'Captain Ace Gunn' (in the 2-player game), players must shoot their way through a huge, multi-level underground city - made up of a series of mazes - and destroy the evil 'Xybot' robot warriors that have invaded the planet and established their underground fortress. The players' on-screen counterparts walk 'into' the screen and players must manually rotate the maze's viewpoint left and right when changing direction in order to be able to look in the direction they are moving.  
+ 
+Each level has at least one exit that must be reached in order to progress to the next (some levels have extra hidden exits that 'warp' players to later levels). Players can find energy pods to restore energy levels, keys to open doors, and golden coins. Some of the levels also feature transporters that connect different parts of the same level. 
+ 
+At the end of each level, players can enter a shop where supplies and power-ups can be purchased with any coins they have collected. Some supplies, such as 'Shield' or 'Speed' are permanent, whereas others are only temporary and must be replenished. 
+ 
+A map of each level is displayed at the top of the screen. For some levels, all enemies, objects and walls are shown. On later levels, however, the map may only display the enemy robots and/or objects; with the maze walls and layout only becoming visible once a player has 'looked' at a wall section. Xybots' gameplay feels highly reminiscent of a 3-Dimensional "Gauntlet" (with good reason, see TRIVIA for more details). The game also uses a split-screen display to allow for two-player simultaneous play; something of an innovation for 1987. 
+ 
+Like the "Gauntlet" games on which Xybots is based; the game is endless and play will continue until all lives are lost and players no longer wish to use the 'Continue' option.</desc>
+		<rating>0.9</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/xybots.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="39911" source="ScreenScraper.fr">
+		<path>./720.zip</path>
+		<name>720 Degrees (rev 4)</name>
+		<desc>A one or two-player arcade game with players taking on the role of a skateboarder, and must perform various tricks and maneuvers to earn the points and tickets needed to compete for medals in the game's numerous skate parks.  
+ 
+The bulk of the action takes place in a 'Skate City', a small urban area made up of ramps, jumps and hazards. Players can skate anywhere they wish as they perform the tricks and jumps needed to reach the score thresholds that will earn them entry tickets to Skate City's skate parks to compete for medals and cash prizes.  
+ 
+Each score threshold must be reached and a park entered within a tight time limit. Failure to do so sees the skater persued by a swarm of bees and the words SKATE OR DIE appear. Should the bees touch the skater before he enters a park, the game ends. Skate City's roads and pavements are populated with moving traffic and pedestrians and any collision with them will result in the skater being knocked from his board, costing the player precious seconds.  
+ 
+The parks themselves each feature one of four different disciplines: Slalom, Jump, Downhill and Ramp. Each park has a timer and players can earn either a bronze, silver or gold medal - together with a cash prize - depending on how quickly the park is completed. If the park target score or finish line is not reached before the timer expires, no medal or money is awarded.  
+ 
+Money won can be used to buy equipment upgrades from the stalls that litter Skate City. Players can buy upgraded boards, helmets, pads and shoes. Boards give faster speed; helmets allow for more risky maneuvers; pads give a faster recovery from falls and shoes provide more height on jumps, as well as giving a quicker standing start.  
+ 
+At the start of each new game, players can select from one of two play modes. 'Training Level' is available for beginners and gives players numerous playing hints and tips. 'Experienced Level' is more challenging as well as offering fewer hints. It does, however, include the 'add-a-coin' feature, which allows for awards and items already won to be carried over to a new game.  
+ 
+The main objective is to compete in as many skate parks as possible. There are numerous city hazards to be avoided, such as BMX riders, cars, Frisbee throwers and other skaters. To guide the player around Skate City are map tiles. Riding over one of these will temporaily pause the action and display the layout of the city, including the locations of the skate parks and equipment stalls.</desc>
+		<image>/userdata/roms/mame/images/720.png</image>
+		<rating>0.9</rating>
+		<releasedate>19861201T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Sports / Skateboard-Sports</genre>
+		<players>2</players>
+		<playcount>2</playcount>
+		<lastplayed>20210123T110336</lastplayed>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="46384" source="ScreenScraper.fr">
+		<path>./astdelux.zip</path>
+		<name>Asteroids Deluxe (rev 3)</name>
+		<desc>Asteroids Deluxe is a 1 or 2-player game with an X-Y or vector-generator monitor. The game depicts a third-person view of a player's spaceship battling to destroy asteroids, flying saucers and enemy ships or 'death stars' (shaped like clusters of triangles). When hit, the asteroids and death stars will break into progressively smaller pieces.  
+ 
+Players can put up an octagon-shaped 'shield' to temporarily protect their spaceship. However, this shield wears out with use.  
+ 
+Large asteroids appear and drift in from the outer edges of the display. By pressing the ROTATE LEFT and ROTATE RIGHT pushbuttons on the control panel, the player may aim a spaceship toward any of the asteroids. The player uses the FIRE pushbutton to shoot at the asteroids and other objects.  
+ 
+When shot, each large asteroid divides into two medium-sized asteroids, and the game adds 20 points to the player's score. Medium-sized asteroids, when shot, divide into two small-sized asteroids, and the game awards 50 points to the player. When shot the smallest asteroid disappears and the game adds 100 points to the player's score.  
+ 
+In addition to asteroids, the players can score points for shooting the various enemy ships. When hit, the large ships ('death stars' shaped like hexagons) score 50 points and break into three diamond shapes. The medium-sized enemy or diamond, when hit, grants the player 100 points and breaks into two small triangular pieces. These small pieces disappear when the player hits them, and the score increases by 200 points.  
+ 
+At any time during game play, a flying saucer may appear from either side of the display. The game awards players 200 points for shooting a large saucer and 1,000 points for a small saucer (the latter is a smaller target for players, though not any faster moving than the large one. It also shoots more accurately).  
+ 
+The player's objective in the game is to shoot and destroy as many asteroids, saucers, and enemy ships as possible before all his or her spaceships are destroyed. A ship is destroyed if an asteroid, saucer or enemy ship smashes into it, or if a flying saucer shoots it. To prevent losing a ship, the player may press the THRUST pushbutton to move out of the path of an oncoming object.  
+ 
+As an emergency maneuver, a player can press the Shields button. An octagon will then appear around the player's ship as protection from all enemies. For challenge the shield power lasts only about 10 seconds, but the power is renewed with each ship. The amount of shielding power available is shown by the brightness of the octagon (dim means almost exhausted power).</desc>
+		<image>/userdata/roms/mame/images/astdelux.png</image>
+		<rating>0.8</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Dave Shepperd</developer>
+		<publisher>Atari</publisher>
+		<genre>Action</genre>
+		<players>1</players>
+		<crc32>6559D5ED</crc32>
+		<cheevosHash>737ED73A8AACEEFAF2AEEA2FE1504137</cheevosHash>
+		<genreid>256</genreid>
+	</game>
+	<game id="39925" source="ScreenScraper.fr">
+		<path>./abaseb.zip</path>
+		<name>Atari Baseball (set 1)</name>
+		<desc>The most realistic video basbeall attraction ever created. 
+Instant response Trak-Ball controls maneuver runners, ourfielders and control throwing direction for realistic action and total player involvement. 
+1 or 2 players can select 4 different hitting plays, 4 different pitches, offering an endless variety of game challenges. 
+Add-a-coin accumulator offers additional innings. 
+Unique stand-up table design ideal for any size location.</desc>
+		<image>/userdata/roms/mame/images/abaseb.png</image>
+		<rating>0.3</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>2</players>
+		<crc32>6E463480</crc32>
+		<cheevosHash>76DC16711D4E662627D1E6AEE1C3F28B</cheevosHash>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40090" source="ScreenScraper.fr">
+		<path>./atarifb1.zip</path>
+		<name>Atari Football (revision 1)</name>
+		<desc>An old black and white American football game where the player characters are represented as X's and O's. Players select either offensive or defensive plays and then control one of the characters on each team by rolling a trackball.</desc>
+		<image>/userdata/roms/mame/images/atarifb1.png</image>
+		<rating>0.3</rating>
+		<releasedate>19780101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Sports / Football-Sports</genre>
+		<players>2</players>
+		<crc32>54235AEC</crc32>
+		<cheevosHash>FC60E9D24E6DF56B55DE4645C5BEE5B3</cheevosHash>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43164" source="ScreenScraper.fr">
+		<path>./soccer.zip</path>
+		<name>Atari Soccer</name>
+		<desc>An old black and white overhead soccer game.</desc>
+		<image>/userdata/roms/mame/images/soccer.png</image>
+		<rating>0.3</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>4</players>
+		<crc32>82E459E5</crc32>
+		<cheevosHash>DA443A0AD979D5530DF38CA1A74E4F80</cheevosHash>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40111" source="ScreenScraper.fr">
+		<path>./avalnche.zip</path>
+		<name>Avalanche</name>
+		<desc>Avalanche is a 2-D game of skill. You control a multi-storied platform with a spinner-knob. Your goal is to prevent the falling rocks from ever reaching the ground. There are six rows of rocks to deal with. You start with a 6-storied platform and you lose one platform per row of rocks cleared. You score points for those rocks you prevent from reaching the ground. Of course, the farther the row of rocks, the smaller and faster they become. Your ultimate goal is to get enough points so that you can continue your game should you lose your first one. Get your hard hat out and prepare to catch some rogue rocks.</desc>
+		<image>/userdata/roms/mame/images/avalnche.png</image>
+		<rating>0.5</rating>
+		<releasedate>19780101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Action</genre>
+		<players>2</players>
+		<crc32>70E24341</crc32>
+		<cheevosHash>59F5104D75464BD841AC7EF0589CAAF4</cheevosHash>
+		<genreid>256</genreid>
+	</game>
+	<game id="51161" source="ScreenScraper.fr">
+		<path>./badlands.zip</path>
+		<name>Badlands</name>
+		<desc>A Western/Gun shooting game where you play a character named Buck, whose wife and children were killed by a group of bad guys. Revenge is the only thing on your mind. You head for town, equipped only with your gun, searching for the people who ruined your life.</desc>
+		<image>/userdata/roms/mame/images/badlands.png</image>
+		<rating>0.8</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter</genre>
+		<players>1</players>
+		<crc32>A52D6A05</crc32>
+		<cheevosHash>DAE6836307C6B9DB62FD874161342689</cheevosHash>
+		<genreid>256</genreid>
+	</game>
+	<game id="40376" source="ScreenScraper.fr">
+		<path>./bsktball.zip</path>
+		<name>Basketball</name>
+		<desc>A sports game released by Taito in 1974. It was notable for its early use of sprites to represent human characters. It was licensed to Midway as TV Basketball in the United States.</desc>
+		<image>/userdata/roms/mame/images/bsktball.png</image>
+		<rating>0.3</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>2</players>
+		<crc32>6B8031F9</crc32>
+		<cheevosHash>723FA7D3AC9C2F43729B45E02472BEB4</cheevosHash>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40160" source="ScreenScraper.fr">
+		<path>./batman.zip</path>
+		<name>Batman</name>
+		<desc>Batman must save Gotham City from The Joker in this action game. Featuring stages with the Batmobile and the Batwing.</desc>
+		<image>/userdata/roms/mame/images/batman.png</image>
+		<rating>0.4</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1</players>
+		<crc32>5610200E</crc32>
+		<cheevosHash>EC0E2603172C73A8B644BB9456C1FF6E</cheevosHash>
+		<genreid>258</genreid>
+	</game>
+	<game id="46387" source="ScreenScraper.fr">
+		<path>./bwidow.zip</path>
+		<name>Black Widow</name>
+		<desc>In Black Widow you have to move around a web using two joysticks to control the action. The left joystick moves, while the right joystick fires. "Robotron - 2084" players will feel right at home playing this game, as the controls are identical. You have to defend your little vector spider around her vector web in order to keep out all the deadly bugs. Shoot down bugs and they turn into bonuses. Watch out for eggs, if you see any eggs, then you should quickly push them off the web before they hatch. Other enemies include mosquitoes, beetles, and hornets.</desc>
+		<image>/userdata/roms/mame/images/bwidow.png</image>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Shooter-N/A-Shoot'em Up</genre>
+		<players>1</players>
+		<crc32>F83ED7B9</crc32>
+		<cheevosHash>9E742AF1997432E8C775C561F23655FC</cheevosHash>
+		<genreid>260</genreid>
+	</game>
+	<game id="40022" source="ScreenScraper.fr">
+		<path>./apb.zip</path>
+		<name>Apb - All Points Bulletin (rev 7)</name>
+		<desc>Players take on the role of policeman 'Officer Bob' as he takes to his patrol car and drives the streets in pursuit of lawbreakers. The object of the game is to meet (or preferably exceed) the daily quota of 'busts', as he tries to catch a variety of law-breakers. 
+ 
+Along the way, players must refuel their patrol car (by driving through filling stations) as well as meeting targets within a set time limit. Any accidental collisions or running over of pedestrians will result in the player earning 'de-merits', while a 'perfect day' will earn bonuses, with further bonuses awarded for each arrest made that exceeds the daily quota. Picking up donuts extends the time limit for a day.</desc>
+		<image>/userdata/roms/mame/images/apb.png</image>
+		<rating>0.6</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Race, Driving</genre>
+		<players>1</players>
+		<crc32>94613AC1</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>107C1464A1AB91D4309827C489FB232C</cheevosHash>
+		<genreid>1537</genreid>
+	</game>
+	<game id="40046" source="ScreenScraper.fr">
+		<path>./arabiana.zip</path>
+		<name>Arabian (Atari)</name>
+		<desc>You'll have 1001 hours of fun with the ARABIAN upright game! You are the adventurous Arabian prince, and your goal is to rescue the princess from her palace. Use the joystick control and the KICK button to move through perilous passages. Sail the seas, crawl in caves, and fly magic carpets - you'll be challenged by 4 increasingly hard waves of play! Score points on the way for picking up the letters in A-R-A-B-I-A-N, and get a bonus if you pick them up in order! 
+ 
+Arabian is a 'video book' with a happy ending! The attract mode introduces the story, and animated storybook 'pages' let you experience the Arabian Prince's adventures. Use the 8-position joystick to jump, super-jump, walk, crawl, or climb in all directions. Tap either KICK button (are you right- or left-handed?) to kick your enemies out of the way. 
+ 
+The player controls a young Arabian Prince who must rescue his Princess from the castle tower where she is being held prisoner. Evil Genies in brass jugs, swooping Rocs, and purple ghostly creatures called Oscars will try to stop him along the way. The Prince scores points for kicking Oscars or Rocs, picking up lettered jugs, or spelling A-R-A-B-I-A-N. The Prince loses a life when he's hit by a smokeball, falls off a ledge, flying carpet or vine, or gets caught (touched) by a Genie, Oscar, or Roc. 
+ 
+The Prince must successfully complete 4 levels to rescue the Princess (4 levels or 'pages' equals 1 section). Each level is introduced with the turning of a page, which shows a distant view of the upcoming playfield. Each playfield has 7 lettered jugs that must be picked up before the player can advance to the next level, but he must avoid or KICK evil Genies, Oscars, and Rocs that will try to stop him.</desc>
+		<image>/userdata/roms/mame/images/arabiana.png</image>
+		<rating>0.6</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<crc32>A6320ECB</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>43E9E5CBD8D8E54588C8D1DF739B580B</cheevosHash>
+		<genreid>257</genreid>
+	</game>
+	<game id="60280" source="ScreenScraper.fr">
+		<path>./asteroid.zip</path>
+		<name>Asteroids (rev 4)</name>
+		<desc>Asteroids © 1979 Atari, Incorporated.
+
+Asteroids is a legendary, genre defining game - in an era replete with genre-defining classics - in which a single player takes control of a spaceship trapped in the middle of an asteroid belt. A number of large, slow-moving asteroids drift randomly around the play area and must be shot by the player. When shot, the asteroids will break into a number of smaller pieces which must also be shot until eventually, all of the asteroids and fragments will be destroyed and the next wave begins. 
+
+Asteroids introduced real-world physics to video games for the first time, with speed and inertia all adding to the player's problems. As well as the inertia of the player's ship - forcing the player to allow for the ship slowing down and speeding up whenever the Thrust button was utilized - shot asteroids would often send fragments flying in seemingly random directions, and at varying and unpredictable speeds. 
+
+As well as the ever-present asteroids, flying saucers also make a regular appearance. These move horizontally and diagonally around the screen, firing at the player's ship, and must be quickly destroyed. They are destroyed when hit by the player's shot, when hit by a saucer's shot or when they collide with an asteroid. 
+
+CAST OF CHARACTERS - 
+
+Spaceship - This is you, the player. You can rotate 360 degrees, fire bullets, thrust forward in any direction, and hyperspace to safety if you feel you are in danger. 
+
+Large Asteroid - These are the large rocks that fill the screen at the beginning of each stage. Hitting one with a bullet will break it apart into two Medium Asteroids. 
+
+Medium Asteroid - Slightly smaller than Large Asteroids, but faster moving. Shooting one of these will result in two Small Asteroids. 
+
+Small Asteroid - These are the smallest and fastest rocks on the screen. If a bullet hits one of these, it will vaporize. 
+
+Large Saucer - Large flying saucers appear on the screen from time to time, randomly firing shots around the screen. They pose a minor threat. 
+
+Small Saucer - The smaller flying saucers are deadlier than the large variety. They are much more precise with their shots, and are more likely to kill you. Eliminate them quickly or get out of their range.</desc>
+		<image>/userdata/roms/mame/images/asteroid.png</image>
+		<rating>0.7</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Atari</developer>
+		<publisher>Atari</publisher>
+		<genre>Action</genre>
+		<players>2</players>
+		<crc32>3C40D82D</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>CD76ADFDB0F7227EC28F6DC8D0CB3221</cheevosHash>
+		<genreid>256</genreid>
+	</game>
+</gameList>

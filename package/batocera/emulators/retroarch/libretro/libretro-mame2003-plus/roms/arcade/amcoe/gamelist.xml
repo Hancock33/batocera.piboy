@@ -1,0 +1,555 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="41690" source="ScreenScraper.fr">
+		<path>./hldspin1.zip</path>
+		<name>Hold And Spin I (Version 2.7T, set 1)</name>
+		<image>/userdata/roms/mame/images/hldspin1.png</image>
+		<releasedate>20000101T000000</releasedate>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>67D7F242</crc32>
+		<cheevosHash>4EF965B158EC190D99E1E72B8FF66CEF</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="62976" source="ScreenScraper.fr">
+		<path>./match98.zip</path>
+		<name>Match '98 (ver. 1.33)</name>
+		<image>/userdata/roms/mame/images/match98.png</image>
+		<releasedate>19980101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino</genre>
+		<crc32>463D06B4</crc32>
+		<cheevosHash>AC0D6D42AC8BA4DDD4EDB4BE9CA8C9D8</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="63114" source="ScreenScraper.fr">
+		<path>./moneymac.zip</path>
+		<name>Money Machine (Version 1.7E Dual)</name>
+		<image>/userdata/roms/mame/images/moneymac.png</image>
+		<releasedate>20050101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<crc32>243CA58D</crc32>
+		<cheevosHash>D2BD9FA7423510CA6DFAC01AE1B2CABE</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="63249" source="ScreenScraper.fr">
+		<path>./nfb96.zip</path>
+		<name>New Fruit Bonus '96 Special Edition (v3.63, C1 PCB)</name>
+		<image>/userdata/roms/mame/images/nfb96.png</image>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<crc32>4736FC97</crc32>
+		<cheevosHash>17D5F89CD282DD35A94D7B795C4DAE88</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="63316" source="ScreenScraper.fr">
+		<path>./parrot3.zip</path>
+		<name>Parrot Poker 3 (Version 2.6E Dual)</name>
+		<image>/userdata/roms/mame/images/parrot3.png</image>
+		<releasedate>20040101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Cards-Casino</genre>
+		<crc32>2440FBD0</crc32>
+		<cheevosHash>20D4C94C27166716C2072C94179BF63D</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="63416" source="ScreenScraper.fr">
+		<path>./pickwin.zip</path>
+		<name>Pick 'n Win (Version 2.9E Dual)</name>
+		<image>/userdata/roms/mame/images/pickwin.png</image>
+		<releasedate>20010101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<crc32>BB71FA4A</crc32>
+		<cheevosHash>EBCACA7D1D8E1F1DCD849AC9131679C7</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="63429" source="ScreenScraper.fr">
+		<path>./pir2001.zip</path>
+		<name>Pirate 2001 (Version 2.5E Dual)</name>
+		<image>/userdata/roms/mame/images/pir2001.png</image>
+		<releasedate>20010101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<crc32>9197A13F</crc32>
+		<cheevosHash>5A17FDC3A9051A37E8B196E4842E64CB</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="63430" source="ScreenScraper.fr">
+		<path>./pir2002.zip</path>
+		<name>Pirate 2002 (Version 2.0E Dual)</name>
+		<image>/userdata/roms/mame/images/pir2002.png</image>
+		<releasedate>20010101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<crc32>B91531D9</crc32>
+		<cheevosHash>B429FF335AC07684A86130D1C57AC328</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="42388" source="ScreenScraper.fr">
+		<path>./pirpok2.zip</path>
+		<name>Pirate Poker 2 (Version 2.4E Dual)</name>
+		<image>/userdata/roms/mame/images/pirpok2.png</image>
+		<releasedate>20030101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Cards-Casino</genre>
+		<players>1</players>
+		<crc32>4C344D1B</crc32>
+		<cheevosHash>18D4C2E049BCBECCC555E753ACF51056</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="42444" source="ScreenScraper.fr">
+		<path>./pokonl97.zip</path>
+		<name>Poker Only '97 (Talking ver. 3.3)</name>
+		<image>/userdata/roms/mame/images/pokonl97.png</image>
+		<releasedate>19970101T000000</releasedate>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Cards-Casino</genre>
+		<players>1</players>
+		<crc32>200B4E44</crc32>
+		<cheevosHash>C0946E6F5FB1873223E4577C59D6A75F</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="42787" source="ScreenScraper.fr">
+		<path>./robadv.zip</path>
+		<name>Robin's Adventure (Version 1.7E Dual)</name>
+		<image>/userdata/roms/mame/images/robadv.png</image>
+		<releasedate>20040101T000000</releasedate>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>D7C3407A</crc32>
+		<cheevosHash>5F0D895FA93C3C0CCC53C732B58CCAEE</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="42788" source="ScreenScraper.fr">
+		<path>./robadv2.zip</path>
+		<name>Robin's Adventure 2 (Version 1.7E Dual)</name>
+		<image>/userdata/roms/mame/images/robadv2.png</image>
+		<releasedate>20040101T000000</releasedate>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>188D2D59</crc32>
+		<cheevosHash>97D00511997A0C6FBFBB4C60FE93D563</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="42832" source="ScreenScraper.fr">
+		<path>./roypok96.zip</path>
+		<name>Royal Poker '96 (set 1, v97-3.5)</name>
+		<image>/userdata/roms/mame/images/roypok96.png</image>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>E91FDCD6</crc32>
+		<cheevosHash>2301BA64BAE975DA2DA8561D2D373921</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="42950" source="ScreenScraper.fr">
+		<path>./seawld.zip</path>
+		<name>Sea World (Version 1.6E Dual)</name>
+		<image>/userdata/roms/mame/images/seawld.png</image>
+		<releasedate>20050101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>8CED1227</crc32>
+		<cheevosHash>93F745B2C59F926E194034B20E668D5E</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="43102" source="ScreenScraper.fr">
+		<path>./skill98.zip</path>
+		<name>Skill '98 (Talking ver. s98-1.33)</name>
+		<image>/userdata/roms/mame/images/skill98.png</image>
+		<releasedate>19980101T000000</releasedate>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>05F46B52</crc32>
+		<cheevosHash>22D935E001903A46092EA1CA6292C626</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="42919" source="ScreenScraper.fr">
+		<path>./schery97.zip</path>
+		<name>Skill Cherry '97 (Talking ver. sc3.52)</name>
+		<image>/userdata/roms/mame/images/schery97.png</image>
+		<releasedate>19970101T000000</releasedate>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>F9337A53</crc32>
+		<cheevosHash>306560CEBA91B7B31B1DDCD058A8FF2A</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="42989" source="ScreenScraper.fr">
+		<path>./sfbonus.zip</path>
+		<name>Skill Fruit Bonus (Version 1.9R, set 1)</name>
+		<image>/userdata/roms/mame/images/sfbonus.png</image>
+		<releasedate>20030101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>9424FAC6</crc32>
+		<cheevosHash>21F14FF92E3E68460BB53C721433CE1F</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="43004" source="ScreenScraper.fr">
+		<path>./sfruitb.zip</path>
+		<name>Super Fruit Bonus (Version 2.5E Dual)</name>
+		<image>/userdata/roms/mame/images/sfruitb.png</image>
+		<releasedate>20020101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>169B2B79</crc32>
+		<cheevosHash>4363CB4841C8CB0D2D9BCF8F0515FD4D</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="43613" source="ScreenScraper.fr">
+		<path>./tighook.zip</path>
+		<name>Tiger Hook (Version 2.1E Dual)</name>
+		<image>/userdata/roms/mame/images/tighook.png</image>
+		<releasedate>20040101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>25200616</crc32>
+		<cheevosHash>DE28A49AC6812268AE9F4CF13B7D6B8B</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="43934" source="ScreenScraper.fr">
+		<path>./version4.zip</path>
+		<name>Version 4 (Version 4.3R CGA)</name>
+		<image>/userdata/roms/mame/images/version4.png</image>
+		<releasedate>20060101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>B0195FB1</crc32>
+		<cheevosHash>9693E74B8DE7D60202CEACDDB5038E62</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="39941" source="ScreenScraper.fr">
+		<path>./act2000.zip</path>
+		<name>Action 2000 (Version 3.5E Dual)</name>
+		<desc>2 games in 1: A fruit game and a poker game. Player can switch between 2 during play.</desc>
+		<image>../../mamemedia/snap/act2000.png</image>
+		<releasedate>19990101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Compilation-Casino</genre>
+		<players>1</players>
+		<playcount>1</playcount>
+		<lastplayed>20210502T152346</lastplayed>
+		<crc32>AC6A1F7B</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>27F88C45F8CD8C1B3EE3A040BC5FD4FA</cheevosHash>
+		<genreid>3840</genreid>
+	</game>
+	<game id="39999" source="ScreenScraper.fr">
+		<path>./amclink.zip</path>
+		<name>Amcoe Link Control Box (Version 2.2)</name>
+		<image>/userdata/roms/mame/images/amclink.png</image>
+		<releasedate />
+		<publisher>Amcoe</publisher>
+		<genre>Various</genre>
+		<crc32>14D4A266</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>ABE9754DD004F9BAC733ECAAA8035365</cheevosHash>
+	</game>
+	<game id="40009" source="ScreenScraper.fr">
+		<path>./anibonus.zip</path>
+		<name>Animal Bonus (Version 1.8E Dual)</name>
+		<image>/userdata/roms/mame/images/anibonus.png</image>
+		<releasedate>20030101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>1784057A</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>20D60BAD7A6037555A1169C0D009D212</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="40012" source="ScreenScraper.fr">
+		<path>./anithunt.zip</path>
+		<name>Animal Treasure Hunt (Version 1.9R, set 1)</name>
+		<image>/userdata/roms/mame/images/anithunt.png</image>
+		<releasedate>20030101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>C01B094B</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>07E6E45E7D45DABB3CC73E39BF52BB74</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="40104" source="ScreenScraper.fr">
+		<path>./atworld.zip</path>
+		<name>Around The World (Version 1.4R CGA)</name>
+		<image>/userdata/roms/mame/images/atworld.png</image>
+		<releasedate>20070101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>9E1C29A0</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>C734E39640E822463F5A435133775422</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="40398" source="ScreenScraper.fr">
+		<path>./bugfever.zip</path>
+		<name>Bugs Fever (Version 1.7R CGA)</name>
+		<image>/userdata/roms/mame/images/bugfever.png</image>
+		<releasedate>20060101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>E496D759</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>4A8D7267192627AA3060CEB0D3199939</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="40573" source="ScreenScraper.fr">
+		<path>./classice.zip</path>
+		<name>Classic Edition (Version 1.6E)</name>
+		<image>/userdata/roms/mame/images/classice.png</image>
+		<releasedate>20040101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>BCC46DBD</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>FE21AD329671F4FE91D4338DCE70953B</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="41058" source="ScreenScraper.fr">
+		<path>./dvisland.zip</path>
+		<name>Devil Island (Version 1.4R CGA)</name>
+		<image>/userdata/roms/mame/images/dvisland.png</image>
+		<releasedate>20060101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>FB0F3F1D</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>16AE8012012CADFB66E5FDCAA4BA2E4B</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="40833" source="ScreenScraper.fr">
+		<path>./dblchal.zip</path>
+		<name>Double Challenge (Version 1.5R, set 1)</name>
+		<image>/userdata/roms/mame/images/dblchal.png</image>
+		<releasedate>20030101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>6657B1D0</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>4B0579ECA64B00189960D9168AE0038E</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="41189" source="ScreenScraper.fr">
+		<path>./fb6.zip</path>
+		<name>Fruit Bonus '06 - 10th Anniversary (Version 1.7E CGA)</name>
+		<image>/userdata/roms/mame/images/fb6.png</image>
+		<releasedate>20060101T000000</releasedate>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>CEF52CCE</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>98894C6D5B1A2BA59F7EC32CADAD286C</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="60527" source="ScreenScraper.fr">
+		<path>./ch2000.zip</path>
+		<name>Fruit Bonus 2000 / New Cherry 2000 (Version 4.4E Dual)</name>
+		<image>/userdata/roms/mame/images/ch2000.png</image>
+		<releasedate>20000101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<crc32>AC15C8A0</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>C74BAEAF3944ADC9EFDBA681241F6C1C</cheevosHash>
+	</game>
+	<game id="41187" source="ScreenScraper.fr">
+		<path>./fb4.zip</path>
+		<name>Fruit Bonus 2004 (Version 1.5R, set 1)</name>
+		<image>/userdata/roms/mame/images/fb4.png</image>
+		<releasedate>20040101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>8076CC7A</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>67971666EF9092B0CD914B19B1F41135</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="41188" source="ScreenScraper.fr">
+		<path>./fb5.zip</path>
+		<name>Fruit Bonus 2005 (Version 1.5SH, set 1)</name>
+		<image>/userdata/roms/mame/images/fb5.png</image>
+		<releasedate>20050101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>3DFC8D0A</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>09BFD314C8DB44C57BFE59C337854ADF</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="41190" source="ScreenScraper.fr">
+		<path>./fb6se.zip</path>
+		<name>Fruit Bonus 2006 Special Edition (Version 1.4E CGA)</name>
+		<image>/userdata/roms/mame/images/fb6se.png</image>
+		<releasedate>20060101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>57A07E80</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>185678C435193E06CDD902D8E32F8AE1</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="41185" source="ScreenScraper.fr">
+		<path>./fb2nd.zip</path>
+		<name>Fruit Bonus 2nd Edition (Version 1.8R, set 1)</name>
+		<image>/userdata/roms/mame/images/fb2nd.png</image>
+		<releasedate>20040101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>7F1B9141</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>F66DF8D9234816C8D828E1CDB0576EFC</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="41184" source="ScreenScraper.fr">
+		<path>./fb2gen.zip</path>
+		<name>Fruit Bonus 2nd Generation (Version 1.8E Dual)</name>
+		<image>/userdata/roms/mame/images/fb2gen.png</image>
+		<releasedate>20040101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>02C721B8</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>4179F8423CCAE498B3BCBCC20598F4FD</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="41197" source="ScreenScraper.fr">
+		<path>./fcnudge.zip</path>
+		<name>Fruit Carnival Nudge (Version 2.1 Dual)</name>
+		<image>/userdata/roms/mame/images/fcnudge.png</image>
+		<releasedate>20030101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>CECAD218</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>27EB9C939CA1FD55128B0E1DD52C066C</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="41308" source="ScreenScraper.fr">
+		<path>./funriver.zip</path>
+		<name>Fun River (Version 1.4R CGA)</name>
+		<image>/userdata/roms/mame/images/funriver.png</image>
+		<releasedate>20050101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<crc32>2F56F7A6</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>23BA2219ED0FA37A2FFFD74FD32296E3</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="41691" source="ScreenScraper.fr">
+		<path>./hldspin2.zip</path>
+		<name>Hold And Spin 2 (Version 2.8R, set 1)</name>
+		<image>/userdata/roms/mame/images/hldspin2.png</image>
+		<releasedate>20000101T000000</releasedate>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<playcount>2</playcount>
+		<lastplayed>20210502T171522</lastplayed>
+		<crc32>7A359992</crc32>
+		<gametime>38</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>9DF62F02ACFCABA6066BBB3EF17A26AB</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+	<game id="39928" source="ScreenScraper.fr">
+		<path>./abnudge.zip</path>
+		<name>Animal Bonus Nudge (Version 2.1 Dual)</name>
+		<image>/userdata/roms/mame/images/abnudge.png</image>
+		<releasedate>20030101T000000</releasedate>
+		<developer>Amcoe</developer>
+		<publisher>Amcoe</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<playcount>1</playcount>
+		<lastplayed>20210613T103036</lastplayed>
+		<crc32>F8953551</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>2CE949C0A9D35DA6A047250833D838A2</cheevosHash>
+		<genreid>3584</genreid>
+	</game>
+</gameList>

@@ -1,0 +1,375 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="40282" source="ScreenScraper.fr">
+		<path>./bloodwar.zip</path>
+		<name>Blood Warrior</name>
+		<desc>The gameplay of Blood Warrior is quite similar to many of the 2D fighting games of the same era. However, Kaneko seem to have taken much of their inspiration from the Mortal Kombat franchise in terms of over the top gore and violence; however, Blood Warrior's predecessor Shogun Warriors predates Mortal Kombat in featuring blood, while Barbarian: The Ultimate Warrior predates Mortal Kombat in featuring death moves.</desc>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bloodwar.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="40323" source="ScreenScraper.fr">
+		<path>./boggy84.zip</path>
+		<name>Boggy '84</name>
+		<desc>Boggy '84 is one of those games of which countless numbers were made in the early eighties during the homecomputer boom. It is slightly similar to Mappy or Space Panic but without the refinements of said games. 
+ 
+You are a man who must collect a set of keys on a level with several floors. You can jump between floors using springboards, which gives you an advantage over your enemies, who must use the ladders to climb between floors. You must also use those in order to descend to a lower floor, mind you. Later levels add touches such as a a ski slope which you must ascend while avoiding the baddies. Hitting them from below will put them out of action, though.</desc>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<publisher>Kaneko</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/boggy84.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="40793" source="ScreenScraper.fr">
+		<path>./cyvern.zip</path>
+		<name>Cyvern - The Dragon Weapons (US)</name>
+		<desc>Take control of 3 artificially enhanced elemental dragons and battle against tons of enemy airships and hulking bosses in this excellent overhead shooter. Features awesome graphics &amp; sound effects as well as responsive controls and a high level of challenge.</desc>
+		<rating>0.8</rating>
+		<releasedate>19980101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/cyvern.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41139" source="ScreenScraper.fr">
+		<path>./explbrkr.zip</path>
+		<name>Explosive Breaker</name>
+		<desc>Explosive Breaker is a up-scrolling space themed shoot 'em up game where you take control of one of six different pilots and their ships. The pilots are Jean, Nigel, Steel, Mai, Mifune and Hanse, each having their own distinct weapons pattern. 
+ 
+You fight a variety of spacecraft's, static guns and bosses. While playing destroyed enemies drop power-ups. These include: A front weapon power-up (P), missiles (M), homing missiles (H), some kind of flouting bombs (C), Side weapon (S), extra big bomb (B) and instant Max power (P in block).</desc>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/explbrkr.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41259" source="ScreenScraper.fr">
+		<path>./flyboy.zip</path>
+		<name>Fly-boy</name>
+		<desc>Take off on a fantastic video trip. A voyage that simulates the thrills and skills of actual Hang Gliding. Players use the joystick to control Freddie, but good timing and strategy is necessary to successfully negotiate invisible air currents, wind direction and up and down drafts. This game has incredible visual impact for this time, Freddie flies the skies over the Alps--over trains, trees, bridges, through winter and summer seasons; over the Pacific--over a yacht, tropical islands, an aircraft carrier; and over Egypt--camels, Pyramids, the Taj Mahal, the Sphinx, through day and night landscapes. It's a complete global challenge with non-stop action over a continuously changing panorama below.</desc>
+		<rating>0.2</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Race, Driving-Race, Driving / Hang-glider-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/flyboy.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41601" source="ScreenScraper.fr">
+		<path>./gutsn.zip</path>
+		<name>Guts'n (Japan)</name>
+		<desc>A puzzle game.</desc>
+		<rating>0.8</rating>
+		<releasedate>20000101T000000</releasedate>
+		<publisher>Kaneko</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gutsn.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41791" source="ScreenScraper.fr">
+		<path>./imago.zip</path>
+		<name>Imago (cocktail set)</name>
+		<desc>Imago is a vertical shoot 'em up.</desc>
+		<rating>0.6</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Acom</developer>
+		<publisher>Acom</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/imago.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41871" source="ScreenScraper.fr">
+		<path>./jchan.zip</path>
+		<name>Jackie Chan - The Kung-fu Master</name>
+		<desc>Features digitized fighters, the bosses are three different versions of Jackie Chan. Pretty funny game, responsive controls, a bit of Jackie 'engrish', loads of little videos and funny stuff.</desc>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<publisher>Kaneko</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/jchan.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41872" source="ScreenScraper.fr">
+		<path>./jchan2.zip</path>
+		<name>Jackie Chan In Fists Of Fire</name>
+		<desc>Features digitized fighters, the bosses are 3 different versions of Jackie Chan. Pretty funny game, responsive controls, a bit of Jackie 'engrish', loads of little videos and funny stuff.</desc>
+		<rating>0.5</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/jchan2.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41923" source="ScreenScraper.fr">
+		<path>./jumpcoas.zip</path>
+		<name>Jump Coaster</name>
+		<desc>You control a caped man who attempts to rescue his girlfriend while attempting to avoid monkeys on roller coasters. Two scenes make up one round . Pick up all gold bags in both scenes and your off to the next round.</desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/jumpcoas.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="57922" source="ScreenScraper.fr">
+		<path>./mgcrystl.zip</path>
+		<name>Magical Crystals (World, 92/01/10)</name>
+		<desc>Magical Crystals is a maze/shooter game, developed and published by Kaneko, which was released in 1991 (also licensed to Atlus).  
+The player impersonate a magician going through a set of mazes suspended in the air; the goal of the game is to rescue the pixies trapped inside the magical crystals. The game has a total of 6 worlds. Each world is divided into 3 acts and has a boss fight and a bonus stage at the end.</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>Kaneko</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mgcrystl.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41555" source="ScreenScraper.fr">
+		<path>./gtmr2.zip</path>
+		<name>Mille Miglia 2 - Great 1000 Miles Rally (95/05/24)</name>
+		<desc>You have 60 seconds to get from the starting line to the finish line. Finishing within 60 seconds allows you to go on to the next race. If you lose, a continue option is available. The screen scrolls fast. The only way you know about a turn coming up is by a little indicator that flashes with a picture of the turn. There are zig-zags, hairpins and all other cool turns, most of which you have to steer into in order to make it though.</desc>
+		<rating>0.8</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/gtmr2.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="60857" source="ScreenScraper.fr">
+		<path>./packbang.zip</path>
+		<name>Pack'n Bang Bang (Prototype)</name>
+		<desc>Pack'n Bang Bang is an unreleased game by Kaneko that was supposed to be released in 1994. The game is a platform in a vs style where the player needs to defeat the opponent by destroying the support blocks and landing them into the spikes.</desc>
+		<rating>0.7</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Action-Action / Breakout games</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/packbang.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="79183" source="ScreenScraper.fr">
+		<path>./panicstr.zip</path>
+		<name>Panic Street (Japan)</name>
+		<desc>Panic Street is an offshoot of the Gals Panic series. It has identical gameplay: a Qix-like puzzle where you uncover an image by cutting away an overlay with a cursor. However, there is no nudity, and the cursor can move diagonally. The "models" in the game vary greatly, being male, female, and some not even human. They are all anime-style drawings. The gameplay is mostly identical to Gals Panic S2, released the same year.</desc>
+		<rating>0.9</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/panicstr.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="79199" source="ScreenScraper.fr">
+		<path>./pbillian.zip</path>
+		<name>Prebillian</name>
+		<desc>Prebillian is a Strange pool-type game in a futuristic environment.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Sports / Swimming-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pbillian.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42964" source="ScreenScraper.fr">
+		<path>./sengekis.zip</path>
+		<name>Sengeki Striker (Asia)</name>
+		<desc> 
+The title of this game translates from Japanese as 'Dramatic Battle Striker'. 
+ 
+The game forbids the initials 'SEX' on the high score table. If you try, it gets changed to 'KAN'.</desc>
+		<rating>0.8</rating>
+		<releasedate>19970101T000000</releasedate>
+		<developer>Warashi</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sengekis.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="42970" source="ScreenScraper.fr">
+		<path>./senknow.zip</path>
+		<name>Sen-know (Japan)</name>
+		<desc>Sen-Know (c) 1999 Kaneko.  - TECHNICAL -  Kaneko Super Nova System hardware  Main CPU : SH-2 (@ 28.638 Mhz) Sound Chips : YMZ280B (@ 16.666666 Mhz)  Screen orientation : Horizontal Video resolution : 320 x 240 pixels Screen refresh : 60.00 Hz Palette colo</desc>
+		<rating>0.5</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/senknow.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="43051" source="ScreenScraper.fr">
+		<path>./shogwarr.zip</path>
+		<name>Shogun Warriors (World)</name>
+		<desc>Shogun Warriors plays similarly to some other 2D versus fighting games during its release, which the player's character fights against his or her opponent in best two-out-of-three matches in a single player tournament mode with the computer or against another human player. It is controlled with an 8-way joystick and 4 buttons that perform weak and strong versions of punches and kicks. In one player mode, after selecting a character, the arcade randomly selects an opponent. The opponent order goes randomly and always leaves the last four bosses in a certain order. Some characters stabbed by ones armed with katanas or other sharp weapons can cause blood to spurt out, which became popularized a few months later by Midway's Mortal Kombat. The main unique feature of Shogun Warriors is its "grabbing system". When the player is grabbed by the opponent, the grabber must move the joystick left and right to make it more difficult for his opponent to escape, while the one being grabbed must rapidly press any or all buttons to make it easier to escape.</desc>
+		<rating>0.4</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/shogwarr.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="43921" source="ScreenScraper.fr">
+		<path>./vblokbrk.zip</path>
+		<name>Vs Block Breaker (Europe)</name>
+		<desc>Breakout featuring a jumping character and hilarious graphics.</desc>
+		<rating>0.7</rating>
+		<releasedate>19970101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/vblokbrk.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43997" source="ScreenScraper.fr">
+		<path>./vsgongf.zip</path>
+		<name>Vs Gong Fight</name>
+		<desc>VS Gong Fight es un juego de boxeo arcade, que fue lanzado por Kaneko en 1984 y licenciado a Taito Corporation para su fabricación y distribución en los Estados Unidos, bajo el nombre de Ring Fighter. Los jugadores deben usar un joystick de 4 vías para tomar el control de un boxeador (1P's usa guantes azules, baúles y botas, pero 2P's usa guantes rojos), con dos botones para hacerlos golpear y bloquear - y si sólo un jugador está jugando el juego, 2P's boxer será controlado por la CPU y silueteado en negro. Los niveles de energía de ambos boxeadores se muestran en las esquinas superior izquierda y superior derecha de la pantalla, con sus niveles de "daño" en las esquinas inferior izquierda y inferior derecha de la pantalla; el número de la ronda actual y su tiempo restante también se muestran en el centro superior de la pantalla. Al igual que en el boxeo real, tienes que golpear a tu oponente antes de que se acabe el tiempo, para proceder a la siguiente ronda - y una vez que lo hayas hecho, tendrás que enfrentarte a otro oponente de la CPU, o se acabará el juego para el perdedor.</desc>
+		<rating>0.3</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Sports / Boxing-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/vsgongf.png</image>
+		<genreid>1540</genreid>
+	</game>
+	<game id="148745" source="ScreenScraper.fr">
+		<path>./skns.zip</path>
+		<name>ZZZ(notgame):Skns Sprite</name>
+		<releasedate />
+		<image>/userdata/roms/mame/images/skns.png</image>
+	</game>
+	<game id="41554" source="ScreenScraper.fr">
+		<path>./gtmr.zip</path>
+		<name>1000 Miglia - Great 1000 Miles Rally (94/07/18)</name>
+		<desc>Great 1000 Miles Rally © 1994 Kaneko.
+
+A racing game featuring classic cars from Ferrari, Alfa Romeo, Mercedes Benz and more.</desc>
+		<image>/userdata/roms/mame/images/gtmr.png</image>
+		<rating>0.9</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>2</players>
+		<playcount>1</playcount>
+		<lastplayed>20210123T110514</lastplayed>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="39954" source="ScreenScraper.fr">
+		<path>./airbustr.zip</path>
+		<name>Air Buster - Trouble Specialty Raid Unit (World)</name>
+		<desc>Air Buster is a horizontally scrolling shoot 'em up video game produced by Kaneko and co-distributed by Namco for the arcades in 1990. It was subsequently ported to the PC Engine/TurboGrafx-16 (under the title Aero Blasters) and for the Mega Drive/Genesis in 1991.  
+In Air Buster, the player controls a fighter jet also designed for space travel and shoots enemies, collects power-ups, and defeats bosses to advance levels. Players choose between one of the two Blaster fighters through scrolling six stages. The Blaster fighters can equip one of seven weapons. The weapons include the Striker weapon which adds additional firepower through vertically aligned Options, the Reverse shot which fires two diagonal shots from the rear of the ship, the Six Way Shot which fires semi-automatic shots in six directions and the Homing Shot which tracks enemies all around the screen. The other three weapons are Missile based which vary from Red straight-firing Rockets and Green Homing Missiles. There is also the Border item which surrounds the front of the ship, keeping it from crashing into foreground objects. The only other Items include Power-Ups which increase the ship's standard shot power and Bonus Points that appear in the sign of Dollar signs.</desc>
+		<image>/userdata/roms/mame/images/airbustr.png</image>
+		<rating>0.6</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Namco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40330" source="ScreenScraper.fr">
+		<path>./bonkadv.zip</path>
+		<name>B.c. Kid</name>
+		<desc>A platform game, based on the NEC PC Engine game of the same name, consisting of 21 stages fighting dinosaurs and other creatures.</desc>
+		<image>/userdata/roms/mame/images/bonkadv.png</image>
+		<rating>0.6</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Red Company</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="40356" source="ScreenScraper.fr">
+		<path>./brapboys.zip</path>
+		<name>B.Rap Boys (World)</name>
+		<desc>A side scrolling beat'em up. 3 characters, one on a skateboard, one on a bike and one on rollerskates fight various enemies. Features a large amount of sampled voices and several rap songs.</desc>
+		<image>/userdata/roms/mame/images/brapboys.png</image>
+		<rating>0.3</rating>
+		<releasedate>19920101T000000</releasedate>
+		<publisher>Kaneko</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>3</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="40202" source="ScreenScraper.fr">
+		<path>./berlwall.zip</path>
+		<name>Berlin Wall, The</name>
+		<desc>The player takes control of a boy who must use his hammer to break the blocks that form part of the colourful, platform-strewn levels that form each stage. These holes act as traps for the many patrolling monsters and once an enemy has fallen into a hole, the player must then use the hammer on the enemy to make it fall through the hole and down to the platform below - causing it to change into fruit, which can then be collected. This game is a reworking of the 1980 classic, "Space Panic".</desc>
+		<image>/userdata/roms/mame/images/berlwall.png</image>
+		<rating>0.4</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="40257" source="ScreenScraper.fr">
+		<path>./blazeon.zip</path>
+		<name>Blaze On (Japan)</name>
+		<desc>The player is set in control of The Garland TFF-01, a sub-standard space fighter ship that is only armed with a semi-auto or rapid fire laser gun known as the Beam Vulcan and the Tranquilander. Some enemy units can be captured and used in play; certain enemy robots, when shot by the player's Tranquilander, will morph into an outline of themselves. The player can then fly into the outline, and take on the form of the enemy robot, taking control of its weapons, abilities and special attacks. 
+ 
+There is also addition to the boss battle scoring: similar to some shooters, players have the opportunity to increase their scores by beating the end level bosses within a certain time limit. Every time a boss battle is initiated, a timer will count down and once the boss is destroyed/killed before the timer reaches zero, then the time left will add to the player's end-level score; if the timer runs out, then the score at the end of the level will remain unaffected.</desc>
+		<image>/userdata/roms/mame/images/blazeon.png</image>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>A.I</developer>
+		<publisher>Atlus</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+</gameList>

@@ -1,0 +1,452 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="43059" source="ScreenScraper.fr">
+		<path>./shougi.zip</path>
+		<name>Shougi</name>
+		<desc>A one or two player tabletop game published and developed by Alpha Denshi in 1982.</desc>
+		<image>/userdata/roms/mame/images/shougi.png</image>
+		<rating>0.3</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>Tehkan Ltd.</publisher>
+		<genre>Shougi-Asiatic board game</genre>
+		<players>2</players>
+		<crc32>A5EC3E6F</crc32>
+		<cheevosHash>110B23D71E3DF9A7C94258C284969D5E</cheevosHash>
+		<genreid>2048</genreid>
+	</game>
+	<game id="43109" source="ScreenScraper.fr">
+		<path>./skyadvnt.zip</path>
+		<name>Sky Adventure (World)</name>
+		<desc>Sky Adventure is a vertically scrolling shoot-em-up.</desc>
+		<image>/userdata/roms/mame/images/skyadvnt.png</image>
+		<rating>0.6</rating>
+		<releasedate>19890503T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<crc32>9287919D</crc32>
+		<cheevosHash>EF0855BAD1E1AC8B89B3A4231617169C</cheevosHash>
+		<genreid>260</genreid>
+	</game>
+	<game id="43127" source="ScreenScraper.fr">
+		<path>./skysoldr.zip</path>
+		<name>Sky Soldiers (US)</name>
+		<desc>Sky Soldiers is a vertical scrolling Shoot em' Up developed by Alpha Denshi and released to arcades in 1988 by Romstar in North America and SNK for the rest of the world. The game features a time travel theme as well as an organized weapon select screen at the beginning of each stage. 
+ 
+Players travel back in time starting in Great Britain 1945, Germany 1915, Japan 1945, Germany 1944, Vietnam 1974, France 1914, Russia 1974 and finally the space station in the present time, 2110. Each time stage has two levels, both ending in a boss battle save for the final stage, resulting in a total of 15 Areas. 
+ 
+The ship's weapon system is accessed in the beginning of each stage. The shipâ€™s main shot consists of a semi-automatic Wave Shot. The shipâ€™s bomb weapons include forward firing missiles, fireballs, homing missiles and the buster bomb. The ship can be equipped with only one bomb weapon from either category at a time. The ship can only be loaded with a certain number of Bomb weapons and they can only be resupplied at the end of the level. The only pick-up item in the game is a parachuting human pilot shot down from malfunctioning fighter planes/jets; collecting these pilots results in random bonus points.</desc>
+		<image>/userdata/roms/mame/images/skysoldr.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<crc32>81A6420D</crc32>
+		<cheevosHash>3AE4107ED0EF8B7E61BF0986427580A8</cheevosHash>
+		<genreid>260</genreid>
+	</game>
+	<game id="43259" source="ScreenScraper.fr">
+		<path>./splndrbt.zip</path>
+		<name>Splendor Blast (set 1)</name>
+		<desc>Splendor Blast is a futuristic spaceship racing game. 
+ 
+Join the intergalactic race, drive your racing spaceship at full speed and destroy the opponents spaceships, grab the energy and ammo items, in this engrossing space race, evade all obstacles and dangerous curves to move to the next race to victory!</desc>
+		<image>/userdata/roms/mame/images/splndrbt.png</image>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>ADK</publisher>
+		<genre>Race, Driving-Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<crc32>80BAC7AE</crc32>
+		<cheevosHash>437AD0ABAEF3CE38663B98784DF310D6</cheevosHash>
+		<genreid>1537</genreid>
+	</game>
+	<game id="145394" source="ScreenScraper.fr">
+		<path>./sbasebal.zip</path>
+		<name>Super Champion Baseball (US)</name>
+		<desc>Un increíble juego de béisbol de SNK.</desc>
+		<image>/userdata/roms/mame/images/sbasebal.png</image>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Sports-Sports / Baseball</genre>
+		<players>2</players>
+		<crc32>2A9A65D8</crc32>
+		<cheevosHash>BF1031CB1081C318C86F856E2CF4364D</cheevosHash>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43333" source="ScreenScraper.fr">
+		<path>./sstingry.zip</path>
+		<name>Super Stingray (Japan)</name>
+		<desc>Super Stingray is a semi-strategic top-down tank action shooter game. 
+ 
+Control your tank across the battlefield and destroy all the enemies in the way and defeated the enemy fortress.</desc>
+		<image>/userdata/roms/mame/images/sstingry.png</image>
+		<rating>0.7</rating>
+		<releasedate>19860502T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>ADK</publisher>
+		<genre>Shooter / Vehicle, Vertical-Shooter</genre>
+		<players>2</players>
+		<crc32>144DDE35</crc32>
+		<cheevosHash>D70C8DE2B1E6FA4872E5918B990022C0</cheevosHash>
+		<genreid>1028</genreid>
+	</game>
+	<game id="37569" source="ScreenScraper.fr">
+		<path>./bjourney.zip</path>
+		<name>Blue's Journey</name>
+		<desc>The planet of Raguy was once beautiful and peaceful, but all hell broke loose when it was invaded by the Daruma tribe. The pollution started to spread through the city. Blue was summoned to get rid of the Daruma tribe, and save Raguy from the Daruma Empire that has turned the inhabitants into slaves.
+
+You control Blue, who only has one weapon to deal with the Darumas. You can use his leaf to whip enemies upside-down, and hurl these enemies at others. Along the way, you can get flowers for use at the shop to buy items that will help you along the way. These items include flower honey (increases stamina), swim fins (easier swimming), light safe (protects all your items), spikes, and ocarinas. Later in the game, you can also get the shopkeeper to sing you a song. This helps you break curses that are placed on you by a witch.You will also interact with other characters along the way that can also help you if you tell the truth.
+
+You exit each stage by jumping on a huge plant. The higher up you are on this plant, the more points you are awarded. Every two or so stages, you have to defeat a boss before a guy in a devil suit offers you something. You can refuse or accept the other. If you accept the offer, you will have to pull one of four strings that will give you a life ball, more stamina, 30 flowers, cocoons, or five flowers.
+
+You are on a time limit. If you run out of time, a black creature appears out of nowhere, and starts firing "bird" missiles at you.</desc>
+		<image>/userdata/roms/mame/images/bjourney.png</image>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>SNK</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>2</players>
+		<crc32>9FC19733</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>98A59E2482E9E4779ED2E2F36C37E462</cheevosHash>
+		<cheevosId>11801</cheevosId>
+		<genreid>258</genreid>
+	</game>
+	<game id="40404" source="ScreenScraper.fr">
+		<path>./bullfgtr.zip</path>
+		<name>Bull Fighter</name>
+		<desc>Bull Fighter is an early ice hockey game.</desc>
+		<image>/userdata/roms/mame/images/bullfgtr.png</image>
+		<rating>0.2</rating>
+		<releasedate>19840901T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>ADK</publisher>
+		<genre>Sports / Hockey-Sports</genre>
+		<players>2</players>
+		<crc32>27FAC693</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>CB7E25BE8E17C4013BF06A55D8A18F44</cheevosHash>
+		<genreid>1538</genreid>
+	</game>
+	<game id="145390" source="ScreenScraper.fr">
+		<path>./champbb2.zip</path>
+		<name>Champion Base Ball Part-2 (set 1)</name>
+		<desc>Champion Baseball II is the multiplayer version of the 1983 baseball arcade game developed by Alpha Denshi and published by Sega. The game was a sophisticated sports game for its time, displaying the playfield using multiple camera angles, including a close-up shot of the batter and pitcher, and giving players the option of selecting relief pitchers or pinch hitters, while an umpire looks on attentively to make the game calls. The game became very popular in Japanese arcades when released in 1983, at one point enjoying a level of popularity comparable to Space Invaders according to Sega.</desc>
+		<image>/userdata/roms/mame/images/champbb2.png</image>
+		<rating>0.3</rating>
+		<releasedate>19830101T000000</releasedate>
+		<genre>Sports-Sports / Baseball</genre>
+		<crc32>FDDC6463</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>86990647A12E8DA3EC0D088BBE61FC52</cheevosHash>
+		<genreid>1538</genreid>
+	</game>
+	<game id="145389" source="ScreenScraper.fr">
+		<path>./champbas.zip</path>
+		<name>Champion Base Ball</name>
+		<desc>Champion Baseball is a 1983 baseball arcade game developed by Alpha Denshi and published by Sega. The game was a sophisticated sports game for its time, displaying the playfield using multiple camera angles, including a close-up shot of the batter and pitcher, and giving players the option of selecting relief pitchers or pinch hitters, while an umpire looks on attentively to make the game calls. The game became very popular in Japanese arcades when released in 1983, at one point enjoying a level of popularity comparable to Space Invaders according to Sega.</desc>
+		<image>/userdata/roms/mame/images/champbas.png</image>
+		<rating>0.3</rating>
+		<releasedate>19830101T000000</releasedate>
+		<genre>Sports-Sports / Baseball</genre>
+		<crc32>B0EF1E19</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>A938874ECE163D77889D9A59BED54DDA</cheevosHash>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43509" source="ScreenScraper.fr">
+		<path>./talbot.zip</path>
+		<name>Talbot</name>
+		<desc>In Talbot, the player controls a peasant with a red pointed hat, he is a rabbit breeder and accompanied with his loyal hunting dog talbot breed, must recapture all the rabbits that have escaped and are running around the maze field.  
+ 
+You must prevent the thieves with sunglasses, steal your rabbits while you avoid his attacks, it is a race against time, as you progress through the maze field you must find some food like milk to replenish your energy and give orders to your dog to put traps along the way to stop the sneaky thieves and also catch the rabbits more easy and bring them to the cage again, to go to the next round. With each round changes the maze pattern. 
+ 
+While more rabbits you catch more points you earn and you win the game, if the enemies catch more rabbits, you lose the game!</desc>
+		<image>/userdata/roms/mame/images/talbot.png</image>
+		<rating>0.5</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>ADK</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<crc32>EFC53305</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>44C4AFC07D4A16F73D13D7DB109BB4BD</cheevosHash>
+		<genreid>258</genreid>
+	</game>
+	<game id="145387" source="ScreenScraper.fr">
+		<path>./kouyakyu.zip</path>
+		<name>The Koukou Yakyuu</name>
+		<desc>The Koukou Yakyuuis a Japanese baseball game from Alpha Denshi.</desc>
+		<image>/userdata/roms/mame/images/kouyakyu.png</image>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>ADK</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>2</players>
+		<crc32>602E3D4E</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>F2EFFE7061EAD5855E34D16040C0DB7D</cheevosHash>
+		<genreid>1538</genreid>
+	</game>
+	<game id="13962" source="ScreenScraper.fr">
+		<path>./trally.zip</path>
+		<name>Thrash Rally</name>
+		<desc>Thrash Rally is a fast-paced racing game, similar to Neo Drift Out and Overtop, but using a top-down view. You can either participate in a World Championship or do a complete Paris Dakar rally.
+Using basic controls: accelerate with automatic transmission, brake and a combination of both to power drift, you have to follow a set path of courses. In the World Championship, each location consists of different stages that need to be finished in a single run. There is a strict time limit and you receive a time bonus upon finishing a section. The Dakar mode is one long track without stops. The championship uses regular cars, but in the Dakar race you can also choose a sand buggy, off-road bike or a truck.
+
+A global ranking is kept while racing, but it is based on your time, not on the number of cars you pass during the race. Aside from your opponents, you'll also find water, animals, hills, bridges, bushes and different obstacles in your path.</desc>
+		<image>/userdata/roms/mame/images/trally.png</image>
+		<rating>0.55</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>SNK</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>2</players>
+		<crc32>7C581F5B</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>95BB32E6E94BD6D8E802FDE53718AC18</cheevosHash>
+		<cheevosId>13819</cheevosId>
+		<genreid>1537</genreid>
+	</game>
+	<game id="43622" source="ScreenScraper.fr">
+		<path>./timesold.zip</path>
+		<name>Time Soldiers (US Rev 3)</name>
+		<desc>Travel throughout various time periods to save your fellow comrades in this vertically scrolling shoot'em up. Collect power-ups to help you defeat a variety of enemies and end-bosses.</desc>
+		<image>/userdata/roms/mame/images/timesold.png</image>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>ADK</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<crc32>FD5AC5F7</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>A98759B589D300A2ED48D92773517080</cheevosHash>
+		<genreid>258</genreid>
+	</game>
+	<game id="37654" source="ScreenScraper.fr">
+		<path>./wh1.zip</path>
+		<name>World Heroes</name>
+		<desc>An alien entity known as Geegus threatens the Earth in the year 3091.  As all of Earth's forces have been defeated, a scientist uses his recently-built time machine to find the greatest fighters of different eras to compete against Geegus.
+
+Featuring a cast of characters ranging from ninjas to a cybernetic supersoldier, you'll fight your way through standard-fare one-on-one matches or take on an opponent in a Deathmatch, where spiked walls and landmines add to the danger.</desc>
+		<image>/userdata/roms/mame/images/wh1.png</image>
+		<rating>0.8</rating>
+		<releasedate>19920728T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>SNK</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<crc32>1DA64CE5</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>D93438A68E424BCFC3460D73A90BF95C</cheevosHash>
+		<genreid>262</genreid>
+	</game>
+	<game id="13924" source="ScreenScraper.fr">
+		<path>./crsword.zip</path>
+		<name>Crossed Swords</name>
+		<desc>As a knight, you must travel the countryside fighting monsters and bandits using your sword and shield. When you enter combat the view changes to a pseudo 1st-person perspective where the body of your knight is outlined so that you can see the creatures that you are fighting. When enemies have been defeated, they drop money and power-ups. There are seven chapters in the game, and each chapter (except one) starts with you entering a merchant's shop and buying weapons using the money that you have collected so far. There are also alternate paths which take you to different parts of the game. At the start of the game, you may choose a chapter (from one to three only) you want to start at.</desc>
+		<image>/userdata/roms/mame/images/crsword.png</image>
+		<rating>0.6</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>SNK</publisher>
+		<genre>Adventure</genre>
+		<players>2</players>
+		<crc32>E157A16A</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>AA6BE49ADE69CA2A4F6DE97EB71150B5</cheevosHash>
+		<genreid>512</genreid>
+	</game>
+	<game id="41114" source="ScreenScraper.fr">
+		<path>./equites.zip</path>
+		<name>Equites</name>
+		<desc>Equites is an early vertically scrolling shoot'em up. 
+ 
+Transform from land-walking mech to a soaring jet and back again in this 1984 shooter from Alpha Denshi.</desc>
+		<image>/userdata/roms/mame/images/equites.png</image>
+		<rating>0.7</rating>
+		<releasedate>19840901T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<crc32>F629BA44</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>62E160CC290FE17E590D043D7F9168A1</cheevosHash>
+		<genreid>258</genreid>
+	</game>
+	<game id="41134" source="ScreenScraper.fr">
+		<path>./exctscc2.zip</path>
+		<name>Exciting Soccer 2</name>
+		<desc>Este juego tiene la misma jugabilidad que su predecesor. Sus mayores diferencias son; una nueva música y la suplantación de Austria por Japón.</desc>
+		<image>/userdata/roms/mame/images/exctscc2.png</image>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>ADK</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>2</players>
+		<crc32>97D9B632</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>81FAE8940FB472A8B8ECCF1D71DD2504</cheevosHash>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41135" source="ScreenScraper.fr">
+		<path>./exctsccr.zip</path>
+		<name>Exciting Soccer</name>
+		<desc>Exciting Soccer is an association football game which includes penalty shootout if the game ends in a tie. If you win the game you move on to the next level, each time the opponent gets harder to beat. When you start playing you can choose one of 6 teams: Italy, England, Brazil, West Germany, Austria, or France. The sequel Exciting Soccer II was released in 1984 with Japan replacing Austria and new music, but identical gameplay.  
+ 
+The game allows for one or two players to play and has a control scheme where they can tackle, shoot, short pass, and long pass. Exciting Soccer had realistic touches for the time: corner kicks, throw-ins, penalty shots, and cheerleaders, as well as digitized voices and an influential overhead view.</desc>
+		<image>/userdata/roms/mame/images/exctsccr.png</image>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>ADK</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>2</players>
+		<crc32>94D7D8FC</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>98FB713B6D7893BEFC6306D5E7A8D9A3</cheevosHash>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41386" source="ScreenScraper.fr">
+		<path>./gangwars.zip</path>
+		<name>Gang Wars</name>
+		<desc>2 street brawlers fight their way through a gang of hoodlums that like to laugh incessantly at you while they're beating you up! Features customizable statistics for your fighter.</desc>
+		<image>/userdata/roms/mame/images/gangwars.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>SNK</publisher>
+		<genre>Beat'em Up</genre>
+		<players>2</players>
+		<crc32>C7166A2B</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>F2EFE1EDF0E7047FA812FCE58DD1049A</cheevosHash>
+		<genreid>263</genreid>
+	</game>
+	<game id="41751" source="ScreenScraper.fr">
+		<path>./hvoltage.zip</path>
+		<name>High Voltage</name>
+		<desc>Once upon a time, man on the Earth concentrated all the power of superlative science to control the universe and changed it into force of arms. We repressed the galactic system where high grade creature lived, and expanded his territory successively. However, it is 3030 now and we ruled over huge country. But, it became too large to do ot. The eye could not have reached at last in all parts of the heavenly bodies and rebellion arose here and there......and finally big revolt rose in a country named Regit. The rebel army extended their power rapidly, centering around their territory and made haste to build up a thorou ghly strengthened country. To control this, we headed on to Regit in High Voltage.</desc>
+		<image>/userdata/roms/mame/images/hvoltage.png</image>
+		<rating>0.7</rating>
+		<releasedate>19850426T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>ADK</publisher>
+		<genre>Shooter / Missile Command Like-Shooter</genre>
+		<players>2</players>
+		<crc32>53070353</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>8939E7856BC2F8867AB0ECBA422C93ED</cheevosHash>
+		<genreid>261</genreid>
+	</game>
+	<game id="42082" source="ScreenScraper.fr">
+		<path>./kyros.zip</path>
+		<name>Kyros</name>
+		<desc>A vertically scrolling beat-em-up where you fight against monsters.</desc>
+		<image>/userdata/roms/mame/images/kyros.png</image>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>ADK</publisher>
+		<genre>Beat'em Up</genre>
+		<players>2</players>
+		<crc32>09D1A9AA</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>CE8F8779069033C234DB60A9CACC2215</cheevosHash>
+		<genreid>263</genreid>
+	</game>
+	<game id="37602" source="ScreenScraper.fr">
+		<path>./maglord.zip</path>
+		<name>Magician Lord</name>
+		<desc>Magician Lord puts you in charge of Elta, a wizard who has the task of collecting eight books of wisdom from the clutches of Az Atorse, the god of destruction. By collecting the right power-ups along the way, you can transform into different characters, including the Rajin, Samurai, Waterman, Shinobi, Poseidon, and Dragon Warrior. Each character has different abilities. There are eight areas in the game, and each stage ends with you trying to defeat both a guardian and the end-of-area boss (which are basically Atorse's incarnations). One of the first games that demonstrated the graphical abilities of the Neo-Geo.</desc>
+		<image>/userdata/roms/mame/images/maglord.png</image>
+		<rating>0.6</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>SNK</publisher>
+		<genre>Platform-Platform / Shooter Scrolling</genre>
+		<players>2</players>
+		<crc32>E06E442A</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>14EBCD8FA440A279FAE066617A13CABC</cheevosHash>
+		<cheevosId>12241</cheevosId>
+		<genreid>257</genreid>
+	</game>
+	<game id="37608" source="ScreenScraper.fr">
+		<path>./ncombat.zip</path>
+		<name>Ninja Combat</name>
+		<desc>Ninja Combat puts you in the middle of, you guessed it, a Ninja invasion! The Kage Ichizoku clan has caused a giant tower to appear in the middle of the city, and it's up to our heroes Joe (Player One) and Hayabusa (Player Two) to take them down. Both characters can attack incoming enemies by using Shuriken (throwing stars) which can be upgraded and they can also unleash a fairly strong special attack which destroys many enemies on the screen, or does heavy damage to the bosses, but it takes away a quarter of your life.</desc>
+		<image>/userdata/roms/mame/images/ncombat.png</image>
+		<rating>0.75</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Beat'em Up</genre>
+		<players>2</players>
+		<crc32>A298BD96</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>039DC12553654C56E3C78F321AD6E620</cheevosHash>
+		<cheevosId>13798</cheevosId>
+		<genreid>263</genreid>
+	</game>
+	<game id="13934" source="ScreenScraper.fr">
+		<path>./ncommand.zip</path>
+		<name>Ninja Commando</name>
+		<desc>The Mars Corporation has caused a problem in the time continuum, and it's up to the Ninja Commandos to go after Spider, leader of the MC, and stop his evil work.
+
+As one of three Ninja Commandos, you must fight your opponents through different time periods, such as The Primitive Age, The Egyptian Era, and the Japanese Civil War Era. Each of the Ninja Commandos have their own specific style of attack and a special "ninja trick" super power. Boxes and other storage units can be broken to reveal power-ups that upgrade your weapons. The bosses are super-powered historical figures and include a dinosaur, a medieval samurai, an Egyptian pharaoh, etc. Cut-scenes occur between the different time periods.</desc>
+		<image>/userdata/roms/mame/images/ncommand.png</image>
+		<rating>0.8</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shoot'em Up</genre>
+		<players>2</players>
+		<playcount>1</playcount>
+		<lastplayed>20210502T171420</lastplayed>
+		<crc32>19B8305F</crc32>
+		<gametime>16</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>CC87EC28EE9628B09587B1E62BEDF289</cheevosHash>
+		<genreid>260</genreid>
+	</game>
+</gameList>

@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="41984" source="ScreenScraper.fr">
+		<path>./kickridr.zip</path>
+		<name>Kick Rider</name>
+		<desc>A road-race game where the view is from above. You control a motorbike with opponents on motorcycles who jostle you with their legs, and the occasional car. Played against the clock with points for passing.</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<genre>Race, Driving / Motorcycle-Race, Driving</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/kickridr.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="42085" source="ScreenScraper.fr">
+		<path>./ladybug.zip</path>
+		<name>Lady Bug</name>
+		<desc>In Lady Bug you guide a lady bug through a Pac-Man style maze, eating dots, and avoiding enemy insects. You lose a life if you run into a skull or get eaten by an enemy insect. Collect letters to spell EXTRA for a bonus life (just like in Mr. Do!), and SPECIAL for an extra credit. The maze has rotating doors which are just enough to give the game a slightly different feel than the Pac-Man series.</desc>
+		<rating>0.7</rating>
+		<releasedate>19810101T000000</releasedate>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ladybug.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="57925" source="ScreenScraper.fr">
+		<path>./magspot2.zip</path>
+		<name>Magical Spot 2</name>
+		<desc>To put it in simple terms, if it moves and it is not your ship, destroy it. This game follows in the same vein as many of the early 1980's space shooters.</desc>
+		<rating>0.3</rating>
+		<releasedate>19800101T000000</releasedate>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/magspot2.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="57924" source="ScreenScraper.fr">
+		<path>./magspot.zip</path>
+		<name>Magical Spot</name>
+		<desc>Shoot larvae and grubs dropping from a UFO. Missed larvae will spin cocoons and when a total of seven hatch, they turn into Ultramoths that swarm against your ship. Destroy all the bugs on the screen to increase your rank.</desc>
+		<rating>0.3</rating>
+		<releasedate>19800101T000000</releasedate>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/magspot.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="78925" source="ScreenScraper.fr">
+		<path>./mimonkey.zip</path>
+		<name>Mighty Monkey</name>
+		<desc>A bootleg was made by Yih Lung on the "Scramble" hardware and another by Noel on the "Super Cobra" hardware. 
+ 
+'Sun Wu Kong' is a legendary monkey king from an Chinese fantasy novel (by His Yu Chi) called 'Pilgrimage to the West'.</desc>
+		<rating>0.5</rating>
+		<releasedate>19820101T000000</releasedate>
+		<publisher>Universal </publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mimonkey.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="78990" source="ScreenScraper.fr">
+		<path>./mrdo.zip</path>
+		<name>Mr. Do!</name>
+		<desc>Mr. Do! is a colourful and addictive maze game in which the player takes on the role of the eponymous Mr. Do, a circus clown, who must clear each level of either cherries or monsters. The game's single screen levels are made up of tunnels surrounded by a colourful, soil-like substance. This soil can be dug through to create new tunnels, allowing Mr. Do to escape his enemies and to reach the many cherries that litter the levels. A number of apples are also scattered around each level, and Mr. Do can push them along tunnels (to block and/or kill monsters) or can tunnel beneath them to drop them onto the heads of any pursuing enemies. Mr. Do himself can also be killed by a falling apple. 
+ 
+Mr. Do is armed with a 'Powerball' that can be fired down a tunnel, it will then bounce around the tunnels until it either returns to Mr. Do, or comes into contact with, and kills, one of the level's monsters. The Powerball regenerates immediately the first time you use it, but takes longer each time it is used to return to your hands. As each level progresses, the monsters themselves start to dig tunnels of their own in their pursuit of Mr. Do. Monsters can also push the apples. 
+ 
+Each screen has a doorway through which the monsters enter the level. Once all of the monsters have appeared, the doorway will turn into a 'prize', (ice cream, biscuits, etc.). If Mr. Do collects the prize, the 'Alphamonster' and his three 'Muncher' henchmen will appear. The Alphamonster may be in the EXTRA box at the top of the screen or be moving around the screen. The Alphamonster and the Munchers cannot be easily crushed under apples because they tend to eat them. They can be killed individually with the Powerball or by killing the Alphamonster itself, at which point any remaining Munchers will turn into apples. 
+ 
+After every three levels, there is a brief intermission in which a tune is played and a large, animated Mr. Do appears, together with some of the game's monsters. The time to complete each level and the preferred method (monsters, cherries, Alphamonsters, or Diamond) is shown. The paths in the first level resemble a 'D', after this each level's tunnels resemble a digit, ('2', '3', '4' etc.) up to '0' for level 10. 
+ 
+A level can be completed any one of several different ways: either by collecting all of the on-screen cherries; by killing all of the monsters, by completing the EXTRA box, or by collecting the diamond. The latter appears only very occasionally ('Special' awards an extra credit).</desc>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mrdo.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40954" source="ScreenScraper.fr">
+		<path>./docastle.zip</path>
+		<name>Mr. Do's Castle (set 1)</name>
+		<desc>The player controls a clown, named “Mr. Do!”. Mr. Do is in his garden, and wants to collect the cherries there. Monsters roam there, and will not let Mr. Do quietly collect. If a monster touches Mr. Do, it dies, and the player loses a life. At each level a path is dug through the garden, going from the bottom to the top of the screen, passing through the center. Monsters can only take paths that have already been dug. Mr. Do is able to dig new paths, at the cost of slower movement speed.</desc>
+		<rating>0.9</rating>
+		<releasedate>19830101T000000</releasedate>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/docastle.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="40684" source="ScreenScraper.fr">
+		<path>./cosmica.zip</path>
+		<name>Cosmic Alien (version II)</name>
+		<desc>An early vertical space shoot'em up game.</desc>
+		<image>/userdata/roms/mame/images/cosmica.png</image>
+		<rating>0.3</rating>
+		<releasedate>19790101T000000</releasedate>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40467" source="ScreenScraper.fr">
+		<path>./cavenger.zip</path>
+		<name>Cosmic Avenger</name>
+		<desc>An early space shoot'em up game. 
+ 
+How to Play: 
+Your Avenger can be moved in 8 directions. The speed increases as it advances, while it decreases as it retreats. 
+Destroy the front enemy by pressing the Fire Button, and destroy the target below by pressing the Bomb Button. 
+The enemy UFO will assault you flying either from in front of you or from behind you.  You can locate it by using the radar. 
+A tough chase missile will pursue your Avenger persistently. Dodge it successfully, and you can cause the enemy to fight among themselves. 
+When you pass the enemy radar site, an ant-aircraft gun will fire at your according to the altitude of your Avenger. 
+When the screen advances further, the X station will appear. When you destroy it in good time, you can destroy all the targets appearing on the screen at once. You are then awarded a high score. 
+Your Avenger will be destroyed when it is affected by any explosion. 
+The 1st â€“ 5th highest scores for the day can enter their names on the screen.</desc>
+		<image>/userdata/roms/mame/images/cavenger.png</image>
+		<rating>0.3</rating>
+		<releasedate>19810101T000000</releasedate>
+		<publisher>Universal</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40685" source="ScreenScraper.fr">
+		<path>./cosmicg.zip</path>
+		<name>Cosmic Guerilla</name>
+		<desc>For some reason you have 2 of your ships placed in the middle of the playing field and aliens all around them. Luckily, they're protected by 5 rows of barriers and you're on the bottom, doing your job to protect them.</desc>
+		<image>/userdata/roms/mame/images/cosmicg.png</image>
+		<rating>0.5</rating>
+		<releasedate>19790101T000000</releasedate>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40913" source="ScreenScraper.fr">
+		<path>./devzone.zip</path>
+		<name>Devil Zone</name>
+		<desc>An early shoot'em up.</desc>
+		<image>/userdata/roms/mame/images/devzone.png</image>
+		<rating>0.1</rating>
+		<releasedate>19800101T000000</releasedate>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40981" source="ScreenScraper.fr">
+		<path>./dorunrun.zip</path>
+		<name>Do! Run Run (set 1)</name>
+		<desc>A superb final entry into the "Mr Do!" series (not counting the Neo Geo-based "Neo Mr. Do", which was merely a remake of the first game in the series), "Do! Run Run" takes its inspiration from Namco's "Pac-Man". 
+ 
+As in his previous games, Mr Do! must once again collect coloured dots and/or fruit while avoiding or killing a number of enemies. For the fourth Mr Do! outing, Universal ditched the sideways viewpoint of the series' previous games and switched to an overhead perspective. This allowed the game to give an impression of 'depth', with slopes and steps affecting Mr Do!'s mobility and speed. 
+ 
+Mr. Do. has two items at his disposal with which he can kill the his enemies. The first is the 'Powerball', which featured in the original 'Mr. Do!' but was dropped from the first two sequels. The Powerball can be shot directly at an enemy to kill it instantly. 
+ 
+The second offensive option is provided in the form of the large wooden logs that litter the levels. These work in the same way as the apples did in the original game, and can be pushed free of their supporting struts, causing them to roll down the screen and kill everything in their path, including Mr. Do. himself if he strays too near. 
+ 
+As Mr Do! moves around a screen, he trails a line behind him. Players can join the two ends of the line up to form a rectangle (in a similar fashion to Taito's 1981 classic, "Qix") which will change any dots within the rectangle into cherries. A second rectangle can be drawn around the cherries which in turn will change them into apples. This can be repeated twice more, changing apples into lemons, and lemons into pineapples. The better the fruit, the more bonus points Mr Do! will earn when he collects them.</desc>
+		<image>/userdata/roms/mame/images/dorunrun.png</image>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Universal</developer>
+		<publisher>Universal</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="41358" source="ScreenScraper.fr">
+		<path>./galxwars.zip</path>
+		<name>Galaxy Wars (Universal set 1)</name>
+		<desc>Galaxy Wars is a 2-D shooter where you are given three missiles to shoot at two rows of alien ships at the top. Miniature rock-like satellites move around the screen, ready to obliterate your missile at any moment, and the ships themselves shoot at you.</desc>
+		<image>/userdata/roms/mame/images/galxwars.png</image>
+		<releasedate>19790101T000000</releasedate>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41778" source="ScreenScraper.fr">
+		<path>./idsoccer.zip</path>
+		<name>Indoor Soccer (set 1)</name>
+		<desc>A two-on-two soccer game.</desc>
+		<image>/userdata/roms/mame/images/idsoccer.png</image>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41883" source="ScreenScraper.fr">
+		<path>./jjack.zip</path>
+		<name>Jumping Jack</name>
+		<desc>Jump from one place to another. Avoid hitting obstacles. Gather bonus items for points.</desc>
+		<image>/userdata/roms/mame/images/jjack.png</image>
+		<rating>0.8</rating>
+		<releasedate>19840101T000000</releasedate>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="40528" source="ScreenScraper.fr">
+		<path>./cheekyms.zip</path>
+		<name>Cheeky Mouse</name>
+		<desc>Try to hit the mouse with a hammer when it comes out from one of many holes in the wall. The mouse is trying to get from its hole to the cheese on the other side of the house.</desc>
+		<image>/userdata/roms/mame/images/cheekyms.png</image>
+		<rating>0.3</rating>
+		<releasedate>19800101T000000</releasedate>
+		<genre>Shooter-Fight</genre>
+		<players>2</players>
+		<playcount>7</playcount>
+		<lastplayed>20210613T103051</lastplayed>
+		<gametime>10</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="40985" source="ScreenScraper.fr">
+		<path>./dowild.zip</path>
+		<name>Mr. Do's Wild Ride</name>
+		<desc>Mr Do's third arcade outing is another platform game, following on from the superb "Mr. Do's Castle", released a year earlier. The synonymous Mr. Do! cherries are present and correct, but are not used in the same way as in other games in the series. In both "Mr Do!" and "Mr. Do's Castle", collecting all of the cherries available was a way of completing a level. In Wild Ride, however, collecting them merely changes the 'prize' awarded upon reaching the level's goal. This can be one or two letters from EXTRA, or other items which simply award bonus points. When Mr. Do reaches his goal, he waves a flag while the bonus counter is added to his score. 
+ 
+The gameplay is similar to that of Nintendo's legendary "Donkey Kong", with Mr. Do starting each level at the bottom of the screen, trying to make his way to the exit at the very top. Mr. Do doesn't have either his Powerball or mallet in this game, but holding the ACTION button makes him run faster along the track. The trade-off of this is that his bonus points deplete much quicker. When all of the EXTRA letters are collected, the player is awarded with an extra life. 
+ 
+Each of the game's six levels is set on a roller coaster, with each having its own theme, traps and pitfalls. Wild Ride doesn't feature the intermission screens that appear in previous Mr.Do games. 
+ 
+The levels are: 
+Level 1, Roller Coaster.  
+Level 2, Pirate Ship.  
+Level 3, Three Elevators.  
+Level 4, Castle on Screen.  
+Level 5, Multiple Columns.  
+Level 6, Six Rings. 
+ 
+After level six the levels are repeated.</desc>
+		<image>/userdata/roms/mame/images/dowild.png</image>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="79149" source="ScreenScraper.fr">
+		<path>./nomnlnd.zip</path>
+		<name>No Man's Land</name>
+		<desc>You control a tank with a hall effect joystick. The tank can move in 8 directions. The fire button causes the tank to shoot in the direction it is moving. On each screen, there are active and dormant enemy tanks. As the screens progress, the tanks are worth more and more, but the dormant tanks are always worth twice as much as the active ones. Of course they are well guarded! The scenery consists of a few trees and a river which you can only cross by bridge. If you shoot an active tank, one of the dormant tanks will spring to life and come after you. The object of the game is to clear the level and go on to the next one before they kill you. Each succeeding level has more enemies, and moves faster and faster.</desc>
+		<image>/userdata/roms/mame/images/nomnlnd.png</image>
+		<rating>0.1</rating>
+		<releasedate>19800101T000000</releasedate>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="79179" source="ScreenScraper.fr">
+		<path>./panic.zip</path>
+		<name>Space Panic (version E)</name>
+		<desc>Influential computer game designer and writer Chris Crawford calls Space Panic "the granddaddy of all platform games", as it predates Nintendo's Donkey Kong (from 1981) which is often cited as the original platform game. Space Panic lacks Donkey Kong's jump mechanic - the main character instead digs holes in the platforms into which he must lure the aliens. He must then hit them to knock them out of the hole and off the screen. In later levels, two or more holes must be lined up vertically in order to dispose of the aliens. There is also a limited supply of oxygen.</desc>
+		<image>/userdata/roms/mame/images/panic.png</image>
+		<rating>0.4</rating>
+		<releasedate>19800101T000000</releasedate>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="43156" source="ScreenScraper.fr">
+		<path>./snapjack.zip</path>
+		<name>Snap Jack</name>
+		<desc>Guide a dot-munching, long-jumping, leg-stretching character through right-to-left scrolling scenes of hills and tunnels. Avoid squid-type-things, giant fish, and the kettles and boots on the overhead conveyor. This game is a cross between "Pac-Man" and "Scramble".</desc>
+		<image>/userdata/roms/mame/images/snapjack.png</image>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="43282" source="ScreenScraper.fr">
+		<path>./sraider.zip</path>
+		<name>Space Raider</name>
+		<desc>An old and challenging space shoot'em up. 
+ 
+Destroy the raiders from mysterious outer space!!</desc>
+		<image>/userdata/roms/mame/images/sraider.png</image>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43429" source="ScreenScraper.fr">
+		<path>./superdq.zip</path>
+		<name>Super Don Quix-ote (Long Scenes)</name>
+		<desc>You are a knight named Don. Your girlfriend, Isabella, has been captured by an evil witch who is holding her hostage. You have a sword for a weapon and a sidekick named Sancho. You must battle your way to the evil witch's hideout and save Isabella.</desc>
+		<image>/userdata/roms/mame/images/superdq.png</image>
+		<releasedate>19840101T000000</releasedate>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="44199" source="ScreenScraper.fr">
+		<path>./zerohour.zip</path>
+		<name>Zero Hour (set 1)</name>
+		<desc>Maneuver your spaceship and destroy meteorites and enemy ships falling from the top of the screen. Shooting a red meteorite awards a quadruple score. After all enemy ships have been destroyed, a landing pad will appear where you must carefully land your ship. Bonus points are awarded for a successful landing.</desc>
+		<image>/userdata/roms/mame/images/zerohour.png</image>
+		<rating>0.3</rating>
+		<releasedate>19800101T000000</releasedate>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+</gameList>

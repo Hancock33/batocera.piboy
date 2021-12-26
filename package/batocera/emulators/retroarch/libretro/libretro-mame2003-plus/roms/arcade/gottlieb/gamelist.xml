@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="42072" source="ScreenScraper.fr">
+		<path>./krull.zip</path>
+		<name>Krull</name>
+		<desc>The left joystick controls the movement of the player character, Colwyn. He can be moved in any one of eight directions. The right joystick controls the movement of the player's weapon, the glaive. It can be thrown in any one of eight directions. Four glaives can be in flight at one time and will return to Colwyn with a boomerang-type action. The one and two player select buttons are also located on the panel. 
+ 
+Krull consists of five subgames: 
+The Mountain Game. 
+The Swamp Game. 
+The Fortress Game. 
+The Hexagon Game. 
+The Beast Game. 
+ 
+The player must accomplish a task in each of the five games with eight levels of difficulty in each. All eight levels can be reached in one task based on the time spent performing that task (amount of time spent on that subgame). The total number of lethal characters on the screen at one time increases as the levels increase. 
+ 
+FROM THE SKY WILL COME THE BLACK FORTRESS. FROM THE FORTRESS WILL COME THE SLAYERS, TO DEVOUR THE PLANET OF KRULL. THEN SHALL A GIRL OF ANCIENT NAME BECOME QUEEN, AND THE KING SHE CHOOSES SHALL RULE THE PLANET. 
+ 
+The planet Krull is threatened by the Beast. His army of Slayers has brought terror to the land. Colwyn must stop this terror and save the land and its people. On the day Colwyn is to wed the Princess Lyssa, the Slayers, army of the Beast, kidnap her to become the Beast's bride. Colwyn must reach the Black Fortress and reclaim his Princess. He who marries the Princess shall be king. The Beast must not be allowed to rule the planet. 
+ 
+A prophet acquaints Colwyn with the magical properties of the glaive, a five-bladed sword, which Colwyn must acquire. To accomplish this task, he must climb the mountain and collect the five individual blades of the glaive in order to assemble the weapon. The blade is picked up by touching Colwyn to the blade. Boulders are fatal and must be avoided. The weapon joystick is not utilized in this subgame. The player is awarded 1,000 points for each blade picked up. Points are also awarded for placing Colwyn in a dangerous position in front of one or more boulders. 
+ 
+During his travels to discover the Black Fortress, Colwyn comes upon an army of eight men that he befriends and recruits to help him in his quest to destroy the Beast so that Krull can be safe from his evil. 
+ 
+With no intentions of losing his newly acquired bride without bloodshed, the Beast orders an army of Slayers to stop Colwyn and his friends. Forging through the quicksand-riddled swamps, Slayers materialize from the soil and Colwyn prepares for battle. In the second subgame, Colwyn must save as many friends as possible while killing all of the Slayers. The friends are saved by touching them and the Slayers are destroyed by the glaive. The Slayers themselves and their spears must be avoided. The game begins with eight friends. The number of friends saved is the number of friends carried over into future subgames. The friends can eliminate the Slayers with hand-to-hand combat but can also be destroyed themselves. Receiving three blows either by hand-to-hand or by the Slayers spear is fatal to the friends. The subgame ends when there are no longer any friends to save and all of the Slayers have been eliminated. Avoid quicksand, as it slows Colwyn's attack. Each friend saved awards 1,000 points (maximum 8,000 points) and 100 points for each Slayer the player eliminates. 
+ 
+After days of travel, Colwyn and his men have found the Black Fortress in the Iron Desert where many dangers await them. While attempting to lead his men through the dangerous narrow passageways that lead to the Fortress, Slayers materialize once again in a second attempt to stop Colwyn's struggle. In this third subgame, Colwyn must pick up all of his friends and deposit them safely into the hexagon while again combating the Slayers. The total number of friends in this subgame is equal to the total number of friends saved in Subgame 2. This subgame concludes when all of the friends have been delivered to the hexagon. The player is awarded 1,000 points for each friend delivered to the hexagon, 100 points for each Slayer he destroys and 100 points for each Slayer remaining when the last friend is delivered to the hexagon. 
+ 
+Victorious in battle, Colwyn must now attempt to release his friends from the hexagon. Unlike entry, exiting the hexagon is a struggle deservant of its own merit. Once again Colwyn must call upon the power of the glaive. Release of his friends is accomplished by throwing the glaive at the front wall while it is black only. Any glaive striking the wall while it is not black will stick in the wall until the wall becomes black. The Slayers, of course, attempt to stop Colwyn's efforts. In his own attempt for survival, Colwyn must fight them off and avoid their spears. The subgame ends when the last black wall is broken through and the friends have escaped. The player is awarded 100 points for each Slayer he puts an end to, 100 points for each Slayer remaining when the friends are set free and 1,000 points for the first black wall destroyed, 2,000 points for the second, 3,000 points for the third and 4,000 points for the fourth. 
+ 
+Now inside the Black Fortress, Colwyn secedes from his friends in order to rescue the Princess Lyssa. He finds her in a large cave carefully guarded by the Beast. He knows that the only way to reclaim his bride and conserve the planet is to forge into battle with the Beast. In the fifth subgame, the player moves Colwyn towards the Princess in order to reach her. As he progresses, the Beast attempts to stop him by throwing fireballs at him. The fireballs must be avoided or destroyed by the glaive. If not destroyed, the fireballs will ricochet off of the walls. Destroying a fireball awards the player 100 points multiplied by the number of fireballs in flight. The Beast is momentarily stunned when hit with a glaive and awards the player 100 points. The Beast cannot be destroyed and the player must avoid touching him. When Colwyn reaches the Princess, his friends, following the pandemonium of the battle, appear and chase the Beast off, awarding 1000 points per friend. The total number of friends in this subgame is equal to the total number of friends saved in Subgame 2.</desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Gottlieb</developer>
+		<publisher>Gottlieb</publisher>
+		<genre>Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/krull.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="57918" source="ScreenScraper.fr">
+		<path>./mplanets.zip</path>
+		<name>Mad Planets</name>
+		<desc>In Mad Planets, the player takes control of a spaceship and must attempt to destroy a series of Earth-like planets which emerge from the center of the screen and rapidly move towards the player's ship - increasing in size as they do so. Destroying all of the planets in a round before the they reach their full scale will see the player awarded with bonus points. Fully-grown planets are orbited by a number of small moons, which, if destroyed, cause the planet to go 'mad' - turning red and making a beeline for the player's ship. The game also includes bonus rounds in which stranded astronauts can be rescued for additional points.</desc>
+		<rating>0.9</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Gottlieb</developer>
+		<publisher>D. Gottlieb &amp; Co.</publisher>
+		<genre>Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mplanets.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="172110" source="ScreenScraper.fr">
+		<path>./qbert.zip</path>
+		<name>Q*bert (US set 1)</name>
+		<desc>Q*bert is an isometric platform game with puzzle elements where the player controls the titular protagonist from a third-person perspective. Q*bert starts each game at the top of a pyramid of cubes, and moves by jumping diagonally from cube to cube. Landing on a cube causes it to change color, and changing every cube to the target color allows the player to progress to the next stage.</desc>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>D. Gottlieb &amp; Co.</developer>
+		<publisher>D. Gottlieb &amp; Co.</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/qbert.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="172111" source="ScreenScraper.fr">
+		<path>./reactor.zip</path>
+		<name>Reactor</name>
+		<desc>A 36-year-old Arcade Video Game 
+ 
+Reactor © 1982 Gottlieb. 
+ 
+The player controls a cursor that can move freely within a screen-sized arena, the nuclear reactor. The center contains a sun-type gravitational power source, the slowly overheating reactor core. The surrounding wall or the sun, if touched results in death. The cursor is controlled with a trackball by the player, who has to roll it fast in one direction in order to overcome the momentum of gravitation imposed by the sun. Swarms of enemy objects named after various radioactive particles float around in the reactor arena, obeying simple physical laws. These enemies can freely bounce into the walls at low speeds, have a repulsive force against each other and actively attack the player cursor. Boss types often break up into several smaller particles. 
+ 
+The object is to survive the sun and walls while gaining the highest score possible. It takes a delicate touch. Rather than moving the cursor/avatar left, right, up and down as in many arcade games, it is controlled by gravity and moves freely; with the player only being able to accelerate it rather than control its movements directly. Meanwhile the enemy particles are getting so aggressive that it can get very difficult to avoid being pulled in by the sun or touching a wall. 
+ 
+The basic gameplay consists of accelerating the cursor just at the right times so that it circles the reactor core with enough speed to have control via its own momentum when the enemy particles try to knock it off course, and then to place decoys and actually use the acceleration of the ball itself to knock enemies into control rods, traps or the reactor core. By pressing the primary button the player cursor can go into high power mode, providing higher repulsion of enemies and conversely higher risk to the player. 
+ 
+To ease the task the player also has a certain number of decoys at their disposal. Pressing the secondary button places a decoy to attract the enemies, luring them into two traps in the corners of the screen for bonus points, into destroying reactor rods or directly into the walls to kill them. Destroying a row of reactor rods gives the player one more decoy, as well as resetting the size of the slowly swelling reactor core. 
+ 
+A time limit is enforced by the slowly swelling reactor core, which limits the space to move about in the arena. Although the reactor doesn't actually melt down, the decreasing space provides for gradually increasing difficulty. After defeating the first wave of enemies, the solid reactor core changes into Vortex core, unlike the Protect core, is lethal to touch (thus making such levels significantly harder).</desc>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<image>/userdata/roms/mame/images/reactor.png</image>
+	</game>
+	<game id="41142" source="ScreenScraper.fr">
+		<path>./exterm.zip</path>
+		<name>Exterminator</name>
+		<desc>A wholly abstract approach to the shoot-em-up genre in which one or two players take control of a disembodied, digitized human hand and must kill the swarms of insects that have infested a street of houses. 
+ 
+Exterminator is set in a street of houses and players must move from room to room in each property, clearing each one of the infestation, before moving onto the next house. Each player can initially only grab or 'thump' enemies (the latter for ground-based, crawling insects), but a number of power-ups, such as bug spray and somewhat bizarrely, a laser firing finger can be collected to make progress a little easier.</desc>
+		<image>/userdata/roms/mame/images/exterm.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Gottlieb</developer>
+		<publisher>Gottlieb</publisher>
+		<genre>Shooter / 3rd person-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="41811" source="ScreenScraper.fr">
+		<path>./insector.zip</path>
+		<name>Insector (Prototype)</name>
+		<desc>You are a can of bug spray. Collect the jewels on the screen and destroy all the bugs.</desc>
+		<image>/userdata/roms/mame/images/insector.png</image>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Gottlieb</developer>
+		<publisher>Gottlieb</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="42019" source="ScreenScraper.fr">
+		<path>./kngtmare.zip</path>
+		<name>Knightmare (Prototype)</name>
+		<desc>The horrible Hudnos has kidnapped your brave knight's beautiful girlfriend, Aphodite and you must help the brave Popolon embark on an amazingly cool mission to battle through spooky castles to save her! In the brilliant Knightmare you must navigate through the castle and the grounds to hunt down and defeat the forces of evil, before finally encountering the evil Hudnos and saving the beautiful Aphrodite from certain death!</desc>
+		<image>/userdata/roms/mame/images/kngtmare.png</image>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Gottlieb</developer>
+		<publisher>Gottlieb</publisher>
+		<genre>Action-Fight-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="152295" source="ScreenScraper.fr">
+		<path>./argusg.zip</path>
+		<name>Argus (Gottlieb, prototype)</name>
+		<desc>Protect the citizens of earth! As Gottlieb's Argus, shoot villains and hazards with energy bolts. Hold down catch button to rescue falling citizens and catch falling cars. Shoot or catch rubble before it crushes someone. Game ends when no citizens remain.</desc>
+		<image>/userdata/roms/mame/images/argusg.png</image>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Gottlieb</developer>
+		<publisher>Gottlieb</publisher>
+		<genre>Action</genre>
+		<players>2</players>
+		<playcount>1</playcount>
+		<lastplayed>20211212T102132</lastplayed>
+		<gametime>25</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+</gameList>

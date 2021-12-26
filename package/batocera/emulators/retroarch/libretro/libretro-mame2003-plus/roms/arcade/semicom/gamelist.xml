@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="41744" source="ScreenScraper.fr">
+		<path>./htchctch.zip</path>
+		<name>Hatch Catch</name>
+		<desc>Shoot coloured blocks at the top of the screen. When 3 or more same colored blocks draw a line, they disappear. By terminating all blocks, the stage is clear.</desc>
+		<rating>0.5</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Puzzle-Game / Throw-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/htchctch.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41764" source="ScreenScraper.fr">
+		<path>./hyperpac.zip</path>
+		<name>Hyper Pacman</name>
+		<desc>This is an updated version of Namco's seminal "Pac-Man", featuring forced-perspective 3-D graphics that allow the players to jump over the enemy ghosts; in a similar fashion to Namco's "Pac-Mania", released in 1987. There are secret items and food to be found on each level that increases the player's power and score. The power-ups themselves consist of a shield, helmet lasers, speed and jump shoes. Players will face a boss encounter every ten stages and the game ends after the 30th stage.</desc>
+		<rating>0.5</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hyperpac.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="78974" source="ScreenScraper.fr">
+		<path>./moremorp.zip</path>
+		<name>More More Plus</name>
+		<desc>More More Plus is the sequel to "More More" with much improved graphics and the addition of three more games. The game features a collection of 20 different mini-games to challenge the player's skill. Unlike the previous game, players can now select any of the 20 games at any time. If the player successfully meets the challenge in the mini-game then he can continue to play. If the player achieves an "excellent" rating in four games then they will receive an extra life.  The game is over once the player has lost of their lives.</desc>
+		<rating>0.7</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Compilation</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/moremorp.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game id="78973" source="ScreenScraper.fr">
+		<path>./moremore.zip</path>
+		<name>More More</name>
+		<desc>More More is a collection of 17 different mini-games to challenge the player's skill. The player may select one game to attempt out of the four or five games that are active at each stage. If the player successfully meets the challenge in the game then he can continue to play. If the player achieves an 'excellent' rating in four games then they will receive an extra life.</desc>
+		<rating>0.7</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Compilation</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/moremore.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game id="78997" source="ScreenScraper.fr">
+		<path>./mrkicker.zip</path>
+		<name>Mr. Kicker (F-E1-16-010 PCB)</name>
+		<desc>Mr. Kicker (c) 2001 SemiCom.  - SOURCES -  Game's ROM</desc>
+		<rating>0.8</rating>
+		<releasedate>20010101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mrkicker.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42963" source="ScreenScraper.fr">
+		<path>./semibase.zip</path>
+		<name>Muhanseungbu (SemiCom Baseball, Korea)</name>
+		<desc>A Korean baseball game.</desc>
+		<rating>0.7</rating>
+		<releasedate>19970101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/semibase.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="59979" source="ScreenScraper.fr">
+		<path>./3in1semi.zip</path>
+		<name>New HyperMan (3-in-1 with Cookie &amp;amp; Bibi &amp;amp; HyperMan)</name>
+		<desc>Three games including "New Hyperman", "Hyperman" and "Cookie &amp; Bibis".</desc>
+		<rating>0.5</rating>
+		<releasedate>19980101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Compilation</genre>
+		<image>/userdata/roms/mame/images/3in1semi.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game id="42579" source="ScreenScraper.fr">
+		<path>./pzlbreak.zip</path>
+		<name>Puzzle Break</name>
+		<desc>A one or two player puzzle game published and developed by SemiCom in 1997. The aim of the game is to remove blocks that lower from the top of the play area by deflecting balls with a paddle.</desc>
+		<rating>0.8</rating>
+		<releasedate>19970101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pzlbreak.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="42938" source="ScreenScraper.fr">
+		<path>./sdfight.zip</path>
+		<name>Sd Fighters (Korea)</name>
+		<desc>A Korean fighting game featuring 8 Super Deformed characters.</desc>
+		<rating>0.5</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sdfight.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="43676" source="ScreenScraper.fr">
+		<path>./toppyrap.zip</path>
+		<name>Tappy And Rappy</name>
+		<rating>0.5</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/toppyrap.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="43805" source="ScreenScraper.fr">
+		<path>./twinkle.zip</path>
+		<name>Twinkle</name>
+		<desc>A sequel to "Hyper Pacman". The power-ups tossed throughout the mazes consist of vision goggles, helmet/laser helmets, speed, hyperspeed, jump shoes, bonus stages and free pac-men. The game ends after the 40th stage.</desc>
+		<rating>0.5</rating>
+		<releasedate>19970101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/twinkle.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="64698" source="ScreenScraper.fr">
+		<path>./wyvernwg.zip</path>
+		<name>Wivern Wings (set 1)</name>
+		<desc>A vertical shoot'em up with 4 selectable airplanes. 3 years later after Arizona impact, other enemy appears to the Human species faced to a environmental crisis. Owing to the appearance of the unknown enemy, the Human being in faced to the existent crisis...</desc>
+		<rating>0.7</rating>
+		<releasedate>20010101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<image>/userdata/roms/mame/images/wyvernwg.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="44113" source="ScreenScraper.fr">
+		<path>./wondl96.zip</path>
+		<name>Wonder League '96 (Korea)</name>
+		<rating>0.5</rating>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>SemiCom</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wondl96.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40183" source="ScreenScraper.fr">
+		<path>./bcstry.zip</path>
+		<name>B.c. Story (set 1)</name>
+		<desc>An Olympic type game set in the Stone Age.</desc>
+		<image>/userdata/roms/mame/images/bcstry.png</image>
+		<rating>0.5</rating>
+		<releasedate>19970101T000000</releasedate>
+		<publisher>SemiCom</publisher>
+		<genre>Compilation</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3840</genreid>
+	</game>
+	<game id="40547" source="ScreenScraper.fr">
+		<path>./chokchok.zip</path>
+		<name>Choky! Choky!</name>
+		<desc>Yet another clone of Buster Brothers / Pang! / Pomping World - this one featuring low-budget music and sound effects, and split-screen competitive two-player action, somewhat reminiscent of Twinkle Star Sprites.</desc>
+		<image>/userdata/roms/mame/images/chokchok.png</image>
+		<rating>0.5</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Shooter / 3rd person-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="40671" source="ScreenScraper.fr">
+		<path>./cookbib.zip</path>
+		<name>Cookie And Bibi (set 1)</name>
+		<desc>A "Puzzle Bobble" ripoff.</desc>
+		<image>/userdata/roms/mame/images/cookbib.png</image>
+		<rating>0.5</rating>
+		<releasedate>19950101T000000</releasedate>
+		<publisher>SemiCom</publisher>
+		<genre>Puzzle-Game / Throw-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40672" source="ScreenScraper.fr">
+		<path>./cookbib2.zip</path>
+		<name>Cookie And Bibi 2</name>
+		<desc>A "Puzzle Bobble" rip-off.</desc>
+		<image>/userdata/roms/mame/images/cookbib2.png</image>
+		<rating>0.5</rating>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>SemiCom</publisher>
+		<genre>Puzzle-Game / Throw-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40673" source="ScreenScraper.fr">
+		<path>./cookbib3.zip</path>
+		<name>Cookie And Bibi 3</name>
+		<desc>A "Puzzle Bobble" Ripoff.</desc>
+		<image>/userdata/roms/mame/images/cookbib3.png</image>
+		<rating>0.5</rating>
+		<releasedate>19970101T000000</releasedate>
+		<publisher>SemiCom</publisher>
+		<genre>Puzzle-Game / Throw-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40674" source="ScreenScraper.fr">
+		<path>./coolmini.zip</path>
+		<name>Cool Minigame Collection</name>
+		<desc>Exactly as the title states, a collection of cool minigames.</desc>
+		<image>/userdata/roms/mame/images/coolmini.png</image>
+		<rating>0.7</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Compilation</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3840</genreid>
+	</game>
+	<game id="40995" source="ScreenScraper.fr">
+		<path>./dquizgo.zip</path>
+		<name>Date Quiz Go Go (Korea)</name>
+		<image>/userdata/roms/mame/images/dquizgo.png</image>
+		<rating>0.7</rating>
+		<releasedate>19980101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Quiz / Korean-Quiz</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3328</genreid>
+	</game>
+	<game id="40996" source="ScreenScraper.fr">
+		<path>./dquizgo2.zip</path>
+		<name>Date Quiz Go Go Episode 2</name>
+		<desc>Date Quiz Go Go Episode 2 (c) 2000 SemiCom.  - SERIES -  1. Date Quiz Go Go (1998) 2. Date Quiz Go Go Episode 2 (2000)  - SOURCES -  Game's rom.</desc>
+		<image>/userdata/roms/mame/images/dquizgo2.png</image>
+		<rating>0.4</rating>
+		<releasedate>20000101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Quiz / Korean-Quiz</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3328</genreid>
+	</game>
+	<game id="41006" source="ScreenScraper.fr">
+		<path>./dreamwld.zip</path>
+		<name>Dream World</name>
+		<desc>At first glance, Lode Quest and Dream World seem like typical Bubble Bobble clones. There's basically two ways to solve each level: Either collect all the gems and escape with them, or defeat all enemies. The latter is often easier said than done, as all enemy types take different strategies. The most basic ones can just be jumped on and then used as projectiles to take out even more with them. But soon the two cute magician protagonists encounter a new helmet-wearing breed, that can't be attacked directly, but have to be lured into Lode Runner type manholes the heroes can create with their wands. When enemies learn to jump over said holes or there are no diggable ground tile available, the only way to get rid of them, anymore, is picking up a potion of invincibility that makes it possible to attack enemies directly with the wand, or use up one of the rare hidden spellbooks that wipe out all enemies on screen.</desc>
+		<image>/userdata/roms/mame/images/dreamwld.png</image>
+		<rating>0.7</rating>
+		<releasedate>20000101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="41226" source="ScreenScraper.fr">
+		<path>./finalgdr.zip</path>
+		<name>Final Godori (Korea, version 2.20.5915)</name>
+		<desc>Final Godori (c) 2001 SemiCom.  - SOURCES -  Game's rom.</desc>
+		<image>/userdata/roms/mame/images/finalgdr.png</image>
+		<rating>0.7</rating>
+		<releasedate>20010101T000000</releasedate>
+		<developer>SemiCom</developer>
+		<publisher>SemiCom</publisher>
+		<genre>Hanafuda-Asiatic board game</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2048</genreid>
+	</game>
+</gameList>

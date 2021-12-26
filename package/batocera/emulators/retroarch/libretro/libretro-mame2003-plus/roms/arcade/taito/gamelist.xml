@@ -1,0 +1,952 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="41037" source="ScreenScraper.fr">
+		<path>./drtoppel.zip</path>
+		<name>Dr. Toppel's Adventure (World)</name>
+		<desc>Dr. Toppel's Adventure is a cutesy vertically scrolling shoot'em up where you play as a cute green creature.</desc>
+		<rating>0.9</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/drtoppel.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41020" source="ScreenScraper.fr">
+		<path>./driftout.zip</path>
+		<name>Drift Out (Europe)</name>
+		<desc>An overhead-view racing game.</desc>
+		<rating>0.8</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Visco</developer>
+		<publisher>Visco</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/driftout.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41111" source="ScreenScraper.fr">
+		<path>./enforce.zip</path>
+		<name>Enforce (World)</name>
+		<desc>Enforce is a 3-Dimensional tank driving shoot'em up using much the same technology as that of "Continental Circus".</desc>
+		<rating>0.6</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Shooter / Vehicle, 1st person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/enforce.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="41143" source="ScreenScraper.fr">
+		<path>./extrmatn.zip</path>
+		<name>Extermination (World)</name>
+		<desc>Exterminate waves of attacking aliens using your gun and defeat the boss at the end of each stage. Enemies that have been shot release energy pods that can be collected to increase your character's available energy. Destroy rocks to reveal entrances that lead down to shelters that contain special bonus items.</desc>
+		<rating>0.6</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/extrmatn.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41225" source="ScreenScraper.fr">
+		<path>./finalb.zip</path>
+		<name>Final Blow (World)</name>
+		<desc>Final Blow features a single season boxing championship run. You can select from a group of fictional fighters. 
+ 
+The game is essentially a side scrolling boxing game where the player moves left and right to control a boxer. When the timing is right, the player can unleash a final blow punch which can sometimes KO the opponent in a single strike.</desc>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Sports / Boxing-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/finalb.png</image>
+		<genreid>1540</genreid>
+	</game>
+	<game id="41348" source="ScreenScraper.fr">
+		<path>./galmedes.zip</path>
+		<name>Galmedes (Japan)</name>
+		<desc>Galmedes is a vertical scrolling shooter arcade game released only in Japan.. The ship has two types of attack: the standard firing weapon and a charge attack. Once the player collects all three weapons, the player can select any of those weapons during combat. 
+ 
+On the alien planet of Gaston, a dictator named Gildy rose to absolute power. Gildy started a plan to take over his home solar system, but upon doing so, he decided to spread his influence. After conquering his home galaxy, the next galaxy that Gildy planned on invading was the Galmedes Galaxy. In response, the unified forces of the planets of the Galmedes Galaxy have created a powerful space fighter known as the LEPTON (Launched Electro-Projectile Thermal Osmotic Nullifier). Two pilots, Foo and Bar, are selected to launch the LEPTON fighters against the invading Gastonian Forces.</desc>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Visco</developer>
+		<publisher>Visco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/galmedes.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41443" source="ScreenScraper.fr">
+		<path>./gigandes.zip</path>
+		<name>Gigandes</name>
+		<desc>A horizontal shooter with a twist. If you die, you get to keep your weapons and power-ups, but at the beginning of each stage you lose everything.</desc>
+		<rating>0.6</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>East Technology</developer>
+		<publisher>East Technology</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gigandes.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41529" source="ScreenScraper.fr">
+		<path>./growl.zip</path>
+		<name>Growl (World, rev 1)</name>
+		<desc>Beat-em-up with an outback Indiana Jones type theme to it. The arcade original allowed you to play up to four players. The game would later get a port done for the Sega Genesis.</desc>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/growl.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="41590" source="ScreenScraper.fr">
+		<path>./gunfront.zip</path>
+		<name>Gun And Frontier (World)</name>
+		<desc>The year is 2120: Earthlings have spread beyond their galaxy and have started to colonize uninhabited planets in different solar systems. One such planet to be colonized was the Earth-like planet Gloria which happened to have an enormous natural supply of gold. This discovery became pivotal to Gloria's emigration, so much that emigrators would be impoverished by the cost of reaching the planet. Because of this, life on the planet thrived in a setting similar to the American Old West. Though poor, the gold trade aided the Glorian's in advancing technology and knowledge, so much that among the inhabitants lived talented inventors and engineers. 
+ 
+However, the Glorian's were not the only ones who were tempted by the planet's gold: Space pirates known as the Wild Lizards quickly invade Gloria and decimate the towns of the people and enslave those who survived in an attempt to deplete the planet's gold supply. Two inventors of Gloria who were a part of the planet's development teams decide to strike back at their invaders using two fighter jets in the shape of giant revolvers with plane wings. 
+ 
+As far as vertical scrolling shooters go, Gun Frontier is very standard. Players start with dual machine guns which are strengthened and multiplied by upgrades that come in the shape of US dimes taken from buffalo shaped enemies and every five dimes empowers the ship's guns. Players also start with a bomb supply which is upgraded to further destruction by collecting gold bars from destroyed ground forces. Once a player accumulates 25 bombs, they are granted access to the Bomber Max, the strongest of the player's bombs. 
+ 
+The players can also pick up spinning coins with two different sides: a silver side and a gold side. If the player collects the coin on the silver side, then the player merely gains another coin for their guns. However, if the player collects the coin on the gold side, then the player's guns and bomb supply is maximized to full power. 
+ 
+A unique feature to the player's bombs is that the direction of the bomb's blast can be determined by the player's movement. If the player moves their plane to the lower right of the screen and launches their bombs, then the direction the bomb will travel in the opposite direction the plane's movement. This feature can only be used however when a player has a large bomb count as only having one or two bombs will result in a small directionless explosion. Like most bombs in shoot 'em ups, the bombs also work as a shield against enemy fire. 
+ 
+The game uses a check-point system in which a downed single player will start off at the beginning of the check-point they died at. 
+ 
+Gun Frontier also employs an anti-autofire mechanism where the difficulty will max out by the second stage if the player is sustaining too fast of a fire rate.</desc>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gunfront.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41666" source="ScreenScraper.fr">
+		<path>./hexa.zip</path>
+		<name>Hexa</name>
+		<desc>Hexa is a clone of Sega's "Columns", released in 1990.</desc>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<publisher>D.R. Korea</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/hexa.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41812" source="ScreenScraper.fr">
+		<path>./insectx.zip</path>
+		<name>Insector X (World)</name>
+		<desc>Battle against the insect army with your special insecticide weapons. 
+ 
+The Burgoid, a tribe of midgets with dreams of conquest, have turned insects into cyborgs and formed them into a vast army which is now on the move and intending to invade planet Earth!  
+ 
+To wipe out these mega-insects - which are invulnerable to ordinary weapons - humans have created an insect-sized warrior called Yanmer. The warrior wears a suit, giving him special powers and wings that are more efficient than a jet engine.  
+ 
+You are Yanmer, and your mission is to destroy the Burgoid Monarch and save mankind from disaster!</desc>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/insectx.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="203306" source="ScreenScraper.fr">
+		<path>./jpopnics.zip</path>
+		<name>Jumping Pop (Nics, Korean hack of Plump Pop)</name>
+		<rating>0.3</rating>
+		<releasedate>19920101T000000</releasedate>
+		<image>/userdata/roms/mame/images/jpopnics.png</image>
+	</game>
+	<game id="41938" source="ScreenScraper.fr">
+		<path>./kageki.zip</path>
+		<name>Kageki (World)</name>
+		<desc>Kageki is a rather silly 1-on-1 beat-'em-up style affair against various gang members.</desc>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Irem</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/kageki.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41123" source="ScreenScraper.fr">
+		<path>./eto.zip</path>
+		<name>Kokontouzai Eto Monogatari (Japan)</name>
+		<desc>Place up to 3 blocks of the same colour, horizontally, vertically or in an 'L' shape which can be done in any direction.</desc>
+		<rating>0.7</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Visco</developer>
+		<publisher>Visco</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/eto.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="149644" source="ScreenScraper.fr">
+		<path>./kyustrkr.zip</path>
+		<name>Last Striker </name>
+		<desc>Last Striker is a manga soccer game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>East Technology</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/kyustrkr.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42156" source="ScreenScraper.fr">
+		<path>./lkage.zip</path>
+		<name>Legend Of Kage, The</name>
+		<desc>As a Ninja, defeat the evils from Devil's World and save the Princess. 
+ 
+At the end of the Edo Period (late 19th century) in Japan, a Corps formed by the evils, which had come back to life from the Devil's World, was terrifying people all over the country. One day the princess 'Kiri', a daughter of the lord, was kidnapped by the Corps. In order to save her from them, a number of militia were sent to the Corps' Headquarters, but none of them ever returned. Then one young man headed for the Corps' Headquarters to save the princess. His name 'Kage', a ninja from Iga Village.</desc>
+		<rating>0.6</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Fight / 2D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/lkage.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="42151" source="ScreenScraper.fr">
+		<path>./liquidk.zip</path>
+		<name>Liquid Kids (World)</name>
+		<desc>Help Hipopo save his friends from the clutches of the Fire Devil!</desc>
+		<rating>0.9</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/liquidk.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="78890" source="ScreenScraper.fr">
+		<path>./megablst.zip</path>
+		<name>Mega Blast (World)</name>
+		<desc>At the end of the 21st century, war and hunger disappear on the earth, and humankind go on very well. On such occasion, it occurred to humankind that mysterious disappearances of women rise in waves in many places in the world. The cause is found by the investigation of a secretly organized 'Defending-the-earth-from-the-outside-organization'. That is, a strange contagious disease prevails throughout a planet 'Zancs' in a dark nebula, and women's generative power is lost, then, women on the earth were abducted as substitutes for having their descendants. Downson and Bogey, the choice out of the 'Defending-the-earth-from-the-outside-organization'. start on a journey to the space by using 'Megablast' which is a space fighter equipped with all available products of the earth's scientific power in order to rescue the earth women as well as lovable 'Sindy' who is also abducted together with the other earth women.</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/megablst.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="60809" source="ScreenScraper.fr">
+		<path>./nastar.zip</path>
+		<name>Nastar (World)</name>
+		<desc>Nastar also known as "Rastan Saga II". 
+ 
+A sequel to Rastan. Defeat the monsters with various attack methods and three different weapons! 
+ 
+In the land of Rastania stands a most sacred shrine called Sky Scraper. It is said that the man who rules Sky Scraper rules the Earth. An evil tribe is now trying to invade this holy place so that they might rule. To protect the shrine, a courageous young man has challenged the invaders...</desc>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/nastar.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43651" source="ScreenScraper.fr">
+		<path>./tnzs.zip</path>
+		<name>Newzealand Story, The (World, new version, P0-043A PCB)</name>
+		<desc>Set in Antipodean country of the game's title, The New Zealand Story is an eight-way scrolling platform game featuring Tiki the Kiwi bird. Tiki and his friends have been kidnapped by the evil 'Wally', a large blue leopard seal who wants the birds for his next meal. Tiki quickly escapes and sets about rescuing his trapped friends.   
+ 
+The game's stages are made up of platforms with a caged kiwi bird awaiting rescue at the end of each. Touching the cage releases the trapped Kiwi and an open window appears, indicating the completion of the stage. </desc>
+		<rating>0.9</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tnzs.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="79131" source="ScreenScraper.fr">
+		<path>./nightstr.zip</path>
+		<name>Night Striker (World)</name>
+		<desc>Night Striker is a 3-D shoot-em-up rendered with fast moving, sprite-scaled graphics. Players must guide an armoured hover car through a number of scrolling levels - destroying waves of enemies in the process - in an attempt to rescue a scientist who has been kidnapped by a terrorist organization. A large guardian awaits players at the end of each level, with each one taking several hits to destroy. 
+ 
+Night Striker takes its influences from many landmark games of the sprite scaling genre, all of which are Sega releases. The basic shoot-em-up gameplay is similar in style to both 1985's "Space Harrier" and 1987's "Thunder Blade". Some of the game's levels resemble those of 1988's "Galaxy Force II" as well as "Thunder Blade", while the game's level structure - a 'pyramid' of levels that allows players to chose their own route through the game with the use of end-of-level forked roads - is borrowed from the 1986 classic, "Out Run".</desc>
+		<rating>0.4</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Shooter / Plane, 3rd person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/nightstr.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="79133" source="ScreenScraper.fr">
+		<path>./ninjak.zip</path>
+		<name>Ninja Kids, The (World)</name>
+		<desc>The Ninja Kids is a horizontally-scrolling hack 'n' slash beat-em-up for up to four players who must defeat a demented cult plotting to summon Satan. A karate sensei sends out his four ninja puppets to combat this looming threat.  
+ 
+All four ninjas carry different weapons and have different fighting styles. As well as their weapons, each ninja also has a screen-filling magical attack based on one of four elements (earth, fire, wind and water). </desc>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/ninjak.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="42421" source="ScreenScraper.fr">
+		<path>./plumppop.zip</path>
+		<name>Plump Pop (Japan)</name>
+		<desc>Use a trampoline to bounce a baby animal into the blocks. You can choose from a cat, a dog and a pig.</desc>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Action</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/plumppop.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="42546" source="ScreenScraper.fr">
+		<path>./pulirula.zip</path>
+		<name>Pu·Li·Ru·La (World)</name>
+		<desc>PuLiRuLa is a six-level, sideways scrolling beat-em-up for 1 or 2 players that defies any logic in either its theme or its graphical approach; that places the players in a dream-like world populated by armies of strange and bizarre creatures.  
+ 
+PuLiRuLa's plot centres around the world of 'Radishland'. Each of Radishland's six towns is kept running smoothly with the aid of a giant key, which is necessary to keep the world's 'time-flow' moving. The key is stolen by a mysterious enemy and the timeflow is disrupted. Players must fight their way through waves of increasingly abstract enemies in their quest to recover the key and restore time to Radishland.</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pulirula.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="37614" source="ScreenScraper.fr">
+		<path>./pbobble.zip</path>
+		<name>Puzzle Bobble (Japan, B-System)</name>
+		<desc>Puzzle Bobble (known as Bust-A-Move outside of Japan) is a spin-off of the Bubble Bobble series, featuring themes from the original game (such as enemies trapped in bubbles by the cutesy dinosaur duo Bub and Bob that must be popped). Players attempt to clear a board of colored bubbles by firing other bubbles at an angle and matching multiple bubbles of the same color. Its characteristically cute Japanese animation and music, along with its play mechanics and level designs, made it successful as an arcade title and spawned several sequels and ports to home gaming systems.</desc>
+		<rating>0.8</rating>
+		<releasedate>19941221T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Puzzle-Game / Throw-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pbobble.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="42708" source="ScreenScraper.fr">
+		<path>./rbisland.zip</path>
+		<name>Rainbow Islands (New version)</name>
+		<desc>Rainbow Islands - The Story of Bubble Bobble 2  is a sequel to the legendary "Bubble Bobble" - released a year earlier - one or two players (who, unlike 'Bubble Bobble', no longer play simultaneously) take on the role of Bub and Bob, who have now been returned to their original human form after their success in Bubble Bobble. The returning heroes have been asked to rescue the Rainbow Islands from the clutches of the various enemies who have overrun the islands in their absence. 
+ 
+Bob and Bob are each armed with the ability to create solid rainbows. This ingenious game-play device acts as both a weapon (to either kill an enemy instantly, or trap it then collapse the rainbow onto it, the latter essential for collecting bonus gems - as detailed in 'Tips and Tricks') and as a temporary platform that allows the players to reach previously inaccessible parts of the level, as they race to reach the top of the island before the game's tight time limit expires.</desc>
+		<rating>0.9</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/rbisland.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="42699" source="ScreenScraper.fr">
+		<path>./rastan.zip</path>
+		<name>Rastan (World Rev 1)</name>
+		<desc>Rastan saga known in North America simply as Rastan, is a 1987 hack and slash platform arcade game developed and published by Taito.</desc>
+		<rating>0.9</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/rastan.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42753" source="ScreenScraper.fr">
+		<path>./retofinv.zip</path>
+		<name>Return of the Invaders</name>
+		<desc>Return of the Invaders is a full colour update of the legendary original; featuring challenge stages and circling aliens. Return of the Invaders, while playable enough in its own right, would be vastly improved upon by its sequel, "Super Space Invaders '91", released five years' later.</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/retofinv.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="42856" source="ScreenScraper.fr">
+		<path>./ryujin.zip</path>
+		<name>Ryu Jin (Japan)</name>
+		<desc>The title of this game translates from Japanese as 'Dragon God'. The player can choose between 4 different ships, each equiped with 4 basic weapon (Vulcan, Laser, Homing Missile and Option Laser) and a unique special attack: 
+Usable fighter &amp; special attack: 
+Sword Breaker (Blue) - Fireball Bomb 
+Vaulge (Green) - Lightning Volt 
+Shamseel (Red) - Flash Bomb 
+Phalcyon (Purple) - Wave Attack</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ryujin.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="42961" source="ScreenScraper.fr">
+		<path>./selfeena.zip</path>
+		<name>Sel Feena</name>
+		<desc>Sel Feena (c) 1991 East Technology.  - TECHNICAL -  Taito B System hardware  Main CPU : 68000 (@ 12 Mhz), Z80 (@ 4 Mhz) Sound Chips : YM2610 (@ 8 Mhz)  Players : 2 Control : 8-way joystick Buttons : 3  - TRIVIA -  Released in September 1991.  - STAFF -  D</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>East Technology</developer>
+		<publisher>East Technology</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/selfeena.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43084" source="ScreenScraper.fr">
+		<path>./silentd.zip</path>
+		<name>Silent Dragon (World)</name>
+		<desc>In the 1990's, a dark force appears on our planet. it's the evil Dr. Bio, the twisted genius behind "Bio-Roid". By using advanced biotechnology, he creates mutant life forms with superhuman strength, terrorizing the human population. To stop the evil doctor, four men, each with courage and fortitude, are chosen to wage a just war against these creatures. And now, that battle has begun!</desc>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/silentd.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="43172" source="ScreenScraper.fr">
+		<path>./solfigtr.zip</path>
+		<name>Solitary Fighter (World)</name>
+		<desc>Six street toughs battle for prize money in an underground fighting competition. Some stages have weapons to throw at the opponent. DOGOOOOOON!</desc>
+		<rating>0.3</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/solfigtr.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="40060" source="ScreenScraper.fr">
+		<path>./arkanoid.zip</path>
+		<name>Arkanoid (World, older)</name>
+		<desc>After a sudden alien assault, the Arkanoid spaceship has been destroyed and the only survivor, the small 'Vaus' space vessel, has been mysteriously trapped in another dimension by an unknown enemy. The player is charged with helping the 'Vaus' overcome the security systems, as well as the many enemies that guard them, before finally finding and destroying 'DOH', the alien responsible for the attack. 
+ 
+Arkanoid is an update of the early ball and paddle video games - and specifically of Atari's 1978 classic, "Super Breakout" - in which the player takes control of a paddle at the bottom of the screen and must use it to deflect a ball into rows of bricks at the top of the screen, thus destroying them and, eventually, clearing the screen to progress to the next level.  
+ 
+As well as impressive and colourful graphics, Arkanoid introduced a number of new elements to the classic bat 'n' ball gameplay. Certain bricks, when destroyed, would release a power-up - in the form of a falling capsule. the player had to catch the capsule to retrieve the power-up. Among the many enhancements the power-ups provided were an increased 'bat' size, multiple balls, 'sticky' ball (which would stick to the bat and could be released when the player chose) and even a laser, which allowed the player to shoot the bricks.</desc>
+		<image>/userdata/roms/mame/images/arkanoid.png</image>
+		<rating>0.9</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Action / Breakout games</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="40063" source="ScreenScraper.fr">
+		<path>./arknoid2.zip</path>
+		<name>Arkanoid - Revenge Of Doh (World)</name>
+		<desc>Arkanoid - Revenge of DOH © 1987 Taito Corp. 
+ 
+The mysterious enemy known as 'DOH' has returned to seek vengeance on the 'Vaus' space vessel. The player must once again take control of the Vaus and overcome many challenges in order to destroy DOH once and for all.  
+ 
+An update of the popular 1986 original, Revenge of DOH sees the player battle through 34 rounds, taken from a grand total of 64. Revenge of DOH differs from its predecessor with the introduction of "Warp Gates". Upon completion of a round or when the Break ('B') pill is caught, two gates appear at the bottom left and bottom right of the play area respectively, the Vaus is then taken through one of the gates - the choice will affect which version of the next round is provided. 
+ 
+The game also features two new features for bricks. Notched silver bricks, like normal silver bricks, take several hits to destroy. However, after a short period of time after destruction, they regenerate at full strength. Fortunately, clearing a level does not require that any notched bricks to be destroyed. Also, some bricks move from side to side as long as their left and/or right sides are not obstructed by other bricks. 
+ 
+The game features a mini-boss in the form of a giant brain, which will help you practice for DOH. You must aim for the brain's mouth to defeat it.</desc>
+		<image>/userdata/roms/mame/images/arknoid2.png</image>
+		<rating>0.75</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="40071" source="ScreenScraper.fr">
+		<path>./ashura.zip</path>
+		<name>Ashura Blaster (World)</name>
+		<desc>Ashura Blaster is a vertically scrolling shoot 'em up arcade game released by Taito in 1990. The player controls a helicopter (selecting 1 of 4 bomb configurations) and shoots enemies in the air and ground, collects power-ups, and defeats bosses to advance levels. 
+ 
+The kanji characters on the titlescreen read 'Ashura'. Ashura is a demon related to fighting.</desc>
+		<image>/userdata/roms/mame/images/ashura.png</image>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Visco</developer>
+		<publisher>Taito</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40085" source="ScreenScraper.fr">
+		<path>./asuka.zip</path>
+		<name>Asuka And Asuka (World)</name>
+		<desc>A vertically scrolling shoot em up.</desc>
+		<image>/userdata/roms/mame/images/asuka.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Visco</developer>
+		<publisher>Taito</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40138" source="ScreenScraper.fr">
+		<path>./ballbros.zip</path>
+		<name>Balloon Brothers</name>
+		<desc>Balloon Brothers is a puzzle game similar to "Tetris" but with different colored balloons in different shapes. Instead of falling blocks, the balloons float to the top. Completing a full row across will make that row disappear.</desc>
+		<image>/userdata/roms/mame/images/ballbros.png</image>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>East Technology</developer>
+		<publisher>East Technology</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40375" source="ScreenScraper.fr">
+		<path>./bshark.zip</path>
+		<name>Battle Shark (World)</name>
+		<desc>Use periscope to attack enemies' submarines.</desc>
+		<image>/userdata/roms/mame/images/bshark.png</image>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Shooter / Plane, 1st person-Shooter</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="40332" source="ScreenScraper.fr">
+		<path>./bonzeadv.zip</path>
+		<name>Bonze Adventure (World, newer)</name>
+		<desc>The player controls a Buddhist monk, Bonze Kackremboh. His weapons are Buddhist prayer beads, called "mala" beads, which can be powered up until they become almost as large as the player. The monk battles snakes, giant eyeballs, ghosts and other enemy creatures.</desc>
+		<image>/userdata/roms/mame/images/bonzeadv.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40417" source="ScreenScraper.fr">
+		<path>./bygone.zip</path>
+		<name>Bygone (Prototype)</name>
+		<desc>Bygone is an innovative and fun platform game. 
+ 
+The player controls a small blue Slinky robot, jumping while adhering and moving through a series of natural platforms levels and must eliminate different kinds of enemy creatures and catch special robotics parts to become different types of robot, always with the possibility once transformed of returning it to its bygone form and try different combinations of transformation, to reach higher zones and defeat the boss, a stone monster that must be shoot several times in his eye without touch it, to go to next levels.</desc>
+		<image>/userdata/roms/mame/images/bygone.png</image>
+		<rating>0.3</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Shooter / Horizontal-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40426" source="ScreenScraper.fr">
+		<path>./cadash.zip</path>
+		<name>Cadash (World)</name>
+		<desc>Four great heroes: a fighter, a wizard, a cleric and a ninja go on a quest to rescue the captured princess. This Taito adventure game feature all the ingredients of a traditional role-playing game (stats, exp, buy upgrade in store...).</desc>
+		<image>/userdata/roms/mame/images/cadash.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40436" source="ScreenScraper.fr">
+		<path>./cameltry.zip</path>
+		<name>Cameltry (US, YM2610)</name>
+		<desc>In Cameltry the player must guide a ball through a number of mazes, rotating the maze through 180 degrees to get the ball to move in the desired direction - much like the bonus levels in the Sega Genesis/Mega Drive console title, "Sonic the Hedgehog". Each maze must be completed within a tight time limit and a number of traps and obstacles litter the mazes to slow players down. 
+ 
+There are, however, a number of positive targets to be hit, and bonuses - such as additional time - can be found hidden away within the mazes. When the ball is stuck or the player would like to speed up, the JUMP button can be used. If the player runs out of time before reaching the goal, a random matching game is run to allow the player more time to complete the maze. This challenge, however is very difficult to win.</desc>
+		<image>/userdata/roms/mame/images/cameltry.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40510" source="ScreenScraper.fr">
+		<path>./chaknpop.zip</path>
+		<name>Chack'n Pop</name>
+		<desc>Chack'n Pop is considered by many to be the precursor to the venerable game Bubble Bobble. The cast consists of two enemies that would later be seen in Bubble Bobble. Many fans of the Bubble Bobble series may find Chack'n Pop less fun to play due to its high degree of difficulty. 
+ 
+The game puts the player in the role of Mr. Chack'n, who must rescue all of the hearts that were stolen during a romantic interlude between him and Miss Chack'n. Chack is an interesting character with interesting abilities. He can toss two bombs, only one in each direction at a time. He can also effortlessly go from walking on the floor to walking on the ceiling. If the ceiling is low enough, Chack can extend his legs until his head touches the ceiling to immediately begin walking on it.</desc>
+		<image>/userdata/roms/mame/images/chaknpop.png</image>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40524" source="ScreenScraper.fr">
+		<path>./chasehq.zip</path>
+		<name>Chase H.q. (World)</name>
+		<desc>"Chase H.Q." is a checkpoint-based racing game in which the player takes on the role on an undercover cop called Tony Gibson in this 'Miami Vice' inspired game from Taito. Gibson drives a powerful unmarked police car (resembling a Porsche 911) along with his partner, 'Raymond Broady' and must chase down and apprehend various criminals. 
+ 
+The player has between fifty-five and seventy seconds (depending on the game's 'Dip' settings) to catch up with the fleeing criminal, then the same time period again to repeatedly ram into the criminal's car until it is too damaged to drive. The criminal's car is constantly moving away, so if the player repeatedly crashes or drives too slowly, the criminal will escape and the game ends.</desc>
+		<image>/userdata/roms/mame/images/chasehq.png</image>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<playcount>1</playcount>
+		<lastplayed>20210123T232456</lastplayed>
+		<gametime>175</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="40556" source="ScreenScraper.fr">
+		<path>./chukatai.zip</path>
+		<name>Chuka Taisen (World, P0-028-A PCB)</name>
+		<desc>Chuka Taisen is a classic shooter starring the Monkey King Sun Wukong (except for Western releases, where the protagonist is "Mike Chen")</desc>
+		<image>/userdata/roms/mame/images/chukatai.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40669" source="ScreenScraper.fr">
+		<path>./contcirc.zip</path>
+		<name>Continental Circus (World)</name>
+		<desc>Continental Circus is a Formula One racing game in which the player races over a number of International Grand Prix circuits, trying to complete each lap before the time limit expires. The game features Pit-stops and dynamic weather; the latter in the form of rain. 
+ 
+If the player's car is hit by either a rival car or strikes a trackside barrier, the car will be damaged and begin to smoke. The player must 'pit' at the earliest opportunity to get the car repaired, otherwise the fire will spread and the car will eventually explode. Should the player's car have a second collision before the Pit-stop is reached, the car to explode, wasting precious time before a replacement car appears.</desc>
+		<image>/userdata/roms/mame/images/contcirc.png</image>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="40715" source="ScreenScraper.fr">
+		<path>./crimec.zip</path>
+		<name>Crime City (World)</name>
+		<desc>Crime City is a side-scrolling platform shoot-em-up for one or two players in which two cops by the names of Tony Gibson and Raymond Brody are tasked with taking down the gangs of criminals that have overrun their city.  
+ 
+Each of the game's six stages focuses on a specific criminal activity, such as bank robbery or smuggling. The goal of each stage is to reach the powerful 'boss' character then defeat and arrest them.</desc>
+		<image>/userdata/roms/mame/images/crimec.png</image>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40817" source="ScreenScraper.fr">
+		<path>./darius.zip</path>
+		<name>Darius (World, rev 2)</name>
+		<desc>Darius is a horizontally scrolling shoot-em-up that was unique at the time for featuring a game screen that was three times wider than the conventional size, with the arcade cabinet utilizing three CRT screens to accommodate it. 
+ 
+In the game, the player flies an ornate fighter craft called a Silver Hawk. The craft is equipped with two attack weapons: Missile (forward-firing standard gun) and Bomb (drops from the bottom of the ship). The Silver Hawk is also equipped with the 'Arm' (armor); a green energy shield that can absorb enemy attacks without harm to the ship.</desc>
+		<image>/userdata/roms/mame/images/darius.png</image>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40928" source="ScreenScraper.fr">
+		<path>./dinorex.zip</path>
+		<name>Dino Rex (World)</name>
+		<desc>Dino Rex is one-on-one fighting game, six selectable dinosaurs do battle for their caveman masters!</desc>
+		<image>/userdata/roms/mame/images/dinorex.png</image>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="40975" source="ScreenScraper.fr">
+		<path>./dondokod.zip</path>
+		<name>Don Doko Don (World)</name>
+		<desc>Don Doko Don is a platform game where you play a bearded dwarf with a mallet as your only weapon. Very abstract colors, talking trees, cute graphics and sounds. The object is to defeat all the enemies and advance to the next round which reveals more and different enemies.</desc>
+		<image>/userdata/roms/mame/images/dondokod.png</image>
+		<rating>0.8</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="40393" source="ScreenScraper.fr">
+		<path>./bublbobl.zip</path>
+		<name>Bubble Bobble (Japan, Ver 0.1)</name>
+		<desc>One or two players take on the role of Bub and Bob, two cute dinosaurs who must battle through 100 platform-packed single screen levels to rescue their girlfriends. Bub and Bob are armed only with the ability to blow bubbles, in which the game's many enemies can be trapped and killed. The bubbles can also be used as temporary platforms, to help the dinosaurs reach previously inaccessible areas of a level.  
+ 
+Any trapped enemies who are not killed quickly enough will turn red and escape their bubble prison. These angry enemies are much faster than before, making them harder to kill. Enemies also become angry if players are taking too long to complete a level. Defeated enemies are turned into bonus fruit items that can be collected for points.</desc>
+		<image>/userdata/roms/mame/images/bublbobl.png</image>
+		<rating>0.9</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<playcount>1</playcount>
+		<lastplayed>20210520T201326</lastplayed>
+		<gametime>79</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="40062" source="ScreenScraper.fr">
+		<path>./arkatour.zip</path>
+		<name>Tournament Arkanoid (US)</name>
+		<desc>Tournament Arkanoid was released in January 1987 in the USA. It was licensed to Romstar. Tournament Arkanoid is more of an upgrade than an actual sequel. The game play is 100% identical to the original. The only thing different is that all 32 stages have completely different arrangements of blocks. The layout of level 2 is a drawing of the US flag, with the stars represented by silver blocks. The layout of level 4 is a drawing of Chack'n from "Chack'n Pop". Chack'n's eyes are made out of indestructible gold blocks.  
+The game does not appear to have been distributed anywhere else in the world but the U.S. Tournament Arkanoid was also never ported to any home system.</desc>
+		<image>/userdata/roms/mame/images/arkatour.png</image>
+		<rating>0.8</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="41080" source="ScreenScraper.fr">
+		<path>./earthjkr.zip</path>
+		<name>U.n. Defense Force - Earth Joker (Japan)</name>
+		<desc>A.D. 2026. The earth feels the onslaught of total takeover from a hostile and powerful enemy. They call themselves Slytow. All the countries of the Earth fall before there might. The military is powerless against the Slytow. The few who survive flee out to space to form colonies, based on their former nations. Their dream: to regroup and wrest control of the earth from the Slytow. 
+ 
+Earth Joker - U.N. Defense Force is a Vertical Shoot-'Em-Up, developed and published by Visco Games, which was released in 1993. The player can pick from four different ships, and has to go through seven stages. The ships are equipped with a charge laser, that can be used holding down the fire button.</desc>
+		<image>/userdata/roms/mame/images/earthjkr.png</image>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Visco</developer>
+		<publisher>Visco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="150518" source="ScreenScraper.fr">
+		<path>./scessjoe.zip</path>
+		<name>Success Joe (World)</name>
+		<desc>Extremely rare, this game is based on the classic manga/anime series Ashita no Joe (Tomorrow's Joe). The manga ran from 1968 to 1973 in Shonen Magazine. There were also 2 TV series that ran from 1970 to 1971 and 1980 to 1981 and a movie was released in 1980.  
+ 
+When one of Joe's old rivals, Rikishi, died in the ring in 1970, Kodansha publishing actually held a funeral service for him. Over 700 people attended from all over Japan. An actual Buddhist priest presided over the funeral, held in a full-sized boxing ring.</desc>
+		<image>/userdata/roms/mame/images/scessjoe.png</image>
+		<rating>0.3</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Wave Corp.</developer>
+		<publisher>Wave</publisher>
+		<genre>Sports / Boxing-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1540</genreid>
+	</game>
+	<game id="43194" source="ScreenScraper.fr">
+		<path>./spacedx.zip</path>
+		<name>Space Invaders Dx (US, v2.1)</name>
+		<desc>A modern and fitting tribute to Taito's 1978 seminal shoot-em-up, "Space Invaders".  
+ 
+There are now 3 different game modes to choose from. These include a faithful recreation of the legendary original - available in both upright and cocktail versions - and replete with a simulation of the infamous "coloured plastic overlay" that was used to add the impression of full colour graphics to the original game. 
+ 
+The 2 remaining game modes are 'Versus', with simultaneous split-screen 2-player action, and "Parody", which features characters and graphics from other well-known Taito games, such as "The New Zealand Story", "Bubble Bobble" and "Liquid Kids". Despite the graphical changes, the Parody version plays identically to the original game, and all modes retain the original, legendary sound effects.</desc>
+		<image>/userdata/roms/mame/images/spacedx.png</image>
+		<rating>0.9</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43311" source="ScreenScraper.fr">
+		<path>./ssi.zip</path>
+		<name>Super Space Invaders '91 (World, rev 1)</name>
+		<desc>Export versionof "Majestic Twelve - The Space Invaders Part IV". 
+The third sequel to Taito's seminal "Space Invaders", Majestic Twelve leaves the classic Invaders game-play intact, but adds a slew of new alien invaders and power-ups to the mix. This, together with the vastly improved graphics that introduce colorful new backdrops - some of which scroll vertically in a similar fashion to the star-field in Namco's "Galaxian" - ensure that Majestic 12 is a worthy sequel to the legendary original. 
+ 
+The original game's flying saucer still makes an appearance, but instead of merely awarding bonus points when shot - as in the original game - it now drops a power-up pod for the player to retrieve. Power-ups include shield, faster shots, a laser (activated with the second button) and a giant butterfly, which freezes the invaders for a limited time. 
+ 
+One of the game's most memorable features was the 'Cattle Mutilation' bonus screen, in which the player must protect a heard of cattle from a number of fast-moving saucers, intent on stealing the animals. If a cow is snatched; the player must shoot the relevant saucer to free it; being careful not to actually shoot the cow itself. The '91 incarnation also introduced 'bosses' to the series for the first time; giant, screen-filling aliens that required several shots to kill. 
+ 
+Another major difference to the previous games in the series is that if an invader reaches the bottom of the screen, the player will simply lose a ship (in the original, the game would end once an alien had landed). Also, the player's ship now comes equipped with a shield that can withstand several hits. The shield's strength is depleted every time it takes a direct hit from one of the invaders, and too many hits will result in the shield disappearing altogether. A direct hit on an un-shielded ship will result in the loss of a player life.</desc>
+		<image>/userdata/roms/mame/images/ssi.png</image>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical-Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="150513" source="ScreenScraper.fr">
+		<path>./superman.zip</path>
+		<name>Superman (World)</name>
+		<desc>Superman is a horizontal video game and may be played by one or two players interactively. The second player controlling a red Superman character, teams up with the first player in this battle against the evil Alien Powers.</desc>
+		<image>/userdata/roms/mame/images/superman.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Beat'em Up-Fight-Fight / 2D</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="43608" source="ScreenScraper.fr">
+		<path>./thundfox.zip</path>
+		<name>Thunder Fox (World)</name>
+		<desc>The world is being overrun by terrorists! Not to worry, since two super soldiers are on the case of wiping out this threat. Features nice graphics and sound, along with solid side-scrolling "Rolling Thunder" style action as well as some side scrolling shooter stages to mix things up.</desc>
+		<image>/userdata/roms/mame/images/thundfox.png</image>
+		<rating>0.6</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43804" source="ScreenScraper.fr">
+		<path>./twinhawk.zip</path>
+		<name>Twin Hawk (World)</name>
+		<desc>Twin Hawk is a typical vertical scrolling shooter with a top-down view. Your goal is easy, shoot all the enemies along the way. You only get a standard gun on your plane, and no bombs. Instead of bombs you can call helper planes. These planes make a formation around you and help to shoot all enemies. 
+ 
+Along the way you get the chance to collect power-ups by shooting transport trucks. When these are destroyed they release a power-up. There are three types. First is the weapon upgrade, with this you get a wider and more powerful shot. Second, you get more calls for helper planes. And third are extra lives.</desc>
+		<image>/userdata/roms/mame/images/twinhawk.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43964" source="ScreenScraper.fr">
+		<path>./viofight.zip</path>
+		<name>Violence Fight (World)</name>
+		<desc>Control different characters with various fighting styles and engage in single or two-player bouts. 
+ 
+In the early 1950's, a game called Violence Fight was popular in the US crime world. Fighters from all over the USA would compete against each other to become that year's champion. The winner stood to make a considerable amount of money.  
+ 
+In downtown LA, a manager called Blinks is training up a new fighter called Bad Blue. He is a strong contender to become the champion and desperately needs the prize money.</desc>
+		<image>/userdata/roms/mame/images/viofight.png</image>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="43975" source="ScreenScraper.fr">
+		<path>./volfied.zip</path>
+		<name>Volfied (World, revision 1)</name>
+		<desc>An update of Taito's 1981 classic, "Qix", Volfied adopts the same 'draw boxes to colour in the background' gameplay of its predecessor but updates both the graphics and in-game enemies. A number of power-ups are available, re</desc>
+		<image>/userdata/roms/mame/images/volfied.png</image>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Taito</publisher>
+		<genre>Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+</gameList>

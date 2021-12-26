@@ -1,0 +1,1947 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="41009" source="ScreenScraper.fr">
+		<path>./drgnbstr.zip</path>
+		<name>Dragon Buster</name>
+		<desc>Dragon Buster is a role-playing game in which you travel through various scenery to rescue the princess from an evil dragon.</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/drgnbstr.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41040" source="ScreenScraper.fr">
+		<path>./dsaberj.zip</path>
+		<name>Dragon Saber (Japan, Rev B)</name>
+		<desc>A vertically scrolling shoot'em up game.</desc>
+		<rating>0.8</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dsaberj.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41047" source="ScreenScraper.fr">
+		<path>./dspirit.zip</path>
+		<name>Dragon Spirit (new version (DS3))</name>
+		<desc>Dragon Spirit scorches the screen with a mythical fantasy theme hot enough to thrill players throughout the land. Come with us, and journey to a time long ago when prehistoric beings populated the globe. Where after a millennium of captivity, an ugly serpent demon named 'Zawell' escapes imprisonment and kidnaps Alicia, princess to the kingdom of Mitgult. A young, crafty soldier Amul is selected to rescue the princess and destroy Zawell. In praying to the gods for strength and courage, he points his sword high toward the heavens. Suddenly he is transformed into an all-powerful blue dragon, bestowed with special powers. Though gifted with a lethal air and ground attack, this is not enough. He must locate and obtain extra powers along the way. The demon has instructed nine of the mightiest beasts to stop Amul before reaching his goal. Do not underestimate this soldier, he has the Dragon Spirit!</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dspirit.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41007" source="ScreenScraper.fr">
+		<path>./dremshpr.zip</path>
+		<name>Dream Shopper</name>
+		<desc>Dream Shopper is an arcade game which was released by Sanritsu in 1982; it runs on Namco's Pac-Man hardware. The player must use a four-way joystick to take control of a shopper. At the start of the game the text YOUR PRESSING GOAL IS 10000 POINTS will appear on the screen. The screen will then cut to a shot of a room whose floor is comprised of 144 tiles as they flash up and give you a brief idea of what they all are; all except the 66th tile (which is the one with the apple) will then go black, and the Dream Shopper will have to walk around the room and use the Reveal Button to reveal the type of tile he is standing on. </desc>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Sanritsu Denki</developer>
+		<publisher>Sanritsu Denki</publisher>
+		<genre>Action-Action / Labyrinth-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dremshpr.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="150406" source="ScreenScraper.fr">
+		<path>./drivfrcp.zip</path>
+		<name>Driving Force (Pac-Man conversion)</name>
+		<desc>An early chase-view racing game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<genre>Race, Driving-Race 3rd Pers. view</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/drivfrcp.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41056" source="ScreenScraper.fr">
+		<path>./dunkmnia.zip</path>
+		<name>Dunk Mania (World, DM2/VER.C)</name>
+		<desc>Dunk Mania is a 2-on-2 basketball game.</desc>
+		<rating>0.8</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/dunkmnia.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41088" source="ScreenScraper.fr">
+		<path>./eggor.zip</path>
+		<name>Eggor</name>
+		<desc>Eggor is a multi-directional shooter/maze arcade game. It runs on Namco's Pac-Man hardware and appears to be based on Digitrex Techstar's Eyes, which was released the previous year. The player must use a 4-way joystick to take up control of a baby vulture, Eggor through eight different mazes and use a single button to shoot all the eggs while getting pursued by five adult vultures. If Eggor shoots one of them, they will disappear for a few moments before rehatching. If one of the adult vultures shoots Eggor he will lose a life. Shooting an egg is worth 500 points on the first round and increases by 250 for every subsequent round, while shooting an adult vulture is worth 100 points upon the first round and increases by 100 for every subsequent round.</desc>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Telko</developer>
+		<publisher>Telko</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/eggor.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41106" source="ScreenScraper.fr">
+		<path>./emeralda.zip</path>
+		<name>Emeraldia (World)</name>
+		<desc>Emeraldia is a puzzle game where the player must line up squares of the same color. When three tiles have been stacked in a vertical row, they crack. When a fourth square of same color lands on the cracked ones, all four squares disappear.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/emeralda.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41144" source="ScreenScraper.fr">
+		<path>./exvania.zip</path>
+		<name>Exvania (World)</name>
+		<desc>The queen of darkness, Erinyes, has kidnapped Princess Electra. The four heroes: Ward, Emilio, Charles, and Karl embark on a quest to save the princess. They compete with each other to reach the Castle of Darkness and defeat Erinyes, so one of them might be able to marry the rescued Electra and rule the land Exvania. 
+ 
+The players must take up control of four medieval lords who are fighting for control of the land. They have to battle through eight different castles, and try to gain control of each one. When one of the lords wins a battle, he shall receive a medal - and once he has won three medals, he will gain control of the current castle (which means that they can be up to six rooms long) and the game will proceed to the next castle. The gameplay is similar to that of Hudson Soft's Bomberman series, the initial title of which was adapted by Irem for the arcade in 1991. </desc>
+		<rating>0.6</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action-Fight-Action / Labyrinth</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/exvania.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41146" source="ScreenScraper.fr">
+		<path>./eyes.zip</path>
+		<name>Eyes (US set 1)</name>
+		<desc>The player controls a hat-wearing eyeball in a maze. As in Pac-Man, the goal is to collect all of the dots to advance to next level, but in Eyes you shoot the dots rather than eat them. Computer-controlled eyes chase and shoot at the player. Shooting a computer eye gives points and removes it from the level, but it will reappear a short time later. Being shot by a computer eye is fatal. 
+ 
+As the game progresses, more computer eyes are added to levels and they take less time to shoot at the player. They also move faster.</desc>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Digitrex Techstar</developer>
+		<publisher>Techstar (Rock-Ola license)</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/eyes.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41160" source="ScreenScraper.fr">
+		<path>./faceoff.zip</path>
+		<name>Face Off (Japan 2 Players)</name>
+		<desc>Face Off is a 4-player overhead-view hockey game, featuring 8 countries: 
+U.S.S.R. 
+CANADA 
+SWEDEN 
+CZEKOSLOVAKIA 
+U.S.A. 
+FINLAND 
+FRANCE 
+JAPAN</desc>
+		<rating>0.3</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Sports / Hockey-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/faceoff.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41208" source="ScreenScraper.fr">
+		<path>./fghtatck.zip</path>
+		<name>Fighter &amp; Attacker (US)</name>
+		<desc>Fighter &amp; Attacker is a vertically scrolling shoot'em up game.</desc>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shooter-Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/fghtatck.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41228" source="ScreenScraper.fr">
+		<path>./finallap.zip</path>
+		<name>Final Lap (Rev E)</name>
+		<desc>Final Lap is a Formula One racing game featuring several courses. The gameplay is similar in feel to Namco's 1982 legend, "Pole Position", although the steering is much looser than that of its legendary predecessor. Down shifting and brakes play major parts in keeping control of the car on the tight, winding courses. Bumping another car will not cause the player's car to explode - as in "Pole position" - but can send the player OR the rival driver spinning off the track, costing valuable seconds.</desc>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/finallap.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41224" source="ScreenScraper.fr">
+		<path>./finalapr.zip</path>
+		<name>Final Lap R (rev. B)</name>
+		<desc>Final Lap R is the last game in Namco's seminal F1 series, which began eleven years' earlier with 1982's "Pole Position". Final Lap R features the same loose handling and demanding game-play of its predecessors, but has the obligatory improved graphics, due to the more powerful host hardware. The game offers players a choice of four race tracks: 
+Germany 
+Brazil 
+Hungary 
+Belgium</desc>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/finalapr.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41232" source="ScreenScraper.fr">
+		<path>./finehour.zip</path>
+		<name>Finest Hour (Japan)</name>
+		<desc>Stomp through the enemy opposition in your very own assault mech! Equipped with a laser beam, Vernier jump-jets, auto-targeting, and automatic cooling system, this mech is a force to be reckoned with. Of course, the enemy doesn't know that yet, do they? Teach 'em a lesson in threat assessment!</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/finehour.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41271" source="ScreenScraper.fr">
+		<path>./fourtrax.zip</path>
+		<name>Four Trax</name>
+		<desc>The player must take control for four quad bikes (red for Player 1, white for Player 2, yellow for Player 3, and green for Player 4), which are competing in an "off-road" race - and they all have a preset amount of time in which to complete a full lap of the track. For each lap of the track that is successfully completed, the players' time is extended. However, if one of the players cannot manage to successfully complete his current lap of the track before the time runs out, his or her game will instantly be over and the race will continue without them.  
+ 
+The players must complete between three and six full laps of the track in order to win (the number is dependent on how both of the cabinets are set, as with Namco's own Final Lap). The players will also encounter between four and seven blue CPU-controlled bikes on the track, as the number is dependent on how many people are playing (seven for one player, six for two players, five for three, and four for four).</desc>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/fourtrax.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41331" source="ScreenScraper.fr">
+		<path>./galaga.zip</path>
+		<name>Galaga (Namco rev. B)</name>
+		<desc>Galaga is a single-screen shoot-em-up in which the player controls a 'Fighter' spaceship and must defend the home planet against the on-coming hordes of alien invaders called "Galagans". The Fighter can only move left and right along the bottom of the screen.  
+ 
+Galagans fly onto the screen in a variety of formations before forming troop lines at the top of the screen. Once all troop lines are formed the Galagans separate and start attacking the player's Fighter in ones, twos and threes. The top-line Boss Galaga need to be shot twice before they are destroyed. </desc>
+		<rating>0.9</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Midway</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical-Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/galaga.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41332" source="ScreenScraper.fr">
+		<path>./galaga88.zip</path>
+		<name>Galaga '88</name>
+		<desc>Galaga '88 is an updated version of the old favorite, "Galaga", with more invaders and more player firepower. Galaga '88 gives players a chance to once again repel the invaders from the Galagan Kingdom. One or two players can try their hand at fighting the invaders. This time the Galagans have four more allies, each with unique weapons and defenses that a player must overcome.  
+ 
+By destroying special enemies or obstacles the player can get 'items'. When a player has two items, they can warp to another dimension to confront more Galagan ships with new strategies. In the Challenging Stages (labelled in this game as 'That's Galactic Dancin'), the player shoots down as many invaders as possible as the Galagans dance to a waltz, tango, march or jazz tune.  
+ 
+The player selects single or dual ship power. The objective is to destroy all the Galagan foes in each of the 29 sectors of the galaxy, with each sector more difficult than the last.  
+ 
+Unique Features:  
+More opponents. In addition to Boss, Goei and Zako, the original Galagan crew, Don, Nin, Ban, and Gan have been added. Each of the Galagans has a unique way of challenging the players.  
+Different types of ships. Players can choose single or dual ships (if the game option is set for dual and single). When the player retrieves a dual ship from the Boss's tractor beam, it turns into a triple ship with ten times the power of a single ship.  
+Challenging Stages. In the 'That's Galactic Dancin' stages, the Galagan invaders dance to a waltz, tango, Sousa march or jazz tune, while the player shoots down Galagans to earn bonus points.  
+Warping to a new dimension. By destroying particular enemies or obstacles and capturing two of their items, the player can warp to the next dimension.  
+Player challenge. Each dimension has different mix of Galagans with different strategies to be overcome.  
+Win back captured ships. The player can win back ships captured in the Boss Galaga's tractor beam. When the player destroys the Boss, the ships are released. If the player retrieves them, the ships become dual ships if they were single and triple if they were dual.  
+High Score Mode. Upon completing a game, a player can enter his initials if they are among the top eight scorers on the game.</desc>
+		<rating>0.9</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/galaga88.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41336" source="ScreenScraper.fr">
+		<path>./galaxian.zip</path>
+		<name>Galaxian (Namco set 1)</name>
+		<desc>Galaxian is a legendary single-screen shoot-em-up that took everything that made Taito's ground-breaking "Space Invaders" so good, and improved upon it on every level. Each screen starts with a wave of multi-colored aliens moving left and right at the top of the screen; the aliens quickly break ranks and start dive-bombing the Galaxip (player's ship) - either in single units or in groups of 3 - dropping multiple missiles as they descend. All of the aliens need to be destroyed before the player can progress to the next wave. </desc>
+		<rating>0.9</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical-Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/galaxian.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="51168" source="ScreenScraper.fr">
+		<path>./blazer.zip</path>
+		<name>Galaxy Ranger</name>
+		<desc>Fly through the universe battling alien ships to make your way to fight the main Alien Battle Cruiser. Along the way, you fly across alien deserts, through tunnels, over alien cities, and get involved in a few "astro-dogfights" with enemy space fighters.</desc>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Plane, 1st person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/blazer.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="41389" source="ScreenScraper.fr">
+		<path>./gaplus.zip</path>
+		<name>Gaplus (GP2 rev. B)</name>
+		<desc>Gaplus is the third game in Namco's classic "Galaxian" series, Gaplus picks up where 1981's "Galaga" left off. While maintaining the same classic 'look' of its predecessor, Gaplus's graphics are a definite improvement over those of "Galaga"; the game's increased color palette and subtle use of shading making the attacking aliens look rather more solid.</desc>
+		<rating>0.9</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gaplus.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41407" source="ScreenScraper.fr">
+		<path>./geebee.zip</path>
+		<name>Gee Bee (Japan)</name>
+		<desc>Gee Bee is a Pinball-flavored ball-and-paddle game.</desc>
+		<rating>0.3</rating>
+		<releasedate>19780101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/geebee.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="41419" source="ScreenScraper.fr">
+		<path>./genpeitd.zip</path>
+		<name>Genpei Toumaden</name>
+		<desc>Genpei Touma Den is a multi-genre birds-eye view action, 2D side-scroller beat 'em up, and 2D side-scroller platform arcade game that was released by Namco in 1986 only in Japan.  
+ 
+The character controlled by the player is that of a real Japanese samurai, Taira no Kagekiyo, who fell at the Battle of Dan-no-ura at the end of the Genpei War in 1185. Over eight hundred years later he is resurrected and has to make his way over the Imperial Regalia of Japan - fighting other characters who actually existed such as Minamoto no Yoshitsune and Saito Musashibo Benkei on his travels, as well as collecting the three sacred game items and defeating his arch-enemy Minamoto no Yoritomo.</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/genpeitd.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41534" source="ScreenScraper.fr">
+		<path>./gslgr94u.zip</path>
+		<name>Great Sluggers '94</name>
+		<desc>Great Sluggers - Featuring 1994 Team Rostersis a Major League Baseball game from Namco.</desc>
+		<rating>0.7</rating>
+		<releasedate>19940101T000000</releasedate>
+		<publisher>Namco</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gslgr94u.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41526" source="ScreenScraper.fr">
+		<path>./grobda.zip</path>
+		<name>Grobda (New Ver.)</name>
+		<desc>Grobda is a tank-like game that uses an overhead view. Enemy tanks attack in waves and they must be destroyed before they do the same to you.</desc>
+		<rating>0.6</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/grobda.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41709" source="ScreenScraper.fr">
+		<path>./hopmappy.zip</path>
+		<name>Hopping Mappy</name>
+		<desc>In Hopping Mappy players control the Micro Police mouse, Mappy as he bounces on a pogo stick to run circles around pink cats, called Meowkies, who patrol either vertically or horizontally. There is also Nyamco, a cat who patrols in a zigzag pattern, but he needs to take occasional breaks. There are eight treasures that a player must grab to complete a round, except on the bonus round where the player will just want to collect all the balloons that he can. The main intrigue here is getting past a blockade of Meowkies. </desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hopmappy.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="44000" source="ScreenScraper.fr">
+		<path>./vshoot.zip</path>
+		<name>J-league Soccer V-shoot (Japan)</name>
+		<desc>A soccer game featuring the top league teams of Japan.</desc>
+		<rating>0.7</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/vshoot.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41994" source="ScreenScraper.fr">
+		<path>./kingball.zip</path>
+		<name>King &amp; Balloon (US)</name>
+		<desc>The player controls two green men (likely soldiers in the king's army) with an orange cannon that fires at squads of descending balloons. You must protect the King and prevent him from being captured and carried away by one of the balloons. Unlike most shooter games, the player's cannon can be hit and destroyed any number of times; it is the King that must be protected. The game ends when the king is carried away three times.</desc>
+		<rating>0.5</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/kingball.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="42017" source="ScreenScraper.fr">
+		<path>./knckhead.zip</path>
+		<name>Knuckle Heads (World)</name>
+		<desc>Weapon based arcade fighting game released in 1993 by Namco during the fighting game boom started by Capcom's Street Fighter II. Notable for having a jump button and multi-player matches allowing up to four players to play simultaneously.</desc>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/knckhead.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="42083" source="ScreenScraper.fr">
+		<path>./kyukaidk.zip</path>
+		<name>Kyuukai Douchuuki (Japan, new version (Rev B))</name>
+		<desc>Kyuukai Douchuuki (c) 1990 Namco.  - TECHNICAL -  Namco System 2 hardware Game ID : KY  Main CPU : (2x) 68000 (@ 12.288 Mhz), M6809 (@ 3.072 Mhz), HD63705 (@ 2.048 Mhz) Sound Chips : C140 (@ 21.39 Khz), YM2151 (@ 3.57958 Mhz)  Screen orientation : Horizon</desc>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/kyukaidk.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42155" source="ScreenScraper.fr">
+		<path>./lizwiz.zip</path>
+		<name>Lizard Wizard</name>
+		<desc>The player must use an eight-way joystick to take control of the Lizard Wizard, whose mission is to help free the people who are caught within the planet Zyfus. The Lizard Wizard does this by shooting the rocks that fly out of that erupting volcano at the bottom of the screen which will burst into flames if he misses them and get eaten by the dragon-like lizards for their fire. As the prisoners emerge from the volcano, the Lizard Wizard must also rescue them from the planet by taking them to the platforms on the surface. The player must also face Spydors on certain levels, which must be killed before they reach the surface.</desc>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Techstar</developer>
+		<publisher>Techstar (Sunn license)</publisher>
+		<genre>Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/lizwiz.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="42193" source="ScreenScraper.fr">
+		<path>./luckywld.zip</path>
+		<name>Lucky And Wild</name>
+		<desc>Lucky &amp; Wild is a hilarious 'drive 'n shoot' game starring two buddy cops on a mission to bring down a mafia gang. Player 1 (Lucky) both drives the car and fires a gun, Player 2 (Wild) uses just a gun. While playing, both cops trade funny banter and dialogue, and even make funny faces in the rearview mirror.</desc>
+		<rating>0.9</rating>
+		<releasedate>19920101T000000</releasedate>
+		<publisher>Namco</publisher>
+		<genre>Race 1st Pers. view-Race, Driving</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/luckywld.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="150086" source="ScreenScraper.fr">
+		<path>./machbrkr.zip</path>
+		<name>Mach Breakers (World, MB2)</name>
+		<desc>Futuristic Competitions sports game with seven selectable characters and fun challenge.</desc>
+		<rating>0.9</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Namco</developer>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/machbrkr.png</image>
+	</game>
+	<game id="78853" source="ScreenScraper.fr">
+		<path>./mappy.zip</path>
+		<name>Mappy (US)</name>
+		<desc>Export version by Bally/Midway for North America. Game developed in Japan by Namco. For more information about the game, please see the original Namco version entry.</desc>
+		<rating>0.9</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mappy.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="78864" source="ScreenScraper.fr">
+		<path>./marvland.zip</path>
+		<name>Marvel Land (US)</name>
+		<desc>Great horizontal platform game that takes place in a fantasy amusement park. You play as Prince Paco, who is on a quest to save Princess Luxy from the evil Mole King.</desc>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/marvland.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="78911" source="ScreenScraper.fr">
+		<path>./metlhawk.zip</path>
+		<name>Metal Hawk (rev C)</name>
+		<desc>Metal Hawk (c) 1988 Namco.  - TECHNICAL -  Namco System 2 hardware Game ID : MH  Main CPU : (2x) 68000 (@ 12.288 Mhz), M6809 (@ 3.072 Mhz), HD63705 (@ 2.048 Mhz) Sound Chips : C140 (@ 21.39 Khz), YM2151 (@ 3.57958 Mhz)  Players : 2 Control : stick Buttons</desc>
+		<rating>0.9</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/metlhawk.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="78914" source="ScreenScraper.fr">
+		<path>./metrocrs.zip</path>
+		<name>Metro-cross (set 1)</name>
+		<desc>Metro-Cross is an abstract, horizontally-scrolling single player racing game set in an automated futuristic city. Players take on the role of 'The Runner', who must run through each of the game's 32 stages to cross the finish line before the time limit expires. If the Runner finishes a round within the time limit, remaining time is converted to bonus points and the next round begins.  
+ 
+Obstacles that hinder the runner's progress include 'Slip Zones' that slow him down if he tries to run over them, 'Pitfalls' that  break under the Runner's weight and drop him into the holes and 'Crackers' that launch the Runner up into the air and cause him to land on his back. Later rounds also feature 'Jumbo Tires' that bounce towards the Runner, barriers that emerge from the ground before receding back into it, Cubes that move through particular columns of tiles, Mice that attempt to jump onto the Runner and slow him down and Chess Knights and Kings that bounce from one tile to another. Clinging mice fall off the runner if he leaps from a springboard. 
+ 
+Progress is aided by yellow springboards that hurl the runner forwards at great speed (players must press the fire button while on the springboard) and a skateboard, that is unaffected by the green 'Slip Zone' tiles that would otherwise slow the player's progress. Bonus points can be earned by kicking the static drinks cans that can be found throughout each level. 
+ 
+Every fourth round is special, using the remaining time from the three previous rounds as additional completion time. However, if the Runner has not finished the round before the time limit runs out, he will be electrocuted and the game is immediately over.</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/metrocrs.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="78933" source="ScreenScraper.fr">
+		<path>./mirninja.zip</path>
+		<name>Mirai Ninja (Japan)</name>
+		<desc>The title of this game translates from Japanese as 'Future Ninja - Stealth Joy Cloud Device Side Story'. 
+ 
+Mirai Ninja was based on a Japanese movie of the same name, also produced by Namco. Both the game and the movie were released the same year. 
+The plot of the movie: A man's body and soul are stolen and used as part of a demon castle. What's left becomes Cyber Ninja. He teams up with the chi students whose cyber-earmuffs show matching red symbols. They fill their swords with ammunition, grab some neo-retro-cyber-antique guns and attack the demon robot expendable ninja squad. Each fight is won by whichever side uses more gratuitous special effects. They slay the Tron-like hover droids, who are destroyed in their shame. There's a showdown with a white-armored guy with dreadlocks, who is later reincarnated by the eclipse and a lot of multicolored lightning. After killing the make-up wearing effeminate spider person, the chi school fires a giant gun at the demon castle spider cyber robot. It blows up.</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mirninja.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="150094" source="ScreenScraper.fr">
+		<path>./moonal2.zip</path>
+		<name>Moon Alien Part 2</name>
+		<desc>A modified version of Galaxian. Besides the graphics, the only main difference between this and Galaxian is the inclusion of an energy meter that drains with every second you spend clearing a wave. If you don't clear the wave before you run out of energy, your ship is destroyed.</desc>
+		<rating>0.6</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Shoot'em Up</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/moonal2.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="78978" source="ScreenScraper.fr">
+		<path>./motos.zip</path>
+		<name>Motos</name>
+		<desc>The object of the game is to bump your enemies - space bugs - off the solar base using Motos, your ship. When you bump all of them off, you move to the next base or round. If Motos is knocked off the base, you lose one life. The game is over when you lose all your lives. 
+ 
+You can collect Power parts and Jump parts lying on the solar base by simply having Motos touch them. The collected parts will be displayed in the lower left corner of the screen and you can use them in the next round. Motos can be outfitted with no more than seven power parts; the more power parts added, the more powerful Motos is. However, Motos can only be outfitted with only one jump part per round. With a jump part, Motos can jump over two squares by moving the joystick in the desired direction and pressing the Jump button. One jump on a square cracks the square and a second jump in the same spot makes a hole in the solar base. 
+ 
+You can outfit Motos with these parts in the Power Parts or Jump Parts screen displayed at the beginning of each round. Select the number of parts you want by moving left and right with the joystick, and lock them in place by pressing the Jump button. You can use the selected parts for one round only; they will not be available in subsequent rounds. 
+ 
+Linger too long on the playing field and Shooting Stars will begin to fall periodically onto the solar base. The Stars are aimed at Motos, and when they miss they crack a square or break a hole in the solar base (like they do to the base behind the Motos logo in the attract mode's title sequence).  
+ 
+</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/motos.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="78991" source="ScreenScraper.fr">
+		<path>./mrdrillr.zip</path>
+		<name>Mr. Driller (US, DRI3/VER.A2)</name>
+		<desc>A highly addictive puzzle game in which the player must drill down through an endless onslaught of blocks, attempting to get blocks of the same colour to touch and subsequently make them disappear. 'Undergrounder' bonuses can be picked up for bonus points and air capsules must be collected to restore the player's ever-diminishing air supply.</desc>
+		<rating>0.8</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mrdrillr.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="39882" source="ScreenScraper.fr">
+		<path>./20pacgal.zip</path>
+		<name>Ms. Pac-Man/Galaga - 20th Anniversary Class of 1981 Reunion (V1.08)</name>
+		<desc>Classic Reunion! Class of '81 
+ 
+Two of the Greatest Hits at One Great Price! 
+</desc>
+		<rating>0.7</rating>
+		<releasedate>20000101T000000</releasedate>
+		<developer>General Computer</developer>
+		<publisher>Namco</publisher>
+		<genre>Compilation</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/20pacgal.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game id="79068" source="ScreenScraper.fr">
+		<path>./ncv1.zip</path>
+		<name>Namco Classic Collection Vol.1</name>
+		<desc>Awesome collection of classic Namco games ("Galaga", "Xevious" and "Mappy") with original and updated 'arrangement' versions available. Additionally "Super Xevious" is available as well.</desc>
+		<rating>0.9</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Compilation</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ncv1.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game id="79069" source="ScreenScraper.fr">
+		<path>./ncv2.zip</path>
+		<name>Namco Classic Collection Vol.2</name>
+		<desc>Awesome collection of classic Namco games ("Pac-Man", "Dig Dug" and "Rally-X") with original and updated 'arrangement' versions available. Additionally "New Rally-X" is available as well.</desc>
+		<rating>0.9</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Compilation</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ncv2.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game id="79144" source="ScreenScraper.fr">
+		<path>./nmouse.zip</path>
+		<name>Naughty Mouse (set 1)</name>
+		<desc>Naughty Mouse, also known as Woodpecker, is a platform arcade game where the player must take control of Naughty Mouse, who must make it from his own house at the bottom of the screen to his girlfriend's house at the top.  
+ 
+There are several differently colored woodpeckers that hatch from the large eggs positioned on the left and right sides of the screen, which set out to stop him. The player has a single button with which to make Naughty Mouse jump over them. 
+ 
+Some of the ladders may also become electrified after Naughty Mouse has climbed them, forbidding him to go back down them again on pain of death. Once he has reached his girlfriend's house, he will receive the stage's remaining time as bonus points and proceed to the next stage. 
+ 
+The main difference between Naughty Mouse and Woodpecker is the color palettes, and stage arrangements.</desc>
+		<rating>0.5</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Amenip</developer>
+		<publisher>Amenip</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/nmouse.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="79070" source="ScreenScraper.fr">
+		<path>./nebulray.zip</path>
+		<name>Nebulas Ray (World, NR2)</name>
+		<desc>NebulasRay is a vertically scrolling shoot'em up for one or two players. Civil war has broken out in the Austral star system, with the militaristic 'Master Forces' ousting the ruling government and looking to seize control of the entire system.  
+ 
+Taking on the role of resistance fighters, players must battle through waves of enemy ships across 6 levels, before finally reaching and destroying the 'Master Fortress'. As well as forward-firing weapons, each player ship also carries a limited number of powerful bombs that inflict much greater damage on the enemy than the standard weapons. Initially, each player ship is armed with only 3 bombs.  
+ 
+Numerous weapons and power-ups can be picked up during play, each of which can itself be powered-up:  
+WIDE SHOT - Increases shot width. 5 levels available.  
+GAIN POWER - Increases destructive power. 5 levels available.  
+SPEED UP - Increases player ship speed. 5 levels available.  
+BOMB - Extra bomb. Maximum of 7 can be carried.  
+FOUR-BARREL PHOTON - Powerful Photon torpedoes. Time-based.  
+HOMING LASER - Powerful lasers that automatically target enemies. Time-based.  
+LIGHTING BURST - Powerful short-range lightning burst. Time-based.  
+DEFLECTOR - Shield to protect player ships. Time-based.  
+EXTRA POINTS - Pick up for 3000 points.  
+ 
+Visually, NebulasRay employs complex sprite rotation and scaling techniques - as well as multi-layered parallax scrolling - to create impressive and highly detailed graphics with a true sense of depth.</desc>
+		<rating>0.8</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/nebulray.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="42649" source="ScreenScraper.fr">
+		<path>./quiztou.zip</path>
+		<name>Nettou! Gekitou! Quiztou!! (Japan)</name>
+		<desc>Nettou! Gekitou! Quiztou!! (c) 1993 Namco.  - TECHNICAL -  Namco System NA-2 hardware Game ID : QT  Main CPU : 68000 (@ 12.52825 Mhz) Sound Chips : Namco (@ 32 Khz)  Screen orientation : Horizontal Video resolution : 288 x 224 pixels Screen refresh : 60.0</desc>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<publisher>Namco</publisher>
+		<genre>Quiz / Japanese-Quiz</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/quiztou.png</image>
+		<genreid>3328</genreid>
+	</game>
+	<game id="79155" source="ScreenScraper.fr">
+		<path>./nrallyx.zip</path>
+		<name>New Rally X</name>
+		<desc>New Rally-X is a scrolling, overhead mazed-based racing game in which the player drives a racing car around a maze and must collect ten yellow flags before the car's fuel runs out. In-game opponents consist of red enemy cars that pursue and try to ram into and destroy the player's car. The enemy cars are faster moving than the player's vehicle.  
+ 
+The player's car automatically moves in whichever direction the joystick is pushed and if it runs into a wall, it will turn automatically and continue moving. To disrupt the chasing enemy cars a smoke-screen can be activated that trails behind the player's car, causing any pursuing vehicles to crash. Activating the smoke screen uses a small amount of fuel, however, so players must be careful to not overuse it. 
+ 
+Each maze also has rock formations and crashing into these will result in the loss of a player car. A radar display to the right-hand side of the playing area shows the relative positions of the flags, rocks and enemy vehicles.  
+ 
+In addition to the standard ten flags, each maze also contains a special flag (indicated by the letter "S"). If collected, the value earned for the round's remaining flags doubles from 100 to 200 points. If the player dies before the end of that round, the flag value is set back to 100 points and the double bonus is lost.  
+ 
+The mazes also contain a 'lucky flag'. This is marked with the letter 'L' and - providing there are still standard flags remaining - awards the player extra points for remaining fuel, after which the round will continue as normal. Upon completion of a round, bonus points are awarded based on how much fuel the player has remaining. 
+ 
+As players progress through the rounds, the number or pursuing enemy cars increases.</desc>
+		<rating>0.8</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action-Race, Driving-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/nrallyx.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="79166" source="ScreenScraper.fr">
+		<path>./numanath.zip</path>
+		<name>Numan Athletics (World)</name>
+		<desc>An athletics game featuring 8 tournaments: 
+ 
+Interceptor 
+A real life missile defense style-contest as missiles are being launched from a ship, and you must use your mystical powers to stop the oncoming missiles. The outside buttons (1 &amp; 3) make you step to the left or right, and the middle button is fire. Failure to hit the missile results in you being blown up. If you select Sharon from France, most of her clothes would disappear except for the bottom part of her suit. 
+ 
+Niagara Jumps 
+The final competition in the tournament. It is also considered to be the most difficult competition in the game. Very similar to the Triple Jump competition in the Olympics. The object is this contest is to make it across the falls. Alternately press buttons 1 and 3 to build up speed, then press button 2 three times. If you don't time yourself properly, you will sink and drown and you will go down the steep falls. 
+ 
+Nonstop Rock Chop 
+You must smash as many rocks as you can before time runs out. Rapidly press buttons 1 and 3 alternately until the gauge is full, then press button 2 to smash the rock. 
+ 
+Numan Sniper 
+In this contest, monsters will jump out of the sea from three different locations. Your object, destroy them. Press buttons 1, 2 or 3 varying by their location to shoot. 
+ 
+Scud Toss 
+Just as in the Javelin competition in the Olympics. Played on a "Track and Field"-like field with an only exception -- a missile. Rapidly and continuously press the two run buttons and then push and hold the middle button to set the angle of which you would throw the missile. Again, like Interceptor, if you select Sharon -- then again if she is faulted, she will be missing most of her clothes. 
+ 
+Tower Topper 
+Here you are expected to climb up to the building rooftop with the fastest time possible. Press button 2 repeatedly to scale the side of a building. If you press it too early -- you won't move, but if you press it too late -- you will fall off. 
+ 
+Turbo Dash 
+Much like the 100m Dash in the Olympics -- only the core elements have slightly changed. You are racing against a drag racer and another player. Press the two outside buttons (1 &amp; 3) in alternate fashion until your RSI (or 'special speed') sets in. 
+ 
+VS. Express 
+Very similar to a familiar scene in the Superman comic books. You must stop the oncoming train using your magical powers and send it in the opposite direction backwards. Press button 2 to stop the train, then hammer the outside buttons to build up power before bunging it back down the track. If you don't time this right -- the train will run you over.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Sports / Running trails-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/numanath.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="79110" source="ScreenScraper.fr">
+		<path>./outfxies.zip</path>
+		<name>Outfoxies, The (World, OU2)</name>
+		<desc>A platform 'versus' shoot'em up in which either one player (playing against the computer) or two players (playing against each other) attempt to destroy each other by any means necessary. The levels themselves are interesting and varied, with airships, planes etc. providing a detailed and highly interactive backdrop in which the players do battle. That interactivity is increased further with the introduction of destructible sections which, when blown up, can often open up new areas or rooms. Each level is littered with a variety of weapons that can be picked up and utilized by the player(s). Graphically, Outfoxies employed superb sprite scale and rotation techniques that elevated the already fun gameplay still further. The aeroplane level, for instance, dips and sways, bringing problems of inertia and gravity to the platform action. Also; the in-game camera zooms in and out of the level, depending on how far away the two opponents are from each other. Playable characters range from a monkey to a pair of psychotic school children, with each character choice offering the player different aptitudes (the monkey can jump higher, for example). A fun enough game in one-player mode, Outfoxies really came into its own when two human protagonists took part.</desc>
+		<rating>0.9</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Fight-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/outfxies.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="60861" source="ScreenScraper.fr">
+		<path>./pacnpal.zip</path>
+		<name>Pac And Pal</name>
+		<desc>Pac-Man has a new friend named Miru, but she tries to steal stuff and take it to the ghost pen. Pac-Man now not only has to collect the stuff lying around the board, but he must also watch Miru to make sure she doesn't take the stuff for her own use.</desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pacnpal.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="60859" source="ScreenScraper.fr">
+		<path>./pacland.zip</path>
+		<name>Pac-Land (World)</name>
+		<desc>Pac-Land is a horizontally-scrolling platform game set in the cartoon world of the game's title. A fairy has lost her way and needs Pac-Man to help her get back to her home of Fairyland. Pac-Man, with the fairy safely hidden beneath his hat, must run and jump through the colourful world until he reaches and enters the magical door to Fairyland. Upon being rescued, the fairy gives Pac-Man a pair of magical shoes for his trip back home. These enable him to jump wherever he wants, without the need for a platform to jump from. This effectively means Pac-Man can 'sky-jump' back home if he so wishes. 
+ 
+Directional buttons make Pac-Man walk left and right and it's possible to make him run by tapping the desired directional button twice. Pac-Man is pursued by his ever-present enemies in the form of five ghosts - Pinky, Inky, Blinky, Clyde and Sue. Pac-Man must avoid the ghosts and other deadly objects that populate the levels. As with previous games in the series, a small number of 'Powerpills' appear. Eating a Powerpill makes Pac-Man temporarily invincible and turns the ghosts purple and vulnerable to being eaten. On some stages, Pac-Man must use a springboard to jump over large ponds by leaping from the springboard and rapidly moving left and right while in the air. 
+ 
+The game's stages are called 'trips', with players able to start on any one of the first five. Each trip made up of four rounds (three rounds to reach Fairyland and one round to return home) with a short interval between each one. The objective in all trips is to get the fairy safely back to Fairyland then return home to Pac-Man's family. The majority of the trip involves moving from left to right, avoiding various obstacles such as the enemy ghosts, water spurts and quicksand traps. The journey home, however, scrolls right to left. 
+ 
+Each stage must be completed within a set time limit and if the player runs out of time before finishing a round, Sue (the purple ghost) will speed up considerably and kill Pac-Man. At the end of each round, players are awarded bonus points based on how much of the time limit remains. On each stage, cherries and other items can be collected for extra points. There are a total of 8 different trips in the game, totalling 32 levels. After the 8th trip, the 9th trip is a repeat of the 5th trip, with level 33 effectively being level 17, with an increased difficulty level.</desc>
+		<rating>0.8</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pacland.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="60862" source="ScreenScraper.fr">
+		<path>./pacplus.zip</path>
+		<name>Pac-man Plus</name>
+		<desc>The ghosts are the same, if their edible forms are changed. The maze is familiar, if a bit off in color. The prizes in the center are a bit different. Be careful, however: Pac-Man may eat a power pill and find that Blinky, who is right in front of the energizer for him to immediately eat, is still red, and now Pac-Man is dead. Also, you might want to try eating the ghosts after eating the center prize. They'll return to their normal forms shortly after turning visible.</desc>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pacplus.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="60860" source="ScreenScraper.fr">
+		<path>./pacmania.zip</path>
+		<name>Pac-Mania</name>
+		<desc>Pac-Mania is a 1- or 2-player game in which the player maneuvers Pac-Man through a world of 3-D mazes. He's back in action... but with a new twist, BOUNCE power! Ready for a new generation of Pac-Man players, he can't wait </desc>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pacmania.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="79257" source="ScreenScraper.fr">
+		<path>./phelios.zip</path>
+		<name>Phelios</name>
+		<desc>A great vertical shoot'em up game based on Greek mythology.   
+ 
+The player controls the sun god Apollo who is riding of his winged horse Pegasus flying through ancient Greece on a mission to rescue his sister Artemis the goddess of the moon, from the clutches of the fiend Typhon. Shoot all enemies like harpies and skeletons along with goblins and colossal enemy bosses. 
+ 
+Pressing the fire button makes his sword fire a tiny shot, while holding it down charges the sword, firing a bigger fireball upon release. Even the smallest enemies take multiple hits, so the standard shot is of little use.</desc>
+		<rating>0.6</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/phelios.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="79260" source="ScreenScraper.fr">
+		<path>./phozon.zip</path>
+		<name>Phozon (Japan)</name>
+		<desc>Phozon is an unusual puzzle/arcade hybrid in which the player controls a black molecule with four red spikes. The idea is for the player to align other floating molecules onto their own molecule to create an increasingly complex pattern; this must match the "blue print" molecule that is situated in the middle of the screen. To make molecules adhere to the player's molecule, the player simply touches the target molecule with their own. If a molecule attaches in a place that does not fit the pattern shown in the middle of the screen, the player must press the reject button to make if float away. Groups of multi-coloured rotating spheres move around the screen and must be avoided.</desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/phozon.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="42390" source="ScreenScraper.fr">
+		<path>./pistoldm.zip</path>
+		<name>Pistol Daimyo no Bōken (Japan)</name>
+		<desc>Bravoman spinoff starring one of the bosses of the first Bravoman game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pistoldm.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="42538" source="ScreenScraper.fr">
+		<path>./ptblank.zip</path>
+		<name>Point Blank (World, GN2 Rev B, set 1)</name>
+		<desc>Point Blank is a challenging light gun game where players can select from a variety of target practice mini games. 
+ 
+Many games require skill and accuracy, such as shooting cardboard cutouts of criminals, a one-shot chance at hitting a leaf, aiming for a specific toy from a shelf, and shooting at objects that move across the screen or rush towards the player. 
+ 
+Your 'judgement' is based on your shooting accuracy in some games, and others require you to hit a certain number of targets within the given time.</desc>
+		<rating>0.9</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ptblank.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="42447" source="ScreenScraper.fr">
+		<path>./polepos1.zip</path>
+		<name>Pole Position (Atari version 1)</name>
+		<desc>Pole Position is a 1-player game using a color raster-scan video display. Game action takes place at the Fuji Speedway in Japan. The country around the speedway consists of green meadows, hills, and snow-capped Mt. Fuji.  
+ 
+The player drives a Formula-1 race car on the track. The first objective of the game is to finish the qualifying lap as quickly as possible. If the player beats the clock, he or she qualifies for the race. If not, he or she drives out the remainder of the time along the qualifying course. </desc>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Atari</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/polepos1.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="42448" source="ScreenScraper.fr">
+		<path>./polepos2.zip</path>
+		<name>Pole Position 2 (Japan)</name>
+		<desc>Pole Position II is a 1-player game using a color raster-scan video display. Game action takes place at four different raceways - the Fuji Speedway in Japan, the Test Track (an oval track like Indy), the Seaside Speedway (with the Long Beach Pike in the background), and the Suzuka Speedway in Japan. The unique and picturesque scenery around each raceway adds exciting realism to each race!  
+ 
+The player drives a Formula-1 race car on each track. The first objective of the game is to finish the qualifying lap as quickly as possible. If the player beats the time, he or she qualifies for the race. If not, he or she drives the remainder of his time along the qualifying course.  
+</desc>
+		<rating>0.8</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/polepos2.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="42457" source="ScreenScraper.fr">
+		<path>./ponpoko.zip</path>
+		<name>Ponpoko</name>
+		<desc>Ponpoko  is a platform game similar to Donkey Kong and Mario Bros. 
+  
+In Ponpoko, the player controls a Tanuki (a Japanese raccoon dog) that can climb ladders, walk across floors and jump over gaps and tacks while trying to avoid red and yellow snakes. The player must collect all the fruits and vegetables in order to advance to the next level. There are also baskets that contain either points or snakes. Once the final level is reached (the beer mug level) the game will repeat that level endlessly.</desc>
+		<rating>0.6</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Sigma Enterprises</developer>
+		<publisher>Sigma Enterprises</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ponpoko.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="42480" source="ScreenScraper.fr">
+		<path>./porky.zip</path>
+		<name>Porky</name>
+		<desc>A pig drove around a city landscape avoiding potholes while shooting wolves with smoked sausages and dodging falling bombs and barbecue forks. For bonus points he could jump into the air to catch flying piglets.</desc>
+		<rating>0.3</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Shinkai Inc.</developer>
+		<publisher>Shinkai Inc.</publisher>
+		<genre>Shooter / Vehicle, Horizontal-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/porky.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="42504" source="ScreenScraper.fr">
+		<path>./primglex.zip</path>
+		<name>Prime Goal Ex (Japan, PG1/VER.A)</name>
+		<rating>0.7</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/primglex.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42544" source="ScreenScraper.fr">
+		<path>./puckman.zip</path>
+		<name>Puck Man (Japan set 1)</name>
+		<desc>Puckman is the seminal and hugely influential arcade game in which the player guides the legendary Puckman around a single-screen maze eating dots. Puckman is constantly pursued in his task by four colored ghosts. Each ghost has its own unique personality and behavioural patterns and a single touch from any of the ghosts results in Puckman losing a life. When all of Puckman's lives are lost, the game is over.</desc>
+		<rating>0.9</rating>
+		<releasedate>19800101T000000</releasedate>
+		<publisher>Namco</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/puckman.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42561" source="ScreenScraper.fr">
+		<path>./puzlclub.zip</path>
+		<name>Puzzle Club (Japan prototype)</name>
+		<desc>Puzzle Club is a sliding block puzzle video game. The objective of each stage is to make every row in the puzzle show matching animated icons before the timer reaches zero. Once a row is matched that row is shifted to the bottom of the puzzle.  Once all of the rows are matched the stage is completed and the players score is tallied.</desc>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Compilation</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/puzlclub.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game id="42615" source="ScreenScraper.fr">
+		<path>./quester.zip</path>
+		<name>Quester (Japan)</name>
+		<desc>The player must move a paddle left and right across the bottom of the screen deflecting a ball to hit bricks. Some bricks contain special power-ups to enhance play</desc>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/quester.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="42690" source="ScreenScraper.fr">
+		<path>./rallyx.zip</path>
+		<name>Rally X (32k Ver.?)</name>
+		<desc>In Rally-X, the player drives a car around a maze picking up all of the yellow flags, of which there are ten, before the car's fuel runs out. The game-play has a similar feel to another Namco legend, "Pac-Man"; although in Rally-X, the mazes are much larger and, with each maze having only ten flags to collect, is more sparsely populated than Namco's pill-eating legend. 
+ 
+In-game opponents consist of red enemy cars that try to ram into and destroy the player's car, a problem compounded by the fact that enemy cars are faster than the player's. A smoke screen can be activated which trails behind the player's car and causes any pursuing enemies to crash. Each maze also has rock formations which, if crashed into, will result in the loss of a player car. A radar display to the right hand side of the playing area shows the positions of both the flags, and the enemy vehicles.</desc>
+		<rating>0.8</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action-Race, Driving-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/rallyx.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="42810" source="ScreenScraper.fr">
+		<path>./roishtar.zip</path>
+		<name>Return Of Ishtar, The</name>
+		<desc>The Return of Ishtar is a sequel to The Tower of Druaga. It is an action game with light puzzle-solving elements that requires two players. One person is in control of the maiden Ki who fights with magic and the other controls Gilgamesh, the sword-wielding knight. Search for keys and special items. The tower has a few different ways to exit, and the aggregate total of levels is 128. 
+ 
+Players are presented a password to allow them to continue from where they left off.</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action-Fight-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/roishtar.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="42839" source="ScreenScraper.fr">
+		<path>./rthunder.zip</path>
+		<name>Rolling Thunder (rev 3)</name>
+		<desc>Rolling Thunder is a single-player scrolling platform shoot-em-up in which a James Bond-esque secret agent codenamed 'Albatross' has been ordered by the Rolling Thunder anti-espionage unit to stop the criminal organization known as Geldra. Albatross must also rescue captured field agent, Lelia Blitz and overthrow Geldra's leader, Maboo.</desc>
+		<rating>0.9</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/rthunder.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42838" source="ScreenScraper.fr">
+		<path>./rthun2.zip</path>
+		<name>Rolling Thunder 2</name>
+		<desc>Rolling Thunder 2 is a straight sequel to the superb 1986 original, Rolling Thunder 2 sees one or two players taking control of secret agents in this scrolling, platform shoot-em-up. The agents once again find themselves up against the sinister GERDRA organization and its many armed agents. Gameplay is very similar to the original, with doors both releasing enemies and hiding weapons and ammunition for the players to collect.</desc>
+		<rating>0.9</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/rthun2.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42815" source="ScreenScraper.fr">
+		<path>./romperso.zip</path>
+		<name>Rompers (Japan, old version)</name>
+		<desc>The player must take up control of Chap a gardener wearing a straw hat, who must collect all the keys in sixty-one maze-inspired gardens in order to rescue his girlfriend, Rumina. He can push the walls in the gardens over to crush the various enemies that pursue him, but they are immediately be resurrected in the form of eggs which hatch after a few seconds. Each round also has a preset time limit to ensure that the player does not dawdle - and once it runs out, a green-haired female vampire known as Tsukaima who cannot be crushed by the walls appears. The game's enemies include white blobs known as Pyokorin, flame-breathing pink Triceratops-esque creatures known as Kerara, armadillos known as Gororin which can roll over Chap, purple seals known as Todorin which can breathe ice, sponges known as Bekabeka, which can push walls onto Chap, turquoise blobs known as Fumajime Pyokorin, which occasionally pause to take a long drag on their cigarettes, helmet-wearing creatures known as Nachibo, which take two crushes to kill, wolves known as Taggus which can throw bombs at Chap, spiders known as Oogumo, which can spin webs for Chap to run into - and this game's main antagonist, an evil scientist named Gurerin who only appears in the final round, where players not only have to collect all the keys, but also push the walls onto his four clones (two of whom can breathe fire, the other two can breathe ice).</desc>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/romperso.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43024" source="ScreenScraper.fr">
+		<path>./shadowld.zip</path>
+		<name>Shadowland (YD3)</name>
+		<desc>You control Tarousuke, a boy who must travel through a scary world fighting demons and other monsters.</desc>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/shadowld.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43118" source="ScreenScraper.fr">
+		<path>./skykid.zip</path>
+		<name>Sky Kid (New version)</name>
+		<desc>Sky Kid is a 2-D, scrolling shooter type of game. You play as the character Sky Kid. Sky Kid flies around in a bi-plane and is assigned specific targets during the missions. These missions involved bombing specific targets. This would seem easy, however, there are a few obstacles Sky Kid must overcome to get to the target safely. First, the bi-plane is not equipped with the bomb. Sky Kid must pick up the bomb en route to the target. Second, there are both ground and air units that attempt to keep Sky Kid from accomplishing his mission. Last, Sky Kid may have to navigate through some very inhospitable terrain or navigate around cities in order to get to the target. The targets that Sky Kid must bomb will either be a fortress complex or a ship. As one moves farther up in the missions, it isn't uncommon to have multiple targets in one mission. Perhaps barnstorming would have been a better idea.</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/skykid.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43119" source="ScreenScraper.fr">
+		<path>./skykiddx.zip</path>
+		<name>Sky Kid Deluxe (set 1)</name>
+		<desc>Sky Kid Deluxe is an update to the original featuring: 
+Battle report between each mission. 
+New missions (X1-4). 
+Snow on missions X1 and X3. 
+Many new characters.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/skykiddx.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43174" source="ScreenScraper.fr">
+		<path>./solvalou.zip</path>
+		<name>Solvalou (Japan)</name>
+		<desc>Solvalou is a great sequel, with a first-person 3-D viewpoint. 
+ 
+You be once again the pilot of mighty combat aircraft 'Solvalou' this time under a first-person view, through the perspective of the pilot and armed with the classic weaponry the forward-firing gun for aerial targets, and the bombs to destroying ground-based targets.  
+ 
+Your pilot skills will be tested! destroy's all the air and ground enemies and dodge all his attacks, to reach the end and destroy the giant mothership 'Andor Genesis' to restore peace in the planet.</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shooter / Plane, 1st person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/solvalou.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43257" source="ScreenScraper.fr">
+		<path>./splatter.zip</path>
+		<name>Splatter House (World, new version (SH3))</name>
+		<desc>In a dark and stormy night, Rick and his girlfriend Jeniffer take refuge in the creepy West mansion, only to find himself dead and Jeniffer missing! Now, a mysterious sacrificial mask with amazing powers brings him back from the dead and in order to free himself from its curse, he must destroy the evil lurking deep within the mansion and save Jennifer in the process! Features some of the goriest graphics ever seen at its release date, awesome music &amp; sound effects, lots of the typical toys seen in horror flicks (knives, etc.) as well as lots of challenge!</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Beat'em Up-Fight / 2D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/splatter.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="43359" source="ScreenScraper.fr">
+		<path>./starswep.zip</path>
+		<name>Star Sweep (World, STP2/VER.A)</name>
+		<desc>Star Sweep (c) 1997 Axela.  - TECHNICAL -  Namco System 11 hardware Game ID : STP  Main CPU : PSX (@ 16.9344 Mhz), M37702 (@ 16.384 Mhz) Sound Chips : C352 (@ 16.384 Mhz)  Players : 4 Control : 8-way joystick Buttons : 3  - TRIVIA -  Released in July 1997</desc>
+		<rating>0.9</rating>
+		<releasedate>19970101T000000</releasedate>
+		<developer>Axela</developer>
+		<publisher>Axela</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/starswep.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="43344" source="ScreenScraper.fr">
+		<path>./starblad.zip</path>
+		<name>Starblade (World)</name>
+		<desc>Starblade is a 3-D space shoot'em up featuring 2 separate missions; the first is to destroy the planet 'Red Eye' while the second is to wipe out the enemy fleet and their leader. The game's sit-down cabinet featured a seat that vibrated whenever the player was hit, either by incoming fire or by enemy objects such as ships, asteroids etc. The yoke joystick - which had a fire button situated at the top of the stick, underneath where the player's thumb sits - was very similar in appearance and feel to that used in Atari's 1983 wireframe classic, "Star Wars (Atari)".</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shooter / Plane, 3rd person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/starblad.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43018" source="ScreenScraper.fr">
+		<path>./sgunner.zip</path>
+		<name>Steel Gunner (rev B)</name>
+		<desc>Some major trouble is brewing in the city of Neo Arc. A radical terrorist group known as S.T.U.R.M. is causing problems to the citizens of Neo Arc by kidnapping a well respected quantum physicist and his assistant in order to create an abominable war machine. However there's a ray of hope which come in the form of the police department's counter-terrorist force called Steel Gunner. Now the battle is set for it's up to both Steel Gunner Officers Cliff and Garcia to stop the seemingly merciless wrath of S.T.U.R.M. and it's leader: Gatse Bernard</desc>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sgunner.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="43019" source="ScreenScraper.fr">
+		<path>./sgunner2.zip</path>
+		<name>Steel Gunner 2 (US)</name>
+		<desc>Steel Gunner 2 (c) 1991 Namco.  - TECHNICAL -  The majority of cabinets for this game were released as conversion kits for Taito's "Operation Thunderbolt".  Namco System 2 hardware Game ID : SNS  Main CPU : (2x) 68000 (@ 12.288 Mhz), M6809 (@ 3.072 Mhz), </desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sgunner2.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="43444" source="ScreenScraper.fr">
+		<path>./suprglob.zip</path>
+		<name>Super Glob</name>
+		<desc>Guide the insatiable Super Glob through corridors, up and down the elevators and through the side tunnels in his never-ending search for snacks. An assortment of crafty animals relentlessly pursue Toby and fight him for control of the elevators. Stop them or avoid them and munch a dozen different snacks to clear the 24 unique levels.</desc>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Epos Corporation</developer>
+		<publisher>Epos Corporation</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/suprglob.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="43432" source="ScreenScraper.fr">
+		<path>./superpac.zip</path>
+		<name>Super Pac-Man</name>
+		<desc>Super Pac-Man is a 1- or 2-player game where you are in control of the legendary Pac-Man. As in the original "Pac-Man" game, the goal is to clear each maze, but this time, instead of dots, the maze consists of prizes which are locked away behind gates. There are two ways to access the prizes. You can eat the keys which open a particular gate, and not always the gate which is closest to that key. Or you can crash through the gate after you eat a Super Pill and become Super Pac-Man. You are not required to eat all of the keys in order to complete the stage.  
+ 
+Four Power Pills are in maze and allow Pac-Man to turn the tables on the ghosts and eat them for a short time. When the ghosts begin to flash, time is running out and they will switch back, so beware.  
+ 
+New in this game is the Super Pill. There are two Super Pills in the maze which allow Pac-Man to become Super Pac-Man for a limited period of time. While in Super form, Pac-Man can crash through the maze gates, fly over the ghosts and avoid being killed (or eat them when they're blue), and travel at super speed whenever the player presses and holds the Super Speed button. When the super power is about to run out, Pac-Man flashes white and then returns to his normal form. You can extend the duration of Super time by eating a regular Power Pill. The Super time will then be extended by the duration of the ghosts' blue time.  
+ 
+Pac-Man loses one life whenever a ghost catches him when the ghost is not blue and Pac-Man is not in Super form. You start with a set number of lives ('Lives' dip switch), and bonus lives can be awarded to you as you reach or pass certain preselected point values ('Extra Lives' dip switch).  
+ 
+The tunnel is a great way to put some space between you and any ghosts that are on your tail since they can only move half as fast as you when they are in it. In Super Pac-Man, the ghosts are also slowed down by travelling through the passage directly beneath the ghost pen. 
+ 
+Occasionally, a star will appear in the middle of the screen with a picture on the left, and a rotating picture on the right. You may eat the star at any time for bonus points, but if you manage to eat the star when the right picture matches the left one, you will receive a larger bonus.  
+ 
+As the stages increases, the ghosts speed up their pursuit of Pac-Man and they stay blue for shorter and shorter periods of time after he eats a Power Pill until, in the high stages, they do not turn blue at all.  
+ 
+Super Pac-Man also features bonus stages in Stage 3, Stage 7, and every fourth stage thereafter, where there are no ghosts, a time limit, and Pac-Man is in Super form throughout the stage. Your goal is to eat all of the prizes in the given time limit. As with gameplay on the regular levels, you don't need to eat all (or any) of the keys. You are awarded the remaining time in the counter as points for successfully eating everything. With each Bonus stage, the walls and gates change color.  
+ 
+</desc>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/superpac.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43474" source="ScreenScraper.fr">
+		<path>./swcourt.zip</path>
+		<name>Super World Court (World)</name>
+		<desc>Super World Court (c) 1992 Namco.  - TECHNICAL -  Namco System NA-1 hardware Game ID : SC  Main CPU : 68000 (@ 12.52825 Mhz), M37710 (@ 12.52825 Mhz) Sound Chips : C140 (@ 42.667 Khz)  Players : 4 Control : 8-way joystick Buttons : 3  - TRIVIA -  Even if </desc>
+		<rating>0.8</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Sports / Tennis-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/swcourt.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43479" source="ScreenScraper.fr">
+		<path>./sws.zip</path>
+		<name>Super World Stadium (Japan)</name>
+		<desc>Super World Stadium (c) 1992 Namco.  - TECHNICAL -  Namco System 2 hardware Game ID : SS  Main CPU : (2x) 68000 (@ 12.288 Mhz), M6809 (@ 3.072 Mhz), HD63705 (@ 2.048 Mhz) Sound Chips : C140 (@ 21.39 Khz), YM2151 (@ 3.57958 Mhz)  Players : 2 Control : 8-wa</desc>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sws.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43481" source="ScreenScraper.fr">
+		<path>./sws92.zip</path>
+		<name>Super World Stadium '92 (Japan)</name>
+		<desc>Super World Stadium '92 (c) 1992 Namco.  - TECHNICAL -  Namco System 2 hardware Game ID : SSS  Main CPU : (2x) 68000 (@ 12.288 Mhz), M6809 (@ 3.072 Mhz), HD63705 (@ 2.048 Mhz) Sound Chips : C140 (@ 21.39 Khz), YM2151 (@ 3.57958 Mhz)  Players : 2 Control :</desc>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<publisher>Namco</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sws92.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43482" source="ScreenScraper.fr">
+		<path>./sws93.zip</path>
+		<name>Super World Stadium '93 (Japan)</name>
+		<desc>Super World Stadium '93 (c) 1993 Namco.  - TECHNICAL -  Namco System 2 hardware Game ID : SST  Main CPU : (2x) 68000 (@ 12.288 Mhz), M6809 (@ 3.072 Mhz), HD63705 (@ 2.048 Mhz) Sound Chips : C140 (@ 21.39 Khz), YM2151 (@ 3.57958 Mhz)  Players : 2 Control :</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<publisher>Namco</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sws93.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43483" source="ScreenScraper.fr">
+		<path>./sws95.zip</path>
+		<name>Super World Stadium '95 (Japan)</name>
+		<desc>Super World Stadium '95 (c) 1995 Namco.  - TECHNICAL -  Namco System NB-1 hardware Game ID : SS5  Main CPU : 68EC020 (@ 24.192 Mhz), M37702 (@ 16.128 Mhz) Sound Chips : C352 (@ 16.128 Mhz)  Players : 2 Control : 8-way joystick Buttons : 3  - TRIVIA -  Sup</desc>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<publisher>Namco</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sws95.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43484" source="ScreenScraper.fr">
+		<path>./sws96.zip</path>
+		<name>Super World Stadium '96 (Japan)</name>
+		<desc>Super World Stadium '96 (c) 1996 Namco.  - TECHNICAL -  Namco System NB-1 hardware Game ID : SS6  Main CPU : 68EC020 (@ 24.192 Mhz), M37702 (@ 16.128 Mhz) Sound Chips : C352 (@ 16.128 Mhz)  Players : 2 Control : 8-way joystick Buttons : 3  - TRIVIA -  Sup</desc>
+		<rating>0.7</rating>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>Namco</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sws96.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43485" source="ScreenScraper.fr">
+		<path>./sws97.zip</path>
+		<name>Super World Stadium '97 (Japan)</name>
+		<desc>Super World Stadium '97 (c) 1997 Namco.  - TECHNICAL -  Namco System NB-1 hardware Game ID : SS7  Main CPU : 68EC020 (@ 24.192 Mhz), M37702 (@ 16.128 Mhz) Sound Chips : C352 (@ 16.128 Mhz)  Players : 2 Control : 8-way joystick Buttons : 3  - TRIVIA -  Sup</desc>
+		<rating>0.7</rating>
+		<releasedate>19970101T000000</releasedate>
+		<publisher>Namco</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sws97.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43464" source="ScreenScraper.fr">
+		<path>./suzuka8h.zip</path>
+		<name>Suzuka 8 Hours (World, Rev C)</name>
+		<desc>An excellent motorcycle game from Namco.</desc>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Motorcycle Race, 3rd Pers.-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/suzuka8h.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="43463" source="ScreenScraper.fr">
+		<path>./suzuk8h2.zip</path>
+		<name>Suzuka 8 Hours 2 (World, Rev B)</name>
+		<desc>A motorcycle game from Namco. This sequel features all the excitement from the original.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Motorcycle Race, 3rd Pers.-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/suzuk8h2.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="43513" source="ScreenScraper.fr">
+		<path>./tankbatt.zip</path>
+		<name>Tank Battalion</name>
+		<desc>Tank Battalion is a multi-directional shooter arcade video game. 
+ 
+The player, controlling a tank, must destroy 20 enemy tanks in each level, which enter the playfield from the top of the screen. The enemy tanks attempt to destroy the player's base (represented on the map as an eagle), as well as the player's tank. A level is completed when the player destroys all 20 enemy tanks, but the game ends if the player's base is destroyed or the player loses all his lives.</desc>
+		<rating>0.5</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tankbatt.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43515" source="ScreenScraper.fr">
+		<path>./tankfrce.zip</path>
+		<name>Tank Force (US, 2 Players)</name>
+		<desc>Tank Force is a multi-directional shooter arcade game that was released by Namco in 1991; it was the last game to run on their System 1 hardware (which had been in use for four years), is the sequel to Battle City, which was released six years earlier and is a sequel to Tank Battalion, which had been released five years before it (and eleven years before this title). The US version of the game was also the first of seven games from the company to display the Federal Bureau of Investigation's "Winners Don't Use Drugs" screen during its attract mode - the others are Steel Gunner 2, F/A, Cosmo Gang the Puzzle, Knuckle Heads, Lucky &amp; Wild, and Numan Athletics. Exvania and Super World Court, which were Japan-exclusive, may also feature the screen in their attract mode if the "Display FBI Screen" setting in the games' options menus has been set to "Yes".</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tankfrce.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43530" source="ScreenScraper.fr">
+		<path>./tceptor.zip</path>
+		<name>Thunder Ceptor</name>
+		<desc>Thunder Ceptor (c) 1986 Namco.  - TECHNICAL -  Game ID : TC  Main CPU : M6809 (@ 1.536 Mhz), 68000 (@ 12.288 Mhz), HD63701 (@ 1.536 Mhz) Sound CPU : (2x) M65C02 (@ 2.048 Mhz) Sound Chips : YM2151 (@ 3.579545 Mhz), Namco 8-channel WSG, DAC  Players : 1 Con</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shooter / Plane, 3rd person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/tceptor.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43625" source="ScreenScraper.fr">
+		<path>./tinklpit.zip</path>
+		<name>Tinkle Pit (Japan)</name>
+		<desc>The player contols Pitt and Patti, who must walk around the mazes, collecting items and avoiding enemies. They have the power to drop their Tinker power balls, which are both invulnerable to the enemies, and move around by pressing the Line button, therefore creating a line between them and their power balls. Releasing the button makes their power balls come back to them; the enemies are killed by having the power balls slam into them. There are also pieces of popcorn which can be picked up around the mazes - and pressing the Popcorn button, Pitt and Patti can throw them at the enemies, and they shall bounce off the walls until they hit one (or evaporate if they have not done so by the end of the stage).  
+ 
+Killing all enemies in a maze advances the player to the next stage; however, in the event of one enemy remaining, he will make for the nearest corner of the maze, say "Bye-bye!", and disappear - which will detract from the "Pursuit Bonus" that the players will receive after they defeat Mao at the end of the game.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tinklpit.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43652" source="ScreenScraper.fr">
+		<path>./todruaga.zip</path>
+		<name>Tower Of Druaga, The (New Ver.)</name>
+		<desc>You control the heroic prince Gilgamesh who must attempt to rescue the maiden Ki from the demon Druaga. You are armed with a sword and shield to attack and defend. Find hidden chests (and special items) when special conditions are met, some of which are required to beat the game. 
+ 
+Original story: 
+IN ANOTHER TIME 
+IN ANOTHER WORLD... 
+THE BLUE CRYSTAL ROD 
+KEPT THE KINGDOM IN PEACE 
+ 
+BUT THE EVIL DRUAGA 
+HID THE ROD 
+AND THE MAIDEN KI 
+IN A TOWER 
+ 
+THE PRINCE GILGAMESH 
+WORE GOLD ARMOR 
+AND ATTACKED MONSTERS 
+TO HELP KI IN 
+THE TOWER OF DRUAGA</desc>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/todruaga.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43705" source="ScreenScraper.fr">
+		<path>./toypop.zip</path>
+		<name>Toypop</name>
+		<desc>Toypop (c) 1986 Namco.  - TECHNICAL -  Game ID : TP  Main CPU : M6809 (@ 1.536 Mhz), 68000 (@ 6.144 Mhz) Sound CPU : M6809 (@ 1.536 Mhz) Sound Chips : Namco 8-channel WSG  Players : 2 Control : 4-way joystick Buttons : 1  - TRIVIA -  Toypop was released i</desc>
+		<rating>0.9</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/toypop.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43905" source="ScreenScraper.fr">
+		<path>./valkyrie.zip</path>
+		<name>Valkyrie no Densetsu (Japan)</name>
+		<desc>A top-down action-adventure game somewhat similar to The Legend of Zelda.</desc>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/valkyrie.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="150260" source="ScreenScraper.fr">
+		<path>./vanvan.zip</path>
+		<name>Van-Van Car</name>
+		<desc>The player must use a 4-directional joystick to take control of a yellow racer car (the "Van-Van Car"), which is on a mission to burst balloons with its front-mounted spike while watching out for the three killer cars.</desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Sanritsu Denki</developer>
+		<publisher>Sanritsu Denki</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/vanvan.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42707" source="ScreenScraper.fr">
+		<path>./rbibb.zip</path>
+		<name>Vs. Atari R.b.i. Baseball (set 1)</name>
+		<desc>Vs. Atari RBI Baseball (c) 1987 Atari Games Corp.  - TECHNICAL -  Main CPU : N2A03 (@ 1.789772 Mhz) Sound Chips : N2A03 (@ 1.789772 Mhz), DAC  Players : 2 Control : 8-way joystick Buttons : 2  - TRIVIA -  Vs. Atari RBI Baseball was released in September 1</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<publisher>Namco</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/rbibb.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40384" source="ScreenScraper.fr">
+		<path>./btlecity.zip</path>
+		<name>Vs. Battle City</name>
+		<desc>Vs. Battle City (c) 1985 Namco.  - TECHNICAL -  Main CPU : N2A03 (@ 1.789772 Mhz) Sound Chips : N2A03 (@ 1.789772 Mhz), DAC (@ 1.789772 Mhz)  Screen orientation : Horizontal Video resolution : 256 x 240 pixels Screen refresh : 60.00 Hz Palette colors : 64</desc>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<publisher>Namco</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/btlecity.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43354" source="ScreenScraper.fr">
+		<path>./starlstr.zip</path>
+		<name>Vs. Star Luster</name>
+		<desc>Vs. Star Luster (c) 1985 Namco.  - TECHNICAL -  Main CPU : N2A03 (@ 1.789772 Mhz) Sound Chips : N2A03 (@ 1.789772 Mhz), DAC (@ 1.789772 Mhz)  Screen orientation : Horizontal Video resolution : 256 x 240 pixels Screen refresh : 60.00 Hz Palette colors : 64</desc>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<publisher>Namco</publisher>
+		<genre>Shooter / Plane, 1st person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/starlstr.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43456" source="ScreenScraper.fr">
+		<path>./supxevs.zip</path>
+		<name>Vs. Super Xevious</name>
+		<desc>Super Xevious is an update to the original game that contains new enemies.</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<publisher>Namco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/supxevs.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43635" source="ScreenScraper.fr">
+		<path>./tkoboxng.zip</path>
+		<name>Vs. T.k.o. Boxing</name>
+		<desc>Vs. T.K.O. Boxing (c) 1987 Data East USA  - TECHNICAL -  Main CPU : N2A03 (@ 1.789772 Mhz) Sound Chips : N2A03 (@ 1.789772 Mhz), DAC (@ 1.789772 Mhz)  Screen orientation : Horizontal Video resolution : 256 x 240 pixels Screen refresh : 60.00 Hz Palette co</desc>
+		<rating>0.6</rating>
+		<releasedate>19870101T000000</releasedate>
+		<publisher>Namco</publisher>
+		<genre>Sports / Boxing-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tkoboxng.png</image>
+		<genreid>1540</genreid>
+	</game>
+	<game id="44036" source="ScreenScraper.fr">
+		<path>./warpwarp.zip</path>
+		<name>Warp And Warp</name>
+		<desc>The objective of the game is to pursue the mystery aliens by warping across 2 different worlds: the Space World and Maze World.  The player may choose when to warp to a different world, so it is possible to continue playing in the same world throughout the game. In Space World, the character uses a gun to shoot up enemy aliens, and in Maze World, aliens are killed using a time-delay bomb. The delay is controlled by the length of time the button is held down, and the player loses if the character is caught in the resulting explosion. 
+ 
+Power-ups may appear on some levels, and allow the player to shoot exploding bullets or attach bombs directly onto enemy aliens. However, the exploding bullets usable in Space World can only obtained in Maze World, and the power-up to attach bombs onto enemies in Maze World only appears in Space World. Players must alternate turns on the screen in the multiplayer mode.</desc>
+		<rating>0.3</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Various-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/warpwarp.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="39978" source="ScreenScraper.fr">
+		<path>./aliensec.zip</path>
+		<name>Alien Sector</name>
+		<desc>A scrolling shooter arcade game, that was released by Namco in 1985. It runs on Namco Pac-Land hardware, but with a video system like that used in Metro-Cross and Dragon Buster (modified to support vertical scrolling and a 2048-color palette). Ten years after its original arcade release, it was ported to the Sharp X68000, and it was also included in the fifth volume of the Namco Museum series on the Sony PlayStation. The game's primary protagonist, Toby "Kissy" Masuyo, predates by one year Samus Aran from Metroid as a human female playable character, although her face isn't revealed until she defeats the Octy King at the end.</desc>
+		<image>/userdata/roms/mame/images/aliensec.png</image>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="145370" source="ScreenScraper.fr">
+		<path>./arcadia.zip</path>
+		<name>Arcadia 2001</name>
+		<desc>A second-generation 8-bit console. The game library was composed of 51 unique games and about 10 variations. The graphic quality is similar to that of the Intellivision and the Odyssey.</desc>
+		<image>/userdata/roms/mame/images/arcadia.png</image>
+		<releasedate>19820101T000000</releasedate>
+		<lang>en</lang>
+		<region>us</region>
+	</game>
+	<game id="150468" source="ScreenScraper.fr">
+		<path>./armorcar.zip</path>
+		<name>Armored Car (set 1)</name>
+		<desc>An overhead view maze game where you drive a money van (the armoured car) through as it scrolls from right to left. Some intersections are marked with directions. You pick up money to deliver to banks while avoiding criminals by dropping saw horses in roadway. Fuel levels must be replenished at gas stations along the way.</desc>
+		<image>/userdata/roms/mame/images/armorcar.png</image>
+		<rating>0.5</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Stern Electronics, Inc.</developer>
+		<publisher>Stern Electronics</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40074" source="ScreenScraper.fr">
+		<path>./assaultj.zip</path>
+		<name>Assault (Japan)</name>
+		<desc>Your mission is to reclaim your homeland by destroying the enemy forces that have taken over. You have an Assault tank, the supreme mobile weapon. Your tank has artillery guns and grenades, can perform Rapid Rolls to dodge enemy shots, and uses Power Wheelies to launch grenades. 
+ 
+Your controls are two 4-position joysticks with triggers. These controls make Assault like no other tank game. You have a quick, highly responsive vehicle with fast movement in all directions. To avoid enemy shots, Rapid Roll your tank left or right by moving both joysticks to the same side. To launch grenades, put the tank in the Power Wheelie position by moving both joysticks to the outside, then pressing either trigger. Your grenades are triple the fire power of your tank's standard shots. 
+ 
+Your tank is always in the center of the screen no matter what direction you are going. With Assault's 360-degree scrolling playfield, the world rotates around you as you move. An arrow always points you towards the exit to the next level. 
+ 
+The lift zone gives you an advantage over the invaders and a spectacular view of the playfield. Each lift zone is a five-sided platform on the playfield that flashes red when you can use it. When you drive onto the lift zone, your tank jets straight up to get a bird's eye view of the surrounding terrain and enemy lines. From this overhead position, you can reconnoiter enemy forces and bomb enemy outposts. 
+ 
+Fight your way through 11 different levels to seek out and destroy the invaderâ€™s headquarters. To succeed, you must: 
+Dodge enemy gunfire with the Rapid Roll maneuver. 
+Assault enemy lines with long-range powerful grenades launched from Power Wheelies. 
+Destroy all enemy tanks you encounter to prevent rear attacks. 
+Bomb enemy outposts and reconnoiter enemy emplacements using the lift zones. 
+Protect yourself against enemy artillery using buildings and trees. 
+Blow up the large cannons on each level while you avoid enemy attacks. 
+Follow the arrow to find the exit to the next level. Before you can exit, you must destroy the large cannons defending the enemy strongholds.</desc>
+		<image>/userdata/roms/mame/images/assaultj.png</image>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Race, Driving-Shooter</genre>
+		<players>1</players>
+		<lang>jp</lang>
+		<region>jp</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="204268" source="ScreenScraper.fr">
+		<path>./acitya.zip</path>
+		<name>Atlantic City Action</name>
+		<desc>A one or two player casino game.</desc>
+		<image>/userdata/roms/mame/images/acitya.png</image>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Epos Corporation</developer>
+		<genre>Casino-Casino / Cards</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3584</genreid>
+	</game>
+	<game id="40135" source="ScreenScraper.fr">
+		<path>./bakutotu.zip</path>
+		<name>Bakutotsu Kijuutei</name>
+		<desc>Bakutotsu Kijuutei is the sequel to BaRaDuKe, which was released three years earlier. As in the original game, the player must take control of a spaceman in a bio-suit (who is a caricature of a Namco employee) while fighting the strange-looking Octy and saving the one-eyed Paccets - except this time Player 1 is Takky and Player 2 is Hommy. The Paccets that the spacemen collect during the stage now come in two different colours (yellow and white), and will circle around them, and the yellow ones will also add to their scores at the end of the stage (for 100, 200, 500, 1000, 2000, 4000 and 7650 points in succession) instead of featuring in the bonus game, which now only happens before a boss stage; however, the white ones will not, because they cannot be killed. If a yellow Paccet is accidentally shot or killed by an enemy, he will explode and send his eyeball flying - and if the player catches the eyeball he will receive a single point. Several new enemies have also been introduced (one of which, the "Block Brain", first appeared in Beraboh Man, and another, the "Black Paccet", is an evil version of the Paccets); the boss for the thirtieth stage, "Dark Paccet", is also an enormous evil version of the Paccets. If the player defeats Dark Paccet on his first try, the game shall not end - instead, six more stages will have to be played, and if a player wins the game (regardless of if it ends on Stage 30 or 36), he will not be able to enter his name on its high score table. There are now four different types of capsules; as a general rule, the yellow ones contain Paccets, while the red ones contain Baganns (the Pac-Man-like aliens from the original title), the blue ones contain shot powerups, and the green ones contain speed powerups. It is also now impossible to move backwards (like in Super Mario Bros.) - but if the player dies, he will be sent back to the beginning of the stage (unlike in the original, where he would restart in the place where he died) and be reprimanded by the "Paccet Ojisan", who also appears for the start of some stages to give him advice.</desc>
+		<image>/userdata/roms/mame/images/bakutotu.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40200" source="ScreenScraper.fr">
+		<path>./berabohm.zip</path>
+		<name>Beraboh Man (Japan, Rev C)</name>
+		<desc>Bravoman is a sentai parody action game. 
+ 
+The subtitle of this game translates from Japanese as 'Unequaled Man'. 
+ 
+This game is called 'Berabow Man' by Namco though this is likely a mistranslation as the later NEC PC-Engine port is called 'Bravoman'. The name 'BERABOW' appears in the default high score list. 
+ 
+In Stage 8, the main character from "Pistol-Shogun - Pistol Daimyo no Bouken" (which was released 2 years later) must be fought. 
+ 
+Bravoman did a cameo appearance in Namco x Capcom released for the Sony PS2 in 2005.</desc>
+		<image>/userdata/roms/mame/images/berabohm.png</image>
+		<rating>0.3</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40256" source="ScreenScraper.fr">
+		<path>./blastoff.zip</path>
+		<name>Blast Off (Japan)</name>
+		<desc>Blast Off is a vertically scrolling shoot'em up. Despite the drastically different gameplay, Blast Off is the sequel to Bosconian which was released eight years earlier. 
+ 
+As in many other vertical scrolling shooters (including Namco's own Xevious), the player controls a ship, facing the top of the screen, that can move freely while the background scrolls down, bringing enemies in to view; the player may destroy enemies for points. The game uses two buttons - one is used to make the ship fire circular lasers, while the other is used to cycle through its four firing patterns. The red pattern is two lasers in a spiral pattern, while the blue one is one laser straight ahead and one behind, the yellow one is one laser straight ahead, one left, and one right and the green one is two lasers diagonally forward (one to the left and one to the right), and one straight behind; by holding down the button, the ship fires more powerful, spherical lasers.</desc>
+		<image>/userdata/roms/mame/images/blastoff.png</image>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40259" source="ScreenScraper.fr">
+		<path>./blazlaz.zip</path>
+		<name>Blazing Lazers (United Amusements PC Engine)</name>
+		<desc>Blazing Lazers (c) 1989 Hudson Soft.  - TECHNICAL -  United Amusement PC-Engine based hardware  - TRIVIA -  In 1989, United Amusement (a large operator of arcades in the US at that time) developed a JAMMA interface for the PC-Engine with NEC's blessing. N</desc>
+		<image>/userdata/roms/mame/images/blazlaz.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Hudson</developer>
+		<publisher>Hudson</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1</players>
+		<playcount>1</playcount>
+		<lastplayed>20210123T110559</lastplayed>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40324" source="ScreenScraper.fr">
+		<path>./bombbee.zip</path>
+		<name>Bomb Bee</name>
+		<desc>In this old ball and paddle game, you control a paddle that must rebound a ball into the colorized bricks and pop-bumpers.</desc>
+		<image>/userdata/roms/mame/images/bombbee.png</image>
+		<rating>0.3</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="40341" source="ScreenScraper.fr">
+		<path>./bosco.zip</path>
+		<name>Bosconian (New version)</name>
+		<desc>Bosconian is a multi-directional space shooter where the player must destroy several enemy bases on each round while evading enemy ships, asteroids and mines. Enemy bases are destroyed either with a shot to the center or by shooting out all six base cannons. The player's ship is always positioned in the center of the screen with everything else scrolling around it as the player flies. A radar map to the right shows the position of the player, enemy bases, and occasional formation attack groups.</desc>
+		<image>/userdata/roms/mame/images/bosco.png</image>
+		<rating>0.4</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="40354" source="ScreenScraper.fr">
+		<path>./boxyboy.zip</path>
+		<name>Boxy Boy (SB?)</name>
+		<desc>Boxy Boy. is a puzzle game where you control a boy who tries to push the boxes onto the blue circles.</desc>
+		<image>/userdata/roms/mame/images/boxyboy.png</image>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40409" source="ScreenScraper.fr">
+		<path>./burnforc.zip</path>
+		<name>Burning Force (Japan, new version (Rev C))</name>
+		<desc>Burning Force is a chase-view shoot'em up where you battle high-tech enemies on a futuristic motor scooter. 
+ 
+The gameplay is similar to that of Sega's Space Harrier, but the worlds are divided into four areas and there is no vertical mobility. In the first two sections the player controls Hiromi on the airbike, which can move to the left and right, as well as braking and accelerating. The airbike can also fire bullets and missiles at the enemies. The third area of every world is a boss area. The airbike will be transformed into a flying ship which can move in all directions. The fourth area of each world is a bonus stage and the player has to collect as many spheres as possible for bonus points.</desc>
+		<image>/userdata/roms/mame/images/burnforc.png</image>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shooter / Vehicle, 3rd person-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1028</genreid>
+	</game>
+	<game id="40687" source="ScreenScraper.fr">
+		<path>./cosmogng.zip</path>
+		<name>Cosmo Gang The Video (US)</name>
+		<desc>Defend against the Cosmo Gang baddies which enter in patterns and join an attack formation. Keep the baddies from stealing energy in the challenging stages.</desc>
+		<image>/userdata/roms/mame/images/cosmogng.png</image>
+		<rating>0.8</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40787" source="ScreenScraper.fr">
+		<path>./cybrcomm.zip</path>
+		<name>Cyber Commando (Rev. CY1, Japan)</name>
+		<desc>The player pilots a futuristic tank that glides smoothly over the surface like a 'sled', searching for enemies to destroy.</desc>
+		<image>/userdata/roms/mame/images/cybrcomm.png</image>
+		<rating>0.6</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shooter / 3rd person-Shooter</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="40789" source="ScreenScraper.fr">
+		<path>./cybsled.zip</path>
+		<name>Cyber Sled (World)</name>
+		<desc>Piloting a colorful tank that slides over the surface like a 'Sled' in an arena of the future, the pilots fight for prestige and glory. Ending the game (either by winning or being eliminated) gives the player a rank and a letter grade to show how good you really are.</desc>
+		<image>/userdata/roms/mame/images/cybsled.png</image>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shooter / Vehicle, 3rd person-Shooter</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1028</genreid>
+	</game>
+	<game id="40815" source="ScreenScraper.fr">
+		<path>./dangseed.zip</path>
+		<name>Dangerous Seed (Japan)</name>
+		<desc>The player assumes control of three separate ships. Each ship has a different firing pattern. When the three ships are combined together, they form the Moon Diver. Their mission is to quell an alien invasion which is spanning all of the Milky Way and destroy the alien headquarters: the Danger-Seed. 
+ 
+The player starts the game with three separate fighters and has to make it through four tubes using the fighters separately. If one gets destroyed, then the next, more powerful ship makes an attempt to get through. If the player makes it to the fifth stage, the three ships combine into a singular composite ship called the "Moon Diver", which has a massive amount of firepower.</desc>
+		<image>/userdata/roms/mame/images/dangseed.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40920" source="ScreenScraper.fr">
+		<path>./digdug.zip</path>
+		<name>Dig Dug (rev 2)</name>
+		<desc>Dig Dug is single screen action game in which the player must dig horizontal and vertical tunnels to reach and eliminate the underground-dwelling monsters living there. This is achieved by either inflating them with an air pump until they explode, or by dropping rocks onto them.</desc>
+		<image>/userdata/roms/mame/images/digdug.png</image>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40921" source="ScreenScraper.fr">
+		<path>./digdug2.zip</path>
+		<name>Dig Dug 2 (New Ver.)</name>
+		<desc>For this sequel to the 1982 classic, "Dig Dug", Namco changed the game's perspective from a cutaway side-on viewpoint to an overhead one. The action now takes place on a series of small islands, the gameplay itself retains much from its predecessor, with Dig Dug still being chased by the 'Pookas' (round, goggle-wearing red enemies) and the 'Fygers' (green, fire-breathing dragons). 
+ 
+As with the first game, Dig Dug is still armed with a pump that allows him to inflate and burst the enemies. For the sequel, however, he is also armed with a jackhammer. This can be used at the round ground-pegs scattered around each island to create and connect up fault lines in the ground. If both ends of a system of faults reaches the water, the ground surrounded by them will sink into the ocean killing all creatures on it, including Dig Dug himself if he is standing on the destroyed section of land.</desc>
+		<image>/userdata/roms/mame/images/digdug2.png</image>
+		<rating>0.8</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Thunder Mountain</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40931" source="ScreenScraper.fr">
+		<path>./dirtfoxj.zip</path>
+		<name>Dirt Fox (Japan)</name>
+		<desc>Dirtfox is an overhead-view racing game.</desc>
+		<image>/userdata/roms/mame/images/dirtfoxj.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1</players>
+		<lang>jp</lang>
+		<region>jp</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="44084" source="ScreenScraper.fr">
+		<path>./winrun91.zip</path>
+		<name>Winning Run '91 (Japan)</name>
+		<desc>Winning Run 91 (c) 1991 Namco.  - TECHNICAL -  Namco System 21 hardware  Main CPU : (3x) 68000 (@ 12.288 Mhz), M6809 (@ 3.072 Mhz), HD63705 (@ 2.048 Mhz) Sound Chips : C140 (@ 32 Khz), YM2151 (@ 3.57958 Mhz)  Players : 1 Buttons : 4  - TRIVIA -  Released</desc>
+		<image>/userdata/roms/mame/images/winrun91.png</image>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>Namco</publisher>
+		<genre>Race 1st Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="44102" source="ScreenScraper.fr">
+		<path>./wldcourt.zip</path>
+		<name>World Court (Japan)</name>
+		<desc>Pro Tennis: World Court (Puro Tenisu: Wārudo Kōto) is a tennis sports arcade game that was released by Namco in 1988 only in Japan. It runs upon Namco System 1 hardware and was inspired by the 1987 Famicom game "Family Tennis". In August 1988, the game was ported to the PC Engine console, in which a new tennis-based role-playing quest mode was added, and was later ported to the North American TurboGrafx-16 console by NEC under the title of "World Court Tennis" in 1989. A sequel named Super World Court was released in 1992, which ran on Namco NA-1 hardware and allowed up to four players to play simultaneously.</desc>
+		<image>/userdata/roms/mame/images/wldcourt.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Sports / Tennis-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="44109" source="ScreenScraper.fr">
+		<path>./wndrmomo.zip</path>
+		<name>Wonder Momo</name>
+		<desc>An excellent side-scrolling beat em up game. 
+ 
+We play with a beautiful teen actress named Momo, through various theater levels, she must face of all enemies from the 'Warudemon' Phantom Army, with kicks and double kicks and must pick up a tornado item to get the ability to turn into 'Wonder Momo' using his super suit that lets throw his 'Wonder hoop' and the powerful 'Wonder Typhoon'. 
+ 
+When you reach the end of each level, a boss appears and has to be defeated to unlock the next stage.</desc>
+		<image>/userdata/roms/mame/images/wndrmomo.png</image>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Fight / 2D-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="44127" source="ScreenScraper.fr">
+		<path>./ws.zip</path>
+		<name>World Stadium (Japan)</name>
+		<desc>A Japanese baseball game that is essentially an arcade rendition of Namco's 'Family Stadium' for the Nintendo Famicom.</desc>
+		<image>/userdata/roms/mame/images/ws.png</image>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="44154" source="ScreenScraper.fr">
+		<path>./xevious.zip</path>
+		<name>Xevious (Namco)</name>
+		<desc>It's a nightmare, but it's true! Research shows that we are the actual aliens on Earth, and the ruthless Xevions are the original inhabitants.
+
+Now the Xevions want Earth back -- minus humans! Their invasion forces are fierce -- the land is crawling with deadly Domogram Rovers; the sky is black with Toroid Patrol Fleets and Zoshi Death Squads.
+
+Our puny weapons offer no defense. Earth's only hope is our powerful new Solvalou Fighter Plane. Its pilot will have a single mission: Penetrate the enemy ranks and destroy the Xevious Mother Ship.
+
+The mission is dangerous. We can't guarantee success. But at this point, it's do or die!
+
+One small problem. We still need a pilot. Any volunteers?</desc>
+		<image>/userdata/roms/mame/images/xevious.png</image>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+</gameList>

@@ -1,0 +1,392 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="43407" source="ScreenScraper.fr">
+		<path>./stvbios.zip</path>
+		<name>St-v Bios</name>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>SEGA</publisher>
+		<genre>Compilation</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/stvbios.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game source="ScreenScraper.fr">
+		<path>./jdredd.zip</path>
+		<name>Judge Dredd</name>
+		<desc>Arcade Video game published 24 years ago:
+
+Judge Dredd Arcade (c) 11/1997 Acclaim.
+
+- TECHNICAL -
+
+Main CPU: SPU (@ 16.9344 Mhz)
+Sound Chips: SPU (@ 16.9344 Mhz)
+
+Screen orientation: Horizontal
+Video resolution: 640 x 480 pixels
+Screen refresh: 60.00 Hz
+Palette Colors: 65536
+
+Players: 2
+Control: 8-way joystick
+Buttons: 6
+
+- TRIVIA -
+
+The game was NOT based on the film at all - in fact it was begun long before programmers/designers knew about the film. During it's lifetime it went through three name changes (two being completely non-dredd related) before finally changing back into a Dredd based game!
+
+- UPDATES -
+
+REV. B:
+* Build date: "12:22:24 Nov 26 1997"
+
+REV. C:
+* Build date: "12:08:44 Dec 17 1997"
+
+- STAFF -
+
+*Team Gremlin*
+Lead Programmer: Jim Tebbutt
+Lead 3D Artists: Syd Franklin, Dave Lewis
+Character Models &amp; Graphics: Matt Sandford, Nick Tipping, Mick Hurst
+Front End Programmer: Alex 'Ferret' Ferrier
+Additional Programming: Phil Rankin, Jake Habgood, Paul Hiley
+Motion Capture Engineers: Mike Sheehan, Tony Wills, Rob Millington
+Product Support: Rob Millington, Simon Short
+Capture Artists: Alex Kelly, Brian Aiken
+Sound FX: Raymond Usher Allan Walker
+In-Game Music: Stuart Ross
+Software Manager: Tim Heaton
+Quality Assurance Manager: Carl Cavers
+Creative Manager: Pat Phelan
+Test Supervisor: Jon Watson
+Lead Tester: Julia Sturman
+Product Testers: Travis Ryan, Steven Woodward, Matt Tuckett, Eric Booker
+Produced by: Steven Zaluo
+
+*Video Cut Sequences*
+Judge Dredd: Richard Waters
+Royston Bean: Christopher Wilkinson
+The Mayor: David Fredrickson
+Chief Judge: Marc Finn
+Control Judge: Tina Pelini
+Bodyguard: Ade Carless
+Litter Geek: Ricki Martin
+Lighting Director: Marc Clayton
+Camera Operator: Darren Mills
+Music: Pat Phelan
+Costume Stylist: Jon Musson
+Make-Up Designer: Abigail Graves
+Make-Up Assistant: Judith Crowe
+Prop Construction: Nik Hull 
+Live Special Effects: Cyberteknix
+Graphics &amp; Storyboards: Les Spink
+Production Assistance: Ade Carless, Keith Dando
+Digital Speech Effects: Darren Mills
+FMV written, directed &amp; produced by: Allan Coltman
+
+*Acclaim Team*
+System Software: Mike Sundius
+Custom Hardware: Jim Hunkins
+Engineering Manager: Manoj Bhatnagar
+Marketing Manager: Phil Alne
+Hardware Engineer: David Rayes
+
+- CONTRIBUTE -
+
+Edit this entry: https://www.arcade-history.com/?&amp;page=detail&amp;id=1233&amp;o=2</desc>
+		<image>/userdata/roms/mame/images/jdredd.png</image>
+		<marquee>./images/jdredd-marquee.png</marquee>
+		<thumbnail>./images/jdredd-thumb.png</thumbnail>
+		<rating>0.5</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Acclaim</developer>
+		<publisher>Acclaim</publisher>
+		<genre>Shooter / Gun</genre>
+		<players>2</players>
+		<playcount>5</playcount>
+		<lastplayed>20210517T205808</lastplayed>
+		<crc32>701D8360</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>FC0F326747867CBDAEA31A1B28BED699</cheevosHash>
+		<genreid>262</genreid>
+	</game>
+	<game>
+		<path>./acpsx.zip</path>
+		<name>Acclaim PSX</name>
+		<image>./images/acpsx-image.png</image>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Acclaim</developer>
+		<publisher>Acclaim</publisher>
+		<genre>System / BIOS</genre>
+		<players>4</players>
+		<playcount>1</playcount>
+		<lastplayed>20210613T103027</lastplayed>
+		<lang>en</lang>
+		<region>us</region>
+	</game>
+	<game source="ScreenScraper.fr">
+		<path>./magictg.zip</path>
+		<name>Magic the Gathering: Armageddon</name>
+		<desc>Arcade Video game published 24 years ago:
+
+Magic the Gathering - Armageddon (c) 1997 Acclaim Coin-Operated Entertainment, Incorporated.
+
+Two wizards square off in a magical battle based on the popular trading card game. Each wizard can summon creatures or deal direct damage to their opponent. The last wizard standing wins.
+
+Players choose one of five colors/magical disciplines: Red (fire magic, mountain creatures) White (healing/curative magic, knights/soldiers), Blue (water elements/creatures, counter magic) Green (elves, forest creatures) and Black (death magic, undead creatures) and fight another wizard on a magical playfield. Each player can summon magical creatures to do their bidding, but they can also directly attack another wizard, or they can use their magical energy for defense. Players can move around the playfield, occupying one of five spots.
+
+Targeting is achieved through a trackball; move the cursor to the opponent you wish to attack or to an area on the playfield where you would like to make a creature appear. The longer you hold the summon button, the more powerful the resulting creature will be, so there's a trade-off in speed for power.
+
+The gameplay can be particulary difficult. In addition to becoming skilled with a trackball, there are lots of buttons to press as you try to create creatures to fight for you. Shifting your strategy on the fly is often necessary. You may want to create big creatures, but if your opponent is swarming you with tons of little enemies, you will have to go on the defensive.
+
+This is an unusual game in many respects -- a mix between a strategy game and a fighting game.
+
+- TECHNICAL -
+
+CPU: R4600 (big) @ 10MHz
+
+Acclaim's arcade chipset is called Epidemic. The 3-D polygonal graphics are powered by a dual-processor Obsidian 3Dfx board.
+
+- TRIVIA -
+
+Magic the Gathering Armageddon was released in June 1997.
+
+Acclaim's Mountain View, California-based coin-op division went out of business shortly after creating this game. It never went into full production, which is a shame, since the title had both an innovative, complex gameplay and a hot license going for it. Only a handful of units shipped (one was spotted in the Tomorrowland arcade at Walt Disney World in 1998; another showed up at Namco's WonderPark in San Jose, CA the same year), but few people even know this game exists. Multiple previews of the game appeared in GamePro magazine, as well as other enthustiast publications.
+
+This was Acclaim's third coin-op, joining its previous titles of "NBA Jam Extreme" and "Batman Forever". The game was not released for any home systems, and has no relation to Acclaim's 'Magic The Gathering' titles for the Sony PlayStation.
+
+- PORTS -
+
+* CONSOLES:
+Nintendo 64 (unreleased prototype)
+
+- CONTRIBUTE -
+
+Edit this entry: https://www.arcade-history.com/?&amp;page=detail&amp;id=19538&amp;o=2</desc>
+		<image>/userdata/roms/mame/images/magictg.png</image>
+		<thumbnail>./images/magictg-thumb.png</thumbnail>
+		<rating>0.1</rating>
+		<releasedate>19970101T000000</releasedate>
+		<developer>Acclaim</developer>
+		<publisher>Acclaim</publisher>
+		<genre>Fighter / Versus</genre>
+		<players>0</players>
+		<playcount>6</playcount>
+		<lastplayed>20210807T133214</lastplayed>
+		<crc32>F1FD0ABE</crc32>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>EC336F3589BD1598FC94AE3637089496</cheevosHash>
+		<genreid>262</genreid>
+	</game>
+	<game source="ScreenScraper.fr">
+		<path>./nbajamex.zip</path>
+		<name>NBA Jam Extreme</name>
+		<desc>Arcade Video game published 25 years ago:
+
+NBA Jam Extreme (c) 1996 Acclaim Coin-Operated Entertainment, Incorporated.
+
+- TECHNICAL -
+
+Main CPU: PSX (@ 16.9344 Mhz)
+
+Players: 2
+Control: 8-way joystick
+Buttons: 6
+
+- TRIVIA -
+
+NBA Jam Extreme was released on December 17, 1996.
+
+Midway lost the NBA Jam license to Acclaim in 1995. Midway developed the 2-D games "NBA Hangtime" and "NBA Maximum Hangtime" while Acclaim developed the 3-D game NBA Jam Extreme.
+
+- TIPS AND TRICKS -
+
+Goaltending allowed: At the tip-off, Press Extreme(x8), Pass, Extreme(x9).
+
+Maximum dunk and three points stat for every player: At the tip-off, Press Turbo(x5), Pass, Extreme, Turbo(x6).
+
+Maximum rebound stat for every player: At the tip-off, Press Pass(x2), Extreme, Special, Extreme, Turbo.
+
+Maximum speed stat for every player: Press Extreme(x10), Pass(x3).
+
+Maximum steal/block stat for every player: At the tip-off, Press Pass(x3), Turbo(x3), Extreme(x3), Pass(x3).
+
+Maximum 3 points stat for every player: At the tip-off, Press Pass(x8), Extreme, Pass(x7).
+
+No CPU assistance: At the tip-off, Press Extreme, Turbo, Pass(x2).
+
+Play with beach ball: At the tip-off, Press Pass(x2), Turbo, Extreme, Turbo, Pass(x2).
+
+Play with soccer ball: At the tip-off, Press Pass(x2), Turbo(x3), Extreme(x3).
+
+- SERIES -
+
+1. NBA Jam (1993)
+2. NBA Jam Tournament Edition (1994)
+3. NBA Hangtime (1996)
+4. NBA Maximum Hangtime (1996)
+5. NBA Jam Extreme (1996)
+6. NBA Jam 99 (1998, N64)
+7. NBA Showtime - NBA on NBC (1999)
+8. NBA Jam 2000 (1999, N64)
+9. NBA Jam 2001 (2000, GBC)
+10. NBA Jam 2002 (2002, GBA)
+11. NBA Jam (2003, PS2, X-Box)
+12. NBA Jam 2004 (2003, unreleased GameCube prototype)
+13. NBA Jam (2010, Nintendo Wii)
+14. NBA Jam - On Fire Edition (2011, PSN, XBOX Live)
+
+- PORTS -
+
+* CONSOLES:
+[US] Sega Saturn (1996) "NBA Jam Extreme [Model T-8120H]"
+[US] Sony PlayStation (1996) "NBA Jam Extreme [Model SLUS-00388]"
+
+* COMPUTERS:
+PC [MS Windows 9x, CD-ROM] (1997)
+
+- CONTRIBUTE -
+
+Edit this entry: https://www.arcade-history.com/?&amp;page=detail&amp;id=1734&amp;o=2</desc>
+		<image>/userdata/roms/mame/images/nbajamex.png</image>
+		<marquee>./images/nbajamex-marquee.png</marquee>
+		<thumbnail>./images/nbajamex-thumb.png</thumbnail>
+		<rating>0.8</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Acclaim</developer>
+		<publisher>Acclaim</publisher>
+		<genre>Sports / Basketball</genre>
+		<players>4</players>
+		<playcount>4</playcount>
+		<lastplayed>20210807T133232</lastplayed>
+		<crc32>79DD064F</crc32>
+		<gametime>167</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>F8FDBFB5C0E64BBB7D319EDA732A51D8</cheevosHash>
+		<genreid>1538</genreid>
+	</game>
+	<game source="ScreenScraper.fr">
+		<path>./batmanfr.zip</path>
+		<name>Batman Forever</name>
+		<desc>Sega ST-V cart. published 25 years ago:
+
+Batman Forever (c) 1996 Acclaim.
+
+A side scrolling beat'em-up for one or two players based on the movie of the same name, featuring the Dark Knight and his side-kick, Robin. Players control either Batman or Robin as they fight their way through numerous stages, facing battles with two of Batman's notorious foes, 'Two-Face' and 'The Riddler'.
+
+Numerous weapons can be used throughout the game to aid Batman in his quest; including the Bat-a-rang, Batrope, Gas Gun and the Metal Cutter. Batman can reach high platforms with the use of the Batrope.
+
+- TECHNICAL -
+
+Runs on the "ST-V [Sega Titan Video Game System]" hardware.
+
+Screen orientation: Horizontal
+
+Players: 2
+Control: 8-way joystick
+Buttons: 3
+
+- TRIVIA -
+
+Released in May 1996.
+
+The game was designed by Iguana Entertainment and is based on the movie featuring Val Kilmer, Jim Carrey, Tommy Lee Jones and Nicole Kidman. The game's movie license is used to full effect, with intermission scenes featuring sampled voices of the film's actors, as well as photographic stills taken directly from the movie.
+
+- STAFF -
+
+Producer: Neill Glancy
+
+* Design:
+Game Design: Neill Glancy, Stephen Broumley, Carl Wade
+Additional Design: Nigel Cook, Ian Dunlop, Jason Carpenter, David Dienstbier
+
+* Programming:
+Lead Programmer Titan Engine: Carl Wade
+Lead Programmer Gameplay: Stephen Broumley
+Tools Programmers: Carl Wade, Stephen Broumley, Craig Galley
+Presentation Programming: David Crummack
+Riddler Control Room: Richard Cowie
+Additional Programming: Craig Galley
+
+* Art:
+Lead Artist: Michael McCallion
+Artists: Scott Brocker, Patrick Thomas
+Presentation Art: Gregg Hargrove
+
+* Advanced Technology Group:
+ATG Director: Cyrus Lum
+Lead 3D Character Animator: Derek Robinette
+3D Character Animators: Cyrus Lum, Michael Daubert, Peyton Duncan, Jason Moulton, Alan Johnson
+3D Real Time Artist: Patrick Thomas
+
+* Team Iguana:
+President: Jeff Spangenberg
+V.P. Product Development: Darrin Stubbington
+Art Director: Matt Stubbington
+Assistant Art Director: Jools Watsham
+Technical Director: Craig Galley
+Creative Director: Nigel Cook
+Dev Support Manager: J Moon
+
+Music: Rick Fox
+Sound Effects: Marc Schaefgen
+
+* Voice Talent Cast:
+Batman: Marc Schaefgen
+Robin: Michael Daubert
+Sabouter: David Dienstbier
+Guesser Robot: Marc Schaefgen
+Feather Thug: Scott Brocker
+Tassel Boss: Rick Stefan
+Spice: Michelle Thomas
+Sugar: Jane Notgrass
+Two Face Thugs: Adam McCarthy, Victor Mercieca
+Voice from the Sky: Marc Schaefgen
+
+* Game Testing: Bey Bicker, Neill Glancy, Stephen Broumley, Carl Wade, Derek Robinette, Micahel Daubert, Peyton Duncan, Jason Moulton, Victor Mercieca, Nigel Cook, David Dienstbier, Jason Carpenter, Marc Schaefgen, Michael McCallion, Rob Cohen, Cameron, Matt, Nathan, Tyrone Miller
+
+Producers for Acclaim: Tom Petit, John Pasierb
+Hardware: Manoj Bhatngar, James Hunkins, Robin Seaver
+Field Test Coordinator: Jaques Carter
+
+- PORTS -
+
+* CONSOLES:
+Sega Saturn (1996)
+Sony PlayStation (1996)
+
+* COMPUTERS:
+PC [MS-DOS / MS Windows, CD-ROM] (1996)
+
+- CONTRIBUTE -
+
+Edit this entry: https://www.arcade-history.com/?&amp;page=detail&amp;id=191&amp;o=2</desc>
+		<image>/userdata/roms/mame/images/batmanfr.png</image>
+		<marquee>./images/batmanfr-marquee.png</marquee>
+		<thumbnail>./images/batmanfr-thumb.png</thumbnail>
+		<rating>0.7</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Acclaim</developer>
+		<publisher>Acclaim</publisher>
+		<genre>Fighter / 2.5D</genre>
+		<players>2</players>
+		<playcount>5</playcount>
+		<lastplayed>20211002T220213</lastplayed>
+		<crc32>3F6DCFD3</crc32>
+		<gametime>104</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<cheevosHash>07766E63FDF4AFB0425853C76CDD3684</cheevosHash>
+		<genreid>263</genreid>
+	</game>
+</gameList>

@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="44122" source="ScreenScraper.fr">
+		<path>./wrally2.zip</path>
+		<name>World Rally 2 - Twin Racing</name>
+		<desc>World Rally 2: Twin Racing is the sequel to World Rally Championship with gameplay largely similar to the original game. Twin Racing in the title refers to a new gameplay element as the cabinet now has a setup with two units side by side, each with their own screen, seat, steering wheel and pedals. Only a single PCB is used to provide for both units. The first game was a standing single-player cabinet only with a steering wheel and buttons. Two players can challenge each other directly for a competition on the same track and the other player is shown as a ghost that cannot be harmed. Players can also choose to race side by side, but each their own single-player game. Both players can continue playing without spending an extra credit as long as they both finish under 60 seconds. 
+ 
+</desc>
+		<rating>0.8</rating>
+		<releasedate>19950101T000000</releasedate>
+		<publisher>Gaelco</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wrally2.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="44163" source="ScreenScraper.fr">
+		<path>./xorworld.zip</path>
+		<name>Xor World (Prototype)</name>
+		<desc>This is a puzzle game that is very similar to Tetris.</desc>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Gaelco</developer>
+		<publisher>Gaelco</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/xorworld.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40145" source="ScreenScraper.fr">
+		<path>./bang.zip</path>
+		<name>Bang!</name>
+		<desc>A cartoony first-person 2-D wild west shoot'em up game.</desc>
+		<image>/userdata/roms/mame/images/bang.png</image>
+		<rating>0.7</rating>
+		<releasedate>19980101T000000</releasedate>
+		<publisher>Gaelco</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>261</genreid>
+	</game>
+	<game id="40215" source="ScreenScraper.fr">
+		<path>./bigkarnk.zip</path>
+		<name>Big Karnak</name>
+		<desc>In this platform game you control a pharaoh that attempts to fight through several deadly enemies like cobras and scorpions.</desc>
+		<image>/userdata/roms/mame/images/bigkarnk.png</image>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Gaelco</developer>
+		<publisher>Gaelco</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40235" source="ScreenScraper.fr">
+		<path>./biomtoy.zip</path>
+		<name>Biomechanical Toy (Ver. 1.0.1885)</name>
+		<desc>Biomechanical Toy is an eightway-scrolling platform shoot-em-up set in a world of magically-animated toys, in which the magical pendulum that animates the toys has been stolen by the evil 'Scrubby', a criminal once imprisoned for trying to steal the pendulum who has managed to escape and take his revenge. The player takes on the role of Inguz and is tasked with freeing the few remaining good toys that are trapped throughout the stages, while destroying or avoiding the many evil toys that now patrol the kingdom.  
+ 
+Inguz carries a basic, single-firing pistol, although additional ammo clips can be found throughout the game that upgrade the gun with either extra shot power, automatic firing or exploding bullets. When the gun's current ammo clip is empty, Inguz will take a moment to reload, leaving him vulnerable to attack. Freed toys will give help to Inguz by providing additional firepower for a short time. 
+ 
+Inguz begins each stage and each new life with a full health meter of eighty units, but food can be found that will replenish the meter. The player can lose a life either by running out of health, falling off the bottom of the screen (or into a hazard, such as a lava pit), or by running out of time. Clearing each stage awards bonus points based on both remaining time and health units. 
+ 
+Checkpoints - indicated by red flags - are located at certain points throughout the stages. In the event of losing a life, play restarts from the last checkpoint reached. Objects with Inguz's face on them (such as wooden chests and balloons) release bonus items when shot.  
+ 
+An abstract, oriental-looking face occasionally forms part of a level's platform which, when shot, releases balloons which can in turn be shot for bonus items. A giant flying hat also occasionally appears and will drop bonus items when shot. Smart Bombs can also be found at certain points that, when run into by Inguz, will damage or destroy all enemy toys on screen.</desc>
+		<image>/userdata/roms/mame/images/biomtoy.png</image>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Gaelco</developer>
+		<publisher>Gaelco</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="78849" source="ScreenScraper.fr">
+		<path>./maniacsq.zip</path>
+		<name>Maniac Square (protected, Version 1.0, Checksum DEEE)</name>
+		<desc>This is a Tetris style puzzle game by Gaelco.  
+As a player you have to complete the number of lines before time runs out.</desc>
+		<image>/userdata/roms/mame/images/maniacsq.png</image>
+		<rating>0.5</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Gaelco</developer>
+		<publisher>Gaelco</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="78865" source="ScreenScraper.fr">
+		<path>./mastboy.zip</path>
+		<name>Master Boy (Spanish, PCB Rev A)</name>
+		<desc>A quiz game.</desc>
+		<image>/userdata/roms/mame/images/mastboy.png</image>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Gaelco</developer>
+		<publisher>Gaelco</publisher>
+		<genre>Quiz / Spanish-Quiz</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3328</genreid>
+	</game>
+	<game id="43160" source="ScreenScraper.fr">
+		<path>./snowboar.zip</path>
+		<name>Snow Board Championship (Version 2.1)</name>
+		<desc>A snowboarding game.</desc>
+		<image>/userdata/roms/mame/images/snowboar.png</image>
+		<rating>0.8</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Gaelco</developer>
+		<publisher>Gaelco</publisher>
+		<genre>Sports / Skiing-Sports</genre>
+		<players>2</players>
+		<playcount>1</playcount>
+		<lastplayed>20210123T110453</lastplayed>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43255" source="ScreenScraper.fr">
+		<path>./splash.zip</path>
+		<name>Splash! (Ver. 1.2 World)</name>
+		<desc>This game is also known as "Painted Lady". 
+ 
+Splash! was developed by a freelance group called OMK from Barcelona. OMK itself were three members: a programmer and two graphic artists. The music and sound was always made at Gaelco. Nowadays, OMK has disappeared, but one of the graphic artists is still working at Gaelco. Splash! was a big success.</desc>
+		<image>/userdata/roms/mame/images/splash.png</image>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Gaelco</developer>
+		<publisher>Gaelco</publisher>
+		<genre>Various</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+	</game>
+	<game id="43280" source="ScreenScraper.fr">
+		<path>./squash.zip</path>
+		<name>Squash (Ver. 1.0)</name>
+		<desc>An entertaining squash sport game from Gaelco.</desc>
+		<image>/userdata/roms/mame/images/squash.png</image>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Gaelco</developer>
+		<publisher>Itisa</publisher>
+		<genre>Sports / Tennis-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43601" source="ScreenScraper.fr">
+		<path>./thoop2.zip</path>
+		<name>Th Strikes Back</name>
+		<desc>In this sequel to "Thunder Hoop", you control a powerful ESP Rambo-like character, throwing sonic rays from his hands and destroying mutated enemies.</desc>
+		<image>/userdata/roms/mame/images/thoop2.png</image>
+		<rating>0.7</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Gaelco</developer>
+		<publisher>Gaelco</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43600" source="ScreenScraper.fr">
+		<path>./thoop.zip</path>
+		<name>Thunder Hoop (Ver. 1)</name>
+		<desc>A  platform game where you aim to defeat Dr. GenBrain. Climb ladders and jump on platforms while killing enemies on the way to the end-of-level boss.</desc>
+		<image>/userdata/roms/mame/images/thoop.png</image>
+		<rating>0.3</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Gaelco</developer>
+		<publisher>Gaelco</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="44121" source="ScreenScraper.fr">
+		<path>./wrally.zip</path>
+		<name>World Rally (Version 1.0, Checksum 0E56)</name>
+		<desc>World Rally is a road rally-themed driving game. Licensed by Gaelco of Barcelona, Spain, it is suitable for both street and arcade locations. World Rally is a 1- or 2-player alternating driving game. Controls include a steering wheel on a mounting pod, a high/low gear shifter assembly, and an accelerator pedal. 
+ 
+Players select 1 of 4 rallies to start, each progressively more difficult than the one before. A rally is composed of three stages, offering a variety of different track layouts and road surfaces. Asphalt, dirt, night driving and snow-covered roads require players to adjust their driving skills accordingly. 
+ 
+Players maneuver their way through hairpin curves, jumps, bridges, puddles, and other obstacles. Completing each stage within the 60-second time limit allows players to advance to the next stage for free. After the finish of each stage, and at the completion of all 12 stages, players' times are displayed and compared with other top drivers.</desc>
+		<image>/userdata/roms/mame/images/wrally.png</image>
+		<rating>0.9</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Gaelco</developer>
+		<publisher>Gaelco</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+</gameList>

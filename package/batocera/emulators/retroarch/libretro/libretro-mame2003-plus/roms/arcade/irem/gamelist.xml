@@ -1,0 +1,559 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="43959" source="ScreenScraper.fr">
+		<path>./vigilant.zip</path>
+		<name>Vigilante (World, Rev E)</name>
+		<desc>A sequel to Irem's legendary 1984 beat-em-up, "Kung-Fu Master", Vigilante sees the hero's girlfriend, Madonna, kidnapped by a gang of thugs and driven away in the back of their van. The vigilante must fight through five enemy-packed levels to rescue his girlfriend. As with "Kung-Fu Master", a tough guardian enemy awaits the player at the end of each level. The guardians must be defeated as quickly as possible as their energy bars will replenish in between the player's attacks. 
+ 
+A weapon, in the form of Nunchakas, can occasionally be found and picked-up; adding to the player's 'kick' and 'punch' fighting moves. Some of the game's many enemies are also armed, with either clubs, chains, knives or guns. The game ends once Madonna is rescued.</desc>
+		<image>/userdata/roms/mame/images/vigilant.png</image>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="44077" source="ScreenScraper.fr">
+		<path>./wilytowr.zip</path>
+		<name>Wily Tower</name>
+		<desc>A platform game where you must climb around lattice of pipes to deactivate power switches for main computer while avoiding robots. Jump on generators to send out disrupters and kill robots.</desc>
+		<image>/userdata/roms/mame/images/wilytowr.png</image>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>2</players>
+		<playcount>1</playcount>
+		<lastplayed>20210122T234453</lastplayed>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="44161" source="ScreenScraper.fr">
+		<path>./xmultipl.zip</path>
+		<name>X Multiply (World, M81)</name>
+		<desc>The game centers around an unusual alien invasion against a colony planet in the year 2249 the aliens themselves are microscopic creatures that invade, infect, and kill the colonists. Scientists have deployed the microscopic fighter X-002 into the body of the hapless woman whose body has been invaded by the alien queen. 
+ 
+The game itself is a side-scroller like R-Type, albeit with a short vertical-scrolling area towards the end of the sixth level. Instead of the Force pod, however, the main power-up apparatus takes the form of two flexible tentacles. The tentacles are invulnerable to all enemy attacks, and can be positioned with careful maneuvering of the X-002.</desc>
+		<image>/userdata/roms/mame/images/xmultipl.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="44186" source="ScreenScraper.fr">
+		<path>./youjyudn.zip</path>
+		<name>Youjyuden (Japan)</name>
+		<desc>The title of this game translates from Japanese as 'Legend of Bewitching Beast'.  
+From the japanese arcade flyer: "The player operates and drives Mule Warrior. In order to get back the robbed-of patron god of peace "Minerva", he runs through the ruins, flies in the sky and crosses the sea. On the way, killing every warrior of Gasp Empire standing in the way, he advanced on bravely. But at the end of the territory of Gasp Empire, the more fearful enemy. It is unknown what will happen next. Developing on exciting story, Mythological type shooting Game is staged on." 
+ 
+Soundtrack releases: 
+R?Type / Irem Game Music [Alfa Records - 28XA-199 - Jan 25, 1988]</desc>
+		<image>/userdata/roms/mame/images/youjyudn.png</image>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="42773" source="ScreenScraper.fr">
+		<path>./riskchal.zip</path>
+		<name>Risky Challenge</name>
+		<desc>El juego trata con los cazadores de tesoros profesionales, Gussun y Oyoyo, que se dirigían a una mazmorra para buscar tesoros, pero luego... el suelo debajo de ellos se debilita y caen al fondo del calabozo por accidente y encontrar amigos perdidos que están atrapados en el interior, así como los artículos místicos. Un hombre llamado George le cuenta a Emily (una buena amiga del dúo) lo que pasó y ella comienza a preocuparse y reza por su regreso seguro. Afortunadamente, con la ayuda de Emily durante el tutorial en el juego antes del accidente, los dos niños están completamente preparados para explorar las profundidades misteriosas de la mazmorra! Después de cada cuatro etapas, verás un breve intermedio donde verás a la protagonista o Emily hablar mientras te aproximas a escapar del calabozo.</desc>
+		<image>/userdata/roms/mame/images/riskchal.png</image>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="42841" source="ScreenScraper.fr">
+		<path>./rtype.zip</path>
+		<name>R-Type (World)</name>
+		<desc>RType is a sideways-scrolling shoot-em-up in which the evil Bydo Empire rules the galaxy through fear and intimidation and it's up to the player - piloting their heavily-armed R-9 space ship - to battle through eight tough levels to the heart of the Bydo stronghold and defeat them. 
+ 
+The game's revolutionary weapons system is its real stroke of genius. The first of numerous innovations that R?Type bought to the genre is the beam weapon: when the fire button is held down, a 'power meter' starts to charge up; once the meter is full, releasing the fire button unleashes a very powerful plasma burst capable of inflicting much greater damage to enemy ships or even destroying numerous enemies simultaneously. The trade-off is that charging the weapon takes up valuable seconds, giving the Bydo ships time to attack. 
+ 
+The most significant addition to R-type's arsenal is the now-legendary 'Force Pod'. This takes the form of an invincible, detachable laser-firing pod that can be attached to either the front or rear of the player's ship, or can be detached completely, after which the pod sits some distance either ahead or behind the player's ship, tracking its movements and providing additional fire power. When attached to the R9 ship, the pod acts as a shield. This forms a crucial part of R?Type's gameplay and has to be fully utilised to navigate certain sections of the game, such as the huge mothership that comprises the game's 3rd stage. 
+ 
+R?Type's levels are designed to make full use of its unique weapons system, making for very linear and demanding gameplay in which losing or picking up the wrong weapon at the wrong time often leads to an instant death. Its intelligent, precise and demanding level design, gave the world its first truly 'strategic' shoot-em-up.</desc>
+		<image>/userdata/roms/mame/images/rtype.png</image>
+		<rating>0.9</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<playcount>2</playcount>
+		<lastplayed>20210518T194415</lastplayed>
+		<gametime>65</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="149894" source="ScreenScraper.fr">
+		<path>./spelunk2.zip</path>
+		<name>Spelunker II (Japan)</name>
+		<desc>The player contols a miner who is looking for treasures in a huge mine. Find the key that opens the door to the next level and along the way, collect items that can help or reward points. Collect life potions to regenerate and shoot your enemies.</desc>
+		<image>/userdata/roms/mame/images/spelunk2.png</image>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Platform-Platform / Run Jump Scrolling</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="43241" source="ScreenScraper.fr">
+		<path>./spelunkr.zip</path>
+		<name>Spelunker</name>
+		<desc>In Spelunker - which means 'cave-diver' - a caver has to work his way down through a number of multi-directionally scrolling caves - each one deeper underground than the last - in his bid to find the mythical 'World of Wonders'. To do this, the spelunker must find the exit to each cave, so he can move on to the next and get closer to his goal. 
+ 
+Spelunker is a platform game, and each tricky cave is filled with enemies - such as bats and ogres - and traps. Ladders, ropes, lifts and the obligatory minecarts must be used to reach other platforms and sections of the cave. 
+ 
+To aid him in his difficult quest, the Spelunker carries a gun and can shoot short-range fireballs at his enemies to stun or kill them. Numerous bonus items can be collected, such as bombs to destroy any rocks block his route, keys to open locked doors and potions to boost the caver's ever-decreasing energy meter. Treasure chests also litter each cave, and can be opened for bonus treasure items.</desc>
+		<image>/userdata/roms/mame/images/spelunkr.png</image>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="39957" source="ScreenScraper.fr">
+		<path>./airduel.zip</path>
+		<name>Air Duel (World, M82-A-A + M82-B-A)</name>
+		<desc>The player selects from a jet fighter or helicopter, shoot enemies in the air and ground, collect power-ups, and defeat bosses to advance levels.
+
+The game differs from most others in the genre in that you can change the aircraft you use at the start of each level. The jet fighter always shoots straight forward; power-ups increase the width and strength of its shots. The helicopter fires thinner and weaker shots, but turns in the direction it moves (similar to the later Zero Gunner), giving it great range; powerups increase the strength of shots, as well as the number of bullets per shot (adding a small "spread" effect to the shot while moving around).
+Both the fighter and the helicopter also start with three bombs which wipe out everything in their path, including enemy shots. These bombs are also unique compared to similar games, in that they produce a line of small horizontal blasts that can be "directed" at the line travels across the ground, by pressing left and right (similar to the helicopter's shots). Additional bombs can be picked up during the course of the game.
+
+Losing a life resets your power and bomb count to the amount you start with. "Air Duel" is a challenging game, and later levels can become nearly unplayable if a single life is lost.</desc>
+		<image>/userdata/roms/mame/images/airduel.png</image>
+		<rating>0.6</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<playcount>2</playcount>
+		<lastplayed>20210807T133848</lastplayed>
+		<gametime>14</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40169" source="ScreenScraper.fr">
+		<path>./battroad.zip</path>
+		<name>Battle-road, The</name>
+		<desc>The Battle-Road (c) 1984 Irem.  - TECHNICAL -  Irem M-62 system hardware  Main CPU : Z80 (@ 3.072 Mhz) Sound CPU : M6803 (@ 894.886 Khz) Sound Chips : (2x) AY8910 (@ 894.886 Khz), (2x) MSM5205 (@ 384 Khz)  Players : 2 Control : 8-way joystick Buttons : 2</desc>
+		<image>/userdata/roms/mame/images/battroad.png</image>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Shooter / Vehicle, Vertical-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1028</genreid>
+	</game>
+	<game id="40181" source="ScreenScraper.fr">
+		<path>./bchopper.zip</path>
+		<name>Battle Chopper</name>
+		<desc>Players control a wacky fighter chopper name Mr. Heli, while shooting enemies, collecting power-ups, and defeating bosses to advance levels.</desc>
+		<image>/userdata/roms/mame/images/bchopper.png</image>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="40175" source="ScreenScraper.fr">
+		<path>./bbmanw.zip</path>
+		<name>Bomber Man World / New Dyna Blaster</name>
+		<desc>Bomber Man World is a strategic maze-based action game for up to four players in which the aim is to plant bombs to kill all of the enemies on the stage. Each of the game's grid-based stages are littered with both destructible and indestructible blocks, destructible blocks can be blown up to clear a path as well as to reveal a variety of different power-ups.</desc>
+		<image>/userdata/roms/mame/images/bbmanw.png</image>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Hudson</developer>
+		<publisher>Irem</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40299" source="ScreenScraper.fr">
+		<path>./bmaster.zip</path>
+		<name>Blade Master (World)</name>
+		<desc>Blade Master is a scrolling hack and slash arcade game released by Irem in 1991. Two selectable heroes, Roy and Arnold, try to save their land from hordes of monsters. There are items to break and power-ups to collect, typical of this genre in the 1990s.</desc>
+		<image>/userdata/roms/mame/images/bmaster.png</image>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="40683" source="ScreenScraper.fr">
+		<path>./cosmccop.zip</path>
+		<name>Cosmic Cop (World)</name>
+		<desc>Hi-octane side-scrolling action, a spin-off from the popular R-Type series</desc>
+		<image>/userdata/roms/mame/images/cosmccop.png</image>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40838" source="ScreenScraper.fr">
+		<path>./dbreed.zip</path>
+		<name>Dragon Breed (M81 PCB version)</name>
+		<desc>Dragon Breed is a side-scrolling shoot-em-up in which the player controls the game's hero, Kayus, who is riding on the back of a fully articulated dragon named 'Bahamoot'. The dragon is immune to enemy attacks, capable of blocking most projectiles and of damaging and eventually killing enemies on contact. Dragon rider Kayus is armed with a forward-firing crossbow but unlike his steed, is not invulnerable and will be killed by contact with either enemies or their projectiles.  
+ 
+What separates Dragon Breed from other games in the genre is in how the Dragon can be utilised. Bahamoot's body is flexible and responds to Kayus' movement, enabling Kayus to use Bahamoot as both a mobile shield and a whip-like weapon. It's also possible to encircle the tail around a group of enemies to kill them. The tail of the yellow or blue dragon can be coiled around the dragon's rider to offer almost complete invulnerability for a limited time. 
+ 
+Bahamoot can also spit fireballs. By holding the fire button down, the dragon will build up fire in its mouth; the longer the button is held down, the more powerful the fireball will be. There are four levels of fireball power and at its strongest, the fireball resembles a dragon's head. 
+ 
+Power-ups appear in the form of orbs, acquired by shooting small green dragons that appear intermittently throughout stages. There are four different types of orbs, each of will change Bahamoot to a different colour and grant him a new attack power:  
+Red orb enables the dragon to breathe a flame.  
+Gold orb enables Bahamoot's body to fire crescents in all directions.  
+Silver orb enables the dragon to produce up to four miniature dragons, which home in on enemies.  
+Blue orb enables Bahamoot to fire bolts of electricity downwards from its underside.  
+ 
+The player can enhance a specific power by picking up the same type of orb, this can be done up to three times.  
+ 
+Dragon Breed also includes platforming elements. At certain points during a stage horizontal platforms appear, these often have power-ups on them and the dragon rider can dismount and run along the platforms while the dragon waits above.</desc>
+		<image>/userdata/roms/mame/images/dbreed.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41069" source="ScreenScraper.fr">
+		<path>./dynablst.zip</path>
+		<name>Dynablaster / Bomber Man</name>
+		<desc>For more information about the game itself, please see the original Japanese version entry; "Bomber Man".</desc>
+		<image>/userdata/roms/mame/images/dynablst.png</image>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="41209" source="ScreenScraper.fr">
+		<path>./fghtbskt.zip</path>
+		<name>Fighting Basketball</name>
+		<desc>A basketball game.</desc>
+		<image>/userdata/roms/mame/images/fghtbskt.png</image>
+		<rating>0.1</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Paradise Co. Ltd.</developer>
+		<publisher>Paradise Co. Ltd.</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41588" source="ScreenScraper.fr">
+		<path>./gunforc2.zip</path>
+		<name>GunForce II (US)</name>
+		<desc>A platform shooter that features incredible graphics and rock solid gameplay.</desc>
+		<image>/userdata/roms/mame/images/gunforc2.png</image>
+		<rating>0.9</rating>
+		<releasedate>19940101T000000</releasedate>
+		<publisher>Irem</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="41671" source="ScreenScraper.fr">
+		<path>./hharry.zip</path>
+		<name>Hammerin' Harry (World, M81)</name>
+		<desc>This was released in Japanese Arcade's in 1990, and for the NES on November 15th 1991 and sometime in 1992 in Europe.</desc>
+		<image>/userdata/roms/mame/images/hharry.png</image>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="41712" source="ScreenScraper.fr">
+		<path>./horizon.zip</path>
+		<name>Horizon (Irem)</name>
+		<desc>A horizontally scrolling shooter, Horizon is the sequel to Moon Patrol. Both were developed by Irem; Moon Patrol was licensed to Williams.   
+ 
+Players take control of hover vehicle armed with a turret and a cannon, rolling over the terrain and alternating their position and perspective on three different lanes to destroy enemies and dodge attacks while avoiding obstacles and picking up fuel and other items.</desc>
+		<image>/userdata/roms/mame/images/horizon.png</image>
+		<rating>0.4</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Shooter / Vehicle, Horizontal-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1028</genreid>
+	</game>
+	<game id="41985" source="ScreenScraper.fr">
+		<path>./kidniki.zip</path>
+		<name>Kid Niki - Radical Ninja (World)</name>
+		<desc>Play as the cool ninja Niki, as he eliminates evil from Japan with his twirling sword. It was originally known as Kaiketsu Yanchamaru in its native Japan.</desc>
+		<image>/userdata/roms/mame/images/kidniki.png</image>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<publisher>Irem</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="42075" source="ScreenScraper.fr">
+		<path>./kungfum.zip</path>
+		<name>Kung-fu Master (World)</name>
+		<desc>Kung-Fu Master, known in Japan as Spartan X (ã‚¹ãƒ‘ãƒ«ã‚¿ãƒ³X?), is a 1984 beat 'em up arcade game developed and published in Japan by Irem. It was later published in North America by Data East. The Japanese version was based on the Jackie Chan movie Wheels on Meals, known as Spartan X in Japan, and credited "Paragon Films Ltd., Towa Promotion", who produced the film upon which it was based. The game is considered by many to be the first beat 'em up video game, and contains elements of Bruce Lee's Game of Death.</desc>
+		<image>/userdata/roms/mame/images/kungfum.png</image>
+		<rating>0.9</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Fight / 2D-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="42118" source="ScreenScraper.fr">
+		<path>./ldrun.zip</path>
+		<name>Lode Runner (set 1)</name>
+		<desc>Lode Runner (c) 1984 Irem.  - TECHNICAL -  Irem M-62 system hardware  Main CPU : Z80 (@ 4 Mhz) Sound CPU : M6803 (@ 894.886 Khz) Sound Chips : (2x) AY8910 (@ 894.886 Khz), (2x) MSM5205 (@ 384 Khz)  Players : 2 Control : 8-way joystick Buttons : 2 =&gt; [A] D</desc>
+		<image>/userdata/roms/mame/images/ldrun.png</image>
+		<rating>0.9</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="42119" source="ScreenScraper.fr">
+		<path>./ldrun2.zip</path>
+		<name>Lode Runner 2 - The Bungeling Strikes Back</name>
+		<desc>Even if title screen says 1984, the game was released in January 1985 by Irem under license from Broderbund. 
+ 
+Alfa Records released a limited-edition soundtrack album for this game (R?Type: Irem Game Music - 28XA-199) on January 25, 1988.</desc>
+		<image>/userdata/roms/mame/images/ldrun2.png</image>
+		<rating>0.9</rating>
+		<releasedate>19840101T000000</releasedate>
+		<publisher>Irem</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="42120" source="ScreenScraper.fr">
+		<path>./ldrun3.zip</path>
+		<name>Lode Runner 3 - The Golden Labyrinth</name>
+		<desc>This game is known in Japan as "Lode Runner - Majin No Fukkatsu" (translated as 'Lode Runner - Resurrection of the Demon').</desc>
+		<image>/userdata/roms/mame/images/ldrun3.png</image>
+		<rating>0.8</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="42121" source="ScreenScraper.fr">
+		<path>./ldrun4.zip</path>
+		<name>Lode Runner 4 - Teikoku Karano Dasshutsu (Japan)</name>
+		<desc>The subtitle of this game translates from Japanese as 'Escape From the Empire'.</desc>
+		<image>/userdata/roms/mame/images/ldrun4.png</image>
+		<rating>0.9</rating>
+		<releasedate>19860101T000000</releasedate>
+		<publisher>Irem</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="42167" source="ScreenScraper.fr">
+		<path>./loht.zip</path>
+		<name>Legend of Hero Tonma</name>
+		<desc>Legend of hero Tonma brings back memories of a real arcade prestige. We played it day and night with tons of coins just to make one another envy our Tonma skills.  
+ 
+This is one of the few real arcade run and gun platformers with so much spirit in it.  
+ 
+As Tonma you jump and shoot your magic finger, upgrading it and fighting the old demon king. Just a perfect setting for a teenage boy gameplay from the early nineties.</desc>
+		<image>/userdata/roms/mame/images/loht.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Platform-Fight / 2D-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="42174" source="ScreenScraper.fr">
+		<path>./lotlot.zip</path>
+		<name>Lot Lot</name>
+		<desc>In Lot Lot, you directly control one arrow and indirectly control another which follows after your original arrow with a (roughly) 4-second delay. When you press the button, any balls on the compartment that one arrow points to are immediately swapped with the contents of the compartment that the other arrow points to. The goal of Lot Lot is to get as many tiny balls (which resemble Pachinko balls) out of grid compartments and down into point slots in order to achieve a designated score, and advance to the next round.</desc>
+		<image>/userdata/roms/mame/images/lotlot.png</image>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="78841" source="ScreenScraper.fr">
+		<path>./majtitl2.zip</path>
+		<name>Major Title 2 (World, set 1)</name>
+		<desc>Major Title 2 is a golf game for up to four players who choose to play as one of four different golfers. Each golfer possesses a unique skill-set that influences their ability to make certain types of shots (power hitter, all-round player, technician and magician).  
+ 
+The game offers a choice of two different courses and provides the usual array of game modes: tournament, match play, stroke play and a skins game. 
+ 
+During play, the action is presented in two different perspectives. The pre-shot perspective is a standard third-person view from behind the golfer but once the ball is hit, the view switches to a top-down perspective to track the ball in flight. Once players are on the green, a window is displayed showing a zoomed-in overhead view detailing the green's contours.  
+ 
+Major Title 2 takes a simplified approach to hitting the ball. Instead of setting the power and controlling the shot, the only function of the swing meter is to select the vertical angle of the shot, which sets the amount of back or topspin applied to the ball. The strength of each swing is selected prior to the shot by setting a power gauge to one of 16 levels.  
+ 
+Draw and fade can also be applied to the ball by changing the players stance prior to taking the shot. However, the game specifies the maximum distance for the putter in yards, but measures distance on the greens in meters.</desc>
+		<image>/userdata/roms/mame/images/majtitl2.png</image>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="78842" source="ScreenScraper.fr">
+		<path>./majtitle.zip</path>
+		<name>Major Title (World)</name>
+		<desc>A golf game where you take part in the final round of a major golf tournament, your goal is to top the leaderboard after 18 holes and take home the trophy. You can also compete against your mates with up to 4 players taking part.</desc>
+		<image>/userdata/roms/mame/images/majtitle.png</image>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="79158" source="ScreenScraper.fr">
+		<path>./nspirit.zip</path>
+		<name>Ninja Spirit</name>
+		<desc>A side scrolling ninja action game. You take control of a ninja who has the ability to make shadow duplicates which trail your movements, and attack at your command. In your path are armies of ninjas, samurais and demons who are constantly out to kill you.</desc>
+		<image>/userdata/roms/mame/images/nspirit.png</image>
+		<rating>0.9</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Platform-Fight / 2D-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="42842" source="ScreenScraper.fr">
+		<path>./rtype2.zip</path>
+		<name>R-type 2</name>
+		<desc>The sequel to the hugely successful original finds the evil Bydo Empire once again intent on the destruction of all mankind in this sideways scrolling, six-level shoot-em-up. 
+ 
+The innovative weapons system of the original game - the 'Beam Weapon' and 'Force Pod' - make a welcome return and remain unchanged for the sequel. 
+ 
+The tight, demanding gameplay and high emphasis on correct usage of the weapons system also return - although the sequel is, if anything, even more demanding than its already unforgiving predecessor; with more durable enemies and trickier level design.  
+ 
+R?Type II features three new weapon shot types:  
+Green - Search Laser - fires semi-homing lasers that can bend at 45Â° angles.  
+Grey - Shotgun Laser - fires large shells that travel a short distance before exploding powerfully.  
+Scatter Bomb - drops bombs to the ground; when these explode, the explosion scatters forwards along the ground. This is a supporting weapon that can be equipped instead of missiles. 
+ 
+In addition to the new weapons, R-type II's Beam Weapon has received an upgrade. As with the first game, holding down the fire button makes a power gauge fill up, releases the button then unleashes a powerful plasma shot. For the sequel, however, continuing to hold down the button causes the gauge to charge up further. This 'double-charged' gauge flashes blue and red and releases an even more powerful plasma burst.</desc>
+		<image>/userdata/roms/mame/images/rtype2.png</image>
+		<rating>0.9</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Irem</developer>
+		<publisher>Irem</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<playcount>3</playcount>
+		<lastplayed>20211030T085312</lastplayed>
+		<gametime>94</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+</gameList>

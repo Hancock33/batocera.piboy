@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="42859" source="ScreenScraper.fr">
+		<path>./s1945ii.zip</path>
+		<name>Strikers 1945 2</name>
+		<desc>Continuing where the last game ended, the forces of CANY had been demolished by the previous Strikers' line-up. However, a small group known as the FGR stole the sources and technology responsible for the last events and planned to continue CANYs work by initiating world-warfare with massive mech technology. Once again, the Strikers are called into action.</desc>
+		<rating>0.9</rating>
+		<releasedate>19970101T000000</releasedate>
+		<developer>Psikyo</developer>
+		<publisher>Psikyo</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/s1945ii.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="42860" source="ScreenScraper.fr">
+		<path>./s1945iii.zip</path>
+		<name>Strikers 1945 3 (World) / Strikers 1999 (Japan)</name>
+		<desc>Year 1999, fall. The countless super minimum machine group 'nano-machine', which came flying, invaded the principal weapon and military terminals of each country from outer space and began multiplication. This weapon group which is automated with the 'nano-machines' repeated attack with non discrimination and the metropoles of each country were in a devastating state. A fear of the extensive nuclear warfare with the strategy nuclear missile error morphism hit the world!!! Barely the unit of each country which prevents the invasion of the 'nano- machine' is summoned because of the unmanned weapon eradication maneuvers. So, fighting with the weapons of the entire world was not enough. The Strikers start the attack on the enemy center! By the way of the time of half a century, new legend of special force STRIKERS now starts!</desc>
+		<rating>0.9</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>Psikyo</developer>
+		<publisher>Psikyo</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/s1945iii.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43557" source="ScreenScraper.fr">
+		<path>./tengai.zip</path>
+		<name>Tengai (World)</name>
+		<desc>Nice horizontal shoot'em up with 5 selectable characters who have their own storyline and ending.</desc>
+		<rating>0.6</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Psikyo</developer>
+		<publisher>Psikyo</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tengai.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43580" source="ScreenScraper.fr">
+		<path>./tgm2.zip</path>
+		<name>Tetris The Absolute The Grand Master 2</name>
+		<desc>Arika's challenging puzzle-action series continues with new game modes, challenges, and mechanics innovations.</desc>
+		<rating>0.9</rating>
+		<releasedate>20000101T000000</releasedate>
+		<developer>Arika</developer>
+		<publisher>Arika</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tgm2.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40816" source="ScreenScraper.fr">
+		<path>./daraku.zip</path>
+		<name>The Fallen Angels</name>
+		<desc>Fallen Angels is a two dimensional fighting game that takes a somewhat realistic approach in its gameplay, with no supernatural attacks and fluid movements animated using real motions. Projectile attacks are limited to three characters, atypical for the game's genre. The game featured eight playable characters: Cool, Harry Ness, Yuiren, Yuiran, Tarō, Torao Onigawara, Ruccio Roche, Haiji Mibu. The boss characters are Trigger and Carlos. 
+ 
+The game takes place in 2010, ten years after a massive earthquake that shook an unnamed city. The earthquake severed the city from its surrounding areas, leaving criminals to run as they please. The game revolves around the inhabitants fighting against one another to accomplish their goals.</desc>
+		<rating>0.7</rating>
+		<releasedate>19980101T000000</releasedate>
+		<developer>Steel Hearts</developer>
+		<publisher>Psikyo</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/daraku.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="40385" source="ScreenScraper.fr">
+		<path>./btlkroad.zip</path>
+		<name>Battle K-Road</name>
+		<desc>The game focuses mostly on reality fighting than fictional. At the start of the game in 1P mode, the player will face against the other fighter that uses the same fighting style as the one the player chose. After the player wins against the opponent, the player will face against other opponents that use other fighting styles in the K-Road Tournament. If the player loses, the game will only allow the player to continue fighting through it with the character he used, and will not allow the player to choose another character.
+
+The gameplay has a 6-button layout, but with command inputs different compared to ones in most fighting games released at the time. There are three punches and kicks for a few directions (weak, medium and strong). There are seven fighting styles featured in the game and two playable characters per style, for a total of 14 playable fighters.</desc>
+		<image>/userdata/roms/mame/images/btlkroad.png</image>
+		<rating>0.3</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Psikyo</developer>
+		<publisher>Psikyo</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="40999" source="ScreenScraper.fr">
+		<path>./dragnblz.zip</path>
+		<name>Dragon Blaze</name>
+		<desc>In a distant land, four brave dragonriders must make use of every trick in the book to survive wave after wave of powerful monsters and hulking bosses in this Psikyo shoot'em up masterpiece. Features some truly beautiful graphics &amp; sound, excellent control that features some interesting gameplay mechanics and tons of challenge.</desc>
+		<image>/userdata/roms/mame/images/dragnblz.png</image>
+		<rating>0.8</rating>
+		<releasedate>20000501T000000</releasedate>
+		<developer>Psikyo</developer>
+		<publisher>Psikyo</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41467" source="ScreenScraper.fr">
+		<path>./gnbarich.zip</path>
+		<name>Gunbarich</name>
+		<desc>Gunbarich (c) 2001 Psikyo.  - TECHNICAL -  Main CPU : SH-2 (@ 28.63635 Mhz) Sound Chips : YMF278B (@ 28.63635 Mhz)  Players : 2 Control : 8-way joystick Buttons : 3  - TRIVIA -  Released in June 2001.  Psikyo's Gunbarich is a spin-off of "Gunbird" featuri</desc>
+		<image>/userdata/roms/mame/images/gnbarich.png</image>
+		<rating>0.9</rating>
+		<releasedate>20010101T000000</releasedate>
+		<developer>Psikyo</developer>
+		<publisher>Psikyo</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="41573" source="ScreenScraper.fr">
+		<path>./gunbird.zip</path>
+		<name>Gunbird (World)</name>
+		<desc>Gunbird is a vertically scrolling shoot 'em up developed and published by Psikyo and released in Japanese arcades in 1994. It has been re-released multiple times, including on the Sega Saturn, PlayStation, and Steam. When originally localized outside Japan by XS Games, Gunbird was retitled Mobile Light Force. The game was followed by Gunbird 2 in 1998 and was included in Gunbird Special Edition. 
+ 
+When a player collides with the body of an enemy unit, the player loses a shot power level, and a power up flies around the screen and disappears as soon as it reaches the edge. If a player is at the lowest level of shot, the player loses a bomb instead. 
+There are seven stages in each of the game's two loops. The first four stages are randomly chosen from possible five. In the second loop enemies fire denser bullet patterns moving at faster speeds. Stage 2-1 takes place at the only stage not available on the first loop, instead of the 1-1 counterpart. The remaining three stages are chosen at random, but does not include the replaced stage. After completing first loop with only one player, the player can choose one of two choices for a wish with a magic potion, with unique endings for each choice. If the first loop is completed with two players, a combination-specific ending is played. 
+The cutscenes between the battles with two players fighting cooperatively are frequently packed with hilarious dialogue and situations. This is often a recurring theme with Psikyo games, the Gunbird games being no exception. There are no cutscenes when playing second loop stages. The Korean arcade version contains English dialog but some sound samples are missing during play. 
+ 
+Gunbird uses manga-styled character as the player's chosen craft. A story plays out in between levels and before boss fights, telling a tale of how the protagonists are trying to collect pieces of a magic mirror to make a wish. 
+Ash: A 28-year-old German man with a jet pack on his back, who in some of the scenes between battles is discovered to be an inventor, and when two players choose Marion and Ash as cooperative partners, he takes an unhealthy interest in her. Voiced by Ry?tar? Okiayu. 
+Marion: A 13-year-old witch from England who flies on a broomstick. She is accompanied by her talking pet rabbit, Pom-Pom, and frequently abuses the poor creature verbally and physically. Marion is fun-loving and thrill-seeking but also selfish, and has a mean streak (which Pom-Pom is often witness to). Voiced by Chiharu Tanaka. 
+Valnus: A big robot created in Russia six months ago that has some of the best firepower in the game. Secretly wishes to be human. Voiced by Kazuya Tatekabe. 
+Yuan Nang: A strong-willed and courageous woman whose character design is highly influenced by that of Sun Wukong from the Chinese classical story Journey to the West, including a cloud-somersault parody, Ruyi Jingu Bang, and the size-changing headband that was used by the monk Xuánzàng. Voiced by Naoko Matsui. 
+Tetsu: A strong, white-haired old man of 60 years. He is homosexual in a rather uncloseted manner and rides in a man-powered helicopter. Voiced by Sakunosuke Maya. 
+The Trump: A group of sky pirates consist of Ace (voiced by J?ji Yanami), Claude (voiced by Kazuya Tatekabe), and their female leader Rouge (voiced by Noriko Ohara). They are not playable and serve as the players' rivals in the story.</desc>
+		<image>/userdata/roms/mame/images/gunbird.png</image>
+		<rating>0.7</rating>
+		<releasedate>19940901T000000</releasedate>
+		<developer>Psikyo</developer>
+		<publisher>Psikyo</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41574" source="ScreenScraper.fr">
+		<path>./gunbird2.zip</path>
+		<name>Gunbird 2</name>
+		<desc>Seven warriors are challenged to head on a quest to find three powerful elements of Sun, Moon and Stars. Whoever brings the elements to the Potion God will be rewarded the legendary Almighty Potion and all its magical powers. 
+ 
+There are seven stages in each game loop (two loops total). The first three stages are randomly chosen from possible four. At the second loop, enemies fire denser bullet patterns moving at faster speeds. Stage 2-1 takes place at the only stage not available in 1st loop, instead of the 1-1 counterpart. After completing the first loop with only one player, player can choose one of two choices for a wish with magic potion, with unique ending for each choice. If 1st loop is completed with two players, a combination-specific ending is played.</desc>
+		<image>/userdata/roms/mame/images/gunbird2.png</image>
+		<rating>0.9</rating>
+		<releasedate>19980101T000000</releasedate>
+		<developer>Psikyo</developer>
+		<publisher>Psikyo</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="42162" source="ScreenScraper.fr">
+		<path>./loderndf.zip</path>
+		<name>Lode Runner: The Dig Fight (ver. B)</name>
+		<desc>Maintenance Code: In test mode enter this code... 
+5-0-8-2-0: Some nice features appear include stages select, obj test, etc... and a complete Map editor!!</desc>
+		<image>/userdata/roms/mame/images/loderndf.png</image>
+		<rating>0.9</rating>
+		<releasedate>20000101T000000</releasedate>
+		<developer>Broderbund Software</developer>
+		<publisher>Psikyo</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="42858" source="ScreenScraper.fr">
+		<path>./s1945.zip</path>
+		<name>Strikers 1945 (World)</name>
+		<desc>In 1945, the second world war ended. Soon, there was peace, but an organization of high-ranking military officers from all over the world form a global army known as CANY. Their mission was to conquer the world. CANY activity was found in areas like the Soviet Union, America, Japan, and even Germany. It is revealed that CANY had weapons never seen before from rockets to mechanical walkers. The world quickly formed a group of pilots and planes called the Strikers whose mission is to rid of CANY from the world.</desc>
+		<image>/userdata/roms/mame/images/s1945.png</image>
+		<rating>0.9</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Psikyo</developer>
+		<publisher>Psikyo</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="42888" source="ScreenScraper.fr">
+		<path>./samuraia.zip</path>
+		<name>Samurai Aces (World)</name>
+		<desc>This game is known in Japan as "Sengoku Ace" (translates from Japanese as 'Civil War Ace'). 
+ 
+Samurai Aces is the very first game developed by Psikyo (Psikyo was founded in 1992 in Tokyo). 
+ 
+Note: There are 22 different endings!</desc>
+		<image>/userdata/roms/mame/images/samuraia.png</image>
+		<rating>0.9</rating>
+		<releasedate>19930401T000000</releasedate>
+		<developer>Psikyo</developer>
+		<publisher>Psikyo</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="42907" source="ScreenScraper.fr">
+		<path>./sbomber.zip</path>
+		<name>Space Bomber (ver. B)</name>
+		<desc>A cutesy vertical shooter with pigs and octopuses instead of airplanes or jets. The game was produced in Japan only.</desc>
+		<image>/userdata/roms/mame/images/sbomber.png</image>
+		<rating>0.9</rating>
+		<releasedate>19980701T000000</releasedate>
+		<developer>Psikyo</developer>
+		<publisher>Psikyo</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43171" source="ScreenScraper.fr">
+		<path>./soldivid.zip</path>
+		<name>Sol Divide: Sword of Darkness</name>
+		<desc>There is an evil empire that is out to take over a fantasy realm and it's up to three powerful warriors to stop him. The first is Kashon. He's a blue skinned guy with wings. He looks kind of like a cross between a Na'vi and an angel. He's out to go and save his race for extinction. Vorg is a black knight who defected from the evil empire because he realized that it is evil and wants to redeem himself. His characterization isn't exactly original, but at least he looks cool. Tyora is the female playable character. She's a wizard that looks like she's about fifteen, but really, she's hundreds of years old. She is the realm's guardian and will stop at nothing to protect the people from the evil empire.Sol Divide is an Action game, developed and published by Psikyo, which was released in Japan in 1997.</desc>
+		<image>/userdata/roms/mame/images/soldivid.png</image>
+		<rating>0.7</rating>
+		<releasedate>19970501T000000</releasedate>
+		<developer>Psikyo</developer>
+		<publisher>Psikyo</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+</gameList>

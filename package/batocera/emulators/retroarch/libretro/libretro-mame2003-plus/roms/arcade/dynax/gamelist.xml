@@ -1,0 +1,547 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="41618" source="ScreenScraper.fr">
+		<path>./hanakanz.zip</path>
+		<name>Hana Kanzashi (Japan)</name>
+		<desc>A hanafuda card game.</desc>
+		<rating>0.7</rating>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Hanafuda-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/hanakanz.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="41698" source="ScreenScraper.fr">
+		<path>./hnkochou.zip</path>
+		<name>Hana Kochou (Japan, Bet)</name>
+		<desc>A hanafuda game with a time-travelling theme.</desc>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Hanafuda-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/hnkochou.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="41622" source="ScreenScraper.fr">
+		<path>./hanayara.zip</path>
+		<name>Hana Wo Yaraneba! (Japan)</name>
+		<desc>Hana wo Yaraneba! (c) 1991 Dynax.  - TRIVIA -  Released in July 1991.  - SOURCES -  Game's rom.</desc>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Hanafuda-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/hanayara.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="41668" source="ScreenScraper.fr">
+		<path>./hginga.zip</path>
+		<name>Hanafuda Hana Ginga</name>
+		<desc>A hanafuda game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Dynax</developer>
+		<publisher>Dynax</publisher>
+		<genre>Hanafuda-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/hginga.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="41670" source="ScreenScraper.fr">
+		<path>./hgokou.zip</path>
+		<name>Hanafuda Hana Gokou (Japan)</name>
+		<desc>Hanafuda Hana Gokou (c) 1995 Dynax.  - TRIVIA -  Released in June 1995.  - TIPS AND TRICKS -  Secret menu : Choose 'Option' in test mode and input 'Yes', 'No', 'Yes', 'No' buttons.  - SOURCES -  Game's rom.</desc>
+		<rating>0.5</rating>
+		<releasedate>19950101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Hanafuda-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/hgokou.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="41745" source="ScreenScraper.fr">
+		<path>./htengoku.zip</path>
+		<name>Hanafuda Hana Tengoku (Japan)</name>
+		<desc>Hanafuda Hana Tengoku (c) 1992 Dynax.  - TRIVIA -  Even if titlescreen says 1992, Hanafuda Hana Tengoku was released in May 1993 in Japan.  - SOURCES -  Game's rom.</desc>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Dynax</developer>
+		<publisher>Dynax</publisher>
+		<genre>Hanafuda-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/htengoku.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="41861" source="ScreenScraper.fr">
+		<path>./janptr96.zip</path>
+		<name>Janputer '96 (Japan)</name>
+		<desc>A mahjong game from the Dynax Soft division.</desc>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/janptr96.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="41869" source="ScreenScraper.fr">
+		<path>./jantouki.zip</path>
+		<name>Jong Tou Ki (Japan)</name>
+		<desc>A Mahjong game.</desc>
+		<releasedate>19900101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/jantouki.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="57928" source="ScreenScraper.fr">
+		<path>./mjangels.zip</path>
+		<name>Mahjong Angels - Comic Theater Vol.2 (Japan)</name>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mjangels.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="40428" source="ScreenScraper.fr">
+		<path>./cafedoll.zip</path>
+		<name>Mahjong Cafe Doll (Japan)</name>
+		<desc>Mahjong Cafe Doll (c) 1993 Dynax.  - TRIVIA -  Released in October 1993.  - SOURCES -  Game's rom.</desc>
+		<releasedate>19930101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<image>/userdata/roms/mame/images/cafedoll.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="40429" source="ScreenScraper.fr">
+		<path>./cafetime.zip</path>
+		<name>Mahjong Cafe Time</name>
+		<desc>Mahjong Cafe Time (c) 1992 Dynax.  - TRIVIA -  Mahjong Cafe Time features comic scenes by Tenho Iwatani. His work can also be seen in "Iwatani Tenho no Mahjong Comic Gekijou Vol. 1" and Warai no "Mahjong Angels Comic Gekijou Vol. 2". Tenho Iwatani is also</desc>
+		<releasedate>19920101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/cafetime.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="57930" source="ScreenScraper.fr">
+		<path>./mcnpshnt.zip</path>
+		<name>Mahjong Campus Hunting (Japan)</name>
+		<releasedate>19900101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mcnpshnt.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="57932" source="ScreenScraper.fr">
+		<path>./mjchuuka.zip</path>
+		<name>Mahjong Chuukanejyo (China)</name>
+		<releasedate>19980101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mjchuuka.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="57935" source="ScreenScraper.fr">
+		<path>./mjcomv1.zip</path>
+		<name>Mahjong Comic Gekijou Vol.1 (Japan)</name>
+		<desc>Iwatani Tenho no Mahjong Comic Gekijou Vol. 1 (c) 1991 Dynax.  - TRIVIA -  Released in August 1991.  The title translates from Japanese as "Iwatani Tenho's Mahjong Comic Theater Vol. 1".  Tenho Iwatani is a Japanese comic book artist, and his comics are f</desc>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mjcomv1.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="40800" source="ScreenScraper.fr">
+		<path>./daimyojn.zip</path>
+		<name>Mahjong Daimyojin (Japan, T017-PB-00)</name>
+		<desc>Mahjong Daimyojin (c) 2002 Dynax.  - TRIVIA -  Released in June 2002.  - SOURCES -  Game's ROM.</desc>
+		<releasedate>20020101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/daimyojn.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="57936" source="ScreenScraper.fr">
+		<path>./mjderngr.zip</path>
+		<name>Mahjong Derringer (Japan)</name>
+		<desc>A mahjong game that seems to have a rape theme. Maybe it should've been called 'Mahjong Deranged'.</desc>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mjderngr.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="57937" source="ScreenScraper.fr">
+		<path>./mjdialq2.zip</path>
+		<name>Mahjong Dial Q2 (Japan)</name>
+		<desc>A mahjong game with random bonus items to be won through mini games.</desc>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mjdialq2.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="149642" source="ScreenScraper.fr">
+		<path>./mjdiplob.zip</path>
+		<name>Mahjong Diplomat [bet] (Japan)</name>
+		<desc>A rather diplomatic mahjong game.</desc>
+		<releasedate>19870101T000000</releasedate>
+		<image>/userdata/roms/mame/images/mjdiplob.png</image>
+	</game>
+	<game id="78942" source="ScreenScraper.fr">
+		<path>./mjelctrn.zip</path>
+		<name>Mahjong Electron Base (parts 2 &amp;amp; 4, Japan)</name>
+		<desc>A classic Mahjong BET game ever with strict score system and function of 'Three Tiles Exchange'. A special effect of Ron or Reach is shown when announced. Play with six girls and wonderful background music.</desc>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Dynax</developer>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mjelctrn.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="57943" source="ScreenScraper.fr">
+		<path>./mjfriday.zip</path>
+		<name>Mahjong Friday (Japan)</name>
+		<desc>A mahjong game where you get to take provocative snapshots of your defeated opponents!</desc>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mjfriday.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="41413" source="ScreenScraper.fr">
+		<path>./gekisha.zip</path>
+		<name>Mahjong Gekisha</name>
+		<desc>Mahjong Gekisha (c) 1989 Dynax.  - SOURCES -  Game's ROM.</desc>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/gekisha.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="149643" source="ScreenScraper.fr">
+		<path>./mjifb.zip</path>
+		<name>Mahjong If...? [bet]</name>
+		<desc>A mahjong game.</desc>
+		<releasedate>19900101T000000</releasedate>
+		<image>/userdata/roms/mame/images/mjifb.png</image>
+	</game>
+	<game id="41907" source="ScreenScraper.fr">
+		<path>./jongtei.zip</path>
+		<name>Mahjong Jong-tei (Japan, NM532-01)</name>
+		<releasedate>19990101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/jongtei.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="57970" source="ScreenScraper.fr">
+		<path>./neruton.zip</path>
+		<name>Mahjong Neruton Haikujiradan (Japan, Rev. B?)</name>
+		<desc>A mahjong game.</desc>
+		<releasedate>19900101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/neruton.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="57975" source="ScreenScraper.fr">
+		<path>./majrjhdx.zip</path>
+		<name>Mahjong Raijinhai Dx</name>
+		<desc>A mahjong game.</desc>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/majrjhdx.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="43299" source="ScreenScraper.fr">
+		<path>./sryudens.zip</path>
+		<name>Mahjong Seiryu Densetsu (Japan, NM502)</name>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/sryudens.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="57982" source="ScreenScraper.fr">
+		<path>./mjdejavu.zip</path>
+		<name>Mahjong Shinkirou Deja Vu (Japan)</name>
+		<desc>Mahjong Shinkirou Deja Vu (c) 1989 Dynax.  - TRIVIA -  The title translates from Japanese as "Mahjong Mirage Deja Vu".  - SOURCES -  Game's rom.</desc>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mjdejavu.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="149641" source="ScreenScraper.fr">
+		<path>./majs101b.zip</path>
+		<name>Mahjong Studio 101 [bet] (Japan)</name>
+		<desc>Mahjong with a movie studio theme.</desc>
+		<releasedate>19880101T000000</releasedate>
+		<image>/userdata/roms/mame/images/majs101b.png</image>
+	</game>
+	<game id="43558" source="ScreenScraper.fr">
+		<path>./tenkai.zip</path>
+		<name>Mahjong Tenkaigen</name>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/tenkai.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="57986" source="ScreenScraper.fr">
+		<path>./mjtensin.zip</path>
+		<name>Mahjong Tensinhai (Japan)</name>
+		<releasedate>19950101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mjtensin.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="57987" source="ScreenScraper.fr">
+		<path>./mjdchuka.zip</path>
+		<name>Mahjong The Dai Chuuka Ken (China, D111)</name>
+		<desc>A mahjong game.</desc>
+		<releasedate>19950101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mjdchuka.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="63070" source="ScreenScraper.fr">
+		<path>./mjmyornt.zip</path>
+		<name>Mahjong The Mysterious Orient Part 2 - Exotic Dream</name>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Dynax</developer>
+		<publisher>Dynax</publisher>
+		<image>/userdata/roms/mame/images/mjmyornt.png</image>
+	</game>
+	<game id="57990" source="ScreenScraper.fr">
+		<path>./mjmyuniv.zip</path>
+		<name>Mahjong The Mysterious Universe (Japan, D85)</name>
+		<desc>A mahjong game.</desc>
+		<releasedate>19940101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mjmyuniv.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="57991" source="ScreenScraper.fr">
+		<path>./mjmyster.zip</path>
+		<name>Mahjong The Mysterious World (set 1)</name>
+		<desc>A mahjong game.</desc>
+		<releasedate>19940101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mjmyster.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="78946" source="ScreenScraper.fr">
+		<path>./mjvegasa.zip</path>
+		<name>Mahjong Vegas (Japan, unprotected)</name>
+		<desc>Mahjong Vegas - Fushigi na Jansou Monogatari (c) 1991 Dynax.  - TRIVIA -  The subtitle translates from Japanese as "Mysterious Mahjong Club Story".  - SOURCES -  Game's rom.</desc>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Dynax</developer>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<image>/userdata/roms/mame/images/mjvegasa.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="149640" source="ScreenScraper.fr">
+		<path>./majxtal7.zip</path>
+		<name>Mahjong X-tal 7 - Crystal Mahjong / Mahjong Diamond 7 (Japan)</name>
+		<desc>A mahjong game.</desc>
+		<releasedate>19900101T000000</releasedate>
+		<image>/userdata/roms/mame/images/majxtal7.png</image>
+	</game>
+	<game id="44181" source="ScreenScraper.fr">
+		<path>./yarunara.zip</path>
+		<name>Mahjong Yarunara (Japan)</name>
+		<desc>Un jeu de Mahjong comme tant d'autres en arcade. Un jeu typiquement japonais. Pas très intéréssant pour nous les français.
+
+</desc>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Dynax</developer>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/yarunara.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="78843" source="ScreenScraper.fr">
+		<path>./makaijan.zip</path>
+		<name>Makaijan [bet] (Japan)</name>
+		<desc>Makaijan (c) 1987 Dynax.  - SOURCES -  Game's ROM.</desc>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Dynax</developer>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/makaijan.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="39963" source="ScreenScraper.fr">
+		<path>./akamaru.zip</path>
+		<name>Panel And Variety Akamaru Q Jousyou Dont-r</name>
+		<rating>0.7</rating>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Quiz / Japanese-Quiz</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/akamaru.png</image>
+		<genreid>3328</genreid>
+	</game>
+	<game id="42650" source="ScreenScraper.fr">
+		<path>./quiztvqq.zip</path>
+		<name>Quiz Tv Gassyuukoku Q And Q (Japan)</name>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Quiz / Japanese-Quiz</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/quiztvqq.png</image>
+		<genreid>3328</genreid>
+	</game>
+	<game id="41736" source="ScreenScraper.fr">
+		<path>./hparadis.zip</path>
+		<name>Super Hana Paradise (Japan)</name>
+		<desc>Super Hana Paradise (c) 1994 Dynax.  - TRIVIA -  Released in December 1994 in Japan only.  - TIPS AND TRICKS -  Hidden menu items : In order for this trick to work Hanafuda panel must be set in DIP switch menu. Choose 'Option' in test mode, and input the </desc>
+		<rating>0.7</rating>
+		<releasedate>19940101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Hanafuda-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/hparadis.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="43668" source="ScreenScraper.fr">
+		<path>./tontonb.zip</path>
+		<name>Tonton [bet] (Japan, set 1)</name>
+		<desc>Tonton the pig challenges you to mahjong!</desc>
+		<releasedate>19870101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/tontonb.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="43838" source="ScreenScraper.fr">
+		<path>./untoucha.zip</path>
+		<name>Untouchable (Ver. 2.10)</name>
+		<releasedate>19870101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Casino / Cards-Casino</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/untoucha.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="39912" source="ScreenScraper.fr">
+		<path>./7jigen.zip</path>
+		<name>7jigen No Youseitachi - Mahjong 7 Dimensions (Japan)</name>
+		<desc>A mahjong game.</desc>
+		<image>/userdata/roms/mame/images/7jigen.png</image>
+		<releasedate>19900101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2048</genreid>
+	</game>
+	<game id="78941" source="ScreenScraper.fr">
+		<path>./mjapinky.zip</path>
+		<name>Almond Pinky [bet] (Japan)</name>
+		<desc>Almond Pinky (c) 1988 Dynax.  - SOURCES -  Game's rom.</desc>
+		<image>/userdata/roms/mame/images/mjapinky.png</image>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Dynax</developer>
+		<publisher>Dynax</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2048</genreid>
+	</game>
+	<game id="40850" source="ScreenScraper.fr">
+		<path>./ddenlovj.zip</path>
+		<name>Don Den Lover Vol. 1 - Shiro Kuro Tsukeyo! (Japan)</name>
+		<desc>Don Den Lover Vol. 1 is an arcade version of the classic board game Othello for one or two players. 
+ 
+The one player game features five female opponents that strip after being defeated. 
+ 
+Gameplay starts with the player given the choice to play as either white or black (with black going first).  A timer is set at 100 seconds and counts down during the player's turn.  If the timer counts down before the end of the round then it is game over.  Upon continuing the player may continue with another 100 seconds on the clock in the same game or start the current round over.  Occasionally the player is asked by his opponent to play in a certain space to add 5 seconds on the timer but this is usually not to the player's advantage. 
+ 
+During a match, the player has the option to ask for help. After making a request the player may either ask for the best place to play in this turn, or go back one turn. But your opponent also has the opportunity to go back one turn as well. 
+ 
+If a round is played to completion, the pieces are counted and whoever has the most pieces wins. If the player loses then it is game over. If the player continues then the round starts over. If the player wins, then the opponent strips for the player. 
+ 
+Strip sequences consist of the girl shown in a still pose, with her clothing disappearing off of her until she is left wearing just a bikini. Each girl has just one strip sequence before the player continues on to the next opponent.</desc>
+		<image>/userdata/roms/mame/images/ddenlovj.png</image>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<publisher>Dynax</publisher>
+		<genre>Othello-Asiatic board game</genre>
+		<players>2</players>
+		<lang>jp</lang>
+		<region>jp</region>
+		<genreid>2048</genreid>
+	</game>
+	<game id="41013" source="ScreenScraper.fr">
+		<path>./drgpunch.zip</path>
+		<name>Dragon Punch (Japan)</name>
+		<desc>A puzzle game featuring adult content.</desc>
+		<image>/userdata/roms/mame/images/drgpunch.png</image>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Dynax</developer>
+		<publisher>Dynax</publisher>
+		<genre>Puzzle-Game / Equalize-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41688" source="ScreenScraper.fr">
+		<path>./hjingi.zip</path>
+		<name>Hana Jingi (Japan, Bet)</name>
+		<desc>Hanajingi (c) 1990 Dynax.  - SOURCES -  Game's rom.</desc>
+		<image>/userdata/roms/mame/images/hjingi.png</image>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Dynax</developer>
+		<publisher>Dynax</publisher>
+		<genre>Hanafuda-Asiatic board game</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2048</genreid>
+	</game>
+</gameList>

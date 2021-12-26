@@ -1,0 +1,722 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="40073" source="ScreenScraper.fr">
+		<path>./aso.zip</path>
+		<name>ASO: Armored Scrum Object</name>
+		<desc>ASO is a one-player scrolling shooter game, similar to Xevious in its segregation of air-to-air and air-to-ground weapons. Missiles are used to destroy ground enemies, while laser-like weapons are used for aerial opponents. Throughout each of the levels, the player must fight off waves of enemies that threaten several space stations and a boss must be defeated at the end of each. Like most early games in this genre, when the player dies, all weapons are lost and the player is moved to a point slightly before the point of death. The player's craft can also be upgraded to have more powerful weapons by picking up various power-ups throughout the level.</desc>
+		<image>/userdata/roms/mame/images/aso.png</image>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40095" source="ScreenScraper.fr">
+		<path>./athena.zip</path>
+		<name>Athena</name>
+		<desc>This is a pretty hard platform game where you take the role of Athena fighting your way through different worlds inhabited by all kinds of different enemies, ranging from moving pears to huge golems and flying devils. 
+ 
+You start out with nothing more than your feet to fight with and no more protection than Athena's underwear (she actually loses her dress in the intro to the first world) but can collect a huge number of different weapons and armour, as well as a great number of power-ups ranging from the usual more-power-for weapon or armour, through boots that allow her to jump higher and wings for flying, to one where Athena becomes a semi-god and actually growths to twice her usual size and gets a huge burning sword and full armour. 
+ 
+The worlds are filled with stone blocks that can be smashed when searching for secrets and items, as well as several levels connected by ladders or other means of transportation. 
+ 
+Athena is a great game, and will give even the most hardened platform-player a real challenge, for it is NOT an easy game, even with the dip switches in 'Easy' mode.</desc>
+		<image>/userdata/roms/mame/images/athena.png</image>
+		<rating>0.3</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40179" source="ScreenScraper.fr">
+		<path>./bbusters.zip</path>
+		<name>Beast Busters (World)</name>
+		<desc>A city has been invaded by the undead, you as any of three soldiers must shoot &amp; blast your way out or you'll become tonight's main course in this frantic first person shooter! Features excellent graphics and lots of challenge! No one knows how it happened but one thing is for sure, we'll risk our lives... and have lots of fun!</desc>
+		<image>/userdata/roms/mame/images/bbusters.png</image>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>3</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>261</genreid>
+	</game>
+	<game id="40203" source="ScreenScraper.fr">
+		<path>./bermudat.zip</path>
+		<name>Bermuda Triangle (World?)</name>
+		<desc>A vertically scrolling shoot'em up.</desc>
+		<image>/userdata/roms/mame/images/bermudat.png</image>
+		<rating>0.4</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40550" source="ScreenScraper.fr">
+		<path>./chopper.zip</path>
+		<name>Chopper I (US set 1)</name>
+		<desc>Pilot a helicopter in this vertically scrolling shooter from SNK.</desc>
+		<image>/userdata/roms/mame/images/chopper.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40693" source="ScreenScraper.fr">
+		<path>./countryc.zip</path>
+		<name>Country Club</name>
+		<desc>A golf game.</desc>
+		<image>/userdata/roms/mame/images/countryc.png</image>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="150438" source="ScreenScraper.fr">
+		<path>./fantasyj.zip</path>
+		<name>Fantasy (Japan)</name>
+		<desc>You must rescue your girlfriend from the bad pirate who has stolen her from your island love nest. Then, rescue her from other kidnappers until you are reunited with her for good.</desc>
+		<image>/userdata/roms/mame/images/fantasyj.png</image>
+		<rating>0.2</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Action-Action / Labyrinth-Action / Adventure</genre>
+		<players>1</players>
+		<lang>jp</lang>
+		<region>jp</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="41290" source="ScreenScraper.fr">
+		<path>./ftsoccer.zip</path>
+		<name>Fighting Soccer</name>
+		<desc>An overhead soccer game.</desc>
+		<image>/userdata/roms/mame/images/ftsoccer.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43012" source="ScreenScraper.fr">
+		<path>./sgladiat.zip</path>
+		<name>Gladiator 1984</name>
+		<desc>Ride on your horse and jump over obstacles or avoid them with your chariot.</desc>
+		<image>/userdata/roms/mame/images/sgladiat.png</image>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="41483" source="ScreenScraper.fr">
+		<path>./goldmedl.zip</path>
+		<name>Gold Medalist (set 1)</name>
+		<desc>Based on the Seoul Olympics, this is a multi-event track and field game for up to four players and featuring nine different events. Despite being heavily influenced by Konami's own "Track and Field" series, Gold Medalist lacks both the addictiveness and tight gameplay mechanics of the games upon which it is based. The nine disciplines, which can be attempted in any order, are: 
+100 Metre Sprint 
+Long Jump 
+Horizontal Bars 
+Freestyle Swimming 
+Boxing 
+Discus 
+110m Hurdles 
+High Jump 
+400m Relay</desc>
+		<image>/userdata/roms/mame/images/goldmedl.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Sports / Running trails-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41604" source="ScreenScraper.fr">
+		<path>./gwar.zip</path>
+		<name>Guerrilla War (US)</name>
+		<desc>The country is struggling under the cruel domination of its evil King. The rebel guerilla leader and his comrades attempt to secretly land on shore. The King's military is waiting for them, however, and the players must fight their way inland to reach and destroy the King's palace stronghold. 
+ 
+In this, the pseudo-sequel to SNK's own superb "Ikari Warriors" (released two years earlier), players must once again shoot their way through a number of vertically scrolling levels, all packed with large numbers of enemy soldiers, gun emplacements and vehicles. Each level also contains a number of captured prisoners tied to wooden stakes, and these can be rescued for extra points.  
+ 
+The players' weapons have only a limited amount of ammunition and additional ammo/grenades must be picked up along the way. A number of gun upgrades can also be found. At various points in the game, players can also enter unoccupied enemy tanks, which provide increased firepower as well as resistance to enemy shots. Too many enemy hits, however, will eventually see the tank explode - this is proceeded by a warning flash to allow the player to exit the tank before the explosion occurs. Should the player be caught inside or near the tank when it explodes, a life is lost. 
+ 
+As with "Ikari Warriors", Guerrilla War features full 360 degree gameplay with attacking troops appearing from all directions. The players' on-screen counterparts are able to rotate themselves accordingly.</desc>
+		<image>/userdata/roms/mame/images/gwar.png</image>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="41613" source="ScreenScraper.fr">
+		<path>./hal21.zip</path>
+		<name>Hal21</name>
+		<desc>A vertically scrolling shoot 'em up from SNK.</desc>
+		<image>/userdata/roms/mame/images/hal21.png</image>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41786" source="ScreenScraper.fr">
+		<path>./ikari3.zip</path>
+		<name>Ikari 3 - The Rescue (World, 8-way Joystick)</name>
+		<desc>Two shirtless Rambo-type players fight their way behind enemy lines to rescue a kidnapped hostage. Various military types must be killed by fist, knife, foot or gun. The players are occasionally marauded by tanks and</desc>
+		<image>/userdata/roms/mame/images/ikari3.png</image>
+		<rating>0.8</rating>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>SNK</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="41785" source="ScreenScraper.fr">
+		<path>./ikari.zip</path>
+		<name>Ikari Warriors (US JAMMA)</name>
+		<desc>Ikari Warriors is a vertically-scrolling run 'n' gun shoot-em-up in which one or two players take on the roles of two bandana-wearing musclebound soldiers as they engage in jungle warfare, fighting over land and water to reach the village of Ikari. 
+ 
+Players can rotate their guns through 360 degrees, allowing them to fire and move in all directions. Standing between the soldiers and their destination is a multitude of enemy soldiers, tanks, helicopters and reinforced bunkers.  
+ 
+The enemy soldiers utilise a number of different weapons, including machine-guns, grenades, super grenades and flame-throwers. The game's standard enemy troops wear blue uniforms, but there are also enemies in red uniforms that when killed, often drop power-ups that either give players more ammunition, increase the power of bullets and grenades or even kill all enemies on the screen. The players' munitions are limited in number so additional ammo and grenades must to be picked up along the way.  
+ 
+While most of the action takes place on foot, unoccupied enemy tanks can be found that can be entered and driven. Tanks offer increased firepower as well as resistance to enemy shots. Too many enemy hits, however, will eventually see the tank explode, this is proceeded by a warning flash to allow the player to exit the tank before the explosion. Should the player be caught inside when the tank explodes, a life is lost. Tanks also have a limited amount of fuel but extra fuel can be found to replenish it. 
+ 
+Another obstacle that players need to be wary of, whether on foot or in a tank, are hidden land-mines. These cannot initially be seen put will appear and flash as the player approaches. These cannot be destroyed and contact with them results in an instant death. 
+ 
+Unlike most arcade games, Ikari Warriors is not separated into different stages; the game takes place over one huge, scrolling stage. Ikari Warriors does have a continue feature, but it's only possible to continue from where the last game ended by first holding down the FIRE button, then pressing the start button. Simply pressing the start button restarts the game from the very beginning.</desc>
+		<image>/userdata/roms/mame/images/ikari.png</image>
+		<rating>0.9</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="41912" source="ScreenScraper.fr">
+		<path>./joyfulr.zip</path>
+		<name>Joyful Road (Japan)</name>
+		<desc>A weird driving game with a car that has long arms that reach out to grab a variety of edible items that appear along roadside. 
+ 
+The object is to drive safely down the road. Pick up enough fuel to stay alive while avoiding other vehicles that go by, grab as many bonus objects as possible including apples, cherries, bananas, acorns, live fish and money, and park your car in the garage. Driving while trying to pick up the goodies is difficult and you can crash very easily on the narrow roads. The pace of the game is frustrating because the hands move slowly while the car itself moves really fast, especially in the later rounds. If one of your hands hits a tree or any other foreign object in its quest for food, the car winces in pain for a few moments until it can use its hands again. 
+ 
+You can get a bonus for putting used-up food into garbage cans. Grabbing fish which leap out of surrounding rivers is a safe bet, but most other bonuses are placed, so you can crash if you try to grab them. The best strategy is only to go for the fuel, since the car is a big gas guzzler and you can also get a bonus for leftover fuel at the end of the drive.</desc>
+		<image>/userdata/roms/mame/images/joyfulr.png</image>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Race, Driving</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41874" source="ScreenScraper.fr">
+		<path>./jcross.zip</path>
+		<name>Jumping Cross (set 1)</name>
+		<desc>A motocross racing game.</desc>
+		<image>/userdata/roms/mame/images/jcross.png</image>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Race, Driving / Motorcycle-Race, Driving</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="42101" source="ScreenScraper.fr">
+		<path>./lasso.zip</path>
+		<name>Lasso</name>
+		<desc>Lasso (c) 1982 SNK.  - TECHNICAL -  Game ID : 'WM'  Main CPU : (2x) M6502 (@ 2 Mhz) Sound CPU : M6502 (@ 600 Khz) Sound Chips : (2x) SN76496 (@ 2 Mhz)  Players : 2 Control : 4-way joystick Buttons : 2  - TRIVIA -  Released in August 1982.  - SOURCES -  Ga</desc>
+		<image>/userdata/roms/mame/images/lasso.png</image>
+		<rating>0.5</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Various-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="150437" source="ScreenScraper.fr">
+		<path>./fitegolf.zip</path>
+		<name>Lee Trevino's Fighting Golf (World?)</name>
+		<desc>A golf game.</desc>
+		<image>/userdata/roms/mame/images/fitegolf.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Sports-Sports / Golf</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42355" source="ScreenScraper.fr">
+		<path>./madcrash.zip</path>
+		<name>Mad Crasher</name>
+		<desc>A diagonal driving/shooting 'em up game. 
+ 
+This was SNK's first 3-D Isometric game.</desc>
+		<image>/userdata/roms/mame/images/madcrash.png</image>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shooter / Vehicle, Diagonal-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1028</genreid>
+	</game>
+	<game id="57998" source="ScreenScraper.fr">
+		<path>./mainsnk.zip</path>
+		<name>Main Event (1984)</name>
+		<desc>A boxing game from SNK.</desc>
+		<image>/userdata/roms/mame/images/mainsnk.png</image>
+		<rating>0.3</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Sports / Boxing-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1540</genreid>
+	</game>
+	<game id="78863" source="ScreenScraper.fr">
+		<path>./marvins.zip</path>
+		<name>Marvin's Maze</name>
+		<desc>A maze game where you fight against Robonoids while trying to clear the maze of dots. Two ways to finish each rack: Eat up all the dots, or destroy a certain number of Robonoids (listed at the bottom of the screen). Two ways to destroy the Robonoids: Shoot them, or remove the ground from under them at certain points of the maze (the 'Trick').</desc>
+		<image>/userdata/roms/mame/images/marvins.png</image>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="78888" source="ScreenScraper.fr">
+		<path>./mechatt.zip</path>
+		<name>Mechanized Attack (World)</name>
+		<desc>The US version is slightly different, it has the "Winners Don't Use Drugs" screen.</desc>
+		<image>/userdata/roms/mame/images/mechatt.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>261</genreid>
+	</game>
+	<game id="43649" source="ScreenScraper.fr">
+		<path>./tnextspc.zip</path>
+		<name>Next Space, The (set 1)</name>
+		<desc>A vertical scrolling shooter. 
+ 
+Pilot your spaceship through the deep space, collect various speed and weapon items to take down a multitude of enemies, and restore peace to the galaxy!   
+ 
+The game concept is all about the power-ups. The game offers ten items to pick up, including speed boosts, laser weapons, a spread gun, a flamethrower, a tiny spaceship helpers and missiles.</desc>
+		<image>/userdata/roms/mame/images/tnextspc.png</image>
+		<rating>0.6</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="79128" source="ScreenScraper.fr">
+		<path>./nibbler.zip</path>
+		<name>Nibbler (rev 9)</name>
+		<desc>A maze game where you control Nibbler the snake to eat food around the maze. With each food you eat, Nibbler gets bigger. Complete each level by eating all the food on the screen. You lose a life if Nibbler hits his own body.</desc>
+		<image>/userdata/roms/mame/images/nibbler.png</image>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Rock-Ola</developer>
+		<publisher>Rock-Ola</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="79117" source="ScreenScraper.fr">
+		<path>./ozmawars.zip</path>
+		<name>Ozma Wars (set 1)</name>
+		<desc>A great and pioneer fixed vertical space shoot'em up game.  
+ 
+The Ozma wars has begun, and the player controls a spacecraft which must fend off UFOs, spaceships meteors, and comets in a varied of space levels. Instead of lives, the player is given an energy reserve that is constantly diminishing; getting hit by the enemy causes gameplay to stop momentarily and a large amount of energy is depleted. Every so often, a mothership will appear and dock with the player's spacecraft, allowing the energy to be refilled. There are 3-4 recognizable stages as the game progresses and new enemies begin to appear. After these, the mothership will appear, and the cycle starts over; this continues indefinitely until the energy reaches zero.</desc>
+		<image>/userdata/roms/mame/images/ozmawars.png</image>
+		<rating>0.3</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="42487" source="ScreenScraper.fr">
+		<path>./pow.zip</path>
+		<name>P.O.W.: Prisoners of War (US version 1)</name>
+		<desc>Prisoners of War is a horizontally-scrolling run 'n' gun platform game for one or two players in which Special Forces soldiers escape from a POW camp and must fight their way through enemy territory to reach the extraction point and rescue.  
+ 
+The escaping POWs fight primarily using hand-to-hand combat, but limited-use knives and sub-machine guns can be retrieved from fallen enemy soldiers. The game consists of three action buttons for punching, kicking and jumping. There are also three special attacks performed by pressing two buttons simultaneously: a jump kick (jump, then kick), a back punch (jump and punch simultaneously) and a headbutt (punch and kick simultaneously). 
+ 
+The controls change when wielding a weapon; the knife is thrown by pressing the punch button, but can preserved by using kicks. When wielding the machine gun, players can fire it by pressing the kick button, or can conserve its ammo by pressing the punch button to gun-whip enemies from close-range.</desc>
+		<image>/userdata/roms/mame/images/pow.png</image>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="79170" source="ScreenScraper.fr">
+		<path>./paddlema.zip</path>
+		<name>Paddle Mania</name>
+		<desc>Paddle Mania (c) 1988 SNK.  - TECHNICAL -  Game ID : Alpha-68K96I 'PM'  Main CPU : 68000 (@ 6 Mhz) Sound CPU : Z80 (@ 4 Mhz) Sound Chips : YM3812 (@ 4 Mhz)  Players : 4 Control : 8-way joystick Buttons : 2  - TRIVIA -  Released in January 1988.  - STAFF -</desc>
+		<image>/userdata/roms/mame/images/paddlema.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Sports / Tennis-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="79198" source="ScreenScraper.fr">
+		<path>./pballoon.zip</path>
+		<name>Pioneer Balloon</name>
+		<desc>Guide a balloon across a variety of frontiers dropping bombs on your enemies. Dodge arrows shot from a covered wagon, boomerangs thrown by natives, coconuts hurled by gorillas, geyser sprays, cannonballs and deadly birds. Finally, navigate the balloon over mountains and make a precise landing at Fort Freedom.</desc>
+		<image>/userdata/roms/mame/images/pballoon.png</image>
+		<rating>0.5</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="42501" source="ScreenScraper.fr">
+		<path>./prehisle.zip</path>
+		<name>Prehistoric Isle in 1930 (World)</name>
+		<desc>Prehistoric Isle in 1930 is a horizontally scrolling shooting game developed by SNK and released in arcades in 1989.  
+ 
+Ships have been mysteriously disappearing in the vicinity of the Bahamas for years. Now, in 1930, the United States government sends an expedition to the area in a flying boat to determine the cause. As they survey the ocean, the expedition comes across an uncharted landmass which they dub "Greenhell Isle" and launches two reconnaissance biplanes to take a closer look. As they investigate the island, the biplanes come under attack by dinosaurs and other life forms that were thought to have become extinct millions of years ago.  
+ 
+The player takes control of a biplane armed with a forward-firing machine gun. It can also be equipped with an option weapon pod that can be rotated clockwise around the craft. The option's attack changes depending on where it is currently positioned: 
+ 
+When directly above or below the plane, the option fires energy waves that reflect back upon contact with a surface. 
+When diagonally above the plane, the option fires balls of energy that bounce off surfaces at a 45 degree angle. 
+When diagonally below the plane, the option drops bombs. 
+When directly in front of the plane, the option replaces the default machine gun with its own flame cannon. 
+When directly behind the plane, the option deploys aerial mines.</desc>
+		<image>/userdata/roms/mame/images/prehisle.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="42533" source="ScreenScraper.fr">
+		<path>./psychos.zip</path>
+		<name>Psycho Soldier (US)</name>
+		<desc>Psycho Soldier is a side-scrolling shooter featuring two-player simultaneous play.  
+The major character is a girl named Athena. She fires blasts of psychic energy as her main weapon. She can collect orbs which she can control telepathically.  
+These orbs protect her from some projectiles and can also be launched at targets. The orbs will explode on impact. Her companion, a boy named Kensu, can help her with his own powers. Together they clean up a ruined city full of monsters and mutants.</desc>
+		<image>/userdata/roms/mame/images/psychos.png</image>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="42947" source="ScreenScraper.fr">
+		<path>./searchar.zip</path>
+		<name>SAR: Search And Rescue (World)</name>
+		<desc>When a pioneer spaceship vanishes mysteriously. An investigation reveals that the spaceship crashed near a ravine due to unknown circumstances. Now two SAR (Search and Rescue) operatives are on a mission to find out what happened, and eliminate the alien threat.</desc>
+		<image>/userdata/roms/mame/images/searchar.png</image>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="42894" source="ScreenScraper.fr">
+		<path>./sasuke.zip</path>
+		<name>Sasuke Vs. Commander</name>
+		<desc>A great vertical shoot'em up game.  
+ 
+You, controls a redheaded ninja warrior named Sasuke, set in feudal Japan in the beautiful city of kioto must protect your master the Shogun, by defeating all the villains ninja Commander.  
+ 
+The player Sasuke is always at the bottom of the screen can only move left or right and shoot tiny shuriken, he faces off against multiple ninjas stealthily jumping from trees and several powerfull bosses each equipped with their own magics capabilities such as Henshin, Bunshin, Kaen and Hiryuken you must eliminate all the enemies and dodge his falling corpses, to complete the stage.</desc>
+		<image>/userdata/roms/mame/images/sasuke.png</image>
+		<rating>0.3</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>TOSE</developer>
+		<publisher>SNK</publisher>
+		<genre>Shooter / 3rd person-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="42895" source="ScreenScraper.fr">
+		<path>./zarzon.zip</path>
+		<name>Satan Of Saturn</name>
+		<desc>A space shoot 'em up game. The gameplay is a variation of Space Invaders. 
+ 
+Fly your spaceship to Saturn, then once on Saturn destroy as many Satan's as possible. Additional bonus points can be accumlated by destroying the comet or attacking dragonflies. An additional spaceship is rewarded if the players score reaches 5,000 or 10,000 points. If the attacking UFOs or enemy rockets are destroyed, points will be scored. The game progresses through 4 different screens.</desc>
+		<image>/userdata/roms/mame/images/zarzon.png</image>
+		<rating>0.3</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43127" source="ScreenScraper.fr">
+		<path>./skysoldr.zip</path>
+		<name>Sky Soldiers (US)</name>
+		<desc>Sky Soldiers is a vertical scrolling Shoot em' Up developed by Alpha Denshi and released to arcades in 1988 by Romstar in North America and SNK for the rest of the world. The game features a time travel theme as well as an organized weapon select screen at the beginning of each stage. 
+ 
+Players travel back in time starting in Great Britain 1945, Germany 1915, Japan 1945, Germany 1944, Vietnam 1974, France 1914, Russia 1974 and finally the space station in the present time, 2110. Each time stage has two levels, both ending in a boss battle save for the final stage, resulting in a total of 15 Areas. 
+ 
+The ship's weapon system is accessed in the beginning of each stage. The shipâ€™s main shot consists of a semi-automatic Wave Shot. The shipâ€™s bomb weapons include forward firing missiles, fireballs, homing missiles and the buster bomb. The ship can be equipped with only one bomb weapon from either category at a time. The ship can only be loaded with a certain number of Bomb weapons and they can only be resupplied at the end of the level. The only pick-up item in the game is a parachuting human pilot shot down from malfunctioning fighter planes/jets; collecting these pilots results in random bonus points.</desc>
+		<image>/userdata/roms/mame/images/skysoldr.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43392" source="ScreenScraper.fr">
+		<path>./streetsm.zip</path>
+		<name>Street Smart (US version 2)</name>
+		<desc>You begin by choosing one of 2 fighters (either a blond guy, or a dark haired guy in karate gear). Then you are whisked away to one of many cities on the map to have a battle. The opponents are tough, but simple. This game has no special moves (and has only punch, kick, and jump buttons), and all characters have insanely high energy. So you pretty much just wail away at each other with punches and kicks until someone falls down. An ambulance will show up to haul away your defeated opponent, and a girl in the audience will come out to congratulate you</desc>
+		<image>/userdata/roms/mame/images/streetsm.png</image>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Fight /  Co-op-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="145394" source="ScreenScraper.fr">
+		<path>./sbasebal.zip</path>
+		<name>Super Champion Baseball (US)</name>
+		<desc>Un increíble juego de béisbol de SNK.</desc>
+		<image>/userdata/roms/mame/images/sbasebal.png</image>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Sports-Sports / Baseball</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43650" source="ScreenScraper.fr">
+		<path>./tnk3.zip</path>
+		<name>T.N.K III (US)</name>
+		<desc>During the final days of World War II, the allied forces sends special forces member Colonel Ralf to penetrate an enemy base and destroy a secret weapon by driving a new prototype tank.</desc>
+		<image>/userdata/roms/mame/images/tnk3.png</image>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shooter / Vehicle, Vertical-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1028</genreid>
+	</game>
+	<game id="43622" source="ScreenScraper.fr">
+		<path>./timesold.zip</path>
+		<name>Time Soldiers (US Rev 3)</name>
+		<desc>Travel throughout various time periods to save your fellow comrades in this vertically scrolling shoot'em up. Collect power-ups to help you defeat a variety of enemies and end-bosses.</desc>
+		<image>/userdata/roms/mame/images/timesold.png</image>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>ADK</developer>
+		<publisher>ADK</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="44116" source="ScreenScraper.fr">
+		<path>./worldwar.zip</path>
+		<name>World Wars (World?)</name>
+		<desc>World Wars and an early "Bermuda Triangle" version, it have different gameplay and graphics from the other versions.</desc>
+		<image>/userdata/roms/mame/images/worldwar.png</image>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43533" source="ScreenScraper.fr">
+		<path>./tdfever.zip</path>
+		<name>Touchdown Fever (US)</name>
+		<desc>Touchdown Fever is an arcade football game from SNK. Go head-to-head against the computer or a human opponent, or team up with another human player vs. the computer. Choose five, ten, or fifteen minute quarters for either league match (single game) or tournament play.</desc>
+		<image>/userdata/roms/mame/images/tdfever.png</image>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Sports / Football-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43909" source="ScreenScraper.fr">
+		<path>./vangrd2.zip</path>
+		<name>Vanguard 2</name>
+		<desc>he sequel to Vanguard, Vanguard II takes players out of the caves and into the sky above Earth. Instead of merely being able to shoot in four directions the ship now has the ability to move in eight directions as it flies over the floating alien platform. Pods on the platform must be bombed while aerial defenses must be shot down. After enough pods are destroyed the core can be bombed, destroying the platform and ending the level.</desc>
+		<image>/userdata/roms/mame/images/vangrd2.png</image>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="43910" source="ScreenScraper.fr">
+		<path>./vanguard.zip</path>
+		<name>Vanguard (SNK)</name>
+		<desc>Vanguard is a scrolling space shooter (some levels are horizontal, some are diagonal, and some are vertical). Shoot down enemies with your laser. Keep a close eye on your ever decreasing fuel gauge, luckily each enemy that you destroy will add to your remaining fuel. Find the energy pods to be temporarily invulnerable; the energy pods will also increase your fuel level. At the end of each level you must defeat a boss that is guarded by two moving force fields with holes in them. The computer will announce the name of the each zone using some nifty early 80's synthesized speech. The different levels include Mountain Zone, Rainbow Zone, Styx Zone, Rainbow Zone 2, Stripe Zone, Rainbow Zone 3, Bleak Zone, and the City of Mystery.</desc>
+		<image>/userdata/roms/mame/images/vanguard.png</image>
+		<rating>0.9</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="43954" source="ScreenScraper.fr">
+		<path>./victroad.zip</path>
+		<name>Victory Road</name>
+		<desc>Up to two players control commandos battling mystical monsters.</desc>
+		<image>/userdata/roms/mame/images/victroad.png</image>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+</gameList>

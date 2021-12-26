@@ -1,0 +1,651 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="40796" source="ScreenScraper.fr">
+		<path>./dacholer.zip</path>
+		<name>Dacholer</name>
+		<desc>A shooter type maze game, where you play a role of an Ostrich and will have to avoid and destroy all the opponents kicking a turtle shell in a shape of soccer ball for hit them  and come to the bonnus stage or next level.</desc>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dacholer.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="150111" source="ScreenScraper.fr">
+		<path>./friskyt.zip</path>
+		<name>Frisky Tom (set 1)</name>
+		<desc>You play the plumber Frisky Tom who is trying to get water from the top tank to a shower tank below. Mice interfere with your plans by stealing pipes blowing-up pipes and by biting Tom. If Tom fills enough water the shower tank, he advances to the next level. Depending upon how much water is in the tank, a woman in a bath tub will appear as an interlude between levels.</desc>
+		<rating>0.5</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Action-Action / Climbing</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/friskyt.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="63039" source="ScreenScraper.fr">
+		<path>./mgion.zip</path>
+		<name>Gionbana [bet] (Japan 890207)</name>
+		<desc>A hanafuda game with women who love to take their clothes off if they lose.</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Hanafuda-Asiatic board game</genre>
+		<image>/userdata/roms/mame/images/mgion.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="41490" source="ScreenScraper.fr">
+		<path>./gomoku.zip</path>
+		<name>Gomoku Narabe Renju</name>
+		<desc>A table top game consisted of an Asian Version of Go. Released in Japan. The Object in this game is to get five chips in a row to win. 
+ 
+This game is endless. The game will keep going until you lose.</desc>
+		<rating>0.3</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Renju-Asiatic board game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gomoku.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="41620" source="ScreenScraper.fr">
+		<path>./hanaoji.zip</path>
+		<name>Hana To Ojisan [bet] (ver 1.01, 1991/12/09)</name>
+		<desc>A hanafuda game with the obligatory nude woman as prize.</desc>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>Nichibutsu</publisher>
+		<genre>Hanafuda-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/hanaoji.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="41759" source="ScreenScraper.fr">
+		<path>./hyhoo.zip</path>
+		<name>Hayaoshi Taisen Quiz Hyhoo (Japan)</name>
+		<desc>A Japanese quiz game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<publisher>Nichibutsu</publisher>
+		<genre>Quiz / Japanese-Quiz</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/hyhoo.png</image>
+		<genreid>3328</genreid>
+	</game>
+	<game id="41760" source="ScreenScraper.fr">
+		<path>./hyhoo2.zip</path>
+		<name>Hayaoshi Taisen Quiz Hyhoo 2 (Japan)</name>
+		<desc>Hayaoshi Taisen Quiz HYHOO 2 © 1987 Nichibutsu.
+
+A Japanese quiz game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<publisher>Nichibutsu</publisher>
+		<genre>Quiz / Japanese-Quiz</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/hyhoo2.png</image>
+		<genreid>3328</genreid>
+	</game>
+	<game id="41735" source="ScreenScraper.fr">
+		<path>./housemnq.zip</path>
+		<name>House Mannequin (Japan 870217)</name>
+		<desc>A mahjong game.</desc>
+		<releasedate>19870101T000000</releasedate>
+		<publisher>Nichibutsu</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/housemnq.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="41734" source="ScreenScraper.fr">
+		<path>./housemn2.zip</path>
+		<name>House Mannequin Roppongi Live Hen (Japan 870418)</name>
+		<desc>A mahjong game.</desc>
+		<releasedate>19870101T000000</releasedate>
+		<publisher>Nichibutsu</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/housemn2.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="41844" source="ScreenScraper.fr">
+		<path>./itaten.zip</path>
+		<name>Itazura Tenshi (Japan)</name>
+		<desc>A shoot 'em up with an angel that has to make a constelation. Win the heart of a lovely angel who draws the beautiful constellations in the sky. A fanciful game of romance with a touch of fairy tales.</desc>
+		<rating>0.6</rating>
+		<releasedate>19840101T000000</releasedate>
+		<publisher>Nichibutsu</publisher>
+		<genre>Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/itaten.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41891" source="ScreenScraper.fr">
+		<path>./jngolady.zip</path>
+		<name>Jangou Lady (Japan)</name>
+		<desc>Jangoh Lady (c) 1984 Nichibutsu.  - SOURCES -  Game's ROM.</desc>
+		<releasedate>19840101T000000</releasedate>
+		<publisher>Nichibutsu</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/jngolady.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="41979" source="ScreenScraper.fr">
+		<path>./kickboy.zip</path>
+		<name>Kick Boy</name>
+		<desc>A shooter type maze game, where you play a role of an boy and will have to avoid and destroy all the annoying dogs kicking a soccer ball for hit them and come to the bonnus stage or next level.</desc>
+		<rating>0.1</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/kickboy.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41711" source="ScreenScraper.fr">
+		<path>./horekid.zip</path>
+		<name>Kid No Hore Hore Daisakusen</name>
+		<desc>'Kid's Horehore Daisakusen' is an action game that was released from Nichibutsu in 1987. 
+Kid, who has been drawn into the space-time labyrinth from the 23 century, fights to escape from a large track of the enemy in order to return to the present day. Players defeat enemies with dropping in holes with using items, to escape from the times, such as primitive times and the Edo era and contemporary.</desc>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/horekid.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42069" source="ScreenScraper.fr">
+		<path>./kozure.zip</path>
+		<name>Kozure Ookami (Japan)</name>
+		<desc>In this game, you play Itto, and you walk around with your son in a backpack, killing a lot of guys to death. While this is a scrolling beat'em all, in terms of mechanical complexity, there is a sort of similarity to simpler games that came before it, like Spartan X, My Hero, et al. There is no combo, but you do have a block button and can do a few different blocks with your sword by holding one direction when you press the attack button.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/kozure.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="42127" source="ScreenScraper.fr">
+		<path>./legion.zip</path>
+		<name>Legion: Spinner-87 (World ver 2.03)</name>
+		<desc>Pick up allies to form a powerful Legion against 'The Dark Empire'.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<publisher>Nichibutsu</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/legion.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="57919" source="ScreenScraper.fr">
+		<path>./magmax.zip</path>
+		<name>Mag Max</name>
+		<desc>Mag Max is a horizontally scrolling shoot-em-up in which a single player takes control of the 'Maxcraft' hover-ship and must battle their way through an packed enemy installation to find and destroy the invading alien 'Dragonia' fleet. 
+ 
+The action takes place both above and below ground and transporters appear throughout the game that allows the Maxcraft warp between the two as players search for the three-headed 'Dragonship'. 
+ 
+At various points the player will come across robot components - either a torso, a pair of legs or a plasma gun - and collecting these will eventually see the player's hover-ship become a towering robot, vastly increasing its firepower in the process. 
+ 
+If the Maxcraft takes an enemy hit when additional components are attached, a component is lost. If the ship is hit when only in basic form, however, a life is lost.</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<publisher>Nichibutsu</publisher>
+		<genre>Shooter / Horizontal-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/magmax.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="78921" source="ScreenScraper.fr">
+		<path>./mightguy.zip</path>
+		<name>Mighty Guy</name>
+		<desc>Mighty Guy doesn't need a gun to fend off large amounts of soldiers! This is what "Ikari Warriors" would be if they left their machine guns at home.</desc>
+		<rating>0.6</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Fight / Vertical-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mightguy.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="78970" source="ScreenScraper.fr">
+		<path>./mooncrst.zip</path>
+		<name>Moon Cresta (Nichibutsu)</name>
+		<desc>Moon Cresta is a single screen shoot-em-up with the player controlling an armed ship that moves horizontally along the bottom of the screen and must use their ship to destroy waves of attacking aliens.  
+ 
+The player begins the game with a small ship armed with a single laser cannon. Upon successful completion of the first four waves of alien attacks, the player's ship will be able to dock with the next 'stage' of fighter ship, although the docking procedure must be completed within a set time. This larger, two-stage ship has increased fire power (three lasers). 
+ 
+After successfully clearing a further two alien waves and surviving a meteor shower, the two-stage ship will be able to dock with the third and final piece, giving the player the largest and most powerful ship, which is now armed with five lasers. Bonus points are awarded depending on how quickly the docking procedures are completed. 
+ 
+If the multi-stage ship is hit, the player continues with whatever stages remain. If players achieve a score of 30,000, they are awarded a free game and their score continues to accumulate. 
+ 
+Upon completion of the first eight screens, the player's ship will revert back to its small, single-stage incarnation and the game begins again with an increased level of difficulty.</desc>
+		<rating>0.7</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mooncrst.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="78971" source="ScreenScraper.fr">
+		<path>./moonqsr.zip</path>
+		<name>Moon Quasar</name>
+		<desc>The space patrol aboard, can you survive the last invasion? you will need cross the entire galaxy and destroy the impending alien menace, should avoid losing one of the three modules of the ship and refuel your tank fuel to complete the mission.</desc>
+		<rating>0.7</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/moonqsr.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="79006" source="ScreenScraper.fr">
+		<path>./mshuttlej2.zip</path>
+		<name>Moon Shuttle (Japan set 2)</name>
+		<desc>Moon Shuttle is a game where at first you have to shoot moon rocks to get out, then after that fight some enemies. The cycle repeats after that. The voice sampling in the game doesn't say what the words on the screen say. For example, when it says on the screen 'Never Give Up', the voice is actually saying 'Hang in there!'.</desc>
+		<rating>0.5</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mshuttlej2.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="79126" source="ScreenScraper.fr">
+		<path>./ngtbunny.zip</path>
+		<name>Night Bunny (Japan 840601 MRN 2-10)</name>
+		<desc>Night Bunny (c) 1985 Nichibutsu.  - SOURCES -  Game's ROM. Machine's picture.</desc>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/ngtbunny.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="79129" source="ScreenScraper.fr">
+		<path>./nightgal.zip</path>
+		<name>Night Gal (Japan 840920 AG 1-00)</name>
+		<desc>Night Gal (c) 1985 Nichibutsu.  - SOURCES -  Game's ROM. Machine's picture.</desc>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/nightgal.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="79138" source="ScreenScraper.fr">
+		<path>./ninjemak.zip</path>
+		<name>Ninja Emaki (US)</name>
+		<desc>Evil demons and enemies are closing into forever confine this world into darkness... but a young and brave ninja arose to conquer the witch castle and defeat the evil. 
+ 
+Fly at full speed on your magic cloud to reach enemy lands and battle your way through a variety of landscapes, shooting plenty of enemies as you go. Grab special ninja scrolls that allow you to use a limited-time power-up weapon. Beat the end boss to move on to the next stage and save the royal princess from the clutches of evil!</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Shooter / Vertical-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ninjemak.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="79142" source="ScreenScraper.fr">
+		<path>./niyanpai.zip</path>
+		<name>Niyanpai (Japan)</name>
+		<desc>Solitaire mahjong game where the player strives to complete a specified mahjong hand by matching tiles.</desc>
+		<rating>0.5</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Puzzle-Game / Equalize-Puzzle-Game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/niyanpai.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="60834" source="ScreenScraper.fr">
+		<path>./ojousan.zip</path>
+		<name>Ojousan (Japan 871204)</name>
+		<desc>Mahjong with beautiful 'prizes'.</desc>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/ojousan.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="42679" source="ScreenScraper.fr">
+		<path>./radrad.zip</path>
+		<name>Radical Radial (US)</name>
+		<desc>This is an interesting take on the shooter genre, with three unique sections in each stage. You control a tire with the ability to jump and shoot. When you jump, you can only be hit by the enemies in the first stage. 
+ 
+In the first level, you need to dodge or jump over rocks as bat-like enemies rush down the screen, weaving across it. Occasionally a string of enemies will appear that give a bonus of 1000 if you hit them all. You can also pick up bonus items worth 300 points each. 
+ 
+In the second level, you are driving down a busy road. You need to doge cars as they erratically move across the screen. Occasionally an ambulance will drive up the screen, and if it hits a vehicle it will go flying across the screen. Watch out for the blue trucks in this section. Midway through this part, a green truck appears which drops stars. They are worth 500 each. There are broken down vehicles on the road, along with oil slicks. The pickups worth 300 points make a return. 
+ 
+The third level is a bonus round. You continue driving down the road, but now there are only oil slicks. You need to collect as many point pickups as possible. If you die in this section, it jumps to the next level, and you do not lose a life. You get a bonus if you get every pickup. You are then given a bonus based on your time for the last stage. 
+ 
+There is a difficulty spike at the third stage. The extra life is at 50000. You only get one extra life during the course of the game. The game is infinite.</desc>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Shooter / Vehicle, Vertical-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/radrad.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="42833" source="ScreenScraper.fr">
+		<path>./rpatrol.zip</path>
+		<name>River Patrol (Japan)</name>
+		<desc>You are the captain of a river patrol ship in this top-down game. Your mission: To save the poor souls who fell into the river. But it is not that easy, in your way lays some big boulders, crocodiles and some tree logs, all waiting to sink your vessel.</desc>
+		<rating>0.6</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Orca Corporation</developer>
+		<publisher>Orca</publisher>
+		<genre>Race, Driving / Boat-Race, Driving</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/rpatrol.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="42775" source="ScreenScraper.fr">
+		<path>./rjammer.zip</path>
+		<name>Roller Jammer</name>
+		<desc>Roller derby competition.</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Fight / Vertical-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/rjammer.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="150104" source="ScreenScraper.fr">
+		<path>./rollingc.zip</path>
+		<name>Rolling Crash / Moon Base</name>
+		<desc>Rolling Crash is a 2-D maze racing game with changes to add to the variety of play. You control your car through the maze to pick up the dots while at the same time avoiding the car, or cars, that are constantly trying to ram you. Successfully get through one maze and many more await you. This is good practice for freeway driving in the big city.</desc>
+		<rating>0.3</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<image>/userdata/roms/mame/images/rollingc.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42959" source="ScreenScraper.fr">
+		<path>./seicross.zip</path>
+		<name>Seicross</name>
+		<desc>The player controls a gliding motorcycle-like vehicle, bumping other riders, collecting power modules and collecting blue people who are stranded. A second area removes the riders and adds rough terrain, while the final leg features a battle with one or more dinosaur tanks, which launch their heads when destroyed. The sequence repeats infinitely, getting progressively difficult.</desc>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Shooter / Vehicle, Horizontal-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/seicross.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="43008" source="ScreenScraper.fr">
+		<path>./sfx.zip</path>
+		<name>Sf-x</name>
+		<desc>SF-X (c) 1983 Nichibutsu.  - TECHNICAL -  Main CPU : Z80 (@ 3.072 Mhz) Sound CPU : (2x) Z80 (@ 1.78975 Mhz) Sound Chips : (2x) AY8910 (@ 1.78975 Mhz), and a DAC for speechs  Players : 2 Control : 8-way joystick Buttons : 2  - TRIVIA -  Developed by Nihon </desc>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sfx.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="39997" source="ScreenScraper.fr">
+		<path>./amatelas.zip</path>
+		<name>Soldier Girl Amazon</name>
+		<desc>Become the Mighty Fighting Amazon and you will search jungles and deserts on the most dangerous island on earth. Your mission is to recapture the men you desperately need to save the only race of giant womankind </desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/amatelas.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43567" source="ScreenScraper.fr">
+		<path>./terracre.zip</path>
+		<name>Terra Cresta (YM3526 set 1)</name>
+		<desc>Terra Cresta is a vertically-scrolling shoot-em-up set over a constantly scrolling landscape of islands and enemy installations. The player is under constant attack from enemy spaceship waves, ground-based guns and turrets, dinosaurs and three different mothercraft ships.  
+ 
+The levels are littered with ground-based silos bearing numbers between 2 and 5. These can be shot to release a player ship component, which then attaches to the player's current ship, increasing both its size and firepower. Power-ups available are 2-Wide shot, 3-Rear Shot, 4-Front cannon and 5-Rear shield.  
+ 
+Using the 'Formation' button splits the ship parts into a formation for limited time, giving increased fire power. The number of parts acquired determines the formation. For example, if the player has picked up two ship parts then a triangle is formed, with the player's main ship at the rear of the formation, with additional two ship components positioned at the front edge of the triangle.  
+ 
+When all four numbered parts have been collected, the player's ship transforms into a flaming Phoenix, and is indestructible for a limited time.</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/terracre.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43568" source="ScreenScraper.fr">
+		<path>./terrafu.zip</path>
+		<name>Terra Force (US)</name>
+		<desc>A standard shooter. All levels are divided in 2 parts : overworld with vertical direction and underground with horizontal.</desc>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>bootleg</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/terrafu.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43772" source="ScreenScraper.fr">
+		<path>./tubep.zip</path>
+		<name>Tube Panic</name>
+		<desc>An early 3-D shoot'em up game. 
+ 
+Pilot your ship through vast zones and large tubular vortex levels full of enemies. The vast zones are similar in gameplay to William's Blaster, while the tubular levels are similar to Konami's Gyruss. Upon the completion of the tubular levels, the player must dock with the mothership. 
+ 
+Good luck, fighter pilot!</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Shooter / Plane, 3rd person-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tubep.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="40812" source="ScreenScraper.fr">
+		<path>./dangar.zip</path>
+		<name>UFO Robo Dangar (4/07/1987)</name>
+		<desc>You fly a spaceship in a vertically scrolling game while fighting off enemy ships and collecting ship parts that combine to form an enormous, fist-launching robot. If the player can keep the robot in one piece (a difficult task considering the number of enemies the game throws at you), they'll eventually be able to arm it with a gun and even transform it into one of several devastatingly powerful smaller ships.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dangar.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="44088" source="ScreenScraper.fr">
+		<path>./wiping.zip</path>
+		<name>Wiping</name>
+		<desc>Wiping, later rereleased as Rug Rats, is Dig Dug-style arcade game that was released by Nichibutsu in 1982; it utilises two Zilog Z80 microprocessors (running up at 3.072 MHz) and a custom sound chip running at the same speed. The player must use a 4-way joystick to take control of a vacuum cleaner (which bears a striking resemblance to Numatic International's then-new "Henry") with a single button to make it spray soapbubbles at germs (of which there are three different types, "Baddons", "Bilbolas" and "Bigimbas"), and roll over them while they're stunned to suck them up - and it can also pass over rugs to make them roll up and squash any germs standing on them, but it can also be a victim of this. 
+ 
+</desc>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wiping.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40067" source="ScreenScraper.fr">
+		<path>./armedf.zip</path>
+		<name>Armed Formation</name>
+		<desc>A vertically scrolling shoot'em up.</desc>
+		<image>/userdata/roms/mame/images/armedf.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40678" source="ScreenScraper.fr">
+		<path>./cop01.zip</path>
+		<name>Cop 01 (set 1)</name>
+		<desc>A shoot'em up / platform game where you are a futuristic cop trying to save your girlfriend.</desc>
+		<image>/userdata/roms/mame/images/cop01.png</image>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="41344" source="ScreenScraper.fr">
+		<path>./galivan.zip</path>
+		<name>Cosmo Police Galivan (12/26/1985)</name>
+		<desc>Galivan is a single player platform shoot-em-up in which the player takes on the roll of a 'Cosmo Police' officer who runs and jumps around a multi-directional scrolling cave system, destroying or avoiding waves of constantly attacking robots, aliens and alien ships. 
+ 
+The player starts the game as an unarmed human, whose only attacking options are kicking and punching, but picking up a POW item encases the human in a robotic suit and arms the player with a laser gun. 
+ 
+Collecting the blue POW items while in the suit awards the player with a powerful beam weapon for a limited time, while the red POW item gives the player a three-shot cannon. POW items are dotted throughout the levels and can also be gained by shooting the blue robot aliens. 
+ 
+The player's character has an energy bar that decreases whenever the player is hit. Should this fall below the halfway point, the robot suit will be lost and the player will once again be an unarmed human. 
+ 
+Collecting a POW item while in human form will restore the player's energy. If a POW is collected while wearing the suit, however, the player's energy will NOT be increased but their weapon will receive a power-up. 
+ 
+The game's platforms are littered with springboards that fire the player high into the air when stepped on. Some platforms - often containing POW items - can only be reached via a springboard.</desc>
+		<image>/userdata/roms/mame/images/galivan.png</image>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<publisher>Nichibutsu</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40608" source="ScreenScraper.fr">
+		<path>./fruitbun.zip</path>
+		<name>Country Girl (World?)</name>
+		<image>/userdata/roms/mame/images/fruitbun.png</image>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Royal Denshi</developer>
+		<publisher>Royal Denshi</publisher>
+		<genre>Casino / Cards-Casino</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3584</genreid>
+	</game>
+	<game id="149429" source="ScreenScraper.fr">
+		<path>./cclimber.zip</path>
+		<name>Crazy Climber (US set 1)</name>
+		<desc>Crazy Climber is a 2-D, strategy style game. The game is strategic in the fact that you must plan your moves as you climb up the building and anticipate the hazards that await you. You start out the game at the bottom of a building to be scaled. As you climb up the building, you will be assailed by bald people throwing flowerpots, signs with loose electrical wires, very large apes, falling signs, trash and barbells, and a bird that likes to drop bad things on your character. Your goal is to make it to the top of the building and catch the helicopter, which will transport you to the next building to be scaled. Of course, you will be rewarded for quickly making it up the building by getting a bonus (that is as long as you can catch the helicopter). The things one does for publicity.</desc>
+		<image>/userdata/roms/mame/images/cclimber.png</image>
+		<rating>0.5</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Action</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="40483" source="ScreenScraper.fr">
+		<path>./cclimbr2.zip</path>
+		<name>Crazy Climber 2 (Japan)</name>
+		<desc>Using 2 joysticks, the player climbs up the face of high-rise buildings, avoiding closing windows, falling objects, cranes, birds, laundry, gorillas, etc. Reach the top of the building and catch a ride on a helicopter over to next building.</desc>
+		<image>/userdata/roms/mame/images/cclimbr2.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Nichibutsu</developer>
+		<publisher>Nichibutsu</publisher>
+		<genre>Action-Action / Climbing</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="40570" source="ScreenScraper.fr">
+		<path>./ckong.zip</path>
+		<name>Crazy Kong</name>
+		<desc>Japanese clone of Donkey Kong. Uses Modified Crazy Climber samples for some sounds, and runs on Crazy Climber hardware, possibly despite the name "Crazy Kong"</desc>
+		<image>/userdata/roms/mame/images/ckong.png</image>
+		<rating>0.9</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Falcon</developer>
+		<publisher>Kyoei / Falcon</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="40739" source="ScreenScraper.fr">
+		<path>./crystalg.zip</path>
+		<name>Crystal Gal (Japan 860512)</name>
+		<desc>A mahjong game.</desc>
+		<image>/userdata/roms/mame/images/crystalg.png</image>
+		<releasedate>19860101T000000</releasedate>
+		<publisher>Nichibutsu</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2048</genreid>
+	</game>
+	<game id="40738" source="ScreenScraper.fr">
+		<path>./crystal2.zip</path>
+		<name>Crystal Gal 2 (Japan 860620)</name>
+		<desc>A mahjong game.</desc>
+		<image>/userdata/roms/mame/images/crystal2.png</image>
+		<releasedate>19860101T000000</releasedate>
+		<publisher>Nichibutsu</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2048</genreid>
+	</game>
+</gameList>

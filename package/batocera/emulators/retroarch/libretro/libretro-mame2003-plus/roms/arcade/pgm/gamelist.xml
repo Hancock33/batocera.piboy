@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <provider>
+    <System>Mame</System>
+    <software>Skraper</software>
+    <database>ScreenScraper.fr</database>
+    <web>http://www.screenscraper.fr</web>
+  </provider>
+  <game id="39974" source="ScreenScraper.fr">
+    <path>./aliencha.zip</path>
+    <name>Alien Challenge (World)</name>
+    <desc>Alien Challenge is a 2D versus fighting game in which you take control of one of eight eight fallen gods (according to the introduction story) and participate in a fighting tournament. The fighters to choose from are the ninja Jean Paul, warrior Melanie, American footballer Dougster, werewolf Fang, jester Drew, oriental fighter Nic-San, burning Burnie and golden Stevareno. Each fighter has their own fighting techniques witch include kick, punch and special attacks. The fights are best of three. After defeating the playable fighters the non-playable boss old man Claus must be beaten. Under certain conditions a bonus level follows were you have to destroy as many objects as possible before the time runs out to increase your score. You can play solo or against a friend.</desc>
+    <rating>0.4</rating>
+    <releasedate>19940101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>IGS</publisher>
+    <genre>Fight / Versus-Fight</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/aliencha.png</image>
+    <genreid>262</genreid>
+  </game>
+  <game id="40737" source="ScreenScraper.fr">
+    <path>./crysking.zip</path>
+    <name>Crystal Of Kings, The</name>
+    <desc>A nice beat'em up featuring transparencies, rowscroll effects and eight levels... 
+Stage 1: The Pull Off Evil - Boss: Great Destructer 
+Stage 2: Across The Currents - Boss: Serpent 
+Stage 3: The Cave Of Darkness - Boss: Master Of Underground 
+Stage 4: The Congress Of Cystals - Boss: Harpies 
+Stage 5: Into The Darkness - Boss: 2 Minotaurs 
+Stage 6: Estorea - Boss: Sinister Dragon 
+Stage 7: Nero Filone - Boss: Black Knight 
+Stage 8: Crystal Of The King - Boss: Night Spirit, Dark Spirit</desc>
+    <rating>0.4</rating>
+    <releasedate>20010101T000000</releasedate>
+    <developer>BrezzaSoft</developer>
+    <publisher>BrezzaSoft</publisher>
+    <genre>Fight / 2.5D-Fight</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/crysking.png</image>
+    <genreid>262</genreid>
+  </game>
+  <game id="40946" source="ScreenScraper.fr">
+    <path>./dmnfrnt.zip</path>
+    <name>Demon Front (68k label V105, ROM M105XX 08/05/02, ARM label V10)</name>
+    <desc>Demon Front is a platform run 'n' Gun game for up to four players (two simultaneously) that is very reminscent of SNK's "Metal Slug" series, although there are significant additions to the gameplay.  
+ 
+20 light years from Earth lies the planet of Andres, a peaceful and civilised place. In the year A.C. 2016 Andres experienced a solar eclipse that lasted for over three months. All living creatures were exposed to a strange, dark red light and many began to mutate in both appearance and character. Few inhabitants would survive the torture inflicted by these crazed mutants.  
+ 
+A lucky few escaped and lived in exile. Four of the survivers decided to join forces, to fight back and overthrow the evil that dominates the planet. 
+</desc>
+    <rating>0.8</rating>
+    <releasedate>20020101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>IGS</publisher>
+    <genre>Shooter-Shooter / Run and Gun-Platform / Shooter Scrolling-Platform</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/dmnfrnt.png</image>
+    <genreid>258</genreid>
+  </game>
+  <game id="37323" source="ScreenScraper.fr">
+    <path>./ddpdoj.zip</path>
+    <name>DoDonPachi DaiOuJou (Japan, 2002.04.05.Master Ver)</name>
+    <desc>The fourth game in the Donpachi series and the first to be ported to the PS2, courtesy of Arika.</desc>
+    <rating>0.85</rating>
+    <releasedate>20020101T000000</releasedate>
+    <developer>Cave</developer>
+    <publisher>AMI</publisher>
+    <genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+    <players>1-4</players>
+    <image>/userdata/roms/mame/images/ddpdoj.png</image>
+    <genreid>260</genreid>
+  </game>
+  <game id="40852" source="ScreenScraper.fr">
+    <path>./ddp2.zip</path>
+    <name>DoDonPachi II - Bee Storm (World, ver. 102)</name>
+    <desc>DoDonPachi II - Bee Storm's gameplay is similar to that of other DonPachi games; however, there are different bosses.</desc>
+    <rating>0.8</rating>
+    <releasedate>20010101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>Capcom</publisher>
+    <genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/ddp2.png</image>
+    <genreid>260</genreid>
+  </game>
+  <game id="41014" source="ScreenScraper.fr">
+    <path>./drgw2.zip</path>
+    <name>Dragon World 2 (ver. 110X, Export)</name>
+    <desc>A solitaire mahjong game where the object is to match 3 of a kind, using a limited amount of tiles.</desc>
+    <rating>0.6</rating>
+    <releasedate>19970101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>IGS</publisher>
+    <genre>Puzzle-Game / Equalize-Puzzle-Game</genre>
+    <players>1</players>
+    <image>/userdata/roms/mame/images/drgw2.png</image>
+    <genreid>2816</genreid>
+  </game>
+  <game id="37330" source="ScreenScraper.fr">
+    <path>./espgal.zip</path>
+    <name>Espgaluda (2003/10/15 Master Ver)</name>
+    <desc>A great vertically scrolling manic shooter.  
+ 
+In an otherwise peaceful world, the Shinra Empire began conquering nearby nations one by one to expand their territory gradually. Meanwhile, in the Shinra weapons lab, the Espgaluda project produced two successful prototypes: Agaha and Tateha. Fearing for their future, the project's head scientist, Hiodoshi, escaped with the two prototypes to a nearby kingdom, but time after were found by Shinra's troops and Hiodoshi was killed by the attack of the imperial army, the power of the galuda has awaken.  
+ 
+You have the option of controlling one of two siblings each with different skills, Ageha  faster but with narrower shooting capabilities or Tateha slower but with a wider attack. As you fly through the various stages various mechanical enemies attack with a high number of bullets, often nearly filling the screen. Aside from the regular shots, Ageha and Tateha also have additional abilities which help the player navigate through the numerous bullets. The first is a guard barrier; when activated the player is immune to collisions and as a bonus when the barrier button is released a more powerful laser shot is fired. A meter at the bottom of the screen indicates how much power is left in the barrier. The second ability is called the Kakusei mode; when this mode is activated your character gender is altered and is able to fire a more powerful shot. More importantly, when this mode is activated all of the enemies and their bullets slow down considerably while the players speed remains the same making it easier to navigate through a tricky pattern of bullets. Activating Kakusei mode will rapidly deplete the players supply of green gems; since the number of gems isn't limitless the player may not be able to remain in Kakusei mode for long. When not in Kakusei mode additional gems can be collected by destroying the various enemies. If the player completely runs out of gems, enemy bullets begin travelling faster than usual. Another bonus in the game is gold inguts which greatly increase the players score. These are found when in Kakusei mode; when an enemy is destroyed, all of its bullets will turn into ingots which can be collected by the player.</desc>
+    <rating>0.85</rating>
+    <releasedate>20030101T000000</releasedate>
+    <developer>Cave</developer>
+    <publisher>AMI</publisher>
+    <genre>Shoot'em up / Vertical-Shoot'em Up</genre>
+    <players>1-4</players>
+    <image>/userdata/roms/mame/images/espgal.png</image>
+    <genreid>260</genreid>
+  </game>
+  <game id="109000" source="ScreenScraper.fr">
+    <path>./pgmfrog.zip</path>
+    <name>Frog Feast</name>
+    <desc>Home Made game. Frog Feast is an adaptation of the Intellvision game "Frog Bog". 
+The game concept is pretty simple: 2 Frogs who have to eat as much insects as possible in a limited time.</desc>
+    <releasedate>20060101T000000</releasedate>
+    <developer>Rastersoft (Ho</developer>
+    <publisher>Homebrew</publisher>
+    <genre>Various</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/pgmfrog.png</image>
+  </game>
+  <game id="41627" source="ScreenScraper.fr">
+    <path>./happy6.zip</path>
+    <name>Happy 6-in-1 (ver. 102CN)</name>
+    <desc>Happy 6-in-1 (c) 2004 IGS [International Game System].  - SOURCES -  Game's ROM.</desc>
+    <rating>0.7</rating>
+    <releasedate>20040101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>IGS</publisher>
+    <genre>Compilation</genre>
+    <image>/userdata/roms/mame/images/happy6.png</image>
+    <genreid>3840</genreid>
+  </game>
+  <game id="37341" source="ScreenScraper.fr">
+    <path>./ket.zip</path>
+    <name>Ketsui: Kizuna Jigoku Tachi (2003/01/01. Master Ver.)</name>
+    <desc>2054 (western calendar) 
+ 
+The continuous industrialization that started in 1900, finally led to unavoidable consequences in the middle of the 21st century. The waterlevel rose worldwide and threatened many coastal countries. So the shorelines had to be modified In order to save the human civilisation from drowning. It was a time of great confusion about the future, and nobody thought about war. Well, almost ... There was one company called EVAC corporation, who made a great profit from underhand productions and exports of weapon systems. When the United Nations discovered their illegal trades, they pointed EVAC to the global ban of weapon imports and exports, and asked them to stop their productions and to destroy their weapon facilities immediately. EVAC rejected all accusations and refused to take any actions. So a preventive war was started by the United Nations to stop the EVAC corporation.</desc>
+    <rating>0.9</rating>
+    <releasedate>20020101T000000</releasedate>
+    <developer>Cave</developer>
+    <publisher>AMI</publisher>
+    <genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/ket.png</image>
+    <genreid>260</genreid>
+  </game>
+  <game id="41990" source="ScreenScraper.fr">
+    <path>./killbldp.zip</path>
+    <name>Killing Blade Plus, The (China, ver. 300)</name>
+    <desc>The Killing Blade is a 1998 competitive fighting game released by IGS on arcade game machine. Development for the game took two years. In September 2005, IGS released a remake titled The Killing Blade Plus. The Mongol invasion of China has left the country in ruin. Five sects consisting of twelve warriors battle each other, then find the defeat the black hand of the wars: The Twin Tartars and Lord Wizard. Victory would earn the title "Superior Martial Paladin" to conquer China, bring order and establish a new empire. The game has a post Dynasty Wars setting and the game mechanics are similar to SNK's The Last Blade franchise, including weapon and kick attacks, combo attacks and power charging.</desc>
+    <rating>0.8</rating>
+    <releasedate>20050101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>IGS</publisher>
+    <genre>Fight / Versus-Fight</genre>
+    <image>/userdata/roms/mame/images/killbldp.png</image>
+    <genreid>262</genreid>
+  </game>
+  <game id="41989" source="ScreenScraper.fr">
+    <path>./killbld.zip</path>
+    <name>Killing Blade, The (ver. 109, Chinese Board)</name>
+    <desc>The Killing Blade is a 1998 competitive fighting game released by IGS on arcade game machine. Development for the game took two years.In September 2005, IGS released a remake titled The Killing Blade Plus. The Mongol invasion of China has left the country in ruin. Five sects consisting of twelve warriors battle each other, then find the defeat the black hand of the wars: The Twin Tartars and Lord Wizard. Victory would earn the title "Superior Martial Paladin" to conquer China, bring order and establish a new empire. The game has a post Dynasty Wars setting and the game mechanics are similar to SNK's The Last Blade franchise, including weapon and kick attacks, combo attacks and power charging.</desc>
+    <rating>0.8</rating>
+    <releasedate>19980101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>IGS</publisher>
+    <genre>Fight / Versus-Fight</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/killbld.png</image>
+    <genreid>262</genreid>
+  </game>
+  <game id="149846" source="ScreenScraper.fr">
+    <path>./kov.zip</path>
+    <name>Knights Of Valour / Sangoku Senki (ver. 117)</name>
+    <desc>A very good beat-'em-up with lots of special moves and great artwork.</desc>
+    <releasedate>19990101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>IGS</publisher>
+    <genre>Beat'em Up-Fight-Fight / 2.5D</genre>
+    <players>1-4</players>
+    <image>/userdata/roms/mame/images/kov.png</image>
+    <genreid>263</genreid>
+  </game>
+  <game id="149850" source="ScreenScraper.fr">
+    <path>./kov2.zip</path>
+    <name>Knights Of Valour 2 / Sangoku Senki 2 (ver. 107, 102, 100HK)</name>
+    <desc>A very good side-scrolling fighting game set in medieval China.</desc>
+    <rating>0.7</rating>
+    <releasedate>20000101T000000</releasedate>
+    <publisher>IGS</publisher>
+    <genre>Beat'em Up-Fight-Fight / 2.5D</genre>
+    <players>1-4</players>
+    <image>/userdata/roms/mame/images/kov2.png</image>
+    <genreid>263</genreid>
+  </game>
+  <game id="149844" source="ScreenScraper.fr">
+    <path>./kov2p.zip</path>
+    <name>Knights Of Valour 2 Plus - Nine Dragons / Sangoku Senki 2 Plus - Nine Dragons (ver. M205XX, 200, 100CN)</name>
+    <desc>A very good side-scrolling fighting game set in medieval China.</desc>
+    <rating>0.7</rating>
+    <releasedate>20010101T000000</releasedate>
+    <publisher>IGS</publisher>
+    <genre>Beat'em Up-Fight-Fight / 2.5D</genre>
+    <players>1-4</players>
+    <image>/userdata/roms/mame/images/kov2p.png</image>
+    <genreid>263</genreid>
+  </game>
+  <game id="149449" source="ScreenScraper.fr">
+    <path>./kovplus.zip</path>
+    <name>Knights Of Valour Plus / Sangoku Senki Plus (ver. 119, set 1)</name>
+    <desc>A very good beat-'em-up with lots of special moves and great artwork.</desc>
+    <releasedate>19990101T000000</releasedate>
+    <publisher>IGS</publisher>
+    <genre>Beat'em Up-Fight-Fight / 2.5D</genre>
+    <players>1-4</players>
+    <image>/userdata/roms/mame/images/kovplus.png</image>
+    <genreid>263</genreid>
+  </game>
+  <game id="149448" source="ScreenScraper.fr">
+    <path>./kovsh.zip</path>
+    <name>Knights Of Valour Super Heroes / Sangoku Senki Super Heroes (ver. 104, CN)</name>
+    <desc>A very good side-scrolling fighting game set in medieval China.</desc>
+    <rating>0.9</rating>
+    <releasedate>19990101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>IGS</publisher>
+    <genre>Beat'em Up-Fight-Fight / 2.5D</genre>
+    <players>1-4</players>
+    <image>/userdata/roms/mame/images/kovsh.png</image>
+    <genreid>263</genreid>
+  </game>
+  <game id="78860" source="ScreenScraper.fr">
+    <path>./martmast.zip</path>
+    <name>Martial Masters (ver. 104, 102, 102US)</name>
+    <desc>At the end of the Qin's Dynasty, the government weakened by corruption was attacked by foreign influences. 
+ 
+The people were flung into misery and became quite unsatisfied with the situation. They did not believe in the government anymore and turned their faith back to religion. 
+ 
+The White Lotus sect saw this as an opportunity and took over. They claimed to help the government to defeat foreigners and bring peace to the world. Their Ideology was quickly adopted. Everything related with the Western world was killed or destroyed. Anyone against this principal was considered an enemy and accused of being bound with the devil.  
+ 
+Dragon of Martial Master and Master Huang of Po Chi Lam could not accept these outrageous actions so they band together in order to prevent much bloodshed. One day the leader of White Lotus Sect sent an invitation to Dragon and Master Huang but Dragon's disciples saw this as a trap and recommended that they wait for Master Huang, who was out of town collecting medicine. 
+ 
+The Master did not want to miss this opportunity to make peace and went alone. Unfortunately, he was captured and put in prison. Both parties started confrontations and have struggled since then. Now dangers are hidden all over the place. Who is capable of resolving the situation? Let's find out!</desc>
+    <rating>0.9</rating>
+    <releasedate>20010101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>IGS</publisher>
+    <genre>Fight / Versus-Fight</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/martmast.png</image>
+    <genreid>262</genreid>
+  </game>
+  <game id="79100" source="ScreenScraper.fr">
+    <path>./orlegend.zip</path>
+    <name>Oriental Legend / Xi You Shi E Zhuan (ver. 126)</name>
+    <desc>Fabulous beat-'em-up featuring player and enemy characters straight out of Asian myths and stories.</desc>
+    <rating>0.7</rating>
+    <releasedate>19970101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>IGS</publisher>
+    <genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+    <players>1-4</players>
+    <image>/userdata/roms/mame/images/orlegend.png</image>
+    <genreid>263</genreid>
+  </game>
+  <game id="60836" source="ScreenScraper.fr">
+    <path>./olds.zip</path>
+    <name>Oriental Legend Special / Xi You Shi E Zhuan Super (ver. 101, Korean Board)</name>
+    <releasedate>19980101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>IGS</publisher>
+    <genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+    <players>1-4</players>
+    <image>/userdata/roms/mame/images/olds.png</image>
+    <genreid>263</genreid>
+  </game>
+  <game id="60837" source="ScreenScraper.fr">
+    <path>./oldsplus.zip</path>
+    <name>Oriental Legend Special Plus / Xi You Shi E Zhuan Super Plus</name>
+    <desc>Oriental Legend Super Super (c) 2004 IGS [International Game System].  - TRIVIA -  Released in June 2004.  - SOURCES -  Game's ROM.</desc>
+    <releasedate>20040101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>IGS</publisher>
+    <genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+    <players>1-4</players>
+    <image>/userdata/roms/mame/images/oldsplus.png</image>
+    <genreid>263</genreid>
+  </game>
+  <game id="79315" source="ScreenScraper.fr">
+    <path>./pgemeni.zip</path>
+    <name>P-gemeni</name>
+    <releasedate>20060101T000000</releasedate>
+    <developer>blastar@gmx.ne</developer>
+    <publisher>blastar@gmx.ne</publisher>
+    <image>/userdata/roms/mame/images/pgemeni.png</image>
+  </game>
+  <game id="79259" source="ScreenScraper.fr">
+    <path>./photoy2k.zip</path>
+    <name>Photo Y2k (ver. 105)</name>
+    <desc>Photo Y2K (c) 1999 IGS.  - TECHNICAL -  IGS PGM hardware  Main CPU : 68000 (@ 20 Mhz) Sound CPU : Z80 (@ 8.468 Mhz) Sound Chips : ICS2115 (@ 8.468 Mhz)  - TRIVIA -  Released in June 1999.  - UPDATES -  * V102 * V104 * V105  - SERIES -  1. Photo Y2K (1999)</desc>
+    <rating>0.8</rating>
+    <releasedate>19990101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>IGS</publisher>
+    <genre>Various-Puzzle-Game</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/photoy2k.png</image>
+    <genreid>2816</genreid>
+  </game>
+  <game id="42563" source="ScreenScraper.fr">
+    <path>./puzlstar.zip</path>
+    <name>Puzzle Star (ver. 100MG)</name>
+    <releasedate>19990101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>IGS</publisher>
+    <genre>Puzzle-Game / Glide-Puzzle-Game-Puzzle-Game / Equalize</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/puzlstar.png</image>
+    <genreid>2816</genreid>
+  </game>
+  <game id="42568" source="ScreenScraper.fr">
+    <path>./puzzli2.zip</path>
+    <name>Puzzli 2 (ver. 100)</name>
+    <rating>0.8</rating>
+    <releasedate>19990101T000000</releasedate>
+    <publisher>IGS</publisher>
+    <genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+    <image>/userdata/roms/mame/images/puzzli2.png</image>
+    <genreid>2816</genreid>
+  </game>
+  <game id="43469" source="ScreenScraper.fr">
+    <path>./svg.zip</path>
+    <name>S.v.g. - Spectral Vs Generation (M68k label V200, ARM label V200, ROM 10/11/05 S.V.)</name>
+    <desc>This game based on Idea Factory's famous turn-based RPG Game.</desc>
+    <rating>0.8</rating>
+    <releasedate>20050101T000000</releasedate>
+    <publisher>IGS</publisher>
+    <genre>Fight / Versus-Fight</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/svg.png</image>
+    <genreid>262</genreid>
+  </game>
+  <game id="149843" source="ScreenScraper.fr">
+    <path>./theglad.zip</path>
+    <name>The Gladiator / Road Of The Sword / Shen Jian (M68k label V101, ARM label V107, ROM 06/06/03 SHEN)</name>
+    <desc>The cursed Sacred Sword appeared once again, took lives of hundreds people. Two prominent families were killed, just because they possessed it. Behind these entire massacres more mysteries were secretly hidden, the rumors said perhaps even the government seemed to take part of it. Chu Xing Han, San Kuan Ging and Wu Ping decided to revenge. Chu is good friend and partner Greg Tien Ray also wanted to help them. Mysterious woman Huang Her decided to kill her own father for committing all these crimes. Wu-Lin Sword master's disciple Siong Chien Chien had an eye on the power of the sword and determined to seize the object. 
+ 
+The conflict in Wu-Lin seemed to trigger at any moment, unconsciously all sword masters were falling into a sophisticated conspiracy designed by Yuen Dynasty Government and...</desc>
+    <releasedate>20030101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>IGS</publisher>
+    <genre>Beat'em Up-Fight-Fight / 2.5D</genre>
+    <image>/userdata/roms/mame/images/theglad.png</image>
+    <genreid>263</genreid>
+  </game>
+  <game id="43922" source="ScreenScraper.fr">
+    <path>./vbowl.zip</path>
+    <name>Virtua Bowling (World, V101XCM)</name>
+    <desc>Up-to-four players bowling video game.</desc>
+    <rating>0.5</rating>
+    <releasedate>19960101T000000</releasedate>
+    <developer>IGS</developer>
+    <publisher>IGS</publisher>
+    <genre>Sports / Bowling-Sports</genre>
+    <players>1-4</players>
+    <image>/userdata/roms/mame/images/vbowl.png</image>
+    <genreid>1538</genreid>
+  </game>
+  <game id="63402" source="ScreenScraper.fr">
+    <path>./pgm.zip</path>
+    <name>ZZZ(notgame):Pgm (Polygame Master)</name>
+    <releasedate />
+    <genre>Various-Various / System</genre>
+    <image>/userdata/roms/mame/images/pgm.png</image>
+  </game>
+</gameList>

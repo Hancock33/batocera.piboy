@@ -1,0 +1,410 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="41946" source="ScreenScraper.fr">
+		<path>./kamenrid.zip</path>
+		<name>Masked Riders Club Battle Race</name>
+		<desc>Masked Riders Club: Battle Race is a top-down action racing game based on the Kamen Rider television franchise. The game consists of nine vertically-scrolling levels that need to be completed before time runs out, with themes such as an industrial environment, a beach, a snowy environment etc., each with its own enemies. At the start the player chooses one of ten superhero Kamen Riders (Rider 1, Rider 2, Rider V3, Riderman, Rider X, Amazon, Stronger, Super1, Rider 2X or Black RX). The riders are grasshopper-themed altered humans and each come with his own motorcycle rated in three different statistics as well as a unique weapon such as a blade, a hook, a short burst of fire, or a pole. The single-player game is only played on the left side of the screen. The middle part shows progress through the level map and the right map the global map of the nine levels.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Race, Driving / Motorcycle-Race, Driving</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/kamenrid.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="37343" source="ScreenScraper.fr">
+		<path>./mazinger.zip</path>
+		<name>Mazinger Z (World)</name>
+		<desc>Vertical shoot'em up with 3 selectable characters: Mazinger Z, Great Mazinger and Grendizer.</desc>
+		<rating>0.65</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Dynamic PL</developer>
+		<publisher>Dynamic PL</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mazinger.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37344" source="ScreenScraper.fr">
+		<path>./metmqstr.zip</path>
+		<name>Metamoqester (International)</name>
+		<desc>Metamoqester is a 2D arcade fighting game, similar in concept to Red Earth or Monster Maulers. One or two players (there is a co-op mode) fight against big monsters in deadly duels. There are three different characters to choose from. The game uses four buttons - Weak Attack, Medium Attack, Strong Attack, and Shoot/Throw Weapon.</desc>
+		<rating>0.85</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Fight-Fight /  Co-op</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/metmqstr.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41405" source="ScreenScraper.fr">
+		<path>./gdfs.zip</path>
+		<name>Mobil Suit Gundam Final Shooting (Japan)</name>
+		<desc>Take 'Operation Wolf' add the plot, characters and mecha from Gundam 008 and you've practically got this game: Mobile Suit Gundam Final Shooting. 
+ 
+One or two players mow down Mobile Suit after Mobile Suit with the cabinet mounted laser rifles. The enemy onslaught is unending so you'll need a good aim, a strong arm and a lot of concentration. Power-ups are few so it's more than welcome when, at the middle of the stage, your Mobile Suit is repaired and supplied with a limited but powerful sub-weapon. Boss battles round off each stage and involve blasting away at a large enemy craft while simultaneously shooting down the oncoming swarms of missiles and bad guys.</desc>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gdfs.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="79004" source="ScreenScraper.fr">
+		<path>./msgundam.zip</path>
+		<name>Mobile Suit Gundam</name>
+		<desc>Ten selectable mecha from the Gundam saga battle each other for space dominance!</desc>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/msgundam.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41578" source="ScreenScraper.fr">
+		<path>./gundamex.zip</path>
+		<name>Mobile Suit Gundam: EX Revue</name>
+		<desc>A sequel to the first Gundam arcade fighter. This game adds more characters and attack options.</desc>
+		<rating>0.5</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gundamex.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="37352" source="ScreenScraper.fr">
+		<path>./sailormn.zip</path>
+		<name>Pretty Soldier Sailor Moon (Ver. 95/03/22B, Europe)</name>
+		<desc>The game is a side-scrolling "beat-'em-up" game, one or two players pick their desired Senshi and travel through various stages defeating enemies. Items are sometimes dropped by enemies that can range from items that restore health, give extra points, or crystals that allow the Senshi to perform special attacks. Up to five crystals can be collected per player to power up the Senshi's special attacks. During the most difficult moments in battle, Tuxedo Mask will appear and throw a rose, which is a bonus to pick up and depart.</desc>
+		<rating>0.8</rating>
+		<releasedate>19950322T000000</releasedate>
+		<developer>Gazelle</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sailormn.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="42553" source="ScreenScraper.fr">
+		<path>./pururun.zip</path>
+		<name>Pururun</name>
+		<desc>Link 4 or more coloured blobs on the grid to make them pop. Each blob has an outer colour and an inner colour and when the blobs pop, they change into their inner colour. Keep linking the blobs until you guide our heroes Pipi and Moko to the goal. You can try to link outer/inner combinations to help them reach the goal quicker.</desc>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Metro</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pururun.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="42567" source="ScreenScraper.fr">
+		<path>./puzzli.zip</path>
+		<name>Puzzli</name>
+		<desc>Puzzli is a colour-matching puzzle game based on fishing.</desc>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Metro</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/puzzli.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="42632" source="ScreenScraper.fr">
+		<path>./quizmoon.zip</path>
+		<name>Quiz Bisyoujo Senshi Sailor Moon - Chiryoku Tairyoku Toki No Un</name>
+		<desc>Un mega quizz avec les belles guerrières, à la facon boardgame (jeu de société) jeu malheureusement 100% jap donc difficilement jouable par les non initiés à la langue nippone.
+
+</desc>
+		<rating>0.7</rating>
+		<releasedate>19970101T000000</releasedate>
+		<publisher>Banpresto</publisher>
+		<genre>Quiz / Japanese-Quiz</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/quizmoon.png</image>
+		<genreid>3328</genreid>
+	</game>
+	<game id="79074" source="ScreenScraper.fr">
+		<path>./neobattl.zip</path>
+		<name>SD Gundam Neo Battling (Japan)</name>
+		<desc>A vertically scrolling shooter. 
+SD stands from 'Super Deformed'.</desc>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/neobattl.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="42939" source="ScreenScraper.fr">
+		<path>./sdgndmps.zip</path>
+		<name>SD Gundam Psycho Salamander no Kyoui</name>
+		<desc>The title of this game translates from Japanese as "Mobile Suit Super Deformed Gundam - Menace of Psycho Salamander".</desc>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sdgndmps.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42350" source="ScreenScraper.fr">
+		<path>./macross2.zip</path>
+		<name>Super Spacefortress Macross 2</name>
+		<desc>Super Spacefortress Macross II (c) 1993 Banpresto.  - TECHNICAL -  Main CPU : 68000 (@ 10 Mhz) Sound CPU : Z80 (@ 4 Mhz) Sound Chips : YM2203 (@ 1.5 Mhz), (2x) OKI6295 (@ 24.242 Khz)  Screen orientation : Horizontal Video resolution : 384 x 224 pixels Scr</desc>
+		<releasedate>19930101T000000</releasedate>
+		<publisher>Banpresto</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/macross2.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="145778" source="ScreenScraper.fr">
+		<path>./macross.zip</path>
+		<name>Super Spacefortress Macross</name>
+		<desc>Super Spacefortress Macross is a vertically-scrolling shoot'em up based on the 1984 theatrical film in the Macross franchise, commonly known in English as Macross: Do You Remember Love?. Players control the VF-1 Valkyrie fighters of ace pilots Max Jenius and (in two-player games only) Hikaru Ichijyo in combat against the Zentradi. 
+ 
+The game consists of seven levels, mostly based on action scenes from the film, including confrontations over Macross City, in the rings of Saturn, the surface of the devastated Earth, and the final battle against Boddole Zer. 
+ 
+Gameplay is similar to Raiden: the Valkyrie can transform into one of three different modes by collecting the appropriate power-up: in Fighter mode, the ship fires a spread shot, Gerwalk mode has a narrow but powerful laser that passes through enemies, and Battroid mode features homing missiles. The intensity of the attacks can be upgraded in three stages through another power-up. There are also smart bombs to pick up that clear most enemies off the screen with one shot. Each level ends with a boss battle. Besides shooting down the hordes of enemies, picking up medals and rare Minmay dolls also increases the score. In two-player mode, both players take on the enemy simultaneously. Between levels, cutscenes recreate scenes from the film to illustrate the storyline.</desc>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/macross.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43537" source="ScreenScraper.fr">
+		<path>./bigbang.zip</path>
+		<name>Thunder Dragon 2 (9th Nov. 1993)</name>
+		<desc>The game uses variable rate scrolling (the screen scrolls at different speeds or not at all), and is played from a top-down view. Unlike space shooters, Thunder Dragon 2 is played in-atmosphere on a single world with contemporary airplanes. 
+The game contains eight stages, with popcorn enemies and ships with varying degrees of durability throughout. Each stage culminates in a boss fight, preceded by a warning. The player chooses between two different ships, a slow but powerful ship on the player 1 side, and a fast but weak ship on the player 2 side. Scoring is accomplished through enemy destruction, accumulation of medals dropped by enemies, and special bonus awards for completing specific tasks.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>NMK</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bigbang.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43853" source="ScreenScraper.fr">
+		<path>./utoukond.zip</path>
+		<name>Ultra Toukon Densetsu (Japan)</name>
+		<desc>Horizontal beat'em up featuring, in SD (Super Deformed), Ultraman and his comrades who fight evil monsters.</desc>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/utoukond.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="60919" source="ScreenScraper.fr">
+		<path>./ultrax.zip</path>
+		<name>Ultra X Weapons</name>
+		<desc>This game is based on 'Ultraman', a famous Japanese live-action superhero series that has had numerous sequels and spin-offs since its debut in the 1960s. Generally, the main character is a normal human who uses an alien device to transform into a giant red-and-silver (sometimes with blue) creature called an Ultraman to combat alien monsters with the help of a special military team. Some of the subsequent shows in the series include 'Ultraseven', 'Ultraman Leo', 'Ultraman Taroh', and 'Ultraman Tiga'.</desc>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ultrax.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43823" source="ScreenScraper.fr">
+		<path>./ultraman.zip</path>
+		<name>Ultraman (Japan)</name>
+		<desc>A one-on-one fighting game based on the Japanese series by Tsuburaya Productions.</desc>
+		<rating>0.3</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ultraman.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="43827" source="ScreenScraper.fr">
+		<path>./umanclub.zip</path>
+		<name>Ultraman Club - Tatakae! Ultraman Kyoudai!!</name>
+		<desc>Is a 2D top-down single screen arcade game, based on the superhero Ultraman, with chibi, anime-style graphic. The player controls one of 8 versions of Ultraman. Gameplay is very simple - Ultraman must kill all enemies on screen. He has two types of attack - one is very short, but has basically unlimited ammo, &amp; the second has better range, but is very limited. Fallen enemies drop various bonuses (like extra life or bombardment special moves), &amp; Ultraman can pick them up.</desc>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<publisher>Banpresto</publisher>
+		<genre>Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/umanclub.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="40146" source="ScreenScraper.fr">
+		<path>./bangball.zip</path>
+		<name>Bang Bang Ball (v1.05)</name>
+		<desc>Two skateboarding mouse dudes must face many strange puzzle challenges in order to rescue their girl who has been abducted by a nasty gang of cats! Features colourful graphics and interesting game mechanics. Care to have a ball of a good time?:)</desc>
+		<image>/userdata/roms/mame/images/bangball.png</image>
+		<rating>0.5</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Puzzle-Game / Throw-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="151192" source="ScreenScraper.fr">
+		<path>./batlbubl.zip</path>
+		<name>Battle Bubble (v2.00)</name>
+		<desc>Battle Bubble is about 2 lovely mice fighting against rascals who kidnapped their girlfriend. On their way to rescue her, they encounter 'bubbles' in their way. See how they wipe out the bubbles with bubbles. 
+ 
+It features 32 stages, and basic rule requires players to pop off all the bubbles in their way to clear stages. Throw your bubbles into the bothering bubbles of the matching color to pop and remove. 
+ 
+Protect yourself from the troublesome bubbles by blocking them with your bubbles. Collision with the bubbles diminishes player's health. Tricky traps like icy stage and boss stages make enemies even harder to deal with. In couple play mode, the game can be easier or harder depending on the harmony with the partner.</desc>
+		<image>/userdata/roms/mame/images/batlbubl.png</image>
+		<rating>0.5</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Puzzle-Game / Throw-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40839" source="ScreenScraper.fr">
+		<path>./dbz.zip</path>
+		<name>DragonBall Z (rev B)</name>
+		<desc>Based on the famous manga works by Akira Toriyama, this game enables you to play as many of the famous characters seen in the show. Too bad that's the only highlight in the game folks since only true fans are likely to enjoy the game!</desc>
+		<image>/userdata/roms/mame/images/dbz.png</image>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="40894" source="ScreenScraper.fr">
+		<path>./denjinmk.zip</path>
+		<name>Denjin Makai</name>
+		<desc>Ghost Chaser Densei is a side-scrolling action game where you control 1 of 3 ghost hunters, Your job is to take down the ghosts and evil spirits who have joined a criminal syndicate.</desc>
+		<image>/userdata/roms/mame/images/denjinmk.png</image>
+		<rating>0.6</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Winky Soft</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Fight / 2.5D-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="150682" source="ScreenScraper.fr">
+		<path>./grdians.zip</path>
+		<name>Guardians: Denjin Makai II</name>
+		<desc>A beat-'em-up developed by Winky Soft with 8 selectable characters and lots of special moves.</desc>
+		<image>/userdata/roms/mame/images/grdians.png</image>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Winky Soft</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Fight-Beat'em Up-Fight / 2.5D</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="41581" source="ScreenScraper.fr">
+		<path>./gundhara.zip</path>
+		<name>Gundhara</name>
+		<desc>A two players vertical top-view shoot em up. 
+ 
+In a near future a group of children disappeared from a town, a secret investigator woman named 'Sarah' entered secretly into the hideout of the kidnappers, to find the reasons, children were brainwashing. It was preparation for a World War III, commanded by a tyrant transhumanist to rule the world. The government opened a emergency meeting to chose two of their best soldiers, to stop this evil plan and rescue all the hostages children's. 
+ 
+The players choose one of two soldiers 'Jerry Scott' from USA and 'Jinn Ayakawa' from Japan and must rescue all childrens on each level, while defeat all the enemies on the way using a variety of weapons, such as the Vulcan a shotgun a laser and a bazooka also a fire may obtained by collecting items.</desc>
+		<image>/userdata/roms/mame/images/gundhara.png</image>
+		<rating>0.8</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="42351" source="ScreenScraper.fr">
+		<path>./macrossp.zip</path>
+		<name>Macross Plus</name>
+		<desc>Macross Plus is a 2D vertically scrolling shooter, based on the Macross anime. The player can choose one from 3 characters: Isamu Dyson in his YF-19, Guld Bowman in his YF-21, and an unnamed female pilot in the VF-11. Gameplay is very straightforward - player flies forward and shoot enemies. He has gun, bombs and missiles (press shot to release missile attack - they have special homing system). The player can collect power-ups dropped by special enemies.</desc>
+		<image>/userdata/roms/mame/images/macrossp.png</image>
+		<rating>0.9</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<playcount>2</playcount>
+		<lastplayed>20210122T234253</lastplayed>
+		<gametime>16</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="145780" source="ScreenScraper.fr">
+		<path>./suprslam.zip</path>
+		<name>From TV Animation Slam Dunk - Super Slams</name>
+		<desc>Basketball game with four selectable teams. This game has a nice design and easy gameplay. Based on the popular manga made by Takehiko Inoue.</desc>
+		<image>/userdata/roms/mame/images/suprslam.png</image>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Toei Animation</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40840" source="ScreenScraper.fr">
+		<path>./dbz2.zip</path>
+		<name>Dragonball Z 2 - Super Battle</name>
+		<desc>Dragon Ball Z 2: Super Battle the sequel to Dragon Ball Z released in 1994, also produced by Banpresto. The gameplay matches the But?den series of games rather than the previous arcade game. The characters are Goku, Gohan, Vegeta, Future Trunks, Piccolo, Cell, Android 16, Android 18, Android 20, and Mr. Satan.</desc>
+		<image>/userdata/roms/mame/images/dbz2.png</image>
+		<rating>0.5</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<playcount>1</playcount>
+		<lastplayed>20210123T110349</lastplayed>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+</gameList>

@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="37425" source="ScreenScraper.fr">
+		<path>./sfiii.zip</path>
+		<name>Street Fighter III : New Generation (Euro 970204)</name>
+		<desc>Street Fighter III - New Generation is a New Generation of Street Fighters! Features larger characters sprites than previous Street Fighter games with the smoothest, most detailed 2-D animation ever made at the time of its release, a level of quality that is yet to be matched by any other 2-D game outside of the Street Fighter III series as of 2004; some complain that too many things are animated and each animation contains too many frames, slowing down the pace of the game.</desc>
+		<rating>0.85</rating>
+		<releasedate>19970101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sfiii.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="37424" source="ScreenScraper.fr">
+		<path>./sfiii3.zip</path>
+		<name>Street Fighter III 3rd Strike : Fight for the Future (Euro 990608)</name>
+		<desc>New characters Remy, Makoto, Q, and Twelve join the returning Street Fighter veteran Chun-Li and the existing "Street Fighter III - 2nd Impact: Giant Attack" cast in this third and final installment of Street Fighter III.</desc>
+		<rating>0.9</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sfiii3.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="37421" source="ScreenScraper.fr">
+		<path>./jojoban.zip</path>
+		<name>JoJo no Kimyou na Bouken: Mirai e no Isan (Japan 990927, NO CD)</name>
+		<desc>The game combines Capcom's trademark anime-inspired graphics, as seen in the Darkstalkers series, with the colorful characters and events of Hirohiko Araki's creation, resulting in a highly stylized and detailed visual style. It also features many of the gameplay mechanics seen on previous Capcom fighting games, such as the use of power gauges for super moves, as well as a brand new Stand Mode. In the game's storyline (based on Stardust Crusaders, the third story arc of the manga), a Stand is a manifestation of the psyche, or a spirit, that accompanies each character and can be summoned or dismissed at will by the player, resulting in variations on the character's move list and abilities. Despite their power, Stands hold one drawback; any damage received by the Stand is transmitted to its user. 
+ 
+Hirohiko Araki served as a consultant for the game and created exclusive pieces of artwork for its promotion and packaging; most notably, he developed from scratch a new character design for Midler, since Capcom was interested in using her in the game and she had been only vaguely shown in the original manga.</desc>
+		<image>/userdata/roms/mame/images/jojoban.png</image>
+		<rating>0.8</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Fight-Fight / Versus</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="37422" source="ScreenScraper.fr">
+		<path>./jojonr2.zip</path>
+		<name>JoJo's Venture (Asia 981202, NO CD)</name>
+		<desc>JoJo's Venture is a 2D fighting game based off of the hit Japanese manga series JoJo's Bizarre Adventure (famous for over-the-top violence, an intricate plot, and numerous Western rock music references).</desc>
+		<image>/userdata/roms/mame/images/jojonr2.png</image>
+		<rating>0.75</rating>
+		<releasedate>19980101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Fight-Fight / Versus</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="37426" source="ScreenScraper.fr">
+		<path>./redearth.zip</path>
+		<name>Red Earth (Euro 961121)</name>
+		<desc>Red Earth take place in the year 1999 of an alternate Earth, follow the adventures of four heroes as they take on an army of mythical monsters unleashed by Scion to bring about the destruction of the world. Take your pick from Leo the Lion King, Mai-Ling the Martial artist, Tessa the Witch, or Kenji the Ninja as they fight their way across the globe in order to defeat Scion the iron giant.</desc>
+		<image>/userdata/roms/mame/images/redearth.png</image>
+		<rating>0.8</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Fight /  Co-op-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="37423" source="ScreenScraper.fr">
+		<path>./sfiii2n.zip</path>
+		<name>Street Fighter III 2nd Impact : Giant Attack (Asia 970930, NO CD)</name>
+		<desc>Street Fighter III - 2nd Impact: Giant Attack is the sequel to "Street Fighter III - New Generation". Joining the existing Street Fighter III cast are Hugo, Urien and recurring character Akuma (Gouki in the Japanese version). Other improvements include a speed increase, new moves and several damage-related tweaks.</desc>
+		<image>/userdata/roms/mame/images/sfiii2n.png</image>
+		<rating>0.85</rating>
+		<releasedate>19970101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+</gameList>

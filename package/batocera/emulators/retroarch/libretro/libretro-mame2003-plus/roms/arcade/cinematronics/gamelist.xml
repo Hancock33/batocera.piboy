@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="46469" source="ScreenScraper.fr">
+		<path>./armora.zip</path>
+		<name>Armor Attack</name>
+		<desc>A wireframe, top-down shoot-em-up in which the player controls a small jeep and must destroy the many tanks and helicopters that populate the war-torn cityscape that represents the game's single play area. As with many games of the time ("Space Invaders", "Battlezone", etc.), Armor Attack's graphics were simple monochrome, with a colour overlay added to the cabinet to give the impression of multicolour graphics.</desc>
+		<rating>0.4</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Tim Skelly</developer>
+		<publisher>Cinematronics</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/armora.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40154" source="ScreenScraper.fr">
+		<path>./basebal2.zip</path>
+		<name>Baseball - The Season 2</name>
+		<desc>A baseball game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<publisher>Cinematronics</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/basebal2.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="46388" source="ScreenScraper.fr">
+		<path>./boxingb.zip</path>
+		<name>Boxing Bugs</name>
+		<desc>This is kind of like a reverse of "Star Castle". In the center of the screen is a player-controlled rotating cannon, enclosed within an octagon. The cannon shoots fireballs from one end and has a boxing glove on an extension arm on the other end. The octagon is a protective wall for the cannon. Fireballs and the boxing glove pass over the wall to targets outside. 
+Bombs are randomly located outside the wall. Each bomb has a lite fuse. Three bugs are also randomly scattered outside the wall. The player's score, the number of cannons remaining, and the number of bugs that must be knocked out to complete the round are shown at the top of the screen.</desc>
+		<rating>0.7</rating>
+		<releasedate>19810101T000000</releasedate>
+		<publisher>Cinematronics</publisher>
+		<genre>Shooter-N/A-Shoot'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/boxingb.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40491" source="ScreenScraper.fr">
+		<path>./cerberus.zip</path>
+		<name>Cerberus</name>
+		<desc>An early shoot'em up game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Cinematronics</developer>
+		<publisher>Cinematronics</publisher>
+		<genre>Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/cerberus.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="57825" source="ScreenScraper.fr">
+		<path>./cchasm.zip</path>
+		<name>Cosmic Chasm (set 1)</name>
+		<desc>Strap on your vector spacesuit, and hop into your vector spaceship. It is a good old ship, and it has seen a lot of action. From navigating the asteroid belt and blasting aliens around the sun, to attacking evil space cannons, your little vector ship has done it all, and this time it has been upgraded with twin blasters. You see the ship in Cosmic Chasm seems to be the same spaceship that is in every vector game. You control it using rotation buttons and a thruster button, with a laser and a shield button thrown in for good measure, just like almost every other vector game around. 
+ 
+Now here is what you have to do. You guide your ship through a space fortress room by room. Each room contains a center section that slowly grows and will eventually trap you if you are not fast enough. You can shoot the center section to slow its growth. Each room also contains several exits. One of the exits will always spew forth a bunch of bad guys, shoot them, then exit to go to a different room. Between rooms you get to see an excellent tunnel animation. The idea is to make your way to the center of the fortress, blast the power core, and then leave. There is a map at the top of the screen to keep you from getting lost. This is a pretty decent game. It has a lot more to offer than the one screen of bad guys that most vector games have.</desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<publisher>Cinematronics</publisher>
+		<genre>Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/cchasm.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="40814" source="ScreenScraper.fr">
+		<path>./dangerz.zip</path>
+		<name>Danger Zone</name>
+		<desc>A war combat game that is set in a desert. Helicopters, fighters and bombers enter the area swooping down over the mountains. Watch your radar screen and protect your base.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Cinematronics</developer>
+		<publisher>Cinematronics</publisher>
+		<genre>Shooter / Plane, 1st person-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dangerz.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="51165" source="ScreenScraper.fr">
+		<path>./dlair.zip</path>
+		<name>Dragon's Lair (US Rev. F2)</name>
+		<desc>Originally released in the arcades as a laserdisc game, Dragon's Lair is an interactive cartoon movie. Players control Dirk the Daring as he struggles his way through a dungeon to fight Singe, the Dragon, and rescue the beautiful Princess Daphne. The game consists of animated scenes, during which the player has to press direction buttons or the sword button in the right moment to trigger the next segment of the movie.</desc>
+		<rating>0.8</rating>
+		<releasedate>19830601T000000</releasedate>
+		<developer>Sullivan Bluth Interactive</developer>
+		<publisher>Cinematronics</publisher>
+		<genre>Action / Adventure-Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dlair.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="41105" source="ScreenScraper.fr">
+		<path>./embargo.zip</path>
+		<name>Embargo</name>
+		<desc>Embargo is a one to four player blocking genre game. Each player must deposit a coin. There is a stylized map of Cuba (with a canal through the center) in the middle of the screen. There are four boats, one in each corner of the screen. If there were less than four players then the computer played the remainder. As the boats sail out they leave a continuous trail of mines behind. The players can control the direction and, with a single button, stop two mines from being laid in every twelve. 
+ 
+Each time a boat hits another boat, a mine, the screen edge or Cuba, it explodes and the surviving boats each get one point. This continues until zero or one boat is left. (If two boats collide they both blow up.) I believe there were four rounds per game. The strategy was to block off as much open water as you could while leaving a hole in your line of mines so you could double back and duck through it.</desc>
+		<releasedate>19770101T000000</releasedate>
+		<publisher>Cinematronics</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/embargo.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41276" source="ScreenScraper.fr">
+		<path>./freeze.zip</path>
+		<name>Freeze</name>
+		<desc>Freeze is a highly addictive, head-to-head, 3-D action-puzzle game where players join a wild cast of characters on an underwater fish sorting adventure. Players sort combos out of cute little fishies that swim, smile and wink. Challenge and strategy build as players learn different characters each possessing a unique special weapon. An exciting quiz game offers players an opportunity to race against time solving a multitude of colorful fishie puzzles. Combining these playful characters with the simple addictive gameplay will have players sorting fish in their sleep. The true challenge of any puzzle game.</desc>
+		<rating>0.6</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Cinematronics</developer>
+		<publisher>Atari</publisher>
+		<genre>Action-Action / Labyrinth-Puzzle-Game / Throw-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/freeze.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41848" source="ScreenScraper.fr">
+		<path>./jack.zip</path>
+		<name>Jack the Giantkiller (set 1)</name>
+		<desc>This game plays a lot like "Donkey Kong" except that the controls are not quite as smooth. There are 5 screens to master if you want to help Jack in his mission. You do not get to play each screen at first, they are added on as you progress through the game. The first time through the game skips from screen 1 right to screen 4. 
+The 1st screen is fairly simple, you just have to climb to the top of the beanstalk. There are a few enemies, but they can be defeated by simply tossing beans at them. You can find the beans scattered all around the stalk, and picking one up adds one to your ammunition count (or two, depending on the dip switch settings). 
+In the 2nd screen, Jack manuevers through the clouds and attempts to cross the drawbridge into the castle, but lions and birds stand in his way. 
+The 3rd screen has Jack climbing the castle stairway in a scene that was obviously inspired by "Donkey Kong". Avoid the cat and the mouse and you can make it to the top. 
+On the 4th screen you have to jump from platform to platform until you reach the giant's lair. There will be several treasures, grab the flashing one and try to make your escape. 
+The 5th screen is the first one again, except that this time you are climbing down the beanstalk, and you have falling rocks to dodge, and the giant himself may even be after you (that one depends on the level). 
+ 
+After making it back to your house you get to watch a little intermission before going after the next treasure. There are four different treasures altogether. The last one is the princess, when you have her the giant himself will follow you down the beanstalk, and you must chop it down to defeat him. After rescuing the princess the game starts over with increased difficulty.</desc>
+		<rating>0.6</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Cinematronics</developer>
+		<publisher>Hara Industries (Cinematronics license)</publisher>
+		<genre>Action-Action / Climbing</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/jack.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="214435" source="ScreenScraper.fr">
+		<path>./mayhem.zip</path>
+		<name>Mayhem 2002</name>
+		<rating>0.3</rating>
+		<releasedate>19850101T000000</releasedate>
+		<image>/userdata/roms/mame/images/mayhem.png</image>
+	</game>
+	<game id="149556" source="ScreenScraper.fr">
+		<path>./powrplay.zip</path>
+		<name>Power Play</name>
+		<desc>A two-on-two soccer game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<genre>Sports-Sports / Soccer</genre>
+		<image>/userdata/roms/mame/images/powrplay.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42737" source="ScreenScraper.fr">
+		<path>./redlin2p.zip</path>
+		<name>Redline Racer (2 Players)</name>
+		<desc>An overhead-view racing game with 16 different tracks.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Cinematronics</developer>
+		<publisher>Cinematronics</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/redlin2p.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="79274" source="ScreenScraper.fr">
+		<path>./ripoff.zip</path>
+		<name>Rip Off</name>
+		<desc>RIP OFF is a 1- or 2-player action game that offers features guaranteed to capture and prolong player interest: an accelerating competitive level with a clearly visible object and a team competition option that allows players to combine scores as well as skills in defense strategy against a futuristic enemy. 
+ 
+The center of the playfield is occupied by a selectable number of triangular fuel cells that pulsate with radioactive energy. The player commandeers a land craft that turns left, right, accelerates and fires torpedo energy bursts activated by push-buttons mounted on the "bridge" control panel. All is quiet as the background audio repeats an ominous low frequency tone. Suddenly, alien craft enter in waves from the edges of the playfield attempting to attach their vehicles to the fuel cells and drag them off to restock their own dwindling supplies. The player maneuvers his land ship into position and fires a volley of torpedoes at the first invader, causing his vehicle to explode in a thunderous roar and a flash of light. A second invader retaliates by firing short range laser bursts at the defender ship while a third invader escapes, dragging off a precious fuel cell. The background audio quickens its pitch and tempo as another wave of sleeker, faster invaders attack and maneuver to rip off fuel canisters - and the battle rages on! 
+ 
+</desc>
+		<rating>0.9</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Cinematronics</developer>
+		<publisher>Cinematronics</publisher>
+		<genre>Various-Shoot'em Up-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ripoff.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="46400" source="ScreenScraper.fr">
+		<path>./solarq.zip</path>
+		<name>Solar Quest</name>
+		<desc>In the center of the screen is a sun. Any space ships or ship's fire coming in contact with the sun are destroyed. The sun exerts an increasing gravitational pull as play progresses. 
+ 
+A player controlled space ship is randomly located on the screen. The space ship's movement is controlled by rotate right, rotate left, and thrust buttons. For quick escapes, the space ship can be thrust into hyperspace, causing the ship to disappear and then reappear in a different location. 
+ 
+The space ship possesses two weapons. The first weapon consists of shots fired by pressing the fire button. These shots will destroy any alien ships they strike, but will disintegrate if they do not hit any targets. The second weapon is a nuke which is launched by pressing the nuke button. The nuke will continue to travel across the screen until either it strikes a target or the player detonates the nuke by pressing the nuke button a second time. The nuke will destroy all alien ships within a limited radius of the explosion. 
+ 
+</desc>
+		<rating>0.9</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Cinematronics</developer>
+		<publisher>Cinematronics</publisher>
+		<genre>Shooter-N/A-Shoot'em Up</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/solarq.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="51173" source="ScreenScraper.fr">
+		<path>./spaceace.zip</path>
+		<name>Space Ace (US Rev. A3)</name>
+		<desc>Space Ace is a laserdisc video game produced by Don Bluth Studios, Cinematronics and Advanced Microcomputer Systems (later renamed RDI Video Systems). It was unveiled in October 1983, just four months after the Dragon's Lair game, then released in Spring 1984, and like its predecessor featured film-quality animation played back from a laserdisc. 
+ 
+The gameplay is also similar, requiring the player to move the joystick or press the fire button at key moments in the animated sequences to govern the hero's actions. However, the game's action was more varied with the player occasionally given the temporary option to either have the character he is controlling transform back into his adult form, or remain as a boy with different styles of challenges.</desc>
+		<rating>0.9</rating>
+		<releasedate>19840424T000000</releasedate>
+		<developer>Advanced Microcomputer Systems</developer>
+		<publisher>Cinematronics</publisher>
+		<genre>Platform / Run Jump-Platform-Action</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/spaceace.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="46403" source="ScreenScraper.fr">
+		<path>./spacewar.zip</path>
+		<name>Space Wars</name>
+		<desc>Two players controlled different ships. One button rotated the ship left, another rotated the ship right, one engaged thrust, one fired a shell, and one entered hyperspace (which causes the ship to disappear and reappear elsewhere on the playfield at random).</desc>
+		<rating>0.7</rating>
+		<releasedate>19770101T000000</releasedate>
+		<developer>Cinematronics</developer>
+		<publisher>Cinematronics</publisher>
+		<genre>Shooter-Fight-Shoot'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/spacewar.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="46405" source="ScreenScraper.fr">
+		<path>./starcas.zip</path>
+		<name>Star Castle (version 3)</name>
+		<desc>Star Castle is a 1- or 2-player outer space action game designed with features geared for maximum player appeal: A progressively difficult competitive level and a clearly defined enemy which must be both attacked and avoided at various points in the course of play. 
+ 
+The center of the playfield is occupied by the Star Castle which is programmed to constantly home in on the players' ships. Surrounding the Star Castle are three concentric energy rings of twelve segments each, which serve as both a protective perimeter for the Star Castle and a source of points for the player. Contained within the energy rings are three protective mines which seek out the players' ships and destroy them upon collision. The movements of the mines are programmed to simulate the actions of heat-seeking missiles. 
+ 
+The object of the games of Star Castle is to score the maximum number of points possible. This is accomplished by the combination of three elements: 
+a) Exploding the ring segments. 
+b) Exploding the Star Castle. 
+c) Avoiding the Star Castle's mines. A player's turn is over when his ship has been destroyed. The number of ships per game is set by the operator. 
+ 
+For maximum scoring, a player will want to shoot out sections of the energy rings in order to give him a shot at the Star Castle in the center of the screen. As play progresses, there are 2 facts a player must keep in mind: 
+1) Exploding all segments in a given ring will cause the entire ring to reappear - thereby eliminating a potential shot at the Star Castle in the center. 
+2) Exploding the rings in a manner that gives you a shot at the Star Castle will also give the Star Castle a shot at you. The Star Castle is programmed so that its nose always seeks out the player's ship. If there is an open shot at the player, it will take it. 
+ 
+When the Star Castle is hit by a player's missile, it will first implode and then explode with all remaining ring segments. After a one-second delay, the Star Castle will reappear with all three ring segments. If the Star Castle shoots the player, his turn is over. 
+ 
+As play begins, the Star Castle will appear in the center of the screen surrounded by its 3 energy rings. The player's ship appears about halfway up on the right hand edge. By using the control buttons to move forward, right or left, the player maneuvers about the screen using the firing button to launch missiles. 
+ 
+Points are scored by destroying the energy ring segments or the Star Castle itself. Exploding the Star Castle gives an extra ship as well as points. No points are given for the mines that attack the player. 
+ 
+The player's ship can be destroyed in 2 ways: By collision with the mines or by a hit from the Star Castle's torpedo. The mines are launched from the rings and attack the player for approximately ten seconds or until shot. The Star Castle's torpedoes are launched only when there is a clear shot at the player through all 3 rings. At this time the player also has his shot at the Star Castle. Both the Star Castle and the mines get smarter and faster as the game progresses. 
+ 
+The game of STAR CASTLE is not based on time units. The battle rages on until all the players' ships are destroyed. The length of the game depends solely on the skill of the player. It's the age-old challenge of man versus machine.</desc>
+		<rating>0.6</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Cinematronics</developer>
+		<publisher>Cinematronics</publisher>
+		<genre>Shooter-N/A-Shoot'em Up</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/starcas.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="63156" source="ScreenScraper.fr">
+		<path>./starhawk.zip</path>
+		<name>Star Hawk</name>
+		<desc>Star Hawk is a 3-D wireframe shoot-em-up which places a strong emphasis on player timing. Players move a cross hair around the screen and must blast the approaching enemy spaceships. 
+ 
+The skill level settings affect how quickly the cross hairs move in response to the joystick input. As the game progresses, the speed of the enemy craft increases. If one particular enemy ship is not destroyed quickly enough, it will zap 800 points off the player's score, with the enemy itself also worth 800 points. 
+ 
+Star Hawk can effectively be played indefinitely, providing the player keeps shooting enough enemy ships.</desc>
+		<rating>0.3</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Bandai Namco</developer>
+		<publisher>Bandai Namco</publisher>
+		<genre>Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/starhawk.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="46408" source="ScreenScraper.fr">
+		<path>./sundance.zip</path>
+		<name>Sundance</name>
+		<desc>The object in Sundance was to catch little suns that bounced back and forth between a pair of grids, which move closer and closer together as the game goes on.</desc>
+		<rating>0.5</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Tim Skelly</developer>
+		<publisher>Cinematronics</publisher>
+		<genre>Various-N/A</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sundance.png</image>
+	</game>
+	<game id="46410" source="ScreenScraper.fr">
+		<path>./tailg.zip</path>
+		<name>Tailgunner</name>
+		<desc>Tail Gunner is a monochrome vector arcade game created by Vectorbeam in 1979. The premise of the game is that the player is the tailgunner of a large space ship. Enemy spacecraft attack the vessel in groups of three, and the player must aim a set of crosshairs and shoot the enemies before they slip past the player's cannons. Because of the game's depicted viewpoint, instead of appearing to fly into the starfield, the stars move toward the center of the screen</desc>
+		<rating>0.5</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Cinematronics</developer>
+		<publisher>Cinematronics</publisher>
+		<genre>Shooter / Plane, 1st person-Shooter-N/A-Action</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/tailg.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43842" source="ScreenScraper.fr">
+		<path>./upyoural.zip</path>
+		<name>Up Your Alley</name>
+		<rating>0.3</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Cinematronics</developer>
+		<publisher>Cinematronics</publisher>
+		<genre>Sports / Bowling-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/upyoural.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="46414" source="ScreenScraper.fr">
+		<path>./wotw.zip</path>
+		<name>War Of The Worlds</name>
+		<desc>This is one great looking game. You control a little tank that can move back and forth at the bottom of the screen, your enemies are martian walkers that advance on your position. Each martian takes several hits to destroy, as you are actually blasting their legs out from under them. You can protect yourself from their shots by using your shield button, but use it sparingly, as you only have a limited amount of shield time.</desc>
+		<rating>0.7</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Tim Skelly</developer>
+		<publisher>Cinematronics</publisher>
+		<genre>Various-Casino-Various / Electro- Mechanical-Casino / Slot machine-N/A-Shoot'em Up</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/wotw.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="44130" source="ScreenScraper.fr">
+		<path>./wseries.zip</path>
+		<name>World Series - The Season</name>
+		<desc>The best baseball game of the era, World Series - The Season allowed one player versus the computer or two players versus each other. The game features excellent sound and graphics, spring-loaded joysticks for batting and pitching and extra base and go back buttons. High score lists the best batting average and ERA.</desc>
+		<rating>0.9</rating>
+		<releasedate>19850101T000000</releasedate>
+		<publisher>Cinematronics</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wseries.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="44225" source="ScreenScraper.fr">
+		<path>./zzyzzyxx.zip</path>
+		<name>Zzyzzyxx (set 1)</name>
+		<desc>Perseverance will be overwhelming emotion game players as they move ZZYZZYXX up and down horizontal rows of alternating moving bricks to gather presents which will satisfy his love. Lola -- whose affection is not easily captured. ZZYZZYXX's vulnerability increases (as he collects gifts, as well as points) not only because of Lola's untouchable attitude, but because of obstacles such as rattifers trying to put an end to ZZYZZYXX's quest for Lola's love and affection. 
+ 
+Intelligent as the rattifers may be, there are 2 defenses ZZYZZYXX can use to outsmart the destructive creatures. ZZYZZYXX can brick himself within a brick when he sees an approaching rattifer or ZZYZZYXX can move into the space where there is a gold helmet. The gold helmet intensifies ZZYZZYXX's goal to reach Lola by allowing ZZYZZYXX to use the helmet to enclose a rattifer or break through one brick which is obstructing ZZYZZYXX's course towards Lola. 
+ 
+As irreproachable as Lola appears. Lola is overjoyed by ZZYZZYXX's success to retrieve enough presents and she whistles resoundingly to let ZZYZZYXX know. After ZZYZZYXX's triumphant deed for love. ZZYZZYXX becomes invincible, enabling him to elude the rattifers by imprisoning them within their spaces. 
+ 
+Other dangers testing ZZYZZYXX's skillful maneuvering are falling bombs, rising missiles and cracked bricks, each capable of disintegrating ZZYZZYXX. 
+ 
+As an added attraction, when a game player completes each level, there are animated cartoons depicting ZZYZZYXX's passionate desire to impress his love for Lola. Also delightful music throughout the game leaves the players humming and their foot tapping.</desc>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Advanced Microcomputer Systems</developer>
+		<publisher>Cinematronics</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/zzyzzyxx.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="39981" source="ScreenScraper.fr">
+		<path>./alleymas.zip</path>
+		<name>Alley Master</name>
+		<desc>A bowling game.</desc>
+		<image>/userdata/roms/mame/images/alleymas.png</image>
+		<rating>0.3</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Cinematronics</developer>
+		<publisher>Cinematronics</publisher>
+		<genre>Sports / Bowling-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+</gameList>

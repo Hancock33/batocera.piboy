@@ -1,0 +1,1642 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="150701" source="ScreenScraper.fr">
+		<path>./catnmous.zip</path>
+		<name>Cat And Mouse (set 1)</name>
+		<desc>A platform shooting game involving a Cat and Mouse.</desc>
+		<rating>0.1</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Zaccaria</developer>
+		<genre>Shooter-Shooter / Space Invaders Like</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/catnmous.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="149615" source="ScreenScraper.fr">
+		<path>./checkmat.zip</path>
+		<name>Checkmate</name>
+		<desc>Up to four players control a block which leaves a trail behind it. The object is to force the other player(s) to run into either the boundary or your trail.</desc>
+		<rating>0.1</rating>
+		<releasedate>19770101T000000</releasedate>
+		<publisher>Dave Nutting Associates</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/checkmat.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40748" source="ScreenScraper.fr">
+		<path>./cshift.zip</path>
+		<name>Chicken Shift</name>
+		<desc>An addictive puzzle game in which the object is to guide eggs through a maze of egg-runs and guide them safely to the basket at the bottom of the screen. 
+ 
+This is achieved by switching red and blue pipes to face the left or right-hand side at exactly the right moment. Players must manipulate different pipes on BOTH halves of the screen at the same time, making for demanding and rewarding gameplay.</desc>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Sente</publisher>
+		<genre>Action-Action / Labyrinth-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/cshift.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="39884" source="ScreenScraper.fr">
+		<path>./280zzzap.zip</path>
+		<name>Datsun 280 Zzzap</name>
+		<desc>Thrilling action matches skills against tight bends... 
+fast straights... S-curves &amp; more for real driving excitement! 
+ 
+Realistic Engine, Crash &amp; Accelerator Sound Effects 
+3-Dimensional Driving Game with HIgh &amp; Low Gear Shift 
+Constantly Changing Race Course 
+High Score of the Day Feature 
+Adjustable Extended PLay 
+Adjustable Time Control 
+Proven Midway Micro Processor Logic Cards</desc>
+		<rating>0.5</rating>
+		<releasedate>19760101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Dave Nutting Associates</publisher>
+		<genre>Race 1st Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/280zzzap.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="40888" source="ScreenScraper.fr">
+		<path>./demoderb.zip</path>
+		<name>Demolition Derby</name>
+		<desc>Drive your car in a demolition derby and avoid getting hit in the radiator. Hit other cars in the radiator several times to make them explode. Collect wrenches, screwdrivers and car keys for bonuses.</desc>
+		<rating>0.4</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Race, Driving</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/demoderb.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="40960" source="ScreenScraper.fr">
+		<path>./dogpatch.zip</path>
+		<name>Dog Patch</name>
+		<desc>An old two players shooting game.</desc>
+		<rating>0.1</rating>
+		<releasedate>19770101T000000</releasedate>
+		<publisher>Midway</publisher>
+		<genre>Fight-Fight / Versus-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dogpatch.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="40969" source="ScreenScraper.fr">
+		<path>./domino.zip</path>
+		<name>Domino Man</name>
+		<desc>The player controls Domino Man, a bespectacled, moustachioed artist who must set up a chain of giant dominoes across the screen, to form a chain of dominoes which can then be toppled. 
+ 
+The dominoes must be placed on sites marked by black spots, achieved by simply running over each spot. Once all of the spots are covered with a domino, the chain is complete. The player will then have the choice of either knocking them all down to clear the level, or simply wait for a few seconds to continue to the next screen, in hope of completing the chain on THAT level, and so on. In this way, the player can set up several chains and knock them all down in one fell swoop, earning many bonus points in the process. Multiple chains are, of course, very difficult to achieve. 
+ 
+Domino Man's progress is hampered by a neighborhood bully who walks onto the screen and tries to knock over the first dominoes he comes across. The player must either try to complete and topple the chain of dominoes before the bully knocks them over, or hit the bully with a domino; causing the bully's trousers to fall down and disabling him for a few seconds. A killer bee also appears, and if it manages to sting the player, a life is lost. A bag lady and a boy pushing a shopping cart wander blindly around the levels, occasionally knocking over some of the dominoes. Domino Man can hit them, however, causing them to change direction. 
+ 
+Once a game is over, a poem is displayed on-screen to evaluate the player's performance on the game. For example: 
+Roses are red 
+Or so goes the verse 
+You set up fifty-two 
+You could have done worse.</desc>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/domino.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41081" source="ScreenScraper.fr">
+		<path>./ebases.zip</path>
+		<name>Extra Bases</name>
+		<desc>An old baseball game.</desc>
+		<rating>0.3</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Dave Nutting Associates</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ebases.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41448" source="ScreenScraper.fr">
+		<path>./gimeabrk.zip</path>
+		<name>Gimme A Break (7/7/85)</name>
+		<desc>Upright Conversion Kit. An overhead pool game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Sente</publisher>
+		<genre>Sports / Pool-Sports / Swimming-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gimeabrk.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41426" source="ScreenScraper.fr">
+		<path>./gghost.zip</path>
+		<name>Goalie Ghost</name>
+		<desc>Your goal here is to keep the ball from getting past you and try to get it past your opponent. One to 3 balls will begin in the center of the playfield. When the ball comes towards you, get in front of it to kick it towards your opponent. If it is up high, press your jump button to jump up and hit it.</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Sente</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gghost.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41496" source="ScreenScraper.fr">
+		<path>./gorf.zip</path>
+		<name>Gorf</name>
+		<desc>The player's goal is to defeat the Gorfian Empire and safeguard the future of mankind. Gorf is a single screen shoot-em-up in the classic "Space Invaders" mould, the prime difference being that Gorf offers five distinct levels of shooting action. The levels are as follows:  
+ 
+Mission 1 - Astro Battles: The first mission is more or less a straight clone of "Space Invaders", set against a sky-blue background. The player is protected by a glittering parabolic force field, which is gradually worn away by enemy projectiles. The force field also works in BOTH directions, and therefore must momentarily deactivate in order for the player's ship to fire out. To advance to the next mission, the player must destroy all the invaders.  
+Mission 2 - Laser Attack: The other missions are all set in space. In this mission, the player is faced with two formations each made up of five enemies. The formations are cross-shaped, and at the bottom of each formation is a single laser gun. The laser guns fire a long, dangerous yellow beam at regular intervals. At the same time, the other enemies may break formation and attempt to dive-bomb the player. Destroying a laser gun causes the corresponding formation to break apart. To advance to the next mission, the player must destroy all the enemies.  
+Mission 3 - Galaxians: This mission is a clone of "Galaxian". The player is faced with a swarm of galaxians, which continually dive-bomb and shower the player with deadly projectiles. To advance to the next mission, the player must destroy all the galaxians.  
+Mission 4 - Space Warp: A wormhole is situated in the middle of the screen out of which enemies ships emerge, one at a time, and spiral outward at increasing speed; whilst growing larger and flinging fireballs at the player. The Space Warp level would have an influence on Konami's superb "Gyruss", released two years later. To advance to the next mission, the player must survive a number of these enemies.  
+Mission 5, Flag Ship: The final mission is a one-on-one confrontation with the alien Flag Ship itself. The Flag Ship is one of the earliest examples of the 'boss' enemy in mainstream video games. It is equipped with its own force field, through which the player must blast in order to get a clean shot on the ship. It is also armed with a powerful fireball weapon. The player's weapon has a minor effect on the Flag Ship's hull, and can only blast off tiny pieces of it. This adds to the player's problems, as stray pieces of hull can destroy their ship. These pieces can be destroyed with a single shot. The only way to destroy the Flag Ship is to hit the glowing reactor at the heart of the ship, either by first blasting away the hull to expose it, or by managing to fire a shot directly into the tiny vent that leads to the reactor.  
+ 
+Each time the Flag Ship is destroyed, the player advances in rank. Initially, the player begins with the rank of Space Cadet, before moving on to Space Captain, Space Colonel, Space General, Space Warrior, and finally Space Avenger. The player's spaceship is equipped with a Quark Laser which allows the player to cancel a poorly aimed shot and fire another shot.</desc>
+		<rating>0.9</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Dave Nutting Associates</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gorf.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="150692" source="ScreenScraper.fr">
+		<path>./grmatch.zip</path>
+		<name>Grudge Match (Yankee Game Technology)</name>
+		<rating>0.3</rating>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>Yankee Game Technology</publisher>
+		<genre>Sports-Puzzle-Game-Sports / Fighting</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/grmatch.png</image>
+		<genreid>1540</genreid>
+	</game>
+	<game id="41466" source="ScreenScraper.fr">
+		<path>./gmissile.zip</path>
+		<name>Guided Missile</name>
+		<desc>Launch missiles at targets moving horizontally across the screen. You have 90 seconds to hit as many targets as you can.</desc>
+		<rating>0.1</rating>
+		<releasedate>19770101T000000</releasedate>
+		<publisher>Midway</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gmissile.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41587" source="ScreenScraper.fr">
+		<path>./gunfight.zip</path>
+		<name>Gun Fight (set 1)</name>
+		<desc>Each player (2 people play at a time--there is no computer opponent) controls a gunfighter. Your left hand has a 4-way joystick which moves your gunfighter anywhere on your side of the screen. Your right hand has a gun grip which tilts up and down to aim your gunfighter's pistol and which has a trigger to fire. Your only goal is to shoot the other player, who is right across the screen from you; he will then fall down and say 'Got Me'. It isn't usually a straight shot, as there will always be cactuses, a moving stagecoach, or trees somewhere between the 2 players. (Another obstacle will be added for each hit scored.) Just shoot the other player for points. The game is time based, and not life based. The factory setting is for a 90-second game, but this is operator-adjustable down to as low as 60 seconds.</desc>
+		<rating>0.1</rating>
+		<releasedate>19750101T000000</releasedate>
+		<publisher>Dave Nutting Associates</publisher>
+		<genre>Fight-Fight / Versus-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gunfight.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41643" source="ScreenScraper.fr">
+		<path>./hattrick.zip</path>
+		<name>Hat Trick</name>
+		<desc>An overhead 2-on-2 hockey game.</desc>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Sente</publisher>
+		<genre>Sports / Hockey-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hattrick.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41677" source="ScreenScraper.fr">
+		<path>./hiimpact.zip</path>
+		<name>High Impact Football (rev LA5 02/15/91)</name>
+		<desc>An American Football game from Williams.</desc>
+		<rating>0.8</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Williams</developer>
+		<publisher>Williams</publisher>
+		<genre>Sports / Football-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/hiimpact.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41909" source="ScreenScraper.fr">
+		<path>./journey.zip</path>
+		<name>Journey</name>
+		<desc>The Play mode begins when either the 1-PLAYER or the 2-PLAYER START button is pressed. The Play mode ends when all of your performers have been eliminated. When this happens, GAME OVER is written across the center of the monitor screen. 
+ 
+ON THE SCREEN: The game is made up of groups of 5 sequences for each rack. When play begins, all the performers run onto the screen and jump aboard their transport ship, the Scarab. The Scarab then lifts off and heads for a point in space that is at the center of a grouping of five planets. (The song that is played in the background during this scene is 'Lights'.) Each group member's instrument is on a different planet. 
+ 
+At the beginning of each sequence, when a 2-PLAYER game has been selected, the game tells which player is up. 
+</desc>
+		<rating>0.8</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/journey.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41910" source="ScreenScraper.fr">
+		<path>./joust.zip</path>
+		<name>Joust (White/Green label)</name>
+		<desc>Joust is a platform-based action combat game for one or two-players (with the two-player game offering either team-up OR head-to-head combat; the first time arcade gamers were given this choice) in which each player controls a knight riding on the back of a flying ostrich.  
+ 
+The object of the game is to progress through platform-based levels by defeating groups of buzzard-riding enemy knights. This is achieved by 'jousting'; both enemy and player knights carry a lance and must fly around the level (actioned by repeatedly hitting the 'Flap' button) trying to oust rival knights from their steeds by ramming them with the lance. This can only be achieved if the attacking rider is above the enemy knight when the lance connects. A collision of equal elevations results in the two knights bouncing off each other, but if a player is lower than their enemy at the instant of contact, they themselves will be knocked from their steed and lose a life.  
+ 
+A defeated enemy will turn into an egg that falls to the bottom of the screen. This must be quickly collected by players as if the egg lands on a platform and isn't retrieved in time, it will eventually hatch into another enemy knight that must be defeated again.  
+ 
+Joust features three different types of enemy knights - Bounder, Hunter, and Shadow Lord - with each earning players different points values when defeated. A pterodactyl will appear after a predetermined time to hunt the players.  
+ 
+Accurately navigating the player Knights can be initially quite difficult as control is strongly affected by both gravity and inertia. Players can lose a life by either being knocked from their steed by an enemy knight, or by falling into the lava pit at the bottom of each level.</desc>
+		<rating>0.8</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Williams</developer>
+		<publisher>Williams</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/joust.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="41911" source="ScreenScraper.fr">
+		<path>./joust2.zip</path>
+		<name>Joust 2: Survival of the Fittest (revision 2)</name>
+		<desc>Joust 2 - Survival of the Fittest © 1986 Williams Electronics, Incorporated. 
+ 
+On the planet of the floating cliffs, society calls upon its wing-mounted Gladiators to solve conflicts. You, the Gladiator, must enter the fray, participating in a challenge of honor, a Joust... where only the fittest survive!  
+ 
+The legend of "Joust" continues in Joust 2. Players must solve the puzzle of what strategy will be most effective in dealing with the buzzards and other winged enemies on each of Joust 2's 35 different backgrounds.  
+ 
+The object of Joust 2 is to defeat all winged enemies by colliding with them. To survive a collision (joust), the Gladiator's lance must be higher.  
+ 
+</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Williams</developer>
+		<publisher>Williams</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/joust2.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="41919" source="ScreenScraper.fr">
+		<path>./jrpacman.zip</path>
+		<name>Jr. Pac-Man (11/9/83)</name>
+		<desc>One of many sequels to the legendary "Pac-Man", Jr. Pac-Man features the character of Pac-Man's son. For the first time in the series' history, side-scrolling mazes were introduced, with each maze being two screens wide.  
+ 
+This time, the mazes have no exit tunnels through which players can make an escape. The bonus items that appear move around the maze and are now something of a mixed blessing, as not only will they destroy any Power Pills they come across, but they will also turn any normal dots they pass over into large dots that slow the player's movements considerably, but are worth more points than normal dots if eaten by the player. Any mutated dots in the maze will disappear if the player loses a life.  
+ 
+The Pac character is once again pursued by four ghosts (Blinky, Pinky, Inky and Tim) in his quest to eat all of the dots in each maze. And, as before, numerous Power Pills litter the mazes that, when eaten, allow Jr. to eat the pursuing ghosts.  
+ 
+As with previous "Pac-Man" games, intermissions are featured between certain levels. Jr. Pac-Man's intermissions are episodic in nature, like those found in "Ms. Pac-Man". Jr. Pac-Man's story tells of the blossoming love between Jr. Pac-Man and a small ghost named Yum-Yum.  
+ 
+</desc>
+		<rating>0.9</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/jrpacman.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="145762" source="ScreenScraper.fr">
+		<path>./jdreddp.zip</path>
+		<name>Judge Dredd (rev LA1, prototype)</name>
+		<desc>Here comes the judge! A beat-'em-up action based on the comics book of the same name.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Acclaim</publisher>
+		<genre>Fight</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/jdreddp.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41927" source="ScreenScraper.fr">
+		<path>./jumpshot.zip</path>
+		<name>Jump Shot</name>
+		<desc>An early one-on-one basketball game. Score more points than your opponent to win.</desc>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/jumpshot.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41977" source="ScreenScraper.fr">
+		<path>./kicka.zip</path>
+		<name>Kick (cocktail)</name>
+		<desc>Move a man on a unicycle and catch falling balloons and Pac-Men on your head. Use the Kick button to make the character's legs kick out and knock balloons back up for another try. Balloons stack up eight high and then the man will pop them. Stack Pac-Men for bonus points.</desc>
+		<rating>0.7</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Action</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/kicka.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="42071" source="ScreenScraper.fr">
+		<path>./kroozr.zip</path>
+		<name>Kozmik Kroozr</name>
+		<desc>Kozmik Krooz'r is a shoot-'em-up game in which players guide Kapt. Krooz'r to a rotating mothership at the top of the playfield, one which can only be entered when its tractor beam is operational. Players can also shoot enemies in one of eight directions and deflect firepower during their journey. Every fifth round there is a bonus round where Kapt. Krooz'r must pick up space junk.</desc>
+		<rating>0.5</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/kroozr.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="42090" source="ScreenScraper.fr">
+		<path>./lagunar.zip</path>
+		<name>Laguna Racer</name>
+		<desc>A black and white racing from Midway.</desc>
+		<rating>0.3</rating>
+		<releasedate>19770101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/lagunar.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="42100" source="ScreenScraper.fr">
+		<path>./lazarian.zip</path>
+		<name>Laser Battle</name>
+		<desc>This game was manufactured and distributed by Bally Midway in the USA as "Lazarian".</desc>
+		<rating>0.5</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Zaccaria</developer>
+		<publisher>Zaccaria</publisher>
+		<genre>Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/lazarian.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="42201" source="ScreenScraper.fr">
+		<path>./m4.zip</path>
+		<name>M-4</name>
+		<desc>M-4 (c) 1977 Midway.  - TECHNICAL -  Game No. 626  Main CPU : 8080 (@ 1.9968 Mhz)  Screen orientation : Horizontal Video resolution : 256 x 224 pixels Screen refresh : 60.00 Hz Palette colors : 2  Players : 2 Control : 2-way joystick Buttons : 2  - TRIVIA</desc>
+		<rating>0.1</rating>
+		<releasedate>19770101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Fight-Fight / Versus-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/m4.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="78873" source="ScreenScraper.fr">
+		<path>./maxrpm.zip</path>
+		<name>Max Rpm (ver 2)</name>
+		<desc>Max RPM is a racing arcade game that was released by Bally Midway in 1986; it runs on their MCR-3 hardware but without the two General Instrument AY-3-8910s. The cabinet has a 25-inch bezel which divides its monitor into two sections - and both players must use a steering wheel, a gas pedal, and a four-position shifter, to take control of a blue (1P) or red (2P) car (but if only one player is present, the red car shall get controlled by the CPU). If the other player's car is in one player's field of vision, it will appear on the other side of the screen as well as his own; a rearview mirror is also present at the top of both sides of the screen, so one player can see the other coming up behind him. If one player fails to finish a race in the qualifying time, his game will immediately be over - and the concept of the split-screen cabinet was later reused by Bally Midway in the following year, upon release of Spy Hunter II.</desc>
+		<rating>0.3</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/maxrpm.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="78876" source="ScreenScraper.fr">
+		<path>./mayday.zip</path>
+		<name>Mayday!! (set 1)</name>
+		<desc>The player's ship flies over a horizontally scrolling planet surface. Waves of enemy ships attack and must be destroyed for the player to advance to the next planet. The Mayday button slows the game down for five seconds. The player's ship fires both forward and back. 
+ 
+The game itself is not a direct copy of Defender. It has an 8-Way joystick, two fire buttons (forward and backwards) and a Mayday button. The Mayday button slows everything on-screen down for a few seconds and makes the screen flash. Although it only scrolls from right to left, you can speed up and slow down your ship's forward momentum. The first wave that is over the sea of submarines. The submarines, which look a lot like Baiters in Defender, shoot along the bottom of the screen and fire up at the player's ship. The player's shots are aimed diagonally down at the waves. The second wave is flying through a cavern with swarms of aliens flying and bouncing from right to left towards the player. Unlike Defender, you can crash into the cavern walls. The third wave is set over a gently rolling planet surface. Later waves follow a similar pattern.</desc>
+		<rating>0.3</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Hoei</developer>
+		<publisher>Hoei</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mayday.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="78928" source="ScreenScraper.fr">
+		<path>./minigolf.zip</path>
+		<name>Mini Golf (11/25/85)</name>
+		<desc>Mini Golf is a golf arcade game, the players must use a track ball to direct their balls around an eighteen-hole course, featuring things such as: loops, waterfalls, warp holes, electric barriers, spinning triangles and discs, whirlpools, opening trap holes emerging bumpers, and even a giant skull. By finishing the holes which have a small flag beneath their bonus values, you shall earn "extra" holes (as you'll only start out with a certain number at the start of the game and shall have to finish these holes in order to play the others) - and the game also has a single button for positioning the ball on one of the three tees at the start of every hole. Once you've finished the eighteenth hole, you shall receive 1000 bonus points for every extra hole you have remaining and the game will end.</desc>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Bally Sente</developer>
+		<publisher>Bally Sente</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/minigolf.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="78947" source="ScreenScraper.fr">
+		<path>./mk.zip</path>
+		<name>Mortal Kombat (rev 5.0 T-Unit 03/19/93)</name>
+		<desc>Mortal Kombat, first in the Mortal Kombat series, is a 1-on-1 fighting game featuring a cast of seven different characters. Mortal Kombat took ideas from Capcom's seminal Street Fighter II, such as the game's special moves and projectiles. It also introduced a cast of photo-realistic digitized fighters for players to fight either as or against.  
+ 
+Mortal Kombat characters list: 
+JOHNNY CAGE 
+KANO 
+RAIDEN 
+LIU KANG 
+SCORPION 
+SUB-ZERO 
+SONYA BLADE 
+ 
+Battles are fought over the best of three rounds. At the end of a battle, a voice instructs the winner to 'Finish Him/Her!' and players have only a couple of seconds to try and execute their character's 'fatality', which sees the winner killing the loser in a spectacular and grisly fashion.</desc>
+		<rating>0.9</rating>
+		<releasedate>19921008T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mk.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="60823" source="ScreenScraper.fr">
+		<path>./offroadc.zip</path>
+		<name>Off Road Challenge (v1.63)</name>
+		<desc>Off Road Challenge is an off-road truck racing game. The player races against other off-road vehicles across various landscapes, while collecting nitros and gold along the way. Gold picked up on the course or earned from racing can be used to upgrade the vehicle. Once the player has completed the circuit, they move up to the next difficulty level and go through it again, keeping the upgraded truck.</desc>
+		<rating>0.8</rating>
+		<releasedate>19970101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/offroadc.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="145767" source="ScreenScraper.fr">
+		<path>./otwalls.zip</path>
+		<name>Off The Wall (Sente)</name>
+		<desc>Off the wall is a sports game that combines elements of racquetball and tennis. A game is over when one player scores 11 points.</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Bally Sente</developer>
+		<publisher>Midway</publisher>
+		<genre>Sports-Sports / Tennis</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/otwalls.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="46396" source="ScreenScraper.fr">
+		<path>./omegrace.zip</path>
+		<name>Omega Race (set 1)</name>
+		<desc>Omega Race is a vector-based single-screen shoot-em-up set in the year 2003, in which the Omegan system has developed a way of training its warriors to protect their star colonies against invading alien androids. Players must pilot an Omegan Space Fighter to engage and destroy the aliens and the mines they have planted.  
+ 
+The Omegan Fighter can rotate through 360 degrees and thrust to move forwards, it's also armed with forward-firing lasers with which to shoot the enemy ships. Battles take place in an enclosed area and when the player's ship reaches the edge of the screen it bounces off an invisible barrier, although the barrier briefly appears when hit or shot.  
+ 
+As well as firing lasers at the player, some enemy ships also drop mines that must be shot or avoided. As players progress through the waves, the number of enemy attackers and their aggression increases.</desc>
+		<rating>0.9</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Shooter-Fight-Shoot'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/omegrace.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="79255" source="ScreenScraper.fr">
+		<path>./phantom2.zip</path>
+		<name>Phantom 2</name>
+		<desc>Phantom II es un shooter de desplazamiento vertical que fue lanzado por Midway Games en 1979; el jugador debe utilizar un joystick de 8 vías para tomar el control de un avión Phantom que siempre está avanzando hacia delante, con un solo botón para hacer que dispare a los aviones enemigos por puntos. Sin embargo, los enemigos se esconderán detrás de las nubes, y tendrás que activar tu radar para revelar sus posiciones,  un jugador recibirá puntos extra por matar enemigos con el radar activado. Si el Phantom se golpea, su piloto será expulsado al aire y saltará en paracaídas desde la parte inferior de la pantalla, antes de que vuele de nuevo desde la parte inferior de la pantalla, en un avión de reemplazo.</desc>
+		<rating>0.1</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/phantom2.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="79266" source="ScreenScraper.fr">
+		<path>./pigskin.zip</path>
+		<name>Pigskin 621ad (rev 1.1K 8/01/90)</name>
+		<desc>Play Football with Barbarians! A basic football-ish game is played on a field filled with weapons, traps, and even paid-off bystanders that will do anything to slow you down!</desc>
+		<rating>0.9</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Sports / Rugby-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pigskin.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42407" source="ScreenScraper.fr">
+		<path>./playball.zip</path>
+		<name>Playball! (Prototype)</name>
+		<desc>PlayBall! (c) 1983 Williams.  - TECHNICAL -  Main CPU : M6809 (@ 1 Mhz) Sound CPU : M6808 (@ 894.75 Khz) Sound Chips : DAC, HC55516 (@ 894.75 Khz)  Screen orientation : Vertical Video resolution : 231 x 292 pixels Screen refresh : 60.00 Hz Palette colors </desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<publisher>Williams</publisher>
+		<genre>Action</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/playball.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="42490" source="ScreenScraper.fr">
+		<path>./powerdrv.zip</path>
+		<name>Power Drive</name>
+		<desc>Up to three players choose to be one of three monster truck characters, each indicated by a different name and color: Daddy's Girl (red), Captain Crush (yellow) or Sheriff Perry (blue). If only one or two people are playing the game, there will be one or two black, computer-controlled monster trucks called Black Lightning who will compete in the race. Players repeatedly press both of the Tire buttons to propel their monster truck and use the "Wheelie" lever to make the truck do a wheelie to help overcome obstacles. 
+Some of the races on this game include speed rallies, car crushes, high jumps, sled pulls, etc. The game will continue if you manage to make to first place in one of the races during the play. If you only get second place, third place or fail to finish the race three times, the game will end. However, continuous play is available.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/powerdrv.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="42662" source="ScreenScraper.fr">
+		<path>./rabiolep.zip</path>
+		<name>Rabio Lepus (Japan)</name>
+		<desc>Cut scenes from the original Rabio Lepus were eliminated in "Rabbit Punch". These include a picture appearing when the spaceship flies out of the castle at the start, pictures when the two bunny girls and Rabbit King are rescued and scenes at the ending.</desc>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>V-System Co.</developer>
+		<publisher>V-System Co.</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/rabiolep.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="42242" source="ScreenScraper.fr">
+		<path>./rampage.zip</path>
+		<name>Rampage (Rev 3, 8/27/86)</name>
+		<desc>Rampage is a classic B-movie inspired smash-em-up in which up to three players take on the roles of three mutated monsters - George the giant ape, Lizzie the giant lizard and Ralph the giant wolf - who move from city to city destroying skyscrapers and vehicles, while eating or killing any people that get in their way.  
+ 
+The monsters' health can be damaged in a number of ways: by being shot by National Guardsmen, by being hit by another monster, by falling from a building, by being hit by police cars or tanks, by going underwater, by being struck by lightning, or by eating something bad, such as dynamite. Health is replenished by eating food found in damaged buildings.  
+ 
+If the players' health gauge diminishes completely, the monsters will revert back to their original human form and walk sideways off the screen. Rampage has a "buy back in" option, however; if players chose to continue the game before the human figure leaves the play area, the game will continue from that stage.  
+ 
+Rampage is set over the course of 128 days in cities across North America. The game starts in Peoria, Illinois and ends in Plano, Illinois. In Plano, players receive a mega vitamin bonus which heals all the monsters and provides a large point bonus. After this, the cycle of cities repeats five times. After 768 days, the game resets back to Day One.  
+ 
+Examples of bonuses and hazards found inside damaged buildings:  
+Food: Milk, Turkey, Hot Toast, Fruit  
+Bonus: Flower Pot, TV Set, Money Bag  
+Hazard: Cactus, Poison, Toaster  
+ 
+Examples of bonuses and hazards found outside damaged buildings:  
+Bonus: Auto (or Truck), Commuter Train, Person in Manhole  
+Hazard: National Guard Tank, Police Car, Storm Cloud  
+ 
+Further bonus points can be earned by grabbing a fleeing 'Townie' from a building window. This has two benefits: 1) While holding the Townie, all swat team members disappear from the building windows and 2) accumulating points are scored during the time the Townie is held.</desc>
+		<rating>0.9</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Barcrest / Red Gaming</publisher>
+		<genre>Adventure-Fight-Platform</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/rampage.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="57794" source="ScreenScraper.fr">
+		<path>./openice.zip</path>
+		<name>2 On 2 Open Ice Challenge (rev 1.21)</name>
+		<desc>A four-player hockey game with 1995 NHL players and teams. Just imagine NBA Jam, then replace basketball with hockey. You pick a team and then play for the Stanley Cup.</desc>
+		<image>/userdata/roms/mame/images/openice.png</image>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Sports / Hockey-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42789" source="ScreenScraper.fr">
+		<path>./robby.zip</path>
+		<name>Adventures Of Robby Roto!, The</name>
+		<desc>When playing this game. YOU are ROTO's mentor. He takes his directions ONLY from YOU and will do your bidding exclusively. YOU determine the strategies he will use to defeat the evil monster VOLTAR who has invaded the Earth, stealing all types of treasures and burying them deep within the earth. VOLTAR also takes hostages and seals them in vaults deep within the earth. 
+ 
+There is only one way to save the hostages and recover the stolen treasures. We must send in ROTO. He will follow VOLTAR right into his own home tunnels to rescue the hostages and recover the stolen treasures VOLTAR has salted away. 
+ 
+To say the least, this makes VOLTAR more than just a little bit upset with ROTO. To help protect his stolen treasures and kidnapped hostages. VOLTAR has developed a breed of giant SPIDER that can sense ROTO's location and that can also travel through solid earth. These SPIDERS attempt to corner and capture ROTO. And to direct their hunt for ROTO, VOLTAR turns himself into a TROLL that can travel through solid earth.</desc>
+		<image>/userdata/roms/mame/images/robby.png</image>
+		<rating>0.5</rating>
+		<releasedate>19810101T000000</releasedate>
+		<publisher>Dave Nutting Associates</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="78881" source="ScreenScraper.fr">
+		<path>./maze.zip</path>
+		<name>Amazing Maze</name>
+		<desc>Each player (up to 2 people may play at a time, 2-player mode is more fun), controls a little geometric shape. Each player starts at opposite sides of the maze. The object is to get to the point where the other player started, before they get to where you started. You use a joystick to guide your 'character' through the maze. The game is time based, and you score a point for each maze you beat faster than your opponent (or the computer player if you are going solo). The factory setting is for a 90 second game, but this is operator adjustable. The graphics are done in monochrome white on black. With no detail on anything. The maze walls are only a pixel thick, while the characters themselves (simple shapes), are not much bigger. The mazes are not stylized in anyway. They look exactly like the kind of maze you would do with a paper and pen.</desc>
+		<image>/userdata/roms/mame/images/maze.png</image>
+		<rating>0.3</rating>
+		<releasedate>19760101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40050" source="ScreenScraper.fr">
+		<path>./archrivl.zip</path>
+		<name>Arch Rivals (rev 4.0 6/29/89)</name>
+		<desc>Arch Rivals is a hilarious basketball game featuring customizing team names and colors. A full game consists of four quarters, with four minutes each. Each team has two players, and the objective of the game is to outscore the opponent until the final buzzer sounds.  
+ 
+If the game results in a tie after four quarters, a sudden death overtime period is added, in which case the next basket to go in will win the game for the team who scored it. The overtime period is one minute long. A player can call for his teammate to pass him the ball or to shoot it.  
+ 
+There are eight characters that the player can play as, each with a unique characteristic. They are:  
+Blade: A crowd pleaser.  
+Hammer: Rebound king.  
+Lewis: Top shooter.  
+Mohawk: Tough &amp; mean.  
+Moose: A real champ.  
+Reggie: All-American.  
+Tyrone: Defensive giant.  
+Vinnie: A great player.</desc>
+		<image>/userdata/roms/mame/images/archrivl.png</image>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40253" source="ScreenScraper.fr">
+		<path>./blasted.zip</path>
+		<name>Blasted</name>
+		<desc>Using your high-powered scope rifle, blast aliens and other bad guys who have invaded an apartment complex, but be careful not to shoot the tenants or get hit by return fire. In 2-player mode, you shoot at your opponent's building and he shoots at yours.</desc>
+		<image>/userdata/roms/mame/images/blasted.png</image>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Shooter / 3rd person-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="40254" source="ScreenScraper.fr">
+		<path>./blaster.zip</path>
+		<name>Blaster</name>
+		<desc>The player takes control of a spaceship and must fight against wave after wave of enemy fighters, while trying to rescue the stranded astronauts that represent the last surviving remnants of the human race. Enemies attack the player both with weapons, and by making 'suicide runs' at the player's ship. The game consists of eleven different levels, nine of which are repeated, bringing the total number of levels to 20.  
+ 
+The levels are: Planetoid Waves, Robot Grid Waves, Saucerland Waves, Vampire Waves, Time Tunnel Waves, Outer Space Waves, Enduro Waves, Cat World Waves, and Mastermind Waves (there are two of each of these).  
+ 
+There are also two unique waves that occur only once, they are Armageddon and Paradise.  
+ 
+Players can select their starting wave at the start of the game; choosing from Planetoids, Robot Grid, Saucerland, and Vampires. During the game, players must be careful to NOT shoot the human astronauts that drift through the levels. These must be rescued by 'running' into them.  
+ 
+Despite the presence of an energy meter, the player can take exactly three hits before he or she dies. Upon death, the window of the player's virtual cockpit breaks and one of the player's lives is lost. Blaster has a 'Continue' option but this can only be used once.</desc>
+		<image>/userdata/roms/mame/images/blaster.png</image>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Williams</developer>
+		<publisher>Williams / Vid Kidz</publisher>
+		<genre>Shooter / Plane, 3rd person-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="150705" source="ScreenScraper.fr">
+		<path>./blueprnt.zip</path>
+		<name>Blue Print (Midway)</name>
+		<desc>In Blue Print the player controls a character that must search houses to find pieces of a machine. There are a variety of antagonists that impede progress, including monsters and bombs. Once the machine has been assembled in accordance with the blueprint, the player must use it to shoot the monster that is chasing the player character's girlfriend.</desc>
+		<image>/userdata/roms/mame/images/blueprnt.png</image>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Ashby Computers and Graphics</developer>
+		<publisher>Midway</publisher>
+		<genre>Action</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="40338" source="ScreenScraper.fr">
+		<path>./boothill.zip</path>
+		<name>Boot Hill</name>
+		<desc>A classic 1 or 2-player western gunfight game, featuring a monochrome display overlaid via mirror onto back-lit plastic background. Each player uses a small joystick to move their cowboy up and down the play area, while a second, much larger joystick is used to aim the pistol and shoot - this larger stick also has a trigger button. The game's single goal is simply to shoot the other player, who is situated on the opposite side of the game area. Wagons and cacti litter the middle of the play area, providing temporary cover from the opponent's gunfire (while, of course, providing the opponent with cover from the PLAYER'S shots). These obstacles slowly disintegrate as they are shot; much like the shields in Taito's "Space Invaders". 
+ 
+Boot Hill is time-based NOT life based, with the factory default set at ninety seconds. This is, of course, operator adjustable via the dip settings. The computer opponent is quite easy to beat with a little practice, but a human opponent provides a much stronger challenge.</desc>
+		<image>/userdata/roms/mame/images/boothill.png</image>
+		<rating>0.3</rating>
+		<releasedate>19770101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Dave Nutting Associates</publisher>
+		<genre>Fight-Fight / Versus-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="40389" source="ScreenScraper.fr">
+		<path>./bubblesr.zip</path>
+		<name>Bubbles (Solid Red label)</name>
+		<desc>In Bubbles you control a cartoon soap bubble inside a large sink. The object of the game is clean out the sink. You can safely scrub away ants, grease, and crumbs all the time. But sponges, roaches, brushes, and razor blades are deadly to a small bubble. Don't worry too much though, because your bubble grows in size as it swallows up the dirt in the sink. When it gets big enough it will be able to hit brushes and sponges (but still not razors).</desc>
+		<image>/userdata/roms/mame/images/bubblesr.png</image>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Williams</developer>
+		<publisher>Williams</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="41820" source="ScreenScraper.fr">
+		<path>./invad2ct.zip</path>
+		<name>Space Invaders 2 (Midway, cocktail)</name>
+		<desc>Space Invaders II © 1980 Midway.
+
+Space Invaders II allowed for 2-player simultaneous competitive play (although both players could work together). Besides shooting the invaders, one of the goals was to destroy your opponent (either CPU or another player) and gain his ships!</desc>
+		<image>/userdata/roms/mame/images/invad2ct.png</image>
+		<rating>0.5</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="78948" source="ScreenScraper.fr">
+		<path>./mk2.zip</path>
+		<name>Mortal Kombat 2 (rev L3.1)</name>
+		<desc>Mortal Kombat II is a direct sequel to the 1992 original featuring new fighters (increasing the character roster from 7 to 12) and improved graphics.  
+ 
+As with its predecessor, MKII's matches are divided into rounds, with victory awarded to the first player to win two rounds. At the point of defeat, the losing fighter will become dazed and the winner is given the opportunity to execute a 'finishing move'.  
+ 
+Some of the standard fighting moves (moves shared by all characters) have now been expanded or enhanced. A crouching punch has been added and the 'roundhouse kick' is more powerful and now knocks opponents across the screen. Also, the difference in hit boxes between high and low kicks is now more marked.  
+ 
+Additionally, returning characters gain new special moves and MKII marks the first appearence of multiple Fatalities - as well as additional, non-lethal finishing moves - in the series. In addition to the Fatalities of its predecessor, MKII offers 'Babalities' (turning a defeated opponent into a crying baby), 'Friendships' (a non-malicious interaction, such as dancing or giving a gift to the defeated opponent) and stage-specific Fatalities (the winner uppercutting their opponent into an abyss below, spikes above, or a pool of acid in the background).  
+ 
+Each character still shares generic attributes - speed, power, jump height and airtime - albeit with differing hit boxes. The sequel drops the points system of its prequel in favour of a consecutive win tally.</desc>
+		<image>/userdata/roms/mame/images/mk2.png</image>
+		<rating>0.8</rating>
+		<releasedate>19930625T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="63073" source="ScreenScraper.fr">
+		<path>./mk3.zip</path>
+		<name>Mortal Kombat 3 (rev 2.1)</name>
+		<desc>Succeeding in taking over the Earth realm, Shao Kahn takes all the human souls on Earth as his own. To stop the Outworld realm from totally merging with the Earth realm, a few Earth warriors were chosen to have their souls protected from Shao Kahn in order to defend the Earth realm in a new Mortal Kombat tournament. 14 digitized characters fight to overthrow Shao Kahn and his Centaur lieutenant Motaro.</desc>
+		<image>/userdata/roms/mame/images/mk3.png</image>
+		<rating>0.8</rating>
+		<releasedate>19950401T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="60558" source="ScreenScraper.fr">
+		<path>./mspacman.zip</path>
+		<name>Ms. Pac-Man</name>
+		<desc>In this, the first proper sequel to Namco's legendary pill eating maze game, players must once again run around a number of mazes, eating all of the pills that are scattered throughout. The ever-present ghosts (Blinky, Pinky, Inky and Sue) return to hamper the player's progress. The infamous 'Power Pills' are also present and correct, with four appearing in each maze.  
+ 
+Namco introduced a number of changes and enhancements over the original game. The first difference is in the main character. For the first time in video-game history, the game's lead character was female. Ms. Pac-Man is almost identical to the original character with two main differences; she wears a bow in her 'hair', and is also wearing lipstick.  
+ 
+Another change from the original is that the bonus fruit items are no longer static but now move randomly around the mazes.  
+ 
+Ms Pac-Man features four different maze layouts, which alternate every two to four rounds:</desc>
+		<image>/userdata/roms/mame/images/mspacman.png</image>
+		<rating>0.9</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Coleco Industries, Inc.</developer>
+		<publisher>Coleco Industries, Inc.</publisher>
+		<genre>Action / Labyrinth-Action</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="79051" source="ScreenScraper.fr">
+		<path>./mysticm.zip</path>
+		<name>Mystic Marathon</name>
+		<desc>The object of Mystic Marathon is to guide an elvish looking goblin in some sort of overland race. In most arcade games if you made a mistake you would lose a life, but in Mystic Marathon making a mistake, any mistake, simply meant it was impossible to win the race. Bump into something, oops, can't win. Choose the wrong path, can't win. Press jump at the wrong time, can't win.</desc>
+		<image>/userdata/roms/mame/images/mysticm.png</image>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Williams</developer>
+		<publisher>Williams</publisher>
+		<genre>Sports / Running trails-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="60805" source="ScreenScraper.fr">
+		<path>./narc.zip</path>
+		<name>Narc (rev 7.00)</name>
+		<desc>NARC is a graphically violent one or two-player side-scrolling shoot-em-up in which players take on the role of "Narcs"; futuristic police officers whose duty it is to either arrest or kill drug dealers, junkies and attack dogs as players fight to crush the criminal empire known as K.R.A.K.  
+ 
+The Narcs have both machine guns and rocket launchers at their disposal and players can also pick up (confiscate) discarded drugs and money to earn extra points. These are totaled up at the end of each level. On many stages a special colour-specific 'Keycard' needs to be found before players can progress to the next section of the level.</desc>
+		<image>/userdata/roms/mame/images/narc.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Williams</developer>
+		<publisher>Williams</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="79057" source="ScreenScraper.fr">
+		<path>./nbahangt.zip</path>
+		<name>Nba Hangtime (rev L1.1 04/16/96)</name>
+		<desc>NBA Hang Time is a 2-on-2 arcade basketball action game following in the footsteps of NBA Jam. All NBA teams, each featuring 4 players to choose from, are included along with fast paced, over-the-top basketball, disregarding the normal rules of the game but including fouls and out of bounds.</desc>
+		<image>/userdata/roms/mame/images/nbahangt.png</image>
+		<rating>0.9</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="79058" source="ScreenScraper.fr">
+		<path>./nbajam.zip</path>
+		<name>Nba Jam (rev 3.01 04/07/93)</name>
+		<desc>Two-on-two basketball with digitized images of real NBA players, monster dunks and no referee - it's a blowout!</desc>
+		<image>/userdata/roms/mame/images/nbajam.png</image>
+		<rating>0.9</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="79060" source="ScreenScraper.fr">
+		<path>./nbajamte.zip</path>
+		<name>Nba Jam Te (rev 4.0 03/23/94)</name>
+		<desc>An update of the classic 'NBA JAM'. New players, new features but still the same classic gameplay.</desc>
+		<image>/userdata/roms/mame/images/nbajamte.png</image>
+		<rating>0.9</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="79164" source="ScreenScraper.fr">
+		<path>./nstocker.zip</path>
+		<name>Night Stocker (10/6/86)</name>
+		<desc>This is the first game to combine the shooting with the driving.</desc>
+		<image>/userdata/roms/mame/images/nstocker.png</image>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Bally Sente</developer>
+		<publisher>Bally Sente</publisher>
+		<genre>Shooter / Vehicle, 1st person-Shooter</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1028</genreid>
+	</game>
+	<game id="42750" source="ScreenScraper.fr">
+		<path>./rescraid.zip</path>
+		<name>Rescue Raider (5/11/87, non-cartridge)</name>
+		<desc>Rescue Raider is a multiple-screen shooter arcade game that was released by Bally Midway in 1987; it was the last title to run on Bally and Sente's SAC-I hardware. The player uses two 8-way joysticks to take  control of a futuristic vehicle. The left joystick is for moving while the right one is for firing. There is also a single button, with which to cycle through the three different types of special weapons. Its mission is to gather secret documents which shall reveal what an area of the radar map on the screen's right side is hiding - and it can also take enemy soldiers as hostages, refuel and earn more powerful weapons.</desc>
+		<image>/userdata/roms/mame/images/rescraid.png</image>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Race, Driving-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="42780" source="ScreenScraper.fr">
+		<path>./rmpgwt.zip</path>
+		<name>Rampage - World Tour (rev 1.3)</name>
+		<desc>A sequel to the 1986 original, Rampage World Tour once again has George, Lizzie, and Ralph bent on a trail of destruction. The 'World Tour' of the title refers to the fact that the action now takes place around the entire world, instead of just North America. Graphics are much improved and a kick button has been added to allow even more chaos. 
+ 
+Hidden bonus items have also been added to the game; two examples are an item that allows any player character to transport to almost any location in the game instantly. A second gives the players more destructive power. Some stages have a vat of toxic chemicals that can mutate any player character into a huge purple bat-like creature called V.E.R.N (Violently Enraged Radioactive Nemesis) for the duration of the stage.</desc>
+		<image>/userdata/roms/mame/images/rmpgwt.png</image>
+		<rating>0.9</rating>
+		<releasedate>19970101T000000</releasedate>
+		<developer>Game Refuge Inc.</developer>
+		<publisher>Midway</publisher>
+		<genre>Fight-Platform</genre>
+		<players>3</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="42795" source="ScreenScraper.fr">
+		<path>./robotron.zip</path>
+		<name>Robotron - 2084 (Solid Blue label)</name>
+		<desc>Set in the year 2084, Robotron is a single-screen shoot-em-up in which super-intelligent self-aware robots known as 'Robotrons' - designed and built to help mankind - have revolted against their creators and vowed to either reprogram the humans into Robotrons or, failing this, wipe-out the human race entirely.  
+ 
+The player must destroy the robots and rescue the Earth's remaining human families. The player's only weapon is a multi-directional Anti-Robot Laser Gun. Used effectively, it will give players the power to destroy all the Robot waves, with the exception of the indestructible 'Hulk' unit.  
+ 
+At the start of the attack wave, players will have three chances to wipe out the enemy and advance to the next wave. Every 25,000 points players are granted another chance to complete their mission.  
+ 
+MAN, WOMAN, CHILD: These are the only three types of human clones left on Earth. Defenseless and easy prey to the Robots, they are totally dependent upon players for their survival and will wander aimlessly until the player makes contact with them. Touching them will place them under the player's protective powers and earn them the following points: 1,000 for rescuing the 1st human; 2,000 for the 2nd: 3,000 for the 3rd; 4,000 for the 4th; 5,000 for the 5th; and 5,000 for every additional human saved. At the beginning of each new wave and when the player loses a turn, rescue scoring will again begin at 1,000.</desc>
+		<image>/userdata/roms/mame/images/robotron.png</image>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Vid Kidz</developer>
+		<publisher>Williams / Vid Kidz</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="42892" source="ScreenScraper.fr">
+		<path>./sarge.zip</path>
+		<name>Sarge</name>
+		<desc>Considered by some to be the grandfather of all real-time video battle-games, Sarge was the first coin-op game to give players the ability to deploy multiple vehicles against common adversaries and, of course, each other.</desc>
+		<image>/userdata/roms/mame/images/sarge.png</image>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="42951" source="ScreenScraper.fr">
+		<path>./seawolf.zip</path>
+		<name>Sea Wolf (set 1)</name>
+		<desc>The game screen is a side view of a underwater scene (with the surface towards the top). You control a crosshair at the surface level. The object is to shoot as many ships as possible, before the time runs out. Your torpedoes are launched from the bottom of the screen, and must move upwards to hit the enemy ships (while avoiding the mines that float at different levels of the water). Your submarine can shoot 5 shots before it has to reload (an automatic action that takes about a second). Your game will be extended if you reach a certain score before time runs out (the score is operator adjustable).</desc>
+		<image>/userdata/roms/mame/images/seawolf.png</image>
+		<rating>0.7</rating>
+		<releasedate>19760101T000000</releasedate>
+		<publisher>Dave Nutting Associates</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43002" source="ScreenScraper.fr">
+		<path>./sfootbal.zip</path>
+		<name>Street Football (11/12/86)</name>
+		<desc>Un jeu de football americain... dans la rue ! 
+Très peu jouable, pas très beau, sons pourris dignes du speaker... Pas de quoi fouetter un chat.</desc>
+		<image>/userdata/roms/mame/images/sfootbal.png</image>
+		<rating>0.3</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Sente</publisher>
+		<genre>Sports / Football-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43044" source="ScreenScraper.fr">
+		<path>./shimpact.zip</path>
+		<name>Super High Impact (rev LA1 09/30/91)</name>
+		<desc>Super High Impact is an arcade-style football game that is essentially the predecessor to NFL Blitz. It is the sequel to High Impact Football.</desc>
+		<image>/userdata/roms/mame/images/shimpact.png</image>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Sports / Football-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43052" source="ScreenScraper.fr">
+		<path>./shollow.zip</path>
+		<name>Satan's Hollow (set 1)</name>
+		<desc>Satan's Hollow is a 1- or a 2-player game. When playing this game, the Rocket Launcher is under YOUR control. YOU make it move back and forth across the screen to launch Rockets that will eliminate your attackers. These attackers are displayed in groups, called 'racks', across the top of the screen. The first rack is made up of a small number of attackers. The second rack is made up of a larger number of these attackers. And intermixed with the racks of attackers is a rack with only a single fire-breathing Devil's head.  
+ 
+The attackers and the Devil's Head will try to wipe out your Rocket Launcher. If they do, you lose one player. In emergencies, you have a Shield which goes all around your Rocket Launcher for a short period of time. It is activated by pushing the Shield button on the control console. BUT BE CAREFUL!! This consumes a lot of power and will only last a VERY SHORT TIME!  
+ 
+Each attacker eliminated will cause a Bridge Section to appear at the lower left corner of the screen EXCEPT: when there is already a Bridge Section there or when you have a Bridge Section in tow under your Rocket Launcher. Pick these Sections up with your Rocket Launcher and move them over to build a Bridge across the gorge at the right side of the screen leading into the land of SATAN.  
+ 
+When you complete your Bridge into the land of SATAN, you can cross it and do battle with him. If you win you will be rewarded by increased fire power for your Rocket Launcher. If SATAN defeats you, you lose one player.  
+ 
+As your skill level increases, the number of attackers is increased and the speed that the fire-breathing Devil's Head moves is increased also.  
+ 
+Bonus Rocket Launchers are awarded to you periodically throughout the game as you reach or pass certain preselected point values. Each attacker has an assigned point value.  
+ 
+The object of the game is to HAVE FUN while constantly improving your skills as you play, eliminating as many attackers as possible each time to get the highest score.</desc>
+		<image>/userdata/roms/mame/images/shollow.png</image>
+		<rating>0.9</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Arcade Engineering</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43097" source="ScreenScraper.fr">
+		<path>./sinistar.zip</path>
+		<name>Sinistar (revision 3)</name>
+		<desc>Your intergalactic crystal-mining mission takes you to the antipodes of the known universe. But your parametric DeepSpace scanner faithfully displays the sector of the galaxy you presently occupy (including an area fully three parsecs across, no less)!  
+ 
+Keep the galaxy safe for all its sinizens! Fiendish Worker ships from the planet Sporg will attempt to fabricate a Sinistar from the remains of derelict planetoids in your very sector. You must not let them do this for two reasons:  
+1) These planetoids contain the life-sustaining crystals that your civilization requires for its vital technologies.  
+2) With the eminently unstable Sinistar in their possession, the Sprogites can lay waste to any civilization in your sector. You alone stand in their way.  
+ 
+You must mine the sinisite crystals. Williams has equipped you with the latest heuristic electret cannon technology. All you need to do is aim at a planetoid and shoot. Now collect your motherlode!  
+ 
+In fact, only with sinisite can you manufacture sinibombs to eradicate the Sinistar. But you must also rebuff the Workers and disintegrate their even more aggressive comrades-at-arms, the evil skelomorphic Warriors! Intelligent beings everywhere depend on your courage, your dedication, your reserve, your shrewd command of tactical invention! It's up to you, space cadet!</desc>
+		<image>/userdata/roms/mame/images/sinistar.png</image>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Williams</developer>
+		<publisher>Williams</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="43147" source="ScreenScraper.fr">
+		<path>./smashtv.zip</path>
+		<name>Smash T.v. (rev 8.00)</name>
+		<desc>Smash TV is a single-screen shoot-em-up for one or two players and is set in a futuristic game show in the year 1999. Contestants must enter enclosed arenas and compete to collect prizes, money and keys, while fighting to stay alive as they are attacked on all sides by waves of enemies.  
+ 
+The game is a sequel to the legendary "Robotron: 2084" and like its prequel, utilises a dual joystick control system, with the left stick controlling player movement and the right controlling the direction of fire.  
+ 
+Enemy waves enter each arena from four directions via open doorways and all must be killed before players can progress to the next stage. Some arenas feature static gun emplacements set into a wall that must also be destroyed. Power-ups that improve weapons, speed and armour appear at regular intervals, although each only lasts for a limited time. 
+ 
+Smash TV is broken down into stages, each with a set number of arenas. Tough end-of-level bosses await at the end of each stage. As well as the prizes and power-ups, keys can be collected and if enough have been picked up by the end of the game, players can access a bonus level called the Pleasure Dome.</desc>
+		<image>/userdata/roms/mame/images/smashtv.png</image>
+		<rating>0.75</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Williams</developer>
+		<publisher>Williams</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="43154" source="ScreenScraper.fr">
+		<path>./snakepit.zip</path>
+		<name>Snake Pit</name>
+		<desc>Player controls a whip-cracking, Indiana Jones-like adventurer called Outback Jack who searches through an ancient temple for treasures while fighting off snakes, scorpions and other attacking creatures.</desc>
+		<image>/userdata/roms/mame/images/snakepit.png</image>
+		<rating>0.9</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Bally Sente</developer>
+		<publisher>Bally Sente</publisher>
+		<genre>Shooter-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="43155" source="ScreenScraper.fr">
+		<path>./snakjack.zip</path>
+		<name>Snacks'n Jaxson</name>
+		<desc>Déplacez la tête du clown Jaxson , pour manger les collations et rebondir sur son nez rond. Attention aux poivrons verts!</desc>
+		<image>/userdata/roms/mame/images/snakjack.png</image>
+		<rating>0.9</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Bally Sente</developer>
+		<publisher>Bally Sente</publisher>
+		<genre>Action</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="43208" source="ScreenScraper.fr">
+		<path>./spacezap.zip</path>
+		<name>Space Zap</name>
+		<desc>A multi-directional space shoot'em up game.  
+ 
+The space colony is in danger his defense base is being attacked by a alien threat it comes in four differents quadrants and their attacks are devastating, quickly use the cannon to destroy them and release the base of the hostile threat must be quick because time passes, the enemy increases the intensity and speed of attack and can exploit its base you must avoid this, you must using your control skills at win the mission and defend your base.</desc>
+		<image>/userdata/roms/mame/images/spacezap.png</image>
+		<rating>0.3</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43209" source="ScreenScraper.fr">
+		<path>./spacwalk.zip</path>
+		<name>Space Walk</name>
+		<desc>A sort of "Clowns" game, for one player vs. computer or two players. You both have a spring board which works the same way as Clowns. On the left hand side of the screen, Player 1's board is higher than Player 2's. On the righ</desc>
+		<image>/userdata/roms/mame/images/spacwalk.png</image>
+		<rating>0.3</rating>
+		<releasedate>19780101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Action</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="43216" source="ScreenScraper.fr">
+		<path>./spcenctr.zip</path>
+		<name>Space Encounters</name>
+		<desc>A great space shoot'em up game, with a good pseudo-3D graphics effects. Navigate with your Defense Ship through the large corridors of the space station, destroy all the enemies and increase the speed to evade enemies and his remains.</desc>
+		<image>/userdata/roms/mame/images/spcenctr.png</image>
+		<rating>0.1</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="150675" source="ScreenScraper.fr">
+		<path>./spdball.zip</path>
+		<name>Speed Ball - Contest at Neonworld (Prototype)</name>
+		<desc>Futurista juego de hockey en vista cenital</desc>
+		<image>/userdata/roms/mame/images/spdball.png</image>
+		<rating>0.3</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Williams</developer>
+		<publisher>Williams</publisher>
+		<genre>Sports-Sports / Hockey</genre>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43249" source="ScreenScraper.fr">
+		<path>./spiker.zip</path>
+		<name>Spiker</name>
+		<desc>Arcade en el que juegas en una vista horizontal a voleibol en la playa.</desc>
+		<image>/userdata/roms/mame/images/spiker.png</image>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Sente</publisher>
+		<genre>Sports / Volleyball-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43256" source="ScreenScraper.fr">
+		<path>./splat.zip</path>
+		<name>Splat!</name>
+		<desc>Splat was inspired by the food fight scene of Animal House. John came up with the idea of removable heads to extend the life of the characters, plus thought it was a unique twist to the game.</desc>
+		<image>/userdata/roms/mame/images/splat.png</image>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<publisher>Williams</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="145766" source="ScreenScraper.fr">
+		<path>./spyhunt.zip</path>
+		<name>Spy Hunter</name>
+		<desc>Spy Hunter is an action/driving game. It places the player as the driver of a G-6155 CIA Prototype Interceptor sports car. The object of the game is to travel the freeways and waterways, hunting down and destroying as many enemy vehicles as possible, all the while not harming civilian vehicles. The view is top-down and the screen scrolls vertically underneath the player's car. 
+ 
+The game begins with the player driving the G-6155. Soon, the player starts to encounter enemy vehicles which try to force the player's car off the road and crash. Each enemy vehicle has its own special feature, such as tire slashers or bulletproof armor. 
+ 
+Points are scored for driving on the road and for destroying enemy vehicles. There is a lead-in time when the player has an endless supply of cars. After this time expires, the player will lose a life each time the car crashes. Extra cars can be earned with high scores. The first extra car is earned at a default value of 30,000 points, but this value can vary depending on settings.</desc>
+		<image>/userdata/roms/mame/images/spyhunt.png</image>
+		<rating>0.9</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Shooter-Shooter / Vehicle, Vertical-Race, Driving</genre>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1028</genreid>
+	</game>
+	<game id="43277" source="ScreenScraper.fr">
+		<path>./spyhunt2.zip</path>
+		<name>Spy Hunter 2 (rev 2)</name>
+		<desc>Driving/shooting game using a 3-D perspective from behind and above the car. The car can attain several different weapons up to four at one time. Two players may play at the same time cooperatively.</desc>
+		<image>/userdata/roms/mame/images/spyhunt2.png</image>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Shooter / Vehicle, 3rd person-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1028</genreid>
+	</game>
+	<game id="43326" source="ScreenScraper.fr">
+		<path>./sspeedr.zip</path>
+		<name>Super Speed Race</name>
+		<desc>Super Speed Race V is an arcade racing game from Taito.</desc>
+		<image>/userdata/roms/mame/images/sspeedr.png</image>
+		<rating>0.5</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="149776" source="ScreenScraper.fr">
+		<path>./stargate.zip</path>
+		<name>Stargate</name>
+		<desc>Stargate, also known as 'Defender II', will transport you to a whole new dimension in video games! Not only will the skills you learned with "Defender" be challenged and refined, but new strategies must come into play if you are to be victorious in rescuing the humanoids from the clutches of the aliens and in entering the Stargate! Your ability to react quickly and with on-target precision will be tested against the evil Yllabian Space Guppies, Dynamos, Space Hums, Firebombers and their Fireballs, Phreds, Big Reds and Munchies! If you succeed in maneuvering your ship into the Stargate, you'll be instantly trans-located to that part of the planet where the humanoids are being abducted! To open up spectacular scoring possibilities, rescue four Humanoids, re-enter Stargate and you'll warp 3 waves ahead in space and time, setting off dazzling special effects and racking up high points!  
+ 
+If you must destroy everything in your path or risk self-destruction, activate the Inviso anti-matter cloaking device and become invisible and invulnerable! Inviso time plus a new ship and a Smart Bomb are earned with every 10,000 points you score!  
+ 
+If all ten Humanoids in a wave are abducted, the universe will explode into smithereens, leaving deadly Mutants on the attack! Survive until Wave 5 and the universe will be restored, the humanoids safe... but you'll be the target of an Yllabian Dog Fight! There'll be no Landers to abduct the Humanoids, but all the other aliens will have stronger and larger forces concentrated against you! It will be an out space battle reaching the outer limits of aggression and will call up your last ounce of determination and courage!</desc>
+		<image>/userdata/roms/mame/images/stargate.png</image>
+		<rating>0.9</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Vid Kidz</developer>
+		<publisher>Williams</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43381" source="ScreenScraper.fr">
+		<path>./stocker.zip</path>
+		<name>Stocker (3/19/85)</name>
+		<desc>Drive all the way from coast to coast !</desc>
+		<image>/userdata/roms/mame/images/stocker.png</image>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Sente</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="43383" source="ScreenScraper.fr">
+		<path>./stompin.zip</path>
+		<name>Stompin' (4/4/86)</name>
+		<desc>Stompin 'es un juego de arcade que fue lanzado por Bally y Sente en 1986; es el cuarto de la tercera hornada de juegos a funcionar en su hardware de SAC-I y no se debe confundir con la máquina 1994 de la redención del diseño de la isla de "Spider Stompin". El jugador debe utilizar un controlador "FloorPlay" (descrito en el volante como "el concepto de diseño de juego más innovador para 1986") que lo ve de pie sobre nueve plazas iluminadas para pisar una variedad de animales (incluyendo hormigas, ratones, ranas y los peces) que emergen de ocho agujeros de ratón alrededor de los bordes de la pantalla y tratar de robar el elemento en el centro de la pantalla - y si está usando MAME para jugar el juego, el control se reproduce con las teclas de flecha, por lo que el la emulación lo presenta como si sólo hubiera utilizado una bola de seguimiento (como muchos otros juegos de Bally / Sente) o joystick.</desc>
+		<image>/userdata/roms/mame/images/stompin.png</image>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<publisher>Bally Sente</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43400" source="ScreenScraper.fr">
+		<path>./strkforc.zip</path>
+		<name>Strike Force (rev 1 02/25/91)</name>
+		<desc>Strike Force is a side-scrolling shoot-em-up and is the third game in Midway's seminal "Defender" series. Saurian lizard men have overrun all twenty-two planets that form the New Earth Solar System colonies, capturing and mutating the resident humans into reptiles to use as slave labour at their stronghold base, the Saurian 'Mega-Star Apocalypse'. 
+ 
+Players fly a spaceship over the surface of the of planets, destroying enemy waves and rescuing humans from the alien invaders, with rescued humans hanging from the underside of the player's ship. Once these tasks have been completed, the mothership arrives to pick up the player's ship, together with any humans they have rescued. Players can decide which planets to attack, when to purchase additional firepower and when to attack the Apocalypse. 
+ 
+Strike Force adds several new features to the series. Two players can now share the screen at one time and the surface of each planet is littered with various special weapons that can be picked up and deployed. Humans can be 'mutated' into small green creatures that will fight against the player (although players can still pick them up for points as, with the unmutated humans). The mutants can also use vehicles found on the planet's surface against the player.</desc>
+		<image>/userdata/roms/mame/images/strkforc.png</image>
+		<rating>0.9</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="43470" source="ScreenScraper.fr">
+		<path>./svolley.zip</path>
+		<name>Super Volleyball (Japan)</name>
+		<desc>Super Volleyball est un jeu de sport sur borne d'arcade. 
+Selon la version, vous incarnez l'équipe du Japon ou des Etats-Unis et devez affronter Cuba, la Chine, l'URSS, ... 
+Le jeu présente le terrain de côté et vous permet de choisir le type de service, blocage, passe ou smatch à réaliser. 
+Lorsqu'un point est marqué, le joueur responsable est présenté en gros plan, sous les cris de la foule en liesse.</desc>
+		<image>/userdata/roms/mame/images/svolley.png</image>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>V-System Co.</developer>
+		<publisher>V-System Co.</publisher>
+		<genre>Sports / Volleyball-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43519" source="ScreenScraper.fr">
+		<path>./tapper.zip</path>
+		<name>Tapper (Budweiser, set 1)</name>
+		<desc>Taking on the role of an overworked bartender, the player must serve beer to the ever-thirsty patrons that populate his bar. All customers must be served before they work their way up to the beer kegs. Empty glasses must also be collected before they slide off the end of the bar and smash to the floor. Extra points are awarded for collecting tips, while bonus rounds involve locating the one beer that has not been shaken, and serving it. The game features four different levels: 
+Cowboys 
+Athletes 
+Punk Rockers 
+Aliens</desc>
+		<image>/userdata/roms/mame/images/tapper.png</image>
+		<rating>0.9</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="43565" source="ScreenScraper.fr">
+		<path>./term2.zip</path>
+		<name>Terminator 2 - Judgment Day (rev LA4 08/03/92)</name>
+		<desc>Help to John connor future leader of the human resistance against the machines and his valiant mother Sarah Connor to be avoid being killed by a prototype robot from Skynet the T-1000 sent from the future composed of a "mimetic poly-alloy" but soon a unexpected savior an reprogrammed T-800 Terminator, will come from the future to help and stop together the judgment day. 
+ 
+Hasta La Vista, Baby!</desc>
+		<image>/userdata/roms/mame/images/term2.png</image>
+		<rating>0.8</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>261</genreid>
+	</game>
+	<game id="43614" source="ScreenScraper.fr">
+		<path>./timber.zip</path>
+		<name>Timber</name>
+		<desc>Timber is an abstract action game in which one or two players assume the role of a lumberjack and have a limited amount of time to chop down a given number of trees that pop up from the ground. The game is controlled with two joysticks, with one stick controlling the player's movement and the other corresponding to left or right chops with the player's axe. Difficulty increases with each level, with the number of trees needed to be chopped down gradually increasing (maxing out at 19) and the allotted time decreasing.  
+ 
+During a round players must avoid beehives that are thrown at them by grizzly bears. The beehives, however, can be destroyed with the player's axe for a 500-point reward. Some trees contain birds that will run around the level after they have been chopped down, awarding 1,000 points if touched by the player. 
+ 
+Every couple of levels players are given the opportunity to amass bonus points. The bonus round begins with the lumberjack standing on a floating log. As the log begins to rotate, players must use their reflexes to stay on top of the log. The first two times this is played, the log is relatively large; on future attempts, the size of the log shrinks considerably. The bonus round ends if the player falls off the log or balances atop it for the duration of the round, in which case 1,000 bonus points are earned. 
+ 
+The two-player simultaneous mode can be played either competitively or cooperatively. In this mode, chopping or pushing down a tree such that it falls on the opponent awards you with 1,000 points.</desc>
+		<image>/userdata/roms/mame/images/timber.png</image>
+		<rating>0.6</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="149616" source="ScreenScraper.fr">
+		<path>./tornbase.zip</path>
+		<name>Tornado Baseball / Ball Park</name>
+		<desc>The game is a very simple game of baseball, implemented with stick figures. The game is very simple in terms of rules, and anybody can pick up on how to play fairly quickly. This is a two player only title, with both people playing for a single quarter. The pitching player selects his pitch with one joystick, while moving his outfielders with a second one. The batting player only has a single button (that is a 'swing' button). Both players use the same set of controls, so they must switch spots in front of the machine midway through each inning. You get a four inning game for one quarter, although that number can be adjusted by the game operator.</desc>
+		<image>/userdata/roms/mame/images/tornbase.png</image>
+		<rating>0.1</rating>
+		<releasedate>19760101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43688" source="ScreenScraper.fr">
+		<path>./totcarn.zip</path>
+		<name>Total Carnage (rev LA1 03/10/92)</name>
+		<desc>A pseudo-sequel to Williams' superb 1990 shoot-em-up, "Smash TV", Total Carnage is set in a futuristic parody of the first Gulf War. General Ahkboob, himself an obvious parody of Sadam Hussein, has set his vast army of infantry, tanks and BioGenetic Mutants onto the world. 
+ 
+1 or 2 players must fight through the enemy-packed levels, rescuing reporters and civilians as they go. Total Carnage retains the dual-joystick control of its predecessor, but introduced new weapons, enemies and large, scrolling levels to the original game-play. 
+ 
+As with "Smash TV", Total Carnage features the infamous 'Pleasuredome'; accessible only if players manage to collect the 220 keys that are hidden throughout the game's levels. Total Carnage has a much higher difficulty level than that of "Smash TV".</desc>
+		<image>/userdata/roms/mame/images/totcarn.png</image>
+		<rating>0.9</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43740" source="ScreenScraper.fr">
+		<path>./trog.zip</path>
+		<name>Trog (rev LA5 03/29/91)</name>
+		<desc>1 to 4 players take on the role of a cute dinosaur, selected from the four on offer: Rex (red), Bloop (blue), Spike (yellow) and Gwen (lavender). The game takes place in a prehistoric land called 'Og' and is made up of forty-nine different islands; the dinos must collect all of the dinosaur eggs that lay on the islands, while avoiding the unwanted attention of a tribe of one-eyed cavemen, called 'Trogs'. The dinos can punch the attacking Trogs; one punch will only stun a Trog but several punches will knock the enemy off the screen. There are 4 different Trogs who pursue the dinos: 
+Brown Trogs who use only their fists. 
+Red Trogs who use clubs and create fires or holes in the ground. 
+Blue Trogs who pop up out of the ground and roll stone wheels. 
+Green Trogs who bounce around trying to crush you with their springs. 
+On each island, after the dinos have gathered up all of their eggs, they must make their way to the base labeled 'Home'; from here they will move on to the next island. 
+ 
+Between each stage, there is an intermission where the players' Dinos will dance, with an on-screen caption proudly declaring 'Excellent!', 'Congratulations!', 'Nice Work!', 'Good Job!' or 'Dino-Mite!'. On occasion, an intermission screen appears that shows a Trog planning another attempt to eat a Dino.</desc>
+		<image>/userdata/roms/mame/images/trog.png</image>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43742" source="ScreenScraper.fr">
+		<path>./tron.zip</path>
+		<name>Tron (8/9)</name>
+		<desc>Tron is a 1- or 2-player game set inside the 'Tron' computer, and is based on the ground-breaking Disney movie of the same name. 
+ 
+Tron consists of twenty-two stages - or 'phases' - of play. Each phase consists of four separate games called "domains", all of which must be completed before moving on to the next phase. Players can determine the order in which each of the four domains is attempted, but the domain position is random and is only revealed once that domain has been chosen. 
+ 
+The four domains that make up a phase never change throughout the game, although both the difficulty level and number of enemies increases with each subsequent phase. The domains are as follows: 
+ 
+LIGHT CYCLES: The player controls a Light Cycle that leaves a blue light trail in its wake. The aim is to 'box in' the yellow enemy Light Cycles, making them crash into either a cycle trail (theirs or the player's) or a wall. The player must also avoid any collision with either walls or light trails. The joystick controls the direction of the bike and the trigger controls its speed. 
+I/O TOWER: Destroy the Grid Bugs that emerge from the grid surrounding the tower. The bugs will multiply and fill the entire screen if not stopped. Players must attempt to clear a path to - and enter - the I/O Tower before the timer runs out. The stick controls the movement of the player's character and the spinner controls the direction of fire. 
+TANK MAZE: Destroy all enemy tanks that are patrolling the maze. The player's tank can fire in all directions and can bounce shots off walls, but can be destroyed by a single shot; while enemy tanks can only fire in the direction of travel but need three shots before they are destroyed. "Recognizer" tanks also feature in later phases; these Do NOT shoot but move quickly and will try to ram the player's tank. The joystick controls the movement of the player's tank and the spinner controls the direction of fire. 
+MCP CONE: Destroy the blocks in the descending, rotating coloured column to clear a path and move the character up into the light cone above the blocks. A bonus is awarded if all of the blocks are destroyed. The stick controls the movement of the character and the spinner controls the direction of fire. 
+ 
+Bonus lives are awarded periodically throughout the game as specific point scores are reached. Each enemy and item has an assigned point value (see the "SCORING" section for details).</desc>
+		<image>/userdata/roms/mame/images/tron.png</image>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Compilation</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3840</genreid>
+	</game>
+	<game id="43766" source="ScreenScraper.fr">
+		<path>./tshoot.zip</path>
+		<name>Turkey Shoot (Prototype)</name>
+		<desc>The year is 1989, one year after the great gobble blight which plagued the world. One-third of the earth's populace was transformed by the ailment. The side effect of the turkey transformation is a tendency toward violence and comradery between these turkeys to organize for rabble-rousing in the urban areas. In February of '89, a group of specially trained agents (the turkey terminators) was formed for the sole task of destroying the turkey menace... 
+ 
+And so it begins. As a Turkey Terminator, the player is given 100 missions and 3 weapons to eliminate all the turkeys, leaving no 'left-overs'. He can take aim with his lethal laser gun using the position dot on the screen Screen-shot to hone in on his enemies with deadly accuracy. He can launch a lit grenade to annihilate all the turkeys within range or he can activate his gobble button (available one time each mission) to freeze all the turkeys for an instant, making them 'sitting ducks'. Missions are varied and include reacting quickly to clever ploys such as turkey air raids, turkeys disguising themselves as businessmen and turkey helicopter get-aways. Every 8th round is a rapid-fire bonus wave where the player has 15 seconds to eliminate as many criminals as possible. Shooting fire hydrants and trash cans as well as freeing bystanders who have been taken hostage also score bonus points. 
+ 
+Three 'fowl-ups' are allowed and occur whenever any turkey... a Pilot Turkey, Boss Turkey, Cyborg Turkey or Thug Turkey... escapes or when an innocent bystander... a businessman, shopper or policeman... is damaged.</desc>
+		<image>/userdata/roms/mame/images/tshoot.png</image>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Williams</developer>
+		<publisher>Williams</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>261</genreid>
+	</game>
+	<game id="43810" source="ScreenScraper.fr">
+		<path>./twotiger.zip</path>
+		<name>Two Tigers (dedicated)</name>
+		<desc>Two Tigers is a 2-D shooter. The game starts by telling you how may hits you must make on the ship before you can claim credit for sinking it. You then will go to the next screen which has your fighter/bomber in the middle of the screen. A gunsight will also be somewhere in the sky (the gunsight is actually the spot where anti-aircraft fire will be hitting at). Soon the sky is filled with enemy planes and a ship enters the screen from the left side. You mission will be to do whatever it takes to put the required number of holes into the enemy ship to sink it. You have at your disposal a single bomb and the enemy planes themselves for achieving your goal. Along the way, other things may assist (if you shoot them) such as mines and fuel drums. The game will go until you fail to sink 2 ships. If you are in 2-player cooperative mode, then the number of holes to sink a ship will be increased. The same rules apply, though, for sending it to the bottom of the sea.</desc>
+		<image>/userdata/roms/mame/images/twotiger.png</image>
+		<rating>0.4</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="43829" source="ScreenScraper.fr">
+		<path>./umk3.zip</path>
+		<name>Ultimate Mortal Kombat 3 (rev 1.2)</name>
+		<desc>An update of "Mortal Kombat 3", with new characters added to the original MK3 cast. There are lots of other additions and goodies in the game (see Updates section (REV. 1.0)).</desc>
+		<image>/userdata/roms/mame/images/umk3.png</image>
+		<rating>0.9</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Midway</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>8</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="44021" source="ScreenScraper.fr">
+		<path>./wacko.zip</path>
+		<name>Wacko</name>
+		<desc>Wacko is a colorful single screen shooter, with excellent graphics for the time. You maneuver Kapt'n Krooz'r around the screen in his spaceship. The terrain is an orange moon scene, various cartoonish monsters dot the landscape. You must blast the monsters in pairs to make them vanish. Later levels introduce even more complex rules as to what can be shot. You control your ship with the trackball, while using the joystick to aim and shoot. The controls feel natural with a little practice, but the game quickly becomes very difficult on the higher levels.</desc>
+		<image>/userdata/roms/mame/images/wacko.png</image>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="44117" source="ScreenScraper.fr">
+		<path>./wow.zip</path>
+		<name>Wizard Of Wor</name>
+		<desc>Wizard of Wor is a maze-based shoot-em-up featuring one or co-operative two-player gameplay. In a two-player game, player one controls yellow Worriors while player two controls blue Worriors. Players are also able to shoot each other's Worriors, earning bonus points and causing the other player to lose a life. Team-oriented players can successfully advance through the game by standing back-to-back and firing at anything that comes at them. 
+ 
+Each single-screen dungeon consists of a grid forming walls and corridors. There are doors situated at the left and right edges of the screen that are inter-connected, making the dungeon wrap around. Whenever a door is used by a player or monster, it deactivates for a short period, making it impassable. A small radar display indicates the positions of all active monsters.</desc>
+		<image>/userdata/roms/mame/images/wow.png</image>
+		<rating>0.9</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Midway</developer>
+		<publisher>Dave Nutting Associates</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="44144" source="ScreenScraper.fr">
+		<path>./wwfmania.zip</path>
+		<name>Wwf - Wrestlemania (rev 1.30 08/10/95)</name>
+		<desc>8 selectable wrestlers fights in mayhem with punishing head-to-head and team match-ups and gruelling WWF and Intercontinental title bouts. Features in-ring commentary by Vince McMahon and Jerry 'The King' Lawler.</desc>
+		<image>/userdata/roms/mame/images/wwfmania.png</image>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<publisher>Midway</publisher>
+		<genre>Sports / Wrestling-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1536</genreid>
+	</game>
+	<game id="44152" source="ScreenScraper.fr">
+		<path>./xenophob.zip</path>
+		<name>Xenophobe</name>
+		<desc>A horizontal monitor is split into three sections, one for each of up to three people. Players wander around a space station shooting as many Ridley-Scott-esque aliens as they can before health or time runs out- then it's off to the next space station. There are multiple weapon types, including a duck gun!</desc>
+		<image>/userdata/roms/mame/images/xenophob.png</image>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>3</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="44224" source="ScreenScraper.fr">
+		<path>./zwackery.zip</path>
+		<name>Zwackery</name>
+		<desc>Zwackery was a sword-fighting and spell-casting game in which the player controls a cartoony wizard Zak Thwacker on a quest to restore an enchanted frog back into the buxom princess she once was. A platform-style exploration game, the world that Zak explores is actually dozens of different screens which the player exits and enters through doorways and tunnels in search of spell and other powerups that will help him defeat the Evil Ghoulum. The Sword can be used to stab, or it can be spun around the player. The Shield, which can be wielded in the same manner, provides protection. Spells include Bouncing Boots, Shooting Swords, Invisibility Potions, Magic flutes, and a Dragons Egg, which put Leapin Fungoes to sleep and allows safe passage through the Dragon's Lair.</desc>
+		<image>/userdata/roms/mame/images/zwackery.png</image>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Bally Midway</developer>
+		<publisher>Bally Midway</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+</gameList>

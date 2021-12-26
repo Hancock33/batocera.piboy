@@ -1,0 +1,345 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="40835" source="ScreenScraper.fr">
+		<path>./dblewing.zip</path>
+		<name>Double Wings</name>
+		<desc>A vertically scrolling shoot'em up game.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Mitchell Corporation</developer>
+		<publisher>Mitchell</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dblewing.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41305" source="ScreenScraper.fr">
+		<path>./funkyjet.zip</path>
+		<name>Funky Jet (World, rev 1)</name>
+		<desc>In this game, you play with a character who has a jet-pack on his back (enabling him to fly in the air), while he is punching the badguys.</desc>
+		<rating>0.6</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/funkyjet.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="41363" source="ScreenScraper.fr">
+		<path>./gamshara.zip</path>
+		<name>Gamshara (World, 10021 Ver.A)</name>
+		<desc>An action shooting game with identical mechanics to TAD's "Cabal".</desc>
+		<releasedate>20020101T000000</releasedate>
+		<developer>Mitchell Corporation</developer>
+		<publisher>Mitchell</publisher>
+		<genre>Shooter / 3rd person-Shooter</genre>
+		<image>/userdata/roms/mame/images/gamshara.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="40548" source="ScreenScraper.fr">
+		<path>./choko.zip</path>
+		<name>Janpai Puzzle Choukou (Japan 010820)</name>
+		<desc>An adult shanghai game from Mitchell. The objective is to clear the board of matching tiles before the timer runs out. 
+ 
+Each level consists a board with two or more columns of tiles and walls slowly moving toward the center of the board.  Every time a matching pair of tiles is cleared from the board the two columns momentarily shift away from the center. The game is lost if the opposing columns of tiles run into each other or into the wall. In order to legally remove matching tiles no walls or other tiles can be in a path with two or fewer bends between the matching tiles. Once per stage, the player can request help and the two columns will shift to their starting positions and matching tiles will be highlighted for a short time. If the player cannot legally remove any more tiles then the board is 'deadlocked', and the game is lost. 
+ 
+If the player clears the board before the timer runs out, the background girl will change into a more revealing state of undress and this new image of her will be the background for the next stage.  If the timer reaches zero the player can still attempt to clear the board but the background image will not change.  The game features four girls with two background images each and a topless image that is revealed after defeating the girl's second stage within the time limit.  
+If the game is lost, upon continuing the player may select to attempt to clear the same board or try a new board of tiles.</desc>
+		<rating>0.8</rating>
+		<releasedate>20010101T000000</releasedate>
+		<developer>Mitchell Corporation</developer>
+		<publisher>Mitchell</publisher>
+		<genre>Puzzle-Game / Equalize-Puzzle-Game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/choko.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41953" source="ScreenScraper.fr">
+		<path>./karatour.zip</path>
+		<name>Karate Tournament, The</name>
+		<desc>Karate Tournament is a one-on-one fighting game for one or two players, based on the ancient and most well known of martial arts, Karate. 
+ 
+Players enter a karate tournament - having first selected their preferred skill level, from either White, Brown or Black belt - and fight against a number of progressively tougher opponents. Each victory awards the player with a higher belt grade within their current belt colour - white grade six to white grade five, for example - and if the player wins the tournament, he or she is awarded a higher belt colour and the game ends. If players chooses to play the game on the 'Black Belt' skill level, defeating opponents is awarded with a higher grade, or 'dan' of Black Belt. 
+ 
+Karate Tournament uses a distinctive graphical technique in that it 'morphs' some of the combatants' movement graphics to simulate speed and motion blur. The game was also unique upon its release in that, in a world of "Street Fighters" and "Mortal Kombats" - replete with fantastical special moves - Karate Tournament was a genuine simulation of a recognized martial art; something not really seen since the first appearance of Data East's legendary genre-defining fighter, "Karate Champ", released eight years' earlier in 1984.</desc>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Mitchell Corporation</developer>
+		<publisher>Mitchell</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/karatour.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="42087" source="ScreenScraper.fr">
+		<path>./ladykill.zip</path>
+		<name>Lady Killer</name>
+		<desc>Lady killer is an adult, puzzle game featuring eight sexy women.  The objective of the game is to dive and leap through the surface of the play area to reveal the image of the girl underneath. 
+ 
+At the start of each level the player gets to select which girl he wants to reveal.  Her image is then shown and is then covered by the game board.  Then the level begins. The player must move to avoid the enemies while attempting to flip the tiles on the board by diving and surfacing through them.  Flipped tiles often reveal power-ups to help the player. The player is killed any time he touches or is shot by an enemy, but the player can kill enemies by flipping a tile that the enemy is standing on. Enemies will re-spawn until the level is completed. The level is completed once all of the tiles have been removed. 
+ 
+Each girl features five states of undress and four stages. During gameplay, the girl's silhouette remains visible through the surface of the game play area and while her state of dress changes between stages, her pose and silhouette will remain the same. Each girl also has a special stage featuring a mini-game of a sliding tile game or a number selecting game. After completing the final stage for each girl, the player is shown an erotic scene for that girl and the player must wiggle the joystick left and right to advance the scene. 
+ 
+The game is over when the player has lost all of his lives.  Upon continuing the player restarts the level he is currently on.</desc>
+		<rating>0.6</rating>
+		<releasedate>19930101T000000</releasedate>
+		<publisher>Yanyaka</publisher>
+		<genre>Adult-Various</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/ladykill.png</image>
+		<adult>true</adult>
+	</game>
+	<game id="42361" source="ScreenScraper.fr">
+		<path>./madmotor.zip</path>
+		<name>Mad Motor (Prototype)</name>
+		<desc>Mad motor is a 2D side-scrolling biker-themed beat 'em-up game that puts players in the shoes of a motor driver on a highway. You have to beat-up enemies driving different types of motors and cars as well enemies on gliders. Bosses include a apelike boss hanging from an helicopter and a guy standing on top of a car in full Japanese armor. You can transform in to a more powerful hulky long haired guy on a tricycle motor. The background scenery includes, cities, deserts and forests. You can play solo or with a friend.</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Mitchell Corporation</developer>
+		<publisher>Mitchell</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/madmotor.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="57955" source="ScreenScraper.fr">
+		<path>./mjikaga.zip</path>
+		<name>Mahjong Ikaga Desu Ka (Japan)</name>
+		<desc>A mahjong game that takes place at a bus stop of all places.</desc>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>Mitchell</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mjikaga.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="37400" source="ScreenScraper.fr">
+		<path>./mpang.zip</path>
+		<name>Mighty! Pang (Euro 001010)</name>
+		<desc>Mighty! Pang is the fourth game in the superb Pang series. While the artistic design has been drastically changed, Mighty! Pang retains the same gameplay of its predecessors. The game features three modes of play: panic, tour and expert modes.</desc>
+		<rating>0.75</rating>
+		<releasedate>20000101T000000</releasedate>
+		<developer>Mitchell</developer>
+		<publisher>Mitchell</publisher>
+		<genre>Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mpang.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="78930" source="ScreenScraper.fr">
+		<path>./mirage.zip</path>
+		<name>Mirage Youjuu Mahjongden (Japan)</name>
+		<desc>Mirage Youjuu Mahjongden (c) 1994 Mitchell.  - STAFF -  Character Designer: Poco, Mika, !Aoki, KE-N, Utachin, 96, S.Bat Stage Designer: Ren Cong, Koyoru Sound Composer: !Aoki A.D. Designer: Matsu, Shin Programmer: Coin, Enoshin' Dresser: Sally  - SOURCES </desc>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Mitchell</developer>
+		<publisher>Mitchell</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mirage.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="79103" source="ScreenScraper.fr">
+		<path>./osman.zip</path>
+		<name>Osman (World)</name>
+		<desc>Osman is a side-scrolling action platforming game produced by Mitchell Corp. that was released exclusively to arcades in 1996. Many ex-Capcom staff including Kouichi Yotsui (credited as Isuke), worked on the original arcade version of Strider and designed Osman as an unofficial sequel to Strider. Yotsui directed both titles. 
+ 
+In contrast to Strider's futuristic Kazakh-Soviet setting, Osman is set in a neon-lit cyberpunk Arabian setting, while Strider Hiryu is replaced by a Middle Eastern protagonist named Kirin who fights without any weapons.The game's bizarre plot supposedly mocks director Kouichi Yotsui's experience at Capcom after Strider. 
+ 
+</desc>
+		<rating>0.7</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Mitchell</developer>
+		<publisher>Mitchell</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/osman.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="150069" source="ScreenScraper.fr">
+		<path>./pang.zip</path>
+		<name>Pang (World)</name>
+		<desc>One or two players control safari-suited characters armed with harpoon guns, who must destroy the numerous different-sized balloons that litter each stage. When hit by a harpoon, the balloons break down into smaller fragments.</desc>
+		<rating>0.9</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Mitchell</developer>
+		<publisher>Mitchell</publisher>
+		<genre>Shooter / 3rd person-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pang.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="37373" source="ScreenScraper.fr">
+		<path>./pang3.zip</path>
+		<name>Pang! 3 (Euro 950601)</name>
+		<desc>Pang! 3 is the second sequel to the superb 1989 original, Pang! 3 retains the same gameplay of its predecessors but adds vastly improved graphics and a choice of three difficulty levels; Beginner, Normal and Panic. On both the 'Normal' and 'Panic' skill levels, players can choose from 4 different playable characters; each possessing different strengths and weaknesses, such as a double harpoon or quick shots. On the beginner level, players can only use the Mexican character. 
+ 
+Another notable difference is in the game's use of backdrops: instead of the world landmarks of the first two games, Pang! 3 features classical works of art in the form of paintings and sculptures.</desc>
+		<rating>0.85</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Mitchell</developer>
+		<publisher>Capcom</publisher>
+		<genre>Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pang3.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="150068" source="ScreenScraper.fr">
+		<path>./prtytime.zip</path>
+		<name>Party Time - Gonta The Diver 2 (World Release)</name>
+		<desc>This game is known in Japan as "Ganbare! Gonta!! 2". 
+ 
+SERIES 
+Lady Killer (1993) 
+Party Time - Gonta The Diver II (1995)</desc>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Mitchell</developer>
+		<publisher>Mitchell</publisher>
+		<genre>Various</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/prtytime.png</image>
+	</game>
+	<game id="42401" source="ScreenScraper.fr">
+		<path>./pkladies.zip</path>
+		<name>Poker Ladies</name>
+		<desc>Il s'agit d'un jeu de poker érotique. Vous défiez 9 filles dans le jeu. Tout résultat supérieur à une paire de valets vous rapportent des points. Les filles se déshabillent en trois étapes (il s’agit de dessins statiques) et vous pouvez "jouer" avec elle lorsque vous l'avez dévêtu), du genre mouiller sa culotte, activer un serpent qui titille sa poitrine,... 
+ 
+Les graphismes sont simples, et les dessins des filles de bonne qualité. La bande son n'est pas transcendante mais rappelle un saloon. La voix off fait un peu robot féminin, mais cela passe 
+
+
+</desc>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>Mitchell</publisher>
+		<genre>Casino / Cards-Casino</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/pkladies.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="42569" source="ScreenScraper.fr">
+		<path>./puzzloop.zip</path>
+		<name>Puzz Loop (Europe, v0.94)</name>
+		<desc>Puzz Loop is a puzzle game for one or two players in which different coloured marbles continually roll down a spiral path towards a central goal line. 
+ 
+Players control a rotating cannon situated at the center of the spiral and must stop the line of marbles from reaching the goal by shooting matching coloured marbles into the line. If three or more marbles of the same colour are matched, they will disappear. 
+ 
+In addition to standard marbles, bonus marbles occasionally appear that will, for example, temporarily slow down the rate the marbles' advance, or cause all marbles of a certain colour to be destroyed. Also, providing there is a clear line of sight, unwanted marbles can be fired straight out of the play area to prevent them from adding to the advancing line. 
+ 
+All marbles must be destroyed to complete a level. The game is over once the marbles are pushed over the goal threshold.</desc>
+		<rating>0.9</rating>
+		<releasedate>19980101T000000</releasedate>
+		<developer>Mitchell Corporation</developer>
+		<publisher>Mitchell</publisher>
+		<genre>Puzzle-Game / Throw-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/puzzloop.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="148745" source="ScreenScraper.fr">
+		<path>./skns.zip</path>
+		<name>ZZZ(notgame):Skns Sprite</name>
+		<releasedate />
+		<image>/userdata/roms/mame/images/skns.png</image>
+	</game>
+	<game id="40523" source="ScreenScraper.fr">
+		<path>./charlien.zip</path>
+		<name>Charlie Ninja</name>
+		<desc>A colourful, 1 or 2-player platform shoot-em-up consisting of 5 stages, in which the player controls a Ninja who must jump and shoot his way through each of the game's stages, before taking on the archetypal end-of-level 'Boss'. 
+ 
+Bonuses can be picked up to increase the firepower, and barrels can either be smashed to reveal bonuses, or picked up and thrown at the enemies. In addition; the Ninja can perform high jump by pressing the JUMP button, then pressing it again while the Ninja is in the air. This is useful for avoiding enemies and essential for reaching high platforms.</desc>
+		<image>/userdata/roms/mame/images/charlien.png</image>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Mitchell Corporation</developer>
+		<publisher>Mitchell</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="39892" source="ScreenScraper.fr">
+		<path>./3kokushi.zip</path>
+		<name>Sankokushi (Japan)</name>
+		<desc>Sankokushi is an adult Shanghai solitaire game. Unlike in a standard mahjong solitaire game, tiles are removed in groups of three.  These groups may be made up of three matching tiles, or the number sets, 1-3, 4-6, or 7-9. The objective is to find the four, three-tile sets shown at the start of the stage and remove them from the game board before the timer runs out. 
+ 
+When a tile is selected, other tiles are lit up.  Tiles within the number sequence are shown in pink, and matching tiles are shown in orange.  The player may request hints by selecting the help button on screen, which will light up all tiles that can be removed from the board at that time.  There is also a back button, which the player may select to return tiles to the screen. 
+ 
+The background image in each stage is an image of a girl.  Each girl has two background images, with the second image showing the girl topless. Once a player removes the four tile sets for the stage, the board is cleared and the player may see the entire image. 
+ 
+After completing a stage the player may use the points he has earned to buy power-ups, such as extra hints or a faster cursor. 
+ 
+The game is over once the timer has run out or if the player cannot legally remove any more tiles and the board is 'deadlocked'.  Upon continuing the player may select to play the same board or play a different one.</desc>
+		<image>/userdata/roms/mame/images/3kokushi.png</image>
+		<rating>0.5</rating>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>Mitchell</publisher>
+		<genre>Puzzle-Game / Equalize-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="37405" source="ScreenScraper.fr">
+		<path>./pzloop2.zip</path>
+		<name>Puzz Loop 2 (Euro 010302)</name>
+		<desc>Gameplay is exactly the same as its predecessor, Puzz Loop , with the player needing to deplete all the colored balls before they hit the center of the screen.</desc>
+		<image>/userdata/roms/mame/images/pzloop2.png</image>
+		<rating>0.7</rating>
+		<releasedate>20010101T000000</releasedate>
+		<developer>Mitchell</developer>
+		<publisher>Mitchell</publisher>
+		<genre>Puzzle-Game / Throw-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="43183" source="ScreenScraper.fr">
+		<path>./sotsugyo.zip</path>
+		<name>Sotsugyo Shousho</name>
+		<image>/userdata/roms/mame/images/sotsugyo.png</image>
+		<rating>0.5</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Mitchell Corporation</developer>
+		<publisher>Mitchell (Atlus license)</publisher>
+		<genre>Compilation</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3840</genreid>
+	</game>
+	<game id="43210" source="ScreenScraper.fr">
+		<path>./spang.zip</path>
+		<name>Super Pang (World 900914)</name>
+		<desc>Super Bang is a sequel to the 1989 original in which one or two players control characters armed with harpoon guns who must destroy the numerous different-sized balloons that bounce around each single-screen stage. When hit by a harpoon, the balloons break down into smaller fragments, in a similar fashion to Atari's 1979 classic, "Asteroids".  
+ 
+Players can only fire the harpoon guns virtually upwards but can move left and right and climb the ladders that appear on many of the stages. The game has two different modes of play: 
+ 
+PANIC MODE 
+In this mode, players face an endless rain of bubbles and must simply last as long as possible. The default weapon is the bubble shot and cannot be changed at any time. Each time a bubble is popped, a rainbow bar at the bottom is slowly filled. Filling the bar all the way raises the level number and the bar depletes back to zero. As more bubbles are popped, both remaining and incoming bubbles move faster. A 'Panic' music plays when there's a very large amount of bubbles on the screen, but the normal music returns once enough bubbles are popped. 
+ 
+There is also one special type of bubble that appears rarely. The bubble has a clock image engraved. Whenever the bubble bounces, the engraving changes to a star, and when the bubble bounces again, the engraving changes back to a clock. Popping the bubble when the clock engraving is present causes all bubbles to stop movement completely for 9 seconds, while popping the bubble when the star engraving is present causes all bubbles to be popped and the game screen gets cleared. 
+ 
+TOUR MODE 
+In this mode players move from stage to stage, travelling around the world. The introductory stage is set in Japan and is the only stage set in this location. After Japan, players travel to parts of Asia, Europe and the Americas. Each location has three stages, with each set at a different time of day: daytime, evening and night. The few exceptions to the three-stage rule are Venice (evening and night stages only), The Mayan Ruins and the Caribbean Sea (both having only day and evening stages). 
+ 
+Each stage has a set layout, consisting of walls, destructible glass walls, invisible walls, ladders and ice. There are forty different stages in the Tour mode.</desc>
+		<image>/userdata/roms/mame/images/spang.png</image>
+		<rating>0.9</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Mitchell Corp.</publisher>
+		<genre>Shooter / 3rd person-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+</gameList>

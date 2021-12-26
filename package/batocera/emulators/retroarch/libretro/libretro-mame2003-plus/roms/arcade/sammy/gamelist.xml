@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="40884" source="ScreenScraper.fr">
+		<path>./deerhunt.zip</path>
+		<name>Deer Hunting Usa V4.3</name>
+		<desc>An interactive shooting game where players stalk deer in the wilderness during hunting season.</desc>
+		<image>/userdata/roms/mame/images/deerhunt.png</image>
+		<rating>0.5</rating>
+		<releasedate>20000101T000000</releasedate>
+		<publisher>Sammy Studios</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>261</genreid>
+	</game>
+	<game id="40937" source="ScreenScraper.fr">
+		<path>./djboy.zip</path>
+		<name>DJ Boy (set 1)</name>
+		<desc>DJ Boy is a side-scrolling Beat 'em up, released in 1989 by Kaneko for the Arcade, and later, Genesis.  The game features a uniquely Japanese take on mid-to-late 80s Hip-hop/Urban culture.  You play as DJ Boy, a rollerskater hoping to win the "Rollergame" fight-race competition in Cigaretch city.</desc>
+		<image>/userdata/roms/mame/images/djboy.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Kaneko</developer>
+		<publisher>Kaneko</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="41072" source="ScreenScraper.fr">
+		<path>./dynagear.zip</path>
+		<name>Dyna Gear</name>
+		<desc>Dyna Gear is a scrolling platform run 'n' gun game for one or two players in which two starships from the year 2993 AD fall through a time-hole and end up 65 million years in the past, above a prehistoric Earth-like planet. One ship is piloted by hero and 'time patroller', Roger, while the other is piloted by the evil Gustaf. The two ships shoot each down and crash-land onto the planet below, where Roger discovers that Gustaf has transformed many of the planet's dinosaurs into aggressive 'combat dinosaurs'.  
+ 
+Players take control of either the muscular hero, Roger, or of Wolf; a bipedal wolfman who wants to free his prehistoric homeworld from Gustaf's clutches. They must battle through several dinosaur-infested stages in their quest to end Gustaf's plans.  
+ 
+Different weapons and health boosts can be found in the destructible wooden chests that litter the stages, enemies also drop coins when killed that can be collected for bonus points.  
+ 
+Each of the two heroes also has a 'double-jump' move; players can jump, then jump again while still in the air. This allows them to reach previously inaccessible ledges and platforms as well as occasionally take different routes through a stage. In the single-player game, a wolfman will occasionally join with the player to aid in the fight. A large, powerful 'boss' dinosaur guards the end of each stage and must be defeated to progress.</desc>
+		<image>/userdata/roms/mame/images/dynagear.png</image>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="41079" source="ScreenScraper.fr">
+		<path>./eaglshot.zip</path>
+		<name>Eagle Shot Golf</name>
+		<desc>A golf game.</desc>
+		<image>/userdata/roms/mame/images/eaglshot.png</image>
+		<rating>0.7</rating>
+		<releasedate>19940101T000000</releasedate>
+		<genre>Sports / Golf-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="145409" source="ScreenScraper.fr">
+		<path>./keroppi.zip</path>
+		<name>Kero Kero Keroppi's Let's Play Together (USA, Version 2.0)</name>
+		<desc>A jumping frog with compressed digital speech.</desc>
+		<image>/userdata/roms/mame/images/keroppi.png</image>
+		<rating>0.2</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Sammy Studios</developer>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="42073" source="ScreenScraper.fr">
+		<path>./krzybowl.zip</path>
+		<name>Krazy Bowl</name>
+		<desc>A 10-pin bowling game.</desc>
+		<image>/userdata/roms/mame/images/krzybowl.png</image>
+		<rating>0.9</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Sammy</developer>
+		<publisher>Sammy</publisher>
+		<genre>Sports / Bowling-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="78902" source="ScreenScraper.fr">
+		<path>./meosism.zip</path>
+		<name>Meosis Magic (Japan)</name>
+		<desc>Meosis Magic (c) 1996 Sammy.  - TECHNICAL -  Main CPU : V60 (@ 16 Mhz) Sound Chips : ES5506 (@ 16 Mhz)  Screen orientation : Horizontal Video resolution : 336 x 240 pixels Screen refresh : 60.00 Hz Palette colors : 32768  Players : 1 Control : 2-way joyst</desc>
+		<image>/userdata/roms/mame/images/meosism.png</image>
+		<releasedate>19960101T000000</releasedate>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3584</genreid>
+	</game>
+	<game id="79097" source="ScreenScraper.fr">
+		<path>./orbs.zip</path>
+		<name>Orbs (10/7/94 prototype?)</name>
+		<desc>Orbs (c) 1994 American Sammy.  - TRIVIA -  Released in October 1994.  - STAFF -  Game Designer &amp; Director : Onijust Programmer : Hiroaki Murase Graphic Designer : Isao Suwa Sound Creator : Brian Schmidt Engineer : Kiyo Nishimura Debugger : Hiroaki Murase,</desc>
+		<image>/userdata/roms/mame/images/orbs.png</image>
+		<rating>0.7</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Sammy</developer>
+		<publisher>Sammy</publisher>
+		<genre>Puzzle-Game / Glide-Puzzle-Game</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="43493" source="ScreenScraper.fr">
+		<path>./sxyreact.zip</path>
+		<name>Pachinko Sexy Reaction (Japan)</name>
+		<desc>Pachinko Sexy Reaction (c) 1998 Sammy.  - TECHNICAL -  Main CPU : V60 (@ 16 Mhz) Sound Chips : ES5506 (@ 16 Mhz)  Players : 1 Control : paddle Buttons : 2  - TRIVIA -  Released in July 1998 in Japan only.  The pinball-like game of Pachinko is extremely po</desc>
+		<image>/userdata/roms/mame/images/sxyreact.png</image>
+		<rating>0.7</rating>
+		<releasedate>19980101T000000</releasedate>
+		<genre>Pachinko</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+	</game>
+	<game id="43492" source="ScreenScraper.fr">
+		<path>./sxyreac2.zip</path>
+		<name>Pachinko Sexy Reaction 2 (Japan)</name>
+		<desc>Six levels (16 rounds)... 
+ 
+Choose the start level: 
+1) Swimming pool: 3 rounds. 
+2) Zoo: 3 rounds. 
+3) Beach: 3 rounds. 
+ 
+Choose a new way (way A or B): 
+Way A: 
+1) Fun fair: 3 rounds 
+2) Sight on the city: 3 rounds 
+Way B: 
+1) Fast Food: 3 rounds 
+2) Cinema: 3 rounds 
+ 
+Last level: 
+1) Bedroom: 1 round</desc>
+		<image>/userdata/roms/mame/images/sxyreac2.png</image>
+		<rating>0.7</rating>
+		<releasedate>19990101T000000</releasedate>
+		<publisher>Sammy</publisher>
+		<genre>Pachinko</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+	</game>
+	<game id="43167" source="ScreenScraper.fr">
+		<path>./sokonuke.zip</path>
+		<name>Sokonuke Taisen Game (Japan)</name>
+		<desc>In this strange party game you must compete in simple yet strange events such as inflating balloons, morphing into dragons, etc., while at the same time protect your partner from 'harmless' pain inducers such as razor-sharp buzzsaws and bombs! Features nice graphics and hectic gameplay!</desc>
+		<image>/userdata/roms/mame/images/sokonuke.png</image>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Sammy Studios</developer>
+		<publisher>Sammy Studios</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="43460" source="ScreenScraper.fr">
+		<path>./survarts.zip</path>
+		<name>Survival Arts (World)</name>
+		<desc>Another digitized fighter attempting to cash in on the "Mortal Kombat" craze featuring eight selectable characters and bonus rounds. The producers of this game must have raided the discount Halloween costume boutique. I cannot help but giggle each time I fight Dantel, the incredibly cheap and hilarious white trash ripoff of Shang Tsung.</desc>
+		<image>/userdata/roms/mame/images/survarts.png</image>
+		<rating>0.3</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Scarab</developer>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="43585" source="ScreenScraper.fr">
+		<path>./tharrier.zip</path>
+		<name>Task Force Harrier</name>
+		<desc>Task Force Harrier EX is a vertical shoot 'em up that was first seen in arcades and later ported to the Sega Megadrive/Genesis.</desc>
+		<image>/userdata/roms/mame/images/tharrier.png</image>
+		<rating>0.6</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>UPL</developer>
+		<publisher>UPL</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43743" source="ScreenScraper.fr">
+		<path>./trophyh.zip</path>
+		<name>Trophy Hunting - Bear And Moose V1.0</name>
+		<desc>Trophy Hunting is a 2-player head-to-head big game competition. The players can select from 4 weapons to hunt with : Bolt-Action Rifle, Compound Bow, Revolver w/ scope, and Muzzleloader. The players</desc>
+		<image>/userdata/roms/mame/images/trophyh.png</image>
+		<rating>0.7</rating>
+		<releasedate>20020101T000000</releasedate>
+		<publisher>Sammy Studios</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>261</genreid>
+	</game>
+	<game id="43781" source="ScreenScraper.fr">
+		<path>./turkhunt.zip</path>
+		<name>Turkey Hunting Usa V1.0</name>
+		<desc>Turkey Hunting USA allows the players to hunt in 5 different states : Florida, New Mexico, Montana, Pennsylvania and Kansas. Each of the states has a different weather condition and level of difficulty. If a pl</desc>
+		<image>/userdata/roms/mame/images/turkhunt.png</image>
+		<rating>0.7</rating>
+		<releasedate>20010101T000000</releasedate>
+		<developer>Sammy Studios</developer>
+		<publisher>Sammy Studios</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>261</genreid>
+	</game>
+	<game id="44129" source="ScreenScraper.fr">
+		<path>./wschamp.zip</path>
+		<name>Wing Shooting Championship V2.00</name>
+		<desc>Wing Shooting Championship is a 2 player head-to-head big game competition. The players can select from 5 weapons to hunt with: Pump Action, Semi-Automatic, Over and Under, Side by Side and Single Shot. There are 6 different bird stages: Great Plains Quail, Ring-Necked Pheasant, Canada Goose, American Black Duck, Mallard Duck, and Eastern Bob White Quail. Each bird stage has 12 areas with one bonus stage.</desc>
+		<image>/userdata/roms/mame/images/wschamp.png</image>
+		<rating>0.7</rating>
+		<releasedate>20010101T000000</releasedate>
+		<publisher>Sammy Studios</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>261</genreid>
+	</game>
+	<game id="44216" source="ScreenScraper.fr">
+		<path>./zombraid.zip</path>
+		<name>Zombie Raid (9/28/95, US)</name>
+		<desc>Welcome to the extraordinary world of Zombie Raid. Players use specially designed sawed-off shotguns with pump action reload to fight their way through the graveyard, through castles and dungeons and even through the mad scientist's laboratory. Battle all kinds of ghastly creatures, like zombies and other frightful beings. You may feel like you're lost in a horror movie! 
+ 
+A myriad of secrets have been programmed into the game for added dimension. Can you discover how to get extra life? Can you find a way to escape the forces? Can you defeat the evil? The challenges are endless!</desc>
+		<image>/userdata/roms/mame/images/zombraid.png</image>
+		<rating>0.9</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Sammy</developer>
+		<publisher>Sammy</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>261</genreid>
+	</game>
+	<game id="41141" source="ScreenScraper.fr">
+		<path>./extdwnhl.zip</path>
+		<name>Extreme Downhill (v1.5)</name>
+		<desc>A downhill skiing game.</desc>
+		<image>/userdata/roms/mame/images/extdwnhl.png</image>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<publisher>Sammy Studios</publisher>
+		<genre>Sports / Skiing-Sports</genre>
+		<players>2</players>
+		<playcount>1</playcount>
+		<lastplayed>20210522T211552</lastplayed>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40430" source="ScreenScraper.fr">
+		<path>./cairblad.zip</path>
+		<name>Change Air Blade (Japan)</name>
+		<desc>A vertically scrolling shoot'em up.</desc>
+		<image>/userdata/roms/mame/images/cairblad.png</image>
+		<rating>0.7</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>Aisystem Tokyo</developer>
+		<publisher>Sammy Studios</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<playcount>1</playcount>
+		<lastplayed>20210808T220357</lastplayed>
+		<gametime>164</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+</gameList>

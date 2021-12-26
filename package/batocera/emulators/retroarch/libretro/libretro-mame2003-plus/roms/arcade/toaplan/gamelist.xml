@@ -1,0 +1,333 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="43961" source="ScreenScraper.fr">
+		<path>./vimana.zip</path>
+		<name>Vimana (World, set 1)</name>
+		<desc>Players control their ship over a constantly scrolling background; the scenery never stops moving until the final level is reached. Players have three weapons at their disposal: the standard shot, a charge shot and a bomb weapon. 
+ 
+The standard shot weapon is a twin-shot weapon capable of strengthening in size and power with upgrades. However, the player has to tap the fire button to fire rapidly; once the button is held down, the ship charges a stronger version of the normal shot capable of spreading out across the entire screen in twelve directions. The playerâ€™s bomb weapon, the Circle Bomb, encircles the ship once activated and seeks out enemies upon an additional tap of the bomb button. 
+ 
+There are a total of four items for the player to pick up shot strength, circle bomb, points, and and extra life.</desc>
+		<rating>0.8</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Toaplan</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/vimana.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="150592" source="ScreenScraper.fr">
+		<path>./zerowing.zip</path>
+		<name>Zero Wing (2P set)</name>
+		<desc>The player is a lone hero who will save the universe from an evil force. 
+ 
+It enjoyed a degree of success in arcades and was subsequently ported to the Mega Drive by Toaplan on May 31, 1991, in Japan, and by Sega during the following year in Europe, followed by a Japan-only release by Naxat Soft on September 18, 1992, for the PC Engine's CD-ROM². 
+ 
+The European version of the Mega Drive port was the source for "All your base are belong to us", an Internet meme which plays off the poorly translated English in the game's introduction. 
+ 
+Set in 2101, the game follows the signing of a peace treaty between the United Nations and CATS, an alien cyborg. However, CATS breaks the covenant and takes control of the Japanese space colonies. The protagonist leads the ZIG spacecraft, managed to escape from the mother ship destroyed by CATS, with the aim to defeat enemy forces and liberate the Earth. 
+ 
+As with other scrolling shooters, the aim of the game is to shoot all enemies that appear on screen and avoid getting obliterated by enemy fire, crashing into enemies or into foreground scenery. There are mid-level and end-of-level boss enemies that stay with the player until they are defeated. The game features eight levels.</desc>
+		<rating>0.8</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Taito</publisher>
+		<genre>Shooter-Shooter / Horizontal</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/zerowing.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40163" source="ScreenScraper.fr">
+		<path>./batsugun.zip</path>
+		<name>Batsugun</name>
+		<desc>A vertically scrolling shoot'em up game. As is the standard with most arcade shooters, the player controls their ship with a joystick and two buttons. One button (Fire) shoots the main guns, and the other button (Bomb) releases a smart bomb that spreads huge energy balls all around the player's ship. 
+ 
+As enemies are destroyed, the player gains experience points that are separate from the score. For every 288 experience points gained, the main gun will 'level up', becoming much stronger. This is analogous to experience points and leveling up in role playing games. The weapon can only level up twice, so after it has achieved its maximum level, 288 experience points will grant the player an extra bomb. 
+ 
+The player can also grab P icons to increase the power of the current level gun. A maximum of five "P"s can be collected per experience level; getting more after this gives extra points instead. 
+ 
+Collecting B icons increases the number of bombs, to a maximum of 7. 
+ 
+Apart from destroying enemies, points can be gained from collecting golden V-shaped medals. After the level is finished, 3000 points are awarded for every small one, and 5000 points for every large one. If the player's ship is destroyed during a level, all medals collected are lost.</desc>
+		<image>/userdata/roms/mame/images/batsugun.png</image>
+		<rating>0.6</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Toaplan</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<playcount>3</playcount>
+		<lastplayed>20210613T103116</lastplayed>
+		<gametime>10</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="150591" source="ScreenScraper.fr">
+		<path>./demonwld.zip</path>
+		<name>Demon's World / Horror Story (set 1)</name>
+		<desc>Demon's World, released in Japan as "Horror Story", is a platformer arcade game that was developed by Toaplan and published by Taito in 1989. This game is multi-regional, meaning that it can be configured for different regions via the DIP switches. These settings change the legal warnings, can display the Taito licensing message and can change the title between the English version (Demon's World) and the Japanese version (Horror Story).</desc>
+		<image>/userdata/roms/mame/images/demonwld.png</image>
+		<rating>0.6</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Toaplan</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40961" source="ScreenScraper.fr">
+		<path>./dogyuun.zip</path>
+		<name>Dogyuun</name>
+		<desc>Dogyuun is an arcade Shoot 'em Up. 
+ 
+The plot is somewhat vague, except that it involves two pilots destroying aliens after an alien mecha kills the reconnaissance ship leading them. 
+ 
+One interesting feature of the game is the ability in Co-Op Multiplayer for player 1 to combine with player 2, producing a larger ship with better firepower. The game also features loads of homing lasers and large bosses.</desc>
+		<image>/userdata/roms/mame/images/dogyuun.png</image>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Toaplan</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41241" source="ScreenScraper.fr">
+		<path>./fireshrk.zip</path>
+		<name>Fire Shark</name>
+		<desc>Same! Same! Same! is a vertically scrolling shoot 'em up from Toaplan.</desc>
+		<image>/userdata/roms/mame/images/fireshrk.png</image>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Toaplan</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41249" source="ScreenScraper.fr">
+		<path>./fixeight.zip</path>
+		<name>FixEight (Europe)</name>
+		<desc>The plot is rather simple: Your character is sent to the alien planet Fortune to destroy it, and with it the Gozzu invasion of our universe. 
+As a follow-up to Out Zone, Fixeight fixes many of the problems that its predecessor had. The main gimmick of the game are the eight unique characters, each of which have different weapons in their arsenal.</desc>
+		<image>/userdata/roms/mame/images/fixeight.png</image>
+		<rating>0.6</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Toaplan</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>3</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="41442" source="ScreenScraper.fr">
+		<path>./ghox.zip</path>
+		<name>Ghox (spinner)</name>
+		<desc>Under the spell of the evil Magician Jagula, who plots to conquer the world, Lucia, the goddess of light, is confined by the gates of the Netherworld. A dark age is ushered in and evil spirits from mountains and rivers roam throughout the world. 
+ 
+Deeply affected by the horror of the world, King Gitane of the Akura Empire summons two burly and brave men from the Eastern Country and orders them to subdue Jagula. 
+ 
+These 2 heroes journey through the evil spirits' lair which is cut off from the exclusive pious area. Freely manipulating their magic balls, Axis and Bilious plung into action.</desc>
+		<image>/userdata/roms/mame/images/ghox.png</image>
+		<rating>0.9</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Toaplan</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="41523" source="ScreenScraper.fr">
+		<path>./grindstm.zip</path>
+		<name>Grind Stormer</name>
+		<desc>A rather obscure vertical scrolling shooter, guide your ship in a battle against aliens using three different weapons. This game is known in Japan as V-Five and is also the first game from Tsuneki Ikeda.</desc>
+		<image>/userdata/roms/mame/images/grindstm.png</image>
+		<rating>0.6</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Toaplan</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41960" source="ScreenScraper.fr">
+		<path>./kbash.zip</path>
+		<name>Knuckle Bash</name>
+		<desc>Join clash, dice and devo as they make their stand against wrestling's underworld! This is the tale of how the young wrestlers saved the sport from evil and corruption.
+
+The Mad Bull Group is a corrupt wrestling organization that profits while draining the purity of the sport. Help the Knuckle Bash team overpower evil and convert the Mad Bulls to their side! Our young wrestlers know how millions of young fans look up to them as role models. It's for them they must TAKE A STAND!</desc>
+		<image>/userdata/roms/mame/images/kbash.png</image>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Toaplan</publisher>
+		<genre>Fight /  Co-op-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="41961" source="ScreenScraper.fr">
+		<path>./kbash2.zip</path>
+		<name>Knuckle Bash 2 (bootleg)</name>
+		<desc>4 wacky characters go after the Bulls and others who would dare threaten the peace of the city!</desc>
+		<image>/userdata/roms/mame/images/kbash2.png</image>
+		<rating>0.5</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>bootleg</developer>
+		<publisher>bootleg</publisher>
+		<genre>Fight /  Co-op-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="79113" source="ScreenScraper.fr">
+		<path>./outzone.zip</path>
+		<name>Out Zone</name>
+		<desc>A vertically scrolling run and gun game, in which the player controls a soldier who must fight his way through 7 increasingly difficult levels. At the end of each level a boss must be defeated before the player can progress any further.</desc>
+		<image>/userdata/roms/mame/images/outzone.png</image>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Toaplan</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="149474" source="ScreenScraper.fr">
+		<path>./pipibibs.zip</path>
+		<name>Pipi &amp; Bibi's (Z80 sound cpu, set 1)</name>
+		<desc>Pipi &amp; Bibis is a platform game for one or two players, in which the aim is to infiltrate buildings and plant time bombs at the computer terminals that litter the levels. The planting of the final bomb starts the detonation sequence, players must then quickly reach the level's exit before the bombs explode. 
+ 
+Each level is populated with enemy scientists and agents, and any contact with these will result in the loss of a life. To help combat this, players are armed with a 'stun gun' which will knock the enemy to the floor, allowing the player to pass. If an enemy is held in the stun gun's beam for several seconds, the enemy will fall to the platform below. 
+ 
+At the completion of each level, part of a cartoon picture of woman in a state of undress is shown. The entire picture is revealed once every four levels.</desc>
+		<image>/userdata/roms/mame/images/pipibibs.png</image>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Toaplan</publisher>
+		<genre>Platform-Platform / Run Jump</genre>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="149459" source="ScreenScraper.fr">
+		<path>./snowbro2.zip</path>
+		<name>Snow Bros. 2 : With New Elves</name>
+		<desc>Snow Bros 2: With New Elves (known as Otenki Paradise in Japan) is a platformer developed by Toaplan and published by Hanafram in April 1994. The game consists of 6 worlds. The player must clear the screen of enemies to advance to the next stage. The game supports 4 players, but requires a 4 player harness for the additional players.</desc>
+		<image>/userdata/roms/mame/images/snowbro2.png</image>
+		<rating>0.8</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Hanafram</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="43162" source="ScreenScraper.fr">
+		<path>./snowbros.zip</path>
+		<name>Snow Bros. - Nick And Tom (set 1)</name>
+		<desc>One or two players take on the roles of snowmen Nick and Tom as they battle a variety of monsters over fifty platform-based, single screen levels.  
+ 
+The snowmen can throw snowballs at the enemies with the aim of encasing them completely in snow. The encased enemies can then be kicked in order to destroy them and this is achieved by standing next to the snowball and pressing the "kick out" button. This sends the giant snowball flying around the screen, killing any enemies that lay in its path.  
+ 
+If players take too much time to complete a stage, an evil pumpkin head will appear and try to kill them. The pumpkin is invincible but can be stunned with snowballs. After a short time the evil pumpkin will spawn ghosts that can travel freely around the stage as they seek out Nick and Tom. These ghosts can't be killed or stunned, so the player's only hope is to avoid them while eliminating the remaining standard enemies, to move on to the next screen as soon as possible. 
+ 
+When players defeat an enemy, it may drop a coloured potion bottle. These can be picked up and act as power-ups: 
+Yellow = Long shot 
+Red = Speed up 
+Blue = Bigger snowballs (encases monsters quicker) 
+Green = Inflates the players like a balloon and lets them fly around the screen, killing any monsters they touch. 
+ 
+Every 10th level features a battle with a large end-of-level boss.</desc>
+		<image>/userdata/roms/mame/images/snowbros.png</image>
+		<rating>0.9</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Toaplan</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="43336" source="ScreenScraper.fr">
+		<path>./sstriker.zip</path>
+		<name>Sorcer Striker (set 1)</name>
+		<desc>Sorcer Striker, released in Japan as Mahou Daisakusen (Magic Armageddon) is a 1993 medieval-themed scrolling shooter developed by Raizing (now known as Eighting) for the arcades and later ported to Sharp X68000 and FM Towns computers and the EZweb mobile phones. It is the first game in the Mahou Daisakusen trilogy, which includes Kingdom Grandprix and Dimahoo. 
+The game is set in a fantasy world filled with magic and magic-fueled machinery. A peaceful kingdom is under assault by the encroaching Gobligan Empire, led by a mysterious human leader known only as the Gobligan King. As the kingdom finds itself unable to drive off the Gobligan Empire's advances, King Codwenna announces a huge bounty for the Gobligan King's head. Four heroes answer the call, and set out to defeat the Gobligan King and restore peace to the kingdom. 
+ 
+Characters 
+Gain, the Warrior: A master of swords and physical combat, Gain wanders the land with his pet monkey Shain in search of the ultimate weapon. Attracted by the large bounty offered for the Gobligan King, Gain takes up arms in his ship, the Valhallyzer, against the Gobligan Empire. His signature weapon is the Buster Sword. 
+Chitta, the Magician: Despite her appearance as a youthful girl, Chitta is a formidable magic user and the granddaughter of a legendary hero. Bored of the quiet life of her village, she sneaks away in her grandfather's magical ship, the Gun Dalf, to seek adventure. Her signature attacks are the Thunder Beam and Ice Cube. 
+Miyamoto, the Samurai Dragon: Well-mannered and wise, Miyamoto the samurai dragon seeks revenge against Tsumujimaru, one of his former disciples. Tsumujimaru turned his back on Miyamoto's teachings and murdered Miyamoto's own Master, then fled into the Gobligan Empire. Miyamoto does not use a magical ship, but rather flies with his own two wings, and attacks via shuriken, ninjutsu stones, and other secret techniques. 
+Bornnam, the Necromancer: Detested and shunned by society, Bornnam lives in seclusion, practicing the black arts of necromancy and gleefully collecting bones. He decides to fight against the Gobligan Empire as a chance to test his power. Via the power of the divine dragon skull that rests on his head, he is able to transform into the Golgodian, a "ship" form that enables him to fly in the air and absorb the ambient mana from the sky in order to cast his spells. His favorite attacks are the Skull Napalm and Search Ghost.</desc>
+		<image>/userdata/roms/mame/images/sstriker.png</image>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Raizing</developer>
+		<publisher>Raizing</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43548" source="ScreenScraper.fr">
+		<path>./tekipaki.zip</path>
+		<name>The Brain Washing Game</name>
+		<desc>Teki-Paki (c) 1991 Toaplan.  - TECHNICAL -  Game ID : TP-020  Main CPU : 68000 (@ 10 Mhz) Sound Chips : YM3812 (@ 3.375 Mhz)  Players : 2 Control : 8-way joystick Buttons : 2  - TRIVIA -  Released in June 1991.  This game in known in Japan and Asia as "Te</desc>
+		<image>/userdata/roms/mame/images/tekipaki.png</image>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Toaplan</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="150594" source="ScreenScraper.fr">
+		<path>./truxton2.zip</path>
+		<name>Truxton 2 / Tatsujin Oh</name>
+		<desc>Gameplay is similar to the previous Tatsujin. Tatsujin Oh has six huge areas, each with a boss at the end; the game "loops" these six areas forever. Lives are given out at 70000 points, then every 200000 points after; players start with three. 
+ 
+There are power-ups to increase ship speed, add a smartbomb to your stock, and change/strengthen your current weapon. Red fires bombs in a small area around your ship,  blue is a homing laser, and green fires wide-reaching salvos of green shots.</desc>
+		<image>/userdata/roms/mame/images/truxton2.png</image>
+		<rating>0.9</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Toaplan</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+</gameList>
