@@ -1,0 +1,402 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="40281" source="ScreenScraper.fr">
+		<path>./bloodstm.zip</path>
+		<name>Blood Storm (v2.22)</name>
+		<desc>Blood Storm is considered by many as a quasi-'sequel' to Time Killers. The game had a rather dark storyline as there were few ambiguously good characters as the other ranged from being sociopathically insane or deceptive folk. 
+ 
+BloodStorm was dubbed as a possible MK-killer in an attempt to surpass rival Midway's success with Mortal Kombat, though it did not prevail. It was the last game Strata produced before the company went out of business. 
+ 
+As with its predecessor Time Killers, BloodStorm features many of the aspects carried down from it, such as the removal of an opponent s arms and an instant kill attack, as well as a Special Death Move. The button layout is virtually the same. They are labeled as "back leg", "front leg", "back arm" and "front arm" respectively. A button in the center is used to make the character block. As one would suspect, if a particular limb is lost in combat, its corresponding button is rendered useless. 
+ 
+</desc>
+		<rating>0.7</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Incredible Technologies</developer>
+		<publisher>Strata</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bloodstm.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="40442" source="ScreenScraper.fr">
+		<path>./capbowl.zip</path>
+		<name>Capcom Bowling (set 1)</name>
+		<desc>This top-down view bowling game allows up to four players to compete. The trackball controls the aim and power of your throw and two buttons control the left and right hook respectively. There are graphic displays of turkeys, splits, gutters etc. and the game keeps track of scoring and high scores.</desc>
+		<rating>0.6</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Incredible Technologies</developer>
+		<publisher>Incredible Technologies</publisher>
+		<genre>Sports / Bowling-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/capbowl.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41021" source="ScreenScraper.fr">
+		<path>./drivedge.zip</path>
+		<name>Driver's Edge</name>
+		<desc>An F-1 racing game from Strata.</desc>
+		<rating>0.5</rating>
+		<releasedate>19940101T000000</releasedate>
+		<publisher>Strata/Incredible Technologies</publisher>
+		<genre>Race 1st Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/drivedge.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41077" source="ScreenScraper.fr">
+		<path>./dynobop.zip</path>
+		<name>Dyno Bop (v1.1)</name>
+		<desc>A fun little redemption game involving rolling balls at virtual targets.</desc>
+		<releasedate>19900101T000000</releasedate>
+		<publisher>Grand Products/Incredible Technologies</publisher>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/dynobop.png</image>
+	</game>
+	<game id="41502" source="ScreenScraper.fr">
+		<path>./gpgolf.zip</path>
+		<name>Golden Par Golf (Joystick, V1.1)</name>
+		<desc>Golden Par Golf (c) 1992 Strata.  - TRIVIA -  Developed by Incredible Technologies, Inc.  Sales by Electrocoin Automatics, Ltd.  - STAFF -  Creative direction : Scott Morrison Game design : Larry Hodgon, Jim Zielinski Software : Larry Hodgson, Richard Dit</desc>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Strata</developer>
+		<publisher>Strata/Incredible Technologies</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/gpgolf.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41540" source="ScreenScraper.fr">
+		<path>./gt2k.zip</path>
+		<name>Golden Tee 2k (v1.00)</name>
+		<desc>Golden Tee Golf (also known as Golden Tee) is a golf arcade game series by Incredible Technologies.</desc>
+		<rating>0.8</rating>
+		<releasedate>20000101T000000</releasedate>
+		<developer>Incredible Technologies</developer>
+		<publisher>Incredible Technologies</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/gt2k.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41541" source="ScreenScraper.fr">
+		<path>./gt3d.zip</path>
+		<name>Golden Tee 3d Golf (v1.93N)</name>
+		<rating>0.8</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Incredible Technologies</developer>
+		<publisher>Incredible Technologies</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/gt3d.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41543" source="ScreenScraper.fr">
+		<path>./gt97.zip</path>
+		<name>Golden Tee '97 (v1.30)</name>
+		<rating>0.8</rating>
+		<releasedate>19970101T000000</releasedate>
+		<publisher>Incredible Technologies</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/gt97.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41544" source="ScreenScraper.fr">
+		<path>./gt98.zip</path>
+		<name>Golden Tee '98 (v1.10)</name>
+		<rating>0.8</rating>
+		<releasedate>19980101T000000</releasedate>
+		<publisher>Incredible Technologies</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/gt98.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41545" source="ScreenScraper.fr">
+		<path>./gt99.zip</path>
+		<name>Golden Tee '99 (v1.00)</name>
+		<rating>0.8</rating>
+		<releasedate>19990101T000000</releasedate>
+		<publisher>Incredible Technologies</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/gt99.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41546" source="ScreenScraper.fr">
+		<path>./gtclassc.zip</path>
+		<name>Golden Tee Classic (v1.00)</name>
+		<rating>0.8</rating>
+		<releasedate>20010101T000000</releasedate>
+		<developer>Incredible Technologies</developer>
+		<publisher>Incredible Technologies</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/gtclassc.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41549" source="ScreenScraper.fr">
+		<path>./gtg.zip</path>
+		<name>Golden Tee Golf (Joystick, v3.1)</name>
+		<desc>Golden Tee Golf is an arcade game which has been extremely popular across bars and pubs. Players use a trackball to hit the golf ball over a wide range of challenging courses. The game also has online leaderboards and tournaments.</desc>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Strata</developer>
+		<publisher>Strata/Incredible Technologies</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/gtg.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41550" source="ScreenScraper.fr">
+		<path>./gtg2.zip</path>
+		<name>Golden Tee Golf 2 (Trackball, V2.2)</name>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Strata</developer>
+		<publisher>Strata/Incredible Technologies</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/gtg2.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41634" source="ScreenScraper.fr">
+		<path>./hardyard.zip</path>
+		<name>Hard Yardage (v1.20)</name>
+		<desc>An arcade football game released in 1993 by the Strata Group, a division of Incredible Technologies.  Looks similar to early 3D Madden games.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Strata</developer>
+		<publisher>Strata/Incredible Technologies</publisher>
+		<genre>Sports / Football-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/hardyard.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41743" source="ScreenScraper.fr">
+		<path>./hstennis.zip</path>
+		<name>Hot Shots Tennis (v1.1)</name>
+		<desc>A tennis game from Strata. 
+ 
+- One or two can play, simultaneously, and see the action from their own points of view. 
+- 32 top seeded players to choose from as opponents. 
+- Racket may be swung using a hard, soft or lob shot. 
+- Helpful blue dot turns red when player should swing. 
+- Place serve anywhere in opponent's service box by moving joystick left or right. 
+- Place ball anywhere in opponent's court by swinging either early or late. 
+- Earn bonus time by accumulating skill points. 
+- Buy additional time, when prompted, to complete a set or match. 
+- Regulation tennis rules apply.</desc>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Strata</developer>
+		<publisher>Strata/Incredible Technologies</publisher>
+		<genre>Sports / Tennis-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hstennis.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="79071" source="ScreenScraper.fr">
+		<path>./neckneck.zip</path>
+		<name>Neck-n-neck (v1.2)</name>
+		<desc>A horse racing game.  Choose from one of 6 horses and press your button to jump over fences to win the race.</desc>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Bundra Games/Incredible Technologies</developer>
+		<publisher>Bundra Games/Incredible Technologies</publisher>
+		<genre>Sports with Animals-Horses race-Sports</genre>
+		<players>1-6</players>
+		<image>/userdata/roms/mame/images/neckneck.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="79132" source="ScreenScraper.fr">
+		<path>./ninclown.zip</path>
+		<name>Ninja Clowns (27 oct 91)</name>
+		<desc>A strange and hugely abstract beat-em-up for one or two players, in which circus clowns take to the streets to beat up other circus performers; as well as lawyers, maintenance workers, and other assorted professionals. 
+ 
+In addition to the standard beat-em-up kick and punch moves, the clowns can use their 'clown equipment' against their enemies; using items such as spring-loaded boxing gloves, bottles of soda water and, of course, cream pies.</desc>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Strata/Incredible Technologies</developer>
+		<publisher>Strata/Incredible Technologies</publisher>
+		<genre>Fight / 2.5D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ninclown.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="63309" source="ScreenScraper.fr">
+		<path>./pairs.zip</path>
+		<name>Pairs - Featuring The Giffy Girls (V1.2, 09/30/94)</name>
+		<desc>This is the classic memory game played with a deck of cards laid out in a 6x10 grid. You begin by selecting a card, it turns over, and then you try to select another card that matches. If both of your cards match, then they are both taken away (and a bit of the picture is revealed underneath them). If they don't match, then they are flipped back over and you must try again. The number of chances you have is kept track of with hearts at the top of the screen, you get an extra heart each time you guess correctly, and you lose a heart each time you guess incorrectly. Matching pairs also adds time to the timer. If you lose all of your hearts or the timer runs out then it is game over. 
+ 
+</desc>
+		<rating>0.8</rating>
+		<releasedate>19940901T000000</releasedate>
+		<developer>Incredible Technologies</developer>
+		<publisher>Strata</publisher>
+		<genre>Casino-Casino / Cards-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pairs.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="79242" source="ScreenScraper.fr">
+		<path>./peggle.zip</path>
+		<name>Peggle (Joystick, V1.0)</name>
+		<desc>Peggle is an arcade game where a ball-like character falls from the top of the screen and the player's task is to make him hit as many pegs as possible before landing in one of the cups at the bottom. The game is played with a single controller which is used to both rotate the pegs and move the cups left and right. The aim of the game is simply to clear all pegs in each level which happens when they are touched by the ball. Pegs of certain colours require multiple hits but are also worth more points. The cups at the bottom have different properties. Some of them give bonuses in terms of extra time or points while others cause the ball to bounce back up to the pegs again.</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Strata/Incredible Technologies</developer>
+		<publisher>Strata/Incredible Technologies</publisher>
+		<genre>Action</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/peggle.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="42445" source="ScreenScraper.fr">
+		<path>./pokrdice.zip</path>
+		<name>Poker Dice</name>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Strata</developer>
+		<publisher>Strata/Incredible Technologies</publisher>
+		<genre>Casino</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/pokrdice.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="42765" source="ScreenScraper.fr">
+		<path>./rimrockn.zip</path>
+		<name>Rim Rockin' Basketball (v2.2)</name>
+		<desc>The West meets the East in a fantastic basketball game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>Strata/Incredible Technologies</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/rimrockn.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43071" source="ScreenScraper.fr">
+		<path>./shufshot.zip</path>
+		<name>Shuffleshot (v1.40)</name>
+		<rating>0.6</rating>
+		<releasedate>19970101T000000</releasedate>
+		<developer>Strata</developer>
+		<publisher>Strata/Incredible Technologies</publisher>
+		<genre>Sports / Shuffleboard-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/shufshot.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43134" source="ScreenScraper.fr">
+		<path>./slikshot.zip</path>
+		<name>Slick Shot (v2.2)</name>
+		<desc>The player have to use a real miniature pool cue to hit a ball along the table, in line with the shot to be played</desc>
+		<releasedate>19900101T000000</releasedate>
+		<publisher>Grand Products/Incredible Technologies</publisher>
+		<genre>Sports-Sports / Pool-Various-Various / Electro- Mechanical</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/slikshot.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43386" source="ScreenScraper.fr">
+		<path>./stratab.zip</path>
+		<name>Strata Bowling (V3)</name>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Strata</developer>
+		<publisher>Strata/Incredible Technologies</publisher>
+		<genre>Sports / Bowling-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/stratab.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43007" source="ScreenScraper.fr">
+		<path>./sftm.zip</path>
+		<name>Street Fighter: The Movie (v1.12)</name>
+		<desc>Shadaloo - The world's most dangerous crime-infested city located in Southeast Asia. When UN sent a team here to rescue the refugees, 63 of them were taken hostage by General Bison, the dictator of Shadaloo who owns a high-tech weapon army. Bison demanded a ransom of $20 billion for their release. Now the UN has decided to send an emergency force to Shadaloo under the command of Colonel Guile! As the entire world anxiously watches the situation unfold, the intentions, the fighting spirits, and the ambitions of the world warriors are ready to explode in Shadaloo!</desc>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Incredible Technologies</developer>
+		<publisher>Capcom</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sftm.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="43335" source="ScreenScraper.fr">
+		<path>./sstrike.zip</path>
+		<name>Super Strike Bowling</name>
+		<desc>A conversion of "Strata Bowling" which uses a ball and mini alley.</desc>
+		<releasedate>19900101T000000</releasedate>
+		<publisher>Strata/Incredible Technologies</publisher>
+		<genre>Various-Various / Electro- Mechanical</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/sstrike.png</image>
+		<genreid>1024</genreid>
+	</game>
+	<game id="43618" source="ScreenScraper.fr">
+		<path>./timekill.zip</path>
+		<name>Time Killers (v1.32)</name>
+		<desc>The first of two Mortal Kombat knock-offs by Incredible Technologies that received some notoriety for being able to de-limb and decapitate your opponent before the match was even over.</desc>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Strata</developer>
+		<publisher>Strata/Incredible Technologies</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/timekill.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="40065" source="ScreenScraper.fr">
+		<path>./arlingtn.zip</path>
+		<name>Arlington Horse Racing (v1.21-D)</name>
+		<desc>In this horse racing game, you plunk a bunch of quarters into the coin mechs, and then bet on the horses. When you are finished betting, press the start race button to see the horse run the track. The game then pays off any winning bids in credits, and then starts over.</desc>
+		<image>/userdata/roms/mame/images/arlingtn.png</image>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Strata</developer>
+		<publisher>Strata/Incredible Technologies</publisher>
+		<genre>Sports with Animals-Horses race-Sports</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="44050" source="ScreenScraper.fr">
+		<path>./wcbowl.zip</path>
+		<name>World Class Bowling (v1.66)</name>
+		<desc>One to four can play. Ture 3D Effects. Plays just like real bowling. Awesome pin action with exciters. Complete JAMMA compatible kits. Player rewards for special scores. Multiple high score pages. Ideal for tournament play!</desc>
+		<image>/userdata/roms/mame/images/wcbowl.png</image>
+		<rating>0.8</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Incredible Technologies</developer>
+		<publisher>Incredible Technologies</publisher>
+		<genre>Sports / Bowling-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="44051" source="ScreenScraper.fr">
+		<path>./wcbowldx.zip</path>
+		<name>World Class Bowling Deluxe (v2.00)</name>
+		<desc>Jeu de simulation de Bowling avec le point de vue du lanceur. Des efforts ont été fait pour ajouter des animations à l'issue des coups mais cela ne rattrape pas un jeu beaucoup trop simple en terme de contrôles. Dès que vous aurez trouvé le truc, plus un strike ne vous échappera. Dommage, les sons et les vues étaient plutôt réussies.</desc>
+		<image>/userdata/roms/mame/images/wcbowldx.png</image>
+		<rating>0.7</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>Incredible Technologies</developer>
+		<publisher>Incredible Technologies</publisher>
+		<genre>Sports / Bowling-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+</gameList>

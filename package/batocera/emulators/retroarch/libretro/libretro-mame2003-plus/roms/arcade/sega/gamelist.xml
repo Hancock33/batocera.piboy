@@ -1,0 +1,2641 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="39961" source="ScreenScraper.fr">
+		<path>./airwolf.zip</path>
+		<name>Airwolf</name>
+		<desc>Airwolf is a horizontally scrolling shoot'em up game.</desc>
+		<rating>0.3</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Kyugo Boueki</developer>
+		<publisher>Kyugo Boueki</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/airwolf.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="149514" source="ScreenScraper.fr">
+		<path>./aladbl.zip</path>
+		<name>Aladdin (bootleg of Japanese MegaDrive version)</name>
+		<desc>Unofficial arcade version of the Japanese Sega Mega Drive version.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<image>/userdata/roms/mame/images/aladbl.png</image>
+	</game>
+	<game id="39968" source="ScreenScraper.fr">
+		<path>./alexkidd.zip</path>
+		<name>Alex Kidd - The Lost Stars (set 2, unprotected)</name>
+		<desc>Alex Kidd: The Lost Stars features Alex Kidd and Stella (controlled by player 2) searching for the twelve Zodiac signs. Alex's mission is to run through each level, knocking down enemies, and obtain the six miracle balls. These balls are hidden inside such unusual places as golden eggs, the Fantasy Zone ship out of action, clamshells, Christmas presents, pumpkins, and desk bells. Levels include Toy World, Machine World, the World of Make Believe, Water World, and Monster World.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/alexkidd.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="40077" source="ScreenScraper.fr">
+		<path>./astorm.zip</path>
+		<name>Alien Storm (World, 2 Players, FD1094 317-0154)</name>
+		<desc>Alien Storm is a side-scrolling beat-em-up in which up to 3 players take on the role of one of 3 futuristic warriors. The game heroes are charged with destroying the hoards of repulsive aliens who are invading the Earth. Many of the aliens are disguised as a variety of everyday street objects; such as telephone booths, oil cans, trash cans and mailboxes. The aliens reveal their true forms as the warriors approach. 
+ 
+Each of the 3 heroes carries their own individual weapon; Gordon has his plasma gun, Karla has a flamethrower and Scooter has an electric whip. At the end of each level, the warriors will enter a building and the shoot-em-up action will switch to a first-person perspective.</desc>
+		<rating>0.4</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Beat'em Up-Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/astorm.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="39979" source="ScreenScraper.fr">
+		<path>./aliensyn2.zip</path>
+		<name>Alien Syndrome (set 2, System 16A, FD1089A 317-0033)</name>
+		<desc>Alien Syndrome is a overhead-view run and gun game for one or two players in which a number of Mankind's space ships and bases have been overrun by an alien race, who have taken the human inhabitants hostage. 
+ 
+Players control two soldiers named Ricky and Mary and must fight their way through large eight-way scrolling levels to rescue their captured comrades. Once a set number of hostages have been rescued, an exit opens and players can pass through it to fight the end-of-level guardian. Once the guardian is defeated, play moves onto the next stage. 
+ 
+A time-bomb is automatically set at the start of each stage, which must then be completed before the bomb's timer runs down. Failure to finish the level in time results in the death of the player characters. Weapon upgrades and maps of the current level are available at certain points and are accessed via hatchways in the wall. 
+ 
+Alien Syndrome consists of 6 full stages plus a 7th final mini-stage, consisting solely of a fight to the death against the game's final, massive guardian.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter-Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/aliensyn2.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="39972" source="ScreenScraper.fr">
+		<path>./alien3.zip</path>
+		<name>Alien3 - The Gun (World)</name>
+		<desc>Alien 3 - The Gun is a shooter game.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/alien3.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="39992" source="ScreenScraper.fr">
+		<path>./altbeast.zip</path>
+		<name>Altered Beast (set 8, 8751 317-0078)</name>
+		<desc>Altered Beast is a side scrolling, platform, beat 'em up game that puts the player in control of a centurion who had died in battle. The centurion has been raised from the dead to rescue Zeus' daughter Athena from the demon Neff. The player battles undead and demonic hordes, controlling the shapeshifting hero. He must fight through several levels in order to save the kidnapped goddess.</desc>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Beat'em Up-Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/altbeast.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="40008" source="ScreenScraper.fr">
+		<path>./angelkds.zip</path>
+		<name>Angel Kids (Japan)</name>
+		<desc>Angel Kids is a climbing game where players take turns controlling two kids holding a rope. Pull the two joysticks outwards and the rope gets taunt. When timed right this throws a third kid into balloons. Balloons are scrolled on screen, seven screens high. While the girl is in the air the screen goes split screen to cover the distance. You must push up to advance kids with the rope.</desc>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action-Action / Climbing</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/angelkds.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="40027" source="ScreenScraper.fr">
+		<path>./appoooh.zip</path>
+		<name>Appoooh</name>
+		<desc>A Japan-only wrestling game by Sega featuring Tigerman, H.Hogen, A.Giant and other wrestlers. Personal Impressions and Technical Impressions each account for half of the total score. Within the Personal Impressions category, "Like" carries a little more weight than the other factors.</desc>
+		<rating>0.3</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Sanritsu Denki</developer>
+		<publisher>Sanritsu Denki</publisher>
+		<genre>Sports / Wrestling-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/appoooh.png</image>
+		<genreid>1536</genreid>
+	</game>
+	<game id="40045" source="ScreenScraper.fr">
+		<path>./arabfgt.zip</path>
+		<name>Arabian Fight (World)</name>
+		<desc>Arabian Fight is an up-to-4 players beat'em up game with 4 selectable warriors who battle hordes of soldiers and mythical beings. Plenty of sprite-scaling action from foreground to background. This game consists all 7 stages.</desc>
+		<rating>0.4</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Fight / 2.5D-Fight</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/arabfgt.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="40079" source="ScreenScraper.fr">
+		<path>./astrob.zip</path>
+		<name>Astro Blaster (version 3)</name>
+		<desc>Astro Blaster is a 1- or 2-player game in which players must advance through squadrons of alien ships in an attempt to dock with the mother ship. Players move their ship left or right and shoot at attacking squadrons. A special time warp allows the player to slow down the alien space ships and their laser fire, while maintaining his own ship and laser fire at normal speed.</desc>
+		<rating>0.6</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/astrob.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40099" source="ScreenScraper.fr">
+		<path>./atomicp.zip</path>
+		<name>Atomic Point (Korea)</name>
+		<desc>In this puzzle game, a collection of colored blocks appears on the screen along with 2 glowing diamonds. Single colored blocks fall from the top of the playfield and your task is to complete a horizontal row on the same level that each flashing diamond appears.</desc>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Philko</developer>
+		<publisher>Philko</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/atomicp.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40105" source="ScreenScraper.fr">
+		<path>./auraila.zip</path>
+		<name>Aurail (set 2, FD1089B 317-0168)</name>
+		<desc>An overhead-view shoot'em up where you pilot a super tank of the future, that looks like a battle mek, and blow everything up. Collect power-ups to increase shields and operate the remote attack drone. Features tunnel levels with a </desc>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Vehicle, Vertical-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/auraila.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="40148" source="ScreenScraper.fr">
+		<path>./bankp.zip</path>
+		<name>Bank Panic</name>
+		<desc>Bank Panic is a reaction-based shoot-em-up in which the player takes on the role of a gun-slinging Deputy, who has been charged with protecting the town bank from outlaws. </desc>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Sanritsu Denki</developer>
+		<publisher>Sanritsu Denki</publisher>
+		<genre>Race, Driving-Race 1st Pers. view-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bankp.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="40170" source="ScreenScraper.fr">
+		<path>./bayroute.zip</path>
+		<name>Bay Route (set 3, World, FD1094 317-0116)</name>
+		<desc>Bay Route is a 1989 run-and-gun game for the Sega System 16B by Sega and Sunsoft. You play as a guy who must destroy some enemy organization that is holding hostages with an arm cannon that can switch between several weapons with one button and shoot with another button. A third button jumps.</desc>
+		<rating>0.4</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Sunsoft</developer>
+		<publisher>Sunsoft</publisher>
+		<genre>Shooter-Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bayroute.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40277" source="ScreenScraper.fr">
+		<path>./blockgal.zip</path>
+		<name>Block Gal (MC-8123B, 317-0029)</name>
+		<desc>Block Gal is a Breakout/Arkanoid clone, with some erotic imagery: clearing a screen reveals some part of a naked lady.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<publisher>SEGA</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/blockgal.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="40283" source="ScreenScraper.fr">
+		<path>./bloxeedc.zip</path>
+		<name>Bloxeed (World, C System)</name>
+		<desc>A puzzle game. Gameplay is quite similar to "Tetris" but with some added twists.</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bloxeedc.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40321" source="ScreenScraper.fr">
+		<path>./bodyslam.zip</path>
+		<name>Body Slam (8751 317-0015)</name>
+		<desc>Body Slam, called Dump Matsumoto in Japan, is a 1986 arcade wrestling game by Sega. You choose one of two wrestling teams, "Fresh Gals" and "The Evil Alliance", and fight with each of its members, taking turns.</desc>
+		<rating>0.3</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Sports / Wrestling-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bodyslam.png</image>
+		<genreid>1536</genreid>
+	</game>
+	<game id="40320" source="ScreenScraper.fr">
+		<path>./bnzabros.zip</path>
+		<name>Bonanza Bros. (US, Floppy DS3-5000-07d? Based)</name>
+		<desc>Bonanza Bros. is a strategic platform shoot-em-up with one or two players taking on the roles of Robo and Mobo, two cat-burgling brothers who must negotiate scrolling platform-based levels and steal a set number of valuable items, before making their way to the roof to escape in a waiting airship. The location of the items is highlighted on a cut-away map displayed in the middle of the screen and each stage must be completed within a set time limit.</desc>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bnzabros.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="40363" source="ScreenScraper.fr">
+		<path>./brdrline.zip</path>
+		<name>Borderline</name>
+		<desc>Borderline is a 1 or 2-player game in which players attempt to destroy enemy refineries and energy plants. The player moves through four different sectors, constantly under attack by enemy tanks, missiles, interceptors and drones.</desc>
+		<rating>0.3</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Vehicle, Vertical-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/brdrline.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="40339" source="ScreenScraper.fr">
+		<path>./borench.zip</path>
+		<name>Borench (set 1)</name>
+		<desc>Borench is a puzzle game similar to "Marble Madness". The player must guide a ball to the goal of a certain level. You must do this by adding blocks to the squares to influence the ball's movement. You must avoid the edges to prevent the ball falling off.</desc>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/borench.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40355" source="ScreenScraper.fr">
+		<path>./brain.zip</path>
+		<name>Brain</name>
+		<desc>Brain is a side scrolling shooter in deep space with tough gameplay and eerie music and sounds. The game has alternate play modes where you must first fly a space craft and land on the planet surface at the end. After landing, you take control of the space ranger and must negotiate your way through caves and tunnels while obtaining computer disks. Each disk you collect brings you closer to discovering a hidden enemy. There are certain UFO's and aliens you can obtain them from, just watch the game demo's to see them.</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Coreland</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/brain.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40396" source="ScreenScraper.fr">
+		<path>./buckrog.zip</path>
+		<name>Buck Rogers - Planet Of Zoom</name>
+		<desc>Buck Rogers: Planet of Zoom is a forward-scrolling rail shooter where the user controls a spaceship in a behind-the-back third-person perspective that must destroy enemy ships and avoid obstacles. The game was notable for its fast pseudo 3-D scaling and detailed sprites. The game would later go on to influence the 1985 Sega hit Space Harrier. Buck is never seen in the game, except presumably in the illustration on the side of the arcade cabinet, and its only real connections to Buck Rogers are the use of the name and the outer space setting. In Japan, the game was known as Zoom 909.</desc>
+		<rating>0.5</rating>
+		<releasedate>19820101T000000</releasedate>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Plane, 3rd person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/buckrog.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="40403" source="ScreenScraper.fr">
+		<path>./bullfgt.zip</path>
+		<name>Bullfight (315-5065)</name>
+		<desc>You play as a torero in the bullring, and the controls comprise a joystick and two buttons. Obviously, the joystick moves you around, while the buttons are for cape moving and stabbing, respectively. You score points for leading the bull with your cape, stabbing the bull, leading it into a wall, opening a wound on its back and killing it. Upon killing the bull, you go onto the next stage, with progressively fiercer bulls, and eventually, a second bull gets added to the mix.</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Coreland</developer>
+		<publisher>SEGA</publisher>
+		<genre>Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bullfgt.png</image>
+		<genreid>1536</genreid>
+	</game>
+	<game id="40367" source="ScreenScraper.fr">
+		<path>./brival.zip</path>
+		<name>Burning Rival (World)</name>
+		<desc>Burning Rival is a cartoon-like fighting game with pleasing animation and a sense of humor. 8 selectable characters.</desc>
+		<rating>0.4</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/brival.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="40434" source="ScreenScraper.fr">
+		<path>./calorie.zip</path>
+		<name>Calorie Kun Vs Moguranian</name>
+		<desc>Calorie Kun vs Moguranian is a traditional platforms and ladders game in which the player controls an abstract, mole-like creature that must make its way around a number of underground tunnels, avoiding enemies and collecting the items placed around the screen; before quickly making its way to the exit. The player is armed with a limited number of bombs that can be used to destroy or disable enemies.</desc>
+		<rating>0.3</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/calorie.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="145389" source="ScreenScraper.fr">
+		<path>./champbas.zip</path>
+		<name>Champion Base Ball</name>
+		<desc>Champion Baseball is a 1983 baseball arcade game developed by Alpha Denshi and published by Sega. The game was a sophisticated sports game for its time, displaying the playfield using multiple camera angles, including a close-up shot of the batter and pitcher, and giving players the option of selecting relief pitchers or pinch hitters, while an umpire looks on attentively to make the game calls. The game became very popular in Japanese arcades when released in 1983, at one point enjoying a level of popularity comparable to Space Invaders according to Sega.</desc>
+		<rating>0.3</rating>
+		<releasedate>19830101T000000</releasedate>
+		<image>/userdata/roms/mame/images/champbas.png</image>
+	</game>
+	<game id="40525" source="ScreenScraper.fr">
+		<path>./chboxing.zip</path>
+		<name>Champion Boxing</name>
+		<desc>Champion Boxing is a simplistic boxing game built for the SG-1000. It was later re-released in arcades for SG-1000-based arcade hardware. 
+ 
+There are five difficulty levels, and the aim is to knock out the opponent. 1 attacks, 2 selects an attack. Interestingly, if a player wins Pengo will make a cameo. 
+ 
+Champion Boxing is also noteworthy for being the first game coded by Yu Suzuki in his first year at Sega.</desc>
+		<rating>0.3</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Sports / Boxing-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/chboxing.png</image>
+		<genreid>1540</genreid>
+	</game>
+	<game id="40557" source="ScreenScraper.fr">
+		<path>./chwrestl.zip</path>
+		<name>Champion Pro Wrestling</name>
+		<desc>A straightforward Pro Wrestling game from Sega in the Champion sport series. You always start at rank C and have to fight your way up to rank B and A. To play for a rank you 'll have to fight three matches. Winning two out of three matches promotes you to an higher rank. During a match several moves can be selected: chop, kick, pile driver, dropkick. The referee does a countdown when your opponent or you are down.</desc>
+		<rating>0.2</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Sports / Wrestling-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/chwrestl.png</image>
+		<genreid>1536</genreid>
+	</game>
+	<game id="40521" source="ScreenScraper.fr">
+		<path>./changes.zip</path>
+		<name>Changes</name>
+		<desc>This maze game is quite similar to "Pac-Man". The player controls a caterpillar that crawls along the branches of a maze-like tree eating nuts and strawberries while avoiding deadly bugs and a hungry bird. The caterpillar changes into a butterfly after everything has been eaten. 
+ 
+The caterpillar must eat all the strawberries and nuts on each level to become a butterfly. Eating a strawberry temporarily makes the caterpillar invincible allowing it to kill the deadly bugs and score 400 bonus points ber bug. If the caterpillar remains still for too long, an invincible owl (replaced by an invincible bat in later levels) will appear. If your catepillar moves, the owl or bat will disappear.  If your catepillar remains still, the invincible owl or bat will chase the caterpillar, albiet not very effrctively.   
+ 
+When the caterpillar crosses over a pivot branch, all the branches will rotate at once, and any bugs that are on those branches will fall off and score 400, 800, 1600 and 3200 points, depending on the amount of bugs killed. Keep an eye out for the flowers that will appear below the house - they will reward you between 400 and 3200 points, depending on the level.</desc>
+		<rating>0.5</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Orca Corporation</developer>
+		<publisher>Orca</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/changes.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40549" source="ScreenScraper.fr">
+		<path>./choplift.zip</path>
+		<name>Choplifter (8751 315-5151)</name>
+		<desc>The player assumes the role of a combat helicopter pilot. The player attempts to save hostages being held in prisoner of war camps in an unnamed enemy country. The player must collect the P.O.W.s, transport them safely to the nearby friendly base, all the while fighting off hostile tanks and other enemy combatants. There are a total of 32 hostages per level. To rescue more than 20 will advance the player to the next level.</desc>
+		<rating>0.8</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/choplift.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40587" source="ScreenScraper.fr">
+		<path>./cltchitr.zip</path>
+		<name>Clutch Hitter (US, FD1094 317-0176)</name>
+		<desc>Clutch Hitter is a baseball game originally released for Sega System 18 hardware before being ported to the Sega Game Gear. The Game Gear version was only released in North America. 
+ 
+There are noticeable differences between the Japanese and US versions of the arcade game - the US version has a MLB license and uses US teams, while the Japanese version opts for Japanese players and teams. There are also subtle changes to the presentation to reflect the two regions. A Chicken Leg, an enemy seen in Altered Beast and Golden Axe, makes a cameo appearance in the results screen. 
+ 
+Clutch Hitter is considered to be an entry in the Super League series of baseball games, directly inspiring the improvements Pro Yakyuu Super League '91 made to Super League.</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/cltchitr.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40618" source="ScreenScraper.fr">
+		<path>./columns2.zip</path>
+		<name>Columns 2 - The Voyage Through Time (World)</name>
+		<desc>Align 3 or more items of the same color vertically, horizontally or diagonally. 
+ 
+Columns II: The Voyage Through Time was the sequel to Columns. It featured the normal puzzle game play, but was only released in Japan in the arcades. It is not clear as to why it was subtitled "The Voyage Through Time", other than the minor tile differences which seem to  attempt to indicate future and past ages: they are labeled as Machine Theme, Pale Green Theme, and Classic Theme.</desc>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<publisher>SEGA</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/columns2.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40621" source="ScreenScraper.fr">
+		<path>./combh.zip</path>
+		<name>Combat Hawk</name>
+		<desc>Combat Hawk is a reaction-based shoot-em-up in which the player takes on the role of an army soldier.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Sanritsu Denki</developer>
+		<publisher>Sanritsu Denki</publisher>
+		<genre>Race, Driving-Race 1st Pers. view-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/combh.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="150338" source="ScreenScraper.fr">
+		<path>./commsega.zip</path>
+		<name>Commando (Sega)</name>
+		<desc>Commando is an early shoot'em up.</desc>
+		<rating>0.3</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/commsega.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40667" source="ScreenScraper.fr">
+		<path>./congo.zip</path>
+		<name>Congo Bongo (Rev C, 2 board stack)</name>
+		<desc>Congo Bongo is an isometric platform game and is Sega's take on Nintendo's legendary "Donkey Kong". The game begins with an animated cut-scene showing Bongo the gorilla as approaches the campsite of a sleeping safari hunter and</desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/congo.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="40689" source="ScreenScraper.fr">
+		<path>./cotton.zip</path>
+		<name>Cotton: Fantastic Night Dreams (set 4, World, FD1094 317-0181a)</name>
+		<desc>Cotton is a shooter starring a cute, moderately psychotic witch and a fairy. It was originally an arcade game, released in Japan in 1991; it was ported to many other platforms.</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/cotton.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40721" source="ScreenScraper.fr">
+		<path>./crkdown.zip</path>
+		<name>Crack Down (World, Floppy Based, FD1094 317-0058-04c)</name>
+		<desc>A futuristic city has been over-taken by a powerful, bio-mechanical army; created by an evil scientist in a bid to take over the world. 2 elite agents must plant a series of time bombs to destroy their base and crush the rebellion. 
+ 
+The 1- or 2-player shoot-em-up action is displayed via an innovative split screen that allows 2 players to work either individually or as a team. A timer countdown timers adds to the tension. Time bombs must be set by running over areas marked with an 'X'; while machine guns and cannons can be reloaded by finding the ammo caches that appear on each level. If ammo runs out, players must result to punching and kicking to defeat opponents.</desc>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/crkdown.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40848" source="ScreenScraper.fr">
+		<path>./ddcrew.zip</path>
+		<name>D. D. Crew (World, 3 Players, FD1094 317-0190)</name>
+		<desc>There's a massive terrorist plot underway and your country is under threat from a new and deadly evil. You must become one part of a 4 man wrecking crew and hit the streets to take the awesome fighting to the waves of terrorists baddies! Jump out of helicopters as you descend to the streets and fight terrorists all over the city - from down on the tarmac to up on the roofs! Punch and kick your way through everyone, collecting their weapons and using them when you can!</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/ddcrew.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="40820" source="ScreenScraper.fr">
+		<path>./darkedge.zip</path>
+		<name>Dark Edge (World)</name>
+		<desc>Dark Edge is a futuristic 3-D fighting game. While the game does not use polygons, sprite and environment scaling is used to give the game a depth of 3-D movement, as the characters circle around each other on the playfield.</desc>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/darkedge.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="40896" source="ScreenScraper.fr">
+		<path>./depthch.zip</path>
+		<name>Depthcharge</name>
+		<desc>Depthcharge is a 2-Dimensional shooter. You control your destroyer on the surface of the water while submarines patrol underneath. Your job is to drop depth charges to eliminate these submarines. The submarines aren't defenseless as they launch mines straight up toward your ship. 
+ 
+Depthcharge was one of the early video games. Action was simple. This game also had the ability to retain the highest score (without the initials of course). Although the game is simple in concept, just trying to get enough points was enough to keep you working at it. Good luck on your submarine hunting mission.</desc>
+		<rating>0.3</rating>
+		<releasedate>19770101T000000</releasedate>
+		<developer>Gremlin Interactive</developer>
+		<publisher>Gremlin Interactive</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/depthch.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40903" source="ScreenScraper.fr">
+		<path>./desertbr.zip</path>
+		<name>Desert Breaker (World, FD1094 317-0196)</name>
+		<desc>Select one of 3 available characters in this vertically-scrolling, futuristic, military-themed shoot'em up. A variety of power-ups can be picked up along the way to aid the player in his or her battle against the many hundreds of troops and tanks that populate the levels.</desc>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/desertbr.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40923" source="ScreenScraper.fr">
+		<path>./digger.zip</path>
+		<name>Digger</name>
+		<desc>Digger is a game that requires you to dig strategically placed holes within a maze format so you can capture and fill in over the invading creatures before they can attack and destroy your man. The maze format changes with every round played. 
+ 
+The creatures are confined behind a wall. In the first of three rounds of game play, four creatures are let out of the holding area through a gate. You must conquer these four before advancing to the next round, where you face six creatures. Your third round has you battling eight creatures. This process is repeated and the point value increased with each three-round victory. Also, creatures' speed increases each round. Any contact at all with the creatures will be fatal to your man. 
+ 
+While you are busy digging holes and entrapping creatures, the rest are behind the retaining wall scurrying back and forth. After about three minutes, the gates at each end will open and all of the remaining creatures will stream into the play area at once. However, a skillful player will conquer all of the creatures of each round and the gate will not be a threat.</desc>
+		<rating>0.3</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Century Electronics</developer>
+		<publisher>Century Electronics</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/digger.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40963" source="ScreenScraper.fr">
+		<path>./dokidoki.zip</path>
+		<name>Doki Doki Penguin Land</name>
+		<desc>Doki Doki Penguin Land is a platform puzzle game in which the player controls a penguin called Adelie and must safely guide an egg - by digging downwards - from the roof at the top of each stage down to the penguin's living room and waiting wife. 
+ 
+The penguin can push the egg left or right and can jump on it to make sure it doesn't get stuck against a wall. Digging affects the tile one block away from the penguin's position, making it impossible to dig directly downwards. If the egg gets into a position where it cannot be moved left or right, jumping and landing on it will cause it to smash. </desc>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dokidoki.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="40982" source="ScreenScraper.fr">
+		<path>./dotrikun.zip</path>
+		<name>Dottori Kun (New version)</name>
+		<desc>Dottori Kun is a tiny maze game.</desc>
+		<rating>0.1</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/dotrikun.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40841" source="ScreenScraper.fr">
+		<path>./dbzvrvs.zip</path>
+		<name>Dragon Ball Z V.r.v.s. (Japan)</name>
+		<desc>Although the game is in 2D, it uses camera angles positioned behind the characters to create a 3D-like experience. The game is controlled with a joysick and 3 buttons; a deluxe edition of the game features motion sensors that allow the player to move his or her body to control the character in the game. The object of the game is to defeat six opponents. The playable characters are Goku, Gohan, Piccolo, Vegeta, and Future Trunks. The final boss is an original character named Ozotto.</desc>
+		<rating>0.7</rating>
+		<releasedate>19940101T000000</releasedate>
+		<publisher>SEGA</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dbzvrvs.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41057" source="ScreenScraper.fr">
+		<path>./dunkshot.zip</path>
+		<name>Dunk Shot (Rev C, FD1089A 317-0022)</name>
+		<desc>Dunk Shot is a top-down basketball arcade game released for Sega System 16B hardware by Sega in 1987. It was licensed to Atari Games for release in the United States.</desc>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/dunkshot.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40842" source="ScreenScraper.fr">
+		<path>./dcclub.zip</path>
+		<name>Dynamic Country Club (World, ROM Based)</name>
+		<desc>Dynamic C.C. - Dynamic Country Club is a polygon-based golf simulation game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dcclub.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40875" source="ScreenScraper.fr">
+		<path>./dduxbl.zip</path>
+		<name>Dynamite Dux (Datsu bootleg)</name>
+		<desc>Dynamite Dux is a beat 'em up game, though rather than relying purely on one-on-one combat the ducks can equip themselves with a variety of weapons, from water pistols to bazookas. The game is also populated with a variety of odd looking enemies and bosses. Colonel Sanders, for instance, can be seen at the very beginning of the first level.</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Fight / 2.5D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ddux.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="40875" source="ScreenScraper.fr">
+		<path>./ddux.zip</path>
+		<name>Dynamite Dux (set 3, World, FD1094 317-0096)</name>
+		<desc>Dynamite Dux is a beat 'em up game, though rather than relying purely on one-on-one combat the ducks can equip themselves with a variety of weapons, from water pistols to bazookas. The game is also populated with a variety of odd looking enemies and bosses. Colonel Sanders, for instance, can be seen at the very beginning of the first level.</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Fight / 2.5D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ddux.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="149789" source="ScreenScraper.fr">
+		<path>./elim2.zip</path>
+		<name>Eliminator (2 Players, set 1)</name>
+		<desc>Eliminator is a multi-directional shooter in which players must use four buttons to take control of their ship: two to make them rotate left and right, and two more to make them fire and accelerate. Players pilot a space ship around the playfield and must destroy alien drones. The ultimate goal is to evade and destroy the Eliminator, a huge asteroid base. The players fire causes any enemy that is struck (with the exception of the Eliminator itself) to rebound and careen off in another direction. </desc>
+		<rating>0.7</rating>
+		<releasedate>19810101T000000</releasedate>
+		<genre>Shooter</genre>
+		<image>/userdata/roms/mame/images/elim2.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="41110" source="ScreenScraper.fr">
+		<path>./enduror.zip</path>
+		<name>Enduro Racer (YM2151, FD1089B 317-0013A)</name>
+		<desc>Enduro Racer is an off-road racing game in which players ride a dirt bike across five extremely hilly and twisting courses. Each course is littered with logs, rocks, trees and rival racers that must be either jumped over or avoided. 
+ 
+Jumps can only be performed at specific locations on each track. These locations feature a dirt ramp that spreads across the width of the track. Players must have the bike in the 'wheelie' position when the ramp is struck, the bike will then be launched into the air. If the bike is not in a wheelie position when the ramps are struck, the bike will still clear the ramp, but will land front-wheel first and crash. 
+ 
+Enduro Racer is perhaps best remembered for its 'Wheelie' feature, which required the player to physically lift the cabinet's handlebars to raise the front wheel of the game's on-screen counterpart.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Motorcycle Race, 3rd Pers.-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/enduror.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41122" source="ScreenScraper.fr">
+		<path>./eswat.zip</path>
+		<name>E-swat - Cyber Police (set 4, World, FD1094 317-0130)</name>
+		<desc>Cyber Police ESWAT is a 1989 scrolling shooter arcade game developed and published by Sega. Players take control of Duke Oda, a member of the Liberty City Cyber Police Force tasked with finding and arresting the city's most wanted criminals, and eventually dismantling a terrorist organization planning world domination. 
+ 
+The gameplay is very similar to Sega's own Shinobi, as the player has the ability to jump up and down between planes where possible. The goal of each of the game's 15 stages is to find and arrest a specific wanted criminal, who is usually fought at the end of the stage as a boss. Duke is initially armed with only a single-shot pistol, but upon arresting the first three criminals and being promoted to ESWAT, Duke is equipped with a Power Suit with a mounted machine gun for the rest of the game. The suit also has access to limited-use special weapons which can be found within stages. However, both of Duke's standard weapons require ammunition, without which the player can only attack with a kick. Additional ammunition can be found in boxes throughout each stage.</desc>
+		<rating>0.6</rating>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>SEGA</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/eswat.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41149" source="ScreenScraper.fr">
+		<path>./f1en.zip</path>
+		<name>F1 Exhaust Note (World)</name>
+		<desc>F1 Exhaust Note (c) 1991 Sega Enterprises, Ltd.  An F-1 racing game.  - TECHNICAL -  Sega System 32 hardware  Main CPU : V60 (@ 16.10795 Mhz), Z80 (@ 8.053975 Mhz) Sound Chips : (2x) YM3438 (@ 8.053975 Mhz), RF5C68 (@ 12.5 Mhz)  Players : 1 Control : padd</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/f1en.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41172" source="ScreenScraper.fr">
+		<path>./fantzone.zip</path>
+		<name>Fantasy Zone (Rev A, unprotected)</name>
+		<desc>The Fantasy Zone is under attack by an army of ruthless, yet undeniably cute, alien enemies. A fearless space fighter by the name of 'Opa-opa' (a craft that is as cute as the game's enemies, featuring wings and feet - the latter appearing whenever the player flies down to ground level at the bottom of the screen) must stop the alien invasion to restore peace to the Fantasy Zone, as well as finding his missing father, 'Opapa', in the process.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/fantzone.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41170" source="ScreenScraper.fr">
+		<path>./fantzn2.zip</path>
+		<name>Fantasy Zone 2 - The Tears Of Opa-opa (MC-8123, 317-0057)</name>
+		<desc>Once again you control Opa-Opa, a pretty colored ship with wings on its side and must destroy the large creatures in each world before moving on to the next. Your task becomes difficult by other small creatures that happen to pass by. If you destroy a large creature, they will drop a dollar bill, which you can pick up and use at the shop to buy items and powerful weapons such as laser beams, x-way shots, and big wings. Another way to get money is to shoot certain kinds of enemies all in a row.</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/fantzn2.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41251" source="ScreenScraper.fr">
+		<path>./flashgal.zip</path>
+		<name>Flashgal (set 1)</name>
+		<desc>Take a stand against crime! As the hyperactive female crime fighter (she just can't stand still!) known as the Flashgal, you'll face many dangers such as helicopters, dogs, thugs &amp; ninjas in order to protect peace, lots of different game styles (beat-em up, shooting, hack &amp; slash, etc.) give this fun game lots of variety!</desc>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Beat'em Up-Fight / 2D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/flashgal.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="41252" source="ScreenScraper.fr">
+		<path>./flicky.zip</path>
+		<name>Flicky (128k Version, 315-5051)</name>
+		<desc>Flicky is a side-scrolling platform game in which the player controls 'Flicky', a flightless bird who must collect her lost chicks - called 'chirps' - and guide them safely to the exit, represented as a door with Flicky's name shown above it.  
+ 
+Flicky must watch out for the house cats that emerge from cat-flaps and start roam the levels, as any contact with a cat results in the loss of a life. Any chicks that are touched by a cat will be separated from Flicky and must again be retrieved.  </desc>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/flicky.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="41256" source="ScreenScraper.fr">
+		<path>./flower.zip</path>
+		<name>Flower (US)</name>
+		<desc>Flower is a vertical shoot'em up that is set in outer space. Eliminate attacking flowers and a variety of end-bosses. Shoot daisy-chains and comets for power-up items.</desc>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Clarue</developer>
+		<publisher>Clarue (Komax license)</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/flower.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41281" source="ScreenScraper.fr">
+		<path>./frogs.zip</path>
+		<name>Frogs</name>
+		<desc>You're a frog on a lily pad and there's flies and insects flying around you. Jump and stick out your tongue to catch these critters. A dragonfly comes out towards the end of your game, if you catch the Dragonfly you get a free game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19780101T000000</releasedate>
+		<developer>Gremlin Interactive</developer>
+		<publisher>Gremlin Interactive</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/frogs.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="41311" source="ScreenScraper.fr">
+		<path>./futspy.zip</path>
+		<name>Future Spy (315-5061)</name>
+		<desc>Future Spy is an arcade game released by Sega in 1984 that runs on Sega Zaxxon hardware. 
+ 
+Like Zaxxon it is a isometric shoot-'em-up, but unlike Zaxxon the player does not spend time adjusting the height of his ship (or plane in this circumstance). One button fires at air targets while another drops bombs on ground targets.</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Diagonal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/futspy.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41429" source="ScreenScraper.fr">
+		<path>./gground.zip</path>
+		<name>Gain Ground (World, 3 Players, Floppy Based, FD1094 317-0058-03)</name>
+		<desc>Gain Ground is a one or two player shoot-em-up featuring single screen levels, in which players must rescue lost troops before making their way to the exit. Players can choose to play as any one of three different characters; each with their own unique weapons, strengths and weaknesses. Time is a factor in this game and all troops that do not enter the exit will be lost. All rescued troops will join the player's ranks as bonus players. The levels take players through fields, castles, forests, forts etc.</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/gground.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41424" source="ScreenScraper.fr">
+		<path>./gforce2.zip</path>
+		<name>Galaxy Force 2</name>
+		<desc>Galaxy Force II is a superb sprite-scaling shoot-em-up from Sega, in which a single player must battle their way through a number of superbly rendered, space-themed levels. Action switches between open space battles and planet-based levels; with tight, enemy packed tunnel sections (enemy bases) seperating each level.</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Plane, 3rd person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/gforce2.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="41391" source="ScreenScraper.fr">
+		<path>./gardia.zip</path>
+		<name>Gardia (317-0006)</name>
+		<desc>Gardia is extremely similar to Namco's Xevious. The player controls a space ship capable of firing at air targets with one button, and ground targets with another. There are weapon powerups and end bosses.</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gardia.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41414" source="ScreenScraper.fr">
+		<path>./gekisou.zip</path>
+		<name>Gekisou (Japan)</name>
+		<desc>Gekisou is an excellent and exciting, high-speed scrolling racing game. 
+ 
+The players control a futuristic armored car at full speed to escape of attack from a variety of enemies vehicles on the city, for this you have powerful weapons at your disposal, you must bump the enemy's car to destroy them and jump to evade obstacles in road or crush the enemies, while reaches the garage to go the next level.</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Eastern Corp.</developer>
+		<publisher>Eastern Corp.</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gekisou.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41444" source="ScreenScraper.fr">
+		<path>./gigasb.zip</path>
+		<name>Gigas (bootleg)</name>
+		<desc>Gigas is a 'breakout'-style from Sega.</desc>
+		<rating>0.8</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gigasb.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="41445" source="ScreenScraper.fr">
+		<path>./gigasm2b.zip</path>
+		<name>Gigas Mark 2 (bootleg)</name>
+		<desc>Gigas Mark II is a ball and paddle game from Sega featuring 32 levels.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>bootleg</developer>
+		<publisher>bootleg</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gigasm2b.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="41461" source="ScreenScraper.fr">
+		<path>./gloc.zip</path>
+		<name>G-loc Air Battle (World)</name>
+		<desc>G-Loc - Air Battle is a direct sequel to 1987's "After Burner", G-loc adopts its predecessor's action-packed, if somewhat limited, gameplay, although the game's pace has been noticeably reduced, making survival more a matter of skill than the shoot-and-hope gameplay of "After Burner". 
+ 
+The object of the game is to shoot a set number of enemy planes as they approach from front and behind; rolling and swerving to avoid incoming enemy fire. Certain stages feature ground-based enemy installations which must also be destroyed. The player's jet fighter is armed with both a machine gun, and a limited supply of missiles which can be 'locked-on' to enemy targets. G-Loc's levels take the player through a variety of different landscapes, including wide, rolling plains and rock-strewn canyons. Later in the game, the player must attempt to land their fighter onto an aircraft carrier. Failure to do so results in the game ending.</desc>
+		<rating>0.8</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Plane, 1st person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/gloc.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="41322" source="ScreenScraper.fr">
+		<path>./ga2.zip</path>
+		<name>Golden Axe - The Revenge Of Death Adder (World)</name>
+		<desc>Like it's legendary prequel, 1989's "Golden Axe"; 'Revenge' is sideways scrolling beat-em-up set in a traditional fantasy world, in which the evil 'Death Adder' has arisen to take over the lands. The game supports simultaneous four-player gameplay, with each player taking on one of the game's characters. The four available characters are 'Sternblade' (a barbarian warrior), 'Dora' (a female centaurian), 'Goah' (a giant with a dwarf sitting atop his shoulders) and 'Little Trix' (an agile, oriental-style warrior).</desc>
+		<rating>0.6</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Fight / 2.5D-Fight</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/ga2.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41484" source="ScreenScraper.fr">
+		<path>./goldnaxe.zip</path>
+		<name>Golden Axe (set 6, US, 8751 317-123A)</name>
+		<desc>Golden Axe is a sideways scrolling beat-em-up set in a traditional fantasy world, in which up to three warriors take up arms to rescue the kidnapped King and his Queen from the evil Death Adder. 
+ 
+The game's three different playable characters are an Amazonian warrior named Tyris Flare, a Barbarian hero named Ax Battler, and a Viking dwarf named Gilius Thunderhead. Each character has a special attack move that is activated by pressing both JUMP and ATTACK at the same time. Also, double-tapping the joystick right or left will make the character charge and smash into opponents.</desc>
+		<rating>0.8</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Beat'em Up-Action-Fight / 2.5D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/goldnaxe.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="41608" source="ScreenScraper.fr">
+		<path>./gyrodine.zip</path>
+		<name>Gyrodine</name>
+		<desc>Gyrodine is a vertically scrolling shoot 'em up.</desc>
+		<rating>0.6</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Crux</developer>
+		<publisher>Taito</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gyrodine.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="149465" source="ScreenScraper.fr">
+		<path>./headon.zip</path>
+		<name>Head On (2 Players)</name>
+		<desc>Head On is a 2-Dimensional maze racing game. You control your car through the maze to pick up the dots while at the same time avoiding the car, or cars, that are constantly trying to ram you. Successfully get through one maze and many more await you. This is good practice for freeway driving in the big city.</desc>
+		<rating>0.3</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Gremlin Interactive</developer>
+		<publisher>Gremlin Interactive</publisher>
+		<genre>Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/headon.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41653" source="ScreenScraper.fr">
+		<path>./headon2.zip</path>
+		<name>Head On 2</name>
+		<desc>Head On 2 is a 2-D maze racing game. You control your car through the maze to pick up the dots while at the same time avoiding the car, or cars, that are constantly trying to ram you. Successfully get through one maze and many more await you. This is good practice for freeway driving in the big city.</desc>
+		<rating>0.3</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action-Race, Driving-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/headon2.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41752" source="ScreenScraper.fr">
+		<path>./hvymetal.zip</path>
+		<name>Heavy Metal (315-5135)</name>
+		<desc>Watch as your transport vessel cruises up to the docks and you drive your powerful tank through the enemy territory to wage a massive war against a plentiful and deadly enemy! In the mighty Heavy Metal you must command a cool tank and use your machine guns and huge missiles to fight through the waves and waves of enemy vehicles structures and troops to destroy their forces to win the war for your people!</desc>
+		<releasedate>19800101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Vehicle, Vertical-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hvymetal.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="41755" source="ScreenScraper.fr">
+		<path>./hwchamp.zip</path>
+		<name>Heavyweight Champ</name>
+		<desc>Heavyweight Champ is a first person boxing game where you guide a boxer named 'Kid Crusher' up the rankings and towards a World Heavyweight Title bout. Win and defend your belt successfully to become a true champion.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Sports / Boxing-Sports</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/hwchamp.png</image>
+		<genreid>1540</genreid>
+	</game>
+	<game id="41660" source="ScreenScraper.fr">
+		<path>./heiankyo.zip</path>
+		<name>Heiankyo Alien</name>
+		<desc>You control a man who walks around in a maze digging holes to trap the aliens.</desc>
+		<rating>0.1</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Denki Onkyo</developer>
+		<publisher>Denki Onkyo</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/heiankyo.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41700" source="ScreenScraper.fr">
+		<path>./hoccer.zip</path>
+		<name>Hoccer (set 1)</name>
+		<desc>You are Andrew, the one man team. Ord and Clee are robots whose goal is to destroy you any way they can (by driving you against the boards, into a spinner, or by hitting you with a supercharged ball). Knock out Ord and Clee with your ball or by hitting them against the sides. Points are also scored by hitting the goal and hitting the targets on the sides.</desc>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Eastern Micro Electronics</developer>
+		<publisher>Eastern Micro Electronics</publisher>
+		<genre>Sports / Hockey-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hoccer.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41704" source="ScreenScraper.fr">
+		<path>./holo.zip</path>
+		<name>Holosseum (US)</name>
+		<desc>The first (and hopefully only) holographic fighter featuring four selectable characters representing different martial arts. I'll let you in on a little secret - my legs are stronger than my arms!</desc>
+		<rating>0.3</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/holo.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41710" source="ScreenScraper.fr">
+		<path>./hopprobo.zip</path>
+		<name>Hopper Robo</name>
+		<desc>Hopper Robo is a platform game in which the player must use a two-way joystick to take up control of a robot named Hopper Robo, and a single button to make him jump. His objective is to collect the numbered boxes on each round in numerical order (the one he should collect next will flash), then drop them onto one of the two conveyor belts at the bottom of the screen. There are several kinds of enemy robots that guard some of the boxes; they all move in preset patterns and you will have to learn their movements in order to figure out the best moment to sneak past them. If any of them touch Hopper Robo he will die. He must also avoid other obstacles such as flying hammers and springs. To aid Hopper Robo, there are springboards to reach higher platforms, and pipes to slide back down. If Hopper Robo should run out of energy, it will cost him a life - but when he clears a round, his remaining energy will be awarded to the player, as bonus points. There are eight unique levels, after which the game loops indefinitely.</desc>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hopprobo.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="150351" source="ScreenScraper.fr">
+		<path>./hotrod.zip</path>
+		<name>Hot Rod (World, 3 Players, Turbo set 1, Floppy Based)</name>
+		<desc>Hot-Rod is a scrolling top-down racing game in which up to four players race each other over a variety of different surfaces on a selection of narrow, twisting roads. Each player's vehicle has a fuel (gas) meter that constantly depletes as the race progresses. Extra fuel and bonus pick-ups are placed at regular intervals on each track and can be collected by driving over them. If a car runs out of fuel it is automatically disqualified from the race. </desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/hotrod.png</image>
+	</game>
+	<game id="41795" source="ScreenScraper.fr">
+		<path>./imsorry.zip</path>
+		<name>I'm Sorry (315-5110, US)</name>
+		<desc>Rabid-Media rates this game: 4/5This one's just plain rediculous! you are some fat guy in a suit. there is a small screen filled with other suited guys, a rolling barrel, and bars of gold. your job is to get those bars of gold and bring them to the building with the word, "IN" on it. Kinda like flicky, you can bring some over to it, then get the rest seperately, but you will get less points this way.
+the graphics are nice and vivid (for an 80's sega arcade game.) and the animations are just plain silly, and sometimes disturbing (when you get caught by a suited man, he then is in a black bikini beating you with a whip!)
+you can combat these perverst by punching them, sometimes repeatedly. you must jump over the barrel to avoid it most of the time.
+as far as arcade games go, it's definately a fun, challenging product of Japanese insanity! try it!</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<publisher>SEGA</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/imsorry.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="214725" source="ScreenScraper.fr">
+		<path>./invds.zip</path>
+		<name>Invinco / Deep Scan</name>
+		<desc>Invinco is a game inspired by "Space Invaders", with some innovation on the aliens: One row blinks in and out of view, another row's aliens roll so as to make themselves harder or easier to hit, and a 3rd row of aliens each take (at least) 3 hits to kill. A 4th row has aliens that turn into bombs, blowing up everything around them to make your job somewhat easier. 
+ 
+Deep Scan is a sub hunting game.</desc>
+		<rating>0.3</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>SEGA</developer>
+		<genre>Compilation</genre>
+		<image>/userdata/roms/mame/images/invds.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game id="150362" source="ScreenScraper.fr">
+		<path>./invho2.zip</path>
+		<name>Invinco / Head On 2</name>
+		<desc>Head On 2 is a 2-D maze racing game. You control your car through the maze to pick up the dots while at the same time avoiding the car, or cars, that are constantly trying to ram you. Successfully get through one maze and many more await you. This is good practice for freeway driving in the big city. 
+ 
+Invinco is a game inspired by "Space Invaders" with some innovation on the aliens: One row blinks in and out of view, another row's aliens roll so as to make themselves harder or easier to hit, and a 3rd row of aliens each take (at least) 3 hits to kill. A 4th row has aliens that turn into bombs, blowing up everything around them to make your job somewhat easier.</desc>
+		<rating>0.3</rating>
+		<releasedate>19790101T000000</releasedate>
+		<genre>Compilation</genre>
+		<image>/userdata/roms/mame/images/invho2.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game id="41826" source="ScreenScraper.fr">
+		<path>./invinco.zip</path>
+		<name>Invinco</name>
+		<desc>Invinco is another game in spired by "Space Invaders", this one includes some innovation on the aliens: One row blinks in and out of view, another row's aliens roll so as to make themselves harder or easier to hit, and a 3rd row of aliens each take (at least) 3 hits to kill. A 4th row has aliens that turn into bombs, blowing up everything around them to make your job somewhat easier.</desc>
+		<rating>0.5</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter-Shooter / Space Invaders Like-Compilation-Action</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/invinco.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41847" source="ScreenScraper.fr">
+		<path>./ixion.zip</path>
+		<name>Ixion (Prototype)</name>
+		<desc>Ixion is a shoot 'em up game where the player has to collect letters for points. 
+ 
+All the letters must be collected to reach the KAILO round. The player receives 500 to 8000 points for collecting gold letters. Enemies are worth 200 points &amp; crystals are worth 1000 points. The KAILO ball heals tiles while the OLIAK ball destroys tiles. A bonus ship is awarded every 100000 points.</desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ixion.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="150352" source="ScreenScraper.fr">
+		<path>./jpark.zip</path>
+		<name>Jurassic Park (World)</name>
+		<desc>Jurassic Park is an on-the-rails lightgun game for 1 or 2 players, based on the groundbreaking Steven Spielberg movie of the same name. 
+ 
+Jurassic Park features Sega's often-used and highly effective sprite scaled graphics and is very similar in style to another Sega Lightgun shoot-em-up, 1991's "Rail Chase". For subsequent games in the series, graphics technology had moved on somewhat and scaled sprites were dropped in favour of far superior textured polygons.</desc>
+		<rating>0.8</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/jpark.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="42124" source="ScreenScraper.fr">
+		<path>./legend.zip</path>
+		<name>Legend</name>
+		<desc>The player controls a young commander which uses a green armour and helmet and must defending the kingdom lands from invading enemies, following the orders and instructions given by the old king, for it you'll have to use money to making defect the enemy and recruit under your commands to form a legion of soldiers and make uses of different arms collected on the way, like bombs and arrows to defeat other enemies while you jump and dodges his attacks, always avoiding contact with any enemy for not to die and continue his legendary journey.</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>Kyugo Boueki</publisher>
+		<genre>Fight / 2D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/legend.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="78855" source="ScreenScraper.fr">
+		<path>./marineb.zip</path>
+		<name>Marine Boy</name>
+		<desc>In Marine Boy, you play as a diver equipped with a harpoon who must at each level reach a mermaid in a shell located at the bottom of the water. This is a vertical shoot 'em up with a scroll down. You will face different sea creatures such as orcas, dolphins or jellyfish. Mermaids encountered along the way will give you bonus points. Be careful your oxygen is limited!</desc>
+		<rating>0.5</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Orca</developer>
+		<publisher>Orca</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/marineb.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="63190" source="ScreenScraper.fr">
+		<path>./mwalk.zip</path>
+		<name>Michael Jackson's Moonwalker (World, FD1094/8751 317-0159)</name>
+		<desc>Based on the movie of the same name, Moonwalker is a scrolling, isometric beat' em up in which Michael Jackson (1958-2009), along with his chimp Bubbles, attempts to save children and defeat the evil 'Mr. Big'. During each round, the player must defeat each and every one of Mr. Big's henchmen and the deadly enemy machines that patrol the levels. This is achieved either by shooting them with Michael Jackson's 'magical energy', or by using his Dance Magic - the game's equivalent of a smart bomb. Some enemies take only one shot to defeat whereas others take several shots before they are destroyed. The longer the player holds down on the fire button, the greater the amount of magical energy Michael can inflict. At the start of each round, the player is given 2 dance magic smart bombs. Towards the end of each round, Michael's pet chimpanzee, Bubbles, will be seen moving about. If Michael touches Bubbles, he will turn into a powerful robot (the 'Moonwalker' of the game's title). After Michael has become Moonwalker, he will be able to shoot lasers and fire missiles. Michael must defeat every boss enemy at the end of each round in order to proceed to the next.</desc>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Beat'em Up-Action-Fight-Action / Labyrinth</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/mwalk.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="79000" source="ScreenScraper.fr">
+		<path>./mrviking.zip</path>
+		<name>Mister Viking (315-5041)</name>
+		<desc>Become a fearless Viking warrior in search of a missing treasure. Face a fury of enemy obstacles in a barbaric battle for bonus points!</desc>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mrviking.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="62993" source="ScreenScraper.fr">
+		<path>./monsterb.zip</path>
+		<name>Monster Bash</name>
+		<desc>MONSTER BASH is a fascinating cartoon theme game featuring colorful graphics in three exciting scenes of hunt-and-hide adventure. Light-hearted, suspenseful music and audio sounds add to the fun, and heighten player interest and intrigue. 
+ 
+DRACULA'S HOUSE 
+The player-hero of the game is LITTLE RED, a wily, red-headed boy who chases Dracula throughout his five-story haunted house. Up and down staircases and through Warp Doors leading to secret passageways, Little Red zaps defending bats while attempting to light candles in certain rooms. When a candle is lit a Magic Sword is energized with mystical powers. Little Red must touch the flashing Magic Sword to gain SuperZap power... only a SuperZap will defeat the sly Dracula. 
+ 
+FRANKENSTEIN'S CASTLE 
+Little Red enters the eerie castle of the hulking Frankenstein. He pursues Frankenstein around his six-story castle while avoiding the fierce Wolfmen.  The tricky Wolfmen can be zapped, but be careful, they can duck under the zap and attack Little Red. Fewer candles are now available to be lit. Warp doors to secret passageways can be used only when they flash. Special jump-down zones allow Little Red to jump down several levels at once, eliminating any Wolfmen in the way as he descends, but Frankenstein can only be defeated with a SuperZap. 
+ 
+CHAMELEON MAN'S GRAVEYARD 
+The greatest challenge yet... to dispatch the sneaky Chameleon Man and his horde of Spiders.  Entering the spooky graveyard, Little Red finds that only one candle is available for lighting which is found in a crypt guarded by giant Spiders. Chameleon Man changes his color to match that of the background and thus becomes invisible. Little Red must pass over one of the Color-Change Spots to change the background color making Chameleon Man visible again. Chameleon Man can do away with Little Red with a flick of his long tongue. Chameleon Man can only be done in with a SuperZap.</desc>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/monsterb.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="79044" source="ScreenScraper.fr">
+		<path>./mvp.zip</path>
+		<name>Mvp (set 2, US, FD1094 317-0143)</name>
+		<desc>M.V.P. (c) 1989 Sega.  A hilarious baseball game.  - TECHNICAL -  Sega System 16B hardware Game ID : 317-0142 / 317-0143  Main CPU : 68000 (@ 10 Mhz) Sound CPU : Z80 (@ 5 Mhz) Sound Chips : YM2151 (@ 4 Mhz), UPD7759 (@ 640 Khz)  Players : 2 Control : 8-wa</desc>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mvp.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="79050" source="ScreenScraper.fr">
+		<path>./myhero.zip</path>
+		<name>My Hero (US, not encrypted)</name>
+		<desc>My Hero is a very basic beat-'em-up game, where the objective is to travel to the right, punching and kicking enemies while trying not to be hit too many times yourself. Eventually you will come to a clearing and have to fight a boss - defeating him will briefly reunite you with your girlfriend, before she is kidnapped again. The game loops indefinitely, and ends when the player runs out of lives.</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Fight / 2D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/myhero.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="79165" source="ScreenScraper.fr">
+		<path>./nsub.zip</path>
+		<name>N-sub (Upright)</name>
+		<desc>The object of the game is to maneuver an on-screen submarine, the "N-Sub," with the joystick and sink the enemy fleet with torpedo fire in the Cobalt Blue Sea. The player can fire torpedoes vertically and horizontally from their submarines by pressing two separate "FIRE" buttons. The player can hold the button longer to fire three torpedoes in rapid succession. Enemy ships attack the N-Sub with missiles, torpedoes and depth charges. A round of gameplay ends when the player defeats a wave of twelve enemy ships. Successive rounds increase in difficulty. The player has multiple lives, or chances to continue after being hit by an enemy ship, and can receive more lives by reaching high scores. The game ends when the player exhausts their lives.</desc>
+		<rating>0.3</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/nsub.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="63306" source="ScreenScraper.fr">
+		<path>./outrun.zip</path>
+		<name>Out Run (sitdown/upright, Rev B)</name>
+		<desc>Out Run is a ground-breaking racing game in which the player drives a red Ferrari Testarossa through a number of colourful European locations, trying to reach each end-of-level checkpoint before the tight time limit expires. 
+ 
+Each of the game's stages is packed with civilian traffic that must be carefully avoided, as players try to negotiate the game's twisting, hilly roads.  
+ 
+At the end of every stage players are presented with a fork in the road, allowing them to chose which route they wish to take next. This was not the first time this feature had appeared (Tatsumi's 1983 racer, TX-1, was the first to introduce forked roads). 
+ 
+As well as being able to choose routes, players could also - via the game's "in-car radio" - choose one of three different catchy tunes to listen to while driving. The songs are 'Magical Sound Shower', 'Passing Breeze' and 'Splash Wave'.</desc>
+		<rating>0.9</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/outrun.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="79195" source="ScreenScraper.fr">
+		<path>./passshtb.zip</path>
+		<name>Passing Shot (2 Players, bootleg)</name>
+		<desc>Passing Shot has 4 levels. The first level is in France, then in Australia, U.S.A. and finally the level 4 is in England. For the first 3 levels the player only plays the final. However, in England the player goes to the quarter-finals then the semi-finals before reaching the final. 
+ 
+This game can be played with men or women. It can also be played with 2 persons in pairs matches.</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Sports / Tennis-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/passshtb.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="79195" source="ScreenScraper.fr">
+		<path>./passsht.zip</path>
+		<name>Passing Shot (World, 2 Players, FD1094 317-0080)</name>
+		<desc>Passing Shot has 4 levels. The first level is in France, then in Australia, U.S.A. and finally the level 4 is in England. For the first 3 levels the player only plays the final. However, in England the player goes to the quarter-finals then the semi-finals before reaching the final. 
+ 
+This game can be played with men or women. It can also be played with 2 persons in pairs matches.</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Sports / Tennis-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/passshtb.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="79195" source="ScreenScraper.fr">
+		<path>./passshta.zip</path>
+		<name>Passing Shot (World, 4 Players, FD1094 317-0074)</name>
+		<desc>Passing Shot has 4 levels. The first level is in France, then in Australia, U.S.A. and finally the level 4 is in England. For the first 3 levels the player only plays the final. However, in England the player goes to the quarter-finals then the semi-finals before reaching the final. 
+ 
+This game can be played with men or women. It can also be played with 2 persons in pairs matches.</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Sports / Tennis-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/passshtb.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="149444" source="ScreenScraper.fr">
+		<path>./pengo.zip</path>
+		<name>Pengo (set 1 rev c)</name>
+		<desc>Pengo is an action game set in an overhead maze constructed of ice blocks. The player controls Pengo, a red penguin that lives in the Antarctic and fights the blob-like Sno-Bees. The objective of the game is for Pengo to survive a series of rounds by eliminating all Sno-Bees, while amassing bonuses by bringing together the three diamonds dispersed in the maze.</desc>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pengo.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="79200" source="ScreenScraper.fr">
+		<path>./pbillrd.zip</path>
+		<name>Perfect Billiard</name>
+		<desc>Perfect Billiards is an overhead billiards.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Nihon Systems</developer>
+		<publisher>Nihon Systems</publisher>
+		<genre>Sports / Pool-Sports / Swimming-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pbillrd.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="79264" source="ScreenScraper.fr">
+		<path>./pignewt.zip</path>
+		<name>Pig Newton (version C)</name>
+		<desc>Pig Newton: Un cochon sur un arbre se bat contre des loups.</desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pignewt.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="42395" source="ScreenScraper.fr">
+		<path>./pitfall2.zip</path>
+		<name>Pitfall 2 (315-5093)</name>
+		<desc>You're the adventurer, the world famous jungle explorer and fortune hunter extraordinaire, Pitfall Harry. Make your way through a lost forest / cavern system. Collect treasure as you go for more points.</desc>
+		<rating>0.9</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pitfall2.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="42548" source="ScreenScraper.fr">
+		<path>./pulsar.zip</path>
+		<name>Pulsar</name>
+		<desc>Pulsar is a multi-directional shooter where the player must use a four-way joystick to direct a small white tank around changing mazes with a single button to make it fire shots at enemies. The yellow enemies move along the edges of the walls, while the green enemies move randomly and the red enemies bounce off the edges of the walls - and they all move faster, fire faster, and increase in point value, with every round. You should also watch out for "force-field" walls - they will kill your tank if it gets caught in one. If you shoot the Pulsar, it will explode into six enemies. </desc>
+		<rating>0.7</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pulsar.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42556" source="ScreenScraper.fr">
+		<path>./puyo.zip</path>
+		<name>Puyo Puyo (World)</name>
+		<desc>Puyo Puyo is an incredibly addictive and original puzzle game in which players must form chains of four or more beans (known as 'Puyos') of the same colour to make to disappear. 
+ 
+Players can hinder their opponent by forming Puyo combinations; a successfully formed chain removes some some of the player's Puyos and causes 'junk' Puyos to fall into the opponent's play area. As these Junk Puyos are transparent, they cannot be used to form a chain and can only be destroyed when a nearby chain is created.</desc>
+		<rating>0.9</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/puyo.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="42559" source="ScreenScraper.fr">
+		<path>./puyopuy2.zip</path>
+		<name>Puyo Puyo 2 (Japan)</name>
+		<desc>Sequel to the hugely popular Puyo Puyo. Though there is not much difference between this and the original, it is just as addictive and fun.</desc>
+		<rating>0.9</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Compile</developer>
+		<publisher>Compile</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/puyopuy2.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="43516" source="ScreenScraper.fr">
+		<path>./tantr.zip</path>
+		<name>Puzzle And Action - Tant-r (Japan)</name>
+		<desc>Tant-R - Puzzle &amp; Action is a fun puzzle game with lots of mini-games.</desc>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<publisher>SEGA</publisher>
+		<genre>Compilation</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tantr.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game id="42612" source="ScreenScraper.fr">
+		<path>./quartet.zip</path>
+		<name>Quartet (Rev A, 8751 315-5194)</name>
+		<desc>Quartet is a platform shoot-em-up hybrid from Sega for one to four players, selected from either Joe (yellow), Mary (red), Lee (blue) and Edgar (green). The action takes place over a number of sideways scrolling levels, the bulk of which consist of straightforward platform action. On some levels, however, there are jet packs for the players to collect, and the gameplay's emphasis switched to that of a standard, sideways scrolling shoot-em-up. 
+ 
+The object of the game is to destroy an army of robots that have taken over an Earth colony satellite station. Each level has a boss character that must be destroyed. Upon its death it releases a door key that must be used to exit the level. Weapon and character power-ups can be collected to aid players in their task.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/quartet.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42666" source="ScreenScraper.fr">
+		<path>./rachero.zip</path>
+		<name>Racing Hero (FD1094 317-0144)</name>
+		<desc>Race a motorcycle against other bikes, cars, trucks and the obligatory tight time limit. Racing Hero is the spiritual successor both to Sega's wonderful "Hang-On" series, and to their most famous racing game, "Out Run". 
+ 
+Some of Racing Hero's stages mirrored the racing-through-traffic gameplay of the Ferrari-based racer, for example perhaps the biggest similarity to Out Run is that at the end of each stage, the player can choose which route he or she wishes to take next. This differs somewhat from "Out Run"'s highly impressive forked-road method. In Racing Hero, the player is presented with a seperate stage-select screen and simply highlights the flag of whichever country they wish to tackle next.</desc>
+		<rating>0.9</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Motorcycle Race, 3rd Pers.-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/rachero.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="42677" source="ScreenScraper.fr">
+		<path>./radm.zip</path>
+		<name>Rad Mobile (World)</name>
+		<desc>Rad Mobile is another in the long line of ground-breaking racing games from Sega, Rad Mobile is a twenty stage race across America; starting in Los Angeles and finishing in New York. With the game's release, Sega yet again introduced new gameplay elements to the genre, primarily in the form of dynamic weather effects. Sega's 1989 racer, "Turbo Out Run", also included limited weather effects, but they were far less prominent as a gameplay feature and a good deal less impressive than they are here.</desc>
+		<rating>0.6</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Race 1st Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/radm.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="42680" source="ScreenScraper.fr">
+		<path>./raflesia.zip</path>
+		<name>Rafflesia (315-5162)</name>
+		<desc>Rafflesia is a deep space shooter from Coreland - it has a similar eerie feel to it as in other space shooters such as "Brain" and "4-D Warriors". 
+ 
+The game scrolls vertically as you maneuver your ship through hordes of enemies while collecting the tears of Rafflesia to power up your weapons. Each sector has a large boss enemy to defeat. 
+ 
+Can you survive to reach the final battle against Rafflesia himself?</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Coreland</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/raflesia.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="42703" source="ScreenScraper.fr">
+		<path>./razmataz.zip</path>
+		<name>Razzmatazz</name>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/razmataz.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="42743" source="ScreenScraper.fr">
+		<path>./regulus.zip</path>
+		<name>Regulus (315-5033, Rev A.)</name>
+		<desc>Les joueurs contrôlent un char, capable de se déplacer dans huit directions. Un bouton tire vers l'avant, tandis qu'un autre lance des bombes plus haut sur l'écran. La zone de jeu défile continuellement vers le haut et les joueurs doivent éviter les ennemis et les obstacles.</desc>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Vehicle, Vertical-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/regulus.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="42759" source="ScreenScraper.fr">
+		<path>./ribbit.zip</path>
+		<name>Ribbit!</name>
+		<desc>Ribbit! is a one or co-operative two-player abstract arcade game and is an unofficial sequel to Konami's seminal 1981 release, "Frogger". 
+ 
+Unlike its legendary prequel (in which players had to guide a frog to his home at top of each screen without being killed) the aim here is to guide a toad around a screen, eating benign insects - such as Ants and Dragon-flies - while avoiding harmful ones - such as Spiders and Rats. A level is only complete once a set amount of insects have been eaten.</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>SEGA</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ribbit.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42764" source="ScreenScraper.fr">
+		<path>./ridleofp.zip</path>
+		<name>Riddle Of Pythagoras (Japan)</name>
+		<desc>Pythagoras no Nazo - Riddle of Pythagoras (c) 1986 Sega.  - TECHNICAL -  Sega System E hardware  Main CPU : Z80 (@ 5.3693 Mhz) Sound Chips : (2x) SN76496 (@ 4 Mhz)  Players : 2 Control : dial Buttons : 2  - TRIVIA -  Even if titlescreen says 1986, Pythago</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/ridleofp.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="42770" source="ScreenScraper.fr">
+		<path>./riotcity.zip</path>
+		<name>Riot City (Japan)</name>
+		<desc>Riot City is a side-scrolling beat-em-up for one or two players who take on the roles of 'Paul' or 'Bobby', two talented fighters who are given the task of breaking a drug syndicate known as "MID". It has also been discovered that Paul's girlfriend has been kidnapped by the syndicate and must be rescued. 
+ 
+MID's hideout is located on Riot Island, an island full of abandoned, run-down buildings that has since become a slum. Locations include apartments, a hospital, a factory and a casino.</desc>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/riotcity.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="42796" source="ScreenScraper.fr">
+		<path>./robowres.zip</path>
+		<name>Robo Wres 2001</name>
+		<desc>Robo Wres 2001 is a robot wrestling game.</desc>
+		<rating>0.3</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Sanritsu Denki</developer>
+		<publisher>Sanritsu Denki</publisher>
+		<genre>Sports / Wrestling-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/robowres.png</image>
+		<genreid>1536</genreid>
+	</game>
+	<game id="42821" source="ScreenScraper.fr">
+		<path>./roughrac.zip</path>
+		<name>Rough Racer (Japan, Floppy Based, FD1094 317-0058-06b)</name>
+		<desc>Rough Racer is a colourful top-down racing game for one to four players; Rough Racer takes most of its inspiration from Atari's "Sprint" series, and from "Championship" and "Super Sprint" in particular. 
+ 
+The game features ten different tracks, each with its own graphical theme. After the first race, in addition to the four racing cars a fifth 'drone' vehicle is added, whose sole intention is to hinder the four racers. The drone is visibly different from the racers and can be anything from a steam roller to a cement mixer.</desc>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/roughrac.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="42857" source="ScreenScraper.fr">
+		<path>./ryukyu.zip</path>
+		<name>Ryukyu (Japan, FD1094 317-5023)</name>
+		<desc>RyuKyu is a highly playable yet challenging puzzle game which uses elements of Poker. In this game, players attempt to make a five-card hand either vertically, horizontially or diagonally to score points and must meet the round's score criteria to progress. The hands are ranked from One Pair to 5-of-a-Kind.</desc>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Success</developer>
+		<publisher>Success</publisher>
+		<genre>Casino-Casino / Cards-Puzzle-Game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/ryukyu.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="150363" source="ScreenScraper.fr">
+		<path>./samurai.zip</path>
+		<name>Samurai</name>
+		<desc>The rogue samurai challenges all comers!</desc>
+		<rating>0.1</rating>
+		<releasedate>19800101T000000</releasedate>
+		<genre>Fight</genre>
+		<image>/userdata/roms/mame/images/samurai.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="42940" source="ScreenScraper.fr">
+		<path>./defense.zip</path>
+		<name>SDI - Strategic Defense Initiative (System 16B, FD1089A 317-0028)</name>
+		<desc>SDI - Strategic Defense Initiative is a strategic challenge in the science of offensive &amp; defensive warfare.</desc>
+		<rating>0.6</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Missile Command Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/defense.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="42957" source="ScreenScraper.fr">
+		<path>./seganinj.zip</path>
+		<name>Sega Ninja (315-5102)</name>
+		<desc>A run &amp; gun shooter arcade game released by Sega in 1985, also known as Sega Ninja or The Ninja.</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/seganinj.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43175" source="ScreenScraper.fr">
+		<path>./sonic.zip</path>
+		<name>Segasonic The Hedgehog (Japan, rev. C)</name>
+		<desc>Segasonic The Hedgehog is a scrolling, isometric racing game for one to three players featuring Sega's legendary mascot, 'Sonic the Hedgehog'. Sonic's nemesis, 'Dr. Robotnik', is once again intent on World domination and is preparing to launch his latest attack from his new island base, Eggman Island. 
+ 
+When 'Sonic', 'Ray', and 'Mighty' drop in to thwart his plans, Robotnik catches them with one of his devious machines. After finding themselves imprisoned in a tower, the trio break free onto the island, and proceed to make their escape and try to defeat Robotnik and his evil plans. 
+ 
+Sega Sonic's gameplay retains elements of the original console games, such as Sonic's ability to jump on the heads of enemies to kill them. The golden rings that Sonic collects are also included. Each level is littered with Dr Robotnik's devious traps; with lava flows, collapsible platforms, locked gates etc. all serving to hamper Sonic's progress.</desc>
+		<rating>0.9</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/sonic.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="43039" source="ScreenScraper.fr">
+		<path>./shdancer.zip</path>
+		<name>Shadow Dancer (World)</name>
+		<desc>Some time after destroying Neo Zeed in Revenge of Shinobi, Joe Musashi decides to spend some time in america with his student, Kato. One day though when a mysterious terrorist group known as Un</desc>
+		<rating>0.8</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/shdancer.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43046" source="ScreenScraper.fr">
+		<path>./shinobi.zip</path>
+		<name>Shinobi (set 6, System 16A, unprotected)</name>
+		<desc>Shinobi is a scrolling platform beat-em-up in which the player takes on the role of Joe Musashi, a Shinobi Ninja, who must fight his way through 5 tough missions - each made up of between 3 to 5 stages - in his quest to rescue the kidnapped Ninja children of the Iga clan; now hostages of an evil Ninja syndicate called "Zeed". To complete a mission, the player must rescue all of the kidnapped children on each level, with the number of hostages remaining displayed on a meter in the bottom left corner of the screen. 
+ 
+Shinobi was a huge success for Sega, and deservedly so. Its perfectly realized blend of platform and fighting action and is as fine an exponent of the 'easy to get into, difficult to master' gameplay ethic as video games have seen.</desc>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Platform-Platform / Fighter Scrolling</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/shinobi.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="43096" source="ScreenScraper.fr">
+		<path>./sindbadm.zip</path>
+		<name>Sindbad Mystery</name>
+		<desc>Described as an Intelligent Puzzle Game on the title screen, the player uses a 4-way joystick to take control of the Sindbad, and direct him around various different mazes to collect thirty question marks to reveal the parts of the maze on a treasure map at the top of the screen, while avoiding the various enemies. Once he collects one question mark in a particular part of the maze it will reveal the location of a treasure item for that round. Sindbad will then have to dig up that spot to find the treasure item. Once this is done, he will receive the remaining value of the round's timer as a bonus.</desc>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action-Action / Labyrinth-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sindbadm.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43157" source="ScreenScraper.fr">
+		<path>./snapper.zip</path>
+		<name>Snapper (Korea)</name>
+		<desc>Snapper is a fun "Blockade" style game. You controls a hungry snake through various levels, will need eat all the balls as you grow and avoid colliding with his own body, while avoiding enemies to open the exit to the next level.</desc>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Philko</developer>
+		<publisher>Philko</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/snapper.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="149968" source="ScreenScraper.fr">
+		<path>./99lstwra.zip</path>
+		<name>Son Of Phoenix (alternate)</name>
+		<releasedate>19850101T000000</releasedate>
+		<image>/userdata/roms/mame/images/99lstwra.png</image>
+	</game>
+	<game id="43176" source="ScreenScraper.fr">
+		<path>./sonicbom.zip</path>
+		<name>Sonic Boom (FD1094 317-0053)</name>
+		<desc>Sonic Boom is a vertically scrolling shooter from Sega.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sonicbom.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43324" source="ScreenScraper.fr">
+		<path>./sspaceat.zip</path>
+		<name>Space Attack (upright set 1)</name>
+		<desc>Another game inspired by Space Invaders. This one is a more straightforward version, although after you finish off a rack a UFO starts working its way down; shoot it and you'll get a bonus (and maybe a free ship).</desc>
+		<releasedate>19790101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter-Compilation</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sspaceat.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="46402" source="ScreenScraper.fr">
+		<path>./spacfury.zip</path>
+		<name>Space Fury (Revision C)</name>
+		<desc>Space Fury is a rather simple alien blasting shoot-em-up. It uses almost industry standard vector controls, which are four buttons, Left Rotate, Right Rotate, Thrust, and Fire. You begin the game in the center of four strange looking shapes. These shapes are both level selects and upgrades. Run into one of them and it will add itself to your ship, and then you get to do the level associated with it. Each level is different mainly because you have wildly different shot patterns on each one. But all of them are the same when it comes to your objective. What you have to do is blast all the spaceship parts before they can form into dangerous enemy spaceships. Blast them all, and you get to select a new level and watch a little interlude where the alien taunts you with his evil computer voice. 
+</desc>
+		<rating>0.5</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter-Fight-Shoot'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/spacfury.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="43038" source="ScreenScraper.fr">
+		<path>./sharrier.zip</path>
+		<name>Space Harrier (Rev A, 8751 315-5163A)</name>
+		<desc>Space Harrier is a sprite-scaling 3D shoot-em-up set in the 'Fantasy Zone'; a surreal world composed of abstract structures and a checkerboard landscape. The game's enemies are as abstract as its setting; with creatures including prehistoric Mammoths, alien pods, giant mushrooms and, at the end of most stages, a huge, fireball-spitting Chinese Dragon. 
+ 
+The player's on-screen counterpart carries a portable jetpack under his arm which allows him to fly. The player can also run along the ground to avoid overhead structures and enemies. 
+ 
+In addition to its flight capability, the jetpack is also equipped with a laser, used to destroy both the game's many enemies as well as some (but not all) obstructions, such as the trees and floating rocks on the first stage. 
+ 
+Space Harrier has a total of 18 stages, each with a boss fight at the end. Three exceptions are the bonus stages (5th and 12th) and the 18th stage, which is a 'boss rush' featuring some of the bosses encountered up to that point.</desc>
+		<rating>0.8</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Plane, 3rd person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/sharrier.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43203" source="ScreenScraper.fr">
+		<path>./spaceod.zip</path>
+		<name>Space Odyssey (version 2)</name>
+		<desc>Destroy attacking UFO-s for points. 
+Round ends after seven sectors. 
+Faster ship speed awards higher bonus at end of round. 
+Extra points awarded for passing through gaps blown in targets. 
+Passing over black hole momentarily disables ship. 
+Avoid meteors. They are indestructible 
+Bonus ship awarded for outstanding play. 
+Point values increase with each round. 
+ 
+Good luck.</desc>
+		<rating>0.6</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/spaceod.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43224" source="ScreenScraper.fr">
+		<path>./spcpostn.zip</path>
+		<name>Space Position (Japan)</name>
+		<desc>Space Position (c) 1986 Sega.  - TECHNICAL -  First Board Number : X090-PC-A 171-5383 Second Board Number : X090-PC-B 171-5384  Main CPU : NEC D317-0005 (Z80) @ 8 Mhz) Sound CPU : NEC D780C-1 (Z80) (@ 4 Mhz) Sound Chips : (2x) YM2203 (@ 4 Mhz)  Players : </desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/spcpostn.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="46409" source="ScreenScraper.fr">
+		<path>./tacscan.zip</path>
+		<name>Tac/scan</name>
+		<desc>TAC/SCAN is a one or two-player vector-based shoot-em-up in which players control a formation squadron of seven fighter ships. All seven ships fire at once when the FIRE button is pressed, producing a spectacular missile salvo. 
+ 
+The player begins the game with a seven ship formation and a supply of reserve ships (shown above the player score). The object of the game is to accumulate points by destroying enemy ships while avoiding incoming fire. As well as the main squadron, there are a number of reserve ships and an ADD SHIP button. This transfers one of the reserve ships into the squadron formation. The 'add ship' position continuously cycles between the empty squadron positions, allowing players to time the ADD SHIP function to place fighters at their desired location.</desc>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em up / Vertical-Shoot'em Up-N/A-Action</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/tacscan.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43544" source="ScreenScraper.fr">
+		<path>./teddybb.zip</path>
+		<name>Teddyboy Blues (315-5115, New Ver.)</name>
+		<desc>Teddy Boy Blues - Yohko Ishino is a strange and unique platform game by Sega. Guide Teddy Boy through an ever scrolling maze to defeat ninjas, snails, big mouthed hippos and other bizarre creatures. 
+ 
+You shoot your enemies with a gun that shrinks them - then you must collect your shrunken foes for bonus points. If you don't collect them quick enough, they will fly down to the bottom of the screen and eat a portion of your time meter.</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/teddybb.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="43597" source="ScreenScraper.fr">
+		<path>./thndrbld.zip</path>
+		<name>Thunder Blade (upright, FD1094 317-0056)</name>
+		<desc>Taking control of a heavily-armed battle chopper, the player must battle through a variety of both overhead and 'into-the-screen' 3-D stages. 
+ 
+Thunder Blade consists of four stages, which are as follows: 
+Stage 1: The game begins in a skyscraper-packed city. Enemies consist of rival choppers, jets, and ground-based tanks and gun emplacements. The level ends over the sea, with the player facing a huge and heavily-armed battleship.  
+Stage 2: This stage begins with the player navigating a desert canyon, before switching to the into-the-screen view and taking the player through a number of stalactite-packed and densely populated caves. A huge ground-based tank awaits the player at the end of the stage. 
+Stage 3: This begins in a river canyon, before moving on to a rain-forest river network. As well the the usual line-up of enemies, heavily-armed boats are introduced. the end-of-level battle takes place in the skies as the player attempts to destroy a massive jet fighter. 
+Stage 4: The 4th and final stage begins with a repeat of the first stage's city level, only this time the action takes place at night. The second half of this stage takes the player deep into an industrial complex, eventually leading to an end-of-game showdown with a massive and heavily-armed gun emplacement.</desc>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/thndrbld.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="149454" source="ScreenScraper.fr">
+		<path>./tfrceac.zip</path>
+		<name>Thunder Force AC</name>
+		<desc>This game is a port of the Sega Mega Drive game "Thunder Force III". The main changes from the home console version are: 
+-No stage select screen 
+-Stages are shorter. 
+-Slightly different enemy layout. 
+-Some graphics are changed, including title screen. 
+-Many voice tracks added.</desc>
+		<rating>0.3</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Technosoft</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/tfrceac.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43621" source="ScreenScraper.fr">
+		<path>./timescan.zip</path>
+		<name>Time Scanner (set 2, System 16B)</name>
+		<desc>Time Scanner is an arcade interpretation of pinball featuring the flippers, ramps, targets, bonus multipliers etc. of the classic genre it serves to replicate. Each level has a specific graphical style - in keeping with the 'time travelling' theme of the game's title - with each of the game's four tables split into two sections. When the player enters either the top or bottom section of a table, the screen will scroll vertically up or down respectively to follow the action.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Pinball</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/timescan.png</image>
+		<genreid>1792</genreid>
+	</game>
+	<game id="43660" source="ScreenScraper.fr">
+		<path>./tokisens.zip</path>
+		<name>Toki no Senshi: Chrono-Soldier</name>
+		<desc>The title of this game translates from Japanese as 'Soldier of Time'.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>EXA Planning</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tokisens.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43687" source="ScreenScraper.fr">
+		<path>./toryumon.zip</path>
+		<name>Toryumon</name>
+		<desc>The title of this game translates from Japanese as 'Gateway To Success'.</desc>
+		<rating>0.5</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/toryumon.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="43771" source="ScreenScraper.fr">
+		<path>./tturfbl.zip</path>
+		<name>Tough Turf (Datsu bootleg)</name>
+		<desc>A fellow that looks like he just got off of work figures that he'd rid the city streets of those pesky gang members and their allies.</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tturfbl.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="150365" source="ScreenScraper.fr">
+		<path>./tranqgun.zip</path>
+		<name>Tranquilizer Gun</name>
+		<desc>Tranquilizer Gun is a multi-directional shooter arcade game. The player must use a four-directional joystick to direct a yellow hunter around a maze with a single button to make him fire shots (from that eponymous "tranquilizer gun") at four different types of wild animals (snakes, elephants, gorillas and lions) to knock them out. Once you have fired a shot at an animal to knock him out, the number 30 will appear below him and start counting down - and this means that you will have thirty seconds to bring the animal out of any of the maze's six exits as his truck drives around and he puts him inside, causing the number below that type of animal's head upon the side to go up by one. Snakes are worth 200 points, gorillas 300, lions 400, and elephants 500; you will also receive a 10% bonus at the end of a round if you did not waste any of your shots.</desc>
+		<rating>0.1</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Action-Shooter Small-Action / Labyrinth-Shoot'em up / Diagonal</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/tranqgun.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43715" source="ScreenScraper.fr">
+		<path>./transfrm.zip</path>
+		<name>Transformer</name>
+		<desc>After the devastating underground Dalaus invasion only one TransBot pilot is left standing. You. Armed with your TransBots tranforming weaponry and your own wits, be prepared for the fight of your life as you try to thwart the Dalaus oppression.</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/transfrm.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43776" source="ScreenScraper.fr">
+		<path>./turbo.zip</path>
+		<name>Turbo (program 1513-1515)</name>
+		<desc>Sega's Turbo is a 3-D racing game from Sega in which the player must pass a set number of rival racers (usually 30) before the time limit expires. Success would see the player progress to the next stage. Turbo's gameplay was unique in that centered ENTIRELY on the passing of cars; while the tracks the player raced on had all of the usual bends and turns of the racing genre, they existed purely for effect and at no point did the player actually have to STEER through them.</desc>
+		<rating>0.9</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/turbo.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="43702" source="ScreenScraper.fr">
+		<path>./toutrun.zip</path>
+		<name>Turbo Out Run (Out Run upgrade, FD1094 317-0118)</name>
+		<desc>Turbo Out Run is the first arcade-based sequel to the legendary 1986 original. It eschews the forked-road, variable route gameplay of it's illustrious predecessor and instead opts for a set route point-to-point race across Am</desc>
+		<rating>0.9</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/toutrun.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="43809" source="ScreenScraper.fr">
+		<path>./twinsqua.zip</path>
+		<name>Twin Squash</name>
+		<desc>Twin Squash (c) 1991 Sega.  - TECHNICAL -  Sega System C2 hardware  Main CPU : 68000 (@ 8.948862 Mhz) Sound Chips : YM3438 (@ 7.670453 Mhz), SN76496 (@ 3.579545 Mhz), UPD7759 (@ 640 Khz)  Screen orientation : Horizontal Video resolution : 320 x 224 pixels</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/twinsqua.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43840" source="ScreenScraper.fr">
+		<path>./upndown.zip</path>
+		<name>Up'n Down (315-5030)</name>
+		<desc>Up'n Down is an abstract racing game viewed in a forced third-person perspective.  
+ 
+The goal of the game is to collect coloured flags, while avoiding the enemy vehicles and obstacles that litter each course. The flags needed are displayed at the top of the screen and are coloured as follows: Light green, blue, red, olive, dark green, magenta, yellow and black. If the flags are collected quickly enough, bonus points are awarded. Collected flags remain visible on the track but are changed to white in colour.</desc>
+		<rating>0.9</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action-Race, Driving-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/upndown.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="44142" source="ScreenScraper.fr">
+		<path>./wwallyj.zip</path>
+		<name>Wally Wo Sagase! (rev B, Japan, FD1094 317-0197B)</name>
+		<desc>Wally wo Sagase! (c) 1992 Sega.  - TECHNICAL -  Sega System 18 hardware  Main CPU : 68000 (@ 10 Mhz) Sound CPU : Z80 (@ 8 Mhz) Sound Chips : (2x) YM3438 (@ 8 Mhz), RF5C68 (@ 10 Mhz)  Players : 3 Control : trackball Buttons : 3  - TRIVIA -  Released in Jun</desc>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<publisher>SEGA</publisher>
+		<genre>Compilation</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wwallyj.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game id="44029" source="ScreenScraper.fr">
+		<path>./wanted.zip</path>
+		<name>Wanted</name>
+		<desc>Wanted is a third person shooter based in the wild west. 
+ 
+In the old wild west, times has get tough, you play on the role of a renegade cowboy surrounded by hostiles native indians, mexican bandits and the most wanted outlaws, in the most varied and iconic west landscapes and they attacking you from all directions, must shoot them all to defend and advance to the next level.</desc>
+		<rating>0.3</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Sigma Enterprises</developer>
+		<publisher>Sigma Enterprises</publisher>
+		<genre>Shooter / 3rd person-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wanted.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="44107" source="ScreenScraper.fr">
+		<path>./wmatch.zip</path>
+		<name>Water Match (315-5064)</name>
+		<desc>Water Match is a multi event multi-player game in the style of Konami's legendary "Track and field" series, featuring events such as free-style swimming, one-man kayaking, four-man boating etc.</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Sports / Running trails-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wmatch.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="44046" source="ScreenScraper.fr">
+		<path>./wboy.zip</path>
+		<name>Wonder Boy (set 1, 315-5177)</name>
+		<desc>Wonder Boy (ãƒ¯ãƒ³ãƒ€ãƒ¼ãƒœãƒ¼ã‚¤ WandÄ  BÅ i?) (also known as Super Wonder Boy for its Sega Mark III release in Japan and Revenge of Drancon for its Game Gear release in North America) is a 1986 video game published by Sega and developed by Escape (now known as WestOne Bit Entertainment, not to be confused with Westone).</desc>
+		<rating>0.9</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wboy.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="44042" source="ScreenScraper.fr">
+		<path>./wb3.zip</path>
+		<name>Wonder Boy 3 - Monster Lair (set 6, World, System 16B, 8751 317-0098)</name>
+		<desc>Strange enemies are attacking your lands and have advanced weapons that they use to destroy everything, so you must take either the awesome Leo or the incredible Princess Purapril on a cool mission to fight these invaders to snatch their weapons and save your lands from total destruction. In the brilliant Wonder Boy III - Monster Lair you must fight the colourful and crazy creatures and defeat them all to save the land!</desc>
+		<rating>0.8</rating>
+		<releasedate>19880101T000000</releasedate>
+		<publisher>SEGA</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wb3.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="39869" source="ScreenScraper.fr">
+		<path>./005.zip</path>
+		<name>005</name>
+		<desc>Agent 005 brings new cash collections to you. His mission is to deliver secret attache cases to an awaiting helicopter. Through wily street chases and the shadows of warehouse darkness to slippery skating rink maneuvers and the blazing aerial getaway fight. Agent 005 steels the scene and delivers customers to you. Fun-filled music attracts them. Four thrilling escape scenes challenge them and the continuous fun keeps them playing and playing. The unique audio and video excitement matches every players skill level.</desc>
+		<image>/userdata/roms/mame/images/005.png</image>
+		<rating>0.6</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="39900" source="ScreenScraper.fr">
+		<path>./4dwarrio.zip</path>
+		<name>4-D Warriors (315-5162)</name>
+		<desc>4-D Warriors is a strange deep space shoot them up, which apparently has a 4th dimension. The game is a side scrolling shooter in which you take control of a jetpack propelled space warrior who travels between parallel universes and worm holes throughout the game. By flying over the top of the play field, you end up in an alternate universe. You travel back and forth defeating enemies until you reach a boss creature. On some occasions a worm hole will appear in the middle of the play field and you are taken to even stranger worlds...</desc>
+		<image>/userdata/roms/mame/images/4dwarrio.png</image>
+		<rating>0.3</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Coreland</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="39926" source="ScreenScraper.fr">
+		<path>./abcop.zip</path>
+		<name>A.B. Cop (World, FD1094 317-0169b)</name>
+		<desc>A.B. Cop is a futuristically-themed racing game from Sega in which the player takes on the role of a law enforcement officer - riding a heavily armoured and heavily armed hover-bike - who must chase down and destroy the perpetrators of an armed robbery before the time limit expires.  
+ 
+A.B. Cop is hugely reminiscent of Taito's superb racing legend, "Chase HQ", released two years earlier.</desc>
+		<image>/userdata/roms/mame/images/abcop.png</image>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Motorcycle Race, 3rd Pers.-Race, Driving</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="39949" source="ScreenScraper.fr">
+		<path>./afighter.zip</path>
+		<name>Action Fighter (FD1089A 317-0018)</name>
+		<desc>Action Fighter is an overhead driving / shoot'em up game from Sega which borrows heavily from Bally Midway's 1983 classic, "Spy Hunter". The player begins the game riding a motorbike. In subsequent levels a sportscar, a beach buggy, a boat, a chopper and even a Formula-1 racing car can all be driven. All of the vehicles are, of course, fully armed to deal with the many enemy vehicles and gun emplacements intent on stopping the player's progress. The helicopter levels play as a straightforward vertically-scrolling shoot'em up and bear more than a passing resemblance to Namco's "Xevious".</desc>
+		<image>/userdata/roms/mame/images/afighter.png</image>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Vertical-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="39930" source="ScreenScraper.fr">
+		<path>./aburner2.zip</path>
+		<name>After Burner II</name>
+		<desc>After Burner is another Sega game rendered with their then-ubiquitous 3-D sprite-scaling technology; this time putting the player into the seat of a powerful F14 Tomcat jet fighter.  
+ 
+Players must fight their way through 21 colourful, fast-moving stages, shooting down waves of enemy fighters while avoiding the enemy's incoming missiles. The F14 is equipped with a machine gun and a limited number of homing missiles. The gun has infinite ammunition and targeting is achieved by maneuvering the Tomcat so that the targeting cursor situated just in front of the jet is placed over an enemy fighter.  
+ 
+After Burner's straightforward shoot-em-up gameplay is simple and repetitive, but the game's incredible visuals ensured its success.</desc>
+		<image>/userdata/roms/mame/images/aburner2.png</image>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Plane, 3rd person-Shooter</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="150935" source="ScreenScraper.fr">
+		<path>./aburner.zip</path>
+		<name>After Burner</name>
+		<desc>After Burner is another 3-D Sega game rendered with their superb sprite-scaling technology; this time putting the player into the seat of a powerful jet fighter. 
+ 
+A number of colorful, fast-moving environments await the player, as he or she takes on the hordes of enemy planes intent on the player's destruction.</desc>
+		<image>/userdata/roms/mame/images/aburner.png</image>
+		<rating>0.8</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Yu Suzuki</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter-Shooter / Plane, 3rd person</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="40055" source="ScreenScraper.fr">
+		<path>./arescue.zip</path>
+		<name>Air Rescue (US)</name>
+		<desc>Air Rescue is based on the game Choplifter but from a 1st person perspective as you must fly your helicopter into enemy territory and rescue stranded soldiers. You must take off from your base and fly to a landing site where your men are waiting. On the way you will encounter soldiers and a range of vehicles which need blasting and destroying with either your cannon or missiles. When you land you must wait for the men to run towards you and board while under fire. You can only carry eight and on later Missions this means multiple trips. Once your helicopter is full you must fly back to your base and land where the men will disembark. If your quota is more than 8 then take-off and rescue the rest. As you fly, your fuel gauge gets lower so you have to rescue men as quick as possible. You can re-fuel once back in your base. If you run out of fuel mid-air then it's game over.</desc>
+		<image>/userdata/roms/mame/images/arescue.png</image>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Plane, 1st person-Shooter</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="41170" source="ScreenScraper.fr">
+		<path>./fantzn2x.zip</path>
+		<name>Fantasy Zone 2 - The Tears Of Opa-opa (System 16C version)</name>
+		<desc>Once again you control Opa-Opa, a pretty colored ship with wings on its side and must destroy the large creatures in each world before moving on to the next. Your task becomes difficult by other small creatures that happen to pass by. If you destroy a large creature, they will drop a dollar bill, which you can pick up and use at the shop to buy items and powerful weapons such as laser beams, x-way shots, and big wings. Another way to get money is to shoot certain kinds of enemies all in a row.</desc>
+		<image>/userdata/roms/mame/images/fantzn2.png</image>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41272" source="ScreenScraper.fr">
+		<path>./fpoint.zip</path>
+		<name>Flash Point (set 2, Japan, FD1094 317-0127A)</name>
+		<desc>Flash Point is an unlicensed Tetris variant released only in Japan. Unlike Tetris, which is usually a pure survival, your goal is to eliminate all golden blocks from the field.</desc>
+		<image>/userdata/roms/mame/images/fpoint.png</image>
+		<rating>0.6</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41624" source="ScreenScraper.fr">
+		<path>./hangon.zip</path>
+		<name>Hang-on (rev A)</name>
+		<desc>Hang-On is a superb point-to-point sprite scaling racing game in which the player takes control of a superbike and must race over five twisting circuits, avoiding rival bikers and trying to reach the end of each stage before the time limit expires. 
+ 
+Hang-On's handling and superb graphics were unlike anything seen before in the arcades and, like many Yu Suzuki games that followed, revolutionised the racing genre.</desc>
+		<image>/userdata/roms/mame/images/hangon.png</image>
+		<rating>0.9</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Motorcycle Race, 3rd Pers.-Race, Driving</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41625" source="ScreenScraper.fr">
+		<path>./hangonjr.zip</path>
+		<name>Hang-on Jr.</name>
+		<desc>Hang-On Jr. is a cut-down version of its legendary parent, 'Hang-On Jr' features similar gameplay to "Hang-On", but is rendered in more primitive graphics due to the vastly inferior host hardware.</desc>
+		<image>/userdata/roms/mame/images/hangonjr.png</image>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Motorcycle Race, 3rd Pers.-Race, Driving</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41630" source="ScreenScraper.fr">
+		<path>./harddunk.zip</path>
+		<name>Hard Dunk (World)</name>
+		<desc>Hard Dunk is a street basketball game from Sega.</desc>
+		<image>/userdata/roms/mame/images/harddunk.png</image>
+		<rating>0.8</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>6</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42484" source="ScreenScraper.fr">
+		<path>./potopoto.zip</path>
+		<name>Poto Poto (Japan, Rev A)</name>
+		<desc>If the pieces that support the lower pieces break, the entire hanging structure breaks. Breaking tiles in groups of three is a good thing that earns points.</desc>
+		<image>/userdata/roms/mame/images/potopoto.png</image>
+		<rating>0.5</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="79240" source="ScreenScraper.fr">
+		<path>./pdrift.zip</path>
+		<name>Power Drift (World, Rev A)</name>
+		<desc>Power Drift is a fast-moving lap-based racing game in which players choose to race on one of five different circuits, each made up of five stages. The game's tracks have a 'roller-coaster' feel to them, with steep climbs, sudden drops and tight chicanes. It's also possible to fall from many of the higher, raised sections of a track, sending the car crashing to the ground below and losing valuable seconds. Each race takes place over four laps and players must finish in 3rd place or better to progress to the next stage. Finishing lower than third place results in a 'game over' but players can insert more credits to continue from the current stage. 
+ 
+In addition to its twisting, abstract courses, Power Drift also features a tilting axis; as players steer left and right, the screen display mirrors the controller's movements and tilts on its axis (in a fashion similar to another Sega game, "After Burner"). The game's difficulty level is determined by the type of car the player chooses to race with. The RED car (with bigger wheels) sets the difficulty level at 'easy', the BLUE car at 'normal', the ORANGE car at 'hard' and GREY car at 'hardest'.  
+ 
+The game's five circuits are labelled from A to E, with each having its own visual theme (for example, circuit A is city-based, circuit B desert-based, circuit C beach-based etc.)  
+ 
+The circuits and their corresponding stages are: 
+Course A - Springfield Ovalshape, Foofy Hilltop, Snowhill Drive, Octopus Oval, Curry De Parl 
+Course B - Swingshot City, Phantom Riverbend, Octangular Ovalshape, Charlotte Beach, Highland Spheres 
+Course C - Bum Beach, Jason Bendyline, Nighthawk City, Zanussi Island, Wasteman Freefall 
+Course D - Mexico Colours, Oxygen Desert, Jamie Road, Monaco Da Farce, Blow Hairpin 
+Course E - Aisthorpe Springrose Valley, Patterson Nightcity, Lydia Rightaway, Bungalow Ridgeway, Karen Longway 
+ 
+"Power Drift" features two hidden bonus courses. Finishing in first place on all tracks of courses B and D will allow players will get to race a special track using the bike from Sega's classic 1985 racer, "Hang-On". Finish first on all five tracks of any given group (A to E) and players will get to race a special track using the jet from "After Burner".  
+ 
+Each course has its own theme song, and they are as follows: 
+Course A - Side Street 
+Course B - Like the Wind 
+Course C - Silent Language 
+Course D - Adjustment Mind 
+Course E - Artistic Traps</desc>
+		<image>/userdata/roms/mame/images/pdrift.png</image>
+		<rating>0.9</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="43206" source="ScreenScraper.fr">
+		<path>./spacetrk.zip</path>
+		<name>Space Trek (Upright)</name>
+		<image>/userdata/roms/mame/images/spacetrk.png</image>
+		<rating>0.3</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43213" source="ScreenScraper.fr">
+		<path>./spatter.zip</path>
+		<name>Spatter (315-xxxx)</name>
+		<desc>Spatter is a fast-moving maze-chase game in which the player takes on the role of a tricycle-pedalling child out collecting flowers, while trying to avoid collisions with the numerous enemies giving chase.</desc>
+		<image>/userdata/roms/mame/images/spatter.png</image>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action-Race, Driving-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="43245" source="ScreenScraper.fr">
+		<path>./spidey.zip</path>
+		<name>Spider-man - The Videogame (World)</name>
+		<desc>Spider-man - The Video Game is a sideways scrolling beat-em-up for 1 to 4 players; choosing from Spider-Man, Black-Cat, Hawkeye or Sub-Mariner. The heroes must fight their way through four levels of Dr. Doom's villains; including Venom, The Scorpion, The Lizard, The Green Goblin, The Sandman, The Kingpin, The Hobgoblin, Electro, Dr. Octopus and, of course, Dr. Doom himself. 
+ 
+Each player character has a different weapon or power that can be used throughout the game while fighting. Spider-Man uses his webs, The Black Cat uses her 'cat's claw' grappling hook and cable, Hawkeye uses his bow and arrows and The Sub-Mariner uses his hydro-electric charges. The game's viewpoint pans in and out between alternate large and small scale (4-way scrolling) sections. The game's 'camera' zooms out on alternate levels with the zoomed-out view introducing four-way scrolling platform sections to the gameplay. The game ends when the fourth and final chapter has been completed.</desc>
+		<image>/userdata/roms/mame/images/spidey.png</image>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43265" source="ScreenScraper.fr">
+		<path>./springer.zip</path>
+		<name>Springer</name>
+		<desc>Springer (c) 1982 Orca.  - TECHNICAL -  Main CPU : Z80 (@ 3.072 Mhz) Sound Chips : AY8910 (@ 1.5 Mhz)  Screen orientation : Vertical Video resolution : 224 x 256 pixels Screen refresh : 60.00 Hz Palette colors : 256  Players : 2 Control : 8-way joystick B</desc>
+		<image>/userdata/roms/mame/images/springer.png</image>
+		<rating>0.3</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Orca Corporation</developer>
+		<publisher>Orca</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="43378" source="ScreenScraper.fr">
+		<path>./stkclmns.zip</path>
+		<name>Stack Columns (World)</name>
+		<desc>Stack Columns is a more competitive version of the classic puzzle game that was released in arcades in 1994.</desc>
+		<image>/userdata/roms/mame/images/stkclmns.png</image>
+		<rating>0.6</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="43353" source="ScreenScraper.fr">
+		<path>./starjack.zip</path>
+		<name>Star Jacker (Sega)</name>
+		<desc>Star Jacker is an early vertical scrolling shooter with some interesting characteristics.  The player starts out with three fighters with all of the fighters moving and shooting at the same time. Two fighters trail the lead fighter. Star Jacker features a similar scheme with the Namco game Xevious in that the fighters shoot at enemy fighters in the air while dropping bombs on enemies and targets on the ground level. 
+ 
+When any of the fighters is killed, the game momentarily pauses and re-centers the player fighters before continuing at the same point.  The game is over when all of the player's fighters are destroyed. Star Jacker allows no continues.</desc>
+		<image>/userdata/roms/mame/images/starjack.png</image>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43471" source="ScreenScraper.fr">
+		<path>./swa.zip</path>
+		<name>Star Wars Arcade</name>
+		<desc>Star Wars Arcade is a superb 3-D shoot-em-up for one or two players, based on the legendary 1977 movie of the same name. In the two player game, one player takes on the role of the pilot, who controls both the speed and direction of the fighter ship, and who can only shoot at the centre of the screen. The second other player takes on the role of the 'gunner' and can target a much larger area on-screen.</desc>
+		<image>/userdata/roms/mame/images/swa.png</image>
+		<releasedate>19930101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Plane, 1st person-Shooter</genre>
+		<players>2</players>
+		<playcount>1</playcount>
+		<lastplayed>20210123T232830</lastplayed>
+		<gametime>75</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="43399" source="ScreenScraper.fr">
+		<path>./strkfgtr.zip</path>
+		<name>Strike Fighter (World)</name>
+		<desc>Strike Fighter is a single player sprite-scaled shoot-em-up in which the player takes the seat of an F-14 flight combat simulator with a view to shooting down swathes of enemy planes, avoiding incoming gunfire and missiles.</desc>
+		<image>/userdata/roms/mame/images/strkfgtr.png</image>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Plane, 1st person-Shooter</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="150938" source="ScreenScraper.fr">
+		<path>./shangon.zip</path>
+		<name>Super Hang-on (sitdown/upright, unprotected)</name>
+		<desc>Super Hang-On is a checkpoint-based racing game and is the sequel to the acclaimed "Hang-On", released two years earlier. As with the prequel, players take control of a superbike and must race over twisting road-based circuits, avoiding rival bikers and trying to reach the end-of-stage checkpoint before the time limit expires. 
+ 
+For the sequel, Sega introduced the hilly, undulating roads that had been executed so superbly in 1986's "Out Run". The gameplay was further enhanced with the introduction of the 'turbo' button. Upon reaching the bike's maximum speed of 280kph, players could press and hold the turbo and push the bike up to 324kph - something that was necessary to beat the game's extremely tight time limits. This had to be used carefully, however, as the increase in speed made the bike harder to control and accelerating at the wrong time would invariably see a head-on collision with either rival bikers or the road-side objects that litter the stages. 
+ 
+Players could chose to race on any one of four courses: Africa, Asia, America and Europe. Africa is the easiest and shortest of the four, with each subsequent course becoming both more demanding - with tighter bends and more aggressive rival racers - and having a greater number of stages to have to beat. Africa, for example, is made up of only six stages, while the hardest course, Europe, has eighteen stages.</desc>
+		<image>/userdata/roms/mame/images/shangon.png</image>
+		<rating>0.9</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>bootleg</developer>
+		<publisher>SEGA</publisher>
+		<genre>Race, Driving-Motorcycle Race, 3rd Pers.</genre>
+		<players>1</players>
+		<playcount>1</playcount>
+		<lastplayed>20210123T232705</lastplayed>
+		<gametime>92</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="150348" source="ScreenScraper.fr">
+		<path>./suprleag.zip</path>
+		<name>Super League (FD1094 317-0045)</name>
+		<image>/userdata/roms/mame/images/suprleag.png</image>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<genre>Sports-Sports / Baseball</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43447" source="ScreenScraper.fr">
+		<path>./suprloco.zip</path>
+		<name>Super Locomotive (Rev.A)</name>
+		<desc>A vehicle-action arcade game released by Sega in 1982. It was an early video game based on trains and featured background music based on Yellow Magic Orchetra's 1979 hit "Rydeen".</desc>
+		<image>/userdata/roms/mame/images/suprloco.png</image>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Action-Race, Driving-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="43149" source="ScreenScraper.fr">
+		<path>./smgp.zip</path>
+		<name>Super Monaco Gp (World, Rev B, FD1094 317-0126a)</name>
+		<desc>Super Monaco GP is a superb Formula One racing game from Sega that took sprite-scaled graphics to a whole new level. The game's single track offered a very reasonable representation of the famous Monaco Grand Prix circuit. 
+ 
+Before entering the Grand Prix, a qualification lap had to be completed. In the event of qualifying, the qualifying time determined the player's position on the starting grid. During the race itself, checkpoints had to be reached within a set time, or the race was over.</desc>
+		<image>/userdata/roms/mame/images/smgp.png</image>
+		<rating>0.8</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Race 1st Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="43468" source="ScreenScraper.fr">
+		<path>./svf.zip</path>
+		<name>Super Visual Football - European Sega Cup (rev A)</name>
+		<desc>Super Visual Football - European Sega Cup (c) 1994 Sega.  - TECHNICAL -  Sega System 32 hardware Game ID : 833-10851  Main CPU : V60 (@ 16.10795 Mhz), Z80 (@ 8.053975 Mhz) Sound Chips : (2x) YM3438 (@ 8.053975 Mhz), RF5C68 (@ 12.5 Mhz)  Screen orientation</desc>
+		<image>/userdata/roms/mame/images/svf.png</image>
+		<rating>0.5</rating>
+		<releasedate>19940101T000000</releasedate>
+		<publisher>SEGA</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43498" source="ScreenScraper.fr">
+		<path>./szaxxon.zip</path>
+		<name>Super Zaxxon (315-5013)</name>
+		<desc>Super Zaxxon is a 1- or 2-player video game that presents the player with tremendous challenge and excitement never before experienced. The 3-dimensional-like, isometric graphics are produced by projecting the picture at a slant on the screen, putting the player in remote controlled realism with his player ship.</desc>
+		<image>/userdata/roms/mame/images/szaxxon.png</image>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Diagonal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43472" source="ScreenScraper.fr">
+		<path>./swat.zip</path>
+		<name>SWAT (315-5048)</name>
+		<desc>SWAT is an abstract one or two player shoot-em-up in which the aim is to stop swarms of aliens from building a sectional tunnel from the bottom of the screen to the top. 
+ 
+At the top of each level are blue tunnel sections, while at the bottom are purple ones. Aliens start at the bottom of the screen in the purple sections. As they move through a tunnel, they can build new sections in any direction.</desc>
+		<image>/userdata/roms/mame/images/swat.png</image>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Coreland</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="149914" source="ScreenScraper.fr">
+		<path>./saturn.zip</path>
+		<name>ZZZ(notgame):Saturn (USA)</name>
+		<image>/userdata/roms/mame/images/saturn.png</image>
+		<releasedate>19940101T000000</releasedate>
+		<lang>en</lang>
+		<region>us</region>
+	</game>
+	<game id="44124" source="ScreenScraper.fr">
+		<path>./wrestwar.zip</path>
+		<name>Wrestle War (set 3, World, 8751 317-0103)</name>
+		<desc>Lead rookie wrestler Bruce Blade to the top of the wrestling world in this 1989 arcade game by Sega.</desc>
+		<image>/userdata/roms/mame/images/wrestwar.png</image>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Sports / Wrestling-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1536</genreid>
+	</game>
+	<game id="44179" source="ScreenScraper.fr">
+		<path>./yamato.zip</path>
+		<name>Yamato (US)</name>
+		<desc>A 1983 arcade game developed by SEGA. The player controls a ship that is being fired upon by aircraft and enemy ships.</desc>
+		<image>/userdata/roms/mame/images/yamato.png</image>
+		<rating>0.3</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="149460" source="ScreenScraper.fr">
+		<path>./zaxxon.zip</path>
+		<name>Zaxxon (set 1, rev D)</name>
+		<desc>Zaxxon is an isometric scrolling shoot-em-up in which the player pilots an armed spaceship and must penetrate heavily-fortified enemy bases, destroying enemy ships and installations before reaching the final confrontation with a giant armoured robot.</desc>
+		<image>/userdata/roms/mame/images/zaxxon.png</image>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Diagonal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="46471" source="ScreenScraper.fr">
+		<path>./zektor.zip</path>
+		<name>Zektor (Revision B)</name>
+		<desc>Zektor is a one- or two-player game that tasks you with the liberation of eight cities that have been seized by the evil cadre of alien robots. In order to liberate a city, you must defeat three attack waves of fighters and robo-probes. Fighters and Robo-probes are often shielded (in red), and each consecutive hit reduces the enemies shield strength, until, when the shield drops, a hit will destroy it. In addition, you will encounter three types of Moboids: 
+Green Moboids spin the players ship on contact, and bounce enemy ships. 
+Blue Moboids bounce all ships. 
+Red Moboids destroy all un-shielded ships (including the players ship). 
+ 
+After defeating three attack waves, the Alien Robot holding that city will reappear within rotating protective rings, through which a 'slot shot' neutralizes that Robot, awarding the player a bonus ship and advancement to the next round.</desc>
+		<image>/userdata/roms/mame/images/zektor.png</image>
+		<rating>0.4</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="44222" source="ScreenScraper.fr">
+		<path>./zunkyou.zip</path>
+		<name>Zunzunkyou no Yabou (Japan)</name>
+		<desc>Zunzunkyou No Yabou (c) 1994 Sega Enterprises, Ltd.  - TECHNICAL -  Sega System C2 hardware  Main CPU : 68000 (@ 8.948862 Mhz) Sound Chips : YM3438 (@ 7.670453 Mhz), SN76496 (@ 3.579545 Mhz), UPD7759 (@ 640 Khz)  Players : 2 Control : 8-way joystick Butto</desc>
+		<image>/userdata/roms/mame/images/zunkyou.png</image>
+		<rating>0.5</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>SEGA</publisher>
+		<genre>Shooter / 3rd person-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+</gameList>

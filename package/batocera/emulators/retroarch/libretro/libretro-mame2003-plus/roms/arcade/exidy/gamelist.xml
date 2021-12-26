@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="149687" source="ScreenScraper.fr">
+		<path>./mf_bdash.zip</path>
+		<name>Boulder Dash (Max-A-Flex)</name>
+		<desc>Rockford digs feverishly, as boulders crash down all around him, through 16 mystical caves and five levels of difficulty.</desc>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>First Star Software</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mf_bdash.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="57818" source="ScreenScraper.fr">
+		<path>./mf_brist.zip</path>
+		<name>Bristles (Max-A-Flex)</name>
+		<desc>A carpenter named Peter tries to paint a house in this platform game.</desc>
+		<rating>0.3</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>First Star Software</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mf_brist.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="40452" source="ScreenScraper.fr">
+		<path>./carpolo.zip</path>
+		<name>Car Polo</name>
+		<desc>Car Polo is an 'up-to-four player' full color video game that combines the skills of driving with the intense player interaction of team sports. The object is to score by bumping or pushing the ball with a car into your team's goal. Teamwork revolves around passing and blocking strategy. Play becomes fast and furious, and excitement is enhanced by car motor noises, crash sounds, controlled grass skids and bouncing ball motions.</desc>
+		<rating>0.3</rating>
+		<releasedate>19770101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Race, Driving-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/carpolo.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="40532" source="ScreenScraper.fr">
+		<path>./cheyenne.zip</path>
+		<name>Cheyenne (version 1.0)</name>
+		<desc>A first-person shoot'em up game, with a western motif. The player uses a gun (mounted to the cabinet) to escort the sheriff through a variety of dangers, gathering bounty for capturing criminals. There are 7 levels or scenes plus the bonus level: 
+ 
+</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/cheyenne.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="40535" source="ScreenScraper.fr">
+		<path>./chiller.zip</path>
+		<name>Chiller (version 3.0)</name>
+		<desc>This is a gun game, and there are four different screens (plus two different bonus screens). The object is simply to shoot everything in sight (and to try and locate any hidden targets on the screen). The game is based on time, and the timer moves faster when you are shooting poorly. 
+The first screen is a torture chamber. There are four (still living) human targets on this screen. From left to right they are; a man chained to the wall, a person in a guillotine (shoot the top of the guillotine to decapitate them), a woman strapped in a strange machine, and a man in a head vise (shoot the vise to crush his head). The rest of the room is strewn with blood and loose body parts. You don't simply shoot each target once, instead you shoot each part of the target, which reduces that part to a mess of blood and bones. This is thankfully the most disturbing level in the game. 
+The second room is another torture chamber with a river of blood flowing through the middle. This one has five human targets; a man strapped to a board, a man chained to the floor, two people on stretching racks (shoot the wheels to pull them apart), and a woman hung from rope over the river (shoot a pulley to slowly lower her into the river to be eaten by crocodiles). Body parts will flow down the river randomly, and a man will pop out of a door from time to time to toss a blade into one of the helpless victims. 
+The third level is a haunted house hallway. There is only one human victim on this level. It is a woman who runs from one doorway to another, shoot out the trapdoor to cause her to fall inside (and then shoot the beast that was chasing her). Your other targets are mostly assorted ghosts, and a few random body parts that will fall from the ceiling. 
+The final level is a graveyard. Your only human victim on this level is a woman who is half buried in the ground, shooting her torso multiple times strips off her clothing until she is topless, and the last shot kills her. You other targets are bats, hands that pop up from the ground, and a man who pulls a cart full of body parts (you can't kill him, shooting him just makes him run away, only to return later). 
+ 
+The game repeats the levels over and over again until you manage to find every secret target on each screen (it gives you hints between the levels). Finding all the targets on a single screen earns you a bonus game (a slot machine), while finding all the hidden targets in the game gives you the second bonus game (a shooting gallery), and a free game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/chiller.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="60538" source="ScreenScraper.fr">
+		<path>./circus.zip</path>
+		<name>Circus</name>
+		<desc>POP! POP! POP! Pop the balloons and score points. A wall of yellow, green and blue balloons will appear at the top of the screen. You must pop balloons by catching a clown on the teeter-totter and bouncing him up to the balloons.</desc>
+		<rating>0.7</rating>
+		<releasedate>19770101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<image>/userdata/roms/mame/images/circus.png</image>
+	</game>
+	<game id="40576" source="ScreenScraper.fr">
+		<path>./claypign.zip</path>
+		<name>Clay Pigeon (Version 2.0)</name>
+		<desc>The object of Clay Pigeon was to shoot as many clay targets as you can, using an arcade light gun that was shaped like a shotgun. At the start of the game you are given the choice of selecting either Trap Shooting or Skeet Shooting. Trap shooting is where the clay target is thrown directly away from the shooter, while in skeet shooting the target is launched across the shooter's field of vision. The graphics are done in Exidy's realistic style, each round is played against a decent looking outdoor background, and an extremely repetitive announcer yells 'pull' to warn you of each and every target being launched. After several rounds of targets, you finally get to go after some real live animals! The real live animals are of course, ducks! The ducks are small and fly onto the screen in small groups of up to around a half dozen or so, and unlike the earlier title "Vs. Duck Hunt", you cannot miss any of these. Missing any ducks in this round ends the game instantly, and will more than likely have you fumbling for another quarter in an attempt to do it right this time.</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/claypign.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="40619" source="ScreenScraper.fr">
+		<path>./combat.zip</path>
+		<name>Combat (version 3.0)</name>
+		<desc>A shooting game with a military motif. The player uses a gun, mounted to the cabinet, to protect allies from a variety of dangers while attempting to break through and conquer enemy lines and get promoted to a higher rank (from Private to General Of The Army) and be awarded a campaign medal. 
+ 
+This game was known under Combat or Catch-22</desc>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/combat.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="40707" source="ScreenScraper.fr">
+		<path>./cracksht.zip</path>
+		<name>Crackshot (Version 2.0)</name>
+		<desc>A First-person shoot'em up gallery style game. A player must use his skill to shoot a number of 'good' targets, while not shooting the 'bad' ones, before time runs out. The game has several levels including a bar, Varmit Alley, Bank Robbers, Robots, Birds, outer space, Bank robbers again and a Bonus 'Slot machine' level.</desc>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/cracksht.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="40708" source="ScreenScraper.fr">
+		<path>./crash.zip</path>
+		<name>Crash</name>
+		<desc>Crash is a two-dimensional maze racing game designed and programmed by Edward Valeau of Exidy in 1979. You "control" a car with no brakes which moves at either slow or fast speed through a maze containing dots. At the same time, one or more computer controlled cars run through the same maze in the opposite direction with the intention of ramming you. At each of four junctions in the maze, you have the option of changing lanes to avoid the oncoming cars. The objective is to pick up all the dots before the computer takes you out.</desc>
+		<rating>0.1</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Action-Race, Driving-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/crash.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="40723" source="ScreenScraper.fr">
+		<path>./crossbow.zip</path>
+		<name>Crossbow (Version 2.0)</name>
+		<desc>Early first-person shoot'em up game with a dungeons and dragons feel about it. Features good speech and screams. 
+ 
+Gameplay requires the player to protect a band of adventurers (referred to as "friends" by the game) from afar by shooting objects that threaten them. The adventurers enter from the left-hand side of the screen and attempt to cross the screen unharmed. If the player helps them reach the opposite side of the screen safely, the adventurers survive to the next scenario, and new adventurers are occasionally granted between scenarios. In addition to the obstacles, the adventurers are vulnerable to the player's shots. The first time the player shoots an adventurer, an on-screen message is shown: "DON'T SHOOT YOUR FRIENDS!" Thereafter, shooting an adventurer will cause him/her to emit a cry of pain, and to walk at a slower pace the rest of the way. A second shot will kill the adventurer.Scenarios are chosen by shooting a destination on a map screen, which include: town, desert, volcano, cave, bridge, jungle, and castle. 
+ 
+The short path to reach the castle is by using the following Color paths -&gt;  Green -&gt; Blue -&gt; Blue -&gt; Red. 
+ 
+The goal is to reach the final scenario, past the castle, in which the player confronts the Masterâ€”who presumably created the dangers in the game. Defeating the Master of Darkness requires shooting him in the eyes when they turn red (and deadly). The player is treated to a brief congratulation and a challenge to defeat the Master again, but if you dare. Following this screen the player starts over with however many adventurers survived the confrontation.</desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/crossbow.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="41183" source="ScreenScraper.fr">
+		<path>./fax.zip</path>
+		<name>FAX</name>
+		<desc>Who? When? What? Where? Why? Fax is a trivia game that asks questions about: general knowledge, sports, history and entertainment.</desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Quiz / English-Quiz</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/fax.png</image>
+		<genreid>3328</genreid>
+	</game>
+	<game id="41240" source="ScreenScraper.fr">
+		<path>./fireone.zip</path>
+		<name>Fire One</name>
+		<desc>Fire One! was a player-versus-player or player-versus-computer submarine showdown. 
+ 
+The primary objective of the game is to find and destroy the enemy's submarine, while avoiding the enemy's torpedoes. Through your virtual periscope you are free to launch one of your 8 torpedoes to take out any of the enemy's various ships for extra points. It takes some time to reload each torpedo tube, so you must be judicious in how you plan your attacks. 
+ 
+In addition to being able to control the left/right rotation of your periscope, the game also features a submerge button which you can use to temporarily hide from the enemy. Holding this button down keeps you hidden but also keeps you out of the action, allowing the enemy free reign over the seas.</desc>
+		<rating>0.5</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/fireone.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="57836" source="ScreenScraper.fr">
+		<path>./mf_flip.zip</path>
+		<name>Flip and Flop (Max-A-Flex)</name>
+		<desc>Flip &amp; Flop is a kind of Pac-Man in isometric graphics on platforms which are connected by ladders. The player controls alternately Flip, a kangaroo, who jumps around on the platforms and Mitch, an ape, who hangs along the platforms. A zoo-keeper tries to catch Flip, and Mitch is being chased by a net. There are sticky fields on which one may lure keeper and net, where they are caught for some seconds. If the player runs beyond the border, he falls off the playing field and loses a life. The goal is to pass all marked fields. Every five levels there is a short sequence with a small circus presentation. In Level 13, the maximum playing field size is reached, later fields must be uncovered twice, and even later there aren't any more sticky fields in the level.</desc>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<publisher>First Star Software</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mf_flip.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="41631" source="ScreenScraper.fr">
+		<path>./hardhat.zip</path>
+		<name>Hard Hat</name>
+		<desc>You are a carpenter and you are being chased by hammers and whirlwinds through a grid of scaffolding. You can move the scaffolding to move letters and spell EXIDY and HARD HAT.</desc>
+		<rating>0.5</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hardhat.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41686" source="ScreenScraper.fr">
+		<path>./hitnmiss.zip</path>
+		<name>Hit 'n Miss (version 3.0)</name>
+		<desc>A child-friendly shooting game where you simply avoid the good targets and shoot the bad ones.</desc>
+		<rating>0.6</rating>
+		<releasedate>19870101T000000</releasedate>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hitnmiss.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="79018" source="ScreenScraper.fr">
+		<path>./mtrap.zip</path>
+		<name>Mouse Trap (version 5)</name>
+		<desc>Control a mouse around the maze to collect cheese while avoiding cats. Collecting a bone will turn you into a dog in which you can eat the cats. Collect all the cheese to clear the maze. But beware of the hawk who flies over periodically, the mouse and the dog are vulnerable to it. You can also press certain colored buttons to alter the maze.</desc>
+		<rating>0.9</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mtrap.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="79247" source="ScreenScraper.fr">
+		<path>./pepper2.zip</path>
+		<name>Pepper 2 (version 8)</name>
+		<desc>Despite its name, there was no predecessor named Pepper or Pepper I. The gameplay is similar to the game Amidar by Konami and Stern. 
+ 
+There are four mazes per level in Pepper II. Each maze has exits leading to 3 other mazes. All four mazes must be filled to advance to the next level. To fill in a maze, the player maneuvers "Pepper" around different segments of the maze. As Pepper travels, he leaves a "zipper". Once he encloses or "zips" a segment, it fills in and points are awarded. If Pepper backtracks on an uncompleted segment, it unzips. 
+ 
+The character "Pepper" is an angel. There are two types of enemies that must be avoided: "Roaming Eyes" and the " Whippersnapper" who unzips all uncompleted, zipped segments by moving over them. Pepper's one defense is to enclose an area containing a pitchfork "energizer", which turns him into a devil for approximately four seconds. At that time he can go after all Roaming Eyes for points. At the same time, the Whippersnapper freezes. There are four pitchforks in the corners of every maze. A deluxe energizer is located in the center of each maze. This energizer alternates between being a pitchfork and a halo symbol. If Pepper encloses the middle area when the energizer is a halo, the Whippersnapper will disappear from the maze. 
+ 
+Points are made for enclosing a segment, consuming a pair of roaming eyes when energized by the pitchfork (similar to Pac-Man), obtaining prizes, completing a maze, and completing 4 mazes. A bonus turn is awarded at 40,000, 50,000, 70,000 or 90,000 points, depending on the dip switch settings. 
+ 
+Each maze also contains a prize in one of the segments. The player must enclose the area it appears in to gain the prize and points, and then the prize is shown beneath the maze.</desc>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pepper2.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42771" source="ScreenScraper.fr">
+		<path>./ripcord.zip</path>
+		<name>Rip Cord</name>
+		<desc>The goal of the game is to jump out of the plane and land safely on one of the many targets down below. The challenge is to avoid the numerous enemy helicopters that occupy the sky in between your plane and the ground. 
+ 
+You control the timing of your jump with the Jump button, at which point your parachutist begins hurtling toward the ground out of control. Pressing the D-Ring button shortly afterwards releases the chute and slows your descent. More importantly, it allows you at this point to control your left/right position via the paddle control to help you avoid the enemies.</desc>
+		<rating>0.1</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Sports / Skydiving-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ripcord.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42794" source="ScreenScraper.fr">
+		<path>./robotbwl.zip</path>
+		<name>Robot Bowl</name>
+		<desc>You have a top down view of a bowling alley with score cards shown on each side. The only thing in the game that uses an actual animation is the bowler himself, the robot has a several frame animation when he walks. Everything is (of course) shown in glorious monochrome black and white. The game begins with your robot bowler running up to the alley (his feet move faster than he does, which makes it look like he is running on a conveyor belt or something). You then have three seconds to roll the ball, before it will roll of its own accord. The game is controlled with five buttons, they are left, right, shoot, hook left, and hook right. When Exidy was making this game, they had to make a decision about how the hooking worked, and it seems that they decided that "Robots are telepaths, and can effect the balls movement after it is thrown!". You see you can't even hook the ball until after it is thrown. This makes it very easy to pick up the spare. The game makes up for that little trick by making 'splits' very common (the 7-10 split and the 4-7-10 split come up all the time). These are pretty annoying, but you can usually learn how to clear them out (except the 7-10 split, I still haven't figured out how to clear that one).</desc>
+		<rating>0.1</rating>
+		<releasedate>19770101T000000</releasedate>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Sports / Bowling-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/robotbwl.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43060" source="ScreenScraper.fr">
+		<path>./showdown.zip</path>
+		<name>Showdown (version 5.0)</name>
+		<desc>A live action western laser disc game by American Laser Games made in 1994 that was eventually re-released by Digital Leisure on the PC in 2004, on Nintendo's Wiiware in 2010, and on PlayStation Network in July 2011.</desc>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Casino / Cards-Casino</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/showdown.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="149685" source="ScreenScraper.fr">
+		<path>./sidetrac.zip</path>
+		<name>Side Trak</name>
+		<desc>Side Trak is a black &amp; white man-versus-machine game where the goal is to pick up all of the waiting passengers with your train while avoiding the computer-driver 'killer engine' which aims to take you out in a head-on collision. You can control your train via the 'fast' button which allows you to temporarily increase your speed on the tracks. You can also use the joystick to switch between several tracks at various junction points. 
+ 
+Each time you make a complete circuit around the track and pass the start marker on the outside track, another car is added to your train.</desc>
+		<rating>0.3</rating>
+		<releasedate>19790101T000000</releasedate>
+		<image>/userdata/roms/mame/images/sidetrac.png</image>
+	</game>
+	<game id="43231" source="ScreenScraper.fr">
+		<path>./spectar.zip</path>
+		<name>Spectar (revision 3)</name>
+		<desc>Spectar, released by Exidy in 1980, is the follow-up of "Targ". Gameplay is apparently unchanged, you control a vehicle called Whummel into a 9x9 grid maze, chasing down, and being chased by, the alien invaders. Targs have evolved into the more dangerous Rammers, and Spectars appears more often, shooting at player's ship. 
+ 
+You use a 4-Way joystick to guide your vehicle in the maze, and a pushbutton to shoot at enemies. Up to 2 players can alternate in gameplay. 
+ 
+The most noticeable difference from his predecessors is that to complete a level you can now collect all the gems in the maze, in a "Pacman"-like game or destroy all of the Rammers (like in "Targ"). Rammers and Spectars continue to appear from flashing pods, so you cannot rest and plan your course easily, or you will be overwhelmed by the alien force. 
+ 
+Graphic is highly improved compared to his predecessor: The maze now has barricades that must be avoided or can be used as a shielding against the enemies, and has ten environment settings, changing from the 'square-block town' of Targ to a city, a forest, a lunar landscape and many more. The enemies too are smarter and faster, and the fact that they go on spawning from the pods makes the game a even more frenzy challenge.</desc>
+		<rating>0.6</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/spectar.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43348" source="ScreenScraper.fr">
+		<path>./starfire.zip</path>
+		<name>Star Fire (set 1)</name>
+		<desc>Exidy STARFIRE is a single player game which simulates combat between space-going fighters. The player can control the speed and direction of his fighter and attack enemy fighters with his lasers; the enemy fighters shoot fireballs at the player. The object of play is to accumulate points by destroying enemy fighters. A player can buy extra playtime during play and continue the game he is playing, as long as he has any time left; he earns bonus playtime each time he exceeds a bonus score. The game keeps track of 20 high scores - one score for each number of coins accumulated. The initials of high scoring players are displayed during the game's attract mode. 
+ 
+</desc>
+		<rating>0.5</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Shooter / Plane, 1st person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/starfire.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43347" source="ScreenScraper.fr">
+		<path>./starfir2.zip</path>
+		<name>Star Fire 2</name>
+		<desc>Exidy STARFIRE is a single player game which simulates combat between space-going fighters. The player can control the speed and direction of his fighter and attack enemy fighters with his lasers; the enemy fighters shoot fireballs at the player. The object of play is to accumulate points by destroying enemy fighters. A player can buy extra playtime during play and continue the game he is playing, as long as he has any time left; he earns bonus playtime each time he exceeds a bonus score. The game keeps track of 20 high scores - one score for each number of coins accumulated. The initials of high scoring players are displayed during the game's attract mode. 
+ 
+</desc>
+		<rating>0.5</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Shooter / Plane, 1st person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/starfir2.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43520" source="ScreenScraper.fr">
+		<path>./targ.zip</path>
+		<name>Targ</name>
+		<desc>Targ is a 1 or 2-player shooter game released by Exidy in 1980. Your town is invaded by Targ riders, you must maneuver the heroic vehicle Wummel to destroy them. From time to time, a Spectar comes into screen, and can be destroyed for extra bonus. 
+ 
+Action takes place into a 9x9 grid, 'Crystal City', where the player's vehicle must avoid and chase down 10 enemy wedge-shaped vehicles. When all enemies are destroyed, you are awarded an extra bonus and can access the following level. 2 players can alternate in the game. You use a 4-way joystick to control the Wummel, and a pushbutton to fire at enemies. Progressing in the gameplay causes the Targs to become faster and smarter, for a fast and furious gameplay.</desc>
+		<rating>0.5</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/targ.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="43546" source="ScreenScraper.fr">
+		<path>./teetert.zip</path>
+		<name>Teeter Torture (Prototype)</name>
+		<desc>You control a cannon moving left-right on a teeter-totter. Weights with hooks on them fall down at you and if you don't shoot them they hook on and weigh down one side of your teeter-totter. The weight of your shooter also moves the teeter-totter. A plunger of TNT is attached to either side of the teeter-totter board. If if goes all the way down, kaboom!</desc>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/teetert.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="64571" source="ScreenScraper.fr">
+		<path>./topgunnr.zip</path>
+		<name>Top Gunner (Exidy)</name>
+		<desc>Top Gunner (c) 1986 Konami.  Top Gunner is a pseudo-3-D shooter. The game starts by dropping a jeep, by parachute, onto a beach. Then two men parachute in and get into the jeep. Now it's up to you to do two things. First, liberate the POW's and second, wr</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Shooter / Plane, 1st person-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/topgunnr.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43678" source="ScreenScraper.fr">
+		<path>./topsecex.zip</path>
+		<name>Top Secret (Exidy, version 1.0)</name>
+		<desc>Steer your spy vehicle through enemy territory, destroying enemy units and obstacles with a large arsenal of different weapons. Extra weapons can be picked up during gameplay.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Race, Driving-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/topsecex.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="43933" source="ScreenScraper.fr">
+		<path>./venture.zip</path>
+		<name>Venture (version 5 set 1)</name>
+		<desc>Venture is a 1- or 2-player "Gauntlet" style game (although Venture pre-dates the Atari legend by 4 years) set in a multi-level dungeon. The player, armed with a bow and arrow fights through enemy infested levels in the quest to collect treasure. 
+ 
+Each dungeon is represented as a floor plan, populated with a number of "Space Invader" like monsters. Numerous rooms and their corresponding doors are clearly marked; these rooms are the treasure rooms and each one must be cleared. When the player enters a room, the viewpoint zooms in on the action and the room takes up the whole screen. Each room has a treasure or weapon guarded by one or more creatures. Players must try to retrieve the treasure while avoiding (or killing) creatures and obstacles. Only in the rooms themselves can players use their bow and arrow. 
+ 
+When the treasure is successfully taken out of the chamber, bonus points are awarded. The screen image then returns to the original, zoomed-out floor plan and the player moves on to the next room of their choice. Once a room has been cleared of its item, the player no longer has access to that room. The player must collect all of the treasures on the current level before descending to another dungeon.</desc>
+		<rating>0.9</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/venture.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="149686" source="ScreenScraper.fr">
+		<path>./victory.zip</path>
+		<name>Victory</name>
+		<desc>Victory is a game which you control your Battlestar to destroy an alien force which has overrun your planet. This force has installed radar and quark silos on your planet and use their deadly armada to drop paratroopers to the surface to release the quarks. All is not lost however as your Battlestar is equipped capable lasers and shields as well as the 'Doomsday Device'.</desc>
+		<rating>0.5</rating>
+		<releasedate>19820101T000000</releasedate>
+		<image>/userdata/roms/mame/images/victory.png</image>
+	</game>
+	<game id="44068" source="ScreenScraper.fr">
+		<path>./whodunit.zip</path>
+		<name>Who Dunit (version 9.0)</name>
+		<desc>A murder mystery shooter where the player uses the gun to protect Max from a variety of attacks as well as give him directions.</desc>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/whodunit.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="44189" source="ScreenScraper.fr">
+		<path>./yukon.zip</path>
+		<name>Yukon (Version 2.0)</name>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Exidy, Inc.</developer>
+		<publisher>Exidy, Inc.</publisher>
+		<genre>Casino / Cards-Casino</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/yukon.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="62979" source="ScreenScraper.fr">
+		<path>./maxaflex.zip</path>
+		<name>ZZZ(notgame):Max-a-flex</name>
+		<releasedate />
+		<genre>Various-Various / System</genre>
+		<image>/userdata/roms/mame/images/maxaflex.png</image>
+	</game>
+	<game id="78916" source="ScreenScraper.fr">
+		<path>./mf_achas.zip</path>
+		<name>Astro Chase (Max-A-Flex)</name>
+		<desc>Arcades conversion. For more information about the gale itself, please refer to the original Atari 8-Bits version entry.</desc>
+		<image>/userdata/roms/mame/images/mf_achas.png</image>
+		<rating>0.3</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>First Star Software</developer>
+		<publisher>First Star Software</publisher>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+	</game>
+</gameList>

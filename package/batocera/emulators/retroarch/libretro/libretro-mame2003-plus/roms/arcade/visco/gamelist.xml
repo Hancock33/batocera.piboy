@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="149456" source="ScreenScraper.fr">
+		<path>./blockcar.zip</path>
+		<name>Block Carnival</name>
+		<desc>Block Carnival is a funny ball and paddle game.</desc>
+		<image>/userdata/roms/mame/images/blockcar.png</image>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<publisher>Visco</publisher>
+		<genre>Action-Action / Breakout games</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="41969" source="ScreenScraper.fr">
+		<path>./keithlcy.zip</path>
+		<name>Dramatic Adventure Quiz Keith And Lucy (Japan)</name>
+		<desc>A Japanese quiz game.</desc>
+		<image>/userdata/roms/mame/images/keithlcy.png</image>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<publisher>Visco</publisher>
+		<genre>Quiz / Japanese-Quiz</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3328</genreid>
+	</game>
+	<game id="41019" source="ScreenScraper.fr">
+		<path>./drifto94.zip</path>
+		<name>Drift Out '94 - The Hard Order (Japan)</name>
+		<desc>A top birds eye view racing game.</desc>
+		<image>/userdata/roms/mame/images/drifto94.png</image>
+		<rating>0.7</rating>
+		<releasedate>19940101T000000</releasedate>
+		<publisher>Visco</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41348" source="ScreenScraper.fr">
+		<path>./galmedes.zip</path>
+		<name>Galmedes (Japan)</name>
+		<desc>Galmedes is a vertical scrolling shooter arcade game released only in Japan.. The ship has two types of attack: the standard firing weapon and a charge attack. Once the player collects all three weapons, the player can select any of those weapons during combat. 
+ 
+On the alien planet of Gaston, a dictator named Gildy rose to absolute power. Gildy started a plan to take over his home solar system, but upon doing so, he decided to spread his influence. After conquering his home galaxy, the next galaxy that Gildy planned on invading was the Galmedes Galaxy. In response, the unified forces of the planets of the Galmedes Galaxy have created a powerful space fighter known as the LEPTON (Launched Electro-Projectile Thermal Osmotic Nullifier). Two pilots, Foo and Bar, are selected to launch the LEPTON fighters against the invading Gastonian Forces.</desc>
+		<image>/userdata/roms/mame/images/galmedes.png</image>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Visco</developer>
+		<publisher>Visco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41123" source="ScreenScraper.fr">
+		<path>./eto.zip</path>
+		<name>Kokontouzai Eto Monogatari (Japan)</name>
+		<desc>Place up to 3 blocks of the same colour, horizontally, vertically or in an 'L' shape which can be done in any direction.</desc>
+		<image>/userdata/roms/mame/images/eto.png</image>
+		<rating>0.7</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Visco</developer>
+		<publisher>Visco</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="79009" source="ScreenScraper.fr">
+		<path>./mslider.zip</path>
+		<name>Monster Slider (Japan)</name>
+		<desc>A puzzle game in vein of Puzzle Bobble set in a fantasy world. Contains three selectable characters (15 in 2 player mode), two modes (single and vs.)</desc>
+		<image>/userdata/roms/mame/images/mslider.png</image>
+		<rating>0.9</rating>
+		<releasedate>19970101T000000</releasedate>
+		<developer>Visco</developer>
+		<publisher>Visco</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="43380" source="ScreenScraper.fr">
+		<path>./stmblade.zip</path>
+		<name>Storm Blade (US)</name>
+		<desc>Auto Fire: At the title screen, hold B and press Start, then choose any plane with the A button.</desc>
+		<image>/userdata/roms/mame/images/stmblade.png</image>
+		<rating>0.7</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Visco</developer>
+		<publisher>Visco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41080" source="ScreenScraper.fr">
+		<path>./earthjkr.zip</path>
+		<name>U.n. Defense Force - Earth Joker (Japan)</name>
+		<desc>A.D. 2026. The earth feels the onslaught of total takeover from a hostile and powerful enemy. They call themselves Slytow. All the countries of the Earth fall before there might. The military is powerless against the Slytow. The few who survive flee out to space to form colonies, based on their former nations. Their dream: to regroup and wrest control of the earth from the Slytow. 
+ 
+Earth Joker - U.N. Defense Force is a Vertical Shoot-'Em-Up, developed and published by Visco Games, which was released in 1993. The player can pick from four different ships, and has to go through seven stages. The ships are equipped with a charge laser, that can be used holding down the fire button.</desc>
+		<image>/userdata/roms/mame/images/earthjkr.png</image>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Visco</developer>
+		<publisher>Visco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43917" source="ScreenScraper.fr">
+		<path>./vasara2.zip</path>
+		<name>Vasara 2 (set 1)</name>
+		<desc>Vasara 2 is a 2D arcade shoot-'em-up in bullet hell/danmaku style, and a sequel to Vasara. Like in the first game, the action takes place in alternate Japan (science fantasy + Sengoku period), and Oda Nobunaga is the main enemy. The player can select one from four characters: Takeda Nobukatsu, Momochi Sandayu, Seiryubo and Akechi Mitsuhide (there's also one hidden character, Saika Magoichi). 
+ 
+Game's danmaku style is simple - fly forward, shoot enemies, collect points and weapon's upgrade, dodge myriad bullets and defeat giant bosses. Vasara 2 has one unique feature, direct contact with the enemy is not deadly - the player is only slightly repelled.</desc>
+		<image>/userdata/roms/mame/images/vasara2.png</image>
+		<rating>0.9</rating>
+		<releasedate>20010101T000000</releasedate>
+		<developer>Visco</developer>
+		<publisher>Visco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43916" source="ScreenScraper.fr">
+		<path>./vasara.zip</path>
+		<name>Vasara</name>
+		<desc>Vasara is a 2D arcade vertical scrolling shoot'em up, taking place in an alternative 1600s Japan, featuring ahistorical elements such as giant robots normally found in sci-fi shooters. The game follows the typical manic shooter/bullet hell concept - players (up to two in co-op) fly forward on hover bikes and shoot enemies while trying to avoid many projectiles fired at them. Vasara has three playable characters: Yukimura Sanada, Keiji Maeda, and Saiga Magoichi - each specializing in a different weapon. Besides the standard shot, screen clearing bombs and charge attacks are available. Defeating or damaging enemies with the charge attacks makes red gems appear. Picking these up fills a "Vasara" meter, turning the charge attack into a super attack. Another unique feature is that players (and enemies) don't die after collisions. The game features six stages and several bosses to kill.</desc>
+		<image>/userdata/roms/mame/images/vasara.png</image>
+		<rating>0.9</rating>
+		<releasedate>20000101T000000</releasedate>
+		<developer>Visco</developer>
+		<publisher>Visco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41020" source="ScreenScraper.fr">
+		<path>./driftout.zip</path>
+		<name>Drift Out (Europe)</name>
+		<desc>An overhead-view racing game.</desc>
+		<image>/userdata/roms/mame/images/driftout.png</image>
+		<rating>0.8</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Visco</developer>
+		<publisher>Visco</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1</players>
+		<playcount>1</playcount>
+		<lastplayed>20210807T205844</lastplayed>
+		<gametime>90</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+</gameList>

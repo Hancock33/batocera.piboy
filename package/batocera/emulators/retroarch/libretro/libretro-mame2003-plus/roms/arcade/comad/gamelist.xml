@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="44043" source="ScreenScraper.fr">
+		<path>./wbbc97.zip</path>
+		<name>Beach Festival World Championship 1997</name>
+		<desc>A volleyball game that features international teams of both men and women contesting in the World Beach Ball Championship.</desc>
+		<releasedate>19970101T000000</releasedate>
+		<developer>Comad</developer>
+		<publisher>Comad</publisher>
+		<genre>Sports / Volleyball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wbbc97.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40173" source="ScreenScraper.fr">
+		<path>./bballs.zip</path>
+		<name>Bouncing Balls</name>
+		<desc>A puzzle game where you drop balls in a certain order to create a sum of numbers.</desc>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>Comad</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bballs.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41163" source="ScreenScraper.fr">
+		<path>./fantasia.zip</path>
+		<name>Fantasia (940429 PCB, set 1)</name>
+		<desc>Fantasia is a "Qix"-style adult puzzle game modeled heavily after the Kaneko game "Gals Panic!". It features photographic images of both Japanese and western models. The objective is to reveal 80% of the silhoue</desc>
+		<releasedate>19940101T000000</releasedate>
+		<publisher>Comad &amp; New Japan System</publisher>
+		<genre>Adult-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/fantasia.png</image>
+		<adult>true</adult>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41168" source="ScreenScraper.fr">
+		<path>./fantsia2.zip</path>
+		<name>Fantasia 2 (Explicit)</name>
+		<desc>An adult variation - one of several released by the company - of the 1981 Taito classic, "Qix" (and, latterly, "Gal Panic" from Kaneko), in which players must 'colour in' sections of the background in order to reveal a digitis</desc>
+		<releasedate>19970101T000000</releasedate>
+		<developer>Comad</developer>
+		<publisher>Comad</publisher>
+		<genre>Adult-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/fantsia2.png</image>
+		<adult>true</adult>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41357" source="ScreenScraper.fr">
+		<path>./galspnbl.zip</path>
+		<name>Gals Pinball</name>
+		<desc>Gals Pinball (c) 1996 Comad.  A video-pinball game with girls... lots of girls.  - TECHNICAL -  Main CPU : 68000 (@ 10 Mhz) Sound CPU : Z80 (@ 4 Mhz) Sound Chips : YM3812 (@ 3.579545 Mhz), OKI6295 (@ 8 Khz)  Screen orientation : Vertical Video resolution </desc>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>Comad</publisher>
+		<genre>Pinball</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/galspnbl.png</image>
+		<genreid>1792</genreid>
+	</game>
+	<game id="41571" source="ScreenScraper.fr">
+		<path>./gulfwar2.zip</path>
+		<name>Gulf War 2 (set 1)</name>
+		<desc>A vertically scrolling shoot-em-up from Comad. 
+ 
+Gulf War-II is more like a bootleg or hack than an original game; a LOT of the game code is taken directly from Taito's "Twin Cobra". The gameplay is nearly identical but the theme and all the GFX have been changed. 
+ 
+Like many game from Korea, Comad used the Gulf war theme in the 90's. This was a great theme, because based on the actuality, and the game sold very well (hundred thousand of boards) 
+</desc>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Comad</developer>
+		<publisher>Comad</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gulfwar2.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41726" source="ScreenScraper.fr">
+		<path>./hotpinbl.zip</path>
+		<name>Hot Pinball</name>
+		<desc>Hot Pinball (c) 1995 Comad.  A video-pinball game with girls... lots of girls.  - TECHNICAL -  Main CPU : 68000 (@ 10 Mhz) Sound CPU : Z80 (@ 4 Mhz) Sound Chips : YM3812 (@ 3.579545 Mhz), OKI6295 (@ 8 Khz)  Players : 1 Buttons : 3  - SERIES -  1. Hot Pinb</desc>
+		<releasedate>19950101T000000</releasedate>
+		<publisher>Comad &amp; New Japan System</publisher>
+		<genre>Pinball</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/hotpinbl.png</image>
+		<genreid>1792</genreid>
+	</game>
+	<game id="41925" source="ScreenScraper.fr">
+		<path>./jumpkids.zip</path>
+		<name>Jump Kids</name>
+		<desc>Control a baby to slap enemies and collect items.</desc>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Comad</developer>
+		<publisher>Comad</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/jumpkids.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="42199" source="ScreenScraper.fr">
+		<path>./lvgirl94.zip</path>
+		<name>Las Vegas Girl (Girl &amp;apos;94)</name>
+		<desc>Las Vegas Girl - Girl '94 (c) 1994 Comad.  "Columns"-like game with pictures of nude girls!  - TECHNICAL -  Main CPU : 68000 (@ 10 Mhz) Sound CPU : Z80 (@ 1 Mhz) Sound Chips : OKI6295 (@ 8 Khz)  Screen orientation : Horizontal Video resolution : 368 x 224</desc>
+		<releasedate>19940101T000000</releasedate>
+		<publisher>Comad</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/lvgirl94.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="78937" source="ScreenScraper.fr">
+		<path>./missw96.zip</path>
+		<name>Miss World '96 (Nude, C-3000A PCB, set 1)</name>
+		<desc>Rip-off of "Gals Panic!", featuring 'adult' photographs instead of the cartoon imagery.</desc>
+		<rating>0.5</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Comad</developer>
+		<publisher>Comad</publisher>
+		<genre>Adult-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/missw96.png</image>
+		<adult>true</adult>
+		<genreid>2816</genreid>
+	</game>
+	<game id="79082" source="ScreenScraper.fr">
+		<path>./newfant.zip</path>
+		<name>New Fantasia (1995 copyright)</name>
+		<desc>New Fantasia (c) 1995 Comad.  An adult variation - one of several released by the company - of the 1981 Taito classic, "Qix" (and, latterly, "Gal Panic" from Kaneko), in which players must 'colour in' sections of the background in order to reveal a digiti</desc>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Comad &amp; New Japan System</developer>
+		<publisher>Comad &amp; New Japan System</publisher>
+		<genre>Adult-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/newfant.png</image>
+		<adult>true</adult>
+		<genreid>2816</genreid>
+	</game>
+	<game id="42554" source="ScreenScraper.fr">
+		<path>./pushman.zip</path>
+		<name>Pushman (Korea, set 1)</name>
+		<desc>For fans of Sokoban type games, with a little more challenge. Some monsters chase you but on the other hand you have the limited possibility of shooting blocks. Monsters die if you crush them with a block or with a turnstile. Funny but quickly boring, the music is quite average.</desc>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Comad</developer>
+		<publisher>Comad</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pushman.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="43320" source="ScreenScraper.fr">
+		<path>./ssmissin.zip</path>
+		<name>S.S. Mission</name>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Comad</developer>
+		<publisher>Comad</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ssmissin.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43441" source="ScreenScraper.fr">
+		<path>./supmodel.zip</path>
+		<name>Super Model</name>
+		<desc>Super Model is a non-nude clone of "New Fantasia" featuring photographic images of both Japanese and western models. The objective is to reveal 80% of the silhouetted girl's image within the time limit while avoiding the enemies. 
+ 
+To complicate things, there is a bar with a pointer at the top of the screen. If the pointer dips below a certain level (indicated by the change in color) the image will change to that of a monster. The pointer slowly creeps towards the monster side of the bar over time and moves dramatically towards the monster side whenever the player reveals a significant piece of the silhouette. Revealing the un-silhouetted part of the image moves the pointer back towards the girl side of the bar. If a round is completed while the monster's image is shown then the round must be repeated.</desc>
+		<rating>0.5</rating>
+		<releasedate>19940101T000000</releasedate>
+		<publisher>Comad &amp; New Japan System</publisher>
+		<genre>Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/supmodel.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="44118" source="ScreenScraper.fr">
+		<path>./wownfant.zip</path>
+		<name>Wow New Fantasia</name>
+		<desc>WOW New Fantasia is a game in the adult "Qix"-styled Fantasia series.</desc>
+		<releasedate>20020101T000000</releasedate>
+		<developer>Comad</developer>
+		<publisher>Comad</publisher>
+		<genre>Adult-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wownfant.png</image>
+		<adult>true</adult>
+		<genreid>2816</genreid>
+	</game>
+	<game id="44205" source="ScreenScraper.fr">
+		<path>./zerozone.zip</path>
+		<name>Zero Zone</name>
+		<desc>Zero Zone (c) 1993 Comad Industry Co., Ltd.  A risque version of "Columns".  - TECHNICAL -  Main CPU : 68000 (@ 10 Mhz) Sound CPU : Z80 (@ 1 Mhz) Sound Chips : OKI6295 (@ 8 Khz)  Players : 2 Control : 4-way joystick Buttons : 3  - TRIVIA -  This game shar</desc>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Comad</developer>
+		<publisher>Comad</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/zerozone.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="39953" source="ScreenScraper.fr">
+		<path>./airattck.zip</path>
+		<name>Air Attack (set 1)</name>
+		<desc>The player ships fly through a total of seven stages fighting many enemies and multiple end-level bosses. Each player ship had a semi-automatic Normal shot and Bomb Stock, appearing as a large Phoenix. Players has a total of four different weapon pick-up items to choose from. Weapon 1 is the standard Vulcan weapon, Weapon 2 is a Rapid-Fire shot, Weapon 3 is an area-effect weapon that fires in five directions, two behind the ship and Weapon 4 is a Rocket weapon. Collecting four of the same weapon pick-up allows the selected weapon to flare-out. The player ship only had one hit though and there were no Extend Bonuses.</desc>
+		<image>/userdata/roms/mame/images/airattck.png</image>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Comad</developer>
+		<publisher>Comad</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+</gameList>

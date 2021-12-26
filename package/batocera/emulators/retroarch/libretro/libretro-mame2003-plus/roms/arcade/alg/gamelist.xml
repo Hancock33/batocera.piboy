@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<gameList>
+	<game>
+		<path>./maddog2.zip</path>
+		<name>Mad Dog II: The Lost Gold v2.04</name>
+		<playcount>1</playcount>
+		<lastplayed>20210807T133250</lastplayed>
+	</game>
+	<game>
+		<path>./maddog22.zip</path>
+		<name>maddog22</name>
+		<playcount>1</playcount>
+		<lastplayed>20210807T210145</lastplayed>
+	</game>
+</gameList>

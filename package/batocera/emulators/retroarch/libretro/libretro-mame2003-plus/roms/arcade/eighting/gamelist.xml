@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="40162" source="ScreenScraper.fr">
+		<path>./batrider.zip</path>
+		<name>Armed Police Batrider (Europe, Fri Feb 13 1998)</name>
+		<desc>An excellent vertically scrolling shoot'em up.</desc>
+		<image>/userdata/roms/mame/images/batrider.png</image>
+		<rating>0.7</rating>
+		<releasedate>19980101T000000</releasedate>
+		<developer>Raizing</developer>
+		<publisher>Raizing</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<playcount>2</playcount>
+		<lastplayed>20210122T234432</lastplayed>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40171" source="ScreenScraper.fr">
+		<path>./bbakraid.zip</path>
+		<name>Battle Bakraid: Unlimited Version (USA, Tue Jun 8 1999)</name>
+		<desc>The sequel to "Battle Garegga", an equally excellent vertically scrolling shoot 'em up game.</desc>
+		<image>/userdata/roms/mame/images/bbakraid.png</image>
+		<rating>0.4</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>Eighting</developer>
+		<publisher>Eighting</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40207" source="ScreenScraper.fr">
+		<path>./bgaregga.zip</path>
+		<name>Battle Garegga (Europe / USA / Japan / Asia, Sat Feb 3 1996)</name>
+		<desc>An excellent vertically shoot'em up.</desc>
+		<image>/userdata/roms/mame/images/bgaregga.png</image>
+		<rating>0.8</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Raizing</developer>
+		<publisher>Raizing</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43336" source="ScreenScraper.fr">
+		<path>./mahoudai.zip</path>
+		<name>Mahou Daisakusen (Japan)</name>
+		<desc>Sorcer Striker, released in Japan as Mahou Daisakusen (Magic Armageddon) is a 1993 medieval-themed scrolling shooter developed by Raizing (now known as Eighting) for the arcades and later ported to Sharp X68000 and FM Towns computers and the EZweb mobile phones. It is the first game in the Mahou Daisakusen trilogy, which includes Kingdom Grandprix and Dimahoo. 
+The game is set in a fantasy world filled with magic and magic-fueled machinery. A peaceful kingdom is under assault by the encroaching Gobligan Empire, led by a mysterious human leader known only as the Gobligan King. As the kingdom finds itself unable to drive off the Gobligan Empire's advances, King Codwenna announces a huge bounty for the Gobligan King's head. Four heroes answer the call, and set out to defeat the Gobligan King and restore peace to the kingdom. 
+ 
+Characters 
+Gain, the Warrior: A master of swords and physical combat, Gain wanders the land with his pet monkey Shain in search of the ultimate weapon. Attracted by the large bounty offered for the Gobligan King, Gain takes up arms in his ship, the Valhallyzer, against the Gobligan Empire. His signature weapon is the Buster Sword. 
+Chitta, the Magician: Despite her appearance as a youthful girl, Chitta is a formidable magic user and the granddaughter of a legendary hero. Bored of the quiet life of her village, she sneaks away in her grandfather's magical ship, the Gun Dalf, to seek adventure. Her signature attacks are the Thunder Beam and Ice Cube. 
+Miyamoto, the Samurai Dragon: Well-mannered and wise, Miyamoto the samurai dragon seeks revenge against Tsumujimaru, one of his former disciples. Tsumujimaru turned his back on Miyamoto's teachings and murdered Miyamoto's own Master, then fled into the Gobligan Empire. Miyamoto does not use a magical ship, but rather flies with his own two wings, and attacks via shuriken, ninjutsu stones, and other secret techniques. 
+Bornnam, the Necromancer: Detested and shunned by society, Bornnam lives in seclusion, practicing the black arts of necromancy and gleefully collecting bones. He decides to fight against the Gobligan Empire as a chance to test his power. Via the power of the divine dragon skull that rests on his head, he is able to transform into the Golgodian, a "ship" form that enables him to fly in the air and absorb the ambient mana from the sky in order to cast his spells. His favorite attacks are the Skull Napalm and Search Ghost.</desc>
+		<image>/userdata/roms/mame/images/mahoudai.png</image>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Raizing</developer>
+		<publisher>Raizing</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+</gameList>

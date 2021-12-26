@@ -1,0 +1,344 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="43173" source="ScreenScraper.fr">
+		<path>./solomon.zip</path>
+		<name>Solomon's Key (US)</name>
+		<desc>Solomon's Key is a single player platform/puzzle game in which the wizard Dana is on a quest to retrieve Solomon's key and vanquish the demon hordes that have broken through into his world. To achieve this Dana must advance through the fifty rooms of 'Constellation Space', before finally reaching the magical key. 
+ 
+Dana is armed with a magic wand that can be used to both destroy and create granite blocks, while blocks situated directly above Dana's head can be destroyed by repeatedly jumping up into them until they shatter. The blocks act as platforms, as well as barriers to defend Dana from the numerous patrolling enemies. Each room contains a golden key, retrieving this automatically opens the room's exit door and players must then try to find/create a safe route past the constantly spawning demons to reach the exit and progress to the next room.  
+ 
+Bonus Items - some hidden inside pre-existing granite blocks - are scattered throughout each room. Collecting these earns the player extra points. Power-ups can also be found, these appear as potion bottles with a flame emblazoned on them and a maximum of three can be carried at any one time. When a potion is used, Dana shoots a fireball which will move along the walls and platforms until it hits and kills the first demon it comes into contact with. 
+ 
+As well as bonus items and power-ups, each room also contains a hand-bell. When collected this triggers the release of a trapped fairy, the fairy will then slowly fly around the room and can be rescued for bonus points. An extra life is awarded for every ten fairies rescued. 
+ 
+The game's levels are based on Zodiac star constellations. The main levels are divided into groups of four - making a total of fourty-eight standard rooms - with each group representing a separate constellation. In addition to the standard rooms, each constellation also has a secret bonus room that can only be accessed by finding the given constellation's 'Seal', which is located in the last room of each group. There are three further secret rooms - 'Page of Time', 'The Page of Space' and the 'Princess Room' - that are only accessible if the player has found the 'Hidden Seals of Solomon'. 
+ 
+The four room groups are: 
+1-4 Aries 5-8 Taurus 9-12 Gemini 
+13-16 Cancer 17-20 Leo 21-24 Scorpio 
+25-28 Libra 29-32 Virgo 33-36 Sagittarius 
+37-40 Capricorn 41-44 Aquarius 45-48 Pisces</desc>
+		<rating>0.8</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Action-Action / Labyrinth-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/solomon.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="190771" source="ScreenScraper.fr">
+		<path>./spdodgeb.zip</path>
+		<name>Super Dodge Ball (US)</name>
+		<desc>The player takes control of the American team, who must compete against five other nations in a worldwide dodgeball tournament. In the first match, the player represent the state Dallas and must defeat their rivals from Chicago to represent America in the World Cup. Afterwards, the player will take on England, Iceland, China and Africa before fighting against the champions from Japan.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Technos Japan</developer>
+		<publisher>Technos Japan</publisher>
+		<image>/userdata/roms/mame/images/spdodgeb.png</image>
+	</game>
+	<game id="43215" source="ScreenScraper.fr">
+		<path>./spbactn.zip</path>
+		<name>Super Pinball Action (US)</name>
+		<desc>A pinball game featuring 4 boards: 
+On the Carnival Board, there are two ways to work towards the goal: knocking out the drop targets on the upper board, or hitting the button targets that light the word 'Rhythm' on the lower part of the main board. 
+On the Border Board, the 'INPUT' button targets in the center upper part of the board are the ones to hit to work your way towards your goal. 
+On the Monster Board, you must complete 7 different target areas, each one referring to a body part: 2 roll-throughs for arms, two holes for eyes, two sets of targets for legs and the top rollovers work towards the 'head'. 
+On the Sniper Board, you knock down the 'LOAD' drop targets, then shoot the Shot Bonus button target when lit. You do this 6 times to reach your goal. 
+ 
+As you go follow through on the game, the warp shots let you see how far you've gone in your quest to finish each board. The fewer clothes each girl has, the further you have gone on that board. Once the women are topless, you've done all you can on that board.</desc>
+		<rating>0.8</rating>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>Tecmo</publisher>
+		<genre>Pinball</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/spbactn.png</image>
+		<genreid>1792</genreid>
+	</game>
+	<game id="43528" source="ScreenScraper.fr">
+		<path>./tbowl.zip</path>
+		<name>Tecmo Bowl (World)</name>
+		<desc>Tecmo Bowl (c) 1989 Nintendo of America.  - TECHNICAL -  Nintendo PlayChoice-10 hardware Game ID : TW  Main CPU : Z80 (@ 4 Mhz), N2A03 (@ 1.789772 Mhz) Sound Chips : N2A03 (@ 1.789772 Mhz), DAC  Players : 2 Control : 8-way joystick Buttons : 2  - TRIVIA -</desc>
+		<rating>0.9</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Sports / Football-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tbowl.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="150548" source="ScreenScraper.fr">
+		<path>./wildfang.zip</path>
+		<name>Tecmo Knight</name>
+		<desc>Wild Fang is a sideways scrolling beat-em-up for 1 or 2 players with a medieval setting. Players take on a variety of orcs, ogres, demons and other mythical creatures in their bid to destroy Satan, decapitating each enemy they encounter in order to collect their skulls for points and power-ups. 
+ 
+The player's character is an armor wearing beastmaster who sits atop of a fist-fighting giant.  Upon the player's command, the player may switch his mount into a tiger and attack with his mace.  Within each stage, there are also power-ups that allow the player to morph into a laser breathing dragon for a limited period of time. 
+ 
+The player's life bar is represented by a fire breathing dragon in the upper corner.  With each hit the player takes, the fire breath grows smaller.  Once the life bar is depleted the player's mount is killed and the player travels on foot and fights with throwing daggers.  If hit in this form then the player loses a life.  The game is over when all of a players lives are lost.</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Platform / Fighter Scrolling-Platform-Beat'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wildfang.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="44047" source="ScreenScraper.fr">
+		<path>./wc90.zip</path>
+		<name>Tecmo World Cup '90 (World)</name>
+		<desc>Tecmo World Cup is a football game which features solely national teams. Like the title indicates, you can play the World Cup tournament, which will also include a qualification round. You can choose your team from a pool of 24 nations, though the assortment is not identical to the roster of the latest World Cup by the time of the games release. Also, the qualification, in contrast to the real World Cup, only has four teams as no other than the available 24 teams take part. Apart from the World Cup, the only other single-player mode is a friendly match against a randomly chosen team. 
+ 
+</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wc90.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43811" source="ScreenScraper.fr">
+		<path>./twrldc94.zip</path>
+		<name>Tecmo World Cup '94 (set 1)</name>
+		<desc>This is a sequel to the 1990 original. It is a four-player soccer game that has nice graphics, music, zoom and scroll. Compete against 16 other countries for the world cup!</desc>
+		<releasedate>19940101T000000</releasedate>
+		<publisher>Tecmo</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<image>/userdata/roms/mame/images/twrldc94.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43545" source="ScreenScraper.fr">
+		<path>./teedoff.zip</path>
+		<name>Tee'd Off (Japan)</name>
+		<desc>Let Tee'd Off putt you into the green! Tee'd Off is a terrific new golf game from Tecmo, Incorporated. that utilizes a multi-directional trackball, which gives the player complete control of every shot. Tee'd Off features a 22-hole golf course with many exciting variables that will keep players' interest levels high and insure your return on investment!</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<publisher>Tecmo</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/teedoff.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43633" source="ScreenScraper.fr">
+		<path>./tkdensho.zip</path>
+		<name>Toukidenshou - Angel Eyes (VER. 960614)</name>
+		<desc>An all-female fighting game featuring 8 selectable angels engaging in one-on-one battle. This game is made by Tecmo, which is not surprising given that they are now more popular because of the "Dead or Alive" series (specifically because of its female characters) than their older series like "Ninja Gaiden".</desc>
+		<rating>0.7</rating>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>Tecmo</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tkdensho.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="43946" source="ScreenScraper.fr">
+		<path>./vgoalsoc.zip</path>
+		<name>V Goal Soccer (Europe)</name>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/vgoalsoc.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="78922" source="ScreenScraper.fr">
+		<path>./mightybj.zip</path>
+		<name>Vs. Mighty Bomb Jack (Japan)</name>
+		<desc> A highly playable sequel to the superb 1984 original, featuring horizontal and vertically scrolling levels. The object is to reach the final stage of the game, the ''Beelzebub'' stage, in order to free the royal family.</desc>
+		<rating>0.6</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mightybj.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="40128" source="ScreenScraper.fr">
+		<path>./backfirt.zip</path>
+		<name>Back Fire (Tecmo, bootleg)</name>
+		<desc>A standard horizontal shoot'em up. The main weapon can be powered-up to provide faster and more powerful shots. Weapons such as lightning or three-way shots appear as power-ups. There are 18 levels to complete the game.</desc>
+		<image>/userdata/roms/mame/images/backfirt.png</image>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41008" source="ScreenScraper.fr">
+		<path>./drgnbowl.zip</path>
+		<name>Dragon Bowl (set 1, encrypted program)</name>
+		<desc>Dragon Bowl is a straight rip-off of Tecmo's "Ninja Gaiden" with different sprites (This game unofficially uses the Dragon Ball license).</desc>
+		<image>/userdata/roms/mame/images/drgnbowl.png</image>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Nics</developer>
+		<publisher>Nics</publisher>
+		<genre>Beat'em Up</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="41091" source="ScreenScraper.fr">
+		<path>./eightfrc.zip</path>
+		<name>Eight Forces</name>
+		<desc>A vertically scrolling shoot'em up.</desc>
+		<image>/userdata/roms/mame/images/eightfrc.png</image>
+		<rating>0.5</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41292" source="ScreenScraper.fr">
+		<path>./fstarfrc.zip</path>
+		<name>Final Star Force (US)</name>
+		<desc>A sequel to Tehkan's 1984 shoot-em-up classic, "Star Force", featuring improved graphics and sound and a new weapons power-up system. The player's ship is equipped with three smart bombs and the fire button can be held down for rapid fire. At regular intervals, a red ship will appear which will release a power-up capsule; the three power-ups available are as follows: 
+A-Pulsator: 
+ Fire: Thunder + Homing 
+ Bomb: S-Bomb 
+B-Pulsator: 
+ Fire: Wide Shot + Missile 
+ Bomb: M-Bomb 
+C-Pulsator: 
+ Fire: Spraygun + Synch-Fire 
+ Bomb: T-Bomb</desc>
+		<image>/userdata/roms/mame/images/fstarfrc.png</image>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41416" source="ScreenScraper.fr">
+		<path>./gemini.zip</path>
+		<name>Gemini Wing (Japan)</name>
+		<desc>A vertically scrolling shooter. Destroy enemies and collect items, such as speed, that are stored in a tail behind your ship. Press the second button to activate them one by one in the order they were collected.</desc>
+		<image>/userdata/roms/mame/images/gemini.png</image>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41450" source="ScreenScraper.fr">
+		<path>./ginkun.zip</path>
+		<name>Ganbare Ginkun</name>
+		<desc>The title of this mini-game pack can be translated from Japanese as 'Good Luck, Ginkun - Action Minigame Meet'. 
+The bike minigame (where you must stop your bike) has the Boss music from "Final Star Force" (1992, Tecmo).</desc>
+		<image>/userdata/roms/mame/images/ginkun.png</image>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Compilation</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3840</genreid>
+	</game>
+	<game id="41538" source="ScreenScraper.fr">
+		<path>./gstriker.zip</path>
+		<name>Grand Striker - Human Cup (Europe, Oceania)</name>
+		<desc>Soccer game in 3D, this one is quite disconcerting if only vis-à-vis the prospect. The graphics are basic, the maneuverability execrable fans of the genre will find much better.</desc>
+		<image>/userdata/roms/mame/images/gstriker.png</image>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Human Amusement</developer>
+		<publisher>Human</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42853" source="ScreenScraper.fr">
+		<path>./rygar.zip</path>
+		<name>Rygar (US set 1)</name>
+		<desc>Rygar is a classic game for many home consoles. It also has an Arcade version that plays different than the home console versions.</desc>
+		<image>/userdata/roms/mame/images/rygar.png</image>
+		<rating>0.9</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43025" source="ScreenScraper.fr">
+		<path>./shadoww.zip</path>
+		<name>Shadow Warriors (World, set 1)</name>
+		<desc>Ryu, the Dragon Ninja, travels the world to defeat evil wherever he finds it.</desc>
+		<image>/userdata/roms/mame/images/shadoww.png</image>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>Ocean</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="43086" source="ScreenScraper.fr">
+		<path>./silkworm.zip</path>
+		<name>Silk Worm (World)</name>
+		<desc>A shooter game where you control either a jeep or a helicopter and travel through the enemy terrain, shooting various enemies.</desc>
+		<image>/userdata/roms/mame/images/silkworm.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Shooter / Horizontal-Shooter</genre>
+		<players>2</players>
+		<playcount>1</playcount>
+		<lastplayed>20210807T205954</lastplayed>
+		<gametime>52</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43388" source="ScreenScraper.fr">
+		<path>./stratof.zip</path>
+		<name>Raiga - Strato Fighter (US)</name>
+		<desc>A horizontal scrolling shooter.</desc>
+		<image>/userdata/roms/mame/images/stratof.png</image>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>Tecmo</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+</gameList>

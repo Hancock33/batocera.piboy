@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <provider>
+    <System>Mame</System>
+    <software>Skraper</software>
+    <database>ScreenScraper.fr</database>
+    <web>http://www.screenscraper.fr</web>
+  </provider>
+  <game id="40020" source="ScreenScraper.fr">
+    <path>./aoh.zip</path>
+    <name>Age of Heroes - Silkroad 2 (v0.63 - 2001/02/07)</name>
+    <desc>A beat'em-up game that is the sequel to "The Legend of Silk Road". The four playable characters are Kai, Shuh, Shenmue and chamuku.</desc>
+    <rating>0.7</rating>
+    <releasedate>20010101T000000</releasedate>
+    <publisher>Unico</publisher>
+    <genre>Fight / 2.5D-Fight</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/aoh.png</image>
+    <genreid>262</genreid>
+  </game>
+  <game id="40378" source="ScreenScraper.fr">
+    <path>./bssoccer.zip</path>
+    <name>Back Street Soccer (KRB-0031 PCB)</name>
+    <desc>One of 14 international teams can be selected. The game is played on the street with a 'street fighter' element to the soccer.</desc>
+    <rating>0.5</rating>
+    <releasedate>19960101T000000</releasedate>
+    <developer>SunA</developer>
+    <publisher>SunA</publisher>
+    <genre>Sports / Soccer-Sports</genre>
+    <players>1-4</players>
+    <image>/userdata/roms/mame/images/bssoccer.png</image>
+    <genreid>1538</genreid>
+  </game>
+  <game id="40407" source="ScreenScraper.fr">
+    <path>./burglarx.zip</path>
+    <name>Burglar X</name>
+    <desc>A maze game.</desc>
+    <rating>0.7</rating>
+    <releasedate>19970101T000000</releasedate>
+    <developer>Unicorn Group</developer>
+    <publisher>Unico</publisher>
+    <genre>Action-Action / Labyrinth</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/burglarx.png</image>
+    <genreid>258</genreid>
+  </game>
+  <game id="41010" source="ScreenScraper.fr">
+    <path>./drgnmst.zip</path>
+    <name>Dragon Master</name>
+    <desc>A fighting game with 3 bosses and 8 characters to select.</desc>
+    <rating>0.5</rating>
+    <releasedate>19940101T000000</releasedate>
+    <developer>Unico</developer>
+    <publisher>Unico</publisher>
+    <genre>Fight / Versus-Fight</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/drgnmst.png</image>
+    <genreid>262</genreid>
+  </game>
+  <game id="41262" source="ScreenScraper.fr">
+    <path>./fncywld.zip</path>
+    <name>Fancy World: Earth of Crisis</name>
+    <desc>A cutesy platform game. 
+ 
+This game is more like a bootleg or hack than an original game; some game code is taken directly from Data East's "Tumble Pop".</desc>
+    <rating>0.5</rating>
+    <releasedate>19960101T000000</releasedate>
+    <developer>Unico Electronics</developer>
+    <publisher>Unico</publisher>
+    <genre>Platform / Run Jump-Platform</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/fncywld.png</image>
+    <genreid>257</genreid>
+  </game>
+  <game id="43085" source="ScreenScraper.fr">
+    <path>./silkroad.zip</path>
+    <name>Legend Of Silkroad, The</name>
+    <desc>Chinese heroes attempt to rid the Orient of the evil mystical warlord and his enemies.</desc>
+    <rating>0.9</rating>
+    <releasedate>19990101T000000</releasedate>
+    <developer>Unicorn Group</developer>
+    <publisher>Unico</publisher>
+    <genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/silkroad.png</image>
+    <genreid>263</genreid>
+  </game>
+  <game id="43817" source="ScreenScraper.fr">
+    <path>./uballoon.zip</path>
+    <name>Ultra Balloon</name>
+    <desc>On a seemingly peaceful night in the Robinson household there are strange things afoot in the baby's room... the toys are launching a revolution and are creating a crazy mess! You must help the cool robot-controlling infant and save him from the evil blue monster. Take the part of a cool blue penguin and navigate through the increasingly tricky levels to solve the puzzles and save the day! Jump between platforms and solve the puzzles to stop the evil plans of the blue monster! 
+ 
+A "Bubble Bobble" clone.</desc>
+    <rating>0.5</rating>
+    <releasedate>19960101T000000</releasedate>
+    <developer>SunA</developer>
+    <publisher>SunA</publisher>
+    <genre>Platform / Run Jump-Platform</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/uballoon.png</image>
+    <genreid>257</genreid>
+  </game>
+  <game id="44200" source="ScreenScraper.fr">
+    <path>./zeropnt.zip</path>
+    <name>Zero Point (set 1)</name>
+    <desc>A target shooting game.</desc>
+    <rating>0.7</rating>
+    <releasedate>19980101T000000</releasedate>
+    <developer>Unicorn Group</developer>
+    <publisher>Unico</publisher>
+    <genre>Lightgun Shooter-Shooter</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/zeropnt.png</image>
+    <genreid>261</genreid>
+  </game>
+  <game id="44201" source="ScreenScraper.fr">
+    <path>./zeropnt2.zip</path>
+    <name>Zero Point 2</name>
+    <desc>A shooting game controlled by a light-gun. Its the 2nd game in the Zero point series.</desc>
+    <rating>0.7</rating>
+    <releasedate>19990101T000000</releasedate>
+    <developer>Unicorn Group</developer>
+    <publisher>Unico</publisher>
+    <genre>Lightgun Shooter-Shooter</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/zeropnt2.png</image>
+    <genreid>261</genreid>
+  </game>
+</gameList>

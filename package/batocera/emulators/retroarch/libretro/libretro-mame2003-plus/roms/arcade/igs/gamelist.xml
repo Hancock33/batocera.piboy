@@ -1,0 +1,729 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="40946" source="ScreenScraper.fr">
+		<path>./dmnfrnt.zip</path>
+		<name>Demon Front (68k label V105, ROM M105XX 08/05/02, ARM label V10)</name>
+		<desc>Demon Front is a platform run 'n' Gun game for up to four players (two simultaneously) that is very reminscent of SNK's "Metal Slug" series, although there are significant additions to the gameplay.  
+ 
+20 light years from Earth lies the planet of Andres, a peaceful and civilised place. In the year A.C. 2016 Andres experienced a solar eclipse that lasted for over three months. All living creatures were exposed to a strange, dark red light and many began to mutate in both appearance and character. Few inhabitants would survive the torture inflicted by these crazed mutants.  
+ 
+A lucky few escaped and lived in exile. Four of the survivers decided to join forces, to fight back and overthrow the evil that dominates the planet. 
+</desc>
+		<rating>0.8</rating>
+		<releasedate>20020101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Shooter-Shooter / Run and Gun-Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dmnfrnt.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40852" source="ScreenScraper.fr">
+		<path>./ddp2.zip</path>
+		<name>DoDonPachi II - Bee Storm (World, ver. 102)</name>
+		<desc>DoDonPachi II - Bee Storm's gameplay is similar to that of other DonPachi games; however, there are different bosses.</desc>
+		<rating>0.8</rating>
+		<releasedate>20010101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>Capcom</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ddp2.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40876" source="ScreenScraper.fr">
+		<path>./ddz.zip</path>
+		<name>Dou Di Zhu</name>
+		<releasedate />
+		<publisher>IGS</publisher>
+		<genre>Casino-Casino / Cards-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/ddz.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="41012" source="ScreenScraper.fr">
+		<path>./drgnwrld.zip</path>
+		<name>Dragon World (World, V040O)</name>
+		<desc>Dong Fang Zhi Zhu is a variation of Mahjong Solitaire.</desc>
+		<rating>0.5</rating>
+		<releasedate>19970101T000000</releasedate>
+		<publisher>IGS</publisher>
+		<genre>Puzzle-Game / Equalize-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/drgnwrld.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41014" source="ScreenScraper.fr">
+		<path>./drgw2.zip</path>
+		<name>Dragon World 2 (ver. 110X, Export)</name>
+		<desc>A solitaire mahjong game where the object is to match 3 of a kind, using a limited amount of tiles.</desc>
+		<rating>0.6</rating>
+		<releasedate>19970101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Puzzle-Game / Equalize-Puzzle-Game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/drgw2.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41015" source="ScreenScraper.fr">
+		<path>./drgw3.zip</path>
+		<name>Dragon World 3 (ver. 106)</name>
+		<desc>Dragon World 3 is a solitaire mahjong game.</desc>
+		<rating>0.6</rating>
+		<releasedate>19980101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Puzzle-Game / Equalize-Puzzle-Game</genre>
+		<image>/userdata/roms/mame/images/drgw3.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41061" source="ScreenScraper.fr">
+		<path>./dwex.zip</path>
+		<name>Dragon World 3 Ex (ver. 100)</name>
+		<desc>Dragon World 3 EX (c) 1998 IGS [International Game System].  - TRIVIA -  Released in November 2000.  - SERIES -  1. Dragon World (1995) 2. Dragon World II (1997) 3. Dragon World 3 (1998) 4. Dragon World 3 EX (1998) 5. Dragon World 3 Special (2000) 6. Drag</desc>
+		<rating>0.7</rating>
+		<releasedate>19980101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Puzzle-Game / Equalize-Puzzle-Game</genre>
+		<image>/userdata/roms/mame/images/dwex.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="39909" source="ScreenScraper.fr">
+		<path>./5clown.zip</path>
+		<name>Five Clown (English, set 1)</name>
+		<releasedate>19930101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Casino / Cards-Casino</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/5clown.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="41487" source="ScreenScraper.fr">
+		<path>./goldstar.zip</path>
+		<name>Golden Star</name>
+		<releasedate />
+		<publisher>IGS</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/goldstar.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="41525" source="ScreenScraper.fr">
+		<path>./grndtour.zip</path>
+		<name>Grand Tour</name>
+		<desc>A "Columns" style game where you are rewarded with pictures of beautiful women for each level you clear.</desc>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<publisher>IGS</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/grndtour.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41627" source="ScreenScraper.fr">
+		<path>./happy6.zip</path>
+		<name>Happy 6-in-1 (ver. 102CN)</name>
+		<desc>Happy 6-in-1 (c) 2004 IGS [International Game System].  - SOURCES -  Game's ROM.</desc>
+		<rating>0.7</rating>
+		<releasedate>20040101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Compilation</genre>
+		<image>/userdata/roms/mame/images/happy6.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game id="41850" source="ScreenScraper.fr">
+		<path>./jackie.zip</path>
+		<name>Happy Jackie (v110U)</name>
+		<releasedate>19930101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/jackie.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="41832" source="ScreenScraper.fr">
+		<path>./iqblock.zip</path>
+		<name>Iq-block</name>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/iqblock.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41879" source="ScreenScraper.fr">
+		<path>./jingbell.zip</path>
+		<name>Jingle Bell (US, V157US)</name>
+		<releasedate>19950101T000000</releasedate>
+		<publisher>IGS</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/jingbell.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="41990" source="ScreenScraper.fr">
+		<path>./killbldp.zip</path>
+		<name>Killing Blade Plus, The (China, ver. 300)</name>
+		<desc>The Killing Blade is a 1998 competitive fighting game released by IGS on arcade game machine. Development for the game took two years. In September 2005, IGS released a remake titled The Killing Blade Plus. The Mongol invasion of China has left the country in ruin. Five sects consisting of twelve warriors battle each other, then find the defeat the black hand of the wars: The Twin Tartars and Lord Wizard. Victory would earn the title "Superior Martial Paladin" to conquer China, bring order and establish a new empire. The game has a post Dynasty Wars setting and the game mechanics are similar to SNK's The Last Blade franchise, including weapon and kick attacks, combo attacks and power charging.</desc>
+		<rating>0.8</rating>
+		<releasedate>20050101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<image>/userdata/roms/mame/images/killbldp.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41989" source="ScreenScraper.fr">
+		<path>./killbld.zip</path>
+		<name>Killing Blade, The (ver. 109, Chinese Board)</name>
+		<desc>The Killing Blade is a 1998 competitive fighting game released by IGS on arcade game machine. Development for the game took two years.In September 2005, IGS released a remake titled The Killing Blade Plus. The Mongol invasion of China has left the country in ruin. Five sects consisting of twelve warriors battle each other, then find the defeat the black hand of the wars: The Twin Tartars and Lord Wizard. Victory would earn the title "Superior Martial Paladin" to conquer China, bring order and establish a new empire. The game has a post Dynasty Wars setting and the game mechanics are similar to SNK's The Last Blade franchise, including weapon and kick attacks, combo attacks and power charging.</desc>
+		<rating>0.8</rating>
+		<releasedate>19980101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/killbld.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="149846" source="ScreenScraper.fr">
+		<path>./kov.zip</path>
+		<name>Knights Of Valour / Sangoku Senki (ver. 117)</name>
+		<desc>A very good beat-'em-up with lots of special moves and great artwork.</desc>
+		<releasedate>19990101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Beat'em Up-Fight-Fight / 2.5D</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/kov.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="149850" source="ScreenScraper.fr">
+		<path>./kov2.zip</path>
+		<name>Knights Of Valour 2 / Sangoku Senki 2 (ver. 107, 102, 100HK)</name>
+		<desc>A very good side-scrolling fighting game set in medieval China.</desc>
+		<rating>0.7</rating>
+		<releasedate>20000101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Beat'em Up-Fight-Fight / 2.5D</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/kov2.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="149844" source="ScreenScraper.fr">
+		<path>./kov2p.zip</path>
+		<name>Knights Of Valour 2 Plus - Nine Dragons / Sangoku Senki 2 Plus - Nine Dragons (ver. M205XX, 200, 100CN)</name>
+		<desc>A very good side-scrolling fighting game set in medieval China.</desc>
+		<rating>0.7</rating>
+		<releasedate>20010101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Beat'em Up-Fight-Fight / 2.5D</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/kov2p.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="149449" source="ScreenScraper.fr">
+		<path>./kovplus.zip</path>
+		<name>Knights Of Valour Plus / Sangoku Senki Plus (ver. 119, set 1)</name>
+		<desc>A very good beat-'em-up with lots of special moves and great artwork.</desc>
+		<releasedate>19990101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Beat'em Up-Fight-Fight / 2.5D</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/kovplus.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="149448" source="ScreenScraper.fr">
+		<path>./kovsh.zip</path>
+		<name>Knights Of Valour Super Heroes / Sangoku Senki Super Heroes (ver. 104, CN)</name>
+		<desc>A very good side-scrolling fighting game set in medieval China.</desc>
+		<rating>0.9</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Beat'em Up-Fight-Fight / 2.5D</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/kovsh.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="149447" source="ScreenScraper.fr">
+		<path>./kovshp.zip</path>
+		<name>Knights Of Valour Super Heroes Plus / Sangoku Senki Super Heroes Plus (ver. 101)</name>
+		<desc>Knights of Valour Superheroes Plus (c) 2004 IGS [International Game System].  - TRIVIA -  Released in December 2004.  - SERIES -  1. Knights of Valour (1999) 2. Knights of Valour Superheroes (1999) 3. Knights of Valour 2 (2000) 4. Knights of Valour 2 - Ni</desc>
+		<releasedate>20040101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Beat'em Up-Fight-Fight / 2.5D</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/kovshp.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="42016" source="ScreenScraper.fr">
+		<path>./klxyj.zip</path>
+		<name>Kuai Le Xi You Ji</name>
+		<releasedate />
+		<publisher>IGS</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/klxyj.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="42141" source="ScreenScraper.fr">
+		<path>./lhb.zip</path>
+		<name>Long Hu Bang (China, V035C)</name>
+		<desc>Long Hu Bang (c) 1995 IGS.  - TECHNICAL -  Main CPU : 68000 (@ 7.333333 Mhz) Sound Chips : OKI6295 (@ 7.936 Khz)  Player : 1  - TRIVIA -  Released in October 1995.  - SERIES -  1. Long Hu Bang (1995) 2. Long Hu Bang II (1996)  - SOURCES -  Game's rom.</desc>
+		<releasedate>19950101T000000</releasedate>
+		<publisher>IGS</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/lhb.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="42142" source="ScreenScraper.fr">
+		<path>./lhb2.zip</path>
+		<name>Long Hu Bang 2 (Hong Kong, V185H)</name>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>IGS</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/lhb2.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="42144" source="ScreenScraper.fr">
+		<path>./lhzb3.zip</path>
+		<name>Long Hu Zheng Ba 3</name>
+		<releasedate />
+		<publisher>IGS</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/lhzb3.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="42145" source="ScreenScraper.fr">
+		<path>./lhzb4.zip</path>
+		<name>Long Hu Zheng Ba 4</name>
+		<releasedate />
+		<publisher>IGS</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/lhzb4.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="42170" source="ScreenScraper.fr">
+		<path>./lordgun.zip</path>
+		<name>Lord Of Gun (USA)</name>
+		<desc>A light gun shooter similar to "Lethal Enforcers", but with animated graphics. There are 10 stages here.</desc>
+		<rating>0.3</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/lordgun.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="42143" source="ScreenScraper.fr">
+		<path>./lhzb2.zip</path>
+		<name>Mahjong Long Hu Zheng Ba 2 (set 1)</name>
+		<releasedate>19980101T000000</releasedate>
+		<publisher>IGS</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<image>/userdata/roms/mame/images/lhzb2.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="57964" source="ScreenScraper.fr">
+		<path>./mgcs.zip</path>
+		<name>Mahjong Man Guan Cai Shen (V103CS)</name>
+		<releasedate>19980101T000000</releasedate>
+		<publisher>IGS</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<image>/userdata/roms/mame/images/mgcs.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="57965" source="ScreenScraper.fr">
+		<path>./mgdh.zip</path>
+		<name>Mahjong Man Guan Da Heng (Taiwan, V125T1)</name>
+		<desc>Mahjong Man Guan Da Heng (c) 1997 IGS [International Game System].  - TRIVIA -  Released in March 1997 in Taiwan.  - SOURCES -  Game's ROM.</desc>
+		<releasedate>19970101T000000</releasedate>
+		<publisher>IGS</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mgdh.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="43141" source="ScreenScraper.fr">
+		<path>./slqz2.zip</path>
+		<name>Mahjong Shuang Long Qiang Zhu 2 (VS203J)</name>
+		<releasedate>19980101T000000</releasedate>
+		<publisher>IGS</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<image>/userdata/roms/mame/images/slqz2.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="42941" source="ScreenScraper.fr">
+		<path>./sdmg2.zip</path>
+		<name>Mahjong Super Da Man Guan 2 (China, V754C)</name>
+		<releasedate>19970101T000000</releasedate>
+		<publisher>IGS</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/sdmg2.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="43631" source="ScreenScraper.fr">
+		<path>./tjsb.zip</path>
+		<name>Mahjong Tian Jiang Shen Bing (V137C)</name>
+		<releasedate>19970101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Various-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/tjsb.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="63038" source="ScreenScraper.fr">
+		<path>./mgfx.zip</path>
+		<name>Man Guan Fu Xing</name>
+		<releasedate>20000101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<image>/userdata/roms/mame/images/mgfx.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="78860" source="ScreenScraper.fr">
+		<path>./martmast.zip</path>
+		<name>Martial Masters (ver. 104, 102, 102US)</name>
+		<desc>At the end of the Qin's Dynasty, the government weakened by corruption was attacked by foreign influences. 
+ 
+The people were flung into misery and became quite unsatisfied with the situation. They did not believe in the government anymore and turned their faith back to religion. 
+ 
+The White Lotus sect saw this as an opportunity and took over. They claimed to help the government to defeat foreigners and bring peace to the world. Their Ideology was quickly adopted. Everything related with the Western world was killed or destroyed. Anyone against this principal was considered an enemy and accused of being bound with the devil.  
+ 
+Dragon of Martial Master and Master Huang of Po Chi Lam could not accept these outrageous actions so they band together in order to prevent much bloodshed. One day the leader of White Lotus Sect sent an invitation to Dragon and Master Huang but Dragon's disciples saw this as a trap and recommended that they wait for Master Huang, who was out of town collecting medicine. 
+ 
+The Master did not want to miss this opportunity to make peace and went alone. Unfortunately, he was captured and put in prison. Both parties started confrontations and have struggled since then. Now dangers are hidden all over the place. Who is capable of resolving the situation? Let's find out!</desc>
+		<rating>0.9</rating>
+		<releasedate>20010101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/martmast.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41782" source="ScreenScraper.fr">
+		<path>./igs_ncs2.zip</path>
+		<name>New Champion Skill (v100n 2000)</name>
+		<releasedate />
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Casino-Casino / Cards</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/igs_ncs.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="41782" source="ScreenScraper.fr">
+		<path>./igs_ncs.zip</path>
+		<name>New Champion Skill (v100n)</name>
+		<releasedate />
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Casino-Casino / Cards</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/igs_ncs.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="79100" source="ScreenScraper.fr">
+		<path>./orlegend.zip</path>
+		<name>Oriental Legend / Xi You Shi E Zhuan (ver. 126)</name>
+		<desc>Fabulous beat-'em-up featuring player and enemy characters straight out of Asian myths and stories.</desc>
+		<rating>0.7</rating>
+		<releasedate>19970101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/orlegend.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="60836" source="ScreenScraper.fr">
+		<path>./olds.zip</path>
+		<name>Oriental Legend Special / Xi You Shi E Zhuan Super (ver. 101, Korean Board)</name>
+		<desc>Oriental Legend é um beat 'em up exclusivo da China desenvolvido pela IGS. É baseado na mitologia chinesa e tem jogabilidade semelhante aos jogos de D&amp;D da Capcom. É notável por seu enorme elenco de personagens.</desc>
+		<releasedate>19980101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/olds.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="60837" source="ScreenScraper.fr">
+		<path>./oldsplus.zip</path>
+		<name>Oriental Legend Special Plus / Xi You Shi E Zhuan Super Plus</name>
+		<desc>Oriental Legend Super Super (c) 2004 IGS [International Game System].  - TRIVIA -  Released in June 2004.  - SOURCES -  Game's ROM.</desc>
+		<releasedate>20040101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/oldsplus.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="79259" source="ScreenScraper.fr">
+		<path>./photoy2k.zip</path>
+		<name>Photo Y2k (ver. 105)</name>
+		<desc>Photo Y2K (c) 1999 IGS.  - TECHNICAL -  IGS PGM hardware  Main CPU : 68000 (@ 20 Mhz) Sound CPU : Z80 (@ 8.468 Mhz) Sound Chips : ICS2115 (@ 8.468 Mhz)  - TRIVIA -  Released in June 1999.  - UPDATES -  * V102 * V104 * V105  - SERIES -  1. Photo Y2K (1999)</desc>
+		<rating>0.8</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/photoy2k.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="42574" source="ScreenScraper.fr">
+		<path>./py2k2.zip</path>
+		<name>Photo Y2k 2</name>
+		<desc>Photo Y2K 2 (c) 2000 IGS.  - TECHNICAL -  IGS PGM hardware  Main CPU : 68000 (@ 20 Mhz) Sound CPU : Z80 (@ 8.468 Mhz) Sound Chips : ICS2115 (@ 8.468 Mhz)  - TRIVIA -  Released in December 2000.  Also known as "Real and Fake 2".  - SERIES -  1. Photo Y2K (</desc>
+		<releasedate>20010101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<image>/userdata/roms/mame/images/py2k2.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="42403" source="ScreenScraper.fr">
+		<path>./pktet346.zip</path>
+		<name>Pk Tetris (v346I)</name>
+		<releasedate>19930101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Casino</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/pktet346.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="42563" source="ScreenScraper.fr">
+		<path>./puzlstar.zip</path>
+		<name>Puzzle Star (ver. 100MG)</name>
+		<desc>In each puzzle, the player has several icons stacked and limited time to complete the puzzle by earning a set number of combos. The player gets a combo by putting three of the same icons together in a row. In each row of the stack the player can only extract an icon from the leftmost column. Getting inconsistent icons in all three slots places them at the bottom of the stack. Placing a star in the appropriate slot, while getting a combo earns the player an extra time boost. Using an extra boost adds five seconds to the time remaining. The player can put back an icon if a mistake is made, but this ability is limited. Fulfilling the combo goal grants the player promotion, which makes it possible to skip puzzle levels. When all levels are finished, the player proceeds to the next stage, each harder than the first.</desc>
+		<releasedate>19990101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Puzzle-Game / Glide-Puzzle-Game-Puzzle-Game / Equalize</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/puzlstar.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="42568" source="ScreenScraper.fr">
+		<path>./puzzli2.zip</path>
+		<name>Puzzli 2 (ver. 100)</name>
+		<rating>0.8</rating>
+		<releasedate>19990101T000000</releasedate>
+		<publisher>IGS</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<image>/userdata/roms/mame/images/puzzli2.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="43469" source="ScreenScraper.fr">
+		<path>./svg.zip</path>
+		<name>S.v.g. - Spectral Vs Generation (M68k label V200, ARM label V200, ROM 10/11/05 S.V.)</name>
+		<desc>This game based on Idea Factory's famous turn-based RPG Game.</desc>
+		<rating>0.8</rating>
+		<releasedate>20050101T000000</releasedate>
+		<publisher>IGS</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/svg.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="42945" source="ScreenScraper.fr">
+		<path>./sdwx.zip</path>
+		<name>Sheng Dan Wu Xian</name>
+		<releasedate>20020101T000000</releasedate>
+		<publisher>IGS</publisher>
+		<genre>N/A</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/sdwx.png</image>
+	</game>
+	<game id="42936" source="ScreenScraper.fr">
+		<path>./sddz.zip</path>
+		<name>Super Dou Di Zhu</name>
+		<releasedate />
+		<publisher>IGS</publisher>
+		<genre>Casino-Casino / Cards-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/sddz.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="43253" source="ScreenScraper.fr">
+		<path>./spk116it.zip</path>
+		<name>Super Poker (v116IT)</name>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Grayhound Electronics</developer>
+		<publisher>IGS</publisher>
+		<genre>Casino / Cards-Casino</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/spk116it.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="43362" source="ScreenScraper.fr">
+		<path>./starzan.zip</path>
+		<name>Super Tarzan (Italy, V100I)</name>
+		<releasedate>20000101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Casino / Slot machine-Casino</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/starzan.png</image>
+		<genreid>3584</genreid>
+	</game>
+	<game id="149838" source="ScreenScraper.fr">
+		<path>./tarzan.zip</path>
+		<name>Tarzan Chuang Tian Guan (V109C, set 2)</name>
+		<releasedate>19990101T000000</releasedate>
+		<image>/userdata/roms/mame/images/tarzan.png</image>
+	</game>
+	<game id="149843" source="ScreenScraper.fr">
+		<path>./theglad.zip</path>
+		<name>The Gladiator / Road Of The Sword / Shen Jian (M68k label V101, ARM label V107, ROM 06/06/03 SHEN)</name>
+		<desc>The cursed Sacred Sword appeared once again, took lives of hundreds people. Two prominent families were killed, just because they possessed it. Behind these entire massacres more mysteries were secretly hidden, the rumors said perhaps even the government seemed to take part of it. Chu Xing Han, San Kuan Ging and Wu Ping decided to revenge. Chu is good friend and partner Greg Tien Ray also wanted to help them. Mysterious woman Huang Her decided to kill her own father for committing all these crimes. Wu-Lin Sword master's disciple Siong Chien Chien had an eye on the power of the sword and determined to seize the object. 
+ 
+The conflict in Wu-Lin seemed to trigger at any moment, unconsciously all sword masters were falling into a sophisticated conspiracy designed by Yuen Dynasty Government and...</desc>
+		<releasedate>20030101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Beat'em Up-Fight-Fight / 2.5D</genre>
+		<image>/userdata/roms/mame/images/theglad.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="43922" source="ScreenScraper.fr">
+		<path>./vbowl.zip</path>
+		<name>Virtua Bowling (World, V101XCM)</name>
+		<desc>Up-to-four players bowling video game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Sports / Bowling-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/vbowl.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="44176" source="ScreenScraper.fr">
+		<path>./xymg.zip</path>
+		<name>Xing Yun Man Guan (China, V651C)</name>
+		<desc>A Chinese mahjong game.</desc>
+		<releasedate>19960101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/xymg.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="63402" source="ScreenScraper.fr">
+		<path>./pgm.zip</path>
+		<name>ZZZ(notgame):Pgm (Polygame Master)</name>
+		<releasedate />
+		<genre>Various-Various / System</genre>
+		<image>/userdata/roms/mame/images/pgm.png</image>
+	</game>
+	<game id="39974" source="ScreenScraper.fr">
+		<path>./aliencha.zip</path>
+		<name>Alien Challenge (World)</name>
+		<desc>Alien Challenge is a 2D versus fighting game in which you take control of one of eight eight fallen gods (according to the introduction story) and participate in a fighting tournament. The fighters to choose from are the ninja Jean Paul, warrior Melanie, American footballer Dougster, werewolf Fang, jester Drew, oriental fighter Nic-San, burning Burnie and golden Stevareno. Each fighter has their own fighting techniques witch include kick, punch and special attacks. The fights are best of three. After defeating the playable fighters the non-playable boss old man Claus must be beaten. Under certain conditions a bonus level follows were you have to destroy as many objects as possible before the time runs out to increase your score. You can play solo or against a friend.</desc>
+		<image>/userdata/roms/mame/images/aliencha.png</image>
+		<rating>0.4</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="40212" source="ScreenScraper.fr">
+		<path>./bigd2.zip</path>
+		<name>Big D2</name>
+		<image>/userdata/roms/mame/images/bigd2.png</image>
+		<releasedate>20000101T000000</releasedate>
+		<publisher>IGS</publisher>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+	</game>
+	<game id="40544" source="ScreenScraper.fr">
+		<path>./chleague.zip</path>
+		<name>Champion League (v220I, Poker)</name>
+		<image>/userdata/roms/mame/images/chleague.png</image>
+		<releasedate>20000101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Casino / Cards-Casino</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3584</genreid>
+	</game>
+	<game id="40695" source="ScreenScraper.fr">
+		<path>./cpoker.zip</path>
+		<name>Champion Poker (v220I)</name>
+		<image>/userdata/roms/mame/images/cpoker.png</image>
+		<releasedate>19930101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Casino / Cards-Casino</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3584</genreid>
+	</game>
+	<game id="40751" source="ScreenScraper.fr">
+		<path>./csk227it.zip</path>
+		<name>Champion Skill (with Ability)</name>
+		<image>/userdata/roms/mame/images/csk227it.png</image>
+		<releasedate></releasedate>
+		<publisher>IGS</publisher>
+		<genre>Casino / Cards-Casino</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3584</genreid>
+	</game>
+	<game id="149848" source="ScreenScraper.fr">
+		<path>./dw2001.zip</path>
+		<name>Chuugokuryuu 2001 [dragon World 2001] (V100?, Japan)</name>
+		<desc>A sequel of Mahjong matching game published in 2001</desc>
+		<image>/userdata/roms/mame/images/dw2001.png</image>
+		<rating>0.8</rating>
+		<releasedate>20010101T000000</releasedate>
+		<developer>IGS</developer>
+		<publisher>IGS</publisher>
+		<genre>Asiatic board game-Mahjong</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2048</genreid>
+	</game>
+</gameList>

@@ -1,0 +1,2526 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="40168" source="ScreenScraper.fr">
+		<path>./battlnts.zip</path>
+		<name>Battlantis (program code G)</name>
+		<desc>A shoot'em up similar to "Space Invaders" in concept.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter / 3rd person-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/battlnts.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="149576" source="ScreenScraper.fr">
+		<path>./atlants2.zip</path>
+		<name>Battle Of Atlantis (set 2)</name>
+		<desc>Your mission: Finish the six tables at all costs by eliminating a maximum of opponents. To Do this you possess a multi-directional laser (ultra-rapid firing) and terrifying torpedo-bombs. Through all 6 tables, build up your bonus by blowing-up the fuel tanks. 
+Table 1: Avoid and destroy the floating mines. 
+Table 2: The deadly exploding sharks appear as well as the destroyers (avoid their bombs!). Obliterate them with your laser. 
+Table 3: You penetrate into an abyssal cavern where redoubtable octopuses lie in wait. The destroyers can only drop their bombs through the thin sides of the cavern. 
+Table 4: A complex of towers replaces the lower part of the cavern. As well as the destroyers and octopus, the mines reappear in large numbers. 
+Table 5: Accelerated version of Table 4. 
+Table 6: You return to Table 1 in an accelerated version but you must face up to all your opponents.</desc>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Comsoft</developer>
+		<publisher>Comsoft</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<image>/userdata/roms/mame/images/atlants2.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40285" source="ScreenScraper.fr">
+		<path>./blswhstl.zip</path>
+		<name>Bells And Whistles (World, version L)</name>
+		<desc>The planet Meru is on the attack by the Iva forces. A plea for help has reached Twinbee and you must guide him through a perilous journey through a colorful world fighting to restore peace. This vertically scrolling shoot'em up game features colorful anime-style graphics, lots of power-ups and a fun challenge.</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/blswhstl.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="150540" source="ScreenScraper.fr">
+		<path>./blkhole.zip</path>
+		<name>Black Hole</name>
+		<desc>Black Hole is a space-themed shoot'em up. The point of the game is to shoot all of the terrain, go through the "point ships" for extra points, and finally shoot the moving figure on top of everything.</desc>
+		<rating>0.1</rating>
+		<releasedate>19810101T000000</releasedate>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/blkhole.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="149951" source="ScreenScraper.fr">
+		<path>./blkpnthr.zip</path>
+		<name>Black Panther</name>
+		<desc>Black Panther is a beat'em up / platform game. You play a black panther cat who has to claw or jump on enemies to kill them. You collect power-ups and defeat bosses to advance levels.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/blkpnthr.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40251" source="ScreenScraper.fr">
+		<path>./bladestl.zip</path>
+		<name>Blades Of Steel (version T)</name>
+		<desc>An ice hockey game with hand-to-hand fighting and physical violence. Features close-up action scenes where two players (one from each team) throw off their gloves and punch each other.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports / Hockey-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bladestl.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40278" source="ScreenScraper.fr">
+		<path>./blockhl.zip</path>
+		<name>Block Hole</name>
+		<desc>A puzzle game. 
+ 
+</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/blockhl.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40345" source="ScreenScraper.fr">
+		<path>./bottom9.zip</path>
+		<name>Bottom Of The Ninth (version T)</name>
+		<desc>1 or 2 players choose a ballclub from cities like New York, Chicago, Los Angeles, Atlanta, or Boston and compete either against the computer or each other in this baseball game. A wide variety of pitches can be thrown and batters can change their stance and angle of swing.</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bottom9.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40433" source="ScreenScraper.fr">
+		<path>./calipso.zip</path>
+		<name>Calipso</name>
+		<desc>You play a diver who is trying to get a treasure. Hold Fire and push in the direction you want to shoot, but you will be unable to move while doing this. Shoot the sea animals and the other player. Try to get the treasure at the bottom and return it to the boat at the top without getting attacked by sea creatures -- all before your air runs out.</desc>
+		<rating>0.3</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Tago Electronics</developer>
+		<publisher>Tago Electronics</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/calipso.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40457" source="ScreenScraper.fr">
+		<path>./cashquiz.zip</path>
+		<name>Cash Quiz (Type B, Version 5)</name>
+		<desc>A quiz game. Test your knowledge from a wide range of categories.</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Zilec Electronics</developer>
+		<publisher>Zilec Electronics</publisher>
+		<genre>Quiz / English-Quiz</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/cashquiz.png</image>
+		<genreid>3328</genreid>
+	</game>
+	<game id="40543" source="ScreenScraper.fr">
+		<path>./chkun.zip</path>
+		<name>Chance Kun (Japan)</name>
+		<desc>A one player game of gambling bet based on a baseball game, starring by fun cats.</desc>
+		<rating>0.1</rating>
+		<releasedate>19880101T000000</releasedate>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/chkun.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="149923" source="ScreenScraper.fr">
+		<path>./chqflag.zip</path>
+		<name>Chequered Flag</name>
+		<desc>Chequered Flag is an overhead-view racing game featuring rotational sprite scaling. The player races over a series of twisting courses, trying to reach the finish line before the timer expires. 
+ 
+The game includes a Pit-stop facility, a feature that had appeared a year earlier in Taito's "Continental Circus". Should the player's car sustain too much damage, a pit-stop must be made to implement repairs. A 'damage meter' at the bottom of the screen shows the severity of the damage; highlighting what car components are in need of repair; Engine, Front Tires, Rear Tires and Brakes.</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Race, Driving</genre>
+		<image>/userdata/roms/mame/images/chqflag.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="40561" source="ScreenScraper.fr">
+		<path>./circusc.zip</path>
+		<name>Circus Charlie (level select, set 1)</name>
+		<desc>Circus Charlie is a single-player abstract platform game in which the player must guide the eponymous Charlie through six different circus events. Bonus points can be won by finishing a level as quickly as possible, with further points awarded for collecting any of the money bags that occasionally appear. 
+ 
+Finally, additional bonus points are awarded for completing a level without losing a life. The game is over when all Circus Charlies are lost. 
+ 
+The six different events are: 
+Ride a lion and jump through fiery hoops and over blazing pots.  
+Jump over monkeys while walking a tightrope.  
+Bounce on trampolines, avoid fire breathers and sword jugglers.  
+Jump on giant, rolling beach balls.  
+Ride a horse while avoiding obstacles.  
+Trapeze.</desc>
+		<rating>0.8</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/circusc.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="40563" source="ScreenScraper.fr">
+		<path>./citybomb.zip</path>
+		<name>City Bomber (World)</name>
+		<desc>City Bomber is a high speed overhead-view vertically scrolling driving game where you attempt to catch criminals.</desc>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter / Vehicle, Vertical-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/citybomb.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="40620" source="ScreenScraper.fr">
+		<path>./combatsc.zip</path>
+		<name>Combat School (Joystick)</name>
+		<desc> 
+Combat School is multi-event combat-themed sports game for one or two players, similar in gameplay style to Konami's earlier Track and Field games. Players must compete in a series of boot-camp style events under the watchful eye of the strict drill instructor, with the ultimate aim of completed all events and graduating as a full soldier. 
+ 
+The game is composed of seven training events, each of which must be completed within a set time to progress to the next. If players only narrowly miss out on qualifying in an event, they must complete a set number of chin-ups as punishment. If they manage this within the time limit, they can progress to the next event. This only occurs once per round, however. 
+ 
+</desc>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports / Running trails-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/combatsc.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40670" source="ScreenScraper.fr">
+		<path>./contra.zip</path>
+		<name>Contra (US / Asia, set 1)</name>
+		<desc>In 2631, a meteorite strikes the Galuga archipelago near New Zealand, carrying with it a dormant alien being. Two years later, a terrorist organization calling themselves Red Falcon takes over the island as part of their plot to invade the Earth. Bill Rizer and Lance Bean, of the Contra unit, are sent to the Oceania island to stop the evil threat. 
+ 
+'Contra' is a hectic one or two player platform shoot-em-up featuring 10 stages. In addition to the standard side-view levels, there are also "3D maze" stages in which the player must proceed through a series of corridors inside an enemy base, destroying various sensors, in order to reach the core of the base. 
+ 
+Each player's character is equipped with a semi-automatic machine gun with an unlimited amount of ammunition and can jump, move and fire in all eight cardinal directions. Players can also move and jump simultaneously while firing. Co-ordination of the character's movement is essential as a single hit from any enemy, bullet, or other hazard will instantly kill the player's character and also eliminate the current weapon from the player's inventory. 
+ 
+</desc>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter-Shooter / Run and Gun</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/contra.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40718" source="ScreenScraper.fr">
+		<path>./crimfght.zip</path>
+		<name>Crime Fighters (World 2 Players)</name>
+		<desc>Crime Fighters is a beat-em up arcade game where your job is to rescue several women that have been kidnapped by a crime boss and clean up the streets by pummeling as many gang members as possible with your bare hands, as well as anything else you might possibly discover. You will travel through eight levels throughout the city, in locations that range from subways to the docks. 
+
+At the end of every stage is a fight with a boss character, many of whom happen to be knockoffs of famous horror movie antagonists like Freddy Kruger and Jason Voorhees. Scoring is handled by a system wherein you simply get a point for every enemy you kill. Occasionally examples of cartoon physics pop up, such as when your character gets squashed flat by a moving steamroller or a falling billboard.</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/crimfght.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="40770" source="ScreenScraper.fr">
+		<path>./cuebrick.zip</path>
+		<name>Cue Brick (World, version D)</name>
+		<desc>A puzzle game where you shift blocks so that a ball rolling along a path can roll across every block that has a path drawn on it.</desc>
+		<rating>0.6</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Puzzle-Game / Glide-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/cuebrick.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40803" source="ScreenScraper.fr">
+		<path>./daiskiss.zip</path>
+		<name>Daisu-kiss (ver JAA)</name>
+		<desc>A mini-game collection similar to Ichidant-R and the Bishi Bashi Series.</desc>
+		<rating>0.5</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Compilation</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/daiskiss.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game id="41966" source="ScreenScraper.fr">
+		<path>./deadeye.zip</path>
+		<name>Dead Eye</name>
+		<desc>An old and challenging shoot'em up where the player controls a cowboy named 'Dead Eye' to shoots at coins tossed into the air and the birds, you must keep shooting your gun to the flip coin and only hitting the top and both sides of the borders with he coin and without crashing, to earn points.</desc>
+		<rating>0.3</rating>
+		<releasedate>19780101T000000</releasedate>
+		<developer>Meadows</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter-Lightgun Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/deadeye.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40912" source="ScreenScraper.fr">
+		<path>./devstors.zip</path>
+		<name>Devastators (ver. Z)</name>
+		<desc>Devastators is an early third-person shooter. Up to two players can take control of Rambo-style mercenaries with mullets.</desc>
+		<rating>0.4</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter / 3rd person-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/devstors.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="40911" source="ScreenScraper.fr">
+		<path>./devilw.zip</path>
+		<name>Devil World</name>
+		<desc>A Gauntlet-type game.</desc>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/devilw.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40926" source="ScreenScraper.fr">
+		<path>./dingo.zip</path>
+		<name>Dingo</name>
+		<desc>A puzzle game by gathering fruits.</desc>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Ashby Computers and Graphics</developer>
+		<publisher>Ashby Computers and Graphics</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dingo.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40866" source="ScreenScraper.fr">
+		<path>./ddribble.zip</path>
+		<name>Double Dribble</name>
+		<desc>A basketball game by Konami, originally for the Arcade and ported to home consoles. It is part of Konami's "Exciting" sports series.</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ddribble.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41116" source="ScreenScraper.fr">
+		<path>./esckids.zip</path>
+		<name>Escape Kids (Asia, 4 Players)</name>
+		<desc>Escape Kids © 1991 Konami Industry Company, Limited.
+
+An unusual take on the overhead racing genre, Escape Kids has up to 4 players taking on the role of an athletic runner and competing to be the first to cross the finish line in a number of 3-lap races. As well as running, each player has a limited number of 'Super Jumps'; these allow the player to leap over both rival runners and obstacles.
+
+Money is awarded for finishing first, and players can upgrade their runner depending on the amount of money they have available. Runners can be given extra super jumps, an upgrade to stop the runner from skidding when going through a bend in the track, quicker recovery time from falls, or be made stronger (and thus less likely to be knocked over by a rival runner). Special items occasionally appear and can be picked up and used. These range from an item that causes a small earthquake (causing all of the rival runners to tumble along the ground, thus slowing them down) and a bomb, which renders any runner that runs into it unable to move for several seconds.
+
+Each race has a total of five competitors (either human or computer controlled) and players must finish in first place or are disqualified. Any player who wins all three races in a round will be taken to a bonus screen. Here, the player's on-screen counterpart rides a bike and the player must collect as much money as possible.</desc>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports / Running trails-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/esckids.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41176" source="ScreenScraper.fr">
+		<path>./fastlane.zip</path>
+		<name>Fast Lane</name>
+		<desc>In this driving/maze game, you control a vehicle who must drive through the entire maze to progress. There is another vehicle who tries to stop you so to aid your progress, you must drive through the beach ladies in order to gain power-ups which you can use on the other vehicle. These power-ups are as follows: 
+JUMP - Allows you to either jump over the other vehicle or jump on top of it. 
+SHOOT - Allows you to fire a bullet at the other vehicle. 
+ATTACK - Allows you to charge into the other vehicle. 
+? - Can either be Option which fires forwards or Line which shoots vertically.  Both also help you complete the maze. 
+FLASH - Allows you to stun the other vehicle from any distance.</desc>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Race, Driving-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/fastlane.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41287" source="ScreenScraper.fr">
+		<path>./fround.zip</path>
+		<name>Final Round, The (version M)</name>
+		<desc>Boxing Game. You play the role of Jabbin Jim who fights his way through different opponnents each tougher than the last. Some of the opponents are recognisable from the Rocky movies. Your boxer has three attributes: strength, speed, and staminia, and these all contribute to his overall power rating. The attributes can be improved by taking part in mini games between the rounds.</desc>
+		<rating>0.6</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports / Boxing-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/fround.png</image>
+		<genreid>1540</genreid>
+	</game>
+	<game id="41280" source="ScreenScraper.fr">
+		<path>./frogger.zip</path>
+		<name>Frogger</name>
+		<desc>Frogger is a one or two-player game in which players must overcome a number of hazards to safely guide the green amphibian from the bottom of the screen to one of five home bases situated at the top of the screen. 
+ 
+The lower half of the screen consists of a bi-directional flow of traffic moving across five lanes. To navigate across the road safely, Frogger's hops must be timed to avoid the vehicles, which include buses, civilian traffic and racing cars, with different vehicle types moving at different speeds. As well as being able to hop vertically, Frogger can also move left and right, allowing him to move with the flow of traffic.  
+ 
+The upper half of the screen consists of a fast-flowing river populated with logs, crocodiles and turtles. Frogger will drown if he has any contact with the water and these act as platforms onto which Frogger can hop. He must be careful to avoid contact with crocodiles' snapping jaws, however and some of the turtles will periodically dive below the water's surface, drowning Frogger. Frogger will also die if he is on a log, turtle or crocodile when it reaches the edge of the screen. 
+ 
+On the logs of the river section a female frog will occasionally appear and bonus points are awarded if Frogger successfully escorts her safely home. A fly also appears randomly in a home base and bonus points are awarded if Frogger enters the base when the fly is present. Conversely, a crocodile may also appear in a home base and a life is lost if Frogger enters the base while the crocodile is present. 
+ 
+A round is completed once five frogs have been guided safely home, after which the next round begins with an increased level of difficulty. This includes faster-moving vehicles on the road section and new, deadly hazards on the river section, including crocodiles, otters and snakes.</desc>
+		<rating>0.9</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/frogger.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41447" source="ScreenScraper.fr">
+		<path>./gijoe.zip</path>
+		<name>G.I. Joe (World, EAB, set 1)</name>
+		<desc>Soldiers fight in a futuristic war against the army of an evil emperor. Unlike most army themed games, even trees and buildings can be destroyed if enough bullets are pumped into them.</desc>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter / 3rd person-Shooter</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/gijoe.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="41324" source="ScreenScraper.fr">
+		<path>./gaiapols.zip</path>
+		<name>Gaiapolis (ver EAF)</name>
+		<desc>A far away land filled with monsters and under the hand of an evil king is on the edge of destruction. Only a small group of brave heroes (a dragon warrior, a fairy &amp; a prince) dare to step forth to look for the legendary sword of the Golden Hawk hidden in the flying citadel known as Gaiapolis in order to topple the evil king and bring peace to this troubled land. Features some very nice 2-D graphics, awesome character &amp; enemy artwork designs, a superb soundtrack and addicting hack &amp; slash action with some RPG characteristics (characters &amp; weapons level up, plenty of magic spells &amp; summons). If you enjoyed Taito's Cadash, this game is for you! 
+ 
+This game features a password system that allows players to continue the game where they left it.</desc>
+		<rating>0.6</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Fight / Vertical-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gaiapols.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41605" source="ScreenScraper.fr">
+		<path>./gwarrior.zip</path>
+		<name>Galactic Warriors</name>
+		<desc>An early fighter where 3 selectable robots do battle against various space enemies.</desc>
+		<rating>0.3</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gwarrior.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41401" source="ScreenScraper.fr">
+		<path>./gbusters.zip</path>
+		<name>Gang Busters (set 1)</name>
+		<desc>Collect criminals while gunning down hundreds of others in this shooter from Konami.</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gbusters.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41507" source="ScreenScraper.fr">
+		<path>./gradius3.zip</path>
+		<name>Gradius 3 (World, program code R)</name>
+		<desc>In the darkest reaches of infinite space, pure evil lies in wait ... The Dark Forces led by the god of destruction, Bacterian, prepare to launch a massive onslaught against the planet Gradius. Possessing unstoppable power, the Dark Forces threaten to plunge the Universe into total war and complete annihilation.
+
+Their invasion force smashes the Gradius defenses, and the surrounding planets soon fall like dominoes. Now Bacterian's evil grasp reaches for the heart of the resistance...planet Gradius itself...
+
+To counter the oncoming threat the United Gradius World Forces gather all their fighter craft. Half of them form a defensive net - the other half a strike team. But they are badly outnumbered and The Dark Forces easily tear through their thin frontline. No fighters survive the slaughter....
+
+In a last gasp move, the United Gradius World Forces send out two fighters, previously considered too dangerous for combat missions: The InterDimensional VIC VIPER fighters.
+
+The Fighters take off for the heart of darkness to join the fray that will decide the fate of the Universe...</desc>
+		<rating>0.6</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gradius3.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="44018" source="ScreenScraper.fr">
+		<path>./gradius2.zip</path>
+		<name>Gradius II: Gofer no Yab (Japan new Ver.)</name>
+		<desc>The third game in Konami's renowned Gradius series; the prequel being "Gradius [Model GX400]" and a spinoff called "Salamande.</desc>
+		<rating>0.9</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gradius2.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41400" source="ScreenScraper.fr">
+		<path>./gberet.zip</path>
+		<name>Green Beret</name>
+		<desc>Green Beret is a sideways-scrolling action/platform game set during the Cold War, in which a US Special Forces Marine must infiltrate a Russian military base to save four POW's from being executed by firing squad.  
+ 
+Initially, the soldier is armed with only a combat knife, but by killing the certain enemy troops, players can obtain either a three-shot flamethrower, a four-shot RPG, or a three-pack of hand grenades.  
+ 
+The Marine can jump or lie down to avoid the enemy bullets, as well as climbing ladders to avoid enemies and projectiles, as well as the flashing land mines that litter the levels. While it's possible to remain still in one area to rack up points, if players take too long to proceed, the game will start sending out tougher enemies and eventually a stealth-like bomber will appear to take out the player. There is also an unseen time limit that will kill off players if they take too long to complete the stage.  
+ 
+The game has four stages in total: a missile base, a harbour, an air Base and a Siberian POW Camp. At the end of each stage the Marine will face a group of enemies specific to that stage: Stage 1 ends with a truckload of running and jump-kicking soldiers, Stage 2 with a pack of fierce dogs and their handlers, Stage 3 with three Gyro-copters and Stage 4 with a number of multi-shot flamethrower operators.  
+ 
+The game is completed once the captives have been rescued at the end of the fourth stage, after which the action starts over with an increased level of difficulty.</desc>
+		<rating>0.8</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gberet.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41649" source="ScreenScraper.fr">
+		<path>./hcastle.zip</path>
+		<name>Haunted Castle (version M)</name>
+		<desc>Count Dracula sleeps for a long hundred of years. During this time, peace exists at the village and Dracula is nothing but a mere legend.
+
+However, one day a young couple named Simon and Serena were celebrating their wedding at the village's church.
+
+The couple were enveloped with happiness, as the wedding bells rang, their future seemed blessed...
+
+Suddenly, the empty sky was covered with dark clouds and with a rolling thunder that shook the earth, Dracula has once again awakened. Asking for the beautiful girl's blood, he flew down during the middle of the wedding and suddenly took the bride with him.
+
+Now in order to save Serena, Simon heads to the demon castle</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hcastle.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41667" source="ScreenScraper.fr">
+		<path>./hexion.zip</path>
+		<name>Hexion (Japan ver JAB)</name>
+		<desc>A good tetris game. This game has hexagonal atoms-based block instead of the normal tetragonal atoms-based blocks.</desc>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hexion.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41715" source="ScreenScraper.fr">
+		<path>./hotchase.zip</path>
+		<name>Hot Chase (set 1)</name>
+		<desc>An action-packed driving game in which the player must drive a stolen enemy 'Super-car' - which has a bomb strapped to the underside of its chassis - and get to the country's border before the timer runs down and the bomb explodes. Enemy troops, road-blocks, planes and helicopters must all be avoided.</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/hotchase.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41650" source="ScreenScraper.fr">
+		<path>./hcrash.zip</path>
+		<name>Hyper Crash (version D)</name>
+		<desc> 
+Drive through a course and reach the goal by crashing into other cars and destroying them.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/hcrash.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41765" source="ScreenScraper.fr">
+		<path>./hyperspt.zip</path>
+		<name>Hyper Sports</name>
+		<desc>Hyper Sports is a multi-event sports game and is the sequel to 1983's seminal "Track and Field". As with "Track and Field", the game supports up to four players and is controlled by two RUN buttons (renamed GO for this sequel) and one action - or UP - button.  
+ 
+Tap GO and player will accelerate, shoot or lift. Push UP and player will jump or shoot. The game offers seven different Olympic-based events, and players must achieve qualification in each event in order to progress to the next. Game is over if you fail to qualify in an event. 
+ 
+</desc>
+		<rating>0.9</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports / Running trails-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/hyperspt.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41849" source="ScreenScraper.fr">
+		<path>./jackal.zip</path>
+		<name>Jackal (World, 8-way Joystick)</name>
+		<desc>Jackal is an overhead view jeep game for up to 2 players. The controller moves in four directions, button A fires your grenades (upgradeable to bazooka) and button B your machine gun which ALWAYS fires to the top of the screen. Your mission is to locate facilities where soldiers are being held prisoner, rescue as many as possible, and escort them to a safe landing zone where they will be air transported away. After that, you'll need to fight a boss battle against the enemy to progress. 
+</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter / Vehicle, Vertical-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/jackal.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="41853" source="ScreenScraper.fr">
+		<path>./jailbrek.zip</path>
+		<name>Jail Break</name>
+		<desc>A mass prison breakout has occurred and the prison warden has been kidnapped in this sideways scrolling shoot-em-up from Konami. The player controls a lonely police officer whose job it is to kill the hordes of escaped convicts and, eventually, rescue the kidnapped warden. Each level also has a number of civilian hostages that also roam the levels and need to be rescued. 
+ 
+The player begins the game with only a pistol, but 2 extra weapons, in the form of a bazooka and a tear gas gun, can be collected. The 'Weapon Select' button cycles through the player's weapons via a display at the bottom of the screen. When the desired weapon is highlighted, pressing the Fire button will select and fire the desired weapon. 
+ 
+Hostages will randomly run across the screen and can be rescued by running into them. Should the player accidentally shoot a hostage, all extra weapons will be lost leaving only the pistol.</desc>
+		<rating>0.8</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/jailbrek.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41922" source="ScreenScraper.fr">
+		<path>./jumpbug.zip</path>
+		<name>Jump Bug</name>
+		<desc>The player controls a VW Beetle that jumps through eight scenarios collecting money and jewels. Shoot or avoid the enemies.</desc>
+		<rating>0.5</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Hoei</developer>
+		<publisher>Hoei (Rock-Ola license)</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/jumpbug.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="41932" source="ScreenScraper.fr">
+		<path>./junofrst.zip</path>
+		<name>Juno First</name>
+		<desc>Juno First a vertically-scrolling shoot-em-up viewed from a third-person perspective in which players must destroy waves of attacking aliens. Unlike other shooters of the time, the game's enemies don't line up in a gallery formation but instead move freely around the screen. Because of this, the player's ship can move both forwards and backwards (in addition to left and right). 
+ 
+As well as the attacking aliens a spherical 'space capsule' occasionally appears on-screen and if shot, it releases an enemy astronaut that can then be captured. This must be done within a set time, however, with the screen having  a red tint for the period in which rescue is possible. During the capture phase, every enemy the player shoots is worth an additional 200 points.  
+ 
+As a last resort players also have the option to 'warp' to another random part of the play area. This is highly risky as it may place the player's ship in a position more dangerous than the one it left. Players are allowed three warps per level. 
+ 
+Starting formations vary from stage to stage and the aliens mutate into more dangerous forms the longer they survive. To complete a level all aliens must be destroyed.</desc>
+		<rating>0.8</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/junofrst.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41947" source="ScreenScraper.fr">
+		<path>./astinvad.zip</path>
+		<name>Kamikaze</name>
+		<desc>Kamikaze is a simple 2-D shooter. You control your laser base against an endless stream of alien invaders. The invaders don't come in set waves. Instead, they come in a constant stream. Once you have gotten through one barrage of aliens, more are just behind to continue the action. Your job is to keep them from overwhelming you with their superiority in numbers. Kill or be killed, that is the objective. 
+ 
+Kamikaze is one of the follow-up games that rode on the wave of the "Space Invaders" craze. The game itself is simple in concept but the action gets fast paced real quickly. Especially since several things can be going on at the same time during the game.</desc>
+		<rating>0.6</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Leijac Corporation</developer>
+		<publisher>Leijac Corporation</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/astinvad.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41980" source="ScreenScraper.fr">
+		<path>./kicker.zip</path>
+		<name>Kicker</name>
+		<desc>Kung-fu player jumps around multiple level boards, kicking opponents and collecting power-ups and bonus items. Player defeats by way of three kicks the board "boss" and advances to the next level.</desc>
+		<rating>0.8</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Fight-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/kicker.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="42009" source="ScreenScraper.fr">
+		<path>./kittenk.zip</path>
+		<name>Kitten Kaboodle</name>
+		<desc>Two cats try to find hidden keys. Avoiding enemies and push blocks around to achieve your goal.</desc>
+		<rating>0.7</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/kittenk.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="42044" source="ScreenScraper.fr">
+		<path>./konamigt.zip</path>
+		<name>Konami Gt</name>
+		<desc>Drive your car through a series of courses, avoiding other cars and motorcycles. Drive through fuel bubbles to gain more fuel. Run out of fuel and it's game over.</desc>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Race 1st Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/konamigt.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="42133" source="ScreenScraper.fr">
+		<path>./lethalen.zip</path>
+		<name>Lethal Enforcers (ver UAE, 11/19/92 15:04)</name>
+		<desc>Lethal Enforcers © 1992 Konami Company, Ltd
+
+As an undercover police officer the player's mission is to put a stop to an array of criminals ranging from bank robbers, hijackers and numerous other law breakers. As well as upholding the law, players must also try to protect innocent members of the public from the criminal gangs, being careful not to accidentally shoot them. Shooting innocent victims will result in the player's energy level being severely reduced.
+
+Lethal Enforcers is an on-the-rails light-gun game. The player is initially armed only with a standard issue revolver, but weapon upgrades such as a .357 Magnum, a shotgun and an automatic pistol can be collected by shooting at their on-screen counterparts as the game progresses. While some weapons can be reloaded, others can't and are only useful for a limited time. Any weapon upgrades are lost in the event of a player losing a life.</desc>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/lethalen.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="42136" source="ScreenScraper.fr">
+		<path>./levers.zip</path>
+		<name>Levers</name>
+		<desc>Jump from one angled platform to another to collect all the flowers. Avoid getting knocked below the lowest platform or getting hit by spiked balls.</desc>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Rocket Science Games</developer>
+		<publisher>Rock-Ola</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/levers.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="42139" source="ScreenScraper.fr">
+		<path>./lgtnfght.zip</path>
+		<name>Lightning Fighters (World)</name>
+		<desc>In Lightning Fighters and Trigon, the original Japanese version, there are different rules depending on whether you start the game with one or two players. In a one-player game, you start with no bombs, and when you die the game restarts you at a checkpoint. In a two-player game, each life starts with one bomb, and when you die you respawn in place. There are some powerups that only appear in a two-player game and one that only appears in a one-player game. The game type cannot be changed once the game starts. A second player cannot join an originally one-player game; conversely, if one player dies in a two-player game the game remains in two-player mode and the second player can rejoin at any time. 
+ 
+In Lightning Fighters, even if you start a one-player game, the game is always in two-player mode: you respawn in place when you die and you start each life with one bomb stocked. This means that a second player can join midway into a one-player game. Unfortunately it also means that the powerup that only appears in one-player games in the other versions, does not appear at all in the US version.</desc>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/lgtnfght.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="150469" source="ScreenScraper.fr">
+		<path>./losttomb.zip</path>
+		<name>Lost Tomb (easy)</name>
+		<desc>A shoot-em-up set in an ancient, South American pyramid, in which the player must explore a large number of single rooms in the search for treasure. Each room is filled with enemy creatures that must be killed or avoided. The player is equipped with a limited amount of whips and must collect as many items of treasure as possible. 
+ 
+The player is presented with options throughout the game, depending upon which rooms they wish to enter. Once a path is chosen, players must pick up treasures, kill all the monsters in their way, find the key and exit the room as fast as they can; avoiding the potential of setting off an earthquake. Upon exiting a level, the player is presented with a hallway which shows a number of doorways allowing access to any one of several different rooms. This allows players to pick their own route through the game, but the decision which room to tackle next must be taken quickly as players must reach their chosen room quickly or risk being attacked by a flock of screeching birds. 
+ 
+The player's character is armed with an eight-way firing gun (in a similar fashion to Williams' 1982 classic, "Robotron"). In addition to the gun, the player is also equipped with three whips, which can be used to either kill attacking creatures or to knock down any walls that bar the player's progress. Players are given the opportunity to purchase additional whips at the interludes between levels; this is done by inserting an extra credit into the arcade machine and pressing the relevant button. 
+ 
+Treasure must be constantly collected in order to stay alive.</desc>
+		<rating>0.7</rating>
+		<releasedate>19830110T000000</releasedate>
+		<developer>Stern Electronics</developer>
+		<publisher>Stern Electronics</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/losttomb.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="57916" source="ScreenScraper.fr">
+		<path>./mia.zip</path>
+		<name>M.I.A.: Missing in Action (version T)</name>
+		<desc>M.I.A. - Missing in Action © 1989 Konami.
+
+M.I.A. Missing in Action is a horizontally-scrolling run 'n' gun platform game for one or two players in which Special Forces soldiers must penetrate enemy-packed combat zones to reach a POW compound and rescue captured prisoners. The rescued POWs must then be escorted safely through a final enemy-packed stage to the helicopter that awaits at the end. 
+
+Players begin each stage armed with only a combat knife to protect them, but other weapons can be picked up from fallen enemy troops. The weapons are always carried by soldiers in red uniforms and range from an assault rifle, grenades, a flame-thrower and a bazooka. Players can carry more than one weapon and can cycle through them as needed. Each collected weapon has only a limited supply of shots.
+
+The game's first four stages are presented in random order and may also be "mirrored", switching the action from from right-to-left instead of left-to-right, increasing the game's variety and adding replay value. The 'POW' and 'Helicopter' stages are always the last two stages, however. 
+
+At the end of each stage players must fight off a wave of enemy troops as well as destroy gun emplacements and watch towers. Certain sections of each stage offer players a different route, with both platforms and underground tunnels that can be utilized and explored. At least one POW must be safely escorted to the rescue Chopper to complete the final mission, after which the game starts over with an increased level of difficulty.
+
+The game consists of six stages:
+War-torn battlefield
+Airstrip
+Jungle
+Rail Yard
+POW Base
+Escort the POWs to the Helicopter
+
+M.I.A. Missing in Action is the direct sequel to 1985's "Green Beret" but unlike its prequel, two-player games now have both players fighting side-by-side, rather than the alternating approach of the original game.</desc>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mia.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="78840" source="ScreenScraper.fr">
+		<path>./mainevt.zip</path>
+		<name>Main Event, The (4 Players ver. Y)</name>
+		<desc>A wrestling game in which you select 2 wrestlers from a choice of 8 and compete in tag-team battles.</desc>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports / Wrestling-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/mainevt.png</image>
+		<genreid>1536</genreid>
+	</game>
+	<game id="79017" source="ScreenScraper.fr">
+		<path>./mtlchamp.zip</path>
+		<name>Martial Champion (ver EAB)</name>
+		<desc>Martial Champion © 1993 Konami Company, Limited.
+
+Knock-Out The Competitions! 10 typical fighters battle against each other in a tournament to win the belt of world Martial Champion.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mtlchamp.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="149949" source="ScreenScraper.fr">
+		<path>./megazone.zip</path>
+		<name>Mega Zone (program code L)</name>
+		<desc>This game has flavors of several different video games rolled into one. It is mostly like Xevious, being an overhead shooter against a plethora of enemies, each with a unique characteristic. Unlike Xevious, however, that only allowed you to travel in one straight path, Mega Zone periodically allows you to choose different paths. For most of the game, the player's ship flies along a river. When the river forks, the player has the option of following either fork.</desc>
+		<rating>0.6</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/megazone.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="78909" source="ScreenScraper.fr">
+		<path>./metamrph.zip</path>
+		<name>Metamorphic Force (ver EAA)</name>
+		<desc>Beat-'em-up with 4 selectable characters who have the power to morph into Were-animals.</desc>
+		<rating>0.6</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Beat'em Up</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/metamrph.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="78923" source="ScreenScraper.fr">
+		<path>./mikie.zip</path>
+		<name>Mikie</name>
+		<desc>Guide Mikie around the school, classroom, and locker room to collect hearts which make up a letter from his girlfriend. Head-butt teachers and throw basketballs at them.</desc>
+		<rating>0.6</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Fight-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mikie.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="78962" source="ScreenScraper.fr">
+		<path>./mogura.zip</path>
+		<name>Mogura Desse (Japan)</name>
+		<desc>A simple test board used to test cabinets at the factory. It's probably very rare though. The game is very simple, mostly just to test the buttons and joysticks.</desc>
+		<rating>0.1</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Race, Driving-Race 1st Pers. view-Shooter</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/mogura.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="78972" source="ScreenScraper.fr">
+		<path>./moonwar.zip</path>
+		<name>Moonwar</name>
+		<desc>A war is taking place but not on Earth, it's on the Moon! You must take control of an awesome spacecraft and take yourself to the Moon where you must wage a deadly war against the powerful forces threatening to invade the Moon and then possibly the Earth too! Fly over the cratered surface, blasting the hell out of everything you see, destroying the enemy forces to save Earth from total invasion!</desc>
+		<rating>0.5</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Stern Electronics</developer>
+		<publisher>Stern Electronics</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/moonwar.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="78995" source="ScreenScraper.fr">
+		<path>./mrgoemon.zip</path>
+		<name>Mr. Goemon (Japan)</name>
+		<desc>Goemon is based on Ishikawa Goemon, an infamous outlaw in 16th century Japan. Some stories tell of Goemon becoming a criminal after stealing from his cruel master and killing his pursuers. Later he becomes a merchant in Kyoto and Osaka by day and a thief by night. Whilst some remember him as simply a thief, others celebrate him as being a Japanese Robin Hood, robbing from the rich to give to the poor.</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mrgoemon.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="79048" source="ScreenScraper.fr">
+		<path>./mx5000.zip</path>
+		<name>MX5000</name>
+		<desc>A vertically scrolling shoot-em-up by Konami featuring good music, big explosions and lots of power-ups.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mx5000.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="79054" source="ScreenScraper.fr">
+		<path>./mystwarr.zip</path>
+		<name>Mystic Warriors (ver EAA)</name>
+		<desc>Mystic Warriors is a horizontally-scrolling platform beat-em-up for up to four players, in which the evil 'SKULL' organisation has taken over the world and driven its terrified civilians into hiding. Five Ninja warriors set about destroying SKULL and freeing the World from its grip. 
+ 
+Mystic Warriors features five selectable characters, one of which is shown being kidnapped by SKULL once players have made their character choices. What follows is eight levels of platform 'run-and-gun' action, with an end-of-level boss waiting at the end of each stage. 
+ 
+Players are armed with both Shuriken throwing stars and with a sword for close encounters. Numerous boxes are scattered throughout the levels (or are being carried by enemies), all of which contain bonus items such as weapon power-ups or energy-replenishing food. Other power-ups include an invulnerability shield (known as the "Shinobi Shield") which lasts a few seconds and a "Smart Bomb" power-up, which destroys all on-screen enemies. Some boxes also contain points-giving items, such as bags of money, jewellery and gold.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform-Fight / 2D-Fight</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/mystwarr.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="150955" source="ScreenScraper.fr">
+		<path>./nemesis.zip</path>
+		<name>Nemesis (ROM version)</name>
+		<desc>Gradius / Nemesis is a horizontally-scrolling shoot-em-up in which the player pilots a spacecraft known as the Vic Viper as they search through unexplored galaxies looking for a lost armada. These new galaxies are teaming with alien life set upon destroying the Viper.  
+ 
+The game features a power-up system based on a selection meter at the bottom of the screen called a 'power meter', this allows players to 'buy' weapons and upgrades. To achieve this, players must destroy special individual enemies - usually red in colour - or enemy waves that then drop orange capsules. These capsules can be collected and used to upgrade the Viper's weapons. Each collected capsule advances the power meter by one step. Players can activate the highlighted item at any point, after which the power meter resets.</desc>
+		<rating>0.9</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/nemesis.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="79174" source="ScreenScraper.fr">
+		<path>./pandoras.zip</path>
+		<name>Pandora's Palace</name>
+		<desc>Pandora's Palace is a platform game in which the player takes on the role of a Roman emperor and must make their way from the top left corner of the screen to the exit at the bottom right corner. This can only be achieved utilising the poles and moving platforms the form each stage.  
+ 
+Burning fires litter the platforms and these must either be avoided or jumped over. Constantly-spawning enemies also patrol each stage and while they won't kill the emperor directly on contact, they can push him into fires or over the edge of platforms, costing the player a life. 
+ 
+Each stage has a set number of flashing bunches of grapes hanging from platforms and buildings, picking these up temporarily sees the laurel leaves and gown the Roman Emperor is wearing replaced with a roman helmet and tunic. While is this mode the emperor can destroy enemies by jumping on their heads, earning bonus points.</desc>
+		<rating>0.9</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pandoras.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="79192" source="ScreenScraper.fr">
+		<path>./parodius.zip</path>
+		<name>Parodius Da! (World, set 1)</name>
+		<desc> 
+ 
+Parodius Da! is a horizontally-scrolling shoot-em-up in which the Great Octopus has threatened Earth. To help Parodius save the planet, the player and his friends must begin their search across the world to find the enemy and destroy him.    
+ 
+Parodius Da! was created as a parody of Konami's own "Gradius" series of shoot-em-ups but adopted a graphical style that was entirely its own; something that becomes evident at the very start of the game when players can chose to pilot either a penguin or an octopus rather that the traditional Gradius ship.  
+ 
+Parodius retains the selectable weapons system of "Gradius";  a 'power meter' at the bottom of the screen enables players to 'buy' weapons and upgrades using capsules left behind by certain destroyed enemies. Each collected capsule advances the power meter by one step. Players can activate the highlighted item at any point, after which the power meter resets. For this game, players can also choose to have weapons update automatically, with the game upgrading weapons simply by collecting the capsules. 
+ 
+Parodius Da! also allows players to pilot any one of four different characters: Vic Viper (from Gradius/Nemesis), Octopus, TwinBee and Pentarou. Another new addition is that of bell power-ups. These originally appeared in Konami's "TwinBee" series and act as one-time power-ups, allowing the player to destroy every enemy on screen, for example, or fire huge energy beams.  
+ 
+Enemies and environments from the Gradius games and TwinBee are mixed in along with a host of anime-style opponents, including scantily-clad women. Parodius' eccentricity and unique humour is further demonstrated soon after the game begins; as players face such enemies as a giant belly-dancing woman and a half-cat/half-boat creature.</desc>
+		<rating>0.9</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/parodius.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="149433" source="ScreenScraper.fr">
+		<path>./phoenix.zip</path>
+		<name>Phoenix (Amstar, set 1)</name>
+		<desc>Phoenix is a classic vertical shoot-em-up in the mould of Taito's "Space Invaders" and Namco's "Galaxian", but takes the concept further with the introduction of progressive stages of play (instead of simply repeating a single playfield over and over with an increasing difficulty level). 
+ 
+According to Centuri's Joel Hochberg, the game was licensed from "a smaller Japanese developer." Amstar Electronics licensed the game to Centuri for manufacture in the United States. Taito released the game in Japan.</desc>
+		<releasedate>19780101T000000</releasedate>
+		<developer>Amstar</developer>
+		<publisher>Centuri</publisher>
+		<genre>Shoot'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/phoenix.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="150647" source="ScreenScraper.fr">
+		<path>./psurge.zip</path>
+		<name>Power Surge</name>
+		<desc>You are a spark trying to destroy resistors and enemy sparks. Try to complete the circuit so as to move on to the next level.</desc>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/psurge.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42507" source="ScreenScraper.fr">
+		<path>./prmrsocr.zip</path>
+		<name>Premier Soccer (ver EAB)</name>
+		<desc>Premier Soccer is a soccer game where you select a team and try to get them to the final and win it. You first select which continent you want to play in before selecting a country from that continent. You also have four choices of how close you want the camera to be when playing. 
+ 
+The actual match is played from a top-down side view where the pitch scrolls where the player with the ball moves. All the usual football rules are there with free-kicks, penalties, throw-ins and corners. The ref will also make an appearance if a yellow or red card is brandished. You control a player with a joystick and various fie-buttons to select different kicks or tackles. Win the game and it's on to the next round and a harder opponent.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/prmrsocr.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42552" source="ScreenScraper.fr">
+		<path>./punkshot2.zip</path>
+		<name>Punk Shot (US 2 Players)</name>
+		<desc>Punk Shot takes up to four players to downtown NYC for some two-on-two street basketball, no referee, no rules. The opposing two-man teams face off for a match played in four quarters (2 to 5 minutes each), on improvised courts in 3 different locations: the alley, the park, and the harbor.nnnnNaturally, it ain't just about being cool and shooting some b-ball outside of the school: on each side you have a couple of guys who are up to no good, with a constant enthusiasm for making trouble in the neighborhood. As such, Punk Shot joyfully turns basketball into a full-contact sport - heads will be bashed, noses punched, and private parts kicked. To top it off, each court features an assortment of environmental hazards, from slippery banana peels and having your butt set on fire, to the park dogs and their special taste for pants.</desc>
+		<rating>0.6</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/punkshot2.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42552" source="ScreenScraper.fr">
+		<path>./punkshot.zip</path>
+		<name>Punk Shot (US 4 Players)</name>
+		<desc>Punk Shot takes up to four players to downtown NYC for some two-on-two street basketball, no referee, no rules. The opposing two-man teams face off for a match played in four quarters (2 to 5 minutes each), on improvised courts in 3 different locations: the alley, the park, and the harbor.nnnnNaturally, it ain't just about being cool and shooting some b-ball outside of the school: on each side you have a couple of guys who are up to no good, with a constant enthusiasm for making trouble in the neighborhood. As such, Punk Shot joyfully turns basketball into a full-contact sport - heads will be bashed, noses punched, and private parts kicked. To top it off, each court features an assortment of environmental hazards, from slippery banana peels and having your butt set on fire, to the park dogs and their special taste for pants.</desc>
+		<rating>0.6</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/punkshot2.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="172110" source="ScreenScraper.fr">
+		<path>./qbert.zip</path>
+		<name>Q*bert (US set 1)</name>
+		<desc>Q*bert is an isometric platform game with puzzle elements where the player controls the titular protagonist from a third-person perspective. Q*bert starts each game at the top of a pyramid of cubes, and moves by jumping diagonally from cube to cube. Landing on a cube causes it to change color, and changing every cube to the target color allows the player to progress to the next stage.</desc>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>D. Gottlieb &amp; Co.</developer>
+		<publisher>D. Gottlieb &amp; Co.</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/qbert.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="42751" source="ScreenScraper.fr">
+		<path>./aponow.zip</path>
+		<name>Rescue (bootleg of Rescue)</name>
+		<desc>The player pilots a rescue helicopter and must try to rescue numerous airmen who have parachuted into the sea below. The rescue chopper is under constant attack from enemy helicopters, while sharks swim in the ocean below and will kill any floating airmen they come across. Later levels also have enemy subs and ships all intent on foiling the rescue mission. Players must be careful to avoid the falling wreckage of any enemy helicopters they have just destroyed, and also need to be wary of hitting any parachuting airmen with their 'copter blades, as this will kill the airmen instantly. 
+ 
+In a very similar vein to Williams' legendary "Robotron", also released in '82, the rescue chopper is armed with a gun that can fire in eight different directions, irrespective of the direction the rescue chopper is flying in. In addition to the eight-way gun, the 'copter can also drop missiles from its underside, which is essential for destroying enemy subs and ships. 
+ 
+To complete a stage, players must pick up a set number of fallen airmen from the sea (determined at the start of each level) and deposit them safely onto a nearby island.</desc>
+		<rating>0.5</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Stern Electronics, Inc.</developer>
+		<publisher>Stern Electronics</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/aponow.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="42784" source="ScreenScraper.fr">
+		<path>./roadf.zip</path>
+		<name>Road Fighter (set 1)</name>
+		<desc>Road Fighter is an exhilarating, high-speed scrolling racing game. 
+ 
+A unique characteristic of Road Fighter is the fact that bumping into an enemy car does not count as a miss. The counter-steering technique required to 'straighten' your car after bumping into an enemy provided a new level of racing game fun to fans.</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/roadf.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="42807" source="ScreenScraper.fr">
+		<path>./rocnrope.zip</path>
+		<name>Roc'n Rope</name>
+		<desc>Roc'n Rope is an incredibly difficult yet playable platform game featuring four different levels. The player takes on the role of a an archaeologist whose mission is to return the missing tail feathers to the golden Phoenix. The archaeologist is armed with a harpoon gun and uses it to fire a rope into a platform above, in order to climb up the rope and progress up the level. This is vaguely similar to the superb 'telescopic arm' feature that appeared in Capcom's superb "Bionic Commando". 
+ 
+All levels are patrolled by enemies in the form of dinosaurs and cavemen and all are deadly to the touch. Some cavemen will pull on the harpoon rope while the archaeologist is climbing it. This will result in the player falling from the rope and losing a life. The archaeologist is armed with a light ray that will kill the enemies. 
+ 
+A breakdown of the game's four levels: 
+ 
+The first level is possibly the most difficult in the game. Players begin at the bottom left of the screen and must work their way up to the Roc, who is sitting at the upper right of the screen. There are many layers of ledges coming out from the sides of the screen. While the middle of the screen is open to the sky (except for a few floating platforms). To reach the top, players must use the harpoon gun to climb diagonally back and forth until they reach the top (ensuring that the Phoenix feathers have been collected on the way). 
+The second level is set underground. There are a lot of dinosaurs on this screen and far fewer platforms than on the first level. Many of the platforms stretch completely across the screen, so there aren't many pitfalls to be wary of. Once again, players must get the archaeologist to the top of the screen to complete the level. 
+The third level is set outdoors. A 'ferris wheel' style rotating platform sits in the center of the screen, but this can be avoided if players don't wish to use it. The easiest route to the top is on the right-hand side of the level. 
+The fourth and final level is shaped a little like a mountain. The player's main concern here is a large waterfall in the center of the screen. Players must time their harpoon climb just right to avoid being killed by the deadly waters. Once this level is finished, the game starts over with an increased level of difficulty.</desc>
+		<rating>0.9</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/rocnrope.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="42812" source="ScreenScraper.fr">
+		<path>./rollerg.zip</path>
+		<name>Rollergames (US)</name>
+		<desc>Rollergames is the name of two 1990 Konami video games, one a coin-operated arcade game by, the other a Nintendo Entertainment System game, and both based on the television show of the same name. This arcade game is faithful to the show unlike the NES version of RollerGames, which is a side-scrolling game. The game is for two players and features all the skaters and managers from the league. 
+ 
+Score values are cut in half from the real show (and rounded up if needed), and feature only four 99-second cycles instead of 45-second cycles within four 6-minute periods. 
+</desc>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/rollerg.png</image>
+		<genreid>1536</genreid>
+	</game>
+	<game id="42849" source="ScreenScraper.fr">
+		<path>./rungun.zip</path>
+		<name>Run And Gun (ver EAA 1993 10.8)</name>
+		<desc>Arcade basketball game similar to NBA Jam. Play against others on separate cabinets.</desc>
+		<rating>0.8</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/rungun.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43275" source="ScreenScraper.fr">
+		<path>./spy.zip</path>
+		<name>S.P.Y. - Special Project Y (World ver. N)</name>
+		<desc>After using your spy-savvy jetpack to land on the secret island, you must stop the evil mastermind from executing his world-dominating plans!</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>Konami</publisher>
+		<genre>Shooter-Fight / 2.5D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/spy.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="42870" source="ScreenScraper.fr">
+		<path>./salamand.zip</path>
+		<name>Salamander (version D)</name>
+		<desc>Salamander is a 1 or 2 player sequel to 1985's superb shoot-em-up, "Nemesis". While it retained the same basic gameplay and feel of its predecessor (particularly the superb and innovative weapons system), Salamander featured both superior graphics and a more imaginative approach to level design. The earliest example of the latter appears towards the end of the very first level, in which imposing, organic obstructions grow before the players' eyes. The game's third level - the infamous 'lava' level - is another good example of Salamander's superb design; with huge solar flares constantly erupting both above and below the player's ship that must be carefully navigated to avoid instant loss of life. Salamander introduced further variety to the action with the introduction vertically-scrolling levels, which alternated with the standard side-scrolling levels. 
+ 
+Salamander's weapon power-up system is as follows: 
+SPEED UP: Five speed levels. 
+MISSILE: Press missile button to launch. 
+LASER: Your forward rockets turn into deadly lasers. 
+RIPPLE LASER: Use shoot button to fire. 
+FORCE FIELD: Protect your ship with barriers. 
+MULTIPLE: Increase your fire power by up to four times. 
+ 
+Multiple special powers can be obtained, but the LASER cannot be used in conjunction with the RIPPLE Laser.</desc>
+		<rating>0.9</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/salamand.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="42873" source="ScreenScraper.fr">
+		<path>./salmndr2.zip</path>
+		<name>Salamander 2 (ver JAA)</name>
+		<desc>A one or two player shoot-em-up released ten years after the game it sequels, Salamander 2 remains faithful to the superb 1986 original; retaining both the organic look and feel of the graphics, as well as the horizontal and vertically scrolling levels. While the game doesn't break any new ground gameplay-wise, and is little more than a retread of (and tribute to) the original game, what it does it does very well; and the graphics in particular are nothing short of stunning.</desc>
+		<rating>0.9</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/salmndr2.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="42929" source="ScreenScraper.fr">
+		<path>./scramble.zip</path>
+		<name>Scramble</name>
+		<desc>Scramble is a sideways scrolling shoot-em-up in which a single player takes control of a spaceship and must try to fight through six different enemy-packed levels - destroying as many fuel tanks and ground intallations as possible - before reaching the enemy base and destroying it.  
+ 
+Contact with any scenery, ground installations, enemy ships or projectyles results in an instant loss of life. The Scramble ship is armed with both a blaster and bombs. The blaster is forward-firing only while the bombs drop downwards to target ground-based enemy installations and to collect fuel from fuel dumps.  
+ 
+The fuel dumps are of particular importance, as the player ship's fuel gauge constantly depletes as the player progresses through the game and the only way to re-fuel is by bombing the fuel tanks that are located on the ground throughout the levels. Fuel usage increases as the game progresses, until fuel usage actually outstrips the amount of fuel dumps available and the game becomes impossible.  
+ 
+Scramble is rightly considered to be a classic and was the world's first ever 'multi-level' shoot-em-up.</desc>
+		<rating>0.9</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/scramble.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43112" source="ScreenScraper.fr">
+		<path>./skybase.zip</path>
+		<name>Sky Base</name>
+		<desc>A very rare shoot-em-up.</desc>
+		<rating>0.1</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Omori Electric Co.</developer>
+		<publisher>Omori Electric Co., Ltd.</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/skybase.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43200" source="ScreenScraper.fr">
+		<path>./spaceint.zip</path>
+		<name>Space Intruder</name>
+		<desc>Space Invader's clone.</desc>
+		<rating>0.5</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Shoeisha</developer>
+		<publisher>Shoei</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/spaceint.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43529" source="ScreenScraper.fr">
+		<path>./tbyahhoo.zip</path>
+		<name>Twin Bee Yahhoo! (ver JAA)</name>
+		<desc>Twin Bee Yahho! differs from Detana!! TwinBee in that the player can adjust their playing style before starting the game to suit their preference. The player begins by choosing between three difficulty settings: Practice, Normal, and Special. Practice course is the game's easiest setting and lasts only three stages, whereas the Special course is the hardest setting and is recommended to expert players. The player will then select between four different charged shots. The regular Charge Shot from Detana! TwinBee is selectable, along with a Charge Punch, a Charge Split (which will cause the player's ship to shoot duplicates of itself), and a Charge Explosion that fires at eight directions at the same time. The player will then choose between two control styles: one which fires the gun with one button and drops bombs with the second, while the other style shoots and drops bomb at the same time with a single button (either button can be used). 
+ 
+Like in previous Twin Bee games, there are two kinds of power-ups: bell power-ups obtained from the sky and land power-ups that can be retrieved from destroy ground enemies. The bells can be changed to up to six colors this time (yellow, blue, white, green, red, and pink), each with a unique attribute. GwinBee returns as well as a power-up item, along with the twin attacks that can be performed with GwinBee or another player.</desc>
+		<rating>0.9</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tbyahhoo.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43798" source="ScreenScraper.fr">
+		<path>./twinbee.zip</path>
+		<name>Twinbee (ROM version)</name>
+		<desc>Twin Bee is an overhead scrolling game starring a pair of bee-shaped robots, Twinbee (the blue one) and his female counterpart Winbee (the pink one), Twin Bee is part of what are called 'cute 'em ups', a slang for shoot-em-up games that feature cute characters, animals and other funny looking creatures, among other whimsical themes and brightly colored landscapes. It's a fun game to play with at least 6 stages that repeat themselves with increased difficulty as you go along. 
+ 
+Power-ups and extra points can be found in special bells hidden in some enemies that, when shot a certain number of times, will change color and then, when touched by the player, will provide a powerup, such as extra speed.</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/twinbee.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43823" source="ScreenScraper.fr">
+		<path>./ultraman.zip</path>
+		<name>Ultraman (Japan)</name>
+		<desc>A one-on-one fighting game based on the Japanese series by Tsuburaya Productions.</desc>
+		<rating>0.3</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ultraman.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="43932" source="ScreenScraper.fr">
+		<path>./vendetta2p.zip</path>
+		<name>Vendetta (World, 2 Players, ver. W)</name>
+		<desc>The hero gang, called The Cobras, numbers five members: Blood (former prizefighter, with a passing resemblance to Mike Tyson), Hawk (former professional wrestler, with strong resemblance to Hulk Hogan), Boomer (a martial artist, possibly based on Jean-Claude Van Damme), Sledge (a military ex-convict with passing resemblance to Mr. T), and Kate, the damsel in distress, described as Hawk's protegee and wearing blue clothing similar to his.
+
+One day, Kate is kidnapped by the Dead End Gang under the leadership of Faust. The four men go save her, fighting through the waves of enemies that are sent against them.</desc>
+		<rating>0.8</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Beat'em Up</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/vendetta2p.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="43965" source="ScreenScraper.fr">
+		<path>./viostorm.zip</path>
+		<name>Violent Storm (ver EAC)</name>
+		<desc>Violent Storm is a sideways-scrolling beat-em-up for up to three players set in the aftermath of World War III. The survivors of the war are attempting to rebuild their world but are being terrorised by violent gangs . Three vigilante heroes called 'Boris', 'Wade' and 'Kyle' are trying to protect the citizens but are hampered in their efforts by the evil and corrupt 'GELD' gang. As the heroes are patrolling the streets, they see their friend, Sheena, kidnapped by the gang. The vigilantes must fight through seven enemy-packed stages to rescue their friend and destroy the gang. 
+ 
+As well as the standard punch and kick moves, each character also has a special attack. This move is powerful enough to fell several enemies at once, but with the trade-off that each time a special attack is executed, some of the player's health is lost. Health levels can be replenished by finding the food that lies hidden in breakable crates and barrels.  
+ 
+Some of the gang members will drop a weapon when they are felled. These weapons can then be picked up and used by the players. Destructible crates and barrels also contain weapons and random bonus items. Stunned enemies fall to the ground and can still be attacked while prone.</desc>
+		<rating>0.8</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Beat'em Up</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/viostorm.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="40759" source="ScreenScraper.fr">
+		<path>./cstlevna.zip</path>
+		<name>Vs. Castlevania</name>
+		<desc>Dracula needs to be stopped, can you defeat the evil vampire? Do you have what it takes to lead Simon thru 18 challenging levels of a classic? This is not the Nintendo version you remember, no way. Vs. Castlevania increases the difficulty making this one tough game. Will you lead the hero to victory or will it be too much for you? Just when you think you have it mastered, there's another difficulty setting. Can you master Castlevania and be victorious on the hard difficulty? </desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/cstlevna.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41495" source="ScreenScraper.fr">
+		<path>./goonies.zip</path>
+		<name>Vs. The Goonies (set E)</name>
+		<desc>A platform game based on the 1985 Steven Spielberg movie of the same name. The player takes control of Mikey and must explore a variety of caverns and rooms, searching for the three keys needed to unlock the huge, metal door that bars progress to the next level. The keys are hidden behind a number of doors which can only be removed by placing a bomb in front of them and blowing them open. Mikey's progress is hampered by the many enemies that roam the levels. The bombs needed to blow the doors appear when certain enemies are killed. 
+ 
+A fellow 'Goonie' is trapped behind one of the doors on each level, and can be rescued, although this isn't necessary to progress to the next level. A catapult, or 'slingshot', can also be found, allowing Mikey to attack enemies from a safe distance.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<publisher>Konami</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/goonies.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="43673" source="ScreenScraper.fr">
+		<path>./topgun.zip</path>
+		<name>Vs. Top Gun</name>
+		<desc>Vs. Top Gun © 1987 Konami.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<publisher>Konami</publisher>
+		<genre>Shooter / Plane, 1st person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/topgun.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="42081" source="ScreenScraper.fr">
+		<path>./kviper.zip</path>
+		<name>ZZZ(notgame):Konami Viper Bios</name>
+		<releasedate>19990101T000000</releasedate>
+		<publisher>Konami</publisher>
+		<genre>Various-Various / System</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/kviper.png</image>
+	</game>
+	<game id="39917" source="ScreenScraper.fr">
+		<path>./88games.zip</path>
+		<name>'88 Games</name>
+		<desc>Konami '88 (also known as '88 Games or Hyper Sports Special) is the third in the Track &amp; Field game series by Konami, where you test your Olympic skills against other world-class athletes. As the name implies, it is loosely based on (and not licensed by) the 1988 Summer Olympics in Seoul, South Korea. Bronze or silver medals are not good enough - you have to go for the gold to get to the next event. However, you must at least qualify in each event in order to compete in the next event.</desc>
+		<image>/userdata/roms/mame/images/88games.png</image>
+		<rating>0.6</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports / Running trails-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="39902" source="ScreenScraper.fr">
+		<path>./4in1.zip</path>
+		<name>4 Fun In 1</name>
+		<desc>This multi-game system lets you select from four different games; "Galactic Convoy", "Scramble Pt2", "Galaxian Pt5" and "The Ghost Muncher Pt3".</desc>
+		<image>/userdata/roms/mame/images/4in1.png</image>
+		<rating>0.1</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Armenia</developer>
+		<publisher>Armenia</publisher>
+		<genre>Compilation</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3840</genreid>
+	</game>
+	<game id="43423" source="ScreenScraper.fr">
+		<path>./superbon.zip</path>
+		<name>Agent Super Bond (Super Cobra conversion)</name>
+		<desc>Agent Super Bond is a shooter game like the 007 series games. You have to shoot at objects and people that try to attack you, and find specific objects to complete the level. This game also has very similar spirtes to the Galaxian hardware shoot-em-up know as Lost Tomb.</desc>
+		<image>/userdata/roms/mame/images/superbon.png</image>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Signatron USA</developer>
+		<publisher>Signatron USA</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="39962" source="ScreenScraper.fr">
+		<path>./ajax.zip</path>
+		<name>Ajax</name>
+		<desc>The player has been issued an emergency order. He must save the earth from being conquered by enemy forces. He climbs into his helicopter and prepares for intense aerial combat. Shooting oncoming enemy aircrafts and bombing the enemies below, he tries to make his way through the different stages to reach the enemy base. When he finishes the first stage, he is transported to his next mission by ab aircraft carrier. He hops into his jet fighters, tanks, ships, helicopters, and aircraft carriers. The player must also be aware of unseen enemies and surprise attacks. 
+ 
+Different kinds of power ups can be obtained throughout the game. These include: 
+'3' 3-Way: Bullets fire forward, right, and left. 
+'L' Laser: Player can shoot double lasers. 
+'T' Triple: Missiles are fired that spread out three ways in front. 
+'V' Vulcan: Rapid bullets are fired in the directions controlled. 
+'B' Bomb: Air to ground missles which can be upgraded twice. 
+'O' Orbital: A small drone using the same weaponry as the helicopter which can be otained by clearing a special formation of little red fighters. 
+ 
+There is an additional super weapon that destroys all the enemies on the screen at once. However, use of this weapon is limited. 
+ 
+Ajax contains 2 different types of stages: 2-D and 3-D. In the 2-D stage, the player controls a helicopter. In the 3-D stage, the player commands a jet fighter. 
+ 
+Ajax features some impressive graphics filled with rotation and scaling effects (some may get a little dizzy, though!), a solid soundtrack and excellent game control. Highly recommended for any shoot'em up enthusiast!</desc>
+		<image>/userdata/roms/mame/images/ajax.png</image>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="39977" source="ScreenScraper.fr">
+		<path>./aliens.zip</path>
+		<name>Aliens (World set 1)</name>
+		<desc>Aliens is a scrolling run 'n' gun game for one or two players based on the classic 1986 science-fiction movie of the same name. Players take on the role of either Ellen Ripley (in the single-player game) or Corporal Hicks (in the two-player game) and must shoot their way through the alien-infested levels of the LV426 base to make their escape together with 'Newt', the little girl who survived the alien invasion of her settlement. 
+ 
+Players begin the game armed only with a pulse rifle but will have opportunities to upgrade to other weapons, including flamethrowers and grenade launchers. Bombs can also be found that cause greater damage to the enemies. Each player life starts with eight health points which deplete upon contact with either an alien or an enemy projectile and once all health points are lost, the player loses a life. Each stage ends with a Boss encounter, with the game's final boss being the Alien Queen herself.  
+ 
+As well as the standard side-scrolling stages, intermittent into-the-screen stages also feature that have the players riding atop the Marines' APC vehicle, shooting the hordes of aliens that swarm towards it. 
+ 
+As well as the standard Aliens and Face-huggers from the original film (that now come in a variety of different colours), there are many enemies that were created only for the arcade game and have never appeared elsewhere in the Alien franchise. These include flying aliens and mutated humans, as well as all end-of-stage bosses prior to the Alien queen.</desc>
+		<image>/userdata/roms/mame/images/aliens.png</image>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Beat'em Up-Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="40001" source="ScreenScraper.fr">
+		<path>./amidar.zip</path>
+		<name>Amidar</name>
+		<desc>Amidar is an abstract arcade game in which players must 'colour in' all of the rectangles on the screen. Each level has a number of patrolling enemies called 'Amidars' that must be avoided but players are aided in their task with the inclusion of a JUMP button which, when used, causes all the on-screen enemies to jump, giving the player time to escape. There are only three 'jumps' given per level, however. 
+ 
+On odd-numbered levels, the player's character is a gorilla who eats coconuts; on even-numbered levels, it's a paint roller. The game's enemy Amidars are savages and pigs respectively. Whenever a rectangular portion of the board is cleared (either by collecting all surrounding coconuts, or painting all surrounding edges), the rectangle is coloured in and on the even levels, bonus points are awarded, while on the odd-numbered levels, points are awarded for each coconut eaten.  
+ 
+If players manage to fill in all four corner rectangles of a board, they are briefly able to kill the enemies by touching them (similar to the 'Power-pill' from Namco's Pac-Man series). Enemies killed in this way fall to the bottom of the screen and recover after a few seconds. 
+ 
+On the even-numbered paint roller levels, the roller cannot move too far from grid rectangles that have already been filled without running out of paint and having to return to completed parts of the map to refresh its supply. When this happens, any painted lines that are not part of a filled rectangle will vanish and must be painted again. This means that the player must build their completed squares around the starting point of the level and spread outwards, rather than completing squares on any part of the board as they can on the odd-numbered Gorilla levels. This makes filling in the corner rectangles to become invincible much more difficult. 
+ 
+In between levels players are given the possibility of earning 5,000 bonus points. Here, an Amidar moves across the top of the screen, by pushing the jump button the Amidar traces a random path down towards the bottom of the screen. If the Amidar reaches a bunch of bananas, a bonus is awarded.</desc>
+		<image>/userdata/roms/mame/images/amidar.png</image>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40015" source="ScreenScraper.fr">
+		<path>./anteater.zip</path>
+		<name>Anteater</name>
+		<desc>Anteater is an abstract maze game in which the player controls an anteater that elongates its tongue through maze-like anthills eating ants and ant larvae. The object of the game is to eat all of the larvae - represented as round dots - before the timer runs out. Once all larvae have been eaten, play moves onto the next stage. 
+ 
+Players can only eat ants with the tip of the anteater's tongue, if an ant touches any other part of the tongue, the anteater is bitten and a player life is lost. As well as the ants, worms also roam the stages, worms will not harm the anteater upon contact with the extended tongue but if the head of the worm touches the tongue's tip, the player loses a life. Worms can be safely eaten from behind.  
+ 
+Large queen ants are situated at the bottom of the nest and eating these will temporarily clear all insects from the screen.   
+ 
+Anteater has a short day-night cycle represented by a moving Sun at the top of the screen. Once the sun has traveled across the screen and night falls, a spider will appear. The spider climbs down the anteater's tongue, taking a life if it reaches the tongue's tip. The spider can only be killed by eating a queen ant.</desc>
+		<image>/userdata/roms/mame/images/anteater.png</image>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Tago Electronics</developer>
+		<publisher>Tago Electronics</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="150468" source="ScreenScraper.fr">
+		<path>./armorcar.zip</path>
+		<name>Armored Car (set 1)</name>
+		<desc>An overhead view maze game where you drive a money van (the armoured car) through as it scrolls from right to left. Some intersections are marked with directions. You pick up money to deliver to banks while avoiding criminals by dropping saw horses in roadway. Fuel levels must be replenished at gas stations along the way.</desc>
+		<image>/userdata/roms/mame/images/armorcar.png</image>
+		<rating>0.5</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Stern Electronics, Inc.</developer>
+		<publisher>Stern Electronics</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40075" source="ScreenScraper.fr">
+		<path>./asterix.zip</path>
+		<name>Asterix (ver EAD)</name>
+		<desc>Asterix is a horizontally-scrolling beat-em-up for one or two players and is based on the French comic-book series, 'Asterix &amp; Obelix'. Players fight as either Asterix the Gaul or his best friend, Obelix, as they take on the might of the oppressive Roman Empire.  
+ 
+Asterix and Obelix each have standard jump/attack controls, as well as a dash attack activated by tapping the joystick forward twice then pressing the attack button. Each character also posesses a powerful spinning arm attack, this is activated by holding the attack button for a short while until the character's face turns red, after which players must release the button. If the button is held down for too long, the character gets out of breath and takes a few seconds to recover. 
+ 
+The heroes' main foes are Roman legionaries and fat - ocassionally horseback riding - centurions. After an enemy has been beaten enough to fall to the ground, he can be picked up and attacked again, the nature of the attack is dependant on which character picks them up; Asterix will spin the stunned enemy above his head, whereas Obelix smashes him repeatedly into the ground. These stunned enemies also act as tempoarary weapons, as they will cause damage to any other enemies they come into contact with.</desc>
+		<image>/userdata/roms/mame/images/asterix.png</image>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Beat'em Up</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="149950" source="ScreenScraper.fr">
+		<path>./bucky.zip</path>
+		<name>Bucky O'Hare (ver EAB)</name>
+		<desc>Bucky O'Hare is a scrolling shoot-em-up for up to four players based on the TV cartoon series Bucky O'Hare and the Toad Wars. Players must stop the Toad Empire from invading their home planets in the 'Aniverse' and enslaving their people. To achieve their goal they must shoot their way through an army of brainwashed toads to destroy their evil leader, a computer program known as 'KOMPLEX' and release the 'Interplanetary Life Force.' 
+ 
+Players choose to play as either Blinky (a one-eyed android), Bucky (the heroic rabbit captain), Dead-Eye Duck (a four-armed mallard) or Jenny (an 'Aldebaran cat' and telepath). Differences between the characters are purely visual as each plays the same.</desc>
+		<image>/userdata/roms/mame/images/bucky.png</image>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Tatsumi</publisher>
+		<genre>Shoot'em Up</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="60635" source="ScreenScraper.fr">
+		<path>./puzldama.zip</path>
+		<name>Crazy Cross (ver JAA)</name>
+		<desc>Puzzle game, also released on Psx.</desc>
+		<image>/userdata/roms/mame/images/puzldama.png</image>
+		<rating>0.7</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="43588" source="ScreenScraper.fr">
+		<path>./theend.zip</path>
+		<name>End, The</name>
+		<desc>The End © 1980 Konami Industry Company, Limited.
+
+In 'The End' you control a ship whose mission is to zap as many bug-ships as possible, before you run out of lives, or the bugs manage to spell out the word END with little chunks of brick. You can move left and right, and the bugs attack from the top of the screen, coming out of a large mothership. But the bugs have another mission besides just blindly attacking you. That other mission is to systematically steal the bricks from your three bases, and use them to spell out the word END up near the top of the screen.</desc>
+		<image>/userdata/roms/mame/images/theend.png</image>
+		<rating>0.7</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="150955" source="ScreenScraper.fr">
+		<path>./gradius.zip</path>
+		<name>Gradius (Japan, ROM version)</name>
+		<desc>Gradius / Nemesis is a horizontally-scrolling shoot-em-up in which the player pilots a spacecraft known as the Vic Viper as they search through unexplored galaxies looking for a lost armada. These new galaxies are teaming with alien life set upon destroying the Viper.  
+ 
+The game features a power-up system based on a selection meter at the bottom of the screen called a 'power meter', this allows players to 'buy' weapons and upgrades. To achieve this, players must destroy special individual enemies - usually red in colour - or enemy waves that then drop orange capsules. These capsules can be collected and used to upgrade the Viper's weapons. Each collected capsule advances the power meter by one step. Players can activate the highlighted item at any point, after which the power meter resets.</desc>
+		<image>/userdata/roms/mame/images/gradius.png</image>
+		<rating>0.9</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41838" source="ScreenScraper.fr">
+		<path>./ironhors.zip</path>
+		<name>Iron Horse (version K)</name>
+		<desc>Iron Horse is a horizontally-scrolling platform run 'n' gun game set in the Wild West in which the player takes on the role of a train-robber. The cowboy can use either his fists, pistols or a whip and must work his way along a moving train, killing enemy cowboys and collecting money bags. 
+ 
+The action takes place either inside a moving train or on its rooftop, with ladders allowing players to move between the two. Player and enemy movement is on three planes and players can duck to both avoid enemy fire and shoot crouching enemies. 
+ 
+The weapon option the player chooses at the start of the games significantly alters the way it plays, with weapons arranged by ease of use. The three weapons and their qualities are: 
+ 
+The whip has good range and can knock out several enemies at once, making it the ideal beginner's pick.  
+The pistol fires bullets that have longer reach and is the only weapon that can be used while still running, but each bullet can kill only a single enemy. 
+Fists have the shortest range but can lay out several enemies in one punch with a domino effect. Double points are awarded for each hit. 
+ 
+In addition to the main weapons, sub-weapons can be collected by killing special, box-carrying enemies. Lanterns create a wave of fire which burns enemies to cinders, bombs destroy everything within a ten-foot radius and lassos tie up enemy varmints.</desc>
+		<image>/userdata/roms/mame/images/ironhors.png</image>
+		<rating>0.6</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="57908" source="ScreenScraper.fr">
+		<path>./pingpong.zip</path>
+		<name>Konami's Ping-pong</name>
+		<desc>Konami's Ping Pong is a playable if simplistic Table Tennis simulation for one or two players. Ping Pong offers three different types of shot; Top spin, Back Spin and Smash. The actual gameplay centers on shot timing and shot choice, with the players' bats moving automatically to track the movement of the ball. 
+ 
+In the single player mode, the player can opt to play the game on any one of five different skill levels.</desc>
+		<image>/userdata/roms/mame/images/pingpong.png</image>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<publisher>Konami</publisher>
+		<genre>Sports / Table tennis-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="78904" source="ScreenScraper.fr">
+		<path>./merlinmm.zip</path>
+		<name>Merlin's Money Maze</name>
+		<desc>Merlin's Money Maze – a monstrously difficult cash-prizes maze game – also has a familiar-looking wizard and definitely feels like the work of the same authors as Cash Quiz and Wizz Quiz.</desc>
+		<image>/userdata/roms/mame/images/merlinmm.png</image>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Zilec Electronics</developer>
+		<publisher>Zilec Electronics</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="79114" source="ScreenScraper.fr">
+		<path>./overdriv.zip</path>
+		<name>Over Drive (set 1)</name>
+		<desc>Over Drive © 1990 Konami.
+
+Very fast first-person racing game.</desc>
+		<image>/userdata/roms/mame/images/overdriv.png</image>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Race 1st Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="42671" source="ScreenScraper.fr">
+		<path>./rackemup.zip</path>
+		<name>Rack 'em Up (program code L)</name>
+		<desc>Rack 'Em Up © 1987 Konami.
+
+A vertical pool game where you can play either 9-ball or rotation.</desc>
+		<image>/userdata/roms/mame/images/rackemup.png</image>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<publisher>Konami</publisher>
+		<genre>Sports / Pool-Sports / Swimming-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42926" source="ScreenScraper.fr">
+		<path>./scotrsht.zip</path>
+		<name>Scooter Shooter</name>
+		<desc>Scooter Shooter is a 2D arcade side scrolling shooter with split-screen. Players fly on special scooters and compete against each other (the player can play against CPU or the second player) - they start on the opposite end of map, and go towards the center. They must kill various enemies on road.</desc>
+		<image>/userdata/roms/mame/images/scotrsht.png</image>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="42923" source="ScreenScraper.fr">
+		<path>./scobra.zip</path>
+		<name>Super Cobra</name>
+		<desc>Super Cobra © 1981 Konami.
+
+The object of the game is to invade ten SUPER COBRA defense systems of increasing difficulty and safely pick up the BOOTY.
+
+Use the joystick to move up, down, accelerate and decelerate. Use the Laser and Bombs to destroy defenders. Hitting tanks scores Mystery Value worth 100, 200, or 300 points. Rockets, Tanks, Missiles, and UFO's may all fire at invader. Hit fuel tanks for extra fuel for CHOPPER. The Chopper uses up fuel as it flies, except in between defense levels.
+
+At 10000 points, the player is awarded a BONUS CHOPPER.
+
+At the end of the game, the player can continue at the defense level he left off on by depositing extra coins and pressing the discharge button on the left-hand side of the panel.
+
+If the Booty is destroyed on the BASE level, the player may try again. When the Booty is safely recovered, a Bonus Chopper is awarded and play resumes at defense level Number 1 where the fuel is used up faster and the defenders fire more often.
+
+SUPER COBRA Defense Level Descriptions:
+ Fuel Tanks appear on every defense level.
+ Tanks appear and fire on all levels except level 8 where they do not fire.
+Level 1 - Player must maneuver the chopper over mountainous terrain against fast and slow firing rockets.
+Level 2 - Chopper faces Arcing missiles over a mountain terrain.
+Level 3 - Smart Bombs flying in groups of four over mountainous terrain. Rockets appear, but do not fire.
+Level 4 - Single Smart Bombs over mountainous terrain. Again, Rockets appear but do not fire.
+Level 5 - Chopper flies through a cavern-like terrain against Falling Mines.
+Level 6 - Rapidly firing, Roving Tanks over mountainous terrain. Rockets appear, but do not fire.
+Level 7 - Maneuver through a field of meteors which explode when hit with bombs or three times with Laser, plus a single, green, shadow meteor directly in front of Chopper which explodes when hit five times with Laser. Rockets appear but do not fire.
+Level 8 - Chopper flies over mountainous terrain against rapidly firing UFO's. Tanks and Rockets appear, but do not fire.
+Level 9 - Chopper faces arcing missiles over tall buildings.
+Level 10 - Firing rockets in a Building Maze.
+Base - Player must maneuver the Chopper over tall buildings against arcing missiles and rapidly firing tanks to reach the Booty and safely carry it away.</desc>
+		<image>/userdata/roms/mame/images/scobra.png</image>
+		<rating>0.8</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43607" source="ScreenScraper.fr">
+		<path>./thunderx.zip</path>
+		<name>Thunder Cross (set 1)</name>
+		<desc>Wipe Out The Mechanikon Hordes! Take off into outer space and prepare for battle. 
+ 
+The legendary music Horizon by Olof 'Blaizer' Gustafsson found in many Amiga Cracktros of early 90s was actually a cover of the first level music of Thunder Cross. Olof Gustaffson is the inhouse musician of Digital Illusion of Pinball Dreams fame and before going commercial he was an active scener in the Amiga demo group 'The Silents'.</desc>
+		<image>/userdata/roms/mame/images/thunderx.png</image>
+		<rating>0.6</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43598" source="ScreenScraper.fr">
+		<path>./thndrx2.zip</path>
+		<name>Thunder Cross 2 (World)</name>
+		<desc>Taking place in the future of space colonization, the planet Haniamu IV is under attack from a relentless, unknown military force known only as Black Impulse. The strongest Earth ships capable of stopping the total conquering of the planet are the Blue Thunder M-45 (player 1) and the Red Thunder M-24 (player 2). 
+ 
+Thunder Cross is a classic horizontal shooter with 7 stages. Players control the Thunder fighter with up to four "options", which arrange up and down vertically and add to the player's attack power. Three weapons are selectable ranging from the Vulcan shot to the Laser and the Boomerang shot (which doubles as a ricochet weapon). Typical of a Konami shooter, Thunder Cross forces the player to beat the game twice in a harder loop of the first seven levels.</desc>
+		<image>/userdata/roms/mame/images/thndrx2.png</image>
+		<rating>0.4</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43620" source="ScreenScraper.fr">
+		<path>./timeplt.zip</path>
+		<name>Time Pilot</name>
+		<desc>Time Pilot is a multi-directionally scrolling shoot-em-up in which the player controls a futuristic jet fighter and takes on the role of pilot trying to rescue fellow pilots who are trapped in different time eras. The game consists of five different stages of play, each of which is set in a different time period.</desc>
+		<image>/userdata/roms/mame/images/timeplt.png</image>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="41749" source="ScreenScraper.fr">
+		<path>./hustler.zip</path>
+		<name>Video Hustler</name>
+		<desc>Pool game released by Konami in 1981 for the arcade</desc>
+		<image>/userdata/roms/mame/images/hustler.png</image>
+		<rating>0.3</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports / Pool-Sports / Swimming-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40240" source="ScreenScraper.fr">
+		<path>./bishi.zip</path>
+		<name>Bishi Bashi Championship Mini Game Senshuken (ver JAA, 3 Players)</name>
+		<desc>A puzzle game with various mini games.</desc>
+		<image>/userdata/roms/mame/images/bishi.png</image>
+		<rating>0.7</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Compilation</genre>
+		<players>3</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3840</genreid>
+	</game>
+	<game id="150707" source="ScreenScraper.fr">
+		<path>./checkman.zip</path>
+		<name>Check Man</name>
+		<desc>Check Man is an arcade game where the player moves a man around a grid made up of squares that disappear after being walked over. The aim of each level is to defuse a number bombs which is done by simply moving over them. Each bomb has a counter and it is necessary to defuse them before the time runs out. The quicker the bombs are defused the more points will be earned. At the same time the player has to watch out for the stomping boots that move around the grid. Any contact with these will lead to the player getting killed and a life will be lost. In addition to bombs and boots there are also skulls which are stationary obstacles and flags which give bonus points. It is possible to slide the row of squares the player is standing on left or right as long as there is space left and the objects are not moved off the edge of the screen.</desc>
+		<image>/userdata/roms/mame/images/checkman.png</image>
+		<rating>0.5</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Zilec Electronics</developer>
+		<publisher>Zilec Electronics</publisher>
+		<genre>Puzzle-Game-Reflection</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40823" source="ScreenScraper.fr">
+		<path>./darkplnt.zip</path>
+		<name>Dark Planet</name>
+		<desc>A 3-D space shoot'em up game that takes place on a mysterious planet. Prevent enemies from building bases.</desc>
+		<image>/userdata/roms/mame/images/darkplnt.png</image>
+		<rating>0.3</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Stern Electronics, Inc.</developer>
+		<publisher>Stern Electronics</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="41227" source="ScreenScraper.fr">
+		<path>./finalizr.zip</path>
+		<name>Finalizer - Super Transformation</name>
+		<desc>Finalizer - Super Transformation © 1985 Konami Industry Company, Limited.
+
+You control a jet shooter and fly through several different states in America shooting different enemies.</desc>
+		<image>/userdata/roms/mame/images/finalizr.png</image>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41609" source="ScreenScraper.fr">
+		<path>./gyruss.zip</path>
+		<name>Gyruss</name>
+		<desc>Gyruss is a single-player shoot-em-up in which the purpose is to fly through the solar system, destroying waves of alien attackers, before finally reaching Earth. Planets that must be passed before Earth is reached are Neptune, Uranus, Saturn, Jupiter, and Mars.  
+ 
+It only takes two warps to reach Neptune, but all of the others, including Earth, take three warps to get to. Each time the player reaches a planet, they will be faced with a 'Chance Stage', a bonus stage in which players try to destroy as many aliens as possible to accrue points. After reaching Earth, there is a Chance Stage, followed by a very fast '3 Warps to Neptune' stage. After this, the levels and the background music start over.  
+ 
+Gyruss' superb gameplay, in which the player ship rotates around the edges of the screen and fires 'inwards', is heavily influenced by Atari's 1981 classic, "Tempest". While the design of the alien ships themselves is similar to those of Namco's also-legendary "Galaga" series.</desc>
+		<image>/userdata/roms/mame/images/gyruss.png</image>
+		<rating>0.9</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter / Plane, 3rd person-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="41931" source="ScreenScraper.fr">
+		<path>./jungler.zip</path>
+		<name>Jungler</name>
+		<desc>In this Konami arcade game, snakes navigate through mazes, shooting at each other in hopes of cutting their opponents down to size enough to be mercilessly devoured. Welcome to the Jungler, baby.</desc>
+		<image>/userdata/roms/mame/images/jungler.png</image>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="42161" source="ScreenScraper.fr">
+		<path>./locomotn.zip</path>
+		<name>Loco-motion</name>
+		<desc>Loco-Motion is a puzzle-style arcade game in which a train is riding on a grid of movable track pieces. The goal is to guide the train through the train stations located around the edge of the playfield. An empty section in the grid allows the player to shift adjacent track pieces into that section to alter the train's path, and a tracing light shows the path the train is taking as it moves. An accelerator button moves the train more quickly on its path, and a panic button will switch the piece of track the train is on with a random track piece on the grid.</desc>
+		<image>/userdata/roms/mame/images/locomotn.png</image>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Puzzle-Game / Glide-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="78952" source="ScreenScraper.fr">
+		<path>./mmaulers.zip</path>
+		<name>Monster Maulers (ver EAA)</name>
+		<desc>A trio of supervillains unleashes an army of gross mutants on earth in order to start an alien invasion. Our only hope is the trio of superheroes known as the 'Ultimate Task Force'. Squash the evil mutants and put an end to the alien menace. Features excellent graphics &amp; sound as well as plenty of moves to find!</desc>
+		<image>/userdata/roms/mame/images/mmaulers.png</image>
+		<rating>0.9</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Fight /  Co-op-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="42462" source="ScreenScraper.fr">
+		<path>./pooyan.zip</path>
+		<name>Pooyan</name>
+		<desc>The player takes on the role of a bow-and-arrow welding pig who must protect her piglets from the pack of hungry wolves ballooning up or down the cliff face. The pig is suspended in a winch-controlled cage and must move vertically up and down, shooting the balloons and sending the wolves plummeting to the ground. Any wolves she misses will, having safely reached the ground, climb a ladder to try and bite her. Also, if any of the wolves reach the ground, more piglets will be captured by them. Mother Pig must try to kill as many wolves as possible without letting them reach the ground. 
+ 
+On the second level, the wolves use balloons to float upwards to the top of a high cliff. If enough of them reach the cliff, they will push a huge boulder down onto Mother Pig's cage. After this level has been completed, the piglets who have been captured are rescued and the game starts over with increased difficulty. 
+ 
+There is also a bonus round where Mother Pig will attempt to eliminate as many wolves on ascending balloons as possible by throwing as few slabs of meat as possible for a maximum bonus score.</desc>
+		<image>/userdata/roms/mame/images/pooyan.png</image>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>bootleg</publisher>
+		<genre>Shooter / 3rd person-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="42804" source="ScreenScraper.fr">
+		<path>./rockrage.zip</path>
+		<name>Rock'n Rage (World)</name>
+		<desc>Two rock stars must battle through 5 stages battling enemies from different time periods.</desc>
+		<image>/userdata/roms/mame/images/rockrage.png</image>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<publisher>Konami</publisher>
+		<genre>Fight-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="43387" source="ScreenScraper.fr">
+		<path>./stratgyx.zip</path>
+		<name>Strategy X</name>
+		<desc>Even Patton would spend all his quarters attempting to advance through the four attack levels of Strategy X, Konami's latest tank attack video game. 
+ 
+1st Level: Defend against rotating cannons. 
+2nd Level: Watch out for attacking Jeeps 
+3rd Level: Careful! Here come attacking and shooting tanks 
+4th Level: Rotating cannons again, but this time against a moving background. 
+ 
+An audible signal warns that it's refueling time. Enter a fuel dock and receive 100-300 points. The Tank commander's life isn't an easy one. 
+ 
+Aside from an on-going battle, he has to watch out for obstacles and rough terrain. Brick walls destroy tanks, although they can be shot away. TNT, rather nasty stuff...explodes when shot, but destroys all objects in the area. Stay off pink backgrounds. That's where the land mines are buried. They explode only on contact. Don't worry about a blue background, though. It's a slip zone like an oil slick and can be driven across. If an alien base is found and destroyed, advance to the next level of difficulty. You bet there's a 'buy-in' feature on this one. 
+ 
+Strategy X. There's never been a war game like it. It blows minds, and quarters.</desc>
+		<image>/userdata/roms/mame/images/stratgyx.png</image>
+		<rating>0.5</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter / Vehicle, Vertical-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1028</genreid>
+	</game>
+	<game id="43661" source="ScreenScraper.fr">
+		<path>./tokkae.zip</path>
+		<name>Taisen Tokkae-dama (ver JAA)</name>
+		<desc>Taisen Tokkae Puzzle-dama © 1996 Konami.</desc>
+		<image>/userdata/roms/mame/images/tokkae.png</image>
+		<rating>0.9</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="43706" source="ScreenScraper.fr">
+		<path>./tp84.zip</path>
+		<name>Time Pilot '84 (set 1)</name>
+		<desc>Time Pilot '84 is an eight-way scrolling shoot 'em up and is the sequel to 1982's 'Time Pilot'. As with the prequel, the game's stages are set over different periods in time. Players must destroy a set number of enemy ships, after which an end-of-level guardian appears. Once this is destroyed the player's ship warps to the next stage.  
+ 
+The player's ship is armed with both a forward-firing gun and an infinite number of homing missiles. Each stage consists of both green and metallic enemies, the green enemies can be destroyed with the standard gun, but both metallic enemies and the end-of-stage guardian can only be killed with homing missiles. As the player's ship gets close to a metallic enemy, a "lock-on" square will appear over it, fired homing missiles will then follow and hit the enemy.  
+ 
+Unlike the prequel, which displayed the year in which each level was set, the time periods of 'Time Pilot '84' are indicated by new enemies and different backgrounds.</desc>
+		<image>/userdata/roms/mame/images/tp84.png</image>
+		<rating>0.9</rating>
+		<releasedate>19840101T000000</releasedate>
+		<publisher>Konami</publisher>
+		<genre>Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="43711" source="ScreenScraper.fr">
+		<path>./trackfld.zip</path>
+		<name>Track And Field</name>
+		<desc>Track &amp; Field © 1983 Konami.
+
+Track &amp; Field is an athletics-themed action game for up to four players, who compete against each other in six track and field-based disciplines. 
+
+The game controls consist of two run buttons (one for each 'leg' of the athlete) and one 'Action' button. Players must hit the two run buttons alternately to build up speed and use action button to jump or throw.
+
+In each event, there is a qualifying time or minimum score threshold that the player must achieve to advance to the next event. failing to qualify (in one heat for track events or in three attempts in the other events) will reduce the players' number of lives by one, the game is over once all lives are lost.
+
+Track &amp; Field can accommodate up to four players, who compete in pairs in the running events and individually in the others. If there are fewer than four players, the remaining slots are played by the computer (or player "CPU"). In all multiplayer heats, however, the relative performance of the players has no effect on the game and advancing is based solely on reaching qualifying times and targets.
+
+The six events are:
+
+100M DASH - Run as fast as possible.
+LONG JUMP - Run to the take-off board then choose angle of jump (42 is the optimum angle).
+JAVELIN - Run to the line then choose angle of throw (43 is the optimum angle).
+110M HURDLES - Run and time jumps over the hurdles.
+HAMMER THROW - As the athlete spins faster and faster, time release of hammer and angle of throw (45 is the optimum angle).
+HIGH JUMP - The athlete will run to the bar; just as he reaches it, use Action button to start the jump and hold down the action button to reduce the angle of climb, i.e. you start going straight up at 90 degrees if you tap the button just once. Use run buttons while in the air to gain extra height.</desc>
+		<image>/userdata/roms/mame/images/trackfld.png</image>
+		<rating>0.9</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports / Running trails-Sports</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43720" source="ScreenScraper.fr">
+		<path>./tricktrp.zip</path>
+		<name>Trick Trap (World?)</name>
+		<desc>The princess of Vegetaria named Papaya has been kidnapped by the Devil. Now it's up to the prince to rescue her. The prince is equipped with a gun that shoots bullets, a laser gun, and bombs. These weapons can continually be upgraded to more powerful versions. The prince has to go through five areas of Vegetaria, through the forest, a castle wall, a maze, riding a railway truck, and finally the devil's castle. Each of these areas are filled with and enemies and a boss monster and have to be beaten within the given time limit.</desc>
+		<image>/userdata/roms/mame/images/tricktrp.png</image>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43783" source="ScreenScraper.fr">
+		<path>./turtles.zip</path>
+		<name>Turtles</name>
+		<desc>Help the turtles carry their babies to safety. Watch out for the evil beetles!</desc>
+		<image>/userdata/roms/mame/images/turtles.png</image>
+		<rating>0.9</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="78969" source="ScreenScraper.fr">
+		<path>./moo.zip</path>
+		<name>Wild West C.o.w.-boys Of Moo Mesa (ver EA)</name>
+		<desc>Wild West C.O.W. Boys of Moo Mesa is a horizontally-scrolling platform run 'n' gun game for up to four players. The game is set in America's Wild West and is based on the cartoon series of the same name.  
+ 
+Players take on the roles of four recently mutated cows - now turned lawmen; the Cowlorado Kid, the Dakota Dude, Marshall Moo Montana and the shotgun-toting Buffalo Bull. The lawmen must shoot their way through enemy-packed stages to take down wanted criminals. 
+ 
+Controls consist of a jump and an attack button and pressing both buttons simultaneously will cause the player character to perform a stampede attack, do a spinning jump, or use any equipped item like dynamite sticks and tomahawk blades.  
+ 
+Numerous variety of power-up items can be found by shooting flying chickens, these include a rapid-fire Machine Gun and a Power-Up for wider bullets. Players have a three-unit life gauge that allows them to take three hits before losing a life.  
+ 
+The game consists of eight stages, each with a boss fight at the end, and after the first stage, players can choose in which order they want to tackle the following stages.</desc>
+		<image>/userdata/roms/mame/images/moomesa.png</image>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="78969" source="ScreenScraper.fr">
+		<path>./moomesa.zip</path>
+		<name>Wild West C.o.w.-boys Of Moo Mesa (ver EAB)</name>
+		<desc>Wild West C.O.W. Boys of Moo Mesa is a horizontally-scrolling platform run 'n' gun game for up to four players. The game is set in America's Wild West and is based on the cartoon series of the same name.  
+ 
+Players take on the roles of four recently mutated cows - now turned lawmen; the Cowlorado Kid, the Dakota Dude, Marshall Moo Montana and the shotgun-toting Buffalo Bull. The lawmen must shoot their way through enemy-packed stages to take down wanted criminals. 
+ 
+Controls consist of a jump and an attack button and pressing both buttons simultaneously will cause the player character to perform a stampede attack, do a spinning jump, or use any equipped item like dynamite sticks and tomahawk blades.  
+ 
+Numerous variety of power-up items can be found by shooting flying chickens, these include a rapid-fire Machine Gun and a Power-Up for wider bullets. Players have a three-unit life gauge that allows them to take three hits before losing a life.  
+ 
+The game consists of eight stages, each with a boss fight at the end, and after the first stage, players can choose in which order they want to tackle the following stages.</desc>
+		<image>/userdata/roms/mame/images/moomesa.png</image>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="42903" source="ScreenScraper.fr">
+		<path>./sbasketb.zip</path>
+		<name>Super Basketball (version I, encrypted)</name>
+		<image>/userdata/roms/mame/images/sbasketb.png</image>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42904" source="ScreenScraper.fr">
+		<path>./sbishi.zip</path>
+		<name>Super Bishi Bashi Championship (ver JAA, 2 Players)</name>
+		<desc>Each game in the compilation contains mini games, some are loosely based around arcade classics such as Breakout ("Car Destroyer) and Pac-Man ("Super Gulper"). Other games, such as "Perm-Mania," in which the player plays as a dancer and has to keep in time with the rhythm to make his dancer's afro hairstyle grow, and "Jump for the Meat", in which the player plays a bodybuilder on a pogo-stick who has to jump high in order to grab a piece of meat, appear to be more original creations.</desc>
+		<image>/userdata/roms/mame/images/sbishi.png</image>
+		<rating>0.7</rating>
+		<releasedate>19980101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Compilation</genre>
+		<players>3</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3840</genreid>
+	</game>
+	<game id="42924" source="ScreenScraper.fr">
+		<path>./scontra.zip</path>
+		<name>Super Contra</name>
+		<desc>Super Contra © 1988 Konami.
+
+Export version. Game developed in Japan. For more information about the game itself, please see the original Japanese version entry; "Super Contra - Alien no Gyakushuu [Model GX775]".</desc>
+		<image>/userdata/roms/mame/images/scontra.png</image>
+		<rating>0.9</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal-Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="149954" source="ScreenScraper.fr">
+		<path>./simpsons.zip</path>
+		<name>The Simpsons (4 Players World, set 1)</name>
+		<desc>A jewel heist gone wrong sees Mr Burns's sidekick, Smithers, kidnapping Maggie and making his escape. Between one and four players take on the role of either Homer, Marge, Lisa, or Bart in this colorful, horizontally-scrolling beat-em-up from Konami. Each Simpsons character possesses an attacking move specific to them; Marge is armed with a vacuum cleaner, Lisa has a skipping rope, Bart has his skateboard, and Homer fights with his fists. The players must battle their way through a variety of Simpsons-themed levels - such as Springfield and Krustyland - fighting goons, thugs, zombies, drunks, firemen, and several Simpsons regulars. Many Simpsons characters that don't appear as enemies have 'cameo' scenes in the game (Otto working at a burgerstand in Krustyland, for example). The archetypal 'boss' character awaits the players at the end of every stage. The game ends with a final showdown with the evil Mr. Burns in his luxurious mansion. 
+ 
+The Simpsons was designed to Konami's typically-high production standards and was, like the 'Ninja Turtles' games that appeared a couple of years' earlier, very faithful to its source material. The colorful, smoothly-animated sprites captured the spirit of the legendary cartoon superbly, and the game's many humorous touches were timed to perfection.</desc>
+		<image>/userdata/roms/mame/images/simpsons.png</image>
+		<rating>0.9</rating>
+		<releasedate>19910403T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Beat'em Up-Fight-Fight / 2.5D</genre>
+		<players>4</players>
+		<playcount>3</playcount>
+		<lastplayed>20210808T220103</lastplayed>
+		<gametime>109</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="43289" source="ScreenScraper.fr">
+		<path>./ssriders.zip</path>
+		<name>Sunset Riders (4 Players ver EAC)</name>
+		<desc>Sunset Riders is a horizontally-scrolling platform shoot-em-up for up to four players set in America's Wild West. Four sharpshooter bounty hunters (Steve, Billy, Bob and Cormano) set out to claim the bounties for killing the most wanted outlaws in the West, before a final showdown against the infamous Sir Richard de la Rose. 
+ 
+The action takes place both on foot and on horseback, with play sometimes broken up with a wild west pursuit; such as having to run along the backs of a herd of fleeing Buffalo. Each level ends with players entering a one-on-one battle against one of the wanted men they have been pursuing.  
+ 
+Power-ups and bonus items can be obtained by entering saloons or defeating certain sack-carrying bandits. The power-ups comes in the form of either a golden sheriff badge (that gives the player's weapon auto-fire) or a silver badge that gives the player a second gun (making it possible to shoot in two directions simultaneously). Both power-ups can be equipped at the same time.  
+ 
+Other weapons that can be used by players include sticks of dynamite carried by female bandits that can be thrown back at the enemy before they explode and a mounted Gatling gun available only in the last stage.  
+ 
+A bonus mini-game appears at the end of Stages 2 and 5 in which players must shoot at enemies from a first-person perspective before the timer runs out. 
+ 
+Sunset Riders features eight stages of play.</desc>
+		<image>/userdata/roms/mame/images/ssridersabd.png</image>
+		<rating>0.9</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform / Shooter Scrolling-Platform-Shooter / Horizontal-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43289" source="ScreenScraper.fr">
+		<path>./ssridersabd.zip</path>
+		<name>Sunset Riders (2 Players ver ABD)</name>
+		<desc>Sunset Riders is a horizontally-scrolling platform shoot-em-up for up to four players set in America's Wild West. Four sharpshooter bounty hunters (Steve, Billy, Bob and Cormano) set out to claim the bounties for killing the most wanted outlaws in the West, before a final showdown against the infamous Sir Richard de la Rose. 
+ 
+The action takes place both on foot and on horseback, with play sometimes broken up with a wild west pursuit; such as having to run along the backs of a herd of fleeing Buffalo. Each level ends with players entering a one-on-one battle against one of the wanted men they have been pursuing.  
+ 
+Power-ups and bonus items can be obtained by entering saloons or defeating certain sack-carrying bandits. The power-ups comes in the form of either a golden sheriff badge (that gives the player's weapon auto-fire) or a silver badge that gives the player a second gun (making it possible to shoot in two directions simultaneously). Both power-ups can be equipped at the same time.  
+ 
+Other weapons that can be used by players include sticks of dynamite carried by female bandits that can be thrown back at the enemy before they explode and a mounted Gatling gun available only in the last stage.  
+ 
+A bonus mini-game appears at the end of Stages 2 and 5 in which players must shoot at enemies from a first-person perspective before the timer runs out. 
+ 
+Sunset Riders features eight stages of play.</desc>
+		<image>/userdata/roms/mame/images/ssridersabd.png</image>
+		<rating>0.9</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform / Shooter Scrolling-Platform-Shooter / Horizontal-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43389" source="ScreenScraper.fr">
+		<path>./streakng.zip</path>
+		<name>Streaking (set 1)</name>
+		<desc>In this comical maze game, the player controls a nude streaker girl who runs around a city maze and she must eat all foods shaped circle while must pick up all the clothes and accessories and back to dress for avoid being caught by the police officers, she also may escape quickly using orbed portals located at each corner of the maze. 
+ 
+This game's ROMs can be swapped with Ghost Muncher's, and it will work perfectly. The game also makes sounds Ghost Muncher will make.</desc>
+		<image>/userdata/roms/mame/images/streakng.png</image>
+		<rating>0.3</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Shoeisha</developer>
+		<publisher>Shoei</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43457" source="ScreenScraper.fr">
+		<path>./suratk.zip</path>
+		<name>Surprise Attack (World Ver. K)</name>
+		<desc>The protagonist is Sergeant John Ryan of the Special Task Force who has to face a terrorist organization that has placed bombs on the Moon, sending an ultimatum of 25 hours to Earth.</desc>
+		<image>/userdata/roms/mame/images/suratk.png</image>
+		<rating>0.6</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43499" source="ScreenScraper.fr">
+		<path>./tactcian.zip</path>
+		<name>Tactician (set 1)</name>
+		<desc>At its core, Tactician might seem like another Space Invaders / Galaxian clone - you control a small ship at the bottom of the screen, which can actually move up or down a bit, instead of just left and right - but it has a pretty cool gimmick going for it.  
+ 
+At the beginning of each stage, you can "draw" a barrier by placing little dots around the playing field. After several seconds, enemies are released from their bases and begin to swarm the screen. They'll usually make quick work of the barrier, but if you shoot the red ball it'll explode and destroy anything near it. Quite a cool concept for something from 1981 - it's a shame that Tactician is so unknown, and that the idea was never expanded on in any other games. Some versions list the game as copyrighted by Sega, but they apparently only distributed the game in certain territories.</desc>
+		<image>/userdata/roms/mame/images/tactcian.png</image>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43526" source="ScreenScraper.fr">
+		<path>./tazmania.zip</path>
+		<name>Tazz-Mania (set 1)</name>
+		<desc>A cross between "Robotron" and "Berzerk".</desc>
+		<image>/userdata/roms/mame/images/tazmania.png</image>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Stern Electronics, Inc.</developer>
+		<publisher>Stern Electronics</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43646" source="ScreenScraper.fr">
+		<path>./tmnt2.zip</path>
+		<name>Teenage Mutant Ninja Turtles: Turtles in Time (4 Players ver UAA)</name>
+		<desc>The sequel to 1989's hugely successful original, 'Turtles in Time' once more sees the four heroes taking on Shredder and his army. Gameplay remains similar to the original game, but the experience is enhanced further with the obligatory improved graphics and sound effects. 'Turtles in Time' also features a larger variety of levels, as now the battle between good and evil rages across time as the Turtles travel to prehistoric, pirate and Wild West times in their pursuit of the elusive Splinter.  
+ 
+Yet again, Konami's mastery of the genre was in evidence as the manic energy and humour of the cartoon and comic-book series upon which the game is based was captured perfectly.</desc>
+		<image>/userdata/roms/mame/images/tmnt2.png</image>
+		<rating>0.9</rating>
+		<releasedate>19910918T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Beat'em Up</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="43785" source="ScreenScraper.fr">
+		<path>./tutankhm.zip</path>
+		<name>Tutankham</name>
+		<desc>Inside King Tut's tomb are treasures beyond your wildest dreams. They can be yours... if you dare to take them. Supernatural creatures roam the mazes of the tomb guarding the treasures at all costs. Your only defenses against them are your laser gun... and your wits. Blast away, snatch the loot, escape through secret passageway before it's too late! And when you see a key, take that, too. It will unlock the door to the next chamber and the next adventure. Enter King Tut's tomb and see what awaits you... if you dare.</desc>
+		<image>/userdata/roms/mame/images/tutankhm.png</image>
+		<rating>0.8</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="44018" source="ScreenScraper.fr">
+		<path>./vulcan.zip</path>
+		<name>Vulcan Venture (NEW)</name>
+		<desc>The third game in Konami's renowned Gradius series; the prequel being "Gradius [Model GX400]" and a spinoff called "Salamande.</desc>
+		<image>/userdata/roms/mame/images/gradius2.png</image>
+		<rating>0.9</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="44054" source="ScreenScraper.fr">
+		<path>./wecleman.zip</path>
+		<name>Wec Le Mans 24 (v2.00, set 1)</name>
+		<desc>A demanding yet superb sprite-scaling racing game from Konami, based on the annual 'WEC Le Mans 24' race; a grueling event that, as its name suggests, takes place over a 24-hour period. 
+ 
+The width of Le Mans' racetrack never varied and remained a constant 3 lanes wide. The track itself was incredibly demanding and contact with either a rival racer or one of the many track-side objects would send the player's vehicle flying dramatically through the air, costing valuable seconds in time.</desc>
+		<image>/userdata/roms/mame/images/wecleman.png</image>
+		<rating>0.9</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="44099" source="ScreenScraper.fr">
+		<path>./wizzquiz.zip</path>
+		<name>Wizz Quiz (Konami version)</name>
+		<image>/userdata/roms/mame/images/wizzquiz.png</image>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Zilec Electronics</developer>
+		<publisher>Zilec Electronics</publisher>
+		<genre>Quiz / English-Quiz</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3328</genreid>
+	</game>
+	<game id="44155" source="ScreenScraper.fr">
+		<path>./xexex.zip</path>
+		<name>Xexex (ver EAA)</name>
+		<desc>Xexex is a horizontally-scrolling shoot-em-up in which players pilot a ship called the 'Flintlock' and must save the blue-haired Princess Irene of the planet E-Square from an evil lord named Klaus.  
+ 
+The player's ship has a detachable orb attachment called the Flint, which behaves in a similar fashion to the 'Force Device' from Irem's "R-Type" series. Power-ups can be obtained to increase the Flint's power, movement speed, change the main weapon, or even give the player an extra life. 
+ 
+The player starts the game armed with the Proton Laser, which emits thin stream of weak bullets. Defeating certain enemies will drop other weapons: 
+Homing Laser: A 3-way laser with weak "bending" homing for top and bottom lasers. 
+Shadow Laser: A laser beam that creates a damage-inflicting shadow as the ship moves up and down.  
+Round Laser: An unusual spread shot (different from the overseas version's main weapon) 
+Spiral Laser: A spiral laser of considerable width. 
+Search Laser: A laser with strong homing that travels in square trajectories. 
+Ground Laser: Fires an upgraded Proton Laser along with a laser beam that travels along the ground. 
+ 
+The name of the current weapon is displayed at the bottom of the screen. In the non-Japanese overseas versions, the only available weapon is the Proton Laser and picking up power-ups simply increases the spread of the weapon. Missiles are a secondary weapon.</desc>
+		<image>/userdata/roms/mame/images/xexex.png</image>
+		<rating>0.9</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="44160" source="ScreenScraper.fr">
+		<path>./xmen.zip</path>
+		<name>X-Men (4 Players ver UBB)</name>
+		<desc>X-Men is a side-scrolling beat-em-up for up to four players. The X-Men's mission is to find and rescue Professor X, who has been captured by evil mutants and is now being held prisoner by Magneto. 
+ 
+Each X-Man character has an 'Attack', 'Jump' and 'Mutant Power' button. The mutant power attack is a powerful special move unique to each X-Man. While it inflicts a lot of damage on the enemies, the trade-off is that each usage removes 3 bars from the players health meter (a full meter has 10 bars). Each level ends with a face-off against a powerful mutant boss character. 
+ 
+The game has six stages, with the final one set on 'Asteroid M', Magneto's base. The defeated mutant bosses from the previous levels each make an appearance (albeit in a less powerful form) before the final encounter with Magneto himself. 
+ 
+Players can chose from 6 X-Men characters, they are: 
+Cyclops  
+Colossus  
+Wolverine  
+Storm  
+Nightcrawler  
+Dazzler</desc>
+		<image>/userdata/roms/mame/images/xmen2pa.png</image>
+		<rating>0.9</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="44160" source="ScreenScraper.fr">
+		<path>./xmen2pa.zip</path>
+		<name>X-Men (2 Players ver AAA)</name>
+		<desc>X-Men is a side-scrolling beat-em-up for up to four players. The X-Men's mission is to find and rescue Professor X, who has been captured by evil mutants and is now being held prisoner by Magneto. 
+ 
+Each X-Man character has an 'Attack', 'Jump' and 'Mutant Power' button. The mutant power attack is a powerful special move unique to each X-Man. While it inflicts a lot of damage on the enemies, the trade-off is that each usage removes 3 bars from the players health meter (a full meter has 10 bars). Each level ends with a face-off against a powerful mutant boss character. 
+ 
+The game has six stages, with the final one set on 'Asteroid M', Magneto's base. The defeated mutant bosses from the previous levels each make an appearance (albeit in a less powerful form) before the final encounter with Magneto himself. 
+ 
+Players can chose from 6 X-Men characters, they are: 
+Cyclops  
+Colossus  
+Wolverine  
+Storm  
+Nightcrawler  
+Dazzler</desc>
+		<image>/userdata/roms/mame/images/xmen2pa.png</image>
+		<rating>0.9</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>4</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="44183" source="ScreenScraper.fr">
+		<path>./yiear.zip</path>
+		<name>Yie Ar Kung-Fu (program code I)</name>
+		<desc>Yie Ar Kung-fu is a single-player one-on-one fighting game in which the player takes on the role of 'Oolong' who must fight and defeat eleven martial arts masters. His ulimate goal is to win the title of "Grand Master" and honour the memory of his father, who was killed while fighting the current grand master. 
+ 
+The player faces a variety of opponents, each with a unique appearance and fighting style. Some opponents are also armed, with weapons including nunchaku, throwing stars and a club. The player can perform up to 16 different moves using a combination of buttons and joystick movements while standing, crouching or jumping. Moves are thrown at high, middle, and low levels.  
+ 
+Yie Ar Kung-Fu plays incredibly quickly, with the player having to be constantly on the move to avoid getting 'pegged in' by some of the game's tougher opponents. There is no time limit in which the opponent must be defeated but Oolong possesses a finite amount of health, represented by a health bar at the top of the screen. Once Oolong's health is fully depleted, the match is over.</desc>
+		<image>/userdata/roms/mame/images/yiear.png</image>
+		<rating>0.9</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="149472" source="ScreenScraper.fr">
+		<path>./zigzagb.zip</path>
+		<name>Zig Zag (Galaxian hardware, set 1)</name>
+		<desc>Zig Zag is a Pirate version of Dig Dug.</desc>
+		<image>/userdata/roms/mame/images/zigzagb.png</image>
+		<releasedate>19820101T000000</releasedate>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+</gameList>

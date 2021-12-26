@@ -1,0 +1,876 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="57899" source="ScreenScraper.fr">
+		<path>./pc_hgaly.zip</path>
+		<name>Hogan's Alley (playchoice-10) (PlayChoice-10)</name>
+		<desc>Test your sharpshooting skills at the FBI's training camp. You've got to respond with split-second accuracy and instinct to protect innocent lives and bring down the bad guys. Do you have what it takes to be an agent?</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/pc_hgaly.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="150136" source="ScreenScraper.fr">
+		<path>./pc_mario.zip</path>
+		<name>Mario Bros. (PlayChoice-10)</name>
+		<desc>Mario and Luigi are doing some underground plumbing when all sorts of weird creatures come flying out of the pipes. Turtles, crabs - even fighterflies - attack the helpless Mario Bros. It's up to you to kick, punch, and knock out these sewer pests before time runs out! But beware. Just when you think you got rid of them, they come back for more! Play against the computer, or with a friend - either way, this is one underground classic you'll want to play time and time again!</desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<image>/userdata/roms/mame/images/pc_mario.png</image>
+	</game>
+	<game id="108036" source="ScreenScraper.fr">
+		<path>./mario.zip</path>
+		<name>Mario Bros. (US, Revision F)</name>
+		<desc>Mario Bros. is a superb, single-screen platform game in which the legendary "Mario Bros.", Mario and Luigi, must try to rid each level of a number of pests that have infested the waterworks: Shellcreepers (turtles), Sidesteppers (crabs that need to be hit twice) and Fighterflies (flies that can only be attacked when they touch a platform). 
+ 
+Players can jump upwards to hit the platform above them, which will 'flip' any enemies on the above platform onto their backs. The prone enemies can then be kicked into the water to remove them. A 'POW' button also appears on a number of screen; this can be 'butted' by a player, causing all on-screen enemies to flip onto their backs; as well as destroying any enemy fireballs that may be around. Each POW can only be used a maximum of three times.  
+ 
+As well as the game's enemies, players are also hampered by the huge amount of inertia that comes into play when controlling Mario or Luigi. This is due to the low degree of traction that exists between the Mario brothers and the platforms. On later phases, ice appears on the platforms reducing the amount of traction even further. As the game progresses, water droplets hang below the platforms and freeze into deadly icicles, which will eventually break off and fall.</desc>
+		<rating>0.9</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mario.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="79218" source="ScreenScraper.fr">
+		<path>./pc_moglf.zip</path>
+		<name>Mario's Open Golf (playchoice-10) (PlayChoice-10)</name>
+		<desc>You can play a round of golf on one of three different courses. One or two players can play in the U.S., Japan, or the U.K. and choose a stroke or match play game. Gameplay is from two point of views, starting with an overhead view allowing you to set up the shot and choose a club, then switching to a 3-D point of view. Hitting the ball uses the common power meter where tapping the button starts the meter, tap the button a second time to select the amount of power in the shot, then tap the button a third time to select the amount of slice or hook. If you are unable to finish a round in one play, NES Open Tournament Golf features a battery back-up allowing you to save the game and continue later.</desc>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pc_moglf.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="79219" source="ScreenScraper.fr">
+		<path>./pc_mtoid.zip</path>
+		<name>Metroid (playchoice-10) (PlayChoice-10)</name>
+		<desc>In the future, the Galactic Federation and the pirates of planet Zebes are at war. Pirates have stolen an unknown life-form, recently discovered on the planet SR388. The life-form, designated "Metroid", is in a state of suspended animation and, according to analysis, was the cause of the complete destruction of SR388. If the Metroid ever got loose, the alien could destroy countless other systems. It is up to the space bounty hunter Samus Aran to land on Zebes and find her way through the perilous terrains of Brinstar and Norfair, destroy the Pirates, as well as their alien enforcers, Ridley and Kraid, and rid the planet of the alien life form before the pirates complete their plans of world destruction. 
+</desc>
+		<rating>0.9</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/pc_mtoid.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="79216" source="ScreenScraper.fr">
+		<path>./pc_miket.zip</path>
+		<name>Mike Tyson's Punch-out!! (playchoice-10) (PlayChoice-10)</name>
+		<desc>Mike Tyson's Punch-Out is one of the most popular and biggest selling video games of all time. Step into the ring as Little Mac, a 17-year-old fighter from the Bronx, ranked number three in the minor circuit. Your goal is to work your way up through the rankings so that you can challenge Mike Tyson, Kid Dynamite, in a dream fight. </desc>
+		<rating>0.9</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Sports / Boxing-Sports</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/pc_miket.png</image>
+		<genreid>1540</genreid>
+	</game>
+	<game id="42465" source="ScreenScraper.fr">
+		<path>./popeye.zip</path>
+		<name>Popeye (revision D)</name>
+		<desc>Popeye is a superb and demanding platform game featuring characters from the famous King Features Syndicate cartoon show of the same name. The aim of the game is to rescue Popeye's girlfriend, Olive Oyl. This is achieved by catching a set number of objects thrown down by Olive from the top of the screen; such as hearts, letters and musical notes. Popeye is constantly pursued in his quest by love rival, Brutus (originally known as Bluto). Popeye must either run away from Brutus or grab some spinach and punch him off the screen (he will, of course, return). 
+ 
+Should any of Olive Oyl's items fail to be caught, they will fall into the water at the bottom of the screen. Popeye will then have only a few seconds to retrieve the object or a life is lost. Several other Popeye characters also make an appearance in the game; namely Wimpy, Swee'Pea, the Sea Hag, and her vulture Bernard. The game's three levels are the dock scene, the street scene and the shipboard scene. These repeat with increasing difficulty.</desc>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/popeye.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="79224" source="ScreenScraper.fr">
+		<path>./pc_pwrst.zip</path>
+		<name>Pro Wrestling (playchoice-10) (PlayChoice-10)</name>
+		<desc>Pro Wrestling is an action wrestling game for one or two players. By using different controller combinations you can perform a wide variety of moves to try and beat your opponent in a 5 minute match. In the one player version, you need to fight your way to first place (but the game will be over if you fall below 6th place). There are seven different wrestlers to fight before you can be declared the Video Wrestling Association champion!</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Sports / Wrestling-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pc_pwrst.png</image>
+		<genreid>1536</genreid>
+	</game>
+	<game id="42550" source="ScreenScraper.fr">
+		<path>./punchout.zip</path>
+		<name>Punch-out!! (rev B)</name>
+		<desc>The player assumes the role of a green-haired boxer, who must fight his way through six increasingly larger-than-life boxers to earn the title of 'Champ' in this superb 1-on-1 fighting game. 
+ 
+During matches, the player's boxer is viewed from behind as a wire-frame (so the player's opponent can be seen). Players must time their punches, dodges and blocks in order to defeat the opposing boxer. 
+ 
+The player's opponents are each rendered as humorous cartoon-like caricatures - adding much to the game's atmosphere - and each boxer fights in a slightly different style, forcing players to adapt to their strategy. The top monitor is used for statistics while the bottom one is used to display the actual fight.</desc>
+		<rating>0.6</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Sports / Boxing-Sports</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/punchout.png</image>
+		<genreid>1540</genreid>
+	</game>
+	<game id="42673" source="ScreenScraper.fr">
+		<path>./radarscp.zip</path>
+		<name>Radar Scope</name>
+		<desc>As captain of the Sonic Spaceport, players must defend their station against enemy spaceships called Gamma Raiders, which attack with vengeance and swiftly retreat to formation. The object of the game is to destroy 48 enemy Gamma Raiders before there is total disintegration of all the Spaceports on the player's side. 
+ 
+Players can counterattack with the Rapid-Fire Laser Blaster which zooms the lasers over the three-dimensional-esque field of curving vectors, while it intercepts enemies. The lower on the radar screen that you destroy a Gamma Raider, the more points will be earned. If exploding decoys damage the Sonic Spaceport, the Laser Blaster's firing speed will reduce. The Laser Blaster's "Damage Meter" will light up as damage is incurred and when fully illuminated, will weaken the Laser Blaster's offensive powers. To reverse this, the players must attack and destroy all remaining Gamma Raiders. 
+ 
+Players are given a wide range of flexibility in controlling the difficulty levels of the game. Extra Spaceports are awarded at 7,000, 10,000, 15,000 and 20,000 points, as determined by the players. The initial number of Spaceports may also be pre-programmed at 3, 4, 5 or 6. When the required number of spaceships is destroyed, players receive an extra point bonus.</desc>
+		<rating>0.5</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/radarscp.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43040" source="ScreenScraper.fr">
+		<path>./sheriff.zip</path>
+		<name>Sheriff</name>
+		<desc>You control a sheriff who has been surrounded by bandits. You can move around in the middle of the screen, and pick off the bandits that have you circled in. The longer you play the quicker they move. Luckily you can move one direction, while firing another.</desc>
+		<rating>0.5</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sheriff.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43125" source="ScreenScraper.fr">
+		<path>./skyskipr.zip</path>
+		<name>Sky Skipper</name>
+		<desc>The wonder kingdom is conquered by giant gorillas the player controls a hero pilot and your mission is to save the king and the royal family and his aides have been kidnaped and caged you must rescue and release them, dropping bombs on gorillas to knock them and catch with your plane all the characters, maneuvering through the maze stay alert to replenish your fuel tank and avoiding colliding with the environment to clear the stage.</desc>
+		<rating>0.5</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/skyskipr.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43196" source="ScreenScraper.fr">
+		<path>./spacefev.zip</path>
+		<name>Space Fever (New Ver.)</name>
+		<desc>The Earth is under attack from alien invaders. Shoot them out of the sky before they land. Space Fever is Nintendo's take on the "Space Invaders" franchise. The game is almost identical in terms of how it plays. The alien craft are arranged in rows and they slowly move left and right across the screen. When the row reaches the edge, the ships drop down a row and move in the opposite direction. As you shoot more enemies the speed will increase, as will the number of enemy bullets. You have four blocks above you that absorb the enemy shots until they are worn through, and being hit by an enemy shot will cost you a life. Sometimes a UFO will fly along the top of the screen and can be hit for Bonus points. 
+ 
+There are three different game modes for 1- or 2-player games: 
+Game A - There are two 'blocks' of aliens that move in opposite directions to each other. 
+Game B - The aliens move as one 'block', but they only appear one row at a time. 
+Game C - The same as "Space Invaders" - all the aliens move as one 'block' in the same direction.</desc>
+		<rating>0.6</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/spacefev.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41676" source="ScreenScraper.fr">
+		<path>./highsplt.zip</path>
+		<name>Space Fever High Splitter (set 1)</name>
+		<desc>Space Fever High Splitter is another of Nintendo's takes on the "Space Invaders" franchise, only with a twist: if you don't quite hit the alien in the middle, you'll split the alien in two, both of which you'll have to shoot. The alien crafts are arranged in rows and they slowly move left and right across the screen. When the row reaches the edge, the ships drop down a row and move in the opposite direction (one exception: see below). As you shoot more enemies the speed will increase, as will the number of enemy bullets. You have four blocks above you that absorb the enemy shots until they are worn through, and being hit by an enemy shot will cost you a life. Sometimes a UFO will fly along the top of the screen; hit it and you'll get points and a smaller alien, hit the smaller alien and get more points. 
+ 
+There are three different game modes for 1- or 2-player games: 
+Game A: aliens go down two, up one, down two, up one. 
+Game B: aliens show up in one up-and-down row, they add a row each time they reach the edge and turn around. 
+Game C: The same as "Space Invaders" - all the aliens move as one 'block' in the same direction.</desc>
+		<rating>0.5</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/highsplt.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43195" source="ScreenScraper.fr">
+		<path>./spacefb.zip</path>
+		<name>Space Firebird (rev. 04-u)</name>
+		<desc>Space Firebird is a one or two player game in which players are attacked from all sides by highly maneuverable Firebirds. Players can move space ship left or right and shoot a rapid-fire laser at attacking Firebirds. A special Warp Mode allows the space ship to escape danger and fire at the flock of aliens. 
+ 
+FIREBIRDS 
+The space Firebirds are a unique set of adversaries. There are three different birds, the Emperor, Eagle and Gull, which fly together in complex looping formations, firing and attacking from all directions. The player must keep track of the laser hits because each bird has a different resistance level to hits. The fearless Emperor is destroyed by four hits, the Eagle with two hits and the soaring Gull with one hit. The Eagle also has a deadly bomb which is launched at the space ship. Extra points are scored by hitting the bomb before it explodes. The bomb when hit, scatters into deadly shrapnel. To avoid the flying shrapnel, the bomb must be hit from directly underneath. 
+ 
+SPACE SHIP 
+The space ship can be moved right or left to evade attacking Firebirds. Depressing the fire button enables the space ship to shoot its laser at approaching Firebirds. Players receive 3 (adjustable) space ships per play. 
+ 
+WARP MODE 
+Activate warp mode to escape impeding danger or to strike out at approaching birds. There is only warp mode per space ship. When activated, the space ship is launched into space with a force field around it that deflects enemy fire. In warp mode, Firebirds can be eliminated by ramming into them or by firing at close range. 
+ 
+If all Firebirds are destroyed, the player moves into a new battle sequence that increases in difficulty. One new space ship is awarded for a score of 5,000 (adjustable) points. Game ends when all space ships are destroyed.</desc>
+		<rating>0.8</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/spacefb.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43202" source="ScreenScraper.fr">
+		<path>./spacelnc.zip</path>
+		<name>Space Launcher</name>
+		<desc>Space Launcher is a game by Nintendo that was surprisingly original - the game is similar to Frogger, though is not a clone since it predates it by at least two years.  
+ 
+The game takes place in space, and your goal is to maneuver around space objects and dodge oncoming enemy fire from the aliens that are stationed above. There are treasures at the top: and your goal is to fly up, grab the treasure, and come soaring back down. You must repeat this until all of the treasures have been scavenged.</desc>
+		<rating>0.5</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/spacelnc.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="79231" source="ScreenScraper.fr">
+		<path>./pc_smb.zip</path>
+		<name>Super Mario Bros. (playchoice-10) (PlayChoice-10)</name>
+		<desc>The Princess has been kidnapped by the evil Bowser, and it is up to Mario and brother Luigi to save the day. 
+ 
+The first ever platform adventure for the Mario Brothers has the player exploring level after level, with Bowser to contend with as the end of level boss. Power-ups include the Super Mushroom, which increases Mario's size and power, the fire flower, allowing him to shoot fireballs at enemies, and the ever important starman for a short burst of invincibility. 
+</desc>
+		<rating>0.9</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pc_smb.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="79232" source="ScreenScraper.fr">
+		<path>./pc_smb2.zip</path>
+		<name>Super Mario Bros. 2 (playchoice-10) (PlayChoice-10)</name>
+		<desc>One night Mario has a strange dream, where he opens a door to another world filled with even stranger creatures and lands then those in his last adventure against Bowser. Amazingly, the next day, Mario, Luigi, Toad, and the Princess stumble upon a cave, which leads to the world that was in Mario's dream. 
+ 
+Subcon, the land of dreams, is under an evil spell thanks to Wart, so Mario and the gang must save the day. New creatures to defeat and plenty of nasty surprises await. 
+ 
+Choose from the four characters, each differing in speed and jumping ability, and head on through 7 levels each filled with puzzles, bosses, bonus money, the always helpful mushroom, and invincible star, plus bombs and magic potions.  
+After each level, depending on the coins you collect, you can use them in the bonus game to collect extra lives.</desc>
+		<rating>0.9</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/pc_smb2.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="79233" source="ScreenScraper.fr">
+		<path>./pc_smb3.zip</path>
+		<name>Super Mario Bros. 3 (playchoice-10) (PlayChoice-10)</name>
+		<desc>Bowser is back, and along with the Bowser kids, he's out to spoil Mario's day once again.  
+ 
+This time, along with nabbing the Princess, the Bowser crew have also taken the magic wands from the Kings of each land and turned them into creatures. 
+It's up to Mario and Luigi to get back the magic wands, defeat Bowser, and save the Princess all before the day is done. 
+ 
+Old and new power-ups abound in each level for the Mario Brothers, including the return of the Super Mushroom and Fire Flower, plus the new power-ups including the frog suit, the warp flute, and the most important of all, the leaf, which allows the player to fly and attack enemies with your tail.</desc>
+		<rating>0.9</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pc_smb3.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="79162" source="ScreenScraper.fr">
+		<path>./nss_smw.zip</path>
+		<name>Super Mario World (Nintendo Super System)</name>
+		<desc>Just when you thought that Bowser and his Koopalings have already learned their lesson about messing with the Mario Brothers, they are already at it again. The only difference is that Bowser is currently wreaking havo</desc>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/nss_smw.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="43260" source="ScreenScraper.fr">
+		<path>./spnchout.zip</path>
+		<name>Super Punch-out!! (rev B)</name>
+		<desc>Super Punch-Out!! is an update of the superb boxing game, "Punch-Out!!", featuring five new larger-than-life opponents. The player once again assumes the role of a green-haired boxer who must fight his way up through five boxers to earn the title of 'Champ'.  
+ 
+As with the original game, the player's boxer is viewed from behind with his torso rendered with wire-frame graphics (allowing the player's opponent to be easily seen). Punches, dodges and blocks must all be well-timed in order to defeat the opponent.  
+ 
+Both the player and the opponent have stamina meters displayed at the top of the screen. These decrease when either boxer takes a punch and boxers will get knocked down if their stamina meter runs out completely. Faster knockdowns will cause the fallen boxer to recover less stamina upon getting up; the same happens if a boxer is knocked down by a knockout punch.  
+ 
+Thanks to the refined roster of new and hugely distinctive enemy fighters, Super Punch-Out!! is considered to be an improvement over the first game.</desc>
+		<rating>0.9</rating>
+		<releasedate>19840101T000000</releasedate>
+		<publisher>Nintendo</publisher>
+		<genre>Sports / Boxing-Sports</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/spnchout.png</image>
+		<genreid>1540</genreid>
+	</game>
+	<game id="79163" source="ScreenScraper.fr">
+		<path>./nss_sten.zip</path>
+		<name>Super Tennis (Nintendo Super System)</name>
+		<desc>SUPER TENNIS propose de nombreux modes, tous plus séduisants les uns que les autres. Choisissez votre joueur dans la liste des 20 tennismen proposés, puis laissez-vous transporter par le suspense et le réalisme que seuls peuvent vous apporter des joueurs aux caractéristiques spécifiquement définies pour la partie en cours. Mettez vos propres aptitudes au défi dans un championnat mondial où vous serez confronté à une série de plus de 30 adversaires en catégorie messieurs ou dames. Libre à vous, si vous le préférez, de disputer, contre ou avec un ami, des simples ou des doubles acharnés.</desc>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Sports / Tennis-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/nss_sten.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="127767" source="ScreenScraper.fr">
+		<path>./pc_tenis.zip</path>
+		<name>Tennis (playchoice-10) (PlayChoice-10)</name>
+		<desc>Tennis is, as the name implies, Nintendo's version of the sport for the Game Boy. One player vs computer or two players will compete in tennis in a more or less standard suite of rules (scoring, sets etc.). 
+ 
+Players are controlled by the movement buttons, but while button A indicates a low hit, button B indicates a high one. You have the choice of four levels of computer AI, or two player via Game Boy link cable.</desc>
+		<rating>0.5</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>bootleg</publisher>
+		<genre>Sports / Tennis-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pc_tenis.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="79236" source="ScreenScraper.fr">
+		<path>./pc_vball.zip</path>
+		<name>Volley Ball (playchoice-10) (PlayChoice-10)</name>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Sports / Volleyball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pc_vball.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40139" source="ScreenScraper.fr">
+		<path>./balonfgt.zip</path>
+		<name>Vs. Balloon Fight (set BF4 A-3)</name>
+		<desc>In Balloon Fight, you control a person who flies around with 2 balloons on his back. You have to defeat men in bird costumes, who have one balloon on their backs. When the balloon is popped, the enemy will float down </desc>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/balonfgt.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="43995" source="ScreenScraper.fr">
+		<path>./vsbball.zip</path>
+		<name>Vs. Baseball (US, set BA E-1)</name>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/vsbball.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40591" source="ScreenScraper.fr">
+		<path>./cluclu.zip</path>
+		<name>Vs. Clu Clu Land</name>
+		<desc>L'histoire de Clu Clu Land commence avec un l'Unira, qui a volé tous les trésors du royaume sous-marin de Clu Clu Land. Bubbles, l'héroïne, se met à récupérer les trésors. L'objet du jeu est de découvrir tous les lingots d'or dans chaque niveau tout en évitant l'Unira et les trous noirs. les Lingots forment des formes telle qu'un coeur ou un champignon.Les bulles peuvent étourdir l'Unira en utilisant une onde sonore. Lorsque l'unira est étourdi, Bubbles peut le pousser dans un mur pour s'en débarrasser. Si Bubbles est blessé par l'Unira, elle perdra une vie. Une vie est également perdue quand Bubbles tombe dans un trou noir, ou quand le temps s'épuise. Le jeu se termine si Bubbles a perdu toute ses vie. 
+</desc>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Action-Action / Labyrinth-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/cluclu.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41024" source="ScreenScraper.fr">
+		<path>./drmario.zip</path>
+		<name>Vs. Dr. Mario</name>
+		<desc>Dr. Mario sur Nes est un puzzle-game proche de Tetris dont le but est d'aligner des gélules de la même couleur afin de les faire disparaître. Avec le temps, les gélules descendent de plus en plus vite et votre adversaire enverra des pièges pour vous ralentir. Faites de même en enchaînant les combos et endiguez l'invasion de bactéries.</desc>
+		<rating>0.8</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/drmario.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="41054" source="ScreenScraper.fr">
+		<path>./duckhunt.zip</path>
+		<name>Vs. Duck Hunt (set DH3 E)</name>
+		<desc>The arcade version of Duck Hunt has many differences compared to the NES version. 
+It has more animations, a slightly different palette and zero game modes. Instead the game starts with the duck hunting game (with multiple ducks, just like Game B on the NES version), the second stage is the clay pigeon shooting game (the dog makes an appearance if you miss), a bonus stage follows where you can shoot lots of ducks for bonus points (as an even bigger bonus you can shoot the dog to make him appear with a cast and crutches and yell at you), then both levels and bonus repeat again followed by an intermission (called "Break Time") where the dog is chasing a duck.</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/duckhunt.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="41132" source="ScreenScraper.fr">
+		<path>./excitebk.zip</path>
+		<name>Vs. Excitebike (set EB4-3 E)</name>
+		<desc>Riders take to the dirt on a course that combines speed with driving strategy and skill. After qualifying to compete, players go for the win against their computer opponents. But, look out! There are oil slicks to dodge and jumps to clear as riders vie for position in a race to the checkered flag.</desc>
+		<rating>0.6</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Race, Driving / Motorcycle-Race, Driving</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/excitebk.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="43999" source="ScreenScraper.fr">
+		<path>./vsgshoe.zip</path>
+		<name>Vs. Gumshoe (set GM5)</name>
+		<desc>A platform game where you use a gun to shoot various baddies including birds and cars and to make Stevenson jump. 
+ 
+</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/vsgshoe.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="41702" source="ScreenScraper.fr">
+		<path>./hogalley.zip</path>
+		<name>Vs. Hogan's Alley (set HA4-1 E-1)</name>
+		<desc>Vs. Hogan's Alley takes the game you remember to a whole new level. No more selecting Game A or Game B, the Vs. arcade version combines the two. Go from shooting at the target range to a more challenging city setting without starting a new game. What's the best part you say? The gameplay is faster, no more long waits between rounds, this game speeds along. So think you are a Master of the Zapper? Here's your chance to prove it.</desc>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hogalley.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="41771" source="ScreenScraper.fr">
+		<path>./iceclimb.zip</path>
+		<name>Vs. Ice Climber (set IC4-4 B-1)</name>
+		<desc>You are an Eskimo who wants to climb mountains. You can jump and break the ice, or splat monsters with a handily provided hammer. Bad weather will hamper your progress through 20 different scenarios. A fun platform game in 2 player mode, but pretty unimpressive in 1 player mode.</desc>
+		<rating>0.6</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/iceclimb.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="41772" source="ScreenScraper.fr">
+		<path>./iceclmrj.zip</path>
+		<name>Vs. Ice Climber Dual (Japan)</name>
+		<desc>You are an Eskimo who wants to climb mountains. You can jump and break the ice, or splat monsters with a handily provided hammer. Bad weather will hamper your progress through 20 different scenarios. A fun platform game in 2 player mode, but pretty unimpressive in 1 player mode.</desc>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/iceclmrj.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="42348" source="ScreenScraper.fr">
+		<path>./machridr.zip</path>
+		<name>Vs. Mach Rider (Endurance Course Version)</name>
+		<desc>Aliens are about to take over earth and Mach Rider must stop them by riding his motorcycle through eight stages, bumping enemy cars off the road and shooting enemy cars as well.</desc>
+		<rating>0.6</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Shooter / Vehicle, 3rd person-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/machridr.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="44001" source="ScreenScraper.fr">
+		<path>./vsmahjng.zip</path>
+		<name>Vs. Mahjong (Japan)</name>
+		<desc>Two-player multi-screen Nintendo mahjong!</desc>
+		<releasedate>19840101T000000</releasedate>
+		<publisher>Nintendo</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/vsmahjng.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="44003" source="ScreenScraper.fr">
+		<path>./vspinbal.zip</path>
+		<name>Vs. Pinball (US, set PN4 E-1)</name>
+		<desc>A great pinball simulator game from Nintendo.  
+ 
+Enjoy a familiar pinball game where the player controls the paddles of a virtual pinball machine. The game has two screens to represent the traditional pinball table and one for a bonus mode. Play begins when the player launches a ball with the plunger from the first screen the bottom of the pinball table through the top of the screen to the second screen. Play will move to the first screen if the ball falls through the bottom of the top screen and will return to the top screen if the ball is hit back through the space at the top of the first screen. The player controls the flippers on either screen to deflect the ball to keep it from falling off the bottom of the lower screen. 
+ 
+Pinball has some many bonnus and also had a secondary Breakout like mode, which the player reaches by hitting the ball into a bonus hole that takes the player to a bonus stage where they control Mario carrying a platform. The object of this mode is to rescue Pauline. The player achieves this by bouncing the ball on the Mario's platform and hitting various targets, the destruction of which also earns them points. When the blocks under her are all gone, she will drop. you must catching her on Mario's platform to earns  bonus points, but you must release pauline it in one of the side platforms and not let it fall, while holding the ball bounce to continue to earn points until the ball falls and go to start.</desc>
+		<rating>0.3</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Pinball</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/vspinbal.png</image>
+		<genreid>1792</genreid>
+	</game>
+	<game id="40317" source="ScreenScraper.fr">
+		<path>./bnglngby.zip</path>
+		<name>Vs. Raid On Bungeling Bay (RD4-2 B)</name>
+		<desc>Le joueur incarne un pilote de choix dans la Task Force, qui a été choisi pour se rendre dans les îles Bungeling où l'Empire Bungeling met la touche finale à son arme ultime dans des usines. Le jeu consiste à détruire ces dernières à l'aide d'un petit hélicoptère basé sur un porte-avions.</desc>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Will Wright</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/bnglngby.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="44007" source="ScreenScraper.fr">
+		<path>./vssoccer.zip</path>
+		<name>Vs. Soccer (set SC4-2 A)</name>
+		<desc>Vs. Soccer is an action game for two players or one player against the computer. You can play the game in one of five skill levels, choose from several different teams, and select the amount of time the match will take. Soccer features throw-ins, goal kicks, corner kicks, penalty kicks and an overhead view of the field which scrolls to follow the action.</desc>
+		<rating>0.4</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/vssoccer.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43148" source="ScreenScraper.fr">
+		<path>./smgolf.zip</path>
+		<name>Vs. Stroke And Match Golf (Men Version, set GF4-2 F)</name>
+		<desc>Vs. Stroke &amp; Match: Golf is a golf game developed for the Vs. Arcade Systems and manufactured by Nintendo Company Limited in 1984. It is an 18 hole golf game where the player chooses stroke play or match play against a human or computer player. It is set to allow a certain number of swings per credit. The player gains or loses swings depending on the outcome of each hole. This same game was ported to the Famicom and Nintendo Entertainment System with very few differences. 
+ 
+This game was released in two editions, a Men's Golf and Ladies Golf edition featuring male and female characters. The unnamed golfer starring in the Men's Golf edition, shares a striking resemblance to Mario.</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/smgolf.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43449" source="ScreenScraper.fr">
+		<path>./suprmrio.zip</path>
+		<name>Vs. Super Mario Bros. (set SM4-4 E)</name>
+		<desc>Classic and cult horizontal platform game featuring the Nintendo mascot Mario who must save princess Toadstool (Princess Peach in Japan) from Bowser (Koopa in Japan).</desc>
+		<rating>0.9</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform / Run Jump Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/suprmrio.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="44009" source="ScreenScraper.fr">
+		<path>./vstennis.zip</path>
+		<name>Vs. Tennis (Japan/USA, set TE A-3)</name>
+		<desc>Single or doubles tennis against human or computer players. Match is best of 3 sets. Game operates on both single and dual monitor cabinets.</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Sports / Tennis-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/vstennis.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="44123" source="ScreenScraper.fr">
+		<path>./wrecking.zip</path>
+		<name>Vs. Wrecking Crew</name>
+		<desc>An arcade game for the Nintendo Vs. System. A notable difference from the original is the addition of simultaneous two player mode.</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wrecking.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="79238" source="ScreenScraper.fr">
+		<path>./pc_wgnmn.zip</path>
+		<name>Wild Gunman (playchoice-10) (PlayChoice-10)</name>
+		<desc>As a lawman in the old west, you carry around a tin star and your NES Zapper. Your goal to to chase down outlaws and then win out over them in a fast-draw competition. Simply put, wait for your opponent to say "Fire" and then shoot first and shoot fast to win.</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/pc_wgnmn.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="39967" source="ScreenScraper.fr">
+		<path>./aleck64.zip</path>
+		<name>ZZZ(notgame):Aleck64 Pif Bios</name>
+		<desc>farscape says:Aleck64 was a arcade console manufactured in the late 90's by SETA Corporation. It's architecture was very closely modeled after the Nintendo 64 console's hardware, but designed for specialty cabinets. The company also produced titles for NES and SNES. As for the Aleck64, (which utilized a Peripheral Interchange Format to load the game data) only a few titles were ever published and the company was eventually dissolved and faded into obscurity.</desc>
+		<releasedate>19980101T000000</releasedate>
+		<publisher>Nintendo</publisher>
+		<genre>Various</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sfcbox.png</image>
+	</game>
+	<game id="63280" source="ScreenScraper.fr">
+		<path>./nss.zip</path>
+		<name>ZZZ(notgame):Nintendo Super System Bios</name>
+		<releasedate />
+		<genre>Various-Various / System</genre>
+		<image>/userdata/roms/mame/images/nss.png</image>
+	</game>
+	<game id="42413" source="ScreenScraper.fr">
+		<path>./playch10.zip</path>
+		<name>ZZZ(notgame):Playchoice-10 Bios</name>
+		<releasedate>19860101T000000</releasedate>
+		<publisher>Nintendo</publisher>
+		<genre>Various-Various / System</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/playch10.png</image>
+	</game>
+	<game id="42990" source="ScreenScraper.fr">
+		<path>./sfcbox.zip</path>
+		<name>ZZZ(notgame):Super Famicom Box Bios</name>
+		<releasedate>19940101T000000</releasedate>
+		<publisher>Nintendo</publisher>
+		<genre>Various-Various / System</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sfcbox.png</image>
+	</game>
+	<game id="40070" source="ScreenScraper.fr">
+		<path>./armwrest.zip</path>
+		<name>Arm Wrestling</name>
+		<desc>In Arm Wrestling, the player takes on a number of different, distinctly cartoon-like opponents in a series of arm wrestling matches. The game's graphical styling is very similar to Nintendo's classic "Punch-Out!!" series. Gameplay requires that the player initially pushes the joystick to the left, but whenever the computer opponent starts to act, the player must push the joystick to the right to counter-attack, and press the button to increase power. If the counterattack is unsuccessful, moving the joystick back and forth several times will prevent the player from being pinned. The player's opponent must be pinned before the counter reaches one minute, or the match will be lost.</desc>
+		<image>/userdata/roms/mame/images/armwrest.png</image>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Sports / Arm wrestling-Sports</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1540</genreid>
+	</game>
+	<game id="57807" source="ScreenScraper.fr">
+		<path>./pc_bfght.zip</path>
+		<name>Balloon Fight (playchoice-10) (PlayChoice-10)</name>
+		<desc>In Balloon Fight, you control a person who flies around with two balloons on his back. You have to defeat men in bird costumes, who have one balloon on their backs. When the balloon is popped, the enemy will float down on</desc>
+		<image>/userdata/roms/mame/images/pc_bfght.png</image>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="57809" source="ScreenScraper.fr">
+		<path>./pc_bball.zip</path>
+		<name>Baseball (playchoice-10) (PlayChoice-10)</name>
+		<desc>A baseball game. Players pick from a list of teams. Time-points are awarded per credit which are either increased with runs batted in or decreased by opponent's runs or just regular plays. The game-play can be</desc>
+		<image>/userdata/roms/mame/images/pc_bball.png</image>
+		<rating>0.3</rating>
+		<releasedate>19840101T000000</releasedate>
+		<publisher>Nintendo</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40939" source="ScreenScraper.fr">
+		<path>./dkong3.zip</path>
+		<name>Donkey Kong 3 (US)</name>
+		<desc>Stanley is a bugman. Donkey Kong has taken refuge in his greenhouse and it is now up to Stanley to stop the ape from stirring up any more insects that will soon destroy his flowers. Stanley saves the flowers by spraying bug spray on Donkey Kong.</desc>
+		<image>/userdata/roms/mame/images/dkong3.png</image>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="40940" source="ScreenScraper.fr">
+		<path>./dkongjr.zip</path>
+		<name>Donkey Kong Junior (US set F-2)</name>
+		<desc>Fate has turned the tables on the inimitable Donkey Kong. 
+ 
+After Mario saved the Beautiful Girl from the lustful clutches of Donkey Kong, he led the brokenhearted ape into captivity, locking him behind steel bars, never again to strut his stuff before the fair maidens of the world. 
+ 
+As the frustration of confinement enrages Donkey Kong, Mario complacently stands guard over the cell, holding the sought after key to freedom. 
+ 
+But wait! Unbeknownst to Little Mario, Donkey Kong has produced an offspring - Donkey Kong Junior! A death-defying little monkey, shrewd and cunning, who resists all enemies to rescue Papa Donkey Kong. 
+ 
+As Mario's brigade of snapping jaws, ape-eating birds and energy pods launch their offensive, Junior bombards them with a fusillade of Fruit Bombs that aim to annihilate his every foe.</desc>
+		<image>/userdata/roms/mame/images/dkongjr.png</image>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="57831" source="ScreenScraper.fr">
+		<path>./pc_drmro.zip</path>
+		<name>Dr. Mario (playchoice-10) (PlayChoice-10)</name>
+		<desc>The object of the game is to help Dr. Mario destroy the most sickening bunch of viruses around. These miserable germs can only be destroyed by lining up the appropriate combinations of vitamins as they fall. And Dr. Mario is</desc>
+		<image>/userdata/roms/mame/images/pc_drmro.png</image>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="57832" source="ScreenScraper.fr">
+		<path>./pc_duckh.zip</path>
+		<name>Duck Hunt (playchoice-10) (PlayChoice-10)</name>
+		<desc>Duck Hunt is a shooting simulation where the player goes out with his faithful dogs to hunt ducks. It requires the use of the Zapper light gun. In game modes A and B, players view a swampland from a first-person perspective. The dog scares ducks (one or two at a time) out of the swamp, and they go flying around in the air. The player has three shots and a limited amount of time to shoot the ducks before they fly away. Each round only allows a limited number of misses in order to move on successfully. As the rounds progress, the ducks begin flying faster and faster, and fewer misses are allowed. 
+ 
+Mode C features target practice on clay pigeons rather than ducks. The perspective and rules here are the same, with only three shots to destroy two clay pigeons before they disappear off the horizon. Destroy enough clay pigeons to move on to the next, tougher round.</desc>
+		<image>/userdata/roms/mame/images/pc_duckh.png</image>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>261</genreid>
+	</game>
+	<game id="57834" source="ScreenScraper.fr">
+		<path>./pc_ebike.zip</path>
+		<name>Excite Bike (playchoice-10) (PlayChoice-10)</name>
+		<desc>Race by yourself against the clock or compete with other motocross riders on 5 tracks full of long straights, large jumps and obstacles to win the Excitebike championship. 
+ 
+Create your own tracks by placing jumps and obstacles of all different sizes and shapes on the track and choosing how many laps each race will have, then race against the clock or other riders to see how your track fares in competition.</desc>
+		<image>/userdata/roms/mame/images/pc_ebike.png</image>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Race, Driving / Motorcycle-Race, Driving</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="57890" source="ScreenScraper.fr">
+		<path>./nss_fzer.zip</path>
+		<name>F-zero (Nintendo Super System)</name>
+		<desc>Nintendo's flagship racing game during the 16-bit era that popularized 'Mode 7' graphics on the Nintendo Super Famicom. F-Zero used the scaling and rotation of the texture mapped race track to give players an impression of 3-D m</desc>
+		<image>/userdata/roms/mame/images/nss_fzer.png</image>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>Nintendo</publisher>
+		<genre>Race 3rd Pers. view-Race, Driving</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="57892" source="ScreenScraper.fr">
+		<path>./pc_golf.zip</path>
+		<name>Golf (playchoice-10) (PlayChoice-10)</name>
+		<desc>Golf features two challenging 18 hole courses where players are able to play a round of golf, and allows players to choose a club, adjust stance and control the swing. The game features three alternating views; an overhead long-range view of the entire hole, an overhead medium-range view from the ball's current location, and an overhead close-range view of the green. Gameplay modes include 1 player, or 2 player play with a link cable.</desc>
+		<image>/userdata/roms/mame/images/pc_golf.png</image>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41661" source="ScreenScraper.fr">
+		<path>./helifire.zip</path>
+		<name>Helifire (set 1)</name>
+		<desc>Take control of a submarine trapped and under heavy fire from helicopters above the water. Shoot as many helicopters as you can while also avoiding their bombs and other underwater hazards. The different colours of helicopter</desc>
+		<image>/userdata/roms/mame/images/helifire.png</image>
+		<rating>0.3</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="149801" source="ScreenScraper.fr">
+		<path>./dkong.zip</path>
+		<name>Donkey Kong (US set 1)</name>
+		<desc>EVERYONE'S GOING APE OVER DONKEY KONG! 
+ 
+"HELP! HELP!" cries the beautiful maiden as she is dragged up a labyrinth of structural beams by the ominous Donkey Kong. "SNORT. SNORT" Foreboding music warns of the eventual doom that awaits the poor girl, lest she somehow be miraculously rescued. "But, wait! Fear not, fair maiden. Little Mario, the carpenter, is in hot pursuit of you this very moment" 
+ 
+Throwing fate to the wind, risking life and limb, or worse, little Mario tries desperately to climb the mighty fortress of steel, to save the lovely lady from the evil Mr. Kong. Little Mario must dodge all manner of obstacles - fireballs, plummeting beams and a barrage of exploding barrels fired at him by Donkey Kong. 
+ 
+Amidst me beautiful girl's constant pleas for help, your challenge is to maneuver little Mario up the steel structure, while helping him to avoid the rapid-fire succession of hazards that come his way. 
+ 
+As little Mario gallantly battles his way up the barriers, he is taunted and teased by Donkey Kong, who brazenly struts back and forth, beating his chest in joyful exuberance at the prospect of having the beautiful girl all to himself. It is your job to get little Mario to the top. For it is there, and only there, that he can send the mighty Donkey Kong to hit mortal doom. Leaving little Mario and the beautiful girl to live happily ever after. "SIGH. SIGH.” 
+ 
+So, if you want the most exciting, most fun-filled, most talked about family video game on the market, don't monkey around with anything but the original Donkey Kong.</desc>
+		<image>/userdata/roms/mame/images/dkong.png</image>
+		<rating>0.9</rating>
+		<releasedate>19810101T000000</releasedate>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1</players>
+		<playcount>3</playcount>
+		<lastplayed>20210502T171217</lastplayed>
+		<gametime>62</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+</gameList>

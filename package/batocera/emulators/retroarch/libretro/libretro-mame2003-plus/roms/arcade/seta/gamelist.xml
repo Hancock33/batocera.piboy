@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="40987" source="ScreenScraper.fr">
+		<path>./downtown.zip</path>
+		<name>Downtown (set 1)</name>
+		<desc>Overhead beat'em up. Save the city from the evil criminals and their morbidly obese enforcers!</desc>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>SETA Corporation</publisher>
+		<genre>Beat'em Up-Fight / Vertical-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/downtown.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="150391" source="ScreenScraper.fr">
+		<path>./drgnunit.zip</path>
+		<name>Dragon Unit / Castle Of Dragon</name>
+		<desc>The Dragon Master, Darklarza, has been terrorizing the kingdom for many years. The king was forced into exile by this threat. He retreated, with the bravest knight in the kingdom, named Garaden. Darklarza stages an attack on the king's fortress, breaks in and manages to abduct the royal princess. Garaden sets off to vanquish Darklarza and rescue the princess.</desc>
+		<rating>0.3</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Athena</developer>
+		<publisher>Athena</publisher>
+		<genre>Beat'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/drgnunit.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="41887" source="ScreenScraper.fr">
+		<path>./jjsquawk.zip</path>
+		<name>J. J. Squawkers</name>
+		<desc>J.J. Squarkers is a scrolling run 'n' gun platform shoot-em-up for one or two players in which several residents from the peaceful village if Pistachio have been kidnapped. Most of the remaining villagers have fallen under a mysterious spell, making them violent. Players take on the roles of two ducks called 'Ani Karasukun' and 'Ototo Karasukun' who set out to defeat the enemy minions and restore peace to their village.  
+ 
+The ducks can fire projectiles to defeat the abstract enemies they face, with their default weapon being tomatoes. Other weapons - as well as bonus and health power-ups - become available when certain enemies are killed. Available weapons include pumpkins, watermelon seeds, screws and slinkys wearing red sneakers.  
+ 
+Each weapon has different strengths and weaknesses; for example the slinkys simply walk in a straight line until they either meet obstacles or the edge of screen, making it easy to deal with enemies from a distance. On the other hand, watermelon seeds can only be thrown a short distance but several are thrown at once. This effectively gives players a 'spread shot' and is more effective when multiple enemies are attacking from several directions at once. 
+ 
+J.J. Squarkers consists of five stages with a powerful end-of-level guardian waiting at the end of each.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<publisher>Athena</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/jjsquawk.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42363" source="ScreenScraper.fr">
+		<path>./madshark.zip</path>
+		<name>Mad Shark</name>
+		<desc>A vertically scrolling shooter.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Allumer</developer>
+		<publisher>Allumer</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/madshark.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="78906" source="ScreenScraper.fr">
+		<path>./metafox.zip</path>
+		<name>Meta Fox</name>
+		<desc>A vertically scrolling shooter.</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SETA Corporation</developer>
+		<publisher>SETA Corporation</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/metafox.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="150936" source="ScreenScraper.fr">
+		<path>./penbros.zip</path>
+		<name>Penguin Brothers (Japan)</name>
+		<desc>Penguin Brothers is a multi-screen platform game in which one or two players (either co-operatively or competitively) control a cute penguin fighting against the game's equally cute enemies. The idea is to destroy all of the on-screen enemies; once this a done, a circular key will appear; the player must pick the key up, whereupon they will be teleported to another screen which represents the second part of the stage. This screen has a silver doorway; the player must carry the key to the door - avoiding or destroying the on-screen enemies - to complete the level.</desc>
+		<rating>0.9</rating>
+		<releasedate>20001001T000000</releasedate>
+		<developer>Ago</developer>
+		<publisher>Subsino</publisher>
+		<genre>Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/penbros.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="42756" source="ScreenScraper.fr">
+		<path>./rezon.zip</path>
+		<name>Rezon</name>
+		<desc>A reasonably playable, if wholly unremarkable sideways-scrolling shoot-em-up that unashamedly rips off Irem's legendary "R?Type". Unfortunately, Rezon lacks any of R?Type's innovations in either level design or the weapons available to the player. One attribute it does share with the Irem classic, however, is that it is extremely difficult.</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Allumer</developer>
+		<publisher>Allumer</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/rezon.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43375" source="ScreenScraper.fr">
+		<path>./stg.zip</path>
+		<name>Strike Gunner S.T.G</name>
+		<desc>A vertically scrolling shooter.</desc>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>Athena</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/stg.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43606" source="ScreenScraper.fr">
+		<path>./thunderl.zip</path>
+		<name>Thunder And Lightning</name>
+		<desc>A ball and paddle game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<publisher>SETA Corporation</publisher>
+		<genre>Action / Breakout games-Action</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/thunderl.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="43648" source="ScreenScraper.fr">
+		<path>./tndrcade.zip</path>
+		<name>Thundercade</name>
+		<desc>Export version. For more information about the game itself, please see the original Japanese version entry; "Tokusyu Butai U.A.G.".</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<publisher>SETA Corporation</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical-Shooter / Vehicle, Vertical-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tndrcade.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43802" source="ScreenScraper.fr">
+		<path>./twineagl.zip</path>
+		<name>Twin Eagle - Revenge Joe's Brother</name>
+		<desc>A vertical shoot-em-up that places the player's helicopter against multiple attacking targets in the air, sea, and land. Collecting the weapon and speed power-ups throughout the game is vital since the gameplay is quite difficult. 
+ 
+The object of the game, which is not explained further, is to avenge Joe's brother - which is probably not assumed to be the player, but presumably a friend of the player who lost his brother to the enemy. (It uses bad English grammar on the subtitle of the screen, using "revenge" as a verb, as apposed to "avenge".  That being said, it's a pretty tight game otherwise.)  To do so, you must destroy the fortress on the very last level. When you start the game and it scrolls onto the starting screen, the background contains the different levels that you must survive. The starting position of the various enemies does not vary from game to game.</desc>
+		<rating>0.3</rating>
+		<releasedate>19880101T000000</releasedate>
+		<publisher>SETA Corporation</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/twineagl.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43801" source="ScreenScraper.fr">
+		<path>./twineag2.zip</path>
+		<name>Twin Eagle 2 - The Rescue Mission</name>
+		<desc>Twin Eagle II is a vertical scrolling shooter where one or two players pilot heavily armed helicopters through three stages with three areas each. 
+ 
+At the start of each stage, the players select their path of attack through the three areas.  Areas with ground level enemies and targets are presented in a 3/4 isometric view, while areas with no ground targets feature scrolling landscape images.  Players use their guns to attack flying enemy aircraft and bombs to attack ground targets such as tanks, rocket launchers and high-rise skyscrapers.  If things get too hairy, the player can use a missile barrage to clear the screen of enemies and enemy firepower.  Destroying some buildings reveal primary colored trucks which drop weapon power-ups and point items when destroyed.  Each area features a boss at the end, which must be destroyed to advance past the area.  The final stage features one additional boss before the end of the game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19940101T000000</releasedate>
+		<publisher>SETA Corporation</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/twineag2.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43846" source="ScreenScraper.fr">
+		<path>./usclssic.zip</path>
+		<name>U.s. Classic</name>
+		<desc>A basic golf game that starts with a view from the tee that shows wind velocity, direction and distance to the green. Choose your club and swing by rolling the track-ball with the desired force and direction. Extra holes given for par and under par.</desc>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>SETA Corporation</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/usclssic.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="44125" source="ScreenScraper.fr">
+		<path>./wrofaero.zip</path>
+		<name>War of Aero: Project MEIOU</name>
+		<desc>War of Aero: Project MEIOU is a 2D vertical scrolling futuristic shoot 'em up. The player controls a spaceship and fights against others - he flies straightforward over cities and more futuristic locations, shoots all enemies in sight and hard bosses, avoids one-hit-death obstacles and collects bonuses to increase firepower (similar to options from Gradius).</desc>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<publisher>Yang Cheng</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wrofaero.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="44094" source="ScreenScraper.fr">
+		<path>./wits.zip</path>
+		<name>Wit's (Japan)</name>
+		<desc>A game with play much like "Tron"'s Light Cycles game, but with the ability to jump and speed burst.</desc>
+		<rating>0.5</rating>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>Athena</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/wits.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="44209" source="ScreenScraper.fr">
+		<path>./zingzip.zip</path>
+		<name>Zing Zing Zip</name>
+		<desc>A vertically scrolling shooter where you control a plane to shoot larger planes, tanks and trains.</desc>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Allumer</developer>
+		<publisher>Allumer + Tecmo</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/zingzip.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40048" source="ScreenScraper.fr">
+		<path>./arbalest.zip</path>
+		<name>Arbalester</name>
+		<desc>A vertically scrolling shoot'em up game.</desc>
+		<image>/userdata/roms/mame/images/arbalest.png</image>
+		<rating>0.3</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>SETA Corporation</developer>
+		<publisher>SETA Corporation</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40093" source="ScreenScraper.fr">
+		<path>./atehate.zip</path>
+		<name>Athena No Hatena ?</name>
+		<desc>A Japanese quiz game.</desc>
+		<image>/userdata/roms/mame/images/atehate.png</image>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<publisher>Athena</publisher>
+		<genre>Quiz / Japanese-Quiz</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3328</genreid>
+	</game>
+	<game id="40252" source="ScreenScraper.fr">
+		<path>./blandia.zip</path>
+		<name>Blandia</name>
+		<desc>Weapon-based fighting game featuring visible damage to each of the 10 fighter's armor.</desc>
+		<image>/userdata/roms/mame/images/blandia.png</image>
+		<rating>0.2</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Taito</developer>
+		<publisher>Allumer</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="40432" source="ScreenScraper.fr">
+		<path>./calibr50.zip</path>
+		<name>Caliber 50</name>
+		<desc>Caliber Fifty is a multi-directional scrolling shoot-em-up for one or two players taking on the roles of captured US pilots who have been taken prisoner during the Vietnam war in 1972. The pilots must escape the prison compound by battling enemy soldiers and vehicles, including tanks planes and helicopters. 
+ 
+The game is very similar in play to SNK's Ikari and Heavy Barrel games, with players able to fully rotate their on-screen characters to fire and move in all directions. Players are initially armed with a machine gun and limited number of grenades but power-ups - including a rocket launcher, a flamethrower and grenades - can be found in the destructible wooden crates that litter the stages.  
+ 
+Enemy vehicles such as a plane can also be commandeered and the stages take place both above ground in the Vietnamese jungles and below ground in hidden tunnels. Caliber Fifty is a quite short but very challenging game, with constantly spawning enemies attacking from all sides.</desc>
+		<image>/userdata/roms/mame/images/calibr50.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Athena</developer>
+		<publisher>Athena</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40710" source="ScreenScraper.fr">
+		<path>./crazyfgt.zip</path>
+		<name>Crazy Fight</name>
+		<desc>Players shoot at on-screen enemies while trying not to hit the hostages throughout 6 different stages of action.</desc>
+		<image>/userdata/roms/mame/images/crazyfgt.png</image>
+		<rating>0.5</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Subsino</developer>
+		<publisher>Subsino</publisher>
+		<genre>Lightgun Shooter-Platform / Shooter Scrolling-Platform</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>261</genreid>
+	</game>
+	<game id="40801" source="ScreenScraper.fr">
+		<path>./daioh.zip</path>
+		<name>Daioh</name>
+		<desc>An excellent vertically scrolling space shoot'em up. Excellent graphics, multi-layer scrolling, big sprites (especially bosses), and an extreme difficulty that continued to increase from easy to insane the farther along you went without getting killed.</desc>
+		<image>/userdata/roms/mame/images/daioh.png</image>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Athena</developer>
+		<publisher>Athena</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+</gameList>

@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <provider>
+    <System>Mame</System>
+    <software>Skraper</software>
+    <database>ScreenScraper.fr</database>
+    <web>http://www.screenscraper.fr</web>
+  </provider>
+  <game id="40877" source="ScreenScraper.fr">
+    <path>./deadang.zip</path>
+    <name>Dead Angle</name>
+    <desc>Armed only with your trusty Tommy gun, you must exterminate all the main gangster families in order to reach the main kingpin so you can save your girl. Beware, they are waiting for you and will not go down without put</desc>
+    <rating>0.5</rating>
+    <releasedate>19880101T000000</releasedate>
+    <developer>Seibu Kaihatsu</developer>
+    <publisher>Seibu Kaihatsu</publisher>
+    <genre>Race, Driving-Race 1st Pers. view-Shooter</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/deadang.png</image>
+    <genreid>1537</genreid>
+  </game>
+  <game id="41076" source="ScreenScraper.fr">
+    <path>./dynduke.zip</path>
+    <name>Dynamite Duke (Europe, 03SEP89)</name>
+    <desc>A mad scientist is creating an army of powerful mutant soldiers in order to conquer the world. Only Dynamite Duke, a battle-hardened elite soldier with an incredibly devastating bionic arm stands a chance to stop th</desc>
+    <rating>0.7</rating>
+    <releasedate>19890101T000000</releasedate>
+    <developer>Seibu Kaihatsu</developer>
+    <publisher>Seibu Kaihatsu</publisher>
+    <genre>Shooter / 3rd person-Shooter</genre>
+    <players>1</players>
+    <image>/userdata/roms/mame/images/dynduke.png</image>
+    <genreid>256</genreid>
+  </game>
+  <game id="41107" source="ScreenScraper.fr">
+    <path>./empcity.zip</path>
+    <name>Empire City - 1931 (bootleg?)</name>
+    <desc>The game is set in 1931 New York City where the player controls a young man who must avenge his family members, who were killed in a gang shootout. Over a period of several months, he targets mobsters, culminating with the mafia boss.</desc>
+    <rating>0.5</rating>
+    <releasedate>19860101T000000</releasedate>
+    <publisher>Seibu Kaihatsu</publisher>
+    <genre>Race, Driving-Race 1st Pers. view-Shooter</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/empcity.png</image>
+    <genreid>1537</genreid>
+  </game>
+  <game id="42076" source="ScreenScraper.fr">
+    <path>./kungfut.zip</path>
+    <name>Kung-fu Taikun (set 1)</name>
+    <desc>The title of this game translates from Japanese as 'Kung Fu Lord'.</desc>
+    <rating>0.3</rating>
+    <releasedate>19840101T000000</releasedate>
+    <developer>Seibu Kaihatsu</developer>
+    <publisher>Seibu Kaihatsu</publisher>
+    <genre>Fight-Platform</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/kungfut.png</image>
+    <genreid>262</genreid>
+  </game>
+  <game id="79040" source="ScreenScraper.fr">
+    <path>./mustache.zip</path>
+    <name>Mustache Boy (Japan)</name>
+    <desc>The Player controls a 'mustache boy' with a red space suit, who runs across of a top-view maze on the space and must coloring by touching all the tiles in the ground, meantime must pick up all the special items to destroy and detain the annoying enemies, we can also evading them by jumping over them to avoiding contact and make uses of a double jump to go to distant areas without falling and pop all the colors ballons to earn points, letters or bonuses, once you survived and changed the color of each tile on the maze, you will go to the next round.</desc>
+    <rating>0.5</rating>
+    <releasedate>19870101T000000</releasedate>
+    <developer>Seibu Kaihatsu</developer>
+    <publisher>Seibu Kaihatsu</publisher>
+    <genre>Action-Action / Labyrinth</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/mustache.png</image>
+    <genreid>258</genreid>
+  </game>
+  <game id="42682" source="ScreenScraper.fr">
+    <path>./raiden.zip</path>
+    <name>Raiden (set 1)</name>
+    <desc>In the year 2090, Earth has suddenly become the target of deranged aliens. Following the invasion, a new cutting-edge weapon, the Raiden Supersonic Attack Fighter, based on the destroyed alien craft, is created for humanity's hope for survival.</desc>
+    <rating>0.9</rating>
+    <releasedate>19900101T000000</releasedate>
+    <developer>Seibu Kaihatsu</developer>
+    <publisher>Fabtek</publisher>
+    <genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/raiden.png</image>
+    <genreid>260</genreid>
+  </game>
+  <game id="42684" source="ScreenScraper.fr">
+    <path>./raidendx.zip</path>
+    <name>Raiden DX (UK)</name>
+    <desc>Raiden DX is an arcade shoot'em up. The game features similar vertically scrolling shooter gameplay as in its predecessors Raiden and Raiden II. The player controls a jet fighter and blasts his way through various stages which are divided into levels. 
+ 
+When destroying buildings and enemies the player can collect power-ups to gain better weapons, bombs, missiles and score extra points. There are three stages, Practice, Novice and Expert. Practice features one level only. Novice features 5 levels and Expert features 8 levels, including remixed versions of the Novice and Practice levels. At the end of each level the player has to defeat a level boss.</desc>
+    <rating>0.9</rating>
+    <releasedate>19940101T000000</releasedate>
+    <developer>Seibu Kaihatsu</developer>
+    <publisher>Fabtek</publisher>
+    <genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+    <image>/userdata/roms/mame/images/raidendx.png</image>
+    <genreid>260</genreid>
+  </game>
+  <game id="42722" source="ScreenScraper.fr">
+    <path>./rdft.zip</path>
+    <name>Raiden Fighters (Germany)</name>
+    <desc>In Raiden Fighters, there are five available fighter craft, each with a Laser and a Missile weapon. Each fighter craft has different strengths and weaknesses. Depending on a particular machine's settings, ships from the earlier Seibu Kaihatsu titles Raiden II and Viper Phase 1 can be chosen. These two ships (given the names Raiden mk-II and Judge Spear respectively) have different mechanics from the five regular craft, such as different bombs and the ability to use Laser and Missile weapons simultaneously. The Slave plane is playable, inheriting the bomb and movement speed of the fighter craft they normally accompany.</desc>
+    <rating>0.9</rating>
+    <releasedate>19960101T000000</releasedate>
+    <developer>Seibu Kaihatsu</developer>
+    <publisher>Fabtek</publisher>
+    <genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/rdft.png</image>
+    <genreid>260</genreid>
+  </game>
+  <game id="150378" source="ScreenScraper.fr">
+    <path>./rdft22kc.zip</path>
+    <name>Raiden Fighters 2 - Operation Hell Dive (China, SYS386I)</name>
+    <desc>Raiden Fighters 2 a lieu quatre ans après les événements du premier. À la suite de cela, quelques groupes de guérillas survivants se rassemblent sous un dictateur. Ensemble, ce groupe de voyous forme une nouvelle nation et lance une série d'attaques contre les forces combattantes. En réponse à ces attaques surprises, le gouvernement rappelle à nouveau les troupes précédentes, équipées de munitions réaménagées.</desc>
+    <rating>0.8</rating>
+    <releasedate>19970101T000000</releasedate>
+    <genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/rdft22kc.png</image>
+    <genreid>260</genreid>
+  </game>
+  <game id="42757" source="ScreenScraper.fr">
+    <path>./rfjet.zip</path>
+    <name>Raiden Fighters Jet (Germany)</name>
+    <desc>The third in the Raiden Fighters series. This opus retains the same intensity and manic gameplay as its predecessors, while introducing several new mechanics. The game contains Normal, Special, and Expert game modes. 
+ 
+The soundtrack consists of fast-paced rave and techno music in a departure from the more melodic pop orientated style of the original Raiden game series.</desc>
+    <rating>0.9</rating>
+    <releasedate>19980101T000000</releasedate>
+    <developer>Seibu Kaihatsu</developer>
+    <publisher>Seibu Kaihatsu</publisher>
+    <genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/rfjet.png</image>
+    <genreid>260</genreid>
+  </game>
+  <game id="42660" source="ScreenScraper.fr">
+    <path>./raiden2.zip</path>
+    <name>Raiden II (US, set 1)</name>
+    <desc>Excellent sequel to the classic original "Raiden". As in the original, players control a fighter jet/spaceship through various levels while shooting down other planes and bombing tanks on the ground.</desc>
+    <rating>0.9</rating>
+    <releasedate>19930101T000000</releasedate>
+    <developer>Seibu Kaihatsu</developer>
+    <publisher>Seibu Kaihatsu</publisher>
+    <genre>Shoot'em Up-Action-Shoot'em up / Vertical</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/raiden2.png</image>
+    <genreid>260</genreid>
+  </game>
+  <game id="42922" source="ScreenScraper.fr">
+    <path>./scion.zip</path>
+    <name>Scion</name>
+    <desc>Players have to pilot a aircraft and shoot the alien waves space ships and dodge his attacks, while destroys a giant latticed ground structure, for this you must shoot first a special ship in mid-air to get the extra weapon and now you are ready to throwing bombs for destroy all the square targets, this makes the whole structure collapses in order to continue on to the next scene and later face off to the end boss structure.</desc>
+    <rating>0.5</rating>
+    <releasedate>19840101T000000</releasedate>
+    <developer>Seibu Denshi</developer>
+    <publisher>Seibu Denshi</publisher>
+    <genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/scion.png</image>
+    <genreid>260</genreid>
+  </game>
+  <game id="40775" source="ScreenScraper.fr">
+    <path>./goal92.zip</path>
+    <name>Seibu Cup Soccer</name>
+    <releasedate>19920101T000000</releasedate>
+    <developer>Seibu Kaihatsu</developer>
+    <publisher>Seibu Kaihatsu</publisher>
+    <genre>Sports / Soccer-Sports</genre>
+    <players>1-4</players>
+    <image>/userdata/roms/mame/images/goal92.png</image>
+    <genreid>1538</genreid>
+  </game>
+  <game id="43376" source="ScreenScraper.fr">
+    <path>./stinger.zip</path>
+    <name>Stinger</name>
+    <desc>The game consists of traveling around a space fortress meanwhile shooting aliens and spaceships. An object called 'Bongo' could be used as a defense method. This object will shoot itself to the enemies for a few seconds.</desc>
+    <rating>0.7</rating>
+    <releasedate>19830101T000000</releasedate>
+    <developer>Seibu Denshi</developer>
+    <publisher>Seibu Denshi</publisher>
+    <genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/stinger.png</image>
+    <genreid>260</genreid>
+  </game>
+  <game id="43967" source="ScreenScraper.fr">
+    <path>./viprp1.zip</path>
+    <name>Viper Phase 1 (New Version, World)</name>
+    <desc>Viper Phase 1 New Version (c) 1995 Seibu Kaihatsu.  - SOURCES -  Game's ROM.</desc>
+    <rating>0.9</rating>
+    <releasedate>19950101T000000</releasedate>
+    <developer>Seibu Kaihatsu</developer>
+    <publisher>Seibu Kaihatsu</publisher>
+    <genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/viprp1.png</image>
+    <genreid>260</genreid>
+  </game>
+  <game id="44095" source="ScreenScraper.fr">
+    <path>./wiz.zip</path>
+    <name>Wiz</name>
+    <desc>As an awesome and fearless wizard named Wiz you must embark on an epic journey through a strange and enchanted wood to battle the evil wizards and then travel up into the skies to continue the fight against evil, using your powerful magic to cast spells on the baddies! Master the dark arts to conjure up amazing spells that will defeat all manner of creatures and rival wizards with ease!</desc>
+    <rating>0.5</rating>
+    <releasedate>19850101T000000</releasedate>
+    <developer>Seibu Kaihatsu</developer>
+    <publisher>Seibu Kaihatsu</publisher>
+    <genre>Platform / Shooter Scrolling-Platform</genre>
+    <players>1-2</players>
+    <image>/userdata/roms/mame/images/wiz.png</image>
+    <genreid>258</genreid>
+  </game>
+</gameList>

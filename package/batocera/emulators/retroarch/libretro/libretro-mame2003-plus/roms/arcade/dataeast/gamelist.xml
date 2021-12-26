@@ -1,0 +1,1340 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="40166" source="ScreenScraper.fr">
+		<path>./battlera.zip</path>
+		<name>Battle Rangers (World)</name>
+		<desc>In this shoot'em up, 2 lone commandos take on an entire army with guns, knives, fists and whatever else might be laying around.</desc>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/battlera.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40239" source="ScreenScraper.fr">
+		<path>./birdtry.zip</path>
+		<name>Birdie Try (Japan)</name>
+		<desc>An overhead golf game.</desc>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Sports / Golf-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/birdtry.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40333" source="ScreenScraper.fr">
+		<path>./boogwing.zip</path>
+		<name>Boogie Wings (Euro v1.5, 92.12.07)</name>
+		<desc>A superbly playable, humourous and utterly unique shoot-em-up from the Date East stable. The player begins each life in control of a bi-plane with a huge metal hook attached to its rear. This hook can be used to pick up enemies, objects, bombs and vehicles which can then be thrown both at other enemies, and at any walls and doorways that may be barring the player's route. 
+ 
+If the bi-plane takes two hits from enemy forces, it will explode and the player is forced to continue on foot. The on-foot sections play in a vaguely similar fashion to SNK's legendary "Metal Slug" series, but while on foot, the player has no protection from enemy hits and is very vulnerable to attack. As such, a replacement vehicle (which appear in the form of tanks, motorbikes, giant robots, elephants etc.) must be found quickly. 
+ 
+Boogie Wings features highly detailed and completely destructible scenery, with a multitude of background animations making the game feel 'alive' and giving it much of its distinctive character. The game's settings are as original as its gameplay; with museums, fairgrounds, the inside of skyscrapers etc. all making an appearance. Boogie Wings soundtrack is also unique to the genre, with a mixture of well-known jazz and blues tunes accompanying the frenetic on-screen action.</desc>
+		<rating>0.8</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shooter / Horizontal-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/boogwing.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="60399" source="ScreenScraper.fr">
+		<path>./boomrang.zip</path>
+		<name>Boomer Rang'r (set 1)</name>
+		<desc>The player controls Whirley, a caveman armed with a boomerang whose quest it is to find a lost treasure in that prehistoric land. As he searches for the lost treasure, he must fight off enemy cavemen armed with clubs, dinosaurs and other prehistoric monsters. He must also look out for vultures who drop rocks. Whirley can also mount a dinosaur and ride it after he kills the caveman who is riding it, and whenever he is riding a dinosaur, he can have the dinosaur breathe fire for a weapon.</desc>
+		<rating>0.7</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<image>/userdata/roms/mame/images/boomrang.png</image>
+	</game>
+	<game id="150946" source="ScreenScraper.fr">
+		<path>./bouldash.zip</path>
+		<name>Boulder Dash / Boulder Dash Part 2 (World)</name>
+		<desc>Boulder Dash is an updated version of the classic rocks-and-gems game. Same gameplay applies, collects gems while pushing rocks and avoiding enemies.</desc>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>First Star Software</developer>
+		<publisher>Data East</publisher>
+		<genre>Puzzle-Game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/bouldash.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40369" source="ScreenScraper.fr">
+		<path>./brkthru.zip</path>
+		<name>Break Thru (US)</name>
+		<desc>This is a horizontally scrolling shoot'em up in which the player drives an armoured car, equipped with a front-mounted gun and super jump capability. The aim of the game is to fight through five enemy-controlled zones to retrieve a stolen top-secret fighter plane, the PK430. 
+ 
+The game's levels force-scroll from right to left, although the vehicle's speed - and rate of scrolling - can be slowed down and speeded up to some degree. As well as a forward-firing gun, the car can be made to jump huge distances. This is necessary to avoid background obstacles such as rock falls and broken bridges. It can also be used to avoid incoming enemy fire and vehicles. Land mines also litter the levels and need to be shot or avoided.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shooter / Vehicle, Horizontal-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/brkthru.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="40475" source="ScreenScraper.fr">
+		<path>./btime.zip</path>
+		<name>Burger Time (Data East set 1)</name>
+		<desc>A platform game in which one or two players take on the role of burger chef 'Peter Pepper'. The chef must create a set number of burgers per level by collecting the separate ingredients needed to make each one (two pieces of bun, the burger itself and/or a garnish, such as lettuce or cheese).  
+ 
+Each screen is made up of platforms joined by connecting ladders. At the bottom of the screen are a number of empty plates while the burger ingredients lay across the platforms directly above the plates. The chef must walk across the entire width of the ingredients to make them drop to the platform below. A burger is only completed once all of its ingredients have been dropped onto the corresponding plate at the bottom of the screen.  
+ 
+The chef's efforts are hampered by the rogue ingredients that are constantly chasing him. They are called 'Mr. Hot Dog', 'Mr. Egg' and 'Mr. Pickle'. Any contact with them results in the loss of a life. The chef can temporarily freeze the enemies by throwing pepper at them. He only carries a limited amount of pepper but this can be replenished by collecting the bonus food items that randomly appear (ice cream cones, coffee, and fries). In addition to the pepper, any enemies located on a platform below the chef can be killed by dropping an available burger ingredient on top of them. .</desc>
+		<rating>0.9</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/btime.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="40476" source="ScreenScraper.fr">
+		<path>./brubber.zip</path>
+		<name>Burnin' Rubber</name>
+		<desc>Bump 'n' Jump (Burnin' Rubber in Japan) is an overhead driving game where you jump or bump enemy cars for points.</desc>
+		<rating>0.7</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/brubber.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="40445" source="ScreenScraper.fr">
+		<path>./captaven.zip</path>
+		<name>Captain America And The Avengers (Asia Rev 1.4)</name>
+		<desc>A side-scrolling beat'em up (punctuated with occasional shoot'em up sections) in which one or more players take on the role of either Captain America, Iron Man, Vision, or Hawkeye as they prepare to do battle with Red Skull and his henchmen. Each player character has a different weapon or power that can be used throughout the game to assist them in combat. Captain America uses his shield, Iron Man uses his repulsor rays, Vision uses his solar beam and Hawkeye uses his bow and arrows. There are also additional superheroes such as Quicksilver, Sub-Mariner, Wonder Man, and The Wasp who appear at certain points in the game to assist the player characters. Some of the super-villain foes that await the heroes are Klaw, The Living Laser, Whirlwind, The Grim Reaper, The Wizard, The Controllers, The Mandarin, The Juggernaut (from X-Men), Ultron and Crossbones. The game consists of all five stages.</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/captaven.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="40607" source="ScreenScraper.fr">
+		<path>./cninja.zip</path>
+		<name>Caveman Ninja (World ver 4)</name>
+		<desc>Caveman Ninja is a horizontally-scrolling platform beat-em-up set in prehistoric times with one or two players taking on the roles of cavemen Joe and Mac. Rival caveman have invaded Joe and Mac's village and kidnapped all of their women and it's up to the two heroes to venture forth and save them.  
+ 
+Joe and Mac must battle through numerous prehistorically-themed stages, fighting enemy cavemen and marauding dinosaurs. The heroes are initially armed with throwing axes that can be tossed either vertically or horizontally, travelling in a short arc. By holding down the attack button, larger, more powerful weapons will be thrown. When close to an enemy, Joe and Mac will utilise a wooden club to whack them. Players can also jump much higher by holding UP and JUMP. 
+ 
+Joe and Mac each have a life meter that gradually depletes over time, with additional energy losses incurred when players are hit by a enemies or projectile. Food can be collected from defeated enemies to top up the players' energy levels. Different weapons can be found throughout the stages including stone wheels, fireballs, and shadowy doppelgangers that charge forward and attack enemies. Other power-ups include hot sauce or jalapeno peppers that give players temporary invincibility and fiery breath.  
+ 
+Certain enemy strikes - such as being hit by a thrown boulder - will flatten Joe and Mac like pancakes for a few seconds, although they can still move and attack while in this form, albeit more slowly. During the simultaneous two-player game, both characters are capable of damaging each other. The game allows players to select between different routes after each boss battle. Also, after defeating the final boss, the players can choose between three exits, each one leading to a slightly different ending sequence.</desc>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/cninja.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="149602" source="ScreenScraper.fr">
+		<path>./chainrec.zip</path>
+		<name>Chain Reaction (World, Version 2.2, 1995.09.25)</name>
+		<desc>Chain Reaction (known in Japan as Magical Drop) is a tile-matching puzzle game developed and released by Data East for arcades throughout 1995. Chain Reaction is known for its cute art style (with characters based on tarot cards) and two-player competitive gameplay. Players control a little clown at the bottom of their playfields and try to arrange groups of tiles to make them disappear before a tile reaches past the bottom of the playfield. This is done by pulling down similar tiles (and throwing them back up) to match.</desc>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Puzzle-Game</genre>
+		<image>/userdata/roms/mame/images/chainrec.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="40523" source="ScreenScraper.fr">
+		<path>./charlien.zip</path>
+		<name>Charlie Ninja</name>
+		<desc>A colourful, 1 or 2-player platform shoot-em-up consisting of 5 stages, in which the player controls a Ninja who must jump and shoot his way through each of the game's stages, before taking on the archetypal end-of-level 'Boss'. 
+ 
+Bonuses can be picked up to increase the firepower, and barrels can either be smashed to reveal bonuses, or picked up and thrown at the enemies. In addition; the Ninja can perform high jump by pressing the JUMP button, then pressing it again while the Ninja is in the air. This is useful for avoiding enemies and essential for reaching high platforms.</desc>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Mitchell Corporation</developer>
+		<publisher>Mitchell</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/charlien.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40530" source="ScreenScraper.fr">
+		<path>./chelnov.zip</path>
+		<name>Chelnov - Atomic Runner (World)</name>
+		<desc>A horizontally scrolling platform shoot-em-up in which the player controls Chelnov, a former coal miner caught up in a Chernobyl-like nuclear accident. Now possessing superior phys</desc>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/chelnov.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40539" source="ScreenScraper.fr">
+		<path>./chinatwn.zip</path>
+		<name>China Town (Japan)</name>
+		<desc>A very refreshing combination of Tetris and mahjong; the object is to complete a mahjong hand by getting correct tiles next to each other.</desc>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/chinatwn.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="150684" source="ScreenScraper.fr">
+		<path>./clshroad.zip</path>
+		<name>Clash-road</name>
+		<desc>A horizontally scrolling bicycle racing game.</desc>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Wood Place</developer>
+		<publisher>Wood Place Inc.</publisher>
+		<genre>Race, Driving / Motorcycle-Race, Driving</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/clshroad.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="40611" source="ScreenScraper.fr">
+		<path>./cobracom.zip</path>
+		<name>Cobra-command (World/US revision 5)</name>
+		<desc>A horizontally scrolling helicopter battle game.</desc>
+		<rating>0.4</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>SEGA</developer>
+		<publisher>Data East</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/cobracom.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="40477" source="ScreenScraper.fr">
+		<path>./cbuster.zip</path>
+		<name>Crude Buster (World FX version)</name>
+		<desc>Crude Buster © 1990 Data East.
+
+In the near future, ruthless gangs are the new rulers of the streets. Only a brave duo of seasoned street brawlers can end this terror and return peace to the streets. Don't forget to grab and use anything you can find as a weapon (pipes, stones, signs, cars, even enemies!) to survive this onslaught. Features solid graphics &amp; sound and very fun gameplay mechanics!</desc>
+		<rating>0.5</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/cbuster.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="40824" source="ScreenScraper.fr">
+		<path>./darkseal.zip</path>
+		<name>Dark Seal (World revision 3)</name>
+		<desc>Fantasy hack and slash game in which up to four people can play at the same time, choosing from three stock fantasy characters (Knight, Wizard and Bard) and, for some reason, a Ninja. Players must then fight their way through enemy-packed levels, plundering treasure and avoiding the game's many traps. Gameplay is highly reminiscent of Atari's legendary 1985 classic, "Gauntlet".</desc>
+		<rating>0.6</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Action-Fight-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/darkseal.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="40919" source="ScreenScraper.fr">
+		<path>./dietgo.zip</path>
+		<name>Diet Go Go (Euro v1.1 1992.09.26)</name>
+		<desc>Diet Go Go is a single-screen platform game for one or two players, in which the aim is to clear each screen of monsters and avoid getting fat. Monsters are defeated by throwing food at them until they inflate (get fat), then touching them to burst them, sending them flying around the screen and killing any other monsters they come into contact with. Many monsters also throw food at the players, making them increasingly fat. If players get too fat, they lose a life, although bonus diet sodas occasionally appear and can be picked up to reverse the effect. Contact with monsters who aren't fully inflated is fatal.  
+ 
+When monsters are destroyed, they leave behind rings, gems, power-ups and diet tonic. Power-ups include roller-skates to move faster, compressed air to blow monsters up and increased fire power. Data East coins also appear on each level. If players collect these coins, they shoot up to the top of the screen where a fruit machine display rolls over and dispenses gems, power-ups and rings. If the fruit machine reads 777, a bonus round appears in which players jump on clouds to collect falling gems while avoiding the falling food that will make them fat. 
+ 
+The game starts with one player selecting an area on a world map, then progresses through two levels of play to reach a giant boss on the third round. After the boss is destroyed that world is complete and play moves onto the next. Each world has a different theme and boss.</desc>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dietgo.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="40487" source="ScreenScraper.fr">
+		<path>./disco.zip</path>
+		<name>Disco No.1</name>
+		<desc>You play a 90 pound weakling kid in a roller rink who has to skate around the bad guys in order to win the love admiration of cute chicks. Earn points by completely encircling one or more tough guys and picking up various bonus items that float across the rink. Interesting gameplay mechanics, nice music and decent graphics for 1982.</desc>
+		<rating>0.5</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/disco.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41000" source="ScreenScraper.fr">
+		<path>./dragngun.zip</path>
+		<name>Dragon Gun (US)</name>
+		<desc>A first-person view shoot'em up game.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Lightgun Shooter-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dragngun.png</image>
+		<genreid>261</genreid>
+	</game>
+	<game id="41140" source="ScreenScraper.fr">
+		<path>./exprraid.zip</path>
+		<name>Express Raider (World, Rev 4)</name>
+		<desc>The wild west-themed Express Raider is separated into two different game types; a sideways scrolling fighting sequence and a shooting sequence. The player controls a train robber, or 'Express Raider', and must try to steal the bags of money from the moving locomotives. 
+ 
+During the fighting sequence, the Raider must fight the bank teller, hit the coyotes and then jump onto the train before it speeds away. Once on the train, he must fight his way past other enemies and avoid various projectiles, such as bottles, bullets and shovels full of coal. Players must be careful to duck under the low signs that come along as the train is travelling. Also, once a train carriage is clear of enemies, a bomb will appear between the current carriage and the next; players must quickly jump over to the next carriage before the bomb goes off, otherwise the Raider will fall from the train and a life is lost. If the Express Raider manages to reach the train engine, the loot will be captured and the game will then move on to the shooting sequence. 
+ 
+In the shooting sequence, the Express Raider rides a horse and must shoot at the enemies that appear from the windows of a train carriage. They will shoot back at the player and throw various objects. Players can hit the DUCK button to avoid the enemy attacks. A woman will appear at regular intervals offering the player a bag of money, if the player shoots the woman, a life is lost. After the shooting sequence has been completed, the game will start over again with an increased level of difficulty.</desc>
+		<rating>0.6</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/exprraid.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41210" source="ScreenScraper.fr">
+		<path>./fghthist.zip</path>
+		<name>Fighter's History (World ver 43-09, DE-0395-1 PCB)</name>
+		<desc>Fighter's History is the first attempt of Data East to enter in competition with Capcom and its omnipresent Street Fighter II. Because the many similarities shared by the game with the Capcom masterpiece (like the character select screen, the vs and winner/loser screens, the controls and the design and moves of some characters), Fighter's History was at least simply stamped by most of the  players like another SFII clone, and in this way remained ignored and obscured to the mass audience. 
+ 
+Although time after, the many beat'em up fans learnt to appreciate this maybe too underestimated fighting game, especially for its combo system, quite simple to execute even for those players not so able with timing and button pressing, and for its fast gameplay: at this purpose most of the contribution was made by the updated version released in 1994, Fighter's History Dynamite (known as Karnov's Revenge in USA and Europe) that made the gameplay more polished. Despite this at least Fighter's History never reached that great success that maybe Data East still tried to achieve. 
+ 
+Players choose one of 9 international fighters and battle to be the best in the world. Every character has his ending sequence and his own stage. There are also two not-selectable bosses to challenge for reach the end, and the last one of them is real surprising!</desc>
+		<rating>0.6</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/fghthist.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41242" source="ScreenScraper.fr">
+		<path>./firetrap.zip</path>
+		<name>Fire Trap (US, set 1)</name>
+		<desc>If you've got cool hands, get ready to climb the burning skyscrapers and dodge the falling bricks, cars, glass and obstacles to rescue the people trapped inside. And watch out - it's a long fall to the street!</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Action-Action / Climbing</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/firetrap.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="41305" source="ScreenScraper.fr">
+		<path>./funkyjet.zip</path>
+		<name>Funky Jet (World, rev 1)</name>
+		<desc>In this game, you play with a character who has a jet-pack on his back (enabling him to fly in the air), while he is punching the badguys.</desc>
+		<rating>0.6</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/funkyjet.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="41394" source="ScreenScraper.fr">
+		<path>./garyoret.zip</path>
+		<name>Garyo Retsuden (Japan)</name>
+		<desc>Choose one of 3 characters and shoot at all advancing enemies. Collect items to increase your speed and firepower.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/garyoret.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41491" source="ScreenScraper.fr">
+		<path>./gondo.zip</path>
+		<name>Gondomania (US)</name>
+		<desc>Arcade game released by Data East in 1987. Top-down shooter featuring rotating joysticks.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gondo.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41681" source="ScreenScraper.fr">
+		<path>./hippodrm.zip</path>
+		<name>Hippodrome (US)</name>
+		<desc>The brave knight takes on a slew of medieval opponents. Money won during fights can be used to purchase fighter upgrades. 
+ 
+The game has 9 different selectable colosseums, each with a different opponent to face: 
+Pandemonium: Cawnus the Lamia Noble 
+Gehenna: Gran the Gargoyle 
+Tarterus: Norfolk the Lizard Man 
+Gadsheim: Sharon the Armor Dragon 
+Archeron: Daldnoa the Scorpion Man 
+Elysium: Solomon the Wizard 
+Twin Paradises: Charry Steve The Assassins 
+Abyss: Pon the Giant</desc>
+		<rating>0.3</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hippodrm.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41708" source="ScreenScraper.fr">
+		<path>./hoops96.zip</path>
+		<name>Hoops'96 (Europe/Asia 2.0)</name>
+		<desc>A basketball game featuring teams from around the world. Similar to regular basketball games, with one major exception - the players have super powers which allow them to perform incredible feats.</desc>
+		<rating>0.7</rating>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>Data East</publisher>
+		<genre>Sports / Basketball-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/hoops96.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="41894" source="ScreenScraper.fr">
+		<path>./joemacr.zip</path>
+		<name>Joe And Mac Returns (World, Version 1.1, 1994.05.27)</name>
+		<desc> 
+For this sequel to the sideways scrolling 1991 beat-em-up, "Caveman Ninja", Data East chose to eschew the former's gameplay and create a single-screen platformer with gameplay hugely similar to Toaplan's "Snow Bros.", released in 1990.</desc>
+		<rating>0.8</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/joemacr.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="41948" source="ScreenScraper.fr">
+		<path>./kamikcab.zip</path>
+		<name>Kamikaze Cabbie</name>
+		<desc>Vous vouliez jouer à l'ancêtre des GTA et autres crazy taxi ? 
+le voici !  
+ 
+Au grès des niveaux dans les quartier d'une ville , une petite bagnole qui doit faire attention à la fois au carburent qui descend , aux passager qui veulent être conduit (l'indicatif de la direction à prendre s'affiche sommairement en haut de l'écran) mais aussi au véhicules de la police qui patrouille et au bulldozer qui passent là ! 
+explosion garantie!! 
+pas la peine de faire gaffe aux feux tricolore, il n'y en a pas ... 
+ 
+l'animation a quelque saccade et les collisions avec les décors sont assez approximatif , mais ce jeu reste prenant le temps d'une bonne partie  
+ 
+</desc>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Action-Race, Driving-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/kamikcab.png</image>
+		<genreid>1537</genreid>
+	</game>
+	<game id="41965" source="ScreenScraper.fr">
+		<path>./kchamp.zip</path>
+		<name>Karate Champ (US)</name>
+		<desc>Karate Champ © 1984 Data East USA.
+
+A seminal 1-on-1 fighting game set over the course of a karate tournament, Karate Champ was the first game of its type and would influence every game of the fighting genre that followed. Karate Champ's control system utilised a somewhat awkward dual joystick control system, with simultaneous joystick manipulation required to execute even the simplest of kicks.</desc>
+		<rating>0.9</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/kchamp.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="41955" source="ScreenScraper.fr">
+		<path>./karnov.zip</path>
+		<name>Karnov (US, rev 6)</name>
+		<desc>Karnov is a 2-D, platform style game. You control Karnov through 9 scenes. Each of these scenes gives you piece of a map (except the first scene). Get all the pieces of the map and you get to the treasure. Your journey won't be easy though. You will be going through some rough environment such as towns, forests, oceans, and caves. To further make your travels a hazard, different enemies attempt to end Karnov's life prematurely and prevent him from getting to the treasure. To aid Karnov in his adventures, he has certain items that he can draw from his inventory. In addition, there are other items that can make Karnov a potent foe of those wishing to harm him. You must complete each scene in order to advance to the next scene. All in a days work of a hearty explorer.</desc>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/karnov.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="149613" source="ScreenScraper.fr">
+		<path>./kingofb.zip</path>
+		<name>King Of Boxer (World)</name>
+		<desc>Un jeu de boxe en perspective. Combattez votre adversaire autour de l'anneau en essayant de l'assommer avant que la cloche ne sonne. Les adversaires acquièrent de plus en plus d'expérience à mesure que les niveaux progressent.</desc>
+		<rating>0.7</rating>
+		<releasedate>19850101T000000</releasedate>
+		<image>/userdata/roms/mame/images/kingofb.png</image>
+	</game>
+	<game id="42112" source="ScreenScraper.fr">
+		<path>./lastmisn.zip</path>
+		<name>Last Mission (US revision 6)</name>
+		<desc>Last Mission is a top-down multidirectional shooter developed by Data East and distributed in world wide release for the arcades in 1986. 
+ 
+The player assumes the role of an space pilot who has been exiled from their home galaxy for committing an unknown crime. The only way the player character can return is to restore their honor - and the only way to do so is to invade and defeat the alien nemesis.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/lastmisn.png</image>
+		<genreid>256</genreid>
+	</game>
+	<game id="42130" source="ScreenScraper.fr">
+		<path>./lemmings.zip</path>
+		<name>Lemmings (US prototype)</name>
+		<desc>Lemmings © 1991 Data East Corp.
+
+A platform game where the player has to designate certain lemmings for certain tasks &amp; try to figure a way to save as many of them from falling off cliffs and prevent them from dying in other ways. The lemmings can be set for walking (which they do by default), digging, climbing, building, blocking (preventing other lemmings from walking a certain direction), bashing, floating, and mining. There are several levels in 3 or 4 categories of difficulty.</desc>
+		<rating>0.9</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Various-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/lemmings.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="42158" source="ScreenScraper.fr">
+		<path>./lnc.zip</path>
+		<name>Lock 'n' Chase</name>
+		<desc>Lock'n'Chase © 1981 Data East.
+
+The game is a maze game. Like "Pac-Man", you're trying to eat up dots while four cops (with the names Spiffy, Smarty, Scaredy and Silly) try to stop you. While you don't have energizers to eat the cops with, you CAN block them off with walls (or better yet, try to trap them in the corners). When you're finished eating dots, there are two exits for you to escape from the cops.</desc>
+		<rating>0.5</rating>
+		<releasedate>19810101T000000</releasedate>
+		<publisher>Data East</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/lnc.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="42353" source="ScreenScraper.fr">
+		<path>./madalien.zip</path>
+		<name>Mad Alien (set 1)</name>
+		<desc>Mad Alien is kind of a combination of a shooter and a driving game. You drive a car equipped with a gun on a road. The landscape around you shows different settings (cities, country side, tunnels) and scrolls by from the top to the bottom of the screen. Your enemies (mad aliens) drive in front of you in a "Galaxian"-like formation and you have to shoot them. Watch out for mad aliens leaving the group and turning back to attack your car.</desc>
+		<rating>0.5</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shooter / Vehicle, Vertical-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/madalien.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="78910" source="ScreenScraper.fr">
+		<path>./metlclsh.zip</path>
+		<name>Metal Clash (Japan)</name>
+		<desc>Metal Clash is a futuristic fighter game for one or two players. In one player mode, the player pilots the metariod 'Saiber' to annihilate the alien robots.   
+ 
+The player pilots his robot around the screen destroying enemy robots using punches and kicks. Flying saucers can be destroyed for a life energy boost.  Items in the background can be destroyed for points. After defeating a set number of enemies the stage's boss will appear. The boss is more powerful than regular enemies, and has his own life energy bar shown on screen. Some of these bosses can be disarmed of their powerful weapons (such as guns and energy shields) which the player can equip and carry on into further levels. 
+ 
+When hit by enemies, the player will lose energy and will drop any weapons that he has equipped. When the player's life energy is completely depleted he will lose a life. The game is over once all of the player's lives are lost.  The game features no continues. 
+ 
+The two player game is a vs. match between players. Gameplay continues until one player has lost all of his lives.</desc>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Various-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/metlclsh.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="78919" source="ScreenScraper.fr">
+		<path>./midres.zip</path>
+		<name>Midnight Resistance (World)</name>
+		<desc>"Midnight Resistance" is a scrolling platform shoot-em-up for one or two players, taking on the role of two commando brothers whose entire family has been kidnapped and must be rescued. The game consists of nine large, eight-way scrolling levels made up of platforms, ledges and ladders. Each is populated with enemy soldiers and gun emplacements, as well as occasional armoured vehicles. At the end of each stage players must defeat a large, powerful enemy boss.  
+ 
+Players can rotate their guns through 360 degrees, allowing them to fire in all directions. Some enemies, when killed, will drop a red key; collecting these keys allows players to upgrade their weapons at the shop that awaits at the end of each level. A maximum of six keys can be carried at any one time and when the player loses a life, all weapons and keys in their possession are dropped. These can be recovered at the start of the next life providing they haven't fallen off-screen.  
+ 
+In addition to main weapon upgrades, secondary weapons can also be bought. These appear as backpacks attached to the player characters and fire when the player pushes up on the joystick while firing their main weapon. Both the main and secondary weapons have only a limited amount of ammo but more can be bought from the end-of-level shops.  
+ 
+</desc>
+		<rating>0.6</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/midres.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="79042" source="ScreenScraper.fr">
+		<path>./mutantf.zip</path>
+		<name>Mutant Fighter (World ver EM-5)</name>
+		<desc>8 mythical creatures battle each other in this wrestling-style fighting game. 
+</desc>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mutantf.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="79157" source="ScreenScraper.fr">
+		<path>./nslasher.zip</path>
+		<name>Night Slashers (Korea Rev 1.3, DE-0397-0 PCB)</name>
+		<desc>A horror-themed brawler where three elite fighters, an American cyborg monster hunter, a European vampire hunter, and an Asian martial arts expert, must save humanity from an army of monsters, mutants, and the undead.</desc>
+		<rating>0.7</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/nslasher.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="79141" source="ScreenScraper.fr">
+		<path>./nitrobal.zip</path>
+		<name>Nitro Ball (World, set 1)</name>
+		<desc> 
+Futuristic, fast and furious vertical action game, it's a sort of "Smash T.V." in a pinball environment.</desc>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/nitrobal.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="149466" source="ScreenScraper.fr">
+		<path>./nob.zip</path>
+		<name>Noboranka (Japan)</name>
+		<desc>This game is a vertical scrolling shoot 'em up where the player controls a character that has to climb a tree and shoot bug-like enemies. The story is that the princess has been kidnapped by the villains of the Insect World, and Zippy Bug has to rescue her. After shooting the enemies, they drop fruits that the player can collect for extra points, and skulls that are deadly if touched. The player is able to fly for a short time, and every time this is done, one of the letters from the 'I Love You' at the bottom of the screen is used up. The letters regenerate over a small period of time. There are also other items, such as the key, which surrounds the player in a bubble and makes him invulnerable to 1 hit. Another item is a ring which seems to instantly replenish all of the used up 'I Love You' letters. One other item is the hammer, which allows the player to wipe out all the enemies off the screen. There is a boss at the end of each level.</desc>
+		<rating>0.9</rating>
+		<releasedate>19860101T000000</releasedate>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<image>/userdata/roms/mame/images/nob.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="79103" source="ScreenScraper.fr">
+		<path>./osman.zip</path>
+		<name>Osman (World)</name>
+		<desc>Osman is a side-scrolling action platforming game produced by Mitchell Corp. that was released exclusively to arcades in 1996. Many ex-Capcom staff including Kouichi Yotsui (credited as Isuke), worked on the original arcade version of Strider and designed Osman as an unofficial sequel to Strider. Yotsui directed both titles. 
+ 
+In contrast to Strider's futuristic Kazakh-Soviet setting, Osman is set in a neon-lit cyberpunk Arabian setting, while Strider Hiryu is replaced by a Middle Eastern protagonist named Kirin who fights without any weapons.The game's bizarre plot supposedly mocks director Kouichi Yotsui's experience at Capcom after Strider. 
+ 
+</desc>
+		<rating>0.7</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Mitchell</developer>
+		<publisher>Mitchell</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/osman.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="79208" source="ScreenScraper.fr">
+		<path>./pcktgal.zip</path>
+		<name>Pocket Gal (Japan)</name>
+		<desc>A pool game with four levels, each denoted by a different woman. Score enough points to cause the woman to strip and to advance you to the next level. Trick shots can be attempted between frames and when two people play, the winner is the best two of three frames.</desc>
+		<rating>0.5</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Sports / Swimming-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pcktgal.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42404" source="ScreenScraper.fr">
+		<path>./pktgaldx.zip</path>
+		<name>Pocket Gal Deluxe (Euro v3.00)</name>
+		<desc>A pool game with four levels, each denoted by a different woman. Score enough points to cause the woman to strip and to advance you to the next level. Trick shots can be attempted between frames and when two people play, the winner is the best two of three frames.</desc>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<publisher>Data East</publisher>
+		<genre>Sports / Pool-Sports / Swimming-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pktgaldx.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43761" source="ScreenScraper.fr">
+		<path>./tryout.zip</path>
+		<name>Pro Baseball Skill Tryout (Japan)</name>
+		<desc>Professional baseball joining test game. There are long throw, steal, pitching, batting, and fielding tests.</desc>
+		<rating>0.3</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tryout.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="40700" source="ScreenScraper.fr">
+		<path>./prosoccr.zip</path>
+		<name>Pro Soccer</name>
+		<desc>Pro Soccer (c) 1983 Data East.  - TECHNICAL -  DECO Cassette System hardware [Cassette No.33]  Main CPU : M6502 (@ 750 Khz), M6502 (@ 500 Khz), I8X41 (@ 500 Khz) Sound Chips : (2x) AY8910 (@ 1.5 Mhz)  Players : 2 Control : stick Buttons : 2  - TRIVIA -  R</desc>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Sports / Soccer-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/prosoccr.png</image>
+		<genreid>1538</genreid>
+	</game>
+	<game id="42515" source="ScreenScraper.fr">
+		<path>./prosport.zip</path>
+		<name>Pro Sports - Bowling, Tennis, And Golf</name>
+		<rating>0.3</rating>
+		<releasedate>19830101T000000</releasedate>
+		<publisher>Data East</publisher>
+		<genre>Compilation-Sports</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/prosport.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game id="79102" source="ScreenScraper.fr">
+		<path>./oscar.zip</path>
+		<name>Psycho-Nics Oscar (World revision 0)</name>
+		<desc>The players controls a powerful mecha robot named Oscar he representing the last hope to the humanity against the oppression of the machines, he must go forward through   vast and exotic terrains of the Ordio City and destroy all mechanical enemies, while accumulates power-ups capsules to choose the "selectors" to be upgrade your weaponry and abilities to earn points as you go to the levels and confront giants and powerful mecha bosses to recover peace and save the city.</desc>
+		<rating>0.6</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/oscar.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="41438" source="ScreenScraper.fr">
+		<path>./meikyuha.zip</path>
+		<name>Real Ghostbusters, The (Japan, set 2)</name>
+		<desc>Adapted from the animated cartoon of the same name. Up to three players, each controlling a Ghostbuster, must run around a top-down universal scrolling terrain, shoot creatures and then try to suck up ghosts with their plasma guns. Players can shoot and then collect various power-ups, including a protective Aura, shot and beam boosters, and a "Green Ghost" Slimer shield satellite. Has interesting screen transition effects and a well-orchestrated version of the movie's popular theme song.</desc>
+		<rating>0.6</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Activision</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/meikyuha.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="39942" source="ScreenScraper.fr">
+		<path>./actfancr.zip</path>
+		<name>Act-Fancer: Cybernetick Hyper Weapon (World revision 3)</name>
+		<desc>A platform game with shoot'em up elements where you play as a robot that can transform into a more powerful robot by collecting power-ups.</desc>
+		<image>/userdata/roms/mame/images/actfancr.png</image>
+		<rating>0.6</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<playcount>1</playcount>
+		<lastplayed>20210125T220443</lastplayed>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="42792" source="ScreenScraper.fr">
+		<path>./robocop2.zip</path>
+		<name>Robocop 2 (Euro/Asia v0.10)</name>
+		<desc>An arcade-only sequel to the 1988 original, placing less of an emphasis on platform action than the face game and concentrating almost exclusively on the shooting aspect.</desc>
+		<image>/userdata/roms/mame/images/robocop2.png</image>
+		<rating>0.6</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="42809" source="ScreenScraper.fr">
+		<path>./rohga.zip</path>
+		<name>Rohga Armor Force (Asia/Europe v5.0)</name>
+		<desc>A good-looking horizontally scrolling shoot 'em up with a few unique features that make it stand out in the crowd.</desc>
+		<image>/userdata/roms/mame/images/rohga.png</image>
+		<rating>0.6</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="42920" source="ScreenScraper.fr">
+		<path>./schmeisr.zip</path>
+		<name>Schmeiser Robo (Japan)</name>
+		<desc>Schmeiser Robo plays similarly to other 2-D versus fighting games during its release, which the player's character fights against his or her opponent in best two-out-of-three matches in a single player tournament mode with the computer or against another human player. However, unlike most other fighting games released at the same time, the game uses an 8-way joystick and 3 buttons: one for punching, another for kicking, and the last one first introduced in the game during the modern era of fighting games, the guard button. Every character can do moving and attacking in spite of repeatedly pressing the guard button; however, they can't block their opponents' attacks by using it. Other unique features introduced in this game are quick (or small) jumping, air-guarding, counter-attacking, guard-canceling and rush-attacking.</desc>
+		<image>/userdata/roms/mame/images/schmeisr.png</image>
+		<rating>0.3</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Hot Lava Games</developer>
+		<publisher>Hot-B</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="61361" source="ScreenScraper.fr">
+		<path>./secretag.zip</path>
+		<name>Secret Agent (World revision 3)</name>
+		<desc>Secret Agent is a side-scrolling platform shoot-em-up which the player takes on the role of a James Bond-esque secret agent who must fight his way through a terrorist group called 'CWD' to reach the final Boss confrontation and prevent a stolen nuclear missile being launched. 
+ 
+The player starts the game armed only with a pistol, and this has a limited amount of ammunition. Once the ammo has run out, players can only kick their enemies. Machine guns are occasionally dropped by defeated enemies and can be picked up and used. Also, Golden Gun components are sometimes dropped; there are six of these in total and once all have been collected, the player is rewarded with a very powerful golden rifle. This weapon kills all enemies instantly but will only last for twenty-five seconds, indicated by a meter at the top-right of the screen. 
+ 
+Most of the game's eight stages are platform-based, but there are also two underwater scuba levels and a motorbike chase. All of the game's end-of-level bosses reappear on the final 'underground lair' level. 
+ 
+While not officially licensed as a James Bond game, Secret Agent is unmistakably meant to represent both the Bond character and movie series. The Bond villain Jaws shows up at the end of stage two and another famous Bond villain, Odd Job also appears. Another memorable Bond reference is the use of a Shaun Connery impersonator who tells players that they have done a Great job upon completion of a level.</desc>
+		<image>/userdata/roms/mame/images/secretag.png</image>
+		<rating>0.8</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Casino-Various-Casino / Slot machine-Various / Electro- Mechanical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3584</genreid>
+	</game>
+	<game id="43021" source="ScreenScraper.fr">
+		<path>./shackled.zip</path>
+		<name>Shackled (US)</name>
+		<desc>Move your player through a maze-like level in this shoot'em up. Shoot enemies and collect treasures and keys.</desc>
+		<image>/userdata/roms/mame/images/shackled.png</image>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Action-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43031" source="ScreenScraper.fr">
+		<path>./shangkid.zip</path>
+		<name>Shanghai Kid</name>
+		<desc>A fighting game from 1985, notable for being the first to implement a combo system.</desc>
+		<image>/userdata/roms/mame/images/shangkid.png</image>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Taiyo</developer>
+		<publisher>Taiyo</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="43056" source="ScreenScraper.fr">
+		<path>./shootout.zip</path>
+		<name>Shoot Out (US)</name>
+		<desc>Shoot Out (c) 1985 Data East.  - TECHNICAL -  Main CPU : M6502 (@ 2 Mhz) Sound CPU : M6502 (@ 1.5 Mhz) Sound Chips : YM2203 (@ 1.5 Mhz)  Screen orientation : Horizontal Video resolution : 256 x 240 pixels Screen refresh : 60.00 Hz Palette Colors : 256  Pl</desc>
+		<image>/userdata/roms/mame/images/shootout.png</image>
+		<rating>0.5</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shooter / 3rd person-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="43079" source="ScreenScraper.fr">
+		<path>./sidepckt.zip</path>
+		<name>Side Pocket (World)</name>
+		<desc>Multi-platform pocket billiards (pool) simulator video game.</desc>
+		<image>/userdata/roms/mame/images/sidepckt.png</image>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Sports / Pool-Sports / Swimming-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43107" source="ScreenScraper.fr">
+		<path>./skullfng.zip</path>
+		<name>Skull Fang (World)</name>
+		<desc>Special Mode (boss battle only): on the scroll selection screen, hold UP then press B3(x5), B2(x3). 
+Very Hard: on the scroll selection screen, hold Right then press B2(x4), B3, B2, B3, B2(x2). 
+Hardest Mode: on the scroll selection screen, hold Left then press B2, B3(x2), B2, B3(x2), B2, B3(x3). 
+Thrust: if you select a 'Fighter' type pilot, you can use Thrust by 'code input' during ingame action. 
+1) Back Thrust: Up, Left or Right, Down + B3 - Back attack. 
+2) Side Thrust: Right or Left, Down + B3 - Side attack. 
+3) Air Brake: Down(x2) + B3 - Temporary invincibility. 
+4) Hi-Ion Shield: Left, Right + B3 or Right, Left + B3 - B.Roll Power-Up. 
+5) SECRET: Down(x4), Up(x2), Down + B3 - Enabled rolling attack.</desc>
+		<image>/userdata/roms/mame/images/skullfng.png</image>
+		<rating>0.8</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43243" source="ScreenScraper.fr">
+		<path>./spfghmk2.zip</path>
+		<name>Space Fighter Mark 2 (set 1)</name>
+		<image>/userdata/roms/mame/images/spfghmk2.png</image>
+		<rating>0.3</rating>
+		<releasedate>19790101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43339" source="ScreenScraper.fr">
+		<path>./stadhero.zip</path>
+		<name>Stadium Hero (Japan)</name>
+		<image>/userdata/roms/mame/images/stadhero.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Sports / Baseball-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43418" source="ScreenScraper.fr">
+		<path>./supbtime.zip</path>
+		<name>Super Burger Time (World, set 1)</name>
+		<desc>Super Burger Time © 1990 Data East.
+
+Peter Pepper returns almost eight years after the original Burger Time - and this time, there are more evil things in his way, more tools to deal with them (the classic pepper, a skewer, a frying pan, even a water hose), and bigger burgers to assemble. You even have to fight bosses, by heaving hamburgers at them!</desc>
+		<image>/userdata/roms/mame/images/supbtime.png</image>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="40747" source="ScreenScraper.fr">
+		<path>./sdtennis.zip</path>
+		<name>Super Doubles Tennis</name>
+		<desc>Super Doubles Tennis (c) 1983 Data East.  - TECHNICAL -  DECO Cassette System hardware. [Cassette No.34]  - SOURCES -  Game's ROM.</desc>
+		<image>/userdata/roms/mame/images/sdtennis.png</image>
+		<rating>0.6</rating>
+		<releasedate>19830101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Sports / Tennis-Sports</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1538</genreid>
+	</game>
+	<game id="43287" source="ScreenScraper.fr">
+		<path>./srdarwin.zip</path>
+		<name>Super Real Darwin (World)</name>
+		<desc>SRD: Super Real Darwin is a vertical scrolling shooter arcade game developed and published by Data East. It is the sequel to Data East's 1986 arcade game, Darwin 4078. The player takes control of a small fighter ship capable of mutating into different shapes. The ship's appearance will change with upgraded weapons as the player obtains more powerups. 
+ 
+The story starts on the planet Lakya where the technologically advanced inhabitants of the planet unwittingly unleash the planet's life force known as Evol. As the released Evol drifts from planet Lakya, it is received by the inhabitants of the nearby planet Cokyo; the people of Cokyo initiate the Shlohe project, a plan to use their captured Evol to develop advanced biologic ships and weapons to invade planet Lakya. The inhabitants of Lakya retaliate the Cokyo invasion by using their own evolving fighter ships.</desc>
+		<image>/userdata/roms/mame/images/srdarwin.png</image>
+		<rating>0.6</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43524" source="ScreenScraper.fr">
+		<path>./tattass.zip</path>
+		<name>Tattoo Assassins (US prototype)</name>
+		<desc>Nine Tattooed Assassins are ordered by Mullah Abba to defeat Koldan and his minions in this unreleased one-on-one beat-em-up. Tattoo Assassins is little more than a flawed beat-em-up that was originally intended to cash in on the massive success of Midway's superior "Mortal Kombat" series.</desc>
+		<image>/userdata/roms/mame/images/tattass.png</image>
+		<rating>0.3</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Pesina</developer>
+		<publisher>Data East</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="41085" source="ScreenScraper.fr">
+		<path>./edrandy.zip</path>
+		<name>The Cliffhanger: Edward Randy (World ver 3)</name>
+		<desc>A fast moving platform game in which the player controls the Indiana Jones-esque and unfortunately named 'Edward Randy'. The levels are an inventive mix of standard platform action and 3-D scrolling levels; the latter usually having the player driving a jeep and repelling the enemy attacks. The game is based on the archetypal Hollywood action blockbuster and features a filmic score to back up the on-screen action. The player's only weapon is a whip - another nod to the Indiana Jones character - which can be used to both attack enemies and as a 'rope', to enable the player to reach distant platforms.</desc>
+		<image>/userdata/roms/mame/images/edrandy.png</image>
+		<rating>0.7</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform-Fight / 2D-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="43599" source="ScreenScraper.fr">
+		<path>./thndzone.zip</path>
+		<name>Thunder Zone (World, rev 1)</name>
+		<desc>The players control one of four soldiers, in his mission must grab machine guns or other projectile weapons, throw grenades and shoot their way through the terrorist arsenal, you could make uses of some war vehicles, while you save the hostages and reach to  terrorist lair and stop the leader and his evil plan of launch a missile of chemical arms  containing deadly spores, stop it before it's too late the world needs you soldier.</desc>
+		<image>/userdata/roms/mame/images/thndzone.png</image>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43665" source="ScreenScraper.fr">
+		<path>./tomahawk.zip</path>
+		<name>Tomahawk 777 (rev 5)</name>
+		<desc>You play as a submarine. There are alien space ships draining the world's water. Earth needs water though, so you've been ordered to open fire on the invaders from space. They move in a simple “back and forth” formation, so it should be easy to hit them. The game's name comes from the type of weaponry you use to defeat these alien space ships. They're Tomahawk missiles, real powerful stuff, able to blow up even the strongest alien ships in a single blast.</desc>
+		<image>/userdata/roms/mame/images/tomahawk.png</image>
+		<rating>0.6</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="43722" source="ScreenScraper.fr">
+		<path>./triothep.zip</path>
+		<name>Trio The Punch - Never Forget Me... (World)</name>
+		<desc>A hilarious action game with three selectable characters: a brawler, warrior and ninja who can randomly power up/decrease after stage complete.</desc>
+		<image>/userdata/roms/mame/images/triothep.png</image>
+		<rating>0.6</rating>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>Data East</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="43774" source="ScreenScraper.fr">
+		<path>./tumblep.zip</path>
+		<name>Tumble Pop (World)</name>
+		<desc>Tumble Pop is a platform game for one or two players in which the aim is to clear each level of enemies by sucking them into - then ejecting them from - a portable vacuum-cleaner.  
+ 
+Holding down the fire button sucks the enemies into the cleaner, releasing the button causes them to be expelled back out. Ejected enemies act as projectiles that can damage and kill any other on-screen enemies that they collide with. All enemies must be killed before players can progress to the next stage.  
+ 
+Throughout the game, letters of the alphabet randomly appear in bubbles. These can be collected to eventually spell the word "TUMBLEPOP". Once this has been achieved players are transported to a time-limited bonus level, giving them the opportunity to earn bonus points and extra lives.</desc>
+		<image>/userdata/roms/mame/images/tumblep.png</image>
+		<rating>0.8</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="43913" source="ScreenScraper.fr">
+		<path>./vaportra.zip</path>
+		<name>Vapor Trail: Hyper Offence Formation (World revision 1)</name>
+		<desc>Vapor Trail - Hyper Offence Formation © 1989 Data East.
+
+Export release. Game developed in Japan. For more information about the game itself, see the original Japanese release entry; "Kuhga - Operation Code Vapor Trail".</desc>
+		<image>/userdata/roms/mame/images/vaportra.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="44097" source="ScreenScraper.fr">
+		<path>./wizdfire.zip</path>
+		<name>Wizard Fire (Over Sea v2.1)</name>
+		<desc>Five legendary heroes must fight through the evil monsters in order to eradicate the evil presence from their kingdom, in this colourful, isometric scrolling multi-player beat-em-up. 
+ 
+Wizard Fire / Dark Seal II is another in a long line of derivative but playable fantasy-themed beat-em-ups that came to typify the arcade scene of the early nineties.</desc>
+		<image>/userdata/roms/mame/images/wizdfire.png</image>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Role playing games-Fight / 2.5D-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="44110" source="ScreenScraper.fr">
+		<path>./wndrplnt.zip</path>
+		<name>Wonder Planet (Japan)</name>
+		<desc>In this colorful shooter, the player controls a starship with two basic attacks - Twin bullets that hit airborne enemies and Drop bombs that hit ground objects indicated by the target in front of the starship. Throughout each planet, the player will find shops in which better equipment can be purchased for the ship's engines (to increase speed), missiles (for better but limited firepower), bombs (greater but limited destruction on ground targets), barriers (to protect the starship) and option (which sells mixed equipment). The credit needed for purchases is found from destroyed airborne and ground targets. The player can find letter pickups, which spell the words EXTRA, MONEY, BLAST and SECRO. If all the letters of one word are collected, the player earns a bonus that matches the word. The player loses a life if the starship is destroyed (from an enemy projectile or collision with an enemy). At the end of a planet, the player must repeatedly bomb or shoot a boss enemy to proceed to the next planet.</desc>
+		<image>/userdata/roms/mame/images/wndrplnt.png</image>
+		<rating>0.7</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="44194" source="ScreenScraper.fr">
+		<path>./zaviga.zip</path>
+		<name>Zaviga</name>
+		<desc>You play as a futuristic jet fighter aircraft that can transform into a tank to descend and ascend. The planet is under attack by hordes of shape bugs robotics and other war machines. Your Aircraft are equipped with 2 laser cannons and bombs for a dual attack in air or land. The game scrolls infinitely of the levels are stopping for an occasional fight against a cannon mountain, that you defeat by destroying a glowing weak spot. With each scroll through the game introduces new enemies and obstacles like flying rocks and underwater enemies.</desc>
+		<image>/userdata/roms/mame/images/zaviga.png</image>
+		<rating>0.7</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shooter / Vertical-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="44213" source="ScreenScraper.fr">
+		<path>./zoar.zip</path>
+		<name>Zoar</name>
+		<desc>Shoot oncoming planes and ground targets using your gun. Land on the air strip for extra points between stages. The game is an X and Z axis vertical shooter.</desc>
+		<image>/userdata/roms/mame/images/zoar.png</image>
+		<rating>0.3</rating>
+		<releasedate>19820101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="60150" source="ScreenScraper.fr">
+		<path>./alphaho.zip</path>
+		<name>Alpha Fighter / Head On</name>
+		<desc>Compilation of two old Data East games.</desc>
+		<image>/userdata/roms/mame/images/alphaho.png</image>
+		<rating>0.3</rating>
+		<releasedate>20190101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+	</game>
+	<game id="40080" source="ScreenScraper.fr">
+		<path>./astrof.zip</path>
+		<name>Astro Fighter (set 1)</name>
+		<desc>Astro Fighter is a 2-D, space shooter style game. Your job is to protect the various sectors from the hoards of invading aliens. You will have to defeat four waves of alien spaceships in order to dock with the 'GS' ship and refuel. In addition to battling the alien spaceships, you will also have to dodge bombs that seem to come out of nowhere. Armed only with your fighter and a lot of spirit, you must ensure that you clear the screen of invaders before they pass you by. All in all, another walk in the park.</desc>
+		<image>/userdata/roms/mame/images/astrof.png</image>
+		<rating>0.7</rating>
+		<releasedate>19800101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shooter / Space Invaders Like-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40416" source="ScreenScraper.fr">
+		<path>./bwings.zip</path>
+		<name>B-wings (Japan new Ver.)</name>
+		<desc>A vertically scrolling shoot'em up.</desc>
+		<image>/userdata/roms/mame/images/bwings.png</image>
+		<rating>0.4</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40127" source="ScreenScraper.fr">
+		<path>./backfire.zip</path>
+		<name>Backfire! (set 1)</name>
+		<desc>Players can choose between 2 fictitious rally cars, "Farco R4 Cup" or "Andula 2.0", and race through 6 stages. It is also possible to play one against another on a split screen.</desc>
+		<image>/userdata/roms/mame/images/backfire.png</image>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Race, Driving / Race-Race, Driving</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>1537</genreid>
+	</game>
+	<game id="40130" source="ScreenScraper.fr">
+		<path>./baddudes.zip</path>
+		<name>Bad Dudes vs. Dragonninja (US)</name>
+		<desc>The game starts in New York City, where President Ronnie has been kidnapped by the nefarious DragonNinja. The game's intro begins with the following introduction: "Rampant ninja related crimes these days... Whitehouse is not the exception...". As soon as that occurs, a Secret Service agent asks two street-smart brawlers, named Blade and Striker: "President Ronnie has been kidnapped by the ninjas. Are you a bad enough dude to rescue Ronnie?". 
+
+After hearing that, the Bad Dudes pursue the DragonNinja through the city streets, highway, sewers, transport train, forest, cave and into the secret ninja base in order to save President Ronnie.</desc>
+		<image>/userdata/roms/mame/images/baddudes.png</image>
+		<rating>0.5</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40750" source="ScreenScraper.fr">
+		<path>./csilver.zip</path>
+		<name>Captain Silver (World)</name>
+		<desc>A side-scrolling game where you must slice enemies with your sword to rescue your beloved.</desc>
+		<image>/userdata/roms/mame/images/csilver.png</image>
+		<rating>0.4</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40827" source="ScreenScraper.fr">
+		<path>./darwin.zip</path>
+		<name>Darwin 4078 (Japan)</name>
+		<desc>The game takes place within a gigantic spaceship which has virtually infinite capacity because of its ability to manipulate time and space. The player must deal with enigmatic creatures called EVOL, which consist only of pure energy and need to keep themselves in capsules in order to maintain their existence in the world. 
+ 
+All of the characters in the game are designed to resemble microscopic organisms, both in their appearance and their quick, tricky movements. The player's ship undergoes over 10 types of transformations throughout the game, each with offensive and defensive maneuvers specific to their design. The sound effects used are minimal, but different types of sounds are used according to the type of shots or their speed. A sound resembling a long scream results when the player's ship is hit and returns to its weakest evolutionary state. 
+ 
+The player must progress through 16 different levels, defeating the boss at the end of each level. The player controls their ship using an 8-way joystick and 2 buttons (one button targets enemies in the air, and the other targets the enemies on the ground). The power of the player's ship increases as it evolves. 
+ 
+There are two broad categories that define how enemies attack. The first type only shoots in the forward direction at a constant speed, but the second type shoots bullets that travel at different speeds depending on its distance with the player's ship (the bullets travel quicker if the player is farther away, and slower if the player is close by). This makes it so that staying away from enemies will not necessarily make it easier to avoid attacks. The game's difficulty also does not change over time, and enemies do not become stronger as the player's ship evolves.</desc>
+		<image>/userdata/roms/mame/images/darwin.png</image>
+		<rating>0.5</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41648" source="ScreenScraper.fr">
+		<path>./hbarrel.zip</path>
+		<name>Heavy Barrel (US)</name>
+		<desc>Heavy Barrel is a 1987 overhead run and gun arcade game by Data East.
+
+Terrorists have seized the underground control complex of a nuclear missile site, and it is up to the player to infiltrate the base and kill the enemy leader. Players begin armed with a laser gun with unlimited ammunition and a limited supply of grenades. Improved weapons and grenade powerups are made available within the game, either in plain sight or within crates that must be unlocked using keys. Additionally, crates may contain orbs or one of the six pieces of the Heavy Barrel superweapon. Like SNK's Ikari Warriors, the original arcade version featured 8-way rotary joysticks.
+The name of the game is from an in-game weapon. The Heavy Barrel is found in six pieces and is an energy cannon capable of destroying any enemy in the game with a single shot (except the final enemy, and possibly one other boss that may have required two shots). The weapon has a wide arc of fire and can be fired as fast as the player's trigger finger permits, but after thirty seconds its use is exhausted, at which point the bearer reverts to his previous weaponry. Best used to get past tough bosses, the weapon could be built several times in a single game (probably three or four times). In a two-player game, whoever collects the sixth piece is equipped with the Heavy Barrel.</desc>
+		<image>/userdata/roms/mame/images/hbarrel.png</image>
+		<rating>0.6</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="42146" source="ScreenScraper.fr">
+		<path>./liberate.zip</path>
+		<name>Liberation</name>
+		<desc>Liberation © 1984 Data East.
+
+A vertically scrolling shoot'em up game.</desc>
+		<image>/userdata/roms/mame/images/liberate.png</image>
+		<rating>0.5</rating>
+		<releasedate>19840101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Shooter / Plane-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+	<game id="79250" source="ScreenScraper.fr">
+		<path>./perfrman.zip</path>
+		<name>Performan (Japan)</name>
+		<desc>A static-screen shoot'em up in which the player controls a robot named Performan that moves in four directions. The character's weapon is a Perfor-Boomerang that shoots in front of the player and a button allows the player to dig tunnels underground.</desc>
+		<image>/userdata/roms/mame/images/perfrman.png</image>
+		<rating>0.9</rating>
+		<releasedate>19850101T000000</releasedate>
+		<developer>Toaplan</developer>
+		<publisher>Toaplan</publisher>
+		<genre>Action-Shooter Small-Action / Labyrinth</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="42791" source="ScreenScraper.fr">
+		<path>./robocop.zip</path>
+		<name>Robocop (World revision 4)</name>
+		<desc>RoboCop - The Future of Law Enforcement is a single player, side-scrolling platform shoot-em-up based on the 1987 movie of the same name. The game's story mirrors that of the film, with former cop Murphy, now a half-human cyborg called 'RoboCop', on a quest to bring down the evil OCP corporation. 
+ 
+RoboCop features nine levels of action, with two of the game's nine stages being into-the-screen target ranges, in which players can try to accrue bonus points and earn extra health. Wooden crates occasionally bar RoboCop's progress, but these can be punched to remove them. Marked crates can be smashed to reveal one of three Weapon power-ups; Three-way Gun, Dual Laser and the incredibly powerful Cobra Gun. 
+ 
+The film's incidental music plays throughout the game and RoboCop's speech is sampled directly from the original film.</desc>
+		<image>/userdata/roms/mame/images/robocop.png</image>
+		<rating>0.6</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Data East</developer>
+		<publisher>Data East</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<playcount>4</playcount>
+		<lastplayed>20211224T001231</lastplayed>
+		<gametime>233</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+</gameList>

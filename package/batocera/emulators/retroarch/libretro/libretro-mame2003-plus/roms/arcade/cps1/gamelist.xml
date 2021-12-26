@@ -1,0 +1,454 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="37360" source="ScreenScraper.fr">
+		<path>./dino.zip</path>
+		<name>Cadillacs and Dinosaurs (World 930201)</name>
+		<desc>Cadillacs and Dinosaurs: The Arcade Game, known in Japan as Cadillacs: Dinosaurs of a New Century is a 1993 arcade game released by Capcom. It is a side-scrolling beat 'em up based on the comic book series Xenozoic Tales. The game was produced as a tie-in to the Cadillacs and Dinosaurs animated series which was aired during the same year the game was released.</desc>
+		<rating>0.75</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Beat'em Up</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/dino.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="37358" source="ScreenScraper.fr">
+		<path>./captcomm.zip</path>
+		<name>Captain Commando (World 911202)</name>
+		<desc>Captain Commando is set in a crime-ridden future in the year 2026, where a superhero named Captain Commando, assisted by his three faithful Commando Companions rise up to protect the Earth and all the Galaxy from a gang of super-powered criminals.</desc>
+		<rating>0.9</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Beat'em Up</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/captcomm.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="37359" source="ScreenScraper.fr">
+		<path>./cawing.zip</path>
+		<name>Carrier Air Wing (World 901012)</name>
+		<desc>Carrier Air Wing / U.S. Navy is a horizontally-scrolling shoot-em-up for one or two players set in the 1990s, a decade of great change marked by growing friendships between old enemies and never before seen levels of co-operation between powerful nations of the world. However, in 1997, using new weapons designed in secrecy, the Middle Eastern country of 'Rabu' threatens to destroy this new and fragile peace.  
+ 
+Players chose to pilot any one of three different jet fighters and must battle their way through ten enemy-packed stages. Each fighter has a fuel bar which is full at the start of each stage but gradually decreases, additional fuel is lost each time the fighter takes damage from an enemy.</desc>
+		<rating>0.85</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/cawing.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41078" source="ScreenScraper.fr">
+		<path>./dynwar.zip</path>
+		<name>Dynasty Wars (USA, B-Board 89624B-?)</name>
+		<desc>This game is a side-scrolling beat-em-up based on Japanese manga books of the same name and is a re-enactment of the historical battles between the Kingdom of Shu and the Yellow Turban rebels. Up to two players assume the roles of one of the four Chinese generals riding on horseback whose goal is to wipe out the 'Huang Ching', the organization responsible for the unrest of the Han Dynasty, and to eventually defeat the tyrant, Dong Zhuo.</desc>
+		<rating>0.8</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Beat'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/dynwar.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="37362" source="ScreenScraper.fr">
+		<path>./ffight.zip</path>
+		<name>Final Fight (World, set 1)</name>
+		<desc>Final Fight can be played by up to two players simultaneously, with each player controlling a different character. Before the game begins, the player chooses between the three main characters, Guy, Cody, and Haggar, each with his own fighting style and attributes. Guy is the weakest but has faster attacks, Haggar is the strongest but also the slowest, and Cody has all-round attributes.
+
+Final Fight consists of six stages or "rounds", as well as two bonus rounds. Each round takes place in a different section of Metro City such as the Slums and the Subway, with most rounds featuring more than one level. At the end of each round the player will face a boss character unique to that round.</desc>
+		<rating>0.8</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Beat'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ffight.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="37363" source="ScreenScraper.fr">
+		<path>./forgottn.zip</path>
+		<name>Forgotten Worlds (World, newer)</name>
+		<desc>The planet used to be beautiful, with gorgeous cities and gleaming countrysides. Until the Aliens attacked! With fire, bombs, and napalm they devastated the world! They made the planet so abominable that it became an outcast in the universe - the Forgotten World. Until you, the Nameless One, appear. You're a Super Warrior of incredible power and energy. You make it your business to reclaim the panet for its rightful owners - the Human Beings!</desc>
+		<rating>0.65</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Shoot'em up / Horizontal-Shoot'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/forgottn.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="41441" source="ScreenScraper.fr">
+		<path>./ghouls.zip</path>
+		<name>Ghouls'n Ghosts (World)</name>
+		<desc>3 years after the events of the last game monsters and demons have returned and a beam of light struck through Princess Prin Prin taking her soul. Now its up to the knight Arthur to defeat the evil Lucifer and restore the souls of Prin Prin and the people. 
+ 
+The gameplay for Ghouls 'n Ghosts is similar to that of Ghosts 'n Goblins. The player controls the knight Arthur, who must advance through a series of eerie levels and defeat a number of undead and demonic creatures in his quest to restore all the people killed by Lucifer (Loki in the English-language Mega Drive and Master System versions), including his beloved Princess Prin Prin, back to life. Along the way, Arthur can pick up a variety of weapons and armor to help him in his quest. While the core gameplay remains the same as its predecessor, the game now allows Arthur to fire directly upward and directly downward while in mid air. 
+ 
+By jumping in certain spots, players can cause a treasure chest to erupt from the ground. By firing his weapon at the chest, players may uncover new weapons, gold armor or an evil magician that changes Arthur into an elderly man or a helpless duck. The gold armor allows players to charge up the weapon to release a powerful magical attack. Each weapon has its own special attack, with the exception of the special weapon.</desc>
+		<rating>0.9</rating>
+		<releasedate>19880101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Platform-Platform / Fighter Scrolling</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ghouls.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="42020" source="ScreenScraper.fr">
+		<path>./knights.zip</path>
+		<name>Knights of the Round (World 911127)</name>
+		<desc>Knights of the Round is an arcade game released by Capcom in 1991. A side-scrolling beat 'em up based loosely on the legend of King Arthur and the Knights of the Round Table, the game features an role-playing video game-like level advancement system, with fighters getting new weapons and armour as they advance through the game, however the player can not choose how to upgrade his/her character - the level up system is static.</desc>
+		<rating>0.75</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Beat'em Up</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/knights.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="57920" source="ScreenScraper.fr">
+		<path>./msword.zip</path>
+		<name>Magic Sword: Heroic Fantasy (World 900725)</name>
+		<desc>The land has been cast in darkness by Drokmar, who has been corrupted by the Black Orb; an artefact that promises immortality to anyone who comes under the influence of the orb's powerful sorcery. Tw</desc>
+		<rating>0.9</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/msword.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="78892" source="ScreenScraper.fr">
+		<path>./megaman.zip</path>
+		<name>Mega Man: The Power Battle (CPS1, USA 951006)</name>
+		<desc>Have you ever pictured a Rockman or Megaman game that allows to skip all the platform elements and just grapple against the bosses? That's pretty much the main idea in this game! Choose from Rockman/Megaman, Protoman or Bass and battle against classic bosses in the series. Features great 2-D graphics, solid control, and a nice use of strategy (since the right order of weapons will rid you of specific enemies in no time!).</desc>
+		<rating>0.75</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Fight-Fight /  Co-op</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/megaman.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="37371" source="ScreenScraper.fr">
+		<path>./mtwins.zip</path>
+		<name>Mega Twins (World 900619)</name>
+		<desc>The game features two twins who are attempting to re-take control of their land, Alurea, after a monster unexpectedly attacks, destroying everything in its path. The people of Alurea have lived in peace for a thousand years and have forgotten how to fight, yet the land's only survivors, the twin sons of the king, must take up the challenge and return their kingdom to its former glory. The two twins, aged around 15 at the time the game takes place, venture forth in search of a legendary stone known as "Dragon Blue Eyes", which is rumored to be able to put everything back to rights.</desc>
+		<rating>0.8</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Platform-Platform / Fighter Scrolling</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mtwins.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="78903" source="ScreenScraper.fr">
+		<path>./mercs.zip</path>
+		<name>Mercs (World 900302)</name>
+		<desc>The US faces a grave crisis! The former president has been kidnapped by a group of revolutionaries while on a trip on Central Africa meant to promote world peace. Take control of three highly skilled anti-terrorist soldiers and venture through enemy lines to save the former president &amp; annihilate the rebel army in the process. Features solid graphics &amp; sound, plenty of weapons &amp; vehicles to use and hulking bosses to defeat.</desc>
+		<rating>0.9</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Shoot'em Up</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/mercs.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37367" source="ScreenScraper.fr">
+		<path>./mbombrd.zip</path>
+		<name>Muscle Bomber Duo : Ultimate Team Battle (World 931206)</name>
+		<desc>Professional wrestling experienced a sudden increase in popularity during the early 1980s, where many professional wrestling organizations were started all over the world. A severe rivalry existed among the organizations. 
+ 
+In order to resolve this conflict, 8 organizations combined to form the Capcom Professional Wrestling Association (CPWA), led by Victor Ortega, the CPWA?s first champion. 
+ 
+One day, Ortega suddenly vanished. He was considered to be the axis of the sport and his unexpected disappearance caused the CPWA to enter an age of confusion and disorder. The BPWA, a dark underground wrestling organization, chose to take advantage of this opportunity and began moving. With "Fighters of Muscle Bomber = Destiny" as the theme, the CPWA chief executives decided to hold a world tour called the ?Crash Carnival,? to decide the new king of the CPWA. 
+ 
+The gong that determines the new ?Master of Muscle Bomber? is sounded?</desc>
+		<rating>0.8</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Sports-Sports / Wrestling</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/mbombrd.png</image>
+		<genreid>1536</genreid>
+	</game>
+	<game id="37372" source="ScreenScraper.fr">
+		<path>./nemo.zip</path>
+		<name>Nemo (World 901130)</name>
+		<desc>One night, as Nemo sleeps, he is visited in a dream by the King of Slumberland, who invites Nemo to come and play with the King's daughter, the Princess. Nemo finds himself unable to find the Princess however, so he and 'Flip', a strange companion who also turns up in the dream, decide to explore Slumberland and find the king.
+
+Nemo is a colourful and abstract platform shoot-em-up set in the dream world of Slumberland, a surreal world in which childrens' toys are running amok and must be destroyed. Nemo is armed with a magical staff that emits a burst of magic to destroy the many enemies, some of which require multiple hits. A number of power-ups also appear at regular intervals to aid Nemo in his quest through seven tough stages.</desc>
+		<rating>0.9</rating>
+		<releasedate>19900101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/nemo.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="37373" source="ScreenScraper.fr">
+		<path>./pang3.zip</path>
+		<name>Pang! 3 (Euro 950601)</name>
+		<desc>Pang! 3 is the second sequel to the superb 1989 original, Pang! 3 retains the same gameplay of its predecessors but adds vastly improved graphics and a choice of three difficulty levels; Beginner, Normal and Panic. On both the 'Normal' and 'Panic' skill levels, players can choose from 4 different playable characters; each possessing different strengths and weaknesses, such as a double harpoon or quick shots. On the beginner level, players can only use the Mexican character. 
+ 
+Another notable difference is in the game's use of backdrops: instead of the world landmarks of the first two games, Pang! 3 features classical works of art in the form of paintings and sculptures.</desc>
+		<rating>0.85</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Mitchell</developer>
+		<publisher>Capcom</publisher>
+		<genre>Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pang3.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="37374" source="ScreenScraper.fr">
+		<path>./pnickj.zip</path>
+		<name>Pnickies (Japan 940608)</name>
+		<desc>A falling blocks game released only to arcades. Like-colored blocks merge together and more points are awarded for larger masses.</desc>
+		<rating>0.7</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pnickj.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="37379" source="ScreenScraper.fr">
+		<path>./slammast.zip</path>
+		<name>Saturday Night Slam Masters (World 930713)</name>
+		<desc>A 1-on-1 fighting game in which players choose from 10 different wrestlers and take to the ring to try and defeat their larger-than-life opponents. Each wrestler has an assortment of moves, including his own special 'super slam'. The object of the game is to win and defend the championship by pinning or putting a submission hold on your opponent.</desc>
+		<rating>0.9</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Sports / Wrestling-Sports</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/slammast.png</image>
+		<genreid>1536</genreid>
+	</game>
+	<game id="37377" source="ScreenScraper.fr">
+		<path>./sf2ce.zip</path>
+		<name>Street Fighter II' : Champion Edition (World 920513)</name>
+		<desc>From the corners of the globe come twelve of the toughest fighters to ever prowl the streets. Choose your champion and step into the arena as one of the eight original challengers or as one of the four Grand Masters! Pound your opponent as Balrog and knock them out for the count. Tower over your prey as Sagat and daze them with your awesome Tiger Shot. Slash your opponent with Vega's claw and send them running for cover. Or strike fear into your enemies as M. Bison, the greatest Grand Master of them all!</desc>
+		<rating>0.9</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sf2ce.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="37378" source="ScreenScraper.fr">
+		<path>./sf2hf.zip</path>
+		<name>Street Fighter II' : Hyper Fighting (World 921209)</name>
+		<desc>Street Fighter II' - Hyper Fighting is the second SFII follow-up. Here's what's new:  
+Gameplay is SIGNIFICANTLY sped up to intensify the pace of the game.  
+More special moves (ie. Chun Li's fireball, Dhalsim's Yoga Teleport) are added for each character except for M. Bison.  
+New color schemes are added for each character (but the color schemes for the stage backgrounds are still the same as they were for Champion Edition).  
+The addition of mid-air special moves for Chun Li, Ryu and Ken are introduced.  
+Platform graphics (resembling the medal ceremonies in the Olympics) are added to each character's ending, featuring the character you completed the game with at the first-place platform, M. Bison at the second-place platform, and Sagat at the third-place platform. The musical setting for this display is the music from the home stage of the character standing on the 1st-place platform (If you completed the game with Sagat or M. Bison, the one you used stands on the 1st-place platform, the other one on the 2nd-place platform, and Vega occupies the 3rd-place platform).</desc>
+		<rating>0.85</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sf2hf.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="42982" source="ScreenScraper.fr">
+		<path>./sf2.zip</path>
+		<name>Street Fighter II : The World Warrior (World 910522)</name>
+		<desc>GET READY TO RUMBLE!
+
+From across the globe comes eight of the wildest fighters the world has ever known. Choose your champion, gather your courage and prepare to battle your opponents in a bare knuckle brawl. Face Ken and his devastating "Dragon Punch"! Watch the temperature rise as Dhalsim incinerates you with his mystical Yoga Flame! Hear your spine crack as Zangief smashes you to the pavement with his spinning pile driver! Cover your ears as Guile breaks the sound barrier with the awesome power of the Sonic Boom!
+
+Annihilate your competition and claim the right to test your skills against the bone-crushing power of the Grand Masters! Can you survive? Can Anyone?</desc>
+		<rating>0.85</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Fight-Fight / Versus</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sf2.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="64254" source="ScreenScraper.fr">
+		<path>./sfzch.zip</path>
+		<name>Street Fighter Zero (CPS Changer, Japan 951020)</name>
+		<desc>The game introduces several new features, expanding on the Super Combo system previously featured in Super Street Fighter II Turbo, with graphics drawn in the same cartoonish style Capcom employed in Darkstalkers and X-Men: Children of the Atom.[2][3] The plot of Street Fighter Alpha is set after the original Street Fighter but before Street Fighter II and thus the game features younger versions of established characters, as well as characters from the original Street Fighter and Final Fight, and a few who are new to the series.</desc>
+		<rating>0.9</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Fight / 2D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sfzch.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="37380" source="ScreenScraper.fr">
+		<path>./strider.zip</path>
+		<name>Strider (USA, B-Board 89624B-2)</name>
+		<desc>Strider is a multi-directional scrolling platform beat-em-up in which the player takes control of 'Strider Hiryu', a ninja-style warrior who must defeat a legendary being known as 'Grandmaster Meio'.  
+ 
+Set in a dystopian future in the year 2048, Meio has been watching Earth from his own distant galaxy and has created a space station (known as 'The Third Moon') between Earth and its moon in order to rule over the Human race. </desc>
+		<rating>0.85</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/strider.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="37366" source="ScreenScraper.fr">
+		<path>./kod.zip</path>
+		<name>The King of Dragons (World 910805)</name>
+		<desc>The King of Dragons is a 1991 side-scrolling hack and slash video game by Capcom that allows players to choose from five characters (Elf, Wizard, Fighter, Cleric, and Dwarf) in order to travel through the kingdom of Malus and defeat the monsters that have taken over, as well as their leader, the red dragon Gildiss. Like Capcom's Knights of the Round, it features a level advancement system, allowing character attributes to be upgraded as players progress through the game. The setting is very similar to that of Dungeons &amp; Dragons and other medieval fantasy worlds, with familiar monsters such as Orcs, Gnolls, Harpies, Wyverns, Cyclopes, and Minotaurs.
+
+The game was ported to the Super NES and released in 1994. An emulated version of the game was released as part of Capcom Classics Collection Vol. 2 and Capcom Classics Collection: Reloaded.</desc>
+		<rating>0.6</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Fight-Fight / 2.5D-Beat'em Up</genre>
+		<players>1-3</players>
+		<image>/userdata/roms/mame/images/kod.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="39873" source="ScreenScraper.fr">
+		<path>./1941.zip</path>
+		<name>1941: Counter Attack (World 900227)</name>
+		<desc>The goal is to shoot down enemy airplanes and collect weapon power-ups (POW). One is only able to perform three loops per level and a bonus is awarded at the end of the level for unused loops. Player 1 uses a P-38 Lightning and Player 2 uses a Mosquito Mk IV. The game shifts from the original Pacific Front setting with that of the Western Front.
+
+The game consists of six levels.
+
+It was the first shoot 'em up to add +1 to the score when a continue is used.[1]</desc>
+		<image>/userdata/roms/mame/images/1941.png</image>
+		<rating>0.8</rating>
+		<releasedate>19900201T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="37357" source="ScreenScraper.fr">
+		<path>./3wonders.zip</path>
+		<name>Three Wonders (World 910520)</name>
+		<desc>Three Wonders contains three games from which a player may choose: 
+ 
+Midnight Wanderers: Quest for the Chariot - A platform game that sees the player control a hobbit named Lou and his traveling companion, Siva, to run, climb, and shoot at enemies. 
+Chariot: Adventure through the Sky - A shoot 'em up game featuring the characters from Midnight Wanderers, but in a Gradius-esque game. 
+Don't Pull - A puzzle game similar to games like the Eggerland series, Pengo and Capcom's own puzzle game Pirate Ship Higemaru. It involves the player controlling either a rabbit named Don (Player 1) or a squirrel called Pull (Player 2), pushing blocks to crush monsters.</desc>
+		<image>/userdata/roms/mame/images/3wonders.png</image>
+		<rating>0.7</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Compilation-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="37375" source="ScreenScraper.fr">
+		<path>./punisher.zip</path>
+		<name>The Punisher (World 930422)</name>
+		<desc>A Capcom arcade beat-em-up game similar to games like Double Dragon featuring the Marvel character The Punisher. Nick Fury is also a playable character in this game.</desc>
+		<image>/userdata/roms/mame/images/punisher.png</image>
+		<rating>0.85</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Beat'em Up</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+	<game id="43837" source="ScreenScraper.fr">
+		<path>./unsquad.zip</path>
+		<name>U.N. Squadron (USA)</name>
+		<desc>U.N. Squadron / Area 88 is a horizontally-scrolling shoot-em-up and is based on the Manga series of the same name. The game features characters from the original Manga and their mission is to battle their way through enemy-packed levels to stop a terrorist group known as 'Project 4'.</desc>
+		<image>/userdata/roms/mame/images/unsquad.png</image>
+		<rating>0.7</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="37382" source="ScreenScraper.fr">
+		<path>./varth.zip</path>
+		<name>Varth: Operation Thunderstorm (World 920714)</name>
+		<desc>Varth: Operation Thunderstorm is an arcade game in the vertical scrolling shooter genre, published in 1992. The game did not see a console port following its initial release, but 14 years later Digital Eclipse Software would port the game onto the PlayStation 2, PSP and Xbox as part of the Capcom Classics Collection Vol. 2.</desc>
+		<image>/userdata/roms/mame/images/varth.png</image>
+		<rating>0.7</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="37383" source="ScreenScraper.fr">
+		<path>./willow.zip</path>
+		<name>Willow (World)</name>
+		<desc>Willow is a sideways scrolling platform shoot-em-up game loosely based upon the movie of the same name. Players take on the role of one of two characters: Willow Ufgood or Madmartigan. The hero's mission is to rescue the baby Elora Danan from the evil Queen Bavmorda and bring her back safely. If the quest fails, the Queen will plunge the world into darkness and chaos. 
+ 
+The game consists of 6 levels, each representing a scene from the movie. Defeated enemies drop gold coins that can be collected by the player. In addition, each level is littered with locked treasure chests that can be shot open and the treasure within collected. The gold can be used to purchase a number of weapons and character power-ups from a nearby shop (represented on screen by a wise old man). All power-ups will stay with the player until all lives are lost and the game is over.</desc>
+		<image>/userdata/roms/mame/images/willow.png</image>
+		<rating>0.8</rating>
+		<releasedate>19890101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Lucasfilm Games</publisher>
+		<genre>Platform / Shooter Scrolling-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="44111" source="ScreenScraper.fr">
+		<path>./wof.zip</path>
+		<name>Warriors of Fate (World 921031)</name>
+		<desc>Warriors of Fate is a side-scrolling beat 'em up produced by Capcom, first released as a coin-operated arcade game in 1992 and later ported to the Sega Saturn and Sony PlayStation. It is Capcom's third game based on the Tenchi wo Kurau manga, following Dynasty Wars and Destiny of an Emperor.</desc>
+		<image>/userdata/roms/mame/images/wof.png</image>
+		<rating>0.6</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Beat'em Up</genre>
+		<players>3</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>263</genreid>
+	</game>
+</gameList>

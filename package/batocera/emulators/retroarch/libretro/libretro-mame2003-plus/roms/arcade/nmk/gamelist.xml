@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="42635" source="ScreenScraper.fr">
+		<path>./quizpani.zip</path>
+		<name>Quiz Panicuru Fantasy</name>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<publisher>NMK</publisher>
+		<genre>Quiz / Japanese-Quiz</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/quizpani.png</image>
+		<genreid>3328</genreid>
+	</game>
+	<game id="152601" source="ScreenScraper.fr">
+		<path>./raphero.zip</path>
+		<name>Rapid Hero</name>
+		<desc>A totally awesome but fairly obscure shooting game about chasing a mech through space, and every time you encounter him he seemingly has bigger and better equipment. Awesome backgrounds and bosses adds to make this just too awesome.</desc>
+		<releasedate>19940101T000000</releasedate>
+		<developer>NMK</developer>
+		<publisher>NMK</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/raphero.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="42862" source="ScreenScraper.fr">
+		<path>./sabotenb.zip</path>
+		<name>Saboten Bombers (set 1)</name>
+		<desc>A platform game with gameplay similar to Snow Bros. and Bubble Bobble. 
+ 
+Saboten Bombers is a single screen platform game. The gameplay consists of throwing bombs at the enemies, and avoiding being hit by the enemy bombs. There are a variety of enemies and colorful backgrounds. The game has over 50 levels, and also a versus mode. The game has many collectables, the most notable of which is the cake which gives the player an extra life after collecting 8 pieces.</desc>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sabotenb.png</image>
+		<genreid>257</genreid>
+	</game>
+	<game id="43536" source="ScreenScraper.fr">
+		<path>./tdragon.zip</path>
+		<name>Thunder Dragon (8th Jan. 1992, unprotected)</name>
+		<desc>The players controls a futuristic helicopter through 8 stages with an end boss at the end of each stage. Enemies include futuristic vehicles, space craft, mechs. The players have a standard weapon and special screen clearing bombs. The standard weapon can be powered up with missiles, wide shot, lasers or heavy fire by picking up icons labeled 1 through 4.</desc>
+		<rating>0.6</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>NMK</developer>
+		<publisher>NMK</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tdragon.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43537" source="ScreenScraper.fr">
+		<path>./tdragon2.zip</path>
+		<name>Thunder Dragon 2 (9th Nov. 1993)</name>
+		<desc>The game uses variable rate scrolling (the screen scrolls at different speeds or not at all), and is played from a top-down view. Unlike space shooters, Thunder Dragon 2 is played in-atmosphere on a single world with contemporary airplanes. 
+The game contains eight stages, with popcorn enemies and ships with varying degrees of durability throughout. Each stage culminates in a boss fight, preceded by a warning. The player chooses between two different ships, a slow but powerful ship on the player 1 side, and a fast but weak ship on the player 2 side. Scoring is accomplished through enemy destruction, accumulation of medals dropped by enemies, and special bonus awards for completing specific tasks.</desc>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>NMK</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/tdragon2.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="43906" source="ScreenScraper.fr">
+		<path>./valtric.zip</path>
+		<name>Valtric</name>
+		<desc>The player controls a space ship in eight directions through four different overhead view stages, and is able to shoot in the direction the space ship faces. The space ship drop bombs vertically above the ship and the player can pick up power-ups that enhance the ship weapons, as well as attach options that fire in a direction depending on where the option was attached. The player can avoid danger and obstacles by pushing the ascend button.  
+ 
+The Enemies consist of a infinitely respawning smaller hordes of moving enemies, stationary cannons, and large bosses enemies, you must destroying all the enemies to clear the stage and complete the mission.</desc>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>NMK</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shooter / Vehicle, Vertical-Shooter</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/valtric.png</image>
+		<genreid>1028</genreid>
+	</game>
+	<game id="37657" source="ScreenScraper.fr">
+		<path>./zedblade.zip</path>
+		<name>Zed Blade</name>
+		<desc>You and/or a friend must choose one of three characters to play as, each with different speeds at which they control their ships. Then select three weapons to use for the front and back of your ship. During play, you must travel to every planet in the solar system, and defeat the various enemy ships and the boss near the end of the planet. Your weapons can be upgraded during the battle, and you can also collect HyperBombs if you want to do maximum damage. Contains a nice soundtrack reminiscent of early 1990s "rave" music.</desc>
+		<rating>0.75</rating>
+		<releasedate>19940913T000000</releasedate>
+		<developer>Saurus</developer>
+		<publisher>SNK</publisher>
+		<genre>Shoot'em up / Horizontal-Shoot'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/zedblade.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="63236" source="ScreenScraper.fr">
+		<path>./neogeo.zip</path>
+		<name>ZZZ(notgame):Neo-geo</name>
+		<releasedate>19900101T000000</releasedate>
+		<developer>SNK</developer>
+		<publisher>SNK</publisher>
+		<genre>Compilation</genre>
+		<image>/userdata/roms/mame/images/neogeo.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game id="40056" source="ScreenScraper.fr">
+		<path>./argus.zip</path>
+		<name>Argus</name>
+		<desc>While it borrows heavily from the game which established the vertically scrolling shooter, "Xevious", Argus adds its own unique twists. The player's ship is always presented in the center of the screen, and as the player moves left and right, the ground actually scrolls in the opposite direction. The player can continue scrolling all the way in one direction and end up back where he or she started. 
+ 
+Other new concepts include walls of mazes that float in the air which may be optionally traveled through. Certain ground targets provide power-ups or special weapons, but they must be bombed 3 times in order to earn them. A boss sequence occurs at the end of each stage. The boss has one infrequently exposed weak spot that only takes one bomb to destroy, but the boss will leave after an allotted time if the player does not succeed. There is a landing sequence after the boss fight that must be successfully maneuvered for bonus points. And finally, the ship receives a new weapons at each stage (5 distinct combinations which cycle).</desc>
+		<image>/userdata/roms/mame/images/argus.png</image>
+		<rating>0.7</rating>
+		<releasedate>19860101T000000</releasedate>
+		<developer>NMK</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="40244" source="ScreenScraper.fr">
+		<path>./bjtwin.zip</path>
+		<name>Bombjack Twin (set 1)</name>
+		<desc>Bomb Jack Twin is a direct sequel to the 1984 original and retains the same platform-based collect-the-bombs gameplay of its predecessor. 
+ 
+Changes over the original game include a slightly faster playing tempo and the option for simultaneous two-player action. As with the prequel, extra points and bonuses can be earned by collecting bonus coins and bombs with their fuses still lit. Bomb Jack Twin also retains the 'Powerball' feature of its predecessor which, when collected, freezes the level's enemies for several seconds, allowing them to be destroyed. 
+ 
+The way the sequel's levels are structured differs significantly from the original game. In "Bomb Jack", each screen was simply numbered sequentially and the background picture changed on every screen, but the stages in "Bomb Jack Twin" are grouped into 'rounds', each consisting of three screen layouts but retaining a single background picture for the duration of that round. 
+ 
+Another new addition is the bonus screen. This appears every couple of rounds and players must try to collect all bombs on the screen within a tight time limit to earn extra bonus points. There are no enemies on the bonus screens and the background is plain black. 
+ 
+As with the first game, "Bomb Jack Twin" takes place in different locations throughout the world. A map screen is displayed before the start of each new round showing the next location. The available locations are: Germany, Thailand, Nevada, Japan, England, Hong Kong and China.</desc>
+		<image>/userdata/roms/mame/images/bjtwin.png</image>
+		<rating>0.7</rating>
+		<releasedate>19930101T000000</releasedate>
+		<publisher>NMK</publisher>
+		<genre>Platform / Run Jump-Platform</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>257</genreid>
+	</game>
+	<game id="40412" source="ScreenScraper.fr">
+		<path>./butasan.zip</path>
+		<name>Butasan - Pig's &amp; Bomber's (Japan, English)</name>
+		<desc>Control a pig and blow up other pigs. The simple gameplay is as tasty as a bacon sandwich! Vegetarians beware! :)</desc>
+		<image>/userdata/roms/mame/images/butasan.png</image>
+		<rating>0.3</rating>
+		<releasedate>19870101T000000</releasedate>
+		<developer>NMK</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Shooter / Run and Gun-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+	<game id="40802" source="ScreenScraper.fr">
+		<path>./daireika.zip</path>
+		<name>Mahjong Daireikai (Japan)</name>
+		<image>/userdata/roms/mame/images/daireika.png</image>
+		<releasedate>19890101T000000</releasedate>
+		<publisher>Jaleco</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2048</genreid>
+	</game>
+	<game id="150141" source="ScreenScraper.fr">
+		<path>./ddealer.zip</path>
+		<name>Double Dealer</name>
+		<desc>Double Dealer is a Puzzle game with playing cards.</desc>
+		<image>/userdata/roms/mame/images/ddealer.png</image>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<lang>en</lang>
+		<region>us</region>
+	</game>
+	<game id="41325" source="ScreenScraper.fr">
+		<path>./gakupara.zip</path>
+		<name>Quiz Gakuen Paradise (Japan)</name>
+		<image>/userdata/roms/mame/images/gakupara.png</image>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>NMK</publisher>
+		<genre>Quiz / Japanese-Quiz</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>3328</genreid>
+	</game>
+	<game id="41594" source="ScreenScraper.fr">
+		<path>./gunnail.zip</path>
+		<name>GunNail (28th May. 1992)</name>
+		<desc>A vertically scrolling shoot 'em up.</desc>
+		<image>/userdata/roms/mame/images/gunnail.png</image>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="41610" source="ScreenScraper.fr">
+		<path>./hachamf.zip</path>
+		<name>Hacha Mecha Fighter (19th Sep. 1991, protected)</name>
+		<desc>A cutesy horizontal scrolling shooter from NMK.</desc>
+		<image>/userdata/roms/mame/images/hachamf.png</image>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<publisher>NMK</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="42769" source="ScreenScraper.fr">
+		<path>./riot.zip</path>
+		<name>Kamniari Kishi Riot</name>
+		<desc>Play as Paul or Bobby in this side-scrolling beat 'em up from Sega and Westone.</desc>
+		<image>/userdata/roms/mame/images/riot.png</image>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>Tecmo</developer>
+		<publisher>NMK</publisher>
+		<genre>Shooter / 3rd person-Shooter</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>256</genreid>
+	</game>
+</gameList>

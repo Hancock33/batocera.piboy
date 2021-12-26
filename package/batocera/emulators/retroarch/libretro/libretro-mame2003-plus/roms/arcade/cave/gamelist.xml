@@ -1,0 +1,481 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="37325" source="ScreenScraper.fr">
+		<path>./deathsml.zip</path>
+		<name>Deathsmiles (2007/10/09 MASTER VER)</name>
+		<desc>Windia, a young girl living in London, mysteriously vanishes after being drawn into a flash of light. 
+Awakening in the Otherworld, Windia arrives in a Western city reminiscent of the early 20th century, and is cared for by Dior, an elderly lord. Discovering there is no way home, Dior reveals to Windia that she is one of the 'lost children', those with magical powers chosen to protect the kingdom...</desc>
+		<rating>0.9</rating>
+		<releasedate>20070101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>AMI</publisher>
+		<genre>Shoot'em up / Horizontal-Shoot'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/deathsml.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37320" source="ScreenScraper.fr">
+		<path>./ddonpach.zip</path>
+		<name>DoDonPachi (International, Master Ver. 97/02/05)</name>
+		<desc>A vertical scrolling shoot 'em up developed by the Japanese developer Cave.</desc>
+		<rating>0.9</rating>
+		<releasedate>19970205T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>Atlus</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ddonpach.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37323" source="ScreenScraper.fr">
+		<path>./ddpdoj.zip</path>
+		<name>DoDonPachi DaiOuJou (Japan, 2002.04.05.Master Ver)</name>
+		<desc>The fourth game in the Donpachi series and the first to be ported to the PS2, courtesy of Arika.</desc>
+		<rating>0.85</rating>
+		<releasedate>20020101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>AMI</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/ddpdoj.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37327" source="ScreenScraper.fr">
+		<path>./donpachi.zip</path>
+		<name>DonPachi (US)</name>
+		<desc>An excellent vertically scrolling shoot'em up. The player assumes the role of a pilot who is sent by their squadron to fight their former allies until one side destroys the other, all of which is a part of a mission to strengthen the military power that controls each side. The player flies their selected fighter over 5 areas of various terrain, encountering a number of land, sea and air enemies. The player's ship has two modes of fire: by tapping the fire button, shots are fired; holding it down produces a concentrated vertical beam, but also reduces the ship's speed. 
+ 
+The player can choose one of 3 aircraft at the start of the game, or upon continuing: 
+Type A: A red (or yellow/orange, for player two) fighter, which fires a narrow stream of shots 
+Type B: A green (or purple, for player two) helicopter, which fires its main guns forward, but has side guns that rotate in the direction of movement 
+Type C: A blue (or black, for player two) fighter, which fires a wide, three-way spread of shots</desc>
+		<rating>0.95</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>Atlus</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/donpachi.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37332" source="ScreenScraper.fr">
+		<path>./esprade.zip</path>
+		<name>ESP Ra.De. (International, Ver. 98/04/22)</name>
+		<desc>ESP Ra.De. is a 1998 arcade game developed by Cave and published by Atlus. It is the first non-DonPachi game released by Cave. ESP Ra.De. received spiritual prequels in the form of the Espgaluda series; however, ESP Ra.De. is related to the Espgaluda series only by shared name and programmer Tsuneki Ikeda. 
+ 
+By 2018, Tokyo has reached its maximum extension, therefore falling prey of common problems such as overpopulation and criminality. For this reason, an artificial island, aptly named Tokyo-2, is created just offshore, thanks to the support of the shady "Yaksa" corporation, led by elusive billionaire Garra Ono, whose ties with the modern incarnation of Yakuza have not been proven. Another source of instability is given by the rising number of humans exhibiting extrasensory perception, the so-called ESPers, who are constantly hunted down by the Japanese Police Force. Unknown to everyone, Garra herself is an extremely powerful ESPer, bent on using her influence over the government and military to replace every living being in the city with clones (disturbingly enough, these ESPers take the form of a 10 years old girl, named "Alice" and implied to originate from Garra's own DNA). Just as her plans begin to unfold, three children are forced to take action, each one for his or her own personal motives. 
+ 
+The story takes place in December, during a 24-hour arc; each character has a specific stage which initiates his or her storyline, culminating with the final encounter.</desc>
+		<rating>0.8</rating>
+		<releasedate>19980101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>Atlus</publisher>
+		<genre>Shoot'em up / Vertical-Shoot'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/esprade.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37330" source="ScreenScraper.fr">
+		<path>./espgal.zip</path>
+		<name>Espgaluda (2003/10/15 Master Ver)</name>
+		<desc>A great vertically scrolling manic shooter.  
+ 
+In an otherwise peaceful world, the Shinra Empire began conquering nearby nations one by one to expand their territory gradually. Meanwhile, in the Shinra weapons lab, the Espgaluda project produced two successful prototypes: Agaha and Tateha. Fearing for their future, the project's head scientist, Hiodoshi, escaped with the two prototypes to a nearby kingdom, but time after were found by Shinra's troops and Hiodoshi was killed by the attack of the imperial army, the power of the galuda has awaken.  
+ 
+You have the option of controlling one of two siblings each with different skills, Ageha  faster but with narrower shooting capabilities or Tateha slower but with a wider attack. As you fly through the various stages various mechanical enemies attack with a high number of bullets, often nearly filling the screen. Aside from the regular shots, Ageha and Tateha also have additional abilities which help the player navigate through the numerous bullets. The first is a guard barrier; when activated the player is immune to collisions and as a bonus when the barrier button is released a more powerful laser shot is fired. A meter at the bottom of the screen indicates how much power is left in the barrier. The second ability is called the Kakusei mode; when this mode is activated your character gender is altered and is able to fire a more powerful shot. More importantly, when this mode is activated all of the enemies and their bullets slow down considerably while the players speed remains the same making it easier to navigate through a tricky pattern of bullets. Activating Kakusei mode will rapidly deplete the players supply of green gems; since the number of gems isn't limitless the player may not be able to remain in Kakusei mode for long. When not in Kakusei mode additional gems can be collected by destroying the various enemies. If the player completely runs out of gems, enemy bullets begin travelling faster than usual. Another bonus in the game is gold inguts which greatly increase the players score. These are found when in Kakusei mode; when an enemy is destroyed, all of its bullets will turn into ingots which can be collected by the player.</desc>
+		<rating>0.85</rating>
+		<releasedate>20030101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>AMI</publisher>
+		<genre>Shoot'em up / Vertical-Shoot'em Up</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/espgal.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37331" source="ScreenScraper.fr">
+		<path>./espgal2.zip</path>
+		<name>Espgaluda II (2005/11/14 MASTER VER)</name>
+		<desc>Three years after the so-called "Great Shinra War" comes to a close, its impact has yet to fade: the formerly-prosperous nation of Soma, one of the invasion's targets, still struggles to recover. In the midst of all this, Ageha and Tateha, along with their mother, newly freed from her self-imposed bonds, have retreated into hiding here, hoping to finally obtain some measure of peace for themselves. Little do they know that the country's researchers have been combing through the wreckage of Jakou's empire, in search of the secret behind the "spirit engine" - once the device's inner workings are finally deciphered, Soma's royal family quickly commences its own quest for military dominance. The children of Project Espgaluda find themselves hunted down once again, and are forced back into battle - this time around, though, they're not quite so alone.</desc>
+		<rating>0.85</rating>
+		<releasedate>20050101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>AMI</publisher>
+		<genre>Shoot'em up / Vertical-Shoot'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/espgal2.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37333" source="ScreenScraper.fr">
+		<path>./feversos.zip</path>
+		<name>Fever SOS (International, Ver. 98/09/25)</name>
+		<desc>Planet Meruto, a well known powerful military force in the Milky Way, sends out a Flagship under the command of Admiral Gratze, to attack the earth in order to gain one of it's most desired raw materials in the Galaxy: Water 
+On Planet Fever, a small planet between Meruto and the Earth a base was planned to be installed, from there the attack vessels should start the invasion of Planet Earth. But before Admiral Gratze's plan was fullfilled, a mysterious wave appeared in space and confused the instruments of Meruto's fleet, and disrupted Admiral Gratze's love chat with his wife Irene Catharine. About this he got angry to such an extent that he forced his fleet to land on the source of this wave. So the wheel of fate began to spin...</desc>
+		<rating>0.8</rating>
+		<releasedate>19980101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>Nihon System</publisher>
+		<genre>Shoot'em up / Vertical-Shoot'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/feversos.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="0" source="ScreenScraper.fr">
+		<path>./futariblk.zip</path>
+		<name>futariblk</name>
+		<desc />
+		<releasedate />
+		<developer />
+		<publisher />
+		<genre />
+		<players />
+	</game>
+	<game id="37336" source="ScreenScraper.fr">
+		<path>./gaia.zip</path>
+		<name>Gaia Crusaders</name>
+		<desc>Gaia Crusaders is a one or two-player side-scrolling beat-em-up in which players must battle Satan and his army of demons that have captured and taken over the world. Players select a character from a choice of five combatants known as 'Elemental Warriors'. Each of the characters possesses either Wind strength, Fire strength, or a mix of the two.  
+ 
+The game has the standard punch and kick attack moves as well as magical special moves. Combos can be strung together by switching quickly between kicking and punching. Players can also perform a 'super attack' by pressing the jump, punch and kick buttons simultaneously, this hits many enemies at once but costs the player character some health. It's also possible to raise a shield by pressing jump and kick simultaneously. 
+ 
+At regular intervals coloured spheres appear, players can pick these up to gain a magical attack. The effects of the magic attack differs depending on the player character. If the magic matches the character's elemental attribute (fire, wind or both), they will gain a special, screen-clearing attack. Otherwise, they earn a powerful special attack.  
+ 
+In addition to the elemental spheres, there are two types of bombs that also appear, both of which detonate immediately once picked up. The first is an earthquake that hits all on-screen enemies and inflicts a large amount of damage. The second is a random bomb that sends out pillars of fire, hurting any enemies they come into contact with. There are also explosive boxes that can be kicked at enemies to keep them at bay. One last notable item is the sword, which functions much like weapons that can be found on the ground in many other beat 'em ups. A boss battle awaits players at the end of each stage. 
+ 
+Gaia Crusaders is heavily influenced by another scrolling beat-em-up, Capcom's 1989 classic, Final Fight and also, to a lesser degree, by Sega's Golden Axe (the latter being the use of the Magical Attack acting as a smart bomb). 
+ 
+</desc>
+		<rating>0.8</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>Noise Factory</developer>
+		<publisher>Noise Factory</publisher>
+		<genre>Fight / 2.5D-Fight-Beat'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/gaia.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="37337" source="ScreenScraper.fr">
+		<path>./guwange.zip</path>
+		<name>Guwange (Japan, Master Ver. 99/06/24)</name>
+		<desc>The story of Guwange is set during the Muromachi period of Japan. During this time, increasing numbers of people suffer possession by shikigami. Although the shikigami grant great spiritual powers, the strain inflicted on the host causes them to die exactly one year after possession. However, a legend has sprung up regarding Guwange, the malevolent god trapped in Mt. Gokumon (i.e. Hell Gate). If one possessed by a shikigami can gather talismans of the five Chinese elements?wood, fire, earth, metal, water?from five demons serving Guwange, then infiltrate Gokumon and slay Guwange, the shikigami will be destroyed and the one possessed will not suffer a premature death.</desc>
+		<rating>0.9</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>Atlus</publisher>
+		<genre>Shoot'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/guwange.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37338" source="ScreenScraper.fr">
+		<path>./hotdogst.zip</path>
+		<name>Hotdog Storm (International)</name>
+		<desc>Hot Dog Storm plays like any typical vertical scrolling shoot 'em up from the early-to-mid 90's. The player takes the role of the pilot of a futuristic space fighter, waging war against a horde of giant robots, tanks, mechs, and massive gunships. Similar to games like Strikers 1945 or Raiden, enemies often attack with extremely fast volleys of projectiles, in contrast to proto-bullet hell games such as DonPachi that started appearing the previous year. 
+The game has five stages, each ending in a boss fight. Bosses have destructible parts that can be blown apart piece by piece for more points, and each boss also has a telegraphed super weapon that fires periodically and must be avoided.  
+The game never explains its unusual title.</desc>
+		<rating>0.75</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>Cave</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/hotdogst.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37339" source="ScreenScraper.fr">
+		<path>./ibara.zip</path>
+		<name>Ibara (2005/03/22 MASTER VER..)</name>
+		<desc>The time is the 19th century, excited with the development of the steam engine. The Northern European country of Edelweiss is a land which especially excels in the mechanical industry with their precise techniques. Their growth is amazing. However, when one least desires it, dark clouds always appear. 
+ 
+That morning there was a cold, awkward feeling in the air. The once called Professor Teresa Rose gives a fearless smile. "Let's destroy this filthy land and it's people. We must make this world beautiful. Yes... then we'll make the entire surface a lovely rose garden." 
+ 
+"We'll make you beautiful." 
+ 
+Teresa began her attack along with five other women and their fortress which resembled a lump of knives. Under the Rose Garden Emblem, the nails of an eerily laughing iron man destroy buildings, and the roars of a plane which covers the sky burn the Earth. The people's cries and the rising flames illuminate the fortress, as if it were a beautiful flower blossoming from scorched earth. 
+ 
+The Rose Garden's power was horrific, but the Edelweiss forces pressed through the desperate battle. Far from being surpressed, but in a worsening situation, the Emperor, not able to handle the situation, ordered into battle his Special Imperial Attack Unit, the Negotiators.  
+ 
+"Annihilate the Rose Garden with your ships!" 
+ 
+The "ships" which had been secretely readied, as if predicting they would have to stand up to a threat and had longed for this day to come, shone bright.</desc>
+		<rating>0.75</rating>
+		<releasedate>20050101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>AMI</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ibara.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="149544" source="ScreenScraper.fr">
+		<path>./ibarablka.zip</path>
+		<name>Ibara Kuro Black Label (2006/02/06 MASTER VER.)</name>
+		<desc>Gameplay in Ibara Kuro: Black Label is the closer to the Arrange mode found in the PlayStation 2 port of Ibara than the original version of the game. Like Arrange mode, players are able to switch weapons by pressing a button, although the ability to change the options formation has been removed. The rank bar is also now in the center of the screen. The controls are roughly the same as the original, with the addition of a button dedicated to rapid fire of the normal shot. Holding down the A button causes the player's ship to slow down, in addition to increasing its fire rate and making the ship's hitbox visible. Ibara Kuro: Black Label adds two important changes to the player's ships. 
+ 
+The first change is that the Silister Similis (Bond's ship) and Dio Spirossi (Dyne's ship) are no longer locked to the Player 1 and Player 2 sides, with both ships being selectable at the start of the game. After selecting your ship, players then select their ship type. The different ship types are the same as the ones previously only selectable by holding down certain button combinations when selecting your ship. They are listed in the game as A Type (default version), B Type (A button held ship), C Type (B button held variant), and D Type (variant selected by holding A + B). Each ship variant also has its speed, power, and bomb information displayed for that type when highlighted. Note that while both ships are selectable for either player, the characters themselves are still locked to their respective sides. The second change, is that any time the A button is not being held down, any nearby medals, power-ups, or other collectable items are sucked into your ship. This is a game-changer, making the game quite a bit easier than the regular Ibara, but also makes the game tons more fun, as you don't have to put your life on the line when trying to keep the medal chain going. The Dio Spirossi ship (the wide shot ship) can suck in items further away than the Silister Similis can.</desc>
+		<rating>0.75</rating>
+		<releasedate>20060101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>Cave</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ibarablka.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37341" source="ScreenScraper.fr">
+		<path>./ketb.zip</path>
+		<name>Ketsui: Kizuna Jigoku Tachi (2003/01/01 Master Ver)</name>
+		<desc>2054 (western calendar) 
+ 
+The continuous industrialization that started in 1900, finally led to unavoidable consequences in the middle of the 21st century. The waterlevel rose worldwide and threatened many coastal countries. So the shorelines had to be modified In order to save the human civilisation from drowning. It was a time of great confusion about the future, and nobody thought about war. Well, almost ... There was one company called EVAC corporation, who made a great profit from underhand productions and exports of weapon systems. When the United Nations discovered their illegal trades, they pointed EVAC to the global ban of weapon imports and exports, and asked them to stop their productions and to destroy their weapon facilities immediately. EVAC rejected all accusations and refused to take any actions. So a preventive war was started by the United Nations to stop the EVAC corporation.</desc>
+		<rating>0.9</rating>
+		<releasedate>20020101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>AMI</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/ketb.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37342" source="ScreenScraper.fr">
+		<path>./korokoro.zip</path>
+		<name>Koro Koro Quest (Japan)</name>
+		<desc>Dans un style RPG avec des graphismes de style fantasy, vous combattez des monstres aléatoires dans des batailles de deux dés a six faces. Si vous gagner vous pouvez encaisser ou passer à la prochaine bataille.</desc>
+		<rating>0.7</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>Takumi</developer>
+		<publisher>Takumi</publisher>
+		<genre>Various-Role playing games</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/korokoro.png</image>
+		<genreid>768</genreid>
+	</game>
+	<game id="37343" source="ScreenScraper.fr">
+		<path>./mazinger.zip</path>
+		<name>Mazinger Z (World)</name>
+		<desc>Vertical shoot'em up with 3 selectable characters: Mazinger Z, Great Mazinger and Grendizer.</desc>
+		<rating>0.65</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Dynamic PL</developer>
+		<publisher>Dynamic PL</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mazinger.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="63095" source="ScreenScraper.fr">
+		<path>./mmmbanc.zip</path>
+		<name>Medal Mahjong Moukari Bancho (2007/06/05 MASTER VER.)</name>
+		<desc>Medal Mahjong Moukari Bancho is a video game trilogy in the genre of competitive game titles. It was released for the Demul platform. It was the great  game franchise created by Developers, following this game series and is set in the same fictional universe as a prequel to the game franchise.One major difference between the human and robot characters is that the robot characters can blow up (or lose all their power) if they are worked too hard during a game. That can happen if you constantly make them dive for a ball, run extra bases, or even if they get hit by a pitch. Under no stress whatsoever, some robots, especially pitchers, will naturally run out of power as the game progresses. When this happens, they will lose all their abilities and be useless, both offensively and defensively.</desc>
+		<releasedate>20070101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>Cave</publisher>
+		<genre>Mahjong-Asiatic board game</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/mmmbanc.png</image>
+		<genreid>2048</genreid>
+	</game>
+	<game id="37344" source="ScreenScraper.fr">
+		<path>./metmqstr.zip</path>
+		<name>Metamoqester (International)</name>
+		<desc>Metamoqester is a 2D arcade fighting game, similar in concept to Red Earth or Monster Maulers. One or two players (there is a co-op mode) fight against big monsters in deadly duels. There are three different characters to choose from. The game uses four buttons - Weak Attack, Medium Attack, Strong Attack, and Shoot/Throw Weapon.</desc>
+		<rating>0.85</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Banpresto</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Fight-Fight /  Co-op</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/metmqstr.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="37345" source="ScreenScraper.fr">
+		<path>./mmpork.zip</path>
+		<name>Muchi Muchi Pork! (2007/ 4/17 MASTER VER.)</name>
+		<desc>The story features a trio of females from Batazuka City who have been transformed into pig-girls by the main antagonist, General Porkfillet. They ride flying motor bikes called "ketta machines", which are powered by pedaling.[7] 
+ 
+Very little story is shown in-game, besides a few comic-strip style images shown at the start, and a short ending sequence. As in Pink Sweets, many of the character names are puns on food.</desc>
+		<rating>0.8</rating>
+		<releasedate>20070101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>AMI</publisher>
+		<genre>Shoot'em up / Vertical-Shoot'em Up</genre>
+		<players>2</players>
+		<image>/userdata/roms/mame/images/mmpork.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37346" source="ScreenScraper.fr">
+		<path>./mushisama.zip</path>
+		<name>Mushihime-Sama (2004/10/12 MASTER VER.)</name>
+		<desc>In a different time than now... 
+ 
+A time when deserts spread across the Earth, 
+and arthropods with gigantic hard shells flourished. 
+ 
+The humans living in the shadows called these beasts 
+with shells who worshipped the god of the forest for Koujuu. 
+ 
+In a small part of that forest was the village of the humans. It was a land that was allowed go on surviving, by offering a sacrifice in the form of a 15 year old once every 200 years. 
+ 
+On the night of each sacrifice, a great number of shooting stars could be seen, which gave it the name "Hoshifuri Village". And living there was a bright princess. Her name was Reco.</desc>
+		<rating>0.8</rating>
+		<releasedate>20040101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>AMI</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mushisama.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37334" source="ScreenScraper.fr">
+		<path>./futari15a.zip</path>
+		<name>Mushihime-Sama Futari (2006/12/8 MASTER VER 1.54)</name>
+		<desc>A vertically shooting game, where players get a choice of characters. Each craft has a different ratio of speed to firepower. 
+ 
+The main characters in this version are 'Hiro', 'Kiniro', 'Palm' and 'Reco'.</desc>
+		<rating>0.85</rating>
+		<releasedate>20060101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>AMI</publisher>
+		<genre>Shoot'em up / Vertical-Shoot'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/futari15a.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37348" source="ScreenScraper.fr">
+		<path>./pinkswts.zip</path>
+		<name>Pink Sweets: Ibara Sorekara (2006/04/06 MASTER VER....)</name>
+		<desc>In Pink Sweets, the sixth and final Guardian in Ibara, did not die. Neither did any of the Rose sisters. Instead, they shifted from the dark side to the light.</desc>
+		<rating>0.7</rating>
+		<releasedate>20060101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>AMI</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pinkswts.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="145758" source="ScreenScraper.fr">
+		<path>./plegends.zip</path>
+		<name>Power Instinct Legends (US, Ver. 95/06/20)</name>
+		<desc>Otane Goketsuji, leader of the Goketsuji clan, was kidnapped. A new tournament was held to find a successor. Otane managed to arrive at the tournament to defend her title as clan leader against the winner of the tournament. Unfortunately to Otane, she was too tired to fight and was defeated by Kokuin Kanji! 
+ 
+After his victory in the Goketsuji tournament, Kanji thought that would be fun to test the strength of the Goketsuji family members, so he invited them for a new tournament.</desc>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Atlus</developer>
+		<publisher>Atlus</publisher>
+		<genre>Fight / Versus-Beat'em Up-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/plegends.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="37352" source="ScreenScraper.fr">
+		<path>./sailormn.zip</path>
+		<name>Pretty Soldier Sailor Moon (Ver. 95/03/22B, Europe)</name>
+		<desc>The game is a side-scrolling "beat-'em-up" game, one or two players pick their desired Senshi and travel through various stages defeating enemies. Items are sometimes dropped by enemies that can range from items that restore health, give extra points, or crystals that allow the Senshi to perform special attacks. Up to five crystals can be collected per player to power up the Senshi's special attacks. During the most difficult moments in battle, Tuxedo Mask will appear and throw a rose, which is a bonus to pick up and depart.</desc>
+		<rating>0.8</rating>
+		<releasedate>19950322T000000</releasedate>
+		<developer>Gazelle</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Beat'em Up-Fight / 2.5D-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/sailormn.png</image>
+		<genreid>263</genreid>
+	</game>
+	<game id="37404" source="ScreenScraper.fr">
+		<path>./progear.zip</path>
+		<name>Progear (USA 010117)</name>
+		<desc>In a time when the industrialization of the world had just begun, various inventions appeared and changed the life of the peaceful kingdom. One of them was a propeller that evolved from pure wind generation by using the created electricity to re-rotate it. It was called 'The Professional Gear', or just 'Progear'. This invention was the key to conquer the great wide open sky. Another discovery made the ancient dream of the immortal body come true. But it was affordable only by some wealthy elderly. They formed a new council called 'the Motorouin' and declared the current government as a corruptive and greedy establishment and that they want to correct it by a new educational system, in order to create a new race of man. So they built a military force to realize the first step of their plan, which was the takeover of the kingdom. The government decided to stop the aggression by putting it's own army in motion. It was a dreadful battle with many victims. But it was won by the Motorouin. This battle is mentioned in the books of history as 'The Punishment of the Sages'. 
+ 
+A group of young pilots, actually children whose families were killed in that war, finally decided to fight back. They secretly developed a new powerful weapon which adults were not able to use. They called it 'Gun Flyer' and installed it in all of their planes. The Storm of Progear was about to begin!</desc>
+		<rating>0.8</rating>
+		<releasedate>20010101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>Capcom</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/progear.png</image>
+		<genreid>260</genreid>
+	</game>
+	<game id="37355" source="ScreenScraper.fr">
+		<path>./uopokoj.zip</path>
+		<name>Puzzle Uo Poko (Japan)</name>
+		<desc>Uo Poko is a puzzle game for one or two players (co-operative). The aim is to clear the screen of coloured glass balls by dropping like-coloured balls down onto them. Connecting three or more like-coloured balls creates a chain reaction and causes them to disappear. 
+ 
+Balls are launched into the play area via a joystick controlled 'pinball-plunger' and as in Pinball, the further the plunger is pulled back, the further the coloured ball will travel. Mastering the strength and distance required is essential in order to drop each ball accurately onto its target. To allow players to learn how to use the plunger, the first two stages feature a guide line which shows exactly where a ball will drop. From the third stage onwards, players must use their judgement alone. 
+ 
+Bonus points are awarded if a stage is completed quickly enough. If too much time is taken, however, the bottom of the stage will start to rise, pushing the balls already in play towards the top of the screen. If the top of the screen is reached, the game is over. 
+ 
+Uo Poko features thirty stages of play.</desc>
+		<rating>0.85</rating>
+		<releasedate>19980101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>Jaleco</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/uopokoj.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="37347" source="ScreenScraper.fr">
+		<path>./mushitam.zip</path>
+		<name>Puzzle! Mushihime-Tama (2005/09/09.MASTER VER)</name>
+		<desc>A puzzle game with the same character from "Mushihime Sama".</desc>
+		<rating>0.8</rating>
+		<releasedate>20050101T000000</releasedate>
+		<developer>Cave</developer>
+		<publisher>AMI</publisher>
+		<genre>Puzzle-Game-Puzzle-Game / Equalize</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/mushitam.png</image>
+		<genreid>2816</genreid>
+	</game>
+	<game id="37353" source="ScreenScraper.fr">
+		<path>./theroes.zip</path>
+		<name>Thunder Heroes</name>
+		<desc>Thunder Heroes (c) 2001 Primetec Investments.  - TECHNICAL -  CAVE 1st Generation hardware  Main CPU : 68000 (@ 16 Mhz) Sound Chips : YMZ280B (@ 16.9344 Mhz)  Players : 2 Control : 8-way joystick Buttons : 4 =&gt; [A] Punch, [B] Kick, [C] Jump, [D] Special  </desc>
+		<rating>0.75</rating>
+		<releasedate>20010101T000000</releasedate>
+		<developer>Primetek Investments</developer>
+		<publisher>Primetek Investments</publisher>
+		<genre>Fight / 2.5D-Fight-Beat'em Up</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/theroes.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="37318" source="ScreenScraper.fr">
+		<path>./agallet.zip</path>
+		<name>Air Gallet (Europe)</name>
+		<desc>The player controls a fighter jet and shoot enemies in the air and on the ground, collects power-ups, and defeat bosses to advance levels. The player must collect four power ups to upgrade their weapon. There are four weapon types: L, a laser weapon, S, a support drone, M, a tracing missile, and F, gatling Fire, a spread-out vulcan bullet shot. 
+ 
+Four levels of power-ups are available for each weapon, however each level requires four power up tokens be collected. There are also two special "bomb" weapons available for collection - green Energy Spark for a screen-covering swarm of lower-power bombs and blue Thunder Drive for a narrower and more focused attack. The Energy Spark clears all bullets from the screen, while the Thunder Drive only clears bullets that actually touch the blast. This blast starts momentarily atop the player, but quickly moves forward a short distance and stays stationary for a few seconds before dissipating.</desc>
+		<image>/userdata/roms/mame/images/agallet.png</image>
+		<rating>0.7</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Gazelle</developer>
+		<publisher>Banpresto</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="37319" source="ScreenScraper.fr">
+		<path>./crusherm.zip</path>
+		<name>Crusher Makochan (Japan)</name>
+		<desc>Crusher Makochan is a little known project of Takumi (or Takumi Corporation, best known for shooting games like Giga Wing, Mars Matrix, etc.) The player must destroy elements of the set to win medals. These medals make it possible to buy improvements that allow you to advance in the game.</desc>
+		<image>/userdata/roms/mame/images/crusherm.png</image>
+		<rating>0.4</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>Takumi</developer>
+		<publisher>Takumi</publisher>
+		<genre>Fight</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+</gameList>

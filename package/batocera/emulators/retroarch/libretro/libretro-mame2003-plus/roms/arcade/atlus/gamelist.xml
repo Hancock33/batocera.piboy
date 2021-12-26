@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<gameList>
+	<provider>
+		<System>Mame</System>
+		<software>Skraper</software>
+		<database>ScreenScraper.fr</database>
+		<web>http://www.screenscraper.fr</web>
+	</provider>
+	<game id="42491" source="ScreenScraper.fr">
+		<path>./powerins.zip</path>
+		<name>Power Instinct (USA)</name>
+		<desc>Those of our clan inherit the fighting spirit of our bloodline "Goketsuji." The name responsible for the ongoing feud for control of the clan.
+
+As outlined in the family code, the bloodline must continue to grow even stronger and eliminate all those who are weak.
+
+The Goketsuji Clan is currently the 3rd wealthiest family in the world. As a result, there are many who seek control the clan and the family fortune.
+
+Some train endlessly building up their strength, others polish up their fighting skills with experience, and still others concentrate on their fighting spirit, all for control of the clan.
+
+Because there were so many fighters vying for control of the clan, Oshima, the 3rd Goketsuji Leader, declared the following to all:
+
+The clan will hold a fighting tournament every 5 years. 
+
+The winner of this "test of strength" tournament will assume immediate control of the Goketsuji clan until the next tournament, at which time the seat for control will be open once again. Any member with blood ties to the clan may enter. 
+
+- Decreed this day in the 14th year of the Taisho era - 
+
+And presently...</desc>
+		<rating>0.6</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Atlus</developer>
+		<publisher>Atlus</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/powerins.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="37351" source="ScreenScraper.fr">
+		<path>./pwrinst2.zip</path>
+		<name>Power Instinct 2 (US, Ver. 94/04/08)</name>
+		<desc>Oume Goketsuji, Leader of the Goketsuji clan for the last 60 years, finally was defeated by her younger sister, Otane, the day where she surpassed her older sister finally had arrived. 
+ 
+One night, Oshima Goketsuji unexpectedly appeared in front of Oume and offered her help to take revenge of Otane. 
+ 
+According to the rules of the clan, if the leader dies or quits, one new tournament should be held immediately to find a successor. 
+ 
+That same night Oshima and Oume sent their servants to dispose of Otane, so while Otane slept, she was kidnapped and thrown to the ocean. 
+ 
+Next day Kuroko found a letter supposedly written by Otane, where she declined to her right to be the leader of the clan. 
+ 
+One week later all the competitors from the previous tournament and other family members were convoked to be informed about Otane's decision and the beginning of a new tournament.</desc>
+		<rating>0.8</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Atlus</developer>
+		<publisher>Atlus</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/pwrinst2.png</image>
+		<genreid>262</genreid>
+	</game>
+	<game id="37547" source="ScreenScraper.fr">
+		<path>./prikura.zip</path>
+		<name>Princess Clara Daisakusen (J 960910 V1.000)</name>
+		<desc>A spin-off of the Power Instinct series, starring Clara. Unlike the main series which were fighters, Prikura Daisakusen is an isometric action/shooter.</desc>
+		<rating>0.6</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Atlus</developer>
+		<publisher>Atlus</publisher>
+		<genre>Action / Labyrinth-Beat'em Up</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/prikura.png</image>
+		<genreid>258</genreid>
+	</game>
+	<game id="79211" source="ScreenScraper.fr">
+		<path>./pclubj.zip</path>
+		<name>Print Club (Japan Vol.1)</name>
+		<desc> 
+Print Club is a small photo booth found at video game arcades in Japan. The Print Club machines produce these small photo stickers (about 2.5 x 2 cm, slightly smaller than a postage stamp) which feature a large variety of superimposed frames which compliment the subject's faces. 
+ 
+You just pay 300 yen, stand in front of a video monitor which shows your face, choose the desired frame, pose for the photo, then wait for a sheet of 16 photo stickers which the machine spits out in about a minute.  
+ 
+The image quality is not so high (this is probably part of the charm), but the sticker is so small that it really doesn't matter. People affix the stickers on personal articles like notebooks, cell phones, etc. But mainly, school girls collect them to show friends.</desc>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Atlus</developer>
+		<publisher>Atlus</publisher>
+		<genre>Various-Various / Print Club</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/pclubj.png</image>
+	</game>
+	<game id="79210" source="ScreenScraper.fr">
+		<path>./pclub2.zip</path>
+		<name>Print Club 2 (U 970921 V1.000)</name>
+		<desc>Print Club 2 (c) 1997 Atlus.  - TRIVIA -  Michael Jackson used to own this game (Seral number 848196). It was sold at the official Michael Jackson Auction on Apr. 24th, 2009.  - SOURCES -  Game's ROM.</desc>
+		<releasedate>19970101T000000</releasedate>
+		<developer>Atlus</developer>
+		<publisher>Atlus</publisher>
+		<genre>Various-Various / Print Club</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/pclub2.png</image>
+	</game>
+	<game id="79212" source="ScreenScraper.fr">
+		<path>./pclubpok.zip</path>
+		<name>Print Club Pokemon B (U 991126 V1.000)</name>
+		<desc>Print Club Pokemon (c) 1999 Atlus.  - SOURCES -  Game's ROM.</desc>
+		<releasedate>19990101T000000</releasedate>
+		<developer>Atlus</developer>
+		<publisher>Atlus</publisher>
+		<genre>Various-Various / Print Club</genre>
+		<players>1</players>
+		<image>/userdata/roms/mame/images/pclubpok.png</image>
+	</game>
+	<game id="43407" source="ScreenScraper.fr">
+		<path>./stvbios.zip</path>
+		<name>St-v Bios</name>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>SEGA</publisher>
+		<genre>Compilation</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/stvbios.png</image>
+		<genreid>3840</genreid>
+	</game>
+	<game id="40098" source="ScreenScraper.fr">
+		<path>./atluspsx.zip</path>
+		<name>ZZZ(notgame):Atlus Psx</name>
+		<releasedate>19960101T000000</releasedate>
+		<publisher>Atlus</publisher>
+		<genre>Various</genre>
+		<players>1-4</players>
+		<image>/userdata/roms/mame/images/atluspsx.png</image>
+	</game>
+	<game id="42413" source="ScreenScraper.fr">
+		<path>./playch10.zip</path>
+		<name>ZZZ(notgame):Playchoice-10 Bios</name>
+		<releasedate>19860101T000000</releasedate>
+		<publisher>Nintendo</publisher>
+		<genre>Various-Various / System</genre>
+		<players>1-2</players>
+		<image>/userdata/roms/mame/images/playch10.png</image>
+	</game>
+	<game id="40257" source="ScreenScraper.fr">
+		<path>./blazeon.zip</path>
+		<name>Blaze On (Japan)</name>
+		<desc>The player is set in control of The Garland TFF-01, a sub-standard space fighter ship that is only armed with a semi-auto or rapid fire laser gun known as the Beam Vulcan and the Tranquilander. Some enemy units can be captured and used in play; certain enemy robots, when shot by the player's Tranquilander, will morph into an outline of themselves. The player can then fly into the outline, and take on the form of the enemy robot, taking control of its weapons, abilities and special attacks. 
+ 
+There is also addition to the boss battle scoring: similar to some shooters, players have the opportunity to increase their scores by beating the end level bosses within a certain time limit. Every time a boss battle is initiated, a timer will count down and once the boss is destroyed/killed before the timer reaches zero, then the time left will add to the player's end-level score; if the timer runs out, then the score at the end of the level will remain unaffected.</desc>
+		<image>/userdata/roms/mame/images/blazeon.png</image>
+		<rating>0.5</rating>
+		<releasedate>19920101T000000</releasedate>
+		<developer>A.I</developer>
+		<publisher>Atlus</publisher>
+		<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>260</genreid>
+	</game>
+	<game id="37542" source="ScreenScraper.fr">
+		<path>./groovef.zip</path>
+		<name>Groove on Fight - Gouketsuji Ichizoku 3 (J 970416 V1.001)</name>
+		<desc>A Tag-Team 2-D fighting game from Atlus. Select a team of 2 characters and face off against the rest. Players can 'tag' their ally watching from the sideline to recover stamina. 
+ 
+The game features an original cast of characters, and also features the Goketsuji sister Oume and Utane (Stuck together back-to back) from "Power Instinct 2", and Popura - who is similar to Kurara from PI2.</desc>
+		<image>/userdata/roms/mame/images/groovef.png</image>
+		<rating>0.6</rating>
+		<releasedate>19980101T000000</releasedate>
+		<developer>Atlus</developer>
+		<publisher>Atlus</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<playcount>1</playcount>
+		<lastplayed>20210502T171632</lastplayed>
+		<gametime>58</gametime>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="41750" source="ScreenScraper.fr">
+		<path>./hvnsgate.zip</path>
+		<name>Heaven's Gate</name>
+		<desc>Heaven's Gate is a one-on-one beat 'em up game from Atlus.</desc>
+		<image>/userdata/roms/mame/images/hvnsgate.png</image>
+		<rating>0.7</rating>
+		<releasedate>19960101T000000</releasedate>
+		<developer>Racdym</developer>
+		<publisher>Atlus</publisher>
+		<genre>Fight / Versus-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="60800" source="ScreenScraper.fr">
+		<path>./naname.zip</path>
+		<name>Naname De Magic! (Japan)</name>
+		<desc>Improve your Japanese skills while honing your reflexes and critical thinking to new heights in the fantastically cool and retro Naname de Magic! Select one of 5 awesome characters and then hit the board to arrange the falling icons as quickly as you can! Your goal is to watch the icons falling from the top of the screen and make them strategically fall into the correct places to create rows - diagonally to attack and horizontally to score big - and eliminate then to make more room for other falling icons!</desc>
+		<image>/userdata/roms/mame/images/naname.png</image>
+		<rating>0.7</rating>
+		<releasedate>19940101T000000</releasedate>
+		<developer>Atlus</developer>
+		<publisher>Atlus</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="60826" source="ScreenScraper.fr">
+		<path>./ohmygod.zip</path>
+		<name>Oh My God! (Japan)</name>
+		<desc>Oh My God! is an arcade puzzle game from Atlus. The gameplay is similar to Dr. Mario. 
+A sequence of snakes made of colored balls fall down into the playing field. The object of the game is to manipulate the direction of these snakes, by using the joystick, in order to form a line of 3 colored balls vertically, horizontally, or diagonally. The game ends when the playing field tops out, that is, when there is no room for a new snake to enter the playing field.</desc>
+		<image>/userdata/roms/mame/images/ohmygod.png</image>
+		<rating>0.5</rating>
+		<releasedate>19930101T000000</releasedate>
+		<developer>Atlus</developer>
+		<publisher>Atlus</publisher>
+		<genre>Puzzle-Game / Fall-Puzzle-Game</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>2816</genreid>
+	</game>
+	<game id="145758" source="ScreenScraper.fr">
+		<path>./plegends.zip</path>
+		<name>Power Instinct Legends (US, Ver. 95/06/20)</name>
+		<desc>Otane Goketsuji, leader of the Goketsuji clan, was kidnapped. A new tournament was held to find a successor. Otane managed to arrive at the tournament to defend her title as clan leader against the winner of the tournament. Unfortunately to Otane, she was too tired to fight and was defeated by Kokuin Kanji! 
+ 
+After his victory in the Goketsuji tournament, Kanji thought that would be fun to test the strength of the Goketsuji family members, so he invited them for a new tournament.</desc>
+		<image>/userdata/roms/mame/images/plegends.png</image>
+		<rating>0.7</rating>
+		<releasedate>19950101T000000</releasedate>
+		<developer>Atlus</developer>
+		<publisher>Atlus</publisher>
+		<genre>Fight / Versus-Beat'em Up-Fight</genre>
+		<players>2</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>262</genreid>
+	</game>
+	<game id="79228" source="ScreenScraper.fr">
+		<path>./pc_rkats.zip</path>
+		<name>Rockin' Kats (playchoice-10) (PlayChoice-10)</name>
+		<desc>Willy is a young jazz cat who goes by the name of "The Rockin' Kat". His girlfriend, Jill, was kidnapped by Mugsy, the local crime boss. 
+ 
+In this side scrolling game, you must help Rockin' Kat Willy to save his girlfriend through 7 stages. Each stage is a TV show broadcast through different channels of a TV set, and you must thus choose which channel you want to play. Through the channels Willy it will be sent to different themed shows such as western movies, gangster movies, etc, as well as some bonus channels.</desc>
+		<image>/userdata/roms/mame/images/pc_rkats.png</image>
+		<rating>0.5</rating>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Atlus</developer>
+		<publisher>Atlus</publisher>
+		<genre>Platform / Fighter Scrolling-Platform</genre>
+		<players>1</players>
+		<lang>en</lang>
+		<region>us</region>
+		<genreid>258</genreid>
+	</game>
+</gameList>
