@@ -3025,7 +3025,7 @@ sorr:
   group: ports
   emulators:
     sorr:
-      sorr: { requireAnyOf: [BR2_PACKAGE_BENNUGD_BGDI] }
+      sorr: { requireAnyOf: [BR2_PACKAGE_LIB32BIT] }
 
 spacecadetpinball:
   name:       3D Pinball Space Cadet

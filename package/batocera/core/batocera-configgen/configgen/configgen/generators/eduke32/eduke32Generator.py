@@ -17,3 +17,4 @@ class Eduke32Generator(Generator):
                 'SDL_MOUSE_RELATIVE_SPEED_SCALE': '7.0',
                 'PIPEWIRE_LATENCY': '1024/48000'
             })
+
