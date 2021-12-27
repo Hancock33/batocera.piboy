@@ -9,7 +9,7 @@ class SorrGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
         os.chdir("/userdata/roms/sorr")
-        commandArray = ["bgdi", "-i", "/userdata/roms/sorr", rom]
+        commandArray = ["/usr/bin32/bgdi", "-i", "/userdata/roms/sorr", rom]
 
         return Command.Command(
             array=commandArray,
