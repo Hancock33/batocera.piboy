@@ -1,13 +1,13 @@
 diff --git a/es-app/src/CustomFeatures.cpp b/es-app/src/CustomFeatures.cpp
-index 1cc53fee..1925def9 100644
+index 1cc53fee..ca942a6c 100644
 --- a/es-app/src/CustomFeatures.cpp
 +++ b/es-app/src/CustomFeatures.cpp
 @@ -39,6 +39,8 @@ EmulatorFeatures::Features EmulatorFeatures::parseFeatures(const std::string fea
  
  		if (trim == "ratio") ret = ret | EmulatorFeatures::Features::ratio;
  		if (trim == "rewind") ret = ret | EmulatorFeatures::Features::rewind;
-++		if (trim == "showfps") ret = ret | EmulatorFeatures::Features::showfps;
-++		if (trim == "framecount") ret = ret | EmulatorFeatures::Features::framecount;
++		if (trim == "showfps") ret = ret | EmulatorFeatures::Features::showfps;
++		if (trim == "framecount") ret = ret | EmulatorFeatures::Features::framecount;
  		if (trim == "smooth") ret = ret | EmulatorFeatures::Features::smooth;
  		if (trim == "shaders") ret = ret | EmulatorFeatures::Features::shaders;
  		if (trim == "pixel_perfect") ret = ret | EmulatorFeatures::Features::pixel_perfect;
@@ -25,7 +25,7 @@ index a01559c2..d46be2b5 100644
  		all = 0x0FFFFFFF
  	};
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 72e34802..a1fe85be 100644
+index 72e34802..2d021065 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -2258,6 +2258,24 @@ void GuiMenu::openGamesSettings_batocera()
@@ -33,21 +33,21 @@ index 72e34802..a1fe85be 100644
  	}
  
 + 	// FPS
-+ 	if (systemData->isFeatureSupported(currentEmulator, currentCore, EmulatorFeatures::showfps))
++	if (!hasGlobalFeature("showfps"))
 + 	{
 + 		auto showfps_enabled = std::make_shared<OptionListComponent<std::string>>(mWindow, _("FPS"));
-+ 		showfps_enabled->addRange({ { _("AUTO"), "auto" },{ _("ON") , "1" },{ _("OFF"), "0" } }, SystemConf::getInstance()->get(configName   ".showfps"));
-+ 		systemConfiguration->addWithLabel(_("FPS"), showfps_enabled);
-+ 		systemConfiguration->addSaveFunc([configName, showfps_enabled] { SystemConf::getInstance()->set(configName   ".showfps", showfps_enabled->getSelected()); });
++ 		showfps_enabled->addRange({ { _("AUTO"), "auto" },{ _("ON") , "1" },{ _("OFF") , "0" } }, SystemConf::getInstance()->get("global.showfps"));
++		s->addWithLabel(_("FPS"), showfps_enabled);
++		s->addSaveFunc([showfps_enabled] { SystemConf::getInstance()->set("global.showfps", showfps_enabled->getSelected()); });
 + 	}
 + 
 + 	// Frame Count
-+ 	if (systemData->isFeatureSupported(currentEmulator, currentCore, EmulatorFeatures::framecount))
++	if (!hasGlobalFeature("framecount"))
 + 	{
 + 		auto framecount_enabled = std::make_shared<OptionListComponent<std::string>>(mWindow, _("FRAME COUNT"));
-+ 		framecount_enabled->addRange({ { _("AUTO"), "auto" },{ _("ON") , "1" },{ _("OFF"), "0" } }, SystemConf::getInstance()->get(configName   ".framecount"));
-+ 		systemConfiguration->addWithLabel(_("FRAME COUNT"), framecount_enabled);
-+ 		systemConfiguration->addSaveFunc([configName, framecount_enabled] { SystemConf::getInstance()->set(configName   ".framecount", framecount_enabled->getSelected()); });
++		framecount_enabled->addRange({ { _("AUTO"), "auto" },{ _("ON") , "1" },{ _("OFF") , "0" } }, SystemConf::getInstance()->get("global.framecount"));
++		s->addWithLabel(_("FRAME COUNT"), framecount_enabled);
++		s->addSaveFunc([framecount_enabled] { SystemConf::getInstance()->set("global.framecount", framecount_enabled->getSelected()); });
 + 	}
 +
  	// smoothing	
