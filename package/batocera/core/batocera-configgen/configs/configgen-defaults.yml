@@ -139,6 +139,9 @@ dos:
 dreamcast:
   emulator: libretro
   core:     flycast
+droidports:
+  emulator: droidports
+  core:     droidports
 easyrpg:
   emulator: easyrpg
   core:     easyrpg

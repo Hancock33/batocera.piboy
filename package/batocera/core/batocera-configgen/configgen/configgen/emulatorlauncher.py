@@ -27,6 +27,7 @@ from generators.dosbox.dosboxGenerator import DosBoxGenerator
 from generators.dosboxstaging.dosboxstagingGenerator import DosBoxStagingGenerator
 from generators.dosboxx.dosboxxGenerator import DosBoxxGenerator
 from generators.drastic.drasticGenerator import DrasticGenerator
+from generators.droidports.droidportsGenerator import DroidportsGenerator
 from generators.duckstation.duckstationGenerator import DuckstationGenerator
 from generators.easyrpg.easyrpgGenerator import EasyRPGGenerator
 from generators.ecwolf.ecwolfGenerator import ECWolfGenerator
@@ -125,6 +126,7 @@ generators = {
     'dosbox_staging': DosBoxStagingGenerator(),
     'dosboxx': DosBoxxGenerator(),
     'drastic': DrasticGenerator(),
+    'droidports': DroidportsGenerator(),
     'duckstation': DuckstationGenerator(),
     'easyrpg': EasyRPGGenerator(),
     'ecwolf': ECWolfGenerator(),
