@@ -2880,6 +2880,17 @@ nukem2:
     nukem2:
       nuken2: { requireAnyOf: [BR2_PACKAGE_NUKEM2] }
 
+openclaw:
+  name:       Captain Claw
+  manufacturer: Ports
+  release: 1997
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    openclaw:
+      openclaw: { requireAnyOf: [BR2_PACKAGE_OPENCLAW] }
+
 openlara:
   name:       Tomb Raider 1
   manufacturer: Ports

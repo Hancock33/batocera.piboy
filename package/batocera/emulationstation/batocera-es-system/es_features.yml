@@ -4820,6 +4820,10 @@ nukem2:
   features: [padtokeyboard, decoration]
   shared: [hud]
 
+openclaw:
+  features: [padtokeyboard, decoration]
+  shared: [hud]
+  
 openjazz:
   features: [padtokeyboard, decoration]
   shared: [hud]

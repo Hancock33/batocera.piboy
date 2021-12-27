@@ -60,6 +60,7 @@ from generators.mupen.mupenGenerator import MupenGenerator
 from generators.nblood.nbloodGenerator import NbloodGenerator
 from generators.nukem2.nukem2Generator import Nukem2Generator
 from generators.openbor.openborGenerator import OpenborGenerator
+from generators.openclaw.openclawGenerator import OpenclawGenerator
 from generators.openjazz.openjazzGenerator import OpenJazzGenerator
 from generators.openlara.openlaraGenerator import OpenlaraGenerator
 from generators.omf2097.omf2097Generator import Omf2097Generator
@@ -159,6 +160,7 @@ generators = {
     'nblood': NbloodGenerator(),
     'nukem2': Nukem2Generator(),
     'openbor' : OpenborGenerator(),
+    'openclaw' : OpenclawGenerator(),
     'openjazz': OpenJazzGenerator(),
     'openlara': OpenlaraGenerator(),
     'omf2097': Omf2097Generator(),

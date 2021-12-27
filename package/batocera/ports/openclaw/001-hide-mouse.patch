@@ -1,0 +1,12 @@
+diff --git a/OpenClaw/Engine/GameApp/BaseGameApp.cpp b/OpenClaw/Engine/GameApp/BaseGameApp.cpp
+index f8c118c..ef299d4 100644
+--- a/OpenClaw/Engine/GameApp/BaseGameApp.cpp
++++ b/OpenClaw/Engine/GameApp/BaseGameApp.cpp
+@@ -268,6 +268,7 @@ void Loop(void *instance) {
+ 
+ int32 BaseGameApp::Run()
+ {
++    SDL_ShowCursor(SDL_DISABLE);
+     // Some systems (like web browsers) does not support infinite loops.
+     // We need to return control after each loop steps.
+ #ifdef __EMSCRIPTEN__
