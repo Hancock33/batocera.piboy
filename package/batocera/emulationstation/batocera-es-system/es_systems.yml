@@ -2761,6 +2761,17 @@ dinothawr:
   comment_fr: |
     Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
 
+droidports:
+  name:       Android Ports
+  manufacturer: Ports
+  release: 2008
+  hardware: port
+  extensions: [apk]
+  group: ports
+  emulators:
+    droidports:
+      droidports: { requireAnyOf: [BR2_PACKAGE_LIB32BIT] }
+
 eduke32:
   name:       Duke Nukem 3D
   manufacturer: Ports

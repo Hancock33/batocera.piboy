@@ -4748,11 +4748,19 @@ bermuda:
   features: [padtokeyboard, decoration]
   shared: [hud]
 
+box86:
+  features: [padtokeyboard, decoration]
+  shared: [hud]
+
 bstone:
   features: [padtokeyboard, decoration]
   shared: [hud]
 
 cdogs:
+  features: [padtokeyboard, decoration]
+  shared: [hud]
+
+droidports:
   features: [padtokeyboard, decoration]
   shared: [hud]
 

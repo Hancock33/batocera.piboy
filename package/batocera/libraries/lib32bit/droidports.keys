@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 bgdi"
+            "target": "killall -9 gmloader"
         },
         {
             "trigger": "start",
@@ -41,32 +41,32 @@
         {
             "trigger": "a",
             "type": "key",
-            "target": "KEY_V"
+            "target": "KEY_Z"
         },
         {
             "trigger": "b",
             "type": "key",
-            "target": "KEY_C"
+            "target": "KEY_X"
         },
         {
             "trigger": "x",
             "type": "key",
-            "target": "KEY_X"
+            "target": "KEY_LEFTCTRL"
         },
         {
             "trigger": "y",
             "type": "key",
-            "target": "KEY_A"
+            "target": "KEY_SPACE"
         },
         {
             "trigger": "pageup",
             "type": "key",
-            "target": "KEY_S"
+            "target": "KEY_A"
         },
         {
             "trigger": "pagedown",
             "type": "key",
-            "target": "KEY_D"
+            "target": "KEY_S"
         },
         {
             "trigger": "joystick1up",
@@ -92,6 +92,16 @@
             "trigger": "l3",
             "type": "key",
             "target": "KEY_B"
+        },
+        {
+            "trigger": "l2",
+            "type": "key",
+            "target": "KEY_LEFTSHIFT"
+        },
+        {
+            "trigger": "r2",
+            "type": "key",
+            "target": "KEY_C"
         }
     ]
 }
