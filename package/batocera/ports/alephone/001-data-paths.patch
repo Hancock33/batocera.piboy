@@ -1,0 +1,42 @@
+diff --git a/Source_Files/CSeries/cspaths_sdl.cpp b/Source_Files/CSeries/cspaths_sdl.cpp
+index b562c908..68a36e8c 100644
+--- a/Source_Files/CSeries/cspaths_sdl.cpp
++++ b/Source_Files/CSeries/cspaths_sdl.cpp
+@@ -174,12 +174,7 @@ char get_path_list_separator()
+ static std::string _get_local_data_path()
+ {
+ 	static std::string local_dir = "";
+-	if (local_dir.empty())
+-	{
+-		const char *home = getenv("HOME");
+-		if (home)
+-			local_dir = std::string(home) + "/.alephone";
+-	}
++    local_dir = std::string("/userdata/roms/alephone/config");
+ 	return local_dir;
+ }
+ 
+@@ -204,19 +199,19 @@ std::string get_data_path(CSPathType type)
+ 			// not applicable
+ 			break;
+ 		case kPathScreenshots:
+-			path = _get_local_data_path() + "/Screenshots";
++			path = "/userdata/screenshots";
+ 			break;
+ 		case kPathSavedGames:
+-			path = _get_local_data_path() + "/Saved Games";
++			path = "/userdata/saves/alephone";
+ 			break;
+ 		case kPathQuickSaves:
+-			path = _get_local_data_path() + "/Quick Saves";
++			path = "/userdata/saves/alephone";
+ 			break;
+ 		case kPathImageCache:
+ 			path = _get_local_data_path() + "/Image Cache";
+ 			break;
+ 		case kPathRecordings:
+-			path = _get_local_data_path() + "/Recordings";
++			path = "/userdata/screenshots";
+ 			break;
+ 	}
+ 	return path;
