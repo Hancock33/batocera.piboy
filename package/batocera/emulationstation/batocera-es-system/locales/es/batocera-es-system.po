@@ -28,7 +28,7 @@ msgctxt "game_options"
 msgid "Show context-sensitive info over the game."
 msgstr ""
 
-#. TRANSLATION: shared, shared, libretro/mesen-s, libretro/swanstation, libretro/swanstation, ...
+#. TRANSLATION: shared, shared, libretro/mesens, libretro/swanstation, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "None"
 msgstr "Ninguno"
@@ -223,159 +223,159 @@ msgctxt "game_options"
 msgid "576+KB"
 msgstr "576+KB"
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
+#. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
 msgid "BLARGG NTSC FILTER"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
+#. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
 msgid "Core-powered video filter."
 msgstr ""
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Disabled"
 msgstr "Desactivado"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Composite (Blargg)"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "S-Video (Blargg)"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "RGB (Blargg)"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Monochrome (Blargg)"
 msgstr "Monocromo (Blargg)"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "HIGH-RES BLENDING"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen-s, libretro/snes9x
+#. TRANSLATION: libretro/mesens, libretro/snes9x
 msgctxt "game_options"
 msgid "Blur high-res mode, allowing for better transparency effects."
 msgstr ""
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "CUBIC AUDIO INTERPOLATION"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid ""
 "Enhancement. Swap from SNES' guassian interpolation to cubic. Improves sound "
 "quality."
 msgstr ""
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "GAME BOY MODE"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid ""
 "Change behaviour when emulating GB games. Auto uses SGB for GB and GBC for "
 "GBC."
 msgstr ""
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Game Boy"
 msgstr "Game Boy"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Game Boy Color"
 msgstr "Game Boy Color"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Super Game Boy"
 msgstr "Super Game Boy"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "SUPER GAME BOY 2"
 msgstr "SUPER GAME BOY 2"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Emulate the Super Game Boy 2 for SGB. Runs games at the correct speed."
 msgstr ""
 "Emula Super Game Boy 2 para SGB. Ejecuta juegos a la velocidad correcta."
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm, libretro/mame, libretro/mednafen_psx, libretro/nestopia, ...
+#. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/mame, libretro/mednafen_psx, libretro/nestopia, ...
 msgctxt "game_options"
 msgid "OVERCLOCK (UNSTABLE)"
 msgstr "OVERCLOCK (INESTABLE)"
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm, libretro/mame, libretro/mednafen_psx, libretro/nestopia, ...
+#. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/mame, libretro/mednafen_psx, libretro/nestopia, ...
 msgctxt "game_options"
 msgid "Enhancement. Reduces system slowdown. Causes issues in some games."
 msgstr ""
 "Mejora. Reduce la ralentización del sistema. Provoca problemas en algunos "
 "juegos."
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm
+#. TRANSLATION: libretro/mesens, libretro/fceumm
 msgctxt "game_options"
 msgid "Low"
 msgstr "Bajo"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Medium"
 msgstr "Medio"
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm
+#. TRANSLATION: libretro/mesens, libretro/fceumm
 msgctxt "game_options"
 msgid "High"
 msgstr "Alto"
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm
+#. TRANSLATION: libretro/mesens, libretro/fceumm
 msgctxt "game_options"
 msgid "Very High"
 msgstr "Muy alto"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "OVERCLOCK TYPE"
 msgstr "TIPO DE OVERCLOCK"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Prefer \"Before NMI\", change to After NMI only if needed by the game."
 msgstr ""
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Before NMI"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "After NMI"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen-s, libretro/snes9x, libretro/snes9x_next
+#. TRANSLATION: libretro/mesens, libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "SUPER FX OVERCLOCK"
 msgstr "SUPER FX OVERCLOCK"
 
-#. TRANSLATION: libretro/mesen-s, libretro/snes9x, libretro/snes9x_next
+#. TRANSLATION: libretro/mesens, libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr ""
@@ -5635,17 +5635,6 @@ msgstr ""
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Renders game at a lower res then upscales to increase FPS."
-msgstr ""
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "NVAPI"
-msgstr ""
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid ""
-"NVAPI is NVIDIA's core software that allows direct access to NVIDIA GPU."
 msgstr ""
 
 #. TRANSLATION: wine

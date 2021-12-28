@@ -10,10 +10,53 @@
             "type": "key",
             "target": "KEY_ESC"
         },
-	{
-            "trigger": ["hotkey", "start"],
+        {
+            "trigger": [
+                "hotkey",
+                "start"
+            ],
             "type": "exec",
             "target": "killall -9 OpenJazz"
-	}
+        },
+        {
+            "trigger": "up",
+            "type": "key",
+            "target": "KEY_UP"
+        },
+        {
+            "trigger": "down",
+            "type": "key",
+            "target": "KEY_DOWN"
+        },
+        {
+            "trigger": "left",
+            "type": "key",
+            "target": "KEY_LEFT"
+        },
+        {
+            "trigger": "right",
+            "type": "key",
+            "target": "KEY_RIGHT"
+        },
+        {
+            "trigger": "a",
+            "type": "key",
+            "target": "KEY_RIGHTALT"
+        },
+        {
+            "trigger": "b",
+            "type": "key",
+            "target": "KEY_SPACE"
+        },
+        {
+            "trigger": "y",
+            "type": "key",
+            "target": "KEY_RIGHTCTRL"
+        },
+        {
+            "trigger": "pageup",
+            "type": "key",
+            "target": "KEY_F9"
+        }
     ]
 }
