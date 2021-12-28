@@ -817,7 +817,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 
     # Alephone
     select BR2_PACKAGE_ALEPHONE                 if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
-    
+
     # Captain Claw
     select BR2_PACKAGE_OPENCLAW                 if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
