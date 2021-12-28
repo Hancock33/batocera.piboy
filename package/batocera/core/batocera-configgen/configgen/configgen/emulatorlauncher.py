@@ -111,7 +111,7 @@ eslog = get_logger(__name__)
 generators = {
     'abuse': AbuseGenerator(),
     'amiberry': AmiberryGenerator(),
-    'alephone': AlephoneGenerator(),    
+    'alephone': AlephoneGenerator(),
     'awgl': AwglGenerator(),
     'bermuda': BermudaGenerator(),
     'bstone' : BstoneGenerator(),
