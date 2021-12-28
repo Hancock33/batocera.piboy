@@ -3,11 +3,12 @@
 import Command
 from generators.Generator import Generator
 import controllersConfig
-
+import os
 
 class StuntcarGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
+        os.chdir("/usr/share/stuntcar")
         commandArray = ["stuntcar"]
 
         return Command.Command(
