@@ -3,11 +3,12 @@
 import Command
 from generators.Generator import Generator
 import controllersConfig
-
+import os
 
 class AwglGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
+        os.chdir("/userdata/roms/awgl")
         rendr = "--render=software"
         if (rom.__contains__("15th")):
             game = "--datapath=/userdata/roms/awgl/15th"

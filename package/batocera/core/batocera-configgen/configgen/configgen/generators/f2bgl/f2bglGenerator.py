@@ -3,12 +3,13 @@
 import Command
 from generators.Generator import Generator
 import controllersConfig
-
+import os
 
 class F2bglGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
-        commandArray = ["f2bgl", "--datapath=/userdata/roms/f2bgl"]
+        os.chdir("/userdata/roms/f2bgl")
+        commandArray = ["f2bgl", "--datapath=/userdata/roms/f2bgl", "--savepath=/userdata/saves/bermuda"]
 
         return Command.Command(
             array=commandArray,
