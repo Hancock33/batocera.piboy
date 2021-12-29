@@ -32,6 +32,20 @@ then
     mv "${TARGET_DIR}/etc/init.d/S02acpid" "${TARGET_DIR}/etc/init.d/S05acpid" || exit 1
 fi
 
+if test -e "${TARGET_DIR}/etc/init.d/S02acpid"
+then
+    mv "${TARGET_DIR}/etc/init.d/S02acpid" "${TARGET_DIR}/etc/init.d/S05acpid" || exit 1
+fi
+
+#### remove unneeded firmware + drivers
+if test -e "${TARGET_DIR}/etc/init.d/S19piboy"
+then
+    rm -frv ${TARGET_DIR}/lib/firmware/{amdgpu,i915,intel,mellanox,nvidia,qcom,qed}
+    rm -frv ${TARGET_DIR}/usr/lib/dri/{armada-drm_dri.so,exynos_dri.so,hx8357d_dri.so,ili9225_dri.so,ili9341_dri.so,imx-dcss_dri.so,imx-drm_dri.so,ingenic-drm_dri.so}
+    rm -frv ${TARGET_DIR}/usr/lib/dri/{mali-dp_dri.so,mcde_dri.so,mediatek_dri.so,meson_dri.so,mi0283qt_dri.so,mxsfb-drm_dri.so,pl111_dri.so,repaper_dri.so,rockchip_dri.so}
+    rm -frv ${TARGET_DIR}/usr/lib/dri/{st7586_dri.so,st7735r_dri.so,stm_dri.so,sun4i-drm_dri.so}
+fi
+
 # we don't want default xorg files
 rm -f "${TARGET_DIR}/etc/X11/xorg.conf"  || exit 1
 rm -f "${TARGET_DIR}/etc/init.d/S40xorg" || exit 1
