@@ -3,12 +3,13 @@
 import Command
 from generators.Generator import Generator
 import controllersConfig
-
+import os
 
 class BermudaGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
-        commandArray = ["bermuda", "--datapath=/userdata/roms/bermuda"]
+        os.chdir("/userdata/roms/bermuda")
+        commandArray = ["bermuda", "--datapath=/userdata/roms/bermuda", "--savepath=/userdata/saves/bermuda"]
 
         return Command.Command(
             array=commandArray,
