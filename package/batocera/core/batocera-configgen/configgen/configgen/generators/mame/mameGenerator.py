@@ -164,13 +164,13 @@ class MameGenerator(Generator):
             commandArray += [ "-video", "opengl" ]
 
         # CRT / SwitchRes support
-        if system.isOptSet("switchres") and system.getOptBoolean("switchres"):
-            commandArray += [ "-modeline_generation" ]
-            commandArray += [ "-changeres" ]
-        else:
-            commandArray += [ "-nomodeline_generation" ]
-            commandArray += [ "-nochangeres" ]
-            commandArray += [ "-noswitchres" ]
+        #if system.isOptSet("switchres") and system.getOptBoolean("switchres"):
+        #    commandArray += [ "-modeline_generation" ]
+        #    commandArray += [ "-changeres" ]
+        #else:
+        #    commandArray += [ "-nomodeline_generation" ]
+        #    commandArray += [ "-nochangeres" ]
+        #    commandArray += [ "-noswitchres" ]
 
         # Rotation / TATE options
         if system.isOptSet("rotation") and system.config["rotation"] == "autoror":

@@ -1,0 +1,23 @@
+diff -Naur mame-mame0238.orig/src/osd/modules/render/drawbgfx.cpp mame-mame0238/src/osd/modules/render/drawbgfx.cpp
+--- mame-mame0238.orig/src/osd/modules/render/drawbgfx.cpp	2021-11-23 18:07:01.000000000 +0000
++++ mame-mame0238/src/osd/modules/render/drawbgfx.cpp	2021-12-29 12:13:15.043455975 +0000
+@@ -171,7 +171,7 @@
+ 	}
+ 
+ #   if BX_PLATFORM_LINUX || BX_PLATFORM_BSD || BX_PLATFORM_RPI
+-	return (void*)wmi.info.x11.window;
++	return nullptr;
+ #   elif BX_PLATFORM_OSX
+ 	return wmi.info.cocoa.window;
+ #   elif BX_PLATFORM_WINDOWS
+@@ -192,8 +192,8 @@
+ 
+ 	bgfx::PlatformData pd;
+ #   if BX_PLATFORM_LINUX || BX_PLATFORM_BSD
+-	pd.ndt          = wmi.info.x11.display;
+-	pd.nwh          = (void*)(uintptr_t)wmi.info.x11.window;
++	pd.ndt          = NULL;
++	pd.nwh          = NULL;
+ #   elif BX_PLATFORM_OSX
+ 	pd.ndt          = NULL;
+ 	pd.nwh          = wmi.info.cocoa.window;

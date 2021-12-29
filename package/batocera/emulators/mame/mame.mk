@@ -3,8 +3,8 @@
 # MAME
 #
 ################################################################################
-# Version.: Release 0.232
-MAME_VERSION = mame0232
+# Version.: Release 0.238
+MAME_VERSION = mame0238
 MAME_SITE = $(call github,mamedev,mame,$(MAME_VERSION))
 MAME_DEPENDENCIES = sdl2 sdl2_ttf zlib libpng fontconfig sqlite jpeg flac rapidjson expat glm
 MAME_LICENSE = MAME
@@ -14,7 +14,7 @@ MAME_CROSS_OPTS =
 MAME_CFLAGS =
 
 # Limit number of jobs not to eat too much RAM....
-MAME_JOBS = 24
+MAME_JOBS = 30
 
 # x86_64 is desktop linux based on X11 and OpenGL
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64),y)
