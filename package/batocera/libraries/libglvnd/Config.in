@@ -1,6 +1,6 @@
 config BR2_PACKAGE_LIBGLVND
   bool "libglvnd"
-  depends on BR2_i386 || BR2_x86_64
+  # Batocera - removed the reliance on X86 (RPi4)
   depends on BR2_PACKAGE_XSERVER_XORG_SERVER_MODULAR
   depends on BR2_PACKAGE_MESA3D
   help

@@ -14,7 +14,10 @@ ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)
 endif
 
 ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
-	LINAPPLE_EXTRA_ARGS = HAVE_X11=1
+# Batocera - X11 only x86 (to test)
+  ifeq ($(BR2_i386)$(BR2_x86_64),y)
+  	LINAPPLE_EXTRA_ARGS = HAVE_X11=1
+  endif
 endif
 
 define LINAPPLE_BUILD_CMDS
