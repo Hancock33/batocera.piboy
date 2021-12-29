@@ -32,11 +32,6 @@ then
     mv "${TARGET_DIR}/etc/init.d/S02acpid" "${TARGET_DIR}/etc/init.d/S05acpid" || exit 1
 fi
 
-if test -e "${TARGET_DIR}/etc/init.d/S02acpid"
-then
-    mv "${TARGET_DIR}/etc/init.d/S02acpid" "${TARGET_DIR}/etc/init.d/S05acpid" || exit 1
-fi
-
 #### remove unneeded firmware + drivers
 if test -e "${TARGET_DIR}/etc/init.d/S19piboy"
 then
