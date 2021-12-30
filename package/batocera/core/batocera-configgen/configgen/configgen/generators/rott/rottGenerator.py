@@ -13,6 +13,7 @@ class RottGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers),
+                'SDL_AUTO_UPDATE_JOYSTICKS': '0',
+                'SDL_MOUSE_RELATIVE_SPEED_SCALE': '7.0',
                 'PIPEWIRE_LATENCY': '1024/48000'
             })

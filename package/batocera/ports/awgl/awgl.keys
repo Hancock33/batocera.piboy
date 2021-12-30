@@ -3,7 +3,7 @@
         {
             "trigger": ["hotkey", "start"],
             "type": "exec",
-            "target": "killall -9 awgl"
+            "target": "killall -9 awgl && reset"
         },
         {
             "trigger": "up",

@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "clear && killall -9 alephone"
+            "target": "killall -9 alephone && reset"
         },
         {
             "trigger": "joystick1",

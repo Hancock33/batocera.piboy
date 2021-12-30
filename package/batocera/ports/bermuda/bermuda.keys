@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 bermuda"
+            "target": "killall -9 bermuda && reset"
         },
         {
             "trigger": "up",

@@ -113,7 +113,7 @@
 	{
             "trigger": ["hotkey", "start"],
             "type": "exec",
-            "target": "killall -15 pygame"
+            "target": "killall -15 pygame && reset"
 	}
     ]
 }

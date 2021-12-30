@@ -3,7 +3,7 @@
 		{
             "trigger": ["hotkey", "start"],
             "type": "exec",
-            "target": "killall -9 RigelEngine"
+            "target": "killall -9 RigelEngine && reset"
 		}
     ]
 }

@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "clear && killall -9 rednukem"
+            "target": "killall -9 rednukem && reset"
         },
         {
             "trigger": "joystick1",

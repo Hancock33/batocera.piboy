@@ -3,7 +3,7 @@
         {
             "trigger": ["hotkey", "start"],
             "type": "exec",
-            "target": "killall -9 rott-darkwar"
+            "target": "killall -9 rott-darkwar && reset"
         },
         {
             "trigger": "up",

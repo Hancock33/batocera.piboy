@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 SpaceCadetPinball"
+            "target": "killall -9 SpaceCadetPinball && reset"
         },
         {
             "trigger": "l2",

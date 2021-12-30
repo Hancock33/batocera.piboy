@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "clear && killall -9 devilutionx"
+            "target": "killall -9 devilutionx && reset"
         },
 	{
             "trigger": [
