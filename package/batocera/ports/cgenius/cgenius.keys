@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "clear && killall -9 CGeniusExe"
+            "target": "killall -9 CGeniusExe && reset"
         },
         {
             "trigger": "up",

@@ -19,8 +19,8 @@ endef
 
 define STUNTCAR_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/stuntcar
-	$(INSTALL) -D $(@D)/stuntcarracer $(TARGET_DIR)/usr/bin/stuntcarracer
-	chmod 0754 $(TARGET_DIR)/usr/bin/stuntcarracer
+	$(INSTALL) -D $(@D)/stuntcarracer $(TARGET_DIR)/usr/bin/stuntcar
+	chmod 0754 $(TARGET_DIR)/usr/bin/stuntcar
     cp -av $(@D)/Bitmap $(TARGET_DIR)/usr/share/stuntcar/
     cp -av $(@D)/Sounds $(TARGET_DIR)/usr/share/stuntcar/
     cp -av $(@D)/Tracks $(TARGET_DIR)/usr/share/stuntcar/

@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 f2bgl"
+            "target": "killall -9 f2bgl && reset"
         },
         {
             "trigger": "up",

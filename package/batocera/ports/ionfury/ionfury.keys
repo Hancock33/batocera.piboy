@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "clear && killall -9 ionfury"
+            "target": "killall -9 ionfury && reset"
         },
         {
             "trigger": "joystick1",

@@ -3,7 +3,7 @@
         {
             "trigger": ["hotkey", "start"],
             "type": "exec",
-            "target": "killall -9 freedroid"
+            "target": "killall -9 freedroid && reset"
         },
         {
             "trigger": "up",

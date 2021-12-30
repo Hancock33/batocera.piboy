@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "clear && killall -9 voidsw"
+            "target": "killall -9 voidsw && reset"
         },
         {
             "trigger": "joystick1",

@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 quake2"
+            "target": "killall -9 quake2 && reset"
         },
         {
             "trigger": "joystick1",

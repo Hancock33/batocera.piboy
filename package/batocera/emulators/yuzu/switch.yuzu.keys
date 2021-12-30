@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 yuzu"
+            "target": "killall -9 yuzu && reset"
         }
     ]
 }

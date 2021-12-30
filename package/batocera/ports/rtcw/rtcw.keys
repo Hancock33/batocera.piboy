@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 iowolfsp"
+            "target": "killall -9 iowolfsp && reset"
         },
         {
             "trigger": "up",

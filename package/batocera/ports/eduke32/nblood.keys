@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "clear && killall -9 nblood"
+            "target": "killall -9 nblood && reset"
         },
         {
             "trigger": "joystick1",

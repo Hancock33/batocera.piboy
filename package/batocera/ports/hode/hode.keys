@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 hode"
+            "target": "killall -9 hode && reset"
         },
         {
             "trigger": "up",

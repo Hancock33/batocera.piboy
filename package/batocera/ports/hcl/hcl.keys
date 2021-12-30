@@ -3,7 +3,7 @@
 		{
             "trigger": ["hotkey", "start"],
             "type": "exec",
-            "target": "killall -9 hcl"
+            "target": "killall -9 hcl && reset"
 		}
     ]
 }
