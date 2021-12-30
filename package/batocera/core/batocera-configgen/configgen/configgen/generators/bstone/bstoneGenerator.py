@@ -23,7 +23,7 @@ class BstoneGenerator(Generator):
             addon = "/userdata/roms/bstone/SW"
             gver = "--aog_sw"
 
-        commandArray = ["bstone", "--data_dir", gver, addon]
+        commandArray = ["bstone", gver, "--data_dir", addon]
 
         return Command.Command(
             array=commandArray,
