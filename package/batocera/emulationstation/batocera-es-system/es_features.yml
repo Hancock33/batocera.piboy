@@ -3030,7 +3030,6 @@ libretro:
                     "On":       enabled
     x1:
       features: [rewind, autosave, padtokeyboard]
-
     yabasanshiro:
       features: [autosave]
       cfeatures:
@@ -3054,19 +3053,14 @@ libretro:
                     "Port1+2":  port12
     gong:
       features: [autosave]
-
     emuscv:
       features: [rewind, autosave]
-
     uzem:
       features: [rewind, autosave]
-
     play:
       features: []
-
     pcsx2:
       features: []
-
 
 # Standalones
 
