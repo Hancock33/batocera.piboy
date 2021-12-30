@@ -3030,8 +3030,7 @@ libretro:
                     "On":       enabled
     x1:
       features: [rewind, autosave, padtokeyboard]
-    xash3d_fwgs:
-      features: [padtokeyboard]
+
     yabasanshiro:
       features: [autosave]
       cfeatures:
@@ -4885,6 +4884,9 @@ stuntcar:
 voidsw:
   features: [padtokeyboard, decoration]
   shared: [hud]
+
+xash3d_fwgs:
+  features: [padtokeyboard]
 
 yquake2:
   features: [padtokeyboard, decoration]

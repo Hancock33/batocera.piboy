@@ -38,6 +38,9 @@ define XASH3D_FWGS_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/build/ref_soft/libref_soft.so $(TARGET_DIR)/usr/lib/xash3d/
 	cp -pvr $(@D)/build/engine/libxash.so $(TARGET_DIR)/usr/lib/xash3d/
 	cp -pvr $(@D)/build/game_launch/xash3d $(TARGET_DIR)/usr/lib/xash3d/
+	# evmap config
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/xash3d/xash3d-fwgs/xash3d_fwgs.keys $(TARGET_DIR)/usr/share/evmapy/xash3d_fwgs.keys
 endef
 
 $(eval $(waf-package))
