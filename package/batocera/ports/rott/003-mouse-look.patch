@@ -1,0 +1,33 @@
+diff --git a/rott/rt_cfg.c b/rott/rt_cfg.c
+index 96d15ad..51031da 100644
+--- a/rott/rt_cfg.c
++++ b/rott/rt_cfg.c
+@@ -109,7 +109,7 @@ fx_blaster_config SBSettings =
+ #endif
+ 
+ boolean mouseenabled     = 1;
+-boolean usemouselook     = 0;
++boolean usemouselook     = 1;
+ int     inverse_mouse    = 1; //set  to -1 to invert mouse
+ boolean usejump          = 0;
+ boolean sdl_fullscreen   = 1;
+diff --git a/rott/rt_playr.c b/rott/rt_playr.c
+index bf9b9b9..2862786 100644
+--- a/rott/rt_playr.c
++++ b/rott/rt_playr.c
+@@ -171,11 +171,11 @@ int rightmom = 0;
+ int lastmom = 0;
+ int first    = 1;
+ 
+-#ifdef _GCW_
++//#ifdef _GCW_
+ int playerautoaim = 1;
+-#else
+-int playerautoaim = 0;
+-#endif
++//#else
++//int playerautoaim = 0;
++//#endif
+ 
+ int pausedstartedticcount;
+ boolean RefreshPause = true;
