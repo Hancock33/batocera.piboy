@@ -3,8 +3,8 @@
 # Heart of Darkness
 #
 ################################################################################
-# Version.: Commits on Jun 12, 2021
-HODE_VERSION = 6b969cd59e7fa6cdc759dba07bb8197103ecb6ae
+# Version.: Commits on Dec 31, 2021
+HODE_VERSION = a971e54d53ac8c8e94894139d5b89c81d04b4d63
 HODE_SITE = $(call github,usineur,hode,$(HODE_VERSION))
 
 HODE_DEPENDENCIES = sdl2 sdl2_mixer
