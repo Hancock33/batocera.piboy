@@ -1026,8 +1026,7 @@ libretro:
                 description: Required for certain visual effects.
                 choices:
                     "Off":                     disabled
-                    "Simple (Accurate)":       mix
-                    "Simple (Fast)":           mix_fast
+                    "Simple":                  mix
                     "LCD Ghosting (Accurate)": lcd_ghosting
                     "LCD Ghosting (Fast)":     lcd_ghosting_fast
       systems:
