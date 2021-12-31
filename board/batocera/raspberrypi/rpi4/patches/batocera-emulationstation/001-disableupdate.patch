@@ -1,0 +1,40 @@
+diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
+index d0f7e837..cea42a3e 100644
+--- a/es-app/src/guis/GuiMenu.cpp
++++ b/es-app/src/guis/GuiMenu.cpp
+@@ -168,7 +168,7 @@ GuiMenu::GuiMenu(Window *window, bool animate) : GuiComponent(window), mMenu(win
+ #endif
+ 
+ 		addEntry(_("SCRAPER").c_str(), true, [this] { openScraperSettings(); }, "iconScraper");		
+-		addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
++		addEntry(_("DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
+ 		addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings_batocera(); }, "iconSystem");
+ 	}
+ 	else
+@@ -1093,7 +1093,7 @@ void GuiMenu::openDeveloperSettings()
+ 
+ void GuiMenu::openUpdatesSettings()
+ {
+-	GuiSettings *updateGui = new GuiSettings(mWindow, _("UPDATES & DOWNLOADS").c_str());
++	GuiSettings *updateGui = new GuiSettings(mWindow, _("DOWNLOADS").c_str());
+ 
+ 	updateGui->addGroup(_("DOWNLOADS"));
+ 
+@@ -1133,7 +1133,7 @@ void GuiMenu::openUpdatesSettings()
+ 		});
+ 	}
+ 
+-	updateGui->addGroup(_("SOFTWARE UPDATES"));
++	/*updateGui->addGroup(_("SOFTWARE UPDATES"));
+ 
+ 	// Enable updates
+ 	auto updates_enabled = std::make_shared<SwitchComponent>(mWindow);
+@@ -1181,7 +1181,7 @@ void GuiMenu::openUpdatesSettings()
+ 
+ 			mWindow->pushGui(new GuiUpdate(mWindow));
+ 		}
+-	});
++	});*/
+ 
+ 	mWindow->pushGui(updateGui);
+ }
