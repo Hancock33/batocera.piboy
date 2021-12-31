@@ -24,12 +24,12 @@ class MameGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
         # Game list files
-        mameCapcom = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameCapcom.txt'
-        mameKInstinct = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameKInstinct.txt'
-        mameMKombat = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameMKombat.txt'
-        mameNeogeo = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameNeogeo.txt'
-        mameTwinstick = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameTwinstick.txt'
-        mameRotatedstick = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameRotatedstick.txt'
+        mameCapcom = '/usr/lib/python3.10/site-packages/configgen/datainit/mame/mameCapcom.txt'
+        mameKInstinct = '/usr/lib/python3.10/site-packages/configgen/datainit/mame/mameKInstinct.txt'
+        mameMKombat = '/usr/lib/python3.10/site-packages/configgen/datainit/mame/mameMKombat.txt'
+        mameNeogeo = '/usr/lib/python3.10/site-packages/configgen/datainit/mame/mameNeogeo.txt'
+        mameTwinstick = '/usr/lib/python3.10/site-packages/configgen/datainit/mame/mameTwinstick.txt'
+        mameRotatedstick = '/usr/lib/python3.10/site-packages/configgen/datainit/mame/mameRotatedstick.txt'
 
         # Extract "<romfile.zip>"
         romBasename = path.basename(rom)
