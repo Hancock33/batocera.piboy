@@ -47,8 +47,8 @@ global:
   shared: [hud, runahead, secondinstance, video_frame_delay_auto, integerscale]
 
 libretro:
-  features: [ratio, framecount, showFPS, smooth, shaders, decoration, game_translation]
-  shared: [hud, runahead, secondinstance, video_frame_delay_auto, integerscale]
+  features: [ratio, framecount, showFPS, smooth, shaders, decoration, runahead, secondinstance, video_frame_delay_auto, game_translation]
+  shared: [hud, integerscale]
   cfeatures:
     gfxbackend:
       archs_include: [x86, x86_64, rpi4, rk3326]
