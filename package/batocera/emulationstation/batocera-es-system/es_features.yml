@@ -4845,6 +4845,14 @@ openclaw:
 openjazz:
   features: [padtokeyboard, decoration]
   shared: [hud]
+  
+openjkja:
+  features: [padtokeyboard, decoration]
+  shared: [hud]
+  
+openjkjo:
+  features: [padtokeyboard, decoration]
+  shared: [hud]
 
 openlara:
   features: [padtokeyboard, decoration]

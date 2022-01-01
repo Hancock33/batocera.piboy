@@ -62,6 +62,8 @@ from generators.nukem2.nukem2Generator import Nukem2Generator
 from generators.openbor.openborGenerator import OpenborGenerator
 from generators.openclaw.openclawGenerator import OpenclawGenerator
 from generators.openjazz.openjazzGenerator import OpenJazzGenerator
+from generators.openjkja.openjkjaGenerator import OpenjkjaGenerator
+from generators.openjkjo.openjkjoGenerator import OpenjkjoGenerator
 from generators.openlara.openlaraGenerator import OpenlaraGenerator
 from generators.omf2097.omf2097Generator import Omf2097Generator
 from generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
@@ -162,6 +164,8 @@ generators = {
     'openbor' : OpenborGenerator(),
     'openclaw' : OpenclawGenerator(),
     'openjazz': OpenJazzGenerator(),
+    'openjkja': OpenjkjaGenerator(),
+    'openjkjo': OpenjkjoGenerator(),
     'openlara': OpenlaraGenerator(),
     'omf2097': Omf2097Generator(),
     'opentyrian': OpentyrianGenerator(),
