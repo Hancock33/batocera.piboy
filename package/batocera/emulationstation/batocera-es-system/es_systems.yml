@@ -2900,6 +2900,28 @@ openclaw:
     openclaw:
       openclaw: { requireAnyOf: [BR2_PACKAGE_OPENCLAW] }
 
+openjkja:
+  name:       Jedi Academy
+  manufacturer: Ports
+  release: 2003
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    openjkja:
+      openjkja: { requireAnyOf: [BR2_PACKAGE_OPENJK] }
+      
+openjkjo:
+  name:       Jedi Outcast
+  manufacturer: Ports
+  release: 2002
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    openjkjo:
+      openjkjo: { requireAnyOf: [BR2_PACKAGE_OPENJK] } 
+
 openlara:
   name:       Tomb Raider 1
   manufacturer: Ports
