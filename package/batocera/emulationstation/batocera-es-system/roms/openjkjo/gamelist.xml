@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./JediOutcast.game</path>
+    <name>Star Wars - Jedi Knight 2 - Jedi Outcast</name>
+    <desc>The Legacy of Star Wars Dark Forces and Star Wars Jedi Knight lives on in the intense first-person action of Jedi Outcast.
+	As Kyle Katarn, agent of the New Republic, use your Lightsaber and the full power of the Force to combat a new evil plaguing the galaxy.
+Wield over 8 Force abilities including the Jedi Mind Trick, Force Lightning and Force Grip.
+Choose wisely from an arsenal of 13 weapons including disruptor rifle, thermal detonators, trip mines and Wookiee bowcaster.
+Play on-line with 2-32 players or against a variety of AI Bots - and gain an additional 7 Force powers.
+Test your skills in 24 single-player missions and in 6 different types of multiplayer games including Jedi Master, Holocron, Capture the Ysalamiri, Duel, Deathmatch and Capture the Flag.
+Interact with legendary Star Wars characters such as Luke Skywalker and Lando Calrissian (featuring the voice of Billy Dee Williams as Lando.)</desc>
+	<image>./images/JediOutcast.png</image>
+    <rating>0.8</rating>
+    <releasedate>20021122T000000</releasedate>
+    <developer>Activision</developer>
+    <publisher>Raven Software</publisher>
+    <genre>Action</genre>
+    <players>2</players>
+    <genreid>256</genreid>
+  </game>
+</gameList>
