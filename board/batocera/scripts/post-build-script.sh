@@ -33,7 +33,7 @@ then
 fi
 
 #### remove unneeded firmware + drivers
-if test -e "${TARGET_DIR}/etc/init.d/S19piboy"
+if (test -e "${TARGET_DIR}/etc/init.d/S19piboy") || (test "${BATOCERA_TARGET}" = "RPI4")
 then
     rm -frv ${TARGET_DIR}/lib/firmware/{amdgpu,i915,intel,mellanox,nvidia,qcom,qed}
     rm -frv ${TARGET_DIR}/usr/lib/dri/{armada-drm_dri.so,exynos_dri.so,hx8357d_dri.so,ili9225_dri.so,ili9341_dri.so,imx-dcss_dri.so,imx-drm_dri.so,ingenic-drm_dri.so}
