@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./JediAcademy.game</path>
+    <name>Star Wars - Jedi Knight - Jedi Academy</name>
+    <desc>Forge your weapon and follow the path of the Jedi
+Jedi Knight Jedi Academy is the latest installment of the highly acclaimed Jedi Knight series. Take on the role of a new student eager to learn the ways of the Force from Jedi Master Luke Skywalker. Interact with famous Star Wars characters in many classic Star Wars locations as you face the ultimate choice: fight for good and freedom on the light side or follow the path of power and evil to the dark side.
+Customize your character by defining both look and gender before entering the Academy to learn the power-and dangers- of the Force.
+Construct your own Lightsaber from handle to blade. As you progress, discover the power of wiedling two Lightsabers or the ultimate double-bladed Lightsaber made famous by Darth Maul.
+New vehicles, weapons, force powers and Star Wars locations.
+Unique level selection system allows you to choose your own missions and adventures.</desc>
+	<image>./images/JediAcademy.png</image>
+    <rating>0.7</rating>
+    <releasedate>20031121T000000</releasedate>
+    <developer>Raven Software</developer>
+    <publisher>Activision</publisher>
+    <genre>Action</genre>
+    <players>2</players>
+    <genreid>256</genreid>
+  </game>
+</gameList>
