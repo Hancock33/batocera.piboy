@@ -7,6 +7,7 @@ from Emulator import Emulator
 import settings
 from settings.unixSettings import UnixSettings
 import json
+import subprocess
 from utils.logger import get_logger
 from PIL import Image, ImageOps
 import utils.bezels as bezelsUtil
@@ -89,12 +90,34 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution):
     # Basic configuration
     retroarchConfig['quit_press_twice'] = 'false'               # not aligned behavior on other emus
     retroarchConfig['menu_show_restart_retroarch'] = 'false'    # this option messes everything up on Batocera if ever clicked
-    retroarchConfig['video_driver'] = '"gl"'                    # needed for the ozone menu
-    retroarchConfig['audio_latency'] = '192'                    # best balance with audio perf
+
+    try:
+        glxCmd = 'glxinfo | grep "OpenGL version"'
+        glOutput = subprocess.check_output(glxCmd, shell=True).decode(sys.stdout.encoding)    
+        glString = glOutput.split()
+        glVersion = float(glString[3])        
+    except:
+        glVersion = 1
+    if glVersion >= 3.1:
+        defaultGFXDriver = "glcore"
+    else:
+        defaultGFXDriver = "gl"
+
+    if system.isOptSet("gfxbackend"):
+        if system.config["gfxbackend"] == "vulkan":
+            retroarchConfig['video_driver'] = '"vulkan"'
+        elif system.config["gfxbackend"] == "glcore":
+            retroarchConfig['video_driver'] = '"glcore"'
+        elif system.config["gfxbackend"] == "opengl":
+            retroarchConfig['video_driver'] = '"gl"'
+    else:
+        retroarchConfig['video_driver'] = '"' + defaultGFXDriver + '"'  # needed for the ozone menu
+
+    retroarchConfig['audio_latency'] = '64'                     # best balance with audio perf
     retroarchConfig['audio_mixer_volume'] = '0.000000'          # remove distortion on Piboy
     retroarchConfig['audio_driver'] = 'tinyalsa'
-    #if (system.isOptSet("audio_latency")):
-    #    retroarchConfig['audio_latency'] = system.config['audio_latency']
+    if (system.isOptSet("audio_latency")):
+        retroarchConfig['audio_latency'] = system.config['audio_latency']
 
     with open("/usr/share/batocera/batocera.arch") as fb:
         arch = fb.readline().strip()
@@ -112,8 +135,7 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution):
     else:
         retroarchConfig['video_rotation'] = '0'
 
-    if system.isOptSet("gfxbackend") and system.config["gfxbackend"] == "vulkan":
-        retroarchConfig['video_driver'] = '"vulkan"'
+    
 
     if system.isOptSet('video_threaded') and system.getOptBoolean('video_threaded') == True:
         retroarchConfig['video_threaded'] = 'true'
@@ -368,12 +390,6 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution):
                 retroarchConfig['input_player1_analog_dpad_mode'] = '1'
         else:
             retroarchConfig['input_libretro_device_p1'] = '1'
-
-    # FPS option
-    if system.isOptSet('framecount') and system.getOptBoolean('framecount') == True:
-        retroarchConfig['framecount_show'] = 'true'
-    else:
-        retroarchConfig['framecount_show'] = 'false'
 
     ## ZX Spectrum
     if (system.config['core'] == 'fuse'):
