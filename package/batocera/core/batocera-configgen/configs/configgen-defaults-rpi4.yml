@@ -15,6 +15,9 @@ psp:
 gamecube:
   emulator: libretro
   core:     dolphin
+sgb
+  emulator: libretro
+  core:     mgba
 wii:
   emulator: libretro
   core:     dolphin
