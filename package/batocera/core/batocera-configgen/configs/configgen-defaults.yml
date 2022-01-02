@@ -523,6 +523,12 @@ tyrquake:
 uzem:
   emulator: libretro
   core:     uzem
+vanillara:
+  emulator: vanillara
+  core:     vanillara
+vanillatd:
+  emulator: vanillatd
+  core:     vanillatd
 vectrex:
   emulator: libretro
   core:     vecx

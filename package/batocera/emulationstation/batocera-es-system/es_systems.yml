@@ -3160,6 +3160,28 @@ twentyfourtyeight:
   comment_fr: |
     Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
 
+vanillara:
+  name:       Command & Conquer Red Alert
+  manufacturer: Ports
+  release: 1996
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    vanillara:
+      vanillara: { requireAnyOf: [BR2_PACKAGE_CANDC] }
+
+vanillatd:
+  name:       Command & Conquer Tiberian Dawn
+  manufacturer: Ports
+  release: 1995
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    vanillatd:
+      vanillatd: { requireAnyOf: [BR2_PACKAGE_CANDC] }
+     
 voidsw:
   name:       Shadow Warrior
   manufacturer: Ports

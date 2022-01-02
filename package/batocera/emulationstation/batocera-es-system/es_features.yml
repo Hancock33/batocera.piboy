@@ -4914,6 +4914,14 @@ stuntcar:
   features: [padtokeyboard, decoration]
   shared: [hud]
 
+vanillara:
+  features: [padtokeyboard, decoration]
+  shared: [hud]
+
+vanillatd:
+  features: [padtokeyboard, decoration]
+  shared: [hud]
+
 voidsw:
   features: [padtokeyboard, decoration]
   shared: [hud]

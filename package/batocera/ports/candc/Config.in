@@ -1,0 +1,11 @@
+config BR2_PACKAGE_CANDC
+	bool "candc"
+	select BR2_PACKAGE_SDL2
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  Vanilla Conquer provides clean, cross-platform builds of the C&C Remastered Collection and the standalone legacy games.
+
+	  https://github.com/TheAssemblyArmada/Vanilla-Conquer
+
+comment "BR2_PACKAGE_CANDC needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

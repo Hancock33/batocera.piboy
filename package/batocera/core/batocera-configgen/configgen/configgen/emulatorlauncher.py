@@ -90,6 +90,8 @@ from generators.steam.steamGenerator import SteamGenerator
 from generators.stuntcar.stuntcarGenerator import StuntcarGenerator
 from generators.supermodel.supermodelGenerator import SupermodelGenerator
 from generators.tsugaru.tsugaruGenerator import TsugaruGenerator
+from generators.vanillara.vanillaraGenerator import VanillaraGenerator
+from generators.vanillatd.vanillatdGenerator import VanillatdGenerator
 from generators.vice.viceGenerator import ViceGenerator
 from generators.voidsw.voidswGenerator import VoidswGenerator
 from generators.wine.wineGenerator import WineGenerator
@@ -194,6 +196,8 @@ generators = {
     'supermodel': SupermodelGenerator(),
     'tsugaru': TsugaruGenerator(),
     'vice': ViceGenerator(),
+    'vanillara': VanillaraGenerator(),
+    'vanillatd': VanillatdGenerator(),
     'voidsw': VoidswGenerator(),
     'wine' : WineGenerator(),
     'xash3d_fwgs': Xash3dFwgsGenerator(),
