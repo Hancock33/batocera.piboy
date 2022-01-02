@@ -11,8 +11,6 @@ CANDC_DEPENDENCIES = sdl2 openal
 CANDC_LICENSE = GPL-2.0
 CANDC_SUPPORTS_IN_SOURCE_BUILD = NO
 
-CANDC_CONF_OPTS += -DCMAKE_BUILD_TYPE=RelWithDebInfo
-
 define CANDC_INSTALL_TARGET_CMDS
     $(INSTALL) -D $(@D)/buildroot-build/vanillara $(TARGET_DIR)/usr/bin/vanillara
     $(INSTALL) -D $(@D)/buildroot-build/vanillatd $(TARGET_DIR)/usr/bin/vanillatd     
