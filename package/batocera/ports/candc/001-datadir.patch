@@ -1,0 +1,13 @@
+diff --git a/common/paths_posix.cpp b/common/paths_posix.cpp
+index 76ae1bc..07d5174 100644
+--- a/common/paths_posix.cpp
++++ b/common/paths_posix.cpp
+@@ -183,7 +183,7 @@ const char* PathsClass::Data_Path()
+             Program_Path();
+         }
+ 
+-        DataPath = ProgramPath.substr(0, ProgramPath.find_last_of("/")) + SEP + "share";
++        DataPath = ProgramPath.substr(0, ProgramPath.find_last_of("u")) + SEP + "userdata/roms";
+ 
+         if (!Suffix.empty()) {
+             DataPath += SEP + Suffix;
