@@ -7,7 +7,7 @@
 MANGOHUD_VERSION = v0.6.6-1
 MANGOHUD_SITE =  $(call github,flightlessmango,MangoHud,$(MANGOHUD_VERSION))
 
-MANGOHUD_DEPENDENCIES = host-libcurl host-python3-mako
+MANGOHUD_DEPENDENCIES = host-libcurl host-python-mako
 
 # Batocaera - don't build using AMD sensor on the RPi4
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
