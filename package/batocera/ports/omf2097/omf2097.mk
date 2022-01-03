@@ -3,8 +3,8 @@
 # One Must Fall 2097
 #
 ################################################################################
-# Version.: Commits on Jan 02, 2022
-OMF2097_VERSION = 2a590e0c808b05c2949521576de957f19cd50d53
+# Version.: Commits on Jan 03, 2022
+OMF2097_VERSION = 1912b122200da73fadfc29319de72330341c8f3b
 OMF2097_SITE = $(call github,omf2097,openomf,$(OMF2097_VERSION))
 
 OMF2097_DEPENDENCIES = sdl2 sdl2_mixer libargtable2 enet libconfuse
