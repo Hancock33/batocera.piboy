@@ -9,15 +9,8 @@ MANGOHUD_SITE =  $(call github,flightlessmango,MangoHud,$(MANGOHUD_VERSION))
 
 MANGOHUD_DEPENDENCIES = host-libcurl host-python-mako
 
-# Batocaera - don't build using AMD sensor on the RPi4
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
-	MANGOHUD_CONF_OPTS += -Dwith_libdrm_amdgpu=disabled
-else
-    MANGOHUD_CONF_OPTS += -Dwith_libdrm_amdgpu=enabled
-endif
-
 ifeq ($(BR2_PACKAGE_LIBDRM),y)
-    MANGOHUD_DEPENDENCIES += libdrm
+	MANGOHUD_DEPENDENCIES += libdrm
 endif
 
 ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
@@ -28,7 +21,7 @@ ifeq ($(BR2_PACKAGE_VULKAN_HEADERS),y)
 	MANGOHUD_DEPENDENCIES += vulkan-headers
 endif
 
-MANGOHUD_CONF_OPTS += -Dwith_xnvctrl=disabled
+MANGOHUD_CONF_OPTS = -Dwith_xnvctrl=disabled
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS),y)
 	MANGOHUD_CONF_OPTS += -Duse_system_vulkan=enabled -Dvulkan_datadir=$(STAGING_DIR)/usr/share
 endif

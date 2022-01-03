@@ -5,7 +5,6 @@ default:
     retroarch.audio_out_rate: 44100
     retroarch.audio_driver: tinyalsa
     retroarch.video_max_swapchain_images: 1
-    hud_support: true
 
 nds:
   emulator: drastic
@@ -34,9 +33,6 @@ advision:
   emulator: mame
   core:     mame
 tvgames:
-  emulator: mame
-  core:     mame
-megaduck:
   emulator: mame
   core:     mame
 pv1000:
