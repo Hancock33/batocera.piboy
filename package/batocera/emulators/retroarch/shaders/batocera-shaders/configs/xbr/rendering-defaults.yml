@@ -84,6 +84,8 @@ jaguar:
   shader: xbr/2xBR-lv1-multipass
 j2me:
   shader: xbr/2xBR-lv1-multipass
+lcdgames:
+  shader: xbr/2xBR-lv1-multipass
 lowresnx:
   shader: xbr/2xBR-lv1-multipass
 lutro:
@@ -161,6 +163,8 @@ sega32x:
 segacd:
   shader: xbr/2xBR-lv1-multipass
 sg1000:
+  shader: xbr/2xBR-lv1-multipass
+sgb:
   shader: xbr/2xBR-lv1-multipass
 sufami:
   shader: xbr/2xBR-lv1-multipass
