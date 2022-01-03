@@ -27,10 +27,13 @@ endif
 
 # enable x11/vulkan interface only if xorg
 ifeq ($(BR2_PACKAGE_XORG7),y)
+# Batocera - use GLES2 for RPi4 (need to test vulkan on x11)
+  ifeq ($(BR2_i386)$(BR2_x86_64),y)
 	LIBRETRO_PPSSPP_CONF_OPTS += -DUSING_X11_VULKAN=ON
-else
+  else
 	LIBRETRO_PPSSPP_CONF_OPTS += -DUSING_X11_VULKAN=OFF
 	LIBRETRO_PPSSPP_TARGET_CFLAGS += -DEGL_NO_X11=1 -DMESA_EGL_NO_X11_HEADERS=1
+  endif
 endif
 
 # arm

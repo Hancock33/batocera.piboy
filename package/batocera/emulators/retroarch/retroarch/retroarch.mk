@@ -111,8 +111,11 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3326),y)
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
+# Batocera - RPi4 prefer GLES
+  ifeq ($(BR2_i386)$(BR2_x86_64),y)
 	RETROARCH_CONF_OPTS += --enable-opengl --disable-opengles
 	RETROARCH_DEPENDENCIES += libgl
+  endif
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
