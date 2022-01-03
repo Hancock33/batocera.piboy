@@ -35,9 +35,6 @@ advision:
 tvgames:
   emulator: mame
   core:     mame
-megaduck:
-  emulator: mame
-  core:     mame
 pv1000:
   emulator: mame
   core:     mame
