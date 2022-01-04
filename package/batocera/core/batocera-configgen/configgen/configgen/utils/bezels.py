@@ -73,7 +73,7 @@ def resizeImage(input_png, output_png, screen_width, screen_height):
     if imgin.mode != "RGBA":
         alphaPaste(input_png, output_png, imgin, fillcolor, (screen_width, screen_height))
     else:
-        imgout = imgin.resize((screen_width, screen_height), Image.ANTIALIAS)
+        imgout = imgin.resize((screen_width, screen_height), Image.BICUBIC)
         imgout.save(output_png, mode="RGBA", format="PNG")
 
 def padImage(input_png, output_png, screen_width, screen_height, bezel_width, bezel_height):
@@ -127,39 +127,38 @@ def tatooImage(input_png, output_png, system):
   # Quickly grab the sizes.
   w,h = fast_image_size(input_png)
   tw,th = fast_image_size(tattoo_file)
-  if system.isOptSet('bezel.resize_tattoo') and system.getOptBoolean('bezel.resize_tattoo') == False:
+  if system.config['bezel.resize_tattoo'] == 0:
       # Maintain the image's original size.
       # Failsafe for if the image is too large.
-      tatwidth,tatheight = tw,th
       if tw > w or th > h:
           # Limit width to that of the bezel and crop the rest.
           pcent = float(w / tw)
-          tatheight = int(float(th) * pcent)
+          th = int(float(th) * pcent)
           # Resize the tattoo to the calculated size.
-          tattoo = tattoo.resize((w,tatheight), Image.ANTIALIAS)
+          tattoo = tattoo.resize((w,th), Image.BICUBIC)
   else:
       # Resize to be slightly smaller than the bezel's column.
-      tatwidth = int(225/1920 * w)
-      pcent = float(tatwidth / tw)
-      tatheight = int(float(th) * pcent)
-      tattoo = tattoo.resize((tatwidth,tatheight), Image.ANTIALIAS)
-  # Grab the alpha masks for use later.
-  alpha = back.split()[-1]
-  alphatat = tattoo.split()[-1]
+      twtemp = int((225/1920) * w)
+      pcent = float(twtemp / tw)
+      th = int(float(th) * pcent)
+      tattoo = tattoo.resize((twtemp,th), Image.BICUBIC)
+      tw = twtemp
   # Create a new blank canvas that is the same size as the bezel for later compositing (they are required to be the same size).
   tattooCanvas = Image.new("RGBA", back.size)
+  # Margin for the tattoo
+  margin = int((20 / 1080) * h)
   if system.isOptSet('bezel.tattoo_corner'):
       corner = system.config['bezel.tattoo_corner']
   else:
       corner = 'NW'
   if (corner.upper() == 'NE'):
-      tattooCanvas.paste(tattoo, (w-tatwidth,20), alphatat) # 20 pixels vertical margins (on 1080p)
+      tattooCanvas.paste(tattoo, (w-tw,margin)) # 20 pixels vertical margins (on 1080p)
   elif (corner.upper() == 'SE'):
-      tattooCanvas.paste(tattoo, (w-tatwidth,h-tatheight-20), alphatat)
+      tattooCanvas.paste(tattoo, (w-tw,h-th-margin))
   elif (corner.upper() == 'SW'):
-      tattooCanvas.paste(tattoo, (0,h-tatheight-20), alphatat)
+      tattooCanvas.paste(tattoo, (0,h-th-margin))
   else: # default = NW
-      tattooCanvas.paste(tattoo, (0,20), alphatat)
+      tattooCanvas.paste(tattoo, (0,margin))
   back = Image.alpha_composite(back, tattooCanvas)
 
   imgnew = Image.new("RGBA", (w,h), (0,0,0,255))
