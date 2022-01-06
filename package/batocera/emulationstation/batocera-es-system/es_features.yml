@@ -2293,7 +2293,7 @@ libretro:
                 description: Hides borders on many games. Some games use the borders.
                 choices:
                     "Off":            none
-                    "Autofit screen": automatic
+                    "Auto zoom":      automatic
                     "minimum":        minimum
                     "smaller":        smaller
                     "small":          small
@@ -2946,11 +2946,11 @@ libretro:
                     "medium":                   medium
                     "maximum":                  maximum
             button_options_c64:
-                prompt:      BUTTON OPTIONS
-                description: Change A button action.
+                prompt:      JUMP ON A
+                description: Makes second fire button press up instead.
                 choices:
-                    "B = Fire, A = 2nd fire":   disabled
-                    "B = Fire, A = Up (jump)":  jump
+                    "Off":                      disabled
+                    "On":                       jump
             vice_joyport:
                 prompt:      CONTROLLER PORT
                 description: Most games use port 2, some use port 1.
@@ -3918,12 +3918,17 @@ ppsspp:
             description: Skip frames to improve performance, at the cost of choppy motion.
             choices:
                 "Off":                  0
-                "Autodetect":           automatic
                 "1":                    1
                 "2":                    2
                 "3":                    3
                 "4":                    4
                 "5":                    5
+        autoframeskip:
+            prompt:      AUTO FRAMESKIP
+            description: Automatically reduce frameskip if the system has spare overhead.
+            choices:
+                "On":                   1
+                "Off":                  0
         vsyncinterval:
             prompt:      VSYNC INTERVAL
             description: Enable for more fluidity, disable if screen tearing.
