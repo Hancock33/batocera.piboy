@@ -3,8 +3,8 @@
 # LIBRETRO-FLYCAST
 #
 ################################################################################
-# Version.: Commits on Dec 31, 2021
-LIBRETRO_FLYCAST_VERSION = 1475db72f26abc8321e085ce163aa12298812e7e
+# Version.: Commits on Jan 07, 2022
+LIBRETRO_FLYCAST_VERSION = d820f09f4c2562731d78463fab06fb861819c7de
 LIBRETRO_FLYCAST_SITE = $(call github,libretro,flycast,$(LIBRETRO_FLYCAST_VERSION))
 LIBRETRO_FLYCAST_LICENSE = GPLv2
 LIBRETRO_FLYCAST_DEPENDENCIES = retroarch
