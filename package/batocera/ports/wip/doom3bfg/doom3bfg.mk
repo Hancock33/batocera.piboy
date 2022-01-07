@@ -3,8 +3,8 @@
 # Doom 3 BFG
 #
 ################################################################################
-# Version.: Commits on Nov 16, 2021
-DOOM3BFG_VERSION = 2b727db4c211c6b6f4d1be0d43d76aa69c7e104f
+# Version.: Commits on Jan 06, 2022
+DOOM3BFG_VERSION = a89dc048e8c4ea1acb3afa2e018b6f8f2b2a7e32
 DOOM3BFG_SITE = https://github.com/RobertBeckebans/RBDOOM-3-BFG.git
 DOOM3BFG_SITE_METHOD=git
 DOOM3BFG_GIT_SUBMODULES=YES
