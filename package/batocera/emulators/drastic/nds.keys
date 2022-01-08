@@ -1,0 +1,118 @@
+{
+    "actions_player1": [
+        {
+            "trigger": [
+                "hotkey",
+                "start"
+            ],
+            "type": "exec",
+            "target": "killall -9 drastic && clear"
+        },
+        {
+            "trigger": "up",
+            "type": "key",
+            "target": "KEY_UP"
+        },
+        {
+            "trigger": "down",
+            "type": "key",
+            "target": "KEY_DOWN"
+        },
+        {
+            "trigger": "left",
+            "type": "key",
+            "target": "KEY_LEFT"
+        },
+        {
+            "trigger": "right",
+            "type": "key",
+            "target": "KEY_RIGHT"
+        },
+        {
+            "trigger": "start",
+            "type": "key",
+            "target": "KEY_ENTER"
+        },
+        {
+            "trigger": "select",
+            "type": "key",
+            "target": "KEY_SPACE"
+        },
+        {
+            "trigger": [
+                "b",
+                "hotkey"
+            ],
+            "type": "key",
+            "target": "KEY_F1"
+        },
+        {
+            "trigger": "joystick1",
+            "type": "mouse"
+        },
+        {
+            "trigger": "a",
+            "type": "key",
+            "target": "KEY_R"
+        },
+        {
+            "trigger": "b",
+            "type": "key",
+            "target": "KEY_E"
+        },
+        {
+            "trigger": "x",
+            "type": "key",
+            "target": "KEY_F"
+        },
+        {
+            "trigger": "y",
+            "type": "key",
+            "target": "KEY_D"
+        },
+        {
+            "trigger": "l2",
+            "type": "key",
+            "target": "KEY_C"
+        },
+        {
+            "trigger": "r2",
+            "type": "key",
+            "target": "KEY_V"
+        },
+        {
+            "trigger": "pageup",
+            "type": "key",
+            "target": "KEY_ESC"
+        },
+        {
+            "trigger": "pagedown",
+            "type": "key",
+            "target": "BTN_LEFT"
+        },
+        {
+            "trigger": [
+                "a",
+                "hotkey"
+            ],
+            "type": "key",
+            "target": "KEY_F2"
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "x"
+            ],
+            "type": "key",
+            "target": "KEY_F3"
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "y"
+            ],
+            "type": "key",
+            "target": "KEY_F4"
+        }
+    ]
+}
