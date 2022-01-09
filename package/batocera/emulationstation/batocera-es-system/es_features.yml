@@ -4231,7 +4231,7 @@ mame:
             choices:
                 "Off (Default)":    0
                 "DS3 Orientation":  1
-                "X360 Orientation": 2      
+                "X360 Orientation": 2
         customcfg:
             prompt:      CUSTOM MAME CONFIG
             description: Set system-wide controls via MAME menu
@@ -4415,7 +4415,7 @@ mame:
                     choices:
                         "On":  1
                         "Off": 0
-       mame: 
+       mame:
             cfeatures:
                 altlayout:
                     prompt:      SPECIAL CONTROL LAYOUTS
@@ -4429,7 +4429,7 @@ mame:
                         "Neo Geo CD Pad":               "neocd"
                         "Twin Stick with Triggers":     "twinstick"
                         "Rotated 4-Way Stick (Q*Bert)": "qbert"
-       neogeo: 
+       neogeo:
             cfeatures:
                 altlayout:
                     prompt:      SPECIAL CONTROL LAYOUTS
@@ -4904,11 +4904,11 @@ openclaw:
 openjazz:
   features: [padtokeyboard, decoration]
   shared: [hud]
-  
+
 openjkja:
   features: [padtokeyboard, decoration]
   shared: [hud]
-  
+
 openjkjo:
   features: [padtokeyboard, decoration]
   shared: [hud]

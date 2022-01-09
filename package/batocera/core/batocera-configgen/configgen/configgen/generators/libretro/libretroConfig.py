@@ -124,7 +124,7 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution, gfxBac
     if system.isOptSet('video_allow_rotate') and system.getOptBoolean('video_allow_rotate') == False:
         retroarchConfig['video_allow_rotate'] = 'false'
     else:
-        retroarchConfig['video_allow_rotate'] = 'true'    
+        retroarchConfig['video_allow_rotate'] = 'true'
 
     # variable refresh rate
     if system.isOptSet("vrr_runloop_enable") and system.getOptBoolean("vrr_runloop_enable") == False:
@@ -390,7 +390,7 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution, gfxBac
         if system.isOptSet('controller2_zxspec'):
             retroarchConfig['input_libretro_device_p2'] = system.config['controller2_zxspec']
         else:
-            retroarchConfig['input_libretro_device_p2'] = '1025'                              #Sinclair 2 controller 
+            retroarchConfig['input_libretro_device_p2'] = '1025'                              #Sinclair 2 controller
         if system.isOptSet('controller3_zxspec'):
             retroarchConfig['input_libretro_device_p3'] = system.config['controller3_zxspec']
         else:

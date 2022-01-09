@@ -10,7 +10,7 @@ class ScummVMGenerator(Generator):
 
     def getResolutionMode(self, config):
         return 'default'
-    
+
     # Main entry of the module
     # Configure mupen and return a command
     def generate(self, system, rom, playersControllers, gameResolution):
@@ -36,7 +36,7 @@ class ScummVMGenerator(Generator):
         commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
                         "-f",
                         "--joystick={}".format(id),
-                        "--screenshotspath="+batoceraFiles.screenshotsDir, 
+                        "--screenshotspath="+batoceraFiles.screenshotsDir,
                         "--extrapath=/usr/share/scummvm",
                         "--savepath="+batoceraFiles.scummvmSaves,
                         "--path=""{}""".format(romPath)]

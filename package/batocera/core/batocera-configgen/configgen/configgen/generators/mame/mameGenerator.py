@@ -46,14 +46,14 @@ class MameGenerator(Generator):
             os.makedirs("/userdata/saves/mame/comments/")
 
         # Define systems that will use the MESS executable instead of MAME
-        messSystems = [ "lcdgames", "gameandwatch", "cdi", "advision", "tvgames", "megaduck", "crvision", "gamate", "pv1000", "gamecom" , "fm7", "xegs", "gamepock", "aarch", "atom", "apfm1000", "bbc", "camplynx", "adam", "arcadia", "supracan", "gmaster", "astrocde", "ti99", "tutor", "coco", "socrates" ]
+        messSystems = [ "lcdgames", "gameandwatch", "cdi", "advision", "tvgames", "sameduck", "crvision", "gamate", "pv1000", "gamecom" , "fm7", "xegs", "gamepock", "aarch", "atom", "apfm1000", "bbc", "camplynx", "adam", "arcadia", "supracan", "gmaster", "astrocde", "ti99", "tutor", "coco", "socrates" ]
         # If it needs a system name defined, use it here. Add a blank string if it does not (ie non-arcade, non-system ROMs)
-        messSysName = [ "", "", "cdimono1", "advision", "", "megaduck", "crvision", "gamate", "pv1000", "gamecom", "fm7", "xegs", "gamepock", "aa310", "atom", "apfm1000", "bbcb", "lynx48k", "adam", "arcadia", "supracan", "gmaster", "astrocde", "ti99_4a", "tutor", "coco", "socrates" ]
+        messSysName = [ "", "", "cdimono1", "advision", "", "sameduck", "crvision", "gamate", "pv1000", "gamecom", "fm7", "xegs", "gamepock", "aa310", "atom", "apfm1000", "bbcb", "lynx48k", "adam", "arcadia", "supracan", "gmaster", "astrocde", "ti99_4a", "tutor", "coco", "socrates" ]
         # For systems with a MAME system name, the type of ROM that needs to be passed on the command line (cart, tape, cdrm, etc)
         # If there are multiple ROM types (ie a computer w/disk & tape), select the default or primary type here.
         messRomType = [ "", "", "cdrm", "cart", "", "cart", "cart", "cart", "cart", "cart1", "flop1", "cart", "cart", "flop", "cass", "cart", "flop1", "cass", "cass1", "cart", "cart", "cart", "cart", "cart", "cart", "cart", "cart" ]
         messAutoRun = [ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", 'mload""\\n', "", "", "", "", "", "", "", "", "" ]
-        
+
         # Identify the current system, select MAME or MESS as needed.
         try:
             messMode = messSystems.index(system.name)
@@ -63,7 +63,7 @@ class MameGenerator(Generator):
             commandArray =  [ "/usr/bin/mame/mame" ]
         else:
             commandArray =  [ "/usr/bin/mame/mess" ]
-        
+
         # MAME options used here are explained as it's not always straightforward
         # A lot more options can be configured, just run mame -showusage and have a look
         commandArray += [ "-skip_gameinfo" ]
@@ -99,14 +99,14 @@ class MameGenerator(Generator):
             else:
                 cfgPath = "/userdata/system/configs/mame/"
             if not os.path.exists("/userdata/system/configs/mame/"):
-                os.makedirs("/userdata/system/configs/mame/")    
+                os.makedirs("/userdata/system/configs/mame/")
         else:
             if customCfg:
                 cfgPath = "/userdata/system/configs/mame/" + messSysName[messMode]+ "/custom/"
             else:
                 cfgPath = "/userdata/system/configs/mame/" + messSysName[messMode] + "/"
             if not os.path.exists("/userdata/system/configs/mame/" + messSysName[messMode] + "/"):
-                os.makedirs("/userdata/system/configs/mame/" + messSysName[messMode] + "/")    
+                os.makedirs("/userdata/system/configs/mame/" + messSysName[messMode] + "/")
         if not os.path.exists(cfgPath):
             os.makedirs(cfgPath)
 
@@ -172,15 +172,17 @@ class MameGenerator(Generator):
             commandArray += [ "-autoror" ]
         if system.isOptSet("rotation") and system.config["rotation"] == "autorol":
             commandArray += [ "-autorol" ]
-        
+
         # UI enable - for computer systems, the default sends all keys to the emulated system.
         # This will enable hotkeys, but some keys may pass through to MAME and not be usable in the emulated system.
         # Hotkey + D-Pad Up will toggle this when in use (scroll lock key)
         if not (system.isOptSet("enableui") and not system.getOptBoolean("enableui")):
             commandArray += [ "-ui_active" ]
-        
+
         # Finally we pass game name
         # MESS will use the full filename and pass the system & rom type parameters if needed.
+        if (messSysName[messMode].__contains__("sameduck")):
+            messSysName[messMode] = messSysName[messMode].replace("sameduck", "megaduck")
         if messMode == -1:
             commandArray += [ romBasename ]
         else:
@@ -215,20 +217,20 @@ class MameGenerator(Generator):
                     commandArray += [ "-" + messRomType[messMode] ]
                 # Use the full filename for MESS ROMs
                 commandArray += [ rom ]
-        
+
         # Alternate D-Pad Mode
         if system.isOptSet("altdpad"):
             dpadMode = system.config["altdpad"]
         else:
             dpadMode = 0
-        
+
         buttonLayout = getMameControlScheme(system, romBasename)
-                
+
         if messMode == -1:
             mameControllers.generatePadsConfig(cfgPath, playersControllers, "", dpadMode, buttonLayout, customCfg)
         else:
             mameControllers.generatePadsConfig(cfgPath, playersControllers, messSysName[messMode], dpadMode, buttonLayout, customCfg)
-        
+
         # bezels
         if 'bezel' not in system.config or system.config['bezel'] == '':
             bezel = None
@@ -423,7 +425,7 @@ def getMameControlScheme(system, romBasename):
         neogeoList = set(open(mameNeogeo).read().split())
         twinstickList = set(open(mameTwinstick).read().split())
         qbertList = set(open(mameRotatedstick).read().split())
-            
+
         romName = os.path.splitext(romBasename)[0]
         if romName in capcomList:
             if controllerType in [ "auto", "snes" ]:
