@@ -2902,7 +2902,7 @@ openjkja:
   emulators:
     openjkja:
       openjkja: { requireAnyOf: [BR2_PACKAGE_OPENJK] }
-      
+
 openjkjo:
   name:       Jedi Outcast
   manufacturer: Ports
@@ -2912,7 +2912,7 @@ openjkjo:
   group: ports
   emulators:
     openjkjo:
-      openjkjo: { requireAnyOf: [BR2_PACKAGE_OPENJK] } 
+      openjkjo: { requireAnyOf: [BR2_PACKAGE_OPENJK] }
 
 openlara:
   name:       Tomb Raider 1
@@ -3173,7 +3173,7 @@ vanillatd:
   emulators:
     vanillatd:
       vanillatd: { requireAnyOf: [BR2_PACKAGE_CANDC] }
-     
+
 voidsw:
   name:       Shadow Warrior
   manufacturer: Ports

@@ -10,7 +10,7 @@ class BstoneGenerator(Generator):
     def generate(self, system, rom, playersControllers, gameResolution):
         addon = "/userdata/roms/bstone/SW"
         gver = "--aog_sw"
-        
+
         if (rom.__contains__("AOG")):
             addon = "/userdata/roms/bstone/AOG"
             gver = "--aog"
