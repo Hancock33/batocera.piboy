@@ -3,8 +3,8 @@
 # LIBRETRO_FREEINTV
 #
 ################################################################################
-# Version.: Commits on Jan 07, 2022
-LIBRETRO_FREEINTV_VERSION = 0ab0a7c049fdd0851c011e35a429bc64a12041e8
+# Version.: Commits on Jan 10, 2022
+LIBRETRO_FREEINTV_VERSION = d58caf23ed1438a1db58f8d6ac24ca521b411d3b
 LIBRETRO_FREEINTV_SITE = $(call github,libretro,freeintv,$(LIBRETRO_FREEINTV_VERSION))
 LIBRETRO_FREEINTV_LICENSE = GPLv3
 
