@@ -3,8 +3,8 @@
 # BEETLE_WSWAN
 #
 ################################################################################
-# Version.: Commits on Nov 25, 2021
-LIBRETRO_BEETLE_WSWAN_VERSION = ea00c1d8eb9894538dd8758975cd9d6ae99ead1e
+# Version.: Commits on Jan 10, 2022
+LIBRETRO_BEETLE_WSWAN_VERSION = 908dea2ec3090639c1eade2ff5fc0fc572214745
 LIBRETRO_BEETLE_WSWAN_SITE = $(call github,libretro,beetle-wswan-libretro,$(LIBRETRO_BEETLE_WSWAN_VERSION))
 LIBRETRO_BEETLE_WSWAN_LICENSE = GPLv2
 
