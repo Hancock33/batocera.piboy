@@ -3,8 +3,8 @@
 # Droid Ports
 #
 ################################################################################
-# Version.: Commits on Nov 27, 2021
-DROIDPORTS_VERSION = faf39702a6148f689c3f36964c8eabad81dc996b
+# Version.: Commits on Dec 28, 2021
+DROIDPORTS_VERSION = aba161e9c36166e8e4fca154343e15a810cdb061
 DROIDPORTS_SITE = https://github.com/JohnnyonFlame/droidports.git
 DROIDPORTS_SITE_METHOD=git
 DROIDPORTS_GIT_SUBMODULES=YES
