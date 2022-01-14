@@ -422,4 +422,5 @@ menu "Libraries"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/wildmidi/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/wxwidgets/Config.in"
 endmenu
+
 endmenu

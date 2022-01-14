@@ -9,7 +9,7 @@ class StuntcarGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
         os.chdir("/usr/share/stuntcar")
-        commandArray = ["stuntcar"]
+        commandArray = ["/usr/share/stuntcar/stuntcar"]
 
         return Command.Command(
             array=commandArray,

@@ -159,13 +159,13 @@ class MameGenerator(Generator):
             commandArray += [ "-video", "opengl" ]
 
         # CRT / SwitchRes support
-        if system.isOptSet("switchres") and system.getOptBoolean("switchres"):
-            commandArray += [ "-modeline_generation" ]
-            commandArray += [ "-changeres" ]
-        else:
-            commandArray += [ "-nomodeline_generation" ]
-            commandArray += [ "-nochangeres" ]
-            commandArray += [ "-noswitchres" ]
+        #if system.isOptSet("switchres") and system.getOptBoolean("switchres"):
+            #commandArray += [ "-modeline_generation" ]
+            #commandArray += [ "-changeres" ]
+        #else:
+            #commandArray += [ "-nomodeline_generation" ]
+            #commandArray += [ "-nochangeres" ]
+            #commandArray += [ "-noswitchres" ]
 
         # Rotation / TATE options
         if system.isOptSet("rotation") and system.config["rotation"] == "autoror":
@@ -403,12 +403,12 @@ class MameGenerator(Generator):
 
 def getMameControlScheme(system, romBasename):
     # Game list files
-    mameCapcom = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameCapcom.txt'
-    mameKInstinct = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameKInstinct.txt'
-    mameMKombat = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameMKombat.txt'
-    mameNeogeo = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameNeogeo.txt'
-    mameTwinstick = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameTwinstick.txt'
-    mameRotatedstick = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameRotatedstick.txt'
+    mameCapcom = '/usr/lib/python3.10/site-packages/configgen/datainit/mame/mameCapcom.txt'
+    mameKInstinct = '/usr/lib/python3.10/site-packages/configgen/datainit/mame/mameKInstinct.txt'
+    mameMKombat = '/usr/lib/python3.10/site-packages/configgen/datainit/mame/mameMKombat.txt'
+    mameNeogeo = '/usr/lib/python3.10/site-packages/configgen/datainit/mame/mameNeogeo.txt'
+    mameTwinstick = '/usr/lib/python3.10/site-packages/configgen/datainit/mame/mameTwinstick.txt'
+    mameRotatedstick = '/usr/lib/python3.10/site-packages/configgen/datainit/mame/mameRotatedstick.txt'
 
     # Controls for games with 5-6 buttons or other unusual controls
     if system.isOptSet("altlayout"):
