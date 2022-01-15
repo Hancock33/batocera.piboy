@@ -23,7 +23,7 @@ msgctxt "game_options"
 msgid "Show context-sensitive info over the game."
 msgstr "ゲーム全体でコンテキスト依存の情報を表示します。"
 
-#. TRANSLATION: shared, shared, libretro/mesen-s, libretro/swanstation, libretro/swanstation, ...
+#. TRANSLATION: shared, shared, libretro/mesens, libretro/swanstation, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "None"
 msgstr "なし"
@@ -218,57 +218,57 @@ msgctxt "game_options"
 msgid "576+KB"
 msgstr "576+KB"
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
+#. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
 msgid "BLARGG NTSC FILTER"
 msgstr "NTSC フィルター"
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
+#. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
 msgid "Core-powered video filter."
 msgstr "コアパワードビデオフィルター"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Disabled"
 msgstr "無効"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Composite (Blargg)"
 msgstr "コンポジット (Blargg)"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "S-Video (Blargg)"
 msgstr "Sビデオ（Blargg）"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "RGB (Blargg)"
 msgstr "RGB (Blargg)"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Monochrome (Blargg)"
 msgstr "モノクロ (Blargg)"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "HIGH-RES BLENDING"
 msgstr "高解像度ブレンディング"
 
-#. TRANSLATION: libretro/mesen-s, libretro/snes9x
+#. TRANSLATION: libretro/mesens, libretro/snes9x
 msgctxt "game_options"
 msgid "Blur high-res mode, allowing for better transparency effects."
 msgstr "高解像度モードをぼかし、透明度の効果を高めます。"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "CUBIC AUDIO INTERPOLATION"
 msgstr "キュービック音声補間"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid ""
 "Enhancement. Swap from SNES' guassian interpolation to cubic. Improves sound "
@@ -276,12 +276,12 @@ msgid ""
 msgstr ""
 "強化：スーファミのグアシアン補間から3次に取り替えます。音質を向上させます。"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "GAME BOY MODE"
 msgstr "ゲームボーイモード"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid ""
 "Change behaviour when emulating GB games. Auto uses SGB for GB and GBC for "
@@ -290,88 +290,88 @@ msgstr ""
 "ゲームボーイのエミュレート動作を変更します。 自動はGBにスーパーGBを使用し、"
 "GBCはGBCを使用します。"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Game Boy"
 msgstr "ゲームボーイアドバンスROMファイル (*.gba)"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Game Boy Color"
 msgstr "ゲームボーイカラー"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Super Game Boy"
 msgstr "スーパーゲームボーイ"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "SUPER GAME BOY 2"
 msgstr "ゲーム別のソート"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Emulate the Super Game Boy 2 for SGB. Runs games at the correct speed."
 msgstr ""
 "スーパーゲームボーイ2をエミュレートします。正しい速度でゲームを実行します。"
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm, libretro/mame, libretro/mednafen_psx, libretro/nestopia, ...
+#. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/mame, libretro/mednafen_psx, libretro/nestopia, ...
 msgctxt "game_options"
 msgid "OVERCLOCK (UNSTABLE)"
 msgstr "オーバークロック（不安定）"
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm, libretro/mame, libretro/mednafen_psx, libretro/nestopia, ...
+#. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/mame, libretro/mednafen_psx, libretro/nestopia, ...
 msgctxt "game_options"
 msgid "Enhancement. Reduces system slowdown. Causes issues in some games."
 msgstr "強化：一部のゲームの元々のスローダウンを修正します"
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm, amiberry
+#. TRANSLATION: libretro/mesens, libretro/fceumm, amiberry
 msgctxt "game_options"
 msgid "Low"
 msgstr "小"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Medium"
 msgstr "中"
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm, amiberry
+#. TRANSLATION: libretro/mesens, libretro/fceumm, amiberry
 msgctxt "game_options"
 msgid "High"
 msgstr "大"
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm
+#. TRANSLATION: libretro/mesens, libretro/fceumm
 msgctxt "game_options"
 msgid "Very High"
 msgstr "非常に高い"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "OVERCLOCK TYPE"
 msgstr "オーバークロック"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Prefer \"Before NMI\", change to After NMI only if needed by the game."
 msgstr "「BeforeNMI」を優先し、ゲームで必要な場合にのみAfterNMIに変更します。"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Before NMI"
 msgstr "Before NMI"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "After NMI"
 msgstr "After NMI"
 
-#. TRANSLATION: libretro/mesen-s, libretro/snes9x, libretro/snes9x_next
+#. TRANSLATION: libretro/mesens, libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "SUPER FX OVERCLOCK"
 msgstr "SUPER-FX オーバークロック"
 
-#. TRANSLATION: libretro/mesen-s, libretro/snes9x, libretro/snes9x_next
+#. TRANSLATION: libretro/mesens, libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr "強化：モード7ゲームの速度低下を減らします。"
