@@ -43,6 +43,5 @@ class ScummVMGenerator(Generator):
         commandArray.append("""{}""".format(romName))
 
         return Command.Command(array=commandArray,env={
-            "PIPEWIRE_LATENCY": "1024/48000",
             "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
         })
