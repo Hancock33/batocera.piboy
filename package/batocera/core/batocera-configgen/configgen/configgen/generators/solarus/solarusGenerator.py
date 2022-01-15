@@ -33,8 +33,7 @@ class SolarusGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS': '0',
-                'PIPEWIRE_LATENCY': '1024/48000'
+                'SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS': '0'
         })
 
     @staticmethod

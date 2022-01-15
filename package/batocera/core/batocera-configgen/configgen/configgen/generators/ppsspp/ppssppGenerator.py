@@ -52,8 +52,7 @@ class PPSSPPGenerator(Generator):
                 'XDG_CONFIG_HOME': batoceraFiles.CONF,
                 'XDG_RUNTIME_DIR': batoceraFiles.HOME_INIT,
                 'QT_QPA_PLATFORM': 'xcb',
-                'PPSSPP_GAME_CONTROLLER_DB_PATH': ppssppControls,
-                'PIPEWIRE_LATENCY': '1024/48000'
+                'PPSSPP_GAME_CONTROLLER_DB_PATH': ppssppControls
         })
 
     @staticmethod
