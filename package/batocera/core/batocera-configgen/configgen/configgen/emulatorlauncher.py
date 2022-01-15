@@ -41,6 +41,7 @@ from generators.freedroid.freedroidGenerator import FreedroidGenerator
 from generators.fpinball.fpinballGenerator import FpinballGenerator
 from generators.fsuae.fsuaeGenerator import FsuaeGenerator
 from generators.gsplus.gsplusGenerator import GSplusGenerator
+from generators.gzdoom.gzdoomGenerator import GzdoomGenerator
 from generators.hatari.hatariGenerator import HatariGenerator
 from generators.hcl.hclGenerator import HclGenerator
 from generators.hode.hodeGenerator import HodeGenerator
@@ -145,6 +146,7 @@ generators = {
     'fpinball': FpinballGenerator(),
     'fsuae': FsuaeGenerator(),
     'gsplus': GSplusGenerator(),
+    'gzdoom': GzdoomGenerator(),   
     'hatari': HatariGenerator(),
     'hcl': HclGenerator(),
     'hode': HodeGenerator(),
