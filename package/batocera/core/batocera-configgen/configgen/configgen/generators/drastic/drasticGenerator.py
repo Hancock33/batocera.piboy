@@ -89,8 +89,7 @@ class DrasticGenerator(Generator):
             env={
                 'DISPLAY': '0.0',
                 'LIB_FB': '3',
-                'SDL_AUTO_UPDATE_JOYSTICKS': '0',
-                'PIPEWIRE_LATENCY': '1024/48000'
+                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
 
 # Language auto-setting

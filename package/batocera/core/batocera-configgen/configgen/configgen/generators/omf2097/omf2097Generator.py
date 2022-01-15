@@ -14,6 +14,5 @@ class Omf2097Generator(Generator):
             array=commandArray,
             env={
                 'OPENOMF_RESOURCE_DIR' : '/userdata/roms/omf2097',
-                'SDL_AUTO_UPDATE_JOYSTICKS': '0',
-                'PIPEWIRE_LATENCY': '1024/48000'
+                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             })

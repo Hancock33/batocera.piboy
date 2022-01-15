@@ -58,11 +58,7 @@ class CannonballGenerator(Generator):
         dom_string = os.linesep.join([s for s in config.toprettyxml().splitlines() if s.strip()]) # remove ugly empty lines while minicom adds them...
         cannonballXml.write(dom_string)
 
-        return Command.Command(
-            array=["cannonball"],
-            env={
-                'PIPEWIRE_LATENCY': '1024/48000'
-        })
+        return Command.Command(array=["cannonball"])
 
     @staticmethod
     def getRoot(config, name):

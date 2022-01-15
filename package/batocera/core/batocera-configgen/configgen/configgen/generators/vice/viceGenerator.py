@@ -30,6 +30,5 @@ class ViceGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'XDG_CONFIG_HOME': batoceraFiles.CONF,
-                'PIPEWIRE_LATENCY': '1024/48000'
+                'XDG_CONFIG_HOME': batoceraFiles.CONF
             })
