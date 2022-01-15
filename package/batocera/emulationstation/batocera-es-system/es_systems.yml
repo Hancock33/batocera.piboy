@@ -947,6 +947,8 @@ prboom:
   emulators:
     libretro:
       prboom: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PRBOOM] }
+    gzdoom:
+      gzdoom: { requireAnyOf: [BR2_PACKAGE_GZDOOM] }
   comment_en: |
     Put DOOM 1 and 2 games (and their associated mods) in this directory.
     Put your soundtrack in the directory ./game-musics
