@@ -3,17 +3,19 @@
 # Aliens Vs Predator
 #
 ################################################################################
-# Version.: Commits on May 05, 2017
-AVP_VERSION = 76a0169ab4a9226ae0f637fbabbf836447f804e9
-AVP_SITE = $(call github,Rinnegatamante,AvP-Gold-Vita,$(AVP_VERSION))
+# Version.: Commits on Apr 19, 2020
+AVP_VERSION = 2d5774781dd2ed959a83b2a98ab6f3f26e1dcc51
+AVP_SITE = $(call github,neuromancer,avp,$(AVP_VERSION))
 
 AVP_DEPENDENCIES = sdl2 sdl2_mixer
 AVP_LICENSE = GPL-2.0
 
 AVP_SUPPORTS_IN_SOURCE_BUILD = NO
 
-AVP_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DSDL_TYPE=SDL2
-
+AVP_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DSDL_TYPE=SDL2 -DOPENGL_TYPE=OPENGLES2
+AVP_CONF_OPTS += -DCMAKE_C_FLAGS="-DNDEBUG -Ofast -pipe -ffast-math -fno-math-errno -g -DFIXED_WINDOW_SIZE" 
+AVP_CONF_OPTS += -DCMAKE_CXX_FLAGS="-DNDEBUG -Ofast -pipe -std=c++11 -ffast-math -fno-math-errno -g -DDFIXED_WINDOW_SIZE" 
+AVP_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-g"
 
 define AVP_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/AVP
