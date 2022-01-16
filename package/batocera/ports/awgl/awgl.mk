@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version.: Commits on Jan 13, 2022
-AWGL_VERSION = 733c41a75e7bde37938c49908fb35c9fc183aed2
+AWGL_VERSION = c0a2eebb71a9f97cac9fa203d1a7cd7095af2abe
 AWGL_SITE = $(call github,cyxx,rawgl,$(AWGL_VERSION))
 
 AWGL_DEPENDENCIES = sdl2 sdl2_mixer freepats
