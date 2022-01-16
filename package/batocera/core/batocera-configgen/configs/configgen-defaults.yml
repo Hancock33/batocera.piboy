@@ -544,6 +544,9 @@ virtualboy:
 voidsw:
   emulator: voidsw
   core:     voidsw
+wasm4:
+  emulator: libretro
+  core:     wasm4
 wii:
   emulator: dolphin
   core:     dolphin

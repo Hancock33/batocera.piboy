@@ -3415,6 +3415,8 @@ libretro:
       features: [rewind, autosave]
     uzem:
       features: [rewind, autosave]
+    wasm4:
+      features: [autosave]
     play:
       features: []
     pcsx2:
