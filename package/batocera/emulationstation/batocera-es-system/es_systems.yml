@@ -2265,6 +2265,16 @@ uzebox:
     libretro:
       uzem: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UZEM] }
 
+wasm4:
+  name:       WASM-4
+  manufacturer: W3C
+  release: 2017
+  hardware: computer
+  extensions: [wasm]
+  emulators:
+    libretro:
+      wasm4: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_WASM] }
+
 cdi:
   name:       CD-i
   manufacturer: Philips
