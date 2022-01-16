@@ -23,8 +23,8 @@ def defined(key, dict):
 
 
 # Warning the values in the array must be exactly at the same index than
-# https://github.com/libretro/RetroArch/blob/master/gfx/video_driver.c#L132
-ratioIndexes = ["4/3", "16/9", "16/10", "16/15", "21/9", "1/1", "2/1", "3/2", "3/4", "4/1", "4/4", "5/4", "6/5", "7/9", "8/3",
+# https://github.com/libretro/RetroArch/blob/master/gfx/video_driver.c#L188
+ratioIndexes = ["4/3", "16/9", "16/10", "16/15", "21/9", "1/1", "2/1", "3/2", "3/4", "4/1", "9/16", "5/4", "6/5", "7/9", "8/3",
                 "8/7", "19/12", "19/14", "30/17", "32/9", "config", "squarepixel", "core", "custom", "full"]
 
 # Define system emulated by bluemsx core
