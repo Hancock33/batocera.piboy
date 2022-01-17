@@ -22,6 +22,7 @@ from generators.cgenius.cgeniusGenerator import CGeniusGenerator
 from generators.citra.citraGenerator import CitraGenerator
 from generators.daphne.daphneGenerator import DaphneGenerator
 from generators.devilutionx.devilutionxGenerator import DevilutionXGenerator
+from generators.demul.demulGenerator import DemulGenerator 
 from generators.dolphin.dolphinGenerator import DolphinGenerator
 from generators.dosbox.dosboxGenerator import DosBoxGenerator
 from generators.dosboxstaging.dosboxstagingGenerator import DosBoxStagingGenerator
@@ -66,6 +67,7 @@ from generators.openjazz.openjazzGenerator import OpenJazzGenerator
 from generators.openjkja.openjkjaGenerator import OpenjkjaGenerator
 from generators.openjkjo.openjkjoGenerator import OpenjkjoGenerator
 from generators.openlara.openlaraGenerator import OpenlaraGenerator
+from generators.openmsx.openmsxGenerator import OpenmsxGenerator
 from generators.omf2097.omf2097Generator import Omf2097Generator
 from generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
 from generators.pcexhumed.pcexhumedGenerator import PcexhumedGenerator
@@ -126,6 +128,7 @@ generators = {
     'cgenius': CGeniusGenerator(),
     'citra' : CitraGenerator(),
     'daphne' : DaphneGenerator(),
+    'demul': DemulGenerator(),
     'devilutionx': DevilutionXGenerator(),
     'dolphin': DolphinGenerator(),
     'dosbox': DosBoxGenerator(),
@@ -171,6 +174,7 @@ generators = {
     'openjkja': OpenjkjaGenerator(),
     'openjkjo': OpenjkjoGenerator(),
     'openlara': OpenlaraGenerator(),
+    'openmsx': OpenmsxGenerator(),
     'omf2097': Omf2097Generator(),
     'opentyrian': OpentyrianGenerator(),
     'pcexhumed': PcexhumedGenerator(),
