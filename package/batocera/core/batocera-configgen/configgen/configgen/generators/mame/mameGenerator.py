@@ -28,32 +28,20 @@ class MameGenerator(Generator):
         romDirname  = path.dirname(rom)
 
         # Generate userdata folders if needed
-        if not os.path.exists("/userdata/system/configs/mame/"):
-            os.makedirs("/userdata/system/configs/mame/")
-        if not os.path.exists("/userdata/saves/mame/"):
-            os.makedirs("/userdata/saves/mame/")
-        if not os.path.exists("/userdata/saves/mame/nvram/"):
-            os.makedirs("/userdata/saves/mame/nvram")
-        if not os.path.exists("/userdata/saves/mame/cfg/"):
-            os.makedirs("/userdata/saves/mame/cfg/")
-        if not os.path.exists("/userdata/saves/mame/input/"):
-            os.makedirs("/userdata/saves/mame/input/")
-        if not os.path.exists("/userdata/saves/mame/state/"):
-            os.makedirs("/userdata/saves/mame/state/")
-        if not os.path.exists("/userdata/saves/mame/diff/"):
-            os.makedirs("/userdata/saves/mame/diff/")
-        if not os.path.exists("/userdata/saves/mame/comments/"):
-            os.makedirs("/userdata/saves/mame/comments/")
+        mamePaths = [ "system/configs/mame", "saves/mame", "saves/mame/nvram", "saves/mame/cfg", "saves/mame/input", "saves/mame/state", "saves/mame/diff", "saves/mame/comments", "bios/mame", "bios/mame/artwork", "cheats/mame", "saves/mame/plugins", "system/configs/mame/ctrlr", "system/configs/mame/ini", "bios/mame/artwork/crosshairs" ]
+        for checkPath in mamePaths:
+            if not os.path.exists("/userdata/" + checkPath + "/"):
+                os.makedirs("/userdata/" + checkPath + "/")
 
         # Define systems that will use the MESS executable instead of MAME
-        messSystems = [ "lcdgames", "gameandwatch", "cdi", "advision", "tvgames", "sameduck", "crvision", "gamate", "pv1000", "gamecom" , "fm7", "xegs", "gamepock", "aarch", "atom", "apfm1000", "bbc", "camplynx", "adam", "arcadia", "supracan", "gmaster", "astrocde", "ti99", "tutor", "coco", "socrates" ]
+        messSystems = [ "lcdgames", "gameandwatch", "cdi", "advision", "plugnplay", "sameduck", "crvision", "gamate", "pv1000", "gamecom" , "fm7", "xegs", "gamepock", "aarch", "atom", "apfm1000", "bbc", "camplynx", "adam", "arcadia", "supracan", "gmaster", "astrocde", "ti99", "tutor", "coco", "socrates", "macintosh" ]
         # If it needs a system name defined, use it here. Add a blank string if it does not (ie non-arcade, non-system ROMs)
-        messSysName = [ "", "", "cdimono1", "advision", "", "sameduck", "crvision", "gamate", "pv1000", "gamecom", "fm7", "xegs", "gamepock", "aa310", "atom", "apfm1000", "bbcb", "lynx48k", "adam", "arcadia", "supracan", "gmaster", "astrocde", "ti99_4a", "tutor", "coco", "socrates" ]
+        messSysName = [ "", "", "cdimono1", "advision", "", "sameduck", "crvision", "gamate", "pv1000", "gamecom", "fm7", "xegs", "gamepock", "aa310", "atom", "apfm1000", "bbcb", "lynx48k", "adam", "arcadia", "supracan", "gmaster", "astrocde", "ti99_4a", "tutor", "coco", "socrates", "maciix" ]
         # For systems with a MAME system name, the type of ROM that needs to be passed on the command line (cart, tape, cdrm, etc)
         # If there are multiple ROM types (ie a computer w/disk & tape), select the default or primary type here.
-        messRomType = [ "", "", "cdrm", "cart", "", "cart", "cart", "cart", "cart", "cart1", "flop1", "cart", "cart", "flop", "cass", "cart", "flop1", "cass", "cass1", "cart", "cart", "cart", "cart", "cart", "cart", "cart", "cart" ]
-        messAutoRun = [ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", 'mload""\\n', "", "", "", "", "", "", "", "", "" ]
-
+        messRomType = [ "", "", "cdrm", "cart", "", "cart", "cart", "cart", "cart", "cart1", "flop1", "cart", "cart", "flop", "cass", "cart", "flop1", "cass", "cass1", "cart", "cart", "cart", "cart", "cart", "cart", "cart", "cart", "flop1" ]
+        messAutoRun = [ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", 'mload""\\n', "", "", "", "", "", "", "", "", "", "" ]
+        
         # Identify the current system, select MAME or MESS as needed.
         try:
             messMode = messSystems.index(system.name)
@@ -125,16 +113,15 @@ class MameGenerator(Generator):
         commandArray += [ "-state_directory" ,    "/userdata/saves/mame/state/" ]
         commandArray += [ "-snapshot_directory" , "/userdata/screenshots/" ]
         commandArray += [ "-diff_directory" ,     "/userdata/saves/mame/diff/" ]
-        commandArray += [ "-comment_directory",   "/userdata/saves/mame/comments/" ]
-        commandArray += [ "-noreadconfig"]
+        commandArray += [ "-comment_directory",   "/userdata/saves/mame/comments/" ]        
+        commandArray += [ "-homepath" ,           "/userdata/saves/mame/plugins/" ]
+        commandArray += [ "-ctrlrpath" ,          "/userdata/system/configs/mame/ctrlr/" ]
+        commandArray += [ "-inipath" ,            "/userdata/system/configs/mame/ini/" ]
+        commandArray += [ "-crosshairpath" ,      "/userdata/bios/mame/artwork/crosshairs/" ]
+        commandArray += [ "-pluginspath" ,        "/userdata/saves/mame/plugins/" ]
 
         # TODO These paths are not handled yet
-        # TODO -homepath            path to base folder for plugin data (read/write)
-        # TODO -ctrlrpath           path to controller definitions
-        # TODO -inipath             path to ini files
-        # TODO -crosshairpath       path to crosshair files
-        # TODO -pluginspath         path to plugin files
-        # TODO -swpath              path to loose software
+        # TODO -swpath              path to loose software - might use if we want software list MESS support
 
         # BGFX video engine : https://docs.mamedev.org/advanced/bgfx.html
         if system.isOptSet("video") and system.config["video"] == "bgfx":
@@ -159,13 +146,15 @@ class MameGenerator(Generator):
             commandArray += [ "-video", "opengl" ]
 
         # CRT / SwitchRes support
-        #if system.isOptSet("switchres") and system.getOptBoolean("switchres"):
-            #commandArray += [ "-modeline_generation" ]
-            #commandArray += [ "-changeres" ]
-        #else:
-            #commandArray += [ "-nomodeline_generation" ]
-            #commandArray += [ "-nochangeres" ]
-            #commandArray += [ "-noswitchres" ]
+        if system.isOptSet("switchres") and system.getOptBoolean("switchres"):
+            commandArray += [ "-modeline_generation" ]
+            commandArray += [ "-changeres" ]
+            commandArray += [ "-modesetting" ]
+            commandArray += [ "-readconfig" ]
+        else:
+            commandArray += [ "-nomodeline_generation" ]
+            commandArray += [ "-nochangeres" ]
+            commandArray += [ "-noswitchres" ]
 
         # Rotation / TATE options
         if system.isOptSet("rotation") and system.config["rotation"] == "autoror":
@@ -194,6 +183,18 @@ class MameGenerator(Generator):
                     commandArray += [ system.config["altmodel"] ]
                 else:
                     commandArray += [ messSysName[messMode] ]
+
+                # Boot disk for Macintosh
+                # Will use Floppy 1 or Hard Drive, depending on the disk.
+                if system.name == "macintosh" and system.isOptSet("bootdisk"):
+                    if system.config["bootdisk"] in [ "macos30", "macos608", "macos701", "macos75" ]:
+                        bootType = "-flop1"                        
+                        bootDisk = "/userdata/bios/" + system.config["bootdisk"] + ".img"
+                    else:
+                        bootType = "-hard"
+                        bootDisk = "/userdata/bios/" + system.config["bootdisk"] + ".chd"
+                    commandArray += [ bootType, bootDisk ]
+
                 # Autostart computer games where applicable
                 # Generic boot if only one type is available
                 if messAutoRun[messMode] != "":
@@ -208,13 +209,28 @@ class MameGenerator(Generator):
                     else:
                         commandArray += [ '-autoboot_delay',  '3',  '-autoboot_command', '*cat\\n*exec !boot\\n' ]
                 # fm7 boots floppies, needs cassette loading
-                if system.name == "fm7" and system.isOptSet("altromtype") and system.config["altromtype"] == "cass":
-                    commandArray += [ '-autoboot_delay', '5', '-autoboot_command', 'LOADM”“,,R\\n' ]
+                if system.name == "fm7" and system.isOptSet("altromtype"):
+                    if system.config["altromtype"] == "cass":
+                        commandArray += [ '-autoboot_delay', '5', '-autoboot_command', 'LOADM”“,,R\\n' ]
+
                 # Alternate ROM type for systems with mutiple media (ie cassette & floppy)
-                if system.isOptSet("altromtype"):
+                # Mac will auto change floppy 1 to 2 if a boot disk is enabled
+                if system.isOptSet("altromtype") and system.name != "macintosh":
                     commandArray += [ "-" + system.config["altromtype"] ]
+                elif system.name == "macintosh" and system.isOptSet("bootdisk"):
+                    if system.isOptSet("altromtype") and system.config["bootdisk"] in [ "macos30", "macos608", "macos701", "macos75" ]:
+                        if system.config["altromtype"] == "flop1":
+                            commandArray += [ "-flop2" ]
+                        else:
+                            commandArray += [ "-" + messRomType[messMode] ]
+                    else:
+                        if system.config["bootdisk"] in [ "macos30", "macos608", "macos701", "macos75" ]:
+                            commandArray += [ "-flop2" ]
+                        else:
+                            commandArray += [ "-" + messRomType[messMode] ]
                 else:
                     commandArray += [ "-" + messRomType[messMode] ]
+                
                 # Use the full filename for MESS ROMs
                 commandArray += [ rom ]
 

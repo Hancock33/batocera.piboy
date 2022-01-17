@@ -37,6 +37,13 @@ shared:
       choices:
         "On": 1
         "Off": 0
+    vrr_runloop_enable:
+      submenu:     LATENCY REDUCTION
+      prompt:      VARIABLE REFRESH RATE
+      description: Don't deviate from core requested timing. G-Sync, FreeSync, HDMI 2.1 VRR.
+      choices:
+        "On": 1
+        "Off": 0
     integerscale:
       prompt:      INTEGER SCALING (PIXEL PERFECT)
       choices:
@@ -44,11 +51,11 @@ shared:
         "Off": 0
 
 global:
-  shared: [hud, runahead, secondinstance, video_frame_delay_auto, integerscale]
+  shared: [hud, runahead, secondinstance, video_frame_delay_auto, vrr_runloop_enable, integerscale]
 
 libretro:
   features: [ratio, framecount, showFPS, smooth, shaders, decoration, runahead, secondinstance, video_frame_delay_auto, game_translation]
-  shared: [hud, integerscale]
+  shared: [hud, vrr_runloop_enable, integerscale]
   cfeatures:
     gfxbackend:
       archs_include: [x86, x86_64, rpi4, rk3326]
@@ -157,7 +164,7 @@ libretro:
     beetle-saturn:
       features: [netplay, autosave, cheevos]
     fmsx:
-       features: [netplay, rewind, autosave]
+       features: [netplay, rewind, autosave, cheevos]
     bluemsx:
       features: [rewind, autosave, padtokeyboard, cheevos]
       cfeatures:
@@ -1230,8 +1237,6 @@ libretro:
                             "On":        enabled
     gpsp:
       features: [rewind, autosave, cheevos]
-    gw:
-      features: []
     handy:
       features: [netplay, rewind, autosave, cheevos]
     hatari:
@@ -1846,8 +1851,6 @@ libretro:
                     "Keypad 3button":               Keypad 3button
                     "Manual keyboard":              Manual Keyboard
                     "Atari Joypad":                 Atari Joypad
-    nxengine:
-      features: []
     o2em:
       features: [rewind, autosave, cheevos]
       cfeatures:
@@ -2540,8 +2543,6 @@ libretro:
                 choices:
                     "Off":                  disabled
                     "On":                   enabled
-    retro8:
-      features: []
     scummvm:
       features: [padtokeyboard]
       cfeatures:
@@ -3566,9 +3567,15 @@ citra:
                 "On":                    1
 
 daphne:
-  features: [ratio, padtokeyboard, decoration]
+  features: [padtokeyboard, decoration]
   shared: [hud]
   cfeatures:
+        daphne_ratio:
+            prompt:      ASPECT RATIO
+            description: Not all games support Stretch, depending on the video files.
+            choices:
+                "Original":                   original
+                "Stretch":                    stretch                    
         gfxbackend:
             archs_include: [x86, x86_64, rpi4, rk3326]
             prompt:      GRAPHICS BACKEND
@@ -4613,6 +4620,48 @@ mame:
                     choices:
                         "On":  1
                         "Off": 0
+       macintosh:
+            cfeatures:
+                altmodel:
+                    prompt:      MAC MODEL
+                    choices:
+                        "Mac 128k (2 LD Floppies)":              mac128k
+                        "Mac 512k (2 LD Floppies)":              mac512k
+                        "Mac Plus (2 LD Floppies/HDD)":          macplus
+                        "Mac SE (2 LD Floppies/HDD)":            macse
+                        "Mac Classic (2 HD Floppies/HDD)":       macclasc
+                        "Mac II (Color, 2 HD Floppies/CD/HDD)":  mac2fdhd
+                        "Mac IIx (Color, 2 HD Floppies/CD/HDD)": maciix
+                altromtype:
+                    prompt:      MEDIA TYPE
+                    description: Type of ROM file to load.
+                    choices:
+                        "Disk":       flop1
+                        "CD":         cdrm
+                        "Hard Drive": hard
+                bootdisk:
+                    prompt:      BOOT DISK
+                    description: Select a boot disk or hard drive if needed
+                    choices:
+                        "System 3.0 (LD Floppy)":    macos3
+                        "System 6.0.8 (LD Floppy)":  macos608
+                        "System 7.0.1 (HD Floppy)":  macos701
+                        "System 7.5 (HD Floppy)":    macos75
+                        "System 6.0.8 (Hard Drive)": mac608
+                        "System 7.0.1 (Hard Drive)": mac701
+                        "System 7.5.5 (Hard Drive)": mac755
+                enableui:
+                    prompt:      UI KEYS
+                    description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
+                    choices:
+                        "Off at Start": 0
+                        "On at Start":  1
+                pergamecfg:
+                    prompt:      CUSTOM GAME CONFIG
+                    description: Enable per-game custom configuration via MAME menu.
+                    choices:
+                        "On":  1
+                        "Off": 0
        bbc:
             cfeatures:
                 altromtype:
@@ -5147,6 +5196,24 @@ cdogs:
   features: [padtokeyboard, decoration]
   shared: [hud]
 
+demul:
+  features: []
+  shared: []
+  cfeatures:
+        demulRatio:
+            prompt:      GAME ASPECT RATIO
+            description: Set the default aspect ratio.
+            choices:
+                "Stretch":       0
+                "4:3 (Default)": 1
+                "16:9":          2
+        demulVSync:
+            prompt:      VSYNC
+            description: Set vsync on to avoid tearing.
+            choices:
+                "Off": 0
+                "On":  1
+
 droidports:
   features: [padtokeyboard, decoration]
   shared: [hud]
@@ -5232,6 +5299,10 @@ openlara:
   shared: [hud]
 
 omf2097:
+  features: [padtokeyboard, decoration]
+  shared: [hud]
+  
+openmsx:
   features: [padtokeyboard, decoration]
   shared: [hud]
 

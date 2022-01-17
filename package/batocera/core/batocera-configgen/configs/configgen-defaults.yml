@@ -49,6 +49,9 @@ amstradcpc:
 apple2:
   emulator: gsplus
   core:     gsplus
+apple2gs:
+  emulator: gsplus
+  core:     gsplus
 gsplus:
   emulator: gsplus
   core:     gsplus
@@ -103,6 +106,9 @@ cannonball:
 cavestory:
   emulator: libretro
   core:     nxengine
+cave3rd:
+  emulator: demul
+  core:     demul
 cdogs:
   emulator: cdogs
   core:     cdogs
@@ -175,6 +181,9 @@ fmtowns:
 freedroid:
   emulator: freedroid
   core:     freedroid
+gaelco:
+  emulator: demul
+  core:     demul
 gameandwatch:
   emulator: libretro
   core:     gw
@@ -207,6 +216,9 @@ gong:
 gx4000:
   emulator: libretro
   core:     cap32
+hikaru:
+  emulator: demul
+  core:     demul
 ionfury:
   emulator: ionfury
   core:     ionfury
@@ -308,6 +320,9 @@ n64dd:
 naomi:
   emulator: libretro
   core:     flycast
+naomi2:
+  emulator: demul
+  core:     demul
 nblood:
   emulator: nblood
   core:     nblood

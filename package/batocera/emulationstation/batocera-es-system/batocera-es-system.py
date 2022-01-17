@@ -36,6 +36,8 @@ class EsSystemConf:
         es_system = ""
 
         archSystemsConfig = yaml.safe_load(open(archSystemsConfigFile, "r"))
+        if archSystemsConfig is None:
+            archSystemsConfig = {}
         systemsConfig     = yaml.safe_load(open(systemsConfigFile, "r"))
 
         es_system += "<?xml version=\"1.0\"?>\n"
@@ -584,7 +586,7 @@ class EsSystemConf:
                         for ext in emulatorData[core]["incompatible_extensions"]:
                             if incompatible_extensionsTxt != "":
                                 incompatible_extensionsTxt += " "
-                            incompatible_extensionsTxt += "." + ext.lower()
+                            incompatible_extensionsTxt += "." + str(ext).lower()
                         incompatible_extensionsTxt = " incompatible_extensions=\"" + incompatible_extensionsTxt + "\""
 
                     if emulator == defaultEmulator and core == defaultCore:
