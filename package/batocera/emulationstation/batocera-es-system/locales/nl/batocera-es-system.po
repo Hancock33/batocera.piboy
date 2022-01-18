@@ -23,7 +23,7 @@ msgctxt "game_options"
 msgid "Show context-sensitive info over the game."
 msgstr "Toon contextuele informatie over het spel"
 
-#. TRANSLATION: shared, shared, libretro/mesen-s, libretro/swanstation, libretro/swanstation, ...
+#. TRANSLATION: shared, shared, libretro/mesens, libretro/swanstation, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "None"
 msgstr "Geen"
@@ -58,12 +58,12 @@ msgctxt "game_options"
 msgid "RUN-AHEAD USE SECOND INSTANCE"
 msgstr "RUN-AHEAD GEBRUIK SECUNDAIRE SESSIE"
 
-#. TRANSLATION: shared, shared, shared, libretro/atari800, libretro/atari800, ...
+#. TRANSLATION: shared, shared, shared, shared, libretro/atari800, ...
 msgctxt "game_options"
 msgid "On"
 msgstr "Aan"
 
-#. TRANSLATION: shared, shared, shared, libretro/81, libretro/81, ...
+#. TRANSLATION: shared, shared, shared, shared, libretro/81, ...
 msgctxt "game_options"
 msgid "Off"
 msgstr "Uit"
@@ -78,6 +78,17 @@ msgctxt "game_options"
 msgid "Automatically decrease frame delay temporarily to prevent frame drops."
 msgstr ""
 "Verminder tijdelijk automatisch frame delay om frame drops te voorkomen."
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "VARIABLE REFRESH RATE"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Don't deviate from core requested timing. G-Sync, FreeSync, HDMI 2.1 VRR."
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -220,58 +231,58 @@ msgctxt "game_options"
 msgid "576+KB"
 msgstr "576+KB"
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
+#. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
 msgid "BLARGG NTSC FILTER"
 msgstr "BLARGG NTSC FILTER"
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
+#. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
 msgid "Core-powered video filter."
 msgstr "Core-aangedreven video filter."
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Disabled"
 msgstr "Uitgeschakeld"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Composite (Blargg)"
 msgstr "Composiet (Blargg)"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "S-Video (Blargg)"
 msgstr "S-Video (Blargg)"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "RGB (Blargg)"
 msgstr "RGB (Blargg)"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Monochrome (Blargg)"
 msgstr "Monochroom (Blargg)"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "HIGH-RES BLENDING"
 msgstr "HIGH-RES BLENDING"
 
-#. TRANSLATION: libretro/mesen-s, libretro/snes9x
+#. TRANSLATION: libretro/mesens, libretro/snes9x
 msgctxt "game_options"
 msgid "Blur high-res mode, allowing for better transparency effects."
 msgstr ""
 "Vervaag hoge resolutie modus, zorgt voor betere transparantie effecten."
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "CUBIC AUDIO INTERPOLATION"
 msgstr "CUBIC AUDIO INTERPOLATIE"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid ""
 "Enhancement. Swap from SNES' guassian interpolation to cubic. Improves sound "
@@ -280,12 +291,12 @@ msgstr ""
 "Uitbreiding. Vervang SNES gaussian interpolatie met cubic. Verbeterd "
 "geluidskwaliteit."
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "GAME BOY MODE"
 msgstr "GAME BOY MODUS"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid ""
 "Change behaviour when emulating GB games. Auto uses SGB for GB and GBC for "
@@ -294,92 +305,92 @@ msgstr ""
 "Verander gedrag wanneer GB spellen geemuleerd worden. Auto gebruikt SGB voor "
 "GB en GBC voor GBC."
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Game Boy"
 msgstr "Game Boy"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Game Boy Color"
 msgstr "Game Boy Color"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Super Game Boy"
 msgstr "Super Game Boy"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "SUPER GAME BOY 2"
 msgstr "SUPER GAME BOY 2"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Emulate the Super Game Boy 2 for SGB. Runs games at the correct speed."
 msgstr ""
 "Emuleer de Super Game Boy 2 voor SGB. Draait spellen op de correcte snelheid."
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm, libretro/mame, libretro/mednafen_psx, libretro/nestopia, ...
+#. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/mame, libretro/mednafen_psx, libretro/nestopia, ...
 msgctxt "game_options"
 msgid "OVERCLOCK (UNSTABLE)"
 msgstr "OVERCLOCK (ONSTABIEL)"
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm, libretro/mame, libretro/mednafen_psx, libretro/nestopia, ...
+#. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/mame, libretro/mednafen_psx, libretro/nestopia, ...
 msgctxt "game_options"
 msgid "Enhancement. Reduces system slowdown. Causes issues in some games."
 msgstr ""
 "Uitbreiding. Verminderd systeem vertraging. Zorgt voor problemen in sommige "
 "spellen."
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm, amiberry
+#. TRANSLATION: libretro/mesens, libretro/fceumm, amiberry
 msgctxt "game_options"
 msgid "Low"
 msgstr "Laag"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Medium"
 msgstr "Gemiddeld"
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm, amiberry
+#. TRANSLATION: libretro/mesens, libretro/fceumm, amiberry
 msgctxt "game_options"
 msgid "High"
 msgstr "Hoog"
 
-#. TRANSLATION: libretro/mesen-s, libretro/fceumm
+#. TRANSLATION: libretro/mesens, libretro/fceumm
 msgctxt "game_options"
 msgid "Very High"
 msgstr "Erg Hoog"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "OVERCLOCK TYPE"
 msgstr "OVERCLOCK TYPE"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Prefer \"Before NMI\", change to After NMI only if needed by the game."
 msgstr ""
 "Prefereer \"Voor NMI\", verander alleen naar Na NMI als het spel het nodig "
 "heeft."
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "Before NMI"
 msgstr "Voor NMI"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesens
 msgctxt "game_options"
 msgid "After NMI"
 msgstr "Na NMI"
 
-#. TRANSLATION: libretro/mesen-s, libretro/snes9x, libretro/snes9x_next
+#. TRANSLATION: libretro/mesens, libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "SUPER FX OVERCLOCK"
 msgstr "SUPER FX OVERCLOCK"
 
-#. TRANSLATION: libretro/mesen-s, libretro/snes9x, libretro/snes9x_next
+#. TRANSLATION: libretro/mesens, libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr "Uitbreiding. Verminderd vertraging in mode 7 spellen."
