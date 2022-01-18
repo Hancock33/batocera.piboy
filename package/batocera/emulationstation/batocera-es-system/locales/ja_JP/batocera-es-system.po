@@ -58,12 +58,12 @@ msgctxt "game_options"
 msgid "RUN-AHEAD USE SECOND INSTANCE"
 msgstr "先行実行の2番目のインスタンス"
 
-#. TRANSLATION: shared, shared, shared, libretro/atari800, libretro/atari800, ...
+#. TRANSLATION: shared, shared, shared, shared, libretro/atari800, ...
 msgctxt "game_options"
 msgid "On"
 msgstr "使用する"
 
-#. TRANSLATION: shared, shared, shared, libretro/81, libretro/81, ...
+#. TRANSLATION: shared, shared, shared, shared, libretro/81, ...
 msgctxt "game_options"
 msgid "Off"
 msgstr "使用しない"
@@ -77,6 +77,17 @@ msgstr "自動フレーム遅延"
 msgctxt "game_options"
 msgid "Automatically decrease frame delay temporarily to prevent frame drops."
 msgstr "フレームドロップを防ぐために、フレーム遅延を一時的に自動的に減らします"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "VARIABLE REFRESH RATE"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Don't deviate from core requested timing. G-Sync, FreeSync, HDMI 2.1 VRR."
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"

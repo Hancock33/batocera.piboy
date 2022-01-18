@@ -64,12 +64,12 @@ msgctxt "game_options"
 msgid "RUN-AHEAD USE SECOND INSTANCE"
 msgstr "WYPRZEDZENIE UŻYWA DRUGIEJ INSTANCJI"
 
-#. TRANSLATION: shared, shared, shared, libretro/atari800, libretro/atari800, ...
+#. TRANSLATION: shared, shared, shared, shared, libretro/atari800, ...
 msgctxt "game_options"
 msgid "On"
 msgstr "Włączone"
 
-#. TRANSLATION: shared, shared, shared, libretro/81, libretro/81, ...
+#. TRANSLATION: shared, shared, shared, shared, libretro/81, ...
 msgctxt "game_options"
 msgid "Off"
 msgstr "Wyłączone"
@@ -85,6 +85,17 @@ msgid "Automatically decrease frame delay temporarily to prevent frame drops."
 msgstr ""
 "Automatycznie zmniejsz tymczasowo opóźnienie klatek, aby zapobiec spadkowi "
 "liczby klatek."
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "VARIABLE REFRESH RATE"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Don't deviate from core requested timing. G-Sync, FreeSync, HDMI 2.1 VRR."
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
