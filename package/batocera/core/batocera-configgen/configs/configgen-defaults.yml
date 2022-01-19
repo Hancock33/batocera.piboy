@@ -270,6 +270,9 @@ mame:
 mastersystem:
   emulator: libretro
   core:     genesisplusgx
+media:
+  emulator: libretro
+  core:     ffmpeg
 megadrive:
   emulator: libretro
   core:     genesisplusgx
