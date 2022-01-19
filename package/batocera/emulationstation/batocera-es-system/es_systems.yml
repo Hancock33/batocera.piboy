@@ -2309,16 +2309,6 @@ plugnplay:
     mame:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
 
-megaduck:
-  name:       Mega Duck
-  manufacturer: Welback Holdings
-  release: 1993
-  hardware: portable
-  extensions:  [bin, zip, 7z]
-  emulators:
-    mame:
-      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
-
 pv1000:
   name:       PV-1000
   manufacturer: Casio
