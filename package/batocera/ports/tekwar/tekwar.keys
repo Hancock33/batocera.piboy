@@ -15,22 +15,22 @@
         {
             "trigger": "up",
             "type": "key",
-            "target": "KEY_KP8"
+            "target": "KEY_UP"
         },
         {
             "trigger": "down",
             "type": "key",
-            "target": "KEY_KP2"
+            "target": "KEY_DOWN"
         },
         {
             "trigger": "left",
             "type": "key",
-            "target": "KEY_KP4"
+            "target": "KEY_LEFT"
         },
         {
             "trigger": "right",
             "type": "key",
-            "target": "KEY_KP6"
+            "target": "KEY_RIGHT"
         },
         {
             "trigger": "start",
@@ -50,37 +50,37 @@
         {
             "trigger": "b",
             "type": "key",
-            "target": "KEY_RIGHTCTRL"
+            "target": "KEY_LEFTCTRL"
         },
         {
             "trigger": "x",
             "type": "key",
-            "target": "KEY_TAB"
+            "target": "KEY_Y"
         },
         {
             "trigger": "pageup",
             "type": "key",
-            "target": "KEY_APOSTROPHE"
+            "target": "KEY_I"
         },
         {
             "trigger": "pagedown",
             "type": "key",
-            "target": "KEY_E"
+            "target": "KEY_SLASH"
         },
         {
             "trigger": "l3",
             "type": "key",
-            "target": "KEY_TAB"
+            "target": "KEY_A"
         },
         {
             "trigger": "r2",
             "type": "key",
-            "target": "KEY_LEFTALT"
+            "target": "KEY_DOT"
         },
         {
             "trigger": "l2",
             "type": "key",
-            "target": "KEY_Q"
+            "target": "KEY_COMMA"
         },
         {
             "trigger": "y",
