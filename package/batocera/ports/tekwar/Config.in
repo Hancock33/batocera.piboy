@@ -1,0 +1,10 @@
+config BR2_PACKAGE_TEKWAR
+	bool "tekwar"
+	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_IMAGE
+	help
+	  Tekwar
+	  No-promises port of TekWar.
+
+	  https://github.com/jonof/jftekwar
