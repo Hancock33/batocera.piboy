@@ -1,0 +1,91 @@
+diff -Naur jftekwar.orig/jfaudiolib/Makefile jftekwar/jfaudiolib/Makefile
+--- jftekwar.orig/jfaudiolib/Makefile	2022-01-19 23:11:29.221922529 +0000
++++ jftekwar/jfaudiolib/Makefile	2022-01-19 23:40:23.435583979 +0000
+@@ -35,7 +35,7 @@
+  CPPFLAGS+= -DHAVE_VORBIS
+ else
+  ifneq (0,$(JFAUDIOLIB_HAVE_SDL))
+-  CPPFLAGS+= -DHAVE_SDL=2 $(shell $(SDL2CONFIG) --cflags)
++  CPPFLAGS+= -DHAVE_SDL=2 `pkg-config sdl2 --cflags`
+   ifeq (1,$(JFAUDIOLIB_USE_SDLMIXER))
+    CPPFLAGS+= -DUSE_SDLMIXER
+    SOURCES+= src/driver_sdlmixer.c
+diff -Naur jftekwar.orig/jfaudiolib/Makefile.shared jftekwar/jfaudiolib/Makefile.shared
+--- jftekwar.orig/jfaudiolib/Makefile.shared	2022-01-19 23:11:29.221922529 +0000
++++ jftekwar/jfaudiolib/Makefile.shared	2022-01-19 23:30:54.462000727 +0000
+@@ -21,7 +21,7 @@
+  endif
+  ifneq (,$(shell $(SDL2CONFIG) --version))
+   JFAUDIOLIB_HAVE_SDL=2
+-  JFAUDIOLIB_LDFLAGS+= $(shell $(SDL2CONFIG) --libs)
++  JFAUDIOLIB_LDFLAGS+= `pkg-config sdl2 --libs`
+  endif
+  ifeq (yes,$(shell $(PKGCONFIG) --exists alsa && echo yes))
+   JFAUDIOLIB_HAVE_ALSA=1
+diff -Naur jftekwar.orig/jfbuild/Makefile.shared jftekwar/jfbuild/Makefile.shared
+--- jftekwar.orig/jfbuild/Makefile.shared	2022-01-19 23:11:29.261922816 +0000
++++ jftekwar/jfbuild/Makefile.shared	2022-01-19 23:35:45.855283748 +0000
+@@ -76,8 +76,8 @@
+ 
+ ifeq ($(RENDERTYPE),SDL)
+ 	ifneq ($(SDL2CONFIG),)
+-		SDLCONFIG_CFLAGS=$(shell $(SDL2CONFIG) --cflags)
+-		SDLCONFIG_LIBS=$(shell $(SDL2CONFIG) --libs)
++		SDLCONFIG_CFLAGS=`pkg-config sdl2 --cflags`
++		SDLCONFIG_LIBS=`pkg-config sdl2 --libs`
+ 	else
+ 		$(error No $(SDL2CONFIG) could be found)
+ 	endif
+diff -Naur jftekwar.orig/Makefile jftekwar/Makefile
+--- jftekwar.orig/Makefile	2022-01-19 23:11:14.825819265 +0000
++++ jftekwar/Makefile	2022-01-20 07:07:55.295045260 +0000
+@@ -14,7 +14,7 @@
+ RELEASE ?= 1
+ 
+ # Path where game data is installed
+-DATADIR ?= /usr/local/share/games/jftekwar
++DATADIR ?= /userdata/roms/etekwar/
+ 
+ # Engine source code path
+ EROOT ?= jfbuild
+@@ -123,8 +123,8 @@
+ endif
+ 
+ ifeq ($(RENDERTYPE),SDL)
+-	OURCFLAGS+= $(SDLCONFIG_CFLAGS)
+-	LIBS+= $(SDLCONFIG_LIBS)
++	OURCFLAGS+= `pkg-config sdl2 --cflags`
++	LIBS+= `pkg-config sdl2 --libs`
+ 
+ 	ifeq (1,$(HAVE_GTK))
+ 		OURCFLAGS+= $(GTKCONFIG_CFLAGS)
+@@ -169,7 +169,7 @@
+ 	cd xcode && xcodebuild -project tekwar.xcodeproj -target all -configuration $(style)
+ endif
+ 
+-all: tekwar$(EXESUFFIX) build$(EXESUFFIX)
++all: tekwar$(EXESUFFIX)
+ 
+ tekwar$(EXESUFFIX): $(GAMEOBJS) $(ELIB)/$(ENGINELIB) $(AUDIOLIBROOT)/$(JFAUDIOLIB)
+ 	$(CXX) $(CXXFLAGS) $(OURCXXFLAGS) $(OURCFLAGS) -o $@ $^ $(LIBS) $(GAMELIBS) -Wl,-Map=$@.map
+diff -Naur jftekwar.orig/src/teksmk.c jftekwar/src/teksmk.c
+--- jftekwar.orig/src/teksmk.c	2022-01-19 23:11:14.833819323 +0000
++++ jftekwar/src/teksmk.c	2022-01-19 23:49:39.781622993 +0000
+@@ -152,7 +152,7 @@
+ 
+           frame = playframe%NUMSMKTILES;
+           setbrightness(brightness, smkpal[frame], 2);
+-          invalidatetile(SMKPICNUM0+frame, 0, -1);
++          //invalidatetile(SMKPICNUM0+frame, 0, -1);
+           clearallviews(0);
+           rotatesprite(160<<16, 100<<16, divscale16(200, tilesizx[SMKPICNUM0+frame]),
+                       512, SMKPICNUM0+frame, 0, 0, 2+4+64, 0, 0, xdim-1, ydim-1);
+@@ -280,7 +280,7 @@
+      }
+ 
+      waloff[SMKPICNUM0] = (intptr_t)smk_get_video(smkmenu);
+-     invalidatetile(SMKPICNUM0, 0, -1);
++     //invalidatetile(SMKPICNUM0, 0, -1);
+ 
+      setbrightness(brightness, spal, 2);
+ }
