@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 tekwar && reset"
+            "target": "killall -9 etekwar && reset"
         },
         {
             "trigger": "joystick1",
