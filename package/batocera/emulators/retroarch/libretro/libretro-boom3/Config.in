@@ -1,0 +1,12 @@
+config BR2_PACKAGE_LIBRETRO_BOOM3
+        bool "libretro-boom3"
+	depends on BR2_PACKAGE_RETROARCH
+	depends on BR2_INSTALL_LIBSTDCPP
+        help
+          A libretro Doom 3 engine
+
+	  http://www.libretro.com
+
+comment "LIBRETRO_BOOM3 needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP
+

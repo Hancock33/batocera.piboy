@@ -23,10 +23,32 @@ endef
 # because it adds so non required files on the rpi ; we prefer the specific rpi firmware packages
 define ALLLINUXFIRMWARES_DELETE_BRCM
 	rm -rf $(@D)/brcm
+	rm -rf $(@D)/amdgpu
+	rm -rf $(@D)/bnx2x
+	rm -rf $(@D)/i915
+	rm -rf $(@D)/intel
+	rm -rf $(@D)/iwlwifi*
+	rm -rf $(@D)/nvidia
+	rm -rf $(@D)/radeon
+endef
+
+define ALLLINUXFIRMWARES_DELETE_OBSCURE_FIRMWARE
+	rm -rf $(@D)/dpaa2
+	rm -rf $(@D)/liquidio
+	rm -rf $(@D)/mellanox
+	rm -rf $(@D)/netronome
+	rm -rf $(@D)/qcom
+	rm -rf $(@D)/qed
+	rm -rf $(@D)/mrvl/prestera
+	rm -rf $(@D)/cxgb4
+	rm -rf $(@D)/cypress
 endef
 
 ifeq ($(BR2_PACKAGE_BATOCERA_RPI_ANY),y)
 ALLLINUXFIRMWARES_PRE_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_DELETE_BRCM
 endif
 
+ALLLINUXFIRMWARES_PRE_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_DELETE_OBSCURE_FIRMWARE
+
 $(eval $(generic-package))
+
