@@ -9,7 +9,7 @@ default:
     showFPS:        false
     smooth:         true
     rewind:         false
-    bezel:          default
+    bezel:          consoles
     forceNoBezel:   false
 
 # 0-C
