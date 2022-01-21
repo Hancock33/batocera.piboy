@@ -19,50 +19,42 @@ index 84e0328..4138645 100644
 \ No newline at end of file
 +}
 diff --git a/src/cli/main.c b/src/cli/main.c
-index 60c9d7c..3f5d645 100644
+index 60c9d7c..b46db10 100644
 --- a/src/cli/main.c
 +++ b/src/cli/main.c
-@@ -10,6 +10,8 @@
+@@ -10,6 +10,10 @@
  #include <stdio.h>
  #include <dirent.h>
  
++#include "res.h"
++
 +Resources G_RESOURCES;
 +
  int create_files(const char* srcdir, const char* dstdir) {
      DIR *d;
      struct dirent *dir;
-@@ -145,4 +147,4 @@ int main(int argc, char* argv[]) {
+@@ -145,4 +149,4 @@ int main(int argc, char* argv[]) {
      res_dispose(&res);
  
      return 0;
 -}
 \ No newline at end of file
 +}
-diff --git a/src/data.h b/src/data.h
-index 59a307f..663a80b 100644
---- a/src/data.h
-+++ b/src/data.h
-@@ -69,4 +69,4 @@ void data_release(Data* data);
- 
- extern Data G_DATA;
- 
--#endif  /* __data_h */
-\ No newline at end of file
-+#endif  /* __data_h */
 diff --git a/src/definitions.h b/src/definitions.h
-index 5b555f8..707da20 100644
+index 5b555f8..a638aa8 100644
 --- a/src/definitions.h
 +++ b/src/definitions.h
-@@ -25,7 +25,7 @@
+@@ -25,7 +25,8 @@
  #define FILENAME_INI    "RAPTOR.INI"
  #define FILENAME_ICON   "ICON.BMP"
  //#define DATA_PATH       "DATA/"
 -#define DATA_PATH       "../resources/dist/"
 +#define DATA_PATH       "/usr/share/raptor/"
++#define SAVE_PATH       "/userdata/saves/raptor/"
  
  #define VIDEO_SCREEN_WIDTH      320
  #define VIDEO_SCREEN_HEIGHT     200
-@@ -326,4 +326,4 @@ enum {
+@@ -326,4 +327,4 @@ enum {
      ITEM_LAST
  };
  
@@ -84,7 +76,7 @@ index 17ba605..b89709d 100644
      pilot_add_energy(&game->pilot, energy);
  }
 diff --git a/src/main.c b/src/main.c
-index a45f615..0de75d8 100644
+index a45f615..8f184ac 100644
 --- a/src/main.c
 +++ b/src/main.c
 @@ -26,6 +26,9 @@
@@ -97,17 +89,8 @@ index a45f615..0de75d8 100644
  void read_arguments(Game *game, int argc, char* argv[]) {
  	int i;
  
-@@ -63,7 +66,7 @@ int main(int argc, char* argv[]) {
-     INI ini;
- 
-     // Load INI file
--    sprintf(path, "%s%s", DATA_PATH, FILENAME_INI);
-+    sprintf(path, "%s%s", "/userdata/saves/raptor/", FILENAME_INI);
-     if (ini_load(&ini, path) != 0)  {
-         printf("Error initializing: %s file not found.\n", FILENAME_INI);
-         return 1;
 diff --git a/src/pilot.c b/src/pilot.c
-index 138feae..fb1a985 100644
+index 138feae..5c19cb2 100644
 --- a/src/pilot.c
 +++ b/src/pilot.c
 @@ -29,7 +29,7 @@ BOOL pilot_save(Pilot* pilot) {
@@ -115,7 +98,7 @@ index 138feae..fb1a985 100644
      uint32_t index = 0;
  
 -    sprintf(filename, "%s/SAVE%04d.SAV", DATA_PATH, index);
-+    sprintf(filename, "%s/SAVE%04d.SAV", "/userdata/saves/raptor/", index);
++    sprintf(filename, "%s/SAVE%04d.SAV", SAVE_PATH, index);
  
      file = fopen(filename, "wb");
      if (!file) {
@@ -124,7 +107,7 @@ index 138feae..fb1a985 100644
      FILE *file;
  
 -    sprintf(filename, "%s/SAVE%04d.SAV", DATA_PATH, index);
-+    sprintf(filename, "%s/SAVE%04d.SAV", "/userdata/saves/raptor/", index);
++    sprintf(filename, "%s/SAVE%04d.SAV", SAVE_PATH, index);
  
      file = fopen(filename, "rb");
      if (!file) {
