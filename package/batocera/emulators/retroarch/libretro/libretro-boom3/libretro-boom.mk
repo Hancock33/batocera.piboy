@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version.: Commits on Jan 14, 2022
-LIBRETRO_BOOM3_VERSION = 4c1e68c5a1550c9d447f0b7c8c5a7cd07ed0ab6e
+LIBRETRO_BOOM_VERSION = 4c1e68c5a1550c9d447f0b7c8c5a7cd07ed0ab6e
 LIBRETRO_BOOM3_SITE = $(call github,libretro,boom3,$(LIBRETRO_BOOM3_VERSION))
 LIBRETRO_BOOM3_LICENSE = GPLv2
 
