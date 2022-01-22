@@ -8,7 +8,7 @@ import controllersConfig
 class GzdoomGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
-        commandArray = ["lzdoom", "-iwad", rom]
+        commandArray = ["gzdoom", "+set", "vid_preferbackend 4", "+set", "vid_rendermode 1", "-iwad", rom]
 
         return Command.Command(
             array=commandArray,

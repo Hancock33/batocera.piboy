@@ -19,6 +19,12 @@ GZDOOM_CONF_OPTS += -DHAVE_VULKAN=ON
 GZDOOM_CONF_OPTS += -DHAVE_GLES2=ON
 GZDOOM_CONF_OPTS += -DIMPORT_EXECUTABLES=$(HOST_GZDOOM_BUILDDIR)/ImportExecutables.cmake
 
+define GZDOOM_KEYS
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/doom/gzdoom/prboom.keys $(TARGET_DIR)/usr/share/evmapy
+endef
+
+GZDOOM__PRE_INSTALL_TARGET_HOOKS += GZDOOM_KEYS
+
 $(eval $(cmake-package))
 $(eval $(host-cmake-package))
-
