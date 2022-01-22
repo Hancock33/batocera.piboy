@@ -5286,7 +5286,11 @@ hurrican:
 ionfury:
   features: [padtokeyboard, decoration]
   shared: [hud]
-
+  
+kodi:
+  features: [padtokeyboard]
+  shared: []
+  
 lexaloffle:
   features: [padtokeyboard, decoration]
   shared: [hud]
