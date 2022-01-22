@@ -3099,15 +3099,15 @@ lowresnx:
     libretro:
       lowresnx: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_LOWRESNX] }
 
-media:
+kodi:
   name:       Media Player
-  manufacturer: ffmpeg
+  manufacturer: Kodi
   release: 2001
   hardware: computer
   extensions: [mkv, avi, f4v, f4f, 3gp, ogm, flv, mp4, mp3, flac, ogg, m4a, webm, 3g2, mov, wmv, mpg, mpeg, vob, asf, divx, m2p, m2ts, ps, ts, mxf, wma, wav]
   emulators:
-    libretro:
-      media: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FFMPEG] }
+    kodi:
+      kodi: { requireAnyOf: [BR2_PACKAGE_KODI] }
 
 mu:
   name:       Palm OS
