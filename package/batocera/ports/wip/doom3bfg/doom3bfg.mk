@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version.: Commits on Jan 21, 2022
-DOOM3BFG_VERSION = 92c5cbf7582bcbce89b12fe1b01bc63026da539a
+DOOM3BFG_VERSION = da947328f0a4a255af53e0d4e6d982e66a734df8
 DOOM3BFG_SITE = https://github.com/RobertBeckebans/RBDOOM-3-BFG.git
 DOOM3BFG_SITE_METHOD=git
 DOOM3BFG_GIT_SUBMODULES=YES
