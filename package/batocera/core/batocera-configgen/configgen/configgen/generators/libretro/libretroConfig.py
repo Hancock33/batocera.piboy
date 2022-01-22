@@ -97,6 +97,8 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution, gfxBac
     retroarchConfig['audio_latency'] = '64'                     # best balance with audio perf
     retroarchConfig['audio_mixer_volume'] = '0.000000'          # remove distortion on Piboy
     retroarchConfig['audio_driver'] = 'tinyalsa'
+    if (system.isOptSet("audio_driver")):
+        retroarchConfig['audio_driver'] = system.config['audio_driver']
     if (system.isOptSet("audio_latency")):
         retroarchConfig['audio_latency'] = system.config['audio_latency']
 
