@@ -1966,6 +1966,26 @@ msgctxt "game_options"
 msgid "Enhancement. Remove the sixteen sprites per line limit."
 msgstr ""
 
+#. TRANSLATION: libretro/mednafen_wswan
+msgctxt "game_options"
+msgid "DISPLAY ROTATION"
+msgstr ""
+
+#. TRANSLATION: libretro/mednafen_wswan
+msgctxt "game_options"
+msgid "Manual"
+msgstr ""
+
+#. TRANSLATION: libretro/mednafen_wswan
+msgctxt "game_options"
+msgid "Portrait"
+msgstr ""
+
+#. TRANSLATION: libretro/mednafen_wswan
+msgctxt "game_options"
+msgid "Landscape"
+msgstr ""
+
 #. TRANSLATION: libretro/mgba
 msgctxt "game_options"
 msgid "Requires BIOS file to be present."
@@ -4169,6 +4189,46 @@ msgstr ""
 #. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "AUDIO API"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "Choose which audio API library to use."
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "ALSA"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "ALSAThread"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "TinyALSA"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "openAL"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "SDL2"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "NULL"
 msgstr ""
 
 #. TRANSLATION: libretro
