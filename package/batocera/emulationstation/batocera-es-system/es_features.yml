@@ -65,6 +65,17 @@ libretro:
         "OpenGL": opengl
         "GLCore": glcore
         "Vulkan": vulkan
+    audio_driver:
+      archs_include: [x86, x86_64, rpi4, rk3326]
+      prompt:      AUDIO API
+      description: Choose which audio API library to use.
+      choices:
+        "ALSA": alsa
+        "ALSAThread": alsathread
+        "TinyALSA": tinalsa
+        "openAL": openal
+        "SDL2": sdl2
+        "NULL": null
     audio_latency:
       prompt:      AUDIO LATENCY
       description: In milliseconds. Can reduce crackling/cutting out.
@@ -3583,7 +3594,7 @@ daphne:
             description: Not all games support Stretch, depending on the video files.
             choices:
                 "Original":                   original
-                "Stretch":                    stretch                    
+                "Stretch":                    stretch
         gfxbackend:
             archs_include: [x86, x86_64, rpi4, rk3326]
             prompt:      GRAPHICS BACKEND
@@ -5255,7 +5266,7 @@ freedroid:
 gsplus:
   features: [padtokeyboard, decoration]
   shared: [hud]
-  
+
 gzdoom:
   features: [padtokeyboard, decoration]
   shared: [hud]
@@ -5311,7 +5322,7 @@ openlara:
 omf2097:
   features: [padtokeyboard, decoration]
   shared: [hud]
-  
+
 openmsx:
   features: [padtokeyboard, decoration]
   shared: [hud]
