@@ -72,7 +72,7 @@ libretro:
       choices:
         "ALSA": alsa
         "ALSAThread": alsathread
-        "TinyALSA": tinalsa
+        "TinyALSA": tinyalsa
         "openAL": openal
         "SDL2": sdl2
         "NULL": null
