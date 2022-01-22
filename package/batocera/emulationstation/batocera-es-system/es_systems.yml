@@ -3078,6 +3078,16 @@ ionfury:
   emulators:
     ionfury:
       ionfury: { requireAnyOf: [BR2_PACKAGE_IONFURY] }
+    
+jaxe:
+  name:       CHIP-8/S-CHIP/XO-CHIP
+  manufacturer: RCA
+  release: 1970
+  hardware: computer
+  extensions: [ch8, sc8, xo8]
+  emulators:
+    libretro:
+      jaxe: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_JAXE] }
 
 lowresnx:
   name:       LowRes-NX

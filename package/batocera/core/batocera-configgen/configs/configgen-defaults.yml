@@ -240,6 +240,10 @@ jaguar:
 j2me:
   emulator: libretro
   core:     freej2me
+jaxe:
+  emulator: libretro
+  core:     jaxe
+  
 kodi:
   emulator: kodi
   options:
