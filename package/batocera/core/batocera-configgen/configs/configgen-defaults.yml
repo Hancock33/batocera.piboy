@@ -544,7 +544,7 @@ tic80:
 tyrquake:
   emulator: libretro
   core:     tyrquake
-uzem:
+uzebox:
   emulator: libretro
   core:     uzem
 vanillara:
