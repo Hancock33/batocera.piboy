@@ -3,8 +3,8 @@
 # XEMU
 #
 ################################################################################
-# Version.: Commits on Jan 22, 2022
-XEMU_VERSION = 6b821d2062f28d8b04c7e02447ed066b50936eea
+# Version.: Commits on Jan 25, 2022
+XEMU_VERSION = caf84884c4a0b866ac2f4fc5eb25017c1320c8ba
 XEMU_SITE = https://github.com/mborgerson/xemu.git
 
 XEMU_DEPENDENCIES = sdl2
