@@ -3,7 +3,8 @@ default:
     ratio: "full"
     retroarch.menu_driver: rgui
     retroarch.audio_out_rate: 44100
-    retroarch.audio_driver: tinyalsa
+    video_threaded: true
+    audio_latency: 96
 
 nds:
   emulator: drastic
