@@ -1,7 +1,8 @@
-diff -Naur eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08.orig/Common.mak eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08/Common.mak
---- eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08.orig/Common.mak	2021-08-27 04:30:07.000000000 +0100
-+++ eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08/Common.mak	2021-09-01 14:46:08.249088820 +0100
-@@ -575,8 +575,8 @@
+diff --git a/Common.mak b/Common.mak
+index 78466b9a7..84e931aae 100644
+--- a/Common.mak
++++ b/Common.mak
+@@ -574,8 +574,8 @@ ifndef OPTOPT
          else
              ifeq ($(PLATFORM),DARWIN)
                  OPTOPT := -march=core2 -mmmx -msse -msse2 -msse3 -mssse3
@@ -12,17 +13,17 @@ diff -Naur eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08.orig/Common.mak eduk
              endif
          endif
      endif
-@@ -603,6 +603,9 @@
+@@ -602,6 +602,9 @@ ifndef OPTOPT
      ifeq ($(PLATFORM),WII)
          OPTOPT := -mtune=750
      endif
 +    ifneq (0,$(RPI4))
 +        OPTOPT := -mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math
-+    endif    
++    endif
  endif
  
  ifeq ($(PACKAGE_REPOSITORY),0)
-@@ -897,7 +900,7 @@
+@@ -893,7 +896,7 @@ endif
  
  ifeq ($(RENDERTYPE),SDL)
      ifeq ($(SDL_TARGET),2)
@@ -31,7 +32,7 @@ diff -Naur eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08.orig/Common.mak eduk
          SDLNAME := SDL2
      else ifeq ($(SDL_TARGET),1)
          SDLCONFIG := sdl-config
-@@ -939,8 +942,8 @@
+@@ -941,8 +944,8 @@ ifeq ($(RENDERTYPE),SDL)
              SDLCONFIG_CFLAGS := $(strip $(subst -Dmain=SDL_main,,$(shell $(SDLCONFIG) --cflags)))
              SDLCONFIG_LIBS := $(strip $(subst -mwindows,,$(shell $(SDLCONFIG) --libs)))
  
@@ -42,10 +43,11 @@ diff -Naur eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08.orig/Common.mak eduk
          else
              ifeq ($(SDL_TARGET),1)
                  COMPILERFLAGS += -D_GNU_SOURCE=1
-diff -Naur eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08.orig/GNUmakefile eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08/GNUmakefile
---- eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08.orig/GNUmakefile	2021-08-27 04:30:07.000000000 +0100
-+++ eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08/GNUmakefile	2021-09-01 14:30:18.343320946 +0100
-@@ -1383,9 +1383,12 @@
+diff --git a/GNUmakefile b/GNUmakefile
+index 105f402dd..9aa56d048 100644
+--- a/GNUmakefile
++++ b/GNUmakefile
+@@ -1413,8 +1413,10 @@ endif
  #### Targets
  
  all: \
@@ -54,7 +56,5 @@ diff -Naur eduke32-9860bbe8c4a5a867e63571e1377f78db5f224d08.orig/GNUmakefile edu
      rr \
 +    sw \
      exhumed \
-+	tekwar \
  
  start:
- 	$(BUILD_STARTED)
