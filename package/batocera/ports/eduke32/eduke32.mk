@@ -3,8 +3,8 @@
 # EDUKE32
 #
 ################################################################################
-# Version.: Commits on Jan 18, 2022
-EDUKE32_VERSION = 8df2fb4d36086d5d54638545b768dbf483bcdfcf
+# Version.: Commits on Jan 17, 2022
+EDUKE32_VERSION = bdad055b7d0c3f84ba91e1c14a9135cca56431f1
 EDUKE32_SITE = https://github.com/nukeykt/NBlood.git
 
 EDUKE32_DEPENDENCIES = sdl2 sdl2_image
@@ -14,7 +14,7 @@ EDUKE32_LICENSE = GPLv3
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
 EDUKE32_CONF_OPTS=USE_OPENGL=1 POLYMER=1 RPI4=0
 else
-EDUKE32_CONF_OPTS=USE_OPENGL=1 POLYMER=1 RPI4=1
+EDUKE32_CONF_OPTS=USE_OPENGL=0 POLYMER=1 RPI4=1
 endif
 
 define EDUKE32_BUILD_CMDS

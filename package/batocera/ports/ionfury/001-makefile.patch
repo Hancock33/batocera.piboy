@@ -1,6 +1,6 @@
-diff -Naur ionfury-fbcb9839404b06cfe76c6c8c277bcc7843d692da.orig/Common.mak ionfury-fbcb9839404b06cfe76c6c8c277bcc7843d692da/Common.mak
---- ionfury-fbcb9839404b06cfe76c6c8c277bcc7843d692da.orig/Common.mak	2021-08-27 04:02:19.000000000 +0100
-+++ ionfury-fbcb9839404b06cfe76c6c8c277bcc7843d692da/Common.mak	2021-09-01 14:52:44.661835376 +0100
+diff -Naur ionfury.orig/Common.mak ionfury/Common.mak
+--- ionfury.orig/Common.mak	2021-09-05 05:58:03.000000000 +0100
++++ ionfury/Common.mak	2022-01-26 21:29:07.767023933 +0000
 @@ -573,8 +573,8 @@
          else
              ifeq ($(PLATFORM),DARWIN)
@@ -42,3 +42,15 @@ diff -Naur ionfury-fbcb9839404b06cfe76c6c8c277bcc7843d692da.orig/Common.mak ionf
          else
              ifeq ($(SDL_TARGET),1)
                  COMPILERFLAGS += -D_GNU_SOURCE=1
+diff -Naur ionfury.orig/GNUmakefile ionfury/GNUmakefile
+--- ionfury.orig/GNUmakefile	2021-09-05 05:58:03.000000000 +0100
++++ ionfury/GNUmakefile	2022-01-26 21:30:01.747475480 +0000
+@@ -519,7 +519,7 @@
+ duke3d_editor_deps := audiolib
+ 
+ duke3d_game := eduke32
+-duke3d_editor := mapster32
++duke3d_editor := 
+ 
+ ifneq (,$(APPBASENAME))
+     duke3d_game := $(APPBASENAME)

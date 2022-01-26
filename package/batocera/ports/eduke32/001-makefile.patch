@@ -1,8 +1,7 @@
-diff --git a/Common.mak b/Common.mak
-index 78466b9a7..84e931aae 100644
---- a/Common.mak
-+++ b/Common.mak
-@@ -574,8 +574,8 @@ ifndef OPTOPT
+diff -Naur eduke32.orig/Common.mak eduke32/Common.mak
+--- eduke32.orig/Common.mak	2022-01-17 19:31:32.000000000 +0000
++++ eduke32/Common.mak	2022-01-26 21:21:07.054943997 +0000
+@@ -575,8 +575,8 @@
          else
              ifeq ($(PLATFORM),DARWIN)
                  OPTOPT := -march=core2 -mmmx -msse -msse2 -msse3 -mssse3
@@ -13,7 +12,7 @@ index 78466b9a7..84e931aae 100644
              endif
          endif
      endif
-@@ -602,6 +602,9 @@ ifndef OPTOPT
+@@ -603,6 +603,9 @@
      ifeq ($(PLATFORM),WII)
          OPTOPT := -mtune=750
      endif
@@ -23,7 +22,7 @@ index 78466b9a7..84e931aae 100644
  endif
  
  ifeq ($(PACKAGE_REPOSITORY),0)
-@@ -893,7 +896,7 @@ endif
+@@ -897,7 +900,7 @@
  
  ifeq ($(RENDERTYPE),SDL)
      ifeq ($(SDL_TARGET),2)
@@ -32,7 +31,7 @@ index 78466b9a7..84e931aae 100644
          SDLNAME := SDL2
      else ifeq ($(SDL_TARGET),1)
          SDLCONFIG := sdl-config
-@@ -941,8 +944,8 @@ ifeq ($(RENDERTYPE),SDL)
+@@ -939,8 +942,8 @@
              SDLCONFIG_CFLAGS := $(strip $(subst -Dmain=SDL_main,,$(shell $(SDLCONFIG) --cflags)))
              SDLCONFIG_LIBS := $(strip $(subst -mwindows,,$(shell $(SDLCONFIG) --libs)))
  
@@ -43,11 +42,19 @@ index 78466b9a7..84e931aae 100644
          else
              ifeq ($(SDL_TARGET),1)
                  COMPILERFLAGS += -D_GNU_SOURCE=1
-diff --git a/GNUmakefile b/GNUmakefile
-index 105f402dd..9aa56d048 100644
---- a/GNUmakefile
-+++ b/GNUmakefile
-@@ -1413,8 +1413,10 @@ endif
+diff -Naur eduke32.orig/GNUmakefile eduke32/GNUmakefile
+--- eduke32.orig/GNUmakefile	2022-01-17 19:31:32.000000000 +0000
++++ eduke32/GNUmakefile	2022-01-26 21:25:51.021369025 +0000
+@@ -653,7 +653,7 @@
+ duke3d_editor_deps := audiolib
+ 
+ duke3d_game := eduke32
+-duke3d_editor := mapster32
++duke3d_editor :=
+ 
+ ifneq (,$(APPBASENAME))
+     duke3d_game := $(APPBASENAME)
+@@ -1413,8 +1413,10 @@
  #### Targets
  
  all: \
