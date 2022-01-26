@@ -24,7 +24,7 @@ define GZDOOM_KEYS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/doom/gzdoom/prboom.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-GZDOOM__PRE_INSTALL_TARGET_HOOKS += GZDOOM_KEYS
+GZDOOM_PRE_INSTALL_TARGET_HOOKS += GZDOOM_KEYS
 
 $(eval $(cmake-package))
 $(eval $(host-cmake-package))
