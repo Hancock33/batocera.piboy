@@ -1,0 +1,10 @@
+config BR2_PACKAGE_WITCHAVEN
+	bool "witchaven"
+	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_IMAGE
+	help
+	  Witchaven
+	  No-promises port of Witchaven.
+
+	  https://github.com/jonof/jfwhaven

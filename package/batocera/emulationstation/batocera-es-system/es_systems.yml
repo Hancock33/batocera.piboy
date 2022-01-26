@@ -3035,6 +3035,17 @@ etekwar:
     etekwar:
       etekwar: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
 
+witchaven:
+  name:       Witchaven
+  manufacturer: Ports
+  release: 1995
+  hardware: port
+  extensions: [pk3]
+  group: ports
+  emulators:
+    witchaven:
+      witchaven: { requireAnyOf: [BR2_PACKAGE_WITCHAVEN] }
+
 f2bgl:
   name:       Fade to Black
   manufacturer: Ports

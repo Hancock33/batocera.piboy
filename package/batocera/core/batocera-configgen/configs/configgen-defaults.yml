@@ -580,6 +580,9 @@ windows:
 windows_installers:
   emulator: wine
   core:     proton
+witchaven:
+  emulator: witchaven
+  core:     witchaven
 wswan:
   emulator: libretro
   core:     mednafen_wswan
