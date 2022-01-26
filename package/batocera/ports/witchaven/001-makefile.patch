@@ -1,0 +1,105 @@
+diff -Naur jfwhaven.orig/jfaudiolib/Makefile jfwhaven/jfaudiolib/Makefile
+--- jfwhaven.orig/jfaudiolib/Makefile	2022-01-26 22:01:47.600178461 +0000
++++ jfwhaven/jfaudiolib/Makefile	2022-01-26 21:48:42.133356508 +0000
+@@ -35,7 +35,7 @@
+  CPPFLAGS+= -DHAVE_VORBIS
+ else
+  ifneq (0,$(JFAUDIOLIB_HAVE_SDL))
+-  CPPFLAGS+= -DHAVE_SDL=2 $(shell $(SDL2CONFIG) --cflags)
++  CPPFLAGS+= -DHAVE_SDL=2 `pkg-config sdl2 --cflags`
+   ifeq (1,$(JFAUDIOLIB_USE_SDLMIXER))
+    CPPFLAGS+= -DUSE_SDLMIXER
+    SOURCES+= src/driver_sdlmixer.c
+diff -Naur jfwhaven.orig/jfaudiolib/Makefile.shared jfwhaven/jfaudiolib/Makefile.shared
+--- jfwhaven.orig/jfaudiolib/Makefile.shared	2022-01-26 22:01:47.600178461 +0000
++++ jfwhaven/jfaudiolib/Makefile.shared	2022-01-26 21:49:17.969674897 +0000
+@@ -21,7 +21,7 @@
+  endif
+  ifneq (,$(shell $(SDL2CONFIG) --version))
+   JFAUDIOLIB_HAVE_SDL=2
+-  JFAUDIOLIB_LDFLAGS+= $(shell $(SDL2CONFIG) --libs)
++  JFAUDIOLIB_LDFLAGS+= `pkg-config sdl2 --libs`
+  endif
+  ifeq (yes,$(shell $(PKGCONFIG) --exists alsa && echo yes))
+   JFAUDIOLIB_HAVE_ALSA=1
+diff -Naur jfwhaven.orig/jfbuild/Makefile.shared jfwhaven/jfbuild/Makefile.shared
+--- jfwhaven.orig/jfbuild/Makefile.shared	2022-01-26 22:01:47.640178802 +0000
++++ jfwhaven/jfbuild/Makefile.shared	2022-01-26 21:50:17.654202931 +0000
+@@ -76,8 +76,8 @@
+ 
+ ifeq ($(RENDERTYPE),SDL)
+ 	ifneq ($(SDL2CONFIG),)
+-		SDLCONFIG_CFLAGS=$(shell $(SDL2CONFIG) --cflags)
+-		SDLCONFIG_LIBS=$(shell $(SDL2CONFIG) --libs)
++		SDLCONFIG_CFLAGS=`pkg-config sdl2 --cflags`
++		SDLCONFIG_LIBS=`pkg-config sdl2 --libs`
+ 	else
+ 		$(error No $(SDL2CONFIG) could be found)
+ 	endif
+diff -Naur jfwhaven.orig/Makefile jfwhaven/Makefile
+--- jfwhaven.orig/Makefile	2022-01-26 22:01:30.996036375 +0000
++++ jfwhaven/Makefile	2022-01-26 22:10:00.924382482 +0000
+@@ -14,7 +14,7 @@
+ RELEASE ?= 1
+ 
+ # Path where game data is installed
+-DATADIR ?= /usr/local/share/games/jfwhaven
++DATADIR ?= /userdata/roms/witchaven/
+ 
+ # Engine source code path
+ EROOT ?= jfbuild
+@@ -64,7 +64,7 @@
+ NASM?=nasm
+ RC?=windres
+ OURCFLAGS=$(debug) -W -Wall -Wimplicit -Wno-unused \
+-	-fno-strict-aliasing -DNO_GCC_BUILTINS \
++	-fno-strict-aliasing -DNO_GCC_BUILTINS -fPIC \
+ 	-I$(INC) -I$(EINC) -I$(AUDIOLIBROOT)/include
+ OURCXXFLAGS=-fno-exceptions -fno-rtti
+ LIBS=-lm
+@@ -110,8 +110,8 @@
+ endif
+ 
+ ifeq ($(RENDERTYPE),SDL)
+-	OURCFLAGS+= $(SDLCONFIG_CFLAGS)
+-	LIBS+= $(SDLCONFIG_LIBS)
++	OURCFLAGS+= `pkg-config sdl2 --cflags`
++	LIBS+= `pkg-config sdl2 --libs`
+ 
+ 	ifeq (1,$(HAVE_GTK))
+ 		OURCFLAGS+= $(GTKCONFIG_CFLAGS)
+@@ -156,7 +156,7 @@
+ 	cd xcode && xcodebuild -project whaven.xcodeproj -target all -configuration $(style)
+ endif
+ 
+-all: whaven$(EXESUFFIX) build$(EXESUFFIX)
++all: whaven$(EXESUFFIX)
+ 
+ whaven$(EXESUFFIX): $(GAMEOBJS) $(ELIB)/$(ENGINELIB) $(AUDIOLIBROOT)/$(JFAUDIOLIB)
+ 	$(CXX) $(CXXFLAGS) $(OURCXXFLAGS) $(OURCFLAGS) -o $@ $^ $(LIBS) $(GAMELIBS) -Wl,-Map=$@.map
+diff -Naur jfwhaven.orig/src/whnet.c jfwhaven/src/whnet.c
+--- jfwhaven.orig/src/whnet.c	2022-01-26 22:01:31.000036409 +0000
++++ jfwhaven/src/whnet.c	2022-01-26 22:15:01.266582983 +0000
+@@ -33,8 +33,8 @@
+ 
+ char netmsg[80],
+      plrindex[256],
+-     tagindex[MAXPLAYERS],
+-     tempbuf[576];
++     tagindex[MAXPLAYERS];
++//     tempbuf[576];
+ 
+ int  netgame,
+      netinitialized;
+diff -Naur jfwhaven.orig/src/whobj.c jfwhaven/src/whobj.c
+--- jfwhaven.orig/src/whobj.c	2022-01-26 22:01:31.000036409 +0000
++++ jfwhaven/src/whobj.c	2022-01-26 22:14:10.194286627 +0000
+@@ -33,7 +33,7 @@
+ short torchpattern[38] = { 2,2,2,3,3,3,4,4,5,5,6,6,4,4,6,6,4,4,6,6,4,4,6,6,4,4,6,6,5,5,4,4,3,3,3,2,2,2 };
+ 
+ char flashflag=0x00;
+-char tempbuf[50];
++char tempbuf[576];
+ char displaybuf[50];
+ char scorebuf[50];
+ char healthbuf[50];

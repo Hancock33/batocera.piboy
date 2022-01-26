@@ -98,6 +98,7 @@ from generators.vanillatd.vanillatdGenerator import VanillatdGenerator
 from generators.vice.viceGenerator import ViceGenerator
 from generators.voidsw.voidswGenerator import VoidswGenerator
 from generators.wine.wineGenerator import WineGenerator
+from generators.witchaven.witchavenGenerator import WitchavenGenerator
 from generators.xash3d_fwgs.xash3dFwgsGenerator import Xash3dFwgsGenerator
 from generators.xemu.xemuGenerator import XemuGenerator
 from generators.yquake2.yquake2Generator import Yquake2Generator
@@ -206,6 +207,7 @@ generators = {
     'vanillatd': VanillatdGenerator(),
     'voidsw': VoidswGenerator(),
     'wine' : WineGenerator(),
+    'witchaven' : WitchavenGenerator(),
     'xash3d_fwgs': Xash3dFwgsGenerator(),
     'xemu': XemuGenerator(),
     'yquake2': Yquake2Generator(),

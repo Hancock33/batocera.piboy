@@ -1,0 +1,91 @@
+{
+    "actions_player1": [
+        {
+            "trigger": [
+                "hotkey",
+                "start"
+            ],
+            "type": "exec",
+            "target": "killall -9 whaven && reset"
+        },
+        {
+            "trigger": "joystick1",
+            "type": "mouse"
+        },
+        {
+            "trigger": "up",
+            "type": "key",
+            "target": "KEY_UP"
+        },
+        {
+            "trigger": "down",
+            "type": "key",
+            "target": "KEY_DOWN"
+        },
+        {
+            "trigger": "left",
+            "type": "key",
+            "target": "KEY_LEFT"
+        },
+        {
+            "trigger": "right",
+            "type": "key",
+            "target": "KEY_RIGHT"
+        },
+        {
+            "trigger": "start",
+            "type": "key",
+            "target": "KEY_ENTER"
+        },
+        {
+            "trigger": "select",
+            "type": "key",
+            "target": "KEY_ESC"
+        },
+        {
+            "trigger": "a",
+            "type": "key",
+            "target": "KEY_C"
+        },
+        {
+            "trigger": "b",
+            "type": "key",
+            "target": "KEY_LEFTCTRL"
+        },
+        {
+            "trigger": "x",
+            "type": "key",
+            "target": "KEY_Y"
+        },
+        {
+            "trigger": "pageup",
+            "type": "key",
+            "target": "KEY_I"
+        },
+        {
+            "trigger": "pagedown",
+            "type": "key",
+            "target": "KEY_SLASH"
+        },
+        {
+            "trigger": "l3",
+            "type": "key",
+            "target": "KEY_A"
+        },
+        {
+            "trigger": "r2",
+            "type": "key",
+            "target": "KEY_DOT"
+        },
+        {
+            "trigger": "l2",
+            "type": "key",
+            "target": "KEY_COMMA"
+        },
+        {
+            "trigger": "y",
+            "type": "key",
+            "target": "KEY_SPACE"
+        }
+    ]
+}
