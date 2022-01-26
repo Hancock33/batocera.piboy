@@ -4447,7 +4447,7 @@ msgctxt "game_options"
 msgid "Native (400x240)"
 msgstr "Native (400x240)"
 
-#. TRANSLATION: citra, dolphin, duckstation, pcsx2, sonic2013, ...
+#. TRANSLATION: citra, dolphin, duckstation, pcsx2, rpcs3, ...
 msgctxt "game_options"
 msgid "VSYNC"
 msgstr "VSYNC(垂直同期)有効"
@@ -5528,30 +5528,104 @@ msgstr "SPU デコーダー"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "If game crashes, try ASMJIT. If still crashing, try Interpreter (fast)."
+msgid "If game crashes, try ASMJIT. If still crashing, try Fast Interpreter."
 msgstr ""
-"ゲームがクラッシュするなら、ASMJITを、まだクラッシュするなら、インタプリタを"
-"試してください"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "Recompiler (LLVM)"
-msgstr "リコンパイラ (LLVM)"
+msgid "LLVM Recompiler"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "Recompiler (ASMJIT)"
-msgstr "リコンパイラ (ASMJIT)"
+msgid "ASMJIT Recompiler"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "Interpreter (fast)"
-msgstr "インタープリタ（速い）"
+msgid "Fast Interpreter"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "Interpreter (precise)"
-msgstr "インタープリタ（正確）"
+msgid "Precise Interpreter"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "TV MODE"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "PS3's internal ratio setting. Some games only support 16/9."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "ADDITIONAL FRAMELIMIT"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Most games already have an internal framelimit. Minor performance cost."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Off (faster, unstable)"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "SHADER MODE"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Only Async (skip draw) avoids freezing while compiling shaders."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Legacy (laggy)"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Async (skip draw, recommended)"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Async with interp. (hybrid)"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Interpreter only (experimental)"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"Can fix screen tearing on unorthodox displays (most LCDs don't need this)."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "On (slower)"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "STRETCH TO DISPLAY AREA"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Distorts the output to fill the display fully."
+msgstr ""
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
@@ -6636,3 +6710,26 @@ msgstr "4:3 (基本)"
 msgctxt "game_options"
 msgid "Set vsync on to avoid tearing."
 msgstr "ティアリングを回避するためにvsyncを設定します"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "If game crashes, try ASMJIT. If still crashing, try Interpreter (fast)."
+#~ msgstr ""
+#~ "ゲームがクラッシュするなら、ASMJITを、まだクラッシュするなら、インタプリタ"
+#~ "を試してください"
+
+#~ msgctxt "game_options"
+#~ msgid "Recompiler (LLVM)"
+#~ msgstr "リコンパイラ (LLVM)"
+
+#~ msgctxt "game_options"
+#~ msgid "Recompiler (ASMJIT)"
+#~ msgstr "リコンパイラ (ASMJIT)"
+
+#~ msgctxt "game_options"
+#~ msgid "Interpreter (fast)"
+#~ msgstr "インタープリタ（速い）"
+
+#~ msgctxt "game_options"
+#~ msgid "Interpreter (precise)"
+#~ msgstr "インタープリタ（正確）"
