@@ -2,8 +2,8 @@
 #
 # Libretro-miniVMac
 #
-################################################################################
-LIBRETRO_MINIVMAC_VERSION = 57fc03ff1f66c9acef6ff612ceda00471a00674a
+# Version.: Commits on Jan 27, 2022
+LIBRETRO_MINIVMAC_VERSION = 2f94ed35b96454a874996b2398c4ff631a425e14
 LIBRETRO_MINIVMAC_SITE = $(call github,libretro,libretro-minivmac,$(LIBRETRO_MINIVMAC_VERSION))
 LIBRETRO_MINIVMAC_LICENSE = GPLv2
 LIBRETRO_MINIVMAC_DEPENDENCIES = 
