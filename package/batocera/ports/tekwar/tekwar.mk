@@ -3,7 +3,7 @@
 # TEKWAR
 #
 ################################################################################
-# Version.: Commits on Jan 26, 2021
+# Version.: Commits on Jan 24, 2021
 TEKWAR_VERSION = fd88dd7ea2a9f66baf14fffad5bed17220833b2b
 TEKWAR_SITE = https://github.com/jonof/jftekwar.git
 

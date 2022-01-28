@@ -3,7 +3,7 @@
 # Open Claw
 #
 ################################################################################
-# Version.: Commits on Jun 7, 2021
+# Version.: Commits on Jun 07, 2021
 OPENCLAW_VERSION = 3586dfade4a0ae9b4456d24b599c9e9b111522e2
 OPENCLAW_SITE = $(call github,pjasicek,OpenClaw,$(OPENCLAW_VERSION))
 
