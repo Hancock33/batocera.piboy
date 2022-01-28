@@ -11,26 +11,42 @@
         {
             "trigger": "up",
             "type": "key",
-            "target": "KEY_W",
+            "target": "KEY_W"
+        },
+        {
+            "trigger": "up",
+            "type": "key",
             "target": "KEY_UP"
         },
         {
             "trigger": "down",
             "type": "key",
-            "target": "KEY_S",
+            "target": "KEY_S"
+        },
+        {
+            "trigger": "down",
+            "type": "key",
             "target": "KEY_DOWN"
         },
         {
             "trigger": "left",
             "type": "key",
-            "target": "KEY_A",
+            "target": "KEY_A"
+        },
+        {
+            "trigger": "left",
+            "type": "key",
             "target": "KEY_LEFT"
         },
         {
             "trigger": "right",
             "type": "key",
-            "target": "KEY_D",
             "target": "KEY_RIGHT"
+        },
+        {
+            "trigger": "right",
+            "type": "key",
+            "target": "KEY_D"
         },
         {
             "trigger": "start",
