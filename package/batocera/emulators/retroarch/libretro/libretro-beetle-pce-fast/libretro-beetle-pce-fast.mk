@@ -3,8 +3,8 @@
 # BEETLE_PCE_FAST
 #
 ################################################################################
-# Version.: Commits on Jan 21, 2022
-LIBRETRO_BEETLE_PCE_FAST_VERSION = 0f43fd4dc406e7da6bbdc13b6eb1c105d6072f8a
+# Version.: Commits on Jan 29, 2022
+LIBRETRO_BEETLE_PCE_FAST_VERSION = edefc860eb51f7e78f4a535fdc3b5950d6a5a9a4
 LIBRETRO_BEETLE_PCE_FAST_SITE = $(call github,libretro,beetle-pce-fast-libretro,$(LIBRETRO_BEETLE_PCE_FAST_VERSION))
 LIBRETRO_BEETLE_PCE_FAST_LICENSE = GPLv2
 
