@@ -595,8 +595,14 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution, gfxBac
         else:
             retroarchConfig['netplay_use_mitm_server'] = "false"
 
+    # Display Framecounter
+    if system.isOptSet('framecount_show') and system.getOptBoolean('framecount_show') == True:
+        retroarchConfig['framecount_show'] = 'true'
+    else:
+        retroarchConfig['framecount_show'] = 'false'
+
     # Display FPS
-    if system.isOptSet('showFPS') and system.getOptBoolean('showFPS') == True:
+    if system.isOptSet('fps_show') and system.getOptBoolean('fps_show') == True:
         retroarchConfig['fps_show'] = 'true'
     else:
         retroarchConfig['fps_show'] = 'false'

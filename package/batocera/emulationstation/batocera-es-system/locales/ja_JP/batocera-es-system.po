@@ -2584,7 +2584,7 @@ msgctxt "game_options"
 msgid "N64 3-point"
 msgstr "N64 3ポイント"
 
-#. TRANSLATION: libretro/parallel_n64
+#. TRANSLATION: libretro/parallel_n64, libretro
 msgctxt "game_options"
 msgid "FRAMERATE"
 msgstr "フレームレート"
@@ -4293,6 +4293,21 @@ msgstr "ライトガンをコントローラーに割り当て"
 msgctxt "game_options"
 msgid "Map controller inputs to lightgun inputs"
 msgstr "コントローラー入力をライトガンに割り当てます"
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "FRAMECOUNT"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "Display the current frame counter."
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "Display the current frames per second."
+msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"

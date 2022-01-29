@@ -2597,7 +2597,7 @@ msgctxt "game_options"
 msgid "N64 3-point"
 msgstr "N64 3 punktowy"
 
-#. TRANSLATION: libretro/parallel_n64
+#. TRANSLATION: libretro/parallel_n64, libretro
 msgctxt "game_options"
 msgid "FRAMERATE"
 msgstr "LICZBA KLATEK NA SEKUNDĘ"
@@ -4312,6 +4312,21 @@ msgstr "KONTROLER DLA PISTOLETU ŚWIETLNEGO"
 msgctxt "game_options"
 msgid "Map controller inputs to lightgun inputs"
 msgstr "Mapowanie wejść kontrolera na wejścia pistoletu świetlnego"
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "FRAMECOUNT"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "Display the current frame counter."
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "Display the current frames per second."
+msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
