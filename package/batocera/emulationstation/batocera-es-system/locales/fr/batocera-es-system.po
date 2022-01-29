@@ -4186,6 +4186,11 @@ msgctxt "game_options"
 msgid "GLCore"
 msgstr ""
 
+#. TRANSLATION: libretro, libretro
+msgctxt "game_options"
+msgid "SDL2"
+msgstr ""
+
 #. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
@@ -4224,11 +4229,6 @@ msgstr ""
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "PulseAudio"
-msgstr ""
-
-#. TRANSLATION: libretro
-msgctxt "game_options"
-msgid "SDL2"
 msgstr ""
 
 #. TRANSLATION: libretro
