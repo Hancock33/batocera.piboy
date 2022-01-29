@@ -16,7 +16,7 @@ diff -Naur batocera-emulationstation.orig/es-app/src/CustomFeatures.h batocera-e
 @@ -88,6 +88,8 @@
  		autocontrollers = 262144,
  		framecount = 524288,
- 		showfps = 1048576,
+ 		fps_show = 1048576,
 +		gfxbackend = 2097152,
 +		audio_driver = 4194304,
  
@@ -48,5 +48,5 @@ diff -Naur batocera-emulationstation.orig/es-app/src/guis/GuiMenu.cpp batocera-e
 +	}
 +
   	// FPS
- 	if (!hasGlobalFeature("showfps"))
+ 	if (!hasGlobalFeature("fps_show"))
   	{

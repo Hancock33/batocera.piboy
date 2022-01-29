@@ -6,8 +6,8 @@ index 1cc53fee..ca942a6c 100644
  
  		if (trim == "ratio") ret = ret | EmulatorFeatures::Features::ratio;
  		if (trim == "rewind") ret = ret | EmulatorFeatures::Features::rewind;
-+		if (trim == "showfps") ret = ret | EmulatorFeatures::Features::showfps;
-+		if (trim == "framecount") ret = ret | EmulatorFeatures::Features::framecount;
++		if (trim == "fps_show") ret = ret | EmulatorFeatures::Features::fps_show;
++		if (trim == "framecount_show") ret = ret | EmulatorFeatures::Features::framecount_show;
  		if (trim == "smooth") ret = ret | EmulatorFeatures::Features::smooth;
  		if (trim == "shaders") ret = ret | EmulatorFeatures::Features::shaders;
  		if (trim == "pixel_perfect") ret = ret | EmulatorFeatures::Features::pixel_perfect;
@@ -19,8 +19,8 @@ index a01559c2..d46be2b5 100644
  		padTokeyboard = 65536,
  		cheevos = 131072,
  		autocontrollers = 262144,
-+		framecount = 524288,
-+		showfps = 1048576,
++		framecount_show = 524288,
++		fps_show = 1048576,
  
  		all = 0x0FFFFFFF
  	};
@@ -33,21 +33,21 @@ index 72e34802..2d021065 100644
  	}
  
 + 	// FPS
-+	if (!hasGlobalFeature("showfps"))
++	if (!hasGlobalFeature("fps_show"))
 + 	{
-+ 		auto showfps_enabled = std::make_shared<OptionListComponent<std::string>>(mWindow, _("FPS"));
-+ 		showfps_enabled->addRange({ { _("AUTO"), "auto" },{ _("ON") , "1" },{ _("OFF") , "0" } }, SystemConf::getInstance()->get("global.showfps"));
-+		s->addWithLabel(_("FPS"), showfps_enabled);
-+		s->addSaveFunc([showfps_enabled] { SystemConf::getInstance()->set("global.showfps", showfps_enabled->getSelected()); });
++ 		auto fps_show_enabled = std::make_shared<OptionListComponent<std::string>>(mWindow, _("FRAMERATE"));
++ 		fps_show_enabled->addRange({ { _("AUTO"), "auto" },{ _("ON") , "1" },{ _("OFF") , "0" } }, SystemConf::getInstance()->get("global.fps_show"));
++		s->addWithLabel(_("FRAMERATE"), fps_show_enabled);
++		s->addSaveFunc([fps_show_enabled] { SystemConf::getInstance()->set("global.fps_show", fps_show_enabled->getSelected()); });
 + 	}
 + 
 + 	// Frame Count
-+	if (!hasGlobalFeature("framecount"))
++	if (!hasGlobalFeature("framecount_show"))
 + 	{
-+ 		auto framecount_enabled = std::make_shared<OptionListComponent<std::string>>(mWindow, _("FRAME COUNT"));
-+		framecount_enabled->addRange({ { _("AUTO"), "auto" },{ _("ON") , "1" },{ _("OFF") , "0" } }, SystemConf::getInstance()->get("global.framecount"));
-+		s->addWithLabel(_("FRAME COUNT"), framecount_enabled);
-+		s->addSaveFunc([framecount_enabled] { SystemConf::getInstance()->set("global.framecount", framecount_enabled->getSelected()); });
++ 		auto framecount_show_enabled = std::make_shared<OptionListComponent<std::string>>(mWindow, _("FRAMECOUNT"));
++		framecount_show_enabled->addRange({ { _("AUTO"), "auto" },{ _("ON") , "1" },{ _("OFF") , "0" } }, SystemConf::getInstance()->get("global.framecount_show"));
++		s->addWithLabel(_("FRAMECOUNT"), framecount_show_enabled);
++		s->addSaveFunc([framecount_show_enabled] { SystemConf::getInstance()->set("global.framecount_show", framecount_show_enabled->getSelected()); });
 + 	}
 +
  	// smoothing	
