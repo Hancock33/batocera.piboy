@@ -1,6 +1,8 @@
---- a/input/drivers_joypad/udev_joypad.c	2021-03-30 23:38:13.099117915 +0200
-+++ b/input/drivers_joypad/udev_joypad.c	2021-03-30 23:37:51.842668196 +0200
-@@ -536,6 +536,60 @@
+diff --git a/input/drivers_joypad/udev_joypad.c b/input/drivers_joypad/udev_joypad.c
+index 47f5622b98..b5ab9f8b65 100644
+--- a/input/drivers_joypad/udev_joypad.c
++++ b/input/drivers_joypad/udev_joypad.c
+@@ -591,6 +591,60 @@ static void udev_joypad_poll(void)
     }
  }
  
@@ -61,9 +63,9 @@
  static void *udev_joypad_init(void *data)
  {
     unsigned i;
-@@ -568,12 +622,33 @@
-    udev_enumerate_scan_devices(enumerate);
-    devs = udev_enumerate_get_list_entry(enumerate);
+@@ -626,11 +680,33 @@ static void *udev_joypad_init(void *data)
+    if (!devs)
+       RARCH_DBG("[udev]: Couldn't open any joypads. Are permissions set correctly for /dev/input/event* and /run/udev/?\n");
  
 -   udev_list_entry_foreach(item, devs)
 +
@@ -72,7 +74,7 @@
        const char         *name = udev_list_entry_get_name(item);
        struct udev_device  *dev = udev_device_new_from_syspath(udev_joypad_fd, name);
        const char      *devnode = udev_device_get_devnode(dev);
- 
++      
 +      if (devnode != NULL) {
 +         sorted[sorted_count].devnode = devnode;
 +         sorted[sorted_count].item = item;
@@ -93,6 +95,6 @@
 +      struct udev_device  *dev = udev_device_new_from_syspath(udev_joypad_fd, name);
 +      const char      *devnode = udev_device_get_devnode(dev);
 +
-       if (devnode)
-          udev_check_device(dev, devnode);
-       udev_device_unref(dev);
+ #if defined(DEBUG)
+       struct udev_list_entry *list_entry = NULL;
+       RARCH_DBG("udev_joypad_init entry name=%s devnode=%s\n", name, devnode);
