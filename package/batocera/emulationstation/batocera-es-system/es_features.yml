@@ -64,6 +64,7 @@ libretro:
       choices:
         "OpenGL": opengl
         "GLCore": glcore
+        "SDL2": sdl2 
         "Vulkan": vulkan
     audio_driver:
       archs_include: [x86, x86_64, rpi4, rk3326]
@@ -74,7 +75,8 @@ libretro:
         "ALSAThread": alsathread
         "TinyALSA": tinyalsa
         "openAL": openal
-        "SDL2": sdl2
+        "PulseAudio": pulse
+        "SDL2": sdl2 
         "NULL": null
     audio_latency:
       prompt:      AUDIO LATENCY

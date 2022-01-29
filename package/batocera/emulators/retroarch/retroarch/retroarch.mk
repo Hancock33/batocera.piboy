@@ -66,9 +66,9 @@ else
 	RETROARCH_CONF_OPTS += --disable-alsa
 endif
 
-ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)
+ifeq ($(BR2_PACKAGE_PULSEAUDIO_UTILS),y)
 	RETROARCH_CONF_OPTS += --enable-pulse
-	RETROARCH_DEPENDENCIES += pulseaudio
+	RETROARCH_DEPENDENCIES += pulseaudio-utils
 else
 	RETROARCH_CONF_OPTS += --disable-pulse
 endif
