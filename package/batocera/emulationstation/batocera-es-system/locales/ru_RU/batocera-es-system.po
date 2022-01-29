@@ -4267,6 +4267,11 @@ msgstr ""
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
+msgid "PulseAudio"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
 
