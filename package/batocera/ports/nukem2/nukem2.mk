@@ -3,8 +3,8 @@
 # Duke Nukem 2
 #
 ################################################################################
-# Version.: Commits on Jan 23, 2022
-NUKEM2_VERSION = 6321c37a831c37334bc75ac0f7d25a774a5ee125
+# Version.: Commits on Jan 29, 2022
+NUKEM2_VERSION = 59ea3aae594a09fb63e5a408dd970b50e50d9922
 NUKEM2_SITE = https://github.com/lethal-guitar/RigelEngine.git
 NUKEM2_SITE_METHOD=git
 NUKEM2_GIT_SUBMODULES=YES
