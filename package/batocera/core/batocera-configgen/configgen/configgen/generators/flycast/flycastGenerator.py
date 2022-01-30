@@ -100,7 +100,7 @@ class FlycastGenerator(Generator):
             copyfile(batoceraFiles.flycastVMUBlank, batoceraFiles.flycastVMUA2)
         
         # point to vulkan icd's in preferred order.
-        gpu_icd = "/usr/share/vulkan/icd.d/nvidia_icd.x86_64.json:/usr/share/vulkan/icd.d/radeon_icd.x86_64.json:/usr/share/vulkan/icd.d/intel_icd.x86_64.json"
+        gpu_icd = "/usr/share/vulkan/icd.d/nvidia_icd.x86_64.json:/usr/share/vulkan/icd.d/radeon_icd.x86_64.json:/usr/share/vulkan/icd.d/intel_icd.x86_64.json:/usr/share/vulkan/icd.d/broadcom_icd.cortex-a72.json"
 
         # the command to run  
         commandArray = [batoceraFiles.batoceraBins[system.config['emulator']]]
