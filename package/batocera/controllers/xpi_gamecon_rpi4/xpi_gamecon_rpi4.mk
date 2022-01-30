@@ -20,6 +20,9 @@ define XPI_GAMECON_RPI4_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi4/piboy_power_ctrl.py 	$(TARGET_DIR)/usr/bin/piboy_power_ctrl.py
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms
 	cp -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi4/roms/piboy $(TARGET_DIR)/usr/share/batocera/datainit/roms
+	# evmap config
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi4/kodi.keys $(TARGET_DIR)/usr/share/evmapy/kodi.keys
 endef
 
 $(eval $(kernel-module))
