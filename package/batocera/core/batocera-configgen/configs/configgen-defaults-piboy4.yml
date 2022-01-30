@@ -1,5 +1,8 @@
 default:
   options:
+    ratio: "full"
+    retroarch.menu_driver: rgui
+    retroarch.audio_out_rate: 44100
     retroarch.vrr_runloop_enable: false
     retroarch.video_max_swapchain_images: 3
 
