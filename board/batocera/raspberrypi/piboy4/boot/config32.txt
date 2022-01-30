@@ -133,9 +133,15 @@ dtparam=audio=on
 [rpi4]
 dtoverlay=vc4-fkms-v3d
 dtoverlay=rpivid-v4l2
+max_framebuffers=2
+extra_transpose_buffer=2
+hdmi_force_hotplug:0=0
+hdmi_force_hotplug:1=1
 
-# Ensure only one display output can be used on the Pi4 with batocera
-max_framebuffers=1
+##HDMI Settings
+hdmi_group:1=2
+hdmi_mode:1=85
+hdmi_drive:1=2
 
 ##Enable DPI gpio
 gpio=0-9,12-17,20-25=a2
@@ -143,15 +149,18 @@ audio_pwm_mode=2
 dtoverlay=audremap,pins_18_19
 
 ##DPI LCD settings
+hvs_set_dither=0x210
 dpi_group=2
 dpi_mode=87
-dpi_output_format=0x070016
-hvs_set_dither=0x210
-dpi_timings=640 1 30 30 30 480 1 13 13 13 0 0 0 85 0 32200000 1
-#dpi_timings=640 1 16 96 48 480 0 10 2 33 0 0 0 60 0 25175000 1
-#dpi_timings=640 1 56 4 42 480 1 16 4 12 0 0 0 60 0 22800000 1 #alternate 60hz setting for Pi4 only.
+dpi_output_format=0x070016 
+dpi_timings=640 1 30 30 30 480 1 13 13 13 0 0 0 85 0 32200000 1        #maximum refresh allowed by Raspberry Pi firmware
+#dpi_timings=640 1 40 40 40 480 1 13 13 13 0 0 0 80 0 31600000 1
+#dpi_timings=640 1 60 60 60 480 1 13 13 13 0 0 0 75 0 32000000 1
+#dpi_timings=640 1 80 80 80 480 1 13 13 13 0 0 0 70 0 32000000 1
+#dpi_timings=640 1 100 100 100 480 1 13 13 13 0 0 0 65 0 31800000 1
+#dpi_timings=640 1 130 130 130 480 1 13 13 13 0 0 0 60 0 32000000 1
+#dpi_timings=640 1 56 4 42 480 1 16 4 12 0 0 0 60 0 22800000 1			#alternate 60hz setting for Pi4 only.
 enable_dpi_lcd=1
-extra_transpose_buffer=2
 
 ##Disable ACT LED
 dtparam=act_led_trigger=none
