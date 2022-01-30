@@ -11,5 +11,5 @@ class KodiGenerator(Generator):
     # Configure kodi inputs and return the command to run
     def generate(self, system, rom, playersControllers, gameResolution):
         kodiConfig.writeKodiConfig(playersControllers)
-        commandArray = [batoceraFiles.batoceraBins[system.config['emulator']]]
+        commandArray = ["kodi", rom]
         return Command.Command(array=commandArray)
