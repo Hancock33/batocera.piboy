@@ -3,8 +3,8 @@
 # BK-0010 / BK-0010.01 / BK-0011 emulator
 #
 ################################################################################
-# Version.: Commits on Jan 22, 2022
-LIBRETRO_BK_EMULATOR_VERSION = eccaa697d9f9f141a61646ffd15bf55241b1288d
+# Version.: Commits on Jan 30, 2022
+LIBRETRO_BK_EMULATOR_VERSION = 1804d368980c71c80452f821e0cb81e25000aa46
 LIBRETRO_BK_EMULATOR_SITE = $(call github,libretro,bk-emulator,$(LIBRETRO_BK_EMULATOR_VERSION))
 LIBRETRO_BK_EMULATOR_LICENSE = Custom
 
