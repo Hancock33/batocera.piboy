@@ -3,8 +3,8 @@
 # Another World
 #
 ################################################################################
-# Version.: Commits on Jan 24, 2022
-AWGL_VERSION = f99ebd299d6373ff82f064db01b01317f8d8617d
+# Version.: Commits on Jan 27, 2022
+AWGL_VERSION = be218d2849889c667e51bcff3e56e1668581bd38
 AWGL_SITE = $(call github,cyxx,rawgl,$(AWGL_VERSION))
 
 AWGL_DEPENDENCIES = sdl2 sdl2_mixer freepats
