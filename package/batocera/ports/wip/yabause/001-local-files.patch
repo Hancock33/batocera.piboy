@@ -1,0 +1,78 @@
+diff -Naur yabause.orig/yabause/CMake/Packages/external_curl.cmake yabause/yabause/CMake/Packages/external_curl.cmake
+--- yabause.orig/yabause/CMake/Packages/external_curl.cmake	2022-01-09 21:33:57.000000000 +0000
++++ yabause/yabause/CMake/Packages/external_curl.cmake	2022-02-01 08:56:02.893992745 +0000
+@@ -12,7 +12,7 @@
+       GIT_TAG "1b6bc02fb926403f04061721f9159e9887202a96"
+       PREFIX curl
+       PATCH_COMMAND ${CURL_PATCH_COMMAND}
+-      CMAKE_ARGS -DBUILD_SHARED_LIBS=OFF -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/curl ${CURL_FLAGS}
++      CMAKE_ARGS -DCMAKE_TOOLCHAIN_FILE=/home/lee/gamecon.piboy4/host/share/buildroot/toolchainfile.cmake -DBUILD_SHARED_LIBS=OFF -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/curl ${CURL_FLAGS}
+     )
+ 
+     ExternalProject_Get_Property(curl INSTALL_DIR)
+diff -Naur yabause.orig/yabause/CMake/Packages/external_libchdr.cmake yabause/yabause/CMake/Packages/external_libchdr.cmake
+--- yabause.orig/yabause/CMake/Packages/external_libchdr.cmake	2022-01-09 21:33:57.000000000 +0000
++++ yabause/yabause/CMake/Packages/external_libchdr.cmake	2022-02-01 08:54:23.121459703 +0000
+@@ -32,7 +32,8 @@
+   GIT_REPOSITORY "https://github.com/devmiyax/libchdr.git"
+   GIT_TAG "074ff1614f2a685f2b5a95b0e788bff6297d5680"
+   #PATCH_COMMAND  git apply "${CMAKE_SOURCE_DIR}/CMake/Packages/libchdr.patch"
+-  CMAKE_ARGS  -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/libchdr 
++  CMAKE_ARGS  -DCMAKE_TOOLCHAIN_FILE=/home/lee/gamecon.piboy4/host/share/buildroot/toolchainfile.cmake
++              -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/libchdr 
+               -DCMAKE_BUILD_TYPE:STRING=Release 
+               -DCMAKE_CXX_FLAGS=${CMAKE_CXX_FLAGS}
+               -DCMAKE_C_FLAGS=${CMAKE_C_FLAGS}
+diff -Naur yabause.orig/yabause/CMake/Packages/external_libpng.cmake yabause/yabause/CMake/Packages/external_libpng.cmake
+--- yabause.orig/yabause/CMake/Packages/external_libpng.cmake	2022-01-09 21:33:57.000000000 +0000
++++ yabause/yabause/CMake/Packages/external_libpng.cmake	2022-02-01 08:56:00.297848132 +0000
+@@ -60,6 +60,7 @@
+     INSTALL_DIR ${png_INSTALL}
+     DOWNLOAD_DIR "${DOWNLOAD_LOCATION}"
+     CMAKE_ARGS
++        -DCMAKE_TOOLCHAIN_FILE=/home/lee/gamecon.piboy4/host/share/buildroot/toolchainfile.cmake
+     	-DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=ON
+         -DCMAKE_BUILD_TYPE:STRING=Release
+         -DCMAKE_VERBOSE_MAKEFILE:BOOL=OFF
+diff -Naur yabause.orig/yabause/CMake/Packages/external_zlib.cmake yabause/yabause/CMake/Packages/external_zlib.cmake
+--- yabause.orig/yabause/CMake/Packages/external_zlib.cmake	2022-01-09 21:33:57.000000000 +0000
++++ yabause/yabause/CMake/Packages/external_zlib.cmake	2022-02-01 08:55:51.685361348 +0000
+@@ -66,6 +66,7 @@
+     BUILD_IN_SOURCE 1
+     DOWNLOAD_DIR "${DOWNLOAD_LOCATION}"
+     CMAKE_ARGS
++        -DCMAKE_TOOLCHAIN_FILE=/home/lee/gamecon.piboy4/host/share/buildroot/toolchainfile.cmake
+ 		-DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=ON
+         -DCMAKE_BUILD_TYPE:STRING=Release
+         -DCMAKE_INSTALL_PREFIX:STRING=${ZLIB_INSTALL}
+@@ -85,4 +86,4 @@
+ foreach(header_file ${ZLIB_HEADERS})
+     add_custom_command(TARGET zlib_copy_headers_to_destination PRE_BUILD
+     COMMAND ${CMAKE_COMMAND} -E copy_if_different ${header_file} ${zlib_INCLUDE_DIR})
+-endforeach()
+\ No newline at end of file
++endforeach()
+diff -Naur yabause.orig/yabause/src/musashi/CMakeLists.txt yabause/yabause/src/musashi/CMakeLists.txt
+--- yabause.orig/yabause/src/musashi/CMakeLists.txt	2022-01-09 21:33:57.000000000 +0000
++++ yabause/yabause/src/musashi/CMakeLists.txt	2022-02-01 08:53:06.591248126 +0000
+@@ -9,7 +9,7 @@
+ endif (MSVC)
+ 
+ add_custom_command(OUTPUT m68kops.h
+-                   COMMAND m68kmake ${CMAKE_CURRENT_BINARY_DIR}/ ${CMAKE_CURRENT_SOURCE_DIR}/m68k_in.c
++                   COMMAND m68kmake_host ${CMAKE_CURRENT_BINARY_DIR}/ ${CMAKE_CURRENT_SOURCE_DIR}/m68k_in.c
+                    DEPENDS m68kmake.c
+                    COMMENT "Generating musashi 68k core"
+                    VERBATIM)
+diff -Naur yabause.orig/yabause/src/retro_arena/nanogui-sdl/CMakeLists.txt yabause/yabause/src/retro_arena/nanogui-sdl/CMakeLists.txt
+--- yabause.orig/yabause/src/retro_arena/nanogui-sdl/CMakeLists.txt	2022-01-09 21:33:57.000000000 +0000
++++ yabause/yabause/src/retro_arena/nanogui-sdl/CMakeLists.txt	2022-02-01 08:53:06.591248126 +0000
+@@ -127,7 +127,7 @@
+ # Run bin2c on resource files
+ add_custom_command(
+   OUTPUT nanogui_resources.cpp nanogui_resources.h
+-  COMMAND ./bin2c ARGS ${bin2c_cmdline}
++  COMMAND bin2c_host ARGS ${bin2c_cmdline}
+   DEPENDS bin2c ${resources}
+   COMMENT "Running bin2c"
+   PRE_BUILD VERBATIM)
