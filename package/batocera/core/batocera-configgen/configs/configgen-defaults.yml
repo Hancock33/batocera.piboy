@@ -242,7 +242,10 @@ j2me:
   core:     freej2me
 jaxe:
   emulator: libretro
-  core:     jaxe  
+  core:     jaxe
+jumpnbump:
+  emulator: libretro
+  core:     jumpnbump
 kodi:
   emulator: kodi
   options:

@@ -4210,13 +4210,11 @@ msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "API GRAFIKI"
 
-#. TRANSLATION: libretro, cemu, dolphin, duckstation, pcsx2, ...
+#. TRANSLATION: libretro
 msgctxt "game_options"
 msgid ""
-"Choose which graphics API library to use. Vulkan is better, when supported."
+"Choose which graphics API library to use. Vulkan may not work for every core."
 msgstr ""
-"Wybierz bibliotekę graficznego interfejsu API, która ma być używana. Vulkan "
-"jest lepszy, jeśli jest obsługiwany."
 
 #. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
 msgctxt "game_options"
@@ -4429,6 +4427,14 @@ msgid ""
 "Improves both sprite scaling and road rendering. Does not affect the car "
 "sprite."
 msgstr ""
+
+#. TRANSLATION: cemu, dolphin, duckstation, pcsx2, ppsspp, ...
+msgctxt "game_options"
+msgid ""
+"Choose which graphics API library to use. Vulkan is better, when supported."
+msgstr ""
+"Wybierz bibliotekę graficznego interfejsu API, która ma być używana. Vulkan "
+"jest lepszy, jeśli jest obsługiwany."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
