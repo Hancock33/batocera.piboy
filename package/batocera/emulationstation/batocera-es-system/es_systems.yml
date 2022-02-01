@@ -3099,6 +3099,16 @@ jaxe:
   emulators:
     libretro:
       jaxe: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_JAXE] }
+      
+jumpnbump:
+  name:       Jump 'n Bump
+  manufacturer: Brainchild Design
+  release: 1998
+  hardware: computer
+  extensions: [dat]
+  emulators:
+    libretro:
+      jumpnbump: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_JUMPNBUMP] }
 
 lowresnx:
   name:       LowRes-NX
