@@ -39,7 +39,7 @@ def createPPSSPPConfig(iniConfig, system):
     # Graphics Backend : TODO VULKAN support (Not used for now)
     iniConfig.set("Graphics", "FailedGraphicsBackends", "0 (OPENGL)")
     if system.isOptSet('gfxbackend'):
-        iniConfig.set("Graphics", "GraphicsBackend", system.config["gfxbackend"])
+        iniConfig.set("Graphics", "GraphicsBackend", "0 (OPENGL)")
     else:
         iniConfig.set("Graphics", "GraphicsBackend", "0 (OPENGL)")
 
