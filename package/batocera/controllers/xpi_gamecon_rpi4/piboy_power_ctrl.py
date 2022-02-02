@@ -17,6 +17,13 @@ try:
         pwrctrlFile = open("/sys/kernel/xpi_gamecon/status", "r")
         pwrctrl = int(pwrctrlFile.read())
         pwrctrlFile.close()
+        if pwrctrl == 198:
+            os.system("echo 20 > /sys/kernel/xpi_gamecon/green")
+            time.sleep(0.5)
+            os.system("echo 30 > /sys/kernel/xpi_gamecon/green")
+        else:
+            os.system("echo 20 > /sys/kernel/xpi_gamecon/green")    
+        
         if abs(pwrctrl - pwrctrlOld) > hyst:
             if pwrctrl == 6:
                 os.system("/etc/init.d/S31emulationstation stop && echo 0 > /sys/kernel/xpi_gamecon/flags && /sbin/rmmod xpi_gamecon && shutdown -h now")
@@ -29,7 +36,7 @@ try:
         battctrlFile.close()
         if abs(battctrl - battctrlOld) > hyst:
             if battctrl <= 10:
-                os.system("echo 20 > /sys/kernel/xpi_gamecon/green && echo 20 > /sys/kernel/xpi_gamecon/red")
+                os.system("echo 40 > /sys/kernel/xpi_gamecon/green && echo 40 > /sys/kernel/xpi_gamecon/red")
             if battctrl <= 5:
                 os.system("/etc/init.d/S31emulationstation stop && echo 0 > /sys/kernel/xpi_gamecon/flags && /sbin/rmmod xpi_gamecon && shutdown -h now")
         battctrlOld = battctrl
