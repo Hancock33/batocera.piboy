@@ -1,0 +1,14 @@
+diff --git a/drivers/gpu/drm/vc4/vc4_dpi.c.ori b/drivers/gpu/drm/vc4/vc4_dpi.c
+index 8fd63e203f..92f7b7544f 100644
+--- a/drivers/gpu/drm/vc4/vc4_dpi.c.ori
++++ b/drivers/gpu/drm/vc4/vc4_dpi.c
+@@ -206,9 +206,6 @@
+ static enum drm_mode_status vc4_dpi_encoder_mode_valid(struct drm_encoder *encoder,
+ 						       const struct drm_display_mode *mode)
+ {
+-	if (mode->flags & DRM_MODE_FLAG_INTERLACE)
+-		return MODE_NO_INTERLACE;
+-
+ 	return MODE_OK;
+ }
+ 
