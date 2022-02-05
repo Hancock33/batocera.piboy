@@ -78,7 +78,7 @@ def getGameSpecial(systemName, rom):
     # Returns an ID for games that need rotated bezels/shaders or have special art
     # Vectrex will actually return an abbreviated game name for overlays, all others will return 0, 90, or 270 for rotation angle
     # 0 will be ignored.
-    # Currently in use with bezels & libretro shaders    
+    # Currently in use with bezels & libretro shaders
     if not systemName in [ 'lynx', 'wswan', 'wswanc', 'mame', 'fbneo', 'naomi', 'atomiswave', 'nds', '3ds', 'vectrex' ]:
         return "0"
 
@@ -89,7 +89,7 @@ def getGameSpecial(systemName, rom):
 
     romBasename = os.path.basename(rom)
     romName = os.path.splitext(romBasename)[0]
-    romCompare = romName.casefold()    
+    romCompare = romName.casefold()
 
     # Load the file, read it in
     # Each file will be a csv with each row being the standard (ie No-Intro) filename, angle of rotation (90 or 270)
@@ -97,8 +97,8 @@ def getGameSpecial(systemName, rom):
     openFile = open(specialFile, 'r')
     with openFile:
         specialList = csv.reader(openFile, delimiter=';')
-        for row in specialList:            
-            if row[0].casefold() == romCompare:                
+        for row in specialList:
+            if row[0].casefold() == romCompare:
                 return str(row[1])
 
     return "0"

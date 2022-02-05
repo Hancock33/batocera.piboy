@@ -64,7 +64,7 @@ libretro:
       choices:
         "OpenGL": opengl
         "GLCore": glcore
-        "SDL2": sdl2 
+        "SDL2": sdl2
         "Vulkan": vulkan
     audio_driver:
       archs_include: [x86, x86_64, rpi4, rk3326]
@@ -76,7 +76,7 @@ libretro:
         "TinyALSA": tinyalsa
         "openAL": openal
         "PulseAudio": pulse
-        "SDL2": sdl2 
+        "SDL2": sdl2
         "NULL": null
     audio_latency:
       prompt:      AUDIO LATENCY
@@ -5335,11 +5335,11 @@ hurrican:
 ionfury:
   features: [padtokeyboard, decoration]
   shared: [hud]
-  
+
 kodi:
   features: [padtokeyboard]
   shared: []
-  
+
 lexaloffle:
   features: [padtokeyboard, decoration]
   shared: [hud]
@@ -5431,11 +5431,11 @@ steam:
 stk:
   features: [padtokeyboard, decoration]
   shared: [hud]
-  
+
 stuntcar:
   features: [padtokeyboard, decoration]
   shared: [hud]
-  
+
 supertux2:
   features: [padtokeyboard, decoration]
   shared: [hud]

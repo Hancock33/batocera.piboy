@@ -45,7 +45,7 @@ class MameGenerator(Generator):
         # If there are multiple ROM types (ie a computer w/disk & tape), select the default or primary type here.
         messRomType = [ "", "", "cdrm", "cart", "", "cart", "cart", "cart", "cart", "cart1", "flop1", "cart", "cart", "flop", "cass", "cart", "flop1", "cass", "cass1", "cart", "cart", "cart", "cart", "cart", "cart", "cart", "cart", "flop1" ]
         messAutoRun = [ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", 'mload""\\n', "", "", "", "", "", "", "", "", "", "" ]
-        
+
         # Identify the current system, select MAME or MESS as needed.
         try:
             messMode = messSystems.index(system.name)
@@ -192,7 +192,7 @@ class MameGenerator(Generator):
                 # Will use Floppy 1 or Hard Drive, depending on the disk.
                 if system.name == "macintosh" and system.isOptSet("bootdisk"):
                     if system.config["bootdisk"] in [ "macos30", "macos608", "macos701", "macos75" ]:
-                        bootType = "-flop1"                        
+                        bootType = "-flop1"
                         bootDisk = "/userdata/bios/" + system.config["bootdisk"] + ".img"
                     else:
                         bootType = "-hard"
@@ -227,7 +227,7 @@ class MameGenerator(Generator):
                 else:
                     if system.isOptSet("bootdisk"):
                         if ((system.isOptSet("altromtype") and system.config["altromtype"] == "flop1") or not system.isOptSet("altromtype")) and system.config["bootdisk"] in [ "macos30", "macos608", "macos701", "macos75" ]:
-                            commandArray += [ "-flop2" ]                            
+                            commandArray += [ "-flop2" ]
                         elif system.isOptSet("altromtype"):
                             commandArray += [ "-" + system.config["altromtype"] ]
                         else:
@@ -325,7 +325,7 @@ class MameGenerator(Generator):
         if bz_infos is None:
             return
 
-        # copy the png inside        
+        # copy the png inside
         if os.path.exists(bz_infos["layout"]):
             os.symlink(bz_infos["layout"], tmpZipDir + "/default.lay")
             pngFile = os.path.split(bz_infos["png"])[1]

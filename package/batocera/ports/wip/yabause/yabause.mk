@@ -19,15 +19,15 @@ define YABAUSE_BUILDROOT_TOOLCHAIN
     echo "set (USE_EGL True)" >> $(HOST_DIR)/share/buildroot/yabause_toolchainfile.cmake
     echo "add_definitions( -D__PI4__ )" >> $(HOST_DIR)/share/buildroot/yabause_toolchainfile.cmake
     echo "add_definitions( -D__RETORO_ARENA__ )" >> $(HOST_DIR)/share/buildroot/yabause_toolchainfile.cmake
-    
+
     ln -s $(HOST_DIR)/share/buildroot/yabause_toolchainfile.cmake $(@D)/yabause
 endef
 
 YABAUSE_POST_EXTRACT_HOOKS += YABAUSE_BUILDROOT_TOOLCHAIN
 
-YABAUSE_CONF_OPTS += -DYAB_PORTS=retro_arena 
-YABAUSE_CONF_OPTS += -DYAB_WANT_DYNAREC_DEVMIYAX=ON 
-YABAUSE_CONF_OPTS += -DYAB_WANT_ARM7=ON 
+YABAUSE_CONF_OPTS += -DYAB_PORTS=retro_arena
+YABAUSE_CONF_OPTS += -DYAB_WANT_DYNAREC_DEVMIYAX=ON
+YABAUSE_CONF_OPTS += -DYAB_WANT_ARM7=ON
 YABAUSE_CONF_OPTS += -DCMAKE_TOOLCHAIN_FILE="$(HOST_DIR)/share/buildroot/toolchainfile.cmake"
 YABAUSE_CONF_OPTS += -DYAB_WANT_VULKAN=OFF
 YABAUSE_CONF_OPTS += -DOPENGL_INCLUDE_DIR=${HOST_DIR}/usr/include

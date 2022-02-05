@@ -15,7 +15,7 @@ class Yquake2Generator(Generator):
         if (rom.__contains__("xatrix")):
             gamemod = "xatrix"
 
-        commandArray = ["quake2", "-datadir", "/userdata/roms/yquake2", "+set", "vid_renderer", "vk", "+set", "r_vsync", "1", "+set", "vk_sampleshading", "0", "+set", "vk_polyblend", "0", "+set", "vk_dynamic", "0", "+set", "vk_postprocess", "0", 
+        commandArray = ["quake2", "-datadir", "/userdata/roms/yquake2", "+set", "vid_renderer", "vk", "+set", "r_vsync", "1", "+set", "vk_sampleshading", "0", "+set", "vk_polyblend", "0", "+set", "vk_dynamic", "0", "+set", "vk_postprocess", "0",
 "+set", "game" , gamemod]
 
         return Command.Command(

@@ -34,7 +34,7 @@ define WITCHAVEN_INSTALL_TARGET_CMDS
 	# make rom path
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/witchaven
 	cp $(@D)/data/*.dat $(TARGET_DIR)/usr/share/batocera/datainit/roms/witchaven/
-	
+
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/witchaven/witchaven.keys $(TARGET_DIR)/usr/share/evmapy/witchaven.keys

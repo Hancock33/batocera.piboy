@@ -22,8 +22,8 @@ try:
             time.sleep(0.5)
             os.system("echo 30 > /sys/kernel/xpi_gamecon/green")
         else:
-            os.system("echo 20 > /sys/kernel/xpi_gamecon/green")    
-        
+            os.system("echo 20 > /sys/kernel/xpi_gamecon/green")
+
         if abs(pwrctrl - pwrctrlOld) > hyst:
             if pwrctrl == 6:
                 os.system("/etc/init.d/S31emulationstation stop && echo 0 > /sys/kernel/xpi_gamecon/flags && /sbin/rmmod xpi_gamecon && shutdown -h now")

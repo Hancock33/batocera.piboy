@@ -8,7 +8,7 @@ default:
     retroarch.vrr_runloop_enable: false
     retroarch.video_max_swapchain_images: 3
     retroarch.video_adaptive_vsync: true
-    
+
 nds:
   emulator: drastic
   core:     drastic

@@ -22,7 +22,7 @@ from generators.cgenius.cgeniusGenerator import CGeniusGenerator
 from generators.citra.citraGenerator import CitraGenerator
 from generators.daphne.daphneGenerator import DaphneGenerator
 from generators.devilutionx.devilutionxGenerator import DevilutionXGenerator
-from generators.demul.demulGenerator import DemulGenerator 
+from generators.demul.demulGenerator import DemulGenerator
 from generators.dolphin.dolphinGenerator import DolphinGenerator
 from generators.dosbox.dosboxGenerator import DosBoxGenerator
 from generators.dosboxstaging.dosboxstagingGenerator import DosBoxStagingGenerator
@@ -152,7 +152,7 @@ generators = {
     'fpinball': FpinballGenerator(),
     'fsuae': FsuaeGenerator(),
     'gsplus': GSplusGenerator(),
-    'gzdoom': GzdoomGenerator(),   
+    'gzdoom': GzdoomGenerator(),
     'hatari': HatariGenerator(),
     'hcl': HclGenerator(),
     'hode': HodeGenerator(),
