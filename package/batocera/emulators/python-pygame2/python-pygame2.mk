@@ -5,8 +5,8 @@
 ################################################################################
 # stable 1.9.1 release requires V4L which has been wiped out of recent Linux
 # kernels, so use latest mercurial revision until next stable release is out.
-# Version.: Commits on Feb 03, 2022
-PYTHON_PYGAME2_VERSION = d7517f14bc45142e4daa188008a220d38163dd62
+# Version.: Commits on Dec 27, 2021
+PYTHON_PYGAME2_VERSION = 2.1.2
 PYTHON_PYGAME2_SITE =  $(call github,pygame,pygame,$(PYTHON_PYGAME2_VERSION))
 PYTHON_PYGAME2_SETUP_TYPE = setuptools
 PYTHON_PYGAME2_LICENSE = LGPL-2.1+
@@ -22,20 +22,20 @@ endef
 PYTHON_PYGAME2_PRE_CONFIGURE_HOOKS += PYTHON_PYGAME2_FIXSDL2_PATH
 
 define PYTHON_PYGAME2_REMOVE_DOC
-	rm -rf $(TARGET_DIR)/usr/lib/python*/site-packages/pygame/docs
+	rm -rf $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/pygame/docs
 endef
 
 PYTHON_PYGAME2_POST_INSTALL_TARGET_HOOKS += PYTHON_PYGAME2_REMOVE_DOC
 
 define PYTHON_PYGAME2_REMOVE_TESTS
-	rm -rf $(TARGET_DIR)/usr/lib/python*/site-packages/pygame/tests
+	rm -rf $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/pygame/tests
 endef
 
 PYTHON_PYGAME2_POST_INSTALL_TARGET_HOOKS += PYTHON_PYGAME2_REMOVE_TESTS
 
 ifneq ($(BR2_PACKAGE_PYTHON_PYGAME2_EXAMPLES),y)
 define PYTHON_PYGAME2_REMOVE_EXAMPLES
-	rm -rf $(TARGET_DIR)/usr/lib/python$(PYTHON_VERSION_MAJOR)/site-packages/pygame/examples
+	rm -rf $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/pygame/examples
 endef
 PYTHON_PYGAME2_POST_INSTALL_TARGET_HOOKS += PYTHON_PYGAME2_REMOVE_EXAMPLES
 endif

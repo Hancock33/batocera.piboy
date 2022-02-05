@@ -195,7 +195,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 	select BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI_BT       if BR2_PACKAGE_BATOCERA_RPI_ANY
 	select BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI_WIFI     if BR2_PACKAGE_BATOCERA_RPI_ANY
 	select BR2_PACKAGE_RPI_USERLAND_BATOCERA               if BR2_PACKAGE_BATOCERA_TARGET_RPI4
-	select BR2_PACKAGE_RPI_EEPROM                          if BR2_PACKAGE_BATOCERA_TARGET_RPI4	
+	select BR2_PACKAGE_RPI_EEPROM                          if BR2_PACKAGE_BATOCERA_TARGET_RPI4
 
 	# Case
 	select BR2_PACKAGE_GPICASE              if BR2_PACKAGE_BATOCERA_TARGET_RPI1 || BR2_PACKAGE_BATOCERA_TARGET_RPIZERO2 # retroflag gpicase
@@ -221,7 +221,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                 !BR2_PACKAGE_BATOCERA_TARGET_CHA            && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3326         && \
 												!BR2_PACKAGE_BATOCERA_TARGET_S922X
-		
+
 	select BR2_PACKAGE_RTL8812AU        if BR2_PACKAGE_BATOCERA_TARGET_S922X
 
 	select BR2_PACKAGE_RTL8723BU        if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY # at least for pc
@@ -510,7 +510,7 @@ config BR2_PACKAGE_BATOCERA_HOMEBREW_SYSTEMS
 	select BR2_PACKAGE_LIBRETRO_LUTRO   if !BR2_PACKAGE_BATOCERA_TARGET_CHA
 
 	# PyGAME
-	select BR2_PACKAGE_BATOCERA_PYGAME if !BR2_PACKAGE_BATOCERA_TARGET_CHA
+	# select BR2_PACKAGE_BATOCERA_PYGAME if !BR2_PACKAGE_BATOCERA_TARGET_CHA
 
 	# RPG engine : Solarus
 	select BR2_PACKAGE_LUAJIT           if !BR2_aarch64 # for performance
@@ -724,7 +724,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 
 	# Rick Dangerous
 	select BR2_PACKAGE_LIBRETRO_XRICK           if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
-	
+
 	# Jump n Bump
 	select BR2_PACKAGE_LIBRETRO_JUMPNBUMP           if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
@@ -769,7 +769,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 	select BR2_PACKAGE_OPENTYRIAN		        if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
 	select BR2_PACKAGE_LIBRETRO_GONG	        if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
-	
+
 	#select BR2_PACKAGE_LIBRETRO_FFMPEG	        if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
     #Quake 2
@@ -778,6 +778,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 												   BR2_PACKAGE_BATOCERA_TARGET_RPI4
 
 	select BR2_PACKAGE_YQUAKE2         			if BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
+	select BR2_PACKAGE_YQUAKE2_REFVK   			if BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL && BR2_PACKAGE_YQUAKE2
 	select BR2_PACKAGE_YROGUE         			if BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL && BR2_PACKAGE_YQUAKE2
 	select BR2_PACKAGE_XATRIX         			if BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL && BR2_PACKAGE_YQUAKE2
 
@@ -957,13 +958,13 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                         !BR2_PACKAGE_BATOCERA_TARGET_RPI1       && \
                                                         !BR2_PACKAGE_BATOCERA_TARGET_RPIZERO2   && \
                                                         !BR2_PACKAGE_BATOCERA_TARGET_RPI2
-                                                        
+
 
 	select BR2_PACKAGE_LIBRETRO_DUCKSTATION         if  !BR2_PACKAGE_BATOCERA_TARGET_X86	    && \
 	                                                    !BR2_PACKAGE_BATOCERA_TARGET_CHA        && \
                                                         !BR2_PACKAGE_BATOCERA_TARGET_RPI1       && \
                                                         !BR2_PACKAGE_BATOCERA_TARGET_RPI2       && \
-                                                        !BR2_PACKAGE_BATOCERA_TARGET_RPIZERO2                                                      
+                                                        !BR2_PACKAGE_BATOCERA_TARGET_RPIZERO2
 
 	select BR2_PACKAGE_LIBRETRO_PCSX                # All
 
@@ -1112,13 +1113,13 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 
 	# Uzebox
 	select BR2_PACKAGE_LIBRETRO_UZEM                if !BR2_PACKAGE_BATOCERA_TARGET_CHA # speed issue on weak SBCs
-	
+
 	# WASM-4
 	select BR2_PACKAGE_LIBRETRO_WASM                if !BR2_PACKAGE_BATOCERA_TARGET_CHA # speed issue on weak SBCs
 
 	# CHIP-8
 	select BR2_PACKAGE_LIBRETRO_JAXE                if !BR2_PACKAGE_BATOCERA_TARGET_CHA # speed issue on weak SBCs
-	
+
 	help
 		All avaible systems for the selected architecture
 
