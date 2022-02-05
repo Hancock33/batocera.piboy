@@ -1,8 +1,6 @@
-diff --git a/src/core/linux/SDL_udev.c b/src/core/linux/SDL_udev.c
-index ad8a7ce..0b12f27 100644
---- a/src/core/linux/SDL_udev.c
-+++ b/src/core/linux/SDL_udev.c
-@@ -458,11 +458,11 @@ device_event(SDL_UDEV_deviceevent type, struct udev_device *dev)
+--- a/src/core/linux/SDL_udev.c	2022-01-08 03:29:52.000000000 +0100
++++ b/src/core/linux/SDL_udev.c	2022-02-05 22:37:37.785572055 +0100
+@@ -433,11 +433,11 @@
              devclass |= SDL_UDEV_DEVICE_JOYSTICK;
          }
  
@@ -10,12 +8,12 @@ index ad8a7ce..0b12f27 100644
 -        if (SDL_GetHintBoolean(SDL_HINT_ACCELEROMETER_AS_JOYSTICK, SDL_TRUE) &&
 -            val != NULL && SDL_strcmp(val, "1") == 0 ) {
 -            devclass |= SDL_UDEV_DEVICE_JOYSTICK;
--	}
+-        }
 +        //val = _this->syms.udev_device_get_property_value(dev, "ID_INPUT_ACCELEROMETER");
 +        //if (SDL_GetHintBoolean(SDL_HINT_ACCELEROMETER_AS_JOYSTICK, SDL_TRUE) &&
 +        //    val != NULL && SDL_strcmp(val, "1") == 0 ) {
 +        //    devclass |= SDL_UDEV_DEVICE_JOYSTICK;
-+	//}
-         
++        //}
+ 
          val = _this->syms.udev_device_get_property_value(dev, "ID_INPUT_MOUSE");
          if (val != NULL && SDL_strcmp(val, "1") == 0 ) {
