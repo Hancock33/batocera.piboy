@@ -3,8 +3,8 @@
 # EmulationStation theme "Carbon"
 #
 ################################################################################
-# Version.: Commits on Feb 01, 2022
-ES_THEME_CARBON_VERSION = 7009a190214016033b34c185c45aecf16db8a4e5
+# Version.: Commits on Feb 05, 2022
+ES_THEME_CARBON_VERSION = 0fa54caa7dbf0dccd1a39cacd9972486e490b15b
 ES_THEME_CARBON_SITE = $(call github,hancock33,es-theme-carbon,$(ES_THEME_CARBON_VERSION))
 
 define ES_THEME_CARBON_INSTALL_TARGET_CMDS

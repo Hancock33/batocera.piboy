@@ -526,6 +526,9 @@ superflappybirds:
 supergrafx:
   emulator: libretro
   core:     mednafen_supergrafx
+supertux2:
+  emulator: supertux2
+  core:     supertux2
 supervision:
   emulator: libretro
   core:     potator
