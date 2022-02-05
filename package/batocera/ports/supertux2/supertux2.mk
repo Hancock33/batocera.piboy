@@ -42,7 +42,7 @@ endif
 define SUPERTUX2_EVMAP
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/supertux2/supertux2.keys $(TARGET_DIR)/usr/share/evmapy	
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/supertux2/supertux2.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 SUPERTUX2_POST_INSTALL_TARGET_HOOKS += SUPERTUX2_EVMAP
 

@@ -845,11 +845,11 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 
     # OpenJK: JediAcademy / Jedi Outcast
     select BR2_PACKAGE_OPENJK                   if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
-   
-    # SuperTuxKart 
+
+    # SuperTuxKart
     select BR2_PACKAGE_STK                      if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_SUPERTUX2                if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
-	
+
     # Red Alert / Tiberian Dawn (WIP)
     #select BR2_PACKAGE_CANDC                   if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 

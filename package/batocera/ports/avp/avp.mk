@@ -13,8 +13,8 @@ AVP_LICENSE = GPL-2.0
 AVP_SUPPORTS_IN_SOURCE_BUILD = NO
 
 AVP_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DSDL_TYPE=SDL2 -DOPENGL_TYPE=OPENGLES2
-AVP_CONF_OPTS += -DCMAKE_C_FLAGS="-DNDEBUG -Ofast -pipe -ffast-math -fno-math-errno -g -DFIXED_WINDOW_SIZE" 
-AVP_CONF_OPTS += -DCMAKE_CXX_FLAGS="-DNDEBUG -Ofast -pipe -std=c++11 -ffast-math -fno-math-errno -g -DDFIXED_WINDOW_SIZE" 
+AVP_CONF_OPTS += -DCMAKE_C_FLAGS="-DNDEBUG -Ofast -pipe -ffast-math -fno-math-errno -g -DFIXED_WINDOW_SIZE"
+AVP_CONF_OPTS += -DCMAKE_CXX_FLAGS="-DNDEBUG -Ofast -pipe -std=c++11 -ffast-math -fno-math-errno -g -DDFIXED_WINDOW_SIZE"
 AVP_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-g"
 
 define AVP_INSTALL_TARGET_CMDS

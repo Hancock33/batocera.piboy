@@ -3089,7 +3089,7 @@ ionfury:
   emulators:
     ionfury:
       ionfury: { requireAnyOf: [BR2_PACKAGE_IONFURY] }
-    
+
 jaxe:
   name:       CHIP-8/S-CHIP/XO-CHIP
   manufacturer: RCA
@@ -3099,7 +3099,7 @@ jaxe:
   emulators:
     libretro:
       jaxe: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_JAXE] }
-      
+
 jumpnbump:
   name:       Jump 'n Bump
   manufacturer: Brainchild Design

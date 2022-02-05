@@ -34,7 +34,7 @@ define TEKWAR_INSTALL_TARGET_CMDS
 	# make rom path
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/etekwar
 	cp $(@D)/data/*.dat $(TARGET_DIR)/usr/share/batocera/datainit/roms/etekwar/
-	
+
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/tekwar/tekwar.keys $(TARGET_DIR)/usr/share/evmapy/etekwar.keys

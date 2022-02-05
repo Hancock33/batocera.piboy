@@ -26,7 +26,7 @@ class DemulGenerator(Generator):
         # copy demulemu to /userdata for rw & emulator directory creation reasons
         if not os.path.exists(emupath):
             shutil.copytree("/usr/demul", emupath)
-        
+
         # get directx11
         if not os.path.exists(wineprefix + "/d3dx11_43.done"):
             cmd = ["/usr/wine/winetricks", "d3dx11_43"]
@@ -100,7 +100,7 @@ class DemulGenerator(Generator):
                     Config.readfp(fp)
             except:
                 pass
-        
+
         # add rom & bios paths to Demul.ini
         nvram = Path("/userdata/saves/demul/demul/nvram/")
         nvram_path_on_windows = PureWindowsPath(nvram)
@@ -122,7 +122,7 @@ class DemulGenerator(Generator):
         roms7_path_on_windows = PureWindowsPath(roms7)
         plugins = Path("/userdata/saves/demul/demul/plugins/")
         plugins_path_on_windows = PureWindowsPath(plugins)
-            
+
         if not Config.has_section("files"):
             Config.add_section("files")
         Config.set("files", "nvram", "Z:{}".format(nvram_path_on_windows))
@@ -178,7 +178,7 @@ class DemulGenerator(Generator):
                     Config.readfp(fp)
             except:
                 pass
-        
+
         # set to be always fullscreen
         if not Config.has_section("main"):
             Config.add_section("main")
@@ -199,7 +199,7 @@ class DemulGenerator(Generator):
             Config.set("main", "Vsync", format(system.config["demulVSync"]))
         else:
             Config.set("main", "Vsync", "0")
-     
+
         with open(configFileName, 'w', encoding='utf_8_sig') as configfile:
             Config.write(configfile)
 
