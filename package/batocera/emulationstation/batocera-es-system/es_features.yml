@@ -5428,6 +5428,10 @@ steam:
   features: [padtokeyboard, decoration]
   shared: [hud]
 
+stk:
+  features: [padtokeyboard, decoration]
+  shared: [hud]
+  
 stuntcar:
   features: [padtokeyboard, decoration]
   shared: [hud]
