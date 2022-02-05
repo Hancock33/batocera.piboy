@@ -2,15 +2,15 @@ diff --git a/src/core/linux/SDL_udev.c b/src/core/linux/SDL_udev.c
 index a22f825..da4672f 100644
 --- a/src/core/linux/SDL_udev.c
 +++ b/src/core/linux/SDL_udev.c
-@@ -192,12 +192,76 @@ SDL_UDEV_Quit(void)
+@@ -193,12 +193,76 @@
      }
  }
  
 +struct joypad_udev_entry
 +{
-+   const char *devnode;
-+   struct udev_list_entry *item;
-+   struct udev_device *dev;
++    const char *devnode;
++    struct udev_list_entry *item;
++    struct udev_device *dev;
 +};
 +
 +int isNumber(const char *s) {
@@ -61,9 +61,9 @@ index a22f825..da4672f 100644
 +/* Used for sorting devnodes to appear in the correct order */
 +static int sort_devnodes(const void *a, const void *b)
 +{
-+   const struct joypad_udev_entry *aa = a;
-+   const struct joypad_udev_entry *bb = b;
-+   return strcmp_events(aa->devnode, bb->devnode);
++    const struct joypad_udev_entry *aa = a;
++    const struct joypad_udev_entry *bb = b;
++    return strcmp_events(aa->devnode, bb->devnode);
 +}
 +
  void
@@ -71,13 +71,12 @@ index a22f825..da4672f 100644
  {
      struct udev_enumerate *enumerate = NULL;
      struct udev_list_entry *devs = NULL;
--    struct udev_list_entry *item = NULL;  
-+    struct udev_list_entry *item = NULL;
+     struct udev_list_entry *item = NULL;
 +
-+    unsigned sorted_count = 0;
-+    struct joypad_udev_entry sorted[64];
-+    int i;
-     
++     unsigned sorted_count = 0;
++     struct joypad_udev_entry sorted[64];
++     int i;
+ 
      if (_this == NULL) {
          return;
 @@ -219,11 +283,28 @@ SDL_UDEV_Scan(void)
