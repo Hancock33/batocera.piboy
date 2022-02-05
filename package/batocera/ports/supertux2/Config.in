@@ -1,0 +1,23 @@
+config BR2_PACKAGE_SUPERTUX2
+	bool "supertux2"
+	select BR2_PACKAGE_BOOST
+	select BR2_PACKAGE_BOOST_DATE_TIME
+	select BR2_PACKAGE_BOOST_FILESYSTEM
+	select BR2_PACKAGE_BOOST_LOCALE
+	select BR2_PACKAGE_BOOST_SYSTEM
+	select BR2_PACKAGE_FREETYPE
+	select BR2_PACKAGE_LIBCURL
+	select BR2_PACKAGE_LIBOGG
+	select BR2_PACKAGE_LIBPNG
+	select BR2_PACKAGE_LIBVORBIS
+	select BR2_PACKAGE_OPENAL
+	select BR2_PACKAGE_PHYSFS
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_IMAGE
+	select BR2_PACKAGE_ZLIB
+	help
+	  SuperTux is a free classic 2D jump'n run sidescroller game in
+	  a style similar to the original Super Mario games covered
+	  under the GNU GPL.
+
+	  http://supertux.github.io/

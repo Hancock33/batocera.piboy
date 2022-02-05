@@ -3383,8 +3383,8 @@ stk:
   extensions: [game]
   group: ports
   emulators:
-    spacecadetpinball:
-      spacecadetpinball: { requireAnyOf: [BR2_PACKAGE_STK] }
+    stk:
+      stk: { requireAnyOf: [BR2_PACKAGE_STK] }
 
 stuntcar:
   name:       Stunt Car Racer
@@ -3415,6 +3415,17 @@ superflappybirds:
     This system is a standalone libretro game. No rom required.
   comment_fr: |
     Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
+
+supertux2:
+  name:       Super Tux
+  manufacturer: Ports
+  release: 2017
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    supertux2:
+      supertux2: { requireAnyOf: [BR2_PACKAGE_SUPERTUX2] }
 
 tg16:
   name:       Turbo Grafx 16
