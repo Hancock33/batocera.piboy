@@ -3375,6 +3375,17 @@ spacecadetpinball:
     spacecadetpinball:
       spacecadetpinball: { requireAnyOf: [BR2_PACKAGE_SPACECADETPINBALL] }
 
+stk:
+  name:       Super Tux Kart
+  manufacturer: Ports
+  release: 2007
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    spacecadetpinball:
+      spacecadetpinball: { requireAnyOf: [BR2_PACKAGE_STK] }
+
 stuntcar:
   name:       Stunt Car Racer
   manufacturer: Ports

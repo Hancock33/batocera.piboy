@@ -514,6 +514,9 @@ snes:
 snes-msu1:
   emulator: libretro
   core:     snes9x
+stk:
+  emulator: stk
+  core:     stk
 stuntcar:
   emulator: stuntcar
   core:     stuntcar

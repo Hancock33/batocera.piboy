@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<players version="1" >
+    <current player="batocera"/>
+    <player name="batocera" guest="false" use-frequency="4"
+            icon-filename="1.png"
+            unique-id="1" saved-session="false"
+            saved-user="0" saved-token=""
+            last-online-name="" last-was-online="false"
+            remember-password="false"
+            default-kart-color="0">
+      <story-mode first-time="false" finished="false" speedrun-finished="false"
+                  story-ms="467516" speedrun-ms="467516">
+        <abyss solved="none" best_while_slower="false"/>
+        <candela_city solved="none" best_while_slower="false"/>
+        <cocoa_temple solved="none" best_while_slower="false"/>
+        <cornfield_crossing solved="none" best_while_slower="false"/>
+        <fortmagma solved="none" best_while_slower="false"/>
+        <gp1 solved="none" best_while_slower="false"/>
+        <gp2 solved="none" best_while_slower="false"/>
+        <gp3 solved="none" best_while_slower="false"/>
+        <gp4 solved="none" best_while_slower="false"/>
+        <granparadiso_island solved="none" best_while_slower="false"/>
+        <green_valley solved="none" best_while_slower="false"/>
+        <hacienda solved="none" best_while_slower="false"/>
+        <lighthouse solved="none" best_while_slower="false"/>
+        <mansion solved="none" best_while_slower="false"/>
+        <mines solved="none" best_while_slower="false"/>
+        <minigolf solved="none" best_while_slower="false"/>
+        <olivermath solved="none" best_while_slower="false"/>
+        <sandtrack solved="none" best_while_slower="false"/>
+        <scotland solved="none" best_while_slower="false"/>
+        <snowmountain solved="none" best_while_slower="false"/>
+        <snowpeak solved="none" best_while_slower="false"/>
+        <stk_enterprise solved="none" best_while_slower="false"/>
+        <unlock_bonus_kart1 solved="none" best_while_slower="false"/>
+        <unlock_bonus_kart2 solved="none" best_while_slower="false"/>
+        <unlock_supertux solved="none" best_while_slower="false"/>
+        <volcano_island solved="none" best_while_slower="false"/>
+        <xr591 solved="none" best_while_slower="false"/>
+        <zengarden solved="none" best_while_slower="false"/>
+      </story-mode>
+      <achievements online="true"> 
+        <achievement id="1" achieved="false"/>
+        <achievement id="2" achieved="false"/>
+        <achievement id="3" achieved="false"/>
+        <achievement id="4" achieved="false"/>
+        <achievement id="5" achieved="false"/>
+        <achievement id="6" achieved="false"/>
+        <achievement id="7" achieved="false"/>
+        <achievement id="8" achieved="false"/>
+        <achievement id="9" achieved="false"/>
+        <achievement id="10" achieved="false"/>
+        <achievement id="11" achieved="false"/>
+        <achievement id="12" achieved="false"/>
+          <data version="4"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="3"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="4"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="4"/>
+          <var counter="3"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="1"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <var counter="0"/>
+          <track_stats ident="abyss" sta="3" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="black_forest" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="candela_city" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="cocoa_temple" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="cornfield_crossing" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="fortmagma" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="gran_paradiso_island" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="hacienda" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="lighthouse" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="mines" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="minigolf" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="olivermath" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="ravenbridge_mansion" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="sandtrack" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="scotland" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="snowmountain" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="snowtuxpeak" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="stk_enterprise" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="volcano_island" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="xr591" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+          <track_stats ident="zengarden" sta="0" fin="0" won="0" fin_rev="0" fin_al="0" l_laps="0" m_laps="0" t_laps="0" eh_sta="0" eh_fin="0"/>
+      </achievements>
+    </player>
+</players>
