@@ -13,6 +13,4 @@ config BR2_PACKAGE_DAPHNE
       "lets one play the original versions of many
       laserdisc arcade games on one's PC."
 
-      https://github.com/btolab/hypseus
-
-
+      https://github.com/DirtBagXon/hypseus-singe

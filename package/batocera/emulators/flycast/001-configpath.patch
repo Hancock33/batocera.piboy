@@ -128,4 +128,3 @@ index 4e76c2cf..d4ef4993 100644
  	}
  
  	if (nowide::getenv("XDG_DATA_DIRS") != NULL)
- 
