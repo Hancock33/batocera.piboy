@@ -12,6 +12,12 @@ battctrlOld = 100
 hyst = 1
 # Power Switch
 try:
+    hdmictrlFile = open("/sys/class/drm/card1-HDMI-A-1/status", "r")
+    hdmictrl = hdmictrlFile.read()
+    hdmictrlFile.close()
+    if "connected" in hdmictrl:
+        os.system("echo 0 >/sys/kernel/xpi_gamecon/flags")
+
     while 1:
         # Read Power Switch
         pwrctrlFile = open("/sys/kernel/xpi_gamecon/status", "r")
