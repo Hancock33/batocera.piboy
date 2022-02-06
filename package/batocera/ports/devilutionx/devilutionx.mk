@@ -3,8 +3,8 @@
 # devilutionx
 #
 ################################################################################
-
-DEVILUTIONX_VERSION = 1.3.0
+# Version.: Commits on Feb 05, 2022
+DEVILUTIONX_VERSION = 2d6c602ef54cd84b6287a3b8af16bfc40183c761
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX/releases/download/$(DEVILUTIONX_VERSION)
 DEVILUTIONX_SOURCE = devilutionx-src.tar.xz
 DEVILUTIONX_DEPENDENCIES = sdl2 sdl2_image fmt libsodium
