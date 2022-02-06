@@ -82,6 +82,7 @@ from generators.rpcs3.rpcs3Generator import Rpcs3Generator
 from generators.rott.rottGenerator import RottGenerator
 from generators.rtcw.rtcwGenerator import RtcwGenerator
 from generators.ruffle.ruffleGenerator import RuffleGenerator
+from generators.ryujinx.ryujinxGenerator import RyujinxGenerator
 from generators.samcoupe.samcoupeGenerator import SamcoupeGenerator
 from generators.scummvm.scummvmGenerator import ScummVMGenerator
 from generators.sdlpop.sdlpopGenerator import SdlPopGenerator
@@ -192,6 +193,7 @@ generators = {
     'rtcw' : RtcwGenerator(),
     'rott' : RottGenerator(),
     'ruffle': RuffleGenerator(),
+    'ryujinx': RyujinxGenerator(),
     'samcoupe': SamcoupeGenerator(),
     'scummvm': ScummVMGenerator(),
     'sdlpop' : SdlPopGenerator(),

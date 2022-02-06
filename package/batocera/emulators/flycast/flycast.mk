@@ -1,6 +1,6 @@
 ################################################################################
 #
-# FLYCAST
+# flycast
 #
 ################################################################################
 # Version.: Release on Jan 29, 2022
@@ -8,68 +8,35 @@ FLYCAST_VERSION = 4e21391f8cfd481ac1e0ac6b2bf54e0d81f59a1f
 FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
-FLYCAST_SUPPORTS_IN_SOURCE_BUILD = NO
 FLYCAST_LICENSE = GPLv2
-FLYCAST_DEPENDENCIES = sdl2 libpng libzip
+FLYCAST_DEPENDENCIES = sdl2 libpng libzip libao pulseaudio-utils
 
 FLYCAST_CONF_OPTS += -DLIBRETRO=OFF
 
-ifeq ($(BR2_PACKAGE_UDEV),y)
-	FLYCAST_DEPENDENCIES += udev
-endif
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_XU4),y)
-	FLYCAST_CONF_OPTS += -DUSE_GLES2=ON
-endif
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S905)$(BR2_PACKAGE_BATOCERA_TARGET_TRITIUM_H5),y)
-	FLYCAST_CONF_OPTS += -DUSE_GLES=ON
-endif
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S905GEN2)$(BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_ZERO2),y)
-	FLYCAST_CONF_OPTS += -DUSE_GLES=ON
-endif
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S905GEN3),y)
-	FLYCAST_CONF_OPTS += -DUSE_GLES=ON
-endif
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S922X),y)
-	FLYCAST_CONF_OPTS += -DUSE_GLES=ON
-endif
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI3),y)
-	FLYCAST_CONF_OPTS += -DUSE_GLES2=ON
-endif
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
-	FLYCAST_CONF_OPTS += -DUSE_GLES=ON
-endif
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_ROCKCHIP_ANY),y)
-	FLYCAST_CONF_OPTS += -DUSE_GLES=ON
-endif
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S812)$(BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_PC),y)
-	FLYCAST_CONF_OPTS += -DUSE_GLES2=ON
-endif
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S912),y)
-	FLYCAST_CONF_OPTS += -DUSE_GLES=ON
+# determine the best GLES version to use - prefer GLES3
+ifeq ($(BR2_PACKAGE_BATOCERA_GLES3),y)
+    FLYCAST_CONF_OPTS += -DUSE_GLES=ON -DUSE_GLES2=OFF
+else ifeq ($(BR2_PACKAGE_BATOCERA_GLES2),y)
+    FLYCAST_CONF_OPTS += -DUSE_GLES2=ON -DUSE_GLES=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
-	FLYCAST_CONF_OPTS += -DUSE_VULKAN=1
-	FLYCAST_EXTRA_ARGS += EXTRAFLAGS=-ldl
+    FLYCAST_CONF_OPTS += -DUSE_VULKAN=ON
+else
+    FLYCAST_CONF_OPTS += -DUSE_VULKAN=OFF
+endif
+
+# RPI: use the legacy Broadcom GLES libraries
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI2)$(BR2_PACKAGE_BATOCERA_TARGET_RPIZERO2),y)
+    FLYCAST_CONF_OPTS += -DUSE_VIDEOCORE
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBMALI),y)
-FLYCAST_EXTRA_ARGS += EXTRAFLAGS=-Wl,-lmali
+    FLYCAST_CONF_OPTS += EXTRAFLAGS=-Wl,-lmali
 endif
 
 define FLYCAST_INSTALL_TARGET_CMDS
-	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/flycast \
-		$(TARGET_DIR)/usr/bin/flycast
+	$(INSTALL) -D $(@D)/flycast $(TARGET_DIR)/usr/bin/flycast
 	# evmapy files
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/flycast/*.keys $(TARGET_DIR)/usr/share/evmapy
