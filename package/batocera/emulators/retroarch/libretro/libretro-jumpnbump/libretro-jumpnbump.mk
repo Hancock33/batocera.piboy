@@ -3,9 +3,9 @@
 # Jump n' Bump
 #
 ################################################################################
-
-LIBRETRO_JUMPNBUMP_VERSION = ce257fa8a4dc122273a3d1377d8079baffb938fc
-LIBRETRO_JUMPNBUMP_SITE = $(call github,loki666,jumpnbump-libretro,$(LIBRETRO_JUMPNBUMP_VERSION))
+# Version.: Commits on Feb 07, 2022
+LIBRETRO_JUMPNBUMP_VERSION = 6ce2569ff8385f8c4d24d6d2ab08fc00612bac29
+LIBRETRO_JUMPNBUMP_SITE = $(call github,libretro,jumpnbump-libretro,$(LIBRETRO_JUMPNBUMP_VERSION))
 LIBRETRO_JUMPNBUMP_LICENSE = GPL-2.0
 
 define LIBRETRO_JUMPNBUMP_BUILD_CMDS
