@@ -1,0 +1,13 @@
+diff --git a/Hurrican/src/Gameplay.cpp b/Hurrican/src/Gameplay.cpp
+index daba264..861ee93 100644
+--- a/Hurrican/src/Gameplay.cpp
++++ b/Hurrican/src/Gameplay.cpp
+@@ -648,7 +648,7 @@ void CreateDefaultControlsConfig(int player) {
+         Player[0].JoystickIndex = 0;
+         Player[0].JoystickSchwelle = 500.0f;
+         Player[0].JoystickMode = JOYMODE_JOYPAD;
+-        Player[0].ControlType = CONTROLTYPE_KEYBOARD;
++        Player[0].ControlType = CONTROLTYPE_JOY;
+ 
+ #if defined(GCW)
+         // On GCW Zero, the Player 1 default joy index is the internal controls and both players use joystick:
