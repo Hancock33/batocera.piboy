@@ -93,10 +93,7 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution, gfxBac
     retroarchConfig['menu_show_restart_retroarch'] = 'false'    # this option messes everything up on Batocera if ever clicked
 
     # Graphic driver needed for the ozone menu
-    if (system.config['core'] == 'ppsspp'):
-        retroarchConfig['video_driver'] = '"gl"'
-    else:
-        retroarchConfig['video_driver'] = '"' + gfxBackend + '"'
+    retroarchConfig['video_driver'] = '"' + gfxBackend + '"'
 
     retroarchConfig['audio_latency'] = '64'                     # best balance with audio perf
     retroarchConfig['audio_mixer_volume'] = '0.000000'          # remove distortion on Piboy
