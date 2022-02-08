@@ -2220,17 +2220,17 @@ msgctxt "game_options"
 msgid "Can change the language of some games."
 msgstr "Kan talen van sommige spellen veranderen."
 
-#. TRANSLATION: libretro/neocd, redream
+#. TRANSLATION: libretro/neocd, flycast/pcsx2, redream
 msgctxt "game_options"
 msgid "Japan"
 msgstr "Japan"
 
-#. TRANSLATION: libretro/neocd
+#. TRANSLATION: libretro/neocd, flycast/pcsx2
 msgctxt "game_options"
 msgid "USA"
 msgstr "USA"
 
-#. TRANSLATION: libretro/neocd, redream
+#. TRANSLATION: libretro/neocd, flycast/pcsx2, redream
 msgctxt "game_options"
 msgid "Europe"
 msgstr "Europa"
@@ -3046,7 +3046,7 @@ msgctxt "game_options"
 msgid "Ignored with 'Cycle-exact'."
 msgstr "Genegeerd met 'Cycle-exact'."
 
-#. TRANSLATION: libretro/puae, flycast
+#. TRANSLATION: libretro/puae, flycast/pcsx2, flycast/pcsx2, flycast
 msgctxt "game_options"
 msgid "Default"
 msgstr "Standaard"
@@ -5069,6 +5069,91 @@ msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "NeGcon (Rumble)"
 
+#. TRANSLATION: flycast/pcsx2
+msgctxt "game_options"
+msgid "CHOOSE DREAMCAST LANGUAGE"
+msgstr ""
+
+#. TRANSLATION: flycast/pcsx2
+msgctxt "game_options"
+msgid "Choose the emulator language."
+msgstr ""
+
+#. TRANSLATION: flycast/pcsx2, redream, sonic2013, soniccd
+msgctxt "game_options"
+msgid "Japanese"
+msgstr "Japans"
+
+#. TRANSLATION: flycast/pcsx2, sonic2013, soniccd
+msgctxt "game_options"
+msgid "English"
+msgstr "Engels"
+
+#. TRANSLATION: flycast/pcsx2, redream, sonic2013, soniccd
+msgctxt "game_options"
+msgid "German"
+msgstr "Duits"
+
+#. TRANSLATION: flycast/pcsx2, redream, sonic2013, soniccd
+msgctxt "game_options"
+msgid "French"
+msgstr "Frans"
+
+#. TRANSLATION: flycast/pcsx2, redream, sonic2013, soniccd
+msgctxt "game_options"
+msgid "Spanish"
+msgstr "Spaans"
+
+#. TRANSLATION: flycast/pcsx2, redream, sonic2013, soniccd
+msgctxt "game_options"
+msgid "Italian"
+msgstr "Italiaans"
+
+#. TRANSLATION: flycast/pcsx2
+msgctxt "game_options"
+msgid "CHOOSE DREAMCAST CONSOLE REGION"
+msgstr ""
+
+#. TRANSLATION: flycast/pcsx2
+msgctxt "game_options"
+msgid "Choose your console region."
+msgstr ""
+
+#. TRANSLATION: flycast/pcsx2
+msgctxt "game_options"
+msgid "ENABLE AUTO LOAD STATES"
+msgstr ""
+
+#. TRANSLATION: flycast/pcsx2
+msgctxt "game_options"
+msgid "Enable Dreamcast auto load states."
+msgstr ""
+
+#. TRANSLATION: flycast/pcsx2, flycast/pcsx2, flycast/pcsx2, redream, redream, ...
+msgctxt "game_options"
+msgid "Off (Default)"
+msgstr "Uit (Standaard)"
+
+#. TRANSLATION: flycast/pcsx2
+msgctxt "game_options"
+msgid "ENABLE AUTO SAVE STATES"
+msgstr ""
+
+#. TRANSLATION: flycast/pcsx2
+msgctxt "game_options"
+msgid "Enable Dreamcast auto saves states."
+msgstr ""
+
+#. TRANSLATION: flycast/pcsx2
+msgctxt "game_options"
+msgid "FORCE WINDOWS CE"
+msgstr ""
+
+#. TRANSLATION: flycast/pcsx2
+msgctxt "game_options"
+msgid "Forces Dreamcast Windows CE mode on."
+msgstr ""
+
 #. TRANSLATION: flycast, openbor
 msgctxt "game_options"
 msgid "SCREEN RATIO"
@@ -5885,11 +5970,6 @@ msgctxt "game_options"
 msgid "Enable auto frameskipping for performance on lower-end systems."
 msgstr ""
 
-#. TRANSLATION: redream, redream, mame
-msgctxt "game_options"
-msgid "Off (Default)"
-msgstr "Uit (Standaard)"
-
 #. TRANSLATION: redream
 msgctxt "game_options"
 msgid "Enable vertical sync to avoid tearing in some cases."
@@ -5945,31 +6025,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "English (Default)"
 msgstr ""
-
-#. TRANSLATION: redream, sonic2013, soniccd
-msgctxt "game_options"
-msgid "German"
-msgstr "Duits"
-
-#. TRANSLATION: redream, sonic2013, soniccd
-msgctxt "game_options"
-msgid "French"
-msgstr "Frans"
-
-#. TRANSLATION: redream, sonic2013, soniccd
-msgctxt "game_options"
-msgid "Spanish"
-msgstr "Spaans"
-
-#. TRANSLATION: redream, sonic2013, soniccd
-msgctxt "game_options"
-msgid "Italian"
-msgstr "Italiaans"
-
-#. TRANSLATION: redream, sonic2013, soniccd
-msgctxt "game_options"
-msgid "Japanese"
-msgstr "Japans"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -6803,11 +6858,6 @@ msgstr "Uitbreiding."
 msgctxt "game_options"
 msgid "Change the game's language."
 msgstr "Verander de taal van het spel."
-
-#. TRANSLATION: sonic2013, soniccd
-msgctxt "game_options"
-msgid "English"
-msgstr "Engels"
 
 #. TRANSLATION: sonic2013
 msgctxt "game_options"
