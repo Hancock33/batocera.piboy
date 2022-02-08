@@ -191,7 +191,7 @@ diff -Naur batocera-emulationstation.orig/es-app/src/guis/GuiMenu.cpp batocera-e
 +	if (!hasGlobalFeature("gfxbackend"))
 +	{
 +		auto gfx_backend = std::make_shared<OptionListComponent<std::string>>(mWindow, _("GRAPHICS API"));
-+		gfx_backend->addRange({ { _("AUTO"), "auto" },{ _("OpenGL") , "opengl" },{ _("GLCore") , "glcore" },{ _("SDL2") , "sdl2" },{ _("Vulkan") , "vulkan" } }, SystemConf::getInstance()->get("global.gfxbackend"));
++		gfx_backend->addRange({ { _("AUTO"), "auto" },{ _("OpenGL") , "gl" },{ _("GLCore") , "glcore" },{ _("SDL2") , "sdl2" },{ _("Vulkan") , "vulkan" } }, SystemConf::getInstance()->get("global.gfxbackend"));
 +		s->addWithLabel(_("GRAPHICS API"), gfx_backend);
 +		s->addSaveFunc([gfx_backend] { SystemConf::getInstance()->set("global.gfxbackend", gfx_backend->getSelected()); });
 +	}

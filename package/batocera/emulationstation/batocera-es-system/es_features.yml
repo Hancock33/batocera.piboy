@@ -63,7 +63,7 @@ libretro:
       prompt:      GRAPHICS API
       description: Choose which graphics API library to use. Vulkan may not work for every core.
       choices:
-        "OpenGL": opengl
+        "OpenGL": gl
         "GLCore": glcore
         "SDL2": sdl2
         "Vulkan": vulkan
