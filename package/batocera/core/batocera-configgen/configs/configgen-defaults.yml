@@ -52,6 +52,9 @@ apple2:
 apple2gs:
   emulator: gsplus
   core:     gsplus
+arduous:
+  emulator: libretro
+  core:     arduous
 gsplus:
   emulator: gsplus
   core:     gsplus
