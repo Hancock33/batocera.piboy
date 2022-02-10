@@ -2928,6 +2928,16 @@ alephone:
     alephone:
       alephone: { requireAnyOf: [BR2_PACKAGE_ALEPHONE] }
 
+arduous:
+  name:       Arduboy
+  manufacturer: Arduboy 
+  release: 2015
+  hardware: portable
+  extensions: [hex]
+  emulators:
+    libretro:
+      arduous: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ARDUOUS] }
+
 awgl:
   name:       Another World
   manufacturer: Ports
