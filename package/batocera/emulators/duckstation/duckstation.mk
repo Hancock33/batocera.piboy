@@ -3,7 +3,7 @@
 # duckstation
 #
 ################################################################################
-# Version.: Commits on Jan 11, 2022
+# Version.: Commits on Jan 10, 2022
 DUCKSTATION_VERSION = 51041e47f70123eda41d999701f5651830a0a95e
 DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
 DUCKSTATION_SITE_METHOD=git
@@ -12,49 +12,30 @@ DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = fmt boost ffmpeg
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 
-DUCKSTATION_CONF_OPTS  = -DENABLE_DISCORD_PRESENCE=OFF -DANDROID=OFF -DBUILD_LIBRETRO_CORE=OFF \
-                         -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=FALSE
-
 DUCKSTATION_CONF_ENV += LDFLAGS=-lpthread
 
-ifeq ($(BR2_PACKAGE_XORG7),y)
-  DUCKSTATION_CONF_OPTS += -DUSE_X11=ON
-else
-  DUCKSTATION_CONF_OPTS += -DUSE_X11=OFF
-endif
-
-ifeq ($(BR2_PACKAGE_QT5),y)
-  DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON -DBUILD_SDL_FRONTEND=OFF
-  DUCKSTATION_DEPENDENCIES += qt5base qt5tools qt5multimedia
-  DUCKSTATION_BINARY = duckstation-qt
-else
-  DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=OFF -DBUILD_SDL_FRONTEND=OFF -DBUILD_NOGUI_FRONTEND=ON
-  DUCKSTATION_DEPENDENCIES += libdrm sdl2 libevdev
-  DUCKSTATION_BINARY = duckstation-nogui
-endif
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64),y)
-  DUCKSTATION_CONF_OPTS += -DUSE_WAYLAND=OFF -DUSE_GLX=ON
-else
-  DUCKSTATION_CONF_OPTS += -DUSE_DRMKMS=ON -DUSE_WAYLAND=OFF
-  DUCKSTATION_CONF_OPTS += -DCMAKE_C_FLAGS=-DEGL_NO_X11 -DCMAKE_CXX_FLAGS=-DEGL_NO_X11
-endif
-
-ifeq ($(BR2_PACKAGE_HAS_LIBEGL),y)
-  DUCKSTATION_CONF_OPTS += -DUSE_EGL=ON
-  ifeq ($(BR2_PACKAGE_HAS_LIBMALI),y)
-    DUCKSTATION_CONF_OPTS += -DUSE_MALI=ON
-  endif
-else
-  DUCKSTATION_CONF_OPTS += -DUSE_EGL=OFF
-endif
+DUCKSTATION_CONF_OPTS  =  -DANDROID=OFF \
+	                      -DBUILD_LIBRETRO_CORE=OFF \
+	                      -DENABLE_DISCORD_PRESENCE=OFF \
+	                      -DUSE_X11=OFF \
+	                      -DBUILD_GO2_FRONTEND=OFF \
+	                      -DBUILD_QT_FRONTEND=OFF \
+	                      -DBUILD_NOGUI_FRONTEND=ON \
+	                      -DCMAKE_BUILD_TYPE=Release \
+	                      -DBUILD_SHARED_LIBS=OFF \
+	                      -DUSE_SDL2=ON \
+	                      -DENABLE_CHEEVOS=ON \
+	                      -DHAVE_EGL=ON \
+	                      -DUSE_DRMKMS=ON \
+	                      -DUSE_FBDEV=OFF \
+	                      -DUSE_MALI=OFF
 
 define DUCKSTATION_INSTALL_TARGET_CMDS
   mkdir -p $(TARGET_DIR)/usr/bin
   mkdir -p $(TARGET_DIR)/usr/lib
   mkdir -p $(TARGET_DIR)/usr/share/duckstation
 
-  $(INSTALL) -D $(@D)/buildroot-build/bin/$(DUCKSTATION_BINARY) $(TARGET_DIR)/usr/bin/duckstation
+  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-nogui $(TARGET_DIR)/usr/bin/duckstation
   cp -R $(@D)/buildroot-build/bin/database      $(TARGET_DIR)/usr/share/duckstation/
   rm -f $(TARGET_DIR)/usr/share/duckstation/database/gamecontrollerdb.txt
   cp -R $(@D)/buildroot-build/bin/inputprofiles $(TARGET_DIR)/usr/share/duckstation/
