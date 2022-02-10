@@ -2381,7 +2381,7 @@ libretro:
                         prompt:      2P GAMEPAD MAPPING (KEYRAH)
                         description: Keypad to joyport mappings for 2 players.
                         choices:
-                            "Off":     disabled
+                            "Off":    disabled
                             "On":     enabled
                     whdload:
                         prompt:      WHDLOAD LAUNCHER
