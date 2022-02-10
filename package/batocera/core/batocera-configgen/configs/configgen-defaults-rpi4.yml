@@ -2,6 +2,7 @@ default:
   options:
     retroarch.vrr_runloop_enable: false
     retroarch.video_max_swapchain_images: 3
+    hud_support: true
 
 nds:
   emulator: drastic
