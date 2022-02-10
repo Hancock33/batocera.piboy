@@ -2413,6 +2413,13 @@ libretro:
                             "Analog Joystick":     773
                             "Joystick":            261
                             "Keyboard":            259
+                    puae_pinball_mode:
+                        prompt:      PINBALL MAPPING MODE
+                        description: Use to play pinball games with correct mapping.
+                        choices:
+                            "Off":      disabled
+                            "Modern":   modern
+                            "Classic":  classic
             amiga1200:
                 cfeatures:
                     puae_floppy_speed:
@@ -2463,6 +2470,13 @@ libretro:
                             "Analog Joystick":     773
                             "Joystick":            261
                             "Keyboard":            259
+                    puae_pinball_mode:
+                        prompt:      PINBALL MAPPING MODE
+                        description: Use to play pinball games with correct mapping.
+                        choices:
+                            "Off":      disabled
+                            "Modern":   modern
+                            "Classic":  classic
             amigacd32:
                 cfeatures:
                     puae_cd_startup_delayed_insert:
