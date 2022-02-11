@@ -16,7 +16,7 @@ define YQUAKE2_REFVK_FIXSDL2_PATH
 endef
 YQUAKE2_REFVK_PRE_CONFIGURE_HOOKS += YQUAKE2_REFVK_FIXSDL2_PATH
 
-ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI4),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
 define YQUAKE2_REFVK_FIXCFLAGS_PATH
 	sed -i 's/-msse/-mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math/g' $(@D)/Makefile
 	sed -i 's/-mfpmath=sse/-mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math/g' $(@D)/Makefile
