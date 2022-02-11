@@ -3,8 +3,8 @@
 # HSM SHADERS
 #
 ################################################################################
-# Version.: Commits on Feb 03, 2022
-HSM_SHADERS_VERSION = d541dbf9dc9d328d84ffa29a8175970fae1b95f7
+# Version.: Commits on Feb 11, 2022
+HSM_SHADERS_VERSION = 68a13f2f731b8999fa20bc7f619506b73947c162
 HSM_SHADERS_SITE = $(call github,HyperspaceMadness,Mega_Bezel,$(HSM_SHADERS_VERSION))
 HSM_SHADERS_LICENSE = GPL
 
