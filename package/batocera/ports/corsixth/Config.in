@@ -1,0 +1,15 @@
+config BR2_PACKAGE_CORSIXTH
+    bool "corsixth"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	select BR2_PACKAGE_FREEPATS
+	select BR2_PACKAGE_LUAFILESYSTEM
+	select BR2_PACKAGE_LUA_LPEG_PATTERNS
+    depends on BR2_INSTALL_LIBSTDCPP
+
+    help
+      Build retro games using WebAssembly for a fantasy console.
+
+	    https://github.com/aduros/wasm4
+
+

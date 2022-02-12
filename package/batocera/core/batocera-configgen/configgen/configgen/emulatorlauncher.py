@@ -95,6 +95,7 @@ from generators.stk.stkGenerator import StkGenerator
 from generators.stuntcar.stuntcarGenerator import StuntcarGenerator
 from generators.supermodel.supermodelGenerator import SupermodelGenerator
 from generators.supertux2.supertux2Generator import Supertux2Generator
+from generators.themehospital.themehospitalGenerator import ThemehospitalGenerator
 from generators.tsugaru.tsugaruGenerator import TsugaruGenerator
 from generators.vanillara.vanillaraGenerator import VanillaraGenerator
 from generators.vanillatd.vanillatdGenerator import VanillatdGenerator
@@ -207,6 +208,7 @@ generators = {
     'stuntcar': StuntcarGenerator(),
     'supermodel': SupermodelGenerator(),
     'supertux2': Supertux2Generator(),
+    'themehospital' : ThemehospitalGenerator(),
     'tsugaru': TsugaruGenerator(),
     'vice': ViceGenerator(),
     'vanillara': VanillaraGenerator(),

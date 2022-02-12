@@ -5618,6 +5618,10 @@ stuntcar:
 supertux2:
   features: [padtokeyboard, decoration]
   shared: [hud]
+  
+themehospital:
+  features: [padtokeyboard, decoration]
+  shared: [hud]
 
 vanillara:
   features: [padtokeyboard, decoration]
