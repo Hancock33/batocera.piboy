@@ -20,7 +20,7 @@ LIBRETRO_TIC80_CONF_OPTS += \
                         -DBUILD_LIBRETRO=ON \
                         -DBUILD_WITH_MRUBY=OFF \
                         -DCMAKE_BUILD_TYPE=Release
-                        
+
 ifeq ($(BR2_PACKAGE_BATOCERA_RPI_ANY),y)
 LIBRETRO_TIC80_CONF_OPTS += -DRPI=ON
 endif
