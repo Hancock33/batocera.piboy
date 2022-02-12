@@ -3192,6 +3192,26 @@ msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae
 msgctxt "game_options"
+msgid "PINBALL MAPPING MODE"
+msgstr ""
+
+#. TRANSLATION: libretro/puae, libretro/puae
+msgctxt "game_options"
+msgid "Use to play pinball games with correct mapping."
+msgstr ""
+
+#. TRANSLATION: libretro/puae, libretro/puae
+msgctxt "game_options"
+msgid "Modern"
+msgstr ""
+
+#. TRANSLATION: libretro/puae, libretro/puae
+msgctxt "game_options"
+msgid "Classic"
+msgstr ""
+
+#. TRANSLATION: libretro/puae, libretro/puae
+msgctxt "game_options"
 msgid "BOOT ANIMATION FIRST"
 msgstr ""
 
@@ -4524,7 +4544,7 @@ msgctxt "game_options"
 msgid "Original"
 msgstr ""
 
-#. TRANSLATION: daphne, openbor, redream, xemu, demul
+#. TRANSLATION: daphne, openbor, pcsx2, redream, xemu, ...
 msgctxt "game_options"
 msgid "Stretch"
 msgstr ""
@@ -5359,6 +5379,16 @@ msgctxt "game_options"
 msgid "Software"
 msgstr ""
 
+#. TRANSLATION: pcsx2, rpcs3
+msgctxt "game_options"
+msgid "TV MODE"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "PS2's internal ratio setting. Some games only support 4/3."
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Some games have issues when the animation is shown, others require it."
@@ -5729,11 +5759,6 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Precise Interpreter"
-msgstr ""
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "TV MODE"
 msgstr ""
 
 #. TRANSLATION: rpcs3
