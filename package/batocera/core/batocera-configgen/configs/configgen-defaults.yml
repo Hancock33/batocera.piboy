@@ -553,6 +553,9 @@ thomson:
 tic80:
   emulator: libretro
   core:     tic80
+themehospital:
+  emulator: themehospital
+  core:     themehospital
 tyrquake:
   emulator: libretro
   core:     tyrquake

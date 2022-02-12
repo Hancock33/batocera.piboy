@@ -3471,6 +3471,17 @@ tg-cd:
       pce:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE] }
       pce_fast: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCE_FAST] }
 
+themehospital:
+  name:       Theme Hospital
+  manufacturer: Bullfrog Productions
+  release: 1997
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    themehospital:
+      themehospital: { requireAnyOf: [BR2_PACKAGE_CORSIXTH] }
+
 twentyfourtyeight:
   name:       '2048'
   manufacturer: Ports
