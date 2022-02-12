@@ -83,7 +83,7 @@ def getGameSpecial(systemName, rom):
         return "0"
 
     # Look for external file, exit if not set up
-    specialFile = '/usr/lib/python3.9/site-packages/configgen/datainit/special/' + systemName + '.csv'
+    specialFile = '/usr/lib/python3.10/site-packages/configgen/datainit/special/' + systemName + '.csv'
     if not os.path.exists(specialFile):
         return "0"
 

@@ -23,7 +23,7 @@ class RedreamGenerator(Generator):
         if not os.path.exists(redream_exec) or not filecmp.cmp(redream_file, redream_exec):
             copyfile(redream_file, redream_exec)
             os.chmod(redream_exec, 0o0775)
-        
+
         configFileName = redreamConfig + "/redream.cfg"
         f = codecs.open(configFileName, "w")
         # set the roms path
@@ -74,7 +74,7 @@ class RedreamGenerator(Generator):
             f.write("cable={}".format(system.config["redreamCable"]) + "\n")
         else:
             f.write("cable=vga\n")
-        
+
         f.write
         f.close()
 
