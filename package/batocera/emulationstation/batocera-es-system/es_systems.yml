@@ -3122,7 +3122,7 @@ jaxe:
 
 jumpnbump:
   name:       Jump 'n Bump
-  manufacturer: Brainchild Design
+  manufacturer: Ports
   release: 1998
   hardware: computer
   extensions: [dat]
@@ -3473,7 +3473,7 @@ tg-cd:
 
 themehospital:
   name:       Theme Hospital
-  manufacturer: Bullfrog Productions
+  manufacturer: Ports
   release: 1997
   hardware: port
   extensions: [game]
