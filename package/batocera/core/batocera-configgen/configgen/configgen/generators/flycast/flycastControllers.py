@@ -81,9 +81,9 @@ def generateControllerConfig(controller):
 
     if not os.path.exists(os.path.dirname(configFileName)):
         os.makedirs(os.path.dirname(configFileName))
-         
+
     cfgfile = open(configFileName,'w+')
-    
+
     # create ini sections
     for section in sections:
         Config.add_section(section)
@@ -92,7 +92,7 @@ def generateControllerConfig(controller):
     Config.set("emulator", "mapping_name", controller.realName)
     Config.set("emulator", "btn_escape", "")
     Config.set("emulator", "btn_menu", "")
-    
+
     l2_r2_flag = False
     if 'r2' in controller.inputs:
         l2_r2_flag = True
@@ -100,7 +100,7 @@ def generateControllerConfig(controller):
     # Parse controller inputs
     for index in controller.inputs:
         input = controller.inputs[index]
-        
+
         if input.name not in flycastMapping:
             continue
         if input.type not in flycastMapping[input.name]:
@@ -141,9 +141,9 @@ def generateArcadeControllerConfig(controller):
 
     if not os.path.exists(os.path.dirname(configFileName)):
         os.makedirs(os.path.dirname(configFileName))
-         
+
     cfgfile = open(configFileName,'w+')
-    
+
     # create ini sections
     for section in arcadesections:
         Config.add_section(section)
@@ -152,7 +152,7 @@ def generateArcadeControllerConfig(controller):
     Config.set("emulator", "mapping_name", controller.realName)
     Config.set("emulator", "btn_escape", "")
     Config.set("emulator", "btn_menu", "")
-    
+
     l2_r2_flag = False
     if 'r2' in controller.inputs:
         l2_r2_flag = True
@@ -160,7 +160,7 @@ def generateArcadeControllerConfig(controller):
     # Parse controller inputs
     for index in controller.inputs:
         input = controller.inputs[index]
-        
+
         if input.name not in flycastArcadeMapping:
             continue
         if input.type not in flycastArcadeMapping[input.name]:
