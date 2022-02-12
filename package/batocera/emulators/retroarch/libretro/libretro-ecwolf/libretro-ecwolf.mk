@@ -5,7 +5,10 @@
 ################################################################################
 # Version.: Commits on Feb 03, 2022
 LIBRETRO_ECWOLF_VERSION = b1bbd64ed9d495c6d532db318d05aff658d2c731
-LIBRETRO_ECWOLF_SITE = $(call github,libretro,ecwolf,$(LIBRETRO_ECWOLF_VERSION))
+LIBRETRO_ECWOLF_SITE = https://github.com/libretro/ecwolf.git
+LIBRETRO_ECWOLF_SITE_METHOD=git
+LIBRETRO_ECWOLF_GIT_SUBMODULES=YES
+
 LIBRETRO_ECWOLF_LICENSE = Non-commercial
 
 LIBRETRO_ECWOLF_PLATFORM = $(LIBRETRO_PLATFORM)

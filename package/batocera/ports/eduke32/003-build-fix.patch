@@ -1,0 +1,46 @@
+diff --git a/source/duke3d/src/menus.cpp b/source/duke3d/src/menus.cpp
+index a4b12d021..e104a806e 100644
+--- a/source/duke3d/src/menus.cpp
++++ b/source/duke3d/src/menus.cpp
+@@ -673,7 +673,7 @@ static MenuEntry_t ME_SCREENSETUP_CROSSHAIRSIZE = MAKE_MENUENTRY( s_Scale, &MF_R
+ 
+ static int32_t vpsize;
+ static MenuRangeInt32_t MEO_SCREENSETUP_SCREENSIZE = MAKE_MENURANGE( &vpsize, &MF_Redfont, 0, 0, 0, 1, EnforceIntervals );
+-#if !defined EDUKE32_STANDALONE && defined USE_OPENGL
++#if !defined EDUKE32_STANDALONE && !defined USE_OPENGL
+ static MenuOption_t MEO_SCREENSETUP_SCREENSIZE_TWO = MAKE_MENUOPTION( &MF_Redfont, &MEOS_OffOn, &vpsize );
+ #endif
+ static MenuEntry_t ME_SCREENSETUP_SCREENSIZE = MAKE_MENUENTRY( "Status bar:", &MF_Redfont, &MEF_BigOptionsRt, &MEO_SCREENSETUP_SCREENSIZE, RangeInt32 );
+@@ -1378,8 +1378,8 @@ static MenuOptionSet_t MEOS_PLAYER_TEAM = MAKE_MENUOPTIONSET( MEOSN_PLAYER_TEAM,
+ static MenuOption_t MEO_PLAYER_TEAM = MAKE_MENUOPTION( &MF_Bluefont, &MEOS_PLAYER_TEAM, &ud.team );
+ static MenuEntry_t ME_PLAYER_TEAM = MAKE_MENUENTRY( "Team", &MF_Bluefont, &MEF_PlayerNarrow, &MEO_PLAYER_TEAM, Option );
+ #ifndef EDUKE32_RETAIL_MENU
+-static MenuLink_t MEO_PLAYER_MACROS = { MENU_MACROS, MA_Advance, };
+-static MenuEntry_t ME_PLAYER_MACROS = MAKE_MENUENTRY( "Multiplayer macros", &MF_Bluefont, &MEF_SmallOptions, &MEO_PLAYER_MACROS, Link );
++//static MenuLink_t MEO_PLAYER_MACROS = { MENU_MACROS, MA_Advance, };
++//static MenuEntry_t ME_PLAYER_MACROS = MAKE_MENUENTRY( "Multiplayer macros", &MF_Bluefont, &MMF_SmallOptions, &MEO_PLAYER_MACROS, Link );
+ #endif
+ 
+ static MenuEntry_t *MEL_PLAYER[] = {
+@@ -1389,8 +1389,8 @@ static MenuEntry_t *MEL_PLAYER[] = {
+     &ME_Space4_Bluefont,
+     &ME_PLAYER_TEAM,
+ #ifndef EDUKE32_RETAIL_MENU
+-    &ME_Space8_Bluefont,
+-    &ME_PLAYER_MACROS,
++//    &ME_Space8_Bluefont,
++//    &ME_PLAYER_MACROS,
+ #endif
+ };
+ 
+@@ -2475,8 +2475,8 @@ static void Menu_Pre(MenuID_t cm)
+ #endif
+         }
+ 
+-        MenuEntry_HideOnCondition(&ME_RENDERERSETUP_TEXQUALITY, !usehightile);
+-        MenuEntry_HideOnCondition(&ME_RENDERERSETUP_PRECACHE, !usehightile);
++        //MenuEntry_HideOnCondition(&ME_RENDERERSETUP_TEXQUALITY, !usehightile);
++        //MenuEntry_HideOnCondition(&ME_RENDERERSETUP_PRECACHE, !usehightile);
+ # ifndef EDUKE32_GLES
+         MenuEntry_HideOnCondition(&ME_RENDERERSETUP_TEXCACHE, !(glusetexcompr && usehightile));
+ # endif
