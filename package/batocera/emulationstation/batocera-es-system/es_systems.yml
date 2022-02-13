@@ -352,12 +352,8 @@ fds:
     libretro:
       fceumm:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FCEUMM]   }
       nestopia: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_NESTOPIA] }
-<<<<<<< HEAD
       mesen:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESEN]    }
       quicknes: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_QUICKNES] }
-=======
-      mesen:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESEN] }
->>>>>>> 8c802a11ed6b729a4f6e8010ab809f9e369e0718
 
 virtualboy:
   name:       Virtual Boy
