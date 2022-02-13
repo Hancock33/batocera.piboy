@@ -3,8 +3,8 @@
 # LUTRO
 #
 ################################################################################
-# Version.: Commits on Jan 02, 2022
-LIBRETRO_LUTRO_VERSION = ba4b4f2609b4bc5c8ae753bcf68aa351f85c9093
+# Version.: Commits on Feb 13, 2022
+LIBRETRO_LUTRO_VERSION = 72abe90c7277b2ba156b84d812e6905a216dead7
 LIBRETRO_LUTRO_SITE = $(call github,libretro,libretro-lutro,$(LIBRETRO_LUTRO_VERSION))
 LIBRETRO_LUTRO_LICENSE = MIT
 
