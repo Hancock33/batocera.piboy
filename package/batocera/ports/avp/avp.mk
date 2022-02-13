@@ -13,7 +13,7 @@ AVP_LICENSE = GPL-2.0
 AVP_SUPPORTS_IN_SOURCE_BUILD = NO
 
 AVP_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DSDL_TYPE=SDL2 -DOPENGL_TYPE=OPENGLES2
-AVP_CONF_OPTS += -DCMAKE_CXX_FLAGS="-O3 -mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math -std=c++11 -DFIXED_WINDOW_SIZE" 
+AVP_CONF_OPTS += -DCMAKE_CXX_FLAGS="-O3 -mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math -std=c++11 -DFIXED_WINDOW_SIZE"
 
 define AVP_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/buildroot-build/AVP $(TARGET_DIR)/usr/share/AVP/AVP
