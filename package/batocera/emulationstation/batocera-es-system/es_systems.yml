@@ -259,9 +259,10 @@ gbc:
   emulators:
     libretro:
       gambatte: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GAMBATTE] }
-      mgba:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA] }
-      vba-m:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VBA_M] }
-      mesens:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS] }
+      mgba:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA]     }
+      vba-m:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VBA_M]    }
+      mesens:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]   }
+      sameboy:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEBOY]  }      
   comment_en: |
     For more info: https://wiki.batocera.org/systems:gbc
   comment_fr: |
@@ -276,9 +277,10 @@ gb:
   emulators:
     libretro:
       gambatte: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GAMBATTE] }
-      mgba:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA] }
-      vba-m:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VBA_M] }
-      mesens:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS] }
+      mgba:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA]     }
+      vba-m:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VBA_M]    }
+      mesens:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]   }
+      sameboy:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEBOY]  }    
   comment_en: |
     For more info: https://wiki.batocera.org/systems:gb
   comment_fr: |
