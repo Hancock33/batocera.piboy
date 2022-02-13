@@ -1,0 +1,26 @@
+diff --git a/yabause/src/libretro/Makefile b/yabause/src/libretro/Makefile
+index 2dd8ab29a..dcf128f7d 100644
+--- a/yabause/src/libretro/Makefile
++++ b/yabause/src/libretro/Makefile
+@@ -117,6 +117,21 @@ ifneq (,$(findstring unix,$(platform)))
+ 		HAVE_SSE = 0
+ 	endif
+ 
++# Rpi4 (64-bit)
++else ifeq ($(platform), rpi4_64)
++	override platform += unix
++	TARGET := $(TARGET_NAME)_libretro.so
++	fpic := -fPIC
++	SHARED := -shared -Wl,--no-undefined -Wl,--version-script=link.T
++	LDFLAGS += -lpthread
++	FLAGS += -DAARCH64
++	ARCH_IS_LINUX = 1
++	HAVE_SSE = 0
++	FORCE_GLES = 1
++	USE_AARCH64_DRC = 1
++	DYNAREC_DEVMIYAX = 1
++	FLAGS += -mcpu=cortex-a72 -mtune=cortex-a72
++
+ else ifneq (,$(findstring linux-portable,$(platform)))
+ 	TARGET := $(TARGET_NAME)_libretro.so
+ 	fpic := -fPIC -nostdlib

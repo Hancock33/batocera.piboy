@@ -1515,6 +1515,7 @@ saturn:
       beetle-saturn: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_SATURN] }
       kronos:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_KRONOS] }
       yabasanshiro:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_YABASANSHIRO] }
+      yabause:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_YABAUSE] }
 
 jaguar:
   name:       Atari Jaguar
