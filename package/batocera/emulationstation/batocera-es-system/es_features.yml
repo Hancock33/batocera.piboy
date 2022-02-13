@@ -2735,6 +2735,8 @@ libretro:
                     "Super Scope":            260
                     "Konami Justifier":       516
                     "Dual Konami Justifiers": 772
+    supafaust:
+      features: [netplay, rewind, autosave, padtokeyboard]
     stella:
       features: [netplay, rewind, autosave, cheevos]
     tgbdual:
