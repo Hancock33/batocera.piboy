@@ -4715,6 +4715,11 @@ msgctxt "game_options"
 msgid "8x 5K (5120x4224)"
 msgstr "8x 5K (5120x4224)"
 
+#. TRANSLATION: dolphin, mupen64plus, demul
+msgctxt "game_options"
+msgid "GAME ASPECT RATIO"
+msgstr "СООТНОШЕНИЕ СТОРОН ИГРЫ"
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "The final output image, unrelated to the Wii's emulated NAND setting."
@@ -5343,11 +5348,6 @@ msgstr "2M"
 msgctxt "game_options"
 msgid "4M"
 msgstr "4M"
-
-#. TRANSLATION: mupen64plus, demul
-msgctxt "game_options"
-msgid "GAME ASPECT RATIO"
-msgstr "СООТНОШЕНИЕ СТОРОН ИГРЫ"
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
