@@ -916,6 +916,7 @@ ngp:
   emulators:
     libretro:
       mednafen_ngp: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_NGP] }
+      race:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_RACE] }
 
 ngpc:
   name:       Neo-Geo Pocket Color
@@ -926,6 +927,7 @@ ngpc:
   emulators:
     libretro:
       mednafen_ngp: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_NGP] }
+      race:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_RACE] }
 
 wswan:
   name:       WonderSwan
