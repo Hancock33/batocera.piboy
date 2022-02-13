@@ -221,6 +221,8 @@ libretro:
                     "192+KB":  192
                     "512KB":   512
                     "576+KB":  576
+    mesen:
+      features: [netplay, rewind, autosave, padtokeyboard]
     mesens:
       features: [netplay, rewind, autosave, padtokeyboard]
       cfeatures:
@@ -5620,7 +5622,7 @@ stuntcar:
 supertux2:
   features: [padtokeyboard, decoration]
   shared: [hud]
-  
+
 themehospital:
   features: [padtokeyboard, decoration]
   shared: [hud]

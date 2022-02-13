@@ -1109,6 +1109,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 	# Nintendo NES / Famicom
 	select BR2_PACKAGE_LIBRETRO_FCEUMM              # ALL
 	select BR2_PACKAGE_LIBRETRO_NESTOPIA            # ALL
+	select BR2_PACKAGE_LIBRETRO_MESEN               # ALL
 
 	# Super Nintendo / Super Famicom
 	select BR2_PACKAGE_LIBRETRO_SNES9X              if !BR2_PACKAGE_BATOCERA_TARGET_RPI1
