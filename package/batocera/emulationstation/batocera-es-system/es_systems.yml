@@ -190,9 +190,10 @@ nes:
   group:      nes
   emulators:
     libretro:
-      fceumm:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FCEUMM] }
-      nestopia: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_NESTOPIA] }
-      mesen:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESEN] }
+      fceumm:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FCEUMM]      }
+      nestopia: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_NESTOPIA]    }
+      mesen:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESEN]       }
+      quicknes: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_QUICKNES]    }
   comment_en: |
     For more info: https://wiki.batocera.org/systems:nes
   comment_fr: |
@@ -349,8 +350,10 @@ fds:
   group:      nes
   emulators:
     libretro:
-      fceumm:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FCEUMM] }
+      fceumm:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FCEUMM]   }
       nestopia: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_NESTOPIA] }
+      mesen:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESEN]    }
+      quicknes: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_QUICKNES] }
 
 virtualboy:
   name:       Virtual Boy
