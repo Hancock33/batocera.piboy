@@ -13,6 +13,7 @@ snes:
       bsnes:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES]       }
       bsnes_hd:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES_HD]    }
       mesens:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]      }
+      supafaust:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]      }
   comment_en: |
     For more info: https://wiki.batocera.org/systems:snes
   comment_fr: |
@@ -31,6 +32,7 @@ snes-msu1:
       snes9x:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SNES9X]    }
       bsnes:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES]     }
       bsnes_hd:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES_HD]  }
+      supafaust:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]    }
 
 c64:
   name:       Commodore 64
@@ -1689,6 +1691,7 @@ satellaview:
       pocketsnes:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_POCKETSNES] }
       snes9x:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SNES9X]     }
       mesens:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]     }
+      supafaust:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]     }
 
 sufami:
   name:       SuFami Turbo
