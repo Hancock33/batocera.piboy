@@ -2593,6 +2593,8 @@ libretro:
                 choices:
                     "Off":                  disabled
                     "On":                   enabled
+    quicknes:
+      features: [netplay, rewind, autosave, padtokeyboard]
     scummvm:
       features: [padtokeyboard]
       cfeatures:
