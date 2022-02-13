@@ -13,18 +13,11 @@ AVP_LICENSE = GPL-2.0
 AVP_SUPPORTS_IN_SOURCE_BUILD = NO
 
 AVP_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DSDL_TYPE=SDL2 -DOPENGL_TYPE=OPENGLES2
-AVP_CONF_OPTS += -DCMAKE_C_FLAGS="-DNDEBUG -Ofast -pipe -ffast-math -fno-math-errno -g -DFIXED_WINDOW_SIZE"
-AVP_CONF_OPTS += -DCMAKE_CXX_FLAGS="-DNDEBUG -Ofast -pipe -std=c++11 -ffast-math -fno-math-errno -g -DDFIXED_WINDOW_SIZE"
-AVP_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-g"
+AVP_CONF_OPTS += -DCMAKE_CXX_FLAGS="-O3 -mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math -std=c++11 -DFIXED_WINDOW_SIZE" 
 
 define AVP_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/AVP
-	cp -pvr $(@D)/data $(TARGET_DIR)/usr/share/AVP/
 	$(INSTALL) -D $(@D)/buildroot-build/AVP $(TARGET_DIR)/usr/share/AVP/AVP
 	chmod 0754 $(TARGET_DIR)/usr/share/AVP/AVP
-	echo "cd /usr/share/AVP && ./AVP" > $(TARGET_DIR)/usr/share/AVP/AVP.sh
-	chmod 0754 $(TARGET_DIR)/usr/share/AVP/AVP.sh
-
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/AVP/AVP.keys $(TARGET_DIR)/usr/share/evmapy

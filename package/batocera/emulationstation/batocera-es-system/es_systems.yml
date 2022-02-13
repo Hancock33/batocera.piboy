@@ -2930,7 +2930,7 @@ alephone:
 
 arduous:
   name:       Arduboy
-  manufacturer: Arduboy 
+  manufacturer: Arduboy
   release: 2015
   hardware: portable
   extensions: [hex]
