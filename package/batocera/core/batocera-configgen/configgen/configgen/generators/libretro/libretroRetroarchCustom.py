@@ -96,3 +96,5 @@ def generateRetroarchCustomPathes(retroarchSettings):
     retroarchSettings.save('video_font_path',               '"/usr/share/fonts/dejavu/DejaVuSansMono.ttf"')
     retroarchSettings.save('video_filter_dir',              '"/usr/share/video_filters"')
     retroarchSettings.save('audio_filter_dir',              '"/usr/share/audio_filters"')
+    retroarchSettings.save('libretro_directory',            '"/usr/share/libretro/cores"')
+    retroarchSettings.save('libretro_info_path',            '"/usr/share/libretro/cores"')
