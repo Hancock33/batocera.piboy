@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version.: Commits on Feb 13, 2022
-STK_VERSION = 9a3c51815a20aa3c2908f476dd150fffc08dbf5a
+STK_VERSION = bd1b20ad351d8e25269c644478f9ff236b6f667c
 STK_SITE = $(call github,supertuxkart,stk-code,$(STK_VERSION))
 
 STK_DEPENDENCIES = sdl2 sdl2_mixer
