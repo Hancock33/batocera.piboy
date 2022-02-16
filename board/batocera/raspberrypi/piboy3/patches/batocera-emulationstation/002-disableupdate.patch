@@ -1,17 +1,16 @@
-diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index d0f7e837..cea42a3e 100644
---- a/es-app/src/guis/GuiMenu.cpp
-+++ b/es-app/src/guis/GuiMenu.cpp
-@@ -168,7 +168,7 @@ GuiMenu::GuiMenu(Window *window, bool animate) : GuiComponent(window), mMenu(win
- #endif
+diff -Naur batocera-emulationstation.orig/es-app/src/guis/GuiMenu.cpp batocera-emulationstation/es-app/src/guis/GuiMenu.cpp
+--- batocera-emulationstation.orig/es-app/src/guis/GuiMenu.cpp	2022-02-06 16:31:06.884840515 +0000
++++ batocera-emulationstation/es-app/src/guis/GuiMenu.cpp	2022-02-06 16:38:09.825015511 +0000
+@@ -182,7 +182,7 @@
+ 		if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::BATOCERASTORE) || ApiSystem::getInstance()->isScriptingSupported(ApiSystem::THEMESDOWNLOADER) ||
+ 			(ApiSystem::getInstance()->isScriptingSupported(ApiSystem::THEBEZELPROJECT) && ApiSystem::getInstance()->isScriptingSupported(ApiSystem::DECORATIONS)) ||
+ 			ApiSystem::getInstance()->isScriptingSupported(ApiSystem::UPGRADE))
+-			addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
++			addEntry(_("DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
  
- 		addEntry(_("SCRAPER").c_str(), true, [this] { openScraperSettings(); }, "iconScraper");		
--		addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
-+		addEntry(_("DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
- 		addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings_batocera(); }, "iconSystem");
+ 		addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings(); }, "iconSystem");
  	}
- 	else
-@@ -1093,7 +1093,7 @@ void GuiMenu::openDeveloperSettings()
+@@ -794,7 +794,7 @@
  
  void GuiMenu::openUpdatesSettings()
  {
@@ -20,21 +19,21 @@ index d0f7e837..cea42a3e 100644
  
  	updateGui->addGroup(_("DOWNLOADS"));
  
-@@ -1133,7 +1133,7 @@ void GuiMenu::openUpdatesSettings()
- 		});
+@@ -835,7 +835,7 @@
+ 
+ 	if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::UPGRADE))
+ 	{
+-		updateGui->addGroup(_("SOFTWARE UPDATES"));
++		/*updateGui->addGroup(_("SOFTWARE UPDATES"));
+ 
+ 		// Enable updates
+ 		updateGui->addSwitch(_("CHECK FOR UPDATES"), "updates.enabled", false);
+@@ -876,7 +876,7 @@
+ 
+ 				mWindow->pushGui(new GuiUpdate(mWindow));
+ 			}
+-		});
++		});*/
  	}
  
--	updateGui->addGroup(_("SOFTWARE UPDATES"));
-+	/*updateGui->addGroup(_("SOFTWARE UPDATES"));
- 
- 	// Enable updates
- 	auto updates_enabled = std::make_shared<SwitchComponent>(mWindow);
-@@ -1181,7 +1181,7 @@ void GuiMenu::openUpdatesSettings()
- 
- 			mWindow->pushGui(new GuiUpdate(mWindow));
- 		}
--	});
-+	});*/
- 
  	mWindow->pushGui(updateGui);
- }
