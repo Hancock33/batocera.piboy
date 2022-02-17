@@ -185,7 +185,7 @@ libretro:
     gfxbackend:
       archs_include: [x86, x86_64, rpi4, rk3326]
       prompt:      GRAPHICS API
-      description: Choose which graphics API library to use. Vulkan may not work for every core.
+      description: Choose which graphics API library to use.
       choices:
         "OpenGL": gl
         "GLCore": glcore
