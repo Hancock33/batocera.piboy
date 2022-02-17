@@ -896,7 +896,7 @@ atari5200:
   emulators:
     libretro:
       atari800: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ATARI800] }
-      a5200:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ATARI800] }
+      a5200:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_A5200] }
 
 atari7800:
   name:       Atari 7800
