@@ -262,7 +262,7 @@ gbc:
       mgba:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA]     }
       vba-m:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VBA_M]    }
       mesens:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]   }
-      sameboy:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEBOY]  }      
+      sameboy:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEBOY]  }
   comment_en: |
     For more info: https://wiki.batocera.org/systems:gbc
   comment_fr: |
@@ -280,7 +280,7 @@ gb:
       mgba:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA]     }
       vba-m:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VBA_M]    }
       mesens:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]   }
-      sameboy:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEBOY]  }    
+      sameboy:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEBOY]  }
   comment_en: |
     For more info: https://wiki.batocera.org/systems:gb
   comment_fr: |
@@ -883,6 +883,7 @@ atari5200:
   emulators:
     libretro:
       atari800: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ATARI800] }
+      a5200:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ATARI800] }
 
 atari7800:
   name:       Atari 7800
