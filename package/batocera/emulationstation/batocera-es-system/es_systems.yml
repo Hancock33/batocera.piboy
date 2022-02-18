@@ -2695,7 +2695,7 @@ sameduck:
     libretro:
       sameduck:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEDUCK] }
     mame:
-      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+      mame:      { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 openjazz:
   name:       Jazz Jackrabbit

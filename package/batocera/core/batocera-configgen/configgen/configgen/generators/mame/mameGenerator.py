@@ -202,8 +202,6 @@ class MameGenerator(Generator):
 
         # Finally we pass game name
         # MESS will use the full filename and pass the system & rom type parameters if needed.
-        if (messSysName[messMode].__contains__("sameduck")):
-            messSysName[messMode] = messSysName[messMode].replace("megaduck", "sameduck")
         if messMode == -1:
             commandArray += [ romBasename ]
             commandArray += [ "-plugins", "-plugin", "hiscore" ]
