@@ -24,6 +24,11 @@ SRB2_POST_EXTRACT_HOOKS += SRB2_ASSETS
 define SRB2_INSTALL_TARGET_CMDS
 	cp -L $(@D)/buildroot-build/bin/lsdlsrb2 $(TARGET_DIR)/usr/bin/srb2
 	chmod 754 $(TARGET_DIR)/usr/bin/srb2
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.srb2
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/srb2/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.srb2/
+	# evmap config
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/srb2/srb2.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(cmake-package))

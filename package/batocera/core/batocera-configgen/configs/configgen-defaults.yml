@@ -506,6 +506,9 @@ sorr:
 spacecadetpinball:
   emulator: spacecadetpinball
   core:     spacecadetpinball
+srb2:
+  emulator: srb2
+  core:     srb2
 steam:
   emulator: steam
   core:     steam
