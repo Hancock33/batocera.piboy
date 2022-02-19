@@ -1,5 +1,5 @@
 config BR2_PACKAGE_BROGUECE
-	bool "StuntCar"
+	bool "broguece"
 	depends on BR2_PACKAGE_SDL2
 	depends on BR2_PACKAGE_SDL2_IMAGE
 	help
