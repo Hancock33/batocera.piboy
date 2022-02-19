@@ -90,6 +90,7 @@ from generators.solarus.solarusGenerator import SolarusGenerator
 from generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
 from generators.sorr.sorrGenerator import SorrGenerator
 from generators.spacecadetpinball.spacecadetpinballGenerator import SpacecadetpinballGenerator
+from generators.srb2.srb2Generator import Srb2Generator
 from generators.steam.steamGenerator import SteamGenerator
 from generators.stk.stkGenerator import StkGenerator
 from generators.stuntcar.stuntcarGenerator import StuntcarGenerator
@@ -203,6 +204,7 @@ generators = {
     'soniccd': SonicRetroGenerator(),
     'sorr': SorrGenerator(),
     'spacecadetpinball': SpacecadetpinballGenerator(),
+    'srb2': Srb2Generator(),
     'steam': SteamGenerator(),
     'stk': StkGenerator(),
     'stuntcar': StuntcarGenerator(),

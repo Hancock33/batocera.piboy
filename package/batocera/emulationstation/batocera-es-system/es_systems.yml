@@ -2210,6 +2210,17 @@ sonicretro:
 
     The dev menu option is needed to run mods.
 
+srb2:
+  name:       Sonic Robo Blast 2
+  manufacturer: SSNTails
+  release: 1998
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    srb2:
+      srb2: { requireAnyOf: [BR2_PACKAGE_SRB2] }
+
 model2:
   name:       Sega Model 2
   manufacturer: Sega
