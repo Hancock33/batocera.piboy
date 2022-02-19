@@ -1,0 +1,25 @@
+diff --git a/Makefile b/Makefile
+index 17d6a28..1e18a91 100644
+--- a/Makefile
++++ b/Makefile
+@@ -4,7 +4,7 @@ cflags := -Isrc/brogue -Isrc/platform -std=c99 \
+ 	-Wall -Wpedantic -Werror=implicit -Wno-parentheses -Wno-unused-result \
+ 	-Wformat -Werror=format-security -Wformat-overflow=0
+ libs := -lm
+-cppflags := -DDATADIR=$(DATADIR)
++cppflags := -DDATADIR=/usr/share/brogue
+ 
+ sources := $(wildcard src/brogue/*.c) $(addprefix src/platform/,main.c platformdependent.c)
+ 
+@@ -23,9 +23,9 @@ endif
+ 
+ ifeq ($(GRAPHICS),YES)
+ 	sources += $(addprefix src/platform/,sdl2-platform.c tiles.c)
+-	cflags += $(shell $(SDL_CONFIG) --cflags)
++	cflags += `pkg-config sdl2 --cflags`
+ 	cppflags += -DBROGUE_SDL
+-	libs += $(shell $(SDL_CONFIG) --libs) -lSDL2_image
++	libs += `pkg-config sdl2 --libs` -lSDL2_image
+ endif
+ 
+ ifeq ($(WEBBROGUE),YES)
