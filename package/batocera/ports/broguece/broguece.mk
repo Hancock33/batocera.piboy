@@ -20,7 +20,7 @@ endef
 define BROGUECE_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/brogue
 	$(INSTALL) -D $(@D)/brogue $(TARGET_DIR)/usr/bin/brogue
-	chmod 0754 $(TARGET_DIR)/usr/share/stuntcar/stuntcar
+	chmod 0754 $(TARGET_DIR)/usr/bin/brogue
     cp -av $(@D)/bin/assests $(TARGET_DIR)/usr/share/brogue
 endef
 
