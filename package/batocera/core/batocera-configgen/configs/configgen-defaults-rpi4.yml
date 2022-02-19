@@ -23,6 +23,15 @@ wii:
   core:     dolphin
 
 # mess
+lcdgames:
+  emulator: mame
+  core:     mame
+cdi:
+  emulator: mame
+  core:     mame
+advision:
+  emulator: mame
+  core:     mame
 plugnplay:
   emulator: mame
   core:     mame
