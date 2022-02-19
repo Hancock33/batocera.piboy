@@ -202,7 +202,7 @@ class MameGenerator(Generator):
 
         # Finally we pass game name
         # MESS will use the full filename and pass the system & rom type parameters if needed.
-        if messMode == -1:
+        if messMode == -1 and not (system.isOptSet("hiscoreplugin") and system.getOptBoolean("hiscoreplugin") == False):
             commandArray += [ romBasename ]
             commandArray += [ "-plugins", "-plugin", "hiscore" ]
         else:
