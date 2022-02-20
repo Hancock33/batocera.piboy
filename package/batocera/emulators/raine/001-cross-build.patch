@@ -1,0 +1,34 @@
+diff --git a/makefile b/makefile
+index 5ec13514..64309e01 100644
+--- a/makefile
++++ b/makefile
+@@ -1391,7 +1391,7 @@ $(RAINE_EXE):	$(OBJS)
+ endif
+ 
+ 	@echo Linking Raine...
+-	$(LDV) $(LDFLAGS) $(LFLAGS) -g -Wall -Wno-write-strings -o $(RAINE_EXE) $^ $(LIBS)
++	$(CCV) $(LDFLAGS) $(LFLAGS) -g -o $(RAINE_EXE) $^ $(LIBS) -lstdc++
+ 
+ $(D7Z)/%.o: source/7z/%.c
+ 	@echo Compiling 7z $<...
+@@ -1701,14 +1701,14 @@ source/Musashi/m68kops.c source/Musashi/m68kops.h: $(OBJDIR)/Musashi/m68kmake
+ 	cd source/Musashi && ../../$(OBJDIR)/Musashi/m68kmake
+ 
+ $(OBJDIR)/Musashi/m68kmake.o: source/Musashi/m68kmake.c
+-	$(CC) -c -o $@ $<
++	/usr/bin/gcc -c -o $@ $<
+ 
+ $(OBJDIR)/Musashi/m68kmake: $(OBJDIR)/Musashi/m68kmake.o
+-ifdef CROSSCOMPILE
+-	cp -fv $(NATIVE)/object/Musashi/m68kmake $(OBJDIR)/Musashi
+-else
+-	$(LD) -o $@ $<
+-endif
++#ifdef CROSSCOMPILE
++#	cp -fv $(NATIVE)/object/Musashi/m68kmake $(OBJDIR)/Musashi
++#else
++	/usr/bin/gcc -o $@ $<
++#endif
+ 
+ $(OBJDIR)/Musashi/m68kcpu.o: source/Musashi/m68kops.h source/Musashi/m68kops.c source/Musashi/m68kcpu.c
+ 
