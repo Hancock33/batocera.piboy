@@ -2175,7 +2175,7 @@ ecwolf:
 
 sonicretro:
   name:       Sonic Retro Engine
-  manufacturer: Rubberduckycooly
+  manufacturer: Sega
   release: 2021
   hardware: port
   extensions: [son, scd]
@@ -2212,7 +2212,7 @@ sonicretro:
 
 srb2:
   name:       Sonic Robo Blast 2
-  manufacturer: SSNTails
+  manufacturer: Sega
   release: 1998
   hardware: port
   extensions: [game]

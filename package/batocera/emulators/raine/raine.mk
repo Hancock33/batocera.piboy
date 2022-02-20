@@ -21,17 +21,15 @@ define RAINE_BUILD_CMDS
 	LD="$(TARGET_LD)" \
 	AR="$(TARGET_AR)" \
 	STRIP="$(TARGET_STRIP)" \
+	CROSSCOMPILE=1 \
+	NO_ASM=1 \
 	NATIVE=$(@D)/linux-gnu-sdl2 \
-	CPU=cortex-a72
+	CPU=cortex-a72 
 endef
 
 define RAINE_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin
-	mkdir -p $(TARGET_DIR)/usr/lib
-
-	$(INSTALL) -D $(@D)/raine \
-		$(TARGET_DIR)/usr/bin/raine
-
+	$(INSTALL) -D $(@D)/raine $(TARGET_DIR)/usr/bin/raine
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/raine/raine.keys $(TARGET_DIR)/usr/share/evmapy
