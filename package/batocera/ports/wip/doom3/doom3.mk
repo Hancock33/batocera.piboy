@@ -5,7 +5,7 @@
 ################################################################################
 # Version.: Commits on Jan 22, 2022
 DOOM3_VERSION = 089db4cbb2a39bee98195120c30bfc9a307df6ca
-DOOM3_SITE = $(call github,MadDeCoDeR/Classic-RBDOOM-3-BFG,$(DOOM3_VERSION))
+DOOM3_SITE = $(call github,MadDeCoDeR,Classic-RBDOOM-3-BFG,$(DOOM3_VERSION))
 
 DOOM3_DEPENDENCIES = sdl2 sdl2_mixer
 DOOM3_LICENSE = GPL-2.0
