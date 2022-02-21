@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import Command
+import batoceraFiles
 from generators.Generator import Generator
 import controllersConfig
 
@@ -13,6 +14,6 @@ class Eduke32Generator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_AUTO_UPDATE_JOYSTICKS': '0',
-                'SDL_MOUSE_RELATIVE_SPEED_SCALE': '7.0'
+            env={"XDG_DATA_HOME":batoceraFiles.CONF, "QT_QPA_PLATFORM":"xcb",
+                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
