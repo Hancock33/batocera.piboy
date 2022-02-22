@@ -36,6 +36,7 @@ define XASH3D_FWGS_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/xash3d/
 	cp -pvr $(@D)/build/mainui/libmenu.so $(TARGET_DIR)/usr/lib/xash3d/
 	cp -pvr $(@D)/build/ref_soft/libref_soft.so $(TARGET_DIR)/usr/lib/xash3d/
+	cp -pvr $(@D)/build/ref_gl/libref_gl.so $(TARGET_DIR)/usr/lib/xash3d/
 	cp -pvr $(@D)/build/engine/libxash.so $(TARGET_DIR)/usr/lib/xash3d/
 	cp -pvr $(@D)/build/game_launch/xash3d $(TARGET_DIR)/usr/lib/xash3d/
 	# evmap config
