@@ -1302,6 +1302,31 @@ def generateCoreSettings(coreSettings, system, rom):
                 coreSettings.save('vbam_tilt_sensitivity', system.config['tilt_sensitivity'])
             else:
                 coreSettings.save('vbam_tilt_sensitivity', '"10"')
+                
+    # SAMEBOY
+    if (system.config['core'] == 'sameboy'):
+        # GB
+        if (system.name == 'gb'):
+            coreSettings.save('sameboy_model', '"Auto"')
+            # Palette color
+            if system.isOptSet('sameboy_gb_palette')
+                coreSettings.save('sameboy_mono_palette', system.config['sameboy_gb_palette'])
+            else:
+                coreSettings.save('sameboy_mono_palette', '"lime"')
+        # GBC
+        if (system.name == 'gbc'):
+            coreSettings.save('sameboy_model', '"Auto"')
+            # Color correction mode
+            if system.isOptSet('sameboy_gbc_color')
+                coreSettings.save('sameboy_color_correction_mode', system.config['sameboy_gbc_color'])
+            else:
+                coreSettings.save('sameboy_color_correction_mode', '"off"')
+        # SGB
+        if (system.name == 'sgb'):
+            if system.isOptSet('sameboy_sgb_model'):
+                coreSettings.save('sameboy_model', system.config['sameboy_sgb_model'])
+            else:
+                coreSettings.save('sameboy_model', '"Super Game Boy"')
 
     # Nintendo NES / Famicom Disk System
     if (system.config['core'] == 'nestopia'):
