@@ -24,6 +24,7 @@ from generators.daphne.daphneGenerator import DaphneGenerator
 from generators.devilutionx.devilutionxGenerator import DevilutionXGenerator
 from generators.demul.demulGenerator import DemulGenerator
 from generators.dolphin.dolphinGenerator import DolphinGenerator
+from generators.dolphin_triforce.dolphinTriforceGenerator import DolphinTriforceGenerator
 from generators.dosbox.dosboxGenerator import DosBoxGenerator
 from generators.dosboxstaging.dosboxstagingGenerator import DosBoxStagingGenerator
 from generators.dosboxx.dosboxxGenerator import DosBoxxGenerator
@@ -137,6 +138,7 @@ generators = {
     'demul': DemulGenerator(),
     'devilutionx': DevilutionXGenerator(),
     'dolphin': DolphinGenerator(),
+    'dolphin_triforce': DolphinTriforceGenerator(),
     'dosbox': DosBoxGenerator(),
     'dosbox_staging': DosBoxStagingGenerator(),
     'dosboxx': DosBoxxGenerator(),

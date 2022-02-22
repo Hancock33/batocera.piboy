@@ -1,13 +1,15 @@
-################################################################################
-#
-# Sonic 1,2,3 Decompilation
-#
-################################################################################
-# Version.: Commits on Sept 05, 2021
-SONIC2013_VERSION = 1f3f245faca59a2a1414fe4556c6c89949041244
-SONIC2013_SITE = $(call github,Rubberduckycooly,Sonic-1-2-2013-Decompilation,$(SONIC2013_VERSION))
+SONIC2013_SITE = https://github.com/Rubberduckycooly/Sonic-1-2-2013-Decompilation.git
+SONIC2013_SITE_METHOD = git
+SONIC2013_GIT_SUBMODULES == YES
+
 SONIC2013_DEPENDENCIES = sdl2 libogg libvorbis
 SONIC2013_LICENSE = Custom
+
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
+	SONIC2013_VERSION = 290cd5f
+else
+	SONIC2013_VERSION = f9718af
+endif
 
 define SONIC2013_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) -f Makefile VERBOSE=1
