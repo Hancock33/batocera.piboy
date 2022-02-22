@@ -9,6 +9,7 @@ default:
     framecount:     false
     showFPS:        false
     smooth:         true
+    shaderset:      sharp-bilinear-simple
     rewind:         false
     bezel:          consoles
     forceNoBezel:   false
@@ -560,6 +561,9 @@ tic80:
 themehospital:
   emulator: themehospital
   core:     themehospital
+triforce:
+  emulator: dolphin_triforce
+  core:     dolphin_triforce
 tyrquake:
   emulator: libretro
   core:     tyrquake
