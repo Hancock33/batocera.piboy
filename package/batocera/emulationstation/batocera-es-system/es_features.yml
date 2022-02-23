@@ -1258,8 +1258,8 @@ libretro:
       systems:
             gbc:
                 cfeatures:
-                    group: ADVANCED OPTIONS
                     gbc_color_correction:
+                        group: ADVANCED OPTIONS
                         prompt:      COLOR CORRECTION
                         description: Simulate LCD color inaccuracy.
                         choices:

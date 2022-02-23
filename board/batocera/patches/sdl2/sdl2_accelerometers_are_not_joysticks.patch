@@ -1,6 +1,8 @@
---- a/src/core/linux/SDL_udev.c	2022-01-08 03:29:52.000000000 +0100
-+++ b/src/core/linux/SDL_udev.c	2022-02-05 22:37:37.785572055 +0100
-@@ -433,11 +433,11 @@
+diff --git a/src/core/linux/SDL_udev.c b/src/core/linux/SDL_udev.c
+index 4c38b6e..b416a53 100644
+--- a/src/core/linux/SDL_udev.c
++++ b/src/core/linux/SDL_udev.c
+@@ -435,11 +435,11 @@ device_event(SDL_UDEV_deviceevent type, struct udev_device *dev)
              devclass |= SDL_UDEV_DEVICE_JOYSTICK;
          }
  
