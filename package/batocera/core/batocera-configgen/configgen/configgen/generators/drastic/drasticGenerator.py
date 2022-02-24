@@ -46,7 +46,7 @@ class DrasticGenerator(Generator):
             esvaluedrasticfix2d = 0
 
         #Check if config exists
-        if not os.path.isfile(drastic_conf) and os.access(drastic_conf, os.R_OK):        
+        if not os.path.isfile(drastic_conf) and os.access(drastic_conf, os.R_OK):
             configurePads(settings, system, drastic_conf)
 
         os.chdir(drastic_root)

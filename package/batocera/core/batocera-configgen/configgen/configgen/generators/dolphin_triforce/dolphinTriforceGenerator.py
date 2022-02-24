@@ -161,17 +161,17 @@ D-Pad/Right = `Hat 0 E`
         if not dolphinTriforceGFXSettings.has_section("Hacks"):
             dolphinTriforceGFXSettings.add_section("Hacks")
         if not dolphinTriforceGFXSettings.has_section("Enhancements"):
-            dolphinTriforceGFXSettings.add_section("Enhancements")             
+            dolphinTriforceGFXSettings.add_section("Enhancements")
         if not dolphinTriforceGFXSettings.has_section("Hardware"):
-            dolphinTriforceGFXSettings.add_section("Hardware")  
-            
+            dolphinTriforceGFXSettings.add_section("Hardware")
+
         # Graphics setting Aspect Ratio
         if system.isOptSet('dolphin_aspect_ratio'):
             dolphinTriforceGFXSettings.set("Settings", "AspectRatio", system.config["dolphin_aspect_ratio"])
         else:
             # set to zero, which is 'Auto' in Dolphin & Batocera
             dolphinTriforceGFXSettings.set("Settings", "AspectRatio", "0")
-        
+
         # Show fps
         if system.isOptSet("showFPS") and system.getOptBoolean("showFPS"):
             dolphinTriforceGFXSettings.set("Settings", "ShowFPS", "True")
@@ -188,7 +188,7 @@ D-Pad/Right = `Hat 0 E`
 
         # Widescreen Hack
         if system.isOptSet('widescreen_hack') and system.getOptBoolean('widescreen_hack'):
-            # Prefer Cheats than Hack 
+            # Prefer Cheats than Hack
             if system.isOptSet('enable_cheats') and system.getOptBoolean('enable_cheats'):
                 dolphinTriforceGFXSettings.set("Settings", "wideScreenHack", "False")
             else:
@@ -225,7 +225,7 @@ D-Pad/Right = `Hat 0 E`
             dolphinTriforceGFXSettings.set("Enhancements", "ForceFiltering", "True")
             dolphinTriforceGFXSettings.set("Enhancements", "ArbitraryMipmapDetection", "True")
             dolphinTriforceGFXSettings.set("Enhancements", "DisableCopyFilter", "True")
-            dolphinTriforceGFXSettings.set("Enhancements", "ForceTrueColor", "True")            
+            dolphinTriforceGFXSettings.set("Enhancements", "ForceTrueColor", "True")
         else:
             if dolphinTriforceGFXSettings.has_section("Hacks"):
                 dolphinTriforceGFXSettings.remove_option("Hacks", "BBoxEnable")
@@ -239,7 +239,7 @@ D-Pad/Right = `Hat 0 E`
                 dolphinTriforceGFXSettings.remove_option("Enhancements", "ForceFiltering")
                 dolphinTriforceGFXSettings.remove_option("Enhancements", "ArbitraryMipmapDetection")
                 dolphinTriforceGFXSettings.remove_option("Enhancements", "DisableCopyFilter")
-                dolphinTriforceGFXSettings.remove_option("Enhancements", "ForceTrueColor")  
+                dolphinTriforceGFXSettings.remove_option("Enhancements", "ForceTrueColor")
 
         # Internal resolution settings
         if system.isOptSet('internal_resolution'):
@@ -474,7 +474,7 @@ $SeatLoopPatch
 $99 credits
 """)
             dolphinTriforceGameSettingsGGPE02.close()
-        
+
         # # Cheats aren't in key = value format, so the allow_no_value option is needed.
         # dolphinTriforceGameSettingsGGPE01 = configparser.ConfigParser(interpolation=None, allow_no_value=True,delimiters=';')
         # # To prevent ConfigParser from converting to lower case
@@ -509,7 +509,7 @@ $99 credits
         # No environment variables work for now, paths are coded in above.
         return Command.Command(array=commandArray, env={"XDG_CONFIG_HOME":batoceraFiles.CONF, "XDG_DATA_HOME":batoceraFiles.SAVES, "QT_QPA_PLATFORM":"xcb"})
         #return Command.Command(array=commandArray)
-            
+
     def getInGameRatio(self, config, gameResolution, rom):
         if 'dolphin_aspect_ratio' in config:
             if config['dolphin_aspect_ratio'] == "1":
