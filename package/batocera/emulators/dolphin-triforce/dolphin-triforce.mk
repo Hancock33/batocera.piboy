@@ -7,7 +7,7 @@
 # Site https://dolphin-emu.org/download/list/Triforce/1/
 # Source https://github.com/EIGHTFINITE/dolphin-triforce
 # Dolphin version: 4.0-315
-DOLPHIN_TRIFORCE_SOURCE = 
+DOLPHIN_TRIFORCE_SOURCE =
 DOLPHIN_TRIFORCE_VERSION = 1.0.0-001
 DOLPHIN_TRIFORCE_LICENSE = GPLv2+
 
