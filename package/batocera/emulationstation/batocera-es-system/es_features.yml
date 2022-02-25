@@ -2865,6 +2865,41 @@ libretro:
     quicknes:
       features: [netplay, padtokeyboard, cheevos]
       shared: [rewind, autosave]
+    sameboy:
+      features: [cheevos]
+      shared: [rewind, autosave]
+      systems:
+            gb:
+                cfeatures:
+                    sameboy_gb_palette:
+                        prompt:      COLOR PALETTE
+                        description: Select the color palette to use
+                        choices:
+                            "Greyscale":                      greyscale
+                            "Lime (Game Boy)":                lime
+                            "Olive (Game Boy Pocket)":        olive
+                            "Teal (Game Boy Light)":          teal
+            gbc:
+                cfeatures:
+                    sameboy_gbc_color:
+                        prompt:      COLOR CORRECTION
+                        description: Simulate LCD color inaccuracy
+                        choices:
+                            "Off":                            off
+                            "Emulate Hardware":               emulate hardware
+                            "Preserve Brightness":            preserve brightness
+                            "Reduce Contrast":                reduce contrast
+                            "Correct Color Curves":           correct curves
+                            "Harsh Reality (Low Contrast)":   harsh reality
+            sgb:
+                cfeatures:
+                    sameboy_sgb_model:
+                        prompt:      SUPER GAME BOY MODEL
+                        description: Select the SGB model to use
+                        choices:
+                            "Super Game Boy NTSC":            Super Game Boy
+                            "Super Game Boy PAL":             Super Game Boy PAL
+                            "Super Game Boy 2":               Super Game Boy 2
     scummvm:
       features: [padtokeyboard]
       cfeatures:
