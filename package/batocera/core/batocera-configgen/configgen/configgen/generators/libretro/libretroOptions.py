@@ -1309,7 +1309,7 @@ def generateCoreSettings(coreSettings, system, rom):
         if (system.name == 'gb'):
             coreSettings.save('sameboy_model', '"Auto"')
             # Palette color
-            if system.isOptSet('sameboy_gb_palette')
+            if system.isOptSet('sameboy_gb_palette'):
                 coreSettings.save('sameboy_mono_palette', system.config['sameboy_gb_palette'])
             else:
                 coreSettings.save('sameboy_mono_palette', '"lime"')
@@ -1317,7 +1317,7 @@ def generateCoreSettings(coreSettings, system, rom):
         if (system.name == 'gbc'):
             coreSettings.save('sameboy_model', '"Auto"')
             # Color correction mode
-            if system.isOptSet('sameboy_gbc_color')
+            if system.isOptSet('sameboy_gbc_color'):
                 coreSettings.save('sameboy_color_correction_mode', system.config['sameboy_gbc_color'])
             else:
                 coreSettings.save('sameboy_color_correction_mode', '"off"')
