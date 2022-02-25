@@ -13,5 +13,5 @@ class IonfuryGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
+                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })

@@ -297,6 +297,7 @@ sgb:
     libretro:
       mgba:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA] }
       mesens:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS] }
+      sameboy:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEBOY] }
 
 gbc2players:
   name:       Game Boy Color (2 players)
