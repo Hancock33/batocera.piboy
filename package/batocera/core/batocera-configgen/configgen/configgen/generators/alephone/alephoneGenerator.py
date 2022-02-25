@@ -16,10 +16,10 @@ class AlephoneGenerator(Generator):
             game = "/userdata/roms/alephone/infinity"
 
 
-        commandArray = ["alephone", "--nogl", "--nojoystick", game]
+        commandArray = ["alephone", "--nogl", game]
 
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
+                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
