@@ -1766,7 +1766,7 @@ msgctxt "game_options"
 msgid "LCD Ghosting (Fast)"
 msgstr "LCD Ghosting (быстрое)"
 
-#. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
+#. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/sameboy, libretro/vba-m, ...
 msgctxt "game_options"
 msgid "COLOR CORRECTION"
 msgstr "КОРРЕКЦИЯ ЦВЕТА"
@@ -2872,7 +2872,7 @@ msgctxt "game_options"
 msgid "LCD GHOSTING EFFECTS"
 msgstr "LCD GHOSTING ЭФФЕКТ"
 
-#. TRANSLATION: libretro/potator
+#. TRANSLATION: libretro/potator, libretro/sameboy
 msgctxt "game_options"
 msgid "COLOR PALETTE"
 msgstr "ЦВЕТОВАЯ ПАЛИТРА"
@@ -3607,6 +3607,86 @@ msgstr "64 MHz (Разгон)"
 msgctxt "game_options"
 msgid "EMULATE PCG-8100"
 msgstr "ЭМУЛЯЦИЯ PCG-8100"
+
+#. TRANSLATION: libretro/sameboy
+msgctxt "game_options"
+msgid "Select the color palette to use"
+msgstr ""
+
+#. TRANSLATION: libretro/sameboy
+msgctxt "game_options"
+msgid "Greyscale"
+msgstr ""
+
+#. TRANSLATION: libretro/sameboy
+msgctxt "game_options"
+msgid "Lime (Game Boy)"
+msgstr ""
+
+#. TRANSLATION: libretro/sameboy
+msgctxt "game_options"
+msgid "Olive (Game Boy Pocket)"
+msgstr ""
+
+#. TRANSLATION: libretro/sameboy
+msgctxt "game_options"
+msgid "Teal (Game Boy Light)"
+msgstr ""
+
+#. TRANSLATION: libretro/sameboy
+msgctxt "game_options"
+msgid "Simulate LCD color inaccuracy"
+msgstr ""
+
+#. TRANSLATION: libretro/sameboy
+msgctxt "game_options"
+msgid "Emulate Hardware"
+msgstr ""
+
+#. TRANSLATION: libretro/sameboy
+msgctxt "game_options"
+msgid "Preserve Brightness"
+msgstr ""
+
+#. TRANSLATION: libretro/sameboy
+msgctxt "game_options"
+msgid "Reduce Contrast"
+msgstr ""
+
+#. TRANSLATION: libretro/sameboy
+msgctxt "game_options"
+msgid "Correct Color Curves"
+msgstr ""
+
+#. TRANSLATION: libretro/sameboy
+msgctxt "game_options"
+msgid "Harsh Reality (Low Contrast)"
+msgstr ""
+
+#. TRANSLATION: libretro/sameboy
+msgctxt "game_options"
+msgid "SUPER GAME BOY MODEL"
+msgstr ""
+
+#. TRANSLATION: libretro/sameboy
+msgctxt "game_options"
+msgid "Select the SGB model to use"
+msgstr ""
+
+#. TRANSLATION: libretro/sameboy
+msgctxt "game_options"
+msgid "Super Game Boy NTSC"
+msgstr ""
+
+#. TRANSLATION: libretro/sameboy
+msgctxt "game_options"
+msgid "Super Game Boy PAL"
+msgstr ""
+
+#. TRANSLATION: libretro/sameboy
+msgctxt "game_options"
+msgid "Super Game Boy 2"
+msgstr ""
 
 #. TRANSLATION: libretro/scummvm
 msgctxt "game_options"
