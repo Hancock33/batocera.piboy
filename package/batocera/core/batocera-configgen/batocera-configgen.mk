@@ -78,6 +78,10 @@ endef
 define BATOCERA_CONFIGGEN_BINS
         chmod a+x $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/configgen/emulatorlauncher.py
         (mkdir -p $(TARGET_DIR)/usr/bin/ && cd $(TARGET_DIR)/usr/bin/ && ln -sf /usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/configgen/emulatorlauncher.py emulatorlauncher)
+ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI4),y)
+		cp -avr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/configgen/configgen/generators.piboy/* \
+				$(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/configgen/generators
+endif
 endef
 
 BATOCERA_CONFIGGEN_POST_INSTALL_TARGET_HOOKS = BATOCERA_CONFIGGEN_CONFIGS
