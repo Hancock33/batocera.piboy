@@ -3,8 +3,8 @@
 # Doom 3
 #
 ################################################################################
-# Version.: Commits on Feb 23, 2022
-DOOM3_VERSION = 46acb2ac254710b3f353cc164c03306e05fb0a3a
+# Version.: Commits on Feb 26, 2022
+DOOM3_VERSION = 950da3093ce4740641a2060218e0d21f45e8f46a
 DOOM3_SITE = $(call github,MadDeCoDeR,Classic-RBDOOM-3-BFG,$(DOOM3_VERSION))
 
 DOOM3_DEPENDENCIES = sdl2 sdl2_mixer
