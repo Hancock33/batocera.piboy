@@ -30,24 +30,62 @@ class DrasticGenerator(Generator):
             os.chmod(drastic_bin, 0o0775)
 
         #Getting Values from ES
+        f = open(drastic_conf, "w", encoding="ascii")
+
+        #Getting Values from ES
         if system.isOptSet("drastic_hires") and system.config["drastic_hires"] == '1':
             esvaluedrastichires = 1
         else:
             esvaluedrastichires = 0
-
+        
         if system.isOptSet("drastic_threaded") and system.config["drastic_threaded"] == '1':
             esvaluedrasticthreaded = 1
         else:
-            esvaluedrasticthreaded = 0
-
+            esvaluedrasticthreaded = 0    
+        
         if system.isOptSet("drastic_fix2d") and system.config["drastic_fix2d"] == '1':
             esvaluedrasticfix2d = 1
         else:
-            esvaluedrasticfix2d = 0
+            esvaluedrasticfix2d = 0 
+        
+        if system.isOptSet("drastic_screen_orientation"):
+            esvaluedrasticscreenorientation = system.config["drastic_screen_orientation"]
+        else:
+            esvaluedrasticscreenorientation = 0
 
-        #Check if config exists
-        if not os.path.isfile(drastic_conf) and os.access(drastic_conf, os.R_OK):
-            configurePads(settings, system, drastic_conf)
+        textList = [                             # 0,1,2,3 ...
+        "enable_sound"                 + " = 1",
+        "compress_savestates"          + " = 1",
+        "savestate_snapshot"           + " = 1",
+        "firmware.username"            + " = Batocera",
+        "firmware.language"            + " = " + str(getDrasticLangFromEnvironment()),
+        "firmware.favorite_color"      + " = 11",
+        "firmware.birthday_month"      + " = 11",
+        "firmware.birthday_day"        + " = 25",
+        "enable_cheats"                + " = 1",
+        "rtc_system_time"              + " = 1",
+        "use_rtc_custom_time"          + " = 0",
+        "rtc_custom_time"              + " = 0",
+        "frameskip_type"               + " = 2",                                        #None/Manual/Auto
+        "frameskip_value"              + " = 1",                                        #50%/100%/200%/300%/400%/Unlimited
+        "safe_frameskip"               + " = 1",
+        "disable_edge_marking"         + " = 1",                                        #will prevent edge marking. It draws outlines around some 3D models to give a cel-shaded effect. Since DraStic doesn't emulate anti-aliasing, it'll cause edges to look harsher than they may on a real DS.
+        "fix_main_2d_screen"           + " = " + str(esvaluedrasticfix2d),              #Top Screen will always be the Action Screen (for 2d games like Sonic)
+        "hires_3d"                     + " = " + str(esvaluedrastichires),              #High Resolution 3D Rendering
+        "threaded_3d"                  + " = " + str(esvaluedrasticthreaded),           #MultiThreaded 3D Rendering - Improves perf in 3D - can cause glitch.
+        "screen_orientation"           + " = " + str(esvaluedrasticscreenorientation),  #Vertical/Horizontal/OneScreen
+        "screen_scaling"               + " = 0",                                        #No Scaling/Stretch Aspect/1x2x/2x1x/TvSplit
+        "screen_swap "                 + " = 0"
+        ]
+        
+        # Write the cfg file
+        for line in textList:
+            f.write(line)
+            f.write("\n")
+        f.close()
+
+        #Configuring Pad in the cfg
+        configurePads(settings, system, drastic_conf)
 
         os.chdir(drastic_root)
         commandArray = [drastic_bin, rom]
