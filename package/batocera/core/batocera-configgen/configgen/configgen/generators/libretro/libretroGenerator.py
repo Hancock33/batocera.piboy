@@ -37,7 +37,7 @@ class LibretroGenerator(Generator):
                 lightgun = system.getOptBoolean('lightgun_map')
             else:
                 # Lightgun button mapping breaks lr-mame's inputs, disable if left on auto
-                if system.config['core'] == "mame":
+                if system.config['core'] in [ 'mame', 'mess', 'mamevirtual' ]:
                     lightgun = False
                 else:
                     lightgun = True
@@ -253,6 +253,11 @@ class LibretroGenerator(Generator):
         if system.name == 'scummvm':
             rom = os.path.dirname(rom) + '/' + romName[0:-8]
 
+        # Use command line instead of ROM file for MAME variants
+        if system.config['core'] in [ 'mame', 'mess', 'mamevirtual' ]:
+            dontAppendROM = True
+            commandArray.append("/var/run/lr-mame.cmd")
+
         if dontAppendROM == False:
             commandArray.append(rom)
 
@@ -267,7 +272,7 @@ def getGFXBackend(system):
             setManually = True
         else:
             setManually = False
-            if videoMode.getGLVersion() >= 3.1 and videoMode.getGLVendor() in ["nvidia", "amd"]:  
+            if videoMode.getGLVersion() >= 3.1 and videoMode.getGLVendor() in ["nvidia", "amd"]:
                 backend = "glcore"
             else:
                 backend = "opengl"

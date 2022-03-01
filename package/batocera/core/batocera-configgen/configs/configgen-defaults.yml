@@ -27,6 +27,12 @@ twentyfourtyeight:
 abuse:
   emulator: abuse
   core:     abuse
+adam:
+  emulator: libretro
+  core:     mess
+advision:
+  emulator: libretro
+  core:     mess
 alephone:
   emulator: alephone
   core:     alephone
@@ -48,18 +54,30 @@ amigademo:
 amstradcpc:
   emulator: libretro
   core:     cap32
+apfm1000:
+  emulator: libretro
+  core:     mess
 apple2:
   emulator: gsplus
   core:     gsplus
 apple2gs:
   emulator: gsplus
   core:     gsplus
+arcadia:
+  emulator: libretro
+  core:     mess
 arduous:
   emulator: libretro
   core:     arduous
 gsplus:
   emulator: gsplus
   core:     gsplus
+archimedes:
+  emulator: libretro
+  core:     mess
+astrocde:
+  emulator: libretro
+  core:     mess
 atari2600:
   emulator: libretro
   core:     stella
@@ -75,12 +93,18 @@ atari800:
 atarist:
   emulator: libretro
   core:     hatari
+atom:
+  emulator: libretro
+  core:     mess
 atomiswave:
   emulator: libretro
   core:     flycast
 awgl:
   emulator: awgl
   core:     awgl
+bbc:
+  emulator: libretro
+  core:     mess
 bermuda:
   emulator: bermuda
   core:     bermuda
@@ -90,21 +114,18 @@ bk:
 bstone:
   emulator: bstone
   core:     bstone
-c64:
-  emulator: libretro
-  core:     vice_x64
-chailove:
-  emulator: libretro
-  core:     chailove
-cplus4:
-  emulator: vice
-  core:     xplus4
-c128:
-  emulator: vice
-  core:     x128
 c20:
   emulator: vice
   core:     xvic
+c64:
+  emulator: libretro
+  core:     vice_x64
+c128:
+  emulator: vice
+  core:     x128
+camplynx:
+  emulator: libretro
+  core:     mess
 cannonball:
   emulator: libretro
   core:     cannonball
@@ -114,6 +135,9 @@ cavestory:
 cave3rd:
   emulator: demul
   core:     demul
+cdi:
+  emulator: libretro
+  core:     mess
 cdogs:
   emulator: cdogs
   core:     cdogs
@@ -123,12 +147,24 @@ cgenius:
 channelf:
   emulator: libretro
   core:     freechaf
+chailove:
+  emulator: libretro
+  core:     chailove
+coco:
+  emulator: libretro
+  core:     mess
 colecovision:
   emulator: libretro
   core:     bluemsx
+cplus4:
+  emulator: vice
+  core:     xplus4
 craft:
    emulator: libretro
    core:     craft
+crvision:
+  emulator: libretro
+  core:     mess
 
 # D-L
 
@@ -162,6 +198,9 @@ ecwolf:
 eduke32:
   emulator: eduke32
   core:     eduke32
+electron:
+  emulator: libretro
+  core:     mess
 etekwar:
   emulator: etekwar
   core:     etekwar
@@ -180,6 +219,9 @@ flash:
 flatpak:
   emulator: flatpak
   core:     flatpak
+fm7:
+  emulator: libretro
+  core:     mess
 fmtowns:
   emulator: tsugaru
   core:     tsugaru
@@ -189,17 +231,26 @@ freedroid:
 gaelco:
   emulator: demul
   core:     demul
+gamate:
+  emulator: libretro
+  core:     mess
 gameandwatch:
   emulator: libretro
   core:     gw
   options:
     forceNoBezel: true
+gamecom:
+  emulator: libretro
+  core:     mess
 gamecube:
   emulator: dolphin
   core:     dolphin
 gamegear:
   emulator: libretro
   core:     genesisplusgx
+gamepock:
+  emulator: libretro
+  core:     mess
 gb:
   emulator: libretro
   core:     gambatte
@@ -215,6 +266,9 @@ gbc:
 gbc2players:
   emulator: libretro
   core:     tgbdual
+gmaster:
+  emulator: libretro
+  core:     mess
 gong:
   emulator: libretro
   core:     gong
@@ -287,9 +341,6 @@ media:
 megadrive:
   emulator: libretro
   core:     genesisplusgx
-mess:
-  emulator: libretro
-  core:     mess
 model2:
   emulator: model2emu
   core:     model2emu
@@ -418,6 +469,9 @@ pet:
 pico8:
   emulator: libretro
   core:     retro8
+plugnplay:
+  emulator: libretro
+  core:     mess
 pokemini:
   emulator: libretro
   core:     pokemini
@@ -444,6 +498,9 @@ pspmini:
 psx:
   emulator: libretro
   core:     pcsx_rearmed
+pv1000:
+  emulator: libretro
+  core:     mess
 pygame:
   emulator: pygame
   core:     pygame
@@ -495,6 +552,9 @@ sg1000:
 sgb:
   emulator: libretro
   core:     mgba
+socrates:
+  emulator: libretro
+  core:     mess
 solarus:
   emulator: solarus
   core:     solarus
@@ -516,6 +576,9 @@ steam:
 sufami:
   emulator: libretro
   core:     snes9x
+supracan:
+  emulator: libretro
+  core:     mess
 snes:
   emulator: libretro
   core:     snes9x
@@ -555,6 +618,9 @@ tg-cd:
 thomson:
   emulator: libretro
   core:     theodore
+ti99:
+  emulator: libretro
+  core:     mess
 tic80:
   emulator: libretro
   core:     tic80
@@ -564,6 +630,9 @@ themehospital:
 triforce:
   emulator: dolphin_triforce
   core:     dolphin_triforce
+tutor:
+  emulator: libretro
+  core:     mess
 tyrquake:
   emulator: libretro
   core:     tyrquake
@@ -582,12 +651,18 @@ vectrex:
 vemulator:
   emulator: libretro
   core:     vemulator
+vgmplay:
+  emulator: libretro
+  core:     mamevirtual
 virtualboy:
   emulator: libretro
   core:     vb
 voidsw:
   emulator: voidsw
   core:     voidsw
+vsmile:
+  emulator: libretro
+  core:     mess
 wasm4:
   emulator: libretro
   core:     wasm4
@@ -621,6 +696,9 @@ x68000:
 xash3d_fwgs:
   emulator: xash3d_fwgs
   core:     xash3d_fwgs
+xegs:
+  emulator: libretro
+  core:     mess
 xrick:
   emulator: libretro
   core:     xrick
