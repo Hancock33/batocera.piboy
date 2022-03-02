@@ -1,8 +1,6 @@
-diff --git a/cube/CMakeLists.txt b/cube/CMakeLists.txt
-index 4087351d..45145612 100644
---- a/cube/CMakeLists.txt
-+++ b/cube/CMakeLists.txt
-@@ -228,7 +228,7 @@ include_directories(${CUBE_INCLUDE_DIRS})
+--- a/cube/CMakeLists.txt	2020-07-28 22:07:45.076645989 +0200
++++ b/cube/CMakeLists.txt	2020-07-28 22:08:30.369519768 +0200
+@@ -164,7 +164,7 @@
  if(APPLE)
      include(macOS/cube/cube.cmake)
  elseif(NOT WIN32)
@@ -11,7 +9,7 @@ index 4087351d..45145612 100644
          add_executable(vkcube
                         cube.c
                         ${PROJECT_SOURCE_DIR}/cube/cube.vert
-@@ -243,7 +243,7 @@ elseif(NOT WIN32)
+@@ -177,7 +177,7 @@
          if (NEED_RT)
              target_link_libraries(vkcube rt)
          endif()
@@ -20,7 +18,7 @@ index 4087351d..45145612 100644
  else()
      if(CMAKE_CL_64)
          set(LIB_DIR "Win64")
-@@ -280,7 +280,7 @@ endif()
+@@ -214,7 +214,7 @@
  if(APPLE)
      include(macOS/cubepp/cubepp.cmake)
  elseif(NOT WIN32)
@@ -29,7 +27,7 @@ index 4087351d..45145612 100644
          add_executable(vkcubepp
                         cube.cpp
                         ${PROJECT_SOURCE_DIR}/cube/cube.vert
-@@ -290,7 +290,7 @@ elseif(NOT WIN32)
+@@ -222,7 +222,7 @@
                         ${OPTIONAL_WAYLAND_DATA_FILES})
          target_link_libraries(vkcubepp Vulkan::Vulkan)
          target_compile_definitions(vkcubepp PUBLIC ${CUBE_PLATFORM})
