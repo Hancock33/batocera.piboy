@@ -15,7 +15,7 @@ import subprocess
 import sys
 
 def generateMAMEConfigs(playersControllers, system, rom):
-    # Generate command line for 
+    # Generate command line for
     commandLine = []
     romBasename = os.path.basename(rom)
     romDirname  = os.path.dirname(rom)
@@ -45,7 +45,7 @@ def generateMAMEConfigs(playersControllers, system, rom):
             softList = ""
 
         # Determine MESS system name (if needed)
-        messDataFile = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/messSystems.csv'
+        messDataFile = '/usr/share/batocera/configgen/data/mame/messSystems.csv'
         openFile = open(messDataFile, 'r')
         messSystems = []
         messSysName = []
@@ -154,7 +154,7 @@ def generateMAMEConfigs(playersControllers, system, rom):
         commandLine += [ "-artwork_crop" ]
 
     # Share plugins & samples with standalone MAME
-    commandLine += [ "-pluginspath", "/usr/bin/mame/plugins/;/userdata/saves/mame/plugins" ]    
+    commandLine += [ "-pluginspath", "/usr/bin/mame/plugins/;/userdata/saves/mame/plugins" ]
     commandLine += [ "-homepath" , "/userdata/saves/mame/plugins/" ]
     if not os.path.exists("/userdata/saves/mame/plugins/"):
         os.makedirs("/userdata/saves/mame/plugins/")
@@ -209,12 +209,12 @@ def prepSoftwareList(subdirSoftList, softList, softDir, hashDir, romDirname):
 
 def getMameControlScheme(system, romBasename):
     # Game list files
-    mameCapcom = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameCapcom.txt'
-    mameKInstinct = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameKInstinct.txt'
-    mameMKombat = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameMKombat.txt'
-    mameNeogeo = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameNeogeo.txt'
-    mameTwinstick = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameTwinstick.txt'
-    mameRotatedstick = '/usr/lib/python3.9/site-packages/configgen/datainit/mame/mameRotatedstick.txt'
+    mameCapcom = '/usr/share/batocera/configgen/data/mame/mameCapcom.txt'
+    mameKInstinct = '/usr/share/batocera/configgen/data/mame/mameKInstinct.txt'
+    mameMKombat = '/usr/share/batocera/configgen/data/mame/mameMKombat.txt'
+    mameNeogeo = '/usr/share/batocera/configgen/data/mame/mameNeogeo.txt'
+    mameTwinstick = '/usr/share/batocera/configgen/data/mame/mameTwinstick.txt'
+    mameRotatedstick = '/usr/share/batocera/configgen/data/mame/mameRotatedstick.txt'
 
     # Controls for games with 5-6 buttons or other unusual controls
     if system.isOptSet("altlayout"):
@@ -231,7 +231,7 @@ def getMameControlScheme(system, romBasename):
         neogeoList = set(open(mameNeogeo).read().split())
         twinstickList = set(open(mameTwinstick).read().split())
         qbertList = set(open(mameRotatedstick).read().split())
-            
+
         romName = os.path.splitext(romBasename)[0]
         if romName in capcomList:
             if controllerType in [ "auto", "snes" ]:
@@ -292,7 +292,7 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
         dpadMode = system['altdpad']
     else:
         dpadMode = 0
-    
+
     # Common controls, default lr-mame mapping
     # lr-mame still uses the actual controller buttons internally, it just converts to Retropad in the UI
     mappings = {
@@ -417,7 +417,7 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
         mappings.update({"BUTTON6": "x"})
         mappings.update({"BUTTON7": "pagedown"})
         mappings.update({"BUTTON8": "pageup"})
-    
+
     xml_mameconfig = getRoot(config, "mameconfig")
     xml_mameconfig.setAttribute("version", "10") # otherwise, config of pad won't work at first run (batocera v33)
     xml_system = getSection(config, xml_mameconfig, "system")
@@ -426,7 +426,7 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
     removeSection(config, xml_system, "input")
     xml_input = config.createElement("input")
     xml_system.appendChild(xml_input)
-    
+
     # Open or create alternate config file for systems with special controllers/settings
     # If the system/game is set to per game config, don't try to open/reset an existing file, only write if it's blank or going to the shared cfg folder
     specialControlList = [ "cdimono1", "apfm1000", "astrocde", "adam", "arcadia", "gamecom", "tutor", "crvision", "bbcb", "xegs", "socrates", "vgmplay" ]
@@ -438,7 +438,7 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
                 config_alt = minidom.parse(configFile_alt)
             except:
                 pass # reinit the file
-        
+
         perGameCfg = system.getOptBoolean('pergamecfg')
         if os.path.exists(configFile_alt) and (customCfg or perGameCfg):
             overwriteSystem = False
@@ -448,11 +448,11 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
         xml_mameconfig_alt = getRoot(config_alt, "mameconfig")
         xml_system_alt = getSection(config_alt, xml_mameconfig_alt, "system")
         xml_system_alt.setAttribute("name", messSysName)
-        
+
         removeSection(config_alt, xml_system_alt, "input")
         xml_input_alt = config_alt.createElement("input")
         xml_system_alt.appendChild(xml_input_alt)
-    
+
     nplayer = 1
     maxplayers = len(playersControllers)
     for playercontroller, pad in sorted(playersControllers.items()):
@@ -462,7 +462,7 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
             mappings_use["JOYSTICK_DOWN"] = "down"
             mappings_use["JOYSTICK_LEFT"] = "left"
             mappings_use["JOYSTICK_RIGHT"] = "right"
-            
+
         for mapping in mappings_use:
             if mappings_use[mapping] in pad.inputs:
                 if mapping in [ 'START', 'COIN' ]:
@@ -493,17 +493,17 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
             # Older MAME
             xml_input_alt.appendChild(generateIncDecPortElement(config_alt, ':slave_hle:MOUSEX', nplayer, pad.index, "P1_MOUSE_X", mappings_use["JOYSTICK_RIGHT"], mappings_use["JOYSTICK_LEFT"], pad.inputs[mappings_use["JOYSTICK_LEFT"]], False, dpadMode, "1023", "0", "10"))
             xml_input_alt.appendChild(generateIncDecPortElement(config_alt, ':slave_hle:MOUSEY', nplayer, pad.index, "P1_MOUSE_Y", mappings_use["JOYSTICK_DOWN"], mappings_use["JOYSTICK_UP"], pad.inputs[mappings_use["JOYSTICK_UP"]], False, dpadMode, "1023", "0", "10"))
-            
+
             #Hide LCD display
             removeSection(config_alt, xml_system_alt, "video")
             xml_video_alt = config_alt.createElement("video")
             xml_system_alt.appendChild(xml_video_alt)
-            
+
             xml_screencfg_alt = config_alt.createElement("target")
             xml_screencfg_alt.setAttribute("index", "0")
             xml_screencfg_alt.setAttribute("view", "Main Screen Standard (4:3)")
             xml_video_alt.appendChild(xml_screencfg_alt)
-            
+
         # Special case for APFM1000 - uses numpad controllers
         if nplayer <= 2 and messSysName == "apfm1000":
             if nplayer == 1:
@@ -698,9 +698,9 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
             xml_input_alt.appendChild(generateSpecialPortElement(config_alt, ':CONTROLS', nplayer, pad.index, "P1_BUTTON9", mappings_use["BUTTON2"], pad.inputs[mappings_use["BUTTON2"]], False, dpadMode, "256", "0"))          # Rate Reset
             xml_input_alt.appendChild(generateSpecialPortElement(config_alt, ':CONTROLS', nplayer, pad.index, "P1_BUTTON10", mappings_use["BUTTON4"], pad.inputs[mappings_use["BUTTON4"]], False, dpadMode, "512", "0"))         # Rate Hold
             xml_input.appendChild(generateSpecialPortElement(config, 'standard', nplayer, pad.index, "UI_CONFIGURE", mappings_use["COIN"], pad.inputs[mappings_use["COIN"]], False, dpadMode, "", ""))
-        
+
         nplayer = nplayer + 1
-        
+
         # save the config file
         #mameXml = open(configFile, "w")
         # TODO: python 3 - workawround to encode files in utf-8
@@ -708,7 +708,7 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
             mameXml = codecs.open(configFile, "w", "utf-8")
             dom_string = os.linesep.join([s for s in config.toprettyxml().splitlines() if s.strip()]) # remove ugly empty lines while minicom adds them...
             mameXml.write(dom_string)
-        
+
         # Write alt config (if used, custom config is turned off or file doesn't exist yet)
         if messSysName in specialControlList and overwriteSystem:
             mameXml_alt = codecs.open(configFile_alt, "w", "utf-8")
@@ -837,7 +837,7 @@ def input2definition(key, input, joycode, reversed, dpadMode, altButtons):
                     return "JOYCODE_{}_XAXIS_RIGHT_SWITCH JOYCODE_{}_YAXIS_DOWN_SWITCH OR JOYCODE_{}_HAT1RIGHT JOYCODE_{}_HAT1DOWN OR JOYCODE_{}_BUTTON16 JOYCODE_{}_BUTTON14".format(joycode, joycode, joycode, joycode, joycode, joycode)
                 else:
                     return "JOYCODE_{}_XAXIS_RIGHT_SWITCH JOYCODE_{}_YAXIS_DOWN_SWITCH OR JOYCODE_{}_HAT1RIGHT JOYCODE_{}_HAT1DOWN OR JOYCODE_{}_BUTTON12 JOYCODE_{}_BUTTON14".format(joycode, joycode, joycode, joycode, joycode, joycode)
-        else:        
+        else:
             if key == "joystick1up" or key == "up":
                 if dpadMode == 0:
                     return "JOYCODE_{}_YAXIS_UP_SWITCH OR JOYCODE_{}_HAT1UP".format(joycode, joycode)
