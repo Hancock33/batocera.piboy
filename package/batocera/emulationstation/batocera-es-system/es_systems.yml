@@ -3641,6 +3641,17 @@ stuntcar:
   comment_fr: |
     Ce système est le premier jeu de autonome. Aucune rom n'est requise.
 
+superbroswar:
+  name:       Super Bros War
+  manufacturer: Ports
+  release:
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    libretro:
+      superbroswar: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SUPERBROSWAR] }
+
 superflappybirds:
   name:       superflappybirds
   manufacturer: Ports

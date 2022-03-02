@@ -1,0 +1,8 @@
+config BR2_PACKAGE_LIBRETRO_SUPERBROSWAR
+	bool "libretro-superbroswar"
+	depends on BR2_PACKAGE_RETROARCH
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  A fan-made multiplayer style deathmatch game.
+
+	  http://www.libretro.com
