@@ -3,8 +3,8 @@
 # MESS
 #
 ################################################################################
-# Version.: Commits on Jan 24, 2022
-LIBRETRO_MESS_VERSION = ec47e94c7eed598e87a6da898821b5c8024c21a5
+# Version.: Commits on Mar 03, 2022
+LIBRETRO_MESS_VERSION = 1f6e6075e9668f55d93c5ef4fa3b032c00c0b305
 LIBRETRO_MESS_SITE = $(call github,libretro,mame,$(LIBRETRO_MESS_VERSION))
 LIBRETRO_MESS_LICENSE = MESS
 LIBRETRO_MESS_DEPENDENCIES = retroarch sqlite
