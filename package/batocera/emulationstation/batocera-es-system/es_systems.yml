@@ -3190,6 +3190,28 @@ bk:
     libretro:
       bk: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BK_EMULATOR] }
 
+blues:
+  name:       Blues Brothers
+  manufacturer: Ports
+  release: 1991
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    blues:
+      blues: { requireAnyOf: [BR2_PACKAGE_BLUES] }
+
+bbja:
+  name:       The Blues Brothers Jukebox Adventure
+  manufacturer: Ports
+  release: 1993
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    bbja:
+      bbja: { requireAnyOf: [BR2_PACKAGE_BLUES] }
+
 bstone:
   name:       Blake Stone Series
   manufacturer: Ports
@@ -3493,6 +3515,17 @@ piboy:
   path:       /userdata/roms/piboy
   command:    "/bin/sh %ROM%"
   force:      True
+
+pre2:
+  name:       Prehistorik 2
+  manufacturer: Ports
+  release: 1993
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    pre2:
+      pre2: { requireAnyOf: [BR2_PACKAGE_BLUES] }
 
 prototype:
   name:       Prototype

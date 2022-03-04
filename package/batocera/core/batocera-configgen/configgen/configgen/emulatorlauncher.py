@@ -13,7 +13,9 @@ from generators.abuse.abuseGenerator import AbuseGenerator
 from generators.amiberry.amiberryGenerator import AmiberryGenerator
 from generators.alephone.alephoneGenerator import AlephoneGenerator
 from generators.awgl.awglGenerator import AwglGenerator
+from generators.bbja.bbjaGenerator import BbjaGenerator
 from generators.bermuda.bermudaGenerator import BermudaGenerator
+from generators.blues.bluesGenerator import BluesGenerator
 from generators.bstone.bstoneGenerator import BstoneGenerator
 from generators.cannonball.cannonballGenerator import CannonballGenerator
 from generators.cdogs.cdogsGenerator import CdogsGenerator
@@ -74,6 +76,7 @@ from generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
 from generators.pcexhumed.pcexhumedGenerator import PcexhumedGenerator
 from generators.pcsx2.pcsx2Generator import Pcsx2Generator
 from generators.ppsspp.ppssppGenerator import PPSSPPGenerator
+from generators.pre2.pre2Generator import Pre2Generator
 from generators.prototype.prototypeGenerator import PrototypeGenerator
 from generators.pygame.pygameGenerator import PygameGenerator
 from generators.quake3.quake3Generator import Quake3Generator
@@ -127,7 +130,9 @@ generators = {
     'amiberry': AmiberryGenerator(),
     'alephone': AlephoneGenerator(),
     'awgl': AwglGenerator(),
+    'bbja': BbjaGenerator(),
     'bermuda': BermudaGenerator(),
+    'blues': BluesGenerator(),
     'bstone' : BstoneGenerator(),
     'cannonball' : CannonballGenerator(),
     'cdogs' : CdogsGenerator(),
@@ -188,6 +193,7 @@ generators = {
     'pcexhumed': PcexhumedGenerator(),
     'pcsx2': Pcsx2Generator(),
     'ppsspp': PPSSPPGenerator(),
+    'pre2': Pre2Generator(),
     'prototype': PrototypeGenerator(),
     'pygame': PygameGenerator(),
     'quake3': Quake3Generator(),

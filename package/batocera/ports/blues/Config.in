@@ -1,0 +1,15 @@
+config BR2_PACKAGE_BLUES
+	bool "awgl"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  This is a rewrite of the Blues Brothers and Blues Brothers: Jukebox Adventure
+	  game engines developed by Titus Interactive.
+
+	  There is also support for Prehistorik 2.
+
+	  https://github.com/cyxx/blues
+
+comment "BR2_PACKAGE_BLUES needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

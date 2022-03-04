@@ -105,12 +105,18 @@ awgl:
 bbc:
   emulator: libretro
   core:     mess
+bbja:
+  emulator: bbja
+  core:     bbja
 bermuda:
   emulator: bermuda
   core:     bermuda
 bk:
   emulator: libretro
   core:     bk
+blues:
+  emulator: blues
+  core:     blues
 bstone:
   emulator: bstone
   core:     bstone
@@ -478,6 +484,9 @@ pokemini:
 prboom:
   emulator: libretro
   core:     prboom
+pre2:
+  emulator: pre2
+  core:     pre2
 prototype:
   emulator: prototype
   core:     prototype
