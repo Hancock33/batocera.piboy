@@ -1178,6 +1178,9 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 
 	# Arduboy
 	select BR2_PACKAGE_LIBRETRO_ARDUOUS             # ALL
+	
+	# Blues Brothers / Prehistorik 2
+	select BR2_PACKAGE_BLUES			            # ALL
 
 	help
 		All avaible systems for the selected architecture
