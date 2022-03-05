@@ -3,8 +3,8 @@
 #  Blues Brothers / Blues Brothers: Jukebox Adventure / Prehistorik 2
 #
 ################################################################################
-# Version.: Commits on Mar 03, 2022
-BLUES_VERSION = ebeed26155cc0267b02b6abda0fbeec9d718ace9
+# Version.: Commits on Mar 04, 2022
+BLUES_VERSION = 84c0dd31eaf0b1e50d5c44291fbaf913df35cfae
 BLUES_SITE = $(call github,twojstaryzdomu,blues,$(BLUES_VERSION))
 
 BLUES_DEPENDENCIES = sdl2 sdl2_mixer
