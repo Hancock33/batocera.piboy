@@ -78,7 +78,7 @@ endef
 define BATOCERA_CONFIGGEN_BINS
         chmod a+x $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/configgen/emulatorlauncher.py
         (mkdir -p $(TARGET_DIR)/usr/bin/ && cd $(TARGET_DIR)/usr/bin/ && ln -sf /usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/configgen/emulatorlauncher.py emulatorlauncher)
-@if [ "$(BR2_PACKAGE_BATOCERA_TARGET_RPI4)" = "y" ]; then \
+@if [ "$(BR2_PACKAGE_XPI_GAMECON_RPI4)" = "y" ]; then \
 		cp -avr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/configgen/configgen/generators.piboy/* \
 				$(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/configgen/generators ; fi
 endef
