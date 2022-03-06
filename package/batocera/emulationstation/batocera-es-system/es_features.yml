@@ -71,7 +71,7 @@ shared:
         "On":  1
         "Off": 0
     hud:
-      archs_exclude: [s905]
+      archs_exclude: [s905 rpi1 rpi2 rpizero2]
       prompt:      HEADS UP DISPLAY
       description: Show context-sensitive info over the game.
       submenu: DECORATIONS
@@ -4961,8 +4961,11 @@ cemu:
         rumble:
             prompt:      RUMBLE
             choices:
-                "Off":                         0
-                "On":                          1
+                "Off (Default)":               0
+                "25%":                         0.25
+                "50%":                         0.5
+                "75%":                         0.75
+                "100%":                        1
         controller_combination:
             prompt:      CONTROLLER COMBINATION
             description: Pro Controller required for games that require shake motions.
@@ -4971,6 +4974,7 @@ cemu:
                 "GamePad + 4 Sideway Wiimote": 1
                 "5 Pro Controller":            2
                 "5 Sideway Wiimote":           3
+                "Wii U Classic Controller":    4
 
 citra:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
