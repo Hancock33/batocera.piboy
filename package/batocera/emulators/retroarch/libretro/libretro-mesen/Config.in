@@ -2,6 +2,6 @@ config BR2_PACKAGE_LIBRETRO_MESEN
         bool "libretro-mesen"
 	depends on BR2_PACKAGE_RETROARCH
         help
-          A libretro Mesen is a NES/Famicom emulator.
+          A libretro NES/Famicom emulator core.
 
 	  http://www.libretro.com

@@ -5027,7 +5027,7 @@ citra:
                 "On":                    1
         citra_custom_textures:
             group: ADVANCED OPTIONS
-            prompt:      CUSTOM TEXTURES
+            prompt:      LOAD CUSTOM TEXTURES
             description: Preloading is impossible from ES.
             choices:
                 "Off":                   0
