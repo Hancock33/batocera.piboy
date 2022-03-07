@@ -3,8 +3,8 @@
 # CANNONBALL
 #
 ################################################################################
-# Version.: Commits on Mar 04, 2022
-LIBRETRO_CANNONBALL_VERSION = 10601a38aa1d5c2f69eac3362f203f8d3b8d0d32
+# Version.: Commits on Mar 07, 2022
+LIBRETRO_CANNONBALL_VERSION = 17c40f298e1906c59d4a639c4e4363e3758d6539
 LIBRETRO_CANNONBALL_SITE = $(call github,libretro,cannonball,$(LIBRETRO_CANNONBALL_VERSION))
 LIBRETRO_CANNONBALL_LICENSE = COPYRIGHT
 LIBRETRO_CANNONBALL_NON_COMMERCIAL = y
