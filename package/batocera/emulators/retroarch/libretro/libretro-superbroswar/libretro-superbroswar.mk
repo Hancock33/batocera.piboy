@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version.: Commits on Mar 06, 2022
-LIBRETRO_SUPERBROSWAR_VERSION = c0b0527ee490c5302dc31d7f45b95e776ce219a9
+LIBRETRO_SUPERBROSWAR_VERSION = 39a2e7724070589286632309718c5251c43bc679
 LIBRETRO_SUPERBROSWAR_SITE = https://github.com/libretro/superbroswar-libretro.git
 LIBRETRO_SUPERBROSWAR_SITE_METHOD=git
 LIBRETRO_SUPERBROSWAR_GIT_SUBMODULES=YES

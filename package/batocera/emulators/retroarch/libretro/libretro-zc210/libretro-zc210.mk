@@ -50,6 +50,8 @@ endef
 
 define LIBRETRO_ZC210_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/zc210_libretro.so $(TARGET_DIR)/usr/lib/libretro/zc210_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/share/libretro/cores
+	cp -a $(@D)/info/*.info $(TARGET_DIR)/usr/share/libretro/cores/
 endef
 
 $(eval $(generic-package))
