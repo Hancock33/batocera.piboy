@@ -35,7 +35,7 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
   mkdir -p $(TARGET_DIR)/usr/lib
   mkdir -p $(TARGET_DIR)/usr/share/duckstation
 
-  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-nogui $(TARGET_DIR)/usr/bin/duckstation
+  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation* $(TARGET_DIR)/usr/bin/
   cp -R $(@D)/buildroot-build/bin/database      $(TARGET_DIR)/usr/share/duckstation/
   rm -f $(TARGET_DIR)/usr/share/duckstation/database/gamecontrollerdb.txt
   cp -R $(@D)/buildroot-build/bin/inputprofiles $(TARGET_DIR)/usr/share/duckstation/
