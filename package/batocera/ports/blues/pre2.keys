@@ -3,7 +3,7 @@
         {
             "trigger": ["hotkey", "start"],
             "type": "exec",
-            "target": "killall -9 pcre2 && reset"
+            "target": "killall -9 pre2 && reset"
         }
     ]
 }
