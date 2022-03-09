@@ -17,7 +17,10 @@ define EVMAPY_INSTALL_SCRIPTS
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/evmapy/batocera-evmapy $(TARGET_DIR)/usr/bin
 
-@if [ "$(BR2_PACKAGE_BATOCERA_TARGET_RPI4)" = "y" ]; then \
+	@if [ "$(BR2_PACKAGE_XPI_GAMECON_RPI4)" = "y" ]; then \
+		cp -avr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/evmapy/keys.piboy/* \
+				$(TARGET_DIR)/usr/share/evmapy ; \
+	else; 
 		cp -avr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/evmapy/keys/* \
 				$(TARGET_DIR)/usr/share/evmapy ; fi
 endef
