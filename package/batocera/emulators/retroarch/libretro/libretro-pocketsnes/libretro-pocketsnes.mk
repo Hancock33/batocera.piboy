@@ -3,8 +3,8 @@
 # POCKETSNESS
 #
 ################################################################################
-# Version.: Commits on Mar 03, 2022
-LIBRETRO_POCKETSNES_VERSION = ef4fa1dddd1c3ed6887d81898ac10c9e210ae84b
+# Version.: Commits on Mar 10, 2022
+LIBRETRO_POCKETSNES_VERSION = 4a5c4cadd53264f3a6ce6b76caae0375390b8ffc
 LIBRETRO_POCKETSNES_SITE = $(call github,libretro,snes9x2002,$(LIBRETRO_POCKETSNES_VERSION))
 LIBRETRO_POCKETSNES_LICENSE = Non-commercial
 
