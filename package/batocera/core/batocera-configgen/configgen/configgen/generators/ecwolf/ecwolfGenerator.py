@@ -22,7 +22,7 @@ class ECWolfGenerator(Generator):
             os.mkdir(ecwolfSaves)
 
         try:
-            os.chdir(rom)
+            os.chdir(os.path.dirname(rom))
         # Only game directories, not .zip
         except Exception as e:
             print("Error: couldn't go into directory {} ({})".format(rom, e))
