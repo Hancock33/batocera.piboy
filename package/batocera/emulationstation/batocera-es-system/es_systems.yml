@@ -975,11 +975,11 @@ prboom:
   manufacturer: Ports
   release:
   hardware: port
-  extensions: [wad, iwad, pwad]
+  extensions: [wad, iwad, pwad, gzdoom]
   group: ports
   emulators:
     libretro:
-      prboom: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PRBOOM] }
+      prboom: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PRBOOM], incompatible_extensions: [gzdoom] }
     gzdoom:
       gzdoom: { requireAnyOf: [BR2_PACKAGE_GZDOOM] }
   comment_en: |

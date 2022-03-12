@@ -8,7 +8,15 @@ import controllersConfig
 class GzdoomGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
-        commandArray = ["gzdoom", "+set", "vid_preferbackend", "1", "+set", "vid_rendermode", "4", "-iwad", rom]
+        if (rom.__contains__(".gzdoom")):
+            try:
+                f=open(rom)
+                lines=f.readlines()
+                commandArray = ["gzdoom", "+set", "vid_preferbackend", "1", "+set", "vid_rendermode", "4", "-iwad", lines(0), "-file", lines(1)]
+            except:
+                print("Unable to open file")
+        else:
+            commandArray = ["gzdoom", "+set", "vid_preferbackend", "1", "+set", "vid_rendermode", "4", "-iwad", rom]
 
         return Command.Command(
             array=commandArray,
