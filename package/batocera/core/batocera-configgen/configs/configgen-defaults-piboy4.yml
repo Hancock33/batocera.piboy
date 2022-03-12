@@ -10,6 +10,9 @@ default:
 nds:
   emulator: drastic
   core:     drastic
+flash:
+  emulator: lightspark
+  core:     lightspark
 psp:
   options:
     frameskip: automatic
