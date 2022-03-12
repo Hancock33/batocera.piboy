@@ -3,8 +3,8 @@
 # Jump n' Bump
 #
 ################################################################################
-# Version.: Commits on Mar 09, 2022
-LIBRETRO_JUMPNBUMP_VERSION = a66391dcf56d60820db5af7241fcf6cfdb043c40
+# Version.: Commits on Mar 12, 2022
+LIBRETRO_JUMPNBUMP_VERSION = 95f3db0c3df2ef3c96cdeaeb4d985bcc2dcc33f1
 LIBRETRO_JUMPNBUMP_SITE = $(call github,libretro,jumpnbump-libretro,$(LIBRETRO_JUMPNBUMP_VERSION))
 LIBRETRO_JUMPNBUMP_LICENSE = GPL-2.0
 
