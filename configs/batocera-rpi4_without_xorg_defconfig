@@ -91,6 +91,7 @@ BR2_SYSTEM_BIN_SH_DASH=y # /bin/sh implementation; set here because a `choice` c
 #BR2_PACKAGE_BATOCERA_DEV=y
 #BR2_PACKAGE_BATOCERA_DEBUG=y
 BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL=y
+BR2_STRIP_EXCLUDE_FILES="ecwolf eduke32 nblood pcexhumed rednukem voidsw ionfury"
 
 # Enables ccache
 BR2_CCACHE=y
