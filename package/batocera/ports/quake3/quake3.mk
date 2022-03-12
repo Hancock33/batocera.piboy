@@ -3,8 +3,8 @@
 # Quake 3
 #
 ################################################################################
-# Version.: Commits on Aug 28, 2021
-QUAKE3_VERSION = ec8089b0940b973fab28b88267b1571af4ae9b3f
+# Version.: Commits on Mar 11, 2022
+QUAKE3_VERSION = 2a950781626056200be07bbefaa0837f244533f4
 QUAKE3_SITE = $(call github,suijingfeng,vkQuake3,$(QUAKE3_VERSION))
 
 QUAKE3_DEPENDENCIES = sdl2 sdl2_mixer
