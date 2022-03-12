@@ -9,12 +9,9 @@ class GzdoomGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
         if (rom.__contains__(".gzdoom")):
-            try:
-                f=open(rom)
-                lines=f.readlines()
-                commandArray = ["gzdoom", "+set", "vid_preferbackend", "1", "+set", "vid_rendermode", "4", "-iwad", lines(0), "-file", lines(1)]
-            except:
-                print("Unable to open file")
+            f=open(rom)
+            content=f.readlines()
+            commandArray = ["gzdoom", "+set", "vid_preferbackend", "1", "+set", "vid_rendermode", "4", "-iwad", content[0], "-file", content[1]]
         else:
             commandArray = ["gzdoom", "+set", "vid_preferbackend", "1", "+set", "vid_rendermode", "4", "-iwad", rom]
 
@@ -24,5 +21,4 @@ class GzdoomGenerator(Generator):
                 'DOOMWADDIR': '/userdata/roms/prboom',
                 'SDL_AUTO_UPDATE_JOYSTICKS': '0',
                 'SDL_MOUSE_RELATIVE_SPEED_SCALE': '2.0'
-
             })
