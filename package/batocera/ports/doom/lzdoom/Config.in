@@ -1,0 +1,9 @@
+config BR2_PACKAGE_LZDOOM
+	bool "lzdoom"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	select BR2_PACKAGE_ZMUSIC
+	select BR2_HOST_PACKAGE_ZMUSIC
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  LZDoom is a classic style GZDoom fork with lower system requirements
