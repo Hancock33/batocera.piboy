@@ -3,8 +3,8 @@
 # Super Bros War
 #
 ################################################################################
-# Version.: Commits on Mar 12, 2022
-LIBRETRO_SUPERBROSWAR_VERSION = a92224d6cdbfd8d90a2752b76ff968643701596e
+# Version.: Commits on Mar 13, 2022
+LIBRETRO_SUPERBROSWAR_VERSION = 724eac234429a3d284b220930f9519e0cafef84a
 LIBRETRO_SUPERBROSWAR_SITE = https://github.com/libretro/superbroswar-libretro.git
 LIBRETRO_SUPERBROSWAR_SITE_METHOD=git
 LIBRETRO_SUPERBROSWAR_GIT_SUBMODULES=YES
