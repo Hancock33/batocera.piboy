@@ -17,8 +17,13 @@ LZDOOM_CONF_OPTS += -DNO_GTK=ON
 LZDOOM_CONF_OPTS += -DFORCE_CROSSCOMPILE=ON
 LZDOOM_CONF_OPTS += -DHAVE_VULKAN=ON
 LZDOOM_CONF_OPTS += -DIMPORT_EXECUTABLES=$(HOST_LZDOOM_BUILDDIR)/ImportExecutables.cmake
+LZDOOM_CONF_OPTS += -DINSTALL_SOUNDFONT_PATH="/usr/share/lzdoom"
+LZDOOM_CONF_OPTS += -DINSTALL_PK3_PATH="/usr/share/lzdoom"
 
 define LZDOOM_KEYS
+	mkdir -p  $(TARGET_DIR)/usr/share/lzdoom
+	cp -av $(@D)/soundfont $(TARGET_DIR)/usr/share/lzdoom
+	cp -av $(@D)/fm_banks  $(TARGET_DIR)/usr/share/lzdoom
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/doom/lzdoom/prboom.lzdoom.keys $(TARGET_DIR)/usr/share/evmapy
 endef

@@ -1,0 +1,47 @@
+diff --git a/src/gameconfigfile.cpp b/src/gameconfigfile.cpp
+index 17898f3ae..03215cfc5 100644
+--- a/src/gameconfigfile.cpp
++++ b/src/gameconfigfile.cpp
+@@ -105,6 +105,7 @@ FGameConfigFile::FGameConfigFile ()
+ 		SetSection ("IWADSearch.Directories", true);
+ 		SetValueForKey ("Path", ".", true);
+ 		SetValueForKey ("Path", "$DOOMWADDIR", true);
++		SetValueForKey ("Path", "/userdata/roms/prboom", true);
+ #ifdef __APPLE__
+ 		SetValueForKey ("Path", user_docs, true);
+ 		SetValueForKey ("Path", user_app_support, true);
+@@ -116,12 +117,12 @@ FGameConfigFile::FGameConfigFile ()
+ #else
+ 		SetValueForKey ("Path", "$HOME/" GAME_DIR, true);
+ 		SetValueForKey ("Path", "$HOME/.local/share/games/doom", true);
+-		// Arch Linux likes them in /usr/share/doom
++		// Arch Linux likes them in /usr/share/gzdoom
+ 		// Debian likes them in /usr/share/games/doom
+ 		// I assume other distributions don't do anything radically different
+ 		SetValueForKey ("Path", "/usr/local/share/doom", true);
+ 		SetValueForKey ("Path", "/usr/local/share/games/doom", true);
+-		SetValueForKey ("Path", "/usr/share/doom", true);
++		SetValueForKey ("Path", "/usr/share/gzdoom", true);
+ 		SetValueForKey ("Path", "/usr/share/games/doom", true);
+ #endif
+ 	}
+@@ -143,7 +144,7 @@ FGameConfigFile::FGameConfigFile ()
+ 		SetValueForKey ("Path", SHARE_DIR, true);
+ 		SetValueForKey ("Path", "/usr/local/share/doom", true);
+ 		SetValueForKey ("Path", "/usr/local/share/games/doom", true);
+-		SetValueForKey ("Path", "/usr/share/doom", true);
++		SetValueForKey ("Path", "/usr/share/gzdoom", true);
+ 		SetValueForKey ("Path", "/usr/share/games/doom", true);
+ #endif
+ 		SetValueForKey ("Path", "$DOOMWADDIR", true);
+@@ -174,8 +175,8 @@ FGameConfigFile::FGameConfigFile ()
+ 		SetValueForKey("Path", "/usr/local/share/doom/fm_banks", true);
+ 		SetValueForKey("Path", "/usr/local/share/games/doom/soundfonts", true);
+ 		SetValueForKey("Path", "/usr/local/share/games/doom/fm_banks", true);
+-		SetValueForKey("Path", "/usr/share/doom/soundfonts", true);
+-		SetValueForKey("Path", "/usr/share/doom/fm_banks", true);
++		SetValueForKey("Path", "/usr/share/gzdoom/soundfonts", true);
++		SetValueForKey("Path", "/usr/share/gzdoom/fm_banks", true);
+ 		SetValueForKey("Path", "/usr/share/games/doom/soundfonts", true);
+ 		SetValueForKey("Path", "/usr/share/games/doom/fm_banks", true);
+ #endif
