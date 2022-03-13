@@ -56,6 +56,7 @@ from generators.lexaloffle.lexaloffleGenerator import LexaloffleGenerator
 from generators.libretro.libretroGenerator import LibretroGenerator
 from generators.lightspark.lightsparkGenerator import LightsparkGenerator
 from generators.linapple.linappleGenerator import LinappleGenerator
+from generators.lzdoom.lzdoomGenerator import LzdoomGenerator
 from generators.mame.mameGenerator import MameGenerator
 from generators.melonds.melondsGenerator import MelonDSGenerator
 from generators.model2emu.model2emuGenerator import Model2EmuGenerator
@@ -173,6 +174,7 @@ generators = {
     'libretro': LibretroGenerator(),
     'lightspark': LightsparkGenerator(),
     'linapple': LinappleGenerator(),
+    'lzdoom': LzdoomGenerator(),
     'mame' : MameGenerator(),
     'melonds' : MelonDSGenerator(),
     'model2emu': Model2EmuGenerator(),
