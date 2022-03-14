@@ -22,15 +22,7 @@ DROIDPORTS_CONF_OPTS += -DCMAKE_C_FLAGS="-w -mlittle-endian -fsingle-precision-c
 
 define DROIDPORTS_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/DROIDPORTS
-	cp -pvr $(@D)/data $(TARGET_DIR)/usr/share/DROIDPORTS/
-	$(INSTALL) -D $(@D)/buildroot-build/DROIDPORTS $(TARGET_DIR)/usr/share/DROIDPORTS/DROIDPORTS
-	chmod 0754 $(TARGET_DIR)/usr/share/DROIDPORTS/DROIDPORTS
-	echo "cd /usr/share/DROIDPORTS && ./DROIDPORTS" > $(TARGET_DIR)/usr/share/DROIDPORTS/DROIDPORTS.sh
-	chmod 0754 $(TARGET_DIR)/usr/share/DROIDPORTS/DROIDPORTS.sh
-
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/DROIDPORTS/DROIDPORTS.keys $(TARGET_DIR)/usr/share/evmapy
+	cp -pvr $(@D)/buildroot-build/gmloader $(TARGET_DIR)/usr/bin
 endef
 
 $(eval $(cmake-package))
