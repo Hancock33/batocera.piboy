@@ -3,8 +3,8 @@
 # supermodel-RPi4
 #
 ################################################################################
-
-SUPERMODEL_RPI4_VERSION = a7d46d1e2523fa129a2c01f0c01a177c5eef0079
+# Version.: Commits on Jan 06, 2022
+SUPERMODEL_RPI4_VERSION = a3582e8b10aefd4741f80fd25f67d77ba7a22654
 SUPERMODEL_RPI4_SITE = $(call github,dmanlfc,model3-RPi4,$(SUPERMODEL_RPI4_VERSION))
 SUPERMODEL_RPI4_DEPENDENCIES = sdl2 zlib libzip sdl2_net
 SUPERMODEL_RPI4_LICENSE = GPLv3

@@ -3,8 +3,8 @@
 # LZDOOM
 #
 ################################################################################
-# Version.: Commits on Feb 28, 2022 (g3.3mgw branch)
-LZDOOM_VERSION = b077470fb3e30c0a7a8d6a45156771d79b4e64cf
+# Version.: Commits on Dec 28, 2021
+LZDOOM_VERSION = 5f2006df7577f5a42966986adb5bca302c71c626
 LZDOOM_SITE = $(call github,drfrag666,gzdoom,$(LZDOOM_VERSION))
 
 LZDOOM_DEPENDENCIES = sdl2 sdl2_mixer host-zmusic zmusic
