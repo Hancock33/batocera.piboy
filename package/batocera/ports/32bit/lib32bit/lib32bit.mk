@@ -3,9 +3,9 @@
 # 32bit libraries
 #
 ################################################################################
-LIB32BIT_VERSION = 0.1
+LIB32BIT_VERSION = 34.0
 LIB32BIT_SOURCE = batocera-rpi4-32bit-libs.tar.gz
-LIB32BIT_SITE = https://github.com/Hancock33/batocera-rp4-32bit-libs/releases/download/33-20211226
+LIB32BIT_SITE = https://github.com/Hancock33/batocera-rp4-32bit-libs/releases/download/34-20220314
 
 define LIB32BIT_EXTRACT_CMDS
 	mkdir -p $(@D)/target && cd $(@D)/target && tar xf $(DL_DIR)/$(LIB32BIT_DL_SUBDIR)/$(LIB32BIT_SOURCE)
