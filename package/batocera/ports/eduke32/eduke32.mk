@@ -3,8 +3,8 @@
 # EDUKE32
 #
 ################################################################################
-# Version.: Commits on Mar 10, 2022
-EDUKE32_VERSION = 83245fc2a69a45f67589b6a0d45bf6d2c22bfa4e
+# Version.: Commits on Mar 15, 2022
+EDUKE32_VERSION = 5815e24a142d0adf92832c059889c52af5822c0a
 EDUKE32_SITE = https://github.com/nukeykt/NBlood.git
 
 EDUKE32_DEPENDENCIES = sdl2 sdl2_image
