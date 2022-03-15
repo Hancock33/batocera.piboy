@@ -1339,7 +1339,7 @@ def generateCoreSettings(coreSettings, system, rom):
         # SGB
         if (system.name == 'sgb'):
             if system.isOptSet('sameboy_sgb_model'):
-                coreSettings.save('sameboy_model', system.config['sameboy_sgb_model'])
+                coreSettings.save('sameboy_model', '"' + system.config['sameboy_sgb_model'] + '"')
             else:
                 coreSettings.save('sameboy_model', '"Super Game Boy"')
 
