@@ -616,7 +616,7 @@ def generateCoreSettings(coreSettings, system, rom):
             coreSettings.save('puae_mouse_speed', system.config['mouse_speed'])
         else:
             coreSettings.save('puae_mouse_speed', '"200"')
-        # Jump on B
+        # Jump on A
         if system.isOptSet('pad_options'):
             coreSettings.save('puae_retropad_options', system.config['pad_options'])
         elif system.name == 'amigacdtv':
