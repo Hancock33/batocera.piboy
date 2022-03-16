@@ -3677,12 +3677,6 @@ libretro:
                     "150%":       150
                     "170%":       170
                     "200%":       200
-            pad_options:
-                prompt:      JUMP ON B
-                description: Makes second fire button press up instead.
-                choices:
-                    "Off":    disabled
-                    "On":     jump
       systems:
             amiga500:
                 cfeatures:
@@ -3714,6 +3708,13 @@ libretro:
                         choices:
                             "Off":    disabled
                             "On":     enabled
+                    pad_options:
+                        group: ADVANCED OPTIONS
+                        prompt:      JUMP ON A
+                        description: Makes second fire button press up instead.
+                        choices:
+                            "Off":    disabled
+                            "On":     jump
                     controller1_puae:
                         prompt:      CONTROLLER 1 TYPE
                         description: Select controller type for Amiga P1.
@@ -3764,7 +3765,7 @@ libretro:
                             "On":     config
                     pad_options:
                         group: ADVANCED OPTIONS
-                        prompt:      JUMP ON B
+                        prompt:      JUMP ON A
                         description: Makes second fire button press up instead.
                         choices:
                             "Off":    disabled
