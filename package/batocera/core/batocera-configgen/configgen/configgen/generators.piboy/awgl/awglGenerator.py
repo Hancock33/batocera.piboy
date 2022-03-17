@@ -3,6 +3,7 @@
 import Command
 from generators.Generator import Generator
 import controllersConfig
+import configparser
 import os
 
 class AwglGenerator(Generator):
