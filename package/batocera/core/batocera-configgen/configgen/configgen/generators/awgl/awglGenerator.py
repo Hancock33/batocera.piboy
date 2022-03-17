@@ -90,8 +90,8 @@ class AwglGenerator(Generator):
         else:
             commandArray.append("--difficulty=easy")
 
-        #EGA screen mode for DOS
-        if system.isOptSet("awgl_egados") and system.config['awgl_egados'] == 'true':
+        # EGA screen mode for DOS
+        if system.isOptSet("awgl_egados") and system.config['awgl_egados'] == 'enabled':
             commandArray.append("--ega-palette")
 
         return Command.Command(
