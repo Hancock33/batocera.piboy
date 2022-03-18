@@ -73,7 +73,7 @@ msgctxt "game_options"
 msgid "SHADER SET"
 msgstr "シェーダー設定"
 
-#. TRANSLATION: shared, shared, shared
+#. TRANSLATION: shared, shared, shared, awgl
 msgctxt "game_options"
 msgid "GAME RENDERING"
 msgstr ""
@@ -4052,7 +4052,7 @@ msgctxt "game_options"
 msgid "Help games which are too quick or that have bugs."
 msgstr "速すぎるゲームやバグのあるゲームを対処"
 
-#. TRANSLATION: libretro/puae, duckstation, flycast, openbor
+#. TRANSLATION: libretro/puae, duckstation, flycast, openbor, awgl
 msgctxt "game_options"
 msgid "Normal"
 msgstr "通常"
@@ -4208,16 +4208,6 @@ msgstr "全体のマウス速度に影響します"
 
 #. TRANSLATION: libretro/puae, libretro/puae
 msgctxt "game_options"
-msgid "JUMP ON B"
-msgstr "Bでジャンプだ"
-
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/vice_x64, libretro/vice_x64sc
-msgctxt "game_options"
-msgid "Makes second fire button press up instead."
-msgstr "代替えで2番目のボタンを有効にします"
-
-#. TRANSLATION: libretro/puae, libretro/puae
-msgctxt "game_options"
 msgid "FLOPPY TURBO SPEED"
 msgstr "フロッピー　ターボ速度"
 
@@ -4255,6 +4245,16 @@ msgstr "エミュレータのジョイスティックを無効にする"
 msgctxt "game_options"
 msgid "Passes all physical keyboard events for Pad2Key."
 msgstr "すべての物理キーボード操作をPad2Keyで実行します"
+
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/vice_x64, libretro/vice_x64sc
+msgctxt "game_options"
+msgid "JUMP ON A"
+msgstr "Aでジャンプだ"
+
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/vice_x64, libretro/vice_x64sc
+msgctxt "game_options"
+msgid "Makes second fire button press up instead."
+msgstr "代替えで2番目のボタンを有効にします"
 
 #. TRANSLATION: libretro/puae, libretro/puae
 msgctxt "game_options"
@@ -4315,11 +4315,6 @@ msgstr "読み込みの失敗を防ぐために、起動アニメーション中
 msgctxt "game_options"
 msgid "CD TURBO SPEED"
 msgstr "CD ターボ 速度"
-
-#. TRANSLATION: libretro/puae, libretro/vice_x64, libretro/vice_x64sc
-msgctxt "game_options"
-msgid "JUMP ON A"
-msgstr "Aでジャンプだ"
 
 #. TRANSLATION: libretro/puae
 msgctxt "game_options"
@@ -5716,7 +5711,7 @@ msgctxt "game_options"
 msgid "Not all games support Stretch, depending on the video files."
 msgstr "引き伸ばしは、すべてのゲームに対応しているわけではありません"
 
-#. TRANSLATION: daphne
+#. TRANSLATION: daphne, awgl, awgl
 msgctxt "game_options"
 msgid "Original"
 msgstr "オリジナル"
@@ -6289,7 +6284,7 @@ msgctxt "game_options"
 msgid "Japanese"
 msgstr "日本語"
 
-#. TRANSLATION: flycast/wasm4, sonic2013, soniccd
+#. TRANSLATION: flycast/wasm4, sonic2013, soniccd, awgl
 msgctxt "game_options"
 msgid "English"
 msgstr "英語"
@@ -6592,7 +6587,7 @@ msgctxt "game_options"
 msgid "Simple 2x"
 msgstr "Simple 2x"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: pcsx2, awgl
 msgctxt "game_options"
 msgid "Software"
 msgstr "ソフトウェア"
@@ -7923,6 +7918,110 @@ msgctxt "game_options"
 msgid ""
 "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
 msgstr "2人用のシューティングゲームで２つ同時にマウスを使用できるようにします"
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "GAME DIFFICULTY"
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "Select game difficulty."
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "Easy"
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "Hard"
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "GAME LANGUAGE"
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "Select game language."
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "Francais"
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "Deutsch"
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "Espanol"
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "Italiano"
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "Select rendering mode."
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "FULLSCREEN MODE"
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "Select fullscreen mode."
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "Stretched (640x480)"
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "Widescreen (16:10)"
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "SOUND EFFECTS MODE"
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "Select sound effects mode."
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "Remastered"
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "EGA GRAPHICS MODE"
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
+msgid "Simulate the EGA graphics mode (works only with DOS version)."
+msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "JUMP ON B"
+#~ msgstr "Bでジャンプだ"
 
 #~ msgctxt "game_options"
 #~ msgid ""
