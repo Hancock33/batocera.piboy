@@ -7673,6 +7673,52 @@ alephone:
 awgl:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+        awgl_difficulty:
+            prompt:      GAME DIFFICULTY
+            description: Select game difficulty.
+            choices:
+                "Easy":           easy
+                "Normal":         normal
+                "Hard":           hard
+        awgl_language:
+            prompt:      GAME LANGUAGE
+            description: Select game language.
+            choices:
+                "English":        us
+                "Français":       fr
+                "Deutsch":        de
+                "Español":        es
+                "Italiano":       it
+        awgl_render:
+            group: ADVANCED OPTIONS
+            prompt:      GAME RENDERING
+            description: Select rendering mode.
+            choices:
+                "Original":       original
+                "Software":       software
+                "OpenGL":         gl
+        awgl_fullscreen:
+            group: ADVANCED OPTIONS
+            prompt:      FULLSCREEN MODE
+            description: Select fullscreen mode.
+            choices:
+                "Stretched (640x480)":      stretched
+                "Widescreen (16:10)":       wide
+        awgl_audio:
+            group: ADVANCED OPTIONS
+            prompt:      SOUND EFFECTS MODE
+            description: Select sound effects mode.
+            choices:
+                "Original":       original
+                "Remastered":     remastered
+        awgl_egados:
+            group: ADVANCED OPTIONS
+            prompt:      EGA GRAPHICS MODE
+            description: Simulate the EGA graphics mode (works only with DOS version).
+            choices:
+                "On":             enabled
+                "Off":            disabled
 
 bermuda:
   features: [padtokeyboard]
