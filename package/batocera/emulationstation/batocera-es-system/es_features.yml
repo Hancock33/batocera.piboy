@@ -7686,9 +7686,9 @@ awgl:
             description: Select game language.
             choices:
                 "English":        us
-                "Français":       fr
+                "Francais":       fr
                 "Deutsch":        de
-                "Español":        es
+                "Espanol":        es
                 "Italiano":       it
         awgl_render:
             group: ADVANCED OPTIONS
