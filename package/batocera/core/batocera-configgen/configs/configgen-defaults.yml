@@ -651,6 +651,9 @@ tyrquake:
 uzebox:
   emulator: libretro
   core:     uzem
+vaporspec:
+  emulator: libretro
+  core:     vaporspec
 vanillara:
   emulator: vanillara
   core:     vanillara
