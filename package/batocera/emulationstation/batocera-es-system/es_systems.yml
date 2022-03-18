@@ -3784,6 +3784,17 @@ vanillatd:
     vanillatd:
       vanillatd: { requireAnyOf: [BR2_PACKAGE_CANDC] }
 
+vaporspec:
+  name:       Virtual Game Platform
+  manufacturer: Ports
+  release: 2017
+  hardware: computer
+  extensions: [vaporbin]
+  emulators:
+    libretro:
+      vaporspec: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VAPORSPEC] }
+
+
 voidsw:
   name:       Shadow Warrior
   manufacturer: Ports
