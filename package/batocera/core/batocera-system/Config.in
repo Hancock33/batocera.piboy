@@ -1172,7 +1172,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 
 	# Virtual Game Platform
 	select BR2_PACKAGE_LIBRETRO_VAPORSPEC           # ALL
-	
+
 	# Blues Brothers / Prehistorik 2
 	select BR2_PACKAGE_BLUES			            # ALL
 

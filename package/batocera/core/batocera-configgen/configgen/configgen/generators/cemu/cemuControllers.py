@@ -33,7 +33,7 @@ cemuConfig  = batoceraFiles.CONF + '/cemu'
 
 # Rigth Axis Click = Button 7
 # Rigth Axis Up =    Button 41
-# Rigth Axis Down =  Button 47 
+# Rigth Axis Down =  Button 47
 # Rigth Axis Left =  Button 46
 # Rigth Axis Right = Button 40
 
@@ -143,7 +143,7 @@ def generateControllerConfig(system, playersControllers, rom):
             "10": "1",
             "11": "2",
             "12": "3",
-            "13": "39",            
+            "13": "39",
             "14": "45",
             "15": "44",
             "16": "38"
@@ -161,7 +161,7 @@ def generateControllerConfig(system, playersControllers, rom):
     m_encoding = 'UTF-8'
     for playercontroller, pad in sorted(playersControllers.items()):
         root = ET.Element("emulated_controller")
-        doc = ET.SubElement(root, "type")      
+        doc = ET.SubElement(root, "type")
         # Controller combination type
         wiimote = 0
         mappings = wiiUProButtons # default
@@ -199,7 +199,7 @@ def generateControllerConfig(system, playersControllers, rom):
 
         doc = ET.SubElement(root, "controller")
         ctrl = ET.SubElement(doc, "api")
-        ctrl.text = "XInput" # use XInput for now 
+        ctrl.text = "XInput" # use XInput for now
         ctrl = ET.SubElement(doc, "uuid") #uuid is the XInput controller number
         ctrl.text = str(nplayer)
         ctrl = ET.SubElement(doc, "display_name")
@@ -245,7 +245,7 @@ def generateControllerConfig(system, playersControllers, rom):
 
         configFileName = "{}/{}".format(cemuConfig + "/controllerProfiles/", "controller" + str(nplayer) + ".xml")
 
-        # Save Cemu controller profiles      
+        # Save Cemu controller profiles
         with open(configFileName, 'w') as xfile:
             xfile.write(part1 + 'encoding=\"{}\"?>\n'.format(m_encoding) + part2)
             xfile.close()

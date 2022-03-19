@@ -7,7 +7,7 @@
 BTOP_VERSION = v1.2.3
 BTOP_SITE = $(call github,aristocratos,btop,$(BTOP_VERSION))
 BTOP_LICENSE = Apache-2.0
-BTOP_DEPENDENCIES = 
+BTOP_DEPENDENCIES =
 
 define BTOP_BUILD_CMDS
 	cd $(@D); $(MAKE)

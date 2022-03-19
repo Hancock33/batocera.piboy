@@ -6,7 +6,7 @@ config BR2_PACKAGE_MUPEN64PLUS_INPUT_SDL
         help
           Input plugin for Mupen64Plus v2.0 project using SDL.
 		  This is derived from the original Mupen64 blight_input plugin.
-	    
+
 		https://github.com/mupen64plus/
 		https://github.com/mupen64plus/mupen64plus-input-sdl
 
