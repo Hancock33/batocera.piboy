@@ -78,7 +78,7 @@ def generateControllerConfig(controller):
 
     if not os.path.exists(os.path.dirname(configFileName)):
         os.makedirs(os.path.dirname(configFileName))
-         
+
     cfgfile = open(configFileName,'w+')
     # create ini sections
     for section in sections:
@@ -167,7 +167,7 @@ def generateArcadeControllerConfig(controller):
 
     if not os.path.exists(os.path.dirname(configFileName)):
         os.makedirs(os.path.dirname(configFileName))
-         
+
     cfgfile = open(configFileName,'w+')
     # create ini sections
     for section in arcadesections:

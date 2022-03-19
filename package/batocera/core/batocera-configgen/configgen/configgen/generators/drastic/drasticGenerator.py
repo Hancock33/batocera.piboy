@@ -37,17 +37,17 @@ class DrasticGenerator(Generator):
             esvaluedrastichires = 1
         else:
             esvaluedrastichires = 0
-        
+
         if system.isOptSet("drastic_threaded") and system.config["drastic_threaded"] == '1':
             esvaluedrasticthreaded = 1
         else:
-            esvaluedrasticthreaded = 0    
-        
+            esvaluedrasticthreaded = 0
+
         if system.isOptSet("drastic_fix2d") and system.config["drastic_fix2d"] == '1':
             esvaluedrasticfix2d = 1
         else:
-            esvaluedrasticfix2d = 0 
-        
+            esvaluedrasticfix2d = 0
+
         if system.isOptSet("drastic_screen_orientation"):
             esvaluedrasticscreenorientation = system.config["drastic_screen_orientation"]
         else:
@@ -77,7 +77,7 @@ class DrasticGenerator(Generator):
         "screen_scaling"               + " = 0",                                        #No Scaling/Stretch Aspect/1x2x/2x1x/TvSplit
         "screen_swap "                 + " = 0"
         ]
-        
+
         # Write the cfg file
         for line in textList:
             f.write(line)

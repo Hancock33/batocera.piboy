@@ -30,7 +30,7 @@ endef
 define RUFFLE_INSTALL_TARGET_CMDS
     $(INSTALL) -D -m 0755 $(@D)/$(RUFFLE_BIN_DIR)/ruffle_desktop \
              $(TARGET_DIR)/usr/bin/ruffle
-	
+
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ruffle/flash.ruffle.keys $(TARGET_DIR)/usr/share/evmapy
 endef

@@ -1317,7 +1317,7 @@ def generateCoreSettings(coreSettings, system, rom):
                 coreSettings.save('vbam_tilt_sensitivity', system.config['tilt_sensitivity'])
             else:
                 coreSettings.save('vbam_tilt_sensitivity', '"10"')
-                
+
     # SAMEBOY
     if (system.config['core'] == 'sameboy'):
         # GB
