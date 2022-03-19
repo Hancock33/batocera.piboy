@@ -171,4 +171,5 @@ class FlycastGenerator(Generator):
             "XDG_DATA_DIRS":batoceraFiles.flycastBios,
             "FLYCAST_BIOS_PATH":batoceraFiles.flycastBios,
             "VK_ICD_FILENAMES":gpu_icd,
+            "SDL_AUTO_UPDATE_JOYSTICKS": '0'
             })
