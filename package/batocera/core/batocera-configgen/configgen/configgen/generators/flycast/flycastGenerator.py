@@ -26,7 +26,7 @@ class FlycastGenerator(Generator):
                 Config.read(batoceraFiles.flycastConfig)
             except:
                 pass # give up the file
-
+        
         if not Config.has_section("input"):
             Config.add_section("input")
         # For each pad detected
@@ -36,21 +36,24 @@ class FlycastGenerator(Generator):
 
         for index in playersControllers:
             controller = playersControllers[index]
-
+        
             # Get the event number
             eventNum = controller.dev.replace('/dev/input/event', '')
-
+            
             # Write its mapping file
             controllerConfigFile = flycastControllers.generateControllerConfig(controller)
             # write the arcade file variant (atomiswave & naomi)
             flycastControllers.generateArcadeControllerConfig(controller)
-
+            
             # set the evdev_device_id_X
             Config.set("input", 'evdev_device_id_' + controller.player, eventNum)
-
+            
             # Set the evdev_mapping_X
             Config.set("input", 'evdev_mapping_' + controller.player, controllerConfigFile)
 
+            # Ensure controller is on Port A
+            Config.set("input", 'maple_/dev/input/event' + eventNum, "0")
+        
         if not Config.has_section("players"):
             Config.add_section("players")
         # number of players
@@ -85,7 +88,7 @@ class FlycastGenerator(Generator):
             Config.set("config", "pvr.rend", str(system.config["flycast_renderer"]))
         else:
             Config.set("config", "pvr.rend", "0")
-
+        
         # dreamcast specifics
         # language
         if system.isOptSet("flycast_language"):
@@ -127,23 +130,25 @@ class FlycastGenerator(Generator):
         if not os.path.exists(os.path.dirname(batoceraFiles.flycastConfig)):
             os.makedirs(os.path.dirname(batoceraFiles.flycastConfig))
         with open(batoceraFiles.flycastConfig, 'w+') as cfgfile:
-            Config.write(cfgfile)
+            Config.write(cfgfile)        
             cfgfile.close()
-
+            
         # internal config
         # vmuA1
         if not isfile(batoceraFiles.flycastVMUA1):
-            if not isdir(dirname(batoceraFiles.flycastVMUA1)):
+            if not isdir(dirname(batoceraFiles.flycastSaves)):
                 os.mkdir(batoceraFiles.flycastSaves)
-                os.mkdir(dirname(batoceraFiles.flycastVMUA1))
+            if not isdir(dirname(batoceraFiles.flycastSaves) + "/flycast"):
+                os.mkdir((batoceraFiles.flycastSaves) + "/flycast")
             copyfile(batoceraFiles.flycastVMUBlank, batoceraFiles.flycastVMUA1)
         # vmuA2
         if not isfile(batoceraFiles.flycastVMUA2):
-            if not isdir(dirname(batoceraFiles.flycastVMUA2)):
+            if not isdir(dirname(batoceraFiles.flycastSaves)):
                 os.mkdir(batoceraFiles.flycastSaves)
-                os.mkdir(dirname(batoceraFiles.flycastVMUA2))
+            if not isdir(dirname(batoceraFiles.flycastSaves) + "/flycast"):
+                os.mkdir((batoceraFiles.flycastSaves) + "/flycast")
             copyfile(batoceraFiles.flycastVMUBlank, batoceraFiles.flycastVMUA2)
-
+        
         # flycast vulkan workaround - manually point to vulkan icd's in preferred order.
         # pi4
         broadcom_icd = "/usr/share/vulkan/icd.d/broadcom_icd.cortex-a72.json"
@@ -153,7 +158,7 @@ class FlycastGenerator(Generator):
         else:
             gpu_icd = "/usr/share/vulkan/icd.d/nvidia_icd.x86_64.json:/usr/share/vulkan/icd.d/radeon_icd.x86_64.json:/usr/share/vulkan/icd.d/intel_icd.x86_64.json"
 
-        # the command to run
+        # the command to run  
         commandArray = [batoceraFiles.batoceraBins[system.config['emulator']]]
         commandArray.append(rom)
         # Here is the trick to make flycast find files :
@@ -166,5 +171,4 @@ class FlycastGenerator(Generator):
             "XDG_DATA_DIRS":batoceraFiles.flycastBios,
             "FLYCAST_BIOS_PATH":batoceraFiles.flycastBios,
             "VK_ICD_FILENAMES":gpu_icd,
-            "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers),
             })
