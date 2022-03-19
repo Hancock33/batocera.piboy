@@ -41,8 +41,6 @@ class AwglGenerator(Generator):
                 commandArray.append("--render=original")
             elif system.config['awgl_render'] == 'software':
                 commandArray.append("--render=software")
-            elif system.config['awgl_render'] == 'gl':
-                commandArray.append("--render=gl")
         else:
             commandArray.append("--render=original")
 
@@ -97,5 +95,5 @@ class AwglGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             })
