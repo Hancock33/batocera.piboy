@@ -32,9 +32,9 @@ try:
 
         if abs(pwrctrl - pwrctrlOld) > hyst:
             if pwrctrl == 6:
-                os.system("/etc/init.d/S31emulationstation stop && echo 0 > /sys/kernel/xpi_gamecon/flags && /sbin/rmmod xpi_gamecon && shutdown -h now")
+                os.system("/usr/bin/batocera-es-swissknife --reboot")
             if pwrctrl == 134:
-                os.system("/etc/init.d/S31emulationstation stop && echo 0 > /sys/kernel/xpi_gamecon/flags && /sbin/rmmod xpi_gamecon && shutdown -h now")
+                os.system("/usr/bin/batocera-es-swissknife --shutdown")
         pwrctrlOld = pwrctrl
         # Read Battery < 5% shutdown
         battctrlFile = open("/sys/kernel/xpi_gamecon/percent", "r")
