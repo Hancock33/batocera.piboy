@@ -41,8 +41,6 @@ class AwglGenerator(Generator):
                 commandArray.append("--render=original")
             elif system.config['awgl_render'] == 'software':
                 commandArray.append("--render=software")
-            elif system.config['awgl_render'] == 'gl':
-                commandArray.append("--render=gl")
         else:
             commandArray.append("--render=original")
 
