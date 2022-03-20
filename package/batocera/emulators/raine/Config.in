@@ -6,6 +6,8 @@ config BR2_PACKAGE_RAINE
         select BR2_PACKAGE_SDL2_IMAGE
         select BR2_PACKAGE_SDL2_TTF
 		select BR2_PACKAGE_MUPARSER
+		select BR2_PACKAGE_GL4ES
+		select BR2_PACKAGE_GLU
 
 	help
 	  RAINE is an Emulator for Arcade games.
