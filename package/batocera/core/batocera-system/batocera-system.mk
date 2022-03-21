@@ -95,6 +95,11 @@ define BATOCERA_SYSTEM_INSTALL_TARGET_CMDS
 
 	# batocera-boot.conf
 	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-system/batocera-boot.conf $(BINARIES_DIR)/batocera-boot.conf
+	
+	# piboy
+	ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI4),y)
+	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-system/batocera-boot-piboy.conf $(BINARIES_DIR)/batocera-boot.conf
+	endef
 
 	# mounts
 	mkdir -p $(TARGET_DIR)/boot $(TARGET_DIR)/overlay $(TARGET_DIR)/userdata

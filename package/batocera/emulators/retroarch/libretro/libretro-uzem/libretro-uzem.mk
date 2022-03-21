@@ -3,8 +3,8 @@
 # Uzem - an Uzebox emulator (retro-minimalist 8-bit opensource console)
 #
 ################################################################################
-# Version.: Commits on Mar 20, 2022
-LIBRETRO_UZEM_VERSION = 48d2babd68527677a23341f3ef6a1b1767cde401
+# Version.: Commits on Mar 21, 2022
+LIBRETRO_UZEM_VERSION = 4c70043e4ad6a8a3aa6326834fba53f2b1c68699
 LIBRETRO_UZEM_SITE = $(call github,libretro,libretro-uzem,$(LIBRETRO_UZEM_VERSION))
 LIBRETRO_UZEM_LICENSE = MIT
 
