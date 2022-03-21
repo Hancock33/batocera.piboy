@@ -82,6 +82,10 @@ else
 	BATOCERA_SYSTEM_BATOCERA_CONF=unknown
 endif
 
+ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI4),y)
+    PYBOY_INSTALL=y
+endif
+
 define BATOCERA_SYSTEM_INSTALL_TARGET_CMDS
 
 	# version/arch
@@ -95,11 +99,9 @@ define BATOCERA_SYSTEM_INSTALL_TARGET_CMDS
 
 	# batocera-boot.conf
 	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-system/batocera-boot.conf $(BINARIES_DIR)/batocera-boot.conf
-	
-	# piboy
-	ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI4),y)
-	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-system/batocera-boot-piboy.conf $(BINARIES_DIR)/batocera-boot.conf
-	endef
+
+    #piboy
+    @if [ "$(PYBOY_INSTALL)" = "y" ]; then $(INSTALL) -D -v -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-system/batocera-boot-piboy.conf $(BINARIES_DIR)/batocera-boot.conf ; fi
 
 	# mounts
 	mkdir -p $(TARGET_DIR)/boot $(TARGET_DIR)/overlay $(TARGET_DIR)/userdata
