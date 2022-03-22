@@ -469,6 +469,9 @@ pcexhumed:
 pcfx:
   emulator: libretro
   core:     pcfx
+pdp1:
+  emulator: libretro
+  core:     mess
 pet:
   emulator: vice
   core:     xpet
