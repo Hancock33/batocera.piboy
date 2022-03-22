@@ -7,8 +7,12 @@
 STUNTCAR_VERSION = f90f3851a44872c874baade0aad7206ce860f1c8
 STUNTCAR_SITE = $(call github,ptitSeb,stuntcarremake,$(STUNTCAR_VERSION))
 
-STUNTCAR_DEPENDENCIES = gl4es glu sdl2 sdl2_mixer sdl2_ttf openal
+STUNTCAR_DEPENDENCIES = sdl2 sdl2_mixer sdl2_ttf openal
 STUNTCAR_LICENSE = GPL-2.0
+
+ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI4),y)
+STUNTCAR_DEPENDENCIES += gl4es glu
+endif
 
 define STUNTCAR_BUILD_CMDS
 		$(TARGET_CONFIGURE_OPTS) $(MAKE) \
