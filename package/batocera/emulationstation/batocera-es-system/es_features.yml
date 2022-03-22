@@ -7743,6 +7743,7 @@ awgl:
             choices:
                 "Original":       original
                 "Software":       software
+                "OpenGL":         gl   
         awgl_fullscreen:
             group: ADVANCED OPTIONS
             prompt:      FULLSCREEN MODE
