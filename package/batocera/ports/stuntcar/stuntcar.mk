@@ -10,7 +10,7 @@ STUNTCAR_SITE = $(call github,ptitSeb,stuntcarremake,$(STUNTCAR_VERSION))
 STUNTCAR_DEPENDENCIES = sdl2 sdl2_mixer sdl2_ttf openal
 STUNTCAR_LICENSE = GPL-2.0
 
-ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI4),y)
+ifeq ($(!BR2_PACKAGE_BATOCERA_XORG),y)
 STUNTCAR_DEPENDENCIES += gl4es glu
 endif
 
