@@ -457,6 +457,37 @@ def generateCoreSettings(coreSettings, system, rom):
                     'start': "RETROK_RETURN",}
                 for key in uae_mapping:
                     coreSettings.save('puae_mapper_' + key, uae_mapping[key])
+            elif system.isOptSet('puae_pinball_mode') and system.config['puae_pinball_mode'] == "modern_alt":
+                uae_mapping = { 'aspect_ratio_toggle': "---",
+                    'mouse_toggle': "RETROK_RCTRL",
+                    'statusbar': "RETROK_F11",
+                    'vkbd': "---",
+                    'reset': "---",
+                    'zoom_mode_toggle': "RETROK_F12",
+                    'down': "---",
+                    'left': "---",
+                    'a': "---",
+                    'b': "---",
+                    'x': "RETROK_SPACE",
+                    'y': "RETROK_DOWN",
+                    'l': "---",
+                    'l2': "RETROK_LALT",
+                    'l3': "SWITCH_JOYMOUSE",
+                    'ld': "---",
+                    'll': "---",
+                    'lr': "---",
+                    'lu': "---",
+                    'r': "---",
+                    'r2': "RETROK_RALT",
+                    'r3': "TOGGLE_STATUSBAR",
+                    'rd': "---",
+                    'rl': "---",
+                    'rr': "---",
+                    'ru': "---",
+                    'select': "TOGGLE_VKBD",
+                    'start': "RETROK_RETURN",}
+                for key in uae_mapping:
+                    coreSettings.save('puae_mapper_' + key, uae_mapping[key])
             elif system.isOptSet('puae_pinball_mode') and system.config['puae_pinball_mode'] == "classic":
                 uae_mapping = { 'aspect_ratio_toggle': "---",
                     'mouse_toggle': "RETROK_RCTRL",
