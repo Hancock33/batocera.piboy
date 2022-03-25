@@ -3,7 +3,7 @@
 # Prototype (R-Type Clone)
 #
 ################################################################################
-# Version.: Commits on Dec 20, 2020
+# Version: Commits on Dec 20, 2020
 PROTOTYPE_VERSION = 12d2de8639982db12091ca37eeee9036b54f3fa7
 PROTOTYPE_SITE = $(call github,ptitSeb,prototype,$(PROTOTYPE_VERSION))
 

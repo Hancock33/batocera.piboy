@@ -3,7 +3,7 @@
 # xow
 #
 ################################################################################
-# Version.: Commits on Oct 08, 2021
+# Version: Commits on Oct 08, 2021
 XOW_VERSION = a396e3fd3f1334e1b9edd011931316ccf15ce431
 XOW_SITE = $(call github,medusalix,xow,$(XOW_VERSION))
 XOW_DEPENDENCIES = host-libcurl host-cabextract libusb

@@ -3,7 +3,7 @@
 # OPENBOR6412
 #
 ################################################################################
-# Version.:
+# Version:
 OPENBOR6412_VERSION = 05af203b0e5676034678291bbedc0b9fe4c8f898
 OPENBOR6412_SITE = $(call github,DCurrent,openbor,$(OPENBOR6412_VERSION))
 OPENBOR6412_LICENSE = BSD

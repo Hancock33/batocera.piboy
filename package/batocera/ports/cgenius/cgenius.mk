@@ -3,7 +3,7 @@
 # Commander Genius
 #
 ################################################################################
-# Version.: Commits on Nov 25, 2021
+# Version: Commits on Nov 25, 2021
 CGENIUS_VERSION = 26bd84895161167afb7b442a178aea2a384c7b53
 CGENIUS_SITE = https://github.com/gerstrong/Commander-Genius
 

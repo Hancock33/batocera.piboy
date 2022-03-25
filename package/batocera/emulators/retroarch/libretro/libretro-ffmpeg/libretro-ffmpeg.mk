@@ -3,7 +3,7 @@
 # FFMPEG
 #
 ################################################################################
-# Version.: Commits on Aug 28, 2020
+# Version: Commits on Aug 28, 2020
 LIBRETRO_FFMPEG_VERSION = 4920879d2f09a78cdf855403c349457cee1c31da
 LIBRETRO_FFMPEG_SITE = $(call github,libretro,FFmpeg,$(LIBRETRO_FFMPEG_VERSION))
 LIBRETRO_FFMPEG_LICENSE = GPL-3.0

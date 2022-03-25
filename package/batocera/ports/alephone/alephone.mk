@@ -3,7 +3,7 @@
 # ALEPHONE
 #
 ################################################################################
-# Version.: Commits on Mar 20, 2022
+# Version: Commits on Mar 20, 2022
 ALEPHONE_VERSION = b7625f21298da1aa7006750c9ca55421c67506ce
 ALEPHONE_SITE = $(call github,Aleph-One-Marathon,alephone,$(ALEPHONE_VERSION))
 

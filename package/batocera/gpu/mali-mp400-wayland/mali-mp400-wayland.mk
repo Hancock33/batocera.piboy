@@ -3,7 +3,7 @@
 # mali mp400 wayland
 #
 ################################################################################
-# Version.: Commits on Feb 24, 2022
+# Version: Commits on Feb 24, 2022
 MALI_MP400_WAYLAND_VERSION = b35e1b288bdac91a7d401edd04c71ec9fa573040
 MALI_MP400_WAYLAND_SITE = $(call github,caesar-github,libmali,$(MALI_MP400_WAYLAND_VERSION))
 
@@ -47,7 +47,7 @@ endef
 
 define MALI_MP400_WAYLAND_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib
-	
+
 	cp $(@D)/lib/arm-linux-gnueabihf/libmali-utgard-400-r7p0-r1p1-wayland.so \
 		$(TARGET_DIR)/usr/lib/libmali.so
 

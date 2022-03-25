@@ -3,7 +3,7 @@
 # lineapple
 #
 ################################################################################
-# Version.: Commits on Oct 06, 2021
+# Version: Commits on Oct 06, 2021
 LINAPPLE_VERSION = f0d7014af983ef36cb6b3dc46cd6e4925da9b3b0
 LINAPPLE_SITE = $(call github,linappleii,linapple,$(LINAPPLE_VERSION))
 LINAPPLE_LICENSE = GPLv2

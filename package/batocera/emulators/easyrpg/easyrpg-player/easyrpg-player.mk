@@ -3,7 +3,7 @@
 # EASYRPG_PLAYER
 #
 ################################################################################
-# Version.: Release on Oct 29, 2021
+# Version: Release on Oct 29, 2021
 EASYRPG_PLAYER_VERSION = 0.7.0
 EASYRPG_PLAYER_DEPENDENCIES = sdl2 zlib fmt libpng freetype mpg123 libvorbis opusfile liblcf pixman speexdsp libxmp wildmidi fluidsynth
 EASYRPG_PLAYER_LICENSE = MIT

@@ -3,7 +3,7 @@
 # libretro-yabasanshiro
 #
 ################################################################################
-# Version.: Commits on Nov 01, 2021
+# Version: Commits on Nov 01, 2021
 # Need to use this branch : https://github.com/libretro/yabause/tree/yabasanshiro
 LIBRETRO_YABASANSHIRO_VERSION = 2848d5053fef1a69f68c600b65a1b9e0d915056c
 LIBRETRO_YABASANSHIRO_SITE = $(call github,libretro,yabause,$(LIBRETRO_YABASANSHIRO_VERSION))

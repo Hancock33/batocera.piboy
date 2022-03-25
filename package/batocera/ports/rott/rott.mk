@@ -3,7 +3,7 @@
 # ROTT
 #
 ################################################################################
-# Version.: Commits on Sept 21, 2020
+# Version: Commits on Sept 21, 2020
 ROTT_VERSION = 72ce197667478745d9a0ed843aa77af45503149a
 ROTT_SITE = $(call github,zerojay,RoTT,$(ROTT_VERSION))
 

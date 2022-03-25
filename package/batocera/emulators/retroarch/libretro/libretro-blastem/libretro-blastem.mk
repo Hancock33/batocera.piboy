@@ -3,7 +3,7 @@
 # libretro-blastem
 #
 ################################################################################
-# Version: Commits on Aug 10, 2021
+# Version: Commits on Aug 06, 2021
 LIBRETRO_BLASTEM_VERSION = 0786858437ed71996f43b7af0fbe627eb88152fc
 LIBRETRO_BLASTEM_SITE = $(call github,libretro,blastem,$(LIBRETRO_BLASTEM_VERSION))
 LIBRETRO_BLASTEM_LICENSE = GPLv3

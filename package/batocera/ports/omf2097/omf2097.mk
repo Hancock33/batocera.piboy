@@ -3,7 +3,7 @@
 # One Must Fall 2097
 #
 ################################################################################
-# Version.: Commits on Jan 22, 2022
+# Version: Commits on Jan 22, 2022
 OMF2097_VERSION = 29df8ad4c6c340956ba8a290a7e1d24cfd5c5c5f
 OMF2097_SITE = $(call github,omf2097,openomf,$(OMF2097_VERSION))
 

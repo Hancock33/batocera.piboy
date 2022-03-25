@@ -3,7 +3,7 @@
 # Return to Castle Wolfenstein
 #
 ################################################################################
-# Version.: Commits on Mar 08, 2022
+# Version: Commits on Mar 08, 2022
 RTCW_VERSION = 9800ee30885f4b8632c52ff89ff69d4709429fdb
 RTCW_SITE = $(call github,iortcw,iortcw,$(RTCW_VERSION))
 

@@ -3,7 +3,7 @@
 # WITCHAVEN
 #
 ################################################################################
-# Version.: Commits on Jan 26, 2021
+# Version: Commits on Jan 26, 2021
 WITCHAVEN_VERSION = e0f0791a9d9b95c3ef6b1b48f6ed48517d0e653e
 WITCHAVEN_SITE = https://github.com/jonof/jfwhaven.git
 

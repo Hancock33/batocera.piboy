@@ -3,7 +3,7 @@
 # devilutionx
 #
 ################################################################################
-# Version.: Commits on Nov 02, 2021
+# Version: Commits on Nov 02, 2021
 DEVILUTIONX_VERSION = 1.3.0
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX/releases/download/$(DEVILUTIONX_VERSION)
 DEVILUTIONX_SOURCE = devilutionx-src.tar.xz

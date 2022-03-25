@@ -3,7 +3,7 @@
 # LIBRETRO DOLPHIN
 #
 ################################################################################
-# Version.: Commits on Mar 08, 2022
+# Version: Commits on Mar 08, 2022
 LIBRETRO_DOLPHIN_VERSION = 6f22ef47d180aeffac69942a205f79f20b2c8892
 LIBRETRO_DOLPHIN_SITE = $(call github,libretro,dolphin,$(LIBRETRO_DOLPHIN_VERSION))
 LIBRETRO_DOLPHIN_LICENSE = GPLv2

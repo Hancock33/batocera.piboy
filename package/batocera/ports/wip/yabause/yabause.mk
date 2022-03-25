@@ -3,7 +3,7 @@
 # YABAUSE
 #
 ################################################################################
-# Version.: Commits on Dec 18, 2021
+# Version: Commits on Dec 18, 2021
 YABAUSE_VERSION = 7493f1d8908f4437a4c8e43aef1e67325b18f716
 YABAUSE_SITE = https://github.com/devmiyax/yabause.git
 YABAUSE_SITE_METHOD=git

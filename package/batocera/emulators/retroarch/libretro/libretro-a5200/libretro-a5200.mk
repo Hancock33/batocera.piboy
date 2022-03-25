@@ -3,7 +3,7 @@
 # A5200
 #
 ################################################################################
-# Version.: Commits on Mar 07, 2022
+# Version: Commits on Mar 07, 2022
 LIBRETRO_A5200_VERSION = 7eee43299d0abe28828dee2b86f100b066391866
 LIBRETRO_A5200_SITE = $(call github,libretro,a5200,$(LIBRETRO_A5200_VERSION))
 LIBRETRO_A5200_LICENSE = GPL
