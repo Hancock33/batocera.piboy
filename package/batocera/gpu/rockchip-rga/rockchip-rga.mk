@@ -3,7 +3,7 @@
 # ROCKCHIP_RGA
 #
 ################################################################################
-# Version.: Commits on Aug 5, 2021
+# Version: Commits on Aug 5, 2021
 ROCKCHIP_RGA_VERSION = df26244eb0c3991df319d4276ab80e8c0bf91f64
 
 ROCKCHIP_RGA_SOURCE = rockchip-rga-$(ROCKCHIP_RGA_VERSION).tar.gz

@@ -3,7 +3,7 @@
 # SIMCOUPE
 #
 ################################################################################
-# Version.: Commits on Mar 12, 2022
+# Version: Commits on Mar 12, 2022
 SIMCOUPE_VERSION = 41c7ce1444a4a008ed6a6e08776b15db41ceb184
 SIMCOUPE_SITE = $(call github,simonowen,simcoupe,$(SIMCOUPE_VERSION))
 

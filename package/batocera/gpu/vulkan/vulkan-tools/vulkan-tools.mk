@@ -3,7 +3,7 @@
 # VULKAN_TOOLS
 #
 ################################################################################
-# Version.: Commits on Mar 23, 2022
+# Version: Commits on Mar 23, 2022
 VULKAN_TOOLS_VERSION = 3758a53671b0cb16a74b6780609e58be4741ad9e
 
 VULKAN_TOOLS_SITE =  $(call github,KhronosGroup,Vulkan-Tools,$(VULKAN_TOOLS_VERSION))

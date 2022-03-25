@@ -3,7 +3,7 @@
 # XPI_GAMECON_RPI3
 #
 ################################################################################
-# Version.: Commits on Jan 31, 2022
+# Version: Commits on Jan 31, 2022
 XPI_GAMECON_RPI3_VERSION = f7cd95886583c72d98ba3570b9f5c928ba182ac9
 XPI_GAMECON_RPI3_SITE = $(call github,hancock33,piboycontrols,$(XPI_GAMECON_RPI3_VERSION))
 XPI_GAMECON_RPI3_DEPENDENCIES = linux

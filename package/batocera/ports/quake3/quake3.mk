@@ -3,7 +3,7 @@
 # Quake 3
 #
 ################################################################################
-# Version.: Commits on Mar 11, 2022
+# Version: Commits on Mar 11, 2022
 QUAKE3_VERSION = 2a950781626056200be07bbefaa0837f244533f4
 QUAKE3_SITE = $(call github,suijingfeng,vkQuake3,$(QUAKE3_VERSION))
 

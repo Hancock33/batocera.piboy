@@ -3,7 +3,7 @@
 # rpi-userland
 #
 ################################################################################
-# Version.: Commits on Feb 02, 2022
+# Version: Commits on Feb 02, 2022
 RPI_USERLAND_BATOCERA_VERSION = 8fa944c74085aacd99da3e733af8dc5ac9b04fd9
 RPI_USERLAND_BATOCERA_SITE = $(call github,raspberrypi,userland,$(RPI_USERLAND_BATOCERA_VERSION))
 

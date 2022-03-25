@@ -3,7 +3,7 @@
 # Raptor: Call of the Shadows Clone
 #
 ################################################################################
-# Version.: Commits on Feb 12, 2021
+# Version: Commits on Feb 12, 2021
 RAPTORCOTS_VERSION = 19c4d684acd87b149cf2e00975d73db5d8875e82
 RAPTORCOTS_SITE = https://github.com/aroldanju/raptor-call-of-the-shadows.git
 RAPTORCOTS_SITE_METHOD=git

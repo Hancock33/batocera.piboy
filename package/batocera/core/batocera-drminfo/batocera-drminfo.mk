@@ -3,7 +3,7 @@
 # drminfo
 #
 ################################################################################
-# Version.: Commits on May 27, 2020
+# Version: Commits on May 27, 2020
 BATOCERA_DRMINFO_VERSION = 1
 BATOCERA_DRMINFO_SOURCE =
 BATOCERA_DRMINFO_LICENSE = GPLv3+

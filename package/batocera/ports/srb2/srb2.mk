@@ -3,7 +3,7 @@
 # Sonic Robo Blast 2
 #
 ################################################################################
-# Version.: Commits on Mar 13, 2022
+# Version: Commits on Mar 13, 2022
 SRB2_VERSION = 29892a5f0c26f869e57587a524c9be1a02394c50
 SRB2_SITE = $(call github,STJr,SRB2,$(SRB2_VERSION))
 

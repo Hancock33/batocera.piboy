@@ -3,7 +3,7 @@
 # Vice Emulation
 #
 ################################################################################
-# Version.: Jan 22, 2022
+# Version: Jan 22, 2022
 VICE_VERSION = 3.6.1
 VICE_SOURCE = vice-$(VICE_VERSION).tar.gz
 VICE_SITE = https://sourceforge.net/projects/vice-emu/files/releases

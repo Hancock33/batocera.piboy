@@ -3,7 +3,7 @@
 # Yamagi Quake II
 #
 ################################################################################
-# Version.: Commits on Mar 12, 2022
+# Version: Commits on Mar 12, 2022
 YQUAKE2_VERSION = bbe639a7b048c73961a25b8edcfe8711e29f3749
 YQUAKE2_SITE = $(call github,yquake2,yquake2,$(YQUAKE2_VERSION))
 

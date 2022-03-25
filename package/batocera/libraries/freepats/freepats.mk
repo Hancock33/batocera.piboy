@@ -3,7 +3,7 @@
 # FreePatsGM-SF2
 #
 ################################################################################
-# Version.: Commits on Feb 19, 2006
+# Version: Commits on Feb 19, 2006
 FREEPATS_VERSION = 20060219
 FREEPATS_SITE =  https://freepats.zenvoid.org
 FREEPATS_SOURCE = freepats-$(FREEPATS_VERSION).tar.xz

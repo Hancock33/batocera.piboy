@@ -3,7 +3,7 @@
 # LIBRETRO_EASYRPG
 #
 ################################################################################
-# Version.: Release 0.7.0
+# Version: Release 0.7.0
 LIBRETRO_EASYRPG_VERSION = 0.7.0
 LIBRETRO_EASYRPG_DEPENDENCIES = sdl2 zlib fmt libpng freetype mpg123 libvorbis opusfile pixman speexdsp libxmp wildmidi liblcf fluidsynth
 LIBRETRO_EASYRPG_LICENSE = MIT

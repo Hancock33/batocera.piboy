@@ -3,7 +3,7 @@
 #  Brogue Community Edition
 #
 ################################################################################
-# Version.: Commits on Feb 25, 2022
+# Version: Commits on Feb 25, 2022
 BROGUECE_VERSION = b209ecde1b512fce31e23485abe3faec668a14ef
 BROGUECE_SITE = $(call github,tmewett,BrogueCE,$(BROGUECE_VERSION))
 

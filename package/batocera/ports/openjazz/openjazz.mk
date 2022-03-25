@@ -3,7 +3,7 @@
 # OPENJAZZ
 #
 ################################################################################
-# Version.: Commits on Aug 28, 2021
+# Version: Commits on Aug 28, 2021
 OPENJAZZ_VERSION = 8108082394a2ca1007b2444b4099d9f18afcb530
 OPENJAZZ_SITE =  $(call github,AlisterT,openjazz,$(OPENJAZZ_VERSION))
 

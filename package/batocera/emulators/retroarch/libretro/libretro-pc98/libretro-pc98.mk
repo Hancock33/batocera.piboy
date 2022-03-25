@@ -3,7 +3,7 @@
 # LIBRETRO PC98
 #
 ################################################################################
-# Version.: Commits on May 10, 2020
+# Version: Commits on May 10, 2020
 LIBRETRO_PC98_VERSION = rev.22
 LIBRETRO_PC98_SITE = $(call github,AZO234,NP2kai,$(LIBRETRO_PC98_VERSION))
 LIBRETRO_PC98_LICENSE = GPLv3

@@ -3,7 +3,7 @@
 # HURRICAN
 #
 ################################################################################
-# Version.: Commits on Mar 04, 2022
+# Version: Commits on Mar 04, 2022
 HURRICAN_VERSION = cb4d00876e062a5d415d3eca45488344493313f0
 HURRICAN_SITE = https://github.com/drfiemost/Hurrican.git
 

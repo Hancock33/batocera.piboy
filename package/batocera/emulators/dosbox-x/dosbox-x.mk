@@ -3,7 +3,7 @@
 # DosBox-X
 #
 ################################################################################
-# Version.: Commits on Nov 01, 2021
+# Version: Commits on Nov 01, 2021
 DOSBOX_X_VERSION = dosbox-x-v0.83.19
 DOSBOX_X_SITE = $(call github,joncampbell123,dosbox-x,$(DOSBOX_X_VERSION))
 DOSBOX_X_DEPENDENCIES = sdl2 sdl2_net fluidsynth zlib libpng libogg libvorbis linux-headers

@@ -3,7 +3,7 @@
 # mupen64plus-gliden64-plugin
 #
 ################################################################################
-# Version.: Commits on Mar 13, 2022
+# Version: Commits on Mar 13, 2022
 MUPEN64PLUS_GLIDEN64_VERSION = c8b3f6378b3d41b3f39d4d5ed0621dcb860c4b9e
 MUPEN64PLUS_GLIDEN64_SITE = $(call github,gonetz,GLideN64,$(MUPEN64PLUS_GLIDEN64_VERSION))
 MUPEN64PLUS_GLIDEN64_LICENSE = GPLv2

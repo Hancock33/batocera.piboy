@@ -3,7 +3,7 @@
 # BENNUGD_BGDC
 #
 ################################################################################
-# Version.: Commits on Oct 06, 2021
+# Version: Commits on Oct 06, 2021
 BENNUGD_BGDC_VERSION = 60ee3389efcf9b402d66035e87f33d17d70cbd83
 BENNUGD_BGDC_SITE = $(call github,christianhaitian,bennugd-monolithic,$(BENNUGD_BGDC_VERSION))
 
