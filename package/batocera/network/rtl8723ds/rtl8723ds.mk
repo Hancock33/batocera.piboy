@@ -3,8 +3,8 @@
 # RTL8723DS
 #
 ################################################################################
-# Version: Commits on Jan 18, 2022
-RTL8723DS_VERSION = 2c218a36ed612cd9e6fc60be8081fd6479f4f602
+# Version: Commits on Jan 26, 2022
+RTL8723DS_VERSION = 76fb80685be9920a1d5ac7003102dcdfb76daa6b
 RTL8723DS_SITE = $(call github,lwfinger,rtl8723ds,$(RTL8723DS_VERSION))
 RTL8723DS_LICENSE = GPL-2.0
 RTL8723DS_LICENSE_FILES = LICENSE
