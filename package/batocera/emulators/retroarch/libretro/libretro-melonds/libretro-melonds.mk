@@ -3,7 +3,7 @@
 # libretro-melonds
 #
 ################################################################################
-# Version: Commits on Mar 08, 2022
+# Version: Commits on Mar 9, 2022
 LIBRETRO_MELONDS_VERSION = e93ec3e462d3dfc1556781510a3cee113f02abb2
 LIBRETRO_MELONDS_SITE = $(call github,libretro,melonds,$(LIBRETRO_MELONDS_VERSION))
 LIBRETRO_MELONDS_LICENSE = GPLv2

@@ -1,6 +1,6 @@
 ################################################################################
 #
-# VITAQUAKE2
+# libretro-vitaquake2
 #
 ################################################################################
 # Version: Commits on Dec 15, 2021
@@ -30,4 +30,3 @@ define LIBRETRO_VITAQUAKE2_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
-

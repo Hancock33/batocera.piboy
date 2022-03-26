@@ -1,10 +1,10 @@
 ################################################################################
 #
-# EMUSCV
+# libretro-emuscv
 #
 ################################################################################
-# Version: Commits on Dec 12, 2021
-LIBRETRO_EMUSCV_VERSION = 9fcce6e65730d6a0d1ddda40d6eeb5db652c82de
+# Version: Commits on 20 Mar, 2022
+LIBRETRO_EMUSCV_VERSION = 112c83930a1959e3d6f81693be1bacae98360539
 LIBRETRO_EMUSCV_SITE = $(call gitlab,MaaaX-EmuSCV,libretro-emuscv,$(LIBRETRO_EMUSCV_VERSION))
 LIBRETRO_EMUSCV_LICENSE = GPLv2
 
