@@ -3,7 +3,7 @@
 # libretro-xrick
 #
 ################################################################################
-# Version: Commits on Mar 2, 2022
+# Version: Commits on Mar 01, 2022
 LIBRETRO_XRICK_VERSION = b70e04f7d418707ffaa6282bf1feb7e243b46f04
 LIBRETRO_XRICK_SITE = $(call github,libretro,xrick-libretro,$(LIBRETRO_XRICK_VERSION))
 LIBRETRO_XRICK_LICENSE = GPL-3.0
