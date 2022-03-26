@@ -1,16 +1,16 @@
-################################################################################
+##########################################################™™######################
 #
-# MAME
+# libretro-mame
 #
 ################################################################################
-# Version: Commits on Mar 17, 2022
+# Version: Commits on Mar 18, 2022 (v0.241)
 LIBRETRO_MAME_VERSION = 012bb32965339b7ad7c0328a5fb6b35806d39fb2
 LIBRETRO_MAME_SITE = $(call github,libretro,mame,$(LIBRETRO_MAME_VERSION))
 LIBRETRO_MAME_LICENSE = MAME
 LIBRETRO_MAME_DEPENDENCIES = retroarch
 
 # Limit number of jobs not to eat too much RAM....
-LIBRETRO_MAME_JOBS=30
+LIBRETRO_MAME_JOBS=4
 
 ifeq ($(BR2_x86_64),y)
 LIBRETRO_MAME_EXTRA_ARGS += PTR64=1 LIBRETRO_CPU=x86_64 PLATFORM=x86_64

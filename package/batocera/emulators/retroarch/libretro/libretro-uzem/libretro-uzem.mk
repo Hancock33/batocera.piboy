@@ -1,6 +1,6 @@
 ################################################################################
 #
-# Uzem - an Uzebox emulator (retro-minimalist 8-bit opensource console)
+# libretro-uzem
 #
 ################################################################################
 # Version: Commits on Mar 21, 2022
