@@ -3,7 +3,7 @@
 # MESS
 #
 ################################################################################
-# Version.: Commits on Mar 17, 2022
+# Version: Commits on Mar 17, 2022
 LIBRETRO_MESS_VERSION = 012bb32965339b7ad7c0328a5fb6b35806d39fb2
 LIBRETRO_MESS_SITE = $(call github,libretro,mame,$(LIBRETRO_MESS_VERSION))
 LIBRETRO_MESS_LICENSE = MESS

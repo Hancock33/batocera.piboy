@@ -3,7 +3,7 @@
 # ROCKCHIP MPP
 #
 ################################################################################
-# Version.: Commits on Nov 2, 2021
+# Version: Commits on Nov 2, 2021
 ROCKCHIP_MPP_VERSION = 786b79f9767d24bed618be60046546b508f9190e
 ROCKCHIP_MPP_SITE =  $(call github,rockchip-linux,mpp,$(ROCKCHIP_MPP_VERSION))
 ROCKCHIP_MPP_LICENSE = Apache License 2.0

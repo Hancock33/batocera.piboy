@@ -3,8 +3,8 @@
 # SuperTuxKart
 #
 ################################################################################
-# Version.: Commits on Mar 16, 2022
-STK_VERSION = c19327aaeb62ba2ee2036b5e90c875fd1a999923
+# Version: Commits on Mar 26, 2022
+STK_VERSION = 37a57d00113bece5e74ffd613865ad75c1e5e719
 STK_SITE = https://github.com/supertuxkart/stk-code.git
 STK_SITE_METHOD=git
 STK_GIT_SUBMODULES=YES
@@ -18,6 +18,7 @@ STK_CONF_OPTS += -USE_GLES2=ON
 STK_CONF_OPTS += -DCHECK_ASSETS=OFF
 STK_CONF_OPTS += -DUSE_WIIUSE=OFF
 STK_CONF_OPTS += -DCMAKE_CXX_FLAGS="-DEGL_NO_X11"
+STK_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 
 define STK_ROMS_DIR
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/stk
@@ -29,7 +30,6 @@ define STK_ROMS_DIR
 	ln -sf /userdata/roms/stk/sfx $(TARGET_DIR)/usr/share/supertuxkart/data
 	ln -sf /userdata/roms/stk/textures $(TARGET_DIR)/usr/share/supertuxkart/data
 	ln -sf /userdata/roms/stk/tracks $(TARGET_DIR)/usr/share/supertuxkart/data
-	cp -pvr $(@D)/buildroot-build/lib/libsquish/libsquish.so* $(TARGET_DIR)/usr/lib
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/supertuxkart/config-0.10
 	cp  -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stk/*.xml $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/supertuxkart/config-0.10
 	# evmap config

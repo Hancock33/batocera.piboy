@@ -3,7 +3,7 @@
 # Stunt Car Racer Remake
 #
 ################################################################################
-# Version.: Commits on Jul 18, 2021
+# Version: Commits on Jul 18, 2021
 STUNTCAR_VERSION = f90f3851a44872c874baade0aad7206ce860f1c8
 STUNTCAR_SITE = $(call github,ptitSeb,stuntcarremake,$(STUNTCAR_VERSION))
 

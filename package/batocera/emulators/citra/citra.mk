@@ -10,7 +10,7 @@ CITRA_GIT_SUBMODULES=YES
 CITRA_LICENSE = GPLv2
 
 # Use citra-android for AArch64 (SDL2 only)
-# Version.: Commits on Sep 11, 2021
+# Version: Commits on Sep 11, 2021
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S922X),y)
 CITRA_VERSION = 6f6f9a091085305154375028f3342aad16697f3c
 CITRA_SITE = https://github.com/citra-emu/citra-android.git

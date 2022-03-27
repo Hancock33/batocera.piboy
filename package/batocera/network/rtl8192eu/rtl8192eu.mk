@@ -3,7 +3,7 @@
 # rtl8192eu
 #
 ################################################################################
-# Version.: Commits on Mar 13, 2022
+# Version: Commits on Mar 13, 2022
 RTL8192EU_VERSION = e0f967cea1d0037c730246c572f7fef000865ff7
 
 RTL8192EU_SITE = $(call github,Mange,rtl8192eu-linux-driver,$(RTL8192EU_VERSION))

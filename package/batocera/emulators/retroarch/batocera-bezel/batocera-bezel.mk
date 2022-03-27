@@ -3,7 +3,7 @@
 # batocera bezel
 #
 ################################################################################
-# Version.: Commits on Feb 1, 2022
+# Version: Commits on Feb 01, 2022
 BATOCERA_BEZEL_VERSION = 6a64404e9f0008b737c56c12ba53710d30036d6f
 BATOCERA_BEZEL_SITE = $(call github,batocera-linux,batocera-bezel,$(BATOCERA_BEZEL_VERSION))
 

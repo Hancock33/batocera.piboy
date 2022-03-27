@@ -3,7 +3,7 @@
 # tsugaru
 #
 ################################################################################
-# Version.: Commits on Feb 19, 2022
+# Version: Commits on Feb 19, 2022
 TSUGARU_VERSION = v20220219
 TSUGARU_SITE = $(call github,captainys,TOWNSEMU,$(TSUGARU_VERSION))
 TSUGARU_DEPENDENCIES = libglu

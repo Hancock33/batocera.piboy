@@ -3,7 +3,7 @@
 # mali g52
 #
 ################################################################################
-# Version.: Commits on Nov 13, 2019
+# Version: Commits on Nov 13, 2019
 MALI_G52_VERSION = d4000def121b818ae0f583d8372d57643f723fdc
 MALI_G52_SITE = $(call github,LibreELEC,libmali,$(MALI_G52_VERSION))
 MALI_G52_INSTALL_STAGING = YES

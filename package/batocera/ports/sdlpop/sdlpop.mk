@@ -3,7 +3,7 @@
 # SDLPOP
 #
 ################################################################################
-# Version.: Commits on Feb 19, 2022
+# Version: Commits on Feb 19, 2022
 SDLPOP_VERSION = 211796b7a905028b6c1583bb6c78014bfaa385a0
 SDLPOP_SITE = $(call github,NagyD,SDLPoP,$(SDLPOP_VERSION))
 SDLPOP_SUBDIR = src

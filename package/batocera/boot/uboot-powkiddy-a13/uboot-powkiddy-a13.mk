@@ -23,7 +23,7 @@ define UBOOT_POWKIDDY_A13_BUILD_CMDS
 
     # Generate uboot.img
     $(@D)/tools/loaderimage --pack --uboot $(@D)/u-boot-dtb.bin $(@D)/uboot.img --size 1024 4
-  
+
     # Generate trust.img
     $(@D)/tools/loaderimage --pack --trustos $(BINARIES_DIR)/rkbin/bin/rk31/rk3126_tee_ta_v2.01.bin $(@D)/trust.img --size 1024 4
 endef

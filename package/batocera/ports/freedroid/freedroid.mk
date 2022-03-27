@@ -3,7 +3,7 @@
 # Freedroid Classic (Paradroid Clone)
 #
 ################################################################################
-# Version.: Commits on Apr 07, 2021
+# Version: Commits on Apr 07, 2021
 FREEDROID_VERSION = 2d5cf64ff5227ee55e133ba392b8ace74d1df2cc
 FREEDROID_SITE = $(call github,ReinhardPrix,FreedroidClassic,$(FREEDROID_VERSION))
 

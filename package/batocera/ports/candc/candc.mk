@@ -3,7 +3,7 @@
 # Vanilla Conquer
 #
 ################################################################################
-# Version.: Commits on Jan 08, 2022
+# Version: Commits on Jan 08, 2022
 CANDC_VERSION = dfae664a3f835e9e332d0af89047195be456c9bb
 CANDC_SITE = $(call github,TheAssemblyArmada,Vanilla-Conquer,$(CANDC_VERSION))
 
