@@ -1,0 +1,32 @@
+diff --git a/source/core/gameconfigfile.cpp b/source/core/gameconfigfile.cpp
+index 68e63b9c9..0c2553731 100644
+--- a/source/core/gameconfigfile.cpp
++++ b/source/core/gameconfigfile.cpp
+@@ -77,7 +77,9 @@ FGameConfigFile::FGameConfigFile ()
+ 	{
+ 		SetSection ("GameSearch.Directories", true);
+ 		SetValueForKey ("Path", ".", true);
+-		SetValueForKey ("Path", "./*", true);
++		SetValueForKey ("Path", "$GAMEDIR", true);
++		SetValueForKey ("Path", "/usr/share/games/raze", true);
++
+ #ifdef __APPLE__
+ 		SetValueForKey ("Path", user_docs + "/*", true);
+ 		SetValueForKey ("Path", user_app_support + "/EDuke32", true);
+@@ -116,7 +118,6 @@ FGameConfigFile::FGameConfigFile ()
+ 		SetValueForKey("Path", "/usr/local/share/games/voidsw", true);
+ 
+ #endif
+-		SetValueForKey ("Path", "$STEAM", true); // also covers GOG.
+ 	}
+ 
+ 	// Set default search paths if none present
+@@ -132,6 +133,8 @@ FGameConfigFile::FGameConfigFile ()
+ 		SetValueForKey ("Path", "$PROGDIR", true);
+ 		SetValueForKey ("Path", "$GAMEDIR", true);
+ #else
++		SetValueForKey ("Path", "$GAMEDIR", true);
++		SetValueForKey ("Path", "/usr/share/games/raze", true);
+ 		SetValueForKey ("Path", "$HOME/" GAME_DIR, true);
+ 		SetValueForKey ("Path", SHARE_DIR, true);
+ 		SetValueForKey ("Path", "/usr/share/games/jfduke3d", true);
