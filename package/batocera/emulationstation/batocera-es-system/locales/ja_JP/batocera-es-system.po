@@ -4369,6 +4369,11 @@ msgstr ""
 
 #. TRANSLATION: libretro/puae
 msgctxt "game_options"
+msgid "Modern Alternative"
+msgstr ""
+
+#. TRANSLATION: libretro/puae
+msgctxt "game_options"
 msgid "Inserts CD during boot animation to prevent loading fail."
 msgstr "読み込みの失敗を防ぐために、起動アニメーション中にCDを挿入します"
 
@@ -7495,6 +7500,42 @@ msgstr "拡大縮小して、最大ディスプレイ表示にします"
 msgctxt "game_options"
 msgid "STRETCH TO DISPLAY AREA"
 msgstr "ディスプレイ表示エリアを合わせる"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Can Fix broken graphics in some games."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "WRITE DEPTH BUFFER"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "May help to fix choppy audio on weaker CPUs."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "PREFERRED SPU THREADS"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "0 (Default)"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"Enable this option if you get missing graphics or broken lighting ingame."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "WRITE COLOUR BUFFERS"
+msgstr ""
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
