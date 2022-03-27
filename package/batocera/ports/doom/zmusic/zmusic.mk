@@ -3,7 +3,7 @@
 # GZDOOM Music
 #
 ################################################################################
-# Version.: Commits on Dec 29, 2021
+# Version: Commits on Dec 29, 2021
 ZMUSIC_VERSION = 6b5aebf6a33d83912de16ed5a7999946bd7b6988
 ZMUSIC_SITE = $(call github,coelckers,ZMusic,$(ZMUSIC_VERSION))
 

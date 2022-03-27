@@ -3,7 +3,7 @@
 # Tomb Raider
 #
 ################################################################################
-# Version.: Commits on Mar 20, 2022
+# Version: Commits on Mar 20, 2022
 OPENLARA_VERSION = d9816be0384f1b00655a5f3476ed0cd0b5a1c65c
 OPENLARA_SITE = $(call github,XProger,OpenLara,$(OPENLARA_VERSION))
 

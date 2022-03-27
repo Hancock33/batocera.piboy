@@ -1,9 +1,9 @@
 ################################################################################
 #
-# FBALPHA
+# libretro-fbalpha
 #
 ################################################################################
-# Version.: Commits on Jun 02, 2021
+# Version: Commits on Jun 02, 2021
 LIBRETRO_FBALPHA_VERSION = 23f98fc7cf4f2f216149c263cf5913d2e28be8d4
 LIBRETRO_FBALPHA_SITE = $(call github,libretro,fbalpha2012,$(LIBRETRO_FBALPHA_VERSION))
 LIBRETRO_FBALPHA_LICENSE = Non-commercial

@@ -3,7 +3,7 @@
 # Blake Stone
 #
 ################################################################################
-# Version.: Commits on Feb 20, 2022
+# Version: Commits on Feb 20, 2022
 BSTONE_VERSION = 6699d5a421c912f2b6e74daf4677cc3e2267729b
 BSTONE_SITE = $(call github,bibendovsky,bstone,$(BSTONE_VERSION))
 

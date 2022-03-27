@@ -12,7 +12,7 @@
 # List of games that require custom libraries (a few are covered by the `mobile_hacks` branch):
 #
 #   https://github.com/FWGS/xash3d-fwgs/blob/master/Documentation/supported-mod-list.md#list-of-games-and-mods-with-custom-gamedll
-# Version.: Commits on Apr 18, 2021
+# Version: Commits on Apr 18, 2021
 HLSDK_XASH3D_VERSION = 41371a3b0c78314271f4658bed5ab0a3dab32960
 HLSDK_XASH3D_SITE = $(call github,FWGS,hlsdk-xash3d,$(HLSDK_XASH3D_VERSION))
 HLSDK_XASH3D_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf libsodium

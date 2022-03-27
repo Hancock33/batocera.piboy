@@ -3,7 +3,7 @@
 # Abuse
 #
 ################################################################################
-# Version.: Commits on Aug 18, 2021
+# Version: Commits on Aug 18, 2021
 ABUSE_VERSION = eb33c63145587454d9d6ce9e5d0d535208bc15e5
 ABUSE_SITE = $(call github,Xenoveritas,abuse,$(ABUSE_VERSION))
 

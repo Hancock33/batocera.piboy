@@ -3,7 +3,7 @@
 # mupen64plus-ui-console
 #
 ################################################################################
-# Version.: Commits on Mar 08, 2022
+# Version: Commits on Mar 08, 2022
 MUPEN64PLUS_UI_CONSOLE_VERSION = b5f62979ed77e526877c9c67dbb8568a3511347c
 MUPEN64PLUS_UI_CONSOLE_SITE = $(call github,mupen64plus,mupen64plus-ui-console,$(MUPEN64PLUS_UI_CONSOLE_VERSION))
 MUPEN64PLUS_UI_CONSOLE_LICENSE = GPLv2

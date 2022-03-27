@@ -3,7 +3,7 @@
 # Scummvm
 #
 ################################################################################
-# Version.: Commits on Oct 31, 2021 (2.5.1pre)
+# Version: Commits on Oct 31, 2021 (2.5.1pre)
 SCUMMVM_VERSION = 57bad5b424475558957aadbb7a2161f6a8f1ff9e
 SCUMMVM_SITE = $(call github,scummvm,scummvm,$(SCUMMVM_VERSION))
 SCUMMVM_LICENSE = GPLv2

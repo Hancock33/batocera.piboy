@@ -3,7 +3,7 @@
 # Aliens Vs Predator
 #
 ################################################################################
-# Version.: Commits on Apr 19, 2020
+# Version: Commits on Apr 19, 2020
 AVP_VERSION = 2d5774781dd2ed959a83b2a98ab6f3f26e1dcc51
 AVP_SITE = $(call github,neuromancer,avp,$(AVP_VERSION))
 

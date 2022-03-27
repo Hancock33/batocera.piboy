@@ -3,7 +3,7 @@
 # HATARI
 #
 ################################################################################
-# Version.: Release on Oct 27, 2021
+# Version: Release on Oct 27, 2021
 HATARI_VERSION = master
 
 HATARI_SOURCE = hatari-$(HATARI_VERSION).tar.gz

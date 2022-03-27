@@ -3,7 +3,7 @@
 # RACE
 #
 ################################################################################
-# Version.: Commits on Nov 02, 2021
+# Version: Commits on Nov 02, 2021
 LIBRETRO_RACE_VERSION = b8264bbaa0878e2d0ebae8ca60bd886c5971e255
 LIBRETRO_RACE_SITE = $(call github,libretro,RACE,$(LIBRETRO_RACE_VERSION))
 LIBRETRO_RACE_LICENSE = GPL-2.0

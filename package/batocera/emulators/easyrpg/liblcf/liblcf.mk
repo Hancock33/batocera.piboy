@@ -3,7 +3,7 @@
 # LIBLCF
 #
 ################################################################################
-# Version.: Release on Oct 29, 2021
+# Version: Release on Oct 29, 2021
 LIBLCF_VERSION = 0.7.0
 LIBLCF_DEPENDENCIES = expat icu
 LIBLCF_LICENSE = MIT

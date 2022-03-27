@@ -3,7 +3,7 @@
 # cannonball
 #
 ################################################################################
-# Version.: Commits on Jun 24, 2020
+# Version: Commits on Jun 24, 2020
 CANNONBALL_VERSION = b6aa525ddd552f96b43b3b3a6f69326a277206bd
 CANNONBALL_SITE = $(call github,djyt,cannonball,$(CANNONBALL_VERSION))
 CANNONBALL_LICENSE = GPLv2

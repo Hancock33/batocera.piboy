@@ -1,9 +1,9 @@
 ################################################################################
 #
-# SUPERFLAPPYBIRDS
+# libretro-superflappybirds
 #
 ################################################################################
-# Version.: Commits on Feb 18, 2019
+# Version: Commits on Feb 18, 2019
 LIBRETRO_SUPERFLAPPYBIRDS_VERSION = 0ba0e188cae44c8900a2f5a04577de85dc8c4410
 LIBRETRO_SUPERFLAPPYBIRDS_SITE = $(call github,IgniparousTempest,libretro-superflappybirds,$(LIBRETRO_SUPERFLAPPYBIRDS_VERSION))
 

@@ -3,7 +3,7 @@
 # mali t620 wayland
 #
 ################################################################################
-# Version.: Commits on Nov 13, 2019
+# Version: Commits on Nov 13, 2019
 MALI_T620_WAYLAND_VERSION = d4000def121b818ae0f583d8372d57643f723fdc
 MALI_T620_WAYLAND_SITE = $(call github,LibreELEC,libmali,$(MALI_T620_WAYLAND_VERSION))
 

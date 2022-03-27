@@ -1,9 +1,9 @@
 ################################################################################
 #
-# NESTOPIA
+# libretro-nestopia
 #
 ################################################################################
-# Version.: Commits on Mar 22, 2022
+# Version: Commits on Mar 22, 2022
 LIBRETRO_NESTOPIA_VERSION = 7dbd5c6384c4c6326004c97fd8e6fa07cb4edcef
 LIBRETRO_NESTOPIA_SITE = $(call github,libretro,nestopia,$(LIBRETRO_NESTOPIA_VERSION))
 LIBRETRO_NESTOPIA_LICENSE = GPLv2
@@ -34,7 +34,8 @@ LIBRETRO_NESTOPIA_PLATFORM = unix
 endif
 
 define LIBRETRO_NESTOPIA_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/libretro/ platform="$(LIBRETRO_NESTOPIA_PLATFORM)" \
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
+	-C $(@D)/libretro/ platform="$(LIBRETRO_NESTOPIA_PLATFORM)" \
         GIT_VERSION="-$(shell echo $(LIBRETRO_NESTOPIA_VERSION) | cut -c 1-7)"
 endef
 

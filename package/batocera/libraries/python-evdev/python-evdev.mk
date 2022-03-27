@@ -3,7 +3,7 @@
 # PYTHON_EVDEV
 #
 ################################################################################
-# Version.: Commits on Jan 16, 2021
+# Version: Commits on Jan 16, 2021
 PYTHON_EVDEV_VERSION = 5adc2abf1ec8a02c05c80cb1b3e34ba1d4237803
 PYTHON_EVDEV_SITE =  $(call github,gvalkov,python-evdev,$(PYTHON_EVDEV_VERSION))
 PYTHON_EVDEV_SETUP_TYPE = setuptools

@@ -3,7 +3,7 @@
 # mali-T860
 #
 ################################################################################
-# Version.: Commits on Jun 11, 2021
+# Version: Commits on Jun 11, 2021
 MALI_T860_VERSION = ad4c28932c3d07c75fc41dd4a3333f9013a25e7f
 
 MALI_T860_SOURCE = libmali-$(MALI_T860_VERSION).tar.gz

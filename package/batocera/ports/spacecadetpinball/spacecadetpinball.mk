@@ -3,7 +3,7 @@
 # Space Cadet Pinball
 #
 ################################################################################
-# Version.: Commits on Feb 10, 2022
+# Version: Commits on Feb 10, 2022
 SPACECADETPINBALL_VERSION = b20e13ee97429826b1c9238f2faad9e1d31f339f
 SPACECADETPINBALL_SITE = $(call github,k4zmu2a,SpaceCadetPinball,$(SPACECADETPINBALL_VERSION))
 

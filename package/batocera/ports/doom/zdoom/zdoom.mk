@@ -3,7 +3,7 @@
 # ZDOOM
 #
 ################################################################################
-# Version.: Commits on Dec 28, 2021
+# Version: Commits on Dec 28, 2021
 ZDOOM_VERSION = 5f2006df7577f5a42966986adb5bca302c71c626
 ZDOOM_SITE = $(call github,drfrag666,gzdoom,$(ZDOOM_VERSION))
 
