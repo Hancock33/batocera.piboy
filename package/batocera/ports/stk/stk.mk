@@ -30,7 +30,6 @@ define STK_ROMS_DIR
 	ln -sf /userdata/roms/stk/sfx $(TARGET_DIR)/usr/share/supertuxkart/data
 	ln -sf /userdata/roms/stk/textures $(TARGET_DIR)/usr/share/supertuxkart/data
 	ln -sf /userdata/roms/stk/tracks $(TARGET_DIR)/usr/share/supertuxkart/data
-	cp -pvr $(@D)/buildroot-build/lib/libsquish/libsquish.so* $(TARGET_DIR)/usr/lib
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/supertuxkart/config-0.10
 	cp  -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stk/*.xml $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/supertuxkart/config-0.10
 	# evmap config
