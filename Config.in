@@ -105,6 +105,8 @@ menu "Controllers"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/uinput-joystick/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/umtool/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/xarcade2jstick/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/xone/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/xpad-noone/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/xpi_gamecon_rpi3/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/xpi_gamecon_rpi4/Config.in"
 endmenu
@@ -453,7 +455,7 @@ menu "Utils"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/winbtrfs/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/winetricks/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/xosd/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/xow/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/xxd/Config.in"
 endmenu
 
 menu "Libraries"
