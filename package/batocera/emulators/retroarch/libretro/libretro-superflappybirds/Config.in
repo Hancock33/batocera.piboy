@@ -4,7 +4,7 @@ config BR2_PACKAGE_LIBRETRO_SUPERFLAPPYBIRDS
 	depends on BR2_INSTALL_LIBSTDCPP
 	  help
 	    A multiplayer Flappy Bird clone designed for the libretro framework.
-		
+
 		https://github.com/IgniparousTempest/libretro-superflappybirds
 
 comment "LIBRETRO_SUPERFLAPPYBIRDS needs a toolchain w/ C++"

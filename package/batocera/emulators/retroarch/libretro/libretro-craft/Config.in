@@ -5,7 +5,7 @@ config BR2_PACKAGE_LIBRETRO_CRAFT
 	  help
 	    A simple Minecraft clone written in C
 	    using modern OpenGL (shaders).
-		
+
 		http://www.libretro.com
 
 comment "LIBRETRO_CRAFT needs a toolchain w/ C++"

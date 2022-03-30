@@ -5,7 +5,7 @@ config BR2_PACKAGE_LIBRETRO_HATARI
 	select BR2_PACKAGE_LIBCAPSIMAGE
 	  help
 	    A libretro Atari ST emulator core.
-		
+
 		http://www.libretro.com
 
 comment "LIBRETRO_HATARI needs a toolchain w/ C++"

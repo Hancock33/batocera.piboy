@@ -5,7 +5,7 @@ config BR2_PACKAGE_LIBRETRO_DESMUME
 	select BR2_PACKAGE_LIBPCAP
       help
         A libretro nintendo ds emulator core.
-		
+
 		http://www.libretro.com
 
 comment "LIBRETRO_DESMUME needs a toolchain w/ C++"

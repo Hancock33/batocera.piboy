@@ -5,7 +5,7 @@ config BR2_PACKAGE_MALI_MP400_WAYLAND
 	select BR2_PACKAGE_HAS_LIBGLES
 	select BR2_PACKAGE_HAS_LIBMALI
 	select BR2_PACKAGE_WAYLAND
-	
+
 	help
 	  Install the binary user-space components for the ARM Mali Utgard
 	  MP400 GPU. This package requires a kernel with the ARM Mali Utgard
