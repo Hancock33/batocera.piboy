@@ -4,7 +4,7 @@ config BR2_PACKAGE_LIBRETRO_REMINISCENCE
 	depends on BR2_INSTALL_LIBSTDCPP
 	  help
 	    A libretro Flashback engine reimplementation.
-		
+
 		http://www.libretro.com
 
 comment "LIBRETRO_REMINISCENCE needs a toolchain w/ C++"

@@ -4,9 +4,9 @@ config BR2_PACKAGE_EVSIEVE
 	select BR2_PACKAGE_HOST_RUSTC
 	select BR2_PACKAGE_LIBEVDEV
 	help
-	  Evsieve (from "event sieve") is a low-level utility that 
-	  can read events from Linux event devices (evdev) and write 
-	  them to virtual event devices (uinput), performing simple 
-	  manipulations on the events along the way. 
+	  Evsieve (from "event sieve") is a low-level utility that
+	  can read events from Linux event devices (evdev) and write
+	  them to virtual event devices (uinput), performing simple
+	  manipulations on the events along the way.
 
 	  https://github.com/KarsMulder/evsieve

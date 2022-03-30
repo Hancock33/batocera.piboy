@@ -6,7 +6,7 @@ config BR2_PACKAGE_LIBRETRO_CITRA
     select BR2_PACKAGE_BOOST
       help
         A libretro Citra core for Nintendo 3DS.
-        
+
         http://www.libretro.com
 
 comment "LIBRETRO_CITRA needs a toolchain w/ C++"

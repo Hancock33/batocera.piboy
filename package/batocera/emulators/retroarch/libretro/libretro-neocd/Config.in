@@ -4,7 +4,7 @@ config BR2_PACKAGE_LIBRETRO_NEOCD
 	depends on BR2_INSTALL_LIBSTDCPP
       help
         Neo Geo CD emulator for libretro
-		
+
 		http://www.libretro.com
 
 comment "LIBRETRO_NEOCD needs a toolchain w/ C++"

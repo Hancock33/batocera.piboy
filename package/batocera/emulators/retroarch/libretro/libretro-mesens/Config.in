@@ -3,5 +3,5 @@ config BR2_PACKAGE_LIBRETRO_MESENS
     depends on BR2_PACKAGE_RETROARCH
       help
         A libretro SNES/Game Boy/Super Game Boy emulator core.
-        
+
         http://www.libretro.com

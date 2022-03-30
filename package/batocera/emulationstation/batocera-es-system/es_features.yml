@@ -5843,7 +5843,7 @@ melonds:
             description: Enable cheats for MelonDS.
             choices:
                 "Off (Default)":   0
-                "On":              1    
+                "On":              1
         melonds_osd:
             prompt: ENABLE OSD
             description: Enable the on screen display.
@@ -7973,7 +7973,7 @@ awgl:
             choices:
                 "Original":       original
                 "Software":       software
-                "OpenGL":         gl   
+                "OpenGL":         gl
         awgl_fullscreen:
             group: ADVANCED OPTIONS
             prompt:      FULLSCREEN MODE

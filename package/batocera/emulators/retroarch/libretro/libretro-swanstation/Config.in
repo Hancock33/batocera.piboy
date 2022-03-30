@@ -5,7 +5,7 @@ config BR2_PACKAGE_LIBRETRO_SWANSTATION
     depends on BR2_GCC_ENABLE_OPENMP
     select BR2_PACKAGE_FMT
     select BR2_PACKAGE_BOOST
-    select BR2_PACKAGE_FFMPEG  
+    select BR2_PACKAGE_FFMPEG
       help
         SwanStation - PlayStation 1, aka. PSX Emulator
 
