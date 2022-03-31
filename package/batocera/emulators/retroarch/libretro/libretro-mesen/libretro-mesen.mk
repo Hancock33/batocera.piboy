@@ -3,8 +3,8 @@
 # libretro-mesen
 #
 ################################################################################
-# Version: Commits on Mar 30, 2022
-LIBRETRO_MESEN_VERSION = 13e985c05b37f5c0bbb64d8404ea528ccf0c0911
+# Version: Commits on Mar 31, 2022
+LIBRETRO_MESEN_VERSION = f383a662c0dd40ec7153048ea57ae1f237fdaaa6
 LIBRETRO_MESEN_SITE = $(call github,libretro,Mesen,$(LIBRETRO_MESEN_VERSION))
 LIBRETRO_MESEN_LICENSE = GPL
 
