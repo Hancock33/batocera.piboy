@@ -61,9 +61,9 @@ do
     echo   "${BATOCERA_SUBTARGET}" > "${BATOCERA_BINARIES_DIR}/boot/boot/batocera.board" || exit 1
 
     #### boot.tar.xz ###############
-    echo "creating images/${BATOCERA_SUBTARGET}/boot.tar.xz"
+    echo "creating images/${BATOCERA_SUBTARGET}/boot-${BATOCERA_LOWER_TARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.tar.xz"
     mkdir -p "${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}" || exit 1
-    (cd "${BATOCERA_BINARIES_DIR}/boot" && tar -I "xz -T0 -v" -cf "${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}/boot.tar.xz" *) || exit 1
+    (cd "${BATOCERA_BINARIES_DIR}/boot" && tar -I "xz -T0 -v" -cf "${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}/boot-${BATOCERA_LOWER_TARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.tar.xz" *) || exit 1
     
     # rename the squashfs : the .update is the version that will be renamed at boot to replace the old version
     mv "${BATOCERA_BINARIES_DIR}/boot/boot/batocera.update" "${BATOCERA_BINARIES_DIR}/boot/boot/batocera" || exit 1
@@ -110,7 +110,7 @@ do
 done
 
 #### md5 and sha256 #######################
-for FILE in "${BATOCERA_BINARIES_DIR}/images/"*"/boot.tar.xz" "${BATOCERA_BINARIES_DIR}/images/"*"/batocera-"*".img.xz"
+for FILE in "${BATOCERA_BINARIES_DIR}/images/"*"/boot-"*".tar.xz" "${BATOCERA_BINARIES_DIR}/images/"*"/batocera-"*".img.xz"
 do
     echo "creating ${FILE}.md5"
     CKS=$(md5sum "${FILE}" | sed -e s+'^\([^ ]*\) .*$'+'\1'+)
@@ -124,4 +124,5 @@ done
 
 #### update the target dir with some information files
 cp "${TARGET_DIR}/usr/share/batocera/batocera.version" "${BATOCERA_BINARIES_DIR}" || exit 1
+cp -av "${BATOCERA_BINARIES_DIR}"/images/* /mnt/smb || exit 1
 #"${BR2_EXTERNAL_BATOCERA_PATH}"/scripts/linux/systemsReport.sh "${PWD}" "${BATOCERA_BINARIES_DIR}" || exit 1
