@@ -1,0 +1,35 @@
+diff --git a/modules/libvideo/g_video.c b/modules/libvideo/g_video.c
+index a1d4f03..b3d2ba2 100644
+--- a/modules/libvideo/g_video.c
++++ b/modules/libvideo/g_video.c
+@@ -54,16 +54,16 @@ SDL_Texture * texture = NULL;
+ 
+ char * apptitle = NULL ;
+ 
+-int scr_width = 320 ;
+-int scr_height = 240 ;
+-int renderer_width = 320 ;
+-int renderer_height = 240 ;
++int scr_width = 640 ;
++int scr_height = 480 ;
++int renderer_width = 640 ;
++int renderer_height = 480 ;
+ 
+ int scr_initialized = 0 ;
+ 
+ int enable_16bits = 0 ;
+ int enable_32bits = 0 ;
+-int full_screen = 0 ;
++int full_screen = 1 ;
+ int double_buffer = 0 ;
+ int hardware_scr = 0 ;
+ int grab_input = 0 ;
+@@ -144,7 +144,7 @@ enum {
+ char * __bgdexport( libvideo, globals_def ) =
+     "graph_mode = 0;\n"
+     "scale_mode = 0;\n"
+-    "full_screen = 0;\n"
++    "full_screen = 1;\n"
+     "scale_resolution = 0;\n"
+     "scale_resolution_aspectratio = 0;\n"
+     "scale_resolution_orientation = 0;\n"
