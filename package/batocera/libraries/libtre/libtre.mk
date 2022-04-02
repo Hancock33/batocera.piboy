@@ -14,11 +14,11 @@ define LIBTRE_INSTALL_TARGET_CMDS
     cp -pvr $(@D)/lib/.libs/libtre.so* $(TARGET_DIR)/usr/lib
     cp -pvr $(@D)/src/agrep $(TARGET_DIR)/usr/bin
 
-    cp -pvr $(@D)/lib/.libs/libtre.so* $(HOST_DIR)/aarch64-buildroot-linux-gnu/sysroot/usr/lib
-    mkdir -p $(HOST_DIR)/aarch64-buildroot-linux-gnu/sysroot/usr/include/tre
-    cp -pvr $(@D)/lib/regex.h  $(HOST_DIR)/aarch64-buildroot-linux-gnu/sysroot/usr/include/tre
-    cp -pvr $(@D)/lib/tre-config.h  $(HOST_DIR)/aarch64-buildroot-linux-gnu/sysroot/usr/include/tre
-    cp -pvr $(@D)/lib/tre.h  $(HOST_DIR)/aarch64-buildroot-linux-gnu/sysroot/usr/include/tre
+    cp -pvr $(@D)/lib/.libs/libtre.so* $(HOST_DIR)/arm-buildroot-linux-gnueabihf/sysroot/usr/lib
+    mkdir -p $(HOST_DIR)/arm-buildroot-linux-gnueabihf/sysroot/usr/include/tre
+    cp -pvr $(@D)/lib/regex.h  $(HOST_DIR)/arm-buildroot-linux-gnueabihf/sysroot/usr/include/tre
+    cp -pvr $(@D)/lib/tre-config.h  $(HOST_DIR)/arm-buildroot-linux-gnueabihf/sysroot/usr/include/tre
+    cp -pvr $(@D)/lib/tre.h  $(HOST_DIR)/arm-buildroot-linux-gnueabihf/sysroot/usr/include/tre
 endef
 
 $(eval $(autotools-package))
