@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Mar 28, 2022
-DUCKSTATION_VERSION = f7a3358b1f0b2681b546135dfd2f23963d248e44
+# Version: Commits on Apr 02, 2022
+DUCKSTATION_VERSION = ef6e18a1b2573240145aa0cb02abd507e463a0bf
 DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
 DUCKSTATION_SITE_METHOD=git
 DUCKSTATION_GIT_SUBMODULES=YES
@@ -17,7 +17,6 @@ DUCKSTATION_CONF_ENV += LDFLAGS=-lpthread
 DUCKSTATION_CONF_OPTS  =  -DANDROID=OFF \
 	                      -DBUILD_LIBRETRO_CORE=OFF \
 	                      -DENABLE_DISCORD_PRESENCE=OFF \
-	                      -DUSE_X11=OFF \
 	                      -DBUILD_GO2_FRONTEND=OFF \
 	                      -DBUILD_QT_FRONTEND=OFF \
 	                      -DBUILD_NOGUI_FRONTEND=ON \
@@ -29,6 +28,12 @@ DUCKSTATION_CONF_OPTS  =  -DANDROID=OFF \
 	                      -DUSE_DRMKMS=ON \
 	                      -DUSE_FBDEV=OFF \
 	                      -DUSE_MALI=OFF
+
+ifeq ($(BR2_PACKAGE_XORG7),y)
+  DUCKSTATION_CONF_OPTS += -DUSE_X11=ON
+else
+  DUCKSTATION_CONF_OPTS += -DUSE_X11=OFF
+endif
 
 define DUCKSTATION_INSTALL_TARGET_CMDS
   mkdir -p $(TARGET_DIR)/usr/bin
