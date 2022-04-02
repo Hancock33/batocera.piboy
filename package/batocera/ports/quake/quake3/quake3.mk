@@ -34,7 +34,7 @@ define QUAKE3_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/build/release-linux-*/baseq3/*.so $(TARGET_DIR)/usr/share/batocera/datainit/roms/quake3/baseq3
     # evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake3/quake3.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/quake3/quake3.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(generic-package))
