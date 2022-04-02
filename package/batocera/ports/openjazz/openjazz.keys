@@ -16,7 +16,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 OpenJazz && reset"
+            "target": "killall -15 OpenJazz"
         },
         {
             "trigger": "up",
