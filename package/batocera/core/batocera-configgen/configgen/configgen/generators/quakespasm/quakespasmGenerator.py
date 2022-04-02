@@ -16,10 +16,6 @@ class QuakespasmGenerator(Generator):
         if (rom.__contains__("rogue")):
             commandArray = ["quakespasm", "-basedir", "/userdata/roms/tyrquake", "-rogue"]
 
-        if (rom.__contains__("dopa")):
-            commandArray = ["quakespasm", "-basedir", "/userdata/roms/tyrquake", "-game", "dopa"]
-
-
         return Command.Command(
             array=commandArray,
             env={

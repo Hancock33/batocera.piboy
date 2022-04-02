@@ -1005,6 +1005,8 @@ tyrquake:
   extensions: [pak]
   group: ports
   emulators:
+    quakespasm:
+      quakespasm: { requireAnyOf: [BR2_PACKAGE_QUAKESPASM] }
     libretro:
       tyrquake: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TYRQUAKE] }
   comment_en: |
