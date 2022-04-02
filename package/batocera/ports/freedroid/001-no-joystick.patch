@@ -98,7 +98,7 @@ index ca6887e..96778e3 100644
    int audio_channels = 2;	// = stereo
    //  int audio_buffers = 4096;
 -  int audio_buffers = 100; // higher = less risk of sound skips, but more lag
-+  int audio_buffers = 2048; // higher = less risk of sound skips, but more lag
++  int audio_buffers = 256; // higher = less risk of sound skips, but more lag
  
    DebugPrintf(1, "\nInitializing SDL Audio Systems....\n");
  
