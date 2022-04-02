@@ -80,6 +80,7 @@ from generators.ppsspp.ppssppGenerator import PPSSPPGenerator
 from generators.pre2.pre2Generator import Pre2Generator
 from generators.prototype.prototypeGenerator import PrototypeGenerator
 from generators.pygame.pygameGenerator import PygameGenerator
+from generators.quakespasm.quakespasmGenerator import QuakespasmGenerator
 from generators.quake3.quake3Generator import Quake3Generator
 from generators.rednukem.rednukemGenerator import RednukemGenerator
 from generators.redream.redreamGenerator import RedreamGenerator
@@ -198,6 +199,7 @@ generators = {
     'pre2': Pre2Generator(),
     'prototype': PrototypeGenerator(),
     'pygame': PygameGenerator(),
+    'quakespasm': QuakespasmGenerator(),
     'quake3': Quake3Generator(),
     'rednukem': RednukemGenerator(),
     'redream': RedreamGenerator(),
