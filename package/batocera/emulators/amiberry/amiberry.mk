@@ -4,8 +4,8 @@
 #
 ################################################################################
 
-# Version: Commits on Mar 26, 2022
-AMIBERRY_VERSION = 4b0f81bbcfe48242f26e6163c9799cff19f0ad17
+# Version: Commits on Apr 02, 2022
+AMIBERRY_VERSION = d6b3dd123c9bffc8ef0d6bcf51ead92ed18177e9
 AMIBERRY_SITE = https://github.com/midwan/amiberry.git
 AMIBERRY_SITE_METHOD=git
 AMIBERRY_GIT_SUBMODULES=YES
