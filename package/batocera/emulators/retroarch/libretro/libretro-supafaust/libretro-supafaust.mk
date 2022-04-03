@@ -3,8 +3,8 @@
 # SUPAFAUST
 #
 ################################################################################
-# Version: Commits on Mar 04, 2022
-LIBRETRO_SUPAFAUST_VERSION = a106dbdc8c5ef11f216b21f4ba1b22cb637e599d
+# Version: Commits on Apr 03, 2022
+LIBRETRO_SUPAFAUST_VERSION = f30d70c3868b35dd25ecfbf916ade60953898e76
 LIBRETRO_SUPAFAUST_SITE = $(call github,libretro,supafaust,$(LIBRETRO_SUPAFAUST_VERSION))
 LIBRETRO_SUPAFAUST_LICENSE = GPL
 
