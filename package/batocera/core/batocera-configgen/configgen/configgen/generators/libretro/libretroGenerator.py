@@ -60,7 +60,14 @@ class LibretroGenerator(Generator):
             retroconfig.write()
 
         # Retroarch core on the filesystem
-        retroarchCore = batoceraFiles.retroarchCores + system.config['core'] + batoceraFiles.libretroExt
+        retroarchCore = batoceraFiles.retroarchCores + system.config['core'] + "_libretro.so"
+
+        # for each core, a file /usr/lib/<core>.info must exit, otherwise, info such as rewinding/netplay will not work
+        # to do a global check : cd /usr/lib/libretro && for i in *.so; do INF=$(echo $i | sed -e s+/usr/lib/libretro+/usr/share/libretro/info+ -e s+\.so+.info+); test -e "$INF" || echo $i; done
+        infoFile = batoceraFiles.retroarchCores  + system.config['core'] + "_libretro.info"
+        if not os.path.exists(infoFile):
+            raise Exception("missing file " + infoFile)
+
         romName = os.path.basename(rom)
 
 
@@ -252,7 +259,7 @@ class LibretroGenerator(Generator):
 
         if system.name == 'scummvm':
             rom = os.path.dirname(rom) + '/' + romName[0:-8]
-
+        
         # Use command line instead of ROM file for MAME variants
         if system.config['core'] in [ 'mame', 'mess', 'mamevirtual' ]:
             dontAppendROM = True
@@ -260,8 +267,8 @@ class LibretroGenerator(Generator):
 
         if dontAppendROM == False:
             commandArray.append(rom)
-
-        return Command.Command(array=commandArray)
+            
+        return Command.Command(array=commandArray, env={"XDG_CONFIG_HOME":batoceraFiles.CONF})
 
 def getGFXBackend(system):
         # Start with the selected option
