@@ -15,5 +15,5 @@ class Srb2Generator(Generator):
             env={
                 'SRB2WADDIR': '/userdata/roms/srb2',
                 'SDL_AUTO_UPDATE_JOYSTICKS': '0',
-                'SDL_MOUSE_RELATIVE_SPEED_SCALE': '7.0'
+                'SDL_MOUSE_RELATIVE_SPEED_SCALE': '2.0'
             })

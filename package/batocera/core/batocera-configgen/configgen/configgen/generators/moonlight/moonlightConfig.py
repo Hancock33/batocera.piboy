@@ -100,7 +100,7 @@ def generateMoonlightConfig(system):
 
         # av decoder
         if system.isOptSet('moonlight_avdecoder'):
-            if system.config["moonlight_avdecoder"] == "sdl": 
+            if system.config["moonlight_avdecoder"] == "sdl":
                 moonlightConfig.save('platform', 'sdl')
 
         ## Directory to store encryption keys
