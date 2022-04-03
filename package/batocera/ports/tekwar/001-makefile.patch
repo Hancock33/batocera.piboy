@@ -1,6 +1,6 @@
 diff -Naur jftekwar.orig/jfaudiolib/Makefile jftekwar/jfaudiolib/Makefile
---- jftekwar.orig/jfaudiolib/Makefile	2022-01-19 23:11:29.221922529 +0000
-+++ jftekwar/jfaudiolib/Makefile	2022-01-19 23:40:23.435583979 +0000
+--- jftekwar.orig/jfaudiolib/Makefile	2022-04-03 21:34:53.825178763 +0100
++++ jftekwar/jfaudiolib/Makefile	2022-04-03 21:37:29.118018283 +0100
 @@ -35,7 +35,7 @@
   CPPFLAGS+= -DHAVE_VORBIS
  else
@@ -11,8 +11,8 @@ diff -Naur jftekwar.orig/jfaudiolib/Makefile jftekwar/jfaudiolib/Makefile
     CPPFLAGS+= -DUSE_SDLMIXER
     SOURCES+= src/driver_sdlmixer.c
 diff -Naur jftekwar.orig/jfaudiolib/Makefile.shared jftekwar/jfaudiolib/Makefile.shared
---- jftekwar.orig/jfaudiolib/Makefile.shared	2022-01-19 23:11:29.221922529 +0000
-+++ jftekwar/jfaudiolib/Makefile.shared	2022-01-19 23:30:54.462000727 +0000
+--- jftekwar.orig/jfaudiolib/Makefile.shared	2022-04-03 21:34:53.825178763 +0100
++++ jftekwar/jfaudiolib/Makefile.shared	2022-04-03 21:37:29.118018283 +0100
 @@ -21,7 +21,7 @@
   endif
   ifneq (,$(shell $(SDL2CONFIG) --version))
@@ -23,8 +23,8 @@ diff -Naur jftekwar.orig/jfaudiolib/Makefile.shared jftekwar/jfaudiolib/Makefile
   ifeq (yes,$(shell $(PKGCONFIG) --exists alsa && echo yes))
    JFAUDIOLIB_HAVE_ALSA=1
 diff -Naur jftekwar.orig/jfbuild/Makefile.shared jftekwar/jfbuild/Makefile.shared
---- jftekwar.orig/jfbuild/Makefile.shared	2022-01-19 23:11:29.261922816 +0000
-+++ jftekwar/jfbuild/Makefile.shared	2022-01-19 23:35:45.855283748 +0000
+--- jftekwar.orig/jfbuild/Makefile.shared	2022-04-03 21:34:53.865178980 +0100
++++ jftekwar/jfbuild/Makefile.shared	2022-04-03 21:37:29.118018283 +0100
 @@ -76,8 +76,8 @@
  
  ifeq ($(RENDERTYPE),SDL)
@@ -37,18 +37,19 @@ diff -Naur jftekwar.orig/jfbuild/Makefile.shared jftekwar/jfbuild/Makefile.share
  		$(error No $(SDL2CONFIG) could be found)
  	endif
 diff -Naur jftekwar.orig/Makefile jftekwar/Makefile
---- jftekwar.orig/Makefile	2022-01-19 23:11:14.825819265 +0000
-+++ jftekwar/Makefile	2022-01-20 07:07:55.295045260 +0000
-@@ -14,7 +14,7 @@
+--- jftekwar.orig/Makefile	2022-04-03 21:34:38.401095409 +0100
++++ jftekwar/Makefile	2022-04-03 21:37:38.910071236 +0100
+@@ -14,7 +14,8 @@
  RELEASE ?= 1
  
  # Path where game data is installed
 -DATADIR ?= /usr/local/share/games/jftekwar
 +DATADIR ?= /userdata/roms/etekwar/
++HAVE_GTK ?= 0
  
  # Engine source code path
  EROOT ?= jfbuild
-@@ -123,8 +123,8 @@
+@@ -123,8 +124,8 @@
  endif
  
  ifeq ($(RENDERTYPE),SDL)
@@ -59,7 +60,7 @@ diff -Naur jftekwar.orig/Makefile jftekwar/Makefile
  
  	ifeq (1,$(HAVE_GTK))
  		OURCFLAGS+= $(GTKCONFIG_CFLAGS)
-@@ -169,7 +169,7 @@
+@@ -169,7 +170,7 @@
  	cd xcode && xcodebuild -project tekwar.xcodeproj -target all -configuration $(style)
  endif
  
@@ -69,8 +70,8 @@ diff -Naur jftekwar.orig/Makefile jftekwar/Makefile
  tekwar$(EXESUFFIX): $(GAMEOBJS) $(ELIB)/$(ENGINELIB) $(AUDIOLIBROOT)/$(JFAUDIOLIB)
  	$(CXX) $(CXXFLAGS) $(OURCXXFLAGS) $(OURCFLAGS) -o $@ $^ $(LIBS) $(GAMELIBS) -Wl,-Map=$@.map
 diff -Naur jftekwar.orig/src/teksmk.c jftekwar/src/teksmk.c
---- jftekwar.orig/src/teksmk.c	2022-01-19 23:11:14.833819323 +0000
-+++ jftekwar/src/teksmk.c	2022-01-19 23:49:39.781622993 +0000
+--- jftekwar.orig/src/teksmk.c	2022-04-03 21:34:38.409095452 +0100
++++ jftekwar/src/teksmk.c	2022-04-03 21:37:29.118018283 +0100
 @@ -152,7 +152,7 @@
  
            frame = playframe%NUMSMKTILES;
