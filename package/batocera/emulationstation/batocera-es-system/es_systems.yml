@@ -3287,6 +3287,17 @@ dinothawr:
   comment_fr: |
     Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
 
+doom3:
+  name:       Doom3
+  manufacturer: Ports
+  release: 2004
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    doom3:
+      doom3: { requireAnyOf: [BR2_PACKAGE_DOOM3] }
+
 droidports:
   name:       Android Ports
   manufacturer: Ports
