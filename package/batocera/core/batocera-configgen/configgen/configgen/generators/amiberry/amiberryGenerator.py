@@ -170,6 +170,10 @@ class AmiberryGenerator(Generator):
             commandArray.append("-s")
             commandArray.append("sound_max_buff=4096")
 
+            # Forcing full-window Mode
+            commandArray.append("-s")
+            commandArray.append("gfx_fullscreen_amiga=fullwindow")
+
             os.chdir("/usr/share/amiberry")
             return Command.Command(array=commandArray,env={
                 "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)})
