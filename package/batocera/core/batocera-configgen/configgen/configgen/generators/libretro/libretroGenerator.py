@@ -64,9 +64,9 @@ class LibretroGenerator(Generator):
 
         # for each core, a file /usr/lib/<core>.info must exit, otherwise, info such as rewinding/netplay will not work
         # to do a global check : cd /usr/lib/libretro && for i in *.so; do INF=$(echo $i | sed -e s+/usr/lib/libretro+/usr/share/libretro/info+ -e s+\.so+.info+); test -e "$INF" || echo $i; done
-        infoFile = batoceraFiles.retroarchCores  + system.config['core'] + "_libretro.info"
-        if not os.path.exists(infoFile):
-            raise Exception("missing file " + infoFile)
+        #infoFile = batoceraFiles.retroarchCores  + system.config['core'] + "_libretro.info"
+        #if not os.path.exists(infoFile):
+        #    raise Exception("missing file " + infoFile)
 
         romName = os.path.basename(rom)
 
