@@ -183,6 +183,9 @@ devilutionx:
 dinothawr:
    emulator: libretro
    core:     dinothawr
+doom3:
+   emulator: doom3
+   core:     doom3
 dos:
   emulator: libretro
   core:     dosbox_pure

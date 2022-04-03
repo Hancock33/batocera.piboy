@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 ioquake3 && reset"
+            "target": "killall -9 dhewm3 && reset"
         },
         {
             "trigger": "up",
@@ -39,13 +39,38 @@
             "target": "KEY_ESC"
         },
         {
+            "trigger": "l2",
+            "type": "key",
+            "target": "BTN_LEFT"
+        },
+        {
+            "trigger": "r2",
+            "type": "key",
+            "target": "BTN_RIGHT"
+        },
+        {
             "trigger": "joystick1",
             "type": "mouse"
+        },
+        {
+            "trigger": "a",
+            "type": "key",
+            "target": "KEY_C"
         },
         {
             "trigger": "b",
             "type": "key",
             "target": "BTN_LEFT"
+        },
+        {
+            "trigger": "x",
+            "type": "key",
+            "target": "KEY_SPACE"
+        },
+        {
+            "trigger": "y",
+            "type": "key",
+            "target": "KEY_R"
         },
         {
             "trigger": "pageup",
@@ -55,32 +80,7 @@
         {
             "trigger": "pagedown",
             "type": "key",
-            "target": "KEY_RIGHTBRACE"
-        },
-        {
-            "trigger": "a",
-            "type": "key",
-            "target": "KEY_LEFTSHIFT"
-        },
-        {
-            "trigger": "x",
-            "type": "key",
-            "target": "KEY_C"
-        },
-        {
-            "trigger": "y",
-            "type": "key",
-            "target": "KEY_SPACE"
-        },
-        {
-            "trigger": "l2",
-            "type": "key",
-            "target": "KEY_A"
-        },
-        {
-            "trigger": "r2",
-            "type": "key",
-            "target": "KEY_D"
+            "target": "KEY_SLASH"
         }
     ]
 }
