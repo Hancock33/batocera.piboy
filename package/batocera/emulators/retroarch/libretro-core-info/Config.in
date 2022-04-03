@@ -1,2 +1,6 @@
 config BR2_PACKAGE_LIBRETRO_CORE_INFO
-        bool "libretro-core-info"
+	bool "libretro-core-info"
+	help
+	  libretro core info files.
+
+	  http://www.libretro.com

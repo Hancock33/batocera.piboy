@@ -5,7 +5,6 @@ config BR2_PACKAGE_RETROARCH
 	select BR2_PACKAGE_RETROARCH_ASSETS
 	select BR2_PACKAGE_LIBRETRO_CORE_INFO
 	select BR2_PACKAGE_FLAC
-	select BR2_PACKAGE_LIBRETRO_CORE_INFO
 
       help
         A multi emulator frontend.
