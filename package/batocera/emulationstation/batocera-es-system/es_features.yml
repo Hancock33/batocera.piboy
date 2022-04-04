@@ -4977,7 +4977,7 @@ amiberry:
             choices:
                 "ON":                          true
                 "OFF":                         false
-        amiberry_auto_height:
+        amiberry_auto_crop:
             prompt:      AUTO HEIGHT
             description: Resize automatically screen height.
             choices:
