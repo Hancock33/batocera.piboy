@@ -3688,9 +3688,9 @@ libretro:
                     "NTSC 240x480px 60Hz": NTSC
             video_resolution:
                 prompt:      VIDEO RESOLUTION
-                description: Manually define which resolution to use.&#x0a;Auto defaults to High and switches to Super-High when needed.
+                description: Manually define which resolution to use.
                 choices:
-                    "Automatic":        automatic
+                    "Autoswitch":       automatic
                     "Low 360p":         lores
                     "High 720p":        hires
                     "Super-high 1440p": superhires
