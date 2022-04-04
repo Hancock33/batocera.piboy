@@ -3642,9 +3642,10 @@ libretro:
                 prompt:      CPU COMPATIBILITY
                 description: Help games which are too quick or that have bugs.
                 choices:
-                    "Normal":          normal
-                    "More compatible": compatible
-                    "Cycle-exact":     exact
+                    "Normal":                       normal
+                    "More compatible":              compatible
+                    "Cycle-exact (DMA/Memory)":     memory
+                    "Cycle-exact (Full)":           exact
             cpu_multiplier:
                 prompt:      CPU CLOCK
                 description: Works with 'Cycle-exact' mode and for a few games.
