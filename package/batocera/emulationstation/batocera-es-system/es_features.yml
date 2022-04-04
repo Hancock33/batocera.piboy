@@ -3785,9 +3785,10 @@ libretro:
                         prompt:      PINBALL MAPPING MODE
                         description: Use to play pinball games with correct mapping.
                         choices:
-                            "Off":      disabled
-                            "Modern":   modern
-                            "Classic":  classic
+                            "Off":                  disabled
+                            "Modern":               modern
+                            "Modern Alternative":   modern_alt
+                            "Classic":              classic
             amiga1200:
                 cfeatures:
                     puae_floppy_speed:
