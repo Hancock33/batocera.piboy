@@ -102,12 +102,12 @@ class AmiberryGenerator(Generator):
                 commandArray.append("gfx_flickerfixer=false")
 
             # auto height
-            if system.isOptSet("amiberry_auto_height") and system.config['amiberry_auto_height'] == 'true':
+            if system.isOptSet("amiberry_auto_crop") and system.config['amiberry_auto_hcrop'] == 'true':
                 commandArray.append("-s")
-                commandArray.append("amiberry.gfx_auto_height=true")
+                commandArray.append("amiberry.gfx_auto_crop=true")
             else:
                 commandArray.append("-s")
-                commandArray.append("amiberry.gfx_auto_height=false")
+                commandArray.append("amiberry.gfx_auto_crop=false")
 
             # line mode
             if system.isOptSet("amiberry_linemode"):
