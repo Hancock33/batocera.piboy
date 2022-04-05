@@ -3,8 +3,8 @@
 # RAZE
 #
 ################################################################################
-# Version: Commits on Mar 25, 2022
-RAZE_VERSION = 16c81f0b1f409436ebf576d2c23f2459a29b34b4
+# Version: Commits on Apr 03, 2022
+RAZE_VERSION = a071479339bea27aa886956ac40d608953201c2b
 RAZE_SITE = $(call github,coelckers,Raze,$(RAZE_VERSION))
 
 RAZE_DEPENDENCIES = sdl2 sdl2_mixer host-zmusic zmusic
