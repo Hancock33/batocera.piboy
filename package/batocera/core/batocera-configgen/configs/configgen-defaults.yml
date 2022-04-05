@@ -726,6 +726,9 @@ xrick:
 xbox:
   emulator: xemu
   core:     xemu
+xbox360:
+  emulator: xenia
+  core:     xenia
 yquake2:
   emulator: yquake2
   core:     yquake2

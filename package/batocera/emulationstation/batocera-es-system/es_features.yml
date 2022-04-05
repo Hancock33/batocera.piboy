@@ -1631,7 +1631,7 @@ libretro:
             sharemameart:
                 group: ADVANCED OPTIONS
                 prompt:      SHARE MAME ARTWORK
-                description: Use the same art paths as standalone MAME - not recommended if using decorations or shaders.
+                description: Use the same art paths as standalone MAME - not recommended if using decoarations or shaders.
                 choices:
                     "On (Default)": 1
                     "Off":          0
@@ -1715,7 +1715,7 @@ libretro:
             sharemameart:
                 group: ADVANCED OPTIONS
                 prompt:      SHARE MAME ARTWORK
-                description: Use the same art paths as standalone MAME - not recommended if using decorations or shaders.
+                description: Use the same art paths as standalone MAME - not recommended if using decoarations or shaders.
                 choices:
                     "On (Default)": 1
                     "Off":          0
@@ -2572,7 +2572,7 @@ libretro:
             sharemameart:
                 group: ADVANCED OPTIONS
                 prompt:      SHARE MAME ARTWORK
-                description: Use the same art paths as standalone MAME - not recommended if using decorations or shaders.
+                description: Use the same art paths as standalone MAME - not recommended if using decoarations or shaders.
                 choices:
                     "On (Default)": 1
                     "Off":          0
@@ -8161,6 +8161,10 @@ witchaven:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 
 xash3d_fwgs:
+  features: [padtokeyboard]
+  shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+
+xenia:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 
