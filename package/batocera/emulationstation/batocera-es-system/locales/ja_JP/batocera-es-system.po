@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v34beta(2022/03/13)\n"
+"Project-Id-Version: batocera-es v34beta(2022/03/25)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-03-14 07:42+0900\n"
+"PO-Revision-Date: 2022-03-25 23:18+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -68,10 +68,10 @@ msgctxt "game_options"
 msgid "AUTO SAVE/LOAD"
 msgstr "オートセーブ/ロード"
 
-#. TRANSLATION: shared, shared, shared, awgl
+#. TRANSLATION: shared, shared, shared
 msgctxt "game_options"
 msgid "GAME RENDERING"
-msgstr ""
+msgstr "ゲーム レンダリング"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -91,7 +91,7 @@ msgstr "整数スケール (ピクセルを正方形表示)"
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "DECORATIONS"
-msgstr ""
+msgstr "ベゼル(ゲーム画面外装飾表示)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -113,7 +113,7 @@ msgctxt "game_options"
 msgid "HEADS UP DISPLAY"
 msgstr "ヘッドアップディスプレイ"
 
-#. TRANSLATION: shared, shared, libretro/mesens, libretro/mesen, libretro/mesen, ...
+#. TRANSLATION: shared, shared, libretro/mesen-s, libretro/mesen, libretro/mesen, ...
 msgctxt "game_options"
 msgid "None"
 msgstr "なし"
@@ -196,7 +196,7 @@ msgstr "カスタム画像サイズを変更"
 #. TRANSLATION: shared, shared, shared, shared
 msgctxt "game_options"
 msgid "AI GAME TRANSLATION"
-msgstr ""
+msgstr "AIゲーム翻訳"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -230,7 +230,7 @@ msgstr ""
 #. TRANSLATION: shared, shared, shared, shared
 msgctxt "game_options"
 msgid "LATENCY REDUCTION"
-msgstr ""
+msgstr "ちらつき軽減"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -264,8 +264,7 @@ msgstr "自動フレーム遅延"
 msgctxt "game_options"
 msgid ""
 "Don't deviate from core requested timing. G-Sync, FreeSync, HDMI 2.1 VRR."
-msgstr ""
-"コア要求のタイミングから逸脱しないでください。 G-Sync、FreeSync、HDMI2.1VRR"
+msgstr "コア要求のタイミングで。G-Sync、FreeSync、HDMI2.1VRR"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -280,7 +279,7 @@ msgstr "Chroma 81インターフェイス（カラー化）をエミュレート
 #. TRANSLATION: libretro/81, libretro/81, libretro/atari800, libretro/atari800, libretro/atari800, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
-msgstr ""
+msgstr "詳細設定"
 
 #. TRANSLATION: libretro/81, libretro/gambatte
 msgctxt "game_options"
@@ -412,52 +411,52 @@ msgctxt "game_options"
 msgid "576+KB"
 msgstr "576+KB"
 
-#. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
+#. TRANSLATION: libretro/mesen-s, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
 msgid "Core-powered video filter."
 msgstr "コアパワードビデオフィルター"
 
-#. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
+#. TRANSLATION: libretro/mesen-s, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
 msgid "BLARGG NTSC FILTER"
 msgstr "BLARGG NTSC フィルター"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/mame, libretro/mess, libretro/mess, ...
+#. TRANSLATION: libretro/mesen-s, libretro/mesen, libretro/mame, libretro/mess, libretro/mess, ...
 msgctxt "game_options"
 msgid "Disabled"
 msgstr "使用しない"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen
+#. TRANSLATION: libretro/mesen-s, libretro/mesen
 msgctxt "game_options"
 msgid "Composite (Blargg)"
 msgstr "コンポジット (Blargg)"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen
+#. TRANSLATION: libretro/mesen-s, libretro/mesen
 msgctxt "game_options"
 msgid "S-Video (Blargg)"
 msgstr "Sビデオ（Blargg）"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen
+#. TRANSLATION: libretro/mesen-s, libretro/mesen
 msgctxt "game_options"
 msgid "RGB (Blargg)"
 msgstr "RGB (Blargg)"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen
+#. TRANSLATION: libretro/mesen-s, libretro/mesen
 msgctxt "game_options"
 msgid "Monochrome (Blargg)"
 msgstr "モノクロ (Blargg)"
 
-#. TRANSLATION: libretro/mesens, libretro/snes9x
+#. TRANSLATION: libretro/mesen-s, libretro/snes9x
 msgctxt "game_options"
 msgid "Blur high-res mode, allowing for better transparency effects."
 msgstr "高解像度モード、ぼかしと透明度の効果を高めます"
 
-#. TRANSLATION: libretro/mesens
+#. TRANSLATION: libretro/mesen-s
 msgctxt "game_options"
 msgid "HIGH-RES BLENDING"
 msgstr "高解像度ブレンディング"
 
-#. TRANSLATION: libretro/mesens
+#. TRANSLATION: libretro/mesen-s
 msgctxt "game_options"
 msgid ""
 "Enhancement. Swap from SNES' guassian interpolation to cubic. Improves sound "
@@ -465,105 +464,105 @@ msgid ""
 msgstr ""
 "強化：スーファミのグアシアン補間から3次に取り替えます。音質が向上します"
 
-#. TRANSLATION: libretro/mesens
+#. TRANSLATION: libretro/mesen-s
 msgctxt "game_options"
 msgid "CUBIC AUDIO INTERPOLATION"
 msgstr "キュービック音声補間"
 
-#. TRANSLATION: libretro/mesens
+#. TRANSLATION: libretro/mesen-s
 msgctxt "game_options"
 msgid ""
 "Change behaviour when emulating GB games. Auto uses SGB for GB and GBC for "
 "GBC."
 msgstr "ゲームボーイのエミュレート動作を変更します(GBをスーパーGBに変更など)"
 
-#. TRANSLATION: libretro/mesens
+#. TRANSLATION: libretro/mesen-s
 msgctxt "game_options"
 msgid "GAME BOY MODE"
 msgstr "ゲームボーイモード"
 
-#. TRANSLATION: libretro/mesens
+#. TRANSLATION: libretro/mesen-s
 msgctxt "game_options"
 msgid "Game Boy"
 msgstr "ゲームボーイ"
 
-#. TRANSLATION: libretro/mesens
+#. TRANSLATION: libretro/mesen-s
 msgctxt "game_options"
 msgid "Game Boy Color"
 msgstr "ゲームボーイカラー"
 
-#. TRANSLATION: libretro/mesens
+#. TRANSLATION: libretro/mesen-s
 msgctxt "game_options"
 msgid "Super Game Boy"
 msgstr "スーパーゲームボーイ"
 
-#. TRANSLATION: libretro/mesens
+#. TRANSLATION: libretro/mesen-s
 msgctxt "game_options"
 msgid "Emulate the Super Game Boy 2 for SGB. Runs games at the correct speed."
 msgstr ""
 "スーパーゲームボーイ2をエミュレートします。正しい速度でゲームを実行します"
 
-#. TRANSLATION: libretro/mesens
+#. TRANSLATION: libretro/mesen-s
 msgctxt "game_options"
 msgid "SUPER GAME BOY 2"
 msgstr "スーパーゲームボーイ2"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, libretro/mame, libretro/mess, ...
+#. TRANSLATION: libretro/mesen-s, libretro/mesen, libretro/fceumm, libretro/mame, libretro/mess, ...
 msgctxt "game_options"
 msgid "Enhancement. Reduces system slowdown. Causes issues in some games."
 msgstr "強化：システムの速度低下を軽減します。一部のゲームで問題が発生します"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, libretro/mame, libretro/mess, ...
+#. TRANSLATION: libretro/mesen-s, libretro/mesen, libretro/fceumm, libretro/mame, libretro/mess, ...
 msgctxt "game_options"
 msgid "OVERCLOCK (UNSTABLE)"
 msgstr "オーバークロック（不安定）"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, amiberry
+#. TRANSLATION: libretro/mesen-s, libretro/mesen, libretro/fceumm, amiberry
 msgctxt "game_options"
 msgid "Low"
 msgstr "小"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen
+#. TRANSLATION: libretro/mesen-s, libretro/mesen
 msgctxt "game_options"
 msgid "Medium"
 msgstr "中"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, amiberry
+#. TRANSLATION: libretro/mesen-s, libretro/mesen, libretro/fceumm, amiberry
 msgctxt "game_options"
 msgid "High"
 msgstr "大"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm
+#. TRANSLATION: libretro/mesen-s, libretro/mesen, libretro/fceumm
 msgctxt "game_options"
 msgid "Very High"
 msgstr "非常に高い"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen
+#. TRANSLATION: libretro/mesen-s, libretro/mesen
 msgctxt "game_options"
 msgid "Prefer \"Before NMI\", change to After NMI only if needed by the game."
 msgstr "「BeforeNMI」を優先し、ゲームで必要な場合にのみAfterNMIに変更します"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen
+#. TRANSLATION: libretro/mesen-s, libretro/mesen
 msgctxt "game_options"
 msgid "OVERCLOCK TYPE"
 msgstr "オーバークロック"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen
+#. TRANSLATION: libretro/mesen-s, libretro/mesen
 msgctxt "game_options"
 msgid "Before NMI"
 msgstr "Before NMI"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen
+#. TRANSLATION: libretro/mesen-s, libretro/mesen
 msgctxt "game_options"
 msgid "After NMI"
 msgstr "After NMI"
 
-#. TRANSLATION: libretro/mesens, libretro/snes9x, libretro/snes9x_next
+#. TRANSLATION: libretro/mesen-s, libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr "強化：モード7ゲームの速度低下を減らします"
 
-#. TRANSLATION: libretro/mesens, libretro/snes9x, libretro/snes9x_next
+#. TRANSLATION: libretro/mesen-s, libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "SUPER FX OVERCLOCK"
 msgstr "SUPER-FX オーバークロック"
@@ -639,12 +638,12 @@ msgctxt "game_options"
 msgid "Enhancement. Remove the eight sprite per line limit."
 msgstr "強化：行制限ごとに8つのスプライトを削除します"
 
-#. TRANSLATION: libretro/mesen, libretro/potator, libretro/sameboy
+#. TRANSLATION: libretro/mesen, libretro/potator
 msgctxt "game_options"
 msgid "COLOR PALETTE"
 msgstr "カラーパレット"
 
-#. TRANSLATION: libretro/mesen, libretro/puae, flycast/wasm4, flycast/wasm4, flycast
+#. TRANSLATION: libretro/mesen, libretro/puae, flycast/uzem, flycast/uzem, flycast
 msgctxt "game_options"
 msgid "Default"
 msgstr "標準値"
@@ -1080,17 +1079,17 @@ msgctxt "game_options"
 msgid "No EMS/XMS"
 msgstr "No EMS/XMS"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mess, libretro/px68k, mame/wasm4
+#. TRANSLATION: libretro/dosbox_pure, libretro/mess, libretro/px68k, mame/uzem
 msgctxt "game_options"
 msgid "4MB"
 msgstr "4MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mess, libretro/px68k, mame/wasm4
+#. TRANSLATION: libretro/dosbox_pure, libretro/mess, libretro/px68k, mame/uzem
 msgctxt "game_options"
 msgid "8MB"
 msgstr "8MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mess, libretro/np2kai, mame/wasm4
+#. TRANSLATION: libretro/dosbox_pure, libretro/mess, libretro/np2kai, mame/uzem
 msgctxt "game_options"
 msgid "16MB"
 msgstr "16MB"
@@ -1100,27 +1099,27 @@ msgctxt "game_options"
 msgid "24MB"
 msgstr "24MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mess, libretro/np2kai, mame/wasm4
+#. TRANSLATION: libretro/dosbox_pure, libretro/mess, libretro/np2kai, mame/uzem
 msgctxt "game_options"
 msgid "32MB"
 msgstr "32MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/dosbox_pure, libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "48MB"
 msgstr "48MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mess, libretro/np2kai, mame/wasm4
+#. TRANSLATION: libretro/dosbox_pure, libretro/mess, libretro/np2kai, mame/uzem
 msgctxt "game_options"
 msgid "64MB"
 msgstr "64MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/dosbox_pure, libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "96MB"
 msgstr "96MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/dosbox_pure, libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "128MB"
 msgstr "128MB"
@@ -1957,7 +1956,7 @@ msgctxt "game_options"
 msgid "Simulate LCD color inaccuracy."
 msgstr "LCDの色の不正確さをシミュレートします"
 
-#. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/sameboy, libretro/vba-m, ...
+#. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
 msgctxt "game_options"
 msgid "COLOR CORRECTION"
 msgstr "色補正"
@@ -2177,67 +2176,67 @@ msgctxt "game_options"
 msgid "EXTENDED SCREEN"
 msgstr "拡張画面"
 
-#. TRANSLATION: libretro/mame, mame/wasm4, mame/wasm4
+#. TRANSLATION: libretro/mame, mame/uzem, mame/uzem
 msgctxt "game_options"
 msgid "Controls for 5/6 button games and other unique controls"
 msgstr "5/6ボタン使用ゲームなど独自のコントロール割当てをします"
 
-#. TRANSLATION: libretro/mame, mame/wasm4, mame/wasm4
+#. TRANSLATION: libretro/mame, mame/uzem, mame/uzem
 msgctxt "game_options"
 msgid "SPECIAL CONTROL LAYOUTS"
 msgstr "カスタムコントロールレイアウト"
 
-#. TRANSLATION: libretro/mame, mame/wasm4, mame/wasm4
+#. TRANSLATION: libretro/mame, mame/uzem, mame/uzem
 msgctxt "game_options"
 msgid "Default Only"
 msgstr "標準のみ"
 
-#. TRANSLATION: libretro/mame, mame/wasm4, mame/wasm4
+#. TRANSLATION: libretro/mame, mame/uzem, mame/uzem
 msgctxt "game_options"
 msgid "SNES Style"
 msgstr "スーファミ"
 
-#. TRANSLATION: libretro/mame, mame/wasm4, mame/wasm4
+#. TRANSLATION: libretro/mame, mame/uzem, mame/uzem
 msgctxt "game_options"
 msgid "Genesis/Megadrive Style"
 msgstr "メガドライブ"
 
-#. TRANSLATION: libretro/mame, mame/wasm4, mame/wasm4
+#. TRANSLATION: libretro/mame, mame/uzem, mame/uzem
 msgctxt "game_options"
 msgid "Modern Fightstick Style"
 msgstr "ファイトスティック"
 
-#. TRANSLATION: libretro/mame, mame/wasm4, mame/wasm4
+#. TRANSLATION: libretro/mame, mame/uzem, mame/uzem
 msgctxt "game_options"
 msgid "Neo Geo Mini Pad"
 msgstr "Neo Geo ミニパッド"
 
-#. TRANSLATION: libretro/mame, mame/wasm4, mame/wasm4
+#. TRANSLATION: libretro/mame, mame/uzem, mame/uzem
 msgctxt "game_options"
 msgid "Neo Geo CD Pad"
 msgstr "Neo Geo CD パッド"
 
-#. TRANSLATION: libretro/mame, mame/wasm4, mame/wasm4
+#. TRANSLATION: libretro/mame, mame/uzem, mame/uzem
 msgctxt "game_options"
 msgid "Twin Stick with Triggers"
 msgstr "トリガー付きツインスティック"
 
-#. TRANSLATION: libretro/mame, mame/wasm4, mame/wasm4
+#. TRANSLATION: libretro/mame, mame/uzem, mame/uzem
 msgctxt "game_options"
 msgid "Rotated 4-Way Stick (Q*Bert)"
 msgstr "回転式ジョイスティック（Q * Bert）"
 
-#. TRANSLATION: libretro/mame, mame/wasm4, mame/wasm4
+#. TRANSLATION: libretro/mame, mame/uzem, mame/uzem
 msgctxt "game_options"
 msgid "Emable or disable high score saving"
 msgstr "ハイスコ​​アの保存を有効または無効にします"
 
-#. TRANSLATION: libretro/mame, mame/wasm4, mame/wasm4
+#. TRANSLATION: libretro/mame, mame/uzem, mame/uzem
 msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr "ハイスコ​​ア プラグイン"
 
-#. TRANSLATION: libretro/mame, libretro/mess, libretro/mess, mame/wasm4, mame/wasm4, ...
+#. TRANSLATION: libretro/mame, libretro/mess, libretro/mess, mame/uzem, mame/uzem, ...
 msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "使用する (標準)"
@@ -2320,22 +2319,22 @@ msgctxt "game_options"
 msgid "Don't Use (Default)"
 msgstr "使用しない (標準)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Coleco Adam cartridges"
 msgstr "Coleco Adam カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Coleco Adam Digital Data Packs"
 msgstr "Coleco Adam デジタルデータパック"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Coleco ADAM diskettes"
 msgstr "Coleco ADAM フロッピーディスク"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Coleco ColecoVision cartridges"
 msgstr "Coleco ColecoVision カートリッジ"
@@ -2350,12 +2349,12 @@ msgctxt "game_options"
 msgid "MEDIA TYPE"
 msgstr "メディアの種類"
 
-#. TRANSLATION: libretro/mess, libretro/mess, mame/wasm4, mame/wasm4
+#. TRANSLATION: libretro/mess, libretro/mess, mame/uzem, mame/uzem
 msgctxt "game_options"
 msgid "Cassette 1"
 msgstr "カセット 1"
 
-#. TRANSLATION: libretro/mess, libretro/mess, mame/wasm4, mame/wasm4
+#. TRANSLATION: libretro/mess, libretro/mess, mame/uzem, mame/uzem
 msgctxt "game_options"
 msgid "Cassette 2"
 msgstr "カセット 2"
@@ -2370,22 +2369,22 @@ msgctxt "game_options"
 msgid "Disk (Drive 2)"
 msgstr "ディスク (ドライブ 2)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Cartridge (Slot 1)"
 msgstr "カートリッジ (スロット 1)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Cartridge (Slot 2)"
 msgstr "カートリッジ (スロット 2)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Cartridge (Slot 3)"
 msgstr "カートリッジ (スロット 3)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Cartridge (Slot 4)"
 msgstr "カートリッジ (スロット 4)"
@@ -2420,82 +2419,82 @@ msgctxt "game_options"
 msgid "CUSTOM GAME CONFIG"
 msgstr "カスタムゲーム構成"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Entex AdventureVision cartridges"
 msgstr "Entex AdventureVision カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "APF M-1000 cartridges"
 msgstr "APF M-1000 カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Emerson Arcadia 2001 cartridges"
 msgstr "Emerson Arcadia 2001 カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Acorn Archimedes floppy images"
 msgstr "Acorn Archimedes フロッピーイメージ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Acorn Archimedes hard disks"
 msgstr "Acorn Archimedes ハードディスク"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Acorn Archimedes ROM images"
 msgstr "Acorn Archimedes ROM イメージ"
 
-#. TRANSLATION: libretro/mess, libretro/mess, mame/wasm4, mame/wasm4
+#. TRANSLATION: libretro/mess, libretro/mess, mame/uzem, mame/uzem
 msgctxt "game_options"
 msgid "Select model to emulate"
 msgstr "エミュレートするモデルを選択します"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "ARCHIMEDES MODEL"
 msgstr "ARCHIMEDES モデル"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Archimedes 310"
 msgstr "Archimedes 310"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "BBC A3000"
 msgstr "BBC A3000"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Archimedes 440/1 (Default)"
 msgstr "Archimedes 440/1 (標準)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Archimedes 540"
 msgstr "Archimedes 540"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Bally Professional Arcade cartridges"
 msgstr "Bally Professional Arcade カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Acorn Atom cassettes"
 msgstr "Acorn Atom カセット"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Acorn Atom disk images"
 msgstr "Acorn Atom ディスクイメージ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Acorn Atom Utility ROMs"
 msgstr "Acorn Atom ユーティリティROM"
@@ -2510,232 +2509,232 @@ msgctxt "game_options"
 msgid "Cartridge"
 msgstr "カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Quickload"
 msgstr "クイックロード"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Acorn BBC Micro cassettes"
 msgstr "Acorn BBC マイクロカセット"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Acorn BBC Micro hard disks"
 msgstr "Acorn BBC Micro ハードディスク"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Acorn BBC Micro ROMs"
 msgstr "Acorn BBC マイクロ ROMs"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Acorn BBC Micro Model B disks"
 msgstr "Acorn BBC Micro Model B ディスク"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Acorn BBC Micro Model B Original disks"
 msgstr "Acorn BBC Micro Model B オリジナル ディスク"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "ROM (Slot 1)"
 msgstr "ROM（スロット1）"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "ROM (Slot 2)"
 msgstr "ROM（スロット2）"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "ROM (Slot 3)"
 msgstr "ROM（スロット3）"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "ROM (Slot 4)"
 msgstr "ROM（スロット4）"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "CUSTOM CONFIG"
 msgstr "カスタム構成"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Camputers Lynx cassettes"
 msgstr "Camputers Lynx カセット"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "LYNX MODEL"
 msgstr "LYNX モデル"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Lynx 128k (Default)"
 msgstr "Lynx 128k (標準)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Lynx 96k"
 msgstr "Lynx 96k"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Lynx 48k"
 msgstr "Lynx 48k"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Philips CD-i CD-ROMs"
 msgstr "Philips CD-i CD-ROM"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Tandy Radio Shack Color Computer cartridges"
 msgstr "Tandy Radio Shack Color Computer カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Tandy Radio Shack Color Computer disk images"
 msgstr "Tandy Radio Shack Color Computer ディスクイメージ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Select the model of Color Computer to emulate"
 msgstr "エミュレートするカラーコンピュータのモデルを選択します"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "COLOR COMPUTER MODEL"
 msgstr "カラーコンピュータ モデル"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Color Computer"
 msgstr "カラーコンピュータ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Color Computer 2"
 msgstr "カラーコンピュータ 2"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Color Computer 2B"
 msgstr "カラーコンピュータ 2B"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Color Computer 3 (NTSC) (Default)"
 msgstr "カラーコンピュータ 3 (NTSC) (標準)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Color Computer 3 (PAL)"
 msgstr "カラーコンピュータ 3 (PAL)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "V-Tech Creativision cartridges"
 msgstr "V-Tech Creativision カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Acorn Electron Disks"
 msgstr "Acorn Electron ディスク"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Acorn Electron Cassettes"
 msgstr "Acorn Electron カセット"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Acorn Electron Cartridges"
 msgstr "Acorn Electron カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Acron Electron ROMs"
 msgstr "Acron Electron ROM"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "ELECTRON MODEL"
 msgstr "エレクトロン モデル"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Electron w/64k Master RAM Board (default)"
 msgstr "Electron w/64k Master RAM ボード (標準)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Electron"
 msgstr "エレクトロン"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Fujitsu FM-77AV disk images"
 msgstr "富士通 FM-77AV ディスクイメージ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Fujitsu FM-7 cassettes"
 msgstr "富士通 FM-7 カセット"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Fujitsu FM-7 disk images"
 msgstr "富士通 FM-7 ディスクイメージ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "FM-7 MODEL"
 msgstr "FM-7 モデル"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Bit Corp Gamate cartridges"
 msgstr "Bit Corp Gamate カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Tiger Game.com cartridges"
 msgstr "Tiger Game.com カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Epoch Game Pocket Computer cartridges"
 msgstr "エポック ゲームポケットコンピュータ カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Hartung Game Master cartridges"
 msgstr "Hartung Game Master カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Macintosh 400K/800K Disk images"
 msgstr "Macintosh 400K/800K ディスクイメージ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Macintosh High Density Disk images"
 msgstr "Macintosh 高密度ディスクイメージ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Mac Harddisks"
 msgstr "Mac ハードディスク"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid ""
 "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
@@ -2743,37 +2742,37 @@ msgid ""
 msgstr ""
 "Macのモデルを選択します（推奨は白黒用のMac Plus、カラー用のMac LC 3です）"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "MAC MODEL"
 msgstr "MAC モデル"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Mac 128k (128kb RAM, 2 LD Floppies)"
 msgstr "Mac 128k (128kb メモリ, 2 LD フロッピー)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Mac 512k (512kb RAM, 2 LD Floppies)"
 msgstr "Mac 512k (512kb メモリ, 2 LD フロッピー))"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Mac Plus (4Mb RAM, 2 LD Floppies/HDD)"
 msgstr "Mac Plus (4Mb メモリ, 2 LD フロッピー/HDD)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Mac SE (4Mb RAM, 2 LD Floppies/HDD)"
 msgstr "Mac SE (4Mb メモリ, 2 LD フロッピー/HDD)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Mac Classic (4Mb RAM, 2 HD Floppies/HDD)"
 msgstr "Mac Classic (4Mb メモリ, 2 HD フロッピー/HDD)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Mac II (2Mb RAM, Color, 2 HD Floppies/CD/HDD)"
 msgstr "Mac II (2Mb メモリ, Color, 2 HD フロッピー/CD/HDD)"
@@ -2783,58 +2782,58 @@ msgctxt "game_options"
 msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD/Image Reader)"
 msgstr ""
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Mac LC 3 (Default) (4Mb RAM, Color, 2 HD Floppies/CD/HDD)"
 msgstr "Mac LC 3 (標準) (4Mb メモリ, Color, 2 HD フロッピー/CD/HDD)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Install the image reader card to read idks image files (Mac IIx only)"
-msgstr ""
+msgstr "イメージリーダーカードで、idksイメージに対応します（Mac IIxのみ）"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "IMAGE READER"
-msgstr ""
+msgstr "イメージリーダー"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Slot A (Default)"
-msgstr ""
+msgstr "スロット A(標準)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Slot B"
-msgstr ""
+msgstr "スロット B"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Slot C"
-msgstr ""
+msgstr "スロット C"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Slot D"
-msgstr ""
+msgstr "スロット D"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Slot E"
-msgstr ""
+msgstr "スロット E"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid ""
 "How much RAM the emulated Mac will have installed (Mac IIx & Mac LC 3 only)"
-msgstr ""
+msgstr "エミュレートされたMacのRAM容量（MacIIxおよびMacLC 3のみ）"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "RAM SIZE"
-msgstr ""
+msgstr "RAM 容量"
 
-#. TRANSLATION: libretro/mess, libretro/px68k, mame/wasm4
+#. TRANSLATION: libretro/mess, libretro/px68k, mame/uzem
 msgctxt "game_options"
 msgid "2MB"
 msgstr "2MB"
@@ -2842,159 +2841,159 @@ msgstr "2MB"
 #. TRANSLATION: libretro/mess
 msgctxt "game_options"
 msgid "Type of ROM file to load"
-msgstr ""
+msgstr "読み込むROMファイルのタイプ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Floppy Disk"
-msgstr ""
+msgstr "フロッピーディスク"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "CD"
 msgstr "CD"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Hard Drive"
 msgstr "ハードディスク"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Select a boot disk or hard drive if needed"
 msgstr "起動ディスクまたはハードディスクを選択します"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "BOOT DISK"
 msgstr "起動ディスク"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "System 3.0 (LD Floppy)"
 msgstr "System 3.0 (LD フロッピー)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "System 6.0.8 (LD Floppy)"
 msgstr "System 6.0.8 (LD フロッピー)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "System 7.0.1 (HD Floppy)"
 msgstr "System 7.0.1 (HD フロッピー)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "System 7.5 (HD Floppy)"
 msgstr "System 7.5 (HD フロッピー)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "System 6.0.8 (Hard Drive)"
 msgstr "System 6.0.8 (ハードディスク)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "System 7.0.1 (Hard Drive)"
 msgstr "System 7.0.1 (ハードディスク)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "System 7.5.5 (Hard Drive)"
 msgstr "System 7.5.5 (ハードディスク)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Creatronic Mega Duck cartridges"
 msgstr "Creatronic メガダック カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "PDP-1 Paper Tape Reader Images"
-msgstr ""
+msgstr "PDP-1ペーパーテープリーダーイメージ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Casio PV-1000 cartridges"
 msgstr "カシオ PV-1000 カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Video Technology Socrates cartridges"
 msgstr "Video Technology Socrates カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Funtech Super A'Can cartridges"
 msgstr "Funtech Super A'Can カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "TI-99/4A Cartridges"
 msgstr "TI-99/4A カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "32k RAM expansion card installed"
 msgstr "32k RAM拡張カード取り付け"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "32K RAM EXPANSION"
 msgstr "32K RAM拡張"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Speech module installed"
 msgstr "音声モジュール インストール"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "SPEECH MODULE"
 msgstr "音声モジュール"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "トミー ぴゅう太(Tutor) カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "GCE Vectrex cartridges"
 msgstr "GCE Vectrex カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "VTech V.Smile cartridges"
 msgstr "VTech V.Smile カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "VTech V.Smile Motion cartridges"
 msgstr "VTech V.Smile モーション カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Atari XE Game System cartridges"
 msgstr "Atari XE Game System カートリッジ"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Atari 400 / 800 floppy disks"
 msgstr "Atari 400 / 800 フロッピーディスク"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Disk (Drive 3)"
 msgstr "ディスク (ドライブ 3)"
 
-#. TRANSLATION: libretro/mess, mame/wasm4
+#. TRANSLATION: libretro/mess, mame/uzem
 msgctxt "game_options"
 msgid "Disk (Drive 4)"
 msgstr "ディスク (ドライブ 4)"
 
-#. TRANSLATION: libretro/mamevirtual, mame/wasm4
+#. TRANSLATION: libretro/mamevirtual, mame/uzem
 msgctxt "game_options"
 msgid "Video Game Music Files"
 msgstr "ビデオゲーム 音楽ファイル"
@@ -3368,17 +3367,17 @@ msgctxt "game_options"
 msgid "Can change the language of some games."
 msgstr "一部のゲームの言語を変更します"
 
-#. TRANSLATION: libretro/neocd, flycast/wasm4, redream
+#. TRANSLATION: libretro/neocd, flycast/uzem, redream
 msgctxt "game_options"
 msgid "Japan"
 msgstr "日本"
 
-#. TRANSLATION: libretro/neocd, flycast/wasm4
+#. TRANSLATION: libretro/neocd, flycast/uzem
 msgctxt "game_options"
 msgid "USA"
 msgstr "USA"
 
-#. TRANSLATION: libretro/neocd, flycast/wasm4, redream
+#. TRANSLATION: libretro/neocd, flycast/uzem, redream
 msgctxt "game_options"
 msgid "Europe"
 msgstr "ヨーロッパ"
@@ -3753,7 +3752,7 @@ msgctxt "game_options"
 msgid "Fullspeed can break some games."
 msgstr "フルスピードはゲームを壊す可能性があります"
 
-#. TRANSLATION: libretro/parallel_n64, libretro
+#. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
 msgid "FRAMERATE"
 msgstr "フレームレート"
@@ -4118,7 +4117,7 @@ msgctxt "game_options"
 msgid "CPU COMPATIBILITY"
 msgstr "CPU　互換性"
 
-#. TRANSLATION: libretro/puae, duckstation, flycast, openbor, awgl
+#. TRANSLATION: libretro/puae, duckstation, flycast, openbor
 msgctxt "game_options"
 msgid "Normal"
 msgstr "通常"
@@ -4151,7 +4150,7 @@ msgstr " 3.54 MHz"
 #. TRANSLATION: libretro/puae
 msgctxt "game_options"
 msgid " 7.09 MHz (A500 speed)"
-msgstr " 7.09 MHz (A500 speed)"
+msgstr " 7.09 MHz (A500 の実行速度)"
 
 #. TRANSLATION: libretro/puae
 msgctxt "game_options"
@@ -4272,6 +4271,16 @@ msgctxt "game_options"
 msgid "MOUSE SPEED"
 msgstr "マウス移動速度"
 
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/vice_x64, libretro/vice_x64sc
+msgctxt "game_options"
+msgid "Makes second fire button press up instead."
+msgstr "代替えで2番目のボタンを有効にします"
+
+#. TRANSLATION: libretro/puae, libretro/puae
+msgctxt "game_options"
+msgid "JUMP ON B"
+msgstr "Bでジャンプだ"
+
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae
 msgctxt "game_options"
 msgid "Removes loading but can add possible glitches/crashes."
@@ -4312,16 +4321,6 @@ msgctxt "game_options"
 msgid "DISABLE EMULATOR JOYSTICK"
 msgstr "エミュレータのジョイスティックを無効にする"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/vice_x64, libretro/vice_x64sc
-msgctxt "game_options"
-msgid "Makes second fire button press up instead."
-msgstr "代替えで2番目のボタンを有効にします"
-
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/vice_x64, libretro/vice_x64sc
-msgctxt "game_options"
-msgid "JUMP ON A"
-msgstr "Aでジャンプだ"
-
 #. TRANSLATION: libretro/puae, libretro/puae
 msgctxt "game_options"
 msgid "Select controller type for Amiga P1."
@@ -4347,31 +4346,6 @@ msgctxt "game_options"
 msgid "Select controller type for Amiga P2."
 msgstr "Amiga P2のコントローラーを選択します"
 
-#. TRANSLATION: libretro/puae, libretro/puae
-msgctxt "game_options"
-msgid "Use to play pinball games with correct mapping."
-msgstr ""
-
-#. TRANSLATION: libretro/puae, libretro/puae
-msgctxt "game_options"
-msgid "PINBALL MAPPING MODE"
-msgstr ""
-
-#. TRANSLATION: libretro/puae, libretro/puae
-msgctxt "game_options"
-msgid "Modern"
-msgstr ""
-
-#. TRANSLATION: libretro/puae, libretro/puae
-msgctxt "game_options"
-msgid "Classic"
-msgstr ""
-
-#. TRANSLATION: libretro/puae
-msgctxt "game_options"
-msgid "Modern Alternative"
-msgstr ""
-
 #. TRANSLATION: libretro/puae
 msgctxt "game_options"
 msgid "Inserts CD during boot animation to prevent loading fail."
@@ -4391,6 +4365,11 @@ msgstr "CD ターボ 速度"
 msgctxt "game_options"
 msgid "Makes the blue button press up instead."
 msgstr "代替えで青いボタンを有効にします"
+
+#. TRANSLATION: libretro/puae, libretro/vice_x64, libretro/vice_x64sc
+msgctxt "game_options"
+msgid "JUMP ON A"
+msgstr "Aでジャンプだ"
 
 #. TRANSLATION: libretro/puae
 msgctxt "game_options"
@@ -4586,86 +4565,6 @@ msgstr "64 MHz（オーバークロック）"
 msgctxt "game_options"
 msgid "EMULATE PCG-8100"
 msgstr "PCG-8100拡張ハードウェア"
-
-#. TRANSLATION: libretro/sameboy
-msgctxt "game_options"
-msgid "Select the color palette to use"
-msgstr ""
-
-#. TRANSLATION: libretro/sameboy
-msgctxt "game_options"
-msgid "Greyscale"
-msgstr ""
-
-#. TRANSLATION: libretro/sameboy
-msgctxt "game_options"
-msgid "Lime (Game Boy)"
-msgstr ""
-
-#. TRANSLATION: libretro/sameboy
-msgctxt "game_options"
-msgid "Olive (Game Boy Pocket)"
-msgstr ""
-
-#. TRANSLATION: libretro/sameboy
-msgctxt "game_options"
-msgid "Teal (Game Boy Light)"
-msgstr ""
-
-#. TRANSLATION: libretro/sameboy
-msgctxt "game_options"
-msgid "Simulate LCD color inaccuracy"
-msgstr ""
-
-#. TRANSLATION: libretro/sameboy
-msgctxt "game_options"
-msgid "Emulate Hardware"
-msgstr ""
-
-#. TRANSLATION: libretro/sameboy
-msgctxt "game_options"
-msgid "Preserve Brightness"
-msgstr ""
-
-#. TRANSLATION: libretro/sameboy
-msgctxt "game_options"
-msgid "Reduce Contrast"
-msgstr ""
-
-#. TRANSLATION: libretro/sameboy
-msgctxt "game_options"
-msgid "Correct Color Curves"
-msgstr ""
-
-#. TRANSLATION: libretro/sameboy
-msgctxt "game_options"
-msgid "Harsh Reality (Low Contrast)"
-msgstr ""
-
-#. TRANSLATION: libretro/sameboy
-msgctxt "game_options"
-msgid "Select the SGB model to use"
-msgstr ""
-
-#. TRANSLATION: libretro/sameboy
-msgctxt "game_options"
-msgid "SUPER GAME BOY MODEL"
-msgstr ""
-
-#. TRANSLATION: libretro/sameboy
-msgctxt "game_options"
-msgid "Super Game Boy NTSC"
-msgstr ""
-
-#. TRANSLATION: libretro/sameboy
-msgctxt "game_options"
-msgid "Super Game Boy PAL"
-msgstr ""
-
-#. TRANSLATION: libretro/sameboy
-msgctxt "game_options"
-msgid "Super Game Boy 2"
-msgstr ""
 
 #. TRANSLATION: libretro/scummvm
 msgctxt "game_options"
@@ -5439,8 +5338,9 @@ msgstr "多人数対応ゲームで7～12のコントローラーを使用でき
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
-msgid "Choose which graphics API library to use."
-msgstr ""
+msgid ""
+"Choose which graphics API library to use. Vulkan may not work for every core."
+msgstr "グラフィックAPIを選択します。Vulkanが機能しないコアもあります"
 
 #. TRANSLATION: libretro, cemu, dolphin, duckstation, flycast, ...
 msgctxt "game_options"
@@ -5457,55 +5357,10 @@ msgctxt "game_options"
 msgid "GLCore"
 msgstr "GL コア"
 
-#. TRANSLATION: libretro, libretro
-msgctxt "game_options"
-msgid "SDL2"
-msgstr ""
-
 #. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
-
-#. TRANSLATION: libretro
-msgctxt "game_options"
-msgid "Choose which audio API library to use."
-msgstr ""
-
-#. TRANSLATION: libretro
-msgctxt "game_options"
-msgid "AUDIO API"
-msgstr ""
-
-#. TRANSLATION: libretro
-msgctxt "game_options"
-msgid "ALSA"
-msgstr ""
-
-#. TRANSLATION: libretro
-msgctxt "game_options"
-msgid "ALSAThread"
-msgstr ""
-
-#. TRANSLATION: libretro
-msgctxt "game_options"
-msgid "TinyALSA"
-msgstr ""
-
-#. TRANSLATION: libretro
-msgctxt "game_options"
-msgid "openAL"
-msgstr ""
-
-#. TRANSLATION: libretro
-msgctxt "game_options"
-msgid "PulseAudio"
-msgstr ""
-
-#. TRANSLATION: libretro
-msgctxt "game_options"
-msgid "NULL"
-msgstr ""
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -5546,21 +5401,6 @@ msgstr "コントローラー入力をガンコン入力に割り当てます"
 msgctxt "game_options"
 msgid "CONTROLLER TO LIGHTGUN"
 msgstr "銃操作をコントローラーに割り当て"
-
-#. TRANSLATION: libretro
-msgctxt "game_options"
-msgid "Display the current frame counter."
-msgstr ""
-
-#. TRANSLATION: libretro
-msgctxt "game_options"
-msgid "FRAMECOUNT"
-msgstr ""
-
-#. TRANSLATION: libretro
-msgctxt "game_options"
-msgid "Display the current frames per second."
-msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -5777,7 +5617,7 @@ msgctxt "game_options"
 msgid "Not all games support Stretch, depending on the video files."
 msgstr "引き伸ばしは、すべてのゲームに対応しているわけではありません"
 
-#. TRANSLATION: daphne, awgl, awgl
+#. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "Original"
 msgstr "オリジナル"
@@ -5837,59 +5677,59 @@ msgctxt "game_options"
 msgid "INVERT AXIS"
 msgstr "スティック軸を反転"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/uzem
 msgctxt "game_options"
 msgid ""
 "Wii NAND's aspect ratio setting. Most games support both ratios natively."
 msgstr "WiiNANDのアスペクト比設定。ほとんどのゲームは、両比率に対応しています"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/uzem
 msgctxt "game_options"
 msgid "WII TV MODE"
 msgstr "Wii テレビモード"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/uzem
 msgctxt "game_options"
 msgid "Map your controller to an emulated Wiimote."
 msgstr "コントローラをエミュレートされたWiiリモコンにマッピングします"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/uzem
 msgctxt "game_options"
 msgid "EMULATE WIIMOTE"
 msgstr "Wiiリモコンをエミュレートする"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/uzem
 msgctxt "game_options"
 msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
 msgstr ""
 "Rスティックをヌンチャク、L2を振る動作としてWiiリモコンをエミュレートします"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/uzem
 msgctxt "game_options"
 msgid "CUSTOMIZE WIIMOTE & GAMEPAD"
 msgstr "Wiiリモコンとゲームパッドをカスタマイズ"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/uzem
 msgctxt "game_options"
 msgid "Classic Controller"
 msgstr "クラシックコントローラ"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/uzem
 msgctxt "game_options"
 msgid "Wiimote Sideway"
 msgstr "Wiiリモコン横向き"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/uzem
 msgctxt "game_options"
 msgid "Wiimote Sideway + Swing"
 msgstr "Wiiリモコン横向き + 振る動作"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/uzem
 msgctxt "game_options"
 msgid "Wiimote Sideway + Tilt"
 msgstr "Wiiリモコン横向き + 傾き動作"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/uzem
 msgctxt "game_options"
 msgid "Wiimote Sideway + Nunchuk"
 msgstr "Wiiリモコン横向き + ヌンチャク"
@@ -6335,82 +6175,82 @@ msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "ネジコン(ナムコ)(振動有)"
 
-#. TRANSLATION: flycast/wasm4
+#. TRANSLATION: flycast/uzem
 msgctxt "game_options"
 msgid "Choose the emulator language."
 msgstr "エミュレータの表示言語を選択します"
 
-#. TRANSLATION: flycast/wasm4
+#. TRANSLATION: flycast/uzem
 msgctxt "game_options"
 msgid "CHOOSE DREAMCAST LANGUAGE"
 msgstr "ドリームキャストの言語の選択"
 
-#. TRANSLATION: flycast/wasm4, redream, sonic2013, soniccd
+#. TRANSLATION: flycast/uzem, redream, sonic2013, soniccd
 msgctxt "game_options"
 msgid "Japanese"
 msgstr "日本語"
 
-#. TRANSLATION: flycast/wasm4, sonic2013, soniccd, awgl
+#. TRANSLATION: flycast/uzem, sonic2013, soniccd
 msgctxt "game_options"
 msgid "English"
 msgstr "英語"
 
-#. TRANSLATION: flycast/wasm4, redream, sonic2013, soniccd
+#. TRANSLATION: flycast/uzem, redream, sonic2013, soniccd
 msgctxt "game_options"
 msgid "German"
 msgstr "ドイツ語"
 
-#. TRANSLATION: flycast/wasm4, redream, sonic2013, soniccd
+#. TRANSLATION: flycast/uzem, redream, sonic2013, soniccd
 msgctxt "game_options"
 msgid "French"
 msgstr "フランス語"
 
-#. TRANSLATION: flycast/wasm4, redream, sonic2013, soniccd
+#. TRANSLATION: flycast/uzem, redream, sonic2013, soniccd
 msgctxt "game_options"
 msgid "Spanish"
 msgstr "スペイン語"
 
-#. TRANSLATION: flycast/wasm4, redream, sonic2013, soniccd
+#. TRANSLATION: flycast/uzem, redream, sonic2013, soniccd
 msgctxt "game_options"
 msgid "Italian"
 msgstr "イタリア語"
 
-#. TRANSLATION: flycast/wasm4
+#. TRANSLATION: flycast/uzem
 msgctxt "game_options"
 msgid "Choose your console region."
 msgstr "ドリームキャストのコンソールリージョンを選択します"
 
-#. TRANSLATION: flycast/wasm4
+#. TRANSLATION: flycast/uzem
 msgctxt "game_options"
 msgid "CHOOSE DREAMCAST CONSOLE REGION"
 msgstr "コンソールリージョンの選択"
 
-#. TRANSLATION: flycast/wasm4
+#. TRANSLATION: flycast/uzem
 msgctxt "game_options"
 msgid "Enable Dreamcast auto load states."
 msgstr "ドリームキャストの自動ステート読込みを有効"
 
-#. TRANSLATION: flycast/wasm4
+#. TRANSLATION: flycast/uzem
 msgctxt "game_options"
 msgid "ENABLE AUTO LOAD STATES"
 msgstr "自動ステート読込みを有効"
 
-#. TRANSLATION: flycast/wasm4
+#. TRANSLATION: flycast/uzem
 msgctxt "game_options"
 msgid "Enable Dreamcast auto saves states."
 msgstr "ドリームキャストの自動ステート保存を有効"
 
-#. TRANSLATION: flycast/wasm4
+#. TRANSLATION: flycast/uzem
 msgctxt "game_options"
 msgid "ENABLE AUTO SAVE STATES"
 msgstr "自動ステート保存を有効"
 
-#. TRANSLATION: flycast/wasm4
+#. TRANSLATION: flycast/uzem
 msgctxt "game_options"
 msgid "Forces Dreamcast Windows CE mode on."
 msgstr "ドリームキャストを強制的にWINDOWS CE モード"
 
-#. TRANSLATION: flycast/wasm4
+#. TRANSLATION: flycast/uzem
 msgctxt "game_options"
 msgid "FORCE WINDOWS CE"
 msgstr "強制的にWINDOWS CE モード"
@@ -6836,127 +6676,128 @@ msgid ""
 "h265 (HEVC) is CPU heavy and increases latency, but is more bandwidth "
 "efficient."
 msgstr ""
+"h265(HEVC)はCPUパワーを消費し、遅延が増加しますが、帯域幅効率が高くなります"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "VIDEO STREAM CODEC"
-msgstr ""
+msgstr "映像ストリームコーデック"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "h264 (less latency)"
-msgstr ""
+msgstr "h264 (低遅延)"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "h265 (HEVC) (higher quality at lower bitrates)"
-msgstr ""
+msgstr "h265 (HEVC)（低ビットレートで高品質）"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "VIDEO STREAM RESOLUTION"
-msgstr ""
+msgstr "映像ストリーム解像度"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "4K (3840x2160)"
-msgstr ""
+msgstr "4K (3840x2160)"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "VIDEO STREAM FRAMERATE"
-msgstr ""
+msgstr "映像ストリームフレームレート"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "30FPS"
-msgstr ""
+msgstr "30FPS"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "60FPS"
-msgstr ""
+msgstr "60FPS"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "120FPS"
-msgstr ""
+msgstr "120FPS"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "Higher number for higher picture quality, but requires more bandwidth."
-msgstr ""
+msgstr "画質を上げると、より多くの帯域幅が必要になります"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "VIDEO STREAM BITRATE"
-msgstr ""
+msgstr "映像ストリームビットレート"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "5Mbps (good for 720p)"
-msgstr ""
+msgstr "5Mbps（720pに最適）"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "10Mbps (good for 1080p 60FPS)"
-msgstr ""
+msgstr "10Mbps（1080p 60FPSに最適）"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "20Mbps (not supported by some routers)"
-msgstr ""
+msgstr "20Mbps（非対応のルーターもあります）"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "50Mbps (highest quality available)"
-msgstr ""
+msgstr "50Mbps（利用可能な最高品質）"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid ""
 "Streaming Optimal Playable Settings, overrides other settings if enabled."
-msgstr ""
+msgstr "ストリーミング最適再生可能設定。有効の場合、他の設定を上書きします"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "DYNAMICALLY CALCULATE OPTIMAL SETTINGS"
-msgstr ""
+msgstr "最適な設定を動的に計算します"
 
 #. TRANSLATION: moonlight, moonlight
 msgctxt "game_options"
 msgid "on"
-msgstr ""
+msgstr "有効"
 
 #. TRANSLATION: moonlight, moonlight
 msgctxt "game_options"
 msgid "off"
-msgstr ""
+msgstr "無効"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
-msgstr ""
+msgstr "Moonlightの終了は、リモートホストのアプリを閉じます"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "QUIT ON HOST"
-msgstr ""
+msgstr "ホストを終了"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "If screen is rotated by 90 degrees, select SDL."
-msgstr ""
+msgstr "画面が90度回転している場合は、SDLを選択します"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "PREFERRED AV DECODER"
-msgstr ""
+msgstr "優先AVデコーダー"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "SDL"
-msgstr ""
+msgstr "SDL"
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -7036,7 +6877,7 @@ msgctxt "game_options"
 msgid "Simple 2x"
 msgstr "Simple 2x"
 
-#. TRANSLATION: pcsx2, awgl
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Software"
 msgstr "ソフトウェア"
@@ -7389,7 +7230,7 @@ msgstr "テクスチャ デポスタライズ"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
-msgstr "Alt+Tab をRPCS3のメニューに許可します。手動でのディスク交換に​​便利です"
+msgstr "[Alt+Tab]でRPCS3のメニューを表示します。ディスク交換などに​便利です"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -7399,8 +7240,7 @@ msgstr "グラフィカル ユーザー インターフェース"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "If game crashes, try ASMJIT. If still crashing, try Fast Interpreter."
-msgstr ""
-"ゲームが停止する時は、ASMJITを、それでも停止する時は、(速い)を試してください"
+msgstr "ゲームが停止する時は[ASMJIT]、[インタープリタ(速い)]を試してください"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -7482,9 +7322,7 @@ msgstr "インタープリタのみ（実験的）"
 msgctxt "game_options"
 msgid ""
 "Can fix screen tearing on unorthodox displays (most LCDs don't need this)."
-msgstr ""
-"特殊なディスプレイでの画面のずれを修正できます（ほとんどのLCDは必要ありませ"
-"ん）"
+msgstr "特殊なディスプレイでの画面のずれを修正できます（ほぼ必要ありません）"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -7871,20 +7709,21 @@ msgctxt "game_options"
 msgid "FORCE 386DX CPU"
 msgstr "386DX CPUに固定"
 
-#. TRANSLATION: mame/wasm4
+#. TRANSLATION: mame/uzem
 msgctxt "game_options"
 msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD, Image Reader)"
-msgstr ""
+msgstr "Mac IIx（2Mb RAM、カラー、2HD FD/CD/HDD、イメージリーダー）"
 
-#. TRANSLATION: mame/wasm4
+#. TRANSLATION: mame/uzem
 msgctxt "game_options"
 msgid "Type of ROM file to load. Disk Image requires Mac IIx and Image Reader"
 msgstr ""
+"読み込むROMの種類。ディスクイメージにはMacIIxとイメージリーダーが必要です"
 
-#. TRANSLATION: mame/wasm4
+#. TRANSLATION: mame/uzem
 msgctxt "game_options"
 msgid "Disk Image"
-msgstr ""
+msgstr "ディスクイメージ"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -8199,22 +8038,22 @@ msgstr "スケーリングモード"
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "Original resolution"
-msgstr ""
+msgstr "オリジナル解像度"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "Scale to best fit"
-msgstr ""
+msgstr "最適なスケール"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "Stretch to full"
-msgstr ""
+msgstr "画面に合わせ引き伸ばし"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "Stretch to 16:9"
-msgstr ""
+msgstr "16：9 引き伸ばし"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -8429,106 +8268,6 @@ msgctxt "game_options"
 msgid "ENABLE RAW INPUT"
 msgstr "RAW入力を有効"
 
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "Select game difficulty."
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "GAME DIFFICULTY"
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "Easy"
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "Hard"
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "Select game language."
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "GAME LANGUAGE"
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "Francais"
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "Deutsch"
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "Espanol"
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "Italiano"
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "Select rendering mode."
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "Select fullscreen mode."
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "FULLSCREEN MODE"
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "Stretched (640x480)"
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "Widescreen (16:10)"
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "Select sound effects mode."
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "SOUND EFFECTS MODE"
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "Remastered"
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "Simulate the EGA graphics mode (works only with DOS version)."
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "EGA GRAPHICS MODE"
-msgstr ""
-
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Use the same art paths as standalone MAME - not recommended if using "
@@ -8538,132 +8277,3 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD)"
 #~ msgstr "Mac IIx (2Mb メモリ, Color, 2 HD フロッピー/CD/HDD)"
-
-#~ msgctxt "game_options"
-#~ msgid "Disk"
-#~ msgstr "ディスク"
-
-#~ msgctxt "game_options"
-#~ msgid "Center"
-#~ msgstr "中央"
-
-#~ msgctxt "game_options"
-#~ msgid "Scale"
-#~ msgstr "スケール"
-
-#~ msgctxt "game_options"
-#~ msgid "JUMP ON B"
-#~ msgstr "Bでジャンプだ"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Choose which graphics API library to use. Vulkan may not work for every "
-#~ "core."
-#~ msgstr "グラフィックAPIを選択します。Vulkanが機能しないコアもあります"
-
-#~ msgctxt "game_options"
-#~ msgid "CUSTOM TEXTURES"
-#~ msgstr "カスタムテクスチャ"
-
-#, fuzzy
-#~| msgctxt "game_options"
-#~| msgid "Gamepad"
-#~ msgctxt "game_options"
-#~ msgid "Game"
-#~ msgstr "ゲームパッド"
-
-#, fuzzy
-#~| msgctxt "game_options"
-#~| msgid "Performance"
-#~ msgctxt "game_options"
-#~ msgid "Performances"
-#~ msgstr "パフォーマンス"
-
-#~ msgctxt "game_options"
-#~ msgid "Use run-ahead frames"
-#~ msgstr "先行フレームの使用"
-
-#, fuzzy
-#~| msgctxt "game_options"
-#~| msgid "USE SECOND INSTANCE FOR RUN-AHEAD"
-#~ msgctxt "game_options"
-#~ msgid "RUN-AHEAD USE SECOND INSTANCE"
-#~ msgstr "ランアヘッドで2番目のインスタンスを使用"
-
-#, fuzzy
-#~| msgctxt "game_options"
-#~| msgid ""
-#~| "Automatically decrease frame delay temporarily to prevent frame drops. "
-#~| "Can introduce stuttering."
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Automatically decrease frame delay temporarily to prevent frame drops."
-#~ msgstr ""
-#~ "フレームドロップ防止で、フレーム遅延を減らします。不具合がでる場合がありま"
-#~ "す"
-
-#~ msgctxt "game_options"
-#~ msgid "Set the default aspect ratio."
-#~ msgstr "通常のアスペクト比を設定します"
-
-#, fuzzy
-#~| msgctxt "game_options"
-#~| msgid "Enable vertical sync to avoid tearing in some cases."
-#~ msgctxt "game_options"
-#~ msgid "Set vsync on to avoid tearing."
-#~ msgstr "場合によっては画面ずれ回避のために、垂直同期を有効にします"
-
-#, fuzzy
-#~| msgctxt "game_options"
-#~| msgid ""
-#~| "If game crashes, try ASMJIT. If still crashing, try Fast Interpreter."
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "If game crashes, try ASMJIT. If still crashing, try Interpreter (fast)."
-#~ msgstr ""
-#~ "ゲームが停止する時は、ASMJITを、それでも停止する時は、(速い)を試してくださ"
-#~ "い"
-
-#, fuzzy
-#~| msgctxt "game_options"
-#~| msgid "Recompiler (Fastest)"
-#~ msgctxt "game_options"
-#~ msgid "Recompiler (LLVM)"
-#~ msgstr "リコンパイラ（最速）"
-
-#, fuzzy
-#~| msgctxt "game_options"
-#~| msgid "Recompiler (Fastest)"
-#~ msgctxt "game_options"
-#~ msgid "Recompiler (ASMJIT)"
-#~ msgstr "リコンパイラ（最速）"
-
-#, fuzzy
-#~| msgctxt "game_options"
-#~| msgid "Interpreter (Slowest)"
-#~ msgctxt "game_options"
-#~ msgid "Interpreter (fast)"
-#~ msgstr "インタープリタ（最も遅い）"
-
-#, fuzzy
-#~| msgctxt "game_options"
-#~| msgid "Interpreter (Slowest)"
-#~ msgctxt "game_options"
-#~ msgid "Interpreter (precise)"
-#~ msgstr "インタープリタ（最も遅い）"
-
-#~ msgctxt "game_options"
-#~ msgid "UBERSHADERS (needs review)"
-#~ msgstr "ウーバーシェーダー（要確認）"
-
-#~ msgctxt "game_options"
-#~ msgid "DUAL CORE MODE (needs review)"
-#~ msgstr "デュアルコアモード（要確認）"
-
-#~ msgctxt "game_options"
-#~ msgid "GPU SYNC (needs review)"
-#~ msgstr "GPU 同期（要確認）"
-
-#~ msgctxt "game_options"
-#~ msgid "RUMBLE (needs review)"
-#~ msgstr "振動（要確認）"
