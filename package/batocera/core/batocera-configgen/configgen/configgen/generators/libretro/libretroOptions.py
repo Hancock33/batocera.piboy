@@ -628,10 +628,10 @@ def generateCoreSettings(coreSettings, system, rom):
         else:
             coreSettings.save('puae_video_standard', '"PAL"')
         # Video Resolution
-        if system.isOptSet('video_resolution'):
+        if system.isOptSet('video_resolution') and system.config['video_resolution'] != 'automatic':
             coreSettings.save('puae_video_resolution', system.config['video_resolution'])
         else:
-            coreSettings.save('puae_video_resolution', '"hires"')
+            coreSettings.save('puae_video_resolution', '"auto"')
         # Zoom Mode
         if system.isOptSet('zoom_mode') and system.config['zoom_mode'] != 'automatic':
             coreSettings.save('puae_zoom_mode', system.config['zoom_mode'])

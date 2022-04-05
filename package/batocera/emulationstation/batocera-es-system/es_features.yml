@@ -3642,9 +3642,10 @@ libretro:
                 prompt:      CPU COMPATIBILITY
                 description: Help games which are too quick or that have bugs.
                 choices:
-                    "Normal":          normal
-                    "More compatible": compatible
-                    "Cycle-exact":     exact
+                    "Normal":                       normal
+                    "More compatible":              compatible
+                    "Cycle-exact (DMA/Memory)":     memory
+                    "Cycle-exact (Full)":           exact
             cpu_multiplier:
                 prompt:      CPU CLOCK
                 description: Works with 'Cycle-exact' mode and for a few games.
@@ -3688,8 +3689,9 @@ libretro:
                     "NTSC 240x480px 60Hz": NTSC
             video_resolution:
                 prompt:      VIDEO RESOLUTION
-                description: Manually define which resolution to use.&#x0a;Auto defaults to High and switches to Super-High when needed.
+                description: Manually define which resolution to use.
                 choices:
+                    "Autoswitch":       automatic
                     "Low 360p":         lores
                     "High 720p":        hires
                     "Super-high 1440p": superhires
@@ -3785,9 +3787,10 @@ libretro:
                         prompt:      PINBALL MAPPING MODE
                         description: Use to play pinball games with correct mapping.
                         choices:
-                            "Off":      disabled
-                            "Modern":   modern
-                            "Classic":  classic
+                            "Off":                  disabled
+                            "Modern":               modern
+                            "Modern Alternative":   modern_alt
+                            "Classic":              classic
             amiga1200:
                 cfeatures:
                     puae_floppy_speed:
@@ -4976,9 +4979,9 @@ amiberry:
             choices:
                 "ON":                          true
                 "OFF":                         false
-        amiberry_auto_height:
-            prompt:      AUTO HEIGHT
-            description: Resize automatically screen height.
+        amiberry_auto_crop:
+            prompt:      AUTO CROP
+            description: Resize automatically the screen.
             choices:
                 "ON":                          true
                 "OFF":                         false
