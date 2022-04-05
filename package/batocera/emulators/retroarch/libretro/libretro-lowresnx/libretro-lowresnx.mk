@@ -3,8 +3,8 @@
 # LOWRESNX
 #
 ################################################################################
-# Version: Commits on Mar 27, 2021
-LIBRETRO_LOWRESNX_VERSION = f2b5c1d4ec95290081eb95fd8262bd25bdea31cc
+# Version: Commits on Apr 04, 2022
+LIBRETRO_LOWRESNX_VERSION = 726016d37bc7b18e6e2fac0140b7d85b19374c7e
 LIBRETRO_LOWRESNX_SITE = $(call github,timoinutilis,lowres-nx,$(LIBRETRO_LOWRESNX_VERSION))
 LIBRETRO_LOWRESNX_LICENSE = ZLIB
 
