@@ -5,9 +5,9 @@ default:
     retroarch.video_max_swapchain_images: 3
     retroarch.video_adaptive_vsync: true
     hud_support: true
-    menu_scale_factor: 0.800000
-    menu_widget_scale_auto: false
-    menu_widget_scale_factor: 0.800000
+    retroarch.menu_scale_factor: 0.800000
+    retroarch.menu_widget_scale_auto: false
+    retroarch.menu_widget_scale_factor: 0.800000
 
 nds:
   emulator: drastic
