@@ -1,6 +1,0 @@
-config BR2_PACKAGE_JDK_RPI3
-    bool "jdk-rpi3"
-    help
-      openJDK precompiled for RPI3
-
-      https://github.com/Hancock33/openjdk-batocera

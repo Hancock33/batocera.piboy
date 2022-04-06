@@ -1,6 +1,0 @@
-config BR2_PACKAGE_JDK_X86_64
-    bool "jdk-x86_64"
-    help
-      openJDK precompiled for X86_64
-
-      https://github.com/Hancock33/openjdk-batocera
