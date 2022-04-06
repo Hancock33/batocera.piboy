@@ -1,7 +1,0 @@
-config BR2_PACKAGE_JDK_RPI4
-    bool "jdk-rpi4"
-    select BR2_PACKAGE_XLIB_LIBXTST
-    help
-      openJDK precompiled for RPI4
-
-      https://github.com/Hancock33/openjdk-batocera
