@@ -6,7 +6,7 @@ default:
     retroarch.vrr_runloop_enable: false
     retroarch.video_max_swapchain_images: 3
     retroarch.video_adaptive_vsync: true
-    retroarch.menu_widget_scale_auto: '"true"'
+    retroarch.menu_widget_scale_auto: true
 
 nds:
   emulator: drastic
