@@ -3,8 +3,8 @@
 # BOOM3 - Doom3 Engine
 #
 ################################################################################
-# Version: Commits on Feb 04, 2022
-LIBRETRO_BOOM_VERSION = 72fc7f24852689287a9fcf7628e8f2e665bd1b33
+# Version: Commits on Apr 05, 2022
+LIBRETRO_BOOM_VERSION = f271fa75b678eb4ff62a7f6e8945e94176d0d5f8
 LIBRETRO_BOOM3_SITE = $(call github,libretro,boom3,$(LIBRETRO_BOOM3_VERSION))
 LIBRETRO_BOOM3_LICENSE = GPLv2
 
