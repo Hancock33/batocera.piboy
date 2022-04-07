@@ -582,7 +582,7 @@ def generateCoreSettings(coreSettings, system, rom):
                 'rl': "---",
                 'rr': "---",
                 'ru': "---",
-                'select': "---",
+                'select': "TOGGLE_VKBD",
                 'start': "---",}
             for key in uae_mapping:
                 coreSettings.save('puae_mapper_' + key, uae_mapping[key])
