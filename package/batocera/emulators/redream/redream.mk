@@ -23,9 +23,6 @@ endef
 
 define REDREAM_INSTALL_TARGET_CMDS
     $(INSTALL) -D $(@D)/target/redream $(TARGET_DIR)/usr/bin/redream
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/redream/dreamcast.redream.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
