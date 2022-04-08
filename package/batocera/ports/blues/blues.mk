@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Apr 08, 2022
-BLUES_VERSION = 01a91cdcffa8e8c47a68e3b12f3aa126efe289cc
+BLUES_VERSION = 7732c4f7d2a0e0edf4063ac1263ba1ca06df24e1
 BLUES_SITE = $(call github,twojstaryzdomu,blues,$(BLUES_VERSION))
 
 BLUES_DEPENDENCIES = sdl2 sdl2_mixer
