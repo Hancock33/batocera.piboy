@@ -3,10 +3,9 @@
 # HATARI
 #
 ################################################################################
-# Version: Release on Apr 09, 2022
+# Version: Release on Apr 08, 2022
 HATARI_VERSION = 3b2ebaed34ccd551c2f38b0433cdcf809b7be2fd
-HATARI_SITE = https://git.tuxfamily.org/hatari/hatari.git
-HATARI_SITE_METHOD=git
+HATARI_SITE = $(call github,hatari,hatari,$(HATARI_VERSION))
 HATARI_LICENSE = GPLv3
 HATARI_DEPENDENCIES = sdl2 zlib libpng libcapsimage
 
