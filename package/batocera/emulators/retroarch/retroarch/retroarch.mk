@@ -128,7 +128,7 @@ ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
-	RETROARCH_CONF_OPTS += --enable-opengles3 --enable-opengles3_1
+	RETROARCH_CONF_OPTS += --enable-opengles3 --enable-opengles3_1 --enable-opengles3_2
 endif
 
 ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),)
