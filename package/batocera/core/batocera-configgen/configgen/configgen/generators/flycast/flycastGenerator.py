@@ -26,7 +26,7 @@ class FlycastGenerator(Generator):
                 Config.read(batoceraFiles.flycastConfig)
             except:
                 pass # give up the file
-        
+
         if not Config.has_section("input"):
             Config.add_section("input")
         # For each pad detected
@@ -36,25 +36,25 @@ class FlycastGenerator(Generator):
 
         for index in playersControllers:
             controller = playersControllers[index]
-        
+
             # Get the event number
             eventNum = controller.dev.replace('/dev/input/event', '')
-            
+
             # Write its mapping file
             controllerConfigFile = flycastControllers.generateControllerConfig(controller)
             # write the arcade file variant (atomiswave & naomi)
             flycastControllers.generateArcadeControllerConfig(controller)
-            
+
             # set the evdev_device_id_X
             Config.set("input", 'evdev_device_id_' + controller.player, eventNum)
-            
+
             # Set the evdev_mapping_X
             Config.set("input", 'evdev_mapping_' + controller.player, controllerConfigFile)
 
             # Ensure controller is on Port A-B
             port = int(controller.player)-1
             Config.set("input", 'maple_/dev/input/event' + eventNum, str(port))
-        
+
         if not Config.has_section("players"):
             Config.add_section("players")
         # number of players
@@ -89,7 +89,7 @@ class FlycastGenerator(Generator):
             Config.set("config", "pvr.rend", str(system.config["flycast_renderer"]))
         else:
             Config.set("config", "pvr.rend", "0")
-        
+
         # dreamcast specifics
         # language
         if system.isOptSet("flycast_language"):
@@ -131,9 +131,9 @@ class FlycastGenerator(Generator):
         if not os.path.exists(os.path.dirname(batoceraFiles.flycastConfig)):
             os.makedirs(os.path.dirname(batoceraFiles.flycastConfig))
         with open(batoceraFiles.flycastConfig, 'w+') as cfgfile:
-            Config.write(cfgfile)        
+            Config.write(cfgfile)
             cfgfile.close()
-            
+
         # internal config
         # vmuA1
         if not isfile(batoceraFiles.flycastVMUA1):
@@ -145,8 +145,8 @@ class FlycastGenerator(Generator):
         # vmuA2
         if not isfile(batoceraFiles.flycastVMUA2):
             copyfile(batoceraFiles.flycastVMUBlank, batoceraFiles.flycastVMUA2)
-        
-        # the command to run  
+
+        # the command to run
         commandArray = [batoceraFiles.batoceraBins[system.config['emulator']]]
         commandArray.append(rom)
         # Here is the trick to make flycast find files :
