@@ -109,19 +109,19 @@ do
 done
 
 #### md5 and sha256 #######################
-for FILE in "${BATOCERA_BINARIES_DIR}/images/"*"/boot-"*".tar.xz" "${BATOCERA_BINARIES_DIR}/images/"*"/batocera-"*".img.xz"
-do
-    echo "creating ${FILE}.md5"
-    CKS=$(md5sum "${FILE}" | sed -e s+'^\([^ ]*\) .*$'+'\1'+)
-    echo "${CKS}" > "${FILE}.md5"
-    echo "${CKS}  $(basename "${FILE}")" >> "${BATOCERA_BINARIES_DIR}/MD5SUMS"
-    echo "creating ${FILE}.sha256"
-    CKS=$(sha256sum "${FILE}" | sed -e s+'^\([^ ]*\) .*$'+'\1'+)
-    echo "${CKS}" > "${FILE}.sha256"
-    echo "${CKS}  $(basename "${FILE}")" >> "${BATOCERA_BINARIES_DIR}/SHA256SUMS"
-done
+#for FILE in "${BATOCERA_BINARIES_DIR}/images/"*"/boot-"*".tar.xz" "${BATOCERA_BINARIES_DIR}/images/"*"/batocera-"*".img.xz"
+#do
+#    echo "creating ${FILE}.md5"
+#    CKS=$(md5sum "${FILE}" | sed -e s+'^\([^ ]*\) .*$'+'\1'+)
+#    echo "${CKS}" > "${FILE}.md5"
+#    echo "${CKS}  $(basename "${FILE}")" >> "${BATOCERA_BINARIES_DIR}/MD5SUMS"
+#    echo "creating ${FILE}.sha256"
+#    CKS=$(sha256sum "${FILE}" | sed -e s+'^\([^ ]*\) .*$'+'\1'+)
+#    echo "${CKS}" > "${FILE}.sha256"
+#    echo "${CKS}  $(basename "${FILE}")" >> "${BATOCERA_BINARIES_DIR}/SHA256SUMS"
+#done
 
 #### update the target dir with some information files
-cp "${TARGET_DIR}/usr/share/batocera/batocera.version" "${BATOCERA_BINARIES_DIR}" || exit 1
-cp -av "${BATOCERA_BINARIES_DIR}"/images/*.xz /mnt/smb || exit 1
+#cp "${TARGET_DIR}/usr/share/batocera/batocera.version" "${BATOCERA_BINARIES_DIR}" || exit 1
+cp -av "${BATOCERA_BINARIES_DIR}"/images/* /mnt/smb || exit 1
 #"${BR2_EXTERNAL_BATOCERA_PATH}"/scripts/linux/systemsReport.sh "${PWD}" "${BATOCERA_BINARIES_DIR}" || exit 1
