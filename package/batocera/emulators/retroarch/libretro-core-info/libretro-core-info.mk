@@ -27,7 +27,7 @@ define LIBRETRO_CORE_INFO_INSTALL_TARGET_CMDS
 	mv $(@D)/snes9x2010_libretro.info 			$(TARGET_DIR)/usr/share/libretro/info/snes9x_next_libretro.info
 	mv $(@D)/vbam_libretro.info 				$(TARGET_DIR)/usr/share/libretro/info/vba-m_libretro.info
 	cp -r $(@D)/*.info 							$(TARGET_DIR)/usr/share/libretro/info
-	
+
 	# emuscv_libretro.info         => no info found
 	# superflappybirds_libretro.so => no info found
 	touch $(TARGET_DIR)/usr/share/libretro/info/emuscv_libretro.info

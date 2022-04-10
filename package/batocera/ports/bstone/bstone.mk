@@ -3,8 +3,8 @@
 # Blake Stone
 #
 ################################################################################
-# Version: Commits on Feb 20, 2022
-BSTONE_VERSION = 6699d5a421c912f2b6e74daf4677cc3e2267729b
+# Version: Commits on Apr 09, 2022
+BSTONE_VERSION = cce009f6c169397714d07c518dabc03b6edd5a29
 BSTONE_SITE = $(call github,bibendovsky,bstone,$(BSTONE_VERSION))
 
 BSTONE_DEPENDENCIES = sdl2 sdl2_mixer

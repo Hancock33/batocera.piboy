@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Apr 09, 2022
-LIBRETRO_MESENS_VERSION = d1714e9e0890bd84493d0cbf97ffb93da18197e2
+LIBRETRO_MESENS_VERSION = b0b53409eecb696fb13f411ffde72e8f576feb09
 LIBRETRO_MESENS_SITE = $(call github,libretro,Mesen-S,$(LIBRETRO_MESENS_VERSION))
 LIBRETRO_MESENS_LICENSE = GPL
 

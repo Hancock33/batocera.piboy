@@ -34,7 +34,7 @@ class XeniaGenerator(Generator):
         # /userdata/system/Xenia/xenia.config.toml
 
         # todo - controller options?
-       
+
         # now setup the command array for the emulator
         # lutris doesn't produce choppy sound
         commandArray = ['/usr/wine/lutris/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe', '--fullscreen', 'z:' + rom]

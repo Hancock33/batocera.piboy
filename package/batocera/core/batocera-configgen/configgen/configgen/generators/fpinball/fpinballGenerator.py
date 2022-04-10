@@ -38,7 +38,7 @@ class FpinballGenerator(Generator):
         # config
         if not os.path.exists("/userdata/system/configs/fpinball"):
             os.makedirs("/userdata/system/configs/fpinball")
-        
+
         with open("/userdata/system/configs/fpinball/batocera.confg.reg", "w") as f:
             f.write("Windows Registry Editor Version 5.00\r\n\r\n")
             f.write("[HKEY_CURRENT_USER\\Software\\Future Pinball\\GamePlayer]\r\n")
