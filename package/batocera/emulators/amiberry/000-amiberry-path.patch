@@ -1,33 +1,8 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index ed96057f..1c8c61b5 100644
+index ff7c2432..55009402 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -2759,19 +2759,19 @@ void save_amiberry_settings(void)
- 	snprintf(buffer, MAX_DPATH, "path=%s\n", current_dir);
- 	fputs(buffer, f);
- 
--	snprintf(buffer, MAX_DPATH, "config_path=%s\n", config_path);
-+	snprintf(buffer, MAX_DPATH, "/userdata/system/configs/amiberry/conf", config_path);
- 	fputs(buffer, f);
- 
--	snprintf(buffer, MAX_DPATH, "controllers_path=%s\n", controllers_path);
-+	snprintf(buffer, MAX_DPATH, "/userdata/system/configs/amiberry/conf/retroarch/inputs", controllers_path);
- 	fputs(buffer, f);
- 
--	snprintf(buffer, MAX_DPATH, "retroarch_config=%s\n", retroarch_file);
-+	snprintf(buffer, MAX_DPATH, "/userdata/system/configs/amiberry/conf/retroarch/retroarchcustom.cfg", retroarch_file);
- 	fputs(buffer, f);
- 
--	snprintf(buffer, MAX_DPATH, "whdboot_path=%s\n", whdboot_path);
-+	snprintf(buffer, MAX_DPATH, "/userdata/system/configs/amiberry/whdboot", whdboot_path);
- 	fputs(buffer, f);
- 
--	snprintf(buffer, MAX_DPATH, "logfile_path=%s\n", logfile_path);
-+	snprintf(buffer, MAX_DPATH, "/userdata/system/configs/amiberry", logfile_path);
- 	fputs(buffer, f);
- 
- 	snprintf(buffer, MAX_DPATH, "rom_path=%s\n", rom_path);
-@@ -3056,11 +3056,11 @@ static int get_env_dir( char * path, const char *path_template, const char *envn
+@@ -3075,11 +3075,11 @@ static int get_env_dir( char * path, const char *path_template, const char *envn
  static void init_amiberry_paths(void)
  {
  	strncpy(current_dir, start_path_data, MAX_DPATH - 1);
@@ -39,12 +14,12 @@ index ed96057f..1c8c61b5 100644
 +	snprintf(config_path, MAX_DPATH, "/userdata/system/configs/amiberry/conf");
 +	snprintf(controllers_path, MAX_DPATH, "/userdata/system/configs/amiberry/conf/retroarch/inputs");
 +	snprintf(retroarch_file, MAX_DPATH, "/userdata/system/configs/amiberry/conf/retroarch/retroarchcustom.cfg");
-+	snprintf(whdboot_path, MAX_DPATH, "/userdata/system/configs/amiberry/whdboot");
++	snprintf(whdboot_path, MAX_DPATH, "/userdata/system/configs/amiberry/whdboot/");
 +	snprintf(logfile_path, MAX_DPATH, "/userdata/system/configs/amiberry/amiberry.log");
  
  #ifdef ANDROID
  	char afepath[MAX_DPATH];
-@@ -3071,9 +3071,9 @@ static void init_amiberry_paths(void)
+@@ -3090,9 +3090,9 @@ static void init_amiberry_paths(void)
  		closedir(afedir);
  	}
  	else
@@ -56,21 +31,27 @@ index ed96057f..1c8c61b5 100644
  #endif
  	snprintf(rp9_path, MAX_DPATH, "%s/rp9/", start_path_data);
  #ifdef __MACH__
-@@ -3082,7 +3082,7 @@ static void init_amiberry_paths(void)
+@@ -3101,15 +3101,15 @@ static void init_amiberry_paths(void)
  	snprintf(amiberry_conf_file, MAX_DPATH, "%s", (macos_home_directory + "/Documents/Amiberry/Configurations/amiberry.conf").c_str());
  	printf("Using configuration: %s\n", (macos_home_directory + "/Documents/Amiberry/Configurations/amiberry.conf").c_str());
  #else
 -	snprintf(amiberry_conf_file, MAX_DPATH, "%s/conf/amiberry.conf", start_path_data);
-+	snprintf(amiberry_conf_file, MAX_DPATH, "%s/conf/amiberry.conf", "/userdata/system/configs/amiberry");
++    snprintf(amiberry_conf_file, MAX_DPATH, "/userdata/system/configs/amiberry/conf/amiberry.conf");
  #endif
- 	snprintf(floppy_sounds_dir, MAX_DPATH, "%s/data/floppy_sounds/", start_path_data);
- 	snprintf(data_dir, MAX_DPATH, "%s/data/", start_path_data);
-@@ -3123,7 +3123,7 @@ void rename_old_adfdir()
- 	char old_path[MAX_DPATH];
- 	char new_path[MAX_DPATH];
- 	snprintf(old_path, MAX_DPATH, "%s/conf/adfdir.conf", start_path_data);
--	snprintf(new_path, MAX_DPATH, "%s/conf/amiberry.conf", start_path_data);
-+	snprintf(new_path, MAX_DPATH, "%s/conf/amiberry.conf", "/userdata/system/configs/amiberry");
+-	snprintf(floppy_sounds_dir, MAX_DPATH, "%s/data/floppy_sounds/", start_path_data);
+-	snprintf(data_dir, MAX_DPATH, "%s/data/", start_path_data);
+-	snprintf(saveimage_dir, MAX_DPATH, "%s/savestates/", start_path_data);
+-	snprintf(savestate_dir, MAX_DPATH, "%s/savestates/", start_path_data);
+-	snprintf(ripper_path, MAX_DPATH, "%s/ripper/", start_path_data);
+-	snprintf(input_dir, MAX_DPATH, "%s/inputrecordings/", start_path_data);
+-	snprintf(screenshot_dir, MAX_DPATH, "%s/screenshots/", start_path_data);
++	snprintf(floppy_sounds_dir, MAX_DPATH, "/usr/share/amiberry/data/floppy_sounds/");
++	snprintf(data_dir, MAX_DPATH, "/usr/share/amiberry/data/");
++	snprintf(saveimage_dir, MAX_DPATH, "/userdata/saves/amiga/");
++	snprintf(savestate_dir, MAX_DPATH, "/userdata/saves/amiga/");
++	snprintf(ripper_path, MAX_DPATH, "/userdata/saves/amiga/ripper/");
++	snprintf(input_dir, MAX_DPATH, "/userdata/screenshots//inputrecordings/");
++	snprintf(screenshot_dir, MAX_DPATH, "/userdata/screenshots/");
+ }
  
- 	const auto result = rename(old_path, new_path);
- 	if (result == 0)
+ void load_amiberry_settings(void)
