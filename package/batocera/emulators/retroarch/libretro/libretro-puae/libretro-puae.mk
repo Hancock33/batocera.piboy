@@ -3,8 +3,8 @@
 # libretro-puae
 #
 ################################################################################
-# Version: Commits on Apr 04, 2022
-LIBRETRO_PUAE_VERSION = 8c44289acfd5e622963aed314512611a7a8301ef
+# Version: Commits on Apr 10, 2022
+LIBRETRO_PUAE_VERSION = 7618788c387e79b79a86b8d97bdaaf80ccc13824
 LIBRETRO_PUAE_SITE = $(call github,libretro,libretro-uae,$(LIBRETRO_PUAE_VERSION))
 LIBRETRO_PUAE__LICENSE = GPLv2
 

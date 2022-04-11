@@ -3,8 +3,8 @@
 # libretro-gw
 #
 ################################################################################
-# Version: Commits on Apr 08, 2022
-LIBRETRO_GW_VERSION = 85bf5c936044db0bf4138e7eb8ab20d3a7330035
+# Version: Commits on Apr 10, 2022
+LIBRETRO_GW_VERSION = d08a08154ce8ed8e9de80582c108f157e4c6b226
 LIBRETRO_GW_SITE = $(call github,libretro,gw-libretro,$(LIBRETRO_GW_VERSION))
 LIBRETRO_GW_LICENSE = GPLv3
 
