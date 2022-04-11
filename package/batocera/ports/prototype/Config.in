@@ -3,8 +3,6 @@ config BR2_PACKAGE_PROTOTYPE
 	depends on BR2_PACKAGE_SDL2
 	depends on BR2_PACKAGE_SDL2_MIXER
 	depends on BR2_PACKAGE_SDL2_IMAGE
-	select BR2_PACKAGE_GL4ES if !BR2_PACKAGE_BATOCERA_XORG
-	select BR2_PACKAGE_GLU   if !BR2_PACKAGE_BATOCERA_XORG
 	depends on BR2_INSTALL_LIBSTDCPP
 	help
 	 This is ProtoType, an RType remake from Dark Castle Software.
