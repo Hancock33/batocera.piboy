@@ -9,10 +9,6 @@ RAINE_SITE = $(call github,zelurker,raine,$(RAINE_VERSION))
 RAINE_LICENSE = BSD
 RAINE_DEPENDENCIES = sdl2 sdl2_net sdl2_image sdl2_ttf muparser
 
-ifeq ($(!BR2_PACKAGE_BATOCERA_XORG),y)
-RAINE_DEPENDENCIES += gl4es glu
-endif
-
 define RAINE_BUILD_CMDS
 	cd $(@D); \
 	PATH="$(STAGING_DIR)/usr/bin:$(HOST_DIR)/bin:$$PATH" \
