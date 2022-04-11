@@ -624,6 +624,8 @@ supervision:
 switch:
   emulator: yuzu
   core:     yuzu
+  options:
+    forceNoBezel: true
 
 # T-Z
 
@@ -696,9 +698,13 @@ wiiu:
 windows:
   emulator: wine
   core:     proton
+  options:
+    forceNoBezel: true
 windows_installers:
   emulator: wine
   core:     proton
+  options:
+    forceNoBezel: true
 witchaven:
   emulator: witchaven
   core:     witchaven
@@ -717,6 +723,8 @@ x68000:
 xash3d_fwgs:
   emulator: xash3d_fwgs
   core:     xash3d_fwgs
+  options:
+    forceNoBezel: true
 xegs:
   emulator: libretro
   core:     mess
