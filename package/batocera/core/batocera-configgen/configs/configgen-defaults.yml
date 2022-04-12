@@ -421,6 +421,9 @@ ngpc:
 nukem2:
   emulator: nukem2
   core:     nukem2
+odcommander:
+  emulator: odcommander
+  core:     odcommander
 odyssey2:
   emulator: libretro
   core:     o2em
@@ -487,6 +490,11 @@ plugnplay:
 pokemini:
   emulator: libretro
   core:     pokemini
+ports:
+  emulator: sh
+  core:     sh
+  options:
+    bezel: none
 prboom:
   emulator: libretro
   core:     prboom
