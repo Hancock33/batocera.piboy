@@ -66,6 +66,7 @@ from generators.mugen.mugenGenerator import MugenGenerator
 from generators.mupen.mupenGenerator import MupenGenerator
 from generators.nblood.nbloodGenerator import NbloodGenerator
 from generators.nukem2.nukem2Generator import Nukem2Generator
+from generators.odcommander.odcommanderGenerator import OdcommanderGenerator
 from generators.openbor.openborGenerator import OpenborGenerator
 from generators.openclaw.openclawGenerator import OpenclawGenerator
 from generators.openjazz.openjazzGenerator import OpenJazzGenerator
@@ -93,6 +94,7 @@ from generators.ryujinx.ryujinxGenerator import RyujinxGenerator
 from generators.samcoupe.samcoupeGenerator import SamcoupeGenerator
 from generators.scummvm.scummvmGenerator import ScummVMGenerator
 from generators.sdlpop.sdlpopGenerator import SdlPopGenerator
+from generators.sh.shGenerator import ShGenerator
 from generators.solarus.solarusGenerator import SolarusGenerator
 from generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
 from generators.sorr.sorrGenerator import SorrGenerator
@@ -187,6 +189,7 @@ generators = {
     'mupen64plus': MupenGenerator(),
     'nblood': NbloodGenerator(),
     'nukem2': Nukem2Generator(),
+    'odcommander': OdcommanderGenerator(),
     'openbor' : OpenborGenerator(),
     'openclaw' : OpenclawGenerator(),
     'openjazz': OpenJazzGenerator(),
@@ -214,6 +217,7 @@ generators = {
     'samcoupe': SamcoupeGenerator(),
     'scummvm': ScummVMGenerator(),
     'sdlpop' : SdlPopGenerator(),
+    'sh': ShGenerator(),
     'solarus': SolarusGenerator(),
     'sonic2013': SonicRetroGenerator(),
     'soniccd': SonicRetroGenerator(),
