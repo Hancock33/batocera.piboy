@@ -1,0 +1,60 @@
+diff --git a/arch/arm/configs/bcm2709_defconfig b/arch/arm/configs/bcm2709_defconfig
+index 60d08fa4f60f..318338ea614f 100644
+--- a/arch/arm/configs/bcm2709_defconfig
++++ b/arch/arm/configs/bcm2709_defconfig
+@@ -63,7 +63,6 @@ CONFIG_MODULES=y
+ CONFIG_MODULE_UNLOAD=y
+ CONFIG_MODVERSIONS=y
+ CONFIG_MODULE_SRCVERSION_ALL=y
+-CONFIG_MODULE_COMPRESS_XZ=y
+ CONFIG_PARTITION_ADVANCED=y
+ CONFIG_MAC_PARTITION=y
+ CONFIG_BINFMT_MISC=m
+diff --git a/arch/arm/configs/bcm2711_defconfig b/arch/arm/configs/bcm2711_defconfig
+index d62d97a4bf64..917ee547d14e 100644
+--- a/arch/arm/configs/bcm2711_defconfig
++++ b/arch/arm/configs/bcm2711_defconfig
+@@ -63,7 +63,6 @@ CONFIG_MODULES=y
+ CONFIG_MODULE_UNLOAD=y
+ CONFIG_MODVERSIONS=y
+ CONFIG_MODULE_SRCVERSION_ALL=y
+-CONFIG_MODULE_COMPRESS_XZ=y
+ CONFIG_BLK_DEV_THROTTLING=y
+ CONFIG_PARTITION_ADVANCED=y
+ CONFIG_MAC_PARTITION=y
+diff --git a/arch/arm/configs/bcmrpi_defconfig b/arch/arm/configs/bcmrpi_defconfig
+index d6c4e1180c64..acff55c5afed 100644
+--- a/arch/arm/configs/bcmrpi_defconfig
++++ b/arch/arm/configs/bcmrpi_defconfig
+@@ -57,7 +57,6 @@ CONFIG_MODULES=y
+ CONFIG_MODULE_UNLOAD=y
+ CONFIG_MODVERSIONS=y
+ CONFIG_MODULE_SRCVERSION_ALL=y
+-CONFIG_MODULE_COMPRESS_XZ=y
+ CONFIG_PARTITION_ADVANCED=y
+ CONFIG_MAC_PARTITION=y
+ CONFIG_BINFMT_MISC=m
+diff --git a/arch/arm64/configs/bcm2711_defconfig b/arch/arm64/configs/bcm2711_defconfig
+index ccce4a690fda..250770ba059e 100644
+--- a/arch/arm64/configs/bcm2711_defconfig
++++ b/arch/arm64/configs/bcm2711_defconfig
+@@ -63,7 +63,6 @@ CONFIG_MODULES=y
+ CONFIG_MODULE_UNLOAD=y
+ CONFIG_MODVERSIONS=y
+ CONFIG_MODULE_SRCVERSION_ALL=y
+-CONFIG_MODULE_COMPRESS_XZ=y
+ CONFIG_BLK_DEV_THROTTLING=y
+ CONFIG_PARTITION_ADVANCED=y
+ CONFIG_MAC_PARTITION=y
+diff --git a/arch/arm64/configs/bcmrpi3_defconfig b/arch/arm64/configs/bcmrpi3_defconfig
+index 45de87991995..d4ffabfdc9c6 100644
+--- a/arch/arm64/configs/bcmrpi3_defconfig
++++ b/arch/arm64/configs/bcmrpi3_defconfig
+@@ -64,7 +64,6 @@ CONFIG_MODULES=y
+ CONFIG_MODULE_UNLOAD=y
+ CONFIG_MODVERSIONS=y
+ CONFIG_MODULE_SRCVERSION_ALL=y
+-CONFIG_MODULE_COMPRESS_XZ=y
+ CONFIG_PARTITION_ADVANCED=y
+ CONFIG_MAC_PARTITION=y
+ CONFIG_BINFMT_MISC=y
