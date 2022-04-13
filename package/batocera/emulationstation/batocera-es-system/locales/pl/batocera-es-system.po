@@ -543,22 +543,22 @@ msgctxt "game_options"
 msgid "OVERCLOCK (UNSTABLE)"
 msgstr "PRZETAKTOWYWANIE (NIESTABILNE)"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, amiberry
+#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, amiberry, mupen64plus
 msgctxt "game_options"
 msgid "Low"
 msgstr "Słabe"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen
+#. TRANSLATION: libretro/mesens, libretro/mesen, mupen64plus
 msgctxt "game_options"
 msgid "Medium"
 msgstr "Średnie"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, amiberry
+#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, amiberry, mupen64plus
 msgctxt "game_options"
 msgid "High"
 msgstr "Wysokie"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm
+#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, mupen64plus
 msgctxt "game_options"
 msgid "Very High"
 msgstr "Bardzo wysokie"
@@ -7035,6 +7035,18 @@ msgstr ""
 msgctxt "game_options"
 msgid "FRAMESKIP (GL64MK2 ONLY)"
 msgstr "FRAMESKIP (TYLKO GL64MK2)"
+
+#. TRANSLATION: mupen64plus
+msgctxt "game_options"
+msgid ""
+"Lower values reduce audio latency and improve performance, but can cause "
+"audio issues."
+msgstr ""
+
+#. TRANSLATION: mupen64plus
+msgctxt "game_options"
+msgid "AUDIO BUFFER (SAMPLES)"
+msgstr ""
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
