@@ -4,6 +4,7 @@ default:
     audio_latency: 96
     retroarch.vrr_runloop_enable: false
     retroarch.video_max_swapchain_images: 3
+    videomode: max-1280x720
 
 nds:
   emulator: drastic
