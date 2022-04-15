@@ -3,8 +3,8 @@
 # LIGHTSPARK
 #
 ################################################################################
-# Version: Commits on Apr 11, 2022
-LIGHTSPARK_VERSION = 469af40e1f00c4ee7c2c0ef950ffc677b64ec53c
+# Version: Commits on Apr 15, 2022
+LIGHTSPARK_VERSION = 6dc7a1097706f62b59176fce07f2f51f5717c753
 LIGHTSPARK_SITE = $(call github,lightspark,lightspark,$(LIGHTSPARK_VERSION))
 LIGHTSPARK_LICENSE = LGPLv3
 LIGHTSPARK_DEPENDENCIES = sdl2 sdl2_mixer freetype pcre jpeg libpng cairo ffmpeg libcurl
