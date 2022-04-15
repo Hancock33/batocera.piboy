@@ -64,10 +64,12 @@ dtparam=pwr_led_trigger=none
 dtparam=pwr_led_activelow=off
 
 #Turn off ethernet port LEDs
-tparam=eth_led0=4
+dtparam=eth_led0=4
 dtparam=eth_led1=4
 
 ### Overclock
+# Run as fast as firmware / board allows
+arm_boost=1
 #over_voltage=2
 #arm_freq=1700
 #gpu_freq=500
