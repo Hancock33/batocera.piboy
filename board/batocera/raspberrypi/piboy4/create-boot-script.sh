@@ -18,7 +18,7 @@ mkdir -p "${BATOCERA_BINARIES_DIR}/boot/boot" || exit 1
 mkdir -p "${BATOCERA_BINARIES_DIR}/boot/overlays" || exit 1
 
 cp -pr "${BINARIES_DIR}/rpi-firmware/"* "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
-cp -f "${BUILD_DIR}/linux-custom/arm/boot/dts/overlays/"*.dtbo "${BATOCERA_BINARIES_DIR}/boot/overlays" || exit 1
+cp -f "${BUILD_DIR}/linux-custom/arch/arm/boot/dts/overlays/"*.dtbo "${BATOCERA_BINARIES_DIR}/boot/overlays" || exit 1
 cp -f  "${BINARIES_DIR}/"*.dtb          "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
 cp     "${BOARD_DIR}/boot/config.txt"   "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
 cp     "${BOARD_DIR}/boot/fan.ini"      "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
