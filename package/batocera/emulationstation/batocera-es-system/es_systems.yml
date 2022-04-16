@@ -114,16 +114,17 @@ amiga500:
   group:      amiga
   emulators:
     fsuae:
-      A500:   { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
-      A500+:  { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
-      A600:   { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
-      A1000:  { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
-      A3000:  { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+      A500:     { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+      A500+:    { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+      A600:     { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+      A1000:    { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+      A3000:    { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
     amiberry:
-      A500:   { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [m3u] }
-      A500+:  { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [m3u] }
+      A500:     { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [m3u] }
+      A500+:    { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [m3u] }
     libretro:
-      puae:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      puae:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      puae2021: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
   comment_en: |
     For more info: https://wiki.batocera.org/systems:amiga500
   comment_fr: |
@@ -139,13 +140,14 @@ amiga1200:
   group:      amiga
   emulators:
     fsuae:
-      A1200:  { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
-      A4000:  { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+      A1200:    { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+      A4000:    { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
     amiberry:
-      A1200:  { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [m3u] }
-      A4000:  { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [m3u] }
+      A1200:    { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [m3u] }
+      A4000:    { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [m3u] }
     libretro:
-      puae:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      puae:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      puae2021: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
   comment_en: |
     For more info: https://wiki.batocera.org/systems:amiga500
   comment_fr: |
@@ -161,11 +163,12 @@ amigacd32:
   group:      amiga
   emulators:
     fsuae:
-      CD32:   { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+      CD32:     { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
     amiberry:
-      CD32:   { requireAnyOf: [BR2_PACKAGE_AMIBERRY]      }
+      CD32:     { requireAnyOf: [BR2_PACKAGE_AMIBERRY]      }
     libretro:
-      puae:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      puae:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      puae2021: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
 
 amigacdtv:
   name:       Amiga CDTV
@@ -177,9 +180,10 @@ amigacdtv:
   group:      amiga
   emulators:
     fsuae:
-      CDTV:   { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+      CDTV:     { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
     libretro:
-      puae:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      puae:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      puae2021: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
 
 nes:
   name:       Nintendo Entertainment System
