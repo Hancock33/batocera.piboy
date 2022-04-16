@@ -1,0 +1,24 @@
+diff --git a/libretro.cpp b/libretro.cpp
+index c9c3a7f..a92048d 100644
+--- a/libretro.cpp
++++ b/libretro.cpp
+@@ -84,12 +84,13 @@ void retro_init(void)
+       save_path = default_path;
+    }
+ 
+-   if (!environ_cb(RETRO_ENVIRONMENT_GET_SYSTEM_DIRECTORY, &system_path)
+-         || !system_path)
+-   {
+-      log_cb(RETRO_LOG_INFO, "Defaulting system directory to %s\n", default_path);
+-      system_path = default_path;
+-   }
++   //if (!environ_cb(RETRO_ENVIRONMENT_GET_SYSTEM_DIRECTORY, &system_path)
++   //      || !system_path)
++   //{
++   //   log_cb(RETRO_LOG_INFO, "Defaulting system directory to %s\n", default_path);
++      system_path = "/userdata/bios";
++      log_cb(RETRO_LOG_INFO, "Setting system directory to %s\n", system_path);
++   //}
+ }
+ 
+ void retro_deinit(void)
