@@ -3917,8 +3917,7 @@ libretro:
                 choices:
                     "Normal":                       normal
                     "More compatible":              compatible
-                    "Cycle-exact (DMA/Memory)":     memory
-                    "Cycle-exact (Full)":           exact
+                    "Cycle-exact":                  exact
             cpu_multiplier:
                 prompt:      CPU CLOCK
                 description: Works with 'Cycle-exact' mode and for a few games.
