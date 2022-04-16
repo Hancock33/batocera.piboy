@@ -20,9 +20,10 @@ LIBRETRO_DUCKSTATION_PK = duckstation_libretro_linux_armv7.zip
 endif
 
 define LIBRETRO_DUCKSTATION_INSTALL_TARGET_CMDS
-        cd $(@D) && unzip $(LIBRETRO_DUCKSTATION_PK)
-        mkdir -p $(TARGET_DIR)/usr/lib/libretro/
-        cp -prn $(@D)/duckstation_libretro.so $(TARGET_DIR)/usr/lib/libretro
+    cd $(@D) && unzip $(LIBRETRO_DUCKSTATION_PK)
+
+    $(INSTALL) -D $(@D)/duckstation_libretro.so \
+        $(TARGET_DIR)/usr/lib/libretro/duckstation_libretro.so
 endef
 
 $(eval $(generic-package))

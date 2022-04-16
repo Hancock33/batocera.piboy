@@ -1,8 +1,8 @@
 diff --git a/Makefile b/Makefile
-index ed40a47e..dd1fc135 100644
+index 3269005..a215089 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -60,6 +60,12 @@ else ifneq (,$(findstring rpi,$(platform)))
+@@ -58,6 +58,12 @@ else ifneq (,$(findstring rpi,$(platform)))
     override platform += unix
  else ifneq (,$(findstring odroid,$(platform)))
     override platform += unix
@@ -15,7 +15,18 @@ index ed40a47e..dd1fc135 100644
  endif
  
  # system platform
-@@ -171,6 +177,37 @@ ifneq (,$(findstring unix,$(platform)))
+@@ -150,6 +156,10 @@ ifneq (,$(findstring unix,$(platform)))
+          CPUFLAGS += -DNO_ASM -DARM -D__arm__ -DARM_ASM -D__NEON_OPT -DNOSSE
+          CPUFLAGS += -mcpu=cortex-a53 -mfpu=neon-fp-armv8 -mfloat-abi=hard
+          HAVE_NEON = 1
++      else ifneq (,$(findstring rpi4,$(platform)))
++         CPUFLAGS += -DNO_ASM -DARM -D__arm__ -DARM_ASM -D__NEON_OPT -DNOSSE
++         CPUFLAGS += -mcpu=cortex-a72 -mfpu=neon-fp-armv8 -mfloat-abi=hard
++         HAVE_NEON = 1
+       # Raspberry pi 4 in 64bit mode with VULKAN
+       else ifneq (,$(findstring rpi4_64,$(platform)))
+          CPUFLAGS += -DNO_ASM -DARM -DARM_ASM -DDONT_WANT_ARM_OPTIMIZATIONS -DARM_FIX -DCLASSIC -DARM64
+@@ -166,6 +176,37 @@ ifneq (,$(findstring unix,$(platform)))
  
     endif
     
@@ -53,7 +64,7 @@ index ed40a47e..dd1fc135 100644
     # ODROIDs
     ifneq (,$(findstring odroid,$(platform)))
        BOARD ?= $(shell cat /proc/cpuinfo | grep -i odroid | awk '{print $$3}')
-@@ -186,6 +223,9 @@ ifneq (,$(findstring unix,$(platform)))
+@@ -181,6 +222,9 @@ ifneq (,$(findstring unix,$(platform)))
        else ifneq (,$(findstring ODROID-XU,$(BOARD)))
           # ODROID-XU3 XU4 and XU3-Lite
           CPUFLAGS += -mcpu=cortex-a15 -mtune=cortex-a15.cortex-a7 -mfpu=neon-vfpv4
