@@ -3898,7 +3898,7 @@ libretro:
       features: [padtokeyboard]
       shared: [rewind, autosave]
       cfeatures:
-            puae_model:
+            puae2021_model:
                 prompt:      AMIGA MODEL
                 description: Force a specific model and prevent tags detection.
                 choices:
@@ -4003,7 +4003,7 @@ libretro:
       systems:
             amiga500:
                 cfeatures:
-                    puae_floppy_speed:
+                    puae2021_floppy_speed:
                         group: ADVANCED OPTIONS
                         prompt:      FLOPPY TURBO SPEED
                         description: Removes loading but can add possible glitches/crashes.
@@ -4056,7 +4056,7 @@ libretro:
                             "Analog Joystick":     773
                             "Joystick":            261
                             "Keyboard":            259
-                    puae_pinball_mode:
+                    puae2021_pinball_mode:
                         prompt:      PINBALL MAPPING MODE
                         description: Use to play pinball games with correct mapping.
                         choices:
@@ -4066,7 +4066,7 @@ libretro:
                             "Classic":              classic
             amiga1200:
                 cfeatures:
-                    puae_floppy_speed:
+                    puae2021_floppy_speed:
                         group: ADVANCED OPTIONS
                         prompt:      FLOPPY TURBO SPEED
                         description: Removes loading but can add possible glitches/crashes.
@@ -4119,7 +4119,7 @@ libretro:
                             "Analog Joystick":     773
                             "Joystick":            261
                             "Keyboard":            259
-                    puae_pinball_mode:
+                    puae2021_pinball_mode:
                         prompt:      PINBALL MAPPING MODE
                         description: Use to play pinball games with correct mapping.
                         choices:
@@ -4129,21 +4129,21 @@ libretro:
                             "Classic":              classic
             amigacd32:
                 cfeatures:
-                    puae_cd_startup_delayed_insert:
+                    puae2021_cd_startup_delayed_insert:
                         group: ADVANCED OPTIONS
                         prompt:      BOOT ANIMATION FIRST
                         description: Inserts CD during boot animation to prevent loading fail.
                         choices:
                             "Off":    disabled
                             "On":     enabled
-                    puae_cd_speed:
+                    puae2021_cd_speed:
                         group: ADVANCED OPTIONS
                         prompt:      CD TURBO SPEED
                         description: Removes loading but can add possible glitches/crashes.
                         choices:
                             "Off":    100
                             "On":     0
-                    puae_cd32pad_options:
+                    puae2021_cd32pad_options:
                         group: ADVANCED OPTIONS
                         prompt:      JUMP ON A
                         description: Makes the blue button press up instead.
@@ -4152,14 +4152,14 @@ libretro:
                             "On":     jump
             amigacdtv:
                 cfeatures:
-                    puae_cd_startup_delayed_insert:
+                    puae2021_cd_startup_delayed_insert:
                         group: ADVANCED OPTIONS
                         prompt:      BOOT ANIMATION FIRST
                         description: Inserts CD during boot animation prevent loading fail.
                         choices:
                             "Off":    disabled
                             "On":     enabled
-                    puae_cd_speed:
+                    puae2021_cd_speed:
                         group: ADVANCED OPTIONS
                         prompt:      CD TURBO SPEED
                         description: Removes loading but can add possible glitches/crashes.

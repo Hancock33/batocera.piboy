@@ -696,6 +696,285 @@ def generateCoreSettings(coreSettings, system, rom):
             else:
                 coreSettings.save('puae_cd32pad_options', '"disabled"')
 
+    # Commodore AMIGA (2021 Core)
+    if (system.config['core'] == 'puae2021'):
+        # Functional mapping for Amiga system
+        # If you want to change them, you can add
+        # some strings to batocera.conf by using
+        # this syntax: SYSTEMNAME.retroarchcore.puae2021_mapper_BUTTONNAME=VALUE
+        if (system.name != 'amigacd32') and not ( system.isOptSet('controller1_puae2021') and ( system.config['controller1_puae2021'] == "517" ) ) and not ( system.isOptSet('controller2_puae2021') and ( system.config['controller2_puae2021'] == "517" ) ):
+        # Controller mapping for A500 and A1200
+            # Pinball games mapping mode option (modern and classic)
+            if system.isOptSet('puae2021_pinball_mode') and system.config['puae2021_pinball_mode'] == "modern":
+                uae_mapping = { 'aspect_ratio_toggle': "---",
+                    'mouse_toggle': "RETROK_RCTRL",
+                    'statusbar': "RETROK_F11",
+                    'vkbd': "---",
+                    'reset': "---",
+                    'zoom_mode_toggle': "RETROK_F12",
+                    'down': "---",
+                    'left': "---",
+                    'a': "RETROK_DOWN",
+                    'b': "---",
+                    'x': "RETROK_SPACE",
+                    'y': "---",
+                    'l': "RETROK_LALT",
+                    'l2': "MOUSE_LEFT_BUTTON",
+                    'l3': "SWITCH_JOYMOUSE",
+                    'ld': "---",
+                    'll': "---",
+                    'lr': "---",
+                    'lu': "---",
+                    'r': "RETROK_RALT",
+                    'r2': "MOUSE_RIGHT_BUTTON",
+                    'r3': "TOGGLE_STATUSBAR",
+                    'rd': "---",
+                    'rl': "---",
+                    'rr': "---",
+                    'ru': "---",
+                    'select': "TOGGLE_VKBD",
+                    'start': "RETROK_RETURN",}
+                for key in uae_mapping:
+                    coreSettings.save('puae2021_mapper_' + key, uae_mapping[key])
+            elif system.isOptSet('puae2021_pinball_mode') and system.config['puae2021_pinball_mode'] == "modern_alt":
+                uae_mapping = { 'aspect_ratio_toggle': "---",
+                    'mouse_toggle': "RETROK_RCTRL",
+                    'statusbar': "RETROK_F11",
+                    'vkbd': "---",
+                    'reset': "---",
+                    'zoom_mode_toggle': "RETROK_F12",
+                    'down': "---",
+                    'left': "---",
+                    'a': "---",
+                    'b': "---",
+                    'x': "RETROK_SPACE",
+                    'y': "RETROK_DOWN",
+                    'l': "---",
+                    'l2': "RETROK_LALT",
+                    'l3': "SWITCH_JOYMOUSE",
+                    'ld': "---",
+                    'll': "---",
+                    'lr': "---",
+                    'lu': "---",
+                    'r': "---",
+                    'r2': "RETROK_RALT",
+                    'r3': "TOGGLE_STATUSBAR",
+                    'rd': "---",
+                    'rl': "---",
+                    'rr': "---",
+                    'ru': "---",
+                    'select': "TOGGLE_VKBD",
+                    'start': "RETROK_RETURN",}
+                for key in uae_mapping:
+                    coreSettings.save('puae2021_mapper_' + key, uae_mapping[key])
+            elif system.isOptSet('puae2021_pinball_mode') and system.config['puae2021_pinball_mode'] == "classic":
+                uae_mapping = { 'aspect_ratio_toggle': "---",
+                    'mouse_toggle': "RETROK_RCTRL",
+                    'statusbar': "RETROK_F11",
+                    'vkbd': "---",
+                    'reset': "---",
+                    'zoom_mode_toggle': "RETROK_F12",
+                    'down': "RETROK_DOWN",
+                    'left': "RETROK_LALT",
+                    'a': "RETROK_RALT",
+                    'b': "---",
+                    'x': "RETROK_SPACE",
+                    'y': "---",
+                    'l': "---",
+                    'l2': "MOUSE_LEFT_BUTTON",
+                    'l3': "SWITCH_JOYMOUSE",
+                    'ld': "---",
+                    'll': "---",
+                    'lr': "---",
+                    'lu': "---",
+                    'r': "---",
+                    'r2': "MOUSE_RIGHT_BUTTON",
+                    'r3': "TOGGLE_STATUSBAR",
+                    'rd': "---",
+                    'rl': "---",
+                    'rr': "---",
+                    'ru': "---",
+                    'select': "TOGGLE_VKBD",
+                    'start': "RETROK_RETURN",}
+                for key in uae_mapping:
+                    coreSettings.save('puae2021_mapper_' + key, uae_mapping[key])
+            else:
+                uae_mapping = { 'aspect_ratio_toggle': "---",
+                    'mouse_toggle': "RETROK_RCTRL",
+                    'statusbar': "RETROK_F11",
+                    'vkbd': "---",
+                    'reset': "---",
+                    'zoom_mode_toggle': "RETROK_F12",
+                    'up': "---",
+                    'down': "---",
+                    'left': "---",
+                    'right': "---",
+                    'a': "---",
+                    'b': "---",
+                    'x': "RETROK_LALT",
+                    'y': "RETROK_SPACE",
+                    'l': "RETROK_ESCAPE",
+                    'l2': "MOUSE_LEFT_BUTTON",
+                    'l3': "SWITCH_JOYMOUSE",
+                    'ld': "---",
+                    'll': "---",
+                    'lr': "---",
+                    'lu': "---",
+                    'r': "RETROK_F1",
+                    'r2': "MOUSE_RIGHT_BUTTON",
+                    'r3': "TOGGLE_STATUSBAR",
+                    'rd': "---",
+                    'rl': "---",
+                    'rr': "---",
+                    'ru': "---",
+                    'select': "TOGGLE_VKBD",
+                    'start': "RETROK_RETURN",}
+                for key in uae_mapping:
+                    coreSettings.save('puae2021_mapper_' + key, uae_mapping[key])
+        else:
+            # Controller mapping for CD32
+            uae_mapping = { 'aspect_ratio_toggle': "---",
+                'mouse_toggle': "RETROK_RCTRL",
+                'statusbar': "RETROK_F11",
+                'vkbd': "---",
+                'reset': "---",
+                'zoom_mode_toggle': "RETROK_F12",
+                'up': "---",
+                'down': "---",
+                'left': "---",
+                'right': "---",
+                'a': "---",
+                'b': "---",
+                'x': "---",
+                'y': "---",
+                'l': "---",
+                'l2': "MOUSE_LEFT_BUTTON",
+                'l3': "SWITCH_JOYMOUSE",
+                'ld': "---",
+                'll': "---",
+                'lr': "---",
+                'lu': "---",
+                'r': "---",
+                'r2': "MOUSE_RIGHT_BUTTON",
+                'r3': "TOGGLE_STATUSBAR",
+                'rd': "---",
+                'rl': "---",
+                'rr': "---",
+                'ru': "---",
+                'select': "TOGGLE_VKBD",
+                'start': "---",}
+            for key in uae_mapping:
+                coreSettings.save('puae2021_mapper_' + key, uae_mapping[key])
+        # Show Video Options
+        coreSettings.save('puae2021_video_options_display ', '"enabled"')
+        # Amiga Model
+        if system.isOptSet('puae2021_model') and system.config['puae2021_model'] != 'automatic':
+            coreSettings.save('puae2021_model', system.config['puae2021_model'])
+        else:
+            if system.name == 'amiga1200':
+                coreSettings.save('puae2021_model', '"A1200"')
+            elif system.name == 'amigacd32':
+                coreSettings.save('puae2021_model', '"CD32FR"')
+            elif (system.name == 'amigacdtv'):
+                coreSettings.save('puae2021_model', '"CDTV"')
+            else:
+                # Will default to A500 when booting floppy disks, A600 when booting hard drives
+                coreSettings.save('puae2021_model', '"auto"')
+
+        # CPU Compatibility
+        if system.isOptSet('cpu_compatibility'):
+            coreSettings.save('puae2021_cpu_compatibility', system.config['cpu_compatibility'])
+        else:
+            coreSettings.save('puae2021_cpu_compatibility', '"normal"')
+        # CPU Multiplier (Overclock)
+        if system.isOptSet('cpu_throttle'):
+            coreSettings.save('puae2021_cpu_throttle', system.config['cpu_throttle'])
+            coreSettings.save('puae2021_cpu_multiplier', '"0"')
+        else:
+            coreSettings.save('puae2021_cpu_throttle', '"0.0"')
+            coreSettings.save('puae2021_cpu_multiplier', '"0"')
+        # CPU Cycle Exact Speed (Overclock)
+        if system.isOptSet('cpu_compatibility') and system.config['cpu_compatibility'] == 'exact':
+            if system.isOptSet('cpu_multiplier'):
+                coreSettings.save('puae2021_cpu_throttle', '"0.0"')
+                coreSettings.save('puae2021_cpu_multiplier', system.config['cpu_multiplier'])
+            else:
+                coreSettings.save('puae2021_cpu_throttle', '"0.0"')
+                coreSettings.save('puae2021_cpu_multiplier', '"0"')
+        # Standard Video
+        if system.isOptSet('video_standard'):
+            coreSettings.save('puae2021_video_standard', system.config['video_standard'])
+        else:
+            coreSettings.save('puae2021_video_standard', '"PAL"')
+        # Video Resolution
+        if system.isOptSet('video_resolution') and system.config['video_resolution'] != 'automatic':
+            coreSettings.save('puae2021_video_resolution', system.config['video_resolution'])
+        else:
+            coreSettings.save('puae2021_video_resolution', '"auto"')
+        # Zoom Mode
+        if system.isOptSet('zoom_mode') and system.config['zoom_mode'] != 'automatic':
+            coreSettings.save('puae2021_zoom_mode', system.config['zoom_mode'])
+        else:
+            coreSettings.save('puae2021_zoom_mode', '"auto"')
+        # Frameskip
+        if system.isOptSet('gfx_framerate'):
+            coreSettings.save('puae2021_gfx_framerate', system.config['gfx_framerate'])
+        else:
+            coreSettings.save('puae2021_gfx_framerate', '"disabled"')
+        # Mouse Speed
+        if system.isOptSet('mouse_speed'):
+            coreSettings.save('puae2021_mouse_speed', system.config['mouse_speed'])
+        else:
+            coreSettings.save('puae2021_mouse_speed', '"200"')
+        # Jump on A
+        if system.isOptSet('pad_options'):
+            coreSettings.save('puae2021_retropad_options', system.config['pad_options'])
+        elif system.name == 'amigacdtv':
+            coreSettings.save('puae2021_retropad_options', '"disabled"')
+        else:
+            coreSettings.save('puae2021_retropad_options', '"jump"')
+
+        if (system.name == 'amiga500') or (system.name == 'amiga1200'):
+            # Floppy Turbo Speed
+            if system.isOptSet('puae2021_floppy_speed'):
+                coreSettings.save('puae2021_floppy_speed', system.config['puae2021_floppy_speed'])
+            else:
+                coreSettings.save('puae2021_floppy_speed', '"100"')
+            # 2P Gamepad Mapping (Keyrah)
+            if system.isOptSet('keyrah_mapping'):
+                coreSettings.save('puae2021_keyrah_keypad_mappings', system.config['keyrah_mapping'])
+            else:
+                coreSettings.save('puae2021_keyrah_keypad_mappings', '"enabled"')
+            # Whdload Launcher
+            if system.isOptSet('whdload'):
+                coreSettings.save('puae2021_use_whdload_prefs', system.config['whdload'])
+            else:
+                coreSettings.save('puae2021_use_whdload_prefs', '"config"')
+            # Disable Emulator Joystick for Pad2Key
+            if system.isOptSet('disable_joystick'):
+                coreSettings.save('puae2021_physical_keyboard_pass_through', system.config['disable_joystick'])
+            else:
+                coreSettings.save('puae2021_physical_keyboard_pass_through', '"disabled"')
+
+        if system.name == 'amigacd32' or (system.name == 'amigacdtv'):
+            # Boot animation first inserting CD
+            if system.isOptSet('puae2021_cd_startup_delayed_insert'):
+                coreSettings.save('puae2021_cd_startup_delayed_insert', system.config['puae2021_cd_startup_delayed_insert'])
+            else:
+                coreSettings.save('puae2021_cd_startup_delayed_insert', '"disabled"')
+            # CD Turbo Speed
+            if system.isOptSet('puae2021_cd_speed'):
+                coreSettings.save('puae2021_cd_speed', system.config['puae2021_cd_speed'])
+            else:
+                coreSettings.save('puae2021_cd_speed', '"100"')
+
+        if system.name == 'amigacd32':
+            # Jump on A (Blue)
+            if system.isOptSet('puae2021_cd32pad_options'):
+                coreSettings.save('puae2021_cd32pad_options', system.config['puae2021_cd32pad_options'])
+            else:
+                coreSettings.save('puae2021_cd32pad_options', '"disabled"')
+
     # Magnavox - Odyssey2 / Phillips Videopac+
     if (system.config['core'] == 'o2em'):
         # Virtual keyboard transparency
