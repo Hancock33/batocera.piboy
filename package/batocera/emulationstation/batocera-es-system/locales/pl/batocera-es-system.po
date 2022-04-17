@@ -4181,12 +4181,12 @@ msgctxt "game_options"
 msgid "More compatible"
 msgstr "Bardziej kompatybilny"
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae
 msgctxt "game_options"
 msgid "Cycle-exact (DMA/Memory)"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae
 msgctxt "game_options"
 msgid "Cycle-exact (Full)"
 msgstr ""
@@ -4459,6 +4459,11 @@ msgid "Inserts CD during boot animation prevent loading fail."
 msgstr ""
 "Wkłada płytę CD podczas animacji rozruchu, aby zapobiec niepowodzeniu "
 "ładowania."
+
+#. TRANSLATION: libretro/puae2021
+msgctxt "game_options"
+msgid "Cycle-exact"
+msgstr "Dokładny cyklowo"
 
 #. TRANSLATION: libretro/px68k, libretro/quasi88
 msgctxt "game_options"
@@ -8629,10 +8634,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "EGA GRAPHICS MODE"
 msgstr ""
-
-#~ msgctxt "game_options"
-#~ msgid "Cycle-exact"
-#~ msgstr "Dokładny cyklowo"
 
 #~ msgctxt "game_options"
 #~ msgid ""

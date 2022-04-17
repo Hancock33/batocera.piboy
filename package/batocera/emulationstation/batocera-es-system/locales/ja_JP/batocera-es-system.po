@@ -4137,12 +4137,12 @@ msgctxt "game_options"
 msgid "More compatible"
 msgstr "より互換性があります"
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae
 msgctxt "game_options"
 msgid "Cycle-exact (DMA/Memory)"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae
 msgctxt "game_options"
 msgid "Cycle-exact (Full)"
 msgstr ""
@@ -4411,6 +4411,11 @@ msgstr "代替えで青いボタンを有効にします"
 msgctxt "game_options"
 msgid "Inserts CD during boot animation prevent loading fail."
 msgstr "起動アニメーション中にCDを挿入して、読み込みの失敗を防ぎます"
+
+#. TRANSLATION: libretro/puae2021
+msgctxt "game_options"
+msgid "Cycle-exact"
+msgstr "Cycle-exact"
 
 #. TRANSLATION: libretro/px68k, libretro/quasi88
 msgctxt "game_options"
@@ -8549,10 +8554,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "EGA GRAPHICS MODE"
 msgstr ""
-
-#~ msgctxt "game_options"
-#~ msgid "Cycle-exact"
-#~ msgstr "Cycle-exact"
 
 #~ msgctxt "game_options"
 #~ msgid ""
