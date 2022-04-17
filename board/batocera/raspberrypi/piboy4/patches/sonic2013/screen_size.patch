@@ -1,0 +1,15 @@
+diff --git a/RSDKv4/RetroEngine.hpp b/RSDKv4/RetroEngine.hpp
+index 9060593..10dccdd 100644
+--- a/RSDKv4/RetroEngine.hpp
++++ b/RSDKv4/RetroEngine.hpp
+@@ -81,8 +81,8 @@ typedef unsigned int uint;
+ #define RETRO_DEVICETYPE (RETRO_STANDARD)
+ #endif
+ 
+-#define DEFAULT_SCREEN_XSIZE 424
+-#define DEFAULT_FULLSCREEN   false
++#define DEFAULT_SCREEN_XSIZE 320
++#define DEFAULT_FULLSCREEN   true
+ #define RETRO_USING_MOUSE
+ #define RETRO_USING_TOUCH
+ 
