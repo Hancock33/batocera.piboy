@@ -3,8 +3,8 @@
 # Scummvm
 #
 ################################################################################
-# Version: Commits on Oct 31, 2021 (2.5.1pre)
-SCUMMVM_VERSION = 57bad5b424475558957aadbb7a2161f6a8f1ff9e
+# Version: Commits on Feb 23, 2022 (2.5 branch)
+SCUMMVM_VERSION = bd2bf31c5fd8bb0d40226094d67775c12b0aa095
 SCUMMVM_SITE = $(call github,scummvm,scummvm,$(SCUMMVM_VERSION))
 SCUMMVM_LICENSE = GPLv2
 SCUMMVM_DEPENDENCIES = sdl2 zlib jpeg libmpeg2 libogg libvorbis flac libmad libpng libtheora faad2 freetype
@@ -16,7 +16,9 @@ ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_RPI_ANY)$(BR2_PACKAGE_BATOCERA_TARGET_ROCKCHIP_ANY),y)
-	SCUMMVM_CONF_OPTS += --host=raspberrypi
+	ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),n)
+		SCUMMVM_CONF_OPTS += --host=raspberrypi
+	endif
 endif
 
 SCUMMVM_CONF_ENV += RANLIB="$(TARGET_RANLIB)" STRIP="$(TARGET_STRIP)" AR="$(TARGET_AR) cru" AS="$(TARGET_AS)"
