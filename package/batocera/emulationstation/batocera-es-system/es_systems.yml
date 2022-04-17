@@ -3160,20 +3160,21 @@ amigademo:
   group:      amiga
   emulators:
     fsuae:
-      A500:   { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
-      A500+:  { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
-      A600:   { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
-      A1000:  { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
-      A3000:  { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
-      A1200:  { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
-      A4000:  { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+      A500:      { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+      A500+:     { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+      A600:      { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+      A1000:     { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+      A3000:     { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+      A1200:     { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
+      A4000:     { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
     amiberry:
-      A500:   { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [m3u] }
-      A500+:  { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [m3u] }
-      A1200:  { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [m3u] }
-      A4000:  { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [m3u] }
+      A500:      { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [m3u] }
+      A500+:     { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [m3u] }
+      A1200:     { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [m3u] }
+      A4000:     { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [m3u] }
     libretro:
-      puae:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      puae:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      puae2021:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
 
 alephone:
   name:       Marathon Trilogy
