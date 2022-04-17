@@ -1,3 +1,16 @@
+diff --git a/base/internal_version.h b/base/internal_version.h
+index 8e0d74a1e1f..a8a039dc2cb 100644
+--- a/base/internal_version.h
++++ b/base/internal_version.h
+@@ -16,7 +16,7 @@
+ #define SCUMMVM_REVISION
+ #endif
+ 
+-#define SCUMMVM_VERSION "2.5.1pre"
++#define SCUMMVM_VERSION "2.5.1 (bd2bf31)"
+ 
+ #define SCUMMVM_VER_MAJOR 2
+ #define SCUMMVM_VER_MINOR 5
 diff --git a/configure b/configure
 index c2b6c757e4d..461cc030fd4 100755
 --- a/configure
