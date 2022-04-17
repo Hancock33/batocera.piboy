@@ -1,0 +1,36 @@
+{
+    "actions_player1": [
+        {
+            "trigger": "joystick1",
+            "type": "mouse"
+        },
+        {
+            "trigger": "x",
+            "type": "key",
+            "target": "KEY_SPACE"
+        },
+        {
+            "trigger": "y",
+            "type": "key",
+            "target": "KEY_ENTER"
+        },
+        {
+            "trigger": "l2",
+            "type": "key",
+            "target": "BTN_LEFT"
+        },
+        {
+            "trigger": "r2",
+            "type": "key",
+            "target": "BTN_RIGHT"
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "start"
+            ],
+            "type": "exec",
+            "target": "killall -9 amiberry && reset"
+        }
+    ]
+}
