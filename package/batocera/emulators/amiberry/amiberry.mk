@@ -3,8 +3,8 @@
 # AMIBERRY
 #
 ################################################################################
-# Version: Commits on Apr 15, 2022
-AMIBERRY_VERSION = ab224417b7ffc10acefdb093c57f675aaef64e58
+# Version: Release on Apr 17, 2022
+AMIBERRY_VERSION = v5.1
 AMIBERRY_SITE = $(call github,midwan,amiberry,$(AMIBERRY_VERSION))
 AMIBERRY_LICENSE = GPLv3
 AMIBERRY_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf mpg123 libxml2 libmpeg2 flac
@@ -88,18 +88,5 @@ define AMIBERRY_INSTALL_TARGET_CMDS
 	cp -pr $(@D)/whdboot $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/amiberry/
 	cp -rf $(@D)/data $(TARGET_DIR)/usr/share/amiberry
 endef
-
-define AMIBERRY_EVMAP
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-
-	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/amiberry/controllers/amiga500.amiberry.keys \
-		$(TARGET_DIR)/usr/share/evmapy
-	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/amiberry/controllers/amiga1200.amiberry.keys \
-		$(TARGET_DIR)/usr/share/evmapy
-	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/amiberry/controllers/amigacd32.amiberry.keys \
-		$(TARGET_DIR)/usr/share/evmapy
-endef
-
-AMIBERRY_POST_INSTALL_TARGET_HOOKS = AMIBERRY_EVMAP
 
 $(eval $(generic-package))
