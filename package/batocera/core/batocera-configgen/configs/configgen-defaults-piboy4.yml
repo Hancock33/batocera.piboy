@@ -8,18 +8,33 @@ default:
     retroarch.video_adaptive_vsync: true
     retroarch.menu_widget_scale_auto: true
 
-nds:
-  emulator: drastic
-  core:     drastic
+c20:
+  emulator: libretro
+  core:     vice_xvic
+c64:
+  emulator: libretro
+  core:     vice_x64
+c128:
+  emulator: libretro
+  core:     vice_x128
+cplus4:
+  emulator: libretro
+  core:     vice_xplus4
 flash:
   emulator: lightspark
   core:     lightspark
-psp:
-  options:
-    frameskip: automatic
 gamecube:
   emulator: libretro
   core:     dolphin
+nds:
+  emulator: drastic
+  core:     drastic
+pet:
+  emulator: libretro
+  core:     vice_xpet
+psp:
+  options:
+    frameskip: automatic
 sgb:
   emulator: libretro
   core:     mgba
