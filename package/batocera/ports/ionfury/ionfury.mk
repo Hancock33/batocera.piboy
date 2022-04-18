@@ -3,8 +3,8 @@
 # IONFURY
 #
 ################################################################################
-# Version: Commits on 04 Apr, 2022
-IONFURY_VERSION = 8cf7e9fbb0a49d9bdc3a3c8d80a9f63df7e4daa0
+# Version: Commits on 17 Apr, 2022
+IONFURY_VERSION = b372ce6dc57a6aed46e7bbe7447e59832e04ef18
 IONFURY_SITE = https://voidpoint.io/terminx/eduke32.git
 IONFURY_SITE_METHOD = git
 IONFURY_LICENSE = GPLv2
@@ -13,7 +13,7 @@ IONFURY_DEPENDENCIES = sdl2 boost
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
 IONFURY_CONF_OPTS=USE_OPENGL=1 RPI4=0
 else
-IONFURY_CONF_OPTS=USE_OPENGL=1 RPI4=1
+IONFURY_CONF_OPTS=USE_OPENGL=0 RPI4=1
 endif
 
 define IONFURY_BUILD_CMDS
