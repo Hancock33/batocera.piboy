@@ -8,7 +8,7 @@ import controllersConfig
 class Eduke32Generator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
-        commandArray = ["eduke32", rom]
+        commandArray = ["eduke32", rom, "-game_dir", "/userdata/roms/eduke32"]
 
         return Command.Command(
             array=commandArray,
