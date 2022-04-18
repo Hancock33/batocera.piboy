@@ -3,18 +3,18 @@
 # EDUKE32
 #
 ################################################################################
-# Version: Commits on Apr 17, 2022
-EDUKE32_VERSION = 29a10b09916c704cd08f0b50b74ed40c3ed06266
-EDUKE32_SITE = https://github.com/nukeykt/NBlood.git
+# Version: Commits on 17 Apr, 2022
+EDUKE32_VERSION = b372ce6dc57a6aed46e7bbe7447e59832e04ef18
+EDUKE32_SITE = https://voidpoint.io/terminx/eduke32.git
 
-EDUKE32_DEPENDENCIES = sdl2 sdl2_image
+EDUKE32_DEPENDENCIES = sdl2 sdl2_image nblood
 EDUKE32_SITE_METHOD=git
 EDUKE32_LICENSE = GPLv3
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
 EDUKE32_CONF_OPTS=USE_OPENGL=1 POLYMER=1 RPI4=0
 else
-EDUKE32_CONF_OPTS=USE_OPENGL=0 POLYMER=1 RPI4=1 CUSTOMOPT="-DEDUKE32_GLES -DHAVE_JWZGLES -DSDL_TARGET=2 -DRENDERTYPESDL=1"
+EDUKE32_CONF_OPTS=USE_OPENGL=0 POLYMER=1 RPI4=1
 endif
 
 define EDUKE32_BUILD_CMDS
@@ -26,29 +26,10 @@ endef
 
 define EDUKE32_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/eduke32 -D $(TARGET_DIR)/usr/bin/eduke32
-	$(INSTALL) -m 0755 $(@D)/nblood -D $(TARGET_DIR)/usr/bin/nblood
-	$(INSTALL) -m 0755 $(@D)/pcexhumed -D $(TARGET_DIR)/usr/bin/pcexhumed
-	$(INSTALL) -m 0755 $(@D)/rednukem -D $(TARGET_DIR)/usr/bin/rednukem
 	$(INSTALL) -m 0755 $(@D)/voidsw -D $(TARGET_DIR)/usr/bin/voidsw
-
-	#make config dir
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/eduke32
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/nblood
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/pcexhumed
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/rednukem
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/voidsw
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/ionfury
 
 	#copy sdl game contoller info
 	cp $(@D)/package/common/gamecontrollerdb.txt $(TARGET_DIR)/usr/share/gamecontrollerdb.txt
-
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/eduke32.keys $(TARGET_DIR)/usr/share/evmapy/eduke32.keys
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/nblood.keys $(TARGET_DIR)/usr/share/evmapy/nblood.keys
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/pcexhumed.keys $(TARGET_DIR)/usr/share/evmapy/pcexhumed.keys
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/rednukem.keys $(TARGET_DIR)/usr/share/evmapy/rednukem.keys
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/eduke32/voidsw.keys $(TARGET_DIR)/usr/share/evmapy/voidsw.keys
 endef
 
 $(eval $(generic-package))
