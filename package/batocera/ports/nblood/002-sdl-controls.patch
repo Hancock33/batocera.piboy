@@ -1,0 +1,13 @@
+diff --git a/source/build/src/sdlayer.cpp b/source/build/src/sdlayer.cpp
+index 292938bb2..0785c6d89 100644
+--- a/source/build/src/sdlayer.cpp
++++ b/source/build/src/sdlayer.cpp
+@@ -829,7 +829,7 @@ static void LoadSDLControllerDB()
+     if (gameControllerDBLoaded)
+         return;
+ 
+-    buildvfs_kfd fh = kopen4load("gamecontrollerdb.txt", 0);
++    buildvfs_kfd fh = kopen4load("/usr/share/gamecontrollerdb.txt", 0);
+     if (fh == buildvfs_kfd_invalid)
+         return;
+ 
