@@ -228,7 +228,7 @@ class AmiberryGenerator(Generator):
             return 'WHDL'
         elif extension == 'hdf' :
             return 'HDF'
-        elif extension in ['iso','cue'] :
+        elif extension in ['iso','cue','chd'] :
             return 'CD'
         elif extension in ['adf','ipf']:
             return 'DISK'
