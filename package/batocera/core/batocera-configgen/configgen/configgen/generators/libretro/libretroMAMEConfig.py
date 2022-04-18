@@ -396,8 +396,8 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
         "BUTTON6": "pagedown",
         "BUTTON7": "l2",
         "BUTTON8": "r2",
-        "BUTTON9": "l3",
-        "BUTTON10": "r3",
+        "BUTTON9": "l2",
+        "BUTTON10": "r2",
         "START": "start",
         "COIN": "select"
         #"BUTTON11": "",
