@@ -156,5 +156,6 @@ class FlycastGenerator(Generator):
         # controller cfg files are set with an absolute path, so no worry
         return Command.Command(array=commandArray, env={"XDG_CONFIG_HOME":batoceraFiles.CONF,
             "XDG_DATA_HOME":batoceraFiles.flycastSaves,
+            "SDL_AUTO_UPDATE_JOYSTICKS": "0",
             "FLYCAST_BIOS_PATH":batoceraFiles.flycastBios,
             })
