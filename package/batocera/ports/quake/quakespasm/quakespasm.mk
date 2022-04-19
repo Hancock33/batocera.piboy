@@ -3,12 +3,11 @@
 # Quake 1
 #
 ################################################################################
-# Version: Commits on Mar Apr 06, 2022
-QUAKESPASM_VERSION = 963646b6cd3f09b66e0bdf7d5fd8c0eb89f38572
-QUAKESPASM_SITE = https://git.code.sf.net/p/quakespasm/quakespasm
+# Version: Commits on Apr 13, 2022
+QUAKESPASM_VERSION = 1711f6ecc484d4bea2178a5a2a265057b3e547af
+QUAKESPASM_SITE = $(call github,sezero,quakespasm,$(QUAKESPASM_VERSION))
 
 QUAKESPASM_DEPENDENCIES = sdl2 sdl2_image
-QUAKESPASM_SITE_METHOD=git
 QUAKESPASM_LICENSE = GPLv2
 
 define QUAKESPASM_BUILD_CMDS
