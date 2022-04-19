@@ -78,7 +78,7 @@ class AmiberryGenerator(Generator):
                     commandArray.append("joyport1_friendlyname=" + padfilename)
                     if romType == 'CD' :
                         commandArray.append("-s")
-                        commandArray.append("joyport1_mode=cd32joy")
+                        commandArray.append("joyport1mode=cd32joy")
                 if nplayer == 2: # 0 = mouse for the player 2
                     commandArray.append("-s")
                     commandArray.append("joyport0_friendlyname=" + padfilename)
@@ -228,7 +228,7 @@ class AmiberryGenerator(Generator):
             return 'WHDL'
         elif extension == 'hdf' :
             return 'HDF'
-        elif extension in ['iso','cue'] :
+        elif extension in ['iso','cue','chd'] :
             return 'CD'
         elif extension in ['adf','ipf']:
             return 'DISK'
