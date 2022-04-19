@@ -1,0 +1,9 @@
+config BR2_PACKAGE_VKQUAKE
+	bool "vkquake"
+	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_IMAGE
+	help
+	  Vulkan Quake port based on QuakeSpasm/
+
+	  https://github.com/Novum/vkQuake
