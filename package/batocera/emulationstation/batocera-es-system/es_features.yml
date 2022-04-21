@@ -7742,6 +7742,13 @@ mame:
                     choices:
                         "Enabled (Default)": 1
                         "Disabled":          0
+                coindropplugin:
+                    group: ADVANCED OPTIONS
+                    prompt:      COIN SOUND PLUGIN
+                    description: Play a coin drop sound effect when an insert coin button is pressed
+                    choices:
+                        "Enabled":            1
+                        "Disabled (Default)": 0
 
 wine:
   features: [padtokeyboard]

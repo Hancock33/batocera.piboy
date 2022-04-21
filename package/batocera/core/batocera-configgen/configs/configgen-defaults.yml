@@ -545,9 +545,6 @@ rtcw:
 samcoupe:
   emulator: samcoupe
   core:     samcoupe
-sameduck:
-  emulator: libretro
-  core:     sameduck
 satellaview:
   emulator: libretro
   core:     snes9x
