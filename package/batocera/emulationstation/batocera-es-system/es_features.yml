@@ -5253,7 +5253,7 @@ amiberry:
                 "OFF":                         disabled
         amiberry_image_center:
             prompt:      IMAGE CENTERING
-            description: Center the image screen. AUTO = Full.
+            description: Centers the image screen. Disabled when using Auto Crop. AUTO = Full.
             choices:
                 "FULL":                        all
                 "VERTICAL ONLY":               vertical
