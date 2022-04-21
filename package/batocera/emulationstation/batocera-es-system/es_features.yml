@@ -5249,14 +5249,22 @@ amiberry:
             prompt:      REMOVE INTERLACE ARTIFACTS
             description: Fix flickering in a static screen like Workbench.
             choices:
-                "ON":                          true
-                "OFF":                         false
+                "ON":                          enabled
+                "OFF":                         disabled
+        amiberry_image_center:
+            prompt:      IMAGE CENTERING
+            description: Centers the image screen. Disabled when using Auto Crop. AUTO = Full.
+            choices:
+                "FULL":                        all
+                "VERTICAL ONLY":               vertical
+                "HORIZONTAL ONLY":             horizontal
+                "NONE":                        none
         amiberry_auto_crop:
             prompt:      AUTO CROP
-            description: Resize automatically the screen.
+            description: Resize automatically the screen. AUTO = Off.
             choices:
-                "ON":                          true
-                "OFF":                         false
+                "ON":                          enabled
+                "OFF":                         disabled
 
 cannonball:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
