@@ -259,7 +259,7 @@ class AmiberryGenerator(Generator):
             return 'HDF'
         elif extension in ['iso','cue','chd'] :
             return 'CD'
-        elif extension in ['adf','ipf']:
+        elif extension in ['iso','cue','chd','img','bin','nrg'] :
             return 'DISK'
         elif extension == "zip":
             # can be either whdl or adf
