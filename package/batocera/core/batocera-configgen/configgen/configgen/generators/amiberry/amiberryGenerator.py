@@ -94,17 +94,23 @@ class AmiberryGenerator(Generator):
             commandArray.append("joyport2=")
 
             # remove interlace artifacts
-            if system.isOptSet("amiberry_flickerfixer") and system.config['amiberry_flickerfixer'] == 'true':
+            if system.isOptSet("amiberry_flickerfixer") and system.config['amiberry_flickerfixer'] == 'enabled':
                 commandArray.append("-s")
                 commandArray.append("gfx_flickerfixer=true")
+            elif system.isOptSet("amiberry_flickerfixer") and system.config['amiberry_flickerfixer'] == 'disabled':
+                commandArray.append("-s")
+                commandArray.append("gfx_flickerfixer=false")
             else:
                 commandArray.append("-s")
                 commandArray.append("gfx_flickerfixer=false")
 
-            # auto height
-            if system.isOptSet("amiberry_auto_crop") and system.config['amiberry_auto_crop'] == 'true':
+            # auto crop
+            if system.isOptSet("amiberry_auto_crop") and system.config['amiberry_auto_crop'] == 'enabled':
                 commandArray.append("-s")
                 commandArray.append("amiberry.gfx_auto_crop=true")
+            elif system.isOptSet("amiberry_auto_crop") and system.config['amiberry_auto_crop'] == 'disabled':
+                commandArray.append("-s")
+                commandArray.append("amiberry.gfx_auto_crop=false")
             else:
                 commandArray.append("-s")
                 commandArray.append("amiberry.gfx_auto_crop=false")
@@ -162,9 +168,32 @@ class AmiberryGenerator(Generator):
                 commandArray.append("-s")
                 commandArray.append("amiberry.scaling_method=-1")
 
-            # display vertical centering
-            commandArray.append("-s")
-            commandArray.append("gfx_center_vertical=smart")
+            # Image centering
+            if system.isOptSet("amiberry_image_center") and system.config['amiberry_image_center'] == 'all':
+                commandArray.append("-s")
+                commandArray.append("gfx_center_vertical=smart")
+                commandArray.append("-s")
+                commandArray.append("gfx_center_horizontal=smart")
+            elif system.isOptSet("amiberry_image_center") and system.config['amiberry_image_center'] == 'vertical':
+                commandArray.append("-s")
+                commandArray.append("gfx_center_vertical=smart")
+                commandArray.append("-s")
+                commandArray.append("gfx_center_horizontal=none")
+            elif system.isOptSet("amiberry_image_center") and system.config['amiberry_image_center'] == 'horizontal':
+                commandArray.append("-s")
+                commandArray.append("gfx_center_vertical=none")
+                commandArray.append("-s")
+                commandArray.append("gfx_center_horizontal=smart")
+            elif system.isOptSet("amiberry_image_center") and system.config['amiberry_image_center'] == 'none':
+                commandArray.append("-s")
+                commandArray.append("gfx_center_vertical=none")
+                commandArray.append("-s")
+                commandArray.append("gfx_center_horizontal=none")
+            else:
+                commandArray.append("-s")
+                commandArray.append("gfx_center_vertical=smart")
+                commandArray.append("-s")
+                commandArray.append("gfx_center_horizontal=smart")
 
             # fix sound buffer
             commandArray.append("-s")
