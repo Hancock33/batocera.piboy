@@ -1659,7 +1659,7 @@ msgctxt "game_options"
 msgid "MEMORY CARD MODE"
 msgstr "メモリーカードモード"
 
-#. TRANSLATION: libretro/fbneo
+#. TRANSLATION: libretro/fbneo, libretro/opera
 msgctxt "game_options"
 msgid "Shared"
 msgstr "共有"
@@ -3747,6 +3747,21 @@ msgctxt "game_options"
 msgid "Microcosm"
 msgstr "Microcosm"
 
+#. TRANSLATION: libretro/opera
+msgctxt "game_options"
+msgid "Enable shared saves for multi-disc games"
+msgstr ""
+
+#. TRANSLATION: libretro/opera
+msgctxt "game_options"
+msgid "NVRAM STORAGE"
+msgstr ""
+
+#. TRANSLATION: libretro/opera
+msgctxt "game_options"
+msgid "Per Game"
+msgstr ""
+
 #. TRANSLATION: libretro/parallel_n64, libretro/tyrquake, amiberry, ppsspp
 msgctxt "game_options"
 msgid "Automatic"
@@ -5649,7 +5664,37 @@ msgstr "オフ"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
-msgid "Resize automatically the screen."
+msgid "Centers the image screen. Disabled when using Auto Crop. AUTO = Full."
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "IMAGE CENTERING"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "FULL"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "VERTICAL ONLY"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "HORIZONTAL ONLY"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "NONE"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Resize automatically the screen. AUTO = Off."
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -7911,6 +7956,26 @@ msgstr ""
 msgctxt "game_options"
 msgid "Disk Image"
 msgstr "ディスクイメージ"
+
+#. TRANSLATION: mame/wasm4
+msgctxt "game_options"
+msgid "Play a coin drop sound effect when an insert coin button is pressed"
+msgstr ""
+
+#. TRANSLATION: mame/wasm4
+msgctxt "game_options"
+msgid "COIN SOUND PLUGIN"
+msgstr ""
+
+#. TRANSLATION: mame/wasm4
+msgctxt "game_options"
+msgid "Enabled"
+msgstr ""
+
+#. TRANSLATION: mame/wasm4
+msgctxt "game_options"
+msgid "Disabled (Default)"
+msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
