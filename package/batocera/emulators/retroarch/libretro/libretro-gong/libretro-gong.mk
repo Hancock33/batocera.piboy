@@ -3,8 +3,8 @@
 # libretro-gong
 #
 ################################################################################
-# Version: Commits on Mar 19, 2022
-LIBRETRO_GONG_VERSION = c4255f80f8d89f31d9e8471f388eb7bbcb85046e
+# Version: Commits on Apr 22, 2022
+LIBRETRO_GONG_VERSION = 4dbe23494173b93322d1033da54aa36cb2b23be7
 LIBRETRO_GONG_SITE = $(call github,libretro,gong,$(LIBRETRO_GONG_VERSION))
 LIBRETRO_GONG_LICENSE = GPLv3
 
