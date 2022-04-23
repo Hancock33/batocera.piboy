@@ -676,6 +676,9 @@ vanillara:
 vanillatd:
   emulator: vanillatd
   core:     vanillatd
+vc4000:
+  emulator: libretro
+  core:     mess
 vectrex:
   emulator: libretro
   core:     vecx

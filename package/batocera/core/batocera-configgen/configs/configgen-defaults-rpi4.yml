@@ -15,6 +15,9 @@ nds:
 flash:
   emulator: lightspark
   core:     lightspark
+fmtowns:
+  emulator: libretro
+  core:     mess
 psp:
   options:
     frameskip: automatic
