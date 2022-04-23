@@ -47,10 +47,6 @@
             "target": "KEY_F1"
         },
         {
-            "trigger": "joystick1",
-            "type": "mouse"
-        },
-        {
             "trigger": "a",
             "type": "key",
             "target": "KEY_R"
