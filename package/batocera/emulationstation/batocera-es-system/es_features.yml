@@ -115,7 +115,7 @@ shared:
       choices:
         "ENGLISH":   "En"
         "FRANÇAIS":  "Fr"
-        "PORTUGUÊS": "Pt"
+        "PORTUGUES": "Pt"
         "DEUTSCH":   "De"
         "GREEK":     "El"
         "ESPAÑOL":   "Es"
@@ -5534,14 +5534,14 @@ daphne:
             choices:
                 "Original":                   original
                 "Stretch":                    stretch
-                "Force 4:3":                  force43				
+                "Force 4:3":                  force43
         daphne_rotate:
-            prompt: 	SCREEN ROTATION
+            prompt:      SCREEN ROTATION
             description: Rotate the screen with the emulator.
             choices:
-                "0 degrees": 		   			0
-                "90 degrees":          			90
-                "270 degrees":         			270
+                "0 degrees":                    0
+                "90 degrees":                   90
+                "270 degrees":                  270
         bilinear_filter:
             group: ADVANCED OPTIONS
             prompt:      BILINEAR FILTERING
@@ -5575,10 +5575,10 @@ daphne:
             prompt:      JOYSTICK SENSITIVITY
             description: Adjust Singe joystick sensitivity.
             choices:
-                "5":                  			5
-                "10":                 			10
-                "15":                 			15
-                "20":                 			20
+                "5":                            5
+                "10":                           10
+                "15":                           15
+                "20":                           20
 
 devilutionx:
   features: [padtokeyboard]
