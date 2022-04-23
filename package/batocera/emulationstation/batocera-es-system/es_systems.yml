@@ -2803,12 +2803,15 @@ sameduck:
   manufacturer: Welback Holdings
   release: 1993
   hardware: portable
-  extensions: [bin, zip, 7z]
+  extensions:  [bin, zip, 7z]
   emulators:
     libretro:
-      sameduck:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEDUCK] }
+      mess: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+      sameduck:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEDUCK], incompatible_extensions: [zip, 7z] }
     mame:
-      mame:      { requireAnyOf: [BR2_PACKAGE_MAME] }
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Use unzipped ROMs (BIN format) if using Sameduck.
 
 openjazz:
   name:       Jazz Jackrabbit

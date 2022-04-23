@@ -41,12 +41,12 @@ hvs_set_dither=0x210
 dpi_group=2
 dpi_mode=87
 dpi_output_format=0x070016
-dpi_timings=640 1 30 30 30 480 1 13 13 13 0 0 0 85 0 32200000 1			# 85Hz maximum refresh allowed by Pi4 firmware
+#dpi_timings=640 1 30 30 30 480 1 13 13 13 0 0 0 85 0 32200000 1		# 85Hz maximum refresh allowed by Pi4 firmware
 #dpi_timings=640 1 40 40 40 480 1 13 13 13 0 0 0 80 0 31600000 1		# 80Hz
 #dpi_timings=640 1 60 60 60 480 1 13 13 13 0 0 0 75 0 32000000 1		# 75Hz
 #dpi_timings=640 1 80 80 80 480 1 13 13 13 0 0 0 70 0 32000000 1		# 70Hz
 #dpi_timings=640 1 100 100 100 480 1 13 13 13 0 0 0 65 0 31800000 1		# 65Hz
-#dpi_timings=640 1 130 130 130 480 1 13 13 13 0 0 0 60 0 32000000 1		# 60Hz
+dpi_timings=640 1 130 130 130 480 1 13 13 13 0 0 0 60 0 32000000 1		# 60Hz
 #dpi_timings=640 1 56 4 42 480 1 16 4 12 0 0 0 60 0 22800000 1			# alternate 60Hz setting for Pi4 only.
 enable_dpi_lcd=1
 
