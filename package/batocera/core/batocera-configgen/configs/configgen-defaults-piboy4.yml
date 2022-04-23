@@ -23,6 +23,9 @@ cplus4:
 flash:
   emulator: lightspark
   core:     lightspark
+fmtowns:
+  emulator: libretro
+  core:     mess
 gamecube:
   emulator: libretro
   core:     dolphin
