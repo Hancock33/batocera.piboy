@@ -12,7 +12,7 @@ ROTT_LICENSE = GPLv2
 
 define ROTT_BUILD_CMDS
 		$(TARGET_CONFIGURE_OPTS) $(MAKE) \
-		CPP="$(TARGET_CPP)" CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
+		CPP="$(TARGET_CPP)" CXX="$(TARGET_CXX)" CC="$(TARGET_CC) -fPIC" \
 		AS="$(TARGET_CC)" LD="$(TARGET_LD)" STRIP="$(TARGET_STRIP)" \
 		-C $(@D) -f Makefile rott-darkwar
 endef
