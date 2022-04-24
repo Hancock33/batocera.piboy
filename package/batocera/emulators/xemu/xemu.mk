@@ -4,8 +4,8 @@
 #
 ################################################################################
 
-# Version: Commits on Jan 30, 2022
-XEMU_VERSION = 6f507c80af546e0f5d316622d20f78820423ce6e
+# Version: Commits on Apr 22, 2022
+XEMU_VERSION = 5c02155e56077217ce0c9bbb8b17ec71f9c2f0a5
 XEMU_SITE = https://github.com/mborgerson/xemu.git
 XEMU_SITE_METHOD=git
 XEMU_GIT_SUBMODULES=YES
