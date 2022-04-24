@@ -4179,7 +4179,7 @@ libretro:
                         choices:
                             "Off":    disabled
                             "On":     jump
-                    controller1_puae:
+                    controller1_puae2021:
                         prompt:      CONTROLLER 1 TYPE
                         description: Select controller type for Amiga P1.
                         choices:
@@ -4188,7 +4188,7 @@ libretro:
                             "Analog Joystick":     773
                             "Joystick":            261
                             "Keyboard":            259
-                    controller2_puae:
+                    controller2_puae2021:
                         prompt:      CONTROLLER 2 TYPE
                         description: Select controller type for Amiga P2.
                         choices:
@@ -4242,7 +4242,7 @@ libretro:
                         choices:
                             "Off":    disabled
                             "On":     enabled
-                    controller1_puae:
+                    controller1_puae2021:
                         prompt:      CONTROLLER 1 TYPE
                         description: Select controller type for Amiga P1.
                         choices:
@@ -4251,7 +4251,7 @@ libretro:
                             "Analog Joystick":     773
                             "Joystick":            261
                             "Keyboard":            259
-                    controller2_puae:
+                    controller2_puae2021:
                         prompt:      CONTROLLER 2 TYPE
                         description: Select controller type for Amiga P2.
                         choices:
