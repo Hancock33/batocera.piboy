@@ -1,7 +1,6 @@
 
 2022/xx/xx - batocera.linux 34
         * add: board anbernic rg552
-        * add: demul emulator for running Sega - Naomi 2, Hikaru, Gaelco & Cave CV1000 games - requires Wine - (x86_64)
         * add: add more flycast options including vulkan support
         * add: dolphin-triforce (x86_64)
         * add: libretro-mesen
@@ -33,10 +32,10 @@
         * es: default keyboard mapping now includes West bound to "-" and North bound to "="
         * bump: rk3399 linux kernel 5.10
         * bump: dolphin to 5.0-15993
-        * bump: flycast & libretro-flycast to 1.2
+        * bump: flycast & libretro-flycast to 1.3
         * bump: duckstation for final build?
         * bump: Sonic Retro Egine ports to latest builds
-        * bump: x86_64 kernel to 5.17.3
+        * bump: x86_64 kernel to 5.17.4
         * bump: linux device firmware to march 2022
         * bump: mesa to 22.0.2
         * bump: retroarch to 1.10.3
