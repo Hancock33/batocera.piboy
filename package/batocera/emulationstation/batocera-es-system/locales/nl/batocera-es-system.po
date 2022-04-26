@@ -6045,26 +6045,6 @@ msgctxt "game_options"
 msgid "GRAPHICS BACKEND"
 msgstr "GRAPHICS BACKEND"
 
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Not all games support Stretch, depending on the video files."
-msgstr ""
-
-#. TRANSLATION: daphne, awgl, awgl
-msgctxt "game_options"
-msgid "Original"
-msgstr ""
-
-#. TRANSLATION: daphne, openbor, pcsx2, redream, demul
-msgctxt "game_options"
-msgid "Stretch"
-msgstr "Strek"
-
-#. TRANSLATION: daphne, dolphin, dolphin_triforce
-msgctxt "game_options"
-msgid "Force 4:3"
-msgstr "Forceer 4:3"
-
 #. TRANSLATION: daphne, melonds
 msgctxt "game_options"
 msgid "Rotate the screen with the emulator."
@@ -6215,6 +6195,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Force 16:9"
 msgstr "Forceer 16:9"
+
+#. TRANSLATION: dolphin, dolphin_triforce
+msgctxt "game_options"
+msgid "Force 4:3"
+msgstr "Forceer 4:3"
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -7337,6 +7322,11 @@ msgid "Stretch games to full-screen, but may distort the aspect ratio"
 msgstr ""
 "Strek spellen naar volledig scherm, maar zou de beeldverhouding kunnen "
 "vervormen."
+
+#. TRANSLATION: openbor, pcsx2, redream, demul
+msgctxt "game_options"
+msgid "Stretch"
+msgstr "Strek"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -8852,6 +8842,11 @@ msgstr ""
 #. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "Select rendering mode."
+msgstr ""
+
+#. TRANSLATION: awgl, awgl
+msgctxt "game_options"
+msgid "Original"
 msgstr ""
 
 #. TRANSLATION: awgl

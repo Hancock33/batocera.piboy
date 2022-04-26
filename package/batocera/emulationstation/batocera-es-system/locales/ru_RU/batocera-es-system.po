@@ -6057,26 +6057,6 @@ msgctxt "game_options"
 msgid "GRAPHICS BACKEND"
 msgstr "ГРАФИЧЕСКИЙ БЭКЭНД"
 
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Not all games support Stretch, depending on the video files."
-msgstr "Не все игры поддерживают Растягивание, зависит от видеофайлов."
-
-#. TRANSLATION: daphne, awgl, awgl
-msgctxt "game_options"
-msgid "Original"
-msgstr "Оригинал"
-
-#. TRANSLATION: daphne, openbor, pcsx2, redream, demul
-msgctxt "game_options"
-msgid "Stretch"
-msgstr "Растянуть"
-
-#. TRANSLATION: daphne, dolphin, dolphin_triforce
-msgctxt "game_options"
-msgid "Force 4:3"
-msgstr "Принудительно 4:3"
-
 #. TRANSLATION: daphne, melonds
 msgctxt "game_options"
 msgid "Rotate the screen with the emulator."
@@ -6226,6 +6206,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Force 16:9"
 msgstr "Принудительно 16:9"
+
+#. TRANSLATION: dolphin, dolphin_triforce
+msgctxt "game_options"
+msgid "Force 4:3"
+msgstr "Принудительно 4:3"
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -7347,6 +7332,11 @@ msgstr "ОТКЛЮЧИТЬ 4MB EXPANSION RAM PACK"
 msgctxt "game_options"
 msgid "Stretch games to full-screen, but may distort the aspect ratio"
 msgstr "Растягивает игры на весь экран, но может исказить соотношение сторон"
+
+#. TRANSLATION: openbor, pcsx2, redream, demul
+msgctxt "game_options"
+msgid "Stretch"
+msgstr "Растянуть"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -8865,6 +8855,11 @@ msgctxt "game_options"
 msgid "Select rendering mode."
 msgstr ""
 
+#. TRANSLATION: awgl, awgl
+msgctxt "game_options"
+msgid "Original"
+msgstr "Оригинал"
+
 #. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "Select fullscreen mode."
@@ -8909,6 +8904,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "EGA GRAPHICS MODE"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "Not all games support Stretch, depending on the video files."
+#~ msgstr "Не все игры поддерживают Растягивание, зависит от видеофайлов."
 
 #~ msgctxt "game_options"
 #~ msgid ""

@@ -6029,26 +6029,6 @@ msgctxt "game_options"
 msgid "GRAPHICS BACKEND"
 msgstr "グラフィックデバイス"
 
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Not all games support Stretch, depending on the video files."
-msgstr "引き伸ばしは、すべてのゲームに対応しているわけではありません"
-
-#. TRANSLATION: daphne, awgl, awgl
-msgctxt "game_options"
-msgid "Original"
-msgstr "オリジナル"
-
-#. TRANSLATION: daphne, openbor, pcsx2, redream, demul
-msgctxt "game_options"
-msgid "Stretch"
-msgstr "引き伸ばし"
-
-#. TRANSLATION: daphne, dolphin, dolphin_triforce
-msgctxt "game_options"
-msgid "Force 4:3"
-msgstr "強制的に 4:3 にする"
-
 #. TRANSLATION: daphne, melonds
 msgctxt "game_options"
 msgid "Rotate the screen with the emulator."
@@ -6195,6 +6175,11 @@ msgstr "WiiのエミュレートNAND設定とは無関係の画像表示を設�
 msgctxt "game_options"
 msgid "Force 16:9"
 msgstr "強制的に 16:9 にする"
+
+#. TRANSLATION: dolphin, dolphin_triforce
+msgctxt "game_options"
+msgid "Force 4:3"
+msgstr "強制的に 4:3 にする"
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -7315,6 +7300,11 @@ msgctxt "game_options"
 msgid "Stretch games to full-screen, but may distort the aspect ratio"
 msgstr ""
 "ゲームをフルスクリーンに拡大しますが、アスペクト比が歪む可能性があります"
+
+#. TRANSLATION: openbor, pcsx2, redream, demul
+msgctxt "game_options"
+msgid "Stretch"
+msgstr "引き伸ばし"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -8817,6 +8807,11 @@ msgctxt "game_options"
 msgid "Select rendering mode."
 msgstr ""
 
+#. TRANSLATION: awgl, awgl
+msgctxt "game_options"
+msgid "Original"
+msgstr "オリジナル"
+
 #. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "Select fullscreen mode."
@@ -8861,6 +8856,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "EGA GRAPHICS MODE"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "Not all games support Stretch, depending on the video files."
+#~ msgstr "引き伸ばしは、すべてのゲームに対応しているわけではありません"
 
 #~ msgctxt "game_options"
 #~ msgid ""
