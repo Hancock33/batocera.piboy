@@ -6087,28 +6087,6 @@ msgctxt "game_options"
 msgid "GRAPHICS BACKEND"
 msgstr "PROCESSO INTERNO GRÁFICO"
 
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Not all games support Stretch, depending on the video files."
-msgstr ""
-"Nem todos os jogos suportam a proporção Esticado, dependem dos arquivos de "
-"vídeo."
-
-#. TRANSLATION: daphne, awgl, awgl
-msgctxt "game_options"
-msgid "Original"
-msgstr "Original"
-
-#. TRANSLATION: daphne, openbor, pcsx2, redream, demul
-msgctxt "game_options"
-msgid "Stretch"
-msgstr "Esticado"
-
-#. TRANSLATION: daphne, dolphin, dolphin_triforce
-msgctxt "game_options"
-msgid "Force 4:3"
-msgstr "Forçar 4:3"
-
 #. TRANSLATION: daphne, melonds
 msgctxt "game_options"
 msgid "Rotate the screen with the emulator."
@@ -6258,6 +6236,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Force 16:9"
 msgstr "Forçar 16:9"
+
+#. TRANSLATION: dolphin, dolphin_triforce
+msgctxt "game_options"
+msgid "Force 4:3"
+msgstr "Forçar 4:3"
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -7390,6 +7373,11 @@ msgstr "DESATIVAR PACOTE DE EXPANSÃO RAM DE 4 MB"
 msgctxt "game_options"
 msgid "Stretch games to full-screen, but may distort the aspect ratio"
 msgstr "Estica os jogos para tela cheia, mas pode distorcer a proporção"
+
+#. TRANSLATION: openbor, pcsx2, redream, demul
+msgctxt "game_options"
+msgid "Stretch"
+msgstr "Esticado"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -8928,6 +8916,11 @@ msgctxt "game_options"
 msgid "Select rendering mode."
 msgstr ""
 
+#. TRANSLATION: awgl, awgl
+msgctxt "game_options"
+msgid "Original"
+msgstr "Original"
+
 #. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "Select fullscreen mode."
@@ -8972,6 +8965,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "EGA GRAPHICS MODE"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "Not all games support Stretch, depending on the video files."
+#~ msgstr ""
+#~ "Nem todos os jogos suportam a proporção Esticado, dependem dos arquivos "
+#~ "de vídeo."
 
 #~ msgctxt "game_options"
 #~ msgid ""
