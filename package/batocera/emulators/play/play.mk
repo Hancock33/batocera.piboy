@@ -3,8 +3,8 @@
 # PLAY
 #
 ################################################################################
-# Version: Commits on Apr 25, 2022
-PLAY_VERSION = 2d78a0d5ad41e11070e543aa421336731eddd114
+# Version: Commits on Apr 27, 2022
+PLAY_VERSION = 0c5b0077d2c3273d77a5bd331fe85955491d9b0f
 PLAY_SITE = https://github.com/jpd002/Play-.git
 PLAY_LICENSE = BSD
 PLAY_DEPENDENCIES = qt5base qt5x11extras xserver_xorg-server libglew vulkan-headers vulkan-loader
