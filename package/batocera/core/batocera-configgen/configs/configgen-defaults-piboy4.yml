@@ -3,10 +3,8 @@ default:
     ratio: "full"
     retroarch.menu_driver: rgui
     retroarch.audio_out_rate: 44100
-    retroarch.vrr_runloop_enable: false
-    retroarch.video_max_swapchain_images: 3
-    retroarch.video_adaptive_vsync: true
-    retroarch.menu_widget_scale_auto: true
+    retroarch.vrr_runloop_enable: "true"
+    retroarch.menu_widget_scale_auto: "true"
 
 c20:
   emulator: libretro
