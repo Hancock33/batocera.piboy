@@ -12,7 +12,7 @@ RPI_EEPROM_LICENSE = BSD-3-Clause
 
 define RPI_EEPROM_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/lib/firmware/raspberrypi/bootloader/default
-	cp -pvr $(@D)/firmware/stable/{pieeprom-2022-03-10.bin,recovery.bin,vl805-000137ad.bin,vl805-000138a1.bin} \
+	cp -pvr $(@D)/firmware/stable/{pieeprom-2022-04-26.bin,recovery.bin,vl805-000137ad.bin,vl805-000138a1.bin} \
 			$(TARGET_DIR)/lib/firmware/raspberrypi/bootloader/default
 		cp -pvr $(@D)/rpi-eeprom-{config,digest,update} $(TARGET_DIR)/usr/bin
 endef
