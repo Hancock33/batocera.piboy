@@ -24,7 +24,8 @@ define RAINE_BUILD_CMDS
 	CROSSCOMPILE=1 \
 	NO_ASM=1 \
 	NATIVE=$(@D)/linux-gnu-sdl2 \
-	CPU=cortex-a72
+	CPU=cortex-a72 \
+	RDTSC_PROFILE=0
 endef
 
 define RAINE_INSTALL_TARGET_CMDS
