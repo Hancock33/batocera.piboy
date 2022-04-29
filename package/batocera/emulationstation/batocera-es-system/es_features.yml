@@ -330,7 +330,7 @@ libretro:
        shared: [rewind, autosave]
       cfeatures:
             controller1_fmsx:
-                prompt:      CONTROLLER TYPE 1
+                prompt:      CONTROLLER 1 TYPE
                 description: Custom Keyboard mapping is available on RA core options menu.
                 choices:
                     "Joystick":                      1
