@@ -76,6 +76,13 @@ class MameGenerator(Generator):
             else:
                 softList = ""
 
+        # Auto softlist for FM Towns if there is a zip that matches the folder name
+        # Used for games that require a CD and floppy to both be inserted
+        if system.name == 'fmtowns' and softList == '':
+            romParentPath = path.basename(romDirname)
+            if os.path.exists('/userdata/roms/fmtowns/{}.zip'.format(romParentPath)):
+                softList = 'fmtowns_cd'
+
         # MAME options used here are explained as it's not always straightforward
         # A lot more options can be configured, just run mame -showusage and have a look
         commandArray += [ "-skip_gameinfo" ]
@@ -254,13 +261,6 @@ class MameGenerator(Generator):
                             if imageSlot != "":
                                 commandArray += [ "-" + imageSlot, 'image' ]
 
-                # Auto softlist for FM Towns if there is a zip that matches the folder name
-                # Used for games that require a CD and floppy to both be inserted
-                if system.name == 'fmtowns' and softList == '':
-                    romParentPath = path.basename(romDirname)
-                    if os.path.exists('/userdata/roms/fmtowns/{}.zip'.format(romParentPath)):
-                        softList = 'fmtowns_cd'
-
                 if softList == "":
                     # Boot disk for Macintosh
                     # Will use Floppy 1 or Hard Drive, depending on the disk.
@@ -320,6 +320,7 @@ class MameGenerator(Generator):
                         if softList in subdirSoftList:
                             romPath = Path(romDirname)
                             os.symlink(str(romPath.parents[0]), softDir + softList, True)
+                            commandArray += [ path.basename(romDirname) ]
                         else:
                             os.symlink(romDirname, softDir + softList, True)
                             commandArray += [ os.path.splitext(romBasename)[0] ]
