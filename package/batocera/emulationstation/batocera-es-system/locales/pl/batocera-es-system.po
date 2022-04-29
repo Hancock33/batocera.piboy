@@ -370,7 +370,7 @@ msgctxt "game_options"
 msgid "Use an alternate resolution. Some games need this."
 msgstr "Użyj alternatywnej rozdzielczości. Niektóre gry tego wymagają."
 
-#. TRANSLATION: libretro/atari800
+#. TRANSLATION: libretro/atari800, libretro/uae4arm
 msgctxt "game_options"
 msgid "INTERNAL RESOLUTION"
 msgstr "ROZDZIELCZOŚĆ WEWNĘTRZNA"
@@ -400,7 +400,7 @@ msgctxt "game_options"
 msgid "CPC MODEL"
 msgstr "MODEL CPC"
 
-#. TRANSLATION: libretro/cap32, libretro/dosbox_pure, libretro/np2kai, libretro/px68k, hatari
+#. TRANSLATION: libretro/cap32, libretro/dosbox_pure, libretro/np2kai, libretro/uae4arm, libretro/px68k, ...
 msgctxt "game_options"
 msgid "EMULATED RAM SIZE"
 msgstr "EMULOWANY ROZMIAR PAMIĘCI RAM"
@@ -1112,12 +1112,12 @@ msgctxt "game_options"
 msgid "No EMS/XMS"
 msgstr "Brak EMS/XMS"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mess, libretro/px68k, mame/wasm4
+#. TRANSLATION: libretro/dosbox_pure, libretro/mess, libretro/uae4arm, libretro/px68k, mame/wasm4
 msgctxt "game_options"
 msgid "4MB"
 msgstr "4MB"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mess, libretro/px68k, mame/wasm4
+#. TRANSLATION: libretro/dosbox_pure, libretro/mess, libretro/uae4arm, libretro/px68k, mame/wasm4
 msgctxt "game_options"
 msgid "8MB"
 msgstr "8MB"
@@ -3075,7 +3075,7 @@ msgctxt "game_options"
 msgid "RAM SIZE"
 msgstr "ROZMIAR RAM"
 
-#. TRANSLATION: libretro/mess, libretro/px68k, mame/wasm4
+#. TRANSLATION: libretro/mess, libretro/uae4arm, libretro/px68k, mame/wasm4
 msgctxt "game_options"
 msgid "2MB"
 msgstr "2MB"
@@ -3702,7 +3702,7 @@ msgctxt "game_options"
 msgid "6x (Recommended)"
 msgstr ""
 
-#. TRANSLATION: libretro/np2kai, libretro/px68k
+#. TRANSLATION: libretro/np2kai, libretro/uae4arm, libretro/px68k
 msgctxt "game_options"
 msgid "1MB"
 msgstr ""
@@ -3997,7 +3997,7 @@ msgctxt "game_options"
 msgid "Per Game"
 msgstr ""
 
-#. TRANSLATION: libretro/parallel_n64, libretro/tyrquake, amiberry, ppsspp
+#. TRANSLATION: libretro/parallel_n64, libretro/tyrquake, amiberry, ppsspp, rpcs3
 msgctxt "game_options"
 msgid "Automatic"
 msgstr "Automatyczne"
@@ -4313,22 +4313,22 @@ msgctxt "game_options"
 msgid "Gamepad Modern"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "Force a specific model and prevent tags detection."
 msgstr "Wymuś określony model i zapobiegaj wykrywaniu znaczników."
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "AMIGA MODEL"
 msgstr "MODEL AMIGI"
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "Autodetect (by game name tag)"
 msgstr "Automatyczne wykrywanie (według tagu nazwy gry)"
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "A500 (512KB Chip + 512KB Slow)"
 msgstr "A500 (512KB Chip + 512KB Slow)"
@@ -4338,12 +4338,12 @@ msgctxt "game_options"
 msgid "A500+ (1MB Chip)"
 msgstr "A500+ (1MB Chip)"
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "A600 (2MB Chip + 8MB Fast)"
 msgstr "A600 (2MB Chip + 8MB Fast)"
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "A1200 (2MB Chip + 8MB Fast)"
 msgstr "A1200 (2MB Chip + 8MB Fast)"
@@ -4353,12 +4353,12 @@ msgctxt "game_options"
 msgid "A4000/040 (2MB Chip + 8MB Fast)"
 msgstr "A4000/040 (2MB Chip + 8MB Fast)"
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "CDTV (1MB Chip)"
 msgstr "CDTV (1MB Chip)"
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "CD32 Default (2MB Chip)"
 msgstr "CD32 Default (2MB Chip)"
@@ -4563,22 +4563,22 @@ msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
 msgstr "Włącz uruchamianie wstępnie zainstalowanych instalacji WHDLoad."
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
 msgctxt "game_options"
 msgid "WHDLOAD LAUNCHER"
 msgstr "URUCHOMIENIE WHDLOAD"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
 msgctxt "game_options"
 msgid "Passes all physical keyboard events for Pad2Key."
 msgstr "Przekazuje wszystkie fizyczne zdarzenia klawiatury do Pad2Key."
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
 msgctxt "game_options"
 msgid "DISABLE EMULATOR JOYSTICK"
 msgstr "WYŁĄCZ JOYSTICK EMULATORA"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x64, ...
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
 msgctxt "game_options"
 msgid "Makes second fire button press up instead."
 msgstr "Sprawia naciśnięcie drugiego przycisku 'fire'."
@@ -4588,7 +4588,7 @@ msgctxt "game_options"
 msgid "JUMP ON A"
 msgstr "SKOK NA A"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
 msgctxt "game_options"
 msgid "Select controller type for Amiga P1."
 msgstr "Wybierz typ kontrolera dla gracza 1 Amigi."
@@ -4608,32 +4608,32 @@ msgctxt "game_options"
 msgid "Joystick"
 msgstr "Joystick"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
 msgctxt "game_options"
 msgid "Select controller type for Amiga P2."
 msgstr "Wybierz typ kontrolera dla gracza 2 Amigi."
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
 msgctxt "game_options"
 msgid "Use to play pinball games with correct mapping."
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
 msgctxt "game_options"
 msgid "PINBALL MAPPING MODE"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
 msgctxt "game_options"
 msgid "Modern"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
 msgctxt "game_options"
 msgid "Modern Alternative"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
 msgctxt "game_options"
 msgid "Classic"
 msgstr ""
@@ -4671,6 +4671,46 @@ msgstr ""
 msgctxt "game_options"
 msgid "Cycle-exact"
 msgstr "Dokładny cyklowo"
+
+#. TRANSLATION: libretro/uae4arm, libretro/uae4arm, libretro/uae4arm, libretro/uae4arm, libretro/uae4arm, ...
+msgctxt "game_options"
+msgid "CORE SETTINGS"
+msgstr ""
+
+#. TRANSLATION: libretro/uae4arm
+msgctxt "game_options"
+msgid "LINE DOUBLING (DEINTERLACE)"
+msgstr ""
+
+#. TRANSLATION: libretro/uae4arm
+msgctxt "game_options"
+msgid "ONSCREEN STATUS LEDS"
+msgstr ""
+
+#. TRANSLATION: libretro/uae4arm
+msgctxt "game_options"
+msgid "COPPER COPROCESSOR"
+msgstr ""
+
+#. TRANSLATION: libretro/uae4arm, libretro/uae4arm
+msgctxt "game_options"
+msgid "FLOPPY SPEED"
+msgstr ""
+
+#. TRANSLATION: libretro/uae4arm, libretro/uae4arm
+msgctxt "game_options"
+msgid "Files"
+msgstr ""
+
+#. TRANSLATION: libretro/uae4arm, libretro/uae4arm
+msgctxt "game_options"
+msgid "HDFs"
+msgstr ""
+
+#. TRANSLATION: libretro/uae4arm, libretro/uae4arm, libretro/uae4arm, libretro/uae4arm, libretro/uae4arm, ...
+msgctxt "game_options"
+msgid "CONTROLLER SETTINGS"
+msgstr ""
 
 #. TRANSLATION: libretro/px68k, libretro/quasi88
 msgctxt "game_options"
@@ -5850,7 +5890,7 @@ msgctxt "game_options"
 msgid "DOUBLE"
 msgstr "PODWÓJNA"
 
-#. TRANSLATION: amiberry
+#. TRANSLATION: amiberry, daphne
 msgctxt "game_options"
 msgid "SCANLINES"
 msgstr "SCANLINES"
@@ -6085,6 +6125,26 @@ msgctxt "game_options"
 msgid "GRAPHICS BACKEND"
 msgstr "BACKEND GRAFICZNY"
 
+#. TRANSLATION: daphne
+msgctxt "game_options"
+msgid "Not all games support Stretch, depending on the video files."
+msgstr "Nie wszystkie gry obsługują rozciąganie, w zależności od plików wideo."
+
+#. TRANSLATION: daphne, awgl, awgl
+msgctxt "game_options"
+msgid "Original"
+msgstr "Oryginał"
+
+#. TRANSLATION: daphne, openbor, pcsx2, redream, demul
+msgctxt "game_options"
+msgid "Stretch"
+msgstr "Rozciągnięcie"
+
+#. TRANSLATION: daphne, dolphin, dolphin_triforce
+msgctxt "game_options"
+msgid "Force 4:3"
+msgstr "Wymuszone 4:3"
+
 #. TRANSLATION: daphne, melonds
 msgctxt "game_options"
 msgid "Rotate the screen with the emulator."
@@ -6109,6 +6169,12 @@ msgstr "Gładkie piksele."
 msgctxt "game_options"
 msgid "BILINEAR FILTERING"
 msgstr "FILTROWANIE DWULINIOWE"
+
+#. TRANSLATION: daphne
+msgctxt "game_options"
+msgid ""
+"Use with Stretch aspect ratio and adjust joystick sensitivity as required."
+msgstr ""
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
@@ -6142,12 +6208,35 @@ msgstr "ODWRÓĆ OŚ"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
-msgid "Adjust Singe joystick sensitivity."
+msgid ""
+"Singe automatically interprets joystick axis change as mouse movement, "
+"useful for lightgun games."
 msgstr ""
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
-msgid "JOYSTICK SENSITIVITY"
+msgid "JOYSTICK TO CURSOR SENSITIVITY"
+msgstr ""
+
+#. TRANSLATION: daphne
+msgctxt "game_options"
+msgid "Hide crosshairs in supported games e.g. ActionMax."
+msgstr ""
+
+#. TRANSLATION: daphne
+msgctxt "game_options"
+msgid "HIDE LIGHTGUN CROSSHAIRS"
+msgstr ""
+
+#. TRANSLATION: daphne
+msgctxt "game_options"
+msgid ""
+"Can improve video performance. Do not use with ActionMax games or scanlines."
+msgstr ""
+
+#. TRANSLATION: daphne
+msgctxt "game_options"
+msgid "SDL TEXTUREACCESS STREAMING"
 msgstr ""
 
 #. TRANSLATION: dolphin/wasm4
@@ -6233,11 +6322,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Force 16:9"
 msgstr "Wymuszone 16:9"
-
-#. TRANSLATION: dolphin, dolphin_triforce
-msgctxt "game_options"
-msgid "Force 4:3"
-msgstr "Wymuszone 4:3"
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -7354,17 +7438,39 @@ msgctxt "game_options"
 msgid "DISABLE 4MB EXPANSION RAM PACK"
 msgstr "WYŁĄCZ 4MB ROZSZERZENIE PAMIĘCI RAM"
 
+#. TRANSLATION: mupen64plus
+msgctxt "game_options"
+msgid ""
+"Required for some effects in-game (Banjo Kazooie and DK64 transitions), can "
+"cause slowdown."
+msgstr ""
+
+#. TRANSLATION: mupen64plus
+msgctxt "game_options"
+msgid "READ FRAMEBUFFER EVERY FRAME (GLIDE64MK2)"
+msgstr ""
+
+#. TRANSLATION: mupen64plus
+msgctxt "game_options"
+msgid "Game default"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, ppsspp
+msgctxt "game_options"
+msgid "Disable"
+msgstr "Wyłącz"
+
+#. TRANSLATION: mupen64plus, ppsspp
+msgctxt "game_options"
+msgid "Enable"
+msgstr "Włącz"
+
 #. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Stretch games to full-screen, but may distort the aspect ratio"
 msgstr ""
 "Rozciągaj gry na pełny ekran, ale może to spowodować zniekształcenie "
 "proporcji obrazu"
-
-#. TRANSLATION: openbor, pcsx2, redream, demul
-msgctxt "game_options"
-msgid "Stretch"
-msgstr "Rozciągnięcie"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -7670,16 +7776,6 @@ msgstr "OKRES VSYNC"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "Enable"
-msgstr "Włącz"
-
-#. TRANSLATION: ppsspp
-msgctxt "game_options"
-msgid "Disable"
-msgstr "Wyłącz"
-
-#. TRANSLATION: ppsspp
-msgctxt "game_options"
 msgid "Enhancement. Enables texture upscaling textures and their size."
 msgstr "Usprawnienie. Umożliwia przeskalowanie tekstur i ich rozmiaru."
 
@@ -7741,6 +7837,23 @@ msgstr "GRAFICZNY INTERFEJS UŻYTKOWNIKA"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
+msgid "Distorts the output to fill the display fully."
+msgstr "Zniekształca sygnał wyjściowy, aby w pełni wypełnić ekran."
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "STRETCH TO DISPLAY AREA"
+msgstr "ROZCIĄGNIJ DO OBSZARU WYŚWIETLANIA"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "PS3's internal ratio setting. Some games only support 16/9."
+msgstr ""
+"Wewnętrzne ustawienie proporcji w systemie PS3. Niektóre gry obsługują tylko "
+"tryb 16/9."
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
 msgid "If game crashes, try ASMJIT. If still crashing, try Fast Interpreter."
 msgstr ""
 "Jeśli gra się zawiesi, spróbuj ASMJIT. Jeśli gra nadal się zawiesza, spróbuj "
@@ -7770,13 +7883,6 @@ msgstr "Fast Interpreter"
 msgctxt "game_options"
 msgid "Precise Interpreter"
 msgstr "Precise Interpreter"
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "PS3's internal ratio setting. Some games only support 16/9."
-msgstr ""
-"Wewnętrzne ustawienie proporcji w systemie PS3. Niektóre gry obsługują tylko "
-"tryb 16/9."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -7841,27 +7947,20 @@ msgstr "Włączone (wolniej)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "Distorts the output to fill the display fully."
-msgstr "Zniekształca sygnał wyjściowy, aby w pełni wypełnić ekran."
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "STRETCH TO DISPLAY AREA"
-msgstr "ROZCIĄGNIJ DO OBSZARU WYŚWIETLANIA"
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "Can Fix broken graphics in some games."
+msgid ""
+"May fix missing graphics and broken lighting at the cost of performance."
 msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "WRITE DEPTH BUFFER"
+msgid "WRITE COLOR BUFFERS"
 msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "May help to fix choppy audio on weaker CPUs."
+msgid ""
+"Limiting to 1 or 2 may fix audio stuttering on weaker CPUs in some games. "
+"Leave on automatic if slowdown occurs."
 msgstr ""
 
 #. TRANSLATION: rpcs3
@@ -7871,18 +7970,42 @@ msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "0 (Default)"
+msgid "1 thread"
 msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid ""
-"Enable this option if you get missing graphics or broken lighting ingame."
+msgid "2 threads"
 msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "WRITE COLOUR BUFFERS"
+msgid "3 threads"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "4 threads"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "5 threads"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "6 threads"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "May fix broken graphics in some games."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "WRITE DEPTH BUFFER"
 msgstr ""
 
 #. TRANSLATION: easyrpg
@@ -8887,11 +9010,6 @@ msgctxt "game_options"
 msgid "Select rendering mode."
 msgstr ""
 
-#. TRANSLATION: awgl, awgl
-msgctxt "game_options"
-msgid "Original"
-msgstr "Oryginał"
-
 #. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "Select fullscreen mode."
@@ -8936,11 +9054,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "EGA GRAPHICS MODE"
 msgstr ""
-
-#~ msgctxt "game_options"
-#~ msgid "Not all games support Stretch, depending on the video files."
-#~ msgstr ""
-#~ "Nie wszystkie gry obsługują rozciąganie, w zależności od plików wideo."
 
 #~ msgctxt "game_options"
 #~ msgid ""
