@@ -188,7 +188,7 @@ amigacdtv:
       puae:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
       puae2021: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
       uae4arm:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM] }
-      
+            
 nes:
   name:       Nintendo Entertainment System
   manufacturer: Nintendo
@@ -2994,7 +2994,7 @@ naomi2:
     --------------------------------
     ## DEMUL - CURRENTLY DISABLED ##
     --------------------------------
-    
+            
     An alternative is to use Demul with Wine.
     Note: Your graphics card requires Vulkan drivers for Demul to work.
 

@@ -326,11 +326,11 @@ libretro:
       features: [netplay, cheevos]
       shared: [autosave]
     fmsx:
-       features: [netplay, cheevos]
-       shared: [rewind, autosave]
+      features: [netplay, cheevos]
+      shared: [rewind, autosave]
       cfeatures:
-            group: CONTROLLER SETTINGS
             controller1_fmsx:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
                 description: Custom Keyboard mapping is available on RA core options menu.
                 choices:
