@@ -6,6 +6,9 @@ default:
     retroarch.vrr_runloop_enable: "true"
     retroarch.menu_widget_scale_auto: "true"
 
+atomiswave:
+  emulator: flycast
+  core:     flycast
 c20:
   emulator: libretro
   core:     vice_xvic
@@ -18,6 +21,9 @@ c128:
 cplus4:
   emulator: libretro
   core:     vice_xplus4
+dreamcast:
+  emulator: flycast
+  core:     flycast
 flash:
   emulator: lightspark
   core:     lightspark
@@ -27,6 +33,12 @@ fmtowns:
 gamecube:
   emulator: libretro
   core:     dolphin
+naomi:
+  emulator: flycast
+  core:     flycast
+naomi2:
+  emulator: flycast
+  core:     flycast
 nds:
   emulator: drastic
   core:     drastic
@@ -39,6 +51,3 @@ psp:
 sgb:
   emulator: libretro
   core:     mgba
-wii:
-  emulator: libretro
-  core:     dolphin
