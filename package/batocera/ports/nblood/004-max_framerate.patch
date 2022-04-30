@@ -1,0 +1,13 @@
+diff --git a/source/build/src/baselayer.cpp b/source/build/src/baselayer.cpp
+index 7b3a29264..f46b75324 100644
+--- a/source/build/src/baselayer.cpp
++++ b/source/build/src/baselayer.cpp
+@@ -47,7 +47,7 @@ uint8_t g_keyAsciiEnd;
+ char    g_keyRemapTable[NUMKEYS];
+ char    g_keyNameTable[NUMKEYS][24];
+ 
+-int32_t r_maxfps = -1;
++int32_t r_maxfps = 240;
+ uint64_t g_frameDelay;
+ 
+ 
