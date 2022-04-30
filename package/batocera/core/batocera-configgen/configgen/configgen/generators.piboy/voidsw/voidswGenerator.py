@@ -1,9 +1,9 @@
 #!/usr/bin/env python
-
+import os
+from os import path
 import Command
 from generators.Generator import Generator
 import controllersConfig
-
 
 class VoidswGenerator(Generator):
 
@@ -15,7 +15,8 @@ class VoidswGenerator(Generator):
         if (rom.__contains__("TD")):
             addon = "-addon2"
 
-        commandArray = ["voidsw", addon, "-j/userdata/roms/voidsw"]
+        commandArray = ["voidsw", addon, "-j", os.path.dirname(os.path.abspath(rom))]
+        os.chdir(os.path.dirname(os.path.abspath(rom)))
 
         return Command.Command(
             array=commandArray,
