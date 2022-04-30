@@ -1,8 +1,8 @@
 diff --git a/libretro/libretro-core.c b/libretro/libretro-core.c
-index dd5e6dd..410c0dd 100644
+index 95a1f9a..cf13a84 100644
 --- a/libretro/libretro-core.c
 +++ b/libretro/libretro-core.c
-@@ -90,7 +90,7 @@ extern uae_u32 natmem_size;
+@@ -91,7 +91,7 @@ extern uae_u32 natmem_size;
  #endif
  
  char full_path[RETRO_PATH_MAX] = {0};
@@ -11,7 +11,7 @@ index dd5e6dd..410c0dd 100644
  static int restart_pending = 0;
  
  static long retro_now = 0;
-@@ -528,7 +528,7 @@ static void retro_set_core_options()
+@@ -572,7 +572,7 @@ static void retro_set_core_options()
     static struct retro_core_option_v2_definition option_defs_us[] =
     {
        {
@@ -20,7 +20,7 @@ index dd5e6dd..410c0dd 100644
           "System > Model",
           "Model",
           "'Automatic' defaults to 'A500' with floppy disks, 'A1200' with hard drives and 'CD32' with compact discs. 'Automatic' can be overridden with file path tags.\nCore restart required.",
-@@ -554,7 +554,7 @@ static void retro_set_core_options()
+@@ -598,7 +598,7 @@ static void retro_set_core_options()
           "auto"
        },
        {
@@ -29,7 +29,7 @@ index dd5e6dd..410c0dd 100644
           "System > Show Automatic Model Options",
           "Show Automatic Model Options",
           "Show/hide default model options (Floppy/HD/CD) for 'Automatic' model.\nPage refresh by menu toggle required!",
-@@ -568,7 +568,7 @@ static void retro_set_core_options()
+@@ -612,7 +612,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -38,7 +38,7 @@ index dd5e6dd..410c0dd 100644
           "Model > Automatic Floppy",
           "Automatic Floppy",
           "Default model when floppies are launched with 'Automatic' model.\nCore restart required.",
-@@ -590,7 +590,7 @@ static void retro_set_core_options()
+@@ -634,7 +634,7 @@ static void retro_set_core_options()
           "A500"
        },
        {
@@ -47,7 +47,7 @@ index dd5e6dd..410c0dd 100644
           "Model > Automatic HD",
           "Automatic HD",
           "Default model when HD interface is used with 'Automatic' model. Affects WHDLoad installs and other hard drive images.\nCore restart required.",
-@@ -608,7 +608,7 @@ static void retro_set_core_options()
+@@ -652,7 +652,7 @@ static void retro_set_core_options()
           "A1200"
        },
        {
@@ -56,7 +56,7 @@ index dd5e6dd..410c0dd 100644
           "Model > Automatic CD",
           "Automatic CD",
           "Default model when compact discs are launched with 'Automatic' model.\nCore restart required.",
-@@ -623,7 +623,7 @@ static void retro_set_core_options()
+@@ -667,7 +667,7 @@ static void retro_set_core_options()
           "CD32"
        },
        {
@@ -65,7 +65,7 @@ index dd5e6dd..410c0dd 100644
           "System > Kickstart ROM",
           "Kickstart ROM",
           "'Automatic' defaults to the most compatible version for the model. 'AROS' is a built-in replacement with fair compatibility.\nCore restart required.",
-@@ -646,7 +646,7 @@ static void retro_set_core_options()
+@@ -690,7 +690,7 @@ static void retro_set_core_options()
           "auto"
        },
        {
@@ -74,7 +74,7 @@ index dd5e6dd..410c0dd 100644
           "System > CPU Compatibility",
           "CPU Compatibility",
           "Some games have graphic and/or speed issues without 'Cycle-exact'. 'Cycle-exact' can be forced with '(CE)' file path tag.",
-@@ -661,7 +661,7 @@ static void retro_set_core_options()
+@@ -705,7 +705,7 @@ static void retro_set_core_options()
           "compatible"
        },
        {
@@ -83,7 +83,7 @@ index dd5e6dd..410c0dd 100644
           "System > CPU Speed",
           "CPU Speed",
           "Ignored with 'Cycle-exact'.",
-@@ -693,7 +693,7 @@ static void retro_set_core_options()
+@@ -737,7 +737,7 @@ static void retro_set_core_options()
           "0.0"
        },
        {
@@ -92,7 +92,7 @@ index dd5e6dd..410c0dd 100644
           "System > CPU Cycle-exact Speed",
           "CPU Cycle-exact Speed",
           "Applies only with 'Cycle-exact'.",
-@@ -713,7 +713,7 @@ static void retro_set_core_options()
+@@ -757,7 +757,7 @@ static void retro_set_core_options()
           "0"
        },
        {
@@ -101,7 +101,7 @@ index dd5e6dd..410c0dd 100644
           "Media > Automatic Load Fast-Forward",
           "Automatic Load Fast-Forward",
           "Toggle frontend fast-forward during media access if there is no audio output. Mutes 'Floppy Sound Emulation'.",
-@@ -730,7 +730,7 @@ static void retro_set_core_options()
+@@ -774,7 +774,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -110,7 +110,7 @@ index dd5e6dd..410c0dd 100644
           "Media > Floppy Speed",
           "Floppy Speed",
           "Default speed is 300RPM. 'Turbo' removes disk rotation emulation.",
-@@ -747,7 +747,7 @@ static void retro_set_core_options()
+@@ -791,7 +791,7 @@ static void retro_set_core_options()
           "100"
        },
        {
@@ -119,7 +119,7 @@ index dd5e6dd..410c0dd 100644
           "Media > Floppy MultiDrive",
           "Floppy MultiDrive",
           "Insert each disk in different drives. Can be forced with '(MD)' file path tag. Maximum is 4 disks due to external drive limit! Not all games support external drives!\nCore restart required.",
-@@ -761,7 +761,7 @@ static void retro_set_core_options()
+@@ -805,7 +805,7 @@ static void retro_set_core_options()
           "enabled"
        },
        {
@@ -128,7 +128,7 @@ index dd5e6dd..410c0dd 100644
           "Media > Floppy Write Protection",
           "Floppy Write Protection",
           "Set all drives read only. Changing this while emulation is running ejects and reinserts all disks. IPF images are always read only!",
-@@ -775,7 +775,7 @@ static void retro_set_core_options()
+@@ -819,7 +819,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -137,7 +137,7 @@ index dd5e6dd..410c0dd 100644
           "Media > CD Speed",
           "CD Speed",
           "Transfer rate in CD32 is 300KB/s (double-speed), CDTV is 150KB/s (single-speed). 'Turbo' removes seek delay emulation.",
-@@ -789,7 +789,7 @@ static void retro_set_core_options()
+@@ -833,7 +833,7 @@ static void retro_set_core_options()
           "100"
        },
        {
@@ -146,7 +146,7 @@ index dd5e6dd..410c0dd 100644
           "Media > CD Startup Delayed Insert",
           "CD Startup Delayed Insert",
           "Some games fail to load if CD32/CDTV is powered on with CD inserted. 'ON' inserts CD during boot animation.",
-@@ -803,7 +803,7 @@ static void retro_set_core_options()
+@@ -847,7 +847,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -155,16 +155,7 @@ index dd5e6dd..410c0dd 100644
           "Media > CD32/CDTV Shared NVRAM",
           "CD32/CDTV Shared NVRAM",
           "'OFF' saves separate files per content. Starting without content uses the shared file. CD32 and CDTV use separate shared files.\nCore restart required.",
-@@ -817,7 +817,7 @@ static void retro_set_core_options()
-          "disabled"
-       },
-       {
--         "puae_use_boot_hd",
-+         "puae2021_use_boot_hd",
-          "Media > Global Boot HD",
-          "Global Boot HD",
-          "Attach a hard disk meant for Workbench usage, not for WHDLoad! Enabling forces a model with HD interface. Changing HDF size will not replace or edit the existing HDF.\nCore restart required.",
-@@ -837,7 +837,7 @@ static void retro_set_core_options()
+@@ -861,7 +861,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -173,8 +164,17 @@ index dd5e6dd..410c0dd 100644
           "Media > WHDLoad Support",
           "WHDLoad Support",
           "Enable launching pre-installed WHDLoad installs. Creates a helper boot image for loading content and an empty image for saving. Legacy 'HDFs' mode is not recommended!\nCore restart required.\n- 'Files' creates data in directories\n- 'HDFs' creates data in images\n- 'OFF' boots hard drive images directly",
-@@ -852,7 +852,7 @@ static void retro_set_core_options()
+@@ -876,7 +876,7 @@ static void retro_set_core_options()
           "files"
+       },
+       {
+-         "puae_use_whdload_theme",
++         "puae2021_use_whdload_theme",
+          "Media > WHDLoad Theme",
+          "WHDLoad Theme",
+          "AmigaOS 'system-configuration' color prefs in WHDLoad helper image. Available only with 'Files' mode.\nCore restart required.\n- 'Default' = Black/White/DarkGray/LightGray\n- 'Native' = Gray/Black/White/LightBlue",
+@@ -890,7 +890,7 @@ static void retro_set_core_options()
+          "default"
        },
        {
 -         "puae_use_whdload_prefs",
@@ -182,7 +182,16 @@ index dd5e6dd..410c0dd 100644
           "Media > WHDLoad Splash Screen",
           "WHDLoad Splash Screen",
           "Space/Enter/Fire works as WHDLoad Start-button. Core restart required.\nOverride with buttons while booting:\n- 'Config': Hold 2nd fire / Blue\n- 'Splash': Hold LMB\n- 'Config + Splash': Hold RMB\n- ReadMe + MkCustom: Hold Red+Blue",
-@@ -868,7 +868,7 @@ static void retro_set_core_options()
+@@ -906,7 +906,7 @@ static void retro_set_core_options()
+          "disabled"
+       },
+       {
+-         "puae_use_boot_hd",
++         "puae2021_use_boot_hd",
+          "Media > Global Boot HD",
+          "Global Boot HD",
+          "Attach a hard disk meant for Workbench, not for WHDLoad! Enabling forces a model with HD interface. Changing HDF size will not replace or edit the existing HDF.\nCore restart required.",
+@@ -926,7 +926,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -191,7 +200,7 @@ index dd5e6dd..410c0dd 100644
           "Show Video Options",
           NULL,
           "Page refresh by menu toggle required!",
-@@ -882,7 +882,7 @@ static void retro_set_core_options()
+@@ -940,7 +940,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -200,7 +209,7 @@ index dd5e6dd..410c0dd 100644
           "Video > Allow Hz Change",
           "Allow Hz Change",
           "Let Amiga decide the exact refresh rate when interlace mode or PAL/NTSC changes. 'Locked' changes only when video standard changes.\nCore restart required.",
-@@ -897,7 +897,7 @@ static void retro_set_core_options()
+@@ -955,7 +955,7 @@ static void retro_set_core_options()
           "locked"
        },
        {
@@ -209,7 +218,7 @@ index dd5e6dd..410c0dd 100644
           "Video > Standard",
           "Standard",
           "Output Hz & height:\n- 'PAL': 50Hz - 288px / 576px\n- 'NTSC': 60Hz - 240px / 480px\n- 'Automatic' switches region per file path tags.",
-@@ -913,7 +913,7 @@ static void retro_set_core_options()
+@@ -971,7 +971,7 @@ static void retro_set_core_options()
           "PAL auto"
        },
        {
@@ -218,7 +227,7 @@ index dd5e6dd..410c0dd 100644
           "Video > Resolution",
           "Resolution",
           "Output width:\n- 'Automatic' defaults to 'High' and switches to 'Super-High' when needed.",
-@@ -929,7 +929,7 @@ static void retro_set_core_options()
+@@ -987,7 +987,7 @@ static void retro_set_core_options()
           "auto"
        },
        {
@@ -227,7 +236,7 @@ index dd5e6dd..410c0dd 100644
           "Video > Line Mode",
           "Line Mode",
           "Output height:\n- 'Automatic' defaults to 'Single Line' and switches to 'Double Line' on interlaced screens.",
-@@ -944,7 +944,7 @@ static void retro_set_core_options()
+@@ -1002,7 +1002,7 @@ static void retro_set_core_options()
           "auto"
        },
        {
@@ -236,7 +245,7 @@ index dd5e6dd..410c0dd 100644
           "Video > Pixel Aspect Ratio",
           "Pixel Aspect Ratio",
           "Hotkey toggling disables this option until core restart.\n- 'PAL': 1/1 = 1.000\n- 'NTSC': 44/52 = 0.846",
-@@ -959,7 +959,7 @@ static void retro_set_core_options()
+@@ -1017,7 +1017,7 @@ static void retro_set_core_options()
           "auto"
        },
        {
@@ -245,7 +254,7 @@ index dd5e6dd..410c0dd 100644
           "Video > Zoom Mode",
           "Zoom Mode",
           "Crop borders to fit various host screens. Requirements in RetroArch settings:\n- Aspect Ratio: Core provided,\n- Integer Scale: Off.",
-@@ -980,7 +980,7 @@ static void retro_set_core_options()
+@@ -1038,7 +1038,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -254,7 +263,7 @@ index dd5e6dd..410c0dd 100644
           "Video > Zoom Mode Crop",
           "Zoom Mode Crop",
           "'Horizontal + Vertical' & 'Automatic' removes borders completely.",
-@@ -999,7 +999,7 @@ static void retro_set_core_options()
+@@ -1057,7 +1057,7 @@ static void retro_set_core_options()
           "both"
        },
        {
@@ -263,7 +272,7 @@ index dd5e6dd..410c0dd 100644
           "Video > Vertical Position",
           "Vertical Position",
           "'Automatic' keeps only zoomed screens centered. Positive values move upward and negative values move downward.",
-@@ -1058,7 +1058,7 @@ static void retro_set_core_options()
+@@ -1116,7 +1116,7 @@ static void retro_set_core_options()
           "auto"
        },
        {
@@ -272,7 +281,7 @@ index dd5e6dd..410c0dd 100644
           "Video > Horizontal Position",
           "Horizontal Position",
           "'Automatic' keeps screen centered. Positive values move right and negative values move left.",
-@@ -1112,7 +1112,7 @@ static void retro_set_core_options()
+@@ -1170,7 +1170,7 @@ static void retro_set_core_options()
           "auto"
        },
        {
@@ -281,7 +290,7 @@ index dd5e6dd..410c0dd 100644
           "Video > Remove Interlace Artifacts",
           "Remove Interlace Artifacts",
           "Best suited for still screens, Workbench etc.",
-@@ -1126,7 +1126,7 @@ static void retro_set_core_options()
+@@ -1184,7 +1184,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -290,7 +299,7 @@ index dd5e6dd..410c0dd 100644
           "Video > Immediate/Waiting Blits",
           "Immediate/Waiting Blits",
           "'Immediate Blitter' is ignored with 'Cycle-exact'.",
-@@ -1141,7 +1141,7 @@ static void retro_set_core_options()
+@@ -1199,7 +1199,7 @@ static void retro_set_core_options()
           "waiting"
        },
        {
@@ -299,7 +308,7 @@ index dd5e6dd..410c0dd 100644
           "Video > Collision Level",
           "Collision Level",
           "'Sprites and Playfields' is recommended.",
-@@ -1157,7 +1157,7 @@ static void retro_set_core_options()
+@@ -1215,7 +1215,7 @@ static void retro_set_core_options()
           "playfields"
        },
        {
@@ -308,7 +317,7 @@ index dd5e6dd..410c0dd 100644
           "Video > Frameskip",
           "Frameskip",
           "Not compatible with 'Cycle-exact'.",
-@@ -1172,7 +1172,7 @@ static void retro_set_core_options()
+@@ -1230,7 +1230,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -317,7 +326,7 @@ index dd5e6dd..410c0dd 100644
           "Video > Color Gamma",
           "Color Gamma",
           "Adjust color gamma.",
-@@ -1195,7 +1195,7 @@ static void retro_set_core_options()
+@@ -1253,7 +1253,7 @@ static void retro_set_core_options()
           "0"
        },
        {
@@ -326,7 +335,7 @@ index dd5e6dd..410c0dd 100644
           "Video > Color Depth",
           "Color Depth",
           "'24-bit' is slower and not available on all platforms. Full restart required.",
-@@ -1209,7 +1209,7 @@ static void retro_set_core_options()
+@@ -1267,7 +1267,7 @@ static void retro_set_core_options()
           "16bit"
        },
        {
@@ -335,7 +344,7 @@ index dd5e6dd..410c0dd 100644
           "OSD > Virtual KBD Theme",
           "Virtual KBD Theme",
           "The keyboard comes up with RetroPad Select by default.",
-@@ -1231,7 +1231,7 @@ static void retro_set_core_options()
+@@ -1289,7 +1289,7 @@ static void retro_set_core_options()
           "auto"
        },
        {
@@ -344,7 +353,7 @@ index dd5e6dd..410c0dd 100644
           "OSD > Virtual KBD Transparency",
           "Virtual KBD Transparency",
           "Keyboard transparency can be toggled with RetroPad A.",
-@@ -1248,7 +1248,7 @@ static void retro_set_core_options()
+@@ -1306,7 +1306,7 @@ static void retro_set_core_options()
           "25%"
        },
        {
@@ -353,7 +362,7 @@ index dd5e6dd..410c0dd 100644
           "OSD > Statusbar Mode",
           "Statusbar Mode",
           "- 'Full': Joyports + Messages + LEDs\n- 'Basic': Messages + LEDs\n- 'Minimal': LED colors only",
-@@ -1268,7 +1268,7 @@ static void retro_set_core_options()
+@@ -1326,7 +1326,7 @@ static void retro_set_core_options()
           "bottom"
        },
        {
@@ -362,7 +371,7 @@ index dd5e6dd..410c0dd 100644
           "OSD > Statusbar Messages",
           "Statusbar Messages",
           "Show messages when statusbar is hidden.",
-@@ -1282,7 +1282,7 @@ static void retro_set_core_options()
+@@ -1340,7 +1340,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -371,7 +380,7 @@ index dd5e6dd..410c0dd 100644
           "Show Audio Options",
           NULL,
           "Page refresh by menu toggle required!",
-@@ -1296,7 +1296,7 @@ static void retro_set_core_options()
+@@ -1354,7 +1354,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -380,7 +389,7 @@ index dd5e6dd..410c0dd 100644
           "Audio > Stereo Separation",
           "Stereo Separation",
           "Paula sound chip channel panning. Does not affect CD audio.",
-@@ -1319,7 +1319,7 @@ static void retro_set_core_options()
+@@ -1377,7 +1377,7 @@ static void retro_set_core_options()
           "100%"
        },
        {
@@ -389,7 +398,7 @@ index dd5e6dd..410c0dd 100644
           "Audio > Interpolation",
           "Interpolation",
           "Paula sound chip interpolation type.",
-@@ -1336,7 +1336,7 @@ static void retro_set_core_options()
+@@ -1394,7 +1394,7 @@ static void retro_set_core_options()
           "anti"
        },
        {
@@ -398,7 +407,7 @@ index dd5e6dd..410c0dd 100644
           "Audio > Filter",
           "Filter",
           "'Emulated' allows states between ON/OFF.",
-@@ -1351,7 +1351,7 @@ static void retro_set_core_options()
+@@ -1409,7 +1409,7 @@ static void retro_set_core_options()
           "emulated"
        },
        {
@@ -407,7 +416,7 @@ index dd5e6dd..410c0dd 100644
           "Audio > Filter Type",
           "Filter Type",
           "'Automatic' picks the filter type for the hardware.",
-@@ -1366,7 +1366,7 @@ static void retro_set_core_options()
+@@ -1424,7 +1424,7 @@ static void retro_set_core_options()
           "auto",
        },
        {
@@ -416,7 +425,7 @@ index dd5e6dd..410c0dd 100644
           "Audio > CD Audio Volume",
           "CD Audio Volume",
           "CD volume in percent.",
-@@ -1399,7 +1399,7 @@ static void retro_set_core_options()
+@@ -1457,7 +1457,7 @@ static void retro_set_core_options()
           "100%"
        },
        {
@@ -425,7 +434,7 @@ index dd5e6dd..410c0dd 100644
           "Audio > Floppy Sound Emulation",
           "Floppy Sound Emulation",
           "Floppy volume in percent.",
-@@ -1432,7 +1432,7 @@ static void retro_set_core_options()
+@@ -1490,7 +1490,7 @@ static void retro_set_core_options()
           "80"
        },
        {
@@ -434,7 +443,7 @@ index dd5e6dd..410c0dd 100644
           "Audio > Floppy Sound Mute Ejected",
           "Floppy Sound Mute Ejected",
           "Mute drive head clicking when floppy is not inserted.",
-@@ -1446,7 +1446,7 @@ static void retro_set_core_options()
+@@ -1504,7 +1504,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -443,7 +452,7 @@ index dd5e6dd..410c0dd 100644
           "Audio > Floppy Sound Type",
           "Floppy Sound Type",
           "External files go in 'system/uae_data/' or 'system/uae/'.",
-@@ -1461,7 +1461,7 @@ static void retro_set_core_options()
+@@ -1519,7 +1519,7 @@ static void retro_set_core_options()
           "internal"
        },
        {
@@ -452,7 +461,7 @@ index dd5e6dd..410c0dd 100644
           "Input > Analog Stick Mouse",
           "Analog Stick Mouse",
           "Default mouse control stick when remappings are empty.",
-@@ -1477,7 +1477,7 @@ static void retro_set_core_options()
+@@ -1535,7 +1535,7 @@ static void retro_set_core_options()
           "both"
        },
        {
@@ -461,7 +470,7 @@ index dd5e6dd..410c0dd 100644
           "Input > Analog Stick Mouse Deadzone",
           "Analog Stick Mouse Deadzone",
           "Required distance from stick center to register input.",
-@@ -1500,7 +1500,7 @@ static void retro_set_core_options()
+@@ -1558,7 +1558,7 @@ static void retro_set_core_options()
           "20"
        },
        {
@@ -470,7 +479,7 @@ index dd5e6dd..410c0dd 100644
           "Input > Analog Stick Mouse Speed",
           "Analog Stick Mouse Speed",
           "Mouse movement speed multiplier for analog stick.",
-@@ -1542,7 +1542,7 @@ static void retro_set_core_options()
+@@ -1600,7 +1600,7 @@ static void retro_set_core_options()
           "1.0"
        },
        {
@@ -479,7 +488,7 @@ index dd5e6dd..410c0dd 100644
           "Input > D-Pad Mouse Speed",
           "D-Pad Mouse Speed",
           "Mouse movement speed multiplier for directional pad.",
-@@ -1572,7 +1572,7 @@ static void retro_set_core_options()
+@@ -1630,7 +1630,7 @@ static void retro_set_core_options()
           "6"
        },
        {
@@ -488,7 +497,7 @@ index dd5e6dd..410c0dd 100644
           "Input > Mouse Speed",
           "Mouse Speed",
           "Global mouse speed.",
-@@ -1614,7 +1614,7 @@ static void retro_set_core_options()
+@@ -1672,7 +1672,7 @@ static void retro_set_core_options()
           "100"
        },
        {
@@ -497,7 +506,7 @@ index dd5e6dd..410c0dd 100644
           "Input > Physical Mouse",
           "Physical Mouse",
           "'Double' requirements: raw/udev input driver and proper mouse index per port.\nDoes not affect RetroPad emulated mice.",
-@@ -1629,7 +1629,7 @@ static void retro_set_core_options()
+@@ -1687,7 +1687,7 @@ static void retro_set_core_options()
           "enabled"
        },
        {
@@ -506,7 +515,7 @@ index dd5e6dd..410c0dd 100644
           "Input > Keyboard Pass-through",
           "Keyboard Pass-through",
           "'ON' passes all physical keyboard events to the core. 'OFF' prevents RetroPad keys from generating keyboard events.",
-@@ -1643,7 +1643,7 @@ static void retro_set_core_options()
+@@ -1701,7 +1701,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -515,7 +524,7 @@ index dd5e6dd..410c0dd 100644
           "Input > Keyrah Keypad Mappings",
           "Keyrah Keypad Mappings",
           "Hardcoded keypad to joyport mappings for Keyrah hardware.",
-@@ -1657,7 +1657,7 @@ static void retro_set_core_options()
+@@ -1715,7 +1715,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -524,7 +533,7 @@ index dd5e6dd..410c0dd 100644
           "Show Mapping Options",
           NULL,
           "Page refresh by menu toggle required!",
-@@ -1672,7 +1672,7 @@ static void retro_set_core_options()
+@@ -1730,7 +1730,7 @@ static void retro_set_core_options()
        },
        /* Hotkeys */
        {
@@ -533,7 +542,7 @@ index dd5e6dd..410c0dd 100644
           "Hotkey > Toggle Virtual Keyboard",
           "Toggle Virtual Keyboard",
           "Press the mapped key to toggle the virtual keyboard.",
-@@ -1682,7 +1682,7 @@ static void retro_set_core_options()
+@@ -1740,7 +1740,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -542,7 +551,7 @@ index dd5e6dd..410c0dd 100644
           "Hotkey > Toggle Statusbar",
           "Toggle Statusbar",
           "Press the mapped key to toggle the statusbar.",
-@@ -1692,7 +1692,7 @@ static void retro_set_core_options()
+@@ -1750,7 +1750,7 @@ static void retro_set_core_options()
           "RETROK_F12"
        },
        {
@@ -551,7 +560,7 @@ index dd5e6dd..410c0dd 100644
           "Hotkey > Switch Joystick/Mouse",
           "Switch Joystick/Mouse",
           "Press the mapped key to switch between joystick and mouse control.",
-@@ -1702,7 +1702,7 @@ static void retro_set_core_options()
+@@ -1760,7 +1760,7 @@ static void retro_set_core_options()
           "RETROK_RCTRL"
        },
        {
@@ -560,7 +569,7 @@ index dd5e6dd..410c0dd 100644
           "Hotkey > Toggle Turbo Fire",
           "Toggle Turbo Fire",
           "Press the mapped key to toggle turbo fire.",
-@@ -1712,7 +1712,7 @@ static void retro_set_core_options()
+@@ -1770,7 +1770,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -569,7 +578,7 @@ index dd5e6dd..410c0dd 100644
           "Hotkey > Toggle Save Disk",
           "Toggle Save Disk",
           "Press the mapped key to create/insert/eject a save disk.",
-@@ -1722,7 +1722,7 @@ static void retro_set_core_options()
+@@ -1780,7 +1780,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -578,7 +587,7 @@ index dd5e6dd..410c0dd 100644
           "Hotkey > Reset",
           "Reset",
           "Press the mapped key to trigger soft reset (Ctrl-Amiga-Amiga).",
-@@ -1732,7 +1732,7 @@ static void retro_set_core_options()
+@@ -1790,7 +1790,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -587,7 +596,7 @@ index dd5e6dd..410c0dd 100644
           "Hotkey > Toggle Aspect Ratio",
           "Toggle Aspect Ratio",
           "Press the mapped key to toggle between PAL/NTSC pixel aspect ratio.",
-@@ -1742,7 +1742,7 @@ static void retro_set_core_options()
+@@ -1800,7 +1800,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -596,7 +605,7 @@ index dd5e6dd..410c0dd 100644
           "Hotkey > Toggle Zoom Mode",
           "Toggle Zoom Mode",
           "Press the mapped key to toggle zoom mode.",
-@@ -1753,7 +1753,7 @@ static void retro_set_core_options()
+@@ -1811,7 +1811,7 @@ static void retro_set_core_options()
        },
        /* Button mappings */
        {
@@ -605,7 +614,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Up",
           "Up",
           "Unmapped defaults to joystick up.",
-@@ -1763,7 +1763,7 @@ static void retro_set_core_options()
+@@ -1821,7 +1821,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -614,7 +623,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Down",
           "Down",
           "Unmapped defaults to joystick down.",
-@@ -1773,7 +1773,7 @@ static void retro_set_core_options()
+@@ -1831,7 +1831,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -623,7 +632,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Left",
           "Left",
           "Unmapped defaults to joystick left.",
-@@ -1783,7 +1783,7 @@ static void retro_set_core_options()
+@@ -1841,7 +1841,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -632,7 +641,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Right",
           "Right",
           "Unmapped defaults to joystick right.",
-@@ -1793,7 +1793,7 @@ static void retro_set_core_options()
+@@ -1851,7 +1851,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -641,7 +650,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > A",
           "A",
           "Unmapped defaults to 2nd fire button.\nVKBD: Toggle transparency. Remapping to non-keyboard keys overrides VKBD function!",
-@@ -1803,7 +1803,7 @@ static void retro_set_core_options()
+@@ -1861,7 +1861,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -650,7 +659,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > B",
           "B",
           "Unmapped defaults to fire button.\nVKBD: Press selected key.",
-@@ -1813,7 +1813,7 @@ static void retro_set_core_options()
+@@ -1871,7 +1871,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -659,7 +668,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > X",
           "X",
           "VKBD: Press 'Space'. Remapping to non-keyboard keys overrides VKBD function!",
-@@ -1823,7 +1823,7 @@ static void retro_set_core_options()
+@@ -1881,7 +1881,7 @@ static void retro_set_core_options()
           "RETROK_SPACE"
        },
        {
@@ -668,7 +677,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Y",
           "Y",
           "VKBD: Toggle 'CapsLock'. Remapping to non-keyboard keys overrides VKBD function!",
-@@ -1833,7 +1833,7 @@ static void retro_set_core_options()
+@@ -1891,7 +1891,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -677,7 +686,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Select",
           "Select",
           "VKBD comes up with RetroPad Select by default.",
-@@ -1843,7 +1843,7 @@ static void retro_set_core_options()
+@@ -1901,7 +1901,7 @@ static void retro_set_core_options()
           "TOGGLE_VKBD"
        },
        {
@@ -686,7 +695,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Start",
           "Start",
           "VKBD: Press 'Return'. Remapping to non-keyboard keys overrides VKBD function!",
-@@ -1853,7 +1853,7 @@ static void retro_set_core_options()
+@@ -1911,7 +1911,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -695,7 +704,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > L",
           "L",
           "",
-@@ -1863,7 +1863,7 @@ static void retro_set_core_options()
+@@ -1921,7 +1921,7 @@ static void retro_set_core_options()
           ""
        },
        {
@@ -704,7 +713,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > R",
           "R",
           "",
-@@ -1873,7 +1873,7 @@ static void retro_set_core_options()
+@@ -1931,7 +1931,7 @@ static void retro_set_core_options()
           ""
        },
        {
@@ -713,7 +722,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > L2",
           "L2",
           "",
-@@ -1883,7 +1883,7 @@ static void retro_set_core_options()
+@@ -1941,7 +1941,7 @@ static void retro_set_core_options()
           "MOUSE_LEFT_BUTTON"
        },
        {
@@ -722,7 +731,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > R2",
           "R2",
           "",
-@@ -1893,7 +1893,7 @@ static void retro_set_core_options()
+@@ -1951,7 +1951,7 @@ static void retro_set_core_options()
           "MOUSE_RIGHT_BUTTON"
        },
        {
@@ -731,7 +740,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > L3",
           "L3",
           "",
-@@ -1903,7 +1903,7 @@ static void retro_set_core_options()
+@@ -1961,7 +1961,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -740,7 +749,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > R3",
           "R3",
           "",
-@@ -1914,7 +1914,7 @@ static void retro_set_core_options()
+@@ -1972,7 +1972,7 @@ static void retro_set_core_options()
        },
        /* Left Stick */
        {
@@ -749,7 +758,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Left Analog > Up",
           "Left Analog > Up",
           "",
-@@ -1924,7 +1924,7 @@ static void retro_set_core_options()
+@@ -1982,7 +1982,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -758,7 +767,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Left Analog > Down",
           "Left Analog > Down",
           "",
-@@ -1934,7 +1934,7 @@ static void retro_set_core_options()
+@@ -1992,7 +1992,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -767,7 +776,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Left Analog > Left",
           "Left Analog > Left",
           "",
-@@ -1944,7 +1944,7 @@ static void retro_set_core_options()
+@@ -2002,7 +2002,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -776,7 +785,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Left Analog > Right",
           "Left Analog > Right",
           "",
-@@ -1955,7 +1955,7 @@ static void retro_set_core_options()
+@@ -2013,7 +2013,7 @@ static void retro_set_core_options()
        },
        /* Right Stick */
        {
@@ -785,7 +794,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Right Analog > Up",
           "Right Analog > Up",
           "",
-@@ -1965,7 +1965,7 @@ static void retro_set_core_options()
+@@ -2023,7 +2023,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -794,7 +803,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Right Analog > Down",
           "Right Analog > Down",
           "",
-@@ -1975,7 +1975,7 @@ static void retro_set_core_options()
+@@ -2033,7 +2033,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -803,7 +812,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Right Analog > Left",
           "Right Analog > Left",
           "",
-@@ -1985,7 +1985,7 @@ static void retro_set_core_options()
+@@ -2043,7 +2043,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -812,7 +821,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Right Analog > Right",
           "Right Analog > Right",
           "",
-@@ -1995,7 +1995,7 @@ static void retro_set_core_options()
+@@ -2053,7 +2053,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -821,7 +830,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Turbo Fire",
           "Turbo Fire",
           "Hotkey toggling disables this option until core restart.",
-@@ -2009,7 +2009,7 @@ static void retro_set_core_options()
+@@ -2067,7 +2067,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -830,7 +839,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Turbo Button",
           "Turbo Button",
           "Replace the mapped button with turbo fire button.",
-@@ -2029,7 +2029,7 @@ static void retro_set_core_options()
+@@ -2087,7 +2087,7 @@ static void retro_set_core_options()
           "B"
        },
        {
@@ -839,7 +848,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Turbo Pulse",
           "Turbo Pulse",
           "Frames in a button cycle.\n- '2' = 1 frame down, 1 frame up\n- '4' = 2 frames down, 2 frames up\n- '6' = 3 frames down, 3 frames up\netc.",
-@@ -2047,7 +2047,7 @@ static void retro_set_core_options()
+@@ -2105,7 +2105,7 @@ static void retro_set_core_options()
           "6"
        },
        {
@@ -848,7 +857,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Joystick/Mouse",
           "Joystick/Mouse",
           "Change D-Pad control between joyports. Hotkey toggling disables this option until core restart.",
-@@ -2061,7 +2061,7 @@ static void retro_set_core_options()
+@@ -2119,7 +2119,7 @@ static void retro_set_core_options()
           "Joystick"
        },
        {
@@ -857,7 +866,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Joystick Port Order",
           "Joystick Port Order",
           "Plug RetroPads in different ports. Useful for Arcadia system and games that use the 4-player adapter.",
-@@ -2077,7 +2077,7 @@ static void retro_set_core_options()
+@@ -2135,7 +2135,7 @@ static void retro_set_core_options()
           "1234"
        },
        {
@@ -866,7 +875,7 @@ index dd5e6dd..410c0dd 100644
           "RetroPad > Face Button Options",
           "RetroPad Face Button Options",
           "Rotate face buttons clockwise and/or make 2nd fire press up.",
-@@ -2093,7 +2093,7 @@ static void retro_set_core_options()
+@@ -2151,7 +2151,7 @@ static void retro_set_core_options()
           "disabled"
        },
        {
@@ -875,7 +884,7 @@ index dd5e6dd..410c0dd 100644
           "CD32 Pad > Face Button Options",
           "CD32 Pad Face Button Options",
           "Rotate face buttons clockwise and/or make blue button press up.",
-@@ -2125,17 +2125,17 @@ static void retro_set_core_options()
+@@ -2183,17 +2183,17 @@ static void retro_set_core_options()
     }
     while (option_defs_us[i].key)
     {
@@ -902,7 +911,7 @@ index dd5e6dd..410c0dd 100644
              hotkey = 1;
           else
              hotkey = 0;
-@@ -2512,42 +2512,42 @@ static void update_variables(void)
+@@ -2570,42 +2570,42 @@ static void update_variables(void)
     struct retro_variable var = {0};
     struct retro_core_option_display option_display;
  
@@ -951,7 +960,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2586,7 +2586,7 @@ static void update_variables(void)
+@@ -2644,7 +2644,7 @@ static void update_variables(void)
        }
     }
  
@@ -960,7 +969,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2601,7 +2601,7 @@ static void update_variables(void)
+@@ -2659,7 +2659,7 @@ static void update_variables(void)
           video_config_aspect = video_config_aspect_prev;
     }
  
@@ -969,7 +978,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2623,7 +2623,7 @@ static void update_variables(void)
+@@ -2681,7 +2681,7 @@ static void update_variables(void)
        }
     }
  
@@ -978,7 +987,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2685,7 +2685,7 @@ static void update_variables(void)
+@@ -2743,7 +2743,7 @@ static void update_variables(void)
           request_init_custom_timer = 2;
     }
  
@@ -987,7 +996,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2734,7 +2734,7 @@ static void update_variables(void)
+@@ -2792,7 +2792,7 @@ static void update_variables(void)
           request_init_custom_timer = 2;
     }
  
@@ -996,7 +1005,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2760,7 +2760,7 @@ static void update_variables(void)
+@@ -2818,7 +2818,7 @@ static void update_variables(void)
        opt_statusbar_position_old = opt_statusbar_position;
     }
  
@@ -1005,7 +1014,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2768,7 +2768,7 @@ static void update_variables(void)
+@@ -2826,7 +2826,7 @@ static void update_variables(void)
           opt_statusbar |= STATUSBAR_MESSAGES;
     }
  
@@ -1014,7 +1023,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2781,7 +2781,7 @@ static void update_variables(void)
+@@ -2839,7 +2839,7 @@ static void update_variables(void)
        if      (strstr(var.value, "outline")) opt_vkbd_theme |= 0x80;
     }
  
@@ -1023,7 +1032,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2792,7 +2792,7 @@ static void update_variables(void)
+@@ -2850,7 +2850,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "100%")) opt_vkbd_alpha = GRAPH_ALPHA_0;
     }
  
@@ -1032,7 +1041,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2835,7 +2835,7 @@ static void update_variables(void)
+@@ -2893,7 +2893,7 @@ static void update_variables(void)
        }
     }
  
@@ -1041,7 +1050,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2847,7 +2847,7 @@ static void update_variables(void)
+@@ -2905,7 +2905,7 @@ static void update_variables(void)
           changed_prefs.m68k_speed_throttle = atof(var.value);
     }
  
@@ -1050,7 +1059,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2859,7 +2859,7 @@ static void update_variables(void)
+@@ -2917,7 +2917,7 @@ static void update_variables(void)
           changed_prefs.cpu_clock_multiplier = atoi(var.value) * 256;
     }
  
@@ -1059,7 +1068,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2875,7 +2875,7 @@ static void update_variables(void)
+@@ -2933,7 +2933,7 @@ static void update_variables(void)
           changed_prefs.sound_stereo_separation = val;
     }
  
@@ -1068,7 +1077,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2893,7 +2893,7 @@ static void update_variables(void)
+@@ -2951,7 +2951,7 @@ static void update_variables(void)
        }
     }
  
@@ -1077,7 +1086,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2909,7 +2909,7 @@ static void update_variables(void)
+@@ -2967,7 +2967,7 @@ static void update_variables(void)
        }
     }
  
@@ -1086,7 +1095,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2929,7 +2929,7 @@ static void update_variables(void)
+@@ -2987,7 +2987,7 @@ static void update_variables(void)
        }
     }
  
@@ -1095,7 +1104,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2946,7 +2946,7 @@ static void update_variables(void)
+@@ -3004,7 +3004,7 @@ static void update_variables(void)
           changed_prefs.sound_volume_cd = val;
     }
  
@@ -1104,7 +1113,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2959,7 +2959,7 @@ static void update_variables(void)
+@@ -3017,7 +3017,7 @@ static void update_variables(void)
                                                                           AUTOLOADFASTFORWARD_CD;
     }
  
@@ -1113,7 +1122,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2971,7 +2971,7 @@ static void update_variables(void)
+@@ -3029,7 +3029,7 @@ static void update_variables(void)
           changed_prefs.cd_speed = atoi(var.value);
     }
  
@@ -1122,7 +1131,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2983,7 +2983,7 @@ static void update_variables(void)
+@@ -3041,7 +3041,7 @@ static void update_variables(void)
           changed_prefs.floppy_speed = atoi(var.value);
     }
  
@@ -1131,7 +1140,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -2991,7 +2991,7 @@ static void update_variables(void)
+@@ -3049,7 +3049,7 @@ static void update_variables(void)
        else                                opt_floppy_multidrive = true;
     }
  
@@ -1140,7 +1149,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3013,7 +3013,7 @@ static void update_variables(void)
+@@ -3071,7 +3071,7 @@ static void update_variables(void)
        }
     }
  
@@ -1149,7 +1158,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3035,7 +3035,7 @@ static void update_variables(void)
+@@ -3093,7 +3093,7 @@ static void update_variables(void)
           changed_prefs.dfxclickvolume = atoi(val);
     }
  
@@ -1158,7 +1167,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3043,7 +3043,7 @@ static void update_variables(void)
+@@ -3101,7 +3101,7 @@ static void update_variables(void)
        else                                opt_floppy_sound_empty_mute = true;
     }
  
@@ -1167,7 +1176,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3092,7 +3092,7 @@ static void update_variables(void)
+@@ -3150,7 +3150,7 @@ static void update_variables(void)
        }
     }
  
@@ -1176,7 +1185,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3108,7 +3108,7 @@ static void update_variables(void)
+@@ -3166,7 +3166,7 @@ static void update_variables(void)
        }
     }
  
@@ -1185,7 +1194,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3148,7 +3148,7 @@ static void update_variables(void)
+@@ -3206,7 +3206,7 @@ static void update_variables(void)
        }
     }
  
@@ -1194,7 +1203,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3165,7 +3165,7 @@ static void update_variables(void)
+@@ -3223,7 +3223,7 @@ static void update_variables(void)
        }
     }
  
@@ -1203,7 +1212,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3187,7 +3187,7 @@ static void update_variables(void)
+@@ -3245,7 +3245,7 @@ static void update_variables(void)
           changed_prefs.gfx_framerate = val;
     }
  
@@ -1212,7 +1221,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3199,7 +3199,7 @@ static void update_variables(void)
+@@ -3257,7 +3257,7 @@ static void update_variables(void)
        }
     }
  
@@ -1221,7 +1230,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3221,7 +3221,7 @@ static void update_variables(void)
+@@ -3279,7 +3279,7 @@ static void update_variables(void)
        }
     }
  
@@ -1230,7 +1239,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3241,7 +3241,7 @@ static void update_variables(void)
+@@ -3299,7 +3299,7 @@ static void update_variables(void)
        }
     }
  
@@ -1239,7 +1248,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3258,7 +3258,7 @@ static void update_variables(void)
+@@ -3316,7 +3316,7 @@ static void update_variables(void)
        opt_zoom_mode_id = zoom_mode_id;
     }
  
@@ -1248,7 +1257,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3271,7 +3271,7 @@ static void update_variables(void)
+@@ -3329,7 +3329,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "5:4"))        zoom_mode_crop_id = 6;
     }
  
@@ -1257,7 +1266,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3294,7 +3294,7 @@ static void update_variables(void)
+@@ -3352,7 +3352,7 @@ static void update_variables(void)
        }
     }
  
@@ -1266,7 +1275,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3315,7 +3315,7 @@ static void update_variables(void)
+@@ -3373,7 +3373,7 @@ static void update_variables(void)
        }
     }
  
@@ -1275,8 +1284,17 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3324,7 +3324,7 @@ static void update_variables(void)
+@@ -3382,7 +3382,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "hdfs"))     opt_use_whdload = 2;
+    }
+ 
+-   var.key = "puae_use_whdload_theme";
++   var.key = "puae2021_use_whdload_theme";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3390,7 +3390,7 @@ static void update_variables(void)
+       else if (!strcmp(var.value, "native"))   opt_use_whdload_theme = 1;
     }
  
 -   var.key = "puae_use_whdload_prefs";
@@ -1284,7 +1302,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3334,7 +3334,7 @@ static void update_variables(void)
+@@ -3400,7 +3400,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "both"))     opt_use_whdload_prefs = 3;
     }
  
@@ -1293,7 +1311,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3342,7 +3342,7 @@ static void update_variables(void)
+@@ -3408,7 +3408,7 @@ static void update_variables(void)
        else                                opt_cd_startup_delayed_insert = true;
     }
  
@@ -1302,7 +1320,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3350,7 +3350,7 @@ static void update_variables(void)
+@@ -3416,7 +3416,7 @@ static void update_variables(void)
        else                                opt_shared_nvram = true;
     }
  
@@ -1311,7 +1329,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3364,7 +3364,7 @@ static void update_variables(void)
+@@ -3430,7 +3430,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "hdf512"))   opt_use_boot_hd = 7;
     }
  
@@ -1320,7 +1338,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3374,28 +3374,28 @@ static void update_variables(void)
+@@ -3440,28 +3440,28 @@ static void update_variables(void)
        else if (!strcmp(var.value, "both"))     opt_analogmouse = 3;
     }
  
@@ -1353,7 +1371,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3404,7 +3404,7 @@ static void update_variables(void)
+@@ -3470,7 +3470,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "double"))   opt_physicalmouse = 2;
     }
  
@@ -1362,7 +1380,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3412,7 +3412,7 @@ static void update_variables(void)
+@@ -3478,7 +3478,7 @@ static void update_variables(void)
        else                                opt_keyrah_keypad = true;
     }
  
@@ -1371,7 +1389,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3420,7 +3420,7 @@ static void update_variables(void)
+@@ -3486,7 +3486,7 @@ static void update_variables(void)
        else                                opt_keyboard_pass_through = true;
     }
  
@@ -1380,7 +1398,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3428,7 +3428,7 @@ static void update_variables(void)
+@@ -3494,7 +3494,7 @@ static void update_variables(void)
        else                                opt_model_options_display = 1;
     }
  
@@ -1389,7 +1407,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3436,7 +3436,7 @@ static void update_variables(void)
+@@ -3502,7 +3502,7 @@ static void update_variables(void)
        else                                opt_mapping_options_display = 1;
     }
  
@@ -1398,7 +1416,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3444,7 +3444,7 @@ static void update_variables(void)
+@@ -3510,7 +3510,7 @@ static void update_variables(void)
        else                                opt_video_options_display = 1;
     }
  
@@ -1407,7 +1425,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3452,7 +3452,7 @@ static void update_variables(void)
+@@ -3518,7 +3518,7 @@ static void update_variables(void)
        else                                opt_audio_options_display = 1;
     }
  
@@ -1416,7 +1434,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3463,14 +3463,14 @@ static void update_variables(void)
+@@ -3529,14 +3529,14 @@ static void update_variables(void)
        }
     }
  
@@ -1433,7 +1451,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3480,7 +3480,7 @@ static void update_variables(void)
+@@ -3546,7 +3546,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "rotate_jump")) opt_retropad_options = RETROPAD_OPTIONS_ROTATE_JUMP;
     }
  
@@ -1442,7 +1460,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3490,7 +3490,7 @@ static void update_variables(void)
+@@ -3556,7 +3556,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "rotate_jump")) opt_cd32pad_options = RETROPAD_OPTIONS_ROTATE_JUMP;
     }
  
@@ -1451,7 +1469,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3501,7 +3501,7 @@ static void update_variables(void)
+@@ -3567,7 +3567,7 @@ static void update_variables(void)
        }
     }
  
@@ -1460,7 +1478,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3515,7 +3515,7 @@ static void update_variables(void)
+@@ -3581,7 +3581,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "R2")) turbo_fire_button = RETRO_DEVICE_ID_JOYPAD_R2;
     }
  
@@ -1469,7 +1487,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3523,168 +3523,168 @@ static void update_variables(void)
+@@ -3589,168 +3589,168 @@ static void update_variables(void)
     }
  
     /* Mapper */
@@ -1662,7 +1680,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3692,56 +3692,56 @@ static void update_variables(void)
+@@ -3758,56 +3758,56 @@ static void update_variables(void)
     }
  
     /* Mapper hotkeys */
@@ -1727,7 +1745,7 @@ index dd5e6dd..410c0dd 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3829,16 +3829,16 @@ static void update_variables(void)
+@@ -3895,16 +3895,16 @@ static void update_variables(void)
     {
        option_display.visible = false;
  
@@ -1748,7 +1766,7 @@ index dd5e6dd..410c0dd 100644
        environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
        return;
     }
-@@ -3846,141 +3846,141 @@ static void update_variables(void)
+@@ -3912,141 +3912,141 @@ static void update_variables(void)
     /* Model options */
     option_display.visible = opt_model_options_display;
  
@@ -1952,7 +1970,7 @@ index dd5e6dd..410c0dd 100644
     environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
  }
  
-@@ -4447,7 +4447,7 @@ void retro_get_system_info(struct retro_system_info *info)
+@@ -4513,7 +4513,7 @@ void retro_get_system_info(struct retro_system_info *info)
  #define GIT_VERSION ""
  #endif
     memset(info, 0, sizeof(*info));
@@ -1962,10 +1980,10 @@ index dd5e6dd..410c0dd 100644
     info->need_fullpath    = true;
     info->block_extract    = true;
 diff --git a/libretro/libretro-core.h b/libretro/libretro-core.h
-index d641b70..3558c50 100644
+index b28e138..48902fa 100644
 --- a/libretro/libretro-core.h
 +++ b/libretro/libretro-core.h
-@@ -211,7 +211,7 @@ static retro_kickstarts uae_kickstarts[15] =
+@@ -217,7 +217,7 @@ static retro_kickstarts uae_kickstarts[15] =
  };
  
  /* Support files */
