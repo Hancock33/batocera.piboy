@@ -230,7 +230,7 @@ libretro:
               "On":   "true"
               "Off":  "false"
     lightgun_map:
-        group: ADVANCED OPTIONS
+        group: CONTROLLER SETTINGS
         prompt:      CONTROLLER TO LIGHTGUN
         description: Map controller inputs to lightgun inputs
         choices:
@@ -329,6 +329,7 @@ libretro:
        features: [netplay, cheevos]
        shared: [rewind, autosave]
       cfeatures:
+            group: CONTROLLER SETTINGS
             controller1_fmsx:
                 prompt:      CONTROLLER 1 TYPE
                 description: Custom Keyboard mapping is available on RA core options menu.
@@ -670,12 +671,14 @@ libretro:
                     "scan2x":      scan2x
                     "scan3x":      scan3x
             controller1_dosbox:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
                 choices:
                     "Gamepad (D-pad, 2 Buttons)":   1
                     "Keyboard + Mouse":             3
                     "Joystick (Analog, 2 Buttons)": 517
             controller2_dosbox:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
                 description: Select Keyboard, Joystick or Gamepad mode
                 choices:
@@ -748,6 +751,7 @@ libretro:
                     "Hercules":             hercules
                     "PCjr":                 pcjr
             pure_keyboard_layout:
+                group: CONTROLLER SETTINGS
                 prompt:      PHYSICAL KEYBOARD LAYOUT
                 description: Does not affect the on-screen keyboard.
                 choices:
@@ -784,6 +788,7 @@ libretro:
                     "On with rewind support": rewind
                     "Off":                    disabled
             pure_auto_mapping:
+                group: CONTROLLER SETTINGS
                 prompt:      GAMEPAD AUTOMATIC MAPPING
                 description: Apply a joy2key profile for the current game.
                 choices:
@@ -791,7 +796,7 @@ libretro:
                     "On with game detection message": notify
                     "Off":                            "false"
             pure_joystick_analog_deadzone:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      ANALOG JOYSTICK DEADZONE
                 description: Set the deadzone of the joystick analog sticks.
                 choices:
@@ -805,13 +810,14 @@ libretro:
                     "35%":                 35
                     "40%":                 40
             pure_joystick_timed:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      TIMED AXIS INTERVALS
                 description: Can fix drifting joysticks in games.
                 choices:
                     "On":                  "true"
                     "Off":                 "false"
             controller1_dosbox_pure:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
                 choices:
                     "Gravis GamePad (D-pad + 4 Btns)":                      1
@@ -824,6 +830,7 @@ libretro:
                     "Both Joysticks (4 Axes, 4 Btns)":                      2049
                     "Custom Keyboard Binds (best for Pad2Key)":             3
             controller2_dosbox_pure:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
                 choices:
                     "Gravis GamePad (D-pad + 4 Btns)":                      1
@@ -903,6 +910,7 @@ libretro:
                     "Only Overscan Area": "Overscan"
                     "All Borders":        "Borders"
             duckstation_Controller1:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
                 description: DualShock has rumble support. Not all games support DualShock.
                 choices:
@@ -913,6 +921,7 @@ libretro:
                     "PlayStation Mouse":             PlayStationMouse
                     "NeGcon":                        NeGcon
             duckstation_Controller2:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
                 description: DualShock has rumble support. Not all games support DualShock.
                 choices:
@@ -990,6 +999,7 @@ libretro:
                     "Only Overscan Area": "Overscan"
                     "All Borders":        "Borders"
             duckstation_Controller1:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
                 description: DualShock has rumble support. Not all games support DualShock.
                 choices:
@@ -1001,6 +1011,7 @@ libretro:
                     "PlayStation Mouse":             258
                     "NeGcon":                        773
             duckstation_Controller2:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
                 description: DualShock has rumble support. Not all games support DualShock.
                 choices:
@@ -1140,12 +1151,14 @@ libretro:
                     "2x-Postrender":        2x-Postrender
                     "2x-VBlank":            2x-VBlank
             controller1_nes:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
                 choices:
                     "Autodetect":           1
                     "NES Gamepad":          513
                     "NES Zapper":           258
             controller2_nes:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
                 description: Paddle can only be used in port 2.
                 choices:
@@ -1252,6 +1265,7 @@ libretro:
                     "Off": disabled
                     "On":  enabled
             controller1_dc:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
                 choices:
                     "Gamepad":   1
@@ -1259,6 +1273,7 @@ libretro:
                     "Mouse":     2
                     "Light Gun": 4
             controller2_dc:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
                 choices:
                     "Gamepad":   1
@@ -1266,6 +1281,7 @@ libretro:
                     "Mouse":     2
                     "Light Gun": 4
             controller3_dc:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 3 TYPE
                 choices:
                     "Gamepad":   1
@@ -1273,6 +1289,7 @@ libretro:
                     "Mouse":     2
                     "Light Gun": 4
             controller4_dc:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 4 TYPE
                 choices:
                     "Gamepad":   1
@@ -1312,6 +1329,7 @@ libretro:
                     "Off":  disabled
                     "On":   enabled
             controller1_zxspec:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
                 description: Sinclair 1 controller set to AUTO.
                 choices:
@@ -1325,6 +1343,7 @@ libretro:
                     "Timex 2 Joystick":        1537
                     "Fuller Joystick":         1793
             controller2_zxspec:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
                 description: Sinclair 2 controller set to AUTO.
                 choices:
@@ -1338,6 +1357,7 @@ libretro:
                     "Timex 2 Joystick":        1537
                     "Fuller Joystick":         1793
             controller3_zxspec:
+                group: CONTROLLER SETTINGS
                 prompt:      KEYBOARD SUPPORT
                 description: Set controller 1 and 2 to None to use it standalone.
                 choices:
@@ -1459,13 +1479,14 @@ libretro:
                             "SVideo (color bleeding only)":           svideo
                             "RGB (crisp image)":                      rgb
                     gun_cursor_md:
-                        group: ADVANCED OPTIONS
+                        group: CONTROLLER SETTINGS
                         prompt:      SHOW LIGHTGUN CROSSHAIRS
                         description: Lightgun device must be selected on at least one port.
                         choices:
                             "Off":        disabled
                             "On":         enabled
                     controller1_md:
+                        group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 1 TYPE
                         choices:
                             #"None":                          0
@@ -1479,6 +1500,7 @@ libretro:
                             #"XE-1AP":                        773
                             "Mouse":                         2
                     controller2_md:
+                        group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 2 TYPE
                         description: Lightguns can only be used in port 2.
                         choices:
@@ -1514,13 +1536,14 @@ libretro:
                             "Off":         disabled
                             "On (forced)": enabled
                     gun_cursor_ms:
-                        group: ADVANCED OPTIONS
+                        group: CONTROLLER SETTINGS
                         prompt:      SHOW LIGHTGUN CROSSHAIRS
                         description: Lightgun device must be selected on at least one port.
                         choices:
                             "Off":        disabled
                             "On":         enabled
                     controller1_ms:
+                        group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 1 TYPE
                         choices:
                             #"None":                          0
@@ -1532,6 +1555,7 @@ libretro:
                             #"Sports Pad":                    517
                             #"Graphic Board":                 262
                     controller2_ms:
+                        group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 2 TYPE
                         choices:
                             #"None":                          0
@@ -1662,7 +1686,7 @@ libretro:
                     "On":            1
                     "Off (Default)": 0
             altdpad:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      ALT DPAD MODE
                 description: If the D-Pad is oriented incorrectly for your controller.
                 choices:
@@ -1746,7 +1770,7 @@ libretro:
                     "On":            1
                     "Off (Default)": 0
             altdpad:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      ALT DPAD MODE
                 description: If the D-Pad is oriented incorrectly for your controller.
                 choices:
@@ -2738,7 +2762,7 @@ libretro:
                     "On":            1
                     "Off (Default)": 0
             altdpad:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      ALT DPAD MODE
                 description: If the D-Pad is oriented incorrectly for your controller.
                 choices:
@@ -2774,6 +2798,7 @@ libretro:
       shared: [rewind, autosave]
       cfeatures:
             mame2003-plus_analog:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROL MAPPING
                 choices:
                     "Analog":       analog
@@ -2789,7 +2814,7 @@ libretro:
                     "4":            4
                     "5":            5
             mame2003-plus_input_interface:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      INPUT INTERFACE
                 description: Keyboard shortcuts unavailable if passing through the keyboard.
                 choices:
@@ -2897,6 +2922,7 @@ libretro:
                     "Full (more compatible)":       full
                     "DMA Only (Slightly Faster)":   dma
             multitap_mednafen:
+                group: CONTROLLER SETTINGS
                 prompt:      MULTITAP
                 description: Allows up to 5 or 8 controllers in supported games.
                 choices:
@@ -2905,6 +2931,7 @@ libretro:
                     "Port 2":           port2
                     "Port 1+2":         port12
             beetle_psx_Controller1:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
                 description: DualShock has rumble support. Not all games support DualShock.
                 choices:
@@ -2918,6 +2945,7 @@ libretro:
                     #"Justifier":                     516
                     "PlayStation Mouse":             258
             beetle_psx_Controller2:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
                 description: DualShock has rumble support. Not all games support DualShock.
                 choices:
@@ -3129,6 +3157,7 @@ libretro:
                     "5xBRZ":      5xBRZ
                     "6xBRZ":      6xBRZ
             mupen64plus-pak1:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PAK 1
                 description: Emulate a pak in the controller expansion port.
                 choices:
@@ -3136,6 +3165,7 @@ libretro:
                     "Memory Pak":  memory
                     "Rumble Pak":  rumble
             mupen64plus-pak2:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PAK 2
                 description: Emulate a pak in the controller expansion port.
                 choices:
@@ -3143,6 +3173,7 @@ libretro:
                     "Memory Pak":  memory
                     "Rumble Pak":  rumble
             mupen64plus-pak3:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PAK 3
                 description: Emulate a pak in the controller expansion port.
                 choices:
@@ -3150,6 +3181,7 @@ libretro:
                     "Memory Pak":  memory
                     "Rumble Pak":  rumble
             mupen64plus-pak4:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PAK 4
                 description: Emulate a pak in the controller expansion port.
                 choices:
@@ -3358,6 +3390,7 @@ libretro:
                     "Off":                          OFF
                     "On":                           ON
             np2kai_joymode:
+                group: CONTROLLER SETTINGS
                 prompt:      JOY2KEY PROFILE
                 description: Emulate a keyboard/mouse/joypad.
                 choices:
@@ -3387,6 +3420,7 @@ libretro:
                     "NTSC":                        NTSC
                     "PAL":                         PAL
             o2em_swap_gamepads:
+                group: CONTROLLER SETTINGS
                 prompt:      SWAP GAMEPADS
                 description: Some games accept input from port 2 instead of port 1.
                 choices:
@@ -3447,7 +3481,7 @@ libretro:
                     "1.8x (22.50Mhz)": 1.8x (22.50Mhz)
                     "2.0x (25.00Mhz)": 2.0x (25.00Mhz)
             active_devices:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      ACTIVE INPUT DEVICES FIX
                 description: Fixes a possible bug with multiple controllers detection.
                 choices:
@@ -3516,6 +3550,7 @@ libretro:
                     "fullspeed":   fullspeed
                     "original":    original
             parallel-n64-pak1:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PAK 1
                 description: Emulate a pak in the controller expansion port.
                 choices:
@@ -3523,6 +3558,7 @@ libretro:
                     "Memory Pak":  memory
                     "Rumble Pak":  rumble
             parallel-n64-pak2:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PAK 2
                 description: Emulate a pak in the controller expansion port.
                 choices:
@@ -3530,6 +3566,7 @@ libretro:
                     "Memory Pak":  memory
                     "Rumble Pak":  rumble
             parallel-n64-pak3:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PAK 3
                 description: Emulate a pak in the controller expansion port.
                 choices:
@@ -3537,6 +3574,7 @@ libretro:
                     "Memory Pak":  memory
                     "Rumble Pak":  rumble
             parallel-n64-pak4:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PAK 4
                 description: Emulate a pak in the controller expansion port.
                 choices:
@@ -3554,6 +3592,7 @@ libretro:
                     "Off":         disabled
                     "On":          enabled
             controller1_pce:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
                 choices:
                     "PCE Joypad": 1
@@ -3569,6 +3608,7 @@ libretro:
                     "Off":        disabled
                     "On":         enabled
             controller1_pce:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
                 choices:
                     "PCE Joypad": 1
@@ -3609,6 +3649,7 @@ libretro:
                     "On":               enabled
                     "On (Speed hack)":  enabled_with_speedhack
             pcsx_rearmed_multitap:
+                group: CONTROLLER SETTINGS
                 prompt:      MULTITAP
                 description: Allows up to 5 or 8 controllers in supported games.
                 choices:
@@ -3630,6 +3671,7 @@ libretro:
                     "Pandemonium 2 Lazy Screen Update Fix": Pandemonium
                     "Parasite Eve 2/Vandal Hearts 1&2 Fix": Parasite_Eve
             controller1_pcsx:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
                 description: DualShock has rumble support. Not all games support DualShock.
                 choices:
@@ -3641,6 +3683,7 @@ libretro:
                     "NeGcon":                        773
                     "PlayStation Mouse":             258
             controller2_pcsx:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
                 description: DualShock has rumble support. Not all games support DualShock.
                 choices:
@@ -3669,11 +3712,13 @@ libretro:
                     "Off":             disabled
                     "On":              enabled
             picodrive_controller1:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
                 choices:
                     "Joypad 3 Button": 3 button pad
                     "Joypad 6 Button": 6 button pad
             picodrive_controller2:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
                 choices:
                     "Joypad 3 Button": 3 button pad
@@ -3767,6 +3812,7 @@ libretro:
                     "2240x1400":  2240x1400
                     "2560x1600":  2560x1600
             prboom_controller1:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PROFILE
                 choices:
                     "Gamepad Classic":    1
@@ -3906,20 +3952,21 @@ libretro:
                             "Off":    disabled
                             "On":     config
                     disable_joystick:
-                        group: ADVANCED OPTIONS
+                        group: CONTROLLER SETTINGS
                         prompt:      DISABLE EMULATOR JOYSTICK
                         description: Passes all physical keyboard events for Pad2Key.
                         choices:
                             "Off":    disabled
                             "On":     enabled
                     pad_options:
-                        group: ADVANCED OPTIONS
+                        group: CONTROLLER SETTINGS
                         prompt:      JUMP ON A
                         description: Makes second fire button press up instead.
                         choices:
                             "Off":    disabled
                             "On":     jump
                     controller1_puae:
+                        group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 1 TYPE
                         description: Select controller type for Amiga P1.
                         choices:
@@ -3929,6 +3976,7 @@ libretro:
                             "Joystick":            261
                             "Keyboard":            259
                     controller2_puae:
+                        group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 2 TYPE
                         description: Select controller type for Amiga P2.
                         choices:
@@ -3938,6 +3986,7 @@ libretro:
                             "Joystick":            261
                             "Keyboard":            259
                     puae_pinball_mode:
+                        group: CONTROLLER SETTINGS
                         prompt:      PINBALL MAPPING MODE
                         description: Use to play pinball games with correct mapping.
                         choices:
@@ -3969,20 +4018,21 @@ libretro:
                             "Off":    disabled
                             "On":     config
                     pad_options:
-                        group: ADVANCED OPTIONS
+                        group: CONTROLLER SETTINGS
                         prompt:      JUMP ON A
                         description: Makes second fire button press up instead.
                         choices:
                             "Off":    disabled
                             "On":     jump
                     disable_joystick:
-                        group: ADVANCED OPTIONS
+                        group: CONTROLLER SETTINGS
                         prompt:      DISABLE EMULATOR JOYSTICK
                         description: Passes all physical keyboard events for Pad2Key.
                         choices:
                             "Off":    disabled
                             "On":     enabled
                     controller1_puae:
+                        group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 1 TYPE
                         description: Select controller type for Amiga P1.
                         choices:
@@ -3992,6 +4042,7 @@ libretro:
                             "Joystick":            261
                             "Keyboard":            259
                     controller2_puae:
+                        group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 2 TYPE
                         description: Select controller type for Amiga P2.
                         choices:
@@ -4001,6 +4052,7 @@ libretro:
                             "Joystick":            261
                             "Keyboard":            259
                     puae_pinball_mode:
+                        group: CONTROLLER SETTINGS
                         prompt:      PINBALL MAPPING MODE
                         description: Use to play pinball games with correct mapping.
                         choices:
@@ -4025,7 +4077,7 @@ libretro:
                             "Off":    100
                             "On":     0
                     puae_cd32pad_options:
-                        group: ADVANCED OPTIONS
+                        group: CONTROLLER SETTINGS
                         prompt:      JUMP ON A
                         description: Makes the blue button press up instead.
                         choices:
@@ -4178,20 +4230,21 @@ libretro:
                             "Off":    disabled
                             "On":     config
                     disable_joystick:
-                        group: ADVANCED OPTIONS
+                        group: CONTROLLER SETTINGS
                         prompt:      DISABLE EMULATOR JOYSTICK
                         description: Passes all physical keyboard events for Pad2Key.
                         choices:
                             "Off":    disabled
                             "On":     enabled
                     pad_options:
-                        group: ADVANCED OPTIONS
+                        group: CONTROLLER SETTINGS
                         prompt:      JUMP ON A
                         description: Makes second fire button press up instead.
                         choices:
                             "Off":    disabled
                             "On":     jump
                     controller1_puae2021:
+                        group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 1 TYPE
                         description: Select controller type for Amiga P1.
                         choices:
@@ -4201,6 +4254,7 @@ libretro:
                             "Joystick":            261
                             "Keyboard":            259
                     controller2_puae2021:
+                        group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 2 TYPE
                         description: Select controller type for Amiga P2.
                         choices:
@@ -4210,6 +4264,7 @@ libretro:
                             "Joystick":            261
                             "Keyboard":            259
                     puae2021_pinball_mode:
+                        group: CONTROLLER SETTINGS
                         prompt:      PINBALL MAPPING MODE
                         description: Use to play pinball games with correct mapping.
                         choices:
@@ -4241,20 +4296,21 @@ libretro:
                             "Off":    disabled
                             "On":     config
                     pad_options:
-                        group: ADVANCED OPTIONS
+                        group: CONTROLLER SETTINGS
                         prompt:      JUMP ON A
                         description: Makes second fire button press up instead.
                         choices:
                             "Off":    disabled
                             "On":     jump
                     disable_joystick:
-                        group: ADVANCED OPTIONS
+                        group: CONTROLLER SETTINGS
                         prompt:      DISABLE EMULATOR JOYSTICK
                         description: Passes all physical keyboard events for Pad2Key.
                         choices:
                             "Off":    disabled
                             "On":     enabled
                     controller1_puae2021:
+                        group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 1 TYPE
                         description: Select controller type for Amiga P1.
                         choices:
@@ -4264,6 +4320,7 @@ libretro:
                             "Joystick":            261
                             "Keyboard":            259
                     controller2_puae2021:
+                        group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 2 TYPE
                         description: Select controller type for Amiga P2.
                         choices:
@@ -4273,6 +4330,7 @@ libretro:
                             "Joystick":            261
                             "Keyboard":            259
                     puae2021_pinball_mode:
+                        group: CONTROLLER SETTINGS
                         prompt:      PINBALL MAPPING MODE
                         description: Use to play pinball games with correct mapping.
                         choices:
@@ -4297,7 +4355,7 @@ libretro:
                             "Off":    100
                             "On":     0
                     puae2021_cd32pad_options:
-                        group: ADVANCED OPTIONS
+                        group: CONTROLLER SETTINGS
                         prompt:      JUMP ON A
                         description: Makes the blue button press up instead.
                         choices:
@@ -4452,6 +4510,7 @@ libretro:
                     "1/60 Frame":         1/60 Frame
                     "Auto Frame Skip":    Auto Frame Skip
             px68k_joytype:
+                group: CONTROLLER SETTINGS
                 prompt:      JOYPAD TYPE
                 description: Applies to both players.
                 choices:
@@ -4529,7 +4588,7 @@ libretro:
       features: [padtokeyboard]
       cfeatures:
             scummvm_analog_deadzone:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      ANALOG DEADZONE
                 description: Use to eliminate cursor drift/unwanted input.
                 choices:
@@ -4541,7 +4600,7 @@ libretro:
                     "25%":        25
                     "30%":        30
             scummvm_gamepad_cursor_speed:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      GAMEPAD CURSOR SPEED
                 choices:
                     "0.25":       0.25
@@ -4607,11 +4666,13 @@ libretro:
                     "Merge":      merge
                     "Blur":       blur
             controller1_snes9x:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
                 choices:
                     "SNES Gamepad":     1
                     "SNES Mouse":       2
             controller2_snes9x:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
                 description: Lightguns can only be used in port 2.
                 choices:
@@ -4622,6 +4683,7 @@ libretro:
                     "Konami Justifier": 516
                     "M.A.C.S. Rifle":   1028
             controller3_snes9x:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 3 TYPE
                 description: Konami Justifier P2 is daisy chained from controller 2, appears as port 3 to system.
                 choices:
@@ -4664,11 +4726,13 @@ libretro:
                     "30 MHz":               30 MHz
                     "40 MHz":               40 MHz
             controller1_snes9x_next:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
                 choices:
                     "SNES Gamepad":           1
                     "SNES Mouse":             2
             controller2_snes9x_next:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
                 description: Lightguns/multitap.
                 choices:
@@ -4734,11 +4798,13 @@ libretro:
                     "155fps":     155fps
                     "160fps":     160fps
             tyrquake_rumble:
+                group: CONTROLLER SETTINGS
                 prompt:      RUMBLE
                 choices:
                     "Off":        disabled
                     "On":         enabled
             tyrquake_controller1:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PROFILE
                 choices:
                     "Gamepad Classic":        1
@@ -4967,19 +5033,21 @@ libretro:
                     "medium":                   medium
                     "maximum":                  maximum
             vice_retropad_options:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      JUMP ON A
                 description: Makes second fire button press up instead.
                 choices:
                     "Off":                      disabled
                     "On":                       jump
             vice_joyport:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PORT
                 description: Most games use port 2, some use port 1.
                 choices:
                     "Port 1":                   1
                     "Port 2":                   2
             vice_joyport_type:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER TYPE
                 choices:
                     "Joystick":                 1
@@ -4993,7 +5061,7 @@ libretro:
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
             vice_keyboard_pass_through:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      KEYBOARD PASSTHROUGH
                 description: Keyboard shortcuts unavailable if passing through the keyboard.
                 choices:
@@ -5060,19 +5128,21 @@ libretro:
                     "medium":                   medium
                     "maximum":                  maximum
             vice_retropad_options:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      JUMP ON A
                 description: Makes second fire button press up instead.
                 choices:
                     "Off":                      disabled
                     "On":                       jump
             vice_joyport:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PORT
                 description: Most games use port 2, some use port 1.
                 choices:
                     "Port 1":                   1
                     "Port 2":                   2
             vice_joyport_type:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER TYPE
                 choices:
                     "Joystick":                 1
@@ -5086,7 +5156,7 @@ libretro:
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
             vice_keyboard_pass_through:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      KEYBOARD PASSTHROUGH
                 description: Keyboard shortcuts unavailable if passing through the keyboard.
                 choices:
@@ -5142,6 +5212,7 @@ libretro:
                     "medium":                   medium
                     "maximum":                  maximum
             vice_retropad_options:
+                group: CONTROLLER SETTINGS
                 prompt:      Button Options
                 description: RetroPad Face Button Options.
                 choices:
@@ -5150,12 +5221,14 @@ libretro:
                     "Y = Fire":                 rotate
                     "Y = Fire, B = Up":         rotate_jump
             vice_joyport:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PORT
                 description: Most games use port 2, some use port 1.
                 choices:
                     "Port 1":                   1
                     "Port 2":                   2
             vice_joyport_type:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER TYPE
                 choices:
                     "Joystick":                 1
@@ -5169,7 +5242,7 @@ libretro:
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
             vice_keyboard_pass_through:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      KEYBOARD PASSTHROUGH
                 description: Keyboard shortcuts unavailable if passing through the keyboard.
                 choices:
@@ -5215,6 +5288,7 @@ libretro:
                     "medium":                   medium
                     "maximum":                  maximum
             vice_retropad_options:
+                group: CONTROLLER SETTINGS
                 prompt:      Button Options
                 description: RetroPad Face Button Options.
                 choices:
@@ -5223,12 +5297,14 @@ libretro:
                     "Y = Fire":                 rotate
                     "Y = Fire, B = Up":         rotate_jump
             vice_joyport:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PORT
                 description: Most games use port 2, some use port 1.
                 choices:
                     "Port 1":                   1
                     "Port 2":                   2
             vice_joyport_type:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER TYPE
                 choices:
                     "Joystick":                 1
@@ -5242,7 +5318,7 @@ libretro:
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
             vice_keyboard_pass_through:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      KEYBOARD PASSTHROUGH
                 description: Keyboard shortcuts unavailable if passing through the keyboard.
                 choices:
@@ -5288,6 +5364,7 @@ libretro:
                     "medium":                   medium
                     "maximum":                  maximum
             vice_retropad_options:
+                group: CONTROLLER SETTINGS
                 prompt:      Button Options
                 description: RetroPad Face Button Options.
                 choices:
@@ -5296,12 +5373,14 @@ libretro:
                     "Y = Fire":                 rotate
                     "Y = Fire, B = Up":         rotate_jump
             vice_joyport:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PORT
                 description: Most games use port 2, some use port 1.
                 choices:
                     "Port 1":                   1
                     "Port 2":                   2
             vice_joyport_type:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER TYPE
                 choices:
                     "Joystick":                 1
@@ -5315,7 +5394,7 @@ libretro:
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
             vice_keyboard_pass_through:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      KEYBOARD PASSTHROUGH
                 description: Keyboard shortcuts unavailable if passing through the keyboard.
                 choices:
@@ -5366,6 +5445,7 @@ libretro:
                     "medium":                   medium
                     "maximum":                  maximum
             vice_retropad_options:
+                group: CONTROLLER SETTINGS
                 prompt:      Button Options
                 description: RetroPad Face Button Options.
                 choices:
@@ -5374,12 +5454,14 @@ libretro:
                     "Y = Fire":                 rotate
                     "Y = Fire, B = Up":         rotate_jump
             vice_joyport:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PORT
                 description: Most games use port 2, some use port 1.
                 choices:
                     "Port 1":                   1
                     "Port 2":                   2
             vice_joyport_type:
+                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER TYPE
                 choices:
                     "Joystick":                 1
@@ -5393,7 +5475,7 @@ libretro:
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
             vice_keyboard_pass_through:
-                group: ADVANCED OPTIONS
+                group: CONTROLLER SETTINGS
                 prompt:      KEYBOARD PASSTHROUGH
                 description: Keyboard shortcuts unavailable if passing through the keyboard.
                 choices:
@@ -5440,6 +5522,7 @@ libretro:
                     "1080p":    1080p
                     "4k":       4k
             multitap_yabasanshiro:
+                group: CONTROLLER SETTINGS
                 prompt:      MULTITAP
                 description: Allows up to 7 or 12 controllers in supported games.
                 choices:
@@ -5533,6 +5616,7 @@ cemu:
                 "Off":                         0
                 "On":                          1
         rumble:
+            group: CONTROLLER SETTINGS
             prompt:      RUMBLE
             choices:
                 "Off (Default)":               0
@@ -5541,6 +5625,7 @@ cemu:
                 "75%":                         0.75
                 "100%":                        1
         controller_combination:
+            group: CONTROLLER SETTINGS
             prompt:      CONTROLLER COMBINATION
             description: Pro Controller required for games that require shake motions.
             choices:
@@ -5663,21 +5748,21 @@ daphne:
                 "Off": 0
                 "On":  1
         lightgun_hd:
-            group: ADVANCED OPTIONS
+            group: CONTROLLER SETTINGS
             prompt:      OVERSIZE OVERLAY (SINGE)
             description: Use with Singe HD lightgun games.
             choices:
                 "Off": 0
                 "On":  1
         invert_axis:
-            group: ADVANCED OPTIONS
+            group: CONTROLLER SETTINGS
             prompt:      INVERT AXIS
             description: Invert joystick on flight games.
             choices:
                 "Off": 0
                 "On":  1
         singe_joystick_range:
-            group: ADVANCED OPTIONS
+            group: CONTROLLER SETTINGS
             prompt:      JOYSTICK TO CURSOR SENSITIVITY
             description: Singe automatically interprets joystick axis change as mouse movement, useful for lightgun games.
             choices:
@@ -5686,7 +5771,7 @@ daphne:
                 "15": 15
                 "20": 20
         singe_crosshair:
-            group: ADVANCED OPTIONS
+            group: CONTROLLER SETTINGS
             prompt:      HIDE LIGHTGUN CROSSHAIRS
             description: Hide crosshairs in supported games e.g. ActionMax.
             choices:
@@ -5757,7 +5842,7 @@ dolphin:
                 "Off": 0
                 "On":  1
         use_pad_profiles:
-            group: ADVANCED OPTIONS
+            group: CONTROLLER SETTINGS
             prompt:      USE PAD PROFILES
             description: Search for custom configured joystick profiles.
             choices:
@@ -5838,20 +5923,21 @@ dolphin:
                 "Off": 0
                 "On":  1
         dsmotion:
-            group: ADVANCED OPTIONS
+            group: CONTROLLER SETTINGS
             prompt:      DUALSHOCK MOTION CONTROL
             description: Emulate the Wiimote pointer with a DS4's gyroscope.
             choices:
                 "Off": 0
                 "On":  1
         mouseir:
-            group: ADVANCED OPTIONS
+            group: CONTROLLER SETTINGS
             prompt:      MOUSE AS WIIMOTE POINTER
             description: Emulate the Wiimote pointer with a mouse.
             choices:
                 "Off": 0
                 "On":  1
         rumble:
+            group: CONTROLLER SETTINGS
             prompt:      RUMBLE
             choices:
                 "Off": 0
@@ -5875,12 +5961,14 @@ dolphin:
                     "4:3": 0
                     "16:9": 1
             emulatedwiimotes:
+                group: CONTROLLER SETTINGS
                 prompt:      EMULATE WIIMOTE
                 description: Map your controller to an emulated Wiimote.
                 choices:
                     "Off": 0
                     "On": 1
             controller_mode:
+                group: CONTROLLER SETTINGS
                 prompt:      CUSTOMIZE WIIMOTE & GAMEPAD
                 description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
                 choices:
@@ -5920,7 +6008,7 @@ dolphin_triforce:
                 "Off": 0
                 "On":  1
         use_pad_profiles:
-            group: ADVANCED OPTIONS
+            group: CONTROLLER SETTINGS
             prompt:      USE PAD PROFILES
             description: Search for custom configured joystick profiles.
             choices:
@@ -5999,6 +6087,7 @@ dolphin_triforce:
                 "Off": 0
                 "On":  1
         rumble:
+            group: CONTROLLER SETTINGS
             prompt:      RUMBLE
             choices:
                 "Off": 0
@@ -6156,18 +6245,21 @@ duckstation:
                 "Normal":                        normal
                 "Preload":                       preload
         duckstation_rumble:
+            group: CONTROLLER SETTINGS
             prompt:      RUMBLE
             description: Activate rumble on supported controllers.
             choices:
                 "Off":                           0
                 "On":                            1
         duckstation_digitalmode:
+            group: CONTROLLER SETTINGS
             prompt:      JOYSTICK TO DPAD
             description: For digital controller mode.
             choices:
                 "Off":                           0
                 "On":                            1
         duckstation_multitap:
+            group: CONTROLLER SETTINGS
             prompt:      MULTITAP
             description: Allows up to 5 or 8 controllers in supported games.
             choices:
@@ -6176,6 +6268,7 @@ duckstation:
                 "Port 2":                        Port2Only
                 "Port 1+2":                      BothPorts
         duckstation_Controller1:
+            group: CONTROLLER SETTINGS
             prompt:      CONTROLLER 1 TYPE
             description: DualShock has rumble support. Not all games support DualShock.
             choices:
@@ -6187,6 +6280,7 @@ duckstation:
                 "PlayStation Mouse":             PlayStationMouse
                 "NeGcon (Rumble)":               NeGcon
         duckstation_Controller2:
+            group: CONTROLLER SETTINGS
             prompt:      CONTROLLER 2 TYPE
             description: DualShock has rumble support. Not all games support DualShock.
             choices:
@@ -6725,6 +6819,7 @@ pcsx2:
                 "VU I bit hack - Crash Tag Team Racing":             CrashTagTeamRacingIbit
                 "VU0 Kickstart to avoid sync problems with VU1":     VU0KickstartHack
         multitap:
+            group: CONTROLLER SETTINGS
             prompt:      MULTITAP
             description: Allows up to 5 or 8 controllers in supported games.
             choices:
@@ -7073,6 +7168,7 @@ supermodel:
                 "P2 only":  2
                 "P1 & P2":  3
         forceFeedback:
+            group: CONTROLLER SETTINGS
             prompt:      RUMBLE
             description: Only some games feature rumble. Not compatible with all controllers.
             choices:
@@ -8317,6 +8413,7 @@ solarus:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         joystick:
+            group: CONTROLLER SETTINGS
             prompt:      CONTROL CHOICE
             description: Choose which pad to control your hero.
             choices:
