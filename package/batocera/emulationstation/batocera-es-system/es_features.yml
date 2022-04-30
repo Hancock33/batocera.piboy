@@ -4374,125 +4374,37 @@ libretro:
                 choices:
                     "On": on
                     "Off": off
-      systems:
-            amiga500:
-                cfeatures:
-                    floppy_speed:
-                        group: CORE SETTINGS
-                        prompt:      FLOPPY SPEED
-                        choices:
-                            "100%":    100
-                            "200%":    200
-                            "400%":    400
-                            "800%":    800
-                    whdload:
-                        group: CORE SETTINGS
-                        prompt:      WHDLOAD LAUNCHER
-                        choices:
-                            "Files":    files
-                            "HDFs":     hdfs
-                    disable_joystick:
-                        group: CONTROLLER SETTINGS
-                        prompt:      DISABLE EMULATOR JOYSTICK
-                        description: Passes all physical keyboard events for Pad2Key.
-                        choices:
-                            "Off":    disabled
-                            "On":     enabled
-                    pad_options:
-                        group: CONTROLLER SETTINGS
-                        prompt:      JUMP ON A
-                        description: Makes second fire button press up instead.
-                        choices:
-                            "Off":    disabled
-                            "On":     jump
-                    controller1_uae4arm:
-                        group: CONTROLLER SETTINGS
-                        prompt:      CONTROLLER 1 TYPE
-                        description: Select controller type for Amiga P1.
-                        choices:
-                            "Retropad":            1
-                            "CD32 Pad":            517
-                            "Analog Joystick":     773
-                            "Joystick":            261
-                            "Keyboard":            259
-                    controller2_uae4arm:
-                        group: CONTROLLER SETTINGS
-                        prompt:      CONTROLLER 2 TYPE
-                        description: Select controller type for Amiga P2.
-                        choices:
-                            "Retropad":            1
-                            "CD32 Pad":            517
-                            "Analog Joystick":     773
-                            "Joystick":            261
-                            "Keyboard":            259
-                    uae4arm_pinball_mode:
-                        group: CONTROLLER SETTINGS
-                        prompt:      PINBALL MAPPING MODE
-                        description: Use to play pinball games with correct mapping.
-                        choices:
-                            "Off":                  disabled
-                            "Modern":               modern
-                            "Modern Alternative":   modern_alt
-                            "Classic":              classic
-            amiga1200:
-                cfeatures:
-                    floppy_speed:
-                        group: CORE SETTINGS
-                        prompt:      FLOPPY SPEED
-                        choices:
-                            "100%":    100
-                            "200%":    200
-                            "400%":    400
-                            "800%":    800
-                    whdload:
-                        group: CORE SETTINGS
-                        prompt:      WHDLOAD LAUNCHER
-                        choices:
-                            "Files":    files
-                            "HDFs":     hdfs
-                    disable_joystick:
-                        group: CONTROLLER SETTINGS
-                        prompt:      DISABLE EMULATOR JOYSTICK
-                        description: Passes all physical keyboard events for Pad2Key.
-                        choices:
-                            "Off":    disabled
-                            "On":     enabled
-                    pad_options:
-                        group: CONTROLLER SETTINGS
-                        prompt:      JUMP ON A
-                        description: Makes second fire button press up instead.
-                        choices:
-                            "Off":    disabled
-                            "On":     jump
-                    controller1_uae4arm:
-                        group: CONTROLLER SETTINGS
-                        prompt:      CONTROLLER 1 TYPE
-                        description: Select controller type for Amiga P1.
-                        choices:
-                            "Retropad":            1
-                            "CD32 Pad":            517
-                            "Analog Joystick":     773
-                            "Joystick":            261
-                            "Keyboard":            259
-                    controller2_uae4arm:
-                        group: CONTROLLER SETTINGS
-                        prompt:      CONTROLLER 2 TYPE
-                        description: Select controller type for Amiga P2.
-                        choices:
-                            "Retropad":            1
-                            "CD32 Pad":            517
-                            "Analog Joystick":     773
-                            "Joystick":            261
-                            "Keyboard":            259
-                    uae4arm_pinball_mode:
-                        group: CONTROLLER SETTINGS
-                        prompt:      PINBALL MAPPING MODE
-                        description: Use to play pinball games with correct mapping.
-                        choices:
-                            "Off":                  disabled
-                            "Modern":               modern
-                            "Modern Alternative":   modern_alt
-                            "Classic":              classic
+
+            floppy_speed:
+                group: CORE SETTINGS
+                prompt:      FLOPPY SPEED
+                choices:
+                    "100%":    100
+                    "200%":    200
+                    "400%":    400
+                    "800%":    800
+            whdload:
+                group: CORE SETTINGS
+                prompt:      WHDLOAD LAUNCHER
+                choices:
+                    "Files":    files
+                    "HDFs":     hdfs
+            controller1_uae4arm:
+                group: CONTROLLER SETTINGS
+                prompt:      CONTROLLER 1 TYPE
+                description: Select controller type for Amiga P1.
+                choices:
+                    "Retropad":            1
+                    "Joystick":            513
+                    "Keyboard":            259
+            controller2_uae4arm:
+                group: CONTROLLER SETTINGS
+                prompt:      CONTROLLER 2 TYPE
+                description: Select controller type for Amiga P2.
+                choices:
+                    "Retropad":            1
+                    "Joystick":            513
+                    "Keyboard":            259
 
     px68k:
       features: [padtokeyboard]
