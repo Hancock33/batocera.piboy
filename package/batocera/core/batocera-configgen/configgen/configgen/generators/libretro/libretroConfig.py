@@ -233,11 +233,19 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution, gfxBac
                 retroarchConfig['input_libretro_device_p2'] = '1'
         else:
             retroarchConfig['input_libretro_device_p1'] = '517'     # CD 32 Pad       
+            
     ## BlueMSX choices by System
     if(system.name in systemToBluemsx):
         if system.config['core'] == 'bluemsx':
             retroarchConfig['input_libretro_device_p1'] = systemToP1Device[system.name]
             retroarchConfig['input_libretro_device_p2'] = systemToP2Device[system.name]
+            
+    ## fMSX
+    if system.config['core'] == 'fmsx':
+        if system.isOptSet('controller1_fmsx'):
+            retroarchConfig['input_libretro_device_p1'] = system.config['controller1_fmsx']
+        else:
+            retroarchConfig['input_libretro_device_p1'] = '1'
 
     ## SNES9x and SNES9x_next (2010) controller
     if system.config['core'] == 'snes9x' or system.config['core'] == 'snes9x_next':
