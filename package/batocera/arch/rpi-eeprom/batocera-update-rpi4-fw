@@ -1,0 +1,17 @@
+#!/bin/bash
+clear
+echo '\033[1;33m-------------------------------------------------------'
+echo 'You are about to update the Raspberry Pi4 Firmware'
+echo 'This could be Dangerous if not done correctly'
+echo '-------------------------------------------------------\033[0;31m'
+read -p "Do you want to proceed? (yes/no)" yn
+
+case $yn in 
+	yes ) echo '\033[1;37m' && echo Proceeding with the firmware update...;;
+	no ) echo '\033[1;37mNOT applying Firmware update\033[0m'
+		exit;;
+	* ) echo '\033[1;37mNOT applying Firmware update\033[0m'
+		exit 1;;
+esac
+mount -o remount,rw /boot
+/usr/bin/rpi-eeprom-update -a
