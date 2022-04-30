@@ -9,21 +9,33 @@ default:
     retroarch.menu_widget_scale_auto: false
     retroarch.menu_widget_scale_factor: 0.800000
 
-nds:
-  emulator: drastic
-  core:     drastic
+atomiswave:
+  emulator: flycast
+  core:     flycast
+dreamcast:
+  emulator: flycast
+  core:     flycast
 flash:
   emulator: lightspark
   core:     lightspark
 fmtowns:
   emulator: libretro
   core:     mess
-psp:
-  options:
-    frameskip: automatic
 gamecube:
   emulator: libretro
   core:     dolphin
+naomi:
+  emulator: flycast
+  core:     flycast
+naomi2:
+  emulator: flycast
+  core:     flycast
+nds:
+  emulator: drastic
+  core:     drastic
+psp:
+  options:
+    frameskip: automatic
 sgb:
   emulator: libretro
   core:     mgba
