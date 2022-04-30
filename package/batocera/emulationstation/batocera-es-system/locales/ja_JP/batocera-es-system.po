@@ -376,6 +376,46 @@ msgctxt "game_options"
 msgid "JOYSTICK HACK (FOR ROBOTRON 2084)"
 msgstr "ジョイスティックハック（ROBOTRON 2084用）"
 
+#. TRANSLATION: libretro/fmsx
+msgctxt "game_options"
+msgid "Custom Keyboard mapping is available on RA core options menu."
+msgstr ""
+
+#. TRANSLATION: libretro/fmsx, libretro/dosbox, libretro/dosbox, libretro/dosbox_pure, libretro/dosbox_pure, ...
+msgctxt "game_options"
+msgid "CONTROLLER SETTINGS"
+msgstr ""
+
+#. TRANSLATION: libretro/fmsx, libretro/dosbox, libretro/dosbox_pure, libretro/swanstation, libretro/duckstation, ...
+msgctxt "game_options"
+msgid "CONTROLLER 1 TYPE"
+msgstr "コントローラー 1 タイプ"
+
+#. TRANSLATION: libretro/fmsx, libretro/puae, libretro/puae, libretro/puae, libretro/puae, ...
+msgctxt "game_options"
+msgid "Joystick"
+msgstr "ジョイスティック"
+
+#. TRANSLATION: libretro/fmsx
+msgctxt "game_options"
+msgid "Joystick + Emulated Keyboard"
+msgstr ""
+
+#. TRANSLATION: libretro/fmsx
+msgctxt "game_options"
+msgid "Emulated Keyboard"
+msgstr ""
+
+#. TRANSLATION: libretro/fmsx
+msgctxt "game_options"
+msgid "Custom Keyboard"
+msgstr ""
+
+#. TRANSLATION: libretro/fmsx
+msgctxt "game_options"
+msgid "Real Keyboard"
+msgstr ""
+
 #. TRANSLATION: libretro/bluemsx
 msgctxt "game_options"
 msgid "Enhancement. Remove the four sprites per line limit."
@@ -918,11 +958,6 @@ msgstr "特定の視覚効果を適用します"
 msgctxt "game_options"
 msgid "VIDEO FILTER"
 msgstr "ビデオフィルター"
-
-#. TRANSLATION: libretro/dosbox, libretro/dosbox_pure, libretro/swanstation, libretro/duckstation, libretro/fceumm, ...
-msgctxt "game_options"
-msgid "CONTROLLER 1 TYPE"
-msgstr "コントローラー 1 タイプ"
 
 #. TRANSLATION: libretro/dosbox, libretro/dosbox
 msgctxt "game_options"
@@ -1871,11 +1906,6 @@ msgctxt "game_options"
 msgid "Sinclair 1 controller set to AUTO."
 msgstr "シンクレア 1 コントローラをAUTOにします"
 
-#. TRANSLATION: libretro/fuse
-msgctxt "game_options"
-msgid "CONTROLLER TYPE 1"
-msgstr "コントローラ タイプ 1"
-
 #. TRANSLATION: libretro/fuse, libretro/fuse, libretro/mame078plus, libretro/puae, libretro/puae, ...
 msgctxt "game_options"
 msgid "Retropad"
@@ -1920,11 +1950,6 @@ msgstr "フラージョイスティック"
 msgctxt "game_options"
 msgid "Sinclair 2 controller set to AUTO."
 msgstr "シンクレア 2 コントローラをAUTOにします"
-
-#. TRANSLATION: libretro/fuse
-msgctxt "game_options"
-msgid "CONTROLLER TYPE 2"
-msgstr "コントローラ タイプ 2"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -4519,22 +4544,22 @@ msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
 msgstr "プリインストールのWHDLoadインストール起動を有効にします"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "WHDLOAD LAUNCHER"
 msgstr "WHDLOADランチャー"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
 msgid "Passes all physical keyboard events for Pad2Key."
 msgstr "すべての物理キーボード操作をPad2Keyで実行します"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
 msgid "DISABLE EMULATOR JOYSTICK"
 msgstr "エミュレータのジョイスティックを無効にする"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x64, ...
 msgctxt "game_options"
 msgid "Makes second fire button press up instead."
 msgstr "代替えで2番目のボタンを有効にします"
@@ -4544,7 +4569,7 @@ msgctxt "game_options"
 msgid "JUMP ON A"
 msgstr "Aでジャンプだ"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "Select controller type for Amiga P1."
 msgstr "Amiga P1のコントローラーを選択します"
@@ -4559,37 +4584,32 @@ msgctxt "game_options"
 msgid "Analog Joystick"
 msgstr "アナログジョイスティック"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
-msgctxt "game_options"
-msgid "Joystick"
-msgstr "ジョイスティック"
-
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "Select controller type for Amiga P2."
 msgstr "Amiga P2のコントローラーを選択します"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
 msgid "Use to play pinball games with correct mapping."
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
 msgid "PINBALL MAPPING MODE"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
 msgid "Modern"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
 msgid "Modern Alternative"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm, ...
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
 msgid "Classic"
 msgstr ""
@@ -4644,24 +4664,19 @@ msgctxt "game_options"
 msgid "COPPER COPROCESSOR"
 msgstr ""
 
-#. TRANSLATION: libretro/uae4arm, libretro/uae4arm
+#. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
 msgid "FLOPPY SPEED"
 msgstr ""
 
-#. TRANSLATION: libretro/uae4arm, libretro/uae4arm
+#. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
 msgid "Files"
 msgstr ""
 
-#. TRANSLATION: libretro/uae4arm, libretro/uae4arm
+#. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
 msgid "HDFs"
-msgstr ""
-
-#. TRANSLATION: libretro/uae4arm, libretro/uae4arm, libretro/uae4arm, libretro/uae4arm, libretro/uae4arm, ...
-msgctxt "game_options"
-msgid "CONTROLLER SETTINGS"
 msgstr ""
 
 #. TRANSLATION: libretro/px68k, libretro/quasi88
@@ -8974,6 +8989,14 @@ msgstr ""
 msgctxt "game_options"
 msgid "EGA GRAPHICS MODE"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "CONTROLLER TYPE 1"
+#~ msgstr "コントローラ タイプ 1"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTROLLER TYPE 2"
+#~ msgstr "コントローラ タイプ 2"
 
 #~ msgctxt "game_options"
 #~ msgid ""
