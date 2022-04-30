@@ -977,173 +977,6 @@ def generateCoreSettings(coreSettings, system, rom):
 
     # Commodore AMIGA (uae4arm)
     if (system.config['core'] == 'uae4arm'):
-        # Functional mapping for Amiga system
-        # If you want to change them, you can add
-        # some strings to batocera.conf by using
-        # this syntax: SYSTEMNAME.retroarchcore.uae4arm_mapper_BUTTONNAME=VALUE
-        if (system.name != 'amigacd32') and not ( system.isOptSet('controller1_uae4arm') and ( system.config['controller1_uae4arm'] == "517" ) ) and not ( system.isOptSet('controller2_uae4arm') and ( system.config['controller2_uae4arm'] == "517" ) ):
-        # Controller mapping for A500 and A1200
-            # Pinball games mapping mode option (modern and classic)
-            if system.isOptSet('uae4arm_pinball_mode') and system.config['uae4arm_pinball_mode'] == "modern":
-                uae_mapping = { 'aspect_ratio_toggle': "---",
-                    'mouse_toggle': "RETROK_RCTRL",
-                    'statusbar': "RETROK_F11",
-                    'vkbd': "---",
-                    'reset': "---",
-                    'zoom_mode_toggle': "RETROK_F12",
-                    'down': "---",
-                    'left': "---",
-                    'a': "RETROK_DOWN",
-                    'b': "---",
-                    'x': "RETROK_SPACE",
-                    'y': "---",
-                    'l': "RETROK_LALT",
-                    'l2': "MOUSE_LEFT_BUTTON",
-                    'l3': "SWITCH_JOYMOUSE",
-                    'ld': "---",
-                    'll': "---",
-                    'lr': "---",
-                    'lu': "---",
-                    'r': "RETROK_RALT",
-                    'r2': "MOUSE_RIGHT_BUTTON",
-                    'r3': "TOGGLE_STATUSBAR",
-                    'rd': "---",
-                    'rl': "---",
-                    'rr': "---",
-                    'ru': "---",
-                    'select': "TOGGLE_VKBD",
-                    'start': "RETROK_RETURN",}
-                for key in uae_mapping:
-                    coreSettings.save('uae4arm_mapper_' + key, uae_mapping[key])
-            elif system.isOptSet('uae4arm_pinball_mode') and system.config['uae4arm_pinball_mode'] == "modern_alt":
-                uae_mapping = { 'aspect_ratio_toggle': "---",
-                    'mouse_toggle': "RETROK_RCTRL",
-                    'statusbar': "RETROK_F11",
-                    'vkbd': "---",
-                    'reset': "---",
-                    'zoom_mode_toggle': "RETROK_F12",
-                    'down': "---",
-                    'left': "---",
-                    'a': "---",
-                    'b': "---",
-                    'x': "RETROK_SPACE",
-                    'y': "RETROK_DOWN",
-                    'l': "---",
-                    'l2': "RETROK_LALT",
-                    'l3': "SWITCH_JOYMOUSE",
-                    'ld': "---",
-                    'll': "---",
-                    'lr': "---",
-                    'lu': "---",
-                    'r': "---",
-                    'r2': "RETROK_RALT",
-                    'r3': "TOGGLE_STATUSBAR",
-                    'rd': "---",
-                    'rl': "---",
-                    'rr': "---",
-                    'ru': "---",
-                    'select': "TOGGLE_VKBD",
-                    'start': "RETROK_RETURN",}
-                for key in uae_mapping:
-                    coreSettings.save('uae4arm_mapper_' + key, uae_mapping[key])
-            elif system.isOptSet('uae4arm_pinball_mode') and system.config['uae4arm_pinball_mode'] == "classic":
-                uae_mapping = { 'aspect_ratio_toggle': "---",
-                    'mouse_toggle': "RETROK_RCTRL",
-                    'statusbar': "RETROK_F11",
-                    'vkbd': "---",
-                    'reset': "---",
-                    'zoom_mode_toggle': "RETROK_F12",
-                    'down': "RETROK_DOWN",
-                    'left': "RETROK_LALT",
-                    'a': "RETROK_RALT",
-                    'b': "---",
-                    'x': "RETROK_SPACE",
-                    'y': "---",
-                    'l': "---",
-                    'l2': "MOUSE_LEFT_BUTTON",
-                    'l3': "SWITCH_JOYMOUSE",
-                    'ld': "---",
-                    'll': "---",
-                    'lr': "---",
-                    'lu': "---",
-                    'r': "---",
-                    'r2': "MOUSE_RIGHT_BUTTON",
-                    'r3': "TOGGLE_STATUSBAR",
-                    'rd': "---",
-                    'rl': "---",
-                    'rr': "---",
-                    'ru': "---",
-                    'select': "TOGGLE_VKBD",
-                    'start': "RETROK_RETURN",}
-                for key in uae_mapping:
-                    coreSettings.save('uae4arm_mapper_' + key, uae_mapping[key])
-            else:
-                uae_mapping = { 'aspect_ratio_toggle': "---",
-                    'mouse_toggle': "RETROK_RCTRL",
-                    'statusbar': "RETROK_F11",
-                    'vkbd': "---",
-                    'reset': "---",
-                    'zoom_mode_toggle': "RETROK_F12",
-                    'up': "---",
-                    'down': "---",
-                    'left': "---",
-                    'right': "---",
-                    'a': "---",
-                    'b': "---",
-                    'x': "RETROK_LALT",
-                    'y': "RETROK_SPACE",
-                    'l': "RETROK_ESCAPE",
-                    'l2': "MOUSE_LEFT_BUTTON",
-                    'l3': "SWITCH_JOYMOUSE",
-                    'ld': "---",
-                    'll': "---",
-                    'lr': "---",
-                    'lu': "---",
-                    'r': "RETROK_F1",
-                    'r2': "MOUSE_RIGHT_BUTTON",
-                    'r3': "TOGGLE_STATUSBAR",
-                    'rd': "---",
-                    'rl': "---",
-                    'rr': "---",
-                    'ru': "---",
-                    'select': "TOGGLE_VKBD",
-                    'start': "RETROK_RETURN",}
-                for key in uae_mapping:
-                    coreSettings.save('uae4arm_mapper_' + key, uae_mapping[key])
-        else:
-            # Controller mapping for CD32
-            uae_mapping = { 'aspect_ratio_toggle': "---",
-                'mouse_toggle': "RETROK_RCTRL",
-                'statusbar': "RETROK_F11",
-                'vkbd': "---",
-                'reset': "---",
-                'zoom_mode_toggle': "RETROK_F12",
-                'up': "---",
-                'down': "---",
-                'left': "---",
-                'right': "---",
-                'a': "---",
-                'b': "---",
-                'x': "---",
-                'y': "---",
-                'l': "---",
-                'l2': "MOUSE_LEFT_BUTTON",
-                'l3': "SWITCH_JOYMOUSE",
-                'ld': "---",
-                'll': "---",
-                'lr': "---",
-                'lu': "---",
-                'r': "---",
-                'r2': "MOUSE_RIGHT_BUTTON",
-                'r3': "TOGGLE_STATUSBAR",
-                'rd': "---",
-                'rl': "---",
-                'rr': "---",
-                'ru': "---",
-                'select': "TOGGLE_VKBD",
-                'start': "---",}
-            for key in uae_mapping:
-                coreSettings.save('uae4arm_mapper_' + key, uae_mapping[key])
         # Show Video Options
         coreSettings.save('uae4arm_video_options_display ', '"enabled"')
         # Amiga Model
@@ -1172,7 +1005,7 @@ def generateCoreSettings(coreSettings, system, rom):
             coreSettings.save('uae4arm_resolution', '"768x270"')
         # Line doubling (de-interlace)
         if system.isOptSet('deinterlace'):
-            coreSettings.save('uae4arm_linedoubling', system.config['deinterlace'])
+            coreSettings.save('uae4arm_linedoubling', '"on"')
         else:
             coreSettings.save('uae4arm_linedoubling', '"off"')
         # Leds on screen
@@ -1182,9 +1015,9 @@ def generateCoreSettings(coreSettings, system, rom):
             coreSettings.save('uae4arm_leds_on_screen', '"off"')
         # fast copper
         if system.isOptSet('copper'):
-            coreSettings.save('uae4arm_fastcopper', system.config['copper'])
-        else:
             coreSettings.save('uae4arm_fastcopper', '"on"')
+        else:
+            coreSettings.save('uae4arm_fastcopper', '"off"')
         # Floppy speed
         if system.isOptSet('floppy_speed'):
             coreSettings.save('uae4arm_floppy_speed', system.config['floppy_speed'])
