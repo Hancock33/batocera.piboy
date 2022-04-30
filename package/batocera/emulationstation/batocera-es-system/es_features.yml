@@ -328,6 +328,16 @@ libretro:
     fmsx:
        features: [netplay, cheevos]
        shared: [rewind, autosave]
+      cfeatures:
+            controller1_fmsx:
+                prompt:      CONTROLLER 1 TYPE
+                description: Custom Keyboard mapping is available on RA core options menu.
+                choices:
+                    "Joystick":                      1
+                    "Joystick + Emulated Keyboard":  257
+                    "Emulated Keyboard":             513
+                    "Custom Keyboard":               769
+                    "Real Keyboard":                 3
     bluemsx:
       features: [padtokeyboard, cheevos]
       shared: [rewind, autosave]
@@ -1302,7 +1312,7 @@ libretro:
                     "Off":  disabled
                     "On":   enabled
             controller1_zxspec:
-                prompt:      CONTROLLER TYPE 1
+                prompt:      CONTROLLER 1 TYPE
                 description: Sinclair 1 controller set to AUTO.
                 choices:
                     "None":                    0
@@ -1315,7 +1325,7 @@ libretro:
                     "Timex 2 Joystick":        1537
                     "Fuller Joystick":         1793
             controller2_zxspec:
-                prompt:      CONTROLLER TYPE 2
+                prompt:      CONTROLLER 2 TYPE
                 description: Sinclair 2 controller set to AUTO.
                 choices:
                     "None":                    0
