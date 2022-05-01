@@ -846,7 +846,13 @@ libretro:
       features: [cheevos]
       shared: [autosave]
       cfeatures:
-            duckstation_PatchFastBoot:
+            gfxbackend:
+                archs_include: [rpi4]
+                prompt:      GRAPHICS API
+                description: Choose which graphics API library to use.
+                choices:
+                    "Vulkan": vulkan
+            swanstation_PatchFastBoot:
                 prompt:      SHOW BIOS BOOTLOGO
                 description: Enhancement. Skipping it can break some games.
                 choices:
@@ -858,7 +864,7 @@ libretro:
                 choices:
                     "Off":        "false"
                     "On":         "true"
-            duckstation_resolution_scale:
+            swanstation_resolution_scale:
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -871,7 +877,7 @@ libretro:
                     "7x":          7
                     "8x":          8
                     "9x":          9
-            duckstation_antialiasing:
+            swanstation_antialiasing:
                 group: ADVANCED OPTIONS
                 prompt:      ANTI-ALIASING (MSAA/SSAA)
                 description: Enhancement. Smooth out jagged edges on 3D object polygons.
@@ -887,7 +893,7 @@ libretro:
                     "8x SSAA":    8-ssaa
                     "16x SSAA":   16-ssaa
                     "32x SSAA":   32-ssaa
-            duckstation_texture_filtering:
+            swanstation_texture_filtering:
                 prompt:      TEXTURE FILTERING
                 description: Enhancement. Smooth/upscale textures.
                 choices:
@@ -895,13 +901,13 @@ libretro:
                     "Bilinear":   Bilinear
                     "JINC2":      JINC2
                     "xBR":        xBR
-            duckstation_widescreen_hack:
+            swanstation_widescreen_hack:
                 prompt:      WIDESCREEN HACK (GLITCHY)
                 description: Enhancement. Only works with a 16/9 ratio and bezels disabled.
                 choices:
                     "Off":        "false"
                     "On":         "true"
-            duckstation_CropMode:
+            swanstation_CropMode:
                 group: ADVANCED OPTIONS
                 prompt:      CROP OVERSCAN
                 description: Zooms in to hide black borders. Borders are different per game.
@@ -909,7 +915,7 @@ libretro:
                     "Off":                "None"
                     "Only Overscan Area": "Overscan"
                     "All Borders":        "Borders"
-            duckstation_Controller1:
+            swanstation_Controller1:
                 group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 1 TYPE
                 description: DualShock has rumble support. Not all games support DualShock.
@@ -920,7 +926,7 @@ libretro:
                     "Namco GunCon":                  NamcoGunCon
                     "PlayStation Mouse":             PlayStationMouse
                     "NeGcon":                        NeGcon
-            duckstation_Controller2:
+            swanstation_Controller2:
                 group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
                 description: DualShock has rumble support. Not all games support DualShock.
@@ -935,6 +941,12 @@ libretro:
       features: [cheevos]
       shared: [autosave]
       cfeatures:
+            gfxbackend:
+                archs_include: [rpi4]
+                prompt:      GRAPHICS API
+                description: Choose which graphics API library to use.
+                choices:
+                    "Vulkan": vulkan
             duckstation_PatchFastBoot:
                 prompt:      SHOW BIOS BOOTLOGO
                 description: Enhancement. Skipping it can break some games.

@@ -1,0 +1,1170 @@
+diff --git a/src/libretro/libretro_core_options.h b/src/libretro/libretro_core_options.h
+index cc4e004b..7ceaa8bf 100644
+--- a/src/libretro/libretro_core_options.h
++++ b/src/libretro/libretro_core_options.h
+@@ -80,7 +80,7 @@ struct retro_core_option_v2_category option_cats_us[] = {
+ 
+ struct retro_core_option_v2_definition option_defs_us[] = {
+    {
+-      "duckstation_Console.Region",
++      "swanstation_Console.Region",
+       "Console Region",
+       NULL,
+       "Determines which region/hardware to emulate. Auto-Detect will use the region of the disc inserted.",
+@@ -96,7 +96,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "Auto"
+    },
+    {
+-      "duckstation_BIOS.PathNTSCJ",
++      "swanstation_BIOS.PathNTSCJ",
+       "NTSC-J BIOS (Restart)",
+       NULL,
+       "Select which standard BIOS to use for NTSC-J.",
+@@ -111,7 +111,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "scph5500.bin"
+    },
+    {
+-      "duckstation_BIOS.PathNTSCU",
++      "swanstation_BIOS.PathNTSCU",
+       "NTSC-U BIOS (Restart)",
+       NULL,
+       "Select which standard BIOS to use for NTSC-U.",
+@@ -126,7 +126,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "scph5501.bin"
+    },
+    {
+-      "duckstation_BIOS.PathPAL",
++      "swanstation_BIOS.PathPAL",
+       "PAL BIOS (Restart)",
+       NULL,
+       "Select which standard BIOS to use for PAL.",
+@@ -141,7 +141,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "scph5502.bin"
+    },
+    {
+-      "duckstation_BIOS.PatchFastBoot",
++      "swanstation_BIOS.PatchFastBoot",
+       "Fast Boot",
+       NULL,
+       "Skips the BIOS shell/intro, booting directly into the game. Usually safe to enable, but some games break.",
+@@ -155,7 +155,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_CDROM.RegionCheck",
++      "swanstation_CDROM.RegionCheck",
+       "CD-ROM Region Check",
+       NULL,
+       "Prevents discs from incorrect regions being read by the emulator. Usually safe to disable.",
+@@ -169,7 +169,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_CDROM.ReadThread",
++      "swanstation_CDROM.ReadThread",
+       "CD-ROM Read Thread",
+       NULL,
+       "Reads CD-ROM sectors ahead asynchronously, reducing the risk of frame time spikes.",
+@@ -183,7 +183,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_CDROM.LoadImagePatches",
++      "swanstation_CDROM.LoadImagePatches",
+       "Apply Image Patches",
+       NULL,
+       "Automatically applies patches to disc images when they are present in the same directory. Currently only PPF "
+@@ -198,7 +198,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_CDROM.LoadImageToRAM",
++      "swanstation_CDROM.LoadImageToRAM",
+       "Preload CD-ROM Image To RAM",
+       NULL,
+       "Loads the disc image to RAM before starting emulation. May reduce hitching if you are running off a network share, "
+@@ -214,7 +214,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_CDROM.PreCacheCHD",
++      "swanstation_CDROM.PreCacheCHD",
+       "Pre-cache CHD Images To RAM",
+       NULL,
+       "Pre-caches CHD CD-ROM images to RAM without decompressing them. Unlike the preload option, this option supports "
+@@ -229,7 +229,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_CDROM.MuteCDAudio",
++      "swanstation_CDROM.MuteCDAudio",
+       "Mute CD Audio",
+       NULL,
+       "Forcibly mutes both CD-DA and XA audio from the CD-ROM. Can be used to disable background music in some games.",
+@@ -243,7 +243,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_CDROM.ReadSpeedup",
++      "swanstation_CDROM.ReadSpeedup",
+       "CD-ROM Read Speedup",
+       NULL,
+       "Speeds up CD-ROM reads by the specified factor. Only applies to double-speed reads, and is ignored when audio "
+@@ -266,7 +266,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "1"
+    },
+    {
+-      "duckstation_CDROM.SeekSpeedup",
++      "swanstation_CDROM.SeekSpeedup",
+       "CD-ROM Seek Speedup",
+       NULL,
+       "Speeds up CD-ROM seeks by the specified factor. May improve loading speeds in some game, at "
+@@ -290,7 +290,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "1"
+    },
+    {
+-      "duckstation_CPU.ExecutionMode",
++      "swanstation_CPU.ExecutionMode",
+       "CPU Execution Mode",
+       NULL,
+       "Which mode to use for CPU emulation. Recompiler provides the best performance.",
+@@ -305,7 +305,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "Recompiler"
+    },
+    {
+-      "duckstation_CDROM.ReadaheadSectors",
++      "swanstation_CDROM.ReadaheadSectors",
+       "CD-ROM Async Readahead",
+       NULL,
+       "Determines how far the CD-ROM thread will read ahead. Can reduce hitches on slow storage "
+@@ -351,7 +351,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "8"
+    },
+    {
+-      "duckstation_CPU.Overclock",
++      "swanstation_CPU.Overclock",
+       "CPU Overclocking",
+       NULL,
+       "Runs the emulated CPU faster or slower than native speed, which can improve framerates in some games. Will break "
+@@ -483,7 +483,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "100"
+    },
+    {
+-      "duckstation_GPU.Renderer",
++      "swanstation_GPU.Renderer",
+       "GPU Renderer",
+       NULL,
+       "Which renderer to use to emulate the GPU.",
+@@ -502,7 +502,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "Auto"
+    },
+    {
+-      "duckstation_GPU.ResolutionScale",
++      "swanstation_GPU.ResolutionScale",
+       "Internal Resolution Scale",
+       NULL,
+       "Scales internal VRAM resolution by the specified multiplier for the hardware renderer. Larger values are slower. "
+@@ -531,7 +531,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "1"
+    },
+    {
+-      "duckstation_GPU.UseThread",
++      "swanstation_GPU.UseThread",
+       "Threaded Rendering (Software)",
+       NULL,
+       "Uses a second thread for drawing graphics. Currently only available for the software renderer.",
+@@ -545,7 +545,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_GPU.UseSoftwareRendererForReadbacks",
++      "swanstation_GPU.UseSoftwareRendererForReadbacks",
+       "Use Software Renderer For Readbacks",
+       NULL,
+       "Runs the software renderer in parallel for VRAM readbacks. On some systems, this may "
+@@ -561,7 +561,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_GPU.MSAA",
++      "swanstation_GPU.MSAA",
+       "Multisample Antialiasing",
+       NULL,
+       "Uses multisample antialiasing for rendering 3D objects. Can smooth out jagged edges on polygons at a lower "
+@@ -586,7 +586,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "1"
+    },
+    {
+-      "duckstation_GPU.TrueColor",
++      "swanstation_GPU.TrueColor",
+       "True Color Rendering",
+       NULL,
+       "Disables dithering and uses the full 8 bits per channel of color information. May break rendering in some games.",
+@@ -600,7 +600,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_GPU.ScaledDithering",
++      "swanstation_GPU.ScaledDithering",
+       "Scaled Dithering",
+       NULL,
+       "Scales the dithering pattern with the internal rendering resolution, making it less noticeable. Usually safe to enable.",
+@@ -614,7 +614,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_GPU.DisableInterlacing",
++      "swanstation_GPU.DisableInterlacing",
+       "Disable Interlacing",
+       NULL,
+       "Disables interlaced rendering and display in the GPU. Some games can render in 480p this way, but others will break.",
+@@ -628,7 +628,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_GPU.ForceNTSCTimings",
++      "swanstation_GPU.ForceNTSCTimings",
+       "Force NTSC Timings",
+       NULL,
+       "Forces PAL games to run at NTSC timings, i.e. 60hz. Some PAL games will run at their \"normal\" speeds, while others will break.",
+@@ -642,7 +642,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_Display.Force4_3For24Bit",
++      "swanstation_Display.Force4_3For24Bit",
+       "Force 4:3 For 24-Bit Display",
+       NULL,
+       "Switches back to 4:3 display aspect ratio when displaying 24-bit content, usually FMVs.",
+@@ -656,7 +656,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_GPU.ChromaSmoothing24Bit",
++      "swanstation_GPU.ChromaSmoothing24Bit",
+       "Chroma Smoothing For 24-Bit Display",
+       NULL,
+       "Smooths out blockyness between colour transitions in 24-bit content, usually FMVs. Only applies to the hardware renderers.",
+@@ -670,7 +670,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_GPU.TextureFilter",
++      "swanstation_GPU.TextureFilter",
+       "Texture Filtering",
+       NULL,
+       "Smooths out the blockyness of magnified textures on 3D object by using bilinear filtering. Will have a "
+@@ -690,7 +690,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "Nearest"
+    },
+    {
+-      "duckstation_GPU.WidescreenHack",
++      "swanstation_GPU.WidescreenHack",
+       "Widescreen Hack",
+       NULL,
+       "Increases the field of view from 4:3 to the chosen display aspect ratio in 3D games. For 2D games, or games which "
+@@ -705,7 +705,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_GPU.PGXPEnable",
++      "swanstation_GPU.PGXPEnable",
+       "PGXP Geometry Correction",
+       NULL,
+       "Reduces \"wobbly\" polygons by attempting to preserve the fractional component through memory transfers. Only "
+@@ -720,7 +720,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_GPU.PGXPCulling",
++      "swanstation_GPU.PGXPCulling",
+       "PGXP Culling Correction",
+       NULL,
+       "Increases the precision of polygon culling, reducing the number of holes in geometry. Requires geometry correction enabled.",
+@@ -734,7 +734,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_GPU.PGXPTextureCorrection",
++      "swanstation_GPU.PGXPTextureCorrection",
+       "PGXP Texture Correction",
+       NULL,
+       "Uses perspective-correct interpolation for texture coordinates and colors, straightening out warped textures. "
+@@ -749,7 +749,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_GPU.PGXPDepthBuffer",
++      "swanstation_GPU.PGXPDepthBuffer",
+       "PGXP Depth Buffer",
+       NULL,
+       "Attempts to reduce polygon Z-fighting by testing pixels against the depth values from PGXP. Low compatibility, "
+@@ -764,7 +764,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_GPU.PGXPVertexCache",
++      "swanstation_GPU.PGXPVertexCache",
+       "PGXP Vertex Cache",
+       NULL,
+       "Uses screen coordinates as a fallback when tracking vertices through memory fails. May improve PGXP compatibility.",
+@@ -778,7 +778,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_GPU.PGXPCPU",
++      "swanstation_GPU.PGXPCPU",
+       "PGXP CPU Mode",
+       NULL,
+       "Tries to track vertex manipulation through the CPU. Some games require this option for PGXP to be effective. "
+@@ -793,7 +793,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_Display.AspectRatio",
++      "swanstation_Display.AspectRatio",
+       "Core Provided Aspect Ratio",
+       NULL,
+       "Sets the preferred aspect ratio. Will only work when the 'Core Provided' aspect ratio is selected inside RetroArch's Video settings.",
+@@ -812,7 +812,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "4:3"
+    },
+    {
+-      "duckstation_Display.CustomAspectRatioNumerator",
++      "swanstation_Display.CustomAspectRatioNumerator",
+       "Custom Aspect Ratio Numerator",
+       NULL,
+       "Sets the numerator for the custom aspect ratio, e.g. 4 in 4:3.",
+@@ -873,7 +873,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "4"
+    },
+    {
+-      "duckstation_Display.CustomAspectRatioDenominator",
++      "swanstation_Display.CustomAspectRatioDenominator",
+       "Custom Aspect Ratio Denominator",
+       NULL,
+       "Sets the denominator for the custom aspect ratio, e.g. 3 in 4:3.",
+@@ -934,7 +934,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "3"
+    },
+    {
+-      "duckstation_Display.CropMode",
++      "swanstation_Display.CropMode",
+       "Crop Mode",
+       NULL,
+       "Changes how much of the image is cropped. Some games display garbage in the overscan area which is typically hidden.",
+@@ -949,7 +949,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "Borders"
+    },
+    {
+-      "duckstation_GPU.DownsampleMode",
++      "swanstation_GPU.DownsampleMode",
+       "Downsampling",
+       NULL,
+       "Downsamples the rendered image prior to displaying it. Can improve overall image quality in mixed 2D/3D games, but "
+@@ -965,7 +965,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "Disabled"
+    },
+    {
+-      "duckstation_Main.LoadDevicesFromSaveStates",
++      "swanstation_Main.LoadDevicesFromSaveStates",
+       "Load Devices From Save States",
+       NULL,
+       "Sets whether the contents of devices and memory cards will be loaded when a save state is loaded. "
+@@ -980,7 +980,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_MemoryCards.Card1Type",
++      "swanstation_MemoryCards.Card1Type",
+       "Memory Card 1 Type",
+       NULL,
+       "Sets the type of memory card for Slot 1. Restart the core when switching formats. "
+@@ -1000,7 +1000,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "Libretro"
+    },
+    {
+-      "duckstation_MemoryCards.Card2Type",
++      "swanstation_MemoryCards.Card2Type",
+       "Memory Card 2 Type",
+       NULL,
+       "Sets the type of memory card for Slot 2.",
+@@ -1016,7 +1016,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "None"
+    },
+    {
+-      "duckstation_MemoryCards.UsePlaylistTitle",
++      "swanstation_MemoryCards.UsePlaylistTitle",
+       "Use Single Card For Playlist",
+       NULL,
+       "When using a playlist (m3u) and per-game (title) memory cards, a single memory card "
+@@ -1031,7 +1031,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_ControllerPorts.MultitapMode",
++      "swanstation_ControllerPorts.MultitapMode",
+       "Multitap Mode",
+       NULL,
+       "Sets the mode for the multitap.",
+@@ -1047,7 +1047,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "Disabled"
+    },
+    {
+-      "duckstation_Controller1.ForceAnalogOnReset",
++      "swanstation_Controller1.ForceAnalogOnReset",
+       "Controller 1 Force Analog Mode on Reset",
+       NULL,
+       "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
+@@ -1063,7 +1063,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_Controller1.AnalogDPadInDigitalMode",
++      "swanstation_Controller1.AnalogDPadInDigitalMode",
+       "Controller 1 Use Analog Sticks for D-Pad in Digital Mode",
+       NULL,
+       "Allows you to use the analog sticks to control the d-pad in digital mode, as well as the buttons.",
+@@ -1077,7 +1077,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_Controller1.AxisScale",
++      "swanstation_Controller1.AxisScale",
+       "Controller 1 Analog Axis Scale",
+       NULL,
+       "Sets the analog stick axis scaling factor.",
+@@ -1140,7 +1140,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "1.00f"
+    },
+    {
+-      "duckstation_Controller1.VibrationBias",
++      "swanstation_Controller1.VibrationBias",
+       "Controller 1 Vibration Bias",
+       NULL,
+       "Applies an offset to vibration intensities, higher values will make smaller vibrations more noticable.",
+@@ -1279,7 +1279,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "8"
+    },
+    {
+-      "duckstation_Controller1.XScale", 
++      "swanstation_Controller1.XScale", 
+       "Controller 1 Lightgun X Scale",
+       NULL,
+       "Scales X coordinates relative to the center of the screen.",
+@@ -1390,7 +1390,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+        "1.00"
+    },
+    {
+-      "duckstation_Controller1.SteeringDeadzone", 
++      "swanstation_Controller1.SteeringDeadzone", 
+       "Controller 1 NeGcon Steering Axis Deadzone",
+       NULL,
+       "Scales X coordinates relative to the center of the screen.",
+@@ -1452,7 +1452,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+        "0.10"
+    },
+    {
+-      "duckstation_Controller1.TwistResponse",
++      "swanstation_Controller1.TwistResponse",
+       "Controller 1 NeGcon Twist Response",
+       NULL,
+       "Sets the twist response type for the left analog stick. "
+@@ -1470,7 +1470,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "linear"
+    },
+    {
+-      "duckstation_Controller2.ForceAnalogOnReset",
++      "swanstation_Controller2.ForceAnalogOnReset",
+       "Controller 2 Force Analog Mode on Reset",
+       NULL,
+       "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
+@@ -1486,7 +1486,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_Controller2.AnalogDPadInDigitalMode",
++      "swanstation_Controller2.AnalogDPadInDigitalMode",
+       "Controller 2 Use Analog Sticks for D-Pad in Digital Mode",
+       NULL,
+       "Allows you to use the analog sticks to control the d-pad in digital mode, as well as the buttons.",
+@@ -1500,7 +1500,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_Controller2.AxisScale",
++      "swanstation_Controller2.AxisScale",
+       "Controller 2 Analog Axis Scale",
+       NULL,
+       "Sets the analog stick axis scaling factor.",
+@@ -1563,7 +1563,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "1.00f"
+    },
+    {
+-      "duckstation_Controller2.VibrationBias",
++      "swanstation_Controller2.VibrationBias",
+       "Controller 2 Vibration Bias",
+       NULL,
+       "Applies an offset to vibration intensities, higher values will make smaller vibrations more noticable.",
+@@ -1702,7 +1702,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "8"
+    },
+    {
+-      "duckstation_Controller2.XScale", 
++      "swanstation_Controller2.XScale", 
+       "Controller 2 Lightgun X Scale",
+       NULL,
+       "Scales X coordinates relative to the center of the screen.",
+@@ -1813,7 +1813,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+        "1.00"
+    },
+    {
+-      "duckstation_Controller2.SteeringDeadzone", 
++      "swanstation_Controller2.SteeringDeadzone", 
+       "Controller 2 NeGcon Steering Axis Deadzone",
+       NULL,
+       "Scales X coordinates relative to the center of the screen.",
+@@ -1875,7 +1875,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+        "0.00"
+    },
+    {
+-      "duckstation_Controller2.TwistResponse",
++      "swanstation_Controller2.TwistResponse",
+       "Controller 2 NeGcon Twist Response",
+       NULL,
+       "Sets the twist response type for the left analog stick. "
+@@ -1893,7 +1893,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "linear"
+    },
+    {
+-      "duckstation_Controller3.ForceAnalogOnReset",
++      "swanstation_Controller3.ForceAnalogOnReset",
+       "Controller 3 Force Analog Mode on Reset",
+       NULL,
+       "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
+@@ -1909,7 +1909,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_Controller3.AnalogDPadInDigitalMode",
++      "swanstation_Controller3.AnalogDPadInDigitalMode",
+       "Controller 3 Use Analog Sticks for D-Pad in Digital Mode",
+       NULL,
+       "Allows you to use the analog sticks to control the d-pad in digital mode, as well as the buttons.",
+@@ -1923,7 +1923,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_Controller3.AxisScale",
++      "swanstation_Controller3.AxisScale",
+       "Controller 3 Analog Axis Scale",
+       NULL,
+       "Sets the analog stick axis scaling factor.",
+@@ -1986,7 +1986,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "1.00f"
+    },
+    {
+-      "duckstation_Controller3.VibrationBias",
++      "swanstation_Controller3.VibrationBias",
+       "Controller 3 Vibration Bias",
+       NULL,
+       "Applies an offset to vibration intensities, higher values will make smaller vibrations more noticable.",
+@@ -2125,7 +2125,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "8"
+    },
+    {
+-      "duckstation_Controller3.SteeringDeadzone", 
++      "swanstation_Controller3.SteeringDeadzone", 
+       "Controller 3 NeGcon Steering Axis Deadzone",
+       NULL,
+       "Scales X coordinates relative to the center of the screen.",
+@@ -2187,7 +2187,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+        "0.10"
+    },
+    {
+-      "duckstation_Controller3.TwistResponse",
++      "swanstation_Controller3.TwistResponse",
+       "Controller 3 NeGcon Twist Response",
+       NULL,
+       "Sets the twist response type for the left analog stick. "
+@@ -2205,7 +2205,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "linear"
+    },
+    {
+-      "duckstation_Controller4.ForceAnalogOnReset",
++      "swanstation_Controller4.ForceAnalogOnReset",
+       "Controller 4 Force Analog Mode on Reset",
+       NULL,
+       "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
+@@ -2221,7 +2221,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_Controller4.AnalogDPadInDigitalMode",
++      "swanstation_Controller4.AnalogDPadInDigitalMode",
+       "Controller 4 Use Analog Sticks for D-Pad in Digital Mode",
+       NULL,
+       "Allows you to use the analog sticks to control the d-pad in digital mode, as well as the buttons.",
+@@ -2235,7 +2235,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_Controller4.AxisScale",
++      "swanstation_Controller4.AxisScale",
+       "Controller 4 Analog Axis Scale",
+       NULL,
+       "Sets the analog stick axis scaling factor.",
+@@ -2298,7 +2298,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "1.00f"
+    },
+    {
+-      "duckstation_Controller4.VibrationBias",
++      "swanstation_Controller4.VibrationBias",
+       "Controller 4 Vibration Bias",
+       NULL,
+       "Applies an offset to vibration intensities, higher values will make smaller vibrations more noticable.",
+@@ -2437,7 +2437,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "8"
+    },
+    {
+-      "duckstation_Controller4.SteeringDeadzone", 
++      "swanstation_Controller4.SteeringDeadzone", 
+       "Controller 4 NeGcon Steering Axis Deadzone",
+       NULL,
+       "Scales X coordinates relative to the center of the screen.",
+@@ -2499,7 +2499,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+        "0.10"
+    },
+    {
+-      "duckstation_Controller4.TwistResponse",
++      "swanstation_Controller4.TwistResponse",
+       "Controller 4 NeGcon Twist Response",
+       NULL,
+       "Sets the twist response type for the left analog stick. "
+@@ -2517,7 +2517,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "linear"
+    },
+    {
+-      "duckstation_Controller5.ForceAnalogOnReset",
++      "swanstation_Controller5.ForceAnalogOnReset",
+       "Controller 5 Force Analog Mode on Reset",
+       NULL,
+       "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
+@@ -2533,7 +2533,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_Controller5.AnalogDPadInDigitalMode",
++      "swanstation_Controller5.AnalogDPadInDigitalMode",
+       "Controller 5 Use Analog Sticks for D-Pad in Digital Mode",
+       NULL,
+       "Allows you to use the analog sticks to control the d-pad in digital mode, as well as the buttons.",
+@@ -2547,7 +2547,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_Controller5.AxisScale",
++      "swanstation_Controller5.AxisScale",
+       "Controller 5 Analog Axis Scale",
+       NULL,
+       "Sets the analog stick axis scaling factor.",
+@@ -2610,7 +2610,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "1.00f"
+    },
+    {
+-      "duckstation_Controller5.VibrationBias",
++      "swanstation_Controller5.VibrationBias",
+       "Controller 5 Vibration Bias",
+       NULL,
+       "Applies an offset to vibration intensities, higher values will make smaller vibrations more noticable.",
+@@ -2749,7 +2749,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "8"
+    },
+    {
+-      "duckstation_Controller6.ForceAnalogOnReset",
++      "swanstation_Controller6.ForceAnalogOnReset",
+       "Controller 6 Force Analog Mode on Reset",
+       NULL,
+       "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
+@@ -2765,7 +2765,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_Controller6.AnalogDPadInDigitalMode",
++      "swanstation_Controller6.AnalogDPadInDigitalMode",
+       "Controller 6 Use Analog Sticks for D-Pad in Digital Mode",
+       NULL,
+       "Allows you to use the analog sticks to control the d-pad in digital mode, as well as the buttons.",
+@@ -2779,7 +2779,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_Controller6.AxisScale",
++      "swanstation_Controller6.AxisScale",
+       "Controller 6 Analog Axis Scale",
+       NULL,
+       "Sets the analog stick axis scaling factor.",
+@@ -2842,7 +2842,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "1.00f"
+    },
+    {
+-      "duckstation_Controller6.VibrationBias",
++      "swanstation_Controller6.VibrationBias",
+       "Controller 6 Vibration Bias",
+       NULL,
+       "Applies an offset to vibration intensities, higher values will make smaller vibrations more noticable.",
+@@ -2981,7 +2981,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "8"
+    },
+    {
+-      "duckstation_Controller7.ForceAnalogOnReset",
++      "swanstation_Controller7.ForceAnalogOnReset",
+       "Controller 7 Force Analog Mode on Reset",
+       NULL,
+       "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
+@@ -2997,7 +2997,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_Controller7.AnalogDPadInDigitalMode",
++      "swanstation_Controller7.AnalogDPadInDigitalMode",
+       "Controller 7 Use Analog Sticks for D-Pad in Digital Mode",
+       NULL,
+       "Allows you to use the analog sticks to control the d-pad in digital mode, as well as the buttons.",
+@@ -3011,7 +3011,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_Controller7.AxisScale",
++      "swanstation_Controller7.AxisScale",
+       "Controller 7 Analog Axis Scale",
+       NULL,
+       "Sets the analog stick axis scaling factor.",
+@@ -3074,7 +3074,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "1.00f"
+    },
+    {
+-      "duckstation_Controller7.VibrationBias",
++      "swanstation_Controller7.VibrationBias",
+       "Controller 7 Vibration Bias",
+       NULL,
+       "Applies an offset to vibration intensities, higher values will make smaller vibrations more noticable.",
+@@ -3213,7 +3213,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "8"
+    },
+    {
+-      "duckstation_Controller8.ForceAnalogOnReset",
++      "swanstation_Controller8.ForceAnalogOnReset",
+       "Controller 8 Force Analog Mode on Reset",
+       NULL,
+       "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
+@@ -3229,7 +3229,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_Controller8.AnalogDPadInDigitalMode",
++      "swanstation_Controller8.AnalogDPadInDigitalMode",
+       "Controller 8 Use Analog Sticks for D-Pad in Digital Mode",
+       NULL,
+       "Allows you to use the analog sticks to control the d-pad in digital mode, as well as the buttons.",
+@@ -3243,7 +3243,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_Controller8.AxisScale",
++      "swanstation_Controller8.AxisScale",
+       "Controller 8 Analog Axis Scale",
+       NULL,
+       "Sets the analog stick axis scaling factor.",
+@@ -3306,7 +3306,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "1.00f"
+    },
+    {
+-      "duckstation_Controller8.VibrationBias",
++      "swanstation_Controller8.VibrationBias",
+       "Controller 8 Vibration Bias",
+       NULL,
+       "Applies an offset to vibration intensities, higher values will make smaller vibrations more noticable.",
+@@ -3445,7 +3445,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "8"
+    },
+    {
+-      "duckstation_Display.ShowOSDMessages",
++      "swanstation_Display.ShowOSDMessages",
+       "Display OSD Messages",
+       NULL,
+       "Shows on-screen messages generated by the core.",
+@@ -3459,7 +3459,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_Display.ShowFPS",
++      "swanstation_Display.ShowFPS",
+       "Display Internal Framerate",
+       NULL,
+       "Shows the internal frame rate at which the game is running.",
+@@ -3473,7 +3473,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_Main.ApplyGameSettings",
++      "swanstation_Main.ApplyGameSettings",
+       "Apply Compatibility Settings",
+       NULL,
+       "Automatically disables enhancements on games which are incompatible.",
+@@ -3487,7 +3487,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_Logging.LogLevel",
++      "swanstation_Logging.LogLevel",
+       "Log Level",
+       NULL,
+       "Sets the level of information logged by the core.",
+@@ -3509,7 +3509,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "Info"
+    },
+    {
+-      "duckstation_CPU.RecompilerICache",
++      "swanstation_CPU.RecompilerICache",
+       "CPU Recompiler ICache",
+       NULL,
+       "Determines whether the CPU's instruction cache is simulated in the recompiler. Improves accuracy at a small cost "
+@@ -3524,7 +3524,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_CPU.RecompilerBlockLinking",
++      "swanstation_CPU.RecompilerBlockLinking",
+       "CPU Recompiler Block Linking",
+       NULL,
+       "Enables the generated code to directly jump between blocks without going through the "
+@@ -3539,7 +3539,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "true"
+    },
+    {
+-      "duckstation_CPU.FastmemMode",
++      "swanstation_CPU.FastmemMode",
+       "CPU Recompiler Fast Memory Access",
+       NULL,
+       "Uses page faults to determine hardware memory accesses at runtime. Can provide a significant performance "
+@@ -3557,7 +3557,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "LUT"
+    },
+    {
+-      "duckstation_CPU.FastmemRewrite",
++      "swanstation_CPU.FastmemRewrite",
+       "CPU Recompiler Fast Memory Access Rewrite",
+       NULL,
+       "Enables rewrites when CPU Recompiler Fast Memory Access is enabled. Can provide a measurable speed boost, "
+@@ -3572,7 +3572,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_Debug.ShowVRAM",
++      "swanstation_Debug.ShowVRAM",
+       "Show VRAM",
+       NULL,
+       "Shows the entirety of the console's VRAM instead of the display area (debugging feature).",
+@@ -3586,10 +3586,10 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_TextureReplacements.EnableVRAMWriteReplacements",
++      "swanstation_TextureReplacements.EnableVRAMWriteReplacements",
+       "Enable VRAM Write Texture Replacement",
+       NULL,
+-      "Replace WRAM write textures with DuckStation formatted texture packs from the textures folder inside the RetroArch install directory."
++      "Replace WRAM write textures with Swanstation formatted texture packs from the textures folder inside the RetroArch install directory."
+       "Currently only works with the D3D11 & Vulkan renderers.",
+       NULL,
+       "advanced",
+@@ -3601,7 +3601,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_TextureReplacements.PreloadTextures",
++      "swanstation_TextureReplacements.PreloadTextures",
+       "Preload Texture Replacements",
+       NULL,
+       "Preload VRAM write replacement textures to RAM",
+@@ -3615,7 +3615,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_Display.ActiveStartOffset",
++      "swanstation_Display.ActiveStartOffset",
+       "Display Active Start Offset",
+       NULL,
+       "Pads or crops off lines from the left of the displayed image.",
+@@ -3688,7 +3688,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "0"
+    },
+    {
+-      "duckstation_Display.ActiveEndOffset",
++      "swanstation_Display.ActiveEndOffset",
+       "Display Active End Offset",
+       NULL,
+       "Pads or crops off lines from the right of the displayed image.",
+@@ -3761,7 +3761,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "0"
+    },
+    {
+-      "duckstation_Display.LineStartOffset",
++      "swanstation_Display.LineStartOffset",
+       "Display Line Start Offset",
+       NULL,
+       "Pads or crops off lines from the top of the displayed image.",
+@@ -3834,7 +3834,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "0"
+    },
+    {
+-      "duckstation_Display.LineEndOffset",
++      "swanstation_Display.LineEndOffset",
+       "Display Line End Offset",
+       NULL,
+       "Pads or crops off lines from the bottom of the displayed image.",
+@@ -3907,7 +3907,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "0"
+    },
+    {
+-      "duckstation_GPU.PGXPPreserveProjFP",
++      "swanstation_GPU.PGXPPreserveProjFP",
+       "PGXP Preserve Projection Precision",
+       NULL,
+       "Enables additional precision for PGXP. May improve visuals in some games but break others.",
+@@ -3921,7 +3921,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "false"
+    },
+    {
+-      "duckstation_GPU.PGXPTolerance",
++      "swanstation_GPU.PGXPTolerance",
+       "PGXP Geometry Tolerance",
+       NULL,
+       "Ignores precise positions if the difference exceeds this threshold.",
+@@ -3954,7 +3954,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "-1.0"
+    },
+    {
+-      "duckstation_Main.RunaheadFrameCount",
++      "swanstation_Main.RunaheadFrameCount",
+       "Internal Run-Ahead",
+       NULL,
+       "Simulates the system ahead of time and rolls back/replays to reduce input lag. Has very high system "
+@@ -3978,7 +3978,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "0"
+    },
+    {
+-      "duckstation_Console.Enable8MBRAM",
++      "swanstation_Console.Enable8MBRAM",
+       "Enable 8MB RAM (Dev Console)",
+       NULL,
+       "Enabled an additional 6MB of RAM, usually present on dev consoles. Games have to use a "
+diff --git a/src/libretro/libretro_host_interface.cpp b/src/libretro/libretro_host_interface.cpp
+index 44402802..96e84827 100644
+--- a/src/libretro/libretro_host_interface.cpp
++++ b/src/libretro/libretro_host_interface.cpp
+@@ -247,7 +247,7 @@ static const char* GetSaveDirectory()
+ 
+ std::string LibretroHostInterface::GetSharedMemoryCardPath(u32 slot) const
+ {
+-  return StringUtil::StdStringFromFormat("%s" FS_OSPATH_SEPARATOR_STR "duckstation_shared_card_%d.mcd",
++  return StringUtil::StdStringFromFormat("%s" FS_OSPATH_SEPARATOR_STR "swanstation_shared_card_%d.mcd",
+                                          GetSaveDirectory(), slot + 1);
+ }
+ 
+@@ -272,9 +272,9 @@ std::string LibretroHostInterface::GetShaderCacheBasePath() const
+     }
+   }
+ 
+-  // Use a directory named "duckstation_cache" in the save/system directory.
++  // Use a directory named "swanstation_cache" in the save/system directory.
+   std::string shader_cache_path = StringUtil::StdStringFromFormat(
+-    "%s" FS_OSPATH_SEPARATOR_STR "duckstation_cache" FS_OSPATH_SEPARATOR_STR, save_directory_ptr);
++    "%s" FS_OSPATH_SEPARATOR_STR "swanstation_cache" FS_OSPATH_SEPARATOR_STR, save_directory_ptr);
+   if (!FileSystem::DirectoryExists(shader_cache_path.c_str()) &&
+       !FileSystem::CreateDirectory(shader_cache_path.c_str(), false))
+   {
+@@ -290,7 +290,7 @@ std::string LibretroHostInterface::GetStringSettingValue(const char* section, co
+                                                          const char* default_value /*= ""*/)
+ {
+   TinyString name;
+-  name.Format("duckstation_%s.%s", section, key);
++  name.Format("swanstation_%s.%s", section, key);
+   retro_variable var{name, default_value};
+   if (g_retro_environment_callback(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+     return var.value;
+@@ -517,9 +517,9 @@ bool LibretroHostInterface::retro_load_game(const struct retro_game_info* game)
+   {
+       case  ConsoleRegion::NTSC_J:
+       {
+-         option_display.key = "duckstation_BIOS.PathNTSCU";
++         option_display.key = "swanstation_BIOS.PathNTSCU";
+          g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-         option_display.key = "duckstation_BIOS.PathPAL";
++         option_display.key = "swanstation_BIOS.PathPAL";
+          g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+ 
+          break;
+@@ -527,9 +527,9 @@ bool LibretroHostInterface::retro_load_game(const struct retro_game_info* game)
+ 
+       case  ConsoleRegion::NTSC_U:
+       {
+-         option_display.key = "duckstation_BIOS.PathNTSCJ";
++         option_display.key = "swanstation_BIOS.PathNTSCJ";
+          g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-         option_display.key = "duckstation_BIOS.PathPAL";
++         option_display.key = "swanstation_BIOS.PathPAL";
+          g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+ 
+          break;
+@@ -537,9 +537,9 @@ bool LibretroHostInterface::retro_load_game(const struct retro_game_info* game)
+ 
+       case  ConsoleRegion::PAL:
+       {
+-         option_display.key = "duckstation_BIOS.PathNTSCU";
++         option_display.key = "swanstation_BIOS.PathNTSCU";
+          g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-         option_display.key = "duckstation_BIOS.PathNTSCJ";
++         option_display.key = "swanstation_BIOS.PathNTSCJ";
+          g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+ 
+          break;
+@@ -814,69 +814,69 @@ bool LibretroHostInterface::UpdateCoreOptionsDisplay(bool controller)
+   struct retro_core_option_display option_display;
+ 
+   option_display.visible = cpu_recompiler;
+-  option_display.key = "duckstation_CPU.RecompilerICache";
++  option_display.key = "swanstation_CPU.RecompilerICache";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_CPU.RecompilerBlockLinking";
++  option_display.key = "swanstation_CPU.RecompilerBlockLinking";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_CPU.FastmemMode";
++  option_display.key = "swanstation_CPU.FastmemMode";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_CPU.FastmemRewrite";
++  option_display.key = "swanstation_CPU.FastmemRewrite";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+ 
+   option_display.visible = hardware_renderer;
+-  option_display.key = "duckstation_GPU.UseSoftwareRendererForReadbacks";
++  option_display.key = "swanstation_GPU.UseSoftwareRendererForReadbacks";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_GPU.MSAA";
++  option_display.key = "swanstation_GPU.MSAA";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_GPU.TrueColor";
++  option_display.key = "swanstation_GPU.TrueColor";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_GPU.ScaledDithering";
++  option_display.key = "swanstation_GPU.ScaledDithering";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_GPU.ChromaSmoothing24Bit";
++  option_display.key = "swanstation_GPU.ChromaSmoothing24Bit";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_GPU.TextureFilter";
++  option_display.key = "swanstation_GPU.TextureFilter";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_GPU.DownsampleMode";
++  option_display.key = "swanstation_GPU.DownsampleMode";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_GPU.ResolutionScale";
++  option_display.key = "swanstation_GPU.ResolutionScale";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_TextureReplacements.EnableVRAMWriteReplacements";
++  option_display.key = "swanstation_TextureReplacements.EnableVRAMWriteReplacements";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_GPU.PGXPEnable";
++  option_display.key = "swanstation_GPU.PGXPEnable";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+ 
+   option_display.visible = !hardware_renderer;
+-  option_display.key = "duckstation_GPU.UseThread";
++  option_display.key = "swanstation_GPU.UseThread";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+ 
+   option_display.visible = pgxp_enable;
+-  option_display.key = "duckstation_GPU.PGXPCulling";
++  option_display.key = "swanstation_GPU.PGXPCulling";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_GPU.PGXPTextureCorrection";
++  option_display.key = "swanstation_GPU.PGXPTextureCorrection";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_GPU.PGXPDepthBuffer";
++  option_display.key = "swanstation_GPU.PGXPDepthBuffer";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_GPU.PGXPVertexCache";
++  option_display.key = "swanstation_GPU.PGXPVertexCache";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_GPU.PGXPCPU";
++  option_display.key = "swanstation_GPU.PGXPCPU";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_GPU.PGXPPreserveProjFP";
++  option_display.key = "swanstation_GPU.PGXPPreserveProjFP";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_GPU.PGXPTolerance";
++  option_display.key = "swanstation_GPU.PGXPTolerance";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+ 
+   option_display.visible = vram_rewrite_replacements;
+-  option_display.key = "duckstation_TextureReplacements.PreloadTextures";
++  option_display.key = "swanstation_TextureReplacements.PreloadTextures";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+ 
+   option_display.visible = !cdrom_preload_enable;
+-  option_display.key = "duckstation_CDROM.PreCacheCHD";
++  option_display.key = "swanstation_CDROM.PreCacheCHD";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+ 
+   option_display.visible = custom_aspect_ratio;
+-  option_display.key = "duckstation_Display.CustomAspectRatioNumerator";
++  option_display.key = "swanstation_Display.CustomAspectRatioNumerator";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-  option_display.key = "duckstation_Display.CustomAspectRatioDenominator";
++  option_display.key = "swanstation_Display.CustomAspectRatioDenominator";
+   g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+ 
+   for (u32 i = 0; i < NUM_CONTROLLER_AND_CARD_PORTS; i++)
+@@ -903,25 +903,25 @@ bool LibretroHostInterface::UpdateCoreOptionsDisplay(bool controller)
+     const bool guncon_active = (port_allowed && active_controller == RETRO_DEVICE_PS_GUNCON);
+ 
+     option_display.visible = analog_active;
+-    option_display.key = (TinyString::FromFormat("duckstation_Controller%u.AxisScale", (i + 1)));
++    option_display.key = (TinyString::FromFormat("swanstation_Controller%u.AxisScale", (i + 1)));
+     g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+ 
+     option_display.visible = dualshock_active;
+-    option_display.key = (TinyString::FromFormat("duckstation_Controller%u.ForceAnalogOnReset", (i + 1)));
++    option_display.key = (TinyString::FromFormat("swanstation_Controller%u.ForceAnalogOnReset", (i + 1)));
+     g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-    option_display.key = (TinyString::FromFormat("duckstation_Controller%u.AnalogDPadInDigitalMode", (i + 1)));
++    option_display.key = (TinyString::FromFormat("swanstation_Controller%u.AnalogDPadInDigitalMode", (i + 1)));
+     g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-    option_display.key = (TinyString::FromFormat("duckstation_Controller%u.VibrationBias", (i + 1)));
++    option_display.key = (TinyString::FromFormat("swanstation_Controller%u.VibrationBias", (i + 1)));
+     g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+ 
+     option_display.visible = negcon_active;
+-    option_display.key = (TinyString::FromFormat("duckstation_Controller%u.SteeringDeadzone", (i + 1)));
++    option_display.key = (TinyString::FromFormat("swanstation_Controller%u.SteeringDeadzone", (i + 1)));
+     g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-    option_display.key = (TinyString::FromFormat("duckstation_Controller%u.TwistResponse", (i + 1)));
++    option_display.key = (TinyString::FromFormat("swanstation_Controller%u.TwistResponse", (i + 1)));
+     g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+ 
+     option_display.visible = guncon_active;
+-    option_display.key = (TinyString::FromFormat("duckstation_Controller%u.XScale", (i + 1)));
++    option_display.key = (TinyString::FromFormat("swanstation_Controller%u.XScale", (i + 1)));
+     g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+   }
+ 
+@@ -1469,7 +1469,7 @@ static std::optional<GPURenderer> RenderAPIToRenderer(HostDisplay::RenderAPI api
+ 
+ bool LibretroHostInterface::RequestHardwareRendererContext()
+ {
+-  retro_variable renderer_variable{"duckstation_GPU.Renderer",
++  retro_variable renderer_variable{"swanstation_GPU.Renderer",
+                                    Settings::GetRendererName(Settings::DEFAULT_GPU_RENDERER)};
+   if (!g_retro_environment_callback(RETRO_ENVIRONMENT_GET_VARIABLE, &renderer_variable) || !renderer_variable.value)
+     renderer_variable.value = Settings::GetRendererName(Settings::DEFAULT_GPU_RENDERER);

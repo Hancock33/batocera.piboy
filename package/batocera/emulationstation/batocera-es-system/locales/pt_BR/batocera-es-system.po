@@ -1475,6 +1475,21 @@ msgctxt "game_options"
 msgid "2nd Joystick (2 Axes, 2 Btns)"
 msgstr "2º Controle (2 Eixos, 2 Botões)"
 
+#. TRANSLATION: libretro/swanstation, libretro
+msgctxt "game_options"
+msgid "Choose which graphics API library to use."
+msgstr ""
+
+#. TRANSLATION: libretro/swanstation, libretro, cemu, dolphin, duckstation, ...
+msgctxt "game_options"
+msgid "GRAPHICS API"
+msgstr "API GRÁFICA"
+
+#. TRANSLATION: libretro/swanstation, libretro, cemu, daphne, dolphin, ...
+msgctxt "game_options"
+msgid "Vulkan"
+msgstr "Vulkan"
+
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Enhancement. Skipping it can break some games."
@@ -5773,16 +5788,6 @@ msgctxt "game_options"
 msgid "Allows up to 7 or 12 controllers in supported games."
 msgstr "Permite até 7 ou 12 controles em jogos compatíveis."
 
-#. TRANSLATION: libretro
-msgctxt "game_options"
-msgid "Choose which graphics API library to use."
-msgstr ""
-
-#. TRANSLATION: libretro, cemu, dolphin, duckstation, flycast, ...
-msgctxt "game_options"
-msgid "GRAPHICS API"
-msgstr "API GRÁFICA"
-
 #. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "OpenGL"
@@ -5797,11 +5802,6 @@ msgstr "GLCore"
 msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
-
-#. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
-msgctxt "game_options"
-msgid "Vulkan"
-msgstr "Vulkan"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
