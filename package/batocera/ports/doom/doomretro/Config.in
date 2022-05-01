@@ -1,0 +1,13 @@
+config BR2_PACKAGE_DOOMRETRO
+	bool "doomretro"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	select BR2_PACKAGE_SDL2_IMAGE
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  The classic, refined DOOM source port.
+
+	  www.doomretro.com
+
+comment "BR2_PACKAGE_DOOMRETRO needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP
