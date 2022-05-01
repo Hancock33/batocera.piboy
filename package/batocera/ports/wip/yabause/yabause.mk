@@ -13,34 +13,31 @@ YABAUSE_LICENSE = GPLv2
 YABAUSE_DEPENDENCIES = sdl2 boost openal zlib
 YABAUSE_SUBDIR = yabause
 
-define YABAUSE_BUILDROOT_TOOLCHAIN
-    rm -rf $(HOST_DIR)/share/buildroot/yabause_toolchainfile.cmake
-    cat "$(HOST_DIR)/share/buildroot/yabause_toolchainfile.cmake" >> $(HOST_DIR)/share/buildroot/yabause_toolchainfile.cmake
-    echo "set (USE_EGL True)" >> $(HOST_DIR)/share/buildroot/yabause_toolchainfile.cmake
-    echo "add_definitions( -D__PI4__ )" >> $(HOST_DIR)/share/buildroot/yabause_toolchainfile.cmake
-    echo "add_definitions( -D__RETORO_ARENA__ )" >> $(HOST_DIR)/share/buildroot/yabause_toolchainfile.cmake
-
-    ln -s $(HOST_DIR)/share/buildroot/yabause_toolchainfile.cmake $(@D)/yabause
+define YABAUSE_POST_EXTRACT_FIXUP
+  sed -i "s|COMMAND m68kmake|COMMAND $(@D)/m68kmake_host|" $(@D)/yabause/src/musashi/CMakeLists.txt
+  sed -i "s|COMMAND ./bin2c|COMMAND $(@D)/bin2c_host|" $(@D)/yabause/src/retro_arena/nanogui-sdl/CMakeLists.txt
+  gcc  $(@D)/yabause/src/retro_arena/nanogui-sdl/resources/bin2c.c -o $(@D)/bin2c_host
+  gcc  $(@D)/yabause/src/musashi/m68kmake.c -o $(@D)/m68kmake_host  
+  #cp $(HOST_DIR)/share/buildroot/toolchainfile.cmake $(HOST_DIR)/share/buildroot/yabause.cmake
+  #echo "add_definitions( -D__N2__ )" >> /tmp/buildroot/yabause_toolchainfile.cmake
+  #echo "add_definitions( -D__RETORO_ARENA__ )" >> $(HOST_DIR)/share/buildroot/yabause.cmake
 endef
 
-YABAUSE_POST_EXTRACT_HOOKS += YABAUSE_BUILDROOT_TOOLCHAIN
+YABAUSE_POST_EXTRACT_HOOKS += YABAUSE_POST_EXTRACT_FIXUP
 
+#YABAUSE_CONF_OPTS += -DCMAKE_VERBOSE_MAKEFILE=TRUE
+YABAUSE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 YABAUSE_CONF_OPTS += -DYAB_PORTS=retro_arena
 YABAUSE_CONF_OPTS += -DYAB_WANT_DYNAREC_DEVMIYAX=ON
 YABAUSE_CONF_OPTS += -DYAB_WANT_ARM7=ON
-YABAUSE_CONF_OPTS += -DCMAKE_TOOLCHAIN_FILE="$(HOST_DIR)/share/buildroot/toolchainfile.cmake"
 YABAUSE_CONF_OPTS += -DYAB_WANT_VULKAN=OFF
-YABAUSE_CONF_OPTS += -DOPENGL_INCLUDE_DIR=${HOST_DIR}/usr/include
-YABAUSE_CONF_OPTS += -DOPENGL_opengl_LIBRARY=${HOST_DIR}/usr/lib
-YABAUSE_CONF_OPTS += -DLIBPNG_LIB_DIR=${HOST_DIR}/usr/lib
+YABAUSE_CONF_OPTS += -DYAB_WERROR=OFF
+YABAUSE_CONF_OPTS += -DCMAKE_TOOLCHAIN_FILE=$(HOST_DIR)/share/buildroot/yabause.cmake
+YABAUSE_CONF_OPTS += -DOPENGL_INCLUDE_DIR=$(STAGING_DIR)/usr/include
+YABAUSE_CONF_OPTS += -DOPENGL_opengl_LIBRARY=$(STAGING_DIR)/usr/lib
+YABAUSE_CONF_OPTS += -DOPENGL_glx_LIBRARY=$(STAGING_DIR)/usr/lib
+YABAUSE_CONF_OPTS += -DLIBPNG_LIB_DIR=$(STAGING_DIR)/usr/lib
+YABAUSE_CONF_OPTS += -Dpng_STATIC_LIBRARIES=$(STAGING_DIR)/usr/lib/libpng16.a
 YABAUSE_CONF_OPTS += -Wno-dev
-
-define YABAUSE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/YABAUSE \
-		$(TARGET_DIR)/usr/bin/YABAUSE
-	# evmapy files
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/YABAUSE/ya*.keys $(TARGET_DIR)/usr/share/evmapy
-endef
 
 $(eval $(cmake-package))
