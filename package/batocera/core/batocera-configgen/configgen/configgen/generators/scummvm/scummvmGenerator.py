@@ -28,6 +28,7 @@ class ScummVMGenerator(Generator):
 
         # pad number
         nplayer = 1
+        id = 0
         for playercontroller, pad in sorted(playersControllers.items()):
             if nplayer == 1:
                 id=pad.index
