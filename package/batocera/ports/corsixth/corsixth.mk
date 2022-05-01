@@ -3,8 +3,8 @@
 # Theme Hospital
 #
 ################################################################################
-# Version: Commits on Apr 30, 2022
-CORSIXTH_VERSION = 22f3e3e2ce932543f757969027f51b9235f3b4df
+# Version: Commits on May 01, 2022
+CORSIXTH_VERSION = f38050a935b0ffc28e3a7e3fb43c59361bebdb5c
 CORSIXTH_SITE = $(call github,CorsixTH,CorsixTH,$(CORSIXTH_VERSION))
 
 CORSIXTH_DEPENDENCIES = sdl2 sdl2_mixer freepats luafilesystem lua-lpeg-patterns
