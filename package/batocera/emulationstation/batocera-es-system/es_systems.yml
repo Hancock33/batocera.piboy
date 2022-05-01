@@ -188,7 +188,7 @@ amigacdtv:
       puae:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
       puae2021: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
       uae4arm:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM] }
-            
+
 nes:
   name:       Nintendo Entertainment System
   manufacturer: Nintendo
@@ -1010,7 +1010,9 @@ prboom:
     gzdoom:
       gzdoom: { requireAnyOf: [BR2_PACKAGE_GZDOOM] }
     lzdoom:
-      lzdoom: { requireAnyOf: [BR2_PACKAGE_LZDOOM] }
+      lzdoom: { requireAnyOf: [BR2_PACKAGE_LZDOOM], incompatible_extensions: [gzdoom] }
+    doomretro:
+      doomretro: { requireAnyOf: [BR2_PACKAGE_DOOMRETRO], incompatible_extensions: [gzdoom] }
   comment_en: |
     Put DOOM 1 and 2 games (and their associated mods) in this directory.
     Put your soundtrack in the directory ./game-musics
@@ -2994,7 +2996,7 @@ naomi2:
     --------------------------------
     ## DEMUL - CURRENTLY DISABLED ##
     --------------------------------
-            
+
     An alternative is to use Demul with Wine.
     Note: Your graphics card requires Vulkan drivers for Demul to work.
 

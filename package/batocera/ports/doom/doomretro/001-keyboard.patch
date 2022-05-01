@@ -1,0 +1,35 @@
+diff --git a/src/m_config.h b/src/m_config.h
+index 0574c0f4d..5202f1e25 100644
+--- a/src/m_config.h
++++ b/src/m_config.h
+@@ -484,7 +484,7 @@ enum
+ #if defined(_WIN32)
+ #define iwadfolder_default                 "C:\\"
+ #else
+-#define iwadfolder_default                 "/"
++#define iwadfolder_default                 "/userdata/roms/prboom"
+ #endif
+ 
+ #define joy_analog_default                 true
+@@ -842,8 +842,8 @@ enum
+ #define KEYMARK_DEFAULT                    'm'
+ #define KEYMAXZOOM_DEFAULT                 '0'
+ #define KEYMOUSELOOK_DEFAULT               0
+-#define KEYNEXTWEAPON_DEFAULT              0
+-#define KEYPREVWEAPON_DEFAULT              0
++#define KEYNEXTWEAPON_DEFAULT              '8'
++#define KEYPREVWEAPON_DEFAULT              '9'
+ #define KEYRIGHT_DEFAULT                   KEY_RIGHTARROW
+ #define KEYROTATEMODE_DEFAULT              'r'
+ #define KEYRUN_DEFAULT                     KEY_SHIFT
+@@ -877,8 +877,8 @@ enum
+ #define MOUSEJUMP_DEFAULT                 -1
+ #define MOUSELEFT_DEFAULT                 -1
+ #define MOUSEMOUSELOOK_DEFAULT            -1
+-#define MOUSENEXTWEAPON_DEFAULT            MOUSE_WHEELDOWN
+-#define MOUSEPREVWEAPON_DEFAULT            MOUSE_WHEELUP
++#define MOUSENEXTWEAPON_DEFAULT           -1
++#define MOUSEPREVWEAPON_DEFAULT           -1
+ #define MOUSERIGHT_DEFAULT                -1
+ #define MOUSERUN_DEFAULT                  -1
+ #define MOUSESCREENSHOT_DEFAULT           -1

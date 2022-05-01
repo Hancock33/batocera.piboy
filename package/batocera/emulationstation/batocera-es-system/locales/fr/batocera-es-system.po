@@ -1458,17 +1458,17 @@ msgctxt "game_options"
 msgid "2nd Joystick (2 Axes, 2 Btns)"
 msgstr "2ème Joystick (2 Axes, 2 Btns)"
 
-#. TRANSLATION: libretro/swanstation, libretro
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr ""
 
-#. TRANSLATION: libretro/swanstation, libretro, cemu, dolphin, duckstation, ...
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro, cemu, dolphin, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "API GRAPHIQUE"
 
-#. TRANSLATION: libretro/swanstation, libretro, cemu, daphne, dolphin, ...
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro, cemu, daphne, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
