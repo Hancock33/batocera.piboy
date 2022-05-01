@@ -230,13 +230,13 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution, gfxBac
             retroarchConfig['input_libretro_device_p2'] = system.config['controller2_uae4arm']
         else:
             retroarchConfig['input_libretro_device_p2'] = '1'
-            
+
     ## BlueMSX choices by System
     if(system.name in systemToBluemsx):
         if system.config['core'] == 'bluemsx':
             retroarchConfig['input_libretro_device_p1'] = systemToP1Device[system.name]
             retroarchConfig['input_libretro_device_p2'] = systemToP2Device[system.name]
-            
+
     ## fMSX
     if system.config['core'] == 'fmsx':
         if system.isOptSet('controller1_fmsx'):
@@ -372,15 +372,15 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution, gfxBac
     ## PS1 Swanstation and Duckstation
     if (system.config['core'] == 'swanstation'):               # Swanstation
         # Controller 1 Type
-        if system.isOptSet('duckstation_Controller1'):
-            coreSettings.save('duckstation_Controller1.Type', system.config['duckstation_Controller1'])
+        if system.isOptSet('swanstation_Controller1'):
+            coreSettings.save('swanstation_Controller1.Type', system.config['swanstation_Controller1'])
         else:
-            coreSettings.save('duckstation_Controller1.Type', '"DigitalController"')
+            coreSettings.save('swanstation_Controller1.Type', '"DigitalController"')
         # Controller 2 Type
-        if system.isOptSet('duckstation_Controller2'):
-            coreSettings.save('duckstation_Controller2.Type', system.config['duckstation_Controller2'])
+        if system.isOptSet('swanstation_Controller2'):
+            coreSettings.save('swanstation_Controller2.Type', system.config['swanstation_Controller2'])
         else:
-            coreSettings.save('duckstation_Controller2.Type', '"DigitalController"')
+            coreSettings.save('swanstation_Controller2.Type', '"DigitalController"')
     if (system.config['core'] == 'duckstation'):               # Duckstation
         if system.isOptSet('duckstation_Controller1'):
             retroarchConfig['input_libretro_device_p1'] = system.config['duckstation_Controller1']
