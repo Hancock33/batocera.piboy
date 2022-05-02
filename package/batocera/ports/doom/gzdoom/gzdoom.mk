@@ -21,12 +21,5 @@ GZDOOM_CONF_OPTS += -DIMPORT_EXECUTABLES=$(HOST_GZDOOM_BUILDDIR)/ImportExecutabl
 GZDOOM_CONF_OPTS += -DINSTALL_SOUNDFONT_PATH="/usr/share/gzdoom"
 GZDOOM_CONF_OPTS += -DINSTALL_PK3_PATH="/usr/share/gzdoom"
 
-define GZDOOM_KEYS
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/doom/gzdoom/prboom.gzdoom.keys $(TARGET_DIR)/usr/share/evmapy
-endef
-
-GZDOOM_PRE_INSTALL_TARGET_HOOKS += GZDOOM_KEYS
-
 $(eval $(cmake-package))
 $(eval $(host-cmake-package))

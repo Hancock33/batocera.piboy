@@ -19,5 +19,5 @@ class GzdoomGenerator(Generator):
             array=commandArray,
             env={
                 'DOOMWADDIR': '/userdata/roms/prboom',
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             })
