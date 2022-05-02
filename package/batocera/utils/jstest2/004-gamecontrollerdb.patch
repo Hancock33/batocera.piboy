@@ -1,0 +1,13 @@
+diff --git a/sdl2-jstest.c b/sdl2-jstest.c
+index 61e95ea..6705589 100644
+--- a/sdl2-jstest.c
++++ b/sdl2-jstest.c
+@@ -579,7 +579,7 @@ int main(int argc, char** argv)
+     atexit(SDL_Quit);
+ 
+     {
+-      int ret = SDL_GameControllerAddMappingsFromFile("gamecontrollerdb.txt");
++      int ret = SDL_GameControllerAddMappingsFromFile("/usr/share/gamecontrollerdb.txt");
+       if (ret < 0)
+       {
+         fprintf(stderr, "error: failed to read gamecontrollerdb.txt: %s\n", SDL_GetError());
