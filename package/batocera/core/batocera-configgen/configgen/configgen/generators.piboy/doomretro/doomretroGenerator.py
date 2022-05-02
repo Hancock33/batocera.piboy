@@ -13,5 +13,5 @@ class DoomretroGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             })
