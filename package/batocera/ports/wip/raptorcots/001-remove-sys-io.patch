@@ -1,0 +1,52 @@
+diff --git a/src/glbapi.cpp b/src/glbapi.cpp
+index 31a119c..cb9760c 100644
+--- a/src/glbapi.cpp
++++ b/src/glbapi.cpp
+@@ -12,7 +12,7 @@
+ #include <io.h>
+ #endif // _WIN32
+ #ifdef __linux__
+-#include <sys/io.h>
++//#include <sys/io.h>
+ #endif // __linux__
+ #ifdef __GNUC__
+ #include <unistd.h>
+diff --git a/src/loadsave.cpp b/src/loadsave.cpp
+index b435c69..1364571 100644
+--- a/src/loadsave.cpp
++++ b/src/loadsave.cpp
+@@ -23,7 +23,7 @@
+ #include <io.h>
+ #endif // _WIN32
+ #ifdef __linux__
+-#include <sys/io.h>
++//#include <sys/io.h>
+ #endif // __linux__
+ #ifdef __GNUC__
+ #include <unistd.h>
+diff --git a/src/prefapi.cpp b/src/prefapi.cpp
+index 4544f94..eb8d444 100644
+--- a/src/prefapi.cpp
++++ b/src/prefapi.cpp
+@@ -7,7 +7,7 @@
+ #include <io.h>
+ #endif // _WIN32
+ #ifdef __linux__
+-#include <sys/io.h>
++//#include <sys/io.h>
+ #endif // __linux__
+ #ifdef __GNUC__
+ #include <unistd.h>
+diff --git a/src/rap.cpp b/src/rap.cpp
+index 8bb4da1..c7a8ddf 100644
+--- a/src/rap.cpp
++++ b/src/rap.cpp
+@@ -36,7 +36,7 @@
+ #include <io.h>
+ #endif // _WIN32
+ #ifdef __linux__
+-#include <sys/io.h>
++//#include <sys/io.h>
+ #endif // __linux__
+ #ifdef __GNUC__
+ #include <unistd.h>

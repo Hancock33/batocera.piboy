@@ -172,6 +172,7 @@ menu "Ports"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/xash3d/hlsdk-xash3d-dmc/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/xash3d/hlsdk-xash3d-opfor/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/xash3d/xash3d-fwgs/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/wip/raptorcots/Config.in"  
 endmenu
 
 menu "Emulators"
