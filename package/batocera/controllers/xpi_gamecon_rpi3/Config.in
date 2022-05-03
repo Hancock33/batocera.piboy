@@ -1,5 +1,5 @@
 config BR2_PACKAGE_XPI_GAMECON_RPI3
-	bool "xpi_gamecon Kernel Module for Piboy"
+	bool "xpi_gamecon_rpi3"
 	depends on BR2_LINUX_KERNEL
 	help
 	  Kernel module to support hardware from piboy (experimental pi)
