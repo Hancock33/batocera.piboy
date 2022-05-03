@@ -3,8 +3,8 @@
 # XPI_GAMECON_RPI4
 #
 ################################################################################
-# Version: Commits on May 02, 2022
-XPI_GAMECON_RPI4_VERSION = 6322004ecf57ff40cea03409f7663402d64a3114
+# Version: Commits on May 03, 2022
+XPI_GAMECON_RPI4_VERSION = 690024c98cac98606611a5de74a2b124490408e5
 XPI_GAMECON_RPI4_SITE = $(call github,hancock33,piboycontrols,$(XPI_GAMECON_RPI4_VERSION))
 XPI_GAMECON_RPI4_DEPENDENCIES = linux
 
