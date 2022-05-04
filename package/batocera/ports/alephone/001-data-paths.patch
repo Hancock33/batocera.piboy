@@ -12,7 +12,7 @@ index b562c908..68a36e8c 100644
 -		if (home)
 -			local_dir = std::string(home) + "/.alephone";
 -	}
-+    local_dir = std::string("/userdata/roms/alephone/config");
++    local_dir = std::string("/userdata/system/configs");
  	return local_dir;
  }
  

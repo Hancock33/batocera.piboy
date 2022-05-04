@@ -30,9 +30,6 @@ define ALEPHONE_INSTALL_TARGET_CMDS
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/alephone/alephone.keys $(TARGET_DIR)/usr/share/evmapy/alephone.keys
-	# Config
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/alephone/config
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/alephone/configs/* $(TARGET_DIR)/usr/share/batocera/datainit/roms/alephone/config
 endef
 
 $(eval $(generic-package))

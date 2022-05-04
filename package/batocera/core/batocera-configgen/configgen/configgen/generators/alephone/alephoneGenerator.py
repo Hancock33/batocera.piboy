@@ -16,7 +16,7 @@ class AlephoneGenerator(Generator):
             game = "/userdata/roms/alephone/infinity"
 
 
-        commandArray = ["alephone", "--nogl", game]
+        commandArray = ["alephone", game]
 
         return Command.Command(
             array=commandArray,
