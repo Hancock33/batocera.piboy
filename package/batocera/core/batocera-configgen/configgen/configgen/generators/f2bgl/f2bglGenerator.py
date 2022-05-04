@@ -14,4 +14,5 @@ class F2bglGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
+                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
