@@ -1,0 +1,22 @@
+diff --git a/SDL/OSD.cpp b/SDL/OSD.cpp
+index f78ec9e..dd42c93 100644
+--- a/SDL/OSD.cpp
++++ b/SDL/OSD.cpp
+@@ -64,7 +64,7 @@ std::string OSD::MakeFilePath(PathType type, const std::string& filename)
+ #elif defined(__AMIGAOS4__)
+     base_path = "PROGDIR:";
+ #else
+-    base_path = getenv("HOME");
++    base_path = "/userdata/system/configs";
+ #endif
+ 
+     switch (type)
+@@ -77,7 +77,7 @@ std::string OSD::MakeFilePath(PathType type, const std::string& filename)
+ #elif defined(__AMIGAOS4__)
+         path = base_path;
+ #else
+-        path = base_path / ".simcoupe";
++        path = base_path / "simcoupe";
+ #endif
+         break;
+ 

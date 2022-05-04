@@ -1,0 +1,65 @@
+diff --git a/src/game.c b/src/game.c
+index 89df254..238f13b 100644
+--- a/src/game.c
++++ b/src/game.c
+@@ -266,7 +266,7 @@ void game()
+ 		#if defined(__amigaos4__) || defined(__MORPHOS__)
+ 		strcat(savename, ".hydracastlelabyrinth/");
+ 		#elif !defined(EMSCRIPTEN)
+-		strcat(savename, "/.hydracastlelabyrinth/");
++		strcpy(savename, "/userdata/system/configs/hydracastlelabyrinth/");
+ 		#endif
+ 		strcpy(savemap, savename);
+ 		strcat(savename, "save.tmp");
+diff --git a/src/ini.c b/src/ini.c
+index 566df8c..caa0b69 100644
+--- a/src/ini.c
++++ b/src/ini.c
+@@ -32,8 +32,8 @@ void iniInit()
+ 		#elif defined(EMSCRIPTEN)
+ 		strcpy(fullPath, "hcl_data/");
+ 		#else
+-		strcpy(fullPath, getenv("HOME"));
+-		strcat(fullPath, "/.hydracastlelabyrinth/");
++		strcpy(fullPath, "/userdata/system/configs/hydracastlelabyrinth/");
++		//strcat(fullPath, "/.hydracastlelabyrinth/");
+ 		#endif
+ 		#elif defined(_3DS)
+ 		strcpy(fullPath, "sdmc:/3ds/appdata/HydraCastleLabyrinth/");
+@@ -68,8 +68,8 @@ void saveSettings()
+ 		#elif defined(EMSCRIPTEN)
+ 		strcpy(fullPath, "hcl_data/");
+ 		#else
+-		strcpy(fullPath, getenv("HOME"));
+-		strcat(fullPath, "/.hydracastlelabyrinth/");
++		strcpy(fullPath, "/userdata/system/configs/hydracastlelabyrinth/");
++		//strcat(fullPath, "/.hydracastlelabyrinth/");
+ 		#endif
+ 		#elif defined(_3DS)
+ 		strcpy(fullPath, "sdmc:/3ds/appdata/HydraCastleLabyrinth/");
+@@ -172,8 +172,8 @@ void loadSettings()
+ 		#elif defined(EMSCRIPTEN)
+ 		strcpy(fullPath, "hcl_data/");
+ 		#else
+-		strcpy(fullPath, getenv("HOME"));
+-		strcat(fullPath, "/.hydracastlelabyrinth/");
++		strcpy(fullPath, "/userdata/system/configs/hydracastlelabyrinth/");
++		//strcat(fullPath, "/.hydracastlelabyrinth/");
+ 		#endif
+ 		#elif defined(_3DS)
+ 		strcpy(fullPath, "sdmc:/3ds/appdata/HydraCastleLabyrinth/");
+diff --git a/src/main.c b/src/main.c
+index 4095b2a..16404ce 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -38,8 +38,8 @@ void createSaveLocations()
+ 		#elif defined(EMSCRIPTEN)
+ 		strcpy(buff, "hcl_data");
+ 		#else
+-		strcpy(buff, getenv("HOME"));
+-		strcat(buff, "/.hydracastlelabyrinth");
++		strcpy(buff, "/userdata/system/configs/hydracastlelabyrinth");
++		//strcat(buff, "/.hydracastlelabyrinth/");
+ 		#endif
+ 		// if exist first?
+ 		struct stat sb;

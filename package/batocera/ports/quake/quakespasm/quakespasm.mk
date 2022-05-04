@@ -21,11 +21,11 @@ define QUAKESPASM_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/Quake/quakespasm $(TARGET_DIR)/usr/bin
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/tyrquake/id1
 	cp -pvr $(@D)/Quake/quakespasm.pak $(TARGET_DIR)/usr/share/batocera/datainit/roms/tyrquake/id1
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.quakespasm/{id1,dopa,hipnotic,rogue}
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/quakespasm/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.quakespasm/id1
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/quakespasm/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.quakespasm/dop
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/quakespasm/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.quakespasm/hipnotic
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/quakespasm/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.quakespasm/rogue
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/quakespasm/{id1,dopa,hipnotic,rogue}
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/quakespasm/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/quakespasm/id1
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/quakespasm/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/quakespasm/dop
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/quakespasm/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/quakespasm/hipnotic
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/quakespasm/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/quakespasm/rogue
     # evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/quakespasm/quakespasm.keys $(TARGET_DIR)/usr/share/evmapy/tyrquake.quakespasm.keys
