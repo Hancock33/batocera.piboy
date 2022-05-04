@@ -34,9 +34,27 @@ index 9b26c70..c746c41 100644
  	CFileIO fIO;
  	if(!fIO.GetFile(name,"rb"))
 diff --git a/Engine.cpp b/Engine.cpp
-index 41db8f6..73089a2 100755
+index 41db8f6..7cd4901 100755
 --- a/Engine.cpp
 +++ b/Engine.cpp
+@@ -78,7 +78,7 @@ Engine::Engine(int width, int height, bool fscreen, char* winName)
+ #elif defined(__EMSCRIPTEN__)
+ 	snprintf(enginepath, PATH_MAX, "%s/Engine.cfg", "prototype_data");
+ #else
+-	snprintf(enginepath, PATH_MAX, "%s/.prototype/Engine.cfg", getenv("HOME"));
++	snprintf(enginepath, PATH_MAX, "%s/prototype/Engine.cfg", "/userdata/system/configs");
+ #endif
+ 
+ 	gSerializer.PutComment(enginepath,"[Display Properties]");
+@@ -443,7 +443,7 @@ void Engine::InitializeKeys()
+ #elif defined(__EMSCRIPTEN__)
+ 	snprintf(controlspath, PATH_MAX, "%s/Controls.cfg", "prototype_data");
+ #else
+-	snprintf(controlspath, PATH_MAX, "%s/.prototype/Controls.cfg", getenv("HOME"));
++	snprintf(controlspath, PATH_MAX, "%s/prototype/Controls.cfg", "/userdata/system/configs");
+ #endif
+ 
+ 	gSerializer.PutComment(controlspath,"[Control Configuration]");
 @@ -862,311 +862,311 @@ void Engine::InitializeRenderTargets()
  //================================================================================================//
  bool Engine::LoadConstantData()
@@ -492,8 +510,33 @@ index 41db8f6..73089a2 100755
  	if(!fIO.GetFile(sz,"wb"))
  		return;
  	int x,y;
+@@ -1374,7 +1374,7 @@ void Engine::LoadScores()
+ #elif defined(__EMSCRIPTEN__)
+ 	snprintf(scorepath, PATH_MAX, "%s/score.dat", "prototype_data");
+ #else
+-	snprintf(scorepath, PATH_MAX, "%s/.prototype/score.dat", getenv("HOME"));
++	snprintf(scorepath, PATH_MAX, "%s/prototype/score.dat", "/userdata/system/configs");
+ #endif
+ 
+ 	gSerializer.ReadVariable(scorepath,"1a",iHiScore[0]);
+@@ -1423,7 +1423,7 @@ void Engine::SaveScores()
+ #elif defined(__EMSCRIPTEN__)
+ 	snprintf(scorepath, PATH_MAX, "%s/score.dat", "prototype_data");
+ #else
+-	snprintf(scorepath, PATH_MAX, "%s/.prototype/score.dat", getenv("HOME"));
++	snprintf(scorepath, PATH_MAX, "%s/prototype/score.dat", "/userdata/system/configs");
+ #endif
+ 
+ //	DeleteFile("score.dat");
+@@ -1502,4 +1502,4 @@ void Engine::FreeConstantData()
+ 	stmStage.Discard();
+ 	stmBoss.Discard();
+ 
+-}
+\ No newline at end of file
++}
 diff --git a/FrontEnd.cpp b/FrontEnd.cpp
-index 01feb63..3f30875 100755
+index 01feb63..6f4ec82 100755
 --- a/FrontEnd.cpp
 +++ b/FrontEnd.cpp
 @@ -23,7 +23,7 @@ void Engine::StartFrontEnd()
@@ -505,6 +548,15 @@ index 01feb63..3f30875 100755
  		stmSplash.Play(30);
  	}
  	bDemo = false;
+@@ -463,7 +463,7 @@ void Engine::UpdateConfig(float delta)
+ #ifdef AMIGAOS4
+ 			snprintf(controlspath, PATH_MAX, "%s.prototype/Controls.cfg", "PROGDIR:");
+ #else
+-			snprintf(controlspath, PATH_MAX, "%s/.prototype/Controls.cfg", getenv("HOME"));
++			snprintf(controlspath, PATH_MAX, "%s/prototype/Controls.cfg", "/userdata/system/configs");
+ #endif
+ 			DeleteFile(controlspath);
+ 			gSerializer.PutComment(controlspath,"[Control Configuration]");
 @@ -621,7 +621,7 @@ void Engine::StartGameOver()
  	bBossFight = false;
  	bWimpMode = false;
@@ -545,3 +597,36 @@ index 549ce3e..f52ef20 100644
  	gpEngine->stmSplash.Play(30);
  
  }
+diff --git a/Log.cpp b/Log.cpp
+index e6a5745..b13a186 100755
+--- a/Log.cpp
++++ b/Log.cpp
+@@ -15,7 +15,7 @@ void Log::OutPut(string str)
+ #ifdef AMIGAOS4
+ 	snprintf(logpath, PATH_MAX, "%s.prototype/Logfile.txt", "PROGDIR:");
+ #else
+-	snprintf(logpath, PATH_MAX, "%s/.prototype/Logfile.txt", getenv("HOME"));
++	snprintf(logpath, PATH_MAX, "%s/prototype/Logfile.txt", "/userdata/system/configs");
+ #endif
+ 	if(!bKeepLog)
+ 		return;
+@@ -51,4 +51,4 @@ void Log::SetLogState(int state)
+ 		bKeepLog = l;
+ 		OutPut(">>Logging Disabled<<\n");
+ 	}
+-}
+\ No newline at end of file
++}
+diff --git a/ProtoType.cpp b/ProtoType.cpp
+index 2d39331..449baec 100755
+--- a/ProtoType.cpp
++++ b/ProtoType.cpp
+@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
+ 		});
+ 	}, &fileSynched);
+ #else
+-	snprintf(cfg_path, PATH_MAX, "%s/.prototype/", getenv("HOME"));
++	snprintf(cfg_path, PATH_MAX, "%s/prototype/", "/userdata/system/configs");
+ #endif
+ #ifdef __EMSCRIPTEN__
+ 	emscripten_set_main_loop(em_wait_loop, 0, 1);

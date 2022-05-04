@@ -1,0 +1,16 @@
+diff --git a/src/tekgame.c b/src/tekgame.c
+index 45ffb17..2bfa63b 100644
+--- a/src/tekgame.c
++++ b/src/tekgame.c
+@@ -349,9 +349,9 @@ app_main(int argc, char const * const argv[])
+ #if defined(_WIN32) || defined(__APPLE__)
+                const char *confdir = "JFTekWar";
+ #else
+-               const char *confdir = ".jftekwar";
++               const char *confdir = "tekwar";
+ #endif
+-               Bsnprintf(dirpath, sizeof(dirpath), "%s/%s", supportdir, confdir);
++               Bsnprintf(dirpath, sizeof(dirpath), "%s/%s", "/userdata/system/configs", confdir);
+                asperr = addsearchpath(dirpath);
+                if (asperr == -2) {
+                     if (Bmkdir(dirpath, S_IRWXU) == 0) {

@@ -15,6 +15,28 @@ index ea673d8..65ce204 100644
  
  ROTT ?= rott
  
+diff --git a/rott/dosutil.c b/rott/dosutil.c
+index 0811641..892e617 100644
+--- a/rott/dosutil.c
++++ b/rott/dosutil.c
+@@ -129,14 +129,14 @@ int setup_homedir (void)
+ 	int err;
+ 
+ 	/* try to create the root directory */
+-	snprintf (ApogeePath, sizeof (ApogeePath), "%s/.rott/", getenv ("HOME"));
++	snprintf (ApogeePath, sizeof (ApogeePath), "%s/rott/", "/userdata/system/configs/");
+ 	err = mkdir (ApogeePath, S_IRWXU);
+ 	
+ /* keep the shareware and registered game data separated */
+ #if (SHAREWARE == 1)
+-	snprintf (ApogeePath, sizeof (ApogeePath), "%s/.rott/", getenv ("HOME"));
++	snprintf (ApogeePath, sizeof (ApogeePath), "%s/rott/", "/userdata/system/configs/");
+ #else
+-	snprintf (ApogeePath, sizeof (ApogeePath), "%s/.rott/darkwar/", getenv ("HOME"));
++	snprintf (ApogeePath, sizeof (ApogeePath), "%s/rott/darkwar/", "/userdata/system/configs/");
+ #endif
+ 
+ 	err = mkdir (ApogeePath, S_IRWXU);
 diff --git a/rott/rt_ted.c b/rott/rt_ted.c
 index 9b6da98..a105770 100644
 --- a/rott/rt_ted.c

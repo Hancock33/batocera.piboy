@@ -1,0 +1,22 @@
+diff --git a/GsKit/base/utils/FindFile.cpp b/GsKit/base/utils/FindFile.cpp
+index e1a63dc5a..1158b64a5 100644
+--- a/GsKit/base/utils/FindFile.cpp
++++ b/GsKit/base/utils/FindFile.cpp
+@@ -505,7 +505,7 @@ void InitBaseSearchPaths()
+     AddToFileList(&basesearchpaths, SDL_AndroidGetInternalStoragePath());
+     AddToFileList(&basesearchpaths, "/storage/emulated/0/Android/data/net.sourceforge.clonekeenplus/files/SaveData");
+ #else
+-	AddToFileList(&basesearchpaths, "${HOME}/.CommanderGenius");
++	AddToFileList(&basesearchpaths, "/userdata/system/configs/CommanderGenius");
+ #endif
+ 	AddToFileList(&basesearchpaths, ".");
+ 	AddToFileList(&basesearchpaths, SYSTEM_DATA_DIR"/commandergenius"); // no use of ${SYSTEM_DATA}, because it is uncommon and could cause confusion to the user
+@@ -807,7 +807,7 @@ std::string GetHomeDir()
+ 	const char* home = "";
+ 	return home;
+ #else
+-	char* home = getenv("HOME");
++	char* home = "/userdata/system/configs";
+ #endif
+     if(home == nullptr || home[0] == '\0') {
+ 		passwd* userinfo = getpwuid(getuid());

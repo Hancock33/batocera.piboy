@@ -1,0 +1,13 @@
+diff --git a/src/misc.c b/src/misc.c
+index 334b02a..37fab77 100644
+--- a/src/misc.c
++++ b/src/misc.c
+@@ -160,7 +160,7 @@ LoadGameConfig (void)
+   else
+     DebugPrintf (0, "found environment HOME = '%s'\n", homedir );
+ 
+-  sprintf (ConfigDir, "%s/.freedroidClassic", homedir);
++  sprintf (ConfigDir, "%s/freedroidClassic", "/userdata/system/configs/");
+ 
+   if (stat(ConfigDir, &statbuf) == -1) {
+     DebugPrintf (0, "Couldn't stat Config-dir %s, I'll try to create it...", ConfigDir);
