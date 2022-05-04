@@ -54,7 +54,7 @@ endif
 define SOLARUS_ENGINE_EVMAP
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/solarus-engine/solarus.keys $(TARGET_DIR)/usr/share/evmapy/solarus.keys
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/solarus-engine/solarus.keys $(TARGET_DIR)/usr/share/evmapy/solarus.keys
 endef
 SOLARUS_ENGINE_POST_INSTALL_TARGET_HOOKS += SOLARUS_ENGINE_EVMAP
 
