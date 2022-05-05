@@ -4,9 +4,11 @@
 shared:
   cfeatures:
     videomode:
+      group: VIDEO SETTINGS
       prompt: VIDEO MODE
       preset: videomodes
     ratio:
+      group: VIDEO SETTINGS
       prompt: GAME ASPECT RATIO
       choices:
         "4/3":           "4/3"
@@ -35,42 +37,52 @@ shared:
         "Core provided": "core"
         "Custom":        "custom"
     rewind:
+      group: GAME PLAY
       prompt: REWIND
+      description: Gameplay Rewinding
       choices:
         "On":  1
         "Off": 0
     autosave:
+      group: GAME PLAY
       prompt: AUTO SAVE/LOAD
+      description: Automatically Save/Load Game Play on Exit/Running
       choices:
         "On":  1
         "Off": 0
     shaderset:
+      group: VIDEO SETTINGS
       prompt: SHADER SET
       submenu: GAME RENDERING
       preset: shaderset
     smooth:
+      group: VIDEO SETTINGS
       prompt: SMOOTH GAMES (BILINEAR FILTERING)
       submenu: GAME RENDERING
       choices:
         "On":  1
         "Off": 0
     integerscale:
+      group: VIDEO SETTINGS
       prompt:      INTEGER SCALING (PIXEL PERFECT)
       submenu: GAME RENDERING
       choices:
         "On": 1
         "Off": 0
     bezel:
+      group: VIDEO SETTINGS
       prompt: DECORATION SET
       submenu: DECORATIONS
       preset: bezel
     bezel_stretch:
+      group: VIDEO SETTINGS
       prompt: STRETCH BEZELS (4K & ULTRAWIDE)
       submenu: DECORATIONS
       choices:
         "On":  1
         "Off": 0
     hud:
+      group: VIDEO SETTINGS
       archs_exclude: [s905 rpi1 rpi2 rpizero2]
       prompt:      HEADS UP DISPLAY
       description: Show context-sensitive info over the game.
@@ -81,6 +93,7 @@ shared:
         "Performance": perf
         "Custom": custom
     bezel.tattoo:
+      group: VIDEO SETTINGS
       prompt: SHOW TATTOO OVER BEZEL
       submenu: DECORATIONS
       description: Show an image overlaid on top of the bezel.
@@ -89,6 +102,7 @@ shared:
         "SYSTEM CONTROLLERS": system
         "CUSTOM IMAGE": custom
     bezel.tattoo_corner:
+      group: VIDEO SETTINGS
       prompt: TATTOO CORNER
       submenu: DECORATIONS
       choices:
@@ -97,19 +111,23 @@ shared:
         "SOUTH EAST": "SE"
         "SOUTH WEST": "SW"
     bezel.tattoo_file:
+      group: VIDEO SETTINGS
       prompt: "CUSTOM .PNG IMAGE PATH"
       submenu: DECORATIONS
       preset: folder
     bezel.resize_tattoo:
+      group: VIDEO SETTINGS
       prompt: RESIZE TATTOO
       description: Shrink/expand tattoo to fit within the bezel's border.
       submenu: DECORATIONS
       preset: switchon
     ai_service_enabled:
+      group: GAME TRANSLATION
       prompt: ENABLE AI TRANSLATION SERVICE
       submenu: AI GAME TRANSLATION
       preset: switchoff
     ai_target_lang:
+      group: GAME TRANSLATION
       prompt: TARGET LANGUAGE
       submenu: AI GAME TRANSLATION
       choices:
@@ -135,14 +153,17 @@ shared:
         "TÜRKÇE":    "Tr"
         "简体中文":  "Zh"
     ai_service_url:
+      group: GAME TRANSLATION
       prompt: AI TRANSLATION SERVICE URL
       submenu: AI GAME TRANSLATION
       preset: input
     ai_service_pause:
+      group: GAME TRANSLATION
       prompt: PAUSE ON TRANSLATED SCREEN
       submenu: AI GAME TRANSLATION
       preset: switchoff
     runahead:
+      group: LATENCY REDUCTION
       submenu:     LATENCY REDUCTION
       prompt:      RUN-AHEAD FRAMES
       description: Enables run-ahead. Doubles CPU requirements. High numbers can result in visible jitter.
@@ -155,6 +176,7 @@ shared:
         "5": 5
         "6": 6
     secondinstance:
+      group: LATENCY REDUCTION
       submenu:     LATENCY REDUCTION
       prompt:      USE SECOND INSTANCE FOR RUN-AHEAD
       description: Can prevent audio skips on button presses when using run-ahead.
@@ -162,6 +184,7 @@ shared:
         "On": 1
         "Off": 0
     video_frame_delay_auto:
+      group: LATENCY REDUCTION
       submenu:     LATENCY REDUCTION
       prompt:      AUTOMATIC FRAME DELAY
       description: Automatically decrease frame delay temporarily to prevent frame drops. Can introduce stuttering.
@@ -169,6 +192,7 @@ shared:
         "On": 1
         "Off": 0
     vrr_runloop_enable:
+      group: LATENCY REDUCTION
       submenu:     LATENCY REDUCTION
       prompt:      VARIABLE REFRESH RATE
       description: Don't deviate from core requested timing. G-Sync, FreeSync, HDMI 2.1 VRR.
@@ -176,6 +200,7 @@ shared:
         "On": 1
         "Off": 0
     video_threaded:
+      group: LATENCY REDUCTION
       submenu:     LATENCY REDUCTION
       prompt:      THREADED VIDEO
       description: Improves performance at the cost of latency and more video stuttering.
@@ -190,8 +215,9 @@ libretro:
   shared: [videomode, ratio, shaderset, smooth, integerscale, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, ai_service_enabled, ai_target_lang, ai_service_url, ai_service_pause, runahead, secondinstance, video_frame_delay_auto, vrr_runloop_enable, video_threaded]
   cfeatures:
     gfxbackend:
+      group: DRIVERS
       archs_include: [x86, x86_64, rpi4, rk3326]
-      prompt:      GRAPHICS API
+      prompt: GRAPHICS API
       description: Choose which graphics API library to use.
       choices:
         "OpenGL": gl
@@ -199,6 +225,7 @@ libretro:
         "SDL2": sdl2
         "Vulkan": vulkan
     audio_driver:
+      group: DRIVERS
       archs_include: [x86, x86_64, rpi4, rk3326]
       prompt:      AUDIO API
       description: Choose which audio API library to use.
@@ -210,8 +237,29 @@ libretro:
         "PulseAudio": pulse
         "SDL2": sdl2
         "NULL": null
+    input_driver:
+      group: DRIVERS
+      archs_include: [x86, x86_64, rpi4, rk3326]
+      prompt:      INPUT API
+      description: Choose which input API library to use.
+      choices:
+        "SDL2": sdl2
+        "UDEV": udev
+        "LINUXRAW": linuxraw
+        "X": x
+    input_joypad_driver:
+      group: DRIVERS
+      archs_include: [x86, x86_64, rpi4, rk3326]
+      prompt:      JOYPAD API
+      description: Choose which joypad API library to use.
+      choices:
+        "SDL2": sdl2
+        "UDEV": udev
+        "LINUXRAW": linuxraw
+        "Parport": parport
+        "HID": hid
     audio_latency:
-      group: ADVANCED OPTIONS
+      group: LATENCY REDUCTION
       prompt:      AUDIO LATENCY
       description: In milliseconds. Can reduce crackling/cutting out.
       choices:
@@ -223,7 +271,7 @@ libretro:
         "16":     16
         "8":      8
     video_allow_rotate:
-        group: ADVANCED OPTIONS
+        group: VIDEO SETTINGS
         prompt:      ALLOW ROTATION
         description: Allow cores to set rotation.
         choices:
@@ -237,12 +285,14 @@ libretro:
             "On":   "true"
             "Off":  "false"
     framecount_show:
+        group: FRAME MONITORING SETTINGS
         prompt:      FRAMECOUNT
         description: Display the current frame counter.
         choices:
             "On":   "true"
             "Off":  "false"
     fps_show:
+        group: FRAME MONITORING SETTINGS
         prompt:      FRAMERATE
         description: Display the current frames per second.
         choices:
@@ -457,6 +507,7 @@ libretro:
             "PAL":     PAL
             "Dendy":   Dendy
         mesen_screenrotation:
+          group: VIDEO SETTINGS
           prompt:      DISPLAY ROTATION
           description: Rotate the screen, useful for certain vertical gameplay homebrews.
           choices:
@@ -541,13 +592,12 @@ libretro:
             "After NMI":  After NMI
     citra:
       shared: [rewind, autosave]
-    daphne:
-      features: [padtokeyboard]
     desmume:
       features: [netplay, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             internal_resolution_desmume:
+                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -562,7 +612,7 @@ libretro:
                     "2304x1728": 2304x1728
                     "2560x1920": 2560x1920
             texture_scaling:
-                group: ADVANCED OPTIONS
+                group: VIDEO SETTINGS
                 prompt:      TEXTURE UPSCALING (XBRZ)
                 description: Enhancement. Upscales textures on 3D objects.
                 choices:
@@ -570,13 +620,14 @@ libretro:
                     "2x":  2
                     "4x":  4
             texture_smoothing:
+                group: VIDEO SETTINGS
                 prompt:      TEXTURE SMOOTHING
                 description: Smooths out textures on 3D objects.
                 choices:
                     "Off": disabled
                     "On":  enabled
             multisampling:
-                group: ADVANCED OPTIONS
+                group: VIDEO SETTINGS
                 prompt:      ANTI-ALIASING (MSAA)
                 description: Enhancement. Smooth out jagged edges on 3D object polygons.
                 choices:
@@ -587,6 +638,7 @@ libretro:
                     "16x": 16
                     "32x": 32
             screens_layout:
+                group: VIDEO SETTINGS
                 prompt:      SCREEN LAYOUT
                 description: Arrange the dual screen layout.
                 choices:
@@ -846,12 +898,6 @@ libretro:
       features: [cheevos]
       shared: [autosave]
       cfeatures:
-            gfxbackend:
-                archs_include: [rpi4]
-                prompt:      GRAPHICS API
-                description: Choose which graphics API library to use.
-                choices:
-                    "Vulkan": vulkan
             swanstation_PatchFastBoot:
                 prompt:      SHOW BIOS BOOTLOGO
                 description: Enhancement. Skipping it can break some games.
@@ -865,6 +911,7 @@ libretro:
                     "Off":        "false"
                     "On":         "true"
             swanstation_resolution_scale:
+                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -943,7 +990,8 @@ libretro:
       cfeatures:
             gfxbackend:
                 archs_include: [rpi4]
-                prompt:      GRAPHICS API
+                group: DRIVERS
+                prompt: GRAPHICS API
                 description: Choose which graphics API library to use.
                 choices:
                     "Vulkan": vulkan
@@ -960,6 +1008,7 @@ libretro:
                     "Off":        "false"
                     "On":         "true"
             duckstation_resolution_scale:
+                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -1190,6 +1239,7 @@ libretro:
                     "Off": disabled
                     "On":  enabled
             reicast_internal_resolution:
+                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -1645,6 +1695,7 @@ libretro:
                     "145":            145
                     "150":            150
             mame_altres:
+                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -1748,6 +1799,7 @@ libretro:
                     "145":            145
                     "150":            150
             mame_altres:
+                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -2740,6 +2792,7 @@ libretro:
                     "145":            145
                     "150":            150
             mame_altres:
+                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -2897,6 +2950,7 @@ libretro:
                     "700%":         700%
                     "750%":         750%
             beetle_psx_internal_resolution:
+                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -2985,6 +3039,7 @@ libretro:
       shared: [rewind, autosave]
       cfeatures:
             wswan_rotate_display:
+                group: VIDEO SETTINGS
                 prompt:     DISPLAY ROTATION
                 decription: Initial orientation of the game & controls
                 choices:
@@ -3476,6 +3531,7 @@ libretro:
       shared: [rewind, autosave]
       cfeatures:
             high_resolution:
+                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -3526,6 +3582,7 @@ libretro:
       shared: [autosave]
       cfeatures:
             parallel-n64-screensize:
+                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -3812,6 +3869,7 @@ libretro:
       shared: [rewind, autosave]
       cfeatures:
             prboom-resolution:
+                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -4781,6 +4839,7 @@ libretro:
       shared: [rewind, autosave]
       cfeatures:
             tyrquake_resolution:
+                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -5524,6 +5583,7 @@ libretro:
       shared: [autosave]
       cfeatures:
             resolution_mode:
+                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -5558,7 +5618,7 @@ amiberry:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         amiberry_linemode:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      LINE MODE
             description: Adjust screen line draw mode.
             choices:
@@ -5566,6 +5626,7 @@ amiberry:
                 "DOUBLE":                      double
                 "SCANLINES":                   scanlines
         amiberry_resolution:
+            group: VIDEO SETTINGS
             prompt:      VIDEO RESOLUTION
             description: Manually define which internal resolution to use. AUTO = High.
             choices:
@@ -5573,6 +5634,7 @@ amiberry:
                 "High":                        hires
                 "Super high":                  superhires
         amiberry_scalingmethod:
+            group: VIDEO SETTINGS
             prompt:      SCALING METHOD
             description: Change pixel scaling and filtering method.
             choices:
@@ -5587,6 +5649,7 @@ amiberry:
                 "ON":                          enabled
                 "OFF":                         disabled
         amiberry_image_center:
+            group: VIDEO SETTINGS
             prompt:      IMAGE CENTERING
             description: Centers the image screen. Disabled when using Auto Crop. AUTO = Full.
             choices:
@@ -5595,7 +5658,7 @@ amiberry:
                 "HORIZONTAL ONLY":             horizontal
                 "NONE":                        none
         amiberry_auto_crop:
-            prompt:      AUTO CROP
+            group: VIDEO SETTINGS
             description: Resize automatically the screen. AUTO = Off.
             choices:
                 "ON":                          enabled
@@ -5605,6 +5668,7 @@ cannonball:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         highResolution:
+            group: VIDEO SETTINGS
             prompt:      HIGH RESOLUTION MODE
             description: Improves both sprite scaling and road rendering. Does not affect the car sprite.
             choices:
@@ -5614,8 +5678,9 @@ cannonball:
 cemu:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
-        gfxbackend:
-            prompt:      GRAPHICS API
+        gfxbackend:       
+            group: DRIVERS
+            prompt: GRAPHICS API
             description: Choose which graphics API library to use. Vulkan is better, when supported.
             choices:
                 "OpenGL":                      OpenGL
@@ -5663,6 +5728,7 @@ citra:
                 "hybrid top ratio 4":    2-false
                 "hybrid bottom ratio 4": 2-true
         citra_resolution_factor:
+            group: VIDEO SETTINGS
             prompt:      RENDERING RESOLUTION
             description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
             choices:
@@ -5731,6 +5797,7 @@ daphne:
                 "Stretch":    stretch
                 "Force 4:3":  force_ratio
         daphne_rotate:
+            group: VIDEO SETTINGS
             prompt:      SCREEN ROTATION
             description: Rotate the screen with the emulator.
             choices:
@@ -5806,12 +5873,14 @@ dolphin:
   cfeatures:
         gfxbackend:
             archs_include: [x86, x86_64, rpi4, rk3326]
-            prompt:      GRAPHICS API
+            group: DRIVERS
+            prompt: GRAPHICS API
             description: Choose which graphics API library to use. Vulkan is better, when supported.
             choices:
                 "OpenGL": OGL
                 "Vulkan": Vulkan
         internal_resolution:
+            group: VIDEO SETTINGS
             prompt:      RENDERING RESOLUTION
             description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
             choices:
@@ -5996,6 +6065,7 @@ dolphin_triforce:
   shared: [hud]
   cfeatures:
         internal_resolution:
+            group: VIDEO SETTINGS
             prompt:      RENDERING RESOLUTION
             description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
             choices:
@@ -6134,7 +6204,8 @@ duckstation:
                 "Per 1s, 120s total (1320MB|240MB)":  120
         gfxbackend:
             archs_include: [x86, x86_64, rpi4, rk3326]
-            prompt:      GRAPHICS API
+            group: DRIVERS
+            prompt: GRAPHICS API
             description: Choose which graphics API library to use. Vulkan is better, when supported.
             choices:
                 "OpenGL":                        OpenGL
@@ -6174,6 +6245,7 @@ duckstation:
                 "Show":                            0
                 "Skip":                            1
         duckstation_resolution_scale:
+            group: VIDEO SETTINGS
             prompt:      RENDERING RESOLUTION
             description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
             choices:
@@ -6308,12 +6380,14 @@ flycast:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
     flycast_ratio:
-      prompt:      SCREEN RATIO
+      group: VIDEO SETTINGS
+      prompt: GAME ASPECT RATIO
       description: Choose which screen ratio you want to use.
       choices:
         "Default":    no
         "Widescreen": yes
     flycast_render_resolution:
+      group: VIDEO SETTINGS
       prompt:      RENDER RESOLUTION
       description: Choose which internal rendering resolution you want to use.
       choices:
@@ -6326,12 +6400,14 @@ flycast:
         "2560x1920 (x4)":   1920
         "2880x2160 (x4.5)": 2160
     flycast_renderer:
-      prompt:      GRAPHICS API
+      group: DRIVERS
+      prompt: GRAPHICS API
       description: Choose your graphics renderer.
       choices:
         "OpenGL (Default)": 0
         "Vulkan":           4
     flycast_rotate:
+      group: VIDEO SETTINGS
       prompt:      ROTATE SCREEN 90 DEGREES
       description: Rotate the screen by 90 degrees.
       choices:
@@ -6441,6 +6517,7 @@ melonds:
                 "No Limitation":      0
                 "Standard (Default)": 1
         melonds_resolution:
+            group: VIDEO SETTINGS
             prompt: RENDERING RESOLUTION
             description: Enhancement. Increase the rendering resolution.
             choices:
@@ -6468,6 +6545,7 @@ melonds:
                 "Off (Default)": 0
                 "On":            1
         melonds_rotation:
+            group: VIDEO SETTINGS
             prompt: SCREEN ROTATION
             description: Rotate the screen with the emulator.
             choices:
@@ -6709,7 +6787,8 @@ pcsx2:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         gfxbackend:
-            prompt:      GRAPHICS API
+            group: DRIVERS
+            prompt: GRAPHICS API
             description: Choose which graphics API library to use. Vulkan is better, when supported.
             choices:
                 "OpenGL":      12
@@ -6729,6 +6808,7 @@ pcsx2:
                 "Show (specific games)": 1
                 "Skip (safer)":          0
         internal_resolution:
+            group: VIDEO SETTINGS
             prompt:      RENDERING RESOLUTION
             description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
             choices:
@@ -6845,7 +6925,8 @@ ppsspp:
   cfeatures:
         gfxbackend:
             archs_include: [x86, x86_64, rpi4, rk3326]
-            prompt:      GRAPHICS API
+            group: DRIVERS
+            prompt: GRAPHICS API
             description: Choose which graphics API library to use. Vulkan is better, when supported.
             choices:
                 "OpenGL":               0 (OPENGL)
@@ -6958,7 +7039,8 @@ rpcs3:
                 "Off":   0
                 "On":    1
         gfxbackend:
-            prompt:      GRAPHICS API
+            group: DRIVERS
+            prompt: GRAPHICS API
             description: Choose which graphics API library to use. Vulkan is better, when supported.
             choices:
                 "OpenGL":   OpenGL
@@ -7070,6 +7152,7 @@ redream:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
       redreamResolution:
+          group: VIDEO SETTINGS
           prompt:      RENDERING RESOLUTION
           description: Choose your render resolution (Requires personal redream.key file).
           choices:
@@ -8478,26 +8561,28 @@ drastic:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         drastic_hires:
+            group: VIDEO SETTINGS
             prompt:      ENHANCED RENDERING RESOLUTION
             description: Enhancement. Double the rendering resolution. Makes 3D objects clearer.
             choices:
                 "Off": 0
                 "On":  1
         drastic_threaded:
-            group: ADVANCED OPTIONS
+            group: LATENCY REDUCTION
             prompt:      THREADED 3D
             description: Improves performance in 3D games. Can cause glitches.
             choices:
                 "Off": 0
                 "On":  1
         drastic_fix2d:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      FIX 2D SCREEN
             description: Fix main 2D screen to follow action.
             choices:
                 "Off": 0
                 "On":  1
         drastic_screen_orientation:
+            group: VIDEO SETTINGS
             prompt:      SCREEN LAYOUT
             description: Arrange the dual screen layout.
             choices:
@@ -8509,7 +8594,8 @@ xemu:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         scaling:
-            prompt:      SCALING MODE
+            group: VIDEO SETTINGS
+            prompt: GAME ASPECT RATIO
             description: Choose the scaling mode for the game screen.
             choices:
                 "Original resolution": center
@@ -8517,6 +8603,7 @@ xemu:
                 "Stretch to full":     stretch
                 "Stretch to 16:9":     scale_ws169
         render:
+            group: VIDEO SETTINGS
             prompt:       RENDERING RESOLUTION
             choices:
                 "1x (640x480)":     1

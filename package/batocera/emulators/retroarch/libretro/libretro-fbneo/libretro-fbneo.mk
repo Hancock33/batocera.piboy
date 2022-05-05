@@ -63,8 +63,8 @@ define LIBRETRO_FBNEO_INSTALL_TARGET_CMDS
 		$(TARGET_DIR)/usr/share/batocera/datainit/bios/fbneo
 
     #Data
-    find $(@D)/dats -maxdepth 1 -iname "*.dat" -print0 | xargs -0 -I{} zip {}.zip {}
-	$(INSTALL) -D $(@D)/dats/*.zip \
+    find $(@D)/dats -maxdepth 1 -iname "*.dat" -print0 | xargs -0 -I{} xz {}
+	$(INSTALL) -D $(@D)/dats/*.xz \
 		$(TARGET_DIR)/usr/share/batocera/datainit/bios/fbneo
 endef
 

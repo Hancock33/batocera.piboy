@@ -1,0 +1,114 @@
+diff -Naur batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122.orig/es-app/src/CustomFeatures.cpp batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122/es-app/src/CustomFeatures.cpp
+--- batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122.orig/es-app/src/CustomFeatures.cpp	2022-05-05 18:59:23.000000000 +0100
++++ batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122/es-app/src/CustomFeatures.cpp	2022-05-05 22:00:44.994394225 +0100
+@@ -39,6 +39,8 @@
+ 
+ 		if (trim == "ratio") ret = ret | EmulatorFeatures::Features::ratio;
+ 		if (trim == "rewind") ret = ret | EmulatorFeatures::Features::rewind;
++		if (trim == "fps_show") ret = ret | EmulatorFeatures::Features::fps_show;
++		if (trim == "framecount_show") ret = ret | EmulatorFeatures::Features::framecount_show;
+ 		if (trim == "smooth") ret = ret | EmulatorFeatures::Features::smooth;
+ 		if (trim == "shaders") ret = ret | EmulatorFeatures::Features::shaders;
+ 		if (trim == "pixel_perfect") ret = ret | EmulatorFeatures::Features::pixel_perfect;
+@@ -52,6 +54,10 @@
+ 		if (trim == "videomode") ret = ret | EmulatorFeatures::Features::videomode;
+ 		if (trim == "colorization") ret = ret | EmulatorFeatures::Features::colorization;
+ 		if (trim == "autocontrollers") ret = ret | EmulatorFeatures::Features::autocontrollers;
++		if (trim == "gfxbackend") ret = ret | EmulatorFeatures::Features::gfxbackend;
++		if (trim == "audio_driver") ret = ret | EmulatorFeatures::Features::audio_driver;
++		if (trim == "input_driver") ret = ret | EmulatorFeatures::Features::input_driver;
++		if (trim == "input_joypad_driver") ret = ret | EmulatorFeatures::Features::input_joypad_driver;
+ 	}
+ 
+ 	return ret;
+diff -Naur batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122.orig/es-app/src/CustomFeatures.h batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122/es-app/src/CustomFeatures.h
+--- batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122.orig/es-app/src/CustomFeatures.h	2022-05-05 18:59:23.000000000 +0100
++++ batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122/es-app/src/CustomFeatures.h	2022-05-05 22:00:28.682598939 +0100
+@@ -86,7 +86,12 @@
+ 		padTokeyboard = 65536,
+ 		cheevos = 131072,
+ 		autocontrollers = 262144,
+-
++		framecount_show = 524288,
++		fps_show = 1048576,
++		gfxbackend = 2097152,
++		audio_driver = 4194304,
++		input_driver = 8388608,
++		input_joypad_driver = 16777216,
+ 		all = 0x0FFFFFFF
+ 	};
+ 
+diff -Naur batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122.orig/es-app/src/guis/GuiMenu.cpp batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122/es-app/src/guis/GuiMenu.cpp
+--- batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122.orig/es-app/src/guis/GuiMenu.cpp	2022-05-05 18:59:23.000000000 +0100
++++ batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122/es-app/src/guis/GuiMenu.cpp	2022-05-05 22:58:54.341385821 +0100
+@@ -1870,7 +1870,7 @@
+ 	}
+ 	
+ 
+-	s->addGroup(_("DEFAULT GLOBAL SETTINGS"));
++	s->addGroup(_("DEFAULT DRIVER SETTINGS"));
+ 
+ 	// Screen ratio choice
+ 	if (!hasGlobalFeature("ratio"))
+@@ -1888,6 +1888,61 @@
+ 		s->addSaveFunc([this, videoModeOptionList] { SystemConf::getInstance()->set("global.videomode", videoModeOptionList->getSelected()); });
+ 	}
+ 
++	// GFX Driver
++	if (!hasGlobalFeature("gfxbackend"))
++	{
++		auto gfx_backend = std::make_shared<OptionListComponent<std::string>>(mWindow, _("GRAPHICS API"));
++		gfx_backend->addRange({ { _("AUTO"), "auto" },{ _("OpenGL") , "gl" },{ _("GLCore") , "glcore" },{ _("SDL2") , "sdl2" },{ _("Vulkan") , "vulkan" } }, SystemConf::getInstance()->get("global.gfxbackend"));
++		s->addWithLabel(_("GRAPHICS API"), gfx_backend);
++		s->addSaveFunc([gfx_backend] { SystemConf::getInstance()->set("global.gfxbackend", gfx_backend->getSelected()); });
++	}
++
++	// Audio Driver
++	if (!hasGlobalFeature("audio_driver"))
++	{
++		auto audiodriver = std::make_shared<OptionListComponent<std::string>>(mWindow, _("AUDIO API"));
++		audiodriver->addRange({ { _("AUTO"), "auto" },{ _("ALSA") , "alsa" },{ _("ALSAThread") , "alsathread" },{ _("TinyALSA") , "tinyalsa" },{ _("openAL") , "openal" },{ _("PulseAudio") , "pulse" },{ _("SDL2") , "sdl2" },{ _("NULL") , "null" } }, SystemConf::getInstance()->get("global.audio_driver"));
++		s->addWithLabel(_("AUDIO API"), audiodriver);
++		s->addSaveFunc([audiodriver] { SystemConf::getInstance()->set("global.audio_driver", audiodriver->getSelected()); });
++	}
++	
++	// Input Driver
++	if (!hasGlobalFeature("input_driver"))
++	{
++		auto inputdriver = std::make_shared<OptionListComponent<std::string>>(mWindow, _("INPUT API"));
++		inputdriver->addRange({ { _("AUTO"), "auto" },{ _("SDL2") , "sdl2" },{ _("UDEV") , "udev" },{ _("LINUXRAW") , "linuxraw" },{ _("X") , "x" } }, SystemConf::getInstance()->get("global.input_driver"));
++		s->addWithLabel(_("INPUT API"), inputdriver);
++		s->addSaveFunc([inputdriver] { SystemConf::getInstance()->set("global.input_driver", inputdriver->getSelected()); });
++	}
++	
++	// Input Joypad Driver
++	if (!hasGlobalFeature("input_joypad_driver"))
++	{
++		auto inputjoypaddriver = std::make_shared<OptionListComponent<std::string>>(mWindow, _("JOYPAD API"));
++		inputjoypaddriver->addRange({ { _("AUTO"), "auto" },{ _("SDL2") , "sdl2" },{ _("UDEV") , "udev" },{ _("LINUXRAW") , "linuxraw" },{ _("Parport") , "parport" },{ _("HID") , "hid" } }, SystemConf::getInstance()->get("global.input_joypad_driver"));
++		s->addWithLabel(_("JOYPAD API"), inputjoypaddriver);
++		s->addSaveFunc([inputjoypaddriver] { SystemConf::getInstance()->set("global.input_joypad_driver", inputjoypaddriver->getSelected()); });
++	}
++
++	s->addGroup(_("DEFAULT FRAME MONITORING SETTINGS"));
++ 	// FPS
++	if (!hasGlobalFeature("fps_show"))
++ 	{
++ 		auto fps_show_enabled = std::make_shared<OptionListComponent<std::string>>(mWindow, _("FRAMERATE"));
++ 		fps_show_enabled->addRange({ { _("AUTO"), "auto" },{ _("ON") , "1" },{ _("OFF") , "0" } }, SystemConf::getInstance()->get("global.fps_show"));
++		s->addWithLabel(_("FRAMERATE"), fps_show_enabled);
++		s->addSaveFunc([fps_show_enabled] { SystemConf::getInstance()->set("global.fps_show", fps_show_enabled->getSelected()); });
++ 	}
++ 
++ 	// Frame Count
++	if (!hasGlobalFeature("framecount_show"))
++ 	{
++ 		auto framecount_show_enabled = std::make_shared<OptionListComponent<std::string>>(mWindow, _("FRAMECOUNT"));
++		framecount_show_enabled->addRange({ { _("AUTO"), "auto" },{ _("ON") , "1" },{ _("OFF") , "0" } }, SystemConf::getInstance()->get("global.framecount_show"));
++		s->addWithLabel(_("FRAMECOUNT"), framecount_show_enabled);
++		s->addSaveFunc([framecount_show_enabled] { SystemConf::getInstance()->set("global.framecount_show", framecount_show_enabled->getSelected()); });
++ 	}
++
+ 	// smoothing	
+ 	if (!hasGlobalFeature("smooth"))
+ 	{

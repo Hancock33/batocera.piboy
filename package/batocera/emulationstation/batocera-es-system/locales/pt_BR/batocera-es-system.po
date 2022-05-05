@@ -18,12 +18,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 3.0.1\n"
 
+#. TRANSLATION: shared, shared, shared, shared, shared, ...
+msgctxt "game_options"
+msgid "VIDEO SETTINGS"
+msgstr ""
+
 #. TRANSLATION: shared, mame
 msgctxt "game_options"
 msgid "VIDEO MODE"
 msgstr "MODO DE VÍDEO"
 
-#. TRANSLATION: shared, dolphin, mupen64plus, demul
+#. TRANSLATION: shared, dolphin, flycast, mupen64plus, xemu, ...
 msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
 msgstr "PROPORÇÃO DE ASPECTO DO JOGO"
@@ -53,6 +58,16 @@ msgctxt "game_options"
 msgid "Custom"
 msgstr "Customizado"
 
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Gameplay Rewinding"
+msgstr ""
+
+#. TRANSLATION: shared, shared
+msgctxt "game_options"
+msgid "GAME PLAY"
+msgstr ""
+
 #. TRANSLATION: shared, duckstation
 msgctxt "game_options"
 msgid "REWIND"
@@ -67,6 +82,11 @@ msgstr "Ligado"
 msgctxt "game_options"
 msgid "Off"
 msgstr "Desligado"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Automatically Save/Load Game Play on Exit/Running"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -203,6 +223,11 @@ msgctxt "game_options"
 msgid "AI GAME TRANSLATION"
 msgstr "TRADUÇÃO DE JOGO POR IA"
 
+#. TRANSLATION: shared, shared, shared, shared
+msgctxt "game_options"
+msgid "GAME TRANSLATION"
+msgstr ""
+
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "ENABLE AI TRANSLATION SERVICE"
@@ -232,7 +257,7 @@ msgstr ""
 "Ativa o salto de quadros. Dobra os requisitos do Processador. Números altos "
 "podem resultar em instabilidade visível."
 
-#. TRANSLATION: shared, shared, shared, shared, shared
+#. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "LATENCY REDUCTION"
 msgstr "REDUÇÃO DE LATÊNCIA"
@@ -1475,21 +1500,6 @@ msgctxt "game_options"
 msgid "2nd Joystick (2 Axes, 2 Btns)"
 msgstr "2º Controle (2 Eixos, 2 Botões)"
 
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro
-msgctxt "game_options"
-msgid "Choose which graphics API library to use."
-msgstr ""
-
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro, cemu, dolphin, ...
-msgctxt "game_options"
-msgid "GRAPHICS API"
-msgstr "API GRÁFICA"
-
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro, cemu, daphne, ...
-msgctxt "game_options"
-msgid "Vulkan"
-msgstr "Vulkan"
-
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Enhancement. Skipping it can break some games."
@@ -1667,6 +1677,26 @@ msgstr "Mouse PlayStation"
 msgctxt "game_options"
 msgid "NeGcon"
 msgstr "NeGcon"
+
+#. TRANSLATION: libretro/duckstation, libretro
+msgctxt "game_options"
+msgid "Choose which graphics API library to use."
+msgstr ""
+
+#. TRANSLATION: libretro/duckstation, libretro, libretro, libretro, libretro, ...
+msgctxt "game_options"
+msgid "DRIVERS"
+msgstr ""
+
+#. TRANSLATION: libretro/duckstation, libretro, cemu, dolphin, duckstation, ...
+msgctxt "game_options"
+msgid "GRAPHICS API"
+msgstr "API GRÁFICA"
+
+#. TRANSLATION: libretro/duckstation, libretro, cemu, daphne, dolphin, ...
+msgctxt "game_options"
+msgid "Vulkan"
+msgstr "Vulkan"
 
 #. TRANSLATION: libretro/duckstation, libretro/duckstation
 msgctxt "game_options"
@@ -5798,7 +5828,7 @@ msgctxt "game_options"
 msgid "GLCore"
 msgstr "GLCore"
 
-#. TRANSLATION: libretro, libretro
+#. TRANSLATION: libretro, libretro, libretro, libretro
 msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
@@ -5845,6 +5875,51 @@ msgstr ""
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
+msgid "Choose which input API library to use."
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "INPUT API"
+msgstr ""
+
+#. TRANSLATION: libretro, libretro
+msgctxt "game_options"
+msgid "UDEV"
+msgstr ""
+
+#. TRANSLATION: libretro, libretro
+msgctxt "game_options"
+msgid "LINUXRAW"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "X"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "Choose which joypad API library to use."
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "JOYPAD API"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "Parport"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "HID"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
 msgid "In milliseconds. Can reduce crackling/cutting out."
 msgstr "Em milissegundos. Pode reduzir o estalo/corte."
 
@@ -5876,6 +5951,11 @@ msgstr "CONTROLE PARA PISTOLA"
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Display the current frame counter."
+msgstr ""
+
+#. TRANSLATION: libretro, libretro
+msgctxt "game_options"
+msgid "FRAME MONITORING SETTINGS"
 msgstr ""
 
 #. TRANSLATION: libretro
@@ -6855,11 +6935,6 @@ msgctxt "game_options"
 msgid "Choose which screen ratio you want to use."
 msgstr "Escolha qual proporção de tela que deseja utilizar."
 
-#. TRANSLATION: flycast, openbor
-msgctxt "game_options"
-msgid "SCREEN RATIO"
-msgstr "PROPORÇÃO DE TELA"
-
 #. TRANSLATION: flycast
 msgctxt "game_options"
 msgid "Widescreen"
@@ -7501,6 +7576,11 @@ msgstr "Ativar"
 msgctxt "game_options"
 msgid "Stretch games to full-screen, but may distort the aspect ratio"
 msgstr "Estica os jogos para tela cheia, mas pode distorcer a proporção"
+
+#. TRANSLATION: openbor
+msgctxt "game_options"
+msgid "SCREEN RATIO"
+msgstr "PROPORÇÃO DE TELA"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -8758,11 +8838,6 @@ msgctxt "game_options"
 msgid "Choose the scaling mode for the game screen."
 msgstr "Escolha o modo de dimensionamento para a tela do jogo."
 
-#. TRANSLATION: xemu, sonic2013, soniccd
-msgctxt "game_options"
-msgid "SCALING MODE"
-msgstr "MODO DE ESCALA"
-
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "Original resolution"
@@ -8817,6 +8892,11 @@ msgstr "Corrige falta de sincronização da taxa de atualização da tela."
 msgctxt "game_options"
 msgid "Can smooth the image."
 msgstr "Pode suavizar a imagem."
+
+#. TRANSLATION: sonic2013, soniccd
+msgctxt "game_options"
+msgid "SCALING MODE"
+msgstr "MODO DE ESCALA"
 
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
