@@ -612,7 +612,7 @@ libretro:
                     "2304x1728": 2304x1728
                     "2560x1920": 2560x1920
             texture_scaling:
-                group: VIDEO SETTINGS
+                group: ADVANCED OPTIONS
                 prompt:      TEXTURE UPSCALING (XBRZ)
                 description: Enhancement. Upscales textures on 3D objects.
                 choices:
@@ -620,14 +620,13 @@ libretro:
                     "2x":  2
                     "4x":  4
             texture_smoothing:
-                group: VIDEO SETTINGS
                 prompt:      TEXTURE SMOOTHING
                 description: Smooths out textures on 3D objects.
                 choices:
                     "Off": disabled
                     "On":  enabled
             multisampling:
-                group: VIDEO SETTINGS
+                group: ADVANCED OPTIONS
                 prompt:      ANTI-ALIASING (MSAA)
                 description: Enhancement. Smooth out jagged edges on 3D object polygons.
                 choices:
@@ -638,7 +637,6 @@ libretro:
                     "16x": 16
                     "32x": 32
             screens_layout:
-                group: VIDEO SETTINGS
                 prompt:      SCREEN LAYOUT
                 description: Arrange the dual screen layout.
                 choices:
@@ -5618,7 +5616,7 @@ amiberry:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         amiberry_linemode:
-            group: VIDEO SETTINGS
+            group: ADVANCED OPTIONS
             prompt:      LINE MODE
             description: Adjust screen line draw mode.
             choices:
@@ -5634,7 +5632,7 @@ amiberry:
                 "High":                        hires
                 "Super high":                  superhires
         amiberry_scalingmethod:
-            group: VIDEO SETTINGS
+            group: ADVANCED OPTIONS
             prompt:      SCALING METHOD
             description: Change pixel scaling and filtering method.
             choices:
@@ -5649,7 +5647,7 @@ amiberry:
                 "ON":                          enabled
                 "OFF":                         disabled
         amiberry_image_center:
-            group: VIDEO SETTINGS
+            group: ADVANCED OPTIONS
             prompt:      IMAGE CENTERING
             description: Centers the image screen. Disabled when using Auto Crop. AUTO = Full.
             choices:
@@ -5659,6 +5657,7 @@ amiberry:
                 "NONE":                        none
         amiberry_auto_crop:
             group: VIDEO SETTINGS
+            prompt:      AUTO CROP
             description: Resize automatically the screen. AUTO = Off.
             choices:
                 "ON":                          enabled
@@ -5668,7 +5667,6 @@ cannonball:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         highResolution:
-            group: VIDEO SETTINGS
             prompt:      HIGH RESOLUTION MODE
             description: Improves both sprite scaling and road rendering. Does not affect the car sprite.
             choices:
@@ -8568,21 +8566,20 @@ drastic:
                 "Off": 0
                 "On":  1
         drastic_threaded:
-            group: LATENCY REDUCTION
+            group: ADVANCED OPTIONS
             prompt:      THREADED 3D
             description: Improves performance in 3D games. Can cause glitches.
             choices:
                 "Off": 0
                 "On":  1
         drastic_fix2d:
-            group: VIDEO SETTINGS
+            group: ADVANCED OPTIONS
             prompt:      FIX 2D SCREEN
             description: Fix main 2D screen to follow action.
             choices:
                 "Off": 0
                 "On":  1
         drastic_screen_orientation:
-            group: VIDEO SETTINGS
             prompt:      SCREEN LAYOUT
             description: Arrange the dual screen layout.
             choices:
