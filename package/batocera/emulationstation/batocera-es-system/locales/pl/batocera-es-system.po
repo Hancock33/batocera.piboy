@@ -19,12 +19,17 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
+#. TRANSLATION: shared, shared, shared, shared, shared, ...
+msgctxt "game_options"
+msgid "VIDEO SETTINGS"
+msgstr ""
+
 #. TRANSLATION: shared, mame
 msgctxt "game_options"
 msgid "VIDEO MODE"
 msgstr "TRYB WIDEO"
 
-#. TRANSLATION: shared, dolphin, mupen64plus, demul
+#. TRANSLATION: shared, dolphin, flycast, mupen64plus, xemu, ...
 msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
 msgstr "PROPORCJE GRY"
@@ -54,6 +59,16 @@ msgctxt "game_options"
 msgid "Custom"
 msgstr "Niestandardowe"
 
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Gameplay Rewinding"
+msgstr ""
+
+#. TRANSLATION: shared, shared
+msgctxt "game_options"
+msgid "GAME PLAY"
+msgstr ""
+
 #. TRANSLATION: shared, duckstation
 msgctxt "game_options"
 msgid "REWIND"
@@ -68,6 +83,11 @@ msgstr "Włączone"
 msgctxt "game_options"
 msgid "Off"
 msgstr "Wyłączone"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Automatically Save/Load Game Play on Exit/Running"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -204,6 +224,11 @@ msgctxt "game_options"
 msgid "AI GAME TRANSLATION"
 msgstr "TŁUMACZENIE GRY Z SI"
 
+#. TRANSLATION: shared, shared, shared, shared
+msgctxt "game_options"
+msgid "GAME TRANSLATION"
+msgstr ""
+
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "ENABLE AI TRANSLATION SERVICE"
@@ -233,7 +258,7 @@ msgstr ""
 "Włącza klatki z wyprzedzeniem. Podwaja wymagania procesora. Wysokie liczby "
 "mogą powodować widoczne drgania."
 
-#. TRANSLATION: shared, shared, shared, shared, shared
+#. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "LATENCY REDUCTION"
 msgstr "REDUKCJA OPÓŹNIEŃ"
@@ -1472,21 +1497,6 @@ msgctxt "game_options"
 msgid "2nd Joystick (2 Axes, 2 Btns)"
 msgstr "2. joystick (2 osie, 2 przyciski)"
 
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro
-msgctxt "game_options"
-msgid "Choose which graphics API library to use."
-msgstr ""
-
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro, cemu, dolphin, ...
-msgctxt "game_options"
-msgid "GRAPHICS API"
-msgstr "API GRAFIKI"
-
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro, cemu, daphne, ...
-msgctxt "game_options"
-msgid "Vulkan"
-msgstr "Vulkan"
-
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Enhancement. Skipping it can break some games."
@@ -1665,6 +1675,26 @@ msgstr "Mysz PlayStation"
 msgctxt "game_options"
 msgid "NeGcon"
 msgstr "NeGcon"
+
+#. TRANSLATION: libretro/duckstation, libretro
+msgctxt "game_options"
+msgid "Choose which graphics API library to use."
+msgstr ""
+
+#. TRANSLATION: libretro/duckstation, libretro, libretro, libretro, libretro, ...
+msgctxt "game_options"
+msgid "DRIVERS"
+msgstr ""
+
+#. TRANSLATION: libretro/duckstation, libretro, cemu, dolphin, duckstation, ...
+msgctxt "game_options"
+msgid "GRAPHICS API"
+msgstr "API GRAFIKI"
+
+#. TRANSLATION: libretro/duckstation, libretro, cemu, daphne, dolphin, ...
+msgctxt "game_options"
+msgid "Vulkan"
+msgstr "Vulkan"
 
 #. TRANSLATION: libretro/duckstation, libretro/duckstation
 msgctxt "game_options"
@@ -5795,7 +5825,7 @@ msgctxt "game_options"
 msgid "GLCore"
 msgstr "GLCore"
 
-#. TRANSLATION: libretro, libretro
+#. TRANSLATION: libretro, libretro, libretro, libretro
 msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
@@ -5842,6 +5872,51 @@ msgstr ""
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
+msgid "Choose which input API library to use."
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "INPUT API"
+msgstr ""
+
+#. TRANSLATION: libretro, libretro
+msgctxt "game_options"
+msgid "UDEV"
+msgstr ""
+
+#. TRANSLATION: libretro, libretro
+msgctxt "game_options"
+msgid "LINUXRAW"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "X"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "Choose which joypad API library to use."
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "JOYPAD API"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "Parport"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "HID"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
 msgid "In milliseconds. Can reduce crackling/cutting out."
 msgstr "W milisekundach. Może zmniejszyć trzaski/wycinanie."
 
@@ -5873,6 +5948,11 @@ msgstr "KONTROLER DLA PISTOLETU ŚWIETLNEGO"
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Display the current frame counter."
+msgstr ""
+
+#. TRANSLATION: libretro, libretro
+msgctxt "game_options"
+msgid "FRAME MONITORING SETTINGS"
 msgstr ""
 
 #. TRANSLATION: libretro
@@ -6844,11 +6924,6 @@ msgctxt "game_options"
 msgid "Choose which screen ratio you want to use."
 msgstr "Wybierz proporcje ekranu, których chcesz używać."
 
-#. TRANSLATION: flycast, openbor
-msgctxt "game_options"
-msgid "SCREEN RATIO"
-msgstr "PROPORCJE EKRANU"
-
 #. TRANSLATION: flycast
 msgctxt "game_options"
 msgid "Widescreen"
@@ -7486,6 +7561,11 @@ msgid "Stretch games to full-screen, but may distort the aspect ratio"
 msgstr ""
 "Rozciągaj gry na pełny ekran, ale może to spowodować zniekształcenie "
 "proporcji obrazu"
+
+#. TRANSLATION: openbor
+msgctxt "game_options"
+msgid "SCREEN RATIO"
+msgstr "PROPORCJE EKRANU"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -8747,11 +8827,6 @@ msgctxt "game_options"
 msgid "Choose the scaling mode for the game screen."
 msgstr "Wybierz tryb skalowania dla ekranu gry."
 
-#. TRANSLATION: xemu, sonic2013, soniccd
-msgctxt "game_options"
-msgid "SCALING MODE"
-msgstr "TRYB SKALOWANIA"
-
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "Original resolution"
@@ -8806,6 +8881,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Can smooth the image."
 msgstr ""
+
+#. TRANSLATION: sonic2013, soniccd
+msgctxt "game_options"
+msgid "SCALING MODE"
+msgstr "TRYB SKALOWANIA"
 
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"

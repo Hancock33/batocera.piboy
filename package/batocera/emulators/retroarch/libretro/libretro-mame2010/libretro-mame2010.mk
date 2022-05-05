@@ -52,7 +52,7 @@ define LIBRETRO_MAME2010_INSTALL_TARGET_CMDS
 		$(TARGET_DIR)/usr/lib/libretro/mame0139_libretro.so
 
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2010/samples
-	find $(@D)/metadata -maxdepth 1 -iname "*.xml" -print0 | xargs -0 -I{} zip {}.zip {}
+	find $(@D)/metadata -maxdepth 1 -iname "*.xml" -print0 | xargs -0 -I{} xz {}
 	find $(@D)/metadata -maxdepth 1 -iname "*.xml" -print0 | xargs -0 -I{} rm {}
 	$(INSTALL) -D $(@D)/metadata/* \
 		$(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2010
