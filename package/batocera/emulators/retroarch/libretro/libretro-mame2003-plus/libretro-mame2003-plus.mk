@@ -52,6 +52,8 @@ define LIBRETRO_MAME2003_PLUS_INSTALL_TARGET_CMDS
     # Need to think of another way to use these files.
     # They take up a lot of space on tmpfs.
 		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2003-plus/samples
+    find $(@D)/metadata -maxdepth 1 -iname "*.xml" -print0 | xargs -0 -I{} zip {}.zip {}
+    find $(@D)/metadata -maxdepth 1 -iname "*.xml" -print0 | xargs -0 -I{} rm {}
 	cp -r $(@D)/metadata/* \
 		$(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2003-plus
 		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation

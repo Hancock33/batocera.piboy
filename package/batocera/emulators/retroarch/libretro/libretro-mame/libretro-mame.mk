@@ -63,16 +63,19 @@ define LIBRETRO_MAME_INSTALL_TARGET_CMDS
 		$(TARGET_DIR)/usr/lib/libretro/mess_libretro.so
 	$(INSTALL) -D $(@D)/mamevirtual_libretro.so \
 		$(TARGET_DIR)/usr/lib/libretro/mamevirtual_libretro.so
-	mkdir -p $(TARGET_DIR)/usr/share/lr-mame/hash
-	cp -R $(@D)/hash $(TARGET_DIR)/usr/share/lr-mame
+
+    # Use MAME hashes if installed
+    @if [ "$(BR2_PACKAGE_MAME)" = "y" ]; then \
+    mkdir -p $(TARGET_DIR)/usr/share/lr-mame && ln -sf $(TARGET_DIR)/usr/bin/mame/hash $(TARGET_DIR)/usr/share/lr-mame ; else \
+    mkdir -p $(TARGET_DIR)/usr/share/lr-mame/hash && cp -R $(@D)/hash $(TARGET_DIR)/usr/share/lr-mame ; fi
 
 	mkdir -p $(TARGET_DIR)/usr/share/mame
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/blank.fmtowns $(TARGET_DIR)/usr/share/mame/blank.fmtowns
-	
+
 	# Copy coin drop plugin
 	mkdir -p $(TARGET_DIR)/usr/bin/mame/
     cp -R -u $(@D)/plugins $(TARGET_DIR)/usr/bin/mame/
-	cp -R -u $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/coindrop $(TARGET_DIR)/usr/bin/mame/plugins  
+	cp -R -u $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/coindrop $(TARGET_DIR)/usr/bin/mame/plugins
 endef
 
 define LIBRETRO_MAME_INSTALL_STAGING_CMDS
