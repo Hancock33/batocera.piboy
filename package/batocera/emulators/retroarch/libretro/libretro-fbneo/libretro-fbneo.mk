@@ -62,9 +62,9 @@ define LIBRETRO_FBNEO_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/metadata/* \
 		$(TARGET_DIR)/usr/share/batocera/datainit/bios/fbneo
 
-    # Need to think of another way to use these files.
-    # They take up a lot of space on tmpfs.
-	$(INSTALL) -D $(@D)/dats/* \
+    #Data
+    find $(@D)/dats -maxdepth 1 -iname "*.dat" -print0 | xargs -0 -I{} zip {}.zip {}
+	$(INSTALL) -D $(@D)/dats/*.zip \
 		$(TARGET_DIR)/usr/share/batocera/datainit/bios/fbneo
 endef
 
