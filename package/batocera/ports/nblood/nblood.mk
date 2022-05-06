@@ -3,8 +3,8 @@
 # NBLOOD
 #
 ################################################################################
-# Version: Commits on May 04, 2022
-NBLOOD_VERSION = 9e5f10d1cfc29685ee2668067fc768381469d8b4
+# Version: Commits on May 05, 2022
+NBLOOD_VERSION = 08056b05d5d986a6bd94b1ca095cbf10d44f09f0
 NBLOOD_SITE = https://github.com/nukeykt/NBlood.git
 
 NBLOOD_DEPENDENCIES = sdl2 sdl2_image
