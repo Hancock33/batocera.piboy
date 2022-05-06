@@ -4223,7 +4223,6 @@ libretro:
       shared: [rewind, autosave]
       cfeatures:
             uae4arm_model:
-                group: CORE SETTINGS
                 prompt:      AMIGA MODEL
                 description: Force a specific model and prevent tags detection.
                 choices:
@@ -4234,7 +4233,6 @@ libretro:
                     "CDTV (1MB Chip)":                 CDTV
                     "CD32 Default (2MB Chip)":         CD32
             fastmem:
-                group: CORE SETTINGS
                 prompt:      EMULATED RAM SIZE
                 choices:
                     "None":                       none
@@ -4243,7 +4241,6 @@ libretro:
                     "4MB":                        4 MB
                     "8MB":                        8 MB
             resolution:
-                group: CORE SETTINGS
                 prompt:      INTERNAL RESOLUTION
                 choices:
                     "320x240":                    320x240
@@ -4255,25 +4252,21 @@ libretro:
                     "640x270":                    640x270
                     "768x270":                    768x270
             deinterlace:
-                group: CORE SETTINGS
                 prompt:      LINE DOUBLING (DEINTERLACE)
                 choices:
                     "On": on
                     "Off": off
             leds:
-                group: CORE SETTINGS
                 prompt:      ONSCREEN STATUS LEDS
                 choices:
                     "On": on
                     "Off": off
             copper:
-                group: CORE SETTINGS
                 prompt:      COPPER COPROCESSOR
                 choices:
                     "On": on
                     "Off": off
             floppy_speed:
-                group: CORE SETTINGS
                 prompt:      FLOPPY SPEED
                 choices:
                     "100%":    100
@@ -4281,7 +4274,6 @@ libretro:
                     "400%":    400
                     "800%":    800
             whdload:
-                group: CORE SETTINGS
                 prompt:      WHDLOAD LAUNCHER
                 choices:
                     "Files":    files
