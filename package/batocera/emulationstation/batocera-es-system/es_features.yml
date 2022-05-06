@@ -1,6 +1,5 @@
 # this file describes which features each emulator/core supports
 # the aim is to display in es only the available options
-
 shared:
   cfeatures:
     videomode:
@@ -207,10 +206,8 @@ shared:
       choices:
         "On": 1
         "Off": 0
-
 global:
   shared: [videomode, ratio, shaderset, smooth, integerscale, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, ai_service_enabled, ai_target_lang, ai_service_url, ai_service_pause, rewind, runahead, secondinstance, video_frame_delay_auto, vrr_runloop_enable, video_threaded]
-
 libretro:
   shared: [videomode, ratio, shaderset, smooth, integerscale, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, ai_service_enabled, ai_target_lang, ai_service_url, ai_service_pause, runahead, secondinstance, video_frame_delay_auto, vrr_runloop_enable, video_threaded]
   cfeatures:
@@ -304,7 +301,6 @@ libretro:
       shared: [rewind, autosave]
       cfeatures:
             81_chroma_81:
-                group: ADVANCED OPTIONS
                 prompt:      COLORIZATION
                 description: Emulate Chroma 81 interface (colorization).
                 choices:
@@ -312,7 +308,6 @@ libretro:
                     "Off":         disabled
                     "On (forced)": enabled
             81_highres:
-                group: ADVANCED OPTIONS
                 prompt:      WRX HIGH RESOLUTION
                 description: Required for some homebrew.
                 choices:
@@ -325,7 +320,6 @@ libretro:
             atari800:
                 cfeatures:
                     atari800_system:
-                        group: ADVANCED OPTIONS
                         prompt:      ATARI SYSTEM
                         choices:
                             "400/600XL/800 (48K) (OS B)": 400/800 (OS B)
@@ -340,20 +334,19 @@ libretro:
                             "NTSC 240x480px 60Hz":    NTSC
                             "PAL 288x576px 50Hz":     PAL
                     atari800_sioaccel:
-                        group: ADVANCED OPTIONS
                         prompt:      SIO ACCELERATION
                         description: Speeds up file loading. Some games won't load with this.
                         choices:
                             "Off":     disabled
                             "On":      enabled
                     atari800_artifacting:
-                        group: ADVANCED OPTIONS
                         prompt:      HI-RES ARTIFACTING
                         description: Emulate NTSC quirks to show more colors in hi-res mode.
                         choices:
                             "Off":     disabled
                             "On":      enabled
                     atari800_resolution:
+                        group: VIDEO SETTINGS
                         prompt:      INTERNAL RESOLUTION
                         description: Use an alternate resolution. Some games need this.
                         choices:
@@ -366,7 +359,6 @@ libretro:
             atari5200:
                 cfeatures:
                     atari800_opt2:
-                        group: ADVANCED OPTIONS
                         prompt:      JOYSTICK HACK (FOR ROBOTRON 2084)
                         description: Treats the right analog stick as the second joystick.
                         choices:
@@ -416,7 +408,6 @@ libretro:
                     "6128":  6128
                     "6128+": 6128+
             cap32_ram:
-                group: ADVANCED OPTIONS
                 prompt:      EMULATED RAM SIZE
                 choices:
                     "64KB":    64
@@ -429,7 +420,6 @@ libretro:
       shared: [rewind, autosave]
       cfeatures:
             mesens_ntsc_filter:
-                group: ADVANCED OPTIONS
                 prompt:      BLARGG NTSC FILTER
                 description: Core-powered video filter.
                 choices:
@@ -439,21 +429,18 @@ libretro:
                     "RGB (Blargg)":        RGB (Blargg)
                     "Monochrome (Blargg)": Monochrome (Blargg)
             mesens_blend_high_res:
-                group: ADVANCED OPTIONS
                 prompt:      HIGH-RES BLENDING
                 description: Blur high-res mode, allowing for better transparency effects.
                 choices:
                     "On":  enabled
                     "Off": disabled
             mesens_cubic_interpolation:
-                group: ADVANCED OPTIONS
                 prompt:      CUBIC AUDIO INTERPOLATION
                 description: Enhancement. Swap from SNES' guassian interpolation to cubic. Improves sound quality.
                 choices:
                     "On":  enabled
                     "Off": disabled
             mesens_gbmodel:
-                group: ADVANCED OPTIONS
                 prompt:      GAME BOY MODE
                 description: Change behaviour when emulating GB games. Auto uses SGB for GB and GBC for GBC.
                 choices:
@@ -461,14 +448,12 @@ libretro:
                     "Game Boy Color": Game Boy Color
                     "Super Game Boy": Super Game Boy
             mesens_sgb2:
-                group: ADVANCED OPTIONS
                 prompt:      SUPER GAME BOY 2
                 description: Emulate the Super Game Boy 2 for SGB. Runs games at the correct speed.
                 choices:
                     "On":  enabled
                     "Off": disabled
             mesens_overclock:
-                group: ADVANCED OPTIONS
                 prompt:      OVERCLOCK (UNSTABLE)
                 description: Enhancement. Reduces system slowdown. Causes issues in some games.
                 choices:
@@ -478,14 +463,12 @@ libretro:
                     "High":      High
                     "Very High": Very High
             mesens_overclock_type:
-                group: ADVANCED OPTIONS
                 prompt:      OVERCLOCK TYPE
                 description: Prefer "Before NMI", change to After NMI only if needed by the game.
                 choices:
                     "Before NMI": Before NMI
                     "After NMI":  After NMI
             mesens_superfx_overclock:
-                group: ADVANCED OPTIONS
                 prompt:      SUPER FX OVERCLOCK
                 description: Enhancement. Reduces slowdown in mode 7 games.
                 choices:
@@ -559,14 +542,12 @@ libretro:
             "Off": Off
             "On":  On
         mesen_fdsfastforwardload:
-          group: ADVANCED OPTIONS
           prompt:      (FDS) FAST FORWARD DISK LOADING
           description: Reduce load time at the cost of accuracy.
           choices:
             "Off": Off
             "On":  On
         mesen_ramstate:
-          group: ADVANCED OPTIONS
           prompt:      DEFAULT POWER ON RAM STATE
           description: Useful for speedruns/glitches.
           choices:
@@ -574,7 +555,6 @@ libretro:
             "All 1s":           All 1s
             "Random Values":    Random Values
         mesen_overclock:
-          group: ADVANCED OPTIONS
           prompt:      OVERCLOCK (UNSTABLE)
           description: Enhancement. Reduces system slowdown. Causes issues in some games.
           choices:
@@ -584,7 +564,6 @@ libretro:
             "High":      High
             "Very High": Very High
         mesen_overclock_type:
-          group: ADVANCED OPTIONS
           prompt:      OVERCLOCK TYPE
           description: Prefer "Before NMI", change to After NMI only if needed by the game.
           choices:
@@ -612,7 +591,6 @@ libretro:
                     "2304x1728": 2304x1728
                     "2560x1920": 2560x1920
             texture_scaling:
-                group: ADVANCED OPTIONS
                 prompt:      TEXTURE UPSCALING (XBRZ)
                 description: Enhancement. Upscales textures on 3D objects.
                 choices:
@@ -626,7 +604,6 @@ libretro:
                     "Off": disabled
                     "On":  enabled
             multisampling:
-                group: ADVANCED OPTIONS
                 prompt:      ANTI-ALIASING (MSAA)
                 description: Enhancement. Smooth out jagged edges on 3D object polygons.
                 choices:
@@ -691,7 +668,6 @@ libretro:
       features: [padtokeyboard]
       cfeatures:
             core_timing:
-                group: ADVANCED OPTIONS
                 prompt:      CPU TIMING MODE (FPS)
                 description: Skip frames to improve performance, at the cost of choppy motion.
                 choices:
@@ -739,7 +715,6 @@ libretro:
       features: [padtokeyboard]
       cfeatures:
             pure_cpu_type:
-                group: ADVANCED OPTIONS
                 prompt:      CPU TYPE
                 description: Select which Intel CPU to emulate.
                 choices:
@@ -750,7 +725,6 @@ libretro:
                     "486 (slow)":              486_slow
                     "Pentium (slow)":          pentium_slow
             pure_cpu_core:
-                group: ADVANCED OPTIONS
                 prompt:      CPU CORE METHOD
                 description: Affects efficiency/stability.
                 choices:
@@ -923,7 +897,6 @@ libretro:
                     "8x":          8
                     "9x":          9
             swanstation_antialiasing:
-                group: ADVANCED OPTIONS
                 prompt:      ANTI-ALIASING (MSAA/SSAA)
                 description: Enhancement. Smooth out jagged edges on 3D object polygons.
                 choices:
@@ -953,7 +926,6 @@ libretro:
                     "Off":        "false"
                     "On":         "true"
             swanstation_CropMode:
-                group: ADVANCED OPTIONS
                 prompt:      CROP OVERSCAN
                 description: Zooms in to hide black borders. Borders are different per game.
                 choices:
@@ -1020,7 +992,6 @@ libretro:
                     "8x":          8
                     "9x":          9
             duckstation_antialiasing:
-                group: ADVANCED OPTIONS
                 prompt:      ANTI-ALIASING (MSAA/SSAA)
                 description: Enhancement. Smooth out jagged edges on 3D object polygons.
                 choices:
@@ -1050,7 +1021,6 @@ libretro:
                     "Off":        "false"
                     "On":         "true"
             duckstation_CropMode:
-                group: ADVANCED OPTIONS
                 prompt:      CROP OVERSCAN
                 description: Zooms in to hide black borders. Borders are different per game.
                 choices:
@@ -1086,7 +1056,6 @@ libretro:
       shared: [rewind, autosave]
       cfeatures:
             fbneo-cpu-speed-adjust:
-                group: ADVANCED OPTIONS
                 prompt:      CPU CLOCK
                 description: Can fix slowdown. Only works on some drivers.
                 choices:
@@ -1136,7 +1105,6 @@ libretro:
                             "Arcade MVS Japan":                    MVS Japan
                             "Arcade Universe BIOS (Cheats)":       Universe BIOS
                     fbneo-memcard-mode:
-                        group: ADVANCED OPTIONS
                         prompt:      MEMORY CARD MODE
                         choices:
                             "Off":                                disabled
@@ -1153,7 +1121,6 @@ libretro:
                     "Off":                  disabled
                     "On":                   enabled
             fceumm_cropoverscan:
-                group: ADVANCED OPTIONS
                 prompt:      CROP OVERSCAN
                 description: Zooms in to hide black borders. Borders are different per game.
                 choices:
@@ -1162,7 +1129,6 @@ libretro:
                     "Vertical":             v
                     "Both":                 both
             fceumm_palette:
-                group: ADVANCED OPTIONS
                 prompt:      COLOR FILTER
                 description: Can be used to simulate colors of particular displays.
                 choices:
@@ -1185,7 +1151,6 @@ libretro:
                     "wavebeam":             wavebeam
                     "custom":               custom
             fceumm_ntsc_filter:
-                group: ADVANCED OPTIONS
                 prompt:      BLARGG NTSC FILTER
                 description: Core-powered video filter.
                 choices:
@@ -1194,7 +1159,6 @@ libretro:
                     "SVideo (color bleeding only)":           svideo
                     "RGB (crisp image)":                      rgb
             fceumm_sndquality:
-                group: ADVANCED OPTIONS
                 prompt:      SOUND QUALITY
                 description: Only supported games. Higher settings increase system requirements.
                 choices:
@@ -1202,7 +1166,6 @@ libretro:
                     "High":                 High
                     "Very High":            Very High
             fceumm_overclocking:
-                group: ADVANCED OPTIONS
                 prompt:      OVERCLOCK (UNSTABLE)
                 description: Enhancement. Reduces system slowdown. Causes issues in some games.
                 choices:
@@ -1230,7 +1193,6 @@ libretro:
       shared: [autosave]
       cfeatures:
             reicast_synchronous_rendering:
-                group: ADVANCED OPTIONS
                 prompt:      SYNCHRONOUS RENDERING
                 description: Can avoid flashing screen issues. Significant performance cost.
                 choices:
@@ -1259,14 +1221,12 @@ libretro:
                     "7040x5280":  7040x5280
                     "7680x5760":  7680x5760
             reicast_mipmapping:
-                group: ADVANCED OPTIONS
                 prompt:      TEXTURE MIP-MAPPING (BLUR)
                 description: Smooth textures on distant 3D objects based on angle.
                 choices:
                     "Off": disabled
                     "On":  enabled
             reicast_anisotropic_filtering:
-                group: ADVANCED OPTIONS
                 prompt:      ANISOTROPIC FILTERING
                 description: Improves clarity of distant textures when mip-mapping is enabled.
                 choices:
@@ -1276,7 +1236,6 @@ libretro:
                     "8x":  8
                     "16x": 16
             reicast_texupscale:
-                group: ADVANCED OPTIONS
                 prompt:      TEXTURE UPSCALING (XBRZ)
                 description: Enhancement. Upscales screen textures (2D games only).
                 choices:
@@ -1285,7 +1244,6 @@ libretro:
                     "4x":  4x
                     "6x":  6x
             reicast_render_to_texture_upscaling:
-                group: ADVANCED OPTIONS
                 prompt:      RENDER TO TEXTURE UPSCALING
                 description: Enhancement. Upscale in-game screen-captures.
                 choices:
@@ -1306,7 +1264,6 @@ libretro:
                     "5":   5
                     "6":   6
             reicast_force_wince:
-                group: ADVANCED OPTIONS
                 prompt:      FORCE WINDOWS CE MODE
                 description: Required for some games.
                 choices:
@@ -1444,7 +1401,6 @@ libretro:
             gbc:
                 cfeatures:
                     gbc_color_correction:
-                        group: ADVANCED OPTIONS
                         prompt:      COLOR CORRECTION
                         description: Simulate LCD color inaccuracy.
                         choices:
@@ -1530,7 +1486,6 @@ libretro:
             megadrive:
                 cfeatures:
                     gpgx_blargg_filter_md:
-                        group: ADVANCED OPTIONS
                         prompt:      BLARGG NTSC FILTER
                         description: Core-powered video filter.
                         choices:
@@ -1579,7 +1534,6 @@ libretro:
             mastersystem:
                 cfeatures:
                     gpgx_blargg_filter_ms:
-                        group: ADVANCED OPTIONS
                         prompt:      BLARGG NTSC FILTER
                         description: Core-powered video filter.
                         choices:
@@ -1588,7 +1542,6 @@ libretro:
                             "SVideo (color bleeding only)":           svideo
                             "RGB (crisp image)":                      rgb
                     ym2413:
-                        group: ADVANCED OPTIONS
                         prompt:      FM CHIP (YM2413)
                         description: Enhanced sound output support for compatible games.
                         choices:
@@ -1629,14 +1582,12 @@ libretro:
             gamegear:
                 cfeatures:
                     lcd_filter:
-                        group: ADVANCED OPTIONS
                         prompt:      LCD GHOSTING FILTER
                         description: Required for certain visual effects.
                         choices:
                             "Off":       disabled
                             "On":        enabled
                     gg_extra:
-                        group: ADVANCED OPTIONS
                         prompt:      EXTENDED SCREEN
                         description: Extend the game screen area, similar to the Master System.
                         choices:
@@ -1662,7 +1613,6 @@ libretro:
       shared: [autosave]
       cfeatures:
             mame_cpu_overclock:
-                group: ADVANCED OPTIONS
                 prompt:      OVERCLOCK (UNSTABLE)
                 description: Enhancement. Reduces system slowdown. Causes issues in some games.
                 choices:
@@ -1719,28 +1669,24 @@ libretro:
                     "Twin Stick with Triggers":     "twinstick"
                     "Rotated 4-Way Stick (Q*Bert)": "qbert"
             hiscoreplugin:
-                group: ADVANCED OPTIONS
                 prompt:      HIGH SCORE PLUGIN
                 description: Emable or disable high score saving
                 choices:
                     "Enabled (Default)": 1
                     "Disabled":          0
             sharemameart:
-                group: ADVANCED OPTIONS
                 prompt:      SHARE MAME ARTWORK
                 description: Use the same art paths as standalone MAME - not recommended if using decoarations or shaders.
                 choices:
                     "On (Default)": 1
                     "Off":          0
             artworkcrop:
-                group: ADVANCED OPTIONS
                 prompt:      CROP ARTWORK
                 description: Crop MAME artwork to maximize the game screen and only fill unused space.
                 choices:
                     "On (Default)": 1
                     "Off":          0
             customcfg:
-                group: ADVANCED OPTIONS
                 prompt:      CUSTOM CONFIG
                 description: Use a custom MAME config, do not overwrite config on launch.
                 choices:
@@ -1755,7 +1701,6 @@ libretro:
                     "DS3 Orientation":  1
                     "X360 Orientation": 2
             customcfg:
-                group: ADVANCED OPTIONS
                 prompt:      CUSTOM MAME CONFIG
                 description: Set system-wide controls via MAME menu
                 choices:
@@ -1766,7 +1711,6 @@ libretro:
       shared: [autosave]
       cfeatures:
             mame_cpu_overclock:
-                group: ADVANCED OPTIONS
                 prompt:      OVERCLOCK (UNSTABLE)
                 description: Enhancement. Reduces system slowdown. Causes issues in some games.
                 choices:
@@ -1811,21 +1755,18 @@ libretro:
                     "2560x1440":      2560x1440
                     "3840x2160":      3840x2160
             sharemameart:
-                group: ADVANCED OPTIONS
                 prompt:      SHARE MAME ARTWORK
                 description: Use the same art paths as standalone MAME - not recommended if using decoarations or shaders.
                 choices:
                     "On (Default)": 1
                     "Off":          0
             artworkcrop:
-                group: ADVANCED OPTIONS
                 prompt:      CROP ARTWORK
                 description: Crop MAME artwork to maximize the game screen and only fill unused space.
                 choices:
                     "On (Default)": 1
                     "Off":          0
             customcfg:
-                group: ADVANCED OPTIONS
                 prompt:      CUSTOM CONFIG
                 description: Use a custom MAME config, do not overwrite config on launch.
                 choices:
@@ -1840,7 +1781,6 @@ libretro:
                     "DS3 Orientation":  1
                     "X360 Orientation": 2
             customcfg:
-                group: ADVANCED OPTIONS
                 prompt:      CUSTOM MAME CONFIG
                 description: Set system-wide controls via MAME menu
                 choices:
@@ -1850,7 +1790,6 @@ libretro:
          adam:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -1860,7 +1799,6 @@ libretro:
                           "Coleco ADAM diskettes":          adam_flop
                           "Coleco ColecoVision cartridges": coleco
                   altromtype:
-                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -1873,14 +1811,12 @@ libretro:
                           "Cartridge (Slot 3)": cart3
                           "Cartridge (Slot 4)": cart4
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -1889,14 +1825,12 @@ libretro:
          advision:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":              none
                           "Entex AdventureVision cartridges": advision
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -1905,14 +1839,12 @@ libretro:
          apfm1000:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":   none
                           "APF M-1000 cartridges": apfm1000
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -1921,7 +1853,6 @@ libretro:
          apple2:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -1930,7 +1861,6 @@ libretro:
                           "Apple II miscellaneous disks":   apple2_flop_misc
                           "Apple II original disks":        apple2_flop_orig
                   altromtype:
-                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -1938,14 +1868,12 @@ libretro:
                           "Disk (Drive 1)": flop1
                           "Disk (Drive 2)": flop2
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -1954,7 +1882,6 @@ libretro:
          apple2gs:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -1966,7 +1893,6 @@ libretro:
                           "Apple II miscellaneous disks":     apple2_flop_misc
                           "Apple II original disks":          apple2_flop_orig
                   altromtype:
-                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -1975,14 +1901,12 @@ libretro:
                           "3 1/2 Disk (Drive 3)": flop3
                           "3 1/2 Disk (Drive 4)": flop4
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -1991,14 +1915,12 @@ libretro:
          arcadia:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":             none
                           "Emerson Arcadia 2001 cartridges": arcadia
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2007,7 +1929,6 @@ libretro:
          archimedes:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2016,7 +1937,6 @@ libretro:
                           "Acorn Archimedes hard disks":    archimedes_hdd
                           "Acorn Archimedes ROM images":    archimedes_rom
                   altmodel:
-                      group: ADVANCED OPTIONS
                       prompt:      ARCHIMEDES MODEL
                       description: Select model to emulate
                       choices:
@@ -2025,14 +1945,12 @@ libretro:
                           "Archimedes 440/1 (Default)": aa4401
                           "Archimedes 540":             aa540
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2041,14 +1959,12 @@ libretro:
          astrocde:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":            none
                           "Bally Professional Arcade cartridges": astrocde
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2057,7 +1973,6 @@ libretro:
          atom:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2066,7 +1981,6 @@ libretro:
                           "Acorn Atom disk images":  atom_flop
                           "Acorn Atom Utility ROMs": atom_rom
                   altromtype:
-                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -2076,14 +1990,12 @@ libretro:
                           "Cartridge":      cart
                           "Quickload":      quik
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2092,7 +2004,6 @@ libretro:
          bbc:
               cfeatures:
                   altmodel:
-                      group: ADVANCED OPTIONS
                       prompt:      BBC MODEL
                       description: Select model to emulate
                       choices:
@@ -2101,7 +2012,6 @@ libretro:
                           "BBC Master 512":              bbcm512
                           "BBC Master Compact":          bbcmc
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2116,7 +2026,6 @@ libretro:
                           "Acorn BBC Master Compact disks":                      bbcmc_flop
                           "Olivetti Prodest PC 128S disks (BBC Master Compact)": pro128s_flop
                   altromtype:
-                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -2130,14 +2039,12 @@ libretro:
                           "BBC Master Cartridge (Slot 1)":   cart1
                           "BBC Master Cartridge (Slot 2)":   cart2
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2146,28 +2053,24 @@ libretro:
          camplynx:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":      none
                           "Camputers Lynx cassettes": camplynx_cass
                   altmodel:
-                      group: ADVANCED OPTIONS
                       prompt:      LYNX MODEL
                       choices:
                           "Lynx 128k (Default)": lynx128k
                           "Lynx 96k":            lynx96k
                           "Lynx 48k":            lynx48k
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2176,14 +2079,12 @@ libretro:
          cdi:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":  none
                           "Philips CD-i CD-ROMs": cdi
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2192,7 +2093,6 @@ libretro:
          coco:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2209,21 +2109,18 @@ libretro:
                           "Color Computer 3 (NTSC) (Default)": coco3
                           "Color Computer 3 (PAL)":            coco3p
                   altromtype:
-                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
                           "Cassette":    cass
                           "Cartridge":   cart
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2232,21 +2129,18 @@ libretro:
          crvision:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":            none
                           "V-Tech Creativision cartridges": crvision
                   altromtype:
-                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
                           "Cartridge":   cart
                           "Cassette":    cass
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2255,7 +2149,6 @@ libretro:
          electron:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2271,14 +2164,12 @@ libretro:
                           "Electron w/64k Master RAM Board (default)": electron64
                           "Electron":                                  electron
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2287,7 +2178,6 @@ libretro:
          fm7:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2301,7 +2191,6 @@ libretro:
                           "FM-7":     fm7
                           "FM-77AV":  fm77av
                   altromtype:
-                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -2309,14 +2198,12 @@ libretro:
                           "Disk (Drive 1)": flop1
                           "Disk (Drive 2)": flop2
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2325,7 +2212,6 @@ libretro:
          fmtowns:
               cfeatures:
                   altmodel:
-                      group: ADVANCED OPTIONS
                       prompt:      FM TOWNS MODEL
                       description: Select model to emulate
                       choices:
@@ -2333,14 +2219,12 @@ libretro:
                           "FM Towns (Model 1/2)":     fmtowns
                           "FM Towns II UX":           fmtownsux
                   addblankdisk:
-                      group: ADVANCED OPTIONS
                       prompt:      ADD USER DISK
                       description: Insert a disk into the floppy drive, a blank will be used if one doesn't exist
                       choices:
                           "Off (Default)": 0
                           "On":            1
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2350,7 +2234,6 @@ libretro:
                           "Fujitsu FM Towns miscellaneous floppy disk images": fmtowns_flop_misc
                           "Fujitsu FM Towns original floppy disk images":      fmtowns_flop_orig
                   altromtype:
-                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -2359,14 +2242,12 @@ libretro:
                           "CD-ROM":                                    cdrm
                           "Hard Drive (II UX)":                        hard1
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2375,14 +2256,12 @@ libretro:
          gamate:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":        none
                           "Bit Corp Gamate cartridges": gamate
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2391,14 +2270,12 @@ libretro:
          gamecom:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":       none
                           "Tiger Game.com cartridges": gamecom
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2407,14 +2284,12 @@ libretro:
          gamepock:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":                   none
                           "Epoch Game Pocket Computer cartridges": gamepock
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2423,14 +2298,12 @@ libretro:
          gmaster:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":            none
                           "Hartung Game Master cartridges": gmaster
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2439,7 +2312,6 @@ libretro:
          macintosh:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2460,7 +2332,6 @@ libretro:
                           "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD/Image Reader)": maciix
                           "Mac LC 3 (Default) (4Mb RAM, Color, 2 HD Floppies/CD/HDD)":   maclc3
                   imagereader:
-                      group: ADVANCED OPTIONS
                       prompt:      IMAGE READER
                       description: Install the image reader card to read idks image files (Mac IIx only)
                       choices:
@@ -2471,7 +2342,6 @@ libretro:
                           "Slot D":           nbd
                           "Slot E":           nbe
                   ramsize:
-                      group: ADVANCED OPTIONS
                       prompt:      RAM SIZE
                       description: How much RAM the emulated Mac will have installed (Mac IIx & Mac LC 3 only)
                       choices:
@@ -2485,7 +2355,6 @@ libretro:
                           "96MB":   96
                           "128MB":  128
                   altromtype:
-                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load
                       choices:
@@ -2493,7 +2362,6 @@ libretro:
                           "CD":          cdrm
                           "Hard Drive":  hard
                   bootdisk:
-                      group: ADVANCED OPTIONS
                       prompt:      BOOT DISK
                       description: Select a boot disk or hard drive if needed
                       choices:
@@ -2505,14 +2373,12 @@ libretro:
                           "System 7.0.1 (Hard Drive)": mac701
                           "System 7.5.5 (Hard Drive)": mac755
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2521,14 +2387,12 @@ libretro:
          megaduck:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":             none
                           "Creatronic Mega Duck cartridges": megaduck
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2537,21 +2401,18 @@ libretro:
          pdp1:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":            none
                           "PDP-1 Paper Tape Reader Images": pdp1_ptp
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2560,14 +2421,12 @@ libretro:
          pv1000:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":      none
                           "Casio PV-1000 cartridges": pv1000
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2576,21 +2435,18 @@ libretro:
          socrates:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":                  none
                           "Video Technology Socrates cartridges": socrates
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2599,14 +2455,12 @@ libretro:
          supracan:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":            none
                           "Funtech Super A'Can cartridges": supracan
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2615,28 +2469,24 @@ libretro:
          ti99:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)": none
                           "TI-99/4A Cartridges": ti99_cart
                   ti99_32kram:
-                      group: ADVANCED OPTIONS
                       prompt:      32K RAM EXPANSION
                       description: 32k RAM expansion card installed
                       choices:
                           "Enabled (Default)": 1
                           "Disabled":          0
                   ti99_speech:
-                      group: ADVANCED OPTIONS
                       prompt:      SPEECH MODULE
                       description: Speech module installed
                       choices:
                           "Enabled (Default)": 1
                           "Disabled":          0
                   altromtype:
-                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -2644,14 +2494,12 @@ libretro:
                           "Cassette 2":  cass2
                           "Cartridge":   cart
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2660,28 +2508,24 @@ libretro:
          tutor:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)": none
                           "Tomy Tutor & Pyuuta cartridge": tutor
                   altromtype:
-                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
                           "Cassette":    cass
                           "Cartridge":   cart
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2690,14 +2534,12 @@ libretro:
          vectrex:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":    none
                           "GCE Vectrex cartridges": vectrex
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2706,7 +2548,6 @@ libretro:
          vsmile:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2714,7 +2555,6 @@ libretro:
                           "VTech V.Smile cartridges":        vsmile_cart
                           "VTech V.Smile Motion cartridges": vsmilem_cart
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2723,7 +2563,6 @@ libretro:
          xegs:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2731,7 +2570,6 @@ libretro:
                           "Atari XE Game System cartridges": xegs
                           "Atari 400 / 800 floppy disks":    a800_flop
                   altromtype:
-                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -2741,14 +2579,12 @@ libretro:
                           "Disk (Drive 3)": flop3
                           "Disk (Drive 4)": flop4
                   enableui:
-                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2759,7 +2595,6 @@ libretro:
       shared: [autosave]
       cfeatures:
             mame_cpu_overclock:
-                group: ADVANCED OPTIONS
                 prompt:      OVERCLOCK (UNSTABLE)
                 description: Enhancement. Reduces system slowdown. Causes issues in some games.
                 choices:
@@ -2804,21 +2639,18 @@ libretro:
                     "2560x1440":      2560x1440
                     "3840x2160":      3840x2160
             sharemameart:
-                group: ADVANCED OPTIONS
                 prompt:      SHARE MAME ARTWORK
                 description: Use the same art paths as standalone MAME - not recommended if using decoarations or shaders.
                 choices:
                     "On (Default)": 1
                     "Off":          0
             artworkcrop:
-                group: ADVANCED OPTIONS
                 prompt:      CROP ARTWORK
                 description: Crop MAME artwork to maximize the game screen and only fill unused space.
                 choices:
                     "On":            1
                     "Off (Default)": 0
             customcfg:
-                group: ADVANCED OPTIONS
                 prompt:      CUSTOM CONFIG
                 description: Use a custom MAME config, do not overwrite config on launch.
                 choices:
@@ -2833,7 +2665,6 @@ libretro:
                     "DS3 Orientation":  1
                     "X360 Orientation": 2
             customcfg:
-                group: ADVANCED OPTIONS
                 prompt:      CUSTOM MAME CONFIG
                 description: Set system-wide controls via MAME menu
                 choices:
@@ -2843,14 +2674,12 @@ libretro:
         vgmplay:
               cfeatures:
                   softList:
-                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":    none
                           "Video Game Music Files": vgmplay
                   pergamecfg:
-                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2916,7 +2745,6 @@ libretro:
                     "Show":         disabled
                     "Skip":         enabled
             beetle_psx_cpu_freq_scale:
-                group: ADVANCED OPTIONS
                 prompt:      OVERCLOCK (UNSTABLE)
                 description: Enhancement. Reduces system slowdown. Causes issues in some games.
                 choices:
@@ -2964,14 +2792,12 @@ libretro:
                     "Off":        disabled
                     "On":         enabled
             beetle_psx_frame_duping:
-                group: ADVANCED OPTIONS
                 prompt:      FRAME DUPING (SPEED UP)
                 description: Small performance increase (may drop frames).
                 choices:
                     "Off":        disabled
                     "On":         enabled
             beetle_psx_cpu_dynarec:
-                group: ADVANCED OPTIONS
                 prompt:      CPU DYNAREC (SPEED UP)
                 description: Much faster than interpreter (but may have issues).
                 choices:
@@ -2980,7 +2806,6 @@ libretro:
                     "Cycle Timing Check":            execute_once
                     "Lightrec Interpreter":          run_interpreter
             beetle_psx_dynarec_invalidate:
-                group: ADVANCED OPTIONS
                 prompt:      DYNAREC CODE INVALIDATION
                 choices:
                     "Full (more compatible)":       full
@@ -3058,14 +2883,12 @@ libretro:
             gb:
                 cfeatures:
                     sgb_borders:
-                        group: ADVANCED OPTIONS
                         prompt:      SUPER GB BORDERS
                         description: Only for Super Game Boy enhanced games.
                         choices:
                             "Off": OFF
                             "On":  ON
                     color_correction:
-                        group: ADVANCED OPTIONS
                         prompt:      COLOR CORRECTION
                         description: Simulate LCD color inaccuracy.
                         choices:
@@ -3074,14 +2897,12 @@ libretro:
             gbc:
                 cfeatures:
                     sgb_borders:
-                        group: ADVANCED OPTIONS
                         prompt:      SUPER GB BORDERS
                         description: Only for Super Game Boy enhanced games.
                         choices:
                             "Off": OFF
                             "On":  ON
                     color_correction:
-                        group: ADVANCED OPTIONS
                         prompt:      COLOR CORRECTION
                         description: Simulate LCD color inaccuracy.
                         choices:
@@ -3090,7 +2911,6 @@ libretro:
             gba:
                 cfeatures:
                     solar_sensor_level:
-                        group: ADVANCED OPTIONS
                         prompt:      SOLAR SENSOR LEVEL
                         description: Value to use for the emulated solar sensor (Boktai).
                         choices:
@@ -3174,14 +2994,12 @@ libretro:
                     "Off":       4:3
                     "On":        16:9 adjusted
             mupen64plus-BilinearMode:
-                group: ADVANCED OPTIONS
                 prompt:      TEXTURE FILTERING MODE
                 description: Enhancement. 3 point is accurate to N64, standard is better.
                 choices:
                     "standard":   standard
                     "3 point":    3point
             mupen64plus-MultiSampling:
-                group: ADVANCED OPTIONS
                 prompt:      ANTI-ALIASING (MSAA)
                 description: Enhancement. Smooth out jagged edges on 3D objects polygons.
                 choices:
@@ -3191,7 +3009,6 @@ libretro:
                     "8x":         8
                     "16x":        16
             mupen64plus-txFilterMode:
-                group: ADVANCED OPTIONS
                 prompt:      TEXTURE FILTERING
                 description: Smooth textures on 3D objects.
                 choices:
@@ -3203,7 +3020,6 @@ libretro:
                     "Sharp 1":    Sharp filtering 1
                     "Sharp 2":    Sharp filtering 2
             mupen64plus-txEnhancementMode:
-                group: ADVANCED OPTIONS
                 prompt:      TEXTURE UPSCALING
                 description: Enhancement. Upscale textures.
                 choices:
@@ -3287,7 +3103,6 @@ libretro:
                     "Off":                  disabled
                     "On":                   enabled
             nestopia_cropoverscan:
-                group: ADVANCED OPTIONS
                 prompt:      CROP OVERSCAN
                 description: Zooms in to hide black borders. Borders are different per game.
                 choices:
@@ -3296,7 +3111,6 @@ libretro:
                     "Vertical":             v
                     "Both":                 both
             nestopia_palette:
-                group: ADVANCED OPTIONS
                 prompt:      COLOR FILTER
                 description: Can be used to simulate colors of particular displays.
                 choices:
@@ -3312,7 +3126,6 @@ libretro:
                     "nes-classic-fbx-fs":   nes-classic-fbx-fs
                     "custom":               custom
             nestopia_blargg_ntsc_filter:
-                group: ADVANCED OPTIONS
                 prompt:      BLARGG NTSC FILTER
                 description: Core-powered video filter.
                 choices:
@@ -3321,7 +3134,6 @@ libretro:
                     "SVideo (color bleeding only)":           svideo
                     "RGB (crisp image)":                      rgb
             nestopia_overclock:
-                group: ADVANCED OPTIONS
                 prompt:      OVERCLOCK (UNSTABLE)
                 description: Enhancement. Reduces system slowdown. Causes issues in some games.
                 choices:
@@ -3393,14 +3205,12 @@ libretro:
                     "512MB":              512
                     "1024MB":             1024
             np2kai_gdc:
-                group: ADVANCED OPTIONS
                 prompt:      GDC
                 description: Graphic Display Controller model.
                 choices:
                     "uPD7220":   uPD7220
                     "uPD72020":  uPD72020
             np2kai_skipline:
-                group: ADVANCED OPTIONS
                 prompt:      REMOVE SCANLINES
                 description: Older games skipped drawing every second line, this masks that.
                 choices:
@@ -3408,14 +3218,12 @@ libretro:
                     "Off":       OFF
                     "On":        ON
             np2kai_realpal:
-                group: ADVANCED OPTIONS
                 prompt:      REAL PALETTES
                 description: Some games rely on this (Apros).
                 choices:
                     "Off":       OFF
                     "On":        ON
             np2kai_SNDboard:
-                group: ADVANCED OPTIONS
                 prompt:      SOUND BOARD
                 description: 26K for old games and 86K for newer games.
                 choices:
@@ -3448,7 +3256,6 @@ libretro:
                     "Otomi-chanx2 + 86":                                Otomi-chanx2 + 86
                     "WaveStar":                                         WaveStar
             np2kai_jast_snd:
-                group: ADVANCED OPTIONS
                 prompt:      JAST SOUND
                 description: To have music and not only sound in games (Owl-Zoo).
                 choices:
@@ -3492,14 +3299,12 @@ libretro:
                     "Off":                         disabled
                     "On":                          enabled
             o2em_crop_overscan:
-                group: ADVANCED OPTIONS
                 prompt:      CROP OVERSCAN
                 description: Zooms in to hide black borders.
                 choices:
                     "Off":                         disabled
                     "On":                          enabled
             o2em_mix_frames:
-                group: ADVANCED OPTIONS
                 prompt:      CRT GHOSTING EFFECT
                 description: Required for certain visual effects.
                 choices:
@@ -3510,7 +3315,6 @@ libretro:
                     "Ghosting (85%)":              ghost_85
                     "Ghosting (95%)":              ghost_95
             o2em_low_pass_range:
-                group: ADVANCED OPTIONS
                 prompt:      AUDIO FILTER
                 description: Soften the hash sound effect from some games.
                 choices:
@@ -3560,7 +3364,6 @@ libretro:
                     "7":               7
                     "8":               8
             game_fixes_opera:
-                group: ADVANCED OPTIONS
                 prompt:      SPECIFIC GAME FIXES
                 choices:
                     "Off":               disabled
@@ -3569,7 +3372,6 @@ libretro:
                     "Dinopark Tycoon":   timing_hack3
                     "Microcosm":         timing_hack5
             opera_nvram_storage:
-                group: ADVANCED OPTIONS
                 prompt:      NVRAM STORAGE
                 description: Enable shared saves for multi-disc games
                 choices:
@@ -3601,7 +3403,6 @@ libretro:
                     "Off":   normal
                     "On":    widescreen
             parallel-n64-filtering:
-                group: ADVANCED OPTIONS
                 prompt:      TEXTURE FILTERING
                 description: Smooth textures on 3D objects.
                 choices:
@@ -3610,7 +3411,6 @@ libretro:
                     "Bilinear":    bilinear
                     "Nearest":     nearest
             parallel-n64-framerate:
-                group: ADVANCED OPTIONS
                 prompt:      FRAMERATE
                 description: Fullspeed can break some games.
                 choices:
@@ -3725,7 +3525,6 @@ libretro:
                     "Port2":            port 2 only
                     "Port1+2":          both
             game_fixes_pcsx:
-                group: ADVANCED OPTIONS
                 prompt:      SPECIFIC GAME FIXES
                 choices:
                     "Off":                                  disabled
@@ -3772,7 +3571,6 @@ libretro:
                     "Off":             disabled
                     "On":              enabled
             picodrive_cropoverscan:
-                group: ADVANCED OPTIONS
                 prompt:      CROP OVERSCAN
                 description: Zooms in to hide black borders.
                 choices:
@@ -3798,14 +3596,12 @@ libretro:
       shared: [rewind, autosave]
       cfeatures:
             pokemini_lcdfilter:
-                group: ADVANCED OPTIONS
                 prompt:      LCD FILTER
                 description: Produces a clean LCD effect.
                 choices:
                     "Off":  none
                     "On":   dotmatrix
             pokemini_lcdmode:
-                group: ADVANCED OPTIONS
                 prompt:      LCD GHOSTING EFFECTS
                 description: Required for certain visual effects.
                 choices:
@@ -3964,7 +3760,6 @@ libretro:
                     "High 720p":        hires
                     "Super-high 1440p": superhires
             zoom_mode:
-                group: ADVANCED OPTIONS
                 prompt:      ZOOM (HIDE BORDERS)
                 description: Hides borders on many games. Some games use the borders.
                 choices:
@@ -3999,21 +3794,18 @@ libretro:
             amiga500:
                 cfeatures:
                     puae_floppy_speed:
-                        group: ADVANCED OPTIONS
                         prompt:      FLOPPY TURBO SPEED
                         description: Removes loading but can add possible glitches/crashes.
                         choices:
                             "Off":    100
                             "On":     0
                     keyrah_mapping:
-                        group: ADVANCED OPTIONS
                         prompt:      2P GAMEPAD MAPPING (KEYRAH)
                         description: Keypad to joyport mappings for 2 players.
                         choices:
                             "Off":    disabled
                             "On":     enabled
                     whdload:
-                        group: ADVANCED OPTIONS
                         prompt:      WHDLOAD LAUNCHER
                         description: Enable launching pre-installed WHDLoad installs.
                         choices:
@@ -4065,21 +3857,18 @@ libretro:
             amiga1200:
                 cfeatures:
                     puae_floppy_speed:
-                        group: ADVANCED OPTIONS
                         prompt:      FLOPPY TURBO SPEED
                         description: Removes loading but can add possible glitches/crashes.
                         choices:
                             "Off":    100
                             "On":     0
                     keyrah_mapping:
-                        group: ADVANCED OPTIONS
                         prompt:      2P GAMEPAD MAPPING (KEYRAH)
                         description: Keypad to joyport mappings for 2 players.
                         choices:
                             "Off":    disabled
                             "On":     enabled
                     whdload:
-                        group: ADVANCED OPTIONS
                         prompt:      WHDLOAD LAUNCHER
                         description: Enable launching pre-installed WHDLoad installs.
                         choices:
@@ -4131,14 +3920,12 @@ libretro:
             amigacd32:
                 cfeatures:
                     puae_cd_startup_delayed_insert:
-                        group: ADVANCED OPTIONS
                         prompt:      BOOT ANIMATION FIRST
                         description: Inserts CD during boot animation to prevent loading fail.
                         choices:
                             "Off":    disabled
                             "On":     enabled
                     puae_cd_speed:
-                        group: ADVANCED OPTIONS
                         prompt:      CD TURBO SPEED
                         description: Removes loading but can add possible glitches/crashes.
                         choices:
@@ -4154,20 +3941,17 @@ libretro:
             amigacdtv:
                 cfeatures:
                     puae_cd_startup_delayed_insert:
-                        group: ADVANCED OPTIONS
                         prompt:      BOOT ANIMATION FIRST
                         description: Inserts CD during boot animation prevent loading fail.
                         choices:
                             "Off":    disabled
                             "On":     enabled
                     puae_cd_speed:
-                        group: ADVANCED OPTIONS
                         prompt:      CD TURBO SPEED
                         description: Removes loading but can add possible glitches/crashes.
                         choices:
                             "Off":    100
                             "On":     0
-
     puae2021:
       features: [padtokeyboard]
       shared: [rewind, autosave]
@@ -4242,7 +4026,6 @@ libretro:
                     "High 720p":        hires
                     "Super-high 1440p": superhires
             zoom_mode:
-                group: ADVANCED OPTIONS
                 prompt:      ZOOM (HIDE BORDERS)
                 description: Hides borders on many games. Some games use the borders.
                 choices:
@@ -4277,21 +4060,18 @@ libretro:
             amiga500:
                 cfeatures:
                     puae2021_floppy_speed:
-                        group: ADVANCED OPTIONS
                         prompt:      FLOPPY TURBO SPEED
                         description: Removes loading but can add possible glitches/crashes.
                         choices:
                             "Off":    100
                             "On":     0
                     keyrah_mapping:
-                        group: ADVANCED OPTIONS
                         prompt:      2P GAMEPAD MAPPING (KEYRAH)
                         description: Keypad to joyport mappings for 2 players.
                         choices:
                             "Off":    disabled
                             "On":     enabled
                     whdload:
-                        group: ADVANCED OPTIONS
                         prompt:      WHDLOAD LAUNCHER
                         description: Enable launching pre-installed WHDLoad installs.
                         choices:
@@ -4343,21 +4123,18 @@ libretro:
             amiga1200:
                 cfeatures:
                     puae2021_floppy_speed:
-                        group: ADVANCED OPTIONS
                         prompt:      FLOPPY TURBO SPEED
                         description: Removes loading but can add possible glitches/crashes.
                         choices:
                             "Off":    100
                             "On":     0
                     keyrah_mapping:
-                        group: ADVANCED OPTIONS
                         prompt:      2P GAMEPAD MAPPING (KEYRAH)
                         description: Keypad to joyport mappings for 2 players.
                         choices:
                             "Off":    disabled
                             "On":     enabled
                     whdload:
-                        group: ADVANCED OPTIONS
                         prompt:      WHDLOAD LAUNCHER
                         description: Enable launching pre-installed WHDLoad installs.
                         choices:
@@ -4409,14 +4186,12 @@ libretro:
             amigacd32:
                 cfeatures:
                     puae2021_cd_startup_delayed_insert:
-                        group: ADVANCED OPTIONS
                         prompt:      BOOT ANIMATION FIRST
                         description: Inserts CD during boot animation to prevent loading fail.
                         choices:
                             "Off":    disabled
                             "On":     enabled
                     puae2021_cd_speed:
-                        group: ADVANCED OPTIONS
                         prompt:      CD TURBO SPEED
                         description: Removes loading but can add possible glitches/crashes.
                         choices:
@@ -4432,20 +4207,17 @@ libretro:
             amigacdtv:
                 cfeatures:
                     puae2021_cd_startup_delayed_insert:
-                        group: ADVANCED OPTIONS
                         prompt:      BOOT ANIMATION FIRST
                         description: Inserts CD during boot animation prevent loading fail.
                         choices:
                             "Off":    disabled
                             "On":     enabled
                     puae2021_cd_speed:
-                        group: ADVANCED OPTIONS
                         prompt:      CD TURBO SPEED
                         description: Removes loading but can add possible glitches/crashes.
                         choices:
                             "Off":    100
                             "On":     0
-
     uae4arm:
       features: [padtokeyboard]
       shared: [rewind, autosave]
@@ -4500,7 +4272,6 @@ libretro:
                 choices:
                     "On": on
                     "Off": off
-
             floppy_speed:
                 group: CORE SETTINGS
                 prompt:      FLOPPY SPEED
@@ -4531,7 +4302,6 @@ libretro:
                     "Retropad":            1
                     "Joystick":            513
                     "Keyboard":            259
-
     px68k:
       features: [padtokeyboard]
       cfeatures:
@@ -4608,7 +4378,6 @@ libretro:
                     "32 MHz (Overclock)":   32
                     "64 MHz (Overclock)":   64
             q88_pcg-8100:
-                group: ADVANCED OPTIONS
                 prompt:      EMULATE PCG-8100
                 description: Required for some games.
                 choices:
@@ -4680,7 +4449,6 @@ libretro:
                     "2.5":        2.5
                     "3.0":        3.0
             scummvm_speed_hack:
-                group: ADVANCED OPTIONS
                 prompt:      SPEED HACK (SAFE)
                 description: Improve speed, at a minor cost of accuracy.
                 choices:
@@ -4691,14 +4459,12 @@ libretro:
       shared: [rewind, autosave]
       cfeatures:
             reduce_sprite_flicker:
-                group: ADVANCED OPTIONS
                 prompt:      REDUCE SPRITE FLICKERING (UNSTABLE)
                 description: Enhancement. Remove the thirty-two sprites per line limit. Crashes certain games.
                 choices:
                     "Off":        disabled
                     "On":         enabled
             reduce_slowdown:
-                group: ADVANCED OPTIONS
                 prompt:      OVERCLOCK (UNSTABLE)
                 description: Overclock the SNES CPU (Gradius 3, Super R-Type).
                 choices:
@@ -4707,7 +4473,6 @@ libretro:
                     "Compatible":            compatible
                     "Max (demanding games)": max
             overclock_superfx:
-                group: ADVANCED OPTIONS
                 prompt:      SUPER FX OVERCLOCK
                 description: Enhancement. Reduces slowdown in mode 7 games.
                 choices:
@@ -4726,7 +4491,6 @@ libretro:
                     "450%":       450%
                     "500%":       500%
             hires_blend:
-                group: ADVANCED OPTIONS
                 prompt:      BLEND HIGH-RES MODE
                 description: Blur high-res mode, allowing for better transparency effects.
                 choices:
@@ -4768,7 +4532,6 @@ libretro:
                     "Off":        disabled
                     "On":         enabled
             2010_reduce_slowdown:
-                group: ADVANCED OPTIONS
                 prompt:      OVERCLOCK (UNSTABLE)
                 description: Overclock the SNES CPU (Gradius 3, Super R-Type).
                 choices:
@@ -4777,7 +4540,6 @@ libretro:
                     "Compatible":            compatible
                     "Max (demanding games)": max
             2010_overclock_superfx:
-                group: ADVANCED OPTIONS
                 prompt:      SUPER FX OVERCLOCK
                 description: Enhancement. Reduces slowdown in mode 7 games.
                 choices:
@@ -4821,7 +4583,6 @@ libretro:
       shared: [rewind, autosave]
       cfeatures:
             sync_saves:
-                group: ADVANCED OPTIONS
                 prompt:      SYNC SAVE FILES
                 description: Sync GB2Player/GBC2Player saves with saves in "saves/gb" or "saves/gbc".
                 choices:
@@ -4896,7 +4657,6 @@ libretro:
                     "black/magenta":       black & magenta
                     "black/yellow":        black & yellow
             3d_color_mode:
-                group: ADVANCED OPTIONS
                 prompt:      ANAGLYPH PRESET (3D)
                 description: Use your physical anaglypth 3D glasses!
                 choices:
@@ -4926,14 +4686,12 @@ libretro:
                             "pink dreams":      pink dreams
                             "weird colors":     weird colors
                     gbcoloroption_gb:
-                        group: ADVANCED OPTIONS
                         prompt:      COLOR CORRECTION
                         description: Simulate LCD color inaccuracy.
                         choices:
                             "Off":       disabled
                             "On":        enabled
                     showborders_gb:
-                        group: ADVANCED OPTIONS
                         prompt:      SUPER GB BORDERS
                         description: Only for Super Game Boy enhanced games.
                         choices:
@@ -4942,14 +4700,12 @@ libretro:
             gbc:
                 cfeatures:
                     gbcoloroption_gbc:
-                        group: ADVANCED OPTIONS
                         prompt:      COLOR CORRECTION
                         description: Simulate LCD color inaccuracy.
                         choices:
                             "Off":       disabled
                             "On":        enabled
                     showborders_gbc:
-                        group: ADVANCED OPTIONS
                         prompt:      SUPER GB BORDERS
                         description: Only for Super Game Boy enhanced games.
                         choices:
@@ -4958,7 +4714,6 @@ libretro:
             gba:
                 cfeatures:
                     solarsensor:
-                        group: ADVANCED OPTIONS
                         prompt:      SOLAR SENSOR LEVEL
                         description: Only for games that employed it (for Boktai)
                         choices:
@@ -4974,7 +4729,6 @@ libretro:
                             "9":  9
                             "10": 10
                     gyro_sensitivity:
-                        group: ADVANCED OPTIONS
                         prompt:      SENSOR SENSITIVITY (GYROSCOPE)
                         description: For Gyro-enabled games (bound to left analog stick)
                         choices:
@@ -5002,7 +4756,6 @@ libretro:
                             "115": 115
                             "120": 120
                     tilt_sensitivity:
-                        group: ADVANCED OPTIONS
                         prompt:      SENSOR SENSITIVITY (TILT)
                         description: For Gyro-enabled games (bound to right analog stick)
                         choices:
@@ -5085,13 +4838,13 @@ libretro:
                     "rgb":                      rgb
                     "vice":                     vice
             vice_aspect_ratio:
+                group: VIDEO SETTINGS
                 prompt:      ASPECT RATIO
                 description: Change the output resolution ratio.
                 choices:
                     "PAL 576x312px":     pal
                     "NTSC 492x262px":    ntsc
             vice_zoom_mode:
-                group: ADVANCED OPTIONS
                 prompt:      ZOOM (HIDE BORDERS)
                 description: Hides borders on many games. Some games used the borders.
                 choices:
@@ -5180,13 +4933,13 @@ libretro:
                     "rgb":                      rgb
                     "vice":                     vice
             vice_aspect_ratio:
+                group: VIDEO SETTINGS
                 prompt:      ASPECT RATIO
                 description: Change the output resolution ratio.
                 choices:
                     "PAL 576x312px":     pal
                     "NTSC 492x262px":    ntsc
             vice_zoom_mode:
-                group: ADVANCED OPTIONS
                 prompt:      ZOOM (HIDE BORDERS)
                 description: Hides borders on many games. Some games used the borders.
                 choices:
@@ -5264,13 +5017,13 @@ libretro:
                     "rgb":                      rgb
                     "vice":                     vice
             vice_aspect_ratio:
+                group: VIDEO SETTINGS
                 prompt:      ASPECT RATIO
                 description: Change the output resolution ratio.
                 choices:
                     "PAL 576x312px":     pal
                     "NTSC 492x262px":    ntsc
             vice_zoom_mode:
-                group: ADVANCED OPTIONS
                 prompt:      ZOOM (HIDE BORDERS)
                 description: Hides borders on many games. Some games used the borders.
                 choices:
@@ -5331,7 +5084,6 @@ libretro:
                     "V364 NTSC":            V364 NTSC
                     "232 NTSC":             232 NTSC
             vice_plus4_external_palette:
-                group: ADVANCED OPTIONS
                 prompt:      COLOR FILTER
                 description: Can be used to simulate colors of particular displays.
                 choices:
@@ -5340,13 +5092,13 @@ libretro:
                     "yape-pal":                 yape-pal
                     "yape-ntsc":                yape-ntsc
             vice_aspect_ratio:
+                group: VIDEO SETTINGS
                 prompt:      ASPECT RATIO
                 description: Change the output resolution ratio.
                 choices:
                     "PAL 576x312px":     pal
                     "NTSC 492x262px":    ntsc
             vice_zoom_mode:
-                group: ADVANCED OPTIONS
                 prompt:      ZOOM (HIDE BORDERS)
                 description: Hides borders on many games. Some games used the borders.
                 choices:
@@ -5416,13 +5168,13 @@ libretro:
                     "mike-ntsc":                mike-ntsc
                     "vice":                     vice
             vice_aspect_ratio:
+                group: VIDEO SETTINGS
                 prompt:      ASPECT RATIO
                 description: Change the output resolution ratio.
                 choices:
                     "PAL 576x312px":     pal
                     "NTSC 492x262px":    ntsc
             vice_zoom_mode:
-                group: ADVANCED OPTIONS
                 prompt:      ZOOM (HIDE BORDERS)
                 description: Hides borders on many games. Some games used the borders.
                 choices:
@@ -5497,13 +5249,13 @@ libretro:
                     "amber":         amber
                     "white":         white
             vice_aspect_ratio:
+                group: VIDEO SETTINGS
                 prompt:      ASPECT RATIO
                 description: Change the output resolution ratio.
                 choices:
                     "PAL 576x312px":     pal
                     "NTSC 492x262px":    ntsc
             vice_zoom_mode:
-                group: ADVANCED OPTIONS
                 prompt:      ZOOM (HIDE BORDERS)
                 description: Hides borders on many games. Some games used the borders.
                 choices:
@@ -5555,7 +5307,6 @@ libretro:
       shared: [autosave]
       cfeatures:
             usefastblitter:
-                group: ADVANCED OPTIONS
                 prompt:      FAST BLITTER (LESS COMPATIBLE)
                 description: For weak machines. Some games will not work with this.
                 choices:
@@ -5568,7 +5319,6 @@ libretro:
                     "Show":       enabled
                     "Skip":       disabled
             doom_res_hack:
-                group: ADVANCED OPTIONS
                 prompt:      DOOM RES HACK
                 description: Enable for Doom to run at its correct resolution.
                 choices:
@@ -5608,15 +5358,12 @@ libretro:
       shared: [rewind, autosave]
     wasm4:
       shared: [rewind, autosave]
-
 # Standalones
-
 amiberry:
   features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         amiberry_linemode:
-            group: ADVANCED OPTIONS
             prompt:      LINE MODE
             description: Adjust screen line draw mode.
             choices:
@@ -5632,7 +5379,6 @@ amiberry:
                 "High":                        hires
                 "Super high":                  superhires
         amiberry_scalingmethod:
-            group: ADVANCED OPTIONS
             prompt:      SCALING METHOD
             description: Change pixel scaling and filtering method.
             choices:
@@ -5640,14 +5386,12 @@ amiberry:
                 "Pixelated (Nearest)":         pixelated
                 "Smooth (Linear)":             smooth
         amiberry_flickerfixer:
-            group: ADVANCED OPTIONS
             prompt:      REMOVE INTERLACE ARTIFACTS
             description: Fix flickering in a static screen like Workbench.
             choices:
                 "ON":                          enabled
                 "OFF":                         disabled
         amiberry_image_center:
-            group: ADVANCED OPTIONS
             prompt:      IMAGE CENTERING
             description: Centers the image screen. Disabled when using Auto Crop. AUTO = Full.
             choices:
@@ -5662,7 +5406,6 @@ amiberry:
             choices:
                 "ON":                          enabled
                 "OFF":                         disabled
-
 cannonball:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
@@ -5672,11 +5415,10 @@ cannonball:
             choices:
                 "Off": 0
                 "On":  1
-
 cemu:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
-        gfxbackend:       
+        gfxbackend:
             group: DRIVERS
             prompt: GRAPHICS API
             description: Choose which graphics API library to use. Vulkan is better, when supported.
@@ -5684,7 +5426,6 @@ cemu:
                 "OpenGL":                      OpenGL
                 "Vulkan":                      Vulkan
         async:
-            group: ADVANCED OPTIONS
             prompt:      ASYNC SHADER (VULKAN ONLY)
             description: Speed up. Causes visual glitches on first load.
             choices:
@@ -5709,7 +5450,6 @@ cemu:
                 "5 Pro Controller":            2
                 "5 Sideway Wiimote":           3
                 "Wii U Classic Controller":    4
-
 citra:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
@@ -5741,7 +5481,7 @@ citra:
                 "9x (3600x2160)":        9
                 "10x (4000x2400)":       10
         use_vsync_new:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      VSYNC
             description: Fix screen tearing. CPU heavy.
             choices:
@@ -5754,14 +5494,12 @@ citra:
                 "Off":                   0
                 "On":                    1
         citra_use_disk_shader_cache:
-            group: ADVANCED OPTIONS
             prompt:      DISK SHADER CACHE
             description: Reduce stutter that happens when compiling shaders.
             choices:
                 "Off":                   0
                 "On":                    1
         citra_custom_textures:
-            group: ADVANCED OPTIONS
             prompt:      LOAD CUSTOM TEXTURES
             description: Preloading is impossible from ES.
             choices:
@@ -5769,18 +5507,17 @@ citra:
                 "On":                    1-normal
                 #"Preload":               1-preload
         citra_is_new_3ds:
-            group: ADVANCED OPTIONS
             prompt:      NEW 3DS MODE
             description: The New 3DS has a faster processor, ZL/ZR buttons and a C-stick.
             choices:
                 "Off":                   0
                 "On":                    1
-
 daphne:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         gfxbackend:
+            group: DRIVERS
             archs_include: [x86, x86_64, rpi4, rk3326]
             prompt:      GRAPHICS BACKEND
             description: Choose your graphics rendering
@@ -5788,6 +5525,7 @@ daphne:
                 "OpenGL": OpenGL
                 "Vulkan": Vulkan
         daphne_ratio:
+            group: VIDEO SETTINGS
             prompt:      ASPECT RATIO
             description: Not all games support Stretch, depending on the video files.
             choices:
@@ -5803,7 +5541,6 @@ daphne:
                 "90 degrees":  90
                 "270 degrees": 270
         bilinear_filter:
-            group: ADVANCED OPTIONS
             prompt:      BILINEAR FILTERING
             description: Smooth pixels.
             choices:
@@ -5811,14 +5548,12 @@ daphne:
                 "Off": 1
         daphne_scanlines:
             archs_include: [x86, x86_64]
-            group: ADVANCED OPTIONS
             prompt:      SCANLINES
             description: Use with Stretch aspect ratio and adjust joystick sensitivity as required.
             choices:
                 "Off":                          0
                 "On":                           1
         blend_sprites:
-            group: ADVANCED OPTIONS
             prompt:      BLEND SPRITES (SINGE)
             description: Restore BLENDMODE outline on Singe sprites.
             choices:
@@ -5855,17 +5590,14 @@ daphne:
                 "Off":                          0
                 "On":                           1
         daphne_texturestream:
-            group: ADVANCED OPTIONS
             prompt:      SDL TEXTUREACCESS STREAMING
             description: Can improve video performance. Do not use with ActionMax games or scanlines.
             choices:
                 "Off":                          0
                 "On":                           1
-
 devilutionx:
   features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 dolphin:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
@@ -5891,14 +5623,14 @@ dolphin:
                 "7x (4480x3696)":       7
                 "8x 5K (5120x4224)":    8
         dolphin_aspect_ratio:
-            prompt:      GAME ASPECT RATIO
+            group: VIDEO SETTINGS
+            prompt:      ASPECT RATIO
             description: The final output image, unrelated to the Wii's emulated NAND setting.
             choices:
                 "Force 16:9": 1
                 "Force 4:3": 2
                 "Stretch to window": 3
         ubershaders:
-            group: ADVANCED OPTIONS
             prompt:      UBERSHADERS
             description: May not work well on all hardware. Hybrid is preferred, where supported.
             choices:
@@ -5907,14 +5639,12 @@ dolphin:
                 "Hybrid Ubershaders":                      hybrid_ubershader
                 "Skip Drawing":                            skip_draw
         wait_for_shaders:
-            group: ADVANCED OPTIONS
             prompt:      PRE-CACHE SHADERS
             description: Compile shaders on next launch of game (one time). Reduces micro-freezes.
             choices:
                 "Off (default)": 0
                 "On":            1
         perf_hacks:
-            group: ADVANCED OPTIONS
             prompt:      PERFORMANCE HACKS
             description: Increase emulator performance, at the cost of accuracy/stability.
             choices:
@@ -5928,7 +5658,6 @@ dolphin:
                 "Off": 0
                 "On":  1
         anisotropic_filtering:
-            group: ADVANCED OPTIONS
             prompt:      ANISOTROPIC FILTERING
             description: Improves clarity of distant textures.
             choices:
@@ -5938,21 +5667,18 @@ dolphin:
                 "8x":  3
                 "16x": 4
         dual_core:
-            group: ADVANCED OPTIONS
             prompt:      DUAL CORE MODE
             description: Usually not much faster than single core mode.
             choices:
                 "Off": 0
                 "On":  1
         gpu_sync:
-            group: ADVANCED OPTIONS
             prompt:      GPU SYNC
             description: Speed hack for dual core mode to fix some glitches.
             choices:
                 "Off": 0
                 "On":  1
         antialiasing:
-            group: ADVANCED OPTIONS
             prompt:      ANTI-ALIASING
             description: Enhancement. Smooth out jagged edges on 3D object polygons.
             choices:
@@ -5961,41 +5687,36 @@ dolphin:
                 "4x":  4
                 "8x":  8
         use_ssaa:
-            group: ADVANCED OPTIONS
             prompt:      ANTI-ALIASING MODE
             description: Toggle MSAA/SSAA. Depends on anti-aliasing being enabled.
             choices:
                 "MSAA (default)": 0
                 "SSAA":           1
         hires_textures:
-            group: ADVANCED OPTIONS
             prompt:      LOAD CUSTOM TEXTURES
             choices:
                 "Off": 0
                 "On":  1
         enable_cheats:
-            group: ADVANCED OPTIONS
             prompt:      ENABLE CHEATS
             description: To use game cheats or 16/9 Aspect Ratio Fix codes.
             choices:
                 "Off": 0
                 "On":  1
         enable_mmu:
-            group: ADVANCED OPTIONS
             prompt:      MEMORY MANAGEMENT UNIT
             description: Required by some games.
             choices:
                 "Off": 0
                 "On":  1
         enable_fastdisc:
-            group: ADVANCED OPTIONS
             prompt:      FAST DISK TRANSFER RATE
             description: Enhancement. Removes disc loading.
             choices:
                 "Off": 0
                 "On":  1
         vsync:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      VSYNC
             description: Fix screen tearing. CPU heavy.
             choices:
@@ -6021,7 +5742,6 @@ dolphin:
             choices:
                 "Off": 0
                 "On":  1
-
   systems:
     gamecube:
         cfeatures:
@@ -6057,7 +5777,6 @@ dolphin:
                     "Wiimote Sideway + Swing":   is
                     "Wiimote Sideway + Tilt":    it
                     "Wiimote Sideway + Nunchuk": in
-
 dolphin_triforce:
   features: [decoration]
   shared: [hud]
@@ -6074,6 +5793,7 @@ dolphin_triforce:
                 "3x (1920x1584)":         6
                 "4x 1440p (2560x2112)":   7
         dolphin_aspect_ratio:
+            group: VIDEO SETTINGS
             prompt:      ASPECT RATIO
             description: The final output image, unrelated to the Wii's emulated NAND setting.
             choices:
@@ -6081,7 +5801,6 @@ dolphin_triforce:
                 "Force 4:3": 2
                 "Stretch to window": 3
         perf_hacks:
-            group: ADVANCED OPTIONS
             prompt:      PERFORMANCE HACKS (needs review)
             description: Increase emulator performance, at the cost of accuracy/stability.
             choices:
@@ -6095,7 +5814,6 @@ dolphin_triforce:
                 "Off": 0
                 "On":  1
         anisotropic_filtering:
-            group: ADVANCED OPTIONS
             prompt:      ANISOTROPIC FILTERING
             description: Improves clarity of distant textures.
             choices:
@@ -6105,21 +5823,18 @@ dolphin_triforce:
                 "8x":  3
                 "16x": 4
         dual_core:
-            group: ADVANCED OPTIONS
             prompt:      DUAL CORE MODE
             description: Usually not much faster than single core mode.
             choices:
                 "Off": 0
                 "On":  1
         gpu_sync:
-            group: ADVANCED OPTIONS
             prompt:      GPU SYNC
             description: Speed hack for dual core mode to fix some glitches.
             choices:
                 "Off": 0
                 "On":  1
         antialiasing:
-            group: ADVANCED OPTIONS
             prompt:      ANTI-ALIASING
             description: Enhancement. Smooth out jagged edges on 3D object polygons.
             choices:
@@ -6133,34 +5848,30 @@ dolphin_triforce:
                 "16xQ (CSAA)": 7
                 "4x (SSAA)":   8
         hires_textures:
-            group: ADVANCED OPTIONS
             prompt:      LOAD CUSTOM TEXTURES
             choices:
                 "Off": 0
                 "On":  1
         widescreen_hack:
-            group: ADVANCED OPTIONS
             prompt:      WIDESCREEN HACK (GLITCHY)
             description: Enhancement. Only works with a 16/9 ratio and bezels disabled.
             choices:
                 "Off": 0
                 "On":  1
         enable_mmu:
-            group: ADVANCED OPTIONS
             prompt:      MEMORY MANAGEMENT UNIT
             description: Required by some games.
             choices:
                 "Off": 0
                 "On":  1
         vsync:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      VSYNC
             description: Fix screen tearing. CPU heavy.
             choices:
                 "Off": 0
                 "On":  1
         disable_osd_messages:
-            group: ADVANCED OPTIONS
             prompt:      DISABLE OSD MESSAGES
             description: Disable status messages displayed by the emulator.
             choices:
@@ -6172,19 +5883,15 @@ dolphin_triforce:
             choices:
                 "Off": 0
                 "On":  1
-
 dosbox:
   features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 dosbox_staging:
   features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 dosbox-x:
   features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 duckstation:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
@@ -6209,7 +5916,6 @@ duckstation:
                 "OpenGL":                        OpenGL
                 "Vulkan":                        Vulkan
         duckstation_executionmode:
-            group: ADVANCED OPTIONS
             prompt:      CPU EXECUTION MODE
             description: Interpreter is the most accurate, but is the slowest.
             choices:
@@ -6217,14 +5923,13 @@ duckstation:
                 "Cached Interpreter (Faster)":       CachedInterpreter
                 "Interpreter (Slowest)":             Interpreter
         duckstation_threadedpresentation:
-            group: ADVANCED OPTIONS
             prompt:      THREADED PRESENTATION
             description: Improve performance if VSync is disabled and using Vulkan.
             choices:
                 "Off":                           0
                 "On":                            1
         duckstation_vsync:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      VSYNC
             description: Fix screen tearing. CPU heavy.
             choices:
@@ -6264,7 +5969,6 @@ duckstation:
                 "15x":                           15
                 "16x":                           16
         duckstation_antialiasing:
-            group: ADVANCED OPTIONS
             prompt:      ANTI-ALIASING (MSAA/SSAA)
             description: Enhancement. Smooth out jagged edges on 3D object polygons.
             choices:
@@ -6280,7 +5984,6 @@ duckstation:
                 "16x SSAA":                      16-ssaa
                 "32x SSAA":                      32-ssaa
         duckstation_texture_filtering:
-            group: ADVANCED OPTIONS
             prompt:      TEXTURE FILTERING
             description: Enhancement. Smooth/upscale textures on 3D objects.
             choices:
@@ -6292,7 +5995,6 @@ duckstation:
                 "xBR":                           xBR
                 "xBR (no edge blending)":        xBRBinAlpha
         duckstation_CropMode:
-            group: ADVANCED OPTIONS
             prompt:      CROP OVERSCAN
             description: Zooms in to hide black borders. Borders are different per game.
             choices:
@@ -6312,14 +6014,12 @@ duckstation:
                 "NTSC-U/C":                      NTSC-U
                 "NTSC-J":                        NTSC-J
         duckstation_60hz:
-            group: ADVANCED OPTIONS
             prompt:      FORCE NTSC TIMINGS ON PAL
             description: Hack. Increases most PAL games' speed by 17%.
             choices:
                 "Off":                           0
                 "On":                            1
         duckstation_custom_textures:
-            group: ADVANCED OPTIONS
             prompt:      LOAD CUSTOM TEXTURES
             description: Preload requires more RAM.
             choices:
@@ -6373,13 +6073,12 @@ duckstation:
                 "Namco GunCon (Rumble)":         NamcoGunCon
                 "PlayStation Mouse":             PlayStationMouse
                 "NeGcon (Rumble)":               NeGcon
-
 flycast:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
     flycast_ratio:
       group: VIDEO SETTINGS
-      prompt: GAME ASPECT RATIO
+      prompt: ASPECT RATIO
       description: Choose which screen ratio you want to use.
       choices:
         "Default":    no
@@ -6434,34 +6133,28 @@ flycast:
             "Europe":  2
             "Default": 3
         flycast_loadstate:
-          group: ADVANCED OPTIONS
           prompt:      ENABLE AUTO LOAD STATES
           description: Enable Dreamcast auto load states.
           choices:
             "Off (Default)": no
             "On"           : yes
         flycast_savestate:
-          group: ADVANCED OPTIONS
           prompt:      ENABLE AUTO SAVE STATES
           description: Enable Dreamcast auto saves states.
           choices:
             "Off (Default)": no
             "On"           : yes
         flycast_winCE:
-          group: ADVANCED OPTIONS
           prompt:      FORCE WINDOWS CE
           description: Forces Dreamcast Windows CE mode on.
           choices:
             "Off (Default)": no
             "On"           : yes
-
 fpinball:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 fsuae:
   features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 hatari:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -6499,16 +6192,13 @@ hatari:
                 1M:                  1
                 2M:                  2
                 4M:                  4
-
 linapple:
   features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 melonds:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         melonds_framerate:
-            group: ADVANCED OPTIONS
             prompt: LIMIT FRAMERATE
             description: Choose whether or not to limit the framerate.
             choices:
@@ -6536,7 +6226,6 @@ melonds:
                 "15x native (3840x2880)":        15
                 "16x native (4096x3072)":        16
         melonds_polygons:
-            group: ADVANCED OPTIONS
             prompt: ENABLE POLYGON SPLITTING
             description: Enables improved polygon splitting.
             choices:
@@ -6607,12 +6296,10 @@ melonds:
             choices:
                 "DS (default)":        0
                 "DSi (Experiemental)": 1
-
 moonlight:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         moonlight_codec:
-            group: ADVANCED OPTIONS
             prompt:      VIDEO STREAM CODEC
             description: h265 (HEVC) is CPU heavy and increases latency, but is more bandwidth efficient.
             choices:
@@ -6631,7 +6318,6 @@ moonlight:
                 "60FPS":                    1
                 "120FPS":                   2
         moonlight_bitrate:
-            group: ADVANCED OPTIONS
             prompt:      VIDEO STREAM BITRATE
             description: Higher number for higher picture quality, but requires more bandwidth.
             choices:
@@ -6640,7 +6326,6 @@ moonlight:
                 "20Mbps (not supported by some routers)": 2
                 "50Mbps (highest quality available)":     3
         moonlight_sops:
-            group: ADVANCED OPTIONS
             prompt:      DYNAMICALLY CALCULATE OPTIMAL SETTINGS
             description: Streaming Optimal Playable Settings, overrides other settings if enabled.
             choices:
@@ -6653,23 +6338,21 @@ moonlight:
                 "on":                    0
                 "off":                   1
         moonlight_avdecoder:
-            group: ADVANCED OPTIONS
             prompt:      PREFERRED AV DECODER
             description: If screen is rotated by 90 degrees, select SDL.
             choices:
                 "None":                  "none"
                 "SDL":                   "sdl"
-
 mupen64plus:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         mupen64plus_ratio:
-            prompt:      GAME ASPECT RATIO
+            group: VIDEO SETTINGS
+            prompt:      ASPECT RATIO
             choices:
                 "4:3":   4/3
                 "16:9":  16/9
         mupen64plus_frameskip:
-            group: ADVANCED OPTIONS
             prompt:      FRAMESKIP (GL64MK2 ONLY)
             description: Skip frames to improve performance, at the cost of choppy motion.
             choices:
@@ -6681,7 +6364,6 @@ mupen64plus:
                 "4":                    4
                 "5":                    5
         mupen64plus_AudioBuffer:
-            group: ADVANCED OPTIONS
             prompt:      AUDIO BUFFER (SAMPLES)
             description: Lower values reduce audio latency and improve performance, but can cause audio issues.
             choices:
@@ -6690,7 +6372,6 @@ mupen64plus:
                 "Medium":        Medium
                 "Low":           Low
         mupen64plus_Mipmapping:
-            group: ADVANCED OPTIONS
             prompt:      TEXTURE MIP-MAPPING (BLUR)
             description: Smooth textures on distant 3D objects based on angle.
             choices:
@@ -6699,7 +6380,6 @@ mupen64plus:
                 "bilinear":             2
                 "trilinear":            3
         mupen64plus_Anisotropic:
-            group: ADVANCED OPTIONS
             prompt:      ANISOTROPIC FILTERING
             description: Enhancement. Improves clarity of distant textures when mip-mapping is enabled.
             choices:
@@ -6709,7 +6389,6 @@ mupen64plus:
                 "8x":                   8
                 "16x":                  16
         mupen64plus_AntiAliasing:
-            group: ADVANCED OPTIONS
             prompt:      ANTI-ALIASING (MSAA)
             description: Enhancement. Smooth out jagged edges on 3D object polygons.
             choices:
@@ -6719,7 +6398,6 @@ mupen64plus:
                 "8x":                   8
                 "16x":                  16
         mupen64plus_TextureEnhancement:
-            group: ADVANCED OPTIONS
             prompt:      TEXTURE UPSCALING (RICE ONLY)
             description: Upscale textures on 3D objects.
             choices:
@@ -6734,27 +6412,23 @@ mupen64plus:
                 "External":             8
                 "Mirrored":             9
         mupen64plus_LoadHiResTextures:
-            group: ADVANCED OPTIONS
             prompt:      LOAD CUSTOM TEXTURES
             choices:
                 "Off":                  "False"
                 "On":                   "True"
         mupen64plus_DisableExtraMem:
-            group: ADVANCED OPTIONS
             prompt:      DISABLE 4MB EXPANSION RAM PACK
             description: Required by some games.
             choices:
                 "Off":                  "False"
                 "On":                   "True"
         mupen64plus_fb_read_always:
-            group: ADVANCED OPTIONS
             prompt:      READ FRAMEBUFFER EVERY FRAME (GLIDE64MK2)
             description: Required for some effects in-game (Banjo Kazooie and DK64 transitions), can cause slowdown.
             choices:
                 "Game default": -1
                 "Disable":      0
                 "Enable":       1
-
 openbor:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
@@ -6780,7 +6454,6 @@ openbor:
                 "ScanLines TV":   9
                 "TV 2x":          10
                 "Dot Matrix":     11
-
 pcsx2:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
@@ -6818,7 +6491,6 @@ pcsx2:
                 "6x (2160p 4K)": 6
                 "7x (2880p)":    7
         anisotropic_filtering:
-            group: ADVANCED OPTIONS
             prompt:      ANISOTROPIC FILTERING
             description: Improves clarity of distant textures.
             choices:
@@ -6828,7 +6500,6 @@ pcsx2:
                 "8x":          8
                 "16x":         16
         skipdraw:
-            group: ADVANCED OPTIONS
             prompt:      SKIPDRAW HACK
             description: Skip drawing screen effects. Cumulative.
             choices:
@@ -6839,21 +6510,19 @@ pcsx2:
                 "4 (special FX)":  4
                 "5 (other)":       5
         align_sprite:
-            group: ADVANCED OPTIONS
             prompt:      ALIGN SPRITE (HACK)
             description: Remove lines in internal resolution (fixes Soul Calibur).
             choices:
                 "Off":      0
                 "On":       1
         vsync:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      VSYNC
             description: Fix screen tearing. CPU heavy.
             choices:
                 "Off":      0
                 "On":       1
         micro_vu:
-            group: ADVANCED OPTIONS
             prompt:     "MICRO VU SPEED HACKS"
             description: Good speedup and high compatibility; recommended but may cause issues.
             # The value for each choice is the same as the corresponding PCSX2 ini key
@@ -6865,28 +6534,24 @@ pcsx2:
                 "mVU Flag Hack + MTVU":                                 "vuFlagHack,vuThread"
                 "mVU Flag Hack + Instant VU1":                          "vuFlagHack,vu1Instant"
         EmuCore_EnableCheats:
-            group: ADVANCED OPTIONS
             prompt:      GAME CHEATS
             description: Enables Action Replay cheats.
             choices:
                 "Off":      disabled
                 "On":       enabled
         EmuCore_EnableWideScreenPatches:
-            group: ADVANCED OPTIONS
             prompt:      WIDESCREEN PATCHES
             description: Enhancement. Only works with a 16/9 ratio and bezels disabled.
             choices:
                 "Off":      disabled
                 "On":       enabled
         EmuCore_EnablePatches:
-            group: ADVANCED OPTIONS
             prompt:      AUTOMATIC GAMEFIXES
             description: Automatically use gamefixes as appropriate. Stacks with manual gamefixes.
             choices:
                 "Off":      disabled
                 "On":       enabled
         EmuCore_ManualPatches:
-            group: ADVANCED OPTIONS
             prompt:      MANUAL GAMEFIXES
             description: Stacks with auto gamefixes.
             choices:
@@ -6917,7 +6582,6 @@ pcsx2:
                 "Port1":    port1
                 "Port2":    port2
                 "Port1+2":  port12
-
 ppsspp:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, rewind]
   cfeatures:
@@ -6930,7 +6594,6 @@ ppsspp:
                 "OpenGL":               0 (OPENGL)
                 "Vulkan":               3 (VULKAN)
         rendering_mode:
-            group: ADVANCED OPTIONS
             prompt:      RENDERING MODE
             description: Skip buffer disables auto frameskip and renders at display output resolution.
             choices:
@@ -6968,14 +6631,12 @@ ppsspp:
                 "On":                   1
                 "Off":                  0
         vsyncinterval:
-            group: ADVANCED OPTIONS
             prompt:      VSYNC INTERVAL
             description: Enable for more fluidity, disable if screen tearing.
             choices:
                 "Enable":               1
                 "Disable":              0
         texture_scaling_level:
-            group: ADVANCED OPTIONS
             prompt:      TEXTURE UPSCALING LEVEL
             description: Enhancement. Enables texture upscaling textures and their size.
             choices:
@@ -6986,7 +6647,6 @@ ppsspp:
                 "4x":                   4
                 "5x":                   5
         texture_scaling_type:
-            group: ADVANCED OPTIONS
             prompt:      TEXTURE UPSCALING TYPE
             description: The upscaling method used when enabled.
             choices:
@@ -6995,14 +6655,12 @@ ppsspp:
                 "Bicubique":            2
                 "Hybride + Bicubique":  3
         texture_deposterize:
-            group: ADVANCED OPTIONS
             prompt:      TEXTURE DEPOSTERIZE
             description: Fix texture banding when upscaling.
             choices:
                 "Off":                  False
                 "On":                   True
         anisotropic_filtering:
-            group: ADVANCED OPTIONS
             prompt:      ANISOTROPIC FILTERING
             description: Improves clarity of distant textures.
             choices:
@@ -7012,25 +6670,20 @@ ppsspp:
                 "8x":                   3
                 "16x":                  4
         enable_cheats:
-            group: ADVANCED OPTIONS
             prompt:      GAME CHEATS
             description: Enables Action Replay cheats.
             choices:
                 "Off":                  False
                 "On":                   True
-
 pygame:
   features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 reicast:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 rpcs3:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         gui:
-            group: ADVANCED OPTIONS
             prompt:      GRAPHICAL USER INTERFACE
             description: Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping.
             choices:
@@ -7056,7 +6709,6 @@ rpcs3:
                 "16:9":  16/9
                 "4:3":   4/3
         spudecoder:
-            group: ADVANCED OPTIONS
             prompt:      SPU DECODER
             description: If game crashes, try ASMJIT. If still crashing, try Fast Interpreter.
             choices:
@@ -7065,7 +6717,6 @@ rpcs3:
                 "Fast Interpreter":     Interpreter (fast)
                 "Precise Interpreter":  Interpreter (precise)
         framelimit:
-            group: ADVANCED OPTIONS
             prompt:      ADDITIONAL FRAMELIMIT
             description: Most games already have an internal framelimit. Minor performance cost.
             choices:
@@ -7075,7 +6726,6 @@ rpcs3:
                 "60":                      60
                 "30":                      30
         shadermode:
-            group: ADVANCED OPTIONS
             prompt:      SHADER MODE
             description: Only Async (skip draw) avoids freezing while compiling shaders.
             choices:
@@ -7084,21 +6734,19 @@ rpcs3:
                 "Async with interp. (hybrid)":      Async with Shader Interpreter
                 "Interpreter only (experimental)":  Shader Interpreter only
         vsync:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      VSYNC
             description: Can fix screen tearing on unorthodox displays (most LCDs don't need this).
             choices:
                 "Off":         0
                 "On (slower)": 1
         colorbuffers:
-            group: ADVANCED OPTIONS
             prompt: WRITE COLOR BUFFERS
             description: May fix missing graphics and broken lighting at the cost of performance.
             choices:
                 "Off (Default)": False
                 "On":            True
         sputhreads:
-            group: ADVANCED OPTIONS
             prompt: PREFERRED SPU THREADS
             description: Limiting to 1 or 2 may fix audio stuttering on weaker CPUs in some games. Leave on automatic if slowdown occurs.
             choices:
@@ -7110,17 +6758,14 @@ rpcs3:
                 "5 threads": 5
                 "6 threads": 6
         depthbuffer:
-            group: ADVANCED OPTIONS
             prompt: WRITE DEPTH BUFFER
             description: May fix broken graphics in some games.
             choices:
                 "Off (Default)": False
                 "On":            True
-
 scummvm:
   features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 easyrpg:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
@@ -7145,7 +6790,6 @@ easyrpg:
                 "Greek":                         1253
                 "Turkish":                       1254
                 "Baltic":                        1257
-
 redream:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
@@ -7161,6 +6805,7 @@ redream:
               "3200x2400":          5
               "3840x2880":          6
       redreamRatio:
+          group: VIDEO SETTINGS
           prompt:      ASPECT RATIO
           description: Choose your preferred aspect ratio.
           choices:
@@ -7168,20 +6813,21 @@ redream:
               "16:9":          "16:9"
               "Stretch":       stretch
       redreamFrameSkip:
+          group: VIDEO SETTINGS
           prompt:      FRAMESKIP
           description: Enable auto frameskipping for performance on lower-end systems.
           choices:
               "Off (Default)" : 0
               "On"            : 1
       redreamVsync:
-          group: ADVANCED OPTIONS
+          group: VIDEO SETTINGS
           prompt:      VSYNC
           description: Enable vertical sync to avoid tearing in some cases.
           choices:
               "Off (Default)": 0
               "On"           : 1
       redreamPolygon:
-          group: ADVANCED OPTIONS
+          group: VIDEO SETTINGS
           prompt:      POLYGON SORT ACCURACY
           description: Choose the amount of polygon sort accuracy (Higher may cause artifacts).
           choices:
@@ -7220,27 +6866,22 @@ redream:
               "VGA (Default)": vga
               "RGB":           rgb
               "Composite":     composite
-
 sdlpop:
   features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 superbroswar:
   features: []
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 supermodel:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         engine3D:
-            group: ADVANCED OPTIONS
             prompt:      3D ENGINE
             description: Enable the legacy or the new 3D engine (choose legacy for older GPUs).
             choices:
                 "Legacy3D": legacy3d
                 "New3D":    new3d
         quadRendering:
-            group: ADVANCED OPTIONS
             prompt:      QUAD RENDERING
             description: Enable proper quad rendering (for higher end systems).
             choices:
@@ -7268,14 +6909,12 @@ supermodel:
                 "Off":      0
                 "On":       1
         pedalSwap:
-            group: ADVANCED OPTIONS
             prompt:      MODERN PEDAL CONTROLS
             description: Use L2/R2 for Accel/Brake and L1/R1 or R-stick Up/Down for Shift Up/Down.
             choices:
                 "Off":      0
                 "On":       1
         ppcFreq:
-            group: ADVANCED OPTIONS
             prompt:      ADJUST POWERPC FREQUENCY
             description: Change the speed of the emulated PowerPC chip (fixes some issues).
             choices:
@@ -7285,28 +6924,23 @@ supermodel:
                 "100":          100
                 "125":          125
                 "150":          150
-
 cgenius:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 vice:
   features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         noborder:
-            group: ADVANCED OPTIONS
             prompt:      ZOOM (HIDE BORDERS)
             description: Hides borders on many games. Some games used the borders.
             choices:
                 "NO (DEFAULT)": 0
                 "YES":          1
-
 tsugaru:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         cdrom_speed:
-            group: ADVANCED OPTIONS
             prompt:      CD-ROM SPEED
             choices:
                 "AUTO (DEFAULT)": auto
@@ -7315,13 +6949,11 @@ tsugaru:
                 "4X":             4
                 "8X":             8
         386dx:
-            group: ADVANCED OPTIONS
             prompt:      FORCE 386DX CPU
             description: Required by some games.
             choices:
                 "NO (DEFAULT)":   0
                 "YES":            1
-
 mame:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -7343,7 +6975,6 @@ mame:
                 "OpenGL ES":       gles
                 "Vulkan":          vulkan
         bgfxshaders:
-            group: ADVANCED OPTIONS
             prompt:      BGFX VIDEO FILTER
             description: Apply a post-processing effect.
             choices:
@@ -7359,7 +6990,6 @@ mame:
                 "HQ3X":                        hq3x
                 "HQ4X":                        hq4x
         switchres:
-            group: ADVANCED OPTIONS
             prompt:      CRT SWITCHRES
             description: Allows the use of switchres profiles if present.
             choices:
@@ -7373,14 +7003,12 @@ mame:
                 "Rotate 90":       autoror
                 "Rotate 270":      autorol
         artworkcrop:
-            group: ADVANCED OPTIONS
             prompt:      ARTWORK CROP
             description: Crop artwork to only unused space, keeping the game as large as possible.
             choices:
                 "Off (Default)": 0
                 "On":            1
         altdpad:
-            group: ADVANCED OPTIONS
             prompt:      ALT DPAD MODE
             description: If the D-Pad is oriented incorrectly for your controller.
             choices:
@@ -7388,7 +7016,6 @@ mame:
                 "DS3 Orientation":  1
                 "X360 Orientation": 2
         customcfg:
-            group: ADVANCED OPTIONS
             prompt:      CUSTOM MAME CONFIG
             description: Set system-wide controls via MAME menu
             choices:
@@ -7398,7 +7025,6 @@ mame:
        adam:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
@@ -7408,7 +7034,6 @@ mame:
                         "Coleco ADAM diskettes":          adam_flop
                         "Coleco ColecoVision cartridges": coleco
                 altromtype:
-                    group: ADVANCED OPTIONS
                     prompt:      MEDIA TYPE
                     description: Type of ROM file to load.
                     choices:
@@ -7421,14 +7046,12 @@ mame:
                         "Cartridge (Slot 3)": cart3
                         "Cartridge (Slot 4)": cart4
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7437,14 +7060,12 @@ mame:
        advision:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":              none
                         "Entex AdventureVision cartridges": advision
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7453,14 +7074,12 @@ mame:
        apfm1000:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":   none
                         "APF M-1000 cartridges": apfm1000
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7469,7 +7088,6 @@ mame:
        apple2:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
@@ -7478,7 +7096,6 @@ mame:
                         "Apple II miscellaneous disks":   apple2_flop_misc
                         "Apple II original disks":        apple2_flop_orig
                 altromtype:
-                    group: ADVANCED OPTIONS
                     prompt:      MEDIA TYPE
                     description: Type of ROM file to load.
                     choices:
@@ -7486,14 +7103,12 @@ mame:
                         "Disk (Drive 1)": flop1
                         "Disk (Drive 2)": flop2
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7502,7 +7117,6 @@ mame:
        apple2gs:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
@@ -7514,7 +7128,6 @@ mame:
                         "Apple II miscellaneous disks":     apple2_flop_misc
                         "Apple II original disks":          apple2_flop_orig
                 altromtype:
-                    group: ADVANCED OPTIONS
                     prompt:      MEDIA TYPE
                     description: Type of ROM file to load.
                     choices:
@@ -7523,14 +7136,12 @@ mame:
                         "3 1/2 Disk (Drive 3)": flop3
                         "3 1/2 Disk (Drive 4)": flop4
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7539,14 +7150,12 @@ mame:
        arcadia:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":             none
                         "Emerson Arcadia 2001 cartridges": arcadia
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7555,7 +7164,6 @@ mame:
        archimedes:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
@@ -7564,7 +7172,6 @@ mame:
                         "Acorn Archimedes hard disks":    archimedes_hdd
                         "Acorn Archimedes ROM images":    archimedes_rom
                 altmodel:
-                    group: ADVANCED OPTIONS
                     prompt:      ARCHIMEDES MODEL
                     description: Select model to emulate
                     choices:
@@ -7573,14 +7180,12 @@ mame:
                         "Archimedes 440/1 (Default)": aa4401
                         "Archimedes 540":             aa540
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7589,14 +7194,12 @@ mame:
        astrocde:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":            none
                         "Bally Professional Arcade cartridges": astrocde
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7605,7 +7208,6 @@ mame:
        atom:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
@@ -7614,7 +7216,6 @@ mame:
                         "Acorn Atom disk images":  atom_flop
                         "Acorn Atom Utility ROMs": atom_rom
                 altromtype:
-                    group: ADVANCED OPTIONS
                     prompt:      MEDIA TYPE
                     description: Type of ROM file to load.
                     choices:
@@ -7624,14 +7225,12 @@ mame:
                         "Cartridge":      cart
                         "Quickload":      quik
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7640,7 +7239,6 @@ mame:
        bbc:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
@@ -7651,7 +7249,6 @@ mame:
                         "Acorn BBC Micro Model B disks":          bbcb_flop
                         "Acorn BBC Micro Model B Original disks": bbcb_flop_orig
                 altromtype:
-                    group: ADVANCED OPTIONS
                     prompt:      MEDIA TYPE
                     description: Type of ROM file to load.
                     choices:
@@ -7663,14 +7260,12 @@ mame:
                         "Disk (Drive 1)": flop1
                         "Disk (Drive 2)": flop2
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7679,28 +7274,24 @@ mame:
        camplynx:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":      none
                         "Camputers Lynx cassettes": camplynx_cass
                 altmodel:
-                    group: ADVANCED OPTIONS
                     prompt:      LYNX MODEL
                     choices:
                         "Lynx 128k (Default)": lynx128k
                         "Lynx 96k":            lynx96k
                         "Lynx 48k":            lynx48k
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7709,14 +7300,12 @@ mame:
        cdi:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":  none
                         "Philips CD-i CD-ROMs": cdi
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7725,7 +7314,6 @@ mame:
        coco:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
@@ -7742,21 +7330,18 @@ mame:
                         "Color Computer 3 (NTSC) (Default)": coco3
                         "Color Computer 3 (PAL)":            coco3p
                 altromtype:
-                    group: ADVANCED OPTIONS
                     prompt:      MEDIA TYPE
                     description: Type of ROM file to load.
                     choices:
                         "Cassette":    cass
                         "Cartridge":   cart
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7765,21 +7350,18 @@ mame:
        crvision:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":            none
                         "V-Tech Creativision cartridges": crvision
                 altromtype:
-                    group: ADVANCED OPTIONS
                     prompt:      MEDIA TYPE
                     description: Type of ROM file to load.
                     choices:
                         "Cartridge":   cart
                         "Cassette":    cass
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7788,7 +7370,6 @@ mame:
        electron:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
@@ -7804,14 +7385,12 @@ mame:
                         "Electron w/64k Master RAM Board (default)": electron64
                         "Electron":                                  electron
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7820,7 +7399,6 @@ mame:
        fm7:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
@@ -7834,7 +7412,6 @@ mame:
                         "FM-7":     fm7
                         "FM-77AV":  fm77av
                 altromtype:
-                    group: ADVANCED OPTIONS
                     prompt:      MEDIA TYPE
                     description: Type of ROM file to load.
                     choices:
@@ -7842,7 +7419,6 @@ mame:
                         "Disk (Drive 1)": flop1
                         "Disk (Drive 2)": flop2
                 addblankdisk:
-                    group: ADVANCED OPTIONS
                     prompt:      USER DISK
                     description: Mount a floppy for user data, creates if needed
                     choices:
@@ -7850,14 +7426,12 @@ mame:
                         "Disk (Drive 1)": flop1
                         "Disk (Drive 2)": flop2
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7866,7 +7440,6 @@ mame:
        fmtowns:
             cfeatures:
                 altmodel:
-                    group: ADVANCED OPTIONS
                     prompt:      FM TOWNS MODEL
                     description: Select model to emulate
                     choices:
@@ -7874,14 +7447,12 @@ mame:
                         "FM Towns (Model 1/2)":     fmtowns
                         "FM Towns II UX":           fmtownsux
                 addblankdisk:
-                    group: ADVANCED OPTIONS
                     prompt:      ADD USER DISK
                     description: Insert a disk into the floppy drive, a blank will be used if one doesn't exist
                     choices:
                         "Off (Default)": 0
                         "On":            1
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
@@ -7891,7 +7462,6 @@ mame:
                         "Fujitsu FM Towns miscellaneous floppy disk images": fmtowns_flop_misc
                         "Fujitsu FM Towns original floppy disk images":      fmtowns_flop_orig
                 altromtype:
-                    group: ADVANCED OPTIONS
                     prompt:      MEDIA TYPE
                     description: Type of ROM file to load.
                     choices:
@@ -7900,14 +7470,12 @@ mame:
                         "CD-ROM":                                    cdrm
                         "Hard Drive (II UX)":                        hard1
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7916,14 +7484,12 @@ mame:
        gamate:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":        none
                         "Bit Corp Gamate cartridges": gamate
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7932,14 +7498,12 @@ mame:
        gamecom:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":       none
                         "Tiger Game.com cartridges": gamecom
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7948,14 +7512,12 @@ mame:
        gamepock:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":                   none
                         "Epoch Game Pocket Computer cartridges": gamepock
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7964,14 +7526,12 @@ mame:
        gmaster:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":            none
                         "Hartung Game Master cartridges": gmaster
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -7980,7 +7540,6 @@ mame:
        macintosh:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
@@ -8001,7 +7560,6 @@ mame:
                         "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD, Image Reader)": maciix
                         "Mac LC 3 (Default) (4Mb RAM, Color, 2 HD Floppies/CD/HDD)":    maclc3
                 imagereader:
-                    group: ADVANCED OPTIONS
                     prompt:      IMAGE READER
                     description: Install the image reader card to read idks image files (Mac IIx only)
                     choices:
@@ -8012,7 +7570,6 @@ mame:
                         "Slot D":           nbd
                         "Slot E":           nbe
                 ramsize:
-                    group: ADVANCED OPTIONS
                     prompt:      RAM SIZE
                     description: How much RAM the emulated Mac will have installed (Mac IIx & Mac LC 3 only)
                     choices:
@@ -8026,7 +7583,6 @@ mame:
                         "96MB":   96
                         "128MB":  128
                 altromtype:
-                    group: ADVANCED OPTIONS
                     prompt:      MEDIA TYPE
                     description: Type of ROM file to load. Disk Image requires Mac IIx and Image Reader
                     choices:
@@ -8035,7 +7591,6 @@ mame:
                         "Hard Drive":  hard
                         "Disk Image":  disk
                 bootdisk:
-                    group: ADVANCED OPTIONS
                     prompt:      BOOT DISK
                     description: Select a boot disk or hard drive if needed
                     choices:
@@ -8047,14 +7602,12 @@ mame:
                         "System 7.0.1 (Hard Drive)": mac701
                         "System 7.5.5 (Hard Drive)": mac755
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -8063,14 +7616,12 @@ mame:
        sameduck:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":             none
                         "Creatronic Mega Duck cartridges": megaduck
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -8079,21 +7630,18 @@ mame:
        pdp1:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":            none
                         "PDP-1 Paper Tape Reader Images": pdp1_ptp
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -8102,14 +7650,12 @@ mame:
        pv1000:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":      none
                         "Casio PV-1000 cartridges": pv1000
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -8118,21 +7664,18 @@ mame:
        socrates:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":                  none
                         "Video Technology Socrates cartridges": socrates
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -8141,14 +7684,12 @@ mame:
        supracan:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":            none
                         "Funtech Super A'Can cartridges": supracan
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -8157,28 +7698,24 @@ mame:
        ti99:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)": none
                         "TI-99/4A Cartridges": ti99_cart
                 ti99_32kram:
-                    group: ADVANCED OPTIONS
                     prompt:      32K RAM EXPANSION
                     description: 32k RAM expansion card installed
                     choices:
                         "Enabled (Default)": 1
                         "Disabled":          0
                 ti99_speech:
-                    group: ADVANCED OPTIONS
                     prompt:      SPEECH MODULE
                     description: Speech module installed
                     choices:
                         "Enabled (Default)": 1
                         "Disabled":          0
                 altromtype:
-                    group: ADVANCED OPTIONS
                     prompt:      MEDIA TYPE
                     description: Type of ROM file to load.
                     choices:
@@ -8186,14 +7723,12 @@ mame:
                         "Cassette 2":  cass2
                         "Cartridge":   cart
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -8202,28 +7737,24 @@ mame:
        tutor:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)": none
                         "Tomy Tutor & Pyuuta cartridge": tutor
                 altromtype:
-                    group: ADVANCED OPTIONS
                     prompt:      MEDIA TYPE
                     description: Type of ROM file to load.
                     choices:
                         "Cassette":    cass
                         "Cartridge":   cart
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -8232,21 +7763,18 @@ mame:
        vc4000:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":         none
                         "Interton VC 4000 cartridges": vc4000
                 altromtype:
-                    group: ADVANCED OPTIONS
                     prompt:      MEDIA TYPE
                     description: Type of ROM file to load.
                     choices:
                         "Cartridge": cart
                         "Quickload": quik
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -8255,14 +7783,12 @@ mame:
        vectrex:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":    none
                         "GCE Vectrex cartridges": vectrex
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -8271,14 +7797,12 @@ mame:
        vgmplay:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
                         "Don't Use (Default)":    none
                         "Video Game Music Files": vgmplay
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -8287,7 +7811,6 @@ mame:
        vsmile:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
@@ -8295,7 +7818,6 @@ mame:
                         "VTech V.Smile cartridges":        vsmile_cart
                         "VTech V.Smile Motion cartridges": vsmilem_cart
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -8304,7 +7826,6 @@ mame:
        xegs:
             cfeatures:
                 softList:
-                    group: ADVANCED OPTIONS
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
@@ -8312,7 +7833,6 @@ mame:
                         "Atari XE Game System cartridges": xegs
                         "Atari 400 / 800 floppy disks":    a800_flop
                 altromtype:
-                    group: ADVANCED OPTIONS
                     prompt:      MEDIA TYPE
                     description: Type of ROM file to load.
                     choices:
@@ -8322,14 +7842,12 @@ mame:
                         "Disk (Drive 3)": flop3
                         "Disk (Drive 4)": flop4
                 enableui:
-                    group: ADVANCED OPTIONS
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                     choices:
                         "Off at Start": 0
                         "On at Start":  1
                 pergamecfg:
-                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
@@ -8339,6 +7857,7 @@ mame:
             features: [netplay, padtokeyboard]
             cfeatures:
                 altlayout:
+                    group: CONTROLLER SETTINGS
                     prompt:      SPECIAL CONTROL LAYOUTS
                     description: Controls for 5/6 button games and other unique controls
                     choices:
@@ -8351,7 +7870,6 @@ mame:
                         "Twin Stick with Triggers":     "twinstick"
                         "Rotated 4-Way Stick (Q*Bert)": "qbert"
                 hiscoreplugin:
-                    group: ADVANCED OPTIONS
                     prompt:      HIGH SCORE PLUGIN
                     description: Emable or disable high score saving
                     choices:
@@ -8360,6 +7878,7 @@ mame:
        neogeo:
             cfeatures:
                 altlayout:
+                    group: CONTROLLER SETTINGS
                     prompt:      SPECIAL CONTROL LAYOUTS
                     description: Controls for 5/6 button games and other unique controls
                     choices:
@@ -8372,135 +7891,115 @@ mame:
                         "Twin Stick with Triggers":     "twinstick"
                         "Rotated 4-Way Stick (Q*Bert)": "qbert"
                 hiscoreplugin:
-                    group: ADVANCED OPTIONS
                     prompt:      HIGH SCORE PLUGIN
                     description: Emable or disable high score saving
                     choices:
                         "Enabled (Default)": 1
                         "Disabled":          0
                 coindropplugin:
-                    group: ADVANCED OPTIONS
                     prompt:      COIN SOUND PLUGIN
                     description: Play a coin drop sound effect when an insert coin button is pressed
                     choices:
                         "Enabled":            1
                         "Disabled (Default)": 0
-
 wine:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         dxvk:
-            group: ADVANCED OPTIONS
             prompt:      DXVK FEATURE
             description: Converts DirectX 9/10/11/12 calls to Vulkan.
             choices:
                 "Off": 0
                 "On":  1
         dxvk_hud:
-            group: ADVANCED OPTIONS
             prompt:      DXVK HUD
             description: See your FPS and version of Vulkan API/driver.
             choices:
                 "Off": 0
                 "On":  1
         esync:
-            group: ADVANCED OPTIONS
             prompt:      ESYNC
             description: Can increase performance for games that stress the CPU.
             choices:
                 "Off": 0
                 "On":  1
         fsync:
-            group: ADVANCED OPTIONS
             prompt:      FSYNC
             description: Can improve frame rate and responsiveness.
             choices:
                 "Off": 0
                 "On":  1
         pba:
-            group: ADVANCED OPTIONS
             prompt:      PBA
             description: Vastly improves the speed of buffer maps.
             choices:
                 "Off": 0
                 "On":  1
         fsr:
-            group: ADVANCED OPTIONS
             prompt:      FIDELITY FX SUPER RESOLUTION
             description: Renders game at a lower res then upscales to increase FPS.
             choices:
                 "Off": 0
                 "On":  1
         fps_limit:
-            group: ADVANCED OPTIONS
             prompt:      FPS LIMITER
             description: Allows you to limit FPS to 60.
             choices:
                 "Off": 0
                 "On":  1
         mf:
-            group: ADVANCED OPTIONS
             prompt:      INSTALL MEDIA FOUNDATION
             choices:
                 "Off": 0
                 "On":  1
         virtual_desktop:
-            group: ADVANCED OPTIONS
             prompt:      VIRTUAL DESKTOP
             description: Define the resolution and a new dedicated window.
             choices:
                 "Off": 0
                 "On":  1
         force_mouse:
-            group: ADVANCED OPTIONS
             prompt:      ENABLE MOUSE
             description: Force mouse in games.
             choices:
                 "Off": 0
                 "On":  1
         allow_xim:
-            group: ADVANCED OPTIONS
             prompt:      ENABLE XIM
             description: Enable XIM support.
             choices:
                 "Off": 0
                 "On":  1
         no_write_watch:
-            group: ADVANCED OPTIONS
             prompt:      NO WRITE WATCH
             description: Disable support for memory write watches in ntdll.
             choices:
                 "Off": 0
                 "On":  1
         force_large_adress:
-            group: ADVANCED OPTIONS
             prompt:      FORCE LARGE ADDRESS
             description: Force WINE to run games with large addresses.
             choices:
                 "Off": 0
                 "On":  1
         heap_delay_free:
-            group: ADVANCED OPTIONS
             prompt:      HEAP DELAY FREE
             description: Delay freeing some memory.
             choices:
                 "Off": 0
                 "On":  1
         hide_nvidia_gpu:
-            group: ADVANCED OPTIONS
             prompt:      HIDE NVIDIA GPU
             description: Force Nvidia GPUs to always be reported as AMD GPUs.
             choices:
                 "Off": 0
                 "On":  1
         wine_debug:
-            group: ADVANCED OPTIONS
             prompt:      ENABLE DEBUG
             choices:
                 "Off": 0
                 "On":  1
-
 solarus:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -8513,48 +8012,40 @@ solarus:
                 "Joypad":           normal
                 "Left stick":       joystick1
                 "Right stick":      joystick2
-
 mugen:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         esync:
-            group: ADVANCED OPTIONS
             prompt:      ESYNC
             description: Can increase performance for games that stress the CPU.
             choices:
                 "Off": 0
                 "On":  1
         fsync:
-            group: ADVANCED OPTIONS
             prompt:      FSYNC
             description: Can improve frame rates and responsiveness.
             choices:
                 "Off": 0
                 "On":  1
         pba:
-            group: ADVANCED OPTIONS
             prompt:      PBA
             description: Vastly improves the speed of buffer maps.
             choices:
                 "Off": 0
                 "On":  1
         virtual_desktop:
-            group: ADVANCED OPTIONS
             prompt:      VIRTUAL DESKTOP
             description: Define the resolution and a new dedicated window.
             choices:
                 "Off": 0
                 "On":  1
-
 ruffle:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 lightspark:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 drastic:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
@@ -8566,33 +8057,32 @@ drastic:
                 "Off": 0
                 "On":  1
         drastic_threaded:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      THREADED 3D
             description: Improves performance in 3D games. Can cause glitches.
             choices:
                 "Off": 0
                 "On":  1
         drastic_fix2d:
-            group: ADVANCED OPTIONS
             prompt:      FIX 2D SCREEN
             description: Fix main 2D screen to follow action.
             choices:
                 "Off": 0
                 "On":  1
         drastic_screen_orientation:
+            group: VIDEO SETTINGS
             prompt:      SCREEN LAYOUT
             description: Arrange the dual screen layout.
             choices:
                 "Vertical": 0
                 "Horizontal": 1
                 "Single": 3
-
 xemu:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         scaling:
             group: VIDEO SETTINGS
-            prompt: GAME ASPECT RATIO
+            prompt: ASPECT RATIO
             description: Choose the scaling mode for the game screen.
             choices:
                 "Original resolution": center
@@ -8617,19 +8107,17 @@ xemu:
             choices:
                 "Show":        "false"
                 "Skip":        "true"
-
 lexaloffle:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 ecwolf:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 sonic2013:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         language:
+            group: GAME TRANSLATION
             prompt:      LANGUAGE
             description: Change the game's language.
             choices:
@@ -8644,14 +8132,14 @@ sonic2013:
                 "Korean":    8
                 "Chinese":   9
         vsync:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      VSYNC
             description: Fix screen tearing.
             choices:
                 "Off":  0
                 "On":   1
         scalingmode:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      SCALING MODE
             description: Can smooth the image.
             choices:
@@ -8660,7 +8148,7 @@ sonic2013:
                 "Sharp Bilinear":       2
                 "Regular Bilnear":      3
         hqmode:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      HQ MODE
             description: Enable high quality effects for special stages.
             choices:
@@ -8673,17 +8161,16 @@ sonic2013:
                 "Off":    0
                 "On":     1
         devmenu:
-            group: ADVANCED OPTIONS
             prompt:      DEV MENU
             description: Access to modding and other advanced options.
             choices:
                 "Off":    0
                 "On":     1
-
 soniccd:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         language:
+            group: GAME TRANSLATION
             prompt:      LANGUAGE
             description: Change the game's language.
             choices:
@@ -8694,14 +8181,14 @@ soniccd:
                 "Spanish":  4
                 "Japanese": 5
         vsync:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:     VSYNC
             decription: Fix screen tearing.
             choices:
                 "Off":  0
                 "On":   1
         scalingmode:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      SCALING MODE
             description: Can smooth the image.
             choices:
@@ -8710,14 +8197,13 @@ soniccd:
                 "Sharp Bilinear":       2
                 "Regular Bilnear":      3
         hqmode:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      HQ Mode
             description: Enable high quality effects for special stages.
             choices:
                 "Off":    0
                 "On":     1
         spindash:
-            group: ADVANCED OPTIONS
             prompt:      SPINDASH TYPE
             description: Both types require holding D-pad down during initial charge.
             choices:
@@ -8725,165 +8211,138 @@ soniccd:
                 "Sonic 2 (tap jump)":   0
                 "Sonic CD (hold jump)": 1
         devmenu:
-            group: ADVANCED OPTIONS
             prompt:      DEV MENU
             description: Access to modding and other advanced options.
             choices:
                 "Off":    0
                 "On":     1
-
 srb2:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 model2emu:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         fakeGouraud:
-            group: ADVANCED OPTIONS
             prompt:      FAKE GOURAUD
             description: Tries to guess Per-vertex colour (gouraud) from the Model2 per-poly information (flat).
             choices:
                 "Off":      0
                 "On":       1
         bilinearFiltering:
-            group: ADVANCED OPTIONS
             prompt:      BILINEAR FILTERING
             description: Smooth textures.
             choices:
                 "Off":      0
                 "On":       1
         trilinearFiltering:
-            group: ADVANCED OPTIONS
             prompt:      TRILINEAR FILTERING
             description: Enables mipmap usage and trilinear filtering. Doesn't work with some games.
             choices:
                 "Off":      0
                 "On":       1
         filterTilemaps:
-            group: ADVANCED OPTIONS
             prompt:      FILTER TILEMAPS
             description: Enables bilinear filtering on tilemaps. Looks good, but can cause some stretch artifacts.
             choices:
                 "Off":      0
                 "On":       1
         forceManaged:
-            group: ADVANCED OPTIONS
             prompt:      FORCE MANAGED
             description: Forces the DX driver to use Managed textures instead of Dynamic.
             choices:
                 "Off":      0
                 "On":       1
         enableMIP:
-            group: ADVANCED OPTIONS
             prompt:      ENABLE MIP-MAP
             description: Enables Direct3D Automip-map generation.
             choices:
                 "Off":      0
                 "On":       1
         meshTransparency:
-            group: ADVANCED OPTIONS
             prompt:      ENABLE MESH TRANSPARENCY
             description: Enabled meshed polygons for translucency.
             choices:
                 "Off":      0
                 "On":       1
         fullscreenAA:
-            group: ADVANCED OPTIONS
             prompt:      ENABLE FULL-SCREEN ANTI-ALIASING
             description: Enable full-screen antialiasing in Direct3D.
             choices:
                 "Off":      0
                 "On":       1
         useRawInput:
-            group: ADVANCED OPTIONS
             prompt:      ENABLE RAW INPUT
             description: Read mouse through Rawinput, allowing 2 mice for 2 player shooting games.
             choices:
                 "Off":      0
                 "On":       1
-
 gsplus:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 play:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 flatpak:
   features: [padtokeyboard]
   shared: [videomode, hud]
-
 steam:
   features: [padtokeyboard]
   shared: [videomode, hud]
-
 yuzu:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 ryujinx:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 simcoupe:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 hcl:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 hurrican:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 openjazz:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 etekwar:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 abuse:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 cdogs:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 openmsx:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 demul:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         demulRatio:
-            prompt:      GAME ASPECT RATIO
+            group: VIDEO SETTINGS
+            prompt:      ASPECT RATIO
             choices:
                 "Stretch":       0
                 "4:3 (Default)": 1
                 "16:9":          2
         demulVSync:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      VSYNC
             description: Fix screen tearing.
             choices:
                 "Off": 0
                 "On":  1
-
 alephone:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 awgl:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         awgl_difficulty:
+            group: GAME PLAY
             prompt:      GAME DIFFICULTY
             description: Select game difficulty.
             choices:
@@ -8891,6 +8350,7 @@ awgl:
                 "Normal":         normal
                 "Hard":           hard
         awgl_language:
+            group: GAME TRANSLATION
             prompt:      GAME LANGUAGE
             description: Select game language.
             choices:
@@ -8900,7 +8360,7 @@ awgl:
                 "Espanol":        es
                 "Italiano":       it
         awgl_render:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      GAME RENDERING
             description: Select rendering mode.
             choices:
@@ -8908,211 +8368,162 @@ awgl:
                 "Software":       software
                 "OpenGL":         gl
         awgl_fullscreen:
-            group: ADVANCED OPTIONS
+            group: VIDEO SETTINGS
             prompt:      FULLSCREEN MODE
             description: Select fullscreen mode.
             choices:
                 "Stretched (640x480)":      stretched
                 "Widescreen (16:10)":       wide
         awgl_audio:
-            group: ADVANCED OPTIONS
             prompt:      SOUND EFFECTS MODE
             description: Select sound effects mode.
             choices:
                 "Original":       original
                 "Remastered":     remastered
         awgl_egados:
-            group: ADVANCED OPTIONS
             prompt:      EGA GRAPHICS MODE
             description: Simulate the EGA graphics mode (works only with DOS version).
             choices:
                 "On":             enabled
                 "Off":            disabled
-
 bermuda:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 bbja:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 blues:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 box86:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 bstone:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 doom3:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 doomretro:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 droidports:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 eduke32:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 f2bgl:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 freedroid:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 gzdoom:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 lzdoom:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 hode:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 ionfury:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 kodi:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 nblood:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 nukem2:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 odcommander:
   features: [padtokeyboard]
   shared: [videomode]
-
 openclaw:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 openjkja:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 openjkjo:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 openlara:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 omf2097:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 opentyrian:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 pcexhumed:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 pre2:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 prototype:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 quakespasm:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 quake3:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 rednukem:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 rott:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 rtcw:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 sh:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 sorr:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 spacecadetpinball:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 stk:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 stuntcar:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 supertux2:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 themehospital:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 vanillara:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 vanillatd:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 voidsw:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 witchaven:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 xash3d_fwgs:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 xenia:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-
 yquake2:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

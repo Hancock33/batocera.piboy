@@ -20,7 +20,7 @@ msgctxt "game_options"
 msgid "VIDEO MODE"
 msgstr "MODE VIDÉO"
 
-#. TRANSLATION: shared, dolphin, flycast, mupen64plus, xemu, ...
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
 msgstr "RATIO ÉCRAN DU JEU"
@@ -55,7 +55,7 @@ msgctxt "game_options"
 msgid "Gameplay Rewinding"
 msgstr ""
 
-#. TRANSLATION: shared, shared
+#. TRANSLATION: shared, shared, awgl
 msgctxt "game_options"
 msgid "GAME PLAY"
 msgstr ""
@@ -215,7 +215,7 @@ msgctxt "game_options"
 msgid "AI GAME TRANSLATION"
 msgstr "TRADUCTION PAR IA"
 
-#. TRANSLATION: shared, shared, shared, shared
+#. TRANSLATION: shared, shared, shared, shared, sonic2013, ...
 msgctxt "game_options"
 msgid "GAME TRANSLATION"
 msgstr ""
@@ -308,11 +308,6 @@ msgstr "VIDÉO THREADÉE"
 msgctxt "game_options"
 msgid "Emulate Chroma 81 interface (colorization)."
 msgstr "Émuler l'interface Chroma 81 (colorisation)."
-
-#. TRANSLATION: libretro/81, libretro/81, libretro/atari800, libretro/atari800, libretro/atari800, ...
-msgctxt "game_options"
-msgid "ADVANCED OPTIONS"
-msgstr "OPTIONS AVANCÉES"
 
 #. TRANSLATION: libretro/81, libretro/gambatte
 msgctxt "game_options"
@@ -9171,6 +9166,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "EGA GRAPHICS MODE"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "ADVANCED OPTIONS"
+#~ msgstr "OPTIONS AVANCÉES"
 
 #~ msgctxt "game_options"
 #~ msgid "CONTROLLER TYPE 1"
