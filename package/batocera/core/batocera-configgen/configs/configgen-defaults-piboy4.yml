@@ -9,6 +9,7 @@ default:
 atomiswave:
   emulator: flycast
   core:     flycast
+  gfxbackend: vulkan
 c20:
   emulator: libretro
   core:     vice_xvic
@@ -24,6 +25,7 @@ cplus4:
 dreamcast:
   emulator: flycast
   core:     flycast
+  gfxbackend: vulkan
 flash:
   emulator: lightspark
   core:     lightspark
@@ -36,9 +38,11 @@ gamecube:
 naomi:
   emulator: flycast
   core:     flycast
+  gfxbackend: vulkan
 naomi2:
   emulator: flycast
   core:     flycast
+  gfxbackend: vulkan
 nds:
   emulator: drastic
   core:     drastic

@@ -12,9 +12,23 @@ default:
 atomiswave:
   emulator: flycast
   core:     flycast
+  gfxbackend: vulkan
+c20:
+  emulator: libretro
+  core:     vice_xvic
+c64:
+  emulator: libretro
+  core:     vice_x64
+c128:
+  emulator: libretro
+  core:     vice_x128
+cplus4:
+  emulator: libretro
+  core:     vice_xplus4
 dreamcast:
   emulator: flycast
   core:     flycast
+  gfxbackend: vulkan
 flash:
   emulator: lightspark
   core:     lightspark
@@ -27,18 +41,20 @@ gamecube:
 naomi:
   emulator: flycast
   core:     flycast
+  gfxbackend: vulkan
 naomi2:
   emulator: flycast
   core:     flycast
+  gfxbackend: vulkan
 nds:
   emulator: drastic
   core:     drastic
+pet:
+  emulator: libretro
+  core:     vice_xpet
 psp:
   options:
     frameskip: automatic
 sgb:
   emulator: libretro
   core:     mgba
-wii:
-  emulator: libretro
-  core:     dolphin
