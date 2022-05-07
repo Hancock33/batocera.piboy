@@ -1330,6 +1330,14 @@ libretro:
                         choices:
                             "Horizontal": horizontal
                             "Vertical":   vertical
+            naomigd:
+                cfeatures:
+                    screen_rotation_naomi:
+                        prompt:      SCREEN ORIENTATION
+                        description: Useful for certain arcade games.
+                        choices:
+                            "Horizontal": horizontal
+                            "Vertical":   vertical
     freeintv:
       features: [padtokeyboard, cheevos]
       shared: [autosave]

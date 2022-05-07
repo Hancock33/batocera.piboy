@@ -43,6 +43,10 @@ naomi2:
   emulator: flycast
   core:     flycast
   gfxbackend: vulkan
+naomigd:
+  emulator: flycast
+  core:     flycast
+  gfxbackend: vulkan
 nds:
   emulator: drastic
   core:     drastic
