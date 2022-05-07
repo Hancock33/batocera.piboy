@@ -1,0 +1,3 @@
+ACTION=="remove", GOTO="power_switch_end"
+SUBSYSTEM=="input", KERNEL=="event*", SUBSYSTEMS=="platform", DRIVERS=="gpio-keys", ATTRS{keys}=="*,116|116,*|116|*,116,*", TAG+="power-switch"
+LABEL="power_switch_end"

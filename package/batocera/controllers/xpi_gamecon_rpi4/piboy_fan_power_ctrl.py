@@ -6,15 +6,19 @@ import os.path
 
 # Configuration
 WAIT_TIME = 5  # [s] Time to wait between each refresh
+hyst = 1
+# Fan Control
 cpuTemp = 0
 cpuTempOld = 0
-hyst = 1
 fphihi = 242
 fphi = 194
 fpmed = 147
 fplo = 110
 fplolo = 90
 fpdefault = 75
+# Battery Control
+battctrl = 100
+battctrlOld = 100
 
 #Read Fan.ini file
 if os.path.isfile('/boot/fan.ini'):
@@ -65,6 +69,19 @@ try:
                 fanFile.write(str(fpdefault))
                 fanFile.close()
         cpuTempOld = cpuTemp
+        
+        # Read Battery < 5% shutdown
+        battctrlFile = open("/sys/kernel/xpi_gamecon/percent", "r")
+        battctrl = int(battctrlFile.read())
+        battctrlFile.close()
+        if abs(battctrl - battctrlOld) > hyst:
+            if battctrl <= 10:
+                os.system("echo 20 > /sys/kernel/xpi_gamecon/green")
+                time.sleep(0.2)
+                os.system("echo 100 > /sys/kernel/xpi_gamecon/green")
+            if battctrl <= 5:
+                os.system("/usr/bin/batocera-es-swissknife --shutdown")
+        battctrlOld = battctrl
         # Wait until next refresh
         time.sleep(WAIT_TIME)
 
