@@ -6103,6 +6103,15 @@ flycast:
       choices:
         "OpenGL (Default)": 0
         "Vulkan":           4
+    flycast_broadcast:
+      prompt: BROADCAST
+      description: Choose your video broadcast setting.
+      choices:
+        "PAL (Default)":   1
+        "PAL/M":           2
+        "PAL/N":           3
+        "NTSC":            0
+        "Flycast Default": 4
     flycast_rotate:
       group: VIDEO SETTINGS
       prompt:      ROTATE SCREEN 90 DEGREES
