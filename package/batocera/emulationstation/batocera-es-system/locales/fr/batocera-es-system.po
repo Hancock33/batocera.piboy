@@ -6979,6 +6979,36 @@ msgstr "OpenGL (par défaut)"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
+msgid "Choose your video broadcast setting."
+msgstr ""
+
+#. TRANSLATION: flycast, redream
+msgctxt "game_options"
+msgid "BROADCAST"
+msgstr "DIFFUSION"
+
+#. TRANSLATION: flycast
+msgctxt "game_options"
+msgid "PAL (Default)"
+msgstr ""
+
+#. TRANSLATION: flycast
+msgctxt "game_options"
+msgid "PAL/M"
+msgstr ""
+
+#. TRANSLATION: flycast
+msgctxt "game_options"
+msgid "PAL/N"
+msgstr ""
+
+#. TRANSLATION: flycast
+msgctxt "game_options"
+msgid "Flycast Default"
+msgstr ""
+
+#. TRANSLATION: flycast
+msgctxt "game_options"
 msgid "Rotate the screen by 90 degrees."
 msgstr "Faire pivoter l'écran de 90 degrés."
 
@@ -8265,11 +8295,6 @@ msgstr "Anglais (par défaut)"
 msgctxt "game_options"
 msgid "Choose broadcast standard (for older TV's)."
 msgstr "Choisir le standard de diffusion (pour les téléviseurs plus anciens)."
-
-#. TRANSLATION: redream
-msgctxt "game_options"
-msgid "BROADCAST"
-msgstr "DIFFUSION"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
