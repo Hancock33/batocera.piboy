@@ -1749,12 +1749,12 @@ msgctxt "game_options"
 msgid "Enhancement. Remove the eight sprites per line limit."
 msgstr "強化：行制限ごとに8つのスプライトを削除します"
 
-#. TRANSLATION: libretro/fceumm, libretro/flycast, libretro/flycast, libretro/nestopia, melonds, ...
+#. TRANSLATION: libretro/fceumm, libretro/flycast, libretro/flycast, libretro/flycast, libretro/nestopia, ...
 msgctxt "game_options"
 msgid "Horizontal"
 msgstr "横表示"
 
-#. TRANSLATION: libretro/fceumm, libretro/flycast, libretro/flycast, libretro/nestopia, melonds, ...
+#. TRANSLATION: libretro/fceumm, libretro/flycast, libretro/flycast, libretro/flycast, libretro/nestopia, ...
 msgctxt "game_options"
 msgid "Vertical"
 msgstr "縦表示"
@@ -1920,12 +1920,12 @@ msgctxt "game_options"
 msgid "CONTROLLER 4 TYPE"
 msgstr "コントローラー 4 タイプ"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast
 msgctxt "game_options"
 msgid "Useful for certain arcade games."
 msgstr "一部のアーケードゲームの画面を回転します"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast
 msgctxt "game_options"
 msgid "SCREEN ORIENTATION"
 msgstr "画面の向き"

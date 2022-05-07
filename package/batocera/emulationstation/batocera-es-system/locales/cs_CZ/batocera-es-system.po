@@ -1760,12 +1760,12 @@ msgctxt "game_options"
 msgid "Enhancement. Remove the eight sprites per line limit."
 msgstr "Vylepšení. Odstranění limitu osmi spritů na řádek."
 
-#. TRANSLATION: libretro/fceumm, libretro/flycast, libretro/flycast, libretro/nestopia, melonds, ...
+#. TRANSLATION: libretro/fceumm, libretro/flycast, libretro/flycast, libretro/flycast, libretro/nestopia, ...
 msgctxt "game_options"
 msgid "Horizontal"
 msgstr "Horizontální"
 
-#. TRANSLATION: libretro/fceumm, libretro/flycast, libretro/flycast, libretro/nestopia, melonds, ...
+#. TRANSLATION: libretro/fceumm, libretro/flycast, libretro/flycast, libretro/flycast, libretro/nestopia, ...
 msgctxt "game_options"
 msgid "Vertical"
 msgstr "Vertikální"
@@ -1931,12 +1931,12 @@ msgctxt "game_options"
 msgid "CONTROLLER 4 TYPE"
 msgstr "TYP OVLADAČE 4"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast
 msgctxt "game_options"
 msgid "Useful for certain arcade games."
 msgstr "Užitečné pro některé arkádové hry."
 
-#. TRANSLATION: libretro/flycast, libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast
 msgctxt "game_options"
 msgid "SCREEN ORIENTATION"
 msgstr "ORIENTACE OBRAZOVKY"

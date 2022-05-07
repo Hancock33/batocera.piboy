@@ -1757,12 +1757,12 @@ msgctxt "game_options"
 msgid "Enhancement. Remove the eight sprites per line limit."
 msgstr "Uitbreiding. Verwijder de acht sprites per lijn limiet."
 
-#. TRANSLATION: libretro/fceumm, libretro/flycast, libretro/flycast, libretro/nestopia, melonds, ...
+#. TRANSLATION: libretro/fceumm, libretro/flycast, libretro/flycast, libretro/flycast, libretro/nestopia, ...
 msgctxt "game_options"
 msgid "Horizontal"
 msgstr "Horizontaal"
 
-#. TRANSLATION: libretro/fceumm, libretro/flycast, libretro/flycast, libretro/nestopia, melonds, ...
+#. TRANSLATION: libretro/fceumm, libretro/flycast, libretro/flycast, libretro/flycast, libretro/nestopia, ...
 msgctxt "game_options"
 msgid "Vertical"
 msgstr "Verticaal"
@@ -1930,12 +1930,12 @@ msgctxt "game_options"
 msgid "CONTROLLER 4 TYPE"
 msgstr "CONTROLLER 4 TYPE"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast
 msgctxt "game_options"
 msgid "Useful for certain arcade games."
 msgstr "Handig voor sommige arcade spellen."
 
-#. TRANSLATION: libretro/flycast, libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast
 msgctxt "game_options"
 msgid "SCREEN ORIENTATION"
 msgstr "SCHERM ORIENTATIE"
