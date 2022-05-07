@@ -74,14 +74,37 @@ try:
         battctrlFile = open("/sys/kernel/xpi_gamecon/percent", "r")
         battctrl = int(battctrlFile.read())
         battctrlFile.close()
-        if abs(battctrl - battctrlOld) > hyst:
-            if battctrl <= 10:
-                os.system("echo 20 > /sys/kernel/xpi_gamecon/green")
-                time.sleep(0.2)
-                os.system("echo 100 > /sys/kernel/xpi_gamecon/green")
-            if battctrl <= 5:
-                os.system("/usr/bin/batocera-es-swissknife --shutdown")
-        battctrlOld = battctrl
+
+        if battctrl <= 10:
+            WAIT_TIME = 1
+            os.system("echo 20 > /sys/kernel/xpi_gamecon/green")
+            time.sleep(0.2)
+            os.system("echo 100 > /sys/kernel/xpi_gamecon/green")
+            time.sleep(0.2)
+            os.system("echo 20 > /sys/kernel/xpi_gamecon/green")
+            time.sleep(0.2)
+            os.system("echo 100 > /sys/kernel/xpi_gamecon/green")
+            time.sleep(0.2)
+            os.system("echo 20 > /sys/kernel/xpi_gamecon/green")
+            time.sleep(0.2)
+            os.system("echo 100 > /sys/kernel/xpi_gamecon/green")
+            time.sleep(0.2)
+            os.system("echo 20 > /sys/kernel/xpi_gamecon/green")
+            time.sleep(0.4)
+            os.system("echo 100 > /sys/kernel/xpi_gamecon/green")
+            time.sleep(0.4)
+            os.system("echo 20 > /sys/kernel/xpi_gamecon/green")
+            time.sleep(0.4)
+            os.system("echo 100 > /sys/kernel/xpi_gamecon/green")
+            time.sleep(0.4)
+            os.system("echo 20 > /sys/kernel/xpi_gamecon/green")
+            time.sleep(0.4)
+            os.system("echo 100 > /sys/kernel/xpi_gamecon/green")
+            time.sleep(0.4)
+
+        if battctrl <= 5:
+            os.system("/usr/bin/batocera-es-swissknife --shutdown")
+
         # Wait until next refresh
         time.sleep(WAIT_TIME)
 
