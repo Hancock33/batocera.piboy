@@ -998,12 +998,12 @@ wswanc:
       mednafen_wswan: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_WSWAN] }
 
 prboom:
-  name:       PrBoom
-  manufacturer: Ports
+  name: Doom 1 & 2
+  manufacturer: Ports (Doom)
   release:
   hardware: port
   extensions: [wad, iwad, pwad, gzdoom]
-  group: ports
+  group: doom
   emulators:
     libretro:
       prboom: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PRBOOM], incompatible_extensions: [gzdoom] }
@@ -1025,12 +1025,12 @@ prboom:
     NE PAS EFFACER "prboom.wad"
 
 tyrquake:
-  name:       TyrQuake
-  manufacturer: Ports
+  name: Quake I
+  manufacturer: Ports (Quake)
   release:
   hardware: port
   extensions: [pak]
-  group: ports
+  group: quake
   emulators:
     quakespasm:
       quakespasm: { requireAnyOf: [BR2_PACKAGE_QUAKESPASM] }
@@ -2789,12 +2789,12 @@ switch:
       ryujinx: { requireAnyOf: [BR2_PACKAGE_RYUJINX] }
 
 yquake2:
-  name:       Quake II
-  manufacturer: Ports
+  name: Quake II
+  manufacturer: Ports (Quake)
   release: 1997
   hardware: port
   extensions: [game]
-  group: ports
+  group: quake
   emulators:
     yquake2:
       yquake2: { requireAnyOf: [BR2_PACKAGE_YQUAKE2] }
@@ -2812,7 +2812,7 @@ j2me:
 
 zc210:
   name:       Zelda Classic
-  manufacturer: Ports
+  manufacturer: Nintendo
   release: 1999
   hardware: console
   extensions: [qst]
@@ -3382,8 +3382,8 @@ dinothawr:
     Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
 
 doom3:
-  name:       Doom3
-  manufacturer: Ports
+  name: Doom 3
+  manufacturer: Ports (Doom)
   release: 2004
   hardware: port
   extensions: [game]
@@ -3405,22 +3405,22 @@ droidports:
 
 eduke32:
   name:       Duke Nukem 3D
-  manufacturer: Ports
+  manufacturer: Ports (eDuke Engine)
   release: 1996
   hardware: port
   extensions: [grp]
-  group: ports
+  group: eduke32
   emulators:
     eduke32:
       eduke32: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
 
 etekwar:
-  name:       TekWar
-  manufacturer: Ports
+  name: TekWar
+  manufacturer: Ports (eDuke Engine)
   release: 1995
   hardware: port
   extensions: [pk3]
-  group: ports
+  group: eduke32
   emulators:
     etekwar:
       etekwar: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
@@ -3471,11 +3471,11 @@ hode:
 
 ionfury:
   name:       Ion Fury
-  manufacturer: Ports
+  manufacturer: Ports (eDuke Engine)
   release: 2019
   hardware: port
   extensions: [grp]
-  group: ports
+  group: eduke32
   emulators:
     ionfury:
       ionfury: { requireAnyOf: [BR2_PACKAGE_IONFURY] }
@@ -3532,11 +3532,11 @@ mu:
 
 nblood:
   name:       Blood
-  manufacturer: Ports
+  manufacturer: Ports (eDuke Engine)
   release: 1997
   hardware: port
   extensions: [pk3]
-  group: ports
+  group: eduke32
   emulators:
     nblood:
       nblood: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
@@ -3624,11 +3624,11 @@ opentyrian:
 
 pcexhumed:
   name:       Exhumed/PowerSlave
-  manufacturer: Ports
+  manufacturer: Ports (eDuke Engine)
   release: 1999
   hardware: port
   extensions: [mov]
-  group: ports
+  group: eduke32
   emulators:
     pcexhumed:
       pcexhumed: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
@@ -3688,12 +3688,12 @@ pspmini:
     Trouvez la documentation ici: https://wiki.batocera.org/systems:psp
 
 quake3:
-  name:       Quake 3
-  manufacturer: Ports
+  name: Quake III
+  manufacturer: Ports (Quake)
   release: 1999
   hardware: port
   extensions: [game]
-  group: ports
+  group: quake
   emulators:
     quake3:
       quake3: { requireAnyOf: [BR2_PACKAGE_QUAKE3] }
@@ -3723,11 +3723,11 @@ reminiscence:
 
 rednukem:
   name:       Redneck Rampage
-  manufacturer: Ports
+  manufacturer: Ports (eDuke Engine)
   release: 1997
   hardware: port
   extensions: [grp]
-  group: ports
+  group: eduke32
   emulators:
     rednukem:
       rednukem: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
@@ -3923,12 +3923,12 @@ vaporspec:
 
 
 voidsw:
-  name:       Shadow Warrior
-  manufacturer: Ports
+  name: Shadow Warrior
+  manufacturer: Ports (eDuke Engine)
   release: 1997
   hardware: port
   extensions: [grp]
-  group: ports
+  group: eduke32
   emulators:
     voidsw:
       voidsw: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
