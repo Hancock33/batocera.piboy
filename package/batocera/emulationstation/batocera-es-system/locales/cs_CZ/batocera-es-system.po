@@ -4701,11 +4701,6 @@ msgctxt "game_options"
 msgid "Cycle-exact"
 msgstr "Přesný-cyklus"
 
-#. TRANSLATION: libretro/uae4arm, libretro/uae4arm, libretro/uae4arm, libretro/uae4arm, libretro/uae4arm, ...
-msgctxt "game_options"
-msgid "CORE SETTINGS"
-msgstr ""
-
 #. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
 msgid "LINE DOUBLING (DEINTERLACE)"

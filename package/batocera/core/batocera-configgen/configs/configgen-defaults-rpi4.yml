@@ -9,6 +9,7 @@ default:
     retroarch.menu_widget_scale_auto: false
     retroarch.menu_widget_scale_factor: 0.800000
 
+
 atomiswave:
   emulator: flycast
   core:     flycast
@@ -43,6 +44,10 @@ naomi:
   core:     flycast
   gfxbackend: vulkan
 naomi2:
+  emulator: flycast
+  core:     flycast
+  gfxbackend: vulkan
+naomigd:
   emulator: flycast
   core:     flycast
   gfxbackend: vulkan

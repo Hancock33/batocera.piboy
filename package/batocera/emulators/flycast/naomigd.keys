@@ -1,0 +1,20 @@
+{
+    "actions_player1": [
+        {
+            "trigger": [
+                "hotkey",
+                "start"
+            ],
+            "type": "exec",
+            "target": "killall -9 flycast && reset"
+        },
+        {
+            "trigger": [
+                "b",
+                "hotkey"
+            ],
+            "type": "key",
+            "target": "KEY_TAB"
+        }
+    ]
+}
