@@ -1,8 +1,8 @@
 diff --git a/src/gameconfigfile.cpp b/src/gameconfigfile.cpp
-index 177cb76e51..971b25b7bb 100644
+index 99053ea8a7..fd56a77eaa 100644
 --- a/src/gameconfigfile.cpp
 +++ b/src/gameconfigfile.cpp
-@@ -129,6 +129,7 @@ FGameConfigFile::FGameConfigFile ()
+@@ -105,6 +105,7 @@ FGameConfigFile::FGameConfigFile ()
  		SetSection ("IWADSearch.Directories", true);
  		SetValueForKey ("Path", ".", true);
  		SetValueForKey ("Path", "$DOOMWADDIR", true);
@@ -10,7 +10,7 @@ index 177cb76e51..971b25b7bb 100644
  #ifdef __APPLE__
  		SetValueForKey ("Path", user_docs, true);
  		SetValueForKey ("Path", user_app_support, true);
-@@ -139,12 +140,12 @@ FGameConfigFile::FGameConfigFile ()
+@@ -115,12 +116,12 @@ FGameConfigFile::FGameConfigFile ()
  		SetValueForKey ("Path", "$PROGDIR", true);
  #else
  		SetValueForKey ("Path", "$HOME/" GAME_DIR, true);
@@ -25,7 +25,7 @@ index 177cb76e51..971b25b7bb 100644
  		SetValueForKey ("Path", "/usr/share/games/doom", true);
  #endif
  	}
-@@ -165,7 +166,7 @@ FGameConfigFile::FGameConfigFile ()
+@@ -141,7 +142,7 @@ FGameConfigFile::FGameConfigFile ()
  		SetValueForKey ("Path", SHARE_DIR, true);
  		SetValueForKey ("Path", "/usr/local/share/doom", true);
  		SetValueForKey ("Path", "/usr/local/share/games/doom", true);
@@ -34,7 +34,12 @@ index 177cb76e51..971b25b7bb 100644
  		SetValueForKey ("Path", "/usr/share/games/doom", true);
  #endif
  		SetValueForKey ("Path", "$DOOMWADDIR", true);
-@@ -194,8 +195,8 @@ FGameConfigFile::FGameConfigFile ()
+@@ -166,12 +167,12 @@ FGameConfigFile::FGameConfigFile ()
+ #else
+ 		SetValueForKey("Path", "$HOME/" GAME_DIR "/soundfonts", true);
+ 		SetValueForKey("Path", "$HOME/" GAME_DIR "/fm_banks", true);
+-		SetValueForKey("Path", "/usr/local/share/doom/soundfonts", true);
++		SetValueForKey("Path", "/usr/share/soundfonts", true);
  		SetValueForKey("Path", "/usr/local/share/doom/fm_banks", true);
  		SetValueForKey("Path", "/usr/local/share/games/doom/soundfonts", true);
  		SetValueForKey("Path", "/usr/local/share/games/doom/fm_banks", true);

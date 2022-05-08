@@ -1,5 +1,5 @@
 diff --git a/src/gameconfigfile.cpp b/src/gameconfigfile.cpp
-index 17898f3ae..03215cfc5 100644
+index 17898f3ae..4fcf1c730 100644
 --- a/src/gameconfigfile.cpp
 +++ b/src/gameconfigfile.cpp
 @@ -105,6 +105,7 @@ FGameConfigFile::FGameConfigFile ()
@@ -34,7 +34,12 @@ index 17898f3ae..03215cfc5 100644
  		SetValueForKey ("Path", "/usr/share/games/doom", true);
  #endif
  		SetValueForKey ("Path", "$DOOMWADDIR", true);
-@@ -174,8 +175,8 @@ FGameConfigFile::FGameConfigFile ()
+@@ -170,12 +171,12 @@ FGameConfigFile::FGameConfigFile ()
+ 		SetValueForKey("Path", "$HOME/" GAME_DIR "/fm_banks", true);
+ 		SetValueForKey("Path", "$HOME/.local/share/games/doom/soundfonts", true);
+ 		SetValueForKey("Path", "$HOME/.local/share/games/doom/fm_banks", true);
+-		SetValueForKey("Path", "/usr/local/share/doom/soundfonts", true);
++		SetValueForKey("Path", "/usr/share/soundfonts", true);
  		SetValueForKey("Path", "/usr/local/share/doom/fm_banks", true);
  		SetValueForKey("Path", "/usr/local/share/games/doom/soundfonts", true);
  		SetValueForKey("Path", "/usr/local/share/games/doom/fm_banks", true);
