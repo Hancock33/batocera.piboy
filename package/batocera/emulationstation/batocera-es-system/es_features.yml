@@ -6107,7 +6107,7 @@ flycast:
       prompt: BROADCAST
       description: Choose your video broadcast setting.
       choices:
-        "PAL (Default)":   1
+        "PAL":             1
         "PAL/M":           2
         "PAL/N":           3
         "NTSC":            0
