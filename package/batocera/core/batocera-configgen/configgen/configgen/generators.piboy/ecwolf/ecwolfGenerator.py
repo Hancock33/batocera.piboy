@@ -9,6 +9,7 @@ import shutil
 from os import path
 import codecs
 
+ecwolfSrcDir = "/userdata/system/.config/ecwolf"
 ecwolfConfig = batoceraFiles.CONF + "/ecwolf"
 ecwolfConfigSrc = "/userdata/system/.config/ecwolf/ecwolf.cfg"
 ecwolfConfigDest = batoceraFiles.CONF + "/ecwolf/ecwolf.cfg"
@@ -20,6 +21,9 @@ class ECWolfGenerator(Generator):
         # Create config folder
         if not path.isdir(ecwolfConfig):
             os.mkdir(ecwolfConfig)
+        if not path.isdir(ecwolfSrcDir):
+            os.mkdir(ecwolfSrcDir)
+
         # Create config file if not there
         if not path.isfile(ecwolfConfigSrc):
             f = codecs.open(ecwolfConfigSrc, "x")
@@ -28,6 +32,8 @@ class ECWolfGenerator(Generator):
             f.write('Vid_Vsync = 1;\n')
             f.write('FullScreenWidth = {};\n'.format(gameResolution["width"]))
             f.write('FullScreenHeight = {};\n'.format(gameResolution["height"]))
+            f.write('MouseEnabled = 0;\n')
+            f.write('JoystickEnabled = 0;\n')
             f.close()
         
         # Symbolic link the cfg file

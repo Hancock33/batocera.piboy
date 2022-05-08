@@ -9,6 +9,7 @@ import shutil
 from os import path
 import codecs
 
+ecwolfSrcDir = "/userdata/system/.config/ecwolf"
 ecwolfConfig = batoceraFiles.CONF + "/ecwolf"
 ecwolfConfigSrc = "/userdata/system/.config/ecwolf/ecwolf.cfg"
 ecwolfConfigDest = batoceraFiles.CONF + "/ecwolf/ecwolf.cfg"
@@ -20,6 +21,9 @@ class ECWolfGenerator(Generator):
         # Create config folder
         if not path.isdir(ecwolfConfig):
             os.mkdir(ecwolfConfig)
+        if not path.isdir(ecwolfSrcDir):
+            os.mkdir(ecwolfSrcDir)
+
         # Create config file if not there
         if not path.isfile(ecwolfConfigSrc):
             f = codecs.open(ecwolfConfigSrc, "x")
