@@ -88,7 +88,7 @@ msgctxt "game_options"
 msgid "AUTO SAVE/LOAD"
 msgstr "AUTOMAT. ULOŽIT/NAČÍST"
 
-#. TRANSLATION: shared, shared, shared, awgl
+#. TRANSLATION: shared, shared, shared, awgl, gzdoom
 msgctxt "game_options"
 msgid "GAME RENDERING"
 msgstr ""
@@ -9065,7 +9065,7 @@ msgctxt "game_options"
 msgid "Italiano"
 msgstr ""
 
-#. TRANSLATION: awgl
+#. TRANSLATION: awgl, gzdoom
 msgctxt "game_options"
 msgid "Select rendering mode."
 msgstr ""
@@ -9113,6 +9113,16 @@ msgstr ""
 #. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "EGA GRAPHICS MODE"
+msgstr ""
+
+#. TRANSLATION: gzdoom
+msgctxt "game_options"
+msgid "Softpoly"
+msgstr ""
+
+#. TRANSLATION: gzdoom
+msgctxt "game_options"
+msgid "GLES2"
 msgstr ""
 
 #~ msgctxt "game_options"
