@@ -88,7 +88,7 @@ msgctxt "game_options"
 msgid "AUTO SAVE/LOAD"
 msgstr "オートセーブ/ロード"
 
-#. TRANSLATION: shared, shared, shared, awgl, gzdoom
+#. TRANSLATION: shared, shared, shared, awgl, gzdoom, ...
 msgctxt "game_options"
 msgid "GAME RENDERING"
 msgstr "ゲーム レンダリング"
@@ -6933,11 +6933,6 @@ msgstr "ブロードキャスト"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
-msgid "PAL (Default)"
-msgstr ""
-
-#. TRANSLATION: flycast
-msgctxt "game_options"
 msgid "PAL/M"
 msgstr ""
 
@@ -9035,7 +9030,7 @@ msgctxt "game_options"
 msgid "Italiano"
 msgstr ""
 
-#. TRANSLATION: awgl, gzdoom
+#. TRANSLATION: awgl, gzdoom, lzdoom
 msgctxt "game_options"
 msgid "Select rendering mode."
 msgstr ""
@@ -9085,7 +9080,7 @@ msgctxt "game_options"
 msgid "EGA GRAPHICS MODE"
 msgstr ""
 
-#. TRANSLATION: gzdoom
+#. TRANSLATION: gzdoom, lzdoom
 msgctxt "game_options"
 msgid "Softpoly"
 msgstr ""
