@@ -73,7 +73,7 @@ class FlycastGenerator(Generator):
         if system.isOptSet("flycast_broadcast"):
             Config.set("config", "Dreamcast.Broadcast", str(system.config["flycast_broadcast"]))
         else:
-            Config.set("config", "Dreamcast.Broadcast", "1")
+            Config.set("config", "Dreamcast.Broadcast", "4")
         if system.isOptSet("flycast_render_resolution"):
             Config.set("config", "rend.Resolution", str(system.config["flycast_render_resolution"]))
         else:
