@@ -5,6 +5,7 @@ import batoceraFiles
 from generators.Generator import Generator
 import controllersConfig
 import os
+import shutil
 from os import path
 import codecs
 
@@ -31,7 +32,7 @@ class ECWolfGenerator(Generator):
         
         # Symbolic link the cfg file
         if not path.exists(ecwolfConfigDest):
-            os.symlink(ecwolfConfigSrc, ecwolfConfigDest)
+            shutil.copy(ecwolfConfigSrc, ecwolfConfigDest)
         
         # Set the resolution
         if path.isfile(ecwolfConfigDest):
