@@ -8,12 +8,60 @@ import controllersConfig
 class GzdoomGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
+        commandArray = ["gzdoom"]
+
+        # Rendering mode
+        commandArray = ["gzdoom"]
+
+        # Rendering mode
+        if system.isOptSet("gzdoom_render"):
+            if system.config['gzdoom_render'] == 'gl':
+                commandArray.append("+set")
+                commandArray.append("vid_preferbackend")
+                commandArray.append("0")
+                commandArray.append("+set")
+                commandArray.append("vid_rendermode")
+                commandArray.append("4")
+            elif system.config['gzdoom_render'] == 'vulkan':
+                commandArray.append("+set")
+                commandArray.append("vid_preferbackend")
+                commandArray.append("1")
+                commandArray.append("+set")
+                commandArray.append("vid_rendermode")
+                commandArray.append("4")
+            elif system.config['gzdoom_render'] == 'soft':
+                commandArray.append("+set")
+                commandArray.append("vid_preferbackend")
+                commandArray.append("2")
+                commandArray.append("+set")
+                commandArray.append("vid_rendermode")
+                commandArray.append("4")
+            elif system.config['gzdoom_render'] == 'gles2':
+                commandArray.append("+set")
+                commandArray.append("vid_preferbackend")
+                commandArray.append("3")
+                commandArray.append("+set")
+                commandArray.append("vid_rendermode")
+                commandArray.append("3")
+        else:
+                commandArray.append("+set")
+                commandArray.append("vid_preferbackend")
+                commandArray.append("1")
+                commandArray.append("+set")
+                commandArray.append("vid_rendermode")
+                commandArray.append("4")
+    
         if (rom.__contains__(".gzdoom")):
             f=open(rom)
             content=f.readlines()
-            commandArray = ["gzdoom", "+set", "vid_preferbackend", "1", "+set", "vid_rendermode", "4", "+set", "gl_texture_filter", "0", "+set", "gl_texture_filter_anisotropic", "0", "-iwad", content[0], "-file", content[1]]
+            commandArray.append("-iwad")
+            commandArray.append(content[0])
+            commandArray.append("-file")
+            commandArray.append(content[1])
+
         else:
-            commandArray = ["gzdoom", "+set", "vid_preferbackend", "1", "+set", "vid_rendermode", "4", "+set", "gl_texture_filter", "0", "+set", "gl_texture_filter_anisotropic", "0", "-iwad", rom]
+            commandArray.append("-iwad")
+            commandArray.append(rom)
 
         return Command.Command(
             array=commandArray,
