@@ -1,3 +1,9 @@
+################################################################################
+#
+# Sonic2013
+#
+################################################################################
+# Version.: Commits on May 04, 2022 (xorg)
 SONIC2013_SITE = https://github.com/Rubberduckycooly/Sonic-1-2-2013-Decompilation.git
 SONIC2013_SITE_METHOD = git
 SONIC2013_GIT_SUBMODULES == YES
@@ -6,9 +12,9 @@ SONIC2013_DEPENDENCIES = sdl2 libogg libvorbis
 SONIC2013_LICENSE = Custom
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
-	SONIC2013_VERSION = cb8fe7405c5c760cdf1507032b558dc3110354fc
+	SONIC2013_VERSION = 71d31aacbd2c5f6912c4379fee942b410619954d
 else ifeq ($(BR2_PACKAGE_BATOCERA_RPI4_WITH_XORG),y)
-	SONIC2013_VERSION = cb8fe7405c5c760cdf1507032b558dc3110354fc
+	SONIC2013_VERSION = 71d31aacbd2c5f6912c4379fee942b410619954d
 else
 	SONIC2013_VERSION = f9718af
 endif
