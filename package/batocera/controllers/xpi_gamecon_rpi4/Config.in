@@ -1,6 +1,7 @@
 config BR2_PACKAGE_XPI_GAMECON_RPI4
 	bool "xpi_gamecon_rpi4"
 	depends on BR2_LINUX_KERNEL
+	depends on BR2_PACKAGE_PULSEAUDIO_UTILS
 	help
 	  Kernel module to support hardware from piboy (experimental pi)
 
