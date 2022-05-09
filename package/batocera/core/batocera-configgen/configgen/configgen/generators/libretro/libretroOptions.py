@@ -182,6 +182,11 @@ def generateCoreSettings(coreSettings, system, rom):
             coreSettings.save('vice_physical_keyboard_pass_through', system.config['vice_keyboard_pass_through'])
         else:
             coreSettings.save('vice_physical_keyboard_pass_through', '"disabled"')
+        # Keyrah keypad mapping
+        if system.isOptSet('vice_keyrah_keypad_mappings'):
+            coreSettings.save('vice_keyrah_keypad_mappings', system.config['vice_keyrah_mapping'])
+        else:
+            coreSettings.save('vice_keyrah_keypad_mappings', '"disabled"')
 
     # Commodore 128
     if (system.config['core'] == 'vice_x128'):
@@ -242,6 +247,11 @@ def generateCoreSettings(coreSettings, system, rom):
             coreSettings.save('vice_physical_keyboard_pass_through', system.config['vice_keyboard_pass_through'])
         else:
             coreSettings.save('vice_physical_keyboard_pass_through', '"disabled"')
+        # Keyrah keypad mapping
+        if system.isOptSet('vice_keyrah_keypad_mappings'):
+            coreSettings.save('vice_keyrah_keypad_mappings', system.config['vice_keyrah_mapping'])
+        else:
+            coreSettings.save('vice_keyrah_keypad_mappings', '"disabled"')
 
     # Commodore Plus/4
     if (system.config['core'] == 'vice_xplus4'):
@@ -300,6 +310,11 @@ def generateCoreSettings(coreSettings, system, rom):
             coreSettings.save('vice_physical_keyboard_pass_through', system.config['vice_keyboard_pass_through'])
         else:
             coreSettings.save('vice_physical_keyboard_pass_through', '"disabled"')
+        # Keyrah keypad mapping
+        if system.isOptSet('vice_keyrah_keypad_mappings'):
+            coreSettings.save('vice_keyrah_keypad_mappings', system.config['vice_keyrah_mapping'])
+        else:
+            coreSettings.save('vice_keyrah_keypad_mappings', '"disabled"')
 
     # Commodore VIC-20
     if (system.config['core'] == 'vice_xvic'):
@@ -358,6 +373,11 @@ def generateCoreSettings(coreSettings, system, rom):
             coreSettings.save('vice_physical_keyboard_pass_through', system.config['vice_keyboard_pass_through'])
         else:
             coreSettings.save('vice_physical_keyboard_pass_through', '"disabled"')
+        # Keyrah keypad mapping
+        if system.isOptSet('vice_keyrah_keypad_mappings'):
+            coreSettings.save('vice_keyrah_keypad_mappings', system.config['vice_keyrah_mapping'])
+        else:
+            coreSettings.save('vice_keyrah_keypad_mappings', '"disabled"')
 
     # Commodore PET
     if (system.config['core'] == 'vice_xpet'):
@@ -416,6 +436,11 @@ def generateCoreSettings(coreSettings, system, rom):
             coreSettings.save('vice_physical_keyboard_pass_through', system.config['vice_keyboard_pass_through'])
         else:
             coreSettings.save('vice_physical_keyboard_pass_through', '"disabled"')
+        # Keyrah keypad mapping
+        if system.isOptSet('vice_keyrah_keypad_mappings'):
+            coreSettings.save('vice_keyrah_keypad_mappings', system.config['vice_keyrah_mapping'])
+        else:
+            coreSettings.save('vice_keyrah_keypad_mappings', '"disabled"')
 
     # Commodore AMIGA
     if (system.config['core'] == 'puae'):
@@ -661,21 +686,21 @@ def generateCoreSettings(coreSettings, system, rom):
                 coreSettings.save('puae_floppy_speed', system.config['puae_floppy_speed'])
             else:
                 coreSettings.save('puae_floppy_speed', '"100"')
-            # 2P Gamepad Mapping (Keyrah)
-            if system.isOptSet('keyrah_mapping'):
-                coreSettings.save('puae_keyrah_keypad_mappings', system.config['keyrah_mapping'])
-            else:
-                coreSettings.save('puae_keyrah_keypad_mappings', '"enabled"')
             # Whdload Launcher
             if system.isOptSet('whdload'):
                 coreSettings.save('puae_use_whdload_prefs', system.config['whdload'])
             else:
                 coreSettings.save('puae_use_whdload_prefs', '"config"')
-            # Disable Emulator Joystick for Pad2Key
-            if system.isOptSet('disable_joystick'):
-                coreSettings.save('puae_physical_keyboard_pass_through', system.config['disable_joystick'])
+            # Keyboard Passthrough
+            if system.isOptSet('puae_keyboard_pass_through'):
+                coreSettings.save('puae_physical_keyboard_pass_through', system.config['puae_keyboard_pass_through'])
             else:
                 coreSettings.save('puae_physical_keyboard_pass_through', '"disabled"')
+            # Keyrah keymap mapping
+            if system.isOptSet('puae_keyrah_mapping'):
+                coreSettings.save('puae_keyrah_keypad_mappings', system.config['puae_keyrah_mapping'])
+            else:
+                coreSettings.save('puae_keyrah_keypad_mappings', '"enabled"')
 
         if system.name == 'amigacd32' or (system.name == 'amigacdtv'):
             # Boot animation first inserting CD
@@ -940,21 +965,21 @@ def generateCoreSettings(coreSettings, system, rom):
                 coreSettings.save('puae2021_floppy_speed', system.config['puae2021_floppy_speed'])
             else:
                 coreSettings.save('puae2021_floppy_speed', '"100"')
-            # 2P Gamepad Mapping (Keyrah)
-            if system.isOptSet('keyrah_mapping'):
-                coreSettings.save('puae2021_keyrah_keypad_mappings', system.config['keyrah_mapping'])
-            else:
-                coreSettings.save('puae2021_keyrah_keypad_mappings', '"enabled"')
             # Whdload Launcher
             if system.isOptSet('whdload'):
                 coreSettings.save('puae2021_use_whdload_prefs', system.config['whdload'])
             else:
                 coreSettings.save('puae2021_use_whdload_prefs', '"config"')
-            # Disable Emulator Joystick for Pad2Key
-            if system.isOptSet('disable_joystick'):
-                coreSettings.save('puae2021_physical_keyboard_pass_through', system.config['disable_joystick'])
+            # Keyboard Passthrough
+            if system.isOptSet('puae2021_keyboard_pass_through'):
+                coreSettings.save('puae2021_physical_keyboard_pass_through', system.config['puae2021_keyboard_pass_through'])
             else:
                 coreSettings.save('puae2021_physical_keyboard_pass_through', '"disabled"')
+            # Keyrah keymap mapping
+            if system.isOptSet('puae2021_keyrah_mapping'):
+                coreSettings.save('puae2021_keyrah_keypad_mappings', system.config['puae2021_keyrah_mapping'])
+            else:
+                coreSettings.save('puae2021_keyrah_keypad_mappings', '"enabled"')
 
         if system.name == 'amigacd32' or (system.name == 'amigacdtv'):
             # Boot animation first inserting CD

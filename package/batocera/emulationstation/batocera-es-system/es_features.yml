@@ -3807,22 +3807,22 @@ libretro:
                         choices:
                             "Off":    100
                             "On":     0
-                    keyrah_mapping:
-                        prompt:      2P GAMEPAD MAPPING (KEYRAH)
-                        description: Keypad to joyport mappings for 2 players.
-                        choices:
-                            "Off":    disabled
-                            "On":     enabled
                     whdload:
                         prompt:      WHDLOAD LAUNCHER
                         description: Enable launching pre-installed WHDLoad installs.
                         choices:
                             "Off":    disabled
                             "On":     config
-                    disable_joystick:
+                    puae_keyboard_pass_through:
+                        prompt:      KEYBOARD PASSTHROUGH
+                        description: If enabled, passes all physical keyboard events to the core.
+                        choices:
+                            "Off":    disabled
+                            "On":     enabled
+                    puae_keyrah_mapping:
                         group: CONTROLLER SETTINGS
-                        prompt:      DISABLE EMULATOR JOYSTICK
-                        description: Passes all physical keyboard events for Pad2Key.
+                        prompt:      KEYRAH KEYPAD MAPPING
+                        description: Hardcoded keymap to joyport mapping for Keyrah hardware.
                         choices:
                             "Off":    disabled
                             "On":     enabled
@@ -3870,18 +3870,25 @@ libretro:
                         choices:
                             "Off":    100
                             "On":     0
-                    keyrah_mapping:
-                        prompt:      2P GAMEPAD MAPPING (KEYRAH)
-                        description: Keypad to joyport mappings for 2 players.
-                        choices:
-                            "Off":    disabled
-                            "On":     enabled
                     whdload:
                         prompt:      WHDLOAD LAUNCHER
                         description: Enable launching pre-installed WHDLoad installs.
                         choices:
                             "Off":    disabled
                             "On":     config
+                    puae_keyboard_pass_through:
+                        prompt:      KEYBOARD PASSTHROUGH
+                        description: If enabled, passes all physical keyboard events to the core.
+                        choices:
+                            "Off":    disabled
+                            "On":     enabled
+                    puae_keyrah_mapping:
+                        group: CONTROLLER SETTINGS
+                        prompt:      KEYRAH KEYPAD MAPPING
+                        description: Hardcoded keymap to joyport mapping for Keyrah hardware.
+                        choices:
+                            "Off":    disabled
+                            "On":     enabled
                     pad_options:
                         group: CONTROLLER SETTINGS
                         prompt:      JUMP ON A
@@ -3889,13 +3896,6 @@ libretro:
                         choices:
                             "Off":    disabled
                             "On":     jump
-                    disable_joystick:
-                        group: CONTROLLER SETTINGS
-                        prompt:      DISABLE EMULATOR JOYSTICK
-                        description: Passes all physical keyboard events for Pad2Key.
-                        choices:
-                            "Off":    disabled
-                            "On":     enabled
                     controller1_puae:
                         group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 1 TYPE
@@ -4073,22 +4073,22 @@ libretro:
                         choices:
                             "Off":    100
                             "On":     0
-                    keyrah_mapping:
-                        prompt:      2P GAMEPAD MAPPING (KEYRAH)
-                        description: Keypad to joyport mappings for 2 players.
-                        choices:
-                            "Off":    disabled
-                            "On":     enabled
                     whdload:
                         prompt:      WHDLOAD LAUNCHER
                         description: Enable launching pre-installed WHDLoad installs.
                         choices:
                             "Off":    disabled
                             "On":     config
-                    disable_joystick:
+                    puae2021_keyboard_pass_through:
+                        prompt:      KEYBOARD PASSTHROUGH
+                        description: If enabled, passes all physical keyboard events to the core.
+                        choices:
+                            "Off":    disabled
+                            "On":     enabled
+                    puae2021_keyrah_mapping:
                         group: CONTROLLER SETTINGS
-                        prompt:      DISABLE EMULATOR JOYSTICK
-                        description: Passes all physical keyboard events for Pad2Key.
+                        prompt:      KEYRAH KEYPAD MAPPING
+                        description: Hardcoded keymap to joyport mapping for Keyrah hardware.
                         choices:
                             "Off":    disabled
                             "On":     enabled
@@ -4136,18 +4136,25 @@ libretro:
                         choices:
                             "Off":    100
                             "On":     0
-                    keyrah_mapping:
-                        prompt:      2P GAMEPAD MAPPING (KEYRAH)
-                        description: Keypad to joyport mappings for 2 players.
-                        choices:
-                            "Off":    disabled
-                            "On":     enabled
                     whdload:
                         prompt:      WHDLOAD LAUNCHER
                         description: Enable launching pre-installed WHDLoad installs.
                         choices:
                             "Off":    disabled
                             "On":     config
+                    puae2021_keyboard_pass_through:
+                        prompt:      KEYBOARD PASSTHROUGH
+                        description: If enabled, passes all physical keyboard events to the core.
+                        choices:
+                            "Off":    disabled
+                            "On":     enabled
+                    puae2021_keyrah_mapping:
+                        group: CONTROLLER SETTINGS
+                        prompt:      KEYRAH KEYPAD MAPPING
+                        description: Hardcoded keymap to joyport mapping for Keyrah hardware.
+                        choices:
+                            "Off":    disabled
+                            "On":     enabled
                     pad_options:
                         group: CONTROLLER SETTINGS
                         prompt:      JUMP ON A
@@ -4155,13 +4162,6 @@ libretro:
                         choices:
                             "Off":    disabled
                             "On":     jump
-                    disable_joystick:
-                        group: CONTROLLER SETTINGS
-                        prompt:      DISABLE EMULATOR JOYSTICK
-                        description: Passes all physical keyboard events for Pad2Key.
-                        choices:
-                            "Off":    disabled
-                            "On":     enabled
                     controller1_puae2021:
                         group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 1 TYPE
@@ -4854,6 +4854,19 @@ libretro:
                     "small":                    small
                     "medium":                   medium
                     "maximum":                  maximum
+            vice_keyboard_pass_through:
+                prompt:      KEYBOARD PASSTHROUGH
+                description: If enabled, passes all physical keyboard events to the core.
+                choices:
+                    "Off":    disabled
+                    "On":     enabled
+            vice_keyrah_mapping:
+                group: CONTROLLER SETTINGS
+                prompt:      KEYRAH KEYPAD MAPPING
+                description: Hardcoded keymap to joyport mapping for Keyrah hardware.
+                choices:
+                    "Off":    disabled
+                    "On":     enabled
             vice_retropad_options:
                 group: CONTROLLER SETTINGS
                 prompt:      JUMP ON A
@@ -4882,13 +4895,6 @@ libretro:
                     #"Mouse (SmartMouse)":       8
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
-            vice_keyboard_pass_through:
-                group: CONTROLLER SETTINGS
-                prompt:      KEYBOARD PASSTHROUGH
-                description: Keyboard shortcuts unavailable if passing through the keyboard.
-                choices:
-                    "Off":                      disabled
-                    "On":                       enabled
     vice_x64sc:
       features: [padtokeyboard]
       shared: [rewind, autosave]
@@ -4949,6 +4955,19 @@ libretro:
                     "small":                    small
                     "medium":                   medium
                     "maximum":                  maximum
+            vice_keyboard_pass_through:
+                prompt:      KEYBOARD PASSTHROUGH
+                description: If enabled, passes all physical keyboard events to the core.
+                choices:
+                    "Off":    disabled
+                    "On":     enabled
+            vice_keyrah_mapping:
+                group: CONTROLLER SETTINGS
+                prompt:      KEYRAH KEYPAD MAPPING
+                description: Hardcoded keymap to joyport mapping for Keyrah hardware.
+                choices:
+                    "Off":    disabled
+                    "On":     enabled
             vice_retropad_options:
                 group: CONTROLLER SETTINGS
                 prompt:      JUMP ON A
@@ -4977,13 +4996,6 @@ libretro:
                     #"Mouse (SmartMouse)":       8
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
-            vice_keyboard_pass_through:
-                group: CONTROLLER SETTINGS
-                prompt:      KEYBOARD PASSTHROUGH
-                description: Keyboard shortcuts unavailable if passing through the keyboard.
-                choices:
-                    "Off":                      disabled
-                    "On":                       enabled
     vice_x128:
       features: [padtokeyboard]
       shared: [rewind, autosave]
@@ -5033,6 +5045,19 @@ libretro:
                     "small":                    small
                     "medium":                   medium
                     "maximum":                  maximum
+            vice_keyboard_pass_through:
+                prompt:      KEYBOARD PASSTHROUGH
+                description: If enabled, passes all physical keyboard events to the core.
+                choices:
+                    "Off":    disabled
+                    "On":     enabled
+            vice_keyrah_mapping:
+                group: CONTROLLER SETTINGS
+                prompt:      KEYRAH KEYPAD MAPPING
+                description: Hardcoded keymap to joyport mapping for Keyrah hardware.
+                choices:
+                    "Off":    disabled
+                    "On":     enabled
             vice_retropad_options:
                 group: CONTROLLER SETTINGS
                 prompt:      Button Options
@@ -5063,13 +5088,6 @@ libretro:
                     #"Mouse (SmartMouse)":       8
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
-            vice_keyboard_pass_through:
-                group: CONTROLLER SETTINGS
-                prompt:      KEYBOARD PASSTHROUGH
-                description: Keyboard shortcuts unavailable if passing through the keyboard.
-                choices:
-                    "Off":                      disabled
-                    "On":                       enabled
     vice_xplus4:
       features: [padtokeyboard]
       shared: [rewind, autosave]
@@ -5108,6 +5126,19 @@ libretro:
                     "small":                    small
                     "medium":                   medium
                     "maximum":                  maximum
+            vice_keyboard_pass_through:
+                prompt:      KEYBOARD PASSTHROUGH
+                description: If enabled, passes all physical keyboard events to the core.
+                choices:
+                    "Off":    disabled
+                    "On":     enabled
+            vice_keyrah_mapping:
+                group: CONTROLLER SETTINGS
+                prompt:      KEYRAH KEYPAD MAPPING
+                description: Hardcoded keymap to joyport mapping for Keyrah hardware.
+                choices:
+                    "Off":    disabled
+                    "On":     enabled
             vice_retropad_options:
                 group: CONTROLLER SETTINGS
                 prompt:      Button Options
@@ -5138,13 +5169,6 @@ libretro:
                     #"Mouse (SmartMouse)":       8
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
-            vice_keyboard_pass_through:
-                group: CONTROLLER SETTINGS
-                prompt:      KEYBOARD PASSTHROUGH
-                description: Keyboard shortcuts unavailable if passing through the keyboard.
-                choices:
-                    "Off":                      disabled
-                    "On":                       enabled
     vice_xvic:
       features: [padtokeyboard]
       shared: [rewind, autosave]
@@ -5184,6 +5208,19 @@ libretro:
                     "small":                    small
                     "medium":                   medium
                     "maximum":                  maximum
+            vice_keyboard_pass_through:
+                prompt:      KEYBOARD PASSTHROUGH
+                description: If enabled, passes all physical keyboard events to the core.
+                choices:
+                    "Off":    disabled
+                    "On":     enabled
+            vice_keyrah_mapping:
+                group: CONTROLLER SETTINGS
+                prompt:      KEYRAH KEYPAD MAPPING
+                description: Hardcoded keymap to joyport mapping for Keyrah hardware.
+                choices:
+                    "Off":    disabled
+                    "On":     enabled
             vice_retropad_options:
                 group: CONTROLLER SETTINGS
                 prompt:      Button Options
@@ -5214,13 +5251,6 @@ libretro:
                     #"Mouse (SmartMouse)":       8
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
-            vice_keyboard_pass_through:
-                group: CONTROLLER SETTINGS
-                prompt:      KEYBOARD PASSTHROUGH
-                description: Keyboard shortcuts unavailable if passing through the keyboard.
-                choices:
-                    "Off":                      disabled
-                    "On":                       enabled
     vice_xpet:
       features: [padtokeyboard]
       shared: [rewind, autosave]
@@ -5265,6 +5295,19 @@ libretro:
                     "small":                    small
                     "medium":                   medium
                     "maximum":                  maximum
+            vice_keyboard_pass_through:
+                prompt:      KEYBOARD PASSTHROUGH
+                description: If enabled, passes all physical keyboard events to the core.
+                choices:
+                    "Off":    disabled
+                    "On":     enabled
+            vice_keyrah_mapping:
+                group: CONTROLLER SETTINGS
+                prompt:      KEYRAH KEYPAD MAPPING
+                description: Hardcoded keymap to joyport mapping for Keyrah hardware.
+                choices:
+                    "Off":    disabled
+                    "On":     enabled
             vice_retropad_options:
                 group: CONTROLLER SETTINGS
                 prompt:      Button Options
@@ -5295,13 +5338,6 @@ libretro:
                     #"Mouse (SmartMouse)":       8
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
-            vice_keyboard_pass_through:
-                group: CONTROLLER SETTINGS
-                prompt:      KEYBOARD PASSTHROUGH
-                description: Keyboard shortcuts unavailable if passing through the keyboard.
-                choices:
-                    "Off":                      disabled
-                    "On":                       enabled
     virtualjaguar:
       features: [padtokeyboard, cheevos]
       shared: [autosave]
