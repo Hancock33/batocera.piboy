@@ -406,7 +406,7 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution, gfxBac
         # If set manually, proritize that.
         # Otherwise, set to portrait for games listed as 90 degrees, manual (default) if not.
         if not system.isOptSet('wswan_rotate_display'):
-            wswanGameRotation = videoMode.getGameSpecial(system.name, rom)
+            wswanGameRotation = videoMode.getGameSpecial(system.name, rom, True)
             if wswanGameRotation == "90":
                 wswanOrientation = "portrait"
             else:
@@ -540,6 +540,7 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution, gfxBac
     retroarchConfig['cheevos_verbose_enable'] = 'false'
     retroarchConfig['cheevos_auto_screenshot'] = 'false'
     retroarchConfig['cheevos_challenge_indicators'] = 'false'
+    retroarchConfig['cheevos_start_active'] = 'false'
 
     if system.isOptSet('retroachievements') and system.getOptBoolean('retroachievements') == True:
         if(system.name in systemToRetroachievements) or (system.config['core'] in coreToRetroachievements) or (system.isOptSet('cheevos_force') and system.getOptBoolean('cheevos_force') == True):
@@ -572,6 +573,11 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution, gfxBac
                 retroarchConfig['cheevos_challenge_indicators'] = 'true'
             else:
                 retroarchConfig['cheevos_challenge_indicators'] = 'false'
+            # retroarchievements_encore_mode
+            if system.isOptSet('retroachievements.encore') and system.getOptBoolean('retroachievements.encore') == True:
+                retroarchConfig['cheevos_start_active'] = 'true'
+            else:
+                retroarchConfig['cheevos_start_active'] = 'false'
     else:
         retroarchConfig['cheevos_enable'] = 'false'
 
@@ -722,7 +728,7 @@ def writeBezelConfig(bezel, retroarchConfig, rom, gameResolution, system):
     if bezel is None:
         return
 
-    bz_infos = bezelsUtil.getBezelInfos(rom, bezel, system.name)
+    bz_infos = bezelsUtil.getBezelInfos(rom, bezel, system.name, True)
     if bz_infos is None:
         return
 
