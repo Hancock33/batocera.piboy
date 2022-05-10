@@ -101,7 +101,7 @@ define MAME_BUILD_CMDS
 	LDOPTS="-lasound -lfontconfig" \
 	SYMBOLS=0 \
 	STRIP_SYMBOLS=1 \
-	TOOLS=1
+	TOOLS=1 NOWERROR=1
 
 	# Compile emulation target (MESS)
 	cd $(@D); \
@@ -136,7 +136,7 @@ define MAME_BUILD_CMDS
 	LDOPTS="-lasound -lfontconfig" \
 	SYMBOLS=0 \
 	STRIP_SYMBOLS=1 \
-	TOOLS=1
+	TOOLS=1 NOWERROR=1
 
 	# Compile emulation target (Virtual Devices)
 	cd $(@D); \
@@ -171,7 +171,7 @@ define MAME_BUILD_CMDS
 	LDOPTS="-lasound -lfontconfig" \
 	SYMBOLS=0 \
 	STRIP_SYMBOLS=1 \
-	TOOLS=1
+	TOOLS=1 NOWERROR=1
 endef
 
 define MAME_INSTALL_TARGET_CMDS
