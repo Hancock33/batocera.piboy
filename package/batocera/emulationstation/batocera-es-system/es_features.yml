@@ -2011,6 +2011,16 @@ libretro:
                           "Off": 0
          bbc:
               cfeatures:
+                  sticktype:
+                      group: ADVANCED OPTIONS
+                      prompt:      JOYSTICK TYPE
+                      description: Select which joystick to emulate.
+                      choices:
+                          "None (Default)":                   none
+                          "Acorn Analogue Joysticks":         acornjoy
+                          "Acorn Bitstik":                    bitstik1
+                          "Robo Bitstik 2":                   bitstik2
+                          "Voltmace Delta 3b Twin Joysticks": voltmace3b
                   altmodel:
                       prompt:      BBC MODEL
                       description: Select model to emulate
@@ -3045,6 +3055,27 @@ libretro:
                     "4xBRZ":      4xBRZ
                     "5xBRZ":      5xBRZ
                     "6xBRZ":      6xBRZ
+            mupen64plus-rdpPlugin:
+                group: ADVANCED OPTIONS
+                prompt:      RDP PLUGIN
+                choices:
+                    "GLideN64 (Fastest)":          gliden64
+                    "ParaLLEl-RDP":                parallel
+                    "Angrylion (Most Compatible)": angrylion
+            mupen64plus-rspPlugin:
+                group: ADVANCED OPTIONS
+                prompt:      RSP PLUGIN
+                choices:
+                    "HLE (Fastest)":       hle
+                    "ParaLLEl (Best LLE)": parallel
+                    "CXD4 (LLE Fallback)": cxd4
+            mupen64plus-cpuCore:
+                group: ADVANCED OPTIONS
+                prompt:      CPU CORE
+                choices:
+                    "Dynarec (Fastest)":                dynamic_recompiler
+                    "Cached Interpreter":               cached_interpreter
+                    "Pure Interpreter (Most Accurate)": pure_interpreter
             mupen64plus-pak1:
                 group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PAK 1
@@ -7315,6 +7346,16 @@ mame:
                         "Off": 0
        bbc:
             cfeatures:
+                sticktype:
+                    group: ADVANCED OPTIONS
+                    prompt:      JOYSTICK TYPE
+                    description: Select which joystick to emulate.
+                    choices:
+                        "None (Default)":                   none
+                        "Acorn Analogue Joysticks":         acornjoy
+                        "Acorn Bitstik":                    bitstik1
+                        "Robo Bitstik 2":                   bitstik2
+                        "Voltmace Delta 3b Twin Joysticks": voltmace3b
                 softList:
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
