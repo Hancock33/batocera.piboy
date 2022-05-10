@@ -1,0 +1,33 @@
+diff -Naur a/3rd_party/entityx/entityx/Entity.h b/3rd_party/entityx/entityx/Entity.h
+--- a/3rd_party/entityx/entityx/Entity.h	2022-05-10 20:26:26.743509062 +0100
++++ b/3rd_party/entityx/entityx/Entity.h	2022-05-10 20:22:15.253111735 +0100
+@@ -10,6 +10,7 @@
+ 
+ #pragma once
+ 
++#include <utility>
+ #include <cstdint>
+ #include <tuple>
+ #include <new>
+diff -Naur a/3rd_party/entityx/entityx/entityx.h b/3rd_party/entityx/entityx/entityx.h
+--- a/3rd_party/entityx/entityx/entityx.h	2022-05-10 20:21:17.164529101 +0100
++++ b/3rd_party/entityx/entityx/entityx.h	2022-05-10 20:30:21.597617675 +0100
+@@ -1,5 +1,6 @@
+ #pragma once
+ 
++#include <utility>
+ #include "entityx/config.h"
+ #include "entityx/Event.h"
+ #include "entityx/Entity.h"
+diff -Naur a/src/data/mod_library.cpp b/src/data/mod_library.cpp
+--- a/src/data/mod_library.cpp	2022-05-10 20:33:38.867326901 +0100
++++ b/src/data/mod_library.cpp	2022-05-10 20:34:02.727530811 +0100
+@@ -24,7 +24,7 @@
+ #include <cassert>
+ #include <limits>
+ #include <unordered_map>
+-
++#include <utility>
+ 
+ namespace rigel::data
+ {
