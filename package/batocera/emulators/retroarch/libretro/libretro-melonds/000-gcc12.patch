@@ -1,0 +1,35 @@
+diff --git a/src/teakra/src/common_types.h b/src/teakra/src/common_types.h
+index 37a6c93..9f1774a 100644
+--- a/src/teakra/src/common_types.h
++++ b/src/teakra/src/common_types.h
+@@ -1,6 +1,7 @@
+ #pragma once
+ 
+ #include <cstdint>
++#include <utility>
+ 
+ using u8 = std::uint8_t;
+ using u16 = std::uint16_t;
+diff --git a/src/teakra/src/core_timing.h b/src/teakra/src/core_timing.h
+index 80e8703..195ac80 100644
+--- a/src/teakra/src/core_timing.h
++++ b/src/teakra/src/core_timing.h
+@@ -4,6 +4,7 @@
+ #include <functional>
+ #include <limits>
+ #include <vector>
++#include <utility>
+ #include "common_types.h"
+ 
+ namespace Teakra {
+diff --git a/src/teakra/src/processor.h b/src/teakra/src/processor.h
+index d0f0b59..df6c75b 100644
+--- a/src/teakra/src/processor.h
++++ b/src/teakra/src/processor.h
+@@ -1,5 +1,6 @@
+ #pragma once
+ 
++#include <utility>
+ #include <memory>
+ #include "common_types.h"
+ #include "core_timing.h"
