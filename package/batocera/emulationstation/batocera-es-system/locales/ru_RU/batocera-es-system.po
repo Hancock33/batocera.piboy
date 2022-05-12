@@ -2660,6 +2660,46 @@ msgctxt "game_options"
 msgid "Quickload"
 msgstr ""
 
+#. TRANSLATION: libretro/mess, mame/wasm4
+msgctxt "game_options"
+msgid "Select which joystick to emulate."
+msgstr ""
+
+#. TRANSLATION: libretro/mess, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, mame/wasm4
+msgctxt "game_options"
+msgid "ADVANCED OPTIONS"
+msgstr ""
+
+#. TRANSLATION: libretro/mess, mame/wasm4
+msgctxt "game_options"
+msgid "JOYSTICK TYPE"
+msgstr ""
+
+#. TRANSLATION: libretro/mess, mame/wasm4
+msgctxt "game_options"
+msgid "None (Default)"
+msgstr ""
+
+#. TRANSLATION: libretro/mess, mame/wasm4
+msgctxt "game_options"
+msgid "Acorn Analogue Joysticks"
+msgstr ""
+
+#. TRANSLATION: libretro/mess, mame/wasm4
+msgctxt "game_options"
+msgid "Acorn Bitstik"
+msgstr ""
+
+#. TRANSLATION: libretro/mess, mame/wasm4
+msgctxt "game_options"
+msgid "Robo Bitstik 2"
+msgstr ""
+
+#. TRANSLATION: libretro/mess, mame/wasm4
+msgctxt "game_options"
+msgid "Voltmace Delta 3b Twin Joysticks"
+msgstr ""
+
 #. TRANSLATION: libretro/mess
 msgctxt "game_options"
 msgid "BBC MODEL"
@@ -3300,7 +3340,7 @@ msgctxt "game_options"
 msgid "Digital"
 msgstr "Цифровая"
 
-#. TRANSLATION: libretro/mame078plus, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, ...
+#. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Keyboard shortcuts unavailable if passing through the keyboard."
 msgstr "Горячие клавиши недоступны через клавиатуру."
@@ -4654,16 +4694,6 @@ msgstr "ФЛОППИ ТУРБО СКОРОСТЬ"
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
-msgid "Keypad to joyport mappings for 2 players."
-msgstr "Привязка клавиатуры к джойпорту для 2 игроков."
-
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
-msgctxt "game_options"
-msgid "2P GAMEPAD MAPPING (KEYRAH)"
-msgstr "2P РАСКЛАДКА ГЕЙМПАДА (KEYRAH)"
-
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
-msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
 msgstr "Включает запуск предустановленных WHDLoad установок."
 
@@ -4672,15 +4702,25 @@ msgctxt "game_options"
 msgid "WHDLOAD LAUNCHER"
 msgstr "WHDLOAD ЛАУНЧЕР"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x64, ...
 msgctxt "game_options"
-msgid "Passes all physical keyboard events for Pad2Key."
-msgstr "Передаёт все события физической клавиатуры для Pad2Key."
+msgid "If enabled, passes all physical keyboard events to the core."
+msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x64, ...
 msgctxt "game_options"
-msgid "DISABLE EMULATOR JOYSTICK"
-msgstr "ОТКЛЮЧИТЬ ЭМУЛЯТОР ДЖОЙСТИКА"
+msgid "KEYBOARD PASSTHROUGH"
+msgstr "КЛАВИАТУРА PASSTHROUGH"
+
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x64, ...
+msgctxt "game_options"
+msgid "Hardcoded keymap to joyport mapping for Keyrah hardware."
+msgstr ""
+
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x64, ...
+msgctxt "game_options"
+msgid "KEYRAH KEYPAD MAPPING"
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x64, ...
 msgctxt "game_options"
@@ -5633,11 +5673,6 @@ msgctxt "game_options"
 msgid "Koalapad"
 msgstr "Koalapad"
 
-#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, libretro/vice_xvic, ...
-msgctxt "game_options"
-msgid "KEYBOARD PASSTHROUGH"
-msgstr "КЛАВИАТУРА PASSTHROUGH"
-
 #. TRANSLATION: libretro/vice_x128
 msgctxt "game_options"
 msgid "C128 PAL"
@@ -6060,7 +6095,7 @@ msgctxt "game_options"
 msgid "ON"
 msgstr "ВКЛ"
 
-#. TRANSLATION: amiberry, amiberry
+#. TRANSLATION: amiberry, amiberry, amiberry
 msgctxt "game_options"
 msgid "OFF"
 msgstr "ВЫКЛ"
@@ -6103,6 +6138,36 @@ msgstr ""
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "AUTO CROP"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Emulates the floppy drive sound."
+msgstr ""
+
+#. TRANSLATION: amiberry, amiberry
+msgctxt "game_options"
+msgid "SOUND SETTINGS"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "FLOPPY DRIVE SOUND"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Select the best value to compensate latency and avoid crackling."
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "SOUND BUFFER SIZE"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Minimum"
 msgstr ""
 
 #. TRANSLATION: cannonball
@@ -9197,6 +9262,22 @@ msgstr ""
 msgctxt "game_options"
 msgid "GLES2"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "Keypad to joyport mappings for 2 players."
+#~ msgstr "Привязка клавиатуры к джойпорту для 2 игроков."
+
+#~ msgctxt "game_options"
+#~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
+#~ msgstr "2P РАСКЛАДКА ГЕЙМПАДА (KEYRAH)"
+
+#~ msgctxt "game_options"
+#~ msgid "Passes all physical keyboard events for Pad2Key."
+#~ msgstr "Передаёт все события физической клавиатуры для Pad2Key."
+
+#~ msgctxt "game_options"
+#~ msgid "DISABLE EMULATOR JOYSTICK"
+#~ msgstr "ОТКЛЮЧИТЬ ЭМУЛЯТОР ДЖОЙСТИКА"
 
 #~ msgctxt "game_options"
 #~ msgid "CONTROLLER TYPE 1"
