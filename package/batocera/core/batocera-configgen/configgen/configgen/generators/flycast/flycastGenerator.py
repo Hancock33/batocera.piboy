@@ -74,6 +74,11 @@ class FlycastGenerator(Generator):
             Config.set("config", "Dreamcast.Broadcast", str(system.config["flycast_broadcast"]))
         else:
             Config.set("config", "Dreamcast.Broadcast", "4")
+        # frameskip
+        if system.isOptSet("flycast_frameskip"):
+            Config.set("config", "ta.skip", str(system.config["flycast_frameskip"]))
+        else:
+            Config.set("config", "ta.skip", "0")
         if system.isOptSet("flycast_render_resolution"):
             Config.set("config", "rend.Resolution", str(system.config["flycast_render_resolution"]))
         else:
