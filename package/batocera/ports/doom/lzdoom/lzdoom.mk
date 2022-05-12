@@ -21,5 +21,11 @@ LZDOOM_CONF_OPTS += -DIMPORT_EXECUTABLES=$(HOST_LZDOOM_BUILDDIR)/ImportExecutabl
 LZDOOM_CONF_OPTS += -DINSTALL_SOUNDFONT_PATH="/usr/share/lzdoom"
 LZDOOM_CONF_OPTS += -DINSTALL_PK3_PATH="/usr/share/lzdoom"
 
+define LZDOOM_KEYS
+	mv $(TARGET_DIR)/usr/bin/lzdoom $(TARGET_DIR)/usr/share/lzdoom/gzdoom
+endef
+
+LZDOOM_POST_INSTALL_TARGET_HOOKS += LZDOOM_KEYS
+
 $(eval $(cmake-package))
 $(eval $(host-cmake-package))

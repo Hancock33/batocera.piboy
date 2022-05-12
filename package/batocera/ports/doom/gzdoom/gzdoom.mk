@@ -3,8 +3,8 @@
 # GZDOOM
 #
 ################################################################################
-# Version: Commits on May 10, 2022
-GZDOOM_VERSION = e639030276599fa6da0e91c07ef689d26a70b222
+# Version: Commits on May 12, 2022
+GZDOOM_VERSION = beeb5f00aa5813e4ce7063e55d924c0a13e80911
 GZDOOM_SITE = $(call github,coelckers,gzdoom,$(GZDOOM_VERSION))
 
 GZDOOM_DEPENDENCIES = sdl2 sdl2_mixer host-zmusic zmusic
@@ -20,6 +20,12 @@ GZDOOM_CONF_OPTS += -DHAVE_GLES2=ON
 GZDOOM_CONF_OPTS += -DIMPORT_EXECUTABLES=$(HOST_GZDOOM_BUILDDIR)/ImportExecutables.cmake
 GZDOOM_CONF_OPTS += -DINSTALL_SOUNDFONT_PATH="/usr/share/gzdoom"
 GZDOOM_CONF_OPTS += -DINSTALL_PK3_PATH="/usr/share/gzdoom"
+
+define GZDOOM_KEYS
+	mv $(TARGET_DIR)/usr/bin/gzdoom $(TARGET_DIR)/usr/share/gzdoom/gzdoom
+endef
+
+GZDOOM_POST_INSTALL_TARGET_HOOKS += GZDOOM_KEYS
 
 $(eval $(cmake-package))
 $(eval $(host-cmake-package))
