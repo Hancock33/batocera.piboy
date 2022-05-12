@@ -8,7 +8,7 @@ import controllersConfig
 class LzdoomGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, gameResolution):
-        commandArray = ["lzdoom"]
+        commandArray = ["/usr/share/lzdoom/lzdoom"]
 
         # Rendering mode
         if system.isOptSet("lzdoom_render"):
