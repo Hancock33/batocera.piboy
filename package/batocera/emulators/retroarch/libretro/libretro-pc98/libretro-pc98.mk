@@ -43,13 +43,13 @@ LIBRETRO_PC98_PLATFORM = unix
 endif
 
 define LIBRETRO_PC98_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/sdl2/ -f Makefile.libretro platform="$(LIBRETRO_PC98_PLATFORM)" \
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/sdl/ -f Makefile.libretro platform="$(LIBRETRO_PC98_PLATFORM)" \
         GIT_VERSION="-$(shell echo $(LIBRETRO_PC98_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_PC98_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/np2kai
-	$(INSTALL) -D $(@D)/sdl2/np2kai_libretro.so \
+	$(INSTALL) -D $(@D)/sdl/np2kai_libretro.so \
 		$(TARGET_DIR)/usr/lib/libretro/np2kai_libretro.so
 endef
 
