@@ -1836,7 +1836,7 @@ pc88:
   manufacturer: NEC
   release: 1981
   hardware: computer
-  extensions: [d88, u88, m3u]
+  extensions: [cmt, d88, u88, m3u]
   platform:   pc88
   emulators:
     libretro:
