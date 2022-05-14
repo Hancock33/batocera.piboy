@@ -51,13 +51,4 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
   cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-define DUCKSTATION_TRANSLATIONS
-  mkdir -p $(TARGET_DIR)/usr/share/duckstation
-  cp -R $(@D)/buildroot-build/bin/translations  $(TARGET_DIR)/usr/share/duckstation/
-endef
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64),y)
-  DUCKSTATION_POST_INSTALL_TARGET_HOOKS += DUCKSTATION_TRANSLATIONS
-endif
-
 $(eval $(cmake-package))
