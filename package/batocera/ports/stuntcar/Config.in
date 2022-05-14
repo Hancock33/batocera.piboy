@@ -1,5 +1,5 @@
 config BR2_PACKAGE_STUNTCAR
-	bool "StuntCar"
+	bool "stuntcar"
 	depends on BR2_PACKAGE_SDL2
 	depends on BR2_PACKAGE_SDL2_MIXER
 	depends on BR2_PACKAGE_SDL2_TTF

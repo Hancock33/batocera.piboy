@@ -10,12 +10,18 @@ PROTOTYPE_SITE = $(call github,ptitSeb,prototype,$(PROTOTYPE_VERSION))
 PROTOTYPE_DEPENDENCIES = sdl2 sdl2_mixer
 PROTOTYPE_LICENSE = GPL-2.0
 
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
+PROTOTYPE_CONF_OPTS=LINUX=1
+else
+PROTOTYPE_CONF_OPTS=RPI4=1
+endif
+
 define PROTOTYPE_BUILD_CMDS
 		$(TARGET_CONFIGURE_OPTS) $(MAKE) \
 		CPP="$(TARGET_CPP)" CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
 		AS="$(TARGET_CC)" LD="$(TARGET_CXX)" STRIP="$(TARGET_STRIP)" \
-		-C $(@D) -f Makefile SDL2=1 RPI4=1 \
-		LDFLAGS="-L$(HOST_DIR)/aarch64-buildroot-linux-gnu/sysroot/lib64 -lm -L$(HOST_DIR)/aarch64-buildroot-linux-gnu/sysroot/usr/lib -lSDL2 -lSDL2_mixer -lGL"
+		-C $(@D) -f Makefile SDL2=1 $(PROTOTYPE_CONF_OPTS) \
+		LDFLAGS="-L$(STAGING_DIR)/lib64 -lm -L-L$(STAGING_DIR)/usr/lib -lSDL2 -lSDL2_mixer -lGL"
 endef
 
 define PROTOTYPE_INSTALL_TARGET_CMDS
