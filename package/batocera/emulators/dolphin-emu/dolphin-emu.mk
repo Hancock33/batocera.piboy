@@ -42,7 +42,7 @@ DOLPHIN_EMU_CONF_OPTS += -DENABLE_VULKAN=ON
 endif
 
 define DOLPHIN_EMU_EVMAPY
-	mv $(TARGET_DIR)/usr/bin/dolphin-emu-nogui $(TARGET_DIR)/usr/bin/dolphin-emu
+	#mv $(TARGET_DIR)/usr/bin/dolphin-emu-nogui $(TARGET_DIR)/usr/bin/dolphin-emu
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/*.keys $(TARGET_DIR)/usr/share/evmapy
 endef
