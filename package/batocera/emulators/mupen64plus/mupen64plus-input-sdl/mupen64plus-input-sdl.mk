@@ -3,8 +3,8 @@
 # mupen64plus-input-sdl
 #
 ################################################################################
-# Version: Commits on Apr 12, 2022
-MUPEN64PLUS_INPUT_SDL_VERSION = 95d901b73725da1ad967c3e2549eab53479a4508
+# Version: Commits on May 14, 2022
+MUPEN64PLUS_INPUT_SDL_VERSION = c6bcb296d51817e4e96d1f776f0f0453833135d2
 MUPEN64PLUS_INPUT_SDL_SITE = $(call github,mupen64plus,mupen64plus-input-sdl,$(MUPEN64PLUS_INPUT_SDL_VERSION))
 MUPEN64PLUS_INPUT_SDL_LICENSE = GPLv2
 MUPEN64PLUS_INPUT_SDL_DEPENDENCIES = sdl2 alsa-lib mupen64plus-core
