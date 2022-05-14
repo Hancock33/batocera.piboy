@@ -14,6 +14,7 @@ define ALEPHONE_BUILD_CMDS
 	cd $(@D) && \
 	PATH=$(BR_PATH) ./autogen.sh --disable-sdltest \
 	                             --with-sdl-prefix="$(STAGING_DIR)/usr" \
+	                             --with-boost="$(STAGING_DIR)/usr" \
 	                             --with-boost-libdir="$(STAGING_DIR)/usr/lib" \
 	                             --prefix=/usr && \
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) \

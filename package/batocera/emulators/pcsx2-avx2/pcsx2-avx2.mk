@@ -8,6 +8,7 @@ PCSX2_AVX2_VERSION = 6e576d208ebb6ffb785608787dcd00229e7f9d41
 PCSX2_AVX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_AVX2_SITE_METHOD = git
 PCSX2_AVX2_GIT_SUBMODULES = YES
+PCSX2_AVX2_SUPPORTS_IN_SOURCE_BUILD = NO
 PCSX2_AVX2_LICENSE = GPLv3
 PCSX2_AVX2_LICENSE_FILE = COPYING.GPLv3
 PCSX2_AVX2_DEPENDENCIES = xserver_xorg-server alsa-lib freetype zlib libpng wxwidgets libaio portaudio libsoundtouch sdl2 libpcap yaml-cpp libgtk3 libsamplerate fmt
@@ -28,8 +29,7 @@ PCSX2_AVX2_CONF_OPTS += -DUSE_VTUNE=OFF
 PCSX2_AVX2_CONF_OPTS += -DUSE_VULKAN=ON
 
 define PCSX2_AVX2_INSTALL_TARGET_CMDS
-	$(INSTALL) -m 0755 -D $(@D)/pcsx2/pcsx2 $(TARGET_DIR)/usr/pcsx2-avx2/bin/pcsx2
-	cp -pr $(@D)/bin/Langs $(TARGET_DIR)/usr/pcsx2-avx2/bin
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/pcsx2/pcsx2 $(TARGET_DIR)/usr/pcsx2-avx2/bin/pcsx2
 	cp -pr  $(@D)/bin/resources $(TARGET_DIR)/usr/pcsx2-avx2/bin/
 	mkdir -p $(TARGET_DIR)/usr/pcsx2-avx2/lib
 	cp -p $(@D)/buildroot-build/common/libcommon.so $(TARGET_DIR)/usr/pcsx2-avx2/lib
