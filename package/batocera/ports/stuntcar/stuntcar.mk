@@ -21,7 +21,7 @@ define STUNTCAR_BUILD_CMDS
 		CPP="$(TARGET_CPP)" CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
 		AS="$(TARGET_CC)" LD="$(TARGET_LD)" STRIP="$(TARGET_STRIP)" \
 		LDFLAGS="-L$(STAGING_DIR)/lib64 -lm -L$(STAGING_DIR)/usr/lib -lSDL2 -lSDL2_mixer -lSDL2_ttf -lGL" \
-		-C $(@D) -f Makefile SDL=2 $(STUNTCAR_CONF_OPTS) \
+		-C $(@D) -f Makefile SDL=2 $(STUNTCAR_CONF_OPTS)
 endef
 
 define STUNTCAR_INSTALL_TARGET_CMDS
