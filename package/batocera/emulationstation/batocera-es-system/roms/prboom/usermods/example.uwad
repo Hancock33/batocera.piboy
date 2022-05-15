@@ -1,0 +1,9 @@
+# The DOOM engines supports countless number of third-party WADs — called PWADs (or “Patch WADs”) — built by diligent members of the DOOM community over the past 28 or so years. 
+# Every PWAD needs a specific IWAD in order to work. In this case below it is doom.wad and the PWAD is obviously the mod to be loaded loaded.
+#
+# Note 1. You cannot run mods with the shareware or demo versions
+# Note 2. The filepath is case sensitive.
+# Note 3. PK3 files are only compatable with GZDOOM
+# 
+IWAD=/userdata/roms/prdoom/doom.wad
+PWAD=/userdata/roms/prboom/usermods/BrutalDoomPlatinumv2.0.pk3
