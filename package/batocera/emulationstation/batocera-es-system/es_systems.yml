@@ -1002,17 +1002,17 @@ prboom:
   manufacturer: Ports (Doom)
   release:
   hardware: port
-  extensions: [wad, iwad, pwad, gzdoom]
+  extensions: [wad, iwad, pwad, uwad]
   group: doom
   emulators:
     libretro:
-      prboom: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PRBOOM], incompatible_extensions: [gzdoom] }
+      prboom: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PRBOOM], incompatible_extensions: [uwad] }
     gzdoom:
       gzdoom: { requireAnyOf: [BR2_PACKAGE_GZDOOM] }
     lzdoom:
-      lzdoom: { requireAnyOf: [BR2_PACKAGE_LZDOOM], incompatible_extensions: [gzdoom] }
+      lzdoom: { requireAnyOf: [BR2_PACKAGE_LZDOOM] }
     doomretro:
-      doomretro: { requireAnyOf: [BR2_PACKAGE_DOOMRETRO], incompatible_extensions: [gzdoom] }
+      doomretro: { requireAnyOf: [BR2_PACKAGE_DOOMRETRO] }
   comment_en: |
     Put DOOM 1 and 2 games (and their associated mods) in this directory.
     Put your soundtrack in the directory ./game-musics

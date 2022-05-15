@@ -48,13 +48,16 @@ class GzdoomGenerator(Generator):
                 commandArray.append("vid_rendermode")
                 commandArray.append("4")
     
-        if (rom.__contains__(".gzdoom")):
+        if (rom.__contains__(".uwad")):
             f=open(rom)
             content=f.readlines()
-            commandArray.append("-iwad")
-            commandArray.append(content[0])
-            commandArray.append("-file")
-            commandArray.append(content[1])
+            for line in content:
+                if 'IWAD=/' in line:
+                    commandArray.append("-iwad")
+                    commandArray.append(line.replace("IWAD=", "").replace("\n", ""))
+                elif 'PWAD=/' in line:
+                    commandArray.append("-file")
+                    commandArray.append(line.replace("PWAD=", "").replace("\n", ""))
 
         else:
             commandArray.append("-iwad")
