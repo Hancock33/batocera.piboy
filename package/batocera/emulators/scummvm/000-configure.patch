@@ -1,21 +1,21 @@
 diff --git a/base/internal_version.h b/base/internal_version.h
-index 8e0d74a1e1f..a8a039dc2cb 100644
+index 235243ea2dc..4d999715f5d 100644
 --- a/base/internal_version.h
 +++ b/base/internal_version.h
 @@ -16,7 +16,7 @@
  #define SCUMMVM_REVISION
  #endif
  
--#define SCUMMVM_VERSION "2.5.1pre"
-+#define SCUMMVM_VERSION "2.5.1 (bd2bf31)"
+-#define SCUMMVM_VERSION "2.6.0git"
++#define SCUMMVM_VERSION "2.6.0 (1aabe90)"
  
  #define SCUMMVM_VER_MAJOR 2
- #define SCUMMVM_VER_MINOR 5
+ #define SCUMMVM_VER_MINOR 6
 diff --git a/configure b/configure
-index c2b6c757e4d..461cc030fd4 100755
+index 79c7f9bcbec..67ebccace05 100755
 --- a/configure
 +++ b/configure
-@@ -1490,9 +1490,6 @@ for ac_option in $@; do
+@@ -1491,9 +1491,6 @@ for ac_option in $@; do
  			engine_disable ${engine_name}
  		done
  		;;
@@ -25,7 +25,7 @@ index c2b6c757e4d..461cc030fd4 100755
  	esac;
  done;
  
-@@ -3292,13 +3289,13 @@ if test -n "$_host"; then
+@@ -3240,13 +3237,13 @@ if test -n "$_host"; then
  			# but Raspbian does.
  			# Be careful as it's the linker (LDFLAGS) which must know about sysroot.
  			# These are needed to build against Raspbian's libSDL.
