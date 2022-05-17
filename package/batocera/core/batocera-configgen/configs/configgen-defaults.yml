@@ -227,11 +227,13 @@ flash:
   core:     ruffle
   options:
     forceNoBezel: true
+    hud_support: false
 flatpak:
   emulator: flatpak
   core:     flatpak
   options:
     forceNoBezel: true
+    hud_support: false
 fm7:
   emulator: libretro
   core:     mess
@@ -359,6 +361,7 @@ model2:
   core:     model2emu
   options:
     forceNoBezel: true
+    hud_support: false
 model3:
   emulator: supermodel
   core:     supermodel
@@ -640,6 +643,7 @@ switch:
   core:     yuzu
   options:
     forceNoBezel: true
+    hud_support: false
 
 # T-Z
 
@@ -717,11 +721,13 @@ windows:
   core:     proton
   options:
     forceNoBezel: true
+    hud_support: false
 windows_installers:
   emulator: wine
   core:     proton
   options:
     forceNoBezel: true
+    hud_support: false
 witchaven:
   emulator: witchaven
   core:     witchaven
@@ -742,6 +748,7 @@ xash3d_fwgs:
   core:     xash3d_fwgs
   options:
     forceNoBezel: true
+    hud_support: false
 xegs:
   emulator: libretro
   core:     mess
@@ -756,6 +763,7 @@ xbox360:
   core:     xenia
   options:
     forceNoBezel: true
+    hud_support: false
 yquake2:
   emulator: yquake2
   core:     yquake2
