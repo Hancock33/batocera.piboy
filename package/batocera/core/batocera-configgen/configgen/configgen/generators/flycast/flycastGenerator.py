@@ -54,6 +54,16 @@ class FlycastGenerator(Generator):
         # set video resolution
         Config.set("window", "width", str(gameResolution["width"]))
         Config.set("window", "height", str(gameResolution["height"]))
+        # set broadcast mode
+        if system.isOptSet("flycast_broadcast"):
+            Config.set("config", "Dreamcast.Broadcast", str(system.config["flycast_broadcast"]))
+        else:
+            Config.set("config", "Dreamcast.Broadcast", "4")
+        # frameskip
+        if system.isOptSet("flycast_frameskip"):
+            Config.set("config", "ta.skip", str(system.config["flycast_frameskip"]))
+        else:
+            Config.set("config", "ta.skip", "0")
         # set render resolution - default 480 (Native)
         if system.isOptSet("flycast_render_resolution"):
             Config.set("config", "rend.Resolution", str(system.config["flycast_render_resolution"]))
