@@ -2639,7 +2639,7 @@ msgctxt "game_options"
 msgid "Select which joystick to emulate."
 msgstr ""
 
-#. TRANSLATION: libretro/mess, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, mame/wasm4
+#. TRANSLATION: libretro/mess, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, flycast/wasm4, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr ""
@@ -6954,6 +6954,41 @@ msgstr ""
 #. TRANSLATION: flycast/wasm4
 msgctxt "game_options"
 msgid "FORCE WINDOWS CE"
+msgstr ""
+
+#. TRANSLATION: flycast/wasm4, flycast/wasm4, flycast/wasm4, flycast/wasm4
+msgctxt "game_options"
+msgid "Choose second feature pack for the controller."
+msgstr ""
+
+#. TRANSLATION: flycast/wasm4
+msgctxt "game_options"
+msgid "CONTROLLER 1 FEATURE PACK"
+msgstr ""
+
+#. TRANSLATION: flycast/wasm4, flycast/wasm4, flycast/wasm4, flycast/wasm4
+msgctxt "game_options"
+msgid "2nd VMU (Default)"
+msgstr ""
+
+#. TRANSLATION: flycast/wasm4, flycast/wasm4, flycast/wasm4, flycast/wasm4
+msgctxt "game_options"
+msgid "Purupuru (Rumble)"
+msgstr ""
+
+#. TRANSLATION: flycast/wasm4
+msgctxt "game_options"
+msgid "CONTROLLER 2 FEATURE PACK"
+msgstr ""
+
+#. TRANSLATION: flycast/wasm4
+msgctxt "game_options"
+msgid "CONTROLLER 3 FEATURE PACK"
+msgstr ""
+
+#. TRANSLATION: flycast/wasm4
+msgctxt "game_options"
+msgid "CONTROLLER 4 FEATURE PACK"
 msgstr ""
 
 #. TRANSLATION: flycast
