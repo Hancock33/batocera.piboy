@@ -124,7 +124,7 @@ shared:
       group: GAME TRANSLATION
       prompt: ENABLE AI TRANSLATION SERVICE
       submenu: AI GAME TRANSLATION
-      preset: switchoff
+      preset: switch
     ai_target_lang:
       group: GAME TRANSLATION
       prompt: TARGET LANGUAGE
@@ -160,7 +160,7 @@ shared:
       group: GAME TRANSLATION
       prompt: PAUSE ON TRANSLATED SCREEN
       submenu: AI GAME TRANSLATION
-      preset: switchoff
+      preset: switch
     runahead:
       group: LATENCY REDUCTION
       submenu:     LATENCY REDUCTION
