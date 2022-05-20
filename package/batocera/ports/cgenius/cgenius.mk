@@ -3,8 +3,8 @@
 # Commander Genius
 #
 ################################################################################
-# Version: Commits on May 20, 2022
-CGENIUS_VERSION = 7f2be03b009cb30cb5d499909ac46cd608c57444
+# Version: Commits on Dec 30, 2021
+CGENIUS_VERSION = 8c69bd96297776b70b2ea5a35471431de095fee5
 CGENIUS_SITE = https://github.com/gerstrong/Commander-Genius
 
 CGENIUS_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf boost libcurl
@@ -13,6 +13,8 @@ CGENIUS_GIT_SUBMODULES=YES
 
 # No OpenGL ES support
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
+CGENIUS_CONF_OPTS += -DUSE_OPENGL=ON
+else ifeq ($(BR2_PACKAGE_BATOCERA_RPI4_WITH_XORG),y)
 CGENIUS_CONF_OPTS += -DUSE_OPENGL=ON
 else
 CGENIUS_CONF_OPTS += -DUSE_OPENGL=OFF
