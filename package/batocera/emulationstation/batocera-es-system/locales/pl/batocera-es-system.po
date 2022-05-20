@@ -8368,7 +8368,7 @@ msgctxt "game_options"
 msgid "Choose your preferred aspect ratio."
 msgstr "Wybierz preferowany współczynnik proporcji."
 
-#. TRANSLATION: redream, demul
+#. TRANSLATION: redream, demul, bermuda
 msgctxt "game_options"
 msgid "4:3 (Default)"
 msgstr "4:3 (domyślnie)"
@@ -9347,7 +9347,7 @@ msgctxt "game_options"
 msgid "Select rendering mode."
 msgstr ""
 
-#. TRANSLATION: awgl
+#. TRANSLATION: awgl, bermuda
 msgctxt "game_options"
 msgid "Select fullscreen mode."
 msgstr ""

@@ -8456,13 +8456,13 @@ hurrican:
   features: [padtokeyboard]
   shared: [videomode]
   cfeatures:
-        crt:
+        hurrican_crt:
             prompt:      CRT EFFECT
             description: Simulate CRT effects for a retro look.
             choices:
                 "Off":      0
                 "On":       1
-        custlevel:
+        hurrican_custlevel:
             prompt:      CUSTOM LEVELS
             description: Play custom userlevel.
             choices:
@@ -8561,7 +8561,15 @@ awgl:
                 "Off":            disabled
 bermuda:
   features: [padtokeyboard]
-  shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [videomode]
+  cfeatures:
+        bermuda_aspect:
+            group: VIDEO SETTINGS
+            prompt:      ASPECT RATIO
+            description: Select fullscreen mode.
+            choices:
+                "4:3 (Default)": 0
+                "16:9":          1
 bbja:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
