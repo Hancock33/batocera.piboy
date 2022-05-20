@@ -8454,7 +8454,27 @@ hcl:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 hurrican:
   features: [padtokeyboard]
-  shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [videomode]
+  cfeatures:
+        crt:
+            prompt:      CRT EFFECT
+            description: Simulate CRT effects for a retro look.
+            choices:
+                "Off":      0
+                "On":       1
+        custlevel:
+            prompt:      CUSTOM LEVELS
+            description: Play custom userlevel.
+            choices:
+                "Original":       Original
+                "ChJees":         ChJees
+                "Genocide":       Genocide
+                "Second Empire":  Second_Empire
+                "Secret Planet":   SecretPlanet
+                "Valentine":      valentine
+                "Volcano Temple": Volcano_Temple
+                "Walkers World":  Walkers_World
+
 openjazz:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -8583,7 +8603,7 @@ gzdoom:
             choices:
                 "Vulkan":   vulkan
                 "Softpoly": soft
-                "GLES2":    gles2      
+                "GLES2":    gles2
 lzdoom:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -8594,7 +8614,7 @@ lzdoom:
             description: Select rendering mode.
             choices:
                 "Vulkan":   vulkan
-                "Softpoly": soft  
+                "Softpoly": soft
 hode:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

@@ -6284,7 +6284,7 @@ msgctxt "game_options"
 msgid "Not all games support Stretch, depending on the video files."
 msgstr "引き伸ばしは、すべてのゲームに対応しているわけではありません"
 
-#. TRANSLATION: daphne, awgl, awgl
+#. TRANSLATION: daphne, hurrican, awgl, awgl
 msgctxt "game_options"
 msgid "Original"
 msgstr "オリジナル"
@@ -9139,6 +9139,61 @@ msgstr "2人用のシューティングゲームで２つ同時にマウスを�
 msgctxt "game_options"
 msgid "ENABLE RAW INPUT"
 msgstr "RAW入力を有効"
+
+#. TRANSLATION: hurrican
+msgctxt "game_options"
+msgid "Simulate CRT effects for a retro look."
+msgstr ""
+
+#. TRANSLATION: hurrican
+msgctxt "game_options"
+msgid "CRT EFFECT"
+msgstr ""
+
+#. TRANSLATION: hurrican
+msgctxt "game_options"
+msgid "Play custom userlevel."
+msgstr ""
+
+#. TRANSLATION: hurrican
+msgctxt "game_options"
+msgid "CUSTOM LEVELS"
+msgstr ""
+
+#. TRANSLATION: hurrican
+msgctxt "game_options"
+msgid "ChJees"
+msgstr ""
+
+#. TRANSLATION: hurrican
+msgctxt "game_options"
+msgid "Genocide"
+msgstr ""
+
+#. TRANSLATION: hurrican
+msgctxt "game_options"
+msgid "Second Empire"
+msgstr ""
+
+#. TRANSLATION: hurrican
+msgctxt "game_options"
+msgid "Secret Planet"
+msgstr ""
+
+#. TRANSLATION: hurrican
+msgctxt "game_options"
+msgid "Valentine"
+msgstr ""
+
+#. TRANSLATION: hurrican
+msgctxt "game_options"
+msgid "Volcano Temple"
+msgstr ""
+
+#. TRANSLATION: hurrican
+msgctxt "game_options"
+msgid "Walkers World"
+msgstr ""
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
