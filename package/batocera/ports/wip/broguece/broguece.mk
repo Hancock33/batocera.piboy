@@ -3,8 +3,8 @@
 #  Brogue Community Edition
 #
 ################################################################################
-# Version: Commits on Apr 30, 2022
-BROGUECE_VERSION = f5869113c174c50ec5215d46598c72bcbb0a7234
+# Version: Commits on May 21, 2022
+BROGUECE_VERSION = 4abf967855716fbf0ba85f21a2994e6da783ac62
 BROGUECE_SITE = $(call github,tmewett,BrogueCE,$(BROGUECE_VERSION))
 
 BROGUECE_DEPENDENCIES = sdl2 sdl2_image
