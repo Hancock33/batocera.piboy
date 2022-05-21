@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on May 20, 2022
-SPACECADETPINBALL_VERSION = 97aea205860bdb1f3838e26f3779d647070432b3
+SPACECADETPINBALL_VERSION = e283a643b3f80bc8c2c7dd0fb51e117fc84f31a1
 SPACECADETPINBALL_SITE = $(call github,k4zmu2a,SpaceCadetPinball,$(SPACECADETPINBALL_VERSION))
 
 SPACECADETPINBALL_DEPENDENCIES = sdl2 sdl2_mixer
