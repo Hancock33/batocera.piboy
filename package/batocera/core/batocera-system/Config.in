@@ -569,16 +569,16 @@ config BR2_PACKAGE_BATOCERA_SEGADC
                                                 !BR2_PACKAGE_BATOCERA_TARGET_X86            && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_CHA            && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3326         && \
-                                                !BR2_PACKAGE_BATOCERA_TARGET_S922X         && \
+                                                !BR2_PACKAGE_BATOCERA_TARGET_S922X          && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_TRITIUM_H5     && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_ROCKCHIP_ANY
-	select BR2_PACKAGE_LIBRETRO_FLYCAST     if  !BR2_PACKAGE_BATOCERA_TARGET_RPI1       && \
-                                                !BR2_PACKAGE_BATOCERA_TARGET_RPIZERO2   && \
-                                                !BR2_PACKAGE_BATOCERA_TARGET_RPI2       && \
-                                                !BR2_PACKAGE_BATOCERA_TARGET_CHA        && \
-						!BR2_PACKAGE_BATOCERA_TARGET_TRITIUM_H5     && \
+	select BR2_PACKAGE_LIBRETRO_FLYCAST     if  !BR2_PACKAGE_BATOCERA_TARGET_RPI1           && \
+                                                !BR2_PACKAGE_BATOCERA_TARGET_RPIZERO2       && \
+                                                !BR2_PACKAGE_BATOCERA_TARGET_RPI2           && \
+                                                !BR2_PACKAGE_BATOCERA_TARGET_CHA            && \
+                                                !BR2_PACKAGE_BATOCERA_TARGET_TRITIUM_H5     && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_X86
-	select BR2_PACKAGE_REDREAM              if BR2_PACKAGE_BATOCERA_TARGET_X86_64 || BR2_PACKAGE_BATOCERA_TARGET_RPI4
+	#select BR2_PACKAGE_REDREAM              if BR2_PACKAGE_BATOCERA_TARGET_X86_64 || BR2_PACKAGE_BATOCERA_TARGET_RPI4
 
 	select BR2_PACKAGE_LIBRETRO_VEMULATOR   # ALL
 
@@ -1028,7 +1028,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 	select BR2_PACKAGE_LIBRETRO_BEETLE_SATURN       if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
 	select BR2_PACKAGE_LIBRETRO_KRONOS              if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-	select BR2_PACKAGE_LIBRETRO_YABAUSE		        if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY || BR2_PACKAGE_BATOCERA_TARGET_RPI4
+	select BR2_PACKAGE_LIBRETRO_YABAUSE		        if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 	select BR2_PACKAGE_LIBRETRO_YABASANSHIRO        if  !BR2_PACKAGE_BATOCERA_TARGET_RPI1       && \
                                                         !BR2_PACKAGE_BATOCERA_TARGET_RPIZERO2   && \
                                                         !BR2_PACKAGE_BATOCERA_TARGET_RPI2       && \
@@ -1040,7 +1040,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                         !BR2_PACKAGE_BATOCERA_TARGET_S905       && \
                                                         !BR2_PACKAGE_BATOCERA_TARGET_S912		&& \
                                                         !BR2_PACKAGE_BATOCERA_TARGET_RK3399     && \
-							!BR2_PACKAGE_BATOCERA_TARGET_RG552      && \
+                                                        !BR2_PACKAGE_BATOCERA_TARGET_RG552      && \
                                                         !BR2_PACKAGE_BATOCERA_TARGET_RK3288     && \
                                                         !BR2_PACKAGE_BATOCERA_TARGET_RK3128
 
