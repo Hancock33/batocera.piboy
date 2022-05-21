@@ -9,7 +9,7 @@ DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
 DUCKSTATION_SITE_METHOD=git
 DUCKSTATION_GIT_SUBMODULES=YES
 DUCKSTATION_LICENSE = GPLv2
-DUCKSTATION_DEPENDENCIES = fmt boost ffmpeg
+DUCKSTATION_DEPENDENCIES = fmt boost ffmpeg libcurl
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 
 DUCKSTATION_CONF_ENV += LDFLAGS=-lpthread
@@ -50,5 +50,3 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
   mkdir -p $(TARGET_DIR)/usr/share/evmapy
   cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy
 endef
-
-$(eval $(cmake-package))
