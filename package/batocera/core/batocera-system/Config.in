@@ -40,7 +40,7 @@ endif
 # add platforms that support GLES3 here
 # the GLES3 backend maps to OpenGL 3.3 on desktop, OpenGL ES 3.0 on mobile and WebGL 2.0 on the web.
 if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY || BR2_PACKAGE_BATOCERA_TARGET_RPI4 || BR2_PACKAGE_BATOCERA_TARGET_RK3399 || BR2_PACKAGE_BATOCERA_TARGET_RG552 \
-    || BR2_PACKAGE_BATOCERA_TARGET_RK3326 || BR2_PACKAGE_BATOCERA_TARGET_XU4 || BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_ZERO2 
+    || BR2_PACKAGE_BATOCERA_TARGET_RK3326 || BR2_PACKAGE_BATOCERA_TARGET_XU4 || BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_ZERO2
     config BR2_PACKAGE_BATOCERA_GLES3
 	bool "target gles3 support"
 	default y
@@ -1043,6 +1043,8 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                         !BR2_PACKAGE_BATOCERA_TARGET_RG552      && \
                                                         !BR2_PACKAGE_BATOCERA_TARGET_RK3288     && \
                                                         !BR2_PACKAGE_BATOCERA_TARGET_RK3128
+
+	select BR2_PACKAGE_YABAUSESA	                if BR2_PACKAGE_BATOCERA_RPI4_WITH_XORG
 
 	# Gamecube / Wii
 	select BR2_PACKAGE_DOLPHIN_EMU                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64	|| \
