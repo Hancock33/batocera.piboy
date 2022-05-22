@@ -46,8 +46,8 @@ YABAUSESA_CONF_OPTS += -Wno-dev
 define YABAUSESA_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/yabause/buildroot-build/src/retro_arena/yabasanshiro -D $(TARGET_DIR)/usr/bin/yabausesa
 	$(INSTALL) -m 0755 $(@D)/yabause/buildroot-build/src/libyabause.so -D $(TARGET_DIR)/usr/lib/libyabause.so
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/yabasanshiro
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/yabausesa/keymapv2.json $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/yabasanshiro
+	mkdir -p $(TARGET_DIR)/usr/share/yabasanshiro
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/yabausesa/keymapv2.json $(TARGET_DIR)/usr/share/yabasanshiro
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/yabausesa/saturn.yabausesa.keys $(TARGET_DIR)/usr/share/evmapy
