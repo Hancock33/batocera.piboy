@@ -1,11 +1,16 @@
 #!/usr/bin/env python
-
+import shutil
+import os
 import Command
 from generators.Generator import Generator
 import controllersConfig
 
 
 class YabausesaGenerator(Generator):
+    if not os.path.exists('/userdata/system/configs/yabasanshiro'):
+        os.makedirs('/userdata/system/configs/yabasanshiro')
+
+    shutil.copyfile('/usr/share/yabasanshiro/keymapv2.json', '/userdata/system/configs/yabasanshiro/keymapv2.json')
 
     def generate(self, system, rom, playersControllers, gameResolution):
         commandArray = ["/usr/bin/yabausesa"]
