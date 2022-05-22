@@ -122,7 +122,7 @@ endif
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
 # Batocera - RPi4 prefer GLES
   ifeq ($(!BR2_PACKAGE_BATOCERA_RPI4_WITH_XORG),y)
-	RETROARCH_CONF_OPTS += --enable-opengl --disable-opengles
+	RETROARCH_CONF_OPTS += --enable-opengl --disable-opengl1
 	RETROARCH_DEPENDENCIES += libgl
   endif
 endif

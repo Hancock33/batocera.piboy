@@ -8722,6 +8722,48 @@ xash3d_fwgs:
 xenia:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+yabausesa:
+  features: [padtokeyboard]
+  shared: [videomode]
+  cfeatures:
+        yabausesa_resolution:
+            group: VIDEO SETTINGS
+            prompt:      RESOLUTION
+            choices:
+                "1x native":   1
+                "2x":          2
+                "4x":          3
+                "0x Original": 4
+        yabausesa_rotate_resolution:
+            group: VIDEO SETTINGS
+            prompt:      ROTATE RESOLUTION
+            choices:
+                "Original": 0
+                "2x":       1
+                "720p":     2
+                "1080P":    3                
+                "Native":   4
+        yabausesa_keep_ar:
+            group: VIDEO SETTINGS
+            prompt:      KEEP ASPECT RATE
+            choices:
+                "False":    0
+                "True":     1
+        yabausesa_scps_sync_per_frame:
+            group: VIDEO SETTINGS
+            prompt:      SYNC PER FRAME
+            choices:
+                "0":        0
+                "1":        1
+                "2":        2
+                "3":        3
+                "4":        4
+        yabausesa_frame:
+            group: VIDEO SETTINGS
+            prompt:      DISABLE FRAME SKIP
+            choices:
+                "False":    0
+                "True":     1
 yquake2:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

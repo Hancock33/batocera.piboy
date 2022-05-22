@@ -117,6 +117,7 @@ from generators.witchaven.witchavenGenerator import WitchavenGenerator
 from generators.xash3d_fwgs.xash3dFwgsGenerator import Xash3dFwgsGenerator
 from generators.xemu.xemuGenerator import XemuGenerator
 from generators.xenia.xeniaGenerator import XeniaGenerator
+from generators.yabausesa.yabausesaGenerator import YabausesaGenerator
 from generators.yquake2.yquake2Generator import Yquake2Generator
 from generators.yuzu.yuzuGenerator import YuzuGenerator
 #from generators.play.playGenerator import PlayGenerator
@@ -242,6 +243,7 @@ generators = {
     'xash3d_fwgs': Xash3dFwgsGenerator(),
     'xemu': XemuGenerator(),
     'xenia': XeniaGenerator(),
+    'yabausesa': YabausesaGenerator(),
     'yquake2': Yquake2Generator(),
     'yuzu': YuzuGenerator(),
     #'play': PlayGenerator(),

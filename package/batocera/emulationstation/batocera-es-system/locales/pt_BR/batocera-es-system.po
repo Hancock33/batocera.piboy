@@ -5886,7 +5886,7 @@ msgctxt "game_options"
 msgid "DOOM RES HACK"
 msgstr "DOOM - TRUQUE DE RESOLUÇÃO"
 
-#. TRANSLATION: libretro/yabasanshiro
+#. TRANSLATION: libretro/yabasanshiro, yabausesa
 msgctxt "game_options"
 msgid "720p"
 msgstr "720p"
@@ -6342,7 +6342,7 @@ msgstr ""
 "Nem todos os jogos suportam a proporção Esticado, dependem dos arquivos de "
 "vídeo."
 
-#. TRANSLATION: daphne, hurrican, awgl, awgl
+#. TRANSLATION: daphne, hurrican, awgl, awgl, yabausesa
 msgctxt "game_options"
 msgid "Original"
 msgstr "Original"
@@ -9410,6 +9410,61 @@ msgstr ""
 #. TRANSLATION: gzdoom
 msgctxt "game_options"
 msgid "GLES2"
+msgstr ""
+
+#. TRANSLATION: yabausesa
+msgctxt "game_options"
+msgid "RESOLUTION"
+msgstr ""
+
+#. TRANSLATION: yabausesa
+msgctxt "game_options"
+msgid "1x native"
+msgstr ""
+
+#. TRANSLATION: yabausesa
+msgctxt "game_options"
+msgid "0x Original"
+msgstr ""
+
+#. TRANSLATION: yabausesa
+msgctxt "game_options"
+msgid "ROTATE RESOLUTION"
+msgstr ""
+
+#. TRANSLATION: yabausesa
+msgctxt "game_options"
+msgid "1080P"
+msgstr ""
+
+#. TRANSLATION: yabausesa
+msgctxt "game_options"
+msgid "Native"
+msgstr ""
+
+#. TRANSLATION: yabausesa
+msgctxt "game_options"
+msgid "KEEP ASPECT RATE"
+msgstr ""
+
+#. TRANSLATION: yabausesa, yabausesa
+msgctxt "game_options"
+msgid "False"
+msgstr ""
+
+#. TRANSLATION: yabausesa, yabausesa
+msgctxt "game_options"
+msgid "True"
+msgstr ""
+
+#. TRANSLATION: yabausesa
+msgctxt "game_options"
+msgid "SYNC PER FRAME"
+msgstr ""
+
+#. TRANSLATION: yabausesa
+msgctxt "game_options"
+msgid "DISABLE FRAME SKIP"
 msgstr ""
 
 #~ msgctxt "game_options"

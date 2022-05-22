@@ -1,5 +1,5 @@
-config BR2_PACKAGE_YABAUSE
-    bool "yabause"
+config BR2_PACKAGE_YABAUSESA
+    bool "yabausesa"
     depends on BR2_PACKAGE_SDL2
     depends on BR2_PACKAGE_BOOST
     depends on BR2_PACKAGE_OPENAL
