@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on May 21, 2022
-RETROARCH_VERSION = 5c6d5b0aa33d0227bf995b07c311bbadc50e281d
+# Version: Commits on May 22, 2022
+RETROARCH_VERSION = 4654fc1b758fd7c32363fb353e69ffd556dda066
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac libretro-core-info
@@ -122,7 +122,7 @@ endif
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
 # Batocera - RPi4 prefer GLES
   ifeq ($(!BR2_PACKAGE_BATOCERA_RPI4_WITH_XORG),y)
-	RETROARCH_CONF_OPTS += --enable-opengl --disable-opengl1
+	RETROARCH_CONF_OPTS += --enable-opengl --disable-opengles
 	RETROARCH_DEPENDENCIES += libgl
   endif
 endif
