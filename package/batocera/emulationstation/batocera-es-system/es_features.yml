@@ -7011,10 +7011,7 @@ redream:
               "Composite":     composite
 sdlpop:
   features: [padtokeyboard]
-  shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-superbroswar:
-  features: []
-  shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [videomode, ratio, hud]
 supermodel:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
@@ -8640,7 +8637,7 @@ nukem2:
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 odcommander:
   features: [padtokeyboard]
-  shared: [videomode]
+  shared: [videomode, ratio, hud]
 openclaw:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -8730,10 +8727,10 @@ yabausesa:
             group: VIDEO SETTINGS
             prompt:      RESOLUTION
             choices:
-                "1x native":   1
-                "2x":          2
-                "4x":          3
-                "0x Original": 4
+                "Native":   1
+                "720p":     2
+                "1080P":    3
+                "Original": 4
         yabausesa_rotate_resolution:
             group: VIDEO SETTINGS
             prompt:      ROTATE RESOLUTION
