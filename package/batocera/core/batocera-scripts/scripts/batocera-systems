@@ -652,7 +652,7 @@ systems = {
                                                 { "md5": "ac0d468be366779c9df633be98da250a", "zippedFile": "cdi220b.rom", "file": "bios/cdimono1.zip"},
                                                 { "md5": "3e59b8a9a423d3ecd612a32fe4e2d748", "zippedFile": "zx405037p__cdi_servo_2.1__b43t__llek9215.mc68hc705c8a_withtestrom.7201", "file": "bios/cdimono1.zip"},
                                                 { "md5": "3d20cf7550f1b723158b42a1fd5bac62", "zippedFile": "zx405042p__cdi_slave_2.0__b43t__zzmk9213.mc68hc705c8a_withtestrom.7206", "file": "bios/cdimono1.zip"} ] },
-    
+
     # ---------- Naomi 2 ---------- #
     "naomi2":   { "name": "Naomi 2", "biosFiles":  [ { "md5": "", "file": "bios/dc/naomi2.zip"  },
                                                 { "md5": "728bfe038ce280872057e365ebfc0fee", "zippedFile": "315-6146.bin", "file": "bios/dc/naomi2.zip"},
