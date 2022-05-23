@@ -17,7 +17,7 @@ class YabausesaGenerator(Generator):
         
         rom_name = os.path.basename(rom)
         
-        f = open('/userdata/system/configs/yabasanshiro/' + rom_name + '.config', 'a')
+        f = open('/userdata/system/configs/yabasanshiro/' + rom_name + '.config', 'w')
         f.write('{' + '\n')
         
         if system.isOptSet("yabausesa_keep_ar"):
