@@ -3758,7 +3758,12 @@ msgstr ""
 
 #. TRANSLATION: libretro/neocd
 msgctxt "game_options"
-msgid "CDZ (MAME)"
+msgid "CDZ MAME"
+msgstr ""
+
+#. TRANSLATION: libretro/neocd
+msgctxt "game_options"
+msgid "CDZ Universe 3.3"
 msgstr ""
 
 #. TRANSLATION: libretro/neocd
