@@ -8727,10 +8727,26 @@ yabausesa:
             group: VIDEO SETTINGS
             prompt:      RESOLUTION
             choices:
-                "Native":   1
-                "720p":     2
-                "1080P":    3
-                "Original": 4
+                "Native":   0
+                "4x":       1
+                "2x":       2
+                "Original": 3
+                "720p":     4
+                "1080P":    5
+        yabausesa_keep_ar:
+            group: VIDEO SETTINGS
+            prompt:      KEEP ASPECT RATE
+            choices:
+                "Original":    0
+                "4:3":         1
+                "16:9":        2
+                "Full Screen": 3
+        yabausesa_rotate:
+            group: VIDEO SETTINGS
+            prompt:      ROTATE SCREEN
+            choices:
+                "False":    false
+                "True":     true
         yabausesa_rotate_resolution:
             group: VIDEO SETTINGS
             prompt:      ROTATE RESOLUTION
@@ -8738,29 +8754,14 @@ yabausesa:
                 "Original": 0
                 "2x":       1
                 "720p":     2
-                "1080P":    3                
+                "1080P":    3
                 "Native":   4
-        yabausesa_keep_ar:
-            group: VIDEO SETTINGS
-            prompt:      KEEP ASPECT RATE
-            choices:
-                "False":    0
-                "True":     1
         yabausesa_scps_sync_per_frame:
             group: VIDEO SETTINGS
-            prompt:      SYNC PER FRAME
+            prompt:      USE COMPUTE SHADER
             choices:
-                "0":        0
-                "1":        1
-                "2":        2
-                "3":        3
-                "4":        4
-        yabausesa_frame:
-            group: VIDEO SETTINGS
-            prompt:      DISABLE FRAME SKIP
-            choices:
-                "False":    0
-                "True":     1
+                "False":    false
+                "True":     true
 yquake2:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

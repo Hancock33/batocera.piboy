@@ -5882,7 +5882,7 @@ msgctxt "game_options"
 msgid "DOOM RES HACK"
 msgstr "DOOM RES HACK"
 
-#. TRANSLATION: libretro/yabasanshiro, yabausesa
+#. TRANSLATION: libretro/yabasanshiro, yabausesa, yabausesa
 msgctxt "game_options"
 msgid "720p"
 msgstr "720p"
@@ -6334,7 +6334,7 @@ msgid "Not all games support Stretch, depending on the video files."
 msgstr ""
 "No todos los juegos admiten estiramiento, depende de los archivos de video."
 
-#. TRANSLATION: daphne, hurrican, awgl, awgl, yabausesa
+#. TRANSLATION: daphne, hurrican, awgl, awgl, yabausesa, ...
 msgctxt "game_options"
 msgid "Original"
 msgstr "Original"
@@ -9408,34 +9408,29 @@ msgctxt "game_options"
 msgid "RESOLUTION"
 msgstr ""
 
-#. TRANSLATION: yabausesa
+#. TRANSLATION: yabausesa, yabausesa
 msgctxt "game_options"
-msgid "1x native"
+msgid "Native"
 msgstr ""
 
-#. TRANSLATION: yabausesa
-msgctxt "game_options"
-msgid "0x Original"
-msgstr ""
-
-#. TRANSLATION: yabausesa
-msgctxt "game_options"
-msgid "ROTATE RESOLUTION"
-msgstr ""
-
-#. TRANSLATION: yabausesa
+#. TRANSLATION: yabausesa, yabausesa
 msgctxt "game_options"
 msgid "1080P"
 msgstr ""
 
 #. TRANSLATION: yabausesa
 msgctxt "game_options"
-msgid "Native"
+msgid "KEEP ASPECT RATE"
 msgstr ""
 
 #. TRANSLATION: yabausesa
 msgctxt "game_options"
-msgid "KEEP ASPECT RATE"
+msgid "Full Screen"
+msgstr ""
+
+#. TRANSLATION: yabausesa
+msgctxt "game_options"
+msgid "ROTATE SCREEN"
 msgstr ""
 
 #. TRANSLATION: yabausesa, yabausesa
@@ -9450,12 +9445,12 @@ msgstr ""
 
 #. TRANSLATION: yabausesa
 msgctxt "game_options"
-msgid "SYNC PER FRAME"
+msgid "ROTATE RESOLUTION"
 msgstr ""
 
 #. TRANSLATION: yabausesa
 msgctxt "game_options"
-msgid "DISABLE FRAME SKIP"
+msgid "USE COMPUTE SHADER"
 msgstr ""
 
 #~ msgctxt "game_options"

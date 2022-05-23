@@ -9,14 +9,6 @@
             "target": "killall -9 yabausesa && reset"
         },
         {
-            "trigger": [
-                "b",
-                "hotkey"
-            ],
-            "type": "key",
-            "target": "KEY_ESC"
-        },
-       {
             "trigger": "up",
             "type": "key",
             "target": "KEY_UP"
