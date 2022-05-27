@@ -60,6 +60,9 @@ pet:
 psp:
   options:
     frameskip: automatic
+psx:
+  options:
+    gfxbackend: vulkan
 sgb:
   emulator: libretro
   core:     mgba

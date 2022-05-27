@@ -7,7 +7,7 @@ import batoceraFiles
 import csv
 from pathlib import Path
 
-def generateCoreSettings(coreSettings, system, rom):
+def generateCoreSettings(coreSettings, system, rom, guns):
 
     # Amstrad CPC / GX4000
     if (system.config['core'] == 'cap32'):
@@ -1754,8 +1754,19 @@ def generateCoreSettings(coreSettings, system, rom):
 
     # Nintendo NES / Famicom Disk System
     if (system.config['core'] == 'nestopia'):
-        # Nestopia Mouse mode for Zapper
-        coreSettings.save('nestopia_zapper_device', '"mouse"')
+        # gun
+        if system.isOptSet('use_guns') and system.getOptBoolean('use_guns') and len(guns) >= 1:
+            coreSettings.save('nestopia_zapper_device', '"lightgun"')
+        else:
+            # Mouse mode for Zapper
+            coreSettings.save('nestopia_zapper_device', '"mouse"')
+
+        # gun cross
+        if system.isOptSet('nestopia_show_crosshair') and system.config['nestopia_show_crosshair'] == "disabled":
+            coreSettings.save('nestopia_show_crosshair', '"disabled"')
+        else:
+            coreSettings.save('nestopia_show_crosshair', '"enabled"')
+
         # Reduce Sprite Flickering
         if system.isOptSet('nestopia_nospritelimit') and system.config['nestopia_nospritelimit'] == "disabled":
             coreSettings.save('nestopia_nospritelimit', '"disabled"')
@@ -1796,8 +1807,19 @@ def generateCoreSettings(coreSettings, system, rom):
             coreSettings.save('nestopia_select_adapter', '"auto"')
 
     if (system.config['core'] == 'fceumm'):
-        # FCEumm Mouse mode for Zapper
-        coreSettings.save('fceumm_zapper_mode', '"mouse"')
+        # gun
+        if system.isOptSet('use_guns') and system.getOptBoolean('use_guns') and len(guns) >= 1:
+            coreSettings.save('fceumm_zapper_mode', '"lightgun"')
+        else:
+            # FCEumm Mouse mode for Zapper
+            coreSettings.save('fceumm_zapper_mode', '"mouse"')
+
+        # gun cross
+        if system.isOptSet('fceumm_show_crosshair') and system.config['fceumm_show_crosshair'] == "disabled":
+            coreSettings.save('fceumm_show_crosshair', '"disabled"')
+        else:
+            coreSettings.save('fceumm_show_crosshair', '"enabled"')
+
         # Reduce Sprite Flickering
         if system.isOptSet('fceumm_nospritelimit') and system.config['fceumm_nospritelimit'] == "disabled":
             coreSettings.save('fceumm_nospritelimit', '"disabled"')
@@ -1928,6 +1950,10 @@ def generateCoreSettings(coreSettings, system, rom):
             coreSettings.save('snes9x_hires_blend', system.config['hires_blend'])
         else:
             coreSettings.save('snes9x_hires_blend', '"disabled"')
+        if system.isOptSet('superscope_crosshair'):
+            coreSettings.save('snes9x_superscope_crosshair', system.config['superscope_crosshair'])
+        else:
+            coreSettings.save('snes9x_superscope_crosshair', '"2"')
 
     if (system.config['core'] == 'snes9x_next'):
         # Reduce sprite flickering (Hack, Unsafe)
@@ -1945,6 +1971,10 @@ def generateCoreSettings(coreSettings, system, rom):
             coreSettings.save('snes9x_2010_overclock', '"' + system.config['2010_overclock_superfx'] + '"')
         else:
             coreSettings.save('snes9x_2010_overclock', '"10 MHz (Default)"')
+        if system.isOptSet('2010_superscope_crosshair'):
+            coreSettings.save('snes9x_2010_superscope_crosshair', system.config['2010_superscope_crosshair'])
+        else:
+            coreSettings.save('snes9x_2010_superscope_crosshair', '"2"')
 
     # TODO: Add CORE options for BSnes and PocketSNES
 
@@ -2082,10 +2112,22 @@ def generateCoreSettings(coreSettings, system, rom):
         # Enable controller force feedback
         coreSettings.save('reicast_enable_purupuru',  '"enabled"')
         # Crossbar Colors
-        coreSettings.save('reicast_lightgun1_crosshair', '"Red"')
-        coreSettings.save('reicast_lightgun2_crosshair', '"Blue"')
-        coreSettings.save('reicast_lightgun3_crosshair', '"Green"')
-        coreSettings.save('reicast_lightgun4_crosshair', '"White"')
+        if system.isOptSet('reicast_lightgun1_crosshair'):
+            coreSettings.save('reicast_lightgun1_crosshair', system.config['reicast_lightgun1_crosshair'])
+        else:
+            coreSettings.save('reicast_lightgun1_crosshair', '"Red"')
+        if system.isOptSet('reicast_lightgun2_crosshair'):
+            coreSettings.save('reicast_lightgun2_crosshair', system.config['reicast_lightgun2_crosshair'])
+        else:
+            coreSettings.save('reicast_lightgun2_crosshair', '"Blue"')
+        if system.isOptSet('reicast_lightgun3_crosshair'):
+            coreSettings.save('reicast_lightgun3_crosshair', system.config['reicast_lightgun3_crosshair'])
+        else:
+            coreSettings.save('reicast_lightgun3_crosshair', '"Green"')
+        if system.isOptSet('reicast_lightgun4_crosshair'):
+            coreSettings.save('reicast_lightgun4_crosshair', system.config['reicast_lightgun4_crosshair'])
+        else:
+            coreSettings.save('reicast_lightgun4_crosshair', '"White"')
         # Video resolution
         if system.isOptSet('reicast_internal_resolution'):
             coreSettings.save('reicast_internal_resolution', system.config['reicast_internal_resolution'])

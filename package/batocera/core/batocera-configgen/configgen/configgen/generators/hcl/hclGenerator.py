@@ -7,7 +7,7 @@ import os
 
 class HclGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         os.chdir("/usr/share/hcl")
         commandArray = ["hcl"]
 

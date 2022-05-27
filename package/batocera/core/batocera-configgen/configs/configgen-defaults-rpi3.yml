@@ -13,3 +13,6 @@ nds:
 fmtowns:
   emulator: libretro
   core:     mess
+psx:
+  options:
+    gfxbackend: vulkan
