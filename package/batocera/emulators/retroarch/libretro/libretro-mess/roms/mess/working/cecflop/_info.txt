@@ -1,5 +1,0 @@
-## SYSTEM CHINA EDUCATION COMPUTER 525 INCH FLOPPIES ##
--------------------------------------------------------------------------------
-ROM files extensions accepted: ".zip .7z"
--------------------------------------------------------------------------------
-Extensions des fichiers ROMs permises: ".zip .7z"

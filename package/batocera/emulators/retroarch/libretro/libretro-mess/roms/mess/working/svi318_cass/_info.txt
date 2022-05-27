@@ -1,5 +1,0 @@
-## SYSTEM SPECTRAVISION SVI-318 CASSETTES ##
--------------------------------------------------------------------------------
-ROM files extensions accepted: ".zip .7z"
--------------------------------------------------------------------------------
-Extensions des fichiers ROMs permises: ".zip .7z"
