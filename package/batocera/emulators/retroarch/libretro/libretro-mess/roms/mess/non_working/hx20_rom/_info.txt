@@ -1,5 +1,0 @@
-## SYSTEM EPSON HX-20 OPTIONAL ROMS ##
--------------------------------------------------------------------------------
-ROM files extensions accepted: ".zip .7z"
--------------------------------------------------------------------------------
-Extensions des fichiers ROMs permises: ".zip .7z"

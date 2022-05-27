@@ -1,5 +1,0 @@
-## SYSTEM NUOVA ELETTRONICA Z80NE FLOPPIES ##
--------------------------------------------------------------------------------
-ROM files extensions accepted: ".zip .7z"
--------------------------------------------------------------------------------
-Extensions des fichiers ROMs permises: ".zip .7z"

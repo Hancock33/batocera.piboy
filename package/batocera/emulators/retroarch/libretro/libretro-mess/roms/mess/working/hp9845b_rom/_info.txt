@@ -1,5 +1,0 @@
-## SYSTEM HP 9845B/T/C OPTION ROMS ##
--------------------------------------------------------------------------------
-ROM files extensions accepted: ".zip .7z"
--------------------------------------------------------------------------------
-Extensions des fichiers ROMs permises: ".zip .7z"
