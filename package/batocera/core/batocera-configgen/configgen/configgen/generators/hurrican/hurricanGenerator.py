@@ -7,7 +7,7 @@ import controllersConfig
 
 class HurricanGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["hurrican"]
         os.chdir(os.path.dirname(os.path.abspath(rom)))
 

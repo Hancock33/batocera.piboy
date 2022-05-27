@@ -7,7 +7,7 @@ import controllersConfig
 
 class Eduke32Generator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["eduke32", rom, "-game_dir", os.path.dirname(os.path.abspath(rom))]
         os.chdir(os.path.dirname(os.path.abspath(rom)))
 

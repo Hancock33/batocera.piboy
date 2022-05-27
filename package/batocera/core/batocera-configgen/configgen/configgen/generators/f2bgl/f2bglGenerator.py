@@ -7,7 +7,7 @@ import os
 
 class F2bglGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         os.chdir("/userdata/roms/f2bgl")
         commandArray = ["f2bgl", "--datapath=/userdata/roms/f2bgl", "--savepath=/userdata/saves/f2bgl"]
 

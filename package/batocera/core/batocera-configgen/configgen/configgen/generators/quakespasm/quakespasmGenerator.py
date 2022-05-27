@@ -7,7 +7,7 @@ import controllersConfig
 
 class QuakespasmGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["quakespasm", "-basedir", "/userdata/roms/tyrquake", "-sndspeed", "44100"]
 
         if (rom.lower().__contains__("hipnotic")):

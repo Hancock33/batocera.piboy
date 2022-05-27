@@ -7,7 +7,7 @@ import controllersConfig
 
 class RednukemGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["rednukem", "-j", os.path.dirname(os.path.abspath(rom)), "-g", rom]
         os.chdir(os.path.dirname(os.path.abspath(rom)))
 

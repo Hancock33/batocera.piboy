@@ -56,7 +56,7 @@ class MameGenerator(Generator):
                 messSysName.append(row[1])
                 messRomType.append(row[2])
                 messAutoRun.append(row[3])
-        
+
         # Identify the current system, select MAME or MESS as needed.
         try:
             messMode = messSystems.index(system.name)
@@ -651,7 +651,7 @@ def getMameControlScheme(system, romBasename):
         neogeoList = set(open(mameNeogeo).read().split())
         twinstickList = set(open(mameTwinstick).read().split())
         qbertList = set(open(mameRotatedstick).read().split())
-            
+
         romName = os.path.splitext(romBasename)[0]
         if romName in capcomList:
             if controllerType in [ "auto", "snes" ]:

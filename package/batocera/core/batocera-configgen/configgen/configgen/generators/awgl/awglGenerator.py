@@ -8,7 +8,7 @@ import os
 
 class AwglGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         os.chdir("/userdata/roms/awgl")
         rendr = "--render=software"
         if (rom.__contains__("15th")):

@@ -7,7 +7,7 @@ import os
 
 class BermudaGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         os.chdir("/userdata/roms/bermuda")
         commandArray = ["bermuda", "--datapath=/userdata/roms/bermuda", "--savepath=/userdata/saves/bermuda"]
 

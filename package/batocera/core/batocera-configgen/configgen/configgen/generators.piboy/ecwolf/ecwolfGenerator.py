@@ -17,7 +17,7 @@ ecwolfSaves = batoceraFiles.SAVES + "/ecwolf"
 
 class ECWolfGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         # Create config folder
         if not path.isdir(ecwolfConfig):
             os.mkdir(ecwolfConfig)
@@ -35,11 +35,11 @@ class ECWolfGenerator(Generator):
             f.write('MouseEnabled = 0;\n')
             f.write('JoystickEnabled = 0;\n')
             f.close()
-        
+
         # Symbolic link the cfg file
         if not path.exists(ecwolfConfigDest):
             shutil.copy(ecwolfConfigSrc, ecwolfConfigDest)
-        
+
         # Set the resolution
         if path.isfile(ecwolfConfigDest):
             f = codecs.open(ecwolfConfigDest, "w")
@@ -49,7 +49,7 @@ class ECWolfGenerator(Generator):
             f.write('FullScreenWidth = {};\n'.format(gameResolution["width"]))
             f.write('FullScreenHeight = {};\n'.format(gameResolution["height"]))
             f.close()
-        
+
         # Create save folder
         if not path.isdir(ecwolfSaves):
             os.mkdir(ecwolfSaves)

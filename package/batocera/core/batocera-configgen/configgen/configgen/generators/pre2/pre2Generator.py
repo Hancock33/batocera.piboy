@@ -7,7 +7,7 @@ import os
 
 class Pre2Generator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["pre2", "--datapath=/userdata/roms/pre2"]
 
         return Command.Command(

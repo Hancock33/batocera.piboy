@@ -7,7 +7,7 @@ import controllersConfig
 
 class Yquake2Generator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         gamemod = "baseq2"
         if (rom.__contains__("rogue")):
             gamemod = "rogue"

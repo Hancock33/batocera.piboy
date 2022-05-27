@@ -7,7 +7,7 @@ import os
 
 class SorrGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         os.chdir("/userdata/roms/sorr")
         commandArray = ["/usr/bin32/bgdi", "-i", "/userdata/roms/sorr", rom]
 

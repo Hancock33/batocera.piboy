@@ -7,7 +7,7 @@ import os
 
 class OpenclawGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         os.chdir("/userdata/roms/openclaw")
         commandArray = ["/usr/bin/openclaw"]
 

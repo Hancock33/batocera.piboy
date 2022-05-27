@@ -84,8 +84,8 @@ class DaphneGenerator(Generator):
 
         # Enable SDL_TEXTUREACCESS_STREAMING, can aid SBC's with SDL2 => 2.0.16
         if system.isOptSet('daphne_texturestream') and system.getOptBoolean("daphne_texturestream"):
-            commandArray.append("-texturestream") 
-            
+            commandArray.append("-texturestream")
+
         # The folder may have a file with the game name and .commands with extra arguments to run the game.
         if os.path.isfile(commandsFile):
             commandArray.extend(open(commandsFile,'r').read().split())

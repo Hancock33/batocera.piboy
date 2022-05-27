@@ -7,7 +7,7 @@ import controllersConfig
 
 class LzdoomGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["/usr/share/lzdoom/lzdoom"]
 
         # Rendering mode
@@ -47,7 +47,7 @@ class LzdoomGenerator(Generator):
                 commandArray.append("+set")
                 commandArray.append("vid_rendermode")
                 commandArray.append("4")
-    
+
         if (rom.__contains__(".uwad")):
             f=open(rom)
             content=f.readlines()

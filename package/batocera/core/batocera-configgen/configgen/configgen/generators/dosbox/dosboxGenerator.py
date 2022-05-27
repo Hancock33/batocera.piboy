@@ -15,11 +15,11 @@ class DosBoxGenerator(Generator):
         gameDir = rom
         batFile = gameDir + "/dosbox.bat"
         gameConfFile = gameDir + "/dosbox.cfg"
-           
+
         commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
 			"-fullscreen",
-			"-userconf", 
-			"-exit", 
+			"-userconf",
+			"-exit",
 			"""{}""".format(batFile),
 			"-c", """set ROOT={}""".format(gameDir)]
         if os.path.isfile(gameConfFile):

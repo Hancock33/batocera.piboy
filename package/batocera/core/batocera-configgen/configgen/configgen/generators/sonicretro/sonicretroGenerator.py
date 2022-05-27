@@ -10,7 +10,7 @@ import shutil
 class SonicRetroGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        
+
         # Determine the emulator to use
         if (rom.lower()).endswith("son"):
             emu = "sonic2013"
