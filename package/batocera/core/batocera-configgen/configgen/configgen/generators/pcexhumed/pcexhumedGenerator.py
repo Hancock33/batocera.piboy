@@ -8,7 +8,7 @@ import controllersConfig
 
 class PcexhumedGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["pcexhumed", "-j", os.path.dirname(os.path.abspath(rom))]
         os.chdir(os.path.dirname(os.path.abspath(rom)))
 

@@ -7,9 +7,9 @@ import controllersConfig
 
 class DoomretroGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["doomretro"]
-        
+
         if (rom.__contains__(".uwad")):
             f=open(rom)
             content=f.readlines()

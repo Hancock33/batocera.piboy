@@ -7,7 +7,7 @@ import controllersConfig
 
 class Omf2097Generator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["openomf"]
 
         return Command.Command(

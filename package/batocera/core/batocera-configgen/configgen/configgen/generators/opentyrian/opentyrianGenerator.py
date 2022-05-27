@@ -7,7 +7,7 @@ import controllersConfig
 
 class OpentyrianGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["opentyrian", "-t" "/usr/share/opentyrian/data/", "-j"]
 
         return Command.Command(

@@ -7,7 +7,7 @@ import controllersConfig
 
 class Doom3Generator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
 
         commandArray = ["dhewm3", "+set", "fs_basepath", "/userdata/roms/doom3", "+set", "r_mode", "3"]
 

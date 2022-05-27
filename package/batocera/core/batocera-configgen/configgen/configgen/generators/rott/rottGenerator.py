@@ -7,7 +7,7 @@ import controllersConfig
 
 class RottGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["rott-darkwar"]
 
         return Command.Command(

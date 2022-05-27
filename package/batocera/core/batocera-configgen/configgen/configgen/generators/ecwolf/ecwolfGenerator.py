@@ -33,11 +33,11 @@ class ECWolfGenerator(Generator):
             f.write('FullScreenWidth = {};\n'.format(gameResolution["width"]))
             f.write('FullScreenHeight = {};\n'.format(gameResolution["height"]))
             f.close()
-        
+
         # Symbolic link the cfg file
         if not path.exists(ecwolfConfigDest):
             shutil.copy(ecwolfConfigSrc, ecwolfConfigDest)
-        
+
         # Set the resolution
         if path.isfile(ecwolfConfigDest):
             f = codecs.open(ecwolfConfigDest, "w")
@@ -47,7 +47,7 @@ class ECWolfGenerator(Generator):
             f.write('FullScreenWidth = {};\n'.format(gameResolution["width"]))
             f.write('FullScreenHeight = {};\n'.format(gameResolution["height"]))
             f.close()
-        
+
         # Create save folder
         if not path.isdir(ecwolfSaves):
             os.mkdir(ecwolfSaves)

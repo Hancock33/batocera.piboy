@@ -6,7 +6,7 @@ import controllersConfig
 
 class DroidportsGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["/usr/bin32/gmloader", rom]
 
         return Command.Command(

@@ -7,7 +7,7 @@ import controllersConfig
 
 class NbloodGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["nblood", "-j=" + os.path.dirname(os.path.abspath(rom))]
         os.chdir(os.path.dirname(os.path.abspath(rom)))
 

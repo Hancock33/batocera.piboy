@@ -7,7 +7,7 @@ import controllersConfig
 
 class BstoneGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
         addon = "/userdata/roms/bstone/SW"
         gver = "--aog_sw"
 
