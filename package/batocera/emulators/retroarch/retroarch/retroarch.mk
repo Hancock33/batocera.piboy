@@ -7,12 +7,13 @@
 RETROARCH_VERSION = 8f1de8a343ef84fcd97a9b24a260adea58236773
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
-RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac libretro-core-info
+RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac
 # install in staging for debugging (gdb)
 RETROARCH_INSTALL_STAGING = YES
 
-RETROARCH_CONF_OPTS = --disable-oss --enable-zlib --disable-qt --enable-threads --enable-ozone --enable-xmb --disable-discord
-RETROARCH_CONF_OPTS += --enable-flac --enable-lua --enable-networking --enable-translate --enable-rgui --disable-cdrom
+RETROARCH_CONF_OPTS = --disable-oss --enable-zlib --disable-qt --enable-threads --enable-ozone \
+    --enable-xmb --disable-discord --enable-flac --enable-lua --enable-networking \
+	--enable-translate --enable-rgui --disable-cdrom
 
 ifeq ($(BR2_ENABLE_DEBUG),y)
     RETROARCH_CONF_OPTS += --enable-debug
@@ -66,23 +67,22 @@ else
 	RETROARCH_CONF_OPTS += --disable-alsa
 endif
 
-ifeq ($(BR2_PACKAGE_PULSEAUDIO_UTILS),y)
+ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)
 	RETROARCH_CONF_OPTS += --enable-pulse
-	RETROARCH_DEPENDENCIES += pulseaudio-utils
+	RETROARCH_DEPENDENCIES += pulseaudio
 else
 	RETROARCH_CONF_OPTS += --disable-pulse
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_GLES3),y)
-	RETROARCH_CONF_OPTS += --enable-opengles3 --enable-opengles3_1 --enable-opengles3_2
+    RETROARCH_CONF_OPTS += --enable-opengles3 --enable-opengles --enable-opengles3_1
 	RETROARCH_DEPENDENCIES += libgles
 endif
+# don't enable --enable-opengles3_2, breaks lr-swanstation
 
-ifeq ($(BR2_PACKAGE_HAS_LIBGLES),y)
-	RETROARCH_CONF_OPTS += --enable-opengles
-	RETROARCH_DEPENDENCIES += libgles
-else
-	RETROARCH_CONF_OPTS += --disable-opengles
+ifeq ($(BR2_PACKAGE_BATOCERA_GLES2),y)
+    RETROARCH_CONF_OPTS += --enable-opengles
+    RETROARCH_DEPENDENCIES += libgles
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBEGL),y)
@@ -120,15 +120,10 @@ ifeq ($(BR2_PACKAGE_ROCKCHIP_RGA),y)
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
-# Batocera - RPi4 prefer GLES
-  ifeq ($(!BR2_PACKAGE_BATOCERA_RPI4_WITH_XORG),y)
-	RETROARCH_CONF_OPTS += --enable-opengl --disable-opengles
-	RETROARCH_DEPENDENCIES += libgl
+  ifneq ($(BR2_PACKAGE_BATOCERA_RPI4_WITH_XORG),y)
+    RETROARCH_CONF_OPTS += --enable-opengl --disable-opengles --disable-opengles3
+    RETROARCH_DEPENDENCIES += libgl
   endif
-endif
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
-	RETROARCH_CONF_OPTS += --enable-opengles3 --enable-opengles3_1 --enable-opengles3_2
 endif
 
 ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),)

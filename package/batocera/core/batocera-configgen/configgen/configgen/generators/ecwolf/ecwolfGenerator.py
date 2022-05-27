@@ -17,8 +17,8 @@ ecwolfSaves = batoceraFiles.SAVES + "/ecwolf"
 
 class ECWolfGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, gameResolution):
-        # Create config folder
+    def generate(self, system, rom, playersControllers, guns, gameResolution):
+        # Create config folders
         if not path.isdir(ecwolfConfig):
             os.mkdir(ecwolfConfig)
         if not path.isdir(ecwolfSrcDir):
