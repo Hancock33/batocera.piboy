@@ -1,5 +1,0 @@
-## SYSTEM COMMODORE AMIGA DISK IMAGES (MISC LIST) ##
--------------------------------------------------------------------------------
-ROM files extensions accepted: ".zip .7z"
--------------------------------------------------------------------------------
-Extensions des fichiers ROMs permises: ".zip .7z"

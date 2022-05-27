@@ -1,5 +1,0 @@
-## SYSTEM DICK SMITH ELECTRONICS VZ-200/300 SNAPSHOTS ##
--------------------------------------------------------------------------------
-ROM files extensions accepted: ".zip .7z"
--------------------------------------------------------------------------------
-Extensions des fichiers ROMs permises: ".zip .7z"

@@ -1,5 +1,0 @@
-## SYSTEM K28 MODEL 7-232 MODULES ##
--------------------------------------------------------------------------------
-ROM files extensions accepted: ".zip .7z"
--------------------------------------------------------------------------------
-Extensions des fichiers ROMs permises: ".zip .7z"

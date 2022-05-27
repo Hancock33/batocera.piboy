@@ -1,5 +1,0 @@
-## SYSTEM VICTOR 9000 / ACT SIRIUS 1 DISKETTES ##
--------------------------------------------------------------------------------
-ROM files extensions accepted: ".zip .7z"
--------------------------------------------------------------------------------
-Extensions des fichiers ROMs permises: ".zip .7z"

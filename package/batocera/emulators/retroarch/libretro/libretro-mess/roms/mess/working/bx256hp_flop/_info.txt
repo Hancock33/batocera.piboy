@@ -1,5 +1,0 @@
-## SYSTEM COMMODORE BX256-80HP / CBM 730 DISKETTES ##
--------------------------------------------------------------------------------
-ROM files extensions accepted: ".zip .7z"
--------------------------------------------------------------------------------
-Extensions des fichiers ROMs permises: ".zip .7z"
