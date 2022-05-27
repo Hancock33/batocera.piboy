@@ -1,5 +1,0 @@
-## SYSTEM THOMSON TO7 AND TO7/70 CASSETES ##
--------------------------------------------------------------------------------
-ROM files extensions accepted: ".zip .7z"
--------------------------------------------------------------------------------
-Extensions des fichiers ROMs permises: ".zip .7z"

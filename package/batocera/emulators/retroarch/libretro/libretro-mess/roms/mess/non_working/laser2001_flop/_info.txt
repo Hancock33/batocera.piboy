@@ -1,5 +1,0 @@
-## SYSTEM V-TECH LASER 2001 / SALORA MANAGER DISKS ##
--------------------------------------------------------------------------------
-ROM files extensions accepted: ".zip .7z"
--------------------------------------------------------------------------------
-Extensions des fichiers ROMs permises: ".zip .7z"

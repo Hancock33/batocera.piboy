@@ -1,5 +1,0 @@
-## SYSTEM ERICSSON PC AT WS286 DISKETTES ##
--------------------------------------------------------------------------------
-ROM files extensions accepted: ".zip .7z"
--------------------------------------------------------------------------------
-Extensions des fichiers ROMs permises: ".zip .7z"
