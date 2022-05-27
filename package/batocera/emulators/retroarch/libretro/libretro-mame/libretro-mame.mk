@@ -3,8 +3,8 @@
 # libretro-mame
 #
 ################################################################################
-# Version: Commits on May 02, 2022
-LIBRETRO_MAME_VERSION = b92680badd44aaa5f863a2b7e9cb78322e579ac1
+# Version: Commits on May 27, 2022
+LIBRETRO_MAME_VERSION = ee3942fc824edaf67768c249f2dd57ec3a20f4b5
 LIBRETRO_MAME_SITE = $(call github,libretro,mame,$(LIBRETRO_MAME_VERSION))
 LIBRETRO_MAME_LICENSE = MAME
 LIBRETRO_MAME_DEPENDENCIES = retroarch
