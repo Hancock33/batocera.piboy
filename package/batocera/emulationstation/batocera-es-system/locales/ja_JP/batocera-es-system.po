@@ -306,6 +306,21 @@ msgctxt "game_options"
 msgid "THREADED VIDEO"
 msgstr "映像処理(映像スレッド)"
 
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Use guns instead of pads if guns are detected on the system"
+msgstr ""
+
+#. TRANSLATION: shared, libretro/fbneo, libretro/fceumm, libretro/flycast, libretro/flycast, ...
+msgctxt "game_options"
+msgid "LIGHTGUN"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Use guns"
+msgstr ""
+
 #. TRANSLATION: libretro/81
 msgctxt "game_options"
 msgid "Emulate Chroma 81 interface (colorization)."
@@ -491,7 +506,7 @@ msgctxt "game_options"
 msgid "BLARGG NTSC FILTER"
 msgstr "BLARGG NTSC フィルター"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/mame, libretro/mess, libretro/mess, ...
+#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Disabled"
 msgstr "使用しない"
@@ -1689,7 +1704,7 @@ msgctxt "game_options"
 msgid "Lightgun device must be selected on at least one port."
 msgstr "ライトガン(ガンコン)は、最低1つのポートを選択する必要があります"
 
-#. TRANSLATION: libretro/fbneo, libretro/genesisplusgx, libretro/genesisplusgx, supermodel
+#. TRANSLATION: libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia, ...
 msgctxt "game_options"
 msgid "SHOW LIGHTGUN CROSSHAIRS"
 msgstr "ガンコンクロスエア(照準)を表示"
@@ -1840,6 +1855,31 @@ msgctxt "game_options"
 msgid "SYNCHRONOUS RENDERING"
 msgstr "同期レンダリング"
 
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast
+msgctxt "game_options"
+msgid "Target color for player 1"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast
+msgctxt "game_options"
+msgid "Red"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast
+msgctxt "game_options"
+msgid "Blue"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast
+msgctxt "game_options"
+msgid "Green"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast
+msgctxt "game_options"
+msgid "White"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, mupen64plus
 msgctxt "game_options"
 msgid "Smooth textures on distant 3D objects based on angle."
@@ -1855,7 +1895,7 @@ msgctxt "game_options"
 msgid "Improves clarity of distant textures when mip-mapping is enabled."
 msgstr "ミップマッピングの有効時、離れたテクスチャの明瞭さを改善します"
 
-#. TRANSLATION: libretro/flycast, dolphin, dolphin_triforce, mupen64plus, pcsx2, ...
+#. TRANSLATION: libretro/flycast, dolphin, dolphin_triforce, flycast, mupen64plus, ...
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "異方性フィルタリング"
@@ -2311,7 +2351,7 @@ msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr "ハイスコ​​ア プラグイン"
 
-#. TRANSLATION: libretro/mame, libretro/mess, libretro/mess, mame/wasm4, mame/wasm4, ...
+#. TRANSLATION: libretro/mame, libretro/mess, libretro/mess, duckstation, mame/wasm4, ...
 msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "使用する (標準)"
@@ -2644,7 +2684,7 @@ msgctxt "game_options"
 msgid "Select which joystick to emulate."
 msgstr ""
 
-#. TRANSLATION: libretro/mess, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, flycast/wasm4, ...
+#. TRANSLATION: libretro/mess, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, duckstation, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "詳細設定"
@@ -6748,6 +6788,26 @@ msgstr "   1 秒間隔、合計120秒 (1320MB|240MB)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
+msgid "Choose whether to show on the display, configuration messages."
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "SHOW OSD MESSAGES"
+msgstr ""
+
+#. TRANSLATION: duckstation, mame/wasm4, mame
+msgctxt "game_options"
+msgid "Disabled (Default)"
+msgstr ""
+
+#. TRANSLATION: duckstation, flycast/wasm4, mame/wasm4, mame
+msgctxt "game_options"
+msgid "Enabled"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
 msgid "Interpreter is the most accurate, but is the slowest."
 msgstr "インタープリタはより正確ですが最も遅い"
 
@@ -6901,6 +6961,16 @@ msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "ネジコン(ナムコ)(振動有)"
 
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Reduces wobbly polygongs & warping textures."
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "ENABLE PGXP CORRECTIONS"
+msgstr ""
+
 #. TRANSLATION: flycast/wasm4
 msgctxt "game_options"
 msgid "Choose the emulator language."
@@ -7016,6 +7086,21 @@ msgctxt "game_options"
 msgid "CONTROLLER 4 FEATURE PACK"
 msgstr ""
 
+#. TRANSLATION: flycast/wasm4
+msgctxt "game_options"
+msgid "Enable the Dreamcast DSP. Only recommended for fast systems."
+msgstr ""
+
+#. TRANSLATION: flycast/wasm4
+msgctxt "game_options"
+msgid "DIGITAL SOUND PROCESSOR"
+msgstr ""
+
+#. TRANSLATION: flycast/wasm4, flycast
+msgctxt "game_options"
+msgid "Disbaled (Default)"
+msgstr ""
+
 #. TRANSLATION: flycast
 msgctxt "game_options"
 msgid "Choose which screen ratio you want to use."
@@ -7125,6 +7210,11 @@ msgstr "画面を90度回転"
 msgctxt "game_options"
 msgid "Rotate"
 msgstr "回転"
+
+#. TRANSLATION: flycast
+msgctxt "game_options"
+msgid "Higher values make textures viewed at oblique angles look sharper."
+msgstr ""
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -8592,16 +8682,6 @@ msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr ""
 
-#. TRANSLATION: mame/wasm4
-msgctxt "game_options"
-msgid "Enabled"
-msgstr ""
-
-#. TRANSLATION: mame/wasm4
-msgctxt "game_options"
-msgid "Disabled (Default)"
-msgstr ""
-
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "BGFX for post-processing, accel/opengl for raw image."
@@ -8685,6 +8765,17 @@ msgstr "ゲーム表示を最大化し、未使用の画面部にアートワー
 msgctxt "game_options"
 msgid "ARTWORK CROP"
 msgstr "アートワークを加工表示"
+
+#. TRANSLATION: mame
+msgctxt "game_options"
+msgid ""
+"Make game history, setup instructions, and special moves viewable in the menu"
+msgstr ""
+
+#. TRANSLATION: mame
+msgctxt "game_options"
+msgid "DATA PLUGIN"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
