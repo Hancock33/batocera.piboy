@@ -1,7 +1,8 @@
-diff -Naur batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122.orig/es-app/src/CustomFeatures.cpp batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122/es-app/src/CustomFeatures.cpp
---- batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122.orig/es-app/src/CustomFeatures.cpp	2022-05-05 18:59:23.000000000 +0100
-+++ batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122/es-app/src/CustomFeatures.cpp	2022-05-05 22:00:44.994394225 +0100
-@@ -39,6 +39,8 @@
+diff --git a/es-app/src/CustomFeatures.cpp b/es-app/src/CustomFeatures.cpp
+index 4e735ca3..89294c36 100644
+--- a/es-app/src/CustomFeatures.cpp
++++ b/es-app/src/CustomFeatures.cpp
+@@ -39,6 +39,8 @@ EmulatorFeatures::Features EmulatorFeatures::parseFeatures(const std::string fea
  
  		if (trim == "ratio") ret = ret | EmulatorFeatures::Features::ratio;
  		if (trim == "rewind") ret = ret | EmulatorFeatures::Features::rewind;
@@ -10,7 +11,7 @@ diff -Naur batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122.or
  		if (trim == "smooth") ret = ret | EmulatorFeatures::Features::smooth;
  		if (trim == "shaders") ret = ret | EmulatorFeatures::Features::shaders;
  		if (trim == "pixel_perfect") ret = ret | EmulatorFeatures::Features::pixel_perfect;
-@@ -52,6 +54,10 @@
+@@ -52,6 +54,10 @@ EmulatorFeatures::Features EmulatorFeatures::parseFeatures(const std::string fea
  		if (trim == "videomode") ret = ret | EmulatorFeatures::Features::videomode;
  		if (trim == "colorization") ret = ret | EmulatorFeatures::Features::colorization;
  		if (trim == "autocontrollers") ret = ret | EmulatorFeatures::Features::autocontrollers;
@@ -21,10 +22,11 @@ diff -Naur batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122.or
  	}
  
  	return ret;
-diff -Naur batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122.orig/es-app/src/CustomFeatures.h batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122/es-app/src/CustomFeatures.h
---- batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122.orig/es-app/src/CustomFeatures.h	2022-05-05 18:59:23.000000000 +0100
-+++ batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122/es-app/src/CustomFeatures.h	2022-05-05 22:00:28.682598939 +0100
-@@ -86,7 +86,12 @@
+diff --git a/es-app/src/CustomFeatures.h b/es-app/src/CustomFeatures.h
+index 6a37e70d..19638204 100644
+--- a/es-app/src/CustomFeatures.h
++++ b/es-app/src/CustomFeatures.h
+@@ -86,7 +86,12 @@ public:
  		padTokeyboard = 65536,
  		cheevos = 131072,
  		autocontrollers = 262144,
@@ -38,10 +40,11 @@ diff -Naur batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122.or
  		all = 0x0FFFFFFF
  	};
  
-diff -Naur batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122.orig/es-app/src/guis/GuiMenu.cpp batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122/es-app/src/guis/GuiMenu.cpp
---- batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122.orig/es-app/src/guis/GuiMenu.cpp	2022-05-05 18:59:23.000000000 +0100
-+++ batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122/es-app/src/guis/GuiMenu.cpp	2022-05-05 22:58:54.341385821 +0100
-@@ -1870,7 +1870,7 @@
+diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
+index e557e536..33a44ce0 100644
+--- a/es-app/src/guis/GuiMenu.cpp
++++ b/es-app/src/guis/GuiMenu.cpp
+@@ -1870,7 +1870,7 @@ void GuiMenu::openGamesSettings()
  	}
  	
  
@@ -50,7 +53,7 @@ diff -Naur batocera-emulationstation-71c08a1e684e392b14dca8ace3086c6946504122.or
  
  	// Screen ratio choice
  	if (!hasGlobalFeature("ratio"))
-@@ -1888,6 +1888,61 @@
+@@ -1888,6 +1888,61 @@ void GuiMenu::openGamesSettings()
  		s->addSaveFunc([this, videoModeOptionList] { SystemConf::getInstance()->set("global.videomode", videoModeOptionList->getSelected()); });
  	}
  
