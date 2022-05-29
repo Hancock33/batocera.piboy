@@ -26,6 +26,8 @@ define DOSBOX_X_CONFIGURE_CONFIG
 
     cp -rf $(@D)/dosbox-x.reference.conf \
         $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/dosbox/dosboxx.conf
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dosbox-x/dos.dosboxx.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 DOSBOX_X_POST_INSTALL_TARGET_HOOKS += DOSBOX_X_CONFIGURE_CONFIG

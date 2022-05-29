@@ -85,6 +85,8 @@ DOSBOX_STAGING_CONF_OPTS += -Duse_slirp=false
 
 define DOSBOX_STAGING_INSTALL_TARGET_CMDS
         $(INSTALL) -D $(@D)/build/dosbox $(TARGET_DIR)/usr/bin/dosbox-staging
+		mkdir -p $(TARGET_DIR)/usr/share/evmapy
+		cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dosbox-staging/dos.dosbox_staging.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(meson-package))
