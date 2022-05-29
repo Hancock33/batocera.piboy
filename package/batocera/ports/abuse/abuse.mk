@@ -3,8 +3,8 @@
 # Abuse
 #
 ################################################################################
-# Version: Commits on Aug 18, 2021
-ABUSE_VERSION = eb33c63145587454d9d6ce9e5d0d535208bc15e5
+# Version: Commits on May 28, 2022
+ABUSE_VERSION = 56e390846baa0c259c0e4705362ba57471164392
 ABUSE_SITE = $(call github,Xenoveritas,abuse,$(ABUSE_VERSION))
 
 ABUSE_DEPENDENCIES = sdl2 sdl2_mixer abuse-data
