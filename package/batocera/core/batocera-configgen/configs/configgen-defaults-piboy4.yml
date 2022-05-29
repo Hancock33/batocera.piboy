@@ -56,6 +56,9 @@ pet:
 psp:
   options:
     frameskip: automatic
+saturn:
+  emulator: yabausesa
+  core:     yabausesa
 sgb:
   emulator: libretro
   core:     mgba
