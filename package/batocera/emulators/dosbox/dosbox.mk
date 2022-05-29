@@ -19,4 +19,11 @@ define DOSBOX_CONFIGURE_CMDS
                     --with-sdl-prefix="$(STAGING_DIR)/usr";
 endef
 
+define DOSBOX_EVMAPY
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dosbox/dos.dosbox.keys $(TARGET_DIR)/usr/share/evmapy
+endef
+
+LIBFOO_POST_INSTALL_TARGET_HOOKS += DOSBOX_EVMAPY
+
 $(eval $(autotools-package))

@@ -6045,7 +6045,7 @@ dosbox:
 dosbox_staging:
   features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-dosbox-x:
+dosboxx:
   features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 duckstation:
