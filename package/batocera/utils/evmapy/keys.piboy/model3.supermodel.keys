@@ -1,0 +1,139 @@
+{
+    "actions_player1": [
+        {
+            "trigger": [
+                "hotkey",
+                "start"
+            ],
+            "type": "exec",
+            "target": "killall -9 supermodel && reset"
+        },
+        {
+            "trigger": [
+                "a",
+                "hotkey"
+            ],
+            "type": "key",
+            "target": [
+                "KEY_LEFTALT",
+                "KEY_R"
+            ]
+        },
+        {
+            "trigger": [
+                "b",
+                "hotkey"
+            ],
+            "type": "key",
+            "target": [
+                "KEY_LEFTALT",
+                "KEY_P"
+            ]
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "x"
+            ],
+            "type": "key",
+            "target": "KEY_F7"
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "y"
+            ],
+            "type": "key",
+            "target": "KEY_F5"
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "up"
+            ],
+            "type": "key",
+            "target": "KEY_F6"
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "pageup"
+            ],
+            "type": "key",
+            "target": [
+                "KEY_LEFTALT",
+                "KEY_S"
+            ]
+        },
+        {
+            "trigger": "up",
+            "type": "key",
+            "target": "KEY_UP"
+        },
+        {
+            "trigger": "down",
+            "type": "key",
+            "target": "KEY_DOWN"
+        },
+        {
+            "trigger": "left",
+            "type": "key",
+            "target": "KEY_LEFT"
+        },
+        {
+            "trigger": "right",
+            "type": "key",
+            "target": "KEY_RIGHT"
+        },
+        {
+            "trigger": "start",
+            "type": "key",
+            "target": "KEY_1"
+        },
+        {
+            "trigger": "select",
+            "type": "key",
+            "target": "KEY_3"
+        },
+        {
+            "trigger": "a",
+            "type": "key",
+            "target": "KEY_A"
+        },
+        {
+            "trigger": "b",
+            "type": "key",
+            "target": "KEY_S"
+        },
+        {
+            "trigger": "x",
+            "type": "key",
+            "target": "KEY_D"
+        },
+        {
+            "trigger": "y",
+            "type": "key",
+            "target": "KEY_F"
+        },
+        {
+            "trigger": "pageup",
+            "type": "key",
+            "target": "KEY_Y"
+        },
+        {
+            "trigger": "pagedown",
+            "type": "key",
+            "target": "KEY_H"
+        },
+        {
+            "trigger": "l2",
+            "type": "key",
+            "target": "KEY_DOWN"
+        },
+        {
+            "trigger": "r2",
+            "type": "key",
+            "target": "KEY_UP"
+        }
+    ]
+}
