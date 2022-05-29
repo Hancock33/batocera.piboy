@@ -24,6 +24,6 @@ define DOSBOX_EVMAPY
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dosbox/dos.dosbox.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-LIBFOO_POST_INSTALL_TARGET_HOOKS += DOSBOX_EVMAPY
+DOSBOX_POST_INSTALL_TARGET_HOOKS += DOSBOX_EVMAPY
 
 $(eval $(autotools-package))
