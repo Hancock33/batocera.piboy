@@ -32,7 +32,6 @@ endif
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
 DOSBOX_STAGING_CFLAGS   += -march=armv8-a+crc -mcpu=cortex-a72 -mtune=cortex-a72
 DOSBOX_STAGING_CXXFLAGS += -march=armv8-a+crc -mcpu=cortex-a72 -mtune=cortex-a72
-DOSBOX_STAGING_CONF_OPTS += -Duse_opengl=false
 endif
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_TRITIUM_H5)$(BR2_PACKAGE_BATOCERA_TARGET_S905)$(BR2_PACKAGE_BATOCERA_TARGET_S912),y)
 DOSBOX_STAGING_CFLAGS   += -march=armv8-a+crc -mtune=cortex-a53
@@ -81,6 +80,8 @@ DOSBOX_STAGING_CONF_OPTS += -Duse_fluidsynth=true
 else
 DOSBOX_STAGING_CONF_OPTS += -Duse_fluidsynth=false
 endif
+
+DOSBOX_STAGING_CONF_OPTS += -Duse_slirp=false
 
 define DOSBOX_STAGING_INSTALL_TARGET_CMDS
         $(INSTALL) -D $(@D)/build/dosbox $(TARGET_DIR)/usr/bin/dosbox-staging
