@@ -49,6 +49,7 @@ class DosBoxxGenerator(Generator):
                         "-c", "c:",
                         "-c", "dosbox.bat",
                         "-fastbioslogo",
+                        "-defaultdir", gameDir,
                         "-conf {}".format(customConfFile)]
 
         return Command.Command(array=commandArray, env={"XDG_CONFIG_HOME":batoceraFiles.CONF})
