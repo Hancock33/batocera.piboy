@@ -58,4 +58,9 @@ class ECWolfGenerator(Generator):
         except Exception as e:
             print("Error: couldn't go into directory {} ({})".format(rom, e))
         commandArray = ["ecwolf", "--joystick", "--savedir '/userdata/saves/ecwolf'"]
-        return Command.Command(array=commandArray)
+        return Command.Command(
+            array=commandArray,
+            env={
+                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
+            })
+
