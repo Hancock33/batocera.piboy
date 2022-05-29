@@ -3,8 +3,8 @@
 # Yamagi Quake II - Ground Zero Addon
 #
 ################################################################################
-# Version: Commits on May 20, 2022
-YROGUE_VERSION = 43a5a3fc23d88db99a0a826a4ae7b74cdc3d77b5
+# Version: Commits on May 28, 2022
+YROGUE_VERSION = 15ffab8518c907d00748f0401be364db7132fc8e
 YROGUE_SITE = $(call github,yquake2,rogue,$(YROGUE_VERSION))
 
 YROGUE_DEPENDENCIES = sdl2 sdl2_mixer yquake2
