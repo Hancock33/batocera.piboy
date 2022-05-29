@@ -1,5 +1,5 @@
 config BR2_PACKAGE_PACMAN
-	bool "PACMAN"
+	bool "pacman"
 	select BR2_PACKAGE_LIBARCHIVE
 	select BR2_PACKAGE_LIBARCHIVE_BSDTAR
 	select BR2_PACKAGE_LIBARCHIVE_BSDCPIO
@@ -15,4 +15,4 @@ config BR2_PACKAGE_PACMAN
 
 	help
 	  Arch Linux PACkage MANager. Because of its name, it's the best choice for a retrogaming-oriented distribution :)
-
+ 

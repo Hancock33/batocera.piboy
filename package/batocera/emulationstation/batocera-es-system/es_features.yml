@@ -1542,6 +1542,7 @@ libretro:
                     "On":                 enabled
       systems:
             megadrive:
+                shared: [use_guns]
                 cfeatures:
                     gpgx_blargg_filter_md:
                         prompt:      BLARGG NTSC FILTER
@@ -1590,6 +1591,7 @@ libretro:
                             "Menacer Light Gun":             516
                             "Konami Justifiers":             772
             mastersystem:
+                shared: [use_guns]
                 cfeatures:
                     gpgx_blargg_filter_ms:
                         prompt:      BLARGG NTSC FILTER
