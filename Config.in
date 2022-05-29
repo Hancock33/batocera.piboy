@@ -111,6 +111,9 @@ menu "Controllers"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/aimtrak-guns/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/dolphinbar-guns/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/sinden-guns/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/gun4ir-guns/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/guncon/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/wiimotes-rules/Config.in"
 endmenu
 
 menu "Ports"
@@ -462,6 +465,7 @@ menu "Utils"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/winbtrfs/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/winetricks/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/xosd/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/xwiimote/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/xxd/Config.in"
 endmenu
 
