@@ -1,6 +1,8 @@
---- a/src/gui/sdlmain.cpp	2020-08-03 06:33:31.000000000 +0200
-+++ b/src/gui/sdlmain.cpp	2020-08-28 13:21:18.681580955 +0200
-@@ -954,7 +954,7 @@
+diff --git a/src/gui/sdlmain.cpp b/src/gui/sdlmain.cpp
+index b138dc9b0..1baceb37d 100644
+--- a/src/gui/sdlmain.cpp
++++ b/src/gui/sdlmain.cpp
+@@ -818,7 +818,7 @@ const char *modifier;
  #elif defined(HAIKU)
  #define DEFAULT_CONFIG_FILE "~/config/settings/dosbox-x/dosbox-x.conf"
  #else /*linux freebsd*/
@@ -9,9 +11,11 @@
  #endif
  
  #if C_SET_PRIORITY
---- a/src/misc/cross.cpp	2020-11-04 16:21:48.281934402 +0100
-+++ b/src/misc/cross.cpp	2020-11-04 16:24:17.576770566 +0100
-@@ -105,7 +105,7 @@
+diff --git a/src/misc/cross.cpp b/src/misc/cross.cpp
+index 54c92adf8..d2813f65e 100644
+--- a/src/misc/cross.cpp
++++ b/src/misc/cross.cpp
+@@ -147,7 +147,7 @@ void Cross::GetPlatformConfigDir(std::string& in) {
  #elif !defined(HX_DOS)
  	const char *xdg_conf_home = getenv("XDG_CONFIG_HOME");
  	const std::string conf_home = xdg_conf_home && xdg_conf_home[0] == '/' ? xdg_conf_home: "~/.config";
@@ -20,7 +24,7 @@
  	ResolveHomedir(in);
  #endif
  	//LOG_MSG("Config dir: %s", in.c_str());
-@@ -118,7 +118,7 @@
+@@ -160,7 +160,7 @@ void Cross::GetPlatformConfigName(std::string& in) {
  #elif defined(MACOSX)
  #define DEFAULT_CONFIG_FILE "DOSBox-X " VERSION " Preferences"
  #else /*linux freebsd*/
@@ -29,7 +33,7 @@
  #endif
  	in = DEFAULT_CONFIG_FILE;
  }
-@@ -142,7 +142,7 @@
+@@ -184,7 +184,7 @@ void Cross::CreatePlatformConfigDir(std::string& in) {
  #elif !defined(HX_DOS)
  	const char *xdg_conf_home = getenv("XDG_CONFIG_HOME");
  	const std::string conf_home = xdg_conf_home && xdg_conf_home[0] == '/' ? xdg_conf_home: "~/.config";
