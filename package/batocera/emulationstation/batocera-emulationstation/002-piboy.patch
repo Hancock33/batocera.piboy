@@ -22,7 +22,7 @@ index b55cc041..c42eaa94 100644
 +endif()
 +
 +if(NOUPDATE)
-+  MESSAGE("Update disbaled")
++  MESSAGE("Update disabled")
 +  add_definitions(-DNOUPDATE)
 +endif()
 +
