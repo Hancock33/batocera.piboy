@@ -7,7 +7,7 @@ index 235243ea2dc..4d999715f5d 100644
  #endif
  
 -#define SCUMMVM_VERSION "2.6.0git"
-+#define SCUMMVM_VERSION "2.6.0 (a640e6b)"
++#define SCUMMVM_VERSION "2.6.0 (c134c27)"
  
  #define SCUMMVM_VER_MAJOR 2
  #define SCUMMVM_VER_MINOR 6
