@@ -3,8 +3,8 @@
 # libretro-pcsx
 #
 ################################################################################
-# Version: Commits on May 04, 2022
-LIBRETRO_PCSX_VERSION = 7dee1e8e9e0c5606f237e487efbd0c5fe6154b3f
+# Version: Commits on May 30, 2022
+LIBRETRO_PCSX_VERSION = aa314e8ebc2281c4b2d3db3378f143de5d68f335
 LIBRETRO_PCSX_SITE = $(call github,libretro,pcsx_rearmed,$(LIBRETRO_PCSX_VERSION))
 LIBRETRO_PCSX_LICENSE = GPLv2
 
