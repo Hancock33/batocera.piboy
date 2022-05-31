@@ -5456,7 +5456,6 @@ libretro:
       shared: [autosave]
       cfeatures:
             resolution_mode:
-                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -5467,7 +5466,6 @@ libretro:
                     "1080p":    1080p
                     "4k":       4k
             multitap_yabasanshiro:
-                group: CONTROLLER SETTINGS
                 prompt:      MULTITAP
                 description: Allows up to 7 or 12 controllers in supported games.
                 choices:
@@ -5475,6 +5473,21 @@ libretro:
                     "Port1":    port1
                     "Port2":    port2
                     "Port1+2":  port12
+            controller1_saturn:
+                prompt:      CONTROLLER 1 TYPE
+                description: Not all games support 3D pad.
+                choices:
+                    #"None":          0
+                    "Saturn Pad":    1
+                    "Saturn 3D Pad": 5
+            controller2_saturn:
+                prompt:      CONTROLLER 2 TYPE
+                description: Not all games support 3D pad.
+                choices:
+                    #"None":          0
+                    "Saturn Pad":    1
+                    "Saturn 3D Pad": 5
+
     gong:
       shared: [autosave]
     emuscv:
