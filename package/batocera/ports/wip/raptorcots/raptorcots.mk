@@ -3,8 +3,8 @@
 # Raptor: Call of the Shadows Clone
 #
 ################################################################################
-# Version: Commits on May 01, 2022
-RAPTORCOTS_VERSION = ae6cc2317c6a4f0a3cd6b5aff7e301931c3c0711
+# Version: Commits on May 31, 2022
+RAPTORCOTS_VERSION = aa8e88c0af1f4de867a8b8fe91b00f715c29f29c
 RAPTORCOTS_SITE = $(call github,skynettx,raptor,$(RAPTORCOTS_VERSION))
 
 RAPTORCOTS_DEPENDENCIES = sdl2 openal
