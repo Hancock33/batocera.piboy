@@ -61,7 +61,7 @@ index 1108c843..8101a95c 100644
    this->filename = home_dir + input_trace_filename + ".config";
  
 diff --git a/yabause/src/retro_arena/main.cpp b/yabause/src/retro_arena/main.cpp
-index a6b0c609..c18d9984 100644
+index a6b0c609..7f983cf2 100644
 --- a/yabause/src/retro_arena/main.cpp
 +++ b/yabause/src/retro_arena/main.cpp
 @@ -75,7 +75,7 @@ static char last_state_filename[256] = "\0";
@@ -114,15 +114,6 @@ index a6b0c609..c18d9984 100644
      }
  		else if(( x == "-rr" || x == "--rotate_resolution_mode") && (i+1<all_args.size() ) ) {
        g_rotate_resolution_mode = std::stoi( all_args[i+1] );
-@@ -338,7 +343,7 @@ int main(int argc, char** argv)
-       g_scsp_sync = std::stoi( all_args[i+1] );
-     }
- 		else if(( x == "-nf" || x == "--no_frame_skip") ) {
--      g_frame_skip = 0;
-+      g_frame_skip = std::stoi( all_args[i+1] );
-     }
- 		else if(( x == "-v" || x == "--version") ) {
-       printf("YabaSanshiro version %s(%s)\n",YAB_VERSION, GIT_SHA1 );
 @@ -350,6 +355,7 @@ int main(int argc, char** argv)
    // Init Preference
    Preference * p = new Preference(cdpath);

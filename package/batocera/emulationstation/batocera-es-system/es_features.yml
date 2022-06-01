@@ -8817,6 +8817,9 @@ vanillara:
 vanillatd:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+vkquake:
+  features: [padtokeyboard]
+  shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 voidsw:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -8851,6 +8854,13 @@ yabausesa:
                 "4:3":         1
                 "16:9":        2
                 "Full Screen": 3
+        yabausesa_frameskip:
+            group: VIDEO SETTINGS
+            prompt:      FRAMESKIP
+            description: Skip frames to improve performance, at the cost of choppy motion.T RATE
+            choices:
+                "On":    true
+                "Off":   false
         yabausesa_rotate:
             group: VIDEO SETTINGS
             prompt:      ROTATE SCREEN

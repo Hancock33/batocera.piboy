@@ -9443,6 +9443,11 @@ msgstr ""
 
 #. TRANSLATION: yabausesa
 msgctxt "game_options"
+msgid "Skip frames to improve performance, at the cost of choppy motion.T RATE"
+msgstr ""
+
+#. TRANSLATION: yabausesa
+msgctxt "game_options"
 msgid "ROTATE SCREEN"
 msgstr ""
 

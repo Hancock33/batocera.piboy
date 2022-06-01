@@ -5,7 +5,7 @@ from generators.Generator import Generator
 import controllersConfig
 
 
-class VkQuakeGenerator(Generator):
+class VkquakeGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["vkquake", "-basedir", "/userdata/roms/tyrquake", "-sndspeed", "44100"]
