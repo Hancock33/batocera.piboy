@@ -110,7 +110,7 @@ from generators.themehospital.themehospitalGenerator import ThemehospitalGenerat
 from generators.tsugaru.tsugaruGenerator import TsugaruGenerator
 from generators.vanillara.vanillaraGenerator import VanillaraGenerator
 from generators.vanillatd.vanillatdGenerator import VanillatdGenerator
-from generators.vkquake.viceGenerator import VkquakeGenerator
+from generators.vkquake.vkquakeGenerator import VkquakeGenerator
 from generators.vice.viceGenerator import ViceGenerator
 from generators.voidsw.voidswGenerator import VoidswGenerator
 from generators.wine.wineGenerator import WineGenerator

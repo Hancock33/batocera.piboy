@@ -47,6 +47,10 @@ class YabausesaGenerator(Generator):
 
         f.write('}')
         f.close()
+        
+        if system.isOptSet("yabausesa_frameskip"):
+            if system.config['yabausesa_frameskip'] == 'False':
+                commandArray.append("-nf")
 
         return Command.Command(
             array=commandArray,
