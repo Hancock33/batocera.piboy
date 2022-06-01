@@ -1033,7 +1033,7 @@ tyrquake:
   emulators:
     quakespasm:
       quakespasm: { requireAnyOf: [BR2_PACKAGE_QUAKESPASM] }
-     vkquake:
+    vkquake:
       vkquake:    { requireAnyOf: [BR2_PACKAGE_VKQUAKE] }     
     libretro:
       tyrquake:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TYRQUAKE] }
