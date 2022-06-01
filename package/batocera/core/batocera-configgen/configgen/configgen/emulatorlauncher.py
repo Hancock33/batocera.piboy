@@ -110,6 +110,7 @@ from generators.themehospital.themehospitalGenerator import ThemehospitalGenerat
 from generators.tsugaru.tsugaruGenerator import TsugaruGenerator
 from generators.vanillara.vanillaraGenerator import VanillaraGenerator
 from generators.vanillatd.vanillatdGenerator import VanillatdGenerator
+from generators.vkquake.viceGenerator import VkquakeGenerator
 from generators.vice.viceGenerator import ViceGenerator
 from generators.voidsw.voidswGenerator import VoidswGenerator
 from generators.wine.wineGenerator import WineGenerator
@@ -234,9 +235,10 @@ generators = {
     'supertux2': Supertux2Generator(),
     'themehospital' : ThemehospitalGenerator(),
     'tsugaru': TsugaruGenerator(),
-    'vice': ViceGenerator(),
     'vanillara': VanillaraGenerator(),
     'vanillatd': VanillatdGenerator(),
+    'vkquake': VkquakeGenerator(),
+    'vice': ViceGenerator(),
     'voidsw': VoidswGenerator(),
     'wine' : WineGenerator(),
     'witchaven' : WitchavenGenerator(),

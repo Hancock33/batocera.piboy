@@ -1,0 +1,21 @@
+diff --git a/Quake/sys_sdl_unix.c b/Quake/sys_sdl_unix.c
+index e4703d4..78e7561 100644
+--- a/Quake/sys_sdl_unix.c
++++ b/Quake/sys_sdl_unix.c
+@@ -237,7 +237,7 @@ static char userdir[MAX_OSPATH];
+ #ifdef PLATFORM_OSX
+ #define SYS_USERDIR "Library/Application Support/vkQuake"
+ #else
+-#define SYS_USERDIR ".vkquake"
++#define SYS_USERDIR "vkquake"
+ #endif
+ 
+ static void Sys_GetUserdir (char *dst, size_t dstsize)
+@@ -256,6 +256,7 @@ static void Sys_GetUserdir (char *dst, size_t dstsize)
+ 	if (home_dir == NULL)
+ 		Sys_Error ("Couldn't determine userspace directory");
+ 
++		home_dir = "/userdata/system/configs/";
+ 	/* what would be a maximum path for a file in the user's directory...
+ 	 * $HOME/SYS_USERDIR/game_dir/dirname1/dirname2/dirname3/filename.ext
+ 	 * still fits in the MAX_OSPATH == 256 definition, but just in case :

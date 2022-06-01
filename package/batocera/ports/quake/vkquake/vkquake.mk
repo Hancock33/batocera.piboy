@@ -4,11 +4,17 @@
 #
 ################################################################################
 # Version: Commits on May 31, 2022
-VKQUAKE_VERSION = 58b9ca9be302e594e5c08c247cb555e1655c6efa
+VKQUAKE_VERSION = de692b2df1bd909502a65ce47d89a0d92062eb83
 VKQUAKE_SITE = $(call github,Novum,vkQuake,$(VKQUAKE_VERSION))
 
 VKQUAKE_DEPENDENCIES = sdl2 sdl2_image
 VKQUAKE_LICENSE = GPLv2
+
+define VKQUAKE_REMOVE_WERROR
+	$(SED) 's% -Werror%%' $(@D)/Quake/Makefile
+endef
+
+VKQUAKE_POST_PATCH_HOOKS += VKQUAKE_REMOVE_WERROR
 
 define VKQUAKE_BUILD_CMDS
 		$(TARGET_CONFIGURE_OPTS) $(MAKE) \
@@ -18,7 +24,17 @@ define VKQUAKE_BUILD_CMDS
 endef
 
 define VKQUAKE_INSTALL_TARGET_CMDS
-	cp -pvr $(@D)/Quake/VKQUAKE $(TARGET_DIR)/usr/bin
+	cp -pvr $(@D)/Quake/vkquake $(TARGET_DIR)/usr/bin
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/tyrquake/id1
+	cp -pvr $(@D)/Quake/vkquake.pak $(TARGET_DIR)/usr/share/batocera/datainit/roms/tyrquake/id1
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/vkquake/{id1,dopa,hipnotic,rogue}
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/vkquake/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/vkquake/id1
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/vkquake/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/vkquake/dop
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/vkquake/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/vkquake/hipnotic
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/vkquake/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/vkquake/rogue
+    # evmap config
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/vkquake/vkquake.keys $(TARGET_DIR)/usr/share/evmapy/tyrquake.vkquake.keys
 endef
 
 $(eval $(generic-package))
