@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jun 02, 2022
-GZDOOM_VERSION = 05c846c4eb770f38c56844a1b8c31142ac658b73
+GZDOOM_VERSION = ea007f56f22af7847e56c04d432ff0ea83878b03
 GZDOOM_SITE = $(call github,coelckers,gzdoom,$(GZDOOM_VERSION))
 
 GZDOOM_DEPENDENCIES = sdl2 sdl2_mixer host-zmusic zmusic
