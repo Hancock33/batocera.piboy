@@ -104,7 +104,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         # Disable Datasette Hotkeys
         coreSettings.save('vice_datasette_hotkeys', '"disabled"')
         # Not Read 'vicerc'
-        coreSettings.save('vice_read_vicerc',       '"disabled"')
+        #coreSettings.save('vice_read_vicerc',       '"disabled"')
         # Select Joystick Type
         coreSettings.save('vice_Controller',        '"joystick"')
         # Disable Turbo Fire
