@@ -25,6 +25,7 @@ define ALLLINUXFIRMWARES_DELETE_BRCM
 	rm -rf $(@D)/brcm
 	rm -rf $(@D)/amdgpu
 	rm -rf $(@D)/bnx2x
+    rm -rf $(@D)/cypress
 	rm -rf $(@D)/i915
 	rm -rf $(@D)/intel
 	rm -rf $(@D)/iwlwifi*
