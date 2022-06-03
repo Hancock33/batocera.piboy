@@ -3,8 +3,8 @@
 # ALEPHONE
 #
 ################################################################################
-# Version: Commits on May 25, 2022
-ALEPHONE_VERSION = b1f7af38b14f74585f0442f1dd757d1238bfcef4
+# Version: Commits on Jun 03, 2022
+ALEPHONE_VERSION = 9f068857448efde4a4600c9475fced4bd7ad1d3a
 ALEPHONE_SITE = $(call github,Aleph-One-Marathon,alephone,$(ALEPHONE_VERSION))
 
 ALEPHONE_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf sdl2_net
