@@ -1034,7 +1034,7 @@ tyrquake:
     quakespasm:
       quakespasm: { requireAnyOf: [BR2_PACKAGE_QUAKESPASM] }
     vkquake:
-      vkquake:    { requireAnyOf: [BR2_PACKAGE_VKQUAKE] }     
+      vkquake:    { requireAnyOf: [BR2_PACKAGE_VKQUAKE] }
     libretro:
       tyrquake:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TYRQUAKE] }
   comment_en: |
@@ -3711,6 +3711,17 @@ quake3:
   emulators:
     quake3:
       quake3: { requireAnyOf: [BR2_PACKAGE_QUAKE3] }
+
+raptor:
+  name:       Raptor Call Of The Shadows
+  manufacturer: Ports
+  release: 1994
+  hardware: port
+  extensions: [game]
+  group: ports
+  emulators:
+    raptor:
+      raptor: { requireAnyOf: [BR2_PACKAGE_RAPTORCOTS] }
 
 reminiscence:
   name:       reminiscence

@@ -115,8 +115,8 @@ index 105f402dd..3d6213f08 100644
      blood \
      rr \
 -    exhumed \
-+    exhumed
-+    
++    exhumed \
++    witchaven
  
  start:
  	$(BUILD_STARTED)

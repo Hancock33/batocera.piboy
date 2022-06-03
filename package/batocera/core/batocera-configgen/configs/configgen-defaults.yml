@@ -539,6 +539,9 @@ pygame:
 quake3:
   emulator: quake3
   core:     quake3
+raptor:
+  emulator: raptor
+  core:     raptor
 rednukem:
   emulator: rednukem
   core:     rednukem

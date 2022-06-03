@@ -85,6 +85,7 @@ from generators.prototype.prototypeGenerator import PrototypeGenerator
 from generators.pygame.pygameGenerator import PygameGenerator
 from generators.quakespasm.quakespasmGenerator import QuakespasmGenerator
 from generators.quake3.quake3Generator import Quake3Generator
+from generators.raptor.raptorGenerator import RaptorGenerator
 from generators.rednukem.rednukemGenerator import RednukemGenerator
 from generators.redream.redreamGenerator import RedreamGenerator
 from generators.rpcs3.rpcs3Generator import Rpcs3Generator
@@ -211,6 +212,7 @@ generators = {
     'pygame': PygameGenerator(),
     'quakespasm': QuakespasmGenerator(),
     'quake3': Quake3Generator(),
+    'raptor': RaptorGenerator(),
     'rednukem': RednukemGenerator(),
     'redream': RedreamGenerator(),
     'rpcs3' : Rpcs3Generator(),
