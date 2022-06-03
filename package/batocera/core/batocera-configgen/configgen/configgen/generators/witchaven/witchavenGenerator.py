@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+import os
 import Command
 from generators.Generator import Generator
 import controllersConfig
@@ -8,7 +8,8 @@ import controllersConfig
 class WitchavenGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ["whaven"]
+        os.chdir("/userdata/roms/witchaven")
+        commandArray = ["ewitchaven"]
 
         return Command.Command(
             array=commandArray,
