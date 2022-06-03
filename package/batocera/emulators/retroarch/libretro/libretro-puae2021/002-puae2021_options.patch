@@ -1,5 +1,5 @@
 diff --git a/libretro/libretro-core.c b/libretro/libretro-core.c
-index 2daff6c..debd966 100644
+index ff1874d..811a6c0 100644
 --- a/libretro/libretro-core.c
 +++ b/libretro/libretro-core.c
 @@ -576,7 +576,7 @@ static void retro_set_core_options()
@@ -965,904 +965,7 @@ index 2daff6c..debd966 100644
              hotkey = 1;
           else
              hotkey = 0;
-@@ -2729,42 +2729,42 @@ static void update_variables(void)
-    uae_model[0]  = '\0';
-    uae_config[0] = '\0';
- 
--   var.key = "puae_model";
-+   var.key = "puae2021_model";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       strlcpy(opt_model, var.value, sizeof(opt_model));
-    }
- 
--   var.key = "puae_model_fd";
-+   var.key = "puae2021_model_fd";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       strlcpy(opt_model_fd, var.value, sizeof(opt_model_fd));
-    }
- 
--   var.key = "puae_model_hd";
-+   var.key = "puae2021_model_hd";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       strlcpy(opt_model_hd, var.value, sizeof(opt_model_hd));
-    }
- 
--   var.key = "puae_model_cd";
-+   var.key = "puae2021_model_cd";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       strlcpy(opt_model_cd, var.value, sizeof(opt_model_cd));
-    }
- 
--   var.key = "puae_kickstart";
-+   var.key = "puae2021_kickstart";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       strlcpy(opt_kickstart, var.value, sizeof(opt_kickstart));
-    }
- 
--   var.key = "puae_video_standard";
-+   var.key = "puae2021_video_standard";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -2803,7 +2803,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_video_aspect";
-+   var.key = "puae2021_video_aspect";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -2818,7 +2818,7 @@ static void update_variables(void)
-          video_config_aspect = video_config_aspect_prev;
-    }
- 
--   var.key = "puae_video_allow_hz_change";
-+   var.key = "puae2021_video_allow_hz_change";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -2840,7 +2840,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_video_resolution";
-+   var.key = "puae2021_video_resolution";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -2902,7 +2902,7 @@ static void update_variables(void)
-          request_init_custom_timer = 2;
-    }
- 
--   var.key = "puae_video_vresolution";
-+   var.key = "puae2021_video_vresolution";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -2951,7 +2951,7 @@ static void update_variables(void)
-          request_init_custom_timer = 2;
-    }
- 
--   var.key = "puae_statusbar";
-+   var.key = "puae2021_statusbar";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -2977,7 +2977,7 @@ static void update_variables(void)
-       opt_statusbar_position_old = opt_statusbar_position;
-    }
- 
--   var.key = "puae_statusbar_messages";
-+   var.key = "puae2021_statusbar_messages";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -2985,7 +2985,7 @@ static void update_variables(void)
-          opt_statusbar |= STATUSBAR_MESSAGES;
-    }
- 
--   var.key = "puae_vkbd_theme";
-+   var.key = "puae2021_vkbd_theme";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -2998,7 +2998,7 @@ static void update_variables(void)
-       if      (strstr(var.value, "outline")) opt_vkbd_theme |= 0x80;
-    }
- 
--   var.key = "puae_vkbd_transparency";
-+   var.key = "puae2021_vkbd_transparency";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3009,7 +3009,7 @@ static void update_variables(void)
-       else if (!strcmp(var.value, "100%")) opt_vkbd_alpha = GRAPH_ALPHA_0;
-    }
- 
--   var.key = "puae_vkbd_dimming";
-+   var.key = "puae2021_vkbd_dimming";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3020,7 +3020,7 @@ static void update_variables(void)
-       else if (!strcmp(var.value, "100%")) opt_vkbd_dim_alpha = GRAPH_ALPHA_100;
-    }
- 
--   var.key = "puae_chipmem_size";
-+   var.key = "puae2021_chipmem_size";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3035,7 +3035,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_bogomem_size";
-+   var.key = "puae2021_bogomem_size";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3050,7 +3050,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_fastmem_size";
-+   var.key = "puae2021_fastmem_size";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3065,7 +3065,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_z3mem_size";
-+   var.key = "puae2021_z3mem_size";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3082,7 +3082,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_cpu_model";
-+   var.key = "puae2021_cpu_model";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3112,7 +3112,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_fpu_model";
-+   var.key = "puae2021_fpu_model";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3138,7 +3138,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_cpu_compatibility";
-+   var.key = "puae2021_cpu_compatibility";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3181,7 +3181,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_cpu_throttle";
-+   var.key = "puae2021_cpu_throttle";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3193,7 +3193,7 @@ static void update_variables(void)
-          changed_prefs.m68k_speed_throttle = atof(var.value);
-    }
- 
--   var.key = "puae_cpu_multiplier";
-+   var.key = "puae2021_cpu_multiplier";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3205,7 +3205,7 @@ static void update_variables(void)
-          changed_prefs.cpu_clock_multiplier = atoi(var.value) * 256;
-    }
- 
--   var.key = "puae_sound_stereo_separation";
-+   var.key = "puae2021_sound_stereo_separation";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3221,7 +3221,7 @@ static void update_variables(void)
-          changed_prefs.sound_stereo_separation = val;
-    }
- 
--   var.key = "puae_sound_interpol";
-+   var.key = "puae2021_sound_interpol";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3239,7 +3239,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_sound_filter";
-+   var.key = "puae2021_sound_filter";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3255,7 +3255,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_sound_filter_type";
-+   var.key = "puae2021_sound_filter_type";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3275,7 +3275,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_sound_volume_cd";
-+   var.key = "puae2021_sound_volume_cd";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3292,7 +3292,7 @@ static void update_variables(void)
-          changed_prefs.sound_volume_cd = val;
-    }
- 
--   var.key = "puae_autoloadfastforward";
-+   var.key = "puae2021_autoloadfastforward";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3305,7 +3305,7 @@ static void update_variables(void)
-                                                                          AUTOLOADFASTFORWARD_CD;
-    }
- 
--   var.key = "puae_cd_speed";
-+   var.key = "puae2021_cd_speed";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3317,7 +3317,7 @@ static void update_variables(void)
-          changed_prefs.cd_speed = atoi(var.value);
-    }
- 
--   var.key = "puae_floppy_speed";
-+   var.key = "puae2021_floppy_speed";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3329,7 +3329,7 @@ static void update_variables(void)
-          changed_prefs.floppy_speed = atoi(var.value);
-    }
- 
--   var.key = "puae_floppy_multidrive";
-+   var.key = "puae2021_floppy_multidrive";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3337,7 +3337,7 @@ static void update_variables(void)
-       else                                opt_floppy_multidrive = true;
-    }
- 
--   var.key = "puae_floppy_write_protection";
-+   var.key = "puae2021_floppy_write_protection";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3359,7 +3359,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_floppy_sound";
-+   var.key = "puae2021_floppy_sound";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3381,7 +3381,7 @@ static void update_variables(void)
-          changed_prefs.dfxclickvolume = atoi(val);
-    }
- 
--   var.key = "puae_floppy_sound_empty_mute";
-+   var.key = "puae2021_floppy_sound_empty_mute";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3389,7 +3389,7 @@ static void update_variables(void)
-       else                                opt_floppy_sound_empty_mute = true;
-    }
- 
--   var.key = "puae_floppy_sound_type";
-+   var.key = "puae2021_floppy_sound_type";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3438,7 +3438,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_mouse_speed";
-+   var.key = "puae2021_mouse_speed";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3454,7 +3454,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_immediate_blits";
-+   var.key = "puae2021_immediate_blits";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3494,7 +3494,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_collision_level";
-+   var.key = "puae2021_collision_level";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3511,7 +3511,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_gfx_framerate";
-+   var.key = "puae2021_gfx_framerate";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3533,7 +3533,7 @@ static void update_variables(void)
-          changed_prefs.gfx_framerate = val;
-    }
- 
--   var.key = "puae_gfx_colors";
-+   var.key = "puae2021_gfx_colors";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3545,7 +3545,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_gfx_gamma";
-+   var.key = "puae2021_gfx_gamma";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3567,7 +3567,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_gfx_flickerfixer";
-+   var.key = "puae2021_gfx_flickerfixer";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3587,7 +3587,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_zoom_mode";
-+   var.key = "puae2021_zoom_mode";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3604,7 +3604,7 @@ static void update_variables(void)
-       opt_zoom_mode_id = zoom_mode_id;
-    }
- 
--   var.key = "puae_zoom_mode_crop";
-+   var.key = "puae2021_zoom_mode_crop";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3617,7 +3617,7 @@ static void update_variables(void)
-       else if (!strcmp(var.value, "5:4"))        zoom_mode_crop_id = 6;
-    }
- 
--   var.key = "puae_vertical_pos";
-+   var.key = "puae2021_vertical_pos";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3640,7 +3640,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_horizontal_pos";
-+   var.key = "puae2021_horizontal_pos";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3661,7 +3661,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_use_whdload";
-+   var.key = "puae2021_use_whdload";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3670,7 +3670,7 @@ static void update_variables(void)
-       else if (!strcmp(var.value, "hdfs"))     opt_use_whdload = 2;
-    }
- 
--   var.key = "puae_use_whdload_theme";
-+   var.key = "puae2021_use_whdload_theme";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3678,7 +3678,7 @@ static void update_variables(void)
-       else if (!strcmp(var.value, "native"))   opt_use_whdload_theme = 1;
-    }
- 
--   var.key = "puae_use_whdload_prefs";
-+   var.key = "puae2021_use_whdload_prefs";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3688,7 +3688,7 @@ static void update_variables(void)
-       else if (!strcmp(var.value, "both"))     opt_use_whdload_prefs = 3;
-    }
- 
--   var.key = "puae_cd_startup_delayed_insert";
-+   var.key = "puae2021_cd_startup_delayed_insert";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3696,7 +3696,7 @@ static void update_variables(void)
-       else                                opt_cd_startup_delayed_insert = true;
-    }
- 
--   var.key = "puae_shared_nvram";
-+   var.key = "puae2021_shared_nvram";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3704,7 +3704,7 @@ static void update_variables(void)
-       else                                opt_shared_nvram = true;
-    }
- 
--   var.key = "puae_use_boot_hd";
-+   var.key = "puae2021_use_boot_hd";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3718,7 +3718,7 @@ static void update_variables(void)
-       else if (!strcmp(var.value, "hdf512"))   opt_use_boot_hd = 7;
-    }
- 
--   var.key = "puae_analogmouse";
-+   var.key = "puae2021_analogmouse";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3728,28 +3728,28 @@ static void update_variables(void)
-       else if (!strcmp(var.value, "both"))     opt_analogmouse = 3;
-    }
- 
--   var.key = "puae_analogmouse_deadzone";
-+   var.key = "puae2021_analogmouse_deadzone";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       opt_analogmouse_deadzone = atoi(var.value);
-    }
- 
--   var.key = "puae_analogmouse_speed";
-+   var.key = "puae2021_analogmouse_speed";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       opt_analogmouse_speed = atof(var.value);
-    }
- 
--   var.key = "puae_dpadmouse_speed";
-+   var.key = "puae2021_dpadmouse_speed";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       opt_dpadmouse_speed = atoi(var.value);
-    }
- 
--   var.key = "puae_physicalmouse";
-+   var.key = "puae2021_physicalmouse";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3758,7 +3758,7 @@ static void update_variables(void)
-       else if (!strcmp(var.value, "double"))   opt_physicalmouse = 2;
-    }
- 
--   var.key = "puae_keyrah_keypad_mappings";
-+   var.key = "puae2021_keyrah_keypad_mappings";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3766,7 +3766,7 @@ static void update_variables(void)
-       else                                opt_keyrah_keypad = true;
-    }
- 
--   var.key = "puae_physical_keyboard_pass_through";
-+   var.key = "puae2021_physical_keyboard_pass_through";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3774,7 +3774,7 @@ static void update_variables(void)
-       else                                opt_keyboard_pass_through = true;
-    }
- 
--   var.key = "puae_model_options_display";
-+   var.key = "puae2021_model_options_display";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3782,7 +3782,7 @@ static void update_variables(void)
-       else                                opt_model_options_display = 1;
-    }
- 
--   var.key = "puae_mapping_options_display";
-+   var.key = "puae2021_mapping_options_display";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3790,7 +3790,7 @@ static void update_variables(void)
-       else                                opt_mapping_options_display = 1;
-    }
- 
--   var.key = "puae_video_options_display";
-+   var.key = "puae2021_video_options_display";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3798,7 +3798,7 @@ static void update_variables(void)
-       else                                opt_video_options_display = 1;
-    }
- 
--   var.key = "puae_audio_options_display";
-+   var.key = "puae2021_audio_options_display";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3806,7 +3806,7 @@ static void update_variables(void)
-       else                                opt_audio_options_display = 1;
-    }
- 
--   var.key = "puae_joyport";
-+   var.key = "puae2021_joyport";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3817,14 +3817,14 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_joyport_order";
-+   var.key = "puae2021_joyport_order";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       snprintf(opt_joyport_order, sizeof(opt_joyport_order), "%s", var.value);
-    }
- 
--   var.key = "puae_retropad_options";
-+   var.key = "puae2021_retropad_options";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3834,7 +3834,7 @@ static void update_variables(void)
-       else if (!strcmp(var.value, "rotate_jump")) opt_retropad_options = RETROPAD_OPTIONS_ROTATE_JUMP;
-    }
- 
--   var.key = "puae_cd32pad_options";
-+   var.key = "puae2021_cd32pad_options";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3844,7 +3844,7 @@ static void update_variables(void)
-       else if (!strcmp(var.value, "rotate_jump")) opt_cd32pad_options = RETROPAD_OPTIONS_ROTATE_JUMP;
-    }
- 
--   var.key = "puae_turbo_fire";
-+   var.key = "puae2021_turbo_fire";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3855,7 +3855,7 @@ static void update_variables(void)
-       }
-    }
- 
--   var.key = "puae_turbo_fire_button";
-+   var.key = "puae2021_turbo_fire_button";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3869,7 +3869,7 @@ static void update_variables(void)
-       else if (!strcmp(var.value, "R2")) turbo_fire_button = RETRO_DEVICE_ID_JOYPAD_R2;
-    }
- 
--   var.key = "puae_turbo_pulse";
-+   var.key = "puae2021_turbo_pulse";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -3877,168 +3877,168 @@ static void update_variables(void)
-    }
- 
-    /* Mapper */
--   var.key = "puae_mapper_up";
-+   var.key = "puae2021_mapper_up";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_UP] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_down";
-+   var.key = "puae2021_mapper_down";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_DOWN] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_left";
-+   var.key = "puae2021_mapper_left";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_LEFT] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_right";
-+   var.key = "puae2021_mapper_right";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_RIGHT] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_select";
-+   var.key = "puae2021_mapper_select";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_SELECT] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_start";
-+   var.key = "puae2021_mapper_start";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_START] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_b";
-+   var.key = "puae2021_mapper_b";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_B] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_a";
-+   var.key = "puae2021_mapper_a";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_A] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_y";
-+   var.key = "puae2021_mapper_y";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_Y] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_x";
-+   var.key = "puae2021_mapper_x";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_X] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_l";
-+   var.key = "puae2021_mapper_l";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_L] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_r";
-+   var.key = "puae2021_mapper_r";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_R] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_l2";
-+   var.key = "puae2021_mapper_l2";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_L2] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_r2";
-+   var.key = "puae2021_mapper_r2";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_R2] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_l3";
-+   var.key = "puae2021_mapper_l3";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_L3] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_r3";
-+   var.key = "puae2021_mapper_r3";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_R3] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_lr";
-+   var.key = "puae2021_mapper_lr";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_LR] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_ll";
-+   var.key = "puae2021_mapper_ll";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_LL] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_ld";
-+   var.key = "puae2021_mapper_ld";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_LD] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_lu";
-+   var.key = "puae2021_mapper_lu";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_LU] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_rr";
-+   var.key = "puae2021_mapper_rr";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_RR] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_rl";
-+   var.key = "puae2021_mapper_rl";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_RL] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_rd";
-+   var.key = "puae2021_mapper_rd";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_DEVICE_ID_JOYPAD_RD] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_ru";
-+   var.key = "puae2021_mapper_ru";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -4046,56 +4046,56 @@ static void update_variables(void)
-    }
- 
-    /* Mapper hotkeys */
--   var.key = "puae_mapper_vkbd";
-+   var.key = "puae2021_mapper_vkbd";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_MAPPER_VKBD] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_statusbar";
-+   var.key = "puae2021_mapper_statusbar";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_MAPPER_STATUSBAR] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_mouse_toggle";
-+   var.key = "puae2021_mapper_mouse_toggle";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_MAPPER_JOYMOUSE] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_reset";
-+   var.key = "puae2021_mapper_reset";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_MAPPER_RESET] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_aspect_ratio_toggle";
-+   var.key = "puae2021_mapper_aspect_ratio_toggle";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_MAPPER_ASPECT_RATIO] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_zoom_mode_toggle";
-+   var.key = "puae2021_mapper_zoom_mode_toggle";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_MAPPER_ZOOM_MODE] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_turbo_fire_toggle";
-+   var.key = "puae2021_mapper_turbo_fire_toggle";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-       mapper_keys[RETRO_MAPPER_TURBO_FIRE] = retro_keymap_id(var.value);
-    }
- 
--   var.key = "puae_mapper_save_disk_toggle";
-+   var.key = "puae2021_mapper_save_disk_toggle";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
-@@ -4183,16 +4183,16 @@ static void update_variables(void)
+@@ -2685,16 +2685,16 @@ static void retro_set_options_display(void)
     {
        option_display.visible = false;
  
@@ -1883,7 +986,7 @@ index 2daff6c..debd966 100644
        environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
        return;
     }
-@@ -4200,143 +4200,143 @@ static void update_variables(void)
+@@ -2702,143 +2702,143 @@ static void retro_set_options_display(void)
     /* Model options */
     option_display.visible = opt_model_options_display;
  
@@ -2090,6 +1193,903 @@ index 2daff6c..debd966 100644
     environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
  }
  
+@@ -2907,42 +2907,42 @@ static void update_variables(void)
+    uae_model[0]  = '\0';
+    uae_config[0] = '\0';
+ 
+-   var.key = "puae_model";
++   var.key = "puae2021_model";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       strlcpy(opt_model, var.value, sizeof(opt_model));
+    }
+ 
+-   var.key = "puae_model_fd";
++   var.key = "puae2021_model_fd";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       strlcpy(opt_model_fd, var.value, sizeof(opt_model_fd));
+    }
+ 
+-   var.key = "puae_model_hd";
++   var.key = "puae2021_model_hd";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       strlcpy(opt_model_hd, var.value, sizeof(opt_model_hd));
+    }
+ 
+-   var.key = "puae_model_cd";
++   var.key = "puae2021_model_cd";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       strlcpy(opt_model_cd, var.value, sizeof(opt_model_cd));
+    }
+ 
+-   var.key = "puae_kickstart";
++   var.key = "puae2021_kickstart";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       strlcpy(opt_kickstart, var.value, sizeof(opt_kickstart));
+    }
+ 
+-   var.key = "puae_video_standard";
++   var.key = "puae2021_video_standard";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -2981,7 +2981,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_video_aspect";
++   var.key = "puae2021_video_aspect";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -2996,7 +2996,7 @@ static void update_variables(void)
+          video_config_aspect = video_config_aspect_prev;
+    }
+ 
+-   var.key = "puae_video_allow_hz_change";
++   var.key = "puae2021_video_allow_hz_change";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3018,7 +3018,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_video_resolution";
++   var.key = "puae2021_video_resolution";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3080,7 +3080,7 @@ static void update_variables(void)
+          request_init_custom_timer = 2;
+    }
+ 
+-   var.key = "puae_video_vresolution";
++   var.key = "puae2021_video_vresolution";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3129,7 +3129,7 @@ static void update_variables(void)
+          request_init_custom_timer = 2;
+    }
+ 
+-   var.key = "puae_statusbar";
++   var.key = "puae2021_statusbar";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3155,7 +3155,7 @@ static void update_variables(void)
+       opt_statusbar_position_old = opt_statusbar_position;
+    }
+ 
+-   var.key = "puae_statusbar_messages";
++   var.key = "puae2021_statusbar_messages";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3163,7 +3163,7 @@ static void update_variables(void)
+          opt_statusbar |= STATUSBAR_MESSAGES;
+    }
+ 
+-   var.key = "puae_vkbd_theme";
++   var.key = "puae2021_vkbd_theme";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3176,7 +3176,7 @@ static void update_variables(void)
+       if      (strstr(var.value, "outline")) opt_vkbd_theme |= 0x80;
+    }
+ 
+-   var.key = "puae_vkbd_transparency";
++   var.key = "puae2021_vkbd_transparency";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3187,7 +3187,7 @@ static void update_variables(void)
+       else if (!strcmp(var.value, "100%")) opt_vkbd_alpha = GRAPH_ALPHA_0;
+    }
+ 
+-   var.key = "puae_vkbd_dimming";
++   var.key = "puae2021_vkbd_dimming";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3198,7 +3198,7 @@ static void update_variables(void)
+       else if (!strcmp(var.value, "100%")) opt_vkbd_dim_alpha = GRAPH_ALPHA_100;
+    }
+ 
+-   var.key = "puae_chipmem_size";
++   var.key = "puae2021_chipmem_size";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3213,7 +3213,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_bogomem_size";
++   var.key = "puae2021_bogomem_size";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3228,7 +3228,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_fastmem_size";
++   var.key = "puae2021_fastmem_size";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3243,7 +3243,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_z3mem_size";
++   var.key = "puae2021_z3mem_size";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3260,7 +3260,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_cpu_model";
++   var.key = "puae2021_cpu_model";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3290,7 +3290,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_fpu_model";
++   var.key = "puae2021_fpu_model";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3316,7 +3316,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_cpu_compatibility";
++   var.key = "puae2021_cpu_compatibility";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3359,7 +3359,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_cpu_throttle";
++   var.key = "puae2021_cpu_throttle";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3371,7 +3371,7 @@ static void update_variables(void)
+          changed_prefs.m68k_speed_throttle = atof(var.value);
+    }
+ 
+-   var.key = "puae_cpu_multiplier";
++   var.key = "puae2021_cpu_multiplier";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3383,7 +3383,7 @@ static void update_variables(void)
+          changed_prefs.cpu_clock_multiplier = atoi(var.value) * 256;
+    }
+ 
+-   var.key = "puae_sound_stereo_separation";
++   var.key = "puae2021_sound_stereo_separation";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3399,7 +3399,7 @@ static void update_variables(void)
+          changed_prefs.sound_stereo_separation = val;
+    }
+ 
+-   var.key = "puae_sound_interpol";
++   var.key = "puae2021_sound_interpol";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3417,7 +3417,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_sound_filter";
++   var.key = "puae2021_sound_filter";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3433,7 +3433,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_sound_filter_type";
++   var.key = "puae2021_sound_filter_type";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3453,7 +3453,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_sound_volume_cd";
++   var.key = "puae2021_sound_volume_cd";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3470,7 +3470,7 @@ static void update_variables(void)
+          changed_prefs.sound_volume_cd = val;
+    }
+ 
+-   var.key = "puae_autoloadfastforward";
++   var.key = "puae2021_autoloadfastforward";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3483,7 +3483,7 @@ static void update_variables(void)
+                                                                          AUTOLOADFASTFORWARD_CD;
+    }
+ 
+-   var.key = "puae_cd_speed";
++   var.key = "puae2021_cd_speed";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3495,7 +3495,7 @@ static void update_variables(void)
+          changed_prefs.cd_speed = atoi(var.value);
+    }
+ 
+-   var.key = "puae_floppy_speed";
++   var.key = "puae2021_floppy_speed";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3507,7 +3507,7 @@ static void update_variables(void)
+          changed_prefs.floppy_speed = atoi(var.value);
+    }
+ 
+-   var.key = "puae_floppy_multidrive";
++   var.key = "puae2021_floppy_multidrive";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3515,7 +3515,7 @@ static void update_variables(void)
+       else                                opt_floppy_multidrive = true;
+    }
+ 
+-   var.key = "puae_floppy_write_protection";
++   var.key = "puae2021_floppy_write_protection";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3537,7 +3537,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_floppy_sound";
++   var.key = "puae2021_floppy_sound";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3559,7 +3559,7 @@ static void update_variables(void)
+          changed_prefs.dfxclickvolume = atoi(val);
+    }
+ 
+-   var.key = "puae_floppy_sound_empty_mute";
++   var.key = "puae2021_floppy_sound_empty_mute";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3567,7 +3567,7 @@ static void update_variables(void)
+       else                                opt_floppy_sound_empty_mute = true;
+    }
+ 
+-   var.key = "puae_floppy_sound_type";
++   var.key = "puae2021_floppy_sound_type";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3616,7 +3616,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_mouse_speed";
++   var.key = "puae2021_mouse_speed";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3632,7 +3632,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_immediate_blits";
++   var.key = "puae2021_immediate_blits";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3672,7 +3672,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_collision_level";
++   var.key = "puae2021_collision_level";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3689,7 +3689,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_gfx_framerate";
++   var.key = "puae2021_gfx_framerate";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3711,7 +3711,7 @@ static void update_variables(void)
+          changed_prefs.gfx_framerate = val;
+    }
+ 
+-   var.key = "puae_gfx_colors";
++   var.key = "puae2021_gfx_colors";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3723,7 +3723,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_gfx_gamma";
++   var.key = "puae2021_gfx_gamma";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3745,7 +3745,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_gfx_flickerfixer";
++   var.key = "puae2021_gfx_flickerfixer";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3765,7 +3765,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_zoom_mode";
++   var.key = "puae2021_zoom_mode";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3782,7 +3782,7 @@ static void update_variables(void)
+       opt_zoom_mode_id = zoom_mode_id;
+    }
+ 
+-   var.key = "puae_zoom_mode_crop";
++   var.key = "puae2021_zoom_mode_crop";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3795,7 +3795,7 @@ static void update_variables(void)
+       else if (!strcmp(var.value, "5:4"))        zoom_mode_crop_id = 6;
+    }
+ 
+-   var.key = "puae_vertical_pos";
++   var.key = "puae2021_vertical_pos";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3818,7 +3818,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_horizontal_pos";
++   var.key = "puae2021_horizontal_pos";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3839,7 +3839,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_use_whdload";
++   var.key = "puae2021_use_whdload";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3848,7 +3848,7 @@ static void update_variables(void)
+       else if (!strcmp(var.value, "hdfs"))     opt_use_whdload = 2;
+    }
+ 
+-   var.key = "puae_use_whdload_theme";
++   var.key = "puae2021_use_whdload_theme";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3856,7 +3856,7 @@ static void update_variables(void)
+       else if (!strcmp(var.value, "native"))   opt_use_whdload_theme = 1;
+    }
+ 
+-   var.key = "puae_use_whdload_prefs";
++   var.key = "puae2021_use_whdload_prefs";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3866,7 +3866,7 @@ static void update_variables(void)
+       else if (!strcmp(var.value, "both"))     opt_use_whdload_prefs = 3;
+    }
+ 
+-   var.key = "puae_cd_startup_delayed_insert";
++   var.key = "puae2021_cd_startup_delayed_insert";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3874,7 +3874,7 @@ static void update_variables(void)
+       else                                opt_cd_startup_delayed_insert = true;
+    }
+ 
+-   var.key = "puae_shared_nvram";
++   var.key = "puae2021_shared_nvram";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3882,7 +3882,7 @@ static void update_variables(void)
+       else                                opt_shared_nvram = true;
+    }
+ 
+-   var.key = "puae_use_boot_hd";
++   var.key = "puae2021_use_boot_hd";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3896,7 +3896,7 @@ static void update_variables(void)
+       else if (!strcmp(var.value, "hdf512"))   opt_use_boot_hd = 7;
+    }
+ 
+-   var.key = "puae_analogmouse";
++   var.key = "puae2021_analogmouse";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3906,28 +3906,28 @@ static void update_variables(void)
+       else if (!strcmp(var.value, "both"))     opt_analogmouse = 3;
+    }
+ 
+-   var.key = "puae_analogmouse_deadzone";
++   var.key = "puae2021_analogmouse_deadzone";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       opt_analogmouse_deadzone = atoi(var.value);
+    }
+ 
+-   var.key = "puae_analogmouse_speed";
++   var.key = "puae2021_analogmouse_speed";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       opt_analogmouse_speed = atof(var.value);
+    }
+ 
+-   var.key = "puae_dpadmouse_speed";
++   var.key = "puae2021_dpadmouse_speed";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       opt_dpadmouse_speed = atoi(var.value);
+    }
+ 
+-   var.key = "puae_physicalmouse";
++   var.key = "puae2021_physicalmouse";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3936,7 +3936,7 @@ static void update_variables(void)
+       else if (!strcmp(var.value, "double"))   opt_physicalmouse = 2;
+    }
+ 
+-   var.key = "puae_keyrah_keypad_mappings";
++   var.key = "puae2021_keyrah_keypad_mappings";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3944,7 +3944,7 @@ static void update_variables(void)
+       else                                opt_keyrah_keypad = true;
+    }
+ 
+-   var.key = "puae_physical_keyboard_pass_through";
++   var.key = "puae2021_physical_keyboard_pass_through";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3952,7 +3952,7 @@ static void update_variables(void)
+       else                                opt_keyboard_pass_through = true;
+    }
+ 
+-   var.key = "puae_model_options_display";
++   var.key = "puae2021_model_options_display";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3960,7 +3960,7 @@ static void update_variables(void)
+       else                                opt_model_options_display = 1;
+    }
+ 
+-   var.key = "puae_mapping_options_display";
++   var.key = "puae2021_mapping_options_display";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3968,7 +3968,7 @@ static void update_variables(void)
+       else                                opt_mapping_options_display = 1;
+    }
+ 
+-   var.key = "puae_video_options_display";
++   var.key = "puae2021_video_options_display";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3976,7 +3976,7 @@ static void update_variables(void)
+       else                                opt_video_options_display = 1;
+    }
+ 
+-   var.key = "puae_audio_options_display";
++   var.key = "puae2021_audio_options_display";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3984,7 +3984,7 @@ static void update_variables(void)
+       else                                opt_audio_options_display = 1;
+    }
+ 
+-   var.key = "puae_joyport";
++   var.key = "puae2021_joyport";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3995,14 +3995,14 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_joyport_order";
++   var.key = "puae2021_joyport_order";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       snprintf(opt_joyport_order, sizeof(opt_joyport_order), "%s", var.value);
+    }
+ 
+-   var.key = "puae_retropad_options";
++   var.key = "puae2021_retropad_options";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -4012,7 +4012,7 @@ static void update_variables(void)
+       else if (!strcmp(var.value, "rotate_jump")) opt_retropad_options = RETROPAD_OPTIONS_ROTATE_JUMP;
+    }
+ 
+-   var.key = "puae_cd32pad_options";
++   var.key = "puae2021_cd32pad_options";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -4022,7 +4022,7 @@ static void update_variables(void)
+       else if (!strcmp(var.value, "rotate_jump")) opt_cd32pad_options = RETROPAD_OPTIONS_ROTATE_JUMP;
+    }
+ 
+-   var.key = "puae_turbo_fire";
++   var.key = "puae2021_turbo_fire";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -4033,7 +4033,7 @@ static void update_variables(void)
+       }
+    }
+ 
+-   var.key = "puae_turbo_fire_button";
++   var.key = "puae2021_turbo_fire_button";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -4047,7 +4047,7 @@ static void update_variables(void)
+       else if (!strcmp(var.value, "R2")) turbo_fire_button = RETRO_DEVICE_ID_JOYPAD_R2;
+    }
+ 
+-   var.key = "puae_turbo_pulse";
++   var.key = "puae2021_turbo_pulse";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -4055,168 +4055,168 @@ static void update_variables(void)
+    }
+ 
+    /* Mapper */
+-   var.key = "puae_mapper_up";
++   var.key = "puae2021_mapper_up";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_UP] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_down";
++   var.key = "puae2021_mapper_down";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_DOWN] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_left";
++   var.key = "puae2021_mapper_left";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_LEFT] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_right";
++   var.key = "puae2021_mapper_right";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_RIGHT] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_select";
++   var.key = "puae2021_mapper_select";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_SELECT] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_start";
++   var.key = "puae2021_mapper_start";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_START] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_b";
++   var.key = "puae2021_mapper_b";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_B] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_a";
++   var.key = "puae2021_mapper_a";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_A] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_y";
++   var.key = "puae2021_mapper_y";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_Y] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_x";
++   var.key = "puae2021_mapper_x";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_X] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_l";
++   var.key = "puae2021_mapper_l";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_L] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_r";
++   var.key = "puae2021_mapper_r";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_R] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_l2";
++   var.key = "puae2021_mapper_l2";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_L2] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_r2";
++   var.key = "puae2021_mapper_r2";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_R2] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_l3";
++   var.key = "puae2021_mapper_l3";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_L3] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_r3";
++   var.key = "puae2021_mapper_r3";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_R3] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_lr";
++   var.key = "puae2021_mapper_lr";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_LR] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_ll";
++   var.key = "puae2021_mapper_ll";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_LL] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_ld";
++   var.key = "puae2021_mapper_ld";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_LD] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_lu";
++   var.key = "puae2021_mapper_lu";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_LU] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_rr";
++   var.key = "puae2021_mapper_rr";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_RR] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_rl";
++   var.key = "puae2021_mapper_rl";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_RL] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_rd";
++   var.key = "puae2021_mapper_rd";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_DEVICE_ID_JOYPAD_RD] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_ru";
++   var.key = "puae2021_mapper_ru";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -4224,56 +4224,56 @@ static void update_variables(void)
+    }
+ 
+    /* Mapper hotkeys */
+-   var.key = "puae_mapper_vkbd";
++   var.key = "puae2021_mapper_vkbd";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_MAPPER_VKBD] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_statusbar";
++   var.key = "puae2021_mapper_statusbar";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_MAPPER_STATUSBAR] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_mouse_toggle";
++   var.key = "puae2021_mapper_mouse_toggle";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_MAPPER_JOYMOUSE] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_reset";
++   var.key = "puae2021_mapper_reset";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_MAPPER_RESET] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_aspect_ratio_toggle";
++   var.key = "puae2021_mapper_aspect_ratio_toggle";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_MAPPER_ASPECT_RATIO] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_zoom_mode_toggle";
++   var.key = "puae2021_mapper_zoom_mode_toggle";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_MAPPER_ZOOM_MODE] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_turbo_fire_toggle";
++   var.key = "puae2021_mapper_turbo_fire_toggle";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+       mapper_keys[RETRO_MAPPER_TURBO_FIRE] = retro_keymap_id(var.value);
+    }
+ 
+-   var.key = "puae_mapper_save_disk_toggle";
++   var.key = "puae2021_mapper_save_disk_toggle";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
 diff --git a/libretro/libretro-core.h b/libretro/libretro-core.h
 index 9b9f5c2..04d91c0 100644
 --- a/libretro/libretro-core.h
