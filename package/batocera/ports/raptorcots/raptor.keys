@@ -6,11 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 whaven && reset"
-        },
-        {
-            "trigger": "joystick1",
-            "type": "mouse"
+            "target": "killall -9 raptor && reset"
         },
         {
             "trigger": "up",
@@ -45,7 +41,7 @@
         {
             "trigger": "a",
             "type": "key",
-            "target": "KEY_C"
+            "target": "KEY_LEFTALT"
         },
         {
             "trigger": "b",
@@ -53,39 +49,39 @@
             "target": "KEY_LEFTCTRL"
         },
         {
-            "trigger": "x",
+            "trigger": "y",
             "type": "key",
-            "target": "KEY_Y"
+            "target": "KEY_SPACE"
         },
         {
             "trigger": "pageup",
             "type": "key",
-            "target": "KEY_I"
+            "target": "KEY_A"
         },
         {
             "trigger": "pagedown",
             "type": "key",
-            "target": "KEY_SLASH"
+            "target": "KEY_B"
         },
         {
-            "trigger": "l3",
+            "trigger": "joystick1up",
             "type": "key",
-            "target": "KEY_A"
+            "target": "KEY_UP"
         },
         {
-            "trigger": "r2",
+            "trigger": "joystick1down",
             "type": "key",
-            "target": "KEY_DOT"
+            "target": "KEY_DOWN"
         },
         {
-            "trigger": "l2",
+            "trigger": "joystick1left",
             "type": "key",
-            "target": "KEY_COMMA"
+            "target": "KEY_LEFT"
         },
         {
-            "trigger": "y",
+            "trigger": "joystick1right",
             "type": "key",
-            "target": "KEY_SPACE"
+            "target": "KEY_RIGHT"
         }
     ]
 }

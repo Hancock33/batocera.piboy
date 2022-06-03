@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game id="188394">
+    <path>./Raptor Call Of The Shadows.game</path>
+    <name>Raptor: Call of the Shadows</name>
+    <desc>Raptor is a vertically-scrolling shoot 'em up. It features smooth scrolling VGA graphics, a variety of enemies on ground, air and sea, and an original soundtrack.After completing each level you have the option of upgrading your ship with a powerful arsenal of weapons and goodies. Some weapons are effective on only ground or air targets, while some are on both. There are some really advanced weapons like the auto-track mini-gun which can effectively destroy almost any kind of targets without aiming the ship.Dying in shoot'em ups can be annoying, especially if you have to start all over the beginning. However, in Raptor you can save your game between each level. If you have enough credit you can even buy multiple shields for further protection.The 2010 edition of Raptor: Call of the Shadows includes improved graphics and native support for higher resolutions (640x400, 960x600 and 1280x800). Standard graphics are also available. 
+</desc>
+    <releasedate>19940401T000000</releasedate>
+    <developer>Cygnus Multimedia Productions, Inc.</developer>
+    <publisher>Apogee Software</publisher>
+    <genre>Shoot'em Up-Shoot'em up / Vertical</genre>
+    <players>1</players>
+    <image>./images/Raptor Call Of The Shadows.png</image>
+    <genreid>260</genreid>
+  </game>
+</gameList>
