@@ -1,5 +1,5 @@
 config BR2_PACKAGE_BATOCERA_ES_PIBOY
-        bool "es-piboy"
+        bool "batocera-es-piboy"
 	depends on BR2_INSTALL_LIBSTDCPP
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
