@@ -10,6 +10,7 @@ case "$1" in
 			touch /tmp/piboy
 			cp /usr/share/batocera/configgen/configgen-defaults-piboy4.yml /usr/share/batocera/configgen/configgen-defaults-arch.yml
 			dmesg -n 1
+			WHEEL_INPUT=$(grep -r -l 'PiBoy Volume wheel' /sys/class/input/event*/device/name | sed 's#/sys/class#/dev#;s#/device.*##')
 			/usr/sbin/volumed -- "$WHEEL_INPUT"
 			python /usr/bin/piboy_fan_power_ctrl.py &
 			# disable LCD display if HDMI is connected
