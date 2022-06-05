@@ -16,8 +16,8 @@ RAPTORCOTS_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 
 define RAPTORCOTS_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/buildroot-build/bin/raptor $(TARGET_DIR)/usr/bin
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs
-	cp -av "$(@D)/SETUP(ADLIB).INI" $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/SETUP.INI
+	mkdir -p $(TARGET_DIR)/usr/share/raptor
+	cp -av "$(@D)/SETUP(ADLIB).INI" $(TARGET_DIR)/usr/share/raptor/SETUP.INI
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/raptorcots/raptor.keys $(TARGET_DIR)/usr/share/evmapy
