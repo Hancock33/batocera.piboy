@@ -1,11 +1,13 @@
 #!/usr/bin/env python
-
+import os
+from os import path
 import Command
 from generators.Generator import Generator
 import controllersConfig
 
-
 class DoomretroGenerator(Generator):
+    if os.path.isfile('/tmp/piboy'):
+        os.system('piboy_keys prboom.doomretro.keys')
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["doomretro"]
@@ -25,8 +27,15 @@ class DoomretroGenerator(Generator):
             commandArray.append("-iwad")
             commandArray.append(rom)
 
-        return Command.Command(
-            array=commandArray,
-            env={
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+        if os.path.isfile('/tmp/piboy'):
+            return Command.Command(
+                array=commandArray,
+                env={
+                'SDL_AUTO_UPDATE_JOYSTICKS': '0',
+            })
+        else:
+            return Command.Command(
+                array=commandArray,
+                env={
+                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })

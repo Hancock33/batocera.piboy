@@ -6,13 +6,23 @@ from generators.Generator import Generator
 import controllersConfig
 
 class RednukemGenerator(Generator):
+    if os.path.isfile('/tmp/piboy'):
+        os.system('piboy_keys rednukem.keys')
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["rednukem", "-j", os.path.dirname(os.path.abspath(rom)), "-g", rom]
         os.chdir(os.path.dirname(os.path.abspath(rom)))
 
-        return Command.Command(
-            array=commandArray,
-            env={
+        if os.path.isfile('/tmp/piboy'):
+            return Command.Command(
+                array=commandArray,
+                env={
+                'SDL_AUTO_UPDATE_JOYSTICKS': '0',
+                'SDL_MOUSE_RELATIVE_SPEED_SCALE': '2.0'
+            })
+        else:
+            return Command.Command(
+                array=commandArray,
+                env={
                 "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })

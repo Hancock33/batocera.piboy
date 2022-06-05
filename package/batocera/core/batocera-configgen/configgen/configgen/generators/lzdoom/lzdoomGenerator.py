@@ -1,11 +1,13 @@
 #!/usr/bin/env python
-
+import os
+from os import path
 import Command
 from generators.Generator import Generator
 import controllersConfig
 
-
 class LzdoomGenerator(Generator):
+    if os.path.isfile('/tmp/piboy'):
+        os.system('piboy_keys prboom.lzdoom.keys')
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["/usr/share/lzdoom/lzdoom"]
@@ -59,13 +61,17 @@ class LzdoomGenerator(Generator):
                     commandArray.append("-file")
                     commandArray.append(line.replace("PWAD=", "").replace("\n", ""))
 
-        else:
-            commandArray.append("-iwad")
-            commandArray.append(rom)
-
-        return Command.Command(
-            array=commandArray,
-            env={
+        if os.path.isfile('/tmp/piboy'):
+            return Command.Command(
+                array=commandArray,
+                env={
                 'DOOMWADDIR': '/userdata/roms/prboom',
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
+            })
+        else:
+            return Command.Command(
+                array=commandArray,
+                env={
+                'DOOMWADDIR': '/userdata/roms/prboom',
+                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })

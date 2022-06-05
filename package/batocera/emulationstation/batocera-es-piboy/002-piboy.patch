@@ -1,0 +1,225 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b55cc041..c42eaa94 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -10,6 +10,9 @@ option(BCM "BCM host" OFF)
+ option(BATOCERA "Set to ON to enable BATOCERA specific code" OFF)
+ option(RETROBAT "Set to ON to enable RETROBAT specific code" OFF)
+ 
++option(PIBOY "Set to ON to enable DMG Piboy compatibility" OFF)
++option(NOUPDATE "Set to ON to disable system updates" OFF)
++
+ option(ENABLE_FILEMANAGER "Set to ON to enable f1 shortcut for filesystem" OFF)
+ option(DISABLE_KODI "Set to ON to disable kodi in menu" OFF)
+ option(ENABLE_PULSE "Set to ON to enable pulse audio (versus alsa)" OFF)
+@@ -34,6 +37,16 @@ if(RETROBAT)
+   add_definitions(-DRETROBAT)
+ endif()
+ 
++if(PIBOY)
++  MESSAGE("Piboy build")
++  add_definitions(-DPIBOY)
++endif()
++
++if(NOUPDATE)
++  MESSAGE("Update disabled")
++  add_definitions(-DNOUPDATE)
++endif()
++
+ # disable kodi menu
+ if(DISABLE_KODI)
+   MESSAGE("kodi disabled")
+diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
+index e557e536..6a36f70f 100644
+--- a/es-app/src/guis/GuiMenu.cpp
++++ b/es-app/src/guis/GuiMenu.cpp
+@@ -70,8 +70,15 @@
+ #define fake_gettext_architecture _("Architecture")
+ #define fake_gettext_diskformat   _("Disk format")
+ #define fake_gettext_temperature  _("Temperature")
++#if PIBOY
++#define fake_gettext_fan          _("Fan speed")
++#endif
+ #define fake_gettext_avail_memory _("Available memory")
+ #define fake_gettext_battery      _("Battery")
++#if PIBOY
++#define fake_gettext_battery_volts   _("Battery voltage")
++#define fake_gettext_battery_amps    _("Battery current")
++#endif
+ #define fake_gettext_model        _("Model")
+ #define fake_gettext_cpu_model    _("Cpu model")
+ #define fake_gettext_cpu_number   _("Cpu number")
+@@ -188,7 +195,11 @@ GuiMenu::GuiMenu(Window *window, bool animate) : GuiComponent(window), mMenu(win
+ 		if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::BATOCERASTORE) || ApiSystem::getInstance()->isScriptingSupported(ApiSystem::THEMESDOWNLOADER) ||
+ 			(ApiSystem::getInstance()->isScriptingSupported(ApiSystem::THEBEZELPROJECT) && ApiSystem::getInstance()->isScriptingSupported(ApiSystem::DECORATIONS)) ||
+ 			ApiSystem::getInstance()->isScriptingSupported(ApiSystem::UPGRADE))
+-			addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
++			#if !NOUPDATE
++				addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
++			#else
++				addEntry(_("DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
++			#endif
+ 
+ 		addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings(); }, "iconSystem");
+ 	}
+@@ -800,7 +811,11 @@ void GuiMenu::openDeveloperSettings()
+ 
+ void GuiMenu::openUpdatesSettings()
+ {
+-	GuiSettings *updateGui = new GuiSettings(mWindow, _("UPDATES & DOWNLOADS").c_str());
++	#if !NOUPDATE
++		GuiSettings *updateGui = new GuiSettings(mWindow, _("UPDATES & DOWNLOADS").c_str());
++	#else
++		GuiSettings *updateGui = new GuiSettings(mWindow, _("DOWNLOADS").c_str());
++	#endif
+ 
+ 	updateGui->addGroup(_("DOWNLOADS"));
+ 
+@@ -841,6 +856,7 @@ void GuiMenu::openUpdatesSettings()
+ 
+ 	if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::UPGRADE))
+ 	{
++	#if !NOUPDATE
+ 		updateGui->addGroup(_("SOFTWARE UPDATES"));
+ 
+ 		// Enable updates
+@@ -850,11 +866,11 @@ void GuiMenu::openUpdatesSettings()
+ 
+ 		std::string updatesType = SystemConf::getInstance()->get("updates.type");
+ 
+-#if WIN32
+-		if (updatesType == "unstable")
+-			updatesTypeList->add("unstable", "unstable", updatesType == "unstable");
+-		else
+-#endif
++		#if WIN32
++			if (updatesType == "unstable")
++				updatesTypeList->add("unstable", "unstable", updatesType == "unstable");
++			else
++		#endif
+ 			if (updatesType.empty() || updatesType != "beta")
+ 				updatesType = "stable";
+ 
+@@ -883,6 +899,7 @@ void GuiMenu::openUpdatesSettings()
+ 				mWindow->pushGui(new GuiUpdate(mWindow));
+ 			}
+ 		});
++#endif
+ 	}
+ 
+ 	mWindow->pushGui(updateGui);
+diff --git a/es-core/src/Settings.cpp b/es-core/src/Settings.cpp
+index 77572ef8..f14e869b 100644
+--- a/es-core/src/Settings.cpp
++++ b/es-core/src/Settings.cpp
+@@ -25,7 +25,11 @@ IMPLEMENT_STATIC_BOOL_SETTING(DrawFramerate, false)
+ IMPLEMENT_STATIC_BOOL_SETTING(VolumePopup, true)
+ IMPLEMENT_STATIC_BOOL_SETTING(BackgroundMusic, true)
+ IMPLEMENT_STATIC_BOOL_SETTING(VSync, true)
++#if PIBOY
++IMPLEMENT_STATIC_BOOL_SETTING(PreloadMedias, true)
++#else
+ IMPLEMENT_STATIC_BOOL_SETTING(PreloadMedias, false)
++#endif
+ IMPLEMENT_STATIC_BOOL_SETTING(IgnoreLeadingArticles, false)
+ IMPLEMENT_STATIC_INT_SETTING(ScreenSaverTime, 5 * 60 * 1000)
+ 
+@@ -192,8 +196,15 @@ void Settings::setDefaults()
+ 	mIntMap["MaxVRAM"] = 100;
+ #endif
+ 
++#if PIBOY
++	mStringMap["TransitionStyle"] = "instant";
++	mStringMap["GameTransitionStyle"] = "instant";
++	mBoolMap["PreloadUI"] = true;
++#else
+ 	mStringMap["TransitionStyle"] = "auto";
+ 	mStringMap["GameTransitionStyle"] = "auto";
++	mBoolMap["PreloadUI"] = false;
++#endif
+ 
+ 	mStringMap["ThemeSet"] = "";
+ 	mStringMap["ScreenSaverBehavior"] = "dim";
+@@ -287,7 +298,6 @@ void Settings::setDefaults()
+ 
+ 	mBoolMap["ThreadedLoading"] = true;
+ 	mBoolMap["AsyncImages"] = true;
+-	mBoolMap["PreloadUI"] = false;
+ 	mBoolMap["PreloadMedias"] = Settings::_PreloadMedias;
+ 	mBoolMap["OptimizeVRAM"] = true;
+ 	mBoolMap["OptimizeVideo"] = true;
+diff --git a/es-core/src/platform.cpp b/es-core/src/platform.cpp
+index 1b2c6495..df1213f0 100644
+--- a/es-core/src/platform.cpp
++++ b/es-core/src/platform.cpp
+@@ -28,6 +28,8 @@ int runShutdownCommand()
+ {
+ #ifdef WIN32 // windows
+ 	return system("shutdown -s -t 0");
++#elseif  PIBOY
++	return system("echo 0 > /sys/kernel/xpi_gamecon/flags && /sbin/rmmod xpi_gamecon && shutdown -h now");
+ #else // osx / linux	
+ 	return system("shutdown -h now");
+ #endif
+@@ -37,6 +39,8 @@ int runRestartCommand()
+ {
+ #ifdef WIN32 // windows	
+ 	return system("shutdown -r -t 0");
++#elseif  PIBOY
++	return system("echo 129 > /sys/kernel/xpi_gamecon/flags && shutdown -r now");
+ #else // osx / linux	
+ 	return system("shutdown -r now");
+ #endif
+@@ -341,23 +345,39 @@ BatteryInformation queryBatteryInformation()
+ 	if (batteryStatusPath.empty())
+ 	{
+ 		std::string batteryRootPath;
+-
++	#if PIBOY
++		auto files = Utils::FileSystem::getDirContent("/sys/kernel");
++	#else
+ 		auto files = Utils::FileSystem::getDirContent("/sys/class/power_supply");
++	#endif
+ 		for (auto file : files)
+ 		{
++		#if PIBOY
++			if (Utils::String::toLower(file).find("/xpi_gamecon") != std::string::npos)
++			{
++				batteryRootPath = file;
++				break;
++			}
++		#else
+ 			if (Utils::String::toLower(file).find("/bat") != std::string::npos)
+ 			{
+ 				batteryRootPath = file;
+ 				break;
+ 			}
++		#endif
+ 		}
+ 
+ 		if (batteryRootPath.empty())
+ 			batteryStatusPath = ".";
+ 		else
+ 		{
++		#if PIBOY
++			batteryStatusPath = batteryRootPath + "/amps";
++			batteryCapacityPath = batteryRootPath + "/percent";
++		#else
+ 			batteryStatusPath = batteryRootPath + "/status";
+ 			batteryCapacityPath = batteryRootPath + "/capacity";
++		#endif
+ 		}
+ 	}
+ 
+@@ -370,7 +390,11 @@ BatteryInformation queryBatteryInformation()
+ 	else
+ 	{
+ 		ret.hasBattery = true;
++		#if PIBOY
++	 	ret.isCharging = (stoi(Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "-", "")) < 650);
++		#else
+ 		ret.isCharging = (Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "") != "Discharging");
++		#endif
+ 		ret.level = atoi(Utils::FileSystem::readAllText(batteryCapacityPath).c_str());
+ 	}
+ 

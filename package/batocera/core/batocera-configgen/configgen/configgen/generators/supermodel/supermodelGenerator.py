@@ -10,6 +10,8 @@ import re
 from shutil import copyfile
 
 class SupermodelGenerator(Generator):
+    if os.path.isfile('/tmp/piboy'):
+        os.system('piboy_keys rednukem.keys')
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["supermodel", "-fullscreen"]
@@ -17,8 +19,10 @@ class SupermodelGenerator(Generator):
         # legacy3d
         if system.isOptSet("engine3D") and system.config["engine3D"] == "legacy3d":
             commandArray.append("-legacy3d")
-        else:
+        elif system.isOptSet("engine3D") and system.config["engine3D"] == "new3d":
             commandArray.append("-new3d")
+        else:
+            commandArray.append("-legacy3d")
 
         # widescreen
         if system.isOptSet("wideScreen") and system.getOptBoolean("wideScreen"):
@@ -59,7 +63,18 @@ class SupermodelGenerator(Generator):
         # config
         configPadsIni(playersControllers, drivingGame)
 
-        return Command.Command(array=commandArray)
+        if os.path.isfile('/tmp/piboy'):
+            return Command.Command(
+                array=commandArray,
+                env={
+                'SDL_AUTO_UPDATE_JOYSTICKS': '0',
+            })
+        else:
+            return Command.Command(
+                array=commandArray,
+                env={
+                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
+            })
 
 def copy_nvram_files():
     sourceDir = "/usr/share/supermodel/NVRAM"
