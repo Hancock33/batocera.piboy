@@ -6,6 +6,7 @@ case "$1" in
 	start)
 		if [[ $enabled == "1" ]]; then
 			echo "Starting PiBoy"
+			modprobe xpi_gamecon
 			touch /tmp/piboy
 			dmesg -n 1
 			/usr/sbin/volumed -- "$WHEEL_INPUT"
