@@ -1,11 +1,13 @@
 #!/usr/bin/env python
-
+import os
+from os import path
 import Command
 from generators.Generator import Generator
 import controllersConfig
 
-
 class GzdoomGenerator(Generator):
+    if os.path.isfile('/tmp/piboy'):
+        os.system('piboy_keys prboom.gzdoom.keys')
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["/usr/share/gzdoom/gzdoom"]
@@ -63,9 +65,17 @@ class GzdoomGenerator(Generator):
             commandArray.append("-iwad")
             commandArray.append(rom)
 
-        return Command.Command(
-            array=commandArray,
-            env={
+        if os.path.isfile('/tmp/piboy'):
+            return Command.Command(
+                array=commandArray,
+                env={
                 'DOOMWADDIR': '/userdata/roms/prboom',
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
+            })
+        else:
+            return Command.Command(
+                array=commandArray,
+                env={
+                'DOOMWADDIR': '/userdata/roms/prboom',
+                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })

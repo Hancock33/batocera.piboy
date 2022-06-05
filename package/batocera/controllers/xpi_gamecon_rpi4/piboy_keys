@@ -1,0 +1,2 @@
+#!/bin/sh
+cp -a /usr/share/evmapy/piboy/$1 /usr/share/evmapy/$1

@@ -1,0 +1,48 @@
+################################################################################
+#
+# Batocera Emulation Station
+#
+################################################################################
+# Version: Commits on Jun 02, 2022
+BATOCERA_ES_PIBOY_VERSION = c7bc8df1d76435c5e4007089515b31bd22e7a756
+BATOCERA_ES_PIBOY_SITE = https://github.com/batocera-linux/batocera-emulationstation
+BATOCERA_ES_PIBOY_SITE_METHOD = git
+BATOCERA_ES_PIBOY_LICENSE = MIT
+BATOCERA_ES_PIBOY_GIT_SUBMODULES = YES
+BATOCERA_ES_PIBOY_LICENSE = MIT, Apache-2.0
+BATOCERA_ES_PIBOY_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib libcurl vlc rapidjson pulseaudio-utils batocera-es-system host-gettext espeak
+
+BATOCERA_ES_PIBOY_CONF_OPTS += -DCMAKE_CXX_FLAGS=-D$(call UPPERCASE,$(BATOCERA_SYSTEM_ARCH))
+BATOCERA_ES_PIBOY_CONF_OPTS += -DCMAKE_CXX_FLAGS=-DRPI4 -DGLES2=ON -DEGL=ON -DENABLE_TTS=ON 
+BATOCERA_ES_PIBOY_CONF_OPTS += -DDISABLE_KODI=OFF -DENABLE_PULSE=ON -DENABLE_FILEMANAGER=ON -DPIBOY=ON -DNOUPDATE=ON -DBATOCERA=ON -DCEC=OFF
+
+BATOCERA_ES_PIBOY_KEY_SCREENSCRAPER_DEV_LOGIN=$(shell grep -E '^SCREENSCRAPER_DEV_LOGIN=' /home/lee/keys.txt | cut -d = -f 2-)
+BATOCERA_ES_PIBOY_KEY_GAMESDB_APIKEY=$(shell grep -E '^GAMESDB_APIKEY=' /home/lee/keys.txt | cut -d = -f 2-)
+BATOCERA_ES_PIBOY_KEY_CHEEVOS_DEV_LOGIN=$(shell grep -E '^CHEEVOS_DEV_LOGIN=' /home/lee/keys.txt | cut -d = -f 2-)
+BATOCERA_ES_PIBOY_KEY_HFS_DEV_LOGIN=$(shell grep -E '^HFS_DEV_LOGIN=' /home/lee/keys.txt | cut -d = -f 2-)
+
+ifneq ($(BATOCERA_ES_PIBOY_KEY_SCREENSCRAPER_DEV_LOGIN),)
+BATOCERA_ES_PIBOY_CONF_OPTS += "-DSCREENSCRAPER_DEV_LOGIN=$(BATOCERA_ES_PIBOY_KEY_SCREENSCRAPER_DEV_LOGIN)"
+endif
+ifneq ($(BATOCERA_ES_PIBOY_KEY_GAMESDB_APIKEY),)
+BATOCERA_ES_PIBOY_CONF_OPTS += "-DGAMESDB_APIKEY=$(BATOCERA_ES_PIBOY_KEY_GAMESDB_APIKEY)"
+endif
+ifneq ($(BATOCERA_ES_PIBOY_KEY_CHEEVOS_DEV_LOGIN),)
+BATOCERA_ES_PIBOY_CONF_OPTS += "-DCHEEVOS_DEV_LOGIN=$(BATOCERA_ES_PIBOY_KEY_CHEEVOS_DEV_LOGIN)"
+endif
+ifneq ($(BATOCERA_ES_PIBOY_KEY_HFS_DEV_LOGIN),)
+BATOCERA_ES_PIBOY_CONF_OPTS += "-DHFS_DEV_LOGIN=$(BATOCERA_ES_PIBOY_KEY_HFS_DEV_LOGIN)"
+endif
+
+define BATOCERA_ES_PIBOY_RPI_FIXUP
+	$(SED) 's|.{CMAKE_FIND_ROOT_PATH}/opt/vc|$(STAGING_DIR)/usr|g' $(@D)/CMakeLists.txt
+	$(SED) 's|.{CMAKE_FIND_ROOT_PATH}/usr|$(STAGING_DIR)/usr|g'    $(@D)/CMakeLists.txt
+endef
+
+BATOCERA_ES_PIBOY_PRE_CONFIGURE_HOOKS += BATOCERA_ES_PIBOY_RPI_FIXUP
+
+define BATOCERA_ES_PIBOY_INSTALL_TARGET_CMDS
+	$(INSTALL) -m 0755 $(@D)/emulationstation -D $(TARGET_DIR)/usr/bin/emulationstation_piboy
+endef
+
+$(eval $(cmake-package))

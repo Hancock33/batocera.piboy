@@ -1,30 +1,37 @@
 #!/bin/sh
 WHEEL_INPUT=$(grep -r -l 'PiBoy Volume wheel' /sys/class/input/event*/device/name | sed 's#/sys/class#/dev#;s#/device.*##')
+enabled="$(batocera-settings-get key piboy.enabled)"
 
 case "$1" in
 	start)
-		echo "Starting PiBoy"
-		dmesg -n 1
-		/usr/sbin/volumed -- "$WHEEL_INPUT"
-		python /usr/bin/piboy_fan_power_ctrl.py &
-    	# disable LCD display if HDMI is connected
- 		if grep -q -E '^connected' /sys/class/drm/card?-HDMI-A-*/status; then
- 			echo 0 >/sys/kernel/xpi_gamecon/flags
-		fi > /dev/null 2>&1
+		if [[ $enabled == "1" ]]; then
+			echo "Starting PiBoy"
+			touch /tmp/piboy
+			dmesg -n 1
+			/usr/sbin/volumed -- "$WHEEL_INPUT"
+			python /usr/bin/piboy_fan_power_ctrl.py &
+			# disable LCD display if HDMI is connected
+			if grep -q -E '^connected' /sys/class/drm/card?-HDMI-A-*/status; then
+				echo 0 >/sys/kernel/xpi_gamecon/flags
+			fi > /dev/null 2>&1
+		fi
 		;;
 	stop)
-		echo "Stopping PiBoy"
-		kill $(ps aux | grep piboy_fan_power_ctrl | awk '{ print $1 }') > /dev/null 2>&1
-		kill $(ps aux | grep volumed | awk '{ print $1 }') > /dev/null 2>&1
+		if [[ $enabled == "1" ]]; then
+			echo "Stopping PiBoy"
+			rm /tmp/piboy
+			kill $(ps aux | grep piboy_fan_power_ctrl | awk '{ print $1 }') > /dev/null 2>&1
+			kill $(ps aux | grep volumed | awk '{ print $1 }') > /dev/null 2>&1
 		
-		# reboot requested
-		if runlevel | grep -q -E '(6|unknown)$'; then
-			echo "129" > /sys/kernel/xpi_gamecon/flags; sleep 1
-		fi
-		# shutdown requested
-		if runlevel | grep -q '0$'; then
-			echo "0" > /sys/kernel/xpi_gamecon/flags
-			rmmod xpi_gamecon
+			# reboot requested
+			if runlevel | grep -q -E '(6|unknown)$'; then
+				echo "129" > /sys/kernel/xpi_gamecon/flags; sleep 1
+			fi
+			# shutdown requested
+			if runlevel | grep -q '0$'; then
+				echo "0" > /sys/kernel/xpi_gamecon/flags
+				rmmod xpi_gamecon
+			fi
 		fi
 		;;
 	*)
