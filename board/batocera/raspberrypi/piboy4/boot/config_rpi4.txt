@@ -1,26 +1,6 @@
-# 64-bit mode
-arm_64bit=1
-kernel=boot/linux
-initramfs boot/initrd.gz
-cec_osd_name=batocera 			# sets the initial CEC name of the device
-start_file=start4x.elf
-fixup_file=fixup4x.dat
-
-[rpi4]
-dtoverlay=vc4-kms-v3d-pi4
-disable_overscan=1
-max_framebuffers=2
-extra_transpose_buffer=2		# allocates an extra transpose buffer - can help with screen tearing
-
 #Base Settings
-avoid_warnings=2				# removes the warning overlay and allows turbo when low-voltage is present.
-boot_delay=0					# the boot_delay command instructs to wait for a given number of seconds before loading the kernel
-initial_turbo=60				# enables turbo mode from boot for the given value in seconds
-force_eeprom_read=0				# set to 0 to prevent the firmware from trying to read an I2C HAT EEPROM
-disable_splash=1				# rainbow splash screen will not be shown on boot
-
-#Audio Settings
-dtparam=audio=on
+cec_osd_name=batocera 			# sets the initial CEC name of the device
+disable_overscan=1
 
 # HDMI Settings
 hdmi_group:1=2					# 1=CEA (Consumer Electronics Association, the standard typically used by TVs), 2=DMT (Display Monitor Timings, the standard typically used by monitors).
@@ -30,7 +10,25 @@ hdmi_drive:1=2					# 1=Normal DVI mode (no sound), 2=Normal HDMI mode and sound
 hdmi_force_hotplug:1=1			# Setting hdmi_force_hotplug to 1 pretends that the HDMI hotplug signal is asserted, so it appears that a HDMI display is attached.
 #hdmi_safe=1 					# uncomment if you get no picture on HDMI for a default "safe" mode
 hdmi_enable_4kp60=1 			# uncomment this option to allow selection of 4k 60Hz refresh rates.
-hvs_set_dither=0x210
+
+boot_delay=3					# the boot_delay command instructs to wait for a given number of seconds before loading the kernel
+disable_splash=1				# rainbow splash screen will not be shown on boot
+kernel=boot/linux
+initramfs boot/initrd.gz
+
+#Audio Settings
+dtparam=audio=on
+
+# Video settings
+gpu_mem_1024=256
+dtoverlay=vc4-kms-v3d-pi4
+
+[rpi4]
+# 64-bit mode
+arm_64bit=1
+start_file=start4x.elf
+fixup_file=fixup4x.dat
+max_framebuffers=2 			    # Ensure only one display output can be used on the Pi4 with batocera
 
 ### Power saving options
 # Disable Bluetooth
