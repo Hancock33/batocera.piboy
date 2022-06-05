@@ -1,6 +1,6 @@
 #!/bin/sh
 WHEEL_INPUT=$(grep -r -l 'PiBoy Volume wheel' /sys/class/input/event*/device/name | sed 's#/sys/class#/dev#;s#/device.*##')
-enabled="$(batocera-settings-get key piboy.enabled)"
+enabled="$(batocera-settings-get -f /boot/batocera-boot.conf key piboy.enabled)"
 
 case "$1" in
 	start)
