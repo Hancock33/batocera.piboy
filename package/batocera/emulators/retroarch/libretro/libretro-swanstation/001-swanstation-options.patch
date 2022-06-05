@@ -1,5 +1,5 @@
 diff --git a/src/libretro/libretro_core_options.h b/src/libretro/libretro_core_options.h
-index cc4e004b..7ceaa8bf 100644
+index cdfdfe05..b3e1c86e 100644
 --- a/src/libretro/libretro_core_options.h
 +++ b/src/libretro/libretro_core_options.h
 @@ -80,7 +80,7 @@ struct retro_core_option_v2_category option_cats_us[] = {
@@ -327,7 +327,7 @@ index cc4e004b..7ceaa8bf 100644
        NULL,
        "Sets the preferred aspect ratio. Will only work when the 'Core Provided' aspect ratio is selected inside RetroArch's Video settings.",
 @@ -812,7 +812,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
-       "4:3"
+       "Auto"
     },
     {
 -      "duckstation_Display.CustomAspectRatioNumerator",
@@ -848,8 +848,8 @@ index cc4e004b..7ceaa8bf 100644
        "CPU Recompiler Fast Memory Access",
        NULL,
        "Uses page faults to determine hardware memory accesses at runtime. Can provide a significant performance "
-@@ -3557,7 +3557,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
-       "LUT"
+@@ -3561,7 +3561,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+ #endif
     },
     {
 -      "duckstation_CPU.FastmemRewrite",
@@ -857,7 +857,7 @@ index cc4e004b..7ceaa8bf 100644
        "CPU Recompiler Fast Memory Access Rewrite",
        NULL,
        "Enables rewrites when CPU Recompiler Fast Memory Access is enabled. Can provide a measurable speed boost, "
-@@ -3572,7 +3572,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3576,7 +3576,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -866,7 +866,7 @@ index cc4e004b..7ceaa8bf 100644
        "Show VRAM",
        NULL,
        "Shows the entirety of the console's VRAM instead of the display area (debugging feature).",
-@@ -3586,10 +3586,10 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3590,10 +3590,10 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -879,7 +879,7 @@ index cc4e004b..7ceaa8bf 100644
        "Currently only works with the D3D11 & Vulkan renderers.",
        NULL,
        "advanced",
-@@ -3601,7 +3601,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3605,7 +3605,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -888,7 +888,7 @@ index cc4e004b..7ceaa8bf 100644
        "Preload Texture Replacements",
        NULL,
        "Preload VRAM write replacement textures to RAM",
-@@ -3615,7 +3615,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3619,7 +3619,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -897,7 +897,7 @@ index cc4e004b..7ceaa8bf 100644
        "Display Active Start Offset",
        NULL,
        "Pads or crops off lines from the left of the displayed image.",
-@@ -3688,7 +3688,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3692,7 +3692,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "0"
     },
     {
@@ -906,7 +906,7 @@ index cc4e004b..7ceaa8bf 100644
        "Display Active End Offset",
        NULL,
        "Pads or crops off lines from the right of the displayed image.",
-@@ -3761,7 +3761,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3765,7 +3765,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "0"
     },
     {
@@ -915,7 +915,7 @@ index cc4e004b..7ceaa8bf 100644
        "Display Line Start Offset",
        NULL,
        "Pads or crops off lines from the top of the displayed image.",
-@@ -3834,7 +3834,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3838,7 +3838,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "0"
     },
     {
@@ -924,7 +924,7 @@ index cc4e004b..7ceaa8bf 100644
        "Display Line End Offset",
        NULL,
        "Pads or crops off lines from the bottom of the displayed image.",
-@@ -3907,7 +3907,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3911,7 +3911,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "0"
     },
     {
@@ -933,7 +933,7 @@ index cc4e004b..7ceaa8bf 100644
        "PGXP Preserve Projection Precision",
        NULL,
        "Enables additional precision for PGXP. May improve visuals in some games but break others.",
-@@ -3921,7 +3921,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3925,7 +3925,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -942,7 +942,7 @@ index cc4e004b..7ceaa8bf 100644
        "PGXP Geometry Tolerance",
        NULL,
        "Ignores precise positions if the difference exceeds this threshold.",
-@@ -3954,7 +3954,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3958,7 +3958,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "-1.0"
     },
     {
@@ -951,7 +951,7 @@ index cc4e004b..7ceaa8bf 100644
        "Internal Run-Ahead",
        NULL,
        "Simulates the system ahead of time and rolls back/replays to reduce input lag. Has very high system "
-@@ -3978,7 +3978,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3982,7 +3982,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "0"
     },
     {
@@ -961,7 +961,7 @@ index cc4e004b..7ceaa8bf 100644
        NULL,
        "Enabled an additional 6MB of RAM, usually present on dev consoles. Games have to use a "
 diff --git a/src/libretro/libretro_host_interface.cpp b/src/libretro/libretro_host_interface.cpp
-index 44402802..96e84827 100644
+index ab411e70..25b2fe6c 100644
 --- a/src/libretro/libretro_host_interface.cpp
 +++ b/src/libretro/libretro_host_interface.cpp
 @@ -247,7 +247,7 @@ static const char* GetSaveDirectory()
@@ -1030,7 +1030,7 @@ index 44402802..96e84827 100644
           g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
  
           break;
-@@ -814,69 +814,69 @@ bool LibretroHostInterface::UpdateCoreOptionsDisplay(bool controller)
+@@ -821,71 +821,71 @@ bool LibretroHostInterface::UpdateCoreOptionsDisplay(bool controller)
    struct retro_core_option_display option_display;
  
    option_display.visible = cpu_recompiler;
@@ -1043,6 +1043,8 @@ index 44402802..96e84827 100644
 -  option_display.key = "duckstation_CPU.FastmemMode";
 +  option_display.key = "swanstation_CPU.FastmemMode";
    g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+ 
+   option_display.visible = cpu_fastmem_rewrite;
 -  option_display.key = "duckstation_CPU.FastmemRewrite";
 +  option_display.key = "swanstation_CPU.FastmemRewrite";
    g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
@@ -1126,7 +1128,7 @@ index 44402802..96e84827 100644
    g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
  
    for (u32 i = 0; i < NUM_CONTROLLER_AND_CARD_PORTS; i++)
-@@ -903,25 +903,25 @@ bool LibretroHostInterface::UpdateCoreOptionsDisplay(bool controller)
+@@ -912,25 +912,25 @@ bool LibretroHostInterface::UpdateCoreOptionsDisplay(bool controller)
      const bool guncon_active = (port_allowed && active_controller == RETRO_DEVICE_PS_GUNCON);
  
      option_display.visible = analog_active;
@@ -1159,7 +1161,7 @@ index 44402802..96e84827 100644
      g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
    }
  
-@@ -1469,7 +1469,7 @@ static std::optional<GPURenderer> RenderAPIToRenderer(HostDisplay::RenderAPI api
+@@ -1478,7 +1478,7 @@ static std::optional<GPURenderer> RenderAPIToRenderer(HostDisplay::RenderAPI api
  
  bool LibretroHostInterface::RequestHardwareRendererContext()
  {
