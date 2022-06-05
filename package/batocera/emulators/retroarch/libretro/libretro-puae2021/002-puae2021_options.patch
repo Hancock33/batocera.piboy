@@ -1,5 +1,5 @@
 diff --git a/libretro/libretro-core.c b/libretro/libretro-core.c
-index ff1874d..811a6c0 100644
+index d9cef65..b238bb1 100644
 --- a/libretro/libretro-core.c
 +++ b/libretro/libretro-core.c
 @@ -576,7 +576,7 @@ static void retro_set_core_options()
