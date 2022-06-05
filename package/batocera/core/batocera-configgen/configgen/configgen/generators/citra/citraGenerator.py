@@ -8,7 +8,6 @@ import os
 from os import environ
 import configparser
 
-
 class CitraGenerator(Generator):
 
     # Main entry of the module
@@ -63,7 +62,6 @@ class CitraGenerator(Generator):
         ## [LAYOUT]
         if not citraConfig.has_section("Layout"):
             citraConfig.add_section("Layout")
-
         # Screen Layout
         citraConfig.set("Layout", "custom_layout", "0")
         if system.isOptSet('citra_screen_layout'):
@@ -77,7 +75,6 @@ class CitraGenerator(Generator):
         ## [SYSTEM]
         if not citraConfig.has_section("System"):
             citraConfig.add_section("System")
-
         # New 3DS Version
         if system.isOptSet('citra_is_new_3ds') and system.config["citra_is_new_3ds"] == '1':
             citraConfig.set("System", "is_new_3ds", "true")
@@ -88,8 +85,7 @@ class CitraGenerator(Generator):
 
         ## [UI]
         if not citraConfig.has_section("UI"):
-            citraConfig.add_section("UI")
-
+            citraConfig.add_section("UI")       
         # Start Fullscreen
         if system.isOptSet("showFPS") and system.getOptBoolean("showFPS"):
             citraConfig.set("UI", "fullscreen",       "false")
@@ -112,12 +108,10 @@ class CitraGenerator(Generator):
         ## [RENDERER]
         if not citraConfig.has_section("Renderer"):
             citraConfig.add_section("Renderer")
-
         # Force Hardware Rrendering / Shader or nothing works fine
         citraConfig.set("Renderer", "use_hw_renderer", "true")
         citraConfig.set("Renderer", "use_hw_shader",   "true")
         citraConfig.set("Renderer", "use_shader_jit",  "true")
-
         # Use VSYNC
         if system.isOptSet('citra_use_vsync_new') and system.config["citra_use_vsync_new"] == '0':
             citraConfig.set("Renderer", "use_vsync_new", "false")
@@ -133,7 +127,7 @@ class CitraGenerator(Generator):
             citraConfig.set("Renderer", "use_frame_limit", "false")
         else:
             citraConfig.set("Renderer", "use_frame_limit", "true")
-
+        
         ## [WEB SERVICE]
         if not citraConfig.has_section("WebService"):
             citraConfig.add_section("WebService")
@@ -142,7 +136,6 @@ class CitraGenerator(Generator):
         ## [UTILITY]
         if not citraConfig.has_section("Utility"):
             citraConfig.add_section("Utility")
-
         # Disk Shader Cache
         if system.isOptSet('citra_use_disk_shader_cache') and system.config["citra_use_disk_shader_cache"] == '1':
             citraConfig.set("Utility", "use_disk_shader_cache", "true")
@@ -167,7 +160,7 @@ class CitraGenerator(Generator):
         # Options required to load the functions when the configuration file is created
         if not citraConfig.has_option("Controls", "profiles\\size"):
             citraConfig.set("Controls", "profile", 0)
-            citraConfig.set("Controls", "profile\\default", "true")
+            citraConfig.set("Controls", "profile\\default", "true")    
             citraConfig.set("Controls", "profiles\\1\\name", "default")
             citraConfig.set("Controls", "profiles\\1\\name\\default", "true")
             citraConfig.set("Controls", "profiles\\size", 1)
@@ -231,7 +224,6 @@ class CitraGenerator(Generator):
         if int(value) == 8:
             return "left"
         return "unknown"
-
 
 # Lauguage auto setting
 def getCitraLangFromEnvironment():
