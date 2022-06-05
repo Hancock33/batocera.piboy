@@ -8,6 +8,7 @@ case "$1" in
 			echo "Starting PiBoy"
 			modprobe xpi_gamecon
 			touch /tmp/piboy
+			cp /usr/share/batocera/configgen/configgen-defaults-piboy4.yml /usr/share/batocera/configgen/configgen-defaults-arch.yml
 			dmesg -n 1
 			/usr/sbin/volumed -- "$WHEEL_INPUT"
 			python /usr/bin/piboy_fan_power_ctrl.py &
