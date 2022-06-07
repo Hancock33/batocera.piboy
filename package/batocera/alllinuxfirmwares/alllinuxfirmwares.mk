@@ -33,6 +33,10 @@ define ALLLINUXFIRMWARES_DELETE_BRCM
 	rm -rf $(@D)/radeon
 endef
 
+ifeq ($(BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI)$(BR2_PACKAGE_FIRMWARE_WLAN_AML),y)
+    ALLLINUXFIRMWARES_PRE_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_DELETE_BRCM
+endif
+
 # realtek uses symbolic links for some firmware between different cards
 define ALLLINUXFIRMWARES_REALTEK_POST_PROCESS
     # create realtek wifi symbolic links

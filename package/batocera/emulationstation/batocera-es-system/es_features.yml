@@ -2379,6 +2379,22 @@ libretro:
                       choices:
                           "On":  1
                           "Off": 0
+         gp32:
+              cfeatures:
+                  softList:
+                      group: ADVANCED OPTIONS
+                      prompt:      SOFTWARE LIST
+                      description: Use MAME software lists to identify ROM
+                      choices:
+                          "Don't Use (Default)":            none
+                          "GamePark GP32 SmartMedia cards": gp32
+                  pergamecfg:
+                      group: ADVANCED OPTIONS
+                      prompt:      CUSTOM GAME CONFIG
+                      description: Enable per-game custom configuration via MAME menu.
+                      choices:
+                          "On":  1
+                          "Off": 0
          macintosh:
               cfeatures:
                   softList:
@@ -7224,6 +7240,12 @@ mame:
                 "BGFX":            bgfx
                 "Accel":           accel
                 "OpenGL":          opengl
+        vsync:
+            prompt:      VSYNC
+            description: Fix screen tearing, but may drop frames.
+            choices:
+                "Off (Default)": 0
+                "On":            1
         bgfxbackend:
             archs_include: [x86, x86_64, rpi4, rk3326]
             prompt:      BGFX GRAPHICS API
@@ -7808,6 +7830,22 @@ mame:
                         "Don't Use (Default)":            none
                         "Hartung Game Master cartridges": gmaster
                 pergamecfg:
+                    prompt:      CUSTOM GAME CONFIG
+                    description: Enable per-game custom configuration via MAME menu.
+                    choices:
+                        "On":  1
+                        "Off": 0
+       gp32:
+            cfeatures:
+                softList:
+                    group: ADVANCED OPTIONS
+                    prompt:      SOFTWARE LIST
+                    description: Use MAME software lists to identify ROM
+                    choices:
+                        "Don't Use (Default)":            none
+                        "GamePark GP32 SmartMedia cards": gp32
+                pergamecfg:
+                    group: ADVANCED OPTIONS
                     prompt:      CUSTOM GAME CONFIG
                     description: Enable per-game custom configuration via MAME menu.
                     choices:
