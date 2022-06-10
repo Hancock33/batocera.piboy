@@ -2714,7 +2714,7 @@ msgctxt "game_options"
 msgid "Select which joystick to emulate."
 msgstr ""
 
-#. TRANSLATION: libretro/mess, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, duckstation, ...
+#. TRANSLATION: libretro/mess, libretro/mess, libretro/mess, libretro/mupen64plus-next, libretro/mupen64plus-next, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr ""
@@ -3101,7 +3101,7 @@ msgctxt "game_options"
 msgid "GamePark GP32 SmartMedia cards"
 msgstr ""
 
-#. TRANSLATION: libretro/mess, mame/uzem
+#. TRANSLATION: libretro/mess, mame/wasm4
 msgctxt "game_options"
 msgid "Macintosh 400K/800K Disk images"
 msgstr ""
