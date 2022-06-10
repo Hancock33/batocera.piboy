@@ -207,9 +207,9 @@ shared:
         "On": 1
         "Off": 0
     use_guns:
-      group: LIGHTGUN
-      prompt: Use guns
-      description: Use guns instead of pads if guns are detected on the system
+      group: LIGHT GUN
+      prompt: USE LIGHT GUNS
+      description: Use light guns instead of pads if light guns are connected.
       choices:
         "On":  1
         "Off": 0
@@ -283,8 +283,8 @@ libretro:
               "Off":  "false"
     lightgun_map:
         group: CONTROLLER SETTINGS
-        prompt:      CONTROLLER TO LIGHTGUN
-        description: Map controller inputs to lightgun inputs
+        prompt:      CONTROLLER TO LIGHT GUN
+        description: Map controller inputs to light gun inputs.
         choices:
             "On":   "true"
             "Off":  "false"
@@ -1094,9 +1094,9 @@ libretro:
                     "3":           3
                     "4":           4
             fbneo-lightgun-hide-crosshair:
-                group: LIGHTGUN
-                prompt:      SHOW LIGHTGUN CROSSHAIRS
-                description: Lightgun device must be selected on at least one port.
+                group: LIGHT GUN
+                prompt:      SHOW LIGHT GUN CROSSHAIRS
+                description: Light gun device must be selected on at least one port.
                 choices:
                     "Off":                                enabled
                     "On":                                 disabled
@@ -1123,8 +1123,8 @@ libretro:
       shared: [rewind, autosave, use_guns]
       cfeatures:
             fceumm_show_crosshair:
-                group: LIGHTGUN
-                prompt:      SHOW LIGHTGUN CROSSHAIRS
+                group: LIGHT GUN
+                prompt:      SHOW LIGHT GUN CROSSHAIRS
                 choices:
                     "Off":        disabled
                     "On":         enabled
@@ -1235,8 +1235,8 @@ libretro:
                     "7040x5280":  7040x5280
                     "7680x5760":  7680x5760
             reicast_lightgun1_crosshair:
-                group: LIGHTGUN
-                prompt:      Target color for player 1
+                group: LIGHT GUN
+                prompt:      Target color for player 1.
                 choices:
                     Red: Red
                     Blue: Blue
@@ -1244,8 +1244,8 @@ libretro:
                     White: White
                     Disabled: disabled
             reicast_lightgun2_crosshair:
-                group: LIGHTGUN
-                prompt:      Target color for player 1
+                group: LIGHT GUN
+                prompt:      Target color for player 2.
                 choices:
                     Red: Red
                     Blue: Blue
@@ -1253,8 +1253,8 @@ libretro:
                     White: White
                     Disabled: disabled
             reicast_lightgun3_crosshair:
-                group: LIGHTGUN
-                prompt:      Target color for player 1
+                group: LIGHT GUN
+                prompt:      Target color for player 3.
                 choices:
                     Red: Red
                     Blue: Blue
@@ -1263,7 +1263,7 @@ libretro:
                     Disabled: disabled
             reicast_lightgun4_crosshair:
                 group: LIGHTGUN
-                prompt:      Target color for player 1
+                prompt:      Target color for player 4.
                 choices:
                     Red: Red
                     Blue: Blue
@@ -1553,9 +1553,9 @@ libretro:
                             "SVideo (color bleeding only)":           svideo
                             "RGB (crisp image)":                      rgb
                     gun_cursor_md:
-                        group: LIGHTGUN
-                        prompt:      SHOW LIGHTGUN CROSSHAIRS
-                        description: Lightgun device must be selected on at least one port.
+                        group: LIGHT GUN
+                        prompt:      SHOW LIGHT GUN CROSSHAIRS
+                        description: Light gun device must be selected on at least one port.
                         choices:
                             "Off":        disabled
                             "On":         enabled
@@ -1576,7 +1576,7 @@ libretro:
                     controller2_md:
                         group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 2 TYPE
-                        description: Lightguns can only be used in port 2.
+                        description: Light guns can only be used in port 2.
                         choices:
                             #"None":                          0
                             "Joypad Auto":                   1
@@ -1609,9 +1609,9 @@ libretro:
                             "Off":         disabled
                             "On (forced)": enabled
                     gun_cursor_ms:
-                        group: LIGHTGUN
-                        prompt:      SHOW LIGHTGUN CROSSHAIRS
-                        description: Lightgun device must be selected on at least one port.
+                        group: LIGHT GUN
+                        prompt:      SHOW LIGHT GUN CROSSHAIRS
+                        description: Light gun device must be selected on at least one port.
                         choices:
                             "Off":        disabled
                             "On":         enabled
@@ -3204,8 +3204,8 @@ libretro:
       shared: [rewind, autosave, use_guns]
       cfeatures:
             nestopia_show_crosshair:
-                group: LIGHTGUN
-                prompt:      SHOW LIGHTGUN CROSSHAIRS
+                group: LIGHT GUN
+                prompt:      SHOW LIGHT GUN CROSSHAIRS
                 choices:
                     "Off":        disabled
                     "On":         enabled
@@ -4611,7 +4611,7 @@ libretro:
             controller2_snes9x:
                 group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
-                description: Lightguns can only be used in port 2.
+                description: Light guns can only be used in port 2.
                 choices:
                     "SNES Gamepad":     1
                     "SNES Mouse":       2
@@ -4669,7 +4669,7 @@ libretro:
             controller2_snes9x_next:
                 group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
-                description: Lightguns/multitap.
+                description: Light guns/multitap.
                 choices:
                     "SNES Gamepad":           1
                     "SNES Mouse":             2
@@ -5748,7 +5748,7 @@ daphne:
         lightgun_hd:
             group: CONTROLLER SETTINGS
             prompt:      OVERSIZE OVERLAY (SINGE)
-            description: Use with Singe HD lightgun games.
+            description: Use with Singe HD light gun games.
             choices:
                 "Off": 0
                 "On":  1
@@ -5762,7 +5762,7 @@ daphne:
         singe_joystick_range:
             group: CONTROLLER SETTINGS
             prompt:      JOYSTICK TO CURSOR SENSITIVITY
-            description: Singe automatically interprets joystick axis change as mouse movement, useful for lightgun games.
+            description: Singe automatically interprets joystick axis change as mouse movement, useful for light gun games.
             choices:
                 "5":  5
                 "10": 10
@@ -5770,7 +5770,7 @@ daphne:
                 "20": 20
         singe_crosshair:
             group: CONTROLLER SETTINGS
-            prompt:      HIDE LIGHTGUN CROSSHAIRS
+            prompt:      HIDE LIGHT GUN CROSSHAIRS
             description: Hide crosshairs in supported games e.g. ActionMax.
             choices:
                 "Off":                          0
@@ -7168,8 +7168,8 @@ supermodel:
                 "Off":      0
                 "On":       1
         crosshairs:
-            group:       LIGHTGUN
-            prompt:      SHOW LIGHTGUN CROSSHAIRS
+            group:       LIGHT GUN
+            prompt:      SHOW LIGHT GUN CROSSHAIRS
             description: Enable crosshairs in shooting games for the selected players.
             choices:
                 "None":     0
