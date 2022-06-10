@@ -315,17 +315,17 @@ msgstr "WIELOWĄTKOWE WIDEO"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "Use guns instead of pads if guns are detected on the system"
+msgid "Use light guns instead of pads if light guns are connected."
 msgstr ""
 
 #. TRANSLATION: shared, libretro/fbneo, libretro/fceumm, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "LIGHTGUN"
+msgid "LIGHT GUN"
 msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "Use guns"
+msgid "USE LIGHT GUNS"
 msgstr ""
 
 #. TRANSLATION: libretro/81
@@ -1728,13 +1728,13 @@ msgstr "Bez pomijania"
 
 #. TRANSLATION: libretro/fbneo, libretro/genesisplusgx, libretro/genesisplusgx
 msgctxt "game_options"
-msgid "Lightgun device must be selected on at least one port."
-msgstr "Pistolet świetlny musi być wybrane na co najmniej jednym porcie."
+msgid "Light gun device must be selected on at least one port."
+msgstr ""
 
 #. TRANSLATION: libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia, ...
 msgctxt "game_options"
-msgid "SHOW LIGHTGUN CROSSHAIRS"
-msgstr "POKAŻ CELOWNIK PISTOLETU ŚWIETLNEGO"
+msgid "SHOW LIGHT GUN CROSSHAIRS"
+msgstr ""
 
 #. TRANSLATION: libretro/fbneo, libretro/mame078plus
 msgctxt "game_options"
@@ -1883,9 +1883,9 @@ msgctxt "game_options"
 msgid "SYNCHRONOUS RENDERING"
 msgstr "RENDEROWANIE SYNCHRONICZNE"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
-msgid "Target color for player 1"
+msgid "Target color for player 1."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast
@@ -1906,6 +1906,26 @@ msgstr ""
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast
 msgctxt "game_options"
 msgid "White"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "Target color for player 2."
+msgstr ""
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "Target color for player 3."
+msgstr ""
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "LIGHTGUN"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "Target color for player 4."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, mupen64plus
@@ -2267,8 +2287,8 @@ msgstr "Joypad 6 Przyciski + Teamplayer"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/snes9x
 msgctxt "game_options"
-msgid "Lightguns can only be used in port 2."
-msgstr "Pistolety świetlne mogą być używane tylko w porcie 2."
+msgid "Light guns can only be used in port 2."
+msgstr ""
 
 #. TRANSLATION: libretro/genesisplusgx
 msgctxt "game_options"
@@ -2719,7 +2739,7 @@ msgctxt "game_options"
 msgid "Select which joystick to emulate."
 msgstr ""
 
-#. TRANSLATION: libretro/mess, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, duckstation, ...
+#. TRANSLATION: libretro/mess, libretro/mess, libretro/mess, libretro/mupen64plus-next, libretro/mupen64plus-next, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "OPCJE ZAAWANSOWANE"
@@ -3106,7 +3126,7 @@ msgctxt "game_options"
 msgid "GamePark GP32 SmartMedia cards"
 msgstr ""
 
-#. TRANSLATION: libretro/mess, mame/uzem
+#. TRANSLATION: libretro/mess, mame/wasm4
 msgctxt "game_options"
 msgid "Macintosh 400K/800K Disk images"
 msgstr "Obrazy dysków Macintosh 400K/800K"
@@ -5382,8 +5402,8 @@ msgstr "40 MHz"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
-msgid "Lightguns/multitap."
-msgstr "Pistolety świetlne/multitap."
+msgid "Light guns/multitap."
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -6097,13 +6117,13 @@ msgstr "ZEZWALAJ NA OBRÓT"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
-msgid "Map controller inputs to lightgun inputs"
-msgstr "Mapowanie wejść kontrolera na wejścia pistoletu świetlnego"
+msgid "Map controller inputs to light gun inputs."
+msgstr ""
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
-msgid "CONTROLLER TO LIGHTGUN"
-msgstr "KONTROLER DLA PISTOLETU ŚWIETLNEGO"
+msgid "CONTROLLER TO LIGHT GUN"
+msgstr ""
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -6473,8 +6493,8 @@ msgstr "MIESZANIE SPRITE'ÓW (POJEDYNCZO)"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
-msgid "Use with Singe HD lightgun games."
-msgstr "Używaj z grami i pistoletem Singe HD."
+msgid "Use with Singe HD light gun games."
+msgstr ""
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
@@ -6495,7 +6515,7 @@ msgstr "ODWRÓĆ OŚ"
 msgctxt "game_options"
 msgid ""
 "Singe automatically interprets joystick axis change as mouse movement, "
-"useful for lightgun games."
+"useful for light gun games."
 msgstr ""
 
 #. TRANSLATION: daphne
@@ -6510,7 +6530,7 @@ msgstr ""
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
-msgid "HIDE LIGHTGUN CROSSHAIRS"
+msgid "HIDE LIGHT GUN CROSSHAIRS"
 msgstr ""
 
 #. TRANSLATION: daphne
@@ -9619,6 +9639,34 @@ msgstr ""
 msgctxt "game_options"
 msgid "USE COMPUTE SHADER"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "Lightgun device must be selected on at least one port."
+#~ msgstr "Pistolet świetlny musi być wybrane na co najmniej jednym porcie."
+
+#~ msgctxt "game_options"
+#~ msgid "SHOW LIGHTGUN CROSSHAIRS"
+#~ msgstr "POKAŻ CELOWNIK PISTOLETU ŚWIETLNEGO"
+
+#~ msgctxt "game_options"
+#~ msgid "Lightguns can only be used in port 2."
+#~ msgstr "Pistolety świetlne mogą być używane tylko w porcie 2."
+
+#~ msgctxt "game_options"
+#~ msgid "Lightguns/multitap."
+#~ msgstr "Pistolety świetlne/multitap."
+
+#~ msgctxt "game_options"
+#~ msgid "Map controller inputs to lightgun inputs"
+#~ msgstr "Mapowanie wejść kontrolera na wejścia pistoletu świetlnego"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTROLLER TO LIGHTGUN"
+#~ msgstr "KONTROLER DLA PISTOLETU ŚWIETLNEGO"
+
+#~ msgctxt "game_options"
+#~ msgid "Use with Singe HD lightgun games."
+#~ msgstr "Używaj z grami i pistoletem Singe HD."
 
 #~ msgctxt "game_options"
 #~ msgid "CDZ (MAME)"
