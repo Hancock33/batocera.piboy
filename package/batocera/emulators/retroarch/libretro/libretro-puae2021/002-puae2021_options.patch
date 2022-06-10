@@ -1,5 +1,5 @@
 diff --git a/libretro/libretro-core.c b/libretro/libretro-core.c
-index e6a6ca0..0baf678 100644
+index a60980f..0cc7b34 100644
 --- a/libretro/libretro-core.c
 +++ b/libretro/libretro-core.c
 @@ -576,7 +576,7 @@ static void retro_set_core_options()
@@ -294,11 +294,11 @@ index e6a6ca0..0baf678 100644
           "auto"
        },
        {
--         "puae_crop_mode",
-+         "puae2021_crop_mode",
-          "Video > Crop Mode",
-          "Crop Mode",
-          "Remove borders according to the crop preset.",
+-         "puae_crop",
++         "puae2021_crop",
+          "Video > Crop",
+          "Crop",
+          "Remove borders according to 'Crop Mode'.",
 @@ -1158,7 +1158,7 @@ static void retro_set_core_options()
           "disabled"
        },
@@ -312,10 +312,10 @@ index e6a6ca0..0baf678 100644
           "deprecated"
        },
        {
--         "puae_crop_mode_preset",
-+         "puae2021_crop_mode_preset",
-          "Video > Crop Mode Preset",
-          "Crop Mode Preset",
+-         "puae_crop_mode",
++         "puae2021_crop_mode",
+          "Video > Crop Mode",
+          "Crop Mode",
           "'Horizontal + Vertical' & 'Automatic' removes borders completely.",
 @@ -1199,7 +1199,7 @@ static void retro_set_core_options()
           "both"
@@ -672,11 +672,11 @@ index e6a6ca0..0baf678 100644
           "---"
        },
        {
--         "puae_mapper_crop_mode_toggle",
-+         "puae2021_mapper_crop_mode_toggle",
-          "Hotkey > Toggle Crop Mode",
-          "Toggle Crop Mode",
-          "Press the mapped key to toggle crop mode.",
+-         "puae_mapper_crop_toggle",
++         "puae2021_mapper_crop_toggle",
+          "Hotkey > Toggle Crop",
+          "Toggle Crop",
+          "Press the mapped key to toggle crop.",
 @@ -1989,7 +1989,7 @@ static void retro_set_core_options()
           "---"
        },
@@ -978,7 +978,7 @@ index e6a6ca0..0baf678 100644
 -            || strstr(option_defs_us[i].key, "puae_mapper_mouse_toggle")
 -            || strstr(option_defs_us[i].key, "puae_mapper_reset")
 -            || strstr(option_defs_us[i].key, "puae_mapper_aspect_ratio_toggle")
--            || strstr(option_defs_us[i].key, "puae_mapper_crop_mode_toggle")
+-            || strstr(option_defs_us[i].key, "puae_mapper_crop_toggle")
 -            || strstr(option_defs_us[i].key, "puae_mapper_turbo_fire_toggle")
 -            || strstr(option_defs_us[i].key, "puae_mapper_save_disk_toggle"))
 +         if (  strstr(option_defs_us[i].key, "puae2021_mapper_vkbd")
@@ -986,7 +986,7 @@ index e6a6ca0..0baf678 100644
 +            || strstr(option_defs_us[i].key, "puae2021_mapper_mouse_toggle")
 +            || strstr(option_defs_us[i].key, "puae2021_mapper_reset")
 +            || strstr(option_defs_us[i].key, "puae2021_mapper_aspect_ratio_toggle")
-+            || strstr(option_defs_us[i].key, "puae2021_mapper_crop_mode_toggle")
++            || strstr(option_defs_us[i].key, "puae2021_mapper_crop_toggle")
 +            || strstr(option_defs_us[i].key, "puae2021_mapper_turbo_fire_toggle")
 +            || strstr(option_defs_us[i].key, "puae2021_mapper_save_disk_toggle"))
              hotkey = 1;
@@ -1060,11 +1060,11 @@ index e6a6ca0..0baf678 100644
 -   option_display.key = "puae_video_aspect";
 +   option_display.key = "puae2021_video_aspect";
     environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+-   option_display.key = "puae_crop";
++   option_display.key = "puae2021_crop";
+    environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
 -   option_display.key = "puae_crop_mode";
 +   option_display.key = "puae2021_crop_mode";
-    environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
--   option_display.key = "puae_crop_mode_preset";
-+   option_display.key = "puae2021_crop_mode_preset";
     environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
 -   option_display.key = "puae_vertical_pos";
 +   option_display.key = "puae2021_vertical_pos";
@@ -1224,8 +1224,8 @@ index e6a6ca0..0baf678 100644
 -   option_display.key = "puae_mapper_aspect_ratio_toggle";
 +   option_display.key = "puae2021_mapper_aspect_ratio_toggle";
     environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
--   option_display.key = "puae_mapper_crop_mode_toggle";
-+   option_display.key = "puae2021_mapper_crop_mode_toggle";
+-   option_display.key = "puae_mapper_crop_toggle";
++   option_display.key = "puae2021_mapper_crop_toggle";
     environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
 -   option_display.key = "puae_mapper_turbo_fire_toggle";
 +   option_display.key = "puae2021_mapper_turbo_fire_toggle";
@@ -1630,22 +1630,22 @@ index e6a6ca0..0baf678 100644
        }
     }
  
+-   var.key = "puae_crop";
++   var.key = "puae2021_crop";
+    var.value = NULL;
+    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
+    {
+@@ -3849,7 +3849,7 @@ static void update_variables(void)
+       opt_crop_id = crop_id;
+    }
+ 
 -   var.key = "puae_crop_mode";
 +   var.key = "puae2021_crop_mode";
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3849,7 +3849,7 @@ static void update_variables(void)
-       opt_crop_mode_id = crop_mode_id;
-    }
- 
--   var.key = "puae_crop_mode_preset";
-+   var.key = "puae2021_crop_mode_preset";
-    var.value = NULL;
-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
-    {
 @@ -3862,7 +3862,7 @@ static void update_variables(void)
-       else if (!strcmp(var.value, "5:4"))        crop_mode_preset_id = 6;
+       else if (!strcmp(var.value, "5:4"))        crop_mode_id = CROP_MODE_5_4;
     }
  
 -   var.key = "puae_vertical_pos";
@@ -2111,12 +2111,12 @@ index e6a6ca0..0baf678 100644
        mapper_keys[RETRO_MAPPER_ASPECT_RATIO] = retro_keymap_id(var.value);
     }
  
--   var.key = "puae_mapper_crop_mode_toggle";
-+   var.key = "puae2021_mapper_crop_mode_toggle";
+-   var.key = "puae_mapper_crop_toggle";
++   var.key = "puae2021_mapper_crop_toggle";
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-       mapper_keys[RETRO_MAPPER_CROP_MODE] = retro_keymap_id(var.value);
+       mapper_keys[RETRO_MAPPER_CROP] = retro_keymap_id(var.value);
     }
  
 -   var.key = "puae_mapper_turbo_fire_toggle";
@@ -2133,7 +2133,7 @@ index e6a6ca0..0baf678 100644
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
 @@ -4434,7 +4434,7 @@ static void update_variables(void)
-    char legacy_zoom_preset_string[20] = {0};
+    char legacy_zoom_crop_string[20]   = {0};
     char legacy_zoom_toggle_string[20] = {0};
  
 -   var.key = "puae_zoom_mode";
@@ -2151,7 +2151,7 @@ index e6a6ca0..0baf678 100644
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
 @@ -4466,7 +4466,7 @@ static void update_variables(void)
-       strlcpy(legacy_zoom_preset_string, var.value, sizeof(legacy_zoom_preset_string));
+       strlcpy(legacy_zoom_crop_string, var.value, sizeof(legacy_zoom_crop_string));
     }
  
 -   var.key = "puae_mapper_zoom_mode_toggle";
@@ -2160,27 +2160,27 @@ index e6a6ca0..0baf678 100644
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
 @@ -4477,32 +4477,32 @@ static void update_variables(void)
-    if (legacy_zoom > CROP_MODE_NONE)
+    if (legacy_zoom > CROP_NONE)
     {
-       log_cb(RETRO_LOG_INFO, "Migrating 'zoom_mode' to 'crop_mode' = '%s'..\n", legacy_zoom_string);
--      set_variable("puae_crop_mode", legacy_zoom_string);
-+      set_variable("puae2021_crop_mode", legacy_zoom_string);
+       log_cb(RETRO_LOG_INFO, "Migrating 'zoom_mode' to 'crop'..\n");
+-      set_variable("puae_crop", legacy_zoom_string);
++      set_variable("puae2021_crop", legacy_zoom_string);
        request_update_variables = true;
     }
  
-    if (legacy_zoom_preset > 0)
+    if (legacy_zoom_crop > 0)
     {
-       log_cb(RETRO_LOG_INFO, "Migrating 'zoom_mode_crop' to 'crop_mode_preset' = '%s'..\n", legacy_zoom_preset_string);
--      set_variable("puae_crop_mode_preset", legacy_zoom_preset_string);
-+      set_variable("puae2021_crop_mode_preset", legacy_zoom_preset_string);
+       log_cb(RETRO_LOG_INFO, "Migrating 'zoom_mode_crop' to 'crop_mode'..\n");
+-      set_variable("puae_crop_mode", legacy_zoom_crop_string);
++      set_variable("puae2021_crop_mode", legacy_zoom_crop_string);
        request_update_variables = true;
     }
  
     if (legacy_zoom_toggle > 0)
     {
-       log_cb(RETRO_LOG_INFO, "Migrating 'mapper_zoom_mode_toggle' to 'mapper_crop_mode_toggle' = '%s'..\n", legacy_zoom_toggle_string);
--      set_variable("puae_mapper_crop_mode_toggle", legacy_zoom_toggle_string);
-+      set_variable("puae2021_mapper_crop_mode_toggle", legacy_zoom_toggle_string);
+       log_cb(RETRO_LOG_INFO, "Migrating 'mapper_zoom_mode_toggle' to 'mapper_crop_toggle'..\n");
+-      set_variable("puae_mapper_crop_toggle", legacy_zoom_toggle_string);
++      set_variable("puae2021_mapper_crop_toggle", legacy_zoom_toggle_string);
        request_update_variables = true;
     }
  
@@ -2188,7 +2188,7 @@ index e6a6ca0..0baf678 100644
 -      set_variable("puae_zoom_mode", "deprecated");
 +      set_variable("puae2021_zoom_mode", "deprecated");
  
-    if (strcmp(legacy_zoom_preset_string, "deprecated"))
+    if (strcmp(legacy_zoom_crop_string, "deprecated"))
 -      set_variable("puae_zoom_mode_crop", "deprecated");
 +      set_variable("puae2021_zoom_mode_crop", "deprecated");
  
@@ -2199,7 +2199,7 @@ index e6a6ca0..0baf678 100644
     updating_variables = false;
     if (request_update_variables)
 diff --git a/libretro/libretro-core.h b/libretro/libretro-core.h
-index dbd27f9..3263b49 100644
+index d2133af..d8fcdbb 100644
 --- a/libretro/libretro-core.h
 +++ b/libretro/libretro-core.h
 @@ -221,7 +221,7 @@ static retro_kickstarts uae_kickstarts[15] =
