@@ -12,11 +12,11 @@ ALEPHONE_LICENSE = GPLv3
 
 define ALEPHONE_BUILD_CMDS
 	cd $(@D) && \
-	PATH=$(BR_PATH) ./autogen.sh --disable-sdltest \
-	                             --with-sdl-prefix="$(STAGING_DIR)/usr" \
-	                             --with-boost="$(STAGING_DIR)/usr" \
-	                             --with-boost-libdir="$(STAGING_DIR)/usr/lib" \
-	                             --prefix=/usr && \
+	PATH=$(BR_PATH) ./configure --disable-sdltest \
+	                            --with-sdl-prefix="$(STAGING_DIR)/usr" \
+	                            --with-boost="$(STAGING_DIR)/usr" \
+	                            --with-boost-libdir="$(STAGING_DIR)/usr/lib" \
+	                            --prefix=/usr && \
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) \
 		CPP="$(TARGET_CPP)" CXX="$(TARGET_CXX) -lGLU" CC="$(TARGET_CC)" \
 		AS="$(TARGET_CC)" LD="$(TARGET_LD)" STRIP="$(TARGET_STRIP)" \
