@@ -1,12 +1,20 @@
 default:
   options:
     video_threaded: true
-    audio_latency: 96
-    retroarch.vrr_runloop_enable: false
-    retroarch.video_max_swapchain_images: 3
     videomode: max-1280x720
     hud_support: false
-
+amiga500:
+  emulator: libretro
+  core:     uae4arm
+amiga1200:
+  emulator: libretro
+  core:     uae4arm
+amigacd32:
+  emulator: libretro
+  core:     uae4arm
+amigacdtv:
+  emulator: libretro
+  core:     uae4arm
 nds:
   emulator: drastic
   core:     drastic

@@ -71,7 +71,7 @@ class LibretroGenerator(Generator):
                 lightgun = system.getOptBoolean('lightgun_map')
             else:
                 # Lightgun button mapping breaks lr-mame's inputs, disable if left on auto
-                if system.config['core'] in [ 'mame', 'mess', 'mamevirtual' ]:
+                if system.config['core'] in [ 'mame', 'mess', 'mamevirtual', 'same_cdi' ]:
                     lightgun = False
                 else:
                     lightgun = True
@@ -231,17 +231,17 @@ class LibretroGenerator(Generator):
 
 
         # Custom configs - per core
-        customCfg = "{}/{}.cfg".format(batoceraFiles.retroarchRoot, system.name)
+        customCfg = f"{batoceraFiles.retroarchRoot}/{system.name}.cfg"
         if os.path.isfile(customCfg):
             configToAppend.append(customCfg)
 
         # Custom configs - per game
-        customGameCfg = "{}/{}/{}.cfg".format(batoceraFiles.retroarchRoot, system.name, romName)
+        customGameCfg = f"{batoceraFiles.retroarchRoot}/{system.name}/{romName}.cfg"
         if os.path.isfile(customGameCfg):
             configToAppend.append(customGameCfg)
 
         # Overlay management
-        overlayFile = "{}/{}/{}.cfg".format(batoceraFiles.OVERLAYS, system.name, romName)
+        overlayFile = f"{batoceraFiles.OVERLAYS}/{system.name}/{romName}.cfg"
         if os.path.isfile(overlayFile):
             configToAppend.append(overlayFile)
 
@@ -276,9 +276,13 @@ class LibretroGenerator(Generator):
             rom = os.path.dirname(rom) + '/' + romName[0:-8]
 
         # Use command line instead of ROM file for MAME variants
-        if system.config['core'] in [ 'mame', 'mess', 'mamevirtual' ]:
+        if system.config['core'] in [ 'mame', 'mess', 'mamevirtual', 'same_cdi' ]:
             dontAppendROM = True
-            commandArray.append("/var/run/lr-mame.cmd")
+            if system.config['core'] in [ 'mame', 'mess', 'mamevirtual' ]:
+                corePath = 'lr-' + system.config['core']
+            else:
+                corePath = system.config['core']
+            commandArray.append("/var/run/{}.cmd".format(corePath))
 
         if dontAppendROM == False:
             commandArray.append(rom)

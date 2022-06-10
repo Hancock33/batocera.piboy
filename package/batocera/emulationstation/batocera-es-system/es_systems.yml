@@ -109,9 +109,9 @@ amiga500:
   manufacturer: Commodore
   release: 1987
   hardware: computer
-  extensions: [adf, uae, ipf, dms, dmz, adz, lha, hdf, exe, m3u, zip]
-  platform:   amiga
-  group:      amiga
+  extensions:   [adf, uae, ipf, dms, dmz, adz, lha, hdf, exe, m3u, zip]
+  platform:     amiga
+  group:        amiga
   emulators:
     fsuae:
       A500:     { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
@@ -126,9 +126,9 @@ amiga500:
       puae:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
       puae2021: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE2021] }
       uae4arm:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM] }
-  comment_en: |
+  comment_en:  |
     For more info: https://wiki.batocera.org/systems:amiga500
-  comment_fr: |
+  comment_fr:  |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:amiga500
 
 amiga1200:
@@ -136,9 +136,9 @@ amiga1200:
   manufacturer: Commodore
   release: 1992
   hardware: computer
-  extensions: [adf, uae, ipf, dms, dmz, adz, lha, hdf, exe, m3u, zip]
-  platform:   amiga
-  group:      amiga
+  extensions:   [adf, uae, ipf, dms, dmz, adz, lha, hdf, exe, m3u, zip]
+  platform:     amiga
+  group:        amiga
   emulators:
     fsuae:
       A1200:    { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
@@ -150,10 +150,10 @@ amiga1200:
       puae:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
       puae2021: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE2021] }
       uae4arm:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM] }
-  comment_en: |
-    For more info: https://wiki.batocera.org/systems:amiga500
-  comment_fr: |
-    Trouvez la documentation ici: https://wiki.batocera.org/systems:amiga500
+  comment_en:  |
+    For more info: https://wiki.batocera.org/systems:amiga1200
+  comment_fr:  |
+    Trouvez la documentation ici: https://wiki.batocera.org/systems:amiga1200
 
 amigacd32:
   name:       Amiga CD32
@@ -163,11 +163,11 @@ amigacd32:
   extensions: [bin, cue, iso, chd, lha]
   platform:   amiga
   group:      amiga
-  emulators:
+ emulators:
     fsuae:
       CD32:     { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
     amiberry:
-      CD32:     { requireAnyOf: [BR2_PACKAGE_AMIBERRY]      }
+      CD32:     { requireAnyOf: [BR2_PACKAGE_AMIBERRY], incompatible_extensions: [chd] }
     libretro:
       puae:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
       puae2021: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE2021] }
@@ -494,6 +494,7 @@ segacd:
   release: 1991
   hardware: console
   extensions: [cue, iso, chd, m3u]
+  platform:   segacd
   emulators:
     libretro:
       genesisplusgx: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX] }
@@ -886,6 +887,7 @@ atari800:
   release: 1979
   hardware: computer
   extensions: [rom, xfd, atr, atx, cdm, cas, car, bin, a52, xex, zip, 7z]
+  group:      atari8bit
   emulators:
     libretro:
       atari800: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ATARI800] }
@@ -896,6 +898,7 @@ xegs:
   release: 1987
   hardware: computer
   extensions: [atr, dsk, xfd, bin, rom, car, zip, 7z]
+  group:      atari8bit
   emulators:
     libretro:
       mess: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -1238,12 +1241,12 @@ msx1:
   comment_en: |
     ## BIOS ##
 
-    - BlueMSX (DEFAULT) :
-    You must download the BlueMSX standalone version, available to this adresse: http://bluemsx.msxblue.com/rel_download/blueMSXv282full.zip
-    Then extract the "Databases" and "Machines" folders and add them to the bios folder.
+    - BlueMSX (DEFAULT)
+    Download the BlueMSX standalone version, available at http://bluemsx.msxblue.com/rel_download/blueMSXv282full.zip
+    then extract the "Databases" and "Machines" folders and add them to the /userdata/bios folder.
 
-    - FMSX :
-    You must have these following files, available with fmsx distribution, in the bios folder:
+    - FMSX
+    Requires the following files (available with fmsx distribution), in the /userdata/bios folder.
     CARTS.SHA
     CYRILLIC.FNT
     DISK.ROM
@@ -1426,12 +1429,12 @@ msxturbor:
   comment_en: |
     ## BIOS ##
 
-    - BlueMSX (DEFAULT) :
-    You must download the BlueMSX standalone version, available to this adresse: http://bluemsx.msxblue.com/rel_download/blueMSXv282full.zip
-    Then extract the "Databases" and "Machines" folders and add them to the bios folder.
+    - BlueMSX (DEFAULT)
+    Download the BlueMSX standalone version, available at http://bluemsx.msxblue.com/rel_download/blueMSXv282full.zip
+    then extract the "Databases" and "Machines" folders and add them to the /userdata/bios folder.
 
-    - FMSX :
-    You must have these following files, available with fmsx distribution, in the bios folder:
+    - FMSX
+    Requires the following files (available with fmsx distribution), in the /userdata/bios folder.
     CARTS.SHA
     CYRILLIC.FNT
     DISK.ROM
@@ -2410,7 +2413,7 @@ cdi:
   extensions: [chd, cue, toc, nrg, gdi, iso, cdr]
   emulators:
     libretro:
-      mess: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+      same_cdi: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAME_CDI], incompatible_extensions: [cue, toc, nrg, gdi, cdr] }
     mame:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |

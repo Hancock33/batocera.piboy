@@ -22,10 +22,15 @@ def generateMAMEConfigs(playersControllers, system, rom):
     romDrivername = os.path.splitext(romBasename)[0]
     specialController = 'none'
 
+    if system.config['core'] in [ 'mame', 'mess', 'mamevirtual' ]:
+        corePath = 'lr-' + system.config['core']
+    else:
+        corePath = system.config['core']
+
     if system.config['core'] == 'mame':
         # Set up command line for MAME
         if system.getOptBoolean("customcfg"):
-            cfgPath = "/userdata/system/configs/lr-mame/custom/"
+            cfgPath = "/userdata/system/configs/{}/custom/".format(corePath)
         else:
             cfgPath = "/userdata/saves/mame/mame/cfg/"
         if not os.path.exists(cfgPath):
@@ -76,7 +81,7 @@ def generateMAMEConfigs(playersControllers, system, rom):
         if messSysName[messMode] == "":
             # Command line for non-arcade, non-system ROMs (lcdgames, plugnplay)
             if system.getOptBoolean("customcfg"):
-                cfgPath = "/userdata/system/configs/lr-mame/custom/"
+                cfgPath = "/userdata/system/configs/{}/custom/".format(corePath)
             else:
                 cfgPath = "/userdata/saves/mame/mame/cfg/"
             if not os.path.exists(cfgPath):
@@ -206,11 +211,11 @@ def generateMAMEConfigs(playersControllers, system, rom):
 
             # MESS config folder
             if system.getOptBoolean("customcfg"):
-                cfgPath = "/userdata/system/configs/lr-mame/" + messSysName[messMode] + "/custom/"
+                cfgPath = "/userdata/system/configs/{}/{}/custom/".format(corePath, messSysName[messMode])
             else:
-                cfgPath = "/userdata/saves/mame/mame/cfg/" + messSysName[messMode] + "/"
+                cfgPath = "/userdata/saves/mame/mame/cfg/{}/".format(messSysName[messMode])
             if system.getOptBoolean("pergamecfg"):
-                cfgPath = "/userdata/system/configs/lr-mame/" + messSysName[messMode] + "/" + romBasename + "/"
+                cfgPath = "/userdata/system/configs/{}/{}/{}/".format(corePath, messSysName[messMode], romBasename)
             if not os.path.exists(cfgPath):
                 os.makedirs(cfgPath)
             commandLine += [ '-cfg_directory', cfgPath ]
@@ -276,11 +281,12 @@ def generateMAMEConfigs(playersControllers, system, rom):
 
     # Art paths - lr-mame displays artwork in the game area and not in the bezel area, so using regular MAME artwork + shaders is not recommended.
     # By default, will ignore standalone MAME's art paths.
-    if not (system.isOptSet("sharemameart") and not system.getOptBoolean('sharemameart')):
-        artPath = "/var/run/mame_artwork/;/usr/bin/mame/artwork/;/userdata/bios/lr-mame/artwork/;/userdata/bios/mame/artwork/;/userdata/decorations/"
-    else:
-        artPath = "/var/run/mame_artwork/;/usr/bin/mame/artwork/;/userdata/bios/lr-mame/artwork/"
-    commandLine += [ '-artpath', artPath ]
+    if system.config['core'] != 'same_cdi':
+        if not (system.isOptSet("sharemameart") and not system.getOptBoolean('sharemameart')):
+            artPath = "/var/run/mame_artwork/;/usr/bin/mame/artwork/;/userdata/bios/lr-mame/artwork/;/userdata/bios/mame/artwork/;/userdata/decorations/"
+        else:
+            artPath = "/var/run/mame_artwork/;/usr/bin/mame/artwork/;/userdata/bios/lr-mame/artwork/"
+        commandLine += [ '-artpath', artPath ]
 
     # Artwork crop - default to On for lr-mame
     # Exceptions for PDP-1 (status lights) and VGM Player (indicators)
@@ -299,7 +305,7 @@ def generateMAMEConfigs(playersControllers, system, rom):
     commandLine += [ "-samplepath", "/userdata/bios/mame/samples/" ]
 
     # Write command line file
-    cmdFilename = "/var/run/lr-mame.cmd"
+    cmdFilename = "/var/run/{}.cmd".format(corePath)
     if os.path.exists(cmdFilename):
         os.remove(cmdFilename)
     cmdFile = open(cmdFilename, "w")
@@ -363,7 +369,7 @@ def getMameControlScheme(system, romBasename):
         neogeoList = set(open(mameNeogeo).read().split())
         twinstickList = set(open(mameTwinstick).read().split())
         qbertList = set(open(mameRotatedstick).read().split())
-
+            
         romName = os.path.splitext(romBasename)[0]
         if romName in capcomList:
             if controllerType in [ "auto", "snes" ]:
@@ -408,8 +414,8 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
         except:
             pass # reinit the file
 
-    if system.isOptSet('customCfg'):
-        customCfg = system.getOptBoolean('customCfg')
+    if system.isOptSet('customcfg'):
+        customCfg = system.getOptBoolean('customcfg')
     else:
         customCfg = False
     # Don't overwrite if using custom configs
@@ -424,7 +430,7 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
         dpadMode = system['altdpad']
     else:
         dpadMode = 0
-
+    
     # Common controls, default lr-mame mapping
     # lr-mame still uses the actual controller buttons internally, it just converts to Retropad in the UI
     mappings = {
@@ -549,7 +555,7 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
         mappings.update({"BUTTON6": "x"})
         mappings.update({"BUTTON7": "pagedown"})
         mappings.update({"BUTTON8": "pageup"})
-
+    
     xml_mameconfig = getRoot(config, "mameconfig")
     xml_mameconfig.setAttribute("version", "10") # otherwise, config of pad won't work at first run (batocera v33)
     xml_system = getSection(config, xml_mameconfig, "system")
@@ -558,7 +564,7 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
     removeSection(config, xml_system, "input")
     xml_input = config.createElement("input")
     xml_system.appendChild(xml_input)
-
+    
     # Open or create alternate config file for systems with special controllers/settings
     # If the system/game is set to per game config, don't try to open/reset an existing file, only write if it's blank or going to the shared cfg folder
     specialControlList = [ "cdimono1", "apfm1000", "astrocde", "adam", "arcadia", "gamecom", "tutor", "crvision", "bbcb", "bbcm", "bbcm512", "bbcmc", "xegs", "socrates", "vgmplay", "pdp1", "vc4000", "fmtmarty", "gp32" ]
@@ -570,7 +576,7 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
                 config_alt = minidom.parse(configFile_alt)
             except:
                 pass # reinit the file
-
+        
         perGameCfg = system.getOptBoolean('pergamecfg')
         if os.path.exists(configFile_alt) and (customCfg or perGameCfg):
             overwriteSystem = False
@@ -580,11 +586,11 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
         xml_mameconfig_alt = getRoot(config_alt, "mameconfig")
         xml_system_alt = getSection(config_alt, xml_mameconfig_alt, "system")
         xml_system_alt.setAttribute("name", messSysName)
-
+        
         removeSection(config_alt, xml_system_alt, "input")
         xml_input_alt = config_alt.createElement("input")
         xml_system_alt.appendChild(xml_input_alt)
-
+    
     nplayer = 1
     maxplayers = len(playersControllers)
     for playercontroller, pad in sorted(playersControllers.items()):
@@ -594,7 +600,7 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
             mappings_use["JOYSTICK_DOWN"] = "down"
             mappings_use["JOYSTICK_LEFT"] = "left"
             mappings_use["JOYSTICK_RIGHT"] = "right"
-
+            
         for mapping in mappings_use:
             if mappings_use[mapping] in pad.inputs:
                 if mapping in [ 'START', 'COIN' ]:
@@ -625,17 +631,17 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
             # Older MAME
             xml_input_alt.appendChild(generateAnalogPortElement(config_alt, ':slave_hle:MOUSEX', nplayer, pad.index, "P1_MOUSE_X", mappings_use["JOYSTICK_RIGHT"], mappings_use["JOYSTICK_LEFT"], pad.inputs[mappings_use["JOYSTICK_LEFT"]], pad.inputs[mappings_use["JOYSTICK_LEFT"]], False, dpadMode, "1023", "0", "10", "XAXIS"))
             xml_input_alt.appendChild(generateAnalogPortElement(config_alt, ':slave_hle:MOUSEY', nplayer, pad.index, "P1_MOUSE_Y", mappings_use["JOYSTICK_DOWN"], mappings_use["JOYSTICK_UP"], pad.inputs[mappings_use["JOYSTICK_UP"]], pad.inputs[mappings_use["JOYSTICK_UP"]],False, dpadMode, "1023", "0", "10", "YAXIS"))
-
+            
             #Hide LCD display
             removeSection(config_alt, xml_system_alt, "video")
             xml_video_alt = config_alt.createElement("video")
             xml_system_alt.appendChild(xml_video_alt)
-
+            
             xml_screencfg_alt = config_alt.createElement("target")
             xml_screencfg_alt.setAttribute("index", "0")
             xml_screencfg_alt.setAttribute("view", "Main Screen Standard (4:3)")
             xml_video_alt.appendChild(xml_screencfg_alt)
-
+            
         # Special case for APFM1000 - uses numpad controllers
         if nplayer <= 2 and messSysName == "apfm1000":
             if nplayer == 1:
@@ -911,7 +917,7 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
             xml_input_alt.appendChild(generateSpecialPortElement(config_alt, ':IN1', nplayer, pad.index, "P1_START", mappings_use["START"], pad.inputs[mappings_use["START"]], False, dpadMode, "64", "64"))              # Start
 
         nplayer = nplayer + 1
-
+        
         # save the config file
         #mameXml = open(configFile, "w")
         # TODO: python 3 - workawround to encode files in utf-8
@@ -919,7 +925,7 @@ def generateMAMEPadConfig(cfgPath, playersControllers, system, messSysName, romB
             mameXml = codecs.open(configFile, "w", "utf-8")
             dom_string = os.linesep.join([s for s in config.toprettyxml().splitlines() if s.strip()]) # remove ugly empty lines while minicom adds them...
             mameXml.write(dom_string)
-
+        
         # Write alt config (if used, custom config is turned off or file doesn't exist yet)
         if messSysName in specialControlList and overwriteSystem:
             mameXml_alt = codecs.open(configFile_alt, "w", "utf-8")
@@ -940,7 +946,7 @@ def reverseMapping(key):
 def generatePortElement(config, nplayer, padindex, mapping, key, input, reversed, dpadMode, altButtons):
     # Generic input
     xml_port = config.createElement("port")
-    xml_port.setAttribute("type", "P{}_{}".format(nplayer, mapping))
+    xml_port.setAttribute("type", f"P{nplayer}_{mapping}")
     xml_newseq = config.createElement("newseq")
     xml_newseq.setAttribute("type", "standard")
     xml_port.appendChild(xml_newseq)
@@ -972,7 +978,7 @@ def generateComboPortElement(config, tag, padindex, mapping, kbkey, key, input, 
     xml_newseq = config.createElement("newseq")
     xml_newseq.setAttribute("type", "standard")
     xml_port.appendChild(xml_newseq)
-    value = config.createTextNode("KEYCODE_{} OR ".format(kbkey) + input2definition(key, input, padindex + 1, reversed, dpadMode, 0))
+    value = config.createTextNode(f"KEYCODE_{kbkey} OR " + input2definition(key, input, padindex + 1, reversed, dpadMode, 0))
     xml_newseq.appendChild(value)
     return xml_port
 
@@ -1007,87 +1013,87 @@ def generateAnalogPortElement(config, tag, nplayer, padindex, mapping, inckey, d
 def input2definition(key, input, joycode, reversed, dpadMode, altButtons):
     if input.type == "button":
         if key == "start":
-            return "JOYCODE_{}_START".format(joycode)
+            return f"JOYCODE_{joycode}_START"
         elif key == "select":
-            return "JOYCODE_{}_SELECT".format(joycode)
+            return f"JOYCODE_{joycode}_SELECT"
         else:
-            return "JOYCODE_{}_BUTTON{}".format(joycode, int(input.id)+1)
+            return f"JOYCODE_{joycode}_BUTTON{int(input.id)+1}"
     elif input.type == "hat":
         if input.value == "1":
-            return "JOYCODE_{}_HAT1UP".format(joycode)
+            return f"JOYCODE_{joycode}_HAT1UP"
         elif input.value == "2":
-            return "JOYCODE_{}_HAT1RIGHT".format(joycode)
+            return f"JOYCODE_{joycode}_HAT1RIGHT"
         elif input.value == "4":
-            return "JOYCODE_{}_HAT1DOWN".format(joycode)
+            return f"JOYCODE_{joycode}_HAT1DOWN"
         elif input.value == "8":
-            return "JOYCODE_{}_HAT1LEFT".format(joycode)
+            return f"JOYCODE_{joycode}_HAT1LEFT"
     elif input.type == "axis":
         if altButtons == "qbert": # Q*Bert Joystick
             if key == "joystick1up" or key == "up":
                 if dpadMode == 0:
-                    return "JOYCODE_{}_YAXIS_UP_SWITCH JOYCODE_{}_XAXIS_RIGHT_SWITCH OR JOYCODE_{}_HAT1UP JOYCODE_{}_HAT1RIGHT".format(joycode, joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_YAXIS_UP_SWITCH JOYCODE_{joycode}_XAXIS_RIGHT_SWITCH OR JOYCODE_{joycode}_HAT1UP JOYCODE_{joycode}_HAT1RIGHT"
                 elif dpadMode == 1:
-                    return "JOYCODE_{}_YAXIS_UP_SWITCH JOYCODE_{}_XAXIS_RIGHT_SWITCH OR JOYCODE_{}_HAT1UP JOYCODE_{}_HAT1RIGHT OR JOYCODE_{}_BUTTON13 JOYCODE_{}_BUTTON16".format(joycode, joycode, joycode, joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_YAXIS_UP_SWITCH JOYCODE_{joycode}_XAXIS_RIGHT_SWITCH OR JOYCODE_{joycode}_HAT1UP JOYCODE_{joycode}_HAT1RIGHT OR JOYCODE_{joycode}_BUTTON13 JOYCODE_{joycode}_BUTTON16"
                 else:
-                    return "JOYCODE_{}_YAXIS_UP_SWITCH JOYCODE_{}_XAXIS_RIGHT_SWITCH OR JOYCODE_{}_HAT1UP JOYCODE_{}_HAT1RIGHT OR JOYCODE_{}_BUTTON13 JOYCODE_{}_BUTTON12".format(joycode, joycode, joycode, joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_YAXIS_UP_SWITCH JOYCODE_{joycode}_XAXIS_RIGHT_SWITCH OR JOYCODE_{joycode}_HAT1UP JOYCODE_{joycode}_HAT1RIGHT OR JOYCODE_{joycode}_BUTTON13 JOYCODE_{joycode}_BUTTON12"
             if key == "joystick1down" or key == "down":
                 if dpadMode == 0:
-                    return "JOYCODE_{}_YAXIS_DOWN_SWITCH JOYCODE_{}_XAXIS_LEFT_SWITCH OR JOYCODE_{}_HAT1DOWN JOYCODE_{}_HAT1LEFT".format(joycode, joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_YAXIS_DOWN_SWITCH JOYCODE_{joycode}_XAXIS_LEFT_SWITCH OR JOYCODE_{joycode}_HAT1DOWN JOYCODE_{joycode}_HAT1LEFT"
                 elif dpadMode == 1:
-                    return "JOYCODE_{}_YAXIS_DOWN_SWITCH JOYCODE_{}_XAXIS_LEFT_SWITCH OR JOYCODE_{}_HAT1DOWN JOYCODE_{}_HAT1LEFT OR JOYCODE_{}_BUTTON14 JOYCODE_{}_BUTTON15".format(joycode, joycode, joycode, joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_YAXIS_DOWN_SWITCH JOYCODE_{joycode}_XAXIS_LEFT_SWITCH OR JOYCODE_{joycode}_HAT1DOWN JOYCODE_{joycode}_HAT1LEFT OR JOYCODE_{joycode}_BUTTON14 JOYCODE_{joycode}_BUTTON15"
                 else:
-                    return "JOYCODE_{}_YAXIS_DOWN_SWITCH JOYCODE_{}_XAXIS_LEFT_SWITCH OR JOYCODE_{}_HAT1DOWN JOYCODE_{}_HAT1LEFT OR JOYCODE_{}_BUTTON14 JOYCODE_{}_BUTTON11".format(joycode, joycode, joycode, joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_YAXIS_DOWN_SWITCH JOYCODE_{joycode}_XAXIS_LEFT_SWITCH OR JOYCODE_{joycode}_HAT1DOWN JOYCODE_{joycode}_HAT1LEFT OR JOYCODE_{joycode}_BUTTON14 JOYCODE_{joycode}_BUTTON11"
             if key == "joystick1left" or key == "left":
                 if dpadMode == 0:
-                    return "JOYCODE_{}_XAXIS_LEFT_SWITCH JOYCODE_{}_YAXIS_UP_SWITCH OR JOYCODE_{}_HAT1LEFT JOYCODE_{}_HAT1UP".format(joycode, joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_XAXIS_LEFT_SWITCH JOYCODE_{joycode}_YAXIS_UP_SWITCH OR JOYCODE_{joycode}_HAT1LEFT JOYCODE_{joycode}_HAT1UP"
                 elif dpadMode == 1:
-                    return "JOYCODE_{}_XAXIS_LEFT_SWITCH JOYCODE_{}_YAXIS_UP_SWITCH OR JOYCODE_{}_HAT1LEFT JOYCODE_{}_HAT1UP OR JOYCODE_{}_BUTTON15 JOYCODE_{}_BUTTON13".format(joycode, joycode, joycode, joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_XAXIS_LEFT_SWITCH JOYCODE_{joycode}_YAXIS_UP_SWITCH OR JOYCODE_{joycode}_HAT1LEFT JOYCODE_{joycode}_HAT1UP OR JOYCODE_{joycode}_BUTTON15 JOYCODE_{joycode}_BUTTON13"
                 else:
-                    return "JOYCODE_{}_XAXIS_LEFT_SWITCH JOYCODE_{}_YAXIS_UP_SWITCH OR JOYCODE_{}_HAT1LEFT JOYCODE_{}_HAT1UP OR JOYCODE_{}_BUTTON11 JOYCODE_{}_BUTTON13".format(joycode, joycode, joycode, joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_XAXIS_LEFT_SWITCH JOYCODE_{joycode}_YAXIS_UP_SWITCH OR JOYCODE_{joycode}_HAT1LEFT JOYCODE_{joycode}_HAT1UP OR JOYCODE_{joycode}_BUTTON11 JOYCODE_{joycode}_BUTTON13"
             if key == "joystick1right" or key == "right":
                 if dpadMode == 0:
-                    return "JOYCODE_{}_XAXIS_RIGHT_SWITCH JOYCODE_{}_YAXIS_DOWN_SWITCH OR JOYCODE_{}_HAT1RIGHT JOYCODE_{}_HAT1DOWN".format(joycode, joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_XAXIS_RIGHT_SWITCH JOYCODE_{joycode}_YAXIS_DOWN_SWITCH OR JOYCODE_{joycode}_HAT1RIGHT JOYCODE_{joycode}_HAT1DOWN"
                 elif dpadMode == 1:
-                    return "JOYCODE_{}_XAXIS_RIGHT_SWITCH JOYCODE_{}_YAXIS_DOWN_SWITCH OR JOYCODE_{}_HAT1RIGHT JOYCODE_{}_HAT1DOWN OR JOYCODE_{}_BUTTON16 JOYCODE_{}_BUTTON14".format(joycode, joycode, joycode, joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_XAXIS_RIGHT_SWITCH JOYCODE_{joycode}_YAXIS_DOWN_SWITCH OR JOYCODE_{joycode}_HAT1RIGHT JOYCODE_{joycode}_HAT1DOWN OR JOYCODE_{joycode}_BUTTON16 JOYCODE_{joycode}_BUTTON14"
                 else:
-                    return "JOYCODE_{}_XAXIS_RIGHT_SWITCH JOYCODE_{}_YAXIS_DOWN_SWITCH OR JOYCODE_{}_HAT1RIGHT JOYCODE_{}_HAT1DOWN OR JOYCODE_{}_BUTTON12 JOYCODE_{}_BUTTON14".format(joycode, joycode, joycode, joycode, joycode, joycode)
-        else:
+                    return f"JOYCODE_{joycode}_XAXIS_RIGHT_SWITCH JOYCODE_{joycode}_YAXIS_DOWN_SWITCH OR JOYCODE_{joycode}_HAT1RIGHT JOYCODE_{joycode}_HAT1DOWN OR JOYCODE_{joycode}_BUTTON12 JOYCODE_{joycode}_BUTTON14"
+        else:        
             if key == "joystick1up" or key == "up":
                 if dpadMode == 0:
-                    return "JOYCODE_{}_YAXIS_UP_SWITCH OR JOYCODE_{}_HAT1UP".format(joycode, joycode)
+                    return f"JOYCODE_{joycode}_YAXIS_UP_SWITCH OR JOYCODE_{joycode}_HAT1UP"
                 else:
-                    return "JOYCODE_{}_YAXIS_UP_SWITCH OR JOYCODE_{}_HAT1UP OR JOYCODE_{}_BUTTON13".format(joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_YAXIS_UP_SWITCH OR JOYCODE_{joycode}_HAT1UP OR JOYCODE_{joycode}_BUTTON13"
             if key == "joystick1down" or key == "down":
                 if dpadMode == 0:
-                    return "JOYCODE_{}_YAXIS_DOWN_SWITCH OR JOYCODE_{}_HAT1DOWN".format(joycode, joycode)
+                    return f"JOYCODE_{joycode}_YAXIS_DOWN_SWITCH OR JOYCODE_{joycode}_HAT1DOWN"
                 else:
-                    return "JOYCODE_{}_YAXIS_DOWN_SWITCH OR JOYCODE_{}_HAT1DOWN OR JOYCODE_{}_BUTTON14".format(joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_YAXIS_DOWN_SWITCH OR JOYCODE_{joycode}_HAT1DOWN OR JOYCODE_{joycode}_BUTTON14"
             if key == "joystick1left" or key == "left":
                 if dpadMode == 0:
-                    return "JOYCODE_{}_XAXIS_LEFT_SWITCH OR JOYCODE_{}_HAT1LEFT".format(joycode, joycode)
+                    return f"JOYCODE_{joycode}_XAXIS_LEFT_SWITCH OR JOYCODE_{joycode}_HAT1LEFT"
                 elif dpadMode == 1:
-                    return "JOYCODE_{}_XAXIS_LEFT_SWITCH OR JOYCODE_{}_HAT1LEFT OR JOYCODE_{}_BUTTON15".format(joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_XAXIS_LEFT_SWITCH OR JOYCODE_{joycode}_HAT1LEFT OR JOYCODE_{joycode}_BUTTON15"
                 else:
-                    return "JOYCODE_{}_XAXIS_LEFT_SWITCH OR JOYCODE_{}_HAT1LEFT OR JOYCODE_{}_BUTTON11".format(joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_XAXIS_LEFT_SWITCH OR JOYCODE_{joycode}_HAT1LEFT OR JOYCODE_{joycode}_BUTTON11"
             if key == "joystick1right" or key == "right":
                 if dpadMode == 0:
-                    return "JOYCODE_{}_XAXIS_RIGHT_SWITCH OR JOYCODE_{}_HAT1RIGHT".format(joycode, joycode)
+                    return f"JOYCODE_{joycode}_XAXIS_RIGHT_SWITCH OR JOYCODE_{joycode}_HAT1RIGHT"
                 elif dpadMode == 1:
-                    return "JOYCODE_{}_XAXIS_RIGHT_SWITCH OR JOYCODE_{}_HAT1RIGHT OR JOYCODE_{}_BUTTON16".format(joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_XAXIS_RIGHT_SWITCH OR JOYCODE_{joycode}_HAT1RIGHT OR JOYCODE_{joycode}_BUTTON16"
                 else:
-                    return "JOYCODE_{}_XAXIS_RIGHT_SWITCH OR JOYCODE_{}_HAT1RIGHT OR JOYCODE_{}_BUTTON12".format(joycode, joycode, joycode)
+                    return f"JOYCODE_{joycode}_XAXIS_RIGHT_SWITCH OR JOYCODE_{joycode}_HAT1RIGHT OR JOYCODE_{joycode}_BUTTON12"
         if key == "joystick2up":
-            return "JOYCODE_{}_RYAXIS_NEG_SWITCH OR JOYCODE_{}_BUTTON4".format(joycode, joycode)
+            return f"JOYCODE_{joycode}_RYAXIS_NEG_SWITCH OR JOYCODE_{joycode}_BUTTON4"
         if key == "joystick2down":
-            return "JOYCODE_{}_RYAXIS_POS_SWITCH OR JOYCODE_{}_BUTTON1".format(joycode, joycode)
+            return f"JOYCODE_{joycode}_RYAXIS_POS_SWITCH OR JOYCODE_{joycode}_BUTTON1"
         if key == "joystick2left":
-            return "JOYCODE_{}_RXAXIS_NEG_SWITCH OR JOYCODE_{}_BUTTON3".format(joycode, joycode)
+            return f"JOYCODE_{joycode}_RXAXIS_NEG_SWITCH OR JOYCODE_{joycode}_BUTTON3"
         if key == "joystick2right":
-            return "JOYCODE_{}_RXAXIS_POS_SWITCH OR JOYCODE_{}_BUTTON2".format(joycode, joycode)
+            return f"JOYCODE_{joycode}_RXAXIS_POS_SWITCH OR JOYCODE_{joycode}_BUTTON2"
         if int(input.id) == 2: # XInput L2
-            return "JOYCODE_{}_ZAXIS_POS_SWITCH".format(joycode)
+            return f"JOYCODE_{joycode}_ZAXIS_POS_SWITCH"
         if int(input.id) == 5: # XInput R2
-            return "JOYCODE_{}_RZAXIS_POS_SWITCH".format(joycode)
+            return f"JOYCODE_{joycode}_RZAXIS_POS_SWITCH"
     return "unknown"
 
 def getRoot(config, name):
