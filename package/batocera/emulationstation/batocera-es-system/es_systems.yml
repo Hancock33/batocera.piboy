@@ -163,7 +163,7 @@ amigacd32:
   extensions: [bin, cue, iso, chd, lha]
   platform:   amiga
   group:      amiga
- emulators:
+  emulators:
     fsuae:
       CD32:     { requireAnyOf: [BR2_PACKAGE_FSUAE]         }
     amiberry:

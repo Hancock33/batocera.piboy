@@ -13,6 +13,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.0.1\n"
 
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Force the emulator to run at this resolution."
+msgstr ""
+
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
 msgid "VIDEO SETTINGS"
@@ -22,6 +27,13 @@ msgstr ""
 msgctxt "game_options"
 msgid "VIDEO MODE"
 msgstr "VIDEO MODUS"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Force the game to render in this aspect ratio. Decorations override this "
+"setting."
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -55,12 +67,7 @@ msgstr "Aangepast"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "Gameplay Rewinding"
-msgstr ""
-
-#. TRANSLATION: shared, shared, awgl
-msgctxt "game_options"
-msgid "GAME PLAY"
+msgid "Store past states to rewind to in realtime, if the core supports it."
 msgstr ""
 
 #. TRANSLATION: shared, duckstation
@@ -80,17 +87,17 @@ msgstr "Uit"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "Automatically Save/Load Game Play on Exit/Running"
+msgid "Load latest save state on game launch and save state when exiting game."
 msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "AUTO SAVE/LOAD"
+msgid "AUTO SAVE/LOAD ON GAME LAUNCH"
 msgstr ""
 
-#. TRANSLATION: shared, shared, shared, awgl, gzdoom, ...
+#. TRANSLATION: shared, shared, shared
 msgctxt "game_options"
-msgid "GAME RENDERING"
+msgid "GAME RENDERING & SHADERS"
 msgstr ""
 
 #. TRANSLATION: shared
@@ -180,22 +187,22 @@ msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "NORTH WEST"
+msgid "TOP LEFT (NW)"
 msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "NORTH EAST"
+msgid "TOP RIGHT (NE)"
 msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "SOUTH EAST"
+msgid "BOTTOM RIGHT (SE)"
 msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "SOUTH WEST"
+msgid "BOTTOM LEFT (SW)"
 msgstr ""
 
 #. TRANSLATION: shared
@@ -211,6 +218,13 @@ msgstr ""
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "RESIZE TATTOO"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
+"libretro cores."
 msgstr ""
 
 #. TRANSLATION: shared, shared, shared, shared
@@ -594,14 +608,14 @@ msgctxt "game_options"
 msgid "SUPER GAME BOY 2"
 msgstr "SUPER GAME BOY 2"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, libretro/mame, libretro/mess, ...
+#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, libretro/mame, libretro/same_cdi, ...
 msgctxt "game_options"
 msgid "Enhancement. Reduces system slowdown. Causes issues in some games."
 msgstr ""
 "Uitbreiding. Verminderd systeem vertraging. Zorgt voor problemen in sommige "
 "spellen."
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, libretro/mame, libretro/mess, ...
+#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, libretro/mame, libretro/same_cdi, ...
 msgctxt "game_options"
 msgid "OVERCLOCK (UNSTABLE)"
 msgstr "OVERCLOCK (ONSTABIEL)"
@@ -2414,40 +2428,45 @@ msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, libretro/mess, libretro/mamevirtual, mame
+#. TRANSLATION: libretro/mame, libretro/same_cdi, libretro/mess, libretro/mamevirtual, mame
 msgctxt "game_options"
 msgid "Set system-wide controls via MAME menu"
 msgstr "System-wide controls instellen via Mame menu"
 
-#. TRANSLATION: libretro/mame, libretro/mess, libretro/mamevirtual, mame
+#. TRANSLATION: libretro/mame, libretro/same_cdi, libretro/mess, libretro/mamevirtual, mame
 msgctxt "game_options"
 msgid "CUSTOM MAME CONFIG"
 msgstr "AANGEPASTE MAME CONFIG"
 
-#. TRANSLATION: libretro/mame, libretro/mess, libretro/mamevirtual, mame
+#. TRANSLATION: libretro/mame, libretro/same_cdi, libretro/mess, libretro/mamevirtual, mame
 msgctxt "game_options"
 msgid "If the D-Pad is oriented incorrectly for your controller."
 msgstr "Als de D-PAD verkeerd is georienteerd voor uw controller."
 
-#. TRANSLATION: libretro/mame, libretro/mess, libretro/mamevirtual, mame
+#. TRANSLATION: libretro/mame, libretro/same_cdi, libretro/mess, libretro/mamevirtual, mame
 msgctxt "game_options"
 msgid "ALT DPAD MODE"
 msgstr "ALT DPAD MODUS"
 
-#. TRANSLATION: libretro/mame, libretro/mess, libretro/mess, libretro/mamevirtual, libretro/mamevirtual, ...
+#. TRANSLATION: libretro/mame, libretro/same_cdi, libretro/mess, libretro/mess, libretro/mamevirtual, ...
 msgctxt "game_options"
 msgid "Off (Default)"
 msgstr "Uit (Standaard)"
 
-#. TRANSLATION: libretro/mame, libretro/mess, libretro/mamevirtual, mame
+#. TRANSLATION: libretro/mame, libretro/same_cdi, libretro/mess, libretro/mamevirtual, mame
 msgctxt "game_options"
 msgid "DS3 Orientation"
 msgstr "DS3 Orientatie"
 
-#. TRANSLATION: libretro/mame, libretro/mess, libretro/mamevirtual, mame
+#. TRANSLATION: libretro/mame, libretro/same_cdi, libretro/mess, libretro/mamevirtual, mame
 msgctxt "game_options"
 msgid "X360 Orientation"
 msgstr "X360 Orientatie"
+
+#. TRANSLATION: libretro/same_cdi, libretro/same_cdi, libretro/same_cdi, libretro/mess, libretro/mess, ...
+msgctxt "game_options"
+msgid "ADVANCED OPTIONS"
+msgstr ""
 
 #. TRANSLATION: libretro/mess, libretro/mess, libretro/mess, libretro/mess, libretro/mess, ...
 msgctxt "game_options"
@@ -2712,11 +2731,6 @@ msgstr ""
 #. TRANSLATION: libretro/mess, mame/wasm4
 msgctxt "game_options"
 msgid "Select which joystick to emulate."
-msgstr ""
-
-#. TRANSLATION: libretro/mess, libretro/mess, libretro/mess, libretro/mupen64plus-next, libretro/mupen64plus-next, ...
-msgctxt "game_options"
-msgid "ADVANCED OPTIONS"
 msgstr ""
 
 #. TRANSLATION: libretro/mess, mame/wasm4
@@ -9422,6 +9436,11 @@ msgstr ""
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
+msgid "GAME PLAY"
+msgstr ""
+
+#. TRANSLATION: awgl
+msgctxt "game_options"
 msgid "GAME DIFFICULTY"
 msgstr ""
 
@@ -9468,6 +9487,11 @@ msgstr ""
 #. TRANSLATION: awgl, gzdoom, lzdoom
 msgctxt "game_options"
 msgid "Select rendering mode."
+msgstr ""
+
+#. TRANSLATION: awgl, gzdoom, lzdoom
+msgctxt "game_options"
+msgid "GAME RENDERING"
 msgstr ""
 
 #. TRANSLATION: awgl, bermuda
