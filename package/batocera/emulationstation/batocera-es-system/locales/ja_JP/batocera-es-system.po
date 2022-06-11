@@ -6108,6 +6108,16 @@ msgctxt "game_options"
 msgid "Display the current frames per second."
 msgstr ""
 
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "Grab Mouse Input"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "AUTO GRAB MOUSE"
+msgstr ""
+
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Adjust screen line draw mode."
