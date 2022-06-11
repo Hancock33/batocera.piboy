@@ -3950,9 +3950,9 @@ libretro:
                     "Low 360p":         lores
                     "High 720p":        hires
                     "Super-high 1440p": superhires
-            zoom_mode:
-                prompt:      ZOOM (HIDE BORDERS)
-                description: Hides borders on many games. Some games use the borders.
+            crop_mode:
+                prompt:      CROP BORDERS
+                description: Remove borders according to the crop preset.
                 choices:
                     "Off":            none
                     "Auto zoom":      automatic
@@ -4216,9 +4216,9 @@ libretro:
                     "Low 360p":         lores
                     "High 720p":        hires
                     "Super-high 1440p": superhires
-            zoom_mode:
-                prompt:      ZOOM (HIDE BORDERS)
-                description: Hides borders on many games. Some games use the borders.
+            crop_mode:
+                prompt:      CROP BORDERS
+                description: Remove borders according to the crop preset.
                 choices:
                     "Off":            none
                     "Auto zoom":      automatic
@@ -5027,12 +5027,12 @@ libretro:
                 choices:
                     "PAL 576x312px":     pal
                     "NTSC 492x262px":    ntsc
-            vice_zoom_mode:
-                prompt:      ZOOM (HIDE BORDERS)
-                description: Hides borders on many games. Some games used the borders.
+            vice_crop_mode:
+                prompt:      CROP BORDERS
+                description: Remove borders according to the crop preset.
                 choices:
-                    "Auto-disable zoom":        auto_disable
-                    "Auto zoom":                automatic
+                    "Auto-disable crop":        auto_disable
+                    "Auto crop":                automatic
                     "Off":                      disabled
                     "small":                    small
                     "medium":                   medium
@@ -5128,12 +5128,12 @@ libretro:
                 choices:
                     "PAL 576x312px":     pal
                     "NTSC 492x262px":    ntsc
-            vice_zoom_mode:
-                prompt:      ZOOM (HIDE BORDERS)
-                description: Hides borders on many games. Some games used the borders.
+            vice_crop_mode:
+                prompt:      CROP BORDERS
+                description: Remove borders according to the crop preset.
                 choices:
-                    "Auto-disable zoom":        auto_disable
-                    "Auto zoom":                automatic
+                    "Auto-disable crop":        auto_disable
+                    "Auto crop":                automatic
                     "Off":                      disabled
                     "small":                    small
                     "medium":                   medium
@@ -5218,12 +5218,12 @@ libretro:
                 choices:
                     "PAL 576x312px":     pal
                     "NTSC 492x262px":    ntsc
-            vice_zoom_mode:
-                prompt:      ZOOM (HIDE BORDERS)
-                description: Hides borders on many games. Some games used the borders.
+            vice_crop_mode:
+                prompt:      CROP BORDERS
+                description: Remove borders according to the crop preset.
                 choices:
-                    "Auto-disable zoom":        auto_disable
-                    "Auto zoom":                automatic
+                    "Auto-disable crop":        auto_disable
+                    "Auto crop":                automatic
                     "Off":                      disabled
                     "small":                    small
                     "medium":                   medium
@@ -5299,12 +5299,12 @@ libretro:
                 choices:
                     "PAL 576x312px":     pal
                     "NTSC 492x262px":    ntsc
-            vice_zoom_mode:
-                prompt:      ZOOM (HIDE BORDERS)
-                description: Hides borders on many games. Some games used the borders.
+            vice_crop_mode:
+                prompt:      CROP BORDERS
+                description: Remove borders according to the crop preset.
                 choices:
-                    "Auto-disable zoom":        auto_disable
-                    "Auto zoom":                automatic
+                    "Auto-disable crop":        auto_disable
+                    "Auto crop":                automatic
                     "Off":                      disabled
                     "small":                    small
                     "medium":                   medium
@@ -5381,12 +5381,12 @@ libretro:
                 choices:
                     "PAL 576x312px":     pal
                     "NTSC 492x262px":    ntsc
-            vice_zoom_mode:
-                prompt:      ZOOM (HIDE BORDERS)
-                description: Hides borders on many games. Some games used the borders.
+            vice_crop_mode:
+                prompt:      CROP BORDERS
+                description: Remove borders according to the crop preset.
                 choices:
-                    "Auto-disable zoom":        auto_disable
-                    "Auto zoom":                automatic
+                    "Auto-disable crop":        auto_disable
+                    "Auto crop":                automatic
                     "Off":                      disabled
                     "small":                    small
                     "medium":                   medium
@@ -5468,12 +5468,12 @@ libretro:
                 choices:
                     "PAL 576x312px":     pal
                     "NTSC 492x262px":    ntsc
-            vice_zoom_mode:
-                prompt:      ZOOM (HIDE BORDERS)
-                description: Hides borders on many games. Some games used the borders.
+            vice_crop_mode:
+                prompt:      CROP BORDERS
+                description: Remove borders according to the crop preset.
                 choices:
-                    "Auto-disable zoom":        auto_disable
-                    "Auto zoom":                automatic
+                    "Auto-disable crop":        auto_disable
+                    "Auto crop":                automatic
                     "Off":                      disabled
                     "small":                    small
                     "medium":                   medium
