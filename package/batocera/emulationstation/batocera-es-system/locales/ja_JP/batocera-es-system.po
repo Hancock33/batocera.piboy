@@ -2004,13 +2004,13 @@ msgctxt "game_options"
 msgid "SCREEN ORIENTATION"
 msgstr "画面の向き"
 
-#. TRANSLATION: libretro/fuse, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, ...
+#. TRANSLATION: libretro/fuse, vice
 msgctxt "game_options"
 msgid "Hides borders on many games. Some games used the borders."
 msgstr ""
 "多くのゲームの境界線を非表示にします。一部のゲームは境界線を使用していました"
 
-#. TRANSLATION: libretro/fuse, libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, ...
+#. TRANSLATION: libretro/fuse, vice
 msgctxt "game_options"
 msgid "ZOOM (HIDE BORDERS)"
 msgstr "ズーム（境界線を非表示）"
@@ -4698,12 +4698,17 @@ msgctxt "game_options"
 msgid "Super-high 1440p"
 msgstr "Super-high 1440p"
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, ...
 msgctxt "game_options"
-msgid "Hides borders on many games. Some games use the borders."
-msgstr "多くのゲームの境界線を非表示にします。一部のゲームは境界線を使用します"
+msgid "Remove borders according to the crop preset."
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, ...
+msgctxt "game_options"
+msgid "CROP BORDERS"
+msgstr ""
+
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Auto zoom"
 msgstr "自動ズーム"
@@ -5705,8 +5710,13 @@ msgstr "NTSC 492x262px"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, libretro/vice_xvic, ...
 msgctxt "game_options"
-msgid "Auto-disable zoom"
-msgstr "自動でズームを無効"
+msgid "Auto-disable crop"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, libretro/vice_xvic, ...
+msgctxt "game_options"
+msgid "Auto crop"
+msgstr ""
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, libretro/vice_xvic, ...
 msgctxt "game_options"
@@ -9576,6 +9586,15 @@ msgstr ""
 msgctxt "game_options"
 msgid "USE COMPUTE SHADER"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "Hides borders on many games. Some games use the borders."
+#~ msgstr ""
+#~ "多くのゲームの境界線を非表示にします。一部のゲームは境界線を使用します"
+
+#~ msgctxt "game_options"
+#~ msgid "Auto-disable zoom"
+#~ msgstr "自動でズームを無効"
 
 #~ msgctxt "game_options"
 #~ msgid "AUTO SAVE/LOAD"

@@ -2035,13 +2035,13 @@ msgctxt "game_options"
 msgid "SCREEN ORIENTATION"
 msgstr "ORIENTACIÓN DE LA PANTALLA"
 
-#. TRANSLATION: libretro/fuse, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, ...
+#. TRANSLATION: libretro/fuse, vice
 msgctxt "game_options"
 msgid "Hides borders on many games. Some games used the borders."
 msgstr ""
 "Oculta los bordes en muchos juegos. Algunos juegos utilizan los bordes."
 
-#. TRANSLATION: libretro/fuse, libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, ...
+#. TRANSLATION: libretro/fuse, vice
 msgctxt "game_options"
 msgid "ZOOM (HIDE BORDERS)"
 msgstr "ACERCAR (OCULTA BORDES)"
@@ -4739,12 +4739,17 @@ msgctxt "game_options"
 msgid "Super-high 1440p"
 msgstr "Super Alta 1440p"
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, ...
 msgctxt "game_options"
-msgid "Hides borders on many games. Some games use the borders."
-msgstr "Oculta los bordes en muchos juegos. Algunos juegos usan los bordes."
+msgid "Remove borders according to the crop preset."
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, ...
+msgctxt "game_options"
+msgid "CROP BORDERS"
+msgstr ""
+
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Auto zoom"
 msgstr "Auto zoom"
@@ -5753,8 +5758,13 @@ msgstr "NTSC 492x262px"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, libretro/vice_xvic, ...
 msgctxt "game_options"
-msgid "Auto-disable zoom"
-msgstr "Auto desactivar zoom"
+msgid "Auto-disable crop"
+msgstr ""
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, libretro/vice_xvic, ...
+msgctxt "game_options"
+msgid "Auto crop"
+msgstr ""
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, libretro/vice_xvic, ...
 msgctxt "game_options"
@@ -9674,6 +9684,14 @@ msgstr ""
 msgctxt "game_options"
 msgid "USE COMPUTE SHADER"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "Hides borders on many games. Some games use the borders."
+#~ msgstr "Oculta los bordes en muchos juegos. Algunos juegos usan los bordes."
+
+#~ msgctxt "game_options"
+#~ msgid "Auto-disable zoom"
+#~ msgstr "Auto desactivar zoom"
 
 #~ msgctxt "game_options"
 #~ msgid "AUTO SAVE/LOAD"
