@@ -3,8 +3,8 @@
 # OpenJK: JediAcademy / Jedi Outcast
 #
 ################################################################################
-# Version: Commits on Jan 31, 2022
-OPENJK_VERSION = 235fb9e1a9c4537a603b2e54e444327d20d198a3
+# Version: Commits on Jun 11, 2022
+OPENJK_VERSION = 5ef6711d6af8c4c0d843f209605647300ad1e619
 OPENJK_SITE = $(call github,JACoders,OpenJK,$(OPENJK_VERSION))
 
 OPENJK_DEPENDENCIES = sdl2 openal

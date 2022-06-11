@@ -1,19 +1,8 @@
 diff --git a/Common.mak b/Common.mak
-index e69d1fd06..d593c38a5 100644
+index 7fba3dadf..f5bc4f192 100644
 --- a/Common.mak
 +++ b/Common.mak
-@@ -572,8 +572,8 @@ ifndef OPTOPT
-         else
-             ifeq ($(PLATFORM),DARWIN)
-                 OPTOPT := -march=core2 -mmmx -msse -msse2 -msse3 -mssse3
--            else
--                OPTOPT := -march=nocona
-+           # else
-+           #     OPTOPT := -march=nocona
-             endif
-         endif
-     endif
-@@ -600,6 +600,9 @@ ifndef OPTOPT
+@@ -574,6 +574,9 @@ ifndef OPTOPT
      ifeq ($(PLATFORM),WII)
          OPTOPT := -mtune=750
      endif
@@ -23,7 +12,7 @@ index e69d1fd06..d593c38a5 100644
  endif
  
  ifeq ($(PACKAGE_REPOSITORY),0)
-@@ -888,7 +891,7 @@ endif
+@@ -873,7 +876,7 @@ endif
  
  ifeq ($(RENDERTYPE),SDL)
      ifeq ($(SDL_TARGET),2)
@@ -32,7 +21,7 @@ index e69d1fd06..d593c38a5 100644
          SDLNAME := SDL2
      else ifeq ($(SDL_TARGET),1)
          SDLCONFIG := sdl-config
-@@ -937,7 +940,8 @@ ifeq ($(RENDERTYPE),SDL)
+@@ -919,7 +922,8 @@ ifeq ($(RENDERTYPE),SDL)
              SDLCONFIG_LIBS := $(strip $(subst -mwindows,,$(shell $(SDLCONFIG) --libs)))
  
              COMPILERFLAGS += $(SDLCONFIG_CFLAGS)
@@ -43,10 +32,10 @@ index e69d1fd06..d593c38a5 100644
              ifeq ($(SDL_TARGET),1)
                  COMPILERFLAGS += -D_GNU_SOURCE=1
 diff --git a/GNUmakefile b/GNUmakefile
-index 43a059af2..7cd753669 100644
+index 002bfe5c3..beef169b8 100644
 --- a/GNUmakefile
 +++ b/GNUmakefile
-@@ -573,7 +573,7 @@ duke3d_game_deps := audiolib mact
+@@ -577,7 +577,7 @@ duke3d_game_deps := audiolib mact
  duke3d_editor_deps := audiolib
  
  duke3d_game := eduke32
@@ -55,7 +44,7 @@ index 43a059af2..7cd753669 100644
  
  ifneq (,$(APPBASENAME))
      duke3d_game := $(APPBASENAME)
-@@ -693,7 +693,7 @@ sw_game_deps := audiolib mact
+@@ -697,7 +697,7 @@ sw_game_deps := audiolib mact
  sw_editor_deps := audiolib
  
  sw_game := voidsw
@@ -64,7 +53,7 @@ index 43a059af2..7cd753669 100644
  
  sw_game_proper := VoidSW
  sw_editor_proper := Wangulator
-@@ -879,7 +879,8 @@ endif
+@@ -883,7 +883,8 @@ endif
  
  #### Targets
  
