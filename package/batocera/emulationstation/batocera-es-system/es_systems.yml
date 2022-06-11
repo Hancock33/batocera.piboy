@@ -1418,7 +1418,7 @@ msxturbor:
   manufacturer: Microsoft
   release: 1990
   hardware: computer
-  extensions: [dsk, mx2, rom, zip, 7z]
+  extensions: [dsk, m3u, mx2, rom, zip, 7z]
   platform:   msx
   group:      msx
   emulators:
