@@ -303,6 +303,13 @@ libretro:
         choices:
             "On":   "true"
             "Off":  "false"
+    autograbmouse:
+        group: CONTROLLER SETTINGS
+        prompt:      AUTO GRAB MOUSE
+        description: Grab Mouse Input
+        choices:
+            "On":   "true"
+            "Off":  "false"
   cores:
     '81':
       features: [netplay, padtokeyboard]
