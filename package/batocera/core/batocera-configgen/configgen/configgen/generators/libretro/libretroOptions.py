@@ -551,7 +551,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                     'statusbar': "RETROK_F11",
                     'vkbd': "---",
                     'reset': "---",
-                    'crop_mode_toggle: "RETROK_F12",
+                    'crop_mode_toggle': "RETROK_F12",
                     'up': "---",
                     'down': "---",
                     'left': "---",
