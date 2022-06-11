@@ -1,5 +1,5 @@
 diff --git a/Common.mak b/Common.mak
-index 7fba3dadf..f5bc4f192 100644
+index 7fba3dadf..dcaf2de36 100644
 --- a/Common.mak
 +++ b/Common.mak
 @@ -574,6 +574,9 @@ ifndef OPTOPT
@@ -8,7 +8,7 @@ index 7fba3dadf..f5bc4f192 100644
      endif
 +    ifneq (0,$(RPI4))
 +        OPTOPT := -mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math
-+    endif
++    endif  
  endif
  
  ifeq ($(PACKAGE_REPOSITORY),0)
@@ -21,10 +21,11 @@ index 7fba3dadf..f5bc4f192 100644
          SDLNAME := SDL2
      else ifeq ($(SDL_TARGET),1)
          SDLCONFIG := sdl-config
-@@ -919,7 +922,8 @@ ifeq ($(RENDERTYPE),SDL)
+@@ -918,8 +921,8 @@ ifeq ($(RENDERTYPE),SDL)
+             SDLCONFIG_CFLAGS := $(strip $(subst -Dmain=SDL_main,,$(shell $(SDLCONFIG) --cflags)))
              SDLCONFIG_LIBS := $(strip $(subst -mwindows,,$(shell $(SDLCONFIG) --libs)))
  
-             COMPILERFLAGS += $(SDLCONFIG_CFLAGS)
+-            COMPILERFLAGS += $(SDLCONFIG_CFLAGS)
 -            LIBS += $(SDLCONFIG_LIBS)
 +            COMPILERFLAGS += `pkg-config sdl2 --cflags`
 +            LIBS += `pkg-config sdl2 --libs`
@@ -32,7 +33,7 @@ index 7fba3dadf..f5bc4f192 100644
              ifeq ($(SDL_TARGET),1)
                  COMPILERFLAGS += -D_GNU_SOURCE=1
 diff --git a/GNUmakefile b/GNUmakefile
-index 002bfe5c3..beef169b8 100644
+index 002bfe5c3..418485afc 100644
 --- a/GNUmakefile
 +++ b/GNUmakefile
 @@ -577,7 +577,7 @@ duke3d_game_deps := audiolib mact
@@ -44,22 +45,3 @@ index 002bfe5c3..beef169b8 100644
  
  ifneq (,$(APPBASENAME))
      duke3d_game := $(APPBASENAME)
-@@ -697,7 +697,7 @@ sw_game_deps := audiolib mact
- sw_editor_deps := audiolib
- 
- sw_game := voidsw
--sw_editor := wangulator
-+sw_editor :=
- 
- sw_game_proper := VoidSW
- sw_editor_proper := Wangulator
-@@ -883,7 +883,8 @@ endif
- 
- #### Targets
- 
--all: duke3d
-+all: duke3d \
-+     sw
- 
- start:
- 	$(BUILD_STARTED)
