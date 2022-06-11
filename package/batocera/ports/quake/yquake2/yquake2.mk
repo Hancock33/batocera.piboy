@@ -3,8 +3,8 @@
 # Yamagi Quake II
 #
 ################################################################################
-# Version: Commits on Jun 07, 2022
-YQUAKE2_VERSION = a80f5b6cd7f911370840e5c2dc6f2bf83d0b92f8
+# Version: Commits on Jun 11, 2022
+YQUAKE2_VERSION = 86811a4c24f5915768cadc2c74e4dabba43f060c
 YQUAKE2_SITE = $(call github,yquake2,yquake2,$(YQUAKE2_VERSION))
 
 YQUAKE2_DEPENDENCIES = sdl2 sdl2_mixer
