@@ -181,6 +181,12 @@ def createLibretroConfig(system, controllers, guns, rom, bezel, shaderBezel, gam
     retroarchConfig['input_libretro_device_p1'] = '1'           # Default devices choices
     retroarchConfig['input_libretro_device_p2'] = '1'
 
+    # Disable / Enable mouse grab when in full screen
+    if system.isOptSet('autograbmouse') == True:
+        retroarchConfig['input_auto_mouse_grab'] = 'true'
+    else:
+        retroarchConfig['input_auto_mouse_grab'] = 'false'
+
     # D-pad = Left analog stick forcing on PUAE and VICE (New D2A system on RA doesn't work with these cores.)
     if system.config['core'] == 'puae' or system.config['core'] == 'puae2021' or system.config['core'] == 'vice_x64' or system.config['core'] == 'vice_x64sc':
         retroarchConfig['input_player1_analog_dpad_mode'] = '3'
