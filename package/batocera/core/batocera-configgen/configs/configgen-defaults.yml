@@ -436,6 +436,8 @@ nukem2:
 odcommander:
   emulator: odcommander
   core:     odcommander
+  options:
+    hud_support: false
 odyssey2:
   emulator: libretro
   core:     o2em
@@ -578,6 +580,8 @@ scv:
 sdlpop:
   emulator: sdlpop
   core:     sdlpop
+  options:
+    hud_support: false
 sega32x:
   emulator: libretro
   core:     picodrive
