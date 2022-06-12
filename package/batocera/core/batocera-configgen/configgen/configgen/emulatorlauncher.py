@@ -1,259 +1,35 @@
 #!/usr/bin/env python
 
-import argparse
-import time
-import sys
-from sys import exit
-from Emulator import Emulator
-from Evmapy import Evmapy
-import generators
-import xml.etree.ElementTree as ET
-import json
-from generators.abuse.abuseGenerator import AbuseGenerator
-from generators.amiberry.amiberryGenerator import AmiberryGenerator
-from generators.alephone.alephoneGenerator import AlephoneGenerator
-from generators.awgl.awglGenerator import AwglGenerator
-from generators.bbja.bbjaGenerator import BbjaGenerator
-from generators.bermuda.bermudaGenerator import BermudaGenerator
-from generators.blues.bluesGenerator import BluesGenerator
-from generators.bstone.bstoneGenerator import BstoneGenerator
-from generators.cannonball.cannonballGenerator import CannonballGenerator
-from generators.cdogs.cdogsGenerator import CdogsGenerator
-from generators.cemu.cemuGenerator import CemuGenerator
-from generators.cgenius.cgeniusGenerator import CGeniusGenerator
-from generators.citra.citraGenerator import CitraGenerator
-from generators.daphne.daphneGenerator import DaphneGenerator
-from generators.devilutionx.devilutionxGenerator import DevilutionXGenerator
-from generators.demul.demulGenerator import DemulGenerator
-from generators.dolphin.dolphinGenerator import DolphinGenerator
-from generators.dolphin_triforce.dolphinTriforceGenerator import DolphinTriforceGenerator
-from generators.doom3.doom3Generator import Doom3Generator
-from generators.doomretro.doomretroGenerator import DoomretroGenerator
-from generators.dosbox.dosboxGenerator import DosBoxGenerator
-from generators.dosboxstaging.dosboxstagingGenerator import DosBoxStagingGenerator
-from generators.dosboxx.dosboxxGenerator import DosBoxxGenerator
-from generators.drastic.drasticGenerator import DrasticGenerator
-from generators.droidports.droidportsGenerator import DroidportsGenerator
-from generators.duckstation.duckstationGenerator import DuckstationGenerator
-from generators.easyrpg.easyrpgGenerator import EasyRPGGenerator
-from generators.ecwolf.ecwolfGenerator import ECWolfGenerator
-from generators.eduke32.eduke32Generator import Eduke32Generator
-from generators.etekwar.etekwarGenerator import EtekwarGenerator
-from generators.f2bgl.f2bglGenerator import F2bglGenerator
-from generators.fba2x.fba2xGenerator import Fba2xGenerator
-from generators.flatpak.flatpakGenerator import FlatpakGenerator
-from generators.flycast.flycastGenerator import FlycastGenerator
-from generators.freedroid.freedroidGenerator import FreedroidGenerator
-from generators.fpinball.fpinballGenerator import FpinballGenerator
-from generators.fsuae.fsuaeGenerator import FsuaeGenerator
-from generators.gsplus.gsplusGenerator import GSplusGenerator
-from generators.gzdoom.gzdoomGenerator import GzdoomGenerator
-from generators.hatari.hatariGenerator import HatariGenerator
-from generators.hcl.hclGenerator import HclGenerator
-from generators.hode.hodeGenerator import HodeGenerator
-from generators.hurrican.hurricanGenerator import HurricanGenerator
-from generators.ionfury.ionfuryGenerator import IonfuryGenerator
-from generators.kodi.kodiGenerator import KodiGenerator
-from generators.lexaloffle.lexaloffleGenerator import LexaloffleGenerator
-from generators.libretro.libretroGenerator import LibretroGenerator
-from generators.lightspark.lightsparkGenerator import LightsparkGenerator
-from generators.linapple.linappleGenerator import LinappleGenerator
-from generators.lzdoom.lzdoomGenerator import LzdoomGenerator
-from generators.mame.mameGenerator import MameGenerator
-from generators.melonds.melondsGenerator import MelonDSGenerator
-from generators.model2emu.model2emuGenerator import Model2EmuGenerator
-from generators.moonlight.moonlightGenerator import MoonlightGenerator
-from generators.mugen.mugenGenerator import MugenGenerator
-from generators.mupen.mupenGenerator import MupenGenerator
-from generators.nblood.nbloodGenerator import NbloodGenerator
-from generators.nukem2.nukem2Generator import Nukem2Generator
-from generators.odcommander.odcommanderGenerator import OdcommanderGenerator
-from generators.openbor.openborGenerator import OpenborGenerator
-from generators.openclaw.openclawGenerator import OpenclawGenerator
-from generators.openjazz.openjazzGenerator import OpenJazzGenerator
-from generators.openjkja.openjkjaGenerator import OpenjkjaGenerator
-from generators.openjkjo.openjkjoGenerator import OpenjkjoGenerator
-from generators.openlara.openlaraGenerator import OpenlaraGenerator
-from generators.openmsx.openmsxGenerator import OpenmsxGenerator
-from generators.omf2097.omf2097Generator import Omf2097Generator
-from generators.opentyrian.opentyrianGenerator import OpentyrianGenerator
-from generators.pcexhumed.pcexhumedGenerator import PcexhumedGenerator
-from generators.pcsx2.pcsx2Generator import Pcsx2Generator
-from generators.ppsspp.ppssppGenerator import PPSSPPGenerator
-from generators.pre2.pre2Generator import Pre2Generator
-from generators.prototype.prototypeGenerator import PrototypeGenerator
-from generators.pygame.pygameGenerator import PygameGenerator
-from generators.quakespasm.quakespasmGenerator import QuakespasmGenerator
-from generators.quake3.quake3Generator import Quake3Generator
-from generators.raptor.raptorGenerator import RaptorGenerator
-from generators.rednukem.rednukemGenerator import RednukemGenerator
-from generators.redream.redreamGenerator import RedreamGenerator
-from generators.rpcs3.rpcs3Generator import Rpcs3Generator
-from generators.rott.rottGenerator import RottGenerator
-from generators.rtcw.rtcwGenerator import RtcwGenerator
-from generators.ruffle.ruffleGenerator import RuffleGenerator
-from generators.ryujinx.ryujinxGenerator import RyujinxGenerator
-from generators.samcoupe.samcoupeGenerator import SamcoupeGenerator
-from generators.scummvm.scummvmGenerator import ScummVMGenerator
-from generators.sdlpop.sdlpopGenerator import SdlPopGenerator
-from generators.sh.shGenerator import ShGenerator
-from generators.solarus.solarusGenerator import SolarusGenerator
-from generators.sonicretro.sonicretroGenerator import SonicRetroGenerator
-from generators.sorr.sorrGenerator import SorrGenerator
-from generators.spacecadetpinball.spacecadetpinballGenerator import SpacecadetpinballGenerator
-from generators.srb2.srb2Generator import Srb2Generator
-from generators.steam.steamGenerator import SteamGenerator
-from generators.stk.stkGenerator import StkGenerator
-from generators.stuntcar.stuntcarGenerator import StuntcarGenerator
-from generators.supermodel.supermodelGenerator import SupermodelGenerator
-from generators.supertux2.supertux2Generator import Supertux2Generator
-from generators.themehospital.themehospitalGenerator import ThemehospitalGenerator
-from generators.tsugaru.tsugaruGenerator import TsugaruGenerator
-from generators.vanillara.vanillaraGenerator import VanillaraGenerator
-from generators.vanillatd.vanillatdGenerator import VanillatdGenerator
-from generators.vkquake.vkquakeGenerator import VkquakeGenerator
-from generators.vice.viceGenerator import ViceGenerator
-from generators.voidsw.voidswGenerator import VoidswGenerator
-from generators.wine.wineGenerator import WineGenerator
-from generators.witchaven.witchavenGenerator import WitchavenGenerator
-from generators.xash3d_fwgs.xash3dFwgsGenerator import Xash3dFwgsGenerator
-from generators.xemu.xemuGenerator import XemuGenerator
-from generators.xenia.xeniaGenerator import XeniaGenerator
-from generators.yabausesa.yabausesaGenerator import YabausesaGenerator
-from generators.yquake2.yquake2Generator import Yquake2Generator
-from generators.yuzu.yuzuGenerator import YuzuGenerator
-#from generators.play.playGenerator import PlayGenerator
-
-import controllersConfig as controllers
-import signal
-import batoceraFiles
 import os
+profiler = None
+
+# 1) touch /var/run/emulatorlauncher.perf
+# 2) start a game
+# 3) gprof2dot.py -f pstats /var/run/emulatorlauncher.prof -o emulatorlauncher.dot # wget https://raw.githubusercontent.com/jrfonseca/gprof2dot/master/gprof2dot.py
+# 4) dot -Tpng emulatorlauncher.dot -o emulatorlauncher.png
+
+if os.path.exists("/var/run/emulatorlauncher.perf"):
+    import cProfile
+    profiler = cProfile.Profile()
+    profiler.enable()
+
+### import always needed ###
+import argparse
+import GeneratorImporter
+import signal
+import time
+from sys import exit
 import subprocess
+import batoceraFiles
 import utils.videoMode as videoMode
-import utils.bezels as bezelsUtil
+############################
 from utils.logger import get_logger
-
 eslog = get_logger(__name__)
+############################
 
-generators = {
-    'abuse': AbuseGenerator(),
-    'amiberry': AmiberryGenerator(),
-    'alephone': AlephoneGenerator(),
-    'awgl': AwglGenerator(),
-    'bbja': BbjaGenerator(),
-    'bermuda': BermudaGenerator(),
-    'blues': BluesGenerator(),
-    'bstone' : BstoneGenerator(),
-    'cannonball' : CannonballGenerator(),
-    'cdogs' : CdogsGenerator(),
-    'cemu' : CemuGenerator(),
-    'cgenius': CGeniusGenerator(),
-    'citra' : CitraGenerator(),
-    'daphne' : DaphneGenerator(),
-    'demul': DemulGenerator(),
-    'devilutionx': DevilutionXGenerator(),
-    'dolphin': DolphinGenerator(),
-    'dolphin_triforce': DolphinTriforceGenerator(),
-    'doom3': Doom3Generator(),
-    'doomretro': DoomretroGenerator(),
-    'dosbox': DosBoxGenerator(),
-    'dosbox_staging': DosBoxStagingGenerator(),
-    'dosboxx': DosBoxxGenerator(),
-    'drastic': DrasticGenerator(),
-    'droidports': DroidportsGenerator(),
-    'duckstation': DuckstationGenerator(),
-    'easyrpg': EasyRPGGenerator(),
-    'ecwolf': ECWolfGenerator(),
-    'eduke32': Eduke32Generator(),
-    'etekwar': EtekwarGenerator(),
-    'f2bgl': F2bglGenerator(),
-    'fba2x': Fba2xGenerator(),
-    'flatpak': FlatpakGenerator(),
-    'flycast': FlycastGenerator(),
-    'freedroid': FreedroidGenerator(),
-    'fpinball': FpinballGenerator(),
-    'fsuae': FsuaeGenerator(),
-    'gsplus': GSplusGenerator(),
-    'gzdoom': GzdoomGenerator(),
-    'hatari': HatariGenerator(),
-    'hcl': HclGenerator(),
-    'hode': HodeGenerator(),
-    'hurrican': HurricanGenerator(),
-    'ionfury': IonfuryGenerator(),
-    'kodi': KodiGenerator(),
-    'lexaloffle': LexaloffleGenerator(),
-    'libretro': LibretroGenerator(),
-    'lightspark': LightsparkGenerator(),
-    'linapple': LinappleGenerator(),
-    'lzdoom': LzdoomGenerator(),
-    'mame' : MameGenerator(),
-    'melonds' : MelonDSGenerator(),
-    'model2emu': Model2EmuGenerator(),
-    'moonlight': MoonlightGenerator(),
-    'mugen': MugenGenerator(),
-    'mupen64plus': MupenGenerator(),
-    'nblood': NbloodGenerator(),
-    'nukem2': Nukem2Generator(),
-    'odcommander': OdcommanderGenerator(),
-    'openbor' : OpenborGenerator(),
-    'openclaw' : OpenclawGenerator(),
-    'openjazz': OpenJazzGenerator(),
-    'openjkja': OpenjkjaGenerator(),
-    'openjkjo': OpenjkjoGenerator(),
-    'openlara': OpenlaraGenerator(),
-    'openmsx': OpenmsxGenerator(),
-    'omf2097': Omf2097Generator(),
-    'opentyrian': OpentyrianGenerator(),
-    'pcexhumed': PcexhumedGenerator(),
-    'pcsx2': Pcsx2Generator(),
-    'ppsspp': PPSSPPGenerator(),
-    'pre2': Pre2Generator(),
-    'prototype': PrototypeGenerator(),
-    'pygame': PygameGenerator(),
-    'quakespasm': QuakespasmGenerator(),
-    'quake3': Quake3Generator(),
-    'raptor': RaptorGenerator(),
-    'rednukem': RednukemGenerator(),
-    'redream': RedreamGenerator(),
-    'rpcs3' : Rpcs3Generator(),
-    'rtcw' : RtcwGenerator(),
-    'rott' : RottGenerator(),
-    'ruffle': RuffleGenerator(),
-    'ryujinx': RyujinxGenerator(),
-    'samcoupe': SamcoupeGenerator(),
-    'scummvm': ScummVMGenerator(),
-    'sdlpop' : SdlPopGenerator(),
-    'sh': ShGenerator(),
-    'solarus': SolarusGenerator(),
-    'sonic2013': SonicRetroGenerator(),
-    'soniccd': SonicRetroGenerator(),
-    'sorr': SorrGenerator(),
-    'spacecadetpinball': SpacecadetpinballGenerator(),
-    'srb2': Srb2Generator(),
-    'steam': SteamGenerator(),
-    'stk': StkGenerator(),
-    'stuntcar': StuntcarGenerator(),
-    'supermodel': SupermodelGenerator(),
-    'supertux2': Supertux2Generator(),
-    'themehospital' : ThemehospitalGenerator(),
-    'tsugaru': TsugaruGenerator(),
-    'vanillara': VanillaraGenerator(),
-    'vanillatd': VanillatdGenerator(),
-    'vkquake': VkquakeGenerator(),
-    'vice': ViceGenerator(),
-    'voidsw': VoidswGenerator(),
-    'wine' : WineGenerator(),
-    'witchaven' : WitchavenGenerator(),
-    'xash3d_fwgs': Xash3dFwgsGenerator(),
-    'xemu': XemuGenerator(),
-    'xenia': XeniaGenerator(),
-    'yabausesa': YabausesaGenerator(),
-    'yquake2': Yquake2Generator(),
-    'yuzu': YuzuGenerator(),
-    #'play': PlayGenerator(),
-}
-
-emulatorNoBezel = [ "sdlpop", "odcommander" ]
+from Emulator import Emulator
+import controllersConfig as controllers
+import utils.bezels as bezelsUtil
 
 def squashfs_begin(rom):
     eslog.debug(f"squashfs_begin({rom})")
@@ -320,6 +96,8 @@ def main(args, maxnbplayers):
         return start_rom(args, maxnbplayers, args.rom, args.rom)
 
 def start_rom(args, maxnbplayers, rom, romConfiguration):
+    global profiler
+
     # controllers
     playersControllers = dict()
 
@@ -369,8 +147,11 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
         eslog.info("guns disabled.");
         guns = []
 
+    # find the generator
+    generator = GeneratorImporter.getGenerator(system.config['emulator'])
+
     # the resolution must be changed before configuration while the configuration may depend on it (ie bezels)
-    wantedGameMode = generators[system.config['emulator']].getResolutionMode(system.config)
+    wantedGameMode = generator.getResolutionMode(system.config)
     systemMode = videoMode.getCurrentMode()
 
     resolutionChanged = False
@@ -435,7 +216,7 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
         if args.state_filename is not None:
             system.config["state_filename"] = args.state_filename
 
-        if generators[system.config['emulator']].getMouseMode(system.config):
+        if generator.getMouseMode(system.config):
             mouseChanged = True
             videoMode.changeMouse(True)
 
@@ -446,24 +227,23 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
             system.config["sdlvsync"] = '1'
         os.environ.update({'SDL_RENDER_VSYNC': system.config["sdlvsync"]})
 
-        os.environ.update({'PIPEWIRE_LATENCY': '1024/48000'})
-
         # run a script before emulator starts
         callExternalScripts("/usr/share/batocera/configgen/scripts", "gameStart", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
         callExternalScripts("/userdata/system/scripts", "gameStart", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
 
         # run the emulator
         try:
+            from Evmapy import Evmapy
             Evmapy.start(systemName, system.config['emulator'], effectiveCore, effectiveRomConfiguration, playersControllers)
             # change directory if wanted
-            executionDirectory = generators[system.config['emulator']].executionDirectory(system.config, effectiveRom)
+            executionDirectory = generator.executionDirectory(system.config, effectiveRom)
             if executionDirectory is not None:
                 os.chdir(executionDirectory)
 
-            cmd = generators[system.config['emulator']].generate(system, rom, playersControllers, guns, gameResolution)
+            cmd = generator.generate(system, rom, playersControllers, guns, gameResolution)
 
             if system.isOptSet('hud_support') and system.getOptBoolean('hud_support') == True:
-                hud_bezel = getHudBezel(system, rom, gameResolution)
+                hud_bezel = getHudBezel(system, generator, rom, gameResolution)
                 if (system.isOptSet('hud') and system.config["hud"] != "" and system.config["hud"] != "none") or hud_bezel is not None:
                     gameinfos = extractGameInfosFromXml(args.gameinfoxml)
                     cmd.env["MANGOHUD_DLSYM"] = "1"
@@ -471,10 +251,14 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
                     with open('/var/run/hud.config', 'w') as f:
                         f.write(hudconfig)
                     cmd.env["MANGOHUD_CONFIGFILE"] = "/var/run/hud.config"
-                    if generators[system.config['emulator']].hasInternalMangoHUDCall() == False:
+                    if generator.hasInternalMangoHUDCall() == False:
                         cmd.array.insert(0, "mangohud")
 
+            if profiler:
+                profiler.disable()
             exitCode = runCommand(cmd)
+            if profiler:
+                profiler.enable()
         finally:
             Evmapy.stop()
 
@@ -499,13 +283,13 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
     # exit
     return exitCode
 
-def getHudBezel(system, rom, gameResolution):
-    if 'bezel' not in system.config or system.config['bezel'] == "" or system.config['bezel'] == "none" or system.config['emulator'] in emulatorNoBezel:
+def getHudBezel(system, generator, rom, gameResolution):
+    if 'bezel' not in system.config or system.config['bezel'] == "" or system.config['bezel'] == "none":
         return None
 
     eslog.debug("hud enabled. trying to apply the bezel {}".format(system.config['bezel']))
 
-    if generators[system.config['emulator']].supportsInternalBezels():
+    if generator.supportsInternalBezels():
         eslog.debug("skipping bezels for emulator {}".format(system.config['emulator']))
         return None
 
@@ -522,6 +306,7 @@ def getHudBezel(system, rom, gameResolution):
     # bottom, top, left and right must not cover too much the image to be considered as compatible
     if os.path.exists(overlay_info_file):
         try:
+            import json
             infos = json.load(open(overlay_info_file))
         except:
             eslog.warning(f"unable to read {overlay_info_file}")
@@ -561,7 +346,7 @@ def getHudBezel(system, rom, gameResolution):
     # if there is no information about top/bottom, assume default is 0
 
     ## the bezel left and right cover must be maximum
-    ingame_ratio = generators[system.config['emulator']].getInGameRatio(system.config, gameResolution, rom)
+    ingame_ratio = generator.getInGameRatio(system.config, gameResolution, rom)
     img_height = bezel_height
     img_width  = img_height * ingame_ratio
 
@@ -613,6 +398,8 @@ def getHudBezel(system, rom, gameResolution):
     return overlay_png_file
 
 def extractGameInfosFromXml(xml):
+    import xml.etree.ElementTree as ET
+
     vals = {}
 
     try:
@@ -721,7 +508,6 @@ def signal_handler(signal, frame):
 if __name__ == '__main__':
     proc = None
     signal.signal(signal.SIGINT, signal_handler)
-
     parser = argparse.ArgumentParser(description='emulator-launcher script')
 
     maxnbplayers = 8
@@ -734,20 +520,20 @@ if __name__ == '__main__':
         parser.add_argument("-p{}nbhats"    .format(p), help="player{} controller number of hats"   .format(p), type=str, required=False)
         parser.add_argument("-p{}nbaxes"    .format(p), help="player{} controller number of axes"   .format(p), type=str, required=False)
 
-    parser.add_argument("-system", help="select the system to launch", type=str, required=True)
-    parser.add_argument("-rom", help="rom absolute path", type=str, required=True)
-    parser.add_argument("-emulator", help="force emulator", type=str, required=False)
-    parser.add_argument("-core", help="force emulator core", type=str, required=False)
-    parser.add_argument("-netplaymode", help="host/client", type=str, required=False)
-    parser.add_argument("-netplaypass", help="enable spectator mode", type=str, required=False)
-    parser.add_argument("-netplayip", help="remote ip", type=str, required=False)
-    parser.add_argument("-netplayport", help="remote port", type=str, required=False)
-    parser.add_argument("-state_slot", help="state slot", type=str, required=False)
-    parser.add_argument("-state_filename", help="state filename", type=str, required=False)
-    parser.add_argument("-autosave", help="autosave", type=str, required=False)
-    parser.add_argument("-systemname", help="system fancy name", type=str, required=False)
-    parser.add_argument("-gameinfoxml", help="game info xml", type=str, nargs='?', default='/dev/null', required=False)
-    parser.add_argument("-lightgun", help="configure lightguns", action="store_true")
+    parser.add_argument("-system",         help="select the system to launch", type=str, required=True)
+    parser.add_argument("-rom",            help="rom absolute path",           type=str, required=True)
+    parser.add_argument("-emulator",       help="force emulator",              type=str, required=False)
+    parser.add_argument("-core",           help="force emulator core",         type=str, required=False)
+    parser.add_argument("-netplaymode",    help="host/client",                 type=str, required=False)
+    parser.add_argument("-netplaypass",    help="enable spectator mode",       type=str, required=False)
+    parser.add_argument("-netplayip",      help="remote ip",                   type=str, required=False)
+    parser.add_argument("-netplayport",    help="remote port",                 type=str, required=False)
+    parser.add_argument("-state_slot",     help="state slot",                  type=str, required=False)
+    parser.add_argument("-state_filename", help="state filename",              type=str, required=False)
+    parser.add_argument("-autosave",       help="autosave",                    type=str, required=False)
+    parser.add_argument("-systemname",     help="system fancy name",           type=str, required=False)
+    parser.add_argument("-gameinfoxml",    help="game info xml",               type=str, nargs='?', default='/dev/null', required=False)
+    parser.add_argument("-lightgun",       help="configure lightguns",         action="store_true")
 
     args = parser.parse_args()
     try:
@@ -755,8 +541,16 @@ if __name__ == '__main__':
         exitcode = main(args, maxnbplayers)
     except Exception as e:
         eslog.error("configgen exception: ", exc_info=True)
+
+    if profiler:
+        import io
+        import pstats
+        profiler.disable()
+        profiler.dump_stats('/var/run/emulatorlauncher.prof')
+
     time.sleep(1) # this seems to be required so that the gpu memory is restituated and available for es
     eslog.debug(f"Exiting configgen with status {str(exitcode)}")
+
     exit(exitcode)
 
 # Local Variables:
