@@ -153,11 +153,11 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         # Crop Mode
         if system.isOptSet('vice_crop_mode'):
             if system.config['vice_crop_mode'] == 'automatic':
-                coreSettings.save('vice_crop_mode', '"auto"')
+                coreSettings.save('vice_crop', '"auto"')
             else:
-                coreSettings.save('vice_crop_mode', system.config['vice_crop_mode'])
+                coreSettings.save('vice_crop', system.config['vice_crop_mode'])
         else:
-            coreSettings.save('vice_crop_mode', '"auto_disable"')
+            coreSettings.save('vice_crop', '"auto_disable"')
         # External palette
         if system.isOptSet('vice_external_palette'):
             coreSettings.save('vice_external_palette', system.config['vice_external_palette'])
@@ -218,11 +218,11 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         # Crop Mode
         if system.isOptSet('vice_crop_mode'):
             if system.config['vice_crop_mode'] == 'automatic':
-                coreSettings.save('vice_crop_mode', '"auto"')
+                coreSettings.save('vice_crop', '"auto"')
             else:
-                coreSettings.save('vice_crop_mode', system.config['vice_crop_mode'])
+                coreSettings.save('vice_crop', system.config['vice_crop_mode'])
         else:
-            coreSettings.save('vice_crop_mode', '"auto_disable"')
+            coreSettings.save('vice_crop', '"auto_disable"')
         # External palette
         if system.isOptSet('vice_external_palette'):
             coreSettings.save('vice_external_palette', system.config['vice_external_palette'])
@@ -281,11 +281,11 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         # Crop Mode
         if system.isOptSet('vice_crop_mode'):
             if system.config['vice_crop_mode'] == 'automatic':
-                coreSettings.save('vice_crop_mode', '"auto"')
+                coreSettings.save('vice_crop', '"auto"')
             else:
-                coreSettings.save('vice_crop_mode', system.config['vice_crop_mode'])
+                coreSettings.save('vice_crop', system.config['vice_crop_mode'])
         else:
-            coreSettings.save('vice_crop_mode', '"auto_disable"')
+            coreSettings.save('vice_crop', '"auto_disable"')
         # External palette
         if system.isOptSet('vice_plus4_external_palette'):
             coreSettings.save('vice_plus4_external_palette', system.config['vice_plus4_external_palette'])
@@ -344,11 +344,11 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         # Crop Mode
         if system.isOptSet('vice_crop_mode'):
             if system.config['vice_crop_mode'] == 'automatic':
-                coreSettings.save('vice_crop_mode', '"auto"')
+                coreSettings.save('vice_crop', '"auto"')
             else:
-                coreSettings.save('vice_crop_mode', system.config['vice_crop_mode'])
+                coreSettings.save('vice_crop', system.config['vice_crop_mode'])
         else:
-            coreSettings.save('vice_crop_mode', '"auto_disable"')
+            coreSettings.save('vice_crop', '"auto_disable"')
         # External palette
         if system.isOptSet('vice_vic20_external_palette'):
             coreSettings.save('vice_vic20_external_palette', system.config['vice_vic20_external_palette'])
@@ -407,11 +407,11 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         # Crop Mode
         if system.isOptSet('vice_crop_mode'):
             if system.config['vice_crop_mode'] == 'automatic':
-                coreSettings.save('vice_crop_mode', '"auto"')
+                coreSettings.save('vice_crop', '"auto"')
             else:
-                coreSettings.save('vice_crop_mode', system.config['vice_crop_mode'])
+                coreSettings.save('vice_crop', system.config['vice_crop_mode'])
         else:
-            coreSettings.save('vice_crop_mode', '"auto_disable"')
+            coreSettings.save('vice_crop', '"auto_disable"')
         # External palette
         if system.isOptSet('vice_pet_external_palette'):
             coreSettings.save('vice_pet_external_palette', system.config['vice_pet_external_palette'])
@@ -458,7 +458,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                     'statusbar': "RETROK_F11",
                     'vkbd': "---",
                     'reset': "---",
-                    'crop_mode_toggle': "RETROK_F12",
+                    'crop_toggle': "RETROK_F12",
                     'down': "---",
                     'left': "---",
                     'a': "RETROK_DOWN",
@@ -489,7 +489,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                     'statusbar': "RETROK_F11",
                     'vkbd': "---",
                     'reset': "---",
-                    'crop_mode_toggle': "RETROK_F12",
+                    'crop_toggle': "RETROK_F12",
                     'down': "---",
                     'left': "---",
                     'a': "---",
@@ -520,7 +520,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                     'statusbar': "RETROK_F11",
                     'vkbd': "---",
                     'reset': "---",
-                    'crop_mode_toggle': "RETROK_F12",
+                    'crop_toggle': "RETROK_F12",
                     'down': "RETROK_DOWN",
                     'left': "RETROK_LALT",
                     'a': "RETROK_RALT",
@@ -551,7 +551,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                     'statusbar': "RETROK_F11",
                     'vkbd': "---",
                     'reset': "---",
-                    'crop_mode_toggle': "RETROK_F12",
+                    'crop_toggle': "RETROK_F12",
                     'up': "---",
                     'down': "---",
                     'left': "---",
@@ -585,7 +585,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                 'statusbar': "RETROK_F11",
                 'vkbd': "---",
                 'reset': "---",
-                'crop_mode_toggle': "RETROK_F12",
+                'crop_toggle': "RETROK_F12",
                 'up': "---",
                 'down': "---",
                 'left': "---",
@@ -660,9 +660,9 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('puae_video_resolution', '"auto"')
         # Crop Mode
         if system.isOptSet('crop_mode') and system.config['crop_mode'] != 'automatic':
-            coreSettings.save('puae_crop_mode', system.config['crop_mode'])
+            coreSettings.save('puae_crop', system.config['crop_mode'])
         else:
-            coreSettings.save('puae_crop_mode', '"auto"')
+            coreSettings.save('puae_crop', '"auto"')
         # Frameskip
         if system.isOptSet('gfx_framerate'):
             coreSettings.save('puae_gfx_framerate', system.config['gfx_framerate'])
@@ -737,7 +737,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                     'statusbar': "RETROK_F11",
                     'vkbd': "---",
                     'reset': "---",
-                    'crop_mode_toggle': "RETROK_F12",
+                    'crop_toggle': "RETROK_F12",
                     'down': "---",
                     'left': "---",
                     'a': "RETROK_DOWN",
@@ -768,7 +768,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                     'statusbar': "RETROK_F11",
                     'vkbd': "---",
                     'reset': "---",
-                    'crop_mode_toggle': "RETROK_F12",
+                    'crop_toggle': "RETROK_F12",
                     'down': "---",
                     'left': "---",
                     'a': "---",
@@ -799,7 +799,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                     'statusbar': "RETROK_F11",
                     'vkbd': "---",
                     'reset': "---",
-                    'crop_mode_toggle': "RETROK_F12",
+                    'crop_toggle': "RETROK_F12",
                     'down': "RETROK_DOWN",
                     'left': "RETROK_LALT",
                     'a': "RETROK_RALT",
@@ -830,7 +830,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                     'statusbar': "RETROK_F11",
                     'vkbd': "---",
                     'reset': "---",
-                    'crop_mode_toggle': "RETROK_F12",
+                    'crop_toggle': "RETROK_F12",
                     'up': "---",
                     'down': "---",
                     'left': "---",
@@ -864,7 +864,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                 'statusbar': "RETROK_F11",
                 'vkbd': "---",
                 'reset': "---",
-                'crop_mode_toggle': "RETROK_F12",
+                'crop_toggle': "RETROK_F12",
                 'up': "---",
                 'down': "---",
                 'left': "---",
@@ -939,9 +939,9 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('puae2021_video_resolution', '"auto"')
         # Crop Mode
         if system.isOptSet('crop_mode') and system.config['crop_mode'] != 'automatic':
-            coreSettings.save('puae2021_crop_mode', system.config['crop_mode'])
+            coreSettings.save('puae2021_crop', system.config['crop_mode'])
         else:
-            coreSettings.save('puae2021_crop_mode', '"auto"')
+            coreSettings.save('puae2021_crop', '"auto"')
         # Frameskip
         if system.isOptSet('gfx_framerate'):
             coreSettings.save('puae2021_gfx_framerate', system.config['gfx_framerate'])
