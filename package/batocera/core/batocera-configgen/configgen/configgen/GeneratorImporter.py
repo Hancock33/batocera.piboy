@@ -327,13 +327,13 @@ def getGenerator(emulator):
         from generators.rpcs3.rpcs3Generator import Rpcs3Generator
         return Rpcs3Generator()
 
-    if emulator == 'rtcw':
-        from generators.rott.rottGenerator import RottGenerator
-        return RtcwGenerator()
-
     if emulator == 'rott':
-        from generators.rtcw.rtcwGenerator import RtcwGenerator
+        from generators.rott.rottGenerator import RottGenerator
         return RottGenerator()
+
+    if emulator == 'rtcw':
+        from generators.rtcw.rtcwGenerator import RtcwGenerator
+        return RtcwGenerator()
 
     if emulator == 'ruffle':
         from generators.ruffle.ruffleGenerator import RuffleGenerator
