@@ -64,11 +64,11 @@ def getGenerator(emulator):
         return DaphneGenerator()
 
     if emulator == 'demul':
-        from generators.devilutionx.devilutionxGenerator import DevilutionXGenerator
+        from generators.demul.demulGenerator import DemulGenerator
         return DemulGenerator()
 
     if emulator == 'devilutionx':
-        from generators.demul.demulGenerator import DemulGenerator
+        from generators.devilutionx.devilutionxGenerator import DevilutionXGenerator
         return DevilutionXGenerator()
 
     if emulator == 'dolphin':
