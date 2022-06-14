@@ -3,8 +3,8 @@
 # Space Cadet Pinball
 #
 ################################################################################
-# Version: Commits on Jun 01, 2022
-SPACECADETPINBALL_VERSION = 8017734de40523e9f1a5689fbb9de5a0eefde5d2
+# Version: Commits on Jun 14, 2022
+SPACECADETPINBALL_VERSION = 5e42f37fba93477e3323eb4c10026a0d810d4309
 SPACECADETPINBALL_SITE = $(call github,k4zmu2a,SpaceCadetPinball,$(SPACECADETPINBALL_VERSION))
 
 SPACECADETPINBALL_DEPENDENCIES = sdl2 sdl2_mixer
