@@ -3,16 +3,22 @@
 # MELONDS
 #
 ################################################################################
-# Version: Commits on May 13, 2022
-MELONDS_VERSION = 4cc34121b0db2cf77541014271af8d79fed35f26
+# Version: Commits on Jun 01, 2022
+MELONDS_VERSION = 35cbda900190ef05fd3df2fa2950657d25b654b6
 MELONDS_SITE = https://github.com/Arisotura/melonDS.git
 MELONDS_SITE_METHOD=git
 MELONDS_GIT_SUBMODULES=YES
 MELONDS_LICENSE = GPLv2
-MELONDS_DEPENDENCIES = sdl2 qt5base slirp
+MELONDS_DEPENDENCIES = sdl2 slirp
 
 # Should be set when the package cannot be built inside the source tree but needs a separate build directory.
 MELONDS_SUPPORTS_IN_SOURCE_BUILD = NO
+
+ifeq ($(BR2_PACKAGE_BATOCERA_RPI4_WITH_XORG),y)
+	MELONDS_CONF_OPTS += -DBUILD_QT_SDL=OFF
+else
+	MELONDS_DEPENDENCIES += qt5base
+endif
 
 MELONDS_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 

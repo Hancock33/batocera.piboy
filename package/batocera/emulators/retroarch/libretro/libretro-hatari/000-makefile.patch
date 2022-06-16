@@ -1,6 +1,8 @@
---- a/Makefile.libretro	2021-01-23 16:29:22.070372812 +0100
-+++ b/Makefile.libretro	2021-01-23 16:29:53.150371703 +0100
-@@ -4,6 +4,13 @@
+diff --git a/Makefile.libretro b/Makefile.libretro
+index 39c5647c..2ed58f80 100755
+--- a/Makefile.libretro
++++ b/Makefile.libretro
+@@ -4,6 +4,13 @@ ZLIB_DIR = $(LIBRETRO_DIR)/utils/zlib
  STATIC_LINKING=0
  STATIC_LINKING_LINK=0
  
@@ -14,7 +16,7 @@
  ifeq ($(platform),)
  platform = unix
  ifeq ($(shell uname -a),)
-@@ -73,6 +80,22 @@
+@@ -73,6 +80,22 @@ else ifeq ($(platform), classic_armv7_a7)
  	endif
  #######################################
  
@@ -37,7 +39,7 @@
  else ifeq ($(platform), osx)
  	TARGET := $(TARGET_NAME)_libretro.dylib
     fpic := -fPIC
-@@ -191,6 +214,10 @@
+@@ -212,6 +235,10 @@ CFLAGS += -funroll-loops -ffast-math -fomit-frame-pointer -O3
  endif
  CFLAGS += -fsigned-char -D__LIBRETRO__ -fno-builtin
  
@@ -48,7 +50,7 @@
  CFLAGS   += $(fpic) $(PLATFLAGS)
  CXXFLAGS := $(CFLAGS)
  CPPFLAGS := $(CFLAGS)
-@@ -210,11 +237,15 @@
+@@ -231,11 +258,15 @@ OBJECTS := $(SOURCES_C:.c=.o)
  
  all: $(TARGET)
  
