@@ -56,10 +56,6 @@ define LIBRETRO_MAME2003_PLUS_INSTALL_TARGET_CMDS
 	find $(@D)/metadata -maxdepth 1 -iname "*.xml" -print0 | xargs -0 -I{} rm {}
 	cp -r $(@D)/metadata/* \
 		$(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2003-plus
-		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
-	cp -avr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-mame2003-plus/es_systems_arcade.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
-		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade
-	cp -avr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-mame2003-plus/roms/arcade/* $(TARGET_DIR)/usr/share/batocera/datainit/roms/arcade
 endef
 
 define LIBRETRO_MAME2003_PLUS_NAMCO_QUICK_FIX

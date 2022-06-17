@@ -2427,8 +2427,7 @@ cdi:
   emulators:
     libretro:
       same_cdi: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAME_CDI], incompatible_extensions: [cue, toc, nrg, gdi, cdr] }
-    libretro:
-      mess: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+      mess:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
     mame:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
@@ -4033,19 +4032,750 @@ gp32:
   comment_en: |
           Requires MAME BIOS file gp32.zip
 
-gzdoom:
-  name:         GZDoom
-  manufacturer: Ports
-  release:
-  hardware: port
-  extensions: [wad, iwad, pwad, gz]
-  group: ports
+acclaim:
+  name: Acclaim
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/acclaim
   emulators:
-    gzdoom:
-      gzdoom: { requireAnyOf: [BR2_PACKAGE_GZDOOM] }
-  comment_en: |
-    Put your WAD files in this directory.
-    The gz extension allow you to add customer mods - blah blah (tbd)
-    i.e. Aliens Eradication.gz = -iwad DOOM2.wad -file ALIENS_ERADICATION_TC_2_0.pk3 ERADICATION_MAPSET_2_0.wad
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
-    Additional music can be added to /userdata/system/configs/gzdoom in fm_banks & soundfonts respectively
+alphadenshi:
+  name: Alpha Denshi
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/alphadenshi
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+amcoe:
+  name: Amcoe
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/amcoe
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+alg:
+  name: American Laser Games
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/alg
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+atari:
+  name: Atari
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/atari
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+atlus:
+  name: Atlus
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/atlus
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+banpresto:
+  name: Banpresto
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/banpresto
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+cave:
+  name: Cave
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/cave
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+centurye:
+  name: Centurye
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/centurye
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+cinematronics:
+  name: Cinematronics
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/cinematronics
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+comad:
+  name: Comad
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/comad
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+cps1:
+  name: CPS-I
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/cps1
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+cps2:
+  name: CPS-II
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/cps2
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+cps3:
+  name: CPS-III
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/cps3
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+dataeast:
+  name: Data-East
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/dataeast
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+dynax:
+  name: Dynax
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/dynax
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+eighting:
+  name: Eighting
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/eighting
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+exidy:
+  name: Exidy
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/exidy
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+gaelco:
+  name: Gaelco
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/gaelco
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+gottlieb:
+  name: Gottlieb
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/gottlieb
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+igs:
+  name: IGS
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/igs
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+incredibletech:
+  name: Incredible Tech
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/incredibletech
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+irem:
+  name: Irem
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/irem
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+jaleco:
+  name: Jaleco
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/jaleco
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+kaneko:
+  name: Kaneko
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/kaneko
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+konami:
+  name: Konami
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/konami
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+midway:
+  name: Miday
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/midway
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+mitchell:
+  name: Mitchell
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/mitchell
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+namco:
+  name: Namco
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/namco
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+nichibutsu:
+  name: Nichibutsu
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/nichibutsu
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+nintendo:
+  name: Nintendo
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/nintendo
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+nmk:
+  name: NMK
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/nmk
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+psikyo:
+  name: Psikyo
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/psikyo
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+sammy:
+  name: Sammy
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/sammy
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+sega:
+  name: Sega
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/sega
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+semicom:
+  name: Semicom
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/semicom
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+seta:
+  name: Seta
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/seta
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+snk:
+  name: SNK
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/snk
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+taito:
+  name: Taito
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/taito
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+technos:
+  name: Technos
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/technos
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+tecmo:
+  name: Tecmo
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/tecmo
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+toplan:
+  name: Toplan
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/toplan
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+universal:
+  name: Universal
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/universal
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+visco:
+  name: Visco
+  manufacturer: Arcade 
+  release: 19XX 
+  hardware: arcade
+  extensions: [zip, 7z]
+  platform:   arcade
+  path: /userdata/roms/arcade/visco
+  emulators:
+    libretro:
+      imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
+      mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
+      mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
+      mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
+    mame: 
+      mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
