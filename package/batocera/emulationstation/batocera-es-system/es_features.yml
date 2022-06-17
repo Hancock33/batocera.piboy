@@ -8504,12 +8504,14 @@ drastic:
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         drastic_hires:
+            group: VIDEO SETTINGS
             prompt:      ENHANCED RENDERING RESOLUTION
             description: Enhancement. Double the rendering resolution. Makes 3D objects clearer.
             choices:
                 "Off": 0
                 "On":  1
         drastic_frameskip_type:
+            group: VIDEO SETTINGS
             prompt:      FRAMESKIP TYPE
             description: Skip frames to improve performance, at the cost of choppy motion. Can cause visual glitches.
             choices:
@@ -8517,6 +8519,7 @@ drastic:
                 "Manual":    1
                 "Automatic": 2
         drastic_frameskip_value:
+            group: VIDEO SETTINGS
             prompt:      FRAMESKIP VALUE
             description: When frameskip type is on automatic or manual, skip up to this many frames consecutively.
             choices:
@@ -8530,6 +8533,7 @@ drastic:
                 "8": 8
                 "9": 9
         drastic_threaded:
+            group: VIDEO SETTINGS
             group: ADVANCED OPTIONS
             prompt:      THREADED 3D
             description: Improves performance in 3D games. Can cause glitches.
@@ -8544,6 +8548,7 @@ drastic:
                 "Off": 0
                 "On":  1
         drastic_screen_orientation:
+            group: ADVANCED OPTIONS
             prompt:      SCREEN LAYOUT
             description: Arrange the dual screen layout.
             choices:
