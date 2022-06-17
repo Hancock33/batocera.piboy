@@ -12,6 +12,7 @@ ALEPHONE_LICENSE = GPLv3
 
 define ALEPHONE_BUILD_CMDS
 	cd $(@D) && \
+	autoreconf -f -i && \
 	PATH=$(BR_PATH) ./configure --disable-sdltest \
 	                            --with-sdl-prefix="$(STAGING_DIR)/usr" \
 	                            --with-boost="$(STAGING_DIR)/usr" \
