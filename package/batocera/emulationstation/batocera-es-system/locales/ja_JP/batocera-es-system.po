@@ -2378,6 +2378,11 @@ msgctxt "game_options"
 msgid "EXTENDED SCREEN"
 msgstr "拡張画面"
 
+#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
+msgctxt "game_options"
+msgid "ADVANCED OPTIONS"
+msgstr "詳細設定"
+
 #. TRANSLATION: libretro/mame, mame/wasm4, mame/wasm4
 msgctxt "game_options"
 msgid "Controls for 5/6 button games and other unique controls"
@@ -2443,12 +2448,32 @@ msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "使用する (標準)"
 
+#. TRANSLATION: libretro/mame, mame/wasm4
+msgctxt "game_options"
+msgid "Play a coin drop sound effect when an insert coin button is pressed"
+msgstr ""
+
+#. TRANSLATION: libretro/mame, mame/wasm4
+msgctxt "game_options"
+msgid "COIN SOUND PLUGIN"
+msgstr ""
+
+#. TRANSLATION: libretro/mame, duckstation, flycast/wasm4, mame/wasm4, mame
+msgctxt "game_options"
+msgid "Enabled"
+msgstr ""
+
+#. TRANSLATION: libretro/mame, duckstation, mame/wasm4, mame
+msgctxt "game_options"
+msgid "Disabled (Default)"
+msgstr ""
+
 #. TRANSLATION: libretro/mame, libretro/mess, libretro/mamevirtual
 msgctxt "game_options"
 msgid ""
 "Use the same art paths as standalone MAME - not recommended if using "
-"decoarations or shaders."
-msgstr "「MAME」と同じartworkパスを使用します(シェーダーを使う場合は不可)"
+"decorations or shaders."
+msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mess, libretro/mamevirtual
 msgctxt "game_options"
@@ -2480,36 +2505,6 @@ msgstr "MAMEメニューからシステム設定の変更を可能にします"
 msgctxt "game_options"
 msgid "CUSTOM MAME CONFIG"
 msgstr "MAME カスタム構成"
-
-#. TRANSLATION: libretro/mame, libretro/same_cdi, libretro/mess, libretro/mamevirtual, mame
-msgctxt "game_options"
-msgid "If the D-Pad is oriented incorrectly for your controller."
-msgstr "方向パッドが正しい方向にいかない場合に選択します"
-
-#. TRANSLATION: libretro/mame, libretro/same_cdi, libretro/mess, libretro/mamevirtual, mame
-msgctxt "game_options"
-msgid "ALT DPAD MODE"
-msgstr "ALT DPAD モード"
-
-#. TRANSLATION: libretro/mame, libretro/same_cdi, libretro/mess, libretro/mess, libretro/mamevirtual, ...
-msgctxt "game_options"
-msgid "Off (Default)"
-msgstr "使用しない (標準)"
-
-#. TRANSLATION: libretro/mame, libretro/same_cdi, libretro/mess, libretro/mamevirtual, mame
-msgctxt "game_options"
-msgid "DS3 Orientation"
-msgstr "デュアルショック3 構成"
-
-#. TRANSLATION: libretro/mame, libretro/same_cdi, libretro/mess, libretro/mamevirtual, mame
-msgctxt "game_options"
-msgid "X360 Orientation"
-msgstr "X360 構成"
-
-#. TRANSLATION: libretro/same_cdi, libretro/same_cdi, libretro/same_cdi, libretro/mess, libretro/mess, ...
-msgctxt "game_options"
-msgid "ADVANCED OPTIONS"
-msgstr "詳細設定"
 
 #. TRANSLATION: libretro/mess, libretro/mess, libretro/mess, libretro/mess, libretro/mess, ...
 msgctxt "game_options"
@@ -3092,6 +3087,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "ADD USER DISK"
 msgstr ""
+
+#. TRANSLATION: libretro/mess, libretro/mamevirtual, cemu, flycast/wasm4, flycast/wasm4, ...
+msgctxt "game_options"
+msgid "Off (Default)"
+msgstr "使用しない (標準)"
 
 #. TRANSLATION: libretro/mess, mame/wasm4
 msgctxt "game_options"
@@ -6933,16 +6933,6 @@ msgctxt "game_options"
 msgid "SHOW OSD MESSAGES"
 msgstr ""
 
-#. TRANSLATION: duckstation, mame/wasm4, mame
-msgctxt "game_options"
-msgid "Disabled (Default)"
-msgstr ""
-
-#. TRANSLATION: duckstation, flycast/wasm4, mame/wasm4, mame
-msgctxt "game_options"
-msgid "Enabled"
-msgstr ""
-
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Interpreter is the most accurate, but is the slowest."
@@ -8831,16 +8821,6 @@ msgctxt "game_options"
 msgid "Interton VC 4000 cartridges"
 msgstr ""
 
-#. TRANSLATION: mame/wasm4
-msgctxt "game_options"
-msgid "Play a coin drop sound effect when an insert coin button is pressed"
-msgstr ""
-
-#. TRANSLATION: mame/wasm4
-msgctxt "game_options"
-msgid "COIN SOUND PLUGIN"
-msgstr ""
-
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "BGFX for post-processing, accel/opengl for raw image."
@@ -9655,6 +9635,28 @@ msgstr ""
 msgctxt "game_options"
 msgid "USE COMPUTE SHADER"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use the same art paths as standalone MAME - not recommended if using "
+#~ "decoarations or shaders."
+#~ msgstr "「MAME」と同じartworkパスを使用します(シェーダーを使う場合は不可)"
+
+#~ msgctxt "game_options"
+#~ msgid "If the D-Pad is oriented incorrectly for your controller."
+#~ msgstr "方向パッドが正しい方向にいかない場合に選択します"
+
+#~ msgctxt "game_options"
+#~ msgid "ALT DPAD MODE"
+#~ msgstr "ALT DPAD モード"
+
+#~ msgctxt "game_options"
+#~ msgid "DS3 Orientation"
+#~ msgstr "デュアルショック3 構成"
+
+#~ msgctxt "game_options"
+#~ msgid "X360 Orientation"
+#~ msgstr "X360 構成"
 
 #~ msgctxt "game_options"
 #~ msgid "Fix main 2D screen to follow action."
