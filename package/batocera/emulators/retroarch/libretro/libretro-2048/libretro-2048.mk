@@ -17,6 +17,9 @@ endef
 define LIBRETRO_2048_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/2048_libretro.so \
 		$(TARGET_DIR)/usr/lib/libretro/2048_libretro.so
+	# install media
+    mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/2048
+	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-2048/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/2048/
 endef
 
 $(eval $(generic-package))

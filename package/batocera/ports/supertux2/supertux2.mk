@@ -40,6 +40,9 @@ SUPERTUX2_POST_PATCH_HOOKS += SUPERTUX2_REMOVE_PEDANTIC
 endif
 
 define SUPERTUX2_EVMAP
+	# install media
+    mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2
+	touch $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2/SuperTux2.game
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/supertux2/supertux2.keys $(TARGET_DIR)/usr/share/evmapy

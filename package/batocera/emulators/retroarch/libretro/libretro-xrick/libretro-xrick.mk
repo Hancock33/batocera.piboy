@@ -15,6 +15,9 @@ endef
 define LIBRETRO_XRICK_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/xrick_libretro.so \
     $(TARGET_DIR)/usr/lib/libretro/xrick_libretro.so
+	# install media
+    mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/xrick
+	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-xrick/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/xrick/
 endef
 
 $(eval $(generic-package))

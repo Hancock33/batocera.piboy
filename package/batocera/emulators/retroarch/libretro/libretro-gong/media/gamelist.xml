@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./pong.game</path>
+    <name>Gong</name>
+    <desc>Gong is a basic simulation of the racket sport of table tennis. A small square representing a ping pong ball travels across the screen in a linear trajectory. If the square strikes the perimeter of the playing field, or one of the simulated paddles, the square ricochets based on the angle of the impact. 
+ 
+Game play consists of players moving their respective paddles vertically to defend their scoring zones. Players score one point by maneuvering the square past their opponent's paddle. 
+ 
+Pong can be played either by a single player pitted against a computerized opponent, or by two players each controlling a paddle. 
+ 
+Scoring went up to 21 pts.</desc>
+    <rating>0.9</rating>
+    <releasedate>19720101T000000</releasedate>
+    <publisher>Atari</publisher>
+    <genre>Action / Breakout games-Action</genre>
+    <players>1-2</players>
+    <image>./images/pong.png</image>
+    <video>./videos/pong.mp4</video>
+    <genreid>256</genreid>
+  </game>
+</gameList>

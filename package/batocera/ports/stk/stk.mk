@@ -35,7 +35,6 @@ define STK_ROMS_DIR
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stk/stk.keys $(TARGET_DIR)/usr/share/evmapy
-
 endef
 
 STK_POST_INSTALL_TARGET_HOOKS += STK_ROMS_DIR

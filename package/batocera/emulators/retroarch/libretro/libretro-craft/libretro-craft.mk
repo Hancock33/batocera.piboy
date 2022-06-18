@@ -40,6 +40,9 @@ endef
 define LIBRETRO_CRAFT_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/craft_libretro.so \
 		$(TARGET_DIR)/usr/lib/libretro/craft_libretro.so
+	# install media
+    mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/craft
+	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-craft/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/craft/
 endef
 
 $(eval $(generic-package))

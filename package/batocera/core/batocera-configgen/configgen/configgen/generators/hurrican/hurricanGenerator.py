@@ -8,7 +8,7 @@ import controllersConfig
 class HurricanGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ["hurrican"]
+        commandArray = ["hurrican", "--pathsave", "/userdata/saves/hurrican/"]
         os.chdir(os.path.dirname(os.path.abspath(rom)))
 
         if system.isOptSet("hurrican_crt"):

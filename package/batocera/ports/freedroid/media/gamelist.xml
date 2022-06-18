@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./paradroid.game</path>
+    <name>Paradroid</name>
+    <desc>Paradroid is a top view shoot-em-up set aboard eight large space freighters filled with droids. After going through a storm in space, the rays affected the droids and they malfunctioned and killed the crew.
+
+You now have to destroy all the droids on the fleet of eight ships.  You control an "Influence Device" which can temporarily control other droids and use their weapons to destroy the others. When your power is low or your damage is high, you will need to transfer to another droid or risk losing your Influence Device.
+
+There was also an updated version called Heavy Metal Paradroid released in 1986 and Paradroid 90 (for the Amiga) released in 1990.</desc>
+    <rating>0.75</rating>
+    <releasedate>19850101T000000</releasedate>
+    <developer>Hewson</developer>
+    <publisher>Graftgold</publisher>
+    <genre>Action-Puzzle-Game</genre>
+    <players>1</players>
+    <image>./images/paradroid.png</image>
+    <genreid>2816</genreid>
+  </game>
+</gameList>

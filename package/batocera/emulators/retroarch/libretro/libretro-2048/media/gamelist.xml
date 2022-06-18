@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./2048.game</path>
+    <name>2048</name>
+    <desc>2048 is a single-player sliding block puzzle game designed by the Italian web developer Gabriele Cirulli. The game's objective is to slide numbered tiles on a grid to combine them to create a tile with the number 2048. However, one can continue to play the game after reaching the goal, creating tiles with larger numbers</desc>
+    <rating>0.6</rating>
+    <releasedate>20140301T000000</releasedate>
+    <developer>Gabriele Cirulli</developer>
+    <publisher>Libretro</publisher>
+    <genre>Puzzle-Game-Puzzle-Game / Glide</genre>
+    <image>./images/2048.png</image>
+    <genreid>2816</genreid>
+  </game>
+</gameList>

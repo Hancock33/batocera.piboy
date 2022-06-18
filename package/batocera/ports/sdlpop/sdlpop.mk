@@ -26,6 +26,10 @@ define SDLPOP_INSTALL_TARGET_CMDS
 	echo "# Blank cfg file for advanced configuration" > \
 	    $(TARGET_DIR)/usr/share/sdlpop/cfg/SDLPoP.cfg
 	cp -pr $(@D)/data $(TARGET_DIR)/usr/share/sdlpop/
+	# install media
+    mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/sdlpop
+	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sdlpop/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/sdlpop/
+	# evmap config
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sdlpop/sdlpop.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
