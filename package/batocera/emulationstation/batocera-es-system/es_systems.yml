@@ -1143,6 +1143,7 @@ sdlpop:
   hardware: port
   extensions: [sdlpop]
   group: ports
+  path: /usr/share/emulationstation/ports/sdlpop 
   emulators:
     sdlpop:
       sdlpop: { requireAnyOf: [BR2_PACKAGE_SDLPOP] }
@@ -2245,6 +2246,7 @@ gong:
   hardware: console
   extensions: [game]
   group: ports
+  path: /usr/share/emulationstation/ports/gong
   emulators:
     libretro:
       gong: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GONG] }
@@ -2895,6 +2897,7 @@ hurrican:
   hardware: port
   extensions: [game]
   group: ports
+  path: /usr/share/emulationstation/ports/hurrican
   emulators:
     hurrican:
       hurrican: { requireAnyOf: [BR2_PACKAGE_HURRICAN] }
@@ -2910,6 +2913,7 @@ hcl:
   hardware: port
   extensions: [game]
   group: ports
+  path: /usr/share/emulationstation/ports/hcl
   emulators:
     hcl:
       hcl: { requireAnyOf: [BR2_PACKAGE_HCL] }
@@ -2935,6 +2939,7 @@ abuse:
   hardware: port
   extensions: [game]
   group: ports
+  path: /usr/share/emulationstation/ports/abuse
   emulators:
     abuse:
       abuse: { requireAnyOf: [BR2_PACKAGE_ABUSE] }
@@ -2966,6 +2971,7 @@ xrick:
   hardware: port
   extensions: [zip]
   group: ports
+  path: /usr/share/emulationstation/ports/xrick
   emulators:
     libretro:
       xrick: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_XRICK] }
@@ -3390,6 +3396,7 @@ craft:
   hardware: port
   extensions: [game]
   group: ports
+  path: /usr/share/emulationstation/ports/craft
   emulators:
     libretro:
       craft: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CRAFT] }
@@ -3486,6 +3493,7 @@ freedroid:
   hardware: port
   extensions: [game]
   group: ports
+  path: /usr/share/emulationstation/ports/freedroid
   emulators:
     freedroid:
       freedroid: { requireAnyOf: [BR2_PACKAGE_FREEDROID] }
@@ -3694,6 +3702,7 @@ prototype:
   hardware: port
   extensions: [game]
   group: ports
+  path: /usr/share/emulationstation/ports/prototype
   emulators:
     prototype:
       prototype: { requireAnyOf: [BR2_PACKAGE_PROTOTYPE] }
@@ -3837,6 +3846,7 @@ stuntcar:
   hardware: port
   extensions: [game]
   group: ports
+  path: /usr/share/emulationstation/ports/stuntcar
   emulators:
     stuntcar:
       stuntcar: { requireAnyOf: [BR2_PACKAGE_STUNTCAR] }
@@ -3863,6 +3873,7 @@ superflappybirds:
   hardware: port
   extensions: [game]
   group: ports
+  path: /usr/share/emulationstation/ports/superflappybirds
   emulators:
     libretro:
       superflappybirds: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SUPERFLAPPYBIRDS] }
@@ -3878,6 +3889,7 @@ supertux2:
   hardware: port
   extensions: [game]
   group: ports
+  path: /usr/share/emulationstation/ports/supertux2
   emulators:
     supertux2:
       supertux2: { requireAnyOf: [BR2_PACKAGE_SUPERTUX2] }
@@ -3924,6 +3936,7 @@ twentyfourtyeight:
   hardware: port
   extensions: [game]
   group: ports
+  path: /usr/share/emulationstation/ports/2048
   emulators:
     libretro:
       '2048': { requireAnyOf: [BR2_PACKAGE_LIBRETRO_2048] }

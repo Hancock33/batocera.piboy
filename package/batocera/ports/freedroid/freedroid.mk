@@ -24,6 +24,9 @@ define FREEDROID_INSTALL_TARGET_CMDS
 		STRIP=/bin/true \
 		DESTDIR=$(TARGET_DIR) \
 		install
+
+    mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/freedroid
+	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/freedroid/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/freedroid/
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/freedroid/freedroid.keys $(TARGET_DIR)/usr/share/evmapy

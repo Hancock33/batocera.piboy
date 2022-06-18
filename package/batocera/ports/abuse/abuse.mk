@@ -17,6 +17,11 @@ define ABUSE_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/data/* $(TARGET_DIR)/usr/share/abuse
 	rm $(TARGET_DIR)/usr/share/abuse/CMakeLists.txt
 	rm $(TARGET_DIR)/usr/share/abuse/READMD.md
+	# install media
+    mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/abuse
+	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/abuse/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/abuse/
+    # evmap config
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/abuse/abuse.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 

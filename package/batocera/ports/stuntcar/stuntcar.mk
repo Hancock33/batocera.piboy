@@ -32,6 +32,9 @@ define STUNTCAR_INSTALL_TARGET_CMDS
     cp -av $(@D)/Sounds $(TARGET_DIR)/usr/share/stuntcar/
     cp -av $(@D)/Tracks $(TARGET_DIR)/usr/share/stuntcar/
 	cp -av $(@D)/DejaVuSans-Bold.ttf $(TARGET_DIR)/usr/share/stuntcar/
+	# install media
+    mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/stuntcar
+	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stuntcar/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/stuntcar/
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stuntcar/stuntcar.keys $(TARGET_DIR)/usr/share/evmapy
