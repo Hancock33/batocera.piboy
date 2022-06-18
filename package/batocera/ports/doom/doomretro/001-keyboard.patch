@@ -7,7 +7,7 @@ index 0574c0f4d..5202f1e25 100644
  #define iwadfolder_default                 "C:\\"
  #else
 -#define iwadfolder_default                 "/"
-+#define iwadfolder_default                 "/userdata/roms/prboom"
++#define iwadfolder_default                 "/userdata/roms/ports/doom"
  #endif
  
  #define joy_analog_default                 true
