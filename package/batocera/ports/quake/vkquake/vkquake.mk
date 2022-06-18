@@ -25,8 +25,8 @@ endef
 
 define VKQUAKE_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/Quake/vkquake $(TARGET_DIR)/usr/bin
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/tyrquake/id1
-	cp -pvr $(@D)/Quake/vkquake.pak $(TARGET_DIR)/usr/share/batocera/datainit/roms/tyrquake/id1
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/quake1/id1
+	cp -pvr $(@D)/Quake/vkquake.pak $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/quake1/id1
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/vkquake/{id1,dopa,hipnotic,rogue}
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/vkquake/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/vkquake/id1
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/vkquake/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/vkquake/dop

@@ -14,8 +14,8 @@ YROGUE_SUPPORTS_IN_SOURCE_BUILD = NO
 YROGUE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 
 define YROGUE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/yquake2/rogue
-	cp -pvr $(@D)/buildroot-build/Release/* $(TARGET_DIR)/usr/share/batocera/datainit/roms/yquake2/rogue
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/quake2/rogue
+	cp -pvr $(@D)/buildroot-build/Release/* $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/quake2/rogue
 endef
 
 $(eval $(cmake-package))
