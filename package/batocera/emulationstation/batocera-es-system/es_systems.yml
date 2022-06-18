@@ -3449,6 +3449,7 @@ eduke32:
   hardware: port
   extensions: [grp]
   group: eduke32
+  path: /userdata/roms/ports/eduke32
   emulators:
     eduke32:
       eduke32: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
@@ -3460,17 +3461,19 @@ etekwar:
   hardware: port
   extensions: [pk3]
   group: eduke32
+  path: /userdata/roms/ports/etekwar
   emulators:
     etekwar:
       etekwar: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
 
 witchaven:
   name:       Witchaven
-  manufacturer: Ports
+  manufacturer: Ports (eDuke Engine)
   release: 1995
   hardware: port
   extensions: [pk3]
   group: ports
+  path: /userdata/roms/ports/witchaven
   emulators:
     witchaven:
       witchaven: { requireAnyOf: [BR2_PACKAGE_WITCHAVEN] }
@@ -3516,6 +3519,7 @@ ionfury:
   hardware: port
   extensions: [grp]
   group: eduke32
+  path: /userdata/roms/ports/ionfury
   emulators:
     ionfury:
       ionfury: { requireAnyOf: [BR2_PACKAGE_IONFURY] }
@@ -3576,7 +3580,9 @@ nblood:
   release: 1997
   hardware: port
   extensions: [pk3]
+  path: /userdata/roms/ports/nblood
   group: eduke32
+  
   emulators:
     nblood:
       nblood: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
@@ -3669,6 +3675,7 @@ pcexhumed:
   hardware: port
   extensions: [mov]
   group: eduke32
+  path: /userdata/roms/ports/pcexhumed
   emulators:
     pcexhumed:
       pcexhumed: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
@@ -3780,6 +3787,7 @@ rednukem:
   hardware: port
   extensions: [grp]
   group: eduke32
+  path: /userdata/roms/ports/rednukem
   emulators:
     rednukem:
       rednukem: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
@@ -3985,6 +3993,7 @@ voidsw:
   hardware: port
   extensions: [grp]
   group: eduke32
+  path: /userdata/roms/ports/voidsw
   emulators:
     voidsw:
       voidsw: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }

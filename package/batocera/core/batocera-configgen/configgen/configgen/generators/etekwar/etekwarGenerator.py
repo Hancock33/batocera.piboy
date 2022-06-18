@@ -1,14 +1,15 @@
 #!/usr/bin/env python
-
+import os
+from os import path
 import Command
 from generators.Generator import Generator
 import controllersConfig
-
 
 class EtekwarGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["etekwar", rom]
+        os.chdir(os.path.dirname(os.path.abspath(rom)))
 
         return Command.Command(
             array=commandArray,
