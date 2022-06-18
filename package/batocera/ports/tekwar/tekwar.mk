@@ -24,8 +24,8 @@ endef
 define TEKWAR_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/tekwar -D $(TARGET_DIR)/usr/bin/etekwar
 	# make rom path
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/etekwar
-	cp $(@D)/data/*.dat $(TARGET_DIR)/usr/share/batocera/datainit/roms/etekwar/
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/etekwar
+	cp $(@D)/data/*.dat $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/etekwar/
 
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

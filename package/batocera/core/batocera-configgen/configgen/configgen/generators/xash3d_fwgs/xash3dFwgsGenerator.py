@@ -9,7 +9,7 @@ import Command
 from generators.Generator import Generator
 import controllersConfig
 
-_ROMS_DIR = '/userdata/roms/xash3d_fwgs'
+_ROMS_DIR = '//userdata/roms/ports/xash3d_fwgs'
 
 _HLSDK_LIBS_DIR = '/usr/lib/xash3d/hlsdk'
 
@@ -91,7 +91,7 @@ class Xash3dFwgsGenerator(Generator):
         server_lib = _get_server_lib_basename_from_liblist_gam(game)
 
         # Useful options for debugging:
-        # -log        # Log to /userdata/roms/xash3d_fwgs/engine.log
+        # -log        # Log to //userdata/roms/ports/xash3d_fwgs/engine.log
         # -dev 2      # Verbose logging
         # -ref gles2  # Select a specific renderer (gl, gl4es, gles1, gles2, soft)
         commandArray = ['/usr/lib/xash3d/xash3d', '-fullscreen', '-dev']

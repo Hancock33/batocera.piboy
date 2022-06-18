@@ -8,8 +8,8 @@ import os
 class BermudaGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        os.chdir("/userdata/roms/bermuda")
-        commandArray = ["bermuda", "--datapath=/userdata/roms/bermuda", "--savepath=/userdata/saves/bermuda"]
+        os.chdir("/userdata/roms/ports/bermuda")
+        commandArray = ["bermuda", "--datapath=/userdata/roms/ports/bermuda", "--savepath=/userdata/saves/bermuda"]
 
         if system.isOptSet("bermuda_aspect"):
             if system.config['bermuda_aspect'] == '1':

@@ -8,7 +8,7 @@ import os
 class BbjaGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ["bbja", "--datapath=/userdata/roms/bbja"]
+        commandArray = ["bbja", "--datapath=/userdata/roms/ports/bbja"]
 
         return Command.Command(
             array=commandArray,

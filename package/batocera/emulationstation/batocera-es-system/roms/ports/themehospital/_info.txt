@@ -1,0 +1,5 @@
+## SYSTEM THEME HOSPITAL ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".game"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".game"

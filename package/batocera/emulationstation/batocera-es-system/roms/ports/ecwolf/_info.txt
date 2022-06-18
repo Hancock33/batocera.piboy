@@ -1,0 +1,5 @@
+## SYSTEM ECWOLF ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".ecwolf .pk3 .zip .7z .exe .squashfs"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".ecwolf .pk3 .zip .7z .exe .squashfs"

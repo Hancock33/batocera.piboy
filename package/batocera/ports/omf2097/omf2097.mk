@@ -21,8 +21,8 @@ else
 endif
 
 define OMF2097_INSTALL_BOOT_PIBOY
- 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/omf2097
-    mv $(TARGET_DIR)/usr/share/games/openomf/openomf.bk $(TARGET_DIR)/usr/share/batocera/datainit/roms/omf2097
+ 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/omf2097
+    mv $(TARGET_DIR)/usr/share/games/openomf/openomf.bk $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/omf2097
     rm -r $(TARGET_DIR)/usr/share/games/openomf
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
@@ -30,8 +30,8 @@ define OMF2097_INSTALL_BOOT_PIBOY
 endef
 
 define OMF2097_INSTALL_BOOT_X86
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/omf2097
-    mv $(TARGET_DIR)/usr/share/games/openomf/openomf.bk $(TARGET_DIR)/usr/share/batocera/datainit/roms/omf2097
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/omf2097
+    mv $(TARGET_DIR)/usr/share/games/openomf/openomf.bk $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/omf2097
     rm -r $(TARGET_DIR)/usr/share/games/openomf
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

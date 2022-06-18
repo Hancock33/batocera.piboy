@@ -6,7 +6,7 @@ index 02ac9f8..a23ab28 100644
  
      cacheDir[0] = saveDir[0] = contentDir[0] = 0;
  
-+    strcpy(contentDir,  "/userdata/roms/openlara/");
++    strcpy(contentDir,  "/userdata/roms/ports/openlara/");
 +
      const char *home;
      if (!(home = getenv("HOME")))
@@ -19,7 +19,7 @@ index ce56353..e248629 100644
  
      SDL_ShowCursor(SDL_DISABLE);
  
-+    strcpy(contentDir,  "/userdata/roms/openlara/");
++    strcpy(contentDir,  "/userdata/roms/ports/openlara/");
 +
      const char *home;
      if (!(home = getenv("HOME")))

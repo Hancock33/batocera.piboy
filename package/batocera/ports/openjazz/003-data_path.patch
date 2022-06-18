@@ -35,7 +35,7 @@ diff -Naur openjazz-8108082394a2ca1007b2444b4099d9f18afcb530.orig/src/main.cpp o
 +//#ifdef DATAPATH
 +//	firstPath = new Path(NULL, createString(DATAPATH));
 +//#else
-+	firstPath = new Path(NULL, createString("/userdata/roms/openjazz"));
++	firstPath = new Path(NULL, createString("/userdata/roms/ports/openjazz"));
 +//#endif
  
  #ifdef __HAIKU__

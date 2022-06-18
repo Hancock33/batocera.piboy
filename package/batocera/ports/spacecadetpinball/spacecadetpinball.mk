@@ -15,7 +15,7 @@ SPACECADETPINBALL_SUPPORTS_IN_SOURCE_BUILD = NO
 SPACECADETPINBALL_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 
 define SPACECADETPINBALL_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/spacecadetpinball
+    mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/spacecadetpinball
 	$(INSTALL) -D $(@D)/bin/SpaceCadetPinball $(TARGET_DIR)/usr/bin
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

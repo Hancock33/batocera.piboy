@@ -1,0 +1,5 @@
+## SYSTEM CAPTAIN CLAW ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".game"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".game"

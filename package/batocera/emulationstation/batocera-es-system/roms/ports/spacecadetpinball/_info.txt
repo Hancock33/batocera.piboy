@@ -1,0 +1,5 @@
+## SYSTEM 3D PINBALL SPACE CADET ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".game"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".game"

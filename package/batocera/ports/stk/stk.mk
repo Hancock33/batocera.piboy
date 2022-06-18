@@ -21,15 +21,15 @@ STK_CONF_OPTS += -DCMAKE_CXX_FLAGS="-DEGL_NO_X11"
 STK_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 
 define STK_ROMS_DIR
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/stk
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/stk
 	mkdir -p $(TARGET_DIR)/usr/share/supertuxkart/data
-	ln -sf /userdata/roms/stk/karts $(TARGET_DIR)/usr/share/supertuxkart/data
-	ln -sf /userdata/roms/stk/library $(TARGET_DIR)/usr/share/supertuxkart/data
-	ln -sf /userdata/roms/stk/models $(TARGET_DIR)/usr/share/supertuxkart/data
-	ln -sf /userdata/roms/stk/music $(TARGET_DIR)/usr/share/supertuxkart/data
-	ln -sf /userdata/roms/stk/sfx $(TARGET_DIR)/usr/share/supertuxkart/data
-	ln -sf /userdata/roms/stk/textures $(TARGET_DIR)/usr/share/supertuxkart/data
-	ln -sf /userdata/roms/stk/tracks $(TARGET_DIR)/usr/share/supertuxkart/data
+	ln -sf /userdata/roms/ports/stk/karts $(TARGET_DIR)/usr/share/supertuxkart/data
+	ln -sf /userdata/roms/ports/stk/library $(TARGET_DIR)/usr/share/supertuxkart/data
+	ln -sf /userdata/roms/ports/stk/models $(TARGET_DIR)/usr/share/supertuxkart/data
+	ln -sf /userdata/roms/ports/stk/music $(TARGET_DIR)/usr/share/supertuxkart/data
+	ln -sf /userdata/roms/ports/stk/sfx $(TARGET_DIR)/usr/share/supertuxkart/data
+	ln -sf /userdata/roms/ports/stk/textures $(TARGET_DIR)/usr/share/supertuxkart/data
+	ln -sf /userdata/roms/ports/stk/tracks $(TARGET_DIR)/usr/share/supertuxkart/data
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/supertuxkart/config-0.10
 	cp  -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stk/*.xml $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/supertuxkart/config-0.10
 	# evmap config

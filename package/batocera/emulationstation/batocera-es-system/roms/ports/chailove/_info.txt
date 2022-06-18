@@ -1,0 +1,5 @@
+## SYSTEM CHAILOVE ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".chailove"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".chailove"

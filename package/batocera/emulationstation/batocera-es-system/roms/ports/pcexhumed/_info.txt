@@ -1,0 +1,5 @@
+## SYSTEM EXHUMED/POWERSLAVE ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".mov"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".mov"

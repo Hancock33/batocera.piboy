@@ -9,8 +9,8 @@ index ee21251..846ecd6 100644
 -    data.rom_path         = pt_config.get("data.rompath", "roms/");  // Path to ROMs
 -    data.res_path         = pt_config.get("data.respath", "res/");   // Path to ROMs
 -    data.save_path        = pt_config.get("data.savepath", "./");    // Path to Save Data
-+    data.rom_path         = "/userdata/roms/cannonball/";       // Path to ROMs
-+    data.res_path         = "/userdata/roms/cannonball/res/";   // Path to ROMs
++    data.rom_path         = "/userdata/roms/ports/cannonball/";       // Path to ROMs
++    data.res_path         = "/userdata/roms/ports/cannonball/res/";   // Path to ROMs
 +    data.save_path        = "/userdata/saves/cannonball/";      // Path to Save Data
      data.crc32            = pt_config.get("data.crc32", 1);
  

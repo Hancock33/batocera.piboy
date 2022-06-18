@@ -1,0 +1,5 @@
+## SYSTEM SHADOW WARRIOR ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".grp"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".grp"

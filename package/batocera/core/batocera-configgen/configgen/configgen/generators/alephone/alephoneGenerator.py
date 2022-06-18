@@ -8,12 +8,12 @@ import controllersConfig
 class AlephoneGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        game = "/userdata/roms/alephone/marathon"
+        game = "/userdata/roms/ports/alephone/marathon"
         if (rom.__contains__("marathon2")):
-            game = "/userdata/roms/alephone/marathon2"
+            game = "/userdata/roms/ports/alephone/marathon2"
 
         if (rom.__contains__("infinity")):
-            game = "/userdata/roms/alephone/infinity"
+            game = "/userdata/roms/ports/alephone/infinity"
 
 
         commandArray = ["alephone", game]

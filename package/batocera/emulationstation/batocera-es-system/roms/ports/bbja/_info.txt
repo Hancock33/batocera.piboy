@@ -1,0 +1,5 @@
+## SYSTEM THE BLUES BROTHERS JUKEBOX ADVENTURE ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".game"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".game"

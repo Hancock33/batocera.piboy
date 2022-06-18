@@ -1,0 +1,5 @@
+## SYSTEM FADE TO BLACK ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".game"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".game"
