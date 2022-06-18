@@ -2950,6 +2950,7 @@ cdogs:
   hardware: port
   extensions: [game]
   group: ports
+  path: /usr/share/emulationstation/ports/cdogs
   emulators:
     cdogs:
       cdogs: { requireAnyOf: [BR2_PACKAGE_CDOGS] }
