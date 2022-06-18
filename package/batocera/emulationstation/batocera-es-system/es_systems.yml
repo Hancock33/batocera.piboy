@@ -1046,6 +1046,7 @@ tyrquake:
   hardware: port
   extensions: [pak]
   group: quake
+  path: /userdata/roms/ports/quake1
   emulators:
     quakespasm:
       quakespasm: { requireAnyOf: [BR2_PACKAGE_QUAKESPASM] }
@@ -1143,7 +1144,7 @@ sdlpop:
   hardware: port
   extensions: [sdlpop]
   group: ports
-  path: /usr/share/emulationstation/ports/sdlpop 
+  path: /usr/share/emulationstation/ports/sdlpop
   emulators:
     sdlpop:
       sdlpop: { requireAnyOf: [BR2_PACKAGE_SDLPOP] }
@@ -2828,6 +2829,7 @@ yquake2:
   hardware: port
   extensions: [game]
   group: quake
+  path: /userdata/roms/ports/quake2
   emulators:
     yquake2:
       yquake2: { requireAnyOf: [BR2_PACKAGE_YQUAKE2] }
@@ -3582,7 +3584,7 @@ nblood:
   extensions: [pk3]
   path: /userdata/roms/ports/nblood
   group: eduke32
-  
+
   emulators:
     nblood:
       nblood: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
@@ -3742,6 +3744,7 @@ quake3:
   hardware: port
   extensions: [game]
   group: quake
+  path: /userdata/roms/ports/quake3
   emulators:
     quake3:
       quake3: { requireAnyOf: [BR2_PACKAGE_QUAKE3] }
@@ -4057,8 +4060,8 @@ gp32:
 
 acclaim:
   name: Acclaim
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4069,13 +4072,13 @@ acclaim:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 alphadenshi:
   name: Alpha Denshi
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4086,13 +4089,13 @@ alphadenshi:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 amcoe:
   name: Amcoe
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4103,13 +4106,13 @@ amcoe:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 alg:
   name: American Laser Games
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4120,13 +4123,13 @@ alg:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 atari:
   name: Atari
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4137,13 +4140,13 @@ atari:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 atlus:
   name: Atlus
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4154,13 +4157,13 @@ atlus:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 banpresto:
   name: Banpresto
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4171,13 +4174,13 @@ banpresto:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 cave:
   name: Cave
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4188,13 +4191,13 @@ cave:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 centurye:
   name: Centurye
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4205,13 +4208,13 @@ centurye:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 cinematronics:
   name: Cinematronics
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4222,13 +4225,13 @@ cinematronics:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 comad:
   name: Comad
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4239,13 +4242,13 @@ comad:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 cps1:
   name: CPS-I
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4256,13 +4259,13 @@ cps1:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 cps2:
   name: CPS-II
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4273,13 +4276,13 @@ cps2:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 cps3:
   name: CPS-III
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4290,13 +4293,13 @@ cps3:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 dataeast:
   name: Data-East
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4307,13 +4310,13 @@ dataeast:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 dynax:
   name: Dynax
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4324,13 +4327,13 @@ dynax:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 eighting:
   name: Eighting
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4341,13 +4344,13 @@ eighting:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 exidy:
   name: Exidy
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4358,13 +4361,13 @@ exidy:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 gaelco:
   name: Gaelco
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4375,13 +4378,13 @@ gaelco:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 gottlieb:
   name: Gottlieb
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4392,13 +4395,13 @@ gottlieb:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 igs:
   name: IGS
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4409,13 +4412,13 @@ igs:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 incredibletech:
   name: Incredible Tech
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4426,13 +4429,13 @@ incredibletech:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 irem:
   name: Irem
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4443,13 +4446,13 @@ irem:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 jaleco:
   name: Jaleco
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4460,13 +4463,13 @@ jaleco:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 kaneko:
   name: Kaneko
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4477,13 +4480,13 @@ kaneko:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 konami:
   name: Konami
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4494,13 +4497,13 @@ konami:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 midway:
   name: Miday
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4511,13 +4514,13 @@ midway:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 mitchell:
   name: Mitchell
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4528,13 +4531,13 @@ mitchell:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 namco:
   name: Namco
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4545,13 +4548,13 @@ namco:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 nichibutsu:
   name: Nichibutsu
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4562,13 +4565,13 @@ nichibutsu:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 nintendo:
   name: Nintendo
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4579,13 +4582,13 @@ nintendo:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 nmk:
   name: NMK
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4596,13 +4599,13 @@ nmk:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 psikyo:
   name: Psikyo
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4613,13 +4616,13 @@ psikyo:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 sammy:
   name: Sammy
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4630,13 +4633,13 @@ sammy:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 sega:
   name: Sega
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4647,13 +4650,13 @@ sega:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 semicom:
   name: Semicom
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4664,13 +4667,13 @@ semicom:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 seta:
   name: Seta
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4681,13 +4684,13 @@ seta:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 snk:
   name: SNK
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4698,13 +4701,13 @@ snk:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 taito:
   name: Taito
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4715,13 +4718,13 @@ taito:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 technos:
   name: Technos
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4732,13 +4735,13 @@ technos:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 tecmo:
   name: Tecmo
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4749,13 +4752,13 @@ tecmo:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 toplan:
   name: Toplan
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4766,13 +4769,13 @@ toplan:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 universal:
   name: Universal
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4783,13 +4786,13 @@ universal:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 visco:
   name: Visco
-  manufacturer: Arcade 
-  release: 19XX 
+  manufacturer: Arcade
+  release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
@@ -4800,5 +4803,5 @@ visco:
       mame078plus:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame0139:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame: 
+    mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
