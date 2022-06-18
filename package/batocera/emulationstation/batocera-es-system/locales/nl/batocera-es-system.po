@@ -9710,6 +9710,14 @@ msgstr ""
 #~ msgstr "Automatisch zoom uitschakelen"
 
 #~ msgctxt "game_options"
+#~ msgid "Fix main 2D screen to follow action."
+#~ msgstr "Fix het hoofd 2D scherm om de actie te volgen."
+
+#~ msgctxt "game_options"
+#~ msgid "FIX 2D SCREEN"
+#~ msgstr "FIX 2D SCHERM"
+
+#~ msgctxt "game_options"
 #~ msgid "Lightgun device must be selected on at least one port."
 #~ msgstr "Lightgun apparaat moet geselecteerd zijn op ten minste een poort."
 

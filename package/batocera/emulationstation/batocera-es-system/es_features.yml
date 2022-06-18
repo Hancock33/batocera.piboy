@@ -1743,6 +1743,7 @@ libretro:
       shared: [autosave]
       cfeatures:
             mame_cpu_overclock:
+                group: ADVANCED OPTIONS
                 prompt:      OVERCLOCK (UNSTABLE)
                 description: Enhancement. Reduces system slowdown. Causes issues in some games.
                 choices:
@@ -1773,7 +1774,6 @@ libretro:
                     "145":            145
                     "150":            150
             mame_altres:
-                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -1799,38 +1799,42 @@ libretro:
                     "Twin Stick with Triggers":     "twinstick"
                     "Rotated 4-Way Stick (Q*Bert)": "qbert"
             hiscoreplugin:
+                group: ADVANCED OPTIONS
                 prompt:      HIGH SCORE PLUGIN
                 description: Emable or disable high score saving
                 choices:
                     "Enabled (Default)": 1
                     "Disabled":          0
+            coindropplugin:
+                group: ADVANCED OPTIONS
+                prompt:      COIN SOUND PLUGIN
+                description: Play a coin drop sound effect when an insert coin button is pressed
+                choices:
+                    "Enabled":            1
+                    "Disabled (Default)": 0
             sharemameart:
+                group: ADVANCED OPTIONS
                 prompt:      SHARE MAME ARTWORK
-                description: Use the same art paths as standalone MAME - not recommended if using decoarations or shaders.
+                description: Use the same art paths as standalone MAME - not recommended if using decorations or shaders.
                 choices:
                     "On (Default)": 1
                     "Off":          0
             artworkcrop:
+                group: ADVANCED OPTIONS
                 prompt:      CROP ARTWORK
                 description: Crop MAME artwork to maximize the game screen and only fill unused space.
                 choices:
                     "On (Default)": 1
                     "Off":          0
             customcfg:
+                group: ADVANCED OPTIONS
                 prompt:      CUSTOM CONFIG
                 description: Use a custom MAME config, do not overwrite config on launch.
                 choices:
                     "On":            1
                     "Off (Default)": 0
-            altdpad:
-                group: CONTROLLER SETTINGS
-                prompt:      ALT DPAD MODE
-                description: If the D-Pad is oriented incorrectly for your controller.
-                choices:
-                    "Off (Default)":    0
-                    "DS3 Orientation":  1
-                    "X360 Orientation": 2
             customcfg:
+                group: ADVANCED OPTIONS
                 prompt:      CUSTOM MAME CONFIG
                 description: Set system-wide controls via MAME menu
                 choices:
@@ -1891,14 +1895,6 @@ libretro:
                 choices:
                     "On":            1
                     "Off (Default)": 0
-            altdpad:
-                group: ADVANCED OPTIONS
-                prompt:      ALT DPAD MODE
-                description: If the D-Pad is oriented incorrectly for your controller.
-                choices:
-                    "Off (Default)":    0
-                    "DS3 Orientation":  1
-                    "X360 Orientation": 2
             customcfg:
                 group: ADVANCED OPTIONS
                 prompt:      CUSTOM MAME CONFIG
@@ -1911,6 +1907,7 @@ libretro:
       shared: [autosave]
       cfeatures:
             mame_cpu_overclock:
+                group: ADVANCED OPTIONS
                 prompt:      OVERCLOCK (UNSTABLE)
                 description: Enhancement. Reduces system slowdown. Causes issues in some games.
                 choices:
@@ -1941,7 +1938,6 @@ libretro:
                     "145":            145
                     "150":            150
             mame_altres:
-                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -1955,32 +1951,28 @@ libretro:
                     "2560x1440":      2560x1440
                     "3840x2160":      3840x2160
             sharemameart:
+                group: ADVANCED OPTIONS
                 prompt:      SHARE MAME ARTWORK
-                description: Use the same art paths as standalone MAME - not recommended if using decoarations or shaders.
+                description: Use the same art paths as standalone MAME - not recommended if using decorations or shaders.
                 choices:
                     "On (Default)": 1
                     "Off":          0
             artworkcrop:
+                group: ADVANCED OPTIONS
                 prompt:      CROP ARTWORK
                 description: Crop MAME artwork to maximize the game screen and only fill unused space.
                 choices:
                     "On (Default)": 1
                     "Off":          0
             customcfg:
+                group: ADVANCED OPTIONS
                 prompt:      CUSTOM CONFIG
                 description: Use a custom MAME config, do not overwrite config on launch.
                 choices:
                     "On":            1
                     "Off (Default)": 0
-            altdpad:
-                group: CONTROLLER SETTINGS
-                prompt:      ALT DPAD MODE
-                description: If the D-Pad is oriented incorrectly for your controller.
-                choices:
-                    "Off (Default)":    0
-                    "DS3 Orientation":  1
-                    "X360 Orientation": 2
             customcfg:
+                group: ADVANCED OPTIONS
                 prompt:      CUSTOM MAME CONFIG
                 description: Set system-wide controls via MAME menu
                 choices:
@@ -2821,6 +2813,7 @@ libretro:
       shared: [autosave]
       cfeatures:
             mame_cpu_overclock:
+                group: ADVANCED OPTIONS
                 prompt:      OVERCLOCK (UNSTABLE)
                 description: Enhancement. Reduces system slowdown. Causes issues in some games.
                 choices:
@@ -2851,7 +2844,6 @@ libretro:
                     "145":            145
                     "150":            150
             mame_altres:
-                group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
                 choices:
@@ -2865,32 +2857,28 @@ libretro:
                     "2560x1440":      2560x1440
                     "3840x2160":      3840x2160
             sharemameart:
+                group: ADVANCED OPTIONS
                 prompt:      SHARE MAME ARTWORK
-                description: Use the same art paths as standalone MAME - not recommended if using decoarations or shaders.
+                description: Use the same art paths as standalone MAME - not recommended if using decorations or shaders.
                 choices:
                     "On (Default)": 1
                     "Off":          0
             artworkcrop:
+                group: ADVANCED OPTIONS
                 prompt:      CROP ARTWORK
                 description: Crop MAME artwork to maximize the game screen and only fill unused space.
                 choices:
                     "On":            1
                     "Off (Default)": 0
             customcfg:
+                group: ADVANCED OPTIONS
                 prompt:      CUSTOM CONFIG
                 description: Use a custom MAME config, do not overwrite config on launch.
                 choices:
                     "On":            1
                     "Off (Default)": 0
-            altdpad:
-                group: CONTROLLER SETTINGS
-                prompt:      ALT DPAD MODE
-                description: If the D-Pad is oriented incorrectly for your controller.
-                choices:
-                    "Off (Default)":    0
-                    "DS3 Orientation":  1
-                    "X360 Orientation": 2
             customcfg:
+                group: ADVANCED OPTIONS
                 prompt:      CUSTOM MAME CONFIG
                 description: Set system-wide controls via MAME menu
                 choices:
@@ -7396,6 +7384,7 @@ mame:
                 "OpenGL ES":       gles
                 "Vulkan":          vulkan
         bgfxshaders:
+            group: ADVANCED OPTIONS
             prompt:      BGFX VIDEO FILTER
             description: Apply a post-processing effect.
             choices:
@@ -7411,6 +7400,7 @@ mame:
                 "HQ3X":                        hq3x
                 "HQ4X":                        hq4x
         switchres:
+            group: ADVANCED OPTIONS
             prompt:      CRT SWITCHRES
             description: Allows the use of switchres profiles if present.
             choices:
@@ -7424,19 +7414,14 @@ mame:
                 "Rotate 90":       autoror
                 "Rotate 270":      autorol
         artworkcrop:
+            group: ADVANCED OPTIONS
             prompt:      ARTWORK CROP
             description: Crop artwork to only unused space, keeping the game as large as possible.
             choices:
                 "Off (Default)": 0
                 "On":            1
-        altdpad:
-            prompt:      ALT DPAD MODE
-            description: If the D-Pad is oriented incorrectly for your controller.
-            choices:
-                "Off (Default)":    0
-                "DS3 Orientation":  1
-                "X360 Orientation": 2
         customcfg:
+            group: ADVANCED OPTIONS
             prompt:      CUSTOM MAME CONFIG
             description: Set system-wide controls via MAME menu
             choices:
