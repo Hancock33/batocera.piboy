@@ -1,0 +1,5 @@
+## SYSTEM ONE MUST FALL 2097 ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".game"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".game"

@@ -14,7 +14,7 @@ class RaptorGenerator(Generator):
         shutil.copyfile('/usr/share/raptor/SETUP.INI', '/userdata/system/configs/raptor/SETUP.INI')
     
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        os.chdir("/userdata/roms/raptor")
+        os.chdir("/userdata/roms/ports/raptor")
         commandArray = ["raptor"]
 
         return Command.Command(

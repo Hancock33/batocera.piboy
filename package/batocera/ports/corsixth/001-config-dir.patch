@@ -7,7 +7,7 @@ index a301d75f..590c410e 100644
    audio_channels = 2,
    audio_buffer_size = 2048,
 -  theme_hospital_install = [[X:\ThemeHospital\hospital]],
-+  theme_hospital_install = [[/userdata/roms/themehospital]],
++  theme_hospital_install = [[/userdata/roms/ports/themehospital]],
    debug = false,
    DBGp_client_idehost = nil,
    DBGp_client_ideport = nil,
@@ -34,7 +34,7 @@ index a301d75f..590c410e 100644
  --     ingame name on the next row.
  --
 -audio_music = nil -- [[X:\ThemeHospital\Music]]
-+audio_music = nil -- [[/userdata/roms/music]]
++audio_music = nil -- [[/userdata/music]]
  
  ------------------------------- SPECIAL SETTINGS ------------------------------
  -- These settings can only be changed here

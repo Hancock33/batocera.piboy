@@ -46,7 +46,7 @@ index 9b6da98..a105770 100644
  #if (SHAREWARE==0) && (USEHOMEPATH==1)
     char buf[MAX_PATH];
 -   snprintf(buf, MAX_PATH, "%s/.rott/%s", getenv("HOME"), filename);
-+   snprintf(buf, MAX_PATH, "%suserdata/roms/rott/%s", "/", filename);
++   snprintf(buf, MAX_PATH, "%suserdata/roms/ports/rott/%s", "/", filename);
  
     CheckRTLVersion( buf );
     filehandle = SafeOpenRead( buf );
@@ -59,7 +59,7 @@ index 4664c5a..9adc376 100644
  
  #if (SHAREWARE==0) && (USEHOMEPATH==1)
 -        snprintf(filename, MAX_PATH, "%s/RetroPie/roms/ports/rott/%s", getenv("HOME"), _filename);
-+        snprintf(filename, MAX_PATH, "%suserdata/roms/rott/%s", "/", _filename);
++        snprintf(filename, MAX_PATH, "%suserdata/roms/ports/rott/%s", "/", _filename);
  
          filename[sizeof (filename) - 1] = '\0';
          FixFilePath(filename);

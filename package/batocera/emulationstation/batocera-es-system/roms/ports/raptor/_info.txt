@@ -1,0 +1,5 @@
+## SYSTEM RAPTOR CALL OF THE SHADOWS ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".game"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".game"

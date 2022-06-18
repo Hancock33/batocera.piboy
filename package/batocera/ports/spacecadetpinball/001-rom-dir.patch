@@ -15,7 +15,7 @@ index 281dfd1..b970c00 100644
  	"/usr/local/share/SpaceCadetPinball/",
 -	"/usr/share/SpaceCadetPinball/"
 +	"/usr/share/SpaceCadetPinball/",
-+	"/userdata/roms/spacecadetpinball/"
++	"/userdata/roms/ports/spacecadetpinball/"
  	#endif
  };
  

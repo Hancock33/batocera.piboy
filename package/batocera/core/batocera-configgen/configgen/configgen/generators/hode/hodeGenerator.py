@@ -8,8 +8,8 @@ import os
 class HodeGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        os.chdir("/userdata/roms/hode")
-        commandArray = ["hode", "--datapath=/userdata/roms/hode", "--savepath=/userdata/saves/hode"]
+        os.chdir("/userdata/roms/ports/hode")
+        commandArray = ["hode", "--datapath=/userdata/roms/ports/hode", "--savepath=/userdata/saves/hode"]
 
         return Command.Command(
             array=commandArray,

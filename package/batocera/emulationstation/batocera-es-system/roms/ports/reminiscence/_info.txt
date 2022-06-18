@@ -1,0 +1,17 @@
+## SYSTEM REMINISCENCE ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".map .map"
+
+Copy your flashback game into thos folder
+Allowed versions
+- DOS Demo (disk)
+- DOS Full version (disk)
+- DOS Full version (CD)
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".map .map"
+
+Copiez votre jeu flashback ici
+Versions reconnues
+- DOS Demo (disquette)
+- DOS Full version (disquette)
+- DOS Full version (CD)

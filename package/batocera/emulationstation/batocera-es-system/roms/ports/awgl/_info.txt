@@ -1,0 +1,5 @@
+## SYSTEM ANOTHER WORLD ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".game"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".game"

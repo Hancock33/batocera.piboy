@@ -8,7 +8,7 @@ import controllersConfig
 class DevilutionXGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ['devilutionx', '--data-dir', '/userdata/roms/devilutionx',
+        commandArray = ['devilutionx', '--data-dir', '/userdata/roms/ports/devilutionx',
                         '--config-dir', '/userdata/system/configs/devilutionx',
                         '--save-dir', '/userdata/saves/devilutionx']
         if rom.endswith('hellfire.mpq'):

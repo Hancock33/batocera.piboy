@@ -1,0 +1,5 @@
+## SYSTEM STREETS OF RAGE REMAKE ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".dat"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".dat"

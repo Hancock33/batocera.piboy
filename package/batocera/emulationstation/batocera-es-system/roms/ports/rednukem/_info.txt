@@ -1,0 +1,5 @@
+## SYSTEM REDNECK RAMPAGE ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".grp"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".grp"

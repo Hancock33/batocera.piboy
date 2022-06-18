@@ -1,0 +1,5 @@
+## SYSTEM TOMB RAIDER 1 ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".game"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".game"

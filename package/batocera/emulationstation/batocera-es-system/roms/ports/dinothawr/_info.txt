@@ -1,0 +1,9 @@
+## SYSTEM DINOTHAWR ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".game"
+
+This system is a standalone libretro game. No rom required.
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".game"
+
+Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.

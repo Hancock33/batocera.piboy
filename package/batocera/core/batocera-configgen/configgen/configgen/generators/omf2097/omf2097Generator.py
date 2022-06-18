@@ -13,6 +13,6 @@ class Omf2097Generator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'OPENOMF_RESOURCE_DIR' : '/userdata/roms/omf2097',
+                'OPENOMF_RESOURCE_DIR' : '/userdata/roms/ports/omf2097',
                 'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             })

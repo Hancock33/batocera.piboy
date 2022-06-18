@@ -7,7 +7,7 @@ index 76ae1bc..07d5174 100644
          }
  
 -        DataPath = ProgramPath.substr(0, ProgramPath.find_last_of("/")) + SEP + "share";
-+        DataPath = ProgramPath.substr(0, ProgramPath.find_last_of("u")) + SEP + "userdata/roms";
++        DataPath = ProgramPath.substr(0, ProgramPath.find_last_of("u")) + SEP + "userdata/ports/roms";
  
          if (!Suffix.empty()) {
              DataPath += SEP + Suffix;

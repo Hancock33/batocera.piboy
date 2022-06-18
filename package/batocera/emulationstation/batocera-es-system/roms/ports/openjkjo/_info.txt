@@ -1,0 +1,5 @@
+## SYSTEM JEDI OUTCAST ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".game"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".game"

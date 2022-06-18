@@ -8,19 +8,19 @@ import controllersConfig
 class BstoneGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        addon = "/userdata/roms/bstone/SW"
+        addon = "/userdata/roms/ports/bstone/SW"
         gver = "--aog_sw"
 
         if (rom.__contains__("AOG")):
-            addon = "/userdata/roms/bstone/AOG"
+            addon = "/userdata/roms/ports/bstone/AOG"
             gver = "--aog"
 
         if (rom.__contains__("PS")):
-            addon = "/userdata/roms/bstone/PS"
+            addon = "/userdata/roms/ports/bstone/PS"
             gver = "--ps"
 
         if (rom.__contains__("SW")):
-            addon = "/userdata/roms/bstone/SW"
+            addon = "/userdata/roms/ports/bstone/SW"
             gver = "--aog_sw"
 
         commandArray = ["bstone", gver, "--data_dir", addon]

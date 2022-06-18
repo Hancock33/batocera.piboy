@@ -8,7 +8,7 @@ index 83941e0..6ca5206 100644
  
 -char g_data_path[PATH_MAX];
 -char g_setup_path[PATH_MAX];
-+static char g_data_path[256] = "/userdata/roms/raptor/";
++static char g_data_path[256] = "/userdata/roms/ports/raptor/";
 +static char g_setup_path[256] = "/userdata/system/configs/raptor/";
  
  int hasdatapath = 0;
