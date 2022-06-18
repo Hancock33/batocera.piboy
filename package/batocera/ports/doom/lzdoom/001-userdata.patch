@@ -6,7 +6,7 @@ index 99053ea8a7..fd56a77eaa 100644
  		SetSection ("IWADSearch.Directories", true);
  		SetValueForKey ("Path", ".", true);
  		SetValueForKey ("Path", "$DOOMWADDIR", true);
-+		SetValueForKey ("Path", "/userdata/roms/prboom", true);
++		SetValueForKey ("Path", "/userdata/roms/ports/doom", true);
  #ifdef __APPLE__
  		SetValueForKey ("Path", user_docs, true);
  		SetValueForKey ("Path", user_app_support, true);

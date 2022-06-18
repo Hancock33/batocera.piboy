@@ -21,11 +21,12 @@ GZDOOM_CONF_OPTS += -DIMPORT_EXECUTABLES=$(HOST_GZDOOM_BUILDDIR)/ImportExecutabl
 GZDOOM_CONF_OPTS += -DINSTALL_SOUNDFONT_PATH="/usr/share/gzdoom"
 GZDOOM_CONF_OPTS += -DINSTALL_PK3_PATH="/usr/share/gzdoom"
 
-define GZDOOM_KEYS
+define GZDOOM_INSTALL
+	cp $(@D)/buildroot-build/libraries/discordrpc/src/libdiscord-rpc.so $(TARGET_DIR)/usr/lib
 	mv $(TARGET_DIR)/usr/bin/gzdoom $(TARGET_DIR)/usr/share/gzdoom/gzdoom
 endef
 
-GZDOOM_POST_INSTALL_TARGET_HOOKS += GZDOOM_KEYS
+GZDOOM_POST_INSTALL_TARGET_HOOKS += GZDOOM_INSTALL
 
 $(eval $(cmake-package))
 $(eval $(host-cmake-package))

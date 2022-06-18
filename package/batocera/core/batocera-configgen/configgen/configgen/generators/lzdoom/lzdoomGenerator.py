@@ -65,13 +65,13 @@ class LzdoomGenerator(Generator):
             return Command.Command(
                 array=commandArray,
                 env={
-                'DOOMWADDIR': '/userdata/roms/prboom',
+                'DOOMWADDIR': '/userdata/roms/ports/doom',
                 'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             })
         else:
             return Command.Command(
                 array=commandArray,
                 env={
-                'DOOMWADDIR': '/userdata/roms/prboom',
+                'DOOMWADDIR': '/userdata/roms/ports/doom',
                 "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })

@@ -1019,6 +1019,7 @@ prboom:
   hardware: port
   extensions: [wad, iwad, pwad, uwad]
   group: doom
+  path: /userdata/roms/ports/doom
   emulators:
     libretro:
       prboom: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PRBOOM], incompatible_extensions: [uwad] }
@@ -1907,7 +1908,7 @@ ports:
   hardware: port
   extensions: [sh, squashfs]
   group: ports
-  path:       /userdata/roms/ports
+  path:       /userdata/roms/ports/other
   emulators:
     sh:
       sh:  { requireAnyOf: [] }
@@ -3429,6 +3430,7 @@ doom3:
   hardware: port
   extensions: [game]
   group: ports
+  path: /userdata/roms/ports/doom3
   emulators:
     doom3:
       doom3: { requireAnyOf: [BR2_PACKAGE_DOOM3] }
