@@ -43,7 +43,7 @@ BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_5_17=y
 # Kernel
 BR2_LINUX_KERNEL=y
 BR2_LINUX_KERNEL_CUSTOM_TARBALL=y
-BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,8b1b752ff6d22973aebd8e3bfba5ce54f1f4db1b)/8b1b752ff6d22973aebd8e3bfba5ce54f1f4db1b.tar.gz"
+BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,ae9d6dcddecab213816fcd5368af244630808ced)/ae9d6dcddecab213816fcd5368af244630808ced.tar.gz"
 BR2_LINUX_KERNEL_DEFCONFIG="bcmrpi"
 BR2_LINUX_KERNEL_PATCH="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/raspberrypi/linux_patches"
 BR2_LINUX_KERNEL_CONFIG_FRAGMENT_FILES="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/raspberrypi/linux-defconfig-fragment.config"
