@@ -390,7 +390,16 @@ libretro:
                             "On":      enabled
     beetle-saturn:
       features: [netplay, cheevos]
-      shared: [autosave]
+      shared: [autosave, use_guns]
+      cfeatures:
+          beetle-saturn_crosshair:
+                group: LIGHT GUN
+                prompt:      SHOW LIGHT GUN CROSSHAIRS
+                description: Show crosshairs in game
+                choices:
+                    "Cross": "Cross"
+                    "Dot": "Dot"
+                    "Disabled": "Off"
     fmsx:
       features: [netplay, cheevos]
       shared: [rewind, autosave]
@@ -1113,10 +1122,10 @@ libretro:
             fbneo-lightgun-hide-crosshair:
                 group: LIGHT GUN
                 prompt:      SHOW LIGHT GUN CROSSHAIRS
-                description: Light gun device must be selected on at least one port.
+                description: Show crosshairs in game
                 choices:
-                    "Off":                                enabled
-                    "On":                                 disabled
+                    "Off":                                disabled
+                    "On":                                 enabled
       systems:
             neogeo:
                 cfeatures:
@@ -1579,7 +1588,7 @@ libretro:
                     gun_cursor_md:
                         group: LIGHT GUN
                         prompt:      SHOW LIGHT GUN CROSSHAIRS
-                        description: Light gun device must be selected on at least one port.
+                        description: Show crosshairs in game
                         choices:
                             "Off":        disabled
                             "On":         enabled
@@ -1681,7 +1690,7 @@ libretro:
                     gun_cursor_ms:
                         group: LIGHT GUN
                         prompt:      SHOW LIGHT GUN CROSSHAIRS
-                        description: Light gun device must be selected on at least one port.
+                        description: Show crosshairs in game
                         choices:
                             "Off":        disabled
                             "On":         enabled
@@ -3737,7 +3746,7 @@ libretro:
                     "On":         enabled
     pcsx_rearmed:
       features: [cheevos]
-      shared: [autosave]
+      shared: [autosave, use_guns]
       cfeatures:
             show_bios_bootlogo:
                 prompt:      SHOW BIOS BOOTLOGO
@@ -4758,6 +4767,13 @@ libretro:
                 choices:
                     "SNES Gamepad":          1
                     "Konami Justifier (P2)": 772
+            superscope_crosshair:
+                group: LIGHT GUN
+                prompt:      SHOW LIGHT GUN CROSSHAIRS
+                description: Show crosshairs in game
+                choices:
+                    "Off":                                disabled
+                    "On":                                 enabled
     snes9x_next:
       features: [netplay, cheevos]
       shared: [rewind, autosave, use_guns]
@@ -4809,6 +4825,13 @@ libretro:
                     "Super Scope":            260
                     "Konami Justifier":       516
                     "Dual Konami Justifiers": 772
+            superscope_crosshair:
+                group: LIGHT GUN
+                prompt:      SHOW LIGHT GUN CROSSHAIRS
+                description: Show crosshairs in game
+                choices:
+                    "Off":                                disabled
+                    "On":                                 enabled
     supafaust:
       features: [netplay, cheevos]
       shared: [rewind, autosave]
@@ -8687,7 +8710,7 @@ srb2:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 model2emu:
-  shared: [videomode]
+  shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         fakeGouraud:
             prompt:      FAKE GOURAUD
