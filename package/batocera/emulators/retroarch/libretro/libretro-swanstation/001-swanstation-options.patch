@@ -1,5 +1,5 @@
 diff --git a/src/libretro/libretro_core_options.h b/src/libretro/libretro_core_options.h
-index cdfdfe05..b3e1c86e 100644
+index 65ed684b..ce1bffba 100644
 --- a/src/libretro/libretro_core_options.h
 +++ b/src/libretro/libretro_core_options.h
 @@ -80,7 +80,7 @@ struct retro_core_option_v2_category option_cats_us[] = {
@@ -798,21 +798,12 @@ index cdfdfe05..b3e1c86e 100644
        "true"
     },
     {
--      "duckstation_Display.ShowFPS",
-+      "swanstation_Display.ShowFPS",
-       "Display Internal Framerate",
-       NULL,
-       "Shows the internal frame rate at which the game is running.",
-@@ -3473,7 +3473,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
-       "false"
-    },
-    {
 -      "duckstation_Main.ApplyGameSettings",
 +      "swanstation_Main.ApplyGameSettings",
        "Apply Compatibility Settings",
        NULL,
        "Automatically disables enhancements on games which are incompatible.",
-@@ -3487,7 +3487,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3473,7 +3473,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -821,7 +812,7 @@ index cdfdfe05..b3e1c86e 100644
        "Log Level",
        NULL,
        "Sets the level of information logged by the core.",
-@@ -3509,7 +3509,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3495,7 +3495,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "Info"
     },
     {
@@ -830,7 +821,7 @@ index cdfdfe05..b3e1c86e 100644
        "CPU Recompiler ICache",
        NULL,
        "Determines whether the CPU's instruction cache is simulated in the recompiler. Improves accuracy at a small cost "
-@@ -3524,7 +3524,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3510,7 +3510,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -839,7 +830,7 @@ index cdfdfe05..b3e1c86e 100644
        "CPU Recompiler Block Linking",
        NULL,
        "Enables the generated code to directly jump between blocks without going through the "
-@@ -3539,7 +3539,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3525,7 +3525,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -848,7 +839,7 @@ index cdfdfe05..b3e1c86e 100644
        "CPU Recompiler Fast Memory Access",
        NULL,
        "Uses page faults to determine hardware memory accesses at runtime. Can provide a significant performance "
-@@ -3561,7 +3561,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3547,7 +3547,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
  #endif
     },
     {
@@ -857,7 +848,7 @@ index cdfdfe05..b3e1c86e 100644
        "CPU Recompiler Fast Memory Access Rewrite",
        NULL,
        "Enables rewrites when CPU Recompiler Fast Memory Access is enabled. Can provide a measurable speed boost, "
-@@ -3576,7 +3576,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3562,7 +3562,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -866,7 +857,7 @@ index cdfdfe05..b3e1c86e 100644
        "Show VRAM",
        NULL,
        "Shows the entirety of the console's VRAM instead of the display area (debugging feature).",
-@@ -3590,10 +3590,10 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3576,10 +3576,10 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -879,7 +870,7 @@ index cdfdfe05..b3e1c86e 100644
        "Currently only works with the D3D11 & Vulkan renderers.",
        NULL,
        "advanced",
-@@ -3605,7 +3605,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3591,7 +3591,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -888,7 +879,7 @@ index cdfdfe05..b3e1c86e 100644
        "Preload Texture Replacements",
        NULL,
        "Preload VRAM write replacement textures to RAM",
-@@ -3619,7 +3619,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3605,7 +3605,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -897,7 +888,7 @@ index cdfdfe05..b3e1c86e 100644
        "Display Active Start Offset",
        NULL,
        "Pads or crops off lines from the left of the displayed image.",
-@@ -3692,7 +3692,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3678,7 +3678,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "0"
     },
     {
@@ -906,7 +897,7 @@ index cdfdfe05..b3e1c86e 100644
        "Display Active End Offset",
        NULL,
        "Pads or crops off lines from the right of the displayed image.",
-@@ -3765,7 +3765,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3751,7 +3751,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "0"
     },
     {
@@ -915,7 +906,7 @@ index cdfdfe05..b3e1c86e 100644
        "Display Line Start Offset",
        NULL,
        "Pads or crops off lines from the top of the displayed image.",
-@@ -3838,7 +3838,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3824,7 +3824,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "0"
     },
     {
@@ -924,7 +915,7 @@ index cdfdfe05..b3e1c86e 100644
        "Display Line End Offset",
        NULL,
        "Pads or crops off lines from the bottom of the displayed image.",
-@@ -3911,7 +3911,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3897,7 +3897,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "0"
     },
     {
@@ -933,7 +924,7 @@ index cdfdfe05..b3e1c86e 100644
        "PGXP Preserve Projection Precision",
        NULL,
        "Enables additional precision for PGXP. May improve visuals in some games but break others.",
-@@ -3925,7 +3925,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3911,7 +3911,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -942,7 +933,7 @@ index cdfdfe05..b3e1c86e 100644
        "PGXP Geometry Tolerance",
        NULL,
        "Ignores precise positions if the difference exceeds this threshold.",
-@@ -3958,7 +3958,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3944,7 +3944,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "-1.0"
     },
     {
@@ -951,7 +942,7 @@ index cdfdfe05..b3e1c86e 100644
        "Internal Run-Ahead",
        NULL,
        "Simulates the system ahead of time and rolls back/replays to reduce input lag. Has very high system "
-@@ -3982,7 +3982,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3968,7 +3968,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "0"
     },
     {
@@ -961,10 +952,10 @@ index cdfdfe05..b3e1c86e 100644
        NULL,
        "Enabled an additional 6MB of RAM, usually present on dev consoles. Games have to use a "
 diff --git a/src/libretro/libretro_host_interface.cpp b/src/libretro/libretro_host_interface.cpp
-index ab411e70..25b2fe6c 100644
+index 55d40110..c05fadf1 100644
 --- a/src/libretro/libretro_host_interface.cpp
 +++ b/src/libretro/libretro_host_interface.cpp
-@@ -247,7 +247,7 @@ static const char* GetSaveDirectory()
+@@ -246,7 +246,7 @@ static const char* GetSaveDirectory()
  
  std::string LibretroHostInterface::GetSharedMemoryCardPath(u32 slot) const
  {
@@ -973,7 +964,7 @@ index ab411e70..25b2fe6c 100644
                                           GetSaveDirectory(), slot + 1);
  }
  
-@@ -272,9 +272,9 @@ std::string LibretroHostInterface::GetShaderCacheBasePath() const
+@@ -271,9 +271,9 @@ std::string LibretroHostInterface::GetShaderCacheBasePath() const
      }
    }
  
@@ -985,7 +976,7 @@ index ab411e70..25b2fe6c 100644
    if (!FileSystem::DirectoryExists(shader_cache_path.c_str()) &&
        !FileSystem::CreateDirectory(shader_cache_path.c_str(), false))
    {
-@@ -290,7 +290,7 @@ std::string LibretroHostInterface::GetStringSettingValue(const char* section, co
+@@ -289,7 +289,7 @@ std::string LibretroHostInterface::GetStringSettingValue(const char* section, co
                                                           const char* default_value /*= ""*/)
  {
    TinyString name;
@@ -994,7 +985,7 @@ index ab411e70..25b2fe6c 100644
    retro_variable var{name, default_value};
    if (g_retro_environment_callback(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
      return var.value;
-@@ -517,9 +517,9 @@ bool LibretroHostInterface::retro_load_game(const struct retro_game_info* game)
+@@ -500,9 +500,9 @@ bool LibretroHostInterface::retro_load_game(const struct retro_game_info* game)
    {
        case  ConsoleRegion::NTSC_J:
        {
@@ -1006,7 +997,7 @@ index ab411e70..25b2fe6c 100644
           g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
  
           break;
-@@ -527,9 +527,9 @@ bool LibretroHostInterface::retro_load_game(const struct retro_game_info* game)
+@@ -510,9 +510,9 @@ bool LibretroHostInterface::retro_load_game(const struct retro_game_info* game)
  
        case  ConsoleRegion::NTSC_U:
        {
@@ -1018,7 +1009,7 @@ index ab411e70..25b2fe6c 100644
           g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
  
           break;
-@@ -537,9 +537,9 @@ bool LibretroHostInterface::retro_load_game(const struct retro_game_info* game)
+@@ -520,9 +520,9 @@ bool LibretroHostInterface::retro_load_game(const struct retro_game_info* game)
  
        case  ConsoleRegion::PAL:
        {
@@ -1030,7 +1021,7 @@ index ab411e70..25b2fe6c 100644
           g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
  
           break;
-@@ -821,71 +821,71 @@ bool LibretroHostInterface::UpdateCoreOptionsDisplay(bool controller)
+@@ -769,71 +769,71 @@ bool LibretroHostInterface::UpdateCoreOptionsDisplay(bool controller)
    struct retro_core_option_display option_display;
  
    option_display.visible = cpu_recompiler;
@@ -1128,7 +1119,7 @@ index ab411e70..25b2fe6c 100644
    g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
  
    for (u32 i = 0; i < NUM_CONTROLLER_AND_CARD_PORTS; i++)
-@@ -912,25 +912,25 @@ bool LibretroHostInterface::UpdateCoreOptionsDisplay(bool controller)
+@@ -860,25 +860,25 @@ bool LibretroHostInterface::UpdateCoreOptionsDisplay(bool controller)
      const bool guncon_active = (port_allowed && active_controller == RETRO_DEVICE_PS_GUNCON);
  
      option_display.visible = analog_active;
@@ -1161,7 +1152,7 @@ index ab411e70..25b2fe6c 100644
      g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
    }
  
-@@ -1478,7 +1478,7 @@ static std::optional<GPURenderer> RenderAPIToRenderer(HostDisplay::RenderAPI api
+@@ -1409,7 +1409,7 @@ static std::optional<GPURenderer> RenderAPIToRenderer(HostDisplay::RenderAPI api
  
  bool LibretroHostInterface::RequestHardwareRendererContext()
  {
