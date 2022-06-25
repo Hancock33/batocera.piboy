@@ -79,7 +79,7 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/vulkan/vulkan-loader/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/vulkan/vulkan-tools/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/vulkan/vulkan-samples/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/batocera-nvidia-lists/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/batocera-nvidia-lists/Config.in" 
   endmenu
 
   menu "Network"
@@ -105,6 +105,7 @@ menu "Emulationstation"
 endmenu
 
 menu "Controllers"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/aelightgun/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/aimtrak-guns/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/batocera-gun-calibrator/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/db9_gpio_rpi/Config.in"
