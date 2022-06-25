@@ -14,7 +14,7 @@ MELONDS_DEPENDENCIES = sdl2 slirp
 # Should be set when the package cannot be built inside the source tree but needs a separate build directory.
 MELONDS_SUPPORTS_IN_SOURCE_BUILD = NO
 
-ifeq ($(BR2_PACKAGE_BATOCERA_RPI4_WITH_XORG),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
 	MELONDS_CONF_OPTS += -DBUILD_QT_SDL=OFF
 else
 	MELONDS_DEPENDENCIES += qt5base
