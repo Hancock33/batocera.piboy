@@ -4,8 +4,8 @@
 #
 ################################################################################
 # Version: Commits on Jan 9, 2022 (rpi4 branch)
-YABAUSESA_VERSION = a335fab0e3814123d0ad5b61439ab49061adcc7e
-YABAUSESA_SITE = https://github.com/Hancock33/yabause.git
+YABAUSESA_VERSION = c7618d2ecbf77b1e8188fa8af4fa1cfb34833a72
+YABAUSESA_SITE = https://github.com/devmiyax/yabause.git
 YABAUSESA_SITE_METHOD=git
 YABAUSESA_GIT_SUBMODULES=YES
 YABAUSESA_SUPPORTS_IN_SOURCE_BUILD = NO
