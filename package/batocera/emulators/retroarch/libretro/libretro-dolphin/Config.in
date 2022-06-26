@@ -1,15 +1,9 @@
 config BR2_PACKAGE_LIBRETRO_DOLPHIN
-	bool "libretro-dolphin"
+    bool "libretro-dolphin"
 	depends on BR2_PACKAGE_RETROARCH
-	depends on BR2_INSTALL_LIBSTDCPP
-	select BR2_PACKAGE_FFMPEG
-	select BR2_PACKAGE_LIBCURL
-	select BR2_PACKAGE_BLUEZ5_UTILS
-	help
-	  A libretro Nintendo WII core
+    depends on BR2_PACKAGE_HAS_UDEV
+    help
+      A libretro core for GameCube / Wii emulation.
 
-	  http`://www.libretro.com
-
-comment "LIBRETRO_DOLPHIN needs a toolchain w/ C++"
-	depends on !BR2_INSTALL_LIBSTDCPP
-
+	  http://www.libretro.com
+	  https://github.com/libretro/dolphin
