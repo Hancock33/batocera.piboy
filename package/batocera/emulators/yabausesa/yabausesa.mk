@@ -3,8 +3,8 @@
 # YABAUSE STANDALONE
 #
 ################################################################################
-# Version: Commits on Jan 9, 2022 (rpi4 branch)
-YABAUSESA_VERSION = c7618d2ecbf77b1e8188fa8af4fa1cfb34833a72
+# Version: Commits on Jun 18, 2022
+YABAUSESA_VERSION = 82cb29171ebe61cf0129682794af5ceb5acaa0f2
 YABAUSESA_SITE = https://github.com/devmiyax/yabause.git
 YABAUSESA_SITE_METHOD=git
 YABAUSESA_GIT_SUBMODULES=YES

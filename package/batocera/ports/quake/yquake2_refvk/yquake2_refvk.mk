@@ -3,8 +3,8 @@
 # Yamagi Quake II - Vulkan plugin
 #
 ################################################################################
-# Version: Commits on Jun 13, 2022
-YQUAKE2_REFVK_VERSION = 67296986113e8d3d32b4c3e1ab899ab60324b1f6
+# Version: Commits on Jun 25, 2022
+YQUAKE2_REFVK_VERSION = c4fc8c86bb6f35ecf1437c31bc8b422a0bd7fafe
 YQUAKE2_REFVK_SITE = $(call github,yquake2,ref_vk,$(YQUAKE2_REFVK_VERSION))
 
 YQUAKE2_REFVK_DEPENDENCIES = yquake2
