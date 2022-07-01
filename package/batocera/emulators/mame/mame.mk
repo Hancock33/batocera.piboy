@@ -189,7 +189,7 @@ define MAME_INSTALL_TARGET_CMDS
 
 	# Install binaries and default distro
 	$(INSTALL) -D $(@D)/mamearcade	$(TARGET_DIR)/usr/bin/mame/mame
-	$(INSTALL) -D $(@D)/mess		$(TARGET_DIR)/usr/bin/mame/mess
+	$(INSTALL) -D $(@D)/mamemess	$(TARGET_DIR)/usr/bin/mame/mess
 	$(INSTALL) -D $(@D)/mamevirtual	$(TARGET_DIR)/usr/bin/mame/vgmplay
 	cp $(@D)/COPYING			$(TARGET_DIR)/usr/bin/mame/
 	cp $(@D)/README.md			$(TARGET_DIR)/usr/bin/mame/
