@@ -3,8 +3,8 @@
 # raine
 #
 ################################################################################
-# Version: Commits on Jun 25, 2022
-RAINE_VERSION = 67e666e6c57d55a045993742972633f67b6c309a
+# Version: Commits on Jun 30, 2022
+RAINE_VERSION = a222d6e073eb96a18bbec95643832bc44427ad2c
 RAINE_SITE = $(call github,zelurker,raine,$(RAINE_VERSION))
 RAINE_LICENSE = BSD
 RAINE_DEPENDENCIES = sdl2 sdl2_net sdl2_image sdl2_ttf muparser
