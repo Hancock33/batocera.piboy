@@ -8990,8 +8990,15 @@ hode:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 ionfury:
-  features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  features: []
+  cfeatures:
+    nologo:
+      prompt: SKIP INTRO VIDEOS
+      description: Skip introduction animations and logos; default is show
+      choices:
+        "Skip": 1
+        "Show": 0
 kodi:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -9037,6 +9044,16 @@ quakespasm:
 quake3:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+raze:
+  shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  features: [padtokeyboard]
+  cfeatures:
+    nologo:
+      prompt: SKIP INTRO VIDEOS
+      description: Skip introduction animations and logos; default is show
+      choices:
+        "Skip": 1
+        "Show": 0
 raptor:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

@@ -315,6 +315,10 @@ def getGenerator(emulator):
         from generators.raptor.raptorGenerator import RaptorGenerator
         return RaptorGenerator()
 
+    if emulator == "raze":
+        from generators.raze.razeGenerator import RazeGenerator
+        return RazeGenerator()
+
     if emulator == 'rednukem':
         from generators.rednukem.rednukemGenerator import RednukemGenerator
         return RednukemGenerator()
