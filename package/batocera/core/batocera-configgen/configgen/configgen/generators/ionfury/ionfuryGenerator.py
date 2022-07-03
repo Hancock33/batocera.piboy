@@ -10,7 +10,7 @@ class IonfuryGenerator(Generator):
         os.system('piboy_keys ionfury.keys')
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ["ionfury", "-game_dir", os.path.dirname(os.path.abspath(rom)), "-g", rom]
+        commandArray = ["ionfury", "-game_dir", os.path.dirname(os.path.abspath(rom)), "-g", rom, "-nologo" if system.getOptBoolean("nologo") else ""]
         os.chdir(os.path.dirname(os.path.abspath(rom)))
 
         if os.path.isfile('/tmp/piboy'):
