@@ -86,7 +86,7 @@ class RazeGenerator(Generator):
                 f"vid_fps {'true' if system.getOptBoolean('showFPS') else 'false'}\n"
                 "echo BATOCERA\n"  # easy check that script ran in console
             )
-        launch_args = ["raze"]
+        launch_args = ["/usr/share/raze/raze"]
         with open(rom, "r") as raze_file:
             paths = raze_file.readlines()
         for i, path in enumerate(paths):
@@ -99,6 +99,8 @@ class RazeGenerator(Generator):
             "-exec", self.script_file,
             # Disable controllers because support is poor; use evmapy instead
             "-nojoy",
+            "+set vid_preferbackend 1",
+            "+set vid_rendermode 4",
             "-width", str(gameResolution["width"]),
             "-height", str(gameResolution["height"]),
             "-nologo" if system.getOptBoolean("nologo") else "",
