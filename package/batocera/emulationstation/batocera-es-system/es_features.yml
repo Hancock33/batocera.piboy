@@ -1747,6 +1747,68 @@ libretro:
     kronos:
       features: [cheevos]
       shared: [autosave]
+    same_cdi:
+      features: [netplay]
+      shared: [autosave]
+      cfeatures:
+            mame_cpu_overclock:
+                group: ADVANCED OPTIONS
+                prompt:      OVERCLOCK (UNSTABLE)
+                description: Enhancement. Reduces system slowdown. Causes issues in some games.
+                choices:
+                    "default":        default
+                    "30":             30
+                    "35":             35
+                    "40":             40
+                    "45":             45
+                    "50":             50
+                    "55":             55
+                    "60":             60
+                    "65":             65
+                    "70":             70
+                    "75":             75
+                    "80":             80
+                    "85":             85
+                    "90":             90
+                    "95":             95
+                    "100":            100
+                    "105":            105
+                    "110":            110
+                    "115":            115
+                    "120":            120
+                    "125":            125
+                    "130":            130
+                    "135":            135
+                    "140":            140
+                    "145":            145
+                    "150":            150
+            mame_altres:
+                prompt:      RENDERING RESOLUTION
+                description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
+                choices:
+                    "640x480":        640x480
+                    "800x600":        800x600
+                    "960x720":        960x720
+                    "1024x768":       1024x768
+                    "1280x720":       1280x720
+                    "1600x800":       1600x800
+                    "1920x1080":      1920x1080
+                    "2560x1440":      2560x1440
+                    "3840x2160":      3840x2160
+            customcfg:
+                group: ADVANCED OPTIONS
+                prompt:      CUSTOM CONFIG
+                description: Use a custom MAME config, do not overwrite config on launch.
+                choices:
+                    "On":            1
+                    "Off (Default)": 0
+            customcfg:
+                group: ADVANCED OPTIONS
+                prompt:      CUSTOM MAME CONFIG
+                description: Set system-wide controls via MAME menu
+                choices:
+                    "On":  1
+                    "Off": 0
     mame:
       features: [netplay]
       shared: [autosave]
@@ -1849,148 +1911,11 @@ libretro:
                 choices:
                     "On":  1
                     "Off": 0
-    same_cdi:
-      features: [netplay]
-      shared: [autosave]
-      cfeatures:
-            mame_cpu_overclock:
-                group: ADVANCED OPTIONS
-                prompt:      OVERCLOCK (UNSTABLE)
-                description: Enhancement. Reduces system slowdown. Causes issues in some games.
-                choices:
-                    "default":        default
-                    "30":             30
-                    "35":             35
-                    "40":             40
-                    "45":             45
-                    "50":             50
-                    "55":             55
-                    "60":             60
-                    "65":             65
-                    "70":             70
-                    "75":             75
-                    "80":             80
-                    "85":             85
-                    "90":             90
-                    "95":             95
-                    "100":            100
-                    "105":            105
-                    "110":            110
-                    "115":            115
-                    "120":            120
-                    "125":            125
-                    "130":            130
-                    "135":            135
-                    "140":            140
-                    "145":            145
-                    "150":            150
-            mame_altres:
-                prompt:      RENDERING RESOLUTION
-                description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
-                choices:
-                    "640x480":        640x480
-                    "800x600":        800x600
-                    "960x720":        960x720
-                    "1024x768":       1024x768
-                    "1280x720":       1280x720
-                    "1600x800":       1600x800
-                    "1920x1080":      1920x1080
-                    "2560x1440":      2560x1440
-                    "3840x2160":      3840x2160
-            customcfg:
-                group: ADVANCED OPTIONS
-                prompt:      CUSTOM CONFIG
-                description: Use a custom MAME config, do not overwrite config on launch.
-                choices:
-                    "On":            1
-                    "Off (Default)": 0
-            customcfg:
-                group: ADVANCED OPTIONS
-                prompt:      CUSTOM MAME CONFIG
-                description: Set system-wide controls via MAME menu
-                choices:
-                    "On":  1
-                    "Off": 0
-    mess:
-      features: [netplay, padtokeyboard]
-      shared: [autosave]
-      cfeatures:
-            mame_cpu_overclock:
-                group: ADVANCED OPTIONS
-                prompt:      OVERCLOCK (UNSTABLE)
-                description: Enhancement. Reduces system slowdown. Causes issues in some games.
-                choices:
-                    "default":        default
-                    "30":             30
-                    "35":             35
-                    "40":             40
-                    "45":             45
-                    "50":             50
-                    "55":             55
-                    "60":             60
-                    "65":             65
-                    "70":             70
-                    "75":             75
-                    "80":             80
-                    "85":             85
-                    "90":             90
-                    "95":             95
-                    "100":            100
-                    "105":            105
-                    "110":            110
-                    "115":            115
-                    "120":            120
-                    "125":            125
-                    "130":            130
-                    "135":            135
-                    "140":            140
-                    "145":            145
-                    "150":            150
-            mame_altres:
-                prompt:      RENDERING RESOLUTION
-                description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
-                choices:
-                    "640x480":        640x480
-                    "800x600":        800x600
-                    "960x720":        960x720
-                    "1024x768":       1024x768
-                    "1280x720":       1280x720
-                    "1600x800":       1600x800
-                    "1920x1080":      1920x1080
-                    "2560x1440":      2560x1440
-                    "3840x2160":      3840x2160
-            sharemameart:
-                group: ADVANCED OPTIONS
-                prompt:      SHARE MAME ARTWORK
-                description: Use the same art paths as standalone MAME - not recommended if using decorations or shaders.
-                choices:
-                    "On (Default)": 1
-                    "Off":          0
-            artworkcrop:
-                group: ADVANCED OPTIONS
-                prompt:      CROP ARTWORK
-                description: Crop MAME artwork to maximize the game screen and only fill unused space.
-                choices:
-                    "On (Default)": 1
-                    "Off":          0
-            customcfg:
-                group: ADVANCED OPTIONS
-                prompt:      CUSTOM CONFIG
-                description: Use a custom MAME config, do not overwrite config on launch.
-                choices:
-                    "On":            1
-                    "Off (Default)": 0
-            customcfg:
-                group: ADVANCED OPTIONS
-                prompt:      CUSTOM MAME CONFIG
-                description: Set system-wide controls via MAME menu
-                choices:
-                    "On":  1
-                    "Off": 0
       systems:
          adam:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2000,6 +1925,7 @@ libretro:
                           "Coleco ADAM diskettes":          adam_flop
                           "Coleco ColecoVision cartridges": coleco
                   altromtype:
+                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -2012,12 +1938,14 @@ libretro:
                           "Cartridge (Slot 3)": cart3
                           "Cartridge (Slot 4)": cart4
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2026,12 +1954,14 @@ libretro:
          advision:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":              none
                           "Entex AdventureVision cartridges": advision
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2040,12 +1970,14 @@ libretro:
          apfm1000:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":   none
                           "APF M-1000 cartridges": apfm1000
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2054,6 +1986,7 @@ libretro:
          apple2:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2062,6 +1995,7 @@ libretro:
                           "Apple II miscellaneous disks":   apple2_flop_misc
                           "Apple II original disks":        apple2_flop_orig
                   altromtype:
+                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -2069,12 +2003,14 @@ libretro:
                           "Disk (Drive 1)": flop1
                           "Disk (Drive 2)": flop2
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2083,6 +2019,7 @@ libretro:
          apple2gs:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2094,6 +2031,7 @@ libretro:
                           "Apple II miscellaneous disks":     apple2_flop_misc
                           "Apple II original disks":          apple2_flop_orig
                   altromtype:
+                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -2102,12 +2040,14 @@ libretro:
                           "3 1/2 Disk (Drive 3)": flop3
                           "3 1/2 Disk (Drive 4)": flop4
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2116,12 +2056,14 @@ libretro:
          arcadia:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":             none
                           "Emerson Arcadia 2001 cartridges": arcadia
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2130,6 +2072,7 @@ libretro:
          archimedes:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2138,6 +2081,7 @@ libretro:
                           "Acorn Archimedes hard disks":    archimedes_hdd
                           "Acorn Archimedes ROM images":    archimedes_rom
                   altmodel:
+                      group: ADVANCED OPTIONS
                       prompt:      ARCHIMEDES MODEL
                       description: Select model to emulate
                       choices:
@@ -2146,12 +2090,14 @@ libretro:
                           "Archimedes 440/1 (Default)": aa4401
                           "Archimedes 540":             aa540
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2160,12 +2106,14 @@ libretro:
          astrocde:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":            none
                           "Bally Professional Arcade cartridges": astrocde
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2174,6 +2122,7 @@ libretro:
          atom:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2182,6 +2131,7 @@ libretro:
                           "Acorn Atom disk images":  atom_flop
                           "Acorn Atom Utility ROMs": atom_rom
                   altromtype:
+                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -2191,12 +2141,14 @@ libretro:
                           "Cartridge":      cart
                           "Quickload":      quik
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2215,6 +2167,7 @@ libretro:
                           "Robo Bitstik 2":                   bitstik2
                           "Voltmace Delta 3b Twin Joysticks": voltmace3b
                   altmodel:
+                      group: ADVANCED OPTIONS
                       prompt:      BBC MODEL
                       description: Select model to emulate
                       choices:
@@ -2223,6 +2176,7 @@ libretro:
                           "BBC Master 512":              bbcm512
                           "BBC Master Compact":          bbcmc
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2237,6 +2191,7 @@ libretro:
                           "Acorn BBC Master Compact disks":                      bbcmc_flop
                           "Olivetti Prodest PC 128S disks (BBC Master Compact)": pro128s_flop
                   altromtype:
+                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -2250,12 +2205,14 @@ libretro:
                           "BBC Master Cartridge (Slot 1)":   cart1
                           "BBC Master Cartridge (Slot 2)":   cart2
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2264,24 +2221,28 @@ libretro:
          camplynx:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":      none
                           "Camputers Lynx cassettes": camplynx_cass
                   altmodel:
+                      group: ADVANCED OPTIONS
                       prompt:      LYNX MODEL
                       choices:
                           "Lynx 128k (Default)": lynx128k
                           "Lynx 96k":            lynx96k
                           "Lynx 48k":            lynx48k
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2290,12 +2251,14 @@ libretro:
          cdi:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":  none
                           "Philips CD-i CD-ROMs": cdi
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2304,6 +2267,7 @@ libretro:
          coco:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2320,18 +2284,21 @@ libretro:
                           "Color Computer 3 (NTSC) (Default)": coco3
                           "Color Computer 3 (PAL)":            coco3p
                   altromtype:
+                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
                           "Cassette":    cass
                           "Cartridge":   cart
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2340,18 +2307,21 @@ libretro:
          crvision:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":            none
                           "V-Tech Creativision cartridges": crvision
                   altromtype:
+                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
                           "Cartridge":   cart
                           "Cassette":    cass
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2360,6 +2330,7 @@ libretro:
          electron:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2375,12 +2346,14 @@ libretro:
                           "Electron w/64k Master RAM Board (default)": electron64
                           "Electron":                                  electron
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2389,6 +2362,7 @@ libretro:
          fm7:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2402,6 +2376,7 @@ libretro:
                           "FM-7":     fm7
                           "FM-77AV":  fm77av
                   altromtype:
+                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -2409,12 +2384,14 @@ libretro:
                           "Disk (Drive 1)": flop1
                           "Disk (Drive 2)": flop2
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2423,6 +2400,7 @@ libretro:
          fmtowns:
               cfeatures:
                   altmodel:
+                      group: ADVANCED OPTIONS
                       prompt:      FM TOWNS MODEL
                       description: Select model to emulate
                       choices:
@@ -2430,12 +2408,14 @@ libretro:
                           "FM Towns (Model 1/2)":     fmtowns
                           "FM Towns II UX":           fmtownsux
                   addblankdisk:
+                      group: ADVANCED OPTIONS
                       prompt:      ADD USER DISK
                       description: Insert a disk into the floppy drive, a blank will be used if one doesn't exist
                       choices:
                           "Off (Default)": 0
                           "On":            1
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2445,6 +2425,7 @@ libretro:
                           "Fujitsu FM Towns miscellaneous floppy disk images": fmtowns_flop_misc
                           "Fujitsu FM Towns original floppy disk images":      fmtowns_flop_orig
                   altromtype:
+                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -2453,12 +2434,14 @@ libretro:
                           "CD-ROM":                                    cdrm
                           "Hard Drive (II UX)":                        hard1
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2467,12 +2450,14 @@ libretro:
          gamate:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":        none
                           "Bit Corp Gamate cartridges": gamate
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2481,12 +2466,14 @@ libretro:
          gamecom:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":       none
                           "Tiger Game.com cartridges": gamecom
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2495,12 +2482,14 @@ libretro:
          gamepock:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":                   none
                           "Epoch Game Pocket Computer cartridges": gamepock
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2509,12 +2498,14 @@ libretro:
          gmaster:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":            none
                           "Hartung Game Master cartridges": gmaster
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2539,6 +2530,7 @@ libretro:
          macintosh:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2559,6 +2551,7 @@ libretro:
                           "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD/Image Reader)": maciix
                           "Mac LC 3 (Default) (4Mb RAM, Color, 2 HD Floppies/CD/HDD)":   maclc3
                   imagereader:
+                      group: ADVANCED OPTIONS
                       prompt:      IMAGE READER
                       description: Install the image reader card to read idks image files (Mac IIx only)
                       choices:
@@ -2569,6 +2562,7 @@ libretro:
                           "Slot D":           nbd
                           "Slot E":           nbe
                   ramsize:
+                      group: ADVANCED OPTIONS
                       prompt:      RAM SIZE
                       description: How much RAM the emulated Mac will have installed (Mac IIx & Mac LC 3 only)
                       choices:
@@ -2582,6 +2576,7 @@ libretro:
                           "96MB":   96
                           "128MB":  128
                   altromtype:
+                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load
                       choices:
@@ -2589,6 +2584,7 @@ libretro:
                           "CD":          cdrm
                           "Hard Drive":  hard
                   bootdisk:
+                      group: ADVANCED OPTIONS
                       prompt:      BOOT DISK
                       description: Select a boot disk or hard drive if needed
                       choices:
@@ -2600,26 +2596,30 @@ libretro:
                           "System 7.0.1 (Hard Drive)": mac701
                           "System 7.5.5 (Hard Drive)": mac755
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
                           "On":  1
                           "Off": 0
-         megaduck:
+         sameduck:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":             none
                           "Creatronic Mega Duck cartridges": megaduck
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2628,18 +2628,21 @@ libretro:
          pdp1:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":            none
                           "PDP-1 Paper Tape Reader Images": pdp1_ptp
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2648,12 +2651,14 @@ libretro:
          pv1000:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":      none
                           "Casio PV-1000 cartridges": pv1000
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2662,18 +2667,21 @@ libretro:
          socrates:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":                  none
                           "Video Technology Socrates cartridges": socrates
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2682,12 +2690,14 @@ libretro:
          supracan:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":            none
                           "Funtech Super A'Can cartridges": supracan
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2696,24 +2706,28 @@ libretro:
          ti99:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)": none
                           "TI-99/4A Cartridges": ti99_cart
                   ti99_32kram:
+                      group: ADVANCED OPTIONS
                       prompt:      32K RAM EXPANSION
                       description: 32k RAM expansion card installed
                       choices:
                           "Enabled (Default)": 1
                           "Disabled":          0
                   ti99_speech:
+                      group: ADVANCED OPTIONS
                       prompt:      SPEECH MODULE
                       description: Speech module installed
                       choices:
                           "Enabled (Default)": 1
                           "Disabled":          0
                   altromtype:
+                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -2721,12 +2735,14 @@ libretro:
                           "Cassette 2":  cass2
                           "Cartridge":   cart
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2735,24 +2751,28 @@ libretro:
          tutor:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)": none
                           "Tomy Tutor & Pyuuta cartridge": tutor
                   altromtype:
+                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
                           "Cassette":    cass
                           "Cartridge":   cart
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2761,12 +2781,14 @@ libretro:
          vectrex:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":    none
                           "GCE Vectrex cartridges": vectrex
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2775,6 +2797,7 @@ libretro:
          vsmile:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2782,6 +2805,7 @@ libretro:
                           "VTech V.Smile cartridges":        vsmile_cart
                           "VTech V.Smile Motion cartridges": vsmilem_cart
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2790,6 +2814,7 @@ libretro:
          xegs:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
@@ -2797,6 +2822,7 @@ libretro:
                           "Atari XE Game System cartridges": xegs
                           "Atari 400 / 800 floppy disks":    a800_flop
                   altromtype:
+                      group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
                       description: Type of ROM file to load.
                       choices:
@@ -2806,12 +2832,14 @@ libretro:
                           "Disk (Drive 3)": flop3
                           "Disk (Drive 4)": flop4
                   enableui:
+                      group: ADVANCED OPTIONS
                       prompt:      UI KEYS
                       description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
                       choices:
                           "Off at Start": 0
                           "On at Start":  1
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:
@@ -2897,12 +2925,14 @@ libretro:
         vgmplay:
               cfeatures:
                   softList:
+                      group: ADVANCED OPTIONS
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
                           "Don't Use (Default)":    none
                           "Video Game Music Files": vgmplay
                   pergamecfg:
+                      group: ADVANCED OPTIONS
                       prompt:      CUSTOM GAME CONFIG
                       description: Enable per-game custom configuration via MAME menu.
                       choices:

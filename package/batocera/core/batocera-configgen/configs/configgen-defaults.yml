@@ -29,10 +29,10 @@ abuse:
   core:     abuse
 adam:
   emulator: libretro
-  core:     mess
+  core:     mame
 advision:
   emulator: libretro
-  core:     mess
+  core:     mame
 alephone:
   emulator: alephone
   core:     alephone
@@ -56,7 +56,7 @@ amstradcpc:
   core:     cap32
 apfm1000:
   emulator: libretro
-  core:     mess
+  core:     mame
 apple2:
   emulator: gsplus
   core:     gsplus
@@ -65,7 +65,7 @@ apple2gs:
   core:     gsplus
 arcadia:
   emulator: libretro
-  core:     mess
+  core:     mame
 arduous:
   emulator: libretro
   core:     arduous
@@ -74,10 +74,10 @@ gsplus:
   core:     gsplus
 archimedes:
   emulator: libretro
-  core:     mess
+  core:     mame
 astrocde:
   emulator: libretro
-  core:     mess
+  core:     mame
 atari2600:
   emulator: libretro
   core:     stella
@@ -95,7 +95,7 @@ atarist:
   core:     hatari
 atom:
   emulator: libretro
-  core:     mess
+  core:     mame
 atomiswave:
   emulator: libretro
   core:     flycast
@@ -104,7 +104,7 @@ awgl:
   core:     awgl
 bbc:
   emulator: libretro
-  core:     mess
+  core:     mame
 bbja:
   emulator: bbja
   core:     bbja
@@ -131,7 +131,7 @@ c128:
   core:     x128
 camplynx:
   emulator: libretro
-  core:     mess
+  core:     mame
 cannonball:
   emulator: libretro
   core:     cannonball
@@ -158,7 +158,7 @@ chailove:
   core:     chailove
 coco:
   emulator: libretro
-  core:     mess
+  core:     mame
 colecovision:
   emulator: libretro
   core:     bluemsx
@@ -170,7 +170,7 @@ craft:
    core:     craft
 crvision:
   emulator: libretro
-  core:     mess
+  core:     mame
 
 # D-L
 
@@ -211,7 +211,7 @@ eduke32:
   core:     eduke32
 electron:
   emulator: libretro
-  core:     mess
+  core:     mame
 etekwar:
   emulator: etekwar
   core:     etekwar
@@ -238,7 +238,7 @@ flatpak:
     hud_support: false
 fm7:
   emulator: libretro
-  core:     mess
+  core:     mame
 fmtowns:
   emulator: tsugaru
   core:     tsugaru
@@ -250,7 +250,7 @@ gaelco:
   core:     demul
 gamate:
   emulator: libretro
-  core:     mess
+  core:     mame
 gameandwatch:
   emulator: libretro
   core:     gw
@@ -258,7 +258,7 @@ gameandwatch:
     forceNoBezel: true
 gamecom:
   emulator: libretro
-  core:     mess
+  core:     mame
 gamecube:
   emulator: dolphin
   core:     dolphin
@@ -267,7 +267,7 @@ gamegear:
   core:     genesisplusgx
 gamepock:
   emulator: libretro
-  core:     mess
+  core:     mame
 gb:
   emulator: libretro
   core:     gambatte
@@ -285,13 +285,13 @@ gbc2players:
   core:     tgbdual
 gmaster:
   emulator: libretro
-  core:     mess
+  core:     mame
 gong:
   emulator: libretro
   core:     gong
 gp32:
   emulator: libretro
-  core:     mess
+  core:     mame
 gx4000:
   emulator: libretro
   core:     cap32
@@ -499,7 +499,7 @@ pcfx:
   core:     pcfx
 pdp1:
   emulator: libretro
-  core:     mess
+  core:     mame
 pet:
   emulator: vice
   core:     xpet
@@ -508,7 +508,7 @@ pico8:
   core:     retro8
 plugnplay:
   emulator: libretro
-  core:     mess
+  core:     mame
 pokemini:
   emulator: libretro
   core:     pokemini
@@ -545,7 +545,7 @@ psx:
   core:     pcsx_rearmed
 pv1000:
   emulator: libretro
-  core:     mess
+  core:     mame
 pygame:
   emulator: pygame
   core:     pygame
@@ -555,6 +555,9 @@ quake3:
 raptor:
   emulator: raptor
   core:     raptor
+raze:
+  emulator: raze
+  core:     raze
 rednukem:
   emulator: rednukem
   core:     rednukem
@@ -604,7 +607,7 @@ sgb:
   core:     mgba
 socrates:
   emulator: libretro
-  core:     mess
+  core:     mame
 solarus:
   emulator: solarus
   core:     solarus
@@ -628,7 +631,7 @@ sufami:
   core:     snes9x
 supracan:
   emulator: libretro
-  core:     mess
+  core:     mame
 superbroswar:
   emulator: libretro
   core:     superbroswar
@@ -676,7 +679,7 @@ thomson:
   core:     theodore
 ti99:
   emulator: libretro
-  core:     mess
+  core:     mame
 tic80:
   emulator: libretro
   core:     tic80
@@ -688,7 +691,7 @@ triforce:
   core:     dolphin_triforce
 tutor:
   emulator: libretro
-  core:     mess
+  core:     mame
 tyrquake:
   emulator: libretro
   core:     tyrquake
@@ -706,7 +709,7 @@ vanillatd:
   core:     vanillatd
 vc4000:
   emulator: libretro
-  core:     mess
+  core:     mame
 vectrex:
   emulator: libretro
   core:     vecx
@@ -727,7 +730,7 @@ voidsw:
   core:     voidsw
 vsmile:
   emulator: libretro
-  core:     mess
+  core:     mame
 wasm4:
   emulator: libretro
   core:     wasm4
@@ -772,7 +775,7 @@ xash3d_fwgs:
     hud_support: false
 xegs:
   emulator: libretro
-  core:     mess
+  core:     mame
 xrick:
   emulator: libretro
   core:     xrick
