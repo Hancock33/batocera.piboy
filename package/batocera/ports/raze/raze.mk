@@ -3,8 +3,8 @@
 # raze
 #
 ################################################################################
-# Version: Commits on Jul 02, 2022
-RAZE_VERSION = 0c03d3e36443dfe8d936b1a0bfbed8410d2f6828
+# Version: Commits on Jul 04, 2022
+RAZE_VERSION = 390cd2ca98d476952f01613a2afa866db1f6059d
 RAZE_SITE = $(call github,coelckers,Raze,$(RAZE_VERSION))
 RAZE_LICENSE = GPLv2
 RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic gzdoom
