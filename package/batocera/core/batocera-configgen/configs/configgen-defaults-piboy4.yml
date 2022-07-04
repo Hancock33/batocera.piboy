@@ -31,7 +31,7 @@ flash:
   core:     lightspark
 fmtowns:
   emulator: libretro
-  core:     mess
+  core:     mame
 gamecube:
   emulator: libretro
   core:     dolphin
