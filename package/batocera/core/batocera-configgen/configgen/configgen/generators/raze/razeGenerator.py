@@ -100,7 +100,7 @@ class RazeGenerator(Generator):
             # Disable controllers because support is poor; use evmapy instead
             "-nojoy",
             "+set vid_preferbackend 1",
-            "+set vid_rendermode 4",
+            "+set +r_precache 0",
             "-width", str(gameResolution["width"]),
             "-height", str(gameResolution["height"]),
             "-nologo" if system.getOptBoolean("nologo") else "",
