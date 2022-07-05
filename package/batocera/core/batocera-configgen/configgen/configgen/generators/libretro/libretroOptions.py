@@ -105,7 +105,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         # Disable Datasette Hotkeys
         coreSettings.save('vice_datasette_hotkeys', '"disabled"')
         # Not Read 'vicerc'
-        #coreSettings.save('vice_read_vicerc',       '"disabled"')
+        coreSettings.save('vice_read_vicerc',       '"disabled"')
         # Select Joystick Type
         coreSettings.save('vice_Controller',        '"joystick"')
         # Disable Turbo Fire
@@ -150,14 +150,15 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('vice_aspect_ratio', system.config['vice_aspect_ratio'])
         else:
             coreSettings.save('vice_aspect_ratio', '"pal"')
-        # Crop Mode
-        if system.isOptSet('vice_crop_mode'):
-            if system.config['vice_crop_mode'] == 'automatic':
+        # Zoom Mode
+        if system.isOptSet('vice_zoom_mode'):
+            if system.config['vice_zoom_mode'] == 'automatic':
                 coreSettings.save('vice_crop', '"auto"')
             else:
-                coreSettings.save('vice_crop', system.config['vice_crop_mode'])
+                coreSettings.save('vice_crop', system.config['vice_zoom_mode'])
         else:
             coreSettings.save('vice_crop', '"auto_disable"')
+        coreSettings.save('vice_zoom_mode', '"deprecated"')
         # External palette
         if system.isOptSet('vice_external_palette'):
             coreSettings.save('vice_external_palette', system.config['vice_external_palette'])
@@ -184,14 +185,9 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                 coreSettings.save('vice_joyport_type', '"1"')
         # Keyboard Pass-through for Pad2Key
         if system.isOptSet('vice_keyboard_pass_through'):
-            coreSettings.save('vice_physical_keyboard_pass_through', system.config['vice_keyboard_pass_through'])
+            coreSettings.save('vice_physical_keyboard_pass_through', system.config['keyboard_pass_through'])
         else:
             coreSettings.save('vice_physical_keyboard_pass_through', '"disabled"')
-        # Keyrah keypad mapping
-        if system.isOptSet('vice_keyrah_keypad_mappings'):
-            coreSettings.save('vice_keyrah_keypad_mappings', system.config['vice_keyrah_mapping'])
-        else:
-            coreSettings.save('vice_keyrah_keypad_mappings', '"disabled"')
 
     # Commodore 128
     if (system.config['core'] == 'vice_x128'):
@@ -219,14 +215,15 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('vice_aspect_ratio', system.config['vice_aspect_ratio'])
         else:
             coreSettings.save('vice_aspect_ratio', '"pal"')
-        # Crop Mode
-        if system.isOptSet('vice_crop_mode'):
-            if system.config['vice_crop_mode'] == 'automatic':
+        # Zoom Mode
+        if system.isOptSet('vice_zoom_mode'):
+            if system.config['vice_zoom_mode'] == 'automatic':
                 coreSettings.save('vice_crop', '"auto"')
             else:
-                coreSettings.save('vice_crop', system.config['vice_crop_mode'])
+                coreSettings.save('vice_crop', system.config['vice_zoom_mode'])
         else:
             coreSettings.save('vice_crop', '"auto_disable"')
+        coreSettings.save('vice_zoom_mode', '"deprecated"')
         # External palette
         if system.isOptSet('vice_external_palette'):
             coreSettings.save('vice_external_palette', system.config['vice_external_palette'])
@@ -252,11 +249,6 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('vice_physical_keyboard_pass_through', system.config['vice_keyboard_pass_through'])
         else:
             coreSettings.save('vice_physical_keyboard_pass_through', '"disabled"')
-        # Keyrah keypad mapping
-        if system.isOptSet('vice_keyrah_keypad_mappings'):
-            coreSettings.save('vice_keyrah_keypad_mappings', system.config['vice_keyrah_mapping'])
-        else:
-            coreSettings.save('vice_keyrah_keypad_mappings', '"disabled"')
 
     # Commodore Plus/4
     if (system.config['core'] == 'vice_xplus4'):
@@ -282,14 +274,15 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('vice_aspect_ratio', system.config['vice_aspect_ratio'])
         else:
             coreSettings.save('vice_aspect_ratio', '"pal"')
-        # Crop Mode
-        if system.isOptSet('vice_crop_mode'):
-            if system.config['vice_crop_mode'] == 'automatic':
+        # Zoom Mode
+        if system.isOptSet('vice_zoom_mode'):
+            if system.config['vice_zoom_mode'] == 'automatic':
                 coreSettings.save('vice_crop', '"auto"')
             else:
-                coreSettings.save('vice_crop', system.config['vice_crop_mode'])
+                coreSettings.save('vice_crop', system.config['vice_zoom_mode'])
         else:
             coreSettings.save('vice_crop', '"auto_disable"')
+        coreSettings.save('vice_zoom_mode', '"deprecated"')
         # External palette
         if system.isOptSet('vice_plus4_external_palette'):
             coreSettings.save('vice_plus4_external_palette', system.config['vice_plus4_external_palette'])
@@ -315,11 +308,6 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('vice_physical_keyboard_pass_through', system.config['vice_keyboard_pass_through'])
         else:
             coreSettings.save('vice_physical_keyboard_pass_through', '"disabled"')
-        # Keyrah keypad mapping
-        if system.isOptSet('vice_keyrah_keypad_mappings'):
-            coreSettings.save('vice_keyrah_keypad_mappings', system.config['vice_keyrah_mapping'])
-        else:
-            coreSettings.save('vice_keyrah_keypad_mappings', '"disabled"')
 
     # Commodore VIC-20
     if (system.config['core'] == 'vice_xvic'):
@@ -345,14 +333,15 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('vice_aspect_ratio', system.config['vice_aspect_ratio'])
         else:
             coreSettings.save('vice_aspect_ratio', '"pal"')
-        # Crop Mode
-        if system.isOptSet('vice_crop_mode'):
-            if system.config['vice_crop_mode'] == 'automatic':
+        # Zoom Mode
+        if system.isOptSet('vice_zoom_mode'):
+            if system.config['vice_zoom_mode'] == 'automatic':
                 coreSettings.save('vice_crop', '"auto"')
             else:
-                coreSettings.save('vice_crop', system.config['vice_crop_mode'])
+                coreSettings.save('vice_crop', system.config['vice_zoom_mode'])
         else:
             coreSettings.save('vice_crop', '"auto_disable"')
+        coreSettings.save('vice_zoom_mode', '"deprecated"')
         # External palette
         if system.isOptSet('vice_vic20_external_palette'):
             coreSettings.save('vice_vic20_external_palette', system.config['vice_vic20_external_palette'])
@@ -378,11 +367,6 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('vice_physical_keyboard_pass_through', system.config['vice_keyboard_pass_through'])
         else:
             coreSettings.save('vice_physical_keyboard_pass_through', '"disabled"')
-        # Keyrah keypad mapping
-        if system.isOptSet('vice_keyrah_keypad_mappings'):
-            coreSettings.save('vice_keyrah_keypad_mappings', system.config['vice_keyrah_mapping'])
-        else:
-            coreSettings.save('vice_keyrah_keypad_mappings', '"disabled"')
 
     # Commodore PET
     if (system.config['core'] == 'vice_xpet'):
@@ -408,14 +392,15 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('vice_aspect_ratio', system.config['vice_aspect_ratio'])
         else:
             coreSettings.save('vice_aspect_ratio', '"pal"')
-        # Crop Mode
-        if system.isOptSet('vice_crop_mode'):
-            if system.config['vice_crop_mode'] == 'automatic':
+        # Zoom Mode
+        if system.isOptSet('vice_zoom_mode'):
+            if system.config['vice_zoom_mode'] == 'automatic':
                 coreSettings.save('vice_crop', '"auto"')
             else:
-                coreSettings.save('vice_crop', system.config['vice_crop_mode'])
+                coreSettings.save('vice_crop', system.config['vice_zoom_mode'])
         else:
             coreSettings.save('vice_crop', '"auto_disable"')
+        coreSettings.save('vice_zoom_mode', '"deprecated"')
         # External palette
         if system.isOptSet('vice_pet_external_palette'):
             coreSettings.save('vice_pet_external_palette', system.config['vice_pet_external_palette'])
@@ -441,11 +426,6 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('vice_physical_keyboard_pass_through', system.config['vice_keyboard_pass_through'])
         else:
             coreSettings.save('vice_physical_keyboard_pass_through', '"disabled"')
-        # Keyrah keypad mapping
-        if system.isOptSet('vice_keyrah_keypad_mappings'):
-            coreSettings.save('vice_keyrah_keypad_mappings', system.config['vice_keyrah_mapping'])
-        else:
-            coreSettings.save('vice_keyrah_keypad_mappings', '"disabled"')
 
     # Commodore AMIGA
     if (system.config['core'] == 'puae'):
@@ -454,134 +434,35 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         # some strings to batocera.conf by using
         # this syntax: SYSTEMNAME.retroarchcore.puae_mapper_BUTTONNAME=VALUE
         if (system.name != 'amigacd32') and not ( system.isOptSet('controller1_puae') and ( system.config['controller1_puae'] == "517" ) ) and not ( system.isOptSet('controller2_puae') and ( system.config['controller2_puae'] == "517" ) ):
-        # Controller mapping for A500 and A1200
-            # Pinball games mapping mode option (modern and classic)
-            if system.isOptSet('puae_pinball_mode') and system.config['puae_pinball_mode'] == "modern":
-                uae_mapping = { 'aspect_ratio_toggle': "---",
-                    'mouse_toggle': "RETROK_RCTRL",
-                    'statusbar': "RETROK_F11",
-                    'vkbd': "---",
-                    'reset': "---",
-                    'crop_toggle': "RETROK_F12",
-                    'down': "---",
-                    'left': "---",
-                    'a': "RETROK_DOWN",
-                    'b': "---",
-                    'x': "RETROK_SPACE",
-                    'y': "---",
-                    'l': "RETROK_LALT",
-                    'l2': "MOUSE_LEFT_BUTTON",
-                    'l3': "SWITCH_JOYMOUSE",
-                    'ld': "---",
-                    'll': "---",
-                    'lr': "---",
-                    'lu': "---",
-                    'r': "RETROK_RALT",
-                    'r2': "MOUSE_RIGHT_BUTTON",
-                    'r3': "TOGGLE_STATUSBAR",
-                    'rd': "---",
-                    'rl': "---",
-                    'rr': "---",
-                    'ru': "---",
-                    'select': "TOGGLE_VKBD",
-                    'start': "RETROK_RETURN",}
-                for key in uae_mapping:
-                    coreSettings.save('puae_mapper_' + key, uae_mapping[key])
-            elif system.isOptSet('puae_pinball_mode') and system.config['puae_pinball_mode'] == "modern_alt":
-                uae_mapping = { 'aspect_ratio_toggle': "---",
-                    'mouse_toggle': "RETROK_RCTRL",
-                    'statusbar': "RETROK_F11",
-                    'vkbd': "---",
-                    'reset': "---",
-                    'crop_toggle': "RETROK_F12",
-                    'down': "---",
-                    'left': "---",
-                    'a': "---",
-                    'b': "---",
-                    'x': "RETROK_SPACE",
-                    'y': "RETROK_DOWN",
-                    'l': "---",
-                    'l2': "RETROK_LALT",
-                    'l3': "SWITCH_JOYMOUSE",
-                    'ld': "---",
-                    'll': "---",
-                    'lr': "---",
-                    'lu': "---",
-                    'r': "---",
-                    'r2': "RETROK_RALT",
-                    'r3': "TOGGLE_STATUSBAR",
-                    'rd': "---",
-                    'rl': "---",
-                    'rr': "---",
-                    'ru': "---",
-                    'select': "TOGGLE_VKBD",
-                    'start': "RETROK_RETURN",}
-                for key in uae_mapping:
-                    coreSettings.save('puae_mapper_' + key, uae_mapping[key])
-            elif system.isOptSet('puae_pinball_mode') and system.config['puae_pinball_mode'] == "classic":
-                uae_mapping = { 'aspect_ratio_toggle': "---",
-                    'mouse_toggle': "RETROK_RCTRL",
-                    'statusbar': "RETROK_F11",
-                    'vkbd': "---",
-                    'reset': "---",
-                    'crop_toggle': "RETROK_F12",
-                    'down': "RETROK_DOWN",
-                    'left': "RETROK_LALT",
-                    'a': "RETROK_RALT",
-                    'b': "---",
-                    'x': "RETROK_SPACE",
-                    'y': "---",
-                    'l': "---",
-                    'l2': "MOUSE_LEFT_BUTTON",
-                    'l3': "SWITCH_JOYMOUSE",
-                    'ld': "---",
-                    'll': "---",
-                    'lr': "---",
-                    'lu': "---",
-                    'r': "---",
-                    'r2': "MOUSE_RIGHT_BUTTON",
-                    'r3': "TOGGLE_STATUSBAR",
-                    'rd': "---",
-                    'rl': "---",
-                    'rr': "---",
-                    'ru': "---",
-                    'select': "TOGGLE_VKBD",
-                    'start': "RETROK_RETURN",}
-                for key in uae_mapping:
-                    coreSettings.save('puae_mapper_' + key, uae_mapping[key])
-            else:
-                uae_mapping = { 'aspect_ratio_toggle': "---",
-                    'mouse_toggle': "RETROK_RCTRL",
-                    'statusbar': "RETROK_F11",
-                    'vkbd': "---",
-                    'reset': "---",
-                    'crop_toggle': "RETROK_F12",
-                    'up': "---",
-                    'down': "---",
-                    'left': "---",
-                    'right': "---",
-                    'a': "---",
-                    'b': "---",
-                    'x': "RETROK_LALT",
-                    'y': "RETROK_SPACE",
-                    'l': "RETROK_ESCAPE",
-                    'l2': "MOUSE_LEFT_BUTTON",
-                    'l3': "SWITCH_JOYMOUSE",
-                    'ld': "---",
-                    'll': "---",
-                    'lr': "---",
-                    'lu': "---",
-                    'r': "RETROK_F1",
-                    'r2': "MOUSE_RIGHT_BUTTON",
-                    'r3': "TOGGLE_STATUSBAR",
-                    'rd': "---",
-                    'rl': "---",
-                    'rr': "---",
-                    'ru': "---",
-                    'select': "TOGGLE_VKBD",
-                    'start': "RETROK_RETURN",}
-                for key in uae_mapping:
-                    coreSettings.save('puae_mapper_' + key, uae_mapping[key])
+            # Controller mapping for A500 and A1200
+            uae_mapping = { 'aspect_ratio_toggle': "---",
+                'mouse_toggle': "RETROK_RCTRL",
+                'statusbar': "RETROK_F11",
+                'vkbd': "---",
+                'reset': "---",
+                'crop_toggle': "RETROK_F12",
+                'a': "---",
+                'b': "---",
+                'x': "RETROK_LALT",
+                'y': "RETROK_SPACE",
+                'l': "RETROK_ESCAPE",
+                'l2': "MOUSE_LEFT_BUTTON",
+                'l3': "SWITCH_JOYMOUSE",
+                'ld': "---",
+                'll': "---",
+                'lr': "---",
+                'lu': "---",
+                'r': "RETROK_F1",
+                'r2': "MOUSE_RIGHT_BUTTON",
+                'r3': "TOGGLE_STATUSBAR",
+                'rd': "---",
+                'rl': "---",
+                'rr': "---",
+                'ru': "---",
+                'select': "TOGGLE_VKBD",
+                'start': "RETROK_RETURN",}
+            for key in uae_mapping:
+                coreSettings.save('puae_mapper_' + key, uae_mapping[key])
         else:
             # Controller mapping for CD32
             uae_mapping = { 'aspect_ratio_toggle': "---",
@@ -590,10 +471,6 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                 'vkbd': "---",
                 'reset': "---",
                 'crop_toggle': "RETROK_F12",
-                'up': "---",
-                'down': "---",
-                'left': "---",
-                'right': "---",
                 'a': "---",
                 'b': "---",
                 'x': "---",
@@ -612,7 +489,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                 'rl': "---",
                 'rr': "---",
                 'ru': "---",
-                'select': "TOGGLE_VKBD",
+                'select': "---",
                 'start': "---",}
             for key in uae_mapping:
                 coreSettings.save('puae_mapper_' + key, uae_mapping[key])
@@ -658,15 +535,15 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         else:
             coreSettings.save('puae_video_standard', '"PAL"')
         # Video Resolution
-        if system.isOptSet('video_resolution') and system.config['video_resolution'] != 'automatic':
+        if system.isOptSet('video_resolution'):
             coreSettings.save('puae_video_resolution', system.config['video_resolution'])
         else:
-            coreSettings.save('puae_video_resolution', '"auto"')
-        # Crop Mode
-        if system.isOptSet('crop_mode') and system.config['crop_mode'] != 'automatic':
-            coreSettings.save('puae_crop', system.config['crop_mode'])
+            coreSettings.save('puae_video_resolution', '"hires"')
+        # Zoom Mode
+        if system.isOptSet('zoom_mode') and system.config['zoom_mode'] != 'automatic':
+            coreSettings.save('puae_zoom_mode', system.config['zoom_mode'])
         else:
-            coreSettings.save('puae_crop', '"auto"')
+            coreSettings.save('puae_zoom_mode', '"auto"')
         # Frameskip
         if system.isOptSet('gfx_framerate'):
             coreSettings.save('puae_gfx_framerate', system.config['gfx_framerate'])
@@ -677,7 +554,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('puae_mouse_speed', system.config['mouse_speed'])
         else:
             coreSettings.save('puae_mouse_speed', '"200"')
-        # Jump on A
+        # Jump on B
         if system.isOptSet('pad_options'):
             coreSettings.save('puae_retropad_options', system.config['pad_options'])
         elif system.name == 'amigacdtv':
@@ -691,21 +568,21 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                 coreSettings.save('puae_floppy_speed', system.config['puae_floppy_speed'])
             else:
                 coreSettings.save('puae_floppy_speed', '"100"')
+            # 2P Gamepad Mapping (Keyrah)
+            if system.isOptSet('keyrah_mapping'):
+                coreSettings.save('puae_keyrah_keypad_mappings', system.config['keyrah_mapping'])
+            else:
+                coreSettings.save('puae_keyrah_keypad_mappings', '"enabled"')
             # Whdload Launcher
             if system.isOptSet('whdload'):
                 coreSettings.save('puae_use_whdload_prefs', system.config['whdload'])
             else:
                 coreSettings.save('puae_use_whdload_prefs', '"config"')
-            # Keyboard Passthrough
-            if system.isOptSet('puae_keyboard_pass_through'):
-                coreSettings.save('puae_physical_keyboard_pass_through', system.config['puae_keyboard_pass_through'])
+            # Disable Emulator Joystick for Pad2Key
+            if system.isOptSet('disable_joystick'):
+                coreSettings.save('puae_physical_keyboard_pass_through', system.config['disable_joystick'])
             else:
                 coreSettings.save('puae_physical_keyboard_pass_through', '"disabled"')
-            # Keyrah keymap mapping
-            if system.isOptSet('puae_keyrah_mapping'):
-                coreSettings.save('puae_keyrah_keypad_mappings', system.config['puae_keyrah_mapping'])
-            else:
-                coreSettings.save('puae_keyrah_keypad_mappings', '"enabled"')
 
         if system.name == 'amigacd32' or (system.name == 'amigacdtv'):
             # Boot animation first inserting CD
