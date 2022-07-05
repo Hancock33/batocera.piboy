@@ -3,8 +3,8 @@
 # YUZU-CMD
 #
 ################################################################################
-# Version: Commits on Jul 04, 2022
-YUZU_CMD_VERSION = c4ccf640b918945383e06f823cae25d7193b86a4
+# Version: Commits on Jul 05, 2022
+YUZU_CMD_VERSION = 5c01606091fa69a4cbc91e3c63348a3e2a1c7069
 YUZU_CMD_SITE = https://github.com/yuzu-emu/yuzu-mainline.git
 YUZU_CMD_SITE_METHOD=git
 YUZU_CMD_GIT_SUBMODULES=YES

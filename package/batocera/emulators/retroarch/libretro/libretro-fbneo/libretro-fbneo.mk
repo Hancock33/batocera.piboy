@@ -3,8 +3,8 @@
 # libretro-fbneo
 #
 ################################################################################
-# Version: Commits on Jul 04, 2022
-LIBRETRO_FBNEO_VERSION = 94be34def54b2746114bfd287abdfadd97e36d5d
+# Version: Commits on Jul 05, 2022
+LIBRETRO_FBNEO_VERSION = c6678275292532297b70c34317733dc4b3d6aff8
 LIBRETRO_FBNEO_SITE = $(call github,libretro,FBNeo,$(LIBRETRO_FBNEO_VERSION))
 LIBRETRO_FBNEO_LICENSE = Non-commercial
 
