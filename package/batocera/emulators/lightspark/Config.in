@@ -8,6 +8,7 @@ config BR2_PACKAGE_LIGHTSPARK
 	depends on BR2_PACKAGE_SDL2_MIXER
 	depends on BR2_PACKAGE_CAIRO
 	depends on BR2_PACKAGE_FFMPEG
+	depends on BR2_PACKAGE_RTMPDUMP
 	depends on BR2_PACKAGE_LIBCURL
 
 	help
