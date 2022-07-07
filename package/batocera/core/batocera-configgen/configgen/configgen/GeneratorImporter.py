@@ -222,6 +222,10 @@ def getGenerator(emulator):
     if emulator == 'moonlight':
         from generators.moonlight.moonlightGenerator import MoonlightGenerator
         return MoonlightGenerator()
+ 
+    if emulator == 'mplayer':
+        from generators.mplayer.mplayerGenerator import MplayerGenerator
+        return MplayerGenerator()
 
     if emulator == 'mugen':
         from generators.mugen.mugenGenerator import MugenGenerator
