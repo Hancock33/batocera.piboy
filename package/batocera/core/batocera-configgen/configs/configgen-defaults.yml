@@ -376,6 +376,9 @@ model3:
 moonlight:
   emulator: moonlight
   core:     moonlight
+mplayer:
+  emulator: mplayer
+  core:     mplayer
 mrboom:
   emulator: libretro
   core:     mrboom

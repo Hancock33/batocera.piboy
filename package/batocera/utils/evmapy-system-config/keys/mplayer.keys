@@ -1,0 +1,88 @@
+{
+    "actions_player1": [
+        {
+            "trigger": [
+                "hotkey",
+                "start"
+            ],
+            "type": "exec",
+            "target": "killall -9 mpv && reset"
+        },
+        {
+            "trigger": "up",
+            "type": "key",
+            "target": "KEY_UP"
+        },
+        {
+            "trigger": "down",
+            "type": "key",
+            "target": "KEY_DOWN"
+        },
+        {
+            "trigger": "left",
+            "type": "key",
+            "target": "KEY_RIGHT"
+        },
+        {
+            "trigger": "right",
+            "type": "key",
+            "target": "KEY_LEFT"
+        },
+        {
+            "trigger": "start",
+            "type": "key",
+            "target": [
+                "KEY_LEFTCTRL",
+                "KEY_H"
+            ]
+        },
+        {
+            "trigger": "select",
+            "type": "key",
+            "target": "KEY_Q"
+        },
+        {
+            "trigger": "a",
+            "type": "key",
+            "target": "KEY_F"
+        },
+        {
+            "trigger": "pagedown",
+            "type": "key",
+            "target": "KEY_O"
+        },
+        {
+            "trigger": "x",
+            "type": "key",
+            "target": "KEY_V"
+        },
+        {
+            "trigger": "y",
+            "type": "key",
+            "target": "KEY_M"
+        },
+        {
+            "trigger": "b",
+            "type": "key",
+            "target": "KEY_P"
+        },
+        {
+            "trigger": "pageup",
+            "type": "key",
+            "target": [
+                "KEY_LEFTSHIFT",
+                "KEY_A"
+            ]
+        },
+        {
+            "trigger": "l2",
+            "type": "key",
+            "target": "KEY_9"
+        },
+        {
+            "trigger": "r2",
+            "type": "key",
+            "target": "KEY_0"
+        }
+    ]
+}
