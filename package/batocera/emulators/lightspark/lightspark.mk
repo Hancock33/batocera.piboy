@@ -7,7 +7,7 @@
 LIGHTSPARK_VERSION = c0047a1dda2d43e668f7e53e2dc160d63296b6e0
 LIGHTSPARK_SITE = $(call github,lightspark,lightspark,$(LIGHTSPARK_VERSION))
 LIGHTSPARK_LICENSE = LGPLv3
-LIGHTSPARK_DEPENDENCIES = sdl2 sdl2_mixer freetype pcre jpeg libpng cairo ffmpeg libcurl
+LIGHTSPARK_DEPENDENCIES = sdl2 sdl2_mixer freetype pcre jpeg libpng cairo ffmpeg libcurl rtmpdump
 
 define LIGHTSPARK_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin

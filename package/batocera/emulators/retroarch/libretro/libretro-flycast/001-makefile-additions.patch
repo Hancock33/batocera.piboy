@@ -1,6 +1,8 @@
---- libretro-flycast-a659b57e63a9b58b8d1f9a4937723d8456f06c22/CMakeLists.txt	2022-06-30 05:11:26.000000000 -0700
-+++ libretro-flycast-lbrpdx/CMakeLists.txt	2022-07-03 11:55:15.668559809 -0700
-@@ -19,6 +19,11 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5552b5a6..530f56a0 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -19,6 +19,11 @@ option(USE_VULKAN "Build with Vulkan support" ON)
  option(LIBRETRO "Build libretro core" OFF)
  option(USE_OPENGL "Use Open GL API" ON)
  option(USE_VIDEOCORE "RPI: use the legacy Broadcom GLES libraries" OFF)
@@ -9,10 +11,10 @@
 +option(RPI4 "Optimize for RPi4" OFF)
 +option(RK3326 "Optimize for RK3326" OFF)
 +option(S922X "Optimize for S922X" OFF)
+ option(APPLE_BREAKPAD "macOS: Build breakpad client and dump symbols" OFF)
  
  set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/shell/cmake")
- 
-@@ -106,6 +111,19 @@
+@@ -107,6 +112,19 @@ elseif(LIBRETRO)
      set(CMAKE_SHARED_LIBRARY_PREFIX "")
      set(CMAKE_POSITION_INDEPENDENT_CODE ON)
      target_compile_definitions(${PROJECT_NAME} PRIVATE LIBRETRO)
@@ -32,7 +34,7 @@
      if(ANDROID OR USE_GLES)
  		target_compile_definitions(${PROJECT_NAME} PRIVATE GLES GLES3 HAVE_OPENGLES HAVE_OPENGLES3)
  		find_library(GLES3_LIBRARIES NAMES GLESv3 GLESv2 NO_CACHE REQUIRED)
-@@ -142,6 +160,10 @@
+@@ -143,6 +161,10 @@ else()
      add_executable(${PROJECT_NAME} MACOSX_BUNDLE core/emulator.cpp)
  endif()
  
@@ -43,10 +45,9 @@
  if(WINDOWS_STORE)
  	set(USE_OPENGL OFF)
      target_compile_features(${PROJECT_NAME} PRIVATE c_std_11 cxx_std_17)
-@@ -1508,4 +1530,4 @@
+@@ -1572,4 +1594,3 @@ if(UNIX AND NOT APPLE AND NOT ANDROID AND NOT LIBRETRO)
  endif()
  
- file(GLOB_RECURSE SRC_FILES *.h *.cpp *.c *.mm)
+ file(GLOB_RECURSE SRC_FILES *.h *.cpp *.c *.cc *.mm)
 -source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${SRC_FILES})
 \ No newline at end of file
-+source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${SRC_FILES})
