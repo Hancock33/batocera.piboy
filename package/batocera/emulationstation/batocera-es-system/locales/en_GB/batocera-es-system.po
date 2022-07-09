@@ -1919,11 +1919,6 @@ msgstr ""
 
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
-msgid "LIGHTGUN"
-msgstr ""
-
-#. TRANSLATION: libretro/flycast
-msgctxt "game_options"
 msgid "Target color for player 4."
 msgstr ""
 
