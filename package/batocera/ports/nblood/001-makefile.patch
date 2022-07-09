@@ -1,19 +1,8 @@
 diff --git a/Common.mak b/Common.mak
-index 78466b9a7..84e931aae 100644
+index 95c964b4a..8ea9f9871 100644
 --- a/Common.mak
 +++ b/Common.mak
-@@ -574,8 +574,8 @@ ifndef OPTOPT
-         else
-             ifeq ($(PLATFORM),DARWIN)
-                 OPTOPT := -march=core2 -mmmx -msse -msse2 -msse3 -mssse3
--            else
--                OPTOPT := -march=nocona
-+#            else
-+#                OPTOPT := -march=nocona
-             endif
-         endif
-     endif
-@@ -602,6 +602,9 @@ ifndef OPTOPT
+@@ -576,6 +576,9 @@ ifndef OPTOPT
      ifeq ($(PLATFORM),WII)
          OPTOPT := -mtune=750
      endif
@@ -23,7 +12,7 @@ index 78466b9a7..84e931aae 100644
  endif
  
  ifeq ($(PACKAGE_REPOSITORY),0)
-@@ -893,7 +896,7 @@ endif
+@@ -878,7 +881,7 @@ endif
  
  ifeq ($(RENDERTYPE),SDL)
      ifeq ($(SDL_TARGET),2)
@@ -32,7 +21,7 @@ index 78466b9a7..84e931aae 100644
          SDLNAME := SDL2
      else ifeq ($(SDL_TARGET),1)
          SDLCONFIG := sdl-config
-@@ -941,8 +944,8 @@ ifeq ($(RENDERTYPE),SDL)
+@@ -923,8 +926,8 @@ ifeq ($(RENDERTYPE),SDL)
              SDLCONFIG_CFLAGS := $(strip $(subst -Dmain=SDL_main,,$(shell $(SDLCONFIG) --cflags)))
              SDLCONFIG_LIBS := $(strip $(subst -mwindows,,$(shell $(SDLCONFIG) --libs)))
  
@@ -44,10 +33,10 @@ index 78466b9a7..84e931aae 100644
              ifeq ($(SDL_TARGET),1)
                  COMPILERFLAGS += -D_GNU_SOURCE=1
 diff --git a/GNUmakefile b/GNUmakefile
-index 105f402dd..3d6213f08 100644
+index 812f2cb9b..fccbac02e 100644
 --- a/GNUmakefile
 +++ b/GNUmakefile
-@@ -514,7 +514,7 @@ kenbuild_obj := $(obj)/$(kenbuild)
+@@ -538,7 +538,7 @@ kenbuild_obj := $(obj)/$(kenbuild)
  kenbuild_cflags := -I$(kenbuild_src)
  
  kenbuild_game := ekenbuild
@@ -56,7 +45,7 @@ index 105f402dd..3d6213f08 100644
  
  kenbuild_game_deps := audiolib
  
-@@ -570,7 +570,7 @@ tekwar_obj := $(obj)/$(tekwar)
+@@ -594,7 +594,7 @@ tekwar_obj := $(obj)/$(tekwar)
  tekwar_cflags := -I$(tekwar_src)
  
  tekwar_game := etekwar
@@ -65,7 +54,7 @@ index 105f402dd..3d6213f08 100644
  
  tekwar_game_proper := ETekWar
  tekwar_editor_proper := ETekWar Editor
-@@ -653,7 +653,7 @@ duke3d_game_deps := audiolib mact
+@@ -677,7 +677,7 @@ duke3d_game_deps := audiolib mact
  duke3d_editor_deps := audiolib
  
  duke3d_game := eduke32
@@ -74,7 +63,7 @@ index 105f402dd..3d6213f08 100644
  
  ifneq (,$(APPBASENAME))
      duke3d_game := $(APPBASENAME)
-@@ -921,7 +921,7 @@ ifneq (0,$(NETCODE))
+@@ -945,7 +945,7 @@ ifneq (0,$(NETCODE))
  endif
  
  rr_game := rednukem
@@ -83,7 +72,7 @@ index 105f402dd..3d6213f08 100644
  
  ifneq (,$(APPBASENAME))
      rr_game := $(APPBASENAME)
-@@ -1048,7 +1048,7 @@ sw_game_deps := audiolib mact
+@@ -1072,7 +1072,7 @@ sw_game_deps := audiolib mact
  sw_editor_deps := audiolib
  
  sw_game := voidsw
@@ -92,7 +81,7 @@ index 105f402dd..3d6213f08 100644
  
  sw_game_proper := VoidSW
  sw_editor_proper := Wangulator
-@@ -1177,7 +1177,7 @@ exhumed_game_deps := duke3d_common_midi audiolib mact
+@@ -1201,7 +1201,7 @@ exhumed_game_deps := duke3d_common_midi audiolib mact
  exhumed_editor_deps := audiolib
  
  exhumed_game := pcexhumed
@@ -101,7 +90,7 @@ index 105f402dd..3d6213f08 100644
  
  exhumed_game_proper := PCExhumed
  exhumed_editor_proper := PCExhumed Editor
-@@ -1286,7 +1286,7 @@ witchaven_game_deps := duke3d_common_midi audiolib mact hmpplay
+@@ -1310,7 +1310,7 @@ witchaven_game_deps := duke3d_common_midi audiolib mact hmpplay
  witchaven_editor_deps := audiolib
  
  witchaven_game := ewitchaven
@@ -110,12 +99,10 @@ index 105f402dd..3d6213f08 100644
  
  witchaven_game_proper := EWitchaven
  witchaven_editor_proper := EWitchaven Editor
-@@ -1415,7 +1415,8 @@ endif
- all: \
+@@ -1442,6 +1442,7 @@ all: \
      blood \
      rr \
--    exhumed \
-+    exhumed \
+     exhumed \
 +    witchaven
  
  start:
