@@ -63,11 +63,11 @@ define MAME_BUILD_CMDS
 	cd $(@D); \
 	PATH="$(HOST_DIR)/bin:$$PATH" \
 	$(MAKE) TARGETOS=linux OSD=sdl genie \
-	TARGET=mame SUBTARGET=tiny\
+	TARGET=mame SUBTARGET=tiny \
 	NO_USE_PORTAUDIO=1 NO_X11=1 USE_SDL=0 \
 	USE_QTDEBUG=0 DEBUG=0 IGNORE_GIT=1 MPARAM=""
 
-	# Compile emulation target (ARCADE)
+	# Compile emulation target (MAME)
 	cd $(@D); \
 	PATH="$(HOST_DIR)/bin:$$PATH" \
 	SYSROOT="$(STAGING_DIR)" \
