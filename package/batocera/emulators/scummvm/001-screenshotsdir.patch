@@ -1,12 +1,12 @@
 diff --git a/base/commandLine.cpp b/base/commandLine.cpp
-index 2454f0842d8..43b6e022f2c 100644
+index 40e853f..dc1c5fa 100644
 --- a/base/commandLine.cpp
 +++ b/base/commandLine.cpp
 @@ -151,6 +151,7 @@ static const char HELP_STRING[] =
  	"                           pce, segacd, wii, windows)\n"
  	"  --savepath=PATH          Path to where saved games are stored\n"
  	"  --extrapath=PATH         Extra path to additional game data\n"
-+	"  --screenshots=PATH       Path to where screenshots are saved\n"	
++	"  --screenshots=PATH       Path to where screenshots are saved\n"
  	"  --iconspath=PATH         Path to additional icons for the launcher grid view\n"
  	"  --soundfont=FILE         Select the SoundFont for MIDI playback (only\n"
  	"                           supported by some MIDI drivers)\n"
@@ -19,7 +19,7 @@ index 2454f0842d8..43b6e022f2c 100644
  	// Game specific
  	ConfMan.registerDefault("path", "");
  	ConfMan.registerDefault("platform", Common::kPlatformDOS);
-@@ -856,6 +859,15 @@ Common::String parseCommandLine(Common::StringMap &settings, int argc, const cha
+@@ -857,6 +860,15 @@ Common::String parseCommandLine(Common::StringMap &settings, int argc, const cha
  			DO_LONG_OPTION("md5-engine")
  			END_OPTION
  

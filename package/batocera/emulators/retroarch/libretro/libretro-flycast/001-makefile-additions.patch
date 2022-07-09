@@ -1,24 +1,24 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 5552b5a6..530f56a0 100644
+index 5552b5a..47b996e 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -19,6 +19,11 @@ option(USE_VULKAN "Build with Vulkan support" ON)
- option(LIBRETRO "Build libretro core" OFF)
+@@ -20,6 +20,11 @@ option(LIBRETRO "Build libretro core" OFF)
  option(USE_OPENGL "Use Open GL API" ON)
  option(USE_VIDEOCORE "RPI: use the legacy Broadcom GLES libraries" OFF)
+ option(APPLE_BREAKPAD "macOS: Build breakpad client and dump symbols" OFF)
 +option(USE_MALI "Use mali" OFF)
 +option(RG552 "Optimize for RG552" OFF)
 +option(RPI4 "Optimize for RPi4" OFF)
 +option(RK3326 "Optimize for RK3326" OFF)
 +option(S922X "Optimize for S922X" OFF)
- option(APPLE_BREAKPAD "macOS: Build breakpad client and dump symbols" OFF)
  
  set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/shell/cmake")
+ 
 @@ -107,6 +112,19 @@ elseif(LIBRETRO)
      set(CMAKE_SHARED_LIBRARY_PREFIX "")
      set(CMAKE_POSITION_INDEPENDENT_CODE ON)
      target_compile_definitions(${PROJECT_NAME} PRIVATE LIBRETRO)
-+    if (RG552)
++	if (RG552)
 +	    set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -O3 -mcpu=cortex-a72 -mtune=cortex-a72.cortex-a53")
 +	    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -mcpu=cortex-a72 -mtune=cortex-a72.cortex-a53")
 +    elseif(RK3326)
@@ -45,9 +45,3 @@ index 5552b5a6..530f56a0 100644
  if(WINDOWS_STORE)
  	set(USE_OPENGL OFF)
      target_compile_features(${PROJECT_NAME} PRIVATE c_std_11 cxx_std_17)
-@@ -1572,4 +1594,3 @@ if(UNIX AND NOT APPLE AND NOT ANDROID AND NOT LIBRETRO)
- endif()
- 
- file(GLOB_RECURSE SRC_FILES *.h *.cpp *.c *.cc *.mm)
--source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${SRC_FILES})
-\ No newline at end of file
