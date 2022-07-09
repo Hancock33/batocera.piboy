@@ -3,8 +3,8 @@
 # Sameduck
 #
 ################################################################################
-# Version: Commits on Nov 16, 2020
-LIBRETRO_SAMEDUCK_VERSION = a5e5462f79164d21053f81fc680bfa9f59a2bf59
+# Version: Commits on Jul 03, 2022
+LIBRETRO_SAMEDUCK_VERSION = 5cc014b23af963f9e9a77091a1e6ff7a7852e8a7
 LIBRETRO_SAMEDUCK_SITE = $(call github,LIJI32,SameBoy,$(LIBRETRO_SAMEDUCK_VERSION))
 LIBRETRO_SAMEDUCK_LICENSE = GPL-3.0
 
