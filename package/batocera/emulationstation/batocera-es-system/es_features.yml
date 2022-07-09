@@ -1288,7 +1288,7 @@ libretro:
                     White: White
                     Disabled: disabled
             reicast_lightgun4_crosshair:
-                group: LIGHTGUN
+                group: LIGHT GUN
                 prompt:      Target color for player 4.
                 choices:
                     Red: Red
