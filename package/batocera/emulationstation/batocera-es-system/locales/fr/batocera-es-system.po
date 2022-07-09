@@ -2037,7 +2037,7 @@ msgctxt "game_options"
 msgid "SCREEN ORIENTATION"
 msgstr "ORIENTATION DE L'ÉCRAN"
 
-#. TRANSLATION: libretro/fuse, vice
+#. TRANSLATION: libretro/fuse, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
 msgid "Hides borders on many games. Some games used the borders."
 msgstr ""
@@ -4794,22 +4794,19 @@ msgctxt "game_options"
 msgid "Super-high 1440p"
 msgstr "1440p super élevé"
 
-#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, ...
-msgctxt "game_options"
-msgid "Remove borders according to the crop preset."
-msgstr ""
-
-#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, ...
-msgctxt "game_options"
-msgid "CROP BORDERS"
-msgstr ""
-
 #. TRANSLATION: libretro/puae, libretro/puae2021
+msgctxt "game_options"
+msgid "Hides borders on many games. Some games use the borders."
+msgstr ""
+"Masque les bordures sur de nombreux jeux. Certains jeux utilisent les "
+"bordures."
+
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, ...
 msgctxt "game_options"
 msgid "ZOOM/CROP (HIDE BORDERS)"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, ...
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Auto zoom"
 msgstr "Zoom automatique"
@@ -9826,12 +9823,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "FIX 2D SCREEN"
 #~ msgstr "CORRECTION DE L'ÉCRAN 2D"
-
-#~ msgctxt "game_options"
-#~ msgid "Hides borders on many games. Some games use the borders."
-#~ msgstr ""
-#~ "Masque les bordures sur de nombreux jeux. Certains jeux utilisent les "
-#~ "bordures."
 
 #~ msgctxt "game_options"
 #~ msgid "Auto-disable zoom"

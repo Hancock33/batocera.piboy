@@ -2019,7 +2019,7 @@ msgctxt "game_options"
 msgid "SCREEN ORIENTATION"
 msgstr "画面の向き"
 
-#. TRANSLATION: libretro/fuse, vice
+#. TRANSLATION: libretro/fuse, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
 msgid "Hides borders on many games. Some games used the borders."
 msgstr ""
@@ -4761,14 +4761,14 @@ msgctxt "game_options"
 msgid "Super-high 1440p"
 msgstr "Super-high 1440p"
 
-#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, ...
+#. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
-msgid "Remove borders according to the crop preset."
-msgstr ""
+msgid "Hides borders on many games. Some games use the borders."
+msgstr "多くのゲームの境界線を非表示にします。一部のゲームは境界線を使用します"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, ...
 msgctxt "game_options"
-msgid "CROP BORDERS"
+msgid "ZOOM/CROP (HIDE BORDERS)"
 msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
@@ -9725,11 +9725,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "FIX 2D SCREEN"
 #~ msgstr "2D画面を修正"
-
-#~ msgctxt "game_options"
-#~ msgid "Hides borders on many games. Some games use the borders."
-#~ msgstr ""
-#~ "多くのゲームの境界線を非表示にします。一部のゲームは境界線を使用します"
 
 #~ msgctxt "game_options"
 #~ msgid "Auto-disable zoom"
