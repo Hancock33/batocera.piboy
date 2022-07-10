@@ -1,0 +1,92 @@
+diff --git a/res/drawable/title.png b/res/drawable/title.png
+index 8241e01..0f2212e 100644
+Binary files a/res/drawable/title.png and b/res/drawable/title.png differ
+diff --git a/src/render.c b/src/render.c
+index 523f81c..e9900a7 100644
+--- a/src/render.c
++++ b/src/render.c
+@@ -36,6 +36,9 @@ unsigned long long renderFrames;
+ 
+ LinkList animationsList[ANIMATION_LINK_LIST_NUM];
+ Animation* countDownBar;
++
++SDL_DisplayMode DM;
++
+ void blacken(int duration) {
+   SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
+   SDL_Rect rect = {0, 0, SCREEN_WIDTH, SCREEN_HEIGHT};
+@@ -68,6 +71,8 @@ void initInfo() {
+   if (!taskText) taskText = createText("placeholder", WHITE);
+ }
+ void initRenderer() {
++  
++SDL_GetCurrentDisplayMode(0, &DM);
+   renderFrames = 0;
+   for (int i = 0; i < ANIMATION_LINK_LIST_NUM; i++) {
+     initLinkList(&animationsList[i]);
+@@ -408,12 +413,15 @@ void render() {
+   renderInfo();
+   renderId();
+   // Update Screen
++  SDL_RenderSetScale(renderer,(float)DM.w/SCREEN_WIDTH,(float)DM.h/SCREEN_HEIGHT);
+   SDL_RenderPresent(renderer);
++  
+   renderFrames++;
+ }
+ void renderUi() {
+   SDL_SetRenderDrawColor(renderer, RENDER_BG_COLOR, 255);
+   SDL_RenderClear(renderer);
++  SDL_RenderSetScale(renderer,(float)DM.w/SCREEN_WIDTH,(float)DM.h/SCREEN_HEIGHT);
+ 
+   for (int i = 0; i < ANIMATION_LINK_LIST_NUM; i++) {
+     updateAnimationLinkList(&animationsList[i]);
+diff --git a/src/res.c b/src/res.c
+index ef4945a..ab1b286 100644
+--- a/src/res.c
++++ b/src/res.c
+@@ -76,6 +76,7 @@ extern SDL_Color WHITE;
+ extern SDL_Renderer* renderer;
+ extern Weapon weapons[WEAPONS_SIZE];
+ 
++extern SDL_DisplayMode DM;
+ SDL_Window* window;
+ SDL_Texture* originTextures[TILESET_SIZE];
+ TTF_Font* font;
+@@ -92,7 +93,8 @@ Mix_Chunk *sounds[AUDIO_SOUND_SIZE];
+ bool init() {
+   // Initialization flag
+   bool success = true;
+-
++  
++  SDL_GetCurrentDisplayMode(0, &DM);
+   // Initialize SDL
+   if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0) {
+     printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
+@@ -100,8 +102,8 @@ bool init() {
+   } else {
+     // Create window
+     window = SDL_CreateWindow("Dungeon Rush "VERSION_STRING, SDL_WINDOWPOS_UNDEFINED,
+-                              SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH,
+-                              SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
++                              SDL_WINDOWPOS_UNDEFINED, 1920,
++                              1080, SDL_WINDOW_OPENGL);
+     if (window == NULL) {
+       printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
+       success = false;
+diff --git a/src/res.h b/src/res.h
+index 20b73f8..3963e63 100644
+--- a/src/res.h
++++ b/src/res.h
+@@ -11,9 +11,9 @@
+ #define TEXTURES_SIZE 1024
+ #define EFFECTS_SIZE 128
+ #define UNIT 32
+-#define SCREEN_WIDTH 1440
+-#define SCREEN_HEIGHT 960
+-#define FONT_SIZE 32
++#define SCREEN_WIDTH 1024
++#define SCREEN_HEIGHT 768
++#define FONT_SIZE 48
+ // Resource ID
+ // Map Resource
+ #define RES_WALL_TOP_LEFT 0
