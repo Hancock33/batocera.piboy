@@ -6,7 +6,7 @@
         * add: wiimote calibration (the wiimote is now precise and can be used as a gun without drawing the target on screen)
         * add: MediaTek MT7921U & MT7986 wifi, RealTek RTL8852A wifi & better AMD sound SOC support. (Kernel 5.18)
         * add: Additional RPCS3 options & auto aspect ratio
-        * add: GamePark GP32 using MAME/MESS
+        * add: GamePark GP32 & VTech Laser 310 using MAME/MESS
         * add: fallback config option to use the Nvidia legacy drivers 'nvidia-driver=legacy' or legacy390
         * add: Nvidia 'legacy' linux driver 470.129.06 & 390.151
         * add: RTL8189es SDIO drivers for the Amlogic S905x devices
@@ -25,7 +25,7 @@
         * add: build engine source ports: ion fury and raze for duke nukem 3d, shadow warrior, blood etc.
         * add: xemu netplay support now enabled and auto-configured by default
         * add: Adding libretro-a5200 for Atari 5200
-        * bump: x86_64 linux kernel to 5.18.4
+        * bump: x86_64 linux kernel to 5.18.10
         * bump: Nvidia linux driver to 515.48.07
         * bump: btop to 1.2.7
         * bump: Mame to 245
