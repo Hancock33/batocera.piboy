@@ -1,11 +1,8 @@
 config BR2_PACKAGE_LIBRETRO_LOWRESNX
-	bool "libretro-lowresnx"
+    bool "libretro-lowresnx"
 	depends on BR2_PACKAGE_RETROARCH
-	depends on BR2_INSTALL_LIBSTDCPP
-	help
-	  Lowres-nx is an simulated retro game console, which can be programmed in the classic BASIC language.
+      help
+        lowresnx fantasy console for retroarch
 
 	  http://www.libretro.com
 
-comment "LIBRETRO_LOWRESNX needs a toolchain w/ C++"
-	depends on !BR2_INSTALL_LIBSTDCPP
