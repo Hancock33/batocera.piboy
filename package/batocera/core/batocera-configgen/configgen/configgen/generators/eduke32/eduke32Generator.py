@@ -10,7 +10,7 @@ class Eduke32Generator(Generator):
         os.system('piboy_keys eduke32.keys')
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ["eduke32", rom, "-game_dir", os.path.dirname(os.path.abspath(rom))]
+        commandArray = ["eduke32", rom, "-game_dir", os.path.dirname(os.path.abspath(rom)), "-nologo" if system.getOptBoolean("nologo") else ""]]
         os.chdir(os.path.dirname(os.path.abspath(rom)))
 
         if os.path.isfile('/tmp/piboy'):
