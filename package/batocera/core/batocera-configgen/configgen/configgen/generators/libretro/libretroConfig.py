@@ -206,7 +206,7 @@ def createLibretroConfig(generator, system, controllers, guns, rom, bezel, shade
         retroarchConfig['input_libretro_device_p2'] = coreToP2Device[system.config['core']]
 
     ## AMIGA OCS-ECS/AGA/CD32
-    if system.config['core'] == 'puae' or system.config['core'] == 'puae2021':
+    if system.config['core'] == 'puae':
         if system.name != 'amigacd32':
             if system.isOptSet('controller1_puae'):
                 retroarchConfig['input_libretro_device_p1'] = system.config['controller1_puae']
