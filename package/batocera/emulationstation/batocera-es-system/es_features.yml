@@ -915,7 +915,7 @@ libretro:
                 choices:
                     "Off":        "false"
                     "On":         "true"
-            duckstation_resolution_scale:
+            swanstation_resolution_scale:
                 group: VIDEO SETTINGS
                 prompt:      RENDERING RESOLUTION
                 description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
@@ -929,7 +929,7 @@ libretro:
                     "7x (2240x1680)": 7
                     "8x (2560x1920)": 8
                     "9x (2880x2160)": 9
-            duckstation_antialiasing:
+            swanstation_antialiasing:
                 prompt:      ANTI-ALIASING (MSAA/SSAA)
                 description: Enhancement. Smooth out jagged edges on 3D object polygons.
                 choices:
@@ -944,7 +944,7 @@ libretro:
                     "8x SSAA":    8-ssaa
                     "16x SSAA":   16-ssaa
                     "32x SSAA":   32-ssaa
-             swanstation_texture_filtering:
+            swanstation_texture_filtering:
                 prompt:      TEXTURE FILTERING
                 description: Enhancement. Smooth/upscale textures.
                 choices:
