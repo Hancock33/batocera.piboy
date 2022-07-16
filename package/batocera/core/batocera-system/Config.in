@@ -229,14 +229,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 	select BR2_PACKAGE_LIBCEC                               # libcec
 	select BR2_PACKAGE_EDID_DECODE                          # edid monitor/tv support
 	select BR2_PACKAGE_READ_EDID                            # edid monitor/tv support
-	select BR2_PACKAGE_XONE                                 if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # xbox receiver (require linux >= 4.15)
-	select BR2_PACKAGE_XPAD_NOONE                           if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # xbox receiver (require linux >= 4.15)
-	select BR2_PACKAGE_XPADNEO                              if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # xbox receiver (require linux >= 4.18)
-	#select BR2_PACKAGE_XOW                                  if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # xbox receiver (requires linux >= 4.5) - *** deprecated use above xinput drivers***
-	select BR2_PACKAGE_WII_U_GC_ADAPTER                     # wii-u-gc-adapter
-	select BR2_PACKAGE_WIIMOTES_RULES                       if !BR2_PACKAGE_BATOCERA_TARGET_RPIZERO2 # wiimotes
-	select BR2_PACKAGE_XWIIMOTE                             # a tool to analye wiimote events (mainly to debug, but helps and is funny)
-	select BR2_PACKAGE_BATOCERA_GUNS                        if !BR2_PACKAGE_BATOCERA_TARGET_RPIZERO2
 	select BR2_SYSTEM_ENABLE_NLS                            # locales
 	select BR2_PACKAGE_ACPID                                if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 	select BR2_PACKAGE_AVAHI                                # service discovery on local network
@@ -261,10 +253,22 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 	select BR2_PACKAGE_RCLONE                               if BR2_PACKAGE_BATOCERA_TARGET_X86_64 # sync files in the cloud (require x86_64)
 	select BR2_PACKAGE_BTOP                                 # htop alternative
 
-	# RaspberryPi Firmwares
-	select BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI          if BR2_PACKAGE_BATOCERA_RPI_ANY
-	select BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI_BT       if BR2_PACKAGE_BATOCERA_RPI_ANY
-	select BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI_WIFI     if BR2_PACKAGE_BATOCERA_RPI_ANY
+	# Controllers
+	select BR2_PACKAGE_XONE                                 if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # xbox receiver (require linux >= 4.15)
+	select BR2_PACKAGE_XPAD_NOONE                           if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # xbox receiver (require linux >= 4.15)
+	select BR2_PACKAGE_XPADNEO                              if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # xbox receiver (require linux >= 4.18)
+	#select BR2_PACKAGE_XOW                                 if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # xbox receiver (requires linux >= 4.5) - *** deprecated use above xinput drivers***
+	select BR2_PACKAGE_WII_U_GC_ADAPTER                     # wii-u-gc-adapter
+	select BR2_PACKAGE_WIIMOTES_RULES                       if !BR2_PACKAGE_BATOCERA_TARGET_RPIZERO2 # wiimotes
+	select BR2_PACKAGE_XWIIMOTE                             # a tool to analye wiimote events (mainly to debug, but helps and is funny)
+	select BR2_PACKAGE_BATOCERA_GUNS                        if !BR2_PACKAGE_BATOCERA_TARGET_RPIZERO2
+	select BR2_PACKAGE_HID_NX                               if BR2_PACKAGE_BATOCERA_TARGET_X86_64 # updated nintendo switch controller driver
+	select BR2_PACKAGE_JOYCOND                              if BR2_PACKAGE_BATOCERA_TARGET_X86_64 # nintendo switch joycon daemon (requires hid-nx)
+
+	# RaspberryPi Firmwares bluetooth and wifi
+	select BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI           if BR2_PACKAGE_BATOCERA_RPI_ANY
+	select BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI_BT        if BR2_PACKAGE_BATOCERA_RPI_ANY
+	select BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI_WIFI      if BR2_PACKAGE_BATOCERA_RPI_ANY
 	select BR2_PACKAGE_RPI_USERLAND_BATOCERA               if BR2_PACKAGE_BATOCERA_TARGET_RPI4
 	select BR2_PACKAGE_RPI_EEPROM                          if BR2_PACKAGE_BATOCERA_TARGET_RPI4
 
@@ -290,21 +294,20 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                 BR2_PACKAGE_BATOCERA_TARGET_RPI4
 
     # wireless drivers
-	select BR2_PACKAGE_RTL8821AU            if  !BR2_PACKAGE_BATOCERA_TARGET_RPI1           && \
+    # use the morrownr RTL8812au & RTL8821au drivers
+	select BR2_PACKAGE_RTL8812AU             if !BR2_PACKAGE_BATOCERA_TARGET_RPI1           && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_RPIZERO2       && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_PC    && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_CHA            && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3326         && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3128         && \
-												!BR2_PACKAGE_BATOCERA_TARGET_S922X          && \
 												!BR2_PACKAGE_BATOCERA_TARGET_ODIN
+	select BR2_PACKAGE_RTL8821AU_MORROWNR    if BR2_PACKAGE_BATOCERA_TARGET_S922X || BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
-	select BR2_PACKAGE_RTL8812AU        if BR2_PACKAGE_BATOCERA_TARGET_S922X
-	select BR2_PACKAGE_RTL8821CU        if BR2_PACKAGE_BATOCERA_TARGET_S922X
-
-	select BR2_PACKAGE_RTL8723BU        if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY # at least for pc
-	select BR2_PACKAGE_RTL8188EU        if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY # at least for pc
-	select BR2_PACKAGE_RTL8189FS        if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY # at least for pc
+	select BR2_PACKAGE_RTL8821CU             if BR2_PACKAGE_BATOCERA_TARGET_S922X || BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+	select BR2_PACKAGE_RTL8723BU             if BR2_PACKAGE_BATOCERA_TARGET_S922X || BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+	select BR2_PACKAGE_RTL8188EU             if BR2_PACKAGE_BATOCERA_TARGET_S922X || BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+	select BR2_PACKAGE_RTL8189FS             if BR2_PACKAGE_BATOCERA_TARGET_S922X || BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
 	# do NOT remove this one for OGA
 	select BR2_PACKAGE_RTL8192EU		if  !BR2_PACKAGE_BATOCERA_TARGET_RPI1           && \
@@ -1501,6 +1504,7 @@ config BR2_PACKAGE_BATOCERA_SDL2
 	select BR2_PACKAGE_SDL2_TTF
 	select BR2_PACKAGE_SDL2_OPENGLES
 	select BR2_PACKAGE_SDL2_OPENGL      if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY || BR2_PACKAGE_BATOCERA_SBC_XORG
+	select BR2_PACKAGE_SDL2_X11         if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY || BR2_PACKAGE_BATOCERA_SBC_XORG
 	select BR2_PACKAGE_SDL2_KMSDRM      if !BR2_PACKAGE_BATOCERA_RPI_VCORE
 	select BR2_PACKAGE_FLAC      # flac
 	select BR2_PACKAGE_LIBMAD    # mp3
@@ -1521,6 +1525,7 @@ config BR2_PACKAGE_BATOCERA_XORG
 	select BR2_PACKAGE_XDRIVER_XF86_INPUT_EVDEV
 	select BR2_PACKAGE_XDRIVER_XF86_INPUT_KEYBOARD
 	select BR2_PACKAGE_XDRIVER_XF86_INPUT_LIBINPUT
+	select BR2_PACKAGE_XDRIVER_XF86_INPUT_SYNAPTICS
 
 	# GPU drivers (needed for old Nvidia&AMD cards for edid handshake with display)
 	select BR2_PACKAGE_XDRIVER_XF86_VIDEO_AMDGPU                if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
@@ -1546,6 +1551,7 @@ config BR2_PACKAGE_BATOCERA_XORG
 	select BR2_PACKAGE_XTERM                        # terminal
 	select BR2_PACKAGE_OPENBOX                      # window manager
 	select BR2_PACKAGE_UNCLUTTER                    # hide mouse
+	select BR2_PACKAGE_TOUCHEGG                     # touchscreen extended gestures
 
 	# vendor neutral GL dispatch library
 	# already set by nvidia for x86_64, but required on x86 for pcsx2
