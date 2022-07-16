@@ -3,8 +3,8 @@
 # EDUKE32
 #
 ################################################################################
-# Version: Commits on 26 Jun, 2022
-EDUKE32_VERSION = e27a7b6218a108942bf884d153623200041f2111
+# Version: Commits on 09 Jul, 2022
+EDUKE32_VERSION = d496daf5483bba9ccf1a94cf047ceb896ed9f8b2
 EDUKE32_SITE = https://voidpoint.io/terminx/eduke32.git
 
 EDUKE32_DEPENDENCIES = sdl2 sdl2_image nblood

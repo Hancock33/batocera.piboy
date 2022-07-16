@@ -3,8 +3,8 @@
 # YABAUSE
 #
 ################################################################################
-# Version: Commits on Feb 18, 2022
-LIBRETRO_YABAUSE_VERSION = 17dfcd8de4700341d972993501d3a043925675ce
+# Version: Commits on Jul 12, 2022
+LIBRETRO_YABAUSE_VERSION = c7e02721eddb3de0ec7ae0d61e9e3afa5f586a62
 LIBRETRO_YABAUSE_SITE = $(call github,libretro,yabause,$(LIBRETRO_YABAUSE_VERSION))
 LIBRETRO_YABAUSE_LICENSE = GPL
 
