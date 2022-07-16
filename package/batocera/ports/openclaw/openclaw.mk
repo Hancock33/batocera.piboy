@@ -3,8 +3,8 @@
 # Open Claw
 #
 ################################################################################
-# Version: Commits on Jun 07, 2021
-OPENCLAW_VERSION = 3586dfade4a0ae9b4456d24b599c9e9b111522e2
+# Version: Commits on Jul 13, 2022
+OPENCLAW_VERSION = 5ee5740ca98377c76b13b50c84f610b0066a4717
 OPENCLAW_SITE = $(call github,pjasicek,OpenClaw,$(OPENCLAW_VERSION))
 
 OPENCLAW_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf sdl2_gfx

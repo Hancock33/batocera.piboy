@@ -3,8 +3,8 @@
 # SIMCOUPE
 #
 ################################################################################
-# Version: Commits on Jun 07, 2022
-SIMCOUPE_VERSION = 63a1bafcaebbb11e67a7f72ea2a4bc4098fe78f4
+# Version: Commits on Jul 13, 2022
+SIMCOUPE_VERSION = 4a6a584dfb5373ec3d16285ff370f8ab412f20ed
 SIMCOUPE_SITE = $(call github,simonowen,simcoupe,$(SIMCOUPE_VERSION))
 
 SIMCOUPE_LICENSE = GPL-3.0
