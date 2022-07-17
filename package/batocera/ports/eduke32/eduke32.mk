@@ -7,26 +7,29 @@
 EDUKE32_VERSION = d496daf5483bba9ccf1a94cf047ceb896ed9f8b2
 EDUKE32_SITE = https://voidpoint.io/terminx/eduke32.git
 
-EDUKE32_DEPENDENCIES = sdl2 sdl2_image nblood
+EDUKE32_DEPENDENCIES = sdl2 flac libvpx
 EDUKE32_SITE_METHOD=git
-EDUKE32_LICENSE = GPLv3
+EDUKE32_LICENSE = GPL-2.0
 
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
-EDUKE32_CONF_OPTS=USE_OPENGL=1 POLYMER=1 RPI4=0
-else
-EDUKE32_CONF_OPTS=USE_OPENGL=0 POLYMER=1 RPI4=1
+# Some build options are documented here: https://wiki.eduke32.com/wiki/Building_EDuke32_on_Linux
+EDUKE32_BUILD_ARGS = STARTUP_WINDOW=0
+EDUKE32_BUILD_ARGS += HAVE_GTK2=0
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
+    EDUKE32_BUILD_ARGS += USE_OPENGL=0 LTO=0
+    EDUKE32_BUILD_ARGS += OPTOPT="-mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math -w"
 endif
 
 define EDUKE32_BUILD_CMDS
-		$(TARGET_CONFIGURE_OPTS) $(MAKE) \
-		CPP="$(TARGET_CPP)" CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
-		AS="$(TARGET_CC)" LD="$(TARGET_LD)" STRIP="$(TARGET_STRIP)" \
-		-C $(@D) -f GNUmakefile HAVE_GTK2=0 $(EDUKE32_CONF_OPTS)
+    $(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) -C $(@D) duke3d 
+    $(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) -C $(@D) sw
+    $(RM) -r $(@D)/obj
+    $(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) FURY=1 -C $(@D)
 endef
 
 define EDUKE32_INSTALL_TARGET_CMDS
-	$(INSTALL) -m 0755 $(@D)/eduke32 -D $(TARGET_DIR)/usr/bin/eduke32
-	$(INSTALL) -m 0755 $(@D)/voidsw -D $(TARGET_DIR)/usr/bin/voidsw
+    $(INSTALL) -D -m 0755 $(@D)/eduke32 $(TARGET_DIR)/usr/bin/eduke32
+    $(INSTALL) -D -m 0755 $(@D)/fury $(TARGET_DIR)/usr/bin/fury
+	$(INSTALL) -D -m 0755 $(@D)/voidsw -D $(TARGET_DIR)/usr/bin/voidsw
 
 	#copy sdl game contoller info
 	cp $(@D)/package/common/gamecontrollerdb.txt $(TARGET_DIR)/usr/share/gamecontrollerdb.txt

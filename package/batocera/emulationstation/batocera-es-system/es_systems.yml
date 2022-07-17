@@ -3428,7 +3428,7 @@ ionfury:
   path: /userdata/roms/ports/ionfury
   emulators:
     ionfury:
-      ionfury: { requireAnyOf: [BR2_PACKAGE_IONFURY] }
+      ionfury: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
 
 jumpnbump:
   name:       Jump 'n Bump
