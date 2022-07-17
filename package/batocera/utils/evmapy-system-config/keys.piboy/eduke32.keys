@@ -87,7 +87,6 @@
             "type": "key",
             "target": "KEY_SPACE"
         },
-,
         {
             "trigger": ["hotkey", "y"],
             "type": "key",
