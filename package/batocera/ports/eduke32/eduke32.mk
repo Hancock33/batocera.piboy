@@ -29,10 +29,10 @@ endef
 define EDUKE32_INSTALL_TARGET_CMDS
     $(INSTALL) -D -m 0755 $(@D)/eduke32 $(TARGET_DIR)/usr/bin/eduke32
     $(INSTALL) -D -m 0755 $(@D)/fury $(TARGET_DIR)/usr/bin/fury
-	$(INSTALL) -D -m 0755 $(@D)/voidsw -D $(TARGET_DIR)/usr/bin/voidsw
+    $(INSTALL) -D -m 0755 $(@D)/voidsw -D $(TARGET_DIR)/usr/bin/voidsw
 
-	#copy sdl game contoller info
-	cp $(@D)/package/common/gamecontrollerdb.txt $(TARGET_DIR)/usr/share/gamecontrollerdb.txt
+    #copy sdl game contoller info
+    cp $(@D)/package/common/gamecontrollerdb.txt $(TARGET_DIR)/usr/share/gamecontrollerdb.txt
 endef
 
 $(eval $(generic-package))
