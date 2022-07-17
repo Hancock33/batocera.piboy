@@ -15,7 +15,7 @@ EDUKE32_LICENSE = GPL-2.0
 EDUKE32_BUILD_ARGS = STARTUP_WINDOW=0
 EDUKE32_BUILD_ARGS += HAVE_GTK2=0
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
-    EDUKE32_BUILD_ARGS += USE_OPENGL=0 LTO=0
+    EDUKE32_BUILD_ARGS += USE_OPENGL=0
     EDUKE32_BUILD_ARGS += OPTOPT="-mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math -w"
 endif
 
@@ -28,7 +28,7 @@ endef
 
 define EDUKE32_INSTALL_TARGET_CMDS
     $(INSTALL) -D -m 0755 $(@D)/eduke32 $(TARGET_DIR)/usr/bin/eduke32
-    $(INSTALL) -D -m 0755 $(@D)/fury $(TARGET_DIR)/usr/bin/fury
+    $(INSTALL) -D -m 0755 $(@D)/fury $(TARGET_DIR)/usr/bin/ionfury
     $(INSTALL) -D -m 0755 $(@D)/voidsw -D $(TARGET_DIR)/usr/bin/voidsw
 
     #copy sdl game contoller info
