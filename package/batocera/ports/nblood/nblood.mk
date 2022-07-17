@@ -7,7 +7,7 @@
 NBLOOD_VERSION = 4715800cd1a74b4500ebc34b61a342a9db7efbda
 NBLOOD_SITE = https://github.com/nukeykt/NBlood.git
 
-NBLOOD_DEPENDENCIES = sdl2 sdl2_image
+NBLOOD_DEPENDENCIES = sdl2 flac libvpx
 NBLOOD_SITE_METHOD=git
 NBLOOD_LICENSE = GPLv3
 
