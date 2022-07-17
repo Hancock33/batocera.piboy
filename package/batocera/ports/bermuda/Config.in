@@ -1,5 +1,5 @@
 config BR2_PACKAGE_BERMUDA
-	bool "BERMUDA"
+	bool "bermuda"
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
 	depends on BR2_INSTALL_LIBSTDCPP

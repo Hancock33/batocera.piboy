@@ -1,5 +1,5 @@
 config BR2_PACKAGE_BOX64
-	bool "BOX64"
+	bool "box64"
 	select BR2_PACKAGE_OPENAL
 	select BR2_PACKAGE_LIBZLIB
 	select BR2_PACKAGE_LIBZIP

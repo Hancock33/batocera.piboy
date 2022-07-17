@@ -1,5 +1,5 @@
 config BR2_PACKAGE_GZDOOM
-	bool "GZDOOM"
+	bool "gzdoom"
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
 	select BR2_PACKAGE_ZMUSIC
