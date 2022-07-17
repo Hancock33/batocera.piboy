@@ -9492,6 +9492,16 @@ msgctxt "game_options"
 msgid "EGA GRAPHICS MODE"
 msgstr ""
 
+#. TRANSLATION: eduke32, ionfury, raze
+msgctxt "game_options"
+msgid "Skip introduction animations and logos; default is show"
+msgstr ""
+
+#. TRANSLATION: eduke32, ionfury, raze
+msgctxt "game_options"
+msgid "SKIP INTRO VIDEOS"
+msgstr ""
+
 #. TRANSLATION: gzdoom, lzdoom
 msgctxt "game_options"
 msgid "Softpoly"
@@ -9500,16 +9510,6 @@ msgstr ""
 #. TRANSLATION: gzdoom
 msgctxt "game_options"
 msgid "GLES2"
-msgstr ""
-
-#. TRANSLATION: ionfury, raze
-msgctxt "game_options"
-msgid "Skip introduction animations and logos; default is show"
-msgstr ""
-
-#. TRANSLATION: ionfury, raze
-msgctxt "game_options"
-msgid "SKIP INTRO VIDEOS"
 msgstr ""
 
 #. TRANSLATION: yabausesa
