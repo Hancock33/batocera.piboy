@@ -3,8 +3,8 @@
 # libretro-citra
 #
 ################################################################################
-# Version: Commits on Jun 11, 2022
-LIBRETRO_CITRA_VERSION = 8bbea555ed94ca998ebd5b36c6bd3c39f4297be4
+# Version: Commits on Jul 16, 2022
+LIBRETRO_CITRA_VERSION = 70bf7d8a63b0b501e8f5cff89a86a3e2d4083aa0
 LIBRETRO_CITRA_SITE = https://github.com/libretro/citra.git
 LIBRETRO_CITRA_SITE_METHOD=git
 LIBRETRO_CITRA_GIT_SUBMODULES=YES
