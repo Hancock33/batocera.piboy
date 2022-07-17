@@ -1,5 +1,5 @@
 config BR2_PACKAGE_ROTT
-	bool "ROTT"
+	bool "rott"
 	depends on BR2_INSTALL_LIBSTDCPP
 	select BR2_PACKAGE_SDL
 	select BR2_PACKAGE_SDL_MIXER
