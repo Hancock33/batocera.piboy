@@ -3,7 +3,7 @@
 # Soniccd
 #
 ################################################################################
-# Version.: Commits on Jul 09, 2022 (xorg)
+# Version.: Commits on Jul 17, 2022 (xorg)
 SONICCD_SITE = https://github.com/Rubberduckycooly/Sonic-CD-11-Decompilation.git
 SONICCD_SITE_METHOD = git
 SONICCD_GIT_SUBMODULES = YES
@@ -12,7 +12,7 @@ SONICCD_DEPENDENCIES = sdl2 libogg libvorbis libtheora
 SONICCD_LICENSE = Custom
 
 ifeq ($(BR2_PACKAGE_BATOCERA_XORG),y)
-	SONICCD_VERSION = a40d2726b6cf27e357a51c7aa782920f2df5c1c3
+	SONICCD_VERSION = b3723156162bc750d065bedbb9ccd2b7a15f7c45
 	SONICCD_BINNAME = RSDKv3
 else
 	SONICCD_VERSION = 222caf6
