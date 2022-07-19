@@ -3,8 +3,8 @@
 # GZDOOM Music
 #
 ################################################################################
-# Version: Commits on Jun 06, 2022
-ZMUSIC_VERSION = 9fbc2ec095ec14267d00caba75cc3e7f59976697
+# Version: Commits on Jul 18, 2022
+ZMUSIC_VERSION = c5b6c0d317beef4a8cd5af1437fd6261391118ca
 ZMUSIC_SITE = $(call github,coelckers,ZMusic,$(ZMUSIC_VERSION))
 
 ZMUSIC_DEPENDENCIES = zlib mpg123 libsndfile alsa-lib host-gzdoom host-lzdoom
