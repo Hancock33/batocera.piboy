@@ -3,10 +3,9 @@
 # supermodel
 #
 ################################################################################
-
-SUPERMODEL_VERSION = r882
-SUPERMODEL_SITE = https://svn.code.sf.net/p/model3emu/code/trunk
-SUPERMODEL_SITE_METHOD=svn
+# Version: Commits on Jul 18, 2022
+SUPERMODEL_VERSION = d60feab2ca7739b59de602e55729bf7ef958ab58
+SUPERMODEL_SITE = $(call github,trzy,Supermodel,$(SUPERMODEL_VERSION))
 SUPERMODEL_DEPENDENCIES = sdl2 zlib libglew libzip sdl2_net
 SUPERMODEL_LICENSE = GPLv3
 
