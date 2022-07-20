@@ -11,10 +11,10 @@ from shutil import copyfile
 
 class SupermodelGenerator(Generator):
     if os.path.isfile('/tmp/piboy'):
-        os.system('piboy_keys rednukem.keys')
+        os.system('piboy_keys model3.supermodel.keys')
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ["supermodel", "-fullscreen"]
+        commandArray = ["supermodel", "-fullscreen", "-channels=2", "-multi-texture", "-legacy-scsp"]
 
         # legacy3d
         if system.isOptSet("engine3D") and system.config["engine3D"] == "legacy3d":
