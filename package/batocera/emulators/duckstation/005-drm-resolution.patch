@@ -1,8 +1,8 @@
 diff --git a/src/common/drm_display.cpp b/src/common/drm_display.cpp
-index 2cadeef..f423b2f 100644
+index ef64d3d4..0064d851 100644
 --- a/src/common/drm_display.cpp
 +++ b/src/common/drm_display.cpp
-@@ -124,45 +124,6 @@ bool DRMDisplay::TryOpeningCard(int card, u32 width, u32 height, float refresh_r
+@@ -146,45 +146,6 @@ bool DRMDisplay::TryOpeningCard(int card, u32 width, u32 height, float refresh_r
      return false;
    }
  
@@ -48,7 +48,7 @@ index 2cadeef..f423b2f 100644
    drmModeEncoder* encoder = nullptr;
    for (int i = 0; i < resources->count_encoders; i++)
    {
-@@ -177,6 +138,21 @@ bool DRMDisplay::TryOpeningCard(int card, u32 width, u32 height, float refresh_r
+@@ -199,6 +160,21 @@ bool DRMDisplay::TryOpeningCard(int card, u32 width, u32 height, float refresh_r
      drmModeFreeEncoder(next_encoder);
    }
  
@@ -70,7 +70,7 @@ index 2cadeef..f423b2f 100644
    if (encoder)
    {
      drmModeFreeEncoder(encoder);
-@@ -192,6 +168,13 @@ bool DRMDisplay::TryOpeningCard(int card, u32 width, u32 height, float refresh_r
+@@ -214,6 +190,13 @@ bool DRMDisplay::TryOpeningCard(int card, u32 width, u32 height, float refresh_r
      }
    }
  

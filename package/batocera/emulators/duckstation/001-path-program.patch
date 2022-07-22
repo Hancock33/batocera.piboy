@@ -1,19 +1,19 @@
 diff --git a/src/common/file_system.cpp b/src/common/file_system.cpp
-index 6a24732..a287703 100644
+index 2ed7686b..fcec78f9 100644
 --- a/src/common/file_system.cpp
 +++ b/src/common/file_system.cpp
-@@ -1179,6 +1179,8 @@ bool FileSystem::DeleteDirectory(const char* Path, bool Recursive)
+@@ -1553,6 +1553,8 @@ bool FileSystem::DeleteDirectory(const char* path)
  
- std::string GetProgramPath()
+ std::string FileSystem::GetProgramPath()
  {
 +  return "/usr/share/duckstation";
 +
    std::wstring buffer;
    buffer.resize(MAX_PATH);
  
-@@ -1549,6 +1551,8 @@ bool DeleteDirectory(const char* Path, bool Recursive)
+@@ -2041,6 +2043,8 @@ bool FileSystem::DeleteDirectory(const char* path)
  
- std::string GetProgramPath()
+ std::string FileSystem::GetProgramPath()
  {
 +  return "/usr/share/duckstation";
 +
