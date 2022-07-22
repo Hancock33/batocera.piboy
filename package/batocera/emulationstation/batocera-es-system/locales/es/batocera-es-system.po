@@ -36,8 +36,8 @@ msgstr "MODO DE VÍDEO"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid ""
-"Force the game to render in this aspect ratio. Decorations override this "
-"setting."
+"Force the game to render in this aspect ratio. Not all systems support all "
+"ratios."
 msgstr ""
 
 #. TRANSLATION: shared
