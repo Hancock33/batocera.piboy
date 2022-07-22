@@ -12,3 +12,4 @@ index ceb2f08..0fa5a04 100644
    std::string::size_type pos = GetLastSeperatorPosition(path, false);
    if (pos == std::string_view::npos)
      return {};
+
