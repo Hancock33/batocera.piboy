@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jul 23, 2022
-DOOMRETRO_VERSION = 709bd9fcf62db179113121627ec176d40788df7d
+DOOMRETRO_VERSION = 3d364beb42bf3a792ba339f341804d250538286f
 DOOMRETRO_SITE = $(call github,bradharding,doomretro,$(DOOMRETRO_VERSION))
 
 DOOMRETRO_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image
