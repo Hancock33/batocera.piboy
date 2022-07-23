@@ -1,6 +1,6 @@
 ################################################################################
 #
-# DOLPHIN TRIFORCE
+# dolphin-triforce
 #
 ################################################################################
 # This is a build that is no longer receiving updates. AppImage format ensures compatibility into the future.

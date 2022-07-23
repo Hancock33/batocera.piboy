@@ -1,6 +1,6 @@
 ################################################################################
 #
-# Pico-8 official virtuel console (needs the binary, not part of Batocera)
+# lexaloffle-pico8
 #
 ################################################################################
 LEXALOFFLE_PICO8_VERSION = 0.1
