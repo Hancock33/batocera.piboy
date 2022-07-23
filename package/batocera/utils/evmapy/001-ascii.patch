@@ -1,0 +1,178 @@
+diff --git a/evmapy/__init__.py b/evmapy/__init__.py
+index 03f13ab..9b69caa 100644
+--- a/evmapy/__init__.py
++++ b/evmapy/__init__.py
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (C) 2015 Michał Kępień <github@kempniu.pl>
++# Copyright (C) 2015 Michal Kepien <github@kempniu.pl>
+ #
+ # This file is part of evmapy.
+ #
+diff --git a/evmapy/__main__.py b/evmapy/__main__.py
+index 91f8661..66d3d34 100644
+--- a/evmapy/__main__.py
++++ b/evmapy/__main__.py
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (C) 2015 Michał Kępień <github@kempniu.pl>
++# Copyright (C) 2015 Michal Kepien <github@kempniu.pl>
+ #
+ # This file is part of evmapy.
+ #
+diff --git a/evmapy/config.py b/evmapy/config.py
+index b2a6106..6539fa7 100644
+--- a/evmapy/config.py
++++ b/evmapy/config.py
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (C) 2015 Michał Kępień <github@kempniu.pl>
++# Copyright (C) 2015 Michal Kepien <github@kempniu.pl>
+ #
+ # This file is part of evmapy.
+ #
+diff --git a/evmapy/controller.py b/evmapy/controller.py
+index 30b45be..5114548 100644
+--- a/evmapy/controller.py
++++ b/evmapy/controller.py
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (C) 2015 Michał Kępień <github@kempniu.pl>
++# Copyright (C) 2015 Michal Kepien <github@kempniu.pl>
+ #
+ # This file is part of evmapy.
+ #
+diff --git a/evmapy/multiplexer.py b/evmapy/multiplexer.py
+index 5a34030..a0c07f3 100644
+--- a/evmapy/multiplexer.py
++++ b/evmapy/multiplexer.py
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (C) 2015 Michał Kępień <github@kempniu.pl>
++# Copyright (C) 2015 Michal Kepien <github@kempniu.pl>
+ #
+ # This file is part of evmapy.
+ #
+diff --git a/evmapy/source.py b/evmapy/source.py
+index a15e21e..ea80351 100644
+--- a/evmapy/source.py
++++ b/evmapy/source.py
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (C) 2015 Michał Kępień <github@kempniu.pl>
++# Copyright (C) 2015 Michal Kepien <github@kempniu.pl>
+ #
+ # This file is part of evmapy.
+ #
+diff --git a/evmapy/util.py b/evmapy/util.py
+index 1da8e33..6e44d10 100644
+--- a/evmapy/util.py
++++ b/evmapy/util.py
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (C) 2015 Michał Kępień <github@kempniu.pl>
++# Copyright (C) 2015 Michal Kepien <github@kempniu.pl>
+ #
+ # This file is part of evmapy.
+ #
+diff --git a/setup.py b/setup.py
+index 4fec0df..743495b 100644
+--- a/setup.py
++++ b/setup.py
+@@ -6,7 +6,7 @@ import evmapy.util
+ setup(
+     name = 'evmapy',
+     version = evmapy.util.get_app_info()['version'],
+-    author = 'Michał Kępień',
++    author = 'Michal Kepien',
+     author_email = 'github@kempniu.pl',
+     description = 'An evdev event mapper',
+     license = 'GPL2',
+diff --git a/tests/__init__.py b/tests/__init__.py
+index 91cd93e..54fb208 100644
+--- a/tests/__init__.py
++++ b/tests/__init__.py
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (C) 2015 Michał Kępień <github@kempniu.pl>
++# Copyright (C) 2015 Michal Kepien <github@kempniu.pl>
+ #
+ # This file is part of evmapy.
+ #
+diff --git a/tests/test_config.py b/tests/test_config.py
+index 220c64c..6c94695 100644
+--- a/tests/test_config.py
++++ b/tests/test_config.py
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (C) 2015 Michał Kępień <github@kempniu.pl>
++# Copyright (C) 2015 Michal Kepien <github@kempniu.pl>
+ #
+ # This file is part of evmapy.
+ #
+diff --git a/tests/test_controller.py b/tests/test_controller.py
+index 917a7fb..ac2a86e 100644
+--- a/tests/test_controller.py
++++ b/tests/test_controller.py
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (C) 2015 Michał Kępień <github@kempniu.pl>
++# Copyright (C) 2015 Michal Kepien <github@kempniu.pl>
+ #
+ # This file is part of evmapy.
+ #
+diff --git a/tests/test_main.py b/tests/test_main.py
+index e074ddd..97a2981 100644
+--- a/tests/test_main.py
++++ b/tests/test_main.py
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (C) 2015 Michał Kępień <github@kempniu.pl>
++# Copyright (C) 2015 Michal Kepien <github@kempniu.pl>
+ #
+ # This file is part of evmapy.
+ #
+diff --git a/tests/test_multiplexer.py b/tests/test_multiplexer.py
+index d4d8f2d..1fe9053 100644
+--- a/tests/test_multiplexer.py
++++ b/tests/test_multiplexer.py
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (C) 2015 Michał Kępień <github@kempniu.pl>
++# Copyright (C) 2015 Michal Kepien <github@kempniu.pl>
+ #
+ # This file is part of evmapy.
+ #
+diff --git a/tests/test_source.py b/tests/test_source.py
+index d0823dc..916e2f8 100644
+--- a/tests/test_source.py
++++ b/tests/test_source.py
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (C) 2015 Michał Kępień <github@kempniu.pl>
++# Copyright (C) 2015 Michal Kepien <github@kempniu.pl>
+ #
+ # This file is part of evmapy.
+ #
+diff --git a/tests/test_util.py b/tests/test_util.py
+index 1ce73f2..9dd2675 100644
+--- a/tests/test_util.py
++++ b/tests/test_util.py
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (C) 2015 Michał Kępień <github@kempniu.pl>
++# Copyright (C) 2015 Michal Kepien <github@kempniu.pl>
+ #
+ # This file is part of evmapy.
+ #
+diff --git a/tests/util.py b/tests/util.py
+index 50ca2bc..f4ed1ae 100644
+--- a/tests/util.py
++++ b/tests/util.py
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (C) 2015 Michał Kępień <github@kempniu.pl>
++# Copyright (C) 2015 Michal Kepien <github@kempniu.pl>
+ #
+ # This file is part of evmapy.
+ #
