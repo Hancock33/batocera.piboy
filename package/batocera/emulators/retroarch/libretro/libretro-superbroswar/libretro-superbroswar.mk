@@ -1,6 +1,6 @@
 ################################################################################
 #
-# libretro-superbroswar - libretro port of Super Mario War
+# libretro-superbroswar
 #
 ################################################################################
 # Version: Commits on Mar 31, 2022
