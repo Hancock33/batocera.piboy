@@ -1,15 +1,15 @@
 ################################################################################
 #
-# ECWOLF
+# ecwolf
 #
 ################################################################################
 # Version: Commits on Jul 21, 2022
 ECWOLF_VERSION = 3fe8e60f86f77d1d25d24ede85a4355c5ef0635a
 ECWOLF_SITE = https://bitbucket.org/ecwolf/ecwolf.git
-ECWOLF_SITE_METHOD=git
-ECWOLF_GIT_SUBMODULES=YES
 ECWOLF_LICENSE = Non-commercial
 ECWOLF_DEPENDENCIES = sdl2 host-ecwolf
+ECWOLF_SITE_METHOD=git
+ECWOLF_GIT_SUBMODULES=YES
 
 HOST_ECWOLF_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DNO_GTK=ON
 ECWOLF_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DNO_GTK=ON -DFORCE_CROSSCOMPILE=ON \
@@ -41,4 +41,3 @@ endef
 
 $(eval $(cmake-package))
 $(eval $(host-cmake-package))
-
