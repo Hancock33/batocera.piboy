@@ -34,6 +34,7 @@ class LzdoomGenerator(Generator):
                     commandArray.extend(['-iwad', rom])
 
         if os.path.isfile('/tmp/piboy'):
+            commandArray.extend(['+set uiscale 2'])
             #Controller 
             commandArray.extend(['+set Axis0map -1', '+set Axis1map -1'])
             commandArray.extend(['+set Axis2map 0', '+set Axis3map 2'])
