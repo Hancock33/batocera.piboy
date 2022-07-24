@@ -9265,3 +9265,12 @@ yabausesa:
 yquake2:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+        yquake2_render:
+            group: VIDEO SETTINGS
+            prompt:      GAME RENDERING
+            description: Select rendering mode.
+            choices:
+                "Vulkan":   vulkan
+                "OpenGL":   gl
+                "Software": soft

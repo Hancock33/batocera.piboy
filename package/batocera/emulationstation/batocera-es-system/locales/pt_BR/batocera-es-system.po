@@ -7992,7 +7992,7 @@ msgctxt "game_options"
 msgid "Simple 2x"
 msgstr "Simples 2x"
 
-#. TRANSLATION: pcsx2, awgl
+#. TRANSLATION: pcsx2, awgl, yquake2
 msgctxt "game_options"
 msgid "Software"
 msgstr "Software"
@@ -9628,12 +9628,12 @@ msgctxt "game_options"
 msgid "Italiano"
 msgstr ""
 
-#. TRANSLATION: awgl, gzdoom, lzdoom
+#. TRANSLATION: awgl, gzdoom, lzdoom, yquake2
 msgctxt "game_options"
 msgid "Select rendering mode."
 msgstr ""
 
-#. TRANSLATION: awgl, gzdoom, lzdoom
+#. TRANSLATION: awgl, gzdoom, lzdoom, yquake2
 msgctxt "game_options"
 msgid "GAME RENDERING"
 msgstr "RENDERIZAÇÃO DO JOGO"
