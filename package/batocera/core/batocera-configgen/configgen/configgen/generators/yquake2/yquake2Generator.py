@@ -6,28 +6,33 @@ from generators.Generator import Generator
 import controllersConfig
 
 class Yquake2Generator(Generator):
-    if os.path.isfile('/tmp/piboy'):
-        os.system('piboy_keys yquake2.keys')
-
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        gamemod = "baseq2"
-        if (rom.__contains__("rogue")):
-            gamemod = "rogue"
+        gamemod = 'baseq2'
+        if (rom.__contains__('rogue')):
+            gamemod = 'rogue'
 
-        if (rom.__contains__("xatrix")):
-            gamemod = "xatrix"
-
-        commandArray = ["quake2", "-datadir", "/userdata/roms/ports/quake2", "+set", "r_vsync", "1", "+set", "vk_sampleshading", "0", "+set", "vk_polyblend", "0", "+set", "vk_dynamic", "0", "+set", "vk_postprocess", "0", "+set", "game" , gamemod]
+        if (rom.__contains__('xatrix')):
+            gamemod = 'xatrix'
+            
+        commandArray = ['quake2', '-datadir', '/userdata/roms/ports/quake2']
+        # Rendering mode
+        if system.isOptSet('yquake2_render'):
+            if system.config['yquake2_render'] == 'gl':
+                commandArray.extend(['+set', 'vid_renderer', 'gl1'])
+            elif system.config['yquake2_render'] == 'vulkan':
+                commandArray.extend(['+set', 'vid_renderer', 'vulkan'])
+            elif system.config['yquake2_render'] == 'soft':
+                commandArray.extend(['+set', 'vid_renderer', 'soft'])
+        else:
+                commandArray.extend(['+set', 'vid_renderer', 'vk'])
 
         if os.path.isfile('/tmp/piboy'):
-            return Command.Command(
-                array=commandArray,
-                env={
-                'SDL_AUTO_UPDATE_JOYSTICKS': '0',
-            })
-        else:
-            return Command.Command(
-                array=commandArray,
-                env={
-                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
-            })
+            commandArray.extend(['+set', 'r_hudscale', '2'])
+            commandArray.extend(['+set', 'r_menuscale', '2'])
+
+        commandArray.extend(['+set', 'game', gamemod])
+        return Command.Command(
+            array=commandArray,
+            env={
+            'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+        })
