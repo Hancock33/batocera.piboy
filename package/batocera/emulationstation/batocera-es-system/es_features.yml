@@ -57,13 +57,15 @@ shared:
     smooth:
       group: VIDEO SETTINGS
       prompt: SMOOTH GAMES (BILINEAR FILTERING)
+      description: Disabled if using a shader set or the output display matches the game's resolution.
       submenu: GAME RENDERING & SHADERS
       choices:
         "On":  1
         "Off": 0
     integerscale:
       group: VIDEO SETTINGS
-      prompt:      INTEGER SCALING (PIXEL PERFECT)
+      prompt:  INTEGER SCALING (PIXEL PERFECT)
+      description: Only increase the image size in integer multiples.
       submenu: GAME RENDERING & SHADERS
       choices:
         "On": 1
@@ -138,6 +140,7 @@ shared:
     ai_target_lang:
       group: GAME TRANSLATION
       prompt: TARGET LANGUAGE
+      description: The language to translate into.
       submenu: AI GAME TRANSLATION
       choices:
         "ENGLISH":   "En"
@@ -164,6 +167,7 @@ shared:
     ai_service_url:
       group: GAME TRANSLATION
       prompt: AI TRANSLATION SERVICE URL
+      description: If nothing is specified, will use ZTranslate by default.
       submenu: AI GAME TRANSLATION
       preset: input
     ai_service_pause:
@@ -223,6 +227,16 @@ shared:
       choices:
         "On":  1
         "Off": 0
+    rumble_gain:
+      prompt:      RUMBLE LEVEL
+      description: For emulators and controllers supporting force feedback.
+      choices:
+        "disabled": 0
+        "20%": 20
+        "40%": 40
+        "60%": 60
+        "80%": 80
+        "100%": 100
 global:
   shared: [videomode, ratio, shaderset, smooth, integerscale, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, ai_service_enabled, ai_target_lang, ai_service_url, ai_service_pause, rewind, runahead, secondinstance, video_frame_delay_auto, vrr_runloop_enable, video_threaded]
 libretro:
@@ -231,7 +245,7 @@ libretro:
     gfxbackend:
       group: DRIVERS
       archs_include: [x86, x86_64, rpi4, rk3326]
-      prompt: GRAPHICS API
+      prompt:      GRAPHICS API
       description: Choose which graphics API library to use.
       choices:
         "OpenGL": gl
@@ -1431,7 +1445,7 @@ libretro:
                     "On":   enabled
             controller1_zxspec:
                 group: CONTROLLER SETTINGS
-                prompt:      CONTROLLER 1 TYPE
+                prompt:      CONTROLLER TYPE 1
                 description: Sinclair 1 controller set to AUTO.
                 choices:
                     "None":                    0
@@ -1445,7 +1459,7 @@ libretro:
                     "Fuller Joystick":         1793
             controller2_zxspec:
                 group: CONTROLLER SETTINGS
-                prompt:      CONTROLLER 2 TYPE
+                prompt:      CONTROLLER TYPE 2
                 description: Sinclair 2 controller set to AUTO.
                 choices:
                     "None":                    0
@@ -1911,6 +1925,13 @@ libretro:
                 choices:
                     "On":  1
                     "Off": 0
+            offscreenreload:
+                group: LIGHT GUN
+                prompt:      OFF SCREEN RELOAD
+                description: Set gun button 2 to reload for games that require shooting off screen
+                choices:
+                    "On":            1
+                    "Off (Default)": 0
       systems:
          adam:
               cfeatures:
@@ -5179,41 +5200,26 @@ libretro:
                 prompt:      ZOOM/CROP (HIDE BORDERS)
                 description: Hides borders on many games. Some games used the borders.
                 choices:
-                    "Auto-disable crop":        auto_disable
-                    "Auto crop":                automatic
+                    "Auto-disable zoom":        auto_disable
+                    "Auto zoom":                automatic
                     "Off":                      disabled
                     "small":                    small
                     "medium":                   medium
                     "maximum":                  maximum
-            vice_keyboard_pass_through:
-                prompt:      KEYBOARD PASSTHROUGH
-                description: If enabled, passes all physical keyboard events to the core.
-                choices:
-                    "Off":    disabled
-                    "On":     enabled
-            vice_keyrah_mapping:
-                group: CONTROLLER SETTINGS
-                prompt:      KEYRAH KEYPAD MAPPING
-                description: Hardcoded keymap to joyport mapping for Keyrah hardware.
-                choices:
-                    "Off":    disabled
-                    "On":     enabled
             vice_retropad_options:
-                group: CONTROLLER SETTINGS
+                group: ADVANCED OPTIONS
                 prompt:      JUMP ON A
                 description: Makes second fire button press up instead.
                 choices:
                     "Off":                      disabled
                     "On":                       jump
             vice_joyport:
-                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PORT
                 description: Most games use port 2, some use port 1.
                 choices:
                     "Port 1":                   1
                     "Port 2":                   2
             vice_joyport_type:
-                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER TYPE
                 choices:
                     "Joystick":                 1
@@ -5226,6 +5232,13 @@ libretro:
                     #"Mouse (SmartMouse)":       8
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
+            vice_keyboard_pass_through:
+                group: ADVANCED OPTIONS
+                prompt:      KEYBOARD PASSTHROUGH
+                description: Keyboard shortcuts unavailable if passing through the keyboard.
+                choices:
+                    "Off":                      disabled
+                    "On":                       enabled
     vice_x64sc:
       features: [padtokeyboard]
       shared: [rewind, autosave]
@@ -5281,41 +5294,26 @@ libretro:
                 prompt:      ZOOM/CROP (HIDE BORDERS)
                 description: Hides borders on many games. Some games used the borders.
                 choices:
-                    "Auto-disable crop":        auto_disable
-                    "Auto crop":                automatic
+                    "Auto-disable zoom":        auto_disable
+                    "Auto zoom":                automatic
                     "Off":                      disabled
                     "small":                    small
                     "medium":                   medium
                     "maximum":                  maximum
-            vice_keyboard_pass_through:
-                prompt:      KEYBOARD PASSTHROUGH
-                description: If enabled, passes all physical keyboard events to the core.
-                choices:
-                    "Off":    disabled
-                    "On":     enabled
-            vice_keyrah_mapping:
-                group: CONTROLLER SETTINGS
-                prompt:      KEYRAH KEYPAD MAPPING
-                description: Hardcoded keymap to joyport mapping for Keyrah hardware.
-                choices:
-                    "Off":    disabled
-                    "On":     enabled
             vice_retropad_options:
-                group: CONTROLLER SETTINGS
+                group: ADVANCED OPTIONS
                 prompt:      JUMP ON A
                 description: Makes second fire button press up instead.
                 choices:
                     "Off":                      disabled
                     "On":                       jump
             vice_joyport:
-                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PORT
                 description: Most games use port 2, some use port 1.
                 choices:
                     "Port 1":                   1
                     "Port 2":                   2
             vice_joyport_type:
-                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER TYPE
                 choices:
                     "Joystick":                 1
@@ -5328,6 +5326,13 @@ libretro:
                     #"Mouse (SmartMouse)":       8
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
+            vice_keyboard_pass_through:
+                group: ADVANCED OPTIONS
+                prompt:      KEYBOARD PASSTHROUGH
+                description: Keyboard shortcuts unavailable if passing through the keyboard.
+                choices:
+                    "Off":                      disabled
+                    "On":                       enabled
     vice_x128:
       features: [padtokeyboard]
       shared: [rewind, autosave]
@@ -5372,27 +5377,13 @@ libretro:
                 prompt:      ZOOM/CROP (HIDE BORDERS)
                 description: Hides borders on many games. Some games used the borders.
                 choices:
-                    "Auto-disable crop":        auto_disable
-                    "Auto crop":                automatic
+                    "Auto-disable zoom":        auto_disable
+                    "Auto zoom":                automatic
                     "Off":                      disabled
                     "small":                    small
                     "medium":                   medium
                     "maximum":                  maximum
-            vice_keyboard_pass_through:
-                prompt:      KEYBOARD PASSTHROUGH
-                description: If enabled, passes all physical keyboard events to the core.
-                choices:
-                    "Off":    disabled
-                    "On":     enabled
-            vice_keyrah_mapping:
-                group: CONTROLLER SETTINGS
-                prompt:      KEYRAH KEYPAD MAPPING
-                description: Hardcoded keymap to joyport mapping for Keyrah hardware.
-                choices:
-                    "Off":    disabled
-                    "On":     enabled
             vice_retropad_options:
-                group: CONTROLLER SETTINGS
                 prompt:      Button Options
                 description: RetroPad Face Button Options.
                 choices:
@@ -5401,14 +5392,12 @@ libretro:
                     "Y = Fire":                 rotate
                     "Y = Fire, B = Up":         rotate_jump
             vice_joyport:
-                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PORT
                 description: Most games use port 2, some use port 1.
                 choices:
                     "Port 1":                   1
                     "Port 2":                   2
             vice_joyport_type:
-                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER TYPE
                 choices:
                     "Joystick":                 1
@@ -5421,6 +5410,13 @@ libretro:
                     #"Mouse (SmartMouse)":       8
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
+            vice_keyboard_pass_through:
+                group: ADVANCED OPTIONS
+                prompt:      KEYBOARD PASSTHROUGH
+                description: Keyboard shortcuts unavailable if passing through the keyboard.
+                choices:
+                    "Off":                      disabled
+                    "On":                       enabled
     vice_xplus4:
       features: [padtokeyboard]
       shared: [rewind, autosave]
@@ -5454,27 +5450,13 @@ libretro:
                 prompt:      ZOOM/CROP (HIDE BORDERS)
                 description: Hides borders on many games. Some games used the borders.
                 choices:
-                    "Auto-disable crop":        auto_disable
-                    "Auto crop":                automatic
+                    "Auto-disable zoom":        auto_disable
+                    "Auto zoom":                automatic
                     "Off":                      disabled
                     "small":                    small
                     "medium":                   medium
                     "maximum":                  maximum
-            vice_keyboard_pass_through:
-                prompt:      KEYBOARD PASSTHROUGH
-                description: If enabled, passes all physical keyboard events to the core.
-                choices:
-                    "Off":    disabled
-                    "On":     enabled
-            vice_keyrah_mapping:
-                group: CONTROLLER SETTINGS
-                prompt:      KEYRAH KEYPAD MAPPING
-                description: Hardcoded keymap to joyport mapping for Keyrah hardware.
-                choices:
-                    "Off":    disabled
-                    "On":     enabled
             vice_retropad_options:
-                group: CONTROLLER SETTINGS
                 prompt:      Button Options
                 description: RetroPad Face Button Options.
                 choices:
@@ -5483,14 +5465,12 @@ libretro:
                     "Y = Fire":                 rotate
                     "Y = Fire, B = Up":         rotate_jump
             vice_joyport:
-                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PORT
                 description: Most games use port 2, some use port 1.
                 choices:
                     "Port 1":                   1
                     "Port 2":                   2
             vice_joyport_type:
-                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER TYPE
                 choices:
                     "Joystick":                 1
@@ -5503,6 +5483,13 @@ libretro:
                     #"Mouse (SmartMouse)":       8
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
+            vice_keyboard_pass_through:
+                group: ADVANCED OPTIONS
+                prompt:      KEYBOARD PASSTHROUGH
+                description: Keyboard shortcuts unavailable if passing through the keyboard.
+                choices:
+                    "Off":                      disabled
+                    "On":                       enabled
     vice_xvic:
       features: [padtokeyboard]
       shared: [rewind, autosave]
@@ -5537,27 +5524,13 @@ libretro:
                 prompt:      ZOOM/CROP (HIDE BORDERS)
                 description: Hides borders on many games. Some games used the borders.
                 choices:
-                    "Auto-disable crop":        auto_disable
-                    "Auto crop":                automatic
+                    "Auto-disable zoom":        auto_disable
+                    "Auto zoom":                automatic
                     "Off":                      disabled
                     "small":                    small
                     "medium":                   medium
                     "maximum":                  maximum
-            vice_keyboard_pass_through:
-                prompt:      KEYBOARD PASSTHROUGH
-                description: If enabled, passes all physical keyboard events to the core.
-                choices:
-                    "Off":    disabled
-                    "On":     enabled
-            vice_keyrah_mapping:
-                group: CONTROLLER SETTINGS
-                prompt:      KEYRAH KEYPAD MAPPING
-                description: Hardcoded keymap to joyport mapping for Keyrah hardware.
-                choices:
-                    "Off":    disabled
-                    "On":     enabled
             vice_retropad_options:
-                group: CONTROLLER SETTINGS
                 prompt:      Button Options
                 description: RetroPad Face Button Options.
                 choices:
@@ -5566,14 +5539,12 @@ libretro:
                     "Y = Fire":                 rotate
                     "Y = Fire, B = Up":         rotate_jump
             vice_joyport:
-                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PORT
                 description: Most games use port 2, some use port 1.
                 choices:
                     "Port 1":                   1
                     "Port 2":                   2
             vice_joyport_type:
-                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER TYPE
                 choices:
                     "Joystick":                 1
@@ -5586,6 +5557,13 @@ libretro:
                     #"Mouse (SmartMouse)":       8
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
+            vice_keyboard_pass_through:
+                group: ADVANCED OPTIONS
+                prompt:      KEYBOARD PASSTHROUGH
+                description: Keyboard shortcuts unavailable if passing through the keyboard.
+                choices:
+                    "Off":                      disabled
+                    "On":                       enabled
     vice_xpet:
       features: [padtokeyboard]
       shared: [rewind, autosave]
@@ -5625,27 +5603,13 @@ libretro:
                 prompt:      ZOOM/CROP (HIDE BORDERS)
                 description: Hides borders on many games. Some games used the borders.
                 choices:
-                    "Auto-disable crop":        auto_disable
-                    "Auto crop":                automatic
+                    "Auto-disable zoom":        auto_disable
+                    "Auto zoom":                automatic
                     "Off":                      disabled
                     "small":                    small
                     "medium":                   medium
                     "maximum":                  maximum
-            vice_keyboard_pass_through:
-                prompt:      KEYBOARD PASSTHROUGH
-                description: If enabled, passes all physical keyboard events to the core.
-                choices:
-                    "Off":    disabled
-                    "On":     enabled
-            vice_keyrah_mapping:
-                group: CONTROLLER SETTINGS
-                prompt:      KEYRAH KEYPAD MAPPING
-                description: Hardcoded keymap to joyport mapping for Keyrah hardware.
-                choices:
-                    "Off":    disabled
-                    "On":     enabled
             vice_retropad_options:
-                group: CONTROLLER SETTINGS
                 prompt:      Button Options
                 description: RetroPad Face Button Options.
                 choices:
@@ -5654,14 +5618,12 @@ libretro:
                     "Y = Fire":                 rotate
                     "Y = Fire, B = Up":         rotate_jump
             vice_joyport:
-                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PORT
                 description: Most games use port 2, some use port 1.
                 choices:
                     "Port 1":                   1
                     "Port 2":                   2
             vice_joyport_type:
-                group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER TYPE
                 choices:
                     "Joystick":                 1
@@ -5674,6 +5636,13 @@ libretro:
                     #"Mouse (SmartMouse)":       8
                     #"Mouse (Micromys)":         9
                     "Koalapad":                 10
+            vice_keyboard_pass_through:
+                group: ADVANCED OPTIONS
+                prompt:      KEYBOARD PASSTHROUGH
+                description: Keyboard shortcuts unavailable if passing through the keyboard.
+                choices:
+                    "Off":                      disabled
+                    "On":                       enabled
     virtualjaguar:
       features: [padtokeyboard, cheevos]
       shared: [autosave]
@@ -7564,6 +7533,13 @@ mame:
             choices:
                 "Enabled":            1
                 "Disabled (Default)": 0
+        offscreenreload:
+            group: LIGHT GUN
+            prompt:      OFF SCREEN RELOAD
+            description: Set gun button 2 to reload for games that require shooting off screen
+            choices:
+                "On":            1
+                "Off (Default)": 0
   systems:
        adam:
             cfeatures:
@@ -8478,7 +8454,7 @@ mame:
                         "Rotated 4-Way Stick (Q*Bert)": "qbert"
                 hiscoreplugin:
                     prompt:      HIGH SCORE PLUGIN
-                    description: Emable or disable high score saving
+                    description: Enable or disable high score saving
                     choices:
                         "Enabled (Default)": 1
                         "Disabled":          0
@@ -8713,7 +8689,7 @@ xemu:
   cfeatures:
         scaling:
             group: VIDEO SETTINGS
-            prompt: ASPECT RATIO
+            prompt:      SCALING MODE
             description: Choose the scaling mode for the game screen.
             choices:
                 "Original resolution": center
@@ -8829,7 +8805,7 @@ soniccd:
                 "Regular Bilnear":      3
         hqmode:
             group: VIDEO SETTINGS
-            prompt:      HQ Mode
+            prompt:      HQ MODE
             description: Enable high quality effects for special stages.
             choices:
                 "Off":    0
@@ -8973,7 +8949,7 @@ demul:
   cfeatures:
         demulRatio:
             group: VIDEO SETTINGS
-            prompt:      ASPECT RATIO
+            prompt:      GAME ASPECT RATIO
             choices:
                 "Stretch":       0
                 "4:3 (Default)": 1
@@ -9079,7 +9055,7 @@ eduke32:
       description: Skip introduction animations and logos; default is show
       choices:
         "Skip": 1
-        "Show": 0
+        "Show (Default)": 0
 f2bgl:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -9122,7 +9098,7 @@ ionfury:
       description: Skip introduction animations and logos; default is show
       choices:
         "Skip": 1
-        "Show": 0
+        "Show (Default)": 0
 kodi:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -9181,7 +9157,7 @@ raze:
       description: Skip introduction animations and logos; default is show
       choices:
         "Skip": 1
-        "Show": 0
+        "Show (Default)": 0
 raptor:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
