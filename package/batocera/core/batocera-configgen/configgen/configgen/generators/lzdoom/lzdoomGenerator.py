@@ -6,72 +6,52 @@ from generators.Generator import Generator
 import controllersConfig
 
 class LzdoomGenerator(Generator):
-    if os.path.isfile('/tmp/piboy'):
-        os.system('piboy_keys prboom.lzdoom.keys')
-
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ["/usr/share/lzdoom/lzdoom"]
+        commandArray = ['/usr/share/lzdoom/lzdoom', '+set', 'use_joystick', 'true', '+set', 'use_mouse', 'false']
 
         # Rendering mode
-        if system.isOptSet("lzdoom_render"):
+        if system.isOptSet('lzdoom_render'):
             if system.config['lzdoom_render'] == 'gl':
-                commandArray.append("+set")
-                commandArray.append("vid_preferbackend")
-                commandArray.append("0")
-                commandArray.append("+set")
-                commandArray.append("vid_rendermode")
-                commandArray.append("4")
+                commandArray.extend(['+set', 'vid_preferbackend', '0', '+set', 'vid_rendermode', '4'])
             elif system.config['lzdoom_render'] == 'vulkan':
-                commandArray.append("+set")
-                commandArray.append("vid_preferbackend")
-                commandArray.append("1")
-                commandArray.append("+set")
-                commandArray.append("vid_rendermode")
-                commandArray.append("4")
+                commandArray.extend(['+set', 'vid_preferbackend', '1', '+set', 'vid_rendermode', '4'])
             elif system.config['lzdoom_render'] == 'soft':
-                commandArray.append("+set")
-                commandArray.append("vid_preferbackend")
-                commandArray.append("2")
-                commandArray.append("+set")
-                commandArray.append("vid_rendermode")
-                commandArray.append("4")
+                commandArray.extend(['+set', 'vid_preferbackend', '2', '+set', 'vid_rendermode', '4'])
             elif system.config['lzdoom_render'] == 'gles2':
-                commandArray.append("+set")
-                commandArray.append("vid_preferbackend")
-                commandArray.append("3")
-                commandArray.append("+set")
-                commandArray.append("vid_rendermode")
-                commandArray.append("3")
+                commandArray.extend(['+set', 'vid_preferbackend', '3', '+set', 'vid_rendermode', '3'])
         else:
-                commandArray.append("+set")
-                commandArray.append("vid_preferbackend")
-                commandArray.append("1")
-                commandArray.append("+set")
-                commandArray.append("vid_rendermode")
-                commandArray.append("4")
+                commandArray.extend(['+set', 'vid_preferbackend', '3', '+set', 'vid_rendermode', '3'])
 
-        if (rom.__contains__(".uwad")):
+        if (rom.__contains__('.uwad')):
             f=open(rom)
             content=f.readlines()
             for line in content:
                 if 'IWAD=/' in line:
-                    commandArray.append("-iwad")
-                    commandArray.append(line.replace("IWAD=", "").replace("\n", ""))
+                    commandArray.extend(['-iwad', line.replace('IWAD=', '').replace('\n', '')])
                 elif 'PWAD=/' in line:
-                    commandArray.append("-file")
-                    commandArray.append(line.replace("PWAD=", "").replace("\n", ""))
+                    commandArray.extend(['-file', line.replace('PWAD=', '').replace('\n', '')])
+        else:
+                    commandArray.extend(['-iwad', rom])
 
         if os.path.isfile('/tmp/piboy'):
-            return Command.Command(
-                array=commandArray,
-                env={
-                'DOOMWADDIR': '/userdata/roms/ports/doom',
-                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
-            })
-        else:
-            return Command.Command(
-                array=commandArray,
-                env={
-                'DOOMWADDIR': '/userdata/roms/ports/doom',
-                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
-            })
+            #Controller 
+            commandArray.extend(['+set Axis0map -1', '+set Axis1map -1'])
+            commandArray.extend(['+set Axis2map 0', '+set Axis3map 2'])
+
+            commandArray.extend(['+bind Joy1 +altattack'])
+            commandArray.extend(['+bind Joy2 +attack'])
+            commandArray.extend(['+bind Joy3 +jump'])
+            commandArray.extend(['+bind Joy4 +use'])
+            commandArray.extend(['+bind Joy5 weapnext'])
+            commandArray.extend(['+bind Joy6 +reload'])
+            commandArray.extend(['+bind Joy7 +moveleft'])
+            commandArray.extend(['+bind Joy8 +moveright'])
+            commandArray.extend(['+bind Joy9 menu_main'])
+            commandArray.extend(['+bind Joy10 pause'])
+
+        return Command.Command(
+            array=commandArray,
+            env={
+            'DOOMWADDIR': '/userdata/roms/ports/doom',
+            'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+        })
