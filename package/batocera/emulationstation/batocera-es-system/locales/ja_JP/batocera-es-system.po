@@ -35,7 +35,7 @@ msgid ""
 "ratios."
 msgstr ""
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, demul
 msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
 msgstr "ゲーム画面比率"
@@ -107,8 +107,20 @@ msgstr "シェーダー設定"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
+msgid ""
+"Disabled if using a shader set or the output display matches the game's "
+"resolution."
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
 msgid "SMOOTH GAMES (BILINEAR FILTERING)"
 msgstr "スムーズゲーム（バイリニアフィルタリング）"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Only increase the image size in integer multiples."
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -249,8 +261,18 @@ msgstr "AIゲーム翻訳サービスを有効"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
+msgid "The language to translate into."
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
 msgid "TARGET LANGUAGE"
 msgstr "対象言語"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "If nothing is specified, will use ZTranslate by default."
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -338,6 +360,16 @@ msgstr ""
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "USE LIGHT GUNS"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "For emulators and controllers supporting force feedback."
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "RUMBLE LEVEL"
 msgstr ""
 
 #. TRANSLATION: libretro/81
@@ -2045,6 +2077,11 @@ msgctxt "game_options"
 msgid "Sinclair 1 controller set to AUTO."
 msgstr "シンクレア 1 コントローラをAUTOにします"
 
+#. TRANSLATION: libretro/fuse
+msgctxt "game_options"
+msgid "CONTROLLER TYPE 1"
+msgstr "コントローラ タイプ 1"
+
 #. TRANSLATION: libretro/fuse, libretro/fuse, libretro/mame078plus, libretro/puae, libretro/puae, ...
 msgctxt "game_options"
 msgid "Retropad"
@@ -2089,6 +2126,11 @@ msgstr "フラージョイスティック"
 msgctxt "game_options"
 msgid "Sinclair 2 controller set to AUTO."
 msgstr "シンクレア 2 コントローラをAUTOにします"
+
+#. TRANSLATION: libretro/fuse
+msgctxt "game_options"
+msgid "CONTROLLER TYPE 2"
+msgstr "コントローラ タイプ 2"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -2463,7 +2505,7 @@ msgctxt "game_options"
 msgid "Rotated 4-Way Stick (Q*Bert)"
 msgstr "回転式ジョイスティック（Q * Bert）"
 
-#. TRANSLATION: libretro/mame, mame/wasm4, mame/wasm4
+#. TRANSLATION: libretro/mame, mame/wasm4
 msgctxt "game_options"
 msgid "Emable or disable high score saving"
 msgstr "ハイスコ​​アの保存を有効または無効にします"
@@ -2525,6 +2567,21 @@ msgstr "ゲーム表示を最大化し、未使用の画面部にアートワー
 msgctxt "game_options"
 msgid "CROP ARTWORK"
 msgstr "アートワークを加工表示"
+
+#. TRANSLATION: libretro/mame, mame
+msgctxt "game_options"
+msgid "Set gun button 2 to reload for games that require shooting off screen"
+msgstr ""
+
+#. TRANSLATION: libretro/mame, mame
+msgctxt "game_options"
+msgid "OFF SCREEN RELOAD"
+msgstr ""
+
+#. TRANSLATION: libretro/mame, libretro/mame, libretro/mamevirtual, libretro/xrick, libretro/xrick, ...
+msgctxt "game_options"
+msgid "Off (Default)"
+msgstr "使用しない (標準)"
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -3108,11 +3165,6 @@ msgctxt "game_options"
 msgid "ADD USER DISK"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/xrick, libretro/xrick, libretro/xrick, ...
-msgctxt "game_options"
-msgid "Off (Default)"
-msgstr "使用しない (標準)"
-
 #. TRANSLATION: libretro/mame, mame/wasm4
 msgctxt "game_options"
 msgid "Fujitsu FM Towns CD-ROMs"
@@ -3507,7 +3559,7 @@ msgctxt "game_options"
 msgid "Digital"
 msgstr "デジタル"
 
-#. TRANSLATION: libretro/mame078plus
+#. TRANSLATION: libretro/mame078plus, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
 msgid "Keyboard shortcuts unavailable if passing through the keyboard."
 msgstr "キーボードパススルーは、KBショートカットは使用できません"
@@ -4816,7 +4868,7 @@ msgctxt "game_options"
 msgid "ZOOM/CROP (HIDE BORDERS)"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae2021
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, ...
 msgctxt "game_options"
 msgid "Auto zoom"
 msgstr "自動ズーム"
@@ -4886,7 +4938,7 @@ msgctxt "game_options"
 msgid "WHDLOAD LAUNCHER"
 msgstr "WHDLOADランチャー"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x64, ...
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
 msgid "If enabled, passes all physical keyboard events to the core."
 msgstr ""
@@ -4896,12 +4948,12 @@ msgctxt "game_options"
 msgid "KEYBOARD PASSTHROUGH"
 msgstr "キーボード パススルー"
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x64, ...
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
 msgid "Hardcoded keymap to joyport mapping for Keyrah hardware."
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x64, ...
+#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
 msgid "KEYRAH KEYPAD MAPPING"
 msgstr ""
@@ -5818,13 +5870,8 @@ msgstr "NTSC 492x262px"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, libretro/vice_xvic, ...
 msgctxt "game_options"
-msgid "Auto-disable crop"
-msgstr ""
-
-#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, libretro/vice_xvic, ...
-msgctxt "game_options"
-msgid "Auto crop"
-msgstr ""
+msgid "Auto-disable zoom"
+msgstr "自動でズームを無効"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, libretro/vice_xvic, ...
 msgctxt "game_options"
@@ -8781,6 +8828,11 @@ msgctxt "game_options"
 msgid "Interton VC 4000 cartridges"
 msgstr ""
 
+#. TRANSLATION: mame/wasm4
+msgctxt "game_options"
+msgid "Enable or disable high score saving"
+msgstr ""
+
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "BGFX for post-processing, accel/opengl for raw image."
@@ -9128,6 +9180,11 @@ msgctxt "game_options"
 msgid "Choose the scaling mode for the game screen."
 msgstr "ゲーム画面のスケーリングモードを選択します"
 
+#. TRANSLATION: xemu, sonic2013, soniccd
+msgctxt "game_options"
+msgid "SCALING MODE"
+msgstr "スケーリングモード"
+
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "Original resolution"
@@ -9185,11 +9242,6 @@ msgstr "画像を滑らかにします"
 
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
-msgid "SCALING MODE"
-msgstr "スケーリングモード"
-
-#. TRANSLATION: sonic2013, soniccd
-msgctxt "game_options"
 msgid "Nearest Neighbour"
 msgstr "最近傍"
 
@@ -9213,7 +9265,7 @@ msgctxt "game_options"
 msgid "Enable high quality effects for special stages."
 msgstr "特別ステージで高品質エフェクトを有効にします"
 
-#. TRANSLATION: sonic2013
+#. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "HQ MODE"
 msgstr "HQ モード"
@@ -9237,11 +9289,6 @@ msgstr "モッディングやその他の高度な設定をします"
 msgctxt "game_options"
 msgid "DEV MENU"
 msgstr "開発メニュー"
-
-#. TRANSLATION: soniccd
-msgctxt "game_options"
-msgid "HQ Mode"
-msgstr "HQ モード"
 
 #. TRANSLATION: soniccd
 msgctxt "game_options"
@@ -9541,6 +9588,11 @@ msgctxt "game_options"
 msgid "SKIP INTRO VIDEOS"
 msgstr ""
 
+#. TRANSLATION: eduke32, ionfury, raze
+msgctxt "game_options"
+msgid "Show (Default)"
+msgstr ""
+
 #. TRANSLATION: gzdoom, lzdoom
 msgctxt "game_options"
 msgid "Softpoly"
@@ -9605,6 +9657,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "USE COMPUTE SHADER"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "HQ Mode"
+#~ msgstr "HQ モード"
 
 #~ msgctxt "game_options"
 #~ msgid "1x (native)"
@@ -9721,10 +9777,6 @@ msgstr ""
 #~ msgstr "2D画面を修正"
 
 #~ msgctxt "game_options"
-#~ msgid "Auto-disable zoom"
-#~ msgstr "自動でズームを無効"
-
-#~ msgctxt "game_options"
 #~ msgid "AUTO SAVE/LOAD"
 #~ msgstr "オートセーブ/ロード"
 
@@ -9791,14 +9843,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "DISABLE EMULATOR JOYSTICK"
 #~ msgstr "エミュレータのジョイスティックを無効にする"
-
-#~ msgctxt "game_options"
-#~ msgid "CONTROLLER TYPE 1"
-#~ msgstr "コントローラ タイプ 1"
-
-#~ msgctxt "game_options"
-#~ msgid "CONTROLLER TYPE 2"
-#~ msgstr "コントローラ タイプ 2"
 
 #~ msgctxt "game_options"
 #~ msgid ""
