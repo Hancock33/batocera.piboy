@@ -33,6 +33,7 @@ endif
 
 define GZDOOM_INSTALL
 	cp $(@D)/buildroot-build/libraries/discordrpc/src/libdiscord-rpc.so $(TARGET_DIR)/usr/lib
+	$(TARGET_STRIP) $(TARGET_DIR)/usr/bin/gzdoom
 	mv $(TARGET_DIR)/usr/bin/gzdoom $(TARGET_DIR)/usr/share/gzdoom/gzdoom
 endef
 
