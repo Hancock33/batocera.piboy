@@ -3,8 +3,8 @@
 # libretro-tyrquake
 #
 ################################################################################
-# Version: Commits on Jul 19, 2022
-LIBRETRO_TYRQUAKE_VERSION = e84d6c1b4d74392e57954e34efeae9c9186bf29d
+# Version: Commits on Jul 24, 2022
+LIBRETRO_TYRQUAKE_VERSION = 89f3e032757b9b56e8d62a528a4a2472e60631aa
 LIBRETRO_TYRQUAKE_SITE = $(call github,libretro,tyrquake,$(LIBRETRO_TYRQUAKE_VERSION))
 LIBRETRO_TYRQUAKE_LICENSE = GPLv2
 
