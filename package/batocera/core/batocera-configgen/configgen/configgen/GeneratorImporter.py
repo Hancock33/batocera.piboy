@@ -131,6 +131,10 @@ def getGenerator(emulator):
         from generators.f2bgl.f2bglGenerator import F2bglGenerator
         return F2bglGenerator()
 
+    if emulator == 'fallout2':
+        from generators.fallout2.fallout2Generator import Fallout2Generator
+        return Fallout2Generator()
+
     if emulator == 'fba2x':
         from generators.fba2x.fba2xGenerator import Fba2xGenerator
         return Fba2xGenerator()
@@ -222,7 +226,7 @@ def getGenerator(emulator):
     if emulator == 'moonlight':
         from generators.moonlight.moonlightGenerator import MoonlightGenerator
         return MoonlightGenerator()
- 
+
     if emulator == 'mplayer':
         from generators.mplayer.mplayerGenerator import MplayerGenerator
         return MplayerGenerator()
