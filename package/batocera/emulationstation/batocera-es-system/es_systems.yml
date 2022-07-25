@@ -2915,7 +2915,7 @@ kodi:
   emulators:
     kodi:
       kodi: { requireAnyOf: [BR2_PACKAGE_KODI] }
-      
+
 mplayer:
   name:       Media Player
   manufacturer: media
@@ -3345,6 +3345,18 @@ f2bgl:
   emulators:
     f2bgl:
       f2bgl: { requireAnyOf: [BR2_PACKAGE_F2BGL] }
+
+fallout2:
+  name: Fallout 2
+  manufacturer: Ports
+  release: 1998
+  hardware: port
+  extensions: [game]
+  group: ports
+  path: /userdata/roms/ports/fallout2
+  emulators:
+    fallout2:
+      fallout2: { requireAnyOf: [BR2_PACKAGE_FALLOUT2] }
 
 freedroid:
   name:       Paradroid
