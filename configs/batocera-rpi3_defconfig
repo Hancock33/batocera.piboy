@@ -1,4 +1,4 @@
-# Target definition
+f# Target definition
 BR2_aarch64=y
 BR2_cortex_a53=y
 BR2_ARM_FPU_NEON_FP_ARMV8=y
@@ -55,7 +55,7 @@ BR2_LINUX_KERNEL_IMAGE_TARGET_NAME="Image"
 
 # Build the DTB from the kernel sources
 BR2_LINUX_KERNEL_DTS_SUPPORT=y
-BR2_LINUX_KERNEL_INTREE_DTS_NAME="broadcom/bcm2710-rpi-3-b broadcom/bcm2710-rpi-3-b-plus broadcom/bcm2837-rpi-3-b"
+BR2_LINUX_KERNEL_INTREE_DTS_NAME="broadcom/bcm2710-rpi-zero-2 broadcom/bcm2710-rpi-3-b broadcom/bcm2710-rpi-3-b-plus broadcom/bcm2837-rpi-3-b"
 BR2_PACKAGE_RPI_FIRMWARE_INSTALL_DTB_OVERLAYS=n
 
 BR2_PACKAGE_ESPEAK=y
