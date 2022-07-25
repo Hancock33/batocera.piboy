@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-GZDOOM_VERSION = eb94f81a83294024bf87fba8d437042fc07eba7c
+GZDOOM_VERSION = e2778ba442c40f60d7b246e43e9ae1b0c36032f4
 GZDOOM_SITE = $(call github,coelckers,gzdoom,$(GZDOOM_VERSION))
 GZDOOM_LICENSE = GPL-3.0
 GZDOOM_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew host-zmusic zmusic
