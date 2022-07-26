@@ -1,8 +1,8 @@
 diff --git a/qb/qb.comp.sh b/qb/qb.comp.sh
-index bde2b8f..f09754a 100644
+index 5a25e69f75..31cd4c5e19 100644
 --- a/qb/qb.comp.sh
 +++ b/qb/qb.comp.sh
-@@ -101,8 +101,13 @@ fi
+@@ -126,8 +126,13 @@ fi
  
  printf %s 'Checking for pkg-config ... '
  

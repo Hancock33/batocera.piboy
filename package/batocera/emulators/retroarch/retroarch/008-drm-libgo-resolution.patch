@@ -1,8 +1,8 @@
 diff --git a/deps/libgo2/src/display.c b/deps/libgo2/src/display.c
-index cedf3c4..69ad609 100644
+index b91cf0624b..061200abf1 100644
 --- a/deps/libgo2/src/display.c
 +++ b/deps/libgo2/src/display.c
-@@ -164,13 +164,29 @@ go2_display_t* go2_display_create()
+@@ -148,13 +148,29 @@ go2_display_t* go2_display_create()
  
      result->connector_id = connector->connector_id;
  

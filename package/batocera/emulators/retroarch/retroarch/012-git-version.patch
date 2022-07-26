@@ -1,6 +1,8 @@
---- a/retroarch.c	2021-03-29 11:30:18.558837411 +0200
-+++ b/retroarch.c	2021-03-29 11:30:46.785504688 +0200
-@@ -19,6 +19,8 @@
+diff --git a/retroarch.c b/retroarch.c
+index 7c4e48ea2d..4778559ad3 100644
+--- a/retroarch.c
++++ b/retroarch.c
+@@ -17,6 +17,8 @@
   *  If not, see <http://www.gnu.org/licenses/>.
   */
  
