@@ -3,8 +3,8 @@
 # libretro-bk-emulator
 #
 ################################################################################
-# Version: Commits on Mar 15, 2022
-LIBRETRO_BK_EMULATOR_VERSION = 30c605acaae958f2c6caf15de1fc5bfac49808b6
+# Version: Commits on Jul 26, 2022
+LIBRETRO_BK_EMULATOR_VERSION = cf70ce503ddb65051a58f3c4f61d1e258fc4c84b
 LIBRETRO_BK_EMULATOR_SITE = $(call github,libretro,bk-emulator,$(LIBRETRO_BK_EMULATOR_VERSION))
 LIBRETRO_BK_EMULATOR_LICENSE = Custom
 

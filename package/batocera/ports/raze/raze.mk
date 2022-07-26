@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-RAZE_VERSION = 7e8e6b1cde5a968ca93af825c1dcadbc44b1e0c1
+RAZE_VERSION = 1df66f4971a3bd8cefec15a574b69539d86064aa
 RAZE_SITE = $(call github,coelckers,Raze,$(RAZE_VERSION))
 RAZE_LICENSE = GPLv2
 RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic gzdoom
