@@ -3,8 +3,8 @@
 # libretro-vecx
 #
 ################################################################################
-# Version: Commits on Mar 27, 2022
-LIBRETRO_VECX_VERSION = 141af284202c86ed0d4ce9030c76954a144287cf
+# Version: Commits on Jul 26, 2022
+LIBRETRO_VECX_VERSION = 0af6990218c0de51c3603324791deb9ea8656766
 LIBRETRO_VECX_SITE = $(call github,libretro,libretro-vecx,$(LIBRETRO_VECX_VERSION))
 LIBRETRO_VECX_LICENSE = GPLv2|LGPLv2.1
 
