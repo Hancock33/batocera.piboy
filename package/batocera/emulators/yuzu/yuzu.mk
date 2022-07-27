@@ -1,12 +1,10 @@
 ################################################################################
 #
-# yuzu
+# YUZU
 #
 ################################################################################
-# Version: Commits on Oct 12, 2021
-#YUZU_VERSION = EA-2226
-#YUZU_SITE = https://github.com/pineappleEA/pineapple-src.git
-YUZU_VERSION = 429320aee8a0beab0081a61e6e3cfbc6bb754db2
+# Version: Commits on Jul 26, 2022
+YUZU_VERSION = 7c63f926ab590d0e3ddf54a1a4fc72238af6ac24
 YUZU_SITE = https://github.com/yuzu-emu/yuzu.git
 YUZU_SITE_METHOD=git
 YUZU_GIT_SUBMODULES=YES

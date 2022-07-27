@@ -1,16 +1,15 @@
 diff --git a/Source/ee/Ee_LibMc2.cpp b/Source/ee/Ee_LibMc2.cpp
-index 9ec9de75..c2d6908a 100644
+index 83850203..2920d367 100644
 --- a/Source/ee/Ee_LibMc2.cpp
 +++ b/Source/ee/Ee_LibMc2.cpp
-@@ -1,5 +1,6 @@
+@@ -1,4 +1,5 @@
  #include "Ee_LibMc2.h"
- #include <cassert>
 +#include <cstring>
+ #include <cassert>
  #include "zip/ZipArchiveWriter.h"
  #include "zip/ZipArchiveReader.h"
- #include "Ps2Const.h"
 diff --git a/Source/iop/IopBios.cpp b/Source/iop/IopBios.cpp
-index 63d7fbb3..1183aebe 100644
+index 6d336ac0..22f51da8 100644
 --- a/Source/iop/IopBios.cpp
 +++ b/Source/iop/IopBios.cpp
 @@ -1,4 +1,5 @@
@@ -20,7 +19,7 @@ index 63d7fbb3..1183aebe 100644
  #include "string_format.h"
  #include "PtrStream.h"
 diff --git a/Source/iop/Iop_McServ.cpp b/Source/iop/Iop_McServ.cpp
-index c3861345..2f991f15 100644
+index 9b4cedda..6af70c89 100644
 --- a/Source/iop/Iop_McServ.cpp
 +++ b/Source/iop/Iop_McServ.cpp
 @@ -1,5 +1,6 @@
