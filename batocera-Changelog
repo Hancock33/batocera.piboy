@@ -33,16 +33,17 @@
         * add: libretro-lowresnx for the Lowres NX fantasy console
         * add: expanded Nintendo controller support
         * add: joycond support - joycons can now be paired as one 'virtual' controller
+        * add: libretro-bsnes as a SNES emulator option to the RPi4
         * bump: x86_64 linux kernel to 5.18.12
         * bump: Nvidia linux driver to 515.48.07
         * bump: btop to 1.2.7
         * bump: Mame to 245
-        * bump: RPCS3 to 0.0.22-13657
+        * bump: RPCS3 to 0.0.23-13976
         * bump: Ruffle
         * bump: lightspark
         * bump: pcsx2 to v1.7.2866 (note: memory cards now saved to /userdata/saves/ps2)
         * bump: amiberry to v5.3
-        * bump: PPSSPP emulators to June 26 builds
+        * bump: PPSSPP emulators to v1.13
         * bump: Proton to 7.0-2
         * bump: DXVK to 1.10.2
         * bump: mesa to 22.1.3
@@ -55,14 +56,14 @@
         * bump: Duckstation emulators to Jul 08 builds
         * bump: ScummVM emulators to Jul 09 builds
         * bump: Mupen64Plus emulators
-          * mupen64plus-core to Jun 24 builds
-          * mupen64plus-audio-sdl to Apr 12 builds
-          * mupen64plus-gliden64-plugin to Jun 12 builds
-          * mupen64plus-input-sdl to May 14 builds
-          * mupen64plus-rsp-hle to Apr 24 builds
-          * mupen64plus-ui-console to Apr 12 builds
-          * mupen64plus-video-glide64mk2 to Apr 12 builds
-          * mupen64plus-video-rice to Apr 12 builds
+        * bump: mupen64plus-core to Jun 24 builds
+        * bump: mupen64plus-audio-sdl to Apr 12 builds
+        * bump: mupen64plus-gliden64-plugin to Jun 12 builds
+        * bump: mupen64plus-input-sdl to May 14 builds
+        * bump: mupen64plus-rsp-hle to Apr 24 builds
+        * bump: mupen64plus-ui-console to Apr 12 builds
+        * bump: mupen64plus-video-glide64mk2 to Apr 12 builds
+        * bump: mupen64plus-video-rice to Apr 12 builds
         * bump: libretro-genesisplusgx to Jun 18 builds
         * bump: libretro-neocd to May 15 builds
         * bump: libretro-pcsx to Jul 15 builds
@@ -72,6 +73,9 @@
         * bump: libretro-mame2003-plus to Jul 16 builds
         * bump: libretro-fbneo to Jul 21 builds
         * bump: libretro-opera to Jul 12 builds
+        * bump: XpadNeo to v0.9.4
+        * bump: Supermodel (Sega Model 3) to new git source
+        * change: Supermodel now requires Mame 0.245 compatible game roms.
         * change: enabled more flycast standalone options (DSP & anisotropic)
         * change: enabled more duckstation options (PGXP & OSD)
         * change: enabled VSync option for standalone MAME
@@ -82,8 +86,10 @@
         * change: disable cec in es (causing issues in some circonstances)
         * change: dolphin is back on s922x with libretro-dolphin
         * change: od-commander south and east buttons swapped to match ES
+        * change: update commentary in batocera.conf and batocera-boot.conf files
         * es: add frameskip options for Drastic
         * es: wii/gamecube added json as acceptable file extension
+        * es: change strings to refer to the spelling of savestates consistently
         * fix: optimize game startup
         * fix: lr-swanstation not working on some SBC's with OpenGLES
         * fix: segacd now scrapes successfully again
@@ -97,6 +103,7 @@
         * fix: mupen64plus-next with s905gen3 devices
         * fix: btop UTF-8 error
         * fix: X68000 load HDF games and random crashes
+        * fix: boot logo rotation on 720x1280 devices such as win600
 
 2022/05/24 - batocera.linux 34 - blue morpho
         * add: board Anbernic RG552

@@ -10,20 +10,16 @@ import re
 from shutil import copyfile
 
 class SupermodelGenerator(Generator):
-    if os.path.isfile('/tmp/piboy'):
-        os.system('piboy_keys model3.supermodel.keys')
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ["supermodel", "-fullscreen", "-channels=2", "-multi-texture", "-legacy-scsp"]
-
+        commandArray = ["supermodel", "-fullscreen", "-channels=2"]
+        
         # legacy3d
-        if system.isOptSet("engine3D") and system.config["engine3D"] == "legacy3d":
-            commandArray.append("-legacy3d")
-        elif system.isOptSet("engine3D") and system.config["engine3D"] == "new3d":
+        if system.isOptSet("engine3D") and system.config["engine3D"] == "new3d":
             commandArray.append("-new3d")
         else:
-            commandArray.append("-legacy3d")
-
+             commandArray.extend(["-multi-texture", "-legacy-scsp", "-legacy3d"])
+        
         # widescreen
         if system.isOptSet("wideScreen") and system.getOptBoolean("wideScreen"):
             commandArray.append("-wide-screen")
@@ -63,18 +59,7 @@ class SupermodelGenerator(Generator):
         # config
         configPadsIni(playersControllers, drivingGame)
 
-        if os.path.isfile('/tmp/piboy'):
-            return Command.Command(
-                array=commandArray,
-                env={
-                'SDL_AUTO_UPDATE_JOYSTICKS': '0',
-            })
-        else:
-            return Command.Command(
-                array=commandArray,
-                env={
-                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
-            })
+        return Command.Command(array=commandArray)
 
 def copy_nvram_files():
     sourceDir = "/usr/share/supermodel/NVRAM"

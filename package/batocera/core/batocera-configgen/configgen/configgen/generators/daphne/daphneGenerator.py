@@ -49,24 +49,29 @@ class DaphneGenerator(Generator):
         if system.isOptSet('bilinear_filter') and system.getOptBoolean("bilinear_filter"):
             commandArray.append("-nolinear_scale")
 
-        # Blend Sprites (Singe)
-        if system.isOptSet('blend_sprites') and system.getOptBoolean("blend_sprites"):
-            commandArray.append("-blend_sprites")
-
-        if controllersConfig.gunsNeedBorders(guns):
-            commandArray.extend(["-sinden", "2", "w"])
-
-        # Oversize Overlay (Singe) for HD lightgun games
-        if system.isOptSet('lightgun_hd') and system.getOptBoolean("lightgun_hd"):
-            commandArray.append("-oversize_overlay")
-
-        # crosshair
-        if system.isOptSet('daphne_crosshair'):
-            if not system.getOptBoolean("daphne_crosshair"):
-                commandArray.append("-nocrosshair")
-        else:
-            if not controllersConfig.gunsNeedCrosses(guns):
-                commandArray.append("-nocrosshair")
+        #The following options should only be set when os.path.isfile(singeFile) is true.
+        #-blend_sprites, -oversize_overlay, -nocrosshair, -sinden or -manymouse
+        if os.path.isfile(singeFile):
+            # Blend Sprites (Singe)
+            if system.isOptSet('blend_sprites') and system.getOptBoolean("blend_sprites"):
+                commandArray.append("-blend_sprites")
+            
+            if controllersConfig.gunsNeedBorders(guns):
+                commandArray.extend(["-sinden", "2", "w"])
+            else:
+                commandArray.extend(["-manymouse"]) # sinden implies manymouse
+                
+            # Oversize Overlay (Singe) for HD lightgun games
+            if system.isOptSet('lightgun_hd') and system.getOptBoolean("lightgun_hd"):
+                commandArray.append("-oversize_overlay")
+            
+            # crosshair
+            if system.isOptSet('daphne_crosshair'):
+                if not system.getOptBoolean("daphne_crosshair"):
+                    commandArray.append("-nocrosshair")
+                else:
+                    if not controllersConfig.gunsNeedCrosses(guns):
+                        commandArray.append("-nocrosshair")
 
         # Invert Axis
         if system.isOptSet('invert_axis') and system.getOptBoolean("invert_axis"):
@@ -96,8 +101,8 @@ class DaphneGenerator(Generator):
 
         # Enable SDL_TEXTUREACCESS_STREAMING, can aid SBC's with SDL2 => 2.0.16
         if system.isOptSet('daphne_texturestream') and system.getOptBoolean("daphne_texturestream"):
-            commandArray.append("-texturestream")
-
+            commandArray.append("-texturestream") 
+            
         # The folder may have a file with the game name and .commands with extra arguments to run the game.
         if os.path.isfile(commandsFile):
             commandArray.extend(open(commandsFile,'r').read().split())
@@ -105,7 +110,7 @@ class DaphneGenerator(Generator):
         return Command.Command(array=commandArray)
 
     def getInGameRatio(self, config, gameResolution, rom):
-        romName = os.path.splitext(os.path.basename(rom))[0]
+        romName = os.path.splitext(os.path.basename(rom))[0]        
         singeFile = rom + "/" + romName + ".singe"
         if "daphne_ratio" in config:
             if config['daphne_ratio'] == "stretch":
