@@ -6,7 +6,7 @@
 # Version: Commits on May 29, 2022
 XONE_VERSION = 5cbad4835ada91bb2d54352e06e3151a7da90f44
 XONE_SITE = $(call github,medusalix,xone,$(XONE_VERSION))
-XONE_DEPENDENCIES = host-libcurl host-cabextract libusb
+XONE_DEPENDENCIES = host-cabextract libusb
 
 define XONE_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0644 $(@D)/install/modprobe.conf $(TARGET_DIR)/etc/modprobe.d/xone-blacklist.conf

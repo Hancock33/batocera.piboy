@@ -5,7 +5,7 @@
 ################################################################################
 XPADNEO_VERSION = v0.9.4
 XPADNEO_SITE = $(call github,atar-axis,xpadneo,$(XPADNEO_VERSION))
-XPADNEO_DEPENDENCIES = host-libcurl host-cabextract bluez5_utils
+XPADNEO_DEPENDENCIES = host-cabextract bluez5_utils
 XPADNEO_MODULE_SUBDIRS = hid-xpadneo/src
 
 define XPADNEO_INSTALL_TARGET_CMDS
