@@ -1,0 +1,13 @@
+diff --git a/yabause/src/retro_arena/CMakeLists.txt b/yabause/src/retro_arena/CMakeLists.txt
+index d767aa81..f0a12d5b 100644
+--- a/yabause/src/retro_arena/CMakeLists.txt
++++ b/yabause/src/retro_arena/CMakeLists.txt
+@@ -22,7 +22,7 @@ add_subdirectory(pugixml)
+ add_subdirectory(nanogui-sdl)
+ 
+ #include( ../glfw/external_zlib.cmake )
+-include( ${CMAKE_SOURCE_DIR}/CMake/Packages/external_libpng.cmake )
++#include( ${CMAKE_SOURCE_DIR}/CMake/Packages/external_libpng.cmake )
+ 
+ #------------------------------------------------------------------------------
+ # nlohmann/json

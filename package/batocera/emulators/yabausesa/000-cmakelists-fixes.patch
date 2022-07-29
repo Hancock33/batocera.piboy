@@ -1,0 +1,36 @@
+diff --git a/yabause/src/CMakeLists.txt b/yabause/src/CMakeLists.txt
+index 0b0e6242..f418fbdc 100644
+--- a/yabause/src/CMakeLists.txt
++++ b/yabause/src/CMakeLists.txt
+@@ -980,20 +980,10 @@ if("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "armv7-a")
+ endif()
+ if("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "aarch64")
+ 		add_definitions(-DAARCH64)
+-    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -std=c99 -march=armv8-a")
+-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -march=armv8-a -std=c++17 ")
++    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -w")
++    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -w")
+ endif()
+ 
+-# Warnings defined to know when we're breaking compilation with MSVC
+-if (CMAKE_COMPILER_IS_GNUCC)
+-	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wdeclaration-after-statement")
+-endif ()
+-
+-if (MSVC)
+-	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /wd4018 /wd4244")
+-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd4244")
+-endif ()
+-
+ # Turn string format security warnings into errors. Some Linux distros enable this by default and travis-ci, etc. needs a way to catch them
+ option(YAB_FORCE_SECURE_STRINGS "Turns all string format warnings into errors." OFF)
+ if (CMAKE_COMPILER_IS_GNUCC AND YAB_FORCE_SECURE_STRINGS)
+@@ -1032,7 +1022,7 @@ endif(YAB_WANT_VULKAN)
+ #-----------------------------------------------------------------------
+ # libCHD
+ include( ${CMAKE_SOURCE_DIR}/CMake/Packages/external_libchdr.cmake )
+-include( ${CMAKE_SOURCE_DIR}/CMake/Packages/external_zlib.cmake )
++#include( ${CMAKE_SOURCE_DIR}/CMake/Packages/external_zlib.cmake )
+ #include_directories(${zlib_INCLUDE_DIR})
+ add_dependencies(yabause libchdr)
+ #add_dependencies(yabause zlib)
