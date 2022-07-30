@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jun 18, 2022
-YABAUSESA_VERSION = c7618d2ecbf77b1e8188fa8af4fa1cfb34833a72
+YABAUSESA_VERSION = c7618d2ecbf77b1e8188fa8af4fa1cfb34833a72 # pi4 branch
 YABAUSESA_SITE = https://github.com/devmiyax/yabause.git
 YABAUSESA_SITE_METHOD=git
 YABAUSESA_GIT_SUBMODULES=YES
@@ -13,40 +13,30 @@ YABAUSESA_LICENSE = GPLv2
 YABAUSESA_DEPENDENCIES = sdl2 boost openal zlib
 YABAUSESA_SUBDIR = yabause
 
-define YABAUSESA_POST_EXTRACT_FIXUP
-  sed -i "s|CMAKE_C_FLAGS}|CMAKE_C_FLAGS} -DCMAKE_TOOLCHAIN_FILE=$(HOST_DIR)/share/buildroot/yabause.cmake|" $(@D)/yabause/CMake/Packages/external_libchdr.cmake  
-  sed -i "s|COMMAND m68kmake|COMMAND $(@D)/m68kmake_host|" $(@D)/yabause/src/musashi/CMakeLists.txt
-  sed -i "s|COMMAND ./bin2c|COMMAND $(@D)/bin2c_host|" $(@D)/yabause/src/retro_arena/nanogui-sdl/CMakeLists.txt
-  gcc  $(@D)/yabause/src/retro_arena/nanogui-sdl/resources/bin2c.c -o $(@D)/bin2c_host
-  gcc  $(@D)/yabause/src/musashi/m68kmake.c -o $(@D)/m68kmake_host
-  cp $(HOST_DIR)/share/buildroot/toolchainfile.cmake $(HOST_DIR)/share/buildroot/yabause.cmake
-  echo "add_definitions( -D__RP64__ )" >> $(HOST_DIR)/share/buildroot/yabause.cmake
-  echo "add_definitions( -D__RETORO_ARENA__ )" $(HOST_DIR)/share/buildroot/yabause.cmake
-endef
-
-YABAUSESA_POST_EXTRACT_HOOKS += YABAUSESA_POST_EXTRACT_FIXUP
-
+YABAUSESA_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 YABAUSESA_CONF_OPTS += -DYAB_PORTS=retro_arena 
 YABAUSESA_CONF_OPTS += -DUSE_EGL=ON
-YABAUSESA_CONF_OPTS += -DYAB_WANT_OPENAL=OFF
-YABAUSESA_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
-YABAUSESA_CONF_OPTS += -DCMAKE_TOOLCHAIN_FILE=$(HOST_DIR)/share/buildroot/yabause.cmake
-YABAUSESA_CONF_OPTS += -DOPENGL_INCLUDE_DIR=$(STAGING_DIR)/usr/include
-YABAUSESA_CONF_OPTS += -DOPENGL_opengl_LIBRARY=$(STAGING_DIR)/usr/lib
-YABAUSESA_CONF_OPTS += -DOPENGL_glx_LIBRARY=$(STAGING_DIR)/usr/lib
-YABAUSESA_CONF_OPTS += -DLIBPNG_LIB_DIR=$(STAGING_DIR)/usr/lib
 YABAUSESA_CONF_OPTS += -Dpng_STATIC_LIBRARIES=$(STAGING_DIR)/usr/lib/libpng16.a
 YABAUSESA_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=-Wl,--unresolved-symbols=ignore-all
 
 ifeq ($(BR2_arm)$(BR2_aarch64),y)
-YABAUSESA_CONF_OPTS += -DYAB_WANT_DYNAREC_DEVMIYAX=ON
+ YABAUSESA_POST_EXTRACT_HOOKS += YABAUSESA_POST_EXTRACT_FIXUP_SOC
+ YABAUSESA_CONF_OPTS += -DYAB_WANT_DYNAREC_DEVMIYAX=ON 
 else ifeq ($(BR2_x86_64),y)
-YABAUSESA_CONF_OPTS += -DYAB_WANT_DYNAREC_DEVMIYAX=OFF
+  YABAUSESA_CONF_OPTS += -DYAB_WANT_DYNAREC_DEVMIYAX=OFF
 endif
 
 ifeq ($(BR2_arm),y)
-YABAUSESA_CONF_OPTS += -DYAB_WANT_ARM7=ON
+  YABAUSESA_CONF_OPTS += -DYAB_WANT_ARM7=ON
 endif
+
+define YABAUSESA_POST_EXTRACT_FIXUP_SOC
+  sed -i "s|CMAKE_C_FLAGS}|CMAKE_C_FLAGS} -DCMAKE_TOOLCHAIN_FILE=$(HOST_DIR)/share/buildroot/toolchainfile.cmake|" $(@D)/yabause/CMake/Packages/external_libchdr.cmake  
+  sed -i "s|COMMAND m68kmake|COMMAND $(@D)/m68kmake_host|" $(@D)/yabause/src/musashi/CMakeLists.txt
+  sed -i "s|COMMAND ./bin2c|COMMAND $(@D)/bin2c_host|" $(@D)/yabause/src/retro_arena/nanogui-sdl/CMakeLists.txt
+  gcc $(@D)/yabause/src/retro_arena/nanogui-sdl/resources/bin2c.c -o $(@D)/bin2c_host
+  gcc $(@CC_FOR_BUILD) $(@D)/yabause/src/musashi/m68kmake.c -o $(@D)/m68kmake_host
+endef
 
 define YABAUSESA_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/yabause/buildroot-build/src/retro_arena/yabasanshiro -D $(TARGET_DIR)/usr/bin/yabausesa
