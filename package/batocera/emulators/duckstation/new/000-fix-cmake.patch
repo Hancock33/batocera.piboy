@@ -1,0 +1,116 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 964495d6..d7a14797 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -40,6 +40,7 @@ if(SUPPORTS_WAYLAND)
+ endif()
+ if((LINUX OR FREEBSD) OR ANDROID)
+   option(USE_EGL "Support EGL OpenGL context creation" ON)
++  option(USE_MALI "Link with libmali for EGL support" OFF)
+ endif()
+ if((LINUX OR FREEBSD) AND NOT ANDROID)
+   option(USE_DRMKMS "Support DRM/KMS OpenGL contexts" OFF)
+@@ -232,7 +233,7 @@ elseif(${CMAKE_SYSTEM_PROCESSOR} STREQUAL "x86" OR ${CMAKE_SYSTEM_PROCESSOR} STR
+ elseif(${CMAKE_SYSTEM_PROCESSOR} STREQUAL "aarch64" OR ${CMAKE_SYSTEM_PROCESSOR} STREQUAL "arm64")
+   set(CPU_ARCH "aarch64")
+ elseif(${CMAKE_SYSTEM_PROCESSOR} STREQUAL "arm" OR ${CMAKE_SYSTEM_PROCESSOR} STREQUAL "armv7-a" OR
+-       ${CMAKE_SYSTEM_PROCESSOR} STREQUAL "armv7l")
++       ${CMAKE_SYSTEM_PROCESSOR} STREQUAL "armv7l" OR ${CMAKE_SYSTEM_PROCESSOR} STREQUAL "armv8l")
+   set(CPU_ARCH "aarch32")
+   if(ANDROID)
+     # Force ARM mode, since apparently ANDROID_ARM_MODE isn't working..
+diff --git a/CMakeModules/FindEGL.cmake b/CMakeModules/FindEGL.cmake
+index 48e51728..c1c947b1 100644
+--- a/CMakeModules/FindEGL.cmake
++++ b/CMakeModules/FindEGL.cmake
+@@ -86,6 +86,17 @@ find_library(EGL_LIBRARY
+         ${PKG_EGL_LIBRARY_DIRS}
+ )
+ 
++if(USE_MALI)
++pkg_check_modules(PKG_MALI QUIET mali)
++find_library(MALI_LIBRARY
++    NAMES
++        mali
++    HINTS
++        ${PKG_MALI_LIBRARY_DIRS}
++)
++endif()
++
++
+ # NB: We do *not* use the version information from pkg-config, as that
+ #     is the implementation version (eg: the Mesa version)
+ if(EGL_INCLUDE_DIR)
+@@ -117,7 +128,11 @@ endif()
+ 
+ cmake_push_check_state(RESET)
+ list(APPEND CMAKE_REQUIRED_LIBRARIES "${EGL_LIBRARY}")
++if(USE_MALI)
++list(APPEND CMAKE_REQUIRED_LIBRARIES "${MALI_LIBRARY}")
++endif()
+ list(APPEND CMAKE_REQUIRED_INCLUDES "${EGL_INCLUDE_DIR}")
++list(APPEND CMAKE_REQUIRED_DEFINITIONS "-DEGL_NO_X11")
+ 
+ check_cxx_source_compiles("
+ #include <EGL/egl.h>
+@@ -161,7 +176,11 @@ endif()
+ mark_as_advanced(EGL_LIBRARY EGL_INCLUDE_DIR HAVE_EGL)
+ 
+ # compatibility variables
++if (USE_MALI)
++set(EGL_LIBRARIES ${EGL_LIBRARY} ${MALI_LIBRARY})
++else()
+ set(EGL_LIBRARIES ${EGL_LIBRARY})
++endif()
+ set(EGL_INCLUDE_DIRS ${EGL_INCLUDE_DIR})
+ set(EGL_VERSION_STRING ${EGL_VERSION})
+ 
+diff --git a/dep/glad/CMakeLists.txt b/dep/glad/CMakeLists.txt
+index 24a4fb45..59eb66e5 100644
+--- a/dep/glad/CMakeLists.txt
++++ b/dep/glad/CMakeLists.txt
+@@ -17,8 +17,9 @@ if(WIN32)
+   target_sources(glad PRIVATE src/glad_wgl.c)
+ else()
+   if(USE_EGL)
++    target_compile_definitions(glad PRIVATE -DEGL_NO_X11)
+     target_sources(glad PRIVATE src/glad_egl.c)
+-    target_link_libraries(glad PRIVATE EGL::EGL)
++    target_link_libraries(glad PRIVATE EGL)
+   endif()
+   if(USE_X11)
+     target_sources(glad PRIVATE src/glad_glx.c)
+diff --git a/src/common/CMakeLists.txt b/src/common/CMakeLists.txt
+index 3785bade..fd5fe00c 100644
+--- a/src/common/CMakeLists.txt
++++ b/src/common/CMakeLists.txt
+@@ -175,12 +175,13 @@ if(USE_EGL)
+     )
+   endif()
+   if(USE_DRMKMS)
++    target_compile_definitions(common PRIVATE "-DEGL_NO_X11=1")
+     target_compile_definitions(common PRIVATE "-DUSE_GBM=1")
+     target_sources(common PRIVATE
+       gl/context_egl_gbm.cpp
+       gl/context_egl_gbm.h
+     )
+-    target_link_libraries(common PUBLIC GBM::GBM)
++    target_link_libraries(common PUBLIC gbm EGL)
+   endif()
+   if(USE_FBDEV)
+     target_compile_definitions(common PRIVATE "-DUSE_FBDEV=1")
+diff --git a/src/duckstation-nogui/CMakeLists.txt b/src/duckstation-nogui/CMakeLists.txt
+index a51778ec..7027ac82 100644
+--- a/src/duckstation-nogui/CMakeLists.txt
++++ b/src/duckstation-nogui/CMakeLists.txt
+@@ -25,6 +25,10 @@ if(USE_EVDEV)
+   target_compile_definitions(duckstation-nogui PRIVATE "-DUSE_LIBEVDEV=1")
+   target_include_directories(duckstation-nogui PRIVATE ${LIBEVDEV_INCLUDE_DIRS})
+   target_link_libraries(duckstation-nogui PRIVATE ${LIBEVDEV_LIBRARIES})
++if (USE_MALI)
++  target_link_libraries(duckstation-nogui PRIVATE ${MALI_LIBRARY})
++endif()
++
+ endif()
+ 
+ if(USE_DRMKMS)

@@ -1,0 +1,22 @@
+diff --git a/src/common/file_system.cpp b/src/common/file_system.cpp
+index 5f16e376..76b192c3 100644
+--- a/src/common/file_system.cpp
++++ b/src/common/file_system.cpp
+@@ -1538,6 +1538,8 @@ bool FileSystem::DeleteDirectory(const char* path)
+ 
+ std::string FileSystem::GetProgramPath()
+ {
++  return "/usr/share/duckstation";
++
+   std::wstring buffer;
+   buffer.resize(MAX_PATH);
+ 
+@@ -2026,6 +2028,8 @@ bool FileSystem::DeleteDirectory(const char* path)
+ 
+ std::string FileSystem::GetProgramPath()
+ {
++  return "/usr/share/duckstation";
++
+ #if defined(__linux__)
+   static const char* exeFileName = "/proc/self/exe";
+ 

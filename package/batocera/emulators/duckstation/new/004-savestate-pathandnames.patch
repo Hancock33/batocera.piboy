@@ -1,0 +1,29 @@
+diff --git a/src/core/system.cpp b/src/core/system.cpp
+index 54c02aa8..bb36dd51 100644
+--- a/src/core/system.cpp
++++ b/src/core/system.cpp
+@@ -81,6 +81,7 @@ struct MemorySaveState
+ namespace System {
+ static std::optional<ExtendedSaveStateInfo> InternalGetExtendedSaveStateInfo(ByteStream* stream);
+ static bool InternalSaveState(ByteStream* state, u32 screenshot_size = 256);
++static bool SaveStateScreenShot(const char* filename);
+ static bool SaveMemoryState(MemorySaveState* mss);
+ static bool LoadMemoryState(const MemorySaveState& mss);
+ 
+@@ -305,7 +306,7 @@ const std::string& System::GetRunningPath()
+ }
+ const std::string& System::GetRunningCode()
+ {
+-  return s_running_game_code;
++  return s_running_game_title; //s_running_game_code;
+ }
+ 
+ const std::string& System::GetRunningTitle()
+@@ -1001,6 +1002,7 @@ bool System::SaveState(const char* filename, bool backup_existing_save)
+   }
+   else
+   {
++    System::SaveStateScreenShot(filename);
+     Host::AddFormattedOSDMessage(5.0f, Host::TranslateString("OSDMessage", "State saved to '%s'."), filename);
+     stream->Commit();
+   }
