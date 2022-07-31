@@ -4102,7 +4102,7 @@ libretro:
                     "Low 360p":         lores
                     "High 720p":        hires
                     "Super-high 1440p": superhires
-            zoom_mode:
+            crop_mode:
                 group: ADVANCED OPTIONS
                 prompt:      ZOOM/CROP (HIDE BORDERS)
                 description: Hides borders on many games. Some games use the borders.
@@ -4369,7 +4369,7 @@ libretro:
                     "Low 360p":         lores
                     "High 720p":        hires
                     "Super-high 1440p": superhires
-            zoom_mode:
+            crop_mode:
                 group: ADVANCED OPTIONS
                 prompt:      ZOOM/CROP (HIDE BORDERS)
                 description: Hides borders on many games. Some games use the borders.
