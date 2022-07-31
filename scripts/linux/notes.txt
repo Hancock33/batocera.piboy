@@ -1,0 +1,20 @@
+===Buildroot
+git remote remove upstream
+git remote add upstream https://github.com/batocera-linux/buildroot.git
+git fetch upstream
+git merge upstream/br2-external
+
+git remote remove upstream
+git remote add upstream https://github.com/buildroot/buildroot.git
+git fetch upstream
+git merge upstream/master
+
+
+===Batocera
+git remote add upstream https://github.com/batocera-linux/batocera.linux.git
+git fetch upstream
+git merge upstream/master
+cd buildroot && git checkout br-2022.08 && git pull
+
+==Remove whitespace 
+\h+$
