@@ -1,0 +1,38 @@
+diff --git a/yabause/src/retro_arena/main.cpp b/yabause/src/retro_arena/main.cpp
+index a6b0c609..7f983cf2 100644
+--- a/yabause/src/retro_arena/main.cpp
++++ b/yabause/src/retro_arena/main.cpp
+@@ -154,6 +154,7 @@ static SDL_Window* wnd;
+ static SDL_GLContext glc;
+ int g_EnagleFPS = 0;
+ int g_resolution_mode = 0;
++int g_rotate_mode = 0;
+ int g_rotate_resolution_mode = 0;
+ int g_keep_aspect_rate = 0;
+ int g_scsp_sync = 1;
+@@ -256,6 +257,7 @@ int yabauseinit()
+ #else
+   yinit.scsp_main_mode = 1;
+ #endif
++  yinit.rbg_resolution_mode = pre.getInt( "Rotate screen" ,g_rotate_mode);
+   yinit.rbg_resolution_mode = pre.getInt( "Rotate screen resolution" ,g_rotate_resolution_mode);
+ #if defined(__JETSON__)
+   yinit.rbg_use_compute_shader = pre.getBool( "Use compute shader" , true);
+@@ -327,6 +329,9 @@ int main(int argc, char** argv)
+     }
+ 		else if(( x == "-r" || x == "--resolution_mode") && (i+1<all_args.size() ) ) {
+       g_resolution_mode = std::stoi( all_args[i+1] );
++    }
++		else if(( x == "-rm" || x == "--rotate_mode") && (i+1<all_args.size() ) ) {
++      g_rotate_mode = std::stoi( all_args[i+1] );
+     }
+ 		else if(( x == "-rr" || x == "--rotate_resolution_mode") && (i+1<all_args.size() ) ) {
+       g_rotate_resolution_mode = std::stoi( all_args[i+1] );
+@@ -350,6 +355,7 @@ int main(int argc, char** argv)
+   // Init Preference
+   Preference * p = new Preference(cdpath);
+   p->getInt("Resolution",g_resolution_mode);
++  p->getInt("Rotate screen",g_rotate_mode);
+   p->getInt("Rotate screen resolution",g_rotate_resolution_mode);
+   p->getInt("Aspect rate",g_keep_aspect_rate);
+   p->getBool("Rotate screen",false);
