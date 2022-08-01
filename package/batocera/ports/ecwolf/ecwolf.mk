@@ -3,8 +3,8 @@
 # ecwolf
 #
 ################################################################################
-# Version: Commits on Jul 21, 2022
-ECWOLF_VERSION = 3fe8e60f86f77d1d25d24ede85a4355c5ef0635a
+# Version: Commits on Jul 23, 2022
+ECWOLF_VERSION = e66f5564b9b382bd8a796b4b21384ac6c1356833
 ECWOLF_SITE = https://bitbucket.org/ecwolf/ecwolf.git
 ECWOLF_LICENSE = Non-commercial
 ECWOLF_DEPENDENCIES = sdl2 host-ecwolf
