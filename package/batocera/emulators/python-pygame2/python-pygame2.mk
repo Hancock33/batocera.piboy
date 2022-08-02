@@ -5,8 +5,8 @@
 ################################################################################
 # stable 1.9.1 release requires V4L which has been wiped out of recent Linux
 # kernels, so use latest mercurial revision until next stable release is out.
-# Version: Commits on Aug 01, 2022
-PYTHON_PYGAME2_VERSION = 8548074af7f7a74ea574c7933dc942278a3ed372
+# Version: Commits on Aug 02, 2022
+PYTHON_PYGAME2_VERSION = 9f14cbf6f7f2cbbffa690c086af31046b8287dcd
 PYTHON_PYGAME2_SITE =  $(call github,pygame,pygame,$(PYTHON_PYGAME2_VERSION))
 PYTHON_PYGAME2_SETUP_TYPE = setuptools
 PYTHON_PYGAME2_LICENSE = LGPL-2.1+
