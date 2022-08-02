@@ -2,3 +2,4 @@ include batocera-x86_64.board
 
 # x86_64 with znver2
 BR2_x86_znver2=y
+BR2_TARGET_OPTIMIZATION="-pipe -fsigned-char -march=znver2 -w"
