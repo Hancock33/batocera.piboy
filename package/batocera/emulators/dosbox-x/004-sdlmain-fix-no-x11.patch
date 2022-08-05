@@ -1,0 +1,18 @@
+--- a/src/gui/sdlmain_linux.cpp	2022-07-06 15:31:44.051739647 +0200
++++ b/src/gui/sdlmain_linux.cpp	2022-07-06 15:32:11.452297897 +0200
+@@ -28,6 +28,7 @@
+  * window resizes, or is resized by the user, the more likely it can occur.
+  *
+  * This can happen at any time. */
++#if C_X11
+ int X11_ErrorHandler(Display *disp,XErrorEvent *xev) {
+ 	char errmsg[512];
+ 
+@@ -49,6 +50,7 @@
+ void X11_ErrorHandlerInstall(void) {
+ 	XSetErrorHandler(X11_ErrorHandler);
+ }
++#endif
+ 
+ #if C_X11_XRANDR
+ #include <X11/extensions/Xrandr.h>
