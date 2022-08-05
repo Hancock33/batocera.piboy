@@ -3406,6 +3406,13 @@ libretro:
                     "Off":         none
                     "Memory Pak":  memory
                     "Rumble Pak":  rumble
+            mupen64plus-Framerate:
+                group: ADVANCED OPTIONS
+                prompt: FRAME RATE
+                description: Full speed can break some games.
+                choices:
+                    "Original":   Original
+                    "Full speed": Fullspeed
     neocd:
       shared: [rewind, autosave]
       cfeatures:
@@ -3754,11 +3761,12 @@ libretro:
                     "Bilinear":    bilinear
                     "Nearest":     nearest
             parallel-n64-framerate:
-                prompt:      FRAMERATE
-                description: Fullspeed can break some games.
+                group: ADVANCED OPTIONS
+                prompt:      FRAME RATE
+                description: Full speed can break some games.
                 choices:
-                    "fullspeed":   fullspeed
-                    "original":    original
+                    "Original":   original
+                    "Full speed": fullspeed
             parallel-n64-pak1:
                 group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER PAK 1
@@ -4960,7 +4968,7 @@ libretro:
                     "1280x720":   1280x720
                     "1920x1080":  1920x1080
             tyrquake_framerate:
-                prompt:      FRAMERATE LIMIT
+                prompt:      FRAME RATE LIMIT
                 choices:
                     "Automatic":  automatic
                     "10fps":      10fps
@@ -6686,7 +6694,8 @@ melonds:
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         melonds_framerate:
-            prompt: LIMIT FRAMERATE
+            group: ADVANCED OPTIONS
+            prompt: LIMIT FRAME RATE
             description: Choose whether or not to limit the framerate.
             choices:
                 "No Limitation":      0
@@ -6799,7 +6808,7 @@ moonlight:
                 "1080p (1920x1080)":     1
                 "4K (3840x2160)":        2
         moonlight_framerate:
-            prompt:      VIDEO STREAM FRAMERATE
+            prompt:      VIDEO STREAM FRAME RATE
             choices:
                 "30FPS":                    0
                 "60FPS":                    1
