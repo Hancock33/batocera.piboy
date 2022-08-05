@@ -3,8 +3,8 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Apr 13, 2022
-DEVILUTIONX_VERSION = 1.4.0
+# Version: Commits on Jul 25, 2022
+DEVILUTIONX_VERSION = 1.4.1
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX/releases/download/$(DEVILUTIONX_VERSION)
 DEVILUTIONX_SOURCE = devilutionx-src.tar.xz
 DEVILUTIONX_DEPENDENCIES = sdl2 sdl2_image fmt libsodium libpng bzip2
