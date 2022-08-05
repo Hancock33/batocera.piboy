@@ -3957,6 +3957,26 @@ msgctxt "game_options"
 msgid "CONTROLLER PAK 4"
 msgstr ""
 
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid "Full speed can break some games."
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid "FRAME RATE"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, daphne, hurrican, awgl, ...
+msgctxt "game_options"
+msgid "Original"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid "Full speed"
+msgstr ""
+
 #. TRANSLATION: libretro/neocd
 msgctxt "game_options"
 msgid "Can change the language of some games."
@@ -4375,26 +4395,6 @@ msgstr ""
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
 msgid "N64 3-point"
-msgstr ""
-
-#. TRANSLATION: libretro/parallel_n64
-msgctxt "game_options"
-msgid "Fullspeed can break some games."
-msgstr ""
-
-#. TRANSLATION: libretro/parallel_n64, libretro
-msgctxt "game_options"
-msgid "FRAMERATE"
-msgstr ""
-
-#. TRANSLATION: libretro/parallel_n64
-msgctxt "game_options"
-msgid "fullspeed"
-msgstr ""
-
-#. TRANSLATION: libretro/parallel_n64, libretro/puae, libretro/puae2021, libretro/vb
-msgctxt "game_options"
-msgid "original"
 msgstr ""
 
 #. TRANSLATION: libretro/pce, libretro/pce_fast
@@ -4910,6 +4910,11 @@ msgstr ""
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "MOUSE SPEED"
+msgstr ""
+
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vb
+msgctxt "game_options"
+msgid "original"
 msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
@@ -5544,7 +5549,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
-msgid "FRAMERATE LIMIT"
+msgid "FRAME RATE LIMIT"
 msgstr ""
 
 #. TRANSLATION: libretro/tyrquake
@@ -6304,6 +6309,11 @@ msgstr ""
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
+msgid "FRAMERATE"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
 msgid "Grab Mouse Input"
 msgstr ""
 
@@ -6588,11 +6598,6 @@ msgstr ""
 #. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "Not all games support Stretch, depending on the video files."
-msgstr ""
-
-#. TRANSLATION: daphne, hurrican, awgl, awgl, yabausesa, ...
-msgctxt "game_options"
-msgid "Original"
 msgstr ""
 
 #. TRANSLATION: daphne, openbor, pcsx2, redream, demul
@@ -7494,7 +7499,7 @@ msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "LIMIT FRAMERATE"
+msgid "LIMIT FRAME RATE"
 msgstr ""
 
 #. TRANSLATION: melonds
@@ -7686,7 +7691,7 @@ msgstr ""
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
-msgid "VIDEO STREAM FRAMERATE"
+msgid "VIDEO STREAM FRAME RATE"
 msgstr ""
 
 #. TRANSLATION: moonlight
