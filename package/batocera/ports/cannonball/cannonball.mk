@@ -22,7 +22,7 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
 CANNONBALL_TARGET = pi-opengl.cmake
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86),y)
 CANNONBALL_TARGET = linux.cmake
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64),y)
+else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 CANNONBALL_TARGET = linux.cmake
 endif
 
