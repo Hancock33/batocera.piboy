@@ -21,7 +21,7 @@ if BR2_PACKAGE_BATOCERA_TARGET_X86 || BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 	default y
 endif
 
-if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY_ZNVER2 ||  BR2_PACKAGE_BATOCERA_TARGET_PS4
+if BR2_PACKAGE_BATOCERA_TARGET_X86_64 || BR2_PACKAGE_BATOCERA_TARGET_X86_64_ZNVER2 ||  BR2_PACKAGE_BATOCERA_TARGET_PS4
 	config BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 	bool "any x86_64"
 	default y
@@ -429,7 +429,7 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
 	default "s812"                                                                            if BR2_PACKAGE_BATOCERA_TARGET_S812
 	default "odroidxu4"                                                                       if BR2_PACKAGE_BATOCERA_TARGET_XU4
 	default "x86"                                                                             if BR2_PACKAGE_BATOCERA_TARGET_X86
-	default "x86_64"                                                                          if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+	default "x86_64"                                                                          if BR2_PACKAGE_BATOCERA_TARGET_X86_64
 	default "ps4"                                                                             if BR2_PACKAGE_BATOCERA_TARGET_PS4
 	default "znver2"                                                                          if BR2_PACKAGE_BATOCERA_TARGET_ZNVER2
 	default "odin"                                                                            if BR2_PACKAGE_BATOCERA_TARGET_ODIN
@@ -479,7 +479,7 @@ config BR2_PACKAGE_BATOCERA_TARGET_S912
 config BR2_PACKAGE_BATOCERA_TARGET_X86
 	bool "x86"
 
-config BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+config BR2_PACKAGE_BATOCERA_TARGET_X86_64
 	bool "x86_64"
 
 config BR2_PACKAGE_BATOCERA_TARGET_ZNVER2
@@ -1000,9 +1000,9 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                         !BR2_PACKAGE_BATOCERA_TARGET_RK3128
 
 	# Gamecube / Wii
-	select BR2_PACKAGE_DOLPHIN_EMU                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || \
+	select BR2_PACKAGE_DOLPHIN_EMU                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY	|| \
                                                         BR2_PACKAGE_BATOCERA_TARGET_S922X
-	select BR2_PACKAGE_LIBRETRO_DOLPHIN             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || \
+	select BR2_PACKAGE_LIBRETRO_DOLPHIN             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY	|| \
                                                         BR2_PACKAGE_BATOCERA_TARGET_S922X
 
     # Triforce
