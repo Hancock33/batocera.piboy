@@ -3963,6 +3963,26 @@ msgctxt "game_options"
 msgid "CONTROLLER PAK 4"
 msgstr "コントローラー パック4"
 
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid "Full speed can break some games."
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid "FRAME RATE"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, daphne, hurrican, awgl, ...
+msgctxt "game_options"
+msgid "Original"
+msgstr "オリジナル"
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid "Full speed"
+msgstr ""
+
 #. TRANSLATION: libretro/neocd
 msgctxt "game_options"
 msgid "Can change the language of some games."
@@ -4382,26 +4402,6 @@ msgstr "自動"
 msgctxt "game_options"
 msgid "N64 3-point"
 msgstr "N64 3ポイント"
-
-#. TRANSLATION: libretro/parallel_n64
-msgctxt "game_options"
-msgid "Fullspeed can break some games."
-msgstr "フルスピードはゲームを壊す可能性があります"
-
-#. TRANSLATION: libretro/parallel_n64, libretro
-msgctxt "game_options"
-msgid "FRAMERATE"
-msgstr "フレームレート"
-
-#. TRANSLATION: libretro/parallel_n64
-msgctxt "game_options"
-msgid "fullspeed"
-msgstr "フルスピード"
-
-#. TRANSLATION: libretro/parallel_n64, libretro/puae, libretro/puae2021, libretro/vb
-msgctxt "game_options"
-msgid "original"
-msgstr "オリジナル"
 
 #. TRANSLATION: libretro/pce, libretro/pce_fast
 msgctxt "game_options"
@@ -4917,6 +4917,11 @@ msgstr "全体のマウス速度に影響します"
 msgctxt "game_options"
 msgid "MOUSE SPEED"
 msgstr "マウス移動速度"
+
+#. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vb
+msgctxt "game_options"
+msgid "original"
+msgstr "オリジナル"
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
@@ -5555,8 +5560,8 @@ msgstr "セーブファイルの同期"
 
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
-msgid "FRAMERATE LIMIT"
-msgstr "フレームレート制限"
+msgid "FRAME RATE LIMIT"
+msgstr ""
 
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
@@ -6315,6 +6320,11 @@ msgstr ""
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
+msgid "FRAMERATE"
+msgstr "フレームレート"
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
 msgid "Grab Mouse Input"
 msgstr ""
 
@@ -6602,11 +6612,6 @@ msgstr "グラフィックデバイス"
 msgctxt "game_options"
 msgid "Not all games support Stretch, depending on the video files."
 msgstr "引き伸ばしは、すべてのゲームに対応しているわけではありません"
-
-#. TRANSLATION: daphne, hurrican, awgl, awgl, yabausesa, ...
-msgctxt "game_options"
-msgid "Original"
-msgstr "オリジナル"
 
 #. TRANSLATION: daphne, openbor, pcsx2, redream, demul
 msgctxt "game_options"
@@ -7512,7 +7517,7 @@ msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "LIMIT FRAMERATE"
+msgid "LIMIT FRAME RATE"
 msgstr ""
 
 #. TRANSLATION: melonds
@@ -7705,8 +7710,8 @@ msgstr "4K (3840x2160)"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
-msgid "VIDEO STREAM FRAMERATE"
-msgstr "映像ストリームフレームレート"
+msgid "VIDEO STREAM FRAME RATE"
+msgstr ""
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -9657,6 +9662,22 @@ msgstr ""
 msgctxt "game_options"
 msgid "USE COMPUTE SHADER"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "Fullspeed can break some games."
+#~ msgstr "フルスピードはゲームを壊す可能性があります"
+
+#~ msgctxt "game_options"
+#~ msgid "fullspeed"
+#~ msgstr "フルスピード"
+
+#~ msgctxt "game_options"
+#~ msgid "FRAMERATE LIMIT"
+#~ msgstr "フレームレート制限"
+
+#~ msgctxt "game_options"
+#~ msgid "VIDEO STREAM FRAMERATE"
+#~ msgstr "映像ストリームフレームレート"
 
 #~ msgctxt "game_options"
 #~ msgid "HQ Mode"
