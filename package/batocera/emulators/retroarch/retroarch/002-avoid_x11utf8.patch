@@ -1,8 +1,8 @@
 diff --git a/gfx/common/x11_common.c b/gfx/common/x11_common.c
-index 81f80e2940..d955915d55 100644
+index 1f85307f09..1939d6650e 100644
 --- a/gfx/common/x11_common.c
 +++ b/gfx/common/x11_common.c
-@@ -518,22 +518,22 @@ static void x11_handle_key_event(unsigned keycode, XEvent *event, XIC ic, bool f
+@@ -516,22 +516,22 @@ static void x11_handle_key_event(unsigned keycode, XEvent *event, XIC ic, bool f
           char keybuf[32];
  
           keybuf[0] = '\0';
