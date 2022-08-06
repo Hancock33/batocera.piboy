@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 7f087486..47c4b696 100644
+index 077c3433..f0aa1cee 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -42,6 +42,7 @@ if(SUPPORTS_WAYLAND)
+@@ -43,6 +43,7 @@ if(SUPPORTS_WAYLAND)
  endif()
  if((LINUX OR FREEBSD) OR ANDROID)
    option(USE_EGL "Support EGL OpenGL context creation" ON)

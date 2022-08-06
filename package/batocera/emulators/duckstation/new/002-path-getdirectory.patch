@@ -1,8 +1,8 @@
 diff --git a/src/common/file_system.cpp b/src/common/file_system.cpp
-index 5f16e376..bb52f32f 100644
+index 79d9c79f..9f81b3a8 100644
 --- a/src/common/file_system.cpp
 +++ b/src/common/file_system.cpp
-@@ -322,6 +322,9 @@ std::string FileSystem::GetDisplayNameFromPath(const std::string_view& path)
+@@ -328,6 +328,9 @@ std::string FileSystem::GetDisplayNameFromPath(const std::string_view& path)
  
  std::string_view Path::GetDirectory(const std::string_view& path)
  {
