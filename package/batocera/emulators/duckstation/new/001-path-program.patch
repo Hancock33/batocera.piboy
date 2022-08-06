@@ -1,8 +1,8 @@
 diff --git a/src/common/file_system.cpp b/src/common/file_system.cpp
-index 5f16e376..76b192c3 100644
+index 79d9c79f..00a0c349 100644
 --- a/src/common/file_system.cpp
 +++ b/src/common/file_system.cpp
-@@ -1538,6 +1538,8 @@ bool FileSystem::DeleteDirectory(const char* path)
+@@ -1546,6 +1546,8 @@ bool FileSystem::DeleteDirectory(const char* path)
  
  std::string FileSystem::GetProgramPath()
  {
@@ -11,7 +11,7 @@ index 5f16e376..76b192c3 100644
    std::wstring buffer;
    buffer.resize(MAX_PATH);
  
-@@ -2026,6 +2028,8 @@ bool FileSystem::DeleteDirectory(const char* path)
+@@ -2034,6 +2036,8 @@ bool FileSystem::DeleteDirectory(const char* path)
  
  std::string FileSystem::GetProgramPath()
  {

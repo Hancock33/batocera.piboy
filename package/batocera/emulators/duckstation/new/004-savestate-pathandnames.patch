@@ -1,5 +1,5 @@
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index 54c02aa8..bb36dd51 100644
+index 7c67fe52..b97acf6e 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
 @@ -81,6 +81,7 @@ struct MemorySaveState
@@ -19,11 +19,11 @@ index 54c02aa8..bb36dd51 100644
  }
  
  const std::string& System::GetRunningTitle()
-@@ -1001,6 +1002,7 @@ bool System::SaveState(const char* filename, bool backup_existing_save)
-   }
+@@ -1010,6 +1011,7 @@ bool System::SaveState(const char* filename, bool backup_existing_save)
    else
    {
-+    System::SaveStateScreenShot(filename);
-     Host::AddFormattedOSDMessage(5.0f, Host::TranslateString("OSDMessage", "State saved to '%s'."), filename);
-     stream->Commit();
-   }
+     const std::string display_name(FileSystem::GetDisplayNameFromPath(filename));
++   System::SaveStateScreenShot(filename);
+     Host::AddIconOSDMessage("save_state", ICON_FA_SAVE,
+                             fmt::format(Host::TranslateString("OSDMessage", "State saved to '{}'.").GetCharArray(),
+                                         Path::GetFileName(display_name)),
