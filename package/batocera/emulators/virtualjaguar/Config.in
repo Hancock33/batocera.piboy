@@ -1,11 +1,7 @@
-config BR2_PACKAGE_VIRTUALJAG
-    bool "virtualjag"
-    depends on BR2_PACKAGE_SDL2
-    depends on BR2_PACKAGE_OPENAL
-    depends on BR2_PACKAGE_ZLIB
-    depends on BR2_PACKAGE_ELFUTILS	
-    depends on BR2_PACKAGE_LIBDWARF
-	
+config BR2_PACKAGE_VIRTUALJAGUAR
+    bool "virtualjaguar"
+    depends on BR2_PACKAGE_SDL
+
       help
         Virtual Jaguar, an Atari Jaguar emulator, with integrated debugger
 
