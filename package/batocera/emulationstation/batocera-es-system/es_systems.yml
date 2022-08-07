@@ -1444,6 +1444,8 @@ jaguar:
   emulators:
     libretro:
       virtualjaguar: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VIRTUALJAGUAR] }
+    virtualjaguar:
+      virtualjaguar: { requireAnyOf: [BR2_PACKAGE_VIRTUALJAGUAR] }
 
 gamecube:
   name:       GameCube

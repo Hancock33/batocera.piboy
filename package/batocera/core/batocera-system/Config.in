@@ -1201,6 +1201,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
 	# Emulators
 	select BR2_PACKAGE_YABAUSESA                if BR2_PACKAGE_BATOCERA_TARGET_RPI4                                         # Sega Saturn
+	select BR2_PACKAGE_VIRTUALJAGUAR            if BR2_PACKAGE_BATOCERA_TARGET_RPI4                                         # Atari Jaguar
 
     #Extra Ports
     #32bit Applications
