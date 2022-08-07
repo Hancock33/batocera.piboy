@@ -3,8 +3,8 @@
 # xpi_gamecon_rpi4
 #
 ################################################################################
-# Version: Commits on May 03, 2022
-XPI_GAMECON_RPI4_VERSION = 690024c98cac98606611a5de74a2b124490408e5
+# Version: Commits on Aug 07, 2022
+XPI_GAMECON_RPI4_VERSION = f30cea1a30e4e9ad8fcf3b7da48f2770b4ea3368
 XPI_GAMECON_RPI4_SITE = $(call github,hancock33,piboycontrols,$(XPI_GAMECON_RPI4_VERSION))
 XPI_GAMECON_RPI4_DEPENDENCIES = linux pulseaudio-utils
 
