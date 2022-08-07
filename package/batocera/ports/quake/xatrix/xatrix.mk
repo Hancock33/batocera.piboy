@@ -3,8 +3,8 @@
 # xatrix
 #
 ################################################################################
-# Version: Commits on Jun 11, 2022
-XATRIX_VERSION = f4643f174f1f57b5aaa3bd95df33154ea4c4c46f
+# Version: Commits on Aug 07, 2022
+XATRIX_VERSION = 8fb33ee9fd938418b2798f273679312904c5e991
 XATRIX_SITE = $(call github,yquake2,xatrix,$(XATRIX_VERSION))
 
 XATRIX_DEPENDENCIES = sdl2 sdl2_mixer yquake2
