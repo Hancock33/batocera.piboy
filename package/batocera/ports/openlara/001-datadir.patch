@@ -1,24 +1,13 @@
 diff --git a/src/platform/sdl2/main.cpp b/src/platform/sdl2/main.cpp
-index 02ac9f8..a23ab28 100644
+index ce56353..24691e1 100644
 --- a/src/platform/sdl2/main.cpp
 +++ b/src/platform/sdl2/main.cpp
-@@ -501,6 +501,8 @@ int main(int argc, char **argv) {
- 
-     cacheDir[0] = saveDir[0] = contentDir[0] = 0;
- 
-+    strcpy(contentDir,  "/userdata/roms/ports/openlara/");
-+
-     const char *home;
-     if (!(home = getenv("HOME")))
-         home = getpwuid(getuid())->pw_dir;
-diff --git a/src/platform/sdl2/main.cpp b/src/platform/sdl2/main.cpp
-index ce56353..e248629 100644
---- a/src/platform/sdl2/main.cpp
-+++ b/src/platform/sdl2/main.cpp
-@@ -551,11 +551,12 @@ int main(int argc, char **argv) {
+@@ -551,11 +551,14 @@ int main(int argc, char **argv) {
  
      SDL_ShowCursor(SDL_DISABLE);
  
++    strcpy(contentDir,  "/userdata/roms/ports/openlara/");
++
 +    strcpy(contentDir,  "/userdata/roms/ports/openlara/");
 +
      const char *home;
