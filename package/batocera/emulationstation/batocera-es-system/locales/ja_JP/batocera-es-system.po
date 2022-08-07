@@ -2297,13 +2297,13 @@ msgctxt "game_options"
 msgid "TWB64 - Pack 2"
 msgstr "TWB64 - Pack 2"
 
-#. TRANSLATION: libretro/genesisplusgx
+#. TRANSLATION: libretro/genesisplusgx, virtualjaguar
 msgctxt "game_options"
 msgid ""
 "Games may run faster/slower than normal if the incorrect region is selected."
 msgstr ""
 
-#. TRANSLATION: libretro/genesisplusgx, redream
+#. TRANSLATION: libretro/genesisplusgx, redream, virtualjaguar
 msgctxt "game_options"
 msgid "REGION"
 msgstr "リージョン(地域)"
@@ -2530,7 +2530,7 @@ msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, duckstation, flycast/wasm4, mame/wasm4, mame
+#. TRANSLATION: libretro/mame, duckstation, flycast/wasm4, mame/wasm4, mame, ...
 msgctxt "game_options"
 msgid "Enabled"
 msgstr ""
@@ -7345,12 +7345,12 @@ msgctxt "game_options"
 msgid "Enable the Dreamcast DSP. Only recommended for fast systems."
 msgstr ""
 
-#. TRANSLATION: flycast/wasm4
+#. TRANSLATION: flycast/wasm4, virtualjaguar
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr ""
 
-#. TRANSLATION: flycast/wasm4, flycast
+#. TRANSLATION: flycast/wasm4, flycast, virtualjaguar
 msgctxt "game_options"
 msgid "Disbaled (Default)"
 msgstr ""
@@ -8620,7 +8620,7 @@ msgctxt "game_options"
 msgid "Choose broadcast standard (for older TV's)."
 msgstr "放送(映像表示)方式を選択します（古いテレビ用）"
 
-#. TRANSLATION: redream
+#. TRANSLATION: redream, virtualjaguar
 msgctxt "game_options"
 msgid "NTSC (Default)"
 msgstr "NTSC (通常)"
@@ -9606,6 +9606,36 @@ msgstr ""
 #. TRANSLATION: gzdoom
 msgctxt "game_options"
 msgid "GLES2"
+msgstr ""
+
+#. TRANSLATION: virtualjaguar
+msgctxt "game_options"
+msgid "Boot cart using Jaguar BIOS ROM"
+msgstr ""
+
+#. TRANSLATION: virtualjaguar
+msgctxt "game_options"
+msgid "USE BIOS"
+msgstr ""
+
+#. TRANSLATION: virtualjaguar
+msgctxt "game_options"
+msgid "Enable the Digital Sound Processor."
+msgstr ""
+
+#. TRANSLATION: virtualjaguar
+msgctxt "game_options"
+msgid "Disbaled"
+msgstr ""
+
+#. TRANSLATION: virtualjaguar
+msgctxt "game_options"
+msgid "Use the DSP pipelined core."
+msgstr ""
+
+#. TRANSLATION: virtualjaguar
+msgctxt "game_options"
+msgid "DSP PIPELINED CORE"
 msgstr ""
 
 #. TRANSLATION: yabausesa

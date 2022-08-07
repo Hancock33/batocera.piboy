@@ -439,6 +439,10 @@ def getGenerator(emulator):
         from generators.vice.viceGenerator import ViceGenerator
         return ViceGenerator()
 
+    if emulator == 'virtualjaguar':
+        from generators.virtualjaguar.virtualjaguarGenerator import VirtualjaguarGenerator
+        return VirtualjaguarGenerator()
+
     if emulator == 'voidsw':
         from generators.voidsw.voidswGenerator import VoidswGenerator
         return VoidswGenerator()

@@ -1,0 +1,15 @@
+diff --git a/src/main.cpp b/src/main.cpp
+index f33bc8b..e88d4dd 100644
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -81,7 +81,9 @@ SDL_Surface* initializeSDL(int moreflags)
+ 
+ 	pause(1000);
+ 
+-	screen = SDL_SetVideoMode(SCREEN_X, SCREEN_Y, COLOUR_DEPTH, flags);
++	//screen = SDL_SetVideoMode(SCREEN_X, SCREEN_Y, COLOUR_DEPTH, flags);
++	screen = SDL_SetVideoMode(0,0, COLOUR_DEPTH, SDL_HWSURFACE | SDL_HWPALETTE | SDL_ASYNCBLIT);
++	
+ 
+ 	if (screen == NULL) {
+ 		output_debug_message("Couldn't set %ix%ix%i", SCREEN_X, SCREEN_Y, COLOUR_DEPTH);

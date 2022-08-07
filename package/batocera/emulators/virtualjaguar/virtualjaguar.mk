@@ -18,7 +18,7 @@ define VIRTUALJAGUAR_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/virtualjaguar -D $(TARGET_DIR)/usr/bin/virtualjaguar
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	#cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/virtualjaguar/virtualjaguar.keys $(TARGET_DIR)/usr/share/evmapy/virtualjaguar.keys
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/virtualjaguar/jaguar.virtualjaguar.keys $(TARGET_DIR)/usr/share/evmapy/jaguar.virtualjaguar.keys
 endef
 
 $(eval $(generic-package))
