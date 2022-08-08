@@ -9239,11 +9239,11 @@ virtualjaguar:
                 "9":   9
                 "10":  10
         virtualjaguar_bios:
-            prompt: USE BIOS
-            description: Boot cart using Jaguar BIOS ROM
+            prompt: SHOW BIOS BOOTLOGO
+            description: Off is safer, On for specific games.
             choices:
-                "On": 1
-                "Off (Default)": 0
+                "Show": 1
+                "Skip (Default)": 0
         virtualjaguar_dsp:
           prompt:      DIGITAL SOUND PROCESSOR
           description: Enable the Digital Sound Processor.
