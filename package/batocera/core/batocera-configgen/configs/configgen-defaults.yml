@@ -2,17 +2,18 @@ default:
   emulator:
   core:
   options:
-    hud_support:    true
-    videomode:      default
-    ratio:          auto
-    video_threaded: false
+    hud_support:        true
+    videomode:          default
+    ratio:              auto
+    video_threaded:     false
     framecount:     false
     showFPS:        false
-    smooth:         true
-    shaderset:      sharp-bilinear-simple
-    rewind:         false
-    bezel:          consoles
-    forceNoBezel:   false
+    smooth:             true
+    shaderset:          sharp-bilinear-simple
+    rewind:             false
+    bezel:              consoles
+    forceNoBezel:       false
+    gamemode_enable:    false
 
 # 0-C
 twentyfourtyeight:
