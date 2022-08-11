@@ -2872,10 +2872,10 @@ amigademo:
 
 arduous:
   name:       Arduboy
-  manufacturer: Arduboy
+  manufacturer: Kevin Bates
   release: 2015
   hardware: portable
-  extensions: [hex]
+  extensions: [hex, zip, 7z]
   emulators:
     libretro:
       arduous: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ARDUOUS] }
