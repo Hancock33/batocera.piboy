@@ -66,13 +66,7 @@ apple2gs:
   core:     gsplus
 arcadia:
   emulator: libretro
-  core:     mame
-arduous:
-  emulator: libretro
-  core:     arduous
-gsplus:
-  emulator: gsplus
-  core:     gsplus
+  core:     mam
 archimedes:
   emulator: libretro
   core:     mame
@@ -299,6 +293,9 @@ gong:
 gp32:
   emulator: libretro
   core:     mame
+gsplus:
+  emulator: gsplus
+  core:     gsplus
 gx4000:
   emulator: libretro
   core:     cap32
