@@ -4451,7 +4451,7 @@ msgctxt "game_options"
 msgid "PCE Mouse"
 msgstr "PCE Mouse"
 
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar
+#. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar, virtualjaguar
 msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "Off es más seguro, On para juegos específicos."
@@ -9706,12 +9706,7 @@ msgstr ""
 
 #. TRANSLATION: virtualjaguar
 msgctxt "game_options"
-msgid "Boot cart using Jaguar BIOS ROM"
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "USE BIOS"
+msgid "Skip (Default)"
 msgstr ""
 
 #. TRANSLATION: virtualjaguar
