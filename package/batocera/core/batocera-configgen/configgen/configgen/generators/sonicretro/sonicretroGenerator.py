@@ -8,6 +8,8 @@ import configparser
 import shutil
 
 class SonicRetroGenerator(Generator):
+    if not os.path.exists('/userdata/system/.local/share/RSDKv3'):
+        os.makedirs('/userdata/system/.local/share/RSDKv3')
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
 
@@ -121,7 +123,7 @@ class SonicRetroGenerator(Generator):
         else:
             sonicConfig.set("Window", "ScalingMode", "2")
         sonicConfig.set("Window", "WindowScale", "2")
-        sonicConfig.set("Window", "ScreenWidth", "424")
+        sonicConfig.set("Window", "ScreenWidth", "320")
         sonicConfig.set("Window", "RefreshRate", "60")
         sonicConfig.set("Window", "DimLimit", "-1")
 
