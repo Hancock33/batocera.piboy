@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index b55cc041..c42eaa94 100644
+index b55cc041..81b0501c 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -10,6 +10,9 @@ option(BCM "BCM host" OFF)
@@ -30,7 +30,7 @@ index b55cc041..c42eaa94 100644
  if(DISABLE_KODI)
    MESSAGE("kodi disabled")
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index e557e536..6a36f70f 100644
+index dc76aa5d..10e44f8d 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -70,8 +70,15 @@
@@ -62,7 +62,7 @@ index e557e536..6a36f70f 100644
  
  		addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings(); }, "iconSystem");
  	}
-@@ -800,7 +811,11 @@ void GuiMenu::openDeveloperSettings()
+@@ -814,7 +825,11 @@ void GuiMenu::openDeveloperSettings()
  
  void GuiMenu::openUpdatesSettings()
  {
@@ -75,7 +75,7 @@ index e557e536..6a36f70f 100644
  
  	updateGui->addGroup(_("DOWNLOADS"));
  
-@@ -841,6 +856,7 @@ void GuiMenu::openUpdatesSettings()
+@@ -855,6 +870,7 @@ void GuiMenu::openUpdatesSettings()
  
  	if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::UPGRADE))
  	{
@@ -83,7 +83,7 @@ index e557e536..6a36f70f 100644
  		updateGui->addGroup(_("SOFTWARE UPDATES"));
  
  		// Enable updates
-@@ -850,11 +866,11 @@ void GuiMenu::openUpdatesSettings()
+@@ -864,11 +880,11 @@ void GuiMenu::openUpdatesSettings()
  
  		std::string updatesType = SystemConf::getInstance()->get("updates.type");
  
@@ -100,7 +100,7 @@ index e557e536..6a36f70f 100644
  			if (updatesType.empty() || updatesType != "beta")
  				updatesType = "stable";
  
-@@ -883,6 +899,7 @@ void GuiMenu::openUpdatesSettings()
+@@ -897,6 +913,7 @@ void GuiMenu::openUpdatesSettings()
  				mWindow->pushGui(new GuiUpdate(mWindow));
  			}
  		});
@@ -109,10 +109,10 @@ index e557e536..6a36f70f 100644
  
  	mWindow->pushGui(updateGui);
 diff --git a/es-core/src/Settings.cpp b/es-core/src/Settings.cpp
-index 77572ef8..f14e869b 100644
+index e6c41ca4..3caf0b37 100644
 --- a/es-core/src/Settings.cpp
 +++ b/es-core/src/Settings.cpp
-@@ -25,7 +25,11 @@ IMPLEMENT_STATIC_BOOL_SETTING(DrawFramerate, false)
+@@ -26,7 +26,11 @@ IMPLEMENT_STATIC_BOOL_SETTING(DrawFramerate, false)
  IMPLEMENT_STATIC_BOOL_SETTING(VolumePopup, true)
  IMPLEMENT_STATIC_BOOL_SETTING(BackgroundMusic, true)
  IMPLEMENT_STATIC_BOOL_SETTING(VSync, true)
@@ -124,7 +124,7 @@ index 77572ef8..f14e869b 100644
  IMPLEMENT_STATIC_BOOL_SETTING(IgnoreLeadingArticles, false)
  IMPLEMENT_STATIC_INT_SETTING(ScreenSaverTime, 5 * 60 * 1000)
  
-@@ -192,8 +196,15 @@ void Settings::setDefaults()
+@@ -198,8 +202,15 @@ void Settings::setDefaults()
  	mIntMap["MaxVRAM"] = 100;
  #endif
  
@@ -140,7 +140,7 @@ index 77572ef8..f14e869b 100644
  
  	mStringMap["ThemeSet"] = "";
  	mStringMap["ScreenSaverBehavior"] = "dim";
-@@ -287,7 +298,6 @@ void Settings::setDefaults()
+@@ -293,7 +304,6 @@ void Settings::setDefaults()
  
  	mBoolMap["ThreadedLoading"] = true;
  	mBoolMap["AsyncImages"] = true;
@@ -149,7 +149,7 @@ index 77572ef8..f14e869b 100644
  	mBoolMap["OptimizeVRAM"] = true;
  	mBoolMap["OptimizeVideo"] = true;
 diff --git a/es-core/src/platform.cpp b/es-core/src/platform.cpp
-index 1b2c6495..df1213f0 100644
+index 7daf4107..df304f46 100644
 --- a/es-core/src/platform.cpp
 +++ b/es-core/src/platform.cpp
 @@ -28,6 +28,8 @@ int runShutdownCommand()

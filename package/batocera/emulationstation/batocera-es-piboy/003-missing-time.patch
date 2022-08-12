@@ -1,0 +1,12 @@
+diff --git a/es-core/src/utils/TimeUtil.h b/es-core/src/utils/TimeUtil.h
+index fea5eb85..aaefb3c4 100644
+--- a/es-core/src/utils/TimeUtil.h
++++ b/es-core/src/utils/TimeUtil.h
+@@ -3,6 +3,7 @@
+ #define ES_CORE_UTILS_TIME_UTIL_H
+ 
+ #include <string>
++#include <time.h>
+ 
+ namespace Utils
+ {
