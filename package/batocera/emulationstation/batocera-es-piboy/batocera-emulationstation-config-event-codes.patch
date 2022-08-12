@@ -1,8 +1,8 @@
 diff --git a/es-core/src/InputConfig.cpp b/es-core/src/InputConfig.cpp
-index f8078d3..048af7d 100644
+index 8f592ed9..7f78633a 100644
 --- a/es-core/src/InputConfig.cpp
 +++ b/es-core/src/InputConfig.cpp
-@@ -223,5 +223,9 @@ void InputConfig::writeToXML(pugi::xml_node& parent)
+@@ -225,6 +225,10 @@ void InputConfig::writeToXML(pugi::xml_node& parent)
  		input.append_attribute("type") = inputTypeToString(iterator->second.type).c_str();
  		input.append_attribute("id").set_value(iterator->second.id);
  		input.append_attribute("value").set_value(iterator->second.value);
@@ -12,11 +12,12 @@ index f8078d3..048af7d 100644
 +
  	}
  }
+ 
 diff --git a/es-core/src/InputConfig.h b/es-core/src/InputConfig.h
-index de750d4..dc76c8e 100644
+index f50542df..4e176654 100644
 --- a/es-core/src/InputConfig.h
 +++ b/es-core/src/InputConfig.h
-@@ -33,6 +33,7 @@ public:
+@@ -41,6 +41,7 @@ public:
  	InputType type;
  	int id;
  	int value;
@@ -24,7 +25,7 @@ index de750d4..dc76c8e 100644
  	bool configured;
  
  	Input()
-@@ -41,6 +42,7 @@ public:
+@@ -49,6 +50,7 @@ public:
  		configured = false;
  		id = -1;
  		value = -999;
@@ -32,7 +33,7 @@ index de750d4..dc76c8e 100644
  		type = TYPE_COUNT;
  	}
  
-@@ -93,6 +95,25 @@ public:
+@@ -101,6 +103,25 @@ public:
  
  		return stream.str();
  	}
@@ -59,10 +60,10 @@ index de750d4..dc76c8e 100644
  
  class InputConfig
 diff --git a/es-core/src/InputManager.cpp b/es-core/src/InputManager.cpp
-index 6e06800..89bf514 100644
+index 56362bfe..41d79e9d 100644
 --- a/es-core/src/InputManager.cpp
 +++ b/es-core/src/InputManager.cpp
-@@ -721,6 +721,7 @@ std::string InputManager::configureEmulators() {
+@@ -777,6 +777,7 @@ std::string InputManager::configureEmulators() {
        command << " -p" << player+1 << "nbbuttons "  << playerInputConfig->getDeviceNbButtons();
        command << " -p" << player+1 << "nbhats "     << playerInputConfig->getDeviceNbHats();
        command << " -p" << player+1 << "nbaxes "     << playerInputConfig->getDeviceNbAxes();
@@ -71,10 +72,10 @@ index 6e06800..89bf514 100644
      }
    }
 diff --git a/es-core/src/guis/GuiInputConfig.cpp b/es-core/src/guis/GuiInputConfig.cpp
-index 3249162..dd01a72 100644
+index aa1aef60..53a05f38 100644
 --- a/es-core/src/guis/GuiInputConfig.cpp
 +++ b/es-core/src/guis/GuiInputConfig.cpp
-@@ -352,6 +352,8 @@ bool GuiInputConfig::assign(Input input, int inputId)
+@@ -381,6 +381,8 @@ bool GuiInputConfig::assign(Input input, int inputId)
  	setAssignedTo(mMappings.at(inputId), input);
  	
  	input.configured = true;

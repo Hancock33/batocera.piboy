@@ -1,8 +1,8 @@
 diff --git a/es-core/src/InputManager.cpp b/es-core/src/InputManager.cpp
-index 98a48f1..8c4b930 100644
+index 56362bfe..ca9f96cd 100644
 --- a/es-core/src/InputManager.cpp
 +++ b/es-core/src/InputManager.cpp
-@@ -721,7 +721,7 @@ void InputManager::updateBatteryLevel(int id, std::string device, int level)
+@@ -795,7 +795,7 @@ void InputManager::updateBatteryLevel(int id, std::string device, int level)
  		InputConfig* config = getInputConfigByDevice(joy.first);
  		if (config != NULL && config->isConfigured())
  		{
