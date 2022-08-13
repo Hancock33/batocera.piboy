@@ -18,6 +18,8 @@ BOX86_CONF_OPTS += -DRPI4=1
 
 define BOX86_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/buildroot-build/box86 $(TARGET_DIR)/usr/bin
+	mkdir -p $(TARGET_DIR)/usr/share/box86/lib
+	cp -pvr $(@D)/x86lib/* $(TARGET_DIR)/usr/share/box86/lib
 endef
 
 $(eval $(cmake-package))
