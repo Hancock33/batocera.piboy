@@ -1135,6 +1135,11 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('dosbox_pure_savestate', system.config['pure_savestate'])
         else:
             coreSettings.save('dosbox_pure_savestate', '"on"')
+        # Select for on-screen keyboard
+        if system.isOptSet('pure_select_onscreen_keyboard'):
+            coreSettings.save('dosbox_pure_selectbtn_screen_keyboard', system.config['pure_select_onscreen_keyboard'])
+        else:
+            coreSettings.save('dosbox_pure_selectbtn_screen_keyboard', '"true"')
         # Keyboard Layout
         if system.isOptSet('pure_keyboard_layout'):
             coreSettings.save('dosbox_pure_keyboard_layout', system.config['pure_keyboard_layout'])

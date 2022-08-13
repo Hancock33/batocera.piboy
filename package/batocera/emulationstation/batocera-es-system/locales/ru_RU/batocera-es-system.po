@@ -1340,6 +1340,26 @@ msgstr "PCjr"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
+msgid "Use the Select instead of L3 to use the on-screen keyboard."
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "SELECT BUTTON FOR ON-SCREEN KEYBOARD"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure, yabausesa, yabausesa
+msgctxt "game_options"
+msgid "True"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure, yabausesa, yabausesa
+msgctxt "game_options"
+msgid "False"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
 msgid "Does not affect the on-screen keyboard."
 msgstr "Не влияет на экранную клавиатуру."
 
@@ -9749,16 +9769,6 @@ msgstr ""
 #. TRANSLATION: yabausesa
 msgctxt "game_options"
 msgid "ROTATE SCREEN"
-msgstr ""
-
-#. TRANSLATION: yabausesa, yabausesa
-msgctxt "game_options"
-msgid "False"
-msgstr ""
-
-#. TRANSLATION: yabausesa, yabausesa
-msgctxt "game_options"
-msgid "True"
 msgstr ""
 
 #. TRANSLATION: yabausesa

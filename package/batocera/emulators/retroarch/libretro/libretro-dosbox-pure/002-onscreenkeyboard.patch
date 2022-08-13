@@ -1,31 +1,66 @@
+diff --git a/core_options.h b/core_options.h
+index 7e6b4db..d67eeee 100644
+--- a/core_options.h
++++ b/core_options.h
+@@ -151,11 +151,20 @@ static retro_core_option_v2_definition option_defs[] =
+ 	{
+ 		"dosbox_pure_on_screen_keyboard",
+ 		"Enable On Screen Keyboard", NULL,
+-		"Enable the On Screen Keyboard feature which can be activated with the L3 button on the controller.", NULL,
++		"Enable the On Screen Keyboard feature by default can be activated with the L3 button on the controller.", NULL,
+ 		"Input",
+ 		{ { "true", "On" }, { "false", "Off" } },
+ 		"true"
+ 	},
++	{
++		"dosbox_pure_selectbtn_screen_keyboard",
++		"Use Select Button for On Screen Keyboard", NULL,
++		"Use Select Button on the controller for the on screen keyboard instead of the L3 button.", NULL,
++		"Input",
++		{ { "true", "On" }, { "false", "Off" } },
++		"true"
++	},
++
+ 	{
+ 		"dosbox_pure_mouse_wheel",
+ 		"Bind Mouse Wheel To Key", NULL,
 diff --git a/dosbox_pure_libretro.cpp b/dosbox_pure_libretro.cpp
-index 1040872..486f085 100644
+index 6a03631..b8c8cd4 100644
 --- a/dosbox_pure_libretro.cpp
 +++ b/dosbox_pure_libretro.cpp
-@@ -2769,7 +2769,7 @@ static void refresh_input_binds(unsigned refresh_min_port = 0)
+@@ -127,6 +127,7 @@ static DBP_Port_Device dbp_port_devices[DBP_MAX_PORTS];
+ static bool dbp_input_binds_modified;
+ static bool dbp_bind_unused;
+ static bool dbp_on_screen_keyboard;
++static bool dbp_selectbtn_screen_keyboard;
+ static bool dbp_mouse_input;
+ static bool dbp_optionsupdatecallback;
+ static bool dbp_last_hideadvanced;
+@@ -3127,7 +3128,11 @@ static void refresh_input_binds(bool set_controller_info = false, unsigned refre
  
  		if (dbp_on_screen_keyboard && port == 0)
  		{
 -			dbp_input_binds.push_back({ port, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_L3, "On Screen Keyboard", DBPET_ONSCREENKEYBOARD });
-+			dbp_input_binds.push_back({ port, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_SELECT, "On Screen Keyboard", DBPET_ONSCREENKEYBOARD });
++			if(dbp_selectbtn_screen_keyboard == 0) {
++			    dbp_input_binds.push_back({ port, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_L3, "On Screen Keyboard", DBPET_ONSCREENKEYBOARD });
++			} else {
++			    dbp_input_binds.push_back({ port, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_SELECT, "On Screen Keyboard", DBPET_ONSCREENKEYBOARD });
++			}	
  		}
  
  		if (mapping)
-@@ -3953,7 +3953,7 @@ void retro_run(void)
- 		{ 0, RETRO_DEVICE_MOUSE, 0, RETRO_DEVICE_ID_MOUSE_MIDDLE, NULL, DBPET_MOUSEDOWN, 2 },
- 		{ 0, RETRO_DEVICE_MOUSE, 0, RETRO_DEVICE_ID_MOUSE_WHEELUP,   NULL, DBPET_KEYDOWN, KBD_up   },
- 		{ 0, RETRO_DEVICE_MOUSE, 0, RETRO_DEVICE_ID_MOUSE_WHEELDOWN, NULL, DBPET_KEYDOWN, KBD_down },
--		{ 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_L3, NULL, DBPET_ONSCREENKEYBOARD },
-+		{ 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_SELECT, NULL, DBPET_ONSCREENKEYBOARD },
- 		{ 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_UP,    NULL, DBPET_JOY1Y, -1 },
- 		{ 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_DOWN,  NULL, DBPET_JOY1Y,  1 },
- 		{ 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_LEFT,  NULL, DBPET_JOY1X, -1 },
-@@ -3968,7 +3968,7 @@ void retro_run(void)
- 		{ 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_A, NULL, DBPET_JOY2DOWN, 1 },
- 		{ 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_L, NULL, DBPET_KEYDOWN, KBD_pageup },
- 		{ 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_R, NULL, DBPET_KEYDOWN, KBD_pagedown },
--		{ 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_SELECT, NULL, DBPET_KEYDOWN, KBD_esc },
-+		{ 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_L3, NULL, DBPET_KEYDOWN, KBD_esc },
- 		{ 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_START,  NULL, DBPET_KEYDOWN, KBD_enter },
- 		{ 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_L2, NULL, DBPET_MOUSESETSPEED,  1 },
- 		{ 0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_R2, NULL, DBPET_MOUSESETSPEED, -1 },
+@@ -3671,11 +3676,13 @@ static bool check_variables(bool is_startup = false)
+ 
+ 	bool bind_unused = (retro_get_variable("dosbox_pure_bind_unused", "true")[0] != 'f');
+ 	bool on_screen_keyboard = (retro_get_variable("dosbox_pure_on_screen_keyboard", "true")[0] != 'f');
++	bool selectbtn_screen_keyboard = (retro_get_variable("dosbox_pure_selectbtn_screen_keyboard", "true")[0] != 'f');
+ 	bool mouse_input = (retro_get_variable("dosbox_pure_mouse_input", "true")[0] != 'f');
+-	if (bind_unused != dbp_bind_unused || on_screen_keyboard != dbp_on_screen_keyboard || mouse_input != dbp_mouse_input || bind_mousewheel != dbp_bind_mousewheel)
++	if (bind_unused != dbp_bind_unused || on_screen_keyboard != dbp_on_screen_keyboard || selectbtn_screen_keyboard != dbp_selectbtn_screen_keyboard || mouse_input != dbp_mouse_input || bind_mousewheel != dbp_bind_mousewheel)
+ 	{
+ 		dbp_bind_unused = bind_unused;
+ 		dbp_on_screen_keyboard = on_screen_keyboard;
++		dbp_selectbtn_screen_keyboard = selectbtn_screen_keyboard;
+ 		dbp_mouse_input = mouse_input;
+ 		dbp_bind_mousewheel = bind_mousewheel;
+ 		if (dbp_state > DBPSTATE_SHUTDOWN) refresh_input_binds();
