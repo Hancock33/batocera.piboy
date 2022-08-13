@@ -7,15 +7,15 @@ index 7e6b4db..d67eeee 100644
  		"dosbox_pure_on_screen_keyboard",
  		"Enable On Screen Keyboard", NULL,
 -		"Enable the On Screen Keyboard feature which can be activated with the L3 button on the controller.", NULL,
-+		"Enable the On Screen Keyboard feature by default can be activated with the L3 button on the controller.", NULL,
++		"Enable the On Screen Keyboard feature, by default this can be activated with the L3 button on the controller.", NULL,
  		"Input",
  		{ { "true", "On" }, { "false", "Off" } },
  		"true"
  	},
 +	{
 +		"dosbox_pure_selectbtn_screen_keyboard",
-+		"Use Select Button for On Screen Keyboard", NULL,
-+		"Use Select Button on the controller for the on screen keyboard instead of the L3 button.", NULL,
++		"Use the Select Button for On Screen Keyboard", NULL,
++		"Use the Select Button on the controller to activate the screen keyboard instead of the L3 button.", NULL,
 +		"Input",
 +		{ { "true", "On" }, { "false", "Off" } },
 +		"true"

@@ -1324,22 +1324,22 @@ msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "Use the Select instead of L3 to use the on-screen keyboard."
+msgid "Use the Select or Left Thumb Button to activate the on-screen keyboard."
 msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SELECT BUTTON FOR ON-SCREEN KEYBOARD"
+msgid "ON-SCREEN KEYBOARD BUTTON"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, yabausesa, yabausesa
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "True"
+msgid "Select Button (Default)"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, yabausesa, yabausesa
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "False"
+msgid "Left Thumb Button"
 msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
@@ -9647,6 +9647,16 @@ msgstr ""
 #. TRANSLATION: yabausesa
 msgctxt "game_options"
 msgid "ROTATE SCREEN"
+msgstr ""
+
+#. TRANSLATION: yabausesa, yabausesa
+msgctxt "game_options"
+msgid "False"
+msgstr ""
+
+#. TRANSLATION: yabausesa, yabausesa
+msgctxt "game_options"
+msgid "True"
 msgstr ""
 
 #. TRANSLATION: yabausesa
