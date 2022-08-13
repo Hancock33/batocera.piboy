@@ -821,6 +821,13 @@ libretro:
                     "Tandy":                tandy
                     "Hercules":             hercules
                     "PCjr":                 pcjr
+            pure_select_onscreen_keyboard:
+                group: CONTROLLER SETTINGS
+                prompt: SELECT BUTTON FOR ON-SCREEN KEYBOARD     
+                description: Use the Select instead of L3 to view the on-screen keyboard.
+                choices:
+                    "True (Default)":        "true"
+                    "False":                 "false"
             pure_keyboard_layout:
                 group: CONTROLLER SETTINGS
                 prompt:      PHYSICAL KEYBOARD LAYOUT
