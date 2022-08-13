@@ -1,11 +1,12 @@
 #!/bin/bash
 if [[ $1 == "" ]]; then
-    echo 'This script requires two arguments, the frist been the output directory and the'
-    echo 'second been the target. For example...'
-	echo
+    echo 'This script requires two arguments,'
+    echo 'the first been the output directory and the second been the target.'
+    echo 'For example...'
+    echo
     echo './build.sh $HOME/batocera.rpi4 rpi4'
-	echo	
-	echo 'You can list the targets with ./build list-targets argument'	
+    echo	
+    echo 'You can list the targets with ./build.sh list-targets'	
     exit 0
 
 elif [[ $1 == "list-targets" ]]; then
