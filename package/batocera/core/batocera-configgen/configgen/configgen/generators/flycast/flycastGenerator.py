@@ -70,10 +70,12 @@ class FlycastGenerator(Generator):
         Config.set("window", "width", str(gameResolution["width"]))
         Config.set("window", "height", str(gameResolution["height"]))
         # set broadcast mode
+        Config.set("config", "Dreamcast.Cable", "2")
+
         if system.isOptSet("flycast_broadcast"):
             Config.set("config", "Dreamcast.Broadcast", str(system.config["flycast_broadcast"]))
         else:
-            Config.set("config", "Dreamcast.Broadcast", "4")
+            Config.set("config", "Dreamcast.Broadcast", "1")
         # frameskip
         if system.isOptSet("flycast_frameskip"):
             Config.set("config", "ta.skip", str(system.config["flycast_frameskip"]))
