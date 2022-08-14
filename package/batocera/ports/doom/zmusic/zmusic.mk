@@ -3,8 +3,8 @@
 # zmusic
 #
 ################################################################################
-# Version: Commits Jul 31, 2022
-ZMUSIC_VERSION = 8ebcd430b2865163ab5dadf34a6e0b27f0a68585
+# Version: Commits on Aug 14, 2022
+ZMUSIC_VERSION = 47255178329bab4efa4408a4e4d373fb9264e8c5
 ZMUSIC_SITE = $(call github,coelckers,ZMusic,$(ZMUSIC_VERSION))
 ZMUSIC_LICENSE = GPLv3
 ZMUSIC_SUPPORTS_IN_SOURCE_BUILD = NO
