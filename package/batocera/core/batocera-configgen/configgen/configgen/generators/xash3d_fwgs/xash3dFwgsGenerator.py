@@ -4,12 +4,13 @@ import glob
 import os
 import re
 import shutil
+from os import path
 
 import Command
 from generators.Generator import Generator
 import controllersConfig
 
-_ROMS_DIR = '//userdata/roms/ports/xash3d_fwgs'
+_ROMS_DIR = '/userdata/roms/ports/xash3d_fwgs'
 
 _HLSDK_LIBS_DIR = '/usr/lib/xash3d/hlsdk'
 
@@ -151,6 +152,6 @@ class Xash3dFwgsGenerator(Generator):
         if not os.path.isdir(rom_dir + '/save'):
             save_dir = _save_dir(game)
             if not os.path.exists(save_dir):
-                os.makedir(save_dir)
+                os.mkdir(save_dir)
             if not os.path.exists(rom_dir + '/save'):
                 shutil.copytree(save_dir, rom_dir + '/save')
