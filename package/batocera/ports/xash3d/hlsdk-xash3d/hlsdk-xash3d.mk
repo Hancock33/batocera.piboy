@@ -12,8 +12,8 @@
 # List of games that require custom libraries (a few are covered by the `mobile_hacks` branch):
 #
 #   https://github.com/FWGS/xash3d-fwgs/blob/master/Documentation/supported-mod-list.md#list-of-games-and-mods-with-custom-gamedll
-# Version: Commits on Jun 23, 2022
-HLSDK_XASH3D_VERSION = e948de3d4161f3094d9985506770adc042e72d7d
+# Version: Commits on Aug 08, 2022
+HLSDK_XASH3D_VERSION = a4f0c11804608151ed087f9ebfb0f1fb0cd0939e
 HLSDK_XASH3D_SITE = $(call github,FWGS,hlsdk-portable,$(HLSDK_XASH3D_VERSION))
 HLSDK_XASH3D_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf libsodium
 HLSDK_XASH3D_LICENSE = Half Life 1 SDK LICENSE
