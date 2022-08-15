@@ -1278,7 +1278,6 @@ config BR2_PACKAGE_BATOCERA_GUNS
 config BR2_PACKAGE_BATOCERA_KODI19
 	bool "batocera.linux Kodi19 packages selection"
 	default n
-	select BR2_PACKAGE_LIBICONV_KODI        # libiconv
 	select BR2_PACKAGE_KODI                 # kodi
 	select BR2_PACKAGE_PYTHON3              # kodi19 is based on python3
 	select BR2_PACKAGE_PYTHON_PYOPENSSL     # used by some kodi plugins
