@@ -2571,22 +2571,22 @@ msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "Ativado (Padrão)"
 
-#. TRANSLATION: libretro/mame, mame/wasm4
+#. TRANSLATION: libretro/mame, mame/wasm4, mame/wasm4
 msgctxt "game_options"
 msgid "Play a coin drop sound effect when an insert coin button is pressed"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/wasm4
+#. TRANSLATION: libretro/mame, mame/wasm4, mame/wasm4
 msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, duckstation, flycast/wasm4, mame/wasm4, mame, ...
+#. TRANSLATION: libretro/mame, duckstation, flycast/wasm4, mame/wasm4, mame/wasm4, ...
 msgctxt "game_options"
 msgid "Enabled"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, duckstation, mame/wasm4, mame
+#. TRANSLATION: libretro/mame, duckstation, mame/wasm4, mame/wasm4, mame
 msgctxt "game_options"
 msgid "Disabled (Default)"
 msgstr ""
@@ -6929,7 +6929,7 @@ msgctxt "game_options"
 msgid "PRE-CACHE SHADERS"
 msgstr "PRÉ-CACHE DE SOMBREAMENTO"
 
-#. TRANSLATION: dolphin
+#. TRANSLATION: dolphin, pcsx2
 msgctxt "game_options"
 msgid "Off (default)"
 msgstr "Desligado (padrão)"
@@ -7992,7 +7992,7 @@ msgctxt "game_options"
 msgid "Game default"
 msgstr ""
 
-#. TRANSLATION: mupen64plus, pcsx2, ppsspp
+#. TRANSLATION: mupen64plus, ppsspp
 msgctxt "game_options"
 msgid "Disable"
 msgstr "Desativar"
@@ -8257,18 +8257,13 @@ msgstr "VU0 Pontapé inicial para evitar problemas de sincronização com VU1"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
-"Enable or disable hardware hacks. Use pcsx2-config via F1 to granularly "
-"adjust if enabled."
+"Automatically use hardware hacks as appropriate. Refer to pcsx2-config for "
+"individual hacks."
 msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "MANUAL HW HACKS"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Enable (default)"
+msgid "AUTOMATIC GRAPHICS HARDWARE HACKS"
 msgstr ""
 
 #. TRANSLATION: ppsspp
