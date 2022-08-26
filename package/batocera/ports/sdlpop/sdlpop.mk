@@ -3,8 +3,8 @@
 # sdlpop
 #
 ################################################################################
-# Version: Commits on Aug 07, 2022
-SDLPOP_VERSION = 4c560a400ab9f23a3151996ef818320616ec12cc
+# Version: Commits on Aug 20, 2022
+SDLPOP_VERSION = 89d441529a9fc0b5ec4012ce3fac04f43e0b6957
 SDLPOP_SITE = $(call github,NagyD,SDLPoP,$(SDLPOP_VERSION))
 SDLPOP_SUBDIR = src
 SDLPOP_LICENSE = GPLv3

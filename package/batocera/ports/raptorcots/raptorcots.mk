@@ -3,8 +3,8 @@
 # raptorcots
 #
 ################################################################################
-# Version: Commits on Apr 29, 2022
-RAPTORCOTS_VERSION = 4b4f0958a40fb7a2979761e71f555e523b9f5ca2
+# Version: Commits on Aug 24, 2022
+RAPTORCOTS_VERSION = 056bbf925c2a089dde1ffaa76978808970ae8e11
 RAPTORCOTS_SITE = $(call github,wel97459,raptor,$(RAPTORCOTS_VERSION))
 
 RAPTORCOTS_DEPENDENCIES = sdl2 openal
