@@ -6548,8 +6548,8 @@ flycast:
       prompt: GRAPHICS API
       description: Choose your graphics renderer.
       choices:
-        "OpenGL (Default)": 0
-        "Vulkan":           4
+        "OpenGL":           0
+        "Vulkan (Default)": 4
     flycast_broadcast:
       prompt: BROADCAST
       description: Choose your video broadcast setting.
