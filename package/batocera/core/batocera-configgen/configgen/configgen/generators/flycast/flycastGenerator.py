@@ -75,7 +75,7 @@ class FlycastGenerator(Generator):
         if system.isOptSet("flycast_broadcast"):
             Config.set("config", "Dreamcast.Broadcast", str(system.config["flycast_broadcast"]))
         else:
-            Config.set("config", "Dreamcast.Broadcast", "1")
+            Config.set("config", "Dreamcast.Broadcast", "4")
         # frameskip
         if system.isOptSet("flycast_frameskip"):
             Config.set("config", "ta.skip", str(system.config["flycast_frameskip"]))
@@ -100,7 +100,12 @@ class FlycastGenerator(Generator):
         if system.isOptSet("flycast_renderer"):
             Config.set("config", "pvr.rend", str(system.config["flycast_renderer"]))
         else:
-            Config.set("config", "pvr.rend", "0")
+            Config.set("config", "pvr.rend", "4")
+
+        # set max graphic threads
+        Config.set("config", "pvr.MaxThreads", "8")
+        Config.set("config", "rend.vsync", "no")
+
         # anisotropic filtering
         if system.isOptSet("flycast_anisotropic"):
             Config.set("config", "rend.AnisotropicFiltering", str(system.config["flycast_anisotropic"]))
