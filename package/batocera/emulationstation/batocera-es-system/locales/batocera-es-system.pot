@@ -2545,12 +2545,12 @@ msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, duckstation, flycast/wasm4, mame/wasm4, mame/wasm4, ...
+#. TRANSLATION: libretro/mame, duckstation, duckstation, flycast/wasm4, mame/wasm4, ...
 msgctxt "game_options"
 msgid "Enabled"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, duckstation, mame/wasm4, mame/wasm4, mame
+#. TRANSLATION: libretro/mame, duckstation, duckstation, mame/wasm4, mame/wasm4, ...
 msgctxt "game_options"
 msgid "Disabled (Default)"
 msgstr ""
@@ -7223,6 +7223,16 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "ENABLE PGXP CORRECTIONS"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Allows loading protected games without subchannel information."
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "ALLOW BOOTING WITHOUT SBI FILE"
 msgstr ""
 
 #. TRANSLATION: flycast/wasm4
