@@ -84,3 +84,24 @@ index be9da8f6..09f523cb 100644
    drmModeFreeResources(resources);
  
    m_card_id = card;
+diff --git a/src/core/system.cpp b/src/core/system.cpp
+index 118eae60..3f01645a 100644
+--- a/src/core/system.cpp
++++ b/src/core/system.cpp
+@@ -302,7 +302,7 @@ const std::string& System::GetRunningPath()
+ }
+ const std::string& System::GetRunningCode()
+ {
+-  return s_running_game_code;
++  return s_running_game_title; //s_running_game_code;
+ }
+ 
+ const std::string& System::GetRunningTitle()
+@@ -997,6 +997,7 @@ bool System::SaveState(const char* filename, bool backup_existing_save)
+   else
+   {
+     const std::string display_name(FileSystem::GetDisplayNameFromPath(filename));
++   System::SaveStateScreenShot(filename);
+     Host::AddIconOSDMessage("save_state", ICON_FA_SAVE,
+                             fmt::format(Host::TranslateString("OSDMessage", "State saved to '{}'.").GetCharArray(),
+                                         Path::GetFileName(display_name)),

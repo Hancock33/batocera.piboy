@@ -17,6 +17,8 @@ define OPENCLAW_INSTALL_TARGET_CMDS
     $(INSTALL) -D $(@D)/Build_Release/openclaw $(TARGET_DIR)/usr/bin/openclaw
     #copy assets
     mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openclaw
+	rm $(@D)/Build_Release/ASSETS.ZIP
+	cd $(@D)/Build_Release/ASSETS && zip -r ../ASSETS.ZIP * 
 	cp -v $(@D)/Build_Release/ASSETS.ZIP $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openclaw/
 	cp -v $(@D)/Build_Release/clacon.ttf $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openclaw/
 	cp -v $(@D)/Build_Release/console02.tga $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openclaw/

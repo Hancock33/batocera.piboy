@@ -2,8 +2,8 @@
 <gameList>
 	<game>
 		<path>./sdlpop.sdlpop</path>
-		<name>SdlPop</name>
-		<desc>Port of Prince of Persia		</desc>
+		<name>Prince of Persia</name>
+		<desc>Port of Prince of Persia</desc>
 		<rating>0.7</rating>
 		<publisher></publisher>
 		<developer></developer>
