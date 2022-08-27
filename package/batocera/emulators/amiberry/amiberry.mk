@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-AMIBERRY_VERSION = ed8dad280cb8ec6def8ff02d2417e61797842112
+AMIBERRY_VERSION = 0eae398aa464d98245d48d2a678f6529339016b8
 AMIBERRY_SITE = $(call github,midwan,amiberry,$(AMIBERRY_VERSION))
 AMIBERRY_LICENSE = GPLv3
 AMIBERRY_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf mpg123 libxml2 libmpeg2 flac
