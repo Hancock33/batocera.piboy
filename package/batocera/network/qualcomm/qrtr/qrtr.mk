@@ -3,7 +3,7 @@
 # qrtr
 #
 ################################################################################
-
+# Version: Commits on Dec 07, 2020
 QRTR_VERSION = 9dc7a88548c27983e06465d3fbba2ba27d4bc050
 QRTR_SITE = $(call github,andersson,qrtr,$(QRTR_VERSION))
 QRTR_LICENSE = BSD-3-Clause license
