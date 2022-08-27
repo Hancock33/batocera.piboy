@@ -3,7 +3,6 @@
 # rtl8821au-morrownr
 #
 ################################################################################
-
 # https://github.com/morrownr/8821au-20210708
 # Version: Commits on Aug 22, 2022
 RTL8821AU_MORROWNR_VERSION = ac275a0ed806fb1c714d8f9194052d4638a68fca
