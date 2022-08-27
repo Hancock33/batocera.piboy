@@ -120,10 +120,12 @@
     <additional_gp_directory value="" />
 
     <!-- Video Settings
-             width : Screen/window width in pixels
-             height : Screen/window height in pixels
-             prev_width : Previous screen/window width
-             prev_height : Previous screen/window height
+             real_width : Screen/window real width in pixels before high dpi is applied
+             real_height : Screen/window real height in pixels before high dpi is applied
+             width : Screen/window width in pixels, this value should not be edited
+             height : Screen/window height in pixels, this value should not be edited
+             prev_real_width : Previous real screen/window width
+             prev_real_height : Previous real screen/window height
              window_x : If remember_window_location is true
              window_y : If remember_window_location is true
              show_fps : Display frame per seconds
@@ -146,11 +148,13 @@
              font_size : The size of fonts. 0 is the smallest and 6 is the biggest
              render_driver : Render video driver to use, at the moment gl or directx9 is supported. -->
     <Video
+        real_width="640"
+        real_height="480"
         width="640"
         height="480"
-        fullscreen="false"
-        prev_width="1024"
-        prev_height="768"
+        fullscreen="true"
+        prev_real_width="1024"
+        prev_real_height="768"
         prev_fullscreen="false"
         remember_window_location="false"
         window_x="-1"
@@ -159,21 +163,21 @@
         show_story_mode_timer="true"
         show_speedrun_timer="false"
         max_fps="120"
-        force_legacy_device="false"
+        force_legacy_device="true"
         split_screen_horizontally="true"
-        enable_texture_compression="true"
+        enable_texture_compression="false"
         enable_high_definition_textures="2"
         enable_glow="false"
         enable_bloom="false"
         enable_light_shaft="false"
-        enable_dynamic_lights="false"
+        enable_dynamic_lights="true"
         enable_dof="false"
         old_driver_popup="true"
-        scale_rtts_factor="0.300000"
-        max_texture_size="256"
+        scale_rtts_factor="1.000000"
+        max_texture_size="512"
         hq_mipmap="false"
         font_size="3.000000"
-        render_driver="gl"
+        render_driver="vulkan"
     >
     </Video>
 
@@ -274,13 +278,13 @@
         christmas-mode="0"
         easter-ear-mode="0"
         animated-characters="false"
-        geometry_level="0"
+        geometry_level="2"
         anisotropic="2"
         swap-interval="1"
         motionblur_enabled="false"
         mlaa="false"
         ssao="false"
-        light_scatter="false"
+        light_scatter="true"
         shadows_resolution="0"
         Degraded_IBL="true"
     >
@@ -405,8 +409,27 @@ moving the mouse (means acceleration).
     <!-- Name of the skin to use -->
     <skin_name value="peach" />
 
-    <!-- Minimap: 0 bottom-left, 1 middle-right, 2 hidden, 3 center -->
-    <minimap_display value="0" />
+    <!-- Minimap Setup Settings
+             display : display: 0 bottom-left, 1 middle-right, 2 hidden, 3 center
+             size : Size of the the minimap (480 = full screen height; scaled afterwards)
+             ai-icon : The size of the icons for the AI karts on the minimap.
+             player-icon : The size of the icons for the player kart. -->
+    <Minimap
+        display="0"
+        size="180.000000"
+        ai-icon="16.000000"
+        player-icon="20.000000"
+    >
+    </Minimap>
+
+    <!-- PowerUp Setup Settings
+             display : display: 0 center, 1 right side, 2 hidden (see karts' held powerups)
+             powerup-icon-size : Size of the powerup icon (scaled afterwards) -->
+    <PowerUp
+        display="0"
+        powerup-icon-size="64.000000"
+    >
+    </PowerUp>
 
     <!-- Everything related to spectator mode.
              camera-distance : Distance between kart and camera.
@@ -449,12 +472,12 @@ moving the mouse (means acceleration).
              addon_last_updated : Time addon-list was updated last.
              latest_addon_time : Latest approved addon time. -->
     <AddonServer
-        news_last_updated="1644082678"
+        news_last_updated="1661605068"
         news_frequency="0"
         news_display_count=""
         last_important_message_id="-1"
-        addon_last_updated="1644082679"
-        latest_addon_time="1643307818"
+        addon_last_updated="1661604865"
+        latest_addon_time="1661022188"
     >
     </AddonServer>
 
