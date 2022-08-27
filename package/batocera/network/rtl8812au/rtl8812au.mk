@@ -3,7 +3,6 @@
 # rtl8812au
 #
 ################################################################################
-
 # https://github.com/morrownr/8812au-20210629
 # Version: Commits on Aug 22, 2022
 RTL8812AU_VERSION = 7aa0e0c74551b4e4f319f4b54e00ccbfe588b7ce

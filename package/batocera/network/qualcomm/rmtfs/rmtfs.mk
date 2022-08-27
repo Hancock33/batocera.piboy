@@ -3,8 +3,8 @@
 # rmtfs
 #
 ################################################################################
-
-RMTFS_VERSION = b08ef6f98ec567876d7d45f15c85c6ed00d7c463
+# Version: Commits on Mar 21, 2022
+RMTFS_VERSION = 695d0668ffa6e2a4bf6e676f3c58a444a5d67690
 RMTFS_SITE = $(call github,andersson,rmtfs,$(RMTFS_VERSION))
 RMTFS_LICENSE = BSD-3-Clause license
 RMTFS_LICENSE_FILE = LICENSE
