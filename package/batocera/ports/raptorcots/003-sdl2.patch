@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ff3112c..1c06e34 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -66,7 +66,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+         textscreen
+         asound
+         SDL2::SDL2
+-        SDL2::SDL2main
++       #SDL2::SDL2main
+         )
+ 
+ elseif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
