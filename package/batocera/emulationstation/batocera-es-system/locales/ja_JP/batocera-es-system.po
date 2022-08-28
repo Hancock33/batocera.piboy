@@ -2535,7 +2535,7 @@ msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr "ハイスコ​​ア プラグイン"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, duckstation, mame/wasm4, ...
+#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, duckstation, flycast/wasm4, ...
 msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "使用する (標準)"
@@ -7385,6 +7385,17 @@ msgctxt "game_options"
 msgid "Disbaled (Default)"
 msgstr ""
 
+#. TRANSLATION: flycast/wasm4
+#, c-format
+msgctxt "game_options"
+msgid "Fastest BIOS but not 100% compatible."
+msgstr ""
+
+#. TRANSLATION: flycast/wasm4
+msgctxt "game_options"
+msgid "HLE BIOS"
+msgstr ""
+
 #. TRANSLATION: flycast
 msgctxt "game_options"
 msgid "Choose which screen ratio you want to use."
@@ -7422,8 +7433,8 @@ msgstr "グラフィックレンダラーを選択します"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
-msgid "OpenGL (Default)"
-msgstr "OpenGL (標準)"
+msgid "Vulkan (Default)"
+msgstr ""
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
@@ -9729,6 +9740,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "USE COMPUTE SHADER"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGL (Default)"
+#~ msgstr "OpenGL (標準)"
 
 #~ msgctxt "game_options"
 #~ msgid "Fullspeed can break some games."

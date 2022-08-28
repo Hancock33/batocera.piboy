@@ -2530,7 +2530,7 @@ msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, duckstation, mame/wasm4, ...
+#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, duckstation, flycast/wasm4, ...
 msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr ""
@@ -7365,6 +7365,17 @@ msgctxt "game_options"
 msgid "Disbaled (Default)"
 msgstr ""
 
+#. TRANSLATION: flycast/wasm4
+#, c-format
+msgctxt "game_options"
+msgid "Fastest BIOS but not 100% compatible."
+msgstr ""
+
+#. TRANSLATION: flycast/wasm4
+msgctxt "game_options"
+msgid "HLE BIOS"
+msgstr ""
+
 #. TRANSLATION: flycast
 msgctxt "game_options"
 msgid "Choose which screen ratio you want to use."
@@ -7402,7 +7413,7 @@ msgstr ""
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
-msgid "OpenGL (Default)"
+msgid "Vulkan (Default)"
 msgstr ""
 
 #. TRANSLATION: flycast
