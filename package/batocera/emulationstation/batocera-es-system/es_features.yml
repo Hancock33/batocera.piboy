@@ -94,6 +94,7 @@ shared:
         "Performance": perf
         "Custom": custom
     hud_corner:
+      group: VIDEO SETTINGS
       archs_exclude: [s905 rpi1 rpi2 rpizero2]
       prompt: HEADS UP DISPLAY CORNER
       submenu: DECORATIONS
@@ -6551,6 +6552,7 @@ flycast:
         "OpenGL":           0
         "Vulkan (Default)": 4
     flycast_broadcast:
+      group: VIDEO SETTINGS
       prompt: BROADCAST
       description: Choose your video broadcast setting.
       choices:
@@ -6560,6 +6562,7 @@ flycast:
         "NTSC":            0
         "Flycast Default": 4
     flycast_frameskip:
+      group: VIDEO SETTINGS
       prompt: FRAMESKIP
       description: Skip frames to improve performance, at the cost of choppy motion.
       choices:
@@ -6575,7 +6578,7 @@ flycast:
         "Normal": no
         "Rotate": yes
     flycast_anisotropic:
-      group: ADVANCED OPTIONS
+      group: VIDEO SETTINGS
       prompt:      ANISOTROPIC FILTERING
       description: Higher values make textures viewed at oblique angles look sharper.
       choices:
@@ -6584,6 +6587,14 @@ flycast:
         "4x"                : 4
         "8x"                : 8
         "16x"               : 16
+    flycast_hle:
+      group: ADVANCED OPTIONS
+      prompt:      HLE BIOS
+      description: Fastest BIOS but not 100% compatible.
+      choices:
+        "Disabled"         : "no"
+        "Enabled (Default)": "yes"
+
   systems:
     dreamcast:
       cfeatures:
@@ -6658,12 +6669,6 @@ flycast:
           choices:
             "Disbaled (Default)": "no"
             "Enabled"           : "yes"
-        flycast_hle:
-          prompt:      HLE BIOS
-          description: Fastest BIOS but not 100% compatible.
-          choices:
-            "Disabled"         : "no"
-            "Enabled (Default)": "yes"
 
 fpinball:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -9375,3 +9380,4 @@ yquake2:
                 "Vulkan":   vulkan
                 "OpenGL":   gl
                 "Software": soft
+
