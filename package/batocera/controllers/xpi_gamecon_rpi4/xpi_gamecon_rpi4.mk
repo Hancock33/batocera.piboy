@@ -8,9 +8,9 @@ XPI_GAMECON_RPI4_VERSION = f30cea1a30e4e9ad8fcf3b7da48f2770b4ea3368
 XPI_GAMECON_RPI4_SITE = $(call github,hancock33,piboycontrols,$(XPI_GAMECON_RPI4_VERSION))
 XPI_GAMECON_RPI4_DEPENDENCIES = linux pulseaudio-utils
 
-define XPI_GAMECON_RPI4_BUILD_CMDS
-        $(MAKE) -C $(@D) $(LINUX_MAKE_FLAGS) KERNELDIR=$(LINUX_DIR) KVERSION=$(LINUX_DIR)
-endef
+#define XPI_GAMECON_RPI4_BUILD_CMDS
+#        $(MAKE) -C $(@D) $(LINUX_MAKE_FLAGS) KERNELDIR=$(LINUX_DIR) KVERSION=$(LINUX_DIR)
+#endef
 
 define XPI_GAMECON_RPI4_INSTALL_TARGET_CMDS
     $(TARGET_CC) $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi4/volumed.c -o $(TARGET_DIR)/usr/sbin/volumed -L$(STAGING_DIR)/usr/lib -lpulse
@@ -25,5 +25,5 @@ define XPI_GAMECON_RPI4_INSTALL_TARGET_CMDS
 	cp -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi4/roms/piboy $(TARGET_DIR)/usr/share/batocera/datainit/roms
 endef
 
-$(eval $(kernel-module))
+#$(eval $(kernel-module))
 $(eval $(generic-package))
