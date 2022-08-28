@@ -6658,12 +6658,12 @@ flycast:
           choices:
             "Disbaled (Default)": "no"
             "Enabled"           : "yes"
-        flycast_DSP:
+        flycast_hle:
           prompt:      HLE BIOS
-          description: Fastest BIOS but not 100% compatible
+          description: Fastest BIOS but not 100% compatible.
           choices:
-            "Disbaled"        : "no"
-            "Enabled"(Default): "yes"
+            "Disabled"         : "no"
+            "Enabled (Default)": "yes"
 
 fpinball:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
