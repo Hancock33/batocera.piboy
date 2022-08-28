@@ -2566,7 +2566,7 @@ msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr "MÓDULO DE EXTENSÃO DE PONTUAÇÃO ALTA"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, duckstation, flycast/wasm4, ...
+#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, duckstation, flycast, ...
 msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "Ativado (Padrão)"
@@ -7450,17 +7450,6 @@ msgctxt "game_options"
 msgid "Disbaled (Default)"
 msgstr ""
 
-#. TRANSLATION: flycast/wasm4
-#, c-format
-msgctxt "game_options"
-msgid "Fastest BIOS but not 100% compatible."
-msgstr ""
-
-#. TRANSLATION: flycast/wasm4
-msgctxt "game_options"
-msgid "HLE BIOS"
-msgstr ""
-
 #. TRANSLATION: flycast
 msgctxt "game_options"
 msgid "Choose which screen ratio you want to use."
@@ -7544,6 +7533,17 @@ msgstr "Girar"
 #. TRANSLATION: flycast
 msgctxt "game_options"
 msgid "Higher values make textures viewed at oblique angles look sharper."
+msgstr ""
+
+#. TRANSLATION: flycast
+#, c-format
+msgctxt "game_options"
+msgid "Fastest BIOS but not 100% compatible."
+msgstr ""
+
+#. TRANSLATION: flycast
+msgctxt "game_options"
+msgid "HLE BIOS"
 msgstr ""
 
 #. TRANSLATION: hatari
