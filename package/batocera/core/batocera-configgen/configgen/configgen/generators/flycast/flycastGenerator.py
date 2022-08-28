@@ -89,15 +89,23 @@ class FlycastGenerator(Generator):
             Config.set("config", "rend.Rotate90", str(system.config["flycast_rotate"]))
         else:
             Config.set("config", "rend.Rotate90", "no")
-        # renderer - default: OpenGL
+
+        # renderer - default: Vulkan. Disable vsync if opengl is enabled, causes black bars
         if system.isOptSet("flycast_renderer"):
             Config.set("config", "pvr.rend", str(system.config["flycast_renderer"]))
+            if system.config['flycast_renderer'] == "0":
+                Config.set("config", "rend.vsync", "no")
+            else:
+                Config.set("config", "rend.vsync", "yes")
         else:
             Config.set("config", "pvr.rend", "4")
+            Config.set("config", "rend.vsync", "yes")
 
-        # set max graphic threads
-        Config.set("config", "pvr.MaxThreads", "8")
-        Config.set("config", "rend.vsync", "no")
+        # HLE Bios
+        if system.isOptSet("flycast_hle"):
+            Config.set("config", "UseReios", str(system.config["flycast_hle"]))
+        else:
+            Config.set("config", "UseReios", "yes")
 
         # anisotropic filtering
         if system.isOptSet("flycast_anisotropic"):
