@@ -2595,9 +2595,9 @@ naomi2:
   platform: naomi2, arcade
   emulators:
     libretro:
-      flycast: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST] }
+      flycast: { requireAnyOf: [BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY] }
     flycast:
-      flycast: { requireAnyOf: [BR2_PACKAGE_FLYCAST]          }
+      flycast: { requireAnyOf: [BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY]          }
     demul:
       demul:   { requireAnyOf: [BR2_PACKAGE_DEMUL]            }
   comment_en: |
@@ -2669,9 +2669,9 @@ naomi2gd:
   platform:   naomi2gd, arcade
   emulators:
     libretro:
-      flycast:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]  }
+      flycast:  { requireAnyOf: [BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY]  }
     flycast:
-      flycast:  { requireAnyOf: [BR2_PACKAGE_FLYCAST]           }
+      flycast:  { requireAnyOf: [BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY]           }
     demul:
       demul:    { requireAnyOf: [BR2_PACKAGE_DEMUL]             }
 
