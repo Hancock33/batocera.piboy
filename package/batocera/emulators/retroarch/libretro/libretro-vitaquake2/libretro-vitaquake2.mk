@@ -21,12 +21,17 @@ LIBRETRO_VITAQUAKE2_PLATFORM=rpi3_64
 endif
 
 define LIBRETRO_VITAQUAKE2_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D) -f Makefile platform="$(LIBRETRO_VITAQUAKE2_PLATFORM)"
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D) -f Makefile platform="$(LIBRETRO_VITAQUAKE2_PLATFORM)" 
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D) -f Makefile platform="$(LIBRETRO_VITAQUAKE2_PLATFORM)" basegame=rogue
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D) -f Makefile platform="$(LIBRETRO_VITAQUAKE2_PLATFORM)" basegame=xatrix
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D) -f Makefile platform="$(LIBRETRO_VITAQUAKE2_PLATFORM)" basegame=zaero
 endef
 
 define LIBRETRO_VITAQUAKE2_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/vitaquake2_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/vitaquake2_libretro.so
+	$(INSTALL) -D $(@D)/vitaquake2_libretro.so $(TARGET_DIR)/usr/lib/libretro/vitaquake2_libretro.so
+	$(INSTALL) -D $(@D)/vitaquake2-rogue_libretro.so $(TARGET_DIR)/usr/lib/libretro/vitaquake2-rogue_libretro.so
+	$(INSTALL) -D $(@D)/vitaquake2-xatrix_libretro.so $(TARGET_DIR)/usr/lib/libretro/vitaquake2-xatrix_libretro.so
+	$(INSTALL) -D $(@D)/vitaquake2-zaero_libretro.so $(TARGET_DIR)/usr/lib/libretro/vitaquake2-zaero_libretro.so
 endef
 
 $(eval $(generic-package))

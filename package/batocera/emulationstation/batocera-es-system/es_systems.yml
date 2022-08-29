@@ -4201,6 +4201,8 @@ yquake2:
   emulators:
     yquake2:
       yquake2: { requireAnyOf: [BR2_PACKAGE_YQUAKE2] }
+    libretro:
+      vitaquake2:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VITAQUAKE2] }
 
 zc210:
   name:       Zelda Classic
