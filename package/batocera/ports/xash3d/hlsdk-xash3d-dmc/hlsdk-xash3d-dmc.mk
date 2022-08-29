@@ -3,8 +3,8 @@
 # hlsdk-xash3d-dmc
 #
 ################################################################################
-# Version.: Commits on Jun 21, 2022 (dmc branch)
-HLSDK_XASH3D_DMC_VERSION = 000f302ab02a58a21d339016279e0b19a8f692ca
+# Version.: Commits on Aug 25, 2022 (dmc branch)
+HLSDK_XASH3D_DMC_VERSION = 2a25fd1fb9be0011755c6b50c12186fb095b7698
 HLSDK_XASH3D_DMC_SITE = $(call github,FWGS,hlsdk-portable,$(HLSDK_XASH3D_DMC_VERSION))
 HLSDK_XASH3D_DMC_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf libsodium
 HLSDK_XASH3D_DMC_LICENSE = Half Life 1 SDK LICENSE
