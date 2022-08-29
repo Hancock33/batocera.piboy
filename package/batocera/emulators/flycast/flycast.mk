@@ -3,8 +3,8 @@
 # flycast
 #
 ################################################################################
-# Version: Commits on Aug 25, 2022
-FLYCAST_VERSION = aa97a6d64fb47d3ce0febaa575b26d975dd916e4
+# Version: Commits on Apr 09, 2022
+FLYCAST_VERSION = v1.3
 FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
@@ -12,6 +12,7 @@ FLYCAST_LICENSE = GPLv2
 FLYCAST_DEPENDENCIES = sdl2 libpng libzip libao pulseaudio-utils
 
 FLYCAST_CONF_OPTS += -DLIBRETRO=OFF
+FLYCAST_CONF_OPTS += -DGIT_VERSION="$(shell echo $(FLYCAST_VERSION) | cut -c 1-7)"
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
     FLYCAST_CONF_OPTS += -DUSE_OPENGL=ON
