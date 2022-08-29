@@ -804,6 +804,9 @@ yquake2:
 zc210:
   emulator: libretro
   core:     zc210
+zc250x:
+  emulator: libretro
+  core:     zc250x
 zx81:
   emulator: libretro
   core:     '81'

@@ -4215,6 +4215,7 @@ zc210:
   emulators:
     libretro:
       zc210:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ZC210] }
+      zc250x: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ZC250X] }
 
 ### Arcade Section
 acclaim:
