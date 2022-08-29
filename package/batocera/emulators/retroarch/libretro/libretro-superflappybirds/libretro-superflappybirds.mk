@@ -20,7 +20,7 @@ define LIBRETRO_SUPERFLAPPYBIRDS_INSTALL_TARGET_CMDS
         $(INSTALL) -D $(@D)/buildroot-build/superflappybirds_libretro.so \
                 $(TARGET_DIR)/usr/lib/libretro/superflappybirds_libretro.so
     mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/superflappybirds
-	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-superflappybirds/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/superflappybirds/				
+	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-superflappybirds/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/superflappybirds/
 endef
 
 $(eval $(cmake-package))

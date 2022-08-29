@@ -14,14 +14,14 @@ YABAUSESA_DEPENDENCIES = sdl2 boost openal zlib
 YABAUSESA_SUBDIR = yabause
 
 YABAUSESA_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
-YABAUSESA_CONF_OPTS += -DYAB_PORTS=retro_arena 
+YABAUSESA_CONF_OPTS += -DYAB_PORTS=retro_arena
 YABAUSESA_CONF_OPTS += -DUSE_EGL=ON
 YABAUSESA_CONF_OPTS += -Dpng_STATIC_LIBRARIES=$(STAGING_DIR)/usr/lib/libpng16.a
 YABAUSESA_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=-Wl,--unresolved-symbols=ignore-all
 
 ifeq ($(BR2_arm)$(BR2_aarch64),y)
  YABAUSESA_POST_EXTRACT_HOOKS += YABAUSESA_POST_EXTRACT_FIXUP_SOC
- YABAUSESA_CONF_OPTS += -DYAB_WANT_DYNAREC_DEVMIYAX=ON 
+ YABAUSESA_CONF_OPTS += -DYAB_WANT_DYNAREC_DEVMIYAX=ON
  YABAUSESA_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -D_POSIX_C_SOURCE=199309L -D__RP64__"
  YABAUSESA_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -D_POSIX_C_SOURCE=199309L -D__RP64__"
 else ifeq ($(BR2_x86_64),y)
@@ -35,7 +35,7 @@ ifeq ($(BR2_arm),y)
 endif
 
 define YABAUSESA_POST_EXTRACT_FIXUP_SOC
-  sed -i "s|CMAKE_C_FLAGS}|CMAKE_C_FLAGS} -DCMAKE_TOOLCHAIN_FILE=$(HOST_DIR)/share/buildroot/toolchainfile.cmake|" $(@D)/yabause/CMake/Packages/external_libchdr.cmake  
+  sed -i "s|CMAKE_C_FLAGS}|CMAKE_C_FLAGS} -DCMAKE_TOOLCHAIN_FILE=$(HOST_DIR)/share/buildroot/toolchainfile.cmake|" $(@D)/yabause/CMake/Packages/external_libchdr.cmake
   sed -i "s|COMMAND m68kmake|COMMAND $(@D)/m68kmake_host|" $(@D)/yabause/src/musashi/CMakeLists.txt
   sed -i "s|COMMAND ./bin2c|COMMAND $(@D)/bin2c_host|" $(@D)/yabause/src/retro_arena/nanogui-sdl/CMakeLists.txt
   gcc $(@D)/yabause/src/retro_arena/nanogui-sdl/resources/bin2c.c -o $(@D)/bin2c_host

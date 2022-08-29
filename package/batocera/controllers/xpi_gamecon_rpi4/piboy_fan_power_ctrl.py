@@ -69,7 +69,7 @@ try:
                 fanFile.write(str(fpdefault))
                 fanFile.close()
         cpuTempOld = cpuTemp
-        
+
         # Read Battery < 5% shutdown
         battctrlFile = open("/sys/kernel/xpi_gamecon/percent", "r")
         battctrl = int(battctrlFile.read())

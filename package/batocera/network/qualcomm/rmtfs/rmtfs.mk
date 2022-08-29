@@ -14,7 +14,7 @@ RMTFS_INSTALL_STAGING = YES
 define RMTFS_BUILD_CMDS
     $(TARGET_MAKE_ENV) $(MAKE) $(TARGET_CONFIGURE_OPTS)  \
         CFLAGS="$(TARGET_CFLAGS) -I$(STAGING_DIR)/usr/include" \
-        LDFLAGS="$(TARGET_LDFLAGS) -L$(STAGING_DIR)/usr/lib -lqrtr -ludev -lpthread" -C $(@D) 
+        LDFLAGS="$(TARGET_LDFLAGS) -L$(STAGING_DIR)/usr/lib -lqrtr -ludev -lpthread" -C $(@D)
 endef
 
 define RMTFS_INSTALL_TARGET_CMDS

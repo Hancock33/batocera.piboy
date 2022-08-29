@@ -13,7 +13,7 @@ class Yquake2Generator(Generator):
 
         if (rom.__contains__('xatrix')):
             gamemod = 'xatrix'
-            
+
         commandArray = ['quake2', '-datadir', '/userdata/roms/ports/quake2']
         # Rendering mode
         if system.isOptSet('yquake2_render'):
