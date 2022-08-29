@@ -52,7 +52,7 @@ define LIBRETRO_ZC210_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/zc210
 	cp -avr $(@D)/datfile/* $(TARGET_DIR)/usr/share/batocera/datainit/bios/zc210
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
-	
+
 	cp -a $(@D)/info/*.info $(TARGET_DIR)/usr/share/libretro/info/
 endef
 

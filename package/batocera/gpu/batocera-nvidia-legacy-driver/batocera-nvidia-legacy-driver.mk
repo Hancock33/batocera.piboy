@@ -230,7 +230,7 @@ define BATOCERA_NVIDIA_LEGACY_DRIVER_RENAME_KERNEL_MODULES
 	mv -f $(TARGET_DIR)/lib/modules/$(KVER)/extra/nvidia-modeset.ko \
 	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia-modeset-legacy.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(KVER)/extra/nvidia-drm.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia-drm-legacy.ko	
+	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia-drm-legacy.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(KVER)/extra/nvidia-uvm.ko \
 	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia-uvm-legacy.ko
 	# set the driver version file

@@ -85,7 +85,7 @@ class CitraGenerator(Generator):
 
         ## [UI]
         if not citraConfig.has_section("UI"):
-            citraConfig.add_section("UI")       
+            citraConfig.add_section("UI")
         # Start Fullscreen
         if system.isOptSet("showFPS") and system.getOptBoolean("showFPS"):
             citraConfig.set("UI", "fullscreen",       "false")
@@ -127,7 +127,7 @@ class CitraGenerator(Generator):
             citraConfig.set("Renderer", "use_frame_limit", "false")
         else:
             citraConfig.set("Renderer", "use_frame_limit", "true")
-        
+
         ## [WEB SERVICE]
         if not citraConfig.has_section("WebService"):
             citraConfig.add_section("WebService")
@@ -160,7 +160,7 @@ class CitraGenerator(Generator):
         # Options required to load the functions when the configuration file is created
         if not citraConfig.has_option("Controls", "profiles\\size"):
             citraConfig.set("Controls", "profile", 0)
-            citraConfig.set("Controls", "profile\\default", "true")    
+            citraConfig.set("Controls", "profile\\default", "true")
             citraConfig.set("Controls", "profiles\\1\\name", "default")
             citraConfig.set("Controls", "profiles\\1\\name\\default", "true")
             citraConfig.set("Controls", "profiles\\size", 1)

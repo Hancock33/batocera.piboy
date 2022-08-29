@@ -15,4 +15,3 @@ config BR2_PACKAGE_PACMAN
 
 	help
 	  Arch Linux PACkage MANager. Because of its name, it's the best choice for a retrogaming-oriented distribution :)
- 

@@ -35,7 +35,7 @@ def generateControllerConfig(system, controllers, rom):
                         f.write(f"    {key}: {rpcs3_mappingValue(reversedName, input.type, input.code, int(input.value)*-1)}\n")
                     else:
                         eslog.warning(f"no rpcs3 mapping found for {input.name}")
-                    
+
             rpcs3_otherKeys(f, controller)
         nplayer += 1
     f.close()
