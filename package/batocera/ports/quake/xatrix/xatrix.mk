@@ -14,8 +14,8 @@ XATRIX_SUPPORTS_IN_SOURCE_BUILD = NO
 XATRIX_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 
 define XATRIX_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/quake2/xatrix
-	cp -pvr $(@D)/buildroot-build/Release/* $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/quake2/xatrix
+	mkdir -p $(TARGET_DIR)/usr/share/game_assets/quake2/xatrix
+	cp -pvr $(@D)/buildroot-build/Release/* $(TARGET_DIR)/usr/share/game_assets/quake2/xatrix
 endef
 
 $(eval $(cmake-package))
