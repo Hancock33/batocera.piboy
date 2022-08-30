@@ -1,14 +1,20 @@
 #!/usr/bin/env python
-
+import os
+import shutil
+from os import path
 import Command
 from generators.Generator import Generator
 import controllersConfig
 
+omf_src = "/usr/share/game_assets/omf2097"
+omf_dst = "/userdata/roms/ports/omf2097"
 
 class Omf2097Generator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["openomf"]
+
+        shutil.copytree(omf_src, omf_dst, dirs_exist_ok=True)
 
         return Command.Command(
             array=commandArray,

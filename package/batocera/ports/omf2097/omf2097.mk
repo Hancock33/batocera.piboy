@@ -14,29 +14,13 @@ OMF2097_SUPPORTS_IN_SOURCE_BUILD = NO
 
 OMF2097_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 
-ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI3)$(BR2_PACKAGE_XPI_GAMECON_RPI4),y)
-    OMF2097_POST_INSTALL_TARGET_HOOKS += OMF2097_INSTALL_BOOT_PIBOY
-else
-    OMF2097_POST_INSTALL_TARGET_HOOKS += OMF2097_INSTALL_BOOT_X86
-endif
-
-define OMF2097_INSTALL_BOOT_PIBOY
- 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/omf2097
-    mv $(TARGET_DIR)/usr/share/games/openomf/openomf.bk $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/omf2097
-    rm -r $(TARGET_DIR)/usr/share/games/openomf
+define OMF2097_INSTALL_TARGET_CMDS
+	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/openomf  $(TARGET_DIR)/usr/bin/openomf
+	mkdir -p $(TARGET_DIR)/usr/share/game_assets/omf2097
+    cp  $(@D)/resources/openomf.bk $(TARGET_DIR)/usr/share/game_assets/omf2097
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/omf2097/omf2097.keys $(TARGET_DIR)/usr/share/evmapy
 endef
-
-define OMF2097_INSTALL_BOOT_X86
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/omf2097
-    mv $(TARGET_DIR)/usr/share/games/openomf/openomf.bk $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/omf2097
-    rm -r $(TARGET_DIR)/usr/share/games/openomf
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/omf2097/omf2097.keys $(TARGET_DIR)/usr/share/evmapy
-endef
-
 
 $(eval $(cmake-package))
