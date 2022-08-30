@@ -3909,7 +3909,7 @@ sonicretro:
   manufacturer: Sega
   release: 2021
   hardware: port
-  extensions: [son, scd]
+  extensions: [son, scd, som]
   group: ports
   path: /userdata/roms/ports/sonicretro
   emulators:
@@ -3917,6 +3917,8 @@ sonicretro:
       sonic2013: { requireAnyOf: [BR2_PACKAGE_SONIC2013] }
     soniccd:
       soniccd: { requireAnyOf: [BR2_PACKAGE_SONICCD] }
+    sonicmania:
+      sonicmania: { requireAnyOf: [BR2_PACKAGE_SONICMANIA] }
   comment_en: |
     ---------------------
     Data File Setup
@@ -3932,13 +3934,16 @@ sonicretro:
     The APK can be extracted the same way. If you're using the Steam version, the Data.rsdk is in the game's folder.
     The rsdk and videos folder should be in a folder named [Game Name].scd - ie "Sonic CD.scd"
 
+    For Sonic Mania, you can use the files from the Stream version. Testsed with version 1.06.0503
+    The Data.rsdk should be in a folder named [Game Name].som - ie "Sonic Mania.som"
+
     ---------------------
     Options and Emulators
     ---------------------
 
     Batocera will auto-select the port to use based on the folder's extension - sonic2013/rsdk4 for .son folders, soniccd/rsdk3 for
-    .scd folders. Selecting the wrong emulator will be ignored as the two versions are not compatible. The options are slightly
-    different between the two, so you may need to manually select the emulator to change them.
+    .scd folders and sonicmania/rsdk5 for .som folders. Selecting the wrong emulator will be ignored as the two versions are not compatible.
+    The options are slightly different between the two, so you may need to manually select the emulator to change them.
 
     The dev menu option is needed to run mods.
 
