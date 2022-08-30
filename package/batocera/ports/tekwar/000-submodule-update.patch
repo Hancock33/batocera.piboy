@@ -1,0 +1,4887 @@
+Submodule jfaudiolib 61d3dc2..0e94055:
+diff --git a/jfaudiolib/Makefile b/jfaudiolib/Makefile
+index 2f0dda2..51895f9 100644
+--- a/jfaudiolib/Makefile
++++ b/jfaudiolib/Makefile
+@@ -1,17 +1,17 @@
+ -include Makefile.user
+ 
+-DXROOT ?= $(USERPROFILE)/sdks/directx/dx81
+-
+ ifeq (0,$(RELEASE))
+  OPTLEVEL=-Og
+ else
+- OPTLEVEL=-O2
++ OPTLEVEL=-fomit-frame-pointer -O2
+ endif
+ 
+ CC?=gcc
+ AR?=ar
+-CFLAGS=-g $(OPTLEVEL) -Wall
++CFLAGS=-g $(OPTLEVEL) -W -Wall -Wno-unused-but-set-variable
+ CPPFLAGS=-Iinclude -Isrc
++LDFLAGS=
++o=o
+ 
+ SOURCES=src/drivers.c \
+         src/fx_man.c \
+@@ -29,11 +29,15 @@ SOURCES=src/drivers.c \
+ include Makefile.shared
+ 
+ ifeq (mingw32,$(findstring mingw32,$(machine)))
+- CPPFLAGS+= -I$(DXROOT)/include -Ithird-party/mingw32/include
++ CPPFLAGS+= -Ithird-party/mingw32/include
+  SOURCES+= src/driver_directsound.c src/driver_winmm.c
+ 
+  CPPFLAGS+= -DHAVE_VORBIS
+ else
++ ifeq (apple-darwin,$(findstring apple-darwin,$(machine)))
++  SOURCES+= src/driver_coreaudio.c
++  LDFLAGS+= -framework AudioToolbox -framework AudioUnit -framework Foundation
++ endif
+  ifneq (0,$(JFAUDIOLIB_HAVE_SDL))
+   CPPFLAGS+= -DHAVE_SDL=2 $(shell $(SDL2CONFIG) --cflags)
+   ifeq (1,$(JFAUDIOLIB_USE_SDLMIXER))
+@@ -58,6 +62,11 @@ endif
+ 
+ OBJECTS=$(SOURCES:%.c=%.o)
+ 
++.PHONY: all
++all: $(JFAUDIOLIB) test
++
++include Makefile.deps
++
+ $(JFAUDIOLIB): $(OBJECTS)
+ 	$(AR) cr $@ $^
+ 
+@@ -65,7 +74,7 @@ $(OBJECTS): %.o: %.c
+ 	$(CC) -c $(CPPFLAGS) $(CFLAGS) $< -o $@
+ 
+ test: src/test.o $(JFAUDIOLIB);
+-	$(CC) $(CPPFLAGS) $(CFLAGS) $^ -o $@ $(JFAUDIOLIB_LDFLAGS) -lm
++	$(CC) $(CPPFLAGS) $(CFLAGS) $^ -o $@ $(LDFLAGS) $(JFAUDIOLIB_LDFLAGS) -lm
+ 
+ .PHONY: clean
+ clean:
+diff --git a/jfaudiolib/Makefile.deps b/jfaudiolib/Makefile.deps
+new file mode 100644
+index 0000000..c58c140
+--- /dev/null
++++ b/jfaudiolib/Makefile.deps
+@@ -0,0 +1,19 @@
++src/asssys.$o: src/asssys.c src/asssys.h
++src/cd.$o: src/cd.c include/cd.h src/drivers.h include/sndcards.h src/midifuncs.h
++src/driver_alsa.$o: src/driver_alsa.c src/midifuncs.h src/driver_alsa.h
++src/driver_coreaudio.$o: src/driver_coreaudio.c src/asssys.h src/midifuncs.h src/driver_coreaudio.h
++src/driver_directsound.$o: src/driver_directsound.c src/asssys.h src/driver_directsound.h
++src/driver_fluidsynth.$o: src/driver_fluidsynth.c src/midifuncs.h src/driver_fluidsynth.h src/asssys.h
++src/driver_nosound.$o: src/driver_nosound.c src/midifuncs.h
++src/driver_sdl.$o: src/driver_sdl.c src/driver_sdl.h
++src/driver_winmm.$o: src/driver_winmm.c src/asssys.h src/assmisc.h src/midifuncs.h src/driver_winmm.h src/linklist.h
++src/drivers.$o: src/drivers.c src/drivers.h include/sndcards.h src/midifuncs.h src/driver_alsa.h src/driver_coreaudio.h src/driver_directsound.h src/driver_fluidsynth.h src/driver_nosound.h src/driver_sdl.h src/driver_winmm.h
++src/fx_man.$o: src/fx_man.c include/sndcards.h src/drivers.h src/midifuncs.h src/multivoc.h include/fx_man.h include/sndcards.h
++src/midi.$o: src/midi.c include/sndcards.h src/drivers.h src/midifuncs.h src/ll_man.h include/music.h include/sndcards.h src/_midi.h src/midi.h src/asssys.h
++src/mix.$o: src/mix.c src/_multivc.h
++src/mixst.$o: src/mixst.c src/_multivc.h
++src/multivoc.$o: src/multivoc.c src/linklist.h include/sndcards.h src/drivers.h src/midifuncs.h src/pitch.h src/multivoc.h src/_multivc.h
++src/music.$o: src/music.c include/sndcards.h src/drivers.h src/midifuncs.h include/music.h include/sndcards.h src/midi.h src/ll_man.h
++src/pitch.$o: src/pitch.c src/pitch.h
++src/vorbis.$o: src/vorbis.c
++src/test.$o: src/test.c include/fx_man.h include/music.h src/drivers.h src/asssys.h
+diff --git a/jfaudiolib/Makefile.msvc b/jfaudiolib/Makefile.msvc
+index 0860c40..f4ea5ca 100644
+--- a/jfaudiolib/Makefile.msvc
++++ b/jfaudiolib/Makefile.msvc
+@@ -1,6 +1,7 @@
+ CC=cl
+ CFLAGS=/MD /J /nologo /O2
+ CPPFLAGS=/Iinclude /Isrc /Isrc\msvc
++o=obj
+ 
+ SOURCES=src\drivers.c \
+         src\fx_man.c \
+@@ -19,6 +20,13 @@ SOURCES=src\drivers.c \
+ 
+ !include Makefile.msvcshared
+ 
++!if "$(PLATFORM)" == ""
++PLATFORM=x86
++!endif
++!if "$(PLATFORM)" == "X86" || "$(PLATFORM)" == "x86"
++CFLAGS=$(CFLAGS) /arch:IA32
++!endif
++
+ !if $(JFAUDIOLIB_HAVE_VORBIS)
+ CPPFLAGS=$(CPPFLAGS) /DHAVE_VORBIS /Ithird-party\msvc\include
+ JFAUDIOLIB_LINKFLAGS=$(JFAUDIOLIB_LINKFLAGS) /LIBPATH:$(MAKEDIR)\third-party\msvc\lib$(PLATFORM)
+@@ -26,6 +34,10 @@ JFAUDIOLIB_LINKFLAGS=$(JFAUDIOLIB_LINKFLAGS) /LIBPATH:$(MAKEDIR)\third-party\msv
+ 
+ OBJECTS=$(SOURCES:.c=.obj)
+ 
++all: $(JFAUDIOLIB) test.exe
++
++!include Makefile.deps
++
+ $(JFAUDIOLIB): $(OBJECTS)
+ 	lib /out:$@ /nologo $**
+ 
+@@ -36,4 +48,4 @@ test.exe: src\test.obj $(JFAUDIOLIB)
+ 	$(CC) /c $(CPPFLAGS) $(CFLAGS) /Fo$@ $<
+ 
+ clean:
+-	-del /q $(OBJECTS) $(JFAUDIOLIB) test.exe
++	-del /q $(OBJECTS) $(JFAUDIOLIB) src\test.obj test.exe
+diff --git a/jfaudiolib/include/fx_man.h b/jfaudiolib/include/fx_man.h
+index d0c8f10..60d6813 100644
+--- a/jfaudiolib/include/fx_man.h
++++ b/jfaudiolib/include/fx_man.h
+@@ -75,6 +75,7 @@ int FX_EndLooping( int handle );
+ int FX_SetPan( int handle, int vol, int left, int right );
+ int FX_SetPitch( int handle, int pitchoffset );
+ int FX_SetFrequency( int handle, int frequency );
++int FX_GetFrequency( int handle, int *frequency );
+ 
+ int FX_PlayVOC( char *ptr, unsigned int ptrlength, int pitchoffset, int vol, int left, int right,
+        int priority, unsigned int callbackval );
+diff --git a/jfaudiolib/include/sndcards.h b/jfaudiolib/include/sndcards.h
+index 7e5652a..aa14c32 100644
+--- a/jfaudiolib/include/sndcards.h
++++ b/jfaudiolib/include/sndcards.h
+@@ -31,19 +31,19 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ #ifndef __SNDCARDS_H
+ #define __SNDCARDS_H
+ 
+-#define ASS_VERSION_STRING "JonoF 20090718"
++#define ASS_VERSION_STRING "JonoF 20210502"
+ 
+ typedef enum
+    {
+    ASS_NoSound,
+-   ASS_SDL,
+    ASS_CoreAudio,
+    ASS_DirectSound,
+    ASS_WinMM,
+-   ASS_FluidSynth,
++   ASS_FluidSynth,
+    ASS_ALSA,
++   ASS_SDL,
+    ASS_NumSoundCards,
+-	ASS_AutoDetect = -2
++   ASS_AutoDetect = -2
+    } soundcardnames;
+ 
+ #endif
+diff --git a/jfaudiolib/jfaudiolib.xcodeproj/project.pbxproj b/jfaudiolib/jfaudiolib.xcodeproj/project.pbxproj
+index 0e51a6f..74f336e 100644
+--- a/jfaudiolib/jfaudiolib.xcodeproj/project.pbxproj
++++ b/jfaudiolib/jfaudiolib.xcodeproj/project.pbxproj
+@@ -10,6 +10,8 @@
+ 		AB0A488F1E43574900CC2214 /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0A488C1E43574900CC2214 /* libogg.a */; };
+ 		AB0A48901E43574900CC2214 /* libvorbis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0A488D1E43574900CC2214 /* libvorbis.a */; };
+ 		AB0A48911E43574900CC2214 /* libvorbisfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0A488E1E43574900CC2214 /* libvorbisfile.a */; };
++		AB21362327531AA80033C569 /* assmisc.h in Headers */ = {isa = PBXBuildFile; fileRef = AB21362227531AA80033C569 /* assmisc.h */; };
++		AB21362B275378D90033C569 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB21362A275378D90033C569 /* Foundation.framework */; };
+ 		AB217B65172E645C00364868 /* driver_coreaudio.c in Sources */ = {isa = PBXBuildFile; fileRef = AB217B64172E645C00364868 /* driver_coreaudio.c */; };
+ 		AB217B67172E646A00364868 /* driver_coreaudio.h in Headers */ = {isa = PBXBuildFile; fileRef = AB217B66172E646A00364868 /* driver_coreaudio.h */; };
+ 		AB217B6D172E74BB00364868 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB217B6B172E669100364868 /* AudioUnit.framework */; };
+@@ -59,6 +61,8 @@
+ 		AB0A488C1E43574900CC2214 /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libogg.a; path = "third-party/osx/out/lib/libogg.a"; sourceTree = "<group>"; };
+ 		AB0A488D1E43574900CC2214 /* libvorbis.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvorbis.a; path = "third-party/osx/out/lib/libvorbis.a"; sourceTree = "<group>"; };
+ 		AB0A488E1E43574900CC2214 /* libvorbisfile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvorbisfile.a; path = "third-party/osx/out/lib/libvorbisfile.a"; sourceTree = "<group>"; };
++		AB21362227531AA80033C569 /* assmisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assmisc.h; sourceTree = "<group>"; };
++		AB21362A275378D90033C569 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+ 		AB217B64172E645C00364868 /* driver_coreaudio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = driver_coreaudio.c; sourceTree = "<group>"; };
+ 		AB217B66172E646A00364868 /* driver_coreaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = driver_coreaudio.h; sourceTree = "<group>"; };
+ 		AB217B6B172E669100364868 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+@@ -113,6 +117,7 @@
+ 				AB32FA9A107712B700A9BAFF /* libjfaudiolib.a in Frameworks */,
+ 				AB217B6D172E74BB00364868 /* AudioUnit.framework in Frameworks */,
+ 				ABE4C94C172EA55A00B18CE9 /* AudioToolbox.framework in Frameworks */,
++				AB21362B275378D90033C569 /* Foundation.framework in Frameworks */,
+ 			);
+ 			runOnlyForDeploymentPostprocessing = 0;
+ 		};
+@@ -143,6 +148,7 @@
+ 			children = (
+ 				ABFBB51E102EBD4100D48B58 /* _midi.h */,
+ 				AB2E9E4D1011E65900DD2F1F /* _multivc.h */,
++				AB21362227531AA80033C569 /* assmisc.h */,
+ 				AB32F97010762A7900A9BAFF /* asssys.c */,
+ 				AB32F97110762A7900A9BAFF /* asssys.h */,
+ 				ABBD3F17101FFBD900F32F37 /* cd.c */,
+@@ -185,6 +191,7 @@
+ 		AB8C582E101B6B7900B42306 /* Frameworks */ = {
+ 			isa = PBXGroup;
+ 			children = (
++				AB21362A275378D90033C569 /* Foundation.framework */,
+ 				AB0A488C1E43574900CC2214 /* libogg.a */,
+ 				AB0A488D1E43574900CC2214 /* libvorbis.a */,
+ 				AB0A488E1E43574900CC2214 /* libvorbisfile.a */,
+@@ -216,6 +223,7 @@
+ 				ABFBB525102EBD4100D48B58 /* midi.h in Headers */,
+ 				ABFBB526102EBD4100D48B58 /* midifuncs.h in Headers */,
+ 				AB32F97310762A7900A9BAFF /* asssys.h in Headers */,
++				AB21362327531AA80033C569 /* assmisc.h in Headers */,
+ 				AB217B67172E646A00364868 /* driver_coreaudio.h in Headers */,
+ 			);
+ 			runOnlyForDeploymentPostprocessing = 0;
+@@ -268,10 +276,11 @@
+ 			};
+ 			buildConfigurationList = AB2E9E331011E60300DD2F1F /* Build configuration list for PBXProject "jfaudiolib" */;
+ 			compatibilityVersion = "Xcode 3.2";
+-			developmentRegion = English;
++			developmentRegion = en;
+ 			hasScannedForEncodings = 0;
+ 			knownRegions = (
+-				English,
++				Base,
++				en,
+ 			);
+ 			mainGroup = AB2E9E301011E60300DD2F1F;
+ 			productRefGroup = AB2E9E431011E61700DD2F1F /* Products */;
+@@ -355,6 +364,11 @@
+ 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+ 				ONLY_ACTIVE_ARCH = YES;
+ 				SKIP_INSTALL = YES;
++				WARNING_CFLAGS = (
++					"-W",
++					"-Wall",
++					"-Wno-unused-variable",
++				);
+ 			};
+ 			name = Debug;
+ 		};
+@@ -371,6 +385,11 @@
+ 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/third-party/osx/out/include/**";
+ 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+ 				SKIP_INSTALL = YES;
++				WARNING_CFLAGS = (
++					"-W",
++					"-Wall",
++					"-Wno-unused-variable",
++				);
+ 			};
+ 			name = Release;
+ 		};
+diff --git a/jfaudiolib/samples/test.mid b/jfaudiolib/samples/test.mid
+new file mode 100644
+index 0000000..c080b02
+Binary files /dev/null and b/jfaudiolib/samples/test.mid differ
+diff --git a/jfaudiolib/samples/test.ogg b/jfaudiolib/samples/test.ogg
+new file mode 100644
+index 0000000..8cafe68
+Binary files /dev/null and b/jfaudiolib/samples/test.ogg differ
+diff --git a/jfaudiolib/samples/test.wav b/jfaudiolib/samples/test.wav
+new file mode 100644
+index 0000000..35a22cc
+Binary files /dev/null and b/jfaudiolib/samples/test.wav differ
+diff --git a/jfaudiolib/src/_midi.h b/jfaudiolib/src/_midi.h
+index 7b5fda6..f9272ae 100644
+--- a/jfaudiolib/src/_midi.h
++++ b/jfaudiolib/src/_midi.h
+@@ -32,7 +32,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ #define ___MIDI_H
+ 
+ #define RELATIVE_BEAT( measure, beat, tick ) \
+-   ( ( tick ) + ( ( beat ) << 9 ) + ( ( measure ) << 16 ) )
++   (unsigned)( ( tick ) + ( ( beat ) << 9 ) + ( ( measure ) << 16 ) )
+ 
+ #define GENMIDI_DefaultVolume 100
+ 
+diff --git a/jfaudiolib/src/assmisc.h b/jfaudiolib/src/assmisc.h
+new file mode 100644
+index 0000000..5addecc
+--- /dev/null
++++ b/jfaudiolib/src/assmisc.h
+@@ -0,0 +1,59 @@
++/*
++Copyright (C) 1994-1995 Apogee Software, Ltd.
++
++This program is free software; you can redistribute it and/or
++modify it under the terms of the GNU General Public License
++as published by the Free Software Foundation; either version 2
++of the License, or (at your option) any later version.
++
++This program is distributed in the hope that it will be useful,
++but WITHOUT ANY WARRANTY; without even the implied warranty of
++MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
++
++See the GNU General Public License for more details.
++
++You should have received a copy of the GNU General Public License
++along with this program; if not, write to the Free Software
++Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
++
++*/
++
++#ifndef __ASSMISC_H
++#define __ASSMISC_H
++
++#ifdef __POWERPC__
++#define LITTLE16(s) SWAP16(s)
++#define LITTLE32(s) SWAP32(s)
++static inline unsigned short SWAP16(unsigned short s)
++{
++	return (s >> 8) | (s << 8);
++}
++static inline unsigned int SWAP32(unsigned int s)
++{
++	return (s >> 24) | (s << 24) | ((s&0xff00) << 8) | ((s & 0xff0000) >> 8);
++}
++#else
++#define LITTLE16(s) (s)
++#define LITTLE32(s) (s)
++#endif
++
++#ifdef _MSC_VER
++#define inline _inline
++#define alloca _alloca
++#endif
++
++#ifndef min
++#define min(x,y) ((x) < (y) ? (x) : (y))
++#endif
++#ifndef max
++#define max(x,y) ((x) > (y) ? (x) : (y))
++#endif
++
++#ifndef TRUE
++#define TRUE  ( 1 == 1 )
++#endif
++#ifndef FALSE
++#define FALSE ( !TRUE )
++#endif
++
++#endif
+diff --git a/jfaudiolib/src/asssys.c b/jfaudiolib/src/asssys.c
+index 2e54acb..a8b88ef 100644
+--- a/jfaudiolib/src/asssys.c
++++ b/jfaudiolib/src/asssys.c
+@@ -23,12 +23,27 @@
+ #ifdef _WIN32
+ # define WIN32_LEAN_AND_MEAN
+ # include <windows.h>
++# include <stdarg.h>
++# include <stdio.h>
+ #else
+ # include <sys/types.h>
+ # include <sys/time.h>
+ # include <unistd.h>
++# include <stdarg.h>
++# include <stdio.h>
+ #endif
+ 
++static void _ASS_MessageOutputString(const char *str)
++{
++#ifdef _WIN32
++    OutputDebugString(str);
++#else
++    fputs(str, stderr);
++#endif
++}
++
++void (*ASS_MessageOutputString)(const char *) = _ASS_MessageOutputString;
++
+ void ASS_Sleep(int msec)
+ {
+ #ifdef _WIN32
+@@ -41,3 +56,14 @@ void ASS_Sleep(int msec)
+ 	select(0, NULL, NULL, NULL, &tv);
+ #endif
+ }
++
++void ASS_Message(const char *fmt, ...)
++{
++    char text[256];
++    va_list va;
++
++    va_start(va, fmt);
++    vsnprintf(text, sizeof(text), fmt, va);
++    va_end(va);
++    ASS_MessageOutputString(text);
++}
+diff --git a/jfaudiolib/src/asssys.h b/jfaudiolib/src/asssys.h
+index 1099640..e8c961f 100644
+--- a/jfaudiolib/src/asssys.h
++++ b/jfaudiolib/src/asssys.h
+@@ -22,5 +22,6 @@
+ #define __ASSSYS_H
+ 
+ void ASS_Sleep(int msec);
++void ASS_Message(const char *fmt, ...);
+ 
+ #endif
+diff --git a/jfaudiolib/src/cd.c b/jfaudiolib/src/cd.c
+index f8b7279..d92f238 100644
+--- a/jfaudiolib/src/cd.c
++++ b/jfaudiolib/src/cd.c
+@@ -20,6 +20,7 @@
+ 
+ #include "cd.h"
+ #include "drivers.h"
++#include "asssys.h"
+ #include <assert.h>
+ 
+ static int ErrorCode = CD_Ok;
+@@ -56,38 +57,41 @@ const char * CD_ErrorString(int code)
+ int CD_Init(int SoundCard)
+ {
+     int err;
++    int mincard, maxcard, card;
+ 
+-	if (SoundCard == ASS_AutoDetect) {
+-#if 0 //defined __APPLE__
+-		SoundCard = ASS_CoreAudio;
+-#elif defined _WIN32
+-		SoundCard = ASS_WinMM;
+-#elif defined HAVE_SDL
+-		SoundCard = ASS_SDL;
+-#else
+-		SoundCard = ASS_NoSound;
+-#endif
+-	}
+-	
+-	if (SoundCard < 0 || SoundCard >= ASS_NumSoundCards) {
+-		ErrorCode = CD_InvalidCard;
+-		return CD_Error;
+-	}
+-	
+-	if (SoundDriver_IsCDSupported(SoundCard) == 0) {
+-		// unsupported cards fall back to no sound
+-		SoundCard = ASS_NoSound;
+-	}
+-   
+-    ASS_CDSoundDriver = SoundCard;
+-
+-    err = SoundDriver_CD_Init();
+-    if (err != CD_Ok) {
+-        ErrorCode = CD_DriverError;
++    if (SoundCard == ASS_AutoDetect) {
++        mincard = ASS_NoSound + 1;
++        maxcard = ASS_NumSoundCards - 1;
++    } else if (SoundCard < 0 || SoundCard >= ASS_NumSoundCards) {
++        ErrorCode = CD_InvalidCard;
+         return CD_Error;
++    } else {
++        mincard = SoundCard;
++        maxcard = SoundCard;
+     }
+ 
+-    return CD_Ok;
++    for (card = mincard; card <= maxcard; card++) {
++        if (!SoundDriver_IsCDSupported(card)) {
++            continue;
++        } else if (SoundCard == ASS_AutoDetect) {
++            ASS_Message("CD_Init: trying %s\n", SoundDriver_GetName(card));
++        }
++
++        ASS_CDSoundDriver = card;
++        err = SoundDriver_CD_Init();
++        if (err == CD_Ok) {
++            return CD_Ok;
++        }
++    }
++
++    if (SoundCard == ASS_AutoDetect) {
++        // A failure to autodetect falls back to no sound.
++        ASS_CDSoundDriver = ASS_NoSound;
++        return CD_Ok;
++    }
++
++    ErrorCode = CD_DriverError;
++    return CD_Error;
+ }
+ 
+ int  CD_GetCurrentDriver(void)
+diff --git a/jfaudiolib/src/driver_alsa.c b/jfaudiolib/src/driver_alsa.c
+index 0c10a98..be791dd 100644
+--- a/jfaudiolib/src/driver_alsa.c
++++ b/jfaudiolib/src/driver_alsa.c
+@@ -24,8 +24,9 @@
+ 
+ #include "midifuncs.h"
+ #include "driver_alsa.h"
++#include "asssys.h"
+ #include <pthread.h>
+-#include <asoundlib.h>
++#include <alsa/asoundlib.h>
+ #include <unistd.h>
+ #include <math.h>
+ 
+@@ -118,11 +119,11 @@ static inline void sequence_event(snd_seq_event_t * ev)
+     snd_seq_ev_schedule_tick(ev, seq_queue, 0, threadTimer);
+     result = snd_seq_event_output(seq, ev);
+     if (result < 0) {
+-        fprintf(stderr, "ALSA could not queue event: err %d\n", result);
++        ASS_Message("ALSADrv: could not queue event: err %d\n", result);
+     } else {
+         while ((result = snd_seq_drain_output(seq)) > 0) ;
+         if (result < 0) {
+-            fprintf(stderr, "ALSA could not drain output: err %d\n", result);
++            ASS_Message("ALSADrv: could not drain output: err %d\n", result);
+         }
+ 
+         snd_seq_sync_output_queue(seq);
+@@ -194,7 +195,7 @@ static unsigned int get_tick(void)
+     
+     result = snd_seq_get_queue_status(seq, seq_queue, status);
+     if (result < 0) {
+-        fprintf(stderr, "ALSA snd_seq_get_queue_status err %d\n", result);
++        ASS_Message("ALSADrv: snd_seq_get_queue_status err %d\n", result);
+         return 0;
+     }
+ 
+@@ -207,6 +208,8 @@ static void * threadProc(void * parm)
+     int sleepAmount = 1000000 / THREAD_QUEUE_INTERVAL;
+     unsigned int sequenceTime;
+ 
++    (void)parm;
++
+     // prime the pump
+     threadTimer = get_tick();
+     threadQueueTimer = threadTimer + threadQueueTicks;
+@@ -248,13 +251,15 @@ static void * threadProc(void * parm)
+ int ALSADrv_MIDI_Init(midifuncs *funcs, const char *params)
+ {
+     int result;
++
++    (void)params;
+     
+     ALSADrv_MIDI_Shutdown();
+     memset(funcs, 0, sizeof(midifuncs));
+ 
+     result = snd_seq_open(&seq, "default", SND_SEQ_OPEN_DUPLEX, 0);
+     if (result < 0) {
+-        fprintf(stderr, "ALSA snd_seq_open err %d\n", result);
++        ASS_Message("ALSADrv: snd_seq_open err %d\n", result);
+         ErrorCode = ALSAErr_SeqOpen;
+         return ALSAErr_Error;
+     }
+@@ -264,7 +269,7 @@ int ALSADrv_MIDI_Init(midifuncs *funcs, const char *params)
+                   SND_SEQ_PORT_TYPE_APPLICATION);
+     if (seq_port < 0) {
+         ALSADrv_MIDI_Shutdown();
+-        fprintf(stderr, "ALSA snd_seq_create_simple_port err %d\n", seq_port);
++        ASS_Message("ALSADrv: snd_seq_create_simple_port err %d\n", seq_port);
+         ErrorCode = ALSAErr_CreateSimplePort;
+         return ALSAErr_Error;
+     }
+@@ -274,7 +279,7 @@ int ALSADrv_MIDI_Init(midifuncs *funcs, const char *params)
+     seq_queue = snd_seq_alloc_queue(seq);
+     if (seq_queue < 0) {
+         ALSADrv_MIDI_Shutdown();
+-        fprintf(stderr, "ALSA snd_seq_alloc_queue err %d\n", seq_queue);
++        ASS_Message("ALSADrv: snd_seq_alloc_queue err %d\n", seq_queue);
+         ErrorCode = ALSAErr_AllocQueue;
+         return ALSAErr_Error;
+     }
+@@ -282,7 +287,7 @@ int ALSADrv_MIDI_Init(midifuncs *funcs, const char *params)
+     result = snd_seq_connect_to(seq, seq_port, 128, 0);
+     if (result < 0) {
+         ALSADrv_MIDI_Shutdown();
+-        fprintf(stderr, "ALSA snd_seq_connect_to err %d\n", result);
++        ASS_Message("ALSADrv: snd_seq_connect_to err %d\n", result);
+         ErrorCode = ALSAErr_ConnectTo;
+         return ALSAErr_Error;
+     }
+@@ -326,7 +331,7 @@ int ALSADrv_MIDI_StartPlayback(void (*service)(void))
+     ALSADrv_MIDI_QueueStart();
+ 
+     if (pthread_create(&thread, NULL, threadProc, NULL)) {
+-        fprintf(stderr, "ALSA pthread_create returned error\n");
++        ASS_Message("ALSADrv: pthread_create returned error\n");
+ 
+         ALSADrv_MIDI_HaltPlayback();
+         
+@@ -349,7 +354,7 @@ void ALSADrv_MIDI_HaltPlayback(void)
+     threadQuit = 1;
+ 
+     if (pthread_join(thread, &ret)) {
+-        fprintf(stderr, "ALSA pthread_join returned error\n");
++        ASS_Message("ALSADrv: pthread_join returned error\n");
+     }
+ 
+     ALSADrv_MIDI_QueueStop();
+@@ -390,12 +395,12 @@ void ALSADrv_MIDI_QueueStart(void)
+     if (!queueRunning) {
+         result = snd_seq_start_queue(seq, seq_queue, NULL);
+         if (result < 0) {
+-            fprintf(stderr, "ALSA snd_seq_start_queue err %d\n", result);
++            ASS_Message("ALSADrv: snd_seq_start_queue err %d\n", result);
+         }
+ 
+         while ((result = snd_seq_drain_output(seq)) > 0);
+         if (result < 0) {
+-            fprintf(stderr, "ALSA could not drain output: err %d\n", result);
++            ASS_Message("ALSADrv: could not drain output: err %d\n", result);
+         }
+ 
+         snd_seq_sync_output_queue(seq);
+@@ -411,12 +416,12 @@ void ALSADrv_MIDI_QueueStop(void)
+     if (queueRunning) {
+         result = snd_seq_stop_queue(seq, seq_queue, NULL);
+         if (result < 0) {
+-            fprintf(stderr, "ALSA snd_seq_stop_queue err %d\n", result);
++            ASS_Message("ALSADrv: snd_seq_stop_queue err %d\n", result);
+         }
+ 
+         while ((result = snd_seq_drop_output(seq)) > 0);
+         if (result < 0) {
+-            fprintf(stderr, "ALSA could not drop output: err %d\n", result);
++            ASS_Message("ALSADrv: could not drop output: err %d\n", result);
+         }
+ 
+         snd_seq_sync_output_queue(seq);
+diff --git a/jfaudiolib/src/driver_coreaudio.c b/jfaudiolib/src/driver_coreaudio.c
+index ca61f29..f299ebe 100644
+--- a/jfaudiolib/src/driver_coreaudio.c
++++ b/jfaudiolib/src/driver_coreaudio.c
+@@ -29,6 +29,7 @@
+ #include <AudioUnit/AudioUnit.h>
+ #include <AudioToolbox/AudioToolbox.h>
+ #include <pthread.h>
++#include "asssys.h"
+ #include "midifuncs.h"
+ #include "driver_coreaudio.h"
+ 
+@@ -40,7 +41,8 @@ enum {
+     CAErr_AssembleAUGraph,
+     CAErr_InitialiseAUGraph,
+     CAErr_SetPCMFormat,
+-    CAErr_Mutex
++    CAErr_Mutex,
++    CAErr_SetSoundBank
+ };
+ 
+ enum {
+@@ -79,6 +81,7 @@ static unsigned int MidiFrameOffset = 0;
+ #define MIDI_MONO_MODE_ON     0x7E
+ #define MIDI_ALL_NOTES_OFF    0x7B
+ 
++static char soundBankName[PATH_MAX+1] = "";
+ 
+ 
+ static OSStatus pcmService(
+@@ -91,7 +94,9 @@ static OSStatus pcmService(
+ {
+     UInt32 remaining, len, bufn;
+     char *ptr, *sptr;
+-    
++
++    (void)inRefCon; (void)inActionFlags; (void)inTimeStamp; (void)inBusNumber; (void)inNumberFrames;
++
+     if (MixCallBack == 0) return noErr;
+ 
+     CoreAudioDrv_PCM_Lock();
+@@ -141,9 +146,11 @@ static OSStatus midiService(
+ {
+     int secondsThisCall = (inNumberFrames << 16) / 44100;
+ 
+-    if (MidiCallBack == 0) return;
++    (void)inRefCon; (void)inTimeStamp; (void)inBusNumber; (void)ioData;
++
++    if (MidiCallBack == 0) return noErr;
+     
+-    if (!(*ioActionFlags & kAudioUnitRenderAction_PreRender)) return;
++    if (!(*ioActionFlags & kAudioUnitRenderAction_PreRender)) return noErr;
+     
+     CoreAudioDrv_MIDI_Lock();
+     while (MidiFrameOffset < inNumberFrames) {
+@@ -211,7 +218,7 @@ const char *CoreAudioDrv_ErrorString( int ErrorNumber )
+ 
+ #define check_result(fcall, errval) \
+ if ((result = (fcall)) != noErr) {\
+-    fprintf(stderr, "CoreAudioDrv: error %d at line %d:" #fcall "\n", (int)result, __LINE__);\
++    ASS_Message("CoreAudioDrv: error %d at line %d:" #fcall "\n", (int)result, __LINE__);\
+     ErrorCode = errval;\
+     return CAErr_Error;\
+ }
+@@ -322,7 +329,22 @@ static int initialise_graph(int subsystem)
+                     0,
+                     &pcmDesc,
+                     sizeof(pcmDesc)), CAErr_SetPCMFormat);
+-    
++
++    // Set a sound bank for the DLS synth
++    if (soundBankName[0]) {
++        CFURLRef url = CFURLCreateFromFileSystemRepresentation(NULL,
++                           (const UInt8 *)soundBankName, strlen(soundBankName), FALSE);
++        if (url) {
++            check_result(AudioUnitSetProperty(synthunit,
++                            kMusicDeviceProperty_SoundBankURL,
++                            kAudioUnitScope_Global,
++                            0,
++                            &url,
++                            sizeof(url)), CAErr_SetSoundBank);
++            CFRelease(url);
++        }
++    }
++
+     // set the synth notify callback
+     check_result(AudioUnitAddRenderNotify(synthunit, midiService, NULL), CAErr_InitialiseAUGraph);
+ 
+@@ -369,11 +391,41 @@ static int uninitialise_graph(int subsystem)
+     return CAErr_Ok;
+ }    
+ 
++static void parse_params(const char *params)
++{
++    char *parseparams, *savepair = NULL;
++    char *parampair, *paramname, *paramvalue;
++    char *firstpair;
++    int setok;
++
++    if (!params || !params[0]) return;
++
++    parseparams = malloc(strlen(params) + 1);
++    strcpy(parseparams, params);
++    firstpair = parseparams;
++    while ((parampair = strtok_r(firstpair, " ", &savepair))) {
++        firstpair = NULL;
++        paramname = strtok_r(parampair, "=", &paramvalue);
++        if (!paramname) {
++            break;
++        }
++        if (strcmp(paramname, "soundbank") == 0 || strcmp(paramname, "soundfont") == 0) {
++            ASS_Message("CoreAudioDrv: using sound bank %s\n", paramvalue);
++            strcpy(soundBankName, paramvalue);
++            continue;
++        }
++    }
++
++    free(parseparams);
++}
++
+ int CoreAudioDrv_PCM_Init(int * mixrate, int * numchannels, int * samplebits, void * initdata)
+ {
+     OSStatus result = noErr;
+     AudioStreamBasicDescription pcmDesc;
+-    
++
++    (void)initdata;
++
+     result = initialise_graph(CASystem_pcm);
+     if (result != CAErr_Ok) {
+         return result;
+@@ -547,6 +599,8 @@ int CoreAudioDrv_MIDI_Init(midifuncs *funcs, const char *params)
+     
+     memset(funcs, 0, sizeof(midifuncs));
+ 
++    parse_params(params);
++
+     result = initialise_graph(CASystem_midi);
+     if (result != CAErr_Ok) {
+         return result;
+diff --git a/jfaudiolib/src/driver_directsound.c b/jfaudiolib/src/driver_directsound.c
+index 6c18b1e..352b638 100644
+--- a/jfaudiolib/src/driver_directsound.c
++++ b/jfaudiolib/src/driver_directsound.c
+@@ -28,8 +28,7 @@
+ #include <mmsystem.h>
+ #include <dsound.h>
+ #include <stdlib.h>
+-#include <stdio.h>
+-
++#include "asssys.h"
+ #include "driver_directsound.h"
+ 
+ enum {
+@@ -111,7 +110,7 @@ static void FillBuffer(int bufnum)
+     DWORD remaining, remaining2;
+     int retries = 1;
+     
+-    //fprintf(stderr, "DirectSound FillBuffer: filling %d\n", bufnum);
++    //ASS_Message("DirectSoundDrv: FillBuffer filling %d\n", bufnum);
+ 
+     do {
+         err = IDirectSoundBuffer_Lock(lpdsbsec,
+@@ -131,7 +130,7 @@ static void FillBuffer(int bufnum)
+                     continue;
+                 }
+             }
+-            fprintf(stderr, "DirectSound FillBuffer: err %x\n", (unsigned int) err);
++            ASS_Message("DirectSoundDrv: FillBuffer err %x\n", (unsigned int) err);
+             return;
+         }
+         break;
+@@ -166,15 +165,15 @@ static DWORD WINAPI fillDataThread(LPVOID lpParameter)
+                     FillBuffer(WAIT_OBJECT_0 + 1 - waitret);
+                     ReleaseMutex(mutex);
+                 } else {
+-                    fprintf(stderr, "DirectSound fillDataThread: wfso err %d\n", (int) waitret2);
++                    ASS_Message("DirectSoundDrv: fillDataThread wfso err %d\n", (int) waitret2);
+                 }
+                 break;
+             case WAIT_OBJECT_0+2:
+-                fprintf(stderr, "DirectSound fillDataThread: exiting\n");
++                ASS_Message("DirectSoundDrv: fillDataThread exiting\n");
+                 ExitThread(0);
+                 break;
+             default:
+-                fprintf(stderr, "DirectSound fillDataThread: wfmo err %d\n", (int) waitret);
++                ASS_Message("DirectSoundDrv: fillDataThread wfmo err %d\n", (int) waitret);
+                 break;
+         }
+ 	} while (1);
+@@ -272,7 +271,7 @@ const char *DirectSoundDrv_ErrorString( int ErrorNumber )
+ static void TeardownDSound(HRESULT err)
+ {
+     if (FAILED(err)) {
+-        fprintf(stderr, "Dying error: %x\n", (unsigned int) err);
++        ASS_Message("DirectSoundDrv: TeardownDSound error: %x\n", (unsigned int) err);
+     }
+ 
+     if (lpdsnotify)   IDirectSoundNotify_Release(lpdsnotify);
+@@ -405,8 +404,6 @@ int DirectSoundDrv_PCM_Init(int * mixrate, int * numchannels, int * samplebits,
+     
+     Initialised = 1;
+     
+-    fprintf(stderr, "DirectSound Init: yay\n");
+-    
+ 	return DSErr_Ok;
+ }
+ 
+@@ -482,7 +479,7 @@ void DirectSoundDrv_PCM_Lock(void)
+     
+     err = WaitForSingleObject(mutex, INFINITE);
+     if (err != WAIT_OBJECT_0) {
+-        fprintf(stderr, "DirectSound lock: wfso %d\n", (int) err);
++        ASS_Message("DirectSoundDrv: PCM_Lock wfso %d\n", (int) err);
+     }
+ }
+ 
+diff --git a/jfaudiolib/src/driver_fluidsynth.c b/jfaudiolib/src/driver_fluidsynth.c
+index 142576b..e5cf779 100644
+--- a/jfaudiolib/src/driver_fluidsynth.c
++++ b/jfaudiolib/src/driver_fluidsynth.c
+@@ -24,9 +24,9 @@
+ 
+ #include "midifuncs.h"
+ #include "driver_fluidsynth.h"
++#include "asssys.h"
+ #include <fluidsynth.h>
+ #include <string.h>
+-#include <stdio.h>
+ #include <stdlib.h>
+ #include <pthread.h>
+ #include <sys/select.h>
+@@ -59,6 +59,8 @@ enum {
+ static int ErrorCode = FSynthErr_Ok;
+ static char soundFontName[PATH_MAX+1] = "";
+ static const char *soundFontPaths[] = {
++    "./*.sf2",
++    "/usr/share/soundfonts/*.sf2",
+     "/usr/share/sounds/sf2/*.sf2",
+     NULL,
+ };
+@@ -152,13 +154,14 @@ static inline void sequence_event(void)
+     //fluid_sequencer_send_now(fluidsequencer, fluidevent);
+     result = fluid_sequencer_send_at(fluidsequencer, fluidevent, threadTimer, 1);
+     if (result < 0) {
+-        fprintf(stderr, "FluidSynthDrv: fluidsynth could not queue event\n");
++        ASS_Message("FluidSynthDrv: fluidsynth could not queue event\n");
+     }
+ }
+ 
+ static int find_soundfont(void)
+ {
+-    int pathn, globi, found = 0;
++    int pathn, found = 0;
++    unsigned globi;
+     glob_t globt;
+ 
+     for (pathn = 0; !found && soundFontPaths[pathn]; pathn++) {
+@@ -183,7 +186,7 @@ static int find_soundfont(void)
+         }
+     }
+ 
+-    return !found;
++    return found;
+ }
+ 
+ static void apply_params(const char *params, fluid_settings_t *settings)
+@@ -204,26 +207,30 @@ static void apply_params(const char *params, fluid_settings_t *settings)
+         if (!paramname) {
+             break;
+         }
++        if (strcmp(paramname, "soundfont") == 0 || strcmp(paramname, "soundbank") == 0) {
++            strcpy(soundFontName, paramvalue);
++            continue;
++        }
+ 
+         switch (fluid_settings_get_type(settings, paramname)) {
+             case FLUID_NUM_TYPE:
+-                fprintf(stderr, "FluidSynthDrv: setting '%s' to %f\n", paramname, atof(paramvalue));
++                ASS_Message("FluidSynthDrv: setting '%s' to %f\n", paramname, atof(paramvalue));
+                 setok = fluid_settings_setnum(settings, paramname, atof(paramvalue));
+                 break;
+             case FLUID_INT_TYPE:
+-                fprintf(stderr, "FluidSynthDrv: setting '%s' to %d\n", paramname, atoi(paramvalue));
++                ASS_Message("FluidSynthDrv: setting '%s' to %d\n", paramname, atoi(paramvalue));
+                 setok = fluid_settings_setint(settings, paramname, atoi(paramvalue));
+                 break;
+             case FLUID_STR_TYPE:
+-                fprintf(stderr, "FluidSynthDrv: setting '%s' to '%s'\n", paramname, paramvalue);
++                ASS_Message("FluidSynthDrv: setting '%s' to '%s'\n", paramname, paramvalue);
+                 setok = fluid_settings_setstr(settings, paramname, paramvalue);
+                 break;
+             default:
+                 setok = 0;
+                 break;
+         }
+-        if (!setok) {
+-            fprintf(stderr, "FluidSynthDrv: error setting '%s' to '%s'\n", paramname, paramvalue);
++        if (setok < 0) {
++            ASS_Message("FluidSynthDrv: error setting '%s' to '%s'\n", paramname, paramvalue);
+         }
+     }
+ 
+@@ -232,6 +239,8 @@ static void apply_params(const char *params, fluid_settings_t *settings)
+ 
+ static void Func_NoteOff( int channel, int key, int velocity )
+ {
++    (void)velocity;
++
+     fluid_event_noteoff(fluidevent, channel, key);
+     sequence_event();
+ }
+@@ -244,7 +253,9 @@ static void Func_NoteOn( int channel, int key, int velocity )
+ 
+ static void Func_PolyAftertouch( int channel, int key, int pressure )
+ {
+-    fprintf(stderr, "FluidSynthDrv: key %d channel %d aftertouch\n", key, channel);
++    (void)pressure;
++
++    ASS_Message("FluidSynthDrv: key %d channel %d aftertouch\n", key, channel);
+ }
+ 
+ static void Func_ControlChange( int channel, int number, int value )
+@@ -261,7 +272,9 @@ static void Func_ProgramChange( int channel, int program )
+ 
+ static void Func_ChannelAftertouch( int channel, int pressure )
+ {
+-    fprintf(stderr, "FluidSynthDrv: channel %d aftertouch\n", channel);
++    (void)pressure;
++
++    ASS_Message("FluidSynthDrv: channel %d aftertouch\n", channel);
+ }
+ 
+ static void Func_PitchBend( int channel, int lsb, int msb )
+@@ -276,6 +289,8 @@ static void * threadProc(void * parm)
+     int sleepAmount = 1000000 / THREAD_QUEUE_INTERVAL;
+     unsigned int sequenceTime;
+ 
++    (void)parm;
++
+     // prime the pump
+     threadTimer = fluid_sequencer_get_tick(fluidsequencer);
+     threadQueueTimer = threadTimer + threadQueueTicks;
+@@ -321,11 +336,7 @@ int FluidSynthDrv_MIDI_Init(midifuncs *funcs, const char *params)
+     FluidSynthDrv_MIDI_Shutdown();
+     memset(funcs, 0, sizeof(midifuncs));
+ 
+-    if (find_soundfont()) {
+-        ErrorCode = FSynthErr_BadSoundFont;
+-        return FSynthErr_Error;
+-    }
+-    fprintf(stderr, "FluidSynthDrv: using soundfont %s\n", soundFontName);
++    ASS_Message("FluidSynthDrv: using version %s, built with %s\n", fluid_version_str(), FLUIDSYNTH_VERSION);
+ 
+     fluidsettings = new_fluid_settings();
+     if (!fluidsettings) {
+@@ -334,46 +345,55 @@ int FluidSynthDrv_MIDI_Init(midifuncs *funcs, const char *params)
+     }
+ 
+     apply_params(params, fluidsettings);
+-        
++
++    if (soundFontName[0]) {
++        ASS_Message("FluidSynthDrv: using soundfont %s\n", soundFontName);
++    } else if (find_soundfont()) {
++        ASS_Message("FluidSynthDrv: using found soundfont %s\n", soundFontName);
++    } else {
++        fluid_settings_copystr(fluidsettings, "synth.default-soundfont", soundFontName,
++            sizeof(soundFontName));
++    }
++
+     fluidsynth = new_fluid_synth(fluidsettings);
+     if (!fluidsettings) {
+         FluidSynthDrv_MIDI_Shutdown();
+         ErrorCode = FSynthErr_NewFluidSynth;
+         return FSynthErr_Error;
+     }
+-    
+-    fluidaudiodriver = new_fluid_audio_driver(fluidsettings, fluidsynth);
+-    if (!fluidsettings) {
++
++    result = fluid_synth_sfload(fluidsynth, soundFontName, 1);
++    if (result < 0) {
+         FluidSynthDrv_MIDI_Shutdown();
+-        ErrorCode = FSynthErr_NewFluidAudioDriver;
++        ErrorCode = FSynthErr_BadSoundFont;
+         return FSynthErr_Error;
+     }
+-    
+-    fluidsequencer = new_fluid_sequencer();
++
++    fluidsequencer = new_fluid_sequencer2(0);
+     if (!fluidsettings) {
+         FluidSynthDrv_MIDI_Shutdown();
+         ErrorCode = FSynthErr_NewFluidSequencer;
+         return FSynthErr_Error;
+     }
+ 
+-    fluidevent = new_fluid_event();
+-    if (!fluidevent) {
++    synthseqid = fluid_sequencer_register_fluidsynth(fluidsequencer, fluidsynth);
++    if (synthseqid < 0) {
+         FluidSynthDrv_MIDI_Shutdown();
+-        ErrorCode = FSynthErr_NewFluidEvent;
++        ErrorCode = FSynthErr_RegisterFluidSynth;
+         return FSynthErr_Error;
+     }
+ 
+-    synthseqid = fluid_sequencer_register_fluidsynth(fluidsequencer, fluidsynth);
+-    if (synthseqid < 0) {
++    fluidaudiodriver = new_fluid_audio_driver(fluidsettings, fluidsynth);
++    if (!fluidsettings) {
+         FluidSynthDrv_MIDI_Shutdown();
+-        ErrorCode = FSynthErr_RegisterFluidSynth;
++        ErrorCode = FSynthErr_NewFluidAudioDriver;
+         return FSynthErr_Error;
+     }
+ 
+-    result = fluid_synth_sfload(fluidsynth, soundFontName, 1);
+-    if (result < 0) {
++    fluidevent = new_fluid_event();
++    if (!fluidevent) {
+         FluidSynthDrv_MIDI_Shutdown();
+-        ErrorCode = FSynthErr_BadSoundFont;
++        ErrorCode = FSynthErr_NewFluidEvent;
+         return FSynthErr_Error;
+     }
+ 
+@@ -393,21 +413,24 @@ int FluidSynthDrv_MIDI_Init(midifuncs *funcs, const char *params)
+ 
+ void FluidSynthDrv_MIDI_Shutdown(void)
+ {
+-    if (fluidevent) {
+-        delete_fluid_event(fluidevent);
++    if (fluidaudiodriver) {
++        delete_fluid_audio_driver(fluidaudiodriver);
++    }
++    if (synthseqid >= 0) {
++        fluid_sequencer_unregister_client(fluidsequencer, synthseqid);
+     }
+     if (fluidsequencer) {
+         delete_fluid_sequencer(fluidsequencer);
+     }
+-    if (fluidaudiodriver) {
+-        delete_fluid_audio_driver(fluidaudiodriver);
+-    }
+     if (fluidsynth) {
+         delete_fluid_synth(fluidsynth);
+     }
+     if (fluidsettings) {
+         delete_fluid_settings(fluidsettings);
+     }
++    if (fluidevent) {
++        delete_fluid_event(fluidevent);
++    }
+     synthseqid = -1;
+     fluidevent = 0;
+     fluidsequencer = 0;
+@@ -424,7 +447,7 @@ int FluidSynthDrv_MIDI_StartPlayback(void (*service)(void))
+     threadQuit = 0;
+ 
+     if (pthread_create(&thread, NULL, threadProc, NULL)) {
+-        fprintf(stderr, "FluidSynthDrv: pthread_create returned error\n");
++        ASS_Message("FluidSynthDrv: pthread_create returned error\n");
+         return FSynthErr_PlayThread;
+     }
+ 
+@@ -444,7 +467,7 @@ void FluidSynthDrv_MIDI_HaltPlayback(void)
+     threadQuit = 1;
+ 
+     if (pthread_join(thread, &ret)) {
+-        fprintf(stderr, "FluidSynthDrv: pthread_join returned error\n");
++        ASS_Message("FluidSynthDrv: pthread_join returned error\n");
+     }
+ 
+     threadRunning = 0;
+diff --git a/jfaudiolib/src/driver_nosound.c b/jfaudiolib/src/driver_nosound.c
+index af2a0ec..984681a 100644
+--- a/jfaudiolib/src/driver_nosound.c
++++ b/jfaudiolib/src/driver_nosound.c
+@@ -32,11 +32,13 @@ int NoSoundDrv_GetError(void)
+ 
+ const char *NoSoundDrv_ErrorString( int ErrorNumber )
+ {
++	(void)ErrorNumber;
+ 	return "No sound, Ok.";
+ }
+ 
+ int NoSoundDrv_PCM_Init(int * mixrate, int * numchannels, int * samplebits, void * initdata)
+ {
++	(void)mixrate; (void)numchannels; (void)samplebits; (void)initdata;
+ 	return 0;
+ }
+ 
+@@ -47,6 +49,7 @@ void NoSoundDrv_PCM_Shutdown(void)
+ int NoSoundDrv_PCM_BeginPlayback(char *BufferStart, int BufferSize,
+ 						int NumDivisions, void ( *CallBackFunc )( void ) )
+ {
++	(void)BufferStart; (void)BufferSize; (void)NumDivisions; (void)CallBackFunc;
+ 	return 0;
+ }
+ 
+@@ -74,6 +77,7 @@ void NoSoundDrv_CD_Shutdown(void)
+ 
+ int NoSoundDrv_CD_Play(int track, int loop)
+ {
++    (void)track; (void)loop;
+     return 0;
+ }
+ 
+@@ -83,6 +87,7 @@ void NoSoundDrv_CD_Stop(void)
+ 
+ void NoSoundDrv_CD_Pause(int pauseon)
+ {
++    (void)pauseon;
+ }
+ 
+ int NoSoundDrv_CD_IsPlaying(void)
+@@ -92,10 +97,12 @@ int NoSoundDrv_CD_IsPlaying(void)
+ 
+ void NoSoundDrv_CD_SetVolume(int volume)
+ {
++    (void)volume;
+ }
+ 
+ int NoSoundDrv_MIDI_Init(midifuncs *funcs, const char *params)
+ {
++    (void)params;
+     memset(funcs, 0, sizeof(midifuncs));
+     return 0;
+ }
+@@ -106,6 +113,7 @@ void NoSoundDrv_MIDI_Shutdown(void)
+ 
+ int  NoSoundDrv_MIDI_StartPlayback(void (*service)(void))
+ {
++    (void)service;
+     return 0;
+ }
+ 
+@@ -120,6 +128,7 @@ unsigned int NoSoundDrv_MIDI_GetTick(void)
+ 
+ void NoSoundDrv_MIDI_SetTempo(int tempo, int division)
+ {
++    (void)tempo; (void)division;
+ }
+ 
+ void NoSoundDrv_MIDI_Lock(void)
+diff --git a/jfaudiolib/src/driver_sdl.c b/jfaudiolib/src/driver_sdl.c
+index 1114db0..0bb9cde 100644
+--- a/jfaudiolib/src/driver_sdl.c
++++ b/jfaudiolib/src/driver_sdl.c
+@@ -31,6 +31,7 @@
+ #else
+ # include <SDL.h>
+ #endif
++#include "asssys.h"
+ #include "driver_sdl.h"
+ 
+ enum {
+@@ -51,7 +52,7 @@ static int ErrorCode = SDLErr_Ok;
+ static int Initialised = 0;
+ static int Playing = 0;
+ static int StartedSDL = 0;      // SDL services in use (1 = sound, 2 = CDA)
+-static int StartedSDLInit = 0;  // SDL services we initialised (0x80000000 means we used SDL_Init)
++static unsigned StartedSDLInit = 0;  // SDL services we initialised (0x80000000 means we used SDL_Init)
+ 
+ #if (SDL_MAJOR_VERSION == 1)
+ static SDL_CD *CDRom = 0;
+@@ -73,6 +74,8 @@ static void fillData(void * userdata, Uint8 * ptr, int remaining)
+     int len;
+     char *sptr;
+ 
++    (void)userdata;
++
+     while (remaining > 0) {
+         if (MixBufferUsed == MixBufferSize) {
+             MixCallBack();
+@@ -164,25 +167,24 @@ const char *SDLDrv_ErrorString( int ErrorNumber )
+ int SDLDrv_PCM_Init(int * mixrate, int * numchannels, int * samplebits, void * initdata)
+ {
+     Uint32 inited;
+-    Uint32 err = 0;
++    int err = 0;
+     SDL_AudioSpec spec, actual;
+ 
++    (void)initdata;
++
+     if (Initialised) {
+         SDLDrv_PCM_Shutdown();
+     }
+ 
+     inited = SDL_WasInit(SDL_INIT_EVERYTHING);
+-    //fprintf(stderr, "inited = %x\n", inited);
+ 
+     if (inited == 0) {
+         // nothing was initialised
+         err = SDL_Init(SDL_INIT_AUDIO);
+         StartedSDLInit |= 0x80000000 + SDL_INIT_AUDIO;
+-        //fprintf(stderr, "called SDL_Init\n");
+     } else if (!(inited & SDL_INIT_AUDIO)) {
+         err = SDL_InitSubSystem(SDL_INIT_AUDIO);
+         StartedSDLInit |= SDL_INIT_AUDIO;
+-        //fprintf(stderr, "called SDL_InitSubSystem\n");
+     }
+ 
+     if (err < 0) {
+@@ -196,12 +198,12 @@ int SDLDrv_PCM_Init(int * mixrate, int * numchannels, int * samplebits, void * i
+     {
+         char drivername[256] = "(error)";
+         SDL_AudioDriverName(drivername, sizeof(drivername));
+-        fprintf(stderr, "SDL_AudioDriverName: %s\n", drivername);
++        ASS_Message("SDLDrv: audio driver: %s\n", drivername);
+     }
+     #else
+     {
+         const char * drivername = SDL_GetCurrentAudioDriver();
+-        fprintf(stderr, "SDL_GetCurrentAudioDriver: %s\n", drivername ? drivername : "(error)");
++        ASS_Message("SDLDrv: audio driver: %s\n", drivername ? drivername : "(error)");
+     }
+     #endif
+ 
+@@ -248,18 +250,18 @@ int SDLDrv_PCM_Init(int * mixrate, int * numchannels, int * samplebits, void * i
+             case AUDIO_S16MSB: format = "AUDIO_S16MSB"; break;
+             default: format = "?!"; break;
+         }
+-        fprintf(stderr, "SDL_OpenAudio: actual.format = %s\n", format);
++        ASS_Message("SDLDrv: audio format: %s\n", format);
+         ErrorCode = SDLErr_OpenAudio;
+         err = 1;
+     }
+     if (actual.channels == 1 || actual.channels == 2) {
+         *numchannels = actual.channels;
+     } else {
+-        fprintf(stderr, "SDL_OpenAudio: actual.channels = %d\n", actual.channels);
++        ASS_Message("SDLDrv: audio channels: %d\n", actual.channels);
+         ErrorCode = SDLErr_OpenAudio;
+         err = 1;
+     }
+-    // fprintf(stderr, "SDL_OpenAudio: actual.samples = %d vs spec.samples = %d\n", actual.samples, spec.samples);
++    // ASS_Message("SDLDrv: actual samples = %d vs spec samples = %d\n", actual.samples, spec.samples);
+ 
+     if (err) {
+         SDL_CloseAudio();
+@@ -405,7 +407,7 @@ int SDLDrv_CD_Init(void)
+     
+     StartedSDL |= SDL_INIT_CDROM;
+     
+-    fprintf(stderr, "SDL_CDNumDrives: %d\n", SDL_CDNumDrives());
++    ASS_Message("SDLDrv: num CD drives: %d\n", SDL_CDNumDrives());
+     
+     CDRom = SDL_CDOpen(0);
+     if (!CDRom) {
+@@ -413,9 +415,9 @@ int SDLDrv_CD_Init(void)
+         return SDLErr_Error;
+     }
+     
+-    fprintf(stderr, "SDL_CD: numtracks: %d\n", CDRom->numtracks);
++    ASS_Message("SDLDrv: num CD tracks: %d\n", CDRom->numtracks);
+     for (i = 0; i < CDRom->numtracks; i++) {
+-        fprintf(stderr, "SDL_CD: track %d - %s, %dsec\n",
++        ASS_Message("SDLDrv: CD track %d - %s, %dsec\n",
+                 CDRom->track[i].id,
+                 CDRom->track[i].type == SDL_AUDIO_TRACK ? "audio" : "data",
+                 CDRom->track[i].length / CD_FPS
+@@ -491,6 +493,8 @@ int SDLDrv_CD_Play(int track, int loop)
+     
+     return SDLErr_Ok;
+ #else
++    (void)track; (void)loop;
++
+     ErrorCode = SDLErr_CDNotSupported;
+     return SDLErr_Error;
+ #endif
+@@ -529,6 +533,8 @@ void SDLDrv_CD_Pause(int pauseon)
+     } else {
+         SDL_CDResume(CDRom);
+     }
++#else
++    (void)pauseon;
+ #endif
+ }
+ 
+@@ -546,4 +552,5 @@ int SDLDrv_CD_IsPlaying(void)
+ 
+ void SDLDrv_CD_SetVolume(int volume)
+ {
++    (void)volume;
+ }
+diff --git a/jfaudiolib/src/driver_winmm.c b/jfaudiolib/src/driver_winmm.c
+index b70bdc3..a2919d3 100644
+--- a/jfaudiolib/src/driver_winmm.c
++++ b/jfaudiolib/src/driver_winmm.c
+@@ -31,15 +31,12 @@
+ #include <stdint.h>
+ #include <stdarg.h>
+ #include <assert.h>
+-
++#include "asssys.h"
++#include "assmisc.h"
+ #include "midifuncs.h"
+ #include "driver_winmm.h"
+ #include "linklist.h"
+ 
+-#ifdef _MSC_VER
+-#define inline _inline
+-#endif
+-
+ enum {
+    WinMMErr_Warning = -2,
+    WinMMErr_Error   = -1,
+@@ -256,7 +253,7 @@ int WinMMDrv_CD_Init(void)
+     mciopenparms.lpstrDeviceType = "cdaudio";
+     rv = mciSendCommand(0, MCI_OPEN, MCI_OPEN_TYPE, (DWORD_PTR) &mciopenparms);
+     if (rv) {
+-        fprintf(stderr, "WinMM CD_Init MCI_OPEN err %d\n", (int) rv);
++        ASS_Message("WinMMDrv: CD_Init MCI_OPEN err %d\n", (int) rv);
+         ErrorCode = WinMMErr_CDMCIOpen;
+         return WinMMErr_Error;
+     }
+@@ -266,7 +263,7 @@ int WinMMDrv_CD_Init(void)
+     mcisetparms.dwTimeFormat = MCI_FORMAT_MSF;
+     rv = mciSendCommand(cdDeviceID, MCI_SET, MCI_SET_TIME_FORMAT, (DWORD_PTR) &mcisetparms);
+     if (rv) {
+-        fprintf(stderr, "WinMM CD_Init MCI_SET err %d\n", (int) rv);
++        ASS_Message("WinMMDrv: CD_Init MCI_SET err %d\n", (int) rv);
+         mciSendCommand(cdDeviceID, MCI_CLOSE, 0, 0);
+         cdDeviceID = 0;
+ 
+@@ -317,7 +314,7 @@ int WinMMDrv_CD_Play(int track, int loop)
+     mcistatusparms.dwTrack = track;
+     rv = mciSendCommand(cdDeviceID, MCI_STATUS, MCI_WAIT | MCI_TRACK | MCI_STATUS_ITEM, (DWORD_PTR) &mcistatusparms);
+     if (rv) {
+-        fprintf(stderr, "WinMM CD_Play MCI_STATUS position err %d\n", (int) rv);
++        ASS_Message("WinMMDrv: CD_Play MCI_STATUS position err %d\n", (int) rv);
+         ErrorCode = WinMMErr_CDMCIPlay;
+         return WinMMErr_Error;
+     }
+@@ -327,7 +324,7 @@ int WinMMDrv_CD_Play(int track, int loop)
+     mcistatusparms.dwTrack = track;
+     rv = mciSendCommand(cdDeviceID, MCI_STATUS, MCI_WAIT | MCI_TRACK | MCI_STATUS_ITEM, (DWORD_PTR) &mcistatusparms);
+     if (rv) {
+-        fprintf(stderr, "WinMM CD_Play MCI_STATUS length err %d\n", (int) rv);
++        ASS_Message("WinMMDrv: CD_Play MCI_STATUS length err %d\n", (int) rv);
+         ErrorCode = WinMMErr_CDMCIPlay;
+         return WinMMErr_Error;
+     }
+@@ -344,7 +341,7 @@ int WinMMDrv_CD_Play(int track, int loop)
+     mciplayparms.dwCallback = (DWORD_PTR) notifyWindow;
+     rv = mciSendCommand(cdDeviceID, MCI_PLAY, MCI_FROM | MCI_TO | MCI_NOTIFY, (DWORD_PTR) &mciplayparms);
+     if (rv) {
+-        fprintf(stderr, "WinMM CD_Play MCI_PLAY err %d\n", (int) rv);
++        ASS_Message("WinMMDrv: CD_Play MCI_PLAY err %d\n", (int) rv);
+         ErrorCode = WinMMErr_CDMCIPlay;
+         return WinMMErr_Error;
+     }
+@@ -367,7 +364,7 @@ void WinMMDrv_CD_Stop(void)
+ 
+     rv = mciSendCommand(cdDeviceID, MCI_STOP, 0, (DWORD_PTR) &mcigenparms);
+     if (rv) {
+-        fprintf(stderr, "WinMM CD_Stop MCI_STOP err %d\n", (int) rv);
++        ASS_Message("WinMMDrv: CD_Stop MCI_STOP err %d\n", (int) rv);
+     }
+ }
+ 
+@@ -389,7 +386,7 @@ void WinMMDrv_CD_Pause(int pauseon)
+         mcistatusparms.dwItem = MCI_STATUS_POSITION;
+         rv = mciSendCommand(cdDeviceID, MCI_STATUS, MCI_WAIT | MCI_STATUS_ITEM, (DWORD_PTR) &mcistatusparms);
+         if (rv) {
+-            fprintf(stderr, "WinMM CD_Pause MCI_STATUS err %d\n", (int) rv);
++            ASS_Message("WinMMDrv: CD_Pause MCI_STATUS err %d\n", (int) rv);
+             return;
+         }
+ 
+@@ -397,7 +394,7 @@ void WinMMDrv_CD_Pause(int pauseon)
+ 
+         rv = mciSendCommand(cdDeviceID, MCI_STOP, 0, (DWORD_PTR) &mcigenparms);
+         if (rv) {
+-            fprintf(stderr, "WinMM CD_Pause MCI_STOP err %d\n", (int) rv);
++            ASS_Message("WinMMDrv: CD_Pause MCI_STOP err %d\n", (int) rv);
+         }
+     } else {
+         MCI_PLAY_PARMS mciplayparms;
+@@ -408,7 +405,7 @@ void WinMMDrv_CD_Pause(int pauseon)
+         mciplayparms.dwCallback = (DWORD_PTR) notifyWindow;
+         rv = mciSendCommand(cdDeviceID, MCI_PLAY, MCI_FROM | MCI_TO | MCI_NOTIFY, (DWORD_PTR) &mciplayparms);
+         if (rv) {
+-            fprintf(stderr, "WinMM CD_Pause MCI_PLAY err %d\n", (int) rv);
++            ASS_Message("WinMMDrv: CD_Pause MCI_PLAY err %d\n", (int) rv);
+             return;
+         }
+ 
+@@ -430,7 +427,7 @@ int WinMMDrv_CD_IsPlaying(void)
+     mcistatusparms.dwItem = MCI_STATUS_MODE;
+     rv = mciSendCommand(cdDeviceID, MCI_STATUS, MCI_WAIT | MCI_STATUS_ITEM, (DWORD_PTR) &mcistatusparms);
+     if (rv) {
+-        fprintf(stderr, "WinMM CD_IsPlaying MCI_STATUS err %d\n", (int) rv);
++        ASS_Message("WinMMDrv: CD_IsPlaying MCI_STATUS err %d\n", (int) rv);
+         return 0;
+     }
+ 
+@@ -444,40 +441,35 @@ void WinMMDrv_CD_SetVolume(int volume)
+ 
+ 
+ // will append "err nnn (ssss)\n" to the end of the string it emits
+-static void midi_error(MMRESULT rv, const char * fmt, ...)
++static const char *mmsyserr_str(MMRESULT rv)
+ {
+-    va_list va;
+-    const char * errtxt = "?";
+-    
+     switch (rv) {
+-        case MMSYSERR_NOERROR: errtxt = "MMSYSERR_NOERROR"; break;
+-        case MMSYSERR_BADDEVICEID: errtxt = "MMSYSERR_BADDEVICEID"; break;
+-        case MMSYSERR_NOTENABLED: errtxt = "MMSYSERR_NOTENABLED"; break;
+-        case MMSYSERR_ALLOCATED: errtxt = "MMSYSERR_ALLOCATED"; break;
+-        case MMSYSERR_INVALHANDLE: errtxt = "MMSYSERR_INVALHANDLE"; break;
+-        case MMSYSERR_NODRIVER: errtxt = "MMSYSERR_NODRIVER"; break;
+-        case MMSYSERR_NOMEM: errtxt = "MMSYSERR_NOMEM"; break;
+-        case MMSYSERR_NOTSUPPORTED: errtxt = "MMSYSERR_NOTSUPPORTED"; break;
+-        case MMSYSERR_BADERRNUM: errtxt = "MMSYSERR_BADERRNUM"; break;
+-        case MMSYSERR_INVALFLAG: errtxt = "MMSYSERR_INVALFLAG"; break;
+-        case MMSYSERR_INVALPARAM: errtxt = "MMSYSERR_INVALPARAM"; break;
+-        case MMSYSERR_HANDLEBUSY: errtxt = "MMSYSERR_HANDLEBUSY"; break;
+-        case MMSYSERR_INVALIDALIAS: errtxt = "MMSYSERR_INVALIDALIAS"; break;
+-        case MMSYSERR_BADDB: errtxt = "MMSYSERR_BADDB"; break;
+-        case MMSYSERR_KEYNOTFOUND: errtxt = "MMSYSERR_KEYNOTFOUND"; break;
+-        case MMSYSERR_READERROR: errtxt = "MMSYSERR_READERROR"; break;
+-        case MMSYSERR_WRITEERROR: errtxt = "MMSYSERR_WRITEERROR"; break;
+-        case MMSYSERR_DELETEERROR: errtxt = "MMSYSERR_DELETEERROR"; break;
+-        case MMSYSERR_VALNOTFOUND: errtxt = "MMSYSERR_VALNOTFOUND"; break;
+-        case MMSYSERR_NODRIVERCB: errtxt = "MMSYSERR_NODRIVERCB"; break;
+-        default: break;
++        case MMSYSERR_NOERROR: return "MMSYSERR_NOERROR";
++        case MMSYSERR_BADDEVICEID: return "MMSYSERR_BADDEVICEID";
++        case MMSYSERR_NOTENABLED: return "MMSYSERR_NOTENABLED";
++        case MMSYSERR_ALLOCATED: return "MMSYSERR_ALLOCATED";
++        case MMSYSERR_INVALHANDLE: return "MMSYSERR_INVALHANDLE";
++        case MMSYSERR_NODRIVER: return "MMSYSERR_NODRIVER";
++        case MMSYSERR_NOMEM: return "MMSYSERR_NOMEM";
++        case MMSYSERR_NOTSUPPORTED: return "MMSYSERR_NOTSUPPORTED";
++        case MMSYSERR_BADERRNUM: return "MMSYSERR_BADERRNUM";
++        case MMSYSERR_INVALFLAG: return "MMSYSERR_INVALFLAG";
++        case MMSYSERR_INVALPARAM: return "MMSYSERR_INVALPARAM";
++        case MMSYSERR_HANDLEBUSY: return "MMSYSERR_HANDLEBUSY";
++        case MMSYSERR_INVALIDALIAS: return "MMSYSERR_INVALIDALIAS";
++        case MMSYSERR_BADDB: return "MMSYSERR_BADDB";
++        case MMSYSERR_KEYNOTFOUND: return "MMSYSERR_KEYNOTFOUND";
++        case MMSYSERR_READERROR: return "MMSYSERR_READERROR";
++        case MMSYSERR_WRITEERROR: return "MMSYSERR_WRITEERROR";
++        case MMSYSERR_DELETEERROR: return "MMSYSERR_DELETEERROR";
++        case MMSYSERR_VALNOTFOUND: return "MMSYSERR_VALNOTFOUND";
++        case MMSYSERR_NODRIVERCB: return "MMSYSERR_NODRIVERCB";
++        default: return "?";
+     }
+-    
+-    va_start(va, fmt);
+-    vfprintf(stderr, fmt, va);
+-    va_end(va);
+-    
+-    fprintf(stderr, " err %d (%s)\n", (int)rv, errtxt);
++}
++#define midi_error(rv, fmt, ...) { \
++    ASS_Message(fmt, __VA_ARGS__); \
++    ASS_Message(" err %d (%s)\n", (int)(rv), mmsyserr_str(rv)); \
+ }
+ 
+ static void midi_dispose_buffer(MidiBuffer * node, const char * caller)
+@@ -487,7 +479,7 @@ static void midi_dispose_buffer(MidiBuffer * node, const char * caller)
+     if (node->prepared) {
+         rv = midiOutUnprepareHeader( (HMIDIOUT) midiStream, &node->hdr, sizeof(MIDIHDR) );
+         if (rv != MMSYSERR_NOERROR) {
+-            midi_error(rv, "WinMM %s/midi_dispose_buffer midiOutUnprepareHeader", caller);
++            midi_error(rv, "WinMMDrv: %s/midi_dispose_buffer midiOutUnprepareHeader", caller);
+         }
+         node->prepared = FALSE;
+     }
+@@ -498,11 +490,11 @@ static void midi_dispose_buffer(MidiBuffer * node, const char * caller)
+     
+         // when playing, we keep the buffers
+         LL_Add( (MidiBuffer*) &spareMidiBuffers, node, next, prev );
+-        //fprintf(stderr, "WinMM %s/midi_dispose_buffer recycling buffer %p\n", caller, node);
++        //ASS_Message("WinMMDrv: %s/midi_dispose_buffer recycling buffer %p\n", caller, node);
+     } else {
+         // when not, we throw them away
+         free(node);
+-        //fprintf(stderr, "WinMM %s/midi_dispose_buffer freeing buffer %p\n", caller, node);
++        //ASS_Message("WinMMDrv: %s/midi_dispose_buffer freeing buffer %p\n", caller, node);
+     }
+ }
+ 
+@@ -523,20 +515,20 @@ static void midi_free_buffers(void)
+ {
+     MidiBuffer *node, *next;
+ 
+-    //fprintf(stderr, "waiting for active buffers to return\n");
++    //ASS_Message("WinMMDrv: waiting for active buffers to return\n");
+     while (!LL_ListEmpty(&activeMidiBuffers, next, prev)) {
+         // wait for Windows to finish with all the buffers queued
+         midi_gc_buffers();
+-        //fprintf(stderr, "waiting...\n");
++        //ASS_Message("WinMMDrv: waiting...\n");
+         Sleep(10);
+     }
+-    //fprintf(stderr, "waiting over\n");
++    //ASS_Message("WinMMDrv: waiting over\n");
+ 
+     for ( node = spareMidiBuffers.next; node != &spareMidiBuffers; node = next ) {
+         next = node->next;
+         LL_Remove( node, next, prev );
+         free(node);
+-        //fprintf(stderr, "WinMM midi_free_buffers freeing buffer %p\n", node);
++        //ASS_Message("WinMMDrv: midi_free_buffers freeing buffer %p\n", node);
+     }
+     
+     assert(currentMidiBuffer == 0);
+@@ -574,7 +566,7 @@ static void midi_flush_current_buffer(void)
+         // we need to prepare the buffer
+         rv = midiOutPrepareHeader( (HMIDIOUT) midiStream, &currentMidiBuffer->hdr, sizeof(MIDIHDR) );
+         if (rv != MMSYSERR_NOERROR) {
+-            midi_error(rv, "WinMM midi_flush_current_buffer midiOutPrepareHeader");
++            midi_error(rv, "WinMMDrv: midi_flush_current_buffer midiOutPrepareHeader");
+             return;
+         }
+ 
+@@ -588,12 +580,12 @@ static void midi_flush_current_buffer(void)
+ 
+         rv = midiStreamOut(midiStream, &currentMidiBuffer->hdr, sizeof(MIDIHDR));
+         if (rv != MMSYSERR_NOERROR) {
+-            midi_error(rv, "WinMM midi_flush_current_buffer midiStreamOut");
++            midi_error(rv, "WinMMDrv: midi_flush_current_buffer midiStreamOut");
+             midi_dispose_buffer(currentMidiBuffer, "midi_flush_current_buffer");
+             return;
+         }
+ 
+-        //fprintf(stderr, "WinMM midi_flush_current_buffer queued buffer %p\n", currentMidiBuffer);
++        //ASS_Message("WinMMDrv: midi_flush_current_buffer queued buffer %p\n", currentMidiBuffer);
+     } else {
+         // midi file not playing, so send immediately
+         
+@@ -603,16 +595,16 @@ static void midi_flush_current_buffer(void)
+                 // busy-wait for Windows to be done with it
+                 while (!(currentMidiBuffer->hdr.dwFlags & MHDR_DONE)) ;
+                 
+-                //fprintf(stderr, "WinMM midi_flush_current_buffer sent immediate long\n");
++                //ASS_Message("WinMMDrv: midi_flush_current_buffer sent immediate long\n");
+             } else {
+-                midi_error(rv, "WinMM midi_flush_current_buffer midiOutLongMsg");
++                midi_error(rv, "WinMMDrv: midi_flush_current_buffer midiOutLongMsg");
+             }
+         } else {
+             rv = midiOutShortMsg( (HMIDIOUT) midiStream, evt->dwEvent );
+             if (rv == MMSYSERR_NOERROR) {
+-                //fprintf(stderr, "WinMM midi_flush_current_buffer sent immediate short\n");
++                //ASS_Message("WinMMDrv: midi_flush_current_buffer sent immediate short\n");
+             } else {
+-                midi_error(rv, "WinMM midi_flush_current_buffer midiOutShortMsg");
++                midi_error(rv, "WinMMDrv: midi_flush_current_buffer midiOutShortMsg");
+             }
+         }
+ 
+@@ -701,7 +693,7 @@ static BOOL midi_get_buffer(int length, unsigned char ** data)
+                 
+                 currentMidiBuffer = node;
+                 
+-                //fprintf(stderr, "WinMM midi_get_buffer fetched buffer %p\n", node);
++                //ASS_Message("WinMMDrv: midi_get_buffer fetched buffer %p\n", node);
+                 break;
+             }
+         }
+@@ -735,7 +727,7 @@ static BOOL midi_get_buffer(int length, unsigned char ** data)
+         
+         currentMidiBuffer = node;
+         
+-        //fprintf(stderr, "WinMM midi_get_buffer allocated buffer %p\n", node);
++        //ASS_Message("WinMMDrv: midi_get_buffer allocated buffer %p\n", node);
+     }
+ 
+     midi_setup_event(length, data);
+@@ -753,7 +745,7 @@ static inline void midi_sequence_event(void)
+         return;
+     }
+     
+-    //fprintf(stderr, "WinMM midi_sequence_event buffered\n");
++    //ASS_Message("WinMMDrv: midi_sequence_event buffered\n");
+ 
+     // update the delta time counter
+     midiLastEventTime = midiThreadTimer;
+@@ -768,7 +760,7 @@ static void Func_NoteOff( int channel, int key, int velocity )
+         data[1] = key;
+         data[2] = velocity;
+         midi_sequence_event();
+-    } else fprintf(stderr, "WinMM Func_NoteOff error\n");
++    } else ASS_Message("WinMMDrv: note off error\n");
+ }
+ 
+ static void Func_NoteOn( int channel, int key, int velocity )
+@@ -780,7 +772,7 @@ static void Func_NoteOn( int channel, int key, int velocity )
+         data[1] = key;
+         data[2] = velocity;
+         midi_sequence_event();
+-    } else fprintf(stderr, "WinMM Func_NoteOn error\n");
++    } else ASS_Message("WinMMDrv: note on error\n");
+ }
+ 
+ static void Func_PolyAftertouch( int channel, int key, int pressure )
+@@ -792,7 +784,7 @@ static void Func_PolyAftertouch( int channel, int key, int pressure )
+         data[1] = key;
+         data[2] = pressure;
+         midi_sequence_event();
+-    } else fprintf(stderr, "WinMM Func_PolyAftertouch error\n");
++    } else ASS_Message("WinMMDrv: poly aftertouch error\n");
+ }
+ 
+ static void Func_ControlChange( int channel, int number, int value )
+@@ -804,7 +796,7 @@ static void Func_ControlChange( int channel, int number, int value )
+         data[1] = number;
+         data[2] = value;
+         midi_sequence_event();
+-    } else fprintf(stderr, "WinMM Func_ControlChange error\n");
++    } else ASS_Message("WinMMDrv: control change error\n");
+ }
+ 
+ static void Func_ProgramChange( int channel, int program )
+@@ -815,7 +807,7 @@ static void Func_ProgramChange( int channel, int program )
+         data[0] = MIDI_PROGRAM_CHANGE | channel;
+         data[1] = program;
+         midi_sequence_event();
+-    } else fprintf(stderr, "WinMM Func_ProgramChange error\n");
++    } else ASS_Message("WinMMDrv: program change error\n");
+ }
+ 
+ static void Func_ChannelAftertouch( int channel, int pressure )
+@@ -826,7 +818,7 @@ static void Func_ChannelAftertouch( int channel, int pressure )
+         data[0] = MIDI_AFTER_TOUCH | channel;
+         data[1] = pressure;
+         midi_sequence_event();
+-    } else fprintf(stderr, "WinMM Func_ChannelAftertouch error\n");
++    } else ASS_Message("WinMMDrv: channel aftertouch error\n");
+ }
+ 
+ static void Func_PitchBend( int channel, int lsb, int msb )
+@@ -838,7 +830,7 @@ static void Func_PitchBend( int channel, int lsb, int msb )
+         data[1] = lsb;
+         data[2] = msb;
+         midi_sequence_event();
+-    } else fprintf(stderr, "WinMM Func_PitchBend error\n");
++    } else ASS_Message("WinMMDrv: pitch bend error\n");
+ }
+ 
+ static void Func_SysEx( const unsigned char * data, int length )
+@@ -848,7 +840,7 @@ static void Func_SysEx( const unsigned char * data, int length )
+     if (midi_get_buffer(length, &wdata)) {
+         memcpy(wdata, data, length);
+         midi_sequence_event();
+-    } else fprintf(stderr, "WinMM Func_SysEx error\n");
++    } else ASS_Message("WinMMDrv: sysex error\n");
+ }
+ 
+ int WinMMDrv_MIDI_Init(midifuncs * funcs, const char *params)
+@@ -875,7 +867,7 @@ int WinMMDrv_MIDI_Init(midifuncs * funcs, const char *params)
+         CloseHandle(midiMutex);
+         midiMutex = 0;
+ 
+-        midi_error(rv, "WinMM MIDI_Init midiStreamOpen");
++        midi_error(rv, "WinMMDrv: MIDI_Init midiStreamOpen");
+         ErrorCode = WinMMErr_MIDIStreamOpen;
+         return WinMMErr_Error;
+     }
+@@ -907,7 +899,7 @@ void WinMMDrv_MIDI_Shutdown(void)
+     if (midiStream) {
+         rv = midiStreamClose(midiStream);
+         if (rv != MMSYSERR_NOERROR) {
+-            midi_error(rv, "WinMM MIDI_Shutdown midiStreamClose");
++            midi_error(rv, "WinMMDrv: MIDI_Shutdown midiStreamClose");
+         }
+     }
+ 
+@@ -930,7 +922,7 @@ static DWORD midi_get_tick(void)
+ 
+     rv = midiStreamPosition(midiStream, &mmtime, sizeof(MMTIME));
+     if (rv != MMSYSERR_NOERROR) {
+-        midi_error(rv, "WinMM midi_get_tick midiStreamPosition");
++        midi_error(rv, "WinMMDrv: midi_get_tick midiStreamPosition");
+         return 0;
+     }
+ 
+@@ -943,7 +935,7 @@ static DWORD WINAPI midiDataThread(LPVOID lpParameter)
+     DWORD sequenceTime;
+     DWORD sleepAmount = 100 / THREAD_QUEUE_INTERVAL;
+     
+-    fprintf(stderr, "WinMM midiDataThread: started\n");
++    ASS_Message("WinMMDrv: midiDataThread started\n");
+ 
+     midiThreadTimer = midi_get_tick();
+     midiLastEventTime = midiThreadTimer;
+@@ -963,7 +955,7 @@ static DWORD WINAPI midiDataThread(LPVOID lpParameter)
+     do {
+         waitret = WaitForSingleObject(midiThreadQuitEvent, sleepAmount);
+         if (waitret == WAIT_OBJECT_0) {
+-            fprintf(stderr, "WinMM midiDataThread: exiting\n");
++            ASS_Message("WinMMDrv: midiDataThread exiting\n");
+             break;
+         } else if (waitret == WAIT_TIMEOUT) {
+             // queue a tick
+@@ -991,7 +983,7 @@ static DWORD WINAPI midiDataThread(LPVOID lpParameter)
+             WinMMDrv_MIDI_Unlock();
+ 
+         } else {
+-            fprintf(stderr, "WinMM midiDataThread: wfmo err %d\n", (int) waitret);
++            ASS_Message("WinMMDrv: midiDataThread wfmo err %d\n", (int) waitret);
+         }
+     } while (1);
+ 
+@@ -1042,7 +1034,7 @@ void WinMMDrv_MIDI_HaltPlayback(void)
+         SetEvent(midiThreadQuitEvent);
+ 
+         WaitForSingleObject(midiThread, INFINITE);
+-        fprintf(stderr, "WinMM MIDI_HaltPlayback synched\n");
++        ASS_Message("WinMMDrv: MIDI_HaltPlayback synched\n");
+ 
+         CloseHandle(midiThread);
+     }
+@@ -1052,12 +1044,12 @@ void WinMMDrv_MIDI_HaltPlayback(void)
+     }
+     
+     if (midiStreamRunning) {
+-        fprintf(stderr, "stopping stream\n");
++        ASS_Message("WinMMDrv: stopping stream\n");
+         rv = midiStreamStop(midiStream);
+         if (rv != MMSYSERR_NOERROR) {
+-            midi_error(rv, "WinMM MIDI_HaltPlayback midiStreamStop");
++            midi_error(rv, "WinMMDrv: MIDI_HaltPlayback midiStreamStop");
+         }
+-        fprintf(stderr, "stream stopped\n");
++        ASS_Message("WinMMDrv: stream stopped\n");
+     
+         midiStreamRunning = FALSE;
+     }
+@@ -1075,7 +1067,7 @@ void WinMMDrv_MIDI_SetTempo(int tempo, int division)
+     MIDIPROPTIMEDIV propTimediv;
+     BOOL running = midiStreamRunning;
+ 
+-    //fprintf(stderr, "MIDI_SetTempo %d/%d\n", tempo, division);
++    //ASS_Message("WinMMDrv: MIDI_SetTempo %d/%d\n", tempo, division);
+ 
+     propTempo.cbStruct = sizeof(MIDIPROPTEMPO);
+     propTempo.dwTempo = 60000000l / tempo;
+@@ -1088,13 +1080,13 @@ void WinMMDrv_MIDI_SetTempo(int tempo, int division)
+ 
+         rv = midiStreamProperty(midiStream, (LPBYTE) &propTimediv, MIDIPROP_SET | MIDIPROP_TIMEDIV);
+         if (rv != MMSYSERR_NOERROR) {
+-            midi_error(rv, "WinMM MIDI_SetTempo midiStreamProperty timediv");
++            midi_error(rv, "WinMMDrv: MIDI_SetTempo midiStreamProperty timediv");
+         }
+     }
+ 
+     rv = midiStreamProperty(midiStream, (LPBYTE) &propTempo, MIDIPROP_SET | MIDIPROP_TEMPO);
+     if (rv != MMSYSERR_NOERROR) {
+-        midi_error(rv, "WinMM MIDI_SetTempo midiStreamProperty tempo");
++        midi_error(rv, "WinMMDrv: MIDI_SetTempo midiStreamProperty tempo");
+     }
+ 
+     if (midiLastDivision != division) {
+@@ -1118,7 +1110,7 @@ void WinMMDrv_MIDI_Lock(void)
+ 
+     err = WaitForSingleObject(midiMutex, INFINITE);
+     if (err != WAIT_OBJECT_0) {
+-        fprintf(stderr, "WinMM midiMutex lock: wfso %d\n", (int) err);
++        ASS_Message("WinMMDrv: midiMutex lock: wfso %d\n", (int) err);
+     }
+ }
+ 
+diff --git a/jfaudiolib/src/drivers.c b/jfaudiolib/src/drivers.c
+index cfcfd4c..9a4f549 100644
+--- a/jfaudiolib/src/drivers.c
++++ b/jfaudiolib/src/drivers.c
+@@ -25,6 +25,9 @@
+ 
+ #include "drivers.h"
+ 
++//#define NO_COREAUDIO
++//#define NO_DIRECTSOUND
++
+ #include "driver_nosound.h"
+ 
+ #ifdef HAVE_SDL
+@@ -112,31 +115,6 @@ static struct {
+         NoSoundDrv_MIDI_SetTempo,
+         NoSoundDrv_MIDI_Lock,
+         NoSoundDrv_MIDI_Unlock,
+-   },
+-    
+-    // Simple DirectMedia Layer
+-    {
+-        "SDL",
+-    #ifdef HAVE_SDL
+-        SDLDrv_GetError,
+-        SDLDrv_ErrorString,
+-        SDLDrv_PCM_Init,
+-        SDLDrv_PCM_Shutdown,
+-        SDLDrv_PCM_BeginPlayback,
+-        SDLDrv_PCM_StopPlayback,
+-        SDLDrv_PCM_Lock,
+-        SDLDrv_PCM_Unlock,
+-        SDLDrv_CD_Init,
+-        SDLDrv_CD_Shutdown,
+-        SDLDrv_CD_Play,
+-        SDLDrv_CD_Stop,
+-        SDLDrv_CD_Pause,
+-        SDLDrv_CD_IsPlaying,
+-        SDLDrv_CD_SetVolume,
+-        UNSUPPORTED_MIDI,
+-    #else
+-        UNSUPPORTED_COMPLETELY,
+-    #endif
+     },
+ 
+     // OS X CoreAudio
+@@ -167,7 +145,7 @@ static struct {
+     // Windows DirectSound
+     {
+         "DirectSound",
+-    #ifdef _WIN32
++    #if defined _WIN32 && !defined NO_DIRECTSOUND
+         DirectSoundDrv_GetError,
+         DirectSoundDrv_ErrorString,
+         DirectSoundDrv_PCM_Init,
+@@ -254,6 +232,31 @@ static struct {
+         UNSUPPORTED_COMPLETELY,
+     #endif
+     },
++
++    // Simple DirectMedia Layer
++    {
++        "SDL",
++    #ifdef HAVE_SDL
++        SDLDrv_GetError,
++        SDLDrv_ErrorString,
++        SDLDrv_PCM_Init,
++        SDLDrv_PCM_Shutdown,
++        SDLDrv_PCM_BeginPlayback,
++        SDLDrv_PCM_StopPlayback,
++        SDLDrv_PCM_Lock,
++        SDLDrv_PCM_Unlock,
++        SDLDrv_CD_Init,
++        SDLDrv_CD_Shutdown,
++        SDLDrv_CD_Play,
++        SDLDrv_CD_Stop,
++        SDLDrv_CD_Pause,
++        SDLDrv_CD_IsPlaying,
++        SDLDrv_CD_SetVolume,
++        UNSUPPORTED_MIDI,
++    #else
++        UNSUPPORTED_COMPLETELY,
++    #endif
++    },
+ };
+ 
+ 
+diff --git a/jfaudiolib/src/fx_man.c b/jfaudiolib/src/fx_man.c
+index e5aedc1..00be010 100644
+--- a/jfaudiolib/src/fx_man.c
++++ b/jfaudiolib/src/fx_man.c
+@@ -28,16 +28,14 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+    (c) Copyright 1994 James R. Dose.  All Rights Reserved.
+ **********************************************************************/
+ 
+-#include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+ #include "sndcards.h"
+ #include "drivers.h"
+ #include "multivoc.h"
+ #include "fx_man.h"
+-
+-#define TRUE  ( 1 == 1 )
+-#define FALSE ( !TRUE )
++#include "asssys.h"
++#include "assmisc.h"
+ 
+ int FX_ErrorCode = FX_Ok;
+ int FX_Installed = FALSE;
+@@ -116,51 +114,64 @@ int FX_Init
+    )
+ 
+    {
+-   int status;
+    int devicestatus;
++   int mincard, maxcard, card;
+ 
+    if ( FX_Installed )
+       {
+       FX_Shutdown();
+       }
+-	
+-	if (SoundCard == ASS_AutoDetect) {
+-#if defined __APPLE__ && !defined NO_COREAUDIO
+-		SoundCard = ASS_CoreAudio;
+-#elif defined _WIN32
+-		SoundCard = ASS_DirectSound;
+-#elif defined HAVE_SDL
+-		SoundCard = ASS_SDL;
+-#else
+-		SoundCard = ASS_NoSound;
+-#endif
+-	}
+-	
+-	if (SoundCard < 0 || SoundCard >= ASS_NumSoundCards) {
+-		FX_SetErrorCode( FX_InvalidCard );
+-		status = FX_Error;
+-		return status;
+-	}
+-	
+-	if (SoundDriver_IsPCMSupported(SoundCard) == 0) {
+-		// unsupported cards fall back to no sound
+-		SoundCard = ASS_NoSound;
+-	}
+-   
+-   status = FX_Ok;
+-	devicestatus = MV_Init( SoundCard, mixrate, numvoices, numchannels, samplebits, initdata );
+-	if ( devicestatus != MV_Ok )
+-		{
+-		FX_SetErrorCode( FX_MultiVocError );
+-		status = FX_Error;
+-		}
+ 
+-   if ( status == FX_Ok )
++   if (SoundCard == ASS_AutoDetect)
++      {
++      mincard = ASS_NoSound + 1;
++      maxcard = ASS_NumSoundCards - 1;
++      }
++   else if (SoundCard < 0 || SoundCard >= ASS_NumSoundCards)
+       {
+-      FX_Installed = TRUE;
++      FX_SetErrorCode( FX_InvalidCard );
++      return FX_Error;
++      }
++   else
++      {
++      mincard = SoundCard;
++      maxcard = SoundCard;
+       }
+ 
+-   return( status );
++   for (card = mincard; card <= maxcard; card++)
++      {
++      if (!SoundDriver_IsPCMSupported(card))
++         {
++         continue;
++         }
++      else if (SoundCard == ASS_AutoDetect)
++         {
++         ASS_Message("FX_Init: trying %s\n", SoundDriver_GetName(card));
++         }
++
++      devicestatus = MV_Init( card, mixrate, numvoices, numchannels, samplebits, initdata );
++      if (devicestatus == MV_Ok)
++         {
++         FX_Installed = TRUE;
++         return FX_Ok;
++         }
++      }
++
++   if (SoundCard == ASS_AutoDetect)
++      {
++      // A failure to autodetect falls back to no sound.
++      card = ASS_NoSound;
++
++      devicestatus = MV_Init( card, mixrate, numvoices, numchannels, samplebits, initdata );
++      if ( devicestatus == MV_Ok )
++         {
++         FX_Installed = TRUE;
++         return FX_Ok;
++         }
++      }
++
++   FX_SetErrorCode( FX_MultiVocError );
++   return FX_Error;
+    }
+ 
+ 
+@@ -502,6 +513,32 @@ int FX_SetFrequency
+    }
+ 
+ 
++/*---------------------------------------------------------------------
++   Function: FX_GetFrequency
++
++   Gets the frequency of the voice associated with the specified handle.
++---------------------------------------------------------------------*/
++
++int FX_GetFrequency
++   (
++   int handle,
++   int *frequency
++   )
++
++   {
++   int status;
++
++   status = MV_GetFrequency( handle, frequency );
++   if ( status == MV_Error )
++      {
++      FX_SetErrorCode( FX_MultiVocError );
++      status = FX_Warning;
++      }
++
++   return( status );
++   }
++
++
+ /*---------------------------------------------------------------------
+    Function: FX_PlayVOC
+ 
+@@ -992,6 +1029,8 @@ int FX_StartRecording
+    {
+    int status;
+ 
++	(void)MixRate; (void)function;
++
+ 	FX_SetErrorCode( FX_InvalidCard );
+ 	status = FX_Warning;
+ 
+diff --git a/jfaudiolib/src/midi.c b/jfaudiolib/src/midi.c
+index 9018143..037ee67 100644
+--- a/jfaudiolib/src/midi.c
++++ b/jfaudiolib/src/midi.c
+@@ -39,35 +39,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ #include "_midi.h"
+ #include "midi.h"
+ #include "asssys.h"
+-
+-#define TRUE  ( 1 == 1 )
+-#define FALSE ( !TRUE )
+-
+-#ifdef __POWERPC__
+-#define LITTLE16 SWAP16
+-#define LITTLE32 SWAP32
+-#else
+-#define LITTLE16
+-#define LITTLE32
+-#endif
+-
+-#ifdef _MSC_VER
+-#define inline _inline
+-#define alloca _alloca
+-#endif
+-
+-static inline unsigned short SWAP16(unsigned short s)
+-{
+-	return (s >> 8) | (s << 8);
+-}
+-
+-static inline unsigned int SWAP32(unsigned int s)
+-{
+-	return (s >> 24) | (s << 24) | ((s&0xff00) << 8) | ((s & 0xff0000) >> 8);
+-}
+-
+-#define min(x,y) ((x) < (y) ? (x) : (y))
+-#define max(x,y) ((x) > (y) ? (x) : (y))
++#include "assmisc.h"
+ 
+ int MUSIC_EMIDIPersonality = EMIDI_GeneralMIDI;
+ 
+diff --git a/jfaudiolib/src/multivoc.c b/jfaudiolib/src/multivoc.c
+index f40d33d..51004ff 100644
+--- a/jfaudiolib/src/multivoc.c
++++ b/jfaudiolib/src/multivoc.c
+@@ -39,33 +39,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ #include "drivers.h"
+ #include "pitch.h"
+ #include "multivoc.h"
++#include "assmisc.h"
+ #include "_multivc.h"
+ 
+-#ifdef __POWERPC__
+-#define LITTLE16 SWAP16
+-#define LITTLE32 SWAP32
+-#else
+-#define LITTLE16
+-#define LITTLE32
+-#endif
+-
+-#ifdef _MSC_VER
+-#define inline _inline
+-#endif
+-
+-static inline unsigned short SWAP16(unsigned short s)
+-{
+-	return (s >> 8) | (s << 8);
+-}
+-
+-static inline unsigned int SWAP32(unsigned int s)
+-{
+-	return (s >> 24) | (s << 24) | ((s&0xff00) << 8) | ((s & 0xff0000) >> 8);
+-}
+-
+-#define min(x,y) ((x) < (y) ? (x) : (y))
+-#define max(x,y) ((x) > (y) ? (x) : (y))
+-
+ #define RoundFixed( fixedval, bits )            \
+         (                                       \
+           (                                     \
+@@ -149,6 +125,8 @@ static int DisableInterrupts(void)
+ 
+ static void RestoreInterrupts(int a)
+ {
++	(void)a;
++
+ 	if (--lockdepth > 0) {
+ 		return;
+ 	}
+@@ -1392,6 +1370,45 @@ int MV_SetFrequency
+    }
+ 
+ 
++/*---------------------------------------------------------------------
++   Function: MV_GetFrequency
++
++   Gets the frequency for the voice associated with the specified handle.
++---------------------------------------------------------------------*/
++
++int MV_GetFrequency
++   (
++   int handle,
++   int *frequency
++   )
++
++   {
++   VoiceNode *voice;
++
++   if ( !MV_Installed )
++      {
++      MV_SetErrorCode( MV_NotInstalled );
++      return( MV_Error );
++      }
++
++   voice = MV_GetVoice( handle );
++   if ( voice == NULL )
++      {
++      MV_SetErrorCode( MV_VoiceNotFound );
++      return( MV_Error );
++      }
++
++    if ( voice->SamplingRate == 0 )
++      {
++      voice->GetSound( voice );
++      }
++
++   *frequency = voice->SamplingRate;
++
++   return( MV_Ok );
++   }
++
++
+ /*---------------------------------------------------------------------
+    Function: MV_GetVolumeTable
+ 
+@@ -2013,6 +2030,8 @@ int MV_StartRecording
+    )
+ 
+    {
++	(void)MixRate; (void)function;
++
+ 	MV_SetErrorCode( MV_UnsupportedCard );
+ 	return( MV_Error );
+    }
+@@ -2355,6 +2374,8 @@ int MV_PlayLoopedWAV
+    VoiceNode     *voice;
+    int length;
+ 
++   (void)ptrlength; (void)loopend;
++
+    if ( !MV_Installed )
+       {
+       MV_SetErrorCode( MV_NotInstalled );
+@@ -2567,6 +2588,8 @@ int MV_PlayLoopedVOC
+    VoiceNode   *voice;
+    int          status;
+ 
++   (void)ptrlength;
++
+    if ( !MV_Installed )
+       {
+       MV_SetErrorCode( MV_NotInstalled );
+diff --git a/jfaudiolib/src/multivoc.h b/jfaudiolib/src/multivoc.h
+index de7d8bf..5328aeb 100644
+--- a/jfaudiolib/src/multivoc.h
++++ b/jfaudiolib/src/multivoc.h
+@@ -63,6 +63,7 @@ int   MV_VoicesPlaying( void );
+ int   MV_VoiceAvailable( int priority );
+ int   MV_SetPitch( int handle, int pitchoffset );
+ int   MV_SetFrequency( int handle, int frequency );
++int   MV_GetFrequency( int handle, int *frequency );
+ int   MV_EndLooping( int handle );
+ int   MV_SetPan( int handle, int vol, int left, int right );
+ int   MV_Pan3D( int handle, int angle, int distance );
+diff --git a/jfaudiolib/src/music.c b/jfaudiolib/src/music.c
+index d2957cd..c57fb94 100644
+--- a/jfaudiolib/src/music.c
++++ b/jfaudiolib/src/music.c
+@@ -35,12 +35,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ #include "music.h"
+ #include "midi.h"
+ #include "ll_man.h"
+-
+-#define TRUE  ( 1 == 1 )
+-#define FALSE ( !TRUE )
+-
+-#define min(x,y) ((x) < (y) ? (x) : (y))
+-#define max(x,y) ((x) > (y) ? (x) : (y))
++#include "asssys.h"
++#include "assmisc.h"
+ 
+ int MUSIC_ErrorCode = MUSIC_Ok;
+ 
+@@ -118,49 +114,59 @@ int MUSIC_Init
+    {
+    int i;
+    int status;
++   int mincard, maxcard, card;
+ 
+    for( i = 0; i < 128; i++ )
+       {
+       MIDI_PatchMap[ i ] = i;
+       }
+ 
+-	if (SoundCard == ASS_AutoDetect) {
+-#if defined __APPLE__ && !defined NO_COREAUDIO
+-		SoundCard = ASS_CoreAudio;
+-#elif defined _WIN32
+-		SoundCard = ASS_WinMM;
+-#elif defined HAVE_ALSA
+-        SoundCard = ASS_ALSA;
+-#elif defined HAVE_FLUIDSYNTH
+-		SoundCard = ASS_FluidSynth;
+-#else
+-		SoundCard = ASS_NoSound;
+-#endif
+-	}
+-
+-	if (SoundCard < 0 || SoundCard >= ASS_NumSoundCards) {
+-		MUSIC_ErrorCode = MUSIC_InvalidCard;
+-		return MUSIC_Error;
+-	}
+-
+-    if (!SoundDriver_IsMIDISupported(SoundCard))
++   if (SoundCard == ASS_AutoDetect)
++      {
++      mincard = ASS_NoSound + 1;
++      maxcard = ASS_NumSoundCards - 1;
++      }
++   else if (SoundCard < 0 || SoundCard >= ASS_NumSoundCards)
+       {
+       MUSIC_ErrorCode = MUSIC_InvalidCard;
+       return MUSIC_Error;
+       }
++   else
++      {
++      mincard = SoundCard;
++      maxcard = SoundCard;
++      }
+ 
+-   ASS_MIDISoundDriver = SoundCard;
+-
+-   status = SoundDriver_MIDI_Init(&MUSIC_MidiFunctions, params);
+-   if (status != MUSIC_Ok)
++   for (card = mincard; card <= maxcard; card++)
+       {
+-      MUSIC_ErrorCode = MUSIC_DriverError;
+-      return MUSIC_Error;
++      if (!SoundDriver_IsMIDISupported(card))
++         {
++         continue;
++         }
++      else if (SoundCard == ASS_AutoDetect)
++         {
++         ASS_Message("MUSIC_Init: trying %s\n", SoundDriver_GetName(card));
++         }
++
++      ASS_MIDISoundDriver = card;
++      status = SoundDriver_MIDI_Init(&MUSIC_MidiFunctions, params);
++      if (status == MUSIC_Ok)
++         {
++         MIDI_SetMidiFuncs( &MUSIC_MidiFunctions );
++         return MUSIC_Ok;
++         }
+       }
+ 
+-   MIDI_SetMidiFuncs( &MUSIC_MidiFunctions );
++   if (SoundCard == ASS_AutoDetect)
++      {
++      // A failure to autodetect falls back to no sound.
++      ASS_MIDISoundDriver = ASS_NoSound;
++      MIDI_SetMidiFuncs( &MUSIC_MidiFunctions );
++      return MUSIC_Ok;
++      }
+ 
+-   return MUSIC_Ok;
++   MUSIC_ErrorCode = MUSIC_DriverError;
++   return MUSIC_Error;
+    }
+ 
+ 
+@@ -216,6 +222,7 @@ void MUSIC_SetMaxFMMidiChannel
+    )
+ 
+    {
++   (void)channel;
+    //AL_SetMaxMidiChannel( channel );
+    }
+ 
+@@ -395,6 +402,8 @@ int MUSIC_PlaySong
+    {
+    int status;
+ 
++   (void)length;
++
+    MIDI_StopSong();
+    status = MIDI_PlaySong( song, loopflag );
+    if ( status != MIDI_Ok )
+@@ -576,6 +585,7 @@ int MUSIC_FadeVolume
+    )
+ 
+    {
++   (void)tovolume; (void)milliseconds;
+    /*int fromvolume;
+ 
+    if ( ( MUSIC_SoundDevice == ProAudioSpectrum ) ||
+@@ -681,5 +691,6 @@ void MUSIC_RegisterTimbreBank
+    )
+ 
+    {
++   (void)timbres;
+    //AL_RegisterTimbreBank( timbres );
+    }
+diff --git a/jfaudiolib/src/test.c b/jfaudiolib/src/test.c
+index fcecf9e..6c44f93 100644
+--- a/jfaudiolib/src/test.c
++++ b/jfaudiolib/src/test.c
+@@ -32,7 +32,7 @@ int main(int argc, char ** argv)
+     int arg = 0;
+     void * initdata = 0;
+     const char * musicinit = 0;
+-    const char * song = "test.ogg";
++    const char * song = "samples/test.wav";
+ 
+     for (arg = 1; arg < argc; arg++) {
+         if (argv[arg][0] == '-') {
+@@ -125,6 +125,8 @@ void playsong(const char * song)
+ 
+     fclose(fp);
+ 
++    printf("Playing %s\n", song);
++
+     if (memcmp(data, "MThd", 4) == 0) {
+         status = MUSIC_PlaySong(data, length, 0);
+         if (status != MUSIC_Ok) {
+diff --git a/jfaudiolib/src/vorbis.c b/jfaudiolib/src/vorbis.c
+index ef35046..c1f0b00 100644
+--- a/jfaudiolib/src/vorbis.c
++++ b/jfaudiolib/src/vorbis.c
+@@ -31,7 +31,6 @@
+ #endif
+ 
+ #include <stdlib.h>
+-#include <stdio.h>
+ #include <string.h>
+ #ifndef _WIN32
+ # include <unistd.h>
+@@ -40,10 +39,8 @@
+ #include "pitch.h"
+ #include "multivoc.h"
+ #include "_multivc.h"
+-
+-#define min(x,y) ((x) < (y) ? (x) : (y))
+-#define max(x,y) ((x) > (y) ? (x) : (y))
+-
++#include "asssys.h"
++#include "assmisc.h"
+ 
+ typedef struct {
+    char * ptr;
+@@ -109,6 +106,7 @@ static int seek_vorbis(void * datasource, ogg_int64_t offset, int whence)
+ 
+ static int close_vorbis(void * datasource)
+ {
++   (void)datasource;
+    return 0;
+ }
+ 
+@@ -148,13 +146,13 @@ static playbackstatus MV_GetNextVorbisBlock
+    bytesread = 0;
+    do {
+       bytes = ov_read(&vd->vf, vd->block + bytesread, sizeof(vd->block) - bytesread, 0, 2, 1, &bitstream);
+-      //fprintf(stderr, "ov_read = %d\n", bytes);
++      //ASS_Message("ov_read = %d\n", bytes);
+       if (bytes == OV_HOLE) continue;
+       if (bytes == 0) {
+          if (voice->LoopStart) {
+             err = ov_pcm_seek_page(&vd->vf, 0);
+             if (err != 0) {
+-               fprintf(stderr, "MV_GetNextVorbisBlock ov_pcm_seek_page_lap: err %d\n", err);
++               ASS_Message("MV_GetNextVorbisBlock ov_pcm_seek_page_lap: err %d\n", err);
+             } else {
+                continue;
+             }
+@@ -162,13 +160,13 @@ static playbackstatus MV_GetNextVorbisBlock
+            break;
+          }
+       } else if (bytes < 0) {
+-         fprintf(stderr, "MV_GetNextVorbisBlock ov_read: err %d\n", bytes);
++         ASS_Message("MV_GetNextVorbisBlock ov_read: err %d\n", bytes);
+          voice->Playing = FALSE;
+          return NoMoreData;
+       }
+ 
+       bytesread += bytes;
+-   } while (bytesread < sizeof(vd->block));
++   } while (bytesread < (int)sizeof(vd->block));
+ 
+    if (bytesread == 0) {
+       voice->Playing = FALSE;
+@@ -317,7 +315,9 @@ int MV_PlayLoopedVorbis
+    int          status;
+    vorbis_data * vd = 0;
+    vorbis_info * vi = 0;
+-   
++
++   (void)loopend;
++
+    if ( !MV_Installed )
+    {
+       MV_SetErrorCode( MV_NotInstalled );
+@@ -338,7 +338,7 @@ int MV_PlayLoopedVorbis
+    
+    status = ov_open_callbacks((void *) vd, &vd->vf, 0, 0, vorbis_callbacks);
+    if (status < 0) {
+-      fprintf(stderr, "MV_PlayLoopedVorbis: err %d\n", status);
++      ASS_Message("MV_PlayLoopedVorbis: err %d\n", status);
+       MV_SetErrorCode( MV_InvalidVorbisFile );
+       return MV_Error;
+    }
+diff --git a/jfaudiolib/third-party/msvc/lib/libogg.lib b/jfaudiolib/third-party/msvc/libx86/libogg.lib
+similarity index 100%
+rename from third-party/msvc/lib/libogg.lib
+rename to third-party/msvc/libx86/libogg.lib
+diff --git a/jfaudiolib/third-party/msvc/lib/libvorbis_static.lib b/jfaudiolib/third-party/msvc/libx86/libvorbis_static.lib
+similarity index 100%
+rename from third-party/msvc/lib/libvorbis_static.lib
+rename to third-party/msvc/libx86/libvorbis_static.lib
+diff --git a/jfaudiolib/third-party/msvc/lib/libvorbisfile_static.lib b/jfaudiolib/third-party/msvc/libx86/libvorbisfile_static.lib
+similarity index 100%
+rename from third-party/msvc/lib/libvorbisfile_static.lib
+rename to third-party/msvc/libx86/libvorbisfile_static.lib
+Submodule jfbuild contains modified content
+Submodule jfbuild ed8c505..a5a83be:
+diff --git a/jfbuild/.github/workflows/ci.yml b/jfbuild/.github/workflows/ci.yml
+new file mode 100644
+index 0000000..9e7b028
+--- /dev/null
++++ b/jfbuild/.github/workflows/ci.yml
+@@ -0,0 +1,63 @@
++name: CI
++on: [ push, pull_request, workflow_dispatch ]
++
++jobs:
++  build-linux:
++    name: Linux polymost=${{ matrix.use_polymost }} gl=${{ matrix.use_opengl }} nogtk=${{ matrix.without_gtk || 0 }}
++    runs-on: ubuntu-latest
++    strategy:
++      fail-fast: false
++      matrix:
++        use_polymost: [ 0, 1 ]
++        use_opengl: [ 0, 1 ]
++        exclude:
++          - use_polymost: 1
++            use_opengl: 0
++        include:
++          - use_polymost: 1
++            use_opengl: 3
++            without_gtk: 1
++          - use_polymost: 1
++            use_opengl: 'USE_GLES2'
++
++    steps:
++      - name: Checkout code
++        uses: actions/checkout@v2
++      - name: Install dependencies
++        run: |
++          sudo apt-get update
++          sudo apt-get install -y libsdl2-dev libgtk-3-dev
++      - name: Make
++        run: |
++          cd "$GITHUB_WORKSPACE"
++          make USE_POLYMOST=${{ matrix.use_polymost }} \
++               USE_OPENGL=${{ matrix.use_opengl }} \
++               WITHOUT_GTK=${{ matrix.without_gtk || 0 }} \
++               USE_ASM=0 \
++               all utils
++
++  build-windows:
++    name: Windows polymost=${{ matrix.use_polymost }} gl=${{ matrix.use_opengl }}
++    runs-on: windows-latest
++    strategy:
++      fail-fast: false
++      matrix:
++        use_polymost: [ 0, 1 ]
++        use_opengl: [ 0, 1 ]
++        exclude:
++          - use_polymost: 1
++            use_opengl: 0
++
++    steps:
++      - name: Checkout code
++        uses: actions/checkout@v2
++      - name: Setup MSVC
++        uses: ilammy/msvc-dev-cmd@v1
++        with:
++          sdk: 10.0.19041.0
++      - name: Make
++        shell: cmd
++        run: |
++          echo USE_POLYMOST=${{ matrix.use_polymost }} > Makefile.msvcuser
++          echo USE_OPENGL=${{ matrix.use_opengl }} >> Makefile.msvcuser
++          nmake /f Makefile.msvc all utils
+diff --git a/jfbuild/Makefile b/jfbuild/Makefile
+index 11430d6..16349b8 100644
+--- a/jfbuild/Makefile
++++ b/jfbuild/Makefile
+@@ -52,9 +52,9 @@ NASM?=nasm
+ WINDRES?=windres
+ AR?=ar
+ RANLIB?=ranlib
+-OURCFLAGS=$(debug) -g -W -Wall -Wimplicit -Wno-unused \
+-	-fno-strict-aliasing -DNO_GCC_BUILTINS \
+-	-DKSFORBUILD -I$(INC) -I$(SRC)
++OURCFLAGS=$(debug) -g -W -Wall -Wno-unused-variable -Wno-unused-function \
++	-Wno-unused-but-set-variable -fno-strict-aliasing -DKSFORBUILD \
++	-I$(INC) -I$(SRC)
+ OURCXXFLAGS=-fno-exceptions -fno-rtti
+ GAMECFLAGS=-I$(GAME) -I$(INC)
+ LIBS=
+@@ -75,7 +75,7 @@ endif
+ 
+ ENGINEOBJS+= \
+ 	$(SRC)/a-c.$o \
+-  	$(SRC)/asmprot.$o \
++	$(SRC)/asmprot.$o \
+ 	$(SRC)/baselayer.$o \
+ 	$(SRC)/cache1d.$o \
+ 	$(SRC)/compat.$o \
+@@ -90,13 +90,16 @@ ENGINEOBJS+= \
+ 	$(SRC)/textfont.$o \
+ 	$(SRC)/smalltextfont.$o
+ 
++ifneq ($(USE_OPENGL),0)
++	ENGINEOBJS+= \
++		$(SRC)/glbuild.$o \
++		$(SRC)/glbuild_fs.$o \
++		$(SRC)/glbuild_vs.$o
++endif
+ ifneq ($(USE_POLYMOST),0)
+ 	ENGINEOBJS+= $(SRC)/polymost.$o
+ 	ifneq ($(USE_OPENGL),0)
+ 		ENGINEOBJS+= \
+-			$(SRC)/glbuild.$o \
+-			$(SRC)/glbuild_fs.$o \
+-			$(SRC)/glbuild_vs.$o \
+ 			$(SRC)/hightile.$o \
+ 			$(SRC)/mdsprite.$o \
+ 			$(SRC)/polymost_fs.$o \
+@@ -246,7 +249,7 @@ cacheinfo$(EXESUFFIX): $(TOOLS)/cacheinfo.$o $(ENGINELIB)
+ # These tools are only used at build time and should be compiled
+ # using the host toolchain rather than any cross-compiler.
+ generatesdlappicon$(EXESUFFIX): $(TOOLS)/generatesdlappicon.c $(SRC)/kplib.c
+-	$(HOSTCC) $(CFLAGS) -I$(SRC) -I$(INC) -o $@ $^
++	$(HOSTCC) -I$(SRC) -I$(INC) -o $@ $^
+ bin2c$(EXESUFFIX): $(TOOLS)/bin2c.cc
+ 	$(HOSTCXX) $(CXXFLAGS) -o $@ $^
+ 
+@@ -267,7 +270,7 @@ $(SRC)/%.$o: $(SRC)/%.cpp
+ 	$(CXX) $(CXXFLAGS) $(OURCXXFLAGS) $(OURCFLAGS) -c $< -o $@
+ 
+ $(LIBSQUISH)/%.$o: $(LIBSQUISH)/%.cpp
+-	$(CXX) $(CXXFLAGS) $(BUILDCFLAGS) -O2 -c $< -o $@
++	$(CXX) $(CXXFLAGS) $(OURCXXFLAGS) $(OURCFLAGS) -O2 -c $< -o $@
+ 
+ $(GAME)/%.$o: $(GAME)/%.c
+ 	$(CC) $(CFLAGS) $(OURCFLAGS) $(GAMECFLAGS) -c $< -o $@
+diff --git a/jfbuild/include/editor.h b/jfbuild/include/editor.h
+index c5685d9..079a062 100644
+--- a/jfbuild/include/editor.h
++++ b/jfbuild/include/editor.h
+@@ -64,10 +64,10 @@ int writesetup(const char *fn);	// from config.c
+ void editinput(void);
+ void clearmidstatbar16(void);
+ 
+-short getnumber256(char namestart[80], short num, int maxnumber, char sign);
+-short getnumber16(char namestart[80], short num, int maxnumber, char sign);
+-void printmessage256(char name[82]);
+-void printmessage16(char name[82]);
++short getnumber256(char *namestart, short num, int maxnumber, char sign);
++short getnumber16(char *namestart, short num, int maxnumber, char sign);
++void printmessage256(char *name);
++void printmessage16(char *name);
+ 
+ void getpoint(int searchxe, int searchye, int *x, int *y);
+ int getpointhighlight(int xplc, int yplc);
+diff --git a/jfbuild/include/glbuild.h b/jfbuild/include/glbuild.h
+index 9ac87ad..ecc146d 100644
+--- a/jfbuild/include/glbuild.h
++++ b/jfbuild/include/glbuild.h
+@@ -168,7 +168,7 @@ void glbuild_check_errors(const char *file, int line);
+ 
+ GLuint glbuild_compile_shader(GLuint type, const GLchar *source);
+ GLuint glbuild_link_program(int shadercount, GLuint *shaders);
+-int glbuild_prepare_8bit_shader(glbuild8bit *state, int resx, int resy, int stride);        // <0 = error
++int glbuild_prepare_8bit_shader(glbuild8bit *state, int resx, int resy, int stride, int winx, int winy);  // <0 = error
+ void glbuild_delete_8bit_shader(glbuild8bit *state);
+ void glbuild_update_8bit_palette(glbuild8bit *state, const GLvoid *pal);
+ void glbuild_update_8bit_frame(glbuild8bit *state, const GLvoid *frame, int resx, int resy, int stride);
+diff --git a/jfbuild/include/mmulti.h b/jfbuild/include/mmulti.h
+index 425761a..f3c49dd 100644
+--- a/jfbuild/include/mmulti.h
++++ b/jfbuild/include/mmulti.h
+@@ -3,6 +3,10 @@
+ #ifndef __mmulti_h__
+ #define __mmulti_h__
+ 
++#ifdef __cplusplus
++extern "C" {
++#endif
++
+ #define MAXMULTIPLAYERS 16
+ 
+ #define MMULTI_MODE_MS  0
+@@ -28,5 +32,9 @@ int getpacket(int *other, unsigned char *bufptr);
+ void flushpackets(void);
+ void genericmultifunction(int other, unsigned char *bufptr, int messleng, int command);
+ 
++#ifdef __cplusplus
++}
++#endif
++
+ #endif	// __mmulti_h__
+ 
+diff --git a/jfbuild/include/osd.h b/jfbuild/include/osd.h
+index 47c6486..348b42b 100644
+--- a/jfbuild/include/osd.h
++++ b/jfbuild/include/osd.h
+@@ -16,6 +16,10 @@ typedef struct {
+ #define OSDCMD_OK	0
+ #define OSDCMD_SHOWHELP 1
+ 
++#ifdef __cplusplus
++extern "C" {
++#endif
++
+ // initializes things
+ void OSD_Init(void);
+ 
+@@ -77,5 +81,9 @@ int OSD_Dispatch(const char *cmd);
+ //   func = the entry point to the function
+ int OSD_RegisterFunction(const char *name, const char *help, int (*func)(const osdfuncparm_t*));
+ 
++#ifdef __cplusplus
++}
++#endif
++
+ #endif // __osd_h__
+ 
+diff --git a/jfbuild/include/scriptfile.h b/jfbuild/include/scriptfile.h
+index 24ddf9f..220b37e 100644
+--- a/jfbuild/include/scriptfile.h
++++ b/jfbuild/include/scriptfile.h
+@@ -1,3 +1,10 @@
++#ifndef __scriptfile_h__
++#define __scriptfile_h__
++
++#ifdef __cplusplus
++extern "C" {
++#endif
++
+ typedef struct {
+     char *textbuf;
+     unsigned int textlength;
+@@ -27,3 +34,9 @@ int scriptfile_eof(scriptfile *sf);
+ int scriptfile_getsymbolvalue(const char *name, int *val);
+ int scriptfile_addsymbolvalue(const char *name, int val);
+ void scriptfile_clearsymbols(void);
++
++#ifdef __cplusplus
++}
++#endif
++
++#endif // __scriptfile_h__
+diff --git a/jfbuild/include/winlayer.h b/jfbuild/include/winlayer.h
+index 1525a87..3b280ca 100644
+--- a/jfbuild/include/winlayer.h
++++ b/jfbuild/include/winlayer.h
+@@ -5,6 +5,10 @@
+ #ifndef __build_interface_layer__
+ #define __build_interface_layer__ WIN
+ 
++#ifdef __cplusplus
++extern "C" {
++#endif
++
+ extern int backgroundidle;	// set to 1 to tell winlayer to go to idle priority when inactive
+ extern unsigned maxrefreshfreq;
+ 
+@@ -16,6 +20,10 @@ intptr_t win_gethinstance(void);
+ void win_allowtaskswitching(int onf);
+ int win_checkinstance(void);
+ 
++#ifdef __cplusplus
++}
++#endif
++
+ #include "baselayer.h"
+ 
+ #else
+diff --git a/jfbuild/kenbuild/StartupWinController.m b/jfbuild/kenbuild/StartupWinController.m
+index 52f9c2e..595298f 100644
+--- a/jfbuild/kenbuild/StartupWinController.m
++++ b/jfbuild/kenbuild/StartupWinController.m
+@@ -352,6 +352,7 @@ int startwin_settitle(const char *s)
+ 
+ int startwin_idle(void *v)
+ {
++    (void)v;
+     return 0;
+ }
+ 
+diff --git a/jfbuild/kenbuild/game.c b/jfbuild/kenbuild/game.c
+index 43150c2..9040323 100644
+--- a/jfbuild/kenbuild/game.c
++++ b/jfbuild/kenbuild/game.c
+@@ -331,6 +331,8 @@ int nextvoxid = 0;
+ 
+ static int osdcmd_restartvid(const osdfuncparm_t *parm)
+ {
++	(void)parm;
++
+ 	resetvideomode();
+ 	if (setgamemode(fullscreen,xdim,ydim,bpp))
+ 		buildputs("restartvid: Reset failed...\n");
+@@ -4435,7 +4437,6 @@ void fakedomovethingscorrect(void)
+ 	myy = omyy = posy[myconnectindex];
+ 	myz = omyz = posz[myconnectindex]; myzvel = hvel[myconnectindex];
+ 	myang = omyang = ang[myconnectindex];
+-	mycursectnum = mycursectnum;
+ 	myhoriz = omyhoriz = horiz[myconnectindex];
+ 
+ 	fakemovefifoplc = movefifoplc;
+@@ -6367,6 +6368,8 @@ void printext(int x, int y, char *buffer, short tilenum, unsigned char invisible
+ 	int i;
+ 	unsigned char ch;
+ 
++	(void)invisiblecol;
++
+ 	for(i=0;buffer[i]!=0;i++)
+ 	{
+ 		ch = (unsigned char)buffer[i];
+@@ -6382,6 +6385,8 @@ void drawtilebackground (int thex, int they, short tilenum,
+ {
+ 	int x, y, xsiz, ysiz, tx1, ty1, tx2, ty2;
+ 
++	(void)thex; (void)they;
++
+ 	xsiz = tilesizx[tilenum]; tx1 = cx1/xsiz; tx2 = cx2/xsiz;
+ 	ysiz = tilesizy[tilenum]; ty1 = cy1/ysiz; ty2 = cy2/ysiz;
+ 
+diff --git a/jfbuild/kenbuild/kdmsound.c b/jfbuild/kenbuild/kdmsound.c
+index c5c7150..3d0e33e 100644
+--- a/jfbuild/kenbuild/kdmsound.c
++++ b/jfbuild/kenbuild/kdmsound.c
+@@ -700,6 +700,8 @@ static int monohicomb(int unused, int *volptr, int cnt, int dasinc, int dasplc,
+     unsigned char al, ah, bl, bh, dl, cf;
+     int ocnt = 0;
+ 
++    (void)unused;
++
+     while (cnt > 0) {
+         bl = snd[kdmasm4 + (dasplc >> 12) + 0];     // mov bx, word ptr [esi+88888888h]
+         bh = snd[kdmasm4 + (dasplc >> 12) + 1];
+@@ -734,6 +736,8 @@ static int stereohicomb(int unused, int *volptr, int cnt, int dasinc, int dasplc
+     unsigned char al, ah, bl, bh, dl, cf;
+     int ocnt = 0;
+ 
++    (void)unused;
++
+     while (cnt > 0) {
+         bl = snd[kdmasm4 + (dasplc >> 12) + 0];     // mov bx, word ptr [esi+88888888h]
+         bh = snd[kdmasm4 + (dasplc >> 12) + 1];
+diff --git a/jfbuild/kenbuild/kdmsound_sdl2.c b/jfbuild/kenbuild/kdmsound_sdl2.c
+index 1b2b50d..dcd65fa 100644
+--- a/jfbuild/kenbuild/kdmsound_sdl2.c
++++ b/jfbuild/kenbuild/kdmsound_sdl2.c
+@@ -28,6 +28,8 @@ void initsb(char dadigistat, char damusistat, int dasamplerate, char danumspeake
+ {
+     SDL_AudioSpec want, have;
+ 
++    (void)daintspersec; (void)daquality;
++
+     if (dev) return;
+ 
+     if ((dadigistat == 0) && (damusistat != 1))
+@@ -91,5 +93,7 @@ void refreshaudio(void)
+ 
+ static void preparesndbuf(void *udata, Uint8 *sndoffsplc, int sndbufsiz)
+ {
++    (void)udata;
++
+     preparekdmsndbuf(sndoffsplc, sndbufsiz);
+ }
+diff --git a/jfbuild/kenbuild/startgtk_game.c b/jfbuild/kenbuild/startgtk_game.c
+index a8ee7ca..bd0da3e 100644
+--- a/jfbuild/kenbuild/startgtk_game.c
++++ b/jfbuild/kenbuild/startgtk_game.c
+@@ -60,6 +60,11 @@ static GObject * get_and_connect_signal(GtkBuilder *builder, const char *name, c
+     return object;
+ }
+ 
++static void foreach_gtk_widget_set_sensitive(GtkWidget *widget, gpointer data)
++{
++    gtk_widget_set_sensitive(widget, (gboolean)(intptr_t)data);
++}
++
+ static void populate_video_modes(gboolean firsttime)
+ {
+     int i, mode3d = -1;
+@@ -125,7 +130,7 @@ static void setup_config_mode(void)
+ 
+     // Enable all the controls on the Configuration page.
+     gtk_container_foreach(GTK_CONTAINER(controls.configbox),
+-            (GtkCallback)gtk_widget_set_sensitive, (gpointer)TRUE);
++            foreach_gtk_widget_set_sensitive, (gpointer)TRUE);
+     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(controls.alwaysshowcheck), settings->forcesetup);
+     gtk_widget_set_sensitive(controls.alwaysshowcheck, TRUE);
+ 
+@@ -164,7 +169,7 @@ static void setup_messages_mode(gboolean allowcancel)
+ 
+     // Disable all the controls on the Configuration page.
+     gtk_container_foreach(GTK_CONTAINER(controls.configbox),
+-            (GtkCallback)gtk_widget_set_sensitive, (gpointer)FALSE);
++            foreach_gtk_widget_set_sensitive, (gpointer)FALSE);
+     gtk_widget_set_sensitive(controls.alwaysshowcheck, FALSE);
+ 
+     gtk_widget_set_sensitive(controls.cancelbutton, allowcancel);
+@@ -175,11 +180,15 @@ static void setup_messages_mode(gboolean allowcancel)
+ 
+ static void on_fullscreencheck_toggled(GtkToggleButton *togglebutton, gpointer user_data)
+ {
++    (void)togglebutton; (void)user_data;
++
+     populate_video_modes(FALSE);
+ }
+ 
+ static void on_multiplayerradio_toggled(GtkRadioButton *radiobutton, gpointer user_data)
+ {
++    (void)radiobutton; (void)user_data;
++
+     //gboolean singleactive = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(controls.singleplayerbutton));
+     gboolean joinmultiactive = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(controls.joinmultibutton));
+     gboolean hostmultiactive = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(controls.hostmultibutton));
+@@ -190,6 +199,8 @@ static void on_multiplayerradio_toggled(GtkRadioButton *radiobutton, gpointer us
+ 
+ static void on_cancelbutton_clicked(GtkButton *button, gpointer user_data)
+ {
++    (void)button; (void)user_data;
++
+     startwinloop = FALSE;   // Break the loop.
+     retval = STARTWIN_CANCEL;
+     quitevent = quitevent || quiteventonclose;
+@@ -200,6 +211,8 @@ static void on_startbutton_clicked(GtkButton *button, gpointer user_data)
+     int mode = -1;
+     GtkTreeIter iter;
+ 
++    (void)button; (void)user_data;
++
+     if (gtk_combo_box_get_active_iter(GTK_COMBO_BOX(controls.vmode3dcombo), &iter)) {
+         gtk_tree_model_get(GTK_TREE_MODEL(controls.vmode3dlist), &iter, 1 /*index*/, &mode, -1);
+     }
+@@ -229,6 +242,8 @@ static void on_startbutton_clicked(GtkButton *button, gpointer user_data)
+ 
+ static gboolean on_startgtk_delete_event(GtkWidget *widget, GdkEvent *event, gpointer user_data)
+ {
++    (void)widget; (void)event; (void)user_data;
++
+     startwinloop = FALSE;   // Break the loop.
+     retval = STARTWIN_CANCEL;
+     quitevent = quitevent || quiteventonclose;
+@@ -398,6 +413,7 @@ int startwin_settitle(const char *title)
+ 
+ int startwin_idle(void *s)
+ {
++    (void)s;
+     return 0;
+ }
+ 
+diff --git a/jfbuild/src/EditorStartupWinController.m b/jfbuild/src/EditorStartupWinController.m
+index 199aea4..87c8dc3 100644
+--- a/jfbuild/src/EditorStartupWinController.m
++++ b/jfbuild/src/EditorStartupWinController.m
+@@ -329,6 +329,7 @@ int startwin_settitle(const char *s)
+ 
+ int startwin_idle(void *v)
+ {
++    (void)v;
+     return 0;
+ }
+ 
+diff --git a/jfbuild/src/baselayer.c b/jfbuild/src/baselayer.c
+index 5fcea27..4e1780c 100644
+--- a/jfbuild/src/baselayer.c
++++ b/jfbuild/src/baselayer.c
+@@ -88,16 +88,17 @@ static int osdcmd_vars(const osdfuncparm_t *parm)
+ 	int showval = (parm->numparms < 1);
+ 
+ 	if (!Bstrcasecmp(parm->name, "screencaptureformat")) {
+-		const char *fmts[2][2] = { {"TGA", "PCX"}, {"0", "1"} };
+-		if (showval) { buildprintf("captureformat is %s\n", fmts[captureformat][0]); }
+-		else {
+-			int i,j;
+-			for (j=0; j<2; j++)
+-				for (i=0; i<2; i++)
+-					if (!Bstrcasecmp(parm->parms[0], fmts[j][i])) break;
+-			if (j == 2) return OSDCMD_SHOWHELP;
+-			captureformat = i;
++		const char *fmts[3] = { "TGA", "PCX", "PNG" };
++		if (!showval) {
++			int i;
++			for (i=0; i<3; i++)
++				if (!Bstrcasecmp(parm->parms[0], fmts[i]) || atoi(parm->parms[0]) == i) {
++					captureformat = i;
++					break;
++				}
++			if (i == 3) return OSDCMD_SHOWHELP;
+ 		}
++		buildprintf("screencaptureformat is %s\n", fmts[captureformat]);
+ 		return OSDCMD_OK;
+ 	}
+ 	else if (!Bstrcasecmp(parm->name, "novoxmips")) {
+@@ -129,7 +130,7 @@ int baselayer_init(void)
+ {
+     OSD_Init();
+ 
+-	OSD_RegisterFunction("screencaptureformat","screencaptureformat: sets the output format for screenshots (TGA or PCX)",osdcmd_vars);
++	OSD_RegisterFunction("screencaptureformat","screencaptureformat: sets the output format for screenshots (TGA, PCX, PNG)",osdcmd_vars);
+ 
+ 	OSD_RegisterFunction("novoxmips","novoxmips: turn off/on the use of mipmaps when rendering 8-bit voxels",osdcmd_vars);
+ 	OSD_RegisterFunction("usevoxels","usevoxels: enable/disable automatic sprite->voxel rendering",osdcmd_vars);
+@@ -270,6 +271,8 @@ static void APIENTRY gl_debug_proc(GLenum source, GLenum type, GLuint id, GLenum
+ 	const char *typestr = "(unknown)";
+ 	const char *severitystr = "(unknown)";
+ 
++	(void)id; (void)length; (void)userParam;
++
+ 	if (debuggllogseverity < 1) return;
+ 
+ 	switch (source) {
+diff --git a/jfbuild/src/build.c b/jfbuild/src/build.c
+index 4c48cfe..8c71486 100644
+--- a/jfbuild/src/build.c
++++ b/jfbuild/src/build.c
+@@ -164,6 +164,8 @@ static int osdcmd_restartvid(const osdfuncparm_t *parm)
+ {
+ 	extern int qsetmode;
+ 
++	(void)parm;
++
+ 	if (qsetmode != 200) return OSDCMD_OK;
+ 
+ 	resetvideomode();
+@@ -6041,7 +6043,7 @@ int numloopsofsector(short sectnum)
+ 	return(numloops);
+ }
+ 
+-short getnumber16(char namestart[80], short num, int maxnumber, char sign)
++short getnumber16(char *namestart, short num, int maxnumber, char sign)
+ {
+ 	char buffer[80], ch;
+ 	int j, k, n, danum, oldnum;
+@@ -6057,7 +6059,7 @@ short getnumber16(char namestart[80], short num, int maxnumber, char sign)
+ 
+ 		ch = bgetchar();
+ 
+-		Bsprintf(buffer,"%s%d_ ",namestart,danum);
++		snprintf(buffer, sizeof(buffer), "%s%d_ ",namestart,danum);
+ 		printmessage16(buffer);
+ 		showframe();
+ 
+@@ -6081,7 +6083,7 @@ short getnumber16(char namestart[80], short num, int maxnumber, char sign)
+ 	return((short)oldnum);
+ }
+ 
+-short getnumber256(char namestart[80], short num, int maxnumber, char sign)
++short getnumber256(char *namestart, short num, int maxnumber, char sign)
+ {
+ 	char buffer[80], ch;
+ 	int j, k, n, danum, oldnum;
+@@ -6101,7 +6103,7 @@ short getnumber256(char namestart[80], short num, int maxnumber, char sign)
+ 
+ 		ch = bgetchar();
+ 
+-		Bsprintf(buffer,"%s%d_ ",namestart,danum);
++		snprintf(buffer, sizeof(buffer), "%s%d_ ",namestart,danum);
+ 		printmessage256(buffer);
+ 		showframe();
+ 
+@@ -6218,8 +6220,7 @@ int menuselect(int newpathmode)
+ 		}
+ 		printext16(halfxdim16-(8*strlen(buffer)/2), 4, 14,0,buffer,0);
+ 
+-		Bsnprintf(buffer,78,"(%d dirs, %d files) %s",numdirs,numfiles,selectedboardfilename);
+-		buffer[sizeof(buffer)-1] = 0;
++		snprintf(buffer,sizeof(buffer),"(%d dirs, %d files) %s",numdirs,numfiles,selectedboardfilename);
+ 		printext16(1,ydim16-8-1,8,0,buffer,0);
+ 
+ 		if (finddirshigh) {
+@@ -6934,7 +6935,7 @@ void keytimerstuff(void)
+ 	if (vel > 0) vel = max(vel-2,0);
+ }
+ 
+-void printmessage16(char name[82])
++void printmessage16(char *name)
+ {
+ 	char snotbuf[60];
+ 	int i;
+@@ -6957,7 +6958,7 @@ void printmessage16(char name[82])
+ 	enddrawing();
+ }
+ 
+-void printmessage256(char name[82])
++void printmessage256(char *name)
+ {
+ 	char snotbuf[40];
+ 	int i;
+diff --git a/jfbuild/src/cache1d.c b/jfbuild/src/cache1d.c
+index f65df40..115d445 100644
+--- a/jfbuild/src/cache1d.c
++++ b/jfbuild/src/cache1d.c
+@@ -445,13 +445,13 @@ int initgroupfile(const char *filename)
+ 	i = Bopen(zfn,BO_BINARY|BO_RDONLY,BS_IREAD);
+ 	if (i < 0) { free(zfn); return -1; }
+ 
+-	Bread(i, buf, 4);
+-	if (buf[0] == 0x50 && buf[1] == 0x4B && buf[2] == 0x03 && buf[3] == 0x04) {
+-		Bclose(i);
+-		j = kzaddstack(zfn);
+-		free(zfn);
+-		return j;
+-	}
++	if (Bread(i, buf, 4) == 4)
++		if (buf[0] == 0x50 && buf[1] == 0x4B && buf[2] == 0x03 && buf[3] == 0x04) {
++			Bclose(i);
++			j = kzaddstack(zfn);
++			free(zfn);
++			return j;
++		}
+ 	free(zfn);
+ 
+ 	if (numgroupfiles >= MAXGROUPFILES) return(-1);
+@@ -464,8 +464,8 @@ int initgroupfile(const char *filename)
+ #endif
+ 	{
+ 		groupfilpos[numgroupfiles] = 0;
+-		Bread(groupfil[numgroupfiles],buf,16);
+-		if ((buf[0] != 'K') || (buf[1] != 'e') || (buf[2] != 'n') ||
++		if (Bread(groupfil[numgroupfiles],buf,16) != 16 ||
++			 (buf[0] != 'K') || (buf[1] != 'e') || (buf[2] != 'n') ||
+ 			 (buf[3] != 'S') || (buf[4] != 'i') || (buf[5] != 'l') ||
+ 			 (buf[6] != 'v') || (buf[7] != 'e') || (buf[8] != 'r') ||
+ 			 (buf[9] != 'm') || (buf[10] != 'a') || (buf[11] != 'n'))
+@@ -481,7 +481,16 @@ int initgroupfile(const char *filename)
+ 		if ((gfileoffs[numgroupfiles] = (int *)kmalloc((gnumfiles[numgroupfiles]+1)<<2)) == 0)
+ 			{ buildprintf("Not enough memory for file grouping system\n"); exit(0); }
+ 
+-		Bread(groupfil[numgroupfiles],gfilelist[numgroupfiles],gnumfiles[numgroupfiles]<<4);
++		if (Bread(groupfil[numgroupfiles],gfilelist[numgroupfiles],
++			 gnumfiles[numgroupfiles]<<4) != gnumfiles[numgroupfiles]<<4)
++		{
++			buildprintf("Group file %s is damaged\n", filename);
++			free(gfilelist[numgroupfiles]); gfilelist[numgroupfiles] = NULL;
++			free(gfileoffs[numgroupfiles]); gfileoffs[numgroupfiles] = NULL;
++			Bclose(groupfil[numgroupfiles]);
++			groupfil[numgroupfiles] = -1;
++			return(-1);
++		}
+ 
+ 		j = 0;
+ 		for(i=0;i<gnumfiles[numgroupfiles];i++)
+@@ -1059,6 +1068,11 @@ static void lzwallocate(void)
+ 	if (lzwbuf5 == NULL) allocache((void **)&lzwbuf5,LZWSIZE+(LZWSIZE>>4),&lzwbuflock[4]);
+ }
+ 
++static void lzwrelease(void)
++{
++	lzwbuflock[0] = lzwbuflock[1] = lzwbuflock[2] = lzwbuflock[3] = lzwbuflock[4] = 1;
++}
++
+ int kdfread(void *buffer, bsize_t dasizeof, bsize_t count, int fil)
+ {
+ 	size_t i, j;
+@@ -1071,9 +1085,9 @@ int kdfread(void *buffer, bsize_t dasizeof, bsize_t count, int fil)
+ 	if (dasizeof > LZWSIZE) { count *= dasizeof; dasizeof = 1; }
+ 	ptr = (unsigned char *)buffer;
+ 
+-	if (kread(fil,&leng,2) != 2) return -1;
++	if (kread(fil,&leng,2) != 2) { lzwrelease(); return -1; }
+ 	leng = B_LITTLE16(leng);
+-	if (kread(fil,lzwbuf5,(int)leng) != leng) return -1;
++	if (kread(fil,lzwbuf5,(int)leng) != leng) { lzwrelease(); return -1; }
+ 	k = 0; kgoal = lzwuncompress(lzwbuf5,(int)leng,lzwbuf4);
+ 
+ 	copybufbyte(lzwbuf4,ptr,(int)dasizeof);
+@@ -1083,16 +1097,16 @@ int kdfread(void *buffer, bsize_t dasizeof, bsize_t count, int fil)
+ 	{
+ 		if (k >= kgoal)
+ 		{
+-			if (kread(fil,&leng,2) != 2) return -1;
++			if (kread(fil,&leng,2) != 2) { lzwrelease(); return -1; }
+ 			leng = B_LITTLE16(leng);
+-			if (kread(fil,lzwbuf5,(int)leng) != leng) return -1;
++			if (kread(fil,lzwbuf5,(int)leng) != leng) { lzwrelease(); return -1; }
+ 			k = 0; kgoal = lzwuncompress(lzwbuf5,(int)leng,lzwbuf4);
+ 		}
+ 		for(j=0;j<dasizeof;j++) ptr[j+dasizeof] = ((ptr[j]+lzwbuf4[j+k])&255);
+ 		k += dasizeof;
+ 		ptr += dasizeof;
+ 	}
+-	lzwbuflock[0] = lzwbuflock[1] = lzwbuflock[2] = lzwbuflock[3] = lzwbuflock[4] = 1;
++	lzwrelease();
+ 	return count;
+ }
+ 
+@@ -1108,9 +1122,9 @@ int dfread(void *buffer, bsize_t dasizeof, bsize_t count, BFILE *fil)
+ 	if (dasizeof > LZWSIZE) { count *= dasizeof; dasizeof = 1; }
+ 	ptr = (unsigned char *)buffer;
+ 
+-	if (Bfread(&leng,2,1,fil) != 1) return -1;
++	if (Bfread(&leng,2,1,fil) != 1) { lzwrelease(); return -1; }
+ 	leng = B_LITTLE16(leng);
+-	if (Bfread(lzwbuf5,(int)leng,1,fil) != 1) return -1;
++	if (Bfread(lzwbuf5,(int)leng,1,fil) != 1) { lzwrelease(); return -1; }
+ 	k = 0; kgoal = lzwuncompress(lzwbuf5,(int)leng,lzwbuf4);
+ 
+ 	copybufbyte(lzwbuf4,ptr,(int)dasizeof);
+@@ -1120,16 +1134,16 @@ int dfread(void *buffer, bsize_t dasizeof, bsize_t count, BFILE *fil)
+ 	{
+ 		if (k >= kgoal)
+ 		{
+-			if (Bfread(&leng,2,1,fil) != 1) return -1;
++			if (Bfread(&leng,2,1,fil) != 1) { lzwrelease(); return -1; }
+ 			leng = B_LITTLE16(leng);
+-			if (Bfread(lzwbuf5,(int)leng,1,fil) != 1) return -1;
++			if (Bfread(lzwbuf5,(int)leng,1,fil) != 1) { lzwrelease(); return -1; }
+ 			k = 0; kgoal = lzwuncompress(lzwbuf5,(int)leng,lzwbuf4);
+ 		}
+ 		for(j=0;j<dasizeof;j++) ptr[j+dasizeof] = ((ptr[j]+lzwbuf4[j+k])&255);
+ 		k += dasizeof;
+ 		ptr += dasizeof;
+ 	}
+-	lzwbuflock[0] = lzwbuflock[1] = lzwbuflock[2] = lzwbuflock[3] = lzwbuflock[4] = 1;
++	lzwrelease();
+ 	return count;
+ }
+ 
+@@ -1150,7 +1164,8 @@ void kdfwrite(void *buffer, bsize_t dasizeof, bsize_t count, int fil)
+ 	if (k > LZWSIZE-dasizeof)
+ 	{
+ 		leng = (short)lzwcompress(lzwbuf4,k,lzwbuf5); k = 0; swleng = B_LITTLE16(leng);
+-		Bwrite(fil,&swleng,2); Bwrite(fil,lzwbuf5,(int)leng);
++		if (Bwrite(fil,&swleng,2) != 2) { lzwrelease(); return; }
++		if (Bwrite(fil,lzwbuf5,(int)leng) != leng) { lzwrelease(); return; }
+ 	}
+ 	
+ 	for(i=1;i<count;i++)
+@@ -1160,16 +1175,18 @@ void kdfwrite(void *buffer, bsize_t dasizeof, bsize_t count, int fil)
+ 		if (k > LZWSIZE-dasizeof)
+ 		{
+ 			leng = (short)lzwcompress(lzwbuf4,k,lzwbuf5); k = 0; swleng = B_LITTLE16(leng);
+-			Bwrite(fil,&swleng,2); Bwrite(fil,lzwbuf5,(int)leng);
++			if (Bwrite(fil,&swleng,2) != 2) { lzwrelease(); return; }
++			if (Bwrite(fil,lzwbuf5,(int)leng) != leng) { lzwrelease(); return; }
+ 		}
+ 		ptr += dasizeof;
+ 	}
+ 	if (k > 0)
+ 	{
+ 		leng = (short)lzwcompress(lzwbuf4,k,lzwbuf5); swleng = B_LITTLE16(leng);
+-		Bwrite(fil,&swleng,2); Bwrite(fil,lzwbuf5,(int)leng);
++		if (Bwrite(fil,&swleng,2) != 2) { lzwrelease(); return; }
++		if (Bwrite(fil,lzwbuf5,(int)leng) != leng) { lzwrelease(); return; }
+ 	}
+-	lzwbuflock[0] = lzwbuflock[1] = lzwbuflock[2] = lzwbuflock[3] = lzwbuflock[4] = 1;
++	lzwrelease();
+ }
+ 
+ void dfwrite(void *buffer, bsize_t dasizeof, bsize_t count, BFILE *fil)
+@@ -1189,7 +1206,8 @@ void dfwrite(void *buffer, bsize_t dasizeof, bsize_t count, BFILE *fil)
+ 	if (k > LZWSIZE-dasizeof)
+ 	{
+ 		leng = (short)lzwcompress(lzwbuf4,k,lzwbuf5); k = 0; swleng = B_LITTLE16(leng);
+-		Bfwrite(&swleng,2,1,fil); Bfwrite(lzwbuf5,(int)leng,1,fil);
++		if (Bfwrite(&swleng,2,1,fil) != 1) { lzwrelease(); return; }
++		if (Bfwrite(lzwbuf5,(int)leng,1,fil) != 1) { lzwrelease(); return; }
+ 	}
+ 
+ 	for(i=1;i<count;i++)
+@@ -1199,16 +1217,18 @@ void dfwrite(void *buffer, bsize_t dasizeof, bsize_t count, BFILE *fil)
+ 		if (k > LZWSIZE-dasizeof)
+ 		{
+ 			leng = (short)lzwcompress(lzwbuf4,k,lzwbuf5); k = 0; swleng = B_LITTLE16(leng);
+-			Bfwrite(&swleng,2,1,fil); Bfwrite(lzwbuf5,(int)leng,1,fil);
++			if (Bfwrite(&swleng,2,1,fil) != 1) { lzwrelease(); return; }
++			if (Bfwrite(lzwbuf5,(int)leng,1,fil) != 1) { lzwrelease(); return; }
+ 		}
+ 		ptr += dasizeof;
+ 	}
+ 	if (k > 0)
+ 	{
+ 		leng = (short)lzwcompress(lzwbuf4,k,lzwbuf5); swleng = B_LITTLE16(leng);
+-		Bfwrite(&swleng,2,1,fil); Bfwrite(lzwbuf5,(int)leng,1,fil);
++		if (Bfwrite(&swleng,2,1,fil) != 1) { lzwrelease(); return; }
++		if (Bfwrite(lzwbuf5,(int)leng,1,fil) != 1) { lzwrelease(); return; }
+ 	}
+-	lzwbuflock[0] = lzwbuflock[1] = lzwbuflock[2] = lzwbuflock[3] = lzwbuflock[4] = 1;
++	lzwrelease();
+ }
+ 
+ static int lzwcompress(unsigned char *lzwinbuf, int uncompleng, unsigned char *lzwoutbuf)
+diff --git a/jfbuild/src/engine.c b/jfbuild/src/engine.c
+index 4fbec18..86b541f 100644
+--- a/jfbuild/src/engine.c
++++ b/jfbuild/src/engine.c
+@@ -38,7 +38,7 @@
+ void *kmalloc(bsize_t size) { return(Bmalloc(size)); }
+ void kfree(void *buffer) { Bfree(buffer); }
+ 
+-void loadvoxel(int voxindex) { voxindex=0; }
++void loadvoxel(int voxindex) { (void)voxindex; }
+ int tiletovox[MAXTILES];
+ int usevoxels = 1;
+ #define kloadvoxel loadvoxel
+@@ -528,9 +528,10 @@ static int permhead = 0, permtail = 0;
+ short numscans, numhits, numbunches;
+ 
+ static short capturecount = 0;
+-static char capturename[20], captureatnextpage = 0;
+-static int screencapture_pcx(char *filename, char inverseit);
+-static int screencapture_tga(char *filename, char inverseit);
++static char capturename[20] = "capt0000.xxx", captureatnextpage = 0;
++static int screencapture_pcx(char mode);
++static int screencapture_tga(char mode);
++static int screencapture_png(char mode);
+ 
+ unsigned char vgapal16[4*256] =
+ {
+@@ -1084,6 +1085,8 @@ int animateoffs(short tilenum, short fakevar)
+ {
+ 	int i, k, offs;
+ 
++	(void)fakevar;
++
+ 	offs = 0;
+ 	i = (totalclocklock>>((picanm[tilenum]>>24)&15));
+ 	if ((picanm[tilenum]&63) > 0)
+@@ -2226,6 +2229,8 @@ static void parascan(int dax1, int dax2, int sectnum, unsigned char dastat, int
+ 	int j, k, l, m, n, x, z, wallnum, nextsectnum, globalhorizbak;
+ 	short *topptr, *botptr;
+ 
++	(void)dax1; (void)dax2;
++
+ 	sectnum = thesector[bunchfirst[bunch]]; sec = &sector[sectnum];
+ 
+ 	globalhorizbak = globalhoriz;
+@@ -5312,6 +5317,9 @@ static int raytrace(int x3, int y3, int *x4, int *y4)
+ static void sighandler(int sig, siginfo_t *info, void *ctx)
+ {
+ 	const char *s;
++
++	(void)ctx;
++
+ 	switch (sig) {
+ 		case SIGFPE:
+ 			switch (info->si_code) {
+@@ -5447,7 +5455,7 @@ int initengine(void)
+ 	visibility = 512;
+ 	parallaxvisibility = 512;
+ 
+-	captureformat = 0;
++	captureformat = 2;  // PNG
+ 
+ 	if (loadtables()) return 1;
+ 	if (loadpalette()) return 1;
+@@ -6061,14 +6069,14 @@ void drawmapview(int dax, int day, int zoome, short ang)
+ 			yspan = tilesizy[tilenum]; yrepeat = spr->yrepeat;
+ 
+ 			ox = ((xspan>>1)+xoff)*xrepeat; oy = ((yspan>>1)+yoff)*yrepeat;
+-			x1 = spr->x + mulscale(sinang,ox,16) + mulscale(cosang,oy,16);
+-			y1 = spr->y + mulscale(sinang,oy,16) - mulscale(cosang,ox,16);
++			x1 = spr->x + mulscale16(sinang,ox) + mulscale16(cosang,oy);
++			y1 = spr->y + mulscale16(sinang,oy) - mulscale16(cosang,ox);
+ 			l = xspan*xrepeat;
+-			x2 = x1 - mulscale(sinang,l,16);
+-			y2 = y1 + mulscale(cosang,l,16);
++			x2 = x1 - mulscale16(sinang,l);
++			y2 = y1 + mulscale16(cosang,l);
+ 			l = yspan*yrepeat;
+-			k = -mulscale(cosang,l,16); x3 = x2+k; x4 = x1+k;
+-			k = -mulscale(sinang,l,16); y3 = y2+k; y4 = y1+k;
++			k = -mulscale16(cosang,l); x3 = x2+k; x4 = x1+k;
++			k = -mulscale16(sinang,l); y3 = y2+k; y4 = y1+k;
+ 
+ 			xb1[0] = 1; xb1[1] = 2; xb1[2] = 3; xb1[3] = 0;
+ 			npoints = 4;
+@@ -7340,15 +7348,15 @@ int saveboard(char *filename, int *daposx, int *daposy, int *daposz,
+ 		mapversion = 8;
+ 	else
+ 		mapversion = 7;
+-	tl = B_LITTLE32(mapversion);    Bwrite(fil,&tl,4);
++	tl = B_LITTLE32(mapversion);    if (Bwrite(fil,&tl,4) != 4) goto writeerror;
+ 
+-	tl = B_LITTLE32(*daposx);       Bwrite(fil,&tl,4);
+-	tl = B_LITTLE32(*daposy);       Bwrite(fil,&tl,4);
+-	tl = B_LITTLE32(*daposz);       Bwrite(fil,&tl,4);
+-	ts = B_LITTLE16(*daang);        Bwrite(fil,&ts,2);
+-	ts = B_LITTLE16(*dacursectnum); Bwrite(fil,&ts,2);
++	tl = B_LITTLE32(*daposx);       if (Bwrite(fil,&tl,4) != 4) goto writeerror;
++	tl = B_LITTLE32(*daposy);       if (Bwrite(fil,&tl,4) != 4) goto writeerror;
++	tl = B_LITTLE32(*daposz);       if (Bwrite(fil,&tl,4) != 4) goto writeerror;
++	ts = B_LITTLE16(*daang);        if (Bwrite(fil,&ts,2) != 2) goto writeerror;
++	ts = B_LITTLE16(*dacursectnum); if (Bwrite(fil,&ts,2) != 2) goto writeerror;
+ 
+-	ts = B_LITTLE16(numsectors);    Bwrite(fil,&ts,2);
++	ts = B_LITTLE16(numsectors);    if (Bwrite(fil,&ts,2) != 2) goto writeerror;
+ 	for (i=0; i<numsectors; i++) {
+ 		tsect = sector[i];
+ 		tsect.wallptr       = B_LITTLE16(tsect.wallptr);
+@@ -7364,10 +7372,10 @@ int saveboard(char *filename, int *daposx, int *daposy, int *daposz,
+ 		tsect.lotag         = B_LITTLE16(tsect.lotag);
+ 		tsect.hitag         = B_LITTLE16(tsect.hitag);
+ 		tsect.extra         = B_LITTLE16(tsect.extra);
+-		Bwrite(fil,&tsect,sizeof(sectortype));
++		if (Bwrite(fil,&tsect,sizeof(sectortype)) != sizeof(sectortype)) goto writeerror;
+ 	}
+ 
+-	ts = B_LITTLE16(numwalls);      Bwrite(fil,&ts,2);
++	ts = B_LITTLE16(numwalls);      if (Bwrite(fil,&ts,2) != 2) goto writeerror;
+ 	for (i=0; i<numwalls; i++) {
+ 		twall = wall[i];
+ 		twall.x          = B_LITTLE32(twall.x);
+@@ -7381,10 +7389,10 @@ int saveboard(char *filename, int *daposx, int *daposy, int *daposz,
+ 		twall.lotag      = B_LITTLE16(twall.lotag);
+ 		twall.hitag      = B_LITTLE16(twall.hitag);
+ 		twall.extra      = B_LITTLE16(twall.extra);
+-		Bwrite(fil,&twall,sizeof(walltype));
++		if (Bwrite(fil,&twall,sizeof(walltype)) != sizeof(walltype)) goto writeerror;
+ 	}
+ 
+-	ts = B_LITTLE16(numsprites);    Bwrite(fil,&ts,2);
++	ts = B_LITTLE16(numsprites);    if (Bwrite(fil,&ts,2) != 2) goto writeerror;
+ 
+ 	for(j=0;j<MAXSTATUS;j++)
+ 	{
+@@ -7407,13 +7415,17 @@ int saveboard(char *filename, int *daposx, int *daposy, int *daposz,
+ 			tspri.lotag   = B_LITTLE16(tspri.lotag);
+ 			tspri.hitag   = B_LITTLE16(tspri.hitag);
+ 			tspri.extra   = B_LITTLE16(tspri.extra);
+-			Bwrite(fil,&tspri,sizeof(spritetype));
++			if (Bwrite(fil,&tspri,sizeof(spritetype)) != sizeof(spritetype)) goto writeerror;
+ 			i = nextspritestat[i];
+ 		}
+ 	}
+ 
+ 	Bclose(fil);
+ 	return(0);
++
++writeerror:
++	Bclose(fil);
++	return(-1);
+ }
+ 
+ 
+@@ -7680,8 +7692,7 @@ void nextpage(void)
+ #endif
+ 
+ 			if (captureatnextpage) {
+-				if (captureformat == 0) screencapture_tga(capturename,captureatnextpage&1);
+-				else screencapture_pcx(capturename,captureatnextpage&1);
++				screencapture(NULL, captureatnextpage);
+ 				captureatnextpage = 0;
+ 			}
+ 
+@@ -10117,6 +10128,8 @@ void preparemirror(int dax, int day, int daz, short daang, int dahoriz, short da
+ {
+ 	int i, j, x, y, dx, dy;
+ 
++	(void)daz; (void)dahoriz; (void)dasector;
++
+ 	x = wall[dawall].x; dx = wall[wall[dawall].point2].x-x;
+ 	y = wall[dawall].y; dy = wall[wall[dawall].point2].y-y;
+ 	j = dx*dx + dy*dy; if (j == 0) return;
+@@ -10764,6 +10777,8 @@ void draw2dgrid(int posxe, int posye, short ange, int zoome, short gride)
+ {
+ 	int i, xp1, yp1, xp2=0, yp2, tempy;
+ 
++	(void)ange;
++
+ 	if (gride > 0)
+ 	{
+ 		begindrawing();	//{{{
+@@ -11127,37 +11142,121 @@ void printext256(int xpos, int ypos, short col, short backcol, const char *name,
+ //
+ // screencapture
+ //
+-static int screencapture_tga(char *filename, char inverseit)
++static BFILE *screencapture_openfile(const char *ext)
+ {
+-	int i,j;
+-	unsigned char *ptr, head[18] = { 0,1,1,0,0,0,1,24,0,0,0,0,0/*wlo*/,0/*whi*/,0/*hlo*/,0/*hhi*/,8,0 };
+-	//char palette[4*256];
+-	char *fn = Bstrdup(filename), *inversebuf, c;
++	int i;
+ 	BFILE *fil;
+ 
+ 	do {	// JBF 2004022: So we don't overwrite existing screenshots
+-        if (capturecount > 9999) {
+-            Bfree(fn);
+-            return -1;
+-        }
+-
+-		i = Bstrrchr(fn,'.')-fn-4;
+-		fn[i++] = ((capturecount/1000)%10)+48;
+-		fn[i++] = ((capturecount/100)%10)+48;
+-		fn[i++] = ((capturecount/10)%10)+48;
+-		fn[i++] = (capturecount%10)+48;
++		if (capturecount > 9999) {
++			return NULL;
++		}
++
++		i = Bstrrchr(capturename,'.')-capturename-4;
++		capturename[i++] = ((capturecount/1000)%10)+48;
++		capturename[i++] = ((capturecount/100)%10)+48;
++		capturename[i++] = ((capturecount/10)%10)+48;
++		capturename[i++] = (capturecount%10)+48;
+ 		i++;
+-		fn[i++] = 't';
+-		fn[i++] = 'g';
+-		fn[i++] = 'a';
++		capturename[i++] = ext[0];
++		capturename[i++] = ext[1];
++		capturename[i++] = ext[2];
+ 
+-		if ((fil = Bfopen(fn,"rb")) == NULL) break;
++		if ((fil = Bfopen(capturename, "rb")) == NULL) break;
+ 		Bfclose(fil);
+ 		capturecount++;
+ 	} while (1);
+-	fil = Bfopen(fn,"wb");
+-	if (fil == NULL) {
+-		Bfree(fn);
++	fil = Bfopen(capturename, "wb");
++	if (fil) capturecount++;
++	return fil;
++}
++
++static int screencapture_writeframe(BFILE *fil, char mode, void *v,
++	void (*writeline)(unsigned char *, int, int, BFILE *, void *))
++{
++	int y, ystart, yend, yinc, j;
++	unsigned char *ptr, *buf;
++	char inverseit = 0, bottotop = 0, bgr = 0;
++
++	inverseit = (mode & 1);
++	bottotop = (mode & 2);
++	bgr = (mode & 4);
++
++#if USE_POLYMOST && USE_OPENGL
++	if (rendmode >= 3 && qsetmode == 200) {
++		// OpenGL returns bottom-to-top ordered lines.
++		if (bottotop) {
++			ystart = 0;
++			yend = ydim;
++			yinc = 1;
++		} else {
++			ystart = ydim-1;
++			yend = -1;
++			yinc = -1;
++		}
++		buf = kmalloc(xdim*ydim*3);
++		if (buf) {
++			glfunc.glReadPixels(0,0,xdim,ydim,GL_RGB,GL_UNSIGNED_BYTE,buf);
++			if (bgr) {
++				for (j=(xdim*ydim-1)*3; j>=0; j-=3) {
++					swapchar(&buf[j+0], &buf[j+2]);
++				}
++			}
++			for (y = ystart; y != yend; y += yinc) {
++				ptr = buf + y*xdim*3;
++				writeline(ptr, xdim, 3, fil, v);
++			}
++			kfree(buf);
++		}
++		return(0);
++	}
++#endif
++
++	begindrawing();	//{{{
++	ptr = (unsigned char *)frameplace;
++	if (bottotop) {
++		ystart = ydim-1;
++		yend = -1;
++		yinc = -1;
++	} else {
++		ystart = 0;
++		yend = ydim;
++		yinc = 1;
++	}
++
++	if (inverseit && qsetmode != 200) {
++		buf = kmalloc(bytesperline);
++		if (buf) {
++			for (y = ystart; y != yend; y += yinc) {
++				copybuf(ptr + y*bytesperline, buf, xdim >> 2);
++				for (j=(bytesperline>>2)-1; j>=0; j--) ((int *)buf)[j] ^= 0x0f0f0f0fL;
++				writeline(buf, xdim, 1, fil, v);
++			}
++			kfree(buf);
++		}
++	} else {
++		for (y = ystart; y != yend; y += yinc) {
++			writeline(ptr + y*bytesperline, xdim, 1, fil, v);
++		}
++	}
++
++	enddrawing();	//}}}
++	return(0);
++}
++
++static void screencapture_writetgaline(unsigned char *buf, int bytes, int elements, BFILE *fp, void *v)
++{
++	(void)v;
++	Bfwrite(buf, bytes, elements, fp);
++}
++
++static int screencapture_tga(char mode)
++{
++	int i,j;
++	unsigned char *ptr, head[18] = { 0,1,1,0,0,0,1,24,0,0,0,0,0/*wlo*/,0/*whi*/,0/*hlo*/,0/*hhi*/,8,0 };
++	BFILE *fil;
++
++	if ((fil = screencapture_openfile("tga")) == NULL) {
+ 		return -1;
+ 	}
+ 
+@@ -11181,14 +11280,10 @@ static int screencapture_tga(char *filename, char inverseit)
+ 
+ 	Bfwrite(head, 18, 1, fil);
+ 
+-	begindrawing();	//{{{
+-	ptr = (unsigned char *)frameplace;
+-
+ 	// palette first
+ #if USE_POLYMOST && USE_OPENGL
+ 	if (rendmode < 3 || (rendmode == 3 && qsetmode != 200)) {
+ #endif
+-		//getpalette(0,256,palette);
+ 		for (i=0; i<256; i++) {
+ 			Bfputc(curpalettefaded[i].b, fil);	// b
+ 			Bfputc(curpalettefaded[i].g, fil);	// g
+@@ -11198,48 +11293,11 @@ static int screencapture_tga(char *filename, char inverseit)
+ 	}
+ #endif
+ 
+-	// targa renders bottom to top, from left to right
+-	if (inverseit && qsetmode != 200) {
+-		inversebuf = kmalloc(bytesperline);
+-		if (inversebuf) {
+-			for (i=ydim-1; i>=0; i--) {
+-				copybuf(ptr+i*bytesperline, inversebuf, xdim >> 2);
+-				for (j=0; j < (bytesperline>>2); j++) ((int *)inversebuf)[j] ^= 0x0f0f0f0fL;
+-				Bfwrite(inversebuf, xdim, 1, fil);
+-			}
+-			kfree(inversebuf);
+-		}
+-	} else {
+-#if USE_POLYMOST && USE_OPENGL
+-		if (rendmode >= 3 && qsetmode == 200) {
+-			// 24bit
+-			inversebuf = kmalloc(xdim*ydim*3);
+-			if (inversebuf) {
+-				glfunc.glReadPixels(0,0,xdim,ydim,GL_RGB,GL_UNSIGNED_BYTE,inversebuf);
+-				j = xdim*ydim*3;
+-				for (i=0; i<j; i+=3) {
+-					c = inversebuf[i];
+-					inversebuf[i] = inversebuf[i+2];
+-					inversebuf[i+2] = c;
+-				}
+-				Bfwrite(inversebuf, xdim*ydim, 3, fil);
+-				kfree(inversebuf);
+-			}
+-		} else {
+-#endif
+-			for (i=ydim-1; i>=0; i--)
+-				Bfwrite(ptr+i*bytesperline, xdim, 1, fil);
+-#if USE_POLYMOST && USE_OPENGL
+-		}
+-#endif
+-	}
+-
+-	enddrawing();	//}}}
++	// Targa renders bottom to top, from left to right.
++	// 24bit images use BGR element order.
++	screencapture_writeframe(fil, (mode&1) | 2 | 4, NULL, screencapture_writetgaline);
+ 
+ 	Bfclose(fil);
+-	buildprintf("Saved screenshot to %s\n", fn);
+-	Bfree(fn);
+-	capturecount++;
+ 	return(0);
+ }
+ 
+@@ -11273,51 +11331,40 @@ static void writepcxline(unsigned char *buf, int bytes, int step, BFILE *fp)
+ 			runCount++;
+ 			if (runCount == 63) {
+ 				writepcxbyte(last, runCount, fp);
+-        	                runCount = 0;
+-                	}
+-	        } else {
++				runCount = 0;
++			}
++		} else {
+ 			if (runCount)
+ 				writepcxbyte(last, runCount, fp);
+ 
+-                	last = ths;
++			last = ths;
+ 			runCount = 1;
+-                }
+-        }
++		}
++	}
+ 
+ 	if (runCount) writepcxbyte(last, runCount, fp);
+ 	if (bytes&1) writepcxbyte(0, 1, fp);
+ }
+ 
+-static int screencapture_pcx(char *filename, char inverseit)
++static void screencapture_writepcxline(unsigned char *buf, int bytes, int elements, BFILE *fp, void *v)
++{
++	(void)v;
++	if (elements == 3) {
++		writepcxline(buf,   bytes, 3, fp);
++		writepcxline(buf+1, bytes, 3, fp);
++		writepcxline(buf+2, bytes, 3, fp);
++		return;
++	}
++	writepcxline(buf, bytes, 1, fp);
++}
++
++static int screencapture_pcx(char mode)
+ {
+ 	int i,j,bpl;
+-	unsigned char *ptr, head[128], *inversebuf;
+-	char *fn = Bstrdup(filename);
++	unsigned char *ptr, head[128];
+ 	BFILE *fil;
+ 
+-	do {	// JBF 2004022: So we don't overwrite existing screenshots
+-        if (capturecount > 9999) {
+-            Bfree(fn);
+-            return -1;
+-        }
+-
+-		i = Bstrrchr(fn,'.')-fn-4;
+-		fn[i++] = ((capturecount/1000)%10)+48;
+-		fn[i++] = ((capturecount/100)%10)+48;
+-		fn[i++] = ((capturecount/10)%10)+48;
+-		fn[i++] = (capturecount%10)+48;
+-		i++;
+-		fn[i++] = 'p';
+-		fn[i++] = 'c';
+-		fn[i++] = 'x';
+-
+-		if ((fil = Bfopen(fn,"rb")) == NULL) break;
+-		Bfclose(fil);
+-		capturecount++;
+-	} while (1);
+-	fil = Bfopen(fn,"wb");
+-	if (fil == NULL) {
+-		Bfree(fn);
++	if ((fil = screencapture_openfile("pcx")) == NULL) {
+ 		return -1;
+ 	}
+ 
+@@ -11349,44 +11396,9 @@ static int screencapture_pcx(char *filename, char inverseit)
+ 
+ 	Bfwrite(head, 128, 1, fil);
+ 
+-	begindrawing();	//{{{
+-	ptr = (unsigned char *)frameplace;
+-
+-	// targa renders bottom to top, from left to right
+-	if (inverseit && qsetmode != 200) {
+-		inversebuf = kmalloc(bytesperline);
+-		if (inversebuf) {
+-			for (i=0; i<ydim; i++) {
+-				copybuf(ptr+i*bytesperline, inversebuf, xdim >> 2);
+-				for (j=0; j < (bytesperline>>2); j++) ((int *)inversebuf)[j] ^= 0x0f0f0f0fL;
+-				writepcxline(inversebuf, xdim, 1, fil);
+-			}
+-			kfree(inversebuf);
+-		}
+-	} else {
+-#if USE_POLYMOST && USE_OPENGL
+-		if (rendmode >= 3 && qsetmode == 200) {
+-			// 24bit
+-			inversebuf = kmalloc(xdim*ydim*3);
+-			if (inversebuf) {
+-				glfunc.glReadPixels(0,0,xdim,ydim,GL_RGB,GL_UNSIGNED_BYTE,inversebuf);
+-				for (i=ydim-1; i>=0; i--) {
+-					writepcxline(inversebuf+i*xdim*3,   xdim, 3, fil);
+-					writepcxline(inversebuf+i*xdim*3+1, xdim, 3, fil);
+-					writepcxline(inversebuf+i*xdim*3+2, xdim, 3, fil);
+-				}
+-				kfree(inversebuf);
+-			}
+-		} else {
+-#endif
+-			for (i=0; i<ydim; i++)
+-				writepcxline(ptr+i*bytesperline, xdim, 1, fil);
+-#if USE_POLYMOST && USE_OPENGL
+-		}
+-#endif
+-	}
+-
+-	enddrawing();	//}}}
++	// PCX renders top to bottom, from left to right.
++	// 24-bit images have each scan line written as deinterleaved RGB.
++	screencapture_writeframe(fil, (mode&1), NULL, screencapture_writepcxline);
+ 
+ 	// palette last
+ #if USE_POLYMOST && USE_OPENGL
+@@ -11404,21 +11416,168 @@ static int screencapture_pcx(char *filename, char inverseit)
+ #endif
+ 
+ 	Bfclose(fil);
+-	buildprintf("Saved screenshot to %s\n", fn);
+-	Bfree(fn);
+-	capturecount++;
++	return(0);
++}
++
++struct pngsums {
++	unsigned int crc;
++	unsigned short adlers1;
++	unsigned short adlers2;
++};
++
++static void screencapture_writepngline(unsigned char *buf, int bytes, int elements, BFILE *fp, void *v)
++{
++	unsigned char header[6];
++	unsigned short blklen;
++	int i;
++	struct pngsums *sums = (struct pngsums *)v;
++
++	blklen = (unsigned short)B_LITTLE16(1 + bytes * elements);	// One extra for the filter type.
++	header[0] = 0;	// BFINAL = 0, BTYPE = 00.
++	memcpy(&header[1], &blklen, 2);
++	blklen = ~blklen;
++	memcpy(&header[3], &blklen, 2);
++
++	header[5] = 0;	// No filter.
++	sums->adlers2 = (sums->adlers2 + sums->adlers1) % 65521;
++	crc32block(&sums->crc, header, sizeof(header));
++	Bfwrite(header, sizeof(header), 1, fp);
++
++	for (i=0; i < bytes * elements; i++) {
++		sums->adlers1 = (sums->adlers1 + buf[i]) % 65521;
++		sums->adlers2 = (sums->adlers2 + sums->adlers1) % 65521;
++	}
++	crc32block(&sums->crc, buf, bytes * elements);
++	Bfwrite(buf, bytes, elements, fp);
++}
++
++static int screencapture_png(char mode)
++{
++	const unsigned char pngsig[] = { 0x89, 'P', 'N', 'G', 0xd, 0xa, 0x1a, 0xa };
++	const unsigned char enddeflate[] = { 1, 0, 0, 0xff, 0xff };
++
++#define BEGIN_PNG_CHUNK(type) { \
++	acclen = 4; \
++	memcpy(&buf[acclen], type, 4); \
++	acclen += 4; \
++}
++#define SET_PNG_CHUNK_LEN(fore) { \
++	/* Accumulated and forecast, minus length and type fields. */ \
++	int len = B_BIG32(acclen + fore - 8); \
++	memcpy(&buf[0], &len, 4); \
++}
++#define END_PNG_CHUNK(ccrc) { \
++	unsigned int crc = B_BIG32(ccrc); \
++	memcpy(&buf[acclen], &crc, 4); \
++	acclen += 4; \
++	Bfwrite(buf, acclen, 1, fil); \
++}
++
++	unsigned char buf[1024];
++	int length, i, acclen, glmode = 0;
++	unsigned short s;
++	BFILE *fil;
++	struct pngsums sums;
++
++#if USE_POLYMOST && USE_OPENGL
++	glmode = (rendmode == 3 && qsetmode == 200);
++#endif
++
++	if ((fil = screencapture_openfile("png")) == NULL) {
++		return -1;
++	}
++
++	Bfwrite(pngsig, sizeof(pngsig), 1, fil);
++
++	// Header.
++	BEGIN_PNG_CHUNK("IHDR");
++	i = B_BIG32(xdim); memcpy(&buf[acclen], &i, 4); acclen += 4;
++	i = B_BIG32(ydim); memcpy(&buf[acclen], &i, 4); acclen += 4;
++	buf[acclen++] = 8;	// Bit depth per sample/palette index.
++	buf[acclen++] = glmode ? 2 : 3;	// Colour type.
++	buf[acclen++] = 0;	// Deflate compression method.
++	buf[acclen++] = 0;	// Adaptive filter.
++	buf[acclen++] = 0;	// No interlace.
++	SET_PNG_CHUNK_LEN(0);
++	END_PNG_CHUNK(crc32once(&buf[4], acclen - 4));
++
++	// Palette if needed.
++#if USE_POLYMOST && USE_OPENGL
++	if (rendmode < 3 || (rendmode == 3 && qsetmode != 200)) {
++#endif
++		BEGIN_PNG_CHUNK("PLTE");
++		for (i=0; i<256; i++, acclen+=3) {
++			buf[acclen+0] = curpalettefaded[i].r;
++			buf[acclen+1] = curpalettefaded[i].g;
++			buf[acclen+2] = curpalettefaded[i].b;
++		}
++		SET_PNG_CHUNK_LEN(0);
++		END_PNG_CHUNK(crc32once(&buf[4], acclen - 4));
++#if USE_POLYMOST && USE_OPENGL
++	}
++#endif
++
++	// Image Data.
++	BEGIN_PNG_CHUNK("IDAT");
++	crc32init(&sums.crc);
++
++	// Content is a Zlib stream.
++	buf[acclen++] = 0x78;	// Deflate, 32k window.
++	buf[acclen++] = 1;		// Check bits 0-4: (0x7800 + 1) % 0x1f == 0
++
++	length = (1 + 2 + 2) + 1 + xdim * (glmode ? 3 : 1);	// Length of one scanline deflate block.
++	length *= ydim;			// By height.
++	length += sizeof(enddeflate);	// Plus length of 'End of Deflate' block.
++	length += 4;			// Plus Adler32 checksum.
++	SET_PNG_CHUNK_LEN(length);
++
++	crc32block(&sums.crc, &buf[4], acclen - 4);
++	Bfwrite(buf, acclen, 1, fil);	// Write header and start of Zlib stream.
++
++	sums.adlers1 = 1;
++	sums.adlers2 = 0;
++	screencapture_writeframe(fil, (mode&1), &sums, screencapture_writepngline);
++
++	// Finalise the Zlib stream.
++	acclen = 0;
++	memcpy(&buf[acclen], enddeflate, sizeof(enddeflate)); acclen += sizeof(enddeflate);
++	s = B_BIG16(sums.adlers2); memcpy(&buf[acclen], &s, 2); acclen += 2;
++	s = B_BIG16(sums.adlers1); memcpy(&buf[acclen], &s, 2); acclen += 2;
++
++	// Finalise the Image Data chunk and write what remains out.
++	crc32block(&sums.crc, buf, acclen);
++	crc32finish(&sums.crc);
++	END_PNG_CHUNK(sums.crc);
++
++	// End chunk.
++	BEGIN_PNG_CHUNK("IEND");
++	SET_PNG_CHUNK_LEN(0);
++	END_PNG_CHUNK(crc32once(&buf[4], acclen - 4));
++
++	Bfclose(fil);
+ 	return(0);
+ }
+ 
+ int screencapture(char *filename, char mode)
+ {
+-	if (qsetmode == 200 && (mode & 2)) {
+-		captureatnextpage = mode;
++	int ret;
++
++	if (filename) {
+ 		strcpy(capturename, filename);
++	}
++	if (qsetmode == 200 && (mode & 2) && !captureatnextpage) {
++		captureatnextpage = mode;
+ 		return 0;
+ 	}
+-	if (captureformat == 0) return screencapture_tga(filename,mode&1);
+-	else return screencapture_pcx(filename,mode&1);
++	switch (captureformat) {
++		case 0: ret = screencapture_tga(mode&1); break;
++		case 1: ret = screencapture_pcx(mode&1); break;
++		default: ret = screencapture_png(mode&1); break;
++	}
++	if (ret == 0) {
++		buildprintf("Saved screenshot to %s\n", capturename);
++	}
++	return ret;
+ }
+ 
+ 
+diff --git a/jfbuild/src/glbuild.c b/jfbuild/src/glbuild.c
+index cbd755a..d888fcf 100644
+--- a/jfbuild/src/glbuild.c
++++ b/jfbuild/src/glbuild.c
+@@ -7,6 +7,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <stdio.h>
++#include <math.h>
+ 
+ struct glbuild_funcs glfunc;
+ 
+@@ -272,7 +273,7 @@ GLuint glbuild_link_program(int shadercount, GLuint *shaders)
+ 	return program;
+ }
+ 
+-int glbuild_prepare_8bit_shader(glbuild8bit *state, int resx, int resy, int stride)
++int glbuild_prepare_8bit_shader(glbuild8bit *state, int resx, int resy, int stride, int winx, int winy)
+ {
+ 	GLuint shaders[2] = {0,0}, prog = 0;
+ 	GLint status = 0;
+@@ -283,6 +284,10 @@ int glbuild_prepare_8bit_shader(glbuild8bit *state, int resx, int resy, int stri
+ 	float tx = (float)resx / (float)stride, ty = 1.0;
+ 	int tsizx = stride, tsizy = resy;
+ 
++	float winaspect = (float)winx / (float)winy;
++	float frameaspect = (float)resx / (float)resy;
++	float aspectx, aspecty;
++
+ 	if (!glinfo.texnpot) {
+ 		for (tsizx = 1; tsizx < stride; tsizx <<= 1) { }
+ 		for (tsizy = 1; tsizy < resy; tsizy <<= 1) { }
+@@ -290,14 +295,28 @@ int glbuild_prepare_8bit_shader(glbuild8bit *state, int resx, int resy, int stri
+ 		ty = (float)resy / (float)tsizy;
+ 	}
+ 
++	// Correct for aspect ratio difference between the window size
++	// and the logical 8-bit surface by skewing the quad we draw.
++	if (fabs(winaspect - frameaspect) < 0.01) {
++		aspectx = aspecty = 1.0;
++	} else if (winaspect > frameaspect) {
++		// Window is wider than the frame.
++		aspectx = frameaspect / winaspect;
++		aspecty = 1.0;
++	} else {
++		// Window is narrower than the frame.
++		aspectx = 1.0;
++		aspecty = winaspect / frameaspect;
++	}
++
+ 	// Buffer contents: indexes and texcoord/vertex elements.
+ 	GLushort indexes[6] = { 0, 1, 2, 0, 2, 3 };
+ 	GLfloat elements[4][4] = {
+ 		// tx, ty,  vx, vy
+-		{ 0.0, ty,  -1.0, -1.0 },
+-		{ tx,  ty,   1.0, -1.0 },
+-		{ tx,  0.0,  1.0,  1.0 },
+-		{ 0.0, 0.0, -1.0,  1.0 },
++		{ 0.0, ty,  -aspectx, -aspecty },
++		{ tx,  ty,   aspectx, -aspecty },
++		{ tx,  0.0,  aspectx,  aspecty },
++		{ 0.0, 0.0, -aspectx,  aspecty },
+ 	};
+ 
+ 	GLint clamp = glinfo.clamptoedge ? GL_CLAMP_TO_EDGE : GL_CLAMP;
+@@ -447,6 +466,8 @@ void glbuild_update_8bit_frame(glbuild8bit *state, const GLvoid *frame, int resx
+ 	GLenum extfmt = GL_RED;
+ #endif
+ 
++	(void)resx;
++
+ 	glfunc.glActiveTexture(GL_TEXTURE0);
+ 	glfunc.glBindTexture(GL_TEXTURE_2D, state->frametex);
+ 	glfunc.glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, stride, resy, extfmt, GL_UNSIGNED_BYTE, frame);
+@@ -454,6 +475,8 @@ void glbuild_update_8bit_frame(glbuild8bit *state, const GLvoid *frame, int resx
+ 
+ void glbuild_draw_8bit_frame(glbuild8bit *state)
+ {
++	(void)state;
++
+ #if (USE_OPENGL == USE_GLES2)
+ 	glfunc.glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
+ #endif
+diff --git a/jfbuild/src/gtkbits.c b/jfbuild/src/gtkbits.c
+index d3d1d36..c818048 100644
+--- a/jfbuild/src/gtkbits.c
++++ b/jfbuild/src/gtkbits.c
+@@ -38,7 +38,7 @@ int wmgtk_msgbox(char *name, char *msg)
+ 			GTK_DIALOG_DESTROY_WITH_PARENT,
+ 			GTK_MESSAGE_INFO,
+ 			GTK_BUTTONS_OK,
+-			msg);
++			"%s", msg);
+ 	gtk_window_set_title(GTK_WINDOW(dialog), name);
+ 	gtk_dialog_run(GTK_DIALOG(dialog));
+ 	gtk_widget_destroy(dialog);
+@@ -57,7 +57,7 @@ int wmgtk_ynbox(char *name, char *msg)
+ 			GTK_DIALOG_DESTROY_WITH_PARENT,
+ 			GTK_MESSAGE_INFO,
+ 			GTK_BUTTONS_YES_NO,
+-			msg);
++			"%s", msg);
+ 	gtk_window_set_title(GTK_WINDOW(dialog), name);
+ 	r = gtk_dialog_run(GTK_DIALOG(dialog));
+ 	gtk_widget_destroy(dialog);
+@@ -77,6 +77,8 @@ int wmgtk_filechooser(const char *initialdir, const char *initialfile, const cha
+ 	GtkFileFilter *filter;
+ 	char typepat[20];
+ 
++	(void)initialdir;
++
+ 	*choice = NULL;
+ 	if (!gtkenabled) return -1;
+ 
+@@ -147,6 +149,8 @@ void wmgtk_exit(void)
+ 
+ int wmgtk_idle(void *ptr)
+ {
++	(void)ptr;
++
+ 	if (!gtkenabled) return 0;
+ 	gtk_main_iteration_do(FALSE);
+ 	return 0;
+diff --git a/jfbuild/src/kplib.c b/jfbuild/src/kplib.c
+index caefd86..4ca4080 100644
+--- a/jfbuild/src/kplib.c
++++ b/jfbuild/src/kplib.c
+@@ -379,9 +379,9 @@ static inline int bitrev (int b, int c)
+ 	return(j);
+ }
+ 
+-static inline int testflag (int c) { return(0); }
++static inline int testflag (int c) { (void)c; return(0); }
+ 
+-static inline void cpuid (int a, int *s) {}
++static inline void cpuid (int a, int *s) { (void)a; (void)s; }
+ 
+ #endif
+ 
+@@ -437,7 +437,7 @@ static void suckbitsnextblock ()
+ 			//NOTE: should only read bytes inside compsize, not 64K!!! :/
+ 		*(int *)&olinbuf[0] = *(int *)&olinbuf[sizeof(olinbuf)-4];
+ 		n = min((unsigned)(kzfs.compleng-kzfs.comptell),sizeof(olinbuf)-4);
+-		fread(&olinbuf[4],n,1,kzfs.fil);
++		n = fread(&olinbuf[4],1,n,kzfs.fil);
+ 		kzfs.comptell += n;
+ 		bitpos -= ((sizeof(olinbuf)-4)<<3);
+ 	}
+@@ -1017,10 +1017,13 @@ static int kpngrend (const char *kfilebuf, int kfilength,
+ 	INT_PTR daframeplace, int dabytesperline, int daxres, int dayres,
+ 	int daglobxoffs, int daglobyoffs)
+ {
+-	int i, j, k, bfinal, btype, hlit, hdist, leng;
++	int i, j, k, bfinal, btype, hlit, hdist;
++	unsigned int leng;
+ 	int slidew, slider;
+ 	//int qhuf0v, qhuf1v;
+ 
++	(void)kfilength;
++
+ 	if (!pnginited) { pnginited = 1; initpngtables(); }
+ 
+ 	if ((*(unsigned int *)&kfilebuf[0] != LSWAPIB(0x474e5089)) || (*(int *)&kfilebuf[4] != LSWAPIB(0x0a1a0a0d)))
+@@ -1033,6 +1036,7 @@ static int kpngrend (const char *kfilebuf, int kfilength,
+ 	{
+ 		leng = LSWAPIL(*(int *)&filptr[0]); i = *(int *)&filptr[4];
+ 		filptr = &filptr[8];
++		if (4+leng+((INT_PTR)filptr-(INT_PTR)kfilebuf) >= kfilength) return(-1); //Chunk length is OOB
+ 
+ 		if ((unsigned)i == LSWAPIB(0x52444849)) //IHDR (must be first)
+ 		{
+@@ -1461,7 +1465,7 @@ static void invdct8x8 (int *dc, unsigned char dcflag)
+ 
+ static void yrbrend (int x, int y)
+ {
+-	int i, j, ox, oy, xx, yy, xxx, yyy, xxxend, yyyend, yv, cr, cb, *odc, *dc, *dc2;
++	int i, j, ox, oy, xx, yy, xxx, yyy, xxxend, yyyend, yv, cr=0, cb=0, *odc, *dc, *dc2;
+ 	INT_PTR p, pp;
+ 
+ 	odc = dct[0]; dc2 = dct[10];
+@@ -1553,11 +1557,11 @@ static int kpegrend (const char *kfilebuf, int kfilength,
+ 	INT_PTR daframeplace, int dabytesperline, int daxres, int dayres,
+ 	int daglobxoffs, int daglobyoffs)
+ {
+-	int i, j, p, v, leng, xdim, ydim, index, prec, restartcnt, restartinterval;
+-	int x, y, z, xx, yy, zz, *dc, *dc2, num, curbits, c, daval, dabits, *hqval, *hqbits, hqcnt, *quanptr;
+-	int passcnt = 0, ghsampmax, gvsampmax, glhsampmax, glvsampmax, glhstep, glvstep;
++	int i, j, p, v, leng=0, xdim=0, ydim=0, index, prec, restartcnt, restartinterval;
++	int x, y, z, xx, yy, zz, *dc=NULL, *dc2, num, curbits, c, daval, dabits, *hqval, *hqbits, hqcnt, *quanptr;
++	int passcnt = 0, ghsampmax=0, gvsampmax=0, glhsampmax=0, glvsampmax=0, glhstep, glvstep;
+ 	int eobrun, Ss, Se, Ah, Al, Alut[2], dctx[12], dcty[12], ldctx[12], ldcty[12], lshx[4], lshy[4];
+-	short *dctbuf = 0, *dctptr[12], *ldctptr[12], *dcs;
++	short *dctbuf = NULL, *dctptr[12], *ldctptr[12], *dcs=NULL;
+ 	unsigned char ch, marker, dcflag;
+ 	const unsigned char *kfileptr;
+ 
+@@ -1956,9 +1960,11 @@ static int kgifrend (const char *kfilebuf, int kfilelength,
+ {
+ 	int i, x, y, xsiz, ysiz, yinc, xend, xspan, yspan, currstr, numbitgoal;
+ 	int lzcols, dat, blocklen, bitcnt, xoff, yoff, transcol, backcol, *lptr;
+-	INT_PTR p;
++	INT_PTR p=0;
+ 	unsigned char numbits, startnumbits, chunkind, ilacefirst;
+-	const unsigned char *ptr, *cptr;
++	const unsigned char *ptr, *cptr=NULL;
++
++	(void)kfilelength;
+ 
+ 	coltype = 3; bitdepth = 8; //For PNGOUT
+ 
+@@ -2100,6 +2106,8 @@ static int kcelrend (const char *buf, int fleng,
+ 	int i, x, y, x0, x1, y0, y1, xsiz, ysiz;
+ 	const unsigned char *cptr;
+ 
++	(void)fleng; (void)daglobxoffs;
++
+ 	if (((unsigned char)buf[0] != 0x19) || ((unsigned char)buf[1] != 0x91) ||
+ 		 ((unsigned char)buf[10] != 8) || ((unsigned char)buf[11] != 0)) return(-1);
+ 
+@@ -2136,9 +2144,9 @@ static int ktgarend (const char *header, int fleng,
+ 	INT_PTR daframeplace, int dabytesperline, int daxres, int dayres,
+ 	int daglobxoffs, int daglobyoffs)
+ {
+-	int i, x, y, pi, xi, yi, x0, x1, y0, y1, xsiz, ysiz, rlestat, colbyte, pixbyte;
++	int i=0, x, y, pi, xi, yi, x0, x1, y0, y1, xsiz, ysiz, rlestat, colbyte, pixbyte;
+ 	INT_PTR p;
+-	const unsigned char *fptr, *cptr, *nptr;
++	const unsigned char *fptr, *cptr=0, *nptr;
+ 
+ 		//Ugly and unreliable identification for .TGA!
+ 	if ((fleng < 20) || (header[1]&0xfe)) return(-1);
+@@ -2161,7 +2169,8 @@ static int ktgarend (const char *header, int fleng,
+ 	switch(pixbyte) //For PNGOUT
+ 	{
+ 		case 1: coltype = 0; bitdepth = 8; palcol[0] = LSWAPIB(0xff000000);
+-				  for(i=1;i<256;i++) palcol[i] = palcol[i-1]+LSWAPIB(0x10101); break;
++				  for(i=1;i<256;i++) palcol[i] = palcol[i-1]+LSWAPIB(0x10101);
++				  break;
+ 		case 2: case 3: coltype = 2; break;
+ 		case 4: coltype = 6; break;
+ 	}
+@@ -2210,23 +2219,23 @@ static int ktgarend (const char *header, int fleng,
+ //==============================  TARGA ends =================================
+ //==============================  BMP begins =================================
+ 	//TODO: handle BI_RLE8 and BI_RLE4 (compression types 1&2 respectively)
+-	//                        ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+-	//                        ³  0(2): "BM"   ³
+-	// ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿³ 10(4): rastoff³ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+-	// ³headsiz=12 (OS/2 1.x)³³ 14(4): headsiz³ ³ All new formats: ³
+-	//ÚÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÁÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÁÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+-	//³ 18(2): xsiz                         ³ 18(4): xsiz                                  ³
+-	//³ 20(2): ysiz                         ³ 22(4): ysiz                                  ³
+-	//³ 22(2): planes (always 1)            ³ 26(2): planes (always 1)                     ³
+-	//³ 24(2): cdim (1,4,8,24)              ³ 28(2): cdim (1,4,8,16,24,32)                 ³
+-	//³ if (cdim < 16)                      ³ 30(4): compression (0,1,2,3!?,4)             ³
+-	//³    26(rastoff-14-headsiz): pal(bgr) ³ 34(4): (bitmap data size+3)&3                ³
+-	//³                                     ³ 46(4): N colors (0=2^cdim)                   ³
+-	//³                                     ³ if (cdim < 16)                               ³
+-	//³                                     ³    14+headsiz(rastoff-14-headsiz): pal(bgr0) ³
+-	//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+-	//                      ³ rastoff(?): bitmap data ³
+-	//                      ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
++	//                        â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
++	//                        â”‚  0(2): "BM"   â”‚
++	// â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”â”‚ 10(4): rastoffâ”‚ â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
++	// â”‚headsiz=12 (OS/2 1.x)â”‚â”‚ 14(4): headsizâ”‚ â”‚ All new formats: â”‚
++	//â”Œâ”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”´â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
++	//â”‚ 18(2): xsiz                         â”‚ 18(4): xsiz                                  â”‚
++	//â”‚ 20(2): ysiz                         â”‚ 22(4): ysiz                                  â”‚
++	//â”‚ 22(2): planes (always 1)            â”‚ 26(2): planes (always 1)                     â”‚
++	//â”‚ 24(2): cdim (1,4,8,24)              â”‚ 28(2): cdim (1,4,8,16,24,32)                 â”‚
++	//â”‚ if (cdim < 16)                      â”‚ 30(4): compression (0,1,2,3!?,4)             â”‚
++	//â”‚    26(rastoff-14-headsiz): pal(bgr) â”‚ 34(4): (bitmap data size+3)&3                â”‚
++	//â”‚                                     â”‚ 46(4): N colors (0=2^cdim)                   â”‚
++	//â”‚                                     â”‚ if (cdim < 16)                               â”‚
++	//â”‚                                     â”‚    14+headsiz(rastoff-14-headsiz): pal(bgr0) â”‚
++	//â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
++	//                      â”‚ rastoff(?): bitmap data â”‚
++	//                      â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+ static int kbmprend (const char *buf, int fleng,
+ 	INT_PTR daframeplace, int dabytesperline, int daxres, int dayres,
+ 	int daglobxoffs, int daglobyoffs)
+@@ -2234,6 +2243,8 @@ static int kbmprend (const char *buf, int fleng,
+ 	int i, j, x, y, x0, x1, y0, y1, rastoff, headsiz, xsiz, ysiz, cdim, comp, cptrinc, *lptr;
+ 	const unsigned char *cptr, *ubuf = (const unsigned char *)buf;
+ 
++	(void)fleng;
++
+ 	headsiz = *(int *)&buf[14];
+ 	if (headsiz == LSWAPIB(12)) //OS/2 1.x (old format)
+ 	{
+@@ -2425,11 +2436,13 @@ static int kpcxrend (const char *buf, int fleng,
+ static int kddsrend (const char *buf, int leng,
+ 	INT_PTR frameptr, int bpl, int xdim, int ydim, int xoff, int yoff)
+ {
+-	int x, y, z, xx, yy, xsiz, ysiz, dxt, al[2], ai, j, k, v, c0, c1, stride;
++	int x, y, z=0, xx, yy, xsiz, ysiz, dxt, al[2], ai, j, k, v, c0, c1, stride;
+ 	INT_PTR p;
+ 	unsigned int lut[256], r[4], g[4], b[4], a[8], rr, gg, bb;
+ 	unsigned char *uptr, *wptr;
+ 
++	(void)leng;
++
+ 	xsiz = LSWAPIB(*(int *)&buf[16]);
+ 	ysiz = LSWAPIB(*(int *)&buf[12]);
+ 	if ((*(int *)&buf[80])&LSWAPIB(64)) //Uncompressed supports only A8R8G8B8 for now
+@@ -2776,7 +2789,7 @@ static int kzcheckhash (const char *filnam, char **zipnam, int *zipseek)
+ 	return(0);
+ }
+ 
+-void kzuninit ()
++void kzuninit (void)
+ {
+ 	if (kzhashbuf) { free(kzhashbuf); kzhashbuf = 0; }
+ 	kzhashpos = kzhashsiz = 0;
+@@ -2797,7 +2810,7 @@ int kzaddstack (const char *zipnam)
+ 	zipnamoffs = kzhashpos; kzhashpos += i;
+ 
+ 	fseek(fil,-22,SEEK_END);
+-	fread(tempbuf,22,1,fil);
++	if (fread(tempbuf,22,1,fil) != 1) { fclose(fil); return(-1); }
+ 	if (*(unsigned int *)&tempbuf[0] == LSWAPIB(0x06054b50)) //Fast way of finding dir info
+ 	{
+ 		numfiles = SSWAPIB(*(short *)&tempbuf[10]);
+@@ -2811,7 +2824,7 @@ int kzaddstack (const char *zipnam)
+ 			if (!fread(&j,4,1,fil)) { numfiles = -1; break; }
+ 			if ((unsigned)j == LSWAPIB(0x02014b50)) break; //Found central file header :)
+ 			if ((unsigned)j != LSWAPIB(0x04034b50)) { numfiles = -1; break; }
+-			fread(tempbuf,26,1,fil);
++			if (fread(tempbuf,26,1,fil) != 1) { fclose(fil); return(-1); }
+ 			fseek(fil,LSWAPIB(*(int *)&tempbuf[14]) + SSWAPIB(*(short *)&tempbuf[24]) + SSWAPIB(*(short *)&tempbuf[22]),SEEK_CUR);
+ 			numfiles++;
+ 		}
+@@ -2820,11 +2833,11 @@ int kzaddstack (const char *zipnam)
+ 	}
+ 	for(i=0;i<numfiles;i++)
+ 	{
+-		fread(tempbuf,46,1,fil);
++		if (fread(tempbuf,46,1,fil) != 1) { fclose(fil); return(-1); }
+ 		if (*(int *)&tempbuf[0] != LSWAPIB(0x02014b50)) { fclose(fil); return(0); }
+ 
+ 		j = SSWAPIB(*(short *)&tempbuf[28]); //filename length
+-		fread(&tempbuf[46],j,1,fil);
++		if (fread(&tempbuf[46],j,1,fil) != 1) { fclose(fil); return(-1); }
+ 		tempbuf[j+46] = 0;
+ 
+ 			//Write information into hash
+@@ -2869,7 +2882,7 @@ int kzopen (const char *filnam)
+ 	{
+ 		fil = fopen(zipnam,"rb"); if (!fil) return(0);
+ 		fseek(fil,zipseek,SEEK_SET);
+-		fread(tempbuf,30,1,fil);
++		if (fread(tempbuf,30,1,fil) != 1) { fclose(fil); return(0); }
+ 		if (*(int *)&tempbuf[0] != LSWAPIB(0x04034b50)) { fclose(fil); return(0); }
+ 		fseek(fil,SSWAPIB(*(short *)&tempbuf[26])+SSWAPIB(*(short *)&tempbuf[28]),SEEK_CUR);
+ 
+@@ -3063,7 +3076,7 @@ int kzread (void *buffer, int leng)
+ 		if (kzfs.pos != kzfs.i) //Seek only when position changes
+ 			fseek(kzfs.fil,kzfs.seek0+kzfs.pos,SEEK_SET);
+ 		i = min(kzfs.leng-kzfs.pos,leng);
+-		fread(buffer,i,1,kzfs.fil);
++		i = fread(buffer,1,i,kzfs.fil);
+ 		kzfs.i += i; //kzfs.i is a local copy of ftell(kzfs.fil);
+ 	}
+ 	else if (kzfs.comptyp == 8)
+@@ -3084,7 +3097,7 @@ int kzread (void *buffer, int leng)
+ 
+ 				//Initialize for suckbits/peekbits/getbits
+ 			kzfs.comptell = min((unsigned)kzfs.compleng,sizeof(olinbuf));
+-			fread(&olinbuf[0],kzfs.comptell,1,kzfs.fil);
++			kzfs.comptell = fread(&olinbuf[0],1,kzfs.comptell,kzfs.fil);
+ 				//Make it re-load when there are < 32 bits left in FIFO
+ 			bitpos = -(((int)sizeof(olinbuf)-4)<<3);
+ 				//Identity: filptr + (bitpos>>3) = &olinbuf[0]
+@@ -3251,7 +3264,7 @@ retkzread:;
+ 	return(kzfs.pos-i);
+ }
+ 
+-int kzfilelength ()
++int kzfilelength (void)
+ {
+ 	if (!kzfs.fil) return(0);
+ 	return(kzfs.leng);
+@@ -3273,26 +3286,26 @@ int kzseek (int offset, int whence)
+ 	return(kzfs.pos);
+ }
+ 
+-int kztell ()
++int kztell (void)
+ {
+ 	if (!kzfs.fil) return(-1);
+ 	return(kzfs.pos);
+ }
+ 
+-int kzgetc ()
++int kzgetc (void)
+ {
+ 	char ch;
+ 	if (!kzread(&ch,1)) return(-1);
+ 	return((int)ch);
+ }
+ 
+-int kzeof ()
++int kzeof (void)
+ {
+ 	if (!kzfs.fil) return(-1);
+ 	return(kzfs.pos >= kzfs.leng);
+ }
+ 
+-void kzclose ()
++void kzclose (void)
+ {
+ 	if (kzfs.fil) { fclose(kzfs.fil); kzfs.fil = 0; }
+ }
+diff --git a/jfbuild/src/mdsprite.c b/jfbuild/src/mdsprite.c
+index 2a62425..2b8d46d 100644
+--- a/jfbuild/src/mdsprite.c
++++ b/jfbuild/src/mdsprite.c
+@@ -104,8 +104,6 @@ void clearskins ()
+ 
+ 			for(sk=m2->skinmap;sk;sk=sk->next)
+ 			{
+-				if (!sk->tex)
+-					continue;
+ 				for(j=0;j<(HICEFFECTMASK+1);j++)
+ 				{
+ 					if (sk->tex[j] && sk->tex[j]->glpic) {
+diff --git a/jfbuild/src/mmulti.c b/jfbuild/src/mmulti.c
+index 2c1f940..ed1f936 100644
+--- a/jfbuild/src/mmulti.c
++++ b/jfbuild/src/mmulti.c
+@@ -115,7 +115,7 @@ static int issameaddress(struct sockaddr *a, struct sockaddr *b);
+ static const char *presentaddress(struct sockaddr *a);
+ static void savesnatchhost(int other);
+ 
+-void netuninit ()
++void netuninit (void)
+ {
+ #ifdef _WIN32
+ 	if (mysock != INVALID_SOCKET) closesocket(mysock);
+diff --git a/jfbuild/src/osd.c b/jfbuild/src/osd.c
+index 71b756a..e2a9e06 100644
+--- a/jfbuild/src/osd.c
++++ b/jfbuild/src/osd.c
+@@ -108,6 +108,8 @@ static void _internal_drawosdchar(int x, int y, char ch, int shade, int pal)
+ 	char st[2] = { 0,0 };
+ 	int colour;
+ 
++	(void)pal;
++
+ 	st[0] = ch;
+ 
+ 	switch (shade) {
+@@ -123,6 +125,8 @@ static void _internal_drawosdstr(int x, int y, char *ch, int len, int shade, int
+ 	char st[1024];
+ 	int colour;
+ 
++	(void)pal;
++
+ 	if (len>1023) len=1023;
+ 	memcpy(st,ch,len);
+ 	st[len]=0;
+@@ -140,6 +144,8 @@ static void _internal_drawosdcursor(int x, int y, int type, int lastkeypress)
+ 	char st[2] = { '_',0 };
+ 	int colour;
+ 
++	(void)lastkeypress;
++
+ 	if (type) st[0] = '|';
+ 
+ 	printext256(4+(x<<3),4+(y<<3)+2, lightgrey, -1, st, 0);
+@@ -157,6 +163,7 @@ static int _internal_getrowheight(int w)
+ 
+ static void _internal_clearbackground(int cols, int rows)
+ {
++	(void)cols; (void)rows;
+ }
+ 
+ static int _internal_gettime(void)
+@@ -193,6 +200,8 @@ static int osdcmd_listsymbols(const osdfuncparm_t *parm)
+ {
+ 	symbol_t *i;
+ 
++	(void)parm;
++
+ 	OSD_Printf("Symbol listing:\n");
+ 	for (i=symbols; i!=NULL; i=i->next)
+ 		OSD_Printf("     %s\n", i->name);
+diff --git a/jfbuild/src/polymost.c b/jfbuild/src/polymost.c
+index 1c0a325..2049a8c 100644
+--- a/jfbuild/src/polymost.c
++++ b/jfbuild/src/polymost.c
+@@ -562,7 +562,7 @@ static GLuint polymost_load_shader(GLuint shadertype, const char *defaultsrc, co
+ 		fseek(shaderfh, 0, SEEK_SET);
+ 
+ 		fileshadersrc = (GLchar *)calloc(1, shadersrclen + 1);
+-		fread(fileshadersrc, shadersrclen, 1, shaderfh);
++		shadersrclen = fread(fileshadersrc, 1, shadersrclen, shaderfh);
+ 
+ 		fclose(shaderfh);
+ 		shaderfh = NULL;
+@@ -729,7 +729,7 @@ void polymost_glinit()
+ 	polymost_loadshaders();
+ }
+ 
+-void resizeglcheck ()
++void resizeglcheck (void)
+ {
+ 	float m[4][4];
+ 
+diff --git a/jfbuild/src/rg_etc1.cpp b/jfbuild/src/rg_etc1.cpp
+index f7fa7ac..8529c6d 100644
+--- a/jfbuild/src/rg_etc1.cpp
++++ b/jfbuild/src/rg_etc1.cpp
+@@ -20,6 +20,11 @@
+ #ifdef _MSC_VER
+ #pragma warning (disable: 4201) //  nonstandard extension used : nameless struct/union
+ #endif
++#if defined(__GNUC__) && !defined(__clang__)   //JonoF
++#pragma GCC diagnostic ignored "-Wparentheses"
++#pragma GCC diagnostic ignored "-Wmisleading-indentation"
++#pragma GCC diagnostic ignored "-Wclass-memaccess"
++#endif
+ 
+ #if defined(_DEBUG) || defined(DEBUG)
+ #define RG_ETC1_BUILD_DEBUG
+diff --git a/jfbuild/src/sdlayer2.c b/jfbuild/src/sdlayer2.c
+index 7c9fa58..037df4e 100644
+--- a/jfbuild/src/sdlayer2.c
++++ b/jfbuild/src/sdlayer2.c
+@@ -411,6 +411,7 @@ void debugprintf(const char *f, ...)
+ 	Bvfprintf(stderr, f, va);
+ 	va_end(va);
+ #endif
++	(void)f;
+ }
+ 
+ 
+@@ -1000,6 +1001,7 @@ int setvideomode(int x, int y, int c, int fs)
+ 		if (fs & 1) {
+ 			if (c > 8) flags |= SDL_WINDOW_FULLSCREEN;
+ 			else flags |= SDL_WINDOW_FULLSCREEN_DESKTOP;
++			flags |= SDL_WINDOW_ALLOW_HIGHDPI;
+ 		}
+ 
+ 		sdl_window = SDL_CreateWindow(wintitle, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, x, y, flags);
+@@ -1065,13 +1067,19 @@ int setvideomode(int x, int y, int c, int fs)
+ #if USE_OPENGL
+ 		} else {
+ 			// Prepare the GLSL shader for 8-bit blitting.
++			int winx = x, winy = y;
++			if (flags & SDL_WINDOW_FULLSCREEN_DESKTOP) {
++				SDL_DisplayMode d;
++				if (SDL_GetWindowDisplayMode(sdl_window, &d) == 0)
++					winx = d.w, winy = d.h;
++			}
+ 			sdl_glcontext = SDL_GL_CreateContext(sdl_window);
+ 			if (!sdl_glcontext) {
+ 				buildprintf("Error creating OpenGL context: %s\n", SDL_GetError());
+ 				nogl = 1;
+ 			} else if (baselayer_setupopengl()) {
+ 				nogl = 1;
+-			} else if (glbuild_prepare_8bit_shader(&gl8bit, x, y, pitch) < 0) {
++			} else if (glbuild_prepare_8bit_shader(&gl8bit, x, y, pitch, winx, winy) < 0) {
+ 				nogl = 1;
+ 			}
+ 			if (nogl) {
+@@ -1407,7 +1415,7 @@ int handleevents(void)
+ 					grabmouse(!mouseacquired);
+ 					break;
+ 				}
+-				// else: fallthrough
++				// else, fallthrough
+ 			case SDL_KEYDOWN:
+ 				code = keytranslation[ev.key.keysym.scancode].normal;
+ 				control = keytranslation[ev.key.keysym.scancode].controlchar;
+diff --git a/jfbuild/src/startgtk_editor.c b/jfbuild/src/startgtk_editor.c
+index 94040cd..203999f 100644
+--- a/jfbuild/src/startgtk_editor.c
++++ b/jfbuild/src/startgtk_editor.c
+@@ -55,6 +55,11 @@ static GObject * get_and_connect_signal(GtkBuilder *builder, const char *name, c
+     return object;
+ }
+ 
++static void foreach_gtk_widget_set_sensitive(GtkWidget *widget, gpointer data)
++{
++    gtk_widget_set_sensitive(widget, (gboolean)(intptr_t)data);
++}
++
+ static void populate_video_modes(gboolean firsttime)
+ {
+     int i, mode2d = -1, mode3d = -1;
+@@ -147,7 +152,7 @@ static void setup_config_mode(void)
+ 
+     // Enable all the controls on the Configuration page.
+     gtk_container_foreach(GTK_CONTAINER(controls.configbox),
+-            (GtkCallback)gtk_widget_set_sensitive, (gpointer)TRUE);
++            foreach_gtk_widget_set_sensitive, (gpointer)TRUE);
+     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(controls.alwaysshowcheck), settings->forcesetup);
+     gtk_widget_set_sensitive(controls.alwaysshowcheck, TRUE);
+ 
+@@ -168,7 +173,7 @@ static void setup_messages_mode(gboolean allowcancel)
+ 
+     // Disable all the controls on the Configuration page.
+     gtk_container_foreach(GTK_CONTAINER(controls.configbox),
+-            (GtkCallback)gtk_widget_set_sensitive, (gpointer)FALSE);
++            foreach_gtk_widget_set_sensitive, (gpointer)FALSE);
+     gtk_widget_set_sensitive(controls.alwaysshowcheck, FALSE);
+ 
+     gtk_widget_set_sensitive(controls.cancelbutton, allowcancel);
+@@ -179,11 +184,15 @@ static void setup_messages_mode(gboolean allowcancel)
+ 
+ static void on_fullscreencheck_toggled(GtkToggleButton *togglebutton, gpointer user_data)
+ {
++    (void)togglebutton; (void)user_data;
++
+     populate_video_modes(FALSE);
+ }
+ 
+ static void on_cancelbutton_clicked(GtkButton *button, gpointer user_data)
+ {
++    (void)button; (void)user_data;
++
+     startwinloop = FALSE;   // Break the loop.
+     retval = STARTWIN_CANCEL;
+     quitevent = quitevent || quiteventonclose;
+@@ -194,6 +203,8 @@ static void on_startbutton_clicked(GtkButton *button, gpointer user_data)
+     int mode = -1;
+     GtkTreeIter iter;
+ 
++    (void)button; (void)user_data;
++
+     if (gtk_combo_box_get_active_iter(GTK_COMBO_BOX(controls.vmode3dcombo), &iter)) {
+         gtk_tree_model_get(GTK_TREE_MODEL(controls.vmode3dlist), &iter, 1 /*index*/, &mode, -1);
+     }
+@@ -219,6 +230,8 @@ static void on_startbutton_clicked(GtkButton *button, gpointer user_data)
+ 
+ static gboolean on_startgtk_delete_event(GtkWidget *widget, GdkEvent *event, gpointer user_data)
+ {
++    (void)widget; (void)event; (void)user_data;
++
+     startwinloop = FALSE;   // Break the loop.
+     retval = STARTWIN_CANCEL;
+     quitevent = quitevent || quiteventonclose;
+@@ -379,6 +392,7 @@ int startwin_settitle(const char *title)
+ 
+ int startwin_idle(void *s)
+ {
++    (void)s;
+     return 0;
+ }
+ 
+diff --git a/jfbuild/src/winlayer.c b/jfbuild/src/winlayer.c
+index 4eae3d6..d2d8ef2 100644
+--- a/jfbuild/src/winlayer.c
++++ b/jfbuild/src/winlayer.c
+@@ -98,7 +98,7 @@ static void updatejoystick(void);
+ static void UninitDIB(void);
+ static int SetupDIB(int width, int height);
+ static void UninitOpenGL(void);
+-static int SetupOpenGL(int width, int height, int bitspp, int cover);
++static int SetupOpenGL(int width, int height, int bitspp);
+ static BOOL RegisterWindowClass(void);
+ static BOOL CreateAppWindow(int width, int height, int bitspp, int fs, int refresh);
+ static void DestroyAppWindow(void);
+@@ -1722,7 +1722,7 @@ static void EnumWGLExts(HDC hdc)
+ //
+ // SetupOpenGL() -- sets up opengl rendering
+ //
+-static int SetupOpenGL(int width, int height, int bitspp, int cover)
++static int SetupOpenGL(int width, int height, int bitspp)
+ {
+ 	int err, pixelformat;
+ 
+@@ -1798,47 +1798,19 @@ static int SetupOpenGL(int width, int height, int bitspp, int cover)
+ 	EnumWGLExts(dummyhDC);
+ 
+ 	// Step 3. Create the actual window we will use going forward.
+-	{
+-		int xpos, ypos, xscl, yscl;
+-
+-		if (cover) {
+-			// The desktop resolution is set to the target. Fill the screen.
+-			xpos = ypos = 0;
+-			xscl = width;
+-			yscl = height;
+-		} else {
+-			// The desktop resolution remains the same and we stretch to fit.
+-			int desktopaspect = divscale16(desktopxdim, desktopydim);
+-			int frameaspect = divscale16(width, height);
+-			if (desktopaspect >= frameaspect) {
+-				// Desktop is at least as wide as the frame. We maximise frame height and centre on width.
+-				ypos = 0;
+-				yscl = desktopydim;
+-				xscl = mulscale16(desktopydim, frameaspect);
+-				xpos = (desktopxdim - xscl) >> 1;
+-			} else {
+-				// Desktop is narrower than the frame. We maximise frame width and centre on height.
+-				xpos = 0;
+-				xscl = desktopxdim;
+-				yscl = divscale16(desktopxdim, frameaspect);
+-				ypos = (desktopydim - yscl) >> 1;
+-			}
+-		}
+-
+-		hGLWindow = CreateWindow(
+-				WINDOW_CLASS,
+-				"OpenGL Window",
+-				WS_CHILD|WS_VISIBLE,
+-				xpos, ypos,
+-				xscl, yscl,
+-				hWindow,
+-				(HMENU)0,
+-				hInstance,
+-				NULL);
+-		if (!hGLWindow) {
+-			errmsg = "Error creating OpenGL child window.";
+-			goto fail;
+-		}
++	hGLWindow = CreateWindow(
++			WINDOW_CLASS,
++			"OpenGL Window",
++			WS_CHILD|WS_VISIBLE,
++			0, 0,
++			width, height,
++			hWindow,
++			(HMENU)0,
++			hInstance,
++			NULL);
++	if (!hGLWindow) {
++		errmsg = "Error creating OpenGL child window.";
++		goto fail;
+ 	}
+ 
+ 	hDCGLWindow = GetDC(hGLWindow);
+@@ -2008,7 +1980,7 @@ fail:
+ static BOOL CreateAppWindow(int width, int height, int bitspp, int fs, int refresh)
+ {
+ 	RECT rect;
+-	int w, h, x, y, stylebits = 0, stylebitsex = 0;
++	int ww, wh, wx, wy, vw, vh, stylebits = 0, stylebitsex = 0;
+ 	HRESULT result;
+ 
+ 	if (width == xres && height == yres && fs == fullscreen && bitspp == bpp && !videomodereset) return FALSE;
+@@ -2060,20 +2032,22 @@ static BOOL CreateAppWindow(int width, int height, int bitspp, int fs, int refre
+ 	if (!fs) {
+ 		rect.left = 0;
+ 		rect.top = 0;
+-		rect.right = width-1;
+-		rect.bottom = height-1;
+-		AdjustWindowRect(&rect, stylebits, FALSE);
+-
+-		w = (rect.right - rect.left);
+-		h = (rect.bottom - rect.top);
+-		x = (desktopxdim - w) / 2;
+-		y = (desktopydim - h) / 2;
++		rect.right = width;
++		rect.bottom = height;
++		AdjustWindowRectEx(&rect, stylebits, FALSE, stylebitsex);
++
++		ww = (rect.right - rect.left);
++		wh = (rect.bottom - rect.top);
++		wx = (desktopxdim - ww) / 2;
++		wy = (desktopydim - wh) / 2;
++		vw = width;
++		vh = height;
+ 	} else {
+-		x=y=0;
+-		w=desktopxdim;
+-		h=desktopydim;
++		wx=wy=0;
++		ww=vw=desktopxdim;
++		wh=vh=desktopydim;
+ 	}
+-	SetWindowPos(hWindow, HWND_TOP, x, y, w, h, 0);
++	SetWindowPos(hWindow, HWND_TOP, wx, wy, ww, wh, 0);
+ 
+ 	UpdateAppWindowTitle();
+ 	ShowWindow(hWindow, SW_SHOWNORMAL);
+@@ -2096,7 +2070,7 @@ static BOOL CreateAppWindow(int width, int height, int bitspp, int fs, int refre
+ #if USE_OPENGL
+ 		} else {
+ 			// Prepare the GLSL shader for 8-bit blitting.
+-			if (SetupOpenGL(width, height, bitspp, !fs)) {
++			if (SetupOpenGL(vw, vh, bitspp)) {
+ 				// No luck. Write off OpenGL and try DIB.
+ 				buildputs("OpenGL initialisation failed. Falling back to DIB mode.\n");
+ 				nogl = 1;
+@@ -2105,7 +2079,7 @@ static BOOL CreateAppWindow(int width, int height, int bitspp, int fs, int refre
+ 
+ 			bytesperline = (((width|1) + 4) & ~3);
+ 
+-			if (glbuild_prepare_8bit_shader(&gl8bit, width, height, bytesperline) < 0) {
++			if (glbuild_prepare_8bit_shader(&gl8bit, width, height, bytesperline, vw, vh) < 0) {
+ 				shutdownvideo();
+ 				return -1;
+ 			}
+@@ -2155,7 +2129,7 @@ static BOOL CreateAppWindow(int width, int height, int bitspp, int fs, int refre
+ 		SetForegroundWindow(hWindow);
+ 		SetFocus(hWindow);
+ 
+-		if (SetupOpenGL(width, height, bitspp, !desktopmodeset)) {
++		if (SetupOpenGL(width, height, bitspp)) {
+ 			return TRUE;
+ 		}
+ 
+diff --git a/jfbuild/xcode/engine.xcodeproj/project.pbxproj b/jfbuild/xcode/engine.xcodeproj/project.pbxproj
+index 9c425fb..bc6e5b7 100644
+--- a/jfbuild/xcode/engine.xcodeproj/project.pbxproj
++++ b/jfbuild/xcode/engine.xcodeproj/project.pbxproj
+@@ -743,10 +743,11 @@
+ 			};
+ 			buildConfigurationList = AB735F3B0A29A24B003261DC /* Build configuration list for PBXProject "engine" */;
+ 			compatibilityVersion = "Xcode 8.0";
+-			developmentRegion = English;
++			developmentRegion = en;
+ 			hasScannedForEncodings = 0;
+ 			knownRegions = (
+-				English,
++				Base,
++				en,
+ 			);
+ 			mainGroup = AB735F380A29A24A003261DC;
+ 			productRefGroup = AB735F4A0A29A2DC003261DC /* Products */;
+@@ -967,6 +968,12 @@
+ 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+ 				ONLY_ACTIVE_ARCH = YES;
+ 				SKIP_INSTALL = YES;
++				WARNING_CFLAGS = (
++					"-W",
++					"-Wall",
++					"-Wno-unused-variable",
++					"-Wno-unused-function",
++				);
+ 			};
+ 			name = Debug;
+ 		};
+@@ -990,6 +997,12 @@
+ 				);
+ 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+ 				SKIP_INSTALL = YES;
++				WARNING_CFLAGS = (
++					"-W",
++					"-Wall",
++					"-Wno-unused-variable",
++					"-Wno-unused-function",
++				);
+ 			};
+ 			name = Release;
+ 		};
+diff --git a/jfbuild/xcode/game.xcodeproj/project.pbxproj b/jfbuild/xcode/game.xcodeproj/project.pbxproj
+index 218dbfd..3888e25 100644
+--- a/jfbuild/xcode/game.xcodeproj/project.pbxproj
++++ b/jfbuild/xcode/game.xcodeproj/project.pbxproj
+@@ -437,10 +437,11 @@
+ 			};
+ 			buildConfigurationList = AB73600C0A29AA64003261DC /* Build configuration list for PBXProject "game" */;
+ 			compatibilityVersion = "Xcode 3.0";
+-			developmentRegion = English;
++			developmentRegion = en;
+ 			hasScannedForEncodings = 0;
+ 			knownRegions = (
+-				English,
++				en,
++				Base,
+ 			);
+ 			mainGroup = AB7360090A29AA64003261DC;
+ 			productRefGroup = AB73602B0A29AB08003261DC /* Products */;
+@@ -623,6 +624,11 @@
+ 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+ 				ONLY_ACTIVE_ARCH = YES;
+ 				PREBINDING = NO;
++				WARNING_CFLAGS = (
++					"-W",
++					"-Wall",
++					"-Wno-unused-variable",
++				);
+ 			};
+ 			name = Debug;
+ 		};
+@@ -645,6 +651,11 @@
+ 				HEADER_SEARCH_PATHS = ../include;
+ 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+ 				PREBINDING = NO;
++				WARNING_CFLAGS = (
++					"-W",
++					"-Wall",
++					"-Wno-unused-variable",
++				);
+ 			};
+ 			name = Release;
+ 		};
+@@ -661,7 +672,7 @@
+ 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+ 				INFOPLIST_FILE = "game-Info.plist";
+ 				INSTALL_PATH = "$(HOME)/Applications";
+-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @rpath/../Frameworks";
++				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
+ 				OTHER_LDFLAGS = "-lc++";
+ 				PRODUCT_BUNDLE_IDENTIFIER = au.id.jonof.kenbuild;
+ 				PRODUCT_NAME = KenBuild;
+@@ -682,7 +693,7 @@
+ 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+ 				INFOPLIST_FILE = "game-Info.plist";
+ 				INSTALL_PATH = "$(HOME)/Applications";
+-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @rpath/../Frameworks";
++				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
+ 				OTHER_LDFLAGS = "-lc++";
+ 				PRODUCT_BUNDLE_IDENTIFIER = au.id.jonof.kenbuild;
+ 				PRODUCT_NAME = KenBuild;
+@@ -702,7 +713,7 @@
+ 				);
+ 				INFOPLIST_FILE = "build-Info.plist";
+ 				INSTALL_PATH = "$(HOME)/Applications";
+-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @rpath/../Frameworks";
++				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
+ 				OTHER_LDFLAGS = "-lc++";
+ 				PRODUCT_BUNDLE_IDENTIFIER = au.id.jonof.kenbuild.build;
+ 				PRODUCT_NAME = "Build Editor";
+@@ -722,7 +733,7 @@
+ 				);
+ 				INFOPLIST_FILE = "build-Info.plist";
+ 				INSTALL_PATH = "$(HOME)/Applications";
+-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @rpath/../Frameworks";
++				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
+ 				OTHER_LDFLAGS = "-lc++";
+ 				PRODUCT_BUNDLE_IDENTIFIER = au.id.jonof.kenbuild.build;
+ 				PRODUCT_NAME = "Build Editor";
