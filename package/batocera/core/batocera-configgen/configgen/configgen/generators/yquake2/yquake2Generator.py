@@ -1,18 +1,30 @@
 #!/usr/bin/env python
 import os
+import shutil
 from os import path
 import Command
 from generators.Generator import Generator
 import controllersConfig
 
+baseq2_src = "/usr/share/game_assets/quake2/baseq2"
+rogue_src = "/usr/share/game_assets/quake2/rogue"
+xatrix_src = "/usr/share/game_assets/quake2/xatrix"
+baseq2_dst = "/userdata/roms/ports/quake2/baseq2"
+rogue_dst = "/userdata/roms/ports/quake2/rogue"
+xatrix_dst = "/userdata/roms/ports/quake2/xatrix"
+
 class Yquake2Generator(Generator):
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         gamemod = 'baseq2'
+        shutil.copytree(baseq2_src, baseq2_dst, dirs_exist_ok=True)
+
         if (rom.__contains__('rogue')):
             gamemod = 'rogue'
+            shutil.copytree(rogue_src, rogue_dst, dirs_exist_ok=True)
 
         if (rom.__contains__('xatrix')):
             gamemod = 'xatrix'
+            shutil.copytree(xatrix_src, xatrix_dst, dirs_exist_ok=True)
 
         commandArray = ['quake2', '-datadir', '/userdata/roms/ports/quake2']
         # Rendering mode

@@ -27,14 +27,14 @@ OPENJK_CONF_OPTS += -DBuildMPCGame=OFF
 OPENJK_CONF_OPTS += -DBuildMPUI=OFF
 
 define OPENJK_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openjkja
-    $(INSTALL) -D $(@D)/buildroot-build/openjk_sp.* $(TARGET_DIR)/usr/bin/openjk_sp
-    $(INSTALL) -D $(@D)/buildroot-build/code/rd-vanilla/rdsp-vanilla_*.so $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openjkja
-    $(INSTALL) -D $(@D)/buildroot-build/code/game/jagame*.so $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openjkja
-    mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openjkjo
-    $(INSTALL) -D $(@D)/buildroot-build/openjo_sp.* $(TARGET_DIR)/usr/bin/openjo_sp
-    $(INSTALL) -D $(@D)/buildroot-build/code/rd-vanilla/rdjosp-vanilla_*.so $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openjkjo
-    $(INSTALL) -D $(@D)/buildroot-build/codeJK2/game/jospgame*.so $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openjkjo
+    mkdir -p $(TARGET_DIR)/usr/share/game_assets/openjkja
+    $(INSTALL) -D $(@D)/buildroot-build/openjk_sp.*                       $(TARGET_DIR)/usr/bin/openjk_sp
+    $(INSTALL) -D $(@D)/buildroot-build/code/rd-vanilla/rdsp-vanilla_*.so $(TARGET_DIR)/usr/share/game_assets/openjkja
+    $(INSTALL) -D $(@D)/buildroot-build/code/game/jagame*.so              $(TARGET_DIR)/usr/share/game_assets/openjkja
+    mkdir -p $(TARGET_DIR)/usr/share/game_assets/openjkjo
+    $(INSTALL) -D $(@D)/buildroot-build/openjo_sp.*                         $(TARGET_DIR)/usr/bin/openjo_sp
+    $(INSTALL) -D $(@D)/buildroot-build/code/rd-vanilla/rdjosp-vanilla_*.so $(TARGET_DIR)/usr/share/game_assets/openjkjo
+    $(INSTALL) -D $(@D)/buildroot-build/codeJK2/game/jospgame*.so           $(TARGET_DIR)/usr/share/game_assets/openjkjo
 	# evmap config
 	 mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/openjk/openjkja.keys $(TARGET_DIR)/usr/share/evmapy

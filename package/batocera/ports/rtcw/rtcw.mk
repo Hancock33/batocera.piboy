@@ -33,10 +33,10 @@ define RTCW_BUILD_CMDS
 endef
 
 define RTCW_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/rtcw/main
+    mkdir -p $(TARGET_DIR)/usr/share/game_assets/rtcw/main
     cp -pvr $(@D)/SP/build/release-linux-*/iowolfsp.* $(TARGET_DIR)/usr/bin/iowolfsp
-    cp -pvr $(@D)/SP/build/release-linux-*/main/*.so $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/rtcw/main
-    cp -pvr $(@D)/SP/build/release-linux-*/main/vm $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/rtcw/main
+    cp -pvr $(@D)/SP/build/release-linux-*/main/*.so  $(TARGET_DIR)/usr/share/game_assets/rtcw/main
+    cp -pvr $(@D)/SP/build/release-linux-*/main/vm    $(TARGET_DIR)/usr/share/game_assets/rtcw/main
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/rtcw/rtcw.keys $(TARGET_DIR)/usr/share/evmapy
