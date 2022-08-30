@@ -16,16 +16,16 @@ OPENCLAW_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 define OPENCLAW_INSTALL_TARGET_CMDS
     $(INSTALL) -D $(@D)/Build_Release/openclaw $(TARGET_DIR)/usr/bin/openclaw
     #copy assets
-    mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openclaw
 	rm $(@D)/Build_Release/ASSETS.ZIP
 	cd $(@D)/Build_Release/ASSETS && zip -r ../ASSETS.ZIP *
-	cp -v $(@D)/Build_Release/ASSETS.ZIP $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openclaw/
-	cp -v $(@D)/Build_Release/clacon.ttf $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openclaw/
-	cp -v $(@D)/Build_Release/console02.tga $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openclaw/
-	cp -v $(@D)/Build_Release/MENU.xml $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openclaw/
-	cp -v $(@D)/Build_Release/SAVES.XML $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openclaw/
-	cp -v $(@D)/Build_Release/startup_commands.txt $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openclaw/
-	cp -v $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/openclaw/config.xml $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/openclaw/
+	mkdir -p $(TARGET_DIR)/usr/share/game_assets/{openclaw,openclaw_zip}
+	cp -v $(@D)/Build_Release/ASSETS.ZIP                                           $(TARGET_DIR)/usr/share/game_assets/openclaw_zip
+	cp -v $(@D)/Build_Release/clacon.ttf                                           $(TARGET_DIR)/usr/share/game_assets/openclaw
+	cp -v $(@D)/Build_Release/console02.tga                                        $(TARGET_DIR)/usr/share/game_assets/openclaw
+	cp -v $(@D)/Build_Release/MENU.xml                                             $(TARGET_DIR)/usr/share/game_assets/openclaw
+	cp -v $(@D)/Build_Release/SAVES.XML                                            $(TARGET_DIR)/usr/share/game_assets/openclaw
+	cp -v $(@D)/Build_Release/startup_commands.txt                                 $(TARGET_DIR)/usr/share/game_assets/openclaw
+	cp -v $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/openclaw/config.xml $(TARGET_DIR)/usr/share/game_assets/openclaw
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/openclaw/openclaw.keys $(TARGET_DIR)/usr/share/evmapy
