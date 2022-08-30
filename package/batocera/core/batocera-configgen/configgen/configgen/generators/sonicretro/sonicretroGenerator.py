@@ -1,23 +1,30 @@
 #!/usr/bin/env python
-
+import os
+import shutil
+from os import path
 import Command
 from generators.Generator import Generator
 import controllersConfig
-import os
 import configparser
-import shutil
+
+sm_src = "/usr/share/game_assets/sonicmania/Game.so"
+sm_dst = "/userdata/roms/ports/sonicretro/Sonic Mania.som/Game.so"
+keys_dst = "/usr/share/evmapy/sonicretro.keys"
 
 class SonicRetroGenerator(Generator):
-    if not os.path.exists('/userdata/system/.local/share/RSDKv3'):
-        os.makedirs('/userdata/system/.local/share/RSDKv3')
-
     def generate(self, system, rom, playersControllers, guns, gameResolution):
 
         # Determine the emulator to use
         if (rom.lower()).endswith("son"):
             emu = "sonic2013"
+            shutil.copy('/usr/share/evmapy/sonic2013.sonicretro.keys', keys_dst)
+        elif (rom.lower()).endswith("som"):
+            emu = "sonicmania"
+            shutil.copy(sm_src, sm_dst)
+            shutil.copy('/usr/share/evmapy/sonicmania.sonicretro.keys', keys_dst)
         else:
             emu = "soniccd"
+            shutil.copy('/usr/share/evmapy/soniccd.sonicretro.keys', keys_dst)
 
         iniFile = rom + "/settings.ini"
 
@@ -65,28 +72,29 @@ class SonicRetroGenerator(Generator):
             sonicConfig.read(iniFile)
 
         # [Dev]
-        if not sonicConfig.has_section("Dev"):
-            sonicConfig.add_section("Dev")
-        if system.isOptSet('devmenu') and system.config["devmenu"] == '1':
-            sonicConfig.set("Dev", "DevMenu", "true")
-        else:
-            sonicConfig.set("Dev", "DevMenu", "false")
-        sonicConfig.set("Dev", "EngineDebugMode", "false")
-        if (emu == "sonic2013"):
-            sonicConfig.set("Dev", "StartingCategory", "255")
-            sonicConfig.set("Dev", "StartingScene", "255")
-            sonicConfig.set("Dev", "StartingPlayer", "255")
-            sonicConfig.set("Dev", "StartingSaveFile", "255")
-        else:
-            sonicConfig.set("Dev", "StartingCategory", "0")
-            sonicConfig.set("Dev", "StartingScene", "0")
-            sonicConfig.set("Dev", "UseSteamDir", "false")
-        sonicConfig.set("Dev", "FastForwardSpeed", "8")
-        if system.isOptSet('hqmode') and system.config["hqmode"] == '0':
-            sonicConfig.set("Dev", "UseHQModes", "false")
-        else:
-            sonicConfig.set("Dev", "UseHQModes", "true")
-        sonicConfig.set("Dev", "DataFile", "Data.rsdk")
+        if (emu == "sonic2013") or (emu == "soniccd"):
+            if not sonicConfig.has_section("Dev"):
+                sonicConfig.add_section("Dev")
+            if system.isOptSet('devmenu') and system.config["devmenu"] == '1':
+                sonicConfig.set("Dev", "DevMenu", "true")
+            else:
+                sonicConfig.set("Dev", "DevMenu", "false")
+            sonicConfig.set("Dev", "EngineDebugMode", "false")
+            if (emu == "sonic2013"):
+                sonicConfig.set("Dev", "StartingCategory", "255")
+                sonicConfig.set("Dev", "StartingScene", "255")
+                sonicConfig.set("Dev", "StartingPlayer", "255")
+                sonicConfig.set("Dev", "StartingSaveFile", "255")
+            else:
+                sonicConfig.set("Dev", "StartingCategory", "0")
+                sonicConfig.set("Dev", "StartingScene", "0")
+                sonicConfig.set("Dev", "UseSteamDir", "false")
+            sonicConfig.set("Dev", "FastForwardSpeed", "8")
+            if system.isOptSet('hqmode') and system.config["hqmode"] == '0':
+                sonicConfig.set("Dev", "UseHQModes", "false")
+            else:
+                sonicConfig.set("Dev", "UseHQModes", "true")
+            sonicConfig.set("Dev", "DataFile", "Data.rsdk")
 
         # [Game]
         if not sonicConfig.has_section("Game"):
@@ -97,42 +105,64 @@ class SonicRetroGenerator(Generator):
                 sonicConfig.set("Game", "SkipStartMenu", "true")
             else:
                 sonicConfig.set("Game", "SkipStartMenu", "false")
-        else:
+        elif (emu == "soniccd"):
             if system.isOptSet('spindash'):
                 sonicConfig.set("Game", "OriginalControls", system.config["spindash"])
             else:
                 sonicConfig.set("Game", "OriginalControls", "-1")
             sonicConfig.set("Game", "DisableTouchControls", "true")
+
         if system.isOptSet('language'):
             sonicConfig.set("Game", "Language", system.config["language"])
         else:
             sonicConfig.set("Game", "Language", "0")
 
         # [Window]
-        if not sonicConfig.has_section("Window"):
-            sonicConfig.add_section("Window")
+        if (emu == "sonic2013") or (emu == "soniccd"):
+            if not sonicConfig.has_section("Window"):
+                sonicConfig.add_section("Window")
 
-        sonicConfig.set("Window", "FullScreen", "true")
-        sonicConfig.set("Window", "Borderless", "true")
-        if system.isOptSet('vsync') and system.config["vsync"] == "0":
-            sonicConfig.set("Window", "VSync", "false")
-        else:
-            sonicConfig.set("Window", "VSync", "true")
-        if system.isOptSet('scalingmode'):
-            sonicConfig.set("Window", "ScalingMode", system.config["scalingmode"])
-        else:
-            sonicConfig.set("Window", "ScalingMode", "2")
-        sonicConfig.set("Window", "WindowScale", "2")
-        sonicConfig.set("Window", "ScreenWidth", "320")
-        sonicConfig.set("Window", "RefreshRate", "60")
-        sonicConfig.set("Window", "DimLimit", "-1")
+            sonicConfig.set("Window", "FullScreen", "true")
+            sonicConfig.set("Window", "Borderless", "true")
+            if system.isOptSet('vsync') and system.config["vsync"] == "0":
+                sonicConfig.set("Window", "VSync", "false")
+            else:
+                sonicConfig.set("Window", "VSync", "true")
+            if system.isOptSet('scalingmode'):
+                sonicConfig.set("Window", "ScalingMode", system.config["scalingmode"])
+            else:
+                sonicConfig.set("Window", "ScalingMode", "2")
+            sonicConfig.set("Window", "WindowScale", "2")
+            sonicConfig.set("Window", "ScreenWidth", "320")
+            sonicConfig.set("Window", "RefreshRate", "60")
+            sonicConfig.set("Window", "DimLimit", "-1")
+
+        if (emu == "sonicmania"):
+            if not sonicConfig.has_section("Video"):
+                sonicConfig.add_section("Video")
+            sonicConfig.set("Video", "windowed", "false")
+            sonicConfig.set("Video", "border", "false")
+            sonicConfig.set("Video", "exclusiveFS", "true")
+            sonicConfig.set("Video", "vsync", "true")
+            sonicConfig.set("Video", "tripleBuffering", "true")
+            sonicConfig.set("Video", "fsWidth", "424")
+            sonicConfig.set("Video", "fsHeight", "240")
+            sonicConfig.set("Video", "refreshRate", "60")
+            sonicConfig.set("Video", "shaderSupport", "true")
+            sonicConfig.set("Video", "screenShader", "0")
+            sonicConfig.set("Video", "pixWidth", "424")
 
         # [Audio]
         if not sonicConfig.has_section("Audio"):
             sonicConfig.add_section("Audio")
 
-        sonicConfig.set("Audio", "BGMVolume", "1.000000")
-        sonicConfig.set("Audio", "SFXVolume", "1.000000")
+        if (emu == "sonicmania"):
+            sonicConfig.set("Audio", "streamsEnabled", "1.000000")
+            sonicConfig.set("Audio", "streamVolume", "1.000000")
+            sonicConfig.set("Audio", "sfxVolume", "1.000000")
+        else:
+            sonicConfig.set("Audio", "BGMVolume", "1.000000")
+            sonicConfig.set("Audio", "SFXVolume", "1.000000")
 
         # [Keyboard 1]
         if not sonicConfig.has_section("Keyboard 1"):
