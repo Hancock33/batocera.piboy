@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Aug 30, 2022
-LIBRETRO_PPSSPP_VERSION = ec00e8069a8cb9690c4543ee73069a817002bf2b
+LIBRETRO_PPSSPP_VERSION = daa62beb39592a64ea2513459b6f07c008e41a73
 LIBRETRO_PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 LIBRETRO_PPSSPP_SITE_METHOD=git
 LIBRETRO_PPSSPP_GIT_SUBMODULES=YES
