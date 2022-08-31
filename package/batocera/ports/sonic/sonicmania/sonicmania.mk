@@ -25,7 +25,7 @@ endef
 
 define SONICMANIA_POST_PROCESS
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sonic/sonicmania/sonicmania.sonicretro.keys $(TARGET_DIR)/usr/share/evmapy
+	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sonic/sonicmania/sonicmania_sonicretro.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 SONICMANIA_POST_INSTALL_TARGET_HOOKS += SONICMANIA_POST_PROCESS

@@ -11,7 +11,7 @@ class VoidswGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         addon = "-addon0"
-        if (rom.__contains__("WT")):
+        if (rom.__contains__("WD")):
             addon = "-addon1"
 
         if (rom.__contains__("TD")):

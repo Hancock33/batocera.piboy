@@ -10,9 +10,14 @@
         },
         {
             "trigger": ["hotkey", "start"],
+            "type": "key",
+            "target": ["KEY_LEFTALT", "KEY_F4"]
+        },
+        {
+            "trigger": ["select", "start"],
             "type": "exec",
-            "target": "killall -15 sonicmania"
-        }
+            "target": "killall -9 sonicmania && reset"
+        },
         {
             "trigger": "up",
             "type": "key",

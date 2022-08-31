@@ -1,23 +1,29 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <gameList>
-	<game>
-		<path>./diabdat.mpq</path>
-		<name>Diablo 1</name>
-		<desc>Classic Hack &amp; Slash Action RPG</desc>
-		<image>./images/devilutionx-image.png</image>
-		<releasedate>19970103T000000</releasedate>
-		<developer>Blizzard North</developer>
-		<genre>Action RPG</genre>
-		<players>1</players>
-	</game>
-	<game>
-		<path>./hellfire.mpq</path>
-		<name>Diablo 1: Hellfire</name>
-		<desc>Classic Hack &amp; Slash Action RPG Expansion Pack</desc>
-		<image>./images/devilutionx-image.png</image>
-		<releasedate>19971125T000000</releasedate>
-		<developer>Synergistic Software</developer>
-		<genre>Action RPG</genre>
-		<players>1</players>
-	</game>
+  <game>
+    <path>./devilutionx.mpq</path>
+    <name>Diablo</name>
+    <desc>Set in the fictional Kingdom of Khanduras, located in the world of Sanctuary, Diablo has the player take control of a lone hero battling to rid the world of Diablo, the Lord of Terror. Beneath the town of Tristram, the player journeys through sixteen dungeon levels, ultimately entering Hell itself in order to face Diablo.</desc>
+    <rating>0.65</rating>
+    <releasedate>19970103T000000</releasedate>
+    <developer>Blizzard Entertainment</developer>
+    <publisher>Blizzard North</publisher>
+    <genre>Role playing games</genre>
+    <players>1-2</players>
+    <image>./images/Diablo.png</image>
+    <genreid>768</genreid>
+  <game>
+  </game>
+    <path>./hellfire.mpq</path>
+    <name>Diablo Hellfire</name>
+    <desc>Darkness stirs beneath Tristram. An ancient evil sweeps across the land, plunging it into civil war and terrorizing the populace. A mad king, his missing son, and a mysterious archbishop are all pieces of the puzzle you need to hack through. You have journeyed to the source of this evil. The town of Tristram - now inhabited only by a handful of survivors, broken and twisted by the madness that has befallen them. A cathedral stands there, built over the ruins of an ancient monastery. Eerie lights and ungodly sounds are heard echoing through its abandoned halls, and that is where you shall venture.</desc>
+    <rating>0.65</rating>
+    <releasedate>19971124T000000</releasedate>
+    <developer>Synergistic Software</developer>
+    <publisher>Sierra On-Line</publisher>
+    <genre>Role playing games</genre>
+    <players>1-2</players>
+    <image>./images/Hellfire.png</image>
+    <genreid>768</genreid>
+  </game>
 </gameList>
