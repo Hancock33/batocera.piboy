@@ -3,8 +3,8 @@
 # libretro-dolphin
 #
 ################################################################################
-# Version: Commits on Jul 25, 2022
-LIBRETRO_DOLPHIN_VERSION = 645cd0de17a122f56c5e516fbd595c44429de2a9
+# Version: Commits on Aug 30, 2022
+LIBRETRO_DOLPHIN_VERSION = 016a5926aeda89087a073b1e6d245396da4b2256
 LIBRETRO_DOLPHIN_SITE = https://github.com/libretro/dolphin
 LIBRETRO_DOLPHIN_SITE_METHOD=git
 LIBRETRO_DOLPHIN_GIT_SUBMODULES=YES
