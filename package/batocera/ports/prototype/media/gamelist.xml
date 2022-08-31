@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./Prototype.game</path>
+    <name>Prototype</name>
+    <desc>In Prototype all the great gadgets and gizmos are present you would expect from a shooter. The all-protecting force shield defends your ship both fore and after. A horde of metallic killing machines will attempt to send you to an early death. Staying alive takes a vigilant eye and a steady stream of killer beams. The graphics are executed with a great deal of imagination and flair.</desc>
+    <rating>0.75</rating>
+    <releasedate>20030101T000000</releasedate>
+    <developer>Dark Castle Software</developer>
+    <publisher>Dark Castle Software</publisher>
+	<genre>Shoot'em Up-Shoot'em up / Horizontal</genre>
+    <players>1</players>
+    <image>./images/prototype.png</image>
+	<genreid>260</genreid>
+  </game>
+</gameList>
