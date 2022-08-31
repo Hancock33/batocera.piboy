@@ -9,15 +9,9 @@
             "target": "KEY_ESC"
         },
         {
-            "trigger": [
-                "hotkey",
-                "start"
-            ],
-            "type": "key",
-            "target": [
-                "KEY_LEFTALT",
-                "KEY_F4"
-            ]
+            "trigger": ["hotkey", "start"],
+            "type": "exec",
+            "target": "killall -15 sonic2013"
         }
     ]
 }
