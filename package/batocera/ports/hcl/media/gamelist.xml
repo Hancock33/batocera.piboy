@@ -3,13 +3,16 @@
   <game>
     <path>./hcl.game</path>
     <name>Hydra Castle Labyrinth</name>
-    <desc>Hydra Castle Labyrinth, originally Meikyuujou Hydra, is a freeware Indie platformer developed by E. Hashimoto, a.k.a. Buster, and released on his website. The original game was entirely in Japanese, but saw a translation patch months after its original creation.
-
-The game hearkens back to early Metroidvania games like Knightmare II The Maze of Galious and Legacy of the Wizard the player explores an immense maze-like dungeon, collecting tools and keys that allow them to proceed deeper. Certain areas are cordoned off from the main dungeon area, and each presents a more linear zone with a boss at the end. The player can find new equipment to make themselves stronger as well.</desc>
-    <releasedate>20110801T000000</releasedate>
-    <developer>Nicalis, Inc.</developer>
-    <publisher>Nicalis, Inc.</publisher>
-    <genre>Platform-Platform / Shooter Scrolling</genre>
+    <desc>Hydra Castle Labyrinth is an old school action / platform game. 
+The game starts with your character inside the castle, without any introduction or tutorial. You just start playing and decide which direction to go. 
+At first, your character doesn't have a special item, just his sword. As you progress, you find new items that will help you in your quest, as some levels are particularly difficult. 
+Besides the normal enemies that you encounter throughout the game, you will also find bosses here and there, and like back then they will be tough. 
+Hydra Castle Labyrinth is quite a fun platform game, featuring gameplay that despite the years still performs very well.</desc>
+    <rating>0.9</rating>
+    <releasedate>20110101T000000</releasedate>
+    <developer>E. Hashimoto (Buster)</developer>
+    <publisher>E. Hashimoto (Buster)</publisher>
+    <genre>Action-Platform-Action / Adventure</genre>
     <players>1</players>
     <image>./images/hcl.png</image>
     <genreid>257</genreid>

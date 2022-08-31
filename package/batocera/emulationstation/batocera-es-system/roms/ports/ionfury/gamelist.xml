@@ -3,15 +3,16 @@
   <game>
     <path>./Ionfury.grp</path>
     <name>Ion Fury</name>
-    <desc>In Ion Fury, the player assumes the role of Shelly Bombshell Harrison, a bomb disposal expert aligned to the Global Defense Force. Dr. Jadus Heskel, a transhumanist cult leader, unleashes an army of cybernetically-enhanced soldiers on the futuristic dystopian city of Neo D.C., which Shelly is tasked with fighting through</desc>
-    <rating>0.85</rating>
-    <releasedate>20190129T000000</releasedate>
-    <developer>Voidpoint</developer>
+    <desc>Ion Fury is a prequel to Bombshell. Shelly "Bombshell" Harrison, a bomb disposal expert working for the Global Defense Force (GDF), returns as the game's protagonist, fighting against the cybernetic forces of Dr. Jadus Heskel. 
+ 
+The game is built in a modified version of the EDuke32 source port of the famed Build engine that powered Duke Nukem 3D, Shadow Warrior, and Blood, which brings modern additions to an otherwise quite old-school experience, such as high resolution support, higher-quality textures, and autosaves running alongside regular manual game saving options, while retaining the bulk of the gameplay from these titles.</desc>
+    <rating>0.75</rating>
+    <releasedate>20180228T000000</releasedate>
+    <developer>Voidpoint, LLC</developer>
     <publisher>3D Realms</publisher>
-    <genre>Shooter / 1st person-Shooter</genre>
+    <genre>Shooter-Shooter / 1st person</genre>
     <players>1</players>
-	<image>./images/ionfury.png</image>
-	<video>./videos/ionfury.mp4</video>
-	<lang>en</lang>
+    <image>./images/Ion fury.png</image>
+    <genreid>259</genreid>
   </game>
 </gameList>

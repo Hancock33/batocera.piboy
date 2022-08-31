@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <provider>
+    <System>Dreamcast</System>
+    <software>Skraper</software>
+    <database>ScreenScraper.fr</database>
+    <web>http://www.screenscraper.fr</web>
+  </provider>
+  <game id="359072" source="ScreenScraper.fr">
+    <path>./media/Hydra Castle Labyrinth.game</path>
+    <name>Hydra Castle Labyrinth</name>
+    <desc>Hydra Castle Labyrinth is an old school action / platform game. 
+The game starts with your character inside the castle, without any introduction or tutorial. You just start playing and decide which direction to go. 
+At first, your character doesn't have a special item, just his sword. As you progress, you find new items that will help you in your quest, as some levels are particularly difficult. 
+Besides the normal enemies that you encounter throughout the game, you will also find bosses here and there, and like back then they will be tough. 
+Hydra Castle Labyrinth is quite a fun platform game, featuring gameplay that despite the years still performs very well.</desc>
+    <rating>0.9</rating>
+    <releasedate>20110101T000000</releasedate>
+    <developer>E. Hashimoto (Buster)</developer>
+    <publisher>E. Hashimoto (Buster)</publisher>
+    <genre>Action-Platform-Action / Adventure</genre>
+    <players>1</players>
+    <image>./images/media/Hydra Castle Labyrinth.png</image>
+    <genreid>257</genreid>
+  </game>
+</gameList>
