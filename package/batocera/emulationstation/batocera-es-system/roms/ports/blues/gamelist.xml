@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+	<game>
+		<path>./Blues Brothers.game</path>
+		<name>The Blues Brothers</name>
+		<desc>The Blues Brothers are on the run from the law. Take control of either bulky Jake or nippy Elwood in this five-level platform game. You must cross a prison, a river and the big city to reach freedom. You also must find your missing records and collect these. Everything and everyone is against you, but you can pick up and throw warehouse crates to defeat your opponents.</desc>
+		<releasedate>19910101T000000</releasedate>
+		<developer>Titus</developer>
+		<publisher>Titus</publisher>
+		<genre>Platform-Platform / Run Jump Scrolling</genre>
+		<players>2</players>
+		<image>./images/Blues Brothers.png</image>
+		<genreid>257</genreid>
+	</game>
+</gameList>

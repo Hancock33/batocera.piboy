@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./SuperTuxKart.game</path>
+    <name>SuperTuxKart</name>
+    <desc>SuperTuxKart is an open source racing game staring the mascots of some open source projects like Tux the the Linux Project Penguin or Konqi from the KDE Project. The racing is similar to the the concept of Super Mario Kart with items used as power-ups or the arena battle. On PC it can be played solo or in a local multiplayer with up to four players.</desc>
+    <rating>0.75</rating>
+    <releasedate>20070805T000000</releasedate>
+    <developer>SuperTuxKart Team</developer>
+    <publisher>SuperTuxKart Team</publisher>
+    <genre>Race, Driving</genre>
+    <players>1-4</players>
+    <image>./images/SuperTuxKart.png</image>
+    <genreid>1537</genreid>
+  </game>
+</gameList>

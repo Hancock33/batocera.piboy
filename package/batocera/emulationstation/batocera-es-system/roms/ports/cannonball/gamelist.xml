@@ -1,18 +1,15 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <gameList>
   <game>
     <path>./Cannonball.cannonball</path>
-    <name>Cannonball</name>
-    <desc>Cannonball is an enhanced OutRun engine</desc>
-	<image>./media/images/Cannonball - OutRun Engine.png</image>
-	<video>./media/videos/Cannonball - OutRun Engine.mp4</video>
-	<thumbnail>./media/mix/Cannonball - OutRun Engine.png</thumbnail>
-    <rating>0.9</rating>
+    <name>Cannonball - Out Run Engine</name>
+    <desc>An enhanced engine running the original Outrun arcade roms on modern platforms.</desc>
+    <releasedate>20121202T000000</releasedate>
     <developer>Chris White</developer>
     <publisher>Chris White</publisher>
-    <genre>Racing</genre>
+    <genre>Race, Driving-Race 3rd Pers. view</genre>
     <players>1</players>
-    <md5>f983a0ae9a7e7378393a79082dd3b1de</md5>
-    <lang>en</lang>
+    <image>./images/Cannonball.cannonball.png</image>
+    <genreid>1537</genreid>
   </game>
 </gameList>

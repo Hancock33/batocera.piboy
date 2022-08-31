@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+	<game>
+		<path>./Doom3.game</path>
+		<name>Doom 3</name>
+		<desc>The third game of the DOOM series (now in full 3D) takes gamers through the depths of Hell, where technology and demons meet. But this time round, the game is more focused on horror elements than previous games in series.</desc>
+		<rating>0.85</rating>
+		<releasedate>20050408T000000</releasedate>
+		<developer>Vicarious Visions</developer>
+		<publisher>Activision</publisher>
+		<genre>Shooter / 1st person-Shooter-Action</genre>
+		<image>./images/Doom 3.png</image>
+		<favorite>true</favorite>
+		<genreid>259</genreid>
+	</game>
+</gameList>

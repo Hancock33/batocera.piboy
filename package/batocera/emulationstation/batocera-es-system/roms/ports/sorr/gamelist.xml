@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./SorR.exe</path>
+    <name>Streets of Rage Remake</name>
+    <desc>Streets of Rage Remake is a reworked version of the MegaDrive classic. 
+You go through a huge city fighting against people who will attack you. There are over 60 different enemies, you can choose from 16 characters, select your favorite and wreak havoc. 
+It's even better than the original. More characters, more levels, more action... Incredible. 
+Plus, it's free!</desc>
+    <releasedate>20030623T000000</releasedate>
+    <developer>BoMbErGaMeS</developer>
+    <genre>Beat'em Up</genre>
+    <image>./images/Streets of Rage Remake.png</image>
+    <genreid>263</genreid>
+  </game>
+</gameList>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <provider>
+    <System>PC Dos</System>
+    <software>Skraper</software>
+    <database>ScreenScraper.fr</database>
+    <web>http://www.screenscraper.fr</web>
+  </provider>
+  <game id="152355" source="ScreenScraper.fr">
+    <path>./Prehistorik 2.game</path>
+    <name>Prehistorik 2</name>
+    <desc>Prehistorik 2 takes up the story of its predecessor, for another caveman-era platform game.  
+ 
+The hero must use his club to crush animal enemies, many of which then release bonus items to collect. He no longer needs to feed his clan, so there is no required minimum food target, unlike the original game. Other bonus items are located around the levels, while yet more can be found by using your club creatively and adventurously.  
+ 
+Passwords for every level can be found written in various places and they are different on every computer. You also encounter bosses after every few levels. In addition, the game includes hidden locations, multiple level exits and even hidden levels.</desc>
+    <rating>0.75</rating>
+    <releasedate>19930101T000000</releasedate>
+    <developer>Titus</developer>
+    <publisher>Titus</publisher>
+    <genre>Action</genre>
+    <players>1</players>
+    <image>./images/Prehistorik 2.png</image>
+    <genreid>256</genreid>
+  </game>
+</gameList>

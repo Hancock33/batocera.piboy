@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./infinity.game</path>
+    <name>Marathon Infinity</name>
+    <desc>Marathon is a fight for survival against the Pfhor, an alien race attacking your colony ship.</desc>
+	<image>./images/infinity.jpg</image>
+	<releasedate>19961015T000000</releasedate>
+    <developer>Bungie, Double Aught</developer>
+    <publisher>Bungie</publisher>
+	<genre>FPS</genre>
+	<players>1</players>
+  </game>
+  <game>
+    <path>./marathon.game</path>
+    <name>Marathon</name>
+    <desc>In Marathon 2 Durandal, you and other survivors hunt for an ancient ally to topple the Pfhor empire.</desc>
+	<image>./images/marathon.jpg</image>
+	<releasedate>19941221T000000</releasedate>
+    <developer>Bungie, Double Aught</developer>
+    <publisher>Bungie</publisher>
+	<genre>FPS</genre>
+	<players>1</players>
+  </game>
+  <game>
+    <path>./marathon2.game</path>
+    <name>Marathon 2 Durandal</name>
+    <desc>Marathon Infinity forces you to rewrite history to prevent the destruction of the universe.</desc>
+	<image>./images/marathon2.jpg</image>
+	<releasedate>19951124T000000</releasedate>
+    <developer>Bungie, Double Aught</developer>
+    <publisher>Bungie</publisher>
+	<genre>FPS</genre>
+	<players>1</players>
+  </game>
+</gameList>

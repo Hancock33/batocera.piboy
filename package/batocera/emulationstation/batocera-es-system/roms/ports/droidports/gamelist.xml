@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./AM2R.apk</path>
+    <name>AM2R</name>
+    <desc>AM2R (Another Metroid 2 Remake) is an action-adventure game developed by Argentinian programmer Milton Guasti (also known as DoctorM64) and released on August 6, 2016, Metroids 30th anniversary.</desc>
+    <rating>0.95</rating>
+    <releasedate>20160806T000000</releasedate>
+    <developer>Milton Guasti</developer>
+    <publisher>DoctorM64</publisher>
+    <genre>Platform-Action-Action / Adventure</genre>
+    <players>1</players>
+    <image>./images/AM2R.png</image>
+    <genreid>257</genreid>
+  </game>
+  <game>
+    <path>./Maldita Castilla.apk</path>
+    <name>Maldita Castilla</name>
+    <desc>The kingdom of Castile is cursed. Thou hath been sent forth by thy King to learn of the source of this evil and rid the land of it. God be with thee, Don Ramiro! 
+ 
+Maldita Castilla (Damn Castile) is a side scrolling action game that is, clearly, inspired by such games as Ghosts 'N Goblins, Rygar, Karnov, among others. 
+ 
+You, as Spanish knight Don Ramiro, must move to the right, killing enemies as you go. Along the way, you encounter treasure chests that will help you. At certain points, you must defeat a boss to advance. You are trying to get through all the bosses to find and defeat the source of all this evil plaguing Castile.</desc>
+    <releasedate>20121212T000000</releasedate>
+    <developer>Locomalito</developer>
+    <publisher>Locomalito</publisher>
+    <genre>Action</genre>
+    <image>./images/Maldita Castilla.png</image>
+    <genreid>256</genreid>
+  </game>
+  <game>
+    <path>./Spelunky.apk</path>
+    <name>Spelunky</name>
+    <desc>Spelunky is a platform game about an explorer who discovers a cave in the desert and ventures inside to loot for treasure, reminiscent of Rick Dangerous and La•Mulana. The game consists of sixteen levels, but for each playthrough the entire level layout (general structure, enemies, traps, items) is completely randomized, making it an entirely new game each time. There are also some fixed parameters, such as certain sets of enemies and level themes that are introduced only from a specific level. The game features four separate "areas", each of which contains four levels and is set in a different environment and has different enemies.  
+ 
+The main goal is to finish the sixteen levels by locating the exits, but players are encouraged to collect jewels and other types of treasure. The main character can move around, run, jump, hang off ledges and attack enemies with his whip (jumping on top off them works as well). He begins with four "hearts" (health) and when these are used up, the entire game needs to be replayed. The explorer also suffers falling damage when the distance is too high. The other basic equipment includes a rope to climb up and a number of bombs. The latter is not only used to dispose of enemies such as spiders, bats, snakes, cavemen and the undead, but also to blast through certain parts of the level. They can be used to create a path and often expose treasure hidden in the ground and walls.</desc>
+    <releasedate>20090901T000000</releasedate>
+    <developer>Mossmouth</developer>
+    <publisher>Mossmouth</publisher>
+    <genre>Platform-Action</genre>
+    <image>./images/Spelunky.png</image>
+    <genreid>257</genreid>
+  </game>
+</gameList>
