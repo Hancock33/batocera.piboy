@@ -1769,6 +1769,8 @@ libretro:
     kronos:
       features: [cheevos]
       shared: [autosave]
+    lowresnx:
+      features: [padtokeyboard]
     same_cdi:
       features: [netplay]
       shared: [autosave]
