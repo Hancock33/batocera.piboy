@@ -19,19 +19,19 @@ class SonicRetroGenerator(Generator):
         # Determine the emulator to use
         if (rom.lower()).endswith('son'):
             shutil.copyfile('/usr/share/evmapy/sonic2013_sonicretro.keys', keys_dst)
+            iniFile = rom + '/settings.ini'
             emu = "sonic2013"
         elif (rom.lower()).endswith('som'):
             shutil.copyfile(sm_src, sm_dst)
             shutil.copyfile('/usr/share/evmapy/sonicmania_sonicretro.keys', keys_dst)
+            iniFile = rom + '/Settings.ini'
             emu = 'sonicmania'
         else:
             shutil.copyfile('/usr/share/evmapy/soniccd_sonicretro.keys', keys_dst)
+            iniFile = rom + '/settings.ini'
             emu = 'soniccd'
 
-        iniFile = rom + '/settings.ini'
-
         # Some code copied from Citra's generator and adapted.
-
         sonicButtons = {
             'Up':       '11',
             'Down':     '12',
@@ -68,7 +68,7 @@ class SonicRetroGenerator(Generator):
 
          # ini file
         sonicConfig = configparser.RawConfigParser(strict=False)
-        sonicConfig.optionxform=str             # Add Case Sensitive comportement
+        sonicConfig.optionxform=str     # Add Case Sensitive comportement
         if os.path.exists(iniFile):
             os.remove(iniFile)          # Force removing settings.ini
             sonicConfig.read(iniFile)
@@ -145,7 +145,10 @@ class SonicRetroGenerator(Generator):
             sonicConfig.set('Video', 'windowed', 'false')
             sonicConfig.set('Video', 'border', 'false')
             sonicConfig.set('Video', 'exclusiveFS', 'true')
-            sonicConfig.set('Video', 'vsync', 'true')
+            if system.isOptSet('vsync') and system.config['vsync'] == '0':
+                sonicConfig.set('Video', 'vsync', 'false')
+            else:
+                sonicConfig.set('Video', 'vsync', 'true')
             sonicConfig.set('Video', 'tripleBuffering', 'true')
             sonicConfig.set('Video', 'fsWidth', '424')
             sonicConfig.set('Video', 'fsHeight', '240')
