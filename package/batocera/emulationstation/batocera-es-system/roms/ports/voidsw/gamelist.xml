@@ -13,4 +13,24 @@
     <image>./images/Shadow Warrior.png</image>
     <genreid>259</genreid>
   </game>
+  <game>
+    <path>./TD.GRP</path>
+    <name>Twin Dragon</name>
+    <desc>Twin Dragon was one of two authorized add-on packs for Shadow Warrior that were canceled during development and later released as freeware.It features a completely new single player episode consisting of 13 levels, three new Wang-Bang levels and more.Lo Wang also had a twin brother, Hung Lo. Because his mother was unwed, she was forced to put  both up for adoption. Lo Wang was sent to a family with a good heart, whilst Hung Lo was adopted by an evil overlord.As can be expected, Hung Lo did many evil deeds because the evil overlord taught him the dark ways of ninja fighting. Now Lo Wang is up to the task to battle through Hung Lo's evil fortress and face his twin brother.
+</desc>
+    <releasedate />
+    <developer>Level Infinity</developer>
+    <publisher>Level Infinity</publisher>
+    <image>./images/Twin Dragon.png</image>
+  </game>
+  <game>
+    <path>./WD.GRP</path>
+    <name>Wanton Destruction</name>
+    <desc>Wanton Destruction was one of two authorized add-on packs for Shadow Warrior that were canceled during development and later released as freeware.It adds three new Wang Bang-levels, a Capture The Flag-level and a new episode: Wanton Destruction. This episode features twelve new maps; also, some enemies now have different graphics. 
+</desc>
+    <releasedate />
+    <developer>Sunstorm Interactive</developer>
+    <publisher>3D Realms</publisher>
+    <image>./images/Wanton Destruction.png</image>
+  </game>
 </gameList>

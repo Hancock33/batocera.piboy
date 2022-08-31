@@ -1,0 +1,19 @@
+{
+    "actions_player1": [
+        {
+            "trigger": ["b", "hotkey"],
+            "type": "key",
+            "target": "KEY_ESC"
+        },
+        {
+            "trigger": ["hotkey", "start"],
+            "type": "key",
+            "target": ["KEY_LEFTALT", "KEY_F4"]
+        },
+        {
+            "trigger": ["select", "start"],
+            "type": "exec",
+            "target": "killall -9 sonic2013 && reset"
+        }
+    ]
+}
