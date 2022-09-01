@@ -2,7 +2,7 @@
 <gameList>
   <game>
     <path>./superflappybirds.game</path>
-    <name>superflappybirds</name>
+    <name>Super Flappy Bird</name>
     <desc>Flappy Bird is a simple mobile-based application originally created by Vietnamese game developer Dong Nguyen. The idea of the game is to flap your bird through as many pipes as possible without hitting a single one.</desc>
     <rating>0.6</rating>
     <releasedate>20130501T000000</releasedate>
