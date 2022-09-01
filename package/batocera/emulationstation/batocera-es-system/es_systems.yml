@@ -3282,7 +3282,7 @@ doom3:
   release: 2004
   hardware: port
   extensions: [game]
-  group: ports
+  group: doom
   path: /userdata/roms/ports/doom3
   emulators:
     doom3:
@@ -3910,7 +3910,7 @@ sonicretro:
   release: 2021
   hardware: port
   extensions: [son, scd, som]
-  group: ports
+  group: sonic
   path: /userdata/roms/ports/sonicretro
   emulators:
     sonic2013:
@@ -3977,7 +3977,7 @@ srb2:
   release: 1998
   hardware: port
   extensions: [game]
-  group: ports
+  group: sonic
   path: /userdata/roms/ports/srb2
   emulators:
     srb2:
