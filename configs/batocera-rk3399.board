@@ -20,7 +20,7 @@ BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_5_15=y
 # Kernel
 BR2_LINUX_KERNEL=y
 BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="5.15.57"
+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="5.15.64"
 BR2_LINUX_KERNEL_PATCH="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/rockchip/rk3399/linux_patches"
 BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/rockchip/rk3399/linux-defconfig.config"
@@ -33,10 +33,11 @@ BR2_LINUX_KERNEL_IMAGE_TARGET_NAME="Image"
 
 # Build the DTB from the kernel sources
 BR2_LINUX_KERNEL_DTS_SUPPORT=y
-BR2_LINUX_KERNEL_INTREE_DTS_NAME="rockchip/rk3399-rockpro64 rockchip/rk3399-rock960 rockchip/rk3399-hugsun-x99 rockchip/rk3399-orangepi-4-lts"
+BR2_LINUX_KERNEL_INTREE_DTS_NAME="rockchip/rk3399-rockpro64 rockchip/rk3399-rock960 rockchip/rk3399-orangepi-4-lts rockchip/rk3399-rock-pi-4a rockchip/rk3399-rock-pi-4b rockchip/rk3399-rock-pi-4c"
 
 # Bootloader (prebuilt)
 BR2_PACKAGE_UBOOT_RK3399=y
+BR2_PACKAGE_UBOOT_ROCK4=y
 
 # System
 BR2_PACKAGE_BATOCERA_KODI19=y
