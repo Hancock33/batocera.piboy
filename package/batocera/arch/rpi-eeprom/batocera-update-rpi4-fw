@@ -1,13 +1,19 @@
 #!/bin/bash
 clear
-echo '-------------------------------------------------------'
+echo '--------------------------------------------------------'
+echo
 echo 'You are about to update the Raspberry Pi4 Firmware'
-echo 'This could be Dangerous if not done correctly'
-echo '-------------------------------------------------------'
+echo 'This can be Dangerous and could potentially brick your'
+echo 'RPI if not done correctly'
+echo 
+echo 'Please enusre your RPI is connected to AC power before'
+echo 'proceeding with the update process.'
+echo
+echo '--------------------------------------------------------'
 read -p "Do you want to proceed? (yes/no)" yn
 
 case $yn in 
-	yes ) echo echo Proceeding with the firmware update...;;
+	yes ) echo Proceeding with the firmware update, please wait...;;
 	no ) echo NOT applying Firmware update
 		exit;;
 	* ) echo NOT applying Firmware update
