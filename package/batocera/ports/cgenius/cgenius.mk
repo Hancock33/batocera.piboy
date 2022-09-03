@@ -3,8 +3,8 @@
 # cgenius
 #
 ################################################################################
-# Version: Commits on Jul 01, 2022
-CGENIUS_VERSION = 67e5e036dadddc9b72b05a90a7c704698fc8b206
+# Version: Commits on Sept 03, 2022
+CGENIUS_VERSION = 7cf9b4432c252b54f28cc7ea6bb12ba65b7785bf
 CGENIUS_SITE = https://github.com/gerstrong/Commander-Genius
 
 CGENIUS_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf boost libcurl
