@@ -70,7 +70,7 @@ arcadia:
 archimedes:
   emulator: libretro
   core:     mame
-arduboy:
+arduous:
   emulator: libretro
   core:     arduous
 astrocde:
