@@ -25,19 +25,19 @@ msgctxt "game_options"
 msgid "VIDEO MODE"
 msgstr "MODE VIDÉO"
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, pcsx2
 msgctxt "game_options"
 msgid ""
 "Force the game to render in this aspect ratio. Not all systems support all "
 "ratios."
 msgstr ""
 
-#. TRANSLATION: shared, demul
+#. TRANSLATION: shared, pcsx2, demul
 msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
 msgstr "RATIO ÉCRAN DU JEU"
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, pcsx2
 msgctxt "game_options"
 msgid "Full"
 msgstr "Complet"
@@ -6683,7 +6683,7 @@ msgstr ""
 "Tous les jeux ne prennent pas en charge l'étirement, selon les fichiers "
 "vidéo."
 
-#. TRANSLATION: daphne, openbor, pcsx2, redream, demul
+#. TRANSLATION: daphne, openbor, redream, demul
 msgctxt "game_options"
 msgid "Stretch"
 msgstr "Étirement"
@@ -8035,18 +8035,6 @@ msgstr "Logiciel"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "PS2's internal ratio setting. Some games only support 4/3."
-msgstr ""
-"Réglage du ratio interne de la PS2. Certains jeux ne prennent en charge que "
-"4/3."
-
-#. TRANSLATION: pcsx2, rpcs3
-msgctxt "game_options"
-msgid "TV MODE"
-msgstr "MODE TV"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
 msgid "Some games have issues when the animation is shown, others require it."
 msgstr ""
 "Certains jeux ont des problèmes lorsque l'animation est affichée, d'autres "
@@ -8409,6 +8397,11 @@ msgid "PS3's internal ratio setting. Some games only support 16/9."
 msgstr ""
 "Réglage du ratio interne de la PS3. Certains jeux ne prennent en charge que "
 "le 16/9."
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "TV MODE"
+msgstr "MODE TV"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -9844,6 +9837,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "USE COMPUTE SHADER"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "PS2's internal ratio setting. Some games only support 4/3."
+#~ msgstr ""
+#~ "Réglage du ratio interne de la PS2. Certains jeux ne prennent en charge "
+#~ "que 4/3."
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (Default)"

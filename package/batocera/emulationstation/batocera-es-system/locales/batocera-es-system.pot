@@ -31,19 +31,19 @@ msgctxt "game_options"
 msgid "VIDEO MODE"
 msgstr ""
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, pcsx2
 msgctxt "game_options"
 msgid ""
 "Force the game to render in this aspect ratio. Not all systems support all "
 "ratios."
 msgstr ""
 
-#. TRANSLATION: shared, demul
+#. TRANSLATION: shared, pcsx2, demul
 msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
 msgstr ""
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, pcsx2
 msgctxt "game_options"
 msgid "Full"
 msgstr ""
@@ -6618,7 +6618,7 @@ msgctxt "game_options"
 msgid "Not all games support Stretch, depending on the video files."
 msgstr ""
 
-#. TRANSLATION: daphne, openbor, pcsx2, redream, demul
+#. TRANSLATION: daphne, openbor, redream, demul
 msgctxt "game_options"
 msgid "Stretch"
 msgstr ""
@@ -7952,16 +7952,6 @@ msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "PS2's internal ratio setting. Some games only support 4/3."
-msgstr ""
-
-#. TRANSLATION: pcsx2, rpcs3
-msgctxt "game_options"
-msgid "TV MODE"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
 msgid "Some games have issues when the animation is shown, others require it."
 msgstr ""
 
@@ -8307,6 +8297,11 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "PS3's internal ratio setting. Some games only support 16/9."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "TV MODE"
 msgstr ""
 
 #. TRANSLATION: rpcs3

@@ -9,25 +9,19 @@ import configparser
 
 sm_src = "/usr/share/game_assets/sonicmania/Game.so"
 sm_dst = "/userdata/roms/ports/sonicretro/Sonic Mania.som/Game.so"
-keys_dst = "/usr/share/evmapy/sonicretro.keys"
 
 class SonicRetroGenerator(Generator):
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        if os.path.isfile(keys_dst):
-            os.remove(keys_dst)
 
         # Determine the emulator to use
         if (rom.lower()).endswith('son'):
-            shutil.copyfile('/usr/share/evmapy/sonic2013_sonicretro.keys', keys_dst)
             iniFile = rom + '/settings.ini'
             emu = "sonic2013"
         elif (rom.lower()).endswith('som'):
             shutil.copyfile(sm_src, sm_dst)
-            shutil.copyfile('/usr/share/evmapy/sonicmania_sonicretro.keys', keys_dst)
             iniFile = rom + '/Settings.ini'
             emu = 'sonicmania'
         else:
-            shutil.copyfile('/usr/share/evmapy/soniccd_sonicretro.keys', keys_dst)
             iniFile = rom + '/settings.ini'
             emu = 'soniccd'
 
