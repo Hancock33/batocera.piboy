@@ -131,7 +131,7 @@ camplynx:
   emulator: libretro
   core:     mame
 cannonball:
-  emulator: libretro
+  emulator: cannonball
   core:     cannonball
 cavestory:
   emulator: libretro
