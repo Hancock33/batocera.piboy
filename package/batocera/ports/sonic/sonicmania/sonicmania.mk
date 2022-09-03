@@ -23,11 +23,4 @@ define SONICMANIA_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/dependencies/RSDKv5/bin/Linux/SDL2/Game.so $(TARGET_DIR)/usr/share/game_assets/sonicmania
 endef
 
-define SONICMANIA_POST_PROCESS
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sonic/sonicmania/sonicmania_sonicretro.keys $(TARGET_DIR)/usr/share/evmapy
-endef
-
-SONICMANIA_POST_INSTALL_TARGET_HOOKS += SONICMANIA_POST_PROCESS
-
 $(eval $(generic-package))
