@@ -65,12 +65,16 @@ class DaphneGenerator(Generator):
                 else:
                     commandArray.extend(["-sinden", "3", "w"])
             else:
-                commandArray.extend(["-manymouse"]) # sinden implies manymouse
+                if len(guns) > 0: # enable manymouse for guns
+                    commandArray.extend(["-manymouse"]) # sinden implies manymouse
+                else:
+                    if system.isOptSet('abs_mouse_input') and system.getOptBoolean("abs_mouse_input"):
+                        commandArray.extend(["-manymouse"]) # this is causing issues on some "non-gun" games
 
             # Oversize Overlay (Singe) for HD lightgun games
             if system.isOptSet('lightgun_hd') and system.getOptBoolean("lightgun_hd"):
                 commandArray.append("-oversize_overlay")
-
+            
             # crosshair
             if system.isOptSet('daphne_crosshair'):
                 if not system.getOptBoolean("daphne_crosshair"):
@@ -107,8 +111,8 @@ class DaphneGenerator(Generator):
 
         # Enable SDL_TEXTUREACCESS_STREAMING, can aid SBC's with SDL2 => 2.0.16
         if system.isOptSet('daphne_texturestream') and system.getOptBoolean("daphne_texturestream"):
-            commandArray.append("-texturestream")
-
+            commandArray.append("-texturestream") 
+            
         # The folder may have a file with the game name and .commands with extra arguments to run the game.
         if os.path.isfile(commandsFile):
             commandArray.extend(open(commandsFile,'r').read().split())
@@ -116,7 +120,7 @@ class DaphneGenerator(Generator):
         return Command.Command(array=commandArray)
 
     def getInGameRatio(self, config, gameResolution, rom):
-        romName = os.path.splitext(os.path.basename(rom))[0]
+        romName = os.path.splitext(os.path.basename(rom))[0]        
         singeFile = rom + "/" + romName + ".singe"
         if "daphne_ratio" in config:
             if config['daphne_ratio'] == "stretch":
