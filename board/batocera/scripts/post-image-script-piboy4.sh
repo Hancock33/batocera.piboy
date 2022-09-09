@@ -15,7 +15,7 @@ GENIMAGE_TMP="${BUILD_DIR}/genimage.tmp"
 ##### find images to build #####
 BATOCERA_TARGET=piboy4
 BATOCERA_LOWER_TARGET=$(echo "${BATOCERA_TARGET}" | tr [A-Z] [a-z])
-BATOCERA_IMAGES_TARGETS=raspberrypi/piboy4
+BATOCERA_IMAGES_TARGETS=broadcom/piboy4
 
 if test -z "${BATOCERA_IMAGES_TARGETS}"
 then
