@@ -1,6 +1,6 @@
 ################################################################################
 #
-# batocera-configgen
+# batocera configgen
 #
 ################################################################################
 
@@ -16,18 +16,18 @@ endef
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPIZERO2),y)
 	BATOCERA_CONFIGGEN_SYSTEM=rpizero2
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI1),y)
-	BATOCERA_CONFIGGEN_SYSTEM=rpi1
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI2),y)
-	BATOCERA_CONFIGGEN_SYSTEM=rpi2
-else ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI3),y)
-	BATOCERA_CONFIGGEN_SYSTEM=piboy3
-else ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI4),y)
-	BATOCERA_CONFIGGEN_SYSTEM=piboy4
+else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2835),y)
+	BATOCERA_CONFIGGEN_SYSTEM=bcm2835
+else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
+	BATOCERA_CONFIGGEN_SYSTEM=bcm2836
+else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2837),y)
+	BATOCERA_CONFIGGEN_SYSTEM=bcm2837
+else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
+	BATOCERA_CONFIGGEN_SYSTEM=bcm2711
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI3),y)
-	BATOCERA_CONFIGGEN_SYSTEM=rpi3
+	BATOCERA_CONFIGGEN_SYSTEM=bcm2837
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RPI4),y)
-	BATOCERA_CONFIGGEN_SYSTEM=rpi4
+	BATOCERA_CONFIGGEN_SYSTEM=bcm2711
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_XU4),y)
 	BATOCERA_CONFIGGEN_SYSTEM=odroidxu4
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3288),y)
@@ -72,10 +72,6 @@ define BATOCERA_CONFIGGEN_INSTALL_STAGING_CMDS
 	mkdir -p $(STAGING_DIR)/usr/share/batocera/configgen
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/configs/configgen-defaults.yml $(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults.yml
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/configs/configgen-defaults-$(BATOCERA_CONFIGGEN_SYSTEM).yml $(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml
-
-	@if [ "$(BR2_PACKAGE_XPI_GAMECON_RPI4)" = "y" ]; then \
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/configs/configgen-defaults-rpi4.yml   $(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/configs/configgen-defaults-piboy4.yml $(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi
 endef
 
 define BATOCERA_CONFIGGEN_CONFIGS
@@ -83,10 +79,6 @@ define BATOCERA_CONFIGGEN_CONFIGS
 	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/data $(TARGET_DIR)/usr/share/batocera/configgen/
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/configs/configgen-defaults.yml $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults.yml
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/configs/configgen-defaults-$(BATOCERA_CONFIGGEN_SYSTEM).yml $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml
-
-	@if [ "$(BR2_PACKAGE_XPI_GAMECON_RPI4)" = "y" ]; then \
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/configs/configgen-defaults-rpi4.yml   $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/configs/configgen-defaults-piboy4.yml $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi
 endef
 
 define BATOCERA_CONFIGGEN_BINS
