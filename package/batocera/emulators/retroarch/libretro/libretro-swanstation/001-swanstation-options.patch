@@ -1,5 +1,5 @@
 diff --git a/src/libretro/libretro_core_options.h b/src/libretro/libretro_core_options.h
-index 65ed684b..ce1bffba 100644
+index 6245e9d8..9614904d 100644
 --- a/src/libretro/libretro_core_options.h
 +++ b/src/libretro/libretro_core_options.h
 @@ -80,7 +80,7 @@ struct retro_core_option_v2_category option_cats_us[] = {
@@ -155,8 +155,8 @@ index 65ed684b..ce1bffba 100644
        "GPU Renderer",
        NULL,
        "Which renderer to use to emulate the GPU.",
-@@ -502,7 +502,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
-       "Auto"
+@@ -506,7 +506,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+ #endif
     },
     {
 -      "duckstation_GPU.ResolutionScale",
@@ -164,7 +164,7 @@ index 65ed684b..ce1bffba 100644
        "Internal Resolution Scale",
        NULL,
        "Scales internal VRAM resolution by the specified multiplier for the hardware renderer. Larger values are slower. "
-@@ -531,7 +531,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -535,7 +535,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "1"
     },
     {
@@ -173,7 +173,7 @@ index 65ed684b..ce1bffba 100644
        "Threaded Rendering (Software)",
        NULL,
        "Uses a second thread for drawing graphics. Currently only available for the software renderer.",
-@@ -545,7 +545,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -549,7 +549,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -182,7 +182,7 @@ index 65ed684b..ce1bffba 100644
        "Use Software Renderer For Readbacks",
        NULL,
        "Runs the software renderer in parallel for VRAM readbacks. On some systems, this may "
-@@ -561,7 +561,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -565,7 +565,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -191,7 +191,7 @@ index 65ed684b..ce1bffba 100644
        "Multisample Antialiasing",
        NULL,
        "Uses multisample antialiasing for rendering 3D objects. Can smooth out jagged edges on polygons at a lower "
-@@ -586,7 +586,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -590,7 +590,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "1"
     },
     {
@@ -200,7 +200,7 @@ index 65ed684b..ce1bffba 100644
        "True Color Rendering",
        NULL,
        "Disables dithering and uses the full 8 bits per channel of color information. May break rendering in some games.",
-@@ -600,7 +600,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -604,7 +604,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -209,7 +209,7 @@ index 65ed684b..ce1bffba 100644
        "Scaled Dithering",
        NULL,
        "Scales the dithering pattern with the internal rendering resolution, making it less noticeable. Usually safe to enable.",
-@@ -614,7 +614,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -618,7 +618,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -218,7 +218,7 @@ index 65ed684b..ce1bffba 100644
        "Disable Interlacing",
        NULL,
        "Disables interlaced rendering and display in the GPU. Some games can render in 480p this way, but others will break.",
-@@ -628,7 +628,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -632,7 +632,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -227,7 +227,7 @@ index 65ed684b..ce1bffba 100644
        "Force NTSC Timings",
        NULL,
        "Forces PAL games to run at NTSC timings, i.e. 60hz. Some PAL games will run at their \"normal\" speeds, while others will break.",
-@@ -642,7 +642,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -646,7 +646,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -236,7 +236,7 @@ index 65ed684b..ce1bffba 100644
        "Force 4:3 For 24-Bit Display",
        NULL,
        "Switches back to 4:3 display aspect ratio when displaying 24-bit content, usually FMVs.",
-@@ -656,7 +656,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -660,7 +660,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -245,7 +245,7 @@ index 65ed684b..ce1bffba 100644
        "Chroma Smoothing For 24-Bit Display",
        NULL,
        "Smooths out blockyness between colour transitions in 24-bit content, usually FMVs. Only applies to the hardware renderers.",
-@@ -670,7 +670,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -674,7 +674,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -254,7 +254,7 @@ index 65ed684b..ce1bffba 100644
        "Texture Filtering",
        NULL,
        "Smooths out the blockyness of magnified textures on 3D object by using bilinear filtering. Will have a "
-@@ -690,7 +690,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -694,7 +694,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "Nearest"
     },
     {
@@ -263,7 +263,7 @@ index 65ed684b..ce1bffba 100644
        "Widescreen Hack",
        NULL,
        "Increases the field of view from 4:3 to the chosen display aspect ratio in 3D games. For 2D games, or games which "
-@@ -705,7 +705,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -709,7 +709,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -272,7 +272,7 @@ index 65ed684b..ce1bffba 100644
        "PGXP Geometry Correction",
        NULL,
        "Reduces \"wobbly\" polygons by attempting to preserve the fractional component through memory transfers. Only "
-@@ -720,7 +720,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -724,7 +724,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -281,7 +281,7 @@ index 65ed684b..ce1bffba 100644
        "PGXP Culling Correction",
        NULL,
        "Increases the precision of polygon culling, reducing the number of holes in geometry. Requires geometry correction enabled.",
-@@ -734,7 +734,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -738,7 +738,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -290,7 +290,7 @@ index 65ed684b..ce1bffba 100644
        "PGXP Texture Correction",
        NULL,
        "Uses perspective-correct interpolation for texture coordinates and colors, straightening out warped textures. "
-@@ -749,7 +749,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -753,7 +753,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -299,7 +299,7 @@ index 65ed684b..ce1bffba 100644
        "PGXP Depth Buffer",
        NULL,
        "Attempts to reduce polygon Z-fighting by testing pixels against the depth values from PGXP. Low compatibility, "
-@@ -764,7 +764,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -768,7 +768,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -308,7 +308,7 @@ index 65ed684b..ce1bffba 100644
        "PGXP Vertex Cache",
        NULL,
        "Uses screen coordinates as a fallback when tracking vertices through memory fails. May improve PGXP compatibility.",
-@@ -778,7 +778,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -782,7 +782,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -317,7 +317,7 @@ index 65ed684b..ce1bffba 100644
        "PGXP CPU Mode",
        NULL,
        "Tries to track vertex manipulation through the CPU. Some games require this option for PGXP to be effective. "
-@@ -793,7 +793,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -797,7 +797,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -326,7 +326,7 @@ index 65ed684b..ce1bffba 100644
        "Core Provided Aspect Ratio",
        NULL,
        "Sets the preferred aspect ratio. Will only work when the 'Core Provided' aspect ratio is selected inside RetroArch's Video settings.",
-@@ -812,7 +812,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -816,7 +816,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "Auto"
     },
     {
@@ -335,7 +335,7 @@ index 65ed684b..ce1bffba 100644
        "Custom Aspect Ratio Numerator",
        NULL,
        "Sets the numerator for the custom aspect ratio, e.g. 4 in 4:3.",
-@@ -873,7 +873,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -877,7 +877,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "4"
     },
     {
@@ -344,7 +344,7 @@ index 65ed684b..ce1bffba 100644
        "Custom Aspect Ratio Denominator",
        NULL,
        "Sets the denominator for the custom aspect ratio, e.g. 3 in 4:3.",
-@@ -934,7 +934,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -938,7 +938,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "3"
     },
     {
@@ -353,7 +353,7 @@ index 65ed684b..ce1bffba 100644
        "Crop Mode",
        NULL,
        "Changes how much of the image is cropped. Some games display garbage in the overscan area which is typically hidden.",
-@@ -949,7 +949,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -953,7 +953,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "Borders"
     },
     {
@@ -362,7 +362,7 @@ index 65ed684b..ce1bffba 100644
        "Downsampling",
        NULL,
        "Downsamples the rendered image prior to displaying it. Can improve overall image quality in mixed 2D/3D games, but "
-@@ -965,7 +965,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -969,7 +969,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "Disabled"
     },
     {
@@ -371,7 +371,7 @@ index 65ed684b..ce1bffba 100644
        "Load Devices From Save States",
        NULL,
        "Sets whether the contents of devices and memory cards will be loaded when a save state is loaded. "
-@@ -980,7 +980,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -984,7 +984,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -380,7 +380,7 @@ index 65ed684b..ce1bffba 100644
        "Memory Card 1 Type",
        NULL,
        "Sets the type of memory card for Slot 1. Restart the core when switching formats. "
-@@ -1000,7 +1000,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1004,7 +1004,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "Libretro"
     },
     {
@@ -389,7 +389,7 @@ index 65ed684b..ce1bffba 100644
        "Memory Card 2 Type",
        NULL,
        "Sets the type of memory card for Slot 2.",
-@@ -1016,7 +1016,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1020,7 +1020,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "None"
     },
     {
@@ -398,7 +398,7 @@ index 65ed684b..ce1bffba 100644
        "Use Single Card For Playlist",
        NULL,
        "When using a playlist (m3u) and per-game (title) memory cards, a single memory card "
-@@ -1031,7 +1031,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1035,7 +1035,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -407,7 +407,7 @@ index 65ed684b..ce1bffba 100644
        "Multitap Mode",
        NULL,
        "Sets the mode for the multitap.",
-@@ -1047,7 +1047,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1051,7 +1051,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "Disabled"
     },
     {
@@ -416,7 +416,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 1 Force Analog Mode on Reset",
        NULL,
        "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
-@@ -1063,7 +1063,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1067,7 +1067,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -425,7 +425,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 1 Use Analog Sticks for D-Pad in Digital Mode",
        NULL,
        "Allows you to use the analog sticks to control the d-pad in digital mode, as well as the buttons.",
-@@ -1077,7 +1077,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1081,7 +1081,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -434,7 +434,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 1 Analog Axis Scale",
        NULL,
        "Sets the analog stick axis scaling factor.",
-@@ -1140,7 +1140,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1144,7 +1144,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "1.00f"
     },
     {
@@ -443,7 +443,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 1 Vibration Bias",
        NULL,
        "Applies an offset to vibration intensities, higher values will make smaller vibrations more noticable.",
-@@ -1279,7 +1279,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1283,7 +1283,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "8"
     },
     {
@@ -452,7 +452,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 1 Lightgun X Scale",
        NULL,
        "Scales X coordinates relative to the center of the screen.",
-@@ -1390,7 +1390,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1394,7 +1394,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
         "1.00"
     },
     {
@@ -461,7 +461,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 1 NeGcon Steering Axis Deadzone",
        NULL,
        "Scales X coordinates relative to the center of the screen.",
-@@ -1452,7 +1452,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1456,7 +1456,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
         "0.10"
     },
     {
@@ -470,7 +470,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 1 NeGcon Twist Response",
        NULL,
        "Sets the twist response type for the left analog stick. "
-@@ -1470,7 +1470,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1474,7 +1474,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "linear"
     },
     {
@@ -479,7 +479,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 2 Force Analog Mode on Reset",
        NULL,
        "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
-@@ -1486,7 +1486,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1490,7 +1490,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -488,7 +488,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 2 Use Analog Sticks for D-Pad in Digital Mode",
        NULL,
        "Allows you to use the analog sticks to control the d-pad in digital mode, as well as the buttons.",
-@@ -1500,7 +1500,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1504,7 +1504,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -497,7 +497,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 2 Analog Axis Scale",
        NULL,
        "Sets the analog stick axis scaling factor.",
-@@ -1563,7 +1563,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1567,7 +1567,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "1.00f"
     },
     {
@@ -506,7 +506,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 2 Vibration Bias",
        NULL,
        "Applies an offset to vibration intensities, higher values will make smaller vibrations more noticable.",
-@@ -1702,7 +1702,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1706,7 +1706,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "8"
     },
     {
@@ -515,7 +515,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 2 Lightgun X Scale",
        NULL,
        "Scales X coordinates relative to the center of the screen.",
-@@ -1813,7 +1813,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1817,7 +1817,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
         "1.00"
     },
     {
@@ -524,7 +524,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 2 NeGcon Steering Axis Deadzone",
        NULL,
        "Scales X coordinates relative to the center of the screen.",
-@@ -1875,7 +1875,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1879,7 +1879,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
         "0.00"
     },
     {
@@ -533,7 +533,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 2 NeGcon Twist Response",
        NULL,
        "Sets the twist response type for the left analog stick. "
-@@ -1893,7 +1893,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1897,7 +1897,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "linear"
     },
     {
@@ -542,7 +542,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 3 Force Analog Mode on Reset",
        NULL,
        "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
-@@ -1909,7 +1909,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1913,7 +1913,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -551,7 +551,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 3 Use Analog Sticks for D-Pad in Digital Mode",
        NULL,
        "Allows you to use the analog sticks to control the d-pad in digital mode, as well as the buttons.",
-@@ -1923,7 +1923,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1927,7 +1927,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -560,7 +560,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 3 Analog Axis Scale",
        NULL,
        "Sets the analog stick axis scaling factor.",
-@@ -1986,7 +1986,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -1990,7 +1990,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "1.00f"
     },
     {
@@ -569,7 +569,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 3 Vibration Bias",
        NULL,
        "Applies an offset to vibration intensities, higher values will make smaller vibrations more noticable.",
-@@ -2125,7 +2125,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2129,7 +2129,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "8"
     },
     {
@@ -578,7 +578,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 3 NeGcon Steering Axis Deadzone",
        NULL,
        "Scales X coordinates relative to the center of the screen.",
-@@ -2187,7 +2187,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2191,7 +2191,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
         "0.10"
     },
     {
@@ -587,7 +587,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 3 NeGcon Twist Response",
        NULL,
        "Sets the twist response type for the left analog stick. "
-@@ -2205,7 +2205,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2209,7 +2209,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "linear"
     },
     {
@@ -596,7 +596,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 4 Force Analog Mode on Reset",
        NULL,
        "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
-@@ -2221,7 +2221,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2225,7 +2225,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -605,7 +605,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 4 Use Analog Sticks for D-Pad in Digital Mode",
        NULL,
        "Allows you to use the analog sticks to control the d-pad in digital mode, as well as the buttons.",
-@@ -2235,7 +2235,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2239,7 +2239,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -614,7 +614,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 4 Analog Axis Scale",
        NULL,
        "Sets the analog stick axis scaling factor.",
-@@ -2298,7 +2298,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2302,7 +2302,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "1.00f"
     },
     {
@@ -623,7 +623,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 4 Vibration Bias",
        NULL,
        "Applies an offset to vibration intensities, higher values will make smaller vibrations more noticable.",
-@@ -2437,7 +2437,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2441,7 +2441,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "8"
     },
     {
@@ -632,7 +632,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 4 NeGcon Steering Axis Deadzone",
        NULL,
        "Scales X coordinates relative to the center of the screen.",
-@@ -2499,7 +2499,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2503,7 +2503,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
         "0.10"
     },
     {
@@ -641,7 +641,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 4 NeGcon Twist Response",
        NULL,
        "Sets the twist response type for the left analog stick. "
-@@ -2517,7 +2517,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2521,7 +2521,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "linear"
     },
     {
@@ -650,7 +650,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 5 Force Analog Mode on Reset",
        NULL,
        "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
-@@ -2533,7 +2533,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2537,7 +2537,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -659,7 +659,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 5 Use Analog Sticks for D-Pad in Digital Mode",
        NULL,
        "Allows you to use the analog sticks to control the d-pad in digital mode, as well as the buttons.",
-@@ -2547,7 +2547,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2551,7 +2551,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -668,7 +668,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 5 Analog Axis Scale",
        NULL,
        "Sets the analog stick axis scaling factor.",
-@@ -2610,7 +2610,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2614,7 +2614,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "1.00f"
     },
     {
@@ -677,7 +677,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 5 Vibration Bias",
        NULL,
        "Applies an offset to vibration intensities, higher values will make smaller vibrations more noticable.",
-@@ -2749,7 +2749,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2753,7 +2753,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "8"
     },
     {
@@ -686,7 +686,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 6 Force Analog Mode on Reset",
        NULL,
        "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
-@@ -2765,7 +2765,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2769,7 +2769,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -695,7 +695,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 6 Use Analog Sticks for D-Pad in Digital Mode",
        NULL,
        "Allows you to use the analog sticks to control the d-pad in digital mode, as well as the buttons.",
-@@ -2779,7 +2779,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2783,7 +2783,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -704,7 +704,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 6 Analog Axis Scale",
        NULL,
        "Sets the analog stick axis scaling factor.",
-@@ -2842,7 +2842,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2846,7 +2846,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "1.00f"
     },
     {
@@ -713,7 +713,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 6 Vibration Bias",
        NULL,
        "Applies an offset to vibration intensities, higher values will make smaller vibrations more noticable.",
-@@ -2981,7 +2981,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -2985,7 +2985,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "8"
     },
     {
@@ -722,7 +722,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 7 Force Analog Mode on Reset",
        NULL,
        "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
-@@ -2997,7 +2997,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3001,7 +3001,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -731,7 +731,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 7 Use Analog Sticks for D-Pad in Digital Mode",
        NULL,
        "Allows you to use the analog sticks to control the d-pad in digital mode, as well as the buttons.",
-@@ -3011,7 +3011,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3015,7 +3015,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -740,7 +740,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 7 Analog Axis Scale",
        NULL,
        "Sets the analog stick axis scaling factor.",
-@@ -3074,7 +3074,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3078,7 +3078,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "1.00f"
     },
     {
@@ -749,7 +749,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 7 Vibration Bias",
        NULL,
        "Applies an offset to vibration intensities, higher values will make smaller vibrations more noticable.",
-@@ -3213,7 +3213,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3217,7 +3217,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "8"
     },
     {
@@ -758,7 +758,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 8 Force Analog Mode on Reset",
        NULL,
        "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
-@@ -3229,7 +3229,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3233,7 +3233,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -767,7 +767,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 8 Use Analog Sticks for D-Pad in Digital Mode",
        NULL,
        "Allows you to use the analog sticks to control the d-pad in digital mode, as well as the buttons.",
-@@ -3243,7 +3243,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3247,7 +3247,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -776,7 +776,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 8 Analog Axis Scale",
        NULL,
        "Sets the analog stick axis scaling factor.",
-@@ -3306,7 +3306,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3310,7 +3310,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "1.00f"
     },
     {
@@ -785,7 +785,7 @@ index 65ed684b..ce1bffba 100644
        "Controller 8 Vibration Bias",
        NULL,
        "Applies an offset to vibration intensities, higher values will make smaller vibrations more noticable.",
-@@ -3445,7 +3445,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3449,7 +3449,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "8"
     },
     {
@@ -794,7 +794,7 @@ index 65ed684b..ce1bffba 100644
        "Display OSD Messages",
        NULL,
        "Shows on-screen messages generated by the core.",
-@@ -3459,7 +3459,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3463,7 +3463,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -803,7 +803,7 @@ index 65ed684b..ce1bffba 100644
        "Apply Compatibility Settings",
        NULL,
        "Automatically disables enhancements on games which are incompatible.",
-@@ -3473,7 +3473,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3477,7 +3477,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -812,7 +812,7 @@ index 65ed684b..ce1bffba 100644
        "Log Level",
        NULL,
        "Sets the level of information logged by the core.",
-@@ -3495,7 +3495,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3499,7 +3499,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "Info"
     },
     {
@@ -821,7 +821,7 @@ index 65ed684b..ce1bffba 100644
        "CPU Recompiler ICache",
        NULL,
        "Determines whether the CPU's instruction cache is simulated in the recompiler. Improves accuracy at a small cost "
-@@ -3510,7 +3510,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3514,7 +3514,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -830,7 +830,7 @@ index 65ed684b..ce1bffba 100644
        "CPU Recompiler Block Linking",
        NULL,
        "Enables the generated code to directly jump between blocks without going through the "
-@@ -3525,7 +3525,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3529,7 +3529,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -839,7 +839,7 @@ index 65ed684b..ce1bffba 100644
        "CPU Recompiler Fast Memory Access",
        NULL,
        "Uses page faults to determine hardware memory accesses at runtime. Can provide a significant performance "
-@@ -3547,7 +3547,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3551,7 +3551,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
  #endif
     },
     {
@@ -848,16 +848,7 @@ index 65ed684b..ce1bffba 100644
        "CPU Recompiler Fast Memory Access Rewrite",
        NULL,
        "Enables rewrites when CPU Recompiler Fast Memory Access is enabled. Can provide a measurable speed boost, "
-@@ -3562,7 +3562,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
-       "false"
-    },
-    {
--      "duckstation_Debug.ShowVRAM",
-+      "swanstation_Debug.ShowVRAM",
-       "Show VRAM",
-       NULL,
-       "Shows the entirety of the console's VRAM instead of the display area (debugging feature).",
-@@ -3576,10 +3576,10 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3566,10 +3566,10 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -870,7 +861,7 @@ index 65ed684b..ce1bffba 100644
        "Currently only works with the D3D11 & Vulkan renderers.",
        NULL,
        "advanced",
-@@ -3591,7 +3591,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3581,7 +3581,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -879,7 +870,7 @@ index 65ed684b..ce1bffba 100644
        "Preload Texture Replacements",
        NULL,
        "Preload VRAM write replacement textures to RAM",
-@@ -3605,7 +3605,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3595,7 +3595,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -888,7 +879,7 @@ index 65ed684b..ce1bffba 100644
        "Display Active Start Offset",
        NULL,
        "Pads or crops off lines from the left of the displayed image.",
-@@ -3678,7 +3678,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3668,7 +3668,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "0"
     },
     {
@@ -897,7 +888,7 @@ index 65ed684b..ce1bffba 100644
        "Display Active End Offset",
        NULL,
        "Pads or crops off lines from the right of the displayed image.",
-@@ -3751,7 +3751,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3741,7 +3741,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "0"
     },
     {
@@ -906,7 +897,7 @@ index 65ed684b..ce1bffba 100644
        "Display Line Start Offset",
        NULL,
        "Pads or crops off lines from the top of the displayed image.",
-@@ -3824,7 +3824,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3814,7 +3814,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "0"
     },
     {
@@ -915,7 +906,7 @@ index 65ed684b..ce1bffba 100644
        "Display Line End Offset",
        NULL,
        "Pads or crops off lines from the bottom of the displayed image.",
-@@ -3897,7 +3897,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3887,7 +3887,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "0"
     },
     {
@@ -924,7 +915,7 @@ index 65ed684b..ce1bffba 100644
        "PGXP Preserve Projection Precision",
        NULL,
        "Enables additional precision for PGXP. May improve visuals in some games but break others.",
-@@ -3911,7 +3911,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3901,7 +3901,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -933,7 +924,7 @@ index 65ed684b..ce1bffba 100644
        "PGXP Geometry Tolerance",
        NULL,
        "Ignores precise positions if the difference exceeds this threshold.",
-@@ -3944,7 +3944,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3934,7 +3934,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "-1.0"
     },
     {
@@ -942,7 +933,7 @@ index 65ed684b..ce1bffba 100644
        "Internal Run-Ahead",
        NULL,
        "Simulates the system ahead of time and rolls back/replays to reduce input lag. Has very high system "
-@@ -3968,7 +3968,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3958,7 +3958,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "0"
     },
     {
@@ -952,7 +943,7 @@ index 65ed684b..ce1bffba 100644
        NULL,
        "Enabled an additional 6MB of RAM, usually present on dev consoles. Games have to use a "
 diff --git a/src/libretro/libretro_host_interface.cpp b/src/libretro/libretro_host_interface.cpp
-index 55d40110..c05fadf1 100644
+index 22594f93..fca7ef7c 100644
 --- a/src/libretro/libretro_host_interface.cpp
 +++ b/src/libretro/libretro_host_interface.cpp
 @@ -246,7 +246,7 @@ static const char* GetSaveDirectory()
@@ -985,7 +976,7 @@ index 55d40110..c05fadf1 100644
    retro_variable var{name, default_value};
    if (g_retro_environment_callback(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
      return var.value;
-@@ -500,9 +500,9 @@ bool LibretroHostInterface::retro_load_game(const struct retro_game_info* game)
+@@ -496,9 +496,9 @@ bool LibretroHostInterface::retro_load_game(const struct retro_game_info* game)
    {
        case  ConsoleRegion::NTSC_J:
        {
@@ -997,7 +988,7 @@ index 55d40110..c05fadf1 100644
           g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
  
           break;
-@@ -510,9 +510,9 @@ bool LibretroHostInterface::retro_load_game(const struct retro_game_info* game)
+@@ -506,9 +506,9 @@ bool LibretroHostInterface::retro_load_game(const struct retro_game_info* game)
  
        case  ConsoleRegion::NTSC_U:
        {
@@ -1009,7 +1000,7 @@ index 55d40110..c05fadf1 100644
           g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
  
           break;
-@@ -520,9 +520,9 @@ bool LibretroHostInterface::retro_load_game(const struct retro_game_info* game)
+@@ -516,9 +516,9 @@ bool LibretroHostInterface::retro_load_game(const struct retro_game_info* game)
  
        case  ConsoleRegion::PAL:
        {
@@ -1021,7 +1012,7 @@ index 55d40110..c05fadf1 100644
           g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
  
           break;
-@@ -769,71 +769,71 @@ bool LibretroHostInterface::UpdateCoreOptionsDisplay(bool controller)
+@@ -752,71 +752,71 @@ bool LibretroHostInterface::UpdateCoreOptionsDisplay(bool controller)
    struct retro_core_option_display option_display;
  
    option_display.visible = cpu_recompiler;
@@ -1119,7 +1110,7 @@ index 55d40110..c05fadf1 100644
    g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
  
    for (u32 i = 0; i < NUM_CONTROLLER_AND_CARD_PORTS; i++)
-@@ -860,25 +860,25 @@ bool LibretroHostInterface::UpdateCoreOptionsDisplay(bool controller)
+@@ -837,25 +837,25 @@ bool LibretroHostInterface::UpdateCoreOptionsDisplay(bool controller)
      const bool guncon_active = (port_allowed && active_controller == RETRO_DEVICE_PS_GUNCON);
  
      option_display.visible = analog_active;
@@ -1152,7 +1143,7 @@ index 55d40110..c05fadf1 100644
      g_retro_environment_callback(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
    }
  
-@@ -1409,7 +1409,7 @@ static std::optional<GPURenderer> RenderAPIToRenderer(HostDisplay::RenderAPI api
+@@ -1371,7 +1371,7 @@ static std::optional<GPURenderer> RenderAPIToRenderer(HostDisplay::RenderAPI api
  
  bool LibretroHostInterface::RequestHardwareRendererContext()
  {
