@@ -3,8 +3,8 @@
 # srb2
 #
 ################################################################################
-# Version: Commits on Mar 13, 2022
-SRB2_VERSION = 29892a5f0c26f869e57587a524c9be1a02394c50
+# Version: Commits on Sept 08, 2022
+SRB2_VERSION = 892ffbe01b30fe39601d36aa8b69292bc46c9f11
 SRB2_SITE = $(call github,STJr,SRB2,$(SRB2_VERSION))
 
 SRB2_DEPENDENCIES = sdl2 sdl2_mixer libgme
