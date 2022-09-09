@@ -9,11 +9,11 @@ define LIB32BIT_PACKAGER_INSTALL_TARGET_CMDS
 	mkdir -p $(DEST_DIR)
 	mkdir -p $(DEST_DIR)/bin32
 	mkdir -p $(DEST_DIR)/share
-	
+
     cp -a $(TARGET_DIR)/usr/bin/{gmloader,bgdi,bgdc,box86} $(DEST_DIR)/bin32
 	cp -a $(TARGET_DIR)/usr/share/box86                    $(DEST_DIR)/share
 	cp -a $(TARGET_DIR)/usr/lib                            $(DEST_DIR)/lib32
-	cp -a $(TARGET_DIR)/lib/*                              $(DEST_DIR)/lib32    
+	cp -a $(TARGET_DIR)/lib/*                              $(DEST_DIR)/lib32
 	ln -sf libblkid.so.1                                   $(DEST_DIR)/lib32/libblkid.so
 	ln -sf libmount.so.1                                   $(DEST_DIR)/lib32/libmount.so
 	ln -sf libsmartcols.so.1                               $(DEST_DIR)/lib32/libsmartcols.so
