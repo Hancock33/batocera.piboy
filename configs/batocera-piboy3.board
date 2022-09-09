@@ -4,7 +4,7 @@ include batocera-board.common
 BR2_aarch64=y
 BR2_cortex_a53=y
 BR2_ARM_FPU_NEON_FP_ARMV8=y
-BR2_PACKAGE_BATOCERA_TARGET_RPI3=y
+BR2_PACKAGE_BATOCERA_TARGET_BCM2837=y
 
 # Toolchain definition
 BR2_GCC_VERSION_11_X=y
@@ -12,8 +12,8 @@ BR2_BINUTILS_VERSION_2_39_X=y
 BR2_TARGET_OPTIMIZATION="-pipe -mcpu=cortex-a53 -mtune=cortex-a53 -w"
 #BR2_TARGET_GENERIC_GETTY_PORT="tty1"
 BR2_TARGET_GENERIC_GETTY_BAUDRATE_115200=y
-BR2_GLOBAL_PATCH_DIR="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/patches $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/rpi3/patches"
-BR2_ROOTFS_OVERLAY="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/fsoverlay $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/rpi3/fsoverlay"
+BR2_GLOBAL_PATCH_DIR="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/patches $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/piboy3/patches"
+BR2_ROOTFS_OVERLAY="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/fsoverlay $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/piboy3/fsoverlay"
 BR2_ROOTFS_POST_IMAGE_SCRIPT="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/scripts/post-image-script-piboy3.sh"
 BR2_TARGET_ROOTFS_SQUASHFS4_ZSTD=y
 
