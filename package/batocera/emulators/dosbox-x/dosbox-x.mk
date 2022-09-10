@@ -1,10 +1,10 @@
 ################################################################################
 #
-# dosbox-x
+# DosBox-X
 #
 ################################################################################
-# Version: Commits on Aug 01, 2022
-DOSBOX_X_VERSION = dosbox-x-windows-v2022.08.0
+# Version.: Commits on Sep 1, 2022
+DOSBOX_X_VERSION = dosbox-x-v0.84.3
 DOSBOX_X_SITE = $(call github,joncampbell123,dosbox-x,$(DOSBOX_X_VERSION))
 DOSBOX_X_DEPENDENCIES = sdl2 sdl2_net fluidsynth zlib libpng libogg libvorbis linux-headers
 DOSBOX_X_LICENSE = GPLv2
@@ -26,8 +26,6 @@ define DOSBOX_X_CONFIGURE_CONFIG
 
     cp -rf $(@D)/dosbox-x.reference.conf \
         $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/dosbox/dosboxx.conf
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dosbox-x/dos.dosboxx.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 DOSBOX_X_POST_INSTALL_TARGET_HOOKS += DOSBOX_X_CONFIGURE_CONFIG
