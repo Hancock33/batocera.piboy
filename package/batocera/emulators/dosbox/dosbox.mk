@@ -1,10 +1,10 @@
 ################################################################################
 #
-# dosbox
+# DosBox
 #
 ################################################################################
-# Version: Commits on Jan 08, 2020
-DOSBOX_VERSION = 411481d3c760a7f25bc530c97da7ae008e63e0ad
+# Version.: Commits on Jan 12, 2020
+DOSBOX_VERSION = e6b88ad03202d1f74e329f54f213d3b070bd6202
 DOSBOX_SITE = $(call github,duganchen,dosbox,$(DOSBOX_VERSION))
 DOSBOX_DEPENDENCIES = sdl2 sdl2_net fluidsynth zlib libpng libogg libvorbis
 DOSBOX_LICENSE = GPLv2
@@ -18,12 +18,5 @@ define DOSBOX_CONFIGURE_CMDS
                     --prefix=/usr \
                     --with-sdl-prefix="$(STAGING_DIR)/usr";
 endef
-
-define DOSBOX_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dosbox/dos.dosbox.keys $(TARGET_DIR)/usr/share/evmapy
-endef
-
-DOSBOX_POST_INSTALL_TARGET_HOOKS += DOSBOX_EVMAPY
 
 $(eval $(autotools-package))

@@ -1,8 +1,8 @@
-diff --git a/acinclude.m4 b/acinclude.m4
-index 329ed6bb1..9496a1ae3 100644
+diff --git a/acinclude.m4 b/acinclude.m4.new
+index 329ed6bb13..21b3fd589c 100644
 --- a/acinclude.m4
-+++ b/acinclude.m4
-@@ -14,35 +14,13 @@ AC_ARG_ENABLE(sdl2,     [  --enable-sdl2           Enable SDL 2.x],
++++ b/acinclude.m4.new
+@@ -14,35 +14,11 @@ AC_ARG_ENABLE(sdl2,     [  --enable-sdl2           Enable SDL 2.x],
  
    SDL2_CONFIG=no
    if test x$enable_sdl2enable = xyes ; then
@@ -23,7 +23,7 @@ index 329ed6bb1..9496a1ae3 100644
 -      SDL2_CONFIG=vs/sdl2/linux-host/bin/sdl2-config
 -      PATH=vs/sdl2/linux-host/bin:$PATH
 -    fi
- 
+-
 +    SDL2_CONFIG=$sdl2_prefix/bin/sdl2-config
      AC_PATH_PROG(SDL2_CONFIG, sdl2-config, no)
 -    min_sdl2_version=ifelse([$1], ,0.11.0,$1)
@@ -39,7 +39,6 @@ index 329ed6bb1..9496a1ae3 100644
 +    SDL2_CFLAGS=`$SDL2_CONFIG $sdl2conf_args --cflags`
 +    SDL2_LIBS=`$SDL2_CONFIG $sdl2conf_args --libs`
 +    AC_DEFINE(C_SDL2,1)
-+
    fi
  
    AC_SUBST(SDL2_CFLAGS)
