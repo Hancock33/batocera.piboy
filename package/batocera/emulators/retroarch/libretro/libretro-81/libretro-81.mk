@@ -3,8 +3,8 @@
 # libretro-81
 #
 ################################################################################
-# Version: Commits on Apr 12, 2022
-LIBRETRO_81_VERSION = 2e34567a320cba27b9162b1776db4de3cdb7cf03
+# Version: Commits on Sept 11, 2022
+LIBRETRO_81_VERSION = f41e1e78b6b3d7fbb8d559298624dcde06710e58
 LIBRETRO_81_SITE = $(call github,libretro,81-libretro,$(LIBRETRO_81_VERSION))
 LIBRETRO_81_LICENSE = GPLv3
 
