@@ -203,10 +203,6 @@ def getGenerator(emulator):
         from generators.lightspark.lightsparkGenerator import LightsparkGenerator
         return LightsparkGenerator()
 
-    if emulator == 'linapple':
-        from generators.linapple.linappleGenerator import LinappleGenerator
-        return LinappleGenerator()
-
     if emulator == 'lzdoom':
         from generators.lzdoom.lzdoomGenerator import LzdoomGenerator
         return LzdoomGenerator()
