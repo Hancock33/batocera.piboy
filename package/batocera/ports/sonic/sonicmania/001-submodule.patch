@@ -1,4 +1,4 @@
-Submodule dependencies/RSDKv5 da7d0186..21ab14c9:
+Submodule dependencies/RSDKv5 da7d0186..ecf21719:
 diff --git a/dependencies/RSDKv5/LICENSE.md b/dependencies/RSDKv5/LICENSE.md
 new file mode 100644
 index 0000000..fcf6d91
@@ -27,8 +27,28 @@ index 0000000..fcf6d91
 +Original RSDK authors: Evening Star
 +
 +Decompilation authors: Rubberduckycooly and chuliRMG
+diff --git a/dependencies/RSDKv5/Makefile b/dependencies/RSDKv5/Makefile
+index 379f26e..bf7e02c 100644
+--- a/dependencies/RSDKv5/Makefile
++++ b/dependencies/RSDKv5/Makefile
+@@ -240,7 +240,7 @@ ifeq ($(RSDK_ONLY),0)
+ $(GAME_PATH): $(GAME_PRELINK) $(GAME_OBJECTS)
+ 	@echo linking game...
+ 	$(CXX) $(CXXFLAGS_ALL) $(LDFLAGS_ALL) $(GAME_LDFLAGS) $(GAME_OBJECTS) $(GAME_LIBS) -o $@ 
+- 	$(STRIP) $@
++	$(STRIP) $@
+ 	@echo done linking game
+ endif # RSDK_ONLY
+ endif # STATICGAME
+@@ -275,4 +275,4 @@ clean: clean-rsdk clean-game
+ else
+ clean: clean-rsdk clean-game
+ 	rm -rf $(PKG_PATH)
+-endif
+\ No newline at end of file
++endif
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Audio/Audio.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Audio/Audio.cpp
-index 8d2e91d..3bdc80f 100644
+index 8d2e91d..17390ba 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Audio/Audio.cpp
 +++ b/dependencies/RSDKv5/RSDKv5/RSDK/Audio/Audio.cpp
 @@ -4,7 +4,9 @@
@@ -41,6 +61,43 @@ index 8d2e91d..3bdc80f 100644
  #include "stb_vorbis/stb_vorbis.c"
  
  stb_vorbis *vorbisInfo = NULL;
+@@ -169,8 +171,8 @@ int32 RSDK::PlayStream(const char *filename, uint32 slot, int32 startPos, uint32
+     return slot;
+ }
+ 
+-#define WAV_SIG_HEADER 0x46464952 // RIFF
+-#define WAV_SIG_DATA   0x61746164 // data
++#define WAV_SIG_HEADER (0x46464952) // RIFF
++#define WAV_SIG_DATA   (0x61746164) // data
+ 
+ void RSDK::ReadSfx(char *filename, uint8 id, uint8 plays, uint8 scope, uint32 *size, uint32 *format, uint16 *channels, uint32 *freq)
+ {
+@@ -181,11 +183,11 @@ void RSDK::ReadSfx(char *filename, uint8 id, uint8 plays, uint8 scope, uint32 *s
+         uint32 signature = ReadInt32(&info, false);
+ 
+         if (signature == WAV_SIG_HEADER) {
+-            ReadInt32(&info, false); // chunk size
+-            ReadInt32(&info, false); // WAVE
+-            ReadInt32(&info, false); // FMT
+-            int32 sizeing = ReadInt32(&info, false); // chunk size
+-            ReadInt16(&info);        // audio format
++            ReadInt32(&info, false);                   // chunk size
++            ReadInt32(&info, false);                   // WAVE
++            ReadInt32(&info, false);                   // FMT
++            int32 chunkSize = ReadInt32(&info, false); // chunk size
++            ReadInt16(&info);                          // audio format
+             *channels = ReadInt16(&info);
+             *freq     = ReadInt32(&info, false);
+             ReadInt32(&info, false); // bytes per sec
+@@ -196,7 +198,7 @@ void RSDK::ReadSfx(char *filename, uint8 id, uint8 plays, uint8 scope, uint32 *s
+             uint16 sampleBits = ReadInt16(&info);
+ 
+             // Original code added to help fix some issues
+-            Seek_Set(&info, 20 + sizeing);
++            Seek_Set(&info, 20 + chunkSize);
+ 
+             int32 loop        = 0;
+             while (true) {
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Audio/SDL2/SDL2AudioDevice.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Audio/SDL2/SDL2AudioDevice.cpp
 index 8ee0a54..8b29ea2 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Audio/SDL2/SDL2AudioDevice.cpp
@@ -55,18 +112,93 @@ index 8ee0a54..8b29ea2 100644
  
  void AudioDevice::ProcessAudioMixing(void *stream, int32 length)
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Core/Legacy/v3/RetroEnginev3.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Core/Legacy/v3/RetroEnginev3.cpp
-index c068e3f..ad9a254 100644
+index c068e3f..74f7329 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Core/Legacy/v3/RetroEnginev3.cpp
 +++ b/dependencies/RSDKv5/RSDKv5/RSDK/Core/Legacy/v3/RetroEnginev3.cpp
-@@ -736,7 +736,6 @@ void RSDK::Legacy::v3::LoadXMLPlayers()
+@@ -464,8 +464,12 @@ void RSDK::Legacy::v3::RetroEngineCallback(int32 callbackID)
+ void RSDK::Legacy::v3::LoadXMLVariables()
+ {
+     FileInfo info;
+-    for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
++
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
+         SetActiveMod(m);
++
++        InitFileInfo(&info);
+         if (LoadFile(&info, "Data/Game/Game.xml", FMODE_RB)) {
+             tinyxml2::XMLDocument *doc = new tinyxml2::XMLDocument;
+ 
+@@ -512,8 +516,12 @@ void RSDK::Legacy::v3::LoadXMLVariables()
+ void RSDK::Legacy::v3::LoadXMLPalettes()
+ {
+     FileInfo info;
+-    for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
++
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
+         SetActiveMod(m);
++
++        InitFileInfo(&info);
+         if (LoadFile(&info, "Data/Game/Game.xml", FMODE_RB)) {
+             tinyxml2::XMLDocument *doc = new tinyxml2::XMLDocument;
+ 
+@@ -575,8 +583,11 @@ void RSDK::Legacy::v3::LoadXMLObjects()
+     FileInfo info;
+     modObjCount = 0;
+ 
+-    for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
+         SetActiveMod(m);
++
++        InitFileInfo(&info);
+         if (LoadFile(&info, "Data/Game/Game.xml", FMODE_RB)) {
+             tinyxml2::XMLDocument *doc = new tinyxml2::XMLDocument;
+ 
+@@ -639,8 +650,11 @@ void RSDK::Legacy::v3::LoadXMLSoundFX()
+ {
+     FileInfo info;
+ 
+-    for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
+         SetActiveMod(m);
++
++        InitFileInfo(&info);
+         if (LoadFile(&info, "Data/Game/Game.xml", FMODE_RB)) {
+             tinyxml2::XMLDocument *doc = new tinyxml2::XMLDocument;
+ 
+@@ -692,8 +706,11 @@ void RSDK::Legacy::v3::LoadXMLPlayers()
+ {
+     FileInfo info;
+ 
+-    for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
+         SetActiveMod(m);
++
++        InitFileInfo(&info);
+         if (LoadFile(&info, "Data/Game/Game.xml", FMODE_RB)) {
+             tinyxml2::XMLDocument *doc = new tinyxml2::XMLDocument;
+ 
+@@ -736,11 +753,13 @@ void RSDK::Legacy::v3::LoadXMLPlayers()
  int32 RSDK::Legacy::v3::LoadXMLStages(int32 mode, int32 gcStageCount)
  {
      FileInfo info;
 -    int32 listCount  = 0;
      int32 stageCount = 0;
  
-     for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
-@@ -833,4 +832,4 @@ int32 RSDK::Legacy::v3::LoadXMLStages(int32 mode, int32 gcStageCount)
+-    for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
+         SetActiveMod(m);
++
++        InitFileInfo(&info);
+         if (LoadFile(&info, "Data/Game/Game.xml", FMODE_RB)) {
+             tinyxml2::XMLDocument *doc = new tinyxml2::XMLDocument;
+ 
+@@ -833,4 +852,4 @@ int32 RSDK::Legacy::v3::LoadXMLStages(int32 mode, int32 gcStageCount)
  
      return stageCount;
  }
@@ -74,27 +206,95 @@ index c068e3f..ad9a254 100644
 \ No newline at end of file
 +#endif
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Core/Legacy/v4/RetroEnginev4.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Core/Legacy/v4/RetroEnginev4.cpp
-index 5545fe8..eddf925 100644
+index 5545fe8..716e710 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Core/Legacy/v4/RetroEnginev4.cpp
 +++ b/dependencies/RSDKv5/RSDKv5/RSDK/Core/Legacy/v4/RetroEnginev4.cpp
-@@ -465,7 +465,7 @@ void RSDK::Legacy::v4::LoadXMLObjects()
+@@ -291,8 +291,12 @@ void RSDK::Legacy::v4::ProcessEngine()
+ void RSDK::Legacy::v4::LoadXMLVariables()
+ {
+     FileInfo info;
+-    for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
++
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
+         SetActiveMod(m);
++
++        InitFileInfo(&info);
+         if (LoadFile(&info, "Data/Game/Game.xml", FMODE_RB)) {
+             tinyxml2::XMLDocument *doc = new tinyxml2::XMLDocument;
+ 
+@@ -339,8 +343,12 @@ void RSDK::Legacy::v4::LoadXMLVariables()
+ void RSDK::Legacy::v4::LoadXMLPalettes()
+ {
+     FileInfo info;
+-    for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
++
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
+         SetActiveMod(m);
++
++        InitFileInfo(&info);
+         if (LoadFile(&info, "Data/Game/Game.xml", FMODE_RB)) {
+             tinyxml2::XMLDocument *doc = new tinyxml2::XMLDocument;
+ 
+@@ -402,8 +410,11 @@ void RSDK::Legacy::v4::LoadXMLObjects()
+     FileInfo info;
+     modObjCount = 0;
+ 
+-    for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
+         SetActiveMod(m);
++
++        InitFileInfo(&info);
+         if (LoadFile(&info, "Data/Game/Game.xml", FMODE_RB)) {
+             tinyxml2::XMLDocument *doc = new tinyxml2::XMLDocument;
+ 
+@@ -465,9 +476,12 @@ void RSDK::Legacy::v4::LoadXMLObjects()
  void RSDK::Legacy::v4::LoadXMLSoundFX()
  {
      FileInfo info;
 -    FileInfo infoStore;
-+    
-     for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
+-    for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
++
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
          SetActiveMod(m);
++
++        InitFileInfo(&info);
          if (LoadFile(&info, "Data/Game/Game.xml", FMODE_RB)) {
-@@ -563,7 +563,6 @@ void RSDK::Legacy::v4::LoadXMLPlayers()
+             tinyxml2::XMLDocument *doc = new tinyxml2::XMLDocument;
+ 
+@@ -519,8 +533,11 @@ void RSDK::Legacy::v4::LoadXMLPlayers()
+ {
+     FileInfo info;
+ 
+-    for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
+         SetActiveMod(m);
++
++        InitFileInfo(&info);
+         if (LoadFile(&info, "Data/Game/Game.xml", FMODE_RB)) {
+             tinyxml2::XMLDocument *doc = new tinyxml2::XMLDocument;
+ 
+@@ -563,11 +580,13 @@ void RSDK::Legacy::v4::LoadXMLPlayers()
  int32 RSDK::Legacy::v4::LoadXMLStages(int32 mode, int32 gcStageCount)
  {
      FileInfo info;
 -    int32 listCount  = 0;
      int32 stageCount = 0;
  
-     for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
-@@ -660,4 +659,4 @@ int32 RSDK::Legacy::v4::LoadXMLStages(int32 mode, int32 gcStageCount)
+-    for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
+         SetActiveMod(m);
++
++        InitFileInfo(&info);
+         if (LoadFile(&info, "Data/Game/Game.xml", FMODE_RB)) {
+             tinyxml2::XMLDocument *doc = new tinyxml2::XMLDocument;
+ 
+@@ -660,4 +679,4 @@ int32 RSDK::Legacy::v4::LoadXMLStages(int32 mode, int32 gcStageCount)
  
      return stageCount;
  }
@@ -223,10 +423,20 @@ index c8f6228..248e910 100644
  #endif
  };
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Core/ModAPI.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Core/ModAPI.cpp
-index 5655524..727b048 100644
+index 5655524..b5581f8 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Core/ModAPI.cpp
 +++ b/dependencies/RSDKv5/RSDKv5/RSDK/Core/ModAPI.cpp
-@@ -252,44 +252,17 @@ void RSDK::ScanModFolder(ModInfo *info)
+@@ -165,7 +165,8 @@ void RSDK::LoadModSettings()
+     modSettings.forceScripts    = false;
+ #endif
+ 
+-    for (int32 i = (int32)ActiveMods().size() - 1; i >= 0; --i) {
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 i = activeModCount - 1; i >= 0; --i) {
+         ModInfo *mod = &modList[i];
+ 
+         if (mod->redirectSaveRAM) {
+@@ -252,44 +253,17 @@ void RSDK::ScanModFolder(ModInfo *info)
  
      if (fs::exists(dataPath) && fs::is_directory(dataPath)) {
          try {
@@ -279,7 +489,7 @@ index 5655524..727b048 100644
          }
      }
  }
-@@ -501,7 +474,7 @@ bool32 RSDK::LoadMod(ModInfo *info, std::string modsPath, std::string folder, bo
+@@ -501,7 +475,7 @@ bool32 RSDK::LoadMod(ModInfo *info, std::string modsPath, std::string folder, bo
  
          info->forceVersion = iniparser_getint(ini, ":ForceVersion", 0);
          if (!info->forceVersion) {
@@ -288,7 +498,7 @@ index 5655524..727b048 100644
              if (info->targetVersion != -1 && ENGINE_VERSION) {
                  if (info->targetVersion < 3 || info->targetVersion > 5) {
                      PrintLog(PRINT_NORMAL, "[MOD] Invalid target version. Should be 3, 4, or 5");
-@@ -862,9 +835,10 @@ void RSDK::AddPublicFunction(const char *functionName, void *functionPtr)
+@@ -862,9 +836,10 @@ void RSDK::AddPublicFunction(const char *functionName, void *functionPtr)
  void *RSDK::GetPublicFunction(const char *id, const char *functionName)
  {
      if (!id) {
@@ -300,7 +510,7 @@ index 5655524..727b048 100644
  
          return NULL;
      }
-@@ -874,9 +848,10 @@ void *RSDK::GetPublicFunction(const char *id, const char *functionName)
+@@ -874,9 +849,10 @@ void *RSDK::GetPublicFunction(const char *id, const char *functionName)
  
      for (ModInfo &m : modList) {
          if (m.active && m.id == id) {
@@ -312,7 +522,7 @@ index 5655524..727b048 100644
  
              return NULL;
          }
-@@ -888,9 +863,10 @@ void *RSDK::GetPublicFunction(const char *id, const char *functionName)
+@@ -888,9 +864,10 @@ void *RSDK::GetPublicFunction(const char *id, const char *functionName)
  void RSDK::GetModPath(const char *id, String *result)
  {
      int32 m;
@@ -324,7 +534,7 @@ index 5655524..727b048 100644
  
      if (m == modList.size())
          return;
-@@ -903,9 +879,10 @@ void RSDK::GetModPath(const char *id, String *result)
+@@ -903,9 +880,10 @@ void RSDK::GetModPath(const char *id, String *result)
  std::string GetModPath_i(const char *id)
  {
      int32 m;
@@ -336,7 +546,7 @@ index 5655524..727b048 100644
  
      if (m == modList.size())
          return std::string();
-@@ -1224,7 +1201,7 @@ void RSDK::SetSettingsString(const char *key, String *val)
+@@ -1224,7 +1202,7 @@ void RSDK::SetSettingsString(const char *key, String *val)
  void RSDK::SaveSettings()
  {
      using namespace std;
@@ -345,8 +555,38 @@ index 5655524..727b048 100644
          return;
  
      FileIO *file = fOpen((GetModPath_i(currentMod->id.c_str()) + "/modSettings.ini").c_str(), "w");
+diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Core/ModAPI.hpp b/dependencies/RSDKv5/RSDKv5/RSDK/Core/ModAPI.hpp
+index 670db37..670d2b1 100644
+--- a/dependencies/RSDKv5/RSDKv5/RSDK/Core/ModAPI.hpp
++++ b/dependencies/RSDKv5/RSDKv5/RSDK/Core/ModAPI.hpp
+@@ -205,7 +205,8 @@ inline std::vector<ModInfo *> ActiveMods()
+ void ScanModFolder(ModInfo *info);
+ inline void RefreshModFolders()
+ {
+-    for (int32 m = 0; m < ActiveMods().size(); ++m) {
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
+         ScanModFolder(&modList[m]);
+     }
+ }
+diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Core/Reader.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Core/Reader.cpp
+index 14a248f..872b827 100644
+--- a/dependencies/RSDKv5/RSDKv5/RSDK/Core/Reader.cpp
++++ b/dependencies/RSDKv5/RSDKv5/RSDK/Core/Reader.cpp
+@@ -37,8 +37,9 @@ void RSDK::DetectEngineVersion()
+     }
+ 
+     // check if we have any mods with gameconfigs
+-    int32 m = 0;
+-    for (; m < ActiveMods().size(); ++m) {
++    int32 m              = 0;
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (m = 0; m < activeModCount; ++m) {
+         SetActiveMod(m);
+ 
+         FileInfo checkInfo;
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Core/RetroEngine.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Core/RetroEngine.cpp
-index dea29b0..ca09068 100644
+index dea29b0..c727540 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Core/RetroEngine.cpp
 +++ b/dependencies/RSDKv5/RSDKv5/RSDK/Core/RetroEngine.cpp
 @@ -26,23 +26,8 @@ int32 RSDK::RunRetroEngine(int32 argc, char *argv[])
@@ -388,7 +628,7 @@ index dea29b0..ca09068 100644
  #endif
  #endif
  
-@@ -87,9 +72,7 @@ int32 RSDK::RunRetroEngine(int32 argc, char *argv[])
+@@ -87,16 +72,14 @@ int32 RSDK::RunRetroEngine(int32 argc, char *argv[])
          }
          else {
              // No render device, throw a "QUIT" msg onto the message loop and call it a day :)
@@ -399,6 +639,14 @@ index dea29b0..ca09068 100644
          }
      }
  
+     RenderDevice::InitFPSCap();
+ 
+     while (RenderDevice::isRunning) {
+-        RenderDevice::isRunning = RenderDevice::ProcessEvents();
++        RenderDevice::ProcessEvents();
+ 
+         if (!RenderDevice::isRunning)
+             break;
 @@ -116,17 +99,38 @@ int32 RSDK::RunRetroEngine(int32 argc, char *argv[])
  #if !RETRO_USE_ORIGINAL_CODE
              if (customSettings.disableFocusPause)
@@ -507,7 +755,30 @@ index dea29b0..ca09068 100644
  
      return 0;
  }
-@@ -775,7 +777,7 @@ void RSDK::LoadXMLSoundFX()
+@@ -697,8 +699,10 @@ void RSDK::LoadXMLObjects()
+ {
+     FileInfo info;
+ 
+-    for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
+         SetActiveMod(m);
++
+         InitFileInfo(&info);
+         if (LoadFile(&info, "Data/Game/Game.xml", FMODE_RB)) {
+             tinyxml2::XMLDocument *doc = new tinyxml2::XMLDocument;
+@@ -749,7 +753,9 @@ void RSDK::LoadXMLObjects()
+ void RSDK::LoadXMLSoundFX()
+ {
+     FileInfo info;
+-    for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
++
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
+         SetActiveMod(m);
+         InitFileInfo(&info);
+         if (LoadFile(&info, "Data/Game/Game.xml", FMODE_RB)) {
+@@ -775,7 +781,7 @@ void RSDK::LoadXMLSoundFX()
                                  sfxPath = valAttr->Value();
  
                              const tinyxml2::XMLAttribute *playsAttr = sfxElement->FindAttribute("maxConcurrentPlays");
@@ -516,7 +787,27 @@ index dea29b0..ca09068 100644
                              if (playsAttr)
                                  maxConcurrentPlays = playsAttr->IntValue();
  
-@@ -1252,7 +1254,7 @@ void RSDK::ProcessDebugCommands()
+@@ -801,7 +807,8 @@ int32 RSDK::LoadXMLStages(int32 mode, int32 gcListCount, int32 gcStageCount)
+     int32 listCount  = 0;
+     int32 stageCount = 0;
+ 
+-    for (int32 m = 0; m < (int32)ActiveMods().size(); ++m) {
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
+         SetActiveMod(m);
+         InitFileInfo(&info);
+         if (LoadFile(&info, "Data/Game/Game.xml", FMODE_RB)) {
+@@ -1217,7 +1224,8 @@ void RSDK::InitGameLink()
+ #if RETRO_USE_MOD_LOADER
+     }
+ 
+-    for (int32 m = 0; m < ActiveMods().size(); ++m) {
++    int32 activeModCount = (int32)ActiveMods().size();
++    for (int32 m = 0; m < activeModCount; ++m) {
+         currentMod = &modList[m];
+         for (modLinkSTD linkModLogic : modList[m].linkModLogic) {
+             if (!linkModLogic(&info, modList[m].id.c_str())) {
+@@ -1252,7 +1260,7 @@ void RSDK::ProcessDebugCommands()
  
  #if RETRO_REV0U
      int32 state          = engine.version == 5 ? sceneInfo.state : Legacy::stageMode;
@@ -525,7 +816,7 @@ index dea29b0..ca09068 100644
  #else
      uint8 state = sceneInfo.state;
      const uint8 stepOver = ENGINESTATE_STEPOVER;
-@@ -1324,3 +1326,82 @@ void RSDK::ProcessDebugCommands()
+@@ -1324,3 +1332,82 @@ void RSDK::ProcessDebugCommands()
      }
  #endif
  }
@@ -705,10 +996,20 @@ index 68bcca9..3b68b26 100644
  #include "Legacy/RetroEngineLegacy.hpp"
  #endif
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Dev/Debug.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Dev/Debug.cpp
-index b3a0f32..328cf22 100644
+index b3a0f32..821553a 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Dev/Debug.cpp
 +++ b/dependencies/RSDKv5/RSDKv5/RSDK/Dev/Debug.cpp
-@@ -841,7 +841,7 @@ void RSDK::DevMenu_OptionsMenu()
+@@ -336,9 +336,6 @@ void RSDK::DevMenu_MainMenu()
+ #endif
+     }
+     y += 20;
+-#if RETRO_USE_MOD_LOADER
+-    y += 2 * selectionCount;
+-#endif
+ 
+     // Storage box
+ 
+@@ -841,7 +838,7 @@ void RSDK::DevMenu_OptionsMenu()
          switch (devMenu.selection) {
              case 0: {
                  devMenu.windowed    = videoSettings.windowed;
@@ -717,7 +1018,7 @@ index b3a0f32..328cf22 100644
  
                  int32 aspect = (int32)((videoSettings.windowWidth / (float)videoSettings.windowHeight) * (float)SCREEN_YSIZE) >> 3;
                  switch (aspect) {
-@@ -1044,6 +1044,7 @@ void RSDK::DevMenu_VideoOptionsMenu()
+@@ -1044,6 +1041,7 @@ void RSDK::DevMenu_VideoOptionsMenu()
                  shaderList[0].linear   = !devMenu.windowed;
                  if (!devMenu.windowScale)
                      videoSettings.shaderID = SHADER_NONE;
@@ -725,7 +1026,7 @@ index b3a0f32..328cf22 100644
  
                  int32 width = 0;
                  switch (devMenu.windowAspect) {
-@@ -1064,8 +1065,8 @@ void RSDK::DevMenu_VideoOptionsMenu()
+@@ -1064,8 +1062,8 @@ void RSDK::DevMenu_VideoOptionsMenu()
                      width = DEFAULT_PIXWIDTH;
  #endif
  
@@ -736,11 +1037,34 @@ index b3a0f32..328cf22 100644
                  UpdateGameWindow();
  
                  devMenu.state     = DevMenu_OptionsMenu;
+diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/Animation.hpp b/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/Animation.hpp
+index bce0b42..974f980 100644
+--- a/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/Animation.hpp
++++ b/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/Animation.hpp
+@@ -12,7 +12,7 @@ namespace RSDK
+ 
+ #define RSDK_SIGNATURE_SPR (0x525053) // "SPR"
+ 
+-enum RotationSyles { ROTSTYLE_NONE, ROTSTYLE_FULL, ROTSTYLE_45DEG, ROTSTYLE_90DEG, ROTSTYLE_180DEG, ROTSTYLE_STATICFRAMES };
++enum RotationStyles { ROTSTYLE_NONE, ROTSTYLE_FULL, ROTSTYLE_45DEG, ROTSTYLE_90DEG, ROTSTYLE_180DEG, ROTSTYLE_STATICFRAMES };
+ 
+ struct Hitbox {
+     int16 left;
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/DX11/DX11RenderDevice.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/DX11/DX11RenderDevice.cpp
-index d77e2dc..1387df7 100644
+index d77e2dc..a32e23d 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/DX11/DX11RenderDevice.cpp
 +++ b/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/DX11/DX11RenderDevice.cpp
-@@ -708,6 +708,9 @@ bool RenderDevice::InitGraphicsAPI()
+@@ -6,6 +6,9 @@
+ 
+ #include <atlbase.h>
+ 
++#include "Ks.h"      // used for KSCATEGORY_AUDIO
++#include "Ksmedia.h" // used for KSCATEGORY_AUDIO
++
+ #define DX11_WINDOWFLAGS_BORDERED   (WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_GROUP)
+ #define DX11_WINDOWFLAGS_BORDERLESS (WS_POPUP)
+ 
+@@ -708,6 +711,9 @@ bool RenderDevice::InitGraphicsAPI()
      }
  
      int32 maxPixHeight = 0;
@@ -750,7 +1074,7 @@ index d77e2dc..1387df7 100644
      for (int32 s = 0; s < SCREEN_COUNT; ++s) {
          if (videoSettings.pixHeight > maxPixHeight)
              maxPixHeight = videoSettings.pixHeight;
-@@ -715,7 +718,11 @@ bool RenderDevice::InitGraphicsAPI()
+@@ -715,7 +721,11 @@ bool RenderDevice::InitGraphicsAPI()
          screens[s].size.y = videoSettings.pixHeight;
  
          float viewAspect  = viewSize.x / viewSize.y;
@@ -762,7 +1086,7 @@ index d77e2dc..1387df7 100644
          if (screenWidth < videoSettings.pixWidth)
              screenWidth = videoSettings.pixWidth;
  
-@@ -775,7 +782,11 @@ bool RenderDevice::InitGraphicsAPI()
+@@ -775,7 +785,11 @@ bool RenderDevice::InitGraphicsAPI()
          dx11Context->RSSetViewports(1, &dx11ViewPort);
      }
  
@@ -774,11 +1098,226 @@ index d77e2dc..1387df7 100644
          textureSize.x = 512.0;
          textureSize.y = 256.0;
      }
+@@ -1478,29 +1492,51 @@ void RenderDevice::ProcessEvent(MSG Msg)
+ 
+ #if !RETRO_USE_ORIGINAL_CODE
+                 case VK_F1:
+-                    sceneInfo.listPos--;
+-                    if (sceneInfo.listPos < sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetStart) {
+-                        sceneInfo.activeCategory--;
+-                        if (sceneInfo.activeCategory >= sceneInfo.categoryCount) {
+-                            sceneInfo.activeCategory = sceneInfo.categoryCount - 1;
++                    if (engine.devMenu) {
++                        sceneInfo.listPos--;
++                        if (sceneInfo.listPos < sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetStart) {
++                            sceneInfo.activeCategory--;
++                            if (sceneInfo.activeCategory >= sceneInfo.categoryCount) {
++                                sceneInfo.activeCategory = sceneInfo.categoryCount - 1;
++                            }
++                            sceneInfo.listPos = sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetEnd - 1;
+                         }
+-                        sceneInfo.listPos = sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetEnd - 1;
+-                    }
+ 
+-                    LoadScene();
++#if RETRO_REV0U
++                        switch (engine.version) {
++                            default: break;
++                            case 5: LoadScene(); break;
++                            case 4:
++                            case 3: RSDK::Legacy::stageMode = RSDK::Legacy::STAGEMODE_LOAD; break;
++                        }
++#else
++                        LoadScene();
++#endif
++                    }
+                     break;
+ 
+                 case VK_F2:
+-                    sceneInfo.listPos++;
+-                    if (sceneInfo.listPos >= sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetEnd) {
+-                        sceneInfo.activeCategory++;
+-                        if (sceneInfo.activeCategory >= sceneInfo.categoryCount) {
+-                            sceneInfo.activeCategory = 0;
++                    if (engine.devMenu) {
++                        sceneInfo.listPos++;
++                        if (sceneInfo.listPos >= sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetEnd) {
++                            sceneInfo.activeCategory++;
++                            if (sceneInfo.activeCategory >= sceneInfo.categoryCount) {
++                                sceneInfo.activeCategory = 0;
++                            }
++                            sceneInfo.listPos = sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetStart;
+                         }
+-                        sceneInfo.listPos = sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetStart;
+-                    }
+ 
+-                    LoadScene();
++#if RETRO_REV0U
++                        switch (engine.version) {
++                            default: break;
++                            case 5: LoadScene(); break;
++                            case 4:
++                            case 3: RSDK::Legacy::stageMode = RSDK::Legacy::STAGEMODE_LOAD; break;
++                        }
++#else
++                        LoadScene();
++#endif
++                    }
+                     break;
+ #endif
+ 
+@@ -1513,8 +1549,20 @@ void RenderDevice::ProcessEvent(MSG Msg)
+ 
+ #if !RETRO_USE_ORIGINAL_CODE
+                 case VK_F5:
+-                    // Quick-Reload
+-                    LoadScene();
++                    if (engine.devMenu) {
++                        // Quick-Reload
++
++#if RETRO_REV0U
++                        switch (engine.version) {
++                            default: break;
++                            case 5: LoadScene(); break;
++                            case 4:
++                            case 3: RSDK::Legacy::stageMode = RSDK::Legacy::STAGEMODE_LOAD; break;
++                        }
++#else
++                        LoadScene();
++#endif
++                    }
+                     break;
+ 
+                 case VK_F6:
+@@ -1662,12 +1710,13 @@ bool RenderDevice::ProcessEvents()
+             return false;
+     }
+ 
+-    return true;
++    return isRunning;
+ }
+ 
+ LRESULT CALLBACK RenderDevice::WindowEventCallback(HWND hRecipient, UINT message, WPARAM wParam, LPARAM lParam)
+ {
+-    GUID deviceGUID = { 1771351300, 37871, 4560, { 163, 204, 0, 160, 201, 34, 49, 150 } };
++    bool32 forceExit = false;
++    GUID deviceGUID  = KSCATEGORY_AUDIO;
+ 
+     switch (message) {
+         case WM_CREATE: {
+@@ -1677,11 +1726,13 @@ LRESULT CALLBACK RenderDevice::WindowEventCallback(HWND hRecipient, UINT message
+             DEV_BROADCAST_DEVICEINTERFACE filter;
+             filter.dbcc_name[0]    = 0;
+             filter.dbcc_reserved   = 0;
+-            filter.dbcc_size       = 32;
++            filter.dbcc_size       = sizeof(DEV_BROADCAST_DEVICEINTERFACE);
+             filter.dbcc_devicetype = DBT_DEVTYP_DEVICEINTERFACE;
+             filter.dbcc_classguid  = deviceGUID;
+ 
+             deviceNotif = RegisterDeviceNotification(hRecipient, &filter, DEVICE_NOTIFY_WINDOW_HANDLE);
++
++            forceExit = true;
+             break;
+         }
+ 
+@@ -1692,10 +1743,11 @@ LRESULT CALLBACK RenderDevice::WindowEventCallback(HWND hRecipient, UINT message
+             }
+ 
+             isRunning = false;
++            forceExit = true;
+             break;
+ 
+         case WM_MOVE:
+-        case WM_SIZE: break;
++        case WM_SIZE: forceExit = true; break;
+ 
+         case WM_ACTIVATE:
+             if (wParam) {
+@@ -1729,11 +1781,15 @@ LRESULT CALLBACK RenderDevice::WindowEventCallback(HWND hRecipient, UINT message
+ 
+                 videoSettings.windowState = WINDOWSTATE_INACTIVE;
+             }
++
++            forceExit = true;
+             break;
+ 
+         case WM_PAINT:
+             BeginPaint(hRecipient, &Paint);
+             EndPaint(hRecipient, &Paint);
++
++            forceExit = true;
+             break;
+ 
+         case WM_DEVICECHANGE: {
+@@ -1758,11 +1814,17 @@ LRESULT CALLBACK RenderDevice::WindowEventCallback(HWND hRecipient, UINT message
+ #if RETRO_INPUTDEVICE_XINPUT
+             SKU::InitXInputAPI();
+ #endif
++
++            forceExit = true;
+             break;
+         }
+ 
+ #if RETRO_INPUTDEVICE_RAWINPUT
+-        case WM_INPUT: SKU::UpdateHIDButtonStates((HRAWINPUT)lParam); break;
++        case WM_INPUT:
++            SKU::UpdateHIDButtonStates((HRAWINPUT)lParam);
++
++            forceExit = true;
++            break;
+ #endif
+ 
+         case WM_SYSCOMMAND: {
+@@ -1780,21 +1842,30 @@ LRESULT CALLBACK RenderDevice::WindowEventCallback(HWND hRecipient, UINT message
+                 videoSettings.windowState = WINDOWSTATE_ACTIVE;
+             }
+ 
+-            return DefWindowProc(hRecipient, WM_SYSCOMMAND, wParam, lParam);
++            break;
+         }
+ 
+         case WM_MENUSELECT:
+         case WM_ENTERSIZEMOVE:
+             touchInfo.down[0] = 0;
+             touchInfo.count   = 0;
++
++            forceExit = true;
+             break;
+ 
+-        case WM_EXITSIZEMOVE: GetDisplays(); break;
++        case WM_EXITSIZEMOVE:
++            GetDisplays();
+ 
+-        default: return DefWindowProc(hRecipient, message, wParam, lParam);
++            forceExit = true;
++            break;
++
++        default: break;
+     }
+ 
+-    return 0;
++    if (forceExit)
++        return 0;
++    else
++        return DefWindowProc(hRecipient, message, wParam, lParam);
+ }
+ 
+ void RenderDevice::SetupImageTexture(int32 width, int32 height, uint8 *imagePixels)
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/DX9/DX9RenderDevice.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/DX9/DX9RenderDevice.cpp
-index 53ff75c..a0b5b5b 100644
+index 53ff75c..47f15a8 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/DX9/DX9RenderDevice.cpp
 +++ b/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/DX9/DX9RenderDevice.cpp
-@@ -599,6 +599,9 @@ bool RenderDevice::InitGraphicsAPI()
+@@ -3,6 +3,9 @@
+ #include <D3Dcompiler.h>
+ #endif
+ 
++#include "Ks.h"      // used for KSCATEGORY_AUDIO
++#include "Ksmedia.h" // used for KSCATEGORY_AUDIO
++
+ // for some reason this seems to be applying "thick frame" instead of thin frame (intended)
+ // it is for this reason that I'm unable to get the cool mini window toolbar that og mania has :(
+ // tldr: microsoft sucks again
+@@ -599,14 +602,21 @@ bool RenderDevice::InitGraphicsAPI()
      }
  
      int32 maxPixHeight = 0;
@@ -788,10 +1327,11 @@ index 53ff75c..a0b5b5b 100644
      for (int32 s = 0; s < SCREEN_COUNT; ++s) {
          if (videoSettings.pixHeight > maxPixHeight)
              maxPixHeight = videoSettings.pixHeight;
-@@ -606,7 +609,11 @@ bool RenderDevice::InitGraphicsAPI()
+ 
          screens[s].size.y = videoSettings.pixHeight;
  
-         float viewAspect  = viewSize.x / viewSize.y;
+-        float viewAspect  = viewSize.x / viewSize.y;
++        float viewAspect = viewSize.x / viewSize.y;
 +#if !RETRO_USE_ORIGINAL_CODE
 +        screenWidth = (int32)((viewAspect * videoSettings.pixHeight) + 3) & 0xFFFFFFFC;
 +#else
@@ -800,7 +1340,7 @@ index 53ff75c..a0b5b5b 100644
          if (screenWidth < videoSettings.pixWidth)
              screenWidth = videoSettings.pixWidth;
  
-@@ -646,7 +653,11 @@ bool RenderDevice::InitGraphicsAPI()
+@@ -646,7 +656,11 @@ bool RenderDevice::InitGraphicsAPI()
          dx9Device->SetViewport(&dx9ViewPort);
      }
  
@@ -812,10 +1352,185 @@ index 53ff75c..a0b5b5b 100644
          textureSize.x = 512.0;
          textureSize.y = 256.0;
      }
+@@ -1176,7 +1190,16 @@ void RenderDevice::ProcessEvent(MSG Msg)
+                             sceneInfo.listPos = sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetEnd - 1;
+                         }
+ 
++#if RETRO_REV0U
++                        switch (engine.version) {
++                            default: break;
++                            case 5: LoadScene(); break;
++                            case 4:
++                            case 3: RSDK::Legacy::stageMode = RSDK::Legacy::STAGEMODE_LOAD; break;
++                        }
++#else
+                         LoadScene();
++#endif
+ 
+                         handledMsg = true;
+                     }
+@@ -1193,7 +1216,16 @@ void RenderDevice::ProcessEvent(MSG Msg)
+                             sceneInfo.listPos = sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetStart;
+                         }
+ 
++#if RETRO_REV0U
++                        switch (engine.version) {
++                            default: break;
++                            case 5: LoadScene(); break;
++                            case 4:
++                            case 3: RSDK::Legacy::stageMode = RSDK::Legacy::STAGEMODE_LOAD; break;
++                        }
++#else
+                         LoadScene();
++#endif
+ 
+                         handledMsg = true;
+                     }
+@@ -1212,7 +1244,17 @@ void RenderDevice::ProcessEvent(MSG Msg)
+                 case VK_F5:
+                     if (engine.devMenu) {
+                         // Quick-Reload
++
++#if RETRO_REV0U
++                        switch (engine.version) {
++                            default: break;
++                            case 5: LoadScene(); break;
++                            case 4:
++                            case 3: RSDK::Legacy::stageMode = RSDK::Legacy::STAGEMODE_LOAD; break;
++                        }
++#else
+                         LoadScene();
++#endif
+ 
+                         handledMsg = true;
+                     }
+@@ -1379,12 +1421,13 @@ bool RenderDevice::ProcessEvents()
+             return false;
+     }
+ 
+-    return true;
++    return isRunning;
+ }
+ 
+ LRESULT CALLBACK RenderDevice::WindowEventCallback(HWND hRecipient, UINT message, WPARAM wParam, LPARAM lParam)
+ {
+-    GUID deviceGUID = { 1771351300, 37871, 4560, { 163, 204, 0, 160, 201, 34, 49, 150 } };
++    bool32 forceExit = false;
++    GUID deviceGUID  = KSCATEGORY_AUDIO;
+ 
+     switch (message) {
+         case WM_CREATE: {
+@@ -1394,11 +1437,13 @@ LRESULT CALLBACK RenderDevice::WindowEventCallback(HWND hRecipient, UINT message
+             DEV_BROADCAST_DEVICEINTERFACE filter;
+             filter.dbcc_name[0]    = 0;
+             filter.dbcc_reserved   = 0;
+-            filter.dbcc_size       = 32;
++            filter.dbcc_size       = sizeof(DEV_BROADCAST_DEVICEINTERFACE);
+             filter.dbcc_devicetype = DBT_DEVTYP_DEVICEINTERFACE;
+             filter.dbcc_classguid  = deviceGUID;
+ 
+             deviceNotif = RegisterDeviceNotification(hRecipient, &filter, DEVICE_NOTIFY_WINDOW_HANDLE);
++
++            forceExit = true;
+             break;
+         }
+ 
+@@ -1409,10 +1454,11 @@ LRESULT CALLBACK RenderDevice::WindowEventCallback(HWND hRecipient, UINT message
+             }
+ 
+             isRunning = false;
++            forceExit = true;
+             break;
+ 
+         case WM_MOVE:
+-        case WM_SIZE: break;
++        case WM_SIZE: forceExit = true; break;
+ 
+         case WM_ACTIVATE:
+             if (wParam) {
+@@ -1446,11 +1492,15 @@ LRESULT CALLBACK RenderDevice::WindowEventCallback(HWND hRecipient, UINT message
+ 
+                 videoSettings.windowState = WINDOWSTATE_INACTIVE;
+             }
++
++            forceExit = true;
+             break;
+ 
+         case WM_PAINT:
+             BeginPaint(hRecipient, &Paint);
+             EndPaint(hRecipient, &Paint);
++
++            forceExit = true;
+             break;
+ 
+         case WM_DEVICECHANGE: {
+@@ -1475,11 +1525,17 @@ LRESULT CALLBACK RenderDevice::WindowEventCallback(HWND hRecipient, UINT message
+ #if RETRO_INPUTDEVICE_XINPUT
+             SKU::InitXInputAPI();
+ #endif
++
++            forceExit = true;
+             break;
+         }
+ 
+ #if RETRO_INPUTDEVICE_RAWINPUT
+-        case WM_INPUT: SKU::UpdateHIDButtonStates((HRAWINPUT)lParam); break;
++        case WM_INPUT:
++            SKU::UpdateHIDButtonStates((HRAWINPUT)lParam);
++
++            forceExit = true;
++            break;
+ #endif
+ 
+         case WM_SYSCOMMAND: {
+@@ -1497,21 +1553,30 @@ LRESULT CALLBACK RenderDevice::WindowEventCallback(HWND hRecipient, UINT message
+                 videoSettings.windowState = WINDOWSTATE_ACTIVE;
+             }
+ 
+-            return DefWindowProc(hRecipient, WM_SYSCOMMAND, wParam, lParam);
++            break;
+         }
+ 
+         case WM_MENUSELECT:
+         case WM_ENTERSIZEMOVE:
+             touchInfo.down[0] = 0;
+             touchInfo.count   = 0;
++
++            forceExit = true;
+             break;
+ 
+-        case WM_EXITSIZEMOVE: GetDisplays(); break;
++        case WM_EXITSIZEMOVE:
++            GetDisplays();
+ 
+-        default: return DefWindowProc(hRecipient, message, wParam, lParam);
++            forceExit = true;
++            break;
++
++        default: break;
+     }
+ 
+-    return 0;
++    if (forceExit)
++        return 0;
++    else
++        return DefWindowProc(hRecipient, message, wParam, lParam);
+ }
+ 
+ void RenderDevice::SetupImageTexture(int32 width, int32 height, uint8 *imagePixels)
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/Drawing.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/Drawing.cpp
-index ba797e1..550a791 100644
+index ba797e1..b85532e 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/Drawing.cpp
 +++ b/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/Drawing.cpp
+@@ -169,7 +169,7 @@ VideoSettings RSDK::videoSettingsBackup;
+ int32 RSDK::userShaderCount = 0;
+ #endif
+ 
+-bool32 RenderDeviceBase::isRunning         = true;
++bool32 RenderDeviceBase::isRunning         = false;
+ int32 RenderDeviceBase::windowRefreshDelay = 0;
+ 
+ #if RETRO_REV02
 @@ -4176,14 +4176,14 @@ void RSDK::DrawTile(uint16 *tiles, int32 countX, int32 countY, Vector2 *position
                              switch ((tile >> 10) & 3) {
                                  case FLIP_NONE:
@@ -845,7 +1560,7 @@ index ba797e1..550a791 100644
                                      break;
  
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/EGL/EGLRenderDevice.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/EGL/EGLRenderDevice.cpp
-index ef8d8d9..3f66dbe 100644
+index ef8d8d9..6be85ce 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/EGL/EGLRenderDevice.cpp
 +++ b/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/EGL/EGLRenderDevice.cpp
 @@ -283,7 +283,7 @@ bool RenderDevice::InitGraphicsAPI()
@@ -891,8 +1606,20 @@ index ef8d8d9..3f66dbe 100644
          textureSize.x = 512.0;
          textureSize.y = 256.0;
      }
+@@ -485,8 +496,10 @@ bool RenderDevice::ProcessEvents()
+         if (source)
+             source->process(app, source);
+ 
+-        if (app->destroyRequested)
++        if (app->destroyRequested) {
++            isRunning = false;
+             return false;
++        }
+     }
+ 
+     if (videoSettings.windowState == WINDOWSTATE_INACTIVE) {
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/GLFW/GLFWRenderDevice.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/GLFW/GLFWRenderDevice.cpp
-index a826a93..253c668 100644
+index a826a93..0da5711 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/GLFW/GLFWRenderDevice.cpp
 +++ b/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/GLFW/GLFWRenderDevice.cpp
 @@ -217,6 +217,9 @@ bool RenderDevice::InitGraphicsAPI()
@@ -929,8 +1656,137 @@ index a826a93..253c668 100644
          textureSize.x = 512.0;
          textureSize.y = 256.0;
      }
+@@ -379,7 +390,9 @@ void RenderDevice::CopyFrameBuffer()
+ bool RenderDevice::ProcessEvents()
+ {
+     glfwPollEvents();
+-    return !glfwWindowShouldClose(window);
++    if (glfwWindowShouldClose(window))
++        isRunning = false;
++    return false;
+ }
+ 
+ void RenderDevice::FlipScreen()
+@@ -687,9 +700,26 @@ void RenderDevice::RefreshWindow()
+ 
+     if (!InitGraphicsAPI() || !InitShaders())
+         return;
++
++    videoSettings.windowState = WINDOWSTATE_ACTIVE;
+ }
+ 
+-void RenderDevice::GetWindowSize(int32 *width, int32 *height) { glfwGetWindowSize(window, width, height); }
++void RenderDevice::GetWindowSize(int32 *width, int32 *height)
++{
++    int32 widest = 0, highest = 0, count = 0;
++    GLFWmonitor **monitors = glfwGetMonitors(&count);
++    for (int32 i = 0; i < count; i++) {
++        const GLFWvidmode *mode = glfwGetVideoMode(monitors[i]);
++        if (mode->height > highest) {
++            highest = mode->height;
++            widest  = mode->width;
++        }
++    }
++    if (width)
++        *width = widest;
++    if (height)
++        *height = highest;
++}
+ 
+ void RenderDevice::SetupImageTexture(int32 width, int32 height, uint8 *imagePixels)
+ {
+@@ -879,29 +909,51 @@ void RenderDevice::ProcessKeyEvent(GLFWwindow *, int32 key, int32 scancode, int3
+ 
+ #if !RETRO_USE_ORIGINAL_CODE
+                 case GLFW_KEY_F1:
+-                    sceneInfo.listPos--;
+-                    if (sceneInfo.listPos < sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetStart) {
+-                        sceneInfo.activeCategory--;
+-                        if (sceneInfo.activeCategory >= sceneInfo.categoryCount) {
+-                            sceneInfo.activeCategory = sceneInfo.categoryCount - 1;
++                    if (engine.devMenu) {
++                        sceneInfo.listPos--;
++                        if (sceneInfo.listPos < sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetStart) {
++                            sceneInfo.activeCategory--;
++                            if (sceneInfo.activeCategory >= sceneInfo.categoryCount) {
++                                sceneInfo.activeCategory = sceneInfo.categoryCount - 1;
++                            }
++                            sceneInfo.listPos = sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetEnd - 1;
+                         }
+-                        sceneInfo.listPos = sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetEnd - 1;
+-                    }
+ 
+-                    LoadScene();
++#if RETRO_REV0U
++                        switch (engine.version) {
++                            default: break;
++                            case 5: LoadScene(); break;
++                            case 4:
++                            case 3: RSDK::Legacy::stageMode = RSDK::Legacy::STAGEMODE_LOAD; break;
++                        }
++#else
++                        LoadScene();
++#endif
++                    }
+                     break;
+ 
+                 case GLFW_KEY_F2:
+-                    sceneInfo.listPos++;
+-                    if (sceneInfo.listPos >= sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetEnd) {
+-                        sceneInfo.activeCategory++;
+-                        if (sceneInfo.activeCategory >= sceneInfo.categoryCount) {
+-                            sceneInfo.activeCategory = 0;
++                    if (engine.devMenu) {
++                        sceneInfo.listPos++;
++                        if (sceneInfo.listPos >= sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetEnd) {
++                            sceneInfo.activeCategory++;
++                            if (sceneInfo.activeCategory >= sceneInfo.categoryCount) {
++                                sceneInfo.activeCategory = 0;
++                            }
++                            sceneInfo.listPos = sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetStart;
+                         }
+-                        sceneInfo.listPos = sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetStart;
+-                    }
+ 
+-                    LoadScene();
++#if RETRO_REV0U
++                        switch (engine.version) {
++                            default: break;
++                            case 5: LoadScene(); break;
++                            case 4:
++                            case 3: RSDK::Legacy::stageMode = RSDK::Legacy::STAGEMODE_LOAD; break;
++                        }
++#else
++                        LoadScene();
++#endif
++                    }
+                     break;
+ #endif
+ 
+@@ -912,8 +964,19 @@ void RenderDevice::ProcessKeyEvent(GLFWwindow *, int32 key, int32 scancode, int3
+ 
+ #if !RETRO_USE_ORIGINAL_CODE
+                 case GLFW_KEY_F5:
+-                    // Quick-Reload
+-                    LoadScene();
++                    if (engine.devMenu) {
++                        // Quick-Reload
++#if RETRO_REV0U
++                        switch (engine.version) {
++                            default: break;
++                            case 5: LoadScene(); break;
++                            case 4:
++                            case 3: RSDK::Legacy::stageMode = RSDK::Legacy::STAGEMODE_LOAD; break;
++                        }
++#else
++                        LoadScene();
++#endif
++                    }
+                     break;
+ 
+                 case GLFW_KEY_F6:
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/SDL2/SDL2RenderDevice.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/SDL2/SDL2RenderDevice.cpp
-index eb6ca5d..5f872b1 100644
+index eb6ca5d..a830813 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/SDL2/SDL2RenderDevice.cpp
 +++ b/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/SDL2/SDL2RenderDevice.cpp
 @@ -326,7 +326,7 @@ void RenderDevice::Release(bool32 isRefresh)
@@ -985,6 +1841,106 @@ index eb6ca5d..5f872b1 100644
                  memcpy(&displayInfo.displays[newDisplayCount - 1], &displayInfo.displays[newDisplayCount], sizeof(displayInfo.displays[0]));
                  --newDisplayCount;
              }
+@@ -836,29 +847,51 @@ void RenderDevice::ProcessEvent(SDL_Event event)
+ 
+ #if !RETRO_USE_ORIGINAL_CODE
+                 case SDL_SCANCODE_F1:
+-                    sceneInfo.listPos--;
+-                    if (sceneInfo.listPos < sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetStart) {
+-                        sceneInfo.activeCategory--;
+-                        if (sceneInfo.activeCategory >= sceneInfo.categoryCount) {
+-                            sceneInfo.activeCategory = sceneInfo.categoryCount - 1;
++                    if (engine.devMenu) {
++                        sceneInfo.listPos--;
++                        if (sceneInfo.listPos < sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetStart) {
++                            sceneInfo.activeCategory--;
++                            if (sceneInfo.activeCategory >= sceneInfo.categoryCount) {
++                                sceneInfo.activeCategory = sceneInfo.categoryCount - 1;
++                            }
++                            sceneInfo.listPos = sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetEnd - 1;
+                         }
+-                        sceneInfo.listPos = sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetEnd - 1;
+-                    }
+ 
+-                    LoadScene();
++#if RETRO_REV0U
++                        switch (engine.version) {
++                            default: break;
++                            case 5: LoadScene(); break;
++                            case 4:
++                            case 3: RSDK::Legacy::stageMode = RSDK::Legacy::STAGEMODE_LOAD; break;
++                        }
++#else
++                        LoadScene();
++#endif
++                    }
+                     break;
+ 
+                 case SDL_SCANCODE_F2:
+-                    sceneInfo.listPos++;
+-                    if (sceneInfo.listPos >= sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetEnd) {
+-                        sceneInfo.activeCategory++;
+-                        if (sceneInfo.activeCategory >= sceneInfo.categoryCount) {
+-                            sceneInfo.activeCategory = 0;
++                    if (engine.devMenu) {
++                        sceneInfo.listPos++;
++                        if (sceneInfo.listPos >= sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetEnd) {
++                            sceneInfo.activeCategory++;
++                            if (sceneInfo.activeCategory >= sceneInfo.categoryCount) {
++                                sceneInfo.activeCategory = 0;
++                            }
++                            sceneInfo.listPos = sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetStart;
+                         }
+-                        sceneInfo.listPos = sceneInfo.listCategory[sceneInfo.activeCategory].sceneOffsetStart;
+-                    }
+ 
+-                    LoadScene();
++#if RETRO_REV0U
++                        switch (engine.version) {
++                            default: break;
++                            case 5: LoadScene(); break;
++                            case 4:
++                            case 3: RSDK::Legacy::stageMode = RSDK::Legacy::STAGEMODE_LOAD; break;
++                        }
++#else
++                        LoadScene();
++#endif
++                    }
+                     break;
+ #endif
+ 
+@@ -869,8 +902,19 @@ void RenderDevice::ProcessEvent(SDL_Event event)
+ 
+ #if !RETRO_USE_ORIGINAL_CODE
+                 case SDL_SCANCODE_F5:
+-                    // Quick-Reload
+-                    LoadScene();
++                    if (engine.devMenu) {
++                        // Quick-Reload
++#if RETRO_REV0U
++                        switch (engine.version) {
++                            default: break;
++                            case 5: LoadScene(); break;
++                            case 4:
++                            case 3: RSDK::Legacy::stageMode = RSDK::Legacy::STAGEMODE_LOAD; break;
++                        }
++#else
++                        LoadScene();
++#endif
++                    }
+                     break;
+ 
+                 case SDL_SCANCODE_F6:
+@@ -969,7 +1013,8 @@ bool RenderDevice::ProcessEvents()
+         if (!isRunning)
+             return false;
+     }
+-    return true;
++
++    return isRunning;
+ }
+ 
+ void RenderDevice::SetupImageTexture(int32 width, int32 height, uint8 *imagePixels)
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/Scene3D.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/Scene3D.cpp
 index 65c1589..dd51e47 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Graphics/Scene3D.cpp
@@ -1201,6 +2157,21 @@ index 4f4fa09..13adfa3 100644
  
  void RemoveInputDevice(InputDevice *targetDevice);
  
+diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Input/RawInput/RawInputDevice.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Input/RawInput/RawInputDevice.cpp
+index 23957bd..7bb926e 100644
+--- a/dependencies/RSDKv5/RSDKv5/RSDK/Input/RawInput/RawInputDevice.cpp
++++ b/dependencies/RSDKv5/RSDKv5/RSDK/Input/RawInput/RawInputDevice.cpp
+@@ -184,6 +184,10 @@ void RSDK::SKU::InitHIDDevices()
+         int32 rawInputListSize = GetRawInputDeviceList(pRawInputDeviceList, &puiNumDevices, sizeof(tagRAWINPUTDEVICELIST));
+         if (rawInputListSize == -1) {
+             PrintLog(PRINT_NORMAL, "Wrong Device Count.");
++#if RETRO_PLATFORM == RETRO_WIN && !RETRO_USE_ORIGINAL_CODE
++            // cheating here since Link::GetError returns windows GetError as a string :]
++            PrintLog(PRINT_NORMAL, "Device Error: %s", Link::GetError());
++#endif
+         }
+         else {
+             RID_DEVICE_INFO deviceInfo;
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Input/SDL2/SDL2InputDevice.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Input/SDL2/SDL2InputDevice.cpp
 index b358de3..3643e95 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Input/SDL2/SDL2InputDevice.cpp
@@ -1235,8 +2206,47 @@ index 7da9c03..22d3c47 100644
  
  } // namespace SKU
 \ No newline at end of file
+diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Collision.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Collision.cpp
+index b7302df..3c26071 100644
+--- a/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Collision.cpp
++++ b/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Collision.cpp
+@@ -2429,9 +2429,8 @@ void RSDK::FloorCollision(CollisionSensor *sensor)
+                             int32 ty = cy + mask;
+ #endif
+                             if (mask < 0xFF) {
+-                                step = -TILE_SIZE;
+-
+ #if RETRO_REV0U
++                                step = -TILE_SIZE;
+                                 if (colY < collidePos) {
+                                     collideAngle = tileInfo[collisionEntity->collisionPlane][tile & 0xFFF].floorAngle;
+                                     collidePos   = ty;
+@@ -2559,9 +2558,8 @@ void RSDK::RoofCollision(CollisionSensor *sensor)
+                             int32 ty = cy + mask;
+ #endif
+                             if (mask < 0xFF) {
+-                                step = TILE_SIZE;
+-
+ #if RETRO_REV0U
++                                step = TILE_SIZE;
+                                 if (colY > collidePos) {
+                                     collideAngle = tileInfo[collisionEntity->collisionPlane][tile & 0xFFF].roofAngle;
+                                     collidePos   = ty;
+diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v3/CollisionLegacyv3.hpp b/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v3/CollisionLegacyv3.hpp
+index a0652b1..99b67d6 100644
+--- a/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v3/CollisionLegacyv3.hpp
++++ b/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v3/CollisionLegacyv3.hpp
+@@ -5,7 +5,7 @@ namespace Legacy
+ namespace v3
+ {
+ 
+-enum CollisionSidess {
++enum CollisionSides {
+     CSIDE_FLOOR = 0,
+     CSIDE_LWALL = 1,
+     CSIDE_RWALL = 2,
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v3/ScriptLegacyv3.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v3/ScriptLegacyv3.cpp
-index 2c1dec0..931f1ab 100644
+index 2c1dec0..4642143 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v3/ScriptLegacyv3.cpp
 +++ b/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v3/ScriptLegacyv3.cpp
 @@ -1813,7 +1813,6 @@ void RSDK::Legacy::v3::LoadBytecode(int32 scriptID, bool32 globalCode)
@@ -1247,6 +2257,33 @@ index 2c1dec0..931f1ab 100644
          int32 *scriptCodePtr = &scriptCode[scriptCodePos];
          int32 *jumpTablePtr  = &jumpTable[jumpTablePos];
  
+@@ -3683,11 +3682,11 @@ void RSDK::Legacy::v3::ProcessScript(int32 scriptCodeStart, int32 jumpTableStart
+                 break;
+             case FUNC_PAUSEMUSIC:
+                 opcodeSize = 0;
+-                PauseSound();
++                PauseChannel(musicChannel);
+                 break;
+             case FUNC_RESUMEMUSIC:
+                 opcodeSize = 0;
+-                ResumeSound();
++                ResumeChannel(musicChannel);
+                 break;
+             case FUNC_CLEARDRAWLIST:
+                 opcodeSize                                      = 0;
+diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v4/CollisionLegacyv4.hpp b/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v4/CollisionLegacyv4.hpp
+index 1b8d0a0..4604e0c 100644
+--- a/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v4/CollisionLegacyv4.hpp
++++ b/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v4/CollisionLegacyv4.hpp
+@@ -5,7 +5,7 @@ namespace Legacy
+ namespace v4
+ {
+ 
+-enum CollisionSidess {
++enum CollisionSides {
+     CSIDE_FLOOR = 0,
+     CSIDE_LWALL = 1,
+     CSIDE_RWALL = 2,
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v4/SceneLegacyv4.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v4/SceneLegacyv4.cpp
 index a427285..a13ebb1 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v4/SceneLegacyv4.cpp
@@ -1269,9 +2306,23 @@ index a427285..a13ebb1 100644
                  buf[0] = ReadInt8(&info);
  
 diff --git a/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v4/ScriptLegacyv4.cpp b/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v4/ScriptLegacyv4.cpp
-index a8231c2..d6654c7 100644
+index a8231c2..6707a8b 100644
 --- a/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v4/ScriptLegacyv4.cpp
 +++ b/dependencies/RSDKv5/RSDKv5/RSDK/Scene/Legacy/v4/ScriptLegacyv4.cpp
+@@ -4770,11 +4770,11 @@ void RSDK::Legacy::v4::ProcessScript(int32 scriptCodeStart, int32 jumpTableStart
+                 break;
+             case FUNC_PAUSEMUSIC:
+                 opcodeSize = 0;
+-                // PauseSound();
++                PauseChannel(musicChannel);
+                 break;
+             case FUNC_RESUMEMUSIC:
+                 opcodeSize = 0;
+-                // ResumeSound();
++                ResumeChannel(musicChannel);
+                 break;
+             case FUNC_SWAPMUSICTRACK:
+                 opcodeSize = 0;
 @@ -5107,8 +5107,8 @@ void RSDK::Legacy::v4::ProcessScript(int32 scriptCodeStart, int32 jumpTableStart
  
                  // Mission Mode stuff
