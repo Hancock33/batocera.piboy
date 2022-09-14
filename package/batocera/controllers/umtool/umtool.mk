@@ -3,8 +3,8 @@
 # umtool
 #
 ################################################################################
-
-UMTOOL_VERSION = 1.2.0
+# Version: Commits on Jun 13, 2022
+UMTOOL_VERSION = 20b8c56a3e6f94034b8529eddd777306f5b6152b
 UMTOOL_SITE = $(call github,katie-snow,Ultimarc-linux,$(UMTOOL_VERSION))
 UMTOOL_LICENSE = GPLv2
 UMTOOL_DEPENDENCIES = json-c libusb libtool udev
