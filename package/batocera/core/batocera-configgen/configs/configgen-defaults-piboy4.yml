@@ -6,10 +6,6 @@ default:
     retroarch.vrr_runloop_enable: "true"
     retroarch.menu_widget_scale_auto: "true"
 
-atomiswave:
-  emulator: flycast
-  core:     flycast
-  gfxbackend: vulkan
 c20:
   emulator: libretro
   core:     vice_xvic
@@ -22,10 +18,6 @@ c128:
 cplus4:
   emulator: libretro
   core:     vice_xplus4
-dreamcast:
-  emulator: flycast
-  core:     flycast
-  gfxbackend: vulkan
 flash:
   emulator: lightspark
   core:     lightspark
@@ -35,18 +27,11 @@ fmtowns:
 gamecube:
   emulator: libretro
   core:     dolphin
-naomi:
-  emulator: flycast
-  core:     flycast
-  gfxbackend: vulkan
-naomi2:
-  emulator: flycast
-  core:     flycast
-  gfxbackend: vulkan
-naomigd:
-  emulator: flycast
-  core:     flycast
-  gfxbackend: vulkan
+model3:
+  options:
+    videomode: max-720x576
+    decorations: none
+    hud_support: none
 nds:
   emulator: drastic
   core:     drastic
