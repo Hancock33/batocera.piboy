@@ -427,6 +427,9 @@ naomi:
 naomi2:
   emulator: libretro
   core:     flycast
+naomigd:
+  emulator: libretro
+  core:     flycast
 nblood:
   emulator: nblood
   core:     nblood
