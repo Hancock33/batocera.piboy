@@ -35,3 +35,7 @@ BR2_TARGET_SYSLINUX_C32="menu.c32 libutil.c32"
 BR2_PACKAGE_SDL_X11=y
 
 BR2_PACKAGE_BATOCERA_SPLASH_MPV=y
+
+# Batocera dev
+BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL=y
+BR2_STRIP_EXCLUDE_FILES="ecwolf eduke32 nblood pcexhumed rednukem voidsw ionfury"

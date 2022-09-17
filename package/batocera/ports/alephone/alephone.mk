@@ -17,7 +17,8 @@ define ALEPHONE_BUILD_CMDS
 	                            --with-sdl-prefix="$(STAGING_DIR)/usr" \
 	                            --with-boost="$(STAGING_DIR)/usr" \
 	                            --with-boost-libdir="$(STAGING_DIR)/usr/lib" \
-	                            --prefix=/usr && \
+	                            --prefix=/usr \
+	                            --without-miniupnpc && \
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) \
 		CPP="$(TARGET_CPP)" CXX="$(TARGET_CXX) -lGLU" CC="$(TARGET_CC)" \
 		AS="$(TARGET_CC)" LD="$(TARGET_LD)" STRIP="$(TARGET_STRIP)" \
