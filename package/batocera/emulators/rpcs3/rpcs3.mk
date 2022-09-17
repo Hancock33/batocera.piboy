@@ -22,7 +22,7 @@ RPCS3_CONF_OPTS = -DCMAKE_BUILD_TYPE=Release \
 
 define RPCS3_LLVM_LIBS
 	mkdir -p $(@D)/llvmlibs
-    $(HOST_DIR)/bin/curl -L https://github.com/RPCS3/llvm-mirror/releases/download/custom-build/llvmlibs-linux.tar.gz -o $(@D)/llvmlibs-linux.tar.gz
+    curl -L https://github.com/RPCS3/llvm-mirror/releases/download/custom-build/llvmlibs-linux.tar.gz -o $(@D)/llvmlibs-linux.tar.gz
 	cd $(@D) && tar -xf llvmlibs-linux.tar.gz -C $(@D)/llvmlibs
 endef
 
