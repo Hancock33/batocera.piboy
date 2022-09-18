@@ -1,0 +1,15 @@
+diff --git a/modules/libvideo/g_video.c b/modules/libvideo/g_video.c
+index a1d4f03..e23db2e 100644
+--- a/modules/libvideo/g_video.c
++++ b/modules/libvideo/g_video.c
+@@ -356,6 +356,10 @@ int gr_set_mode( int width, int height, int depth )
+                 sdl_flags = SDL_RENDERER_PRESENTVSYNC;
+             }
+             renderer = SDL_CreateRenderer(window, -1, sdl_flags);
++            
++            if ( ( e = getenv( "RENDR_WIDTH"  ) ) ) renderer_width = atoi(e);
++            if ( ( e = getenv( "RENDR_HEIGHT" ) ) ) renderer_height = atoi(e);
++            
+             // Store the renderer resolution
+             SDL_GetRendererOutputSize(renderer, &renderer_width, &renderer_height);
+         }
