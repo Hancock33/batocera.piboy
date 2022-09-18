@@ -86,6 +86,7 @@ define AMIBERRY_INSTALL_TARGET_CMDS
 
 	ln -sf /userdata/system/configs/amiberry/whdboot $(TARGET_DIR)/usr/share/amiberry/whdboot
         mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/amiberry
+    ln -sf /usr/lib/libcapsimage.so.5.1 $(TARGET_DIR)/usr/share/amiberry/capsimg.so
 
 	cp -pr $(@D)/whdboot $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/amiberry/
 	cp -rf $(@D)/data $(TARGET_DIR)/usr/share/amiberry
