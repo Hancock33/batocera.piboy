@@ -440,7 +440,7 @@ class AmiberryGenerator(Generator):
                         elif extension == 'lha' :
                             eslog.warning("Amiberry doesn't support .lha inside a .zip")
                             return 'UNKNOWN'
-                        elif extension == 'adf' :
+                        elif extension in ['adf','ipf'] :
                             return 'DISK'
             # no info or adf file found
             return 'UNKNOWN'
