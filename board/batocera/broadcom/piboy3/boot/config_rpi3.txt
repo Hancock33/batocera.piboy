@@ -22,11 +22,11 @@ dtparam=audio=on
 # Video settings
 dtoverlay=vc4-kms-v3d
 
-[rpi3]
+[pi3]
 # 64-bit mode
 arm_64bit=1
-start_file=start.elf
-fixup_file=fixup.dat
+start_file=start_x.elf
+fixup_file=fixup_x.dat
 max_framebuffers=2 			    # Ensure only one display output can be used on the Pi4 with batocera
 
 ### Power saving options
@@ -47,10 +47,3 @@ max_framebuffers=2 			    # Ensure only one display output can be used on the Pi
 #Turn off ethernet port LEDs
 #dtparam=eth_led0=4
 #dtparam=eth_led1=4
-
-### Overclock
-# Run as fast as firmware / board allows
-arm_boost=1
-#over_voltage=2
-#arm_freq=1700
-#gpu_freq=500

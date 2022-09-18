@@ -3,10 +3,10 @@ arm_64bit=1
 kernel=boot/linux
 initramfs boot/initrd.gz
 cec_osd_name=batocera 			# sets the initial CEC name of the device
-start_file=start.elf
-fixup_file=fixup.dat
+start_file=start_x.elf
+fixup_file=fixup_x.dat
 
-[rpi3]
+[pi3]
 dtoverlay=vc4-fkms-v3d
 disable_overscan=1
 max_framebuffers=2
@@ -68,13 +68,6 @@ dtparam=pwr_led_activelow=off
 #Turn off ethernet port LEDs
 dtparam=eth_led0=4
 dtparam=eth_led1=4
-
-### Overclock
-# Run as fast as firmware / board allows
-arm_boost=1
-#over_voltage=2
-#arm_freq=1700
-#gpu_freq=500
 
 ### Auto detect HDMI
 # The Piboy Screen and HDMI cannot be displayed at the same time, disable the Piboy Screen when HDMI is connected.
