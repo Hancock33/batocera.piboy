@@ -3,8 +3,8 @@ arm_64bit=1
 kernel=boot/linux
 initramfs boot/initrd.gz
 cec_osd_name=batocera 			# sets the initial CEC name of the device
-start_file=start_x.elf
-fixup_file=fixup_x.dat
+start_file=start.elf
+fixup_file=fixup.dat
 
 [pi3]
 dtoverlay=vc4-fkms-v3d
