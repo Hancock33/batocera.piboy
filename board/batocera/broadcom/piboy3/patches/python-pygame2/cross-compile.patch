@@ -1,0 +1,13 @@
+diff --git a/setup.py b/setup.py
+index 16edf6b9..58b95d8a 100644
+--- a/setup.py
++++ b/setup.py
+@@ -89,7 +89,7 @@ def spawn(self, cmd, **kwargs):
+         machine_name.startswith("i686") or
+         machine_name.lower() == "amd64") and
+             os.environ.get("MAC_ARCH") != "arm64"):
+-        should_use_avx2 = True
++        should_use_avx2 = False
+ 
+     if should_use_avx2:
+         extra_options = compiler_options.get(self.compiler_type)
