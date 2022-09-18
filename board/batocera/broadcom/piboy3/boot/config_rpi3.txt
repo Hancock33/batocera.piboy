@@ -25,8 +25,8 @@ dtoverlay=vc4-kms-v3d
 [pi3]
 # 64-bit mode
 arm_64bit=1
-start_file=start_x.elf
-fixup_file=fixup_x.dat
+start_file=start.elf
+fixup_file=fixup.dat
 max_framebuffers=2 			    # Ensure only one display output can be used on the Pi4 with batocera
 
 ### Power saving options

@@ -19,7 +19,8 @@ mkdir -p "${BATOCERA_BINARIES_DIR}/boot/overlays" || exit 1
 
 cp -pr "${BINARIES_DIR}/rpi-firmware/"* "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
 cp -f  "${BUILD_DIR}/linux-custom/arch/arm/boot/dts/overlays/"*.dtbo "${BATOCERA_BINARIES_DIR}/boot/overlays" || exit 1
-cp -f  "${BINARIES_DIR}/"*.dtb             "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
+cp -f  "${BUILD_DIR}"/rpi-firmware-*/boot/*rpi-3-*.dtb           "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
+cp -f  "${BUILD_DIR}"/rpi-firmware-*/boot/bcm2710-rpi-zero-2.dtb "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
 cp     "${BOARD_DIR}/boot/config.txt"      "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
 cp     "${BOARD_DIR}/boot/config.txt"      "${BATOCERA_BINARIES_DIR}/boot/config_piboy.txt" || exit 1
 cp     "${BOARD_DIR}/boot/config_rpi3.txt" "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
