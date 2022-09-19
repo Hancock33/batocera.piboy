@@ -3,10 +3,12 @@
 # supertux2
 #
 ################################################################################
-
-SUPERTUX2_VERSION = 0.6.3
-SUPERTUX2_SITE = https://github.com/SuperTux/supertux/releases/download/v$(SUPERTUX2_VERSION)
-SUPERTUX2_SOURCE = SuperTux-v$(SUPERTUX2_VERSION)-Source.tar.gz
+# Version: Commits on Sept 12, 2022
+SUPERTUX2_VERSION = e1e6fa8d02448ee68863db041a1afbe94188fe52
+SUPERTUX2_SITE = https://github.com/SuperTux/supertux.git
+SUPERTUX2_SITE_METHOD=git
+SUPERTUX2_GIT_SUBMODULES=YES
+SUPERTUX2_SUPPORTS_IN_SOURCE_BUILD = NO
 
 # Supertux itself is GPL-3.0+, but it bundles a few libraries with different
 # licenses (sexp-cpp, squirrel, tinygettext) which are linked statically.
@@ -21,13 +23,13 @@ SUPERTUX2_CONF_OPTS += \
 	-DCMAKE_CXX_FLAGS="$(TARGET_CXXFLAGS) -DGLEW_NO_GLU" \
 	-DENABLE_BOOST_STATIC_LIBS=OFF \
 	-DBUILD_DOCUMENTATION=OFF \
-	-DENABLE_OPENGL=OFF \
+	-DENABLE_OPENGL=ON \
 	-DGLBINDING_ENABLED=OFF \
 	-DINSTALL_SUBDIR_BIN="bin" \
 	-DINSTALL_SUBDIR_SHARE="share/supertux2" \
 	-DUSE_SYSTEM_PHYSFS=ON \
-	-DENABLE_OPENGLES2=ON
-
+	-DGIT_VERSION="$(shell echo $(SUPERTUX2_VERSION) | cut -c 1-7)"
+	
 # Avoid incompatible posix_memalign declaration on x86 and x86_64 with
 # musl.
 # https://gcc.gnu.org/ml/gcc-patches/2015-05/msg01425.html
@@ -43,7 +45,9 @@ define SUPERTUX2_EVMAP
 	# install media
     mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2
 	touch $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2/SuperTux2.game
-	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/supertux2/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2
+	cp -a $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/supertux2/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2
+	# copy libraries
+	cp -a $(@D)/buildroot-build/libLibPartioZip.so $(TARGET_DIR)/usr/lib
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/supertux2/supertux2.keys $(TARGET_DIR)/usr/share/evmapy
