@@ -11,4 +11,6 @@ class Supertux2Generator(Generator):
         commandArray = ["supertux2" ]
 
         return Command.Command(
-            array=commandArray)
+            array=commandArray,
+            env={"SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)}
+        )
