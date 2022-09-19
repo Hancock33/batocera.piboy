@@ -17,13 +17,13 @@ BR2_ROOTFS_OVERLAY="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/fsoverlay $(BR2
 BR2_ROOTFS_POST_IMAGE_SCRIPT="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/scripts/post-image-script-piboy3.sh"
 BR2_TARGET_ROOTFS_SQUASHFS4_ZSTD=y
 
-# Linux headers same as kernel, a 5.18 series
-BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_5_18=y
+# Linux headers same as kernel, a 5.19 series
+BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_5_19=y
 
 # Kernel
 BR2_LINUX_KERNEL=y
 BR2_LINUX_KERNEL_CUSTOM_TARBALL=y
-BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,d83fb0cdf9032db64e206fd1f25d2b8e88133fd5)/d83fb0cdf9032db64e206fd1f25d2b8e88133fd5.tar.gz"
+BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,a943b3130c0a8fa37d7dbeb2a54339e365b564c4)/a943b3130c0a8fa37d7dbeb2a54339e365b564c4.tar.gz"
 BR2_LINUX_KERNEL_DEFCONFIG="bcmrpi3"
 BR2_LINUX_KERNEL_PATCH="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/linux_patches"
 BR2_LINUX_KERNEL_CONFIG_FRAGMENT_FILES="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/linux-defconfig-fragment.config"
@@ -35,6 +35,7 @@ BR2_LINUX_KERNEL_IMAGE_TARGET_NAME="Image"
 
 # Build the DTB from the kernel sources
 BR2_LINUX_KERNEL_DTS_SUPPORT=y
+BR2_LINUX_KERNEL_DTB_OVERLAY_SUPPORT=y
 BR2_LINUX_KERNEL_INTREE_DTS_NAME="broadcom/bcm2710-rpi-zero-2 broadcom/bcm2710-rpi-3-b broadcom/bcm2710-rpi-3-b-plus broadcom/bcm2837-rpi-3-b"
 BR2_PACKAGE_RPI_FIRMWARE_INSTALL_DTB_OVERLAYS=n
 
