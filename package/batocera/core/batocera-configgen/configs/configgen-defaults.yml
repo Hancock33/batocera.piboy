@@ -636,6 +636,9 @@ spacecadetpinball:
 srb2:
   emulator: srb2
   core:     srb2
+srb2kart:
+  emulator: srb2kart
+  core:     srb2kart
 steam:
   emulator: steam
   core:     steam

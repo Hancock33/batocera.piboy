@@ -391,6 +391,10 @@ def getGenerator(emulator):
         from generators.srb2.srb2Generator import Srb2Generator
         return Srb2Generator()
 
+    if emulator == 'srb2kart':
+        from generators.srb2kart.srb2kartGenerator import Srb2kartGenerator
+        return Srb2kartGenerator()
+
     if emulator == 'steam':
         from generators.steam.steamGenerator import SteamGenerator
         return SteamGenerator()

@@ -1,0 +1,5 @@
+## SYSTEM SONIC ROBO BLAST 2 KART ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".game"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".game"
