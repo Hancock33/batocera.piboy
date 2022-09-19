@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./Sonic Robo Blast 2 Kart.game</path>
+    <name>Sonic Robo Blast 2 Kart</name>
+    <desc>SRB2Kart is a kart racing game with Sonic-themed characters, items and race tracks. SRB2Kart features over 100 maps for two game modes: the main Race mode and a Battle mode where players fight each other using the items available in the game.</desc>
+    <releasedate>20191209T000000</releasedate>
+    <developer>Sonic Team Junior</developer>
+    <genre>Platform</genre>
+    <image>./images/srb2kart.png</image>
+    <genreid>257</genreid>
+  </game>
+</gameList>

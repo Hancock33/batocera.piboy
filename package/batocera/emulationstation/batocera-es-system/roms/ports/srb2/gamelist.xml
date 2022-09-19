@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./Sonic Robo Blast 2.game</path>
+    <name>Sonic Robo Blast 2</name>
+    <desc>In SRB2, players run at high speeds through generally light-hearted levels, in comparison to the usually dark, dim, and gritty environments of Doom levels. 
+
+Players are additionally equipped with a spindash, which can be charged up using a spin button. Also, players encounter badniks in the field, that can be destroyed by jumping on them once, as opposed to the hellspawn of Doom which requires several shots to be slaughtered.
+
+After two acts of gameplay, players encounter a third act of gameplay in which they find a boss, who must be completed to finish the level. 
+
+In boss acts, an egg capsule rises out of the ground for the player to jump on and finish the act. However, not all boss acts feature an egg capsule, and end the level shortly after defeated. The most current version of Sonic Robo Blast 2 has eight different zones.</desc>
+    <releasedate>20191209T000000</releasedate>
+    <developer>Sonic Team Junior</developer>
+    <genre>Platform</genre>
+    <image>./images/srb2.png</image>
+    <genreid>257</genreid>
+  </game>
+</gameList>
