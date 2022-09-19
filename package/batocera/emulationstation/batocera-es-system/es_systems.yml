@@ -3985,6 +3985,18 @@ srb2:
     srb2:
       srb2: { requireAnyOf: [BR2_PACKAGE_SRB2] }
 
+srb2kart:
+  name:       Sonic Robo Blast 2 Kart
+  manufacturer: Sega
+  release: 1998
+  hardware: port
+  extensions: [game]
+  group: sonic
+  path: /userdata/roms/ports/srb2kart
+  emulators:
+    srb2kart:
+      srb2kart: { requireAnyOf: [BR2_PACKAGE_SRB2KART] }
+
 stk:
   name:       Super Tux Kart
   manufacturer: Ports
