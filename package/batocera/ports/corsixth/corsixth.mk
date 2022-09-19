@@ -3,8 +3,8 @@
 # corsixth
 #
 ################################################################################
-# Version: Commits on Sept 17, 2022
-CORSIXTH_VERSION = c747306c8ef031fa6f3a99a1779ab63ef966a8ad
+# Version: Commits on Sept 19, 2022
+CORSIXTH_VERSION = 48c9f91028dcae1c9c33d030fa3f2327269c7a80
 CORSIXTH_SITE = $(call github,CorsixTH,CorsixTH,$(CORSIXTH_VERSION))
 
 CORSIXTH_DEPENDENCIES = sdl2 sdl2_mixer freepats luafilesystem lua-lpeg-patterns
