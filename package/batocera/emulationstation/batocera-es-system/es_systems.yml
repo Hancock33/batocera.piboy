@@ -4920,14 +4920,14 @@ tecmo:
     mame:
       mame:         { requireAnyOf: [BR2_PACKAGE_MAME] }
 
-toplan:
-  name: Toplan
+toaplan:
+  name: Toaplan
   manufacturer: Arcade
   release: 19XX
   hardware: arcade
   extensions: [zip, 7z]
   platform:   arcade
-  path: /userdata/roms/arcade/toplan
+  path: /userdata/roms/arcade/toaplan
   emulators:
     libretro:
       imame4all:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
