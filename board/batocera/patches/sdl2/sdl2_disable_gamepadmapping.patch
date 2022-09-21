@@ -1,8 +1,8 @@
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
-index a268c0d9b..23cf13a39 100644
+index fc95197..827a7e7 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
-@@ -1624,6 +1624,9 @@ LINUX_JoystickGetGamepadMapping(int device_index, SDL_GamepadMapping *out)
+@@ -1622,6 +1622,9 @@ LINUX_JoystickGetGamepadMapping(int device_index, SDL_GamepadMapping *out)
      SDL_Joystick *joystick;
      SDL_joylist_item *item = JoystickByDevIndex(device_index);
  
