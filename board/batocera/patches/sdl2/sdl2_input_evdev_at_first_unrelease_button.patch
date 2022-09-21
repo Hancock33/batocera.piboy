@@ -1,16 +1,16 @@
 diff --git a/src/joystick/SDL_joystick.c b/src/joystick/SDL_joystick.c
-index 26b017bb9..c4f3cfa5d 100644
+index cfb8353..832bcd7 100644
 --- a/src/joystick/SDL_joystick.c
 +++ b/src/joystick/SDL_joystick.c
-@@ -28,6 +28,8 @@
+@@ -27,6 +27,8 @@
+ #include "SDL_events.h"
  #include "SDL_sysjoystick.h"
  #include "SDL_hints.h"
- #include "../SDL_hints_c.h"
 +#include <sys/stat.h>
 +#include <sys/types.h>
+ #include "../SDL_hints_c.h"
  
  #if !SDL_EVENTS_DISABLED
- #include "../events/SDL_events_c.h"
 @@ -114,6 +116,70 @@ static SDL_atomic_t SDL_next_joystick_instance_id;
  static int SDL_joystick_player_count = 0;
  static SDL_JoystickID *SDL_joystick_players = NULL;
@@ -142,7 +142,7 @@ index 26b017bb9..c4f3cfa5d 100644
          break;
      default:
 diff --git a/src/joystick/SDL_sysjoystick.h b/src/joystick/SDL_sysjoystick.h
-index d5c8c0e21..586fcc963 100644
+index d673ddd..9c7da51 100644
 --- a/src/joystick/SDL_sysjoystick.h
 +++ b/src/joystick/SDL_sysjoystick.h
 @@ -121,6 +121,9 @@ struct _SDL_Joystick
@@ -156,10 +156,10 @@ index d5c8c0e21..586fcc963 100644
  };
  
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
-index 307dd5642..711427fc6 100644
+index 134fa72..0c7f787 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
-@@ -1486,7 +1486,7 @@ HandleInputEvents(SDL_Joystick *joystick)
+@@ -1482,7 +1482,7 @@ HandleInputEvents(SDL_Joystick *joystick)
      struct input_event events[32];
      int i, len, code, hat_index;
  
