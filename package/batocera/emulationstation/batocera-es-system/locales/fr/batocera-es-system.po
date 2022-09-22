@@ -12,7 +12,7 @@ msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "Force the emulator to run at this resolution."
+msgid "Set the display's resolution. Does not affect the rendering resolution."
 msgstr ""
 
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
@@ -2691,7 +2691,7 @@ msgctxt "game_options"
 msgid "SHARE MAME ARTWORK"
 msgstr "PARTAGER MAME ARTWORK"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mamevirtual, libretro/xrick, melonds
+#. TRANSLATION: libretro/mame, libretro/mame, libretro/mamevirtual, libretro/xrick
 msgctxt "game_options"
 msgid "On (Default)"
 msgstr "Activé (par défaut)"
@@ -4541,7 +4541,7 @@ msgctxt "game_options"
 msgid "4.5x (1440x1080)"
 msgstr ""
 
-#. TRANSLATION: libretro/parallel_n64, libretro/tyrquake, amiberry, ppsspp, rpcs3, ...
+#. TRANSLATION: libretro/parallel_n64, libretro/tyrquake, amiberry, melonds, ppsspp, ...
 msgctxt "game_options"
 msgid "Automatic"
 msgstr "Automatique"
@@ -6788,7 +6788,7 @@ msgctxt "game_options"
 msgid "Force 4:3"
 msgstr "Force 4:3"
 
-#. TRANSLATION: daphne, melonds
+#. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "Rotate the screen with the emulator."
 msgstr "Pivoter l'écran et l'émulateur."
@@ -6798,7 +6798,7 @@ msgctxt "game_options"
 msgid "SCREEN ROTATION"
 msgstr "ROTATION DE L'ÉCRAN"
 
-#. TRANSLATION: daphne
+#. TRANSLATION: daphne, melonds
 msgctxt "game_options"
 msgid "0 degrees"
 msgstr ""
@@ -7200,12 +7200,7 @@ msgstr "4x (SSAA)"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
-msgid "Disable status messages displayed by the emulator."
-msgstr ""
-
-#. TRANSLATION: dolphin_triforce
-msgctxt "game_options"
-msgid "DISABLE OSD MESSAGES"
+msgid "DISABLE ON-SCREEN DISPLAY MESSAGES"
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -7248,14 +7243,9 @@ msgctxt "game_options"
 msgid "Per 1s, 120s total (1320MB|240MB)"
 msgstr "Par 1s, 120s au total (1320 Mo|240 Mo)"
 
-#. TRANSLATION: duckstation
+#. TRANSLATION: duckstation, melonds
 msgctxt "game_options"
-msgid "Choose whether to show on the display, configuration messages."
-msgstr ""
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "SHOW OSD MESSAGES"
+msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -7711,33 +7701,23 @@ msgstr "4M"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "Choose whether or not to limit the framerate."
-msgstr "Choisir ou non de limiter la fréquence d'affichage"
-
-#. TRANSLATION: melonds
-msgctxt "game_options"
 msgid "LIMIT FRAME RATE"
 msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "No Limitation"
-msgstr "Pas de limitation"
+msgid "No Limit"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "Standard (Default)"
-msgstr "Standard (Par défaut)"
+msgid "As game specifies"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "Enhancement. Increase the rendering resolution."
-msgstr "Amélioration. Augmenter la résolution du rendu."
-
-#. TRANSLATION: melonds
-msgctxt "game_options"
-msgid "Enables improved polygon splitting."
-msgstr "Améliore la division des polygones."
+msgid "Enhancement. Enables improved polygon splitting."
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -7746,13 +7726,13 @@ msgstr "ACTIVER LA DIVISION DES POLYGONES"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "0 degrees (Default)"
-msgstr "0 degrees (Par défaut)"
+msgid "Rotates the screens, to simulate holding the DS sideways."
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "Swap the Nintendo DS Displays."
-msgstr "Inverser les écrans de la Nintendo DS"
+msgid "Swap the position of the dual displays."
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -7761,8 +7741,8 @@ msgstr "INVERSER LES ÉCRANS"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "Choose the screen size."
-msgstr "Choisir la taile de l'écran"
+msgid "Sets the window size to an integer size."
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -7771,18 +7751,23 @@ msgstr "TAILLE DE L'ÉCRAN"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "1x (Default)"
-msgstr "1x (Par défaut)"
+msgid "Adjusts the positions of the screens."
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "Choose the preferred screen layout."
-msgstr "Choisir la disposition d'écran préférée."
+msgid "Original screen positions"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "Natural (Default)"
-msgstr "Naturelle (Par défaut)"
+msgid "Always enforce vertical"
+msgstr ""
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "Always enforce horizontal"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -7791,8 +7776,8 @@ msgstr "Hybride"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "Choose the NDS screen sizings."
-msgstr "Choisir les tailles d'écran de la NDS"
+msgid "How the window space is distributed between the screens."
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -7801,8 +7786,8 @@ msgstr "DIMENSIONNEMENT DE L'ÉCRAN"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "Even (Default)"
-msgstr "Identique (Par défaut)"
+msgid "Even"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -7811,13 +7796,8 @@ msgstr "Mettre en valeur le haut"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "Emphasize botton"
-msgstr "Mettre en valeur le bas"
-
-#. TRANSLATION: melonds
-msgctxt "game_options"
-msgid "Auto"
-msgstr "Automatique"
+msgid "Emphasize bottom"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -7831,33 +7811,8 @@ msgstr "Le bas seulement"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "Force integer scaling for pixels on larger displays."
-msgstr "Forcer l'agrandissement entier des pixels pour les écrans larges."
-
-#. TRANSLATION: melonds
-msgctxt "game_options"
 msgid "INTEGER SCALING"
 msgstr "AGRANDISSEMENT ENTIER"
-
-#. TRANSLATION: melonds
-msgctxt "game_options"
-msgid "Enable cheats for MelonDS."
-msgstr "Activer la triche pour MelonDS."
-
-#. TRANSLATION: melonds
-msgctxt "game_options"
-msgid "Enable the on screen display."
-msgstr "Activer l'affichage à l'écran"
-
-#. TRANSLATION: melonds
-msgctxt "game_options"
-msgid "ENABLE OSD"
-msgstr "ACTIVER\tL'OSD"
-
-#. TRANSLATION: melonds
-msgctxt "game_options"
-msgid "Choose console type."
-msgstr "Choisir le type de console."
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -7866,13 +7821,13 @@ msgstr "TYPE DE CONSOLE"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "DS (default)"
-msgstr "DS (par défaut)"
+msgid "DS"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "DSi (Experiemental)"
-msgstr "DSi (Expérimental)"
+msgid "DSi (experiemental)"
+msgstr ""
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -9957,6 +9912,94 @@ msgstr ""
 msgctxt "game_options"
 msgid "USE COMPUTE SHADER"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "Choose whether or not to limit the framerate."
+#~ msgstr "Choisir ou non de limiter la fréquence d'affichage"
+
+#~ msgctxt "game_options"
+#~ msgid "No Limitation"
+#~ msgstr "Pas de limitation"
+
+#~ msgctxt "game_options"
+#~ msgid "Standard (Default)"
+#~ msgstr "Standard (Par défaut)"
+
+#~ msgctxt "game_options"
+#~ msgid "Enhancement. Increase the rendering resolution."
+#~ msgstr "Amélioration. Augmenter la résolution du rendu."
+
+#~ msgctxt "game_options"
+#~ msgid "Enables improved polygon splitting."
+#~ msgstr "Améliore la division des polygones."
+
+#~ msgctxt "game_options"
+#~ msgid "0 degrees (Default)"
+#~ msgstr "0 degrees (Par défaut)"
+
+#~ msgctxt "game_options"
+#~ msgid "Swap the Nintendo DS Displays."
+#~ msgstr "Inverser les écrans de la Nintendo DS"
+
+#~ msgctxt "game_options"
+#~ msgid "Choose the screen size."
+#~ msgstr "Choisir la taile de l'écran"
+
+#~ msgctxt "game_options"
+#~ msgid "1x (Default)"
+#~ msgstr "1x (Par défaut)"
+
+#~ msgctxt "game_options"
+#~ msgid "Choose the preferred screen layout."
+#~ msgstr "Choisir la disposition d'écran préférée."
+
+#~ msgctxt "game_options"
+#~ msgid "Natural (Default)"
+#~ msgstr "Naturelle (Par défaut)"
+
+#~ msgctxt "game_options"
+#~ msgid "Choose the NDS screen sizings."
+#~ msgstr "Choisir les tailles d'écran de la NDS"
+
+#~ msgctxt "game_options"
+#~ msgid "Even (Default)"
+#~ msgstr "Identique (Par défaut)"
+
+#~ msgctxt "game_options"
+#~ msgid "Emphasize botton"
+#~ msgstr "Mettre en valeur le bas"
+
+#~ msgctxt "game_options"
+#~ msgid "Auto"
+#~ msgstr "Automatique"
+
+#~ msgctxt "game_options"
+#~ msgid "Force integer scaling for pixels on larger displays."
+#~ msgstr "Forcer l'agrandissement entier des pixels pour les écrans larges."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable cheats for MelonDS."
+#~ msgstr "Activer la triche pour MelonDS."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable the on screen display."
+#~ msgstr "Activer l'affichage à l'écran"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE OSD"
+#~ msgstr "ACTIVER\tL'OSD"
+
+#~ msgctxt "game_options"
+#~ msgid "Choose console type."
+#~ msgstr "Choisir le type de console."
+
+#~ msgctxt "game_options"
+#~ msgid "DS (default)"
+#~ msgstr "DS (par défaut)"
+
+#~ msgctxt "game_options"
+#~ msgid "DSi (Experiemental)"
+#~ msgstr "DSi (Expérimental)"
 
 #~ msgctxt "game_options"
 #~ msgid "PS2's internal ratio setting. Some games only support 4/3."
