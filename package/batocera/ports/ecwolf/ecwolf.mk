@@ -3,8 +3,8 @@
 # ecwolf
 #
 ################################################################################
-# Version: Commits on Aug 20, 2022
-ECWOLF_VERSION = d157e53415eabac11c40d3859b1132bf29dff645
+# Version: Commits on Aug 21, 2022
+ECWOLF_VERSION = bf02d1e5210fcfda66431c1f28091d8503c55f5f
 ECWOLF_SITE = https://bitbucket.org/ecwolf/ecwolf.git
 ECWOLF_LICENSE = Non-commercial
 ECWOLF_DEPENDENCIES = sdl2 host-ecwolf
@@ -12,7 +12,7 @@ ECWOLF_SITE_METHOD=git
 ECWOLF_GIT_SUBMODULES=YES
 
 HOST_ECWOLF_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DNO_GTK=ON
-ECWOLF_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DNO_GTK=ON -DFORCE_CROSSCOMPILE=ON \
+ECWOLF_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DNO_GTK=ON -DFORCE_CROSSCOMPILE=ON -DINTERNAL_SDL_MIXER=ON \
                     -DIMPORT_EXECUTABLES=$(BUILD_DIR)/host-ecwolf-$(ECWOLF_VERSION)/ImportExecutables.cmake
 
 ECWOLF_CONF_ENV += LDFLAGS="-lpthread -lvorbisfile -lopusfile -lFLAC -lmodplug -lfluidsynth"
