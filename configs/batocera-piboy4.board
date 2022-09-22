@@ -60,4 +60,3 @@ BR2_PACKAGE_SDL_X11=y
 
 # Batocera dev
 BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL=y
-BR2_STRIP_EXCLUDE_FILES="ecwolf eduke32 nblood pcexhumed rednukem voidsw ionfury"
