@@ -9181,9 +9181,9 @@ gzdoom:
             prompt:      GAME RENDERING
             description: Select rendering mode.
             choices:
-                "Vulkan":   vulkan
-                "Softpoly": soft
-                "GLES2":    gles2
+                "Vulkan":          vulkan
+                "Softpoly":        soft
+                "GLES2 (default)": gles2
 lzdoom:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -9193,8 +9193,8 @@ lzdoom:
             prompt:      GAME RENDERING
             description: Select rendering mode.
             choices:
-                "Vulkan":   vulkan
-                "Softpoly": soft
+                "Vulkan (default)":   vulkan
+                "Softpoly":           soft
 hode:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -9268,6 +9268,14 @@ raze:
       choices:
         "Skip": 1
         "Show (Default)": 0
+    raze_render:
+      group: VIDEO SETTINGS
+      prompt:      GAME RENDERING
+      description: Select rendering mode.
+      choices:
+        "Vulkan":          vulkan
+        "Softpoly":        soft
+        "GLES2 (Default)": gles2
 raptor:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

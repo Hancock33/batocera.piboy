@@ -95,12 +95,23 @@ class RazeGenerator(Generator):
             "-exec", self.script_file,
             # Disable controllers because support is poor; use evmapy instead
             "-nojoy",
-            "+set vid_preferbackend 1",
-            "+set +r_precache 0",
             "-width", str(gameResolution["width"]),
             "-height", str(gameResolution["height"]),
             "-nologo" if system.getOptBoolean("nologo") else "",
         ]
+        
+        if system.isOptSet('raze_render'):
+            if system.config['raze_render'] == 'gl':
+                launch_args.extend(['+set', 'vid_preferbackend', '0', '+set', 'vid_rendermode', '4'])
+            elif system.config['raze_render'] == 'vulkan':
+                launch_args.extend(['+set', 'vid_preferbackend', '1', '+set', 'vid_rendermode', '4'])
+            elif system.config['raze_render'] == 'soft':
+                launch_args.extend(['+set', 'vid_preferbackend', '2', '+set', 'vid_rendermode', '4'])
+            elif system.config['raze_render'] == 'gles2':
+                launch_args.extend(['+set', 'vid_preferbackend', '3', '+set', 'vid_rendermode', '3'])
+        else:
+            launch_args.extend(['+set', 'vid_preferbackend', '3', '+set', 'vid_rendermode', '3'])
+
         return Command.Command(
             array=launch_args,
             env={
