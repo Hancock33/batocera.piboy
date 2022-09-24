@@ -9594,12 +9594,12 @@ msgctxt "game_options"
 msgid "Italiano"
 msgstr ""
 
-#. TRANSLATION: awgl, gzdoom, lzdoom, yquake2
+#. TRANSLATION: awgl, gzdoom, lzdoom, raze, yquake2
 msgctxt "game_options"
 msgid "Select rendering mode."
 msgstr ""
 
-#. TRANSLATION: awgl, gzdoom, lzdoom, yquake2
+#. TRANSLATION: awgl, gzdoom, lzdoom, raze, yquake2
 msgctxt "game_options"
 msgid "GAME RENDERING"
 msgstr ""
@@ -9664,14 +9664,24 @@ msgctxt "game_options"
 msgid "Show (Default)"
 msgstr ""
 
-#. TRANSLATION: gzdoom, lzdoom
+#. TRANSLATION: gzdoom, lzdoom, raze
 msgctxt "game_options"
 msgid "Softpoly"
 msgstr ""
 
 #. TRANSLATION: gzdoom
 msgctxt "game_options"
-msgid "GLES2"
+msgid "GLES2 (default)"
+msgstr ""
+
+#. TRANSLATION: lzdoom
+msgctxt "game_options"
+msgid "Vulkan (default)"
+msgstr ""
+
+#. TRANSLATION: raze
+msgctxt "game_options"
+msgid "GLES2 (Default)"
 msgstr ""
 
 #. TRANSLATION: virtualjaguar
