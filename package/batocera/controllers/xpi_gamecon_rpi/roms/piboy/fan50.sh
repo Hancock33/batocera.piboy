@@ -1,4 +1,4 @@
 #!/bin/bash
 PID=$(pgrep -f  piboy_fan_ctrl.py)
 kill $PID
-echo 120 >/sys/kernel/xpi_gamecon/fan
+echo 50 >/sys/kernel/xpi_gamecon/fan
