@@ -12,7 +12,7 @@ class SorrGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         os.chdir("/userdata/roms/ports/sorr")
-        commandArray = ["/usr/bin32/bgdi", "-i", "/userdata/roms/ports/sorr", rom]
+        commandArray = ["/usr/bin32/sorr", "-i", "/userdata/roms/ports/sorr", rom]
 
         if os.path.isfile('/tmp/piboy'):
             return Command.Command(

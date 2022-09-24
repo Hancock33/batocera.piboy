@@ -1,9 +1,13 @@
-config BR2_PACKAGE_BENNUGD_BGDI
+config BR2_PACKAGE_SORR
 	bool "bennugd-bgdi"
 	depends on BR2_INSTALL_LIBSTDCPP
     select BR2_PACKAGE_LIBTRE
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
+	select BR2_PACKAGE_LIBOGG
+	select BR2_PACKAGE_LIBVORBIS
+	select BR2_PACKAGE_LIBTHEORA
+
 	help
         BennuGD is an open source video game development language,
         with a modular design designed to facilitate the portability

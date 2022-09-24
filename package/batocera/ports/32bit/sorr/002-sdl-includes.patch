@@ -1,0 +1,13 @@
+diff --git a/modules/mod_iconv/iconv.c b/modules/mod_iconv/iconv.c
+index 24358a3..653a5c0 100644
+--- a/modules/mod_iconv/iconv.c
++++ b/modules/mod_iconv/iconv.c
+@@ -20,7 +20,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+-#include <SDL/SDL_stdinc.h>
++#include <SDL2/SDL_stdinc.h>
+ /* Bennu specifics */
+ #include <xstrings.h>
+ #include <bgddl.h>

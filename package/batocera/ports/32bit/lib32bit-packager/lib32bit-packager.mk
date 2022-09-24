@@ -10,7 +10,7 @@ define LIB32BIT_PACKAGER_INSTALL_TARGET_CMDS
 	mkdir -p $(DEST_DIR)/bin32
 	mkdir -p $(DEST_DIR)/share
 
-    cp -a $(TARGET_DIR)/usr/bin/{gmloader,bgdi,bgdc,box86} $(DEST_DIR)/bin32
+    cp -a $(TARGET_DIR)/usr/bin/{gmloader,sorr,box86}      $(DEST_DIR)/bin32
 	cp -a $(TARGET_DIR)/usr/share/box86                    $(DEST_DIR)/share
 	cp -a $(TARGET_DIR)/usr/lib                            $(DEST_DIR)/lib32
 	cp -a $(TARGET_DIR)/lib/*                              $(DEST_DIR)/lib32
