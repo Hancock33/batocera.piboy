@@ -1,4 +1,6 @@
-Unoffical Port of Batocera for the DMG Piboy. (https://experimentalpi.com/PiBoy-DMG--Kit_p_18.html)
+Unoffical Port of Batocera for the DMG PiBoy and PiBoy XRS. 
+(https://experimentalpi.com/PiBoy-DMG--Kit_p_18.html)
+(https://experimentalpi.com/PiBoy-XRS--Kit_p_59.html)
 
 ![batocera.piboy logo](https://raw.githubusercontent.com/Hancock33/batocera.piboy/master/.github/logo.jpg)
 

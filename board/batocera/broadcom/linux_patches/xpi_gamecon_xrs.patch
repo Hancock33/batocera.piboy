@@ -1,38 +1,44 @@
 diff --git a/drivers/gpio/Kconfig b/drivers/gpio/Kconfig
-index addea3aaa16d..108fa89a6fde 100644
+index 3c761118c9de..d331a38f1af0 100644
 --- a/drivers/gpio/Kconfig
 +++ b/drivers/gpio/Kconfig
-@@ -2,6 +2,12 @@
- #
- # GPIO infrastructure and drivers
- #
-+config XPI_GAMECON
-+	tristate "XPI Gamecon module"
+@@ -9,6 +9,13 @@ config XPI_GAMECON
+ 	  Select this configuration to enable XPI Gamecon module to allow
+ 	  safe shutdown and volume controls.
+ 
++config XPI_GAMECON_XRS
++	tristate "XPI XRS Gamecon module"
 +	depends on ARM64
 +	help
-+	  Select this configuration to enable XPI Gamecon module to allow
++	  Select this configuration to enable XPI XRS Gamecon module to allow
 +	  safe shutdown and volume controls.
- 
- config ARCH_HAVE_CUSTOM_GPIO_H
- 	bool
++
+ config MK_ARCADE_RPI
+        tristate "RPi Arcade Joystick"
+        depends on ARM64
 diff --git a/drivers/gpio/Makefile b/drivers/gpio/Makefile
-index 0980f9b189ba..472e1760ddf1 100644
+index 8d1866a88ae6..571212d8fafa 100644
 --- a/drivers/gpio/Makefile
 +++ b/drivers/gpio/Makefile
-@@ -10,6 +10,7 @@ obj-$(CONFIG_OF_GPIO)		+= gpiolib-of.o
- obj-$(CONFIG_GPIO_CDEV)		+= gpiolib-cdev.o
+@@ -12,6 +12,7 @@ obj-$(CONFIG_GPIO_CDEV)		+= gpiolib-cdev.o
  obj-$(CONFIG_GPIO_SYSFS)	+= gpiolib-sysfs.o
  obj-$(CONFIG_GPIO_ACPI)		+= gpiolib-acpi.o
-+obj-$(CONFIG_XPI_GAMECON)   += xpi_gamecon.o
+ obj-$(CONFIG_XPI_GAMECON)   += xpi_gamecon.o
++obj-$(CONFIG_XPI_GAMECON_XRS) += xpi_gamecon_xrs.o
  
  # Device drivers. Generally keep list sorted alphabetically
  obj-$(CONFIG_GPIO_REGMAP)	+= gpio-regmap.o
-diff --git a/drivers/gpio/xpi_gamecon.c b/drivers/gpio/xpi_gamecon.c
+diff --git a/drivers/gpio/xpi_gamecon_xrs.c b/drivers/gpio/xpi_gamecon_xrs.c
 new file mode 100644
-index 000000000000..a889576c8503
+index 000000000000..d9da8ac556b8
 --- /dev/null
-+++ b/drivers/gpio/xpi_gamecon.c
-@@ -0,0 +1,651 @@
++++ b/drivers/gpio/xpi_gamecon_xrs.c
+@@ -0,0 +1,756 @@
++#include <linux/platform_device.h>
++#include <linux/power_supply.h>
++#include <linux/err.h>
++#include <linux/errno.h>
++#include <linux/init.h>
 +#include <linux/delay.h>
 +#include <linux/input.h>
 +#include <linux/of_device.h>
@@ -42,8 +48,26 @@ index 000000000000..a889576c8503
 +#include <asm/io.h>
 +
 +MODULE_AUTHOR("Nathan Scherdin");
-+MODULE_DESCRIPTION("PiBoy DMG Controls driver");
++MODULE_DESCRIPTION("Experimental Pi Controls driver");
 +MODULE_LICENSE("GPL");
++
++#define EXPI_MANUFACTURER	"Experimental Pi"
++#define EXPI_DRIVER_NAME	"Experimental Pi Driver"
++
++struct expi {
++	struct	power_supply		*psy;
++	struct	power_supply_desc	psy_desc;
++	int	status;
++	bool	cable_plugged;
++};
++
++static const enum power_supply_property expi_props[] = {
++	POWER_SUPPLY_PROP_STATUS,
++	POWER_SUPPLY_PROP_VOLTAGE_NOW,
++	POWER_SUPPLY_PROP_CURRENT_NOW,
++	POWER_SUPPLY_PROP_CAPACITY,
++	POWER_SUPPLY_PROP_MODEL_NAME,
++};
 +
 +static struct gc *gc_base;
 +static const int gc_gpio_clk = 26;
@@ -55,7 +79,9 @@ index 000000000000..a889576c8503
 +static unsigned long lasterror=0;
 +
 +static uint8_t index;
++
 +static uint8_t running=0;
++
 +union {
 +	struct {
 +		int flags_val;
@@ -75,7 +101,7 @@ index 000000000000..a889576c8503
 +
 +struct kobject *kobj_ref;
 +
-+#define GC_LENGTH 12
++#define GC_LENGTH 14
 +
 +#define GPIO_SET *(gpio+7)
 +#define GPIO_CLR *(gpio+10)
@@ -87,20 +113,25 @@ index 000000000000..a889576c8503
 +
 +static volatile unsigned *gpio;
 +
-+static const short gc_btn[] = { BTN_A, 
-+                BTN_B, 
-+                BTN_Y,
-+                BTN_X,
-+                BTN_TL,             //BTN Z
-+                BTN_TR,             //BTN C
-+                BTN_SELECT,
-+                BTN_START,
-+                BTN_MODE,           //Left Thumb
-+                BTN_TL2,            //Left Trigger
-+                BTN_TR2,            //Right Trigger     
-+                -1			        /* terminating entry */
++static const short gc_btn[] = { 
++				BTN_TRIGGER_HAPPY3,		//DPAD Up
++				BTN_TRIGGER_HAPPY4,		//DPAD Down
++				BTN_TRIGGER_HAPPY1,		//DPAD Left
++				BTN_TRIGGER_HAPPY2,		//DPAD Right
++				BTN_A,				//A
++				BTN_B,				//B
++				BTN_X,				//X
++				BTN_Y,				//Y
++				BTN_TL,				//Left Button
++				BTN_TR,				//Right Button
++				BTN_TL2,			//Left Trigger
++				BTN_TR2,			//Right Trigger
++				BTN_THUMBL,			//Left Thumb
++				BTN_THUMBR,			//Right Thumb
++				BTN_SELECT,			//Select
++				BTN_START,			//Start
 +			};
-+int gc_btn_size = sizeof(gc_btn)/sizeof(gc_btn[0]);
++int gc_btn_size = sizeof(gc_btn);
 +
 +struct gc {
 +	struct input_dev *dev;
@@ -151,6 +182,50 @@ index 000000000000..a889576c8503
 +struct kobj_attribute per = __ATTR(percent, 0660, percent_show, percent_store);
 +struct kobj_attribute stat = __ATTR(status, 0660, stat_show, stat_store);
 +struct kobj_attribute vol = __ATTR(volume, 0660, vol_show, vol_store);
++
++static int expi_get_property(struct power_supply *psy, enum power_supply_property psp, union power_supply_propval *val)
++{
++	int status;
++	struct expi *adc_bat = (struct expi *)power_supply_get_drvdata(psy);
++	if (!adc_bat) {
++		dev_err(&psy->dev, "no battery infos ?!\n");
++		return -EINVAL;
++	}
++
++	status = adc_bat->status;
++	adc_bat->cable_plugged = stat_val&0x80 ? 1 : 0;;
++
++	if (!adc_bat->cable_plugged)
++		adc_bat->status =  POWER_SUPPLY_STATUS_DISCHARGING;
++	else if (percent_val==100)
++		adc_bat->status = POWER_SUPPLY_STATUS_NOT_CHARGING;
++	else
++		adc_bat->status = POWER_SUPPLY_STATUS_CHARGING;
++
++	if (status != adc_bat->status)
++		power_supply_changed(adc_bat->psy);
++
++	switch (psp) {
++	case POWER_SUPPLY_PROP_STATUS:
++		val->intval = adc_bat->status;
++		break;
++	case POWER_SUPPLY_PROP_VOLTAGE_NOW:
++		val->intval = batt_val;		//original; value in mv
++		break;
++	case POWER_SUPPLY_PROP_CURRENT_NOW:
++		val->intval = cur_val*10;	//original value in 10mA increments
++		break;
++	case POWER_SUPPLY_PROP_CAPACITY:
++		val->intval = percent_val;
++		break;
++	case POWER_SUPPLY_PROP_MODEL_NAME:
++		val->strval = EXPI_MANUFACTURER;
++		break;
++	default:
++		return -EINVAL;
++	}
++	return 0;
++}
 +
 +void gpio_func(int pin, int state)
 +{
@@ -207,9 +282,9 @@ index 000000000000..a889576c8503
 +
 +	int byteindex;
 +	long bitindex;
-+	//Set Dead Zone
-+	int nAX = 0, nAY = 0;
-+	int dzone = 20;
++
++	if(running)
++		mod_timer(&gc->timer, jiffies + GC_REFRESH_TIME);
 +
 +	gpio_func(gc_gpio_data,1);	//input
 +
@@ -235,36 +310,14 @@ index 000000000000..a889576c8503
 +	udelay(BITRATE);
 +
 +	if(data[0] && !check_crc16(data)){
-+		uint8_t len = 0;
-+		if(data[0]==0xA5){
-+			unsigned char val;
-+			len = 2;
-+			version_val = 0x0100;
-+			val = values.fan_val | (values.flags_val&0x1 ? 0x00 : 0x80);
-+			data[GC_LENGTH] = val;
-+			data[GC_LENGTH+1] = ~val;
-+			data[GC_LENGTH+2] = 0;
-+			data[GC_LENGTH+3] = 0;
-+		}
-+		else
-+		if(data[0]==0x5A){
-+			len = 4;
-+			version_val = 0x0101;
-+			data[GC_LENGTH+0] = 0xC0 | (index&0x3);
-+			data[GC_LENGTH+1] = values.data[index&0x3];
-+			calc_crc16(&data[GC_LENGTH],2);
-+			index++;
-+		}
-+		else{
-+			len = 4;
-+			version_val = ((data[0]&0xC0)<<2) | (data[0]&0x3F);
-+			data[GC_LENGTH+0] = 0xC0 | (index&0x3);
-+			data[GC_LENGTH+1] = values.data[index&0x3];
-+			calc_crc16(&data[GC_LENGTH],2);
-+			index++;
-+		}
++		version_val = ((data[0]&0xC0)<<2) | (data[0]&0x3F);
 +
-+		for(byteindex=GC_LENGTH;byteindex<GC_LENGTH+len;byteindex++){
++		data[GC_LENGTH+0] = 0xC0 | (index&0x3);
++		data[GC_LENGTH+1] = values.data[index&0x3];
++		calc_crc16(&data[GC_LENGTH],2);
++		index++;
++
++		for(byteindex=GC_LENGTH;byteindex<GC_LENGTH+4;byteindex++){
 +			for(bitindex=0;bitindex<8;bitindex++){
 +				if(data[byteindex]&(0x80>>bitindex))
 +					GPIO_SET |= gc_data_bit;
@@ -280,41 +333,27 @@ index 000000000000..a889576c8503
 +
 +		lastgood++;
 +
-+		
-+    	/* start/back buttons */
-+    	input_report_key(dev, BTN_START,  data[3] & 0x80);
-+    	input_report_key(dev, BTN_SELECT, data[3] & 0x40);
++		input_report_abs(dev, ABS_X, (int16_t)data[1]);		//X Axis
++		input_report_abs(dev, ABS_Y, (int16_t)data[2]);		//Y Axis
++		input_report_abs(dev, ABS_RX, (int16_t)data[3]);	//RX Axis
++		input_report_abs(dev, ABS_RY, (int16_t)data[4]);	//RY Axis
 +
-+    	/* triggers left/right */
-+		input_report_key(dev, BTN_TL2, data[4]&0x20);
-+		input_report_key(dev, BTN_TR2, data[4]&0x10);
-+
-+
-+    	/* buttons A,B,X,Y,TL,TR and MODE */
-+    	input_report_key(dev, BTN_A,	!(data[3]&0x01));
-+    	input_report_key(dev, BTN_B,	!(data[3]&0x02));
-+    	input_report_key(dev, BTN_X,	!(data[3]&0x08));
-+    	input_report_key(dev, BTN_Y,	!(data[3]&0x10));
-+    	input_report_key(dev, BTN_TL,	!(data[3]&0x20));
-+    	input_report_key(dev, BTN_TR,	!(data[3]&0x04));
-+    	input_report_key(dev, BTN_MODE, data[4]&0x40);	
-+    	
-+    	/* Stick press left/right */
-+    	//input_report_key(dev, BTN_THUMBL, null);
-+    	//input_report_key(dev, BTN_THUMBR, null);			
-+
-+        /* DPAD as buttons (up, down, left, right) */
-+		input_report_abs(dev, ABS_HAT0X, !(data[4]&0x04) - !(data[4]&0x08));
-+		input_report_abs(dev, ABS_HAT0Y, !(data[4]&0x02) - !(data[4]&0x01));
-+		
-+		/* Left Analogue Stick */
-+	    nAX = (int16_t)data[1];
-+		nAY = (int16_t)data[2];
-+		if ( nAX > (127 - dzone) && nAX < (127 + dzone) ) nAX = 127;
-+		if ( nAY > (127 - dzone) && nAY < (127 + dzone) ) nAY = 127;
-+		input_report_abs(dev, ABS_X, nAX);
-+		input_report_abs(dev, ABS_Y, nAY);
-+		input_sync(dev);
++		input_report_key(dev, gc_btn[0], !(data[5]&0x01));	//DPAD Up
++		input_report_key(dev, gc_btn[1], !(data[5]&0x02));	//DPAD Down
++		input_report_key(dev, gc_btn[2], !(data[5]&0x04));	//DPAD Left
++		input_report_key(dev, gc_btn[3], !(data[5]&0x08));	//DPAD Right
++		input_report_key(dev, gc_btn[4], !(data[5]&0x10));	//A
++		input_report_key(dev, gc_btn[5], !(data[5]&0x20));	//B
++		input_report_key(dev, gc_btn[6], !(data[5]&0x40));	//X
++		input_report_key(dev, gc_btn[7], !(data[5]&0x80)); 	//Y
++		input_report_key(dev, gc_btn[8], !(data[6]&0x01));	//Left Button
++		input_report_key(dev, gc_btn[9], !(data[6]&0x02));	//Right Button
++		input_report_key(dev, gc_btn[10], !(data[6]&0x04));	//Left Trigger
++		input_report_key(dev, gc_btn[11], !(data[6]&0x08));	//Right Trigger
++		input_report_key(dev, gc_btn[12], !(data[6]&0x10));	//Left Thumb
++		input_report_key(dev, gc_btn[13], !(data[6]&0x20));	//Right Thumb
++		input_report_key(dev, gc_btn[14], !(data[6]&0x40));	//Select
++		input_report_key(dev, gc_btn[15], !(data[6]&0x80));	//Start
 +
 +		/* Volume Wheel */
 +		input_report_abs(volume_dev, ABS_VOLUME, data[6]);
@@ -323,12 +362,13 @@ index 000000000000..a889576c8503
 +		/* Power Switch */
 +		input_report_key(power_dev, KEY_POWER, !(data[5]&0x40));
 +		input_sync(power_dev);
++		input_sync(dev);
 +
-+		batt_val = (int)(data[7]*5)+2950;            //Battery Voltage
-+		cur_val = (int)((signed char)data[8])*50;    //Current
-+		percent_val = data[9];                       //battery percentage
-+		stat_val = data[5]&0xC6;                     //VBus,Shutdown,VSTAT2,VSTAT1
-+		vol_val = data[6];                           //Volume
++		batt_val = (int)(data[9]*5)+2950;		    //Battery Voltage
++		cur_val = (int)((signed char)data[10])*50;	//Current
++		percent_val = data[11];                     //battery percentage
++		stat_val = data[7];					        //VBus,Shutdown
++		vol_val = data[8];					        //Volume
 +
 +		lasterror = 0;
 +	}
@@ -339,12 +379,9 @@ index 000000000000..a889576c8503
 +	}
 +
 +	gpio_func(gc_gpio_data,1);	//input
-+
-+	if(running)
-+		mod_timer(&gc->timer, jiffies + GC_REFRESH_TIME);
 +}
 +
-+static int __init gc_setup_pad(struct gc *gc)
++static int gc_setup_pad(struct gc *gc)
 +{
 +	struct input_dev *input_dev;
 +	int i;
@@ -356,7 +393,7 @@ index 000000000000..a889576c8503
 +		return -ENOMEM;
 +	}
 +
-+	input_dev->name = "PiBoy DMG Controller";
++	input_dev->name = "Experimental Pi Controller";
 +	input_dev->phys = "input0";
 +	input_dev->id.bustype = BUS_PARPORT;
 +	input_dev->id.vendor = 0x0001;
@@ -367,14 +404,14 @@ index 000000000000..a889576c8503
 +
 +	input_dev->evbit[0] = BIT_MASK(EV_KEY) | BIT_MASK(EV_ABS);
 +
++	input_set_abs_params(input_dev, ABS_X, 0, 255, 0, 0);
++	input_set_abs_params(input_dev, ABS_Y, 0, 255, 0, 0);
++	input_set_abs_params(input_dev, ABS_RX, 0, 255, 0, 0);
++	input_set_abs_params(input_dev, ABS_RY, 0, 255, 0, 0);
++
 +	for (i = 0; i < gc_btn_size; i++){
 +		__set_bit(gc_btn[i], input_dev->keybit);
 +	}
-+
-+	input_set_abs_params(input_dev, ABS_X, 0, 255, 0, 0);
-+	input_set_abs_params(input_dev, ABS_Y, 0, 255, 0, 0);
-+	input_set_abs_params(input_dev, ABS_HAT0X, -1, 1, 0, 0);
-+	input_set_abs_params(input_dev, ABS_HAT0Y, -1, 1, 0, 0);
 +
 +	err = input_register_device(input_dev);
 +	if (err)
@@ -384,8 +421,8 @@ index 000000000000..a889576c8503
 +	gpio_func(gc_gpio_clk,0);	//output
 +	gpio_func(gc_gpio_data,1);	//input
 +
-+	printk(KERN_INFO "GPIO%i and GPIO%i configured for Piboy DMG controller pins\n",gc_gpio_clk,gc_gpio_data);
-+	printk(KERN_INFO "PiBoy DMG Controls module loaded");
++	printk(KERN_INFO "GPIO%i and GPIO%i configured for Experimental Pi controller pins\n",gc_gpio_clk,gc_gpio_data);
++	printk(KERN_INFO "Experimental Pi Controls module loaded");
 +
 +	return 0;
 +
@@ -471,7 +508,7 @@ index 000000000000..a889576c8503
 +	return err;
 +}
 +
-+static struct gc __init *gc_probe(void)
++static struct gc *gc_probe(void)
 +{
 +	struct gc *gc;
 +	int err;
@@ -554,7 +591,7 @@ index 000000000000..a889576c8503
 +	return base_address == 1 ? 0x02000000 : base_address;
 +}
 +
-+static int __init gc_init(void)
++static int gc_init(void)
 +{
 +	/* BCM board peripherals address base */
 +	static u32 gc_bcm2708_peri_base;
@@ -580,8 +617,10 @@ index 000000000000..a889576c8503
 +   	}
 +
 +	gc_base = gc_probe();
-+	if (IS_ERR(gc_base))
++	if (IS_ERR(gc_base)){
++		printk(KERN_INFO "failed to probe controls\n");
 +		return -ENODEV;
++	}
 +
 +	/*Creating a directory in /sys/kernel/ */
 +	kobj_ref = kobject_create_and_add("xpi_gamecon",kernel_kobj);
@@ -655,13 +694,13 @@ index 000000000000..a889576c8503
 +        return -1;
 +}
 +
-+static void __exit gc_exit(void)
++static void gc_exit(void)
 +{
 +	running = 0;
 +
 +	if (gc_base){
-+	  //del_timer_sync(&gc_base->timer);
-+        del_timer(&gc_base->timer);
++		//del_timer_sync(&gc_base->timer);
++		del_timer(&gc_base->timer);
 +		gc_remove(gc_base);
 +	}
 +
@@ -678,9 +717,76 @@ index 000000000000..a889576c8503
 +	sysfs_remove_file(kernel_kobj, &red.attr);
 +	sysfs_remove_file(kernel_kobj, &flags.attr);
 +	sysfs_remove_file(kernel_kobj, &version.attr);
-+
-+	printk(KERN_INFO "PiBoy DMG Controls module unloaded");
 +}
++
++static int expi_probe(struct platform_device *pdev)
++{
++	struct expi *adc_bat;
++	struct power_supply_desc *psy_desc;
++	struct power_supply_config psy_cfg = {};
++
++	int ret = gc_init();
++	if(ret){
++		printk(KERN_INFO "failed to init controls\n");
++		return ret;
++	}
++
++	adc_bat = devm_kzalloc(&pdev->dev, sizeof(*adc_bat), GFP_KERNEL);
++	if (!adc_bat) {
++		dev_err(&pdev->dev, "failed to allocate memory\n");
++		return -ENOMEM;
++	}
++
++	psy_cfg.drv_data = adc_bat;
++	psy_desc = &adc_bat->psy_desc;
++	psy_desc->name = EXPI_DRIVER_NAME;
++
++	/* bootup default values for the battery */
++	adc_bat->cable_plugged = false;
++	adc_bat->status = POWER_SUPPLY_STATUS_DISCHARGING;
++	psy_desc->type = POWER_SUPPLY_TYPE_BATTERY;
++	psy_desc->get_property = expi_get_property;
++
++	adc_bat->psy = power_supply_register(&pdev->dev, psy_desc, &psy_cfg);
++	if (IS_ERR(adc_bat->psy)) {
++		printk(KERN_INFO "failed to register battery\n");
++		goto err_reg_fail;
++	}
++
++	platform_set_drvdata(pdev, adc_bat);
++
++	printk(KERN_INFO "Experimental Pi Driver Insert...Done!!!\n");
++
++	return 0;
++
++err_reg_fail:
++	return PTR_ERR(adc_bat->psy);
++}
++
++static int expi_remove(struct platform_device *pdev)
++{
++	struct expi *adc_bat = platform_get_drvdata(pdev);
++
++	gc_exit();
++
++	power_supply_unregister(adc_bat->psy);
++
++	printk(KERN_INFO "Experimental Pi Driver unloaded");
++
++	return 0;
++}
++
++static struct platform_driver expi_driver = {
++	.driver		= {
++		.name	= EXPI_DRIVER_NAME,
++	},
++	.probe		= expi_probe,
++	.remove		= expi_remove,
++};
++
++//module_platform_driver(expi_driver);
 +
 +module_init(gc_init);
 +module_exit(gc_exit);
++
++

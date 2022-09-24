@@ -1,36 +1,25 @@
 #!/bin/sh
-WHEEL_INPUT=$(grep -r -l 'PiBoy Volume wheel' /sys/class/input/event*/device/name | sed 's#/sys/class#/dev#;s#/device.*##')
-enabled="$(batocera-settings-get -f /boot/batocera-boot.conf key piboy.enabled)"
-enabledxrs="$(batocera-settings-get -f /boot/batocera-boot.conf key piboyxrs.enabled)"
+enabled="$(batocera-settings-get -f /boot/batocera-boot.conf key piboyxrs.enabled)"
 
 case "$1" in
 	start)
 		if [[ $enabled == "1" ]]; then
-			echo "Starting PiBoy"
-			modprobe xpi_gamecon
+			echo "Starting PiBoy XRS"
+			modprobe xpi_gamecon_xrs
 			touch /tmp/piboy
 			cp /usr/share/batocera/configgen/configgen-defaults-piboy4.yml /usr/share/batocera/configgen/configgen-defaults-arch.yml
 			dmesg -n 1
-			WHEEL_INPUT=$(grep -r -l 'PiBoy Volume wheel' /sys/class/input/event*/device/name | sed 's#/sys/class#/dev#;s#/device.*##')
-			# check if audio wheel is available, if not use python script
-			if [ "$WHEEL_INPUT" = "" ]; then
-				python /usr/bin/piboy_audctrl.py &
-			else
-				/usr/sbin/volumed -- "$WHEEL_INPUT"
-			fi
+			python /usr/bin/piboy_audctrl.py &
 			python /usr/bin/piboy_fan_power_ctrl.py &
 			# disable LCD display if HDMI is connected
 			if grep -q -E '^connected' /sys/class/drm/card?-HDMI-A-*/status; then
 				echo 0 >/sys/kernel/xpi_gamecon/flags
 			fi > /dev/null 2>&1
 		fi
-		if [[ $enabledxrs == "1" ]]; then
-			touch /tmp/piboy
-		fi
 		;;
 	stop)
 		if [[ $enabled == "1" ]]; then
-			echo "Stopping PiBoy"
+			echo "Stopping PiBoy XRS"
 			rm /tmp/piboy
 			kill $(ps aux | grep piboy_fan_power_ctrl | awk '{ print $1 }') > /dev/null 2>&1
 			kill $(ps aux | grep volumed | awk '{ print $1 }') > /dev/null 2>&1
@@ -47,7 +36,7 @@ case "$1" in
 		fi
 		;;
 	*)
-		echo "Usage: /etc/init.d/S19piboy {start|stop}"
+		echo "Usage: /etc/init.d/S34piboyxrs {start|stop}"
 		exit 1
 	;;
 esac

@@ -1,5 +1,16 @@
+From 6b9e64f5154e7aefcf3e7e2aa36d18d53aa3bb3d Mon Sep 17 00:00:00 2001
+Date: Sat, 24 Sep 2022 14:36:26 +0100
+Subject: [PATCH] add rpi arcade joystick (gpio)
+
+---
+ drivers/gpio/Kconfig                  |   8 +
+ drivers/gpio/Makefile                 |   1 +
+ drivers/gpio/mk_arcade_joystick_rpi.c | 706 ++++++++++++++++++++++++++
+ 3 files changed, 715 insertions(+)
+ create mode 100644 drivers/gpio/mk_arcade_joystick_rpi.c
+
 diff --git a/drivers/gpio/Kconfig b/drivers/gpio/Kconfig
-index addea3aaa16d..778125fd412c 100644
+index 30709c20699d4..3a71a2a824093 100644
 --- a/drivers/gpio/Kconfig
 +++ b/drivers/gpio/Kconfig
 @@ -3,6 +3,14 @@
@@ -18,7 +29,7 @@ index addea3aaa16d..778125fd412c 100644
  	bool
  	help
 diff --git a/drivers/gpio/Makefile b/drivers/gpio/Makefile
-index 0980f9b189ba..872cc2bacc81 100644
+index 0cdabdacdedf2..4712694eb7d13 100644
 --- a/drivers/gpio/Makefile
 +++ b/drivers/gpio/Makefile
 @@ -3,6 +3,7 @@
@@ -31,7 +42,7 @@ index 0980f9b189ba..872cc2bacc81 100644
  obj-$(CONFIG_GPIOLIB)		+= gpiolib-legacy.o
 diff --git a/drivers/gpio/mk_arcade_joystick_rpi.c b/drivers/gpio/mk_arcade_joystick_rpi.c
 new file mode 100644
-index 000000000000..09a609271a90
+index 0000000000000..09a609271a90d
 --- /dev/null
 +++ b/drivers/gpio/mk_arcade_joystick_rpi.c
 @@ -0,0 +1,706 @@
