@@ -1184,6 +1184,11 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('bluemsx_nospritelimits', '"OFF"')
         else:
             coreSettings.save('bluemsx_nospritelimits', '"ON"')
+        # Zoom, Hide Video Border
+        if system.isOptSet('bluemsx_overscan'):
+            coreSettings.save('bluemsx_overscan', system.config['bluemsx_overscan'])
+        else:
+            coreSettings.save('bluemsx_overscan', '"MSX2"')
 
     # Nec PC Engine / CD
     if system.config['core'] == 'pce' or system.config['core'] == 'pce_fast':
