@@ -3,8 +3,8 @@
 # slang-shaders
 #
 ################################################################################
-# Version: Commits on Sept 25, 2022
-SLANG_SHADERS_VERSION = 731a13f79dd6342560d31178f22a3ff68da8d398
+# Version: Commits on Sept 28, 2022
+SLANG_SHADERS_VERSION = ff2cc5eb1f675e91d03f006c6b390e26f8b8439c
 SLANG_SHADERS_SITE = $(call github,libretro,slang-shaders,$(SLANG_SHADERS_VERSION))
 SLANG_SHADERS_LICENSE = GPL
 
