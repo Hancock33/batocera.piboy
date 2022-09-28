@@ -3,8 +3,8 @@
 # daphne
 #
 ################################################################################
-# Version: Commits on Sept 24, 2022
-DAPHNE_VERSION = eb07029d81b9e8f789793da10f95623e576bac6a
+# Version: Commits on Sept 28, 2022
+DAPHNE_VERSION = fa32d54dbef3adf9cc9ee6c25489d01b56053834
 
 DAPHNE_SITE = https://github.com/DirtBagXon/hypseus-singe
 DAPHNE_SITE_METHOD=git
