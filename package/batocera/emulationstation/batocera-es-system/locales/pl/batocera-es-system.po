@@ -551,6 +551,22 @@ msgctxt "game_options"
 msgid "Real Keyboard"
 msgstr ""
 
+#. TRANSLATION: libretro/bluemsx, libretro/fuse, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, ...
+msgctxt "game_options"
+msgid "Hides borders on many games. Some games used the borders."
+msgstr ""
+"Ukrywa obramowania w wielu grach. Niektóre gry wykorzystywały obramowania."
+
+#. TRANSLATION: libretro/bluemsx, libretro/fuse, vice
+msgctxt "game_options"
+msgid "ZOOM (HIDE BORDERS)"
+msgstr "ZOOM (UKRYJ OBRAMOWANIA)"
+
+#. TRANSLATION: libretro/bluemsx
+msgctxt "game_options"
+msgid "MSX2"
+msgstr ""
+
 #. TRANSLATION: libretro/bluemsx
 msgctxt "game_options"
 msgid "Enhancement. Remove the four sprites per line limit."
@@ -2204,17 +2220,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Scorpion 256K"
 msgstr ""
-
-#. TRANSLATION: libretro/fuse, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_x128, libretro/vice_xplus4, ...
-msgctxt "game_options"
-msgid "Hides borders on many games. Some games used the borders."
-msgstr ""
-"Ukrywa obramowania w wielu grach. Niektóre gry wykorzystywały obramowania."
-
-#. TRANSLATION: libretro/fuse, vice
-msgctxt "game_options"
-msgid "ZOOM (HIDE BORDERS)"
-msgstr "ZOOM (UKRYJ OBRAMOWANIA)"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
