@@ -15,7 +15,7 @@ define RPI_EEPROM_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/firmware/stable/{pieeprom-2022-09-02.bin,recovery.bin,vl805-000137ad.bin,vl805-000138a1.bin} \
 			$(TARGET_DIR)/lib/firmware/raspberrypi/bootloader/default
 		cp -pvr $(@D)/rpi-eeprom-{config,digest,update} $(TARGET_DIR)/usr/bin
-		cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/arch/rpi-eeprom/batocera-update-rpi4-fw $(TARGET_DIR)/usr/bin
+		cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/rpi-eeprom/batocera-update-rpi4-fw $(TARGET_DIR)/usr/bin
 		chmod 754 $(TARGET_DIR)/usr/bin/batocera-update-rpi4-fw
 endef
 
