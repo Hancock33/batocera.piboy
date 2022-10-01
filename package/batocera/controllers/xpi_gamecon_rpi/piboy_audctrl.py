@@ -31,6 +31,9 @@ try:
         if status == 46:
             os.system("/usr/bin/batocera-es-swissknife --shutdown")
 
+        if status == 174:
+            os.system("/usr/bin/batocera-es-swissknife --shutdown")
+
         # Wait until next refresh
         time.sleep(WAIT_TIME)
 
