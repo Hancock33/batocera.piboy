@@ -3,8 +3,8 @@
 # libretro-play
 #
 ################################################################################
-# Version: Commits on Sept 15, 2022
-LIBRETRO_PLAY_VERSION = 9e814f6feb98d93aaec367967a6a51d6c7e126d0
+# Version: Commits on Sept 14, 2022
+LIBRETRO_PLAY_VERSION = 1129440ab6ede8263275dc3a5eec1624d20442fb
 LIBRETRO_PLAY_SITE = https://github.com/jpd002/Play-.git
 LIBRETRO_PLAY_LICENSE = BSD
 LIBRETRO_PLAY_DEPENDENCIES = qt5base qt5x11extras xserver_xorg-server libglew
