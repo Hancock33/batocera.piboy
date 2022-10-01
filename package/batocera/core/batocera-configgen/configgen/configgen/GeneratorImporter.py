@@ -443,6 +443,10 @@ def getGenerator(emulator):
         from generators.virtualjaguar.virtualjaguarGenerator import VirtualjaguarGenerator
         return VirtualjaguarGenerator()
 
+    if emulator == "vita3k":
+        from generators.vita3k.vita3kGenerator import Vita3kGenerator
+        return Vita3kGenerator()
+
     if emulator == 'voidsw':
         from generators.voidsw.voidswGenerator import VoidswGenerator
         return VoidswGenerator()
