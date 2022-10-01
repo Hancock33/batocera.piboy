@@ -8924,14 +8924,14 @@ msgctxt "game_options"
 msgid "Enable or disable high score saving"
 msgstr ""
 
-#. TRANSLATION: mame/uzem
+#. TRANSLATION: mame/wasm4
 msgctxt "game_options"
 msgid ""
 "Enable mouse input for trackballs, spinners, lightguns (if no gun "
 "connected), and similar controls"
 msgstr ""
 
-#. TRANSLATION: mame/uzem, wine
+#. TRANSLATION: mame/wasm4, wine
 msgctxt "game_options"
 msgid "ENABLE MOUSE"
 msgstr ""
@@ -9340,7 +9340,7 @@ msgctxt "game_options"
 msgid "Chinese"
 msgstr ""
 
-#. TRANSLATION: sonic2013, demul
+#. TRANSLATION: sonic2013, demul, vita3k
 msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr ""
@@ -9739,6 +9739,16 @@ msgstr ""
 #. TRANSLATION: virtualjaguar
 msgctxt "game_options"
 msgid "DSP PIPELINED CORE"
+msgstr ""
+
+#. TRANSLATION: vita3k
+msgctxt "game_options"
+msgid "Anti-aliasing is a technique for smoothing out jagged edges."
+msgstr ""
+
+#. TRANSLATION: vita3k
+msgctxt "game_options"
+msgid "FXAA"
 msgstr ""
 
 #. TRANSLATION: yabausesa
