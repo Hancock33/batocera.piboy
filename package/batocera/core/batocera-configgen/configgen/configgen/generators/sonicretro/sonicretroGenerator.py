@@ -21,6 +21,9 @@ class SonicRetroGenerator(Generator):
             shutil.copyfile(sm_src, sm_dst)
             iniFile = rom + '/Settings.ini'
             emu = 'sonicmania'
+        elif (rom.lower()).endswith('snx'):
+            iniFile = rom + '/Settings.ini'
+            emu = 'sonicnexus'
         else:
             iniFile = rom + '/settings.ini'
             emu = 'soniccd'
@@ -66,6 +69,7 @@ class SonicRetroGenerator(Generator):
         if os.path.exists(iniFile):
             os.remove(iniFile)          # Force removing settings.ini
             sonicConfig.read(iniFile)
+
 
         # [Dev]
         if (emu == 'sonic2013') or (emu == 'soniccd'):
