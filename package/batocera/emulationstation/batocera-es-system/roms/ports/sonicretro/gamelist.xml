@@ -60,10 +60,10 @@ The game adds leaderboards for the Single Player and Time Attack modes. It also 
 	<genreid>257</genreid>
   </game>
   <game>
-    <path>./Sonic Nexus.son</path>
+    <path>./Sonic Nexus.snx</path>
     <name>Sonic Nexus</name>
 	<desc>Sonic Nexus was a game created by Nexus Team, headed by Slingerland. The game used the Retro Sonic engine by The Taxman who joined the project in 2008. The game began development in the summer of 2006 and had three demo releases, two at the Sonic Amateur Games Expo and one during the summer of 2008. It is a critically acclaimed fangame, garnering comments such as, "absolute perfection of the classic Sonic style" from SAGE visitors and various blogs. The character lineup consisted of Sonic, Tails, and Knuckles.</desc>
-    <image>./images/Sonic the Hedgehog.png</image>
+    <image>./images/Sonic Nexus.png</image>
 	<rating>0.8</rating>
 	<releasedate>20060623T000000</releasedate>
 	<developer>Christian Whitehead</developer>
