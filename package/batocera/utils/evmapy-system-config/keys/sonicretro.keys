@@ -13,7 +13,7 @@
         {
             "trigger": ["select", "start"],
             "type": "exec",
-            "target": "killall -9 soniccd && killall -9 sonic2013 && killall -9 sonicmania && reset"
+            "target": "killall -9 soniccd && killall -9 sonic2013 && killall -9 sonicmania &&  killall -9 sonicnexus && reset"
         }
     ]
 }
