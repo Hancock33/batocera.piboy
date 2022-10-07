@@ -4100,6 +4100,7 @@ libretro:
                     "A500 (512KB Chip + 512KB Slow)":  A500
                     "A500+ (1MB Chip)":                A500PLUS
                     "A600 (2MB Chip + 8MB Fast)":      A600
+                    "A1200 (2MB Chip)":                A1200OG
                     "A1200 (2MB Chip + 8MB Fast)":     A1200
                     "A4000/040 (2MB Chip + 8MB Fast)": A4040
                     "CDTV (1MB Chip)":                 CDTV
@@ -4368,6 +4369,7 @@ libretro:
                     "A500 (512KB Chip + 512KB Slow)":  A500
                     "A500+ (1MB Chip)":                A500PLUS
                     "A600 (2MB Chip + 8MB Fast)":      A600
+                    "A1200 (2MB Chip)":                A1200OG
                     "A1200 (2MB Chip + 8MB Fast)":     A1200
                     "A4000/040 (2MB Chip + 8MB Fast)": A4040
                     "CDTV (1MB Chip)":                 CDTV
