@@ -4890,6 +4890,11 @@ msgctxt "game_options"
 msgid "A600 (2MB Chip + 8MB Fast)"
 msgstr "A600 (2MB Chip + 8MB Fast)"
 
+#. TRANSLATION: libretro/puae, libretro/puae2021
+msgctxt "game_options"
+msgid "A1200 (2MB Chip)"
+msgstr ""
+
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "A1200 (2MB Chip + 8MB Fast)"
