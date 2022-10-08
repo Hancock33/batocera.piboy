@@ -99,6 +99,7 @@ case ${1,,} in
             /etc/init.d/S31emulationstation stop
 			echo "0" > /sys/kernel/xpi_gamecon/flags
 			/sbin/rmmod xpi_gamecon
+			/sbin/rmmod xpi_gamecon_xrs
             shutdown -h now
         elif [[ "${1,,}" == "--reboot" && -n $ES_PID ]]; then
             /etc/init.d/S31emulationstation stop
