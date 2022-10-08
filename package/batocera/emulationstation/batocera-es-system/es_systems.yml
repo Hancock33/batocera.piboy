@@ -3086,6 +3086,7 @@ abuse:
   release: 1996
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/abuse
   emulators:
@@ -3102,6 +3103,7 @@ alephone:
   release: 1994
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/alephone
   emulators:
@@ -3114,6 +3116,7 @@ awgl:
   release: 1991
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/awgl
   emulators:
@@ -3126,6 +3129,7 @@ bermuda:
   release: 1995
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/bermuda
   emulators:
@@ -3138,6 +3142,7 @@ blues:
   release: 1991
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/blues
   emulators:
@@ -3150,6 +3155,7 @@ bbja:
   release: 1993
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/bbja
   emulators:
@@ -3162,6 +3168,7 @@ bstone:
   release: 1993
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/bstone
   emulators:
@@ -3174,6 +3181,7 @@ cannonball:
   release:
   hardware: port
   extensions: [cannonball]
+  platform: arcade
   group: ports
   path: /userdata/roms/ports/cannonball
   emulators:
@@ -3196,6 +3204,7 @@ cavestory:
   release: 2004
   hardware: port
   extensions: [exe]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/cavestory
   emulators:
@@ -3220,6 +3229,7 @@ cdogs:
   release: 1997
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/cdogs
   emulators:
@@ -3237,6 +3247,8 @@ cgenius:
   hardware: port
   extensions: [zip]
   path: /userdata/roms/ports/cgenius
+  platform: pc
+  group: ports
   emulators:
     cgenius:
       cgenius: { requireAnyOf: [BR2_PACKAGE_CGENIUS] }
@@ -3247,6 +3259,7 @@ chailove:
   release:
   hardware: port
   extensions: [chailove]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/chailove
   emulators:
@@ -3259,6 +3272,7 @@ craft:
   release:
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/craft
   emulators:
@@ -3275,6 +3289,7 @@ devilutionx:
   release:
   hardware:   port
   extensions: [mpq]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/devilutionx
   emulators:
@@ -3301,6 +3316,7 @@ dinothawr:
   release:
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/dinothawr
   emulators:
@@ -3317,6 +3333,7 @@ doom3:
   release: 2004
   hardware: port
   extensions: [game]
+  platform: pc
   group: doom
   path: /userdata/roms/ports/doom3
   emulators:
@@ -3329,6 +3346,7 @@ droidports:
   release: 2008
   hardware: port
   extensions: [apk]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/droidports
   emulators:
@@ -3341,6 +3359,7 @@ ecwolf:
   release: 2013
   hardware: port
   extensions: [ecwolf, pk3, zip, 7z, exe, squashfs]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/ecwolf
   emulators:
@@ -3355,6 +3374,7 @@ eduke32:
   release: 1996
   hardware: port
   extensions: [grp]
+  platform: pc
   group: eduke32
   path: /userdata/roms/ports/eduke32
   emulators:
@@ -3367,6 +3387,7 @@ etekwar:
   release: 1995
   hardware: port
   extensions: [pk3]
+  platform: pc
   group: eduke32
   path: /userdata/roms/ports/etekwar
   emulators:
@@ -3379,6 +3400,7 @@ f2bgl:
   release: 1995
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/f2bgl
   emulators:
@@ -3391,6 +3413,7 @@ fallout2:
   release: 1998
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/fallout2
   emulators:
@@ -3403,6 +3426,7 @@ freedroid:
   release: 1985
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/freedroid
   emulators:
@@ -3415,6 +3439,7 @@ gong:
   release: 1972
   hardware: console
   extensions: [game]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/gong
   emulators:
@@ -3431,6 +3456,7 @@ hcl:
   release: 2011
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/hcl
   emulators:
@@ -3447,6 +3473,7 @@ hode:
   release: 1998
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/hode
   emulators:
@@ -3459,6 +3486,7 @@ hurrican:
   release: 1990
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/hurrican
   emulators:
@@ -3475,6 +3503,7 @@ ionfury:
   release: 2019
   hardware: port
   extensions: [grp]
+  platform: pc
   group: eduke32
   path: /userdata/roms/ports/ionfury
   emulators:
@@ -3487,6 +3516,8 @@ jumpnbump:
   release: 1998
   hardware: computer
   extensions: [dat]
+  platform: pc
+  group: ports
   path: /userdata/roms/ports/jumpnbump
   emulators:
     libretro:
@@ -3498,6 +3529,7 @@ lutro:
   release:
   hardware: port
   extensions: [lutro, zip, 7z]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/lutro
   emulators:
@@ -3521,6 +3553,7 @@ mrboom:
   release:
   hardware: port
   extensions: [libretro]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/mrboom
   emulators:
@@ -3537,9 +3570,9 @@ nblood:
   release: 1997
   hardware: port
   extensions: [pk3]
-  path: /userdata/roms/ports/nblood
+  platform: pc
   group: eduke32
-
+  path: /userdata/roms/ports/nblood
   emulators:
     nblood:
       nblood: { requireAnyOf: [BR2_PACKAGE_EDUKE32] }
@@ -3550,6 +3583,7 @@ nukem2:
   release: 1993
   hardware: port
   extensions: [cmp]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/nukem2
   emulators:
@@ -3562,6 +3596,7 @@ odcommander:
   release: 2022
   hardware: port
   extensions: [odc]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/od-commander
   emulators:
@@ -3578,6 +3613,7 @@ omf2097:
   release: 1994
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/omf2097
   emulators:
@@ -3606,6 +3642,7 @@ openclaw:
   release: 1997
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/openclaw
   emulators:
@@ -3618,6 +3655,7 @@ openjazz:
   release: 1994
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/openjazz
   emulators:
@@ -3630,6 +3668,7 @@ openjkja:
   release: 2003
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/openjkja
   emulators:
@@ -3642,6 +3681,7 @@ openjkjo:
   release: 2002
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/openjkjo
   emulators:
@@ -3654,6 +3694,7 @@ openlara:
   release: 1996
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/openlara
   emulators:
@@ -3666,6 +3707,7 @@ opentyrian:
   release: 1995
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/opentyrian
   emulators:
@@ -3682,6 +3724,7 @@ ports:
   release:
   hardware: port
   extensions: [sh, squashfs]
+  platform: pc
   group: ports
   path:       /userdata/roms/ports/other
   emulators:
@@ -3717,6 +3760,7 @@ prboom:
   release:
   hardware: port
   extensions: [wad, iwad, pwad, uwad]
+  platform: pc
   group: doom
   path: /userdata/roms/ports/doom
   emulators:
@@ -3745,6 +3789,7 @@ pre2:
   release: 1993
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/pre2
   emulators:
@@ -3757,6 +3802,7 @@ prototype:
   release: 1992
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/prototype
   emulators:
@@ -3773,6 +3819,7 @@ quake3:
   release: 1999
   hardware: port
   extensions: [game]
+  platform: pc
   group: quake
   path: /userdata/roms/ports/quake3
   emulators:
@@ -3785,6 +3832,7 @@ raptor:
   release: 1994
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/raptor
   emulators:
@@ -3797,6 +3845,7 @@ raze:
   release:
   hardware: port
   extensions: [raze]
+  platform: pc
   group: ports
   emulators:
     raze:
@@ -3881,6 +3930,7 @@ reminiscence:
   release:
   hardware: port
   extensions: [map,MAP]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/reminiscence
   emulators:
@@ -3905,6 +3955,7 @@ rott:
   release: 1994
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/rott
   emulators:
@@ -3917,6 +3968,7 @@ rtcw:
   release: 2001
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/rtcw
   emulators:
@@ -3929,6 +3981,7 @@ sdlpop:
   release:
   hardware: port
   extensions: [sdlpop]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/sdlpop
   emulators:
@@ -3945,6 +3998,7 @@ sonicretro:
   release: 2021
   hardware: port
   extensions: [son, scd, som, snx]
+  platform: pc
   group: sonic
   path: /userdata/roms/ports/sonicretro
   emulators:
@@ -3992,6 +4046,7 @@ sorr:
   release: 2011
   hardware: port
   extensions: [dat]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/sorr
   emulators:
@@ -4004,6 +4059,7 @@ spacecadetpinball:
   release: 1995
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/spacecadetpinball
   emulators:
@@ -4016,6 +4072,7 @@ srb2:
   release: 1998
   hardware: port
   extensions: [game]
+  platform: pc
   group: sonic
   path: /userdata/roms/ports/srb2
   emulators:
@@ -4028,6 +4085,7 @@ srb2kart:
   release: 1998
   hardware: port
   extensions: [game]
+  platform: pc
   group: sonic
   path: /userdata/roms/ports/srb2kart
   emulators:
@@ -4040,6 +4098,7 @@ stk:
   release: 2007
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/stk
   emulators:
@@ -4052,6 +4111,7 @@ stuntcar:
   release: 1989
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/stuntcar
   emulators:
@@ -4068,6 +4128,7 @@ superbroswar:
   release:
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/superbroswar
   emulators:
@@ -4080,6 +4141,7 @@ superflappybirds:
   release:
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/superflappybirds
   emulators:
@@ -4096,6 +4158,7 @@ supertux2:
   release: 2017
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/supertux2
   emulators:
@@ -4108,6 +4171,7 @@ themehospital:
   release: 1997
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/themehospital
   emulators:
@@ -4120,6 +4184,7 @@ twentyfourtyeight:
   release:
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/2048
   emulators:
@@ -4136,6 +4201,7 @@ tyrquake:
   release:
   hardware: port
   extensions: [pak]
+  platform: pc
   group: quake
   path: /userdata/roms/ports/quake1
   emulators:
@@ -4160,6 +4226,7 @@ vanillara:
   release: 1996
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   emulators:
     vanillara:
@@ -4171,6 +4238,7 @@ vanillatd:
   release: 1995
   hardware: port
   extensions: [game]
+  platform: pc
   group: ports
   emulators:
     vanillatd:
@@ -4194,6 +4262,7 @@ witchaven:
   release: 1995
   hardware: port
   extensions: [pk3]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/witchaven
   emulators:
@@ -4206,6 +4275,7 @@ xash3d_fwgs:
   release:
   hardware:   port
   extensions: [game]
+  platform: pc
   group: ports
   path: /userdata/roms/ports/xash3d_fwgs
   emulators:
@@ -4236,6 +4306,7 @@ xrick:
   release:
   hardware: port
   extensions: [zip]
+  platform: pc
   group: ports
   path: /usr/share/emulationstation/ports/xrick
   emulators:
@@ -4252,6 +4323,7 @@ yquake2:
   release: 1997
   hardware: port
   extensions: [game]
+  platform: pc
   group: quake
   path: /userdata/roms/ports/quake2
   emulators:
