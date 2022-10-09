@@ -5,6 +5,7 @@ enabledxrs="$(batocera-settings-get -f /boot/batocera-boot.conf key piboyxrs.ena
 
 case "$1" in
 	start)
+		echo performance > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 		if [[ $enabled == "1" ]]; then
 			echo "Starting PiBoy"
 			modprobe xpi_gamecon
