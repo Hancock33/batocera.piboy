@@ -6,7 +6,7 @@ index ec88627267..cce6b00681 100644
   *  If not, see <http://www.gnu.org/licenses/>.
   */
  
-+const char retroarch_git_version[] = "v1.10.3-batocera";
++const char retroarch_git_version[] = "v1.11.1-batocera";
 +
  #ifdef _WIN32
  #ifdef _XBOX
