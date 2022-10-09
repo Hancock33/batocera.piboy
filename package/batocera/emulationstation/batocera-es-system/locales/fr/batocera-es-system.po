@@ -9327,6 +9327,17 @@ msgstr "MASQUER le GPU NVIDIA"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid ""
+"Disabling this may help compatibility with certain controllers and games."
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "RAW CONTROLLER INPUT"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "ENABLE DEBUG"
 msgstr "ACTIVER LE DÉBOGAGE"
 
