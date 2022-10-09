@@ -1,0 +1,36 @@
+################################################################################
+#
+# libretro-flycast2021
+#
+################################################################################
+LIBRETRO_FLYCAST2021_VERSION = v1.2
+LIBRETRO_FLYCAST2021_SITE = https://github.com/flyinghead/flycast.git
+LIBRETRO_FLYCAST2021_SITE_METHOD=git
+LIBRETRO_FLYCAST2021_GIT_SUBMODULES=YES
+LIBRETRO_FLYCAST2021_LICENSE = GPLv2
+LIBRETRO_FLYCAST2021_DEPENDENCIES = retroarch
+
+LIBRETRO_FLYCAST2021_PLATFORM = $(LIBRETRO_PLATFORM)
+
+LIBRETRO_FLYCAST2021_CONF_OPTS = -DUSE_OPENMP=ON -DLIBRETRO=ON \
+    -DBUILD_SHARED_LIBS=OFF -DBUILD_EXTERNAL=OFF \
+    -DGIT_VERSION="$(shell echo $(FLYCAST_VERSION) | cut -c 1-7)"
+
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
+    LIBRETRO_FLYCAST2021_CONF_OPTS += -DUSE_OPENGL=ON
+else
+    LIBRETRO_FLYCAST2021_CONF_OPTS += -DUSE_GLES2=ON -DUSE_GLES=OFF
+endif
+
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
+    LIBRETRO_FLYCAST2021_CONF_OPTS += -DUSE_VULKAN=ON
+else
+    LIBRETRO_FLYCAST2021_CONF_OPTS += -DUSE_VULKAN=OFF
+endif
+
+define LIBRETRO_FLYCAST2021_INSTALL_TARGET_CMDS
+	$(INSTALL) -D $(@D)/flycast_libretro.so \
+		$(TARGET_DIR)/usr/lib/libretro/flycast2021_libretro.so
+endef
+
+$(eval $(cmake-package))

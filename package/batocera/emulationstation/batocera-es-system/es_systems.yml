@@ -413,6 +413,7 @@ dreamcast:
   emulators:
     libretro:
       flycast:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST] }
+      flycast2021:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2021] }
     flycast:
       flycast:        { requireAnyOf: [BR2_PACKAGE_FLYCAST]          }
     redream:
@@ -434,6 +435,7 @@ naomi:
   emulators:
     libretro:
       flycast:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]  }
+      flycast2021:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2021] }
     flycast:
       flycast:  { requireAnyOf: [BR2_PACKAGE_FLYCAST]           }
     demul:
@@ -449,6 +451,7 @@ naomigd:
   emulators:
     libretro:
       flycast:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]  }
+      flycast2021:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2021] }
     flycast:
       flycast:  { requireAnyOf: [BR2_PACKAGE_FLYCAST]           }
     demul:
@@ -464,6 +467,7 @@ atomiswave:
   emulators:
     libretro:
       flycast: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST] }
+      flycast2021:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2021] }
     flycast:
       flycast: { requireAnyOf: [BR2_PACKAGE_FLYCAST]          }
     demul:
