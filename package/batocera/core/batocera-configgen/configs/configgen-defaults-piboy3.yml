@@ -5,6 +5,7 @@ default:
     retroarch.audio_out_rate: 44100
     retroarch.vrr_runloop_enable: "true"
     retroarch.menu_widget_scale_auto: "true"
+    retroarch.audio_latency: 96
     video_threaded: true
     hud_support: false 
 
