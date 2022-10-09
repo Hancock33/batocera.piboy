@@ -50,3 +50,9 @@ psx:
 sgb:
   emulator: libretro
   core:     mgba
+wii:
+  emulator: libretro
+  core:     dolphin
+wiiware:
+  emulator: libretro
+  core:     dolphin

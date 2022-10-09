@@ -1513,6 +1513,18 @@ wii:
 
     Trouvez la documentation ici: https://wiki.batocera.org/systems:wii
 
+wiiware:
+  name:       WiiWare
+  manufacturer: Nintendo
+  release: 2006
+  hardware: console
+  extensions: [wad]
+  emulators:
+    dolphin:
+      dolphin:  { requireAnyOf: [BR2_PACKAGE_DOLPHIN_EMU]       }
+    libretro:
+      dolphin: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOLPHIN] }
+
 ps2:
   name:       PlayStation 2
   manufacturer: Sony
