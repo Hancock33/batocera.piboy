@@ -756,6 +756,9 @@ wasm4:
 wii:
   emulator: dolphin
   core:     dolphin
+wiiware:
+  emulator: dolphin
+  core:     dolphin
 wiiu:
   emulator: cemu
   core:     cemu
