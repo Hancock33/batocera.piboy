@@ -3,8 +3,8 @@
 # YUZU
 #
 ################################################################################
-# Version: Commits on Jul 26, 2022
-YUZU_VERSION = 7c63f926ab590d0e3ddf54a1a4fc72238af6ac24
+# Version.: Commits on Oct 09, 2022
+YUZU_VERSION = 55e6d0dae003378ca8ed9a10b6fbb8626a1fd25f
 YUZU_SITE = https://github.com/yuzu-emu/yuzu.git
 YUZU_SITE_METHOD=git
 YUZU_GIT_SUBMODULES=YES
@@ -35,6 +35,7 @@ define YUZU_INSTALL_TARGET_CMDS
 
         $(INSTALL) -D $(@D)/buildroot-build/bin/yuzu $(TARGET_DIR)/usr/bin/
         $(INSTALL) -D $(@D)/buildroot-build/bin/yuzu-cmd $(TARGET_DIR)/usr/bin/
+        $(INSTALL) -D $(@D)/buildroot-build/bin/yuzu-room $(TARGET_DIR)/usr/bin/
 
         #evmap config
         mkdir -p $(TARGET_DIR)/usr/share/evmapy
