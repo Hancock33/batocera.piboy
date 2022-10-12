@@ -1,6 +1,8 @@
---- a/Src/OSD/SDL/Main.cpp	2020-07-27 20:42:50.558288000 +0200
-+++ b/Src/OSD/SDL/Main.cpp	2020-07-27 20:53:37.716417446 +0200
-@@ -429,7 +429,7 @@
+diff --git a/Src/OSD/SDL/Main.cpp b/Src/OSD/SDL/Main.cpp
+index e185a43..21d7081 100644
+--- a/Src/OSD/SDL/Main.cpp
++++ b/Src/OSD/SDL/Main.cpp
+@@ -436,7 +436,7 @@ void Screenshot()
      time_t now = std::time(nullptr);
      tm* ltm = std::localtime(&now);
  
@@ -9,7 +11,7 @@
  
      info += file;
      puts(info.c_str());
-@@ -569,7 +569,7 @@
+@@ -576,7 +576,7 @@ static void SaveState(IEmulator *Model3)
  {
    CBlockFile  SaveState;
  
@@ -18,7 +20,7 @@
    if (OKAY != SaveState.Create(file_path, "Supermodel Save State", "Supermodel Version " SUPERMODEL_VERSION))
    {
      ErrorLog("Unable to save state to '%s'.", file_path.c_str());
-@@ -594,7 +594,7 @@
+@@ -601,7 +601,7 @@ static void LoadState(IEmulator *Model3, std::string file_path = std::string())
  
    // Generate file path
    if (file_path.empty())
@@ -27,7 +29,7 @@
  
    // Open and check to make sure format is correct
    if (OKAY != SaveState.Load(file_path))
-@@ -628,7 +628,7 @@
+@@ -635,7 +635,7 @@ static void SaveNVRAM(IEmulator *Model3)
  {
    CBlockFile  NVRAM;
  
@@ -36,7 +38,7 @@
    if (OKAY != NVRAM.Create(file_path, "Supermodel NVRAM State", "Supermodel Version " SUPERMODEL_VERSION))
    {
      ErrorLog("Unable to save NVRAM to '%s'. Make sure directory exists!", file_path.c_str());
-@@ -651,7 +651,7 @@
+@@ -658,7 +658,7 @@ static void LoadNVRAM(IEmulator *Model3)
    CBlockFile  NVRAM;
  
    // Generate file path
@@ -45,7 +47,7 @@
  
    // Open and check to make sure format is correct
    if (OKAY != NVRAM.Load(file_path))
-@@ -1273,8 +1273,8 @@
+@@ -1317,8 +1317,8 @@ QuitError:
   Entry Point and Command Line Procesing
  ******************************************************************************/
  
