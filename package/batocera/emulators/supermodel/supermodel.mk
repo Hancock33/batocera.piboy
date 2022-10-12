@@ -34,20 +34,11 @@ define SUPERMODEL_INSTALL_TARGET_CMDS
 	$(SED) 's|InputGearShiftDown = "KEY_H"|InputGearShiftDown = "KEY_H,JOY1_BUTTON5,JOY1_RYAXIS_POS"|g' $(TARGET_DIR)/usr/share/supermodel/Supermodel-Driving.ini.template
 endef
 
-define SUPERMODEL_LINE_ENDINGS_FIXUP
-	# DOS2UNIX Supermodel.ini and Main.cpp - patch system does not support different line endings
-	sed -i -E -e "s|\r$$||g" $(@D)/Src/OSD/SDL/Main.cpp
-	sed -i -E -e "s|\r$$||g" $(@D)/Src/Inputs/Inputs.cpp
-	sed -i -E -e "s|\r$$||g" $(@D)/Src/Graphics/New3D/R3DShaderTriangles.h
-endef
-
 define SUPERMODEL_POST_PROCESS
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy $(TARGET_DIR)/usr/share/supermodel
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/supermodel/model3.supermodel.keys $(TARGET_DIR)/usr/share/evmapy
         cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/supermodel/NVRAM $(TARGET_DIR)/usr/share/supermodel
 endef
-
-SUPERMODEL_PRE_PATCH_HOOKS += SUPERMODEL_LINE_ENDINGS_FIXUP
 
 SUPERMODEL_POST_INSTALL_TARGET_HOOKS += SUPERMODEL_POST_PROCESS
 
