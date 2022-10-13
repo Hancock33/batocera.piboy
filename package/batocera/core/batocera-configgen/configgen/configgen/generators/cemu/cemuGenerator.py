@@ -109,7 +109,11 @@ class CemuGenerator(Generator):
         CemuGenerator.setSectionConfig(config, xml_root, "vk_warning", "false")
         CemuGenerator.setSectionConfig(config, xml_root, "fullscreen", "true")
         # Language
-        CemuGenerator.setSectionConfig(config, xml_root, "console_language", str(getCemuLangFromEnvironment()))
+        if not system.isOptSet("cemu_console_language") or system.config["cemu_console_language"] == "ui":
+            lang = getLangFromEnvironment()
+        else:
+            lang = system.config["cemu_console_language"]
+        CemuGenerator.setSectionConfig(config, xml_root, "cemu_console_language", str(getCemuLang(lang)))
 
         ## [WINDOW POSITION]
         CemuGenerator.setSectionConfig(config, xml_root, "window_position", "")
@@ -216,6 +220,13 @@ class CemuGenerator(Generator):
         xml = codecs.open(configFile, "w", "utf-8")
         dom_string = os.linesep.join([s for s in config.toprettyxml().splitlines() if s.strip()]) # remove ugly empty lines while minicom adds them...
         xml.write(dom_string)
+    
+    # Show mouse for touchscreen actions    
+    def getMouseMode(self, config):
+        if "cemu_touchpad" in config and config["cemu_touchpad"] == "True":
+            return True
+        else:
+            return False
 
     @staticmethod
     def getRoot(config, name):
@@ -243,14 +254,15 @@ class CemuGenerator(Generator):
         else:
             xml_elt.appendChild(config.createTextNode(value))
 
-# Lauguage auto setting
-def getCemuLangFromEnvironment():
+# Language setting
+def getLangFromEnvironment():
     if 'LANG' in environ:
-        lang = environ['LANG'][:5]
+        return environ['LANG'][:5]
     else:
-        lang = "en_US"
+        return "en_US"
 
-    availableLanguages = { "ja_JP": 0, "en_US": 1, "fr_FR": 2, "de_DE": 3, "it_IT": 4, "es_ES": 5, "zh_CN": 6, "ko_KR": 7, "hu_HU": 8, "pt_PT": 9, "ru_RU": 10, "zh_TW": 11 }
+def getCemuLang(lang):
+    availableLanguages = { "ja_JP": 0, "en_US": 1, "fr_FR": 2, "de_DE": 3, "it_IT": 4, "es_ES": 5, "zh_CN": 6, "ko_KR": 7, "nl_NL": 8, "pt_PT": 9, "ru_RU": 10, "zh_TW": 11 }
     if lang in availableLanguages:
         return availableLanguages[lang]
     else:
