@@ -112,11 +112,14 @@ class DolphinGenerator(Generator):
         # Wiimote scanning
         dolphinSettings.set("Core", "WiimoteContinuousScanning", "True")
 
-        # Gamecube pads forced as standard pad
-        dolphinSettings.set("Core", "SIDevice0", "6")
-        dolphinSettings.set("Core", "SIDevice1", "6")
-        dolphinSettings.set("Core", "SIDevice2", "6")
-        dolphinSettings.set("Core", "SIDevice3", "6")
+        # Gamecube ports
+        # Create a for loop going 1 through to 4 and iterate through it:
+        for i in range(1,5):
+            if system.isOptSet("dolphin_port_" + str(i) + "_type"):
+                # Sub in the appropriate values from es_features, accounting for the 1 integer difference.
+                dolphinSettings.set("Core", "SIDevice" + str(i - 1), system.config["dolphin_port_" + str(i) + "_type"])
+            else:
+                dolphinSettings.set("Core", "SIDevice" + str(i - 1), "6")
 
         # Change discs automatically
         dolphinSettings.set("Core", "AutoDiscChange", "True")
