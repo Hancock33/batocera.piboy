@@ -18,6 +18,8 @@ snes:
     For more info: https://wiki.batocera.org/systems:snes
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:snes
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:snes
 
 snes-msu1:
   name:       Super Disc System (MSU1)
@@ -130,6 +132,8 @@ amiga500:
     For more info: https://wiki.batocera.org/systems:amiga500
   comment_fr:  |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:amiga500
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:amiga500
 
 amiga1200:
   name:       Amiga AGA
@@ -154,13 +158,15 @@ amiga1200:
     For more info: https://wiki.batocera.org/systems:amiga1200
   comment_fr:  |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:amiga1200
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:amiga500
 
 amigacd32:
   name:       Amiga CD32
   manufacturer: Commodore
   release: 1994
   hardware: console
-  extensions: [bin, cue, iso, chd, lha]
+  extensions:   [bin, chd, cue, iso, lha,  m3u]
   platform:   amiga
   group:      amiga
   emulators:
@@ -178,7 +184,7 @@ amigacdtv:
   manufacturer: Commodore
   release: 1991
   hardware: console
-  extensions: [bin, cue, iso, chd, m3u]
+  extensions:   [bin, chd, cue, iso, lha,  m3u]
   platform:   amiga
   group:      amiga
   emulators:
@@ -198,14 +204,16 @@ nes:
   group:      nes
   emulators:
     libretro:
-      fceumm:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FCEUMM]      }
-      nestopia: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_NESTOPIA]    }
-      mesen:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESEN]       }
-      quicknes: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_QUICKNES]    }
+      fceumm:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FCEUMM] }
+      nestopia: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_NESTOPIA] }
+      mesen:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESEN] }
+      quicknes: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_QUICKNES] }
   comment_en: |
     For more info: https://wiki.batocera.org/systems:nes
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:nes
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:nes
 
 n64:
   name:       Nintendo 64
@@ -215,9 +223,9 @@ n64:
   extensions: [z64, n64, v64, zip, 7z]
   emulators:
     mupen64plus:
-      gliden64:   { requireAnyOf: [BR2_PACKAGE_MUPEN64PLUS_GLIDEN64] }
-      glide64mk2: { requireAnyOf: [BR2_PACKAGE_MUPEN64PLUS_VIDEO_GLIDE64MK2]  }
-      rice:       { requireAnyOf: [BR2_PACKAGE_MUPEN64PLUS_VIDEO_RICE]        }
+      gliden64:   { requireAnyOf: [BR2_PACKAGE_MUPEN64PLUS_GLIDEN64], incompatible_extensions: [zip, 7z] }
+      glide64mk2: { requireAnyOf: [BR2_PACKAGE_MUPEN64PLUS_VIDEO_GLIDE64MK2], incompatible_extensions: [zip, 7z] }
+      rice:       { requireAnyOf: [BR2_PACKAGE_MUPEN64PLUS_VIDEO_RICE], incompatible_extensions: [zip, 7z] }
     libretro:
       mupen64plus-next: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MUPEN64PLUS_NEXT] }
       parallel_n64:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PARALLEL_N64] }
@@ -226,6 +234,9 @@ n64:
     For more info: https://wiki.batocera.org/systems:n64
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:n64
+  comment_br: |
+    Caso o Mupen64Plus não carregue as ROMs compactadas em formato .zip (tela preta retornando ao menu), descompacte as ROMs e executando nos formatos .z64/.n64.
+    Para mais informações: https://wiki.batocera.org/systems:n64
 
 n64dd:
   name:       Nintendo 64 Disk Drive
@@ -257,6 +268,8 @@ gba:
     For more info: https://wiki.batocera.org/systems:gba
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:gba
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:gba
 
 gbc:
   name:       Game Boy Color
@@ -275,6 +288,8 @@ gbc:
     For more info: https://wiki.batocera.org/systems:gbc
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:gbc
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:gbc
 
 gb:
   name:       Game Boy
@@ -293,6 +308,8 @@ gb:
     For more info: https://wiki.batocera.org/systems:gb
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:gb
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:gb
 
 sgb:
   name:       Super Game Boy
@@ -321,6 +338,8 @@ gbc2players:
     For more info: https://wiki.batocera.org/systems:gbc2players
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:gbc2players
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:gbc2players
 
 gb2players:
   name:       Game Boy (2 players)
@@ -336,6 +355,8 @@ gb2players:
     For more info: https://wiki.batocera.org/systems:gb2players
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:gb2players
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:gb2players
 
 nds:
   name:       Nintendo DS
@@ -424,6 +445,8 @@ dreamcast:
     For more info: https://wiki.batocera.org/systems:dreamcast
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:dreamcast
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:dreamcast
 
 naomi:
   name:       Naomi
@@ -491,6 +514,8 @@ megadrive:
     For more info: https://wiki.batocera.org/systems:megadrive
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:megadrive
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:megadrive
 
 segacd:
   name:       Sega CD
@@ -579,6 +604,8 @@ psp:
     For more info: https://wiki.batocera.org/systems:psp
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:psp
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:psp
 
 psx:
   name:       PlayStation
@@ -598,6 +625,8 @@ psx:
     For more info: https://wiki.batocera.org/systems:psx
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:psx
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:psx
 
 pcengine:
   name:       PC Engine
@@ -676,6 +705,17 @@ scummvm:
     Si vous souhaitez utiliser des Midi ROM, c'est-à-dire le synthé MT-32, mettez vos fichiers dans /userdata/roms/scummvm/extras
 
     Trouvez la documentation ici: https://wiki.batocera.org/systems:scummvm
+comment_br: |
+    Coloque os diretóios dos jogos scummvm nesta pasta.
+
+    Para cada jogo, você deve criar um arquivo com o nome abreviado do jogo e com a extensão ".scummvm"
+
+    Nomes curtos de jogos podem ser encontrados em http://scummvm.org/compatibility/
+    Por exemplo, para "Broken Sword" crie o arquivo "Broken Sword/sword1.scummvm"
+
+    Se você deseja usar Midi ROM, ou seja, o sintetizador MT-32, coloque seus arquivos em /userdata/roms/scummvm/extras
+
+    Para mais informações: https://wiki.batocera.org/systems:scummvm
 
 dos:
   name:       Dos (x86)
@@ -691,7 +731,7 @@ dos:
     dosbox_staging:
       dosbox_staging:   { requireAnyOf: [BR2_PACKAGE_DOSBOX_STAGING], incompatible_extensions: [zip] }
     dosboxx:
-      dosboxx:         { requireAnyOf: [BR2_PACKAGE_DOSBOX_X], incompatible_extensions: [zip] }
+      dosbox-x:         { requireAnyOf: [BR2_PACKAGE_DOSBOX_X], incompatible_extensions: [zip] }
     libretro:
       dosbox_pure:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOSBOX_PURE] }
   comment_en: |
@@ -710,9 +750,6 @@ dos:
 
     To quit a game, press CTRL + F9.
 
-    Games files are available on myabandonware:
-    http://www.myabandonware.com/browse/platform/dos/
-
     For more info: https://wiki.batocera.org/systems:dos
   comment_fr: |
     Chaque jeu (fichiers) doit être contenu dans un dossier ayant l'extension ".pc .dos".
@@ -730,10 +767,24 @@ dos:
 
     Pour quitter un jeu, appuyer sur CTRL + F9.
 
-    Les jeux DOS sont disponibles sur myabandonware:
-    http://www.myabandonware.com/browse/platform/dos/
-
     La doc dos pour Batocera se trouve à cet endroit : https://wiki.batocera.org/systems:dos
+  comment_br: |
+     Cada jogo (arquivos) deve ser colocado em seu próprio diretório com a extensão ".pc .dos".
+     Em cada diretório, um arquivo dosbox.bat deve conter a linha de comando para iniciar o jogo.
+
+     Por exemplo:
+     miniputt.pc/
+     miniputt.pc/dosbox.bat
+     miniputt.pc/MP.DAT
+     miniputt.pc/MP.EXE
+
+     Onde o dosbox.bat contém: MP.EXE
+
+     Com pure-dosbox você também pode usar arquivos zip.
+
+     Para sair de um jogo, pressione CTRL + F9.
+
+     Para mais informações: https://wiki.batocera.org/systems:dos
 
 fbneo:
   name:       Final Burn Neo
@@ -760,6 +811,12 @@ fbneo:
     Le fichier FinalBurn Neo (ClrMame Pro XML, Arcade only).dat dans bios/FBNeo peut servir à valider les ROMs avec clrmamepro disponible sur http://mamedev.emulab.it/clrmamepro/
 
     Vous pouvez trouver la doc arcade là : https://wiki.batocera.org/arcade
+  comment_br: |
+    As ROMs devem vir do romset FBneo versão 1.0.0.0
+
+    O arquivo FinalBurn Neo (ClrMame Pro XML, somente Arcade).dat em bios/FBNeo pode ser usado para verificar ROMs com clrmamepro disponível em http://mamedev.emulab.it/clrmamepro/
+
+    Para mais informações: https://wiki.batocera.org/arcade
 
 mame:
   name:       Mame
@@ -799,6 +856,17 @@ mame:
     - Ajoutez vos fichiers samples dans le répertoire /userdata/bios/mame2003/samples/
 
     Vous pouvez trouver la doc arcade là : https://wiki.batocera.org/arcade
+  comment_br: |
+    O sistema usa o libretro mame2003+ como núcleo padrão: ROMs compatíveis devem vir da versão de romset 0.78+
+    Dependendo do seu hardawre, outros núcleos mame estão incluídos:
+      - núcleo mame mais recente (0,228 atualmente)
+      - imame4all baseado no romset 0.37b5
+      - mame2010 baseado em romset 0.139
+
+    Arquivos especiais para o núcleo mame2003:
+    - Adicione seus arquivos de samples em /userdata/bios/mame2003/samples/
+
+    Para mais informações: https://wiki.batocera.org/arcade
 
 neogeo:
   name:       Neo-Geo
@@ -876,6 +944,33 @@ colecovision:
     Extraire de ce dernier, les répertoire "Databases" et "Machines" et les ajouter dans le répertoire bios.
 
     Valider que le fichier coleco.rom (md5sum = 2c66f5911e5b42b8ebe113403548eee7) est bien dans le répertoire /bios/Machines/COL - ColecoVision/
+  comment_br: |
+    ## BIOS##
+
+    - BlueMSX:
+    Você deve baixar a versão independente do BlueMSX, disponível nesta URL:
+    http://bluemsx.msxblue.com/rel_download/blueMSXv282full.zip
+
+    Extraia as pastas "Databases" e "Machines" e adicione-as à pasta bios.
+
+    Verifique se o arquivo coleco.rom (md5sum = 2c66f5911e5b42b8ebe113403548eee7) está dentro da pasta /bios/Machines/COL - ColecoVision/
+
+    ## MAPEAMENTO ##
+
+    JOYPAD_UP     = COLECO 1
+    JOYPAD_DOWN   = COLECO 2
+    JOYPAD_LEFT   = COLECO 3
+    JOYPAD_RIGHT  = COLECO 4
+    JOYPAD_A      = COLECO 5
+    JOYPAD_B      = COLECO 6
+    JOYPAD_X      = COLECO 7
+    JOYPAD_Y      = COLECO 8
+    JOYPAD_R2     = COLECO 9
+    JOYPAD_L2     = COLECO 0
+    JOYPAD_R      = COLECO BUTTON1
+    JOYPAD_L      = COLECO BUTTON2
+    JOYPAD_SELECT = COLECO STAR
+    JOYPAD_START  = COLECO HASH
 
 atari800:
   name:       Atari 800
@@ -903,6 +998,9 @@ xegs:
   comment_en: |
           Requires MAME BIOS file xegs.zip
           Software list mode recommended
+  comment_br: |
+          Requer o arquivo xegs.zip da BIOS do MAME
+          Modo de lista de software recomendado
 
 atari2600:
   name:       Atari 2600
@@ -924,7 +1022,7 @@ atari5200:
   emulators:
     libretro:
       atari800: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ATARI800] }
-      a5200:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_A5200] }
+      a5200:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_A5200]    }
 
 atari7800:
   name:       Atari 7800
@@ -1008,6 +1106,8 @@ tic80:
     For more info: https://wiki.batocera.org/systems:tic-80
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:tic-80
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:tic-80
 
 pico8:
   name:       Pico-8
@@ -1022,6 +1122,8 @@ pico8:
     For more info: https://wiki.batocera.org/systems:pico-8
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:pico-8
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:pico-8
 
 channelf:
   name:       Channel-F
@@ -1072,6 +1174,9 @@ amstradcpc:
   comment_fr: |
     Pour activer le gamepad, entrer dans le menu Retroarch avec "Hotkey+B", puis modifiez l'option:
     "Quick Menu/Core Input Options/User 1 Device type : Retropad" en "Amstrad Joystick"
+  comment_br: |
+    Para habilitar o suporte ao controle, vá no menu RetroArch com "Hotkey + B" e altere esta opção:
+    De "Quick Menu/Core Input Options/User 1 Device type: Retropad" para "Amstrad Joystick"
 
 msx1:
   name:       MSX1
@@ -1120,6 +1225,30 @@ msx1:
 
     - Emulateur FMSX :
     Vous devez avoir les fichiers fournis avec la distribution de fmsx suivant dans le dossier bios:
+    CARTS.SHA
+    CYRILLIC.FNT
+    DISK.ROM
+    FMPAC.ROM
+    FMPAC16.ROM
+    ITALIC.FNT
+    KANJI.ROM
+    MSX.ROM
+    MSX2.ROM
+    MSX2EXT.ROM
+    MSX2P.ROM
+    MSX2PEXT.ROM
+    MSXDOS2.ROM
+    PAINTER.ROM
+    RS232.ROM
+  comment_br: |
+    ## BIOS ##
+
+    - BlueMSX (PADRÃO):
+    Você deve baixar a versão independente do BlueMSX, disponível neste endereço: http://bluemsx.msxblue.com/rel_download/blueMSXv282full.zip
+    Em seguida, extraia as pastas "Databases" e "Machines" e adicione-as à pasta bios.
+
+    - FMSX:
+    Você deve ter os seguintes arquivos, disponíveis com a distribuição fmsx, na pasta bios:
     CARTS.SHA
     CYRILLIC.FNT
     DISK.ROM
@@ -1198,6 +1327,30 @@ msx2:
     MSXDOS2.ROM
     PAINTER.ROM
     RS232.ROM
+  comment_br: |
+    ## BIOS ##
+
+    - BlueMSX (PADRÃO):
+    Você deve baixar a versão independente do BlueMSX, disponível neste endereço: http://bluemsx.msxblue.com/rel_download/blueMSXv282full.zip
+    Em seguida, extraia as pastas "Databases" e "Machines" e adicione-as à pasta bios.
+
+    - FMSX:
+    Você deve ter os seguintes arquivos, disponíveis com a distribuição fmsx, na pasta bios:
+    CARTS.SHA
+    CYRILLIC.FNT
+    DISK.ROM
+    FMPAC.ROM
+    FMPAC16.ROM
+    ITALIC.FNT
+    KANJI.ROM
+    MSX.ROM
+    MSX2.ROM
+    MSX2EXT.ROM
+    MSX2P.ROM
+    MSX2PEXT.ROM
+    MSXDOS2.ROM
+    PAINTER.ROM
+    RS232.ROM
 
 msx2+:
   name:       MSX2+
@@ -1246,6 +1399,30 @@ msx2+:
 
     - Emulateur FMSX :
     Vous devez avoir les fichiers fournis avec la distribution de fmsx suivant dans le dossier bios:
+    CARTS.SHA
+    CYRILLIC.FNT
+    DISK.ROM
+    FMPAC.ROM
+    FMPAC16.ROM
+    ITALIC.FNT
+    KANJI.ROM
+    MSX.ROM
+    MSX2.ROM
+    MSX2EXT.ROM
+    MSX2P.ROM
+    MSX2PEXT.ROM
+    MSXDOS2.ROM
+    PAINTER.ROM
+    RS232.ROM
+ comment_br: |
+    ## BIOS ##
+
+   - BlueMSX (PADRÃO):
+    Você deve baixar a versão independente do BlueMSX, disponível neste endereço: http://bluemsx.msxblue.com/rel_download/blueMSXv282full.zip
+    Em seguida, extraia as pastas "Databases" e "Machines" e adicione-as à pasta bios.
+
+    - FMSX:
+    Você deve ter os seguintes arquivos, disponíveis com a distribuição fmsx, na pasta bios:
     CARTS.SHA
     CYRILLIC.FNT
     DISK.ROM
@@ -1348,6 +1525,31 @@ zxspectrum:
         For keyboard games: Set users 1 and 2 to none, and user 3 to Sinclair Keyboard. You won't have any joystick and the embedded keyboard won't work, but the entire physical keyboard will be available for you to type in those text adventure commands.
 
     If you set a joystick along with the keyboard, the joystick will work just fine except for the bindings to RETURN and SPACE, and the keyboard won't register the keys assigned to the Cursor joystick, or to the L1 and R1 buttons for all other joystick types.
+  comment_br: |
+    ## Dispositivos de entrada ##
+
+    Existem sete tipos de controles emulados:
+
+        Cursor
+        Kempston
+        Sinclair 1
+        Sinclair 2
+        Timex 1
+        Timex 2
+        Joystick mais completo
+
+    Os usuários podem configurar seus tipos de controles na configuração de entrada na interface de front end (Hotkey+B). No entanto, o fuse-libretro permite no máximo dois controles para que apenas os usuários um e dois possam realmente usar os seus na emulação.
+
+    Os usuários 1 e 2 podem escolher qualquer um dos controles como seus tipos de dispositivo, o usuário 3 só pode escolher o teclado Sinclair.
+
+    Os botões A, X e Y são mapeados para o botão de disparo do controle e o botão B é mapeado para o botão direcional PARA CIMA. Os botões L1 e R1 são mapeados para RETURN (ENTER pular linha) and SPACE (Barra de Espaços), respectivamente. O botão SELECT (Shift direito) exibe o teclado embutido na tela, que é útil se você tiver apenas controles conectados à sua caixa.
+
+    Existem alguns conflitos na forma de como os dispositivos de entrada interagem devido ao uso das teclas físicas do teclado como botões do controle. Para uma boa experiência de jogo, defina os tipos de dispositivo do usuário da seguinte forma:
+
+        Para jogos de controle: Defina o usuário 1 como um tipo de controle. Opcionalmente, defina o usuário 2 para outro tipo de controle (jogos cooperativos locais). Defina o usuário 3 como nenhum. Desta forma, você pode usar L1 como RETURN (ENTER pula linha), R1 como SPACE (Barra de Espaços) e SELECT (Shift direito) para exibir o teclado embutido.
+        Para jogos de teclado: defina os usuários 1 e 2 para nenhum e o usuário 3 para o teclado Sinclair. Você não terá nenhum controle e o teclado embutido não funcionará, mas todo o teclado físico estará disponível para você digitar esses comandos de aventura em texto.
+
+    Se você definir um controle junto com o teclado, o controle funcionará bem, exceto pelas ligações para RETURN (ENTER pula linha) e SPACE (Barra de Espaços), e o teclado não registrará as teclas atribuídas aocontrole de cursor ou aos botões L1 e R1 para todos os outros tipos de controle.
 
 moonlight:
   name:       Moonlight Embedded
@@ -1362,6 +1564,8 @@ moonlight:
     For more info: https://wiki.batocera.org/systems:moonlight
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:moonlight
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:moonlight
 
 apple2:
   name:       Apple II
@@ -1422,6 +1626,8 @@ gamecube:
     For more info: https://wiki.batocera.org/systems:gamecube
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:gamecube
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:gamecube
 
 triforce:
   name:       Triforce
@@ -1468,6 +1674,14 @@ wii:
     Mettez les textures personnalisées dans /userdata/saves/dolphin-emu/Load/Textures/<game id>.
 
     Trouvez la documentation ici: https://wiki.batocera.org/systems:wii
+  comment_br: |
+    Para usar um wiimote virtual na horizontal, inclua ".side". no nome do arquivo da rom do jogo (por exemplo ".side.iso").
+    Você pode escolher os controles de eixo entre i(nfrared), s(wing), t(ilt) ou n(unchuk):
+        por exemplo, para jogar mariokart wii, renomeie-o como mario_kart.side.ti.iso (para obter a inclinação no primeiro eixo e o infravermelho no 2º (ti))
+        por exemplo, para jogar mario galaxy, renomeie-o como mario_galaxy.ni.iso (pegue o nunchuk no primeiro eixo e o infravermelho no 2º (ni))
+    Para usar texturas personalizadas, coloque-as em /userdata/saves/dolphin-emu/Load/Textures/<game id>.
+
+    Para mais informações: https://wiki.batocera.org/systems:wii
 
 wiiware:
   name:       WiiWare
@@ -1499,6 +1713,8 @@ ps2:
     For more info: https://wiki.batocera.org/systems:ps2
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:ps2
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:ps2
 
 ps3:
   name:       PlayStation 3
@@ -1522,6 +1738,13 @@ ps3:
     La première fois que vous chargez un jeu, cela met du temps (une barre de progression est visible). Cela ne se produit pas les fois suivantes.
 
     Trouvez la documentation ici : https://wiki.batocera.org/systems:ps3
+  comment_br: |
+    Você deve primeiramente carregar o firmware executando o rpcs3-config no menu>f1>Applications e depois File>Install firmware.
+    As roms de PS3 são diretórios que devem ser renomeados para terminar com .ps3.
+    Os jogos digitais da PSN são instalados no rpcs3-config, crie um arquivo de texto que termine com .psn que contenha o ID do jogo.
+    A primeira vez que você carrega um jogo, levará tempo para ser processado (uma barra de progresso é visível). Isso não acontece nas próximas vezes.
+
+    Para mais informações: https://wiki.batocera.org/systems:ps3
 
 3do:
   name:       3DO Interactive Multiplayer
@@ -1634,6 +1857,8 @@ daphne:
     For more info: https://wiki.batocera.org/systems:daphne
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:daphne
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:daphne
 
 thomson:
   name:       Thomson - MO/TO (Theodore)
@@ -1698,6 +1923,8 @@ windows:
     For more info: https://wiki.batocera.org/systems:windows
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:windows
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:windows
 
 windows_installers:
   name:       Install a new Windows game
@@ -1715,6 +1942,8 @@ windows_installers:
     For more info: https://wiki.batocera.org/systems:windows
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:windows
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:windows
 
 wiiu:
   name:       Wii U
@@ -1731,6 +1960,8 @@ wiiu:
     For more info: https://wiki.batocera.org/systems:wiiu
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:wiiu
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:wiiu
 
 solarus:
   name:       Solarus
@@ -1755,6 +1986,8 @@ easyrpg:
       easyrpg: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EASYRPG] }
   comment_en: |
           The EasyRPG engine supports RPG Maker 2000 and 2003 games, you have to put the game's entire folder inside, and add .easyrpg to it's name the game folder is the one containing the RPG_RT.ldb file.
+  comment_br: |
+          A engine do EasyRPG suporta jogos RPG Maker 2000 e 2003, você deve colocar a pasta inteira do jogo dentro do diretório, e adicionar .easyrpg ao final do nome da pasta do jogo, aquela que contém o arquivo RPG_RT.ldb.
 
 pygame:
   name:       Pygame
@@ -1771,6 +2004,8 @@ pygame:
           Create your game yourself ! Pygame helps you to create games in only some lines. Find a lot of example on internet.
   comment_fr: |
           Créez vos jeux vous-même ! Pygame vous aide à créer vos propres jeux en quelques lignes de code seulement. Vous trouvez sur internet plein d'exemples et de tutoriaux.
+  comment_br: |
+          Crie seu jogo você mesmo ! Pygame ajuda você a criar jogos com apenas algumas linhas. Encontre um monte de exemplos na internet.
 
 imageviewer:
   name:       Screenshots
@@ -1851,6 +2086,53 @@ model3:
     ----------------
 
     See the Supermodel FAQ here - https://www.supermodel3.com/FAQ.html
+  comment_br: |
+    ## SEGA MODEL 3 INFORMAÇÕES IMPORTANTES ##
+
+    Coloque suas roms model3 neste diretório.
+
+    Os arquivos de rom devem ter a extensão ".zip" da romset do mame versão 0.220.
+
+    Isso permite que o emulador Supermodel use roms compactados.
+    Os arquivos dentro do .zip devem corresponder às informações de rom e CRC da placa esperadas do emulador ou não funcionarão.
+    Cada arquivo .zip deve conter apenas uma rom compactada e ser nomeado corretamente ser compatível.
+
+    Compatibilidade do jogo:
+    -------------------
+
+    A compatibilidade do jogo pode ser encontrada aqui - https://www.supermodel3.com/About.html
+
+    Arquivo de configuração:
+    -----------------------
+
+    O arquivo de configuração, Supermodel.ini, está localizado na pasta Config (/system/configs/supermodel/), ele armazena as configurações de entrada, bem como a maior parte do que pode ser definido via linha de comando.
+
+    Áudio:
+    ------
+
+    O volume do som e da música pode ser ajustado durante o tempo de execução usando as teclas F9 e F12.
+    As configurações de volume também podem ser especificadas no arquivo de configuração, globalmente para todos os jogos ou personalizadas para cada jogo.
+
+    Salvar estados e memória não volátil:
+    ------------------------------------
+
+    Os estados de salvamento são totalmente suportados. Até 10 espaços diferentes podem ser selecionados com o teclado via F6. Para salvar e restaurar estados, pressione F5 e F7.
+    Os arquivos de estado são salvos na pasta de Saves (/saves/supermodel/), que deve existir para que as operações de salvamento sejam bem-sucedidas.
+    A memória não volátil (NVRAM) consiste em uma RAM de backup com bateria (normalmente usada para dados de alta pontuação) e uma EEPROM (configurações da máquina).
+    Ele é salvo na pasta NVRAM (/system/configs/supermodel/NVRAM/) cada vez que o Supermodel é fechado e é recarregado na inicialização.
+    Os estados de salvamento também salvarão e substituirão os dados NVRAM.
+    Se você alterar qualquer configuração da máquina, e carregar um estado anterior, isto fará com que ela retorne à configuração anterior.
+    Certifique-se de salvar esses arquivos para uso futuro.
+
+    Saída de emulação
+    --------------
+
+    A configuração é definida como os botões Select & Start do controlador.
+
+    Solução de problemas:
+    ----------------
+
+    Veja as Perguntas e dúvidas mais frequentes sobre supermodelos aqui - https://www.supermodel3.com/FAQ.html
 
 mugen:
   name:       MUGEN
@@ -1876,6 +2158,8 @@ fpinball:
     For more info: https://wiki.batocera.org/systems:windows
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:windows
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:windows
 
 flash:
   name:       Flash Player
@@ -1902,6 +2186,8 @@ xbox:
     For more info: https://wiki.batocera.org/systems:xbox
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:xbox
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:xbox
 
 flatpak:
   name: Applications
@@ -1909,6 +2195,7 @@ flatpak:
   release:
   hardware:
   extensions: [flatpak]
+  platform: pc
   group: ports
   emulators:
     flatpak:
@@ -1924,6 +2211,17 @@ flatpak:
           List your apps : flatpak list
           Remove intalled app : flatpak remove xmoto
           then, run batocera-flatpak-update to update the roms directory according to your installed applications.
+  comment_br: |
+          Jogue jogos (e execute programas) disponíveis em https://flathub.org.
+          Os programas devem ser instalados a partir da linha de comando.
+          Exemplo:
+          Instale o Repositório do Flathub: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+          Instale aplicativos via url: flatpak install https://dl.flathub.org/repo/appstream/org.tuxfamily.XMoto.flatpakref
+          Pesquise aplicativos do repositório: flatpak search xmoto
+          Instale aplicativos do repositório: flatpak install xmoto
+          Liste seus aplicativos instalados: lista flatpak
+          Remova um aplicativo instalado: flatpak remove xmoto
+          em seguida, execute batocera-flatpak-update para atualizar o diretório roms de acordo com seus aplicativos instalados.
 
 steam:
   name: Steam
@@ -1931,12 +2229,16 @@ steam:
   release:
   hardware:
   extensions: [steam]
+  platform: pc
   emulators:
     steam:
       steam: { requireAnyOf: [BR2_PACKAGE_BATOCERA_STEAM] }
   comment_en: |
           Play Steam.
           Run batocera-steam-update to update the roms directory according to your installed games.
+  comment_br: |
+          Execute o Steam.
+          Em seguida execute o comando batocera-steam-update para atualizar o diretório de roms de acordo com seus jogos instalados.
 
 supervision:
   name:       Supervision
@@ -2017,6 +2319,67 @@ model2:
     Afterwards you can restore your CFG & NVDATA directories.
 
     *** Enjoy the Sega Model 2 emulator running under Linux !!! ***
+  comment_br: |
+    ----------------------------------
+    ## SEGA MODEL 2 INFORMAÇÕES IMPORTANTES ##
+    ----------------------------------
+
+    Agora você pode jogar jogos da Sega Model 2 usando o Demul & Wine.
+    Roms devem ser armazenados apropriadamente no diretório cave3rd .
+
+    O desempenho depende do hardware do sistema x86_64.
+    Se você tiver falhas de áudio e música lenta, seu sistema não tem desempenho suficiente para executar este emulador.
+
+    -----------
+    Primeiro acesso
+    -----------
+
+    Você precisa executar uma ROM pelo menos uma vez E estar conectado à internet.
+    Isso cria a estrutura de diretórios e instala as bibliotecas Windows DirectX associadas para Wine.
+
+    Nota: Pode levar algum tempo até que o jogo comece na primeira tentativa, isso é NORMAL!
+    *** Por favor, seja paciente, pois pode levar até 10 minutos, dependendo da velocidade da sua conexão com a internet ***
+
+    -----------
+    Configuração dos Controles
+    -----------
+
+     Nota: Um teclado e um mouse são necessários além do(s) seu(s) controle(s).
+
+     Um conjunto de arquivos de entrada é fornecido, no entanto, você pode mapear seus controles para cada um dos jogos que pretende executar.
+     Recomendamos que você faça isso usando a opção de menu 'F1' do Emulation Station e, em seguida, escolha o aplicativo de configuração model2.
+     *** A ROM deve ser carregada antes que você possa configurar os controles. ***
+
+     Pressione Esc no teclado para voltar ao modo 'janela' para definir as opções do controle se o aplicativo for de tela cheia.
+     Uma vez que os controles são definidos, eles são salvos para uso futuro no Batocera através das opções normais do menu.
+
+    ------------
+    Menu de serviço
+    ------------
+
+    Nota: Necessário teclado.
+    Você pode acessar o Menu de Serviço usando o F4 e depois usar o F2 para navegar e o F4 para selecionar.
+
+    -----------------
+    Atualizações do Batocera
+    -----------------
+
+    Em alguns casos, quando você atualiza o Batocera para uma nova versão, ao tentar executar o emulador Sega Model 2, ele pode travar.
+    Verificando o seu arquivo /userdata/system/logs/es_launch_stderr.log você pode ver um erro de incompatibilidade do Wine (Wine mismatch error).
+    Isso ocorre porque o Wine está desatualizada e não está alinhada com a versão instalada com o Batocera mais recente.
+    Se for o caso, você deve fazer backup de suas pastas /userdata/saves/model2/model2emu/CFG & userdata/saves/model2/model2emu/NVDATA.
+    Ao navegar usando o compartilhamento de rede, você não verá o diretório userdata, navegue até a pasta de saves.
+    O backup dessas pastas manterá suas pontuações, configurações de rom e controles.
+
+    É recomendado remover seu diretório /userdata/saves/model2/ somente via ssh!
+    Quando logado via ssh execute:
+    cd /userdata/saves
+    rm -rf modelo2
+
+    Uma vez feito isto, inicie um jogo estando conectado à Internet e ele recriará a os arquivos wine para você.
+    Depois, você pode restaurar seus diretórios CFG e NVDATA.
+
+    *** Desfrute dos jogos Sega Model 2 no Linux! ***
 
 scv:
   name:       Super Cassette Vision
@@ -2066,6 +2429,8 @@ cdi:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
           Requires MAME BIOS file cdimono1.zip
+  comment_br: |
+          Requer o arquivo cdimono1.zip da BIOS do MAME
 
 advision:
   name:       Adventure Vision
@@ -2080,6 +2445,8 @@ advision:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
           Requires MAME BIOS file advision.zip
+  comment_br: |
+          Requer o arquivo advision.zip da BIOS do MAME
 
 plugnplay:
   name:       Plug and Play TV Games
@@ -2092,6 +2459,23 @@ plugnplay:
       mame: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
     mame:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+sameduck:
+  name:       Mega Duck / Cougar Boy
+  manufacturer: Welback Holdings
+  release: 1993
+  hardware: portable
+  extensions:  [bin, zip, 7z]
+  emulators:
+    libretro:
+      mame: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+      sameduck:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEDUCK], incompatible_extensions: [zip, 7z] }
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Use unzipped ROMs (BIN format) if using Sameduck.
+  comment_br: |
+           Use ROMs descompactadas (formato BIN) se estiver usando Sameduck.
 
 pv1000:
   name:       PV-1000
@@ -2118,14 +2502,16 @@ gamate:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
           Requires MAME BIOS file gamate.zip
+  comment_br: |
+          Requer o arquivo gamate.zip da BIOS do MAME
 
 crvision:
   name:       CreatiVision
   manufacturer: VTech
   release: 1982
   hardware: console
+  theme: creativision
   extensions: [bin, rom, zip, 7z]
-  theme:      creativision
   emulators:
     libretro:
       mame: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -2133,6 +2519,8 @@ crvision:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
           Requires MAME BIOS file crvision.zip
+  comment_br: |
+          Requer o arquivo crvision.zip da BIOS do MAME
 
 laser310:
   name:       Laser 310
@@ -2148,6 +2536,9 @@ laser310:
   comment_en: |
           Requires MAME BIOS file laser310.zip
           Using snapshot (.vz) files is recommended.
+  comment_br: |
+          Requer o arquivo laser310.zip da BIOS do MAME
+          O uso de arquivos de imagem (.vz) é recomendado.
 
 socrates:
   name:       Socrates
@@ -2163,6 +2554,9 @@ socrates:
   comment_en: |
           Requires MAME BIOS file socrates.zip
           Software list mode recommended
+  comment_br: |
+          Requer o arquivo socrates.zip da BIOS do MAME
+          Modo de lista de software recomendado
 
 vsmile:
   name:       V.Smile
@@ -2177,6 +2571,8 @@ vsmile:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
           Requires MAME BIOS file vsmile.zip
+  comment_br: |
+          Requer o arquivo vsmile.zip da BIOS do MAME
 
 supracan:
   name:       Super A'Can
@@ -2191,6 +2587,8 @@ supracan:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
           Sound support is preliminary
+  comment_br: |
+          O suporte de som é preliminar
 
 gamecom:
   name:       Game.com
@@ -2205,6 +2603,8 @@ gamecom:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
           Requires MAME BIOS file gamecom.zip
+  comment_br: |
+          Requer o arquivo gamecom.zip da BIOS do MAME
 
 gamepock:
   name:       Game Pocket Computer
@@ -2219,6 +2619,8 @@ gamepock:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
           Requires MAME BIOS file gamepock.zip
+  comment_br: |
+          Requer o arquivo gamepock.zip da BIOS do MAME
 
 fm7:
   name:       FM-7
@@ -2233,6 +2635,8 @@ fm7:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
           Requires MAME BIOS file fm7.zip, and optionally fm77av.zip for FM-77AV support.
+  comment_br: |
+          Requer o arquivo fm7.zip da BIOS do MAME, e opcionalmente o arquivo fm77av.zip para ter suporte a FM-77AV.
 
 archimedes:
   name:       Archimedes
@@ -2249,6 +2653,10 @@ archimedes:
           Requires MAME BIOS files aa310.zip and archimedes_keyboard.zip
           Using software list mode is recommended.
           Double-click the floppy drive in the lower left to open the contents, double-click the app/game to run it.
+  comment_br: |
+          Requer os arquivos aa310.zip and archimedes_keyboard.zip da BIOS do MAME
+          Recomenda-se o uso do modo de lista de software.
+          Clique duas vezes na unidade de disquete no canto inferior esquerdo para abrir o conteúdo, clique duas vezes no aplicativo/jogo para executá-lo.
 
 atom:
   name:       Atom
@@ -2265,6 +2673,10 @@ atom:
           Requires MAME BIOS file atom.zip
           Using software list mode is recommended. Software list cassettes don't work but floppies do.
           Disks will automatically show contents, if the program isn't auto-launched, type the program name followed by a double quote (mapped to shift-2) and hit enter to run.
+  comment_br: |
+          Requer o arquivo atom.zip da BIOS do MAME
+          Recomenda-se o uso do modo de lista de software. Os cassetes de lista de software não funcionam, mas os disquetes sim.
+          Os discos mostrarão automaticamente o conteúdo, se o programa não for iniciado automaticamente, digite o nome do programa seguido por aspas duplas (mapeado para shift-2) e pressione enter para executar.
 
 electron:
   name:       Electron
@@ -2281,6 +2693,10 @@ electron:
           Requires MAME BIOS files electron.zip, electron64.zip, electron_plus1.zip, electron_plus3.zip
           Using software list mode (cassette) is recommended.
           Tapes should auto-load, use the MAME menu to stop/play/rewind if needed.
+  comment_br: |
+          Requer os arquivos electron.zip, electron64.zip, electron_plus1.zip, electron_plus3.zip da BIOS do MAME
+          Recomenda-se o uso do modo de lista de software (cassete).
+           As fitas devem ser carregadas automaticamente, use o menu MAME para parar/reproduzir/rebobinar, se necessário.
 
 apfm1000:
   name:       M-1000
@@ -2295,14 +2711,16 @@ apfm1000:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
           Requires MAME BIOS file apfm1000.zip
+  comment_br: |
+          Requer o arquivo apfm1000.zip da BIOS do MAME
 
 bbc:
   name:       BBC Micro
   manufacturer: Acorn Computers
   release: 1981
   hardware: computer
+  theme: bbcmicro
   extensions: [mfi, dfi, hfe, mfm, td0, imd, d77, d88, 1dd, cqm, cqi, dsk, ima, img, ufi, 360, ipf, ssd, bbc, dsd, adf, ads, adm, adl, fsd, wav, tap, bin, zip, 7z]
-  theme:      bbcmicro
   emulators:
     libretro:
       mame: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -2311,6 +2729,9 @@ bbc:
   comment_en: |
           Requires MAME BIOS files bbcb.zip, bbc_acorn8271.zip, & saa5050.zip
           Also sample pack bbc.zip in bios/mame/samples
+  comment_br: |
+          Requer os arquivo de BIOS MAME bbcb.zip, bbc_acorn8271.zip, & saa5050.zip
+          Também pacote de samples bbc.zip em bios/mame/samples
 
 camplynx:
   name:       Camputers Lynx
@@ -2326,6 +2747,9 @@ camplynx:
   comment_en: |
           Requires MAME BIOS files lynx128k.zip, lynx96k.zip, lynx48k.zip
           Using software list mode is recommended.
+  comment_br: |
+          Requer os arquivo de BIOS MAME lynx128k.zip, lynx96k.zip, lynx48k.zip
+          Também pacote de samples bbc.zip em bios/mame/samples
 
 adam:
   name:       ADAM
@@ -2340,6 +2764,9 @@ adam:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
           Requires the following MAME BIOS files:
+          adam.zip, adam_ddp.zip, adam_fdc.zip, adam_kb.zip, & adam_prn.zip
+  comment_br: |
+          Requer os seguintes aquivos de BIOS do MAME:
           adam.zip, adam_ddp.zip, adam_fdc.zip, adam_kb.zip, & adam_prn.zip
 
 arcadia:
@@ -2367,14 +2794,16 @@ gmaster:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
           Requires MAME BIOS file gmaster.zip
+  comment_br: |
+          Requer o arquivo gmaster.zip da BIOS do MAME
 
 astrocde:
   name:       Astrocade
   manufacturer: Bally
   release: 1978
   hardware: console
+  theme: astrocade
   extensions: [bin, zip, 7z]
-  theme:      astrocade
   emulators:
     libretro:
       mame: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -2382,6 +2811,8 @@ astrocde:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
           Requires MAME BIOS file astrocde.zip
+  comment_br: |
+          Requer o arquivo astrocde.zip da BIOS do MAME
 
 ti99:
   name:       TI-99
@@ -2397,6 +2828,9 @@ ti99:
   comment_en: |
           Requires MAME BIOS file ti99_4a.zip
           Cartridges need to be in .rpk format and unzipped if not using software lists.
+  comment_br: |
+          Requer o arquivo ti99_4a.zip da BIOS do MAME
+          Os cartuchos precisam estar no formato .rpk e descompactados - caso contrário os arquivos da lista de software MAME (.bin) não serão executados corretamente.
 
 tutor:
   name:       Tutor
@@ -2412,6 +2846,9 @@ tutor:
   comment_en: |
           Requires MAME BIOS file tutor.zip
           To get through the loading menu, R1 will move down and A/East will select.
+  comment_br: |
+          Requer o arquivo tutor.zip da BIOS do MAME
+          Para pular o menu de carregamento, pressione R1 para mover para baixo e A/Leste para selecionar.
 
 coco:
   name:       Color Computer
@@ -2426,6 +2863,8 @@ coco:
       mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
           Requires MAME BIOS file coco.zip
+  comment_br: |
+          Requer o arquivo coco.zip da BIOS do MAME
 
 vc4000:
   name:       VC 4000
@@ -2453,6 +2892,9 @@ vgmplay:
   comment_en: |
           Software lists recommended. QSound can be CPU-intensive.
           Use the File Manager in the MAME menu to change tracks.
+  comment_br: |
+          Listas de software recomendadas. O QSound pode consumir muita CPU.
+          Use o Gerenciador de Arquivos no menu MAME para mudar de faixa.
 
 switch:
   name:       Switch
@@ -2488,21 +2930,6 @@ vemulator:
   emulators:
     libretro:
       vemulator:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VEMULATOR] }
-
-sameduck:
-  name:       Mega Duck / Cougar Boy
-  manufacturer: Welback Holdings
-  release: 1993
-  hardware: portable
-  extensions:  [bin, zip, 7z]
-  emulators:
-    libretro:
-      mame: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
-      sameduck:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SAMEDUCK], incompatible_extensions: [zip, 7z] }
-    mame:
-      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
-  comment_en: |
-          Use unzipped ROMs (BIN format) if using Sameduck.
 
 samcoupe:
   name:       SAM Coupé
@@ -2541,6 +2968,21 @@ macintosh:
           lr-minivmac requires MacII.ROM and MacIIx.ROM.
           If booting from a hard drive, floppies may not load at boot. For best results, make a copy of one of the bootable drives, load disks manually via the MAME menu, and copy or install them to the hard drive image.
           Disk images will only load on Mac IIx and are not bootable.
+  comment_br: |
+          O MAME requer vários arquivos de BIOS e dispositivos, coloque na pasta bios em formato .zip.
+          Os discos de inicialização são das listas de software do MAME, as imagens de disquete precisam ser extraídas e renomeadas.
+          Recomenda-se usar uma opção de disco rígido, se disponível, caso contrário use System 6.0.8.
+          De mac_flop:
+          macos3.img = sytem tools.img do arquivo sys30.zip
+          macos608.img = system tools.img do arquivo sys608.zip
+          De mac_hdflop:
+          macos701 = disk tools.img do arquivo sys701.zip
+          macos75 = SSW750_DiskTools.img do arquivo sys75.zip
+          De mac_hdd:
+          mac601.chd, mac701.chd e mac755.chd
+          lr-minivmac requer MacII.ROM e MacIIx.ROM.
+          Se inicializar a partir de um disco rígido, os disquetes podem não carregar na inicialização. Para obter melhores resultados, faça uma cópia de uma das unidades de inicialização, carregue os discos manualmente através do menu MAME e copie ou instale-os na imagem do disco rígido.
+          As imagens de disco só serão carregadas no Mac IIx e não são inicializáveis.
 
 naomi2:
   name:       Naomi 2
@@ -2615,6 +3057,50 @@ naomi2:
     You can access the Service Menu using F4 and then use F2 to navigate with F4 to select.
 
     Enjoy Naomi 2 games under Linux!
+  comment_br: |
+    ----------------------------------
+    ## NAOMI 2 INFORMAÇÕES IMPORTANTES ##
+    ----------------------------------
+
+    Agora você pode jogar jogos da Sega Cave CV1000 usando o Demul & Wine.
+    Roms devem ser armazenados apropriadamente no diretório cave3rd .
+
+    --------------------------------
+    ## DEMUL - ATUALMENTE DESATIVADO ##
+    --------------------------------
+
+    Uma alternativa é usar Demul com Wine.
+    Nota: Sua placa gráfica requer drivers Vulkan para que o Demul funcione.
+
+    O desempenho depende do hardware do sistema x86_64.
+    Se você tiver falhas de áudio e música lenta, seu sistema não tem desempenho suficiente para executar este emulador.
+
+    -----------
+    Primeiro acesso
+    -----------
+
+    Você precisa executar uma ROM pelo menos uma vez E estar conectado à internet.
+    Isso cria a estrutura de diretórios e instala as bibliotecas do Windows associadas para o Wine.
+
+    Nota: Pode levar algum tempo até que o jogo comece na primeira tentativa, isso é NORMAL!
+    *** Por favor, seja paciente, pois pode levar até 2 minutos, dependendo da velocidade da sua conexão com a internet ***
+
+    -----------
+    Controles
+    -----------
+
+    Atualmente, os controles não podem ser configurados usando o aplicativo de desktop.
+    Esta é uma limitação do aplicativo Demul no Wine, mas também uma falha conhecida de conexão com o controle, mesmo no Windows.
+    Atualmente, mapeamos apenas o Jogador 1 usando a configuração de teclado padrão dos emuladores usando o evmapy.
+
+    ------------
+    Menu de serviço
+    ------------
+
+    Nota: Necessário teclado.
+    Você pode acessar o Menu de Serviço usando o F4 e depois usar o F2 para navegar e o F4 para selecionar.
+
+    Desfrute dos jogos Sega Naomi 2 no Linux!
 
 naomi2gd:
   name:       Naomi2 GDROM
@@ -2681,6 +3167,45 @@ hikaru:
     You can access the Service Menu using F4 and then use F2 to navigate with F4 to select.
 
     Enjoy Sega Hikaru games under Linux!
+comment_br: |
+    ----------------------------------
+    ## HIKARU INFORMAÇÕES IMPORTANTES ##
+    ----------------------------------
+
+    Agora você pode jogar jogos da Sega Cave CV1000 usando o Demul com o Wine.
+    Roms devem ser armazenados apropriadamente no diretório cave3rd .
+
+    O desempenho depende do hardware do sistema x86_64.
+    Se você tiver falhas de áudio e música lenta, seu sistema não tem desempenho suficiente para executar este emulador.
+
+    Nota: Sua placa gráfica requer drivers Vulkan para que o Demul funcione.
+
+    -----------
+    Primeiro acesso
+    -----------
+
+    Você precisa executar uma ROM pelo menos uma vez E estar conectado à internet.
+    Isso cria a estrutura de diretórios e instala as bibliotecas do Windows associadas para o Wine.
+
+    Nota: Pode levar algum tempo até que o jogo comece na primeira tentativa, isso é NORMAL!
+    *** Por favor, seja paciente, pois pode levar até 2 minutos, dependendo da velocidade da sua conexão com a internet ***
+
+    -----------
+    Controles
+    -----------
+
+    Atualmente, os controles não podem ser configurados usando o aplicativo de desktop.
+    Esta é uma limitação do aplicativo Demul no Wine, mas também uma falha conhecida de conexão com o controle, mesmo no Windows.
+    Atualmente, mapeamos apenas o Jogador 1 usando a configuração de teclado padrão dos emuladores usando o evmapy.
+
+    ------------
+    Menu de serviço
+    ------------
+
+    Nota: Necessário teclado.
+    Você pode acessar o Menu de Serviço usando o F4 e depois usar o F2 para navegar e o F4 para selecionar.
+
+    Desfrute dos jogos Sega Hiraku no Linux!
 
 gaelco:
   name:       Gaelco
@@ -2731,6 +3256,45 @@ gaelco:
     You can access the Service Menu using F4 and then use F2 to navigate with F4 to select.
 
     Enjoy Sega Gaelco games under Linux!
+  comment_br: |
+    ----------------------------------
+    ## GAELCO INFORMAÇÕES IMPORTANTES ##
+    ----------------------------------
+
+    Agora você pode jogar jogos da Sega Cave CV1000 usando o Demul com o Wine.
+    Roms devem ser armazenados apropriadamente no diretório cave3rd .
+
+    O desempenho depende do hardware do sistema x86_64.
+    Se você tiver falhas de áudio e música lenta, seu sistema não tem desempenho suficiente para executar este emulador.
+
+    Nota: Sua placa gráfica requer drivers Vulkan para que o Demul funcione.
+
+    -----------
+    Primeiro acesso
+    -----------
+
+    Você precisa executar uma ROM pelo menos uma vez E estar conectado à internet.
+    Isso cria a estrutura de diretórios e instala as bibliotecas do Windows associadas para o Wine.
+
+    Nota: Pode levar algum tempo até que o jogo comece na primeira tentativa, isso é NORMAL!
+    *** Por favor, seja paciente, pois pode levar até 2 minutos, dependendo da velocidade da sua conexão com a internet ***
+
+    -----------
+    Controles
+    -----------
+
+    Atualmente, os controles não podem ser configurados usando o aplicativo de desktop.
+    Esta é uma limitação do aplicativo Demul no Wine, mas também uma falha conhecida de conexão com o controle, mesmo no Windows.
+    Atualmente, mapeamos apenas o Jogador 1 usando a configuração de teclado padrão dos emuladores usando o evmapy.
+
+    ------------
+    Menu de serviço
+    ------------
+
+    Nota: Necessário teclado.
+    Você pode acessar o Menu de Serviço usando o F4 e depois usar o F2 para navegar e o F4 para selecionar.
+
+    Desfrute dos jogos Sega Gaelco no Linux!
 
 cave3rd:
   name:       Cave CV1000
@@ -2744,7 +3308,7 @@ cave3rd:
       demul: { requireAnyOf: [BR2_PACKAGE_DEMUL] }
   comment_en: |
     ---------------------------------
-    ## GAELCO IMPORTANT INFO ##
+    ## CAVE CV1000 IMPORTANT INFO ##
     ---------------------------------
 
     You can now play Sega Cave CV1000 games using Demul with Wine.
@@ -2781,6 +3345,45 @@ cave3rd:
     You can access the Service Menu using F4 and then use F2 to navigate with F4 to select.
 
     Enjoy Sega Cave CV1000 games under Linux!
+comment_br: |
+    ----------------------------------
+    ## GAELCO INFORMAÇÕES IMPORTANTES ##
+    ----------------------------------
+
+    Agora você pode jogar jogos da Sega Cave CV1000 usando o Demul & Wine.
+    Roms devem ser armazenados apropriadamente no diretório cave3rd .
+
+    O desempenho depende do hardware do sistema x86_64.
+    Se você tiver falhas de áudio e música lenta, seu sistema não tem desempenho suficiente para executar este emulador.
+
+    Nota: Sua placa gráfica requer drivers Vulkan para que o Demul funcione.
+
+    -----------
+    Primeiro acesso
+    -----------
+
+    Você precisa executar uma ROM pelo menos uma vez E estar conectado à internet.
+    Isso cria a estrutura de diretórios e instala as bibliotecas do Windows associadas para o Wine.
+
+    Nota: Pode levar algum tempo até que o jogo comece na primeira tentativa, isso é NORMAL!
+    *** Por favor, seja paciente, pois pode levar até 2 minutos, dependendo da velocidade da sua conexão com a internet ***
+
+    -----------
+    Controles
+    -----------
+
+    Atualmente, os controles não podem ser configurados usando o aplicativo de desktop.
+    Esta é uma limitação do aplicativo Demul no Wine, mas também uma falha conhecida de conexão com o controle, mesmo no Windows.
+    Atualmente, mapeamos apenas o Jogador 1 usando a configuração de teclado padrão dos emuladores usando o evmapy.
+
+    ------------
+    Menu de serviço
+    ------------
+
+    Nota: Necessário teclado.
+    Você pode acessar o Menu de Serviço usando o F4 e depois usar o F2 para navegar e o F4 para selecionar.
+
+    Desfrute dos jogos Sega Cave CV1000 no Linux!
 
 pdp1:
   name:       PDP-1
@@ -2798,6 +3401,11 @@ pdp1:
     if the green lights are blinking, it is loading.
 
     Spacewar is two player only, if you only have one controller connected, it will control both ships.
+  comment_br: |
+     Use Control-Enter ou Start para iniciar após o carregamento. O carregamento pode demorar algum tempo,
+     se as luzes verdes estiverem piscando, ele está carregando.
+
+     Spacewar é apenas para dois jogadores, se você tiver apenas um controlador conectado, ele controlará as duas naves.
 
 amigademo:
   name:       Amiga Demoscene
