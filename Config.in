@@ -279,7 +279,7 @@ menu "Emulators"
 
   menu "Standalone Emulators"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/amiberry/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/cemu/cemu/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/cemu/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/citra/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/daphne/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/demul/Config.in"
