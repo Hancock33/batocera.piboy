@@ -1,8 +1,8 @@
 diff --git a/es-core/src/InputConfig.cpp b/es-core/src/InputConfig.cpp
-index 8f592ed9..7f78633a 100644
+index 07b82f59..14741408 100644
 --- a/es-core/src/InputConfig.cpp
 +++ b/es-core/src/InputConfig.cpp
-@@ -225,6 +225,10 @@ void InputConfig::writeToXML(pugi::xml_node& parent)
+@@ -226,6 +226,10 @@ void InputConfig::writeToXML(pugi::xml_node& parent)
  		input.append_attribute("type") = inputTypeToString(iterator->second.type).c_str();
  		input.append_attribute("id").set_value(iterator->second.id);
  		input.append_attribute("value").set_value(iterator->second.value);
@@ -14,7 +14,7 @@ index 8f592ed9..7f78633a 100644
  }
  
 diff --git a/es-core/src/InputConfig.h b/es-core/src/InputConfig.h
-index f50542df..4e176654 100644
+index 762d703f..c14628db 100644
 --- a/es-core/src/InputConfig.h
 +++ b/es-core/src/InputConfig.h
 @@ -41,6 +41,7 @@ public:
@@ -60,10 +60,10 @@ index f50542df..4e176654 100644
  
  class InputConfig
 diff --git a/es-core/src/InputManager.cpp b/es-core/src/InputManager.cpp
-index 56362bfe..41d79e9d 100644
+index d41ed684..b466d8bf 100644
 --- a/es-core/src/InputManager.cpp
 +++ b/es-core/src/InputManager.cpp
-@@ -777,6 +777,7 @@ std::string InputManager::configureEmulators() {
+@@ -924,6 +924,7 @@ std::string InputManager::configureEmulators() {
        command << " -p" << player+1 << "nbbuttons "  << playerInputConfig->getDeviceNbButtons();
        command << " -p" << player+1 << "nbhats "     << playerInputConfig->getDeviceNbHats();
        command << " -p" << player+1 << "nbaxes "     << playerInputConfig->getDeviceNbAxes();

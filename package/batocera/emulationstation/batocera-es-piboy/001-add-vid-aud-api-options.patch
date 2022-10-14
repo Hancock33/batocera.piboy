@@ -1,5 +1,5 @@
 diff --git a/es-app/src/CustomFeatures.cpp b/es-app/src/CustomFeatures.cpp
-index 4e735ca3..89294c36 100644
+index ea93d3bf..a5021061 100644
 --- a/es-app/src/CustomFeatures.cpp
 +++ b/es-app/src/CustomFeatures.cpp
 @@ -39,6 +39,8 @@ EmulatorFeatures::Features EmulatorFeatures::parseFeatures(const std::string fea
@@ -23,10 +23,10 @@ index 4e735ca3..89294c36 100644
  
  	return ret;
 diff --git a/es-app/src/CustomFeatures.h b/es-app/src/CustomFeatures.h
-index 6a37e70d..19638204 100644
+index 26e4f3ed..42cc07dd 100644
 --- a/es-app/src/CustomFeatures.h
 +++ b/es-app/src/CustomFeatures.h
-@@ -86,7 +86,12 @@ public:
+@@ -89,7 +89,12 @@ public:
  		padTokeyboard = 65536,
  		cheevos = 131072,
  		autocontrollers = 262144,
@@ -41,10 +41,10 @@ index 6a37e70d..19638204 100644
  	};
  
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index dc76aa5d..0e8bc12c 100644
+index cd7911b0..6c178774 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
-@@ -1888,7 +1888,7 @@ void GuiMenu::openGamesSettings()
+@@ -1889,7 +1889,7 @@ void GuiMenu::openGamesSettings()
  	}
  	
  
@@ -53,7 +53,7 @@ index dc76aa5d..0e8bc12c 100644
  
  	// Screen ratio choice
  	if (!hasGlobalFeature("ratio"))
-@@ -1906,6 +1906,61 @@ void GuiMenu::openGamesSettings()
+@@ -1907,6 +1907,61 @@ void GuiMenu::openGamesSettings()
  		s->addSaveFunc([this, videoModeOptionList] { SystemConf::getInstance()->set("global.videomode", videoModeOptionList->getSelected()); });
  	}
  
