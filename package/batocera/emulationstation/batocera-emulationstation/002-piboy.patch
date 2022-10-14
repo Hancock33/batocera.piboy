@@ -30,7 +30,7 @@ index b55cc041..81b0501c 100644
  if(DISABLE_KODI)
    MESSAGE("kodi disabled")
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index dc76aa5d..10e44f8d 100644
+index cd7911b0..80cc50d1 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -70,8 +70,15 @@
@@ -149,7 +149,7 @@ index e6c41ca4..3caf0b37 100644
  	mBoolMap["OptimizeVRAM"] = true;
  	mBoolMap["OptimizeVideo"] = true;
 diff --git a/es-core/src/platform.cpp b/es-core/src/platform.cpp
-index 7daf4107..df304f46 100644
+index 57221153..9ca042c8 100644
 --- a/es-core/src/platform.cpp
 +++ b/es-core/src/platform.cpp
 @@ -28,6 +28,8 @@ int runShutdownCommand()
@@ -170,7 +170,7 @@ index 7daf4107..df304f46 100644
  #else // osx / linux	
  	return system("shutdown -r now");
  #endif
-@@ -341,23 +345,39 @@ BatteryInformation queryBatteryInformation()
+@@ -344,23 +348,39 @@ BatteryInformation queryBatteryInformation()
  	if (batteryStatusPath.empty())
  	{
  		std::string batteryRootPath;
@@ -211,7 +211,7 @@ index 7daf4107..df304f46 100644
  		}
  	}
  
-@@ -370,7 +390,11 @@ BatteryInformation queryBatteryInformation()
+@@ -373,7 +393,11 @@ BatteryInformation queryBatteryInformation()
  	else
  	{
  		ret.hasBattery = true;
