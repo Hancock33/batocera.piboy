@@ -1,0 +1,8 @@
+config BR2_PACKAGE_NLOHMANN_JSON
+    bool "nlohmann-json"
+    depends on BR2_x86_64
+
+    help
+      JSON for Modern C++
+
+      json.nlohmann.me

@@ -20,7 +20,7 @@ VITA3K_CONF_OPTS = -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF \
 define VITA3K_INSTALL_TARGET_CMDS
     mkdir -p $(TARGET_DIR)/usr/bin/vita3k/
 	cp -R $(@D)/buildroot-build/bin/* $(TARGET_DIR)/usr/bin/vita3k/
-	rm $(TARGET_DIR)/usr/bin/vita3k/update-vita3k.sh
+	#rm $(TARGET_DIR)/usr/bin/vita3k/update-vita3k.sh
 endef
 
 define VITA3K_INSTALL_EVMAPY

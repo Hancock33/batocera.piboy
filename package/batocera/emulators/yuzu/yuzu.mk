@@ -9,7 +9,7 @@ YUZU_SITE = https://github.com/yuzu-emu/yuzu.git
 YUZU_SITE_METHOD=git
 YUZU_GIT_SUBMODULES=YES
 YUZU_LICENSE = GPLv2
-YUZU_DEPENDENCIES = qt5base qt5tools qt5multimedia fmt boost ffmpeg zstd zlib libzip lz4 catch2 sdl2 opus
+YUZU_DEPENDENCIES = qt5base qt5tools qt5multimedia fmt boost ffmpeg zstd zlib libzip lz4 catch2 sdl2 opus nlohmann-json
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
 YUZU_DEPENDENCIES += host-glslang
