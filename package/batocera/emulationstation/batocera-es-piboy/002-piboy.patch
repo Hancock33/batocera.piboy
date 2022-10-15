@@ -149,7 +149,7 @@ index e6c41ca4..3caf0b37 100644
  	mBoolMap["OptimizeVRAM"] = true;
  	mBoolMap["OptimizeVideo"] = true;
 diff --git a/es-core/src/platform.cpp b/es-core/src/platform.cpp
-index 57221153..9ca042c8 100644
+index 7b30f397..1759f95c 100644
 --- a/es-core/src/platform.cpp
 +++ b/es-core/src/platform.cpp
 @@ -28,6 +28,8 @@ int runShutdownCommand()
@@ -170,10 +170,10 @@ index 57221153..9ca042c8 100644
  #else // osx / linux	
  	return system("shutdown -r now");
  #endif
-@@ -344,23 +348,39 @@ BatteryInformation queryBatteryInformation()
- 	if (batteryStatusPath.empty())
- 	{
+@@ -348,19 +352,30 @@ BatteryInformation queryBatteryInformation()
  		std::string batteryRootPath;
+                 std::string fuelgaugeRootPath;
+                 std::string chargerRootPath;
 -
 +	#if PIBOY
 +		auto files = Utils::FileSystem::getDirContent("/sys/kernel");
@@ -189,37 +189,47 @@ index 57221153..9ca042c8 100644
 +				break;
 +			}
 +		#else
- 			if (Utils::String::toLower(file).find("/bat") != std::string::npos)
- 			{
+ 			if ( (Utils::String::toLower(file).find("/bat") != std::string::npos) && (batteryRootPath.empty()) )
  				batteryRootPath = file;
- 				break;
- 			}
-+		#endif
- 		}
  
+ 			if ( (Utils::String::toLower(file).find("fuel") != std::string::npos) && (fuelgaugeRootPath.empty()) )
+ 				fuelgaugeRootPath = file;
+ 
+-                        if ( (Utils::String::toLower(file).find("charger") != std::string::npos) && (chargerRootPath.empty()) )
+-                                chargerRootPath = file;
+-                }
++			if ( (Utils::String::toLower(file).find("charger") != std::string::npos) && (chargerRootPath.empty()) )
++				chargerRootPath = file;
++		#endif
++		}
+ 
+ 		// If there's no battery device, look for discrete charger and fuel gauge
  		if (batteryRootPath.empty())
- 			batteryStatusPath = ".";
+@@ -384,8 +399,13 @@ BatteryInformation queryBatteryInformation()
+ 		}
  		else
  		{
+-			batteryStatusPath = batteryRootPath + "/status";
+-			batteryCapacityPath = batteryRootPath + "/capacity";
 +		#if PIBOY
 +			batteryStatusPath = batteryRootPath + "/amps";
 +			batteryCapacityPath = batteryRootPath + "/percent";
 +		#else
- 			batteryStatusPath = batteryRootPath + "/status";
- 			batteryCapacityPath = batteryRootPath + "/capacity";
++ 			batteryStatusPath = batteryRootPath + "/status";
++ 			batteryCapacityPath = batteryRootPath + "/capacity";
 +		#endif
  		}
  	}
  
-@@ -373,7 +393,11 @@ BatteryInformation queryBatteryInformation()
- 	else
- 	{
+@@ -400,7 +420,11 @@ BatteryInformation queryBatteryInformation()
  		ret.hasBattery = true;
+ 		std::string chargerStatus;
+ 		chargerStatus = Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "");
 +		#if PIBOY
 +	 	ret.isCharging = (stoi(Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "-", "")) < 650);
 +		#else
- 		ret.isCharging = (Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "") != "Discharging");
+ 		ret.isCharging = ((chargerStatus != "Not charging") && (chargerStatus != "Discharging"));
 +		#endif
- 		ret.level = atoi(Utils::FileSystem::readAllText(batteryCapacityPath).c_str());
- 	}
- 
+ 		// If reading from fuel gauge, we have to calculate remaining charge
+ 		if (batteryCapacityPath.length() <= 1)
+ 		{
