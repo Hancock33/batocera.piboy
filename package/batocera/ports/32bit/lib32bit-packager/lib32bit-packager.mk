@@ -26,7 +26,7 @@ define LIB32BIT_PACKAGER_INSTALL_TARGET_CMDS
 	mkdir -p $(DEST_DIR)/lib32/dri
 	mv $(DEST_DIR)/lib32/dri.old/{v3d_dri.so,vc4_dri.so}   $(DEST_DIR)/lib32/dri
 	rm -r $(DEST_DIR)/lib32/dri.old
-	cd $(DEST_DIR) && tar -Jcvf $(DEST_DIR).tar.xz .
+	cd $(DEST_DIR) && tar -Jvf $(DEST_DIR).tar.xz .
 	rm -r $(DEST_DIR)
 endef
 
