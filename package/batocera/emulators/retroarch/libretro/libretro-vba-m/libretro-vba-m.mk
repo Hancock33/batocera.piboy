@@ -3,8 +3,8 @@
 # libretro-vba-m
 #
 ################################################################################
-# Version: Commits on Oct 14, 2022
-LIBRETRO_VBA_M_VERSION = d6331ff92ebdf5954d91c97ea14d8d7efbb99bea
+# Version: Commits on Oct 16, 2022
+LIBRETRO_VBA_M_VERSION = 927ccf0bc830190b44a9f0037aa2d3c85979bdc0
 LIBRETRO_VBA_M_SITE = $(call github,visualboyadvance-m,visualboyadvance-m,$(LIBRETRO_VBA_M_VERSION))
 
 define LIBRETRO_VBA_M_BUILD_CMDS
