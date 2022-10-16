@@ -3,32 +3,21 @@
 # libretro-mgba
 #
 ################################################################################
-# Version.: Commits on Apr 13, 2022 (branch 0.9)
-LIBRETRO_MGBA_VERSION = ac8861a429f8de2a18daefd61ad89bf6577ee2a8
-LIBRETRO_MGBA_SITE = $(call github,mgba-emu,mgba,$(LIBRETRO_MGBA_VERSION))
+# Version: Commits on Oct 14, 2022
+LIBRETRO_MGBA_VERSION = 3d3342f5c317283d57ce67d4a33b5e494626c544
+LIBRETRO_MGBA_SITE = $(call github,Ryunam,mgba,$(LIBRETRO_MGBA_VERSION))
 LIBRETRO_MGBA_LICENSE = MPLv2.0
 
 LIBRETRO_MGBA_DEPENDENCIES = libzip libpng zlib
 
-LIBRETRO_MGBA_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DBUILD_LIBRETRO=ON \
-    -DSKIP_LIBRARY=ON -DBUILD_QT=OFF -DBUILD_SDL=OFF -DUSE_DISCORD_RPC=OFF \
-	-DUSE_GDB_STUB=OFF -DUSE_SQLITE3=OFF -DUSE_DEBUGGERS=OFF -DUSE_EDITLINE=OFF \
-	-DUSE_EPOXY=OFF
-
-ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
-# Batocera - SBC prefer GLES
-  ifneq ($(BR2_PACKAGE_BATOCERA_SBC_XORG),y)
-    LIBRETRO_MGBA_CONF_OPTS += -DBUILD_GL=ON -DBUILD_GLES2=OFF -DBUILD_GLES3=OFF
-  endif
-else ifeq ($(BR2_PACKAGE_BATOCERA_GLES3),y)
-    LIBRETRO_MGBA_CONF_OPTS += -DBUILD_GLES3=ON -DBUILD_GLES2=OFF -DBUILD_GL=ON
-else ifeq ($(BR2_PACKAGE_BATOCERA_GLES2),y)
-    LIBRETRO_MGBA_CONF_OPTS += -DBUILD_GLES2=ON -DBUILD_GLES3=OFF -DBUILD_GL=OFF
-endif
+define LIBRETRO_MGBA_BUILD_CMDS
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile \
+        GIT_VERSION="-$(shell echo $(LIBRETRO_MGBA_VERSION) | cut -c 1-7)"
+endef
 
 define LIBRETRO_MGBA_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/mgba_libretro.so \
 		$(TARGET_DIR)/usr/lib/libretro/mgba_libretro.so
 endef
 
-$(eval $(cmake-package))
+$(eval $(generic-package))
