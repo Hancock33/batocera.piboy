@@ -18,15 +18,13 @@ define LIB32BIT_PACKAGER_INSTALL_TARGET_CMDS
 	ln -sf libmount.so.1                                   $(DEST_DIR)/lib32/libmount.so
 	ln -sf libsmartcols.so.1                               $(DEST_DIR)/lib32/libsmartcols.so
 	ln -sf libudev.so.1                                    $(DEST_DIR)/lib32/libudev.so
-	ln -sf libpulse.so.0.24.2                              $(DEST_DIR)/lib32/libpulse.so.0
-	ln -sf libpulse-simple.so.0.1.1                        $(DEST_DIR)/lib32/libpulse-simple.so.0
 	ln -sf libuuid.so.1                                    $(DEST_DIR)/lib32/libuuid.so
 	rm -rf $(DEST_DIR)/lib32/{gconv,glslang,python3.10,terminfo,udev,xorg}
 	mv $(DEST_DIR)/lib32/dri                               $(DEST_DIR)/lib32/dri.old
 	mkdir -p $(DEST_DIR)/lib32/dri
 	mv $(DEST_DIR)/lib32/dri.old/{v3d_dri.so,vc4_dri.so}   $(DEST_DIR)/lib32/dri
 	rm -r $(DEST_DIR)/lib32/dri.old
-	cd $(DEST_DIR) && tar -Jvf $(DEST_DIR).tar.xz .
+	cd $(DEST_DIR) && tar -Jcf $(DEST_DIR).tar.xz .
 	rm -r $(DEST_DIR)
 endef
 
