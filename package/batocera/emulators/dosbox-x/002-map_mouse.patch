@@ -1,5 +1,5 @@
 diff --git a/src/gui/sdl_mapper.cpp b/src/gui/sdl_mapper.cpp
-index f85bf7774..8501bff53 100644
+index 45b487d45..888faf8ac 100644
 --- a/src/gui/sdl_mapper.cpp
 +++ b/src/gui/sdl_mapper.cpp
 @@ -86,6 +86,7 @@
@@ -10,7 +10,7 @@ index f85bf7774..8501bff53 100644
  
  class CEvent;
  class CKeyEvent;
-@@ -2941,6 +2942,21 @@ public:
+@@ -3000,6 +3001,21 @@ public:
  	uint8_t button;
  };
  
@@ -32,7 +32,7 @@ index f85bf7774..8501bff53 100644
  //! \brief Joystick axis event handling for the mapper
  class CJAxisEvent : public CContinuousEvent {
  public:
-@@ -3810,6 +3826,16 @@ static CMouseButtonEvent * AddMouseButtonEvent(Bitu x,Bitu y,Bitu dx,Bitu dy,cha
+@@ -3872,6 +3888,16 @@ static CMouseButtonEvent * AddMouseButtonEvent(Bitu x,Bitu y,Bitu dx,Bitu dy,cha
  	return event;
  }
  
@@ -49,7 +49,7 @@ index f85bf7774..8501bff53 100644
  static CJAxisEvent * AddJAxisButton(Bitu x,Bitu y,Bitu dx,Bitu dy,char const * const title,Bitu stick,Bitu axis,bool positive,CJAxisEvent * opposite_axis) {
      char buf[64];
      sprintf(buf,"jaxis_%d_%d%s",(int)stick,(int)axis,positive ? "+" : "-");
-@@ -3938,6 +3964,16 @@ static void CreateLayout(void) {
+@@ -4000,6 +4026,16 @@ static void CreateLayout(void) {
  
  #undef XO
  #undef YO

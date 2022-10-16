@@ -3,7 +3,7 @@
 # openbor6330
 #
 ################################################################################
-# Version:
+# Version: Commits on Jul 19, 2018
 OPENBOR6330_VERSION = v6330
 OPENBOR6330_SITE = $(call github,DCurrent,openbor,$(OPENBOR6330_VERSION))
 OPENBOR6330_LICENSE = BSD

@@ -2667,12 +2667,12 @@ msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, cemu, cemu, cemu, duckstation, ...
+#. TRANSLATION: libretro/mame, cemu, duckstation, duckstation, flycast/wasm4, ...
 msgctxt "game_options"
 msgid "Enabled"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, cemu, cemu, cemu, duckstation, ...
+#. TRANSLATION: libretro/mame, cemu, duckstation, duckstation, mame/wasm4, ...
 msgctxt "game_options"
 msgid "Disabled (Default)"
 msgstr ""
@@ -6888,26 +6888,6 @@ msgstr ""
 #. TRANSLATION: cemu, mame/wasm4, wine
 msgctxt "game_options"
 msgid "ENABLE MOUSE"
-msgstr ""
-
-#. TRANSLATION: cemu
-msgctxt "game_options"
-msgid "Enable Cemu's performance overlay."
-msgstr ""
-
-#. TRANSLATION: cemu
-msgctxt "game_options"
-msgid "ENABLE PERFORMANCE OVERLAY"
-msgstr ""
-
-#. TRANSLATION: cemu
-msgctxt "game_options"
-msgid "Enable notifications of cache, controller events etc."
-msgstr ""
-
-#. TRANSLATION: cemu
-msgctxt "game_options"
-msgid "ENABLE NOTIFICATIONS"
 msgstr ""
 
 #. TRANSLATION: citra
