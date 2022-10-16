@@ -7172,7 +7172,7 @@ msgctxt "game_options"
 msgid "SDL TEXTUREACCESS STREAMING"
 msgstr "TRANSMISIÓN DE ACCESO A LA TEXTURA DE SDL"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid ""
 "Wii NAND's aspect ratio setting. Most games support both ratios natively."
@@ -7180,53 +7180,53 @@ msgstr ""
 "Config. de relación de aspecto de Wii NAND. La mayoría de juegos admiten "
 "ambas de forma nativa."
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "WII TV MODE"
 msgstr "MODO WII TV"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "Map your controller to an emulated Wiimote."
 msgstr "Mapea tu mando para emular Wiimote."
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "EMULATE WIIMOTE"
 msgstr "EMULAR WIIMOTE"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
 msgstr ""
 "Emula un Wiimote Sideway con L2 para Shake y Nunchuk en el Stick derecho."
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "CUSTOMIZE WIIMOTE & GAMEPAD"
 msgstr "PERSONALIZAR WIIMOTE Y GAMEPAD"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "Classic Controller"
 msgstr "Mando Clásico"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "Wiimote Sideway"
 msgstr "Wiimote Sideway"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "Wiimote Sideway + Swing"
 msgstr "Wiimote Sideway + Swing"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "Wiimote Sideway + Tilt"
 msgstr "Wiimote Sideway + Tilt"
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "Wiimote Sideway + Nunchuk"
 msgstr "Wiimote Sideway + Nunchuk"

@@ -16,7 +16,7 @@ eslog = get_logger(__name__)
 def generateControllerConfig(system, playersControllers, rom):
 
     generateHotkeys(playersControllers)
-    if system.name == "wii":
+    if system.name == "wii" or system.name == "wiiware" :
         if (system.isOptSet('emulatedwiimotes') and system.getOptBoolean('emulatedwiimotes') == False):
             # Generate if hardcoded
             generateControllerConfig_realwiimotes("WiimoteNew.ini", "Wiimote")
