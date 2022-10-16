@@ -141,7 +141,7 @@ class Xash3dFwgsGenerator(Generator):
         config_dir = _config_dir(game)
         if not os.path.exists(config_dir + '/custom.cfg'):
             if not os.path.exists(config_dir):
-                os.makedir(config_dir)
+                os.mkdir(config_dir)
             with open(config_dir + '/custom.cfg', 'w') as f:
                 f.write('\n')
             if not os.path.exists(rom_dir + '/custom.cfg'):
