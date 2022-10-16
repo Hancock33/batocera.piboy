@@ -24,9 +24,6 @@ flash:
 fmtowns:
   emulator: libretro
   core:     mame
-gamecube:
-  emulator: libretro
-  core:     dolphin
 model3:
   options:
     videomode: max-720x576
@@ -47,9 +44,3 @@ saturn:
 sgb:
   emulator: libretro
   core:     mgba
-wii:
-  emulator: libretro
-  core:     dolphin
-wiiware:
-  emulator: libretro
-  core:     dolphin

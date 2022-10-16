@@ -103,11 +103,11 @@ class DolphinGenerator(Generator):
         else:
             dolphinSettings.set("Core", "MMU", "False")
 
-        # Backend - Default OpenGL
-        if system.isOptSet("gfxbackend") and system.config["gfxbackend"] == 'Vulkan':
-            dolphinSettings.set("Core", "GFXBackend", "Vulkan")
-        else:
+        # Backend - Default Vulkan
+        if system.isOptSet("gfxbackend") and system.config["gfxbackend"] == 'OGL':
             dolphinSettings.set("Core", "GFXBackend", "OGL")
+        else:
+            dolphinSettings.set("Core", "GFXBackend", "Vulkan")
 
         # Wiimote scanning
         dolphinSettings.set("Core", "WiimoteContinuousScanning", "True")

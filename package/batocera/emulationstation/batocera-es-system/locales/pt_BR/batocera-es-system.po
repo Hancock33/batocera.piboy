@@ -7064,58 +7064,58 @@ msgctxt "game_options"
 msgid "SDL TEXTUREACCESS STREAMING"
 msgstr ""
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid ""
 "Wii NAND's aspect ratio setting. Most games support both ratios natively."
 msgstr ""
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "WII TV MODE"
 msgstr ""
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "Map your controller to an emulated Wiimote."
 msgstr ""
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "EMULATE WIIMOTE"
 msgstr ""
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
 msgstr ""
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "CUSTOMIZE WIIMOTE & GAMEPAD"
 msgstr ""
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "Classic Controller"
 msgstr ""
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "Wiimote Sideway"
 msgstr ""
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "Wiimote Sideway + Swing"
 msgstr ""
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "Wiimote Sideway + Tilt"
 msgstr ""
 
-#. TRANSLATION: dolphin/wasm4
+#. TRANSLATION: dolphin/wasm4, dolphin/wasm4
 msgctxt "game_options"
 msgid "Wiimote Sideway + Nunchuk"
 msgstr ""
