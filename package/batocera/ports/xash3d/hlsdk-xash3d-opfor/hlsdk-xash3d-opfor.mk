@@ -3,8 +3,8 @@
 # hlsdk-xash3d-opfor
 #
 ################################################################################
-# Version.: Commits on Aug 23, 2022 (opfor branch)
-HLSDK_XASH3D_OPFOR_VERSION = 0ef24db3f8eb953a5a5671b3e4f04d6f1611b7aa
+# Version.: Commits on Oct 14, 2022 (opfor branch)
+HLSDK_XASH3D_OPFOR_VERSION = 6e8340e9af8a023f197341e6e5ea2a1b7ca22a6c
 HLSDK_XASH3D_OPFOR_SITE = $(call github,FWGS,hlsdk-portable,$(HLSDK_XASH3D_OPFOR_VERSION))
 HLSDK_XASH3D_OPFOR_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf libsodium
 HLSDK_XASH3D_OPFOR_LICENSE = Half Life 1 SDK LICENSE

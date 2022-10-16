@@ -1,7 +1,7 @@
-diff --git a/acinclude.m4 b/acinclude.m4.new
-index 329ed6bb13..21b3fd589c 100644
+diff --git a/acinclude.m4 b/acinclude.m4
+index 329ed6bb1..21b3fd589 100644
 --- a/acinclude.m4
-+++ b/acinclude.m4.new
++++ b/acinclude.m4
 @@ -14,35 +14,11 @@ AC_ARG_ENABLE(sdl2,     [  --enable-sdl2           Enable SDL 2.x],
  
    SDL2_CONFIG=no

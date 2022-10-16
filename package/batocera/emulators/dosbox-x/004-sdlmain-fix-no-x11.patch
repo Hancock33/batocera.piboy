@@ -1,6 +1,8 @@
---- a/src/gui/sdlmain_linux.cpp	2022-07-06 15:31:44.051739647 +0200
-+++ b/src/gui/sdlmain_linux.cpp	2022-07-06 15:32:11.452297897 +0200
-@@ -28,6 +28,7 @@
+diff --git a/src/gui/sdlmain_linux.cpp b/src/gui/sdlmain_linux.cpp
+index b22e987a8..1bba726f6 100644
+--- a/src/gui/sdlmain_linux.cpp
++++ b/src/gui/sdlmain_linux.cpp
+@@ -24,6 +24,7 @@
   * window resizes, or is resized by the user, the more likely it can occur.
   *
   * This can happen at any time. */
@@ -8,11 +10,11 @@
  int X11_ErrorHandler(Display *disp,XErrorEvent *xev) {
  	char errmsg[512];
  
-@@ -49,6 +50,7 @@
- void X11_ErrorHandlerInstall(void) {
- 	XSetErrorHandler(X11_ErrorHandler);
+@@ -41,6 +42,7 @@ int X11_ErrorHandler(Display *disp,XErrorEvent *xev) {
+ 
+ 	return 0; // ignored anyway
  }
 +#endif
  
- #if C_X11_XRANDR
- #include <X11/extensions/Xrandr.h>
+ void X11_ErrorHandlerInstall(void) {
+ 	XSetErrorHandler(X11_ErrorHandler);
