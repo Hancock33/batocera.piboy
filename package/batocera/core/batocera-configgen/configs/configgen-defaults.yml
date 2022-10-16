@@ -96,7 +96,7 @@ atom:
   core:     mame
 atomiswave:
   emulator: libretro
-  core:     flycast
+  core:     flycast2021
 awgl:
   emulator: awgl
   core:     awgl
@@ -194,7 +194,7 @@ dos:
     video_threaded: false
 dreamcast:
   emulator: libretro
-  core:     flycast
+  core:     flycast2021
 droidports:
   emulator: droidports
   core:     droidports
@@ -423,13 +423,13 @@ n64dd:
     videomode: max-640x480
 naomi:
   emulator: libretro
-  core:     flycast
+  core:     flycast2021
 naomi2:
   emulator: libretro
-  core:     flycast
+  core:     flycast2021
 naomigd:
   emulator: libretro
-  core:     flycast
+  core:     flycast2021
 nblood:
   emulator: nblood
   core:     nblood
