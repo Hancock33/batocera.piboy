@@ -108,48 +108,8 @@ index cd7911b0..80cc50d1 100644
  	}
  
  	mWindow->pushGui(updateGui);
-diff --git a/es-core/src/Settings.cpp b/es-core/src/Settings.cpp
-index e6c41ca4..3caf0b37 100644
---- a/es-core/src/Settings.cpp
-+++ b/es-core/src/Settings.cpp
-@@ -26,7 +26,11 @@ IMPLEMENT_STATIC_BOOL_SETTING(DrawFramerate, false)
- IMPLEMENT_STATIC_BOOL_SETTING(VolumePopup, true)
- IMPLEMENT_STATIC_BOOL_SETTING(BackgroundMusic, true)
- IMPLEMENT_STATIC_BOOL_SETTING(VSync, true)
-+#if PIBOY
-+IMPLEMENT_STATIC_BOOL_SETTING(PreloadMedias, true)
-+#else
- IMPLEMENT_STATIC_BOOL_SETTING(PreloadMedias, false)
-+#endif
- IMPLEMENT_STATIC_BOOL_SETTING(IgnoreLeadingArticles, false)
- IMPLEMENT_STATIC_INT_SETTING(ScreenSaverTime, 5 * 60 * 1000)
- 
-@@ -198,8 +202,15 @@ void Settings::setDefaults()
- 	mIntMap["MaxVRAM"] = 100;
- #endif
- 
-+#if PIBOY
-+	mStringMap["TransitionStyle"] = "instant";
-+	mStringMap["GameTransitionStyle"] = "instant";
-+	mBoolMap["PreloadUI"] = true;
-+#else
- 	mStringMap["TransitionStyle"] = "auto";
- 	mStringMap["GameTransitionStyle"] = "auto";
-+	mBoolMap["PreloadUI"] = false;
-+#endif
- 
- 	mStringMap["ThemeSet"] = "";
- 	mStringMap["ScreenSaverBehavior"] = "dim";
-@@ -293,7 +304,6 @@ void Settings::setDefaults()
- 
- 	mBoolMap["ThreadedLoading"] = true;
- 	mBoolMap["AsyncImages"] = true;
--	mBoolMap["PreloadUI"] = false;
- 	mBoolMap["PreloadMedias"] = Settings::_PreloadMedias;
- 	mBoolMap["OptimizeVRAM"] = true;
- 	mBoolMap["OptimizeVideo"] = true;
 diff --git a/es-core/src/platform.cpp b/es-core/src/platform.cpp
-index 7b30f397..1759f95c 100644
+index 57221153..9ca042c8 100644
 --- a/es-core/src/platform.cpp
 +++ b/es-core/src/platform.cpp
 @@ -28,6 +28,8 @@ int runShutdownCommand()
@@ -170,10 +130,10 @@ index 7b30f397..1759f95c 100644
  #else // osx / linux	
  	return system("shutdown -r now");
  #endif
-@@ -348,19 +352,30 @@ BatteryInformation queryBatteryInformation()
+@@ -344,23 +348,39 @@ BatteryInformation queryBatteryInformation()
+ 	if (batteryStatusPath.empty())
+ 	{
  		std::string batteryRootPath;
-                 std::string fuelgaugeRootPath;
-                 std::string chargerRootPath;
 -
 +	#if PIBOY
 +		auto files = Utils::FileSystem::getDirContent("/sys/kernel");
@@ -189,47 +149,37 @@ index 7b30f397..1759f95c 100644
 +				break;
 +			}
 +		#else
- 			if ( (Utils::String::toLower(file).find("/bat") != std::string::npos) && (batteryRootPath.empty()) )
+ 			if (Utils::String::toLower(file).find("/bat") != std::string::npos)
+ 			{
  				batteryRootPath = file;
- 
- 			if ( (Utils::String::toLower(file).find("fuel") != std::string::npos) && (fuelgaugeRootPath.empty()) )
- 				fuelgaugeRootPath = file;
- 
--                        if ( (Utils::String::toLower(file).find("charger") != std::string::npos) && (chargerRootPath.empty()) )
--                                chargerRootPath = file;
--                }
-+			if ( (Utils::String::toLower(file).find("charger") != std::string::npos) && (chargerRootPath.empty()) )
-+				chargerRootPath = file;
+ 				break;
+ 			}
 +		#endif
-+		}
- 
- 		// If there's no battery device, look for discrete charger and fuel gauge
- 		if (batteryRootPath.empty())
-@@ -384,8 +399,13 @@ BatteryInformation queryBatteryInformation()
  		}
+ 
+ 		if (batteryRootPath.empty())
+ 			batteryStatusPath = ".";
  		else
  		{
--			batteryStatusPath = batteryRootPath + "/status";
--			batteryCapacityPath = batteryRootPath + "/capacity";
 +		#if PIBOY
 +			batteryStatusPath = batteryRootPath + "/amps";
 +			batteryCapacityPath = batteryRootPath + "/percent";
 +		#else
-+ 			batteryStatusPath = batteryRootPath + "/status";
-+ 			batteryCapacityPath = batteryRootPath + "/capacity";
+ 			batteryStatusPath = batteryRootPath + "/status";
+ 			batteryCapacityPath = batteryRootPath + "/capacity";
 +		#endif
  		}
  	}
  
-@@ -400,7 +420,11 @@ BatteryInformation queryBatteryInformation()
+@@ -373,7 +393,11 @@ BatteryInformation queryBatteryInformation()
+ 	else
+ 	{
  		ret.hasBattery = true;
- 		std::string chargerStatus;
- 		chargerStatus = Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "");
 +		#if PIBOY
 +	 	ret.isCharging = (stoi(Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "-", "")) < 650);
 +		#else
- 		ret.isCharging = ((chargerStatus != "Not charging") && (chargerStatus != "Discharging"));
+ 		ret.isCharging = (Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "") != "Discharging");
 +		#endif
- 		// If reading from fuel gauge, we have to calculate remaining charge
- 		if (batteryCapacityPath.length() <= 1)
- 		{
+ 		ret.level = atoi(Utils::FileSystem::readAllText(batteryCapacityPath).c_str());
+ 	}
+ 
