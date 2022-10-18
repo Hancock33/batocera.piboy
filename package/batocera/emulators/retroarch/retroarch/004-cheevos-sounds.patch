@@ -1,5 +1,5 @@
 diff --git a/audio/audio_driver.c b/audio/audio_driver.c
-index f4a0d205cd..a6fc4de66a 100644
+index 57fa9ed..88bc040 100644
 --- a/audio/audio_driver.c
 +++ b/audio/audio_driver.c
 @@ -1332,8 +1332,8 @@ static void audio_driver_load_menu_bgm_callback(retro_task_t *task,
@@ -40,17 +40,17 @@ index f4a0d205cd..a6fc4de66a 100644
 -         else if (string_is_equal_noncase(basename_noext, "unlock"))
 -            path_cheevo_unlock = path;
 +         else if(string_is_empty(settings->arrays.cheevos_unlock_sound)) {
-+	         if (string_is_equal_noncase(basename_noext, "unlock"))
-+	            path_cheevo_unlock = path;
-+	         } else {
-+	            if (string_is_equal_noncase(basename_noext, settings->arrays.cheevos_unlock_sound))
-+	               path_cheevo_unlock = path;
-+	         }
++            if (string_is_equal_noncase(basename_noext, "unlock"))
++               path_cheevo_unlock = path;
++            } else {
++               if (string_is_equal_noncase(basename_noext, settings->arrays.cheevos_unlock_sound))
++                  path_cheevo_unlock = path;
++            }
        }
     }
  
 diff --git a/configuration.c b/configuration.c
-index 23ac4e6260..8818cbb866 100644
+index 8751932..0c698a1 100644
 --- a/configuration.c
 +++ b/configuration.c
 @@ -1406,6 +1406,7 @@ static struct config_array_setting *populate_settings_array(settings_t *settings
@@ -61,7 +61,7 @@ index 23ac4e6260..8818cbb866 100644
     SETTING_ARRAY("cheevos_token",            settings->arrays.cheevos_token, false, NULL, true);
     SETTING_ARRAY("cheevos_leaderboards_enable", settings->arrays.cheevos_leaderboards_enable, true, "true", true);
  #endif
-@@ -2657,6 +2658,7 @@ void config_set_defaults(void *data)
+@@ -2672,6 +2673,7 @@ void config_set_defaults(void *data)
  #ifdef HAVE_CHEEVOS
     *settings->arrays.cheevos_username                 = '\0';
     *settings->arrays.cheevos_password                 = '\0';
@@ -70,10 +70,10 @@ index 23ac4e6260..8818cbb866 100644
  #endif
  
 diff --git a/configuration.h b/configuration.h
-index 13f19cf8e7..3321815f56 100644
+index 839fdde..aa6e709 100644
 --- a/configuration.h
 +++ b/configuration.h
-@@ -396,6 +396,7 @@ typedef struct settings
+@@ -410,6 +410,7 @@ typedef struct settings
        char menu_driver[32];
        char cheevos_username[32];
        char cheevos_password[256];

@@ -1,8 +1,8 @@
 diff --git a/gfx/drivers_context/vc_egl_ctx.c b/gfx/drivers_context/vc_egl_ctx.c
-index 16f312ae39..e1f59737d7 100644
+index 3c52edb..52fe42d 100644
 --- a/gfx/drivers_context/vc_egl_ctx.c
 +++ b/gfx/drivers_context/vc_egl_ctx.c
-@@ -77,6 +77,9 @@ typedef struct
+@@ -81,6 +81,9 @@ typedef struct
  /* TODO/FIXME - static globals */
  static enum gfx_ctx_api vc_api = GFX_CTX_NONE;
  
