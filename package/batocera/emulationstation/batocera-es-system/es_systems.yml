@@ -1125,6 +1125,16 @@ pico8:
   comment_br: |
     Para mais informações: https://wiki.batocera.org/systems:pico-8
 
+wasm4:
+  name:       wasm4
+  manufacturer: Fantasy
+  release: 2021
+  hardware: console
+  extensions: [wasm]
+  emulators:
+    libretro:
+      wasm4: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_WASM4] }
+
 channelf:
   name:       Channel-F
   manufacturer: Fairchild
