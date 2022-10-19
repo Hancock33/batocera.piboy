@@ -5736,7 +5736,7 @@ libretro:
                     "Off":      disabled
                     "On":       enabled
     wasm4:
-      features: [netplay, padtokeyboard]
+      features: [padtokeyboard]
       shared: [rewind, autosave]
     x1:
       features: [padtokeyboard]
@@ -5808,8 +5808,6 @@ libretro:
     emuscv:
       shared: [rewind, autosave]
     uzem:
-      shared: [rewind, autosave]
-    wasm4:
       shared: [rewind, autosave]
 # Standalones
 amiberry:
