@@ -3627,16 +3627,6 @@ vaporspec:
     libretro:
       vaporspec: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VAPORSPEC] }
 
-wasm4:
-  name:       WASM-4
-  manufacturer: W3C
-  release: 2017
-  hardware: computer
-  extensions: [wasm]
-  emulators:
-    libretro:
-      wasm4: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_WASM] }
-
 xbox360:
   name: Xbox 360
   manufacturer: Microsoft
