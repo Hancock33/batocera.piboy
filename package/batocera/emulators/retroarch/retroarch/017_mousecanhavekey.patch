@@ -1,8 +1,8 @@
 diff --git a/input/drivers/udev_input.c b/input/drivers/udev_input.c
-index 5e127f9..3ac9768 100644
+index 7d6f8d4236..fada07ba14 100644
 --- a/input/drivers/udev_input.c
 +++ b/input/drivers/udev_input.c
-@@ -612,11 +612,9 @@ static int udev_input_add_device(udev_input_t *udev,
+@@ -584,11 +584,9 @@ static int udev_input_add_device(udev_input_t *udev,
     if (type == UDEV_INPUT_MOUSE || type == UDEV_INPUT_TOUCHPAD )
     {
        bool mouse = 0;

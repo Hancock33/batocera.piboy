@@ -1,6 +1,8 @@
---- a/input/drivers_joypad/udev_joypad.c	2021-03-29 15:48:26.882822501 +0200
-+++ b/input/drivers_joypad/udev_joypad.c	2021-03-29 15:48:39.249488731 +0200
-@@ -49,7 +49,7 @@
+diff --git a/input/drivers_joypad/udev_joypad.c b/input/drivers_joypad/udev_joypad.c
+index 3d01809bea..f208e8f1f6 100644
+--- a/input/drivers_joypad/udev_joypad.c
++++ b/input/drivers_joypad/udev_joypad.c
+@@ -51,7 +51,7 @@
   * Code adapted from SDL 2.0's implementation.
   */
  

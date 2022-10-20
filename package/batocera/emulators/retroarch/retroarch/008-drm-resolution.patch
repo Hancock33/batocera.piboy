@@ -1,9 +1,9 @@
 diff --git a/gfx/common/drm_common.c b/gfx/common/drm_common.c
-index a1bede5..8bc674a 100644
+index 418fe6709f..5759d82d28 100644
 --- a/gfx/common/drm_common.c
 +++ b/gfx/common/drm_common.c
-@@ -156,6 +156,22 @@ bool drm_get_encoder(int fd)
-             g_drm_connector->modes[i].vrefresh);
+@@ -161,6 +161,22 @@ bool drm_get_encoder(int fd)
+             drm_calc_refresh_rate(&g_drm_connector->modes[i]));
     }
  
 +   // batocera - set resolution
