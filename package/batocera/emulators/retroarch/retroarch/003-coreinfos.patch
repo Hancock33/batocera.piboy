@@ -1,11 +1,11 @@
 diff --git a/retroarch.c b/retroarch.c
-index 159d482..3c9d169 100644
+index 387a9e95a5..bcbfb94584 100644
 --- a/retroarch.c
 +++ b/retroarch.c
-@@ -24707,6 +24707,36 @@ static void retroarch_parse_input_and_config(int argc, char *argv[])
+@@ -4563,6 +4563,36 @@ static bool retroarch_parse_input_and_config(
        { NULL, 0, NULL, 0 }
     };
-
+ 
 +   if(argc >= 2) {
 +     if(strcmp(argv[1], "-x") == 0) {
 +       struct retro_system_info info;
