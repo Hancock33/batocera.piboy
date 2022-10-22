@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<gameList>
+	<game>
+		<path>./Heroes of Might and Magic III.game</path>
+		<name>Heroes of Might and Magic III: The Restoration of Erathia</name>
+		<desc>On returning from a crusade, the queen of the Griffin Empire discovers her kingdom destroyed. Hordes of demons overwhelmed the Empire and its allies. The queen must rehabilitate her troops and reconnect with her allies to expel the enemies. 
+The player controls one or more heroes. Each hero can move a certain number of times each turn. In the event of a confrontation, the player controls the hero's army against enemy monsters or heroes; the hero in himself cannot fight directly but he can cast magic spells to support his troops. At the end of a fight, the victorious hero gains experience points which he can distribute in various fields.</desc>
+		<image>./images/Heroes of Might and Magic III.png</image>
+		<rating>0.9</rating>
+		<releasedate>19990101T000000</releasedate>
+		<developer>New World Computing's</developer>
+		<publisher>Ubisoft</publisher>
+		<genre>Strategy</genre>
+		<players>1</players>
+		<playcount>15</playcount>
+		<lastplayed>20221022T150240</lastplayed>
+		<gametime>204</gametime>
+		<lang>en</lang>
+		<genreid>1280</genreid>
+	</game>
+</gameList>
