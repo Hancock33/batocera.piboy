@@ -621,6 +621,9 @@ sg1000:
 sgb:
   emulator: libretro
   core:     mgba
+sm64:
+  emulator: sm64
+  core:     sm64
 socrates:
   emulator: libretro
   core:     mame
