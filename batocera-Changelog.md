@@ -6,6 +6,7 @@
 - Vita3k - PlayStation Vita emulator
 - WASM4 - WebAssembly fantasy console (x86_64)
 - automatic switch when a new display is plugged or unplugged (on es only for plugging)
+- Intel VAAPI drivers
 ### Changed
 - move to pipewire wireplumber audio
 - kronos now uses beetle's save path by default, move the save files out of saves/saturn/kronos to saves/saturn and rename:
@@ -40,7 +41,7 @@
 - groovy mame to 0.247
 - hatari to v2.4.1
 - fsuae to July 30 build
-- scummvm to Oct 13, 2022 (v2.6.1)
+- scummvm to v2.6.1
 - simcoupe to v1.2.11
 - supermodel to Aug 19 2022 build
 - tsugaru to v20220702
@@ -66,18 +67,23 @@
 - mupen64plus-audio-sdl to Oct 01, 2022
 - mupen64plus-core to Oct 01, 2022
 - mesa3d to 22.2.1
+- moonlight embedded to 2.5.3
 ### Fixed
 - lr-mame save state file names
 - slow rpcs3 initial ppu compilation times
 - rpcs3 cache & saves dir
   - note: move existing cache from /userdata/saves/rpcs3 to /userdata/system/cache/rpcs3
 - can now boot in verbose mode from syslinux (spam down on keyboard while booting)
+- moonlight embedded not connecting to streams
+- mesa vaapi for additional cards
 ### Dev  
 - buildroot upgrade to 2022.08.1
 - rpi1 image renamed to bcm2835
 - rpi2 image renamed to bcm2836
 - rpi3 image renamed to bcm2837
 - rpi4 image renamed to bcm2711
+- ffmpeg updated to 5.1.2
+- libva updated to 2.16
 
 # 2022/09/20 - batocera.linux 35 - Monarch Butterfly
 * add: gun support in emulationstation
