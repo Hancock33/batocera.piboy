@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./Super Mario 64.e64</path>
+    <name>Super Mario 64 (EU)</name>
+    <desc>Mario is super in a whole new way! Combining the finest 3-D graphics ever developed for a video game and an explosive sound track, Super Mario 64 becomes a new standard for video games. It's packed with bruising battles, daunting obstacle courses and underwater adventures. Retrieve the Power Stars from their hidden locations and confront your arch nemesis - Bowser, King of the Koopas!</desc>
+    <rating>0.8</rating>
+    <releasedate>19960926T000000</releasedate>
+    <developer>Nintendo</developer>
+    <publisher>Nintendo</publisher>
+    <genre>Platform</genre>
+    <players>1</players>
+    <image>./images/Super Mario 64.png</image>
+    <genreid>257</genreid>
+  </game>
+  <game>
+    <path>./Super Mario 64.j64</path>
+    <name>Super Mario 64 (JP)</name>
+    <desc>Mario is super in a whole new way! Combining the finest 3-D graphics ever developed for a video game and an explosive sound track, Super Mario 64 becomes a new standard for video games. It's packed with bruising battles, daunting obstacle courses and underwater adventures. Retrieve the Power Stars from their hidden locations and confront your arch nemesis - Bowser, King of the Koopas!</desc>
+    <rating>0.8</rating>
+    <releasedate>19960926T000000</releasedate>
+    <developer>Nintendo</developer>
+    <publisher>Nintendo</publisher>
+    <genre>Platform</genre>
+    <players>1</players>
+    <image>./images/Super Mario 64.png</image>
+    <genreid>257</genreid>
+  </game>
+  <game>
+    <path>./Super Mario 64.u64</path>
+    <name>Super Mario 64 (US)</name>
+    <desc>Mario is super in a whole new way! Combining the finest 3-D graphics ever developed for a video game and an explosive sound track, Super Mario 64 becomes a new standard for video games. It's packed with bruising battles, daunting obstacle courses and underwater adventures. Retrieve the Power Stars from their hidden locations and confront your arch nemesis - Bowser, King of the Koopas!</desc>
+    <rating>0.8</rating>
+    <releasedate>19960926T000000</releasedate>
+    <developer>Nintendo</developer>
+    <publisher>Nintendo</publisher>
+    <genre>Platform</genre>
+    <players>1</players>
+    <image>./images/Super Mario 64.png</image>
+    <genreid>257</genreid>
+  </game>
+</gameList>

@@ -9465,7 +9465,6 @@ quake3:
 raze:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-  features: [padtokeyboard]
   cfeatures:
     nologo:
       prompt: SKIP INTRO VIDEOS
@@ -9496,6 +9495,24 @@ rtcw:
 sh:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+sm64:
+  features: [padtokeyboard]
+  shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+    nointro:
+      prompt: SKIP INTRO VIDEOS
+      description: Skips the Peach and Castle intro when starting a new game.
+      choices:
+        "Skip": 1
+        "Show (Default)": 0
+
+    cheatsmenu:
+      prompt: SHOW CHEATS MENU
+      description: Show Cheat Menu (Pause + R Shoulder button)
+      choices:
+        "On": 1
+        "Off": 0
+
 sorr:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

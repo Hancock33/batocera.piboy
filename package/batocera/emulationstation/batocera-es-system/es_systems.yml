@@ -4732,6 +4732,31 @@ superflappybirds:
   comment_fr: |
     Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
 
+sm64:
+  name:       Super Mario 64
+  manufacturer: Nintendo
+  release: 1996
+  hardware: console
+  extensions: [e64, j64, u64]
+  path: /userdata/roms/ports/sm64
+  emulators:
+    sm64:
+      sm64: { requireAnyOf: [BR2_PACKAGE_SM64PORT] }
+  comment_en: |
+    ---------------------
+    Data File Setup
+    ---------------------
+
+    A prior copy of the game is required to extract the assets, the data assests can be extracted from
+
+    sm64.eu.z64 sha1: 4ac5721683d0e0b6bbb561b58a71740845dceea9
+    sm64.jp.z64 sha1: 8a20a5c83d6ceb0f0506cfc9fa20d8f438cafe51
+    sm64.us.z64 sha1: 9bef1128717f958171a4afac3ed78ee2bb4e86ce
+
+    For the EU the assest should be in a folder named [Game Name].e64 - ie "Super Mario 64 (EU).e64"
+    For the JP the assest should be in a folder named [Game Name].e64 - ie "Super Mario 64 (JP).j64"
+    For the US the assest should be in a folder named [Game Name].e64 - ie "Super Mario 64 (US).u64"
+
 supertux2:
   name:       Super Tux
   manufacturer: Ports

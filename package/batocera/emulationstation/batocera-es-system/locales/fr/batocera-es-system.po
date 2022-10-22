@@ -10073,12 +10073,12 @@ msgctxt "game_options"
 msgid "Skip introduction animations and logos; default is show"
 msgstr ""
 
-#. TRANSLATION: eduke32, ionfury, raze
+#. TRANSLATION: eduke32, ionfury, raze, sm64
 msgctxt "game_options"
 msgid "SKIP INTRO VIDEOS"
 msgstr ""
 
-#. TRANSLATION: eduke32, ionfury, raze
+#. TRANSLATION: eduke32, ionfury, raze, sm64
 msgctxt "game_options"
 msgid "Show (Default)"
 msgstr ""
@@ -10101,6 +10101,21 @@ msgstr ""
 #. TRANSLATION: raze
 msgctxt "game_options"
 msgid "GLES2 (Default)"
+msgstr ""
+
+#. TRANSLATION: sm64
+msgctxt "game_options"
+msgid "Skips the Peach and Castle intro when starting a new game."
+msgstr ""
+
+#. TRANSLATION: sm64
+msgctxt "game_options"
+msgid "Show Cheat Menu (Pause + R Shoulder button)"
+msgstr ""
+
+#. TRANSLATION: sm64
+msgctxt "game_options"
+msgid "SHOW CHEATS MENU"
 msgstr ""
 
 #. TRANSLATION: virtualjaguar

@@ -367,6 +367,10 @@ def getGenerator(emulator):
         from generators.sh.shGenerator import ShGenerator
         return ShGenerator()
 
+    if emulator == 'sm64':
+        from generators.sm64.sm64Generator import Sm64Generator
+        return Sm64Generator()
+
     if emulator == 'solarus':
         from generators.solarus.solarusGenerator import SolarusGenerator
         return SolarusGenerator()
