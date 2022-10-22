@@ -729,6 +729,9 @@ vanillara:
 vanillatd:
   emulator: vanillatd
   core:     vanillatd
+vcmi:
+  emulator: vcmi
+  core:     vcmi
 vc4000:
   emulator: libretro
   core:     mame
