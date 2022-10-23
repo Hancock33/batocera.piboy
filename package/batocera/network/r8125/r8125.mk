@@ -3,8 +3,8 @@
 # r8125
 #
 ################################################################################
-
-R8125_VERSION = 9.009.02-1
+# Version: Commits on Jul 10, 2022
+R8125_VERSION = 161eefde99d14c799e87764da514f0483ae7092f
 R8125_SITE = $(call github,awesometic,realtek-r8125-dkms,$(R8125_VERSION))
 R8125_LICENSE = GPL-2.0
 R8125_LICENSE_FILES = LICENSE
