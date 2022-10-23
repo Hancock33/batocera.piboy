@@ -367,6 +367,26 @@ class AmiberryGenerator(Generator):
                 commandArray.append("-s")
                 commandArray.append("sound_max_buff=4096")
 
+            # default soundcard
+            if system.isOptSet('amiberry_default_soundcard') and system.config['amiberry_default_soundcard'] == '1':
+                commandArray.append("-o")
+                commandArray.append("default_soundcard=1")
+            elif system.isOptSet('amiberry_default_soundcard') and system.config['amiberry_default_soundcard'] == '2':
+                commandArray.append("-o")
+                commandArray.append("default_soundcard=2")
+            elif system.isOptSet('amiberry_default_soundcard') and system.config['amiberry_default_soundcard'] == '3':
+                commandArray.append("-o")
+                commandArray.append("default_soundcard=3")
+            elif system.isOptSet('amiberry_default_soundcard') and system.config['amiberry_default_soundcard'] == '4':
+                commandArray.append("-o")
+                commandArray.append("default_soundcard=4")
+            elif system.isOptSet('amiberry_default_soundcard') and system.config['amiberry_default_soundcard'] == '5':
+                commandArray.append("-o")
+                commandArray.append("default_soundcard=5")
+            else:
+                commandArray.append("-o")
+                commandArray.append("default_soundcard=0")
+
             # Forcing full-window Mode
             commandArray.append("-s")
             commandArray.append("gfx_fullscreen_amiga=fullwindow")
