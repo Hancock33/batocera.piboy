@@ -3,7 +3,7 @@
 # rtl8188fu
 #
 ################################################################################
-
+# Version: Commits on Oct 04, 2022
 RTL8188FU_VERSION = f5df53df6e1e0f4c4d38df412ec35cd96c06cf23
 RTL8188FU_SITE = $(call github,kelebek333,rtl8188fu,$(RTL8188FU_VERSION))
 RTL8188FU_LICENSE = GPL-2.0
