@@ -435,6 +435,10 @@ def getGenerator(emulator):
         from generators.vanillatd.vanillatdGenerator import VanillatdGenerator
         return VanillatdGenerator()
 
+    if emulator == 'vcmi':
+        from generators.vcmi.vcmiGenerator import VcmiGenerator
+        return VcmiGenerator()
+
     if emulator == 'vkquake':
         from generators.vkquake.vkquakeGenerator import VkquakeGenerator
         return VkquakeGenerator()

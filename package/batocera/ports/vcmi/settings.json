@@ -1,0 +1,10 @@
+{
+	"video" : {
+		"fullscreen" : true,
+		"realFullscreen" : true,		
+		"screenRes" : {
+			"height" : 600,
+			"width" : 800
+		}
+	}
+}
