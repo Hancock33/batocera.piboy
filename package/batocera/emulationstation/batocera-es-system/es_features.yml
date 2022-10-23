@@ -5889,6 +5889,19 @@ amiberry:
                 "8":                           8
                 "9":                           9
                 "10":                          10
+        amiberry_default_soundcard:
+            group: SOUND SETTINGS
+            prompt:      SOUNDCARD
+            description: Change if you are no hearing any sound.
+            choices:
+                "AUTO":                     0
+                "Device 0":                 0
+                "Device 1":                 1
+                "Device 2":                 2
+                "Device 3":                 3
+                "Device 4":                 4
+                "Device 5":                 5
+
 cannonball:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
