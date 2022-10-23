@@ -4849,6 +4849,19 @@ vanillatd:
     vanillatd:
       vanillatd: { requireAnyOf: [BR2_PACKAGE_CANDC] }
 
+vcmi:
+  name:       Heroes of Might and Magic III
+  manufacturer: Ports
+  release: 1999
+  hardware: port
+  extensions: [game]
+  platform: pc
+  group: ports
+  path: /userdata/roms/ports/vcmi
+  emulators:
+    vcmi:
+      vcmi: { requireAnyOf: [BR2_PACKAGE_VCMI] }
+
 voidsw:
   name: Shadow Warrior
   manufacturer: Ports (eDuke Engine)
