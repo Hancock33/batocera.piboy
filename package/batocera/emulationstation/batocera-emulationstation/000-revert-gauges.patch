@@ -1,5 +1,5 @@
 diff --git a/es-core/src/platform.cpp b/es-core/src/platform.cpp
-index 7b30f397..57221153 100644
+index d2d1bc94..57221153 100644
 --- a/es-core/src/platform.cpp
 +++ b/es-core/src/platform.cpp
 @@ -339,49 +339,24 @@ BatteryInformation queryBatteryInformation()
@@ -62,7 +62,7 @@ index 7b30f397..57221153 100644
  		}
  	}
  
--	if ((batteryStatusPath.length() <= 1) || (batteryCurrChargePath.length() <= 1))
+-	if ((batteryStatusPath.length() <= 1) && (batteryCurrChargePath.length() <= 1))
 +	if (batteryStatusPath.length() <= 1)
  	{
  		ret.hasBattery = false;
