@@ -3,8 +3,8 @@
 # libretro-genesisplusgx
 #
 ################################################################################
-# Version: Commits on Oct 23, 2022
-LIBRETRO_GENESISPLUSGX_VERSION = 90bb356a173dc1010d6694bdb470c176efd9c03b
+# Version: Commits on Oct 25, 2022
+LIBRETRO_GENESISPLUSGX_VERSION = ec466a7c9e833a5d5fca4b6fe3baa6ea9238fc42
 LIBRETRO_GENESISPLUSGX_SITE = $(call github,ekeeke,Genesis-Plus-GX,$(LIBRETRO_GENESISPLUSGX_VERSION))
 LIBRETRO_GENESISPLUSGX_LICENSE = Non-commercial
 
