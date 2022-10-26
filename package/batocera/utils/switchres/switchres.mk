@@ -7,8 +7,12 @@
 SWITCHRES_VERSION = 4f80107073201dc89d3a645287365aac59347f80
 SWITCHRES_SITE = $(call github,antonioginer,switchres,$(SWITCHRES_VERSION))
 
-SWITCHRES_DEPENDENCIES = libdrm xserver_xorg-server
+SWITCHRES_DEPENDENCIES = libdrm
 SWITCHRES_INSTALL_STAGING = YES
+
+ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
+SWITCHRES_DEPENDENCIES += xserver_xorg-server
+endif
 
 define SWITCHRES_BUILD_CMDS
 	# Cross-compile standalone and libswitchres
