@@ -18,7 +18,7 @@ SWAY_CONF_OPTS = -Ddefault-wallpaper=false \
                 -Dtray=disabled \
                 -Dman-pages=disabled
 
-ifeq ($(BR2_PACKAGE_WLROOTS_X11),y)
+ifeq ($(BR2_PACKAGE_XWAYLAND),y)
 SWAY_CONF_OPTS += -Dxwayland=enabled
 else
 SWAY_CONF_OPTS += -Dxwayland=disabled
@@ -33,11 +33,11 @@ define SWAY_INSTALL_TARGET_CMDS
     $(INSTALL) -D $(@D)/build/swaymsg/swaymsg   $(TARGET_DIR)/usr/bin
 
     mkdir -p $(TARGET_DIR)/etc/sway
-    $(INSTALL) -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/gpu/sway/config \
+    $(INSTALL) -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/display/sway/config \
         $(TARGET_DIR)/etc/sway
 
     mkdir -p $(TARGET_DIR)/etc/profile.d
-    $(INSTALL) -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/gpu/sway/04-sway.sh \
+    $(INSTALL) -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/display/sway/04-sway.sh \
         $(TARGET_DIR)/etc/profile.d/04-sway.sh
 endef
 

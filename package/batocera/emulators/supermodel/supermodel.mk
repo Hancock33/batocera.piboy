@@ -6,8 +6,12 @@
 # Version: Commits on Oct 17, 2022
 SUPERMODEL_VERSION = b2e5a200daf9588616715f2279c5d3bd37832e09
 SUPERMODEL_SITE = $(call github,trzy,Supermodel,$(SUPERMODEL_VERSION))
-SUPERMODEL_DEPENDENCIES = sdl2 zlib libglew libzip sdl2_net
+SUPERMODEL_DEPENDENCIES = sdl2 zlib libzip sdl2_net
 SUPERMODEL_LICENSE = GPLv3
+
+ifeq ($(BR2_PACKAGE_LIBGLEW),y)
+SUPERMODEL_DEPENDENCIES += libglew
+endif
 
 define SUPERMODEL_BUILD_CMDS
 	cp $(@D)/Makefiles/Makefile.UNIX $(@D)/Makefile

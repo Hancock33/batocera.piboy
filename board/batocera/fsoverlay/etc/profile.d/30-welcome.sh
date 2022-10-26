@@ -8,5 +8,5 @@ echo '
 '
 echo
 batocera-info 2>/dev/null
-echo "OS version: $(cat /usr/share/batocera/batocera.version)"
+echo "OS version: $(batocera-version)"
 echo
