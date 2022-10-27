@@ -3,9 +3,9 @@
 # libretro-mgba
 #
 ################################################################################
-# Version: Commits on Oct 14, 2022
-LIBRETRO_MGBA_VERSION = 3d3342f5c317283d57ce67d4a33b5e494626c544
-LIBRETRO_MGBA_SITE = $(call github,Ryunam,mgba,$(LIBRETRO_MGBA_VERSION))
+# Version: Commits on Oct 25, 2022
+LIBRETRO_MGBA_VERSION = ec5ecb26deba8d7ac830fc66ade9fac0eeaeb4ae
+LIBRETRO_MGBA_SITE = $(call github,libretro,mgba,$(LIBRETRO_MGBA_VERSION))
 LIBRETRO_MGBA_LICENSE = MPLv2.0
 
 LIBRETRO_MGBA_DEPENDENCIES = libzip libpng zlib
