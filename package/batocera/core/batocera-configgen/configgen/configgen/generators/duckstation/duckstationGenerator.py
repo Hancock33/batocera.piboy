@@ -109,6 +109,8 @@ class DuckstationGenerator(Generator):
         # Backend - Default OpenGL
         if system.isOptSet("gfxbackend") and system.config["gfxbackend"] == 'Vulkan':  # Using Gun, you'll have the Aiming ONLY in Vulkan. Duckstation Issue
             settings.set("GPU", "Renderer", "Vulkan")
+        elif system.isOptSet("gfxbackend") and system.config["gfxbackend"] == 'Software':
+            settings.set("GPU", "Renderer", "Software")
         else:
             settings.set("GPU", "Renderer", "OpenGL")
         # Multisampling force (MSAA or SSAA)
