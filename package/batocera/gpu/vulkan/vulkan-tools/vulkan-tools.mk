@@ -23,6 +23,8 @@ ifeq ($(BR2_PACKAGE_MESA3D),y)
 VULKAN_TOOLS_DEPENDENCIES += mesa3d
 endif
 
+VULKAN_TOOLS_CONF_OPTS += -DVulkanHeaders_INCLUDE_DIR=$(STAGING_DIR)/usr/include
+
 define VULKAN_TOOLS_SERVICE
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/gpu/vulkan/vulkan-tools/S55vulkaninfo \
 	    $(TARGET_DIR)/etc/init.d/S55vulkaninfo
