@@ -3,8 +3,8 @@
 # vulkan-loader
 #
 ################################################################################
-# Version: Commits on Oct 26, 2022
-VULKAN_LOADER_VERSION = 201c2d83b133eea61e2c580dfdbe93e3fa706f11
+# Version: Commits on Oct 27, 2022
+VULKAN_LOADER_VERSION = d4cb3b54bb822c819b378af478145b60320e6679
 VULKAN_LOADER_SITE =  $(call github,KhronosGroup,Vulkan-Loader,$(VULKAN_LOADER_VERSION))
 VULKAN_LOADER_DEPENDENCIES = vulkan-headers
 VULKAN_LOADER_INSTALL_STAGING = YES
@@ -21,4 +21,3 @@ VULKAN_LOADER_DEPENDENCIES += mesa3d
 endif
 
 $(eval $(cmake-package))
-
