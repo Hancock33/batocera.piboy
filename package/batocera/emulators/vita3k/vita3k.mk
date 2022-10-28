@@ -3,8 +3,7 @@
 # vita3k
 #
 ################################################################################
-# Version: Commits on Aug 31, 2022
-# Version: Commits on Sept 04, 2022
+# Version: Commits on Oct 25, 2022
 VITA3K_VERSION = 0bc9ef9ee7e695cb4cd4f2539ca9a981f77583ea
 VITA3K_SITE = https://github.com/vita3k/vita3k
 VITA3K_SITE_METHOD=git
@@ -17,10 +16,14 @@ VITA3K_SUPPORTS_IN_SOURCE_BUILD = NO
 VITA3K_CONF_OPTS = -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF \
                    -DUSE_DISCORD_RICH_PRESENCE=OFF -DUSE_VITA3K_UPDATE=OFF
 
+define VITA3K_GET_SUBMODULE
+    mkdir -p $(@D)/external
+    cd $(@D)/external && git clone https://github.com/Vita3K/nativefiledialog-cmake
+endef
+
 define VITA3K_INSTALL_TARGET_CMDS
     mkdir -p $(TARGET_DIR)/usr/bin/vita3k/
 	cp -R $(@D)/buildroot-build/bin/* $(TARGET_DIR)/usr/bin/vita3k/
-	#rm $(TARGET_DIR)/usr/bin/vita3k/update-vita3k.sh
 endef
 
 define VITA3K_INSTALL_EVMAPY
@@ -28,6 +31,7 @@ define VITA3K_INSTALL_EVMAPY
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/vita3k/psvita.vita3k.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
+VITA3K_PRE_CONFIGURE_HOOKS = VITA3K_GET_SUBMODULE
 VITA3K_POST_INSTALL_TARGET_HOOKS = VITA3K_INSTALL_EVMAPY
 
 $(eval $(cmake-package))
