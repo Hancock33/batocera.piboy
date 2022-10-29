@@ -1,8 +1,8 @@
 diff --git a/Makefile b/Makefile
-index f35e8a4..ed4bff6 100644
+index 952b211..3577b1c 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -571,8 +571,7 @@ OBJS            = $(MAIN)
+@@ -556,8 +556,7 @@ OBJS            = $(MAIN)
  #----------------------------------------------------------------------------------------------------
  
  CFLAGS 	       += $(addprefix -I", $(addsuffix ", $(INCS))) $(ARCHFLAGS) -D$(TARGET_PLATFORM)

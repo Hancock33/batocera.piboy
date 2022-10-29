@@ -3,8 +3,8 @@
 # dosbox-staging
 #
 ################################################################################
-# Version: Commits on Oct 15, 2022
-DOSBOX_STAGING_VERSION = 898fccd04487bd9f75f513be694278f2cf6cdf1a
+# Version: Commits on Oct 28, 2022
+DOSBOX_STAGING_VERSION = 8a0ad4d952947759376959a532f10b6881f8f88f
 DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGING_VERSION))
 DOSBOX_STAGING_DEPENDENCIES = sdl2 sdl2_net fluidsynth zlib libpng libogg libvorbis opus opusfile slirp speexdsp
 DOSBOX_STAGING_LICENSE = GPLv2
@@ -96,7 +96,7 @@ define DOSBOX_DL_DEPENDENCIES
 	curl -L https://github.com/berndporr/iir1/archive/refs/tags/1.9.3.tar.gz -o $(@D)/subprojects/packagecache/1.9.3.tar.gz
 	curl -L https://wrapdb.mesonbuild.com/v2/iir_1.9.3-1/get_patch           -o $(@D)/subprojects/packagecache/iir_1.9.3-1_patch.zip
 	curl -L https://downloads.xiph.org/releases/speex/speexdsp-1.2.1.tar.gz  -o $(@D)/subprojects/packagecache/speexdsp-1.2.1.tar.gz
-	curl -L https://wrapdb.mesonbuild.com/v2/speexdsp_1.2.1-4/get_patch      -o $(@D)/subprojects/packagecache/speexdsp_1.2.1-4_patch.zip
+	curl -L https://wrapdb.mesonbuild.com/v2/speexdsp_1.2.1-5/get_patch      -o $(@D)/subprojects/packagecache/speexdsp_1.2.1-5_patch.zip
 endef
 DOSBOX_STAGING_PRE_CONFIGURE_HOOKS += DOSBOX_DL_DEPENDENCIES
 

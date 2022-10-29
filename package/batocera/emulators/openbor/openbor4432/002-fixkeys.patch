@@ -1,5 +1,5 @@
 diff --git a/openbor.c b/openbor.c
-index cc2a0d4..5437d72 100644
+index 2750f50..79dfdf2 100644
 --- a/openbor.c
 +++ b/openbor.c
 @@ -18,6 +18,7 @@
@@ -10,7 +10,7 @@ index cc2a0d4..5437d72 100644
  
  static const char *E_OUT_OF_MEMORY = "Error: Could not allocate sufficient memory.\n";
  static int DEFAULT_OFFSCREEN_KILL = 3000;
-@@ -2959,7 +2960,7 @@ void clearsettings()
+@@ -2961,7 +2962,7 @@ void clearsettings()
      savedata.logo = 0;
      savedata.uselog = 1;
      savedata.debuginfo = 0;
@@ -19,7 +19,7 @@ index cc2a0d4..5437d72 100644
      savedata.stretch = 0;
  
  
-@@ -3053,6 +3054,7 @@ void clearsettings()
+@@ -3055,6 +3056,7 @@ void clearsettings()
  
  void savesettings()
  {
@@ -27,7 +27,7 @@ index cc2a0d4..5437d72 100644
  #ifndef DC
      FILE *handle = NULL;
      char path[128] = {""};
-@@ -3070,8 +3072,174 @@ void savesettings()
+@@ -3072,8 +3074,174 @@ void savesettings()
  #endif
  }
  
@@ -202,7 +202,7 @@ index cc2a0d4..5437d72 100644
  #ifndef DC
      FILE *handle = NULL;
      char path[128] = {""};
-@@ -3090,6 +3258,8 @@ void saveasdefault()
+@@ -3092,6 +3260,8 @@ void saveasdefault()
  
  void loadsettings()
  {
@@ -211,7 +211,7 @@ index cc2a0d4..5437d72 100644
  #ifndef DC
      FILE *handle = NULL;
      char path[128] = {""};
-@@ -3121,6 +3291,8 @@ void loadsettings()
+@@ -3123,6 +3293,8 @@ void loadsettings()
  
  void loadfromdefault()
  {
@@ -220,7 +220,7 @@ index cc2a0d4..5437d72 100644
  #ifndef DC
      FILE *handle = NULL;
      char path[128] = {""};
-@@ -3128,16 +3300,16 @@ void loadfromdefault()
+@@ -3130,16 +3302,16 @@ void loadfromdefault()
      strncat(path, "default.cfg", 128);
      clearsettings();
      handle = fopen(path, "rb");
@@ -247,7 +247,7 @@ index cc2a0d4..5437d72 100644
  #else
      clearsettings();
  #endif
-@@ -31355,6 +31527,8 @@ void inputrefresh(int playrecmode)
+@@ -31357,6 +31529,8 @@ void inputrefresh(int playrecmode)
          bothnewkeys |= player[p].newkeys;
      }
  
@@ -256,7 +256,7 @@ index cc2a0d4..5437d72 100644
  }
  
  void execute_keyscripts()
-@@ -32052,7 +32226,8 @@ void apply_controls()
+@@ -32054,7 +32228,8 @@ void apply_controls()
  
      for(p = 0; p < 4; p++)
      {
@@ -266,7 +266,7 @@ index cc2a0d4..5437d72 100644
          control_setkey(playercontrolpointers[p], FLAG_MOVEUP,     savedata.keys[p][SDID_MOVEUP]);
          control_setkey(playercontrolpointers[p], FLAG_MOVEDOWN,   savedata.keys[p][SDID_MOVEDOWN]);
          control_setkey(playercontrolpointers[p], FLAG_MOVELEFT,   savedata.keys[p][SDID_MOVELEFT]);
-@@ -32193,7 +32368,7 @@ void shutdown(int status, char *msg, ...)
+@@ -32195,7 +32370,7 @@ void shutdown(int status, char *msg, ...)
  
      if(status != 2)
      {

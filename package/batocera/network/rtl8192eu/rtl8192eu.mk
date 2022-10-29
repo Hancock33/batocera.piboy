@@ -3,8 +3,8 @@
 # rtl8192eu
 #
 ################################################################################
-# Version: Commits on Aug 25, 2022
-RTL8192EU_VERSION = e39c4e7a66b05fab6eceb2bb251d399c003fb544
+# Version: Commits on Oct 26, 2022
+RTL8192EU_VERSION = 2181717490b6399b84f02066a2bd14e49c8a6fc4
 RTL8192EU_SITE = $(call github,Mange,rtl8192eu-linux-driver,$(RTL8192EU_VERSION))
 RTL8192EU_LICENSE = GPL-2.0
 RTL8192EU_LICENSE_FILES = LICENSE
