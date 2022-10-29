@@ -3,14 +3,17 @@
 # lzdoom
 #
 ################################################################################
-# Version: Commits on Feb 26, 2022
-LZDOOM_VERSION = 3.88b
+# Version: Commits on Apr 10, 2022
+LZDOOM_VERSION = 7f3de9e225deace07ac86dadbe41ccf45ceaae3e
 LZDOOM_SITE = $(call github,drfrag666,gzdoom,$(LZDOOM_VERSION))
 LZDOOM_LICENSE = GPL-3.0
 LZDOOM_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew host-zmusic zmusic
 
 LZDOOM_SUPPORTS_IN_SOURCE_BUILD = NO
 LZDOOM_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
+LZDOOM_CONF_OPTS += -DCMAKE_RULE_MESSAGES=OFF
+LZDOOM_CONF_OPTS += -DCMAKE_C_FLAGS_RELEASE="-DNDEBUG"
+LZDOOM_CONF_OPTS += -DCMAKE_CXX_FLAGS_RELEASE="-DNDEBUG"
 LZDOOM_CONF_OPTS += -DNO_GTK=ON
 LZDOOM_CONF_OPTS += -DFORCE_CROSSCOMPILE=ON
 LZDOOM_CONF_OPTS += -DIMPORT_EXECUTABLES=$(HOST_GZDOOM_BUILDDIR)/ImportExecutables.cmake

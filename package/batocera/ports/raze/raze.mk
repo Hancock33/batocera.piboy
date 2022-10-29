@@ -11,6 +11,9 @@ RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic gz
 
 RAZE_SUPPORTS_IN_SOURCE_BUILD = NO
 RAZE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
+RAZE_CONF_OPTS += -DCMAKE_RULE_MESSAGES=OFF
+RAZE_CONF_OPTS += -DCMAKE_C_FLAGS_RELEASE="-DNDEBUG"
+RAZE_CONF_OPTS += -DCMAKE_CXX_FLAGS_RELEASE="-DNDEBUG"
 RAZE_CONF_OPTS += -DNO_GTK=ON
 RAZE_CONF_OPTS += -DFORCE_CROSSCOMPILE=ON
 RAZE_CONF_OPTS += -DIMPORT_EXECUTABLES=$(HOST_GZDOOM_BUILDDIR)/ImportExecutables.cmake
@@ -31,14 +34,16 @@ else
     RAZE_CONF_OPTS += -DHAVE_GLES2=OFF
 endif
 
-define RAZE_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/share/raze
-    $(INSTALL) -D -m 0755 $(@D)/buildroot-build/raze $(TARGET_DIR)/usr/share/raze/raze
-    $(INSTALL) -D -m 0755 $(@D)/buildroot-build/raze.pk3 $(TARGET_DIR)/usr/share/raze/raze.pk3
-    $(INSTALL) -D -m 0755 $(@D)/buildroot-build/soundfonts/raze.sf2 $(TARGET_DIR)/usr/share/raze/raze.sf2
-	cp $(@D)/buildroot-build/libraries/discordrpc/src/libdiscord-rpc.so $(TARGET_DIR)/usr/lib
+define RAZE_INSTALL
+	$(TARGET_STRIP) $(TARGET_DIR)/usr/bin/raze
+	mv $(TARGET_DIR)/usr/bin/raze $(TARGET_DIR)/usr/share/raze/raze
+    mkdir -p $(TARGET_DIR)/usr/share/raze/soundfonts
+    $(INSTALL) -D -m 0755 $(@D)/buildroot-build/soundfonts/raze.sf2 $(TARGET_DIR)/usr/share/raze/soundfonts/raze.sf2
+
     mkdir -p $(TARGET_DIR)/usr/share/evmapy
     cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/raze/raze.keys $(TARGET_DIR)/usr/share/evmapy
 endef
+
+RAZE_POST_INSTALL_TARGET_HOOKS += RAZE_INSTALL
 
 $(eval $(cmake-package))

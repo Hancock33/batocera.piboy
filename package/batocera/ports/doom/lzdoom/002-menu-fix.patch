@@ -1,8 +1,8 @@
-diff --git a/src/menu/menu.cpp b/src/menu/menu.cpp
-index ec9f382096..0b3c77fc73 100644
---- a/src/menu/menu.cpp
-+++ b/src/menu/menu.cpp
-@@ -666,14 +666,14 @@ bool M_Responder (event_t *ev)
+diff --git a/src/common/menu/menu.cpp b/src/common/menu/menu.cpp
+index db89dfedd4..1505a232a3 100644
+--- a/src/common/menu/menu.cpp
++++ b/src/common/menu/menu.cpp
+@@ -702,14 +702,14 @@ bool M_Responder (event_t *ev)
  			ch = ev->data1;
  			switch (ch)
  			{
@@ -19,7 +19,7 @@ index ec9f382096..0b3c77fc73 100644
  			case KEY_JOY14:
  			case KEY_PAD_B:
  				mkey = MKEY_Back;
-@@ -696,28 +696,28 @@ bool M_Responder (event_t *ev)
+@@ -732,14 +732,14 @@ bool M_Responder (event_t *ev)
  
  			case KEY_PAD_DPAD_UP:
  			case KEY_PAD_LTHUMB_UP:
@@ -35,20 +35,4 @@ index ec9f382096..0b3c77fc73 100644
 +			//case KEY_JOYAXIS2PLUS:
  			case KEY_JOYPOV1_DOWN:
  				mkey = MKEY_Down;
- 				break;
- 
- 			case KEY_PAD_DPAD_LEFT:
- 			case KEY_PAD_LTHUMB_LEFT:
--			case KEY_JOYAXIS1MINUS:
-+			//case KEY_JOYAXIS1MINUS:
- 			case KEY_JOYPOV1_LEFT:
- 				mkey = MKEY_Left;
- 				break;
- 
- 			case KEY_PAD_DPAD_RIGHT:
- 			case KEY_PAD_LTHUMB_RIGHT:
--			case KEY_JOYAXIS1PLUS:
-+			//case KEY_JOYAXIS1PLUS:
- 			case KEY_JOYPOV1_RIGHT:
- 				mkey = MKEY_Right;
  				break;
