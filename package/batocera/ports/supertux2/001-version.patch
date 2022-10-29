@@ -19,3 +19,16 @@ index b2c724b60..6887e65a7 100644
  
    if("${VERSION_STRING_GIT}" STREQUAL "")
      set(VERSION_STRING_GIT "${MAJOR_VERSION_GIT}.${MINOR_VERSION_GIT}.${PATCH_VERSION_GIT}")
+diff --git a/src/supertux/main.cpp b/src/supertux/main.cpp
+index 1f3b90f0d..2542d925c 100644
+--- a/src/supertux/main.cpp
++++ b/src/supertux/main.cpp
+@@ -605,7 +605,7 @@ Main::launch_game(const CommandLineArguments& args)
+     else
+     {
+       m_screen_manager->push_screen(std::make_unique<TitleScreen>(*m_savegame));
+-      if (g_config->do_release_check) release_check();
++     // if (g_config->do_release_check) release_check();
+     }
+   }
+ 

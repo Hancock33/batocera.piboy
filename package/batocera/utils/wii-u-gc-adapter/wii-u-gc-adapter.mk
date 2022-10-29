@@ -3,7 +3,8 @@
 # wii-u-gc-adapter
 #
 ################################################################################
-WII_U_GC_ADAPTER_VERSION = 64d7ddc511adb12f2eb05bd97294bc51cf51bfab
+# Version: Commits on Sept 06, 2021
+WII_U_GC_ADAPTER_VERSION = fa098efa7f6b34f8cd82e2c249c81c629901976c
 WII_U_GC_ADAPTER_SITE = $(call github,ToadKing,wii-u-gc-adapter,$(WII_U_GC_ADAPTER_VERSION))
 
 define WII_U_GC_ADAPTER_BUILD_CMDS

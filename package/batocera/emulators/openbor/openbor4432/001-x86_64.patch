@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 10d7a23..6ac1625 100644
+index 952b211..085057c 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -84,16 +84,16 @@ YASM 	        = yasm
@@ -22,7 +22,7 @@ index 10d7a23..6ac1625 100644
  BUILD_MMX       = 1
  endif
  ifeq ($(BUILD_LINUX), 0)
-@@ -289,9 +289,6 @@ ifndef NO_STRIP
+@@ -273,9 +273,6 @@ ifndef NO_STRIP
  ifdef BUILD_WIN
  STRIP 	        = $(WINDEV)/$(PREFIX)strip$(EXTENSION) $(TARGET) -o $(TARGET_FINAL)
  endif
