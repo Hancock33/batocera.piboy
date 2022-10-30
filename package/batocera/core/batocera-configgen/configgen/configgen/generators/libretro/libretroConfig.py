@@ -111,7 +111,7 @@ def createLibretroConfig(generator, system, controllers, guns, rom, bezel, shade
     # Graphic driver needed for the ozone menu
     retroarchConfig['video_driver'] = '"' + gfxBackend + '"'
 
-    retroarchConfig['audio_latency'] = '64'                     # best balance with audio perf
+    retroarchConfig['audio_latency'] = '96'                     # best balance with audio perf
     retroarchConfig['audio_mixer_volume'] = '0.000000'          # remove distortion on Piboy
     retroarchConfig['audio_driver'] = 'tinyalsa'
     if (system.isOptSet("audio_driver")):

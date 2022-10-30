@@ -16,16 +16,20 @@ EDUKE32_BUILD_ARGS = STARTUP_WINDOW=0
 EDUKE32_BUILD_ARGS += HAVE_GTK2=0
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
     EDUKE32_BUILD_ARGS += OPTOPT="-mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math -w"
+	EDUKE32_BUILD_ARGS += LTO=0
 endif
 
 define EDUKE32_BUILD_CMDS
     $(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) -C $(@D) duke3d
     $(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) -C $(@D) sw
+    #$(RM) -r $(@D)/obj
+    #$(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) FURY=1 -C $(@D)
 endef
 
 define EDUKE32_INSTALL_TARGET_CMDS
     $(INSTALL) -D -m 0755 $(@D)/eduke32 $(TARGET_DIR)/usr/bin/eduke32
-    $(INSTALL) -D -m 0755 $(@D)/voidsw -D $(TARGET_DIR)/usr/bin/voidsw
+    $(INSTALL) -D -m 0755 $(@D)/voidsw  $(TARGET_DIR)/usr/bin/voidsw
+    #$(INSTALL) -D -m 0755 $(@D)/fury    $(TARGET_DIR)/usr/bin/ionfury
     #copy sdl game contoller info
     cp $(@D)/package/common/gamecontrollerdb.txt $(TARGET_DIR)/usr/share/gamecontrollerdb.txt
 endef

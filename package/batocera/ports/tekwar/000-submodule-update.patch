@@ -2490,7 +2490,7 @@ similarity index 100%
 rename from third-party/msvc/lib/libvorbisfile_static.lib
 rename to third-party/msvc/libx86/libvorbisfile_static.lib
 Submodule jfbuild contains modified content
-Submodule jfbuild ed8c505..a5a83be:
+Submodule jfbuild ed8c505..8dfb7af:
 diff --git a/jfbuild/.github/workflows/ci.yml b/jfbuild/.github/workflows/ci.yml
 new file mode 100644
 index 0000000..9e7b028
@@ -2561,7 +2561,7 @@ index 0000000..9e7b028
 +          echo USE_OPENGL=${{ matrix.use_opengl }} >> Makefile.msvcuser
 +          nmake /f Makefile.msvc all utils
 diff --git a/jfbuild/Makefile b/jfbuild/Makefile
-index 11430d6..16349b8 100644
+index 11430d6..759b920 100644
 --- a/jfbuild/Makefile
 +++ b/jfbuild/Makefile
 @@ -52,9 +52,9 @@ NASM?=nasm
@@ -2606,15 +2606,18 @@ index 11430d6..16349b8 100644
  			$(SRC)/hightile.$o \
  			$(SRC)/mdsprite.$o \
  			$(SRC)/polymost_fs.$o \
-@@ -246,7 +249,7 @@ cacheinfo$(EXESUFFIX): $(TOOLS)/cacheinfo.$o $(ENGINELIB)
+@@ -246,9 +249,9 @@ cacheinfo$(EXESUFFIX): $(TOOLS)/cacheinfo.$o $(ENGINELIB)
  # These tools are only used at build time and should be compiled
  # using the host toolchain rather than any cross-compiler.
  generatesdlappicon$(EXESUFFIX): $(TOOLS)/generatesdlappicon.c $(SRC)/kplib.c
 -	$(HOSTCC) $(CFLAGS) -I$(SRC) -I$(INC) -o $@ $^
 +	$(HOSTCC) -I$(SRC) -I$(INC) -o $@ $^
  bin2c$(EXESUFFIX): $(TOOLS)/bin2c.cc
- 	$(HOSTCXX) $(CXXFLAGS) -o $@ $^
+-	$(HOSTCXX) $(CXXFLAGS) -o $@ $^
++	$(HOSTCXX) -o $@ $^
  
+ # DEPENDENCIES
+ include Makefile.deps
 @@ -267,7 +270,7 @@ $(SRC)/%.$o: $(SRC)/%.cpp
  	$(CXX) $(CXXFLAGS) $(OURCXXFLAGS) $(OURCFLAGS) -c $< -o $@
  
@@ -2624,6 +2627,192 @@ index 11430d6..16349b8 100644
  
  $(GAME)/%.$o: $(GAME)/%.c
  	$(CC) $(CFLAGS) $(OURCFLAGS) $(GAMECFLAGS) -c $< -o $@
+diff --git a/jfbuild/Makefile.deps b/jfbuild/Makefile.deps
+index 6ecfc7c..5e09b48 100644
+--- a/jfbuild/Makefile.deps
++++ b/jfbuild/Makefile.deps
+@@ -1,60 +1,78 @@
+ # Build Engine dependencies
+ #
+-$(SRC)/a-c.$o: $(SRC)/a-c.c $(SRC)/a.h $(INC)/compat.h
++$(SRC)/a-c.$o: $(SRC)/a-c.c $(INC)/compat.h $(SRC)/a.h
+ $(SRC)/a.$o: $(SRC)/a.$(asm)
+ $(SRC)/asmprot.$o: $(SRC)/asmprot.c $(SRC)/a.h
+-$(SRC)/baselayer.$o: $(SRC)/baselayer.c $(INC)/compat.h $(INC)/baselayer.h $(INC)/build.h $(INC)/osd.h
+-$(SRC)/build.$o: $(SRC)/build.c $(INC)/build.h $(INC)/pragmas.h $(INC)/compat.h $(INC)/baselayer.h $(INC)/editor.h
+-$(SRC)/cache1d.$o: $(SRC)/cache1d.c $(INC)/compat.h $(INC)/cache1d.h $(INC)/pragmas.h $(INC)/baselayer.h
++$(SRC)/baselayer.$o: $(SRC)/baselayer.c $(INC)/build.h $(INC)/compat.h $(INC)/osd.h $(INC)/baselayer.h $(INC)/glbuild.h
++$(SRC)/build.$o: $(SRC)/build.c $(INC)/build.h $(INC)/compat.h $(INC)/pragmas.h $(INC)/osd.h $(INC)/cache1d.h $(INC)/editor.h $(INC)/baselayer.h
++$(SRC)/cache1d.$o: $(SRC)/cache1d.c $(INC)/build.h $(INC)/compat.h $(INC)/cache1d.h $(INC)/pragmas.h $(SRC)/kplib.h
+ $(SRC)/compat.$o: $(SRC)/compat.c $(INC)/compat.h
+-$(SRC)/config.$o: $(SRC)/config.c $(INC)/compat.h $(INC)/editor.h $(INC)/osd.h $(INC)/scriptfile.h $(INC)/baselayer.h $(INC)/winlayer.h
++$(SRC)/config.$o: $(SRC)/config.c $(INC)/build.h $(INC)/compat.h $(INC)/editor.h $(INC)/osd.h $(INC)/scriptfile.h $(INC)/winlayer.h $(INC)/baselayer.h
+ $(SRC)/crc32.$o: $(SRC)/crc32.c $(INC)/crc32.h
+-$(SRC)/defs.$o: $(SRC)/defs.c $(INC)/build.h $(INC)/baselayer.h $(INC)/scriptfile.h $(INC)/compat.h
+-$(SRC)/engine.$o: $(SRC)/engine.c $(INC)/compat.h $(INC)/build.h $(INC)/pragmas.h $(INC)/cache1d.h $(SRC)/a.h $(INC)/osd.h $(INC)/baselayer.h $(SRC)/engine_priv.h $(SRC)/polymost_priv.h $(SRC)/hightile_priv.h $(SRC)/mdsprite_priv.h
+-$(SRC)/polymost.$o: $(SRC)/polymost.c $(INC)/compat.h $(INC)/build.h $(INC)/glbuild.h $(INC)/pragmas.h $(INC)/baselayer.h $(INC)/osd.h $(SRC)/engine_priv.h $(SRC)/polymost_priv.h $(SRC)/hightile_priv.h $(SRC)/polymosttex_priv.h $(SRC)/polymosttexcache.h $(SRC)/mdsprite_priv.h
+-$(SRC)/polymosttex.$o: $(SRC)/polymosttex.c $(INC)/compat.h $(INC)/baselayer.h $(INC)/build.h $(INC)/glbuild.h $(SRC)/kplib.h $(INC)/cache1d.h $(INC)/pragmas.h $(SRC)/engine_priv.h $(SRC)/polymost_priv.h $(SRC)/hightile_priv.h $(SRC)/polymosttex_priv.h $(SRC)/polymosttexcache.h $(SRC)/polymosttexcompress.h
+-$(SRC)/polymosttexcompress.$o: $(SRC)/polymosttexcompress.cc $(LIBSQUISH)/squish.h $(SRC)/rg_etc1.h $(INC)/glbuild.h $(SRC)/polymost_priv.h
+-$(SRC)/polymosttexcache.$o: $(SRC)/polymosttexcache.c $(SRC)/polymosttexcache.h $(INC)/compat.h $(INC)/baselayer.h $(INC)/glbuild.h $(INC)/build.h $(SRC)/hightile_priv.h $(SRC)/polymosttex_priv.h
+-$(SRC)/hightile.$o: $(SRC)/hightile.c $(SRC)/kplib.h $(SRC)/hightile_priv.h
+-$(SRC)/mdsprite.$o: $(SRC)/mdsprite.c $(INC)/compat.h $(INC)/build.h $(INC)/glbuild.h $(SRC)/kplib.h $(INC)/pragmas.h $(INC)/cache1d.h $(INC)/baselayer.h $(SRC)/engine_priv.h $(SRC)/polymost_priv.h $(SRC)/hightile_priv.h $(SRC)/mdsprite_priv.h
+-$(SRC)/textfont.$o: $(SRC)/textfont.c
+-$(SRC)/smalltextfont.$o: $(SRC)/smalltextfont.c
+-$(SRC)/glbuild.$o: $(SRC)/glbuild.c $(INC)/glbuild.h $(INC)/baselayer.h
+-$(SRC)/kplib.$o: $(SRC)/kplib.c $(INC)/compat.h
++$(SRC)/defs.$o: $(SRC)/defs.c $(INC)/build.h $(INC)/compat.h $(INC)/baselayer.h $(INC)/scriptfile.h
++$(SRC)/engine.$o: $(SRC)/engine.c $(INC)/build.h $(INC)/compat.h $(INC)/pragmas.h $(INC)/cache1d.h $(SRC)/a.h $(INC)/osd.h $(INC)/crc32.h $(INC)/baselayer.h $(SRC)/engine_priv.h $(SRC)/polymost_priv.h $(SRC)/glbuild_priv.h $(INC)/glbuild.h $(SRC)/glext.h $(SRC)/hightile_priv.h $(SRC)/polymosttex_priv.h $(SRC)/polymosttexcache.h $(SRC)/mdsprite_priv.h $(INC)/scriptfile.h
++$(SRC)/glbuild.$o: $(SRC)/glbuild.c $(INC)/build.h $(INC)/compat.h $(SRC)/glbuild_priv.h $(INC)/glbuild.h $(SRC)/glext.h $(INC)/osd.h $(INC)/baselayer.h
++$(SRC)/gtkbits.$o: $(SRC)/gtkbits.c $(INC)/build.h $(INC)/compat.h $(INC)/baselayer.h
++$(SRC)/hightile.$o: $(SRC)/hightile.c $(INC)/build.h $(INC)/compat.h $(SRC)/kplib.h $(SRC)/hightile_priv.h
++$(SRC)/kplib.$o: $(SRC)/kplib.c
++$(SRC)/mdsprite.$o: $(SRC)/mdsprite.c $(INC)/build.h $(INC)/compat.h $(INC)/glbuild.h $(SRC)/kplib.h $(INC)/pragmas.h $(INC)/cache1d.h $(INC)/baselayer.h $(INC)/crc32.h $(SRC)/engine_priv.h $(SRC)/polymost_priv.h $(SRC)/glbuild_priv.h $(SRC)/glext.h $(SRC)/hightile_priv.h $(SRC)/polymosttex_priv.h $(SRC)/mdsprite_priv.h
++$(SRC)/mmulti.$o: $(SRC)/mmulti.c $(INC)/build.h $(INC)/compat.h $(INC)/mmulti.h $(INC)/baselayer.h
+ $(SRC)/mmulti_null.$o: $(SRC)/mmulti_null.c $(INC)/mmulti.h
+-$(SRC)/mmulti.$o: $(SRC)/mmulti.c $(INC)/build.h $(INC)/mmulti.h $(INC)/baselayer.h
+-$(SRC)/osd.$o: $(SRC)/osd.c $(INC)/build.h $(INC)/osd.h $(INC)/compat.h $(INC)/baselayer.h
++$(SRC)/osd.$o: $(SRC)/osd.c $(INC)/build.h $(INC)/compat.h $(INC)/osd.h $(INC)/baselayer.h
++$(SRC)/polymost.$o: $(SRC)/polymost.c $(INC)/build.h $(INC)/compat.h $(INC)/glbuild.h $(INC)/pragmas.h $(INC)/baselayer.h $(INC)/osd.h $(SRC)/engine_priv.h $(SRC)/polymost_priv.h $(SRC)/glbuild_priv.h $(SRC)/glext.h $(SRC)/hightile_priv.h $(SRC)/polymosttex_priv.h $(SRC)/polymosttexcache.h $(SRC)/mdsprite_priv.h
++$(SRC)/polymosttexcache.$o: $(SRC)/polymosttexcache.c $(INC)/build.h $(INC)/compat.h $(SRC)/polymosttexcache.h $(INC)/baselayer.h $(SRC)/glbuild_priv.h $(INC)/glbuild.h $(SRC)/glext.h $(SRC)/hightile_priv.h $(SRC)/polymosttex_priv.h
++$(SRC)/polymosttexcompress.$o: $(SRC)/polymosttexcompress.cc $(INC)/build.h $(INC)/compat.h $(SRC)/polymosttexcompress.h $(LIBSQUISH)/squish.h $(SRC)/rg_etc1.h $(INC)/glbuild.h
++$(SRC)/polymosttex.$o: $(SRC)/polymosttex.c $(INC)/build.h $(INC)/compat.h $(INC)/baselayer.h $(INC)/glbuild.h $(SRC)/kplib.h $(INC)/cache1d.h $(INC)/pragmas.h $(INC)/crc32.h $(SRC)/engine_priv.h $(SRC)/polymost_priv.h $(SRC)/glbuild_priv.h $(SRC)/glext.h $(SRC)/hightile_priv.h $(SRC)/polymosttex_priv.h $(SRC)/polymosttexcache.h $(SRC)/polymosttexcompress.h
+ $(SRC)/pragmas.$o: $(SRC)/pragmas.c $(INC)/compat.h
+-$(SRC)/scriptfile.$o: $(SRC)/scriptfile.c $(INC)/scriptfile.h $(INC)/cache1d.h $(INC)/compat.h
+-$(SRC)/sdlayer2.$o: $(SRC)/sdlayer2.c $(INC)/compat.h $(INC)/sdlayer.h $(INC)/baselayer.h $(INC)/cache1d.h $(INC)/pragmas.h $(SRC)/a.h $(INC)/build.h $(INC)/osd.h $(INC)/glbuild.h
+-$(SRC)/winlayer.$o: $(SRC)/winlayer.c $(INC)/compat.h $(INC)/winlayer.h $(INC)/baselayer.h $(INC)/pragmas.h $(INC)/build.h $(SRC)/a.h $(INC)/osd.h $(SRC)/dxdidf.h $(INC)/glbuild.h
+-$(SRC)/gtkbits.$o: $(SRC)/gtkbits.c $(INC)/baselayer.h $(INC)/compat.h $(INC)/build.h
+-$(SRC)/version.$o: $(SRC)/version.c
++$(SRC)/rg_etc1.$o: $(SRC)/rg_etc1.cpp $(SRC)/rg_etc1.h
++$(SRC)/scriptfile.$o: $(SRC)/scriptfile.c $(INC)/build.h $(INC)/compat.h $(INC)/scriptfile.h $(INC)/cache1d.h
++$(SRC)/sdlayer2.$o: $(SRC)/sdlayer2.c $(INC)/build.h $(INC)/compat.h $(INC)/sdlayer.h $(INC)/baselayer.h $(INC)/cache1d.h $(INC)/pragmas.h $(SRC)/a.h $(INC)/osd.h $(SRC)/glbuild_priv.h $(INC)/glbuild.h $(SRC)/glext.h $(SRC)/gtkbits.h
++$(SRC)/smalltextfont.$o: $(SRC)/smalltextfont.c
++$(SRC)/textfont.$o: $(SRC)/textfont.c
+ $(SRC)/version-auto.$o: $(SRC)/version-auto.c
++$(SRC)/version.$o: $(SRC)/version.c
++$(SRC)/winlayer.$o: $(SRC)/winlayer.c $(INC)/compat.h $(INC)/winlayer.h $(INC)/baselayer.h $(INC)/pragmas.h $(INC)/build.h $(SRC)/a.h $(INC)/osd.h $(SRC)/dxdidf.h $(SRC)/glbuild_priv.h $(INC)/glbuild.h
+ 
++$(LIBSQUISH)/alpha.$o: $(LIBSQUISH)/alpha.cpp $(LIBSQUISH)/alpha.h $(LIBSQUISH)/squish.h
++$(LIBSQUISH)/clusterfit.$o: $(LIBSQUISH)/clusterfit.cpp $(LIBSQUISH)/clusterfit.h $(LIBSQUISH)/squish.h $(LIBSQUISH)/maths.h $(LIBSQUISH)/config.h $(LIBSQUISH)/simd.h $(LIBSQUISH)/simd_float.h $(LIBSQUISH)/colourfit.h $(LIBSQUISH)/colourset.h $(LIBSQUISH)/colourblock.h
++$(LIBSQUISH)/colourblock.$o: $(LIBSQUISH)/colourblock.cpp $(LIBSQUISH)/colourblock.h $(LIBSQUISH)/squish.h $(LIBSQUISH)/maths.h $(LIBSQUISH)/config.h
++$(LIBSQUISH)/colourfit.$o: $(LIBSQUISH)/colourfit.cpp $(LIBSQUISH)/colourfit.h $(LIBSQUISH)/squish.h $(LIBSQUISH)/maths.h $(LIBSQUISH)/config.h $(LIBSQUISH)/colourset.h
++$(LIBSQUISH)/colourset.$o: $(LIBSQUISH)/colourset.cpp $(LIBSQUISH)/colourset.h $(LIBSQUISH)/squish.h $(LIBSQUISH)/maths.h $(LIBSQUISH)/config.h
++$(LIBSQUISH)/maths.$o: $(LIBSQUISH)/maths.cpp $(LIBSQUISH)/maths.h $(LIBSQUISH)/config.h $(LIBSQUISH)/simd.h $(LIBSQUISH)/simd_float.h
++$(LIBSQUISH)/rangefit.$o: $(LIBSQUISH)/rangefit.cpp $(LIBSQUISH)/rangefit.h $(LIBSQUISH)/squish.h $(LIBSQUISH)/colourfit.h $(LIBSQUISH)/maths.h $(LIBSQUISH)/config.h $(LIBSQUISH)/colourset.h $(LIBSQUISH)/colourblock.h
++$(LIBSQUISH)/singlecolourfit.$o: $(LIBSQUISH)/singlecolourfit.cpp $(LIBSQUISH)/singlecolourfit.h $(LIBSQUISH)/squish.h $(LIBSQUISH)/colourfit.h $(LIBSQUISH)/maths.h $(LIBSQUISH)/config.h $(LIBSQUISH)/colourset.h $(LIBSQUISH)/colourblock.h $(LIBSQUISH)/singlecolourlookup.inl
++$(LIBSQUISH)/squish.$o: $(LIBSQUISH)/squish.cpp $(LIBSQUISH)/squish.h $(LIBSQUISH)/colourset.h $(LIBSQUISH)/maths.h $(LIBSQUISH)/config.h $(LIBSQUISH)/rangefit.h $(LIBSQUISH)/colourfit.h $(LIBSQUISH)/clusterfit.h $(LIBSQUISH)/simd.h $(LIBSQUISH)/simd_float.h $(LIBSQUISH)/colourblock.h $(LIBSQUISH)/alpha.h $(LIBSQUISH)/singlecolourfit.h
++
++$(SRC)/startgtk_editor.$o: $(SRC)/startgtk_editor.c $(INC)/compat.h $(INC)/baselayer.h $(INC)/build.h $(INC)/compat.h $(INC)/editor.h
+ $(SRC)/startwin_editor.$o: $(SRC)/startwin_editor.c $(INC)/build.h $(INC)/editor.h $(INC)/winlayer.h $(INC)/compat.h $(INC)/buildres.h
+-$(SRC)/startgtk_editor.$o: $(SRC)/startgtk_editor.c $(INC)/baselayer.h $(INC)/build.h $(INC)/compat.h $(INC)/editor.h
+ 
+ # Derived source files from shader files
+ $(SRC)/glbuild_fs.c: $(SRC)/glbuild_fs.glsl
++$(SRC)/glbuild_fs.$o: $(SRC)/glbuild_fs.c
+ $(SRC)/glbuild_vs.c: $(SRC)/glbuild_vs.glsl
++$(SRC)/glbuild_vs.$o: $(SRC)/glbuild_vs.c
+ $(SRC)/polymost_fs.c: $(SRC)/polymost_fs.glsl
++$(SRC)/polymost_fs.$o: $(SRC)/polymost_fs.c
+ $(SRC)/polymost_vs.c: $(SRC)/polymost_vs.glsl
++$(SRC)/polymost_vs.$o: $(SRC)/polymost_vs.c
+ $(SRC)/polymostaux_fs.c: $(SRC)/polymostaux_fs.glsl
++$(SRC)/polymostaux_fs.$o: $(SRC)/polymostaux_fs.c
+ $(SRC)/polymostaux_vs.c: $(SRC)/polymostaux_vs.glsl
++$(SRC)/polymostaux_vs.$o: $(SRC)/polymostaux_vs.c
+ 
+ # KenBuild test game
+-$(GAME)/game.$o: $(GAME)/game.c $(INC)/compat.h $(INC)/build.h $(GAME)/names.h $(INC)/pragmas.h $(INC)/cache1d.h $(GAME)/game.h $(GAME)/kdmsound.h $(INC)/osd.h $(INC)/baselayer.h
+-$(GAME)/bstub.$o: $(GAME)/bstub.c $(INC)/compat.h $(INC)/build.h $(INC)/pragmas.h $(INC)/baselayer.h $(GAME)/names.h $(INC)/osd.h $(INC)/cache1d.h $(INC)/editor.h
+-$(GAME)/config.$o: $(GAME)/config.c $(INC)/compat.h $(GAME)/game.h $(INC)/osd.h $(INC)/scriptfile.h $(INC)/baselayer.h $(INC)/winlayer.h
++$(GAME)/bstub.$o: $(GAME)/bstub.c $(INC)/compat.h $(INC)/build.h $(INC)/compat.h $(INC)/editor.h $(INC)/pragmas.h $(INC)/baselayer.h $(GAME)/names.h $(INC)/osd.h $(INC)/cache1d.h
++$(GAME)/config.$o: $(GAME)/config.c $(INC)/build.h $(INC)/compat.h $(GAME)/game.h $(INC)/osd.h $(INC)/scriptfile.h $(INC)/winlayer.h $(INC)/baselayer.h
++$(GAME)/game.$o: $(GAME)/game.c $(INC)/build.h $(INC)/compat.h $(GAME)/names.h $(INC)/pragmas.h $(INC)/cache1d.h $(GAME)/game.h $(INC)/osd.h $(INC)/mmulti.h $(GAME)/kdmsound.h $(INC)/baselayer.h
+ $(GAME)/kdmsound.$o: $(GAME)/kdmsound.c $(GAME)/kdmsound.h $(INC)/compat.h $(INC)/pragmas.h $(INC)/cache1d.h
+-$(GAME)/kdmsound_stub.$o: $(GAME)/kdmsound_stub.c
+ $(GAME)/kdmsound_sdl2.$o: $(GAME)/kdmsound_sdl2.c $(GAME)/kdmsound.h
++$(GAME)/kdmsound_stub.$o: $(GAME)/kdmsound_stub.c
++
++$(GAME)/startgtk_game.$o: $(GAME)/startgtk_game.c $(INC)/compat.h $(INC)/baselayer.h $(INC)/build.h $(INC)/compat.h $(GAME)/game.h
+ $(GAME)/startwin_game.$o: $(GAME)/startwin_game.c $(INC)/build.h $(INC)/winlayer.h $(INC)/compat.h $(GAME)/game.h $(GAME)/gameres.h
+-$(GAME)/startgtk_game.$o: $(GAME)/startgtk_game.c $(INC)/baselayer.h $(INC)/build.h $(INC)/compat.h $(GAME)/game.h
+ 
+-$(GAME)/gameres.$(res): $(GAME)/gameres.rc $(GAME)/gameres.h $(GAME)/rsrc/game_icon.ico $(GAME)/rsrc/game.manifest
+ $(GAME)/buildres.$(res): $(GAME)/buildres.rc $(INC)/buildres.h $(GAME)/rsrc/build.bmp $(GAME)/rsrc/build_icon.ico $(GAME)/rsrc/build.manifest
++$(GAME)/gameres.$(res): $(GAME)/gameres.rc $(GAME)/gameres.h $(GAME)/rsrc/game_icon.ico $(GAME)/rsrc/game.manifest
+ 
+ # Derived source files from art assets
+ $(GAME)/rsrc/startgtk_game_gresource.c: $(GAME)/rsrc/startgtk_game.gresource.xml $(GAME)/rsrc/game.png $(GAME)/rsrc/startgtk_game.glade
+diff --git a/jfbuild/include/baselayer.h b/jfbuild/include/baselayer.h
+index 1884dc1..f6047b0 100644
+--- a/jfbuild/include/baselayer.h
++++ b/jfbuild/include/baselayer.h
+@@ -36,33 +36,6 @@ extern intptr_t frameplace;
+ 
+ extern void (*baselayer_onvideomodechange)(int);
+ 
+-#if USE_OPENGL
+-typedef struct {
+-	int loaded;
+-
+-	int majver;	// GL version
+-	int minver;
+-	int glslmajver;	// 0 = no support
+-	int glslminver;
+-
+-	float maxanisotropy;
+-	char bgra;
+-	char clamptoedge;
+-	char texcomprdxt1;
+-	char texcomprdxt5;
+-	char texcompretc1;
+-	char texnpot;
+-	char multisample;
+-	char nvmultisamplehint;
+-
+-	int multitex;
+-	int maxtexsize;
+-	int maxvertexattribs;
+-	char debugext;
+-} baselayer_glinfo;
+-extern baselayer_glinfo glinfo;
+-#endif
+-
+ extern int inputdevices;
+ 
+ // keys
+@@ -155,9 +128,6 @@ int unloadgldriver(void);
+ 
+ // baselayer.c
+ int baselayer_init(void);
+-#if USE_OPENGL
+-int baselayer_setupopengl(void);
+-#endif
+ 
+ void makeasmwriteable(void);
+ 
+diff --git a/jfbuild/include/build.h b/jfbuild/include/build.h
+index 865a179..6a35878 100644
+--- a/jfbuild/include/build.h
++++ b/jfbuild/include/build.h
+@@ -484,6 +484,10 @@ void    setrollangle(int rolla);
+ # define POLYMOST_RENDERMODE_POLYGL() (0)
+ #endif
+ 
++#if USE_OPENGL
++extern int glswapinterval;
++#endif
++
+ #if USE_POLYMOST && USE_OPENGL
+ //  pal: pass -1 to invalidate all palettes for the tile, or >=0 for a particular palette
+ //  how: pass -1 to invalidate all instances of the tile in texture memory, or a bitfield
+@@ -511,7 +515,7 @@ extern int glusetexcompr;
+ extern int gltexfiltermode;
+ extern int glredbluemode;
+ extern int glusetexcache;
+-extern int glmultisample, glnvmultisamplehint;
++extern int glmultisample, glnvmultisamplehint, glsampleshading;
+ void gltexapplyprops (void);
+ 
+ extern int polymosttexfullbright;	// set to the first index of the fullbright palette
 diff --git a/jfbuild/include/editor.h b/jfbuild/include/editor.h
 index c5685d9..079a062 100644
 --- a/jfbuild/include/editor.h
@@ -2644,18 +2833,233 @@ index c5685d9..079a062 100644
  void getpoint(int searchxe, int searchye, int *x, int *y);
  int getpointhighlight(int xplc, int yplc);
 diff --git a/jfbuild/include/glbuild.h b/jfbuild/include/glbuild.h
-index 9ac87ad..ecc146d 100644
+index 9ac87ad..1ebee0f 100644
 --- a/jfbuild/include/glbuild.h
 +++ b/jfbuild/include/glbuild.h
-@@ -168,7 +168,7 @@ void glbuild_check_errors(const char *file, int line);
- 
- GLuint glbuild_compile_shader(GLuint type, const GLchar *source);
- GLuint glbuild_link_program(int shadercount, GLuint *shaders);
+@@ -1,179 +1,44 @@
+-#ifndef __build_h__
+-#error Include build.h first.
+-#endif
+-
+-#ifndef __glbuild_h__
+-#define __glbuild_h__
+-
+-#if USE_OPENGL
+-
+-#if (USE_OPENGL == USE_GLES2)
+-#  include <GLES2/gl2.h>
+-#  include <GLES2/gl2ext.h>
+-#else
+-#  if defined(_MSC_VER)
+-#    define WIN32_LEAN_AND_MEAN
+-#    include <windows.h>
+-#    include <GL/gl.h>
+-#  elif defined(__APPLE__)
+-#    if (USE_OPENGL == USE_GL3)
+-#      include <stddef.h>
+-#      include <OpenGL/gl3.h>
+-#    else
+-#      include <OpenGL/gl.h>
+-#    endif
+-#    define APIENTRY
+-#  else
+-#    if (USE_OPENGL == USE_GL3)
+-#      include <GL/glcorearb.h>
+-#    else
+-#      include <GL/gl.h>
+-#    endif
+-#  endif
+-#  ifndef GL_GLEXT_VERSION
+-#    include "glext.h"
+-#  endif
+-#endif
+-
+-#ifndef APIENTRY
+-#  define APIENTRY GL_APIENTRY
+-#endif
+-#ifndef GL_CLAMP  //ES2
+-#  define GL_CLAMP GL_CLAMP_TO_EDGE
+-#endif
+-#ifndef GL_BGRA
+-#  define GL_BGRA GL_BGRA_EXT
+-#endif
+-#ifndef GL_MAX_TEXTURE_MAX_ANISOTROPY
+-#  define GL_MAX_TEXTURE_MAX_ANISOTROPY GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT
+-#endif
+-
+-typedef void (APIENTRY *GLBUILD_DEBUGPROC)(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length,
+-    const GLchar* message, const GLvoid* userParam);
+-
+-struct glbuild_funcs {
+-    void (APIENTRY * glClearColor)( GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha );
+-    void (APIENTRY * glClear)( GLbitfield mask );
+-    void (APIENTRY * glColorMask)( GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha );
+-    void (APIENTRY * glBlendFunc)( GLenum sfactor, GLenum dfactor );
+-    void (APIENTRY * glCullFace)( GLenum mode );
+-    void (APIENTRY * glFrontFace)( GLenum mode );
+-    void (APIENTRY * glPolygonOffset)( GLfloat factor, GLfloat units );
+-#if (USE_OPENGL != USE_GLES2)
+-    void (APIENTRY * glPolygonMode)( GLenum face, GLenum mode );
+-#endif
+-    void (APIENTRY * glEnable)( GLenum cap );
+-    void (APIENTRY * glDisable)( GLenum cap );
+-    void (APIENTRY * glGetFloatv)( GLenum pname, GLfloat *params );
+-    void (APIENTRY * glGetIntegerv)( GLenum pname, GLint *params );
+-    const GLubyte* (APIENTRY * glGetString)( GLenum name );
+-#if (USE_OPENGL == USE_GL3)
+-    const GLubyte* (APIENTRY * glGetStringi)(GLenum name, GLuint index);
+-#endif
+-    GLenum (APIENTRY * glGetError)( GLvoid );
+-    void (APIENTRY * glHint)( GLenum target, GLenum mode );
+-    void (APIENTRY * glPixelStorei)( GLenum pname, GLint param );
+-    void (APIENTRY * glViewport)( GLint x, GLint y, GLsizei width, GLsizei height );
+-    void (APIENTRY * glScissor)( GLint x, GLint y, GLsizei width, GLsizei height );
+-
+-    // Depth
+-    void (APIENTRY * glDepthFunc)( GLenum func );
+-    void (APIENTRY * glDepthMask)( GLboolean flag );
+-#if (USE_OPENGL == USE_GLES2)
+-    void (APIENTRY * glDepthRangef)( GLclampf near_val, GLclampf far_val );
+-#else
+-    void (APIENTRY * glDepthRange)( GLclampd near_val, GLclampd far_val );
+-#endif
+-
+-    // Raster funcs
+-    void (APIENTRY * glReadPixels)( GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid *pixels );
+-
+-    // Texture mapping
+-    void (APIENTRY * glTexEnvf)( GLenum target, GLenum pname, GLfloat param );
+-    void (APIENTRY * glGenTextures)( GLsizei n, GLuint *textures );
+-    void (APIENTRY * glDeleteTextures)( GLsizei n, const GLuint *textures);
+-    void (APIENTRY * glBindTexture)( GLenum target, GLuint texture );
+-    void (APIENTRY * glTexImage2D)( GLenum target, GLint level, GLint internalFormat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
+-    void (APIENTRY * glTexSubImage2D)( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels );	// 1.1
+-    void (APIENTRY * glTexParameterf)( GLenum target, GLenum pname, GLfloat param );
+-    void (APIENTRY * glTexParameteri)( GLenum target, GLenum pname, GLint param );
+-    void (APIENTRY * glCompressedTexImage2D)(GLenum, GLint, GLenum, GLsizei, GLsizei, GLint, GLsizei, const GLvoid *);
+-
+-    // Buffer objects
+-    void (APIENTRY * glBindBuffer)(GLenum target, GLuint buffer);
+-    void (APIENTRY * glBufferData)(GLenum target, GLsizeiptr size, const GLvoid * data, GLenum usage);
+-    void (APIENTRY * glBufferSubData)(GLenum target, GLintptr offset, GLsizeiptr size, const GLvoid * data);
+-    void (APIENTRY * glDeleteBuffers)(GLsizei n, const GLuint * buffers);
+-    void (APIENTRY * glGenBuffers)(GLsizei n, GLuint * buffers);
+-    void (APIENTRY * glDrawElements)( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices );
+-    void (APIENTRY * glEnableVertexAttribArray)(GLuint index);
+-    void (APIENTRY * glDisableVertexAttribArray)(GLuint index);
+-    void (APIENTRY * glVertexAttribPointer)(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid * pointer);
+-#if (USE_OPENGL == USE_GL3)
+-    void (APIENTRY * glBindVertexArray)(GLuint array);
+-    void (APIENTRY * glDeleteVertexArrays)(GLsizei n, const GLuint *arrays);
+-    void (APIENTRY * glGenVertexArrays)(GLsizei n, GLuint *arrays);
+-#endif
+-
+-    // Shaders
+-    void (APIENTRY * glActiveTexture)( GLenum texture );
+-    void (APIENTRY * glAttachShader)(GLuint program, GLuint shader);
+-    void (APIENTRY * glCompileShader)(GLuint shader);
+-    GLuint (APIENTRY * glCreateProgram)(GLvoid);
+-    GLuint (APIENTRY * glCreateShader)(GLenum type);
+-    void (APIENTRY * glDeleteProgram)(GLuint program);
+-    void (APIENTRY * glDeleteShader)(GLuint shader);
+-    void (APIENTRY * glDetachShader)(GLuint program, GLuint shader);
+-    GLint (APIENTRY * glGetAttribLocation)(GLuint program, const GLchar *name);
+-    void (APIENTRY * glGetProgramiv)(GLuint program, GLenum pname, GLint *params);
+-    void (APIENTRY * glGetProgramInfoLog)(GLuint program, GLsizei bufSize, GLsizei *length, GLchar *infoLog);
+-    void (APIENTRY * glGetShaderiv)(GLuint shader, GLenum pname, GLint *params);
+-    void (APIENTRY * glGetShaderInfoLog)(GLuint shader, GLsizei bufSize, GLsizei *length, GLchar *infoLog);
+-    GLint (APIENTRY * glGetUniformLocation)(GLuint program, const GLchar *name);
+-    void (APIENTRY * glLinkProgram)(GLuint program);
+-    void (APIENTRY * glShaderSource)(GLuint shader, GLsizei count, const GLchar **string, const GLint *length);
+-    void (APIENTRY * glUniform1i)(GLint location, GLint v0);
+-    void (APIENTRY * glUniform1f)(GLint location, GLfloat v0);
+-    void (APIENTRY * glUniform2f)(GLint location, GLfloat v0, GLfloat v1);
+-    void (APIENTRY * glUniform3f)(GLint location, GLfloat v0, GLfloat v1, GLfloat v2);
+-    void (APIENTRY * glUniform4f)(GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3);
+-    void (APIENTRY * glUniformMatrix4fv)(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+-    void (APIENTRY * glUseProgram)(GLuint program);
+-
+-    // Debug extension.
+-#if (USE_OPENGL == USE_GLES2)
+-    void (APIENTRY * glDebugMessageCallbackKHR)(GLBUILD_DEBUGPROC callback, const GLvoid* userParam);
+-#else
+-    void (APIENTRY * glDebugMessageCallback)(GLBUILD_DEBUGPROC callback, const GLvoid* userParam);
+-#endif
+-};
+-
+-extern struct glbuild_funcs glfunc;
+-
+-typedef struct {
+-    GLuint program;
+-    GLuint paltex;
+-    GLuint frametex;
+-    GLuint vao;
+-    GLint attrib_vertex;    // vec2
+-    GLint attrib_texcoord;  // vec2
+-    GLuint buffer_indexes;
+-    GLuint buffer_elements;
+-} glbuild8bit;
+-
+-int glbuild_loadfunctions(void);
+-void glbuild_unloadfunctions(void);
+-void glbuild_check_errors(const char *file, int line);
+-#define GLBUILD_CHECK_ERRORS() glbuild_check_errors(__FILE__, __LINE__)
+-
+-GLuint glbuild_compile_shader(GLuint type, const GLchar *source);
+-GLuint glbuild_link_program(int shadercount, GLuint *shaders);
 -int glbuild_prepare_8bit_shader(glbuild8bit *state, int resx, int resy, int stride);        // <0 = error
-+int glbuild_prepare_8bit_shader(glbuild8bit *state, int resx, int resy, int stride, int winx, int winy);  // <0 = error
- void glbuild_delete_8bit_shader(glbuild8bit *state);
- void glbuild_update_8bit_palette(glbuild8bit *state, const GLvoid *pal);
- void glbuild_update_8bit_frame(glbuild8bit *state, const GLvoid *frame, int resx, int resy, int stride);
+-void glbuild_delete_8bit_shader(glbuild8bit *state);
+-void glbuild_update_8bit_palette(glbuild8bit *state, const GLvoid *pal);
+-void glbuild_update_8bit_frame(glbuild8bit *state, const GLvoid *frame, int resx, int resy, int stride);
+-void glbuild_draw_8bit_frame(glbuild8bit *state);
+-
+-#endif //USE_OPENGL
+-
+-#endif // __glbuild_h__
++// OpenGL interface declaration
++// for the Build Engine
++// by Jonathon Fowler (jf@jonof.id.au)
++
++#ifndef __glbuild_h__
++#define __glbuild_h__
++
++#ifdef __cplusplus
++extern "C" {
++#endif
++
++#if USE_OPENGL
++struct glbuild_info {
++	int loaded;
++
++	int majver;	// GL version
++	int minver;
++	int glslmajver;	// 0 = no support
++	int glslminver;
++
++	float maxanisotropy;
++	char bgra;
++	char clamptoedge;
++	char texcomprdxt1;
++	char texcomprdxt5;
++	char texcompretc1;
++	char texnpot;
++	char multisample;
++	char nvmultisamplehint;
++	char sampleshading;
++
++	int multitex;
++	int maxtexsize;
++	int maxvertexattribs;
++	char debugext;
++};
++extern struct glbuild_info glinfo;
++#endif
++
++#ifdef __cplusplus
++}
++#endif
++
++#endif // __glbuild_h__
 diff --git a/jfbuild/include/mmulti.h b/jfbuild/include/mmulti.h
 index 425761a..f3c49dd 100644
 --- a/jfbuild/include/mmulti.h
@@ -2949,10 +3353,50 @@ index 199aea4..87c8dc3 100644
  }
  
 diff --git a/jfbuild/src/baselayer.c b/jfbuild/src/baselayer.c
-index 5fcea27..4e1780c 100644
+index 5fcea27..fbd6bed 100644
 --- a/jfbuild/src/baselayer.c
 +++ b/jfbuild/src/baselayer.c
-@@ -88,16 +88,17 @@ static int osdcmd_vars(const osdfuncparm_t *parm)
+@@ -15,7 +15,7 @@
+ 
+ #if USE_OPENGL
+ #include "glbuild.h"
+-baselayer_glinfo glinfo;
++struct glbuild_info glinfo;
+ #endif //USE_OPENGL
+ 
+ static void onvideomodechange(int UNUSED(newmode)) { }
+@@ -44,10 +44,6 @@ static int osdfunc_setrendermode(const osdfuncparm_t *parm)
+ }
+ #endif //USE_POLYMOST
+ 
+-#if defined(DEBUGGINGAIDS) && USE_OPENGL
+-static int debuggllogseverity = 2;	// default to 'low'
+-#endif
+-
+ #if defined(DEBUGGINGAIDS) && USE_POLYMOST && USE_OPENGL
+ static int osdcmd_hicsetpalettetint(const osdfuncparm_t *parm)
+ {
+@@ -68,36 +64,22 @@ static int osdcmd_hicsetpalettetint(const osdfuncparm_t *parm)
+ }
+ #endif //DEBUGGINGAIDS && USE_POLYMOST && USE_OPENGL
+ 
+-#if USE_OPENGL
+-static void dumpglinfo(void);
+-static void dumpglexts(void);
+-static int osdcmd_glinfo(const osdfuncparm_t *parm)
+-{
+-	if (parm->numparms == 0) {
+-		dumpglinfo();
+-		buildputs("Use \"glinfo exts\" to list extensions.\n");
+-	} else if (strcmp(parm->parms[0], "exts") == 0) {
+-		dumpglexts();
+-	}
+-	return OSDCMD_OK;
+-}
+-#endif //USE_OPENGL
+-
+ static int osdcmd_vars(const osdfuncparm_t *parm)
+ {
  	int showval = (parm->numparms < 1);
  
  	if (!Bstrcasecmp(parm->name, "screencaptureformat")) {
@@ -2979,7 +3423,26 @@ index 5fcea27..4e1780c 100644
  		return OSDCMD_OK;
  	}
  	else if (!Bstrcasecmp(parm->name, "novoxmips")) {
-@@ -129,7 +130,7 @@ int baselayer_init(void)
+@@ -110,18 +92,6 @@ static int osdcmd_vars(const osdfuncparm_t *parm)
+ 		else { usevoxels = (atoi(parm->parms[0]) != 0); }
+ 		return OSDCMD_OK;
+ 	}
+-#if defined(DEBUGGINGAIDS) && USE_OPENGL
+-	else if (!Bstrcasecmp(parm->name, "debuggllogseverity")) {
+-		const char *levels[] = {"none", "notification", "low", "medium", "high"};
+-		if (showval) { buildprintf("debuggllogseverity is %s (%d)\n", levels[debuggllogseverity], debuggllogseverity); }
+-		else {
+-			debuggllogseverity = atoi(parm->parms[0]);
+-			debuggllogseverity = max(0, min(4, debuggllogseverity));
+-			buildprintf("debuggllogseverity is now %s (%d)\n", levels[debuggllogseverity], debuggllogseverity);
+-		}
+-		return OSDCMD_OK;
+-	}
+-#endif
+ 	return OSDCMD_SHOWHELP;
+ }
+ 
+@@ -129,7 +99,7 @@ int baselayer_init(void)
  {
      OSD_Init();
  
@@ -2988,15 +3451,360 @@ index 5fcea27..4e1780c 100644
  
  	OSD_RegisterFunction("novoxmips","novoxmips: turn off/on the use of mipmaps when rendering 8-bit voxels",osdcmd_vars);
  	OSD_RegisterFunction("usevoxels","usevoxels: enable/disable automatic sprite->voxel rendering",osdcmd_vars);
-@@ -270,6 +271,8 @@ static void APIENTRY gl_debug_proc(GLenum source, GLenum type, GLuint id, GLenum
- 	const char *typestr = "(unknown)";
- 	const char *severitystr = "(unknown)";
+@@ -150,353 +120,7 @@ int baselayer_init(void)
+ #if defined(DEBUGGINGAIDS) && USE_POLYMOST && USE_OPENGL
+ 	OSD_RegisterFunction("hicsetpalettetint","hicsetpalettetint: sets palette tinting values",osdcmd_hicsetpalettetint);
+ #endif
+-#if defined(DEBUGGINGAIDS) && USE_OPENGL
+-	OSD_RegisterFunction("debuggllogseverity","debuggllogseverity: set OpenGL debug log verbosity (0-4 = none/notification/low/med/high)",osdcmd_vars);
+-#endif
+-
+-#if USE_OPENGL
+-	OSD_RegisterFunction("glinfo","glinfo [exts]: shows OpenGL information about the current OpenGL mode",osdcmd_glinfo);
+-#endif //USE_OPENGL
  
-+	(void)id; (void)length; (void)userParam;
-+
- 	if (debuggllogseverity < 1) return;
+ 	return 0;
+ }
  
- 	switch (source) {
+-#if USE_OPENGL
+-
+-static void glext_enumerate_dump(const char *ext) {
+-	buildputs(" ");
+-	buildputs(ext);
+-}
+-
+-static void glext_enumerate_configure(const char *ext) {
+-	if (!Bstrcmp(ext, "GL_EXT_texture_filter_anisotropic")) {
+-			// supports anisotropy. get the maximum anisotropy level
+-		glfunc.glGetFloatv(GL_MAX_TEXTURE_MAX_ANISOTROPY, &glinfo.maxanisotropy);
+-	} else if (!Bstrcmp(ext, "GL_EXT_texture_edge_clamp") ||
+-			!Bstrcmp(ext, "GL_SGIS_texture_edge_clamp")) {
+-			// supports GL_CLAMP_TO_EDGE
+-		glinfo.clamptoedge = 1;
+-	} else if (!Bstrcmp(ext, "GL_EXT_bgra") ||
+-			!Bstrcmp(ext, "GL_EXT_texture_format_BGRA8888")) {
+-			// support bgra textures
+-		glinfo.bgra = 1;
+-	} else if (!Bstrcmp(ext, "GL_EXT_texture_compression_s3tc")) {
+-			// support DXT1 and DXT5 texture compression
+-		glinfo.texcomprdxt1 = 1;
+-		glinfo.texcomprdxt5 = 1;
+-	} else if (!Bstrcmp(ext, "GL_EXT_texture_compression_dxt1")) {
+-			// support DXT1 texture compression
+-		glinfo.texcomprdxt1 = 1;
+-	} else if (!Bstrcmp(ext, "GL_OES_compressed_ETC1_RGB8_texture")) {
+-			// support ETC1 texture compression
+-		glinfo.texcompretc1 = 1;
+-	} else if (!Bstrcmp(ext, "GL_ARB_texture_non_power_of_two") ||
+-			!Bstrcmp(ext, "GL_OES_texture_npot")) {
+-			// support non-power-of-two texture sizes
+-		glinfo.texnpot = 1;
+-	} else if (!Bstrcmp(ext, "GL_ARB_multisample")) {
+-			// supports multisampling
+-		glinfo.multisample = 1;
+-	} else if (!Bstrcmp(ext, "GL_NV_multisample_filter_hint")) {
+-			// supports nvidia's multisample hint extension
+-		glinfo.nvmultisamplehint = 1;
+-	} else if (!strcmp(ext, "GL_ARB_shading_language_100")) {
+-		const char *ver;
+-
+-		// Clear the error queue, then query the version string.
+-		while (glfunc.glGetError() != GL_NO_ERROR) { }
+-		ver = (const char *) glfunc.glGetString(GL_SHADING_LANGUAGE_VERSION);
+-
+-		if (!ver && glfunc.glGetError() == GL_INVALID_ENUM) {
+-			// GLSL 1.00 (1.051).
+-			glinfo.glslmajver = 1;
+-			glinfo.glslminver = 0;
+-		} else if (ver) {
+-			// GLSL 1.10 or newer.
+-			sscanf(ver, "%d.%d", &glinfo.glslmajver, &glinfo.glslminver);
+-		}
+-	} else if (!strcmp(ext, "GL_KHR_debug")) {
+-		glinfo.debugext = 1;
+-	}
+-}
+-
+-static void glext_enumerate(void (*callback)(const char *)) {
+-	char *workstr = NULL, *workptr = NULL, *nextptr = NULL;
+-	const char *ext = NULL;
+-	GLint extn = 0, numexts = 0;
+-
+-#if (USE_OPENGL == USE_GL3)
+-	if (glinfo.majver >= 3) {
+-		glfunc.glGetIntegerv(GL_NUM_EXTENSIONS, &numexts);
+-	} else
+-#endif
+-	{
+-		const char *extstr = (const char *) glfunc.glGetString(GL_EXTENSIONS);
+-		workstr = workptr = strdup(extstr);
+-	}
+-
+-	while (1) {
+-#if (USE_OPENGL == USE_GL3)
+-		if (glinfo.majver >= 3) {
+-			if (extn == numexts) break;
+-			ext = (const char *) glfunc.glGetStringi(GL_EXTENSIONS, extn);
+-		} else
+-#endif
+-		{
+-			ext = Bstrtoken(workptr, " ", &nextptr, 1);
+-			if (!ext) break;
+-		}
+-
+-		callback(ext);
+-
+-#if (USE_OPENGL == USE_GL3)
+-		if (glinfo.majver >= 3) {
+-			extn++;
+-		} else
+-#endif
+-		{
+-			workptr = NULL;
+-		}
+-	}
+-
+-	if (workstr) free(workstr);
+-}
+-
+-#if defined(DEBUGGINGAIDS) && defined(GL_KHR_debug)
+-static void APIENTRY gl_debug_proc(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length,
+-	const GLchar* message, const GLvoid* userParam)
+-{
+-	const char *sourcestr = "(unknown)";
+-	const char *typestr = "(unknown)";
+-	const char *severitystr = "(unknown)";
+-
+-	if (debuggllogseverity < 1) return;
+-
+-	switch (source) {
+-#if (USE_OPENGL == USE_GLES2)
+-		case GL_DEBUG_SOURCE_API_KHR: sourcestr = "API"; break;
+-		case GL_DEBUG_SOURCE_SHADER_COMPILER_KHR: sourcestr = "SHADER_COMPILER"; break;
+-		case GL_DEBUG_SOURCE_WINDOW_SYSTEM_KHR: sourcestr = "WINDOW_SYSTEM"; break;
+-		case GL_DEBUG_SOURCE_THIRD_PARTY_KHR: sourcestr = "THIRD_PARTY"; break;
+-		case GL_DEBUG_SOURCE_APPLICATION_KHR: sourcestr = "APPLICATION"; break;
+-		case GL_DEBUG_SOURCE_OTHER_KHR: sourcestr = "OTHER"; break;
+-#else
+-		case GL_DEBUG_SOURCE_API: sourcestr = "API"; break;
+-		case GL_DEBUG_SOURCE_SHADER_COMPILER: sourcestr = "SHADER_COMPILER"; break;
+-		case GL_DEBUG_SOURCE_WINDOW_SYSTEM: sourcestr = "WINDOW_SYSTEM"; break;
+-		case GL_DEBUG_SOURCE_THIRD_PARTY: sourcestr = "THIRD_PARTY"; break;
+-		case GL_DEBUG_SOURCE_APPLICATION: sourcestr = "APPLICATION"; break;
+-		case GL_DEBUG_SOURCE_OTHER: sourcestr = "OTHER"; break;
+-#endif
+-	}
+-	switch (type) {
+-#if (USE_OPENGL == USE_GLES2)
+-		case GL_DEBUG_TYPE_ERROR_KHR: typestr = "ERROR"; break;
+-		case GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR_KHR: typestr = "DEPRECATED_BEHAVIOR"; break;
+-		case GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR_KHR: typestr = "UNDEFINED_BEHAVIOR"; break;
+-		case GL_DEBUG_TYPE_PERFORMANCE_KHR: typestr = "PERFORMANCE"; break;
+-		case GL_DEBUG_TYPE_PORTABILITY_KHR: typestr = "PORTABILITY"; break;
+-		case GL_DEBUG_TYPE_OTHER_KHR: typestr = "OTHER"; break;
+-		case GL_DEBUG_TYPE_MARKER_KHR: typestr = "MARKER"; break;
+-		case GL_DEBUG_TYPE_PUSH_GROUP_KHR: typestr = "PUSH_GROUP"; break;
+-		case GL_DEBUG_TYPE_POP_GROUP_KHR: typestr = "POP_GROUP"; break;
+-#else
+-		case GL_DEBUG_TYPE_ERROR: typestr = "ERROR"; break;
+-		case GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR: typestr = "DEPRECATED_BEHAVIOR"; break;
+-		case GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR: typestr = "UNDEFINED_BEHAVIOR"; break;
+-		case GL_DEBUG_TYPE_PERFORMANCE: typestr = "PERFORMANCE"; break;
+-		case GL_DEBUG_TYPE_PORTABILITY: typestr = "PORTABILITY"; break;
+-		case GL_DEBUG_TYPE_OTHER: typestr = "OTHER"; break;
+-		case GL_DEBUG_TYPE_MARKER: typestr = "MARKER"; break;
+-		case GL_DEBUG_TYPE_PUSH_GROUP: typestr = "PUSH_GROUP"; break;
+-		case GL_DEBUG_TYPE_POP_GROUP: typestr = "POP_GROUP"; break;
+-#endif
+-	}
+-	switch (severity) {
+-#if (USE_OPENGL == USE_GLES2)
+-		case GL_DEBUG_SEVERITY_HIGH_KHR:
+-			severitystr = "HIGH";
+-			break;
+-		case GL_DEBUG_SEVERITY_MEDIUM_KHR:
+-			if (debuggllogseverity > 3) return;
+-			severitystr = "MEDIUM";
+-			break;
+-		case GL_DEBUG_SEVERITY_LOW_KHR:
+-			if (debuggllogseverity > 2) return;
+-			severitystr = "LOW";
+-			break;
+-		case GL_DEBUG_SEVERITY_NOTIFICATION_KHR:
+-			if (debuggllogseverity > 1) return;
+-			severitystr = "NOTIFICATION";
+-			break;
+-#else
+-		case GL_DEBUG_SEVERITY_HIGH:
+-			severitystr = "HIGH";
+-			break;
+-		case GL_DEBUG_SEVERITY_MEDIUM:
+-			if (debuggllogseverity > 3) return;
+-			severitystr = "MEDIUM";
+-			break;
+-		case GL_DEBUG_SEVERITY_LOW:
+-			if (debuggllogseverity > 2) return;
+-			severitystr = "LOW";
+-			break;
+-		case GL_DEBUG_SEVERITY_NOTIFICATION:
+-			if (debuggllogseverity > 1) return;
+-			severitystr = "NOTIFICATION";
+-			break;
+-#endif
+-	}
+-	debugprintf("gl_debug_proc: %s %s %s %s\n", sourcestr, typestr, severitystr, message);
+-}
+-#endif
+-
+-int baselayer_setupopengl(void)
+-{
+-	const char *glver;
+-
+-	if (glbuild_loadfunctions()) {
+-		return -1;
+-	}
+-
+-	memset(&glinfo, 0, sizeof(glinfo));
+-	glver = (const char *) glfunc.glGetString(GL_VERSION);
+-
+-#if (USE_OPENGL == USE_GLES2)
+-	sscanf(glver, "OpenGL ES %d.%d", &glinfo.majver, &glinfo.minver);
+-#else
+-	sscanf(glver, "%d.%d", &glinfo.majver, &glinfo.minver);
+-#endif
+-
+-	sscanf((const char *) glfunc.glGetString(GL_VERSION), "%d.%d",
+-		&glinfo.majver, &glinfo.minver);
+-	glinfo.maxanisotropy = 1.0;
+-	glfunc.glGetIntegerv(GL_MAX_TEXTURE_SIZE, &glinfo.maxtexsize);
+-	glfunc.glGetIntegerv(GL_MAX_TEXTURE_IMAGE_UNITS, &glinfo.multitex);
+-	glfunc.glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &glinfo.maxvertexattribs);
+-
+-#if (USE_OPENGL == USE_GLES2)
+-	glinfo.clamptoedge = 1;
+-	glinfo.glslmajver = 1;
+-	glinfo.glslminver = 0;
+-#elif (USE_OPENGL == USE_GL3)
+-	glinfo.bgra = 1;
+-	glinfo.clamptoedge = 1;
+-	glinfo.texnpot = 1;
+-	glinfo.multisample = 1;
+-
+-	glver = (const char *) glfunc.glGetString(GL_SHADING_LANGUAGE_VERSION);
+-	sscanf(glver, "%d.%d", &glinfo.glslmajver, &glinfo.glslminver);
+-#endif
+-
+-	glext_enumerate(glext_enumerate_configure);
+-	glinfo.loaded = 1;
+-
+-#if (USE_OPENGL == USE_GLES2)
+-	if (glinfo.majver < 2) {
+-		buildputs("OpenGL device does not support ES 2.0 features.\n");
+-		return -2;
+-	}
+-#else
+-	if (glinfo.majver < 2) {
+-		buildputs("OpenGL device does not support 2.0 features.\n");
+-		return -2;
+-	}
+-	if (glinfo.multitex < 2) {
+-		buildputs("OpenGL device does not have at least 2 texturing units.\n");
+-		return -2;
+-	}
+-	if (glinfo.glslmajver < 1 || (glinfo.glslmajver == 1 && glinfo.glslminver < 10)) {
+-		buildputs("OpenGL device does not support GLSL 1.10 shaders.\n");
+-		return -2;
+-	}
+-#endif
+-
+-#if defined(DEBUGGINGAIDS) && defined(GL_KHR_debug)
+-	if (glinfo.debugext) {
+-#if (USE_OPENGL == USE_GLES2)
+-		glfunc.glDebugMessageCallbackKHR(gl_debug_proc, NULL);
+-		glfunc.glEnable(GL_DEBUG_OUTPUT_KHR);
+-#else
+-		glfunc.glDebugMessageCallback(gl_debug_proc, NULL);
+-		glfunc.glEnable(GL_DEBUG_OUTPUT);
+-#endif
+-	}
+-#endif
+-
+-	return 0;
+-}
+-
+-static void dumpglinfo(void)
+-{
+-	const char *supported = "supported", *unsupported = "not supported";
+-	const char *glslverstr = "not supported";
+-
+-	if (!glinfo.loaded) {
+-		buildputs("OpenGL information not available.\n");
+-		return;
+-	}
+-
+-	if (glinfo.glslmajver == 1 && glinfo.glslminver == 0) {
+-		glslverstr = "1.00";
+-	} else if (glinfo.glslmajver >= 1) {
+-		glslverstr = (const char *) glfunc.glGetString(GL_SHADING_LANGUAGE_VERSION);
+-	}
+-
+-	buildprintf(
+-		"OpenGL Information:\n"
+-		" Version:      %s\n"
+-		" Vendor:       %s\n"
+-		" Renderer:     %s\n"
+-		" GLSL version: %s\n"
+-		" Anisotropic filtering: %s (%.1f)\n"
+-		" BGRA textures:         %s\n"
+-		" Non-2^x textures:      %s\n"
+-		" DXT1 texture compr:    %s\n"
+-		" DXT5 texture compr:    %s\n"
+-		" ETC1 texture compr:    %s\n"
+-		" Clamp-to-edge:         %s\n"
+-		" Multisampling:         %s\n"
+-		"   Nvidia hint:         %s\n",
+-		glfunc.glGetString(GL_VERSION),
+-		glfunc.glGetString(GL_VENDOR),
+-		glfunc.glGetString(GL_RENDERER),
+-		glslverstr,
+-		glinfo.maxanisotropy > 1.0 ? supported : unsupported, glinfo.maxanisotropy,
+-		glinfo.bgra ? supported : unsupported,
+-		glinfo.texnpot ? supported : unsupported,
+-		glinfo.texcomprdxt1 ? supported : unsupported,
+-		glinfo.texcomprdxt5 ? supported : unsupported,
+-		glinfo.texcompretc1 ? supported : unsupported,
+-		glinfo.clamptoedge ? supported : unsupported,
+-		glinfo.multisample ? supported : unsupported,
+-		glinfo.nvmultisamplehint ? supported : unsupported
+-	);
+-
+-#ifdef DEBUGGINGAIDS
+-	buildprintf(
+-		" Multitexturing:        %d units\n"
+-		" Max 1/2D texture size: %d\n"
+-		" Max vertex attribs:    %d\n",
+-		glinfo.multitex,
+-		glinfo.maxtexsize,
+-		glinfo.maxvertexattribs
+-	);
+-#endif
+-}
+-
+-static void dumpglexts(void)
+-{
+-	char *workstr, *workptr, *nextptr = NULL, *ext = NULL;
+-
+-	if (!glinfo.loaded) {
+-		buildputs("OpenGL information not available.\n");
+-		return;
+-	}
+-
+-	buildputs("OpenGL Extensions:\n");
+-	glext_enumerate(glext_enumerate_dump);
+-	buildputs("\n");
+-}
+-
+-#endif //USE_OPENGL
 diff --git a/jfbuild/src/build.c b/jfbuild/src/build.c
 index 4c48cfe..8c71486 100644
 --- a/jfbuild/src/build.c
@@ -3958,10 +4766,17 @@ index 4fbec18..86b541f 100644
  
  
 diff --git a/jfbuild/src/glbuild.c b/jfbuild/src/glbuild.c
-index cbd755a..d888fcf 100644
+index cbd755a..b88af7e 100644
 --- a/jfbuild/src/glbuild.c
 +++ b/jfbuild/src/glbuild.c
-@@ -7,6 +7,7 @@
+@@ -2,14 +2,292 @@
+ 
+ #if USE_OPENGL
+ 
+-#include "glbuild.h"
++#include "glbuild_priv.h"
++#include "osd.h"
+ #include "baselayer.h"
  #include <stdlib.h>
  #include <string.h>
  #include <stdio.h>
@@ -3969,16 +4784,318 @@ index cbd755a..d888fcf 100644
  
  struct glbuild_funcs glfunc;
  
-@@ -272,7 +273,7 @@ GLuint glbuild_link_program(int shadercount, GLuint *shaders)
++#if defined(DEBUGGINGAIDS)
++static int gldebuglogseverity = 2;	// default to 'low'
++#endif
++
++static int osdcmd_vars(const osdfuncparm_t *);
++static int osdcmd_glinfo(const osdfuncparm_t *);
++
++static void enumerate_configure(const char *ext) {
++	if (!Bstrcmp(ext, "GL_EXT_texture_filter_anisotropic")) {
++			// supports anisotropy. get the maximum anisotropy level
++		glfunc.glGetFloatv(GL_MAX_TEXTURE_MAX_ANISOTROPY, &glinfo.maxanisotropy);
++	} else if (!Bstrcmp(ext, "GL_EXT_texture_edge_clamp") ||
++			!Bstrcmp(ext, "GL_SGIS_texture_edge_clamp")) {
++			// supports GL_CLAMP_TO_EDGE
++		glinfo.clamptoedge = 1;
++	} else if (!Bstrcmp(ext, "GL_EXT_bgra") ||
++			!Bstrcmp(ext, "GL_EXT_texture_format_BGRA8888")) {
++			// support bgra textures
++		glinfo.bgra = 1;
++	} else if (!Bstrcmp(ext, "GL_EXT_texture_compression_s3tc")) {
++			// support DXT1 and DXT5 texture compression
++		glinfo.texcomprdxt1 = 1;
++		glinfo.texcomprdxt5 = 1;
++	} else if (!Bstrcmp(ext, "GL_EXT_texture_compression_dxt1")) {
++			// support DXT1 texture compression
++		glinfo.texcomprdxt1 = 1;
++	} else if (!Bstrcmp(ext, "GL_OES_compressed_ETC1_RGB8_texture")) {
++			// support ETC1 texture compression
++		glinfo.texcompretc1 = 1;
++	} else if (!Bstrcmp(ext, "GL_ARB_texture_non_power_of_two") ||
++			!Bstrcmp(ext, "GL_OES_texture_npot")) {
++			// support non-power-of-two texture sizes
++		glinfo.texnpot = 1;
++	} else if (!Bstrcmp(ext, "GL_ARB_multisample")) {
++			// supports multisampling
++		glinfo.multisample = 1;
++	} else if (!Bstrcmp(ext, "GL_NV_multisample_filter_hint")) {
++			// supports nvidia's multisample hint extension
++		glinfo.nvmultisamplehint = 1;
++	} else if (!Bstrcmp(ext, "GL_ARB_sample_shading")) {
++			// supports sample shading extension
++		glinfo.sampleshading = 1;
++	} else if (!strcmp(ext, "GL_ARB_shading_language_100")) {
++		const char *ver;
++
++		// Clear the error queue, then query the version string.
++		while (glfunc.glGetError() != GL_NO_ERROR) { }
++		ver = (const char *) glfunc.glGetString(GL_SHADING_LANGUAGE_VERSION);
++
++		if (!ver && glfunc.glGetError() == GL_INVALID_ENUM) {
++			// GLSL 1.00 (1.051).
++			glinfo.glslmajver = 1;
++			glinfo.glslminver = 0;
++		} else if (ver) {
++			// GLSL 1.10 or newer.
++			sscanf(ver, "%d.%d", &glinfo.glslmajver, &glinfo.glslminver);
++		}
++	} else if (!strcmp(ext, "GL_KHR_debug")) {
++		glinfo.debugext = 1;
++	}
++}
++
++static void glbuild_enumerate_exts(void (*callback)(const char *)) {
++	char *workstr = NULL, *workptr = NULL, *nextptr = NULL;
++	const char *ext = NULL;
++	GLint extn = 0, numexts = 0;
++
++#if (USE_OPENGL == USE_GL3)
++	if (glinfo.majver >= 3) {
++		glfunc.glGetIntegerv(GL_NUM_EXTENSIONS, &numexts);
++	} else
++#endif
++	{
++		const char *extstr = (const char *) glfunc.glGetString(GL_EXTENSIONS);
++		workstr = workptr = strdup(extstr);
++	}
++
++	while (1) {
++#if (USE_OPENGL == USE_GL3)
++		if (glinfo.majver >= 3) {
++			if (extn == numexts) break;
++			ext = (const char *) glfunc.glGetStringi(GL_EXTENSIONS, extn);
++		} else
++#endif
++		{
++			ext = Bstrtoken(workptr, " ", &nextptr, 1);
++			if (!ext) break;
++		}
++
++		callback(ext);
++
++#if (USE_OPENGL == USE_GL3)
++		if (glinfo.majver >= 3) {
++			extn++;
++		} else
++#endif
++		{
++			workptr = NULL;
++		}
++	}
++
++	if (workstr) free(workstr);
++}
++
++#if defined(DEBUGGINGAIDS) && defined(GL_KHR_debug)
++static void APIENTRY gl_debug_proc(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length,
++	const GLchar* message, const GLvoid* userParam)
++{
++	const char *sourcestr = "(unknown)";
++	const char *typestr = "(unknown)";
++	const char *severitystr = "(unknown)";
++
++	(void)id; (void)length; (void)userParam;
++
++	if (gldebuglogseverity < 1) return;
++
++	switch (source) {
++#if (USE_OPENGL == USE_GLES2)
++		case GL_DEBUG_SOURCE_API_KHR: sourcestr = "API"; break;
++		case GL_DEBUG_SOURCE_SHADER_COMPILER_KHR: sourcestr = "SHADER_COMPILER"; break;
++		case GL_DEBUG_SOURCE_WINDOW_SYSTEM_KHR: sourcestr = "WINDOW_SYSTEM"; break;
++		case GL_DEBUG_SOURCE_THIRD_PARTY_KHR: sourcestr = "THIRD_PARTY"; break;
++		case GL_DEBUG_SOURCE_APPLICATION_KHR: sourcestr = "APPLICATION"; break;
++		case GL_DEBUG_SOURCE_OTHER_KHR: sourcestr = "OTHER"; break;
++#else
++		case GL_DEBUG_SOURCE_API: sourcestr = "API"; break;
++		case GL_DEBUG_SOURCE_SHADER_COMPILER: sourcestr = "SHADER_COMPILER"; break;
++		case GL_DEBUG_SOURCE_WINDOW_SYSTEM: sourcestr = "WINDOW_SYSTEM"; break;
++		case GL_DEBUG_SOURCE_THIRD_PARTY: sourcestr = "THIRD_PARTY"; break;
++		case GL_DEBUG_SOURCE_APPLICATION: sourcestr = "APPLICATION"; break;
++		case GL_DEBUG_SOURCE_OTHER: sourcestr = "OTHER"; break;
++#endif
++	}
++	switch (type) {
++#if (USE_OPENGL == USE_GLES2)
++		case GL_DEBUG_TYPE_ERROR_KHR: typestr = "ERROR"; break;
++		case GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR_KHR: typestr = "DEPRECATED_BEHAVIOR"; break;
++		case GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR_KHR: typestr = "UNDEFINED_BEHAVIOR"; break;
++		case GL_DEBUG_TYPE_PERFORMANCE_KHR: typestr = "PERFORMANCE"; break;
++		case GL_DEBUG_TYPE_PORTABILITY_KHR: typestr = "PORTABILITY"; break;
++		case GL_DEBUG_TYPE_OTHER_KHR: typestr = "OTHER"; break;
++		case GL_DEBUG_TYPE_MARKER_KHR: typestr = "MARKER"; break;
++		case GL_DEBUG_TYPE_PUSH_GROUP_KHR: typestr = "PUSH_GROUP"; break;
++		case GL_DEBUG_TYPE_POP_GROUP_KHR: typestr = "POP_GROUP"; break;
++#else
++		case GL_DEBUG_TYPE_ERROR: typestr = "ERROR"; break;
++		case GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR: typestr = "DEPRECATED_BEHAVIOR"; break;
++		case GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR: typestr = "UNDEFINED_BEHAVIOR"; break;
++		case GL_DEBUG_TYPE_PERFORMANCE: typestr = "PERFORMANCE"; break;
++		case GL_DEBUG_TYPE_PORTABILITY: typestr = "PORTABILITY"; break;
++		case GL_DEBUG_TYPE_OTHER: typestr = "OTHER"; break;
++		case GL_DEBUG_TYPE_MARKER: typestr = "MARKER"; break;
++		case GL_DEBUG_TYPE_PUSH_GROUP: typestr = "PUSH_GROUP"; break;
++		case GL_DEBUG_TYPE_POP_GROUP: typestr = "POP_GROUP"; break;
++#endif
++	}
++	switch (severity) {
++#if (USE_OPENGL == USE_GLES2)
++		case GL_DEBUG_SEVERITY_HIGH_KHR:
++			severitystr = "HIGH";
++			break;
++		case GL_DEBUG_SEVERITY_MEDIUM_KHR:
++			if (gldebuglogseverity > 3) return;
++			severitystr = "MEDIUM";
++			break;
++		case GL_DEBUG_SEVERITY_LOW_KHR:
++			if (gldebuglogseverity > 2) return;
++			severitystr = "LOW";
++			break;
++		case GL_DEBUG_SEVERITY_NOTIFICATION_KHR:
++			if (gldebuglogseverity > 1) return;
++			severitystr = "NOTIFICATION";
++			break;
++#else
++		case GL_DEBUG_SEVERITY_HIGH:
++			severitystr = "HIGH";
++			break;
++		case GL_DEBUG_SEVERITY_MEDIUM:
++			if (gldebuglogseverity > 3) return;
++			severitystr = "MEDIUM";
++			break;
++		case GL_DEBUG_SEVERITY_LOW:
++			if (gldebuglogseverity > 2) return;
++			severitystr = "LOW";
++			break;
++		case GL_DEBUG_SEVERITY_NOTIFICATION:
++			if (gldebuglogseverity > 1) return;
++			severitystr = "NOTIFICATION";
++			break;
++#endif
++	}
++	debugprintf("gl_debug_proc: %s %s %s %s\n", sourcestr, typestr, severitystr, message);
++}
++#endif
++
++int glbuild_init(void)
++{
++	const char *glver;
++
++	if (glbuild_loadfunctions()) {
++		return -1;
++	}
++
++	memset(&glinfo, 0, sizeof(glinfo));
++	glver = (const char *) glfunc.glGetString(GL_VERSION);
++
++#if (USE_OPENGL == USE_GLES2)
++	sscanf(glver, "OpenGL ES %d.%d", &glinfo.majver, &glinfo.minver);
++#else
++	sscanf(glver, "%d.%d", &glinfo.majver, &glinfo.minver);
++#endif
++
++	sscanf((const char *) glfunc.glGetString(GL_VERSION), "%d.%d",
++		&glinfo.majver, &glinfo.minver);
++	glinfo.maxanisotropy = 1.0;
++	glfunc.glGetIntegerv(GL_MAX_TEXTURE_SIZE, &glinfo.maxtexsize);
++	glfunc.glGetIntegerv(GL_MAX_TEXTURE_IMAGE_UNITS, &glinfo.multitex);
++	glfunc.glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &glinfo.maxvertexattribs);
++
++#if (USE_OPENGL == USE_GLES2)
++	glinfo.clamptoedge = 1;
++	glinfo.glslmajver = 1;
++	glinfo.glslminver = 0;
++#elif (USE_OPENGL == USE_GL3)
++	glinfo.bgra = 1;
++	glinfo.clamptoedge = 1;
++	glinfo.texnpot = 1;
++	glinfo.multisample = 1;
++
++	glver = (const char *) glfunc.glGetString(GL_SHADING_LANGUAGE_VERSION);
++	sscanf(glver, "%d.%d", &glinfo.glslmajver, &glinfo.glslminver);
++#endif
++
++	glbuild_enumerate_exts(enumerate_configure);
++	glinfo.loaded = 1;
++
++#if (USE_OPENGL == USE_GLES2)
++	if (glinfo.majver < 2) {
++		buildputs("OpenGL device does not support ES 2.0 features.\n");
++		return -2;
++	}
++#else
++	if (glinfo.majver < 2) {
++		buildputs("OpenGL device does not support 2.0 features.\n");
++		return -2;
++	}
++	if (glinfo.multitex < 2) {
++		buildputs("OpenGL device does not have at least 2 texturing units.\n");
++		return -2;
++	}
++	if (glinfo.glslmajver < 1 || (glinfo.glslmajver == 1 && glinfo.glslminver < 10)) {
++		buildputs("OpenGL device does not support GLSL 1.10 shaders.\n");
++		return -2;
++	}
++#endif
++
++#if defined(DEBUGGINGAIDS) && defined(GL_KHR_debug)
++	if (glinfo.debugext) {
++#if (USE_OPENGL == USE_GLES2)
++		glfunc.glDebugMessageCallbackKHR(gl_debug_proc, NULL);
++		glfunc.glEnable(GL_DEBUG_OUTPUT_KHR);
++#else
++		glfunc.glDebugMessageCallback(gl_debug_proc, NULL);
++		glfunc.glEnable(GL_DEBUG_OUTPUT);
++#endif
++	}
++#endif
++
++#if defined(DEBUGGINGAIDS)
++	OSD_RegisterFunction("gldebuglogseverity","gldebuglogseverity: set OpenGL debug log verbosity (0-4 = none/notification/low/med/high)",osdcmd_vars);
++#endif
++	OSD_RegisterFunction("glinfo","glinfo [exts]: shows OpenGL information about the current OpenGL mode",osdcmd_glinfo);
++
++	return 0;
++}
++
+ static inline void * getproc_(const char *func, int *err, int fatal)
+ {
+ 	void *proc = getglprocaddress(func, 1);
+@@ -49,6 +327,7 @@ int glbuild_loadfunctions(void)
+ 	INIT_PROC(glPixelStorei);
+ 	INIT_PROC(glViewport);
+ 	INIT_PROC(glScissor);
++	INIT_PROC_SOFT(glMinSampleShadingARB);
+ 
+ 	// Depth
+ 	INIT_PROC(glDepthFunc);
+@@ -153,6 +432,10 @@ void glbuild_check_errors(const char *file, int line)
+ 	}
+ }
+ 
++
++//
++// OpenGL shader compilation and linking
++//
+ static GLchar *glbuild_cook_source(const GLchar *source, const char *spec)
+ {
+ 	GLchar *cooked, *pos, *match, *end;
+@@ -272,7 +555,11 @@ GLuint glbuild_link_program(int shadercount, GLuint *shaders)
  	return program;
  }
  
 -int glbuild_prepare_8bit_shader(glbuild8bit *state, int resx, int resy, int stride)
++
++//
++// OpenGL 8-bit rendering
++//
 +int glbuild_prepare_8bit_shader(glbuild8bit *state, int resx, int resy, int stride, int winx, int winy)
  {
  	GLuint shaders[2] = {0,0}, prog = 0;
  	GLint status = 0;
-@@ -283,6 +284,10 @@ int glbuild_prepare_8bit_shader(glbuild8bit *state, int resx, int resy, int stri
+@@ -283,6 +570,10 @@ int glbuild_prepare_8bit_shader(glbuild8bit *state, int resx, int resy, int stri
  	float tx = (float)resx / (float)stride, ty = 1.0;
  	int tsizx = stride, tsizy = resy;
  
@@ -3989,7 +5106,7 @@ index cbd755a..d888fcf 100644
  	if (!glinfo.texnpot) {
  		for (tsizx = 1; tsizx < stride; tsizx <<= 1) { }
  		for (tsizy = 1; tsizy < resy; tsizy <<= 1) { }
-@@ -290,14 +295,28 @@ int glbuild_prepare_8bit_shader(glbuild8bit *state, int resx, int resy, int stri
+@@ -290,14 +581,28 @@ int glbuild_prepare_8bit_shader(glbuild8bit *state, int resx, int resy, int stri
  		ty = (float)resy / (float)tsizy;
  	}
  
@@ -4022,7 +5139,7 @@ index cbd755a..d888fcf 100644
  	};
  
  	GLint clamp = glinfo.clamptoedge ? GL_CLAMP_TO_EDGE : GL_CLAMP;
-@@ -447,6 +466,8 @@ void glbuild_update_8bit_frame(glbuild8bit *state, const GLvoid *frame, int resx
+@@ -447,6 +752,8 @@ void glbuild_update_8bit_frame(glbuild8bit *state, const GLvoid *frame, int resx
  	GLenum extfmt = GL_RED;
  #endif
  
@@ -4031,7 +5148,7 @@ index cbd755a..d888fcf 100644
  	glfunc.glActiveTexture(GL_TEXTURE0);
  	glfunc.glBindTexture(GL_TEXTURE_2D, state->frametex);
  	glfunc.glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, stride, resy, extfmt, GL_UNSIGNED_BYTE, frame);
-@@ -454,6 +475,8 @@ void glbuild_update_8bit_frame(glbuild8bit *state, const GLvoid *frame, int resx
+@@ -454,6 +761,8 @@ void glbuild_update_8bit_frame(glbuild8bit *state, const GLvoid *frame, int resx
  
  void glbuild_draw_8bit_frame(glbuild8bit *state)
  {
@@ -4040,6 +5157,320 @@ index cbd755a..d888fcf 100644
  #if (USE_OPENGL == USE_GLES2)
  	glfunc.glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
  #endif
+@@ -463,4 +772,119 @@ void glbuild_draw_8bit_frame(glbuild8bit *state)
+ 	glfunc.glDrawElements(GL_TRIANGLE_FAN, 6, GL_UNSIGNED_SHORT, 0);
+ }
+ 
++
++//
++// OSD variables and commands
++//
++static int osdcmd_vars(const osdfuncparm_t *parm)
++{
++	int showval = (parm->numparms < 1);
++
++#if defined(DEBUGGINGAIDS)
++	if (!Bstrcasecmp(parm->name, "gldebuglogseverity")) {
++		const char *levels[] = {"none", "notification", "low", "medium", "high"};
++		if (showval) { buildprintf("gldebuglogseverity is %s (%d)\n", levels[gldebuglogseverity], gldebuglogseverity); }
++		else {
++			gldebuglogseverity = atoi(parm->parms[0]);
++			gldebuglogseverity = max(0, min(4, gldebuglogseverity));
++			buildprintf("gldebuglogseverity is now %s (%d)\n", levels[gldebuglogseverity], gldebuglogseverity);
++		}
++		return OSDCMD_OK;
++	}
++#endif
++
++	return OSDCMD_SHOWHELP;
++}
++
++static void dumpglinfo(void)
++{
++	const char *supported = "supported", *unsupported = "not supported";
++	const char *glslverstr = "not supported";
++
++	if (!glinfo.loaded) {
++		buildputs("OpenGL information not available.\n");
++		return;
++	}
++
++	if (glinfo.glslmajver == 1 && glinfo.glslminver == 0) {
++		glslverstr = "1.00";
++	} else if (glinfo.glslmajver >= 1) {
++		glslverstr = (const char *) glfunc.glGetString(GL_SHADING_LANGUAGE_VERSION);
++	}
++
++	buildprintf(
++		"OpenGL Information:\n"
++		" Version:      %s\n"
++		" Vendor:       %s\n"
++		" Renderer:     %s\n"
++		" GLSL version: %s\n"
++		" Anisotropic filtering: %s (%.1f)\n"
++		" BGRA textures:         %s\n"
++		" Non-2^x textures:      %s\n"
++		" DXT1 texture compr:    %s\n"
++		" DXT5 texture compr:    %s\n"
++		" ETC1 texture compr:    %s\n"
++		" Clamp-to-edge:         %s\n"
++		" Multisampling:         %s\n"
++		"   Nvidia quincunx:     %s\n"
++		"   Sample shading:      %s\n",
++		glfunc.glGetString(GL_VERSION),
++		glfunc.glGetString(GL_VENDOR),
++		glfunc.glGetString(GL_RENDERER),
++		glslverstr,
++		glinfo.maxanisotropy > 1.0 ? supported : unsupported, glinfo.maxanisotropy,
++		glinfo.bgra ? supported : unsupported,
++		glinfo.texnpot ? supported : unsupported,
++		glinfo.texcomprdxt1 ? supported : unsupported,
++		glinfo.texcomprdxt5 ? supported : unsupported,
++		glinfo.texcompretc1 ? supported : unsupported,
++		glinfo.clamptoedge ? supported : unsupported,
++		glinfo.multisample ? supported : unsupported,
++		glinfo.nvmultisamplehint ? supported : unsupported,
++		glinfo.sampleshading ? supported : unsupported
++	);
++
++#ifdef DEBUGGINGAIDS
++	buildprintf(
++		" Multitexturing:        %d units\n"
++		" Max 1/2D texture size: %d\n"
++		" Max vertex attribs:    %d\n",
++		glinfo.multitex,
++		glinfo.maxtexsize,
++		glinfo.maxvertexattribs
++	);
++#endif
++}
++
++static void indentedputs(const char *ext) {
++	buildputs(" ");
++	buildputs(ext);
++}
++
++static void dumpglexts(void)
++{
++	char *workstr, *workptr, *nextptr = NULL, *ext = NULL;
++
++	if (!glinfo.loaded) {
++		buildputs("OpenGL information not available.\n");
++		return;
++	}
++
++	buildputs("OpenGL Extensions:\n");
++	glbuild_enumerate_exts(indentedputs);
++	buildputs("\n");
++}
++
++static int osdcmd_glinfo(const osdfuncparm_t *parm)
++{
++	if (parm->numparms == 0) {
++		dumpglinfo();
++		buildputs("Use \"glinfo exts\" to list extensions.\n");
++	} else if (strcmp(parm->parms[0], "exts") == 0) {
++		dumpglexts();
++	}
++	return OSDCMD_OK;
++}
++
++
+ #endif  //USE_OPENGL
+diff --git a/jfbuild/src/glbuild_priv.h b/jfbuild/src/glbuild_priv.h
+new file mode 100644
+index 0000000..3a5fdc6
+--- /dev/null
++++ b/jfbuild/src/glbuild_priv.h
+@@ -0,0 +1,184 @@
++#ifndef __build_h__
++#error Include build.h first.
++#endif
++
++#ifndef __glbuild_priv_h__
++#define __glbuild_priv_h__
++
++#if USE_OPENGL
++
++#include "glbuild.h"
++
++#if (USE_OPENGL == USE_GLES2)
++#  include <GLES2/gl2.h>
++#  include <GLES2/gl2ext.h>
++#else
++#  if defined(_MSC_VER)
++#    define WIN32_LEAN_AND_MEAN
++#    include <windows.h>
++#    include <GL/gl.h>
++#  elif defined(__APPLE__)
++#    if (USE_OPENGL == USE_GL3)
++#      include <stddef.h>
++#      include <OpenGL/gl3.h>
++#    else
++#      include <OpenGL/gl.h>
++#    endif
++#    define APIENTRY
++#  else
++#    if (USE_OPENGL == USE_GL3)
++#      include <GL/glcorearb.h>
++#    else
++#      include <GL/gl.h>
++#    endif
++#  endif
++#  ifndef GL_GLEXT_VERSION
++#    include "glext.h"
++#  endif
++#endif
++
++#ifndef APIENTRY
++#  define APIENTRY GL_APIENTRY
++#endif
++#ifndef GL_CLAMP  //ES2
++#  define GL_CLAMP GL_CLAMP_TO_EDGE
++#endif
++#ifndef GL_BGRA
++#  define GL_BGRA GL_BGRA_EXT
++#endif
++#ifndef GL_MAX_TEXTURE_MAX_ANISOTROPY
++#  define GL_MAX_TEXTURE_MAX_ANISOTROPY GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT
++#endif
++
++typedef void (APIENTRY *GLBUILD_DEBUGPROC)(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length,
++    const GLchar* message, const GLvoid* userParam);
++
++struct glbuild_funcs {
++    void (APIENTRY * glClearColor)( GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha );
++    void (APIENTRY * glClear)( GLbitfield mask );
++    void (APIENTRY * glColorMask)( GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha );
++    void (APIENTRY * glBlendFunc)( GLenum sfactor, GLenum dfactor );
++    void (APIENTRY * glCullFace)( GLenum mode );
++    void (APIENTRY * glFrontFace)( GLenum mode );
++    void (APIENTRY * glPolygonOffset)( GLfloat factor, GLfloat units );
++#if (USE_OPENGL != USE_GLES2)
++    void (APIENTRY * glPolygonMode)( GLenum face, GLenum mode );
++#endif
++    void (APIENTRY * glEnable)( GLenum cap );
++    void (APIENTRY * glDisable)( GLenum cap );
++    void (APIENTRY * glGetFloatv)( GLenum pname, GLfloat *params );
++    void (APIENTRY * glGetIntegerv)( GLenum pname, GLint *params );
++    const GLubyte* (APIENTRY * glGetString)( GLenum name );
++#if (USE_OPENGL == USE_GL3)
++    const GLubyte* (APIENTRY * glGetStringi)(GLenum name, GLuint index);
++#endif
++    GLenum (APIENTRY * glGetError)( GLvoid );
++    void (APIENTRY * glHint)( GLenum target, GLenum mode );
++    void (APIENTRY * glPixelStorei)( GLenum pname, GLint param );
++    void (APIENTRY * glViewport)( GLint x, GLint y, GLsizei width, GLsizei height );
++    void (APIENTRY * glScissor)( GLint x, GLint y, GLsizei width, GLsizei height );
++    void (APIENTRY * glMinSampleShadingARB)( GLfloat value );
++
++    // Depth
++    void (APIENTRY * glDepthFunc)( GLenum func );
++    void (APIENTRY * glDepthMask)( GLboolean flag );
++#if (USE_OPENGL == USE_GLES2)
++    void (APIENTRY * glDepthRangef)( GLclampf near_val, GLclampf far_val );
++#else
++    void (APIENTRY * glDepthRange)( GLclampd near_val, GLclampd far_val );
++#endif
++
++    // Raster funcs
++    void (APIENTRY * glReadPixels)( GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid *pixels );
++
++    // Texture mapping
++    void (APIENTRY * glTexEnvf)( GLenum target, GLenum pname, GLfloat param );
++    void (APIENTRY * glGenTextures)( GLsizei n, GLuint *textures );
++    void (APIENTRY * glDeleteTextures)( GLsizei n, const GLuint *textures);
++    void (APIENTRY * glBindTexture)( GLenum target, GLuint texture );
++    void (APIENTRY * glTexImage2D)( GLenum target, GLint level, GLint internalFormat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const GLvoid *pixels );
++    void (APIENTRY * glTexSubImage2D)( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid *pixels );	// 1.1
++    void (APIENTRY * glTexParameterf)( GLenum target, GLenum pname, GLfloat param );
++    void (APIENTRY * glTexParameteri)( GLenum target, GLenum pname, GLint param );
++    void (APIENTRY * glCompressedTexImage2D)(GLenum, GLint, GLenum, GLsizei, GLsizei, GLint, GLsizei, const GLvoid *);
++
++    // Buffer objects
++    void (APIENTRY * glBindBuffer)(GLenum target, GLuint buffer);
++    void (APIENTRY * glBufferData)(GLenum target, GLsizeiptr size, const GLvoid * data, GLenum usage);
++    void (APIENTRY * glBufferSubData)(GLenum target, GLintptr offset, GLsizeiptr size, const GLvoid * data);
++    void (APIENTRY * glDeleteBuffers)(GLsizei n, const GLuint * buffers);
++    void (APIENTRY * glGenBuffers)(GLsizei n, GLuint * buffers);
++    void (APIENTRY * glDrawElements)( GLenum mode, GLsizei count, GLenum type, const GLvoid *indices );
++    void (APIENTRY * glEnableVertexAttribArray)(GLuint index);
++    void (APIENTRY * glDisableVertexAttribArray)(GLuint index);
++    void (APIENTRY * glVertexAttribPointer)(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid * pointer);
++#if (USE_OPENGL == USE_GL3)
++    void (APIENTRY * glBindVertexArray)(GLuint array);
++    void (APIENTRY * glDeleteVertexArrays)(GLsizei n, const GLuint *arrays);
++    void (APIENTRY * glGenVertexArrays)(GLsizei n, GLuint *arrays);
++#endif
++
++    // Shaders
++    void (APIENTRY * glActiveTexture)( GLenum texture );
++    void (APIENTRY * glAttachShader)(GLuint program, GLuint shader);
++    void (APIENTRY * glCompileShader)(GLuint shader);
++    GLuint (APIENTRY * glCreateProgram)(GLvoid);
++    GLuint (APIENTRY * glCreateShader)(GLenum type);
++    void (APIENTRY * glDeleteProgram)(GLuint program);
++    void (APIENTRY * glDeleteShader)(GLuint shader);
++    void (APIENTRY * glDetachShader)(GLuint program, GLuint shader);
++    GLint (APIENTRY * glGetAttribLocation)(GLuint program, const GLchar *name);
++    void (APIENTRY * glGetProgramiv)(GLuint program, GLenum pname, GLint *params);
++    void (APIENTRY * glGetProgramInfoLog)(GLuint program, GLsizei bufSize, GLsizei *length, GLchar *infoLog);
++    void (APIENTRY * glGetShaderiv)(GLuint shader, GLenum pname, GLint *params);
++    void (APIENTRY * glGetShaderInfoLog)(GLuint shader, GLsizei bufSize, GLsizei *length, GLchar *infoLog);
++    GLint (APIENTRY * glGetUniformLocation)(GLuint program, const GLchar *name);
++    void (APIENTRY * glLinkProgram)(GLuint program);
++    void (APIENTRY * glShaderSource)(GLuint shader, GLsizei count, const GLchar **string, const GLint *length);
++    void (APIENTRY * glUniform1i)(GLint location, GLint v0);
++    void (APIENTRY * glUniform1f)(GLint location, GLfloat v0);
++    void (APIENTRY * glUniform2f)(GLint location, GLfloat v0, GLfloat v1);
++    void (APIENTRY * glUniform3f)(GLint location, GLfloat v0, GLfloat v1, GLfloat v2);
++    void (APIENTRY * glUniform4f)(GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3);
++    void (APIENTRY * glUniformMatrix4fv)(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
++    void (APIENTRY * glUseProgram)(GLuint program);
++
++    // Debug extension.
++#if (USE_OPENGL == USE_GLES2)
++    void (APIENTRY * glDebugMessageCallbackKHR)(GLBUILD_DEBUGPROC callback, const GLvoid* userParam);
++#else
++    void (APIENTRY * glDebugMessageCallback)(GLBUILD_DEBUGPROC callback, const GLvoid* userParam);
++#endif
++};
++
++extern struct glbuild_funcs glfunc;
++
++typedef struct {
++    GLuint program;
++    GLuint paltex;
++    GLuint frametex;
++    GLuint vao;
++    GLint attrib_vertex;    // vec2
++    GLint attrib_texcoord;  // vec2
++    GLuint buffer_indexes;
++    GLuint buffer_elements;
++} glbuild8bit;
++
++int glbuild_init(void);
++
++int glbuild_loadfunctions(void);
++void glbuild_unloadfunctions(void);
++void glbuild_check_errors(const char *file, int line);
++#define GLBUILD_CHECK_ERRORS() glbuild_check_errors(__FILE__, __LINE__)
++
++GLuint glbuild_compile_shader(GLuint type, const GLchar *source);
++GLuint glbuild_link_program(int shadercount, GLuint *shaders);
++int glbuild_prepare_8bit_shader(glbuild8bit *state, int resx, int resy, int stride, int winx, int winy);  // <0 = error
++void glbuild_delete_8bit_shader(glbuild8bit *state);
++void glbuild_update_8bit_palette(glbuild8bit *state, const GLvoid *pal);
++void glbuild_update_8bit_frame(glbuild8bit *state, const GLvoid *frame, int resx, int resy, int stride);
++void glbuild_draw_8bit_frame(glbuild8bit *state);
++
++#endif //USE_OPENGL
++
++#endif // __glbuild_priv_h__
+diff --git a/jfbuild/include/glext.h b/jfbuild/src/glext.h
+similarity index 100%
+rename from include/glext.h
+rename to src/glext.h
 diff --git a/jfbuild/src/gtkbits.c b/jfbuild/src/gtkbits.c
 index d3d1d36..c818048 100644
 --- a/jfbuild/src/gtkbits.c
@@ -4398,7 +5829,7 @@ index 2c1f940..ed1f936 100644
  #ifdef _WIN32
  	if (mysock != INVALID_SOCKET) closesocket(mysock);
 diff --git a/jfbuild/src/osd.c b/jfbuild/src/osd.c
-index 71b756a..e2a9e06 100644
+index 71b756a..86d32b4 100644
 --- a/jfbuild/src/osd.c
 +++ b/jfbuild/src/osd.c
 @@ -108,6 +108,8 @@ static void _internal_drawosdchar(int x, int y, char ch, int shade, int pal)
@@ -4445,10 +5876,31 @@ index 71b756a..e2a9e06 100644
  	OSD_Printf("Symbol listing:\n");
  	for (i=symbols; i!=NULL; i=i->next)
  		OSD_Printf("     %s\n", i->name);
+@@ -1124,7 +1133,10 @@ int OSD_RegisterFunction(const char *name, const char *help, int (*func)(const o
+ 	}
+ 
+ 	symb = findexactsymbol(name);
+-	if (symb) {
++	if (symb && symb->func == func) {
++		// Same function being defined a second time, so we'll quietly ignore it.
++		return 0;
++	} else if (symb) {
+ 		buildprintf("OSD_RegisterFunction(): \"%s\" is already defined\n", name);
+ 		return -1;
+ 	}
 diff --git a/jfbuild/src/polymost.c b/jfbuild/src/polymost.c
-index 1c0a325..2049a8c 100644
+index 1c0a325..8443bc3 100644
 --- a/jfbuild/src/polymost.c
 +++ b/jfbuild/src/polymost.c
+@@ -136,7 +136,7 @@ int glusetexcompr = 1;
+ int gltexcomprquality = 0;	// 0 = fast, 1 = slow and pretty, 2 = very slow and pretty
+ int gltexfiltermode = 5;   // GL_LINEAR_MIPMAP_LINEAR
+ int glusetexcache = 1;
+-int glmultisample = 0, glnvmultisamplehint = 0;
++int glmultisample = 0, glnvmultisamplehint = 0, glsampleshading = 0;
+ int gltexmaxsize = 0;      // 0 means autodetection on first run
+ int gltexmiplevel = 0;		// discards this many mipmap levels
+ static int lastglpolygonmode = 0;
 @@ -562,7 +562,7 @@ static GLuint polymost_load_shader(GLuint shadertype, const char *defaultsrc, co
  		fseek(shaderfh, 0, SEEK_SET);
  
@@ -4458,7 +5910,20 @@ index 1c0a325..2049a8c 100644
  
  		fclose(shaderfh);
  		shaderfh = NULL;
-@@ -729,7 +729,7 @@ void polymost_glinit()
+@@ -722,14 +722,20 @@ void polymost_glinit()
+ #if (USE_OPENGL != USE_GLES2)
+ 		if (glinfo.nvmultisamplehint)
+ 			glfunc.glHint(GL_MULTISAMPLE_FILTER_HINT_NV, glnvmultisamplehint ? GL_NICEST:GL_FASTEST);
++
+ 		glfunc.glEnable(GL_MULTISAMPLE_ARB);
++
++		if (glsampleshading > 0 && glinfo.sampleshading) {
++			glfunc.glMinSampleShadingARB(1.f);
++			glfunc.glEnable(GL_SAMPLE_SHADING_ARB);
++		}
+ #endif
+ 	}
+ 
  	polymost_loadshaders();
  }
  
@@ -4466,6 +5931,70 @@ index 1c0a325..2049a8c 100644
 +void resizeglcheck (void)
  {
  	float m[4][4];
+ 
+@@ -4825,8 +4831,11 @@ static int osdcmd_polymostvars(const osdfuncparm_t *parm)
+ 		return OSDCMD_OK;
+ 	}
+ 	else if (!Bstrcasecmp(parm->name, "glmultisample")) {
+-		if (showval) { buildprintf("glmultisample is %d\n", glmultisample); }
+-		else glmultisample = max(0,val);
++		if (showval) {
++			if (!glmultisample) buildprintf("glmultisample is %d (off)\n", glmultisample);
++			else buildprintf("glmultisample is %d (%dx)\n", glmultisample, 1<<glmultisample);
++		}
++		else glmultisample = min(2,max(0,val));
+ 		return OSDCMD_OK;
+ 	}
+ 	else if (!Bstrcasecmp(parm->name, "glnvmultisamplehint")) {
+@@ -4834,6 +4843,11 @@ static int osdcmd_polymostvars(const osdfuncparm_t *parm)
+ 		else glnvmultisamplehint = (val != 0);
+ 		return OSDCMD_OK;
+ 	}
++	else if (!Bstrcasecmp(parm->name, "glsampleshading")) {
++		if (showval) { buildprintf("glsampleshading is %d\n", glsampleshading); }
++		else glsampleshading = (val != 0);
++		return OSDCMD_OK;
++	}
+ 	else if (!Bstrcasecmp(parm->name, "polymosttexverbosity")) {
+ 		if (showval) { buildprintf("polymosttexverbosity is %d\n", polymosttexverbosity); }
+ 		else {
+@@ -4868,8 +4882,9 @@ void polymost_initosdfuncs(void)
+ 	OSD_RegisterFunction("usegoodalpha","usegoodalpha: enable/disable better looking OpenGL alpha hack",osdcmd_polymostvars);
+ 	OSD_RegisterFunction("glpolygonmode","glpolygonmode: debugging feature. 0 = normal, 1 = edges, 2 = points, 3 = clear each frame",osdcmd_polymostvars);
+ 	OSD_RegisterFunction("glusetexcache","glusetexcache: enable/disable OpenGL compressed texture cache",osdcmd_polymostvars);
+-	OSD_RegisterFunction("glmultisample","glmultisample: sets the number of samples used for antialiasing (0 = off)",osdcmd_polymostvars);
+-	OSD_RegisterFunction("glnvmultisamplehint","glnvmultisamplehint: enable/disable Nvidia multisampling hinting",osdcmd_polymostvars);
++	OSD_RegisterFunction("glmultisample","glmultisample: enable/disable OpenGL (edge) multisampling. 0 = off, 1 = 2x, 2 = 4x",osdcmd_polymostvars);
++	OSD_RegisterFunction("glnvmultisamplehint","glnvmultisamplehint: enable/disable Nvidia multisampling (Quincunx)",osdcmd_polymostvars);
++	OSD_RegisterFunction("glsampleshading","glsampleshading: enable/disable OpenGL sample multisampling",osdcmd_polymostvars);
+ 	OSD_RegisterFunction("polymosttexverbosity","polymosttexverbosity: sets the level of chatter during texture loading. 0 = none, 1 = errors (default), 2 = all",osdcmd_polymostvars);
+ 	OSD_RegisterFunction("forcetexcacherebuild","forcetexcacherebuild: invalidates the compressed texture cache", osdcmd_forcetexcacherebuild);
+ #ifdef SHADERDEV
+diff --git a/jfbuild/src/polymost_priv.h b/jfbuild/src/polymost_priv.h
+index 3f2fcbe..fe9ff99 100644
+--- a/jfbuild/src/polymost_priv.h
++++ b/jfbuild/src/polymost_priv.h
+@@ -35,7 +35,7 @@ enum {
+ 
+ #if USE_OPENGL
+ 
+-#include "glbuild.h"
++#include "glbuild_priv.h"
+ 
+ typedef struct { unsigned char r, g, b, a; } coltype;
+ typedef struct { GLfloat r, g, b, a; } coltypef;
+diff --git a/jfbuild/src/polymosttexcache.c b/jfbuild/src/polymosttexcache.c
+index 5bda3c3..6c661b8 100644
+--- a/jfbuild/src/polymosttexcache.c
++++ b/jfbuild/src/polymosttexcache.c
+@@ -4,7 +4,7 @@
+ 
+ #include "polymosttexcache.h"
+ #include "baselayer.h"
+-#include "glbuild.h"
++#include "glbuild_priv.h"
+ #include "hightile_priv.h"
+ #include "polymosttex_priv.h"
  
 diff --git a/jfbuild/src/rg_etc1.cpp b/jfbuild/src/rg_etc1.cpp
 index f7fa7ac..8529c6d 100644
@@ -4484,9 +6013,36 @@ index f7fa7ac..8529c6d 100644
  #if defined(_DEBUG) || defined(DEBUG)
  #define RG_ETC1_BUILD_DEBUG
 diff --git a/jfbuild/src/sdlayer2.c b/jfbuild/src/sdlayer2.c
-index 7c9fa58..037df4e 100644
+index 7c9fa58..cbe66e2 100644
 --- a/jfbuild/src/sdlayer2.c
 +++ b/jfbuild/src/sdlayer2.c
+@@ -41,7 +41,7 @@
+ #include "pragmas.h"
+ #include "a.h"
+ #include "osd.h"
+-#include "glbuild.h"
++#include "glbuild_priv.h"
+ 
+ #if defined(__APPLE__)
+ # include "osxbits.h"
+@@ -87,7 +87,7 @@ extern float curgamma;
+ static SDL_GLContext sdl_glcontext;
+ static glbuild8bit gl8bit;
+ static char nogl=0;
+-static int glswapinterval = 1;
++int glswapinterval = 1;
+ 
+ static int set_glswapinterval(const osdfuncparm_t *parm);
+ #endif
+@@ -364,7 +364,7 @@ int initsystem(void)
+ 		}
+ 	}
+ 
+-	OSD_RegisterFunction("glswapinterval", "glswapinterval: frame swap interval for OpenGL modes (0 = no vsync, max 2)", set_glswapinterval);
++	OSD_RegisterFunction("glswapinterval", "glswapinterval: frame swap interval for OpenGL modes. 0 = no vsync, -1 = adaptive, max 2", set_glswapinterval);
+ #endif
+ 
+ 	return 0;
 @@ -411,6 +411,7 @@ void debugprintf(const char *f, ...)
  	Bvfprintf(stderr, f, va);
  	va_end(va);
@@ -4495,6 +6051,15 @@ index 7c9fa58..037df4e 100644
  }
  
  
+@@ -990,7 +991,7 @@ int setvideomode(int x, int y, int c, int fs)
+ 			SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
+ #if USE_POLYMOST
+ 			SDL_GL_SetAttribute(SDL_GL_MULTISAMPLEBUFFERS, glmultisample > 0);
+-			SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES, glmultisample);
++			SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES, glmultisample ? (1 << glmultisample) : 0);
+ #endif
+ 
+ 			flags |= SDL_WINDOW_OPENGL;
 @@ -1000,6 +1001,7 @@ int setvideomode(int x, int y, int c, int fs)
  		if (fs & 1) {
  			if (c > 8) flags |= SDL_WINDOW_FULLSCREEN;
@@ -4517,13 +6082,23 @@ index 7c9fa58..037df4e 100644
  			if (!sdl_glcontext) {
  				buildprintf("Error creating OpenGL context: %s\n", SDL_GetError());
  				nogl = 1;
- 			} else if (baselayer_setupopengl()) {
+-			} else if (baselayer_setupopengl()) {
++			} else if (glbuild_init()) {
  				nogl = 1;
 -			} else if (glbuild_prepare_8bit_shader(&gl8bit, x, y, pitch) < 0) {
 +			} else if (glbuild_prepare_8bit_shader(&gl8bit, x, y, pitch, winx, winy) < 0) {
  				nogl = 1;
  			}
  			if (nogl) {
+@@ -1107,7 +1115,7 @@ int setvideomode(int x, int y, int c, int fs)
+ 			return -1;
+ 		}
+ 
+-		if (baselayer_setupopengl()) {
++		if (glbuild_init()) {
+ 			shutdownvideo();
+ 			return -1;
+ 		}
 @@ -1407,7 +1415,7 @@ int handleevents(void)
  					grabmouse(!mouseacquired);
  					break;
@@ -4533,6 +6108,29 @@ index 7c9fa58..037df4e 100644
  			case SDL_KEYDOWN:
  				code = keytranslation[ev.key.keysym.scancode].normal;
  				control = keytranslation[ev.key.keysym.scancode].controlchar;
+@@ -1674,18 +1682,18 @@ static int set_glswapinterval(const osdfuncparm_t *parm)
+ 		return OSDCMD_OK;
+ 	}
+ 	if (parm->numparms == 0) {
+-		buildprintf("glswapinterval = %d\n", glswapinterval);
++		buildprintf("glswapinterval is %d\n", glswapinterval);
+ 		return OSDCMD_OK;
+ 	}
+ 	if (parm->numparms != 1) return OSDCMD_SHOWHELP;
+ 
+ 	interval = Batol(parm->parms[0]);
+-	if (interval < 0 || interval > 2) return OSDCMD_SHOWHELP;
++	if (interval < -1 || interval > 2) return OSDCMD_SHOWHELP;
+ 
+ 	if (SDL_GL_SetSwapInterval(interval) < 0) {
+-		buildputs("note: OpenGL swap interval could not be changed\n");
++		buildprintf("error: could not change swap interval: %s\n", SDL_GetError());
+ 	} else {
+-		glswapinterval = interval;
++		glswapinterval = SDL_GL_GetSwapInterval();
+ 	}
+ 	return OSDCMD_OK;
+ }
 diff --git a/jfbuild/src/startgtk_editor.c b/jfbuild/src/startgtk_editor.c
 index 94040cd..203999f 100644
 --- a/jfbuild/src/startgtk_editor.c
@@ -4609,11 +6207,34 @@ index 94040cd..203999f 100644
      return 0;
  }
  
+diff --git a/jfbuild/include/wglext.h b/jfbuild/src/wglext.h
+similarity index 100%
+rename from include/wglext.h
+rename to src/wglext.h
 diff --git a/jfbuild/src/winlayer.c b/jfbuild/src/winlayer.c
-index 4eae3d6..d2d8ef2 100644
+index 4eae3d6..2936623 100644
 --- a/jfbuild/src/winlayer.c
 +++ b/jfbuild/src/winlayer.c
-@@ -98,7 +98,7 @@ static void updatejoystick(void);
+@@ -25,7 +25,7 @@
+ #include "build.h"
+ 
+ #if USE_OPENGL
+-#include "glbuild.h"
++#include "glbuild_priv.h"
+ #include "wglext.h"
+ #endif
+ 
+@@ -84,6 +84,9 @@ static struct winlayer_glfuncs {
+ 	int (WINAPI * wglGetSwapIntervalEXT)(void);
+ 
+ 	int have_ARB_create_context_profile;
++	int have_EXT_multisample;
++	int have_EXT_swap_control;
++	int have_EXT_swap_control_tear;
+ } wglfunc;
+ #endif
+ 
+@@ -98,7 +101,7 @@ static void updatejoystick(void);
  static void UninitDIB(void);
  static int SetupDIB(int width, int height);
  static void UninitOpenGL(void);
@@ -4622,7 +6243,56 @@ index 4eae3d6..d2d8ef2 100644
  static BOOL RegisterWindowClass(void);
  static BOOL CreateAppWindow(int width, int height, int bitspp, int fs, int refresh);
  static void DestroyAppWindow(void);
-@@ -1722,7 +1722,7 @@ static void EnumWGLExts(HDC hdc)
+@@ -456,13 +459,19 @@ static int set_glswapinterval(const osdfuncparm_t *parm)
+ 		return OSDCMD_OK;
+ 	}
+ 	if (parm->numparms == 0) {
+-		buildprintf("glswapinterval = %d\n", glswapinterval);
++		if (glswapinterval == -1) buildprintf("glswapinterval is %d (adaptive vsync)\n", glswapinterval);
++		else buildprintf("glswapinterval is %d\n", glswapinterval);
+ 		return OSDCMD_OK;
+ 	}
+ 	if (parm->numparms != 1) return OSDCMD_SHOWHELP;
+ 
+ 	interval = Batol(parm->parms[0]);
+-	if (interval < 0 || interval > 2) return OSDCMD_SHOWHELP;
++	if (interval < -1 || interval > 2) return OSDCMD_SHOWHELP;
++
++	if (interval == -1 && !wglfunc.have_EXT_swap_control_tear) {
++		buildputs("adaptive glswapinterval is not available\n");
++		return OSDCMD_OK;
++	}
+ 
+ 	glswapinterval = interval;
+ 	wglfunc.wglSwapIntervalEXT(interval);
+@@ -515,7 +524,7 @@ int initsystem(void)
+ 		buildputs("Failed loading OpenGL driver. GL modes will be unavailable.\n");
+ 		memset(&wglfunc, 0, sizeof(wglfunc));
+ 	} else {
+-		OSD_RegisterFunction("glswapinterval", "glswapinterval: frame swap interval for OpenGL modes (0 = no vsync, max 2)", set_glswapinterval);
++		OSD_RegisterFunction("glswapinterval", "glswapinterval: frame swap interval for OpenGL modes. 0 = no vsync, -1 = adaptive, max 2", set_glswapinterval);
+ 	}
+ #endif
+ 
+@@ -1706,10 +1715,17 @@ static void EnumWGLExts(HDC hdc)
+ 		} else if (!strcmp(ext, "WGL_ARB_create_context_profile")) {
+ 			wglfunc.have_ARB_create_context_profile = 1;
+ 			ack = '+';
++		} else if (!strcmp(ext, "WGL_EXT_multisample") || !strcmp(ext, "WGL_ARB_multisample")) {
++			wglfunc.have_EXT_multisample = 1;
++			ack = '+';
+ 		} else if (!strcmp(ext, "WGL_EXT_swap_control")) {
++			wglfunc.have_EXT_swap_control = 1;
+ 			wglfunc.wglSwapIntervalEXT = getglprocaddress("wglSwapIntervalEXT", 1);
+ 			wglfunc.wglGetSwapIntervalEXT = getglprocaddress("wglGetSwapIntervalEXT", 1);
+ 			ack = (!wglfunc.wglSwapIntervalEXT || !wglfunc.wglGetSwapIntervalEXT) ? '!' : '+';
++		} else if (!strcmp(ext, "WGL_EXT_swap_control_tear")) {
++			wglfunc.have_EXT_swap_control_tear = 1;
++			ack = '+';
+ 		} else {
+ 			ack = ' ';
+ 		}
+@@ -1722,7 +1738,7 @@ static void EnumWGLExts(HDC hdc)
  //
  // SetupOpenGL() -- sets up opengl rendering
  //
@@ -4631,7 +6301,7 @@ index 4eae3d6..d2d8ef2 100644
  {
  	int err, pixelformat;
  
-@@ -1798,47 +1798,19 @@ static int SetupOpenGL(int width, int height, int bitspp, int cover)
+@@ -1798,47 +1814,19 @@ static int SetupOpenGL(int width, int height, int bitspp, int cover)
  	EnumWGLExts(dummyhDC);
  
  	// Step 3. Create the actual window we will use going forward.
@@ -4692,7 +6362,54 @@ index 4eae3d6..d2d8ef2 100644
  	}
  
  	hDCGLWindow = GetDC(hGLWindow);
-@@ -2008,7 +1980,7 @@ fail:
+@@ -1847,6 +1835,12 @@ static int SetupOpenGL(int width, int height, int bitspp, int cover)
+ 		goto fail;
+ 	}
+ 
++#if USE_POLYMOST && USE_OPENGL
++	if (!wglfunc.have_EXT_multisample) {
++		glmultisample = 0;
++	}
++#endif
++
+ 	// Step 3. Find and set a suitable pixel format.
+ 	if (wglfunc.wglChoosePixelFormatARB) {
+ 		UINT numformats;
+@@ -1859,6 +1853,10 @@ static int SetupOpenGL(int width, int height, int bitspp, int cover)
+ 			WGL_DEPTH_BITS_ARB,     24,
+ 			WGL_STENCIL_BITS_ARB,   0,
+ 			WGL_ACCELERATION_ARB,   WGL_FULL_ACCELERATION_ARB,
++#if USE_POLYMOST && USE_OPENGL
++			WGL_SAMPLE_BUFFERS_EXT, glmultisample > 0,
++			WGL_SAMPLES_EXT,        glmultisample > 0 ? (1 << glmultisample) : 0,
++#endif
+ 			0,
+ 		};
+ 		if (!wglfunc.wglChoosePixelFormatARB(hDCGLWindow, pformatattribs, NULL, 1, &pixelformat, &numformats)) {
+@@ -1946,7 +1944,7 @@ static int SetupOpenGL(int width, int height, int bitspp, int cover)
+ 	}
+ 
+ 	// Step 5. Done.
+-	switch (baselayer_setupopengl()) {
++	switch (glbuild_init()) {
+ 		case 0:
+ 			break;
+ 		case -1:
+@@ -1960,8 +1958,11 @@ static int SetupOpenGL(int width, int height, int bitspp, int cover)
+ 			goto fail;
+ 	}
+ 
+-	if (wglfunc.wglSwapIntervalEXT) {
+-		wglfunc.wglSwapIntervalEXT(glswapinterval);
++	if (wglfunc.have_EXT_swap_control && wglfunc.wglSwapIntervalEXT) {
++		if (glswapinterval == -1 && !wglfunc.have_EXT_swap_control_tear) glswapinterval = 1;
++		if (!wglfunc.wglSwapIntervalEXT(glswapinterval)) {
++			buildputs("note: OpenGL swap interval could not be changed\n");
++		}
+ 	}
+ 	numpages = 127;
+ 
+@@ -2008,7 +2009,7 @@ fail:
  static BOOL CreateAppWindow(int width, int height, int bitspp, int fs, int refresh)
  {
  	RECT rect;
@@ -4701,7 +6418,7 @@ index 4eae3d6..d2d8ef2 100644
  	HRESULT result;
  
  	if (width == xres && height == yres && fs == fullscreen && bitspp == bpp && !videomodereset) return FALSE;
-@@ -2060,20 +2032,22 @@ static BOOL CreateAppWindow(int width, int height, int bitspp, int fs, int refre
+@@ -2060,20 +2061,22 @@ static BOOL CreateAppWindow(int width, int height, int bitspp, int fs, int refre
  	if (!fs) {
  		rect.left = 0;
  		rect.top = 0;
@@ -4736,7 +6453,7 @@ index 4eae3d6..d2d8ef2 100644
  
  	UpdateAppWindowTitle();
  	ShowWindow(hWindow, SW_SHOWNORMAL);
-@@ -2096,7 +2070,7 @@ static BOOL CreateAppWindow(int width, int height, int bitspp, int fs, int refre
+@@ -2096,7 +2099,7 @@ static BOOL CreateAppWindow(int width, int height, int bitspp, int fs, int refre
  #if USE_OPENGL
  		} else {
  			// Prepare the GLSL shader for 8-bit blitting.
@@ -4745,7 +6462,7 @@ index 4eae3d6..d2d8ef2 100644
  				// No luck. Write off OpenGL and try DIB.
  				buildputs("OpenGL initialisation failed. Falling back to DIB mode.\n");
  				nogl = 1;
-@@ -2105,7 +2079,7 @@ static BOOL CreateAppWindow(int width, int height, int bitspp, int fs, int refre
+@@ -2105,7 +2108,7 @@ static BOOL CreateAppWindow(int width, int height, int bitspp, int fs, int refre
  
  			bytesperline = (((width|1) + 4) & ~3);
  
@@ -4754,7 +6471,7 @@ index 4eae3d6..d2d8ef2 100644
  				shutdownvideo();
  				return -1;
  			}
-@@ -2155,7 +2129,7 @@ static BOOL CreateAppWindow(int width, int height, int bitspp, int fs, int refre
+@@ -2155,7 +2158,7 @@ static BOOL CreateAppWindow(int width, int height, int bitspp, int fs, int refre
  		SetForegroundWindow(hWindow);
  		SetFocus(hWindow);
  
@@ -4764,10 +6481,97 @@ index 4eae3d6..d2d8ef2 100644
  		}
  
 diff --git a/jfbuild/xcode/engine.xcodeproj/project.pbxproj b/jfbuild/xcode/engine.xcodeproj/project.pbxproj
-index 9c425fb..bc6e5b7 100644
+index 9c425fb..a075bc8 100644
 --- a/jfbuild/xcode/engine.xcodeproj/project.pbxproj
 +++ b/jfbuild/xcode/engine.xcodeproj/project.pbxproj
-@@ -743,10 +743,11 @@
+@@ -41,6 +41,9 @@
+ 		AB4F6B7223118E7B00713ACC /* polymostaux_vs.glsl in Sources */ = {isa = PBXBuildFile; fileRef = ABE362572146955700BA44B3 /* polymostaux_vs.glsl */; };
+ 		AB4F6B7323118E7F00713ACC /* polymostaux_fs.glsl in Sources */ = {isa = PBXBuildFile; fileRef = ABE3624E2144CC9000BA44B3 /* polymostaux_fs.glsl */; };
+ 		AB63426D2430617A002CDE1A /* osxbits.m in Sources */ = {isa = PBXBuildFile; fileRef = AB735F5C0A29A39C003261DC /* osxbits.m */; };
++		AB66C6AA2907E89F0063C874 /* glbuild_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = AB66C6A92907E89F0063C874 /* glbuild_priv.h */; };
++		AB66C6AD2907E8BE0063C874 /* rg_etc1.h in Headers */ = {isa = PBXBuildFile; fileRef = AB66C6AB2907E8BE0063C874 /* rg_etc1.h */; };
++		AB66C6AE2907E8BE0063C874 /* polymosttexcompress.h in Headers */ = {isa = PBXBuildFile; fileRef = AB66C6AC2907E8BE0063C874 /* polymosttexcompress.h */; };
+ 		AB6725F90F0F8114000C7D92 /* polymosttexcache.c in Sources */ = {isa = PBXBuildFile; fileRef = AB6725F80F0F8114000C7D92 /* polymosttexcache.c */; };
+ 		AB6727E40F1093DC000C7D92 /* polymosttexcompress.cc in Sources */ = {isa = PBXBuildFile; fileRef = AB6727E30F1093DC000C7D92 /* polymosttexcompress.cc */; };
+ 		AB6728580F1096AF000C7D92 /* alpha.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6728400F1096AF000C7D92 /* alpha.cpp */; };
+@@ -175,7 +178,7 @@
+ /* Begin PBXFileReference section */
+ 		AB1751260CEF5AF8003AF128 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = /Users/jonof/Library/Frameworks/SDL2.framework; sourceTree = "<absolute>"; };
+ 		AB3B2A0D0EE3FC0400944CD1 /* hightile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hightile.c; sourceTree = "<group>"; };
+-		AB3B2A1C0EE3FCF900944CD1 /* polymost.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = polymost.c; sourceTree = "<group>"; };
++		AB3B2A1C0EE3FCF900944CD1 /* polymost.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = polymost.c; sourceTree = "<group>"; usesTabs = 1; };
+ 		AB3B2A6B0EE4007B00944CD1 /* mdsprite.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mdsprite.c; sourceTree = "<group>"; };
+ 		AB3B2AB50EE402B600944CD1 /* engine_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = engine_priv.h; sourceTree = "<group>"; };
+ 		AB3B2ABF0EE4033300944CD1 /* hightile_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hightile_priv.h; sourceTree = "<group>"; };
+@@ -186,6 +189,9 @@
+ 		AB3E07290A33035B00FF2442 /* EditorStartupWinController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorStartupWinController.m; sourceTree = "<group>"; };
+ 		AB3FE4550C04336F00D5DBDC /* libeditorsupp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libeditorsupp.a; sourceTree = BUILT_PRODUCTS_DIR; };
+ 		AB48BD6C208C0AEA00E38090 /* version-auto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "version-auto.c"; sourceTree = "<group>"; };
++		AB66C6A92907E89F0063C874 /* glbuild_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glbuild_priv.h; sourceTree = "<group>"; };
++		AB66C6AB2907E8BE0063C874 /* rg_etc1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rg_etc1.h; sourceTree = "<group>"; };
++		AB66C6AC2907E8BE0063C874 /* polymosttexcompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = polymosttexcompress.h; sourceTree = "<group>"; };
+ 		AB6725F80F0F8114000C7D92 /* polymosttexcache.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = polymosttexcache.c; sourceTree = "<group>"; };
+ 		AB6727E30F1093DC000C7D92 /* polymosttexcompress.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = polymosttexcompress.cc; sourceTree = "<group>"; };
+ 		AB6728400F1096AF000C7D92 /* alpha.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = alpha.cpp; sourceTree = "<group>"; };
+@@ -422,9 +428,6 @@
+ 				ABE362572146955700BA44B3 /* polymostaux_vs.glsl */,
+ 				ABE3624E2144CC9000BA44B3 /* polymostaux_fs.glsl */,
+ 				ABA9E3020FEF9D170024231F /* a.h */,
+-				ABA9E3030FEF9D170024231F /* kplib.h */,
+-				ABA9E3040FEF9D170024231F /* osxbits.h */,
+-				ABA9E3060FEF9D170024231F /* polymosttexcache.h */,
+ 				AB735F4E0A29A39C003261DC /* a-c.c */,
+ 				ABF1DD181BB7D0F5007DE427 /* asmprot.c */,
+ 				AB735F4F0A29A39C003261DC /* baselayer.c */,
+@@ -435,22 +438,28 @@
+ 				AB735F540A29A39C003261DC /* engine.c */,
+ 				AB3B2AB50EE402B600944CD1 /* engine_priv.h */,
+ 				AB735F550A29A39C003261DC /* glbuild.c */,
++				AB66C6A92907E89F0063C874 /* glbuild_priv.h */,
+ 				AB3B2A0D0EE3FC0400944CD1 /* hightile.c */,
+ 				AB3B2ABF0EE4033300944CD1 /* hightile_priv.h */,
+ 				AB735F560A29A39C003261DC /* kplib.c */,
++				ABA9E3030FEF9D170024231F /* kplib.h */,
+ 				AB3B2A6B0EE4007B00944CD1 /* mdsprite.c */,
+ 				AB3B2AC00EE4033300944CD1 /* mdsprite_priv.h */,
+ 				AB735F5A0A29A39C003261DC /* mmulti.c */,
+ 				AB735F5B0A29A39C003261DC /* osd.c */,
+ 				AB735F5C0A29A39C003261DC /* osxbits.m */,
++				ABA9E3040FEF9D170024231F /* osxbits.h */,
+ 				AB3B2A1C0EE3FCF900944CD1 /* polymost.c */,
+ 				AB3B2AC10EE4033300944CD1 /* polymost_priv.h */,
+ 				AB726D4A0F046C3B00730EAA /* polymosttex.c */,
+ 				AB726D4B0F046C3B00730EAA /* polymosttex_priv.h */,
+ 				AB6725F80F0F8114000C7D92 /* polymosttexcache.c */,
++				ABA9E3060FEF9D170024231F /* polymosttexcache.h */,
+ 				AB6727E30F1093DC000C7D92 /* polymosttexcompress.cc */,
++				AB66C6AC2907E8BE0063C874 /* polymosttexcompress.h */,
+ 				AB735F5D0A29A39C003261DC /* pragmas.c */,
+ 				ABBB1E8C21C7926D00DD438B /* rg_etc1.cpp */,
++				AB66C6AB2907E8BE0063C874 /* rg_etc1.h */,
+ 				AB735F5E0A29A39C003261DC /* scriptfile.c */,
+ 				AB735F5F0A29A39C003261DC /* sdlayer2.c */,
+ 				AB3B2C7F0EE41B9000944CD1 /* smalltextfont.c */,
+@@ -540,8 +549,10 @@
+ 				AB735F8A0A29A44C003261DC /* build.h in Headers */,
+ 				AB735F8B0A29A44C003261DC /* cache1d.h in Headers */,
+ 				AB735F8C0A29A44C003261DC /* compat.h in Headers */,
++				AB66C6AD2907E8BE0063C874 /* rg_etc1.h in Headers */,
+ 				AB735F8D0A29A44C003261DC /* crc32.h in Headers */,
+ 				AB735F8E0A29A44C003261DC /* glbuild.h in Headers */,
++				AB66C6AE2907E8BE0063C874 /* polymosttexcompress.h in Headers */,
+ 				AB735F920A29A44C003261DC /* mmulti.h in Headers */,
+ 				AB735F940A29A44C003261DC /* osd.h in Headers */,
+ 				AB735F960A29A44C003261DC /* pragmas.h in Headers */,
+@@ -557,6 +568,7 @@
+ 				ABA9E3080FEF9D170024231F /* kplib.h in Headers */,
+ 				ABA9E3090FEF9D170024231F /* osxbits.h in Headers */,
+ 				ABA9E30B0FEF9D170024231F /* polymosttexcache.h in Headers */,
++				AB66C6AA2907E89F0063C874 /* glbuild_priv.h in Headers */,
+ 			);
+ 			runOnlyForDeploymentPostprocessing = 0;
+ 		};
+@@ -743,10 +755,11 @@
  			};
  			buildConfigurationList = AB735F3B0A29A24B003261DC /* Build configuration list for PBXProject "engine" */;
  			compatibilityVersion = "Xcode 8.0";
@@ -4781,7 +6585,7 @@ index 9c425fb..bc6e5b7 100644
  			);
  			mainGroup = AB735F380A29A24A003261DC;
  			productRefGroup = AB735F4A0A29A2DC003261DC /* Products */;
-@@ -967,6 +968,12 @@
+@@ -967,6 +980,12 @@
  				MACOSX_DEPLOYMENT_TARGET = 10.9;
  				ONLY_ACTIVE_ARCH = YES;
  				SKIP_INSTALL = YES;
@@ -4794,7 +6598,7 @@ index 9c425fb..bc6e5b7 100644
  			};
  			name = Debug;
  		};
-@@ -990,6 +997,12 @@
+@@ -990,6 +1009,12 @@
  				);
  				MACOSX_DEPLOYMENT_TARGET = 10.9;
  				SKIP_INSTALL = YES;
