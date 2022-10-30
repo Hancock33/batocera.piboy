@@ -8,7 +8,7 @@ import controllersConfig
 class EtekwarGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ["etekwar", rom]
+        commandArray = ["etekwar"]
         os.chdir(os.path.dirname(os.path.abspath(rom)))
 
         return Command.Command(

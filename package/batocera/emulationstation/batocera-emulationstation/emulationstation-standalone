@@ -163,7 +163,7 @@ do
     cd /userdata # es need a PWD
 	if (test -e "/tmp/piboy")
     then
-    /usr/bin/emulationstation_piboy ${GAMELAUNCHOPT} --vsync 0 --exit-on-reboot-required %BATOCERA_EMULATIONSTATION_ARGS% ${CUSTOMESOPTIONS}
+    /usr/bin/emulationstation_piboy ${GAMELAUNCHOPT} --exit-on-reboot-required %BATOCERA_EMULATIONSTATION_ARGS% ${CUSTOMESOPTIONS}
     else
     /usr/bin/emulationstation ${GAMELAUNCHOPT} --exit-on-reboot-required %BATOCERA_EMULATIONSTATION_ARGS% ${CUSTOMESOPTIONS}
     fi
