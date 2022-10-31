@@ -466,6 +466,7 @@ endmenu
 
 menu "Utils"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/alsa-ucm-conf/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/batocera-battery-checker/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/batocera-ethtool/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/batocera-pygame/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/batocera-steam/Config.in"
