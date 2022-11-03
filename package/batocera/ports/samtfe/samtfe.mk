@@ -14,7 +14,8 @@ SAMTFE_DEPENDENCIES = sdl2 sdl2_mixer host-samtfe
 SAMTFE_LICENSE = GPL-2.0
 
 define SAMTFE_CP_WEAPONS
-	cp -vfr $(@D)/SamTFE/Sources/Entities/PlayerWeapons_old.es $(@D)/SamTFE/Sources/Entities/PlayerWeapons.es
+	cp -vfr $(@D)/SamTFE/Sources/Entities/PlayerWeapons_old.es $(@D)/SamTFE/Sources/Entities/PlayerWeapons.es	
+	sed -i "s|add_compile_options(-march=native)|#add_compile_options(-march=native)|" $(@D)/SamTFE/Sources/CMakeLists.txt
 endef
 SAMTFE_POST_EXTRACT_HOOKS += SAMTFE_CP_WEAPONS
 
@@ -30,10 +31,12 @@ endif
 SAMTFE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DECC=$(HOST_SAMTFE_BUILDDIR)/ecc -DTFE=ON
 
 define SAMTFE_INSTALL_TARGET_CMDS
+	rm -rf $(TARGET_DIR)/usr/share/game_assets/samtfe
 	mkdir -p $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
-	cp -av $(@D)/SamTFE/SE1_10b.gro   $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
 	cp -av $(SAMTFE_BUILDDIR)/Debug/* $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
 	cp -av $(SAMTFE_BUILDDIR)/{DedicatedServer,MakeFONT,SeriousSam} $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
+	$(TARGET_STRIP) $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin/*
+	cp -av $(@D)/SamTFE/SE1_10b.gro   $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
 endef
 
 $(eval $(cmake-package))
