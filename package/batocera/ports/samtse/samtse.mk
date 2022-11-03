@@ -15,6 +15,7 @@ SAMTSE_LICENSE = GPL-2.0
 
 define SAMTSE_CP_WEAPONS
 	cp -vfr $(@D)/SamTSE/Sources/Entities/PlayerWeapons_old.es $(@D)/SamTSE/Sources/Entities/PlayerWeapons.es
+	sed -i "s|add_compile_options(-march=native)|#add_compile_options(-march=native)|" $(@D)/SamTSE/Sources/CMakeLists.txt
 endef
 SAMTSE_POST_EXTRACT_HOOKS += SAMTSE_CP_WEAPONS
 
@@ -24,10 +25,12 @@ endif
 SAMTSE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DECC=$(HOST_SAMTFE_BUILDDIR)/ecc -DTFE=ON
 
 define SAMTSE_INSTALL_TARGET_CMDS
+	rm -rf $(TARGET_DIR)/usr/share/game_assets/samtse
 	mkdir -p $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
-	cp -av $(@D)/SamTSE/SE1_10b.gro   $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
 	cp -av $(SAMTSE_BUILDDIR)/Debug/* $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
 	cp -av $(SAMTSE_BUILDDIR)/{DedicatedServer,MakeFONT,SeriousSam} $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
+	$(TARGET_STRIP) $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/*
+	cp -av $(@D)/SamTSE/SE1_10b.gro   $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
 endef
 
 $(eval $(cmake-package))
