@@ -3,8 +3,8 @@
 # melonds
 #
 ################################################################################
-# Version: Commits on Aug 05, 2022
-MELONDS_VERSION = 5baf5fe77b15451055300fcd235197f47fbf154a
+
+MELONDS_VERSION = 0.9.5
 MELONDS_SITE = https://github.com/Arisotura/melonDS.git
 MELONDS_SITE_METHOD=git
 MELONDS_GIT_SUBMODULES=YES

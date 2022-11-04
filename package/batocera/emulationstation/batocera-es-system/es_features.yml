@@ -8944,6 +8944,9 @@ mugen:
 ruffle:
   features: [padtokeyboard]
   shared: [videomode]
+ikemen:
+  features: [padtokeyboard]
+  shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 lightspark:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
