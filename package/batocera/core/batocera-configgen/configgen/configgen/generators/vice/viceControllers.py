@@ -26,7 +26,7 @@ viceJoystick = {
 def generateControllerConfig(viceConfigFile, playersControllers):
     # vjm file
     viceFile = viceConfigFile + "/sdl-joymap.vjm"
-
+                
     if not os.path.exists(os.path.dirname(viceFile)):
         os.makedirs(os.path.dirname(viceFile))
 
@@ -34,7 +34,7 @@ def generateControllerConfig(viceConfigFile, playersControllers):
     nplayer = 1
     listVice = [];
     for playercontroller, pad in sorted(playersControllers.items()):
-        if nplayer == 1:
+        if nplayer == 1:    
             listVice.append("!CLEAR")
             # joystick 1 right
             listVice.append("0 0 0 1 1 8")
@@ -53,9 +53,14 @@ def generateControllerConfig(viceConfigFile, playersControllers):
             listVice.append("0 2 2 1 1 4")
             # hat 1 up
             listVice.append("0 2 3 1 1 8")
-
-        for indexName, indexValue in viceJoystick.items():
-            listVice.append(indexValue.replace('#', pad.inputs[indexName].id, 1))
+        
+        # more logic for controllers with fewer configured buttons
+        for x in pad.inputs:
+            input = pad.inputs[x]
+            for indexName, indexValue in viceJoystick.items():
+                if indexName == input.name:
+                    eslog.debug(f"*** indexName = {indexName}, input.name = {input.name} ***")
+                    listVice.append(indexValue.replace('#', pad.inputs[indexName].id, 1))
         nplayer += 1
 
     f = open(viceFile, 'w')

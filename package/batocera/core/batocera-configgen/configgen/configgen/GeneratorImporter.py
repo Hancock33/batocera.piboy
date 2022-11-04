@@ -183,6 +183,10 @@ def getGenerator(emulator):
         from generators.hurrican.hurricanGenerator import HurricanGenerator
         return HurricanGenerator()
 
+    if emulator == "ikemen":
+        from generators.ikemen.ikemenGenerator import IkemenGenerator
+        return IkemenGenerator()
+
     if emulator == 'ionfury':
         from generators.ionfury.ionfuryGenerator import IonfuryGenerator
         return IonfuryGenerator()

@@ -305,12 +305,17 @@ gzdoom:
 hikaru:
   emulator: demul
   core:     demul
-ionfury:
-  emulator: ionfury
-  core:     ionfury
+ikemen:
+  emulator: ikemen
+  core:     ikemen
+  options:
+    videomode: max-720x480
 intellivision:
   emulator: libretro
   core:     freeintv
+ionfury:
+  emulator: ionfury
+  core:     ionfury
 hcl:
   emulator: hcl
   core:     hcl

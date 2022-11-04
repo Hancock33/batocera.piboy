@@ -53,7 +53,7 @@
 - supermodel to Aug 19 2022 build
 - tsugaru to v20220702
 - vice to 3.6.1
-- linux kernel for x86_64 to 6.0.5
+- linux kernel for x86_64 to 6.0.6
 - daphne emulator hypseus-singe to v2.10.1 (now uses SDL controller)
 - amiberry to v5.4
 - mame to v0.248
@@ -89,6 +89,7 @@
 - Sony touchpad for Mame
 ### Dev  
 - buildroot upgrade to 2022.08.1
+- raspberrypi upgrade linux to 1.20221028 (5.15.74)
 - rpi1 image renamed to bcm2835
 - rpi2 image renamed to bcm2836
 - rpi3 image renamed to bcm2837
