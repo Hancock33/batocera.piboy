@@ -1393,6 +1393,12 @@ libretro:
                     "4":   4
                     "5":   5
                     "6":   6
+            reicast_alpha_sorting:
+                prompt:      ALPHA SORTING
+                choices:
+                    "Per-Strip (fast, least accurate)":  Least
+                    "Per-Triangle (normal)":             Normal
+                    "Per-Pixel (accurate, but slowest)": Accurate
             reicast_force_wince:
                 prompt:      FORCE WINDOWS CE MODE
                 description: Required for some games.
@@ -6833,6 +6839,12 @@ flycast:
         "4x"                : 4
         "8x"                : 8
         "16x"               : 16
+    flycast_alpha_sorting:
+      group: VIDEO SETTINGS
+      prompt:      ALPHA SORTING
+      choices:
+        "On"                : "on"
+        "Off"               : "off"
     flycast_hle:
       group: ADVANCED OPTIONS
       prompt:      HLE BIOS

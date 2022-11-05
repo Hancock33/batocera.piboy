@@ -2169,6 +2169,17 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         else:
             coreSettings.save('reicast_widescreen_hack',   '"disabled"')
 
+        # Alpha Sorting
+        if system.isOptSet('reicast_alpha_sorting'):
+            if system.config['reicast_alpha_sorting'] == 'Least':
+                coreSettings.save('reicast_alpha_sorting',   '"per-strip (fast, least accurate)"')
+            elif system.config['reicast_alpha_sorting'] == 'Normal':
+                coreSettings.save('reicast_alpha_sorting',   '"per-triangle (normal)""')
+            elif system.config['reicast_alpha_sorting'] == 'Accurate':
+                coreSettings.save('reicast_alpha_sorting',   '"per-pixel (accurate)"')
+        else:
+            coreSettings.save('reicast_alpha_sorting',   '"per-strip (fast, least accurate)"')
+
         ## Atomiswave / Naomi
 
         # Screen Orientation

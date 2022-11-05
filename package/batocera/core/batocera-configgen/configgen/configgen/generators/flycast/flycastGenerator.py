@@ -101,6 +101,15 @@ class FlycastGenerator(Generator):
             Config.set("config", "pvr.rend", "4")
             Config.set("config", "rend.vsync", "yes")
 
+        # Alpha Sorting
+        if system.isOptSet('flycast_alpha_sorting'):
+            if system.config['flycast_alpha_sorting'] == 'off':
+                Config.set("config", "rend.PerStripSorting", "yes")
+            elif system.config['flycast_alpha_sorting'] == 'on':
+                Config.set("config", "rend.PerStripSorting", "no")
+        else:
+            Config.set("config", "rend.PerStripSorting", "yes")
+
         # HLE Bios
         if system.isOptSet("flycast_hle"):
             Config.set("config", "UseReios", str(system.config["flycast_hle"]))
