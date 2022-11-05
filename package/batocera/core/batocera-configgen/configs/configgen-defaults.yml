@@ -431,7 +431,7 @@ naomi:
   core:     flycast2021
 naomi2:
   emulator: libretro
-  core:     flycast2021
+  core:     flycast
 naomigd:
   emulator: libretro
   core:     flycast2021

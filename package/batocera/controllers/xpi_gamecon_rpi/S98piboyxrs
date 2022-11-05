@@ -31,7 +31,7 @@ case "$1" in
 			# shutdown requested
 			if runlevel | grep -q '0$'; then
 				echo "0" > /sys/kernel/xpi_gamecon/flags
-				rmmod xpi_gamecon
+				rmmod xpi_gamecon_xrs
 			fi
 		fi
 		;;
