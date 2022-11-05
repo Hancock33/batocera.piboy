@@ -1,7 +1,8 @@
-diff -Naur solarus-engine-80295247a0c93bd24e07824238b277412a72d112.orig/include/solarus/core/InputEvent.h solarus-engine-80295247a0c93bd24e07824238b277412a72d112/include/solarus/core/InputEvent.h
---- solarus-engine-80295247a0c93bd24e07824238b277412a72d112.orig/include/solarus/core/InputEvent.h	2021-09-22 21:25:01.000000000 +0100
-+++ solarus-engine-80295247a0c93bd24e07824238b277412a72d112/include/solarus/core/InputEvent.h	2021-10-29 20:52:07.662782010 +0100
-@@ -356,6 +356,7 @@
+diff --git a/include/solarus/core/InputEvent.h b/include/solarus/core/InputEvent.h
+index c99dbcf8c..a32cb5b6c 100644
+--- a/include/solarus/core/InputEvent.h
++++ b/include/solarus/core/InputEvent.h
+@@ -356,6 +356,7 @@ class InputEvent {
      static std::set<SDL_Keycode> keys_pressed;    /**< Keys currently down, only according to SDL_KEYDOWN and SDL_KEYUP events
                                                     * (i.e. independently of the real current state SDL_GetKeyboardState()). */
      static int joypad_deadzone;                   /**< Joypad axis deadzone for detecting directions. */
@@ -9,10 +10,11 @@ diff -Naur solarus-engine-80295247a0c93bd24e07824238b277412a72d112.orig/include/
      static std::set<Uint8> jbuttons_pressed;      /**< Joypad buttons currently down, only according to SDL_JOYBUTTONDOWN and
                                                     * SDL_JOYBUTTONUP events. */
      static std::set<Uint8> quit_combo;            /**< Optional joypad buttons combination for quitting the application. */
-diff -Naur solarus-engine-80295247a0c93bd24e07824238b277412a72d112.orig/src/core/InputEvent.cpp solarus-engine-80295247a0c93bd24e07824238b277412a72d112/src/core/InputEvent.cpp
---- solarus-engine-80295247a0c93bd24e07824238b277412a72d112.orig/src/core/InputEvent.cpp	2021-09-22 21:25:01.000000000 +0100
-+++ solarus-engine-80295247a0c93bd24e07824238b277412a72d112/src/core/InputEvent.cpp	2021-10-29 20:54:14.247950095 +0100
-@@ -46,6 +46,7 @@
+diff --git a/src/core/InputEvent.cpp b/src/core/InputEvent.cpp
+index c748c4f03..987a0fb8c 100644
+--- a/src/core/InputEvent.cpp
++++ b/src/core/InputEvent.cpp
+@@ -46,6 +46,7 @@ std::map<int, SDL_JoystickID> InputEvent::jindex2id;
  // Default the axis states to centered
  
  int InputEvent::joypad_deadzone = 500;
@@ -20,7 +22,7 @@ diff -Naur solarus-engine-80295247a0c93bd24e07824238b277412a72d112.orig/src/core
  std::set<Uint8> InputEvent::jbuttons_pressed;
  std::set<Uint8> InputEvent::quit_combo;
  
-@@ -228,6 +229,13 @@
+@@ -228,6 +229,13 @@ void InputEvent::initialize(const Arguments& args) {
      }
    }
  
