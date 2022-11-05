@@ -3,8 +3,8 @@
 # batocera-bezel
 #
 ################################################################################
-# Version: Commits on Nov 03, 2022
-BATOCERA_BEZEL_VERSION = ccfd0c19008b6263d25025a2e1433c84a668e1ae
+# Version: Commits on Nov 04, 2022
+BATOCERA_BEZEL_VERSION = 3e1b3d658fd9068526aa52c4e1accc8d0b156e57
 BATOCERA_BEZEL_SITE = $(call github,hancock33,batocera-bezel,$(BATOCERA_BEZEL_VERSION))
 
 define BATOCERA_BEZEL_INSTALL_TARGET_CMDS
