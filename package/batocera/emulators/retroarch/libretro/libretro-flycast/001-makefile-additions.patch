@@ -1,11 +1,19 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index f53bc675..f94ab72d 100644
+index 366b7c19..91c3205a 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -19,6 +19,11 @@ option(USE_VULKAN "Build with Vulkan support" ON)
- option(LIBRETRO "Build libretro core" OFF)
- option(USE_OPENGL "Use Open GL API" ON)
+@@ -5,7 +5,6 @@ if(CCACHE_PROGRAM)
+ 	set(CMAKE_C_COMPILER_LAUNCHER ${CCACHE_PROGRAM} CACHE STRING "Compiler launcher for C.")
+ 	set(CMAKE_CXX_COMPILER_LAUNCHER ${CCACHE_PROGRAM} CACHE STRING "Compiler launcher for CXX.")
+ endif()
+-
+ option(ENABLE_CTEST "Enables unit tests" OFF)
+ option(ENABLE_OPROFILE "Enable OProfile" OFF)
+ option(TEST_AUTOMATION "Enable test automation" OFF)
+@@ -20,6 +19,11 @@ option(LIBRETRO "Build libretro core" OFF)
+ option(USE_OPENGL "Use OpenGL API" ON)
  option(USE_VIDEOCORE "RPI: use the legacy Broadcom GLES libraries" OFF)
+ option(APPLE_BREAKPAD "macOS: Build breakpad client and dump symbols" OFF)
 +option(USE_MALI "Use mali" OFF)
 +option(RG552 "Optimize for RG552" OFF)
 +option(RPI4 "Optimize for RPi4" OFF)
@@ -14,10 +22,10 @@ index f53bc675..f94ab72d 100644
  
  set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/shell/cmake")
  
-@@ -106,6 +111,19 @@ elseif(LIBRETRO)
-     set(CMAKE_SHARED_LIBRARY_PREFIX "")
-     set(CMAKE_POSITION_INDEPENDENT_CODE ON)
-     target_compile_definitions(${PROJECT_NAME} PRIVATE LIBRETRO)
+@@ -109,6 +113,19 @@ elseif(LIBRETRO)
+ 	set(CMAKE_SHARED_LIBRARY_PREFIX "")
+ 	set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+ 	target_compile_definitions(${PROJECT_NAME} PRIVATE LIBRETRO)
 +	if (RG552)
 +	    set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -O3 -mcpu=cortex-a72 -mtune=cortex-a72.cortex-a53")
 +	    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -mcpu=cortex-a72 -mtune=cortex-a72.cortex-a53")
@@ -25,17 +33,17 @@ index f53bc675..f94ab72d 100644
 +	    set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -O3 -mcpu=cortex-a35 -mtune=cortex-a35")
 +	    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -mcpu=cortex-a35 -mtune=cortex-a35")
 +    elseif(RPI4)
-+	    set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -O3 -mcpu=cortex-a72 -mtune=cortex-a72")
-+	    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -mcpu=cortex-a72 -mtune=cortex-a72")
++	    set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -O3 -mcpu=cortex-a72 -mtune=cortex-a72 -w")
++	    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -mcpu=cortex-a72 -mtune=cortex-a72 -w")
 +    elseif(S922X)
 +	    set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -O3 -mcpu=cortex-a73 -mtune=cortex-a73.cortex-a53")
 +	    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -mcpu=cortex-a73 -mtune=cortex-a73.cortex-a53")
 +    endif()
-     if(ANDROID OR USE_GLES)
+ 	if(ANDROID OR USE_GLES)
  		target_compile_definitions(${PROJECT_NAME} PRIVATE GLES GLES3 HAVE_OPENGLES HAVE_OPENGLES3)
  		find_library(GLES3_LIBRARIES NAMES GLESv3 GLESv2 NO_CACHE REQUIRED)
-@@ -142,6 +160,10 @@ else()
-     add_executable(${PROJECT_NAME} MACOSX_BUNDLE core/emulator.cpp)
+@@ -147,6 +164,10 @@ else()
+ 	add_executable(${PROJECT_NAME} core/emulator.cpp)
  endif()
  
 +if(USE_MALI)
@@ -44,5 +52,4 @@ index f53bc675..f94ab72d 100644
 +
  if(WINDOWS_STORE)
  	set(USE_OPENGL OFF)
-     target_compile_features(${PROJECT_NAME} PRIVATE c_std_11 cxx_std_17)
-
+ 	set(USE_VULKAN OFF)

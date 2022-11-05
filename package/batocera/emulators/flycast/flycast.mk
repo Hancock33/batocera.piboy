@@ -3,15 +3,15 @@
 # flycast
 #
 ################################################################################
-# Version: Commits on Apr 09, 2022
-FLYCAST_VERSION = v1.3
-FLYCAST_SITE = https://github.com/flyinghead/flycast.git
+# Version: Commits on Oct 21, 2022
+FLYCAST_VERSION = d063f38c78851ed74c5507f5d18e49c4bd08dcb2
+FLYCAST_SITE = https://github.com/inada-s/flycast.git
 FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
 FLYCAST_LICENSE = GPLv2
 FLYCAST_DEPENDENCIES = sdl2 libpng libzip libao pulseaudio-utils
 
-FLYCAST_CONF_OPTS += -DLIBRETRO=OFF
+FLYCAST_CONF_OPTS += -DLIBRETRO=OFF -DGDB_SERVER=OFF
 FLYCAST_CONF_OPTS += -DGIT_VERSION="$(shell echo $(FLYCAST_VERSION) | cut -c 1-7)"
 FLYCAST_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -Wno-error=array-bounds"
 FLYCAST_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -Wno-error=array-bounds"
