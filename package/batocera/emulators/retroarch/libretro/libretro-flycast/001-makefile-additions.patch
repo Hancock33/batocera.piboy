@@ -45,3 +45,4 @@ index f53bc675..f94ab72d 100644
  if(WINDOWS_STORE)
  	set(USE_OPENGL OFF)
      target_compile_features(${PROJECT_NAME} PRIVATE c_std_11 cxx_std_17)
+

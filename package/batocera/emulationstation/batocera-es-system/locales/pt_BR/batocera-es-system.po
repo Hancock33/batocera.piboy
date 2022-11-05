@@ -2059,6 +2059,26 @@ msgctxt "game_options"
 msgid "RENDER TO TEXTURE UPSCALING"
 msgstr ""
 
+#. TRANSLATION: libretro/flycast, flycast
+msgctxt "game_options"
+msgid "ALPHA SORTING"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "Per-Strip (fast, least accurate)"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "Per-Triangle (normal)"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "Per-Pixel (accurate, but slowest)"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, libretro/quasi88
 msgctxt "game_options"
 msgid "Required for some games."
