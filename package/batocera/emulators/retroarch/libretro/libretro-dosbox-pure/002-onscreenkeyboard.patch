@@ -1,5 +1,5 @@
 diff --git a/core_options.h b/core_options.h
-index 7e6b4db..d67eeee 100644
+index a00b36a..243b09a 100644
 --- a/core_options.h
 +++ b/core_options.h
 @@ -151,11 +151,20 @@ static retro_core_option_v2_definition option_defs[] =
@@ -25,7 +25,7 @@ index 7e6b4db..d67eeee 100644
  		"dosbox_pure_mouse_wheel",
  		"Bind Mouse Wheel To Key", NULL,
 diff --git a/dosbox_pure_libretro.cpp b/dosbox_pure_libretro.cpp
-index 6a03631..b8c8cd4 100644
+index 1452b77..3ba98a3 100644
 --- a/dosbox_pure_libretro.cpp
 +++ b/dosbox_pure_libretro.cpp
 @@ -127,6 +127,7 @@ static DBP_Port_Device dbp_port_devices[DBP_MAX_PORTS];
@@ -36,7 +36,7 @@ index 6a03631..b8c8cd4 100644
  static bool dbp_mouse_input;
  static bool dbp_optionsupdatecallback;
  static bool dbp_last_hideadvanced;
-@@ -3127,7 +3128,11 @@ static void refresh_input_binds(bool set_controller_info = false, unsigned refre
+@@ -3161,7 +3162,11 @@ static void refresh_input_binds(bool set_controller_info = false, unsigned refre
  
  		if (dbp_on_screen_keyboard && port == 0)
  		{
@@ -49,7 +49,7 @@ index 6a03631..b8c8cd4 100644
  		}
  
  		if (mapping)
-@@ -3671,11 +3676,13 @@ static bool check_variables(bool is_startup = false)
+@@ -3707,11 +3712,13 @@ static bool check_variables(bool is_startup = false)
  
  	bool bind_unused = (retro_get_variable("dosbox_pure_bind_unused", "true")[0] != 'f');
  	bool on_screen_keyboard = (retro_get_variable("dosbox_pure_on_screen_keyboard", "true")[0] != 'f');

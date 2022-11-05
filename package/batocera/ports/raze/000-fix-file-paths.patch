@@ -152,30 +152,31 @@ index 524f94c60..e216c92e8 100644
  
  //===========================================================================
 diff --git a/source/core/gameconfigfile.cpp b/source/core/gameconfigfile.cpp
-index de8df7921..d1d5827af 100644
+index d8db65e0d..94b931db2 100644
 --- a/source/core/gameconfigfile.cpp
 +++ b/source/core/gameconfigfile.cpp
-@@ -141,6 +141,7 @@ FGameConfigFile::FGameConfigFile ()
+@@ -154,6 +154,7 @@ FGameConfigFile::FGameConfigFile ()
+ 		SetValueForKey ("Path", "/usr/local/share/games/jfduke3d", true);
  		SetValueForKey ("Path", "/usr/local/share/games/eduke32", true);
- 		SetValueForKey ("Path", "/usr/share/games/nblood", true);
  		SetValueForKey ("Path", "/usr/local/share/games/nblood", true);
 +		SetValueForKey ("Path", "/usr/share/raze", true);
  #endif
  	}
  
-@@ -161,6 +162,7 @@ FGameConfigFile::FGameConfigFile ()
- 		SetValueForKey("Path", "/usr/local/share/games/" GAME_DIR "/soundfonts", true);
- 		SetValueForKey("Path", "/usr/share/" GAME_DIR "/soundfonts", true);
- 		SetValueForKey("Path", "/usr/share/games/" GAME_DIR "/soundfonts", true);
+@@ -174,6 +175,8 @@ FGameConfigFile::FGameConfigFile ()
+ 		SetValueForKey("Path", "/usr/share/games/" GAMENAMELOWERCASE "/soundfonts", true);
+ 		SetValueForKey("Path", "/usr/local/share/" GAMENAMELOWERCASE "/soundfonts", true);
+ 		SetValueForKey("Path", "/usr/local/share/games/" GAMENAMELOWERCASE "/soundfonts", true);
 +		SetValueForKey("Path", "/usr/share/raze/soundfonts", true);
++		SetValueForKey("Path", "/usr/share/soundfonts", true);
  #endif
  	}
  
 diff --git a/source/core/gamecontrol.cpp b/source/core/gamecontrol.cpp
-index d8e9a145c..5c6d2f3c2 100644
+index 5d0611b2a..ee006de60 100644
 --- a/source/core/gamecontrol.cpp
 +++ b/source/core/gamecontrol.cpp
-@@ -971,7 +971,7 @@ int RunGame()
+@@ -984,7 +984,7 @@ int RunGame()
  	FString logfile = Args->TakeValue("+logfile");
  
  	// As long as this engine is still in prerelease mode let's always write a log file.
