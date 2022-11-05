@@ -18,27 +18,27 @@ XASH3D_FWGS_CONF_OPTS += --build-type=release \
   --disable-menu-changegame
 
 ifeq ($(BR2_ARCH_IS_64),y)
-XASH3D_FWGS_CONF_OPTS += --64bits
+	XASH3D_FWGS_CONF_OPTS += --64bits
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
 # Batocera - SBC prefer GLES
-  ifneq ($(BR2_PACKAGE_BATOCERA_SBC_XORG),y)
-    XASH3D_FWGS_DEPENDENCIES += libgl
-  endif
+	ifneq ($(BR2_PACKAGE_BATOCERA_SBC_XORG),y)
+		XASH3D_FWGS_DEPENDENCIES += libgl
+	endif
 else
-ifeq ($(BR2_PACKAGE_HAS_LIBGLES),y)
-XASH3D_FWGS_DEPENDENCIES += libgles
-XASH3D_FWGS_CONF_OPTS += --disable-gl --enable-gl4es
-else
-XASH3D_FWGS_CONF_OPTS += --disable-gl
-endif
+	ifeq ($(BR2_PACKAGE_HAS_LIBGLES),y)
+		XASH3D_FWGS_DEPENDENCIES += libgles
+		XASH3D_FWGS_CONF_OPTS += --disable-gl --enable-gl4es
+	else
+		XASH3D_FWGS_CONF_OPTS += --disable-gl
+	endif
 endif
 
 define XASH3D_FWGS_EVMAPY
-      # evmap config
-       mkdir -p $(TARGET_DIR)/usr/share/evmapy
-       cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/xash3d/hlsdk-xash3d/hlsdk-xash3d.keys $(TARGET_DIR)/usr/share/evmapy
+	# evmap config
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/xash3d/xash3d-fwgs/xash3d_fwgs.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 XASH3D_FWGS_POST_INSTALL_TARGET_HOOKS += XASH3D_FWGS_EVMAPY
 
