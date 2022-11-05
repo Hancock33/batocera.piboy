@@ -1,7 +1,8 @@
-diff -Naur solarus-engine-80295247a0c93bd24e07824238b277412a72d112.orig/include/solarus/core/Savegame.h solarus-engine-80295247a0c93bd24e07824238b277412a72d112/include/solarus/core/Savegame.h
---- solarus-engine-80295247a0c93bd24e07824238b277412a72d112.orig/include/solarus/core/Savegame.h	2021-09-22 21:25:01.000000000 +0100
-+++ solarus-engine-80295247a0c93bd24e07824238b277412a72d112/include/solarus/core/Savegame.h	2021-10-29 20:46:27.383795419 +0100
-@@ -121,6 +121,7 @@
+diff --git a/include/solarus/core/Savegame.h b/include/solarus/core/Savegame.h
+index f17734224..876e0f006 100644
+--- a/include/solarus/core/Savegame.h
++++ b/include/solarus/core/Savegame.h
+@@ -121,6 +121,7 @@ class SOLARUS_API Savegame: public ExportableToLua {
      bool is_set(const std::string& key) const;
      void unset(const std::string& key);
  
@@ -9,10 +10,11 @@ diff -Naur solarus-engine-80295247a0c93bd24e07824238b277412a72d112.orig/include/
      void set_initial_values();
      void set_default_keyboard_controls();
      void set_default_joypad_controls();
-diff -Naur solarus-engine-80295247a0c93bd24e07824238b277412a72d112.orig/src/core/Savegame.cpp solarus-engine-80295247a0c93bd24e07824238b277412a72d112/src/core/Savegame.cpp
---- solarus-engine-80295247a0c93bd24e07824238b277412a72d112.orig/src/core/Savegame.cpp	2021-09-22 21:25:01.000000000 +0100
-+++ solarus-engine-80295247a0c93bd24e07824238b277412a72d112/src/core/Savegame.cpp	2021-10-29 20:49:07.057145755 +0100
-@@ -95,6 +95,47 @@
+diff --git a/src/core/Savegame.cpp b/src/core/Savegame.cpp
+index 7e146b108..46a06fcbe 100644
+--- a/src/core/Savegame.cpp
++++ b/src/core/Savegame.cpp
+@@ -95,6 +95,47 @@ Savegame::Savegame(MainLoop& main_loop, const std::string& file_name):
    // at this point, but is needed by initialize() when calling item scripts.
  }
  
@@ -60,7 +62,7 @@ diff -Naur solarus-engine-80295247a0c93bd24e07824238b277412a72d112.orig/src/core
  /**
   * \brief Initializes the data from the file or from initial values if the file
   * does not exist.
-@@ -127,6 +168,8 @@
+@@ -127,6 +168,8 @@ void Savegame::initialize() {
      empty = false;
      import_from_file();
    }

@@ -1,8 +1,8 @@
 diff --git a/cmake/AddCompilationFlags.cmake b/cmake/AddCompilationFlags.cmake
-index 0768e40..9f04c1a 100644
+index 5afd80c73..0852cf8fb 100644
 --- a/cmake/AddCompilationFlags.cmake
 +++ b/cmake/AddCompilationFlags.cmake
-@@ -37,7 +37,7 @@ endif()
+@@ -30,7 +30,7 @@ endif()
  set(CMAKE_CXX_FLAGS_RELEASE "-Wno-error -Wall -Wextra -Wno-unknown-pragmas -Wno-fatal-errors ${CMAKE_CXX_FLAGS_RELEASE} -O3")
  
  # Be more pedantic in debug mode for developers.
