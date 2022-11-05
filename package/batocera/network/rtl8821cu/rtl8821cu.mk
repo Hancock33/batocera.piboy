@@ -3,8 +3,8 @@
 # rtl8821cu
 #
 ################################################################################
-# Version: Commits on Oct 24, 2022
-RTL8821CU_VERSION = abcdac7e6d1da1347542359a329c660e764d5b8f
+# Version: Commits on Nov 01, 2022
+RTL8821CU_VERSION = 6d03eb2981b2b81f1742e3b2f9a0c9f8c122bc40
 RTL8821CU_SITE = $(call github,morrownr,8821cu-20210118,$(RTL8821CU_VERSION))
 RTL8821CU_LICENSE = GPL-2.0
 RTL8821CU_LICENSE_FILES = LICENSE
