@@ -3,8 +3,8 @@
 # xash3d-fwgs
 #
 ################################################################################
-# Version: Commits on Jul 26, 2022
-XASH3D_FWGS_VERSION = 12ea6dcfd7d9242f7e9412e0e4d7ada4184fc256
+# Version: Commits on Nov 05, 2022
+XASH3D_FWGS_VERSION = 1064b41ab219c7f25ffc6633048bfd2d95ccc86b
 XASH3D_FWGS_SITE = https://github.com/FWGS/xash3d-fwgs.git
 XASH3D_FWGS_SITE_METHOD = git
 XASH3D_FWGS_GIT_SUBMODULES = yes
@@ -12,10 +12,10 @@ XASH3D_LICENSE = GPL-3.0+
 XASH3D_FWGS_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf freetype fontconfig hlsdk-xash3d
 
 XASH3D_FWGS_CONF_OPTS += --build-type=release \
+  --enable-packaging \
   --sdl2=$(STAGING_DIR)/usr/ \
   --disable-vgui \
-  --disable-menu-changegame \
-  --disable-werror
+  --disable-menu-changegame
 
 ifeq ($(BR2_ARCH_IS_64),y)
 XASH3D_FWGS_CONF_OPTS += --64bits
@@ -35,16 +35,11 @@ XASH3D_FWGS_CONF_OPTS += --disable-gl
 endif
 endif
 
-define XASH3D_FWGS_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/xash3d/
-	cp -pvr $(@D)/build/mainui/libmenu.so $(TARGET_DIR)/usr/lib/xash3d/
-	cp -pvr $(@D)/build/ref_soft/libref_soft.so $(TARGET_DIR)/usr/lib/xash3d/
-	cp -pvr $(@D)/build/ref_gl/libref_gl*.so $(TARGET_DIR)/usr/lib/xash3d/
-	cp -pvr $(@D)/build/engine/libxash.so $(TARGET_DIR)/usr/lib/xash3d/
-	cp -pvr $(@D)/build/game_launch/xash3d $(TARGET_DIR)/usr/lib/xash3d/
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/xash3d/xash3d-fwgs/xash3d_fwgs.keys $(TARGET_DIR)/usr/share/evmapy/xash3d_fwgs.keys
+define XASH3D_FWGS_EVMAPY
+      # evmap config
+       mkdir -p $(TARGET_DIR)/usr/share/evmapy
+       cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/xash3d/hlsdk-xash3d/hlsdk-xash3d.keys $(TARGET_DIR)/usr/share/evmapy
 endef
+XASH3D_FWGS_POST_INSTALL_TARGET_HOOKS += XASH3D_FWGS_EVMAPY
 
 $(eval $(waf-package))

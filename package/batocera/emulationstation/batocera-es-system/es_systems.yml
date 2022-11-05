@@ -4935,9 +4935,6 @@ xash3d_fwgs:
 
     For Half-Life 1, the game folder is `valve/`.
 
-    Then, download https://github.com/FWGS/xash-extras/releases/latest/download/extras.pak and copy it to:
-    /userdata/roms/xash3d_fwgs/extras.pak.
-
 xrick:
   name:       xrick
   manufacturer: Ports
