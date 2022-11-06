@@ -3,8 +3,8 @@
 # od-commander
 #
 ################################################################################
-# Version: Commits on Nov 05, 2022
-OD_COMMANDER_VERSION = 699e3ca200c7fa1d32addcb6b98800a66478e547
+# Version: Commits on Apr 26, 2021
+OD_COMMANDER_VERSION = 9e26d5fadd387ee1e6e32122f1aed0204922dd51
 OD_COMMANDER_SITE = $(call github,od-contrib,commander,$(OD_COMMANDER_VERSION))
 OD_COMMANDER_DEPENDENCIES = sdl2 sdl2_gfx sdl2_image sdl2_ttf dejavu nanum-font
 OD_COMMANDER_RESOURCES_DIR = /usr/share/od-commander/

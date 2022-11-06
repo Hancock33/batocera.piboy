@@ -30,7 +30,18 @@ define SAMTSE_INSTALL_TARGET_CMDS
 	cp -av $(SAMTSE_BUILDDIR)/Debug/* $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
 	cp -av $(SAMTSE_BUILDDIR)/{DedicatedServer,MakeFONT,SeriousSam} $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
 	$(TARGET_STRIP) $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/*
-	cp -av $(@D)/SamTSE/SE1_10b.gro   $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
+	cp -av $(@D)/SamTSE/SE1_10b.gro                                     $(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00.gro            $(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_Extra.gro      $(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_ExtraTools.gro $(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_Levels.gro     $(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_Logo.gro       $(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_Music.gro      $(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/1_04_patch.gro        $(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/1_07_patch.gro        $(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/Help                  $(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/Levels                $(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/Mods                  $(TARGET_DIR)/usr/share/game_assets/samtse
 endef
 
 $(eval $(cmake-package))
