@@ -1,8 +1,8 @@
 diff --git a/Makefile b/Makefile
-index fed5ce1..8a1e021 100644
+index 3e7941c..f434bbc 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -145,6 +145,25 @@ else ifneq ($(findstring Haiku,$(shell uname -s)),)
+@@ -147,6 +147,25 @@ else ifneq ($(findstring Haiku,$(shell uname -s)),)
    else
      CXX   ?= g++
    endif
