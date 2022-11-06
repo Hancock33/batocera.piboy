@@ -4,8 +4,8 @@
 #
 ################################################################################
 # https://github.com/morrownr/8812au-20210629
-# Version: Commits on Nov 05, 2022
-RTL8812AU_VERSION = a6d5de2e610969d5208c7854b44b8dc864ba68af
+# Version: Commits on Nov 06, 2022
+RTL8812AU_VERSION = b31bb2269210c0112f62f263ecec18eaac42cd63
 RTL8812AU_SITE = $(call github,morrownr,8812au-20210629,$(RTL8812AU_VERSION))
 RTL8812AU_LICENSE = GPL-2.0
 RTL8812AU_LICENSE_FILES = LICENSE

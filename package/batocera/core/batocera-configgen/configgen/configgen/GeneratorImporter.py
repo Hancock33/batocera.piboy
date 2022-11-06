@@ -367,6 +367,10 @@ def getGenerator(emulator):
         from generators.sdlpop.sdlpopGenerator import SdlPopGenerator
         return SdlPopGenerator()
 
+    if emulator == 'serioussam':
+        from generators.serioussam.serioussamGenerator import SerioussamGenerator
+        return SerioussamGenerator()
+
     if emulator == 'sh':
         from generators.sh.shGenerator import ShGenerator
         return ShGenerator()

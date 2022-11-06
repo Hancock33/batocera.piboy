@@ -4575,6 +4575,19 @@ rtcw:
     rtcw:
       rtcw: { requireAnyOf: [BR2_PACKAGE_RTCW] }
 
+serioussam:
+  name:       Serious Sam
+  manufacturer: Ports
+  release: 2001
+  hardware: port
+  extensions: [game]
+  platform: pc
+  group: ports
+  path: /userdata/roms/ports/serioussam
+  emulators:
+    serioussam:
+      serioussam: { requireAnyOf: [BR2_PACKAGE_SAMTFE] }
+
 sdlpop:
   name:       SdlPop
   manufacturer: Ports

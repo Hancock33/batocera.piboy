@@ -1,0 +1,78 @@
+diff --git a/SamTFE/Sources/CMakeLists.txt b/SamTFE/Sources/CMakeLists.txt
+index b0bd4dd..dd0b5ba 100644
+--- a/SamTFE/Sources/CMakeLists.txt
++++ b/SamTFE/Sources/CMakeLists.txt
+@@ -1020,7 +1020,7 @@ if(RPI4)
+     target_link_libraries(${ENGINELIB} "rt")
+ endif()
+ target_link_libraries(${ENGINELIB} vulkan)
+-set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
++#set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
+ 
+ add_executable(SeriousSam
+     #${ENGINE_SRCS}
+@@ -1114,14 +1114,14 @@ if(MACOSX)
+ endif()
+ 
+ if(LINUX)
+-    set_target_properties(SeriousSam PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
++    #set_target_properties(SeriousSam PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+     target_link_libraries(SeriousSam "m")
+     target_link_libraries(SeriousSam "dl")
+     target_link_libraries(SeriousSam "pthread")
+     target_link_libraries(SeriousSam ${SDL2_LIBRARY})
+     target_link_libraries(SeriousSam ${ZLIB_LIBRARIES})
+     if(BUILD_DEDICATED_SERVER)
+-        set_target_properties(DedicatedServer PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
++        #set_target_properties(DedicatedServer PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+         target_link_libraries(DedicatedServer "m")
+         target_link_libraries(DedicatedServer "dl")
+         target_link_libraries(DedicatedServer "pthread")
+@@ -1129,7 +1129,7 @@ if(LINUX)
+         target_link_libraries(DedicatedServer ${ZLIB_LIBRARIES})
+     endif()
+     if(BUILD_MAKEFONT)
+-        set_target_properties(MakeFONT PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
++        #set_target_properties(MakeFONT PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+         target_link_libraries(MakeFONT "m")
+         target_link_libraries(MakeFONT "dl")
+         target_link_libraries(MakeFONT "pthread")
+diff --git a/SamTSE/Sources/CMakeLists.txt b/SamTSE/Sources/CMakeLists.txt
+index b0bd4dd..dd0b5ba 100644
+--- a/SamTSE/Sources/CMakeLists.txt
++++ b/SamTSE/Sources/CMakeLists.txt
+@@ -1020,7 +1020,7 @@ if(RPI4)
+     target_link_libraries(${ENGINELIB} "rt")
+ endif()
+ target_link_libraries(${ENGINELIB} vulkan)
+-set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
++#set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
+ 
+ add_executable(SeriousSam
+     #${ENGINE_SRCS}
+@@ -1114,14 +1114,14 @@ if(MACOSX)
+ endif()
+ 
+ if(LINUX)
+-    set_target_properties(SeriousSam PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
++    #set_target_properties(SeriousSam PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+     target_link_libraries(SeriousSam "m")
+     target_link_libraries(SeriousSam "dl")
+     target_link_libraries(SeriousSam "pthread")
+     target_link_libraries(SeriousSam ${SDL2_LIBRARY})
+     target_link_libraries(SeriousSam ${ZLIB_LIBRARIES})
+     if(BUILD_DEDICATED_SERVER)
+-        set_target_properties(DedicatedServer PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
++        #set_target_properties(DedicatedServer PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+         target_link_libraries(DedicatedServer "m")
+         target_link_libraries(DedicatedServer "dl")
+         target_link_libraries(DedicatedServer "pthread")
+@@ -1129,7 +1129,7 @@ if(LINUX)
+         target_link_libraries(DedicatedServer ${ZLIB_LIBRARIES})
+     endif()
+     if(BUILD_MAKEFONT)
+-        set_target_properties(MakeFONT PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
++        #set_target_properties(MakeFONT PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+         target_link_libraries(MakeFONT "m")
+         target_link_libraries(MakeFONT "dl")
+         target_link_libraries(MakeFONT "pthread")

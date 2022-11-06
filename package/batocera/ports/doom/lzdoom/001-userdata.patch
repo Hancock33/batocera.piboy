@@ -1,8 +1,8 @@
 diff --git a/src/gameconfigfile.cpp b/src/gameconfigfile.cpp
-index 99053ea8a7..5986d4c8dd 100644
+index 177cb76e51..c10ea2fd62 100644
 --- a/src/gameconfigfile.cpp
 +++ b/src/gameconfigfile.cpp
-@@ -105,6 +105,7 @@ FGameConfigFile::FGameConfigFile ()
+@@ -129,6 +129,7 @@ FGameConfigFile::FGameConfigFile ()
  		SetSection ("IWADSearch.Directories", true);
  		SetValueForKey ("Path", ".", true);
  		SetValueForKey ("Path", "$DOOMWADDIR", true);
@@ -10,7 +10,7 @@ index 99053ea8a7..5986d4c8dd 100644
  #ifdef __APPLE__
  		SetValueForKey ("Path", user_docs, true);
  		SetValueForKey ("Path", user_app_support, true);
-@@ -115,12 +116,12 @@ FGameConfigFile::FGameConfigFile ()
+@@ -139,12 +140,12 @@ FGameConfigFile::FGameConfigFile ()
  		SetValueForKey ("Path", "$PROGDIR", true);
  #else
  		SetValueForKey ("Path", "$HOME/" GAME_DIR, true);
@@ -25,7 +25,7 @@ index 99053ea8a7..5986d4c8dd 100644
  		SetValueForKey ("Path", "/usr/share/games/doom", true);
  #endif
  	}
-@@ -141,7 +142,7 @@ FGameConfigFile::FGameConfigFile ()
+@@ -165,7 +166,7 @@ FGameConfigFile::FGameConfigFile ()
  		SetValueForKey ("Path", SHARE_DIR, true);
  		SetValueForKey ("Path", "/usr/local/share/doom", true);
  		SetValueForKey ("Path", "/usr/local/share/games/doom", true);
@@ -34,7 +34,7 @@ index 99053ea8a7..5986d4c8dd 100644
  		SetValueForKey ("Path", "/usr/share/games/doom", true);
  #endif
  		SetValueForKey ("Path", "$DOOMWADDIR", true);
-@@ -166,12 +167,12 @@ FGameConfigFile::FGameConfigFile ()
+@@ -190,12 +191,12 @@ FGameConfigFile::FGameConfigFile ()
  #else
  		SetValueForKey("Path", "$HOME/" GAME_DIR "/soundfonts", true);
  		SetValueForKey("Path", "$HOME/" GAME_DIR "/fm_banks", true);

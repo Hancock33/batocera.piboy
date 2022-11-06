@@ -620,6 +620,9 @@ sega32x:
 segacd:
   emulator: libretro
   core:     genesisplusgx
+serioussam:
+  emulator: serioussam
+  core:     serioussam
 sg1000:
   emulator: libretro
   core:     genesisplusgx

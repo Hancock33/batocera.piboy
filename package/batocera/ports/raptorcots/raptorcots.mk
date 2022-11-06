@@ -3,9 +3,9 @@
 # raptorcots
 #
 ################################################################################
-# Version: Commits on Apr 29, 2022
-RAPTORCOTS_VERSION = 4b4f0958a40fb7a2979761e71f555e523b9f5ca2
-RAPTORCOTS_SITE = $(call github,wel97459,raptor,$(RAPTORCOTS_VERSION))
+# Version: Commits on Aug 23, 2022
+RAPTORCOTS_VERSION = 224ccb27c1658d3609a20dc437f1063909d9a72c
+RAPTORCOTS_SITE = $(call github,skynettx,raptor,$(RAPTORCOTS_VERSION))
 
 RAPTORCOTS_DEPENDENCIES = sdl2 openal
 RAPTORCOTS_LICENSE = GPL-2.0
