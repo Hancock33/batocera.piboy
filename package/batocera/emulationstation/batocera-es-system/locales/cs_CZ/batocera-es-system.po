@@ -2079,6 +2079,26 @@ msgctxt "game_options"
 msgid "Per-Pixel (accurate, but slowest)"
 msgstr ""
 
+#. TRANSLATION: libretro/flycast, flycast
+msgctxt "game_options"
+msgid "AUTO FRAME SKIPPING"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, amiberry, amiberry, amiberry, flycast
+msgctxt "game_options"
+msgid "OFF"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, libretro/puae, libretro/puae2021, duckstation, flycast, ...
+msgctxt "game_options"
+msgid "Normal"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, flycast
+msgctxt "game_options"
+msgid "Maximum"
+msgstr ""
+
 #. TRANSLATION: libretro/flycast, libretro/quasi88
 msgctxt "game_options"
 msgid "Required for some games."
@@ -4892,11 +4912,6 @@ msgctxt "game_options"
 msgid "CPU COMPATIBILITY"
 msgstr ""
 
-#. TRANSLATION: libretro/puae, libretro/puae2021, duckstation, flycast, openbor, ...
-msgctxt "game_options"
-msgid "Normal"
-msgstr ""
-
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "More compatible"
@@ -6535,11 +6550,6 @@ msgstr ""
 #. TRANSLATION: amiberry, amiberry
 msgctxt "game_options"
 msgid "ON"
-msgstr ""
-
-#. TRANSLATION: amiberry, amiberry, amiberry
-msgctxt "game_options"
-msgid "OFF"
 msgstr ""
 
 #. TRANSLATION: amiberry

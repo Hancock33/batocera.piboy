@@ -74,6 +74,12 @@ class FlycastGenerator(Generator):
         else:
             Config.set("config", "ta.skip", "0")
 
+        # auto frame skiping
+        if system.isOptSet("flycast_autoframeskip"):
+            Config.set("config", "pvr.AutoSkipFrame", str(system.config["flycast_autoframeskip"]))
+        else:
+            Config.set("config", "pvr.AutoSkipFrame", "1")
+
         # set render resolution - default 480 (Native)
         if system.isOptSet("flycast_render_resolution"):
             Config.set("config", "rend.Resolution", str(system.config["flycast_render_resolution"]))
