@@ -2180,6 +2180,17 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         else:
             coreSettings.save('reicast_alpha_sorting',   '"per-strip (fast, least accurate)"')
 
+        # Auto Frame Skipping
+        if system.isOptSet('reicast_auto_skip_frame'):
+            if system.config['reicast_auto_skip_frame'] == 'OFF':
+                coreSettings.save('reicast_auto_skip_frame',   '"disabled"')
+            elif system.config['reicast_auto_skip_frame'] == 'Normal':
+                coreSettings.save('reicast_auto_skip_frame',   '"some""')
+            elif system.config['reicast_auto_skip_frame'] == 'Maximum':
+                coreSettings.save('reicast_auto_skip_frame',   '"more"')
+        else:
+            coreSettings.save('reicast_auto_skip_frame',   '"some"')
+
         ## Atomiswave / Naomi
 
         # Screen Orientation

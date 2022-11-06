@@ -1399,6 +1399,12 @@ libretro:
                     "Per-Strip (fast, least accurate)":  Least
                     "Per-Triangle (normal)":             Normal
                     "Per-Pixel (accurate, but slowest)": Accurate
+            reicast_auto_skip_frame:
+                prompt:      AUTO FRAME SKIPPING
+                choices:
+                    "OFF"    : disabled
+                    "Normal" : some
+                    "Maximum": more
             reicast_force_wince:
                 prompt:      FORCE WINDOWS CE MODE
                 description: Required for some games.
@@ -6813,6 +6819,13 @@ flycast:
         "PAL/N":           3
         "NTSC":            0
         "Flycast Default": 4
+    flycast_autoframeskip:
+      group: VIDEO SETTINGS
+      prompt: AUTO FRAME SKIPPING
+      choices:
+        "OFF":     0
+        "Normal":  1
+        "Maximum": 2
     flycast_frameskip:
       group: VIDEO SETTINGS
       prompt: FRAMESKIP
