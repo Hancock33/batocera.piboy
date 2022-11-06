@@ -1,8 +1,8 @@
 diff --git a/src/joystick/SDL_gamecontroller.c b/src/joystick/SDL_gamecontroller.c
-index 6ebdf66..fee2e4d 100644
+index 037effe98..36a5d7ffe 100644
 --- a/src/joystick/SDL_gamecontroller.c
 +++ b/src/joystick/SDL_gamecontroller.c
-@@ -1371,14 +1371,14 @@ SDL_GameControllerInitMappings(void)
+@@ -1703,14 +1703,14 @@ SDL_GameControllerInitMappings(void)
  {
      char szControllerMapPath[1024];
      int i = 0;

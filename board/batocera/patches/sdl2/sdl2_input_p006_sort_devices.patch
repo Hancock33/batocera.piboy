@@ -1,5 +1,5 @@
 diff --git a/src/core/linux/SDL_udev.c b/src/core/linux/SDL_udev.c
-index b416a53..70936a4 100644
+index fa775bc22..2cf468167 100644
 --- a/src/core/linux/SDL_udev.c
 +++ b/src/core/linux/SDL_udev.c
 @@ -48,6 +48,66 @@ static int SDL_UDEV_load_syms(void);
