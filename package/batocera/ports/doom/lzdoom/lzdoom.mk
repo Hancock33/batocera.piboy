@@ -3,8 +3,8 @@
 # lzdoom
 #
 ################################################################################
-# Version: Commits on Apr 10, 2022
-LZDOOM_VERSION = 7f3de9e225deace07ac86dadbe41ccf45ceaae3e
+# Version: Commits on Apr 13, 2022 (g3.3mgw branch)
+LZDOOM_VERSION = 43e444889953e99a5b42d7c87ce67dfd351b696a
 LZDOOM_SITE = $(call github,drfrag666,gzdoom,$(LZDOOM_VERSION))
 LZDOOM_LICENSE = GPL-3.0
 LZDOOM_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew host-zmusic zmusic
