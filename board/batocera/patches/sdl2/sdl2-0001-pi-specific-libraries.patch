@@ -1,8 +1,8 @@
 diff --git a/configure b/configure
-index 9c46ffe..80f942b 100755
+index a3fb4ea56..107f65523 100755
 --- a/configure
 +++ b/configure
-@@ -19917,10 +19917,10 @@ fi
+@@ -23376,10 +23376,10 @@ fi
          if test x$video_rpi = xno; then
              if test x$ARCH = xnetbsd; then
                  RPI_CFLAGS="-I/usr/pkg/include -I/usr/pkg/include/interface/vcos/pthreads -I/usr/pkg/include/interface/vmcs_host/linux"
