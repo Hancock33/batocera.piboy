@@ -1,5 +1,5 @@
-config BR2_PACKAGE_FLYCAST2021
-    bool "flycast2021"
+config BR2_PACKAGE_FLYCAST2022
+    bool "flycast2022"
     depends on BR2_PACKAGE_SDL2
     depends on BR2_PACKAGE_LIBPNG
     depends on BR2_PACKAGE_LIBZIP

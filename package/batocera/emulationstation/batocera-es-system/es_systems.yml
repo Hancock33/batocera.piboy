@@ -433,15 +433,16 @@ dreamcast:
   extensions: [cdi, cue, gdi, chd, m3u]
   emulators:
     libretro:
-      flycast:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]     }
-      flycast2021: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2021] }
+      flycast-next: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]     }
+      flycast2021:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2021] }
+      flycast2022:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2022] }
     flycast:
-      flycast:     { requireAnyOf: [BR2_PACKAGE_FLYCAST]              }
-      flycast2021: { requireAnyOf: [BR2_PACKAGE_FLYCAST2021]          }
+      flycast-next: { requireAnyOf: [BR2_PACKAGE_FLYCAST]              }
+      flycast2022:  { requireAnyOf: [BR2_PACKAGE_FLYCAST2022]          }
     redream:
-      redream:     { requireAnyOf: [BR2_PACKAGE_REDREAM]              }
+      redream:      { requireAnyOf: [BR2_PACKAGE_REDREAM]              }
     demul:
-      demul:       { requireAnyOf: [BR2_PACKAGE_DEMUL]                }
+      demul:        { requireAnyOf: [BR2_PACKAGE_DEMUL]                }
 
   comment_en: |
     For more info: https://wiki.batocera.org/systems:dreamcast
@@ -459,13 +460,14 @@ naomi:
   platform:   naomi, arcade
   emulators:
     libretro:
-      flycast:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]     }
-      flycast2021: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2021] }
+      flycast-next: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]     }
+      flycast2021:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2021] }
+      flycast2022:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2022] }
     flycast:
-      flycast:     { requireAnyOf: [BR2_PACKAGE_FLYCAST]              }
-      flycast2021: { requireAnyOf: [BR2_PACKAGE_FLYCAST2021]          }
+      flycast-next: { requireAnyOf: [BR2_PACKAGE_FLYCAST]              }
+      flycast2022:  { requireAnyOf: [BR2_PACKAGE_FLYCAST2022]          }
     demul:
-      demul:       { requireAnyOf: [BR2_PACKAGE_DEMUL]                }
+      demul:        { requireAnyOf: [BR2_PACKAGE_DEMUL]                }
 
 naomigd:
   name:       Naomi GDROM
@@ -476,13 +478,14 @@ naomigd:
   platform:   naomigd, arcade
   emulators:
     libretro:
-      flycast:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]     }
-      flycast2021: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2021] }
+      flycast-next: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]     }
+      flycast2021:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2021] }
+      flycast2022:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2022] }
     flycast:
-      flycast:     { requireAnyOf: [BR2_PACKAGE_FLYCAST]              }
-      flycast2021: { requireAnyOf: [BR2_PACKAGE_FLYCAST2021]          }
+      flycast-next: { requireAnyOf: [BR2_PACKAGE_FLYCAST]              }
+      flycast2022:  { requireAnyOf: [BR2_PACKAGE_FLYCAST2022]          }
     demul:
-      demul:       { requireAnyOf: [BR2_PACKAGE_DEMUL]                }
+      demul:        { requireAnyOf: [BR2_PACKAGE_DEMUL]                }
 
 atomiswave:
   name:       Atomiswave
@@ -493,13 +496,14 @@ atomiswave:
   platform:   atomiswave, arcade
   emulators:
     libretro:
-      flycast:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]     }
-      flycast2021: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2021] }
+      flycast-next: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]     }
+      flycast2021:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2021] }
+      flycast2022:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2022] }
     flycast:
-      flycast:     { requireAnyOf: [BR2_PACKAGE_FLYCAST]              }
-      flycast2021: { requireAnyOf: [BR2_PACKAGE_FLYCAST2021]          }
+      flycast-next: { requireAnyOf: [BR2_PACKAGE_FLYCAST]              }
+      flycast2022:  { requireAnyOf: [BR2_PACKAGE_FLYCAST2022]          }
     demul:
-      demul:       { requireAnyOf: [BR2_PACKAGE_DEMUL]                }
+      demul:        { requireAnyOf: [BR2_PACKAGE_DEMUL]                }
 
 megadrive:
   name:       Mega Drive
@@ -3024,7 +3028,7 @@ naomi2:
     libretro:
       flycast:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]     }
     flycast:
-      flycast:     { requireAnyOf: [BR2_PACKAGE_FLYCAST]              }
+      flycast-next:     { requireAnyOf: [BR2_PACKAGE_FLYCAST]              }
     demul:
       demul:       { requireAnyOf: [BR2_PACKAGE_DEMUL]                }
 

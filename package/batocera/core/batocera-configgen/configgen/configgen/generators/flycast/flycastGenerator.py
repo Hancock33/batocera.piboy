@@ -191,8 +191,8 @@ class FlycastGenerator(Generator):
 
         # the command to run
         #commandArray = [batoceraFiles.batoceraBins[system.config['emulator']]]
-        if system.config['core'] == 'flycast2021':
-            commandArray = ['flycast2021']
+        if system.config['core'] == 'flycast2022':
+            commandArray = ['flycast2022']
         else:
             commandArray = ['flycast']
 

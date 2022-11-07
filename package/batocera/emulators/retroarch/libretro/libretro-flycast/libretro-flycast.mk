@@ -53,7 +53,7 @@ endif
 
 define LIBRETRO_FLYCAST_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/flycast_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/flycast_libretro.so
+		$(TARGET_DIR)/usr/lib/libretro/flycast-next_libretro.so
 endef
 
 $(eval $(cmake-package))
