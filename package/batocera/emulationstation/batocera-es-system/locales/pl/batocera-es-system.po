@@ -947,7 +947,7 @@ msgctxt "game_options"
 msgid "Random Values"
 msgstr ""
 
-#. TRANSLATION: libretro/desmume, libretro/swanstation, libretro/duckstation, libretro/flycast, libretro/same_cdi, ...
+#. TRANSLATION: libretro/desmume, libretro/swanstation, libretro/duckstation, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid ""
 "Enhancement. Increase the rendering resolution. Makes 3D objects clearer."
@@ -955,7 +955,7 @@ msgstr ""
 "Usprawnienie. Zwiększa rozdzielczość renderowania. Sprawia, że obiekty 3D są "
 "wyraźniejsze."
 
-#. TRANSLATION: libretro/desmume, libretro/swanstation, libretro/duckstation, libretro/flycast, libretro/same_cdi, ...
+#. TRANSLATION: libretro/desmume, libretro/swanstation, libretro/duckstation, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid "RENDERING RESOLUTION"
 msgstr "ROZDZIELCZOŚĆ RENDEROWANIA"
@@ -965,7 +965,7 @@ msgctxt "game_options"
 msgid "Enhancement. Upscales textures on 3D objects."
 msgstr "Usprawnienie. Poprawia jakość tekstur na obiektach 3D."
 
-#. TRANSLATION: libretro/desmume, libretro/flycast
+#. TRANSLATION: libretro/desmume, libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "TEXTURE UPSCALING (XBRZ)"
 msgstr "PRZESKALOWANIE TEKSTURY (XBRZ)"
@@ -1046,13 +1046,13 @@ msgctxt "game_options"
 msgid "hybrid/bottom"
 msgstr "hybryda/dół"
 
-#. TRANSLATION: libretro/desmume, libretro/dosbox, libretro/fbneo, libretro/flycast, libretro/mame078plus, ...
+#. TRANSLATION: libretro/desmume, libretro/dosbox, libretro/fbneo, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid "Skip frames to improve performance, at the cost of choppy motion."
 msgstr ""
 "Pomijaj klatki, aby poprawić wydajność, kosztem zniekształconego ruchu."
 
-#. TRANSLATION: libretro/desmume, libretro/fbneo, libretro/flycast, libretro/mame078plus, libretro/mgba, ...
+#. TRANSLATION: libretro/desmume, libretro/fbneo, libretro/flycast, libretro/flycast2021, libretro/flycast2022, ...
 msgctxt "game_options"
 msgid "FRAMESKIP"
 msgstr "POMIJANIE KLATEK"
@@ -1759,13 +1759,13 @@ msgctxt "game_options"
 msgid "Bilinear"
 msgstr "Dwuliniowe"
 
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/flycast, libretro/flycast, libretro/mednafen_psx, ...
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid "Enhancement. Only works with a 16/9 ratio and bezels disabled."
 msgstr ""
 "Usprawnienie. Działa tylko przy proporcjach 16/9 i wyłączonych ramkach."
 
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/flycast, libretro/mednafen_psx, libretro/mupen64plus-next, ...
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/flycast, libretro/flycast2021, libretro/flycast2022, ...
 msgctxt "game_options"
 msgid "WIDESCREEN HACK (GLITCHY)"
 msgstr "HAK SZEROKOEKRANOWY (WADLIWY)"
@@ -1918,12 +1918,12 @@ msgctxt "game_options"
 msgid "Enhancement. Remove the eight sprites per line limit."
 msgstr "Usprawnienie. Usunięcie limitu ośmiu sprite'ów na linię."
 
-#. TRANSLATION: libretro/fceumm, libretro/flycast, libretro/flycast, libretro/flycast, libretro/nestopia, ...
+#. TRANSLATION: libretro/fceumm, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid "Horizontal"
 msgstr "Poziomo"
 
-#. TRANSLATION: libretro/fceumm, libretro/flycast, libretro/flycast, libretro/flycast, libretro/nestopia, ...
+#. TRANSLATION: libretro/fceumm, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid "Vertical"
 msgstr "Pionowo"
@@ -1999,204 +1999,204 @@ msgctxt "game_options"
 msgid "Arkanoid paddle"
 msgstr "Paddle Arkanoid"
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "Can avoid flashing screen issues. Significant performance cost."
 msgstr ""
 "Można uniknąć problemów z migającym ekranem. Znaczący koszt wydajności."
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "SYNCHRONOUS RENDERING"
 msgstr "RENDEROWANIE SYNCHRONICZNE"
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "1.25x (800x600)"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022, flycast
 msgctxt "game_options"
 msgid "1.5x (960x720)"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "1.6x (1024x768)"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "2.25x (1440x1080)"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022, flycast
 msgctxt "game_options"
 msgid "2.5x (1600x1200)"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "Target color for player 1."
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid "Red"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid "Blue"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid "Green"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid "White"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "Target color for player 2."
 msgstr ""
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "Target color for player 3."
 msgstr ""
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "Target color for player 4."
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, mupen64plus
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022, mupen64plus
 msgctxt "game_options"
 msgid "Smooth textures on distant 3D objects based on angle."
 msgstr "Wygładzanie tekstur na odległych obiektach 3D w oparciu o kąt."
 
-#. TRANSLATION: libretro/flycast, mupen64plus
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022, mupen64plus
 msgctxt "game_options"
 msgid "TEXTURE MIP-MAPPING (BLUR)"
 msgstr "MIP-MAPOWANIE TEKSTURY (ROZMYCIE)"
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "Improves clarity of distant textures when mip-mapping is enabled."
 msgstr ""
 "Poprawia wyrazistość odległych tekstur, gdy włączone jest mip-mapowanie."
 
-#. TRANSLATION: libretro/flycast, dolphin, dolphin_triforce, flycast, mupen64plus, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "FILTROWANIE ANIZOTROPOWE"
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "Enhancement. Upscales screen textures (2D games only)."
 msgstr "Usprawnienie. Poprawia jakość tekstur (tylko gry 2D)."
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "Enhancement. Upscale in-game screen-captures."
 msgstr "Usprawnienie. Zwiększanie rozdzielczości zrzutów ekranu w grze."
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "RENDER TO TEXTURE UPSCALING"
 msgstr "PRZESKALOWANIE RENDEROWANIA DO TEKSTUR"
 
-#. TRANSLATION: libretro/flycast, flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022, flycast
 msgctxt "game_options"
 msgid "ALPHA SORTING"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "Per-Strip (fast, least accurate)"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "Per-Triangle (normal)"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "Per-Pixel (accurate, but slowest)"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022, flycast
 msgctxt "game_options"
 msgid "AUTO FRAME SKIPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, amiberry, amiberry, amiberry, flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022, amiberry, amiberry, ...
 msgctxt "game_options"
 msgid "OFF"
 msgstr "Wył."
 
-#. TRANSLATION: libretro/flycast, libretro/puae, libretro/puae2021, duckstation, flycast, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
 msgid "Normal"
 msgstr "Normalny"
 
-#. TRANSLATION: libretro/flycast, flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022, flycast
 msgctxt "game_options"
 msgid "Maximum"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/quasi88
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022, libretro/quasi88
 msgctxt "game_options"
 msgid "Required for some games."
 msgstr "Wymagane dla niektórych gier."
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "FORCE WINDOWS CE MODE"
 msgstr "WYMUSZENIE TRYBU WINDOWS CE"
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "WIDESCREEN CHEAT (PRIORITY)"
 msgstr "SZEROKOEKRANOWY CHEAT (PRIORYTET)"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid "Gamepad"
 msgstr "Kontroler"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/puae, ...
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid "Keyboard"
 msgstr "Klawiatura"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid "Light Gun"
 msgstr "Pistolet świetlny"
 
-#. TRANSLATION: libretro/flycast, libretro/snes9x
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022, libretro/snes9x
 msgctxt "game_options"
 msgid "CONTROLLER 3 TYPE"
 msgstr "TYP KONTROLERA 3"
 
-#. TRANSLATION: libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/flycast2022
 msgctxt "game_options"
 msgid "CONTROLLER 4 TYPE"
 msgstr "TYP KONTROLERA 4"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid "Useful for certain arcade games."
 msgstr "Przydatne w niektórych grach zręcznościowych."
 
-#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
 msgid "SCREEN ORIENTATION"
 msgstr "ORIENTACJA EKRANU"
