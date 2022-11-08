@@ -1282,7 +1282,7 @@ libretro:
                     "NES Gamepad":          513
                     "NES Zapper":           258
                     "Arkanoid paddle":      514
-    flycast:
+    flycast-next:
       features: [cheevos]
       shared: [autosave, use_guns]
       cfeatures:
