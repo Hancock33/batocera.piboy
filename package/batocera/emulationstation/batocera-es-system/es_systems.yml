@@ -3026,7 +3026,7 @@ naomi2:
   platform: naomi2, arcade
   emulators:
     libretro:
-      flycast:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]     }
+      flycast-next:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]     }
     flycast:
       flycast-next:     { requireAnyOf: [BR2_PACKAGE_FLYCAST]              }
     demul:
