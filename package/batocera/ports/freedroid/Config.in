@@ -3,10 +3,10 @@ config BR2_PACKAGE_FREEDROID
 	select BR2_PACKAGE_SDL
 	select BR2_PACKAGE_SDL_MIXER
 	select BR2_PACKAGE_SDL_GFX
-    select BR2_PACKAGE_SDL_IMAGE
+	select BR2_PACKAGE_SDL_IMAGE
 	select BR2_PACKAGE_SDL_IMAGE_PNG
 	select BR2_PACKAGE_SDL_IMAGE_JPEG
-
+	select BR2_PACKAGE_LIBJPEG
 	depends on BR2_INSTALL_LIBSTDCPP
 	help
 	 The original Freedroid, a free & open-source clone of the C64 classic Paradroid.
@@ -15,4 +15,3 @@ config BR2_PACKAGE_FREEDROID
 
 comment "BR2_PACKAGE_FREEDROID needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP
-
