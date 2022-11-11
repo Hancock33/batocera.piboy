@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Nov 10, 2022
-VULKAN_TOOLS_VERSION = 3a729c0a9d581d21f9f36cb1831281cb526834d5
+VULKAN_TOOLS_VERSION = c4839afe758d3c8fb5c46792398509b4fee0a28a
 VULKAN_TOOLS_SITE = $(call github,KhronosGroup,Vulkan-Tools,$(VULKAN_TOOLS_VERSION))
 VULKAN_TOOLS_DEPENDENCIES = vulkan-headers vulkan-loader host-python3 host-glslang
 VULKAN_TOOLS_INSTALL_STAGING = YES
