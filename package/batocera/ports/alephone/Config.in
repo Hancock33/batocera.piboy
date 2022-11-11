@@ -5,6 +5,8 @@ config BR2_PACKAGE_ALEPHONE
 	select BR2_PACKAGE_SDL2_IMAGE
 	select BR2_PACKAGE_SDL2_TTF
 	select BR2_PACKAGE_SDL2_NET
+	depends on BR2_PACKAGE_BOOST
+
 	help
 	  ALEPHONE
 	  Aleph One is the open source continuation of Bungie’s Marathon 2 game engine.
