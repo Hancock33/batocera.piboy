@@ -14,7 +14,7 @@ SAMTFE_DEPENDENCIES = sdl2 sdl2_mixer host-samtfe
 SAMTFE_LICENSE = GPL-2.0
 
 define SAMTFE_CP_WEAPONS
-	cp -vfr $(@D)/SamTFE/Sources/Entities/PlayerWeapons_old.es $(@D)/SamTFE/Sources/Entities/PlayerWeapons.es	
+	cp -vfr $(@D)/SamTFE/Sources/Entities/PlayerWeapons_old.es $(@D)/SamTFE/Sources/Entities/PlayerWeapons.es
 	sed -i "s|add_compile_options(-march=native)|#add_compile_options(-march=native)|" $(@D)/SamTFE/Sources/CMakeLists.txt
 endef
 SAMTFE_POST_EXTRACT_HOOKS += SAMTFE_CP_WEAPONS
@@ -50,7 +50,7 @@ define SAMTFE_INSTALL_TARGET_CMDS
 	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00c_scripts.gro   $(TARGET_DIR)/usr/share/game_assets/samtfe
 	ln -sf /userdata/roms/ports/serioussam/SamTFE/Help                $(TARGET_DIR)/usr/share/game_assets/samtfe
 	ln -sf /userdata/roms/ports/serioussam/SamTFE/Levels              $(TARGET_DIR)/usr/share/game_assets/samtfe
-	ln -sf /userdata/roms/ports/serioussam/SamTFE/Mods                $(TARGET_DIR)/usr/share/game_assets/samtfe	
+	ln -sf /userdata/roms/ports/serioussam/SamTFE/Mods                $(TARGET_DIR)/usr/share/game_assets/samtfe
 endef
 
 $(eval $(cmake-package))
