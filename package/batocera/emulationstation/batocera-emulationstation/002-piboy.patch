@@ -117,7 +117,7 @@ index 57221153..9ca042c8 100644
  #ifdef WIN32 // windows
  	return system("shutdown -s -t 0");
 +#elseif  PIBOY
-+	return system("echo 0 > /sys/kernel/xpi_gamecon/flags && /sbin/rmmod xpi_gamecon && shutdown -h now");
++	return system("/sbin/rmmod xpi_gamecon ; /sbin/rmmod xpi_gamecon_xrs shutdown -t1 now -h");
  #else // osx / linux	
  	return system("shutdown -h now");
  #endif
@@ -126,7 +126,7 @@ index 57221153..9ca042c8 100644
  #ifdef WIN32 // windows	
  	return system("shutdown -r -t 0");
 +#elseif  PIBOY
-+	return system("echo 129 > /sys/kernel/xpi_gamecon/flags && shutdown -r now");
++	return system("reboot");
  #else // osx / linux	
  	return system("shutdown -r now");
  #endif
@@ -176,10 +176,9 @@ index 57221153..9ca042c8 100644
  	{
  		ret.hasBattery = true;
 +		#if PIBOY
-+	 	ret.isCharging = (stoi(Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "-", "")) < 650);
++	 	ret.isCharging = (stoi(Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "-", "")) < 950);
 +		#else
  		ret.isCharging = (Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "") != "Discharging");
 +		#endif
  		ret.level = atoi(Utils::FileSystem::readAllText(batteryCapacityPath).c_str());
  	}
- 
