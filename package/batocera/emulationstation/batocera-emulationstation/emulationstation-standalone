@@ -175,11 +175,17 @@ do
     batocera-resolution currentOutput > "/var/run/switch_screen_current"
 
     cd /userdata # es need a PWD
-	if (test -e "/tmp/piboy")
-    then
-    /usr/bin/emulationstation_piboy ${GAMELAUNCHOPT} --exit-on-reboot-required %BATOCERA_EMULATIONSTATION_ARGS% ${CUSTOMESOPTIONS}
+    enabledpi="$(batocera-settings-get -f /boot/batocera-boot.conf key piboy.enabled)"
+    enabledxrs="$(batocera-settings-get -f /boot/batocera-boot.conf key piboyxrs.enabled)"
+
+    if test ${enabledpi} = 1
+       then
+          /usr/bin/emulationstation_piboy ${GAMELAUNCHOPT} --exit-on-reboot-required --windowed ${CUSTOMESOPTIONS}
+    elif test ${enabledxrs} = 1
+       then
+          /usr/bin/emulationstation_piboy ${GAMELAUNCHOPT} --exit-on-reboot-required --windowed ${CUSTOMESOPTIONS}
     else
-    /usr/bin/emulationstation ${GAMELAUNCHOPT} --exit-on-reboot-required %BATOCERA_EMULATIONSTATION_ARGS% ${CUSTOMESOPTIONS}
+          /usr/bin/emulationstation ${GAMELAUNCHOPT} --exit-on-reboot-required --windowed ${CUSTOMESOPTIONS}
     fi
 
     # es flag when rebooting (https://github.com/batocera-linux/batocera-emulationstation/blob/master/es-core/src/platform.cpp#L194)
