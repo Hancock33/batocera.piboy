@@ -1,17 +1,23 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index b55cc041..81b0501c 100644
+index b55cc041..45ddccca 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -10,6 +10,9 @@ option(BCM "BCM host" OFF)
+@@ -9,12 +9,15 @@ option(BCM "BCM host" OFF)
+ 
  option(BATOCERA "Set to ON to enable BATOCERA specific code" OFF)
  option(RETROBAT "Set to ON to enable RETROBAT specific code" OFF)
- 
 +option(PIBOY "Set to ON to enable DMG Piboy compatibility" OFF)
 +option(NOUPDATE "Set to ON to disable system updates" OFF)
-+
+ 
  option(ENABLE_FILEMANAGER "Set to ON to enable f1 shortcut for filesystem" OFF)
  option(DISABLE_KODI "Set to ON to disable kodi in menu" OFF)
  option(ENABLE_PULSE "Set to ON to enable pulse audio (versus alsa)" OFF)
+ option(ENABLE_TTS "Set to ON to enable text to speech" OFF)
+ 
++
+ project(emulationstation-all)
+ 
+ #-------------------------------------------------------------------------------
 @@ -34,6 +37,16 @@ if(RETROBAT)
    add_definitions(-DRETROBAT)
  endif()
@@ -30,10 +36,10 @@ index b55cc041..81b0501c 100644
  if(DISABLE_KODI)
    MESSAGE("kodi disabled")
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index cd7911b0..80cc50d1 100644
+index a8e5791c..1054c52d 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
-@@ -70,8 +70,15 @@
+@@ -71,8 +71,15 @@
  #define fake_gettext_architecture _("Architecture")
  #define fake_gettext_diskformat   _("Disk format")
  #define fake_gettext_temperature  _("Temperature")
@@ -49,20 +55,20 @@ index cd7911b0..80cc50d1 100644
  #define fake_gettext_model        _("Model")
  #define fake_gettext_cpu_model    _("Cpu model")
  #define fake_gettext_cpu_number   _("Cpu number")
-@@ -188,7 +195,11 @@ GuiMenu::GuiMenu(Window *window, bool animate) : GuiComponent(window), mMenu(win
- 		if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::BATOCERASTORE) || ApiSystem::getInstance()->isScriptingSupported(ApiSystem::THEMESDOWNLOADER) ||
- 			(ApiSystem::getInstance()->isScriptingSupported(ApiSystem::THEBEZELPROJECT) && ApiSystem::getInstance()->isScriptingSupported(ApiSystem::DECORATIONS)) ||
+@@ -191,7 +198,11 @@ GuiMenu::GuiMenu(Window *window, bool animate) : GuiComponent(window), mMenu(win
  			ApiSystem::getInstance()->isScriptingSupported(ApiSystem::UPGRADE))
--			addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
+ 			addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
+ 
+-		addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings(); }, "iconSystem");
 +			#if !NOUPDATE
 +				addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
 +			#else
 +				addEntry(_("DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
 +			#endif
- 
- 		addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings(); }, "iconSystem");
  	}
-@@ -814,7 +825,11 @@ void GuiMenu::openDeveloperSettings()
+ 	else
+ 	{
+@@ -798,7 +809,11 @@ void GuiMenu::openDeveloperSettings()
  
  void GuiMenu::openUpdatesSettings()
  {
@@ -75,32 +81,29 @@ index cd7911b0..80cc50d1 100644
  
  	updateGui->addGroup(_("DOWNLOADS"));
  
-@@ -855,6 +870,7 @@ void GuiMenu::openUpdatesSettings()
+@@ -839,6 +854,7 @@ void GuiMenu::openUpdatesSettings()
  
  	if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::UPGRADE))
  	{
-+	#if !NOUPDATE
++#if !NOUPDATE
  		updateGui->addGroup(_("SOFTWARE UPDATES"));
  
  		// Enable updates
-@@ -864,11 +880,11 @@ void GuiMenu::openUpdatesSettings()
+@@ -848,11 +864,11 @@ void GuiMenu::openUpdatesSettings()
  
  		std::string updatesType = SystemConf::getInstance()->get("updates.type");
  
 -#if WIN32
--		if (updatesType == "unstable")
--			updatesTypeList->add("unstable", "unstable", updatesType == "unstable");
--		else
++	#if WIN32
+ 		if (updatesType == "unstable")
+ 			updatesTypeList->add("unstable", "unstable", updatesType == "unstable");
+ 		else
 -#endif
-+		#if WIN32
-+			if (updatesType == "unstable")
-+				updatesTypeList->add("unstable", "unstable", updatesType == "unstable");
-+			else
-+		#endif
++	#endif
  			if (updatesType.empty() || updatesType != "beta")
  				updatesType = "stable";
  
-@@ -897,6 +913,7 @@ void GuiMenu::openUpdatesSettings()
+@@ -881,6 +897,7 @@ void GuiMenu::openUpdatesSettings()
  				mWindow->pushGui(new GuiUpdate(mWindow));
  			}
  		});
@@ -109,14 +112,14 @@ index cd7911b0..80cc50d1 100644
  
  	mWindow->pushGui(updateGui);
 diff --git a/es-core/src/platform.cpp b/es-core/src/platform.cpp
-index 57221153..9ca042c8 100644
+index d2d1bc94..d6db4182 100644
 --- a/es-core/src/platform.cpp
 +++ b/es-core/src/platform.cpp
 @@ -28,6 +28,8 @@ int runShutdownCommand()
  {
  #ifdef WIN32 // windows
  	return system("shutdown -s -t 0");
-+#elseif  PIBOY
++#elseif PIBOY
 +	return system("/sbin/rmmod xpi_gamecon ; /sbin/rmmod xpi_gamecon_xrs shutdown -t1 now -h");
  #else // osx / linux	
  	return system("shutdown -h now");
@@ -125,16 +128,15 @@ index 57221153..9ca042c8 100644
  {
  #ifdef WIN32 // windows	
  	return system("shutdown -r -t 0");
-+#elseif  PIBOY
++#elseif PIBOY
 +	return system("reboot");
  #else // osx / linux	
  	return system("shutdown -r now");
  #endif
-@@ -344,23 +348,39 @@ BatteryInformation queryBatteryInformation()
- 	if (batteryStatusPath.empty())
- 	{
- 		std::string batteryRootPath;
--
+@@ -349,9 +353,20 @@ BatteryInformation queryBatteryInformation()
+                 std::string fuelgaugeRootPath;
+                 std::string chargerRootPath;
+ 
 +	#if PIBOY
 +		auto files = Utils::FileSystem::getDirContent("/sys/kernel");
 +	#else
@@ -149,16 +151,22 @@ index 57221153..9ca042c8 100644
 +				break;
 +			}
 +		#else
- 			if (Utils::String::toLower(file).find("/bat") != std::string::npos)
- 			{
+ 			if ( (Utils::String::toLower(file).find("/bat") != std::string::npos) && (batteryRootPath.empty()) )
  				batteryRootPath = file;
- 				break;
- 			}
-+		#endif
- 		}
  
+@@ -360,7 +375,9 @@ BatteryInformation queryBatteryInformation()
+ 
+                         if ( (Utils::String::toLower(file).find("charger") != std::string::npos) && (chargerRootPath.empty()) )
+                                 chargerRootPath = file;
+-                }
++		#endif
++		}
++
+ 
+ 		// If there's no battery device, look for discrete charger and fuel gauge
  		if (batteryRootPath.empty())
- 			batteryStatusPath = ".";
+@@ -384,8 +401,13 @@ BatteryInformation queryBatteryInformation()
+ 		}
  		else
  		{
 +		#if PIBOY
@@ -171,14 +179,17 @@ index 57221153..9ca042c8 100644
  		}
  	}
  
-@@ -373,7 +393,11 @@ BatteryInformation queryBatteryInformation()
+@@ -398,9 +420,13 @@ BatteryInformation queryBatteryInformation()
  	else
  	{
  		ret.hasBattery = true;
 +		#if PIBOY
 +	 	ret.isCharging = (stoi(Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "-", "")) < 950);
 +		#else
- 		ret.isCharging = (Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "") != "Discharging");
+ 		std::string chargerStatus;
+ 		chargerStatus = Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "");
+ 		ret.isCharging = ((chargerStatus != "Not charging") && (chargerStatus != "Discharging"));
 +		#endif
- 		ret.level = atoi(Utils::FileSystem::readAllText(batteryCapacityPath).c_str());
- 	}
+ 		// If reading from fuel gauge, we have to calculate remaining charge
+ 		if (batteryCapacityPath.length() <= 1)
+ 		{
