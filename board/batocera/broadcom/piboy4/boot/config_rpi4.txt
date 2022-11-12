@@ -21,7 +21,7 @@ dtparam=audio=on
 
 # Video settings
 gpu_mem_1024=256
-dtoverlay=vc4-kms-v3d-pi4
+dtoverlay=vc4-fkms-v3d-pi4
 
 [rpi4]
 # 64-bit mode

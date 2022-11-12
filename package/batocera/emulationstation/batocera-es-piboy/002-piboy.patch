@@ -36,7 +36,7 @@ index b55cc041..45ddccca 100644
  if(DISABLE_KODI)
    MESSAGE("kodi disabled")
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index a8e5791c..1054c52d 100644
+index a8e5791c..12c1a0d9 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -71,8 +71,15 @@
@@ -55,20 +55,23 @@ index a8e5791c..1054c52d 100644
  #define fake_gettext_model        _("Model")
  #define fake_gettext_cpu_model    _("Cpu model")
  #define fake_gettext_cpu_number   _("Cpu number")
-@@ -191,7 +198,11 @@ GuiMenu::GuiMenu(Window *window, bool animate) : GuiComponent(window), mMenu(win
+@@ -189,9 +196,12 @@ GuiMenu::GuiMenu(Window *window, bool animate) : GuiComponent(window), mMenu(win
+ 		if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::BATOCERASTORE) || ApiSystem::getInstance()->isScriptingSupported(ApiSystem::THEMESDOWNLOADER) ||
+ 			(ApiSystem::getInstance()->isScriptingSupported(ApiSystem::THEBEZELPROJECT) && ApiSystem::getInstance()->isScriptingSupported(ApiSystem::DECORATIONS)) ||
  			ApiSystem::getInstance()->isScriptingSupported(ApiSystem::UPGRADE))
- 			addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
- 
+-			addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
+-
 -		addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings(); }, "iconSystem");
 +			#if !NOUPDATE
 +				addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
 +			#else
 +				addEntry(_("DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
-+			#endif
++			#endif	
++			addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings(); }, "iconSystem");
  	}
  	else
  	{
-@@ -798,7 +809,11 @@ void GuiMenu::openDeveloperSettings()
+@@ -798,7 +808,11 @@ void GuiMenu::openDeveloperSettings()
  
  void GuiMenu::openUpdatesSettings()
  {
@@ -81,7 +84,7 @@ index a8e5791c..1054c52d 100644
  
  	updateGui->addGroup(_("DOWNLOADS"));
  
-@@ -839,6 +854,7 @@ void GuiMenu::openUpdatesSettings()
+@@ -839,6 +853,7 @@ void GuiMenu::openUpdatesSettings()
  
  	if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::UPGRADE))
  	{
@@ -89,7 +92,7 @@ index a8e5791c..1054c52d 100644
  		updateGui->addGroup(_("SOFTWARE UPDATES"));
  
  		// Enable updates
-@@ -848,11 +864,11 @@ void GuiMenu::openUpdatesSettings()
+@@ -848,11 +863,11 @@ void GuiMenu::openUpdatesSettings()
  
  		std::string updatesType = SystemConf::getInstance()->get("updates.type");
  
@@ -103,7 +106,7 @@ index a8e5791c..1054c52d 100644
  			if (updatesType.empty() || updatesType != "beta")
  				updatesType = "stable";
  
-@@ -881,6 +897,7 @@ void GuiMenu::openUpdatesSettings()
+@@ -881,6 +896,7 @@ void GuiMenu::openUpdatesSettings()
  				mWindow->pushGui(new GuiUpdate(mWindow));
  			}
  		});
