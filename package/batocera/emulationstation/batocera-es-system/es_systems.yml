@@ -1464,7 +1464,7 @@ msxturbor:
     openmsx:
       openmsx: { requireAnyOf: [BR2_PACKAGE_OPENMSX] }
 
-o2em:
+odyssey2:
   name:       Odyssey2
   manufacturer: Magnavox - Philips
   release: 1978
