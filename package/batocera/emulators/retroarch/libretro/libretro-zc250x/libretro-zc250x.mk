@@ -51,8 +51,8 @@ define LIBRETRO_ZC250X_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/zc250x_libretro.so $(TARGET_DIR)/usr/lib/libretro/zc250x_libretro.so
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/zc250x
 	cp -avr $(@D)/datfile/* $(TARGET_DIR)/usr/share/batocera/datainit/bios/zc250x
+	# install core info file
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
-
 	cp -a $(@D)/info/*.info $(TARGET_DIR)/usr/share/libretro/info/
 endef
 
