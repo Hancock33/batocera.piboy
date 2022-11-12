@@ -91,7 +91,7 @@
 - long start times with vulkan in some cases
 - Sony touchpad for Mame
 - od-commander fixed for several screen resolutions
-### Dev  
+### Dev
 - buildroot upgrade to 2022.08.1
 - raspberrypi upgrade linux to 1.20221104 (5.15.76)
 - rpi1 image renamed to bcm2835

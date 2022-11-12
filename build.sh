@@ -5,8 +5,8 @@ if [[ $1 == "" ]]; then
     echo 'For example...'
     echo
     echo './build.sh $HOME/batocera.rpi4 rpi4'
-    echo	
-    echo 'You can list the targets with ./build.sh list-targets'	
+    echo
+    echo 'You can list the targets with ./build.sh list-targets'
     exit 0
 
 elif [[ $1 == "list-targets" ]]; then

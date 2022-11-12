@@ -5,5 +5,5 @@ config BR2_PACKAGE_XEMU
     select BR2_PACKAGE_LIBSAMPLERATE
     help
         Xbox (og) emulator based on QEMU
-        
+
         https://xemu.app/

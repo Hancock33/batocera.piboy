@@ -29,7 +29,7 @@ SUPERTUX2_CONF_OPTS += \
 	-DINSTALL_SUBDIR_SHARE="share/supertux2" \
 	-DUSE_SYSTEM_PHYSFS=ON \
 	-DGIT_VERSION="$(shell echo $(SUPERTUX2_VERSION) | cut -c 1-7)"
-	
+
 # Avoid incompatible posix_memalign declaration on x86 and x86_64 with
 # musl.
 # https://gcc.gnu.org/ml/gcc-patches/2015-05/msg01425.html
