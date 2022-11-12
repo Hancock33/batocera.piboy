@@ -10,14 +10,14 @@ class ScummVMGenerator(Generator):
 
     def getResolutionMode(self, config):
         return 'default'
-    
+
     # Main entry of the module
     # Configure mupen and return a command
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         # crete /userdata/roms/scummvm/extras folder if it doesn't exist
         if not os.path.exists('/userdata/roms/scummvm/extras'):
             os.makedirs('/userdata/roms/scummvm/extras')
-        
+
         # Find rom path
         if os.path.isdir(rom):
           # rom is a directory: must contains a <game name>.scummvm file
@@ -41,7 +41,7 @@ class ScummVMGenerator(Generator):
         commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
                         "-f",
                         f"--joystick={id}",
-                        "--screenshotspath="+batoceraFiles.screenshotsDir, 
+                        "--screenshotspath="+batoceraFiles.screenshotsDir,
                         "--extrapath=/userdata/roms/scummvm/extras",
                         "--savepath="+batoceraFiles.scummvmSaves,
                         "--path=""{}""".format(romPath)]

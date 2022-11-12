@@ -377,7 +377,7 @@ def getHudBezel(system, generator, rom, gameResolution, bordersSize):
             if abs((infos_left  - ((bezel_width-img_width)/2.0)) / img_width) > max_cover:
                 eslog.debug(f"bezel left covers too much the game image : {infos_left  - ((bezel_width-img_width)/2.0)} / {img_width} > {max_cover}")
                 return None
-        
+
     if "right" not in infos:
         eslog.debug(f"bezel has no right info in {overlay_info_file}")
         # assume default is 4/3 over 16/9

@@ -112,7 +112,7 @@ def generateControllerConfig(system, playersControllers):
             "10": "12",
             "11": "13",
             "12": "14",
-            "13": "45",            
+            "13": "45",
             "14": "39",
             "15": "44",
             "16": "38"
@@ -239,5 +239,5 @@ def generateControllerConfig(system, playersControllers):
         with open(configFileName, 'w') as xfile:
             xfile.write(part1 + 'encoding=\"{}\"?>\n'.format(m_encoding) + part2)
             xfile.close()
-        
+
         nplayer+=1

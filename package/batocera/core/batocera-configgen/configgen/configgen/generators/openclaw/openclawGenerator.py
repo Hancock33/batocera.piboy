@@ -15,8 +15,8 @@ class OpenclawGenerator(Generator):
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         os.chdir("/userdata/roms/ports/openclaw")
         commandArray = ["/usr/bin/openclaw"]
-        shutil.copytree(clawzip_src, claw_dst, dirs_exist_ok=True) 
-        
+        shutil.copytree(clawzip_src, claw_dst, dirs_exist_ok=True)
+
         # dont want to overwrite these file is exist
         if (os.path.exists(claw_dst + '/SAVES.XML') == False):
             shutil.copytree(claw_src, claw_dst, dirs_exist_ok=True)

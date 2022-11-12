@@ -18,7 +18,7 @@ class DolphinGenerator(Generator):
         # Dir required for saves
         if not os.path.exists(batoceraFiles.dolphinData + "/StateSaves"):
             os.makedirs(batoceraFiles.dolphinData + "/StateSaves")
-        
+
         # Generate the controller config(s)
         dolphinControllers.generateControllerConfig(system, playersControllers, rom, guns)
 
@@ -277,7 +277,7 @@ class DolphinGenerator(Generator):
             commandArray = ["dolphin-emu", "-e", rom]
         else:
             commandArray = ["dolphin-emu-nogui", "-p", "drm", "-e", rom]
-        
+
         return Command.Command(array=commandArray, \
             env={ "XDG_CONFIG_HOME":batoceraFiles.CONF, \
             "XDG_DATA_HOME":batoceraFiles.SAVES, \
