@@ -99,7 +99,7 @@ class RazeGenerator(Generator):
             "-height", str(gameResolution["height"]),
             "-nologo" if system.getOptBoolean("nologo") else "",
         ]
-        
+
         if system.isOptSet('raze_render'):
             if system.config['raze_render'] == 'gl':
                 launch_args.extend(['+set', 'vid_preferbackend', '0', '+set', 'vid_rendermode', '4'])

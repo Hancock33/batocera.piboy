@@ -23,7 +23,7 @@ class DaphneGenerator(Generator):
         # create a custom ini
         if not os.path.exists(batoceraFiles.daphneDatadir + "/custom.ini"):
             shutil.copyfile(batoceraFiles.daphneConfig, batoceraFiles.daphneDatadir + "/custom.ini")
-            
+
         # copy required resources to config
         if not os.path.exists(batoceraFiles.daphneDatadir + "/pics"):
             shutil.copytree("/usr/share/daphne/pics", batoceraFiles.daphneDatadir + "/pics")
@@ -31,11 +31,11 @@ class DaphneGenerator(Generator):
             shutil.copytree("/usr/share/daphne/sound", batoceraFiles.daphneDatadir + "/sound")
         if not os.path.exists(batoceraFiles.daphneDatadir + "/fonts"):
             shutil.copytree("/usr/share/daphne/fonts", batoceraFiles.daphneDatadir + "/fonts")
-        
+
         # create symbolic link for singe
         if not os.path.exists(batoceraFiles.daphneDatadir + "/singe"):
             os.symlink(batoceraFiles.daphneHomedir + "/roms", batoceraFiles.daphneDatadir + "/singe")
-        
+
         # extension used .daphne and the file to start the game is in the folder .daphne with the extension .txt
         romName = os.path.splitext(os.path.basename(rom))[0]
         frameFile = rom + "/" + romName + ".txt"
@@ -50,7 +50,7 @@ class DaphneGenerator(Generator):
             commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
                             romName, "vldp", "-framefile", frameFile, "-useoverlaysb", "2", "-fullscreen",
                             "-fastboot", "-gamepad", "-datadir", batoceraFiles.daphneDatadir, "-homedir", batoceraFiles.daphneHomedir]
-        
+
         # controller config file
         if system.isOptSet('daphne_joy')  and system.getOptBoolean('daphne_joy'):
             commandArray.extend(['-keymapfile', 'custom.ini'])
@@ -98,7 +98,7 @@ class DaphneGenerator(Generator):
             # Oversize Overlay (Singe) for HD lightgun games
             if system.isOptSet('lightgun_hd') and system.getOptBoolean("lightgun_hd"):
                 commandArray.append("-oversize_overlay")
-            
+
             # crosshair
             if system.isOptSet('daphne_crosshair'):
                 if not system.getOptBoolean("daphne_crosshair"):
@@ -135,8 +135,8 @@ class DaphneGenerator(Generator):
 
         # Enable SDL_TEXTUREACCESS_STREAMING, can aid SBC's with SDL2 => 2.0.16
         if system.isOptSet('daphne_texturestream') and system.getOptBoolean("daphne_texturestream"):
-            commandArray.append("-texturestream") 
-            
+            commandArray.append("-texturestream")
+
         # The folder may have a file with the game name and .commands with extra arguments to run the game.
         if os.path.isfile(commandsFile):
             commandArray.extend(open(commandsFile,'r').read().split())
@@ -150,7 +150,7 @@ class DaphneGenerator(Generator):
             })
 
     def getInGameRatio(self, config, gameResolution, rom):
-        romName = os.path.splitext(os.path.basename(rom))[0]        
+        romName = os.path.splitext(os.path.basename(rom))[0]
         singeFile = rom + "/" + romName + ".singe"
         if "daphne_ratio" in config:
             if config['daphne_ratio'] == "stretch":

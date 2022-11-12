@@ -24,12 +24,12 @@ class XeniaGenerator(Generator):
         # check binary then copy update xenia exe as necessary
         if not filecmp.cmp("/usr/xenia/xenia.exe", emupath + "/xenia.exe"):
             shutil.copytree("/usr/xenia", emupath, dirs_exist_ok=True)
-        
+
         # create portable txt file to try & stop file spam
         if not os.path.exists(emupath + "/portable.txt"):
             with open(emupath + "/portable.txt", "w") as fp:
                 pass
-     
+
         # now setup the command array for the emulator
         if rom == 'config':
             commandArray = ['/usr/wine/lutris/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe']

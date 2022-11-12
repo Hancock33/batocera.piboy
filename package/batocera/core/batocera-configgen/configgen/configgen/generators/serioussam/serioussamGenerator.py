@@ -8,7 +8,7 @@ import controllersConfig
 class SerioussamGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        # Determine the emulator to use      
+        # Determine the emulator to use
         if "samtfe" in rom.lower():
             data_dir = '/usr/share/game_assets/samtfe/Bin'
         elif "samtse" in rom.lower():

@@ -27,7 +27,7 @@ class Vita3kGenerator(Generator):
         # Create save folder
         if not path.isdir(vitaSaves):
             os.mkdir(vitaSaves)
-        
+
         # Create the config.yml file if it doesn't exist
         vita3kymlconfig = {}
         if os.path.isfile(vitaConfigFile):
@@ -36,25 +36,25 @@ class Vita3kGenerator(Generator):
 
         if vita3kymlconfig is None:
             vita3kymlconfig = {}
-         
+
         # Set the renderer
         if system.isOptSet("vita3k_gfxbackend"):
             vita3kymlconfig["backend-renderer"] = system.config["vita3k_gfxbackend"]
         else:
             vita3kymlconfig["backend-renderer"] = "OpenGL"
-        
+
         # Set the resolution multiplier
         if system.isOptSet("vita3k_resolution"):
             vita3kymlconfig["resolution-multiplier"] = int(system.config["vita3k_resolution"])
         else:
-            vita3kymlconfig["resolution-multiplier"] = 1        
-        
+            vita3kymlconfig["resolution-multiplier"] = 1
+
         # Set FXAA
         if system.isOptSet("vita3k_fxaa"):
             vita3kymlconfig["enable-fxaa"] = system.config["vita3k_fxaa"]
         else:
             vita3kymlconfig["enable-fxaa"] = False
-        
+
         # Set VSync
         if system.isOptSet("vita3k_vsync"):
             vita3kymlconfig["v-sync"] = system.config["vita3k_vsync"]
@@ -66,7 +66,7 @@ class Vita3kGenerator(Generator):
             vita3kymlconfig["resolution-multiplier"] = int(system.config["vita3k_anisotropic"])
         else:
             vita3kymlconfig["resolution-multiplier"] = 1
-        
+
         # Vita3k is fussy over it's yml file
         # We try to match it as close as possible but the 'vectors' cause yml formatting issues
         yaml = ruamel.yaml.YAML()
@@ -89,7 +89,7 @@ class Vita3kGenerator(Generator):
             env={
                 'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
             })
-    
+
     # Show mouse for touchscreen actions
     def getMouseMode(self, config):
         return True

@@ -13,7 +13,7 @@ class VkquakeGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["vkquake", "-basedir", "/userdata/roms/ports/quake1", "-sndspeed", "44100"]
-        
+
         shutil.copy(q1_src, q1_dst)
 
         if (rom.lower().__contains__("hipnotic")):
