@@ -562,8 +562,8 @@ psvita:
   emulator: vita3k
   core:     vita3k
 psx:
-  emulator: libretro
-  core:     pcsx_rearmed
+  emulator: duckstation
+  core:     duckstation
 pv1000:
   emulator: libretro
   core:     mame
