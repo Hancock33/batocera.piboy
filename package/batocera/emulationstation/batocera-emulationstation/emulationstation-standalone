@@ -180,10 +180,10 @@ do
 
     if test ${enabledpi} = 1
        then
-          /usr/bin/emulationstation_piboy ${GAMELAUNCHOPT} --exit-on-reboot-required --windowed ${CUSTOMESOPTIONS}
+          /usr/bin/emulationstation_piboy ${GAMELAUNCHOPT} --exit-on-reboot-required ${CUSTOMESOPTIONS}
     elif test ${enabledxrs} = 1
        then
-          /usr/bin/emulationstation_piboy ${GAMELAUNCHOPT} --exit-on-reboot-required --windowed ${CUSTOMESOPTIONS}
+          /usr/bin/emulationstation_piboy ${GAMELAUNCHOPT} --exit-on-reboot-required ${CUSTOMESOPTIONS}
     else
           /usr/bin/emulationstation ${GAMELAUNCHOPT} --exit-on-reboot-required --windowed ${CUSTOMESOPTIONS}
     fi

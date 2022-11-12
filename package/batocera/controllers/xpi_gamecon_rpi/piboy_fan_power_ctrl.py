@@ -103,6 +103,7 @@ try:
             time.sleep(0.4)
 
         if battctrl <= 5:
+            os.system("touch /tmp/shutdown.please")
             os.system("/usr/bin/batocera-es-swissknife --shutdown")
 
         # Wait until next refresh

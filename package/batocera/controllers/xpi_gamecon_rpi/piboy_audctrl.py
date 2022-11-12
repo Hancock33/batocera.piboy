@@ -29,6 +29,7 @@ try:
         statusFile.close()
 
         if status == 46:
+            os.system("touch /tmp/shutdown.please")
             os.system("/usr/bin/batocera-es-swissknife --shutdown")
 
         # Wait until next refresh
