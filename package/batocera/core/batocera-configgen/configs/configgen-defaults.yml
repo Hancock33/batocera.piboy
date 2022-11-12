@@ -96,7 +96,7 @@ atom:
   core:     mame
 atomiswave:
   emulator: libretro
-  core:     flycast2022
+  core:     flycast
 awgl:
   emulator: awgl
   core:     awgl
