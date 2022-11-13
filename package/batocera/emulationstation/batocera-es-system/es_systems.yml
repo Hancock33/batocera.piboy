@@ -4734,7 +4734,7 @@ stuntcar:
 
 superbroswar:
   name:       Super Bros War
-  manufacturer: Ports
+  manufacturer: Nintendo
   release:
   hardware: port
   extensions: [game]
