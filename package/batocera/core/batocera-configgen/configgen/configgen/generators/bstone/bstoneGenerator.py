@@ -3,13 +3,14 @@
 import Command
 from generators.Generator import Generator
 import controllersConfig
-
+import utils.videoMode as videoMode
 
 class BstoneGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         addon = "/userdata/roms/ports/bstone/SW"
         gver = "--aog_sw"
+        gameResolution = videoMode.getCurrentResolution()
 
         if (rom.__contains__("AOG")):
             addon = "/userdata/roms/ports/bstone/AOG"
@@ -23,7 +24,7 @@ class BstoneGenerator(Generator):
             addon = "/userdata/roms/ports/bstone/SW"
             gver = "--aog_sw"
 
-        commandArray = ["bstone", gver, "--data_dir", addon]
+        commandArray = ["bstone", gver, "--data_dir", addon, "--vid_is_vsync", "1", "--vid_is_ui_stretched", "1", "--vid_width", str(gameResolution["width"]), "--vid_height", str(gameResolution["height"])]
 
         return Command.Command(
             array=commandArray,
