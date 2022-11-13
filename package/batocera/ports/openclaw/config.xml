@@ -2,9 +2,9 @@
   <Display>
     <Size width="640" height="480" />
     <Scale>1</Scale>
-    <UseVerticalSync>false</UseVerticalSync>
-    <IsFullscreen>false</IsFullscreen>
-    <IsFullscreenDesktop>false</IsFullscreenDesktop>
+    <UseVerticalSync>true</UseVerticalSync>
+    <IsFullscreen>true</IsFullscreen>
+    <IsFullscreenDesktop>true</IsFullscreenDesktop>
   </Display>
   <Audio>
     <Frequency>44100</Frequency>
