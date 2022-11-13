@@ -34,9 +34,27 @@ index 9b26c70..c746c41 100644
  	CFileIO fIO;
  	if(!fIO.GetFile(name,"rb"))
 diff --git a/Engine.cpp b/Engine.cpp
-index 41db8f6..7cd4901 100755
+index 41db8f6..ebd6628 100755
 --- a/Engine.cpp
 +++ b/Engine.cpp
+@@ -63,12 +63,12 @@ Engine::Engine(int width, int height, bool fscreen, char* winName)
+ 	bPaused = false;
+ 	winWidth = width;
+ 	winHeight = height;
+-	int vsync=0, bpp=32, log=1, joystick=1;
+-	#if defined(PANDORA) || defined(PYRA)
++	int vsync=1, bpp=32, log=1, joystick=1;
++	//#if defined(PANDORA) || defined(PYRA)
+ 	int fullscreen=1;
+-	#else
+-	int fullscreen = fscreen?1:0;
+-	#endif
++	//#else
++	//int fullscreen = fscreen?1:0;
++	//#endif
+ 	int renderTargets=1;
+ 	int FPS=0;
+ 	int scanlines = 0;
 @@ -78,7 +78,7 @@ Engine::Engine(int width, int height, bool fscreen, char* winName)
  #elif defined(__EMSCRIPTEN__)
  	snprintf(enginepath, PATH_MAX, "%s/Engine.cfg", "prototype_data");
