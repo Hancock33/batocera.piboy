@@ -180,10 +180,10 @@ class FlycastGenerator(Generator):
         # internal config
         # vmuA1
         if not isfile(batoceraFiles.flycastVMUA1):
-            if not isdir(dirname(batoceraFiles.flycastSaves)):
-                os.mkdir(batoceraFiles.flycastSaves)
-            if not isdir(dirname(batoceraFiles.flycastSaves) + "/flycast"):
-                os.mkdir((batoceraFiles.flycastSaves) + "/flycast")
+            if not os.path.exists(batoceraFiles.flycastSaves):
+                os.makedirs(batoceraFiles.flycastSaves)
+            if not os.path.exists(batoceraFiles.flycastSaves + "/flycast"):
+                os.makedirs(batoceraFiles.flycastSaves + "/flycast")
             copyfile(batoceraFiles.flycastVMUBlank, batoceraFiles.flycastVMUA1)
         # vmuA2
         if not isfile(batoceraFiles.flycastVMUA2):
