@@ -3,7 +3,6 @@
 # wine-lutris
 #
 ################################################################################
-
 # Version.: 7.2-2
 WINE_LUTRIS_VERSION = lutris-wine-7.2-2
 WINE_LUTRIS_SITE = $(call github,lutris,wine,$(WINE_LUTRIS_VERSION))

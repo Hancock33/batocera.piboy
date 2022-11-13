@@ -10,6 +10,12 @@ VKQUAKE_SITE = $(call github,Novum,vkQuake,$(VKQUAKE_VERSION))
 VKQUAKE_DEPENDENCIES = sdl2 sdl2_image
 VKQUAKE_LICENSE = GPLv2
 
+define VKQUAKE_WERROR
+	sed -i 's/-Werror/-w/g' $(@D)/meson.build
+endef
+
+VKQUAKE_POST_EXTRACT_HOOKS += VKQUAKE_WERROR
+
 define VKQUAKE_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/build/vkquake $(TARGET_DIR)/usr/bin
 	mkdir -p $(TARGET_DIR)/usr/share/game_assets/quake1/id1
