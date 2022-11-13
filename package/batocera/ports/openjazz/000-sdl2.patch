@@ -1,0 +1,661 @@
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+index 0f066c3..fc83e23 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -15,8 +15,8 @@ defaults:
+     shell: bash
+ 
+ jobs:
+-  linux-gcc:
+-    name: Build (Ubuntu 18.04 LTS x86_64, GCC)
++  linux-gcc-sdl1:
++    name: Build (Ubuntu 18.04 LTS x86_64, GCC, SDL 1.2)
+     runs-on: ubuntu-18.04
+     steps:
+       - name: Install dependencies
+@@ -34,11 +34,11 @@ jobs:
+ 
+       - name: Build OpenJazz (normal)
+         run: |
+-          make
++          make SDLCONFIG=sdl-config
+           ls -l OpenJazz
+ 
+-  linux-clang:
+-    name: Build (Ubuntu 18.04 LTS x86_64, Clang)
++  linux-clang-sdl1:
++    name: Build (Ubuntu 18.04 LTS x86_64, Clang, SDL 1.2)
+     runs-on: ubuntu-18.04
+     steps:
+       - name: Install dependencies
+@@ -60,7 +60,7 @@ jobs:
+           export CXX=clang++
+           export CXXFLAGS="-Wall -O2 -g -ffunction-sections -fdata-sections"
+           export LDFLAGS="-Wl,--gc-sections"
+-          make
++          make SDLCONFIG=sdl-config
+           ls -l OpenJazz
+ 
+       - name: Prepare artifact
+@@ -76,6 +76,51 @@ jobs:
+           name: openjazz-linux-glibc2.27-x86_64
+           path: OJ-*/
+ 
++  linux-gcc-sdl2:
++    name: Build (Ubuntu 18.04 LTS x86_64, GCC, SDL2)
++    runs-on: ubuntu-18.04
++    steps:
++      - name: Install dependencies
++        run: |
++          sudo apt-get update -yqq
++          sudo apt-get install -yqq build-essential libsdl2-dev
++
++      - name: Prepare Environment
++        run: |
++          echo "SHORT_SHA=${GITHUB_SHA:0:10}" >> $GITHUB_ENV
++          echo "MAKEFLAGS=-j$(nproc)" >> $GITHUB_ENV
++
++      - name: Checkout
++        uses: actions/checkout@v3
++
++      - name: Build OpenJazz (normal)
++        run: |
++          make SDLCONFIG=sdl2-config
++          ls -l OpenJazz
++
++  linux-clang-sdl2:
++    name: Build (Ubuntu 18.04 LTS x86_64, Clang, SDL2)
++    runs-on: ubuntu-18.04
++    steps:
++      - name: Install dependencies
++        run: |
++          sudo apt-get update -yqq
++          sudo apt-get install -yqq build-essential libsdl2-dev clang-10 \
++            asciidoctor w3m
++
++      - name: Prepare Environment
++        run: |
++          echo "SHORT_SHA=${GITHUB_SHA:0:10}" >> $GITHUB_ENV
++          echo "MAKEFLAGS=-j$(nproc)" >> $GITHUB_ENV
++
++      - name: Checkout
++        uses: actions/checkout@v3
++
++      - name: Build OpenJazz (normal)
++        run: |
++          make SDLCONFIG=sdl2-config
++          ls -l OpenJazz
++
+   windows-mingw-gcc:
+     name: Build (Windows x86_64, MinGW, GCC)
+     runs-on: windows-2019
+diff --git a/Makefile b/Makefile
+index 817e0b3..d623f78 100644
+--- a/Makefile
++++ b/Makefile
+@@ -14,8 +14,9 @@ ifeq ($(OS),Windows_NT)
+ endif
+ 
+ # SDL
+-CXXFLAGS += $(shell sdl-config --cflags)
+-LIBS += $(shell sdl-config --libs)
++SDLCONFIG ?= sdl-config
++CXXFLAGS += `pkg-config sdl2 --cflags`
++LIBS += `pkg-config sdl2 --libs`
+ 
+ LIBS += -lm
+ 
+diff --git a/src/io/gfx/font.cpp b/src/io/gfx/font.cpp
+index 63aeca7..88c2b8d 100644
+--- a/src/io/gfx/font.cpp
++++ b/src/io/gfx/font.cpp
+@@ -100,7 +100,7 @@ Font::Font (const char* fileName) {
+ 
+ 		} else characters[count] = createSurface(blank, 3, 1);
+ 
+-		SDL_SetColorKey(characters[count], SDL_SRCCOLORKEY, 0);
++		enableColorKey(characters[count], 0);
+ 
+ 	}
+ 
+@@ -174,7 +174,7 @@ Font::Font (unsigned char* pixels, bool big) {
+ 
+ 		characters[count] = createSurface(chrPixels, 8, lineHeight);
+ 
+-		if (big) SDL_SetColorKey(characters[count], SDL_SRCCOLORKEY, 31);
++		if (big) enableColorKey(characters[count], 31);
+ 
+ 	}
+ 
+@@ -289,7 +289,7 @@ Font::Font (bool bonus) {
+ 		pixels = file->loadPixels(width * height);
+ 
+ 		characters[count] = createSurface(pixels, width, height);
+-		SDL_SetColorKey(characters[count], SDL_SRCCOLORKEY, 254);
++		enableColorKey(characters[count], 254);
+ 
+ 		delete[] pixels;
+ 
+@@ -305,7 +305,7 @@ Font::Font (bool bonus) {
+ 	pixels = new unsigned char[3];
+ 	memset(pixels, 254, 3);
+ 	characters[nCharacters] = createSurface(pixels, 3, 1);
+-	SDL_SetColorKey(characters[nCharacters], SDL_SRCCOLORKEY, 254);
++	enableColorKey(characters[nCharacters], 254);
+ 	delete[] pixels;
+ 
+ 
+@@ -553,7 +553,7 @@ void Font::mapPalette (int start, int length, int newStart, int newLength) {
+ 			(count * newLength / length) + newStart;
+ 
+ 	for (count = 0; count < nCharacters; count++)
+-		SDL_SetPalette(characters[count], SDL_LOGPAL, palette, start, length);
++		setLogicalPalette(characters[count], palette, start, length);
+ 
+ 	return;
+ 
+diff --git a/src/io/gfx/sprite.cpp b/src/io/gfx/sprite.cpp
+index 46571b1..adf3fb7 100644
+--- a/src/io/gfx/sprite.cpp
++++ b/src/io/gfx/sprite.cpp
+@@ -64,7 +64,7 @@ void Sprite::clearPixels () {
+ 
+ 	data = 0;
+ 	pixels = createSurface(&data, 1, 1);
+-	SDL_SetColorKey(pixels, SDL_SRCCOLORKEY, 0);
++	enableColorKey(pixels, 0);
+ 
+ 	return;
+ 
+@@ -94,7 +94,7 @@ void Sprite::setPixels (unsigned char *data, int width, int height, unsigned cha
+ 	if (pixels) SDL_FreeSurface(pixels);
+ 
+ 	pixels = createSurface(data, width, height);
+-	SDL_SetColorKey(pixels, SDL_SRCCOLORKEY, key);
++	enableColorKey(pixels, key);
+ 
+ 	return;
+ 
+@@ -158,7 +158,7 @@ int Sprite::getYOffset () {
+  */
+ void Sprite::setPalette (SDL_Color *palette, int start, int amount) {
+ 
+-	SDL_SetPalette(pixels, SDL_LOGPAL, palette + start, start, amount);
++	setLogicalPalette(pixels, palette + start, start, amount);
+ 
+ 	return;
+ 
+@@ -178,7 +178,7 @@ void Sprite::flashPalette (int index) {
+ 	for (count = 0; count < 256; count++)
+ 		palette[count].r = palette[count].g = palette[count].b = index;
+ 
+-	SDL_SetPalette(pixels, SDL_LOGPAL, palette, 0, 256);
++	setLogicalPalette(pixels, palette, 0, 256);
+ 
+ 	return;
+ 
+@@ -241,7 +241,7 @@ void Sprite::drawScaled (int x, int y, fixed scale) {
+ 	int dstX, dstY;
+ 	int srcX, srcY;
+ 
+-	key = pixels->format->colorkey;
++	key = getColorKey(pixels);
+ 
+ 	fullWidth = FTOI(pixels->w * scale);
+ 	if (x < -(fullWidth >> 1)) return; // Off-screen
+diff --git a/src/io/gfx/video.cpp b/src/io/gfx/video.cpp
+index b14eb53..4f3d00f 100644
+--- a/src/io/gfx/video.cpp
++++ b/src/io/gfx/video.cpp
+@@ -53,7 +53,11 @@ SDL_Surface* createSurface (unsigned char * pixels, int width, int height) {
+ 	int y;
+ 
+ 	// Create the surface
++#if SDL_VERSION_ATLEAST(2, 0, 0)
++	ret = SDL_CreateRGBSurface(SDL_SWSURFACE, width, height, 8, 0, 0, 0, 0);
++#else
+ 	ret = SDL_CreateRGBSurface(SDL_HWSURFACE, width, height, 8, 0, 0, 0, 0);
++#endif
+ 
+ 	// Set the surface's palette
+ 	video.restoreSurfacePalette(ret);
+@@ -109,6 +113,16 @@ void Video::findResolutions () {
+ #ifdef NO_RESIZE
+ 	minW = maxW = DEFAULT_SCREEN_WIDTH;
+ 	minH = maxH = DEFAULT_SCREEN_HEIGHT;
++#elif SDL_VERSION_ATLEAST(2, 0, 0)
++	SDL_DisplayMode mode;
++
++	minW = maxW = DEFAULT_SCREEN_WIDTH;
++	minH = maxH = DEFAULT_SCREEN_HEIGHT;
++
++	if (SDL_GetDesktopDisplayMode(SDL_GetWindowDisplayIndex(window), &mode) >= 0) {
++		maxW = mode.w;
++		maxH = mode.h;
++	}
+ #else
+ 	SDL_Rect **resolutions;
+ 	int count;
+@@ -165,6 +179,29 @@ bool Video::init (SetupOptions cfg) {
+ 
+ 	fullscreen = cfg.fullScreen;
+ 
++#if SDL_VERSION_ATLEAST(2, 0, 0)
++	window = SDL_CreateWindow("OpenJazz", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SW, SH, fullscreen? FULLSCREEN_FLAGS: WINDOWED_FLAGS);
++
++	if (!window) {
++
++		LOG_FATAL("Could not create window: %s", SDL_GetError());
++
++		return false;
++
++	}
++
++	renderer = SDL_CreateRenderer(window, -1, 0);
++
++	if (!renderer) {
++
++		LOG_FATAL("Could not create renderer: %s", SDL_GetError());
++
++		return false;
++
++	}
++
++#endif
++
+ 	if (fullscreen) SDL_ShowCursor(SDL_DISABLE);
+ 
+ 	findResolutions();
+@@ -203,8 +240,18 @@ bool Video::reset (int width, int height) {
+ 	screenW = width;
+ 	screenH = height;
+ 
+-#ifdef SCALE
+ 	if (canvas != screen) SDL_FreeSurface(canvas);
++	canvas = NULL;
++
++#if SDL_VERSION_ATLEAST(2, 0, 0)
++	SDL_FreeSurface(screen);
++	screen = NULL;
++
++	SDL_FreeSurface(textureSurface);
++	textureSurface = NULL;
++
++	SDL_DestroyTexture(texture);
++	texture = NULL;
+ #endif
+ 
+ #ifdef NO_RESIZE
+@@ -219,10 +266,17 @@ bool Video::reset (int width, int height) {
+ 		screenH = minH;
+ 	}
+ 
++#if SDL_VERSION_ATLEAST(2, 0, 0)
++
++	SDL_SetWindowSize(window, screenW, screenH);
++	SDL_SetWindowFullscreen(window, fullscreen? SDL_WINDOW_FULLSCREEN_DESKTOP: 0);
++
++#else
+ 	screen = SDL_SetVideoMode(screenW, screenH, 8, fullscreen? FULLSCREEN_FLAGS: WINDOWED_FLAGS);
+ 
+ 	if (!screen) return false;
+ 
++#endif
+ 
+ #ifdef SCALE
+ 	// Check that the scale will fit in the current resolution
+@@ -237,6 +291,10 @@ bool Video::reset (int width, int height) {
+ 		canvasW = screenW / scaleFactor;
+ 		canvasH = screenH / scaleFactor;
+ 		canvas = createSurface(NULL, canvasW, canvasH);
++#if SDL_VERSION_ATLEAST(2, 0, 0)
++		if (setup.scale2x && scaleFactor < 5)
++			screen = createSurface(NULL, screenW, screenH);
++#endif
+ 
+ 	} else
+ #endif
+@@ -244,9 +302,41 @@ bool Video::reset (int width, int height) {
+ 
+ 		canvasW = screenW;
+ 		canvasH = screenH;
++#if SDL_VERSION_ATLEAST(2, 0, 0)
++		canvas = createSurface(NULL, canvasW, canvasH);
++#else
+ 		canvas = screen;
++#endif
++
++	}
++
++#if SDL_VERSION_ATLEAST(2, 0, 0)
++	if (!screen) {
++		screen = SDL_CreateRGBSurfaceFrom(canvas->pixels, canvas->w, canvas->h, canvas->format->BitsPerPixel, canvas->pitch,
++		                                  canvas->format->Rmask, canvas->format->Gmask, canvas->format->Bmask, canvas->format->Amask);
++	}
+ 
++	Uint32 format = SDL_PIXELFORMAT_UNKNOWN;
++	SDL_RendererInfo info;
++	if (SDL_GetRendererInfo(renderer, &info) >= 0) {
++		for (Uint32 i = 0; i < info.num_texture_formats; i++) {
++			if (SDL_ISPIXELFORMAT_PACKED(info.texture_formats[i])) {
++				format = info.texture_formats[i];
++				break;
++			}
++		}
+ 	}
++	if (format == SDL_PIXELFORMAT_UNKNOWN)
++		format = SDL_PIXELFORMAT_RGB888;
++
++	texture = SDL_CreateTexture(renderer, format, SDL_TEXTUREACCESS_STREAMING, screen->w, screen->h);
++
++	if (!texture) return false;
++
++	textureSurface = SDL_CreateRGBSurfaceWithFormat(SDL_SWSURFACE, screen->w, screen->h, SDL_BITSPERPIXEL(format), format);
++
++	if (!textureSurface) return false;
++#endif
+ 
+ #if !defined(WIZ) && !defined(GP2X)
+ 	expose();
+@@ -277,10 +367,10 @@ bool Video::reset (int width, int height) {
+ void Video::setPalette (SDL_Color *palette) {
+ 
+ 	// Make palette changes invisible until the next draw. Hopefully.
+-	clearScreen(SDL_MapRGB(screen->format, 0, 0, 0));
++	clearScreen(SDL_MapRGB(canvas->format, 0, 0, 0));
+ 	flip(0);
+ 
+-	SDL_SetPalette(screen, SDL_PHYSPAL, palette, 0, 256);
++	changePalette(palette, 0, 256);
+ 	currentPalette = palette;
+ 
+ 	return;
+@@ -309,7 +399,11 @@ SDL_Color* Video::getPalette () {
+  */
+ void Video::changePalette (SDL_Color *palette, unsigned char first, unsigned int amount) {
+ 
++#if SDL_VERSION_ATLEAST(2, 0, 0)
++	SDL_SetPaletteColors(screen->format->palette, palette, first, amount);
++#else
+ 	SDL_SetPalette(screen, SDL_PHYSPAL, palette, first, amount);
++#endif
+ 
+ 	return;
+ 
+@@ -323,7 +417,7 @@ void Video::changePalette (SDL_Color *palette, unsigned char first, unsigned int
+  */
+ void Video::restoreSurfacePalette (SDL_Surface* surface) {
+ 
+-	SDL_SetPalette(surface, SDL_LOGPAL, logicalPalette, 0, 256);
++	setLogicalPalette(surface, logicalPalette, 0, 256);
+ 
+ 	return;
+ 
+@@ -428,7 +522,11 @@ void Video::setTitle (const char *title) {
+ 
+ 	}
+ 
++#if SDL_VERSION_ATLEAST(2, 0, 0)
++	SDL_SetWindowTitle(window, windowTitle);
++#else
+ 	SDL_WM_SetCaption(windowTitle, NULL);
++#endif
+ 
+ 	delete[] windowTitle;
+ 
+@@ -487,8 +585,8 @@ bool Video::isFullscreen () {
+  */
+ void Video::expose () {
+ 
+-	SDL_SetPalette(screen, SDL_LOGPAL, logicalPalette, 0, 256);
+-	SDL_SetPalette(screen, SDL_PHYSPAL, currentPalette, 0, 256);
++	setLogicalPalette(canvas, logicalPalette, 0, 256);
++	changePalette(currentPalette, 0, 256);
+ 
+ 	return;
+ 
+@@ -527,6 +625,7 @@ void Video::update (SDL_Event *event) {
+ 			break;
+     #endif
+ 
++    #if !SDL_VERSION_ATLEAST(2, 0, 0)
+     #ifndef NO_RESIZE
+ 		case SDL_VIDEORESIZE:
+ 
+@@ -540,6 +639,7 @@ void Video::update (SDL_Event *event) {
+ 			expose();
+ 
+ 			break;
++    #endif
+ 
+ 	}
+ #endif
+@@ -564,13 +664,15 @@ void Video::flip (int mspf, PaletteEffect* paletteEffects, bool effectsStopped)
+ 	if (canvas != NULL && canvas != screen) {
+ 
+ 		// Copy everything that has been drawn so far
+-		if (setup.scale2x)
++		if (setup.scale2x && scaleFactor < 5)
+ 			scale(scaleFactor,
+ 				screen->pixels, screen->pitch,
+ 				canvas->pixels, canvas->pitch,
+ 				screen->format->BytesPerPixel, canvas->w, canvas->h);
++#if SDL_VERSION_ATLEAST(2, 0, 0)
+ 		else
+ 			SDL_SoftStretch(canvas, NULL, screen, NULL);
++#endif
+ 
+ 	}
+ #endif
+@@ -589,7 +691,7 @@ void Video::flip (int mspf, PaletteEffect* paletteEffects, bool effectsStopped)
+ 
+ 			paletteEffects->apply(shownPalette, false, mspf, effectsStopped);
+ 
+-			SDL_SetPalette(screen, SDL_PHYSPAL, shownPalette, 0, 256);
++			changePalette(shownPalette, 0, 256);
+ 
+ 		} else {
+ 
+@@ -600,7 +702,15 @@ void Video::flip (int mspf, PaletteEffect* paletteEffects, bool effectsStopped)
+ 	}
+ 
+ 	// Show what has been drawn
++#if SDL_VERSION_ATLEAST(2, 0, 0)
++	SDL_BlitSurface(screen, NULL, textureSurface, NULL);
++	SDL_UpdateTexture(texture, NULL, textureSurface->pixels, textureSurface->pitch);
++	SDL_RenderClear(renderer);
++	SDL_RenderCopy(renderer, texture, NULL, NULL);
++	SDL_RenderPresent(renderer);
++#else
+ 	SDL_Flip(screen);
++#endif
+ 
+ 	return;
+ 
+@@ -652,3 +762,42 @@ void drawRect (int x, int y, int width, int height, int index) {
+ 
+ }
+ 
++
++void enableColorKey (SDL_Surface* surface, unsigned int index) {
++
++#if SDL_VERSION_ATLEAST(2, 0, 0)
++	SDL_SetColorKey(surface, SDL_TRUE, index);
++#else
++	SDL_SetColorKey(surface, SDL_SRCCOLORKEY, index);
++#endif
++
++	return;
++
++}
++
++unsigned int getColorKey (SDL_Surface* surface) {
++
++#if SDL_VERSION_ATLEAST(2, 0, 0)
++	Uint32 key;
++
++	if (SDL_GetColorKey(surface, &key) < 0)
++		return -1;
++
++	return key;
++#else
++	return surface->format->colorkey;
++#endif
++
++}
++
++void setLogicalPalette (SDL_Surface* surface, SDL_Color *palette, int start, int length) {
++
++#if SDL_VERSION_ATLEAST(2, 0, 0)
++	if (surface->format->palette) {
++		SDL_SetPaletteColors(surface->format->palette, palette, start, length);
++	}
++#else
++	SDL_SetPalette(surface, SDL_LOGPAL, palette, start, length);
++#endif
++
++}
+diff --git a/src/io/gfx/video.h b/src/io/gfx/video.h
+index 88a97cc..026c9c2 100644
+--- a/src/io/gfx/video.h
++++ b/src/io/gfx/video.h
+@@ -94,6 +94,13 @@
+ 	#define NO_RESIZE
+ 
+ 	#define FULLSCREEN_FLAGS (SDL_FULLSCREEN | SDL_HWSURFACE)
++#elif SDL_VERSION_ATLEAST(2, 0, 0)
++	#define DEFAULT_SCREEN_WIDTH SW
++	#define DEFAULT_SCREEN_HEIGHT SH
++
++	#undef WINDOWED_FLAGS
++	#define WINDOWED_FLAGS (SDL_WINDOW_RESIZABLE)
++	#define FULLSCREEN_FLAGS (SDL_WINDOW_FULLSCREEN_DESKTOP)
+ #else
+ 	#define DEFAULT_SCREEN_WIDTH SW
+ 	#define DEFAULT_SCREEN_HEIGHT SH
+@@ -111,6 +118,12 @@
+ class Video {
+ 
+ 	private:
++#if SDL_VERSION_ATLEAST(2, 0, 0)
++		SDL_Window* window; ///< Output window
++		SDL_Renderer* renderer; ///< Output renderer
++		SDL_Texture* texture; ///< Output texture
++		SDL_Surface* textureSurface;
++#endif
+ 		SDL_Surface* screen; ///< Output surface
+ 
+ 		// Palettes
+@@ -178,8 +191,11 @@ EXTERN Video video; ///< Video output
+ 
+ // Functions
+ 
+-EXTERN SDL_Surface*   createSurface  (unsigned char* pixels, int width, int height);
+-EXTERN void           drawRect       (int x, int y, int width, int height, int index);
++EXTERN SDL_Surface*   createSurface     (unsigned char* pixels, int width, int height);
++EXTERN void           drawRect          (int x, int y, int width, int height, int index);
++EXTERN void           enableColorKey    (SDL_Surface* surface, unsigned int index);
++EXTERN unsigned int   getColorKey       (SDL_Surface* surface);
++EXTERN void           setLogicalPalette (SDL_Surface* surface, SDL_Color *palette, int start, int length);
+ 
+ #endif
+ 
+diff --git a/src/io/sound.cpp b/src/io/sound.cpp
+index 3ca8542..7143458 100644
+--- a/src/io/sound.cpp
++++ b/src/io/sound.cpp
+@@ -28,6 +28,7 @@
+ 
+ #include <SDL_audio.h>
+ #include <psmplug.h>
++#include <cstring>
+ 
+ #if defined(__SYMBIAN32__) || defined(_3DS) || defined(PSP) || defined(__vita__)
+ 	#define SOUND_FREQ 22050
+diff --git a/src/jj1/level/jj1levelload.cpp b/src/jj1/level/jj1levelload.cpp
+index 65f1400..5c907e3 100644
+--- a/src/jj1/level/jj1levelload.cpp
++++ b/src/jj1/level/jj1levelload.cpp
+@@ -386,7 +386,7 @@ int JJ1Level::loadTiles (char* fileName) {
+ 	tiles = pos >> 10;
+ 
+ 	tileSet = createSurface(buffer, TTOI(1), TTOI(tiles));
+-	SDL_SetColorKey(tileSet, SDL_SRCCOLORKEY, TKEY);
++	enableColorKey(tileSet, TKEY);
+ 
+ 	delete[] buffer;
+ 
+diff --git a/src/jj2/level/jj2levelload.cpp b/src/jj2/level/jj2levelload.cpp
+index 96302b5..46b2627 100644
+--- a/src/jj2/level/jj2levelload.cpp
++++ b/src/jj2/level/jj2levelload.cpp
+@@ -361,7 +361,7 @@ int JJ2Level::loadTiles (char* fileName) {
+ 	}
+ 
+ 	tileSet = createSurface(tileBuffer, TTOI(1), TTOI(tiles));
+-	SDL_SetColorKey(tileSet, SDL_SRCCOLORKEY, 0);
++	enableColorKey(tileSet, 0);
+ 
+ 	// Flip tiles
+ 	for (count = 0; count < TTOI(tiles); count++) {
+@@ -377,7 +377,7 @@ int JJ2Level::loadTiles (char* fileName) {
+ 	}
+ 
+ 	flippedTileSet = createSurface(tileBuffer, TTOI(1), TTOI(tiles));
+-	SDL_SetColorKey(flippedTileSet, SDL_SRCCOLORKEY, 0);
++	enableColorKey(flippedTileSet, 0);
+ 
+ 	delete[] tileBuffer;
+ 
+diff --git a/src/menu/gamemenu.cpp b/src/menu/gamemenu.cpp
+index 8ca3b0f..8373f5e 100644
+--- a/src/menu/gamemenu.cpp
++++ b/src/menu/gamemenu.cpp
+@@ -49,7 +49,7 @@ GameMenu::GameMenu (File *file) {
+ 	// Load the difficulty graphics
+ 	file->loadPalette(menuPalette);
+ 	difficultyScreen = file->loadSurface(SW, SH);
+-	SDL_SetColorKey(difficultyScreen, SDL_SRCCOLORKEY, 0);
++	enableColorKey(difficultyScreen, 0);
+ 
+ 	// Default difficulty setting
+ 	difficulty = 1;
+@@ -493,7 +493,7 @@ int GameMenu::newGameEpisode (GameModeType mode) {
+ 		delete[] check;
+ 
+ 		if (exists[count]) video.restoreSurfacePalette(episodeScreens[count]);
+-		else SDL_SetPalette(episodeScreens[count], SDL_LOGPAL, greyPalette, 0, 256);
++		else setLogicalPalette(episodeScreens[count], greyPalette, 0, 256);
+ 
+ 	}
+ 
+diff --git a/src/menu/mainmenu.cpp b/src/menu/mainmenu.cpp
+index 5aeada0..28ab834 100644
+--- a/src/menu/mainmenu.cpp
++++ b/src/menu/mainmenu.cpp
+@@ -115,9 +115,9 @@ MainMenu::MainMenu () {
+ 
+ 	}
+ 
+-	SDL_SetColorKey(background, SDL_SRCCOLORKEY, 0);
+-	SDL_SetColorKey(highlight, SDL_SRCCOLORKEY, 0);
+-	if (logo) SDL_SetColorKey(logo, SDL_SRCCOLORKEY, 28);
++	enableColorKey(background, 0);
++	enableColorKey(highlight, 0);
++	if (logo) enableColorKey(logo, 28);
+ 
+ 	gameMenu = new GameMenu(file);
+ 
+diff --git a/src/setup.cpp b/src/setup.cpp
+index dfebd3c..9bedaff 100644
+--- a/src/setup.cpp
++++ b/src/setup.cpp
+@@ -132,7 +132,7 @@ SetupOptions Setup::load () {
+ 
+ 	// Read controls
+ 	for (count = 0; count < CONTROLS - 4; count++)
+-		controls.setKey(count, (SDLKey)(file->loadInt()));
++		controls.setKey(count, file->loadInt());
+ 
+ 	for (count = 0; count < CONTROLS; count++)
+ 		controls.setButton(count, file->loadInt());
