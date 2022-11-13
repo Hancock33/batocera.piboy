@@ -30,7 +30,7 @@ abuse:
   core:     abuse
 acclaim:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 adam:
   emulator: libretro
   core:     mame
@@ -42,13 +42,13 @@ alephone:
   core:     alephone
 alg:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 alphadenshi:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 amcoe:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 amiga1200:
   emulator: libretro
   core:     puae
@@ -90,7 +90,7 @@ astrocde:
   core:     mame
 atari:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 atari2600:
   emulator: libretro
   core:     stella
@@ -108,7 +108,7 @@ atarist:
   core:     hatari
 atlus:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 atom:
   emulator: libretro
   core:     mame
@@ -120,7 +120,7 @@ awgl:
   core:     awgl
 banpresto:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 bbc:
   emulator: libretro
   core:     mame
@@ -156,7 +156,7 @@ cannonball:
   core:     cannonball
 cave:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 cave3rd:
   emulator: demul
   core:     demul
@@ -171,7 +171,7 @@ cdogs:
   core:     cdogs
 centurye:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 cgenius:
   emulator: cgenius
   core:     cgenius
@@ -183,7 +183,7 @@ channelf:
   core:     freechaf
 cinematronics:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 coco:
   emulator: libretro
   core:     mame
@@ -192,19 +192,19 @@ colecovision:
   core:     bluemsx
 comad:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 cplus4:
   emulator: vice
   core:     xplus4
 cps1:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 cps2:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 cps3:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 craft:
   emulator: libretro
   core:     craft
@@ -221,7 +221,7 @@ daphne:
     hud_support: false
 dataeast:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 devilutionx:
   emulator: devilutionx
   core:     devilutionx
@@ -245,7 +245,7 @@ droidports:
   core:     droidports
 dynax:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 easyrpg:
   emulator: easyrpg
   core:     easyrpg
@@ -257,7 +257,7 @@ eduke32:
   core:     eduke32
 eighting:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 electron:
   emulator: libretro
   core:     mame
@@ -266,7 +266,7 @@ etekwar:
   core:     etekwar
 exidy:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 f2bgl:
   emulator: f2bgl
   core:     f2bgl
@@ -349,7 +349,7 @@ gong:
   core:     gong
 gottlieb:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 gp32:
   emulator: libretro
   core:     mame
@@ -376,7 +376,7 @@ hurrican:
   core:     hurrican
 igs:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 ikemen:
   emulator: ikemen
   core:     ikemen
@@ -384,7 +384,7 @@ ikemen:
     videomode: max-720x480
 incredibletech:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 intellivision:
   emulator: libretro
   core:     freeintv
@@ -393,7 +393,7 @@ ionfury:
   core:     ionfury
 irem:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 j2me:
   emulator: libretro
   core:     freej2me
@@ -402,7 +402,7 @@ jaguar:
   core:     virtualjaguar
 jaleco:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 jaxe:
   emulator: libretro
   core:     jaxe
@@ -411,14 +411,14 @@ jumpnbump:
   core:     jumpnbump
 kaneko:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 kodi:
   emulator: kodi
   options:
     videomode: default
 konami:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 laser310:
   emulator: libretro
   core:     mame
@@ -456,10 +456,10 @@ megadrive:
   core:     genesisplusgx
 midway:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 mitchell:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 model2:
   emulator: model2emu
   core:     model2emu
@@ -509,7 +509,7 @@ n64dd:
     videomode: max-640x480
 namco:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 naomi:
   emulator: libretro
   core:     flycast2021
@@ -518,7 +518,7 @@ naomi2:
   core:     flycast
 naomi2gd:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 naomigd:
   emulator: libretro
   core:     flycast2021
@@ -545,13 +545,13 @@ ngpc:
   core:     mednafen_ngp
 nichibutsu:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 nintendo:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 nmk:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 nukem2:
   emulator: nukem2
   core:     nukem2
@@ -619,7 +619,7 @@ pet:
   core:     xpet
 piboy:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 pico8:
   emulator: libretro
   core:     fake08
@@ -653,7 +653,7 @@ ps3:
   core:     rpcs3
 psikyo:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 psp:
   emulator: ppsspp
   core: ppsspp
@@ -701,7 +701,7 @@ sameduck:
   core:     sameduck
 sammy:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 satellaview:
   emulator: libretro
   core:     snes9x
@@ -721,7 +721,7 @@ sdlpop:
     hud_support: false
 sega:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 sega32x:
   emulator: libretro
   core:     picodrive
@@ -730,13 +730,13 @@ segacd:
   core:     genesisplusgx
 semicom:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 serioussam:
   emulator: serioussam
   core:     serioussam
 seta:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 sg1000:
   emulator: libretro
   core:     genesisplusgx
@@ -754,7 +754,7 @@ snes-msu1:
   core:     snes9x
 snk:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 socrates:
   emulator: libretro
   core:     mame
@@ -817,13 +817,13 @@ switch:
 
 taito:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 technos:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 tecmo:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 tg16:
   emulator: libretro
   core:     pce_fast
@@ -844,7 +844,7 @@ tic80:
   core:     tic80
 toaplan:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 triforce:
   emulator: dolphin_triforce
   core:     dolphin_triforce
@@ -856,7 +856,7 @@ tyrquake:
   core:     tyrquake
 universal:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 uzebox:
   emulator: libretro
   core:     uzem
@@ -892,7 +892,7 @@ virtualboy:
   core:     vb
 visco:
   emulator: libretro
-   core:     mame0139
+  core:     mame0139
 voidsw:
   emulator: voidsw
   core:     voidsw
