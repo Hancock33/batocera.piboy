@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-WINE_PROTON_WOW64_32_VERSION = proton-wine-7.0-4
+WINE_PROTON_WOW64_32_VERSION = proton-wine-7.0-5
 WINE_PROTON_WOW64_32_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_WOW64_32_VERSION))
 WINE_PROTON_WOW64_32_LICENSE = LGPL-2.1+
 WINE_PROTON_WOW64_32_DEPENDENCIES = host-bison host-flex host-wine-proton
@@ -134,7 +134,7 @@ else
 WINE_PROTON_WOW64_32_CONF_OPTS += --without-gnutls
 endif
 
-ifeq ($(BR2_PACKAGE_GST1_PLUGINS_BASE),y)
+ifeq ($(BR2_PACKAGE_GST_PLUGINS_BASE),y)
 WINE_PROTON_WOW64_32_CONF_OPTS += --with-gstreamer
 WINE_PROTON_WOW64_32_DEPENDENCIES += gst1-plugins-base
 else

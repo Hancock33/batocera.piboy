@@ -17,8 +17,12 @@ DROIDPORTS_SUPPORTS_IN_SOURCE_BUILD = NO
 DROIDPORTS_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 DROIDPORTS_CONF_OPTS += -DPLATFORM=linux
 DROIDPORTS_CONF_OPTS += -DPORT=gmloader
-DROIDPORTS_CONF_OPTS += -DCMAKE_CXX_FLAGS="-w -mlittle-endian -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -lm"
-DROIDPORTS_CONF_OPTS += -DCMAKE_C_FLAGS="-w -mlittle-endian -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -lm"
+DROIDPORTS_CONF_OPTS += -DCMAKE_TOOLCHAIN_FILE=$(HOST_DIR)/share/buildroot/toolchainfile.cmake
+
+ifeq ($(BR2_arm),y)
+	DROIDPORTS_CONF_OPTS += -DCMAKE_CXX_FLAGS="-w -mlittle-endian -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -lm"
+	DROIDPORTS_CONF_OPTS += -DCMAKE_C_FLAGS="-w -mlittle-endian -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -lm"
+endif
 
 define DROIDPORTS_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/DROIDPORTS

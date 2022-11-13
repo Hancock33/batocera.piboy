@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-WINE_PROTON_VERSION = proton-wine-7.0-4
+WINE_PROTON_VERSION = proton-wine-7.0-5
 WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
 WINE_PROTON_DEPENDENCIES = host-bison host-flex host-wine-proton
@@ -25,7 +25,7 @@ endef
 WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_CREATE_WINE_FOLDER
 
 # Wine needs its own directory structure and tools for cross compiling
-WINE_PROTON_CONF_OPTS = CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
+WINE_PROTON_CONF_OPTS = LDFLAGS="-Wl,--unresolved-symbols=ignore-all" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
 	--with-wine-tools=../host-wine-proton-$(WINE_PROTON_VERSION) \
 	--disable-tests \
 	--without-capi \
@@ -147,7 +147,7 @@ else
 WINE_PROTON_CONF_OPTS += --without-gnutls
 endif
 
-ifeq ($(BR2_PACKAGE_GST1_PLUGINS_BASE),y)
+ifeq ($(BR2_PACKAGE_GST_PLUGINS_BASE),y)
 WINE_PROTON_CONF_OPTS += --with-gstreamer
 WINE_PROTON_DEPENDENCIES += gst1-plugins-base
 else
