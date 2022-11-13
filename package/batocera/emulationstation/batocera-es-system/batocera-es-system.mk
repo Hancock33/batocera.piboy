@@ -44,6 +44,11 @@ define BATOCERA_ES_SYSTEM_INSTALL_TARGET_CMDS
 	    cp -pr $(@D)/roms $(TARGET_DIR)/usr/share/batocera/datainit/
 	    cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/bios $(TARGET_DIR)/usr/share/batocera/datainit/
 		cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/roms/ports $(TARGET_DIR)/usr/share/batocera/datainit/roms
+		# create saves dirs
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/saves/dreamcast
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/saves/sm64
+		# create configdirs
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/xash3d_fwgs
 endef
 
 $(eval $(generic-package))
