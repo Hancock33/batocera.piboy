@@ -108,14 +108,11 @@ def createLibretroConfig(generator, system, controllers, guns, rom, bezel, shade
     retroarchConfig['menu_show_restart_retroarch'] = 'false'      # this option messes everything up on Batocera if ever clicked
     retroarchConfig['menu_show_load_content_animation'] = 'false' # hide popup when starting a game
 
-    # Graphic driver needed for the ozone menu
-    retroarchConfig['video_driver'] = '"' + gfxBackend + '"'
-
-    retroarchConfig['audio_latency'] = '96'                     # best balance with audio perf
-    retroarchConfig['audio_mixer_volume'] = '0.000000'          # remove distortion on Piboy
-    retroarchConfig['audio_driver'] = 'tinyalsa'
+    retroarchConfig['video_driver'] = '"' + gfxBackend + '"'  # needed for the ozone menu
     if (system.isOptSet("audio_driver")):
         retroarchConfig['audio_driver'] = system.config['audio_driver']
+
+    retroarchConfig['audio_latency'] = '64'                     # best balance with audio perf
     if (system.isOptSet("audio_latency")):
         retroarchConfig['audio_latency'] = system.config['audio_latency']
 
