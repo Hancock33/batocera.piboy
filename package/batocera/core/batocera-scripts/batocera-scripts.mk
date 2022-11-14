@@ -9,12 +9,6 @@ BATOCERA_SCRIPTS_LICENSE = GPL
 BATOCERA_SCRIPTS_DEPENDENCIES = pciutils
 BATOCERA_SCRIPTS_SOURCE=
 
-ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI),y)
- PYBOY_INSTALL=y
-else
- PYBOY_INSTALL=n
-endif
-
 BATOCERA_SCRIPTS_PATH = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-scripts
 
 define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
@@ -52,7 +46,6 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
     install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-switch-screen-checker     $(TARGET_DIR)/usr/bin/
     install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-ikemen                    $(TARGET_DIR)/usr/bin/
     install -m 0644 $(BATOCERA_SCRIPTS_PATH)/rules/80-switch-screen.rules               $(TARGET_DIR)/etc/udev/rules.d
-	@if [ "$(PYBOY_INSTALL)" = "y" ]; then install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-scripts/scripts/batocera-info.piboy $(TARGET_DIR)/usr/bin/batocera-info ; fi
 endef
 
 define BATOCERA_SCRIPTS_INSTALL_ROCKCHIP
@@ -62,5 +55,14 @@ endef
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_ROCKCHIP_ANY),y)
   BATOCERA_SCRIPTS_POST_INSTALL_TARGET_HOOKS += BATOCERA_SCRIPTS_INSTALL_ROCKCHIP
 endif
+
+define BATOCERA_SCRIPTS_INSTALL_GAMECON_RPI
+    install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-scripts/scripts/batocera-info.piboy $(TARGET_DIR)/usr/bin/batocera-info
+endef
+
+ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI),y)
+  BATOCERA_SCRIPTS_POST_INSTALL_TARGET_HOOKS += BATOCERA_SCRIPTS_INSTALL_GAMECON_RPI
+endif
+
 
 $(eval $(generic-package))
