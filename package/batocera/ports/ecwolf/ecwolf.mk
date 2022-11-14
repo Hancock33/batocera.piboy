@@ -18,13 +18,9 @@ ECWOLF_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DNO_GTK=ON -DFORCE_CROSSCOMPILE=
 ECWOLF_CONF_ENV += LDFLAGS="-lpthread -lvorbisfile -lopusfile -lFLAC -lmodplug -lfluidsynth"
 
 define ECWOLF_CROSS
- gcc -o $(@D)/deps/gdtoa/arithchk $(@D)/deps/gdtoa/arithchk.c -Wall -Wextra
-             $(@D)/deps/gdtoa/arithchk > $(@D)/deps/gdtoa/arith.h
-
- gcc -o $(@D)/deps/gdtoa/qnan $(@D)/deps/gdtoa/qnan.c -Wall -Wextra
-             $(@D)/deps/gdtoa/qnan > $(@D)/deps/gdtoa/gd_qnan.h
+    $(HOST_ECWOLF_DIR)/deps/gdtoa/arithchk > $(@D)/deps/gdtoa/arith.h
+    $(HOST_ECWOLF_DIR)/deps/gdtoa/qnan > $(@D)/deps/gdtoa/gd_qnan.h
 endef
-
 ECWOLF_POST_EXTRACT_HOOKS += ECWOLF_CROSS
 
 define ECWOLF_INSTALL_TARGET_CMDS
