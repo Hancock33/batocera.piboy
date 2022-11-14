@@ -3,9 +3,9 @@
 # flycast
 #
 ################################################################################
-# Version: Commits on Oct 21, 2022
-FLYCAST_VERSION = d063f38c78851ed74c5507f5d18e49c4bd08dcb2
-FLYCAST_SITE = https://github.com/inada-s/flycast.git
+# Version: Commits on Nov 14, 2022
+FLYCAST_VERSION = 76cf9894552f0bca7119282ab51b8feef8a2e8f3
+FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
 FLYCAST_LICENSE = GPLv2
