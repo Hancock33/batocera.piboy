@@ -471,7 +471,7 @@ msgctxt "game_options"
 msgid "Use an alternate resolution. Some games need this."
 msgstr "Użyj alternatywnej rozdzielczości. Niektóre gry tego wymagają."
 
-#. TRANSLATION: libretro/atari800, libretro/dolphin, libretro/uae4arm
+#. TRANSLATION: libretro/atari800, libretro/dolphin, libretro/dolphin, libretro/uae4arm
 msgctxt "game_options"
 msgid "INTERNAL RESOLUTION"
 msgstr "ROZDZIELCZOŚĆ WEWNĘTRZNA"
@@ -521,7 +521,7 @@ msgctxt "game_options"
 msgid "CONTROLLER SETTINGS"
 msgstr ""
 
-#. TRANSLATION: libretro/fmsx, libretro/dolphin, libretro/dosbox, libretro/dosbox_pure, libretro/swanstation, ...
+#. TRANSLATION: libretro/fmsx, libretro/dolphin, libretro/dolphin, libretro/dosbox, libretro/dosbox_pure, ...
 msgctxt "game_options"
 msgid "CONTROLLER 1 TYPE"
 msgstr "TYP KONTROLERA 1"
@@ -1113,137 +1113,137 @@ msgctxt "game_options"
 msgid "Right Stick"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "Wii Internal resolution."
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "x1 (640 x 528)"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "x2 (1280 x 1056)"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "x3 (1920 x 1584)"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "x4 (2560 x 2112)"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "x5 (3200 x 2640)"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "x6 (3840 x 3168)"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, dolphin, dolphin_triforce, pcsx2, ppsspp, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, dolphin, dolphin_triforce, pcsx2, ...
 msgctxt "game_options"
 msgid "Improves clarity of distant textures."
 msgstr "Poprawia wyrazistość odległych tekstur."
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/flycast2021, dolphin, dolphin_triforce, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/flycast2021, dolphin, ...
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "FILTROWANIE ANIZOTROPOWE"
 
-#. TRANSLATION: libretro/dolphin, tsugaru
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, tsugaru
 msgctxt "game_options"
 msgid "1X"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, mupen64plus, tsugaru
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, mupen64plus, tsugaru
 msgctxt "game_options"
 msgid "2X"
 msgstr "2x"
 
-#. TRANSLATION: libretro/dolphin, tsugaru
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, tsugaru
 msgctxt "game_options"
 msgid "4X"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, tsugaru
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, tsugaru
 msgctxt "game_options"
 msgid "8X"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "16X"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "Wii System languages."
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "LANGUAGES"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, cemu, flycast/uzem, sonic2013, soniccd, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, cemu, flycast/uzem, sonic2013, ...
 msgctxt "game_options"
 msgid "English"
 msgstr "Angielski"
 
-#. TRANSLATION: libretro/dolphin, cemu, flycast/uzem, redream, sonic2013, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, cemu, flycast/uzem, redream, ...
 msgctxt "game_options"
 msgid "French"
 msgstr "Francuski"
 
-#. TRANSLATION: libretro/dolphin, cemu, flycast/uzem, redream, sonic2013, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, cemu, flycast/uzem, redream, ...
 msgctxt "game_options"
 msgid "German"
 msgstr "Niemiecki"
 
-#. TRANSLATION: libretro/dolphin, cemu, flycast/uzem, redream, sonic2013, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, cemu, flycast/uzem, redream, ...
 msgctxt "game_options"
 msgid "Spanish"
 msgstr "Hiszpański"
 
-#. TRANSLATION: libretro/dolphin, cemu, flycast/uzem, redream, sonic2013, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, cemu, flycast/uzem, redream, ...
 msgctxt "game_options"
 msgid "Italian"
 msgstr "Włoski"
 
-#. TRANSLATION: libretro/dolphin, cemu
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, cemu
 msgctxt "game_options"
 msgid "Dutch"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, cemu, flycast/uzem, redream, sonic2013, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, cemu, flycast/uzem, redream, ...
 msgctxt "game_options"
 msgid "Japanese"
 msgstr "Japoński"
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "Simplified Chinese"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, cemu, easyrpg, sonic2013
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, cemu, easyrpg, sonic2013
 msgctxt "game_options"
 msgid "Korean"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, dolphin/uzem, dolphin/uzem
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, dolphin/uzem, dolphin/uzem
 msgctxt "game_options"
 msgid ""
 "Wii NAND's aspect ratio setting. Most games support both ratios natively."
@@ -1251,113 +1251,113 @@ msgstr ""
 "Ustawienie proporcji obrazu w Wii NAND. Większość gier obsługuje oba "
 "współczynniki natywnie."
 
-#. TRANSLATION: libretro/dolphin, dolphin/uzem, dolphin/uzem
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, dolphin/uzem, dolphin/uzem
 msgctxt "game_options"
 msgid "WII TV MODE"
 msgstr "TRYB TV WII"
 
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, libretro/flycast, libretro/flycast, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/swanstation, libretro/duckstation, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Enhancement. Only works with a 16/9 ratio and bezels disabled."
 msgstr ""
 "Usprawnienie. Działa tylko przy proporcjach 16/9 i wyłączonych ramkach."
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "WII WIDESCREEN HACK"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, moonlight, moonlight
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, moonlight, moonlight
 msgctxt "game_options"
 msgid "on"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, moonlight, moonlight
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, moonlight, moonlight
 msgctxt "game_options"
 msgid "off"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "Shader compilation mode, may not work well on all hardware."
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "SHADER COMPILATION MODE"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "Sync"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "A-Sync Skip Rendering"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "Sync UberShaders"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin
 msgctxt "game_options"
 msgid "A-Sync UberShaders"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, dolphin/uzem, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
 msgstr "Emuluj Wiimote Sideway z L2 dla Shake i Nunchuk na R-stick."
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "WiiMote"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "WiiMote Sideways"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "WiiMote + Nunchuk"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "WiiMote + Classic Controller"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "WiiMote + Classic Controller Pro"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Real Wiimote"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "GameCube Controller"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, libretro/dosbox, libretro/dosbox_pure, libretro/swanstation, libretro/duckstation, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dosbox, libretro/dosbox_pure, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "CONTROLLER 2 TYPE"
 msgstr "TYP KONTROLERA 2"
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/flycast2021, libretro/snes9x
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/flycast2021, libretro/snes9x
 msgctxt "game_options"
 msgid "CONTROLLER 3 TYPE"
 msgstr "TYP KONTROLERA 3"
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "CONTROLLER 4 TYPE"
 msgstr "TYP KONTROLERA 4"
