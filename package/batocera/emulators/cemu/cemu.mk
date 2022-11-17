@@ -3,14 +3,13 @@
 # cemu
 #
 ################################################################################
-# Version: Commits on Nov 13, 2022
-CEMU_VERSION = 4442efa8acae769d0c7b7f41dbcb16700e2ef053
+CEMU_VERSION = v2.0-16
 CEMU_SITE = https://github.com/cemu-project/Cemu
 CEMU_LICENSE = GPLv2
 CEMU_SITE_METHOD=git
 CEMU_GIT_SUBMODULES=YES
 CEMU_DEPENDENCIES = sdl2 host-libcurl host-pugixml pugixml rapidjson boost libpng \
-                    libzip host-glslang glslang zlib zstd wxwidgets fmt glm
+                    libzip host-glslang glslang zlib zstd wxwidgets fmt glm 
 
 CEMU_SUPPORTS_IN_SOURCE_BUILD = NO
 
