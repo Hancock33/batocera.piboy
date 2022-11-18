@@ -3,8 +3,8 @@
 # libretro-openlara
 #
 ################################################################################
-# Version: Commits on Jul 29, 2022
-LIBRETRO_OPENLARA_VERSION = 39ba32e43d958c32bf7779b350c348450b6e1e65
+# Version: Commits on Nov 16, 2022
+LIBRETRO_OPENLARA_VERSION = 96989ac41ae55a42b19916dc8191f74be40e1b07
 LIBRETRO_OPENLARA_SITE = $(call github,libretro,openlara,$(LIBRETRO_OPENLARA_VERSION))
 LIBRETRO_OPENLARA_LICENSE = BSD 2
 LIBRETRO_OPENLARA_LICENSE_FILES = LICENSE
