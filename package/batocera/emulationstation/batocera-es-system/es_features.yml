@@ -746,20 +746,31 @@ libretro:
                     "Right Stick":  Joystick
     dolphin:
       shared: [autosave]
-      cfeatures:
+      systems:
+            wii:
+                cfeatures:
                     wii_resolution:
-                        prompt:      RENDERING RESOLUTION
-                        description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
+                        prompt:      INTERNAL RESOLUTION
+                        description: Wii Internal resolution.
                         choices:
-                            "1x native (640x528)":  x1 (640 x 528)
-                            "2x 720p (1280x1056)":  x2 (1280 x 1056)
-                            "3x 1080p (1920x1584)": x3 (1920 x 1584)
-                            "4x 1440p (2560x2112)": x4 (2560 x 2112)
-                            "5x (3200x2640)":       x5 (3200 x 2640)
-                            "6x 4K (3840x3168)":    x6 (3840 x 3168)
+                            "x1 (640 x 528)":    x1 (640 x 528)
+                            "x2 (1280 x 1056)":  x2 (1280 x 1056)
+                            "x3 (1920 x 1584)":  x3 (1920 x 1584)
+                            "x4 (2560 x 2112)":  x4 (2560 x 2112)
+                            "x5 (3200 x 2640)":  x5 (3200 x 2640)
+                            "x6 (3840 x 3168)":  x6 (3840 x 3168)
+                    wii_anisotropic:
+                        prompt:      ANISOTROPIC FILTERING
+                        description: Improves clarity of distant textures.
+                        choices:
+                            "1X":  1x
+                            "2X":  2x
+                            "4X":  4x
+                            "8X":  8x
+                            "16X": 16x
                     wii_language:
-                        prompt:      LANGUAGE
-                        description: Wii NAND's language setting.
+                        prompt:      LANGUAGES
+                        description: Wii System languages.
                         choices:
                             "English":             English
                             "French":              French
@@ -771,40 +782,26 @@ libretro:
                             "Simplified Chinese":  Simplified Chinese
                             "Traditional Chinese": Traditional Chinese
                             "Korean":              Korean
-                    wii_widescreen_hack:
-                        prompt:      WIDESCREEN HACK (GLITCHY)
-                        description: Enhancement. Only works with a 16/9 ratio and bezels disabled.
-                        choices:
-                            "Off":   disabled
-                            "On":  enabled
-                    wii_shader_mode:
-                        group: ADVANCED OPTIONS
-                        prompt:      UBERSHADERS
-                        description: May not work well on all hardware. Hybrid is preferred, where supported.
-                        choices:
-                            "No Ubershaders":        sync
-                            "Exclusive Ubershaders": sync UberShaders
-                            "Hybrid Ubershaders":    a-sync UberShaders
-                            "Skip Drawing":          a-sync Skip Rendering
-                    wii_anisotropic:
-                        group: ADVANCED OPTIONS
-                        prompt:      ANISOTROPIC FILTERING
-                        description: Improves clarity of distant textures.
-                        choices:
-                            "Off":  1x
-                            "2x":   2x
-                            "4x":   4x
-                            "8x":   8x
-                            "16x":  16x
-      systems:
-            wii:
-                cfeatures:
                     wii_widescreen:
                         prompt:      WII TV MODE
                         description: Wii NAND's aspect ratio setting. Most games support both ratios natively.
                         choices:
                             "16:9":  enabled
                             "4:3":   disabled
+                    wii_widescreen_hack:
+                        prompt:      WII WIDESCREEN HACK
+                        description: Enhancement. Only works with a 16/9 ratio and bezels disabled.
+                        choices:
+                            "on":  enabled
+                            "off":   disabled
+                    wii_shader_mode:
+                        prompt:      SHADER COMPILATION MODE
+                        description: Shader compilation mode, may not work well on all hardware.
+                        choices:
+                            "Sync":                   sync
+                            "A-Sync Skip Rendering":  a-sync Skip Rendering
+                            "Sync UberShaders":       sync UberShaders
+                            "A-Sync UberShaders":     a-sync UberShaders
                     controller1_wii:
                         prompt:      CONTROLLER 1 TYPE
                         description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
@@ -9650,102 +9647,7 @@ yuzu:
   shared: [videomode]
 ryujinx:
   features: [padtokeyboard]
-  shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-  cfeatures:
-        ryujinx_api:
-          prompt: GRAPHICS API
-          description: Choose which graphics API library to use. Vulkan is better, when supported.
-          choices:
-            "OpenGL": "OpenGL"
-            "Vulkan": "Vulkan"
-        ryujinx_scale:
-          prompt: RENDERING RESOLUTION
-          description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
-          choices:
-            "Native (720p/1080p)": 1
-            "2x (1440p/2160p)":    2
-            "3x (2160p/3240p)":    3
-            "4x (2880p/4320p)":    4
-        ryujinx_ratio:
-          prompt: ASPECT RATIO
-          description: Change the output resolution ratio.
-          choices:
-            "4:3":                   "Fixed4x3"
-            "16:9 (Default)":        "Fixed16x9"
-            "16:10":                 "Fixed16x10"
-            "21:9":                  "Fixed21x9"
-            "32:9":                  "Fixed32x9"
-            "Stretch to fit window": "Stretched"
-        ryujinx_filtering:
-          prompt: ANISOTROPIC FILTERING
-          description: Improves clarity of distant textures.
-          choices:
-            "2x":   2
-            "4x":   4
-            "8x":   8
-            "16x":  16
-        ryujinx_language:
-          prompt: LANGUAGE
-          description: Change the game's language.
-          choices:
-            "American English":       "AmericanEnglish"
-            "British English":        "BritishEnglish"
-            "Canadian French":        "CanadianFrench"
-            "Chinese":                "Chinese"
-            "Dutch":                  "Dutch"
-            "French":                 "French"
-            "German":                 "German"
-            "Italian":                "Italian"
-            "Japanese":               "Japanese"
-            "Korean":                 "Korean"
-            "Latin American Spanish": "LatinAmericanSpanish"
-            "Portuguese":             "Portuguese"
-            "Russian":                "Russian"
-            "Simplified Chinese":     "SimplifiedChinese"
-            "Spanish":                "Spanish"
-            "Taiwanese":              "Taiwanese"
-            "Traditional Chinese":    "TraditionalChinese"
-            "Brazilian Portuguese":   "BrazilianPortuguese"
-        ryujinx_region:
-          prompt: CHOOSE CONSOLE REGION
-          description: Choose your console region.
-          choices:
-            "Japan":     "Japan"
-            "USA":       "USA"
-            "Europe":    "Europe"
-            "Australia": "Australia"
-            "China":     "China"
-            "Korea":     "Korea"
-            "Taiwan":    "Taiwan"
-        ryujinx_timeoffset:
-          prompt: CHOOSE CONSOLE TIMEZONE
-          description: Choose your console UTC timezone.
-          choices:
-            "UTC-12": -12
-            "UTC-11": -11
-            "UTC-10": -10
-            "UTC-9":  -9
-            "UTC-8":  -8
-            "UTC-7":  -7
-            "UTC-6":  -6
-            "UTC-5":  -5
-            "UTC-4":  -4
-            "UTC-3":  -3
-            "UTC-2":  -2
-            "UTC-1":  -1
-            "UTC":    0
-            "UTC+1":  1
-            "UTC+2":  2
-            "UTC+3":  3
-            "UTC+4":  4
-            "UTC+5":  5
-            "UTC+6":  6
-            "UTC+7":  7
-            "UTC+8":  8
-            "UTC+9":  9
-            "UTC+10": 10
-            "UTC+11": 11
-            "UTC+12": 12
+  shared: [videomode]
 samcoupe:
   features: [padtokeyboard]
   shared: [videomode, hud, hud_corner]
@@ -10180,6 +10082,9 @@ xash3d_fwgs:
 xenia:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+xenia-canary:
+  features: []
+  shared: [videomode]
 yabausesa:
   features: [padtokeyboard]
   shared: [videomode]

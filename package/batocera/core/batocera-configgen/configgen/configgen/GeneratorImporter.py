@@ -483,7 +483,7 @@ def getGenerator(emulator):
         from generators.xemu.xemuGenerator import XemuGenerator
         return XemuGenerator()
 
-    if emulator == 'xenia':
+    if emulator == 'xenia' or emulator == 'xenia-canary':
         from generators.xenia.xeniaGenerator import XeniaGenerator
         return XeniaGenerator()
 

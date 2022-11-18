@@ -84,7 +84,6 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/display/xwayland/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/display/sway/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/display/swaybg/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/display/grim/Config.in"
   endmenu
 
   menu "Network"
@@ -342,6 +341,7 @@ menu "Emulators"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/vita3k/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xemu/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xenia/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xenia-canary/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/yabausesa/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/yuzu/Config.in"
   endmenu
