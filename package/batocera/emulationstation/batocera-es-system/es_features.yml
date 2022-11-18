@@ -1665,6 +1665,24 @@ libretro:
                         choices:
                             "Horizontal": horizontal
                             "Vertical":   vertical
+                    analog_to_dpad_atomiswave_p1:
+                        group:       CONTROLLER SETTINGS
+                        prompt:      ANALOG TO D-PAD TYPE P1
+                        description: Adds d-pad mapping to the analog stick (Controller 1).
+                        choices:
+                            "Left Analog (Auto)":    1
+                            "Right Analog (Auto)":   2
+                            "Left Analog (Forced)":  3
+                            "Right Analog (Forced)": 4
+                    analog_to_dpad_atomiswave_p2:
+                        group:       CONTROLLER SETTINGS
+                        prompt:      ANALOG TO D-PAD TYPE P2
+                        description: Adds d-pad mapping to the analog stick (Controller 2).
+                        choices:
+                            "Left Analog (Auto)":    1
+                            "Right Analog (Auto)":   2
+                            "Left Analog (Forced)":  3
+                            "Right Analog (Forced)": 4
             naomi:
                 cfeatures:
                     screen_rotation_naomi:
@@ -1673,6 +1691,24 @@ libretro:
                         choices:
                             "Horizontal": horizontal
                             "Vertical":   vertical
+                    analog_to_dpad_naomi_p1:
+                        group:       CONTROLLER SETTINGS
+                        prompt:      ANALOG TO D-PAD TYPE P1
+                        description: Adds d-pad mapping to the analog stick (Controller 1).
+                        choices:
+                            "Left Analog (Auto)":    1
+                            "Right Analog (Auto)":   2
+                            "Left Analog (Forced)":  3
+                            "Right Analog (Forced)": 4
+                    analog_to_dpad_naomi_p2:
+                        group:       CONTROLLER SETTINGS
+                        prompt:      ANALOG TO D-PAD TYPE P2
+                        description: Adds d-pad mapping to the analog stick (Controller 2).
+                        choices:
+                            "Left Analog (Auto)":    1
+                            "Right Analog (Auto)":   2
+                            "Left Analog (Forced)":  3
+                            "Right Analog (Forced)": 4
             naomigd:
                 cfeatures:
                     screen_rotation_naomi:
@@ -1681,6 +1717,24 @@ libretro:
                         choices:
                             "Horizontal": horizontal
                             "Vertical":   vertical
+                    analog_to_dpad_naomi_p1:
+                        group:       CONTROLLER SETTINGS
+                        prompt:      ANALOG TO D-PAD TYPE P1
+                        description: Adds d-pad mapping to the analog stick (Controller 1).
+                        choices:
+                            "Left Analog (Auto)":    1
+                            "Right Analog (Auto)":   2
+                            "Left Analog (Forced)":  3
+                            "Right Analog (Forced)": 4
+                    analog_to_dpad_naomi_p2:
+                        group:       CONTROLLER SETTINGS
+                        prompt:      ANALOG TO D-PAD TYPE P2
+                        description: Adds d-pad mapping to the analog stick (Controller 2).
+                        choices:
+                            "Left Analog (Auto)":    1
+                            "Right Analog (Auto)":   2
+                            "Left Analog (Forced)":  3
+                            "Right Analog (Forced)": 4
     flycast2021:
       features: [cheevos]
       shared: [autosave, use_guns]
@@ -1863,6 +1917,24 @@ libretro:
                         choices:
                             "Horizontal": horizontal
                             "Vertical":   vertical
+                    analog_to_dpad_atomiswave_p1:
+                        group:       CONTROLLER SETTINGS
+                        prompt:      ANALOG TO D-PAD TYPE P1
+                        description: Adds d-pad mapping to the analog stick (Controller 1).
+                        choices:
+                            "Left Analog (Auto)":    1
+                            "Right Analog (Auto)":   2
+                            "Left Analog (Forced)":  3
+                            "Right Analog (Forced)": 4
+                    analog_to_dpad_atomiswave_p2:
+                        group:       CONTROLLER SETTINGS
+                        prompt:      ANALOG TO D-PAD TYPE P2
+                        description: Adds d-pad mapping to the analog stick (Controller 2).
+                        choices:
+                            "Left Analog (Auto)":    1
+                            "Right Analog (Auto)":   2
+                            "Left Analog (Forced)":  3
+                            "Right Analog (Forced)": 4
             naomi:
                 cfeatures:
                     screen_rotation_naomi:
@@ -1871,6 +1943,24 @@ libretro:
                         choices:
                             "Horizontal": horizontal
                             "Vertical":   vertical
+                    analog_to_dpad_naomi_p1:
+                        group:       CONTROLLER SETTINGS
+                        prompt:      ANALOG TO D-PAD TYPE P1
+                        description: Adds d-pad mapping to the analog stick (Controller 1).
+                        choices:
+                            "Left Analog (Auto)":    1
+                            "Right Analog (Auto)":   2
+                            "Left Analog (Forced)":  3
+                            "Right Analog (Forced)": 4
+                    analog_to_dpad_naomi_p2:
+                        group:       CONTROLLER SETTINGS
+                        prompt:      ANALOG TO D-PAD TYPE P2
+                        description: Adds d-pad mapping to the analog stick (Controller 2).
+                        choices:
+                            "Left Analog (Auto)":    1
+                            "Right Analog (Auto)":   2
+                            "Left Analog (Forced)":  3
+                            "Right Analog (Forced)": 4
             naomigd:
                 cfeatures:
                     screen_rotation_naomi:
@@ -1879,6 +1969,24 @@ libretro:
                         choices:
                             "Horizontal": horizontal
                             "Vertical":   vertical
+                    analog_to_dpad_naomi_p1:
+                        group:       CONTROLLER SETTINGS
+                        prompt:      ANALOG TO D-PAD TYPE P1
+                        description: Adds d-pad mapping to the analog stick (Controller 1).
+                        choices:
+                            "Left Analog (Auto)":    1
+                            "Right Analog (Auto)":   2
+                            "Left Analog (Forced)":  3
+                            "Right Analog (Forced)": 4
+                    analog_to_dpad_naomi_p2:
+                        group:       CONTROLLER SETTINGS
+                        prompt:      ANALOG TO D-PAD TYPE P2
+                        description: Adds d-pad mapping to the analog stick (Controller 2).
+                        choices:
+                            "Left Analog (Auto)":    1
+                            "Right Analog (Auto)":   2
+                            "Left Analog (Forced)":  3
+                            "Right Analog (Forced)": 4
     freeintv:
       features: [padtokeyboard, cheevos]
       shared: [autosave]

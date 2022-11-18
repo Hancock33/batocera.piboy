@@ -2113,7 +2113,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('scummvm_speed_hack', '"enabled"')
 
     # Sega Dreamcast / Atomiswave / Naomi
-    if (system.config['core'] == 'flycast-next') or (system.config['core'] == 'flycast2021') or (system.config['core'] == 'flycast2022'):
+    if (system.config['core'] == 'flycast') or (system.config['core'] == 'flycast2021'):
         # Synchronous rendering
         if system.isOptSet('reicast_synchronous_rendering'):
             coreSettings.save('reicast_synchronous_rendering', system.config['reicast_synchronous_rendering'])
