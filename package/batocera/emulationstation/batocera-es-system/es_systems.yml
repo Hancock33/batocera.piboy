@@ -1472,7 +1472,6 @@ odyssey2:
   hardware: console
   extensions: [bin, zip, 7z]
   path:       o2em
-  theme:      odyssey2
   emulators:
     libretro:
       o2em: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_O2EM] }
@@ -1585,14 +1584,14 @@ apple2:
   manufacturer: Apple
   release: 1977
   hardware: computer
-  extensions: [nib, do, po, dsk, mfi, dfi, rti, edd, woz, wav, zip, 7z, chd, hdv, 2mg]
+  extensions: [nib, do, po, dsk, mfi, dfi, rti, edd, woz, wav, zip, 7z]
   emulators:
     libretro:
       mame: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
     mame:
-      mame: { requireAnyOf: [BR2_PACKAGE_MAME], incompatible_extensions: [chd, hdv, 2mg] }
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
     gsplus:
-      gsplus: { requireAnyOf: [BR2_PACKAGE_GSPLUS], incompatible_extensions: [mfi, dfi, rti, edd, woz, wav, zip, 7z, chd, hdv, 2mg] }
+      gsplus: { requireAnyOf: [BR2_PACKAGE_GSPLUS], incompatible_extensions: [mfi, dfi, rti, edd, woz, wav, zip, 7z] }
 
 saturn:
   name:       Saturn
@@ -3654,6 +3653,8 @@ xbox360:
   emulators:
     xenia:
       xenia: { requireAnyOf: [BR2_PACKAGE_XENIA] }
+    xenia-canary:
+      xenia-canary: { requireAnyOf: [BR2_PACKAGE_XENIA_CANARY] }
   comment_en: |
     Currently Xenia runs under Wine and therefore is currently restricted to run using Vulkan only.
     Unfortunately the Vulkan implementation for Xenia is somewhat behind D3D12 in terms on graphics compatibility.
