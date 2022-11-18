@@ -2424,6 +2424,46 @@ msgctxt "game_options"
 msgid "SCREEN ORIENTATION"
 msgstr "ORIENTACJA EKRANU"
 
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
+msgctxt "game_options"
+msgid "Adds d-pad mapping to the analog stick (Controller 1)."
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
+msgctxt "game_options"
+msgid "ANALOG TO D-PAD TYPE P1"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
+msgctxt "game_options"
+msgid "Left Analog (Auto)"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
+msgctxt "game_options"
+msgid "Right Analog (Auto)"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
+msgctxt "game_options"
+msgid "Left Analog (Forced)"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
+msgctxt "game_options"
+msgid "Right Analog (Forced)"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
+msgctxt "game_options"
+msgid "Adds d-pad mapping to the analog stick (Controller 2)."
+msgstr ""
+
+#. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
+msgctxt "game_options"
+msgid "ANALOG TO D-PAD TYPE P2"
+msgstr ""
+
 #. TRANSLATION: libretro/fuse, hatari
 msgctxt "game_options"
 msgid "MODEL"
