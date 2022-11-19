@@ -55,7 +55,7 @@ def generateMAMEConfigs(playersControllers, system, rom):
     else:
         corePath = system.config['core']
 
-    if system.name in [ 'mame', 'neogeo', 'lcdgames', 'plugnplay' ]:
+    if system.name in [ 'mame', 'neogeo', 'lcdgames', 'plugnplay', 'acclaim', 'alg', 'alphadenshi', 'amcoe', 'atari', 'atlus', 'banpresto', 'cave', 'centurye', 'cinematronics', 'comad', 'cps1', 'cps2', 'cps3', 'dataeast', 'dynax', 'eighting', 'exidy', 'gaelco', 'gottlieb', 'igs', 'incredibletech', 'irem', 'jaleco', 'kaneko', 'konami', 'midway', 'mitchell', 'namco', 'nichibutsu', 'nintendo', 'nmk', 'pgm', 'playchoice', 'psikyo', 'sammy', 'sega', 'seibu', 'semicom', 'seta', 'snk', 'taito', 'technos', 'tecmo', 'toaplan', 'unico', 'universal', 'visco' ]:
         # Set up command line for basic systems
         # ie. no media, softlists, etc.
         if system.getOptBoolean("customcfg"):
