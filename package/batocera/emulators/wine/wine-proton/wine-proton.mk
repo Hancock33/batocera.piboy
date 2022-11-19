@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-WINE_PROTON_VERSION = proton-wine-7.0-5
+WINE_PROTON_VERSION = 8dabf336548bee8ea19bd66d551d0ad32005c7b9
 WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
 WINE_PROTON_DEPENDENCIES = host-bison host-flex host-wine-proton
@@ -25,7 +25,7 @@ endef
 WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_CREATE_WINE_FOLDER
 
 # Wine needs its own directory structure and tools for cross compiling
-WINE_PROTON_CONF_OPTS = LDFLAGS="-Wl,--unresolved-symbols=ignore-all" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
+WINE_PROTON_CONF_OPTS = LDFLAGS="-Wl,--unresolved-symbols=ignore-all" CPPFLAGS="-DMPG123_NO_LARGENAME=1" ac_cv_header_resolv_h="no" \
 	--with-wine-tools=../host-wine-proton-$(WINE_PROTON_VERSION) \
 	--disable-tests \
 	--disable-win16 \
