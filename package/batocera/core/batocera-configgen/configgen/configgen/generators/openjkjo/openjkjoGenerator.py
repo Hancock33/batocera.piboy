@@ -5,6 +5,7 @@ from os import path
 import Command
 from generators.Generator import Generator
 import controllersConfig
+import utils.videoMode as videoMode
 
 jkjo_src = "/usr/share/game_assets/openjkjo"
 jkjo_dst = "/userdata/roms/ports/openjkjo"
@@ -12,7 +13,7 @@ jkjo_dst = "/userdata/roms/ports/openjkjo"
 class OpenjkjoGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ["openjo_sp", "+set", "fs_basepath", "/userdata/roms/ports/openjkjo", "+set", "r_mode", "-1", "+set", "r_customwidth", "640", "+set", "r_customheight", "480", "+set", "r_swapInterval", "1", "+set", "com_jk2", "1"]
+        commandArray = ["openjo_sp", "+set", "fs_basepath", "/userdata/roms/ports/openjkjo", "+set", "r_mode", "-1", "+set" , "r_fullscreen", "1", "+set", "r_customwidth", str(gameResolution["width"]), "+set", "r_customheight",str(gameResolution["height"]), "+set", "r_swapInterval", "1", "+set", "com_jk2", "1"]
 
         shutil.copytree(jkjo_src, jkjo_dst, dirs_exist_ok=True)
 
