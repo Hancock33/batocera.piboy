@@ -1,0 +1,26 @@
+diff --git a/SamTFE/Sources/SeriousSam/SeriousSam.cpp b/SamTFE/Sources/SeriousSam/SeriousSam.cpp
+index 425e9df..e39a9a3 100755
+--- a/SamTFE/Sources/SeriousSam/SeriousSam.cpp
++++ b/SamTFE/Sources/SeriousSam/SeriousSam.cpp
+@@ -94,7 +94,7 @@ extern INDEX sam_bWideScreen = FALSE;
+ extern FLOAT sam_fPlayerOffset = 0.0f;
+ 
+ // display mode settings
+-extern INDEX sam_bFullScreenActive = FALSE;
++extern INDEX sam_bFullScreenActive = TRUE;
+ extern INDEX sam_iScreenSizeI = 1024;  // current size of the window
+ extern INDEX sam_iScreenSizeJ = 768;  // current size of the window
+ extern INDEX sam_iAspectSizeI = 16;  //
+diff --git a/SamTSE/Sources/SeriousSam/SeriousSam.cpp b/SamTSE/Sources/SeriousSam/SeriousSam.cpp
+index 425e9df..e39a9a3 100755
+--- a/SamTSE/Sources/SeriousSam/SeriousSam.cpp
++++ b/SamTSE/Sources/SeriousSam/SeriousSam.cpp
+@@ -94,7 +94,7 @@ extern INDEX sam_bWideScreen = FALSE;
+ extern FLOAT sam_fPlayerOffset = 0.0f;
+ 
+ // display mode settings
+-extern INDEX sam_bFullScreenActive = FALSE;
++extern INDEX sam_bFullScreenActive = TRUE;
+ extern INDEX sam_iScreenSizeI = 1024;  // current size of the window
+ extern INDEX sam_iScreenSizeJ = 768;  // current size of the window
+ extern INDEX sam_iAspectSizeI = 16;  //
