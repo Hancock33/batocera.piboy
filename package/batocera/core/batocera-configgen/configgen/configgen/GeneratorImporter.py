@@ -75,7 +75,7 @@ def getGenerator(emulator):
         from generators.dolphin.dolphinGenerator import DolphinGenerator
         return DolphinGenerator()
 
-    if emulator == 'dolphin_tr        iforce':
+    if emulator == 'dolphin_triforce':
         from generators.dolphin_triforce.dolphinTriforceGenerator import DolphinTriforceGenerator
         return DolphinTriforceGenerator()
 
