@@ -45,6 +45,7 @@
 - flycast emulators to v2.0
 - dosbox to v0.78.1
 - dosbox-x to v0.84.3
+- dosbox-staging to v0.79.1
 - PPSSPP & lr-PPSSPP to v1.13.2
 - nvidia production driver to 520.56.06
 - nvidia legacy driver to 470.141.03
@@ -94,8 +95,8 @@
 - long start times with vulkan in some cases
 - Sony touchpad for Mame
 - od-commander fixed for several screen resolutions
-### Dev
-- buildroot upgrade to 2022.08.1
+### Dev  
+- buildroot upgrade to 2022.08.2
 - odroidxu4 upgrade kernel to 5.19.17
 - rpi1 image renamed to bcm2835
 - rpi2 image renamed to bcm2836
@@ -105,7 +106,7 @@
 - libva updated to 2.16
 - rtl8192eu update to Nov 5, 2022
 - rtl8723ds update to Nov 4, 2022
-- mesa3d to 22.2.3
+- mesa3d to 22.2.4
 - uinput-joystick update to Feb 11, 2022
 
 # 2022/09/20 - batocera.linux 35 - Monarch Butterfly
