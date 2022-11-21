@@ -1,6 +1,6 @@
 config BR2_PACKAGE_VIRTUALJAGUAR
     bool "virtualjaguar"
-    depends on BR2_PACKAGE_SDL
+    select BR2_PACKAGE_SDL2_COMPAT
 
       help
         Virtual Jaguar, an Atari Jaguar emulator, with integrated debugger

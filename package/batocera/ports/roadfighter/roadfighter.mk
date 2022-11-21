@@ -6,7 +6,7 @@
 # Version: Commits on Aug 01, 2022
 ROADFIGHTER_VERSION = fd3e1ec14d6b84c408dca50081da0a61f8a4f73d
 ROADFIGHTER_SITE = $(call github,ptitSeb,roadfighter,$(ROADFIGHTER_VERSION))
-ROADFIGHTER_DEPENDENCIES = sdl sdl_image sdl_mixer sdl_sound sdl_ttf
+ROADFIGHTER_DEPENDENCIES = sdl2-compat
 
 define ROADFIGHTER_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile
