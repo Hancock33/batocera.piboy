@@ -233,6 +233,8 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
             system.config["sdlvsync"] = '1'
         os.environ.update({'SDL_RENDER_VSYNC': system.config["sdlvsync"]})
 
+        os.environ.update({'PIPEWIRE_LATENCY': '1024/48000'})
+
         # run a script before emulator starts
         callExternalScripts("/usr/share/batocera/configgen/scripts", "gameStart", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
         callExternalScripts("/userdata/system/scripts", "gameStart", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
