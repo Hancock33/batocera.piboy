@@ -3,7 +3,6 @@
 # retroarch
 #
 ################################################################################
-
 # Version: Commits on Nov 23, 2022
 RETROARCH_VERSION = 16e0319e2e1c6535947e0a41e1946e770a1f9426
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
