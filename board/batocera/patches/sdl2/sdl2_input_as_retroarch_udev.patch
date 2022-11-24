@@ -1,8 +1,8 @@
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
-index 307dd5642..7c0167d28 100644
+index b15cc91..934afa7 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
-@@ -979,7 +979,7 @@ ConfigJoystick(SDL_Joystick *joystick, int fd)
+@@ -641,7 +641,7 @@ ConfigJoystick(SDL_Joystick * joystick, int fd)
          (ioctl(fd, EVIOCGBIT(EV_REL, sizeof(relbit)), relbit) >= 0)) {
  
          /* Get the number of buttons, axes, and other thingamajigs */
@@ -10,4 +10,4 @@ index 307dd5642..7c0167d28 100644
 +      for (i = 0; i < KEY_MAX; ++i) {
              if (test_bit(i, keybit)) {
  #ifdef DEBUG_INPUT_EVENTS
-                 SDL_Log("Joystick has button: 0x%x\n", i);
+                 printf("Joystick has button: 0x%x\n", i);
