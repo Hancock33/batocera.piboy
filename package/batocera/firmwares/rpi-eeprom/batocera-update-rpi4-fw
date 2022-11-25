@@ -21,7 +21,7 @@ case $yn in
 esac
 mount -o remount,rw /boot
 /usr/bin/rpi-eeprom-update -a
-#rpi-eeprom-digest -i /lib/firmware/raspberrypi/bootloader/default/pieeprom-2022-11-04.bin -o /boot/pieeprom.sig
+#rpi-eeprom-digest -i /lib/firmware/raspberrypi/bootloader/default/pieeprom-2022-11-25.bin -o /boot/pieeprom.sig
 #cp /lib/firmware/raspberrypi/bootloader/default/pieeprom-2022-11-04.bin /boot/pieeprom.upd
 #chmod -f go+r /boot/pieeprom.upd /boot/pieeprom.sig
 #echo 'Please reboot your Raspberry Pi4'
