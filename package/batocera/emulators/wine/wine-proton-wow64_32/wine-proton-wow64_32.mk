@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-WINE_PROTON_WOW64_32_VERSION = proton-wine-7.0-5
+WINE_PROTON_WOW64_32_VERSION = 1c488819eefdad6a4f1d53bb01f76fedec3df528
 WINE_PROTON_WOW64_32_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_WOW64_32_VERSION))
 WINE_PROTON_WOW64_32_LICENSE = LGPL-2.1+
 WINE_PROTON_WOW64_32_DEPENDENCIES = host-bison host-flex host-wine-proton
@@ -25,7 +25,7 @@ endef
 WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_CREATE_WINE_FOLDER
 
 # Wine needs its own directory structure and tools for cross compiling
-WINE_PROTON_WOW64_32_CONF_OPTS = CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
+WINE_PROTON_WOW64_32_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
 	--with-wine-tools=../host-wine-proton-$(WINE_PROTON_WOW64_32_VERSION) \
 	--disable-tests \
 	--disable-win16 \
@@ -137,7 +137,7 @@ else
 WINE_PROTON_WOW64_32_CONF_OPTS += --without-gnutls
 endif
 
-ifeq ($(BR2_PACKAGE_GST_PLUGINS_BASE),y)
+ifeq ($(BR2_PACKAGE_GST1_PLUGINS_BASE),y)
 WINE_PROTON_WOW64_32_CONF_OPTS += --with-gstreamer
 WINE_PROTON_WOW64_32_DEPENDENCIES += gst1-plugins-base
 else
