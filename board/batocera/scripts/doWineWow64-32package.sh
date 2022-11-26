@@ -152,6 +152,7 @@ cp -pr "${G_TARGETDIR}/usr/lib/lib"*"krb5"*"so"*  "${TMPOUT}/lib32/" || exit 1
 cp -pr "${G_TARGETDIR}/lib/libnss_"*"so"*  "${TMPOUT}/lib32/" || exit 1
 cp -pr "${G_TARGETDIR}/usr/lib/libpulse"*"so"* "${TMPOUT}/lib32/" || exit 1
 cp -pr "${G_TARGETDIR}/usr/lib/libpipewire"*"so"* "${TMPOUT}/lib32/" || exit 1
+cp -pr "${G_TARGETDIR}/usr/lib/libSDL"*"so"* "${TMPOUT}/lib32/" || exit 1
 mkdir -p "${TMPOUT}/lib32/alsa-lib" || exit 1
 cp -pr "${G_TARGETDIR}/usr/lib/alsa-lib/libasound_module_"*".so" "${TMPOUT}/lib32/alsa-lib" || exit 1
 
@@ -171,7 +172,11 @@ echo " wine helper binaries"
 mkdir -p "${TMPOUT}/usr/bin32"				|| exit 1
 #cp -p "${G_TARGETDIR}/usr/bin/cabextract"          "${TMPOUT}/usr/bin32/" || exit 1
 cp -p "${G_TARGETDIR}/usr/bin/gst"*          "${TMPOUT}/usr/bin32/" || exit 1
-
+cp -p "${G_TARGETDIR}/usr/bin/sorr"*         "${TMPOUT}/usr/bin32/" || exit 1
+cp -p "${G_TARGETDIR}/usr/bin/box86"*        "${TMPOUT}/usr/bin32/" || exit 1
+#box86 libraries
+mkdir -p "${TMPOUT}/usr/share" || exit 1
+cp -a "${G_TARGETDIR}/usr/share/box86"*      "${TMPOUT}/usr/share/" || exit 1
 # dri
 echo "dri..."
 for i in "${G_TARGETDIR}/usr/lib/dri/"*.so
