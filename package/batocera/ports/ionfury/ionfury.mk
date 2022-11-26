@@ -14,8 +14,9 @@ IONFURY_LICENSE = GPL-2.0
 # Some build options are documented here: https://wiki.eduke32.com/wiki/Building_EDuke32_on_Linux
 IONFURY_BUILD_ARGS = STARTUP_WINDOW=0
 IONFURY_BUILD_ARGS += HAVE_GTK2=0
+IONFURY_BUILD_ARGS += USE_OPENGL=0 LTO=0
+
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
-    IONFURY_BUILD_ARGS += USE_OPENGL=0 LTO=0
     IONFURY_BUILD_ARGS += OPTOPT="-mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math -w"
 endif
 
