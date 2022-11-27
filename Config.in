@@ -56,6 +56,7 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/firmwares/firmware-wlan-aml/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/firmwares/rpi-eeprom/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/firmwares/rpi-userland-batocera/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/firmwares/sound-open-firmware/Config.in"
   endmenu
 
   menu "GPU"
