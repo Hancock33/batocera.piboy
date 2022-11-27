@@ -16,8 +16,6 @@ define VCMI_EVMAPY
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/vcmi/vcmi.keys $(TARGET_DIR)/usr/share/evmapy
-	# configs
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/vcmi/*.json $(TARGET_DIR)/usr/share/vcmi/
 endef
 
 VCMI_POST_INSTALL_TARGET_HOOKS += VCMI_EVMAPY

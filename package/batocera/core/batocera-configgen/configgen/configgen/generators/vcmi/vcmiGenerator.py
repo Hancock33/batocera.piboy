@@ -5,16 +5,17 @@ from os import path
 import Command
 from generators.Generator import Generator
 import controllersConfig
+import utils.videoMode as videoMode
 
 class VcmiGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ["vcmiclient"]
+        gameResolution = videoMode.getCurrentResolution()
 
         if os.path.isfile('/tmp/piboy'):
-            shutil.copyfile('/usr/share/vcmi/settings_piboy.json', '/userdata/roms/ports/vcmi/settings.json')
+            commandArray = ["vcmiclient", "--video-width", str(gameResolution["width"]), "--video-height", str(gameResolution["height"]), "--video-fullscreen", "true", "--video-realFullscreen", "false"]
         else:
-            shutil.copyfile('/usr/share/vcmi/settings.json', '/userdata/roms/ports/vcmi/settings.json')
+            commandArray = ["vcmiclient", "--video-width", str(gameResolution["width"]), "--video-height", str(gameResolution["height"]), "--video-fullscreen", "false", "--video-realFullscreen", "false"]
 
         return Command.Command(
             array=commandArray,
