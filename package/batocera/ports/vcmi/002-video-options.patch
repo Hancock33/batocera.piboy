@@ -1,0 +1,41 @@
+diff --git a/client/CMT.cpp b/client/CMT.cpp
+index 26459e815..ccbb9c2a5 100644
+--- a/client/CMT.cpp
++++ b/client/CMT.cpp
+@@ -201,8 +201,11 @@ int main(int argc, char * argv[])
+ 		("donotstartserver,d","do not attempt to start server and just connect to it instead server")
+ 		("serverport", po::value<si64>(), "override port specified in config file")
+ 		("saveprefix", po::value<std::string>(), "prefix for auto save files")
+-		("savefrequency", po::value<si64>(), "limit auto save creation to each N days");
+-
++		("savefrequency", po::value<si64>(), "limit auto save creation to each N days")
++		("video-fullscreen", po::value<bool>(), "Full Screen")
++		("video-realFullscreen", po::value<bool>(), "Real Full Screen")
++		("video-width", po::value<int>(), "Video Width")
++		("video-height", po::value<int>(), "Video Height");
+ 	if(argc > 1)
+ 	{
+ 		try
+@@ -1061,7 +1064,7 @@ static bool recreateWindow(int w, int h, int bpp, bool fullscreen, int displayIn
+ #endif
+ 
+ 	bool bufOnScreen = (screenBuf == screen);
+-	bool realFullscreen = settings["video"]["realFullscreen"].Bool();
++	bool realFullscreen = vm["video-realFullscreen"].as<bool>();
+ 
+ 	/* match best rendering resolution */
+ 	int renderWidth = 0, renderHeight = 0;
+@@ -1305,6 +1308,13 @@ static bool recreateWindow(int w, int h, int bpp, bool fullscreen, int displayIn
+ //used only once during initialization
+ static void setScreenRes(int w, int h, int bpp, bool fullscreen, int displayIndex, bool resetVideo)
+ {
++	if(vm.count("video-width"))
++		w = vm["video-width"].as<int>();
++	if(vm.count("video-height"))
++		h = vm["video-height"].as<int>();
++	if(vm.count("video-fullscreen"))
++		fullscreen = vm["video-fullscreen"].as<bool>();
++
+ 	if(!recreateWindow(w, h, bpp, fullscreen, displayIndex))
+ 	{
+ 		throw std::runtime_error("Requested screen resolution is not available\n");
