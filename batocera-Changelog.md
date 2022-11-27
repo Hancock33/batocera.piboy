@@ -25,7 +25,7 @@
     - *.ram to *.bkr
     - *-ext512K.ram to *.bcr
     - You can continue to use the old save format by entering the following line into batocera.conf: saturn.kronos_use_beetle_saves = disabled
-- cemu to native linux version (v2.0.10)
+- cemu to native linux version (v2.0.18)
 - cemu fixes for controllers
 - new Apple 2 MAME options - joystick & alternate models, (LR-MAME & Standalone), hard drive images (Standalone)
 ### Updated
@@ -60,7 +60,7 @@
 - supermodel to Nov 14, 2022 build
 - tsugaru to v20220702
 - vice to 3.6.1
-- linux kernel for x86_64 to 6.0.7
+- linux kernel for x86_64 to 6.0.10
 - daphne emulator hypseus-singe to v2.10.1 (now uses SDL controller)
 - amiberry to v5.4
 - mame to v0.248
