@@ -7753,6 +7753,12 @@ pcsx2:
                 "OpenGL":      12
                 "Software":    13
                 "Vulkan":      14
+        avx2:
+            prompt: USE AVX2
+            description: AVX2 is the fastest but not all computers can run it.
+            choices:
+                "Off":      0
+                "On":       1
         fullboot:
             prompt:      SHOW BIOS BOOTLOGO
             description: Some games have issues when the animation is shown, others require it.

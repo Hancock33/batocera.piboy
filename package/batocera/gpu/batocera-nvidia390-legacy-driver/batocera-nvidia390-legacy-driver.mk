@@ -159,7 +159,7 @@ endef
 # batocera install 32bit libraries
 define BATOCERA_NVIDIA390_LEGACY_DRIVER_INSTALL_32
 	$(foreach lib,$(BATOCERA_NVIDIA390_LEGACY_DRIVER_32),\
-		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/lib32/$(notdir $(lib))
+		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/usr/lib32/$(notdir $(lib))
 	)
 endef
 
