@@ -1,5 +1,6 @@
 #!/bin/bash
 clear
+v=2022-11-25
 echo '--------------------------------------------------------'
 echo
 echo 'You are about to update the Raspberry Pi4 Firmware'
@@ -20,8 +21,7 @@ case $yn in
 		exit 1;;
 esac
 mount -o remount,rw /boot
-/usr/bin/rpi-eeprom-update -a
-#rpi-eeprom-digest -i /lib/firmware/raspberrypi/bootloader/default/pieeprom-2022-11-25.bin -o /boot/pieeprom.sig
-#cp /lib/firmware/raspberrypi/bootloader/default/pieeprom-2022-11-04.bin /boot/pieeprom.upd
-#chmod -f go+r /boot/pieeprom.upd /boot/pieeprom.sig
-#echo 'Please reboot your Raspberry Pi4'
+rpi-eeprom-digest -i /lib/firmware/raspberrypi/bootloader/default/pieeprom-$v.bin -o /boot/pieeprom.sig
+cp /lib/firmware/raspberrypi/bootloader/default/pieeprom-$v.bin /boot/pieeprom.upd
+chmod -f go+r /boot/pieeprom.upd /boot/pieeprom.sig
+echo 'Please reboot your Raspberry Pi4'
