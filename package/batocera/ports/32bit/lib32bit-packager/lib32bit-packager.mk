@@ -44,19 +44,19 @@ define ARCHIVE_X86
 	cp -a $(TARGET_DIR)/usr/share/box86                      $(DEST_DIR)/usr/share
 	cp -a $(TARGET_DIR)/usr/share/vulkan                     $(DEST_DIR)/usr/share
 	#cp -a $(TARGET_DIR)/usr/share/gst-plugins-base           $(DEST_DIR)/usr/share
-	#cp -a $(TARGET_DIR)/usr/share/gstreamer-                 $(DEST_DIR)/usr/share
+	#cp -a $(TARGET_DIR)/usr/share/gstreamer-*                $(DEST_DIR)/usr/share
 	cp -a $(TARGET_DIR)/usr/wine                             $(DEST_DIR)/usr	
-	cp -a $(TARGET_DIR)/usr/lib                              $(DEST_DIR)/lib32
-	cp -a $(TARGET_DIR)/lib/*                                $(DEST_DIR)/lib32
-	ln -sf libblkid.so.1                                     $(DEST_DIR)/lib32/libblkid.so
-	ln -sf libmount.so.1                                     $(DEST_DIR)/lib32/libmount.so
-	ln -sf libsmartcols.so.1                                 $(DEST_DIR)/lib32/libsmartcols.so
-	ln -sf libudev.so.1                                      $(DEST_DIR)/lib32/libudev.so
-	ln -sf libuuid.so.1                                      $(DEST_DIR)/lib32/libuuid.so
-	ln -sf /lib32                                            $(DEST_DIR)/usr/lib32
-	ln -sf /lib32/ld-linux.so.2                              $(DEST_DIR)/lib/ld-linux.so.2
+	cp -a $(TARGET_DIR)/usr/lib                              $(DEST_DIR)/usr/lib32
+	cp -a $(TARGET_DIR)/lib/*                                $(DEST_DIR)/usr/lib32
+	ln -sf libblkid.so.1                                     $(DEST_DIR)/usr/lib32/libblkid.so
+	ln -sf libmount.so.1                                     $(DEST_DIR)/usr/lib32/libmount.so
+	ln -sf libsmartcols.so.1                                 $(DEST_DIR)/usr/lib32/libsmartcols.so
+	ln -sf libudev.so.1                                      $(DEST_DIR)/usr/lib32/libudev.so
+	ln -sf libuuid.so.1                                      $(DEST_DIR)/usr/lib32/libuuid.so
+	ln -sf /usr/lib32                                        $(DEST_DIR)/lib32
+	ln -sf /usr/lib32/ld-linux.so.2                          $(DEST_DIR)/lib/ld-linux.so.2
 	
-	rm -rf $(DEST_DIR)/lib32/{gconv,glslang,python3.10,terminfo,udev,xorg}
+	rm -rf $(DEST_DIR)/usr/lib32/{gconv,glslang,python3.10,terminfo,udev,xorg}
 	cd $(DEST_DIR) && tar -Jcf $(DEST_DIR).tar.xz .
 	rm -r $(DEST_DIR)
 endef
