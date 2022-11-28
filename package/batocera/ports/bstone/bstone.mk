@@ -3,7 +3,7 @@
 # bstone
 #
 ################################################################################
-# Version: Commits on Nov 24, 2022
+# Version: Commits on Sept 17, 2022
 BSTONE_VERSION = v1.2.12
 BSTONE_SITE = $(call github,bibendovsky,bstone,$(BSTONE_VERSION))
 
