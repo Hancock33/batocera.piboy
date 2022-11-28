@@ -8,7 +8,10 @@ import controllersConfig
 class OpentyrianGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ["opentyrian", "-t" "/usr/share/opentyrian/data/", "-j"]
+        if (rom.__contains__("2000")):
+            commandArray = ["opentyrian2000", "-t" "/usr/share/tyrian2000/", "-j"]
+        else:
+            commandArray = ["opentyrian", "-t" "/usr/share/opentyrian/data/", "-j"]
 
         return Command.Command(
             array=commandArray,
