@@ -61,7 +61,7 @@ index 1108c843..8101a95c 100644
    this->filename = home_dir + input_trace_filename + ".config";
  
 diff --git a/yabause/src/retro_arena/main.cpp b/yabause/src/retro_arena/main.cpp
-index 39029508..79552585 100644
+index 39029508..592c8cc6 100644
 --- a/yabause/src/retro_arena/main.cpp
 +++ b/yabause/src/retro_arena/main.cpp
 @@ -75,7 +75,7 @@ static char last_state_filename[256] = "\0";
@@ -73,23 +73,7 @@ index 39029508..79552585 100644
  static char cdpath[256] = ""; ///home/pigaming/RetroPie/roms/saturn/nights.cue";
  //static char cdpath[256] = "/home/pigaming/RetroPie/roms/saturn/gd.cue";
  //static char cdpath[256] = "/home/pigaming/RetroPie/roms/saturn/Virtua Fighter Kids (1996)(Sega)(JP).ccd";
-@@ -154,6 +154,7 @@ static SDL_Window* wnd;
- static SDL_GLContext glc;
- int g_EnagleFPS = 0;
- int g_resolution_mode = 0;
-+int g_rotate_mode = 0;
- int g_rotate_resolution_mode = 0;
- int g_keep_aspect_rate = 0;
- int g_scsp_sync = 1;
-@@ -256,6 +257,7 @@ int yabauseinit()
- #else
-   yinit.scsp_main_mode = 1;
- #endif
-+  yinit.rbg_resolution_mode = pre.getInt( "Rotate screen" ,g_rotate_mode);
-   yinit.rbg_resolution_mode = pre.getInt( "Rotate screen resolution" ,g_rotate_resolution_mode);
- #if defined(__JETSON__)
-   yinit.rbg_use_compute_shader = pre.getBool( "Use compute shader" , true);
-@@ -290,12 +292,12 @@ int main(int argc, char** argv)
+@@ -290,12 +290,12 @@ int main(int argc, char** argv)
  
    // Inisialize home directory
    std::string home_dir = getenv("HOME");
@@ -104,30 +88,23 @@ index 39029508..79552585 100644
    strcpy( buppath, bckup_dir.c_str() );
    strcpy( s_savepath, home_dir.c_str() );
    g_keymap_filename = home_dir + "keymapv2.json";
-@@ -331,6 +333,9 @@ int main(int argc, char** argv)
-     }
- 		else if(( x == "-r" || x == "--resolution_mode") && (i+1<all_args.size() ) ) {
-       g_resolution_mode = std::stoi( all_args[i+1] );
-+    }
-+		else if(( x == "-rm" || x == "--rotate_mode") && (i+1<all_args.size() ) ) {
-+      g_rotate_mode = std::stoi( all_args[i+1] );
-     }
- 		else if(( x == "-rr" || x == "--rotate_resolution_mode") && (i+1<all_args.size() ) ) {
-       g_rotate_resolution_mode = std::stoi( all_args[i+1] );
-@@ -354,6 +359,7 @@ int main(int argc, char** argv)
-   // Init Preference
-   Preference * p = new Preference(cdpath);
-   p->getInt("Resolution",g_resolution_mode);
-+  p->getInt("Rotate screen",g_rotate_mode);
-   p->getInt("Rotate screen resolution",g_rotate_resolution_mode);
-   p->getInt("Aspect rate",g_keep_aspect_rate);
-   p->getBool("Rotate screen",false);
-@@ -601,7 +607,7 @@ int main(int argc, char** argv)
+@@ -401,8 +401,8 @@ int main(int argc, char** argv)
+ 		SDL_GL_SetAttribute(SDL_GL_ACCELERATED_VISUAL, 1);
+ 
+ #if defined(__PC__)
+-  int width = 1280;
+-  int height = 720;
++  int width = dsp.w;
++  int height = dsp.h;
+   wnd = SDL_CreateWindow("Yaba Snashiro", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+       width, height, SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN );
+ #else
+@@ -601,7 +601,7 @@ int main(int argc, char** argv)
          if( ret == 0 ){
            char pngname[256];
            snprintf(pngname,256,"%s/%s_%d.png", s_savepath, cdip->itemnum, e.user.code);
 -          fs::copy(tmpfilename, pngname, fs::copy_options::overwrite_existing );
-+           system((std::string("cp -f ") + tmpfilename + " " + pngname).c_str()); 
++           system((std::string("cp -f ") + tmpfilename + " " + pngname).c_str());
          }
          hideMenuScreen();
        }
