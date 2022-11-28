@@ -1,18 +1,24 @@
 #!/bin/bash
+V=2022-11-25
+RED="\e[1;31m"
+GREEN="\e[1;32m"
+BLUE="\e[1;34m"
+ENDCOLOR="\e[0m"
 clear
-v=2022-11-25
-echo '--------------------------------------------------------'
-echo
+echo '-----------------------RPI4 Update----------------------'
 echo 'You are about to update the Raspberry Pi4 Firmware'
 echo 'This can be Dangerous and could potentially brick your'
 echo 'RPI if not done correctly'
 echo 
 echo 'Please enusre your RPI is connected to AC power before'
 echo 'proceeding with the update process.'
-echo
-echo '--------------------------------------------------------'
+echo -e '---------------------Current Version--------------------'${GREEN}
+vcgencmd bootloader_version &&
+echo -e ${ENDCOLOR}'---------------------Update Version---------------------'${BLUE}
+echo $V
+echo -e ${ENDCOLOR}'--------------------------------------------------------'${RED}
 read -p "Do you want to proceed? (yes/no)" yn
-
+echo -e ${ENDCOLOR}
 case $yn in 
 	yes ) echo Proceeding with the firmware update, please wait...;;
 	no ) echo NOT applying Firmware update
@@ -21,7 +27,7 @@ case $yn in
 		exit 1;;
 esac
 mount -o remount,rw /boot
-rpi-eeprom-digest -i /lib/firmware/raspberrypi/bootloader/default/pieeprom-$v.bin -o /boot/pieeprom.sig
-cp /lib/firmware/raspberrypi/bootloader/default/pieeprom-$v.bin /boot/pieeprom.upd
+rpi-eeprom-digest -i /lib/firmware/raspberrypi/bootloader/default/pieeprom-$V.bin -o /boot/pieeprom.sig
+cp /lib/firmware/raspberrypi/bootloader/default/pieeprom-$V.bin /boot/pieeprom.upd
 chmod -f go+r /boot/pieeprom.upd /boot/pieeprom.sig
 echo 'Please reboot your Raspberry Pi4'
