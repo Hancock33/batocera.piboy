@@ -22,8 +22,6 @@ class Pcsx2Generator(Generator):
         return 4/3
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        isAVX2 = checkAvx2()
-
         pcsx2ConfigDir = "/userdata/system/configs/PCSX2"
 
         # Config files
@@ -33,8 +31,11 @@ class Pcsx2Generator(Generator):
         configureGFX(pcsx2ConfigDir, system)
         configureAudio(pcsx2ConfigDir)
 
-        if isAVX2:
-            commandArray = ["/usr/pcsx2-avx2/bin/pcsx2", rom]
+        if system.isOptSet('avx2'):
+            if system.config['avx2'] == '1':
+                commandArray = ["/usr/pcsx2-avx2/bin/pcsx2", rom]
+            elif system.config['avx2'] == '0':
+                commandArray = ["/usr/pcsx2/bin/pcsx2", rom]
         else:
             commandArray = ["/usr/pcsx2/bin/pcsx2", rom]
 
@@ -53,11 +54,6 @@ class Pcsx2Generator(Generator):
             arch = content_file.read()
 
         env = {}
-
-        if isAVX2:
-            env["LD_LIBRARY_PATH"] = "/usr/pcsx2-avx2/lib"
-        else:
-            env["LD_LIBRARY_PATH"] = "/usr/pcsx2/lib"
 
         env["XDG_CONFIG_HOME"] = batoceraFiles.CONF
         env["SDL_GAMECONTROLLERCONFIG"] = controllersConfig.generateSdlGameControllerConfig(playersControllers)
@@ -379,9 +375,3 @@ def configureAudio(config_directory):
     f.write("[SDL]\n")
     f.write("HostApi=alsa\n")
     f.close()
-
-def checkAvx2():
-    for line in open("/proc/cpuinfo").readlines():
-        if re.match("^flags[\t ]*:.* avx2", line):
-            return True
-    return False
