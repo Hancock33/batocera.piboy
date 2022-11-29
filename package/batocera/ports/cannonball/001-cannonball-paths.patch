@@ -117,10 +117,10 @@ index ee21251..846ecd6 100644
 +    controls.steer_speed   = pt_config.get("config.controls.steerspeed", 3);
 +    controls.pedal_speed   = pt_config.get("config.controls.pedalspeed", 4);
 +    controls.rumble        = pt_config.get("config.controls.rumble", 1.0f);
-+    controls.keyconfig[0]  = pt_config.get("config.controls.keyconfig.up",      273);
-+    controls.keyconfig[1]  = pt_config.get("config.controls.keyconfig.down",    274);
-+    controls.keyconfig[2]  = pt_config.get("config.controls.keyconfig.left",    276);
-+    controls.keyconfig[3]  = pt_config.get("config.controls.keyconfig.right",   275);
++    controls.keyconfig[0]  = pt_config.get("config.controls.keyconfig.up",      1073741906);
++    controls.keyconfig[1]  = pt_config.get("config.controls.keyconfig.down",    1073741905);
++    controls.keyconfig[2]  = pt_config.get("config.controls.keyconfig.left",    1073741904);
++    controls.keyconfig[3]  = pt_config.get("config.controls.keyconfig.right",   1073741903);
 +    controls.keyconfig[4]  = pt_config.get("config.controls.keyconfig.acc",     122);
 +    controls.keyconfig[5]  = pt_config.get("config.controls.keyconfig.brake",   120);
 +    controls.keyconfig[6]  = pt_config.get("config.controls.keyconfig.gear1",   32);
@@ -128,7 +128,7 @@ index ee21251..846ecd6 100644
 +    controls.keyconfig[8]  = pt_config.get("config.controls.keyconfig.start",   49);
 +    controls.keyconfig[9]  = pt_config.get("config.controls.keyconfig.coin",    53);
 +    controls.keyconfig[10] = pt_config.get("config.controls.keyconfig.menu",    286);
-+    controls.keyconfig[11] = pt_config.get("config.controls.keyconfig.view",    304);
++    controls.keyconfig[11] = pt_config.get("config.controls.keyconfig.view",    121);
 +    controls.padconfig[0]  = pt_config.get("config.controls.padconfig.acc",     1);
 +    controls.padconfig[1]  = pt_config.get("config.controls.padconfig.brake",   4);
 +    controls.padconfig[2]  = pt_config.get("config.controls.padconfig.gear1",   -1);
