@@ -20,9 +20,6 @@ define ABUSE_INSTALL_TARGET_CMDS
 	# install media
     mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/abuse
 	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/abuse/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/abuse/
-    # evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/abuse/abuse.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(cmake-package))
