@@ -49,7 +49,7 @@ class CannonballGenerator(Generator):
             CannonballGenerator.setSectionConfig(config, xml_video, "hires", "0")
 
         # controllers
-        cannonballControllers.generateControllerConfig(config, xml_root, playersControllers)
+        # cannonballControllers.generateControllerConfig(config, xml_root, playersControllers)
 
         # save the config file
         #cannonballXml = open(configFile, "w")
@@ -58,7 +58,10 @@ class CannonballGenerator(Generator):
         dom_string = os.linesep.join([s for s in config.toprettyxml().splitlines() if s.strip()]) # remove ugly empty lines while minicom adds them...
         cannonballXml.write(dom_string)
 
-        return Command.Command(array=["cannonball", "-cfgfile", "/userdata/system/configs/cannonball/config.xml"])
+        return Command.Command(array=["cannonball", "-cfgfile", "/userdata/system/configs/cannonball/config.xml"],
+		env={
+		'SDL_AUTO_UPDATE_JOYSTICKS': '0'
+        })
 
     @staticmethod
     def getRoot(config, name):
