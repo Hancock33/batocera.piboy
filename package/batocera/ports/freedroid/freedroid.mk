@@ -7,7 +7,7 @@
 FREEDROID_VERSION = 2d5cf64ff5227ee55e133ba392b8ace74d1df2cc
 FREEDROID_SITE = $(call github,ReinhardPrix,FreedroidClassic,$(FREEDROID_VERSION))
 
-FREEDROID_DEPENDENCIES = sdl2-compat sdl_mixer sdl_image sdl_gfx jpeg
+FREEDROID_DEPENDENCIES = sdl12-compat sdl_mixer sdl_image sdl_gfx jpeg
 FREEDROID_LICENSE = GPL-2.0
 
 FREEDROID_SUPPORTS_IN_SOURCE_BUILD = NO

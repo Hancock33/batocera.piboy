@@ -1,5 +1,5 @@
-config BR2_PACKAGE_SDL2_COMPAT
-    bool "sdl2-compat"
+config BR2_PACKAGE_SDL12_COMPAT
+    bool "sdl12-compat"
     select BR2_PACKAGE_SDL2
 
       help
