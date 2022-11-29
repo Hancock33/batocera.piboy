@@ -3,31 +3,32 @@
 # ecwolf
 #
 ################################################################################
-# Version: Commits on Aug 21, 2022
-ECWOLF_VERSION = bf02d1e5210fcfda66431c1f28091d8503c55f5f
+# Version: Commits on Nov 11, 2022
+ECWOLF_VERSION = 8b64784e33f35d96f8a57a41a4658e5dedf20289
 ECWOLF_SITE = https://bitbucket.org/ecwolf/ecwolf.git
-ECWOLF_LICENSE = Non-commercial
-ECWOLF_DEPENDENCIES = sdl2 host-ecwolf
 ECWOLF_SITE_METHOD=git
+ECWOLF_GIT_SUBMODULES=YES
+ECWOLF_LICENSE = Non-commercial
+ECWOLF_DEPENDENCIES = host-ecwolf sdl2 sdl2_mixer sdl2_net zlib bzip2 jpeg
+ECWOLF_SUPPORTS_IN_SOURCE_BUILD = NO
 
-HOST_ECWOLF_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DNO_GTK=ON
+HOST_ECWOLF_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DTOOLS_ONLY=ON
 
-ECWOLF_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DNO_GTK=ON -DFORCE_CROSSCOMPILE=ON -DINTERNAL_SDL_MIXER=ON -DINTERNAL_SDL_NET=ON \
-                    -DIMPORT_EXECUTABLES=$(BUILD_DIR)/host-ecwolf-$(ECWOLF_VERSION)/ImportExecutables.cmake
-
-ECWOLF_CONF_ENV += LDFLAGS="-lpthread -lvorbisfile -lopusfile -lFLAC -lmodplug -lfluidsynth"
+ECWOLF_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DNO_GTK=ON -DFORCE_CROSSCOMPILE=ON \
+                    -DINTERNAL_SDL{,_MIXER,_MIXER_CODECS,_NET}=ON \
+                    -DIMPORT_EXECUTABLES="$(HOST_ECWOLF_BUILDDIR)/ImportExecutables.cmake"
 
 define ECWOLF_CROSS
-    $(HOST_ECWOLF_DIR)/deps/gdtoa/arithchk > $(@D)/deps/gdtoa/arith.h
-    $(HOST_ECWOLF_DIR)/deps/gdtoa/qnan > $(@D)/deps/gdtoa/gd_qnan.h
+    $(HOST_ECWOLF_BUILDDIR)/deps/gdtoa/arithchk > $(@D)/deps/gdtoa/arith.h
+    $(HOST_ECWOLF_BUILDDIR)/deps/gdtoa/qnan > $(@D)/deps/gdtoa/gd_qnan.h
 endef
 ECWOLF_POST_EXTRACT_HOOKS += ECWOLF_CROSS
 
 define ECWOLF_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin
 	mkdir -p $(TARGET_DIR)/usr/share/ecwolf
-	$(INSTALL) -D -m 0755 $(@D)/ecwolf $(TARGET_DIR)/usr/share/ecwolf/ecwolf
-	cp -a $(@D)/ecwolf.pk3 $(TARGET_DIR)/usr/share/ecwolf/
+	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/ecwolf $(TARGET_DIR)/usr/share/ecwolf/ecwolf
+	cp -a $(@D)/buildroot-build/ecwolf.pk3 $(TARGET_DIR)/usr/share/ecwolf/
 	ln -sf /usr/share/ecwolf/ecwolf $(TARGET_DIR)/usr/bin/ecwolf
 
 	# evmap config
