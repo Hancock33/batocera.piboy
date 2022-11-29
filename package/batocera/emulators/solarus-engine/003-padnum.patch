@@ -1,8 +1,8 @@
 diff --git a/include/solarus/core/InputEvent.h b/include/solarus/core/InputEvent.h
-index c99dbcf8c..a32cb5b6c 100644
+index 064f8aac0..408c87d96 100644
 --- a/include/solarus/core/InputEvent.h
 +++ b/include/solarus/core/InputEvent.h
-@@ -356,6 +356,7 @@ class InputEvent {
+@@ -357,6 +357,7 @@ class InputEvent {
      static std::set<SDL_Keycode> keys_pressed;    /**< Keys currently down, only according to SDL_KEYDOWN and SDL_KEYUP events
                                                     * (i.e. independently of the real current state SDL_GetKeyboardState()). */
      static int joypad_deadzone;                   /**< Joypad axis deadzone for detecting directions. */
@@ -11,13 +11,13 @@ index c99dbcf8c..a32cb5b6c 100644
                                                     * SDL_JOYBUTTONUP events. */
      static std::set<Uint8> quit_combo;            /**< Optional joypad buttons combination for quitting the application. */
 diff --git a/src/core/InputEvent.cpp b/src/core/InputEvent.cpp
-index c748c4f03..987a0fb8c 100644
+index f5597f6fc..e300958ed 100644
 --- a/src/core/InputEvent.cpp
 +++ b/src/core/InputEvent.cpp
 @@ -46,6 +46,7 @@ std::map<int, SDL_JoystickID> InputEvent::jindex2id;
  // Default the axis states to centered
  
- int InputEvent::joypad_deadzone = 500;
+ int InputEvent::joypad_deadzone = 8000;
 +int InputEvent::joypad_num = 0;
  std::set<Uint8> InputEvent::jbuttons_pressed;
  std::set<Uint8> InputEvent::quit_combo;
