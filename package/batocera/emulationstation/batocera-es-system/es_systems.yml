@@ -2964,12 +2964,12 @@ wii:
   manufacturer: Nintendo
   release: 2006
   hardware: console
-  extensions: [gcm, iso, gcz, ciso, wbfs, wad, rvz, elf, dol, m3u, json]
+  extensions: [gcm, iso, gcz, ciso, wbfs, rvz, elf, dol, m3u, json, gbl]
   emulators:
     dolphin:
       dolphin:  { requireAnyOf: [BR2_PACKAGE_DOLPHIN_EMU]       }
     libretro:
-      dolphin: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOLPHIN] }
+      dolphin:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOLPHIN], incompatible_extensions: [gbl] }
   comment_en: |
     To use a virtual horizontal wiimote, include ".side." in the filename (for example ".side.iso").
     You can choose the axis controls among i(nfrared), s(wing), t(ilt) or n(unchuk) :

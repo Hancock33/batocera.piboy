@@ -13,6 +13,7 @@ import shutil
 import filecmp
 import subprocess
 from . import cemuControllers
+import utils.videoMode as videoMode
 
 from utils.logger import get_logger
 eslog = get_logger(__name__)
@@ -27,7 +28,7 @@ class CemuGenerator(Generator):
     # disable hud & bezels for now - causes game issues
     def hasInternalMangoHUDCall(self):
         return True
-
+    
     def generate(self, system, rom, playersControllers, guns, gameResolution):
 
         # in case of squashfs, the root directory is passed
@@ -46,16 +47,16 @@ class CemuGenerator(Generator):
             os.mkdir(cemuConfig)
         #graphic packs
         if not path.isdir(cemuSaves + "/graphicPacks"):
-            os.mkdir(cemuSaves + "/graphicPacks")
+            os.mkdir(cemuSaves + "/graphicPacks")         
         if not path.isdir(cemuConfig + "/controllerProfiles"):
             os.mkdir(cemuConfig + "/controllerProfiles")
 
         # Create the settings file
         CemuGenerator.CemuConfig(cemuConfig + "/settings.xml", system)
-
+        
         # Copy the keys.txt file from where cemu reads it
         shutil.copyfile(batoceraFiles.BIOS + "/cemu/keys.txt", cemuConfig + "/keys.txt")
-
+        
         # Set-up the controllers
         cemuControllers.generateControllerConfig(system, playersControllers)
 
@@ -65,6 +66,20 @@ class CemuGenerator(Generator):
             commandArray = ["/usr/bin/cemu/cemu", "-f", "-g", rpxrom]
             # force no menubar
             commandArray.append("--force-no-menubar")
+
+        # Dual view option
+        if system.isOptSet("cemu_dualview") and system.config["cemu_dualview"] != "none":
+            if system.config["cemu_dualview"].startswith('vert'):
+                dualviewOrientation = 'vert'
+            else:
+                dualviewOrientation = 'horiz'
+            if system.config["cemu_dualview"].endswith('1'):
+                dualviewSize = .5
+            else:
+                dualviewSize = .67
+            videoMode.setupRatpoisonFrames(dualviewOrientation, dualviewSize, 1, True)
+        elif system.isOptSet("cemu_gamepad") and system.config["cemu_gamepad"] == "True":
+            videoMode.setupRatpoisonFrames("offscreen", 1, 1, True)
 
         return Command.Command(
             array=commandArray,
@@ -98,7 +113,7 @@ class CemuGenerator(Generator):
         CemuGenerator.setSectionConfig(config, xml_root, "use_discord_presence", "false")
         CemuGenerator.setSectionConfig(config, xml_root, "fullscreen_menubar", "false")
         CemuGenerator.setSectionConfig(config, xml_root, "vk_warning", "false")
-        CemuGenerator.setSectionConfig(config, xml_root, "fullscreen", "true")
+        CemuGenerator.setSectionConfig(config, xml_root, "fullscreen", "false")
         # Language
         if not system.isOptSet("cemu_console_language") or system.config["cemu_console_language"] == "ui":
             lang = getLangFromEnvironment()
@@ -119,7 +134,8 @@ class CemuGenerator(Generator):
         CemuGenerator.setSectionConfig(config, window_size, "y", "480")
 
         ## [GAMEPAD]
-        if system.isOptSet("cemu_gamepad") and system.config["cemu_gamepad"] == "True":
+        if (system.isOptSet("cemu_dualview") and system.config["cemu_dualview"] != "none") or \
+            (system.isOptSet("cemu_gamepad") and system.config["cemu_gamepad"] == "True"):
             CemuGenerator.setSectionConfig(config, xml_root, "open_pad", "true")
         else:
             CemuGenerator.setSectionConfig(config, xml_root, "open_pad", "false")
@@ -132,13 +148,12 @@ class CemuGenerator(Generator):
         pad_size = CemuGenerator.getRoot(config, "pad_size")
         CemuGenerator.setSectionConfig(config, pad_size, "x", "640")
         CemuGenerator.setSectionConfig(config, pad_size, "y", "480")
-
         ## [GAME PATH]
         CemuGenerator.setSectionConfig(config, xml_root, "GamePaths", "")
         game_root = CemuGenerator.getRoot(config, "GamePaths")
         # Default games path
         CemuGenerator.setSectionConfig(config, game_root, "Entry", cemuRomdir)
-
+     
         ## [GRAPHICS]
         CemuGenerator.setSectionConfig(config, xml_root, "Graphic", "")
         graphic_root = CemuGenerator.getRoot(config, "Graphic")
@@ -149,7 +164,7 @@ class CemuGenerator(Generator):
             CemuGenerator.setSectionConfig(config, graphic_root, "api", "1") # Vulkan
         # Async VULKAN Shader compilation
         if system.isOptSet("cemu_async"):
-            CemuGenerator.setSectionConfig(config, graphic_root, "AsyncCompile", system.config["cemu_async"])
+            CemuGenerator.setSectionConfig(config, graphic_root, "AsyncCompile", system.config["cemu_async"]) 
         else:
             CemuGenerator.setSectionConfig(config, graphic_root, "AsyncCompile", "true")
         # Vsync
@@ -242,7 +257,7 @@ class CemuGenerator(Generator):
             eslog.debug("*** use config audio device ***")
         else:
             CemuGenerator.setSectionConfig(config, audio_root, "TVDevice", cemuAudioDevice)
-
+        
         # Save the config file
         xml = open(configFile, "w")
 
@@ -250,10 +265,11 @@ class CemuGenerator(Generator):
         xml = codecs.open(configFile, "w", "utf-8")
         dom_string = os.linesep.join([s for s in config.toprettyxml().splitlines() if s.strip()]) # remove ugly empty lines while minicom adds them...
         xml.write(dom_string)
-
-    # Show mouse for touchscreen actions
+    
+    # Show mouse for touchscreen actions    
     def getMouseMode(self, config):
-        if "cemu_touchpad" in config and config["cemu_touchpad"] == "1":
+        if ("cemu_touchpad" in config and config["cemu_touchpad"] == "1") or \
+            ("cemu_dualview" in config and config["cemu_dualview"] != "none"):
             return True
         else:
             return False
