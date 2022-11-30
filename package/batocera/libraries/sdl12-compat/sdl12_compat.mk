@@ -3,8 +3,8 @@
 # sdl12_compat
 #
 ################################################################################
-# Version: Commits on Nov 27, 2022
-SDL12_COMPAT_VERSION = 137d4515585efa145baca6bf52afd1eb702a6bbc
+# Version: Commits on Nov 29, 2022
+SDL12_COMPAT_VERSION = 3e81339b30bffb54cb0563a9bd6194ffedb2cce8
 SDL12_COMPAT_SITE = $(call github,libsdl-org,sdl12-compat,$(SDL12_COMPAT_VERSION))
 SDL12_COMPAT_LICENSE = GPL
 SDL12_COMPAT_DEPENDENCIES = sdl2
