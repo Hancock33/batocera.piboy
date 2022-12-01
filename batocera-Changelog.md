@@ -50,9 +50,9 @@
 - dosbox-x to v0.84.3
 - dosbox-staging to v0.79.1
 - PPSSPP & lr-PPSSPP to v1.13.2
-- nvidia production driver to 520.56.06
-- nvidia legacy driver to 470.141.03
-- nvidia legacy 390 driver to 390.154
+- nvidia production driver to 525.60.11
+- nvidia legacy driver to 470.161.03
+- nvidia legacy 390 driver to 390.157
 - openMSX to v18
 - moonlight embedded to v2.5.2
 - groovy mame to 0.247
@@ -111,7 +111,7 @@
 - rtl8723ds update to Nov 4, 2022
 - rtl8812au update to Nov 16, 2022
 - rtl8188fu update to Nov 1, 2022
-- mesa3d to 22.2.4
+- mesa3d to 22.3.0
 - uinput-joystick update to Feb 11, 2022
 
 # 2022/09/20 - batocera.linux 35 - Monarch Butterfly
