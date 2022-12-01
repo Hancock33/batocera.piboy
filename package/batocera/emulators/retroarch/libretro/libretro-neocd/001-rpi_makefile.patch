@@ -1,12 +1,11 @@
 diff --git a/Makefile b/Makefile
-index 6934856..bc77950 100644
+index 4b918c6..928a1f5 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -58,6 +58,28 @@ ifneq (,$(findstring unix,$(platform)))
-    fpic := -fPIC
-    SHARED := -shared -Wl,--version-script=$(CORE_DIR)/link.T -Wl,--no-undefined
+@@ -62,6 +62,27 @@ ifneq (,$(findstring unix,$(platform)))
     LIBS += -lpthread
-+
+    HAVE_CDROM := 1
+    USE_LTO := 1
 +# Raspberry Pi
 +else ifneq (,$(findstring rpi,$(platform)))
 +	EXT ?= so
@@ -14,19 +13,19 @@ index 6934856..bc77950 100644
 +   fpic := -fPIC
 +   SHARED := -shared -Wl,--version-script=$(CORE_DIR)/link.T -Wl,--no-undefined
 +   LIBS += -lpthread
-+   
++   USE_LTO := 1
 +	ifneq (,$(findstring rpi1,$(platform)))
 +    	CFLAGS += -marm -mcpu=arm1176jzf-s -mfloat-abi=hard
 +	else ifneq (,$(findstring rpi2,$(platform)))
 +    	CFLAGS += -marm -mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard
 +	else ifneq (,$(findstring rpi3,$(platform)))
 +		ifneq (,$(findstring rpi3_64,$(platform)))
-+           CFLAGS += -mcpu=cortex-a53 -mtune=cortex-a53
++    		CFLAGS += -mcpu=cortex-a53 -mtune=cortex-a53
 +		else
-+			CFLAGS += -marm -mcpu=cortex-a53 -mfpu=neon-fp-armv8 -mfloat-abi=hard
++    		CFLAGS += -marm -mcpu=cortex-a53 -mfpu=neon-fp-armv8 -mfloat-abi=hard
 +		endif
 +	else ifneq (,$(findstring rpi4,$(platform)))
-+         CFLAGS += -mcpu=cortex-a72 -mtune=cortex-a72
++    		CFLAGS += -mcpu=cortex-a72 -mtune=cortex-a72
 +	endif
  else ifeq ($(platform), linux-portable)
     TARGET := $(TARGET_NAME)_libretro.$(EXT)
