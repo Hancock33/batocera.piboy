@@ -61,7 +61,6 @@ endif
 define PCSX2_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/pcsx2/pcsx2 $(TARGET_DIR)/usr/pcsx2/bin/pcsx2
 	cp -pr  $(@D)/bin/resources $(TARGET_DIR)/usr/pcsx2/bin/
-	cp -a $(HOST_GCC_FINAL_BUILDDIR)/x86_64-buildroot-linux-gnu/libsanitizer/asan/.libs/libasan.so* $(TARGET_DIR)/usr/lib
 endef
 
 define PCSX2_EVMAPY
