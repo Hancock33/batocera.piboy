@@ -44,10 +44,10 @@ index b42523c..5f7e4d8 100644
  	inline static std::optional<uint32> s_persistent_id{};
  
 diff --git a/src/gui/MainWindow.cpp b/src/gui/MainWindow.cpp
-index 3291f3b..97d7243 100644
+index 4c94365..f1490e1 100644
 --- a/src/gui/MainWindow.cpp
 +++ b/src/gui/MainWindow.cpp
-@@ -1664,7 +1664,8 @@ void MainWindow::SetMenuVisible(bool state)
+@@ -1625,7 +1625,8 @@ void MainWindow::SetMenuVisible(bool state)
  	if (m_menu_visible == state)
  		return;
  
@@ -57,7 +57,7 @@ index 3291f3b..97d7243 100644
  	m_menu_visible = state;
  }
  
-@@ -2226,7 +2227,8 @@ void MainWindow::RecreateMenu()
+@@ -2186,7 +2187,8 @@ void MainWindow::RecreateMenu()
  
  	m_menuBar->Append(helpMenu, _("&Help"));
  
