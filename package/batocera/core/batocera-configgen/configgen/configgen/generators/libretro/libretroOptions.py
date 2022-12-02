@@ -961,7 +961,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                 coreSettings.save('dolphin_max_anisotropy', '"x1"')
         # Anti-Aliasing
             if system.isOptSet('wii_antialiasing'):
-                coreSettings.save('dolphin_anti_aliasing', system.config['wii_antialiasing'])
+                coreSettings.save('dolphin_anti_aliasing', chr(34) + system.config['wii_antialiasing'] + chr(34))
             else:
                 coreSettings.save('dolphin_anti_aliasing', '"None"')
         # Wii Tv Mode
