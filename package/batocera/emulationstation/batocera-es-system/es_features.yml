@@ -10428,7 +10428,7 @@ vcmi:
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, cpucores]
 virtualjaguar:
   features: [padtokeyboard]
-  shared: [videomode, cpucores]]
+  shared: [videomode, cpucores]
   cfeatures:
         virtualjaguar_frameskip:
             group: VIDEO SETTINGS
@@ -10531,10 +10531,10 @@ xenia:
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, cpucores]
 xenia-canary:
   features: []
-  shared: [videomode, cpucores]]
+  shared: [videomode, cpucores]
 yabausesa:
   features: [padtokeyboard]
-  shared: [videomode, cpucores]]
+  shared: [videomode, cpucores]
   cfeatures:
         yabausesa_resolution:
             group: VIDEO SETTINGS
