@@ -3,11 +3,9 @@
 # wine-x86
 #
 ################################################################################
-
-# version 5.18 means binary from 5.18 version (or the last built if the version is not yet out)
-WINE_X86_VERSION = 20221129
+WINE_X86_VERSION = 20221201
 WINE_X86_SOURCE = batocera-x86-32bit-libs-$(WINE_X86_VERSION).tar.xz
-WINE_X86_SITE = https://github.com/batocera-linux/wine-x86/releases/download/$(WINE_X86_VERSION)
+WINE_X86_SITE = https://github.com/Hancock33/batocera-rp4-32bit-libs/releases/download/$(WINE_X86_VERSION)
 
 define WINE_X86_EXTRACT_CMDS
 	mkdir -p $(@D)/target && cd $(@D)/target && tar xf $(DL_DIR)/$(WINE_X86_DL_SUBDIR)/$(WINE_X86_SOURCE)
