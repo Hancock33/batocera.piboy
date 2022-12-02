@@ -821,6 +821,18 @@ libretro:
                             "4x":   4x
                             "8x":   8x
                             "16x":  16x
+                    wii_antialiasing:
+                        group: VIDEO SETTINGS
+                        prompt:      ANTI-ALIASING (MSAA/SSAA)
+                        description: Enhancement. Smooth out jagged edges on 3D object polygons.
+                        choices:
+                            "Off":        "None"
+                            "2x MSAA":    "2x MSAA"
+                            "4x MSAA":    "4x MSAA"
+                            "8x MSAA":    "8x MSAA"
+                            "2x SSAA":    "2x SSAA"
+                            "4x SSAA":    "4x SSAA"
+                            "8x SSAA":    "8x SSAA"                       
       systems:
             wii:
                 cfeatures:
