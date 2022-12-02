@@ -1002,7 +1002,7 @@ msgctxt "game_options"
 msgid "TEXTURE SMOOTHING"
 msgstr ""
 
-#. TRANSLATION: libretro/desmume, libretro/swanstation, libretro/duckstation, dolphin, dolphin_triforce, ...
+#. TRANSLATION: libretro/desmume, libretro/dolphin, libretro/swanstation, libretro/duckstation, dolphin, ...
 msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D object polygons."
 msgstr ""
@@ -1251,6 +1251,41 @@ msgstr ""
 #. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/flycast2021, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
+msgstr ""
+
+#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "ANTI-ALIASING (MSAA/SSAA)"
+msgstr ""
+
+#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "2x MSAA"
+msgstr ""
+
+#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "4x MSAA"
+msgstr ""
+
+#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "8x MSAA"
+msgstr ""
+
+#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "2x SSAA"
+msgstr ""
+
+#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "4x SSAA"
+msgstr ""
+
+#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "8x SSAA"
 msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, dolphin/uzem, dolphin/uzem
@@ -1881,47 +1916,12 @@ msgstr ""
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
-msgid "ANTI-ALIASING (MSAA/SSAA)"
-msgstr ""
-
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "2x MSAA"
-msgstr ""
-
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "4x MSAA"
-msgstr ""
-
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "8x MSAA"
-msgstr ""
-
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
 msgid "16x MSAA"
 msgstr ""
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
 msgid "32x MSAA"
-msgstr ""
-
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "2x SSAA"
-msgstr ""
-
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "4x SSAA"
-msgstr ""
-
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "8x SSAA"
 msgstr ""
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
