@@ -217,8 +217,6 @@ crvision:
 daphne:
   emulator: daphne
   core:     hypseus
-  options:
-    hud_support: false
 dataeast:
   emulator: libretro
   core:     mame
