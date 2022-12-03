@@ -33,7 +33,7 @@ else
     PPSSPP_CONF_OPTS += -DVULKAN=OFF
 endif
 # enable x11/vulkan interface only if xorg
-ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
     PPSSPP_CONF_OPTS += -DUSING_X11_VULKAN=ON
 else
     PPSSPP_CONF_OPTS += -DUSING_X11_VULKAN=OFF

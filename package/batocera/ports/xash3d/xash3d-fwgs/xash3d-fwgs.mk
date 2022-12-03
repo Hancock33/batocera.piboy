@@ -23,7 +23,7 @@ endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
 # Batocera - SBC prefer GLES
-	ifneq ($(BR2_PACKAGE_BATOCERA_SBC_XORG),y)
+	ifneq ($(BR2_PACKAGE_XORG7),y)
 		XASH3D_FWGS_DEPENDENCIES += libgl
 	endif
 else

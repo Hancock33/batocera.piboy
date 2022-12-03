@@ -9,6 +9,8 @@ ALEPHONE_SITE = $(call github,Aleph-One-Marathon,alephone,$(ALEPHONE_VERSION))
 
 ALEPHONE_DEPENDENCIES = boost sdl2 sdl2_image sdl2_ttf sdl2_net
 ALEPHONE_LICENSE = GPLv3
+
+ALEPHONE_SUPPORTS_IN_SOURCE_BUILD = NO
 ALEPHONE_CONF_OPTS = \
 	                --disable-sdltest \
 	                --with-sdl-prefix="$(STAGING_DIR)/usr" \
