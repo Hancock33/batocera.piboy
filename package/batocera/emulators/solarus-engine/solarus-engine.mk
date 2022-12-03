@@ -25,7 +25,7 @@ SOLARUS_ENGINE_CONF_OPTS = \
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
 # Batocera - SBC prefer GLES
-	ifneq ($(BR2_PACKAGE_BATOCERA_SBC_XORG),y)
+	ifneq ($(BR2_PACKAGE_XORG7),y)
 		SOLARUS_ENGINE_DEPENDENCIES += libgl
 	endif
 else

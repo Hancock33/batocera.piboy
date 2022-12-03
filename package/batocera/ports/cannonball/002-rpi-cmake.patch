@@ -34,7 +34,7 @@ index 00000000..994c9383
 +
 +set(platform_link_libs
 +    SDL2
-+    OpenGL
++    GL
 +)
 +
 +# Platform Specific Link Directories
