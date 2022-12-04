@@ -1,6 +1,8 @@
---- a/3rdparty/libusb/libusb.cmake	2020-07-19 17:14:04.829722651 +0200
-+++ b/3rdparty/libusb/libusb.cmake	2020-07-19 17:14:12.793868076 +0200
-@@ -3,6 +3,7 @@
+diff --git a/3rdparty/libusb/libusb.cmake b/3rdparty/libusb/libusb.cmake
+index 7df04c32e..73a3b6fbc 100644
+--- a/3rdparty/libusb/libusb.cmake
++++ b/3rdparty/libusb/libusb.cmake
+@@ -3,6 +3,7 @@ include(os.cmake)
  include(config.cmake)
  include(FindThreads)
  

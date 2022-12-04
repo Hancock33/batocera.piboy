@@ -1,5 +1,5 @@
 diff --git a/rpcs3/Input/evdev_joystick_handler.cpp b/rpcs3/Input/evdev_joystick_handler.cpp
-index b6dab60..bbc9d3b 100644
+index e465377fc..a921789d4 100644
 --- a/rpcs3/Input/evdev_joystick_handler.cpp
 +++ b/rpcs3/Input/evdev_joystick_handler.cpp
 @@ -16,6 +16,7 @@
@@ -10,7 +10,7 @@ index b6dab60..bbc9d3b 100644
  
  LOG_CHANNEL(evdev_log, "evdev");
  
-@@ -99,23 +99,23 @@
+@@ -106,23 +107,23 @@ bool evdev_joystick_handler::Init()
  	if (m_is_init)
  		return true;
  
@@ -51,7 +51,7 @@ index b6dab60..bbc9d3b 100644
  
  	m_is_init = true;
  	return true;
-@@ -240,19 +241,26 @@ std::unordered_map<u64, std::pair<u16, bool>> evdev_joystick_handler::GetButtonV
+@@ -260,19 +261,26 @@ std::unordered_map<u64, std::pair<u16, bool>> evdev_joystick_handler::GetButtonV
  		const int min = libevdev_get_abs_minimum(dev, code);
  		const int max = libevdev_get_abs_maximum(dev, code);
  
@@ -82,7 +82,7 @@ index b6dab60..bbc9d3b 100644
  	}
  
  	return button_values;
-@@ -301,12 +309,19 @@ void evdev_joystick_handler::get_next_button_press(const std::string& padId, con
+@@ -330,12 +338,19 @@ PadHandlerBase::connection evdev_joystick_handler::get_next_button_press(const s
  
  	auto find_value = [=, this](const std::string& name)
  	{
@@ -108,9 +108,9 @@ index b6dab60..bbc9d3b 100644
  		auto it = data.find(static_cast<u64>(key));
  		return it != data.end() && dir == it->second.second ? it->second.first : 0;
  	};
-@@ -333,8 +348,12 @@ void evdev_joystick_handler::get_next_button_press(const std::string& padId, con
- 
- 	std::pair<u16, std::string> pressed_button = { 0, "" };
+@@ -366,8 +381,12 @@ PadHandlerBase::connection evdev_joystick_handler::get_next_button_press(const s
+ 		std::string name;
+ 	} pressed_button{};
  
 -	for (const auto& [code, name] : button_list)
 +	for (const auto& [code, name2] : button_list)
@@ -120,9 +120,9 @@ index b6dab60..bbc9d3b 100644
 +	  std::string name = ss.str();
 +
  		// Handle annoying useless buttons
- 		if (padId.find("Xbox 360") != umax && code >= BTN_TRIGGER_HAPPY)
+ 		if (code == NO_BUTTON)
  			continue;
-@@ -357,8 +376,12 @@ void evdev_joystick_handler::get_next_button_press(const std::string& padId, con
+@@ -394,8 +413,12 @@ PadHandlerBase::connection evdev_joystick_handler::get_next_button_press(const s
  		}
  	}
  
@@ -136,7 +136,7 @@ index b6dab60..bbc9d3b 100644
  		if (data[code].second)
  			continue;
  
-@@ -380,8 +403,12 @@ void evdev_joystick_handler::get_next_button_press(const std::string& padId, con
+@@ -419,8 +442,12 @@ PadHandlerBase::connection evdev_joystick_handler::get_next_button_press(const s
  		}
  	}
  
@@ -150,7 +150,7 @@ index b6dab60..bbc9d3b 100644
  		if (!data[code].second)
  			continue;
  
-@@ -551,7 +578,7 @@ int evdev_joystick_handler::GetButtonInfo(const input_event& evt, const std::sha
+@@ -650,7 +677,7 @@ u32 evdev_joystick_handler::GetButtonInfo(const input_event& evt, const std::sha
  		const int max = libevdev_get_abs_maximum(dev, code);
  
  		// Triggers do not need handling of negative values
@@ -159,7 +159,7 @@ index b6dab60..bbc9d3b 100644
  		{
  			m_is_negative          = false;
  			m_is_button_or_trigger = true;
-@@ -733,7 +733,7 @@
+@@ -706,7 +733,7 @@ std::vector<pad_list_entry> evdev_joystick_handler::list_devices()
  				if (is_pad_device || is_motion_device)
  				{
  					// It's a joystick or motion device.
@@ -168,7 +168,7 @@ index b6dab60..bbc9d3b 100644
  
  					if (unique_names.find(name) == unique_names.end())
  						unique_names.emplace(name, 1);
-@@ -642,7 +669,7 @@ int evdev_joystick_handler::add_device(const std::string& device, const std::sha
+@@ -751,7 +778,7 @@ std::shared_ptr<evdev_joystick_handler::EvdevDevice> evdev_joystick_handler::add
  				continue;
  			}
  
@@ -177,7 +177,7 @@ index b6dab60..bbc9d3b 100644
  
  			if (unique_names.find(name) == unique_names.end())
  				unique_names.emplace(name, 1);
-@@ -683,6 +710,19 @@ int evdev_joystick_handler::add_device(const std::string& device, const std::sha
+@@ -781,6 +808,19 @@ std::shared_ptr<evdev_joystick_handler::EvdevDevice> evdev_joystick_handler::add
  					}
  				}
  
@@ -197,7 +197,7 @@ index b6dab60..bbc9d3b 100644
  				// Alright, now that we've confirmed we haven't added this joystick yet, les do dis.
  				m_dev->device     = dev;
  				m_dev->path       = path;
-@@ -905,25 +945,19 @@ bool evdev_joystick_handler::bindPadToDevice(std::shared_ptr<Pad> pad, const std
+@@ -1198,25 +1238,19 @@ bool evdev_joystick_handler::bindPadToDevice(std::shared_ptr<Pad> pad, u8 player
  	{
  		EvdevButton button{ 0, -1, EV_ABS };
  

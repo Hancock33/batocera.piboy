@@ -1,5 +1,5 @@
 diff --git a/rpcs3/rpcs3qt/screenshot_manager_dialog.cpp b/rpcs3/rpcs3qt/screenshot_manager_dialog.cpp
-index 92645bb3a..cf102971f 100644
+index fe1d38bc3..9f6ef87ed 100644
 --- a/rpcs3/rpcs3qt/screenshot_manager_dialog.cpp
 +++ b/rpcs3/rpcs3qt/screenshot_manager_dialog.cpp
 @@ -34,7 +34,7 @@ screenshot_manager_dialog::screenshot_manager_dialog(QWidget* parent) : QDialog(

@@ -1,9 +1,9 @@
 diff --git a/rpcs3/CMakeLists.txt b/rpcs3/CMakeLists.txt
-index 70f4a83..6f4f98b 100644
+index 6d78ae237..355a1aed1 100644
 --- a/rpcs3/CMakeLists.txt
 +++ b/rpcs3/CMakeLists.txt
-@@ -11,7 +11,7 @@
- include(CheckFunctionExists)
+@@ -16,7 +16,7 @@ include(CheckFunctionExists)
+ set(CMAKE_CXX_STANDARD 20)
  
  set(ADDITIONAL_LIBS "")
 -if(CMAKE_SYSTEM MATCHES "Linux")
