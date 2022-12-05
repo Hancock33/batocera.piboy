@@ -139,14 +139,14 @@ apple2:
   manufacturer: Apple
   release: 1977
   hardware: computer
-  extensions: [nib, do, po, dsk, mfi, dfi, rti, edd, woz, wav, zip, 7z]
+  extensions: [nib, do, po, dsk, mfi, dfi, rti, edd, woz, wav, zip, 7z, chd, hdv, 2mg]
   emulators:
     libretro:
       mame: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
     mame:
-      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME], incompatible_extensions: [chd, hdv, 2mg] }
     gsplus:
-      gsplus: { requireAnyOf: [BR2_PACKAGE_GSPLUS], incompatible_extensions: [mfi, dfi, rti, edd, woz, wav, zip, 7z] }
+      gsplus: { requireAnyOf: [BR2_PACKAGE_GSPLUS], incompatible_extensions: [mfi, dfi, rti, edd, woz, wav, zip, 7z, chd, hdv, 2mg] }
 
 apple2gs:
   name:      Apple IIGS
@@ -204,19 +204,6 @@ macintosh:
           lr-minivmac requer MacII.ROM e MacIIx.ROM.
           Se inicializar a partir de um disco rígido, os disquetes podem não carregar na inicialização. Para obter melhores resultados, faça uma cópia de uma das unidades de inicialização, carregue os discos manualmente através do menu MAME e copie ou instale-os na imagem do disco rígido.
           As imagens de disco só serão carregadas no Mac IIx e não são inicializáveis.
-
-zc210:
-  name:       Zelda Classic
-  manufacturer: Nintendo
-  release: 1999
-  hardware: console
-  extensions: [qst]
-  theme:    zeldac
-  path: /userdata/roms/ports/zc210
-  emulators:
-    libretro:
-      zc210:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ZC210] }
-      zc250x: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ZC250X] }
 
 ### Arcade Section
 acclaim:
@@ -1452,7 +1439,7 @@ amigacdtv:
   manufacturer: Commodore
   release: 1991
   hardware: console
-  extensions:   [bin, chd, cue, iso, lha,  m3u]
+  extensions:   [bin, chd, cue, iso, lha, m3u]
   platform:   amiga
   group:      amiga
   emulators:
@@ -1584,6 +1571,12 @@ cavestory:
 
     Il est recommendé d'utiliser la version anglophone.
     Les autres versions pourraient figer le système.
+  comment_br: |
+    Baixe o jogo a partir da seguinte URL e descompacte-o nesta pasta.
+    http://www.cavestory.org/downloads/cavestoryen.zip
+
+    Recomenda-se usar a versão em inglês.
+    Outras versões podem congelar o sistema.
 
 pdp1:
   name:       PDP-1
@@ -1763,6 +1756,22 @@ supracan:
           Sound support is preliminary
   comment_br: |
           O suporte de som é preliminar
+
+gp32:
+  name:       GP32
+  manufacturer: GamePark
+  release: 2001
+  hardware: portable
+  extensions: [smc, zip, 7z]
+  emulators:
+    libretro:
+      mame: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+    mame:
+      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en: |
+          Requires MAME BIOS file gp32.zip
+  comment_br: |
+           Requer arquivo gp32.zip do MAME BIOS
 
 gmaster:
   name:       Game Master
@@ -2336,7 +2345,7 @@ msx2+:
     Você deve baixar a versão independente do BlueMSX, disponível neste endereço: http://bluemsx.msxblue.com/rel_download/blueMSXv282full.zip
     Em seguida, extraia as pastas "Databases" e "Machines" e adicione-as à pasta bios.
 
-    - FMSX :
+    - FMSX:
     Você deve ter os seguintes arquivos, disponíveis com a distribuição fmsx, na pasta bios:
     CARTS.SHA
     CYRILLIC.FNT
@@ -2441,6 +2450,14 @@ xbox360:
     You therefore need a GPU that supports Vulkan well.
 
     Note: It is possible to build Xenia for Linux but functionality as of writing is extremely poor.
+  comment_br: |
+    Atualmente, o Xenia é executado no Wine e, portanto, está restrito a ser executado apenas no Vulkan.
+    Infelizmente, a implementação Vulkan para Xenia está um pouco atrás do D3D12 em termos de compatibilidade gráfica.
+    Portanto, apenas alguns jogos serão executados usando o Xenia util ou melhorias Vulkan ou o VKD3D funciona com o Xenia.
+
+    Portanto, você precisa de uma GPU que suporte bem o Vulkan.
+
+    Nota: É possível construir o Xenia para Linux, mas a funcionalidade no momento da escrita é extremamente pobre.
 
 samcoupe:
   name:       SAM Coupé
@@ -2642,14 +2659,14 @@ gamecube:
   manufacturer: Nintendo
   release: 2001
   hardware: console
-  extensions: [gcm, iso, gcz, ciso, wbfs, rvz, elf, dol, m3u, json]
+  extensions: [gcm, iso, gcz, ciso, wbfs, rvz, elf, dol, m3u, json, gbl]
   platform:   gc
   theme:      gc
   emulators:
     dolphin:
       dolphin:  { requireAnyOf: [BR2_PACKAGE_DOLPHIN_EMU]       }
     libretro:
-      dolphin: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOLPHIN] }
+      dolphin: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOLPHIN], incompatible_extensions: [gbl] }
   comment_en: |
     For more info: https://wiki.batocera.org/systems:gamecube
   comment_fr: |
@@ -2920,7 +2937,6 @@ snes-msu1:
       snes9x:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SNES9X]    }
       bsnes:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES]     }
       bsnes_hd:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BSNES_HD]  }
-      supafaust:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MESENS]    }
 
 superbroswar:
   name:       Super Bros War
@@ -2964,12 +2980,12 @@ wii:
   manufacturer: Nintendo
   release: 2006
   hardware: console
-  extensions: [gcm, iso, gcz, ciso, wbfs, rvz, elf, dol, m3u, json, gbl]
+  extensions: [gcm, iso, gcz, ciso, wbfs, wad, rvz, elf, dol, m3u, json]
   emulators:
     dolphin:
       dolphin:  { requireAnyOf: [BR2_PACKAGE_DOLPHIN_EMU]       }
     libretro:
-      dolphin:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOLPHIN], incompatible_extensions: [gbl] }
+      dolphin: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOLPHIN] }
   comment_en: |
     To use a virtual horizontal wiimote, include ".side." in the filename (for example ".side.iso").
     You can choose the axis controls among i(nfrared), s(wing), t(ilt) or n(unchuk) :
@@ -3024,6 +3040,19 @@ wiiware:
       dolphin:  { requireAnyOf: [BR2_PACKAGE_DOLPHIN_EMU]       }
     libretro:
       dolphin: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOLPHIN] }
+
+zc210:
+  name:       Zelda Classic
+  manufacturer: Nintendo
+  release: 1999
+  hardware: console
+  extensions: [qst]
+  theme:    zeldac
+  path: /userdata/roms/ports/zc210
+  emulators:
+    libretro:
+      zc210:  { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ZC210] }
+      zc250x: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ZC250X] }
 
 mu:
   name:       Palm OS
@@ -3084,20 +3113,6 @@ videopacplus:
     libretro:
       o2em: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_O2EM] }
 
-gp32:
-  name:       GP32
-  manufacturer: GamePark
-  release: 2001
-  hardware: handheld
-  extensions: [smc, zip, 7z]
-  emulators:
-    libretro:
-      mame: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
-    mame:
-      mame: { requireAnyOf: [BR2_PACKAGE_MAME] }
-  comment_en: |
-          Requires MAME BIOS file gp32.zip
-
 ### Ports Section
 abuse:
   name:       Abuse
@@ -3115,6 +3130,8 @@ abuse:
     This system is a standalone  game. No rom required.
   comment_fr: |
     Ce système est le premier jeu de autonome. Aucune rom n'est requise.
+  comment_br: |
+    Este sistema é um jogo independente. Não requer arquivo de rom.
 
 alephone:
   name:       Marathon Trilogy
@@ -3216,6 +3233,10 @@ cannonball:
     Ajoutez les roms mame de 'OutRun rev. B' (epr-10187.88, epr-10327a.76.. ) dans ce dossier et renommez Cannonball.cannonball.disabled en Cannonball.cannonball.
 
     Trouvez la documentation ici: https://wiki.batocera.org/systems:cannonball
+  comment_br: |
+    Adicione as ROMS do mame 'OutRun rev. B' (epr-10187.88, epr-10327a.76.. ) neste diretório e renomeie Cannonball.cannonball.disabled para Cannonball.cannonball.
+
+    Para mais informações: https://wiki.batocera.org/systems:cannonball
 
 cdogs:
   name:       C-Dogs SDL
@@ -3233,6 +3254,8 @@ cdogs:
     This system is a standalone  game. No rom required.
   comment_fr: |
     Ce système est le premier jeu de autonome. Aucune rom n'est requise.
+  comment_br: |
+    Este sistema é um jogo independente. Não requer arquivo de rom.
 
 cgenius:
   name:       Commander Genius
@@ -3289,6 +3312,20 @@ devilutionx:
     https://github.com/diasurgical/devilutionx-assets/releases/download/v1/fonts.mpq
 
     For the Polish voice pack copy:
+    https://github.com/diasurgical/devilutionx-assets/releases/download/v1/pl.mpq
+  comment_br: |
+    Diablo 1.
+
+    Coloque o arquivo diabdat.mpq do seu CD ou instalação do GoG em:
+
+        /userdata/roms/ports/devilutionx/
+
+    Para Hellfire, copie também hellfire.mpq, hfmonk.mpq, hfmusic.mpq e hfvoice.mpq.
+
+    Para cópia de suporte de texto em chinês, japonês e coreano:
+    https://github.com/diasurgical/devilutionx-assets/releases/download/v1/fonts.mpq
+
+    Para a cópia do pacote de voz em polonês:
     https://github.com/diasurgical/devilutionx-assets/releases/download/v1/pl.mpq
 
 dinothawr:
@@ -3441,6 +3478,8 @@ gong:
     This system is a standalone libretro game. No rom required.
   comment_fr: |
     Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
+  comment_br: |
+    Este sistema é um jogo do libretro idependente. Não requer rom.
 
 hcl:
   name:       Hydra Castle Labyrinth
@@ -3458,6 +3497,8 @@ hcl:
     This system is a standalone  game. No rom required.
   comment_fr: |
     Ce système est le premier jeu de autonome. Aucune rom n'est requise.
+  comment_br: |
+    Este sistema é um jogo independente. Não requer arquivo de rom.
 
 hode:
   name:       Heart of Darkness
@@ -3488,6 +3529,8 @@ hurrican:
     This system is a standalone  game. No rom required.
   comment_fr: |
     Ce système est le premier jeu de autonome. Aucune rom n'est requise.
+  comment_br: |
+    Este sistema é um jogo independente. Não requer arquivo de rom.
 
 jumpnbump:
   name:       Jump 'n Bump
@@ -3518,6 +3561,8 @@ mrboom:
     For more info: https://wiki.batocera.org/systems:mrboom
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:mrboom
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:mrboom
 
 nukem2:
   name:       Duke Nukem 2
@@ -3548,6 +3593,8 @@ odcommander:
     A two-pane file manager in the style of Norton/Midnight Commander.
   comment_fr: |
     Un gestionnaire de fichiers a deux volets, dans le style Norton/Midnight Commander.
+  comment_br: |
+     Um gerenciador de arquivos de dois painéis no estilo do Norton/Midnight Commander.
 
 omf2097:
   name:       One Must Fall 2097
@@ -3577,6 +3624,8 @@ openbor:
     For more info: https://wiki.batocera.org/systems:openbor
   comment_fr: |
     Trouvez la documentation ici: https://wiki.batocera.org/systems:openbor
+  comment_br: |
+    Para mais informações: https://wiki.batocera.org/systems:openbor
 
 openclaw:
   name:       Captain Claw
@@ -3683,6 +3732,11 @@ ports:
     -------------------------------------------------------------------------------
     Vous trouverez ici des jeux et applications Linux, qui sont lancés par des scripts
     shell en ".sh". Seuls les scripts en ".sh" apparaissent dans EmulationStation.
+  comment_br: |
+    ## SISTEMA DE PORTS ##
+     -------------------------------------------------- -----------------------------
+     Aqui você pode encontrar jogos e aplicativos para Linux, iniciados via scripts shell que terminam em
+     ".sh". Apenas os scripts ".sh" aparecem no EmulationStation.
 
 pre2:
   name:       Prehistorik 2
@@ -3867,6 +3921,8 @@ sdlpop:
     An open-source port of Prince of Persia, based on the disassembly of the DOS version.
   comment_fr: |
     Un port open-source de Prince of Persia basé sur la version DOS.
+  comment_br: |
+    Uma port de código aberto do Prince of Persia, baseada na desmontagem da versão DOS.
 
 serioussam:
   name:       Serious Sam
@@ -4061,6 +4117,21 @@ xash3d_fwgs:
     to /userdata/roms/xash3d_fwgs/<game folder> and create an empty `<game folder>.game` file in the same directory.
 
     For Half-Life 1, the game folder is `valve/`.
+  comment_br: |
+    Engine Half-Life 1.
+
+    Suporta os seguintes jogos:
+
+    * Half-Life, incluindo Blue Shift e Opposing Force.
+    * Deathmatch Clássico.
+    * Vários outros mods: https://github.com/FWGS/hlsdk-xash3d/blob/mobile_hacks/dlls/moddef.h
+
+    Instalação:
+
+    Copie o diretório do jogo da sua instalação do Steam (Steam/steamapps/common/Half-Life/<game data folder>/)
+    para /userdata/roms/xash3d_fwgs/<pasta do jogo> e crie um arquivo `<pasta do jogo>.game` vazio no mesmo diretório.
+
+    Para Half-Life 1, a pasta do jogo é `valve/`.
 
 xrick:
   name:       xrick
@@ -4078,6 +4149,8 @@ xrick:
     Put the data.zip in this directory.
   comment_fr: |
     Placez ici vos fichiers data.zip pour xrick.
+  comment_br: |
+    Coloque o data.zip do jogo xrick neste diretório.
 
 doom3:
   name: Doom 3
