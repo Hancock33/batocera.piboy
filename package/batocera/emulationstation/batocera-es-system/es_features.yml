@@ -2153,7 +2153,7 @@ libretro:
       shared: [rewind, autosave]
     genesisplusgx:
       features: [netplay, cheevos]
-      shared: [rewind, autosave, use_guns]
+      shared: [rewind, autosave]
       cfeatures:
             gpgx_region:
                 prompt:      REGION
@@ -6730,7 +6730,7 @@ devilutionx:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, cpucores]
 dolphin:
   features: [padtokeyboard]
-  shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, cpucores]
+  shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, cpucores]
   cfeatures:
         gfxbackend:
             archs_include: [x86, x86_64, bcm2711, rk3326]
@@ -6926,13 +6926,6 @@ dolphin:
             choices:
                 "Off": 0
                 "On":  1
-        dolphin-lightgun-hide-crosshair:
-            group: LIGHT GUN
-            prompt:      SHOW LIGHT GUN CROSSHAIRS
-            description: Show crosshairs in game
-            choices:
-                "Off": 0
-                "On":  1
   systems:
     gamecube:
         cfeatures:
@@ -6960,6 +6953,7 @@ dolphin:
                     "Off": 0
                     "On":  1
     wii:
+        shared: [use_guns]
         cfeatures:
             tv_mode:
                 prompt:      WII TV MODE
@@ -6985,7 +6979,15 @@ dolphin:
                     "Wiimote Sideway + Swing":   is
                     "Wiimote Sideway + Tilt":    it
                     "Wiimote Sideway + Nunchuk": in
+            dolphin-lightgun-hide-crosshair:
+                group: LIGHT GUN
+                prompt:      SHOW LIGHT GUN CROSSHAIRS
+                description: Show crosshairs in game
+                choices:
+                    "Off": 0
+                    "On":  1
     wiiware:
+        shared: [use_guns]
         cfeatures:
             tv_mode:
                 prompt:      WII TV MODE
@@ -7011,6 +7013,13 @@ dolphin:
                     "Wiimote Sideway + Swing":   is
                     "Wiimote Sideway + Tilt":    it
                     "Wiimote Sideway + Nunchuk": in
+            dolphin-lightgun-hide-crosshair:
+                group: LIGHT GUN
+                prompt:      SHOW LIGHT GUN CROSSHAIRS
+                description: Show crosshairs in game
+                choices:
+                    "Off": 0
+                    "On":  1
 dolphin_triforce:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, cpucores]
