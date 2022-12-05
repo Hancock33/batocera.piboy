@@ -160,13 +160,6 @@ class MelonDSGenerator(Generator):
         # Now write the ini file
         f.close()
 
-        if (rom.lower()).endswith('zip'):
-            commandArray = ["/usr/bin/melonDS", "-a", rom + "|" + rom.replace(".zip", ".nds").replace("/userdata/roms/nds/","")]
-            emu = "sonic2013"
-        elif (rom.lower()).endswith('7z'):
-            commandArray = ["/usr/bin/melonDS", "-a", rom + "|" + rom.replace(".7z", ".nds").replace("/userdata/roms/nds/","")]
-        else:
-            commandArray = ["/usr/bin/melonDS", rom]
-
+        commandArray = ["/usr/bin/melonDS", "-f", rom]
         return Command.Command(array=commandArray, env={"XDG_CONFIG_HOME":batoceraFiles.CONF, \
             "XDG_DATA_HOME":batoceraFiles.SAVES, "QT_QPA_PLATFORM":"xcb"})
