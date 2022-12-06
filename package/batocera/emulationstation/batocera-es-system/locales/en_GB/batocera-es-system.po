@@ -1986,7 +1986,7 @@ msgctxt "game_options"
 msgid "NeGcon"
 msgstr ""
 
-#. TRANSLATION: libretro/duckstation
+#. TRANSLATION: libretro/duckstation, melonds
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr ""
@@ -8168,6 +8168,11 @@ msgctxt "game_options"
 msgid "4M"
 msgstr ""
 
+#. TRANSLATION: melonds, pcsx2, awgl, yquake2
+msgctxt "game_options"
+msgid "Software"
+msgstr ""
+
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "LIMIT FRAME RATE"
@@ -8557,11 +8562,6 @@ msgstr ""
 #. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Simple 2x"
-msgstr ""
-
-#. TRANSLATION: pcsx2, awgl, yquake2
-msgctxt "game_options"
-msgid "Software"
 msgstr ""
 
 #. TRANSLATION: pcsx2
