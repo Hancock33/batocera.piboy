@@ -1,16 +1,51 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0"?>
 <gameList>
 	<game>
-		<path>./Doom3.game</path>
+		<path>./Doom3.base</path>
 		<name>Doom 3</name>
 		<desc>The third game of the DOOM series (now in full 3D) takes gamers through the depths of Hell, where technology and demons meet. But this time round, the game is more focused on horror elements than previous games in series.</desc>
+		<image>./images/Doom 3.png</image>
 		<rating>0.85</rating>
 		<releasedate>20050408T000000</releasedate>
 		<developer>Vicarious Visions</developer>
 		<publisher>Activision</publisher>
 		<genre>Shooter / 1st person-Shooter-Action</genre>
-		<image>./images/Doom 3.png</image>
 		<favorite>true</favorite>
+		<playcount>2</playcount>
+		<gametime>119</gametime>
+		<lang>en</lang>
+		<genreid>259</genreid>
+	</game>
+	<game>
+		<path>./Doom3.demo</path>
+		<name>Doom 3 Demo</name>
+		<desc>Demo of the third game of the DOOM series (now in full 3D) takes gamers through the depths of Hell, where technology and demons meet. But this time round, the game is more focused on horror elements than previous games in series.</desc>
+		<image>./images/Doom 3.png</image>
+		<rating>0.85</rating>
+		<releasedate>20050408T000000</releasedate>
+		<developer>Vicarious Visions</developer>
+		<publisher>Activision</publisher>
+		<genre>Shooter / 1st person-Shooter-Action</genre>
+		<favorite>true</favorite>
+		<playcount>2</playcount>
+		<gametime>119</gametime>
+		<lang>en</lang>
+		<genreid>259</genreid>
+	</game>
+	<game>
+		<path>./Doom 3 Resurrection of Evil.d3xp</path>
+		<name>Doom 3 Resurrection of Evil</name>
+		<desc>Resurrection of Evil adds in two new main features to the gameplay that the player can use throughout the game. The first, is a tool that was originally developed for Doom 3; the Grabber. The Grabber, like the "gravity gun" from the game Half-Life 2, is a physics-based weapon that allows the player to pick up and move certain items. It also allows the player to catch fireballs and throw them back at the enemy. Resurrection of Evil has come under some criticism about the use of the Grabber due to the prior popularity of the similar weapon in Half-Life 2. The developers have commented that the tool was originally in Doom 3 before Half-Life 2, and was used to create damaged rooms; instead of building a ruined room, they would build a pristine room and use the grabber to damage it realistically.</desc>
+		<image>./images/d3xp.png</image>
+		<rating>0.85</rating>
+		<releasedate>20050308T000000</releasedate>
+		<developer>Vicarious Visions</developer>
+		<publisher>Activision</publisher>
+		<genre>Shooter / 1st person-Shooter-Action</genre>
+		<favorite>true</favorite>
+		<playcount>2</playcount>
+		<gametime>119</gametime>
+		<lang>en</lang>
 		<genreid>259</genreid>
 	</game>
 </gameList>

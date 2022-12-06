@@ -4157,7 +4157,7 @@ doom3:
   manufacturer: Ports (Doom)
   release: 2004
   hardware: port
-  extensions: [game]
+  extensions: [base, d3xp, demo]
   platform: pc
   group: doom
   path: /userdata/roms/ports/doom3
