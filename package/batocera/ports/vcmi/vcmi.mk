@@ -3,8 +3,8 @@
 # vcmi
 #
 ################################################################################
-# Version: Commits on Dec 02, 2022
-VCMI_VERSION = fd21f9ead21fc45ce356d19f9da18c49465bb424
+# Version: Commits on Dec 06, 2022
+VCMI_VERSION = 923d4e6e6bf661ee33ac8da48cc620f1027db889
 VCMI_SITE = https://github.com/vcmi/vcmi.git
 VCMI_SITE_METHOD=git
 VCMI_GIT_SUBMODULES=YES
