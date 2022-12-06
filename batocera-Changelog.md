@@ -20,7 +20,6 @@
 - Xenia a Microsoft Xbox 360 emulator (v1.0.2775) - requires x86_64+Vulkan card & Wine (Note: Limited compatibility)
 - Light gun support for Wii
 - Light gun support for PS3
-- CPU core control (x86_64)
 ### Changed
 - move to pipewire wireplumber audio
 - change window manager from Openbox to Ratpoison
@@ -101,7 +100,7 @@
 - od-commander fixed for several screen resolutions
 ### Dev  
 - buildroot upgrade to 2022.08.2
-- odroidxu4 upgrade kernel to 5.19.17
+- odroidxu4 upgrade kernel to 6.1.0-rc8
 - rpi1 image renamed to bcm2835
 - rpi2 image renamed to bcm2836
 - rpi3 image renamed to bcm2837
