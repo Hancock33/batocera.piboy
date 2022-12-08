@@ -3,8 +3,8 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on Dec 04, 2022
-PCSX2_VERSION = v1.7.3675
+# Version: Commits on Dec 08, 2022
+PCSX2_VERSION = v1.7.3692
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
@@ -31,7 +31,7 @@ PCSX2_CONF_OPTS += -DUSE_SYSTEM_LIBS=AUTO
 PCSX2_CONF_OPTS += -DDISABLE_ADVANCE_SIMD=ON
 PCSX2_CONF_OPTS += -DUSE_VTUNE=OFF
 PCSX2_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
-PCSX2_CONF_OPTS += -DLTO_PCSX2_CORE=OFF
+PCSX2_CONF_OPTS += -DLTO_PCSX2_CORE=ON
 PCSX2_CONF_OPTS += -DUSE_ACHIEVEMENTS=ON
 
 ifeq ($(BR2_PACKAGE_XORG7),y)
