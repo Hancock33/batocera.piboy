@@ -174,28 +174,23 @@ class FlycastGenerator(Generator):
         if not os.path.exists(os.path.dirname(batoceraFiles.flycastConfig)):
             os.makedirs(os.path.dirname(batoceraFiles.flycastConfig))
         with open(batoceraFiles.flycastConfig, 'w+') as cfgfile:
-            Config.write(cfgfile)
+            Config.write(cfgfile)        
             cfgfile.close()
-
+            
         # internal config
+        if not isdir(batoceraFiles.flycastSaves):
+            os.mkdir(batoceraFiles.flycastSaves)
+        if not isdir(batoceraFiles.flycastSaves + "/flycast"):
+            os.mkdir(batoceraFiles.flycastSaves + "/flycast")
         # vmuA1
         if not isfile(batoceraFiles.flycastVMUA1):
-            if not os.path.exists(batoceraFiles.flycastSaves):
-                os.makedirs(batoceraFiles.flycastSaves)
-            if not os.path.exists(batoceraFiles.flycastSaves + "/flycast"):
-                os.makedirs(batoceraFiles.flycastSaves + "/flycast")
             copyfile(batoceraFiles.flycastVMUBlank, batoceraFiles.flycastVMUA1)
         # vmuA2
         if not isfile(batoceraFiles.flycastVMUA2):
             copyfile(batoceraFiles.flycastVMUBlank, batoceraFiles.flycastVMUA2)
-
-        # the command to run
-        #commandArray = [batoceraFiles.batoceraBins[system.config['emulator']]]
-        if system.config['core'] == 'flycast2022':
-            commandArray = ['flycast2022']
-        else:
-            commandArray = ['flycast']
-
+        
+        # the command to run  
+        commandArray = [batoceraFiles.batoceraBins[system.config['emulator']]]
         commandArray.append(rom)
         # Here is the trick to make flycast find files :
         # emu.cfg is in $XDG_CONFIG_DIRS or $XDG_CONFIG_HOME.
