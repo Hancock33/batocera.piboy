@@ -2382,7 +2382,7 @@ windows:
   name:       Windows
   manufacturer: Microsoft
   release: 1992
-  hardware: pc
+  hardware: computer
   extensions: [pc, exe, wine, wsquashfs, wtgz]
   platform:   pc
   theme:      windows
@@ -2401,7 +2401,7 @@ windows_installers:
   name:       Install a new Windows game
   manufacturer: Microsoft
   release: 1992
-  hardware: pc
+  hardware: computer
   extensions: [exe, iso]
   platform:   pc
   group:      windows
