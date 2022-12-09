@@ -16,8 +16,8 @@ define LIBRETRO_SCUMMVM_MAINLINE_BUILD_CMDS
 endef
 
 define LIBRETRO_SCUMMVM_MAINLINE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/scummvm_mainline_libretro.so $(TARGET_DIR)/usr/lib/libretro/scummvm_mainline_libretro.so
-	cp $(@D)/scummvm_mainline_libretro.info          $(TARGET_DIR)/usr/share/libretro/info
+	$(INSTALL) -D $(@D)/scummvm_mainline_libretro.so $(TARGET_DIR)/usr/lib/libretro/scummvm_libretro.so
+	cp $(@D)/scummvm_mainline_libretro.info          $(TARGET_DIR)/usr/share/libretro/info/scummvm_libretro.info
 endef
 
 $(eval $(generic-package))
