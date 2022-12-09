@@ -1,8 +1,8 @@
 diff --git a/SDL/SDLMain.cpp b/SDL/SDLMain.cpp
-index ec612d118..3a706179c 100644
+index 415860069..518fa85dd 100644
 --- a/SDL/SDLMain.cpp
 +++ b/SDL/SDLMain.cpp
-@@ -456,11 +456,11 @@ void ToggleFullScreenIfFlagSet(SDL_Window *window) {
+@@ -460,11 +460,11 @@ void ToggleFullScreenIfFlagSet(SDL_Window *window) {
  
  		Uint32 window_flags = SDL_GetWindowFlags(window);
  		if (g_ToggleFullScreenType == -1) {
@@ -17,16 +17,7 @@ index ec612d118..3a706179c 100644
  		}
  		SDL_SetWindowFullscreen(window, window_flags);
  	}
-@@ -566,7 +566,7 @@ int main(int argc, char *argv[]) {
- 	Uint32 mode = 0;
- 	for (int i = 1; i < argc; i++) {
- 		if (!strcmp(argv[i],"--fullscreen"))
--			mode |= SDL_WINDOW_FULLSCREEN_DESKTOP;
-+			mode |= SDL_WINDOW_FULLSCREEN;
- 		else if (set_xres == -2)
- 			set_xres = parseInt(argv[i]);
- 		else if (set_yres == -2)
-@@ -638,19 +638,19 @@ int main(int argc, char *argv[]) {
+@@ -643,19 +643,19 @@ int main(int argc, char *argv[]) {
  
  	// Force fullscreen if the resolution is too low to run windowed.
  	if (g_DesktopWidth < 480 * 2 && g_DesktopHeight < 272 * 2) {
@@ -48,8 +39,8 @@ index ec612d118..3a706179c 100644
 +	if (mode & SDL_WINDOW_FULLSCREEN) {
  		pixel_xres = g_DesktopWidth;
  		pixel_yres = g_DesktopHeight;
- 		g_Config.iForceFullScreen = 1;
-@@ -719,7 +719,7 @@ int main(int argc, char *argv[]) {
+ 		if (g_Config.iForceFullScreen == -1)
+@@ -726,7 +726,7 @@ int main(int argc, char *argv[]) {
  
  	// Use the setting from the config when initing the window.
  	if (g_Config.UseFullScreen())
