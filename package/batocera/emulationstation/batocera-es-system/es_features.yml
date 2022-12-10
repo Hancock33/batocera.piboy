@@ -827,8 +827,8 @@ libretro:
                         prompt:      FAST DISK TRANSFER RATE
                         description: Enhancement. Removes disc loading.
                         choices:
-                            "Off": false
-                            "On":  true
+                            "Off": disabled
+                            "On":  enabled
       systems:
             wii:
                 cfeatures:
