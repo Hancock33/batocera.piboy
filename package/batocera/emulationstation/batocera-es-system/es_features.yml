@@ -822,7 +822,13 @@ libretro:
                             "8x MSAA":    "8x MSAA"
                             "2x SSAA":    "2x SSAA"
                             "4x SSAA":    "4x SSAA"
-                            "8x SSAA":    "8x SSAA"                       
+                            "8x SSAA":    "8x SSAA"
+                    wii_fast_disc_speed:
+                        prompt:      FAST DISK TRANSFER RATE
+                        description: Enhancement. Removes disc loading.
+                        choices:
+                            "Off": false
+                            "On":  true
       systems:
             wii:
                 cfeatures:
