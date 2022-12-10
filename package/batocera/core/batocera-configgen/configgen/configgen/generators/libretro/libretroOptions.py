@@ -979,7 +979,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                 coreSettings.save('dolphin_shader_compilation_mode', system.config['wii_shader_mode'])
             else:
                 coreSettings.save('dolphin_shader_compilation_mode', '"sync"')
-        # Shader Compilation Mode
+        # Fast Disc Speed
             if system.isOptSet('wii_fast_disc_speed'):
                 coreSettings.save('dolphin_fast_disc_speed', system.config['wii_fast_disc_speed'])
             else:
