@@ -979,6 +979,11 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                 coreSettings.save('dolphin_shader_compilation_mode', system.config['wii_shader_mode'])
             else:
                 coreSettings.save('dolphin_shader_compilation_mode', '"sync"')
+        # Shader Compilation Mode
+            if system.isOptSet('wii_fast_disc_speed'):
+                coreSettings.save('dolphin_fast_disc_speed', system.config['wii_fast_disc_speed'])
+            else:
+                coreSettings.save('dolphin_fast_disc_speed', '"true"')
 
     # Magnavox - Odyssey2 / Phillips Videopac+
     if (system.config['core'] == 'o2em'):
