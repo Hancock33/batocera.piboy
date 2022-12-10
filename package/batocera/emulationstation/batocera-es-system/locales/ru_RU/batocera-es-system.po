@@ -1235,6 +1235,16 @@ msgctxt "game_options"
 msgid "8x SSAA"
 msgstr ""
 
+#. TRANSLATION: libretro/dolphin, dolphin
+msgctxt "game_options"
+msgid "Enhancement. Removes disc loading."
+msgstr ""
+
+#. TRANSLATION: libretro/dolphin, dolphin
+msgctxt "game_options"
+msgid "FAST DISK TRANSFER RATE"
+msgstr ""
+
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, dolphin/uzem, dolphin/uzem
 msgctxt "game_options"
 msgid ""
@@ -7600,16 +7610,6 @@ msgstr ""
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
 msgid "MEMORY MANAGEMENT UNIT"
-msgstr ""
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "Enhancement. Removes disc loading."
-msgstr ""
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "FAST DISK TRANSFER RATE"
 msgstr ""
 
 #. TRANSLATION: dolphin
