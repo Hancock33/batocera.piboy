@@ -11,5 +11,5 @@ definekey top M-Tab exec batocera-ratpoison switchapp
 definekey top M-F4 delete
 definekey top C-M-Tab swap 0 1
 banish
-exec "xsetroot -cursor_name left_ptr"
+exec xsetroot -cursor_name left_ptr
 exec emulationstation-standalone
