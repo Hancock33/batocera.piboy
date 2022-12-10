@@ -983,7 +983,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             if system.isOptSet('wii_fast_disc_speed'):
                 coreSettings.save('dolphin_fast_disc_speed', system.config['wii_fast_disc_speed'])
             else:
-                coreSettings.save('dolphin_fast_disc_speed', '"true"')
+                coreSettings.save('dolphin_fast_disc_speed', '"enabled"')
 
     # Magnavox - Odyssey2 / Phillips Videopac+
     if (system.config['core'] == 'o2em'):
