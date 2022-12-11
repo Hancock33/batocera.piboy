@@ -3,8 +3,8 @@
 # openlara
 #
 ################################################################################
-# Version: Commits on Dec 05, 2022
-OPENLARA_VERSION = 40eb268b3ab4523fe65eeaf31ef65866b53565c9
+# Version: Commits on Dec 11, 2022
+OPENLARA_VERSION = f4d36d8b550e773e1c441b3d76a85f15c590a9f1
 OPENLARA_SITE = $(call github,XProger,OpenLara,$(OPENLARA_VERSION))
 
 OPENLARA_DEPENDENCIES = sdl2 sdl2_mixer openal

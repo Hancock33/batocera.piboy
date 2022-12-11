@@ -3,8 +3,8 @@
 # libretro-same-cdi
 #
 ################################################################################
-# Version: Commits on Nov 24, 2022
-LIBRETRO_SAME_CDI_VERSION = a68ef22890b519b4adc35c01b5eeafbe50629e98
+# Version: Commits on Dec 11, 2022
+LIBRETRO_SAME_CDI_VERSION = 2ee1200d3c9bbceb64e1f0ec9e5224a16cdc0061
 LIBRETRO_SAME_CDI_SITE = $(call github,libretro,same_cdi,$(LIBRETRO_SAME_CDI_VERSION))
 LIBRETRO_SAME_CDI_LICENSE = GPL
 
