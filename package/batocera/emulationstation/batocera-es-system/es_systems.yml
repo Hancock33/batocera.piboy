@@ -1138,6 +1138,8 @@ jaguar:
       virtualjaguar: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VIRTUALJAGUAR] }
     virtualjaguar:
       virtualjaguar: { requireAnyOf: [BR2_PACKAGE_VIRTUALJAGUAR] }
+    bigpemu:
+      bigpemu:       { requireAnyOf: [BR2_PACKAGE_BIGPEMU] }
 
 lynx:
   name:       Atari Lynx
