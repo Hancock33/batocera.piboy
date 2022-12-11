@@ -28,7 +28,7 @@ endef
 
 XENIA_CANARY_POST_INSTALL_TARGET_HOOKS += XENIA_CANARY_POST_PROCESS
 
-# when rebuilding a new version will not be downloaded if existing an existing version is cached.
+# when rebuilding a new version will not be downloaded if an existing version is cached.
 # delete existing version before building
 define XENIA_CANARY_REMOVE_SOURCE
 	rm -rf $(DL_DIR)/$(XENIA_CANARY_DL_SUBDIR)/$(XENIA_CANARY_SOURCE)

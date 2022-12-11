@@ -30,9 +30,15 @@ define DEVILUTIONX_INSTALL_TARGET_EVMAPY
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/devilutionx/devilutionx.keys $(TARGET_DIR)/usr/share/evmapy
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/devilutionx
 	$(INSTALL) -D $(@D)/dist/devilutionx.mpq $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/devilutionx
-
 endef
 
 DEVILUTIONX_POST_INSTALL_TARGET_HOOKS = DEVILUTIONX_INSTALL_TARGET_EVMAPY
+
+# when rebuilding a new version will not be downloaded if an existing version is cached.
+# delete existing version before building
+define DEVILUTIONX_REMOVE_SOURCE
+	rm -rf $(DL_DIR)/$(DEVILUTIONX_DL_SUBDIR)/$(DEVILUTIONX_SOURCE)
+endef
+DEVILUTIONX_PRE_DOWNLOAD_HOOKS += DEVILUTIONX_REMOVE_SOURCE
 
 $(eval $(cmake-package))
