@@ -1,0 +1,13 @@
+diff --git a/OpenClaw/Engine/GameApp/BaseGameApp.h b/OpenClaw/Engine/GameApp/BaseGameApp.h
+index 731f317..f4c9851 100644
+--- a/OpenClaw/Engine/GameApp/BaseGameApp.h
++++ b/OpenClaw/Engine/GameApp/BaseGameApp.h
+@@ -25,7 +25,7 @@ struct GameOptions
+         windowHeight = 780;
+         scale = 1.0f;
+         useVerticalSync = true;
+-        isFullscreen = false;
++        isFullscreen = true;
+         isFullscreenDesktop = false;
+ 
+         frequency = 44100;
