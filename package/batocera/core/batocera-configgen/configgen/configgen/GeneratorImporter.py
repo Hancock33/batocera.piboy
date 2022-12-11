@@ -31,6 +31,10 @@ def getGenerator(emulator):
         from generators.bermuda.bermudaGenerator import BermudaGenerator
         return BermudaGenerator()
 
+    if emulator == 'bigpemu':
+        from generators.bigpemu.bigpemuGenerator import BigPEmuGenerator
+        return BigPEmuGenerator()
+
     if emulator == 'blues':
         from generators.blues.bluesGenerator import BluesGenerator
         return BluesGenerator()
