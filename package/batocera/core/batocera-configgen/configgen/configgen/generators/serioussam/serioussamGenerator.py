@@ -17,7 +17,7 @@ class SerioussamGenerator(Generator):
             data_dir = '/usr/share/game_assets/samtfe/Bin'
 
         os.chdir(data_dir)
-        commandArray = [data_dir + '/SeriousSam']
+        commandArray = [data_dir + '/serioussam']
 
         return Command.Command(
             array=commandArray,
