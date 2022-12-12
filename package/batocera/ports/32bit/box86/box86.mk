@@ -3,8 +3,8 @@
 # box86
 #
 ################################################################################
-# Version: Commits on Dec 11, 2022
-BOX86_VERSION = 1e648aa3d6b1f5d33c65e6d5efa77f22c67ee98f
+# Version: Commits on Dec 12, 2022
+BOX86_VERSION = ebab21f21156e9a3490a727d62a365039cb292ac
 BOX86_SITE = https://github.com/ptitseb/box86.git
 BOX86_SITE_METHOD=git
 BOX86_GIT_SUBMODULES=YES
