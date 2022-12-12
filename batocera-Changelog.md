@@ -13,7 +13,7 @@
 - Ikemen-Go fighting engine (x86_64)
 - automatic switch when a new display is plugged or unplugged (on es only for plugging)
 - Intel VAAPI drivers
-- Light gun in-game pre-calibration for arcade (atomiswave, naomi, MAME, lr-mame, lr-mame2003-plus, model2, model3)
+- Light gun in-game pre-calibration for arcade (atomiswave, naomi, MAME, lr-mame, lr-mame2003-plus, model2, model3) and Wii
 - Mesa hadware codecs for supported Intel & AMD cards
 - Zink for OpenGL to Vulkan
 - patch to allow Switch clone controllers to work in some cases
@@ -101,7 +101,7 @@
 - od-commander fixed for several screen resolutions
 ### Dev  
 - buildroot upgrade to 2022.08.2
-- odroidxu4 upgrade kernel to 6.1.0-rc8
+- odroidxu4 upgrade kernel to 6.1
 - rpi1 image renamed to bcm2835
 - rpi2 image renamed to bcm2836
 - rpi3 image renamed to bcm2837
