@@ -389,41 +389,6 @@ msgctxt "game_options"
 msgid "hidden"
 msgstr ""
 
-#. TRANSLATION: shared
-msgctxt "game_options"
-msgid "Change the number of enabled cores, increasing per-core performance"
-msgstr ""
-
-#. TRANSLATION: shared
-msgctxt "game_options"
-msgid "CPU CORES"
-msgstr ""
-
-#. TRANSLATION: shared
-msgctxt "game_options"
-msgid "Use All Cores"
-msgstr ""
-
-#. TRANSLATION: shared
-msgctxt "game_options"
-msgid "Use Physical Cores Only"
-msgstr ""
-
-#. TRANSLATION: shared
-msgctxt "game_options"
-msgid "Dual Core"
-msgstr ""
-
-#. TRANSLATION: shared
-msgctxt "game_options"
-msgid "Triple Core"
-msgstr ""
-
-#. TRANSLATION: shared
-msgctxt "game_options"
-msgid "Quad Core"
-msgstr ""
-
 #. TRANSLATION: libretro/81
 msgctxt "game_options"
 msgid "Emulate Chroma 81 interface (colorization)."
@@ -1270,6 +1235,16 @@ msgctxt "game_options"
 msgid "8x SSAA"
 msgstr ""
 
+#. TRANSLATION: libretro/dolphin, dolphin
+msgctxt "game_options"
+msgid "Enhancement. Removes disc loading."
+msgstr ""
+
+#. TRANSLATION: libretro/dolphin, dolphin
+msgctxt "game_options"
+msgid "FAST DISK TRANSFER RATE"
+msgstr ""
+
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, dolphin/uzem, dolphin/uzem
 msgctxt "game_options"
 msgid ""
@@ -1986,7 +1961,7 @@ msgctxt "game_options"
 msgid "NeGcon"
 msgstr ""
 
-#. TRANSLATION: libretro/duckstation
+#. TRANSLATION: libretro/duckstation, melonds
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr ""
@@ -7639,16 +7614,6 @@ msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
-msgid "Enhancement. Removes disc loading."
-msgstr ""
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "FAST DISK TRANSFER RATE"
-msgstr ""
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
 msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
 msgstr ""
 
@@ -8168,6 +8133,11 @@ msgctxt "game_options"
 msgid "4M"
 msgstr ""
 
+#. TRANSLATION: melonds, pcsx2, awgl, yquake2
+msgctxt "game_options"
+msgid "Software"
+msgstr ""
+
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "LIMIT FRAME RATE"
@@ -8557,11 +8527,6 @@ msgstr ""
 #. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Simple 2x"
-msgstr ""
-
-#. TRANSLATION: pcsx2, awgl, yquake2
-msgctxt "game_options"
-msgid "Software"
 msgstr ""
 
 #. TRANSLATION: pcsx2

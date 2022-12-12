@@ -1,24 +1,25 @@
 diff --git a/Core/Config.cpp b/Core/Config.cpp
-index 91264ca5b..f300a1c23 100644
+index e5b5283f0..2cce25a46 100644
 --- a/Core/Config.cpp
 +++ b/Core/Config.cpp
-@@ -1301,9 +1301,9 @@ void Config::Reload() {
- // really think of any other legit uses).
+@@ -1334,10 +1334,10 @@ void Config::Reload() {
  void Config::UpdateIniLocation(const char *iniFileName, const char *controllerIniFilename) {
  	const bool useIniFilename = iniFileName != nullptr && strlen(iniFileName) > 0;
--	iniFilename_ = FindConfigFile(useIniFilename ? iniFileName : "ppsspp.ini");
+ 	const char *ppssppIniFilename = IsVREnabled() ? "ppssppvr.ini" : "ppsspp.ini";
+-	iniFilename_ = FindConfigFile(useIniFilename ? iniFileName : ppssppIniFilename);
 +	iniFilename_ = Path("/userdata/system/configs/ppsspp/PSP/SYSTEM") / "ppsspp.ini";
  	const bool useControllerIniFilename = controllerIniFilename != nullptr && strlen(controllerIniFilename) > 0;
--	controllerIniFilename_ = FindConfigFile(useControllerIniFilename ? controllerIniFilename : "controls.ini");
+ 	const char *controlsIniFilename = IsVREnabled() ? "controlsvr.ini" : "controls.ini";
+-	controllerIniFilename_ = FindConfigFile(useControllerIniFilename ? controllerIniFilename : controlsIniFilename);
 +	controllerIniFilename_ = Path("/userdata/system/configs/ppsspp/PSP/SYSTEM") / "controls.ini";
  }
  
  void Config::Load(const char *iniFileName, const char *controllerIniFilename) {
 diff --git a/Core/System.cpp b/Core/System.cpp
-index 867000ede..ec3cba249 100644
+index 35da73d35..d49a3cc3d 100644
 --- a/Core/System.cpp
 +++ b/Core/System.cpp
-@@ -594,26 +594,27 @@ std::string PSP_GetLoading() {
+@@ -616,26 +616,27 @@ std::string PSP_GetLoading() {
  }
  
  Path GetSysDirectory(PSPDirectories directoryType) {
@@ -56,7 +57,7 @@ index 867000ede..ec3cba249 100644
  	case DIRECTORY_SYSTEM:
  		return pspDirectory / "SYSTEM";
  	case DIRECTORY_PAUTH:
-@@ -623,9 +624,9 @@ Path GetSysDirectory(PSPDirectories directoryType) {
+@@ -645,9 +646,9 @@ Path GetSysDirectory(PSPDirectories directoryType) {
  	case DIRECTORY_DUMP:
  		return pspDirectory / "SYSTEM/DUMP";
  	case DIRECTORY_SAVESTATE:
@@ -68,7 +69,7 @@ index 867000ede..ec3cba249 100644
  	case DIRECTORY_TEXTURES:
  		return pspDirectory / "TEXTURES";
  	case DIRECTORY_PLUGINS:
-@@ -634,22 +635,22 @@ Path GetSysDirectory(PSPDirectories directoryType) {
+@@ -656,22 +657,22 @@ Path GetSysDirectory(PSPDirectories directoryType) {
  		if (!g_Config.appCacheDirectory.empty()) {
  			return g_Config.appCacheDirectory;
  		}
@@ -118,10 +119,10 @@ index 0a53ef80b..d583294ec 100644
  		delete[] mappingData;
  	} else {
 diff --git a/UI/NativeApp.cpp b/UI/NativeApp.cpp
-index cc1e08ff4..bb648f544 100644
+index 3c5c6a1b2..1f4ef5465 100644
 --- a/UI/NativeApp.cpp
 +++ b/UI/NativeApp.cpp
-@@ -489,7 +489,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -487,7 +487,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	VFSRegister("", new DirectoryAssetReader(File::GetExeDirectory()));
  	VFSRegister("", new DirectoryAssetReader(Path("/usr/local/share/ppsspp/assets")));
  	VFSRegister("", new DirectoryAssetReader(Path("/usr/local/share/games/ppsspp/assets")));
@@ -130,7 +131,7 @@ index cc1e08ff4..bb648f544 100644
  	VFSRegister("", new DirectoryAssetReader(Path("/usr/share/games/ppsspp/assets")));
  #endif
  
-@@ -574,7 +574,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -572,7 +572,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	else // Just in case
  		config = "./config";
  
