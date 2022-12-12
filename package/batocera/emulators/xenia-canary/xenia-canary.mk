@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Dec 11, 2022
-XENIA_CANARY_VERSION = c9cd6f15fc251b43ef461c993be7d11ac7f18788
+XENIA_CANARY_VERSION = 43d7fc5158efb6dedd95e0751e2a1b9bcfedc527
 XENIA_CANARY_DL_VERSION = $(shell echo $(XENIA_CANARY_VERSION) | cut -c 1-7)"
 XENIA_CANARY_SOURCE = xenia_canary.zip
 XENIA_CANARY_SITE = https://github.com/xenia-canary/xenia-canary/releases/download/experimental
