@@ -40,11 +40,13 @@ class ScummVMGenerator(Generator):
 
         commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
                         "-f",
+                        "--gfx_mode=opengl",
                         f"--joystick={id}",
                         "--screenshotspath="+batoceraFiles.screenshotsDir,
                         "--extrapath=/userdata/roms/scummvm/extras",
                         "--savepath="+batoceraFiles.scummvmSaves,
                         "--path=""{}""".format(romPath)]
+
         commandArray.append(f"""{romName}""")
 
         return Command.Command(array=commandArray,env={
