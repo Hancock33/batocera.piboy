@@ -30,6 +30,9 @@ define BATOCERA_AUDIO_INSTALL_TARGET_CMDS
 
 	# default alsa configurations
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/alsa/asoundrc-* \
+		$(TARGET_DIR)/usr/share/batocera/alsa
+	# default alsa configurations
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/alsa/asound.state \
 		$(TARGET_DIR)/usr/share/batocera/alsa/
 	# sample audio files
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/*.wav $(TARGET_DIR)/usr/share/sounds
