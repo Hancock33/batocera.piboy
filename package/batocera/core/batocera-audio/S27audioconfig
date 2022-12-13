@@ -6,6 +6,10 @@
 . /etc/profile.d/xdg.sh
 . /etc/profile.d/dbus.sh
 
+if [ ! -f "/userdata/system/asound.state" ]; then
+	cp /usr/share/batocera/alsa/asound.state /userdata/system/asound.state
+fi
+
 apply_audioconfig() {
     DEVICE=$1
     PROFILE=$2
@@ -88,12 +92,14 @@ start_audioconfig() {
     fi
 
     echo "OK"
+    alsactl restore -f /userdata/system/asound.state >/dev/null 2>&1
 }
 
 stop_audioconfig() {
     	VOLUME=$(batocera-audio getSystemVolume)
 	/usr/bin/batocera-settings-set audio.volume "${VOLUME}"
 	echo "OK"
+    alsactl save -f /userdata/system/asound.state >/dev/null 2>&1
 }
 
 restart() {
