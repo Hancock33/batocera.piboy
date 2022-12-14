@@ -40,7 +40,7 @@ class ScummVMGenerator(Generator):
 
         commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
                         "-f",
-                        "--gfx_mode=opengl",
+                        "--gfx-mode=opengl",
                         f"--joystick={id}",
                         "--screenshotspath="+batoceraFiles.screenshotsDir,
                         "--extrapath=/userdata/roms/scummvm/extras",
