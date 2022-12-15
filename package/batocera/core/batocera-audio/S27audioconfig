@@ -99,7 +99,7 @@ stop_audioconfig() {
     	VOLUME=$(batocera-audio getSystemVolume)
 	/usr/bin/batocera-settings-set audio.volume "${VOLUME}"
 	echo "OK"
-    alsactl save -f /userdata/system/asound.state >/dev/null 2>&1
+    alsactl store -f /userdata/system/asound.state >/dev/null 2>&1
 }
 
 restart() {

@@ -1223,7 +1223,7 @@ state.acp5x {
 	control.67 {
 		iface MIXER
 		name 'Right PCM Source'
-		value DSP
+		value ASP
 		comment {
 			access 'read write'
 			type ENUMERATED
