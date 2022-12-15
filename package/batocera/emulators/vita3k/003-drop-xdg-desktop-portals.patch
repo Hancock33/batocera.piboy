@@ -13,10 +13,10 @@ index e57fd159..bb5ed956 100644
 +    path = external/nativefiledialog-cmake
 +	url = https://github.com/Vita3K/nativefiledialog-cmake
 diff --git a/external/CMakeLists.txt b/external/CMakeLists.txt
-index d4dcfc94..4cb3e1ee 100644
+index 53a422cd..689dd5e1 100644
 --- a/external/CMakeLists.txt
 +++ b/external/CMakeLists.txt
-@@ -369,11 +369,33 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
+@@ -385,11 +385,33 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
  # target_compile_definitions(tracy PUBLIC TRACY_ENABLE)
  
  # Use XDG desktop portals on Linux
@@ -56,7 +56,7 @@ index d4dcfc94..4cb3e1ee 100644
 +set_property(TARGET nativefiledialog PROPERTY FOLDER externals)
 \ No newline at end of file
 diff --git a/vita3k/CMakeLists.txt b/vita3k/CMakeLists.txt
-index e1b27dfd..25d8f88b 100644
+index f300fc77..1a32eb1f 100644
 --- a/vita3k/CMakeLists.txt
 +++ b/vita3k/CMakeLists.txt
 @@ -105,7 +105,6 @@ add_subdirectory(features)
@@ -96,7 +96,7 @@ index ef7de553..811ee661 100644
 +target_link_libraries(gui PRIVATE ctrl kernel miniz nativefiledialog psvpfsparser pugixml::pugixml stb renderer packages sdl2 vkutil)
  target_link_libraries(gui PUBLIC tracy)
 diff --git a/vita3k/gui/src/archive_install_dialog.cpp b/vita3k/gui/src/archive_install_dialog.cpp
-index 67832991..5d724637 100644
+index 7cf1decf..b50ef6b1 100644
 --- a/vita3k/gui/src/archive_install_dialog.cpp
 +++ b/vita3k/gui/src/archive_install_dialog.cpp
 @@ -19,11 +19,12 @@
@@ -158,7 +158,7 @@ index 67832991..5d724637 100644
                      const auto archives_path = get_path_of_archives(contents_path);
                      archives_count = float(archives_path.size());
 @@ -264,7 +258,7 @@ void draw_archive_install_dialog(GuiState &gui, EmuEnvState &emuenv) {
-                     for (const auto archive : invalid_archives)
+                     for (const auto &archive : invalid_archives)
                          fs::remove(archive);
                  }
 -                archive_path = "";
@@ -167,7 +167,7 @@ index 67832991..5d724637 100644
                  delete_archive_file = false;
                  contents_archives.clear();
 diff --git a/vita3k/gui/src/firmware_install_dialog.cpp b/vita3k/gui/src/firmware_install_dialog.cpp
-index 1b7208e6..f29150f7 100644
+index 29ef31d0..3ad9dcec 100644
 --- a/vita3k/gui/src/firmware_install_dialog.cpp
 +++ b/vita3k/gui/src/firmware_install_dialog.cpp
 @@ -19,18 +19,19 @@
@@ -238,9 +238,9 @@ index 1b7208e6..f29150f7 100644
 +                    fs::remove(fs::path(string_utils::utf_to_wide(pup_path)));
                      delete_pup_file = false;
                  }
-                 if (emuenv.cfg.initial_setup)
+                 get_modules_list(gui, emuenv);
 diff --git a/vita3k/gui/src/initial_setup.cpp b/vita3k/gui/src/initial_setup.cpp
-index 0bbe3548..e327c6cb 100644
+index 906a4f8b..3e984471 100644
 --- a/vita3k/gui/src/initial_setup.cpp
 +++ b/vita3k/gui/src/initial_setup.cpp
 @@ -19,11 +19,12 @@
@@ -447,7 +447,7 @@ index 75c11214..46fcf6f8 100644
                  work_path = "";
                  state.clear();
 diff --git a/vita3k/gui/src/settings.cpp b/vita3k/gui/src/settings.cpp
-index 72ffabdb..7a6f4265 100644
+index f24cb89c..6aea2d53 100644
 --- a/vita3k/gui/src/settings.cpp
 +++ b/vita3k/gui/src/settings.cpp
 @@ -20,7 +20,6 @@
@@ -466,7 +466,7 @@ index 72ffabdb..7a6f4265 100644
  #include <pugixml.hpp>
  #include <stb_image.h>
  
-@@ -581,11 +581,11 @@ void draw_settings(GuiState &gui, EmuEnvState &emuenv) {
+@@ -580,11 +580,11 @@ void draw_settings(GuiState &gui, EmuEnvState &emuenv) {
                              sub_menu.clear();
                          }
                      } else if (sub_menu == "image") {
@@ -482,7 +482,7 @@ index 72ffabdb..7a6f4265 100644
                              gui.users[emuenv.io.user_id].start_type = "image";
                              save_user(gui, emuenv, emuenv.io.user_id);
                          }
-@@ -638,12 +638,12 @@ void draw_settings(GuiState &gui, EmuEnvState &emuenv) {
+@@ -637,12 +637,12 @@ void draw_settings(GuiState &gui, EmuEnvState &emuenv) {
                      ImGui::NextColumn();
                  }
                  if (ImGui::Selectable(theme_background.home_screen_backgrounds["add_background"].c_str(), false, ImGuiSelectableFlags_None, SIZE_PACKAGE)) {
@@ -501,7 +501,7 @@ index 72ffabdb..7a6f4265 100644
                              save_user(gui, emuenv, emuenv.io.user_id);
                          }
 diff --git a/vita3k/gui/src/settings_dialog.cpp b/vita3k/gui/src/settings_dialog.cpp
-index 37c05f1c..73dc08c3 100644
+index c562b219..07a490cc 100644
 --- a/vita3k/gui/src/settings_dialog.cpp
 +++ b/vita3k/gui/src/settings_dialog.cpp
 @@ -21,7 +21,6 @@
@@ -538,7 +538,7 @@ index 37c05f1c..73dc08c3 100644
          // TODO: Move app old to new path
          reset_emulator(gui, emuenv);
 diff --git a/vita3k/gui/src/trophy_collection.cpp b/vita3k/gui/src/trophy_collection.cpp
-index 85854dc3..97193c7d 100644
+index 098989d6..040c624d 100644
 --- a/vita3k/gui/src/trophy_collection.cpp
 +++ b/vita3k/gui/src/trophy_collection.cpp
 @@ -26,6 +26,7 @@
