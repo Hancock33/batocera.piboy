@@ -8,7 +8,7 @@ import os
 from os import path
 import ruamel.yaml
 import ruamel.yaml.util
-from distutils.dir_util import copy_tree
+import shutil
 
 vitaConfig = batoceraFiles.CONF + '/vita3k'
 vitaSaves = batoceraFiles.SAVES + '/psvita'
@@ -22,7 +22,7 @@ class Vita3kGenerator(Generator):
         if not path.isdir(vitaConfig):
             os.mkdir(vitaConfig)
             # copy /usr/bin/vita3k contents here
-            copy_tree("/usr/bin/vita3k", vitaConfig)
+            shutil.copytree("/usr/bin/vita3k", vitaConfig)
 
         # Create save folder
         if not path.isdir(vitaSaves):

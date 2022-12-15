@@ -4,7 +4,7 @@ from generators.Generator import Generator
 import Command
 import os
 from os import path
-from distutils.dir_util import copy_tree
+import shutil
 
 openMSX_Homedir = '/userdata/system/configs/openmsx'
 openMSX_Config = '/usr/share/openmsx/'
@@ -25,7 +25,7 @@ class OpenmsxGenerator(Generator):
         # Copy File Needed
         if not os.path.exists(share_dir):
             os.mkdir(share_dir)
-            copy_tree(openMSX_Config, share_dir)
+            shutil.copytree(openMSX_Config, share_dir)
 
         commandArray = ["/usr/bin/openmsx", "-cart", rom ]
         if system.isOptSet('hud') and system.config["hud"] != "":

@@ -11,7 +11,7 @@ import shutil
 import stat
 import configparser
 from pathlib import Path, PureWindowsPath
-from distutils.dir_util import copy_tree
+import shutil
 
 eslog = get_logger(__name__)
 
@@ -29,8 +29,8 @@ class DemulGenerator(Generator):
         if not os.path.exists(emupath):
             shutil.copytree("/usr/demul", emupath)
             # add dxvk dll's
-            copy_tree("/usr/wine/dxvk/x64/", bottlewinpath + "/system32/")
-            copy_tree("/usr/wine/dxvk/x32/", bottlewinpath + "/syswow64/")
+            shutil.copytree("/usr/wine/dxvk/x64/", bottlewinpath + "/system32/")
+            shutil.copytree("/usr/wine/dxvk/x32/", bottlewinpath + "/syswow64/")
 
         # determine what system to define for demul
         # -run=<name>		run specified system (dc, naomi, awave, hikaru, gaelco, cave3rd)
