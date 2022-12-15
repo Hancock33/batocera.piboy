@@ -1,10 +1,10 @@
 diff --git a/vita3k/CMakeLists.txt b/vita3k/CMakeLists.txt
-index 9c72581..7269b8d 100644
+index f300fc77..26af52e8 100644
 --- a/vita3k/CMakeLists.txt
 +++ b/vita3k/CMakeLists.txt
-@@ -180,7 +180,7 @@ if(APPLE)
- 	set(MACOSX_BUNDLE_GUI_IDENTIFIER "com.github.Vita3K.Vita3K")
- 	set(MACOSX_BUNDLE_BUNDLE_NAME "Vita3K")
+@@ -198,7 +198,7 @@ if(APPLE)
+ 	target_sources(vita3k PRIVATE ${MOLTENVK_DYLIB})
+ 	set_source_files_properties(${MOLTENVK_DYLIB} PROPERTIES MACOSX_PACKAGE_LOCATION Frameworks)
  elseif(LINUX)
 -	set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath='$ORIGIN'")
 +	#set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath='$ORIGIN'")
