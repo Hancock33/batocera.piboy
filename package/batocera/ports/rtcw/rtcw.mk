@@ -3,8 +3,8 @@
 # rtcw
 #
 ################################################################################
-# Version: Commits on Sept 23, 2022
-RTCW_VERSION = 6cbc480b1a4ce1ebbbb52b85bc6ae080dafd2fc4
+# Version: Commits on Dec 14, 2022
+RTCW_VERSION = 48116b99814d7c8350a25edf76de60e207053ca5
 RTCW_SITE = $(call github,iortcw,iortcw,$(RTCW_VERSION))
 
 RTCW_DEPENDENCIES = sdl2 sdl2_mixer openal

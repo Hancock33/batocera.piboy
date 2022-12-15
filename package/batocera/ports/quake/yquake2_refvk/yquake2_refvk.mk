@@ -3,8 +3,8 @@
 # yquake2_refvk
 #
 ################################################################################
-# Version: Commits on Dec 11, 2022
-YQUAKE2_REFVK_VERSION = 39738797a1049f1b65396dc49f0ca208e43999c5
+# Version: Commits on Dec 14, 2022
+YQUAKE2_REFVK_VERSION = 3da1dd3a8d4ed61af68725b04d28285b5e4290bc
 YQUAKE2_REFVK_SITE = $(call github,yquake2,ref_vk,$(YQUAKE2_REFVK_VERSION))
 
 YQUAKE2_REFVK_DEPENDENCIES = yquake2
