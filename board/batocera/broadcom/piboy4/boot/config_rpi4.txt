@@ -14,7 +14,7 @@ hdmi_enable_4kp60=1 			# uncomment this option to allow selection of 4k 60Hz ref
 boot_delay=0					# the boot_delay command instructs to wait for a given number of seconds before loading the kernel
 disable_splash=1				# rainbow splash screen will not be shown on boot
 kernel=boot/linux
-initramfs boot/initrd.lz4
+initramfs boot/initrd.gz
 
 #Audio Settings
 dtparam=audio=on
