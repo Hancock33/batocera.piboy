@@ -1,7 +1,7 @@
 # 64-bit mode
 arm_64bit=1
 kernel=boot/linux
-initramfs boot/initrd.gz
+initramfs boot/initrd.lz4
 cec_osd_name=batocera 			# sets the initial CEC name of the device
 start_file=start4.elf
 fixup_file=fixup4.dat
