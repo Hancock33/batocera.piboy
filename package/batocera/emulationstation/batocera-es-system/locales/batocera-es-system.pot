@@ -2939,7 +2939,7 @@ msgctxt "game_options"
 msgid "SHARE MAME ARTWORK"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mamevirtual, libretro/xrick, cemu
+#. TRANSLATION: libretro/mame, libretro/mame, libretro/mamevirtual, libretro/xrick, cemu, ...
 msgctxt "game_options"
 msgid "On (Default)"
 msgstr ""
@@ -7243,7 +7243,7 @@ msgctxt "game_options"
 msgid "Smooth pixels."
 msgstr ""
 
-#. TRANSLATION: daphne, model2emu
+#. TRANSLATION: daphne, scummvm, model2emu
 msgctxt "game_options"
 msgid "BILINEAR FILTERING"
 msgstr ""
@@ -8832,7 +8832,7 @@ msgctxt "game_options"
 msgid "Distorts the output to fill the display fully."
 msgstr ""
 
-#. TRANSLATION: rpcs3
+#. TRANSLATION: rpcs3, scummvm
 msgctxt "game_options"
 msgid "STRETCH TO DISPLAY AREA"
 msgstr ""
@@ -9026,6 +9026,134 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "6 threads"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid ""
+"Change the graphics backend used to render the ScummVM window on the screen."
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "GRAPHICS MODE"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "SDL (Default)"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Select stretch mode."
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Center"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Pixel-Perfect"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Fit to Window"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Stretch to Window"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Fit to Window (4:3)"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Select which filter is used to scale up the resolution."
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "SCALE FILTER"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "HQ"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Edge"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "AdvMame"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "SAI"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "SuperSAI"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "SuperEagle"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "PM"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Dotmatrix"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "TV"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Changes the resolution of the game."
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "SCALE FACTOR"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "0x (Default)"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid ""
+"Corrects the aspect ratio so that games appear the same as they would on "
+"original."
+msgstr ""
+
+#. TRANSLATION: scummvm, model2emu
+msgctxt "game_options"
+msgid "Smooth textures."
 msgstr ""
 
 #. TRANSLATION: easyrpg
@@ -9911,11 +10039,6 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "FAKE GOURAUD"
-msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Smooth textures."
 msgstr ""
 
 #. TRANSLATION: model2emu
