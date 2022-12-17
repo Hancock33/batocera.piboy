@@ -8122,6 +8122,67 @@ rpcs3:
 scummvm:
   features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+        scummvm_render:
+            group: VIDEO SETTINGS
+            prompt:      GRAPHICS MODE
+            description: Change the graphics backend used to render the ScummVM window on the screen.
+            choices:
+                "SDL (Default)": sdl
+                "OpenGL":        gl
+        scummvm_strech:
+            group: VIDEO SETTINGS
+            prompt:      STRETCH TO DISPLAY AREA
+            description: Select stretch mode.
+            choices:
+                "Center":              0
+                "Pixel-Perfect":       1
+                "Fit to Window":       2
+                "Stretch to Window":   3
+                "Fit to Window (4:3)": 4
+                "Off (Default)":       5
+        scummvm_scaler:
+            group: VIDEO SETTINGS
+            prompt:      SCALE FILTER
+            description: Select which filter is used to scale up the resolution.
+            choices:
+                "Normal":        0
+                "HQ":            1
+                "Edge":          2
+                "AdvMame":       3
+                "SAI":           4
+                "SuperSAI":      5
+                "SuperEagle":    6
+                "PM":            7
+                "Dotmatrix":     8
+                "TV":            9
+                "Off (Default)": 10
+        scummvm_scale_factor:
+            group: VIDEO SETTINGS
+            prompt:      SCALE FACTOR
+            description: Changes the resolution of the game.
+            choices:
+                "0x (Default)": 0
+                "1x":           1
+                "2x":           2
+                "3x":           3
+                "4x":           4
+                "5x":           5
+        scummvm_aspect_ratio:
+            group: VIDEO SETTINGS
+            prompt:      ASPECT RATIO
+            description: Corrects the aspect ratio so that games appear the same as they would on original.
+            choices:
+                "Off":           0
+                "On (Default)":  1
+        scummvm_filtering:
+            group: VIDEO SETTINGS
+            prompt:      BILINEAR FILTERING
+            description: Smooth textures.
+            choices:
+                "Off (Default)": 0
+                "On":            1
+
 easyrpg:
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
