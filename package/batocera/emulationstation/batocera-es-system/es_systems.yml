@@ -2461,6 +2461,17 @@ xbox360:
 
                         Nota: É possível construir o Xenia para Linux, mas a funcionalidade no momento da escrita é extremamente pobre.
 
+xboxcloud:
+  name:                 Xbox Cloud Gaming
+  manufacturer:         Microsoft
+  release:              2019
+  hardware:             console
+  extensions:           [game]
+  path:                 /usr/share/emulationstation/ports/xboxcloud
+  emulators:
+    xboxcloud:
+      xboxcloud:            { requireAnyOf: [BR2_PACKAGE_XBOX_XCLOUD_CLIENT] }
+
 samcoupe:
   name:                 SAM Coupé
   manufacturer:         Miles Gordon Technology

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<gameList>
+	<game>
+		<path>./xboxcloud.game</path>
+		<name>Xbox Cloud Gaming</name>
+		<desc>Microsoft Xbox Cloud Gaming.</desc>
+		<image>./images/xboxcloud.png</image>
+		<releasedate>20191114T000000</releasedate>
+		<developer>Microsoft</developer>
+		<publisher>Microsoft</publisher>
+		<players>1</players>
+		<lang>en</lang>
+	</game>
+</gameList>
