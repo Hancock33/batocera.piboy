@@ -483,6 +483,10 @@ def getGenerator(emulator):
         from generators.xash3d_fwgs.xash3dFwgsGenerator import Xash3dFwgsGenerator
         return Xash3dFwgsGenerator()
 
+    if emulator == 'xboxcloud':
+        from generators.xboxcloud.xboxcloudGenerator import XboxcloudGenerator
+        return XboxcloudGenerator()
+
     if emulator == 'xemu':
         from generators.xemu.xemuGenerator import XemuGenerator
         return XemuGenerator()

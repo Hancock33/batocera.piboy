@@ -951,6 +951,9 @@ xbox360:
   options:
     forceNoBezel: true
     hud_support: false
+xboxcloud:
+  emulator: xboxcloud
+  core:     xboxcloud
 xegs:
   emulator: libretro
   core:     mame
