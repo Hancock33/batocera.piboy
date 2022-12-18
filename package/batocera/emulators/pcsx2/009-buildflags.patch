@@ -12,10 +12,10 @@ index a47da2581..2f4c95033 100644
  	endif()
  	list(APPEND PCSX2_DEFS _ARCH_64=1 _M_X86=1)
 diff --git a/pcsx2/CMakeLists.txt b/pcsx2/CMakeLists.txt
-index a5f698c29..ddbc8a365 100644
+index e1bafa911..0d00e234c 100644
 --- a/pcsx2/CMakeLists.txt
 +++ b/pcsx2/CMakeLists.txt
-@@ -1011,9 +1011,9 @@ if(DISABLE_ADVANCE_SIMD)
+@@ -947,9 +947,9 @@ if(DISABLE_ADVANCE_SIMD)
  		set(compile_options_avx  -msse4.1 -mavx)
  		set(compile_options_sse4 -msse4.1)
  	else()

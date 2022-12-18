@@ -1,8 +1,8 @@
 diff --git a/pcsx2/PAD/Linux/SDL/joystick.cpp b/pcsx2/PAD/Linux/SDL/joystick.cpp
-index 933bc4f..84be6d4 100644
+index 17f93ba17..988522241 100644
 --- a/pcsx2/PAD/Linux/SDL/joystick.cpp
 +++ b/pcsx2/PAD/Linux/SDL/joystick.cpp
-@@ -21,6 +21,32 @@
+@@ -25,6 +25,32 @@
  // Joystick definitions //
  //////////////////////////
  
@@ -35,7 +35,7 @@ index 933bc4f..84be6d4 100644
  // opens handles to all possible joysticks
  void JoystickInfo::EnumerateJoysticks(std::vector<std::unique_ptr<Device>>& vjoysticks)
  {
-@@ -64,9 +90,12 @@ void JoystickInfo::EnumerateJoysticks(std::vector<std::unique_ptr<Device>>& vjoy
+@@ -78,9 +104,12 @@ void JoystickInfo::EnumerateJoysticks(std::vector<std::unique_ptr<Device>>& vjoy
  
  	vjoysticks.clear();
  

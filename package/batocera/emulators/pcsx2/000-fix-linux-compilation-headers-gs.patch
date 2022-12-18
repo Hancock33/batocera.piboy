@@ -1,10 +1,10 @@
 diff --git a/pcsx2/CDVD/CDVD.cpp b/pcsx2/CDVD/CDVD.cpp
-index 757d7ae..79c4937 100644
+index b4b121fc2..0e35a7ecd 100644
 --- a/pcsx2/CDVD/CDVD.cpp
 +++ b/pcsx2/CDVD/CDVD.cpp
-@@ -25,7 +25,7 @@
+@@ -33,7 +33,7 @@
  #include "CDVD_internal.h"
- #include "CDVDisoReader.h"
+ #include "IsoFileFormats.h"
  
 -#include "GS.h" // for gsVideoMode
 +#include "../GS.h" // for gsVideoMode
@@ -12,7 +12,7 @@ index 757d7ae..79c4937 100644
  #include "ps2/BiosTools.h"
  
 diff --git a/pcsx2/DebugTools/DebugInterface.cpp b/pcsx2/DebugTools/DebugInterface.cpp
-index d29c2b0..2a89378 100644
+index 9b2c804cc..e778ade14 100644
 --- a/pcsx2/DebugTools/DebugInterface.cpp
 +++ b/pcsx2/DebugTools/DebugInterface.cpp
 @@ -20,7 +20,7 @@
@@ -25,7 +25,7 @@ index d29c2b0..2a89378 100644
  
  #include "R3000A.h"
 diff --git a/pcsx2/PAD/Linux/Global.h b/pcsx2/PAD/Linux/Global.h
-index 71e4a8a..7754542 100644
+index c2ba2a9aa..56e3063b1 100644
 --- a/pcsx2/PAD/Linux/Global.h
 +++ b/pcsx2/PAD/Linux/Global.h
 @@ -15,6 +15,9 @@
@@ -49,14 +49,15 @@ index 71e4a8a..7754542 100644
  
  enum gamePadValues
 diff --git a/pcsx2/gui/App.h b/pcsx2/gui/App.h
-index d9decd7..ade53b9 100644
+index 4505887a2..90afdec1e 100644
 --- a/pcsx2/gui/App.h
 +++ b/pcsx2/gui/App.h
-@@ -36,7 +36,7 @@
+@@ -33,7 +33,7 @@
  class DisassemblyDialog;
  struct HostKeyEvent;
  
 -#include "GS.h"
 +#include "../GS.h"
  #include "System.h"
- #include "System/SysThreads.h"
+ 
+ // TODO: Not the best location for this, but it needs to be accessed by MTGS etc.

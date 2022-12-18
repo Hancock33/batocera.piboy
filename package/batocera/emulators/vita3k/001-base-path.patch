@@ -1,5 +1,5 @@
 diff --git a/vita3k/main.cpp b/vita3k/main.cpp
-index 93ed0129..e6274907 100644
+index e93e5289..bb2fffb2 100644
 --- a/vita3k/main.cpp
 +++ b/vita3k/main.cpp
 @@ -84,8 +84,8 @@ static void run_execv(char *argv[], EmuEnvState &emuenv) {

@@ -1,8 +1,8 @@
 diff --git a/.gitmodules b/.gitmodules
-index e57fd159..bb5ed956 100644
+index 89ec3aa2..36427fbe 100644
 --- a/.gitmodules
 +++ b/.gitmodules
-@@ -90,6 +90,6 @@
+@@ -90,9 +90,9 @@
  [submodule "external/tracy"]
  	path = external/tracy
  	url = https://github.com/wolfpld/tracy.git
@@ -12,11 +12,14 @@ index e57fd159..bb5ed956 100644
 +[submodule "external/nativefiledialog-cmake"]
 +    path = external/nativefiledialog-cmake
 +	url = https://github.com/Vita3K/nativefiledialog-cmake
+ [submodule "external/cubeb"]
+ 	path = external/cubeb
+ 	url = https://github.com/mozilla/cubeb.git
 diff --git a/external/CMakeLists.txt b/external/CMakeLists.txt
-index 53a422cd..689dd5e1 100644
+index a5ba32c4..555e6d88 100644
 --- a/external/CMakeLists.txt
 +++ b/external/CMakeLists.txt
-@@ -385,11 +385,33 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
+@@ -409,11 +409,33 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
  # target_compile_definitions(tracy PUBLIC TRACY_ENABLE)
  
  # Use XDG desktop portals on Linux
@@ -85,15 +88,15 @@ index b66bbd98..28d5a6f4 100644
   * @dir vita3k/io
   *
 diff --git a/vita3k/gui/CMakeLists.txt b/vita3k/gui/CMakeLists.txt
-index ef7de553..811ee661 100644
+index 81c5c681..afe49740 100644
 --- a/vita3k/gui/CMakeLists.txt
 +++ b/vita3k/gui/CMakeLists.txt
 @@ -51,5 +51,5 @@ add_library(
  
  target_include_directories(gui PUBLIC include ${CMAKE_SOURCE_DIR}/vita3k)
  target_link_libraries(gui PUBLIC app config dialog emuenv ime imgui glutil lang np)
--target_link_libraries(gui PRIVATE ctrl kernel miniz psvpfsparser pugixml::pugixml stb renderer packages sdl2 vkutil host::dialog)
-+target_link_libraries(gui PRIVATE ctrl kernel miniz nativefiledialog psvpfsparser pugixml::pugixml stb renderer packages sdl2 vkutil)
+-target_link_libraries(gui PRIVATE audio ctrl kernel miniz psvpfsparser pugixml::pugixml stb renderer packages sdl2 vkutil host::dialog)
++target_link_libraries(gui PRIVATE audio ctrl kernel miniz nativefiledialog psvpfsparser pugixml::pugixml stb renderer packages sdl2 vkutil)
  target_link_libraries(gui PUBLIC tracy)
 diff --git a/vita3k/gui/src/archive_install_dialog.cpp b/vita3k/gui/src/archive_install_dialog.cpp
 index 7cf1decf..b50ef6b1 100644
@@ -501,10 +504,10 @@ index f24cb89c..6aea2d53 100644
                              save_user(gui, emuenv, emuenv.io.user_id);
                          }
 diff --git a/vita3k/gui/src/settings_dialog.cpp b/vita3k/gui/src/settings_dialog.cpp
-index c562b219..07a490cc 100644
+index 20b1c7e0..9d5a40be 100644
 --- a/vita3k/gui/src/settings_dialog.cpp
 +++ b/vita3k/gui/src/settings_dialog.cpp
-@@ -21,7 +21,6 @@
+@@ -22,7 +22,6 @@
  #include <config/functions.h>
  #include <config/state.h>
  #include <display/state.h>
@@ -512,7 +515,7 @@ index c562b219..07a490cc 100644
  #include <io/state.h>
  #include <kernel/state.h>
  #include <renderer/state.h>
-@@ -43,6 +42,7 @@
+@@ -44,6 +43,7 @@
  #include <SDL.h>
  
  #include <algorithm>
@@ -520,7 +523,7 @@ index c562b219..07a490cc 100644
  #include <pugixml.hpp>
  #include <sstream>
  
-@@ -105,12 +105,12 @@ static void reset_emulator(GuiState &gui, EmuEnvState &emuenv) {
+@@ -106,12 +106,12 @@ static void reset_emulator(GuiState &gui, EmuEnvState &emuenv) {
  }
  
  static void change_emulator_path(GuiState &gui, EmuEnvState &emuenv) {
