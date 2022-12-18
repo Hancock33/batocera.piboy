@@ -1,0 +1,12 @@
+diff --git a/zc/zelda.cpp b/zc/zelda.cpp
+index 91f4d99..6f95b57 100644
+--- a/zc/zelda.cpp
++++ b/zc/zelda.cpp
+@@ -2,6 +2,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <stdarg.h>
++#include <ctime>
+ #include <map>
+ #include <vector>
+ 
