@@ -1,5 +1,5 @@
 diff --git a/audio/audio_driver.c b/audio/audio_driver.c
-index 57fa9ed4e6..88bc040abe 100644
+index a82270cf21..0a5e043b82 100644
 --- a/audio/audio_driver.c
 +++ b/audio/audio_driver.c
 @@ -1332,8 +1332,8 @@ static void audio_driver_load_menu_bgm_callback(retro_task_t *task,
@@ -50,10 +50,10 @@ index 57fa9ed4e6..88bc040abe 100644
     }
  
 diff --git a/configuration.c b/configuration.c
-index ac4779b2d7..7aa651785b 100644
+index d9ab8370c4..aa3be94222 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -1406,6 +1406,7 @@ static struct config_array_setting *populate_settings_array(settings_t *settings
+@@ -1421,6 +1421,7 @@ static struct config_array_setting *populate_settings_array(settings_t *settings
     SETTING_ARRAY("cheevos_custom_host",      settings->arrays.cheevos_custom_host, false, NULL, true);
     SETTING_ARRAY("cheevos_username",         settings->arrays.cheevos_username, false, NULL, true);
     SETTING_ARRAY("cheevos_password",         settings->arrays.cheevos_password, false, NULL, true);
@@ -61,7 +61,7 @@ index ac4779b2d7..7aa651785b 100644
     SETTING_ARRAY("cheevos_token",            settings->arrays.cheevos_token, false, NULL, true);
     SETTING_ARRAY("cheevos_leaderboards_enable", settings->arrays.cheevos_leaderboards_enable, true, "true", true);
  #endif
-@@ -2678,6 +2679,7 @@ void config_set_defaults(void *data)
+@@ -2701,6 +2702,7 @@ void config_set_defaults(void *data)
  #ifdef HAVE_CHEEVOS
     *settings->arrays.cheevos_username                 = '\0';
     *settings->arrays.cheevos_password                 = '\0';
@@ -70,10 +70,10 @@ index ac4779b2d7..7aa651785b 100644
  #endif
  
 diff --git a/configuration.h b/configuration.h
-index 839fdde48c..aa6e70921b 100644
+index e8fe1ccf9d..7afbd134f3 100644
 --- a/configuration.h
 +++ b/configuration.h
-@@ -410,6 +410,7 @@ typedef struct settings
+@@ -415,6 +415,7 @@ typedef struct settings
        char menu_driver[32];
        char cheevos_username[32];
        char cheevos_password[256];

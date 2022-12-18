@@ -1,5 +1,5 @@
 diff --git a/pcsx2/gui/AppConfig.cpp b/pcsx2/gui/AppConfig.cpp
-index 507348e73..71cd04d64 100644
+index 487d895a5..4b7f7fb5f 100644
 --- a/pcsx2/gui/AppConfig.cpp
 +++ b/pcsx2/gui/AppConfig.cpp
 @@ -202,22 +202,22 @@ namespace PathDefs
@@ -62,7 +62,7 @@ index 507348e73..71cd04d64 100644
  	}
  
  	wxDirName GetTextures()
-@@ -1092,7 +1092,7 @@ void RelocateLogfile()
+@@ -1086,7 +1086,7 @@ void RelocateLogfile()
  {
  	g_Conf->Folders.Logs.Mkdir();
  

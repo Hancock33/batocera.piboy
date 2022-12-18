@@ -1,6 +1,8 @@
---- pcsx2-v1.7.3527/cmake/SearchForStuff.cmake	2022-11-04 16:12:25.000000000 -0700
-+++ pcsx2-lbrpdx/cmake/SearchForStuff.cmake	2022-11-06 14:18:46.686596704 -0800
-@@ -48,22 +48,22 @@
+diff --git a/cmake/SearchForStuff.cmake b/cmake/SearchForStuff.cmake
+index 4a62944e4..29ad6564a 100644
+--- a/cmake/SearchForStuff.cmake
++++ b/cmake/SearchForStuff.cmake
+@@ -47,22 +47,22 @@ else()
  		# Fedora uses an extra non-standard option ... Arch must be the first option.
  		# They do uname -m if missing so only fix for cross compilations.
  		# http://pkgs.fedoraproject.org/cgit/wxGTK.git/plain/wx-config
@@ -33,7 +35,7 @@
  
  		# wx2.8 => /usr/bin/wx-config-2.8
  		# lib32-wx2.8 => /usr/bin/wx-config32-2.8
-@@ -71,44 +71,44 @@
+@@ -70,44 +70,44 @@ else()
  		# I'm going to take a wild guess and predict this:
  		# lib32-wx3.0 => /usr/bin/wx-config32-3.0
  		# FindwxWidgets only searches for wx-config.

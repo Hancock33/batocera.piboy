@@ -1,9 +1,9 @@
 diff --git a/common/Pcsx2Defs.h b/common/Pcsx2Defs.h
-index 111db24..4c4ad62 100644
+index 40f70f87a..7e9106b5b 100644
 --- a/common/Pcsx2Defs.h
 +++ b/common/Pcsx2Defs.h
-@@ -119,7 +119,7 @@ static const int __pagesize = PCSX2_PAGESIZE;
- 	#define __vectorcall __fastcall
+@@ -121,7 +121,7 @@ static constexpr size_t __pagemask = PCSX2_PAGESIZE - 1;
+ 
  	#define _inline __inline__ __attribute__((unused))
  	#ifdef NDEBUG
 -		#define __forceinline __attribute__((always_inline, unused))
