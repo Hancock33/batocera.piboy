@@ -9561,10 +9561,10 @@ wine:
         wine_ntfs:
             group: ADVANCED OPTIONS
             prompt:      ENABLE NTFS MODE
-            description: Enable this mode if you have issue for run your game on NTFS storage (by default is better to use LinuxFS).
+            description: Enable this mode if you have issue for run your game on NTFS storage (by default it is better to use LinuxFS).
             choices:
-                "Off": 0
-                "On":  1
+                "Off": 1
+                "On":  0
         wine_debug:
             prompt:      ENABLE DEBUG
             choices:

@@ -146,7 +146,7 @@ wine_options() {
     test "${DXVK_RESET_CACHE}" = 1 && DXVK_STATE_CACHE=reset
 
     export NTFS_MODE=0
-    test "${WINE_NTFS}" = 1 && NTFS_MODE=1
+    test "${WINE_NTFS}" = 0 && NTFS_MODE=1
 
     export STAGING_SHARED_MEMORY=1
     export ULIMIT_SIZE=1048576
