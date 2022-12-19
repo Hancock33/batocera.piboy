@@ -21,5 +21,3 @@ config BR2_PACKAGE_DUCKSTATION
       DuckStation - PlayStation 1, aka. PSX Emulator
 
 	    https://github.com/stenzek/duckstation
-
-

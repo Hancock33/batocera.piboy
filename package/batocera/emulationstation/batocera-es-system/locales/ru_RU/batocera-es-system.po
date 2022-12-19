@@ -9777,7 +9777,7 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Enable this mode if you have issue for run your game on NTFS storage (by "
-"default is better to use LinuxFS)."
+"default it is better to use LinuxFS)."
 msgstr ""
 
 #. TRANSLATION: wine
