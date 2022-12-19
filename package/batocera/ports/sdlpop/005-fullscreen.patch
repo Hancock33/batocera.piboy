@@ -1,0 +1,26 @@
+diff --git a/SDLPoP.ini b/SDLPoP.ini
+index cbb8c29..6621bf4 100644
+--- a/SDLPoP.ini
++++ b/SDLPoP.ini
+@@ -38,7 +38,7 @@ enable_text = true
+ enable_info_screen = true;
+ 
+ ; Start the game in fullscreen mode. (In-game fullscreen toggle: Alt+Enter)
+-start_fullscreen = false
++start_fullscreen = true
+ 
+ ; Width and height of the game window.
+ ; By default, the window is 640 pixels wide and 400 pixels tall.
+diff --git a/src/options.c b/src/options.c
+index 1acbcb3..d90f2ee 100644
+--- a/src/options.c
++++ b/src/options.c
+@@ -469,7 +469,7 @@ void set_options_to_default() {
+ 	enable_flash = 1;
+ 	enable_text = 1;
+ 	enable_info_screen = 1;
+-	start_fullscreen = 0;
++	start_fullscreen = 1;
+ 	use_hardware_acceleration = 2;
+ 	use_correct_aspect_ratio = 0;
+ 	use_integer_scaling = 0;
