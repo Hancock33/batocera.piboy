@@ -7,7 +7,7 @@ import controllersConfig
 
 class LzdoomGenerator(Generator):
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ['/usr/share/lzdoom/lzdoom', '+set', 'use_joystick', 'true', '+set', 'use_mouse', 'false']
+        commandArray = ['/usr/share/lzdoom/lzdoom', '+set', 'use_joystick', 'true', '+set', 'use_mouse', 'false', '+set', 'fullscreen', 'true']
 
         # Rendering mode
         if system.isOptSet('lzdoom_render'):

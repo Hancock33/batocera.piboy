@@ -7,7 +7,7 @@ import controllersConfig
 
 class GzdoomGenerator(Generator):
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ['/usr/share/gzdoom/gzdoom', '+set', 'use_joystick', 'true', '+set', 'use_mouse', 'false']
+        commandArray = ['/usr/share/gzdoom/gzdoom', '+set', 'use_joystick', 'true', '+set', 'use_mouse', 'false', '+set', 'vid_fullscreen', 'true']
 
         # Rendering mode
         if system.isOptSet('gzdoom_render'):
