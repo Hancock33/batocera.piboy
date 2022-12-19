@@ -112,6 +112,8 @@ class RazeGenerator(Generator):
         else:
             launch_args.extend(['+set', 'vid_preferbackend', '3', '+set', 'vid_rendermode', '3'])
 
+            launch_args.extend(['+set', 'vid_fullscreen', 'true'])
+
         return Command.Command(
             array=launch_args,
             env={
