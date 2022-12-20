@@ -1,0 +1,13 @@
+diff --git a/main.cpp b/main.cpp
+index 71e0ee1..ac3ef6b 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -40,7 +40,7 @@ static const char *_usage =
+ 	"  --checkpoint=NUM  Start at checkpoint NUM\n"
+ ;
+ 
+-static bool _fullscreen = false;
++static bool _fullscreen = true;
+ static bool _widescreen = false;
+ 
+ static const bool _runBenchmark = false;
