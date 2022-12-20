@@ -1,8 +1,17 @@
 diff --git a/src/glbapi.cpp b/src/glbapi.cpp
-index affcfbc..b81109b 100644
+index affcfbc..d5735d3 100644
 --- a/src/glbapi.cpp
 +++ b/src/glbapi.cpp
-@@ -33,7 +33,7 @@ char* strupr(char* s)
+@@ -8,6 +8,8 @@
+ #include "common.h"
+ #include "glbapi.h"
+ #include "vmemapi.h"
++#include "rap.h"
++
+ #ifdef _WIN32
+ #include <io.h>
+ #endif // _WIN32
+@@ -33,7 +35,7 @@ char* strupr(char* s)
  #endif
  
  char prefix[] = "FILE";
@@ -11,7 +20,7 @@ index affcfbc..b81109b 100644
  const char *serial = "32768GLB";
  
  struct fitem_t {
-@@ -480,7 +480,7 @@ int GLB_ReadFile(const char *a1, char *a2)
+@@ -480,7 +482,7 @@ int GLB_ReadFile(const char *a1, char *a2)
      FILE *handle;
      int l;
      char f_a0[PATH_MAX];
@@ -21,10 +30,18 @@ index affcfbc..b81109b 100644
          strcpy(f_a0, exePath);
          strcat(f_a0, a1);
 diff --git a/src/loadsave.cpp b/src/loadsave.cpp
-index 52d6e47..179bd3b 100644
+index 52d6e47..810257c 100644
 --- a/src/loadsave.cpp
 +++ b/src/loadsave.cpp
-@@ -45,8 +45,8 @@ int filepos = -1;
+@@ -19,6 +19,7 @@
+ #include "joyapi.h"
+ #include "input.h"
+ #include "fileids.h"
++#include "rap.h"
+ 
+ #ifdef _WIN32
+ #include <io.h>
+@@ -45,8 +46,8 @@ int filepos = -1;
  int map_item = -1;
  int curplr_diff = 2;
  
@@ -35,34 +52,34 @@ index 52d6e47..179bd3b 100644
  
  map_t *mapmem;
  csprite_t *csprite;
-@@ -140,7 +140,7 @@ RAP_AreSavedFiles(
+@@ -140,7 +141,7 @@ RAP_AreSavedFiles(
          else
              sprintf(temp, fmt, loop);
          
 -        if (!access(temp, 0))
-+        if (!checkfile(temp, 0))
++        if (!checkfile(temp))
              return 1;
      }
      
-@@ -196,7 +196,7 @@ RAP_FFSaveFile(
+@@ -196,7 +197,7 @@ RAP_FFSaveFile(
          else
              sprintf(temp, fmt, loop);
          
 -        if (access(temp, 0) != 0)
-+        if (checkfile(temp, 0) != 0)
++        if (checkfile(temp))
          {
              RAP_ClearPlayer();
              filepos = loop;
-@@ -470,7 +470,7 @@ RAP_LoadWin(
+@@ -470,7 +471,7 @@ RAP_LoadWin(
          else
              sprintf(temp, fmt, loop);
          
 -        if (!access(temp, 0))
-+        if (!checkfile(temp, 0))
++        if (!checkfile(temp))
          {
              if (pos == -1)
                  pos = loop;
-@@ -656,7 +656,7 @@ RAP_InitLoadSave(
+@@ -656,7 +657,7 @@ RAP_InitLoadSave(
      
      cdflag = 0;
      
@@ -72,10 +89,18 @@ index 52d6e47..179bd3b 100644
      return cdpath;
  }
 diff --git a/src/prefapi.cpp b/src/prefapi.cpp
-index f397a37..f6a7a8b 100644
+index f397a37..920c99d 100644
 --- a/src/prefapi.cpp
 +++ b/src/prefapi.cpp
-@@ -269,7 +269,7 @@ int INI_InitPreference(const char *section)
+@@ -3,6 +3,7 @@
+ #include <string.h>
+ #include "common.h"
+ #include "prefapi.h"
++#include "rap.h"
+ #ifdef _WIN32
+ #include <io.h>
+ #endif // _WIN32
+@@ -269,7 +270,7 @@ int INI_InitPreference(const char *section)
  {
      if (section)
          strcpy(preference, section);
