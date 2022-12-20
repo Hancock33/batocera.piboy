@@ -1,10 +1,10 @@
 diff --git a/src/Cafe/HW/Latte/Renderer/Renderer.cpp b/src/Cafe/HW/Latte/Renderer/Renderer.cpp
-index 0e5f1ac..8543e24 100644
+index 8f99c06930..7faa605755 100644
 --- a/src/Cafe/HW/Latte/Renderer/Renderer.cpp
 +++ b/src/Cafe/HW/Latte/Renderer/Renderer.cpp
-@@ -83,7 +83,7 @@ uint8 Renderer::RGBComponentToSRGB(uint8 cli)
+@@ -84,7 +84,7 @@ uint8 Renderer::RGBComponentToSRGB(uint8 cli)
  
- fs::path _GenerateScreenshotFilename(bool isDRC)
+ static std::optional<fs::path> GenerateScreenshotFilename(bool isDRC)
  {
 -	fs::path screendir = ActiveSettings::GetUserDataPath("screenshots");
 +	fs::path screendir = "/userdata/screenshots";
@@ -12,7 +12,7 @@ index 0e5f1ac..8543e24 100644
  	// if the file already exists add a suffix counter (_2.png, _3.png etc)
  	std::time_t time_t = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
 diff --git a/src/Cemu/Logging/CemuLogging.cpp b/src/Cemu/Logging/CemuLogging.cpp
-index 28a8642..a4f78b6 100644
+index 28a86427f6..a4f78b6d94 100644
 --- a/src/Cemu/Logging/CemuLogging.cpp
 +++ b/src/Cemu/Logging/CemuLogging.cpp
 @@ -98,7 +98,7 @@ void cemuLog_createLogFile(bool triggeredByCrash)
@@ -25,7 +25,7 @@ index 28a8642..a4f78b6 100644
  	if (LogContext.file_stream.fail())
  	{
 diff --git a/src/Common/ExceptionHandler/ExceptionHandler_win32.cpp b/src/Common/ExceptionHandler/ExceptionHandler_win32.cpp
-index 565f4f8..00e15c5 100644
+index 565f4f8fc4..00e15c51f3 100644
 --- a/src/Common/ExceptionHandler/ExceptionHandler_win32.cpp
 +++ b/src/Common/ExceptionHandler/ExceptionHandler_win32.cpp
 @@ -360,7 +360,7 @@ void createCrashlog(EXCEPTION_POINTERS* e, PCONTEXT context)
@@ -38,11 +38,11 @@ index 565f4f8..00e15c5 100644
  
  	exit(0);
 diff --git a/src/gui/CemuApp.cpp b/src/gui/CemuApp.cpp
-index 02a360a..895e60b 100644
+index 2c766f5bab..425a125e5a 100644
 --- a/src/gui/CemuApp.cpp
 +++ b/src/gui/CemuApp.cpp
-@@ -82,7 +82,7 @@ bool CemuApp::OnInit()
- #endif
+@@ -79,7 +79,7 @@ bool CemuApp::OnInit()
+ 	fs::path exePath(standardPaths.GetExecutablePath().ToStdString());
  	user_data_path = config_path = cache_path = data_path = exePath.parent_path();
  #else
 -	SetAppName("Cemu");
@@ -50,7 +50,7 @@ index 02a360a..895e60b 100644
  	wxString appName=GetAppName();
  	#if BOOST_OS_LINUX
  	standardPaths.SetFileLayout(wxStandardPaths::FileLayout::FileLayout_XDG);
-@@ -94,14 +94,14 @@ bool CemuApp::OnInit()
+@@ -91,14 +91,14 @@ bool CemuApp::OnInit()
  		return dir;
  	};
  	wxString homeDir=wxFileName::GetHomeDir();
