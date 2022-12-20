@@ -1,24 +1,185 @@
-diff --git a/src/loadsave.cpp b/src/loadsave.cpp
-index 83941e0..6ca5206 100644
---- a/src/loadsave.cpp
-+++ b/src/loadsave.cpp
-@@ -33,8 +33,8 @@
- #define PATH_MAX MAX_PATH
+diff --git a/src/glbapi.cpp b/src/glbapi.cpp
+index affcfbc..b81109b 100644
+--- a/src/glbapi.cpp
++++ b/src/glbapi.cpp
+@@ -33,7 +33,7 @@ char* strupr(char* s)
  #endif
  
--char g_data_path[PATH_MAX];
--char g_setup_path[PATH_MAX];
-+static char g_data_path[256] = "/userdata/roms/ports/raptor/";
-+static char g_setup_path[256] = "/userdata/system/configs/raptor/";
+ char prefix[] = "FILE";
+-char exePath[PATH_MAX];
++char exePath[PATH_MAX] = "/userdata/roms/ports/raptor/";
+ const char *serial = "32768GLB";
  
- int hasdatapath = 0;
+ struct fitem_t {
+@@ -480,7 +480,7 @@ int GLB_ReadFile(const char *a1, char *a2)
+     FILE *handle;
+     int l;
+     char f_a0[PATH_MAX];
+-    if (access(a1, 0) == -1)
++    if (!checkfile(a1) == -1)
+     {
+         strcpy(f_a0, exePath);
+         strcat(f_a0, a1);
+diff --git a/src/loadsave.cpp b/src/loadsave.cpp
+index 52d6e47..179bd3b 100644
+--- a/src/loadsave.cpp
++++ b/src/loadsave.cpp
+@@ -45,8 +45,8 @@ int filepos = -1;
+ int map_item = -1;
+ int curplr_diff = 2;
  
-@@ -494,7 +494,7 @@ const char *RAP_DataPath(void)
+-static const char *fmt = "CHAR%04u.FIL";
+-static const char* cdfmt = "%s\\CHAR%04u.FIL";
++static const char *fmt = "/userdata/roms/ports/raptor/CHAR%04u.FIL";
++static const char *cdfmt = "/userdata/roms/ports/raptor/CHAR%04u.FIL";
+ 
+ map_t *mapmem;
+ csprite_t *csprite;
+@@ -140,7 +140,7 @@ RAP_AreSavedFiles(
+         else
+             sprintf(temp, fmt, loop);
+         
+-        if (!access(temp, 0))
++        if (!checkfile(temp, 0))
+             return 1;
+     }
+     
+@@ -196,7 +196,7 @@ RAP_FFSaveFile(
+         else
+             sprintf(temp, fmt, loop);
+         
+-        if (access(temp, 0) != 0)
++        if (checkfile(temp, 0) != 0)
+         {
+             RAP_ClearPlayer();
+             filepos = loop;
+@@ -470,7 +470,7 @@ RAP_LoadWin(
+         else
+             sprintf(temp, fmt, loop);
+         
+-        if (!access(temp, 0))
++        if (!checkfile(temp, 0))
+         {
+             if (pos == -1)
+                 pos = loop;
+@@ -656,7 +656,7 @@ RAP_InitLoadSave(
+     
+     cdflag = 0;
+     
+-    strcpy(g_setup_ini, "SETUP.INI");
++    strcpy(g_setup_ini, "/usr/share/raptor/SETUP.INI");
+     
+     return cdpath;
+ }
+diff --git a/src/prefapi.cpp b/src/prefapi.cpp
+index f397a37..f6a7a8b 100644
+--- a/src/prefapi.cpp
++++ b/src/prefapi.cpp
+@@ -269,7 +269,7 @@ int INI_InitPreference(const char *section)
  {
-     memset(g_data_path, 0, sizeof(g_data_path));
-     hasdatapath = 0;
--    strcpy(g_setup_path, "SETUP.INI");
-+    strcat(g_setup_path, "SETUP.INI");  
-     return g_data_path;
+     if (section)
+         strcpy(preference, section);
+-    return !access(preference, 4);
++    return checkfile(preference);
  }
  
+ int INI_GetPreferenceLong(const char *section, const char *key, int defValue)
+diff --git a/src/rap.cpp b/src/rap.cpp
+index ebfec03..a9e43a7 100644
+--- a/src/rap.cpp
++++ b/src/rap.cpp
+@@ -32,6 +32,7 @@
+ #include "joyapi.h"
+ #include "i_lastscr.h"
+ #include "fileids.h"
++#include "rap.h"
+ 
+ #ifdef _WIN32
+ #include <io.h>
+@@ -179,8 +180,8 @@ void InitScreen(void)
+ 
+ void ShutDown(int a1)
+ {
+-    if (!a1 && !godmode)
+-        WIN_Order();
++    //if (!a1 && !godmode)
++    //    WIN_Order();
+ 
+     //IPT_DeInit();
+     //DMX_DeInit();
+@@ -999,6 +1000,18 @@ void RAP_InitMem(void)
+     GLB_UseVM();
+ }
+ 
++bool checkfile(const char* path)
++{
++	FILE* f = fopen(path, "r");
++	if (f)
++	{
++        fclose(f);
++		return true;
++	} else {
++        return false;
++    }
++}
++
+ int main(int argc, char *argv[])
+ {
+     char *shost, *reg_text, *pal;
+@@ -1047,11 +1060,11 @@ int main(int argc, char *argv[])
+         printf("GOD mode enabled\n");
+     cur_diff = 0;
+ 
+-    if (!access("FILE0001.GLB", 0))
++    if (checkfile("/userdata/roms/ports/raptor/FILE0001.GLB"))
+         gameflag[0] = 1;
+-    if (!access("FILE0002.GLB", 0))
++    if (checkfile("/userdata/roms/ports/raptor/FILE0002.GLB"))
+         gameflag[1] = 1;
+-    if (!access("FILE0003.GLB", 0) && !access("FILE0004.GLB", 0))
++    if (checkfile("/userdata/roms/ports/raptor/FILE0003.GLB") && checkfile("/userdata/roms/ports/raptor/FILE0004.GLB"))
+     {
+         gameflag[2] = 1;
+         gameflag[3] = 1;
+@@ -1065,14 +1078,14 @@ int main(int argc, char *argv[])
+         if (gameflag[i])
+             eps++;
+ 
+-    if (access("FILE0000.GLB", 0) || !eps)
++     if (!checkfile("/userdata/roms/ports/raptor/FILE0000.GLB") || !eps)
+     {
+         printf("All game data files NOT FOUND cannot proceed !!\n");
+-        SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,
+-            "Raptor", "All game data files NOT FOUND cannot proceed !!", NULL);
+-        exit(0);
++        //SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,
++        //    "Raptor", "All game data files NOT FOUND cannot proceed !!", NULL);
++        //exit(0);
+     }
+-    printf("Init -\n");
++    //printf("Init -\n");
+     EXIT_Install(ShutDown);
+     memset(bday, 0, sizeof(bday));
+     bday[0].f_0 = 5;
+@@ -1111,10 +1124,10 @@ int main(int argc, char *argv[])
+         printf("Birthday() = %s\n", bday[bday_num].f_c);
+ 
+     if (access(RAP_SetupFilename(), 0))
+-        EXIT_Error("You Must run SETUP.EXE First !!");
++        printf("You Must run SETUP.EXE First !!");
+ 
+     if (!INI_InitPreference(RAP_SetupFilename()))
+-        EXIT_Error("SETUP Error");
++        printf("SETUP Error");
+ 
+     fflush(stdout);
+ 
+diff --git a/src/rap.h b/src/rap.h
+index b251e67..6dc4c70 100644
+--- a/src/rap.h
++++ b/src/rap.h
+@@ -168,3 +168,4 @@ void RAP_LoadMap(void);
+ int Do_Game(void);
+ int RAP_LoadWin(void);
+ void ShutDown(int a1);
++bool checkfile(const char* path);
