@@ -8,7 +8,7 @@ import controllersConfig
 class CdogsGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ["cdogs"]
+        commandArray = ["cdogs", "--fullscreen"]
 
         return Command.Command(
             array=commandArray,
