@@ -1,0 +1,1069 @@
+From 847b4f33cc20e6ab3bfc39a2f6f12b5c2bd43e04 Mon Sep 17 00:00:00 2001
+From: Mike Schuchardt <mikes@lunarg.com>
+Date: Mon, 19 Dec 2022 16:15:32 -0800
+Subject: [PATCH] build: Update to header 1.3.238
+
+- Update known-good
+- Generate source
+---
+ build-android/vulkan-headers_revision_android |   2 +-
+ common/vulkan_wrapper.cpp                     |  78 +++--
+ common/vulkan_wrapper.h                       |  38 ++-
+ icd/generated/mock_icd.cpp                    |  12 +-
+ icd/generated/mock_icd.h                      |  46 +--
+ icd/generated/vk_typemap_helper.h             | 280 +++++++-----------
+ scripts/generate_vulkan_wrapper.py            |  58 ++--
+ scripts/known_good.json                       |   4 +-
+ vulkaninfo/generated/vulkaninfo.hpp           |  26 +-
+ 9 files changed, 200 insertions(+), 344 deletions(-)
+
+diff --git a/build-android/vulkan-headers_revision_android b/build-android/vulkan-headers_revision_android
+index 7227e07dd..2997364be 100644
+--- a/build-android/vulkan-headers_revision_android
++++ b/build-android/vulkan-headers_revision_android
+@@ -1 +1 @@
+-v1.3.237
++v1.3.238
+diff --git a/common/vulkan_wrapper.cpp b/common/vulkan_wrapper.cpp
+index 3fb6d1b89..7bd3dcc73 100644
+--- a/common/vulkan_wrapper.cpp
++++ b/common/vulkan_wrapper.cpp
+@@ -328,6 +328,26 @@ int InitVulkan(void) {
+         reinterpret_cast<PFN_vkCreateDisplayPlaneSurfaceKHR>(dlsym(libvulkan, "vkCreateDisplayPlaneSurfaceKHR"));
+     vkCreateSharedSwapchainsKHR =
+         reinterpret_cast<PFN_vkCreateSharedSwapchainsKHR>(dlsym(libvulkan, "vkCreateSharedSwapchainsKHR"));
++    vkGetPhysicalDeviceVideoCapabilitiesKHR =
++        reinterpret_cast<PFN_vkGetPhysicalDeviceVideoCapabilitiesKHR>(dlsym(libvulkan, "vkGetPhysicalDeviceVideoCapabilitiesKHR"));
++    vkGetPhysicalDeviceVideoFormatPropertiesKHR = reinterpret_cast<PFN_vkGetPhysicalDeviceVideoFormatPropertiesKHR>(
++        dlsym(libvulkan, "vkGetPhysicalDeviceVideoFormatPropertiesKHR"));
++    vkCreateVideoSessionKHR = reinterpret_cast<PFN_vkCreateVideoSessionKHR>(dlsym(libvulkan, "vkCreateVideoSessionKHR"));
++    vkDestroyVideoSessionKHR = reinterpret_cast<PFN_vkDestroyVideoSessionKHR>(dlsym(libvulkan, "vkDestroyVideoSessionKHR"));
++    vkGetVideoSessionMemoryRequirementsKHR =
++        reinterpret_cast<PFN_vkGetVideoSessionMemoryRequirementsKHR>(dlsym(libvulkan, "vkGetVideoSessionMemoryRequirementsKHR"));
++    vkBindVideoSessionMemoryKHR =
++        reinterpret_cast<PFN_vkBindVideoSessionMemoryKHR>(dlsym(libvulkan, "vkBindVideoSessionMemoryKHR"));
++    vkCreateVideoSessionParametersKHR =
++        reinterpret_cast<PFN_vkCreateVideoSessionParametersKHR>(dlsym(libvulkan, "vkCreateVideoSessionParametersKHR"));
++    vkUpdateVideoSessionParametersKHR =
++        reinterpret_cast<PFN_vkUpdateVideoSessionParametersKHR>(dlsym(libvulkan, "vkUpdateVideoSessionParametersKHR"));
++    vkDestroyVideoSessionParametersKHR =
++        reinterpret_cast<PFN_vkDestroyVideoSessionParametersKHR>(dlsym(libvulkan, "vkDestroyVideoSessionParametersKHR"));
++    vkCmdBeginVideoCodingKHR = reinterpret_cast<PFN_vkCmdBeginVideoCodingKHR>(dlsym(libvulkan, "vkCmdBeginVideoCodingKHR"));
++    vkCmdEndVideoCodingKHR = reinterpret_cast<PFN_vkCmdEndVideoCodingKHR>(dlsym(libvulkan, "vkCmdEndVideoCodingKHR"));
++    vkCmdControlVideoCodingKHR = reinterpret_cast<PFN_vkCmdControlVideoCodingKHR>(dlsym(libvulkan, "vkCmdControlVideoCodingKHR"));
++    vkCmdDecodeVideoKHR = reinterpret_cast<PFN_vkCmdDecodeVideoKHR>(dlsym(libvulkan, "vkCmdDecodeVideoKHR"));
+     vkCmdBeginRenderingKHR = reinterpret_cast<PFN_vkCmdBeginRenderingKHR>(dlsym(libvulkan, "vkCmdBeginRenderingKHR"));
+     vkCmdEndRenderingKHR = reinterpret_cast<PFN_vkCmdEndRenderingKHR>(dlsym(libvulkan, "vkCmdEndRenderingKHR"));
+     vkGetPhysicalDeviceFeatures2KHR =
+@@ -556,32 +576,6 @@ int InitVulkan(void) {
+         dlsym(libvulkan, "vkGetPhysicalDeviceXlibPresentationSupportKHR"));
+ #endif
+ 
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-    vkGetPhysicalDeviceVideoCapabilitiesKHR =
+-        reinterpret_cast<PFN_vkGetPhysicalDeviceVideoCapabilitiesKHR>(dlsym(libvulkan, "vkGetPhysicalDeviceVideoCapabilitiesKHR"));
+-    vkGetPhysicalDeviceVideoFormatPropertiesKHR = reinterpret_cast<PFN_vkGetPhysicalDeviceVideoFormatPropertiesKHR>(
+-        dlsym(libvulkan, "vkGetPhysicalDeviceVideoFormatPropertiesKHR"));
+-    vkCreateVideoSessionKHR = reinterpret_cast<PFN_vkCreateVideoSessionKHR>(dlsym(libvulkan, "vkCreateVideoSessionKHR"));
+-    vkDestroyVideoSessionKHR = reinterpret_cast<PFN_vkDestroyVideoSessionKHR>(dlsym(libvulkan, "vkDestroyVideoSessionKHR"));
+-    vkGetVideoSessionMemoryRequirementsKHR =
+-        reinterpret_cast<PFN_vkGetVideoSessionMemoryRequirementsKHR>(dlsym(libvulkan, "vkGetVideoSessionMemoryRequirementsKHR"));
+-    vkBindVideoSessionMemoryKHR =
+-        reinterpret_cast<PFN_vkBindVideoSessionMemoryKHR>(dlsym(libvulkan, "vkBindVideoSessionMemoryKHR"));
+-    vkCreateVideoSessionParametersKHR =
+-        reinterpret_cast<PFN_vkCreateVideoSessionParametersKHR>(dlsym(libvulkan, "vkCreateVideoSessionParametersKHR"));
+-    vkUpdateVideoSessionParametersKHR =
+-        reinterpret_cast<PFN_vkUpdateVideoSessionParametersKHR>(dlsym(libvulkan, "vkUpdateVideoSessionParametersKHR"));
+-    vkDestroyVideoSessionParametersKHR =
+-        reinterpret_cast<PFN_vkDestroyVideoSessionParametersKHR>(dlsym(libvulkan, "vkDestroyVideoSessionParametersKHR"));
+-    vkCmdBeginVideoCodingKHR = reinterpret_cast<PFN_vkCmdBeginVideoCodingKHR>(dlsym(libvulkan, "vkCmdBeginVideoCodingKHR"));
+-    vkCmdEndVideoCodingKHR = reinterpret_cast<PFN_vkCmdEndVideoCodingKHR>(dlsym(libvulkan, "vkCmdEndVideoCodingKHR"));
+-    vkCmdControlVideoCodingKHR = reinterpret_cast<PFN_vkCmdControlVideoCodingKHR>(dlsym(libvulkan, "vkCmdControlVideoCodingKHR"));
+-#endif
+-
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-    vkCmdDecodeVideoKHR = reinterpret_cast<PFN_vkCmdDecodeVideoKHR>(dlsym(libvulkan, "vkCmdDecodeVideoKHR"));
+-#endif
+-
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
+     vkCmdEncodeVideoKHR = reinterpret_cast<PFN_vkCmdEncodeVideoKHR>(dlsym(libvulkan, "vkCmdEncodeVideoKHR"));
+ #endif
+@@ -826,6 +820,19 @@ PFN_vkCreateDisplayModeKHR vkCreateDisplayModeKHR;
+ PFN_vkGetDisplayPlaneCapabilitiesKHR vkGetDisplayPlaneCapabilitiesKHR;
+ PFN_vkCreateDisplayPlaneSurfaceKHR vkCreateDisplayPlaneSurfaceKHR;
+ PFN_vkCreateSharedSwapchainsKHR vkCreateSharedSwapchainsKHR;
++PFN_vkGetPhysicalDeviceVideoCapabilitiesKHR vkGetPhysicalDeviceVideoCapabilitiesKHR;
++PFN_vkGetPhysicalDeviceVideoFormatPropertiesKHR vkGetPhysicalDeviceVideoFormatPropertiesKHR;
++PFN_vkCreateVideoSessionKHR vkCreateVideoSessionKHR;
++PFN_vkDestroyVideoSessionKHR vkDestroyVideoSessionKHR;
++PFN_vkGetVideoSessionMemoryRequirementsKHR vkGetVideoSessionMemoryRequirementsKHR;
++PFN_vkBindVideoSessionMemoryKHR vkBindVideoSessionMemoryKHR;
++PFN_vkCreateVideoSessionParametersKHR vkCreateVideoSessionParametersKHR;
++PFN_vkUpdateVideoSessionParametersKHR vkUpdateVideoSessionParametersKHR;
++PFN_vkDestroyVideoSessionParametersKHR vkDestroyVideoSessionParametersKHR;
++PFN_vkCmdBeginVideoCodingKHR vkCmdBeginVideoCodingKHR;
++PFN_vkCmdEndVideoCodingKHR vkCmdEndVideoCodingKHR;
++PFN_vkCmdControlVideoCodingKHR vkCmdControlVideoCodingKHR;
++PFN_vkCmdDecodeVideoKHR vkCmdDecodeVideoKHR;
+ PFN_vkCmdBeginRenderingKHR vkCmdBeginRenderingKHR;
+ PFN_vkCmdEndRenderingKHR vkCmdEndRenderingKHR;
+ PFN_vkGetPhysicalDeviceFeatures2KHR vkGetPhysicalDeviceFeatures2KHR;
+@@ -1275,25 +1282,6 @@ PFN_vkCreateScreenSurfaceQNX vkCreateScreenSurfaceQNX;
+ PFN_vkGetPhysicalDeviceScreenPresentationSupportQNX vkGetPhysicalDeviceScreenPresentationSupportQNX;
+ #endif
+ 
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-PFN_vkGetPhysicalDeviceVideoCapabilitiesKHR vkGetPhysicalDeviceVideoCapabilitiesKHR;
+-PFN_vkGetPhysicalDeviceVideoFormatPropertiesKHR vkGetPhysicalDeviceVideoFormatPropertiesKHR;
+-PFN_vkCreateVideoSessionKHR vkCreateVideoSessionKHR;
+-PFN_vkDestroyVideoSessionKHR vkDestroyVideoSessionKHR;
+-PFN_vkGetVideoSessionMemoryRequirementsKHR vkGetVideoSessionMemoryRequirementsKHR;
+-PFN_vkBindVideoSessionMemoryKHR vkBindVideoSessionMemoryKHR;
+-PFN_vkCreateVideoSessionParametersKHR vkCreateVideoSessionParametersKHR;
+-PFN_vkUpdateVideoSessionParametersKHR vkUpdateVideoSessionParametersKHR;
+-PFN_vkDestroyVideoSessionParametersKHR vkDestroyVideoSessionParametersKHR;
+-PFN_vkCmdBeginVideoCodingKHR vkCmdBeginVideoCodingKHR;
+-PFN_vkCmdEndVideoCodingKHR vkCmdEndVideoCodingKHR;
+-PFN_vkCmdControlVideoCodingKHR vkCmdControlVideoCodingKHR;
+-#endif
+-
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-PFN_vkCmdDecodeVideoKHR vkCmdDecodeVideoKHR;
+-#endif
+-
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
+ PFN_vkCmdEncodeVideoKHR vkCmdEncodeVideoKHR;
+ #endif
+diff --git a/common/vulkan_wrapper.h b/common/vulkan_wrapper.h
+index b5c35faf0..8909486a9 100644
+--- a/common/vulkan_wrapper.h
++++ b/common/vulkan_wrapper.h
+@@ -282,6 +282,23 @@ extern PFN_vkCreateDisplayPlaneSurfaceKHR vkCreateDisplayPlaneSurfaceKHR;
+ // VK_KHR_display_swapchain
+ extern PFN_vkCreateSharedSwapchainsKHR vkCreateSharedSwapchainsKHR;
+ 
++// VK_KHR_video_queue
++extern PFN_vkGetPhysicalDeviceVideoCapabilitiesKHR vkGetPhysicalDeviceVideoCapabilitiesKHR;
++extern PFN_vkGetPhysicalDeviceVideoFormatPropertiesKHR vkGetPhysicalDeviceVideoFormatPropertiesKHR;
++extern PFN_vkCreateVideoSessionKHR vkCreateVideoSessionKHR;
++extern PFN_vkDestroyVideoSessionKHR vkDestroyVideoSessionKHR;
++extern PFN_vkGetVideoSessionMemoryRequirementsKHR vkGetVideoSessionMemoryRequirementsKHR;
++extern PFN_vkBindVideoSessionMemoryKHR vkBindVideoSessionMemoryKHR;
++extern PFN_vkCreateVideoSessionParametersKHR vkCreateVideoSessionParametersKHR;
++extern PFN_vkUpdateVideoSessionParametersKHR vkUpdateVideoSessionParametersKHR;
++extern PFN_vkDestroyVideoSessionParametersKHR vkDestroyVideoSessionParametersKHR;
++extern PFN_vkCmdBeginVideoCodingKHR vkCmdBeginVideoCodingKHR;
++extern PFN_vkCmdEndVideoCodingKHR vkCmdEndVideoCodingKHR;
++extern PFN_vkCmdControlVideoCodingKHR vkCmdControlVideoCodingKHR;
++
++// VK_KHR_video_decode_queue
++extern PFN_vkCmdDecodeVideoKHR vkCmdDecodeVideoKHR;
++
+ // VK_KHR_dynamic_rendering
+ extern PFN_vkCmdBeginRenderingKHR vkCmdBeginRenderingKHR;
+ extern PFN_vkCmdEndRenderingKHR vkCmdEndRenderingKHR;
+@@ -510,27 +527,6 @@ extern PFN_vkCreateXlibSurfaceKHR vkCreateXlibSurfaceKHR;
+ extern PFN_vkGetPhysicalDeviceXlibPresentationSupportKHR vkGetPhysicalDeviceXlibPresentationSupportKHR;
+ #endif
+ 
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-// VK_KHR_video_queue
+-extern PFN_vkGetPhysicalDeviceVideoCapabilitiesKHR vkGetPhysicalDeviceVideoCapabilitiesKHR;
+-extern PFN_vkGetPhysicalDeviceVideoFormatPropertiesKHR vkGetPhysicalDeviceVideoFormatPropertiesKHR;
+-extern PFN_vkCreateVideoSessionKHR vkCreateVideoSessionKHR;
+-extern PFN_vkDestroyVideoSessionKHR vkDestroyVideoSessionKHR;
+-extern PFN_vkGetVideoSessionMemoryRequirementsKHR vkGetVideoSessionMemoryRequirementsKHR;
+-extern PFN_vkBindVideoSessionMemoryKHR vkBindVideoSessionMemoryKHR;
+-extern PFN_vkCreateVideoSessionParametersKHR vkCreateVideoSessionParametersKHR;
+-extern PFN_vkUpdateVideoSessionParametersKHR vkUpdateVideoSessionParametersKHR;
+-extern PFN_vkDestroyVideoSessionParametersKHR vkDestroyVideoSessionParametersKHR;
+-extern PFN_vkCmdBeginVideoCodingKHR vkCmdBeginVideoCodingKHR;
+-extern PFN_vkCmdEndVideoCodingKHR vkCmdEndVideoCodingKHR;
+-extern PFN_vkCmdControlVideoCodingKHR vkCmdControlVideoCodingKHR;
+-#endif
+-
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-// VK_KHR_video_decode_queue
+-extern PFN_vkCmdDecodeVideoKHR vkCmdDecodeVideoKHR;
+-#endif
+-
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
+ // VK_KHR_video_encode_queue
+ extern PFN_vkCmdEncodeVideoKHR vkCmdEncodeVideoKHR;
+diff --git a/icd/generated/mock_icd.cpp b/icd/generated/mock_icd.cpp
+index 9f31fbebb..cb2142c43 100644
+--- a/icd/generated/mock_icd.cpp
++++ b/icd/generated/mock_icd.cpp
+@@ -2790,7 +2790,6 @@ static VKAPI_ATTR VkBool32 VKAPI_CALL GetPhysicalDeviceWin32PresentationSupportK
+ #endif /* VK_USE_PLATFORM_WIN32_KHR */
+ 
+ 
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ 
+ static VKAPI_ATTR VkResult VKAPI_CALL GetPhysicalDeviceVideoCapabilitiesKHR(
+     VkPhysicalDevice                            physicalDevice,
+@@ -2898,9 +2897,7 @@ static VKAPI_ATTR void VKAPI_CALL CmdControlVideoCodingKHR(
+ {
+ //Not a CREATE or DESTROY function
+ }
+-#endif /* VK_ENABLE_BETA_EXTENSIONS */
+ 
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ 
+ static VKAPI_ATTR void VKAPI_CALL CmdDecodeVideoKHR(
+     VkCommandBuffer                             commandBuffer,
+@@ -2908,7 +2905,7 @@ static VKAPI_ATTR void VKAPI_CALL CmdDecodeVideoKHR(
+ {
+ //Not a CREATE or DESTROY function
+ }
+-#endif /* VK_ENABLE_BETA_EXTENSIONS */
++
+ 
+ 
+ static VKAPI_ATTR void VKAPI_CALL CmdBeginRenderingKHR(
+@@ -3580,6 +3577,7 @@ static VKAPI_ATTR void VKAPI_CALL CmdDrawIndexedIndirectCountKHR(
+ 
+ 
+ 
++
+ static VKAPI_ATTR VkResult VKAPI_CALL GetSemaphoreCounterValueKHR(
+     VkDevice                                    device,
+     VkSemaphore                                 semaphore,
+@@ -4146,9 +4144,6 @@ static VKAPI_ATTR void VKAPI_CALL CmdDrawIndexedIndirectCountAMD(
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
+ #endif /* VK_ENABLE_BETA_EXTENSIONS */
+ 
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-#endif /* VK_ENABLE_BETA_EXTENSIONS */
+-
+ 
+ 
+ static VKAPI_ATTR VkResult VKAPI_CALL GetShaderInfoAMD(
+@@ -4827,9 +4822,6 @@ static VKAPI_ATTR VkResult VKAPI_CALL GetCalibratedTimestampsEXT(
+ }
+ 
+ 
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-#endif /* VK_ENABLE_BETA_EXTENSIONS */
+-
+ 
+ 
+ #ifdef VK_USE_PLATFORM_GGP
+diff --git a/icd/generated/mock_icd.h b/icd/generated/mock_icd.h
+index b15fccf39..3b58360b8 100644
+--- a/icd/generated/mock_icd.h
++++ b/icd/generated/mock_icd.h
+@@ -101,8 +101,8 @@ static const std::unordered_map<std::string, uint32_t> device_extension_map = {
+     {"VK_AMD_shader_trinary_minmax", 1},
+     {"VK_AMD_shader_explicit_vertex_parameter", 1},
+     {"VK_EXT_debug_marker", 4},
+-    {"VK_KHR_video_queue", 7},
+-    {"VK_KHR_video_decode_queue", 6},
++    {"VK_KHR_video_queue", 8},
++    {"VK_KHR_video_decode_queue", 7},
+     {"VK_AMD_gcn_shader", 1},
+     {"VK_NV_dedicated_allocation", 1},
+     {"VK_EXT_transform_feedback", 1},
+@@ -114,7 +114,7 @@ static const std::unordered_map<std::string, uint32_t> device_extension_map = {
+     {"VK_AMD_shader_ballot", 1},
+     {"VK_EXT_video_encode_h264", 9},
+     {"VK_EXT_video_encode_h265", 9},
+-    {"VK_EXT_video_decode_h264", 7},
++    {"VK_KHR_video_decode_h264", 8},
+     {"VK_AMD_texture_gather_bias_lod", 1},
+     {"VK_AMD_shader_info", 1},
+     {"VK_KHR_dynamic_rendering", 1},
+@@ -213,7 +213,7 @@ static const std::unordered_map<std::string, uint32_t> device_extension_map = {
+     {"VK_AMD_pipeline_compiler_control", 1},
+     {"VK_EXT_calibrated_timestamps", 2},
+     {"VK_AMD_shader_core_properties", 2},
+-    {"VK_EXT_video_decode_h265", 6},
++    {"VK_KHR_video_decode_h265", 7},
+     {"VK_KHR_global_priority", 1},
+     {"VK_AMD_memory_overallocation_behavior", 1},
+     {"VK_EXT_vertex_attribute_divisor", 3},
+@@ -1759,7 +1759,6 @@ static VKAPI_ATTR VkBool32 VKAPI_CALL GetPhysicalDeviceWin32PresentationSupportK
+ #endif /* VK_USE_PLATFORM_WIN32_KHR */
+ 
+ 
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ 
+ static VKAPI_ATTR VkResult VKAPI_CALL GetPhysicalDeviceVideoCapabilitiesKHR(
+     VkPhysicalDevice                            physicalDevice,
+@@ -1822,14 +1821,12 @@ static VKAPI_ATTR void VKAPI_CALL CmdEndVideoCodingKHR(
+ static VKAPI_ATTR void VKAPI_CALL CmdControlVideoCodingKHR(
+     VkCommandBuffer                             commandBuffer,
+     const VkVideoCodingControlInfoKHR*          pCodingControlInfo);
+-#endif /* VK_ENABLE_BETA_EXTENSIONS */
+ 
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ 
+ static VKAPI_ATTR void VKAPI_CALL CmdDecodeVideoKHR(
+     VkCommandBuffer                             commandBuffer,
+     const VkVideoDecodeInfoKHR*                 pDecodeInfo);
+-#endif /* VK_ENABLE_BETA_EXTENSIONS */
++
+ 
+ 
+ static VKAPI_ATTR void VKAPI_CALL CmdBeginRenderingKHR(
+@@ -2204,6 +2201,7 @@ static VKAPI_ATTR void VKAPI_CALL CmdDrawIndexedIndirectCountKHR(
+ 
+ 
+ 
++
+ static VKAPI_ATTR VkResult VKAPI_CALL GetSemaphoreCounterValueKHR(
+     VkDevice                                    device,
+     VkSemaphore                                 semaphore,
+@@ -2566,9 +2564,6 @@ static VKAPI_ATTR void VKAPI_CALL CmdDrawIndexedIndirectCountAMD(
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
+ #endif /* VK_ENABLE_BETA_EXTENSIONS */
+ 
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-#endif /* VK_ENABLE_BETA_EXTENSIONS */
+-
+ 
+ 
+ static VKAPI_ATTR VkResult VKAPI_CALL GetShaderInfoAMD(
+@@ -3015,9 +3010,6 @@ static VKAPI_ATTR VkResult VKAPI_CALL GetCalibratedTimestampsEXT(
+     uint64_t*                                   pMaxDeviation);
+ 
+ 
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-#endif /* VK_ENABLE_BETA_EXTENSIONS */
+-
+ 
+ 
+ #ifdef VK_USE_PLATFORM_GGP
+@@ -4409,45 +4401,19 @@ static const std::unordered_map<std::string, void*> name_to_funcptr_map = {
+ #ifdef VK_USE_PLATFORM_WIN32_KHR
+     {"vkGetPhysicalDeviceWin32PresentationSupportKHR", (void*)GetPhysicalDeviceWin32PresentationSupportKHR},
+ #endif
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+     {"vkGetPhysicalDeviceVideoCapabilitiesKHR", (void*)GetPhysicalDeviceVideoCapabilitiesKHR},
+-#endif
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+     {"vkGetPhysicalDeviceVideoFormatPropertiesKHR", (void*)GetPhysicalDeviceVideoFormatPropertiesKHR},
+-#endif
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+     {"vkCreateVideoSessionKHR", (void*)CreateVideoSessionKHR},
+-#endif
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+     {"vkDestroyVideoSessionKHR", (void*)DestroyVideoSessionKHR},
+-#endif
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+     {"vkGetVideoSessionMemoryRequirementsKHR", (void*)GetVideoSessionMemoryRequirementsKHR},
+-#endif
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+     {"vkBindVideoSessionMemoryKHR", (void*)BindVideoSessionMemoryKHR},
+-#endif
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+     {"vkCreateVideoSessionParametersKHR", (void*)CreateVideoSessionParametersKHR},
+-#endif
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+     {"vkUpdateVideoSessionParametersKHR", (void*)UpdateVideoSessionParametersKHR},
+-#endif
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+     {"vkDestroyVideoSessionParametersKHR", (void*)DestroyVideoSessionParametersKHR},
+-#endif
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+     {"vkCmdBeginVideoCodingKHR", (void*)CmdBeginVideoCodingKHR},
+-#endif
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+     {"vkCmdEndVideoCodingKHR", (void*)CmdEndVideoCodingKHR},
+-#endif
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+     {"vkCmdControlVideoCodingKHR", (void*)CmdControlVideoCodingKHR},
+-#endif
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+     {"vkCmdDecodeVideoKHR", (void*)CmdDecodeVideoKHR},
+-#endif
+     {"vkCmdBeginRenderingKHR", (void*)CmdBeginRenderingKHR},
+     {"vkCmdEndRenderingKHR", (void*)CmdEndRenderingKHR},
+     {"vkGetPhysicalDeviceFeatures2KHR", (void*)GetPhysicalDeviceFeatures2KHR},
+diff --git a/icd/generated/vk_typemap_helper.h b/icd/generated/vk_typemap_helper.h
+index 6f0c24485..c326eefd2 100644
+--- a/icd/generated/vk_typemap_helper.h
++++ b/icd/generated/vk_typemap_helper.h
+@@ -2119,7 +2119,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_WIN32_SURFACE_CREATE_INFO_KHR>
+ };
+ 
+ #endif // VK_USE_PLATFORM_WIN32_KHR
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkQueueFamilyQueryResultStatusPropertiesKHR to id VK_STRUCTURE_TYPE_QUEUE_FAMILY_QUERY_RESULT_STATUS_PROPERTIES_KHR
+ template <> struct LvlTypeMap<VkQueueFamilyQueryResultStatusPropertiesKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_QUEUE_FAMILY_QUERY_RESULT_STATUS_PROPERTIES_KHR;
+@@ -2129,8 +2128,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_QUEUE_FAMILY_QUERY_RESULT_STATU
+     typedef VkQueueFamilyQueryResultStatusPropertiesKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkQueueFamilyVideoPropertiesKHR to id VK_STRUCTURE_TYPE_QUEUE_FAMILY_VIDEO_PROPERTIES_KHR
+ template <> struct LvlTypeMap<VkQueueFamilyVideoPropertiesKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_QUEUE_FAMILY_VIDEO_PROPERTIES_KHR;
+@@ -2140,8 +2137,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_QUEUE_FAMILY_VIDEO_PROPERTIES_K
+     typedef VkQueueFamilyVideoPropertiesKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoProfileInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_PROFILE_INFO_KHR
+ template <> struct LvlTypeMap<VkVideoProfileInfoKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_PROFILE_INFO_KHR;
+@@ -2151,8 +2146,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_PROFILE_INFO_KHR> {
+     typedef VkVideoProfileInfoKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoProfileListInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_PROFILE_LIST_INFO_KHR
+ template <> struct LvlTypeMap<VkVideoProfileListInfoKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_PROFILE_LIST_INFO_KHR;
+@@ -2162,8 +2155,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_PROFILE_LIST_INFO_KHR> {
+     typedef VkVideoProfileListInfoKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoCapabilitiesKHR to id VK_STRUCTURE_TYPE_VIDEO_CAPABILITIES_KHR
+ template <> struct LvlTypeMap<VkVideoCapabilitiesKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_CAPABILITIES_KHR;
+@@ -2173,8 +2164,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_CAPABILITIES_KHR> {
+     typedef VkVideoCapabilitiesKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkPhysicalDeviceVideoFormatInfoKHR to id VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR
+ template <> struct LvlTypeMap<VkPhysicalDeviceVideoFormatInfoKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR;
+@@ -2184,8 +2173,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VIDEO_FORMAT_IN
+     typedef VkPhysicalDeviceVideoFormatInfoKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoFormatPropertiesKHR to id VK_STRUCTURE_TYPE_VIDEO_FORMAT_PROPERTIES_KHR
+ template <> struct LvlTypeMap<VkVideoFormatPropertiesKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_FORMAT_PROPERTIES_KHR;
+@@ -2195,8 +2182,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_FORMAT_PROPERTIES_KHR> {
+     typedef VkVideoFormatPropertiesKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoPictureResourceInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_PICTURE_RESOURCE_INFO_KHR
+ template <> struct LvlTypeMap<VkVideoPictureResourceInfoKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_PICTURE_RESOURCE_INFO_KHR;
+@@ -2206,8 +2191,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_PICTURE_RESOURCE_INFO_KHR
+     typedef VkVideoPictureResourceInfoKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoReferenceSlotInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_REFERENCE_SLOT_INFO_KHR
+ template <> struct LvlTypeMap<VkVideoReferenceSlotInfoKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_REFERENCE_SLOT_INFO_KHR;
+@@ -2217,8 +2200,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_REFERENCE_SLOT_INFO_KHR>
+     typedef VkVideoReferenceSlotInfoKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoSessionMemoryRequirementsKHR to id VK_STRUCTURE_TYPE_VIDEO_SESSION_MEMORY_REQUIREMENTS_KHR
+ template <> struct LvlTypeMap<VkVideoSessionMemoryRequirementsKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_SESSION_MEMORY_REQUIREMENTS_KHR;
+@@ -2228,8 +2209,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_SESSION_MEMORY_REQUIREMEN
+     typedef VkVideoSessionMemoryRequirementsKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkBindVideoSessionMemoryInfoKHR to id VK_STRUCTURE_TYPE_BIND_VIDEO_SESSION_MEMORY_INFO_KHR
+ template <> struct LvlTypeMap<VkBindVideoSessionMemoryInfoKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_BIND_VIDEO_SESSION_MEMORY_INFO_KHR;
+@@ -2239,8 +2218,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_BIND_VIDEO_SESSION_MEMORY_INFO_
+     typedef VkBindVideoSessionMemoryInfoKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoSessionCreateInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_SESSION_CREATE_INFO_KHR
+ template <> struct LvlTypeMap<VkVideoSessionCreateInfoKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_SESSION_CREATE_INFO_KHR;
+@@ -2250,8 +2227,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_SESSION_CREATE_INFO_KHR>
+     typedef VkVideoSessionCreateInfoKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoSessionParametersCreateInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_SESSION_PARAMETERS_CREATE_INFO_KHR
+ template <> struct LvlTypeMap<VkVideoSessionParametersCreateInfoKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_SESSION_PARAMETERS_CREATE_INFO_KHR;
+@@ -2261,8 +2236,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_SESSION_PARAMETERS_CREATE
+     typedef VkVideoSessionParametersCreateInfoKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoSessionParametersUpdateInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_SESSION_PARAMETERS_UPDATE_INFO_KHR
+ template <> struct LvlTypeMap<VkVideoSessionParametersUpdateInfoKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_SESSION_PARAMETERS_UPDATE_INFO_KHR;
+@@ -2272,8 +2245,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_SESSION_PARAMETERS_UPDATE
+     typedef VkVideoSessionParametersUpdateInfoKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoBeginCodingInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_BEGIN_CODING_INFO_KHR
+ template <> struct LvlTypeMap<VkVideoBeginCodingInfoKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_BEGIN_CODING_INFO_KHR;
+@@ -2283,8 +2254,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_BEGIN_CODING_INFO_KHR> {
+     typedef VkVideoBeginCodingInfoKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoEndCodingInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_END_CODING_INFO_KHR
+ template <> struct LvlTypeMap<VkVideoEndCodingInfoKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_END_CODING_INFO_KHR;
+@@ -2294,8 +2263,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_END_CODING_INFO_KHR> {
+     typedef VkVideoEndCodingInfoKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoCodingControlInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_CODING_CONTROL_INFO_KHR
+ template <> struct LvlTypeMap<VkVideoCodingControlInfoKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_CODING_CONTROL_INFO_KHR;
+@@ -2305,8 +2272,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_CODING_CONTROL_INFO_KHR>
+     typedef VkVideoCodingControlInfoKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoDecodeCapabilitiesKHR to id VK_STRUCTURE_TYPE_VIDEO_DECODE_CAPABILITIES_KHR
+ template <> struct LvlTypeMap<VkVideoDecodeCapabilitiesKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_CAPABILITIES_KHR;
+@@ -2316,8 +2281,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_CAPABILITIES_KHR>
+     typedef VkVideoDecodeCapabilitiesKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoDecodeUsageInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_DECODE_USAGE_INFO_KHR
+ template <> struct LvlTypeMap<VkVideoDecodeUsageInfoKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_USAGE_INFO_KHR;
+@@ -2327,8 +2290,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_USAGE_INFO_KHR> {
+     typedef VkVideoDecodeUsageInfoKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoDecodeInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_DECODE_INFO_KHR
+ template <> struct LvlTypeMap<VkVideoDecodeInfoKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_INFO_KHR;
+@@ -2338,7 +2299,60 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_INFO_KHR> {
+     typedef VkVideoDecodeInfoKHR Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
++// Map type VkVideoDecodeH264ProfileInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_PROFILE_INFO_KHR
++template <> struct LvlTypeMap<VkVideoDecodeH264ProfileInfoKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_PROFILE_INFO_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_PROFILE_INFO_KHR> {
++    typedef VkVideoDecodeH264ProfileInfoKHR Type;
++};
++
++// Map type VkVideoDecodeH264CapabilitiesKHR to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_CAPABILITIES_KHR
++template <> struct LvlTypeMap<VkVideoDecodeH264CapabilitiesKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_CAPABILITIES_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_CAPABILITIES_KHR> {
++    typedef VkVideoDecodeH264CapabilitiesKHR Type;
++};
++
++// Map type VkVideoDecodeH264SessionParametersAddInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_KHR
++template <> struct LvlTypeMap<VkVideoDecodeH264SessionParametersAddInfoKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_KHR> {
++    typedef VkVideoDecodeH264SessionParametersAddInfoKHR Type;
++};
++
++// Map type VkVideoDecodeH264SessionParametersCreateInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_KHR
++template <> struct LvlTypeMap<VkVideoDecodeH264SessionParametersCreateInfoKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_KHR> {
++    typedef VkVideoDecodeH264SessionParametersCreateInfoKHR Type;
++};
++
++// Map type VkVideoDecodeH264PictureInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_PICTURE_INFO_KHR
++template <> struct LvlTypeMap<VkVideoDecodeH264PictureInfoKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_PICTURE_INFO_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_PICTURE_INFO_KHR> {
++    typedef VkVideoDecodeH264PictureInfoKHR Type;
++};
++
++// Map type VkVideoDecodeH264DpbSlotInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_DPB_SLOT_INFO_KHR
++template <> struct LvlTypeMap<VkVideoDecodeH264DpbSlotInfoKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_DPB_SLOT_INFO_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_DPB_SLOT_INFO_KHR> {
++    typedef VkVideoDecodeH264DpbSlotInfoKHR Type;
++};
++
+ // Map type VkRenderingFragmentShadingRateAttachmentInfoKHR to id VK_STRUCTURE_TYPE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR
+ template <> struct LvlTypeMap<VkRenderingFragmentShadingRateAttachmentInfoKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR;
+@@ -2763,6 +2777,60 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_CLOCK_FE
+     typedef VkPhysicalDeviceShaderClockFeaturesKHR Type;
+ };
+ 
++// Map type VkVideoDecodeH265ProfileInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_PROFILE_INFO_KHR
++template <> struct LvlTypeMap<VkVideoDecodeH265ProfileInfoKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_PROFILE_INFO_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_PROFILE_INFO_KHR> {
++    typedef VkVideoDecodeH265ProfileInfoKHR Type;
++};
++
++// Map type VkVideoDecodeH265CapabilitiesKHR to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_CAPABILITIES_KHR
++template <> struct LvlTypeMap<VkVideoDecodeH265CapabilitiesKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_CAPABILITIES_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_CAPABILITIES_KHR> {
++    typedef VkVideoDecodeH265CapabilitiesKHR Type;
++};
++
++// Map type VkVideoDecodeH265SessionParametersAddInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_KHR
++template <> struct LvlTypeMap<VkVideoDecodeH265SessionParametersAddInfoKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_KHR> {
++    typedef VkVideoDecodeH265SessionParametersAddInfoKHR Type;
++};
++
++// Map type VkVideoDecodeH265SessionParametersCreateInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_KHR
++template <> struct LvlTypeMap<VkVideoDecodeH265SessionParametersCreateInfoKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_KHR> {
++    typedef VkVideoDecodeH265SessionParametersCreateInfoKHR Type;
++};
++
++// Map type VkVideoDecodeH265PictureInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_PICTURE_INFO_KHR
++template <> struct LvlTypeMap<VkVideoDecodeH265PictureInfoKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_PICTURE_INFO_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_PICTURE_INFO_KHR> {
++    typedef VkVideoDecodeH265PictureInfoKHR Type;
++};
++
++// Map type VkVideoDecodeH265DpbSlotInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_DPB_SLOT_INFO_KHR
++template <> struct LvlTypeMap<VkVideoDecodeH265DpbSlotInfoKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_DPB_SLOT_INFO_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_DPB_SLOT_INFO_KHR> {
++    typedef VkVideoDecodeH265DpbSlotInfoKHR Type;
++};
++
+ // Map type VkDeviceQueueGlobalPriorityCreateInfoKHR to id VK_STRUCTURE_TYPE_DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_KHR
+ template <> struct LvlTypeMap<VkDeviceQueueGlobalPriorityCreateInfoKHR> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_KHR;
+@@ -3437,72 +3505,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_RATE_CONTROL_
+     typedef VkVideoEncodeH265RateControlLayerInfoEXT Type;
+ };
+ 
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-// Map type VkVideoDecodeH264ProfileInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_PROFILE_INFO_EXT
+-template <> struct LvlTypeMap<VkVideoDecodeH264ProfileInfoEXT> {
+-    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_PROFILE_INFO_EXT;
+-};
+-
+-template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_PROFILE_INFO_EXT> {
+-    typedef VkVideoDecodeH264ProfileInfoEXT Type;
+-};
+-
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-// Map type VkVideoDecodeH264CapabilitiesEXT to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_CAPABILITIES_EXT
+-template <> struct LvlTypeMap<VkVideoDecodeH264CapabilitiesEXT> {
+-    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_CAPABILITIES_EXT;
+-};
+-
+-template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_CAPABILITIES_EXT> {
+-    typedef VkVideoDecodeH264CapabilitiesEXT Type;
+-};
+-
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-// Map type VkVideoDecodeH264SessionParametersAddInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT
+-template <> struct LvlTypeMap<VkVideoDecodeH264SessionParametersAddInfoEXT> {
+-    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT;
+-};
+-
+-template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT> {
+-    typedef VkVideoDecodeH264SessionParametersAddInfoEXT Type;
+-};
+-
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-// Map type VkVideoDecodeH264SessionParametersCreateInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT
+-template <> struct LvlTypeMap<VkVideoDecodeH264SessionParametersCreateInfoEXT> {
+-    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT;
+-};
+-
+-template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT> {
+-    typedef VkVideoDecodeH264SessionParametersCreateInfoEXT Type;
+-};
+-
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-// Map type VkVideoDecodeH264PictureInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_PICTURE_INFO_EXT
+-template <> struct LvlTypeMap<VkVideoDecodeH264PictureInfoEXT> {
+-    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_PICTURE_INFO_EXT;
+-};
+-
+-template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_PICTURE_INFO_EXT> {
+-    typedef VkVideoDecodeH264PictureInfoEXT Type;
+-};
+-
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-// Map type VkVideoDecodeH264DpbSlotInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT
+-template <> struct LvlTypeMap<VkVideoDecodeH264DpbSlotInfoEXT> {
+-    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT;
+-};
+-
+-template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT> {
+-    typedef VkVideoDecodeH264DpbSlotInfoEXT Type;
+-};
+-
+ #endif // VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkTextureLODGatherFormatPropertiesAMD to id VK_STRUCTURE_TYPE_TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD
+ template <> struct LvlTypeMap<VkTextureLODGatherFormatPropertiesAMD> {
+@@ -4369,72 +4371,6 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_CORE_PRO
+     typedef VkPhysicalDeviceShaderCorePropertiesAMD Type;
+ };
+ 
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-// Map type VkVideoDecodeH265ProfileInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_PROFILE_INFO_EXT
+-template <> struct LvlTypeMap<VkVideoDecodeH265ProfileInfoEXT> {
+-    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_PROFILE_INFO_EXT;
+-};
+-
+-template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_PROFILE_INFO_EXT> {
+-    typedef VkVideoDecodeH265ProfileInfoEXT Type;
+-};
+-
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-// Map type VkVideoDecodeH265CapabilitiesEXT to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_CAPABILITIES_EXT
+-template <> struct LvlTypeMap<VkVideoDecodeH265CapabilitiesEXT> {
+-    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_CAPABILITIES_EXT;
+-};
+-
+-template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_CAPABILITIES_EXT> {
+-    typedef VkVideoDecodeH265CapabilitiesEXT Type;
+-};
+-
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-// Map type VkVideoDecodeH265SessionParametersAddInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT
+-template <> struct LvlTypeMap<VkVideoDecodeH265SessionParametersAddInfoEXT> {
+-    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT;
+-};
+-
+-template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT> {
+-    typedef VkVideoDecodeH265SessionParametersAddInfoEXT Type;
+-};
+-
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-// Map type VkVideoDecodeH265SessionParametersCreateInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT
+-template <> struct LvlTypeMap<VkVideoDecodeH265SessionParametersCreateInfoEXT> {
+-    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT;
+-};
+-
+-template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT> {
+-    typedef VkVideoDecodeH265SessionParametersCreateInfoEXT Type;
+-};
+-
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-// Map type VkVideoDecodeH265PictureInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_PICTURE_INFO_EXT
+-template <> struct LvlTypeMap<VkVideoDecodeH265PictureInfoEXT> {
+-    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_PICTURE_INFO_EXT;
+-};
+-
+-template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_PICTURE_INFO_EXT> {
+-    typedef VkVideoDecodeH265PictureInfoEXT Type;
+-};
+-
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+-// Map type VkVideoDecodeH265DpbSlotInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_DPB_SLOT_INFO_EXT
+-template <> struct LvlTypeMap<VkVideoDecodeH265DpbSlotInfoEXT> {
+-    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_DPB_SLOT_INFO_EXT;
+-};
+-
+-template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_DECODE_H265_DPB_SLOT_INFO_EXT> {
+-    typedef VkVideoDecodeH265DpbSlotInfoEXT Type;
+-};
+-
+-#endif // VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkDeviceMemoryOverallocationCreateInfoAMD to id VK_STRUCTURE_TYPE_DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD
+ template <> struct LvlTypeMap<VkDeviceMemoryOverallocationCreateInfoAMD> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD;
+diff --git a/scripts/generate_vulkan_wrapper.py b/scripts/generate_vulkan_wrapper.py
+index 53a22f8a6..5592b8d8c 100755
+--- a/scripts/generate_vulkan_wrapper.py
++++ b/scripts/generate_vulkan_wrapper.py
+@@ -360,6 +360,28 @@ def __repr__(self):
+ VK_KHR_sampler_mirror_clamp_to_edge = Extension(name='VK_KHR_sampler_mirror_clamp_to_edge', version=3, guard=None, commands=[
+ ])
+ 
++VK_KHR_video_queue = Extension(name='VK_KHR_video_queue', version=8, guard=None, commands=[
++    Command(name='vkGetPhysicalDeviceVideoCapabilitiesKHR', dispatch='VkPhysicalDevice'),
++    Command(name='vkGetPhysicalDeviceVideoFormatPropertiesKHR', dispatch='VkPhysicalDevice'),
++    Command(name='vkCreateVideoSessionKHR', dispatch='VkDevice'),
++    Command(name='vkDestroyVideoSessionKHR', dispatch='VkDevice'),
++    Command(name='vkGetVideoSessionMemoryRequirementsKHR', dispatch='VkDevice'),
++    Command(name='vkBindVideoSessionMemoryKHR', dispatch='VkDevice'),
++    Command(name='vkCreateVideoSessionParametersKHR', dispatch='VkDevice'),
++    Command(name='vkUpdateVideoSessionParametersKHR', dispatch='VkDevice'),
++    Command(name='vkDestroyVideoSessionParametersKHR', dispatch='VkDevice'),
++    Command(name='vkCmdBeginVideoCodingKHR', dispatch='VkCommandBuffer'),
++    Command(name='vkCmdEndVideoCodingKHR', dispatch='VkCommandBuffer'),
++    Command(name='vkCmdControlVideoCodingKHR', dispatch='VkCommandBuffer'),
++])
++
++VK_KHR_video_decode_queue = Extension(name='VK_KHR_video_decode_queue', version=7, guard=None, commands=[
++    Command(name='vkCmdDecodeVideoKHR', dispatch='VkCommandBuffer'),
++])
++
++VK_KHR_video_decode_h264 = Extension(name='VK_KHR_video_decode_h264', version=8, guard=None, commands=[
++])
++
+ VK_KHR_dynamic_rendering = Extension(name='VK_KHR_dynamic_rendering', version=1, guard=None, commands=[
+     Command(name='vkCmdBeginRenderingKHR', dispatch='VkCommandBuffer'),
+     Command(name='vkCmdEndRenderingKHR', dispatch='VkCommandBuffer'),
+@@ -539,6 +561,9 @@ def __repr__(self):
+ VK_KHR_shader_clock = Extension(name='VK_KHR_shader_clock', version=1, guard=None, commands=[
+ ])
+ 
++VK_KHR_video_decode_h265 = Extension(name='VK_KHR_video_decode_h265', version=7, guard=None, commands=[
++])
++
+ VK_KHR_global_priority = Extension(name='VK_KHR_global_priority', version=1, guard=None, commands=[
+ ])
+ 
+@@ -1635,25 +1660,6 @@ def __repr__(self):
+     Command(name='vkGetPhysicalDeviceScreenPresentationSupportQNX', dispatch='VkPhysicalDevice'),
+ ])
+ 
+-VK_KHR_video_queue = Extension(name='VK_KHR_video_queue', version=7, guard='VK_ENABLE_BETA_EXTENSIONS', commands=[
+-    Command(name='vkGetPhysicalDeviceVideoCapabilitiesKHR', dispatch='VkPhysicalDevice'),
+-    Command(name='vkGetPhysicalDeviceVideoFormatPropertiesKHR', dispatch='VkPhysicalDevice'),
+-    Command(name='vkCreateVideoSessionKHR', dispatch='VkDevice'),
+-    Command(name='vkDestroyVideoSessionKHR', dispatch='VkDevice'),
+-    Command(name='vkGetVideoSessionMemoryRequirementsKHR', dispatch='VkDevice'),
+-    Command(name='vkBindVideoSessionMemoryKHR', dispatch='VkDevice'),
+-    Command(name='vkCreateVideoSessionParametersKHR', dispatch='VkDevice'),
+-    Command(name='vkUpdateVideoSessionParametersKHR', dispatch='VkDevice'),
+-    Command(name='vkDestroyVideoSessionParametersKHR', dispatch='VkDevice'),
+-    Command(name='vkCmdBeginVideoCodingKHR', dispatch='VkCommandBuffer'),
+-    Command(name='vkCmdEndVideoCodingKHR', dispatch='VkCommandBuffer'),
+-    Command(name='vkCmdControlVideoCodingKHR', dispatch='VkCommandBuffer'),
+-])
+-
+-VK_KHR_video_decode_queue = Extension(name='VK_KHR_video_decode_queue', version=6, guard='VK_ENABLE_BETA_EXTENSIONS', commands=[
+-    Command(name='vkCmdDecodeVideoKHR', dispatch='VkCommandBuffer'),
+-])
+-
+ VK_KHR_portability_subset = Extension(name='VK_KHR_portability_subset', version=1, guard='VK_ENABLE_BETA_EXTENSIONS', commands=[
+ ])
+ 
+@@ -1667,12 +1673,6 @@ def __repr__(self):
+ VK_EXT_video_encode_h265 = Extension(name='VK_EXT_video_encode_h265', version=9, guard='VK_ENABLE_BETA_EXTENSIONS', commands=[
+ ])
+ 
+-VK_EXT_video_decode_h264 = Extension(name='VK_EXT_video_decode_h264', version=7, guard='VK_ENABLE_BETA_EXTENSIONS', commands=[
+-])
+-
+-VK_EXT_video_decode_h265 = Extension(name='VK_EXT_video_decode_h265', version=6, guard='VK_ENABLE_BETA_EXTENSIONS', commands=[
+-])
+-
+ extensions = [
+     VK_core_0,
+     VK_core_1,
+@@ -1683,6 +1683,9 @@ def __repr__(self):
+     VK_KHR_display,
+     VK_KHR_display_swapchain,
+     VK_KHR_sampler_mirror_clamp_to_edge,
++    VK_KHR_video_queue,
++    VK_KHR_video_decode_queue,
++    VK_KHR_video_decode_h264,
+     VK_KHR_dynamic_rendering,
+     VK_KHR_multiview,
+     VK_KHR_get_physical_device_properties2,
+@@ -1725,6 +1728,7 @@ def __repr__(self):
+     VK_KHR_8bit_storage,
+     VK_KHR_shader_atomic_int64,
+     VK_KHR_shader_clock,
++    VK_KHR_video_decode_h265,
+     VK_KHR_global_priority,
+     VK_KHR_driver_properties,
+     VK_KHR_shader_float_controls,
+@@ -1984,14 +1988,10 @@ def __repr__(self):
+     VK_GGP_stream_descriptor_surface,
+     VK_GGP_frame_token,
+     VK_QNX_screen_surface,
+-    VK_KHR_video_queue,
+-    VK_KHR_video_decode_queue,
+     VK_KHR_portability_subset,
+     VK_KHR_video_encode_queue,
+     VK_EXT_video_encode_h264,
+     VK_EXT_video_encode_h265,
+-    VK_EXT_video_decode_h264,
+-    VK_EXT_video_decode_h265,
+ ]
+ # end of generated code
+ 
+diff --git a/scripts/known_good.json b/scripts/known_good.json
+index 1ae537d5e..9953aba01 100644
+--- a/scripts/known_good.json
++++ b/scripts/known_good.json
+@@ -6,7 +6,7 @@
+       "sub_dir" : "Vulkan-Headers",
+       "build_dir" : "Vulkan-Headers/build",
+       "install_dir" : "Vulkan-Headers/build/install",
+-      "commit" : "v1.3.237"
++      "commit" : "v1.3.238"
+     },
+     {
+       "name" : "MoltenVK",
+@@ -30,7 +30,7 @@
+       "sub_dir" : "Vulkan-Loader",
+       "build_dir" : "Vulkan-Loader/build",
+       "install_dir" : "Vulkan-Loader/build/install",
+-      "commit" : "v1.3.237",
++      "commit" : "v1.3.238",
+       "deps" : [
+         {
+           "var_name" : "VULKAN_HEADERS_INSTALL_DIR",
+diff --git a/vulkaninfo/generated/vulkaninfo.hpp b/vulkaninfo/generated/vulkaninfo.hpp
+index 8ea4f5568..0151d4685 100644
+--- a/vulkaninfo/generated/vulkaninfo.hpp
++++ b/vulkaninfo/generated/vulkaninfo.hpp
+@@ -1219,11 +1219,10 @@ std::vector<const char *> VkVideoCodecOperationFlagBitsKHRGetStrings(VkVideoCode
+     if (VK_VIDEO_CODEC_OPERATION_NONE_KHR & value) strings.push_back("VIDEO_CODEC_OPERATION_NONE_KHR");
+     if (VK_VIDEO_CODEC_OPERATION_ENCODE_H264_BIT_EXT & value) strings.push_back("VIDEO_CODEC_OPERATION_ENCODE_H264_BIT_EXT");
+     if (VK_VIDEO_CODEC_OPERATION_ENCODE_H265_BIT_EXT & value) strings.push_back("VIDEO_CODEC_OPERATION_ENCODE_H265_BIT_EXT");
+-    if (VK_VIDEO_CODEC_OPERATION_DECODE_H264_BIT_EXT & value) strings.push_back("VIDEO_CODEC_OPERATION_DECODE_H264_BIT_EXT");
+-    if (VK_VIDEO_CODEC_OPERATION_DECODE_H265_BIT_EXT & value) strings.push_back("VIDEO_CODEC_OPERATION_DECODE_H265_BIT_EXT");
++    if (VK_VIDEO_CODEC_OPERATION_DECODE_H264_BIT_KHR & value) strings.push_back("VIDEO_CODEC_OPERATION_DECODE_H264_BIT_KHR");
++    if (VK_VIDEO_CODEC_OPERATION_DECODE_H265_BIT_KHR & value) strings.push_back("VIDEO_CODEC_OPERATION_DECODE_H265_BIT_KHR");
+     return strings;
+ }
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ void DumpVkVideoCodecOperationFlagsKHR(Printer &p, std::string name, VkVideoCodecOperationFlagsKHR value) {
+     if (static_cast<VkVideoCodecOperationFlagBitsKHR>(value) == 0) {
+         ArrayWrapper arr(p, name, 0);
+@@ -1245,7 +1244,6 @@ void DumpVkVideoCodecOperationFlagBitsKHR(Printer &p, std::string name, VkVideoC
+     if (strings.size() > 0)
+         p.PrintKeyString(name, strings.at(0));
+ }
+-#endif  // VK_ENABLE_BETA_EXTENSIONS
+ 
+ void DumpVkConformanceVersion(Printer &p, std::string name, const VkConformanceVersion &obj) {
+     ObjectWrapper object{p, name};
+@@ -2911,19 +2909,15 @@ void DumpVkQueueFamilyGlobalPriorityPropertiesKHR(Printer &p, std::string name,
+            p.PrintString(VkQueueGlobalPriorityKHRString(obj.priorities[i]));
+     }
+ }
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ void DumpVkQueueFamilyQueryResultStatusPropertiesKHR(Printer &p, std::string name, const VkQueueFamilyQueryResultStatusPropertiesKHR &obj) {
+     ObjectWrapper object{p, name};
+     p.SetMinKeyWidth(24);
+     p.PrintKeyBool("queryResultStatusSupport", static_cast<bool>(obj.queryResultStatusSupport));
+ }
+-#endif  // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+ void DumpVkQueueFamilyVideoPropertiesKHR(Printer &p, std::string name, const VkQueueFamilyVideoPropertiesKHR &obj) {
+     ObjectWrapper object{p, name};
+     DumpVkVideoCodecOperationFlagsKHR(p, "videoCodecOperations", obj.videoCodecOperations);
+ }
+-#endif  // VK_ENABLE_BETA_EXTENSIONS
+ void DumpVkSharedPresentSurfaceCapabilitiesKHR(Printer &p, std::string name, const VkSharedPresentSurfaceCapabilitiesKHR &obj) {
+     ObjectWrapper object{p, name};
+     DumpVkImageUsageFlags(p, "sharedPresentSupportedUsageFlags", obj.sharedPresentSupportedUsageFlags);
+@@ -3620,28 +3614,16 @@ struct queue_properties2_chain {
+     queue_properties2_chain& operator=(queue_properties2_chain &&) = delete;
+     void* start_of_chain = nullptr;
+     VkQueueFamilyGlobalPriorityPropertiesKHR QueueFamilyGlobalPriorityPropertiesKHR{};
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+     VkQueueFamilyQueryResultStatusPropertiesKHR QueueFamilyQueryResultStatusPropertiesKHR{};
+-#endif  // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+     VkQueueFamilyVideoPropertiesKHR QueueFamilyVideoPropertiesKHR{};
+-#endif  // VK_ENABLE_BETA_EXTENSIONS
+     void initialize_chain() noexcept {
+         QueueFamilyGlobalPriorityPropertiesKHR.sType = VK_STRUCTURE_TYPE_QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_KHR;
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+         QueueFamilyQueryResultStatusPropertiesKHR.sType = VK_STRUCTURE_TYPE_QUEUE_FAMILY_QUERY_RESULT_STATUS_PROPERTIES_KHR;
+-#endif  // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+         QueueFamilyVideoPropertiesKHR.sType = VK_STRUCTURE_TYPE_QUEUE_FAMILY_VIDEO_PROPERTIES_KHR;
+-#endif  // VK_ENABLE_BETA_EXTENSIONS
+         std::vector<VkBaseOutStructure*> chain_members;
+         chain_members.push_back(reinterpret_cast<VkBaseOutStructure*>(&QueueFamilyGlobalPriorityPropertiesKHR));
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+         chain_members.push_back(reinterpret_cast<VkBaseOutStructure*>(&QueueFamilyQueryResultStatusPropertiesKHR));
+-#endif  // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+         chain_members.push_back(reinterpret_cast<VkBaseOutStructure*>(&QueueFamilyVideoPropertiesKHR));
+-#endif  // VK_ENABLE_BETA_EXTENSIONS
+ 
+         for(size_t i = 0; i < chain_members.size() - 1; i++){
+             chain_members[i]->pNext = chain_members[i + 1];
+@@ -4746,22 +4728,18 @@ void chain_iterator_queue_properties2(Printer &p, AppGpu &gpu, void * place) {
+             DumpVkQueueFamilyGlobalPriorityPropertiesKHR(p, "VkQueueFamilyGlobalPriorityPropertiesKHR", *props);
+             p.AddNewline();
+         }
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+         if (structure->sType == VK_STRUCTURE_TYPE_QUEUE_FAMILY_QUERY_RESULT_STATUS_PROPERTIES_KHR &&
+            (gpu.CheckPhysicalDeviceExtensionIncluded(VK_KHR_VIDEO_QUEUE_EXTENSION_NAME))) {
+             VkQueueFamilyQueryResultStatusPropertiesKHR* props = (VkQueueFamilyQueryResultStatusPropertiesKHR*)structure;
+             DumpVkQueueFamilyQueryResultStatusPropertiesKHR(p, "VkQueueFamilyQueryResultStatusPropertiesKHR", *props);
+             p.AddNewline();
+         }
+-#endif  // VK_ENABLE_BETA_EXTENSIONS
+-#ifdef VK_ENABLE_BETA_EXTENSIONS
+         if (structure->sType == VK_STRUCTURE_TYPE_QUEUE_FAMILY_VIDEO_PROPERTIES_KHR &&
+            (gpu.CheckPhysicalDeviceExtensionIncluded(VK_KHR_VIDEO_QUEUE_EXTENSION_NAME))) {
+             VkQueueFamilyVideoPropertiesKHR* props = (VkQueueFamilyVideoPropertiesKHR*)structure;
+             DumpVkQueueFamilyVideoPropertiesKHR(p, "VkQueueFamilyVideoPropertiesKHR", *props);
+             p.AddNewline();
+         }
+-#endif  // VK_ENABLE_BETA_EXTENSIONS
+         place = structure->pNext;
+     }
+ }
