@@ -1,0 +1,17 @@
+Submodule jfbuild contains modified content
+diff --git a/jfbuild/Makefile b/jfbuild/Makefile
+index 7330136..ec4da2e 100644
+--- a/jfbuild/Makefile
++++ b/jfbuild/Makefile
+@@ -251,9 +251,9 @@ cacheinfo$(EXESUFFIX): $(TOOLS)/cacheinfo.$o $(ENGINELIB)
+ # These tools are only used at build time and should be compiled
+ # using the host toolchain rather than any cross-compiler.
+ generatesdlappicon$(EXESUFFIX): $(TOOLS)/generatesdlappicon.c $(SRC)/kplib.c
+-	$(HOSTCC) $(CFLAGS) -I$(SRC) -I$(INC) -o $@ $^
++	$(HOSTCC) -I$(SRC) -I$(INC) -o $@ $^
+ bin2c$(EXESUFFIX): $(TOOLS)/bin2c.cc
+-	$(HOSTCXX) $(CXXFLAGS) -o $@ $^
++	$(HOSTCXX) -o $@ $^
+ 
+ # DEPENDENCIES
+ include Makefile.deps
