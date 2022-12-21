@@ -29,8 +29,8 @@ endef
 
 XENIA_POST_INSTALL_TARGET_HOOKS += XENIA_POST_PROCESS
 
-# when rebuilding a new version will not be downloaded if an existing version is cached.
-# delete existing version before building
+# When rebuilding, if an existing version is cached a new version will not be downloaded as the filenames is the same.
+# Delete existing version before building
 define XENIA_REMOVE_SOURCE
 	rm -rf $(DL_DIR)/$(XENIA_DL_SUBDIR)/$(XENIA_SOURCE)
 endef
