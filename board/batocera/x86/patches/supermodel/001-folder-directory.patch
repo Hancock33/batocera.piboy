@@ -1,0 +1,64 @@
+diff --git a/Src/OSD/Unix/FileSystemPath.cpp b/Src/OSD/Unix/FileSystemPath.cpp
+index 4ab5916..73649cf 100644
+--- a/Src/OSD/Unix/FileSystemPath.cpp
++++ b/Src/OSD/Unix/FileSystemPath.cpp
+@@ -56,27 +56,27 @@ namespace FileSystemPath
+         switch (pathType)
+         {
+         case Analysis:
+-            strPathType = "Analysis";
++            strPathType = "/userdata/system/configs/supermodel/analysis";
+             break;
+         case Config:
+-            strPathType = "Config";
++            strPathType = "/userdata/system/configs/supermodel";
+             break;
+         case Log:
+-            strPathType = "Log";
++            strPathType = "/userdata/system/logs";
+             break;
+         case NVRAM:
+-            strPathType = "NVRAM";
++            strPathType = "/userdata/saves/supermodel/NVRAM";
+             break;
+         case Saves:
+-            strPathType = "Saves";
++            strPathType = "/userdata/saves/supermodel";
+             break;
+         case Screenshots:
+-            strPathType = "Screenshots";
++            strPathType = "/userdata/screenshots/supermodel";
+             break;
+         }
+ 
+         // Get user's HOME directory
+-        if (pwd)
++        /*if (pwd)
+         {
+             homePath = pwd->pw_dir;
+         }
+@@ -95,13 +95,13 @@ namespace FileSystemPath
+             }
+             else
+             {
+-                // If directory doesn't exist, create it
++                // If directory doesn't exist, create it*/
+                 if (!FileSystemPath::PathExists(strPathType))
+                 {
+                     mkdir(strPathType.c_str(), 0775);
+                 }
+                 finalPath = strPathType;
+-            }
++            /*}
+         }
+         // Check if $HOME/.supermodel exists
+         else if (FileSystemPath::PathExists(Util::Format() << homePath << "/.supermodel"))
+@@ -149,7 +149,7 @@ namespace FileSystemPath
+                 }
+             }
+             
+-        }
++        }*/
+         
+         if (finalPath != "")
+         {

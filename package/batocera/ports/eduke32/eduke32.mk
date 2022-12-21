@@ -22,14 +22,14 @@ endif
 
 define EDUKE32_BUILD_CMDS
     $(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) -C $(@D) duke3d
-    #$(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) -C $(@D) sw
+    $(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) -C $(@D) sw
     $(RM) -r $(@D)/obj
     $(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) USE_OPENGL=0 FURY=1 -C $(@D)
 endef
 
 define EDUKE32_INSTALL_TARGET_CMDS
     $(INSTALL) -D -m 0755 $(@D)/eduke32 $(TARGET_DIR)/usr/bin/eduke32
-    #$(INSTALL) -D -m 0755 $(@D)/voidsw  $(TARGET_DIR)/usr/bin/voidsw
+    $(INSTALL) -D -m 0755 $(@D)/voidsw  $(TARGET_DIR)/usr/bin/voidsw
     $(INSTALL) -D -m 0755 $(@D)/fury    $(TARGET_DIR)/usr/bin/ionfury
     #copy sdl game contoller info
     cp $(@D)/package/common/gamecontrollerdb.txt $(TARGET_DIR)/usr/share/gamecontrollerdb.txt
