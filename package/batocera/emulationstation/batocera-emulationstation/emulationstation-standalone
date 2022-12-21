@@ -167,6 +167,10 @@ do
     enabledpi="$(batocera-settings-get -f /boot/batocera-boot.conf key piboy.enabled)"
     enabledxrs="$(batocera-settings-get -f /boot/batocera-boot.conf key piboyxrs.enabled)"
 
+	# set inital background for openbox
+	feh --no-fehbg --bg-scale '/usr/share/emulationstation/resources/loading.jpg'
+
+	# start emulationstation / emulationstation_piboy
     if test ${enabledpi} = 1
        then
           /usr/bin/emulationstation_piboy ${GAMELAUNCHOPT} --exit-on-reboot-required ${CUSTOMESOPTIONS}
