@@ -93,13 +93,13 @@ define BATOCERA_EMULATIONSTATION_RESOURCES
 	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/emulationstation/resources/flags
 	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/emulationstation/resources/battery
 	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/emulationstation/resources/services
-	$(INSTALL) -m 0644 -D $(@D)/resources/*.* $(TARGET_DIR)/usr/share/emulationstation/resources
-	$(INSTALL) -m 0644 -D $(@D)/resources/help/*.* $(TARGET_DIR)/usr/share/emulationstation/resources/help
-	$(INSTALL) -m 0644 -D $(@D)/resources/flags/*.* $(TARGET_DIR)/usr/share/emulationstation/resources/flags
-	$(INSTALL) -m 0644 -D $(@D)/resources/battery/*.* $(TARGET_DIR)/usr/share/emulationstation/resources/battery
+	$(INSTALL) -m 0644 -D $(@D)/resources/*.*          $(TARGET_DIR)/usr/share/emulationstation/resources
+	$(INSTALL) -m 0644 -D $(@D)/resources/help/*.*     $(TARGET_DIR)/usr/share/emulationstation/resources/help
+	$(INSTALL) -m 0644 -D $(@D)/resources/flags/*.*    $(TARGET_DIR)/usr/share/emulationstation/resources/flags
+	$(INSTALL) -m 0644 -D $(@D)/resources/battery/*.*  $(TARGET_DIR)/usr/share/emulationstation/resources/battery
 	$(INSTALL) -m 0644 -D $(@D)/resources/services/*.* $(TARGET_DIR)/usr/share/emulationstation/resources/services
-	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo.png  \
-		   $(TARGET_DIR)/usr/share/emulationstation/resources/logo.png
+	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/resources/loading.jpg $(TARGET_DIR)/usr/share/emulationstation/resources/loading.jpg
+	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo.png                             $(TARGET_DIR)/usr/share/emulationstation/resources/logo.png
 	# es_input.cfg
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/controllers/es_input.cfg \
