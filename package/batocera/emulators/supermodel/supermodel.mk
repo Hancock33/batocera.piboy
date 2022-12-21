@@ -3,14 +3,18 @@
 # supermodel
 #
 ################################################################################
-# Version: Commits on Nov 06, 2022
-SUPERMODEL_VERSION = 4c727abdc84e5c9eb56b3a178c2dd473d7581725
+# Version: Commits on Dec 19, 2022
+SUPERMODEL_VERSION = ad0aed42a48436f47aa21bd2704871afb115a21e
 SUPERMODEL_SITE = $(call github,trzy,Supermodel,$(SUPERMODEL_VERSION))
 SUPERMODEL_DEPENDENCIES = sdl2 zlib libzip sdl2_net
 SUPERMODEL_LICENSE = GPLv3
 
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
+	SUPERMODEL_VERSION = 4c727abdc84e5c9eb56b3a178c2dd473d7581725
+endif
+
 ifeq ($(BR2_PACKAGE_LIBGLEW),y)
-SUPERMODEL_DEPENDENCIES += libglew
+	SUPERMODEL_DEPENDENCIES += libglew
 endif
 
 define SUPERMODEL_BUILD_CMDS

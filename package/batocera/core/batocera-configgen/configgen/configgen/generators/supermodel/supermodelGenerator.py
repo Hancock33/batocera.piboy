@@ -74,6 +74,13 @@ def copy_nvram_files():
             if not os.path.exists(targetDir + "/" + file):
                 copyfile(sourceDir + "/" + file, targetDir + "/" + file)
 
+    # Check if games list exists
+    confDir = '/userdata/system/configs/supermodel'
+    if not os.path.exists(confDir):
+        os.makedirs(confDir)
+
+    copyfile('/usr/share/supermodel/Games.xml', confDir + '/Games.xml')
+
 def configPadsIni(playersControllers, altControl):
     if bool(altControl):
         templateFile = "/usr/share/supermodel/Supermodel-Driving.ini.template"
