@@ -1,17 +1,17 @@
 diff --git a/SamTFE/Sources/CMakeLists.txt b/SamTFE/Sources/CMakeLists.txt
-index b0bd4dd..dd0b5ba 100644
+index 77ebf2f..b0ea53d 100644
 --- a/SamTFE/Sources/CMakeLists.txt
 +++ b/SamTFE/Sources/CMakeLists.txt
-@@ -1020,7 +1020,7 @@ if(RPI4)
-     target_link_libraries(${ENGINELIB} "rt")
- endif()
+@@ -1033,7 +1033,7 @@ if(FREEBSD)
+ set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+ else()
  target_link_libraries(${ENGINELIB} vulkan)
 -set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
 +#set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
+ endif()
  
  add_executable(SeriousSam
-     #${ENGINE_SRCS}
-@@ -1114,14 +1114,14 @@ if(MACOSX)
+@@ -1128,14 +1128,14 @@ if(MACOSX)
  endif()
  
  if(LINUX)
@@ -28,7 +28,7 @@ index b0bd4dd..dd0b5ba 100644
          target_link_libraries(DedicatedServer "m")
          target_link_libraries(DedicatedServer "dl")
          target_link_libraries(DedicatedServer "pthread")
-@@ -1129,7 +1129,7 @@ if(LINUX)
+@@ -1143,7 +1143,7 @@ if(LINUX)
          target_link_libraries(DedicatedServer ${ZLIB_LIBRARIES})
      endif()
      if(BUILD_MAKEFONT)
@@ -38,19 +38,19 @@ index b0bd4dd..dd0b5ba 100644
          target_link_libraries(MakeFONT "dl")
          target_link_libraries(MakeFONT "pthread")
 diff --git a/SamTSE/Sources/CMakeLists.txt b/SamTSE/Sources/CMakeLists.txt
-index b0bd4dd..dd0b5ba 100644
+index 77ebf2f..b0ea53d 100644
 --- a/SamTSE/Sources/CMakeLists.txt
 +++ b/SamTSE/Sources/CMakeLists.txt
-@@ -1020,7 +1020,7 @@ if(RPI4)
-     target_link_libraries(${ENGINELIB} "rt")
- endif()
+@@ -1033,7 +1033,7 @@ if(FREEBSD)
+ set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+ else()
  target_link_libraries(${ENGINELIB} vulkan)
 -set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
 +#set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
+ endif()
  
  add_executable(SeriousSam
-     #${ENGINE_SRCS}
-@@ -1114,14 +1114,14 @@ if(MACOSX)
+@@ -1128,14 +1128,14 @@ if(MACOSX)
  endif()
  
  if(LINUX)
@@ -67,7 +67,7 @@ index b0bd4dd..dd0b5ba 100644
          target_link_libraries(DedicatedServer "m")
          target_link_libraries(DedicatedServer "dl")
          target_link_libraries(DedicatedServer "pthread")
-@@ -1129,7 +1129,7 @@ if(LINUX)
+@@ -1143,7 +1143,7 @@ if(LINUX)
          target_link_libraries(DedicatedServer ${ZLIB_LIBRARIES})
      endif()
      if(BUILD_MAKEFONT)
