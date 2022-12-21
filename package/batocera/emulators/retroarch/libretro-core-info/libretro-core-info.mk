@@ -3,8 +3,8 @@
 # libretro-core-info
 #
 ################################################################################
-# Version: Commits on Dec 13, 2022
-LIBRETRO_CORE_INFO_VERSION = 3d9b20d3711c8c2827246e3b48a503973192f080
+# Version: Commits on Dec 21, 2022
+LIBRETRO_CORE_INFO_VERSION = 0c56d506ea3eb0d87b3fe64552a7d2bbe04d1658
 LIBRETRO_CORE_INFO_SITE = $(call github,libretro,libretro-core-info,$(LIBRETRO_CORE_INFO_VERSION))
 LIBRETRO_CORE_INFO_LICENSE = MIT
 
@@ -27,6 +27,7 @@ define LIBRETRO_CORE_INFO_INSTALL_TARGET_CMDS
 	mv $(@D)/mednafen_supafaust_libretro.info   $(TARGET_DIR)/usr/share/libretro/info/supafaust_libretro.info
 	mv $(@D)/mednafen_vb_libretro.info          $(TARGET_DIR)/usr/share/libretro/info/vb_libretro.info
 	mv $(@D)/mupen64plus_next_libretro.info     $(TARGET_DIR)/usr/share/libretro/info/mupen64plus-next_libretro.info
+	cp $(@D)/pcsx2_libretro.info                $(TARGET_DIR)/usr/share/libretro/info/lrps2_libretro.info.info
 	mv $(@D)/snes9x2010_libretro.info           $(TARGET_DIR)/usr/share/libretro/info/snes9x_next_libretro.info
 	mv $(@D)/vbam_libretro.info                 $(TARGET_DIR)/usr/share/libretro/info/vba-m_libretro.info
 	cp -r $(@D)/*.info                          $(TARGET_DIR)/usr/share/libretro/info
