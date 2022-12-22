@@ -39,9 +39,9 @@ class DaphneGenerator(Generator):
         if not os.path.exists(batoceraFiles.daphneDatadir + "/singe"):
             if not os.path.exists(batoceraFiles.daphneHomedir + "/roms"):
                 os.mkdir(batoceraFiles.daphneHomedir + "/roms")
-            os.symlink(batoceraFiles.daphneHomedir + "/roms", batoceraFiles.daphneDatadir + "/singe")
-        if not os.path.islink(batoceraFiles.daphneDatadir + "/singe"):
-            eslog.error("Your {} directory isn't a symlink, that's not good.".format(batoceraFiles.daphneDatadir + "/singe"))
+        #    os.symlink(batoceraFiles.daphneHomedir + "/roms", batoceraFiles.daphneDatadir + "/singe")
+        #if not os.path.islink(batoceraFiles.daphneDatadir + "/singe"):
+        #    eslog.error("Your {} directory isn't a symlink, that's not good.".format(batoceraFiles.daphneDatadir + "/singe"))
 
 
         # extension used .daphne and the file to start the game is in the folder .daphne with the extension .txt
