@@ -10326,25 +10326,28 @@ gzdoom:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
-        gzdoom_render:
-            group: VIDEO SETTINGS
-            prompt:      GAME RENDERING
-            description: Select rendering mode.
-            choices:
-                "Vulkan":          vulkan
-                "Softpoly":        soft
-                "GLES2 (default)": gles2
+    gzdoom_render:
+      group: VIDEO SETTINGS
+      prompt:      GAME RENDERING
+      description: Select rendering mode.
+      choices:
+        "Vulkan":             vulkan
+        "Softpoly":           soft
+        "GLES2 (Default)":    gles2
+        "OpenGL (x86 only)":  gl
 lzdoom:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
-        gzdoom_render:
-            group: VIDEO SETTINGS
-            prompt:      GAME RENDERING
-            description: Select rendering mode.
-            choices:
-                "Vulkan (default)":   vulkan
-                "Softpoly":           soft
+    lzdoom_render:
+      group: VIDEO SETTINGS
+      prompt:      GAME RENDERING
+      description: Select rendering mode.
+      choices:
+        "Vulkan":             vulkan
+        "Softpoly":           soft
+        "GLES2 (Default)":    gles2
+        "OpenGL (x86 only)":  gl
 hode:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -10422,9 +10425,10 @@ raze:
       prompt:      GAME RENDERING
       description: Select rendering mode.
       choices:
-        "Vulkan":          vulkan
-        "Softpoly":        soft
-        "GLES2 (Default)": gles2
+        "Vulkan":             vulkan
+        "Softpoly":           soft
+        "GLES2 (Default)":    gles2
+        "OpenGL (x86 only)":  gl
 raptor:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
