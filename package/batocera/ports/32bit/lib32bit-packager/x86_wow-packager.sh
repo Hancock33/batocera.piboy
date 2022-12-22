@@ -4,11 +4,10 @@ DEST_DIR=/tmp/batocera-x86-32bit-libs-$CURRENTDATE
 
 mkdir -p $DEST_DIR/lib
 mkdir -p $DEST_DIR/usr/bin32
-mkdir -p $DEST_DIR/usr/share
+mkdir -p $DEST_DIR/usr/share/vulkan/icd.d
 cp -a ${TARGET_DIR}/usr/bin/gst-*                        $DEST_DIR/usr/bin32
-cp -a ${TARGET_DIR}/usr/bin/{sorr,box86}                 $DEST_DIR/usr/bin32
-cp -a ${TARGET_DIR}/usr/share/box86                      $DEST_DIR/usr/share
-cp -a ${TARGET_DIR}/usr/share/vulkan                     $DEST_DIR/usr/share
+#cp -a ${TARGET_DIR}/usr/bin/{sorr,box86}                $DEST_DIR/usr/bin32
+#cp -a ${TARGET_DIR}/usr/share/box86                     $DEST_DIR/usr/share
 cp -a ${TARGET_DIR}/usr/share/gst-plugins-base           $DEST_DIR/usr/share
 cp -a ${TARGET_DIR}/usr/share/gstreamer-*                $DEST_DIR/usr/share
 cp -a ${TARGET_DIR}/usr/wine                             $DEST_DIR/usr
@@ -21,6 +20,12 @@ ln -sf libudev.so.1                                      $DEST_DIR/usr/lib32/lib
 ln -sf libuuid.so.1                                      $DEST_DIR/usr/lib32/libuuid.so
 ln -sf /usr/lib32                                        $DEST_DIR/lib32
 ln -sf /usr/lib32/ld-linux.so.2                          $DEST_DIR/lib/ld-linux.so.2
+
+cp -a ${TARGET_DIR}/usr/share/vulkan/icd.d/intel_icd..json   $DEST_DIR/usr/share/vulkan/icd.d/intel_icd.i686.json
+cp -a ${TARGET_DIR}/usr/share/vulkan/icd.d/intel_icd..json   $DEST_DIR/usr/share/vulkan/icd.d/intel_icd.x86_64.json
+cp -a ${TARGET_DIR}/usr/share/vulkan/icd.d/radeon_icd..json  $DEST_DIR/usr/share/vulkan/icd.d/radeon_icd.i686.json
+cp -a ${TARGET_DIR}/usr/share/vulkan/icd.d/radeon_icd..json  $DEST_DIR/usr/share/vulkan/icd.d/radeon_icd.x86_64.json
+sed -i s@/usr/lib/@/lib32/@g                                 $DEST_DIR/usr/share/vulkan/icd.d/*i686.json
 
 rm -rf $DEST_DIR/usr/lib32/{avahi,gconv,glslang,graphene-1.0,icu,libfm,locale}
 rm -rf $DEST_DIR/usr/lib32/{pcmanfm,python3.*,terminfo,udev,xorg,X11}
