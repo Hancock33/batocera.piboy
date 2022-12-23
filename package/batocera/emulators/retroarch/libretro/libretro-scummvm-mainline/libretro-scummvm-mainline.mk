@@ -3,8 +3,8 @@
 # libretro-scummvm-mainline
 #
 ################################################################################
-# Version: Commits on Dec 15, 2022
-LIBRETRO_SCUMMVM_MAINLINE_VERSION = d48cdc346b2291ef5d41859f8911f06312cb2b70
+# Version: Commits on Dec 23, 2022
+LIBRETRO_SCUMMVM_MAINLINE_VERSION = 0f6c148be023a7014b3328f3f41e167c6656aa5e
 LIBRETRO_SCUMMVM_MAINLINE_SITE = https://github.com/spleen1981/scummvm-mainline-libretro.git
 LIBRETRO_SCUMMVM_MAINLINE_SITE_METHOD=git
 LIBRETRO_SCUMMVM_MAINLINE_GIT_SUBMODULES=YES
