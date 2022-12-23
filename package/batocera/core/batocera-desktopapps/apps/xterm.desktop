@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Icon=xterm-color_48x48
-Exec=xterm -fg green -bg black -fa 'Monospace' -fs 12 -ls 
+Exec=xterm -bg black -fg green -fa 'Monospace' -fs 12 -e /bin/bash
 Terminal=false
 Type=Application
 Categories=System;batocera.linux;
