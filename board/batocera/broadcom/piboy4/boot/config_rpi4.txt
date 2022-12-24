@@ -19,9 +19,6 @@ initramfs boot/initrd.gz
 #Audio Settings
 dtparam=audio=on
 
-# Enable bluetooth
-dtparam=krnbt=on
-
 # Video settings
 gpu_mem_1024=256
 dtoverlay=vc4-fkms-v3d-pi4
