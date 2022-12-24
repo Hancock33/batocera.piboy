@@ -27,9 +27,6 @@ dtparam=audio=on
 audio_pwm_mode=2
 dtoverlay=audremap,pins_18_19
 
-# Enable bluetooth
-dtparam=krnbt=on
-
 # HDMI Settings
 hdmi_group:1=2					# 1=CEA (Consumer Electronics Association, the standard typically used by TVs), 2=DMT (Display Monitor Timings, the standard typically used by monitors).
 hdmi_mode:1=82					# DMT 82=1080p@60hz, 85=720p@60hz
