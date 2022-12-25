@@ -1,21 +1,3 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
-msgid ""
-msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: 8bit\n"
-
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Set the display's resolution. Does not affect the rendering resolution."
@@ -1919,7 +1901,7 @@ msgctxt "game_options"
 msgid "TEXTURE FILTERING"
 msgstr ""
 
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/parallel_n64, f2bgl
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/parallel_n64
 msgctxt "game_options"
 msgid "Nearest"
 msgstr ""
@@ -8045,12 +8027,12 @@ msgctxt "game_options"
 msgid "ES"
 msgstr ""
 
-#. TRANSLATION: hatari, f2bgl
+#. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "FR"
 msgstr ""
 
-#. TRANSLATION: hatari, f2bgl
+#. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "IT"
 msgstr ""
@@ -9094,7 +9076,7 @@ msgctxt "game_options"
 msgid "Fit to Window (4:3)"
 msgstr ""
 
-#. TRANSLATION: scummvm, f2bgl
+#. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Select which filter is used to scale up the resolution."
 msgstr ""
@@ -10788,116 +10770,6 @@ msgstr ""
 #. TRANSLATION: eduke32, ionfury, raze, sm64
 msgctxt "game_options"
 msgid "Show (Default)"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "Disable fog rendering"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "FOG RENDERING"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "Disable gouraud shading"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "GOURAUD RENDERING"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "TEXTURE FILTER"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "Linear (Default)"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "Select which scaler is used to scale up the resolution."
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "TEXTURE SCALER"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "Point1x"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "Point2x"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "Point3x"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "Scale2x (Default)"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "Scale3x"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "Display cutscene subtitles"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "SUBTITLES"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "TRUE"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "FALSE"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "EN"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "GR"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "SP"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "Start at level number"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "START LEVEL"
 msgstr ""
 
 #. TRANSLATION: gzdoom, lzdoom, raze
