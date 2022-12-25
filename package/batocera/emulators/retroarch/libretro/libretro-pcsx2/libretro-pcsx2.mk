@@ -3,8 +3,8 @@
 # libretro-pcsx2
 #
 ################################################################################
-# Version: Commits on Dec 23, 2022
-LIBRETRO_PCSX2_VERSION = e4a7384d5a939a18b0fdac88371332473faca96d
+# Version: Commits on Dec 24, 2022
+LIBRETRO_PCSX2_VERSION = 550c67b817c32fa732278cfafde8d0ae050c1d9a
 LIBRETRO_PCSX2_SITE = https://github.com/libretro/LRPS2.git
 LIBRETRO_PCSX2_SITE_METHOD = git
 LIBRETRO_PCSX2_GIT_SUBMODULES = YES

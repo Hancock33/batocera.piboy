@@ -3,8 +3,8 @@
 # dosbox-staging
 #
 ################################################################################
-# Version: Commits on Dec 23, 2022
-DOSBOX_STAGING_VERSION = 208485b490a838add84da0c1f4fa5be145d9fb1a
+# Version: Commits on Dec 24, 2022
+DOSBOX_STAGING_VERSION = 617386ec1a442328727f74dac49bdca0f7225651
 DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGING_VERSION))
 DOSBOX_STAGING_DEPENDENCIES = sdl2 sdl2_net fluidsynth zlib libpng libogg libvorbis opus opusfile slirp speexdsp iir
 DOSBOX_STAGING_LICENSE = GPLv2
