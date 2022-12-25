@@ -96,7 +96,7 @@ define DOSBOX_DL_DEPENDENCIES
 	curl -L https://github.com/berndporr/iir1/archive/refs/tags/1.9.3.tar.gz -o $(@D)/subprojects/packagecache/1.9.3.tar.gz
 	curl -L https://wrapdb.mesonbuild.com/v2/iir_1.9.3-1/get_patch           -o $(@D)/subprojects/packagecache/iir_1.9.3-1_patch.zip
 	curl -L https://downloads.xiph.org/releases/speex/speexdsp-1.2.1.tar.gz  -o $(@D)/subprojects/packagecache/speexdsp-1.2.1.tar.gz
-	curl -L https://wrapdb.mesonbuild.com/v2/speexdsp_1.2.1-5/get_patch      -o $(@D)/subprojects/packagecache/speexdsp_1.2.1-5_patch.zip
+	curl -L https://wrapdb.mesonbuild.com/v2/speexdsp_1.2.1-7/get_patch      -o $(@D)/subprojects/packagecache/speexdsp_1.2.1-7_patch.zip
 endef
 DOSBOX_STAGING_PRE_CONFIGURE_HOOKS += DOSBOX_DL_DEPENDENCIES
 
