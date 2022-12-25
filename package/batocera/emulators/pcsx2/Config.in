@@ -7,7 +7,6 @@ config BR2_PACKAGE_PCSX2
 	select BR2_PACKAGE_FREETYPE
 	select BR2_PACKAGE_ZLIB
 	select BR2_PACKAGE_LIBPNG
-	select BR2_PACKAGE_WXWIDGETS
 	select BR2_PACKAGE_LIBAIO
 	select BR2_PACKAGE_PORTAUDIO
 	select BR2_PACKAGE_LIBSOUNDTOUCH
@@ -22,4 +21,4 @@ config BR2_PACKAGE_PCSX2
     help
         PCSX2 is a free and open-source PlayStation 2 (PS2) emulator.
 
-              https://github.com/PCSX2/pcsx2
+		https://github.com/PCSX2/pcsx2
