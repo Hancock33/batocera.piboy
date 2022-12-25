@@ -3,8 +3,8 @@
 # pcsx2-avx2
 #
 ################################################################################
-# Version: Commits on Dec 23, 2022
-PCSX2_AVX2_VERSION = v1.7.3762
+# Version: Commits on Dec 25, 2022
+PCSX2_AVX2_VERSION = v1.7.3786
 PCSX2_AVX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_AVX2_SITE_METHOD = git
 PCSX2_AVX2_GIT_SUBMODULES = YES
@@ -15,13 +15,12 @@ PCSX2_AVX2_SUPPORTS_IN_SOURCE_BUILD = NO
 
 PCSX2_AVX2_DEPENDENCIES += xserver_xorg-server alsa-lib freetype zlib libpng
 PCSX2_AVX2_DEPENDENCIES += libaio portaudio libsoundtouch sdl2 libpcap yaml-cpp
-PCSX2_AVX2_DEPENDENCIES += libsamplerate fmt wxwidgets libgtk3
+PCSX2_AVX2_DEPENDENCIES += libsamplerate fmt libgtk3
 
 PCSX2_AVX2_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 PCSX2_AVX2_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 PCSX2_AVX2_CONF_OPTS += -DPCSX2_TARGET_ARCHITECTURES=x86_64
 PCSX2_AVX2_CONF_OPTS += -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=TRUE
-PCSX2_AVX2_CONF_OPTS += -DwxWidgets_CONFIG_EXECUTABLE="$(STAGING_DIR)/usr/bin/wx-config"
 PCSX2_AVX2_CONF_OPTS += -DQT_BUILD=FALSE
 PCSX2_AVX2_CONF_OPTS += -DXDG_STD=TRUE
 PCSX2_AVX2_CONF_OPTS += -DDISABLE_PCSX2_WRAPPER=1
