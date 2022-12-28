@@ -80,6 +80,24 @@ class Rpcs3Generator(Generator):
             rpcs3ymlconfig["Core"]['SPU Decoder'] = system.config["spudecoder"]
         else:
             rpcs3ymlconfig["Core"]['SPU Decoder'] = 'Recompiler (LLVM)'
+
+        # Set the SPU XFloat Accuracy based on config
+        rpcs3ymlconfig["Core"]['Accurate xfloat'] = "false"
+        rpcs3ymlconfig["Core"]['Approximate xfloat'] = "true"
+        # This is not an oversight. Relaxed xfloat is always set to "true" by the RPCS3 config menu.
+        rpcs3ymlconfig["Core"]['Relaxed xfloat'] = "true"
+        if system.isOptSet("spuxfloataccuracy"):
+            if system.config["spuxfloataccuracy"] == "accurate":
+                rpcs3ymlconfig["Core"]['Accurate xfloat'] = "true"
+                rpcs3ymlconfig["Core"]['Approximate xfloat'] = "false"
+            # This is what is set by default.
+            # elif system.config["spuxfloataccuracy"] == "approximate":
+            #     rpcs3ymlconfig["Core"]['Accurate xfloat'] = "false"
+            #     rpcs3ymlconfig["Core"]['Approximate xfloat'] = "true"
+            elif system.config["spuxfloataccuracy"] == "relaxed":
+                rpcs3ymlconfig["Core"]['Accurate xfloat'] = "false"
+                rpcs3ymlconfig["Core"]['Approximate xfloat'] = "false"
+
         # Set the Default Core Values we need
         rpcs3ymlconfig["Core"]['Lower SPU thread priority'] = False
         rpcs3ymlconfig["Core"]['SPU Cache'] = False # When SPU Cache is True, game performance decreases signficantly. Force it to off.
@@ -89,6 +107,7 @@ class Rpcs3Generator(Generator):
             rpcs3ymlconfig["Core"]['Preferred SPU Threads'] = system.config["sputhreads"]
         else:
             rpcs3ymlconfig["Core"]['Preferred SPU Threads'] = 0
+
         # [Video]
         # gfx backend
         if system.isOptSet("gfxbackend"):
