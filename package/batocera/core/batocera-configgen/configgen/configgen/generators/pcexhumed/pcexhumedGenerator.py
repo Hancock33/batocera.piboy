@@ -5,7 +5,6 @@ import Command
 from generators.Generator import Generator
 import controllersConfig
 
-
 class PcexhumedGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):

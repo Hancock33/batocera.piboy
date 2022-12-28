@@ -6,8 +6,6 @@ from generators.Generator import Generator
 import controllersConfig
 
 class VoidswGenerator(Generator):
-    if os.path.isfile('/tmp/piboy'):
-        os.system('piboy_keys voidsw.keys')
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         addon = "-addon0"
@@ -20,7 +18,8 @@ class VoidswGenerator(Generator):
         commandArray = ["voidsw", addon, "-j", os.path.dirname(os.path.abspath(rom))]
         os.chdir(os.path.dirname(os.path.abspath(rom)))
 
-        if os.path.isfile('/tmp/piboy'):
+        if os.path.isfile('/tmp/piboy') and not os.path.isfile('/tmp/piboy_xrs'):
+            os.system('piboy_keys voidsw.keys')
             return Command.Command(
                 array=commandArray,
                 env={

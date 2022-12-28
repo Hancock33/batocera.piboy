@@ -21,6 +21,7 @@ case "$1" in
 			modprobe xpi_gamecon_xrs
 			python /usr/bin/piboy_audctrl.py &
 			python /usr/bin/piboy_fan_power_ctrl.py &
+			touch /tmp/piboy_xrs
 		fi
 
 		if [[ $enabled == "1" ]] || [[ $enabledxrs == "1" ]]; then
