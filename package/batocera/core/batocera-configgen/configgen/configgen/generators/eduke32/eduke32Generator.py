@@ -6,14 +6,13 @@ from generators.Generator import Generator
 import controllersConfig
 
 class Eduke32Generator(Generator):
-    if os.path.isfile('/tmp/piboy'):
-        os.system('piboy_keys eduke32.keys')
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["eduke32", rom, "-game_dir", os.path.dirname(os.path.abspath(rom)), "-nologo" if system.getOptBoolean("nologo") else ""]
         os.chdir(os.path.dirname(os.path.abspath(rom)))
 
-        if os.path.isfile('/tmp/piboy'):
+        if os.path.isfile('/tmp/piboy') and not os.path.isfile('/tmp/piboy_xrs'):
+            os.system('piboy_keys eduke32.keys')
             return Command.Command(
                 array=commandArray,
                 env={

@@ -3,22 +3,21 @@
 # eduke32
 #
 ################################################################################
-# Version: Commits on 26 Jul, 2022
-EDUKE32_VERSION = 9ae924b98be227dd2c3993268a40af1a61055f7e
+# Version: Commits on 25 Dec, 2022
+EDUKE32_VERSION = 122aee012e7d45c48636d4e38b5af6c37c1ef8ad
 EDUKE32_SITE = https://voidpoint.io/terminx/eduke32.git
 
 EDUKE32_DEPENDENCIES = sdl2 flac libvpx
 EDUKE32_SITE_METHOD=git
 EDUKE32_LICENSE = GPL-2.0
+EDUKE32_VC_REV="$(shell echo $(EDUKE32_SITE) | cut -c 1-7)"
 
 # Some build options are documented here: https://wiki.eduke32.com/wiki/Building_EDuke32_on_Linux
 EDUKE32_BUILD_ARGS = STARTUP_WINDOW=0
 EDUKE32_BUILD_ARGS += HAVE_GTK2=0
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
-    EDUKE32_BUILD_ARGS += USE_OPENGL=0
-    EDUKE32_BUILD_ARGS += OPTOPT="-mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math -w"
-endif
+EDUKE32_BUILD_ARGS += LTO=0
+EDUKE32_BUILD_ARGS += PACKAGE_REPOSITORY=1
+EDUKE32_BUILD_ARGS += VC_REV=$(EDUKE32_VC_REV)
 
 define EDUKE32_BUILD_CMDS
     $(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) -C $(@D) duke3d

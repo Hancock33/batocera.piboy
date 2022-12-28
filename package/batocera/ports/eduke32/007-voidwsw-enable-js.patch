@@ -1,0 +1,13 @@
+diff --git a/source/sw/src/config.h b/source/sw/src/config.h
+index 4caf0c71f..dda073c71 100644
+--- a/source/sw/src/config.h
++++ b/source/sw/src/config.h
+@@ -36,7 +36,7 @@ Prepared for public release: 03/28/2005 - Charlie Wiederhold, 3D Realms
+ #ifdef __cplusplus
+ struct ud_setup_t {
+     union {
+-      int32_t usejoystick, UseJoystick = {0};
++      int32_t usejoystick, UseJoystick = {1};
+     };
+     union {
+       int32_t usemouse, UseMouse = {1};

@@ -1,0 +1,26 @@
+diff --git a/source/sw/src/draw.cpp b/source/sw/src/draw.cpp
+index 49b2d7871..d1fd1fd93 100644
+--- a/source/sw/src/draw.cpp
++++ b/source/sw/src/draw.cpp
+@@ -1569,7 +1569,7 @@ int COVERsetgamemode(int mode, int xdim, int ydim, int bpp)
+ {
+     ud_setup.ScreenHeight = ydim;
+     ud_setup.ScreenWidth  = xdim;
+-    ud_setup.ScreenMode   = mode;
++    ud_setup.ScreenMode   = 1;
+     ud_setup.ScreenBPP    = bpp;
+ 
+     // [JM] Should I be using upscalefactor here, or some SW equivalent to Duke's ud.detail? !CHECKME!
+diff --git a/source/sw/src/game.cpp b/source/sw/src/game.cpp
+index 5145d5638..665145196 100644
+--- a/source/sw/src/game.cpp
++++ b/source/sw/src/game.cpp
+@@ -778,7 +778,7 @@ void Set_GameMode(void)
+         buildprintf("Failure setting video mode %dx%dx%d %s! Attempting safer mode...",
+                     ud_setup.ScreenWidth,ud_setup.ScreenHeight,ud_setup.ScreenBPP,
+                     ud_setup.ScreenMode ? "fullscreen" : "windowed");
+-        ud_setup.ScreenMode = 0;
++        ud_setup.ScreenMode = 1;
+         ud_setup.ScreenWidth = 640;
+         ud_setup.ScreenHeight = 480;
+         ud_setup.ScreenBPP = 8;
