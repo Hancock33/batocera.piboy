@@ -1,5 +1,5 @@
 diff --git a/sway/ipc-server.c b/sway/ipc-server.c
-index 1bf5a05..be2dcc9 100644
+index 00b01d7d..8f60cfbf 100644
 --- a/sway/ipc-server.c
 +++ b/sway/ipc-server.c
 @@ -140,7 +140,7 @@ struct sockaddr_un *ipc_user_sockaddr(void) {
@@ -12,17 +12,18 @@ index 1bf5a05..be2dcc9 100644
  	}
  
 diff --git a/sway/main.c b/sway/main.c
-index b6f8a8b..84a0523 100644
+index 85bc2f1c..2cf38556 100644
 --- a/sway/main.c
 +++ b/sway/main.c
-@@ -152,6 +152,10 @@ static void log_kernel(void) {
+@@ -151,6 +151,11 @@ static void log_kernel(void) {
+ }
  
- 
- static bool drop_permissions(void) {
+ static bool detect_suid(void) {
 +	if (getuid() == 0 || getgid() == 0) {
 +		sway_log(SWAY_INFO, "Running sway as root user");
 +		return true;
 +	}
- 	if (getuid() != geteuid() || getgid() != getegid()) {
- 		sway_log(SWAY_ERROR, "!!! DEPRECATION WARNING: "
- 			"SUID privilege drop will be removed in a future release, please migrate to seatd-launch");
++
+ 	if (geteuid() != 0 && getegid() != 0) {
+ 		return false;
+ 	}
