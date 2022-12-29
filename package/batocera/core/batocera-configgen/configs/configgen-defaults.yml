@@ -979,6 +979,9 @@ zc210:
 zc250x:
   emulator: libretro
   core:     zc250x
+zmachine:
+  emulator: libretro
+  core:     mojozork
 zx81:
   emulator: libretro
   core:     '81'

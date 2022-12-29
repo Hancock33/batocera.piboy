@@ -6345,6 +6345,8 @@ libretro:
       shared: [rewind, autosave]
     uzem:
       shared: [rewind, autosave]
+    zmachine:
+      shared: [autosave]
 # Standalones
 amiberry:
   features: [padtokeyboard]
