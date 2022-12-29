@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./38ambushalley.daphne</path>
+    <name>.38 Ambush Alley</name>
+    <desc>.38 Ambush Alley is a game for the Action Max. As a VHS tape, the on-screen action is not interactive, rather, scores are tallied when the console's TV-mounted sensor detects "hits" and "friendly fire". The first three minutes of the video, as with all Action Max tapes, is a calibration routine, and instructional video. Gameplay begins at a police academy, with the player in the roll of an unnamed rookie. The officer in charge explains that the toughest test a trainee will face is at "a little place called Ambush Alley". Ambush Alley turns out to be a mock city, where trainees must shoot humanesque targets, and avoid shooting civilian targets. The trainees eventually progress to an area consisting of mannequins, rather than paper targets, with the police officer in charge instructing the player on where to shoot, pantomiming a real-life police combat situation. The tape ends with credits, and previews of other Action Max titles.</desc>
+    <rating>0.65</rating>
+    <releasedate>19870101T000000</releasedate>
+    <developer>Sourcing International</developer>
+    <publisher>Sourcing International Ltd.</publisher>
+    <genre>Lightgun Shooter</genre>
+    <players>1</players>
+    <image>./images/38ambushalley.png</image>
+    <genreid>261</genreid>
+  </game>
+  <game>
+    <path>./bluethunder.daphne</path>
+    <name>Blue Thunder</name>
+    <desc>"Blue Thunder" Get in your chopper and take out the bad guys in this action-packed game for Action Max.</desc>
+    <rating>0.5</rating>
+    <releasedate>19870101T000000</releasedate>
+    <developer>Sourcing International, Ltd.</developer>
+    <publisher>Worlds of Wonder Inc.</publisher>
+    <genre>Lightgun Shooter</genre>
+    <players>1</players>
+    <image>./images/bluethunder.png</image>
+    <genreid>261</genreid>
+  </game>
+  <game>
+    <path>./hydrosub2021.daphne</path>
+    <name>Hydrosub - 2021</name>
+    <desc>Defend the Sea Dragon hydrosub from enemy submarines and sea creatures.</desc>
+    <rating>0.7</rating>
+    <releasedate>19870501T000000</releasedate>
+    <developer>Sourcing International, Ltd.</developer>
+    <publisher>Worlds of Wonder</publisher>
+    <genre>Lightgun Shooter</genre>
+    <players>1</players>
+    <image>./images/hydrosub2021.png</image>
+    <genreid>261</genreid>
+  </game>
+  <game>
+    <path>./popsghostly.daphne</path>
+    <name>The Rescue of Pops Ghostly</name>
+    <desc>Help Pops Ghostly and his family get rid of the bad spirits who have taken over the house in this shooter for Action Max.</desc>
+    <rating>1</rating>
+    <releasedate>19870501T000000</releasedate>
+    <developer>Sourcing International</developer>
+    <publisher>Sourcing International Ltd.</publisher>
+    <genre>Lightgun Shooter</genre>
+    <players>1</players>
+    <image>./images/popsghostly.png</image>
+    <genreid>261</genreid>
+  </game>
+  <game>
+    <path>./sonicfury.daphne</path>
+    <name>Sonic Fury</name>
+    <desc>Gameplay begins with Squadron Leader, Maj. Lance Bedson giving the player a callsign "Ace" (nicknames, in game lingo), and informing the player that this is a training mission, to find out if Ace is good enough to join the titular Sonic Fury squadron. Squadmates "Chief" (which Major Lance specifically mentions is Native American) and "Trucker" accompany Ace on a training sortie, where a "combat drone" is the target. Suddenly, as the training mission closes, actual enemy aircraft close in. There is very little voice chatter after this point, and the remainder of the game is the player scoring hits over a wide variety of terrain. The video closes with a few wisecracks and the credit roll. After the credits, there is an interactive (i.e., hits are scored) preview for the other Action Max tapes.</desc>
+    <rating>0.7</rating>
+    <releasedate>19870501T000000</releasedate>
+    <developer>Sourcing International</developer>
+    <publisher>Sourcing International Ltd.</publisher>
+    <genre>Lightgun Shooter</genre>
+    <players>1</players>
+    <image>./images/sonicfury.png</image>
+    <genreid>261</genreid>
+  </game>
+</gameList>
