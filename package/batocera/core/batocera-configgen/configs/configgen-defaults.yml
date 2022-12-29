@@ -31,6 +31,11 @@ abuse:
 acclaim:
   emulator: libretro
   core:     mame
+actionmax:
+  emulator: daphne
+  core:     hypseus
+  options:
+    hud_support: false
 adam:
   emulator: libretro
   core:     mame

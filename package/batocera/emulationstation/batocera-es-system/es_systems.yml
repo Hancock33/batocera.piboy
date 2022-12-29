@@ -5836,3 +5836,20 @@ sameduck:
                         Use unzipped ROMs (BIN format) if using Sameduck.
   comment_br:           |
                         Use ROMs descompactadas (formato BIN) se estiver usando Sameduck.
+
+actionmax:
+  name:                 Action Max
+  manufacturer:         Worlds of Wonder
+  release:              1987
+  hardware:             console
+  extensions:           [daphne, squashfs]
+  platform:             daphne
+  emulators:
+    daphne:
+      hypseus:          { requireAnyOf: [BR2_PACKAGE_DAPHNE]          }
+  comment_en:           |
+                        For more info: https://wiki.batocera.org/systems:daphne
+  comment_fr:           |
+                        Trouvez la documentation ici: https://wiki.batocera.org/systems:daphne
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/systems:daphne
