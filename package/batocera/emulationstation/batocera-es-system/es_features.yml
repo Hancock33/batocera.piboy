@@ -1338,6 +1338,9 @@ libretro:
                     "Namco GunCon":                  260
                     "PlayStation Mouse":             258
                     "NeGcon":                        773
+    ep128emu:
+      features: [netplay, cheevos]
+      shared: [rewind, autosave]
     fbneo:
       features: [netplay, cheevos]
       shared: [rewind, autosave, use_guns]
