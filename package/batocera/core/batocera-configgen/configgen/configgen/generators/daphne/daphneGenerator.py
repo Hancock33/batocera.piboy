@@ -57,7 +57,7 @@ class DaphneGenerator(Generator):
             commandsFile = amDir + romName + ".commands"
             singeFile = amDir + romName + ".singe"
 
-        if (system.name == 'actionmax'):
+        if (system.name == 'actionmax') or (system.name == 'alg') :
             commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
                             "singe", "vldp", "-framefile", frameFile, "-script", singeFile, "-fullscreen",
                             "-gamepad", "-datadir", batoceraFiles.daphneDatadir, "-homedir", batoceraFiles.daphneDatadir]

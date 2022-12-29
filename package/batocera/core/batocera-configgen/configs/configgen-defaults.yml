@@ -46,8 +46,10 @@ alephone:
   emulator: alephone
   core:     alephone
 alg:
-  emulator: libretro
-  core:     mame
+  emulator: daphne
+  core:     hypseus
+  options:
+    hud_support: false
 alphadenshi:
   emulator: libretro
   core:     mame
