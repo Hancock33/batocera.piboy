@@ -13,7 +13,7 @@ config BR2_PACKAGE_BATOCERA_ES_PIBOY
 	select BR2_PACKAGE_LIBCURL
 	select BR2_PACKAGE_NANUM_FONT
 	select BR2_PACKAGE_FPING
-	select BR2_PACKAGE_BATOCERA_ES_PIBOY_FONTS
+	select BR2_PACKAGE_BATOCERA_EMULATIONSTATION_FONTS
 	select BR2_PACKAGE_VLC
 	select BR2_PACKAGE_OMXPLAYER if BR2_PACKAGE_RPI_USERLAND
 	select BR2_PACKAGE_RAPIDJSON
@@ -24,14 +24,8 @@ config BR2_PACKAGE_BATOCERA_ES_PIBOY
 	select BR2_PACKAGE_PULSEAUDIO_ENABLE_ATOMIC
 	select BR2_PACKAGE_PULSEAUDIO_UTILS
 	select BR2_PACKAGE_BATOCERA_ES_SYSTEM
-
-	# when kodi is not enable, es needs some videos players
-	# not sure about which packages exactly are required
-	select BR2_PACKAGE_X264               # decoder for video for vlc
-	select BR2_PACKAGE_X265               # decoder for video for vlc
-	select BR2_PACKAGE_GSTREAMER1         # decoder for video for vlc
-	select BR2_PACKAGE_GST1_PLUGINS_BASE  # decoder for video for vlc
-	select BR2_PACKAGE_FFMPEG_GPL
+    select BR2_PACKAGE_FFMPEG
+    select BR2_PACKAGE_FFMPEG_GPL
 	select BR2_PACKAGE_FFMPEG_FFPROBE
 	select BR2_PACKAGE_FFMPEG_AVRESAMPLE
 	select BR2_PACKAGE_FFMPEG_SWSCALE
@@ -40,7 +34,7 @@ config BR2_PACKAGE_BATOCERA_ES_PIBOY
         help
           A multi emulator frontend.
 
-	  https://github.com/Aloshi/EmulationStation
+	  https://github.com/batocera-linux/batocera-emulationstation
 
 if BR2_PACKAGE_BATOCERA_ES_PIBOY
 choice
