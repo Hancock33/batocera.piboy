@@ -1657,7 +1657,7 @@ ep128emu:
   extensions:           [128, bas, cas, cdt, com, dsk, dtf, img, tap, trn, tvcwav, tzx, wav, zip, 7z]
   emulators:
     libretro:
-      ep128emu:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EP128EMU] }
+      ep128emu:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EP128EMU] }
 
 advision:
   name:                 Adventure Vision
@@ -1964,6 +1964,17 @@ wasm4:
   emulators:
     libretro:
       wasm4:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_WASM4] }
+
+zmachine:
+  name:                 Z-Machine
+  manufacturer:         Homebrew Systems
+  release:              1979
+  hardware:             computer
+  extensions:           [dat, z1, z3, zip]
+  theme:                zmachine
+  emulators:
+    libretro:
+      mojozork:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MOJOZORK] }
 
 vc4000:
   name:                 VC 4000
