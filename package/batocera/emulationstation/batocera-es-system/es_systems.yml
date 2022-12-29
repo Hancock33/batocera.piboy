@@ -226,19 +226,13 @@ acclaim:
 alg:
   name:                 American Laser Games
   manufacturer:         Arcade
-  release:              19XX
+  release:              198X
   hardware:             arcade
-  extensions:           [zip, 7z]
-  platform:             arcade
-  path:                 /userdata/roms/arcade/alg
+  extensions:           [daphne, squashfs]
+  platform:             daphne, arcade
   emulators:
-    libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
-      mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
-      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame:
-      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
+    daphne:
+      hypseus:          { requireAnyOf: [BR2_PACKAGE_DAPHNE]          }
 
 alphadenshi:
   name:                 Alpha Denshi
