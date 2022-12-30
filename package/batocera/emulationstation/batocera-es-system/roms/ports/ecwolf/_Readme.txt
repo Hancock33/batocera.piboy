@@ -1,4 +1,4 @@
-Please note unlike the batocera master the directory name must NOT end with. ecwolf but a dummy file ending with .ecwolf should be placed in the directory.
+Please note unlike the batocera master the directory name must NOT end with .ecwolf but a dummy file ending with .ecwolf should be placed in the directory.
 For example ...
 
 /userdata/roms/ecwolf/Spear of Destiny/
