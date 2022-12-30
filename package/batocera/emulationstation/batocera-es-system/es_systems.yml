@@ -3391,13 +3391,13 @@ ecwolf:
   manufacturer:         Ports
   release:              2013
   hardware:             port
-  extensions:           [ecwolf, pk3, zip, 7z, exe, squashfs]
+  extensions:           [ecwolf, pk3]
   platform:             pc
   group:                ports
   path:                 /userdata/roms/ports/ecwolf
   emulators:
     libretro:
-      ecwolf:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ECWOLF], incompatible_extensions: [ecwolf] }
+      ecwolf:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ECWOLF] }
     ecwolf:
       ecwolf:           { requireAnyOf: [BR2_PACKAGE_ECWOLF] }
 

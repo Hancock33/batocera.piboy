@@ -16,8 +16,6 @@ ecwolfConfigDest = batoceraFiles.CONF + "/ecwolf/ecwolf.cfg"
 ecwolfSaves = batoceraFiles.SAVES + "/ecwolf"
 
 class ECWolfGenerator(Generator):
-    if os.path.isfile('/tmp/piboy'):
-        os.system('piboy_keys ecwolf.keys')
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         # Create config folders
@@ -54,17 +52,21 @@ class ECWolfGenerator(Generator):
         if not path.isdir(ecwolfSaves):
             os.mkdir(ecwolfSaves)
 
+        # Inital command
+        commandArray = ["ecwolf", "--savedir '/userdata/saves/ecwolf'"]
+
         try:
-            os.chdir(os.path.dirname(rom))
+            if rom.endswith(".pk3"):
+                commandArray.extend(["--file", os.path.basename(rom)])
+                os.chdir(os.path.dirname(rom)) 
+            else:
+                os.chdir(os.path.dirname(rom))
         # Only game directories, not .zip
         except Exception as e:
             print("Error: couldn't go into directory {} ({})".format(rom, e))
-        if os.path.isfile('/tmp/piboy'):
-        	commandArray = ["ecwolf", "--savedir '/userdata/saves/ecwolf'"]
-        else:
-        	commandArray = ["ecwolf", "--joystick", "--savedir '/userdata/saves/ecwolf'"]
 
-        if os.path.isfile('/tmp/piboy'):
+        if os.path.isfile('/tmp/piboy') and not os.path.isfile('/tmp/piboy_xrs'):
+            os.system('piboy_keys ecwolf.keys')
             return Command.Command(
                 array=commandArray,
                 env={
