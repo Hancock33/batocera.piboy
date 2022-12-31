@@ -13,11 +13,20 @@ DEVILUTIONX_SUPPORTS_IN_SOURCE_BUILD = NO
 # Prefill the player name when creating a new character, in case the device does
 # not have a keyboard.
 DEVILUTIONX_CONF_OPTS += -DBUILD_TESTING=OFF -DPREFILL_PLAYER_NAME=ON \
-                         -DNONET=ON -DCMAKE_BUILD_TYPE=Release
+                         -DCMAKE_BUILD_TYPE=Release
 
 # Ensure that DevilutionX's vendored dependencies are not accidentally fetched from network.
 # They should all be present in the source package.
 DEVILUTIONX_CONF_OPTS += -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+
+# ZeroTier on aarch64 uses ARMv8 Cryptography Extensions.
+# These extension are optional and only certain Armv8-A CPUs support them.
+# Disables ZeroTier if the CPU compilation flags do not specify the "+crypto" extension.
+ifeq ($(BR2_aarch64)$(BR2_ARM_CPU_ARMV8A),yy)
+ifneq ($(findstring +crypto,$(BR2_TARGET_OPTIMIZATION)),+crypto)
+DEVILUTIONX_CONF_OPTS += -DDISABLE_ZERO_TIER=ON
+endif
+endif
 
 define DEVILUTIONX_FIX_SDL2MAIN
 	sed -i -e s+"SDL2::SDL2main"+"-lSDL2main"+ $(@D)/CMakeLists.txt
