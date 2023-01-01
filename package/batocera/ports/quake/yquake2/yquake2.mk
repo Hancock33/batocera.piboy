@@ -3,8 +3,8 @@
 # yquake2
 #
 ################################################################################
-# Version: Commits on Dec 09, 2022
-YQUAKE2_VERSION = 7f05cefbcfaa9cc4b4d4cbc7ae124264310115f5
+# Version: Commits on Jan 01, 2023
+YQUAKE2_VERSION = ce2410079ef3bc6eb4dc0cbccea2eb3505301afb
 YQUAKE2_SITE = $(call github,yquake2,yquake2,$(YQUAKE2_VERSION))
 
 YQUAKE2_DEPENDENCIES = sdl2 sdl2_mixer

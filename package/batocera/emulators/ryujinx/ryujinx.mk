@@ -3,8 +3,8 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Dec 29, 2022
-RYUJINX_VERSION = 1.1.500
+# Version: Commits on Jan 01, 2023
+RYUJINX_VERSION = 1.1.501
 RYUJINX_SOURCE = ryujinx-$(RYUJINX_VERSION)-linux_x64.tar.gz
 RYUJINX_SITE = https://github.com/Ryujinx/release-channel-master/releases/download/$(RYUJINX_VERSION)
 RYUJINX_LICENSE = MIT
