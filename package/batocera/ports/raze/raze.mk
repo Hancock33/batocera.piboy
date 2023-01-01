@@ -3,15 +3,11 @@
 # raze
 #
 ################################################################################
-# Version: Commits on Dec 20, 2022
-RAZE_VERSION = c7e25726c1e8a9cebeae9085d0573e905e5e97c2
+# Version: Commits on Dec 17, 2022
+RAZE_VERSION = 1.6.1
 RAZE_SITE = $(call github,ZDoom,Raze,$(RAZE_VERSION))
 RAZE_LICENSE = GPLv2
 RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic gzdoom
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
-    RAZE_VERSION = 1.5
-endif
 
 RAZE_SUPPORTS_IN_SOURCE_BUILD = NO
 RAZE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
