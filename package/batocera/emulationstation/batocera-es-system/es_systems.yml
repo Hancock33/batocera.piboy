@@ -4187,6 +4187,7 @@ doom3:
   hardware:             port
   extensions:           [base, d3xp, demo]
   platform:             pc
+  theme:                doom3
   group:                doom
   path:                 /userdata/roms/ports/doom3
   emulators:
