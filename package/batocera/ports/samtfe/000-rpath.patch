@@ -1,8 +1,8 @@
 diff --git a/SamTFE/Sources/CMakeLists.txt b/SamTFE/Sources/CMakeLists.txt
-index 77ebf2f..b0ea53d 100644
+index 3adf412..48d9179 100644
 --- a/SamTFE/Sources/CMakeLists.txt
 +++ b/SamTFE/Sources/CMakeLists.txt
-@@ -1033,7 +1033,7 @@ if(FREEBSD)
+@@ -1035,7 +1035,7 @@ if(FREEBSD)
  set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-rpath,$ORIGIN")
  else()
  target_link_libraries(${ENGINELIB} vulkan)
@@ -11,7 +11,7 @@ index 77ebf2f..b0ea53d 100644
  endif()
  
  add_executable(SeriousSam
-@@ -1128,14 +1128,14 @@ if(MACOSX)
+@@ -1130,14 +1130,14 @@ if(MACOSX)
  endif()
  
  if(LINUX)
@@ -28,7 +28,7 @@ index 77ebf2f..b0ea53d 100644
          target_link_libraries(DedicatedServer "m")
          target_link_libraries(DedicatedServer "dl")
          target_link_libraries(DedicatedServer "pthread")
-@@ -1143,7 +1143,7 @@ if(LINUX)
+@@ -1145,7 +1145,7 @@ if(LINUX)
          target_link_libraries(DedicatedServer ${ZLIB_LIBRARIES})
      endif()
      if(BUILD_MAKEFONT)
@@ -38,10 +38,10 @@ index 77ebf2f..b0ea53d 100644
          target_link_libraries(MakeFONT "dl")
          target_link_libraries(MakeFONT "pthread")
 diff --git a/SamTSE/Sources/CMakeLists.txt b/SamTSE/Sources/CMakeLists.txt
-index 77ebf2f..b0ea53d 100644
+index 3adf412..48d9179 100644
 --- a/SamTSE/Sources/CMakeLists.txt
 +++ b/SamTSE/Sources/CMakeLists.txt
-@@ -1033,7 +1033,7 @@ if(FREEBSD)
+@@ -1035,7 +1035,7 @@ if(FREEBSD)
  set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-rpath,$ORIGIN")
  else()
  target_link_libraries(${ENGINELIB} vulkan)
@@ -50,7 +50,7 @@ index 77ebf2f..b0ea53d 100644
  endif()
  
  add_executable(SeriousSam
-@@ -1128,14 +1128,14 @@ if(MACOSX)
+@@ -1130,14 +1130,14 @@ if(MACOSX)
  endif()
  
  if(LINUX)
@@ -67,7 +67,7 @@ index 77ebf2f..b0ea53d 100644
          target_link_libraries(DedicatedServer "m")
          target_link_libraries(DedicatedServer "dl")
          target_link_libraries(DedicatedServer "pthread")
-@@ -1143,7 +1143,7 @@ if(LINUX)
+@@ -1145,7 +1145,7 @@ if(LINUX)
          target_link_libraries(DedicatedServer ${ZLIB_LIBRARIES})
      endif()
      if(BUILD_MAKEFONT)
