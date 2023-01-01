@@ -10438,10 +10438,8 @@ lzdoom:
       prompt:      GAME RENDERING
       description: Select rendering mode.
       choices:
-        "Vulkan":             vulkan
-        "Softpoly":           soft
-        "GLES2 (Default)":    gles2
-        "OpenGL (x86 only)":  gl
+        "Software (default)": soft
+        "OpenGL":             gl
 hode:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

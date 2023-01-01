@@ -15,39 +15,20 @@ class LzdoomGenerator(Generator):
         extra_config = ''
 
         if system.isOptSet('lzdoom_render'):
+            if system.config['lzdoom_render'] == 'soft':
+                extra_config += (
+                    # Use the Software render:
+                    'vid_rendermode 0\n'
+                )
             if system.config['lzdoom_render'] == 'gl':
                 extra_config += (
                     # Use the OpenGL render:
-                    'vid_rendermode 4\n'
-                    'vid_preferbackend 0\n'
-                )
-            if system.config['lzdoom_render'] == 'vulkan':
-                extra_config += (
-                    # Use the Vulkan render:
-                    'vid_rendermode 4\n'
-                    'vid_preferbackend 1\n'
-                )
-            if system.config['lzdoom_render'] == 'soft':
-                extra_config += (
-                    # Use the Softpoly render:
-                    'vid_rendermode 4\n'
-                    'vid_preferbackend 2\n'
-                )
-            if system.config['lzdoom_render'] == 'gles2':
-                extra_config += (
-                    # Use the GLES render:
-                    'vid_rendermode 4\n'
-                    'vid_preferbackend 3\n'
-                    # This setting greatly improves performance:
-                    'gles_use_mapped_buffer true\n'
+                    'vid_rendermode 1\n'
                 )
         else:
             extra_config += (
-                # Use the GLES render:
-                'vid_rendermode 4\n'
-                'vid_preferbackend 3\n'
-                # This setting greatly improves performance:
-                'gles_use_mapped_buffer true\n'
+                # Use the Software render:
+                'vid_rendermode 0\n'
                 )
 
         iwad = ''
