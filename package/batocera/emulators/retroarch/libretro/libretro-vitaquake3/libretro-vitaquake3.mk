@@ -20,12 +20,14 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2837),y)
 LIBRETRO_VITAQUAKE3_PLATFORM=rpi3_64
 endif
 
+
 define LIBRETRO_VITAQUAKE3_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D) -f Makefile platform="$(LIBRETRO_VITAQUAKE3_PLATFORM)"
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D) -f Makefile platform="$(LIBRETRO_VITAQUAKE3_PLATFORM)" \
+        GIT_VERSION="-$(shell echo $(LIBRETRO_VITAQUAKE3_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_VITAQUAKE3_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/VITAQUAKE3_libretro.so $(TARGET_DIR)/usr/lib/libretro/VITAQUAKE3_libretro.so
+	$(INSTALL) -D $(@D)/vitaquake3_libretro.so $(TARGET_DIR)/usr/lib/libretro/vitaquake3_libretro.so
 endef
 
 $(eval $(generic-package))

@@ -290,6 +290,16 @@ class LibretroGenerator(Generator):
         if system.name == 'scummvm':
             rom = os.path.dirname(rom) + '/' + romName[0:-8]
 
+        if system.name == 'doom3' and system.config['core'] == "boom3":
+            rom = '/userdata/roms/ports/doom3/base/pak000.pk4'
+
+        if system.name == 'doom3' and system.config['core'] == "boom3_xp":
+            rom = '/userdata/roms/ports/doom3/d3xp/pak000.pk4'
+
+        if system.name == 'quake3' and system.config['core'] == "vitaquake3":
+            rom = '/userdata/roms/ports/quake3/baseq3/pak0.pk3'
+
+
         # Use command line instead of ROM file for MAME variants
         if system.config['core'] in [ 'mame', 'mess', 'mamevirtual', 'same_cdi' ]:
             dontAppendROM = True

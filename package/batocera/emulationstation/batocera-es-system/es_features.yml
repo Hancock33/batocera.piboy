@@ -6347,6 +6347,36 @@ libretro:
       shared: [rewind, autosave]
     zmachine:
       shared: [autosave]
+    boom3:
+      shared: [autosave]
+      features: [padtokeyboard]
+      cfeatures:
+            boom3_invertctl:
+                prompt:      INVERT CONTROLS
+                description: Invert the gamepad right analog stick's Y axis.
+                choices:
+                    "Off":  disabled
+                    "On" :  enabled
+    boom3_xp:
+      shared: [autosave]
+      features: [padtokeyboard]
+      cfeatures:
+            boom3_invertctl:
+                prompt:      INVERT CONTROLS
+                description: Invert the gamepad right analog stick's Y axis.
+                choices:
+                    "Off":  disabled
+                    "On" :  enabled
+    vitaquake3:
+      shared: [autosave]
+      features: [padtokeyboard]
+      cfeatures:
+            vitaquake3_invertctl:
+                prompt:      INVERT CONTROLS
+                description: Invert the gamepad right analog stick's Y axis.
+                choices:
+                    "Off":  disabled
+                    "On" :  enabled
 # Standalones
 amiberry:
   features: [padtokeyboard]
