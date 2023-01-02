@@ -2809,7 +2809,26 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         else:
             coreSettings.save('mrboom-nomonster', '"OFF"')
 
+    if (system.config['core'] == 'boom3'):
+        # Invert Controls
+        if system.isOptSet('boom3_invertctl'):
+            coreSettings.save('doom_invert_y_axis', system.config['boom3_invertctl'])
+        else:
+            coreSettings.save('doom_invert_y_axis', '"disabled"')
 
+    if (system.config['core'] == 'boom3_xp'):
+        # Invert Controls
+        if system.isOptSet('boom3_invertctl'):
+            coreSettings.save('doom_invert_y_axis', system.config['boom3_invertctl'])
+        else:
+            coreSettings.save('doom_invert_y_axis', '"disabled"')
+
+    if (system.config['core'] == 'vitaquake3'):
+        # Invert Controls
+        if system.isOptSet('vitaquake3_invertctl'):
+            coreSettings.save('vitaquakeiii_invert_y_axis', system.config['vitaquake3_invertctl'])
+        else:
+            coreSettings.save('vitaquakeiii_invert_y_axis', '"disabled"')
 
     # Custom : Allow the user to configure directly retroarchcore.cfg via batocera.conf via lines like : snes.retroarchcore.opt=val
     for user_config in system.config:

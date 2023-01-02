@@ -1,13 +1,11 @@
 diff --git a/src/platform/sdl2/main.cpp b/src/platform/sdl2/main.cpp
-index ce56353..24691e1 100644
+index ce56353..c64d5a7 100644
 --- a/src/platform/sdl2/main.cpp
 +++ b/src/platform/sdl2/main.cpp
-@@ -551,11 +551,14 @@ int main(int argc, char **argv) {
+@@ -551,11 +551,12 @@ int main(int argc, char **argv) {
  
      SDL_ShowCursor(SDL_DISABLE);
  
-+    strcpy(contentDir,  "/userdata/roms/ports/openlara/");
-+
 +    strcpy(contentDir,  "/userdata/roms/ports/openlara/");
 +
      const char *home;

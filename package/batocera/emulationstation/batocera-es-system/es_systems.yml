@@ -3719,6 +3719,8 @@ openlara:
   emulators:
     openlara:
       openlara:         { requireAnyOf: [BR2_PACKAGE_OPENLARA] }
+    libretro:
+      openlara:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_OPENLARA] }
 
 opentyrian:
   name:                 Tyrian
@@ -4193,6 +4195,9 @@ doom3:
   emulators:
     doom3:
       doom3:            { requireAnyOf: [BR2_PACKAGE_DOOM3] }
+    libretro:
+      boom3:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BOOM3] }
+      boom3_xp:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BOOM3] }
 
 prboom:
   name:                 Doom 1 & 2
@@ -4336,6 +4341,8 @@ quake3:
   emulators:
     quake3:
       quake3:           { requireAnyOf: [BR2_PACKAGE_QUAKE3] }
+    libretro:
+      vitaquake3:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VITAQUAKE3] }
 
 tyrquake:
   name:                 Quake I
