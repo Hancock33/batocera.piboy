@@ -10,7 +10,7 @@ BATOCERA_ES_PIBOY_SITE_METHOD = git
 BATOCERA_ES_PIBOY_LICENSE = MIT
 BATOCERA_ES_PIBOY_GIT_SUBMODULES = YES
 BATOCERA_ES_PIBOY_LICENSE = MIT, Apache-2.0
-BATOCERA_ES_PIBOY_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib libcurl vlc rapidjson pulseaudio-utils batocera-es-system host-gettext espeak
+BATOCERA_ES_PIBOY_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib libcurl vlc rapidjson pulseaudio batocera-es-system host-gettext espeak
 
 BATOCERA_ES_PIBOY_CONF_OPTS += -DCMAKE_CXX_FLAGS=-D$(call UPPERCASE,$(BATOCERA_SYSTEM_ARCH))
 
