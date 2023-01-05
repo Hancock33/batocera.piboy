@@ -1,5 +1,5 @@
 diff --git a/libretro/libretro-core.h b/libretro/libretro-core.h
-index 9b9f5c2..ecb6507 100644
+index b613b73..7281032 100644
 --- a/libretro/libretro-core.h
 +++ b/libretro/libretro-core.h
 @@ -3,6 +3,7 @@
@@ -11,7 +11,7 @@ index 9b9f5c2..ecb6507 100644
  #include <stdlib.h>
  #include <stdio.h>
 diff --git a/sources/src/audio.c b/sources/src/audio.c
-index 86ca183..e366e9d 100644
+index a312e4c..c82c2f7 100644
 --- a/sources/src/audio.c
 +++ b/sources/src/audio.c
 @@ -43,6 +43,7 @@

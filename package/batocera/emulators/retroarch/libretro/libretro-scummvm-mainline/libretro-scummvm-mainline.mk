@@ -3,9 +3,10 @@
 # libretro-scummvm-mainline
 #
 ################################################################################
+# Version: Commits on Jan 05, 2023
+LIBRETRO_SCUMMVM_MAINLINE_VERSION = 5ce8142a0339ff7eda78f515b6d12d72a1732a31
+LIBRETRO_SCUMMVM_MAINLINE_SITE = https://github.com/libretro/scummvm.git
 
-LIBRETRO_SCUMMVM_MAINLINE_VERSION = b65c80b7ec3063733466a6e70edd178832e1667e
-LIBRETRO_SCUMMVM_MAINLINE_SITE = https://github.com/spleen1981/scummvm-mainline-libretro.git
 LIBRETRO_SCUMMVM_MAINLINE_SITE_METHOD=git
 LIBRETRO_SCUMMVM_MAINLINE_GIT_SUBMODULES=YES
 LIBRETRO_SCUMMVM_MAINLINE_SUPPORTS_IN_SOURCE_BUILD = NO
@@ -45,8 +46,7 @@ define LIBRETRO_SCUMMVM_MAINLINE_BUILD_CMDS
 endef
 
 define LIBRETRO_SCUMMVM_MAINLINE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/scummvm_mainline_libretro.so $(TARGET_DIR)/usr/lib/libretro/scummvm_libretro.so
-	cp $(@D)/scummvm_mainline_libretro.info          $(TARGET_DIR)/usr/share/libretro/info/scummvm_libretro.info
+	$(INSTALL) -D $(@D)/scummvm_libretro.so $(TARGET_DIR)/usr/lib/libretro/scummvm_libretro.so
 endef
 
 $(eval $(generic-package))
