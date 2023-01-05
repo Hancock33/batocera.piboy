@@ -44,6 +44,8 @@
 	- RPi4 will also use XWayaland - v22.1.7
 		- Removed 'redream' emulator which fails under wayland
 - Light gun support for GUN4IR (was partial in v35)
+- RG552 updated to kernel 6.1 (Thanks Maccraft123 and brooksytech)
+- RG552 adding mesa3d and wayland support
 ### Updated
 - pcsx2 to v1.7.3292
 - alsa to 1.2.8
@@ -134,6 +136,7 @@
 - mesa3d update to 22.3.2
 - uinput-joystick update to Feb 11, 2022
 - firmware-orangepi update to Nov 24, 2022
+- The build of RG552 has been added to RK3399
 
 # 2022/09/20 - batocera.linux 35 - Monarch Butterfly
 * add: gun support in emulationstation
