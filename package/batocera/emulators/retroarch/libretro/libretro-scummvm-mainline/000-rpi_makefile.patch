@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 02cc610..8ad0bab 100644
+index 25d141e..b599725 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -34,8 +34,38 @@ MKDIR     = mkdir -p
@@ -10,8 +10,8 @@ index 02cc610..8ad0bab 100644
 +ifeq ($(platform), rpi1)
 +   TARGET = $(TARGET_NAME)_libretro.so
 +   DEFINES += -fPIC
-+   LDFLAGS += -shared -Wl,--version-script=../link.T -fPIC
 +   CFLAGS += -fPIC
++   LDFLAGS += -shared -Wl,--version-script=../link.T -fPIC
 +   CFLAGS += -marm -mcpu=arm1176jzf-s -mfpu=vfp -mfloat-abi=hard
 +   CFLAGS += -fomit-frame-pointer -ffast-math
 +   CXXFLAGS = $(CFLAGS) -frtti
@@ -20,8 +20,8 @@ index 02cc610..8ad0bab 100644
 +else ifeq ($(platform), rpi2)
 +   TARGET = $(TARGET_NAME)_libretro.so
 +   DEFINES += -fPIC
-+   LDFLAGS += -shared -Wl,--version-script=../link.T -fPIC
 +   CFLAGS += -fPIC
++   LDFLAGS += -shared -Wl,--version-script=../link.T -fPIC
 +   CFLAGS += -marm -mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard
 +   CFLAGS += -fomit-frame-pointer -ffast-math
 +   CXXFLAGS = $(CFLAGS) -frtti
@@ -30,8 +30,8 @@ index 02cc610..8ad0bab 100644
 +else ifeq ($(platform), rpi3)
 +   TARGET = $(TARGET_NAME)_libretro.so
 +   DEFINES += -fPIC
-+   LDFLAGS += -shared -Wl,--version-script=../link.T -fPIC
 +   CFLAGS += -fPIC
++   LDFLAGS += -shared -Wl,--version-script=../link.T -fPIC
 +   CFLAGS += -marm -mtune=cortex-a53 -mfpu=neon-fp-armv8 -mfloat-abi=hard
 +   CFLAGS += -fomit-frame-pointer -ffast-math
 +   CXXFLAGS = $(CFLAGS) -frtti
