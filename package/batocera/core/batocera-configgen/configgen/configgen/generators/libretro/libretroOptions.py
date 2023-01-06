@@ -958,7 +958,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             if system.isOptSet('wii_language'):
                 coreSettings.save('dolphin_language', system.config['wii_language'])
             else:
-                coreSettings.save('dolphin_language', '"French"')
+                coreSettings.save('dolphin_language', '"English"')
         # Wii Resolution Scale
             if system.isOptSet('wii_resolution'):
                 coreSettings.save('dolphin_efb_scale', system.config['wii_resolution'])
