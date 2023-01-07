@@ -3,8 +3,8 @@
 # shaderc
 #
 ################################################################################
-# Version: Commits on Dec 01, 2022
-SHADERC_VERSION = v2022.4
+# Version: Commits on Jan 04, 2023
+SHADERC_VERSION = b810acf2c3d989e3fb27521f4f8cf13940160e23
 SHADERC_SITE = $(call github,google,shaderc,$(SHADERC_VERSION))
 SHADERC_DEPENDENCIES = spirv-tools
 SHADERC_INSTALL_STAGING = YES
