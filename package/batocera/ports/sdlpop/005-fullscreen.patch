@@ -12,7 +12,7 @@ index cbb8c29..6621bf4 100644
  ; Width and height of the game window.
  ; By default, the window is 640 pixels wide and 400 pixels tall.
 diff --git a/src/options.c b/src/options.c
-index 1acbcb3..d90f2ee 100644
+index 2efbb7e..b13f715 100644
 --- a/src/options.c
 +++ b/src/options.c
 @@ -469,7 +469,7 @@ void set_options_to_default() {
