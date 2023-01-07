@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./avp.game</path>
+    <name>Aliens vs Predator Classic</name>
+    <desc>The storylines of the three player characters are independent of one another. As an Alien the player must defend the Alien hive from human marines, then stow away on an evacuating spacecraft and reach the marines ship, the Ferarco. When the Ferarcos self-destruct system is activated, the player must reach the escape shuttle, which takes them to Gateway Station from Aliens (1986). Here the player explores the station and battles more marines, reaching a ship departing for Earth. Before boarding the ship the player battles two Predators, after which the Alien enters the Earth-bound shuttle.</desc>
+    <rating>0.85</rating>
+    <releasedate>20000414T000000</releasedate>
+    <developer>Rebellion Developments</developer>
+    <publisher>Fox Interactive</publisher>
+    <genre>Shooter-Shooter / 1st person</genre>
+    <players>1-4</players>
+    <image>./images/avp.png</image>
+    <favorite>true</favorite>
+    <genreid>259</genreid>
+  </game>
+</gameList>

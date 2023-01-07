@@ -1,0 +1,24 @@
+diff --git a/src/files.c b/src/files.c
+index 620543d..b886988 100644
+--- a/src/files.c
++++ b/src/files.c
+@@ -622,8 +622,8 @@ void InitGameDirectories(char *argv0)
+     
+ 	localdir = (char *)malloc(strlen(homedir)+10);
+ 	strcpy(localdir, homedir);
+-	strcat(localdir, "/");
+-	strcat(localdir, ".avp");
++	strcat(localdir, "/configs/");
++	strcat(localdir, "avp");
+ 
+ 	tmp = NULL;
+ 	
+@@ -709,7 +709,7 @@ void InitGameDirectories(char *argv0)
+ #endif
+ 
+ #if !defined __APPLE__ && !defined __WIN32
+-	gamedir = "/usr/local/games/AliensVsPredator/";
++	gamedir = "/userdata/roms/ports/avp/";
+ #endif
+ 
+ 	assert(gamedir != NULL);
