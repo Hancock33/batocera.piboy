@@ -19,6 +19,7 @@ STK_CONF_OPTS += -DCHECK_ASSETS=OFF
 STK_CONF_OPTS += -DUSE_WIIUSE=OFF
 STK_CONF_OPTS += -DCMAKE_CXX_FLAGS="-DEGL_NO_X11"
 STK_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+STK_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=-Wl,--unresolved-symbols=ignore-all
 
 define STK_ROMS_DIR
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/stk
