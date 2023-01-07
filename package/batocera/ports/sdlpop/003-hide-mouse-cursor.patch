@@ -1,8 +1,8 @@
 diff --git a/src/menu.c b/src/menu.c
-index 77c412f..5b149ba 100644
+index b57f3ba..dea4cd8 100644
 --- a/src/menu.c
 +++ b/src/menu.c
-@@ -2031,15 +2031,15 @@ void process_additional_menu_input() {
+@@ -2033,15 +2033,15 @@ void process_additional_menu_input() {
  	have_mouse_input = (mouse_moved || mouse_clicked || mouse_button_clicked_right || menu_control_scroll_y);
  
  	dword flags = SDL_GetWindowFlags(window_);
@@ -26,7 +26,7 @@ index 77c412f..5b149ba 100644
  }
  
  bool joy_ABXY_buttons_released;
-@@ -2315,11 +2315,11 @@ void menu_was_closed(void) {
+@@ -2317,11 +2317,11 @@ void menu_was_closed(void) {
  	}
  	// In fullscreen mode, hide the mouse cursor (because it is only needed in the menu).
  	dword flags = SDL_GetWindowFlags(window_);
@@ -43,10 +43,10 @@ index 77c412f..5b149ba 100644
  
  
 diff --git a/src/seg009.c b/src/seg009.c
-index 7a7b9db..b2dbd88 100644
+index e668cbe..b830d66 100644
 --- a/src/seg009.c
 +++ b/src/seg009.c
-@@ -2567,9 +2567,9 @@ void set_gr_mode(byte grmode) {
+@@ -2569,9 +2569,9 @@ void set_gr_mode(byte grmode) {
  	}
  	init_overlay();
  	init_scaling();
