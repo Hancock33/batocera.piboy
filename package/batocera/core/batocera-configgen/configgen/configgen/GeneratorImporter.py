@@ -19,6 +19,10 @@ def getGenerator(emulator):
         from generators.alephone.alephoneGenerator import AlephoneGenerator
         return AlephoneGenerator()
 
+    if emulator == 'avp':
+        from generators.avp.avpGenerator import AvpGenerator
+        return AvpGenerator()
+
     if emulator == 'awgl':
         from generators.awgl.awglGenerator import AwglGenerator
         return AwglGenerator()

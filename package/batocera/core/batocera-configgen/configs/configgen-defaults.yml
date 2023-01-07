@@ -122,6 +122,9 @@ atom:
 atomiswave:
   emulator: libretro
   core:     flycast
+avp:
+  emulator: avp
+  core:     avp
 awgl:
   emulator: awgl
   core:     awgl

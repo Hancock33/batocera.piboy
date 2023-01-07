@@ -1,0 +1,5 @@
+## SYSTEM ALIENS VS PREDATOR CLASSIC ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".game"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".game"

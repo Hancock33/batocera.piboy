@@ -3174,6 +3174,19 @@ alephone:
     alephone:
       alephone:         { requireAnyOf: [BR2_PACKAGE_ALEPHONE] }
 
+avp:
+  name:                 Aliens vs Predator Classic
+  manufacturer:         Ports
+  release:              2000
+  hardware:             port
+  extensions:           [game]
+  platform:             pc
+  group:                ports
+  path:                 /userdata/roms/ports/avp
+  emulators:
+    avp:
+      avp:             { requireAnyOf: [BR2_PACKAGE_AVP] }
+
 awgl:
   name:                 Another World
   manufacturer:         Ports
