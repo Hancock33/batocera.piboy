@@ -21,23 +21,14 @@ STK_CONF_OPTS += -DCMAKE_CXX_FLAGS="-DEGL_NO_X11"
 STK_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 STK_CONF_OPTS += -DBUILD_RECORDER=0
 
-define STK_ROMS_DIR
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/stk
-	mkdir -p $(TARGET_DIR)/usr/share/supertuxkart/data
-	ln -sf /userdata/roms/ports/stk/karts $(TARGET_DIR)/usr/share/supertuxkart/data
-	ln -sf /userdata/roms/ports/stk/library $(TARGET_DIR)/usr/share/supertuxkart/data
-	ln -sf /userdata/roms/ports/stk/models $(TARGET_DIR)/usr/share/supertuxkart/data
-	ln -sf /userdata/roms/ports/stk/music $(TARGET_DIR)/usr/share/supertuxkart/data
-	ln -sf /userdata/roms/ports/stk/sfx $(TARGET_DIR)/usr/share/supertuxkart/data
-	ln -sf /userdata/roms/ports/stk/textures $(TARGET_DIR)/usr/share/supertuxkart/data
-	ln -sf /userdata/roms/ports/stk/tracks $(TARGET_DIR)/usr/share/supertuxkart/data
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/supertuxkart/config-0.10
-	cp  -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stk/*.xml $(TARGET_DIR)/usr/share/batocera/datainit/system/.config/supertuxkart/config-0.10
+define STK_INSTALL_TARGET_CMDS
+	$(INSTALL) -m 0755 $(@D)/buildroot-build/bin/supertuxkart -D $(TARGET_DIR)/usr/bin/supertuxkart
+	# config
+    mkdir -p $(TARGET_DIR)/usr/share/game_assets/supertuxkart
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stk/players.xml $(TARGET_DIR)/usr/share/game_assets/supertuxkart
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stk/stk.keys $(TARGET_DIR)/usr/share/evmapy
 endef
-
-STK_POST_INSTALL_TARGET_HOOKS += STK_ROMS_DIR
 
 $(eval $(cmake-package))

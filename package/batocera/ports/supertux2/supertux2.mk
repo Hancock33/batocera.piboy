@@ -3,8 +3,8 @@
 # supertux2
 #
 ################################################################################
-# Version: Commits on Dec 18, 2022
-SUPERTUX2_VERSION = 0eca10bfe158a678b236caa59ee39f879547d38e
+# Version: Commits on Jan 06, 2023
+SUPERTUX2_VERSION = cfeab6f92da7e910ea01a6d47ec19b0f50ccbb3d
 SUPERTUX2_SITE = https://github.com/SuperTux/supertux.git
 SUPERTUX2_SITE_METHOD=git
 SUPERTUX2_GIT_SUBMODULES=YES
@@ -41,18 +41,18 @@ endef
 SUPERTUX2_POST_PATCH_HOOKS += SUPERTUX2_REMOVE_PEDANTIC
 endif
 
-define SUPERTUX2_EVMAP
+define SUPERTUX2_INSTALL_TARGET_CMDS
 	# install media
     mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2
 	touch $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2/SuperTux2.game
 	cp -a $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/supertux2/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2
+	ln -sf /userdata/roms/ports/supertux2 $(TARGET_DIR)/usr/share/supertux2
 	# copy libraries
 	cp -a $(@D)/buildroot-build/libLibPartioZip.so $(TARGET_DIR)/usr/lib
+	cp -a $(@D)/buildroot-build/supertux2 $(TARGET_DIR)/usr/bin
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/supertux2/supertux2.keys $(TARGET_DIR)/usr/share/evmapy
-	cp $(TARGET_DIR)/usr/share/supertux2/images/engine/menu/logo.png $(TARGET_DIR)/usr/share/supertux2/images/engine/menu/logo_dev.png
 endef
-SUPERTUX2_POST_INSTALL_TARGET_HOOKS += SUPERTUX2_EVMAP
 
 $(eval $(cmake-package))
