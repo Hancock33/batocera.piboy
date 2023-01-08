@@ -1,8 +1,8 @@
 diff --git a/Makefile b/Makefile
-index e5a7276..dff241d 100644
+index 82a947f..c7707c1 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -14,7 +14,8 @@
+@@ -28,7 +28,8 @@ USE_ASM ?= 1
  RELEASE ?= 1
  
  # Path where game data is installed
@@ -10,36 +10,36 @@ index e5a7276..dff241d 100644
 +DATADIR ?= /userdata/roms/ports/etekwar/
 +HAVE_GTK ?= 0
  
- # Engine source code path
- EROOT ?= jfbuild
-@@ -123,8 +124,8 @@ ifeq ($(PLATFORM),WINDOWS)
+ ##
+ ##
+@@ -127,8 +128,8 @@ ifeq ($(PLATFORM),DARWIN)
  endif
  
  ifeq ($(RENDERTYPE),SDL)
 -	OURCFLAGS+= $(SDLCONFIG_CFLAGS)
--	LIBS+= $(SDLCONFIG_LIBS)
+-	OURLDFLAGS+= $(SDLCONFIG_LIBS)
 +	OURCFLAGS+= `pkg-config sdl2 --cflags`
 +	LIBS+= `pkg-config sdl2 --libs`
  
  	ifeq (1,$(HAVE_GTK))
  		OURCFLAGS+= $(GTKCONFIG_CFLAGS)
-@@ -169,7 +170,7 @@ alldarwin:
- 	cd xcode && xcodebuild -project tekwar.xcodeproj -target all -configuration $(style)
- endif
+@@ -154,7 +155,7 @@ endif
  
+ # TARGETS
+ .PHONY: clean veryclean all
 -all: tekwar$(EXESUFFIX) build$(EXESUFFIX)
 +all: tekwar$(EXESUFFIX)
  
- tekwar$(EXESUFFIX): $(GAMEOBJS) $(ELIB)/$(ENGINELIB) $(AUDIOLIBROOT)/$(JFAUDIOLIB)
- 	$(CXX) $(CXXFLAGS) $(OURCXXFLAGS) $(OURCFLAGS) -o $@ $^ $(LIBS) $(GAMELIBS) -Wl,-Map=$@.map
+ include Makefile.deps
+ 
 Submodule jfaudiolib contains modified content
 diff --git a/jfaudiolib/Makefile b/jfaudiolib/Makefile
-index 2f0dda2..74be691 100644
+index a753a4e..f4550ba 100644
 --- a/jfaudiolib/Makefile
 +++ b/jfaudiolib/Makefile
-@@ -35,7 +35,7 @@ ifeq (mingw32,$(findstring mingw32,$(machine)))
-  CPPFLAGS+= -DHAVE_VORBIS
- else
+@@ -39,7 +39,7 @@ else
+   LDFLAGS+= -framework Foundation
+  endif
   ifneq (0,$(JFAUDIOLIB_HAVE_SDL))
 -  CPPFLAGS+= -DHAVE_SDL=2 $(shell $(SDL2CONFIG) --cflags)
 +  CPPFLAGS+= -DHAVE_SDL=2 `pkg-config sdl2 --cflags`
@@ -47,10 +47,10 @@ index 2f0dda2..74be691 100644
     CPPFLAGS+= -DUSE_SDLMIXER
     SOURCES+= src/driver_sdlmixer.c
 diff --git a/jfaudiolib/Makefile.shared b/jfaudiolib/Makefile.shared
-index 8fd36dd..e7fe492 100644
+index aea6279..241491e 100644
 --- a/jfaudiolib/Makefile.shared
 +++ b/jfaudiolib/Makefile.shared
-@@ -21,7 +21,7 @@ else
+@@ -22,7 +22,7 @@ else
   endif
   ifneq (,$(shell $(SDL2CONFIG) --version))
    JFAUDIOLIB_HAVE_SDL=2
@@ -61,10 +61,10 @@ index 8fd36dd..e7fe492 100644
    JFAUDIOLIB_HAVE_ALSA=1
 Submodule jfbuild contains modified content
 diff --git a/jfbuild/Makefile.shared b/jfbuild/Makefile.shared
-index fd4addf..bfeef2d 100644
+index 537dcd4..dedac39 100644
 --- a/jfbuild/Makefile.shared
 +++ b/jfbuild/Makefile.shared
-@@ -76,8 +76,8 @@ endif
+@@ -74,8 +74,8 @@ endif
  
  ifeq ($(RENDERTYPE),SDL)
  	ifneq ($(SDL2CONFIG),)
@@ -75,25 +75,3 @@ index fd4addf..bfeef2d 100644
  	else
  		$(error No $(SDL2CONFIG) could be found)
  	endif
-diff --git a/src/teksmk.c b/src/teksmk.c
-index a93d4f6..6b9f3bd 100644
---- a/src/teksmk.c
-+++ b/src/teksmk.c
-@@ -152,7 +152,7 @@ smkplayseq(char *name)
- 
-           frame = playframe%NUMSMKTILES;
-           setbrightness(brightness, smkpal[frame], 2);
--          invalidatetile(SMKPICNUM0+frame, 0, -1);
-+          //invalidatetile(SMKPICNUM0+frame, 0, -1);
-           clearallviews(0);
-           rotatesprite(160<<16, 100<<16, divscale16(200, tilesizx[SMKPICNUM0+frame]),
-                       512, SMKPICNUM0+frame, 0, 0, 2+4+64, 0, 0, xdim-1, ydim-1);
-@@ -280,7 +280,7 @@ smkmenuframe(int fn)
-      }
- 
-      waloff[SMKPICNUM0] = (intptr_t)smk_get_video(smkmenu);
--     invalidatetile(SMKPICNUM0, 0, -1);
-+     //invalidatetile(SMKPICNUM0, 0, -1);
- 
-      setbrightness(brightness, spal, 2);
- }
