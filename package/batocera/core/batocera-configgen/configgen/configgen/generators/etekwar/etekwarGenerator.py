@@ -15,7 +15,11 @@ class EtekwarGenerator(Generator):
         os.chdir(os.path.dirname(os.path.abspath(rom)))
 
         # ini file
-        iniFile = '/userdata/system/configs/tekwar/tekwar.ini'
+        config_dir = '/userdata/system/configs/tekwar'
+        if not os.path.exists(config_dir):
+            os.mkdir(config_dir)
+
+        iniFile = config_dir + '/tekwar.ini'
         if os.path.exists(iniFile):
             os.remove(iniFile)          # Force removing tekwar.ini
 
