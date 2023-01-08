@@ -47,6 +47,11 @@
 - Light gun support for GUN4IR (was partial in v35)
 - RG552 updated to kernel 6.1 (Thanks Maccraft123 and brooksytech)
 - RG552 adding mesa3d and wayland support
+- General tweaks for the Sinden Lightgun
+    - Default camera settings changed to recommended : exposure to -7; brightness to 120; contrast to 60
+    - Border mode : auto is NORMAL (always shown); IN-GAME ONLY; HIDDEN (always off)
+    - Border frame : auto is now MEDIUM with a thicker line; THIN and MEDIUM don't have outerframe anymore; BIG has outerframe
+    - Recoil : DISABLE option added
 ### Updated
 - pcsx2 to v1.7.3292
 - alsa to 1.2.8
@@ -121,6 +126,7 @@
 - disabling rumble for some libretro emulators/controllers
 - Xbox S|X controllers with the RPi4
 - White frame on 4:3 screen in libretro cores for Sinden Lightgun
+- Future Pinball saves
 ### Dev  
 - buildroot upgrade to 2022.11.x
 - odroidxu4 upgrade kernel to 6.1
