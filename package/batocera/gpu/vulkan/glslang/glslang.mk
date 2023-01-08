@@ -19,11 +19,5 @@ ifeq ($(BR2_PACKAGE_MESA3D),y)
 GLSLANG_DEPENDENCIES += mesa3d
 endif
 
-define GLSLANG_STATIC_LIBS
-    cp $(@D)/buildroot-build/OGLCompilersDLL/libOGLCompiler.a $(STAGING_DIR)/usr/lib
-    cp $(@D)/buildroot-build/glslang/OSDependent/Unix/libOSDependent.a $(STAGING_DIR)/usr/lib
-endef
-GLSLANG_POST_INSTALL_TARGET_HOOKS += GLSLANG_STATIC_LIBS
-
 $(eval $(cmake-package))
 $(eval $(host-cmake-package))
