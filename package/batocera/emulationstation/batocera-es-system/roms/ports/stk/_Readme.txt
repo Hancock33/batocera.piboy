@@ -1,12 +1,10 @@
-This port requires a copy of supertuxkar assest, these can be downloaded from
-https://github.com/supertuxkart/stk-assets-mobile/releases/download/1.3/stk-assets-full.zip
+This port requires a copy of the supertuxkar assest, these can be downloaded from
+https://github.com/supertuxkart/stk-code/releases/download/1.4/SuperTuxKart-1.4-linux-x86_64.tar.xz
 
-Extract to the contents to this folder, you should the following folders ...
+Extract to the data folder to this folder, this folder should look as followings...
 
-karts
-library
-models
-music
-sfx
-textures
-tracks
+data/challenges
+data/editor
+...
+data/thaidict.txt
+data/tips.xml
