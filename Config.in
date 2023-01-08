@@ -344,6 +344,7 @@ menu "Emulators"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xemu/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xenia/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xenia-canary/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xenia-native/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/yabausesa/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/yuzu/Config.in"
   endmenu
