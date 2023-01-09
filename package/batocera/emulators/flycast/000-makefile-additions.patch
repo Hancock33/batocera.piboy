@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index a1134312..a8c881b8 100644
+index 6e58227b..ba639acd 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -5,7 +5,6 @@ if(CCACHE_PROGRAM)
@@ -10,18 +10,18 @@ index a1134312..a8c881b8 100644
  option(ENABLE_CTEST "Enables unit tests" OFF)
  option(ENABLE_OPROFILE "Enable OProfile" OFF)
  option(TEST_AUTOMATION "Enable test automation" OFF)
-@@ -20,6 +19,10 @@ option(LIBRETRO "Build libretro core" OFF)
- option(USE_OPENGL "Use OpenGL API" ON)
- option(USE_VIDEOCORE "RPI: use the legacy Broadcom GLES libraries" OFF)
- option(APPLE_BREAKPAD "macOS: Build breakpad client and dump symbols" OFF)
+@@ -25,6 +24,10 @@ option(APPLE_BREAKPAD "macOS: Build breakpad client and dump symbols" OFF)
+ option(ENABLE_GDB_SERVER "Build with GDB debugging support" OFF)
+ option(ENABLE_DC_PROFILER "Build with support for target machine (SH4) profiler" OFF)
+ option(ENABLE_FC_PROFILER "Build with support for host app (Flycast) profiler" OFF)
 +option(RK3399 "Optimize for RK3399" OFF)
 +option(RPI4 "Optimize for RPi4" OFF)
 +option(RK3326 "Optimize for RK3326" OFF)
 +option(S922X "Optimize for S922X" OFF)
  
- set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/shell/cmake")
+ set(SENTRY_UPLOAD_URL "" CACHE STRING "Sentry upload URL")
  
-@@ -109,6 +112,19 @@ elseif(LIBRETRO)
+@@ -116,6 +119,19 @@ elseif(LIBRETRO)
  	set(CMAKE_SHARED_LIBRARY_PREFIX "")
  	set(CMAKE_POSITION_INDEPENDENT_CODE ON)
  	target_compile_definitions(${PROJECT_NAME} PRIVATE LIBRETRO)
@@ -41,7 +41,7 @@ index a1134312..a8c881b8 100644
  	if(ANDROID OR USE_GLES)
  		target_compile_definitions(${PROJECT_NAME} PRIVATE GLES GLES3 HAVE_OPENGLES HAVE_OPENGLES3)
  		find_library(GLES3_LIBRARIES NAMES GLESv3 GLESv2 NO_CACHE REQUIRED)
-@@ -147,6 +163,10 @@ else()
+@@ -157,6 +173,10 @@ else()
  	add_executable(${PROJECT_NAME} core/emulator.cpp)
  endif()
  
