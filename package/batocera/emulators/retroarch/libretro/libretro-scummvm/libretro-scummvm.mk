@@ -3,8 +3,8 @@
 # libretro-scummvm
 #
 ################################################################################
-# Version: Commits on Jan 08, 2023
-LIBRETRO_SCUMMVM_VERSION = b2e3c7fc83709ec81c4cb7814637ecd3754800c6
+# Version: Commits on Jan 10, 2023
+LIBRETRO_SCUMMVM_VERSION = c84a0f7b6a9ed9fdd187f2ef594a9daee1071627
 LIBRETRO_SCUMMVM_SITE = https://github.com/libretro/scummvm
 LIBRETRO_SCUMMVM_SITE_METHOD=git
 LIBRETRO_SCUMMVM_GIT_SUBMODULES=YES
