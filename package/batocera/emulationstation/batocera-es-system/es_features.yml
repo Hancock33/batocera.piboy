@@ -84,7 +84,7 @@ shared:
         "Off": 0
     hud:
       group: VIDEO SETTINGS
-      archs_exclude: [s905 bcm2835 bcm2836 rpizero2]
+      archs_exclude: [s905 bcm2835 bcm2836]
       prompt:      HEADS UP DISPLAY
       description: Show context-sensitive info over the game.
       submenu: DECORATIONS
@@ -95,7 +95,7 @@ shared:
         "Custom": custom
     hud_corner:
       group: VIDEO SETTINGS
-      archs_exclude: [s905 bcm2835 bcm2836 rpizero2]
+      archs_exclude: [s905 bcm2835 bcm2836]
       prompt: HEADS UP DISPLAY CORNER
       submenu: DECORATIONS
       choices:
