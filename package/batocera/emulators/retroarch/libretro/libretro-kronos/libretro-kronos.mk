@@ -3,8 +3,8 @@
 # libretro-kronos
 #
 ################################################################################
-# Version: Commits on Jan 11, 2023
-LIBRETRO_KRONOS_VERSION = 97eb6a10fa7e13af74b110eff829e055a7c4ffa3
+# Version: Commits on Jan 12, 2023
+LIBRETRO_KRONOS_VERSION = 9f5b6992a606a0d344bc459dfe4e1e1e5ad52224
 LIBRETRO_KRONOS_SITE = $(call github,FCare,kronos,$(LIBRETRO_KRONOS_VERSION))
 LIBRETRO_KRONOS_LICENSE = BSD-3-Clause
 
