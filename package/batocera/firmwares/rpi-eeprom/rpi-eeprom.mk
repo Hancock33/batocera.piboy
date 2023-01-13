@@ -3,13 +3,13 @@
 # rpi-eeprom
 #
 ################################################################################
-# Version: Commits on Jan 05, 2023
-RPI_EEPROM_VERSION = b4b4605c7de485a6604fb5b9f295eb87d878f848
+# Version: Commits on Jan 13, 2023
+RPI_EEPROM_VERSION = e2fc5b19933e8dd7c5677fec08cdeec54934b29b
 RPI_EEPROM_SITE = $(call github,raspberrypi,rpi-eeprom,$(RPI_EEPROM_VERSION))
 RPI_EEPROM_DEPENDENCIES = rpi-userland-batocera
 
 RPI_EEPROM_LICENSE = BSD-3-Clause
-EEPROM_VERSION=2022-12-07
+EEPROM_VERSION=2023-01-11
 define RPI_EEPROM_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/lib/firmware/raspberrypi/bootloader/default
 	cp -pvr $(@D)/firmware/stable/{pieeprom-$(EEPROM_VERSION).bin,recovery.bin,vl805-000137ad.bin,vl805-000138a1.bin} \
