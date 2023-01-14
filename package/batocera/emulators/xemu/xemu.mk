@@ -3,9 +3,9 @@
 # xemu
 #
 ################################################################################
-# Version: Commits on Jan 06, 2023
-XEMU_VERSION = a0cffd77debf6caf8804a0fbb2d04fb9c54c13a6
-XEMU_SITE = https://github.com/mborgerson/xemu.git
+# Version: Commits on Jan 14, 2023
+XEMU_VERSION = e44e78fa06c3d486c4b6ace68e4449819ed0b269
+XEMU_SITE = https://github.com/xemu-project/xemu
 XEMU_SITE_METHOD=git
 XEMU_GIT_SUBMODULES=YES
 XEMU_LICENSE = GPLv2
