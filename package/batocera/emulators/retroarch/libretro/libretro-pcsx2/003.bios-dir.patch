@@ -1,13 +1,13 @@
 diff --git a/libretro/main.cpp b/libretro/main.cpp
-index dd078157b..0d6648701 100644
+index 15c6efdf8..da5b9e802 100644
 --- a/libretro/main.cpp
 +++ b/libretro/main.cpp
-@@ -264,7 +264,7 @@ void retro_init(void)
+@@ -313,7 +313,7 @@ void retro_init(void)
  
  	// get the BIOS available and fill the option
  
 -	bios_dir = Path::Combine(system, "pcsx2/bios");
 +	bios_dir = Path::Combine(system, "");
- 
- 	wxArrayString bios_list;
  	wxDir::GetAllFiles(bios_dir.GetFullPath(), &bios_list, L"*.*", wxDIR_FILES);
+ 	for (wxString bios_file : bios_list)
+ 	{

@@ -1,13 +1,11 @@
 diff --git a/src/seg000.c b/src/seg000.c
-index 1665fb9..c2b46f5 100644
+index 2165e5e..32c7d85 100644
 --- a/src/seg000.c
 +++ b/src/seg000.c
-@@ -2320,16 +2320,12 @@ const rect_type splash_text_2_rect = {50, 0, 200, 320};
- 
- const char* splash_text_1 = "SDLPoP " SDLPOP_VERSION;
+@@ -2326,17 +2326,11 @@ const char* splash_text_1 = "SDLPoP " SDLPOP_VERSION;
  const char* splash_text_2 =
--		"In-game, Esc opens a settings/quicksave menu.\n"
--		"\n"
+ 		"In-game, Esc opens a settings/quicksave menu.\n"
+ 		"\n"
 -#ifdef USE_REPLAY
 -		"To record replays, press Ctrl+Tab in-game.\n"
 -		"To view replays, press Tab on the title screen.\n"
@@ -15,12 +13,15 @@ index 1665fb9..c2b46f5 100644
 -#endif
 -		"Edit SDLPoP.ini to customize SDLPoP.\n"
 -		"Mods also work with SDLPoP.\n"
+-		"\n"
+-		"For more information, read README.md.\n"
+-		"Questions? Visit https://forum.princed.org\n"
+-		"\n"
 +		"To quick save/load, press Hotkey + Y/X.\n"
- 		"\n"
 +		"To take a screenshot, press Hotkey + Left Bumper.\n"
 +		"To restart the level, press Hotkey + Right Bumper.\n"
 +		"To return to the main menu, press Hotkey + A.\n"
 + 		"\n"
- 		"For more information, read doc/Readme.txt.\n"
- 		"Questions? Visit https://forum.princed.org\n"
- 		"\n"
+ 		"Press any key to continue...";
+ 
+ void show_splash() {
