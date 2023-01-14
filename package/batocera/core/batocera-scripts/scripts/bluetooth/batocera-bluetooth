@@ -108,14 +108,6 @@ do_trust() {
         else
           echo "Device ${TRUSTDEV} paired successfully." >> $log
         fi
-        # now trust the device
-        do_trust_device "$TRUSTDEV" 2> /dev/null
-        if [ $? -ne 0 ]; then
-          echo "Error: Trusting $TRUSTDEV failed." >> $log
-          exit 1
-        else
-          echo "Device ${TRUSTDEV} trusted successfully." >> $log
-        fi
         # now connect the device (usually not necessary)
         do_connect_device "$TRUSTDEV" 2> /dev/null
         if [ $? -ne 0 ]; then
@@ -123,6 +115,14 @@ do_trust() {
           exit 1
         else
           echo "Device ${TRUSTDEV} connected successfully." >> $log
+        fi
+        # now trust the device
+        do_trust_device "$TRUSTDEV" 2> /dev/null
+        if [ $? -ne 0 ]; then
+          echo "Error: Trusting $TRUSTDEV failed." >> $log
+          exit 1
+        else
+          echo "Device ${TRUSTDEV} trusted successfully." >> $log
         fi
       else
         echo "Invalid MAC address" >> $log
