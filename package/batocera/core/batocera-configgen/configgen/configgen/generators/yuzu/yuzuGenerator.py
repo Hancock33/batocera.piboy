@@ -59,6 +59,12 @@ class YuzuGenerator(Generator):
             yuzuConfig.read(yuzuConfigFile)
 
         # UI section
+        if not yuzuConfig.has_section("Audio"):
+            yuzuConfig.add_section("Audio")
+        yuzuConfig.set("Audio", "output_engine", "cubeb")
+        yuzuConfig.set("Audio", "output_engine\\default", "false")
+
+        # UI section
         if not yuzuConfig.has_section("UI"):
             yuzuConfig.add_section("UI")
         yuzuConfig.set("UI", "fullscreen", "true")
@@ -144,8 +150,8 @@ class YuzuGenerator(Generator):
         if system.isOptSet('yuzu_backend'):
             yuzuConfig.set("Renderer", "backend", system.config["yuzu_backend"])
         else:
-            yuzuConfig.set("Renderer", "backend", "0")
-        yuzuConfig.set("Renderer", "backend\\default", "false")
+            yuzuConfig.set("Renderer", "backend", "1")
+        yuzuConfig.set("Renderer", "backend\\default", "true")
 
         # Async Shader compilation
         if system.isOptSet('yuzu_async_shaders'):
@@ -179,8 +185,8 @@ class YuzuGenerator(Generator):
         if system.isOptSet('yuzu_gpuaccuracy'):
             yuzuConfig.set("Renderer", "gpu_accuracy", system.config["yuzu_gpuaccuracy"])
         else:
-            yuzuConfig.set("Renderer", "gpu_accuracy", "0")
-        yuzuConfig.set("Renderer", "gpu_accuracy\\default", "false")
+            yuzuConfig.set("Renderer", "gpu_accuracy", "1")
+        yuzuConfig.set("Renderer", "gpu_accuracy\\default", "true")
 
         # Vsync
         if system.isOptSet('yuzu_vsync'):
@@ -275,7 +281,7 @@ class YuzuGenerator(Generator):
                 yuzuConfig.set("Controls", "time_zone_index", system.config["yuzu_timezone"])
             else:
                 yuzuConfig.set("Controls", "time_zone_index", "0")
-            yuzuConfig.set("Controls", "time_zone_index\\default", "false")        
+            yuzuConfig.set("Controls", "time_zone_index\\default", "false")
 
             # controllers
             nplayer = 1
@@ -330,11 +336,11 @@ class YuzuGenerator(Generator):
             input = padInputs[key]
 
             if input.type == "button":
-                return ("engine:sdl,button:{},guid:{},port:{}").format(input.id, padGuid, port)
+                return ("pad:0,button:{},port:{},guid:{},engine:sdl").format(input.id, port, padGuid)
             elif input.type == "hat":
                 return ("engine:sdl,hat:{},direction:{},guid:{},port:{}").format(input.id, YuzuGenerator.hatdirectionvalue(input.value), padGuid, port)
             elif input.type == "axis":
-                return ("engine:sdl,threshold:{},axis:{},guid:{},port:{},invert:{}").format(0.5, input.id, padGuid, port, "+")
+                return ("threshold:0.500000,axis:{},pad:0,port:{},guid:{},engine:sdl").format(input.id, port, padGuid)
         return ""
 
     @staticmethod
@@ -351,7 +357,7 @@ class YuzuGenerator(Generator):
                 inputy = padInputs["joystick1up"]
         elif key == "joystick2" and "joystick2up" in padInputs:
             inputy = padInputs["joystick2up"]
-        return ("engine:sdl,range:1.000000,deadzone:0.100000,invert_y:+,invert_x:+,offset_y:-0.000000,axis_y:{},offset_x:-0.000000,axis_x:{},guid:{},port:{}").format(inputy.id, inputx.id, padGuid, port)
+        return ("range:0.950000,deadzone:0.150000,threshold:0.500000,axis_y:{},axis_x:{},pad:0,port:{},guid:{},engine:sdl").format(inputy.id, inputx.id, port, padGuid)
 
     @staticmethod
     def hatdirectionvalue(value):
