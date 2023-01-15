@@ -9152,11 +9152,6 @@ msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "On (slower)"
-msgstr "Zapnout (pomalé)"
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
 msgid ""
 "May fix missing graphics and broken lighting at the cost of performance."
 msgstr "Může opravit chybějící grafiku a nefunkční osvětlení na úkor výkonu."
@@ -9233,6 +9228,28 @@ msgstr "5 vláken"
 msgctxt "game_options"
 msgid "6 threads"
 msgstr "6 vláken"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Can reduce crackle and stutter but increases audio latency."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "ENABLE AUDIO BUFFERING"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"Reduces crackle and stutter further, but may cause a very noticeable "
+"reduction in audio quality on slower CPUs."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "ENABLE TIME STRETCHING"
+msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -11272,6 +11289,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "USE COMPUTE SHADER"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "On (slower)"
+#~ msgstr "Zapnout (pomalé)"
 
 #~ msgctxt "game_options"
 #~ msgid "Always have 6 bullets, 6 dynamite, 6 lives."
