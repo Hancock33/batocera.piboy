@@ -256,55 +256,54 @@ class YuzuGenerator(Generator):
          # controls section
         if not yuzuConfig.has_section("Controls"):
             yuzuConfig.add_section("Controls")
-
-        # Dock Mode
-        if system.isOptSet('yuzu_dock_mode'):
-            yuzuConfig.set("Controls", "use_docked_mode", system.config["yuzu_dock_mode"])
-        else:
-            yuzuConfig.set("Controls", "use_docked_mode", "true")
-        yuzuConfig.set("Controls", "use_docked_mode\\default", "false")
-
-        # Sound Mode
-        if system.isOptSet('yuzu_sound_mode'):
-            yuzuConfig.set("Controls", "sound_index", system.config["yuzu_sound_mode"])
-        else:
-            yuzuConfig.set("Controls", "sound_index", "1")
-        yuzuConfig.set("Controls", "sound_index\\default", "false")
-
-        # Timezone
-        if system.isOptSet('yuzu_timezone'):
-            yuzuConfig.set("Controls", "time_zone_index", system.config["yuzu_timezone"])
-        else:
-            yuzuConfig.set("Controls", "time_zone_index", "0")
-        yuzuConfig.set("Controls", "time_zone_index\\default", "false")        
-
-        # controllers
-        nplayer = 1
-        for playercontroller, pad in sorted(playersControllers.items()):
-            if system.isOptSet('p{}_pad'.format(nplayer-1)):
-                yuzuConfig.set("Controls", "player_{}_type".format(nplayer-1), system.config["p{}_pad".format(nplayer)])
+            # Dock Mode
+            if system.isOptSet('yuzu_dock_mode'):
+                yuzuConfig.set("Controls", "use_docked_mode", system.config["yuzu_dock_mode"])
             else:
-                yuzuConfig.set("Controls", "player_{}_type".format(nplayer-1), 0)
-            yuzuConfig.set("Controls", "player_{}_type\default".format(nplayer-1), "false")
+                yuzuConfig.set("Controls", "use_docked_mode", "true")
+            yuzuConfig.set("Controls", "use_docked_mode\\default", "false")
 
-            for x in yuzuButtonsMapping:
-                yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_" + x, '"{}"'.format(YuzuGenerator.setButton(yuzuButtonsMapping[x], pad.guid, pad.inputs, nplayer-1)))
-            for x in yuzuAxisMapping:
-                yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_" + x, '"{}"'.format(YuzuGenerator.setAxis(yuzuAxisMapping[x], pad.guid, pad.inputs, nplayer-1)))
-            yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_motionleft", '"[empty]"')
-            yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_motionright", '"[empty]"')
-            yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_connected", "true")
-            yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_connected\default", "false")
-            yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_vibration_enabled", "true")
-            yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_vibration_enabled\\default", "false")
-            nplayer += 1
+            # Sound Mode
+            if system.isOptSet('yuzu_sound_mode'):
+                yuzuConfig.set("Controls", "sound_index", system.config["yuzu_sound_mode"])
+            else:
+                yuzuConfig.set("Controls", "sound_index", "1")
+            yuzuConfig.set("Controls", "sound_index\\default", "false")
 
-        yuzuConfig.set("Controls", "vibration_enabled", "true")
-        yuzuConfig.set("Controls", "vibration_enabled\\default", "false")
+            # Timezone
+            if system.isOptSet('yuzu_timezone'):
+                yuzuConfig.set("Controls", "time_zone_index", system.config["yuzu_timezone"])
+            else:
+                yuzuConfig.set("Controls", "time_zone_index", "0")
+            yuzuConfig.set("Controls", "time_zone_index\\default", "false")        
 
-        for y in range(nplayer, 9):
-            yuzuConfig.set("Controls", "player_" + str(y-1) + "_connected", "false")
-            yuzuConfig.set("Controls", "player_" + str(y-1) + "_connected\default", "false")
+            # controllers
+            nplayer = 1
+            for playercontroller, pad in sorted(playersControllers.items()):
+                if system.isOptSet('p{}_pad'.format(nplayer-1)):
+                    yuzuConfig.set("Controls", "player_{}_type".format(nplayer-1), system.config["p{}_pad".format(nplayer)])
+                else:
+                    yuzuConfig.set("Controls", "player_{}_type".format(nplayer-1), 0)
+                yuzuConfig.set("Controls", "player_{}_type\default".format(nplayer-1), "false")
+
+                for x in yuzuButtonsMapping:
+                    yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_" + x, '"{}"'.format(YuzuGenerator.setButton(yuzuButtonsMapping[x], pad.guid, pad.inputs, nplayer-1)))
+                for x in yuzuAxisMapping:
+                    yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_" + x, '"{}"'.format(YuzuGenerator.setAxis(yuzuAxisMapping[x], pad.guid, pad.inputs, nplayer-1)))
+                yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_motionleft", '"[empty]"')
+                yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_motionright", '"[empty]"')
+                yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_connected", "true")
+                yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_connected\default", "false")
+                yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_vibration_enabled", "true")
+                yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_vibration_enabled\\default", "false")
+                nplayer += 1
+
+            yuzuConfig.set("Controls", "vibration_enabled", "true")
+            yuzuConfig.set("Controls", "vibration_enabled\\default", "false")
+
+            for y in range(nplayer, 9):
+                yuzuConfig.set("Controls", "player_" + str(y-1) + "_connected", "false")
+                yuzuConfig.set("Controls", "player_" + str(y-1) + "_connected\default", "false")
 
         # telemetry section
         if not yuzuConfig.has_section("WebService"):
