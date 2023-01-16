@@ -7957,6 +7957,7 @@ ppsspp:
   cfeatures:
         gfxbackend:
             archs_include: [x86, x86_64, bcm2711, rk3326]
+            group: DRIVERS
             prompt: GRAPHICS API
             description: Choose which graphics API library to use. Vulkan is better, when supported.
             choices:
@@ -8059,8 +8060,6 @@ ppsspp:
             choices:
                 "Off": False
                 "On":  True
-
-
 pygame:
   features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns]
