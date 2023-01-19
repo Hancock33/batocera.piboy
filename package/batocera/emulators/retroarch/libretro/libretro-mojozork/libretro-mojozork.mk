@@ -3,8 +3,8 @@
 # libretro-mojozork
 #
 ################################################################################
-# Version: Commits on Dec 28, 2022
-LIBRETRO_MOJOZORK_VERSION = d3bcff1bad330b23c0065540e0cae78fbcf4ba2d
+# Version: Commits on Jan 18, 2023
+LIBRETRO_MOJOZORK_VERSION = e5eed8e7db672779391b3ce8fdebdefefb2fa52a
 LIBRETRO_MOJOZORK_SITE = $(call github,icculus,mojozork,$(LIBRETRO_MOJOZORK_VERSION))
 LIBRETRO_MOJOZORK_LICENSE = Zlib
 LIBRETRO_MOJOZORK_DEPENDENCIES = retroarch
