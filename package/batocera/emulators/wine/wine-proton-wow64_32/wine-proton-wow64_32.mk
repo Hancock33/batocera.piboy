@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-WINE_PROTON_WOW64_32_VERSION = experimental-wine-bleeding-edge-7.0-33264-20230114-p4b1fb7-w9a4f14-d1c2df5-v5e2c98
+WINE_PROTON_WOW64_32_VERSION = experimental-wine-bleeding-edge-7.0-33675-20230119-p4b1fb7-wc2a4d5-d4d0d45-v8c5472
 WINE_PROTON_WOW64_32_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_WOW64_32_VERSION))
 WINE_PROTON_WOW64_32_LICENSE = LGPL-2.1+
 WINE_PROTON_WOW64_32_DEPENDENCIES = host-bison host-flex host-wine-proton
