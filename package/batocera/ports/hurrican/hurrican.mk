@@ -3,8 +3,8 @@
 # hurrican
 #
 ################################################################################
-# Version: Commits on Apr 13, 2022
-HURRICAN_VERSION = bcb65d5da5bc423fb81432eee864d896b8518799
+# Version: Commits on Jan 20, 2023
+HURRICAN_VERSION = a7098c899f41c16ccae2e7b555ddcf9f9b07680c
 HURRICAN_SITE = https://github.com/drfiemost/Hurrican.git
 
 HURRICAN_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image libepoxy

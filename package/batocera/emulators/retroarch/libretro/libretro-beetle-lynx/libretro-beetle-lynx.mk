@@ -3,8 +3,8 @@
 # libretro-beetle-lynx
 #
 ################################################################################
-# Version: Commits on Jan 13, 2023
-LIBRETRO_BEETLE_LYNX_VERSION = 74603da1ee8f934e5edd31dffad44a69a569e4d0
+# Version: Commits on Jan 20, 2023
+LIBRETRO_BEETLE_LYNX_VERSION = fc1288ccc0a4c6c07d690e0f0f5e883b43c20ba4
 LIBRETRO_BEETLE_LYNX_SITE = $(call github,libretro,beetle-lynx-libretro,$(LIBRETRO_BEETLE_LYNX_VERSION))
 LIBRETRO_BEETLE_LYNX_LICENSE = GPLv2
 
