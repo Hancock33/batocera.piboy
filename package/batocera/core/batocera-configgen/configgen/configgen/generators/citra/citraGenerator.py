@@ -19,8 +19,7 @@ class CitraGenerator(Generator):
         "XDG_CONFIG_HOME":batoceraFiles.CONF, \
         "XDG_DATA_HOME":batoceraFiles.SAVES + "/3ds", \
         "XDG_CACHE_HOME":batoceraFiles.CACHE, \
-        "XDG_RUNTIME_DIR":batoceraFiles.SAVES + "/3ds/citra-emu", \
-        "QT_QPA_PLATFORM":"xcb"})
+        "XDG_RUNTIME_DIR":batoceraFiles.SAVES + "/3ds/citra-emu"})
 
     # Show mouse on screen
     def getMouseMode(self, config):
