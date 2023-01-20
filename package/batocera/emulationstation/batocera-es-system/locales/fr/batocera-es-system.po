@@ -1931,7 +1931,7 @@ msgctxt "game_options"
 msgid "TEXTURE FILTERING"
 msgstr ""
 
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/parallel_n64, f2bgl
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/parallel_n64, ppsspp, f2bgl
 msgctxt "game_options"
 msgid "Nearest"
 msgstr ""
@@ -4249,7 +4249,7 @@ msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D objects polygons."
 msgstr ""
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, yuzu
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, ppsspp, yuzu
 msgctxt "game_options"
 msgid "Smooth textures on 3D objects."
 msgstr ""
@@ -4829,7 +4829,7 @@ msgctxt "game_options"
 msgid "4.5x (1440x1080)"
 msgstr ""
 
-#. TRANSLATION: libretro/parallel_n64, libretro/tyrquake, amiberry, melonds, ppsspp, ...
+#. TRANSLATION: libretro/parallel_n64, libretro/tyrquake, amiberry, melonds, rpcs3, ...
 msgctxt "game_options"
 msgid "Automatic"
 msgstr ""
@@ -7110,7 +7110,7 @@ msgctxt "game_options"
 msgid "UPSCALE FILTER"
 msgstr ""
 
-#. TRANSLATION: cemu, cemu, yuzu
+#. TRANSLATION: cemu, cemu, ppsspp, yuzu
 msgctxt "game_options"
 msgid "Bicubic"
 msgstr ""
@@ -7998,31 +7998,6 @@ msgctxt "game_options"
 msgid "HLE BIOS"
 msgstr ""
 
-#. TRANSLATION: flycast
-msgctxt "game_options"
-msgid "How the emulator should sort transparent objects."
-msgstr ""
-
-#. TRANSLATION: flycast
-msgctxt "game_options"
-msgid "TRANSPARENT SORTING"
-msgstr ""
-
-#. TRANSLATION: flycast
-msgctxt "game_options"
-msgid "Per Triangle (Default)"
-msgstr ""
-
-#. TRANSLATION: flycast
-msgctxt "game_options"
-msgid "Per Strip"
-msgstr ""
-
-#. TRANSLATION: flycast
-msgctxt "game_options"
-msgid "Per Pixel"
-msgstr ""
-
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "520 ST AUTO"
@@ -8223,7 +8198,7 @@ msgctxt "game_options"
 msgid "Always enforce horizontal"
 msgstr ""
 
-#. TRANSLATION: melonds
+#. TRANSLATION: melonds, ppsspp
 msgctxt "game_options"
 msgid "Hybrid"
 msgstr ""
@@ -8812,12 +8787,12 @@ msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "Buffered rendering"
+msgid "Skip buffer effects"
 msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "Skip buffer effects"
+msgid "Buffered rendering"
 msgstr ""
 
 #. TRANSLATION: ppsspp
@@ -8867,22 +8842,12 @@ msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "xBRZ"
+msgid "xBRZ (Default)"
 msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "Hybride"
-msgstr ""
-
-#. TRANSLATION: ppsspp
-msgctxt "game_options"
-msgid "Bicubique"
-msgstr ""
-
-#. TRANSLATION: ppsspp
-msgctxt "game_options"
-msgid "Hybride + Bicubique"
+msgid "Hybrid + Bicubic"
 msgstr ""
 
 #. TRANSLATION: ppsspp
@@ -8893,6 +8858,16 @@ msgstr ""
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "TEXTURE DEPOSTERIZE"
+msgstr ""
+
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "Linear"
+msgstr ""
+
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "Auto Max Quality"
 msgstr ""
 
 #. TRANSLATION: rpcs3
