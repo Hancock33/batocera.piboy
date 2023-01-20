@@ -26,7 +26,7 @@ class PlayGenerator(Generator):
         commandArray = ["/usr/bin/play-emu", "--disc", rom]
         return Command.Command(
             array=commandArray,
-            env={"XDG_CONFIG_HOME":playConfig, "XDG_DATA_HOME":playConfig, "XDG_CACHE_HOME":batoceraFiles.CACHE, "QT_QPA_PLATFORM":"xcb"}
+            env={"XDG_CONFIG_HOME":playConfig, "XDG_DATA_HOME":playConfig, "XDG_CACHE_HOME":batoceraFiles.CACHE}
             )
 
     def getMouseMode(self, config):

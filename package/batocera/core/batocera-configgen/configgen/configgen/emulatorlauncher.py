@@ -234,6 +234,8 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
         os.environ.update({'SDL_RENDER_VSYNC': system.config["sdlvsync"]})
 
         os.environ.update({'PIPEWIRE_LATENCY': '1024/48000'})
+        os.environ.update({'QT_PLUGIN_PATH': '/usr/lib/qt/plugins'})
+        os.environ.update({'QT_QPA_PLATFORM': 'xcb'})
 
         # run a script before emulator starts
         callExternalScripts("/usr/share/batocera/configgen/scripts", "gameStart", [systemName, system.config['emulator'], effectiveCore, effectiveRom])

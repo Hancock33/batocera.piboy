@@ -296,7 +296,7 @@ class DuckstationGenerator(Generator):
         with open(settings_path, 'w') as configfile:
             settings.write(configfile)
 
-        env = {"XDG_DATA_HOME":batoceraFiles.CONF, "QT_QPA_PLATFORM":"xcb"}
+        env = {"XDG_DATA_HOME":batoceraFiles.CONF}
         return Command.Command(array=commandArray, env=env)
 
 def getGfxRatioFromConfig(config, gameResolution):
