@@ -29,6 +29,7 @@ sed -i s@/usr/lib/@/lib32/@g                                 $DEST_DIR/usr/share
 
 rm -rf $DEST_DIR/usr/lib32/{avahi,gconv,glslang,graphene-1.0,icu,libfm,locale}
 rm -rf $DEST_DIR/usr/lib32/{pcmanfm,python3.*,terminfo,udev,xorg,X11}
+find $DEST_DIR/usr -type f -name "*.a" -exec rm {} \;
 cd $DEST_DIR && tar -Jcf $DEST_DIR.tar.xz .
 rm -r $DEST_DIR
 cp -av $DEST_DIR.tar.xz /mnt/smb
