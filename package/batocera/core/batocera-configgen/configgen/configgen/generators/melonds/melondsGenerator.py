@@ -62,6 +62,10 @@ class MelonDSGenerator(Generator):
         f.write("AudioVolume=256\n")
         # For Software Rendering
         f.write("Threaded3D=1\n")
+        # Force English
+        f.write("FirmwareOverrideSettings=1\n")
+        f.write("FirmwareLanguage=1\n")
+
 
         # [User selected options]
         # MelonDS only has OpenGL or Software - use OpenGL if not selected
