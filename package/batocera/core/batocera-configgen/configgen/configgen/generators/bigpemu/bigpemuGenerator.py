@@ -11,6 +11,7 @@ import stat
 import configparser
 import filecmp
 from utils.logger import get_logger
+import controllersConfig
 
 eslog = get_logger(__name__)
 
