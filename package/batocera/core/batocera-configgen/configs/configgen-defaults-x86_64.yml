@@ -88,7 +88,7 @@ megaduck:
   core:     mame
 n64:
   options:
-
+    videomode: max-1920x1080
 n64dd:
   options:
     videomode: max-1920x1080
