@@ -1,5 +1,5 @@
 diff --git a/src/libretro/libretro_core_options.h b/src/libretro/libretro_core_options.h
-index 4f651c02..2405f830 100644
+index e21cf46c..e2d3b488 100644
 --- a/src/libretro/libretro_core_options.h
 +++ b/src/libretro/libretro_core_options.h
 @@ -80,7 +80,7 @@ struct retro_core_option_v2_category option_cats_us[] = {
@@ -317,6 +317,15 @@ index 4f651c02..2405f830 100644
        "PGXP Geometry Tolerance",
        NULL,
        "Ignores precise positions if the difference exceeds this threshold.",
+@@ -662,7 +662,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "-1.0"
+    },
+    {
+-      "duckstation_GPU.PGXPDepthClearThreshold",
++      "swanstation_GPU.PGXPDepthClearThreshold",
+       "PGXP Depth Clear Threshold",
+       NULL,
+       "Sets the threshold for the PGXP Depth Buffer",
 @@ -774,7 +774,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "300"
     },
@@ -407,6 +416,15 @@ index 4f651c02..2405f830 100644
        "Display Line End Offset",
        NULL,
        "Pads or crops off lines from the bottom of the displayed image.",
+@@ -1254,7 +1254,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+       "0"
+    },
+    {
+-      "duckstation_MemoryCards.Card1Type",
++      "swanstation_MemoryCards.Card1Type",
+       "Memory Card 1 Type",
+       NULL,
+       "Sets the type of memory card for Slot 1. Restart the core when switching formats. "
 @@ -1274,7 +1274,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "Libretro"
     },
@@ -453,7 +471,7 @@ index 4f651c02..2405f830 100644
        NULL,
        "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
 @@ -1360,7 +1360,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
-       "false"
+       "true"
     },
     {
 -      "duckstation_Controller1.AnalogDPadInDigitalMode",
@@ -516,7 +534,7 @@ index 4f651c02..2405f830 100644
        NULL,
        "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
 @@ -1783,7 +1783,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
-       "false"
+       "true"
     },
     {
 -      "duckstation_Controller2.AnalogDPadInDigitalMode",
@@ -579,7 +597,7 @@ index 4f651c02..2405f830 100644
        NULL,
        "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
 @@ -2206,7 +2206,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
-       "false"
+       "true"
     },
     {
 -      "duckstation_Controller3.AnalogDPadInDigitalMode",
@@ -633,7 +651,7 @@ index 4f651c02..2405f830 100644
        NULL,
        "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
 @@ -2518,7 +2518,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
-       "false"
+       "true"
     },
     {
 -      "duckstation_Controller4.AnalogDPadInDigitalMode",
@@ -687,7 +705,7 @@ index 4f651c02..2405f830 100644
        NULL,
        "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
 @@ -2830,7 +2830,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
-       "false"
+       "true"
     },
     {
 -      "duckstation_Controller5.AnalogDPadInDigitalMode",
@@ -723,7 +741,7 @@ index 4f651c02..2405f830 100644
        NULL,
        "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
 @@ -3062,7 +3062,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
-       "false"
+       "true"
     },
     {
 -      "duckstation_Controller6.AnalogDPadInDigitalMode",
@@ -759,7 +777,7 @@ index 4f651c02..2405f830 100644
        NULL,
        "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
 @@ -3294,7 +3294,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
-       "false"
+       "true"
     },
     {
 -      "duckstation_Controller7.AnalogDPadInDigitalMode",
@@ -795,7 +813,7 @@ index 4f651c02..2405f830 100644
        NULL,
        "Forces analog mode in Analog Controller (DualShock) at start/reset. May cause issues with some games. Only use "
 @@ -3526,7 +3526,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
-       "false"
+       "true"
     },
     {
 -      "duckstation_Controller8.AnalogDPadInDigitalMode",
@@ -852,21 +870,12 @@ index 4f651c02..2405f830 100644
        "true"
     },
     {
--      "duckstation_Main.LoadDevicesFromSaveStates",
-+      "swanstation_Main.LoadDevicesFromSaveStates",
-       "Load Memory Cards From Save States",
-       NULL,
-       "Sets whether the contents memory cards will be loaded when a save state is loaded. "
-@@ -3949,7 +3949,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
-       "true"
-    },
-    {
 -      "duckstation_Logging.LogLevel",
 +      "swanstation_Logging.LogLevel",
        "Log Level",
        NULL,
        "Sets the level of information logged by the core.",
-@@ -3971,7 +3971,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3956,7 +3956,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "Info"
     },
     {
@@ -875,7 +884,7 @@ index 4f651c02..2405f830 100644
        "CPU Recompiler ICache",
        NULL,
        "Determines whether the CPU's instruction cache is simulated in the recompiler. Improves accuracy at a small cost "
-@@ -3986,7 +3986,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3971,7 +3971,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -884,7 +893,7 @@ index 4f651c02..2405f830 100644
        "CPU Recompiler Block Linking",
        NULL,
        "Enables the generated code to directly jump between blocks without going through the "
-@@ -4001,7 +4001,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -3986,7 +3986,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "true"
     },
     {
@@ -893,7 +902,7 @@ index 4f651c02..2405f830 100644
        "CPU Recompiler Fast Memory Access",
        NULL,
        "Uses page faults to determine hardware memory accesses at runtime. Can provide a significant performance "
-@@ -4023,7 +4023,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -4008,7 +4008,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
  #endif
     },
     {
@@ -902,7 +911,7 @@ index 4f651c02..2405f830 100644
        "CPU Recompiler Fast Memory Access Rewrite",
        NULL,
        "Enables rewrites when CPU Recompiler Fast Memory Access is enabled. Can provide a measurable speed boost, "
-@@ -4038,10 +4038,10 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -4023,10 +4023,10 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -915,7 +924,7 @@ index 4f651c02..2405f830 100644
        "Currently only works with the D3D11 & Vulkan renderers.",
        NULL,
        "advanced",
-@@ -4053,7 +4053,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -4038,7 +4038,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -924,7 +933,7 @@ index 4f651c02..2405f830 100644
        "Preload Texture Replacements",
        NULL,
        "Preload VRAM write replacement textures to RAM",
-@@ -4067,7 +4067,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -4052,7 +4052,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "false"
     },
     {
@@ -933,7 +942,7 @@ index 4f651c02..2405f830 100644
        "Internal Run-Ahead",
        NULL,
        "Simulates the system ahead of time and rolls back/replays to reduce input lag. Has very high system "
-@@ -4091,7 +4091,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
+@@ -4076,7 +4076,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
        "0"
     },
     {
