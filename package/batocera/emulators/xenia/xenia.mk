@@ -17,8 +17,8 @@ define XENIA_EXTRACT_CMDS
 endef
 
 define XENIA_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr
-	cp -pfr $(@D) $(TARGET_DIR)/usr/xenia
+	mkdir -p $(TARGET_DIR)/usr/xenia
+	cp -avr $(@D)/xenia.exe $(TARGET_DIR)/usr/xenia
 endef
 
 define XENIA_POST_PROCESS

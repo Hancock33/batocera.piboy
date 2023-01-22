@@ -3,17 +3,7 @@
 # hlsdk-xash3d
 #
 ################################################################################
-
-# Important: We use the `mobile_hacks` branch that builds an `.so` that
-# is compatible with several Half-Life-based mods, including these:
-#
-#   https://github.com/FWGS/hlsdk-xash3d/blob/mobile_hacks/dlls/moddef.h
-#
-# List of games that require custom libraries (a few are covered by the `mobile_hacks` branch):
-#
-#   https://github.com/FWGS/xash3d-fwgs/blob/master/Documentation/supported-mod-list.md#list-of-games-and-mods-with-custom-gamedll
-#
-# "mobile_hacks" branch on Nov 25, 2022
+# Version: Commits on Nov 25, 2022 (branch@mobile_hacks)
 HLSDK_XASH3D_VERSION = 568a83008358c0ac056eaf855a575310ee042b81
 HLSDK_XASH3D_SITE = $(call github,FWGS,hlsdk-portable,$(HLSDK_XASH3D_VERSION))
 HLSDK_XASH3D_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf libsodium

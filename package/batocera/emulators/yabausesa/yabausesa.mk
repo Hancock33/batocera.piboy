@@ -3,7 +3,7 @@
 # yabausesa
 #
 ################################################################################
-# Version: Commits on Jun 18, 2022 (pi4 branch)
+# Version: Commits on Jun 18, 2022 (branch@pi4-1-9-0)
 YABAUSESA_VERSION = c7618d2ecbf77b1e8188fa8af4fa1cfb34833a72
 YABAUSESA_SITE = https://github.com/devmiyax/yabause.git
 YABAUSESA_SITE_METHOD=git
