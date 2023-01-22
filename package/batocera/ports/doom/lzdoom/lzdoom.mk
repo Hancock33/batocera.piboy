@@ -3,7 +3,7 @@
 # lzdoom
 #
 ################################################################################
-# Version: Commits on Apr 13, 2022 (g3.3mgw branch)
+# Version: Commits on Apr 13, 2022 (branch@g3.3mgw)
 LZDOOM_VERSION = 43e444889953e99a5b42d7c87ce67dfd351b696a
 LZDOOM_SITE = $(call github,drfrag666,gzdoom,$(LZDOOM_VERSION))
 LZDOOM_LICENSE = GPL-3.0
