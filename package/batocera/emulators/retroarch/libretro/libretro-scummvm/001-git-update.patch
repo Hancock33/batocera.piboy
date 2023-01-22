@@ -1,0 +1,7 @@
+diff --git a/scummvm b/scummvm
+index e4401d4..b46a044 160000
+--- a/scummvm
++++ b/scummvm
+@@ -1 +1 @@
+-Subproject commit e4401d497b8ee48967429672108e010332165170
++Subproject commit b46a044bc5ab6713924b1d2626cd1ac6e68ff040
