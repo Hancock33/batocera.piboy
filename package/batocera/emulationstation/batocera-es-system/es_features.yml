@@ -39,7 +39,7 @@ shared:
         "Custom":        "custom"
     rewind:
       prompt: REWIND
-      description: Store past states to rewind to in realtime, if the core supports it.
+      description: Store past states to rewind to in real-time, if the core supports it.
       choices:
         "On":  1
         "Off": 0
@@ -426,7 +426,7 @@ libretro:
                     atari800_opt2:
                         group: CONTROLLER SETTINGS
                         prompt:      JOYSTICK HACK (FOR ROBOTRON 2084)
-                        description: Treats the right analog stick as the second joystick.
+                        description: Treats the right analogue stick as the second joystick.
                         choices:
                             "Off":     disabled
                             "On":      enabled
@@ -436,8 +436,7 @@ libretro:
       cfeatures:
           beetle-saturn_crosshair:
                 group: LIGHT GUN
-                prompt:      SHOW LIGHT GUN CROSSHAIRS
-                description: Show crosshairs in game
+                prompt:      LIGHT GUN CROSSHAIR
                 choices:
                     "Cross": "Cross"
                     "Dot": "Dot"
@@ -1024,7 +1023,7 @@ libretro:
                 prompt:      CPU CORE METHOD
                 description: Affects efficiency/stability.
                 choices:
-                    "Optimized (auto)":                             automatic
+                    "Optimised (auto)":                             automatic
                     "Dynamic (fast)":                               dynamic
                     "Normal (interpreter)":                         normal
                     "Simple (interpreter for old real-mode games)": simple
@@ -1124,8 +1123,8 @@ libretro:
                     "Off":                            "false"
             pure_joystick_analog_deadzone:
                 group: CONTROLLER SETTINGS
-                prompt:      ANALOG JOYSTICK DEADZONE
-                description: Set the deadzone of the joystick analog sticks.
+                prompt:      ANALOGUE JOYSTICK DEADZONE
+                description: Set the deadzone of the joystick analogue sticks.
                 choices:
                     "0%":                  0
                     "5%":                  5
@@ -1388,7 +1387,6 @@ libretro:
             fbneo-lightgun-hide-crosshair:
                 group: LIGHT GUN
                 prompt:      SHOW LIGHT GUN CROSSHAIRS
-                description: Show crosshairs in game
                 choices:
                     "Off":                                disabled
                     "On":                                 enabled
@@ -1670,8 +1668,8 @@ libretro:
                             "Vertical":   vertical
                     analog_to_dpad_atomiswave_p1:
                         group:       CONTROLLER SETTINGS
-                        prompt:      ANALOG TO D-PAD TYPE P1
-                        description: Adds d-pad mapping to the analog stick (Controller 1).
+                        prompt:      ANALOGUE TO D-PAD TYPE P1
+                        description: Adds d-pad mapping to the analogue stick (Controller 1).
                         choices:
                             "Left Analog (Auto)":    1
                             "Right Analog (Auto)":   2
@@ -1679,8 +1677,8 @@ libretro:
                             "Right Analog (Forced)": 4
                     analog_to_dpad_atomiswave_p2:
                         group:       CONTROLLER SETTINGS
-                        prompt:      ANALOG TO D-PAD TYPE P2
-                        description: Adds d-pad mapping to the analog stick (Controller 2).
+                        prompt:      ANALOGUE TO D-PAD TYPE P2
+                        description: Adds d-pad mapping to the analogue stick (Controller 2).
                         choices:
                             "Left Analog (Auto)":    1
                             "Right Analog (Auto)":   2
@@ -1696,8 +1694,8 @@ libretro:
                             "Vertical":   vertical
                     analog_to_dpad_naomi_p1:
                         group:       CONTROLLER SETTINGS
-                        prompt:      ANALOG TO D-PAD TYPE P1
-                        description: Adds d-pad mapping to the analog stick (Controller 1).
+                        prompt:      ANALOGUE TO D-PAD TYPE P1
+                        description: Adds d-pad mapping to the analogue stick (Controller 1).
                         choices:
                             "Left Analog (Auto)":    1
                             "Right Analog (Auto)":   2
@@ -1705,8 +1703,8 @@ libretro:
                             "Right Analog (Forced)": 4
                     analog_to_dpad_naomi_p2:
                         group:       CONTROLLER SETTINGS
-                        prompt:      ANALOG TO D-PAD TYPE P2
-                        description: Adds d-pad mapping to the analog stick (Controller 2).
+                        prompt:      ANALOGUE TO D-PAD TYPE P2
+                        description: Adds d-pad mapping to the analogue stick (Controller 2).
                         choices:
                             "Left Analog (Auto)":    1
                             "Right Analog (Auto)":   2
@@ -1722,8 +1720,8 @@ libretro:
                             "Vertical":   vertical
                     analog_to_dpad_naomi_p1:
                         group:       CONTROLLER SETTINGS
-                        prompt:      ANALOG TO D-PAD TYPE P1
-                        description: Adds d-pad mapping to the analog stick (Controller 1).
+                        prompt:      ANALOGUE TO D-PAD TYPE P1
+                        description: Adds d-pad mapping to the analogue stick (Controller 1).
                         choices:
                             "Left Analog (Auto)":    1
                             "Right Analog (Auto)":   2
@@ -1731,8 +1729,8 @@ libretro:
                             "Right Analog (Forced)": 4
                     analog_to_dpad_naomi_p2:
                         group:       CONTROLLER SETTINGS
-                        prompt:      ANALOG TO D-PAD TYPE P2
-                        description: Adds d-pad mapping to the analog stick (Controller 2).
+                        prompt:      ANALOGUE TO D-PAD TYPE P2
+                        description: Adds d-pad mapping to the analogue stick (Controller 2).
                         choices:
                             "Left Analog (Auto)":    1
                             "Right Analog (Auto)":   2
@@ -1922,8 +1920,8 @@ libretro:
                             "Vertical":   vertical
                     analog_to_dpad_atomiswave_p1:
                         group:       CONTROLLER SETTINGS
-                        prompt:      ANALOG TO D-PAD TYPE P1
-                        description: Adds d-pad mapping to the analog stick (Controller 1).
+                        prompt:      ANALOGUE TO D-PAD TYPE P1
+                        description: Adds d-pad mapping to the analogue stick (Controller 1).
                         choices:
                             "Left Analog (Auto)":    1
                             "Right Analog (Auto)":   2
@@ -1931,8 +1929,8 @@ libretro:
                             "Right Analog (Forced)": 4
                     analog_to_dpad_atomiswave_p2:
                         group:       CONTROLLER SETTINGS
-                        prompt:      ANALOG TO D-PAD TYPE P2
-                        description: Adds d-pad mapping to the analog stick (Controller 2).
+                        prompt:      ANALOGUE TO D-PAD TYPE P2
+                        description: Adds d-pad mapping to the analogue stick (Controller 2).
                         choices:
                             "Left Analog (Auto)":    1
                             "Right Analog (Auto)":   2
@@ -1948,8 +1946,8 @@ libretro:
                             "Vertical":   vertical
                     analog_to_dpad_naomi_p1:
                         group:       CONTROLLER SETTINGS
-                        prompt:      ANALOG TO D-PAD TYPE P1
-                        description: Adds d-pad mapping to the analog stick (Controller 1).
+                        prompt:      ANALOGUE TO D-PAD TYPE P1
+                        description: Adds d-pad mapping to the analogue stick (Controller 1).
                         choices:
                             "Left Analog (Auto)":    1
                             "Right Analog (Auto)":   2
@@ -1957,8 +1955,8 @@ libretro:
                             "Right Analog (Forced)": 4
                     analog_to_dpad_naomi_p2:
                         group:       CONTROLLER SETTINGS
-                        prompt:      ANALOG TO D-PAD TYPE P2
-                        description: Adds d-pad mapping to the analog stick (Controller 2).
+                        prompt:      ANALOGUE TO D-PAD TYPE P2
+                        description: Adds d-pad mapping to the analogue stick (Controller 2).
                         choices:
                             "Left Analog (Auto)":    1
                             "Right Analog (Auto)":   2
@@ -1974,8 +1972,8 @@ libretro:
                             "Vertical":   vertical
                     analog_to_dpad_naomi_p1:
                         group:       CONTROLLER SETTINGS
-                        prompt:      ANALOG TO D-PAD TYPE P1
-                        description: Adds d-pad mapping to the analog stick (Controller 1).
+                        prompt:      ANALOGUE TO D-PAD TYPE P1
+                        description: Adds d-pad mapping to the analogue stick (Controller 1).
                         choices:
                             "Left Analog (Auto)":    1
                             "Right Analog (Auto)":   2
@@ -1983,8 +1981,8 @@ libretro:
                             "Right Analog (Forced)": 4
                     analog_to_dpad_naomi_p2:
                         group:       CONTROLLER SETTINGS
-                        prompt:      ANALOG TO D-PAD TYPE P2
-                        description: Adds d-pad mapping to the analog stick (Controller 2).
+                        prompt:      ANALOGUE TO D-PAD TYPE P2
+                        description: Adds d-pad mapping to the analogue stick (Controller 2).
                         choices:
                             "Left Analog (Auto)":    1
                             "Right Analog (Auto)":   2
@@ -2183,7 +2181,6 @@ libretro:
                     gun_cursor_md:
                         group: LIGHT GUN
                         prompt:      SHOW LIGHT GUN CROSSHAIRS
-                        description: Show crosshairs in game
                         choices:
                             "Off":        disabled
                             "On":         enabled
@@ -2285,7 +2282,6 @@ libretro:
                     gun_cursor_ms:
                         group: LIGHT GUN
                         prompt:      SHOW LIGHT GUN CROSSHAIRS
-                        description: Show crosshairs in game
                         choices:
                             "Off":        disabled
                             "On":         enabled
@@ -2490,7 +2486,7 @@ libretro:
             artworkcrop:
                 group: ADVANCED OPTIONS
                 prompt:      CROP ARTWORK
-                description: Crop MAME artwork to maximize the game screen and only fill unused space.
+                description: Crop MAME artwork to maximise the game screen and only fill unused space.
                 choices:
                     "On (Default)": 1
                     "Off":          0
@@ -3562,7 +3558,7 @@ libretro:
             artworkcrop:
                 group: ADVANCED OPTIONS
                 prompt:      CROP ARTWORK
-                description: Crop MAME artwork to maximize the game screen and only fill unused space.
+                description: Crop MAME artwork to maximise the game screen and only fill unused space.
                 choices:
                     "On":            1
                     "Off (Default)": 0
@@ -5371,7 +5367,7 @@ libretro:
       cfeatures:
             scummvm_analog_deadzone:
                 group: CONTROLLER SETTINGS
-                prompt:      ANALOG DEADZONE
+                prompt:      ANALOGUE DEADZONE
                 description: Use to eliminate cursor drift/unwanted input.
                 choices:
                     "0%":         0
@@ -5469,7 +5465,6 @@ libretro:
             superscope_crosshair:
                 group: LIGHT GUN
                 prompt:      SHOW LIGHT GUN CROSSHAIRS
-                description: Show crosshairs in game
                 choices:
                     "Off":                                disabled
                     "On":                                 enabled
@@ -5688,7 +5683,7 @@ libretro:
                             "10": 10
                     gyro_sensitivity:
                         prompt:      SENSOR SENSITIVITY (GYROSCOPE)
-                        description: For Gyro-enabled games (bound to left analog stick)
+                        description: For Gyro-enabled games (bound to left analogue stick)
                         choices:
                             "10":  10
                             "15":  15
@@ -5715,7 +5710,7 @@ libretro:
                             "120": 120
                     tilt_sensitivity:
                         prompt:      SENSOR SENSITIVITY (TILT)
-                        description: For Gyro-enabled games (bound to right analog stick)
+                        description: For Gyro-enabled games (bound to right analogue stick)
                         choices:
                             "10":  10
                             "15":  15
@@ -6353,7 +6348,7 @@ libretro:
       cfeatures:
             boom3_invertctl:
                 prompt:      INVERT CONTROLS
-                description: Invert the gamepad right analog stick's Y axis.
+                description: Invert the gamepad right analogue stick's Y axis.
                 choices:
                     "Off":  disabled
                     "On" :  enabled
@@ -6363,7 +6358,7 @@ libretro:
       cfeatures:
             boom3_invertctl:
                 prompt:      INVERT CONTROLS
-                description: Invert the gamepad right analog stick's Y axis.
+                description: Invert the gamepad right analogue stick's Y axis.
                 choices:
                     "Off":  disabled
                     "On" :  enabled
@@ -6373,7 +6368,7 @@ libretro:
       cfeatures:
             vitaquake3_invertctl:
                 prompt:      INVERT CONTROLS
-                description: Invert the gamepad right analog stick's Y axis.
+                description: Invert the gamepad right analogue stick's Y axis.
                 choices:
                     "Off":  disabled
                     "On" :  enabled
@@ -6971,7 +6966,7 @@ dolphin:
                     "On": 1
             controller_mode:
                 group: CONTROLLER SETTINGS
-                prompt:      CUSTOMIZE WIIMOTE & GAMEPAD
+                prompt:      CUSTOMISE EMULATED WIIMOTE & GAMEPAD
                 description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
                 choices:
                     "Off":                       disabled
@@ -6983,7 +6978,6 @@ dolphin:
             dolphin-lightgun-hide-crosshair:
                 group: LIGHT GUN
                 prompt:      SHOW LIGHT GUN CROSSHAIRS
-                description: Show crosshairs in game
                 choices:
                     "Off": 0
                     "On":  1
@@ -7005,7 +6999,7 @@ dolphin:
                     "On": 1
             controller_mode:
                 group: CONTROLLER SETTINGS
-                prompt:      CUSTOMIZE WIIMOTE & GAMEPAD
+                prompt:      CUSTOMISE EMULATED WIIMOTE & GAMEPAD
                 description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
                 choices:
                     "Off":                       disabled
@@ -7017,7 +7011,6 @@ dolphin:
             dolphin-lightgun-hide-crosshair:
                 group: LIGHT GUN
                 prompt:      SHOW LIGHT GUN CROSSHAIRS
-                description: Show crosshairs in game
                 choices:
                     "Off": 0
                     "On":  1
