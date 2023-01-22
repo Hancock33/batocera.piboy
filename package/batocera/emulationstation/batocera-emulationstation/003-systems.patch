@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index eba3405e..9399d2d0 100644
+index eba3405e..62f2d4aa 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,179 +9,271 @@ namespace PlatformIds
+@@ -9,179 +9,274 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -157,6 +157,7 @@ index eba3405e..9399d2d0 100644
 -		{ "gameandwatch",			NINTENDO_GAME_AND_WATCH },
 -		{ "pc",						PC },
 +		{ "wii",					NINTENDO_WII },
++		{ "wiiware",				NINTENDO_WII },
 +		{ "wiiu",					NINTENDO_WII_U },
 +		{ "nmk",					NMK },
 +		{ "ngage",					NOKIA_NGAGE },
@@ -310,6 +311,7 @@ index eba3405e..9399d2d0 100644
 +		{ "mrboom",					MRBOOM },
 +		{ "n3ds",					NINTENDO_3DS },
  		{ "oricatmos",				ORICATMOS },
++		{ "mu",	    				PALMOS },
 +		{ "dos",		    		PC },		
 +		{ "prboom",					PRBOOM },
  		{ "tyrquake",				QUAKE },
@@ -394,6 +396,7 @@ index eba3405e..9399d2d0 100644
 -		{ "wasm4",					WASM4 },
 +		{ "pcengine",				TURBOGRAFX_16 },
 +		{ "pcenginecd",				TURBOGRAFX_CD },
++		{ "tg-cd",					TURBOGRAFX_CD },
 +		{ "vic20",					VIC20 },
 +		{ "videopac",				VIDEOPAC_ODYSSEY2 },
 +		{ "odyssey2",				VIDEOPAC_ODYSSEY2 },
