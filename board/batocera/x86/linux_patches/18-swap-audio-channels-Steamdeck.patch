@@ -1,0 +1,18 @@
+diff --git a/sound/soc/amd/vangogh/acp5x-mach.c b/sound/soc/amd/vangogh/acp5x-mach.c
+index eebf2650ad27..8b8b4e21313e 100644
+--- a/sound/soc/amd/vangogh/acp5x-mach.c
++++ b/sound/soc/amd/vangogh/acp5x-mach.c
+@@ -212,11 +212,11 @@ static const struct snd_soc_ops acp5x_cs35l41_play_ops = {
+ 
+ static struct snd_soc_codec_conf cs35l41_conf[] = {
+ 	{
+-		.dlc = COMP_CODEC_CONF("spi-VLV1776:00"),
++		.dlc = COMP_CODEC_CONF("spi-VLV1776:01"),
+ 		.name_prefix = "Left",
+ 	},
+ 	{
+-		.dlc = COMP_CODEC_CONF("spi-VLV1776:01"),
++		.dlc = COMP_CODEC_CONF("spi-VLV1776:00"),
+ 		.name_prefix = "Right",
+ 	},
+ };
