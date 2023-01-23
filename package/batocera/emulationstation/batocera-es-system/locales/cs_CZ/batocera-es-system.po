@@ -69,10 +69,8 @@ msgstr "Vlastní"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "Store past states to rewind to in realtime, if the core supports it."
+msgid "Store past states to rewind to in real-time, if the core supports it."
 msgstr ""
-"Uložení minulých pozic pro přetáčení v reálném čase, pokud to jádro "
-"podporuje."
 
 #. TRANSLATION: shared, duckstation
 msgctxt "game_options"
@@ -505,8 +503,8 @@ msgstr "INTERNÍ ROZLIŠENÍ"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
-msgid "Treats the right analog stick as the second joystick."
-msgstr "Zachází s pravou analogovou páčkou jako s druhým joystickem."
+msgid "Treats the right analogue stick as the second joystick."
+msgstr ""
 
 #. TRANSLATION: libretro/atari800, libretro/beetle-saturn, libretro/beetle-saturn, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
@@ -518,15 +516,10 @@ msgctxt "game_options"
 msgid "JOYSTICK HACK (FOR ROBOTRON 2084)"
 msgstr "HACK JOYSTICKU (PRO ROBOTRON 2084)"
 
-#. TRANSLATION: libretro/beetle-saturn, libretro/fbneo, libretro/genesisplusgx, libretro/genesisplusgx, libretro/snes9x, ...
+#. TRANSLATION: libretro/beetle-saturn
 msgctxt "game_options"
-msgid "Show crosshairs in game"
-msgstr "Zobrazení zaměřovacího kříže ve hře"
-
-#. TRANSLATION: libretro/beetle-saturn, libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, ...
-msgctxt "game_options"
-msgid "SHOW LIGHT GUN CROSSHAIRS"
-msgstr "ZOBRAZIT ZAMĚŘOVACÍ KŘÍŽ SVĚTELNÉ ZBRANĚ"
+msgid "LIGHT GUN CROSSHAIR"
+msgstr ""
 
 #. TRANSLATION: libretro/beetle-saturn
 msgctxt "game_options"
@@ -1480,8 +1473,8 @@ msgstr "METODA JÁDRA CPU"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "Optimized (auto)"
-msgstr "Optimalizováno (auto)"
+msgid "Optimised (auto)"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -1855,13 +1848,13 @@ msgstr "Zapnout se zprávou o detekci hry"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "Set the deadzone of the joystick analog sticks."
-msgstr "Nastavení mrtvé zóny analogových páček joysticku."
+msgid "Set the deadzone of the joystick analogue sticks."
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "ANALOG JOYSTICK DEADZONE"
-msgstr "MRTVÁ ZÓNA ANALOG. JOSTICKU"
+msgid "ANALOGUE JOYSTICK DEADZONE"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -2058,6 +2051,11 @@ msgstr "TAKT CPU"
 msgctxt "game_options"
 msgid "No skipping"
 msgstr "Žádné přeskakování"
+
+#. TRANSLATION: libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia, ...
+msgctxt "game_options"
+msgid "SHOW LIGHT GUN CROSSHAIRS"
+msgstr "ZOBRAZIT ZAMĚŘOVACÍ KŘÍŽ SVĚTELNÉ ZBRANĚ"
 
 #. TRANSLATION: libretro/fbneo, libretro/mame078plus
 msgctxt "game_options"
@@ -2377,12 +2375,12 @@ msgstr "ORIENTACE OBRAZOVKY"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
-msgid "Adds d-pad mapping to the analog stick (Controller 1)."
+msgid "Adds d-pad mapping to the analogue stick (Controller 1)."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
-msgid "ANALOG TO D-PAD TYPE P1"
+msgid "ANALOGUE TO D-PAD TYPE P1"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
@@ -2407,12 +2405,12 @@ msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
-msgid "Adds d-pad mapping to the analog stick (Controller 2)."
+msgid "Adds d-pad mapping to the analogue stick (Controller 2)."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
-msgid "ANALOG TO D-PAD TYPE P2"
+msgid "ANALOGUE TO D-PAD TYPE P2"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
@@ -3016,10 +3014,8 @@ msgstr "Zapnout (Výchozí)"
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid ""
-"Crop MAME artwork to maximize the game screen and only fill unused space."
+"Crop MAME artwork to maximise the game screen and only fill unused space."
 msgstr ""
-"Ořízne grafiku MAME tak, aby se maximalizovala herní obrazovka a vyplnilo se "
-"pouze nevyužité místo."
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -5867,8 +5863,8 @@ msgstr "Použít k eliminaci posunu kurzoru/nežádoucího vstupu."
 
 #. TRANSLATION: libretro/scummvm
 msgctxt "game_options"
-msgid "ANALOG DEADZONE"
-msgstr "ANALOGOVÁ MRTVÁ ZÓNA"
+msgid "ANALOGUE DEADZONE"
+msgstr ""
 
 #. TRANSLATION: libretro/scummvm
 msgctxt "game_options"
@@ -6305,8 +6301,8 @@ msgstr "Pouze pro hry, které ji využívaly (pro Boktai)"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
-msgid "For Gyro-enabled games (bound to left analog stick)"
-msgstr "Pro hry s gyroskopem (na levou analogovou páčku)"
+msgid "For Gyro-enabled games (bound to left analogue stick)"
+msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -6315,8 +6311,8 @@ msgstr "CITLIVOST SENZORU (GYROSKOP)"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
-msgid "For Gyro-enabled games (bound to right analog stick)"
-msgstr "Pro hry s gyroskopem (na pravou analogovou páčku)"
+msgid "For Gyro-enabled games (bound to right analogue stick)"
+msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -6675,7 +6671,7 @@ msgstr "Umožňuje použití až 7 nebo 12 ovladačů v podporovaných hrách."
 
 #. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
 msgctxt "game_options"
-msgid "Invert the gamepad right analog stick's Y axis."
+msgid "Invert the gamepad right analogue stick's Y axis."
 msgstr ""
 
 #. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
@@ -7471,8 +7467,8 @@ msgstr "EMULOVAT WIIMOTE"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "CUSTOMIZE WIIMOTE & GAMEPAD"
-msgstr "PŘIZPŮSOBENÍ WIIMOTE A GAMEPADU"
+msgid "CUSTOMISE EMULATED WIIMOTE & GAMEPAD"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -11289,6 +11285,55 @@ msgstr ""
 msgctxt "game_options"
 msgid "USE COMPUTE SHADER"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "Store past states to rewind to in realtime, if the core supports it."
+#~ msgstr ""
+#~ "Uložení minulých pozic pro přetáčení v reálném čase, pokud to jádro "
+#~ "podporuje."
+
+#~ msgctxt "game_options"
+#~ msgid "Treats the right analog stick as the second joystick."
+#~ msgstr "Zachází s pravou analogovou páčkou jako s druhým joystickem."
+
+#~ msgctxt "game_options"
+#~ msgid "Show crosshairs in game"
+#~ msgstr "Zobrazení zaměřovacího kříže ve hře"
+
+#~ msgctxt "game_options"
+#~ msgid "Optimized (auto)"
+#~ msgstr "Optimalizováno (auto)"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the deadzone of the joystick analog sticks."
+#~ msgstr "Nastavení mrtvé zóny analogových páček joysticku."
+
+#~ msgctxt "game_options"
+#~ msgid "ANALOG JOYSTICK DEADZONE"
+#~ msgstr "MRTVÁ ZÓNA ANALOG. JOSTICKU"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Crop MAME artwork to maximize the game screen and only fill unused space."
+#~ msgstr ""
+#~ "Ořízne grafiku MAME tak, aby se maximalizovala herní obrazovka a vyplnilo "
+#~ "se pouze nevyužité místo."
+
+#~ msgctxt "game_options"
+#~ msgid "ANALOG DEADZONE"
+#~ msgstr "ANALOGOVÁ MRTVÁ ZÓNA"
+
+#~ msgctxt "game_options"
+#~ msgid "For Gyro-enabled games (bound to left analog stick)"
+#~ msgstr "Pro hry s gyroskopem (na levou analogovou páčku)"
+
+#~ msgctxt "game_options"
+#~ msgid "For Gyro-enabled games (bound to right analog stick)"
+#~ msgstr "Pro hry s gyroskopem (na pravou analogovou páčku)"
+
+#~ msgctxt "game_options"
+#~ msgid "CUSTOMIZE WIIMOTE & GAMEPAD"
+#~ msgstr "PŘIZPŮSOBENÍ WIIMOTE A GAMEPADU"
 
 #~ msgctxt "game_options"
 #~ msgid "xBRZ"
