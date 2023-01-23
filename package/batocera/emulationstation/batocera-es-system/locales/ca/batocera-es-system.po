@@ -52,7 +52,7 @@ msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "Store past states to rewind to in realtime, if the core supports it."
+msgid "Store past states to rewind to in real-time, if the core supports it."
 msgstr ""
 
 #. TRANSLATION: shared, duckstation
@@ -471,7 +471,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
-msgid "Treats the right analog stick as the second joystick."
+msgid "Treats the right analogue stick as the second joystick."
 msgstr ""
 
 #. TRANSLATION: libretro/atari800, libretro/beetle-saturn, libretro/beetle-saturn, libretro/dolphin, libretro/dolphin, ...
@@ -484,14 +484,9 @@ msgctxt "game_options"
 msgid "JOYSTICK HACK (FOR ROBOTRON 2084)"
 msgstr ""
 
-#. TRANSLATION: libretro/beetle-saturn, libretro/fbneo, libretro/genesisplusgx, libretro/genesisplusgx, libretro/snes9x, ...
+#. TRANSLATION: libretro/beetle-saturn
 msgctxt "game_options"
-msgid "Show crosshairs in game"
-msgstr ""
-
-#. TRANSLATION: libretro/beetle-saturn, libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, ...
-msgctxt "game_options"
-msgid "SHOW LIGHT GUN CROSSHAIRS"
+msgid "LIGHT GUN CROSSHAIR"
 msgstr ""
 
 #. TRANSLATION: libretro/beetle-saturn
@@ -1433,7 +1428,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "Optimized (auto)"
+msgid "Optimised (auto)"
 msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
@@ -1808,12 +1803,12 @@ msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "Set the deadzone of the joystick analog sticks."
+msgid "Set the deadzone of the joystick analogue sticks."
 msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "ANALOG JOYSTICK DEADZONE"
+msgid "ANALOGUE JOYSTICK DEADZONE"
 msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
@@ -2009,6 +2004,11 @@ msgstr ""
 #. TRANSLATION: libretro/fbneo
 msgctxt "game_options"
 msgid "No skipping"
+msgstr ""
+
+#. TRANSLATION: libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia, ...
+msgctxt "game_options"
+msgid "SHOW LIGHT GUN CROSSHAIRS"
 msgstr ""
 
 #. TRANSLATION: libretro/fbneo, libretro/mame078plus
@@ -2328,12 +2328,12 @@ msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
-msgid "Adds d-pad mapping to the analog stick (Controller 1)."
+msgid "Adds d-pad mapping to the analogue stick (Controller 1)."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
-msgid "ANALOG TO D-PAD TYPE P1"
+msgid "ANALOGUE TO D-PAD TYPE P1"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
@@ -2358,12 +2358,12 @@ msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
-msgid "Adds d-pad mapping to the analog stick (Controller 2)."
+msgid "Adds d-pad mapping to the analogue stick (Controller 2)."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
 msgctxt "game_options"
-msgid "ANALOG TO D-PAD TYPE P2"
+msgid "ANALOGUE TO D-PAD TYPE P2"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
@@ -2959,7 +2959,7 @@ msgstr ""
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid ""
-"Crop MAME artwork to maximize the game screen and only fill unused space."
+"Crop MAME artwork to maximise the game screen and only fill unused space."
 msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
@@ -5796,7 +5796,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/scummvm
 msgctxt "game_options"
-msgid "ANALOG DEADZONE"
+msgid "ANALOGUE DEADZONE"
 msgstr ""
 
 #. TRANSLATION: libretro/scummvm
@@ -6228,7 +6228,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
-msgid "For Gyro-enabled games (bound to left analog stick)"
+msgid "For Gyro-enabled games (bound to left analogue stick)"
 msgstr ""
 
 #. TRANSLATION: libretro/vba-m
@@ -6238,7 +6238,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
-msgid "For Gyro-enabled games (bound to right analog stick)"
+msgid "For Gyro-enabled games (bound to right analogue stick)"
 msgstr ""
 
 #. TRANSLATION: libretro/vba-m
@@ -6598,7 +6598,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
 msgctxt "game_options"
-msgid "Invert the gamepad right analog stick's Y axis."
+msgid "Invert the gamepad right analogue stick's Y axis."
 msgstr ""
 
 #. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
@@ -7384,7 +7384,7 @@ msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "CUSTOMIZE WIIMOTE & GAMEPAD"
+msgid "CUSTOMISE EMULATED WIIMOTE & GAMEPAD"
 msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
