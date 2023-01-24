@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jan 23, 2023
-DOSBOX_STAGING_VERSION = 3527865a340fea159db5eaa4d4e5ce965674e592
+DOSBOX_STAGING_VERSION = ee6189c855c4bdc9d0c63ed00b729be75846da11
 DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGING_VERSION))
 DOSBOX_STAGING_DEPENDENCIES = sdl2 sdl2_net fluidsynth zlib libpng libogg libvorbis opus opusfile slirp speexdsp iir
 DOSBOX_STAGING_LICENSE = GPLv2
