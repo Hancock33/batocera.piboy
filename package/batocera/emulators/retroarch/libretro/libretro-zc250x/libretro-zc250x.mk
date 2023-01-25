@@ -3,8 +3,8 @@
 # libretro-zc250x
 #
 ################################################################################
-# Version: Commits on Jan 22, 2023
-LIBRETRO_ZC250X_VERSION = b57baa492a64cf2c9fd75d7132450af6f3fe4fab
+# Version: Commits on Jan 25, 2023
+LIBRETRO_ZC250X_VERSION = cfe8da6aa8714f2a77dba81026a5a5560bc70ad6
 LIBRETRO_ZC250X_SITE = https://github.com/netux79/zc250x-libretro.git
 LIBRETRO_ZC250X_SITE_METHOD=git
 LIBRETRO_ZC250X_GIT_SUBMODULES=YES
