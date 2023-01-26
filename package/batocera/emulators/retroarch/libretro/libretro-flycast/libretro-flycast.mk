@@ -3,8 +3,8 @@
 # libretro-flycast
 #
 ################################################################################
-# Version: Commits on Jan 24, 2023
-LIBRETRO_FLYCAST_VERSION = f7e227a4aaca6ec359f29f6987e0630d0aaad9e2
+# Version: Commits on Jan 21, 2023
+LIBRETRO_FLYCAST_VERSION = 80cf4406a7d00c49d220749d7269ef61753266f3
 LIBRETRO_FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 LIBRETRO_FLYCAST_SITE_METHOD=git
 LIBRETRO_FLYCAST_GIT_SUBMODULES=YES
