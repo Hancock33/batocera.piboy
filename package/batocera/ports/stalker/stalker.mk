@@ -3,8 +3,8 @@
 # stalker
 #
 ################################################################################
-# Version: Commits on Jan 26, 2023
-STALKER_VERSION = 50907a906c939212ef8979d634c5e6a2d2fa3e06
+# Version: Commits on Jan 28, 2023
+STALKER_VERSION = a4fe481b501546170c4a0550211645c1be888732
 STALKER_SITE = https://github.com/OpenXRay/xray-16.git
 STALKER_SITE_METHOD=git
 STALKER_GIT_SUBMODULES=YES
@@ -15,7 +15,13 @@ STALKER_LICENSE = GPL-2.0
 STALKER_SUPPORTS_IN_SOURCE_BUILD = NO
 STALKER_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 STALKER_CONF_OPTS += -DSDL2=ON
-STALKER_CONF_OPTS += -DCMAKE_C_FLAGS="-O3 -pipe"
-STALKER_CONF_OPTS += -DCMAKE_CXX_FLAGS="-O3 -pipe"
+
+define STALKER_EVMAPY
+	# evmap config
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stalker/stalker.keys $(TARGET_DIR)/usr/share/evmapy
+endef
+
+STALKER_POST_INSTALL_TARGET_HOOKS += STALKER_EVMAPY
 
 $(eval $(cmake-package))

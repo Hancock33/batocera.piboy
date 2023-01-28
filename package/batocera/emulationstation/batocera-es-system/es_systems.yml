@@ -4006,6 +4006,19 @@ spacecadetpinball:
     spacecadetpinball:
       spacecadetpinball: { requireAnyOf: [BR2_PACKAGE_SPACECADETPINBALL] }
 
+stalker:
+  name:                 S.T.A.L.K.E.R.
+  manufacturer:         Ports
+  release:              2009
+  hardware:             port
+  extensions:           [cop,cs]
+  platform:             pc
+  group:                ports
+  path:                 /userdata/roms/ports/stalker
+  emulators:
+    stalker:
+      stalker:              { requireAnyOf: [BR2_PACKAGE_STALKER] }
+
 stk:
   name:                 Super Tux Kart
   manufacturer:         Ports

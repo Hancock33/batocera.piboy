@@ -801,6 +801,9 @@ steam:
 stk:
   emulator: stk
   core:     stk
+stalker:
+  emulator: stalker
+  core:     stalker
 stuntcar:
   emulator: stuntcar
   core:     stuntcar

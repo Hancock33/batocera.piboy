@@ -1240,12 +1240,13 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_SPACECADETPINBALL        if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Space Cadet Pinball
     select BR2_PACKAGE_SRB2                     if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Sonic Robo Blast 2
     select BR2_PACKAGE_SRB2KART                 if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Sonic Robo Blast 2 Kart
+    select BR2_PACKAGE_STALKER                  if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                           # S.T.A.L.K.E.R.
     select BR2_PACKAGE_STK                      if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # SuperTuxKart
     select BR2_PACKAGE_STUNTCAR                 if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Stunt Car Racer
     select BR2_PACKAGE_SUPERTUX2                if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Super Tux2 (Mario Land Clone)
     select BR2_PACKAGE_TEKWAR                   if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Tekwar
     select BR2_PACKAGE_VCMI                     if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Heroes of Might and Magic III
-    #select BR2_PACKAGE_XBOX_XCLOUD_CLIENT       if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                           # Xbox Cloud Gaming
+    #select BR2_PACKAGE_XBOX_XCLOUD_CLIENT      if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                           # Xbox Cloud Gaming
 
     help
         Emulators under development (Experimental)
