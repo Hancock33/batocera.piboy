@@ -1,0 +1,33 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 7caceb465..34acf23d7 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -195,17 +195,17 @@ endif()
+ 
+ option(XRAY_USE_DEFAULT_LINKER "Don't select linker, use system default." OFF)
+ 
+-if (NOT XRAY_LINKER AND NOT XRAY_USE_DEFAULT_LINKER AND NOT APPLE) # XXX: check if we can remove check for Apple
+-    include(CheckCXXCompilerFlag)
+-    CHECK_CXX_COMPILER_FLAG("-fuse-ld=gold" GOLD_LINKER_AVAILABLE)
+-    CHECK_CXX_COMPILER_FLAG("-fuse-ld=lld" LLD_LINKER_AVAILABLE)
+-
+-    if (CMAKE_CXX_COMPILER_ID MATCHES "Clang" AND LLD_LINKER_AVAILABLE)
+-        set(XRAY_LINKER "lld" CACHE STRING "" FORCE)
+-    elseif (GOLD_LINKER_AVAILABLE)
+-        set(XRAY_LINKER "gold" CACHE STRING "" FORCE)
+-    endif()
+-endif()
++#if (NOT XRAY_LINKER AND NOT XRAY_USE_DEFAULT_LINKER AND NOT APPLE) # XXX: check if we can remove check for Apple
++#    include(CheckCXXCompilerFlag)
++#    CHECK_CXX_COMPILER_FLAG("-fuse-ld=gold" GOLD_LINKER_AVAILABLE)
++#    CHECK_CXX_COMPILER_FLAG("-fuse-ld=lld" LLD_LINKER_AVAILABLE)
++#
++#    if (CMAKE_CXX_COMPILER_ID MATCHES "Clang" AND LLD_LINKER_AVAILABLE)
++#        set(XRAY_LINKER "lld" CACHE STRING "" FORCE)
++#    elseif (GOLD_LINKER_AVAILABLE)
++#        set(XRAY_LINKER "gold" CACHE STRING "" FORCE)
++#    endif()
++#endif()
+ 
+ if (XRAY_LINKER AND NOT XRAY_USE_DEFAULT_LINKER)
+     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fuse-ld=${XRAY_LINKER}")

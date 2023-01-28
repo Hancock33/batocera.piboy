@@ -10889,7 +10889,7 @@ msgctxt "game_options"
 msgid "SKIP INTRO VIDEOS"
 msgstr ""
 
-#. TRANSLATION: eduke32, ionfury, raze, sm64
+#. TRANSLATION: eduke32, ionfury, raze, sm64, stalker
 msgctxt "game_options"
 msgid "Show (Default)"
 msgstr ""
@@ -11047,6 +11047,11 @@ msgstr ""
 #. TRANSLATION: sm64
 msgctxt "game_options"
 msgid "SHOW CHEATS MENU"
+msgstr ""
+
+#. TRANSLATION: stalker
+msgctxt "game_options"
+msgid "SKIP SPLASH SCREEN"
 msgstr ""
 
 #. TRANSLATION: virtualjaguar
