@@ -31,6 +31,7 @@
 - Automatically recenter 16:9 bezels for a better rendition on 16:10 and 5:3 screens (SteamDeck and other handheld devices)
 - Added the initial Radxa RockPi 5b board support - thanks @stvhay for your persistence & hard work!
 - Retroachievements for Arduboy and WASM4
+- Added RPI2, RPI3_32Bits and RPIZero2 support in bcm2836 image
 ### Changed
 - move to pipewire wireplumber audio
 - bluetooth modes : automatic and manual (via a list)
@@ -93,7 +94,7 @@
 - switchres to sep 25th 2022 build
 - lr-mame to v0.251
 - retroarch to v1.14.0
-- libretro cores synced with retroarch v1.11.1 [#7245](https://github.com/batocera-linux/batocera.linux/pull/7245)
+- libretro cores update
 - libretro-core-info to Oct 04 2022 build
 - retroarch-assets to Oct 24 2022 build
 - common-shaders to Apr 16 2022 build
@@ -132,6 +133,7 @@
 ### Dev  
 - buildroot upgrade to 2022.11.x
 - odroidxu4 upgrade kernel to 6.1.6
+- raspberrypi upgrade kernel to 6.1.8
 - rpi1 image renamed to bcm2835
 - rpi2 image renamed to bcm2836
 - rpi3 image renamed to bcm2837
@@ -142,7 +144,7 @@
 - rtl8723ds update to Nov 4, 2022
 - rtl8812au update to Nov 16, 2022
 - rtl8188fu update to Nov 1, 2022
-- mesa3d update to 22.3.3
+- mesa3d update to 22.3.4
 - uinput-joystick update to Feb 11, 2022
 - firmware-orangepi update to Jan 13, 2023
 - The build of RG552 has been added to RK3399
