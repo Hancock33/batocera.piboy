@@ -3,7 +3,8 @@
 # bauh
 #
 ################################################################################
-BAUH_VERSION = 0.9.25
+# Version: Commits on Dec 17, 2022
+BAUH_VERSION = 0.10.5
 BAUH_SITE =  $(call github,vinifmor,bauh,$(BAUH_VERSION))
 BAUH_SETUP_TYPE = setuptools
 
