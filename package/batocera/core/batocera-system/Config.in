@@ -110,6 +110,7 @@ config BR2_PACKAGE_BATOCERA_VULKAN
 	bool "batocera.linux Vulkan support"
 
 	# Vulkan headers, loaders, SPIR-V, glsLang
+	select BR2_PACKAGE_WAYLAND
 	select BR2_PACKAGE_VULKAN_TOOLS
 	select BR2_PACKAGE_SPIRV_TOOLS
 
