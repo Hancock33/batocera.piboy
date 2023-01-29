@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jan 14, 2023
-WILDMIDI_VERSION = 0.4.5
+WILDMIDI_VERSION = wildmidi-0.4.5
 WILDMIDI_SITE =  $(call github,Mindwerks,wildmidi,$(WILDMIDI_VERSION))
 WILDMIDI_LICENSE = LGPLv3
 WILDMIDI_INSTALL_STAGING = YES
