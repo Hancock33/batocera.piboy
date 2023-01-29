@@ -86,7 +86,7 @@ config BR2_PACKAGE_BATOCERA_CORES_STILL_COMMERCIALIZED
     bool "batocera is limited to abandonned systems"
 
 config BR2_PACKAGE_BATOCERA_SBC_XORG
-    bool "xorg on Single Board Computer
+    bool "xorg on Single Board Computer"
 
 ##########################################
 config BR2_PACKAGE_BATOCERA_MUSIC_SUPPORT
