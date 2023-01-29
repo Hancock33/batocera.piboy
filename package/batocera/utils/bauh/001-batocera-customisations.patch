@@ -1,5 +1,5 @@
 diff --git a/bauh/gems/flatpak/__init__.py b/bauh/gems/flatpak/__init__.py
-index 0f6ec4c..31d32b0 100644
+index a775678b..f56440eb 100644
 --- a/bauh/gems/flatpak/__init__.py
 +++ b/bauh/gems/flatpak/__init__.py
 @@ -9,7 +9,7 @@ from bauh.api.paths import CONFIG_DIR
@@ -12,10 +12,10 @@ index 0f6ec4c..31d32b0 100644
  FLATPAK_CONFIG_DIR = f'{CONFIG_DIR}/flatpak'
  UPDATES_IGNORED_FILE = f'{FLATPAK_CONFIG_DIR}/updates_ignored.txt'
 diff --git a/bauh/gems/flatpak/controller.py b/bauh/gems/flatpak/controller.py
-index d0bff64..9b221c1 100644
+index 53dbaac8..26e8a182 100644
 --- a/bauh/gems/flatpak/controller.py
 +++ b/bauh/gems/flatpak/controller.py
-@@ -378,6 +378,7 @@ class FlatpakManager(SoftwareManager):
+@@ -443,6 +443,7 @@ class FlatpakManager(SoftwareManager, SettingsController):
          if not self.context.root_user:
              flatpak_config = self.configman.get_config()
              install_level = flatpak_config['installation_level']
@@ -24,7 +24,7 @@ index d0bff64..9b221c1 100644
              install_level = 'system'
  
 diff --git a/bauh/view/qt/apps_table.py b/bauh/view/qt/apps_table.py
-index 92afff8..824fdbf 100644
+index 5a75367f..65148333 100644
 --- a/bauh/view/qt/apps_table.py
 +++ b/bauh/view/qt/apps_table.py
 @@ -9,6 +9,7 @@ from PyQt5.QtGui import QPixmap, QIcon, QCursor
@@ -35,7 +35,7 @@ index 92afff8..824fdbf 100644
  
  from bauh.api.abstract.cache import MemoryCache
  from bauh.api.abstract.model import PackageStatus, CustomSoftwareAction
-@@ -521,18 +522,18 @@ class PackagesTable(QTableWidget):
+@@ -518,18 +519,18 @@ class PackagesTable(QTableWidget):
          toolbar.setObjectName('app_actions')
          toolbar.add_space()
  
@@ -66,7 +66,7 @@ index 92afff8..824fdbf 100644
  
          settings = self.has_any_settings(pkg)
  
-@@ -540,32 +541,41 @@ class PackagesTable(QTableWidget):
+@@ -537,32 +538,41 @@ class PackagesTable(QTableWidget):
              def handle_custom_actions():
                  self.show_pkg_actions(pkg)
  
@@ -123,10 +123,10 @@ index 92afff8..824fdbf 100644
          self.setCellWidget(pkg.table_index, col, toolbar)
  
 diff --git a/bauh/view/qt/screenshots.py b/bauh/view/qt/screenshots.py
-index 1f25570..85f1f82 100644
+index 5d52aaf7..86246ec9 100644
 --- a/bauh/view/qt/screenshots.py
 +++ b/bauh/view/qt/screenshots.py
-@@ -77,6 +77,13 @@ class ScreenshotsDialog(QDialog):
+@@ -96,6 +96,13 @@ class ScreenshotsDialog(QDialog):
          self.bt_next.clicked.connect(self.next)
          self.container_buttons.layout().addWidget(self.bt_next)
  
@@ -141,10 +141,10 @@ index 1f25570..85f1f82 100644
  
          self.img_idx = 0
 diff --git a/bauh/view/qt/window.py b/bauh/view/qt/window.py
-index f7064c2..6444fc7 100755
+index 2cb6b538..31b7239c 100755
 --- a/bauh/view/qt/window.py
 +++ b/bauh/view/qt/window.py
-@@ -177,8 +177,8 @@ class ManageWindow(QWidget):
+@@ -189,8 +189,8 @@ class ManageWindow(QWidget):
          self.combo_filter_type.activated.connect(self._handle_type_filter)
          self.combo_filter_type.addItem('--- {} ---'.format(self.i18n['type'].capitalize()), self.any_type_filter)
          self.combo_filter_type.sizePolicy().setRetainSizeWhenHidden(True)
@@ -155,7 +155,7 @@ index f7064c2..6444fc7 100755
  
          self.any_category_filter = 'any'
          self.combo_categories = QComboBox()
-@@ -192,8 +192,8 @@ class ManageWindow(QWidget):
+@@ -204,8 +204,8 @@ class ManageWindow(QWidget):
          self.combo_categories.activated.connect(self._handle_category_filter)
          self.combo_categories.sizePolicy().setRetainSizeWhenHidden(True)
          self.combo_categories.addItem('--- {} ---'.format(self.i18n['category'].capitalize()), self.any_category_filter)
@@ -166,7 +166,7 @@ index f7064c2..6444fc7 100755
  
          self.input_name = QSearchBar(search_callback=self.begin_apply_filters)
          self.input_name.palette().swap(self.combo_categories.palette())
-@@ -202,8 +202,8 @@ class ManageWindow(QWidget):
+@@ -214,8 +214,8 @@ class ManageWindow(QWidget):
          self.input_name.set_tooltip(self.i18n['manage_window.name_filter.tooltip'])
          self.input_name.set_button_tooltip(self.i18n['manage_window.name_filter.button_tooltip'])
          self.input_name.sizePolicy().setRetainSizeWhenHidden(True)
@@ -177,7 +177,7 @@ index f7064c2..6444fc7 100755
  
          self.toolbar_filters.layout().addWidget(new_spacer())
  
-@@ -232,7 +232,7 @@ class ManageWindow(QWidget):
+@@ -244,7 +244,7 @@ class ManageWindow(QWidget):
          toolbar_bts.append(bt_ref)
          self.toolbar_filters.layout().addWidget(bt_ref)
          self.comp_manager.register_component(BT_REFRESH, bt_ref)
@@ -186,7 +186,7 @@ index f7064c2..6444fc7 100755
          self.bt_upgrade = QPushButton()
          self.bt_upgrade.setProperty('root', 'true')
          self.bt_upgrade.setObjectName('bt_upgrade')
-@@ -359,43 +359,66 @@ class ManageWindow(QWidget):
+@@ -374,43 +374,66 @@ class ManageWindow(QWidget):
          self.container_bottom.layout().addWidget(new_spacer())
  
          if config['suggestions']['enabled']:
@@ -285,7 +285,7 @@ index f7064c2..6444fc7 100755
  
          self.layout.addWidget(self.container_bottom)
  
-@@ -437,8 +460,8 @@ class ManageWindow(QWidget):
+@@ -453,8 +476,8 @@ class ManageWindow(QWidget):
  
          self.thread_load_installed = NotifyInstalledLoaded()
          self.thread_load_installed.signal_loaded.connect(self._finish_loading_installed)
@@ -296,7 +296,7 @@ index f7064c2..6444fc7 100755
          self._register_groups()
  
      def _register_groups(self):
-@@ -844,7 +867,8 @@ class ManageWindow(QWidget):
+@@ -871,7 +894,8 @@ class ManageWindow(QWidget):
              if len(self.pkgs) == 0 and len(self.pkgs_available) == 0:
                  self.label_displayed.setText('')
              else:
