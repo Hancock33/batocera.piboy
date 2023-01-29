@@ -3,8 +3,8 @@
 # syncthing
 #
 ################################################################################
-# Version: Commits on Jan 02, 2023
-SYNCTHING_VERSION = v1.23.0
+# Version: Commits on Dec 06, 2022
+SYNCTHING_VERSION = v1.22.2
 SYNCTHING_SITE = $(call github,syncthing,syncthing,$(SYNCTHING_VERSION))
 SYNCTHING_LICENSE = MPLv2
 SYNCTHING_LICENSE_FILES = LICENSE
