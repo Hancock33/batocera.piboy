@@ -6,7 +6,7 @@
 # Wine Mono addon (required)
 WINE_MONO_LUTRIS_VERSION = 7.4.1
 WINE_MONO_LUTRIS_SOURCE = wine-mono-$(WINE_MONO_LUTRIS_VERSION)-x86.tar.xz
-WINE_MONO_LUTRIS_SITE = https://dl.winehq.org/wine/wine-mono/$(WINE_MONO_LUTRIS_VERSION)
+WINE_MONO_LUTRIS_SITE = https://github.com/madewokherd/wine-mono/releases/download/wine-mono-$(WINE_MONO_LUTRIS_VERSION)
 
 # Wine Gecko addon (required)
 #WINE_GECKO_VERSION = 2.47.1
