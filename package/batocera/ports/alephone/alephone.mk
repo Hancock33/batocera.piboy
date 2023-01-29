@@ -19,10 +19,6 @@ ALEPHONE_CONF_OPTS = \
 	                --prefix=/usr \
 	                --without-miniupnpc
 
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
-	ALEPHONE_CONF_OPTS += --without-ffmpeg
-endif
-
 define ALEPHONE_INSTALL_TARGET_CMDS
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) STRIP=/bin/true DESTDIR=$(TARGET_DIR) install
 	# evmap config
