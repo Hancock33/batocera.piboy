@@ -3,8 +3,8 @@
 # python-evdev
 #
 ################################################################################
-# Version: Commits on Jul 17, 2022
-PYTHON_EVDEV_VERSION = 3cd7fbf222dbf3b4ca277d5138eabdb1819faa66
+# Version: Commits on Jan 20, 2023
+PYTHON_EVDEV_VERSION = v1.6.1
 PYTHON_EVDEV_SITE =  $(call github,gvalkov,python-evdev,$(PYTHON_EVDEV_VERSION))
 PYTHON_EVDEV_SETUP_TYPE = setuptools
 
