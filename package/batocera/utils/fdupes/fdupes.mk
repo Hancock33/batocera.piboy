@@ -3,6 +3,7 @@
 # fdupes
 #
 ################################################################################
+# Version: Commits on Sept 09, 2022
 FDUPES_VERSION = v2.2.1
 FDUPES_SITE = $(call github,adrianlopezroche,fdupes,$(FDUPES_VERSION))
 FDUPES_AUTORECONF = YES
