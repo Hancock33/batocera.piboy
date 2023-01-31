@@ -42,7 +42,7 @@ ifeq ($(BR2_arm)$(BR2_aarch64),y)
 									$(@D)/ueagle-atm
 endif
 
-ifeq ($(BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI)$(BR2_PACKAGE_FIRMWARE_WLAN_AML),y)
+ifeq ($(BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI),y)
     ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/brcm
 endif
 
