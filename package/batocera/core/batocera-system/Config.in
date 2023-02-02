@@ -88,6 +88,9 @@ config BR2_PACKAGE_BATOCERA_CORES_STILL_COMMERCIALIZED
 config BR2_PACKAGE_BATOCERA_SBC_XORG
     bool "xorg on Single Board Computer"
 
+config BR2_PACKAGE_BATOCERA_LIB32
+    bool "32bit libraries"
+
 ##########################################
 config BR2_PACKAGE_BATOCERA_MUSIC_SUPPORT
 	bool "batocera.linux music formats support"
@@ -1522,13 +1525,13 @@ config BR2_PACKAGE_BATOCERA_XWAYLAND
     # Xorg emulation layer of Wayland
     select BR2_PACKAGE_XWAYLAND
 	select BR2_PACKAGE_XORG7
-	select BR2_PACKAGE_BATOCERA_DESKTOPAPPS         if !BR2_arm   # batocera applications config and scripts
-	select BR2_PACKAGE_LIBGTK3                      if !BR2_arm   # gtk3 library
-	select BR2_PACKAGE_L3AFPAD                      if !BR2_arm   # gtk3 text editor
-	select BR2_PACKAGE_PCMANFM                      if !BR2_arm   # file manager
-	select BR2_PACKAGE_GVFS                         if !BR2_arm   # file systems (trash, smb, ... in pcmanfm)
-	select BR2_PACKAGE_ADWAITA_ICON_THEME_LIGHT     if !BR2_arm   # theme for file manager
-	select BR2_PACKAGE_XTERM                        if !BR2_arm   # terminal
+	select BR2_PACKAGE_BATOCERA_DESKTOPAPPS         if !BR2_PACKAGE_BATOCERA_LIB32   # batocera applications config and scripts
+	select BR2_PACKAGE_LIBGTK3                      if !BR2_PACKAGE_BATOCERA_LIB32   # gtk3 library
+	select BR2_PACKAGE_L3AFPAD                      if !BR2_PACKAGE_BATOCERA_LIB32   # gtk3 text editor
+	select BR2_PACKAGE_PCMANFM                      if !BR2_PACKAGE_BATOCERA_LIB32   # file manager
+	select BR2_PACKAGE_GVFS                         if !BR2_PACKAGE_BATOCERA_LIB32   # file systems (trash, smb, ... in pcmanfm)
+	select BR2_PACKAGE_ADWAITA_ICON_THEME_LIGHT     if !BR2_PACKAGE_BATOCERA_LIB32   # theme for file manager
+	select BR2_PACKAGE_XTERM                        if !BR2_PACKAGE_BATOCERA_LIB32   # terminal
 
 config BR2_PACKAGE_BATOCERA_XORG
 	bool "batocera.linux xorgs packages selection"
@@ -1542,10 +1545,10 @@ config BR2_PACKAGE_BATOCERA_XORG
 	select BR2_PACKAGE_XLIB_LIBXCOMPOSITE
 
 	# drivers
-	select BR2_PACKAGE_XDRIVER_XF86_INPUT_EVDEV
-	select BR2_PACKAGE_XDRIVER_XF86_INPUT_KEYBOARD
-	select BR2_PACKAGE_XDRIVER_XF86_INPUT_LIBINPUT
-	select BR2_PACKAGE_XDRIVER_XF86_INPUT_SYNAPTICS
+	select BR2_PACKAGE_XDRIVER_XF86_INPUT_EVDEV     if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_XDRIVER_XF86_INPUT_KEYBOARD  if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_XDRIVER_XF86_INPUT_LIBINPUT  if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_XDRIVER_XF86_INPUT_SYNAPTICS if !BR2_PACKAGE_BATOCERA_LIB32
 
 	# GPU drivers (needed for old Nvidia&AMD cards for edid handshake with display)
 	select BR2_PACKAGE_XDRIVER_XF86_VIDEO_AMDGPU                if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
@@ -1555,30 +1558,30 @@ config BR2_PACKAGE_BATOCERA_XORG
 	# nvidia xorg packages are selected by batocera-nvidia package
 
 	# applications
-	select BR2_PACKAGE_XAPP_SETXKBMAP
-	select BR2_PACKAGE_XAPP_XEV
-	select BR2_PACKAGE_XAPP_XINIT
-	select BR2_PACKAGE_XAPP_XINPUT
-	select BR2_PACKAGE_XAPP_XRANDR                  # required for resolution manipulation
-	select BR2_PACKAGE_XAPP_XSET                    # X11 Xset command
+	select BR2_PACKAGE_XAPP_SETXKBMAP             if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_XAPP_XEV                   if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_XAPP_XINIT                 if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_XAPP_XINPUT                if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_XAPP_XRANDR                if !BR2_PACKAGE_BATOCERA_LIB32  # required for resolution manipulation
+	select BR2_PACKAGE_XAPP_XSET                  if !BR2_PACKAGE_BATOCERA_LIB32  # X11 Xset command
 
-	select BR2_PACKAGE_BATOCERA_DESKTOPAPPS         # batocera applications config and scripts
-	select BR2_PACKAGE_LIBGTK3                      # gtk3 library
-	select BR2_PACKAGE_L3AFPAD                      # gtk3 text editor
-	select BR2_PACKAGE_PCMANFM                      # file manager
-	select BR2_PACKAGE_GVFS                         if BR2_PACKAGE_PCMANFM # file systems (trash, smb, ... in pcmanfm)
-	select BR2_PACKAGE_ADWAITA_ICON_THEME_LIGHT     if BR2_PACKAGE_PCMANFM # theme for file manager
-	select BR2_PACKAGE_XTERM                        # terminal
-	select BR2_PACKAGE_OPENBOX                      # window manager
-	select BR2_PACKAGE_UNCLUTTER                    # hide mouse
-	select BR2_PACKAGE_TOUCHEGG                     # touchscreen extended gestures
+	select BR2_PACKAGE_BATOCERA_DESKTOPAPPS       if !BR2_PACKAGE_BATOCERA_LIB32  # batocera applications config and scripts
+	select BR2_PACKAGE_LIBGTK3                    if !BR2_PACKAGE_BATOCERA_LIB32  # gtk3 library
+	select BR2_PACKAGE_L3AFPAD                    if !BR2_PACKAGE_BATOCERA_LIB32  # gtk3 text editor
+	select BR2_PACKAGE_PCMANFM                    if !BR2_PACKAGE_BATOCERA_LIB32  # file manager
+	select BR2_PACKAGE_GVFS                       if BR2_PACKAGE_PCMANFM # file systems (trash, smb, ... in pcmanfm)
+	select BR2_PACKAGE_ADWAITA_ICON_THEME_LIGHT   if BR2_PACKAGE_PCMANFM # theme for file manager
+	select BR2_PACKAGE_XTERM                      if !BR2_PACKAGE_BATOCERA_LIB32  # terminal
+	select BR2_PACKAGE_OPENBOX                    if !BR2_PACKAGE_BATOCERA_LIB32  # window manager
+	select BR2_PACKAGE_UNCLUTTER                  if !BR2_PACKAGE_BATOCERA_LIB32  # hide mouse
+	select BR2_PACKAGE_TOUCHEGG                   if !BR2_PACKAGE_BATOCERA_LIB32  # touchscreen extended gestures
 
 	#Openbox wallpaper
-	select BR2_PACKAGE_IMLIB2_X
-	select BR2_PACKAGE_IMLIB2_JPEG
-	select BR2_PACKAGE_IMLIB2_PNG
-	select BR2_PACKAGE_IMLIB2_GIF
-	select BR2_PACKAGE_FEH
+	select BR2_PACKAGE_IMLIB2_X                   if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_IMLIB2_JPEG                if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_IMLIB2_PNG                 if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_IMLIB2_GIF                 if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_FEH                        if !BR2_PACKAGE_BATOCERA_LIB32
 
 	# vendor neutral GL dispatch library
 	# already set by nvidia for x86_64, but required on x86 for pcsx2
