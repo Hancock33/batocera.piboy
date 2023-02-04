@@ -2,9 +2,8 @@
     "actions_player1": [
 	{
             "trigger": ["hotkey", "start"],
-            "type": "key",
-            "target": [ "KEY_F10" ],
-            "description": "Exit the emulator"
+            "type": "exec",
+            "target": "killall -9 redream && reset"
 	},
 	{
             "trigger": ["hotkey", "b"],
