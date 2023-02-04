@@ -1,8 +1,8 @@
 diff --git a/bauh/view/core/config.py b/bauh/view/core/config.py
-index 9737bc5..873fdd2 100644
+index e9c7c5d8..5f0b2b7c 100644
 --- a/bauh/view/core/config.py
 +++ b/bauh/view/core/config.py
-@@ -29,7 +29,7 @@ class CoreConfigManager(YAMLConfigManager):
+@@ -30,7 +30,7 @@ class CoreConfigManager(YAMLConfigManager):
              },
              'suggestions': {
                  'enabled': True,

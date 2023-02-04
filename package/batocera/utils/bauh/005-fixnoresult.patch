@@ -1,13 +1,13 @@
 diff --git a/bauh/gems/flatpak/flatpak.py b/bauh/gems/flatpak/flatpak.py
-index 8586af4..81a9d53 100755
+index 87ac1424..852ab0a6 100755
 --- a/bauh/gems/flatpak/flatpak.py
 +++ b/bauh/gems/flatpak/flatpak.py
-@@ -285,6 +285,8 @@ def search(version: Version, word: str, installation: str, app_id: bool = False)
-     res = run_cmd('{} search {} --{}'.format('flatpak', word, installation))
+@@ -331,6 +331,8 @@ def search(version: Version, word: str, installation: str, app_id: bool = False)
+     res = run_cmd(f'flatpak search {word} --{installation}', lang=None)
  
      found = []
 +    if res is None:
 +        return found
  
-     split_res = res.split('\n')
+     split_res = res.strip().split('\n')
  

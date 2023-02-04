@@ -1,0 +1,12 @@
+config BR2_PACKAGE_STALKER
+	bool "stalker"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  Improved version of the X-Ray Engine, the game engine used in the world-famous S.T.A.L.K.E.R. game series by GSC Game World.
+
+	  https://github.com/OpenXRay/xray-16/
+
+comment "BR2_PACKAGE_STALKER needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP
