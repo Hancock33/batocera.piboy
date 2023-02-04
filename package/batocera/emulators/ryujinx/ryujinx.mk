@@ -3,8 +3,8 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Jan 07, 2023
-RYUJINX_VERSION = 1.1.515
+# Version: Commits on Feb 01, 2023
+RYUJINX_VERSION = 1.1.599
 RYUJINX_SOURCE = ryujinx-$(RYUJINX_VERSION)-linux_x64.tar.gz
 RYUJINX_SITE = https://github.com/Ryujinx/release-channel-master/releases/download/$(RYUJINX_VERSION)
 RYUJINX_LICENSE = MIT
@@ -16,8 +16,9 @@ define RYUJINX_EXTRACT_CMDS
 endef
 
 define RYUJINX_INSTALL_TARGET_CMDS
+	rm -rf $(TARGET_DIR)/usr/ryujinx
 	mkdir -p $(TARGET_DIR)/usr/ryujinx
-	cp -pr $(@D)/target/publish/* $(TARGET_DIR)/usr/ryujinx
+	cp -avr $(@D)/target/publish/* $(TARGET_DIR)/usr/ryujinx
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ryujinx/switch.ryujinx.keys \

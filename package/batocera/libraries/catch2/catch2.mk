@@ -3,8 +3,8 @@
 # catch2
 #
 ################################################################################
-# Version: Commits on Jul 28, 2021
-CATCH2_VERSION = v2.13.7
+# Version: Commits on Apr 12, 2022
+CATCH2_VERSION = v2.13.9
 CATCH2_SITE = https://github.com/catchorg/Catch2.git
 CATCH2_SITE_METHOD=git
 CATCH2_GIT_SUBMODULES=YES

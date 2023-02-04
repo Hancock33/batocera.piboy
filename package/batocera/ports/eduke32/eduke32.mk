@@ -3,8 +3,8 @@
 # eduke32
 #
 ################################################################################
-# Version: Commits on 25 Dec, 2022
-EDUKE32_VERSION = 122aee012e7d45c48636d4e38b5af6c37c1ef8ad
+# Version: Commits on 17 Jan, 2023
+EDUKE32_VERSION = 1a90b98832b7b3cc9ab6ec04e320dbf64744e9e3
 EDUKE32_SITE = https://voidpoint.io/terminx/eduke32.git
 
 EDUKE32_DEPENDENCIES = sdl2 flac libvpx

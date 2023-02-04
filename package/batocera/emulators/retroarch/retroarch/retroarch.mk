@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Jan 26, 2023
-RETROARCH_VERSION = 10ace666e1be45efbee7f3b01508dffb46af86af
+# Version: Commits on Feb 04, 2023
+RETROARCH_VERSION = 12fb608c54b5e9f9f2471e1e93c50f9d0e008de3
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac
@@ -120,7 +120,7 @@ ifeq ($(BR2_PACKAGE_ROCKCHIP_RGA),y)
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
-  ifneq ($(BR2_PACKAGE_XWAYLAND),y)
+  ifneq ($(BR2_PACKAGE_BATOCERA_SBC_XORG)$(BR2_PACKAGE_XWAYLAND),y)
     RETROARCH_CONF_OPTS += --enable-opengl --disable-opengles --disable-opengles3
     RETROARCH_DEPENDENCIES += libgl
   endif

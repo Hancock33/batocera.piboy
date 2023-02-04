@@ -3,8 +3,8 @@
 # wine-proton
 #
 ################################################################################
-
-WINE_PROTON_VERSION = proton-wine-7.0-6d
+# Version: Commits on Feb 01, 2023 (branch@experimental_7.0)
+WINE_PROTON_VERSION = proton-wine-7.0-6e
 WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
 WINE_PROTON_DEPENDENCIES = host-bison host-flex host-wine-proton

@@ -32,9 +32,9 @@ class Model2EmuGenerator(Generator):
         # install windows libraries required
         if not os.path.exists(wineprefix + "/d3dx9.done"):
             cmd = ["/usr/wine/winetricks", "-q", "d3dx9"]
-            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/proton/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/lutris/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
-            env["PATH"] = "/usr/wine/proton/bin:/bin:/usr/bin"
+            env["PATH"] = "/usr/wine/lutris/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
             proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             out, err = proc.communicate()
@@ -46,9 +46,9 @@ class Model2EmuGenerator(Generator):
         
         if not os.path.exists(wineprefix + "/d3dcompiler_42.done"):
             cmd = ["/usr/wine/winetricks", "-q", "d3dcompiler_42"]
-            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/proton/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/lutris/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
-            env["PATH"] = "/usr/wine/proton/bin:/bin:/usr/bin"
+            env["PATH"] = "/usr/wine/lutris/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
             proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             out, err = proc.communicate()
@@ -60,9 +60,9 @@ class Model2EmuGenerator(Generator):
         
         if not os.path.exists(wineprefix + "/d3dx9_42.done"):
             cmd = ["/usr/wine/winetricks", "-q", "d3dx9_42"]
-            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/proton/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/lutris/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
-            env["PATH"] = "/usr/wine/proton/bin:/bin:/usr/bin"
+            env["PATH"] = "/usr/wine/lutris/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
             proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             out, err = proc.communicate()
@@ -74,9 +74,9 @@ class Model2EmuGenerator(Generator):
         
         if not os.path.exists(wineprefix + "/xact.done"):
             cmd = ["/usr/wine/winetricks", "-q", "xact"]
-            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/proton/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/lutris/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
-            env["PATH"] = "/usr/wine/proton/bin:/bin:/usr/bin"
+            env["PATH"] = "/usr/wine/lutris/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
             proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             out, err = proc.communicate()
@@ -88,9 +88,9 @@ class Model2EmuGenerator(Generator):
         
         if not os.path.exists(wineprefix + "/xact_x64.done"):
             cmd = ["/usr/wine/winetricks", "-q", "xact_x64"]
-            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/proton/lib/wine", "WINEPREFIX": wineprefix }
+            env = {"LD_LIBRARY_PATH": "/lib32:/usr/wine/lutris/lib/wine", "WINEPREFIX": wineprefix }
             env.update(os.environ)
-            env["PATH"] = "/usr/wine/proton/bin:/bin:/usr/bin"
+            env["PATH"] = "/usr/wine/lutris/bin:/bin:/usr/bin"
             eslog.debug(f"command: {str(cmd)}")
             proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             out, err = proc.communicate()
@@ -192,7 +192,7 @@ class Model2EmuGenerator(Generator):
             }
 
         # now run the emulator
-        commandArray = ["/usr/wine/proton/bin/wine", "/userdata/saves/model2/model2emu/emulator_multicpu.exe"]
+        commandArray = ["/usr/wine/lutris/bin/wine", "/userdata/saves/model2/model2emu/emulator_multicpu.exe"]
         # simplify the rom name (strip the directory & extension)
         if rom != 'config':
             romname = rom.replace("/userdata/roms/model2/", "")

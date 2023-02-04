@@ -419,6 +419,10 @@ def getGenerator(emulator):
         from generators.steam.steamGenerator import SteamGenerator
         return SteamGenerator()
 
+    if emulator == 'stalker':
+        from generators.stalker.stalkerGenerator import StalkerGenerator
+        return StalkerGenerator()
+
     if emulator == 'stk':
         from generators.stk.stkGenerator import StkGenerator
         return StkGenerator()

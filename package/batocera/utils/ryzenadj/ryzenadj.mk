@@ -3,7 +3,7 @@
 # ryzenadj
 #
 ################################################################################
-
+# Version: Commits on Dec 01, 2022
 RYZENADJ_VERSION = v0.12.0
 RYZENADJ_SITE = $(call github,FlyGoat,RyzenAdj,$(RYZENADJ_VERSION))
 RYZENADJ_LICENSE = GPLv2

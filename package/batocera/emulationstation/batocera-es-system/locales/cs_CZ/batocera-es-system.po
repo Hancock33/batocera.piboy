@@ -2052,7 +2052,7 @@ msgctxt "game_options"
 msgid "No skipping"
 msgstr "Žádné přeskakování"
 
-#. TRANSLATION: libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia, ...
+#. TRANSLATION: libretro/fbneo, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/mame078plus, ...
 msgctxt "game_options"
 msgid "SHOW LIGHT GUN CROSSHAIRS"
 msgstr "ZOBRAZIT ZAMĚŘOVACÍ KŘÍŽ SVĚTELNÉ ZBRANĚ"
@@ -11041,7 +11041,7 @@ msgctxt "game_options"
 msgid "SKIP INTRO VIDEOS"
 msgstr "PŘESKOČIT ÚVODNÍ VIDEA"
 
-#. TRANSLATION: eduke32, ionfury, raze, sm64
+#. TRANSLATION: eduke32, ionfury, raze, sm64, stalker
 msgctxt "game_options"
 msgid "Show (Default)"
 msgstr "Zobrazit (výchozí)"
@@ -11199,6 +11199,11 @@ msgstr ""
 #. TRANSLATION: sm64
 msgctxt "game_options"
 msgid "SHOW CHEATS MENU"
+msgstr ""
+
+#. TRANSLATION: stalker
+msgctxt "game_options"
+msgid "SKIP SPLASH SCREEN"
 msgstr ""
 
 #. TRANSLATION: virtualjaguar

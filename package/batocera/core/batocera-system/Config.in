@@ -85,6 +85,12 @@ endif
 config BR2_PACKAGE_BATOCERA_CORES_STILL_COMMERCIALIZED
     bool "batocera is limited to abandonned systems"
 
+config BR2_PACKAGE_BATOCERA_SBC_XORG
+    bool "xorg on Single Board Computer"
+
+config BR2_PACKAGE_BATOCERA_LIB32
+    bool "32bit libraries"
+
 ##########################################
 config BR2_PACKAGE_BATOCERA_MUSIC_SUPPORT
 	bool "batocera.linux music formats support"
@@ -107,6 +113,7 @@ config BR2_PACKAGE_BATOCERA_VULKAN
 	bool "batocera.linux Vulkan support"
 
 	# Vulkan headers, loaders, SPIR-V, glsLang
+	select BR2_PACKAGE_WAYLAND
 	select BR2_PACKAGE_VULKAN_TOOLS
 	select BR2_PACKAGE_SPIRV_TOOLS
 
@@ -276,8 +283,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 
 	select BR2_PACKAGE_RTL88X2BU             if BR2_PACKAGE_BATOCERA_TARGET_S922X || BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
-	select BR2_PACKAGE_RTL8188FU             if BR2_PACKAGE_BATOCERA_TARGET_S922X
-
 	select BR2_PACKAGE_RTL8821CU             if BR2_PACKAGE_BATOCERA_TARGET_S922X || BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 	select BR2_PACKAGE_RTL8723BU             if BR2_PACKAGE_BATOCERA_TARGET_S922X || BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 	select BR2_PACKAGE_RTL8188EU             if BR2_PACKAGE_BATOCERA_TARGET_S922X || BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
@@ -302,7 +307,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 	select BR2_PACKAGE_BATOCERA_SDL2
 
     # xorg
-	select BR2_PACKAGE_BATOCERA_XORG        if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+	select BR2_PACKAGE_BATOCERA_XORG        if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY || BR2_PACKAGE_BATOCERA_SBC_XORG
 
 	# compression tools
 	select BR2_PACKAGE_UNZIP        # for /userdata/system/upgrade/share.zip
@@ -377,7 +382,7 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
 	config BR2_TARGET_BATOCERA_IMAGES
 	string "target images"
 	default "amlogic/s922x/odroidn2 amlogic/s922x/vim3 amlogic/s922x/gtking amlogic/s922x/gtkingpro amlogic/s922x/zero2"  if BR2_PACKAGE_BATOCERA_TARGET_S922X
-	default "amlogic/s905/odroidc2 amlogic/s905/tvbox amlogic/s905/fun-r1"                    if BR2_PACKAGE_BATOCERA_TARGET_S905
+	default "amlogic/s905/odroidc2 amlogic/s905/tvbox amlogic/s905/lepotato" if BR2_PACKAGE_BATOCERA_TARGET_S905 # amlogic/s905/fun-r1
 	default "amlogic/s905gen2"                                                                if BR2_PACKAGE_BATOCERA_TARGET_S905GEN2
 	default "amlogic/s905gen3/odroidc4 amlogic/s905gen3/tvbox-gen3"                           if BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
 	default "amlogic/s912"                                                                    if BR2_PACKAGE_BATOCERA_TARGET_S912
@@ -1240,12 +1245,13 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_SPACECADETPINBALL        if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Space Cadet Pinball
     select BR2_PACKAGE_SRB2                     if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Sonic Robo Blast 2
     select BR2_PACKAGE_SRB2KART                 if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Sonic Robo Blast 2 Kart
+    select BR2_PACKAGE_STALKER                  if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                           # S.T.A.L.K.E.R.
     select BR2_PACKAGE_STK                      if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # SuperTuxKart
     select BR2_PACKAGE_STUNTCAR                 if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Stunt Car Racer
     select BR2_PACKAGE_SUPERTUX2                if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Super Tux2 (Mario Land Clone)
     select BR2_PACKAGE_TEKWAR                   if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Tekwar
     select BR2_PACKAGE_VCMI                     if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Heroes of Might and Magic III
-    #select BR2_PACKAGE_XBOX_XCLOUD_CLIENT       if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                           # Xbox Cloud Gaming
+    #select BR2_PACKAGE_XBOX_XCLOUD_CLIENT      if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                           # Xbox Cloud Gaming
 
     help
         Emulators under development (Experimental)
@@ -1411,8 +1417,8 @@ config BR2_PACKAGE_BATOCERA_RPI_MESA3D
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_VC4
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_V3D
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_KMSRO
-    select BR2_PACKAGE_MESA3D_OPENGL_GLX                  if BR2_PACKAGE_XWAYLAND # OpenGL GLX support
-    select BR2_PACKAGE_MESA3D_DEMOS                       if BR2_PACKAGE_XWAYLAND # glxinfo etc
+    select BR2_PACKAGE_MESA3D_OPENGL_GLX                  if BR2_PACKAGE_XWAYLAND || BR2_PACKAGE_BATOCERA_SBC_XORG # OpenGL GLX support
+    select BR2_PACKAGE_MESA3D_DEMOS                       if BR2_PACKAGE_XWAYLAND || BR2_PACKAGE_BATOCERA_SBC_XORG && !BR2_PACKAGE_BATOCERA_LIB32 # glxinfo etc
 
 config BR2_PACKAGE_BATOCERA_LIMA_MESA3D
 	bool "batocera.linux driver mesa LIMA"
@@ -1519,13 +1525,13 @@ config BR2_PACKAGE_BATOCERA_XWAYLAND
     # Xorg emulation layer of Wayland
     select BR2_PACKAGE_XWAYLAND
 	select BR2_PACKAGE_XORG7
-	select BR2_PACKAGE_BATOCERA_DESKTOPAPPS         if !BR2_arm   # batocera applications config and scripts
-	select BR2_PACKAGE_LIBGTK3                      if !BR2_arm   # gtk3 library
-	select BR2_PACKAGE_L3AFPAD                      if !BR2_arm   # gtk3 text editor
-	select BR2_PACKAGE_PCMANFM                      if !BR2_arm   # file manager
-	select BR2_PACKAGE_GVFS                         if !BR2_arm   # file systems (trash, smb, ... in pcmanfm)
-	select BR2_PACKAGE_ADWAITA_ICON_THEME_LIGHT     if !BR2_arm   # theme for file manager
-	select BR2_PACKAGE_XTERM                        if !BR2_arm   # terminal
+	select BR2_PACKAGE_BATOCERA_DESKTOPAPPS         if !BR2_PACKAGE_BATOCERA_LIB32   # batocera applications config and scripts
+	select BR2_PACKAGE_LIBGTK3                      if !BR2_PACKAGE_BATOCERA_LIB32   # gtk3 library
+	select BR2_PACKAGE_L3AFPAD                      if !BR2_PACKAGE_BATOCERA_LIB32   # gtk3 text editor
+	select BR2_PACKAGE_PCMANFM                      if !BR2_PACKAGE_BATOCERA_LIB32   # file manager
+	select BR2_PACKAGE_GVFS                         if !BR2_PACKAGE_BATOCERA_LIB32   # file systems (trash, smb, ... in pcmanfm)
+	select BR2_PACKAGE_ADWAITA_ICON_THEME_LIGHT     if !BR2_PACKAGE_BATOCERA_LIB32   # theme for file manager
+	select BR2_PACKAGE_XTERM                        if !BR2_PACKAGE_BATOCERA_LIB32   # terminal
 
 config BR2_PACKAGE_BATOCERA_XORG
 	bool "batocera.linux xorgs packages selection"
@@ -1539,10 +1545,10 @@ config BR2_PACKAGE_BATOCERA_XORG
 	select BR2_PACKAGE_XLIB_LIBXCOMPOSITE
 
 	# drivers
-	select BR2_PACKAGE_XDRIVER_XF86_INPUT_EVDEV
-	select BR2_PACKAGE_XDRIVER_XF86_INPUT_KEYBOARD
-	select BR2_PACKAGE_XDRIVER_XF86_INPUT_LIBINPUT
-	select BR2_PACKAGE_XDRIVER_XF86_INPUT_SYNAPTICS
+	select BR2_PACKAGE_XDRIVER_XF86_INPUT_EVDEV     if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_XDRIVER_XF86_INPUT_KEYBOARD  if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_XDRIVER_XF86_INPUT_LIBINPUT  if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_XDRIVER_XF86_INPUT_SYNAPTICS if !BR2_PACKAGE_BATOCERA_LIB32
 
 	# GPU drivers (needed for old Nvidia&AMD cards for edid handshake with display)
 	select BR2_PACKAGE_XDRIVER_XF86_VIDEO_AMDGPU                if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
@@ -1552,35 +1558,35 @@ config BR2_PACKAGE_BATOCERA_XORG
 	# nvidia xorg packages are selected by batocera-nvidia package
 
 	# applications
-	select BR2_PACKAGE_XAPP_SETXKBMAP
-	select BR2_PACKAGE_XAPP_XEV
-	select BR2_PACKAGE_XAPP_XINIT
-	select BR2_PACKAGE_XAPP_XINPUT
-	select BR2_PACKAGE_XAPP_XRANDR                  # required for resolution manipulation
-	select BR2_PACKAGE_XAPP_XSET                    # X11 Xset command
+	select BR2_PACKAGE_XAPP_SETXKBMAP             if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_XAPP_XEV                   if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_XAPP_XINIT                 if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_XAPP_XINPUT                if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_XAPP_XRANDR                if !BR2_PACKAGE_BATOCERA_LIB32  # required for resolution manipulation
+	select BR2_PACKAGE_XAPP_XSET                  if !BR2_PACKAGE_BATOCERA_LIB32  # X11 Xset command
 
-	select BR2_PACKAGE_BATOCERA_DESKTOPAPPS         # batocera applications config and scripts
-	select BR2_PACKAGE_LIBGTK3                      # gtk3 library
-	select BR2_PACKAGE_L3AFPAD                      # gtk3 text editor
-	select BR2_PACKAGE_PCMANFM                      # file manager
-	select BR2_PACKAGE_GVFS                         if BR2_PACKAGE_PCMANFM # file systems (trash, smb, ... in pcmanfm)
-	select BR2_PACKAGE_ADWAITA_ICON_THEME_LIGHT     if BR2_PACKAGE_PCMANFM # theme for file manager
-	select BR2_PACKAGE_XTERM                        # terminal
-	select BR2_PACKAGE_OPENBOX                      # window manager
-	select BR2_PACKAGE_UNCLUTTER                    # hide mouse
-	select BR2_PACKAGE_TOUCHEGG                     # touchscreen extended gestures
+	select BR2_PACKAGE_BATOCERA_DESKTOPAPPS       if !BR2_PACKAGE_BATOCERA_LIB32  # batocera applications config and scripts
+	select BR2_PACKAGE_LIBGTK3                    if !BR2_PACKAGE_BATOCERA_LIB32  # gtk3 library
+	select BR2_PACKAGE_L3AFPAD                    if !BR2_PACKAGE_BATOCERA_LIB32  # gtk3 text editor
+	select BR2_PACKAGE_PCMANFM                    if !BR2_PACKAGE_BATOCERA_LIB32  # file manager
+	select BR2_PACKAGE_GVFS                       if BR2_PACKAGE_PCMANFM # file systems (trash, smb, ... in pcmanfm)
+	select BR2_PACKAGE_ADWAITA_ICON_THEME_LIGHT   if BR2_PACKAGE_PCMANFM # theme for file manager
+	select BR2_PACKAGE_XTERM                      if !BR2_PACKAGE_BATOCERA_LIB32  # terminal
+	select BR2_PACKAGE_OPENBOX                    if !BR2_PACKAGE_BATOCERA_LIB32  # window manager
+	select BR2_PACKAGE_UNCLUTTER                  if !BR2_PACKAGE_BATOCERA_LIB32  # hide mouse
+	select BR2_PACKAGE_TOUCHEGG                   if !BR2_PACKAGE_BATOCERA_LIB32  # touchscreen extended gestures
 
 	#Openbox wallpaper
-	select BR2_PACKAGE_IMLIB2_X
-	select BR2_PACKAGE_IMLIB2_JPEG
-	select BR2_PACKAGE_IMLIB2_PNG
-	select BR2_PACKAGE_IMLIB2_GIF
-	select BR2_PACKAGE_FEH
+	select BR2_PACKAGE_IMLIB2_X                   if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_IMLIB2_JPEG                if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_IMLIB2_PNG                 if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_IMLIB2_GIF                 if !BR2_PACKAGE_BATOCERA_LIB32
+	select BR2_PACKAGE_FEH                        if !BR2_PACKAGE_BATOCERA_LIB32
 
 	# vendor neutral GL dispatch library
 	# already set by nvidia for x86_64, but required on x86 for pcsx2
 	# required for RPi4 OpenGL stack
-	select BR2_PACKAGE_LIBGLVND                     if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+	select BR2_PACKAGE_LIBGLVND                     if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY || BR2_PACKAGE_BATOCERA_SBC_XORG
 
 config BR2_PACKAGE_BATOCERA_GPU_X86
 	bool "batocera.linux GPU support for x86 platform"

@@ -3,8 +3,8 @@
 # imgui
 #
 ################################################################################
-
-IMGUI_VERSION = v1.88
+# Version: Commits on Jan 05, 2023
+IMGUI_VERSION = v1.89.2
 IMGUI_SITE = $(call github,ocornut,imgui,$(IMGUI_VERSION))
 
 IMGUI_CONF_OPTS = -DCMAKE_BUILD_TYPE=Release

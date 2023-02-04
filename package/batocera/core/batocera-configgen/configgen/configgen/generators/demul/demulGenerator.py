@@ -192,7 +192,7 @@ class DemulGenerator(Generator):
             Config.write(configfile)
 
         # now setup the command array for the emulator
-        commandArray = ["/usr/wine/proton/bin/wine", "/userdata/saves/demul/demul/demul.exe"]
+        commandArray = ["/usr/wine/lutris/bin/wine", "/userdata/saves/demul/demul/demul.exe"]
         # add system to command array
         commandArray.extend([f"-run={demulsystem}"])
         # add rom to the command array if not dreamcast
@@ -205,7 +205,7 @@ class DemulGenerator(Generator):
             array=commandArray,
             env={
                 "WINEPREFIX": wineprefix,
-                "LD_LIBRARY_PATH": "/lib32:/usr/wine/proton/lib/wine",
+                "LD_LIBRARY_PATH": "/lib32:/usr/wine/lutris/lib/wine",
                 "LIBGL_DRIVERS_PATH": "/lib32/dri",
                 "WINEDLLOVERRIDES": "d3d11=n",
                 # hum pw 0.2 and 0.3 are hardcoded, not nice

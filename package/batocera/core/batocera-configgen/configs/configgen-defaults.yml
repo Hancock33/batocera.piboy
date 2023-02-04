@@ -437,7 +437,7 @@ laser310:
   core:     mame
 lcdgames:
   emulator: libretro
-  core:     gw
+  core:     mame
   options:
     forceNoBezel: true
 lowresnx:
@@ -801,6 +801,9 @@ steam:
 stk:
   emulator: stk
   core:     stk
+stalker:
+  emulator: stalker
+  core:     stalker
 stuntcar:
   emulator: stuntcar
   core:     stuntcar

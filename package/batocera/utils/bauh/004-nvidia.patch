@@ -1,8 +1,8 @@
 diff --git a/bauh/app.py b/bauh/app.py
-index 172b0e5..bab1f8e 100755
+index 5ee5bcd2..4c18d09e 100755
 --- a/bauh/app.py
 +++ b/bauh/app.py
-@@ -12,6 +12,11 @@ from bauh.view.util import logs
+@@ -13,6 +13,11 @@ from bauh.view.util import logs
  
  
  def main(tray: bool = False):
