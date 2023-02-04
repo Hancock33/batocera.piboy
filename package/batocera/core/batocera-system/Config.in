@@ -629,7 +629,7 @@ config BR2_PACKAGE_BATOCERA_SEGADC
                                                 !BR2_PACKAGE_BATOCERA_TARGET_TRITIUM_H5     && \
                                                 !BR2_PACKAGE_BATOCERA_TARGET_X86
 	select BR2_PACKAGE_LIBRETRO_FLYCAST2021 if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
-	select BR2_PACKAGE_REDREAM              if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711 # Redream not working with RPi4 & XWayland
+	select BR2_PACKAGE_REDREAM              if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || (BR2_PACKAGE_BATOCERA_TARGET_BCM2711 && !BR2_PACKAGE_BATOCERA_WAYLAND)
 
 	help
 		Sega Dreamcast and Naomi/Atomiswave emulation support
@@ -1417,7 +1417,7 @@ config BR2_PACKAGE_BATOCERA_RPI_MESA3D
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_V3D
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_KMSRO
     select BR2_PACKAGE_MESA3D_OPENGL_GLX                  if BR2_PACKAGE_XWAYLAND || BR2_PACKAGE_BATOCERA_SBC_XORG # OpenGL GLX support
-    select BR2_PACKAGE_MESA3D_DEMOS                       if BR2_PACKAGE_XWAYLAND || BR2_PACKAGE_BATOCERA_SBC_XORG && !BR2_PACKAGE_BATOCERA_LIB32 # glxinfo etc
+    select BR2_PACKAGE_MESA3D_DEMOS                       if BR2_PACKAGE_XWAYLAND || (BR2_PACKAGE_BATOCERA_SBC_XORG && !BR2_PACKAGE_BATOCERA_LIB32) # glxinfo etc
 
 config BR2_PACKAGE_BATOCERA_LIMA_MESA3D
 	bool "batocera.linux driver mesa LIMA"
@@ -1511,9 +1511,9 @@ config BR2_PACKAGE_BATOCERA_WAYLAND
     select BR2_PACKAGE_SEATD_DAEMON
 
     # Compositor for wayland
-    select BR2_PACKAGE_WF_RECORDER      if !BR2_arm
-    select BR2_PACKAGE_SWAY             if !BR2_arm
-    select BR2_PACKAGE_SWAYBG           if !BR2_arm
+    select BR2_PACKAGE_WF_RECORDER      if !BR2_PACKAGE_BATOCERA_LIB32
+    select BR2_PACKAGE_SWAY             if !BR2_PACKAGE_BATOCERA_LIB32
+    select BR2_PACKAGE_SWAYBG           if !BR2_PACKAGE_BATOCERA_LIB32
 
 config BR2_PACKAGE_BATOCERA_XWAYLAND
 	bool "batocera.linux xwayland packages selection"
