@@ -31,6 +31,7 @@
 - Automatically recenter 16:9 bezels for a better rendition on 16:10 and 5:3 screens (SteamDeck and other handheld devices)
 - Added the initial Radxa RockPi 5b board support - thanks @stvhay for your persistence & hard work!
 - Retroachievements for Arduboy and WASM4
+- Added RPI2, RPI3_32Bits and RPIZero2 support in bcm2836 image
 ### Changed
 - move to pipewire wireplumber audio
 - bluetooth modes : automatic and manual (via a list)
@@ -61,7 +62,7 @@
 - lightspark to August 18th release
 - btop to 1.2.8
 - ryzenadj to 0.11.1
-- pipewire to 0.3.57
+- pipewire to 0.3.63
 - rust to 1.63
 - bluez to 5.66
 - xemu to 0.7.67
@@ -93,7 +94,7 @@
 - switchres to sep 25th 2022 build
 - lr-mame to v0.251
 - retroarch to v1.14.0
-- libretro cores synced with retroarch v1.11.1 [#7245](https://github.com/batocera-linux/batocera.linux/pull/7245)
+- libretro cores update
 - libretro-core-info to Oct 04 2022 build
 - retroarch-assets to Oct 24 2022 build
 - common-shaders to Apr 16 2022 build
@@ -111,7 +112,7 @@
 	- vkd3d-proton to v2.8
 - vulkan stack to v1.3.231
 - lr-yabasanshiro to 28th sept build
-- lr-flycast emulators to Dec 5, 2022 build
+- lr-flycast emulators to Jan 14, 2023 build
 - bezels updated for many systems
 - xpandneo to v0.9.5
 ### Fixed
@@ -130,8 +131,10 @@
 - White frame on 4:3 screen in libretro cores for Sinden Lightgun
 - Future Pinball saves
 ### Dev  
-- buildroot upgrade to 2022.11.x
-- odroidxu4 upgrade kernel to 6.1.6
+- buildroot upgrade to 2022.11.1
+- odroidxu4 upgrade kernel to 6.1.9
+- raspberrypi upgrade kernel to 6.1.9
+- Amlogic upgrade kernel to 6.1.9
 - rpi1 image renamed to bcm2835
 - rpi2 image renamed to bcm2836
 - rpi3 image renamed to bcm2837
@@ -141,12 +144,14 @@
 - rtl8192eu update to Nov 5, 2022
 - rtl8723ds update to Nov 4, 2022
 - rtl8812au update to Nov 16, 2022
-- rtl8188fu update to Nov 1, 2022
-- mesa3d update to 22.3.3
+- mesa3d update to 22.3.4
 - uinput-joystick update to Feb 11, 2022
 - firmware-orangepi update to Jan 13, 2023
 - The build of RG552 has been added to RK3399
 - firmware-wlan-aml update to Jan 15, 2022
+- Wayland version 1.21.0
+- Wlroots version 0.16.1
+- Sway version 1.8
 
 # 2022/09/20 - batocera.linux 35 - Monarch Butterfly
 * add: gun support in emulationstation
