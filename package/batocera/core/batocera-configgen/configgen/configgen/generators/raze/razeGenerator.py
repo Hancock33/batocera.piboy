@@ -117,6 +117,6 @@ class RazeGenerator(Generator):
         return Command.Command(
             array=launch_args,
             env={
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             }
         )
