@@ -1,0 +1,28 @@
+diff --git a/src/io/log.cpp b/src/io/log.cpp
+index e00af2a..da5f14d 100644
+--- a/src/io/log.cpp
++++ b/src/io/log.cpp
+@@ -48,7 +48,7 @@ Log::Log () {
+ 
+ 	level = LL_DEBUG;
+ 	quiet = false;
+-	logfile = fopen("openjazz.log", "w");
++	logfile = fopen("/userdata/system/logs/openjazz.log", "w");
+ 	color_stdout = false;
+ 	color_stderr = false;
+ 
+diff --git a/src/main.cpp b/src/main.cpp
+index 1f661e6..a76646b 100644
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -281,9 +281,7 @@ void startUp (const char *argv0, int pathCount, char *paths[]) {
+ 
+ 	// Last Resort: Use the current working directory
+ 
+-	firstPath = new Path(firstPath, createString(""));
+-
+-
++	firstPath = new Path(firstPath, createString("/userdata/system/configs/"));
+ 
+ 	// Default settings
+ 
