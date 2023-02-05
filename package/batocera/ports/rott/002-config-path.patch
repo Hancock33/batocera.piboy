@@ -1,22 +1,22 @@
-diff --git a/rott/dosutil.c b/rott/dosutil.c
-index 0811641..b587c7e 100644
---- a/rott/dosutil.c
-+++ b/rott/dosutil.c
-@@ -129,14 +129,14 @@ int setup_homedir (void)
- 	int err;
+diff --git a/src/dosutil.c b/src/dosutil.c
+index 9d4a01c..9926b57 100644
+--- a/src/dosutil.c
++++ b/src/dosutil.c
+@@ -71,14 +71,14 @@ int setup_homedir (void)
+     int err;
  
- 	/* try to create the root directory */
--	snprintf (ApogeePath, sizeof (ApogeePath), "%s/.rott/", getenv ("HOME"));
+     /* try to create the root directory */
+-    snprintf (ApogeePath, sizeof (ApogeePath), "%s/.rott/", getenv ("HOME"));
 +	snprintf (ApogeePath, sizeof (ApogeePath), "%s/rott/", "/userdata/system/configs/");
- 	err = mkdir (ApogeePath, S_IRWXU);
- 	
- /* keep the shareware and registered game data separated */
+     err = mkdir (ApogeePath, S_IRWXU);
+ 
+     /* keep the shareware and registered game data separated */
  #if (SHAREWARE == 1)
--	snprintf (ApogeePath, sizeof (ApogeePath), "%s/.rott/", getenv ("HOME"));
+-    snprintf (ApogeePath, sizeof (ApogeePath), "%s/.rott/", getenv ("HOME"));
 +	snprintf (ApogeePath, sizeof (ApogeePath), "%s/rott/", "/userdata/system/configs/");
  #else
--	snprintf (ApogeePath, sizeof (ApogeePath), "%s/.rott/darkwar/", getenv ("HOME"));
+-    snprintf (ApogeePath, sizeof (ApogeePath), "%s/.rott/darkwar/", getenv ("HOME"));
 +	snprintf (ApogeePath, sizeof (ApogeePath), "%s/rott/", "/userdata/system/configs/");
  #endif
  
- 	err = mkdir (ApogeePath, S_IRWXU);
+     err = mkdir (ApogeePath, S_IRWXU);
