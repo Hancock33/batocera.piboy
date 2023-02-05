@@ -35,5 +35,12 @@ else
 	endif
 endif
 
+define XASH3D_FWGS_EVMAPY
+	# evmap config
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/xash3d/xash3d-fwgs/xash3d_fwgs.keys $(TARGET_DIR)/usr/share/evmapy
+endef
+
+XASH3D_FWGS_POST_INSTALL_TARGET_HOOKS += XASH3D_FWGS_EVMAPY
 
 $(eval $(waf-package))
