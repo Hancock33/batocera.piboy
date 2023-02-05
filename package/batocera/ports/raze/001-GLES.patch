@@ -1,0 +1,471 @@
+From ed3177dd82304044d5ee092817b6744b130a520b Mon Sep 17 00:00:00 2001
+From: Emile Belanger <emile.belanger@gmail.com>
+Date: Sat, 4 Feb 2023 22:20:05 +0000
+Subject: [PATCH] Fixing GLES mode to work on real GLES hardware and OpenGL 2
+ again
+
+---
+ source/common/rendering/gles/gles_buffers.cpp    |  10 +-
+ source/common/rendering/gles/gles_hwtexture.cpp  |  59 +++----
+ .../rendering/gles/gles_renderstate.cpp       |   2 +-
+ source/common/rendering/gles/gles_system.cpp     | 153 +++++++++++-------
+ source/common/rendering/gles/gles_system.h       |  70 +++++---
+ 5 files changed, 172 insertions(+), 122 deletions(-)
+
+diff --git a/source/common/rendering/gles/gles_buffers.cpp b/source/common/rendering/gles/gles_buffers.cpp
+index cf7b8ae97b9..7f56f737f6b 100644
+--- a/source/common/rendering/gles/gles_buffers.cpp
++++ b/source/common/rendering/gles/gles_buffers.cpp
+@@ -234,8 +234,7 @@ void GLBuffer::Resize(size_t newsize)
+ 
+ void GLBuffer::GPUDropSync()
+ {
+-#if !(USE_GLES2)  // Only applicable when running on desktop for now
+-	if (gles.useMappedBuffers && glFenceSync && glClientWaitSync)
++	if (gles.glesMode > GLES_MODE_GLES && gles.useMappedBuffers && glFenceSync && glDeleteSync)
+ 	{
+ 		if (mGLSync != NULL)
+ 		{
+@@ -244,13 +243,11 @@ void GLBuffer::GPUDropSync()
+ 
+ 		mGLSync = glFenceSync(GL_SYNC_GPU_COMMANDS_COMPLETE, 0);
+ 	}
+-#endif
+ }
+ 
+ void GLBuffer::GPUWaitSync()
+ {
+-#if !(USE_GLES2)  // Only applicable when running on desktop for now
+-	if (gles.useMappedBuffers && glFenceSync && glClientWaitSync)
++	if (gles.glesMode > GLES_MODE_GLES && gles.useMappedBuffers && glDeleteSync && glClientWaitSync)
+ 	{
+ 		GLenum status = glClientWaitSync(mGLSync, GL_SYNC_FLUSH_COMMANDS_BIT, 1000 * 1000 * 50); // Wait for a max of 50ms...
+ 
+@@ -263,7 +260,6 @@ void GLBuffer::GPUWaitSync()
+ 
+ 		mGLSync = NULL;
+ 	}
+-#endif
+ }
+ 
+ 
+@@ -318,7 +314,7 @@ void GLVertexBuffer::Bind(int *offsets)
+ 				glVertexAttribPointer(i, attrinf.size, attrinf.format, attrinf.normalize, (GLsizei)mStride, (void*)(intptr_t)ofs);
+ 			else
+ 			{
+-				if (gles.gles3Features)
++				if (gles.glesMode >= GLES_MODE_OGL3)
+ 					glVertexAttribIPointer(i, attrinf.size, attrinf.format, (GLsizei)mStride, (void*)(intptr_t)ofs);
+ 			}
+ 		}
+diff --git a/source/common/rendering/gles/gles_hwtexture.cpp b/source/common/rendering/gles/gles_hwtexture.cpp
+index 43425ce7d79..3f07c65d676 100644
+--- a/source/common/rendering/gles/gles_hwtexture.cpp
++++ b/source/common/rendering/gles/gles_hwtexture.cpp
+@@ -130,44 +130,47 @@ unsigned int FHardwareTexture::CreateTexture(unsigned char * buffer, int w, int
+ 
+ 	int sourcetype;
+ 
+-
+-#if USE_GLES2
+-	if (glTextureBytes == 1)
++	if (gles.glesMode == GLES_MODE_GLES)
+ 	{
+-		glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+-		sourcetype = GL_ALPHA;
+-		texformat = GL_ALPHA;
+-	}
+-	else
+-	{
+-		sourcetype = GL_BGRA;
+-		texformat = GL_BGRA;
+-	}
+-#else
+-	if (glTextureBytes == 1)
+-	{
+-		glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+-		sourcetype = GL_RED;
+-		texformat = GL_RED;
++		if (glTextureBytes == 1)
++		{
++			glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
++			sourcetype = GL_ALPHA;
++			texformat = GL_ALPHA;
++		}
++		else
++		{
++			sourcetype = GL_BGRA; // These two must be the same
++			texformat = GL_BGRA;
++		}
+ 	}
+ 	else
+ 	{
+-		sourcetype = GL_BGRA;
+-		texformat = GL_RGBA;
++		if (glTextureBytes == 1) //Use Red channel instread becuase Alpha does not work in OpenGL, swizzle later
++		{
++			glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
++			sourcetype = GL_RED;
++			texformat = GL_RED;
++		}
++		else
++		{
++			sourcetype = GL_BGRA;
++			texformat = GL_RGBA;
++		}
+ 	}
+-#endif
+ 
+ 	glTexImage2D(GL_TEXTURE_2D, 0, texformat, rw, rh, 0, sourcetype, GL_UNSIGNED_BYTE, buffer);
+ 
+-#if !(USE_GLES2)
+-	// The shader is using the alpha channel instead of red, this work on GLES but not on GL
+-	// So the texture uses GL_RED and this swizzels the red channel into the alpha channel
+-	if (glTextureBytes == 1)
++	if (gles.glesMode != GLES_MODE_GLES)
+ 	{
+-		GLint swizzleMask[] = { GL_ZERO, GL_ZERO, GL_ZERO, GL_RED };
+-		glTexParameteriv(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_RGBA, swizzleMask);
++		// The shader is using the alpha channel instead of red, this work on GLES but not on GL
++		// So the texture uses GL_RED and this swizzels the red channel into the alpha channel
++		if (glTextureBytes == 1)
++		{
++			GLint swizzleMask[] = { GL_ZERO, GL_ZERO, GL_ZERO, GL_RED };
++			glTexParameteriv(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_RGBA, swizzleMask);
++		}
+ 	}
+-#endif
+ 
+ 	if (deletebuffer && buffer) free(buffer);
+ 
+diff --git a/source/common/rendering/gles/gles_renderstate.cpp b/source/common/rendering/gles/gles_renderstate.cpp
+index 87cf2681e75..5995fd3b638 100644
+--- a/source/common/rendering/gles/gles_renderstate.cpp
++++ b/source/common/rendering/gles/gles_renderstate.cpp
+@@ -346,7 +346,7 @@ bool FGLRenderState::ApplyShader()
+ 		activeShader->cur->muLightRange.Set(range);
+ 	}
+ 
+-	if (gles.gles3Features)
++	if (gles.glesMode >= GLES_MODE_OGL3)
+ 	{
+ 		// Upload bone data
+ 		// NOTE, this is pretty inefficient, it will be reloading the same data over and over in a single frame
+diff --git a/source/common/rendering/gles/gles_system.cpp b/source/common/rendering/gles/gles_system.cpp
+index 22ba8cad691..bb7d61687ef 100644
+--- a/source/common/rendering/gles/gles_system.cpp
++++ b/source/common/rendering/gles/gles_system.cpp
+@@ -12,50 +12,16 @@ EXTERN_CVAR(Bool, gl_customshader);
+ void setGlVersion(double glv);
+ 
+ 
+-#if USE_GLES2
++#if USE_GLAD_LOADER
+ 
+ PFNGLMAPBUFFERRANGEEXTPROC glMapBufferRange = NULL;
+ PFNGLUNMAPBUFFEROESPROC glUnmapBuffer = NULL;
+ PFNGLVERTEXATTRIBIPOINTERPROC glVertexAttribIPointer = NULL;
++PFNGLFENCESYNCPROC glFenceSync = NULL;
++PFNGLCLIENTWAITSYNCPROC glClientWaitSync = NULL;
++PFNGLDELETESYNCPROC glDeleteSync = NULL;
+ 
+-#ifdef __ANDROID__
+-#include <dlfcn.h>
+-
+-static void* LoadGLES2Proc(const char* name)
+-{
+-	static void *glesLib = NULL;
+-
+-	if(!glesLib)
+-	{
+-		int flags = RTLD_LOCAL | RTLD_NOW;
+-
+-		glesLib = dlopen("libGLESv2_CM.so", flags);
+-		if(!glesLib)
+-		{
+-			glesLib = dlopen("libGLESv2.so", flags);
+-		}
+-		if(!glesLib)
+-		{
+-			glesLib = dlopen("libGLESv2.so.2", flags);
+-		}
+-	}
+-
+-	void * ret = NULL;
+-	ret =  dlsym(glesLib, name);
+-
+-	if(!ret)
+-	{
+-		//LOGI("Failed to load: %s", name);
+-	}
+-	else
+-	{
+-		//LOGI("Loaded %s func OK", name);
+-	}
+-
+-	return ret;
+-}
+-
+-#elif defined _WIN32
++#if defined _WIN32
+ 
+ #include <windows.h>
+ 
+@@ -80,9 +46,38 @@ static void* LoadGLES2Proc(const char* name)
+ 	}
+ }
+ 
++#else
++
++#include <dlfcn.h>
++
++static void* LoadGLES2Proc(const char* name)
++{
++	static void* glesLib = NULL;
++
++	if (!glesLib)
++	{
++		int flags = RTLD_LOCAL | RTLD_NOW;
++
++		glesLib = dlopen("libGLESv2_CM.so", flags);
++		if (!glesLib)
++		{
++			glesLib = dlopen("libGLESv2.so", flags);
++		}
++		if (!glesLib)
++		{
++			glesLib = dlopen("libGLESv2.so.2", flags);
++		}
++	}
++
++	void* ret = NULL;
++	ret = dlsym(glesLib, name);
++
++	return ret;
++}
++
+ #endif
+ 
+-#endif // USE_GLES2
++#endif // USE_GLAD_LOADER
+ 
+ static TArray<FString>  m_Extensions;
+ 
+@@ -126,7 +121,7 @@ namespace OpenGLESRenderer
+ 	void InitGLES()
+ 	{
+ 
+-#if USE_GLES2
++#if USE_GLAD_LOADER
+ 
+ 		if (!gladLoadGLES2Loader(&LoadGLES2Proc))
+ 		{
+@@ -136,6 +131,10 @@ namespace OpenGLESRenderer
+ 		glMapBufferRange = (PFNGLMAPBUFFERRANGEEXTPROC)LoadGLES2Proc("glMapBufferRange");
+ 		glUnmapBuffer = (PFNGLUNMAPBUFFEROESPROC)LoadGLES2Proc("glUnmapBuffer");
+ 		glVertexAttribIPointer = (PFNGLVERTEXATTRIBIPOINTERPROC)LoadGLES2Proc("glVertexAttribIPointer");
++
++		glFenceSync = (PFNGLFENCESYNCPROC)LoadGLES2Proc("glFenceSync");
++		glClientWaitSync = (PFNGLCLIENTWAITSYNCPROC)LoadGLES2Proc("glClientWaitSync");
++		glDeleteSync = (PFNGLDELETESYNCPROC)LoadGLES2Proc("glDeleteSync");
+ #else
+ 		static bool first = true;
+ 
+@@ -161,48 +160,78 @@ namespace OpenGLESRenderer
+ 		{
+ 			Printf(" %s\n", m_Extensions[i].GetChars());
+ 		}
++		const char* glVersionStr = (const char*)glGetString(GL_VERSION);
++		double glVersion = strtod(glVersionStr, NULL);
+ 
++		Printf("GL Version parsed = %f\n", glVersion);
+ 
+ 		gles.flags = RFL_NO_CLIP_PLANES;
+ 
+ 		gles.useMappedBuffers = gles_use_mapped_buffer;
+ 		gles.forceGLSLv100 = gles_force_glsl_v100;
+ 		gles.maxlights = gles_max_lights_per_surface;
++		gles.numlightvectors = (gles.maxlights * LIGHT_VEC4_NUM);
+ 
+ 		gles.modelstring = (char*)glGetString(GL_RENDERER);
+ 		gles.vendorstring = (char*)glGetString(GL_VENDOR);
+ 
+-		gl_customshader = false;
++
++		gl_customshader = false; // Disable user shaders for GLES renderer
+ 
+ 		GLint maxTextureSize[1];
+ 		glGetIntegerv(GL_MAX_TEXTURE_SIZE, maxTextureSize);
+-
+ 		gles.max_texturesize = maxTextureSize[0];
+ 
+ 		Printf("GL_MAX_TEXTURE_SIZE: %d\n", gles.max_texturesize);
+ 
+-#if USE_GLES2
+-		gles.gles3Features = false; // Enales IQM bones
+-		gles.shaderVersionString = "100";
+ 
+-		gles.depthStencilAvailable = CheckExtension("GL_OES_packed_depth_stencil");
+-		gles.npotAvailable = CheckExtension("GL_OES_texture_npot");
+-		gles.depthClampAvailable = CheckExtension("GL_EXT_depth_clamp");
+-		gles.anistropicFilterAvailable = CheckExtension("GL_EXT_texture_filter_anisotropic");
+-#else
+-		gles.gles3Features = true;
+-		gles.shaderVersionString = "330";
+-		gles.depthStencilAvailable = true;
+-		gles.npotAvailable = true;
+-		gles.useMappedBuffers = true;
+-		gles.depthClampAvailable = true;
+-		gles.anistropicFilterAvailable = true;
+-#endif
++		// Check if running on a GLES device, version string will start with 'OpenGL ES'
++		if (!strncmp(glVersionStr, "OpenGL ES", strlen("OpenGL ES")))
++		{
++			gles.glesMode = GLES_MODE_GLES;
++		}
++		else // Else runnning on Desktop, check OpenGL version is 3 or above
++		{
++			if (glVersion > 3.29)
++				gles.glesMode = GLES_MODE_OGL3; // 3.3 or above
++			else
++				gles.glesMode = GLES_MODE_OGL2; // Below 3.3
++		}
+ 
+-		gles.numlightvectors = (gles.maxlights * LIGHT_VEC4_NUM);
+ 
+-		const char* glversion = (const char*)glGetString(GL_VERSION);
+-		setGlVersion( strtod(glversion, NULL));
++		if (gles.glesMode == GLES_MODE_GLES)
++		{
++			Printf("GLES choosing mode: GLES_MODE_GLES\n");
+ 
++			gles.shaderVersionString = "100";
++			gles.depthStencilAvailable = CheckExtension("GL_OES_packed_depth_stencil");
++			gles.npotAvailable = CheckExtension("GL_OES_texture_npot");
++			gles.depthClampAvailable = CheckExtension("GL_EXT_depth_clamp");
++			gles.anistropicFilterAvailable = CheckExtension("GL_EXT_texture_filter_anisotropic");
++		}
++		else if (gles.glesMode == GLES_MODE_OGL2)
++		{
++			Printf("GLES choosing mode: GLES_MODE_OGL2\n");
++
++			gles.shaderVersionString = "100";
++			gles.depthStencilAvailable = true;
++			gles.npotAvailable = true;
++			gles.useMappedBuffers = true;
++			gles.depthClampAvailable = true;
++			gles.anistropicFilterAvailable = true;
++		}
++		else if (gles.glesMode == GLES_MODE_OGL3)
++		{
++			Printf("GLES choosing mode: GLES_MODE_OGL3\n");
++
++			gles.shaderVersionString = "330";
++			gles.depthStencilAvailable = true;
++			gles.npotAvailable = true;
++			gles.useMappedBuffers = true;
++			gles.depthClampAvailable = true;
++			gles.anistropicFilterAvailable = true;
++		}
++		
++		setGlVersion(glVersion);
+ 	}
+ }
+diff --git a/source/common/rendering/gles/gles_system.h b/source/common/rendering/gles/gles_system.h
+index 481c132d01e..0edec6282fc 100644
+--- a/source/common/rendering/gles/gles_system.h
++++ b/source/common/rendering/gles/gles_system.h
+@@ -23,32 +23,47 @@
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ 
+-#define USE_GLES2 0 // For Desktop PC leave as 0, it will use the exisiting OpenGL context creationg code but run with the GLES2 renderer
+-                    // Set to 1 for when comipling for a real GLES device
++#define USE_GLAD_LOADER 0 // Set to 1 to use the GLAD loader, otherwise use noramal GZDoom loader for PC
+ 
+-#if (USE_GLES2)
++#if (USE_GLAD_LOADER)
+ 	#include "glad/glad.h"
+ 
+-// Below are used extensions for GLES
+-typedef void* (APIENTRYP PFNGLMAPBUFFERRANGEEXTPROC)(GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access);
+-GLAPI PFNGLMAPBUFFERRANGEEXTPROC glMapBufferRange;
+-
+-typedef GLboolean(APIENTRYP PFNGLUNMAPBUFFEROESPROC)(GLenum target);
+-GLAPI PFNGLUNMAPBUFFEROESPROC glUnmapBuffer;
+-
+-typedef void (APIENTRYP PFNGLVERTEXATTRIBIPOINTERPROC) (GLuint index, GLint size, GLenum type, GLsizei stride, const void* pointer);
+-GLAPI PFNGLVERTEXATTRIBIPOINTERPROC glVertexAttribIPointer;
+-
+-#define GL_DEPTH24_STENCIL8               0x88F0
+-#define GL_MAP_PERSISTENT_BIT             0x0040
+-#define GL_MAP_READ_BIT                   0x0001
+-#define GL_MAP_WRITE_BIT                  0x0002
+-#define GL_MAP_UNSYNCHRONIZED_BIT         0x0020
+-#define GL_MAP_INVALIDATE_BUFFER_BIT      0x0008
+-#define GL_BGRA                           0x80E1
+-#define GL_DEPTH_CLAMP                    0x864F
+-#define GL_TEXTURE_MAX_ANISOTROPY_EXT     0x84FE
+-#define GL_INT_2_10_10_10_REV             0x8D9F
++	// Below are used extensions for GLES
++	typedef void* (APIENTRYP PFNGLMAPBUFFERRANGEEXTPROC)(GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access);
++	GLAPI PFNGLMAPBUFFERRANGEEXTPROC glMapBufferRange;
++
++	typedef GLboolean(APIENTRYP PFNGLUNMAPBUFFEROESPROC)(GLenum target);
++	GLAPI PFNGLUNMAPBUFFEROESPROC glUnmapBuffer;
++
++	typedef void (APIENTRYP PFNGLVERTEXATTRIBIPOINTERPROC) (GLuint index, GLint size, GLenum type, GLsizei stride, const void* pointer);
++	GLAPI PFNGLVERTEXATTRIBIPOINTERPROC glVertexAttribIPointer;
++
++	typedef GLsync(APIENTRYP PFNGLFENCESYNCPROC)(GLenum condition, GLbitfield flags);
++	GLAPI PFNGLFENCESYNCPROC glFenceSync;
++	
++	typedef GLenum(APIENTRYP PFNGLCLIENTWAITSYNCPROC)(GLsync sync, GLbitfield flags, GLuint64 timeout);
++	GLAPI PFNGLCLIENTWAITSYNCPROC glClientWaitSync;
++
++	typedef void (APIENTRYP PFNGLDELETESYNCPROC)(GLsync sync);
++	GLAPI PFNGLDELETESYNCPROC glDeleteSync;
++
++	#define GL_DEPTH24_STENCIL8               0x88F0
++	#define GL_MAP_PERSISTENT_BIT             0x0040
++	#define GL_MAP_READ_BIT                   0x0001
++	#define GL_MAP_WRITE_BIT                  0x0002
++	#define GL_MAP_UNSYNCHRONIZED_BIT         0x0020
++	#define GL_MAP_INVALIDATE_BUFFER_BIT      0x0008
++	#define GL_BGRA                           0x80E1
++	#define GL_DEPTH_CLAMP                    0x864F
++	#define GL_TEXTURE_MAX_ANISOTROPY_EXT     0x84FE
++	#define GL_INT_2_10_10_10_REV             0x8D9F
++	#define GL_RED                            0x1903
++	#define GL_TEXTURE_SWIZZLE_RGBA           0x8E46
++	#define GL_SYNC_GPU_COMMANDS_COMPLETE     0x9117
++	#define GL_SYNC_FLUSH_COMMANDS_BIT        0x00000001
++	#define GL_ALREADY_SIGNALED               0x911A
++	#define GL_CONDITION_SATISFIED            0x911C
++
+ #else
+ 	#include "gl_load/gl_load.h"
+ #endif
+@@ -66,6 +81,13 @@ GLAPI PFNGLVERTEXATTRIBIPOINTERPROC glVertexAttribIPointer;
+ 
+ namespace OpenGLESRenderer
+ {
++	enum 
++	{
++		GLES_MODE_GLES = 0,
++		GLES_MODE_OGL2 = 1,
++		GLES_MODE_OGL3 = 2,
++	};
++
+ 	struct RenderContextGLES
+ 	{
+ 		unsigned int flags;
+@@ -77,7 +99,7 @@ namespace OpenGLESRenderer
+ 		bool forceGLSLv100;
+ 		bool depthClampAvailable;
+ 		bool anistropicFilterAvailable;
+-		bool gles3Features;
++		int glesMode;
+ 		const char* shaderVersionString;
+ 		int max_texturesize;
+ 		char* vendorstring;
