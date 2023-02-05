@@ -1,9 +1,9 @@
-diff --git a/rott/rt_cfg.c b/rott/rt_cfg.c
-index c4ea802..54da045 100644
---- a/rott/rt_cfg.c
-+++ b/rott/rt_cfg.c
-@@ -109,14 +109,14 @@ fx_blaster_config SBSettings =
- #endif
+diff --git a/src/rt_cfg.c b/src/rt_cfg.c
+index d811080..0bb8783 100644
+--- a/src/rt_cfg.c
++++ b/src/rt_cfg.c
+@@ -75,7 +75,7 @@ int     MUvolume         = 196;
+ int     FXvolume         = 196;
  
  boolean mouseenabled     = 1;
 -boolean usemouselook     = 0;
@@ -11,6 +11,9 @@ index c4ea802..54da045 100644
  int     inverse_mouse    = 1; //set  to -1 to invert mouse
  boolean usejump          = 0;
  boolean sdl_fullscreen   = 1;
+@@ -96,9 +96,9 @@ int ScreenWidthToWriteToCfg = 0;
+ boolean writeNewResIntoCfg = false;
+ 
  
 -boolean joystickenabled  = 0;
 -boolean joypadenabled    = 0;
