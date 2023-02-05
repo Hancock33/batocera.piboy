@@ -98,7 +98,7 @@
         {
             "trigger": "pageup",
             "type": "key",
-            "target": "KEY_K",
+            "target": "KEY_Q",
             "description": "Kick"
         },
         {
