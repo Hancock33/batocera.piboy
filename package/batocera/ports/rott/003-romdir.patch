@@ -1,0 +1,17 @@
+diff --git a/src/rt_def.h b/src/rt_def.h
+index a910b2e..91fa395 100644
+--- a/src/rt_def.h
++++ b/src/rt_def.h
+@@ -82,9 +82,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ //
+ //***************************************************************************
+ 
+-#ifndef DATADIR
+-#define DATADIR	""
+-#endif
++//#ifndef DATADIR
++#define DATADIR	"/userdata/roms/ports/rott/"
++//#endif
+ 
+ #undef PI
+ #undef M_PI

@@ -1,0 +1,35 @@
+diff --git a/src/Makefile b/src/Makefile
+index fb1c9d8..0c8120f 100644
+--- a/src/Makefile
++++ b/src/Makefile
+@@ -18,7 +18,7 @@ CC ?= gcc
+ 
+ CFLAGS ?= -std=c17 -g -Og
+ CFLAGS += -Wall -Wextra -Wshadow -Wpedantic
+-CFLAGS += $(shell sdl2-config --cflags)
++CFLAGS += `pkg-config sdl2 --cflags`
+ CFLAGS += $(EXTRACFLAGS)
+ 
+ CPPFLAGS += -DUSE_SDL=1
+@@ -28,7 +28,7 @@ CPPFLAGS += $(EXTRACPPFLAGS)
+ 
+ LDFLAGS += $(EXTRALDFLAGS)
+ 
+-LDLIBS += $(shell sdl2-config --libs)
++LDLIBS += `pkg-config sdl2 --libs`
+ LDLIBS += -lSDL2_mixer
+ LDLIBS += $(EXTRALDLIBS)
+ 
+diff --git a/src/audiolib/Makefile b/src/audiolib/Makefile
+index 21334c7..d48c52a 100644
+--- a/src/audiolib/Makefile
++++ b/src/audiolib/Makefile
+@@ -8,7 +8,7 @@ ARFLAGS ?= rcT
+ 
+ CFLAGS ?= -std=c17 -g -Og
+ CFLAGS += -Wall -Wextra -Wshadow -Wpedantic
+-CFLAGS += $(shell sdl2-config --cflags)
++CFLAGS += `pkg-config sdl2 --cflags`
+ 
+ OBJS :=
+ OBJS += fx_man.o
