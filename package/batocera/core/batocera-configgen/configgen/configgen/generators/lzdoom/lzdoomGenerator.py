@@ -12,7 +12,7 @@ class LzdoomGenerator(Generator):
         if not os.path.exists(config_dir):
             os.mkdir(config_dir)
 
-        extra_config = ''
+        extra_config = 'bind ] weapnext\n'
 
         if system.isOptSet('lzdoom_render'):
             if system.config['lzdoom_render'] == 'soft':
@@ -71,6 +71,6 @@ class LzdoomGenerator(Generator):
             ],
             env={
                 'DOOMWADDIR': '/userdata/roms/ports/doom',
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             }
         )

@@ -12,7 +12,7 @@ class GzdoomGenerator(Generator):
         if not os.path.exists(config_dir):
             os.mkdir(config_dir)
 
-        extra_config = ''
+        extra_config = 'bind ] weapnext\n'
 
         if system.isOptSet('gzdoom_render'):
             if system.config['gzdoom_render'] == 'gl':
@@ -90,6 +90,6 @@ class GzdoomGenerator(Generator):
             ],
             env={
                 'DOOMWADDIR': '/userdata/roms/ports/doom',
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
+                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             }
         )
