@@ -3,8 +3,8 @@
 # xash3d-fwgs
 #
 ################################################################################
-# Version: Commits on Feb 03, 2023
-XASH3D_FWGS_VERSION = 82b6da493a3b04876a30c832571569138dd073e4
+# Version: Commits on Feb 05, 2023
+XASH3D_FWGS_VERSION = 87c307f47e71ed9fbfdb475941ecb37d97c79bf9
 XASH3D_FWGS_SITE = https://github.com/FWGS/xash3d-fwgs.git
 XASH3D_FWGS_SITE_METHOD = git
 XASH3D_FWGS_GIT_SUBMODULES = yes
@@ -21,11 +21,19 @@ ifeq ($(BR2_ARCH_IS_64),y)
   XASH3D_FWGS_CONF_OPTS += --64bits
 endif
 
-ifeq ($(BR2_PACKAGE_HAS_LIBGLES),y)
-  XASH3D_FWGS_DEPENDENCIES += libgles
-  XASH3D_FWGS_CONF_OPTS += --disable-gl --enable-gl4es
+ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
+# Batocera - SBC prefer GLES
+	ifneq ($(BR2_PACKAGE_LIBGLVND),y)
+		XASH3D_FWGS_DEPENDENCIES += libgl
+	endif
 else
-  XASH3D_FWGS_CONF_OPTS += --disable-gl
+	ifeq ($(BR2_PACKAGE_HAS_LIBGLES),y)
+		XASH3D_FWGS_DEPENDENCIES += libgles
+		XASH3D_FWGS_CONF_OPTS += --disable-gl --enable-gl4es
+	else
+		XASH3D_FWGS_CONF_OPTS += --disable-gl
+	endif
 endif
+
 
 $(eval $(waf-package))

@@ -170,6 +170,7 @@ define BATOCERA_DESKTOPAPPS_INSTALL_TARGET_CMDS
 	# scripts
 	mkdir -p $(TARGET_DIR)/usr/bin
 	$(foreach f,$(BATOCERA_DESKTOPAPPS_SCRIPTS), cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-desktopapps/scripts/$(f) $(TARGET_DIR)/usr/bin/$(f)$(sep))
+	chmod 754  $(TARGET_DIR)/usr/bin/batocera-config-*
 
 	# apps
 	mkdir -p $(TARGET_DIR)/usr/share/applications
