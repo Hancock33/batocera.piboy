@@ -360,7 +360,7 @@ libretro:
             "Off":  "false"
   cores:
     '81':
-      features: [netplay, padtokeyboard]
+      features: [padtokeyboard, netplay]
       shared: [rewind, autosave]
       cfeatures:
             81_chroma_81:
@@ -378,7 +378,7 @@ libretro:
                     "Off":         none
                     "On (forced)": WRX
     arduous:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
     atari800:
       features: [padtokeyboard]
       systems:
@@ -431,7 +431,7 @@ libretro:
                             "Off":     disabled
                             "On":      enabled
     beetle-saturn:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [autosave, use_guns]
       cfeatures:
           beetle-saturn_crosshair:
@@ -458,7 +458,7 @@ libretro:
                     "Saturn Pad":    1
                     "Saturn 3D Pad": 5
     fmsx:
-       features: [netplay, cheevos]
+       features: [padtokeyboard, netplay, cheevos]
        shared: [rewind, autosave]
     bluemsx:
       features: [padtokeyboard, cheevos]
@@ -478,13 +478,13 @@ libretro:
                     "Off": OFF
                     "On":  ON
     bsnes:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave, use_guns]
     bsnes_hd:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
     cap32:
-      features: [netplay, cheevos, padtokeyboard]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             cap32_model:
@@ -516,7 +516,7 @@ libretro:
                     "French":            french
 
     mesens:
-      features: [netplay, padtokeyboard]
+      features: [padtokeyboard, netplay]
       shared: [rewind, autosave, use_guns]
       cfeatures:
             mesens_ntsc_filter:
@@ -579,7 +579,7 @@ libretro:
                     "500%":  500%
                     "1000%": 1000%
     mesen:
-      features: [netplay, padtokeyboard]
+      features: [padtokeyboard, netplay]
       shared: [rewind, autosave]
       cfeatures:
         mesen_region:
@@ -672,7 +672,7 @@ libretro:
     citra:
       shared: [rewind, autosave]
     desmume:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             internal_resolution_desmume:
@@ -741,7 +741,7 @@ libretro:
                     "8":   8
                     "9":   9
     melonds:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [autosave]
       cfeatures:
             melonds_boot_directly:
@@ -1169,7 +1169,7 @@ libretro:
                     "Both Joysticks (4 Axes, 4 Btns)":                      2049
                     "Custom Keyboard Binds (best for Pad2Key)":             3
     swanstation:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [autosave, use_guns]
       cfeatures:
             swanstation_PatchFastBoot:
@@ -1257,7 +1257,7 @@ libretro:
                     "PlayStation Mouse":             PlayStationMouse
                     "NeGcon":                        NeGcon
     duckstation:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [autosave]
       cfeatures:
             duckstation_PatchFastBoot:
@@ -1347,10 +1347,10 @@ libretro:
                     "PlayStation Mouse":             258
                     "NeGcon":                        773
     ep128emu:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
     fbneo:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave, use_guns]
       cfeatures:
             fbneo-cpu-speed-adjust:
@@ -1409,7 +1409,7 @@ libretro:
                             "Shared":                             shared
                             "Per-game":                           per-game
     fceumm:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave, use_guns]
       cfeatures:
             fceumm_show_crosshair:
@@ -1493,7 +1493,7 @@ libretro:
                     "NES Zapper":           258
                     "Arkanoid paddle":      514
     flycast:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [autosave, use_guns]
       cfeatures:
             reicast_synchronous_rendering:
@@ -1737,7 +1737,7 @@ libretro:
                             "Left Analog (Forced)":  3
                             "Right Analog (Forced)": 4
     flycast2021:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [autosave, use_guns]
       cfeatures:
             reicast_synchronous_rendering:
@@ -1992,7 +1992,7 @@ libretro:
       features: [padtokeyboard, cheevos]
       shared: [autosave]
     freechaf:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [rewind]
     fuse:
       features: [padtokeyboard]
@@ -2058,7 +2058,7 @@ libretro:
                     "Off":                     0
                     "On":                      259
     gambatte:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             gb_bootloader:
@@ -2147,10 +2147,10 @@ libretro:
                             "TWB64 - Pack 2":                   TWB76 - Yellow Banana
                             "Custom":                           custom
     genesisplusgx-wide:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
     genesisplusgx:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             gpgx_region:
@@ -2324,24 +2324,24 @@ libretro:
                             "Off":       disabled
                             "On":        enabled
     gpsp:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [rewind, autosave]
     handy:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
     hatari:
       features: [padtokeyboard]
       shared: [autosave]
     imame4all:
-      features: [netplay]
+      features: [padtokeyboard, netplay]
       shared: [rewind, autosave]
     kronos:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [autosave]
     lowresnx:
       features: [padtokeyboard]
     same_cdi:
-      features: [netplay]
+      features: [padtokeyboard, netplay]
       shared: [autosave]
       cfeatures:
             mame_cpu_overclock:
@@ -2403,7 +2403,7 @@ libretro:
                     "On":  1
                     "Off": 0
     mame:
-      features: [netplay]
+      features: [padtokeyboard, netplay]
       shared: [autosave]
       cfeatures:
             mame_cpu_overclock:
@@ -3501,7 +3501,7 @@ libretro:
                           "On":  1
                           "Off": 0
     mamevirtual:
-      features: [netplay]
+      features: [padtokeyboard, netplay]
       shared: [autosave]
       cfeatures:
             mame_cpu_overclock:
@@ -3596,7 +3596,7 @@ libretro:
     mame0139:
       shared: [use_guns]
     mame078plus:
-      features: [netplay]
+      features: [padtokeyboard, netplay]
       shared: [rewind, autosave, use_guns]
       cfeatures:
             mame2003-plus_analog:
@@ -3645,13 +3645,13 @@ libretro:
                     "Off":        disabled
                     "On":         enabled
     mednafen_lynx:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
     mednafen_ngp:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
     mednafen_psx:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [autosave, use_guns]
       cfeatures:
             beetle_psx_skip_bios:
@@ -3764,7 +3764,7 @@ libretro:
                     #"Justifier":                     516
                     "PlayStation Mouse":             258
     mednafen_supergrafx:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             sgx_nospritelimit:
@@ -3774,7 +3774,7 @@ libretro:
                     "Off":        disabled
                     "On":         enabled
     mednafen_wswan:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             wswan_rotate_display:
@@ -3786,7 +3786,7 @@ libretro:
                     "Portrait":     portrait
                     "Landscape":    landscape
     mgba:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             skip_bios_mgba:
@@ -3857,7 +3857,7 @@ libretro:
                             "9":  9
                             "10": 10
     mrboom:
-      features: [netplay]
+      features: [padtokeyboard, netplay]
       shared: [rewind, autosave]
       cfeatures:
             mrboom-aspect:
@@ -3874,7 +3874,7 @@ libretro:
                     "Off":    OFF
                     "On":     ON
     mupen64plus-next:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [autosave]
       cfeatures:
             mupen64plus-43screensize:
@@ -4037,7 +4037,7 @@ libretro:
                     "Off":          Off
                     "On":           On
     nestopia:
-      features: [netplay]
+      features: [padtokeyboard, netplay]
       shared: [rewind, autosave, use_guns]
       cfeatures:
             nestopia_show_crosshair:
@@ -4097,7 +4097,7 @@ libretro:
                     "NTSC (NES)":           ntsc
                     "Famicom (FDS)":        famicom
     np2kai:
-      features: [netplay, padtokeyboard]
+      features: [padtokeyboard, netplay]
       shared: [rewind, autosave]
       cfeatures:
             np2kai_model:
@@ -4225,7 +4225,7 @@ libretro:
                     "Manual keyboard":              Manual Keyboard
                     "Atari Joypad":                 Atari Joypad
     o2em:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             o2em_bios:
@@ -4279,7 +4279,7 @@ libretro:
                     "80%":                         80
                     "90%":                         90
     opera:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave, use_guns]
       cfeatures:
             high_resolution:
@@ -4328,7 +4328,7 @@ libretro:
                     "Shared":   shared
                     "Per Game": per game
     parallel_n64:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [autosave]
       cfeatures:
             parallel-n64-screensize:
@@ -4400,7 +4400,7 @@ libretro:
                     "Memory Pak":  memory
                     "Rumble Pak":  rumble
     pce:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             pce_nospritelimit:
@@ -4416,7 +4416,7 @@ libretro:
                     "PCE Joypad": 1
                     "PCE Mouse":  2
     pce_fast:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             pce_nospritelimit:
@@ -4432,7 +4432,7 @@ libretro:
                     "PCE Joypad": 1
                     "PCE Mouse":  2
     pcfx:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             pcfx_nospritelimit:
@@ -4442,7 +4442,7 @@ libretro:
                     "Off":        disabled
                     "On":         enabled
     pcsx_rearmed:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [autosave, use_guns]
       cfeatures:
             show_bios_bootlogo:
@@ -4512,7 +4512,7 @@ libretro:
                     "NeGcon":                        773
                     "PlayStation Mouse":             258
     picodrive:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [autosave]
       cfeatures:
             picodrive_sprlim:
@@ -4540,10 +4540,10 @@ libretro:
                     "Joypad 3 Button": 3 button pad
                     "Joypad 6 Button": 6 button pad
     pocketsnes:
-      features: [netplay]
+      features: [padtokeyboard, netplay]
       shared: [rewind, autosave]
     pokemini:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             pokemini_lcdfilter:
@@ -4559,7 +4559,7 @@ libretro:
                     "Off":  3shades
                     "On":   analog
     potator:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             watara_palette:
@@ -4608,7 +4608,7 @@ libretro:
                     "7 Frames":                       7
                     "8 Frames":                       8
     ppsspp:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [rewind, autosave]
     prboom:
       shared: [rewind, autosave]
@@ -4634,7 +4634,7 @@ libretro:
                     "Gamepad Modern":     773
                     "Keyboard + Mouse":   3
     prosystem:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [rewind, autosave]
     puae:
       features: [padtokeyboard]
@@ -5303,7 +5303,7 @@ libretro:
                     "Megadrive (8 Buttons)":     CPSF-MD (8 Buttons)
                     "Super Famicom (8 Buttons)": CPSF-SFC (8 Buttons)
     quasi88:
-      features: [netplay, padtokeyboard, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             q88_basic_mode:
@@ -5331,10 +5331,10 @@ libretro:
                     "Off":                  disabled
                     "On":                   enabled
     quicknes:
-      features: [netplay, padtokeyboard, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
     sameboy:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [rewind, autosave]
       systems:
             gb:
@@ -5402,7 +5402,7 @@ libretro:
                     "Off":        disabled
                     "On":         enabled
     snes9x:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave, use_guns]
       cfeatures:
             reduce_sprite_flicker:
@@ -5475,7 +5475,7 @@ libretro:
                     "Off":                                disabled
                     "On":                                 enabled
     snes9x_next:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave, use_guns]
       cfeatures:
             2010_reduce_sprite_flicker:
@@ -5532,13 +5532,13 @@ libretro:
                     "Off":                                disabled
                     "On":                                 enabled
     supafaust:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
     stella:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave, use_guns]
     tgbdual:
-      features: [netplay]
+      features: [padtokeyboard, netplay]
       shared: [rewind, autosave]
       cfeatures:
             sync_saves:
@@ -5548,7 +5548,7 @@ libretro:
                     "On":   1
                     "Off":  0
     theodore:
-      features: [netplay, padtokeyboard]
+      features: [padtokeyboard, netplay]
       shared: [rewind, autosave]
     tic80:
       features: [padtokeyboard]
@@ -5601,7 +5601,7 @@ libretro:
                     "Gamepad Modern":         773
                     "Keyboard + Mouse":       3
     vb:
-      features: [netplay, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             2d_color_mode:
@@ -5626,7 +5626,7 @@ libretro:
                     "green/magenta":       green & magenta
                     "yellow/blue":         yellow & blue
     vba-m:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [rewind, autosave]
       systems:
             gb:
@@ -5742,7 +5742,7 @@ libretro:
                             "115": 115
                             "120": 120
     vecx:
-      features: [cheevos]
+      features: [padtokeyboard, cheevos]
       shared: [rewind, autosave]
       cfeatures:
             res_multi:
@@ -6274,7 +6274,7 @@ libretro:
                     "Off":      disabled
                     "On":       enabled
     wasm4:
-      features: [netplay, padtokeyboard, cheevos]
+      features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
     x1:
       features: [padtokeyboard]
@@ -8361,7 +8361,7 @@ sdlpop:
   features: [padtokeyboard]
   shared: [videomode, ratio, hud]
 superbroswar:
-  features: []
+  features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 supermodel:
   features: [padtokeyboard]
@@ -9455,7 +9455,7 @@ mame:
                         "On":  1
                         "Off": 0
        mame:
-            features: [netplay, padtokeyboard]
+            features: [padtokeyboard, netplay]
             cfeatures:
                 altlayout:
                     group: CONTROLLER SETTINGS
@@ -10402,7 +10402,7 @@ droidports:
 eduke32:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-  features: []
+  features: [padtokeyboard]
   cfeatures:
     nologo:
       prompt: SKIP INTRO VIDEOS
@@ -10515,7 +10515,7 @@ hode:
 ionfury:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-  features: []
+  features: [padtokeyboard]
   cfeatures:
     nologo:
       prompt: SKIP INTRO VIDEOS
@@ -10707,7 +10707,7 @@ virtualjaguar:
 # vita3k doesn't handle the hud - so no deocrations etc
 vita3k:
   shared: [videomode]
-  features: []
+  features: [padtokeyboard]
   cfeatures:
     vita3k_gfxbackend:
       prompt:      GRAPHICS API
@@ -10764,7 +10764,7 @@ xenia:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 xenia-canary:
-  features: []
+  features: [padtokeyboard]
   shared: [videomode]
 yabausesa:
   features: [padtokeyboard]
