@@ -86,6 +86,9 @@ def _get_arch_suffix():
 class Xash3dFwgsGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
+        if not os.path.isdir('/userdata/system/configs/xash3d_fwgs'):
+            os.mkdir('/userdata/system/configs/xash3d_fwgs')
+
         game = os.path.splitext(os.path.basename(rom))[0]
 
         arch_suffix = _get_arch_suffix()
