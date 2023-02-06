@@ -1,0 +1,15 @@
+diff --git a/Makefile b/Makefile
+index 915ed88..3eadc6a 100644
+--- a/Makefile
++++ b/Makefile
+@@ -10,8 +10,8 @@ OBJS = $(addsuffix .o, $(basename $(notdir $(SOURCES))))
+ CXXFLAGS = -I$(IMGUI_DIR) -I$(IMGUI_DIR)/backends -I$(CXXOPTS_DIR)/include
+ CXXFLAGS += -std=c++17 -O2 -Wall -Wformat
+ CXXFLAGS += -DIMGUI_IMPL_OPENGL_ES2
+-CXXFLAGS += `sdl2-config --cflags`
+-LIBS = -lGLESv2 -ldl `sdl2-config --libs`
++CXXFLAGS += `pkg-config sdl2 --cflags`
++LIBS = -lGLESv2 -ldl `pkg-config sdl2 --libs`
+ 
+ ##---------------------------------------------------------------------
+ ## BUILD RULES
