@@ -756,6 +756,11 @@ serioussam:
 seta:
   emulator: libretro
   core:     mame078plus
+settings:
+  emulator: sh
+  core:     sh
+  options:
+    bezel: none
 sg1000:
   emulator: libretro
   core:     genesisplusgx
