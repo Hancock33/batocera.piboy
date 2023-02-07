@@ -3781,6 +3781,17 @@ ports:
                         Aqui você pode encontrar jogos e aplicativos para Linux, iniciados via scripts shell que terminam em
                         ".sh". Apenas os scripts ".sh" aparecem no EmulationStation.
 
+settings:
+  name:                 Batocera Logs
+  manufacturer:         Batocera
+  release:
+  hardware:
+  extensions:           [sh]
+  path:                 /userdata/roms/settings
+  emulators:
+    sh:
+      sh:               { requireAnyOf: [] }
+
 pre2:
   name:                 Prehistorik 2
   manufacturer:         Ports
