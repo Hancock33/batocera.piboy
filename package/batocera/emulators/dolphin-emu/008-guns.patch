@@ -1,5 +1,5 @@
 diff --git a/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp b/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
-index d4e26fd..a297d57 100644
+index cf811e5b41..bbcd2af13b 100644
 --- a/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
 +++ b/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
 @@ -22,6 +22,7 @@
@@ -10,7 +10,7 @@ index d4e26fd..a297d57 100644
  
  namespace ciface::evdev
  {
-@@ -52,15 +53,7 @@ protected:
+@@ -89,15 +90,7 @@ protected:
    {
      if (const char* code_name = libevdev_event_code_get_name(EV_KEY, m_code))
      {
@@ -27,7 +27,7 @@ index d4e26fd..a297d57 100644
      }
      else
      {
-@@ -111,9 +104,30 @@ public:
+@@ -148,9 +141,30 @@ public:
    ControlState GetState() const final override
    {
      int value = 0;
@@ -59,7 +59,7 @@ index d4e26fd..a297d57 100644
    }
  
  protected:
-@@ -524,7 +538,6 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
+@@ -474,7 +488,6 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
      m_name = potential_new_name;
  
    const bool is_motion_device = libevdev_has_property(dev, INPUT_PROP_ACCELEROMETER);
@@ -67,7 +67,7 @@ index d4e26fd..a297d57 100644
  
    // If a device has BTN_JOYSTICK it probably uses event codes counting up from 0x120
    // which have very useless and wrong names.
-@@ -537,21 +550,7 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
+@@ -487,21 +500,7 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
    {
      if (libevdev_has_event_code(dev, EV_KEY, key))
      {
@@ -90,7 +90,7 @@ index d4e26fd..a297d57 100644
        ++num_buttons;
      }
    }
-@@ -587,24 +586,6 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
+@@ -537,24 +536,6 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
      return true;
    }
  
