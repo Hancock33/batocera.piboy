@@ -3,8 +3,8 @@
 # fallout2
 #
 ################################################################################
-# Version: Commits on Jan 29, 2023
-FALLOUT2_VERSION = 5a230efd2bc7474f843f6fe849d485f53dd2f4a0
+# Version: Commits on Feb 09, 2023
+FALLOUT2_VERSION = 28083cfea9b2ff57a04a2be950bf1c6e54057eff
 FALLOUT2_SITE = $(call github,alexbatalov,fallout2-ce,$(FALLOUT2_VERSION))
 
 FALLOUT2_DEPENDENCIES = sdl2 sdl2_image sdl2_mixer sdl2_net sdl2_ttf
