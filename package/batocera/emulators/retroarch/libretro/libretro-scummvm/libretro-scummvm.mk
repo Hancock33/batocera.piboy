@@ -3,12 +3,11 @@
 # libretro-scummvm
 #
 ################################################################################
-# Version: Commits on Feb 08, 2023 (branch@upstream_master)
-LIBRETRO_SCUMMVM_VERSION = cf2535388411fa59e28d9ed4cb0c225af3277888
-LIBRETRO_SCUMMVM_SITE = https://github.com/libretro/scummvm
-LIBRETRO_SCUMMVM_SITE_METHOD=git
-LIBRETRO_SCUMMVM_GIT_SUBMODULES=YES
-LIBRETRO_SCUMMVM_LICENSE = GPLv3
+# Version: Commits on Feb 10, 2023 (branch@branch-2-7)
+LIBRETRO_SCUMMVM_VERSION = 9010056d7edd40ed6e14ca63d430cc3a65626b19
+LIBRETRO_SCUMMVM_SITE = $(call github,scummvm,scummvm,$(LIBRETRO_SCUMMVM_VERSION))
+LIBRETRO_SCUMMVM_LICENSE = GPLv2
+LIBRETRO_SCUMMVM_DEPENDENCIES = sdl2 zlib jpeg libmpeg2 libogg libvorbis flac libmad libpng libtheora faad2 freetype
 
 LIBRETRO_SCUMMVM_PLATFORM = $(LIBRETRO_PLATFORM)
 
@@ -33,12 +32,16 @@ LIBRETRO_SCUMMVM_MAKE_OPTS += TARGET_64BIT=1
 endif
 
 define LIBRETRO_SCUMMVM_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ platform="$(LIBRETRO_SCUMMVM_PLATFORM)" $(LIBRETRO_SCUMMVM_MAKE_OPTS)
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/backends/platform/libretro \
+	platform="$(LIBRETRO_SCUMMVM_PLATFORM)" $(LIBRETRO_SCUMMVM_MAKE_OPTS) all
 endef
 
 define LIBRETRO_SCUMMVM_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/scummvm_libretro.so \
+	$(INSTALL) -D $(@D)/backends/platform/libretro/scummvm_libretro.so \
 		$(TARGET_DIR)/usr/lib/libretro/scummvm_libretro.so
+
+	$(INSTALL) -D $(@D)/backends/platform/libretro/scummvm_libretro.info \
+		$(TARGET_DIR)/usr/share/libretro/info/scummvm_libretro.info	
 endef
 
 $(eval $(generic-package))
