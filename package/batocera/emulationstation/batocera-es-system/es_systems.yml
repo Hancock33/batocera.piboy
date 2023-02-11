@@ -4270,7 +4270,7 @@ eduke32:
   manufacturer:         Ports (eDuke Engine)
   release:              1996
   hardware:             port
-  extensions:           [grp]
+  extensions:           [eduke, grp, ssi]
   platform:             pc
   group:                eduke32
   path:                 /userdata/roms/ports/eduke32
