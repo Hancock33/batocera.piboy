@@ -1,8 +1,8 @@
 diff --git a/configuration.c b/configuration.c
-index 814d036dd4..b20bf21429 100644
+index aba56b93e2..7baa6f8d18 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -4154,6 +4154,7 @@ bool config_load_remap(const char *directory_input_remapping,
+@@ -4254,6 +4254,7 @@ bool config_load_remap(const char *directory_input_remapping,
     char content_dir_name[PATH_MAX_LENGTH];
     /* final path for core-specific configuration (prefix+suffix) */
     char core_path[PATH_MAX_LENGTH];
@@ -10,7 +10,7 @@ index 814d036dd4..b20bf21429 100644
     /* final path for game-specific configuration (prefix+suffix) */
     char game_path[PATH_MAX_LENGTH];
     /* final path for content-dir-specific configuration (prefix+suffix) */
-@@ -4170,6 +4171,7 @@ bool config_load_remap(const char *directory_input_remapping,
+@@ -4270,6 +4271,7 @@ bool config_load_remap(const char *directory_input_remapping,
  
     content_dir_name[0] = '\0';
     core_path[0]        = '\0';
@@ -18,7 +18,7 @@ index 814d036dd4..b20bf21429 100644
     game_path[0]        = '\0';
     content_path[0]     = '\0';
  
-@@ -4206,6 +4208,12 @@ bool config_load_remap(const char *directory_input_remapping,
+@@ -4306,6 +4308,12 @@ bool config_load_remap(const char *directory_input_remapping,
           FILE_PATH_REMAP_EXTENSION,
           sizeof(core_path));
  
@@ -31,7 +31,7 @@ index 814d036dd4..b20bf21429 100644
     input_remapping_set_defaults(false);
  
     /* If a game remap file exists, load it. */
-@@ -4254,6 +4262,19 @@ bool config_load_remap(const char *directory_input_remapping,
+@@ -4354,6 +4362,19 @@ bool config_load_remap(const char *directory_input_remapping,
        }
     }
  
