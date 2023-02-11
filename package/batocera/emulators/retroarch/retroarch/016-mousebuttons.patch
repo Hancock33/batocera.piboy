@@ -1,8 +1,8 @@
 diff --git a/configuration.c b/configuration.c
-index 814d036dd4..d004961ba4 100644
+index aba56b93e2..3b3c79ce9f 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -4432,12 +4432,33 @@ static void save_keybind_mbutton(config_file_t *conf,
+@@ -4532,12 +4532,33 @@ static void save_keybind_mbutton(config_file_t *conf,
        case RETRO_DEVICE_ID_MOUSE_MIDDLE:
           config_set_uint64(conf, key, 3);
           break;
@@ -38,7 +38,7 @@ index 814d036dd4..d004961ba4 100644
        case RETRO_DEVICE_ID_MOUSE_WHEELUP:
           config_set_string(conf, key, "wu");
           break;
-@@ -5795,11 +5816,32 @@ void input_config_parse_mouse_button(
+@@ -6047,11 +6068,32 @@ void input_config_parse_mouse_button(
                 bind->mbutton = RETRO_DEVICE_ID_MOUSE_MIDDLE;
                 break;
              case 4:
@@ -171,7 +171,7 @@ index 7d6f8d4236..f224975430 100644
           return mouse->wu;
        case RETRO_DEVICE_ID_MOUSE_WHEELDOWN:
 diff --git a/libretro-common/include/libretro.h b/libretro-common/include/libretro.h
-index 4bd3f2f0c7..ebc2920656 100644
+index 3d6df6f9e1..8d4ac112b5 100644
 --- a/libretro-common/include/libretro.h
 +++ b/libretro-common/include/libretro.h
 @@ -221,8 +221,15 @@ extern "C" {
@@ -193,10 +193,10 @@ index 4bd3f2f0c7..ebc2920656 100644
  /* Id values for LIGHTGUN. */
  #define RETRO_DEVICE_ID_LIGHTGUN_SCREEN_X        13 /*Absolute Position*/
 diff --git a/menu/menu_driver.c b/menu/menu_driver.c
-index cb3d629061..a23a72897b 100644
+index 273e8ed2b3..15065e25e6 100644
 --- a/menu/menu_driver.c
 +++ b/menu/menu_driver.c
-@@ -1598,8 +1598,15 @@ bool menu_input_key_bind_poll_find_hold_pad(
+@@ -1625,8 +1625,15 @@ bool menu_input_key_bind_poll_find_hold_pad(
           case RETRO_DEVICE_ID_MOUSE_LEFT:
           case RETRO_DEVICE_ID_MOUSE_RIGHT:
           case RETRO_DEVICE_ID_MOUSE_MIDDLE:
@@ -212,7 +212,7 @@ index cb3d629061..a23a72897b 100644
           case RETRO_DEVICE_ID_MOUSE_WHEELUP:
           case RETRO_DEVICE_ID_MOUSE_WHEELDOWN:
           case RETRO_DEVICE_ID_MOUSE_HORIZ_WHEELUP:
-@@ -1705,8 +1712,15 @@ bool menu_input_key_bind_poll_find_trigger_pad(
+@@ -1732,8 +1739,15 @@ bool menu_input_key_bind_poll_find_trigger_pad(
           case RETRO_DEVICE_ID_MOUSE_LEFT:
           case RETRO_DEVICE_ID_MOUSE_RIGHT:
           case RETRO_DEVICE_ID_MOUSE_MIDDLE:
