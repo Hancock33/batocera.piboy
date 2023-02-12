@@ -35,10 +35,10 @@ define SAMTSE_INSTALL_TARGET_CMDS
 	$(TARGET_STRIP) $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/*
 
 	# link libraries 
-	ln -sf /usr/share/game_assets/samtse/libEngineMP.so                 $(TARGET_DIR)/usr/share/game_assets/samtse/libEngine.so
-	ln -sf /usr/share/game_assets/samtse/libEntitiesMP.so               $(TARGET_DIR)/usr/share/game_assets/samtse/libEntities.so	
-	ln -sf /usr/share/game_assets/samtse/libGameMP.so                   $(TARGET_DIR)/usr/share/game_assets/samtse/libGame.so
-	ln -sf /usr/lib/libvorbisfile.so                                    $(TARGET_DIR)/usr/share/game_assets/samtse/libvorbisfile.so
+	ln -sf /usr/share/game_assets/samtse/Bin/libEngineMP.so             $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libEngine.so
+	ln -sf /usr/share/game_assets/samtse/Bin/libEntitiesMP.so           $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libEntities.so	
+	ln -sf /usr/share/game_assets/samtse/Bin/libGameMP.so               $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libGame.so
+	ln -sf /usr/lib/libvorbisfile.so                                    $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libvorbisfile.so
 
 	# link game files
 	cp -av $(@D)/SamTSE/SE1_10b.gro                                     $(TARGET_DIR)/usr/share/game_assets/samtse
