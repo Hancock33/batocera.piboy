@@ -27,12 +27,20 @@ SAMTSE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DECC=$(HOST_SAMTFE_BUILDDIR)/ecc
 define SAMTSE_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/share/game_assets/samtse
 	mkdir -p $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
+	# copy assets
 	cp -av $(SAMTSE_BUILDDIR)/Debug/*                                   $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
 	cp -av $(SAMTSE_BUILDDIR)/MakeFONT                                  $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
 	cp -av $(SAMTSE_BUILDDIR)/serioussamse-ded                          $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/serioussam-ded
 	cp -av $(SAMTSE_BUILDDIR)/serioussamse                              $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/serioussam
-	
 	$(TARGET_STRIP) $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/*
+
+	# link libraries 
+	ln -sf /usr/share/game_assets/samtse/libEngineMP.so                 $(TARGET_DIR)/usr/share/game_assets/samtse/libEngine.so
+	ln -sf /usr/share/game_assets/samtse/libEntitiesMP.so               $(TARGET_DIR)/usr/share/game_assets/samtse/libEntities.so	
+	ln -sf /usr/share/game_assets/samtse/libGameMP.so                   $(TARGET_DIR)/usr/share/game_assets/samtse/libGame.so
+	ln -sf /usr/lib/libvorbisfile.so                                    $(TARGET_DIR)/usr/share/game_assets/samtse/libvorbisfile.so
+
+	# link game files
 	cp -av $(@D)/SamTSE/SE1_10b.gro                                     $(TARGET_DIR)/usr/share/game_assets/samtse
 	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00.gro            $(TARGET_DIR)/usr/share/game_assets/samtse
 	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_Extra.gro      $(TARGET_DIR)/usr/share/game_assets/samtse
