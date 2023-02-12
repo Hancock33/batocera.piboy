@@ -1125,7 +1125,7 @@ jaguar:
   manufacturer:         Atari
   release:              1993
   hardware:             console
-  extensions:           [abs, cof, j64, jag, rom, zip, 7z]
+  extensions:           [j64, jag, rom, zip, 7z]
   theme:                atarijaguar
   emulators:
     libretro:
@@ -1140,7 +1140,7 @@ jaguarcd:
   manufacturer:         Atari
   release:              1995
   hardware:             console
-  extensions:           [cue, cdi, zip, 7z]
+  extensions:           [cue, cdi]
   theme:                atarijaguarcd
   emulators:
     bigpemu:
