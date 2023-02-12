@@ -10,6 +10,7 @@ FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
 FLYCAST_LICENSE = GPLv2
 FLYCAST_DEPENDENCIES = sdl2 libpng libzip libcurl libao libminiupnpc
+FLYCAST_SUPPORTS_IN_SOURCE_BUILD = NO
 
 FLYCAST_CONF_OPTS += -DLIBRETRO=OFF -DGDB_SERVER=OFF
 FLYCAST_CONF_OPTS += -DGIT_VERSION="$(shell echo $(FLYCAST_VERSION) | cut -c 1-7)"
@@ -42,7 +43,7 @@ ifeq ($(BR2_PACKAGE_HAS_LIBMALI),y)
 endif
 
 define FLYCAST_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/flycast $(TARGET_DIR)/usr/bin/flycast
+	$(INSTALL) -D $(@D)/buildroot-build/flycast $(TARGET_DIR)/usr/bin/flycast
 	# evmapy files
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/flycast/*.keys $(TARGET_DIR)/usr/share/evmapy
