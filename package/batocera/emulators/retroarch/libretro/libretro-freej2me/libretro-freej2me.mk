@@ -3,8 +3,8 @@
 # libretro-freej2me
 #
 ################################################################################
-# Version: Commits on Dec 22, 2022
-LIBRETRO_FREEJ2ME_VERSION = 40d1ac9c61c04fa96b90e117f99a2c494798806c
+# Version: Commits on Feb 11, 2023
+LIBRETRO_FREEJ2ME_VERSION = 8344bcbd957e7055e90e57f1aff14d7d49c081cb
 LIBRETRO_FREEJ2ME_SITE = $(call github,hex007,freej2me,$(LIBRETRO_FREEJ2ME_VERSION))
 LIBRETRO_FREEJ2ME_LICENSE = GPL-3.0
 
