@@ -22,7 +22,7 @@ SAMTSE_POST_EXTRACT_HOOKS += SAMTSE_CP_WEAPONS
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 	SAMTSE_CONF_OPTS += -DRPI4=ON
 endif
-SAMTSE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DECC=$(HOST_SAMTFE_BUILDDIR)/ecc -DTFE=ON
+SAMTSE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DECC=$(HOST_SAMTFE_BUILDDIR)/ecc -DTSE=ON
 
 define SAMTSE_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/share/game_assets/samtse
@@ -38,7 +38,7 @@ define SAMTSE_INSTALL_TARGET_CMDS
 	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_Logo.gro       $(TARGET_DIR)/usr/share/game_assets/samtse
 	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_Music.gro      $(TARGET_DIR)/usr/share/game_assets/samtse
 	ln -sf /userdata/roms/ports/serioussam/SamTSE/1_04_patch.gro        $(TARGET_DIR)/usr/share/game_assets/samtse
-	ln -sf /userdata/roms/ports/serioussam/SamTSE/1_07_patch.gro        $(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/1_07_tools.gro        $(TARGET_DIR)/usr/share/game_assets/samtse
 	ln -sf /userdata/roms/ports/serioussam/SamTSE/Help                  $(TARGET_DIR)/usr/share/game_assets/samtse
 	ln -sf /userdata/roms/ports/serioussam/SamTSE/Levels                $(TARGET_DIR)/usr/share/game_assets/samtse
 	ln -sf /userdata/roms/ports/serioussam/SamTSE/Mods                  $(TARGET_DIR)/usr/share/game_assets/samtse
