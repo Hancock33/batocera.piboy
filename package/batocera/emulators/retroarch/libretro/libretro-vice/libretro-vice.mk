@@ -3,8 +3,8 @@
 # libretro-vice
 #
 ################################################################################
-# Version: Commits on Jan 12, 2023
-LIBRETRO_VICE_VERSION = 099ddc95da816d78b22f361dce081e5e2019ad5a
+# Version: Commits on Feb 11, 2023
+LIBRETRO_VICE_VERSION = f4b055b2f8e5877c617ed4623fa8cd9ade029bb9
 LIBRETRO_VICE_SITE = $(call github,sonninnos,libretro-vice,$(LIBRETRO_VICE_VERSION))
 LIBRETRO_VICE_LICENSE = GPLv2
 

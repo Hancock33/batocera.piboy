@@ -121,6 +121,9 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
 
     # find the system to run
     systemName = args.system
+    global endSystem  
+    endSystem = args.system
+    
     eslog.debug(f"Running system: {systemName}")
     system = Emulator(systemName, romConfiguration)
 
@@ -594,8 +597,10 @@ if __name__ == '__main__':
 
     time.sleep(1) # this seems to be required so that the gpu memory is restituated and available for es
     eslog.debug(f"Exiting configgen with status {str(exitcode)}")
-    shutil.copy('/userdata/system/logs/es_launch_stderr.log', '/tmp')
-    shutil.copy('/userdata/system/logs/es_launch_stdout.log', '/tmp')
+
+    if not endSystem == "settings":
+        shutil.copy('/userdata/system/logs/es_launch_stderr.log', '/tmp')
+        shutil.copy('/userdata/system/logs/es_launch_stdout.log', '/tmp')
 
     exit(exitcode)
 
