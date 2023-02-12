@@ -413,6 +413,9 @@ j2me:
 jaguar:
   emulator: libretro
   core:     virtualjaguar
+jaguarcd:
+  emulator: bigpemu
+  core:     bigpemu
 jaleco:
   emulator: libretro
   core:     mame078plus

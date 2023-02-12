@@ -1,8 +1,8 @@
 diff --git a/cheevos/cheevos.c b/cheevos/cheevos.c
-index 52efcc2769..784d42957d 100644
+index ac5a648bf6..9f9f0a13f8 100644
 --- a/cheevos/cheevos.c
 +++ b/cheevos/cheevos.c
-@@ -372,9 +372,10 @@ void rcheevos_award_achievement(rcheevos_locals_t* locals,
+@@ -375,9 +375,10 @@ void rcheevos_award_achievement(rcheevos_locals_t* locals,
  
        if (shotname)
        {
