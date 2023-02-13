@@ -1127,7 +1127,6 @@ jaguar:
   hardware:             console
   extensions:           [j64, jag, rom, zip, 7z]
   theme:                atarijaguar
-  platform:             atarijaguar
   emulators:
     libretro:
       virtualjaguar:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VIRTUALJAGUAR] }
@@ -1143,7 +1142,6 @@ jaguarcd:
   hardware:             console
   extensions:           [cue, cdi]
   theme:                atarijaguarcd
-  platform:             atarijaguarcd
   emulators:
     bigpemu:
       bigpemu:          { requireAnyOf: [BR2_PACKAGE_BIGPEMU] }
