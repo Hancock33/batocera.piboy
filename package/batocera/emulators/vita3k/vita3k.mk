@@ -3,8 +3,8 @@
 # vita3k
 #
 ################################################################################
-# Version: Commits on Jan 03, 2023
-VITA3K_VERSION = 762ee3bc4a261d779bbf34179a7c6a5316f36c69
+# Version: Commits on Feb 12, 2023
+VITA3K_VERSION = 97f8bb0da581d5a63b23246a69e003de090c3dbe
 VITA3K_SITE = https://github.com/vita3k/vita3k
 VITA3K_SITE_METHOD=git
 VITA3K_GIT_SUBMODULES=YES
@@ -35,3 +35,4 @@ VITA3K_PRE_CONFIGURE_HOOKS = VITA3K_GET_SUBMODULE
 VITA3K_POST_INSTALL_TARGET_HOOKS = VITA3K_INSTALL_EVMAPY
 
 $(eval $(cmake-package))
+
