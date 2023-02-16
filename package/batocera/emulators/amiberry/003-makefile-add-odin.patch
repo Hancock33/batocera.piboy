@@ -1,6 +1,8 @@
+diff --git a/Makefile b/Makefile
+index d3b24687..624a01f8 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -173,6 +173,12 @@
+@@ -193,6 +193,12 @@ else ifeq ($(PLATFORM),vero4k)
  	LDFLAGS += -L/opt/vero3/lib
  	HAVE_NEON = 1
  
