@@ -3,13 +3,14 @@
 # libretro-flycast
 #
 ################################################################################
-# Version: Commits on Feb 10, 2023
-LIBRETRO_FLYCAST_VERSION = 71aea45811276692cd17de195e7fc1bef8fdfc75
+# Version: Commits on Feb 16, 2023
+LIBRETRO_FLYCAST_VERSION = 253301ba4f822e8c0f53d1f3fe010ad85ca336ed
 LIBRETRO_FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 LIBRETRO_FLYCAST_SITE_METHOD=git
 LIBRETRO_FLYCAST_GIT_SUBMODULES=YES
 LIBRETRO_FLYCAST_LICENSE = GPLv2
 LIBRETRO_FLYCAST_DEPENDENCIES = retroarch
+LIBRETRO_FLYCAST_SUPPORTS_IN_SOURCE_BUILD = NO
 
 LIBRETRO_FLYCAST_PLATFORM = $(LIBRETRO_PLATFORM)
 
@@ -53,7 +54,7 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S922X),y)
 endif
 
 define LIBRETRO_FLYCAST_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/flycast_libretro.so \
+	$(INSTALL) -D $(@D)/buildroot-build/flycast_libretro.so \
 		$(TARGET_DIR)/usr/lib/libretro/flycast_libretro.so
 endef
 
