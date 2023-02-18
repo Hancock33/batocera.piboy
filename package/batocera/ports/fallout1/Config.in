@@ -1,0 +1,11 @@
+config BR2_PACKAGE_FALLOUT1
+	bool "fallout1"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_IMAGE
+	select BR2_PACKAGE_SDL2_MIXER
+	select BR2_PACKAGE_SDL2_NET
+	select BR2_PACKAGE_SDL2_TTF
+
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  Open source Fallout
