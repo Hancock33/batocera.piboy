@@ -1,4 +1,4 @@
-# 202x/xx/xx - batocera.linux 36 - Luna Moth
+# 2023/xx/xx - batocera.linux 36 - Luna Moth
 ### EmulationStation
 - volume for libretro cores can be changed per-game from es, may be extended to other emulators in future
 - brightness can go down to 1% (instead of 5%)
@@ -7,6 +7,7 @@
 - navigation with light guns now possible
 ### Added
 - Support for RK3328 Rock64(Pine64) & Roc-cc(firefly) Boards
+- added odroid-n2l support
 - alsa ucm2 to x86 builds for soundcard compatibility - v1.2.8
 - sound open firmware for expanded soundcard support - v2.2.3
 	- manual config is necessary
@@ -33,6 +34,7 @@
 - Added the initial Radxa RockPi 5b board support - thanks @stvhay for your persistence & hard work!
 - Retroachievements for Arduboy and WASM4
 - Added RPI2, RPI3_32Bits and RPIZero2 support in bcm2836 image
+- Expanded RTW89 linux driver for Realtek 8852xx devices
 ### Changed
 - Move to pipewire wireplumber audio
 - Bluetooth modes : automatic and manual (via a list)
@@ -131,6 +133,8 @@
 - Xbox S|X controllers with the RPi4
 - White frame on 4:3 screen in libretro cores for Sinden Lightgun
 - Future Pinball saves
+- Light guns on RPi4
+-   - they now start when connected/plugged
 ### Dev  
 - buildroot upgrade to 2022.11.1
 - odroidxu4 upgrade kernel to 6.1.10
