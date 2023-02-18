@@ -283,6 +283,9 @@ exidy:
 f2bgl:
   emulator: f2bgl
   core:     f2bgl
+fallout1:
+  emulator: fallout2
+  core:     fallout2
 fallout2:
   emulator: fallout2
   core:     fallout2
