@@ -3440,6 +3440,19 @@ f2bgl:
     f2bgl:
       f2bgl:            { requireAnyOf: [BR2_PACKAGE_F2BGL] }
 
+fallout1:
+  name:                 Fallout 1
+  manufacturer:         Ports
+  release:              1997
+  hardware:             port
+  extensions:           [game]
+  platform:             pc
+  group:                ports
+  path:                 /userdata/roms/ports/fallout1
+  emulators:
+    fallout2:
+      fallout2:         { requireAnyOf: [BR2_PACKAGE_FALLOUT1] }
+
 fallout2:
   name:                 Fallout 2
   manufacturer:         Ports
