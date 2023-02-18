@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gameList>
+  <game>
+    <path>./fallout.game</path>
+    <name>Fallout</name>
+    <desc>A devastating atomic war wiped out almost the entire population of the Earth. The civilization as we know it has been destroyed. The Earth has become a huge radioactive area. Only the most courageous ones dare to dwell on the surface, forming communities and building new cities. Many people live in Vaults, huge underground dwellings. You play the role of an inhabitant of Vault 13. Recently, the water purification controller chip was broken. Without clean water, the people of the Vault cannot survive. You are sent to retrieve a chip from another Vault. And you venture outside, to face a dangerous world and to find your place in it.
+
+Fallout is a RPG that utilizes a character development system called S.P.E.C.I.A.L. (the word is formed from the first letters of the game's most important character attributes). You can customize your character's parameters and skills, making him a strong melee fighter, a computer freak, a charismatic leader, a skillful sniper, and many more. You can specialize in various types of weapons, become proficient in conversations with people, etc. The game world offers a non-linear exploration: you can either follow the main story or perform one of the many sub-quests, visiting the game's locations in your preferred order. The game utilizes a turn-based combat system. Your party members (if you recruit any) are controlled by the computer AI. Each action (movement, attack, using a healing item, etc.) costs you action points; once they are depleted, your turn ends.</desc>
+    <releasedate>19971010T000000</releasedate>
+    <developer>Interplay</developer>
+    <publisher>Interplay</publisher>
+    <players>1</players>
+    <image>./images/fallout.png</image>
+  </game>
+</gameList>
