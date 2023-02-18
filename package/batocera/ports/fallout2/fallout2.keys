@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 fallout2-ce && reset"
+            "target": "pkill fallout && reset"
         },
         {
             "trigger": "joystick1",
