@@ -1,8 +1,8 @@
 diff --git a/Makefile b/Makefile
-index 57c13e9..2a6587c 100644
+index d3b24687..14293563 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -175,9 +175,9 @@ else ifeq ($(PLATFORM),vero4k)
+@@ -195,9 +195,9 @@ else ifeq ($(PLATFORM),vero4k)
  
  # Amlogic S905/S905X/S912 (AMLGXBB/AMLGXL/AMLGXM) e.g. Khadas VIM1/2 / S905X2 (AMLG12A) & S922X/A311D (AMLG12B) e.g. Khadas VIM3 - 32-bit userspace
  else ifneq (,$(findstring AMLG,$(PLATFORM)))
@@ -15,7 +15,7 @@ index 57c13e9..2a6587c 100644
  
  	ifneq (,$(findstring AMLG12,$(PLATFORM)))
  	  ifneq (,$(findstring AMLG12B,$(PLATFORM)))
-@@ -189,6 +189,8 @@ else ifneq (,$(findstring AMLG,$(PLATFORM)))
+@@ -209,6 +209,8 @@ else ifneq (,$(findstring AMLG,$(PLATFORM)))
  	  CPUFLAGS = -mcpu=cortex-a53
  	  CPPFLAGS += -DUSE_RENDER_THREAD
  	endif
