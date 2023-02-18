@@ -766,6 +766,9 @@ case "${ACTION}" in
 #	    "iso")
 #		play_iso "${GAMENAME}" || cleanAndExit 1
 #		;;
+	    "squashfs")
+		play_squashfs "${GAMENAME}" || cleanAndExit 1
+		;;
 	    "wsquashfs")
 		play_squashfs "${GAMENAME}" || cleanAndExit 1
 		;;
