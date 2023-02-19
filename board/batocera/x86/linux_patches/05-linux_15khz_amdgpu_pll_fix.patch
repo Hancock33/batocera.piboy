@@ -1,8 +1,8 @@
-Index: linux-6.1/drivers/gpu/drm/amd/amdgpu/amdgpu_pll.c
-===================================================================
---- linux-6.1.orig/drivers/gpu/drm/amd/amdgpu/amdgpu_pll.c
-+++ linux-6.1/drivers/gpu/drm/amd/amdgpu/amdgpu_pll.c
-@@ -89,9 +89,9 @@ static void amdgpu_pll_get_fb_ref_div(st
+diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_pll.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_pll.c
+index 0bb2466d539a..077906236ac2 100644
+--- a/drivers/gpu/drm/amd/amdgpu/amdgpu_pll.c
++++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_pll.c
+@@ -89,9 +89,9 @@ static void amdgpu_pll_get_fb_ref_div(struct amdgpu_device *adev, unsigned int n
  
  	/* limit reference * post divider to a maximum */
  	if (adev->family == AMDGPU_FAMILY_SI)
