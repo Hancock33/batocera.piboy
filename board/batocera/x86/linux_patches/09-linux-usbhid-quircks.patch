@@ -1,8 +1,8 @@
 diff --git a/drivers/hid/hid-quirks.c b/drivers/hid/hid-quirks.c
-index e92b77f..60bcce2 100644
+index 5bc91f68b374..d541d4c5b9ac 100644
 --- a/drivers/hid/hid-quirks.c
 +++ b/drivers/hid/hid-quirks.c
-@@ -27,6 +27,54 @@
+@@ -25,6 +25,54 @@
   */
  
  static const struct hid_device_id hid_quirks[] = {
