@@ -19,6 +19,7 @@ WINE_LUTRIS_PRE_CONFIGURE_HOOKS += WINE_LUTRIS_CREATE_WINE_FOLDER
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_LUTRIS_CONF_OPTS = CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
+	LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
 	--with-wine-tools=../host-wine-lutris-$(WINE_LUTRIS_VERSION) \
 	--disable-tests \
 	--without-capi \
