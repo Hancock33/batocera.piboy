@@ -1509,7 +1509,7 @@ config BR2_PACKAGE_BATOCERA_SDL2
 	select BR2_PACKAGE_FLAC             # flac
 	select BR2_PACKAGE_LIBMAD           # mp3
 	select BR2_PACKAGE_LIBVORBIS        # ogg
-	select BR2_PACKAGE_TVTEXTVIEWER
+	select BR2_PACKAGE_TVTEXTVIEWER     if !BR2_PACKAGE_BATOCERA_LIB32
 
 config BR2_PACKAGE_BATOCERA_WAYLAND
 	bool "batocera.linux wayland packages selection"
