@@ -3,8 +3,8 @@
 # libretro-quicknes
 #
 ################################################################################
-# Version: Commits on Jul 25, 2022
-LIBRETRO_QUICKNES_VERSION = 1b88a09f1c386ff9ee46bb371583ae04c5cb5dd0
+# Version: Commits on Feb 20, 2023
+LIBRETRO_QUICKNES_VERSION = 75d501a87ec2074e8d2f7256fb0359513c263c29
 LIBRETRO_QUICKNES_SITE = $(call github,libretro,QuickNES_Core,$(LIBRETRO_QUICKNES_VERSION))
 LIBRETRO_QUICKNES_LICENSE = GPL
 
