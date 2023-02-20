@@ -1,16 +1,5 @@
-From 55da94ff45741d978d79efdc55423ab25ca2ebb7 Mon Sep 17 00:00:00 2001
-Date: Sat, 24 Sep 2022 14:40:20 +0100
-Subject: [PATCH] add xpi_gamecon (experimantal pi controls)
-
----
- drivers/gpio/Kconfig       |   6 +
- drivers/gpio/Makefile      |   1 +
- drivers/gpio/xpi_gamecon.c | 651 +++++++++++++++++++++++++++++++++++++
- 3 files changed, 658 insertions(+)
- create mode 100644 drivers/gpio/xpi_gamecon.c
-
 diff --git a/drivers/gpio/Kconfig b/drivers/gpio/Kconfig
-index 3a71a2a824093..3c761118c9de1 100644
+index 19de794b4b7f8..601d6c7f0e2fc 100644
 --- a/drivers/gpio/Kconfig
 +++ b/drivers/gpio/Kconfig
 @@ -2,6 +2,12 @@
@@ -27,13 +16,13 @@ index 3a71a2a824093..3c761118c9de1 100644
  config MK_ARCADE_RPI
         tristate "RPi Arcade Joystick"
 diff --git a/drivers/gpio/Makefile b/drivers/gpio/Makefile
-index 4712694eb7d13..8d1866a88ae6e 100644
+index 6bedfb68c6ada..2ee59cfec7b0e 100644
 --- a/drivers/gpio/Makefile
 +++ b/drivers/gpio/Makefile
-@@ -11,6 +11,7 @@ obj-$(CONFIG_OF_GPIO)		+= gpiolib-of.o
- obj-$(CONFIG_GPIO_CDEV)		+= gpiolib-cdev.o
+@@ -12,6 +12,7 @@ obj-$(CONFIG_GPIO_CDEV)		+= gpiolib-cdev.o
  obj-$(CONFIG_GPIO_SYSFS)	+= gpiolib-sysfs.o
  obj-$(CONFIG_GPIO_ACPI)		+= gpiolib-acpi.o
+ obj-$(CONFIG_GPIOLIB)		+= gpiolib-swnode.o
 +obj-$(CONFIG_XPI_GAMECON)   += xpi_gamecon.o
  
  # Device drivers. Generally keep list sorted alphabetically
@@ -695,3 +684,4 @@ index 0000000000000..a889576c8503f
 +
 +module_init(gc_init);
 +module_exit(gc_exit);
+
