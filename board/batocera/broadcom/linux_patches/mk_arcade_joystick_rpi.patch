@@ -1,6 +1,7 @@
-From 6b9e64f5154e7aefcf3e7e2aa36d18d53aa3bb3d Mon Sep 17 00:00:00 2001
-Date: Sat, 24 Sep 2022 14:36:26 +0100
-Subject: [PATCH] add rpi arcade joystick (gpio)
+From d895668ec29a0a00b5771cc6f36e6febe561dd87 Mon Sep 17 00:00:00 2001
+From: Lee <lee.hancock4@ntlworld.com>
+Date: Mon, 20 Feb 2023 19:35:50 +0000
+Subject: [PATCH] add arcade joystick (gpio)
 
 ---
  drivers/gpio/Kconfig                  |   8 +
@@ -10,7 +11,7 @@ Subject: [PATCH] add rpi arcade joystick (gpio)
  create mode 100644 drivers/gpio/mk_arcade_joystick_rpi.c
 
 diff --git a/drivers/gpio/Kconfig b/drivers/gpio/Kconfig
-index 30709c20699d4..3a71a2a824093 100644
+index ba917cebef987..19de794b4b7f8 100644
 --- a/drivers/gpio/Kconfig
 +++ b/drivers/gpio/Kconfig
 @@ -3,6 +3,14 @@
@@ -29,7 +30,7 @@ index 30709c20699d4..3a71a2a824093 100644
  	bool
  	help
 diff --git a/drivers/gpio/Makefile b/drivers/gpio/Makefile
-index 0cdabdacdedf2..4712694eb7d13 100644
+index 54326bb9d928b..6bedfb68c6ada 100644
 --- a/drivers/gpio/Makefile
 +++ b/drivers/gpio/Makefile
 @@ -3,6 +3,7 @@
