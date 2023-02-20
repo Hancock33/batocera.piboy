@@ -3,8 +3,8 @@
 # fallout1
 #
 ################################################################################
-# Version: Commits on Feb 16, 2023
-FALLOUT1_VERSION = 5b4b27b61543394460b7c447c5dd6984686a8ff9
+# Version: Commits on Feb 20, 2023
+FALLOUT1_VERSION = 406b69b0fc52b53608cc34782ca9976c8b2b9c3e
 FALLOUT1_SITE = $(call github,alexbatalov,fallout1-ce,$(FALLOUT1_VERSION))
 
 FALLOUT1_DEPENDENCIES = sdl2 sdl2_image sdl2_mixer sdl2_net sdl2_ttf
