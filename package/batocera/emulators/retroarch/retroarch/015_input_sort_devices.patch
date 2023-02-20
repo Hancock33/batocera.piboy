@@ -1,8 +1,8 @@
 diff --git a/input/drivers/udev_input.c b/input/drivers/udev_input.c
-index 7d6f8d4236..d15ebdc8f2 100644
+index 222afaed4c..87b53a6bc7 100644
 --- a/input/drivers/udev_input.c
 +++ b/input/drivers/udev_input.c
-@@ -1340,6 +1340,65 @@ static void udev_input_free(void *data)
+@@ -1331,6 +1331,65 @@ static void udev_input_free(void *data)
     free(udev);
  }
  
@@ -68,7 +68,7 @@ index 7d6f8d4236..d15ebdc8f2 100644
  static bool open_devices(udev_input_t *udev,
        enum udev_input_dev_type type, device_handle_cb cb)
  {
-@@ -1348,6 +1407,10 @@ static bool open_devices(udev_input_t *udev,
+@@ -1339,6 +1398,10 @@ static bool open_devices(udev_input_t *udev,
     struct udev_list_entry     *item = NULL;
     struct udev_enumerate *enumerate = udev_enumerate_new(udev->udev);
  
@@ -79,7 +79,7 @@ index 7d6f8d4236..d15ebdc8f2 100644
     if (!enumerate)
        return false;
  
-@@ -1357,8 +1420,28 @@ static bool open_devices(udev_input_t *udev,
+@@ -1348,8 +1411,28 @@ static bool open_devices(udev_input_t *udev,
     devs = udev_enumerate_get_list_entry(enumerate);
  
     for (item = devs; item; item = udev_list_entry_get_next(item))
