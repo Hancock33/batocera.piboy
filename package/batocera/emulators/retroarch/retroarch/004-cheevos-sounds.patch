@@ -54,7 +54,7 @@ index 7a9ccb042d..537215bdee 100644
     }
  
 diff --git a/configuration.c b/configuration.c
-index aba56b93e2..f45df66c2d 100644
+index ff4829ee4d..341b36cafb 100644
 --- a/configuration.c
 +++ b/configuration.c
 @@ -1429,6 +1429,7 @@ static struct config_array_setting *populate_settings_array(settings_t *settings
@@ -65,7 +65,7 @@ index aba56b93e2..f45df66c2d 100644
     SETTING_ARRAY("cheevos_token",            settings->arrays.cheevos_token, false, NULL, true);
     SETTING_ARRAY("cheevos_leaderboards_enable", settings->arrays.cheevos_leaderboards_enable, true, "true", true);
  #endif
-@@ -2721,6 +2722,7 @@ void config_set_defaults(void *data)
+@@ -2725,6 +2726,7 @@ void config_set_defaults(void *data)
  #ifdef HAVE_CHEEVOS
     *settings->arrays.cheevos_username                 = '\0';
     *settings->arrays.cheevos_password                 = '\0';
@@ -74,7 +74,7 @@ index aba56b93e2..f45df66c2d 100644
  #endif
  
 diff --git a/configuration.h b/configuration.h
-index 3619ca7f0a..14b240179a 100644
+index 5198374488..5355c707b8 100644
 --- a/configuration.h
 +++ b/configuration.h
 @@ -421,6 +421,7 @@ typedef struct settings

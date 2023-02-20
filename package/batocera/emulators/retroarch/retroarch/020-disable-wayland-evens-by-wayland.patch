@@ -1,5 +1,5 @@
 diff --git a/gfx/drivers_context/wayland_ctx.c b/gfx/drivers_context/wayland_ctx.c
-index e12a453..f5f2494 100644
+index e12a4533ef..f5f2494f74 100644
 --- a/gfx/drivers_context/wayland_ctx.c
 +++ b/gfx/drivers_context/wayland_ctx.c
 @@ -437,6 +437,10 @@ static void gfx_ctx_wl_input_driver(void *data,

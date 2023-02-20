@@ -1,5 +1,5 @@
 diff --git a/input/drivers_joypad/udev_joypad.c b/input/drivers_joypad/udev_joypad.c
-index 3d01809bea..a0d5677fee 100644
+index 8f6c3eacd0..235b6a44e1 100644
 --- a/input/drivers_joypad/udev_joypad.c
 +++ b/input/drivers_joypad/udev_joypad.c
 @@ -224,21 +224,12 @@ static int udev_add_pad(struct udev_device *dev, unsigned p, int fd, const char
