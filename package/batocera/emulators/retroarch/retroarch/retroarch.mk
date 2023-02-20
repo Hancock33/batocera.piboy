@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Feb 17, 2023
-RETROARCH_VERSION = d7f2bd6ce7c1581c00a32416d55e639384c3cc0f
+# Version: Commits on Feb 20, 2023
+RETROARCH_VERSION = 48e551a2e6523e2fa6319932de9a1f6ee141b3e6
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac
@@ -149,7 +149,7 @@ define RETROARCH_CONFIGURE_CMDS
 		$(TARGET_CONFIGURE_ARGS) \
 		$(TARGET_CONFIGURE_OPTS) \
 		CFLAGS="$(TARGET_CFLAGS) $(RETROARCH_TARGET_CFLAGS)" \
-		LDFLAGS="$(TARGET_LDFLAGS) $(RETROARCH_TARGET_LDFLAGS) -lc" \
+		LDFLAGS="$(RETROARCH_TARGET_LDFLAGS) -lc" \
 		CROSS_COMPILE="$(HOST_DIR)/usr/bin/" \
 		./configure \
 		--prefix=/usr \

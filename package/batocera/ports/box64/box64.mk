@@ -3,8 +3,8 @@
 # box64
 #
 ################################################################################
-# Version: Commits on Feb 17, 2023
-BOX64_VERSION = 838dfa453c4e1596ef3a9b60aed05a7cc34bee8e
+# Version: Commits on Feb 20, 2023
+BOX64_VERSION = 9ef48de1a860a3fc2ce33e7aaaa942212b279613
 BOX64_SITE = https://github.com/ptitseb/box64.git
 BOX64_SITE_METHOD=git
 BOX64_GIT_SUBMODULES=YES
@@ -13,7 +13,7 @@ BOX64_SUPPORTS_IN_SOURCE_BUILD = NO
 BOX64_DEPENDENCIES = sdl2 sdl2_image zlib libzip freetype bzip2 libpng openal
 BOX64_LICENSE = GPL-3.0
 
-BOX64_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
+BOX64_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS=""
 BOX64_CONF_OPTS += -DRPI4=1
 
 define BOX64_INSTALL_TARGET_CMDS

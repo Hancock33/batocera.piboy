@@ -301,6 +301,8 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 
 	select BR2_PACKAGE_RTL8189ES		if  BR2_PACKAGE_BATOCERA_TARGET_S905 || BR2_PACKAGE_BATOCERA_TARGET_S905GEN2 || BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
 
+	select BR2_PACKAGE_RTW89_TEMP       if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY || BR2_PACKAGE_BATOCERA_TARGET_RK3588
+
 	# ethernet
 	select BR2_PACKAGE_R8125                if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
@@ -385,10 +387,11 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
 	bool "target images definitions"
 	config BR2_TARGET_BATOCERA_IMAGES
 	string "target images"
-	default "amlogic/s922x/odroidn2 amlogic/s922x/vim3 amlogic/s922x/gtking amlogic/s922x/gtkingpro amlogic/s922x/zero2"  if BR2_PACKAGE_BATOCERA_TARGET_S922X
+	default "amlogic/s922x/odroidn2 amlogic/s922x/odroidn2l amlogic/s922x/vim3 amlogic/s922x/gtking amlogic/s922x/gtkingpro amlogic/s922x/zero2"  if BR2_PACKAGE_BATOCERA_TARGET_S922X
 	default "amlogic/s905/odroidc2 amlogic/s905/tvbox amlogic/s905/lepotato amlogic/s905/vim amlogic/s905/p201" if BR2_PACKAGE_BATOCERA_TARGET_S905 # amlogic/s905/fun-r1
 	default "amlogic/s905gen2"                                                                if BR2_PACKAGE_BATOCERA_TARGET_S905GEN2
 	default "amlogic/s905gen3/odroidc4 amlogic/s905gen3/tvbox-gen3"                           if BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
+	default "amlogic/a3gen2/vim4 amlogic/a3gen2/gtking2"                                      if BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
 	default "amlogic/s912/vim2"                                                               if BR2_PACKAGE_BATOCERA_TARGET_S912
 	default "broadcom/bcm2835"                                                                if BR2_PACKAGE_BATOCERA_TARGET_BCM2835
 	default "broadcom/bcm2836"                                                                if BR2_PACKAGE_BATOCERA_TARGET_BCM2836
@@ -470,6 +473,9 @@ config BR2_PACKAGE_BATOCERA_TARGET_S905GEN2
 
 config BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
 	bool "s905gen3"
+
+config BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
+	bool "a3gen2"
 
 config BR2_PACKAGE_BATOCERA_TARGET_S922X
 	bool "s922x"
@@ -789,16 +795,7 @@ config BR2_PACKAGE_BATOCERA_MSDOS_SYSTEMS
                                                     !BR2_PACKAGE_BATOCERA_TARGET_RK3128		&& \
                                                     !BR2_PACKAGE_BATOCERA_TARGET_CHA        # dos
 
-	select BR2_PACKAGE_DOSBOX_STAGING           if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835    && \
-                                                    !BR2_PACKAGE_BATOCERA_TARGET_BCM2836    && \
-                                                    !BR2_PACKAGE_BATOCERA_TARGET_CHA        && \
-                                                    !BR2_PACKAGE_BATOCERA_TARGET_RK3288     && \
-                                                    !BR2_PACKAGE_BATOCERA_TARGET_RK3328     && \
-                                                    !BR2_PACKAGE_BATOCERA_TARGET_RK3399     && \
-                                                    !BR2_PACKAGE_BATOCERA_TARGET_XU4        && \
-                                                    !BR2_PACKAGE_BATOCERA_TARGET_S812        && \
-                                                    !BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_3_LTS
-
+	select BR2_PACKAGE_DOSBOX_STAGING           if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835 && !BR2_PACKAGE_BATOCERA_TARGET_CHA
 	select BR2_PACKAGE_LIBRETRO_DOSBOX_PURE     # ALL
 
 	help
@@ -1516,7 +1513,7 @@ config BR2_PACKAGE_BATOCERA_SDL2
 	select BR2_PACKAGE_FLAC             # flac
 	select BR2_PACKAGE_LIBMAD           # mp3
 	select BR2_PACKAGE_LIBVORBIS        # ogg
-	select BR2_PACKAGE_TVTEXTVIEWER
+	select BR2_PACKAGE_TVTEXTVIEWER     if !BR2_PACKAGE_BATOCERA_LIB32
 
 config BR2_PACKAGE_BATOCERA_WAYLAND
 	bool "batocera.linux wayland packages selection"
