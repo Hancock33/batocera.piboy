@@ -3,8 +3,8 @@
 # libretro-neocd
 #
 ################################################################################
-# Version: Commits on Dec 22, 2022
-LIBRETRO_NEOCD_VERSION = de42c4f280455f33f01a6581ec7c5e39464c6cfa
+# Version: Commits on Feb 21, 2023
+LIBRETRO_NEOCD_VERSION = 2070f5258c9d3feee15962f9db8c8ef20072ece8
 LIBRETRO_NEOCD_SITE = https://github.com/libretro/neocd_libretro.git
 LIBRETRO_NEOCD_SITE_METHOD=git
 LIBRETRO_NEOCD_GIT_SUBMODULES=YES
