@@ -132,25 +132,25 @@ index 8bdcfdfdba2..b1ab2d10c17 100644
  	trigger = "DEBUG_DIR",
  	description = "Default directory for debugger.",
 diff --git a/scripts/src/3rdparty.lua b/scripts/src/3rdparty.lua
-index fb79e05a44d..b1ea6075dbc 100644
+index fb79e05a44d..26710fcdacf 100644
 --- a/scripts/src/3rdparty.lua
 +++ b/scripts/src/3rdparty.lua
-@@ -1334,9 +1334,14 @@ end
+@@ -1334,8 +1334,13 @@ end
  		MAME_DIR .. "3rdparty/bx/include",
  		MAME_DIR .. "3rdparty/bimg/include",
  		MAME_DIR .. "3rdparty/bgfx/3rdparty/directx-headers/include/directx",
 -		MAME_DIR .. "3rdparty/bgfx/3rdparty/khronos",
- 	}
- 
+-	}
++ 	}
++ 
 +	if not _OPTIONS["NO_USE_BGFX_KHRONOS"] then
 +		includedirs {
 +			MAME_DIR .. "3rdparty/bgfx/3rdparty/khronos",
 +		}
 +	end
-+
+ 
  	configuration { "android-*"}
  		buildoptions {
- 			"-Wno-macro-redefined",
 @@ -2112,8 +2117,12 @@ end
  	configuration { "mingw*"}
  		includedirs {
@@ -165,31 +165,11 @@ index fb79e05a44d..b1ea6075dbc 100644
  		buildoptions_c {
  			"-Wno-bad-function-cast",
  			"-Wno-discarded-qualifiers",
-diff --git a/scripts/src/main.lua b/scripts/src/main.lua
-index cf81aabbd42..45aeb26cde0 100644
---- a/scripts/src/main.lua
-+++ b/scripts/src/main.lua
-@@ -162,6 +162,7 @@ end
- 	links {
- 		ext_lib("zlib"),
- 		ext_lib("flac"),
-+		ext_lib("udev"),
- 		ext_lib("utf8proc"),
- 	}
- if (STANDALONE~=true) then
 diff --git a/scripts/src/osd/modules.lua b/scripts/src/osd/modules.lua
-index 3f4b65b4d06..8cd95dbe302 100644
+index 6160e2f1374..8cd95dbe302 100644
 --- a/scripts/src/osd/modules.lua
 +++ b/scripts/src/osd/modules.lua
-@@ -93,6 +93,7 @@ function osdmodulesbuild()
- 		MAME_DIR .. "src/osd/modules/input/input_windows.h",
- 		MAME_DIR .. "src/osd/modules/input/input_winhybrid.cpp",
- 		MAME_DIR .. "src/osd/modules/input/input_x11.cpp",
-+		MAME_DIR .. "src/osd/modules/input/input_udev.cpp",
- 		MAME_DIR .. "src/osd/modules/input/input_xinput.cpp",
- 		MAME_DIR .. "src/osd/modules/input/input_xinput.h",
- 		MAME_DIR .. "src/osd/modules/lib/osdobj_common.cpp",
-@@ -277,11 +278,16 @@ function osdmodulesbuild()
+@@ -278,11 +278,16 @@ function osdmodulesbuild()
  		MAME_DIR .. "3rdparty/bgfx/examples/common",
  		MAME_DIR .. "3rdparty/bgfx/include",
  		MAME_DIR .. "3rdparty/bgfx/3rdparty",
@@ -275,15 +255,6 @@ index c8b90f3d738..b65278f1204 100644
  
  	configuration { "mingw*", "x64" }
  		postbuildcommands {
-diff --git a/src/osd/modules/lib/osdobj_common.cpp b/src/osd/modules/lib/osdobj_common.cpp
-index 0d69e39b5f4..1104c97961b 100644
---- a/src/osd/modules/lib/osdobj_common.cpp
-+++ b/src/osd/modules/lib/osdobj_common.cpp
-@@ -309,6 +309,7 @@ void osd_common_t::register_options()
- 	REGISTER_MODULE(m_mod_man, MOUSE_NONE);
- 
- 	REGISTER_MODULE(m_mod_man, LIGHTGUN_X11);
-+	REGISTER_MODULE(m_mod_man, LIGHTGUN_UDEV);
- 	REGISTER_MODULE(m_mod_man, LIGHTGUNINPUT_RAWINPUT);
- 	REGISTER_MODULE(m_mod_man, LIGHTGUNINPUT_WIN32);
- 	REGISTER_MODULE(m_mod_man, LIGHTGUN_NONE);
+-- 
+2.34.1
+
