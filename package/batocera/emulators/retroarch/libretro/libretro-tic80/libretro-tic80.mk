@@ -3,8 +3,8 @@
 # libretro-tic80
 #
 ################################################################################
-# Version: Commits on Feb 21, 2023
-LIBRETRO_TIC80_VERSION = 019f68e9e528097b18f3419dac0c01dc37a51527
+# Version: Commits on Feb 22, 2023
+LIBRETRO_TIC80_VERSION = 95011d61a72f524d754778c06adc85127d318a58
 LIBRETRO_TIC80_SITE = https://github.com/nesbox/TIC-80.git
 LIBRETRO_TIC80_SITE_METHOD=git
 LIBRETRO_TIC80_GIT_SUBMODULES=YES
