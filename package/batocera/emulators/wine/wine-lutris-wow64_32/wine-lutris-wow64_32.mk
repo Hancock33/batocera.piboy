@@ -3,8 +3,8 @@
 # wine-lutris-wow64_32
 #
 ################################################################################
-# Version: Commits on Feb 17, 2023
-WINE_LUTRIS_WOW64_32_VERSION = wine-8.2
+# Version: Commits on Feb 23, 2023
+WINE_LUTRIS_WOW64_32_VERSION = 4d0d7e49b9b33bba023ba67add84486ba4cc8efd
 WINE_LUTRIS_WOW64_32_SITE = $(call github,wine-mirror,wine,$(WINE_LUTRIS_WOW64_32_VERSION))
 WINE_LUTRIS_WOW64_32_LICENSE = LGPL-2.1+
 WINE_LUTRIS_WOW64_32_DEPENDENCIES = host-bison host-flex host-wine-lutris
