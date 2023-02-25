@@ -1,3 +1,29 @@
+diff --git a/Common/GPU/Vulkan/VulkanContext.cpp b/Common/GPU/Vulkan/VulkanContext.cpp
+index fe15710d7..68c3ed021 100644
+--- a/Common/GPU/Vulkan/VulkanContext.cpp
++++ b/Common/GPU/Vulkan/VulkanContext.cpp
+@@ -973,8 +973,8 @@ VkResult VulkanContext::ReinitSurface() {
+ 		{
+ 			const VkDisplayModePropertiesKHR* mode = &mode_props[i];
+ 
+-			if (mode->parameters.visibleRegion.width == pixel_xres &&
+-			    mode->parameters.visibleRegion.height == pixel_yres)
++			if (mode->parameters.visibleRegion.width == g_display.pixel_xres &&
++			    mode->parameters.visibleRegion.height == g_display.pixel_yres)
+ 			{
+ 				display_mode = mode->displayMode;
+ 				mode_found = true;
+@@ -1053,8 +1053,8 @@ VkResult VulkanContext::ReinitSurface() {
+ 		}
+ 	
+ 		// Finally, create the vulkan surface.
+-		image_size.width = pixel_xres;
+-		image_size.height = pixel_yres;
++		image_size.width = g_display.pixel_xres;
++		image_size.height = g_display.pixel_yres;
+ 
+ 		display.displayMode = display_mode;
+ 		display.imageExtent = image_size;
 diff --git a/Core/SaveState.cpp b/Core/SaveState.cpp
 index 3e982d371..260d8b8ad 100644
 --- a/Core/SaveState.cpp
