@@ -1,0 +1,17 @@
+diff --git a/src/gui/MainWindow.cpp b/src/gui/MainWindow.cpp
+index c99771f..50ae173 100644
+--- a/src/gui/MainWindow.cpp
++++ b/src/gui/MainWindow.cpp
+@@ -347,10 +347,10 @@ MainWindow::MainWindow()
+ 	{
+ 		MainWindow::RequestLaunchGame(LaunchSettings::GetLoadFile().value(), wxLaunchGameEvent::INITIATED_BY::COMMAND_LINE);
+ 	}
+-	if (LaunchSettings::GDBStubEnabled())
++	/*if (LaunchSettings::GDBStubEnabled())
+ 	{
+ 		g_gdbstub = std::make_unique<GDBServer>(config.gdb_port);
+-	}
++	}*/
+ }
+ 
+ MainWindow::~MainWindow()
