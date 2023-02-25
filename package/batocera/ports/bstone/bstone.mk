@@ -3,8 +3,8 @@
 # bstone
 #
 ################################################################################
-# Version: Commits on Feb 19, 2023
-BSTONE_VERSION = 20b1772389116127286e4100dc7fb2e075cf1ae4
+# Version: Commits on Feb 24, 2023
+BSTONE_VERSION = 707cf1423def16dd4dd8da0b6853a8e2f18e7a52
 BSTONE_SITE = $(call github,bibendovsky,bstone,$(BSTONE_VERSION))
 
 BSTONE_DEPENDENCIES = sdl2 sdl2_mixer
