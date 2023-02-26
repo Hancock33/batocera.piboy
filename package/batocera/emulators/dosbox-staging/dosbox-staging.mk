@@ -3,8 +3,8 @@
 # dosbox-staging
 #
 ################################################################################
-# Version: Commits on Feb 20, 2023
-DOSBOX_STAGING_VERSION = e129de7b450dc2dafb94e74b53860414019fb7f7
+# Version: Commits on Feb 25, 2023
+DOSBOX_STAGING_VERSION = 89553f84731bd6875545cf3831c32a420e9d71f5
 DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGING_VERSION))
 DOSBOX_STAGING_DEPENDENCIES = alsa-lib sdl2 sdl2_net sdl2_image fluidsynth zlib libpng libogg libvorbis opus opusfile slirp iir speexdsp
 DOSBOX_STAGING_LICENSE = GPLv2
@@ -24,7 +24,7 @@ DOSBOX_STAGING_CFLAGS   += -mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard
 DOSBOX_STAGING_CXXFLAGS += -mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard
 DOSBOX_STAGING_CONF_OPTS += -Duse_opengl=false
 endif
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2837),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_CORTEX_A53),y)
 DOSBOX_STAGING_CFLAGS   += -march=armv8-a+crc -mcpu=cortex-a53 -mtune=cortex-a53
 DOSBOX_STAGING_CXXFLAGS += -march=armv8-a+crc -mcpu=cortex-a53 -mtune=cortex-a53
 DOSBOX_STAGING_CONF_OPTS += -Duse_opengl=false
@@ -34,16 +34,7 @@ DOSBOX_STAGING_CFLAGS   += -march=armv8-a+crc -mcpu=cortex-a72 -mtune=cortex-a72
 DOSBOX_STAGING_CXXFLAGS += -march=armv8-a+crc -mcpu=cortex-a72 -mtune=cortex-a72
 DOSBOX_STAGING_CONF_OPTS += -Duse_opengl=false
 endif
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_TRITIUM_H5)$(BR2_PACKAGE_BATOCERA_TARGET_S905)$(BR2_PACKAGE_BATOCERA_TARGET_S912),y)
-DOSBOX_STAGING_CFLAGS   += -march=armv8-a+crc -mtune=cortex-a53
-DOSBOX_STAGING_CXXFLAGS += -march=armv8-a+crc -mtune=cortex-a53
-DOSBOX_STAGING_CONF_OPTS += -Duse_opengl=false
-endif
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S905GEN2)$(BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_ZERO2)$(BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_3_LTS),y)
-DOSBOX_STAGING_CFLAGS   += -march=armv8-a+crc -mtune=cortex-a53
-DOSBOX_STAGING_CXXFLAGS += -march=armv8-a+crc -mtune=cortex-a53
-DOSBOX_STAGING_CONF_OPTS += -Duse_opengl=false
-endif
+
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S905GEN3),y)
 DOSBOX_STAGING_CFLAGS   += -march=armv8-a+crc -mtune=cortex-a55
 DOSBOX_STAGING_CXXFLAGS += -march=armv8-a+crc -mtune=cortex-a55

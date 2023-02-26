@@ -1,6 +1,8 @@
---- a/hash/atom_flop.xml	2022-02-24 11:47:25.000000000 -0500
-+++ b/hash/atom_flop.xml	2022-03-17 14:09:03.323992383 -0400
-@@ -207,4 +207,30 @@
+diff --git a/hash/atom_flop.xml b/hash/atom_flop.xml
+index b99291de8b0..82d3499e22f 100644
+--- a/hash/atom_flop.xml
++++ b/hash/atom_flop.xml
+@@ -207,4 +207,30 @@ Acorn Atom - Floppy disk images
  		</part>
  	</software>
  

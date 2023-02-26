@@ -1,19 +1,5 @@
-From b855601daf932018e03506922a9c0a96593eabec Mon Sep 17 00:00:00 2001
-From: Nicolas Adenis-Lamarre <nicolas.adenis.lamarre@gmail.com>
-Date: Thu, 8 Sep 2022 06:02:34 +0000
-Subject: [PATCH] mame lightgun udev driver
-
-Signed-off-by: Nicolas Adenis-Lamarre <nicolas.adenis.lamarre@gmail.com>
----
- scripts/src/main.lua                  |   1 +
- scripts/src/osd/modules.lua           |   1 +
- src/osd/modules/input/input_udev.cpp  | 405 ++++++++++++++++++++++++++
- src/osd/modules/lib/osdobj_common.cpp |   1 +
- 4 files changed, 408 insertions(+)
- create mode 100644 src/osd/modules/input/input_udev.cpp
-
 diff --git a/scripts/src/main.lua b/scripts/src/main.lua
-index 94ee2b3..d5f0150 100644
+index cf81aabbd42..45aeb26cde0 100644
 --- a/scripts/src/main.lua
 +++ b/scripts/src/main.lua
 @@ -162,6 +162,7 @@ end
@@ -25,20 +11,20 @@ index 94ee2b3..d5f0150 100644
  	}
  if (STANDALONE~=true) then
 diff --git a/scripts/src/osd/modules.lua b/scripts/src/osd/modules.lua
-index 5ede2a8..ec34889 100644
+index 3f4b65b4d06..6160e2f1374 100644
 --- a/scripts/src/osd/modules.lua
 +++ b/scripts/src/osd/modules.lua
-@@ -103,6 +103,7 @@ function osdmodulesbuild()
- 		MAME_DIR .. "src/osd/modules/input/input_sdlcommon.cpp",
- 		MAME_DIR .. "src/osd/modules/input/input_sdlcommon.h",
+@@ -93,6 +93,7 @@ function osdmodulesbuild()
+ 		MAME_DIR .. "src/osd/modules/input/input_windows.h",
+ 		MAME_DIR .. "src/osd/modules/input/input_winhybrid.cpp",
  		MAME_DIR .. "src/osd/modules/input/input_x11.cpp",
 +		MAME_DIR .. "src/osd/modules/input/input_udev.cpp",
- 		MAME_DIR .. "src/osd/modules/input/input_windows.cpp",
- 		MAME_DIR .. "src/osd/modules/input/input_windows.h",
  		MAME_DIR .. "src/osd/modules/input/input_xinput.cpp",
+ 		MAME_DIR .. "src/osd/modules/input/input_xinput.h",
+ 		MAME_DIR .. "src/osd/modules/lib/osdobj_common.cpp",
 diff --git a/src/osd/modules/input/input_udev.cpp b/src/osd/modules/input/input_udev.cpp
 new file mode 100644
-index 0000000..c1926a2
+index 00000000000..c1926a29e39
 --- /dev/null
 +++ b/src/osd/modules/input/input_udev.cpp
 @@ -0,0 +1,405 @@
@@ -448,10 +434,10 @@ index 0000000..c1926a2
 +
 +MODULE_DEFINITION(LIGHTGUN_UDEV, udev_lightgun_module)
 diff --git a/src/osd/modules/lib/osdobj_common.cpp b/src/osd/modules/lib/osdobj_common.cpp
-index 2546abd..0ecfbac 100644
+index 0d69e39b5f4..1104c97961b 100644
 --- a/src/osd/modules/lib/osdobj_common.cpp
 +++ b/src/osd/modules/lib/osdobj_common.cpp
-@@ -305,6 +305,7 @@ void osd_common_t::register_options()
+@@ -309,6 +309,7 @@ void osd_common_t::register_options()
  	REGISTER_MODULE(m_mod_man, MOUSE_NONE);
  
  	REGISTER_MODULE(m_mod_man, LIGHTGUN_X11);

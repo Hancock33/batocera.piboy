@@ -1,6 +1,8 @@
---- a/src/mame/layout/vgmplay.lay	2022-02-01 05:26:54.000000000 -0500
-+++ b/src/mame/layout/vgmplay.lay	2022-02-14 15:38:02.548182991 -0500
-@@ -109,19 +109,19 @@
+diff --git a/src/mame/layout/vgmplay.lay b/src/mame/layout/vgmplay.lay
+index 2317397478d..7eddb4d3563 100644
+--- a/src/mame/layout/vgmplay.lay
++++ b/src/mame/layout/vgmplay.lay
+@@ -109,19 +109,19 @@ license:CC0-1.0
  	</element>
  	<element name="text_l2">
  		<rect><color red="0.2" green="0.21" blue="0.23" /></rect>

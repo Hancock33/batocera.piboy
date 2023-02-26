@@ -3,8 +3,8 @@
 # batocera-es-piboy
 #
 ################################################################################
-# Version: Commits on Feb 18, 2023
-BATOCERA_ES_PIBOY_VERSION = b6847389607b4760824ba9b2d8c1321c3e9d493d
+# Version: Commits on Feb 26, 2023
+BATOCERA_ES_PIBOY_VERSION = 3d0e9fdd602a125400804407fbc66a07893ba4d4
 BATOCERA_ES_PIBOY_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_ES_PIBOY_SITE_METHOD = git
 BATOCERA_ES_PIBOY_LICENSE = MIT
@@ -48,7 +48,13 @@ endif
 BATOCERA_ES_PIBOY_CONF_OPTS += -DNOUPDATE=ON
 BATOCERA_ES_PIBOY_CONF_OPTS += -DBATOCERA=ON
 BATOCERA_ES_PIBOY_CONF_OPTS += -DPIBOY=ON
-BATOCERA_ES_PIBOY_CONF_OPTS += -DCEC=OFF
+
+# disabling cec. causing perf issue on init/deinit
+#ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3128),y)
+BATOCERA_EMULATIONSTATION_CONF_OPTS += -DCEC=OFF
+#else
+#BATOCERA_EMULATIONSTATION_CONF_OPTS += -DCEC=ON
+#endif
 
 BATOCERA_ES_PIBOY_KEY_SCREENSCRAPER_DEV_LOGIN=$(shell grep -E '^SCREENSCRAPER_DEV_LOGIN=' /home/lee/keys.txt | cut -d = -f 2-)
 BATOCERA_ES_PIBOY_KEY_GAMESDB_APIKEY=$(shell grep -E '^GAMESDB_APIKEY=' /home/lee/keys.txt | cut -d = -f 2-)
