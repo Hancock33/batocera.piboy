@@ -3,18 +3,14 @@
 # sonic2013
 #
 ################################################################################
-# Version: Commits on Jul 26, 2022
+# Version: Commits on Jun 26, 2022
 SONIC2013_VERSION = 559adb1df5593422d23179d5a7f3967283575b5d
 SONIC2013_SITE = https://github.com/Rubberduckycooly/Sonic-1-2-2013-Decompilation.git
 SONIC2013_SITE_METHOD = git
-SONIC2013_GIT_SUBMODULES == YES
+SONIC2013_GIT_SUBMODULES = YES
 
 SONIC2013_DEPENDENCIES = sdl2 libogg libvorbis
 SONIC2013_LICENSE = Custom
-
-ifeq ($(BR2_PACKAGE_XORG7),n)
-	SONIC2013_VERSION = f9718af
-endif
 
 define SONIC2013_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) -f Makefile VERBOSE=1

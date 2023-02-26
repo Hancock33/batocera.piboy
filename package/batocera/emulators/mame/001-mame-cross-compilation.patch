@@ -1,7 +1,8 @@
-diff -ur ./3rdparty/minimp3/minimp3.h /home/romain/batocera.linux/output/odroidn2/build/mame-mame0226/3rdparty/minimp3/minimp3.h
---- a/3rdparty/minimp3/minimp3.h	2020-10-27 02:00:36.000000000 +0100
-+++ b/3rdparty/minimp3/minimp3.h	2020-11-10 17:13:17.377760626 +0100
-@@ -84,6 +84,10 @@
+diff --git a/3rdparty/minimp3/minimp3.h b/3rdparty/minimp3/minimp3.h
+index 796cbc1f8ed..619561fe314 100644
+--- a/3rdparty/minimp3/minimp3.h
++++ b/3rdparty/minimp3/minimp3.h
+@@ -84,6 +84,10 @@ int mp3dec_decode_frame(mp3dec_t *dec, const uint8_t *mp3, int mp3_bytes, mp3d_s
  #define MINIMP3_MIN(a, b)           ((a) > (b) ? (b) : (a))
  #define MINIMP3_MAX(a, b)           ((a) < (b) ? (b) : (a))
  
@@ -11,8 +12,8 @@ diff -ur ./3rdparty/minimp3/minimp3.h /home/romain/batocera.linux/output/odroidn
 +
  #if !defined(MINIMP3_NO_SIMD)
  
- #if !defined(MINIMP3_ONLY_SIMD) && (defined(_M_X64) || defined(_M_ARM64) || defined(__x86_64__) || defined(__aarch64__))
-@@ -96,6 +100,9 @@
+ #if !defined(MINIMP3_ONLY_SIMD) && (defined(_M_X64) || defined(__x86_64__) || defined(__aarch64__) || defined(_M_ARM64))
+@@ -96,6 +100,9 @@ int mp3dec_decode_frame(mp3dec_t *dec, const uint8_t *mp3, int mp3_bytes, mp3d_s
  #include <intrin.h>
  #endif /* defined(_MSC_VER) */
  #include <immintrin.h>
@@ -22,7 +23,7 @@ diff -ur ./3rdparty/minimp3/minimp3.h /home/romain/batocera.linux/output/odroidn
  #define HAVE_SSE 1
  #define HAVE_SIMD 1
  #define VSTORE _mm_storeu_ps
-@@ -844,6 +851,7 @@
+@@ -889,6 +896,7 @@ static void L3_midside_stereo(float *left, int n)
          VSTORE(right + i, VSUB(vl, vr));
      }
  #endif /* HAVE_SIMD */
@@ -30,9 +31,10 @@ diff -ur ./3rdparty/minimp3/minimp3.h /home/romain/batocera.linux/output/odroidn
      for (; i < n; i++)
      {
          float a = left[i];
-diff -ur ./makefile /home/romain/batocera.linux/output/odroidn2/build/mame-mame0226/makefile
---- a/makefile	2020-10-27 02:00:36.000000000 +0100
-+++ b/makefile	2020-11-09 18:56:15.179960037 +0100
+diff --git a/makefile b/makefile
+index 273f1827fe0..f072bdcc8e2 100644
+--- a/makefile
++++ b/makefile
 @@ -32,6 +32,7 @@
  # SDL2_MULTIAPI = 1
  # NO_USE_MIDI = 1
@@ -41,7 +43,7 @@ diff -ur ./makefile /home/romain/batocera.linux/output/odroidn2/build/mame-mame0
  # NO_USE_PULSEAUDIO = 1
  # USE_TAPTUN = 1
  # USE_PCAP = 1
-@@ -87,11 +87,13 @@
+@@ -86,11 +87,13 @@
  # BUILDDIR = build
  # TARGETOS = windows
  # CROSS_BUILD = 1
@@ -55,7 +57,7 @@ diff -ur ./makefile /home/romain/batocera.linux/output/odroidn2/build/mame-mame0
  
  # DEPRECATED = 0
  # LTO = 1
-@@ -329,6 +333,10 @@
+@@ -339,6 +342,10 @@ endif
  
  else
  CROSS_BUILD := 1
@@ -66,8 +68,8 @@ diff -ur ./makefile /home/romain/batocera.linux/output/odroidn2/build/mame-mame0
  endif # TARGET_OS
  
  ifdef PTR64
-@@ -573,6 +581,18 @@
- LD := $(OVERRIDE_LD)
+@@ -602,6 +609,18 @@ ifndef CROSS_BUILD
+ AR := $(OVERRIDE_AR)
  endif
  endif
 +ifdef OVERRIDE_AR
@@ -85,7 +87,7 @@ diff -ur ./makefile /home/romain/batocera.linux/output/odroidn2/build/mame-mame0
  
  #-------------------------------------------------
  # sanity check the configuration
-@@ -740,6 +760,10 @@
+@@ -769,6 +788,10 @@ ifdef NO_USE_MIDI
  PARAMS += --NO_USE_MIDI='$(NO_USE_MIDI)'
  endif
  
@@ -96,13 +98,15 @@ diff -ur ./makefile /home/romain/batocera.linux/output/odroidn2/build/mame-mame0
  ifdef NO_USE_PORTAUDIO
  PARAMS += --NO_USE_PORTAUDIO='$(NO_USE_PORTAUDIO)'
  endif
-diff -ur ./scripts/genie.lua /home/romain/batocera.linux/output/odroidn2/build/mame-mame0226/scripts/genie.lua
---- a/scripts/genie.lua	2020-10-27 02:00:36.000000000 +0100
-+++ b/scripts/genie.lua	2020-11-09 19:09:38.958845876 +0100
-@@ -195,6 +195,16 @@
+diff --git a/scripts/genie.lua b/scripts/genie.lua
+index 8bdcfdfdba2..b1ab2d10c17 100644
+--- a/scripts/genie.lua
++++ b/scripts/genie.lua
+@@ -202,6 +202,16 @@ newoption {
+ 	description = "AR replacement",
  }
  
- newoption {
++newoption {
 +	trigger = "AR",
 +	description = "AR replacement",
 +}
@@ -112,42 +116,42 @@ diff -ur ./scripts/genie.lua /home/romain/batocera.linux/output/odroidn2/build/m
 +	description = "STRIP replacement",
 +}
 +
-+newoption {
+ newoption {
  	trigger = "TOOLCHAIN",
  	description = "Toolchain prefix"
- }
-@@ -390,6 +400,11 @@
+@@ -402,6 +412,11 @@ newoption {
+ 	description = "Target machine platform (x86,arm,...)",
  }
  
- newoption {
++newoption {
 +	trigger = "NO_USE_BGFX_KHRONOS",
 +	description = "Skip including bgfx 3rdparty khronos headers (rely on system ones)",
 +}
 +
-+newoption {
+ newoption {
  	trigger = "DEBUG_DIR",
  	description = "Default directory for debugger.",
- }
-diff -ur ./scripts/src/3rdparty.lua /home/romain/batocera.linux/output/odroidn2/build/mame-mame0226/scripts/src/3rdparty.lua
---- a/scripts/src/3rdparty.lua	2020-10-27 02:00:36.000000000 +0100
-+++ b/scripts/src/3rdparty.lua	2020-11-09 18:03:17.288620257 +0100
-@@ -1263,9 +1263,14 @@
+diff --git a/scripts/src/3rdparty.lua b/scripts/src/3rdparty.lua
+index fb79e05a44d..26710fcdacf 100644
+--- a/scripts/src/3rdparty.lua
++++ b/scripts/src/3rdparty.lua
+@@ -1334,8 +1334,13 @@ end
  		MAME_DIR .. "3rdparty/bx/include",
  		MAME_DIR .. "3rdparty/bimg/include",
- 		MAME_DIR .. "3rdparty/bgfx/3rdparty/dxsdk/include",
+ 		MAME_DIR .. "3rdparty/bgfx/3rdparty/directx-headers/include/directx",
 -		MAME_DIR .. "3rdparty/bgfx/3rdparty/khronos",
- 	}
- 
+-	}
++ 	}
++ 
 +	if not _OPTIONS["NO_USE_BGFX_KHRONOS"] then
 +		includedirs {
 +			MAME_DIR .. "3rdparty/bgfx/3rdparty/khronos",
 +		}
 +	end
-+
+ 
  	configuration { "android-*"}
  		buildoptions {
- 			"-Wno-macro-redefined",
-@@ -2121,8 +2123,12 @@
+@@ -2112,8 +2117,12 @@ end
  	configuration { "mingw*"}
  		includedirs {
  			MAME_DIR .. "3rdparty/SDL2-override/mingw",
@@ -159,12 +163,13 @@ diff -ur ./scripts/src/3rdparty.lua /home/romain/batocera.linux/output/odroidn2/
 +			}
 +		end
  		buildoptions_c {
- 			"-Wno-undef",
- 			"-Wno-format",
-diff -ur ./scripts/src/osd/modules.lua /home/romain/batocera.linux/output/odroidn2/build/mame-mame0226/scripts/src/osd/modules.lua
---- a/scripts/src/osd/modules.lua	2020-10-27 02:00:36.000000000 +0100
-+++ b/scripts/src/osd/modules.lua	2020-11-09 17:59:35.068394429 +0100
-@@ -255,11 +255,16 @@
+ 			"-Wno-bad-function-cast",
+ 			"-Wno-discarded-qualifiers",
+diff --git a/scripts/src/osd/modules.lua b/scripts/src/osd/modules.lua
+index 6160e2f1374..8cd95dbe302 100644
+--- a/scripts/src/osd/modules.lua
++++ b/scripts/src/osd/modules.lua
+@@ -278,11 +278,16 @@ function osdmodulesbuild()
  		MAME_DIR .. "3rdparty/bgfx/examples/common",
  		MAME_DIR .. "3rdparty/bgfx/include",
  		MAME_DIR .. "3rdparty/bgfx/3rdparty",
@@ -182,10 +187,11 @@ diff -ur ./scripts/src/osd/modules.lua /home/romain/batocera.linux/output/odroid
  	if _OPTIONS["NO_USE_PORTAUDIO"]=="1" then
  		defines {
  			"NO_USE_PORTAUDIO",
-diff -ur ./scripts/toolchain.lua /home/romain/batocera.linux/output/odroidn2/build/mame-mame0226/scripts/toolchain.lua
---- a/scripts/toolchain.lua	2020-10-27 02:00:36.000000000 +0100
-+++ b/scripts/toolchain.lua	2020-11-09 19:09:29.890677516 +0100
-@@ -207,7 +207,11 @@
+diff --git a/scripts/toolchain.lua b/scripts/toolchain.lua
+index c8b90f3d738..b65278f1204 100644
+--- a/scripts/toolchain.lua
++++ b/scripts/toolchain.lua
+@@ -147,7 +147,11 @@ function toolchain(_buildDir, _subDir)
  				premake.gcc.cc   = "@gcc -V 4.2"
  				premake.gcc.cxx  = "@g++-4.2"
  			end
@@ -198,7 +204,7 @@ diff -ur ./scripts/toolchain.lua /home/romain/batocera.linux/output/odroidn2/bui
  			location (_buildDir .. "projects/" .. _subDir .. "/".. _ACTION .. "-linux")
  		end
  
-@@ -737,6 +741,18 @@
+@@ -358,6 +362,18 @@ function toolchain(_buildDir, _subDir)
  	configuration { "linux-gcc", "x64", "Debug" }
  		targetdir (_buildDir .. "linux_gcc" .. "/bin/x64/Debug")
  
@@ -217,7 +223,7 @@ diff -ur ./scripts/toolchain.lua /home/romain/batocera.linux/output/odroidn2/bui
  	configuration { "linux-clang", "x32" }
  		objdir (_buildDir .. "linux_clang" .. "/obj")
  		buildoptions {
-@@ -860,8 +876,12 @@
+@@ -481,8 +497,12 @@ function toolchain(_buildDir, _subDir)
  
  	configuration { "android-*" }
  		objdir (_buildDir .. "android/obj/" .. _OPTIONS["PLATFORM"])
@@ -231,7 +237,7 @@ diff -ur ./scripts/toolchain.lua /home/romain/batocera.linux/output/odroidn2/bui
  			"$(ANDROID_NDK_ROOT)/sources/cxx-stl/llvm-libc++/libcxx/include",
  			"$(ANDROID_NDK_ROOT)/sources/cxx-stl/llvm-libc++/include",
  			"$(ANDROID_NDK_ROOT)/sysroot/usr/include",
-@@ -712,10 +712,17 @@
+@@ -697,10 +717,17 @@ function strip()
  		}
  
  	configuration { "linux-*" }
@@ -249,3 +255,6 @@ diff -ur ./scripts/toolchain.lua /home/romain/batocera.linux/output/odroidn2/bui
  
  	configuration { "mingw*", "x64" }
  		postbuildcommands {
+-- 
+2.34.1
+
