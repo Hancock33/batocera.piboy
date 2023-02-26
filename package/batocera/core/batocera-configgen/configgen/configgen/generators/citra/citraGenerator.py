@@ -197,8 +197,8 @@ class CitraGenerator(Generator):
 
     @staticmethod
     def setAxis(key, padGuid, padInputs):
-        inputx = -1
-        inputy = -1
+        inputx = None
+        inputy = None
 
         if key == "joystick1" and "joystick1left" in padInputs:
             inputx = padInputs["joystick1left"]
@@ -209,6 +209,9 @@ class CitraGenerator(Generator):
             inputy = padInputs["joystick1up"]
         elif key == "joystick2" and "joystick2up" in padInputs:
             inputy = padInputs["joystick2up"]
+
+        if inputx is None or inputy is None:
+            return "";
 
         return ("axis_x:{},guid:{},axis_y:{},engine:sdl").format(inputx.id, padGuid, inputy.id)
 
