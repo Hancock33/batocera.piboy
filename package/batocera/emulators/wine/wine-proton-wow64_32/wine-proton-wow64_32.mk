@@ -3,8 +3,8 @@
 # wine-proton-wow64_32
 #
 ################################################################################
-# Version: Commits on Feb 06, 2023 (branch@experimental_7.0)
-WINE_PROTON_WOW64_32_VERSION = experimental-wine-bleeding-edge-7.0-36113-20230223-p74ac5f-w374a9a-d0d28be-v3322ed
+# Version: Commits on Feb 27, 2023 (branch@experimental_7.0)
+WINE_PROTON_WOW64_32_VERSION = experimental-wine-7.0-20230227
 WINE_PROTON_WOW64_32_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_WOW64_32_VERSION))
 WINE_PROTON_WOW64_32_LICENSE = LGPL-2.1+
 WINE_PROTON_WOW64_32_DEPENDENCIES = host-bison host-flex host-wine-proton
