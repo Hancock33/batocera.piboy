@@ -1,25 +1,19 @@
 #!/bin/bash
+# Architecture
+ARCH=$(uname -m)
+
+# Detect battery
+BATT=$(cat /sys/kernel/xpi_gamecon/percent 2>/dev/null)
 
 ### short version (for osd)
 if test "$1" = "--short"
 then
-    BATT=$(cat /sys/class/power_supply/{BAT,bat}*/uevent 2>/dev/null | grep -E "^POWER_SUPPLY_CAPACITY=" | sed -e s+'^POWER_SUPPLY_CAPACITY='++ | sort -rn | head -1)
     DT=$(date +%H:%M)
     if test -n "${BATT}"
     then
-	echo "Battery: ${BATT}% - ${DT}"
+        echo "Battery: ${BATT}% - ${DT}"
     else
-	echo "${DT}"
-    fi
-    exit 0
-
-    BATT=$(cat /sys/kernel/xpi_gamecon/percent 2>/dev/null)
-    DT=$(date +%H:%M)
-    if test -n "${BATT}"
-    then
-	echo "Battery: ${BATT}% - ${DT}"
-    else
-	echo "${DT}"
+        echo "${DT}"
     fi
     exit 0
 fi
@@ -46,6 +40,7 @@ getCpu() {
 
 V_BOARD=$(cat /boot/boot/batocera.board)
 V_CPUNB=$(grep -E $'^processor\t:' /proc/cpuinfo | wc -l)
+V_CPUMAXNB=$(ls /sys/devices/system/cpu | grep -E '^cpu[0-9]*$' | wc -l)
 V_CPUMODEL1=$(grep -E $'^model name\t:' /proc/cpuinfo | head -1 | sed -e s+'^model name\t: '++)
 V_SYSTEM=$(uname -rs)
 # min freq : minimum freq among the max cpus ; consider only online cpus
@@ -61,13 +56,6 @@ echo "Disk format: ${INTERNALDEVICETYPE}"
 
 
 # battery
-BATT=$(cat /sys/class/power_supply/{BAT,bat}*/uevent 2>/dev/null | grep -E "^POWER_SUPPLY_CAPACITY=" | sed -e s+'^POWER_SUPPLY_CAPACITY='++ | sort -rn | head -1)
-if test -n "${BATT}"
-then
-    echo "Battery: ${BATT}%"
-fi
-
-BATT=$(cat /sys/kernel/xpi_gamecon/percent 2>/dev/null)
 if test -n "${BATT}"
 then
     echo "Battery: ${BATT}%"
@@ -109,7 +97,7 @@ done
 
 # temperature
 # Unit: millidegree Celsius
-TEMPE=$(cat /sys/devices/virtual/thermal/thermal_zone*/temp 2>/dev/null | sort -rn | head -1 | sed -e s+"[0-9][0-9][0-9]$"++)
+TEMPE=$(cat /sys/devices/virtual/thermal/thermal_zone*/temp /sys/class/hwmon/hwmon*/temp*_input 2>/dev/null | sort -rn | head -1 | sed -e s+"[0-9][0-9][0-9]$"++)
 if test -n "${TEMPE}"
 then
     echo "Temperature: ${TEMPE}°C"
@@ -122,11 +110,22 @@ then
     echo "Fan speed: ${FANE}%"
 fi
 
-echo "Architecture: ${V_BOARD}"
-if test -e /sys/firmware/devicetree/base/model
+echo "Architecture: ${ARCH}"
+echo "Board: ${V_BOARD}"
+V_BOARD_MODEL=$(cat /sys/firmware/devicetree/base/model 2>/dev/null | tr -d '\0' | sed -e s+"[^A-Za-z0-9]"+"_"+g)
+if test -z "${V_BOARD_MODEL}"
 then
-    DTMODEL=$(tr -d '\0' </sys/firmware/devicetree/base/model)
-    echo "Model: ${DTMODEL}"
+    # give an other chance with dmi
+    V_BOARD_MODEL=$(cat /sys/devices/virtual/dmi/id/board_name 2>/dev/null | tr -d '\0' | sed -e s+"[^A-Za-z0-9]"+"_"+g)
+fi
+# 3rd time lucky
+if test -z "${V_BOARD_MODEL}" || test "${V_BOARD_MODEL}" == "Default_string"
+then
+    V_BOARD_MODEL=$(cat /sys/devices/virtual/dmi/id/product_name 2>/dev/null | tr -d '\0' | sed -e s+"[^A-Za-z0-9]"+"_"+g)
+fi
+if test -n "${V_BOARD_MODEL}"
+then
+    echo "Model: ${V_BOARD_MODEL}"
 fi
 
 if echo "${V_BOARD}" | grep -qE "^rpi[0-9]$"
@@ -171,7 +170,13 @@ if [[ "${FULL_DISPLAY}" != 0 ]]; then
 fi
 
 [[ -z ${V_CPUMODEL1} ]] || echo "Cpu model: ${V_CPUMODEL1}"
-echo "Cpu number: ${V_CPUNB}"
+
+if test "${V_CPUMAXNB}" = "${V_CPUNB}"
+then
+    echo "Cpu number: ${V_CPUNB}"
+else
+        echo "Cpu number: ${V_CPUNB}/${V_CPUMAXNB}"
+fi
 if test "${V_CPUMINFREQ}" != "${V_CPUMAXFREQ}"
 then
     echo "Cpu frequency: ${V_CPUMINFREQ}/${V_CPUMAXFREQ} MHz"
@@ -182,4 +187,3 @@ if grep -q " avx2" /proc/cpuinfo
 then
     echo "Cpu feature: avx2"
 fi
-
