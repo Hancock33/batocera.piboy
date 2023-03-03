@@ -3,8 +3,8 @@
 # mupen64plus-core
 #
 ################################################################################
-# Version: Commits on Feb 07, 2023
-MUPEN64PLUS_CORE_VERSION = 7ee312cb282a7794c62d5d284bf93151c585dd1f
+# Version: Commits on Mar 03, 2023
+MUPEN64PLUS_CORE_VERSION = cf0ee9ec37bdacb1f0d753fc81673c93ec0867ad
 MUPEN64PLUS_CORE_SITE = $(call github,mupen64plus,mupen64plus-core,$(MUPEN64PLUS_CORE_VERSION))
 MUPEN64PLUS_CORE_LICENSE = GPLv2
 MUPEN64PLUS_CORE_DEPENDENCIES = sdl2 alsa-lib freetype dejavu
