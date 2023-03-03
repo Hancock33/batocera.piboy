@@ -3,8 +3,8 @@
 # libretro-scummvm
 #
 ################################################################################
-# Version: Commits on Mar 02, 2023 (branch@branch-2-7)
-LIBRETRO_SCUMMVM_VERSION = 33236089886927fe895880eb069b0996588a3886
+# Version: Commits on Mar 03, 2023 (branch@branch-2-7)
+LIBRETRO_SCUMMVM_VERSION = 6d7915d945397c5feda7a42fbd8a1ef6f04f6cf6
 LIBRETRO_SCUMMVM_SITE = $(call github,scummvm,scummvm,$(LIBRETRO_SCUMMVM_VERSION))
 LIBRETRO_SCUMMVM_LICENSE = GPLv2
 LIBRETRO_SCUMMVM_DEPENDENCIES = sdl2 zlib jpeg libmpeg2 libogg libvorbis flac libmad libpng libtheora faad2 freetype
