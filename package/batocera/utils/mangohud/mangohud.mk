@@ -22,11 +22,11 @@ ifeq ($(BR2_PACKAGE_VULKAN_HEADERS),y)
 endif
 
 MANGOHUD_CONF_OPTS = -Dwith_xnvctrl=disabled
-ifeq ($(BR2_PACKAGE_VULKAN_HEADERS),y)
-	MANGOHUD_CONF_OPTS += -Duse_vulkan=true -Duse_system_vulkan=enabled -Dvulkan_datadir=$(STAGING_DIR)/usr/share
-else
+#ifeq ($(BR2_PACKAGE_VULKAN_HEADERS),y)
+#	MANGOHUD_CONF_OPTS += -Duse_vulkan=true -Duse_system_vulkan=enabled -Dvulkan_datadir=$(STAGING_DIR)/usr/share
+#else
 	MANGOHUD_CONF_OPTS += -Duse_vulkan=false -Duse_system_vulkan=disabled
-endif
+#endif
 
 ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
 	MANGOHUD_CONF_OPTS += -Dwith_x11=enabled

@@ -1,0 +1,25 @@
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 3bb2337..79c3c81 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -321,9 +321,9 @@ target_sources(engine PRIVATE ${HEADER_FILES})
+ 
+ add_dependencies(engine revision_check)
+ target_link_libraries(engine PRIVATE
+-	SDL2_mixer::SDL2_mixer
+-	SDL2_net::SDL2_net
+-	SDL2::SDL2
++	-lSDL2_mixer
++	-lSDL2_net
++	-lSDL2
+ 	${BZIP2_LIBRARIES}
+ 	${JPEG_LIBRARIES}
+ 	lzma
+@@ -333,6 +333,7 @@ target_link_libraries(engine PRIVATE
+ target_include_directories(engine PRIVATE
+ 	${BZIP2_INCLUDE_DIR}
+ 	${JPEG_INCLUDE_DIR}
++	${JPEG_INCLUDE_DIR}/SDL2
+ 	${CMAKE_CURRENT_BINARY_DIR}
+ 	${CMAKE_CURRENT_SOURCE_DIR}
+ 	${CMAKE_CURRENT_SOURCE_DIR}/g_shared
