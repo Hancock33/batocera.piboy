@@ -5,8 +5,9 @@
 ################################################################################
 # Version: Commits on Feb 25, 2023
 VULKAN_TOOLS_VERSION = 5bcfa1605e110150710170bfe199aa60e7f048fe
-VULKAN_TOOLS_SITE = $(call github,KhronosGroup,Vulkan-Tools,$(VULKAN_TOOLS_VERSION))
-VULKAN_TOOLS_DEPENDENCIES = vulkan-headers vulkan-loader host-python3 host-glslang
+
+VULKAN_TOOLS_SITE =  $(call github,KhronosGroup,Vulkan-Tools,$(VULKAN_TOOLS_VERSION))
+VULKAN_TOOLS_DEPENDENCIES = vulkan-headers vulkan-loader host-python3 host-glslang wayland
 VULKAN_TOOLS_INSTALL_STAGING = YES
 VULKAN_TOOLS_SUPPORTS_IN_SOURCE_BUILD = NO
 
@@ -24,8 +25,6 @@ endif
 ifeq ($(BR2_PACKAGE_MESA3D),y)
 VULKAN_TOOLS_DEPENDENCIES += mesa3d
 endif
-
-VULKAN_TOOLS_CONF_OPTS += -DVulkanHeaders_INCLUDE_DIR=$(STAGING_DIR)/usr/include
 
 define VULKAN_TOOLS_SERVICE
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/gpu/vulkan/vulkan-tools/S55vulkaninfo \

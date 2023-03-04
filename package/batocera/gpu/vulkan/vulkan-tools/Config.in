@@ -6,6 +6,7 @@ config BR2_PACKAGE_VULKAN_TOOLS
   select BR2_PACKAGE_HOST_PYTHON3
   select BR2_PACKAGE_HOST_PYTHON3_SSL
   select BR2_PACKAGE_GLSLANG
+  select BR2_PACKAGE_WAYLAND
 
   help
     Vulkan tools from Khronos
