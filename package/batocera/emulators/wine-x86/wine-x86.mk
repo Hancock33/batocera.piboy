@@ -3,7 +3,7 @@
 # wine-x86
 #
 ################################################################################
-WINE_X86_VERSION = 20230225
+WINE_X86_VERSION = 20230304
 WINE_X86_SOURCE = batocera-x86-32bit-libs-$(WINE_X86_VERSION).tar.xz
 WINE_X86_SITE = https://github.com/Hancock33/batocera-rp4-32bit-libs/releases/download/$(WINE_X86_VERSION)
 
