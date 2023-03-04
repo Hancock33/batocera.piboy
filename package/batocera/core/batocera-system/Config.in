@@ -102,6 +102,9 @@ config BR2_PACKAGE_BATOCERA_SBC_XORG
 config BR2_PACKAGE_BATOCERA_LIB32
     bool "32bit libraries"
 
+config BR2_REMOVE_SOURCE_AFTER_COMPILE
+    bool "remove src"
+
 ##########################################
 config BR2_PACKAGE_BATOCERA_MUSIC_SUPPORT
 	bool "batocera.linux music formats support"
