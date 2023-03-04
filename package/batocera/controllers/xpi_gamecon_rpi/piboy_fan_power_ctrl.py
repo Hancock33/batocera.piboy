@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import time
+import subprocess
 import sys
 import os.path
 
@@ -20,20 +21,33 @@ fpdefault = 75
 battctrl = 100
 battctrlOld = 100
 
+piboyEnabled = subprocess.run(['batocera-settings-get', '-f', '/boot/batocera-boot.conf', 'key', 'piboy.enabled'],
+                              stdout=subprocess.PIPE, text=True).stdout.splitlines()
+piboyXRSEnabled = subprocess.run(['batocera-settings-get', '-f', '/boot/batocera-boot.conf', 'key', 'piboyxrs.enabled'],
+                                 stdout=subprocess.PIPE, text=True).stdout.splitlines()
+
+fanFilename = ""
+if (piboyEnabled and piboyEnabled[0] == "1"): 
+    fanFilename = "fan.piboy.ini"
+elif (piboyXRSEnabled and piboyXRSEnabled[0] == "1"): 
+    fanFilename = "fan.piboyxrs.ini"
+
 #Read Fan.ini file
-if os.path.isfile('/boot/fan.ini'):
-	from configparser import ConfigParser
-	config_object = ConfigParser()
-	config_object.read("/boot/fan.ini")
+for path in ['/userdata/system/configs/fan/', '/boot/']:
+    if os.path.isfile(path + fanFilename):
+        from configparser import ConfigParser
+        config_object = ConfigParser()
+        config_object.read(path + fanFilename)
 
-	userinfo = config_object["FAN"]
+        userinfo = config_object["FAN"]
 
-	fphihi = (userinfo["75DegC"])
-	fphi = (userinfo["70DegC"])
-	fpmed = (userinfo["65DegC"])
-	fplo = (userinfo["60DegC"])
-	fplolo = (userinfo["55DegC"])
-	fpdefault = (userinfo["50DegC"])
+        fphihi = (userinfo["75DegC"])
+        fphi = (userinfo["70DegC"])
+        fpmed = (userinfo["65DegC"])
+        fplo = (userinfo["60DegC"])
+        fplolo = (userinfo["55DegC"])
+        fpdefault = (userinfo["50DegC"])
+        break
 
 # Fan Controller
 try:
