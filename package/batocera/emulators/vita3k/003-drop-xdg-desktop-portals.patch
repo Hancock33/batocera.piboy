@@ -16,10 +16,10 @@ index bf59a3a2..4cdda17f 100644
  	path = external/cubeb
  	url = https://github.com/mozilla/cubeb.git
 diff --git a/external/CMakeLists.txt b/external/CMakeLists.txt
-index e9f7a07c..5b8e491f 100644
+index 51e40ddb..2dc813c9 100644
 --- a/external/CMakeLists.txt
 +++ b/external/CMakeLists.txt
-@@ -397,11 +397,33 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
+@@ -415,11 +415,33 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
  # target_compile_definitions(tracy PUBLIC TRACY_ENABLE)
  
  # Use XDG desktop portals on Linux
@@ -59,7 +59,7 @@ index e9f7a07c..5b8e491f 100644
 +set_property(TARGET nativefiledialog PROPERTY FOLDER externals)
 \ No newline at end of file
 diff --git a/vita3k/CMakeLists.txt b/vita3k/CMakeLists.txt
-index ecdc9040..08d83368 100644
+index 101749c8..efe2ed5f 100644
 --- a/vita3k/CMakeLists.txt
 +++ b/vita3k/CMakeLists.txt
 @@ -118,7 +118,6 @@ add_subdirectory(features)
@@ -88,13 +88,13 @@ index b66bbd98..28d5a6f4 100644
   * @dir vita3k/io
   *
 diff --git a/vita3k/gui/CMakeLists.txt b/vita3k/gui/CMakeLists.txt
-index a1a3fe01..89c493fb 100644
+index 360cdd61..68404dfd 100644
 --- a/vita3k/gui/CMakeLists.txt
 +++ b/vita3k/gui/CMakeLists.txt
 @@ -51,5 +51,5 @@ add_library(
  
  target_include_directories(gui PUBLIC include ${CMAKE_SOURCE_DIR}/vita3k)
- target_link_libraries(gui PUBLIC app compat config dialog emuenv ime imgui glutil lang np)
+ target_link_libraries(gui PUBLIC app compat config dialog emuenv https ime imgui glutil lang np)
 -target_link_libraries(gui PRIVATE audio ctrl kernel miniz psvpfsparser pugixml::pugixml stb renderer packages sdl2 vkutil host::dialog)
 +target_link_libraries(gui PRIVATE audio ctrl kernel miniz nativefiledialog psvpfsparser pugixml::pugixml stb renderer packages sdl2 vkutil)
  target_link_libraries(gui PUBLIC tracy)

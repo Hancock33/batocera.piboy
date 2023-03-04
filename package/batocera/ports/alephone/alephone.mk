@@ -3,13 +3,13 @@
 # alephone
 #
 ################################################################################
-# Version: Commits on Feb 23, 2023
-ALEPHONE_VERSION = 3dec36b985193c8d35d6c3fdb22071bf39e7e383
+# Version: Commits on Mar 03, 2023
+ALEPHONE_VERSION = 9caa3c79e096c82cc2e3881018d5cae65ec86190
 ALEPHONE_SITE = $(call github,Aleph-One-Marathon,alephone,$(ALEPHONE_VERSION))
 
 ALEPHONE_DEPENDENCIES = boost sdl2 sdl2_image sdl2_ttf sdl2_net
 ALEPHONE_LICENSE = GPLv3
-
+#ALEPHONE_AUTORECONF = YES
 ALEPHONE_SUPPORTS_IN_SOURCE_BUILD = NO
 ALEPHONE_CONF_OPTS = \
 	                --disable-sdltest \

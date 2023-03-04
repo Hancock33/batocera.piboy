@@ -1,12 +1,12 @@
-From b0afdd285da541f5051ffb1d43c40d053cb30a00 Mon Sep 17 00:00:00 2001
+From 20d3d43d9daa82d5fa1e937e17b975974572d189 Mon Sep 17 00:00:00 2001
 From: Juliano Dorigão <jdorigao@gmail.com>
-Date: Sun, 19 Feb 2023 19:42:21 -0400
+Date: Fri, 3 Mar 2023 16:12:03 -0400
 Subject: [PATCH] OrangePi 3 LTS support
 
 ---
  arch/arm64/boot/dts/allwinner/Makefile        |   1 +
- .../allwinner/sun50i-h6-orangepi-3-lts.dts    | 374 ++++++++++++++++++
- 2 files changed, 375 insertions(+)
+ .../allwinner/sun50i-h6-orangepi-3-lts.dts    | 361 ++++++++++++++++++
+ 2 files changed, 362 insertions(+)
  create mode 100644 arch/arm64/boot/dts/allwinner/sun50i-h6-orangepi-3-lts.dts
 
 diff --git a/arch/arm64/boot/dts/allwinner/Makefile b/arch/arm64/boot/dts/allwinner/Makefile
@@ -23,13 +23,14 @@ index 6a96494a2..ace8159a6 100644
  dtb-$(CONFIG_ARCH_SUNXI) += sun50i-h6-pine-h64.dtb
 diff --git a/arch/arm64/boot/dts/allwinner/sun50i-h6-orangepi-3-lts.dts b/arch/arm64/boot/dts/allwinner/sun50i-h6-orangepi-3-lts.dts
 new file mode 100644
-index 000000000..468c7fdde
+index 000000000..67f38b8a1
 --- /dev/null
 +++ b/arch/arm64/boot/dts/allwinner/sun50i-h6-orangepi-3-lts.dts
-@@ -0,0 +1,374 @@
+@@ -0,0 +1,361 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
-+// Copyright (C) 2019 Ondřej Jirman <megous@megous.com>
 +// Copyright (C) 2023 Jernej Skrabec <jernej.skrabec@gmail.com>
++// Based on sun50i-h6-orangepi-3.dts, which is:
++// Copyright (C) 2019 Ondřej Jirman <megous@megous.com>
 +
 +/dts-v1/;
 +
@@ -43,9 +44,8 @@ index 000000000..468c7fdde
 +	compatible = "xunlong,orangepi-3-lts", "allwinner,sun50i-h6";
 +
 +	aliases {
-+		serial0 = &uart0;
-+		serial1 = &uart1;
 +		ethernet0 = &emac;
++		serial0 = &uart0;
 +	};
 +
 +	chosen {
@@ -77,12 +77,12 @@ index 000000000..468c7fdde
 +		led-0 {
 +			label = "orangepi:red:power";
 +			gpios = <&r_pio 0 4 GPIO_ACTIVE_HIGH>; /* PL4 */
-+			default-state = "on";
 +		};
 +
 +		led-1 {
 +			label = "orangepi:green:status";
 +			gpios = <&r_pio 0 7 GPIO_ACTIVE_HIGH>; /* PL7 */
++			default-state = "on";
 +		};
 +	};
 +
@@ -97,12 +97,12 @@ index 000000000..468c7fdde
 +
 +	reg_gmac_3v3: gmac-3v3 {
 +		compatible = "regulator-fixed";
-+		regulator-name = "vcc-gmac-3v3";
++		regulator-name = "gmac-3v3";
 +		regulator-min-microvolt = <3300000>;
 +		regulator-max-microvolt = <3300000>;
 +		startup-delay-us = <150000>;
-+		gpio = <&pio 3 6 GPIO_ACTIVE_HIGH>;
 +		enable-active-high;
++		gpio = <&pio 3 6 GPIO_ACTIVE_HIGH>; /* PD6 */
 +	};
 +
 +	reg_vcc33_wifi: vcc33-wifi {
@@ -111,8 +111,8 @@ index 000000000..468c7fdde
 +		regulator-name = "vcc33-wifi";
 +		regulator-min-microvolt = <3300000>;
 +		regulator-max-microvolt = <3300000>;
-+		regulator-always-on;
-+		vin-supply = <&reg_vcc5v>;
++		enable-active-high;
++		gpio = <&pio 7 7 GPIO_ACTIVE_HIGH>; /* PH7 */
 +	};
 +
 +	reg_vcc_wifi_io: vcc-wifi-io {
@@ -127,7 +127,7 @@ index 000000000..468c7fdde
 +
 +	wifi_pwrseq: wifi-pwrseq {
 +		compatible = "mmc-pwrseq-simple";
-+		clocks = <&rtc CLK_OSC32K_FANOUT>;
++		clocks = <&rtc 1>;
 +		clock-names = "ext_clock";
 +		reset-gpios = <&r_pio 1 3 GPIO_ACTIVE_LOW>; /* PM3 */
 +		post-power-on-delay-ms = <200>;
@@ -154,6 +154,17 @@ index 000000000..468c7fdde
 +	status = "okay";
 +};
 +
++&emac {
++	pinctrl-names = "default";
++	pinctrl-0 = <&ext_rgmii_pins>;
++	phy-mode = "rgmii";
++	phy-handle = <&ext_rgmii_phy>;
++	phy-supply = <&reg_gmac_3v3>;
++	allwinner,rx-delay-ps = <1500>;
++	allwinner,tx-delay-ps = <700>;
++	status = "okay";
++};
++
 +&gpu {
 +	mali-supply = <&reg_dcdcc>;
 +	status = "okay";
@@ -170,17 +181,6 @@ index 000000000..468c7fdde
 +	};
 +};
 +
-+&emac {
-+	pinctrl-names = "default";
-+	pinctrl-0 = <&ext_rgmii_pins>;
-+	phy-mode = "rgmii";
-+	phy-handle = <&ext_rgmii_phy>;
-+	phy-supply = <&reg_gmac_3v3>;
-+	allwinner,rx-delay-ps = <200>;
-+	allwinner,tx-delay-ps = <300>;
-+	status = "okay";
-+};
-+
 +&mdio {
 +	ext_rgmii_phy: ethernet-phy@1 {
 +		compatible = "ethernet-phy-ieee802.3-c22";
@@ -190,10 +190,6 @@ index 000000000..468c7fdde
 +		reset-assert-us = <15000>;
 +		reset-deassert-us = <40000>;
 +	};
-+};
-+
-+&i2s1 {
-+	status = "okay";
 +};
 +
 +&mmc0 {
@@ -235,6 +231,10 @@ index 000000000..468c7fdde
 +	vcc-pg-supply = <&reg_bldo3>;
 +};
 +
++&r_ir {
++	status = "okay";
++};
++
 +&r_rsb {
 +	clock-frequency = <100000>;
 +	status = "okay";
@@ -268,7 +268,6 @@ index 000000000..468c7fdde
 +				regulator-min-microvolt = <3300000>;
 +				regulator-max-microvolt = <3300000>;
 +				regulator-name = "vcc33-audio-tv-ephy-mac";
-+				regulator-enable-ramp-delay = <100000>;
 +			};
 +
 +			/* ALDO3 is shorted to CLDO1 */
@@ -287,17 +286,15 @@ index 000000000..468c7fdde
 +			};
 +
 +			reg_bldo2: bldo2 {
-+				regulator-always-on;
 +				regulator-min-microvolt = <1800000>;
 +				regulator-max-microvolt = <1800000>;
 +				regulator-name = "vcc-efuse-pcie-hdmi-pc";
 +			};
 +
 +			reg_bldo3: bldo3 {
-+				regulator-always-on;
 +				regulator-min-microvolt = <1800000>;
 +				regulator-max-microvolt = <1800000>;
-+				regulator-name = "vcc-wifi-io-pm-pg";
++				regulator-name = "vcc-pm-pg-dcxoio-wifi";
 +			};
 +
 +			bldo4 {
@@ -368,25 +365,15 @@ index 000000000..468c7fdde
 +	clocks = <&ext_osc32k>;
 +};
 +
++/delete-node/ &spi0;
++
 +&uart0 {
 +	pinctrl-names = "default";
 +	pinctrl-0 = <&uart0_ph_pins>;
 +	status = "okay";
 +};
 +
-+&uart1 {
-+	pinctrl-names = "default";
-+	pinctrl-0 = <&uart1_pins>, <&uart1_rts_cts_pins>;
-+	uart-has-rtscts;
-+	status = "disabled";
-+};
-+
 +&usb2otg {
-+	/*
-+	 * This board doesn't have a controllable VBUS even though it
-+	 * does have an ID pin. Using it as anything but a USB host is
-+	 * unsafe.
-+	 */
 +	dr_mode = "host";
 +	status = "okay";
 +};
