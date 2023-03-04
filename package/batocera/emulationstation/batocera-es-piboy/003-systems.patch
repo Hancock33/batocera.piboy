@@ -802,10 +802,10 @@ index 189d7754..b2c6d701 100644
 \ No newline at end of file
 +#endif
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index 230a7c99..63d62b4c 100644
+index fb9cedfe..fe0dbefb 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -36,145 +36,232 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
+@@ -36,145 +36,231 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
@@ -1136,20 +1136,12 @@ index 230a7c99..63d62b4c 100644
 -	{ CREATONIC_MEGA_DUCK, 90 },
 -	{ FUNTECH_SUPER_A_CAN, 100 },
 -	{ CAMPUTER_LYNX, 88 },
--	{ EPOCH_GAMEPOCKET, 95 }
+-	{ EPOCH_GAMEPOCKET, 95 },
 +	{ LOWRESNX, 244 },
 +	{ PICO, 250 },
 +	{ FMTOWNS, 253 },
 +	{ HIKARU, 258 },
 +	{ VG5000, 261 },
-+	{ WASM4, 262 }
+ 	{ WASM4, 262 }
  };
  
- const std::set<Scraper::ScraperMediaSource>& ScreenScraperScraper::getSupportedMedias()
-@@ -915,4 +1002,4 @@ int ScreenScraperScraper::getThreadCount(std::string &result)
- 	return 1;
- }
- 
--#endif
-\ No newline at end of file
-+#endif

@@ -36,7 +36,7 @@ index b55cc041..45ddccca 100644
  if(DISABLE_KODI)
    MESSAGE("kodi disabled")
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index a8e5791c..12c1a0d9 100644
+index f45f4460..2cda892e 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -71,8 +71,15 @@
@@ -71,7 +71,7 @@ index a8e5791c..12c1a0d9 100644
  	}
  	else
  	{
-@@ -798,7 +808,11 @@ void GuiMenu::openDeveloperSettings()
+@@ -815,7 +825,11 @@ void GuiMenu::openDeveloperSettings()
  
  void GuiMenu::openUpdatesSettings()
  {
@@ -84,7 +84,7 @@ index a8e5791c..12c1a0d9 100644
  
  	updateGui->addGroup(_("DOWNLOADS"));
  
-@@ -839,6 +853,7 @@ void GuiMenu::openUpdatesSettings()
+@@ -856,6 +870,7 @@ void GuiMenu::openUpdatesSettings()
  
  	if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::UPGRADE))
  	{
@@ -92,7 +92,7 @@ index a8e5791c..12c1a0d9 100644
  		updateGui->addGroup(_("SOFTWARE UPDATES"));
  
  		// Enable updates
-@@ -848,11 +863,11 @@ void GuiMenu::openUpdatesSettings()
+@@ -865,11 +880,11 @@ void GuiMenu::openUpdatesSettings()
  
  		std::string updatesType = SystemConf::getInstance()->get("updates.type");
  
@@ -106,7 +106,7 @@ index a8e5791c..12c1a0d9 100644
  			if (updatesType.empty() || updatesType != "beta")
  				updatesType = "stable";
  
-@@ -881,6 +896,7 @@ void GuiMenu::openUpdatesSettings()
+@@ -898,6 +913,7 @@ void GuiMenu::openUpdatesSettings()
  				mWindow->pushGui(new GuiUpdate(mWindow));
  			}
  		});
@@ -115,7 +115,7 @@ index a8e5791c..12c1a0d9 100644
  
  	mWindow->pushGui(updateGui);
 diff --git a/es-core/src/platform.cpp b/es-core/src/platform.cpp
-index d2d1bc94..d6db4182 100644
+index 737919f4..6a9945f3 100644
 --- a/es-core/src/platform.cpp
 +++ b/es-core/src/platform.cpp
 @@ -28,6 +28,8 @@ int runShutdownCommand()
