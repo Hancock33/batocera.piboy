@@ -1,5 +1,5 @@
 diff --git a/src/rt_cfg.c b/src/rt_cfg.c
-index d811080..0bb8783 100644
+index 4bcd99f..0f6b82c 100644
 --- a/src/rt_cfg.c
 +++ b/src/rt_cfg.c
 @@ -75,7 +75,7 @@ int     MUvolume         = 196;
