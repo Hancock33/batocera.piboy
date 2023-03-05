@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Mar 04, 2023 (branch@branch-2-7)
-LIBRETRO_SCUMMVM_VERSION = 72ab68f2c2944b2c7093abef1c8edd316b31bda4
+LIBRETRO_SCUMMVM_VERSION = 61aebc613d430c46ec23ca08f3ad5039a5a23f49
 LIBRETRO_SCUMMVM_SITE = $(call github,scummvm,scummvm,$(LIBRETRO_SCUMMVM_VERSION))
 LIBRETRO_SCUMMVM_LICENSE = GPLv2
 LIBRETRO_SCUMMVM_DEPENDENCIES = sdl2 zlib jpeg libmpeg2 libogg libvorbis flac libmad libpng libtheora faad2 freetype
