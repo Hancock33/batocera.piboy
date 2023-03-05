@@ -1,18 +1,18 @@
 diff --git a/configure b/configure
-index 1f304390438..6519d2cad3b 100755
+index a3de4f873ad..1579a080d76 100755
 --- a/configure
 +++ b/configure
-@@ -1492,9 +1492,6 @@ for ac_option in $@; do
+@@ -1519,9 +1519,6 @@ for ac_option in $@; do
  			engine_disable ${engine_name}
  		done
  		;;
 -	*)
 -		option_error
 -		;;
- 	esac;
- done;
+ 	esac
+ done
  
-@@ -3243,13 +3240,13 @@ if test -n "$_host"; then
+@@ -3395,13 +3392,13 @@ if test -n "$_host"; then
  			# but Raspbian does.
  			# Be careful as it's the linker (LDFLAGS) which must know about sysroot.
  			# These are needed to build against Raspbian's libSDL.
