@@ -18,7 +18,7 @@ define SONICMANIA_BUILD_CMDS
 endef
 
 define SONICMANIA_INSTALL_TARGET_CMDS
-	$(INSTALL) -D -m 0755 $(@D)/dependencies/RSDKv5/bin/Linux/SDL2/RSDKv5  $(TARGET_DIR)/usr/bin/sonicmania
+	$(INSTALL) -D -m 0755 $(@D)/dependencies/RSDKv5/bin/Linux/SDL2/RSDKv5U $(TARGET_DIR)/usr/bin/sonicmania
 	mkdir -p $(TARGET_DIR)/usr/share/game_assets/sonicmania
 	$(INSTALL) -D -m 0755 $(@D)/dependencies/RSDKv5/bin/Linux/SDL2/Game.so $(TARGET_DIR)/usr/share/game_assets/sonicmania
 endef
