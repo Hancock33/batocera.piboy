@@ -1,8 +1,8 @@
 diff --git a/Core/Config.cpp b/Core/Config.cpp
-index 3cf4d788b..24d8f538c 100644
+index ca8e44e02..8bb2ac3c2 100644
 --- a/Core/Config.cpp
 +++ b/Core/Config.cpp
-@@ -1273,10 +1273,10 @@ void Config::Reload() {
+@@ -1274,10 +1274,10 @@ void Config::Reload() {
  void Config::UpdateIniLocation(const char *iniFileName, const char *controllerIniFilename) {
  	const bool useIniFilename = iniFileName != nullptr && strlen(iniFileName) > 0;
  	const char *ppssppIniFilename = IsVREnabled() ? "ppssppvr.ini" : "ppsspp.ini";
@@ -97,7 +97,7 @@ index 8303f08a1..04c064151 100644
  }
  
 diff --git a/SDL/SDLJoystick.cpp b/SDL/SDLJoystick.cpp
-index 0a53ef80b..d583294ec 100644
+index 59906f4a3..f47549f39 100644
 --- a/SDL/SDLJoystick.cpp
 +++ b/SDL/SDLJoystick.cpp
 @@ -25,7 +25,7 @@ SDLJoystick::SDLJoystick(bool init_SDL ) : registeredAsEventHandler(false) {
@@ -119,19 +119,19 @@ index 0a53ef80b..d583294ec 100644
  		delete[] mappingData;
  	} else {
 diff --git a/UI/NativeApp.cpp b/UI/NativeApp.cpp
-index 65fd9fac7..2ee882f8d 100644
+index e482eca11..191da67b4 100644
 --- a/UI/NativeApp.cpp
 +++ b/UI/NativeApp.cpp
-@@ -477,7 +477,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
- 	VFSRegister("", new DirectoryAssetReader(File::GetExeDirectory()));
- 	VFSRegister("", new DirectoryAssetReader(Path("/usr/local/share/ppsspp/assets")));
- 	VFSRegister("", new DirectoryAssetReader(Path("/usr/local/share/games/ppsspp/assets")));
--	VFSRegister("", new DirectoryAssetReader(Path("/usr/share/ppsspp/assets")));
-+	VFSRegister("", new DirectoryAssetReader(Path("/usr/share/ppsspp/PPSSPP")));
- 	VFSRegister("", new DirectoryAssetReader(Path("/usr/share/games/ppsspp/assets")));
+@@ -478,7 +478,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+ 	g_VFS.Register("", new DirectoryReader(File::GetExeDirectory()));
+ 	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/ppsspp/assets")));
+ 	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/games/ppsspp/assets")));
+-	g_VFS.Register("", new DirectoryReader(Path("/usr/share/ppsspp/assets")));
++	g_VFS.Register("", new DirectoryReader(Path("/usr/share/ppsspp/PPSSPP")));
+ 	g_VFS.Register("", new DirectoryReader(Path("/usr/share/games/ppsspp/assets")));
  #endif
  
-@@ -562,7 +562,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -563,7 +563,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	else // Just in case
  		config = "./config";
  

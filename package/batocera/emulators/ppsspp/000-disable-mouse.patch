@@ -1,8 +1,8 @@
 diff --git a/SDL/SDLMain.cpp b/SDL/SDLMain.cpp
-index d1e71462a..bb9948411 100644
+index 1acd96e77..ca7fef5d2 100644
 --- a/SDL/SDLMain.cpp
 +++ b/SDL/SDLMain.cpp
-@@ -811,9 +811,7 @@ int main(int argc, char *argv[]) {
+@@ -809,9 +809,7 @@ int main(int argc, char *argv[]) {
  		printf("Init from thread error: '%s'\n", error_message.c_str());
  	}
  
@@ -12,7 +12,7 @@ index d1e71462a..bb9948411 100644
  
  	if (!useEmuThread) {
  		NativeInitGraphics(graphicsContext);
-@@ -903,14 +901,6 @@ int main(int argc, char *argv[]) {
+@@ -901,14 +899,6 @@ int main(int argc, char *argv[]) {
  						g_Config.bFullScreen = fullscreen;
  						g_Config.iForceFullScreen = -1;
  					}
@@ -27,7 +27,7 @@ index d1e71462a..bb9948411 100644
  				}
  
  				case SDL_WINDOWEVENT_MINIMIZED:
-@@ -1170,15 +1160,6 @@ int main(int argc, char *argv[]) {
+@@ -1168,15 +1158,6 @@ int main(int argc, char *argv[]) {
  		}
  		if (g_QuitRequested)
  			break;
