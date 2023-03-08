@@ -132,21 +132,21 @@ class XeniaGenerator(Generator):
 
         # now setup the command array for the emulator
         if rom == 'config':
-            if core == 'xenia-canary':
-                commandArray = ['/usr/wine/lutris/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe']
+            if core == 'xenia':
+                commandArray = ['/usr/wine/proton/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe']
             else:
-                commandArray = ['/usr/wine/lutris/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe']
+                commandArray = ['/usr/wine/proton/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe']
         else:
-            if core == 'xenia-canary':
-                commandArray = ['/usr/wine/lutris/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe', 'z:' + rom]
+            if core == 'xenia':
+                commandArray = ['/usr/wine/proton/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe', 'z:' + rom]
             else:
-                commandArray = ['/usr/wine/lutris/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe', 'z:' + rom]
+                commandArray = ['/usr/wine/proton/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe', 'z:' + rom]
 
         return Command.Command(
             array=commandArray,
             env={
                 'WINEPREFIX': wineprefix,
-                'LD_LIBRARY_PATH': '/usr/lib:/lib32:/usr/wine/lutris/lib/wine',
+                'LD_LIBRARY_PATH': '/usr/lib:/lib32:/usr/wine/proton/lib/wine',
                 'LIBGL_DRIVERS_PATH': '/usr/lib/dri',
                 'WINEESYNC': '1',
                 'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers),
