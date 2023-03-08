@@ -3,14 +3,22 @@
 # cdogs
 #
 ################################################################################
-# Version: Commits on Mar 05, 2023
-CDOGS_VERSION = 5a363acefc761d7fd57305e669a4e01142e4f91f
+# Version: Commits on Mar 07, 2023
+CDOGS_VERSION = 0433ae772622bbb68fa3de5990d11752c0813d4e
 CDOGS_SITE = $(call github,cxong,cdogs-sdl,$(CDOGS_VERSION))
 
 CDOGS_DEPENDENCIES = sdl2 python-protobuf
 CDOGS_LICENSE = GPL-2.0
 
 CDOGS_SUPPORTS_IN_SOURCE_BUILD = NO
+
+define CDOGS_FIX_SDL2MAIN
+	sed -i -e s+"SDL2_image::SDL2_image"+"-lSDL2_image"+ $(@D)/src/cdogs/CMakeLists.txt
+	sed -i -e s+"SDL2_mixer::SDL2_mixer"+"-lSDL2_mixer"+ $(@D)/src/cdogs/CMakeLists.txt
+	sed -i -e s+"SDL2_image::SDL2_image"+"-lSDL2_image"+ $(@D)/src/tests/CMakeLists.txt
+endef
+
+CDOGS_PRE_CONFIGURE_HOOKS += CDOGS_FIX_SDL2MAIN
 
 CDOGS_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 CDOGS_CONF_OPTS += -DCDOGS_DATA_DIR=/usr/share/cdogs/
