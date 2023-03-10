@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Mar 09, 2023
-OPENJK_VERSION = 04cd89f0e09ef5a6027e0ed3bd736d685b55586f
+OPENJK_VERSION = f35116c8b8708ea985c1c58e52e91bceccfa738e
 OPENJK_SITE = $(call github,JACoders,OpenJK,$(OPENJK_VERSION))
 
 OPENJK_DEPENDENCIES = sdl2 openal
