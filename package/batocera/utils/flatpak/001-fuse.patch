@@ -1,0 +1,377 @@
+From b75260288d33d43893b40a06340e965b2e3edab1 Mon Sep 17 00:00:00 2001
+From: Simon McVittie <smcv@collabora.com>
+Date: Thu, 17 Jun 2021 23:20:25 +0100
+Subject: [PATCH 1/3] revokefs: Use FUSE version 3 if possible
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Based on a change contributed by Léo Stefanesco; but instead of
+unconditionally using FUSE 3, leave a fallback code path for FUSE 2 for
+older distros.
+
+Co-authored-by: Léo Stefanesco <leo.lveb@gmail.com>
+Signed-off-by: Simon McVittie <smcv@collabora.com>
+---
+ configure.ac         |  9 ++++++++-
+ revokefs/main.c      | 45 +++++++++++++++++++++++++++++++++++++++++--
+ revokefs/writer.c    | 24 ++++++++++++++++-------
+ revokefs/writer.h    |  2 +-
+ tests/can-use-fuse.c | 46 ++++++++++++++++++++++++++++++++++++++++----
+ 5 files changed, 111 insertions(+), 15 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 32b3dd112d..c80dd6a9cf 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -315,7 +315,14 @@ AC_ARG_ENABLE([auto-sideloading],
+               [enable_auto_sideloading=no])
+ AM_CONDITIONAL(BUILD_AUTO_SIDELOADING, test x$enable_auto_sideloading = xyes)
+ 
+-PKG_CHECK_MODULES(FUSE, fuse >= 2.9.2)
++PKG_CHECK_MODULES([FUSE3], [fuse3 >= 3.1.1],
++                  [
++                    FUSE_USE_VERSION=31
++                    FUSE_CFLAGS="$FUSE3_CFLAGS"
++                    FUSE_LIBS="$FUSE3_LIBS"
++                  ],
++                  [PKG_CHECK_MODULES([FUSE], [fuse >= 2.9.2], [FUSE_USE_VERSION=26])])
++AC_DEFINE_UNQUOTED([FUSE_USE_VERSION], [$FUSE_USE_VERSION], [Define to the FUSE API version])
+ 
+ AC_ARG_ENABLE([xauth],
+               AC_HELP_STRING([--disable-xauth],
+diff --git a/revokefs/main.c b/revokefs/main.c
+index f0808f15d4..7aa1e44f10 100644
+--- a/revokefs/main.c
++++ b/revokefs/main.c
+@@ -20,7 +20,9 @@
+  * Boston, MA 02111-1307, USA.
+  */
+ 
+-#define FUSE_USE_VERSION 26
++#ifndef FUSE_USE_VERSION
++#error config.h needs to define FUSE_USE_VERSION
++#endif
+ 
+ #include <sys/types.h>
+ #include <sys/stat.h>
+@@ -60,7 +62,11 @@ ENSURE_RELPATH (const char *path)
+ }
+ 
+ static int
++#if FUSE_USE_VERSION >= 31
++callback_getattr (const char *path, struct stat *st_data, struct fuse_file_info *finfo)
++#else
+ callback_getattr (const char *path, struct stat *st_data)
++#endif
+ {
+   path = ENSURE_RELPATH (path);
+   if (!*path)
+@@ -94,8 +100,13 @@ callback_readlink (const char *path, char *buf, size_t size)
+ }
+ 
+ static int
++#if FUSE_USE_VERSION >= 31
++callback_readdir (const char *path, void *buf, fuse_fill_dir_t filler,
++                  off_t offset, struct fuse_file_info *fi, enum fuse_readdir_flags flags)
++#else
+ callback_readdir (const char *path, void *buf, fuse_fill_dir_t filler,
+                   off_t offset, struct fuse_file_info *fi)
++#endif
+ {
+   DIR *dp;
+   struct dirent *de;
+@@ -128,8 +139,14 @@ callback_readdir (const char *path, void *buf, fuse_fill_dir_t filler,
+       memset (&st, 0, sizeof (st));
+       st.st_ino = de->d_ino;
+       st.st_mode = de->d_type << 12;
++
++#if FUSE_USE_VERSION >= 31
++      if (filler (buf, de->d_name, &st, 0, 0))
++        break;
++#else
+       if (filler (buf, de->d_name, &st, 0))
+         break;
++#endif
+     }
+ 
+   (void) closedir (dp);
+@@ -185,12 +202,20 @@ callback_symlink (const char *from, const char *to)
+ }
+ 
+ static int
++#if FUSE_USE_VERSION >= 31
++callback_rename (const char *from, const char *to, unsigned int flags)
++#else
+ callback_rename (const char *from, const char *to)
++#endif
+ {
++#if FUSE_USE_VERSION < 31
++  unsigned int flags = 0;
++#endif
++
+   from = ENSURE_RELPATH (from);
+   to = ENSURE_RELPATH (to);
+ 
+-  return request_rename (writer_socket, from, to);
++  return request_rename (writer_socket, from, to, flags);
+ }
+ 
+ static int
+@@ -203,28 +228,44 @@ callback_link (const char *from, const char *to)
+ }
+ 
+ static int
++#if FUSE_USE_VERSION >= 31
++callback_chmod (const char *path, mode_t mode, struct fuse_file_info *finfo)
++#else
+ callback_chmod (const char *path, mode_t mode)
++#endif
+ {
+   path = ENSURE_RELPATH (path);
+   return request_chmod (writer_socket, path, mode);
+ }
+ 
+ static int
++#if FUSE_USE_VERSION >= 31
++callback_chown (const char *path, uid_t uid, gid_t gid, struct fuse_file_info *finfo)
++#else
+ callback_chown (const char *path, uid_t uid, gid_t gid)
++#endif
+ {
+   path = ENSURE_RELPATH (path);
+   return request_chown (writer_socket, path, uid, gid);
+ }
+ 
+ static int
++#if FUSE_USE_VERSION >= 31
++callback_truncate (const char *path, off_t size, struct fuse_file_info *finfo)
++#else
+ callback_truncate (const char *path, off_t size)
++#endif
+ {
+   path = ENSURE_RELPATH (path);
+   return request_truncate (writer_socket, path, size);
+ }
+ 
+ static int
++#if FUSE_USE_VERSION >= 31
++callback_utimens (const char *path, const struct timespec tv[2], struct fuse_file_info *finfo)
++#else
+ callback_utimens (const char *path, const struct timespec tv[2])
++#endif
+ {
+   path = ENSURE_RELPATH (path);
+ 
+diff --git a/revokefs/writer.c b/revokefs/writer.c
+index 3e821d9f02..cb48b35af8 100644
+--- a/revokefs/writer.c
++++ b/revokefs/writer.c
+@@ -19,6 +19,10 @@
+  * Boston, MA 02111-1307, USA.
+  */
+ 
++#ifndef FUSE_USE_VERSION
++#error config.h needs to define FUSE_USE_VERSION
++#endif
++
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/statvfs.h>
+@@ -166,7 +170,7 @@ request_path (int writer_socket, RevokefsOps op, const char *path)
+ 
+ static int
+ request_path_data (int writer_socket, RevokefsOps op, const char *path,
+-                   const char *data, size_t data_len)
++                   const char *data, size_t data_len, guint64 flags)
+ {
+   RevokefsRequest request = { op };
+   RevokefsResponse response;
+@@ -177,7 +181,8 @@ request_path_data (int writer_socket, RevokefsOps op, const char *path,
+   if (total_len > MAX_DATA_SIZE)
+     return -ENAMETOOLONG;
+ 
+-  request.arg1 = strlen(path);
++  request.arg1 = path_len;
++  request.arg2 = flags;
+ 
+   response_data_len = do_request (writer_socket, &request, path, path_len, data, data_len,
+                                   &response, NULL, 0);
+@@ -190,7 +195,7 @@ request_path_data (int writer_socket, RevokefsOps op, const char *path,
+ static int
+ request_path_path (int writer_socket, RevokefsOps op, const char *path1, const char *path2)
+ {
+-  return request_path_data (writer_socket, op, path1, path2, strlen(path2));
++  return request_path_data (writer_socket, op, path1, path2, strlen(path2), 0);
+ }
+ 
+ static gboolean
+@@ -392,10 +397,12 @@ handle_rename (RevokefsRequest *request,
+ {
+   g_autofree char *from = NULL;
+   g_autofree char *to = NULL;
++  unsigned int flags;
+ 
+   get_valid_2path (request, data_size,  &from, &to);
++  flags = (unsigned int)request->arg2;
+ 
+-  if (renameat (basefd, from, basefd, to) == -1)
++  if (renameat2 (basefd, from, basefd, to, flags) == -1)
+     response->result = -errno;
+   else
+     response->result = 0;
+@@ -404,9 +411,12 @@ handle_rename (RevokefsRequest *request,
+ }
+ 
+ int
+-request_rename (int writer_socket, const char *from, const char *to)
++request_rename (int writer_socket,
++                const char *from,
++                const char *to,
++                unsigned int flags)
+ {
+-  return request_path_path (writer_socket, REVOKE_FS_RENAME, from, to);
++  return request_path_data (writer_socket, REVOKE_FS_RENAME, from, to, strlen (to), flags);
+ }
+ 
+ static ssize_t
+@@ -515,7 +525,7 @@ int
+ request_utimens (int writer_socket, const char *path, const struct timespec tv[2])
+ {
+   return request_path_data (writer_socket, REVOKE_FS_UTIMENS, path,
+-                            (const char *)tv, sizeof (struct timespec) * 2);
++                            (const char *)tv, sizeof (struct timespec) * 2, 0);
+ }
+ 
+ static ssize_t
+diff --git a/revokefs/writer.h b/revokefs/writer.h
+index 0131eaa4ac..7096b58fda 100644
+--- a/revokefs/writer.h
++++ b/revokefs/writer.h
+@@ -27,7 +27,7 @@ int request_rmdir (int writer_socket, const char *path);
+ int request_unlink (int writer_socket, const char *path);
+ int request_symlink (int writer_socket, const char *from, const char *to);
+ int request_link (int writer_socket, const char *from, const char *to);
+-int request_rename (int writer_socket, const char *from, const char *to);
++int request_rename (int writer_socket, const char *from, const char *to, unsigned int flags);
+ int request_chmod(int writer_socket, const char *path, mode_t mode);
+ int request_chown(int writer_socket, const char *path, uid_t uid, gid_t gid);
+ int request_truncate (int writer_socket, const char *path, off_t size);
+diff --git a/tests/can-use-fuse.c b/tests/can-use-fuse.c
+index f39d2f15b0..b418c8748c 100644
+--- a/tests/can-use-fuse.c
++++ b/tests/can-use-fuse.c
+@@ -13,8 +13,15 @@
+ 
+ #include "libglnx.h"
+ 
+-#define FUSE_USE_VERSION 26
++#ifndef FUSE_USE_VERSION
++#error config.h needs to define FUSE_USE_VERSION
++#endif
++
++#if FUSE_USE_VERSION >= 31
++#include <fuse.h>
++#else
+ #include <fuse_lowlevel.h>
++#endif
+ 
+ gchar *cannot_use_fuse = NULL;
+ 
+@@ -26,10 +33,15 @@ check_fuse (void)
+ {
+   g_autofree gchar *fusermount = NULL;
+   g_autofree gchar *path = NULL;
+-  char *argv[] = { "flatpak-fuse-test" };
+-  struct fuse_args args = FUSE_ARGS_INIT (G_N_ELEMENTS (argv), argv);
+-  struct fuse_chan *chan = NULL;
++  char *argv[] = { "flatpak-fuse-test", NULL };
++  struct fuse_args args = FUSE_ARGS_INIT (G_N_ELEMENTS (argv) - 1, argv);
+   g_autoptr(GError) error = NULL;
++#if FUSE_USE_VERSION >= 31
++  struct fuse *fuse = NULL;
++  const struct fuse_operations ops = { NULL };
++#else
++  struct fuse_chan *chan = NULL;
++#endif
+ 
+   if (cannot_use_fuse != NULL)
+     return FALSE;
+@@ -64,6 +76,26 @@ check_fuse (void)
+   path = g_dir_make_tmp ("flatpak-test.XXXXXX", &error);
+   g_assert_no_error (error);
+ 
++#if FUSE_USE_VERSION >= 31
++  fuse = fuse_new (&args, &ops, sizeof (ops), NULL);
++
++  if (fuse == NULL)
++    {
++      fuse_opt_free_args (&args);
++      cannot_use_fuse = g_strdup_printf ("fuse_new: %s",
++                                         g_strerror (errno));
++      return FALSE;
++    }
++
++  if (fuse_mount (fuse, path) != 0)
++    {
++      fuse_destroy (fuse);
++      fuse_opt_free_args (&args);
++      cannot_use_fuse = g_strdup_printf ("fuse_mount: %s",
++                                         g_strerror (errno));
++      return FALSE;
++    }
++#else
+   chan = fuse_mount (path, &args);
+ 
+   if (chan == NULL)
+@@ -73,10 +105,16 @@ check_fuse (void)
+                                          g_strerror (errno));
+       return FALSE;
+     }
++#endif
+ 
+   g_test_message ("Successfully set up test FUSE fs on %s", path);
+ 
++#if FUSE_USE_VERSION >= 31
++  fuse_unmount (fuse);
++  fuse_destroy (fuse);
++#else
+   fuse_unmount (path, chan);
++#endif
+ 
+   if (g_rmdir (path) != 0)
+     g_error ("rmdir %s: %s", path, g_strerror (errno));
+
+From 0fd3e4a35bcedc8e50bc293f7b3f1c6d4b4d9168 Mon Sep 17 00:00:00 2001
+From: Simon McVittie <smcv@collabora.com>
+Date: Sat, 30 Apr 2022 17:05:58 +0100
+Subject: [PATCH 2/3] tests: Add valgrind suppression for ostreedev/ostree#2592
+
+This is fixed in v2022.3, but that version missed the boat for Ubuntu
+22.04.
+
+Signed-off-by: Simon McVittie <smcv@collabora.com>
+---
+ tests/flatpak.supp | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+diff --git a/tests/flatpak.supp b/tests/flatpak.supp
+index aae8ae160f..6938c6260b 100644
+--- a/tests/flatpak.supp
++++ b/tests/flatpak.supp
+@@ -254,3 +254,14 @@
+    fun:g_file_new_for_path
+    fun:flatpak_get_user_base_dir_location
+ }
++
++# https://github.com/ostreedev/ostree/issues/2592
++{
++   ostree_issue_2592
++   Memcheck:Cond
++   ...
++   fun:_ostree_repo_auto_transaction_unref
++   fun:glib_autoptr_clear_OstreeRepoAutoTransaction
++   fun:glib_autoptr_cleanup_OstreeRepoAutoTransaction
++   fun:ostree_repo_prepare_transaction
++}
+

@@ -8,6 +8,7 @@ FLATPAK_VERSION = 1.12.7
 FLATPAK_SOURCE = flatpak-$(FLATPAK_VERSION).tar.xz
 FLATPAK_SITE = https://github.com/flatpak/flatpak/releases/download/$(FLATPAK_VERSION)
 
+FLATPAK_AUTORECONF = YES
 FLATPAK_DEPENDENCIES += pkgconf host-pkgconf libcap libarchive libglib2 libsoup libgpgme polkit
 FLATPAK_DEPENDENCIES += libostree json-glib appstream-glib yaml-cpp
 FLATPAK_DEPENDENCIES += python-pyparsing host-python-pyparsing glib-networking libseccomp
@@ -19,7 +20,6 @@ FLATPAK_CONF_OPTS += --with-run-media-dir="/media"
 FLATPAK_CONF_OPTS += --disable-selinux-module
 
 FLATPAK_CONF_ENV += LDFLAGS=-lpthread
-
 
 define FLATPAK_INSTALL_SCRIPTS
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/flatpak/batocera-flatpak-update $(TARGET_DIR)/usr/bin/
