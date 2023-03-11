@@ -2,8 +2,8 @@ default:
   emulator:
   core:
   options:
-    hud_support:  false
-    forceNoBezel: true
+    hud_support:  true
+    bezel:        none
     video_frame_delay_auto: true
 
 adam:
