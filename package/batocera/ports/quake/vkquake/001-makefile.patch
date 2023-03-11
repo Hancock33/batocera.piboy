@@ -1,39 +1,39 @@
 diff --git a/Quake/Makefile b/Quake/Makefile
-index 4c51912..0322cb1 100644
+index cb146ac..40d76f3 100644
 --- a/Quake/Makefile
 +++ b/Quake/Makefile
 @@ -6,18 +6,18 @@
  # "make VULKAN_SDK=/path/to/sdk" if it is not already in path
  
  # Enable/Disable user directories support
--DO_USERDIRS=0
-+DO_USERDIRS=1
+-DO_USERDIRS = 0
++DO_USERDIRS = 1
  
  ### Enable/Disable codecs for streaming music support
- USE_CODEC_WAVE=1
--USE_CODEC_FLAC=0
-+USE_CODEC_FLAC=1
- USE_CODEC_MP3=1
- USE_CODEC_VORBIS=1
--USE_CODEC_OPUS=0
-+USE_CODEC_OPUS=1
+ USE_CODEC_WAVE = 1
+-USE_CODEC_FLAC = 0
++USE_CODEC_FLAC = 1
+ USE_CODEC_MP3 = 1
+ USE_CODEC_VORBIS = 1
+-USE_CODEC_OPUS = 0
++USE_CODEC_OPUS = 1
  # either xmp or mikmod (or modplug)
- USE_CODEC_MIKMOD=0
--USE_CODEC_XMP=0
--USE_CODEC_MODPLUG=0
-+USE_CODEC_XMP=1
-+USE_CODEC_MODPLUG=1
- USE_CODEC_UMX=0
+ USE_CODEC_MIKMOD = 0
+-USE_CODEC_XMP = 0
+-USE_CODEC_MODPLUG = 0
++USE_CODEC_XMP = 1
++USE_CODEC_MODPLUG = 1
+ USE_CODEC_UMX = 0
  
  # which library to use for mp3 decoding: mad or mpg123
-@@ -76,8 +76,8 @@ CFLAGS += -DDO_USERDIRS=1
- endif
- 
+@@ -56,8 +56,8 @@ include common.make
+ # libraries
+ # ---------------------------
  SDL_CONFIG ?= sdl2-config
 -SDL_CFLAGS := $(shell $(SDL_CONFIG) --cflags)
--SDL_LIBS   := $(shell $(SDL_CONFIG) --libs)
+-SDL_LIBS := $(shell $(SDL_CONFIG) --libs)
 +SDL_CFLAGS := `pkg-config sdl2 --cflags`
 +SDL_LIBS   := `pkg-config sdl2 --libs`
  
- ifeq ($(HOST_OS),sunos)
- NET_LIBS   :=-lsocket -lnsl -lresolv
+ ifneq ($(VULKAN_SDK),)
+ LDFLAGS += -L$(VULKAN_SDK)/lib
