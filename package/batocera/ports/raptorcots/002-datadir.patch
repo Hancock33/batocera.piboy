@@ -30,18 +30,10 @@ index affcfbc..d5735d3 100644
          strcpy(f_a0, exePath);
          strcat(f_a0, a1);
 diff --git a/src/loadsave.cpp b/src/loadsave.cpp
-index 52d6e47..810257c 100644
+index 97af683..af0dc35 100644
 --- a/src/loadsave.cpp
 +++ b/src/loadsave.cpp
-@@ -19,6 +19,7 @@
- #include "joyapi.h"
- #include "input.h"
- #include "fileids.h"
-+#include "rap.h"
- 
- #ifdef _WIN32
- #include <io.h>
-@@ -45,8 +46,8 @@ int filepos = -1;
+@@ -46,8 +46,8 @@ int filepos = -1;
  int map_item = -1;
  int curplr_diff = 2;
  
@@ -52,7 +44,7 @@ index 52d6e47..810257c 100644
  
  map_t *mapmem;
  csprite_t *csprite;
-@@ -140,7 +141,7 @@ RAP_AreSavedFiles(
+@@ -141,7 +141,7 @@ RAP_AreSavedFiles(
          else
              sprintf(temp, fmt, loop);
          
@@ -61,7 +53,7 @@ index 52d6e47..810257c 100644
              return 1;
      }
      
-@@ -196,7 +197,7 @@ RAP_FFSaveFile(
+@@ -197,7 +197,7 @@ RAP_FFSaveFile(
          else
              sprintf(temp, fmt, loop);
          
@@ -70,7 +62,7 @@ index 52d6e47..810257c 100644
          {
              RAP_ClearPlayer();
              filepos = loop;
-@@ -470,7 +471,7 @@ RAP_LoadWin(
+@@ -471,7 +471,7 @@ RAP_LoadWin(
          else
              sprintf(temp, fmt, loop);
          
@@ -79,7 +71,7 @@ index 52d6e47..810257c 100644
          {
              if (pos == -1)
                  pos = loop;
-@@ -656,7 +657,7 @@ RAP_InitLoadSave(
+@@ -657,7 +657,7 @@ RAP_InitLoadSave(
      
      cdflag = 0;
      
@@ -200,7 +192,7 @@ index ebfec03..a9e43a7 100644
      fflush(stdout);
  
 diff --git a/src/rap.h b/src/rap.h
-index b251e67..6dc4c70 100644
+index bbe4794..48d98a0 100644
 --- a/src/rap.h
 +++ b/src/rap.h
 @@ -168,3 +168,4 @@ void RAP_LoadMap(void);
