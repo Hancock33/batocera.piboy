@@ -4,7 +4,8 @@ default:
     retroarch.menu_driver: rgui
     retroarch.vrr_runloop_enable: "true"
     retroarch.menu_widget_scale_auto: "true"
-    hud_support: false
+    hud_support:  true
+    bezel:        none
     gfxbackend: vulkan
     audio_driver: tinyalsa
 
