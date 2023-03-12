@@ -22,11 +22,11 @@ ifeq ($(BR2_PACKAGE_VULKAN_HEADERS),y)
 endif
 
 MANGOHUD_CONF_OPTS = -Dwith_xnvctrl=disabled
-#ifeq ($(BR2_PACKAGE_VULKAN_HEADERS),y)
-#	MANGOHUD_CONF_OPTS += -Duse_vulkan=true -Duse_system_vulkan=enabled -Dvulkan_datadir=$(STAGING_DIR)/usr/share
-#else
+ifeq ($(BR2_PACKAGE_VULKAN_HEADERS),y)
+	MANGOHUD_CONF_OPTS += -Duse_vulkan=true -Duse_system_vulkan=disabled
+else
 	MANGOHUD_CONF_OPTS += -Duse_vulkan=false -Duse_system_vulkan=disabled
-#endif
+endif
 
 ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
 	MANGOHUD_CONF_OPTS += -Dwith_x11=enabled
@@ -48,6 +48,8 @@ define MANGOHUD_DWD_DEPENDENCIES
 	curl -L https://wrapdb.mesonbuild.com/v2/imgui_1.81-1/get_patch   -o $(@D)/subprojects/packagecache/imgui-1.81-1-wrap.zip
 	curl -L https://github.com/gabime/spdlog/archive/v1.8.5.tar.gz    -o $(@D)/subprojects/packagecache/v1.8.5.tar.gz
 	curl -L https://wrapdb.mesonbuild.com/v2/spdlog_1.8.5-1/get_patch -o $(@D)/subprojects/packagecache/spdlog-1.8.5-1-wrap.zip
+	curl -L https://github.com/KhronosGroup/Vulkan-Headers/archive/v1.2.158.tar.gz -o $(@D)/subprojects/packagecache/vulkan-headers-1.2.158.tar.gz
+	curl -L https://wrapdb.mesonbuild.com/v2/vulkan-headers_1.2.158-2/get_patch    -o $(@D)/subprojects/packagecache/vulkan-headers-1.2.158-2-wrap.zip
 endef
 MANGOHUD_PRE_CONFIGURE_HOOKS += MANGOHUD_DWD_DEPENDENCIES
 
