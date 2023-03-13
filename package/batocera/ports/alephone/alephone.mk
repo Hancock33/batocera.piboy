@@ -3,8 +3,8 @@
 # alephone
 #
 ################################################################################
-# Version: Commits on Mar 12, 2023
-ALEPHONE_VERSION = 0009c18b0c3baa3cd259411f2ae0831dd2c749b3
+# Version: Commits on Mar 13, 2023
+ALEPHONE_VERSION = 21e49ec62ad029be0406a1ec7cc94ad3cd27e0b9
 ALEPHONE_SITE = $(call github,Aleph-One-Marathon,alephone,$(ALEPHONE_VERSION))
 
 ALEPHONE_DEPENDENCIES = boost sdl2 sdl2_image sdl2_ttf sdl2_net
