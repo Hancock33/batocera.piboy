@@ -1,8 +1,8 @@
 diff --git a/Src/OSD/Unix/FileSystemPath.cpp b/Src/OSD/Unix/FileSystemPath.cpp
-index 4ab5916..73649cf 100644
+index f30bb04..2d14742 100644
 --- a/Src/OSD/Unix/FileSystemPath.cpp
 +++ b/Src/OSD/Unix/FileSystemPath.cpp
-@@ -56,27 +56,27 @@ namespace FileSystemPath
+@@ -56,30 +56,30 @@ namespace FileSystemPath
          switch (pathType)
          {
          case Analysis:
@@ -29,6 +29,10 @@ index 4ab5916..73649cf 100644
 -            strPathType = "Screenshots";
 +            strPathType = "/userdata/screenshots/supermodel";
              break;
+         case Assets:
+-            strPathType = "Assets/";
++            strPathType = "/userdata/system/configs/supermodel/assets";
+             break;
          }
  
          // Get user's HOME directory
@@ -37,7 +41,7 @@ index 4ab5916..73649cf 100644
          {
              homePath = pwd->pw_dir;
          }
-@@ -95,13 +95,13 @@ namespace FileSystemPath
+@@ -98,13 +98,13 @@ namespace FileSystemPath
              }
              else
              {
@@ -53,7 +57,7 @@ index 4ab5916..73649cf 100644
          }
          // Check if $HOME/.supermodel exists
          else if (FileSystemPath::PathExists(Util::Format() << homePath << "/.supermodel"))
-@@ -149,7 +149,7 @@ namespace FileSystemPath
+@@ -152,7 +152,7 @@ namespace FileSystemPath
                  }
              }
              
