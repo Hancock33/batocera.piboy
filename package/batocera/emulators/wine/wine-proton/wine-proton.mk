@@ -3,8 +3,8 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Feb 27, 2023 (branch@experimental_7.0)
-WINE_PROTON_VERSION = experimental-wine-bleeding-edge-7.0-37361-20230310-pffd4f0-w0ad5e2-dd14dcf-vc4656d
+# Version: Commits on Mar 14, 2023 (branch@experimental_7.0)
+WINE_PROTON_VERSION = df30c7ca39c3609b6f41584ba330cb42eaed1f54
 WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
 WINE_PROTON_DEPENDENCIES = host-bison host-flex host-wine-proton

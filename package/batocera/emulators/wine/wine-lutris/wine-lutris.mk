@@ -3,8 +3,8 @@
 # wine-lutris
 #
 ################################################################################
-# Version: Commits on Mar 10, 2023
-WINE_LUTRIS_VERSION = fbfa4a3aed432257931efb436b53fb891afc5fb5
+# Version: Commits on Mar 13, 2023
+WINE_LUTRIS_VERSION = 67c67703311f75540896f29ec576fb8fac427121
 WINE_LUTRIS_SITE = $(call github,wine-mirror,wine,$(WINE_LUTRIS_VERSION))
 WINE_LUTRIS_LICENSE = LGPL-2.1+
 WINE_LUTRIS_DEPENDENCIES = host-bison host-flex host-wine-lutris
