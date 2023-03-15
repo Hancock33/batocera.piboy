@@ -1,0 +1,12 @@
+diff --git a/core/deps/libelf/CMakeLists.txt b/core/deps/libelf/CMakeLists.txt
+index 255a2ea05..c85573320 100644
+--- a/core/deps/libelf/CMakeLists.txt
++++ b/core/deps/libelf/CMakeLists.txt
+@@ -8,6 +8,6 @@ cmake_minimum_required(VERSION 3.7.2)
+ 
+ project(libelf C)
+ 
+-add_library(elf EXCLUDE_FROM_ALL src/elf.c src/elf32.c src/elf64.c)
++add_library(elf STATIC src/elf.c src/elf32.c src/elf64.c)
+ target_include_directories(elf PUBLIC include)
+ target_link_libraries(elf)
