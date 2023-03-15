@@ -11,6 +11,8 @@ SUPERMODEL_LICENSE = GPLv3
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 	SUPERMODEL_VERSION = 4c727abdc84e5c9eb56b3a178c2dd473d7581725
+else
+	X86_INSTALL=y
 endif
 
 ifeq ($(BR2_PACKAGE_LIBGLEW),y)
@@ -30,6 +32,7 @@ define SUPERMODEL_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/supermodel
 	$(INSTALL) -D -m 0755 $(@D)/bin/supermodel $(TARGET_DIR)/usr/bin/supermodel
 	$(INSTALL) -D -m 0644 $(@D)/Config/Games.xml $(TARGET_DIR)/usr/share/supermodel/Games.xml
+	@if [ "$(X86_INSTALL)" = "y" ]; then cp -av $(@D)/Assets $(TARGET_DIR)/usr/share/supermodel ; fi
 	$(INSTALL) -D -m 0644 $(@D)/Config/Supermodel.ini $(TARGET_DIR)/usr/share/supermodel/Supermodel.ini.template
 	$(INSTALL) -D -m 0644 $(@D)/Config/Supermodel.ini $(TARGET_DIR)/usr/share/supermodel/Supermodel-Driving.ini.template
 	$(SED) 's|InputAccelerator = "KEY_UP,JOY1_UP"|InputAccelerator = "KEY_UP,JOY1_RZAXIS_POS"|g' $(TARGET_DIR)/usr/share/supermodel/Supermodel-Driving.ini.template
