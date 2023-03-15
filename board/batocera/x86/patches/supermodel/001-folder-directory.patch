@@ -31,7 +31,7 @@ index f30bb04..2d14742 100644
              break;
          case Assets:
 -            strPathType = "Assets/";
-+            strPathType = "/userdata/system/configs/supermodel/assets";
++            strPathType = "/usr/share/supermodel/Assets";
              break;
          }
  
