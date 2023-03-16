@@ -36,7 +36,7 @@ autoresize=true
 ## See https://wiki.batocera.org/display_issues#force_any_specific_supported_resolution_in_es_instead_of_the_default_maximum_one
 #es.resolution=max-1920x1080
 
-# Enable Experimental Pi DMG case. Please note only on can be enabled at any time.
+# Enable Experimental Pi DMG case. Please note only one can be enabled at any time.
 piboy.enabled=1
 piboyxrs.enabled=0
 
