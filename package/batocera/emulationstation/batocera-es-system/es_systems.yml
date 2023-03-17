@@ -1528,6 +1528,7 @@ c64:
     libretro:
       vice_x64:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VICE] }
       vice_x64sc:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VICE] }
+      vice_xscpu64:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VICE] }
 
 cplus4:
   name:                 Commodore Plus4
@@ -3057,7 +3058,7 @@ wiiu:
   manufacturer:         Nintendo
   release:              2012
   hardware:             console
-  extensions:           [wua, wup, wud, rpx, squashfs]
+  extensions:           [wua, wup, wud, wux, rpx, squashfs]
   platform:             wiiu
   theme:                wiiu
   emulators:
