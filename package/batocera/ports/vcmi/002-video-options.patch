@@ -1,8 +1,8 @@
 diff --git a/client/CMT.cpp b/client/CMT.cpp
-index f18d522d7..431924b70 100644
+index 13b31c89f..e640bb4cd 100644
 --- a/client/CMT.cpp
 +++ b/client/CMT.cpp
-@@ -202,6 +202,10 @@ int main(int argc, char * argv[])
+@@ -191,6 +191,10 @@ int main(int argc, char * argv[])
  		("serverport", po::value<si64>(), "override port specified in config file")
  		("saveprefix", po::value<std::string>(), "prefix for auto save files")
  		("savefrequency", po::value<si64>(), "limit auto save creation to each N days")
@@ -13,7 +13,7 @@ index f18d522d7..431924b70 100644
  		("lobby", "parameters address, port, uuid to connect ro remote lobby session")
  		("lobby-address", po::value<std::string>(), "address to remote lobby")
  		("lobby-port", po::value<ui16>(), "port to remote lobby")
-@@ -1090,7 +1094,7 @@ static bool recreateWindow(int w, int h, int bpp, bool fullscreen, int displayIn
+@@ -650,7 +654,7 @@ static bool recreateWindow(int w, int h, int bpp, bool fullscreen, int displayIn
  #endif
  
  	bool bufOnScreen = (screenBuf == screen);
@@ -22,7 +22,7 @@ index f18d522d7..431924b70 100644
  
  	/* match best rendering resolution */
  	int renderWidth = 0, renderHeight = 0;
-@@ -1334,6 +1338,13 @@ static bool recreateWindow(int w, int h, int bpp, bool fullscreen, int displayIn
+@@ -894,6 +898,13 @@ static bool recreateWindow(int w, int h, int bpp, bool fullscreen, int displayIn
  //used only once during initialization
  static void setScreenRes(int w, int h, int bpp, bool fullscreen, int displayIndex, bool resetVideo)
  {

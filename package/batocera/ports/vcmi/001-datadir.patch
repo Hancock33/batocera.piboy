@@ -1,8 +1,8 @@
 diff --git a/lib/VCMIDirs.cpp b/lib/VCMIDirs.cpp
-index f56a6549b..a01d5a245 100644
+index 1e8dc49ac..86f218412 100644
 --- a/lib/VCMIDirs.cpp
 +++ b/lib/VCMIDirs.cpp
-@@ -548,7 +548,7 @@ bfs::path VCMIDirsXDG::userDataPath() const
+@@ -600,7 +600,7 @@ bfs::path VCMIDirsXDG::userDataPath() const
  	if((homeDir = getenv("XDG_DATA_HOME")))
  		return bfs::path(homeDir) / "vcmi";
  	else if((homeDir = getenv("HOME")))
@@ -11,12 +11,12 @@ index f56a6549b..a01d5a245 100644
  	else
  		return ".";
  }
-@@ -570,7 +570,7 @@ bfs::path VCMIDirsXDG::userConfigPath() const
- 	if ((tempResult = getenv("XDG_CONFIG_HOME")))
- 		return bfs::path(tempResult) / "vcmi";
- 	else if ((tempResult = getenv("HOME")))
+@@ -624,7 +624,7 @@ bfs::path VCMIDirsXDG::userConfigPath() const
+ 	
+ 	tempResult = getenv("HOME");
+ 	if (tempResult)
 -		return bfs::path(tempResult) / ".config" / "vcmi";
 +		return "/userdata/roms/ports/vcmi";
- 	else
- 		return ".";
+ 
+ 	return ".";
  }
