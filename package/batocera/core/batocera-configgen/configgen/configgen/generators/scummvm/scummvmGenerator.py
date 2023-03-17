@@ -8,10 +8,6 @@ import glob
 import utils.videoMode as videoMode
 
 class ScummVMGenerator(Generator):
-
-    def getResolutionMode(self, config):
-        return 'default'
-
     # Main entry of the module
     # Configure mupen and return a command
     def generate(self, system, rom, playersControllers, guns, gameResolution):
