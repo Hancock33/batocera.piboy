@@ -92,8 +92,15 @@ class XeniaGenerator(Generator):
         # add node Display
         if 'Display' not in config:
             config['Display'] = {}
-        # always run fullscreen
-        config['Display'] = {'fullscreen': True}
+        # internal resolution - default 1280x720
+        if system.isOptSet('xeniaResolution'):
+            config['Display'] = {
+            'internal_display_resolution': int(system.config['xeniaResolution']),
+            'fullscreen': True}
+        else:
+            config['Display'] = {
+            'internal_display_resolution': 8,
+            'fullscreen': True}
         # add node GPU
         if 'GPU' not in config:
             config['GPU'] = {}
@@ -128,6 +135,14 @@ class XeniaGenerator(Generator):
         if 'Vulkan' not in config:
             config['Vulkan'] = {}
         config['Vulkan'] = {'vulkan_sparse_shared_memory': False}
+        # add node XConfig
+        if 'XConfig' not in config:
+            config['XConfig'] = {}
+        # language
+        if system.isOptSet('xeniaLanguage'):
+            config['XConfig'] = {'user_language': int(system.config['xeniaLanguage'])}
+        else:
+            config['XConfig'] = {'user_language': 1}
         
         # now write the updated toml
         with open(toml_file, 'w') as f:
