@@ -739,7 +739,7 @@ msgctxt "game_options"
 msgid "24 bit (Default)"
 msgstr "24비트(기본값)"
 
-#. TRANSLATION: libretro/cap32, sonic2013, soniccd, yuzu, ryujinx
+#. TRANSLATION: libretro/cap32, sonic2013, soniccd, yuzu, ryujinx, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Change the game's language."
@@ -751,7 +751,7 @@ msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "언어"
 
-#. TRANSLATION: libretro/cap32, redream
+#. TRANSLATION: libretro/cap32, redream, xenia, xenia-canary
 #, fuzzy
 msgctxt "game_options"
 msgid "English (Default)"
@@ -1374,7 +1374,7 @@ msgctxt "game_options"
 msgid "Italian"
 msgstr "이탈리아어"
 
-#. TRANSLATION: libretro/dolphin, cemu, yuzu, ryujinx
+#. TRANSLATION: libretro/dolphin, cemu, yuzu, ryujinx, xenia, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Dutch"
@@ -8165,19 +8165,19 @@ msgctxt "game_options"
 msgid "Current language"
 msgstr "현재 언어"
 
-#. TRANSLATION: cemu, sonic2013, yuzu, ryujinx
+#. TRANSLATION: cemu, sonic2013, yuzu, ryujinx, xenia, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Chinese"
 msgstr "중국어"
 
-#. TRANSLATION: cemu, yuzu, ryujinx
+#. TRANSLATION: cemu, yuzu, ryujinx, xenia, xenia-canary
 #, fuzzy
 msgctxt "game_options"
 msgid "Portuguese"
 msgstr "포르투갈어"
 
-#. TRANSLATION: cemu, sonic2013, yuzu, ryujinx
+#. TRANSLATION: cemu, sonic2013, yuzu, ryujinx, xenia, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Russian"
@@ -10867,7 +10867,7 @@ msgctxt "game_options"
 msgid "Greek"
 msgstr "그리스어"
 
-#. TRANSLATION: easyrpg
+#. TRANSLATION: easyrpg, xenia, xenia-canary
 #, fuzzy
 msgctxt "game_options"
 msgid "Turkish"
@@ -12906,6 +12906,38 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
+msgid "Polish"
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
+msgid "Swedish"
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
+msgid "Norwegian"
+msgstr ""
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid ""
+"Allow game that support different resolutions to be rendered in specific "
+"resolution."
+msgstr ""
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "INTERNAL DISPLAY RESOLUTION"
+msgstr ""
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "1280x720 (Default)"
 msgstr ""
 
 #. TRANSLATION: yabausesa
