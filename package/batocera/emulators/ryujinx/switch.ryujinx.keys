@@ -2,119 +2,141 @@
     "actions_player1": [
         {
             "trigger": ["hotkey", "start"],
-            "type": "key",
-            "target": [ "KEY_LEFTALT", "KEY_F4" ],
+            "type": "exec",
+            "target": "killall -9 ryujinx && reset",
             "description": "Exit the emulator"
         },
         {
             "trigger": "joystick1up",
             "type": "key",
-            "target": "KEY_W"
+            "target": "KEY_W",
+            "description": "Left Stick Up"
         },
         {
             "trigger": "joystick1down",
             "type": "key",
-            "target": "KEY_S"
+            "target": "KEY_S",
+            "description": "Left Stick Down"
         },
         {
             "trigger": "joystick1left",
             "type": "key",
-            "target": "KEY_A"
+            "target": "KEY_A",
+            "description": "Left Stick Left"
         },
         {
             "trigger": "joystick1right",
             "type": "key",
-            "target": "KEY_D"
+            "target": "KEY_D",
+            "description": "Left Stick Right"
         },
         {
             "trigger": "joystick2up",
             "type": "key",
-            "target": "KEY_I"
+            "target": "KEY_I",
+            "description": "Right Stick Up"
         },
         {
             "trigger": "joystick2down",
             "type": "key",
-            "target": "KEY_J"
+            "target": "KEY_J",
+            "description": "Right Stick Down"
         },
         {
             "trigger": "joystick2left",
             "type": "key",
-            "target": "KEY_H"
+            "target": "KEY_H",
+            "description": "Right Stick Left"
         },
         {
             "trigger": "joystick2right",
             "type": "key",
-            "target": "KEY_K"
+            "target": "KEY_K",
+            "description": "Right Stick right"
         },
         {
             "trigger": "up",
             "type": "key",
-            "target": "KEY_UP"
+            "target": "KEY_UP",
+            "description": "Direction Pad Stick Up"
         },
         {
             "trigger": "down",
             "type": "key",
-            "target": "KEY_DOWN"
+            "target": "KEY_DOWN",
+            "description": "Direction Pad Stick Down"
         },
         {
             "trigger": "left",
             "type": "key",
-            "target": "KEY_LEFT"
+            "target": "KEY_LEFT",
+            "description": "Direction Pad Stick Left"
         },
         {
             "trigger": "right",
             "type": "key",
-            "target": "KEY_RIGHT"
+            "target": "KEY_RIGHT",
+            "description": "Direction Pad Stick Right"
         },
         {
             "trigger": "start",
             "type": "key",
-            "target": "KEY_EQUAL"
+            "target": "KEY_EQUAL",
+            "description": "Plus"
         },
         {
             "trigger": "select",
             "type": "key",
-            "target": "KEY_MINUS"
+            "target": "KEY_MINUS",
+            "description": "Minus"
         },
         {
             "trigger": "a",
             "type": "key",
-            "target": "KEY_Z"
+            "target": "KEY_X",
+            "description": "Button B"
         },
         {
             "trigger": "b",
             "type": "key",
-            "target": "KEY_X"
+            "target": "KEY_Z",
+            "description": "Button A"
         },
         {
             "trigger": "x",
             "type": "key",
-            "target": "KEY_C"
+            "target": "KEY_V",
+            "description": "Button Y"
         },
         {
             "trigger": "y",
             "type": "key",
-            "target": "KEY_V"
+            "target": "KEY_C",
+            "description": "Button X"
         },
         {
             "trigger": "pageup",
             "type": "key",
-            "target": "KEY_E"
+            "target": "KEY_E",
+            "description": "Left Bumper"
         },
         {
             "trigger": "pagedown",
             "type": "key",
-            "target": "KEY_U"
+            "target": "KEY_U",
+            "description": "Right Bumper"
         },
         {
             "trigger": "l2",
             "type": "key",
-            "target": "KEY_Q"
+            "target": "KEY_Q",
+            "description": "Left Trigger"
         },
         {
             "trigger": "r2",
             "type": "key",
-            "target": "KEY_O"
+            "target": "KEY_O",
+            "description": "Right Trigger"
         }
     ]
 }
