@@ -3,8 +3,8 @@
 # libretro-scummvm
 #
 ################################################################################
-# Version: Commits on Mar 17, 2023
-LIBRETRO_SCUMMVM_VERSION = 292ae3da2f515ae40acbeef89e4584d287c7e634
+# Version: Commits on Mar 18, 2023
+LIBRETRO_SCUMMVM_VERSION = c48a85d97c891fb5292ca12064418fd7a2e2d424
 LIBRETRO_SCUMMVM_SOURCE = scummvm-$(LIBRETRO_SCUMMVM_VERSION).tar.gz
 LIBRETRO_SCUMMVM_SITE = $(call github,scummvm,scummvm,$(LIBRETRO_SCUMMVM_VERSION))
 LIBRETRO_SCUMMVM_LICENSE = GPLv2
