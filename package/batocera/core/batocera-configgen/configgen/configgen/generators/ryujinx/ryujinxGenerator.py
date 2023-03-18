@@ -18,60 +18,47 @@ ryujinxKeys = batoceraFiles.BIOS + "/switch/prod.keys"
 ryujinxExec = ryujinxConf + "/ryujinx"
 
 ryujinxCtrl = {
-        "left_joycon_stick": {
-        "joystick": "Left",
-        "invert_stick_x": False,
-        "invert_stick_y": False,
-        "rotate90_cw": False,
-        "stick_button": "LeftStick"
+      "left_joycon_stick": {
+        "stick_up": "W",
+        "stick_down": "S",
+        "stick_left": "A",
+        "stick_right": "D",
+        "stick_button": "F"
       },
       "right_joycon_stick": {
-        "joystick": "Right",
-        "invert_stick_x": False,
-        "invert_stick_y": False,
-        "rotate90_cw": False,
-        "stick_button": "RightStick"
-      },
-      "deadzone_left": 0,
-      "deadzone_right": 0,
-      "range_left": 1,
-      "range_right": 1,
-      "trigger_threshold": 0,
-      "motion": {
-        "motion_backend": "GamepadDriver",
-        "sensitivity": 100,
-        "gyro_deadzone": 1,
-        "enable_motion": True
-      },
-      "rumble": {
-        "strong_rumble": 8,
-        "weak_rumble": 2,
-        "enable_rumble": True
+        "stick_up": "I",
+        "stick_down": "K",
+        "stick_left": "J",
+        "stick_right": "L",
+        "stick_button": "H"
       },
       "left_joycon": {
         "button_minus": "Minus",
-        "button_l": "LeftShoulder",
-        "button_zl": "LeftTrigger",
+        "button_l": "E",
+        "button_zl": "Q",
         "button_sl": "Unbound",
         "button_sr": "Unbound",
-        "dpad_up": "DpadUp",
-        "dpad_down": "DpadDown",
-        "dpad_left": "DpadLeft",
-        "dpad_right": "DpadRight"
+        "dpad_up": "Up",
+        "dpad_down": "Down",
+        "dpad_left": "Left",
+        "dpad_right": "Right"
       },
       "right_joycon": {
         "button_plus": "Plus",
-        "button_r": "RightShoulder",
-        "button_zr": "RightTrigger",
+        "button_r": "U",
+        "button_zr": "O",
         "button_sl": "Unbound",
         "button_sr": "Unbound",
-        "button_x": "Y",
-        "button_b": "A",
-        "button_y": "X",
-        "button_a": "B"
-    },
-    "version": 1,
-    "backend": "GamepadSDL2",
+        "button_x": "C",
+        "button_b": "X",
+        "button_y": "V",
+        "button_a": "Z"
+      },
+      "version": 1,
+      "backend": "WindowKeyboard",
+      "id": "0",
+      "controller_type": "JoyconPair",
+      "player_index": "Player1"
 }
 
 class RyujinxGenerator(Generator):
@@ -156,41 +143,7 @@ class RyujinxGenerator(Generator):
             jout.write(js_out)
         
         # Now add Controllers
-        nplayer = 1
-        for controller, pad in sorted(playersControllers.items()):
-            if nplayer <= 8:
-                ctrlConf = ryujinxCtrl
-                # we need to get the uuid for ryujinx controllers
-                # example xbox 360 - "id": "0-00000003-045e-0000-8e02-000014010000"
-                devices = [InputDevice(fn) for fn in evdev.list_devices()]
-                for dev in devices:
-                    if dev.path == pad.dev:
-                        bustype = "%x" % dev.info.bustype
-                        bustype = bustype.zfill(8)
-                        vendor = "%x" % dev.info.vendor
-                        vendor = vendor.zfill(4)
-                        product = "%x" % dev.info.product
-                        product = product.zfill(4)
-                        # reverse the poduct id, so 028e becomes 8e02
-                        product1 = (product)[-2::]
-                        product2 = (product)[:-2]
-                        product = product1 + product2
-                        # reverse the version id also
-                        version = "%x" % dev.info.version
-                        version = version.zfill(4)
-                        version1 = (version)[-2::]
-                        version2 = (version)[:-2]
-                        version = version1 + version2
-                        ctrlUUID = (f"{pad.index}-{bustype}-{vendor}-0000-{product}-0000{version}0000")
-                        ctrlConf["id"] = ctrlUUID
-                        # always configure a pro controller for now
-                        ctrlConf["controller_type"] = "ProController"
-                        playerNum = (f"Player{nplayer}")
-                        ctrlConf["player_index"] = playerNum
-                        # write the controller to the file
-                        writeControllerIntoJson(ctrlConf)
-                        break
-            nplayer += 1
+        writeControllerIntoJson(ryujinxCtrl)
 
         if rom == "config":
             commandArray = [ryujinxExec]
