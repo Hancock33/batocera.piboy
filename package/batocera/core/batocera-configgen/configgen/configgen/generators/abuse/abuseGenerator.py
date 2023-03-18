@@ -10,7 +10,7 @@ class AbuseGenerator(Generator):
         os.system('piboy_keys abuse.keys')
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ["abuse", "-datadir", "/usr/share/abuse"]
+        commandArray = ["abuse", "-datadir", "/userdata/roms/abuse/abuse_data"]
 
         return Command.Command(
             array=commandArray,
