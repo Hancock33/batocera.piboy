@@ -582,6 +582,9 @@ odcommander:
 o2em:
   emulator: libretro
   core:     o2em
+odyssey2:
+  emulator: libretro
+  core:     o2em
 omf2097:
   emulator: omf2097
   core:     omf2097
