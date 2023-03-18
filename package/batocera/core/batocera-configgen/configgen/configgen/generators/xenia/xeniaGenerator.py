@@ -92,13 +92,15 @@ class XeniaGenerator(Generator):
         # add node Display
         if 'Display' not in config:
             config['Display'] = {}
-        # always run fullscreen
-        config['Display'] = {'fullscreen': True}
         # internal resolution - default 1280x720
         if system.isOptSet('xeniaResolution'):
-            config['Display'] = {'internal_display_resolution': int(system.config['xeniaResolution'])}
+            config['Display'] = {
+            'internal_display_resolution': int(system.config['xeniaResolution']),
+            'fullscreen': True}
         else:
-            config['Display'] = {'internal_display_resolution': 8}
+            config['Display'] = {
+            'internal_display_resolution': 8,
+            'fullscreen': True}
         # add node GPU
         if 'GPU' not in config:
             config['GPU'] = {}
