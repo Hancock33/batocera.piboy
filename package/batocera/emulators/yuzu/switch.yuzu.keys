@@ -1,12 +1,142 @@
 {
     "actions_player1": [
         {
-            "trigger": [
-                "hotkey",
-                "start"
-            ],
+            "trigger": ["hotkey", "start"],
             "type": "exec",
-            "target": "killall -9 yuzu && reset"
+            "target": "killall -9 yuzu && reset",
+            "description": "Exit the emulator"
+        },
+        {
+            "trigger": "joystick1up",
+            "type": "key",
+            "target": "KEY_W",
+            "description": "Left Stick Up"
+        },
+        {
+            "trigger": "joystick1down",
+            "type": "key",
+            "target": "KEY_S",
+            "description": "Left Stick Down"
+        },
+        {
+            "trigger": "joystick1left",
+            "type": "key",
+            "target": "KEY_A",
+            "description": "Left Stick Left"
+        },
+        {
+            "trigger": "joystick1right",
+            "type": "key",
+            "target": "KEY_D",
+            "description": "Left Stick Right"
+        },
+        {
+            "trigger": "joystick2up",
+            "type": "key",
+            "target": "KEY_I",
+            "description": "Right Stick Up"
+        },
+        {
+            "trigger": "joystick2down",
+            "type": "key",
+            "target": "KEY_K",
+            "description": "Right Stick Down"
+        },
+        {
+            "trigger": "joystick2left",
+            "type": "key",
+            "target": "KEY_J",
+            "description": "Right Stick Left"
+        },
+        {
+            "trigger": "joystick2right",
+            "type": "key",
+            "target": "KEY_L",
+            "description": "Right Stick right"
+        },
+        {
+            "trigger": "up",
+            "type": "key",
+            "target": "KEY_UP",
+            "description": "Direction Pad Stick Up"
+        },
+        {
+            "trigger": "down",
+            "type": "key",
+            "target": "KEY_DOWN",
+            "description": "Direction Pad Stick Down"
+        },
+        {
+            "trigger": "left",
+            "type": "key",
+            "target": "KEY_LEFT",
+            "description": "Direction Pad Stick Left"
+        },
+        {
+            "trigger": "right",
+            "type": "key",
+            "target": "KEY_RIGHT",
+            "description": "Direction Pad Stick Right"
+        },
+        {
+            "trigger": "start",
+            "type": "key",
+            "target": "KEY_M",
+            "description": "Plus"
+        },
+        {
+            "trigger": "select",
+            "type": "key",
+            "target": "KEY_N",
+            "description": "Minus"
+        },
+        {
+            "trigger": "a",
+            "type": "key",
+            "target": "KEY_C",
+            "description": "Button B"
+        },
+        {
+            "trigger": "b",
+            "type": "key",
+            "target": "KEY_X",
+            "description": "Button A"
+        },
+        {
+            "trigger": "x",
+            "type": "key",
+            "target": "KEY_V",
+            "description": "Button Y"
+        },
+        {
+            "trigger": "y",
+            "type": "key",
+            "target": "KEY_V",
+            "description": "Button Z"
+        },
+        {
+            "trigger": "pageup",
+            "type": "key",
+            "target": "KEY_Q",
+            "description": "Left Bumper"
+        },
+        {
+            "trigger": "pagedown",
+            "type": "key",
+            "target": "KEY_E",
+            "description": "Right Bumper"
+        },
+        {
+            "trigger": "l2",
+            "type": "key",
+            "target": "KEY_R",
+            "description": "Left Trigger"
+        },
+        {
+            "trigger": "r2",
+            "type": "key",
+            "target": "KEY_T",
+            "description": "Right Trigger"
         }
     ]
 }
