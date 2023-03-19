@@ -5,7 +5,7 @@
 ################################################################################
 LIB32BIT_VERSION = 20230318
 LIB32BIT_SOURCE = batocera-rpi4-32bit-libs-$(LIB32BIT_VERSION).tar.xz
-LIB32BIT_SITE = https://github.com/Hancock33/batocera-rp4-32bit-libs/releases/download/$(LIB32BIT_VERSION)
+LIB32BIT_SITE = https://github.com/Hancock33/batocera-32bit-libs/releases/download/$(LIB32BIT_VERSION)
 
 define LIB32BIT_EXTRACT_CMDS
 	tar xf $(DL_DIR)/$(LIB32BIT_DL_SUBDIR)/$(LIB32BIT_SOURCE) -C $(TARGET_DIR)/usr
