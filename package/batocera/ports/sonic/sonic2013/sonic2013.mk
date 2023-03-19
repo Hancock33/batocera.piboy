@@ -3,8 +3,8 @@
 # sonic2013
 #
 ################################################################################
-# Version: Commits on Mar 18, 2023
-SONIC2013_VERSION = c08a97e3f56d72407158e5830c89778280f27a35
+# Version: Commits on Mar 19, 2023
+SONIC2013_VERSION = 7f21d9dac38aed84e8c3398495ae7d591e01dda6
 SONIC2013_SITE = https://github.com/Rubberduckycooly/Sonic-1-2-2013-Decompilation.git
 SONIC2013_SITE_METHOD = git
 SONIC2013_GIT_SUBMODULES = YES
