@@ -10386,18 +10386,6 @@ msgstr "Skryť EmulationStation pri behu hry"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
-"Disabling this may help compatibility with certain controllers and games."
-msgstr ""
-
-#. TRANSLATION: wine
-#, fuzzy
-msgctxt "game_options"
-msgid "RAW CONTROLLER INPUT"
-msgstr "Vstup"
-
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid ""
 "Reset the cache can fix some crashes if your game was running under Batocera "
 "29."
 msgstr ""
@@ -11737,6 +11725,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "USE COMPUTE SHADER"
 msgstr ""
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "RAW CONTROLLER INPUT"
+#~ msgstr "Vstup"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
