@@ -3,8 +3,8 @@
 # doomretro
 #
 ################################################################################
-# Version: Commits on Mar 18, 2023
-DOOMRETRO_VERSION = 147633e2e1c2e4cbfe32950f9842c3b8dd2731d5
+# Version: Commits on Mar 19, 2023
+DOOMRETRO_VERSION = d865410c6c70c34e4c9576f7bf0ac7c52cf8014b
 DOOMRETRO_SITE = $(call github,bradharding,doomretro,$(DOOMRETRO_VERSION))
 
 DOOMRETRO_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image
