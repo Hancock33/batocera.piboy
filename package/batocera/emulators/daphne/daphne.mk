@@ -3,8 +3,8 @@
 # hypseus-singe - aka # daphne
 #
 ################################################################################
-# Version: Commits on Mar 12, 2023
-DAPHNE_VERSION = 4dd03c34859e5d11411623d7cbc05988d39853a3
+# Version: Commits on Mar 19, 2023
+DAPHNE_VERSION = 9a6d2a4ebe2c0e5bd994aa84415daaceafa37997
 DAPHNE_SITE = https://github.com/DirtBagXon/hypseus-singe
 DAPHNE_SITE_METHOD=git
 DAPHNE_LICENSE = GPLv3
