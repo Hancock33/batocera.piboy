@@ -81,7 +81,10 @@
         {
             "trigger": "start",
             "type": "key",
-            "target": "KEY_EQUAL",
+            "target": [
+                "KEY_RIGHTSHIFT",
+                "KEY_EQUAL"
+            ],
             "description": "Plus"
         },
         {
