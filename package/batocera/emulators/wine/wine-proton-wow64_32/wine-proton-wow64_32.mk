@@ -3,8 +3,8 @@
 # wine-proton-wow64_32
 #
 ################################################################################
-# Version: Commits on Mar 21, 2023 (branch@experimental_7.0)
-WINE_PROTON_WOW64_32_VERSION = 2a98737c09869470ec28a8217020671b19b93c9f
+# Version: Commits on Mar 22, 2023 (branch@experimental_7.0)
+WINE_PROTON_WOW64_32_VERSION = d8bbd2212fee20e4e41104ac0ba14af2de088204
 WINE_PROTON_WOW64_32_SOURCE = wine-proton-$(WINE_PROTON_WOW64_32_VERSION).tar.gz
 WINE_PROTON_WOW64_32_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_WOW64_32_VERSION))
 WINE_PROTON_WOW64_32_LICENSE = LGPL-2.1+
