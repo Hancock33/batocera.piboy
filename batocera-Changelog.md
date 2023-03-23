@@ -10,6 +10,7 @@
 - Mame additional MacIntosh options
 - Libretro Vice core xscpu64
 - sinden gun border colors modifiable via es menu (white, red, green, blue)
+- sinden gun options to control camera contrast, brightness and exposure
 - virtual devices with options (sinden guns) loading is now delayed once options are available (/userdata available)
 ### Fixed
 - System reverting to 40% volume with Nvidia cards
@@ -27,6 +28,7 @@
 - Removed .wux extension for Cemu
 - Wii balance board controller option for Dolphin now enabled
 - Flatpak emulators can now use a Switch Pro Controller
+- move from busybox linux commands to more standard linux commands
 ### Updated
 - xenia to 1.0.2786
 - xenia canary to 8678bec (Commits on Mar 13, 2023)
