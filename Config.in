@@ -467,6 +467,7 @@ menu "Looks"
 endmenu
 
 menu "Utils"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/alsa-topology-conf/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/alsa-ucm-conf/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/batocera-battery-checker/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/batocera-ethtool/Config.in"
