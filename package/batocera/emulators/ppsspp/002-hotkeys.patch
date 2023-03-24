@@ -79,8 +79,8 @@ index a86a460ac..d3aa38692 100644
 +		break;
 +
 +	case CTRL_START:
-+		System_SendMessage("event", "exitprogram");		
-+		System_SendMessage("finish", "");
++		//System_SendMessage("event", "exitprogram");		
++		//System_SendMessage("finish", "");
  		break;
  
 +	case CTRL_CROSS:

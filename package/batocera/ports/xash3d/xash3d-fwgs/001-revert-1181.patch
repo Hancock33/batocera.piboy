@@ -1,10 +1,10 @@
 diff --git a/wscript b/wscript
-index 4931ad6a..caf8fc84 100644
+index 7eaecbcb..3c7f2d0c 100644
 --- a/wscript
 +++ b/wscript
-@@ -258,6 +258,14 @@ def configure(conf):
- 	conf.env.append_unique('CXXFLAGS', cxxflags)
- 	conf.env.append_unique('LINKFLAGS', linkflags)
+@@ -325,6 +325,14 @@ def configure(conf):
+ 		conf.env.append_unique('CFLAGS', cflags)
+ 		conf.env.append_unique('CXXFLAGS', cxxflags)
  
 +	# check if we can use C99 stdint
 +	if conf.check_cc(header_name='stdint.h', mandatory=False):
@@ -17,7 +17,7 @@ index 4931ad6a..caf8fc84 100644
  	conf.env.ENABLE_UTILS  = conf.options.ENABLE_UTILS
  	conf.env.ENABLE_FUZZER = conf.options.ENABLE_FUZZER
  	conf.env.DEDICATED     = conf.options.DEDICATED
-@@ -272,15 +280,6 @@ def configure(conf):
+@@ -338,15 +346,6 @@ def configure(conf):
  	conf.env.GAMEDIR = conf.options.GAMEDIR
  	conf.define('XASH_GAMEDIR', conf.options.GAMEDIR)
  
@@ -30,10 +30,10 @@ index 4931ad6a..caf8fc84 100644
 -	elif conf.check_cc(header_name='malloc.h', mandatory=False):
 -		conf.define('ALLOCA_H', 'malloc.h')
 -
- 	if conf.env.DEST_OS != 'win32':
- 		conf.check_cc(lib='dl', mandatory=False)
- 
-@@ -294,7 +293,16 @@ def configure(conf):
+ 	if conf.env.DEST_OS == 'nswitch':
+ 		conf.check_cfg(package='solder', args='--cflags --libs', uselib_store='SOLDER')
+ 		if conf.env.HAVE_SOLDER and conf.env.LIB_SOLDER and conf.options.BUILD_TYPE == 'debug':
+@@ -364,7 +363,16 @@ def configure(conf):
  		# Don't check them more than once, to save time
  		# Usually, they are always available
  		# but we need them in uselib
@@ -51,7 +51,7 @@ index 4931ad6a..caf8fc84 100644
  		if conf.env.COMPILER_CC == 'msvc':
  			for i in a:
  				conf.start_msg('Checking for MSVC library')
-@@ -337,17 +345,18 @@ def configure(conf):
+@@ -411,17 +419,18 @@ def configure(conf):
  	if conf.env.DEST_OS != 'win32':
  		strcasestr_frag = '''#include <string.h>
  int main(int argc, char **argv) { strcasestr(argv[1], argv[2]); return 0; }'''
