@@ -3,8 +3,8 @@
 # wine-lutris-wow64_32
 #
 ################################################################################
-# Version: Commits on Mar 20, 2023
-WINE_LUTRIS_WOW64_32_VERSION = fd99bd4e247a879e8cb186212d1dc66268aa0888
+# Version: Commits on Feb 09, 2023
+WINE_LUTRIS_WOW64_32_VERSION = 44e1e9438c867b6adfecaad6e87967f6fe26c7e1
 WINE_LUTRIS_WOW64_32_SOURCE = wine-lutris-$(WINE_LUTRIS_WOW64_32_VERSION).tar.gz
 WINE_LUTRIS_WOW64_32_SITE = $(call github,wine-mirror,wine,$(WINE_LUTRIS_WOW64_32_VERSION))
 WINE_LUTRIS_WOW64_32_LICENSE = LGPL-2.1+
