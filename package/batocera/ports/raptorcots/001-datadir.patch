@@ -1,18 +1,17 @@
 diff --git a/src/glbapi.cpp b/src/glbapi.cpp
-index affcfbc..d5735d3 100644
+index a258df4..fed6136 100644
 --- a/src/glbapi.cpp
 +++ b/src/glbapi.cpp
-@@ -8,6 +8,8 @@
+@@ -8,6 +8,7 @@
  #include "common.h"
  #include "glbapi.h"
  #include "vmemapi.h"
 +#include "rap.h"
-+
+ 
  #ifdef _WIN32
  #include <io.h>
- #endif // _WIN32
-@@ -33,7 +35,7 @@ char* strupr(char* s)
- #endif
+@@ -31,7 +32,7 @@ char* strupr(char* s)
+ #endif // _MSC_VER
  
  char prefix[] = "FILE";
 -char exePath[PATH_MAX];
@@ -20,7 +19,7 @@ index affcfbc..d5735d3 100644
  const char *serial = "32768GLB";
  
  struct fitem_t {
-@@ -480,7 +482,7 @@ int GLB_ReadFile(const char *a1, char *a2)
+@@ -478,7 +479,7 @@ int GLB_ReadFile(const char *a1, char *a2)
      FILE *handle;
      int l;
      char f_a0[PATH_MAX];
@@ -30,10 +29,10 @@ index affcfbc..d5735d3 100644
          strcpy(f_a0, exePath);
          strcat(f_a0, a1);
 diff --git a/src/loadsave.cpp b/src/loadsave.cpp
-index 97af683..af0dc35 100644
+index 7f5cc3c..43769bb 100644
 --- a/src/loadsave.cpp
 +++ b/src/loadsave.cpp
-@@ -46,8 +46,8 @@ int filepos = -1;
+@@ -43,8 +43,8 @@ int filepos = -1;
  int map_item = -1;
  int curplr_diff = 2;
  
@@ -44,7 +43,7 @@ index 97af683..af0dc35 100644
  
  map_t *mapmem;
  csprite_t *csprite;
-@@ -141,7 +141,7 @@ RAP_AreSavedFiles(
+@@ -138,7 +138,7 @@ RAP_AreSavedFiles(
          else
              sprintf(temp, fmt, loop);
          
@@ -53,7 +52,7 @@ index 97af683..af0dc35 100644
              return 1;
      }
      
-@@ -197,7 +197,7 @@ RAP_FFSaveFile(
+@@ -194,7 +194,7 @@ RAP_FFSaveFile(
          else
              sprintf(temp, fmt, loop);
          
@@ -62,7 +61,7 @@ index 97af683..af0dc35 100644
          {
              RAP_ClearPlayer();
              filepos = loop;
-@@ -471,7 +471,7 @@ RAP_LoadWin(
+@@ -468,7 +468,7 @@ RAP_LoadWin(
          else
              sprintf(temp, fmt, loop);
          
@@ -71,7 +70,7 @@ index 97af683..af0dc35 100644
          {
              if (pos == -1)
                  pos = loop;
-@@ -657,7 +657,7 @@ RAP_InitLoadSave(
+@@ -654,7 +654,7 @@ RAP_InitLoadSave(
      
      cdflag = 0;
      
@@ -81,7 +80,7 @@ index 97af683..af0dc35 100644
      return cdpath;
  }
 diff --git a/src/prefapi.cpp b/src/prefapi.cpp
-index f397a37..920c99d 100644
+index b9d583b..c47fb09 100644
 --- a/src/prefapi.cpp
 +++ b/src/prefapi.cpp
 @@ -3,6 +3,7 @@
@@ -89,10 +88,10 @@ index f397a37..920c99d 100644
  #include "common.h"
  #include "prefapi.h"
 +#include "rap.h"
+ 
  #ifdef _WIN32
  #include <io.h>
- #endif // _WIN32
-@@ -269,7 +270,7 @@ int INI_InitPreference(const char *section)
+@@ -267,7 +268,7 @@ int INI_InitPreference(const char *section)
  {
      if (section)
          strcpy(preference, section);
@@ -102,7 +101,7 @@ index f397a37..920c99d 100644
  
  int INI_GetPreferenceLong(const char *section, const char *key, int defValue)
 diff --git a/src/rap.cpp b/src/rap.cpp
-index ebfec03..a9e43a7 100644
+index b60480b..42d927c 100644
 --- a/src/rap.cpp
 +++ b/src/rap.cpp
 @@ -32,6 +32,7 @@
@@ -113,7 +112,7 @@ index ebfec03..a9e43a7 100644
  
  #ifdef _WIN32
  #include <io.h>
-@@ -179,8 +180,8 @@ void InitScreen(void)
+@@ -176,8 +177,8 @@ void InitScreen(void)
  
  void ShutDown(int a1)
  {
@@ -124,7 +123,7 @@ index ebfec03..a9e43a7 100644
  
      //IPT_DeInit();
      //DMX_DeInit();
-@@ -999,6 +1000,18 @@ void RAP_InitMem(void)
+@@ -996,6 +997,18 @@ void RAP_InitMem(void)
      GLB_UseVM();
  }
  
@@ -143,7 +142,7 @@ index ebfec03..a9e43a7 100644
  int main(int argc, char *argv[])
  {
      char *shost, *reg_text, *pal;
-@@ -1047,11 +1060,11 @@ int main(int argc, char *argv[])
+@@ -1044,11 +1057,11 @@ int main(int argc, char *argv[])
          printf("GOD mode enabled\n");
      cur_diff = 0;
  
@@ -158,7 +157,7 @@ index ebfec03..a9e43a7 100644
      {
          gameflag[2] = 1;
          gameflag[3] = 1;
-@@ -1065,14 +1078,14 @@ int main(int argc, char *argv[])
+@@ -1062,14 +1075,14 @@ int main(int argc, char *argv[])
          if (gameflag[i])
              eps++;
  
@@ -178,7 +177,7 @@ index ebfec03..a9e43a7 100644
      EXIT_Install(ShutDown);
      memset(bday, 0, sizeof(bday));
      bday[0].f_0 = 5;
-@@ -1111,10 +1124,10 @@ int main(int argc, char *argv[])
+@@ -1108,10 +1121,10 @@ int main(int argc, char *argv[])
          printf("Birthday() = %s\n", bday[bday_num].f_c);
  
      if (access(RAP_SetupFilename(), 0))
