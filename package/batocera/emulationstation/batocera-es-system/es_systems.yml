@@ -709,7 +709,7 @@ mame:
 
   comment_en:           |
                         The system uses libretro mame2003+ as default core: compatible ROMs must come from set 0.78+
-                        Depending on your hardawre, other mame cores are included :
+                        Depending on your hardware, other mame cores are included:
                         - latest mame core (0.228 currently)
                         - imame4all based on 0.37b5 romset
                         - mame2010 based on 0.139 romset
@@ -731,7 +731,7 @@ mame:
                         Vous pouvez trouver la doc arcade là : https://wiki.batocera.org/arcade
   comment_br:           |
                         O sistema usa o libretro mame2003+ como núcleo padrão: ROMs compatíveis devem vir da versão de romset 0.78+
-                        Dependendo do seu hardawre, outros núcleos mame estão incluídos:
+                        Dependendo do seu hardware, outros núcleos mame estão incluídos:
                         - núcleo mame mais recente (0,228 atualmente)
                         - imame4all baseado no romset 0.37b5
                         - mame2010 baseado em romset 0.139
@@ -1573,7 +1573,7 @@ cavestory:
                         Download the game from the following URL and uncompress it in this folder.
                         http://www.cavestory.org/downloads/cavestoryen.zip
 
-                        It is recommended to use the english version.
+                        It is recommended to use the English version.
                         Other versions may freeze the system.
   comment_fr:           |
                         Télécharger le jeu de l'adresse suivante et décompresser le fichier dans ce dossier.
@@ -1844,7 +1844,7 @@ easyrpg:
     libretro:
       easyrpg:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EASYRPG] }
   comment_en:           |
-                        The EasyRPG engine supports RPG Maker 2000 and 2003 games, you have to put the game's entire folder inside, and add .easyrpg to it's name the game folder is the one containing the RPG_RT.ldb file.
+                        The EasyRPG engine supports RPG Maker 2000 and 2003 games, you have to put the game's entire folder inside, and add .easyrpg to its name. The game folder is the one containing the RPG_RT.ldb file.
   comment_br:           |
                         A engine do EasyRPG suporta jogos RPG Maker 2000 e 2003, você deve colocar a pasta inteira do jogo dentro do diretório, e adicionar .easyrpg ao final do nome da pasta do jogo, aquela que contém o arquivo RPG_RT.ldb.
 
@@ -1921,11 +1921,11 @@ pygame:
     pygame:
       pygame:           { requireAnyOf: [BR2_PACKAGE_BATOCERA_PYGAME] }
   comment_en:           |
-                        Create your game yourself ! Pygame helps you to create games in only some lines. Find a lot of example on internet.
+                        Create your game yourself! Pygame helps you to create games in only some lines. Find a lot of example on internet.
   comment_fr:           |
-                        Créez vos jeux vous-même ! Pygame vous aide à créer vos propres jeux en quelques lignes de code seulement. Vous trouvez sur internet plein d'exemples et de tutoriaux.
+                        Créez vos jeux vous-même! Pygame vous aide à créer vos propres jeux en quelques lignes de code seulement. Vous trouvez sur internet plein d'exemples et de tutoriaux.
   comment_br:           |
-                        Crie seu jogo você mesmo ! Pygame ajuda você a criar jogos com apenas algumas linhas. Encontre um monte de exemplos na internet.
+                        Crie seu jogo você mesmo! Pygame ajuda você a criar jogos com apenas algumas linhas. Encontre um monte de exemplos na internet.
 
 tic80:
   name:                 TIC-80
@@ -2009,7 +2009,7 @@ scummvm:
     libretro:
       scummvm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SCUMMVM] }
   comment_en:           |
-                        Put scummvm games foders in this folder.
+                        Put scummvm games in this folder.
 
                         For each game, you must create a file named from the short name of the game and with the extension ".scummvm"
 
@@ -2082,7 +2082,7 @@ dos:
     libretro:
       dosbox_pure:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DOSBOX_PURE] }
   comment_en:           |
-                        Each game (files) must be placed its own directory having the ".pc .dos" extension.
+                        Each game (files) must be placed in its own directory having the ".pc .dos" extension.
                         In each directory, a dosbox.bat file must contain the command line for launching the game.
 
                         For example:
@@ -2091,7 +2091,7 @@ dos:
                         miniputt.pc/MP.DAT
                         miniputt.pc/MP.EXE
 
-                        WHere dosbox.bat contains: MP.EXE
+                        Where dosbox.bat contains: MP.EXE
 
                         With pure-dosbox you can also use zip files.
 
@@ -2476,7 +2476,7 @@ xbox360:
   comment_en:           |
                         Currently Xenia runs under Wine and therefore is currently restricted to run using Vulkan only.
                         Unfortunately the Vulkan implementation for Xenia is somewhat behind D3D12 in terms on graphics compatibility.
-                        Therefore only a few games will run using Xenia util either Vulkan improves or VKD3D works with Xenia.
+                        Therefore only a few games will run using Xenia until either Vulkan improves or VKD3D works with Xenia.
 
                         You therefore need a GPU that supports Vulkan well.
 
