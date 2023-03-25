@@ -54,10 +54,10 @@ index 7a9ccb042d..537215bdee 100644
     }
  
 diff --git a/configuration.c b/configuration.c
-index ff4829ee4d..341b36cafb 100644
+index 7821dcfe0f..06c5bc4f88 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -1429,6 +1429,7 @@ static struct config_array_setting *populate_settings_array(settings_t *settings
+@@ -1434,6 +1434,7 @@ static struct config_array_setting *populate_settings_array(settings_t *settings
     SETTING_ARRAY("cheevos_custom_host",      settings->arrays.cheevos_custom_host, false, NULL, true);
     SETTING_ARRAY("cheevos_username",         settings->arrays.cheevos_username, false, NULL, true);
     SETTING_ARRAY("cheevos_password",         settings->arrays.cheevos_password, false, NULL, true);
@@ -65,7 +65,7 @@ index ff4829ee4d..341b36cafb 100644
     SETTING_ARRAY("cheevos_token",            settings->arrays.cheevos_token, false, NULL, true);
     SETTING_ARRAY("cheevos_leaderboards_enable", settings->arrays.cheevos_leaderboards_enable, true, "true", true);
  #endif
-@@ -2725,6 +2726,7 @@ void config_set_defaults(void *data)
+@@ -2712,6 +2713,7 @@ void config_set_defaults(void *data)
  #ifdef HAVE_CHEEVOS
     *settings->arrays.cheevos_username                 = '\0';
     *settings->arrays.cheevos_password                 = '\0';
@@ -74,7 +74,7 @@ index ff4829ee4d..341b36cafb 100644
  #endif
  
 diff --git a/configuration.h b/configuration.h
-index 5198374488..5355c707b8 100644
+index 3eb09d9483..7d949443d7 100644
 --- a/configuration.h
 +++ b/configuration.h
 @@ -421,6 +421,7 @@ typedef struct settings
