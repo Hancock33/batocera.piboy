@@ -1,8 +1,8 @@
 diff --git a/gfx/common/wayland_common.c b/gfx/common/wayland_common.c
-index bf02a4b869..0abfefaf2c 100644
+index d47d9fe1fe..7c58e5f5e4 100644
 --- a/gfx/common/wayland_common.c
 +++ b/gfx/common/wayland_common.c
-@@ -683,8 +683,8 @@ bool gfx_ctx_wl_init_common(
+@@ -711,8 +711,8 @@ bool gfx_ctx_wl_init_common(
     /* Bind SHM based wl_buffer to wl_surface until the vulkan surface is ready.
      * This shows the window which assigns us a display (wl_output)
      *  which is usefull for HiDPI and auto selecting a display for fullscreen. */
