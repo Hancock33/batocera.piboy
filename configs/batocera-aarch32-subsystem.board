@@ -83,3 +83,4 @@ BR2_PACKAGE_LIBUSB=y
 
 # Enables ccache
 BR2_CCACHE=y
+BR2_CCACHE_DIR="$(HOME)/build-dir/ccache/aarch32"
