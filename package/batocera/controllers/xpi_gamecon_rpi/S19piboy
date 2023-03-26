@@ -5,7 +5,7 @@ enabledxrs="$(batocera-settings-get -f /boot/batocera-boot.conf key piboyxrs.ena
 
 case "$1" in
 	start)
-		if [[ $enabled == "1" ]]; then
+		if [ "$enabled" = "1" ];then
 			echo "Starting PiBoy"
 			modprobe xpi_gamecon
 			WHEEL_INPUT=$(grep -r -l 'PiBoy Volume wheel' /sys/class/input/event*/device/name | sed 's#/sys/class#/dev#;s#/device.*##')
@@ -16,7 +16,7 @@ case "$1" in
 				/usr/sbin/volumed -- "$WHEEL_INPUT"
 			fi
 			python /usr/bin/piboy_fan_power_ctrl.py &
-		elif [[ $enabledxrs == "1" ]]; then
+		elif [ "$enabledxrs" = "1" ];then
 			echo "Starting PiBoy XRS"
 			modprobe xpi_gamecon_xrs
 			python /usr/bin/piboy_audctrl.py &
@@ -24,7 +24,7 @@ case "$1" in
 			touch /tmp/piboy_xrs
 		fi
 
-		if [[ $enabled == "1" ]] || [[ $enabledxrs == "1" ]]; then
+		if [ "$enabled" = "1" ] || [ "$enabledxrs" = "1" ];then
 			touch /tmp/piboy
 			cp /usr/share/batocera/configgen/configgen-defaults-piboy4.yml /usr/share/batocera/configgen/configgen-defaults-arch.yml
 			dmesg -n 1
@@ -35,7 +35,7 @@ case "$1" in
 		fi
 		;;
 	stop)
-		if [[ $enabled == "1" ]] || [[ $enabledxrs == "1" ]]; then
+		if [ "$enabled" = "1" ] || [ "$enabledxrs" = "1" ];then
 			echo "Stopping PiBoy"
 			rm /tmp/piboy
 			kill $(ps aux | grep piboy_fan_power_ctrl | awk '{ print $1 }') > /dev/null 2>&1
