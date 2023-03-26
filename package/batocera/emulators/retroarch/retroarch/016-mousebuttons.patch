@@ -1,8 +1,8 @@
 diff --git a/configuration.c b/configuration.c
-index ff4829ee4d..8a050c70bb 100644
+index 7821dcfe0f..6cdbdb40f4 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -4537,12 +4537,33 @@ static void save_keybind_mbutton(config_file_t *conf,
+@@ -4515,12 +4515,33 @@ static void save_keybind_mbutton(config_file_t *conf,
        case RETRO_DEVICE_ID_MOUSE_MIDDLE:
           config_set_uint64(conf, key, 3);
           break;
@@ -38,7 +38,7 @@ index ff4829ee4d..8a050c70bb 100644
        case RETRO_DEVICE_ID_MOUSE_WHEELUP:
           config_set_string(conf, key, "wu");
           break;
-@@ -6052,11 +6073,32 @@ void input_config_parse_mouse_button(
+@@ -6030,11 +6051,32 @@ void input_config_parse_mouse_button(
                 bind->mbutton = RETRO_DEVICE_ID_MOUSE_MIDDLE;
                 break;
              case 4:
@@ -73,7 +73,7 @@ index ff4829ee4d..8a050c70bb 100644
        }
     }
 diff --git a/input/drivers/udev_input.c b/input/drivers/udev_input.c
-index 222afaed4c..340bcff281 100644
+index b16c4d3837..2c64c28173 100644
 --- a/input/drivers/udev_input.c
 +++ b/input/drivers/udev_input.c
 @@ -117,7 +117,7 @@ typedef struct
@@ -193,7 +193,7 @@ index 3d6df6f9e1..8d4ac112b5 100644
  /* Id values for LIGHTGUN. */
  #define RETRO_DEVICE_ID_LIGHTGUN_SCREEN_X        13 /*Absolute Position*/
 diff --git a/menu/menu_driver.c b/menu/menu_driver.c
-index b28538fd08..706ed4f717 100644
+index 77d799f132..82d67e0abf 100644
 --- a/menu/menu_driver.c
 +++ b/menu/menu_driver.c
 @@ -1625,8 +1625,15 @@ bool menu_input_key_bind_poll_find_hold_pad(

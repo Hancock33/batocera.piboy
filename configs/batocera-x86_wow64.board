@@ -49,3 +49,4 @@ BR2_PACKAGE_SORR=y
 
 # Enables ccache
 BR2_CCACHE=y
+BR2_CCACHE_DIR="$(HOME)/build-dir/ccache/x86_wow64"
