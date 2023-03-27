@@ -21,11 +21,10 @@ BR2_REMOVE_SOURCE_AFTER_COMPILE=y
 # required for utf-8
 BR2_TOOLCHAIN_GLIBC_GCONV_LIBS_COPY=y
 
-# kernel selected just to be able to select the correct version
+# Kernel 6.3-rc4
+BR2_KERNEL_HEADERS_CUSTOM_TARBALL=y
+BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$BR2_DL_DIR/linux/linux-6.3-rc4.tar.gz"
 BR2_LINUX_KERNEL=n
-BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="6.3-rc3"
-BR2_KERNEL_HEADERS_AS_KERNEL=y
 
 # BR2_TARGET_ROOTFS_TAR is not set
 BR2_ROOTFS_POST_BUILD_SCRIPT="$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/32bit/lib32bit-packager/x86_wow-packager.sh"
@@ -50,3 +49,4 @@ BR2_PACKAGE_SORR=y
 
 # Enables ccache
 BR2_CCACHE=y
+BR2_CCACHE_DIR="$(HOME)/build-dir/ccache/x86_wow64"

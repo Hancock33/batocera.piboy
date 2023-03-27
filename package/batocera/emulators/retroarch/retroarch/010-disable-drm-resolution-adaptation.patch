@@ -1,8 +1,8 @@
 diff --git a/gfx/drivers_context/drm_ctx.c b/gfx/drivers_context/drm_ctx.c
-index c8a2e63b29..f003534337 100644
+index 5b59e4c129..574fca72ed 100644
 --- a/gfx/drivers_context/drm_ctx.c
 +++ b/gfx/drivers_context/drm_ctx.c
-@@ -698,6 +698,8 @@ static bool gfx_ctx_drm_set_video_mode(void *data,
+@@ -807,6 +807,8 @@ static bool gfx_ctx_drm_set_video_mode(void *data,
     settings_t *settings            = config_get_ptr();
     unsigned black_frame_insertion  = settings->uints.video_black_frame_insertion;
     float video_refresh_rate        = settings->floats.video_refresh_rate;
@@ -11,10 +11,10 @@ index c8a2e63b29..f003534337 100644
  
     if (!drm)
        return false;
-@@ -712,47 +714,16 @@ static bool gfx_ctx_drm_set_video_mode(void *data,
-    /* Find desired video mode, and use that.
-     * If not fullscreen, we get desired windowed size,
-     * which is not appropriate. */
+@@ -830,50 +832,18 @@ static bool gfx_ctx_drm_set_video_mode(void *data,
+       /* Let's exit, since modeswitching will happen while swapping buffers */
+       return true;
+    }
 -   if ((width == 0 && height == 0) || !fullscreen)
 -      g_drm_mode                   = &g_drm_connector->modes[0];
 -   else
@@ -35,6 +35,7 @@ index c8a2e63b29..f003534337 100644
 -         drmModeModeInfo *mode     = NULL;
 -         float minimum_fps_diff    = 0.0f;
 -         float mode_vrefresh       = 0.0f;
+-         g_drm_mode                = 0;
 -
 -         /* Find best match. */
 -         for (i = 0; i < g_drm_connector->count_modes; i++)
@@ -56,6 +57,8 @@ index c8a2e63b29..f003534337 100644
 -            }
 -         }
 -      }
+-   }
+-
 +   //if ((width == 0 && height == 0) || !fullscreen)
 +   g_drm_mode = &g_drm_connector->modes[0];
 +   // batocera - set resolution
@@ -66,6 +69,8 @@ index c8a2e63b29..f003534337 100644
 +       }
 +     }
 +     fclose(fdDrmMode);
-    }
- 
++    }
++ 
     if (!g_drm_mode)
+    {
+       RARCH_ERR("[KMS/EGL]: Did not find suitable video mode for %u x %u.\n",

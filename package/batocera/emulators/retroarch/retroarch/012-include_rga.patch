@@ -1,5 +1,5 @@
 diff --git a/gfx/drivers/oga_gfx.c b/gfx/drivers/oga_gfx.c
-index 1be05693fe..0e7a3218c9 100644
+index a290b3d7d0..293a15a349 100644
 --- a/gfx/drivers/oga_gfx.c
 +++ b/gfx/drivers/oga_gfx.c
 @@ -22,7 +22,7 @@
