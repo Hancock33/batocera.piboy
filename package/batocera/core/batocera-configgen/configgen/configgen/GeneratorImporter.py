@@ -319,6 +319,10 @@ def getGenerator(emulator):
         from generators.pygame.pygameGenerator import PygameGenerator
         return PygameGenerator()
 
+    if emulator == 'pyxel':
+        from generators.pyxel.pyxelGenerator import PyxelGenerator
+        return PyxelGenerator()
+
     if emulator == 'quakespasm':
         from generators.quakespasm.quakespasmGenerator import QuakespasmGenerator
         return QuakespasmGenerator()
