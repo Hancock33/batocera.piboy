@@ -697,6 +697,9 @@ pv1000:
 pygame:
   emulator: pygame
   core:     pygame
+pyxel:
+  emulator: pyxel
+  core:     pyxel
 quake3:
   emulator: quake3
   core:     quake3
