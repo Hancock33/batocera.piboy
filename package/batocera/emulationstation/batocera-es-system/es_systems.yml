@@ -1927,6 +1927,16 @@ pygame:
   comment_br:           |
                         Crie seu jogo você mesmo! Pygame ajuda você a criar jogos com apenas algumas linhas. Encontre um monte de exemplos na internet.
 
+pyxel:
+  name:                 Pyxel
+  manufacturer:         Homebrew Systems
+  release:              2021
+  hardware:             console
+  extensions:           [py, pyxapp]
+  emulators:
+    pyxel:
+      pyxel:            { requireAnyOf: [BR2_PACKAGE_PYTHON_PYXEL] }
+
 tic80:
   name:                 TIC-80
   manufacturer:         Homebrew Systems
