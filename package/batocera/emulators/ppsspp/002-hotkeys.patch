@@ -1,8 +1,8 @@
 diff --git a/Core/ControlMapper.cpp b/Core/ControlMapper.cpp
-index 9970c282e..0c5e44f8a 100644
+index 9a2d3834b..8a25b0e7a 100644
 --- a/Core/ControlMapper.cpp
 +++ b/Core/ControlMapper.cpp
-@@ -10,6 +10,8 @@
+@@ -11,6 +11,8 @@
  #include "Core/CoreParameter.h"
  #include "Core/System.h"
  
@@ -11,9 +11,9 @@ index 9970c282e..0c5e44f8a 100644
  static float MapAxisValue(float v) {
  	const float deadzone = g_Config.fAnalogDeadzone;
  	const float invDeadzone = g_Config.fAnalogInverseDeadzone;
-@@ -225,6 +227,10 @@ void ControlMapper::pspKey(int deviceId, int pspKeyCode, int flags) {
+@@ -230,6 +232,10 @@ void ControlMapper::SetPSPKey(int deviceId, int pspKeyCode, int flags) {
  		if (flags & KEY_UP)
- 			__CtrlButtonUp(pspKeyCode);
+ 			setPSPButtonState_(pspKeyCode, false);
  	}
 +
 +	if ( batocera_hotkey || (__CtrlPeekButtons() & CTRL_SELECT) == CTRL_SELECT ) {
@@ -23,7 +23,7 @@ index 9970c282e..0c5e44f8a 100644
  
  void ControlMapper::onVKeyDown(int deviceId, int vkey) {
 diff --git a/Core/SaveState.cpp b/Core/SaveState.cpp
-index 3f51aebbc..3e982d371 100644
+index 3af497362..22941a716 100644
 --- a/Core/SaveState.cpp
 +++ b/Core/SaveState.cpp
 @@ -525,6 +525,11 @@ namespace SaveState
@@ -51,7 +51,7 @@ index 274052fed..864dcc8ce 100644
  	void SaveSlot(const Path &gameFilename, int slot, Callback callback, void *cbUserData = 0);
  	void LoadSlot(const Path &gameFilename, int slot, Callback callback, void *cbUserData = 0);
 diff --git a/UI/EmuScreen.cpp b/UI/EmuScreen.cpp
-index a86a460ac..d3aa38692 100644
+index aed79db15..2b7015671 100644
 --- a/UI/EmuScreen.cpp
 +++ b/UI/EmuScreen.cpp
 @@ -107,6 +107,7 @@ static int lastNumFlips;
@@ -62,7 +62,7 @@ index a86a460ac..d3aa38692 100644
  
  static void __EmuScreenVblank()
  {
-@@ -568,6 +569,7 @@ void EmuScreen::onVKeyDown(int virtualKeyCode) {
+@@ -567,6 +568,7 @@ void EmuScreen::onVKeyDown(int virtualKeyCode) {
  
  	switch (virtualKeyCode) {
  	case VIRTKEY_FASTFORWARD:
@@ -70,7 +70,7 @@ index a86a460ac..d3aa38692 100644
  		if (coreState == CORE_STEPPING) {
  			Core_EnableStepping(false);
  		}
-@@ -602,9 +604,24 @@ void EmuScreen::onVKeyDown(int virtualKeyCode) {
+@@ -601,9 +603,24 @@ void EmuScreen::onVKeyDown(int virtualKeyCode) {
  		break;
  
  	case VIRTKEY_PAUSE:
@@ -96,7 +96,7 @@ index a86a460ac..d3aa38692 100644
  	case VIRTKEY_FRAME_ADVANCE:
  		// If game is running, pause emulation immediately. Otherwise, advance a single frame.
  		if (Core_IsStepping())
-@@ -659,6 +676,7 @@ void EmuScreen::onVKeyDown(int virtualKeyCode) {
+@@ -658,6 +675,7 @@ void EmuScreen::onVKeyDown(int virtualKeyCode) {
  #endif
  
  	case VIRTKEY_REWIND:
@@ -104,7 +104,7 @@ index a86a460ac..d3aa38692 100644
  		if (SaveState::CanRewind()) {
  			SaveState::Rewind(&AfterSaveStateAction);
  		} else {
-@@ -666,12 +684,15 @@ void EmuScreen::onVKeyDown(int virtualKeyCode) {
+@@ -665,12 +683,15 @@ void EmuScreen::onVKeyDown(int virtualKeyCode) {
  		}
  		break;
  	case VIRTKEY_SAVE_STATE:
@@ -120,7 +120,7 @@ index a86a460ac..d3aa38692 100644
  		SaveState::NextSlot();
  		NativeMessageReceived("savestate_displayslot", "");
  		break;
-@@ -726,6 +747,8 @@ void EmuScreen::onVKeyUp(int virtualKeyCode) {
+@@ -725,6 +746,8 @@ void EmuScreen::onVKeyUp(int virtualKeyCode) {
  
  	switch (virtualKeyCode) {
  	case VIRTKEY_FASTFORWARD:
