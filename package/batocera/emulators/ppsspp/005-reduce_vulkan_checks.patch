@@ -1,8 +1,8 @@
 diff --git a/Common/GPU/Vulkan/VulkanLoader.cpp b/Common/GPU/Vulkan/VulkanLoader.cpp
-index 5dd7baf4f..786461fdd 100644
+index 23f664ba9..d89cdf73b 100644
 --- a/Common/GPU/Vulkan/VulkanLoader.cpp
 +++ b/Common/GPU/Vulkan/VulkanLoader.cpp
-@@ -246,8 +246,9 @@ typedef void *VulkanLibraryHandle;
+@@ -245,8 +245,9 @@ typedef void *VulkanLibraryHandle;
  static VulkanLibraryHandle vulkanLibrary;
  #endif
  
