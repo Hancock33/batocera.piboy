@@ -566,6 +566,5 @@ menu "Libraries"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/sdl12-compat/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/wildmidi/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/wxwidgets/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/xlib_libXpresent/Config.in"
 endmenu
 endmenu
