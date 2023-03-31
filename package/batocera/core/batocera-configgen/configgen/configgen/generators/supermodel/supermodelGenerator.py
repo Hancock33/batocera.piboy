@@ -14,13 +14,13 @@ class SupermodelGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["supermodel", "-fullscreen", "-channels=2"]
-
+        
         # legacy3d
         if system.isOptSet("engine3D") and system.config["engine3D"] == "new3d":
             commandArray.append("-new3d")
         else:
              commandArray.extend(["-multi-texture", "-legacy-scsp", "-legacy3d"])
-
+        
         # widescreen
         if system.isOptSet("wideScreen") and system.getOptBoolean("wideScreen"):
             commandArray.append("-wide-screen")
@@ -33,6 +33,12 @@ class SupermodelGenerator(Generator):
         # crosshairs
         if system.isOptSet("crosshairs"):
             commandArray.append("-crosshairs={}".format(system.config["crosshairs"]))
+        else:
+            if controllersConfig.gunsNeedCrosses(guns):
+                if len(guns) == 1:
+                    commandArray.append("-crosshairs={}".format("1"))
+                else:
+                    commandArray.append("-crosshairs={}".format("3"))
 
         # force feedback
         if system.isOptSet("forceFeedback") and system.getOptBoolean("forceFeedback"):
@@ -64,7 +70,7 @@ class SupermodelGenerator(Generator):
         copy_xml()
 
         # config
-        configPadsIni(playersControllers, drivingGame)
+        configPadsIni(system, playersControllers, guns, drivingGame)
 
         return Command.Command(array=commandArray, env={"SDL_VIDEODRIVER":"x11"})
 
@@ -111,14 +117,7 @@ def copy_xml():
     if not os.path.exists(dest_path) or os.path.getmtime(source_path) > os.path.getmtime(dest_path):
         shutil.copy2(source_path, dest_path)
 
-    # Check if games list exists
-    confDir = '/userdata/system/configs/supermodel'
-    if not os.path.exists(confDir):
-        os.makedirs(confDir)
-
-    copyfile('/usr/share/supermodel/Games.xml', confDir + '/Games.xml')
-
-def configPadsIni(playersControllers, altControl):
+def configPadsIni(system, playersControllers, guns, altControl):
     if bool(altControl):
         templateFile = "/usr/share/supermodel/Supermodel-Driving.ini.template"
         mapping = {
@@ -195,6 +194,45 @@ def configPadsIni(playersControllers, altControl):
         for key, value in templateConfig.items(section):
             targetConfig.set(section, key, transformValue(value, playersControllers, mapping, mapping_fallback))
 
+    # apply guns
+    for section in targetConfig.sections():
+        for key, value in targetConfig.items(section):
+            if system.isOptSet('use_guns') and system.getOptBoolean('use_guns') and len(guns) >= 1:
+                if key == "InputSystem":
+                    targetConfig.set(section, key, "evdev")
+                elif key == "InputGunX" or key == "InputAnalogGunX":
+                    targetConfig.set(section, key, "MOUSE1_XAXIS")
+                elif key == "InputGunY" or key == "InputAnalogGunY":
+                    targetConfig.set(section, key, "MOUSE1_YAXIS")
+                elif key == "InputTrigger" or key == "InputAnalogTriggerLeft":
+                    targetConfig.set(section, key, "MOUSE1_LEFT_BUTTON")
+                elif key == "InputOffscreen" or key == "InputAnalogTriggerRight":
+                    targetConfig.set(section, key, "MOUSE1_RIGHT_BUTTON")
+                elif key == "InputStart1":
+                    targetConfig.set(section, key, "MOUSE1_BUTTONX1,JOY1_BUTTON9")
+                elif key == "InputCoin1":
+                    targetConfig.set(section, key, "MOUSE1_BUTTONX2,JOY1_BUTTON10")
+                elif key == "InputAnalogJoyEvent":
+                    targetConfig.set(section, key, "KEY_S,JOY_BUTTON2,MOUSE1_MIDDLE_BUTTON")
+                elif len(guns) >= 2:
+                    if key == "InputGunX2" or key == "InputAnalogGunX2":
+                        targetConfig.set(section, key, "MOUSE2_XAXIS")
+                    elif key == "InputGunY2" or key == "InputAnalogGunY2":
+                        targetConfig.set(section, key, "MOUSE2_YAXIS")
+                    elif key == "InputTrigger2" or key == "InputAnalogTriggerLeft2":
+                        targetConfig.set(section, key, "MOUSE2_LEFT_BUTTON")
+                    elif key == "InputOffscreen2" or key == "InputAnalogTriggerRight2":
+                        targetConfig.set(section, key, "MOUSE2_RIGHT_BUTTON")
+                    elif key == "InputStart2":
+                        targetConfig.set(section, key, "MOUSE2_BUTTONX1,JOY2_BUTTON9")
+                    elif key == "InputCoin1":
+                        targetConfig.set(section, key, "MOUSE2_BUTTONX2,JOY1_BUTTON10")
+                    elif key == "InputAnalogJoyEvent2":
+                        targetConfig.set(section, key, "JOY2_BUTTON2,MOUSE2_MIDDLE_BUTTON")
+            else:
+                if key == "InputSystem":
+                    targetConfig.set(section, key, "sdl")
+
     # save the ini file
     if not os.path.exists(os.path.dirname(targetFile)):
         os.makedirs(os.path.dirname(targetFile))
@@ -233,7 +271,7 @@ def transformElement(elt, playersControllers, mapping, mapping_fallback):
         return input2input(playersControllers, matches.group(1), joy2realjoyid(playersControllers, matches.group(1)), mapping["button" + matches.group(2)])
     matches = re.search("^JOY([12])_UP$", elt)
     if matches:
-        # check joystick type if it's hat or axis
+        # check joystick type if it's hat or axis 
         joy_type = hatOrAxis(playersControllers, matches.group(1))
         if joy_type == "hat":
             key_up = "up"
