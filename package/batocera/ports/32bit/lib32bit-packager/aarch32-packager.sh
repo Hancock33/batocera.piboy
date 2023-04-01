@@ -13,7 +13,6 @@ ln -sf libblkid.so.1                                     $DEST_DIR/lib32/libblki
 ln -sf libmount.so.1                                     $DEST_DIR/lib32/libmount.so
 ln -sf libsmartcols.so.1                                 $DEST_DIR/lib32/libsmartcols.so
 ln -sf libudev.so.1                                      $DEST_DIR/lib32/libudev.so
-ln -sf libuuid.so.1                                      $DEST_DIR/lib32/libuuid.so
 rm -rf $DEST_DIR/lib32/{gconv,glslang,python3.*,terminfo,udev,xorg}
 mv $DEST_DIR/lib32/dri                                 $DEST_DIR/lib32/dri.old
 mkdir -p $DEST_DIR/lib32/dri
@@ -23,3 +22,4 @@ cd $DEST_DIR && tar -Jcf $DEST_DIR.tar.xz .
 rm -r $DEST_DIR
 cp -av $DEST_DIR.tar.xz /mnt/smb
 mv $DEST_DIR.tar.xz  $HOME/dl/lib32bit
+

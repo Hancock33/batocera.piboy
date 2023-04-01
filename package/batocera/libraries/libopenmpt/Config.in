@@ -1,5 +1,8 @@
 config BR2_PACKAGE_LIBOPENMPT
-    bool "libopenmpt"
+	bool "libopenmpt"
+	select BR2_PACKAGE_HOST_DOXYGEN
+	select BR2_PACKAGE_ZLIB
+
     help
       libopenmpt is a cross-platform C++ and C module playback library.
 	  It is based on the player code of the Open ModPlug Tracker project.
