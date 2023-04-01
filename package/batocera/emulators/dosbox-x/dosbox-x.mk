@@ -3,8 +3,8 @@
 # DosBox-X
 #
 ################################################################################
-# Version: Commits on Mar 30, 2023
-DOSBOX_X_VERSION = d1449e95afd0dfc13a57ee6837f8169541bb69c5
+# Version: Commits on Apr 01, 2023
+DOSBOX_X_VERSION = 7aaa67cccc7226a2c83e93afced47ec2b515b21d
 DOSBOX_X_SITE = $(call github,joncampbell123,dosbox-x,$(DOSBOX_X_VERSION))
 DOSBOX_X_DEPENDENCIES = sdl2 sdl2_net fluidsynth zlib libpng libogg libvorbis linux-headers
 DOSBOX_X_LICENSE = GPLv2
