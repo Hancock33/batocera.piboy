@@ -90,6 +90,8 @@ define PPSSPP_INSTALL_TARGET_CMDS
     # Fix PSP font for languages like Japanese
     # (font from https://github.com/minoryorg/Noto-Sans-CJK-JP/blob/master/fonts/)
     cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/NotoSansCJKjp-DemiLight.ttf $(TARGET_DIR)/usr/share/ppsspp/PPSSPP/Roboto-Condensed.ttf
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/psp.ppsspp.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/pspmini.ppsspp.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(cmake-package))
