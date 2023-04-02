@@ -1,131 +1,26 @@
-diff --git a/Core/ControlMapper.cpp b/Core/ControlMapper.cpp
-index 9a2d3834b..8a25b0e7a 100644
---- a/Core/ControlMapper.cpp
-+++ b/Core/ControlMapper.cpp
-@@ -11,6 +11,8 @@
- #include "Core/CoreParameter.h"
- #include "Core/System.h"
+diff --git a/Core/KeyMapDefaults.cpp b/Core/KeyMapDefaults.cpp
+index 63c429430..30b25c6b6 100644
+--- a/Core/KeyMapDefaults.cpp
++++ b/Core/KeyMapDefaults.cpp
+@@ -39,12 +39,16 @@ static const DefMappingStruct defaultQwertyKeyboardKeyMap[] = {
+ 	{VIRTKEY_AXIS_Y_MIN, NKCODE_K},
+ 	{VIRTKEY_AXIS_X_MIN, NKCODE_J},
+ 	{VIRTKEY_AXIS_X_MAX, NKCODE_L},
+-	{VIRTKEY_RAPID_FIRE, NKCODE_SHIFT_LEFT},
+-	{VIRTKEY_FASTFORWARD, NKCODE_TAB},
+-	{VIRTKEY_SPEED_TOGGLE, NKCODE_GRAVE},
+-	{VIRTKEY_PAUSE       , NKCODE_ESCAPE},
+-	{VIRTKEY_REWIND      , NKCODE_DEL},
++	{VIRTKEY_RAPID_FIRE, NKCODE_F8},
++	{VIRTKEY_FASTFORWARD, NKCODE_F5},
++	{VIRTKEY_SPEED_TOGGLE, NKCODE_F7},
++	{VIRTKEY_PAUSE       , NKCODE_F12},
++	{VIRTKEY_REWIND      , NKCODE_F6},
+ 	{VIRTKEY_ANALOG_LIGHTLY, NKCODE_SHIFT_RIGHT},
++	{VIRTKEY_DEVMENU, NKCODE_F1},
++	{VIRTKEY_SAVE_STATE, NKCODE_F2},
++	{VIRTKEY_LOAD_STATE, NKCODE_F3},
++	{VIRTKEY_NEXT_SLOT, NKCODE_F4},
+ };
  
-+extern bool batocera_hotkey;
-+
- static float MapAxisValue(float v) {
- 	const float deadzone = g_Config.fAnalogDeadzone;
- 	const float invDeadzone = g_Config.fAnalogInverseDeadzone;
-@@ -230,6 +232,10 @@ void ControlMapper::SetPSPKey(int deviceId, int pspKeyCode, int flags) {
- 		if (flags & KEY_UP)
- 			setPSPButtonState_(pspKeyCode, false);
- 	}
-+
-+	if ( batocera_hotkey || (__CtrlPeekButtons() & CTRL_SELECT) == CTRL_SELECT ) {
-+		onVKeyDown(deviceId, pspKeyCode);
-+	}
- }
- 
- void ControlMapper::onVKeyDown(int deviceId, int vkey) {
-diff --git a/Core/SaveState.cpp b/Core/SaveState.cpp
-index 3af497362..22941a716 100644
---- a/Core/SaveState.cpp
-+++ b/Core/SaveState.cpp
-@@ -525,6 +525,11 @@ namespace SaveState
- 		return g_Config.iCurrentStateSlot;
- 	}
- 
-+	void PrevSlot()
-+	{
-+		g_Config.iCurrentStateSlot = (g_Config.iCurrentStateSlot - 1 + NUM_SLOTS) % NUM_SLOTS;
-+	}
-+
- 	void NextSlot()
- 	{
- 		g_Config.iCurrentStateSlot = (g_Config.iCurrentStateSlot + 1) % NUM_SLOTS;
-diff --git a/Core/SaveState.h b/Core/SaveState.h
-index 274052fed..864dcc8ce 100644
---- a/Core/SaveState.h
-+++ b/Core/SaveState.h
-@@ -43,6 +43,7 @@ namespace SaveState
- 	void Shutdown();
- 
- 	// Cycle through the 5 savestate slots
-+	void PrevSlot();
- 	void NextSlot();
- 	void SaveSlot(const Path &gameFilename, int slot, Callback callback, void *cbUserData = 0);
- 	void LoadSlot(const Path &gameFilename, int slot, Callback callback, void *cbUserData = 0);
-diff --git a/UI/EmuScreen.cpp b/UI/EmuScreen.cpp
-index aed79db15..2b7015671 100644
---- a/UI/EmuScreen.cpp
-+++ b/UI/EmuScreen.cpp
-@@ -107,6 +107,7 @@ static int lastNumFlips;
- static bool startDumping;
- 
- extern bool g_TakeScreenshot;
-+bool batocera_hotkey = false;
- 
- static void __EmuScreenVblank()
- {
-@@ -567,6 +568,7 @@ void EmuScreen::onVKeyDown(int virtualKeyCode) {
- 
- 	switch (virtualKeyCode) {
- 	case VIRTKEY_FASTFORWARD:
-+	case CTRL_RIGHT:
- 		if (coreState == CORE_STEPPING) {
- 			Core_EnableStepping(false);
- 		}
-@@ -601,9 +603,24 @@ void EmuScreen::onVKeyDown(int virtualKeyCode) {
- 		break;
- 
- 	case VIRTKEY_PAUSE:
--		pauseTrigger_ = true;
-+		batocera_hotkey = true;
-+		break;
-+
-+	case CTRL_START:
-+		//System_SendMessage("event", "exitprogram");		
-+		//System_SendMessage("finish", "");
- 		break;
- 
-+	case CTRL_CROSS:
-+		batocera_hotkey = false;
-+		pauseTrigger_ = true;
-+		break;
-+	
-+	case CTRL_DOWN:
-+		SaveState::PrevSlot();
-+	    NativeMessageReceived("savestate_displayslot", "");
-+		break;
-+	
- 	case VIRTKEY_FRAME_ADVANCE:
- 		// If game is running, pause emulation immediately. Otherwise, advance a single frame.
- 		if (Core_IsStepping())
-@@ -658,6 +675,7 @@ void EmuScreen::onVKeyDown(int virtualKeyCode) {
- #endif
- 
- 	case VIRTKEY_REWIND:
-+	case CTRL_LEFT:
- 		if (SaveState::CanRewind()) {
- 			SaveState::Rewind(&AfterSaveStateAction);
- 		} else {
-@@ -665,12 +683,15 @@ void EmuScreen::onVKeyDown(int virtualKeyCode) {
- 		}
- 		break;
- 	case VIRTKEY_SAVE_STATE:
-+	case CTRL_SQUARE:
- 		SaveState::SaveSlot(gamePath_, g_Config.iCurrentStateSlot, &AfterSaveStateAction);
- 		break;
- 	case VIRTKEY_LOAD_STATE:
-+	case CTRL_TRIANGLE:
- 		SaveState::LoadSlot(gamePath_, g_Config.iCurrentStateSlot, &AfterSaveStateAction);
- 		break;
- 	case VIRTKEY_NEXT_SLOT:
-+	case CTRL_UP:
- 		SaveState::NextSlot();
- 		NativeMessageReceived("savestate_displayslot", "");
- 		break;
-@@ -725,6 +746,8 @@ void EmuScreen::onVKeyUp(int virtualKeyCode) {
- 
- 	switch (virtualKeyCode) {
- 	case VIRTKEY_FASTFORWARD:
-+	case VIRTKEY_PAUSE:
-+		batocera_hotkey = false;
- 		PSP_CoreParameter().fastForward = false;
- 		break;
- 
+ static const DefMappingStruct defaultAzertyKeyboardKeyMap[] = {
