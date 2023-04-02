@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Apr 02, 2023
-DAPHNE_VERSION = 37c7eb8cf75ed5ac65efa8f255d543f3061b5f66
+DAPHNE_VERSION = 40bdb5163deb27398609e35bfaf74fc47fe00353
 DAPHNE_SITE = https://github.com/DirtBagXon/hypseus-singe
 DAPHNE_SITE_METHOD=git
 DAPHNE_LICENSE = GPLv3
