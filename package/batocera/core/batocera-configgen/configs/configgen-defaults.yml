@@ -680,10 +680,10 @@ psikyo:
   emulator: libretro
   core:     mame078plus
 psp:
-  emulator: ppsspp
+  emulator: libretro
   core: ppsspp
 pspmini:
-  emulator: ppsspp
+  emulator: libretro
   core: ppsspp
 psvita:
   emulator: vita3k
