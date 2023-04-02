@@ -8073,6 +8073,7 @@ pcsx2:
                 "Port2":    port2
                 "Port1+2":  port12
 ppsspp:
+  features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, rewind]
   cfeatures:
         gfxbackend:
@@ -9825,6 +9826,7 @@ lightspark:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 drastic:
+  features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         drastic_hires:
@@ -9880,6 +9882,7 @@ drastic:
                 "Horizontal": 1
                 "Single": 3
 xemu:
+  features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         scaling:
@@ -10043,6 +10046,7 @@ srb2kart:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 model2emu:
+  features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         fakeGouraud:
@@ -10118,6 +10122,7 @@ gsplus:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 play:
+  features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 flatpak:
   features: [padtokeyboard]
@@ -10424,6 +10429,7 @@ openmsx:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 demul:
+  features: [padtokeyboard]
   shared: [videomode]
   cfeatures:
         demulRatio:
@@ -10840,6 +10846,7 @@ virtualjaguar:
                 "PAL":  pal
 # vita3k doesn't handle the hud - so no deocrations etc
 vita3k:
+  features: [padtokeyboard]
   shared: [videomode]
   features: [padtokeyboard]
   cfeatures:
@@ -10905,6 +10912,12 @@ xenia:
                 "No licenses enabled":                     0
                 "XBLA license enabled (Default)":          1
                 "All possible licenses (Not recommended)": -1
+        xeniaHeadless:
+            prompt: UI PROMPTS
+            description: Choose to display UI prompts or accept defaults.
+            choices:
+                "Enabled UI prompts (Default)": 0
+                "Disable UI prompts":           1
         xeniaLanguage:
             prompt: LANGUAGE
             description: Change the game's language.
@@ -10955,6 +10968,12 @@ xenia-canary:
                 "1680x1050":          14
                 "1920x540":           15
                 "1920x1080":          16
+        xeniaHeadless:
+            prompt: UI PROMPTS
+            description: Choose to display UI prompts or accept defaults.
+            choices:
+                "Enabled UI prompts (Default)": 0
+                "Disable UI prompts":           1
         xeniaLanguage:
             prompt: LANGUAGE
             description: Change the game's language.

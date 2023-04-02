@@ -6,13 +6,11 @@ from generators.Generator import Generator
 import shutil
 import os.path
 import configparser
-# TODO: python3 - delete me!
 import codecs
 from . import ppssppConfig
 from . import ppssppControllers
 
 ppssppControls = batoceraFiles.CONF + '/ppsspp/gamecontrollerdb.txt'
-
 
 class PPSSPPGenerator(Generator):
 
@@ -34,8 +32,7 @@ class PPSSPPGenerator(Generator):
             break
 
         # The command to run
-        commandArray = ['/usr/bin/PPSSPP']
-        commandArray.append(rom)
+        commandArray = ["PPSSPP", rom]
         commandArray.append("--fullscreen")
 
         # Adapt the menu size to low defenition
