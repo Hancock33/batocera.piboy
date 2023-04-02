@@ -3,8 +3,8 @@
 # samtse
 #
 ################################################################################
-# Version: Commits on Mar 29, 2023
-SAMTSE_VERSION = 306f65300eeee56c77c73d7bf688768ad310aee6
+# Version: Commits on Apr 02, 2023
+SAMTSE_VERSION = 88b4e2f81789e02376495824e796706d26c3a52b
 SAMTSE_SITE = https://github.com/tx00100xt/SeriousSamClassic-VK.git
 SAMTSE_SITE_METHOD=git
 SAMTSE_GIT_SUBMODULES=YES

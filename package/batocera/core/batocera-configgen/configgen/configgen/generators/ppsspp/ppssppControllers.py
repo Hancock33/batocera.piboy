@@ -129,6 +129,17 @@ def generateControllerConfig(controller):
     if not Config.has_section(section):
         Config.add_section(section)
 
+    Config.set(section, 'Analog limiter', '1-60')
+    Config.set(section, 'RapidFire', '1-138')
+    Config.set(section, 'Fast-forward', '1-135')
+    Config.set(section, 'SpeedToggle', '1-137')
+    Config.set(section, 'Pause', '1-142,10-109,10-104')
+    Config.set(section, 'Rewind', '1-136')
+    Config.set(section, 'Save State', '1-132')
+    Config.set(section, 'Load State', '1-133')
+    Config.set(section, 'Next Slot', '1-134')
+    Config.set(section, 'DevMenu', '1-131')
+
     # Parse controller inputs
     for index in controller.inputs:
         input = controller.inputs[index]

@@ -1,0 +1,100 @@
+{
+    "actions_player1": [
+        {
+            "trigger": [
+                "hotkey",
+                "start"
+            ],
+            "type": "key",
+            "target": [
+                "KEY_LEFTALT",
+                "KEY_F4"
+            ],
+            "description": "Exit the emulator"
+        },
+        {
+            "trigger": [
+                "b",
+                "hotkey"
+            ],
+            "type": "key",
+            "target": "KEY_F12",
+            "description": "Emulator menu"
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "y"
+            ],
+            "type": "key",
+            "target": "KEY_F2",
+            "description": "Quick save slot"
+        },
+        {
+            "trigger": [
+                "a",
+                "hotkey"
+            ],
+            "type": "key",
+            "target": "KEY_F3",
+            "description": "Quick load slot"
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "up"
+            ],
+            "type": "key",
+            "target": "KEY_F4",
+            "description": "Select save slot number"
+        },
+        {
+            "trigger": [
+                "down",
+                "hotkey"
+            ],
+            "type": "key",
+            "target": "KEY_F4",
+            "description": "Select save slot number"
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "left"
+            ],
+            "type": "key",
+            "target": "KEY_F6",
+            "description": "Rewind"
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "right"
+            ],
+            "type": "key",
+            "target": "KEY_F5",
+            "description": "Fast-forward"
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "x"
+            ],
+            "type": "key",
+            "target": "KEY_F8",
+            "description": "Rapid Fire"
+        },
+        {
+            "trigger": "r3",
+            "type": "key",
+            "target": "KEY_ENTER",
+            "description": "Enter on the menu"
+        },
+        {
+            "trigger": "l3",
+            "type": "key",
+            "target": "KEY_ESC",
+            "description": "Back on the menu"
+        }
+    ]
+}
