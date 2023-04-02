@@ -72,10 +72,8 @@ class XeniaGenerator(Generator):
         if os.path.isfile(toml_file):
             with open(toml_file) as f:
                 config = toml.load(f)
-        # in case the file is empty
-        if config is None:
-            config = {}
-        # [ Now adjust the config file default we want ]
+        
+        # [ Now adjust the config file defaults & options we want ]
         # add node CPU
         if 'CPU' not in config:
             config['CPU'] = {}
@@ -92,15 +90,13 @@ class XeniaGenerator(Generator):
         # add node Display
         if 'Display' not in config:
             config['Display'] = {}
-        # internal resolution - default 1280x720
+        # always run fullscreen & set internal resolution - default 1280x720
+        displayRes = 8
         if system.isOptSet('xeniaResolution'):
-            config['Display'] = {
-            'internal_display_resolution': int(system.config['xeniaResolution']),
-            'fullscreen': True}
-        else:
-            config['Display'] = {
-            'internal_display_resolution': 8,
-            'fullscreen': True}
+            displayRes = int(system.config['xeniaResolution'])
+        config['Display'] = {
+            'fullscreen': True,
+            'internal_display_resolution': displayRes}
         # add node GPU
         if 'GPU' not in config:
             config['GPU'] = {}
@@ -129,8 +125,11 @@ class XeniaGenerator(Generator):
         # add node UI
         if 'UI' not in config:
             config['UI'] = {}
-        # run headless
-        config['UI'] = {'headless': True}
+        # run headless ?
+        if system.isOptSet('xeniaHeadless') and system.getOptBoolean('xeniaHeadless') == True:
+            config['UI'] = {'headless': True}
+        else:
+            config['UI'] = {'headless': False}
         # add node Vulkan
         if 'Vulkan' not in config:
             config['Vulkan'] = {}
