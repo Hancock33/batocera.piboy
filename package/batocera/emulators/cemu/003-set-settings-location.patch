@@ -1,5 +1,5 @@
 diff --git a/src/config/CemuConfig.cpp b/src/config/CemuConfig.cpp
-index 3774c1f..e215038 100644
+index e51dfbe..7eaeb2d 100644
 --- a/src/config/CemuConfig.cpp
 +++ b/src/config/CemuConfig.cpp
 @@ -8,7 +8,7 @@
@@ -9,5 +9,5 @@ index 3774c1f..e215038 100644
 -XMLCemuConfig_t g_config(L"settings.xml");
 +XMLCemuConfig_t g_config(L"/userdata/system/configs/cemu/settings.xml");
  
- void CemuConfig::SetMLCPath(std::wstring_view path, bool save)
+ void CemuConfig::SetMLCPath(fs::path path, bool save)
  {
