@@ -1,5 +1,5 @@
 diff --git a/src/Cafe/Filesystem/FST/KeyCache.cpp b/src/Cafe/Filesystem/FST/KeyCache.cpp
-index 5d8d51c..92678e4 100644
+index 5d8d51c..aca26e7 100644
 --- a/src/Cafe/Filesystem/FST/KeyCache.cpp
 +++ b/src/Cafe/Filesystem/FST/KeyCache.cpp
 @@ -59,7 +59,18 @@ void KeyCache_Prepare()
