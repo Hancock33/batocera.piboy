@@ -1,0 +1,10 @@
+config BR2_PACKAGE_MAELSTROM
+	bool "maelstrom"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_NET
+	help
+	  Maelstrom 3.0 is a GPL'd port of the original shareware game for the
+	  Macintosh.  It is a fast-action, high resolution (640x480) asteroids-like
+	  game, with detailed graphics and original sounds.
+
+	  https://www.libsdl.org/projects/Maelstrom/
