@@ -39,7 +39,7 @@
 ### Updated
 - xenia to 1.0.2786
 - xenia canary to 8678bec (Commits on Mar 13, 2023)
-- cemu to 2.0-29
+- cemu to 2.0-32
 - retroarch to 1.15.0
 - libretro-wasm4 to 2.5.4
 - simcoupe to 1.2.12
@@ -51,11 +51,13 @@
 - supermodel to Mar 19, 2023 build
 - Updated libretro cores [#8411](https://github.com/batocera-linux/batocera.linux/pull/8411)
 - Updated mupen64plus cores [#8413](https://github.com/batocera-linux/batocera.linux/pull/8413)
+- dosbox to v2023.03.31
+- citra to nightly-1877
 ### Dev
 - buildroot upgrade to 2023.02
 - dxvk to 2.1
 - linux firmware to 20230310
-- linux kernel for x86_64 to 6.2.8
+- linux kernel for x86_64 to 6.2.10
 - nvidia production driver to 530.41.03
 - llvm to 15.0.7
 
