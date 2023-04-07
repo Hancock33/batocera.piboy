@@ -7761,17 +7761,26 @@ moonlight:
   shared: [videomode, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         moonlight_codec:
+            group: ADVANCED OPTIONS
             prompt:      VIDEO STREAM CODEC
             description: h265 (HEVC) is CPU heavy and increases latency, but is more bandwidth efficient.
             choices:
-                "h264 (less latency)":                                 0
-                "h265 (HEVC) (higher quality at lower bitrates)":      1
+                "h264 (less latency)":                            "h264"
+                "h265 (HEVC) (higher quality at lower bitrates)": "h265"
         moonlight_resolution:
             prompt:      VIDEO STREAM RESOLUTION
             choices:
                 "720p (1280x720)":       0
                 "1080p (1920x1080)":     1
                 "4K (3840x2160)":        2
+        moonlight_rotate:
+            prompt:      ROTATE
+            description: Output rotation independent of xrandr or framebuffer settings.
+            choices:
+                "0 degrees":   "0"
+                "90 degrees":  "90"
+                "180 degrees": "180"
+                "270 degrees": "270"
         moonlight_framerate:
             prompt:      VIDEO STREAM FRAME RATE
             choices:
@@ -7790,20 +7799,39 @@ moonlight:
             prompt:      DYNAMICALLY CALCULATE OPTIMAL SETTINGS
             description: Streaming Optimal Playable Settings, overrides other settings if enabled.
             choices:
-                "on":                    0
-                "off":                   1
+                "Off": False
+                "On":  True
         moonlight_quitapp:
             prompt:      QUIT ON HOST
             description: Close app on the remote host when quitting Moonlight.
             choices:
-                "on":                    0
-                "off":                   1
+                "Off": False
+                "On":  True
+        moonlight_viewonly:
+            prompt:      VIEW ONLY
+            description: Disable all input processing (view-only mode).
+            choices:
+                "Off": False
+                "On":  True            
         moonlight_avdecoder:
             prompt:      PREFERRED AV DECODER
-            description: If screen is rotated by 90 degrees, select SDL.
+            description: May have an impact on performance.
             choices:
-                "None":                  "none"
-                "SDL":                   "sdl"
+                "Autodetect (Default)": "default"
+                "SDL":                  "sdl"
+                "X11":                  "x11"
+        moonlight_remote:
+            prompt:      LAN / WAN STREAMING
+            description: Enable QOS settings to optimize for internet or local network.
+            choices:
+                "WAN":           "yes"
+                "LAN (Default)": "no"
+        moonlight_surround:
+            prompt:      SURROUND SOUND
+            description: Enables surround sound if your audio card supports it (Consumes more bandwidth).
+            choices:
+                "5.1": "5.1"
+                "7.1": "7.1"
 mupen64plus:
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
@@ -10428,6 +10456,14 @@ cdogs:
 openmsx:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+        openmsx_machine:
+            group: ADVANCED OPTIONS
+            prompt:      COLECOVISION MACHINE
+            description: Choose machine type only when playing ColecoVision roms.
+            choices:
+                "ColecoVision":          "ColecoVision"
+                "ColecoVision with SGM": "ColecoVision_SGM"
 demul:
   features: [padtokeyboard]
   shared: [videomode]
