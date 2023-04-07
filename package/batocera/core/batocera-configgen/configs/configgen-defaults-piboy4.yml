@@ -27,6 +27,9 @@ flash:
 fmtowns:
   emulator: libretro
   core:     mame
+jaguar:
+  emulator: virtualjaguar
+  core:     virtualjaguar
 model3:
   options:
     videomode: max-720x576

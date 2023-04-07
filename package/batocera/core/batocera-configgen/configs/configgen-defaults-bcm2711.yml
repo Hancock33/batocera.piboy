@@ -30,6 +30,9 @@ fmtowns:
 gamecube:
   emulator: libretro
   core:     dolphin
+jaguar:
+  emulator: virtualjaguar
+  core:     virtualjaguar
 model3:
   options:
     videomode: max-720x576
