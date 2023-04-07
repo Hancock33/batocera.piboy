@@ -13,6 +13,21 @@
             "trigger": "r2",
             "type": "key",
             "target": "BTN_RIGHT"
+        },
+        {
+            "trigger": [
+                "b",
+                "hotkey"
+            ],
+            "type": "key",
+            "target": "KEY_F12",
+            "description": "Emulator configuration"
+        },
+        {
+            "trigger": ["hotkey", "start"],
+            "type": "exec",
+            "target": "killall -9 amiberry && reset",
+            "description": "Exit the emulator"
         }
     ]
 }
