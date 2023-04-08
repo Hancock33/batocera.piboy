@@ -1,8 +1,8 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index ccc89dc5..d7ca91ed 100644
+index 146172ba..e83838f7 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -2406,7 +2406,7 @@ void get_data_path(char* out, int size)
+@@ -2475,7 +2475,7 @@ void get_data_path(char* out, int size)
  
  void get_saveimage_path(char* out, int size, int dir)
  {
@@ -11,7 +11,7 @@ index ccc89dc5..d7ca91ed 100644
  	strncpy(out, saveimage_dir, size - 1);
  }
  
-@@ -2529,7 +2529,7 @@ void get_rp9_path(char* out, int size)
+@@ -2598,7 +2598,7 @@ void get_rp9_path(char* out, int size)
  
  void get_savestate_path(char* out, int size)
  {
@@ -20,7 +20,7 @@ index ccc89dc5..d7ca91ed 100644
  	strncpy(out, savestate_dir, size - 1);
  }
  
-@@ -2553,7 +2553,7 @@ void get_nvram_path(TCHAR *out, int size)
+@@ -2622,7 +2622,7 @@ void get_nvram_path(TCHAR *out, int size)
  
  void get_screenshot_path(char* out, int size)
  {
@@ -29,7 +29,7 @@ index ccc89dc5..d7ca91ed 100644
  	strncpy(out, screenshot_dir, size - 1);
  }
  
-@@ -2900,19 +2900,19 @@ void save_amiberry_settings(void)
+@@ -3001,19 +3001,19 @@ void save_amiberry_settings(void)
  	snprintf(buffer, MAX_DPATH, "path=%s\n", current_dir);
  	fputs(buffer, f);
  
@@ -53,7 +53,7 @@ index ccc89dc5..d7ca91ed 100644
  	fputs(buffer, f);
  
  	snprintf(buffer, MAX_DPATH, "rom_path=%s\n", rom_path);
-@@ -2927,10 +2927,10 @@ void save_amiberry_settings(void)
+@@ -3028,10 +3028,10 @@ void save_amiberry_settings(void)
  	snprintf(buffer, MAX_DPATH, "data_dir=%s\n", data_dir);
  	fputs(buffer, f);
  
@@ -66,7 +66,7 @@ index ccc89dc5..d7ca91ed 100644
  	fputs(buffer, f);
  
  	snprintf(buffer, MAX_DPATH, "ripper_dir=%s\n", ripper_path);
-@@ -2939,7 +2939,7 @@ void save_amiberry_settings(void)
+@@ -3040,7 +3040,7 @@ void save_amiberry_settings(void)
  	snprintf(buffer, MAX_DPATH, "inputrecordings_dir=%s\n", input_dir);
  	fputs(buffer, f);
  
@@ -75,23 +75,24 @@ index ccc89dc5..d7ca91ed 100644
  	fputs(buffer, f);
  
  	snprintf(buffer, MAX_DPATH, "nvram_dir=%s\n", nvram_dir);
-@@ -3304,11 +3304,11 @@ void macos_copy_amiberry_files_to_userdir(std::string macos_amiberry_directory)
+@@ -3413,11 +3413,11 @@ void macos_copy_amiberry_files_to_userdir(std::string macos_amiberry_directory)
  static void init_amiberry_paths(void)
  {
  	strncpy(current_dir, start_path_data, MAX_DPATH - 1);
 -	snprintf(config_path, MAX_DPATH, "%s/conf/", start_path_data);
 -	snprintf(controllers_path, MAX_DPATH, "%s/controllers/", start_path_data);
 -	snprintf(retroarch_file, MAX_DPATH, "%s/conf/retroarch.cfg", start_path_data);
+-	snprintf(whdboot_path, MAX_DPATH, "%s/whdboot/", start_path_data);
+-	snprintf(logfile_path, MAX_DPATH, "%s/amiberry.log", start_path_data);
 +	snprintf(config_path, MAX_DPATH, "/userdata/system/configs/amiberry/conf");
 +	snprintf(controllers_path, MAX_DPATH, "/userdata/system/configs/amiberry/conf/retroarch/inputs");
 +	snprintf(retroarch_file, MAX_DPATH, "/userdata/system/configs/amiberry/conf/retroarch/retroarchcustom.cfg");
- 	snprintf(whdboot_path, MAX_DPATH, "%s/whdboot/", start_path_data);
--	snprintf(logfile_path, MAX_DPATH, "%s/amiberry.log", start_path_data);
++ 	snprintf(whdboot_path, MAX_DPATH, "%s/whdboot/", start_path_data);
 +	snprintf(logfile_path, MAX_DPATH, "/userdata/system/logs/amiberry.log");
  
  #ifdef ANDROID
  	char afepath[MAX_DPATH];
-@@ -3319,9 +3319,9 @@ static void init_amiberry_paths(void)
+@@ -3428,9 +3428,9 @@ static void init_amiberry_paths(void)
  		closedir(afedir);
  	}
  	else
@@ -103,7 +104,7 @@ index ccc89dc5..d7ca91ed 100644
  #endif
  	snprintf(rp9_path, MAX_DPATH, "%s/rp9/", start_path_data);
  #ifdef __MACH__
-@@ -3338,15 +3338,15 @@ static void init_amiberry_paths(void)
+@@ -3447,15 +3447,15 @@ static void init_amiberry_paths(void)
  	snprintf(amiberry_conf_file, MAX_DPATH, "%s", (macos_amiberry_directory + "/Configurations/amiberry.conf").c_str());
  	write_log("Using configuration: %s\n", (macos_amiberry_directory + "/Configurations/amiberry.conf").c_str());
  #else
@@ -123,7 +124,7 @@ index ccc89dc5..d7ca91ed 100644
  	snprintf(nvram_dir, MAX_DPATH, "%s/nvram/", start_path_data);
  }
  
-@@ -3379,8 +3379,8 @@ void rename_old_adfdir()
+@@ -3488,8 +3488,8 @@ void rename_old_adfdir()
  {
  	char old_path[MAX_DPATH];
  	char new_path[MAX_DPATH];
@@ -134,7 +135,7 @@ index ccc89dc5..d7ca91ed 100644
  
  	const auto result = rename(old_path, new_path);
  	if (result == 0)
-@@ -3524,7 +3524,7 @@ int main(int argc, char* argv[])
+@@ -3633,7 +3633,7 @@ int main(int argc, char* argv[])
  	}
  
  	fix_trailing(savestate_dir);
