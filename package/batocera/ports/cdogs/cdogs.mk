@@ -3,8 +3,8 @@
 # cdogs
 #
 ################################################################################
-# Version: Commits on Apr 05, 2023
-CDOGS_VERSION = 34cb238f801ee29499140def0c1e968abdca9237
+# Version: Commits on Apr 08, 2023
+CDOGS_VERSION = 6ec425e42fbead4959a0f1a73b0cb314a2afdcda
 CDOGS_SITE = $(call github,cxong,cdogs-sdl,$(CDOGS_VERSION))
 
 CDOGS_DEPENDENCIES = sdl2 python-protobuf
