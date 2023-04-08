@@ -1,5 +1,5 @@
 diff --git a/audio/audio_driver.c b/audio/audio_driver.c
-index 7a9ccb042d..537215bdee 100644
+index 7a9ccb042d..de8923e4da 100644
 --- a/audio/audio_driver.c
 +++ b/audio/audio_driver.c
 @@ -1319,8 +1319,8 @@ static void audio_driver_load_menu_bgm_callback(retro_task_t *task,
@@ -33,26 +33,22 @@ index 7a9ccb042d..537215bdee 100644
     list          = dir_list_new(sounds_path, MENU_SOUND_FORMATS, false, false, false, false);
     list_fallback = dir_list_new(sounds_fallback_path, MENU_SOUND_FORMATS, false, false, false, false);
  
-@@ -1403,12 +1390,17 @@ void audio_driver_load_system_sounds(void)
+@@ -1403,8 +1390,13 @@ void audio_driver_load_system_sounds(void)
              path_notice_back = path;
           else if (string_is_equal_noncase(basename_noext, "bgm"))
              path_bgm = path;
 -         else if (string_is_equal_noncase(basename_noext, "unlock"))
 -            path_cheevo_unlock = path;
-          else if (string_is_equal_noncase(basename_noext, "up"))
-             path_up = path;
-          else if (string_is_equal_noncase(basename_noext, "down"))
-             path_down = path;
 +         else if(string_is_empty(settings->arrays.cheevos_unlock_sound)) {
 +            if (string_is_equal_noncase(basename_noext, "unlock"))
 +               path_cheevo_unlock = path;
-+            } else {
++            else
 +               if (string_is_equal_noncase(basename_noext, settings->arrays.cheevos_unlock_sound))
 +                  path_cheevo_unlock = path;
 +            }
-       }
-    }
- 
+          else if (string_is_equal_noncase(basename_noext, "up"))
+             path_up = path;
+          else if (string_is_equal_noncase(basename_noext, "down"))
 diff --git a/configuration.c b/configuration.c
 index 7821dcfe0f..06c5bc4f88 100644
 --- a/configuration.c
