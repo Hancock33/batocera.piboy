@@ -3,10 +3,12 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Jul 25, 2022
-DEVILUTIONX_VERSION = 1.4.1
-DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX/releases/download/$(DEVILUTIONX_VERSION)
-DEVILUTIONX_SOURCE = devilutionx-src.tar.xz
+# Version: Commits on Apr 08, 2023
+DEVILUTIONX_VERSION = cb5e2b252cb05a491b65fcf6a8150d5188712edf
+DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
+DEVILUTIONX_SITE_METHOD=git
+DEVILUTIONX_SUBDIR = dist-src
+
 DEVILUTIONX_DEPENDENCIES = sdl2 sdl2_image fmt libsodium libpng bzip2
 DEVILUTIONX_SUPPORTS_IN_SOURCE_BUILD = NO
 
@@ -31,25 +33,26 @@ else ifeq ($(BR2_arm),y)
 endif
 
 define DEVILUTIONX_FIX_SDL2MAIN
-	sed -i -e s+"SDL2::SDL2main"+"-lSDL2main"+ $(@D)/CMakeLists.txt
+	sed -i -e s+"SDL2::SDL2main"+"-lSDL2main"+ $(@D)/dist-src/CMakeLists.txt
+	sed -i -e s+"SDL2::SDL2_image"+"-lSDL2_image"+ $(@D)/dist-src/Source/CMakeLists.txt
+	#sed -i -e s+"VERSION ${VERSION_NUM}"+"VERSION 1.4.99"+ $(@D)/dist-src/CMakeLists.txt
+endef
+
+define DEVILUTIONX_BUILD_SRC_DIST
+    rm -rf $(DEVILUTIONX_DL_DIR)/git/build-src-dist/
+	python $(DEVILUTIONX_DL_DIR)/git/tools/make_src_dist.py
+	tar -xf $(DEVILUTIONX_DL_DIR)/git/build-src-dist/devilutionx-src-*.tar.xz -C $(@D)
+	mv $(@D)/devilutionx-src-* $(@D)/dist-src
 endef
 
 DEVILUTIONX_PRE_CONFIGURE_HOOKS += DEVILUTIONX_FIX_SDL2MAIN
+DEVILUTIONX_POST_EXTRACT_HOOKS += DEVILUTIONX_BUILD_SRC_DIST
 
 define DEVILUTIONX_INSTALL_TARGET_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/devilutionx/devilutionx.keys $(TARGET_DIR)/usr/share/evmapy
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/devilutionx
-	$(INSTALL) -D $(@D)/dist/devilutionx.mpq $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/devilutionx
 endef
 
 DEVILUTIONX_POST_INSTALL_TARGET_HOOKS = DEVILUTIONX_INSTALL_TARGET_EVMAPY
-
-# when rebuilding a new version will not be downloaded if an existing version is cached.
-# delete existing version before building
-define DEVILUTIONX_REMOVE_SOURCE
-	rm -rf $(DL_DIR)/$(DEVILUTIONX_DL_SUBDIR)/$(DEVILUTIONX_SOURCE)
-endef
-DEVILUTIONX_PRE_DOWNLOAD_HOOKS += DEVILUTIONX_REMOVE_SOURCE
 
 $(eval $(cmake-package))
