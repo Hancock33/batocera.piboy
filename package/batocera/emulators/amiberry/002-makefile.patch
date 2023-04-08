@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 93ef345..57f9e63 100644
+index 93ef3455..57f9e636 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -23,11 +23,7 @@ export SDL_LDFLAGS := $(shell $(SDL_CONFIG) --libs)
