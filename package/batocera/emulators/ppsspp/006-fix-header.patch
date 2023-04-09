@@ -1,5 +1,5 @@
 diff --git a/Common/GPU/Vulkan/VulkanContext.cpp b/Common/GPU/Vulkan/VulkanContext.cpp
-index 3d40c99ec..d1d2a0c83 100644
+index 822be354c..d1d2a0c83 100644
 --- a/Common/GPU/Vulkan/VulkanContext.cpp
 +++ b/Common/GPU/Vulkan/VulkanContext.cpp
 @@ -970,8 +970,8 @@ VkResult VulkanContext::ReinitSurface() {
@@ -13,14 +13,3 @@ index 3d40c99ec..d1d2a0c83 100644
  			{
  				display_mode = mode->displayMode;
  				mode_found = true;
-@@ -1050,8 +1050,8 @@ VkResult VulkanContext::ReinitSurface() {
- 		}
- 	
- 		// Finally, create the vulkan surface.
--		image_size.width = pixel_xres;
--		image_size.height = pixel_yres;
-+		image_size.width = g_display.pixel_xres;
-+		image_size.height = g_display.pixel_yres;
- 
- 		display.displayMode = display_mode;
- 		display.imageExtent = image_size;

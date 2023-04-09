@@ -3165,6 +3165,7 @@ videopacplus:
   release:              1983
   hardware:             console
   extensions:           [bin, zip, 7z]
+  platform:             videopac
   path:                 videopacplus
   emulators:
     libretro:
