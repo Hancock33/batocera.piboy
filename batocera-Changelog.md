@@ -54,6 +54,10 @@
 - Updated mupen64plus cores [#8413](https://github.com/batocera-linux/batocera.linux/pull/8413)
 - dosbox to v2023.03.31
 - citra to nightly-1877
+- amiberry to v5.6.0
+- ppsspp to v1.14.4
+- libretro-ppsspp to v1.14.4
+- scummvm to v2.7.0
 ### Dev
 - buildroot upgrade to 2023.02
 - mesa3d update to 23.0.2
