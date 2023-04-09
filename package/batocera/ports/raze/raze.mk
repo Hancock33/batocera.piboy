@@ -3,8 +3,8 @@
 # raze
 #
 ################################################################################
-# Version: Commits on Dec 17, 2022
-RAZE_VERSION = 684fb5eb744a215afa1eee9435bd55cbabfa4645
+# Version: Commits on Apr 09, 2023
+RAZE_VERSION = 3df7539eb9d3f651880a7061c1298929758bae37
 RAZE_SITE = $(call github,ZDoom,Raze,$(RAZE_VERSION))
 RAZE_LICENSE = GPLv2
 RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic gzdoom
