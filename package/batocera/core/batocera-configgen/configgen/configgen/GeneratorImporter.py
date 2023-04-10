@@ -215,10 +215,6 @@ def getGenerator(emulator):
         from generators.lightspark.lightsparkGenerator import LightsparkGenerator
         return LightsparkGenerator()
 
-    if emulator == 'lzdoom':
-        from generators.lzdoom.lzdoomGenerator import LzdoomGenerator
-        return LzdoomGenerator()
-
     if emulator == 'mame':
         from generators.mame.mameGenerator import MameGenerator
         return MameGenerator()
