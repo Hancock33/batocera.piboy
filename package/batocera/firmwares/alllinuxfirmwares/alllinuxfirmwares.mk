@@ -42,6 +42,15 @@ ifeq ($(BR2_arm)$(BR2_aarch64),y)
 									$(@D)/ueagle-atm
 endif
 
+ifeq ($(BR2_x86_i686)$(BR2_x86_64),y)
+    ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/bnx2x \
+									$(@D)/LICENCE* \
+									$(@D)/LICENSE* \
+									$(@D)/mellanox \
+									$(@D)/mrvl/prestera \
+									$(@D)/qcom
+endif
+
 ifeq ($(BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI)$(BR2_PACKAGE_EXTRALINUXFIRMWARES),y)
     ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/brcm
 endif
