@@ -1,0 +1,583 @@
+From a007c715b74d52c8185ae43d4cf051e22d48196d Mon Sep 17 00:00:00 2001
+From: RodoMa92 <marco.rodolfi@tuta.io>
+Date: Sun, 26 Mar 2023 17:04:24 +0200
+Subject: [PATCH 1/4] Upstreamed
+ https://github.com/xenia-project/xenia/pull/1433 to master
+
+---
+ src/xenia/base/demangle.h                 | 19 ++++++++
+ src/xenia/base/demangle_posix.cc          | 26 ++++++++++
+ src/xenia/base/demangle_win.cc            | 16 ++++++
+ src/xenia/base/filesystem_posix.cc        | 59 +++++++++++++----------
+ src/xenia/base/string_buffer.cc           | 14 +++---
+ src/xenia/base/system_gnulinux.cc         |  2 +-
+ src/xenia/base/testing/filesystem_test.cc | 58 ++++++++++++++++++++++
+ src/xenia/base/testing/premake5.lua       |  7 +++
+ src/xenia/base/testing/res/test_file      |  1 +
+ src/xenia/base/testing/string_test.cc     | 34 +++++++++++++
+ src/xenia/kernel/util/object_table.cc     |  7 ++-
+ 11 files changed, 209 insertions(+), 34 deletions(-)
+ create mode 100644 src/xenia/base/demangle.h
+ create mode 100644 src/xenia/base/demangle_posix.cc
+ create mode 100644 src/xenia/base/demangle_win.cc
+ create mode 100644 src/xenia/base/testing/filesystem_test.cc
+ create mode 100644 src/xenia/base/testing/res/test_file
+ create mode 100644 src/xenia/base/testing/string_test.cc
+
+diff --git a/src/xenia/base/demangle.h b/src/xenia/base/demangle.h
+new file mode 100644
+index 0000000000..6fbdab9a9e
+--- /dev/null
++++ b/src/xenia/base/demangle.h
+@@ -0,0 +1,19 @@
++/**
++ ******************************************************************************
++ * Xenia : Xbox 360 Emulator Research Project                                 *
++ ******************************************************************************
++ * Copyright 2020 Ben Vanik. All rights reserved.                             *
++ * Released under the BSD license - see LICENSE in the root for more details. *
++ ******************************************************************************
++ */
++
++#ifndef XENIA_BASE_DEMANGLE_H_
++#define XENIA_BASE_DEMANGLE_H_
++
++#include <string>
++
++namespace xe {
++std::string Demangle(const std::string& mangled_name);
++}
++
++#endif  // XENIA_BASE_DEMANGLE_H_
+diff --git a/src/xenia/base/demangle_posix.cc b/src/xenia/base/demangle_posix.cc
+new file mode 100644
+index 0000000000..4e50e3dbb7
+--- /dev/null
++++ b/src/xenia/base/demangle_posix.cc
+@@ -0,0 +1,26 @@
++/**
++ ******************************************************************************
++ * Xenia : Xbox 360 Emulator Research Project                                 *
++ ******************************************************************************
++ * Copyright 2020 Ben Vanik. All rights reserved.                             *
++ * Released under the BSD license - see LICENSE in the root for more details. *
++ ******************************************************************************
++ */
++
++#include "xenia/base/demangle.h"
++
++#include <cxxabi.h>
++#include <memory>
++
++namespace xe {
++
++std::string Demangle(const std::string& mangled_name) {
++  std::size_t len = 0;
++  int status = 0;
++  std::unique_ptr<char, decltype(&std::free)> ptr(
++      __cxxabiv1::__cxa_demangle(mangled_name.c_str(), nullptr, &len, &status),
++      &std::free);
++  return ptr ? std::string("class ") + ptr.get() : "";
++}
++
++}  // namespace xe
+diff --git a/src/xenia/base/demangle_win.cc b/src/xenia/base/demangle_win.cc
+new file mode 100644
+index 0000000000..84a46a437e
+--- /dev/null
++++ b/src/xenia/base/demangle_win.cc
+@@ -0,0 +1,16 @@
++/**
++ ******************************************************************************
++ * Xenia : Xbox 360 Emulator Research Project                                 *
++ ******************************************************************************
++ * Copyright 2020 Ben Vanik. All rights reserved.                             *
++ * Released under the BSD license - see LICENSE in the root for more details. *
++ ******************************************************************************
++ */
++
++#include "xenia/base/demangle.h"
++
++namespace xe {
++
++std::string Demangle(const std::string& name) { return name; }
++
++}  // namespace xe
+diff --git a/src/xenia/base/filesystem_posix.cc b/src/xenia/base/filesystem_posix.cc
+index 2e9ddb2c5b..34b186a810 100644
+--- a/src/xenia/base/filesystem_posix.cc
++++ b/src/xenia/base/filesystem_posix.cc
+@@ -9,21 +9,18 @@
+ 
+ #include "xenia/base/assert.h"
+ #include "xenia/base/filesystem.h"
+-#include "xenia/base/logging.h"
+ #include "xenia/base/string.h"
+ 
+-#include <assert.h>
+ #include <dirent.h>
+ #include <fcntl.h>
+ #include <ftw.h>
+-#include <libgen.h>
+ #include <pwd.h>
+-#include <stdio.h>
+-#include <string.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>
+ #include <unistd.h>
+-#include <iostream>
++#include <cstdio>
++#include <cstdlib>
++#include <cstring>
+ 
+ namespace xe {
+ 
+@@ -65,12 +62,12 @@ std::filesystem::path GetUserFolder() {
+   home = std::getenv("HOME");
+ 
+   // if HOME not set, fall back to this
+-  if (home == NULL) {
++  if (home == nullptr) {
+     struct passwd pw1;
+     struct passwd* pw;
+-    char buf[4096];  // could potentionally lower this
++    char buf[4096];  // could potentially lower this
+     getpwuid_r(getuid(), &pw1, buf, sizeof(buf), &pw);
+-    assert(&pw1 == pw);  // sanity check
++    assert_true(&pw1 == pw);  // sanity check
+     home = pw->pw_dir;
+   }
+ 
+@@ -112,13 +109,14 @@ static int removeCallback(const char* fpath, const struct stat* sb,
+   return rv;
+ }
+ 
+-static uint64_t convertUnixtimeToWinFiletime(time_t unixtime) {
+-  // Linux uses number of seconds since 1/1/1970, and Windows uses
++static uint64_t convertUnixtimeToWinFiletime(const timespec& unixtime) {
++  // Linux uses number of nanoseconds since 1/1/1970, and Windows uses
+   // number of nanoseconds since 1/1/1601
+-  // so we convert linux time to nanoseconds and then add the number of
+-  // nanoseconds from 1601 to 1970
++  // so we add the number of nanoseconds from 1601 to 1970
++  // and return in the format of 10ns intervals
+   // see https://msdn.microsoft.com/en-us/library/ms724228
+-  uint64_t filetime = filetime = (unixtime * 10000000) + 116444736000000000;
++  uint64_t filetime = (unixtime.tv_sec * 10000000) + unixtime.tv_nsec / 100 +
++                      116444736000000000;
+   return filetime;
+ }
+ 
+@@ -143,16 +141,16 @@ class PosixFileHandle : public FileHandle {
+             size_t* out_bytes_read) override {
+     ssize_t out = pread(handle_, buffer, buffer_length, file_offset);
+     *out_bytes_read = out;
+-    return out >= 0 ? true : false;
++    return out >= 0;
+   }
+   bool Write(size_t file_offset, const void* buffer, size_t buffer_length,
+              size_t* out_bytes_written) override {
+     ssize_t out = pwrite(handle_, buffer, buffer_length, file_offset);
+     *out_bytes_written = out;
+-    return out >= 0 ? true : false;
++    return out >= 0;
+   }
+   bool SetLength(size_t length) override {
+-    return ftruncate(handle_, length) >= 0 ? true : false;
++    return ftruncate(handle_, length) >= 0;
+   }
+   void Flush() override { fsync(handle_); }
+ 
+@@ -197,12 +195,17 @@ bool GetInfo(const std::filesystem::path& path, FileInfo* out_info) {
+   if (stat(path.c_str(), &st) == 0) {
+     if (S_ISDIR(st.st_mode)) {
+       out_info->type = FileInfo::Type::kDirectory;
++      // On Linux st.st_size can have non-zero size (generally 4096) so make 0
++      out_info->total_size = 0;
+     } else {
+       out_info->type = FileInfo::Type::kFile;
++      out_info->total_size = st.st_size;
+     }
+-    out_info->create_timestamp = convertUnixtimeToWinFiletime(st.st_ctime);
+-    out_info->access_timestamp = convertUnixtimeToWinFiletime(st.st_atime);
+-    out_info->write_timestamp = convertUnixtimeToWinFiletime(st.st_mtime);
++    out_info->path = path.parent_path();
++    out_info->name = path.filename();
++    out_info->create_timestamp = convertUnixtimeToWinFiletime(st.st_ctim);
++    out_info->access_timestamp = convertUnixtimeToWinFiletime(st.st_atim);
++    out_info->write_timestamp = convertUnixtimeToWinFiletime(st.st_mtim);
+     return true;
+   }
+   return false;
+@@ -217,20 +220,26 @@ std::vector<FileInfo> ListFiles(const std::filesystem::path& path) {
+   }
+ 
+   while (auto ent = readdir(dir)) {
++    if (std::strcmp(ent->d_name, ".") == 0 ||
++        std::strcmp(ent->d_name, "..") == 0) {
++      continue;
++    }
++
+     FileInfo info;
+ 
+     info.name = ent->d_name;
+     struct stat st;
+-    stat((path / info.name).c_str(), &st);
+-    info.create_timestamp = convertUnixtimeToWinFiletime(st.st_ctime);
+-    info.access_timestamp = convertUnixtimeToWinFiletime(st.st_atime);
+-    info.write_timestamp = convertUnixtimeToWinFiletime(st.st_mtime);
++    auto ret = stat((path / info.name).c_str(), &st);
++    assert_zero(ret);
++    info.create_timestamp = convertUnixtimeToWinFiletime(st.st_ctim);
++    info.access_timestamp = convertUnixtimeToWinFiletime(st.st_atim);
++    info.write_timestamp = convertUnixtimeToWinFiletime(st.st_mtim);
+     if (ent->d_type == DT_DIR) {
+       info.type = FileInfo::Type::kDirectory;
+       info.total_size = 0;
+     } else {
+       info.type = FileInfo::Type::kFile;
+-      info.total_size = st.st_size;
++      info.total_size = static_cast<size_t>(st.st_size);
+     }
+     result.push_back(info);
+   }
+diff --git a/src/xenia/base/string_buffer.cc b/src/xenia/base/string_buffer.cc
+index b3a9270a81..f94fd6c880 100644
+--- a/src/xenia/base/string_buffer.cc
++++ b/src/xenia/base/string_buffer.cc
+@@ -71,13 +71,15 @@ void StringBuffer::Append(const std::string_view value) {
+ }
+ 
+ void StringBuffer::AppendVarargs(const char* format, va_list args) {
+-  int result = vsnprintf(nullptr, 0, format, args);
+-  if (result <= 0) {
+-    return;
+-  }
+-  auto length = static_cast<size_t>(result);
++  va_list size_args;
++  va_copy(size_args, args);  // arg is indeterminate after the return so copy it
++  int length = vsnprintf(nullptr, 0, format, size_args);
++  assert_true(length >= 0);
++  va_end(size_args);
+   Grow(length + 1);
+-  vsnprintf(buffer_ + buffer_offset_, buffer_capacity_, format, args);
++  int result = vsnprintf(buffer_ + buffer_offset_,
++                         buffer_capacity_ - buffer_offset_, format, args);
++  assert_true(result == length);
+   buffer_offset_ += length;
+   buffer_[buffer_offset_] = 0;
+ }
+diff --git a/src/xenia/base/system_gnulinux.cc b/src/xenia/base/system_gnulinux.cc
+index 920c9ab9e0..403e9b01ff 100644
+--- a/src/xenia/base/system_gnulinux.cc
++++ b/src/xenia/base/system_gnulinux.cc
+@@ -9,7 +9,7 @@
+ 
+ #include <alloca.h>
+ #include <dlfcn.h>
+-#include <stdlib.h>
++#include <cstdlib>
+ 
+ #include <cstring>
+ 
+diff --git a/src/xenia/base/testing/filesystem_test.cc b/src/xenia/base/testing/filesystem_test.cc
+new file mode 100644
+index 0000000000..2829e6b9d5
+--- /dev/null
++++ b/src/xenia/base/testing/filesystem_test.cc
+@@ -0,0 +1,58 @@
++/**
++ ******************************************************************************
++ * Xenia : Xbox 360 Emulator Research Project                                 *
++ ******************************************************************************
++ * Copyright 2019 Ben Vanik. All rights reserved.                             *
++ * Released under the BSD license - see LICENSE in the root for more details. *
++ ******************************************************************************
++ */
++
++#include "xenia/base/filesystem.h"
++
++#include <filesystem>
++
++#include "third_party/catch/include/catch.hpp"
++
++namespace xe {
++namespace base {
++namespace test {
++
++TEST_CASE("file_get_info", "Get Info") {
++  auto test_file_name = std::filesystem::path("test_file");
++  auto test_file_dir = std::filesystem::path("src/xenia/base/testing/res");
++  auto test_file_path = test_file_dir / test_file_name;
++
++  filesystem::FileInfo info = {};
++
++  REQUIRE(filesystem::GetInfo(test_file_path, &info));
++
++  CHECK(info.type == filesystem::FileInfo::Type::kFile);
++  CHECK(info.name == test_file_name);
++  CHECK(info.path == test_file_dir);
++  CHECK(info.total_size == 81);
++  CHECK(info.create_timestamp > 132111406279379842);
++  CHECK(info.access_timestamp > 132111406279379842);
++  CHECK(info.write_timestamp > 132111406279379842);
++}
++
++TEST_CASE("folder_get_info", "Get Info") {
++  auto test_folder_name = std::filesystem::path("res");
++  auto test_folder_dir = std::filesystem::path("src/xenia/base/testing");
++  auto test_folder_path = test_folder_dir / test_folder_name;
++
++  filesystem::FileInfo info = {};
++
++  REQUIRE(filesystem::GetInfo(test_folder_path, &info));
++
++  CHECK(info.type == filesystem::FileInfo::Type::kDirectory);
++  CHECK(info.name == test_folder_name);
++  CHECK(info.path == test_folder_dir);
++  CHECK(info.total_size == 0);
++  CHECK(info.create_timestamp > 132111406279379842);
++  CHECK(info.access_timestamp > 132111406279379842);
++  CHECK(info.write_timestamp > 132111406279379842);
++}
++
++}  // namespace test
++}  // namespace base
++}  // namespace xe
+diff --git a/src/xenia/base/testing/premake5.lua b/src/xenia/base/testing/premake5.lua
+index 74d39aa651..61194c98a8 100644
+--- a/src/xenia/base/testing/premake5.lua
++++ b/src/xenia/base/testing/premake5.lua
+@@ -7,3 +7,10 @@ test_suite("xenia-base-tests", project_root, ".", {
+     "xenia-base",
+   },
+ })
++  files({
++    "res/*",
++  })
++  filter("files:res/*")
++    flags({"ExcludeFromBuild"})
++  filter("platforms:Windows")
++    debugdir(project_root)
+\ No newline at end of file
+diff --git a/src/xenia/base/testing/res/test_file b/src/xenia/base/testing/res/test_file
+new file mode 100644
+index 0000000000..c94444439f
+--- /dev/null
++++ b/src/xenia/base/testing/res/test_file
+@@ -0,0 +1 @@
++Test file to test the xe::filesystem::GetInfo function on both Windows and Linux
+diff --git a/src/xenia/base/testing/string_test.cc b/src/xenia/base/testing/string_test.cc
+new file mode 100644
+index 0000000000..654f7d440a
+--- /dev/null
++++ b/src/xenia/base/testing/string_test.cc
+@@ -0,0 +1,34 @@
++/**
++******************************************************************************
++* Xenia : Xbox 360 Emulator Research Project                                 *
++******************************************************************************
++* Copyright 2019 Ben Vanik. All rights reserved.                             *
++* Released under the BSD license - see LICENSE in the root for more details. *
++******************************************************************************
++*/
++
++#include "xenia/base/string.h"
++#include "xenia/base/string_buffer.h"
++
++#include "third_party/catch/include/catch.hpp"
++
++namespace xe {
++namespace base {
++namespace test {
++
++TEST_CASE("StringBuffer") {
++  StringBuffer sb;
++  uint32_t module_flags = 0x1000000;
++
++  std::string path_(R"(\Device\Cdrom0\default.xex)");
++  sb.AppendFormat("Module {}:\n", path_.c_str());
++  REQUIRE(sb.to_string() == "Module \\Device\\Cdrom0\\default.xex:\n");
++  sb.AppendFormat("    Module Flags: {:08X}\n", module_flags);
++  REQUIRE(
++      sb.to_string() ==
++      "Module \\Device\\Cdrom0\\default.xex:\n    Module Flags: 01000000\n");
++}
++
++}  // namespace test
++}  // namespace base
++}  // namespace xe
+diff --git a/src/xenia/kernel/util/object_table.cc b/src/xenia/kernel/util/object_table.cc
+index d1250791c5..9c8ef871e6 100644
+--- a/src/xenia/kernel/util/object_table.cc
++++ b/src/xenia/kernel/util/object_table.cc
+@@ -13,6 +13,7 @@
+ #include <cstring>
+ 
+ #include "xenia/base/byte_stream.h"
++#include "xenia/base/demangle.h"
+ #include "xenia/base/logging.h"
+ #include "xenia/kernel/xobject.h"
+ #include "xenia/kernel/xthread.h"
+@@ -118,7 +119,8 @@ X_STATUS ObjectTable::AddHandle(XObject* object, X_HANDLE* out_handle) {
+       // Retain so long as the object is in the table.
+       object->Retain();
+ 
+-      XELOGI("Added handle:{:08X} for {}", handle, typeid(*object).name());
++      XELOGI("Added handle:{:08X} for {}", handle,
++             Demangle(typeid(*object).name()));
+     }
+   }
+ 
+@@ -203,7 +205,8 @@ X_STATUS ObjectTable::RemoveHandle(X_HANDLE handle) {
+       object->handles().erase(handle_entry);
+     }
+ 
+-    XELOGI("Removed handle:{:08X} for {}", handle, typeid(*object).name());
++    XELOGI("Removed handle:{:08X} for {}", handle,
++           Demangle(typeid(*object).name()).c_str());
+ 
+     // Remove object name from mapping to prevent naming collision.
+     if (!object->name().empty()) {
+
+From 576d0311a56cb64eaedf40cfada349f6b6a703a9 Mon Sep 17 00:00:00 2001
+From: RodoMa92 <marco.rodolfi@tuta.io>
+Date: Sun, 26 Mar 2023 18:07:42 +0200
+Subject: [PATCH 2/4] [xenia-kernel] fixed build for a missing include
+ directory
+
+---
+ src/xenia/kernel/premake5.lua | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/src/xenia/kernel/premake5.lua b/src/xenia/kernel/premake5.lua
+index 1061c24ea5..5da51373a5 100644
+--- a/src/xenia/kernel/premake5.lua
++++ b/src/xenia/kernel/premake5.lua
+@@ -17,6 +17,9 @@ project("xenia-kernel")
+   })
+   defines({
+   })
++  includedirs({
++    project_root.."/xenia/base/",
++  })
+   recursive_platform_files()
+   files({
+     "debug_visualizers.natvis",
+
+From d57af00ddd6f53c2e718fa5a624e254d400635fe Mon Sep 17 00:00:00 2001
+From: RodoMa92 <marco.rodolfi@tuta.io>
+Date: Sun, 26 Mar 2023 18:09:49 +0200
+Subject: [PATCH 3/4] [tests] fixed filesystem failing tests for missing
+ relative path to file
+
+---
+ src/xenia/base/testing/filesystem_test.cc | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/src/xenia/base/testing/filesystem_test.cc b/src/xenia/base/testing/filesystem_test.cc
+index 2829e6b9d5..6f21772796 100644
+--- a/src/xenia/base/testing/filesystem_test.cc
++++ b/src/xenia/base/testing/filesystem_test.cc
+@@ -18,9 +18,10 @@ namespace base {
+ namespace test {
+ 
+ TEST_CASE("file_get_info", "Get Info") {
++  auto relative_root_dir = std::filesystem::path("../../../../");
+   auto test_file_name = std::filesystem::path("test_file");
+   auto test_file_dir = std::filesystem::path("src/xenia/base/testing/res");
+-  auto test_file_path = test_file_dir / test_file_name;
++  auto test_file_path = relative_root_dir / test_file_dir / test_file_name;
+ 
+   filesystem::FileInfo info = {};
+ 
+@@ -28,7 +29,7 @@ TEST_CASE("file_get_info", "Get Info") {
+ 
+   CHECK(info.type == filesystem::FileInfo::Type::kFile);
+   CHECK(info.name == test_file_name);
+-  CHECK(info.path == test_file_dir);
++  CHECK(info.path == relative_root_dir / test_file_dir);
+   CHECK(info.total_size == 81);
+   CHECK(info.create_timestamp > 132111406279379842);
+   CHECK(info.access_timestamp > 132111406279379842);
+@@ -36,9 +37,10 @@ TEST_CASE("file_get_info", "Get Info") {
+ }
+ 
+ TEST_CASE("folder_get_info", "Get Info") {
++  auto relative_root_dir = std::filesystem::path("../../../../");
+   auto test_folder_name = std::filesystem::path("res");
+   auto test_folder_dir = std::filesystem::path("src/xenia/base/testing");
+-  auto test_folder_path = test_folder_dir / test_folder_name;
++  auto test_folder_path = relative_root_dir / test_folder_dir / test_folder_name;
+ 
+   filesystem::FileInfo info = {};
+ 
+@@ -46,7 +48,7 @@ TEST_CASE("folder_get_info", "Get Info") {
+ 
+   CHECK(info.type == filesystem::FileInfo::Type::kDirectory);
+   CHECK(info.name == test_folder_name);
+-  CHECK(info.path == test_folder_dir);
++  CHECK(info.path == relative_root_dir / test_folder_dir);
+   CHECK(info.total_size == 0);
+   CHECK(info.create_timestamp > 132111406279379842);
+   CHECK(info.access_timestamp > 132111406279379842);
+
+From 8b7f7fbdbf5a65f8552997919ef9ba5a9d2d7ffd Mon Sep 17 00:00:00 2001
+From: RodoMa92 <marco.rodolfi@tuta.io>
+Date: Sun, 26 Mar 2023 20:13:23 +0200
+Subject: [PATCH 4/4] Revert "[tests] fixed filesystem failing tests for
+ missing relative path to file"
+
+This reverts commit d57af00ddd6f53c2e718fa5a624e254d400635fe.
+
+The failure was caused by my editor and not present on the CLI tests.
+---
+ src/xenia/base/testing/filesystem_test.cc | 10 ++++------
+ 1 file changed, 4 insertions(+), 6 deletions(-)
+
+diff --git a/src/xenia/base/testing/filesystem_test.cc b/src/xenia/base/testing/filesystem_test.cc
+index 6f21772796..2829e6b9d5 100644
+--- a/src/xenia/base/testing/filesystem_test.cc
++++ b/src/xenia/base/testing/filesystem_test.cc
+@@ -18,10 +18,9 @@ namespace base {
+ namespace test {
+ 
+ TEST_CASE("file_get_info", "Get Info") {
+-  auto relative_root_dir = std::filesystem::path("../../../../");
+   auto test_file_name = std::filesystem::path("test_file");
+   auto test_file_dir = std::filesystem::path("src/xenia/base/testing/res");
+-  auto test_file_path = relative_root_dir / test_file_dir / test_file_name;
++  auto test_file_path = test_file_dir / test_file_name;
+ 
+   filesystem::FileInfo info = {};
+ 
+@@ -29,7 +28,7 @@ TEST_CASE("file_get_info", "Get Info") {
+ 
+   CHECK(info.type == filesystem::FileInfo::Type::kFile);
+   CHECK(info.name == test_file_name);
+-  CHECK(info.path == relative_root_dir / test_file_dir);
++  CHECK(info.path == test_file_dir);
+   CHECK(info.total_size == 81);
+   CHECK(info.create_timestamp > 132111406279379842);
+   CHECK(info.access_timestamp > 132111406279379842);
+@@ -37,10 +36,9 @@ TEST_CASE("file_get_info", "Get Info") {
+ }
+ 
+ TEST_CASE("folder_get_info", "Get Info") {
+-  auto relative_root_dir = std::filesystem::path("../../../../");
+   auto test_folder_name = std::filesystem::path("res");
+   auto test_folder_dir = std::filesystem::path("src/xenia/base/testing");
+-  auto test_folder_path = relative_root_dir / test_folder_dir / test_folder_name;
++  auto test_folder_path = test_folder_dir / test_folder_name;
+ 
+   filesystem::FileInfo info = {};
+ 
+@@ -48,7 +46,7 @@ TEST_CASE("folder_get_info", "Get Info") {
+ 
+   CHECK(info.type == filesystem::FileInfo::Type::kDirectory);
+   CHECK(info.name == test_folder_name);
+-  CHECK(info.path == relative_root_dir / test_folder_dir);
++  CHECK(info.path == test_folder_dir);
+   CHECK(info.total_size == 0);
+   CHECK(info.create_timestamp > 132111406279379842);
+   CHECK(info.access_timestamp > 132111406279379842);
