@@ -10893,12 +10893,12 @@ msgctxt "game_options"
 msgid "Italiano"
 msgstr ""
 
-#. TRANSLATION: awgl, gzdoom, lzdoom, raze, yquake2
+#. TRANSLATION: awgl, yquake2
 msgctxt "game_options"
 msgid "Select rendering mode."
 msgstr ""
 
-#. TRANSLATION: awgl, gzdoom, lzdoom, raze, yquake2
+#. TRANSLATION: awgl, yquake2
 msgctxt "game_options"
 msgid "GAME RENDERING"
 msgstr ""
@@ -11081,26 +11081,6 @@ msgstr ""
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "START LEVEL"
-msgstr ""
-
-#. TRANSLATION: gzdoom, raze
-msgctxt "game_options"
-msgid "Softpoly"
-msgstr ""
-
-#. TRANSLATION: gzdoom, raze
-msgctxt "game_options"
-msgid "GLES2 (Default)"
-msgstr ""
-
-#. TRANSLATION: gzdoom, raze
-msgctxt "game_options"
-msgid "OpenGL (x86 only)"
-msgstr ""
-
-#. TRANSLATION: lzdoom
-msgctxt "game_options"
-msgid "Software (default)"
 msgstr ""
 
 #. TRANSLATION: sm64
