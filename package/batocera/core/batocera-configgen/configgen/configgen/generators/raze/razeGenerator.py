@@ -100,15 +100,10 @@ class RazeGenerator(Generator):
             "-nologo" if system.getOptBoolean("nologo") else "",
         ]
 
-        if system.isOptSet('raze_render'):
-            if system.config['raze_render'] == 'gl':
-                launch_args.extend(['+set', 'vid_preferbackend', '0', '+set', 'vid_rendermode', '4'])
-            elif system.config['raze_render'] == 'vulkan':
-                launch_args.extend(['+set', 'vid_preferbackend', '1', '+set', 'vid_rendermode', '4'])
-            elif system.config['raze_render'] == 'soft':
-                launch_args.extend(['+set', 'vid_preferbackend', '2', '+set', 'vid_rendermode', '4'])
-            elif system.config['raze_render'] == 'gles2':
-                launch_args.extend(['+set', 'vid_preferbackend', '3', '+set', 'vid_rendermode', '3'])
+        f=open('/usr/share/batocera/batocera.arch')
+        arch=f.readline().strip('\n')
+        if 'x86_64' in arch:
+            launch_args.extend(['+set', 'vid_preferbackend', '1', '+set', 'vid_rendermode', '4'])
         else:
             launch_args.extend(['+set', 'vid_preferbackend', '3', '+set', 'vid_rendermode', '3'])
 
