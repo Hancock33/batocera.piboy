@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-ALLLINUXFIRMWARES_VERSION = 20230310
+ALLLINUXFIRMWARES_VERSION = 20230404
 ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.gz
 ALLLINUXFIRMWARES_SITE = https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot
 
@@ -40,6 +40,15 @@ ifeq ($(BR2_arm)$(BR2_aarch64),y)
 									$(@D)/radeon \
 									$(@D)/s5p-* \
 									$(@D)/ueagle-atm
+endif
+
+ifeq ($(BR2_x86_i686)$(BR2_x86_64),y)
+    ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/bnx2x \
+									$(@D)/LICENCE* \
+									$(@D)/LICENSE* \
+									$(@D)/mellanox \
+									$(@D)/mrvl/prestera \
+									$(@D)/qcom
 endif
 
 ifeq ($(BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI)$(BR2_PACKAGE_EXTRALINUXFIRMWARES),y)

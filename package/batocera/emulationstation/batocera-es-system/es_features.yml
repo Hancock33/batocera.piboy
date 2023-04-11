@@ -7812,14 +7812,7 @@ moonlight:
             description: Disable all input processing (view-only mode).
             choices:
                 "Off": False
-                "On":  True            
-        moonlight_avdecoder:
-            prompt:      PREFERRED AV DECODER
-            description: May have an impact on performance.
-            choices:
-                "SDL":                               "sdl"
-                "X11 (Default)":                     "x11"
-                "X11 - Nvidia Hardware Accelerated": "x11_vdpau"
+                "On":  True
         moonlight_remote:
             prompt:      LAN / WAN STREAMING
             description: Enable QOS settings to optimize for internet or local network.
@@ -10661,27 +10654,6 @@ freedroid:
 gzdoom:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-  cfeatures:
-    gzdoom_render:
-      group: VIDEO SETTINGS
-      prompt:      GAME RENDERING
-      description: Select rendering mode.
-      choices:
-        "Vulkan":             vulkan
-        "Softpoly":           soft
-        "GLES2 (Default)":    gles2
-        "OpenGL (x86 only)":  gl
-lzdoom:
-  features: [padtokeyboard]
-  shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-  cfeatures:
-    lzdoom_render:
-      group: VIDEO SETTINGS
-      prompt:      GAME RENDERING
-      description: Select rendering mode.
-      choices:
-        "Software (default)": soft
-        "OpenGL":             gl
 hode:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -10754,15 +10726,6 @@ raze:
       choices:
         "Skip": 1
         "Show (Default)": 0
-    raze_render:
-      group: VIDEO SETTINGS
-      prompt:      GAME RENDERING
-      description: Select rendering mode.
-      choices:
-        "Vulkan":             vulkan
-        "Softpoly":           soft
-        "GLES2 (Default)":    gles2
-        "OpenGL (x86 only)":  gl
 raptor:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

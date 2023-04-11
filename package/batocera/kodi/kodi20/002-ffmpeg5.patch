@@ -1,0 +1,1596 @@
+diff --git a/cmake/modules/FindFFMPEG.cmake b/cmake/modules/FindFFMPEG.cmake
+index fedbf0adde..e58b026088 100644
+--- a/cmake/modules/FindFFMPEG.cmake
++++ b/cmake/modules/FindFFMPEG.cmake
+@@ -151,14 +151,14 @@ if(WITH_FFMPEG)
+   set(REQUIRED_FFMPEG_VERSION undef)
+ else()
+   # required ffmpeg library versions
+-  set(REQUIRED_FFMPEG_VERSION 4.4.1)
+-  set(_avcodec_ver ">=58.134.100")
+-  set(_avfilter_ver ">=7.110.100")
+-  set(_avformat_ver ">=58.76.100")
+-  set(_avutil_ver ">=56.70.100")
+-  set(_postproc_ver ">=55.9.100")
+-  set(_swresample_ver ">=3.9.100")
+-  set(_swscale_ver ">=5.9.100")
++  set(REQUIRED_FFMPEG_VERSION 5.0.0)
++  set(_avcodec_ver ">=59.18.100")
++  set(_avfilter_ver ">=8.24.100")
++  set(_avformat_ver ">=59.16.100")
++  set(_avutil_ver ">=57.17.100")
++  set(_postproc_ver ">=56.3.100")
++  set(_swresample_ver ">=4.3.100")
++  set(_swscale_ver ">=6.4.100")
+ endif()
+ 
+ # Allows building with external ffmpeg not found in system paths,
+diff --git a/xbmc/cdrip/EncoderFFmpeg.cpp b/xbmc/cdrip/EncoderFFmpeg.cpp
+index 2867b7cb67..5d290ee26d 100644
+--- a/xbmc/cdrip/EncoderFFmpeg.cpp
++++ b/xbmc/cdrip/EncoderFFmpeg.cpp
+@@ -11,6 +11,7 @@
+ #include "ServiceBroker.h"
+ #include "addons/Addon.h"
+ #include "addons/AddonManager.h"
++#include "cores/FFmpeg.h"
+ #include "settings/Settings.h"
+ #include "settings/SettingsComponent.h"
+ #include "utils/StringUtils.h"
+@@ -19,23 +20,8 @@
+ #include "utils/log.h"
+ 
+ using namespace KODI::CDRIP;
+-
+-namespace
+-{
+-
+-struct EncoderException : public std::exception
+-{
+-  std::string s;
+-  template<typename... Args>
+-  EncoderException(const std::string& fmt, Args&&... args)
+-    : s(StringUtils::Format(fmt, std::forward<Args>(args)...))
+-  {
+-  }
+-  ~EncoderException() throw() {} // Updated
+-  const char* what() const throw() { return s.c_str(); }
+-};
+-
+-} /* namespace */
++using FFMPEG_HELP_TOOLS::FFMpegErrorToString;
++using FFMPEG_HELP_TOOLS::FFMpegException;
+ 
+ bool CEncoderFFmpeg::Init()
+ {
+@@ -54,7 +40,7 @@ bool CEncoderFFmpeg::Init()
+     }
+     else
+     {
+-      throw EncoderException("Could not get add-on: {}", addonId);
++      throw FFMpegException("Could not get add-on: {}", addonId);
+     }
+ 
+     // Hack fix about PTS on generated files.
+@@ -66,50 +52,50 @@ bool CEncoderFFmpeg::Init()
+     else if (addonId == "audioencoder.kodi.builtin.wma")
+       m_samplesCountMultiply = 1000;
+     else
+-      throw EncoderException("Internal add-on id \"{}\" not known as usable", addonId);
++      throw FFMpegException("Internal add-on id \"{}\" not known as usable", addonId);
+ 
+     const std::string filename = URIUtils::GetFileName(m_strFile);
+ 
+     m_formatCtx = avformat_alloc_context();
+     if (!m_formatCtx)
+-      throw EncoderException("Could not allocate output format context");
++      throw FFMpegException("Could not allocate output format context");
+ 
+     m_bcBuffer = static_cast<uint8_t*>(av_malloc(BUFFER_SIZE + AV_INPUT_BUFFER_PADDING_SIZE));
+     if (!m_bcBuffer)
+-      throw EncoderException("Could not allocate buffer");
++      throw FFMpegException("Could not allocate buffer");
+ 
+     m_formatCtx->pb = avio_alloc_context(m_bcBuffer, BUFFER_SIZE, AVIO_FLAG_WRITE, this, nullptr,
+                                          avio_write_callback, avio_seek_callback);
+     if (!m_formatCtx->pb)
+-      throw EncoderException("Failed to allocate ByteIOContext");
++      throw FFMpegException("Failed to allocate ByteIOContext");
+ 
+     /* Guess the desired container format based on the file extension. */
+     m_formatCtx->oformat = av_guess_format(nullptr, filename.c_str(), nullptr);
+     if (!m_formatCtx->oformat)
+-      throw EncoderException("Could not find output file format");
++      throw FFMpegException("Could not find output file format");
+ 
+     m_formatCtx->url = av_strdup(filename.c_str());
+     if (!m_formatCtx->url)
+-      throw EncoderException("Could not allocate url");
++      throw FFMpegException("Could not allocate url");
+ 
+     /* Find the encoder to be used by its name. */
+-    AVCodec* codec = avcodec_find_encoder(m_formatCtx->oformat->audio_codec);
++    const AVCodec* codec = avcodec_find_encoder(m_formatCtx->oformat->audio_codec);
+     if (!codec)
+-      throw EncoderException("Unable to find a suitable FFmpeg encoder");
++      throw FFMpegException("Unable to find a suitable FFmpeg encoder");
+ 
+     /* Create a new audio stream in the output file container. */
+     m_stream = avformat_new_stream(m_formatCtx, nullptr);
+     if (!m_stream)
+-      throw EncoderException("Failed to allocate AVStream context");
++      throw FFMpegException("Failed to allocate AVStream context");
+ 
+     m_codecCtx = avcodec_alloc_context3(codec);
+     if (!m_codecCtx)
+-      throw EncoderException("Failed to allocate the encoder context");
++      throw FFMpegException("Failed to allocate the encoder context");
+ 
+     /* Set the basic encoder parameters.
+      * The input file's sample rate is used to avoid a sample rate conversion. */
+-    m_codecCtx->channels = m_iInChannels;
+-    m_codecCtx->channel_layout = av_get_default_channel_layout(m_iInChannels);
++    av_channel_layout_uninit(&m_codecCtx->ch_layout);
++    av_channel_layout_default(&m_codecCtx->ch_layout, m_iInChannels);
+     m_codecCtx->sample_rate = m_iInSampleRate;
+     m_codecCtx->sample_fmt = codec->sample_fmts[0];
+     m_codecCtx->bit_rate = bitrate;
+@@ -128,14 +114,14 @@ bool CEncoderFFmpeg::Init()
+ 
+     int err = avcodec_open2(m_codecCtx, codec, nullptr);
+     if (err < 0)
+-      throw EncoderException("Failed to open the codec {} (error '{}')",
+-                             codec->long_name ? codec->long_name : codec->name,
+-                             FFmpegErrorToString(err));
++      throw FFMpegException("Failed to open the codec {} (error '{}')",
++                            codec->long_name ? codec->long_name : codec->name,
++                            FFMpegErrorToString(err));
+ 
+     err = avcodec_parameters_from_context(m_stream->codecpar, m_codecCtx);
+     if (err < 0)
+-      throw EncoderException("Failed to copy encoder parameters to output stream (error '{}')",
+-                             FFmpegErrorToString(err));
++      throw FFMpegException("Failed to copy encoder parameters to output stream (error '{}')",
++                            FFMpegErrorToString(err));
+ 
+     m_inFormat = GetInputFormat(m_iInBitsPerSample);
+     m_outFormat = m_codecCtx->sample_fmt;
+@@ -150,44 +136,48 @@ bool CEncoderFFmpeg::Init()
+ 
+     m_bufferFrame = av_frame_alloc();
+     if (!m_bufferFrame || !m_buffer)
+-      throw EncoderException("Failed to allocate necessary buffers");
++      throw FFMpegException("Failed to allocate necessary buffers");
+ 
+     m_bufferFrame->nb_samples = m_codecCtx->frame_size;
+     m_bufferFrame->format = m_inFormat;
+-    m_bufferFrame->channel_layout = m_codecCtx->channel_layout;
++
++    av_channel_layout_uninit(&m_bufferFrame->ch_layout);
++    av_channel_layout_copy(&m_bufferFrame->ch_layout, &m_codecCtx->ch_layout);
++
+     m_bufferFrame->sample_rate = m_codecCtx->sample_rate;
+ 
+     err = av_frame_get_buffer(m_bufferFrame, 0);
+     if (err < 0)
+-      throw EncoderException("Could not allocate output frame samples (error '{}')",
+-                             FFmpegErrorToString(err));
++      throw FFMpegException("Could not allocate output frame samples (error '{}')",
++                            FFMpegErrorToString(err));
+ 
+     avcodec_fill_audio_frame(m_bufferFrame, m_iInChannels, m_inFormat, m_buffer, m_neededBytes, 0);
+ 
+     if (m_needConversion)
+     {
+-      m_swrCtx = swr_alloc_set_opts(nullptr, m_codecCtx->channel_layout, m_outFormat,
+-                                    m_codecCtx->sample_rate, m_codecCtx->channel_layout, m_inFormat,
++      int ret = swr_alloc_set_opts2(&m_swrCtx, &m_codecCtx->ch_layout, m_outFormat,
++                                    m_codecCtx->sample_rate, &m_codecCtx->ch_layout, m_inFormat,
+                                     m_codecCtx->sample_rate, 0, nullptr);
+-      if (!m_swrCtx || swr_init(m_swrCtx) < 0)
+-        throw EncoderException("Failed to initialize the resampler");
++      if (ret || swr_init(m_swrCtx) < 0)
++        throw FFMpegException("Failed to initialize the resampler");
+ 
+       m_resampledBufferSize =
+           av_samples_get_buffer_size(nullptr, m_iInChannels, m_neededFrames, m_outFormat, 0);
+       m_resampledBuffer = static_cast<uint8_t*>(av_malloc(m_resampledBufferSize));
+       m_resampledFrame = av_frame_alloc();
+       if (!m_resampledBuffer || !m_resampledFrame)
+-        throw EncoderException("Failed to allocate a frame for resampling");
++        throw FFMpegException("Failed to allocate a frame for resampling");
+ 
+       m_resampledFrame->nb_samples = m_neededFrames;
+       m_resampledFrame->format = m_outFormat;
+-      m_resampledFrame->channel_layout = m_codecCtx->channel_layout;
++      av_channel_layout_uninit(&m_resampledFrame->ch_layout);
++      av_channel_layout_copy(&m_resampledFrame->ch_layout, &m_codecCtx->ch_layout);
+       m_resampledFrame->sample_rate = m_codecCtx->sample_rate;
+ 
+       err = av_frame_get_buffer(m_resampledFrame, 0);
+       if (err < 0)
+-        throw EncoderException("Could not allocate output resample frame samples (error '{}')",
+-                               FFmpegErrorToString(err));
++        throw FFMpegException("Could not allocate output resample frame samples (error '{}')",
++                              FFMpegErrorToString(err));
+ 
+       avcodec_fill_audio_frame(m_resampledFrame, m_iInChannels, m_outFormat, m_resampledBuffer,
+                                m_resampledBufferSize, 0);
+@@ -204,7 +194,7 @@ bool CEncoderFFmpeg::Init()
+     /* write the header */
+     err = avformat_write_header(m_formatCtx, nullptr);
+     if (err != 0)
+-      throw EncoderException("Failed to write the header (error '{}')", FFmpegErrorToString(err));
++      throw FFMpegException("Failed to write the header (error '{}')", FFMpegErrorToString(err));
+ 
+     CLog::Log(LOGDEBUG, "CEncoderFFmpeg::{} - Successfully initialized with muxer {} and codec {}",
+               __func__,
+@@ -212,16 +202,19 @@ bool CEncoderFFmpeg::Init()
+                                               : m_formatCtx->oformat->name,
+               codec->long_name ? codec->long_name : codec->name);
+   }
+-  catch (EncoderException& caught)
++  catch (const FFMpegException& caught)
+   {
+     CLog::Log(LOGERROR, "CEncoderFFmpeg::{} - {}", __func__, caught.what());
+ 
+     av_freep(&m_buffer);
++    av_channel_layout_uninit(&m_bufferFrame->ch_layout);
+     av_frame_free(&m_bufferFrame);
+     swr_free(&m_swrCtx);
++    av_channel_layout_uninit(&m_resampledFrame->ch_layout);
+     av_frame_free(&m_resampledFrame);
+     av_freep(&m_resampledBuffer);
+     av_free(m_bcBuffer);
++    av_channel_layout_uninit(&m_codecCtx->ch_layout);
+     avcodec_free_context(&m_codecCtx);
+     if (m_formatCtx)
+     {
+@@ -299,7 +292,7 @@ bool CEncoderFFmpeg::WriteFrame()
+       if (swr_convert(m_swrCtx, m_resampledFrame->data, m_neededFrames,
+                       const_cast<const uint8_t**>(m_bufferFrame->extended_data),
+                       m_neededFrames) < 0)
+-        throw EncoderException("Error resampling audio");
++        throw FFMpegException("Error resampling audio");
+ 
+       frame = m_resampledFrame;
+     }
+@@ -316,8 +309,8 @@ bool CEncoderFFmpeg::WriteFrame()
+     m_bufferSize = 0;
+     err = avcodec_send_frame(m_codecCtx, frame);
+     if (err < 0)
+-      throw EncoderException("Error sending a frame for encoding (error '{}')", __func__,
+-                             FFmpegErrorToString(err));
++      throw FFMpegException("Error sending a frame for encoding (error '{}')",
++                            FFMpegErrorToString(err));
+ 
+     while (err >= 0)
+     {
+@@ -329,19 +322,18 @@ bool CEncoderFFmpeg::WriteFrame()
+       }
+       else if (err < 0)
+       {
+-        throw EncoderException("Error during encoding (error '{}')", __func__,
+-                               FFmpegErrorToString(err));
++        throw FFMpegException("Error during encoding (error '{}')", FFMpegErrorToString(err));
+       }
+ 
+       err = av_write_frame(m_formatCtx, pkt);
+       if (err < 0)
+-        throw EncoderException("Failed to write the frame data (error '{}')", __func__,
+-                               FFmpegErrorToString(err));
++        throw FFMpegException("Failed to write the frame data (error '{}')",
++                              FFMpegErrorToString(err));
+ 
+       av_packet_unref(pkt);
+     }
+   }
+-  catch (EncoderException& caught)
++  catch (const FFMpegException& caught)
+   {
+     CLog::Log(LOGERROR, "CEncoderFFmpeg::{} - {}", __func__, caught.what());
+   }
+@@ -366,8 +358,10 @@ bool CEncoderFFmpeg::Close()
+ 
+     /* Flush if needed */
+     av_freep(&m_buffer);
++    av_channel_layout_uninit(&m_bufferFrame->ch_layout);
+     av_frame_free(&m_bufferFrame);
+     swr_free(&m_swrCtx);
++    av_channel_layout_uninit(&m_resampledFrame->ch_layout);
+     av_frame_free(&m_resampledFrame);
+     av_freep(&m_resampledBuffer);
+     m_needConversion = false;
+@@ -379,6 +373,7 @@ bool CEncoderFFmpeg::Close()
+ 
+     /* cleanup */
+     av_free(m_bcBuffer);
++    av_channel_layout_uninit(&m_codecCtx->ch_layout);
+     avcodec_free_context(&m_codecCtx);
+     av_freep(&m_formatCtx->pb);
+     avformat_free_context(m_formatCtx);
+@@ -400,14 +395,6 @@ AVSampleFormat CEncoderFFmpeg::GetInputFormat(int inBitsPerSample)
+     case 32:
+       return AV_SAMPLE_FMT_S32;
+     default:
+-      throw EncoderException("Invalid input bits per sample");
++      throw FFMpegException("Invalid input bits per sample");
+   }
+ }
+-
+-std::string CEncoderFFmpeg::FFmpegErrorToString(int err)
+-{
+-  std::string text;
+-  text.reserve(AV_ERROR_MAX_STRING_SIZE);
+-  av_strerror(err, text.data(), AV_ERROR_MAX_STRING_SIZE);
+-  return text;
+-}
+diff --git a/xbmc/cdrip/EncoderFFmpeg.h b/xbmc/cdrip/EncoderFFmpeg.h
+index 39112ba3ba..0c2391c7ab 100644
+--- a/xbmc/cdrip/EncoderFFmpeg.h
++++ b/xbmc/cdrip/EncoderFFmpeg.h
+@@ -39,7 +39,6 @@ private:
+   void SetTag(const std::string& tag, const std::string& value);
+   bool WriteFrame();
+   AVSampleFormat GetInputFormat(int inBitsPerSample);
+-  std::string FFmpegErrorToString(int err);
+ 
+   AVFormatContext* m_formatCtx{nullptr};
+   AVCodecContext* m_codecCtx{nullptr};
+diff --git a/xbmc/cores/AudioEngine/Encoders/AEEncoderFFmpeg.cpp b/xbmc/cores/AudioEngine/Encoders/AEEncoderFFmpeg.cpp
+index 09bb26a327..ba35c95063 100644
+--- a/xbmc/cores/AudioEngine/Encoders/AEEncoderFFmpeg.cpp
++++ b/xbmc/cores/AudioEngine/Encoders/AEEncoderFFmpeg.cpp
+@@ -10,13 +10,24 @@
+ #define DTS_ENCODE_BITRATE 1411200
+ 
+ #include "cores/AudioEngine/Encoders/AEEncoderFFmpeg.h"
+-#include "cores/AudioEngine/Utils/AEUtil.h"
++
+ #include "ServiceBroker.h"
+-#include "utils/log.h"
++#include "cores/AudioEngine/Utils/AEUtil.h"
++#include "cores/FFmpeg.h"
+ #include "settings/Settings.h"
+ #include "settings/SettingsComponent.h"
+-#include <string.h>
++#include "utils/log.h"
++
++extern "C"
++{
++#include <libavutil/channel_layout.h>
++}
++
+ #include <cassert>
++#include <string.h>
++
++using FFMPEG_HELP_TOOLS::FFMpegErrorToString;
++using FFMPEG_HELP_TOOLS::FFMpegException;
+ 
+ CAEEncoderFFmpeg::CAEEncoderFFmpeg() : m_CodecCtx(NULL), m_SwrCtx(NULL)
+ {
+@@ -26,6 +37,7 @@ CAEEncoderFFmpeg::~CAEEncoderFFmpeg()
+ {
+   Reset();
+   swr_free(&m_SwrCtx);
++  av_channel_layout_uninit(&m_CodecCtx->ch_layout);
+   avcodec_free_context(&m_CodecCtx);
+ }
+ 
+@@ -81,7 +93,7 @@ bool CAEEncoderFFmpeg::Initialize(AEAudioFormat &format, bool allow_planar_input
+ 
+   bool ac3 = CServiceBroker::GetSettingsComponent()->GetSettings()->GetBool(CSettings::SETTING_AUDIOOUTPUT_AC3PASSTHROUGH);
+ 
+-  AVCodec *codec = NULL;
++  const AVCodec* codec = nullptr;
+ 
+   /* fallback to ac3 if we support it, we might not have DTS support */
+   if (ac3)
+@@ -102,7 +114,8 @@ bool CAEEncoderFFmpeg::Initialize(AEAudioFormat &format, bool allow_planar_input
+ 
+   m_CodecCtx->bit_rate = m_BitRate;
+   m_CodecCtx->sample_rate = format.m_sampleRate;
+-  m_CodecCtx->channel_layout = AV_CH_LAYOUT_5POINT1_BACK;
++  av_channel_layout_uninit(&m_CodecCtx->ch_layout);
++  av_channel_layout_from_mask(&m_CodecCtx->ch_layout, AV_CH_LAYOUT_5POINT1_BACK);
+ 
+   /* select a suitable data format */
+   if (codec->sample_fmts)
+@@ -179,22 +192,28 @@ bool CAEEncoderFFmpeg::Initialize(AEAudioFormat &format, bool allow_planar_input
+           LOGERROR,
+           "CAEEncoderFFmpeg::Initialize - Unable to find a suitable data format for the codec ({})",
+           m_CodecName);
++      av_channel_layout_uninit(&m_CodecCtx->ch_layout);
+       avcodec_free_context(&m_CodecCtx);
+       return false;
+     }
+   }
+ 
+-  m_CodecCtx->channels = BuildChannelLayout(m_CodecCtx->channel_layout, m_Layout);
++  uint64_t mask = m_CodecCtx->ch_layout.u.mask;
++  av_channel_layout_uninit(&m_CodecCtx->ch_layout);
++  av_channel_layout_from_mask(&m_CodecCtx->ch_layout, mask);
++  m_CodecCtx->ch_layout.nb_channels = BuildChannelLayout(mask, m_Layout);
+ 
+   /* open the codec */
+   if (avcodec_open2(m_CodecCtx, codec, NULL))
+   {
++    av_channel_layout_uninit(&m_CodecCtx->ch_layout);
+     avcodec_free_context(&m_CodecCtx);
+     return false;
+   }
+ 
+   format.m_frames = m_CodecCtx->frame_size;
+-  format.m_frameSize = m_CodecCtx->channels * (CAEUtil::DataFormatToBits(format.m_dataFormat) >> 3);
++  int channels = m_CodecCtx->ch_layout.nb_channels;
++  format.m_frameSize = channels * (CAEUtil::DataFormatToBits(format.m_dataFormat) >> 3);
+   format.m_channelLayout = m_Layout;
+ 
+   m_CurrentFormat = format;
+@@ -204,14 +223,14 @@ bool CAEEncoderFFmpeg::Initialize(AEAudioFormat &format, bool allow_planar_input
+ 
+   if (m_NeedConversion)
+   {
+-    m_SwrCtx = swr_alloc_set_opts(NULL,
+-                      m_CodecCtx->channel_layout, m_CodecCtx->sample_fmt, m_CodecCtx->sample_rate,
+-                      m_CodecCtx->channel_layout, AV_SAMPLE_FMT_FLT, m_CodecCtx->sample_rate,
+-                      0, NULL);
+-    if (!m_SwrCtx || swr_init(m_SwrCtx) < 0)
++    int ret = swr_alloc_set_opts2(&m_SwrCtx, &m_CodecCtx->ch_layout, m_CodecCtx->sample_fmt,
++                                  m_CodecCtx->sample_rate, &m_CodecCtx->ch_layout,
++                                  AV_SAMPLE_FMT_FLT, m_CodecCtx->sample_rate, 0, NULL);
++    if (ret || swr_init(m_SwrCtx) < 0)
+     {
+       CLog::Log(LOGERROR, "CAEEncoderFFmpeg::Initialize - Failed to initialise resampler.");
+       swr_free(&m_SwrCtx);
++      av_channel_layout_uninit(&m_CodecCtx->ch_layout);
+       avcodec_free_context(&m_CodecCtx);
+       return false;
+     }
+@@ -242,63 +261,79 @@ unsigned int CAEEncoderFFmpeg::GetFrames()
+ 
+ int CAEEncoderFFmpeg::Encode(uint8_t *in, int in_size, uint8_t *out, int out_size)
+ {
+-  int got_output;
+-  AVFrame *frame;
++  int size = 0;
++  int err = AVERROR_UNKNOWN;
++  AVFrame* frame = nullptr;
++  AVPacket* pkt = nullptr;
+ 
+   if (!m_CodecCtx)
+-    return 0;
+-
+-  /* allocate the input frame
+-   * sadly, we have to alloc/dealloc it everytime since we have no guarantee the
+-   * data argument will be constant over iterated calls and the frame needs to
+-   * setup pointers inside data */
+-  frame = av_frame_alloc();
+-  if (!frame)
+-    return 0;
++    return size;
+ 
+-  frame->nb_samples = m_CodecCtx->frame_size;
+-  frame->format = m_CodecCtx->sample_fmt;
+-  frame->channel_layout = m_CodecCtx->channel_layout;
+-  frame->channels = m_CodecCtx->channels;
++  try
++  {
++    /* allocate the input frame and output packet
++     * sadly, we have to alloc/dealloc it everytime since we have no guarantee the
++     * data argument will be constant over iterated calls and the frame needs to
++     * setup pointers inside data */
++    frame = av_frame_alloc();
++    pkt = av_packet_alloc();
++    if (!frame || !pkt)
++      throw FFMpegException(
++          "Failed to allocate \"AVFrame\" or \"AVPacket\" for encoding (error '{}')",
++          strerror(errno));
++
++    frame->nb_samples = m_CodecCtx->frame_size;
++    frame->format = m_CodecCtx->sample_fmt;
++    av_channel_layout_uninit(&frame->ch_layout);
++    av_channel_layout_copy(&frame->ch_layout, &m_CodecCtx->ch_layout);
++    int channelNum = m_CodecCtx->ch_layout.nb_channels;
++
++    avcodec_fill_audio_frame(frame, channelNum, m_CodecCtx->sample_fmt, in, in_size, 0);
++
++    pkt->size = out_size;
++    pkt->data = out;
++
++    /* encode it */
++    err = avcodec_send_frame(m_CodecCtx, frame);
++    if (err < 0)
++      throw FFMpegException("Error sending a frame for encoding (error '{}')",
++                            FFMpegErrorToString(err));
++
++    while (err >= 0)
++    {
++      err = avcodec_receive_packet(m_CodecCtx, pkt);
++      if (err == AVERROR(EAGAIN) || err == AVERROR_EOF)
++      {
++        av_channel_layout_uninit(&frame->ch_layout);
++        av_frame_free(&frame);
++        av_packet_free(&pkt);
++        return (err == AVERROR(EAGAIN)) ? -1 : 0;
++      }
++      else if (err < 0)
++      {
++        throw FFMpegException("Error during encoding (error '{}')", FFMpegErrorToString(err));
++      }
+ 
+-  avcodec_fill_audio_frame(frame, m_CodecCtx->channels, m_CodecCtx->sample_fmt,
+-                    in, in_size, 0);
++      av_packet_unref(pkt);
++    }
+ 
+-  /* initialize the output packet */
+-  AVPacket* pkt = av_packet_alloc();
+-  if (!pkt)
++    size = pkt->size;
++  }
++  catch (const FFMpegException& caught)
+   {
+-    CLog::Log(LOGERROR, "CAEEncoderFFmpeg::{} - av_packet_alloc failed: {}", __FUNCTION__,
+-              strerror(errno));
+-    av_frame_free(&frame);
+-    return 0;
++    CLog::Log(LOGERROR, "CAEEncoderFFmpeg::{} - {}", __func__, caught.what());
+   }
+ 
+-  pkt->size = out_size;
+-  pkt->data = out;
+-
+-  /* encode it */
+-  int ret = avcodec_encode_audio2(m_CodecCtx, pkt, frame, &got_output);
+-
+-  int size = pkt->size;
+-
+   /* free temporary data */
+   av_frame_free(&frame);
+ 
+   /* free the packet */
+   av_packet_free(&pkt);
+ 
+-  if (ret < 0 || !got_output)
+-  {
+-    CLog::Log(LOGERROR, "CAEEncoderFFmpeg::Encode - Encoding failed");
+-    return 0;
+-  }
+-
+   /* return the number of frames used */
+   return size;
+ }
+ 
+-
+ int CAEEncoderFFmpeg::GetData(uint8_t **data)
+ {
+   int size;
+diff --git a/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAE.cpp b/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAE.cpp
+index 9053603e5c..f5dcc117c7 100644
+--- a/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAE.cpp
++++ b/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAE.cpp
+@@ -16,17 +16,16 @@ using namespace ActiveAE;
+ #include "ActiveAESound.h"
+ #include "ActiveAEStream.h"
+ #include "ServiceBroker.h"
++#include "cores/AudioEngine/AEResampleFactory.h"
++#include "cores/AudioEngine/Encoders/AEEncoderFFmpeg.h"
+ #include "cores/AudioEngine/Interfaces/IAudioCallback.h"
+-#include "cores/AudioEngine/Utils/AEUtil.h"
+ #include "cores/AudioEngine/Utils/AEStreamData.h"
+ #include "cores/AudioEngine/Utils/AEStreamInfo.h"
+-#include "cores/AudioEngine/AEResampleFactory.h"
+-#include "cores/AudioEngine/Encoders/AEEncoderFFmpeg.h"
+-
++#include "cores/AudioEngine/Utils/AEUtil.h"
+ #include "settings/Settings.h"
+ #include "settings/SettingsComponent.h"
+-#include "windowing/WinSystem.h"
+ #include "utils/log.h"
++#include "windowing/WinSystem.h"
+ 
+ using namespace std::chrono_literals;
+ 
+@@ -3043,8 +3042,8 @@ IAE::SoundPtr CActiveAE::MakeSound(const std::string& file)
+   AVFormatContext *fmt_ctx = nullptr;
+   AVCodecContext *dec_ctx = nullptr;
+   AVIOContext *io_ctx;
+-  AVInputFormat *io_fmt = nullptr;
+-  AVCodec *dec = nullptr;
++  const AVInputFormat* io_fmt = nullptr;
++  const AVCodec* dec = nullptr;
+   SampleConfig config;
+ 
+   // No custom deleter until sound is registered
+@@ -3096,8 +3095,8 @@ IAE::SoundPtr CActiveAE::MakeSound(const std::string& file)
+       AVCodecID codecId = fmt_ctx->streams[0]->codecpar->codec_id;
+       dec = avcodec_find_decoder(codecId);
+       config.sample_rate = fmt_ctx->streams[0]->codecpar->sample_rate;
+-      config.channels = fmt_ctx->streams[0]->codecpar->channels;
+-      config.channel_layout = fmt_ctx->streams[0]->codecpar->channel_layout;
++      config.channels = fmt_ctx->streams[0]->codecpar->ch_layout.nb_channels;
++      config.channel_layout = fmt_ctx->streams[0]->codecpar->ch_layout.u.mask;
+     }
+   }
+   if (dec == nullptr)
+@@ -3113,10 +3112,14 @@ IAE::SoundPtr CActiveAE::MakeSound(const std::string& file)
+ 
+   dec_ctx = avcodec_alloc_context3(dec);
+   dec_ctx->sample_rate = config.sample_rate;
+-  dec_ctx->channels = config.channels;
++  AVChannelLayout layout = {};
+   if (!config.channel_layout)
+-    config.channel_layout = av_get_default_channel_layout(config.channels);
+-  dec_ctx->channel_layout = config.channel_layout;
++    av_channel_layout_default(&layout, config.channels);
++  else
++    av_channel_layout_from_mask(&layout, config.channel_layout);
++  config.channel_layout = layout.u.mask;
++  av_channel_layout_copy(&dec_ctx->ch_layout, &layout);
++  av_channel_layout_uninit(&layout);
+ 
+   AVPacket* avpkt = av_packet_alloc();
+   if (!avpkt)
+@@ -3183,6 +3186,7 @@ IAE::SoundPtr CActiveAE::MakeSound(const std::string& file)
+ 
+   av_packet_free(&avpkt);
+   av_frame_free(&decoded_frame);
++  av_channel_layout_uninit(&dec_ctx->ch_layout);
+   avcodec_free_context(&dec_ctx);
+   avformat_close_input(&fmt_ctx);
+   if (io_ctx)
+diff --git a/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAEFilter.cpp b/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAEFilter.cpp
+index 26b669a2cf..9c79d8740d 100644
+--- a/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAEFilter.cpp
++++ b/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAEFilter.cpp
+@@ -12,8 +12,8 @@
+ #include <algorithm>
+ 
+ extern "C" {
+-#include <libavfilter/avfilter.h>
+ #include <libavcodec/avcodec.h>
++#include <libavfilter/avfilter.h>
+ #include <libavfilter/buffersink.h>
+ #include <libavfilter/buffersrc.h>
+ #include <libswresample/swresample.h>
+@@ -171,7 +171,10 @@ void CActiveAEFilter::CloseFilter()
+   }
+ 
+   if (m_pOutFrame)
++  {
++    av_channel_layout_uninit(&m_pOutFrame->ch_layout);
+     av_frame_free(&m_pOutFrame);
++  }
+ 
+   if (m_pConvertFrame)
+     av_frame_free(&m_pConvertFrame);
+@@ -205,10 +208,9 @@ int CActiveAEFilter::ProcessFilter(uint8_t **dst_buffer, int dst_samples, uint8_
+     if (!frame)
+       return -1;
+ 
+-    int channels = av_get_channel_layout_nb_channels(m_channelLayout);
+-
+-    frame->channel_layout = m_channelLayout;
+-    frame->channels = channels;
++    av_channel_layout_uninit(&frame->ch_layout);
++    av_channel_layout_from_mask(&frame->ch_layout, m_channelLayout);
++    int channels = frame->ch_layout.nb_channels;
+     frame->sample_rate = m_sampleRate;
+     frame->nb_samples = src_samples;
+     frame->format = m_sampleFormat;
+@@ -224,6 +226,7 @@ int CActiveAEFilter::ProcessFilter(uint8_t **dst_buffer, int dst_samples, uint8_
+                              src_buffer[0], src_bufsize, 16);
+     if (result < 0)
+     {
++      av_channel_layout_uninit(&frame->ch_layout);
+       av_frame_free(&frame);
+       CLog::Log(LOGERROR, "CActiveAEFilter::ProcessFilter - avcodec_fill_audio_frame failed");
+       m_filterEof = true;
+@@ -231,6 +234,7 @@ int CActiveAEFilter::ProcessFilter(uint8_t **dst_buffer, int dst_samples, uint8_
+     }
+ 
+     result = av_buffersrc_write_frame(m_pFilterCtxIn, frame);
++    av_channel_layout_uninit(&frame->ch_layout);
+     av_frame_free(&frame);
+     if (result < 0)
+     {
+@@ -284,7 +288,8 @@ int CActiveAEFilter::ProcessFilter(uint8_t **dst_buffer, int dst_samples, uint8_
+     {
+       av_frame_unref(m_pOutFrame);
+       m_pOutFrame->format = m_sampleFormat;
+-      m_pOutFrame->channel_layout = m_channelLayout;
++      av_channel_layout_uninit(&m_pOutFrame->ch_layout);
++      av_channel_layout_from_mask(&m_pOutFrame->ch_layout, m_channelLayout);
+       m_pOutFrame->sample_rate = m_sampleRate;
+       result = swr_convert_frame(m_pConvertCtx, m_pOutFrame, m_pConvertFrame);
+       av_frame_unref(m_pConvertFrame);
+@@ -302,7 +307,10 @@ int CActiveAEFilter::ProcessFilter(uint8_t **dst_buffer, int dst_samples, uint8_
+ 
+   if (m_hasData)
+   {
+-    int channels = av_get_channel_layout_nb_channels(m_channelLayout);
++    AVChannelLayout layout = {};
++    av_channel_layout_from_mask(&layout, m_channelLayout);
++    int channels = layout.nb_channels;
++    av_channel_layout_uninit(&layout);
+     int planes = av_sample_fmt_is_planar(m_sampleFormat) ? channels : 1;
+     int samples = std::min(dst_samples, m_pOutFrame->nb_samples - m_sampleOffset);
+     int bytes = samples * av_get_bytes_per_sample(m_sampleFormat) * channels / planes;
+diff --git a/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAEResampleFFMPEG.cpp b/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAEResampleFFMPEG.cpp
+index bfef837114..02c8eb1b83 100644
+--- a/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAEResampleFFMPEG.cpp
++++ b/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAEResampleFFMPEG.cpp
+@@ -49,15 +49,30 @@ bool CActiveAEResampleFFMPEG::Init(SampleConfig dstConfig, SampleConfig srcConfi
+     m_doesResample = true;
+ 
+   if (m_dst_chan_layout == 0)
+-    m_dst_chan_layout = av_get_default_channel_layout(m_dst_channels);
++  {
++    AVChannelLayout layout = {};
++    av_channel_layout_default(&layout, m_dst_channels);
++    m_dst_chan_layout = layout.u.mask;
++    av_channel_layout_uninit(&layout);
++  }
+   if (m_src_chan_layout == 0)
+-    m_src_chan_layout = av_get_default_channel_layout(m_src_channels);
++  {
++    AVChannelLayout layout = {};
++    av_channel_layout_default(&layout, m_src_channels);
++    m_src_chan_layout = layout.u.mask;
++    av_channel_layout_uninit(&layout);
++  }
+ 
+-  m_pContext = swr_alloc_set_opts(NULL, m_dst_chan_layout, m_dst_fmt, m_dst_rate,
+-                                                        m_src_chan_layout, m_src_fmt, m_src_rate,
+-                                                        0, NULL);
++  AVChannelLayout dstChLayout = {};
++  AVChannelLayout srcChLayout = {};
+ 
+-  if (!m_pContext)
++  av_channel_layout_from_mask(&dstChLayout, m_dst_chan_layout);
++  av_channel_layout_from_mask(&srcChLayout, m_src_chan_layout);
++
++  int ret = swr_alloc_set_opts2(&m_pContext, &dstChLayout, m_dst_fmt, m_dst_rate, &srcChLayout,
++                                m_src_fmt, m_src_rate, 0, NULL);
++
++  if (ret)
+   {
+     CLog::Log(LOGERROR, "CActiveAEResampleFFMPEG::Init - create context failed");
+     return false;
+@@ -126,10 +141,12 @@ bool CActiveAEResampleFFMPEG::Init(SampleConfig dstConfig, SampleConfig srcConfi
+   else if (upmix && m_src_channels == 2 && m_dst_channels > 2)
+   {
+     memset(m_rematrix, 0, sizeof(m_rematrix));
++    av_channel_layout_uninit(&dstChLayout);
++    av_channel_layout_from_mask(&dstChLayout, m_dst_chan_layout);
+     for (int out=0; out<m_dst_channels; out++)
+     {
+-      uint64_t out_chan = av_channel_layout_extract_channel(m_dst_chan_layout, out);
+-      switch(out_chan)
++      AVChannel outChan = av_channel_layout_channel_from_index(&dstChLayout, out);
++      switch (outChan)
+       {
+         case AV_CH_FRONT_LEFT:
+         case AV_CH_BACK_LEFT:
+@@ -154,6 +171,8 @@ bool CActiveAEResampleFFMPEG::Init(SampleConfig dstConfig, SampleConfig srcConfi
+       }
+     }
+ 
++    av_channel_layout_uninit(&dstChLayout);
++
+     if (swr_set_matrix(m_pContext, (const double*)m_rematrix, AE_CH_MAX) < 0)
+     {
+       CLog::Log(LOGERROR, "CActiveAEResampleFFMPEG::Init - setting channel matrix failed");
+diff --git a/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAEStream.cpp b/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAEStream.cpp
+index 858b0f2f22..a52ac2829f 100644
+--- a/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAEStream.cpp
++++ b/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAEStream.cpp
+@@ -88,7 +88,7 @@ void CActiveAEStream::InitRemapper()
+   for(unsigned int i=0; i<m_format.m_channelLayout.Count(); i++)
+   {
+     avLast = avCur;
+-    avCur = CAEUtil::GetAVChannel(m_format.m_channelLayout[i]);
++    avCur = CAEUtil::GetAVChannelMask(m_format.m_channelLayout[i]);
+     if(avCur < avLast)
+     {
+       needRemap = true;
+diff --git a/xbmc/cores/AudioEngine/Utils/AEUtil.cpp b/xbmc/cores/AudioEngine/Utils/AEUtil.cpp
+index bfa2cf9e4c..81a5f1995a 100644
+--- a/xbmc/cores/AudioEngine/Utils/AEUtil.cpp
++++ b/xbmc/cores/AudioEngine/Utils/AEUtil.cpp
+@@ -19,10 +19,6 @@
+ #include <xmmintrin.h>
+ #endif
+ 
+-extern "C" {
+-#include <libavutil/channel_layout.h>
+-}
+-
+ void AEDelayStatus::SetDelay(double d)
+ {
+   delay = d;
+@@ -550,34 +546,64 @@ AVSampleFormat CAEUtil::GetAVSampleFormat(AEDataFormat format)
+   }
+ }
+ 
+-uint64_t CAEUtil::GetAVChannel(enum AEChannel aechannel)
++uint64_t CAEUtil::GetAVChannelMask(enum AEChannel aechannel)
++{
++  enum AVChannel ch = GetAVChannel(aechannel);
++  if (ch == AV_CHAN_NONE)
++    return 0;
++  return (1ULL << ch);
++}
++
++enum AVChannel CAEUtil::GetAVChannel(enum AEChannel aechannel)
+ {
+   switch (aechannel)
+   {
+-  case AE_CH_FL:   return AV_CH_FRONT_LEFT;
+-  case AE_CH_FR:   return AV_CH_FRONT_RIGHT;
+-  case AE_CH_FC:   return AV_CH_FRONT_CENTER;
+-  case AE_CH_LFE:  return AV_CH_LOW_FREQUENCY;
+-  case AE_CH_BL:   return AV_CH_BACK_LEFT;
+-  case AE_CH_BR:   return AV_CH_BACK_RIGHT;
+-  case AE_CH_FLOC: return AV_CH_FRONT_LEFT_OF_CENTER;
+-  case AE_CH_FROC: return AV_CH_FRONT_RIGHT_OF_CENTER;
+-  case AE_CH_BC:   return AV_CH_BACK_CENTER;
+-  case AE_CH_SL:   return AV_CH_SIDE_LEFT;
+-  case AE_CH_SR:   return AV_CH_SIDE_RIGHT;
+-  case AE_CH_TC:   return AV_CH_TOP_CENTER;
+-  case AE_CH_TFL:  return AV_CH_TOP_FRONT_LEFT;
+-  case AE_CH_TFC:  return AV_CH_TOP_FRONT_CENTER;
+-  case AE_CH_TFR:  return AV_CH_TOP_FRONT_RIGHT;
+-  case AE_CH_TBL:  return AV_CH_TOP_BACK_LEFT;
+-  case AE_CH_TBC:  return AV_CH_TOP_BACK_CENTER;
+-  case AE_CH_TBR:  return AV_CH_TOP_BACK_RIGHT;
+-  default:
+-    return 0;
++    case AE_CH_FL:
++      return AV_CHAN_FRONT_LEFT;
++    case AE_CH_FR:
++      return AV_CHAN_FRONT_RIGHT;
++    case AE_CH_FC:
++      return AV_CHAN_FRONT_CENTER;
++    case AE_CH_LFE:
++      return AV_CHAN_LOW_FREQUENCY;
++    case AE_CH_BL:
++      return AV_CHAN_BACK_LEFT;
++    case AE_CH_BR:
++      return AV_CHAN_BACK_RIGHT;
++    case AE_CH_FLOC:
++      return AV_CHAN_FRONT_LEFT_OF_CENTER;
++    case AE_CH_FROC:
++      return AV_CHAN_FRONT_RIGHT_OF_CENTER;
++    case AE_CH_BC:
++      return AV_CHAN_BACK_CENTER;
++    case AE_CH_SL:
++      return AV_CHAN_SIDE_LEFT;
++    case AE_CH_SR:
++      return AV_CHAN_SIDE_RIGHT;
++    case AE_CH_TC:
++      return AV_CHAN_TOP_CENTER;
++    case AE_CH_TFL:
++      return AV_CHAN_TOP_FRONT_LEFT;
++    case AE_CH_TFC:
++      return AV_CHAN_TOP_FRONT_CENTER;
++    case AE_CH_TFR:
++      return AV_CHAN_TOP_FRONT_RIGHT;
++    case AE_CH_TBL:
++      return AV_CHAN_TOP_BACK_LEFT;
++    case AE_CH_TBC:
++      return AV_CHAN_TOP_BACK_CENTER;
++    case AE_CH_TBR:
++      return AV_CHAN_TOP_BACK_RIGHT;
++    default:
++      return AV_CHAN_NONE;
+   }
+ }
+ 
+ int CAEUtil::GetAVChannelIndex(enum AEChannel aechannel, uint64_t layout)
+ {
+-  return av_get_channel_layout_channel_index(layout, GetAVChannel(aechannel));
++  AVChannelLayout ch_layout = {};
++  av_channel_layout_from_mask(&ch_layout, layout);
++  int idx = av_channel_layout_index_from_channel(&ch_layout, GetAVChannel(aechannel));
++  av_channel_layout_uninit(&ch_layout);
++  return idx;
+ }
+diff --git a/xbmc/cores/AudioEngine/Utils/AEUtil.h b/xbmc/cores/AudioEngine/Utils/AEUtil.h
+index 034e115ee8..6b5fc123c6 100644
+--- a/xbmc/cores/AudioEngine/Utils/AEUtil.h
++++ b/xbmc/cores/AudioEngine/Utils/AEUtil.h
+@@ -13,6 +13,7 @@
+ #include <math.h>
+ 
+ extern "C" {
++#include <libavutil/channel_layout.h>
+ #include <libavutil/samplefmt.h>
+ }
+ 
+@@ -171,6 +172,7 @@ public:
+   static uint64_t GetAVChannelLayout(const CAEChannelInfo &info);
+   static CAEChannelInfo GetAEChannelLayout(uint64_t layout);
+   static AVSampleFormat GetAVSampleFormat(AEDataFormat format);
+-  static uint64_t GetAVChannel(enum AEChannel aechannel);
++  static uint64_t GetAVChannelMask(enum AEChannel aechannel);
++  static enum AVChannel GetAVChannel(enum AEChannel aechannel);
+   static int GetAVChannelIndex(enum AEChannel aechannel, uint64_t layout);
+ };
+diff --git a/xbmc/cores/FFmpeg.cpp b/xbmc/cores/FFmpeg.cpp
+index 03a29f7db4..de1765ed52 100644
+--- a/xbmc/cores/FFmpeg.cpp
++++ b/xbmc/cores/FFmpeg.cpp
+@@ -21,6 +21,19 @@
+ 
+ static thread_local CFFmpegLog* CFFmpegLogTls;
+ 
++namespace FFMPEG_HELP_TOOLS
++{
++
++std::string FFMpegErrorToString(int err)
++{
++  std::string text;
++  text.resize(AV_ERROR_MAX_STRING_SIZE);
++  av_strerror(err, text.data(), AV_ERROR_MAX_STRING_SIZE);
++  return text;
++}
++
++} // namespace FFMPEG_HELP_TOOLS
++
+ void CFFmpegLog::SetLogLevel(int level)
+ {
+   CFFmpegLog::ClearLogLevel();
+@@ -116,4 +129,3 @@ void ff_avutil_log(void* ptr, int level, const char* format, va_list va)
+   }
+   buffer.erase(0, start);
+ }
+-
+diff --git a/xbmc/cores/FFmpeg.h b/xbmc/cores/FFmpeg.h
+index e1194d19e9..0de52f5ca9 100644
+--- a/xbmc/cores/FFmpeg.h
++++ b/xbmc/cores/FFmpeg.h
+@@ -10,6 +10,7 @@
+ 
+ #include "ServiceBroker.h"
+ #include "utils/CPUInfo.h"
++#include "utils/StringUtils.h"
+ 
+ extern "C" {
+ #include <libavcodec/avcodec.h>
+@@ -21,6 +22,24 @@ extern "C" {
+ #include <libpostproc/postprocess.h>
+ }
+ 
++namespace FFMPEG_HELP_TOOLS
++{
++
++struct FFMpegException : public std::exception
++{
++  std::string s;
++  template<typename... Args>
++  FFMpegException(const std::string& fmt, Args&&... args)
++    : s(StringUtils::Format(fmt, std::forward<Args>(args)...))
++  {
++  }
++  const char* what() const noexcept override { return s.c_str(); }
++};
++
++std::string FFMpegErrorToString(int err);
++
++} // namespace FFMPEG_HELP_TOOLS
++
+ inline int PPCPUFlags()
+ {
+   unsigned int cpuFeatures = CServiceBroker::GetCPUInfo()->GetCPUFeatures();
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Audio/DVDAudioCodecFFmpeg.cpp b/xbmc/cores/VideoPlayer/DVDCodecs/Audio/DVDAudioCodecFFmpeg.cpp
+index 25f3f08e1f..b2849c797d 100644
+--- a/xbmc/cores/VideoPlayer/DVDCodecs/Audio/DVDAudioCodecFFmpeg.cpp
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Audio/DVDAudioCodecFFmpeg.cpp
+@@ -7,14 +7,16 @@
+  */
+ 
+ #include "DVDAudioCodecFFmpeg.h"
+-#include "ServiceBroker.h"
++
+ #include "../../DVDStreamInfo.h"
+-#include "utils/log.h"
++#include "DVDCodecs/DVDCodecs.h"
++#include "ServiceBroker.h"
++#include "cores/AudioEngine/Utils/AEUtil.h"
++#include "cores/FFmpeg.h"
+ #include "settings/AdvancedSettings.h"
+ #include "settings/Settings.h"
+ #include "settings/SettingsComponent.h"
+-#include "DVDCodecs/DVDCodecs.h"
+-#include "cores/AudioEngine/Utils/AEUtil.h"
++#include "utils/log.h"
+ 
+ extern "C" {
+ #include <libavutil/opt.h>
+@@ -44,7 +46,7 @@ bool CDVDAudioCodecFFmpeg::Open(CDVDStreamInfo &hints, CDVDCodecOptions &options
+     return false;
+   }
+ 
+-  AVCodec* pCodec = NULL;
++  const AVCodec* pCodec = nullptr;
+   bool allowdtshddecode = true;
+ 
+   // set any special options
+@@ -76,7 +78,9 @@ bool CDVDAudioCodecFFmpeg::Open(CDVDStreamInfo &hints, CDVDCodecOptions &options
+ 
+   m_matrixEncoding = AV_MATRIX_ENCODING_NONE;
+   m_channels = 0;
+-  m_pCodecContext->channels = hints.channels;
++  av_channel_layout_uninit(&m_pCodecContext->ch_layout);
++  m_pCodecContext->ch_layout.order = AV_CHANNEL_ORDER_NATIVE;
++  m_pCodecContext->ch_layout.nb_channels = hints.channels;
+   m_hint_layout = hints.channellayout;
+   m_pCodecContext->sample_rate = hints.samplerate;
+   m_pCodecContext->block_align = hints.blockalign;
+@@ -259,12 +263,13 @@ int CDVDAudioCodecFFmpeg::GetData(uint8_t** dst)
+     m_format.m_frameSize = m_format.m_channelLayout.Count() *
+                            CAEUtil::DataFormatToBits(m_format.m_dataFormat) >> 3;
+ 
+-    int planes = av_sample_fmt_is_planar(m_pCodecContext->sample_fmt) ? m_pFrame->channels : 1;
++    int channels = m_pFrame->ch_layout.nb_channels;
++    int planes = av_sample_fmt_is_planar(m_pCodecContext->sample_fmt) ? channels : 1;
++
+     for (int i=0; i<planes; i++)
+       dst[i] = m_pFrame->extended_data[i];
+ 
+-    return m_pFrame->nb_samples * m_pFrame->channels *
+-           av_get_bytes_per_sample(m_pCodecContext->sample_fmt);
++    return m_pFrame->nb_samples * channels * av_get_bytes_per_sample(m_pCodecContext->sample_fmt);
+   }
+ 
+   return 0;
+@@ -278,7 +283,7 @@ void CDVDAudioCodecFFmpeg::Reset()
+ 
+ int CDVDAudioCodecFFmpeg::GetChannels()
+ {
+-  return m_pCodecContext->channels;
++  return m_pCodecContext->ch_layout.nb_channels;
+ }
+ 
+ int CDVDAudioCodecFFmpeg::GetSampleRate()
+@@ -345,28 +350,33 @@ static unsigned count_bits(int64_t value)
+ 
+ void CDVDAudioCodecFFmpeg::BuildChannelMap()
+ {
+-  if (m_channels == m_pCodecContext->channels && m_layout == m_pCodecContext->channel_layout)
++  int codecChannels = m_pCodecContext->ch_layout.nb_channels;
++  uint64_t codecChannelLayout = m_pCodecContext->ch_layout.u.mask;
++  if (m_channels == codecChannels && m_layout == codecChannelLayout)
+     return; //nothing to do here
+ 
+-  m_channels = m_pCodecContext->channels;
+-  m_layout   = m_pCodecContext->channel_layout;
++  m_channels = codecChannels;
++  m_layout = codecChannelLayout;
+ 
+   int64_t layout;
+ 
+-  int bits = count_bits(m_pCodecContext->channel_layout);
+-  if (bits == m_pCodecContext->channels)
+-    layout = m_pCodecContext->channel_layout;
++  int bits = count_bits(codecChannelLayout);
++  if (bits == codecChannels)
++    layout = codecChannelLayout;
+   else
+   {
+     CLog::Log(LOGINFO,
+               "CDVDAudioCodecFFmpeg::GetChannelMap - FFmpeg reported {} channels, but the layout "
+               "contains {} - trying hints",
+-              m_pCodecContext->channels, bits);
+-    if (static_cast<int>(count_bits(m_hint_layout)) == m_pCodecContext->channels)
++              codecChannels, bits);
++    if (static_cast<int>(count_bits(m_hint_layout)) == codecChannels)
+       layout = m_hint_layout;
+     else
+     {
+-      layout = av_get_default_channel_layout(m_pCodecContext->channels);
++      AVChannelLayout def_layout = {};
++      av_channel_layout_default(&def_layout, codecChannels);
++      layout = def_layout.u.mask;
++      av_channel_layout_uninit(&def_layout);
+       CLog::Log(LOGINFO, "Using default layout...");
+     }
+   }
+@@ -392,7 +402,7 @@ void CDVDAudioCodecFFmpeg::BuildChannelMap()
+   if (layout & AV_CH_TOP_BACK_CENTER      ) m_channelLayout += AE_CH_BC  ;
+   if (layout & AV_CH_TOP_BACK_RIGHT       ) m_channelLayout += AE_CH_BR  ;
+ 
+-  m_channels = m_pCodecContext->channels;
++  m_channels = codecChannels;
+ }
+ 
+ CAEChannelInfo CDVDAudioCodecFFmpeg::GetChannelMap()
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Overlay/DVDOverlayCodecFFmpeg.cpp b/xbmc/cores/VideoPlayer/DVDCodecs/Overlay/DVDOverlayCodecFFmpeg.cpp
+index 8c26cad306..164360ff53 100644
+--- a/xbmc/cores/VideoPlayer/DVDCodecs/Overlay/DVDOverlayCodecFFmpeg.cpp
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Overlay/DVDOverlayCodecFFmpeg.cpp
+@@ -10,6 +10,7 @@
+ 
+ #include "DVDOverlayImage.h"
+ #include "DVDStreamInfo.h"
++#include "cores/FFmpeg.h"
+ #include "cores/VideoPlayer/Interface/DemuxPacket.h"
+ #include "cores/VideoPlayer/Interface/TimingConstants.h"
+ #include "utils/EndianSwap.h"
+@@ -39,7 +40,7 @@ bool CDVDOverlayCodecFFmpeg::Open(CDVDStreamInfo &hints, CDVDCodecOptions &optio
+   if (hints.codec == AV_CODEC_ID_EIA_608)
+     return false;
+ 
+-  AVCodec* pCodec = avcodec_find_decoder(hints.codec);
++  const AVCodec* pCodec = avcodec_find_decoder(hints.codec);
+   if (!pCodec)
+   {
+     CLog::Log(LOGDEBUG, "{} - Unable to find codec {}", __FUNCTION__, hints.codec);
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Video/DVDVideoCodecFFmpeg.cpp b/xbmc/cores/VideoPlayer/DVDCodecs/Video/DVDVideoCodecFFmpeg.cpp
+index 881c02ec12..bb9c20bf9d 100644
+--- a/xbmc/cores/VideoPlayer/DVDCodecs/Video/DVDVideoCodecFFmpeg.cpp
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Video/DVDVideoCodecFFmpeg.cpp
+@@ -12,6 +12,7 @@
+ #include "DVDCodecs/DVDFactoryCodec.h"
+ #include "DVDStreamInfo.h"
+ #include "ServiceBroker.h"
++#include "cores/FFmpeg.h"
+ #include "cores/VideoPlayer/Interface/TimingConstants.h"
+ #include "cores/VideoPlayer/VideoRenderers/RenderManager.h"
+ #include "cores/VideoSettings.h"
+@@ -27,12 +28,13 @@
+ #include <mutex>
+ 
+ extern "C" {
+-#include <libavutil/opt.h>
+-#include <libavutil/mastering_display_metadata.h>
+ #include <libavfilter/avfilter.h>
+ #include <libavfilter/buffersink.h>
+ #include <libavfilter/buffersrc.h>
++#include <libavutil/mastering_display_metadata.h>
++#include <libavutil/opt.h>
+ #include <libavutil/pixdesc.h>
++#include <libavutil/video_enc_params.h>
+ }
+ 
+ #ifndef TARGET_POSIX
+@@ -327,7 +329,7 @@ bool CDVDVideoCodecFFmpeg::Open(CDVDStreamInfo &hints, CDVDCodecOptions &options
+   m_hints = hints;
+   m_options = options;
+ 
+-  AVCodec* pCodec = nullptr;
++  const AVCodec* pCodec = nullptr;
+ 
+   m_iOrientation = hints.orientation;
+ 
+@@ -1048,24 +1050,27 @@ bool CDVDVideoCodecFFmpeg::GetPictureCommon(VideoPicture* pVideoPicture)
+   pVideoPicture->qscale_type = 0;
+ 
+   AVFrameSideData* sd;
+-  sd = av_frame_get_side_data(m_pFrame, AV_FRAME_DATA_QP_TABLE_PROPERTIES);
++
++  // https://github.com/FFmpeg/FFmpeg/blob/991d417692/doc/APIchanges#L18-L20
++  sd = av_frame_get_side_data(m_pFrame, AV_FRAME_DATA_VIDEO_ENC_PARAMS);
+   if (sd)
+   {
+-    struct qp_properties
+-    {
+-      int stride;
+-      int type;
+-    };
+-
+-    auto qp = reinterpret_cast<qp_properties*>(sd->data);
++    unsigned int mb_h = (m_pFrame->height + 15) / 16;
++    unsigned int mb_w = (m_pFrame->width + 15) / 16;
++    unsigned int nb_mb = mb_h * mb_w;
++    unsigned int block_idx;
+ 
+-    sd = av_frame_get_side_data(m_pFrame, AV_FRAME_DATA_QP_TABLE_DATA);
+-    if (sd && sd->buf && qp)
++    auto par = reinterpret_cast<AVVideoEncParams*>(sd->data);
++    if (par->type == AV_VIDEO_ENC_PARAMS_MPEG2 && (par->nb_blocks == 0 || par->nb_blocks == nb_mb))
+     {
+-      // this seems wrong but it's what ffmpeg does internally
+-      pVideoPicture->qp_table = reinterpret_cast<int8_t*>(sd->buf->data);
+-      pVideoPicture->qstride = qp->stride;
+-      pVideoPicture->qscale_type = qp->type;
++      pVideoPicture->qstride = mb_w;
++      pVideoPicture->qscale_type = par->type;
++      pVideoPicture->qp_table = static_cast<int8_t*>(av_malloc(nb_mb));
++      for (block_idx = 0; block_idx < nb_mb; block_idx++)
++      {
++        AVVideoBlockParams* b = av_video_enc_params_block(par, block_idx);
++        pVideoPicture->qp_table[block_idx] = par->qp + b->delta_qp;
++      }
+     }
+   }
+ 
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Video/DVDVideoPPFFmpeg.cpp b/xbmc/cores/VideoPlayer/DVDCodecs/Video/DVDVideoPPFFmpeg.cpp
+index a98fbb1710..481d44672d 100644
+--- a/xbmc/cores/VideoPlayer/DVDCodecs/Video/DVDVideoPPFFmpeg.cpp
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Video/DVDVideoPPFFmpeg.cpp
+@@ -118,6 +118,8 @@ void CDVDVideoPPFFmpeg::Process(VideoPicture* pPicture)
+                  m_pMode, m_pContext,
+                  pSource->pict_type | pSource->qscale_type ? PP_PICT_TYPE_QP2 : 0);
+ 
++  // https://github.com/FFmpeg/FFmpeg/blob/991d417692/doc/APIchanges#L18-L20
++  av_free(pSource->qp_table);
+ 
+   pPicture->SetParams(*pSource);
+   if (pPicture->videoBuffer)
+diff --git a/xbmc/cores/VideoPlayer/DVDCodecs/Video/VAAPI.cpp b/xbmc/cores/VideoPlayer/DVDCodecs/Video/VAAPI.cpp
+index 7ad891083c..272ae3af51 100644
+--- a/xbmc/cores/VideoPlayer/DVDCodecs/Video/VAAPI.cpp
++++ b/xbmc/cores/VideoPlayer/DVDCodecs/Video/VAAPI.cpp
+@@ -1259,7 +1259,9 @@ void CDecoder::ReturnRenderPicture(CVaapiRenderPicture *renderPic)
+ 
+ IHardwareDecoder* CDecoder::Create(CDVDStreamInfo &hint, CProcessInfo &processInfo, AVPixelFormat fmt)
+ {
+-  if (fmt == AV_PIX_FMT_VAAPI_VLD && CServiceBroker::GetSettingsComponent()->GetSettings()->GetBool(SETTING_VIDEOPLAYER_USEVAAPI))
++  // https://github.com/FFmpeg/FFmpeg/blob/56450a0ee4fdda160f4039fc2ae33edfd27765c9/doc/APIchanges#L18-L26
++  if (fmt == AV_PIX_FMT_VAAPI &&
++      CServiceBroker::GetSettingsComponent()->GetSettings()->GetBool(SETTING_VIDEOPLAYER_USEVAAPI))
+     return new VAAPI::CDecoder(processInfo);
+ 
+   return nullptr;
+diff --git a/xbmc/cores/VideoPlayer/DVDDemuxers/DVDDemuxClient.cpp b/xbmc/cores/VideoPlayer/DVDDemuxers/DVDDemuxClient.cpp
+index 2bdc3ea5a9..62c8b12f00 100644
+--- a/xbmc/cores/VideoPlayer/DVDDemuxers/DVDDemuxClient.cpp
++++ b/xbmc/cores/VideoPlayer/DVDDemuxers/DVDDemuxClient.cpp
+@@ -10,6 +10,7 @@
+ 
+ #include "DVDDemuxUtils.h"
+ #include "DVDInputStreams/DVDInputStream.h"
++#include "cores/FFmpeg.h"
+ #include "cores/VideoPlayer/Interface/TimingConstants.h"
+ #include "utils/log.h"
+ 
+@@ -130,7 +131,7 @@ bool CDVDDemuxClient::ParsePacket(DemuxPacket* pkt)
+ 
+   if (stream->m_context == nullptr)
+   {
+-    AVCodec *codec = avcodec_find_decoder(st->codec);
++    const AVCodec* codec = avcodec_find_decoder(st->codec);
+     if (codec == nullptr)
+     {
+       CLog::Log(LOGERROR, "{} - can't find decoder", __FUNCTION__);
+@@ -219,10 +220,12 @@ bool CDVDDemuxClient::ParsePacket(DemuxPacket* pkt)
+       case STREAM_AUDIO:
+       {
+         CDemuxStreamClientInternalTpl<CDemuxStreamAudio>* sta = static_cast<CDemuxStreamClientInternalTpl<CDemuxStreamAudio>*>(st);
+-        if (stream->m_context->channels != sta->iChannels && stream->m_context->channels != 0)
++        int streamChannels = stream->m_context->ch_layout.nb_channels;
++        if (streamChannels != sta->iChannels && streamChannels != 0)
+         {
+-          CLog::Log(LOGDEBUG, "CDVDDemuxClient::ParsePacket - ({}) channels changed from {} to {}", st->uniqueId, sta->iChannels, stream->m_context->channels);
+-          sta->iChannels = stream->m_context->channels;
++          CLog::Log(LOGDEBUG, "CDVDDemuxClient::ParsePacket - ({}) channels changed from {} to {}",
++                    st->uniqueId, sta->iChannels, streamChannels);
++          sta->iChannels = streamChannels;
+           sta->changes++;
+           sta->disabled = false;
+         }
+@@ -234,7 +237,7 @@ bool CDVDDemuxClient::ParsePacket(DemuxPacket* pkt)
+           sta->changes++;
+           sta->disabled = false;
+         }
+-        if (stream->m_context->channels)
++        if (streamChannels)
+           st->changes = -1; // stop parsing
+         break;
+       }
+diff --git a/xbmc/cores/VideoPlayer/DVDDemuxers/DVDDemuxFFmpeg.cpp b/xbmc/cores/VideoPlayer/DVDDemuxers/DVDDemuxFFmpeg.cpp
+index 739bf51922..4e04756486 100644
+--- a/xbmc/cores/VideoPlayer/DVDDemuxers/DVDDemuxFFmpeg.cpp
++++ b/xbmc/cores/VideoPlayer/DVDDemuxers/DVDDemuxFFmpeg.cpp
+@@ -38,6 +38,7 @@
+ 
+ extern "C"
+ {
++#include "libavutil/channel_layout.h"
+ #include "libavutil/pixdesc.h"
+ }
+ 
+@@ -235,7 +236,7 @@ bool CDVDDemuxFFmpeg::Aborted()
+ 
+ bool CDVDDemuxFFmpeg::Open(const std::shared_ptr<CDVDInputStream>& pInput, bool fileinfo)
+ {
+-  AVInputFormat* iformat = NULL;
++  const AVInputFormat* iformat = nullptr;
+   std::string strFile;
+   m_streaminfo = !pInput->IsRealtime() && !m_reopen;
+   m_reopen = false;
+@@ -422,9 +423,7 @@ bool CDVDDemuxFFmpeg::Open(const std::shared_ptr<CDVDInputStream>& pInput, bool
+           // is present, we assume it is PCM audio.
+           // AC3 is always wrapped in iec61937 (ffmpeg "spdif"), while DTS
+           // may be just padded.
+-          AVInputFormat* iformat2;
+-          iformat2 = av_find_input_format("spdif");
+-
++          const AVInputFormat* iformat2 = av_find_input_format("spdif");
+           if (iformat2 && iformat2->read_probe(&pd) > AVPROBE_SCORE_MAX / 4)
+           {
+             iformat = iformat2;
+@@ -544,12 +543,6 @@ bool CDVDDemuxFFmpeg::Open(const std::shared_ptr<CDVDInputStream>& pInput, bool
+     m_streaminfo = true;
+   }
+ 
+-  if (iformat && (strcmp(iformat->name, "mov,mp4,m4a,3gp,3g2,mj2") == 0))
+-  {
+-    if (URIUtils::IsRemote(strFile))
+-      m_pFormatContext->iformat->flags |= AVFMT_NOGENSEARCH;
+-  }
+-
+   // we need to know if this is matroska, avi or sup later
+   m_bMatroska = strncmp(m_pFormatContext->iformat->name, "matroska", 8) == 0;	// for "matroska.webm"
+   m_bAVI = strcmp(m_pFormatContext->iformat->name, "avi") == 0;
+@@ -604,9 +597,6 @@ bool CDVDDemuxFFmpeg::Open(const std::shared_ptr<CDVDInputStream>& pInput, bool
+   // if format can be nonblocking, let's use that
+   m_pFormatContext->flags |= AVFMT_FLAG_NONBLOCK;
+ 
+-  // deprecated, will be always set in future versions
+-  m_pFormatContext->flags |= AVFMT_FLAG_KEEP_SIDE_DATA;
+-
+   UpdateCurrentPTS();
+ 
+   // select the correct program if requested
+@@ -647,7 +637,10 @@ bool CDVDDemuxFFmpeg::Open(const std::shared_ptr<CDVDInputStream>& pInput, bool
+           {
+             int idx = m_pFormatContext->programs[i]->stream_index[j];
+             AVStream* st = m_pFormatContext->streams[idx];
+-            if ((st->codecpar->codec_type == AVMEDIA_TYPE_VIDEO && st->codec_info_nb_frames > 0) ||
++            // Related to https://patchwork.ffmpeg.org/project/ffmpeg/patch/20210429143825.53040-1-jamrial@gmail.com/
++            // has been replaced with AVSTREAM_EVENT_FLAG_NEW_PACKETS.
++            if ((st->codecpar->codec_type == AVMEDIA_TYPE_VIDEO &&
++                 (st->event_flags & AVSTREAM_EVENT_FLAG_NEW_PACKETS)) ||
+                 (st->codecpar->codec_type == AVMEDIA_TYPE_AUDIO && st->codecpar->sample_rate > 0))
+             {
+               nProgram = i;
+@@ -1218,8 +1211,11 @@ DemuxPacket* CDVDDemuxFFmpeg::Read()
+     else if (stream->type == STREAM_AUDIO)
+     {
+       CDemuxStreamAudioFFmpeg* audiostream = dynamic_cast<CDemuxStreamAudioFFmpeg*>(stream);
+-      if (audiostream && (audiostream->iChannels != m_pFormatContext->streams[pPacket->iStreamId]->codecpar->channels ||
+-          audiostream->iSampleRate != m_pFormatContext->streams[pPacket->iStreamId]->codecpar->sample_rate))
++      int codecparChannels =
++          m_pFormatContext->streams[pPacket->iStreamId]->codecpar->ch_layout.nb_channels;
++      if (audiostream && (audiostream->iChannels != codecparChannels ||
++                          audiostream->iSampleRate !=
++                              m_pFormatContext->streams[pPacket->iStreamId]->codecpar->sample_rate))
+       {
+         // content has changed
+         stream = AddStream(pPacket->iStreamId);
+@@ -1401,9 +1397,10 @@ void CDVDDemuxFFmpeg::UpdateCurrentPTS()
+   if (idx >= 0)
+   {
+     AVStream* stream = m_pFormatContext->streams[idx];
+-    if (stream && stream->cur_dts != (int64_t)AV_NOPTS_VALUE)
++
++    if (stream && m_pkt.pkt.dts != (int64_t)AV_NOPTS_VALUE)
+     {
+-      double ts = ConvertTimestamp(stream->cur_dts, stream->time_base.den, stream->time_base.num);
++      double ts = ConvertTimestamp(m_pkt.pkt.dts, stream->time_base.den, stream->time_base.num);
+       m_currentPts = ts;
+     }
+   }
+@@ -1614,14 +1611,20 @@ CDemuxStream* CDVDDemuxFFmpeg::AddStream(int streamIdx)
+       {
+         CDemuxStreamAudioFFmpeg* st = new CDemuxStreamAudioFFmpeg(pStream);
+         stream = st;
+-        st->iChannels = pStream->codecpar->channels;
++        int codecparChannels = pStream->codecpar->ch_layout.nb_channels;
++        int codecparChannelLayout = pStream->codecpar->ch_layout.u.mask;
++        st->iChannels = codecparChannels;
++        st->iChannelLayout = codecparChannelLayout;
+         st->iSampleRate = pStream->codecpar->sample_rate;
+         st->iBlockAlign = pStream->codecpar->block_align;
+         st->iBitRate = static_cast<int>(pStream->codecpar->bit_rate);
+         st->iBitsPerSample = pStream->codecpar->bits_per_raw_sample;
+-        st->iChannelLayout = pStream->codecpar->channel_layout;
+         char buf[32] = {};
+-        av_get_channel_layout_string(buf, 31, st->iChannels, st->iChannelLayout);
++        // https://github.com/FFmpeg/FFmpeg/blob/6ccc3989d15/doc/APIchanges#L50-L53
++        AVChannelLayout layout = {};
++        av_channel_layout_from_mask(&layout, st->iChannelLayout);
++        av_channel_layout_describe(&layout, buf, sizeof(buf));
++        av_channel_layout_uninit(&layout);
+         st->m_channelLayoutName = buf;
+         if (st->iBitsPerSample == 0)
+           st->iBitsPerSample = pStream->codecpar->bits_per_coded_sample;
+@@ -1663,16 +1666,6 @@ CDemuxStream* CDVDDemuxFFmpeg::AddStream(int streamIdx)
+           st->iFpsScale = 0;
+         }
+ 
+-        if (pStream->codec_info_nb_frames > 0 &&
+-            pStream->codec_info_nb_frames <= 2 &&
+-            m_pInput->IsStreamType(DVDSTREAM_TYPE_DVD))
+-        {
+-          CLog::Log(LOGDEBUG, "{} - fps may be unreliable since ffmpeg decoded only {} frame(s)",
+-                    __FUNCTION__, pStream->codec_info_nb_frames);
+-          st->iFpsRate  = 0;
+-          st->iFpsScale = 0;
+-        }
+-
+         st->iWidth = pStream->codecpar->width;
+         st->iHeight = pStream->codecpar->height;
+         st->fAspect = SelectAspect(pStream, st->bForcedAspect);
+@@ -1693,7 +1686,8 @@ CDemuxStream* CDVDDemuxFFmpeg::AddStream(int streamIdx)
+         st->colorRange = pStream->codecpar->color_range;
+         st->hdr_type = DetermineHdrType(pStream);
+ 
+-        int size = 0;
++        // https://github.com/FFmpeg/FFmpeg/blob/release/5.0/doc/APIchanges
++        size_t size = 0;
+         uint8_t* side_data = nullptr;
+ 
+         side_data = av_stream_get_side_data(pStream, AV_PKT_DATA_MASTERING_DISPLAY_METADATA, &size);
+@@ -2103,7 +2097,7 @@ std::string CDVDDemuxFFmpeg::GetStreamCodecName(int iStreamId)
+       return strName;
+     }
+ 
+-    AVCodec* codec = avcodec_find_decoder(stream->codec);
++    const AVCodec* codec = avcodec_find_decoder(stream->codec);
+     if (codec)
+       strName = avcodec_get_name(codec->id);
+   }
+@@ -2158,8 +2152,8 @@ bool CDVDDemuxFFmpeg::IsProgramChange()
+     if (m_pFormatContext->streams[idx]->codecpar->codec_type == AVMEDIA_TYPE_AUDIO)
+     {
+       CDemuxStreamAudioFFmpeg* audiostream = dynamic_cast<CDemuxStreamAudioFFmpeg*>(stream);
+-      if (audiostream &&
+-          m_pFormatContext->streams[idx]->codecpar->channels != audiostream->iChannels)
++      int codecparChannels = m_pFormatContext->streams[idx]->codecpar->ch_layout.nb_channels;
++      if (audiostream && codecparChannels != audiostream->iChannels)
+       {
+         return true;
+       }
+@@ -2279,7 +2273,7 @@ void CDVDDemuxFFmpeg::ParsePacket(AVPacket* pkt)
+ 
+       parser->second->m_parserCtx = av_parser_init(st->codecpar->codec_id);
+ 
+-      AVCodec* codec = avcodec_find_decoder(st->codecpar->codec_id);
++      const AVCodec* codec = avcodec_find_decoder(st->codecpar->codec_id);
+       if (codec == nullptr)
+       {
+         CLog::Log(LOGERROR, "{} - can't find decoder", __FUNCTION__);
+@@ -2357,7 +2351,8 @@ TRANSPORT_STREAM_STATE CDVDDemuxFFmpeg::TransportStreamAudioState()
+         {
+           if (!m_startTime)
+           {
+-            m_startTime = av_rescale(st->cur_dts, st->time_base.num, st->time_base.den) - 0.000001;
++            m_startTime =
++                av_rescale(m_pkt.pkt.dts, st->time_base.num, st->time_base.den) - 0.000001;
+             m_seekStream = idx;
+           }
+           return TRANSPORT_STREAM_STATE::READY;
+@@ -2377,7 +2372,8 @@ TRANSPORT_STREAM_STATE CDVDDemuxFFmpeg::TransportStreamAudioState()
+         {
+           if (!m_startTime)
+           {
+-            m_startTime = av_rescale(st->cur_dts, st->time_base.num, st->time_base.den) - 0.000001;
++            m_startTime =
++                av_rescale(m_pkt.pkt.dts, st->time_base.num, st->time_base.den) - 0.000001;
+             m_seekStream = i;
+           }
+           return TRANSPORT_STREAM_STATE::READY;
+@@ -2410,7 +2406,8 @@ TRANSPORT_STREAM_STATE CDVDDemuxFFmpeg::TransportStreamVideoState()
+         {
+           if (!m_startTime)
+           {
+-            m_startTime = av_rescale(st->cur_dts, st->time_base.num, st->time_base.den) - 0.000001;
++            m_startTime =
++                av_rescale(m_pkt.pkt.dts, st->time_base.num, st->time_base.den) - 0.000001;
+             m_seekStream = idx;
+           }
+           return TRANSPORT_STREAM_STATE::READY;
+@@ -2430,7 +2427,8 @@ TRANSPORT_STREAM_STATE CDVDDemuxFFmpeg::TransportStreamVideoState()
+         {
+           if (!m_startTime)
+           {
+-            m_startTime = av_rescale(st->cur_dts, st->time_base.num, st->time_base.den) - 0.000001;
++            m_startTime =
++                av_rescale(m_pkt.pkt.dts, st->time_base.num, st->time_base.den) - 0.000001;
+             m_seekStream = i;
+           }
+           return TRANSPORT_STREAM_STATE::READY;
+diff --git a/xbmc/cores/VideoPlayer/DVDInputStreams/InputStreamAddon.cpp b/xbmc/cores/VideoPlayer/DVDInputStreams/InputStreamAddon.cpp
+index 8ef7975707..9548351817 100644
+--- a/xbmc/cores/VideoPlayer/DVDInputStreams/InputStreamAddon.cpp
++++ b/xbmc/cores/VideoPlayer/DVDInputStreams/InputStreamAddon.cpp
+@@ -12,6 +12,7 @@
+ #include "addons/addoninfo/AddonType.h"
+ #include "addons/binary-addons/AddonDll.h"
+ #include "addons/kodi-dev-kit/include/kodi/addon-instance/VideoCodec.h"
++#include "cores/FFmpeg.h"
+ #include "cores/VideoPlayer/DVDDemuxers/DVDDemux.h"
+ #include "cores/VideoPlayer/DVDDemuxers/DVDDemuxUtils.h"
+ #include "cores/VideoPlayer/Interface/DemuxCrypto.h"
+@@ -392,7 +393,7 @@ KODI_HANDLE CInputStreamAddon::cb_get_stream_transfer(KODI_HANDLE handle,
+     return nullptr;
+ 
+   std::string codecName(stream->m_codecName);
+-  AVCodec* codec = nullptr;
++  const AVCodec* codec = nullptr;
+ 
+   if (stream->m_streamType != INPUTSTREAM_TYPE_TELETEXT &&
+       stream->m_streamType != INPUTSTREAM_TYPE_RDS && stream->m_streamType != INPUTSTREAM_TYPE_ID3)
+diff --git a/xbmc/filesystem/AudioBookFileDirectory.cpp b/xbmc/filesystem/AudioBookFileDirectory.cpp
+index 04d1c14343..94fb232db6 100644
+--- a/xbmc/filesystem/AudioBookFileDirectory.cpp
++++ b/xbmc/filesystem/AudioBookFileDirectory.cpp
+@@ -11,6 +11,7 @@
+ #include "TextureDatabase.h"
+ #include "URL.h"
+ #include "Util.h"
++#include "cores/FFmpeg.h"
+ #include "filesystem/File.h"
+ #include "guilib/LocalizeStrings.h"
+ #include "music/tags/MusicInfoTag.h"
+@@ -149,7 +150,7 @@ bool CAudioBookFileDirectory::ContainsFiles(const CURL& url)
+ 
+   m_ioctx->max_packet_size = 32768;
+ 
+-  AVInputFormat* iformat=nullptr;
++  const AVInputFormat* iformat = nullptr;
+   av_probe_input_buffer(m_ioctx, &iformat, url.Get().c_str(), nullptr, 0, 0);
+ 
+   bool contains = false;
+diff --git a/xbmc/guilib/FFmpegImage.cpp b/xbmc/guilib/FFmpegImage.cpp
+index fa255278b7..e71980998b 100644
+--- a/xbmc/guilib/FFmpegImage.cpp
++++ b/xbmc/guilib/FFmpegImage.cpp
+@@ -52,7 +52,7 @@ struct ThumbDataManagement
+   AVFrame* frame_temporary = nullptr;
+   SwsContext* sws = nullptr;
+   AVCodecContext* avOutctx = nullptr;
+-  AVCodec* codec = nullptr;
++  const AVCodec* codec = nullptr;
+   ~ThumbDataManagement()
+   {
+     av_free(intermediateBuffer);
+@@ -198,7 +198,7 @@ bool CFFmpegImage::Initialize(unsigned char* buffer, size_t bufSize)
+   bool is_png = (bufSize > 3 && buffer[1] == 'P' && buffer[2] == 'N' && buffer[3] == 'G');
+   bool is_tiff = (bufSize > 2 && buffer[0] == 'I' && buffer[1] == 'I' && buffer[2] == '*');
+ 
+-  AVInputFormat* inp = nullptr;
++  const AVInputFormat* inp = nullptr;
+   if (is_jpeg)
+     inp = av_find_input_format("image2");
+   else if (m_strMimeType == "image/apng")
+@@ -236,7 +236,7 @@ bool CFFmpegImage::Initialize(unsigned char* buffer, size_t bufSize)
+     return false;
+   }
+   AVCodecParameters* codec_params = m_fctx->streams[0]->codecpar;
+-  AVCodec* codec = avcodec_find_decoder(codec_params->codec_id);
++  const AVCodec* codec = avcodec_find_decoder(codec_params->codec_id);
+   m_codec_ctx = avcodec_alloc_context3(codec);
+   if (!m_codec_ctx)
+   {
+diff --git a/xbmc/music/tags/MusicInfoTagLoaderFFmpeg.cpp b/xbmc/music/tags/MusicInfoTagLoaderFFmpeg.cpp
+index 9bb2cdc09b..6ede1a31df 100644
+--- a/xbmc/music/tags/MusicInfoTagLoaderFFmpeg.cpp
++++ b/xbmc/music/tags/MusicInfoTagLoaderFFmpeg.cpp
+@@ -58,7 +58,7 @@ bool CMusicInfoTagLoaderFFmpeg::Load(const std::string& strFileName, CMusicInfoT
+   if (file.IoControl(IOCTRL_SEEK_POSSIBLE, NULL) != 1)
+     ioctx->seekable = 0;
+ 
+-  AVInputFormat* iformat=NULL;
++  const AVInputFormat* iformat = nullptr;
+   av_probe_input_buffer(ioctx, &iformat, strFileName.c_str(), NULL, 0, 0);
+ 
+   if (avformat_open_input(&fctx, strFileName.c_str(), iformat, NULL) < 0)
+diff --git a/xbmc/video/tags/VideoTagLoaderFFmpeg.cpp b/xbmc/video/tags/VideoTagLoaderFFmpeg.cpp
+index c1b0495179..9fa3687b5e 100644
+--- a/xbmc/video/tags/VideoTagLoaderFFmpeg.cpp
++++ b/xbmc/video/tags/VideoTagLoaderFFmpeg.cpp
+@@ -65,7 +65,7 @@ CVideoTagLoaderFFmpeg::CVideoTagLoaderFFmpeg(const CFileItem& item,
+   if (m_file->IoControl(IOCTRL_SEEK_POSSIBLE, nullptr) != 1)
+     m_ioctx->seekable = 0;
+ 
+-  AVInputFormat* iformat = nullptr;
++  const AVInputFormat* iformat = nullptr;
+   av_probe_input_buffer(m_ioctx, &iformat, m_item.GetPath().c_str(), nullptr, 0, 0);
+   if (avformat_open_input(&m_fctx, m_item.GetPath().c_str(), iformat, nullptr) < 0)
+   {
