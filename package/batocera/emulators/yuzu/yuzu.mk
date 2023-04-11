@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Apr 10, 2023
-YUZU_VERSION = 47b80da9064f91d89b11a09192e1fc2fd5f57e69
+YUZU_VERSION = 4f77275cd515162dd1b3dccb96296c4d4a370c8e
 YUZU_SITE = https://github.com/yuzu-emu/yuzu.git
 YUZU_SITE_METHOD=git
 YUZU_GIT_SUBMODULES=YES
