@@ -1,9 +1,0 @@
-config BR2_PACKAGE_YABAUSESA
-    bool "yabausesa"
-    depends on BR2_PACKAGE_SDL2
-    depends on BR2_PACKAGE_BOOST
-    depends on BR2_PACKAGE_OPENAL
-    depends on BR2_PACKAGE_ZLIB
-
-    help
-        Yabause is a Sega Saturn emulator and took over as Yaba Sanshiro

@@ -5244,8 +5244,8 @@ saturn:
       kronos:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_KRONOS] }
       yabasanshiro:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_YABASANSHIRO] }
       yabause:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_YABAUSE] }
-    yabausesa:
-      yabausesa:        { requireAnyOf: [BR2_PACKAGE_YABAUSESA] }
+    yabasanshiro:
+      yabasanshiro:     { requireAnyOf: [BR2_PACKAGE_YABASANSHIRO], incompatible_extensions: [ccd, m3u, zip] }
 
 sega32x:
   name:                 32x

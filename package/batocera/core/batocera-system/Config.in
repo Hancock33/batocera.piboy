@@ -1020,6 +1020,8 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                         BR2_PACKAGE_BATOCERA_TARGET_S912        || \
                                                         BR2_PACKAGE_BATOCERA_TARGET_S905GEN3    || \
                                                         BR2_PACKAGE_BATOCERA_TARGET_S922X
+														
+	select BR2_PACKAGE_YABASANSHIRO                 if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
 	# Gamecube / Wii
 	select BR2_PACKAGE_DOLPHIN_EMU                  if	BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
@@ -1242,7 +1244,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 	select BR2_PACKAGE_LIBRETRO_YABAUSE         if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
 	# Emulators
-	select BR2_PACKAGE_YABAUSESA                if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711 # Sega Saturn
 	select BR2_PACKAGE_VIRTUALJAGUAR            if BR2_PACKAGE_BATOCERA_TARGET_BCM2711                                           # Atari Jaguar
 
     #Extra Ports

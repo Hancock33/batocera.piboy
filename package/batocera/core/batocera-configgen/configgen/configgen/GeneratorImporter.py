@@ -503,9 +503,9 @@ def getGenerator(emulator):
         from generators.xenia.xeniaGenerator import XeniaGenerator
         return XeniaGenerator()
 
-    if emulator == 'yabausesa':
-        from generators.yabausesa.yabausesaGenerator import YabausesaGenerator
-        return YabausesaGenerator()
+    if emulator == 'yabasanshiro':
+        from generators.yabasanshiro.yabasanshiroGenerator import YabasanshiroGenerator
+        return YabasanshiroGenerator()
 
     if emulator == 'yquake2':
         from generators.yquake2.yquake2Generator import Yquake2Generator
