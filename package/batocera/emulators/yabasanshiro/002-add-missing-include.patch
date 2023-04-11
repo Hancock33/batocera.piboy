@@ -1,0 +1,13 @@
+diff --git a/yabause/src/threads.h b/yabause/src/threads.h
+index c635dad5..50441925 100644
+--- a/yabause/src/threads.h
++++ b/yabause/src/threads.h
+@@ -118,6 +118,8 @@ void YabThreadUSleep( unsigned int stime );
+ 
+ int YabCopyFile(const char * src, const char * dst);
+ int YabMakeCleanDir( const char * dirname );
++
++#include <core.h>
+ int YabNanosleep(u64 ns);
+ 
+ ///////////////////////////////////////////////////////////////////////////

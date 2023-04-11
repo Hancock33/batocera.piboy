@@ -10992,56 +10992,46 @@ xenia-canary:
                 "Turkish":           14
                 "Norwegian":         15
                 "Dutch":             16
-yabausesa:
+yabasanshiro:
   features: [padtokeyboard]
-  shared: [videomode]
+  shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
-        yabausesa_resolution:
-            group: VIDEO SETTINGS
-            prompt:      RESOLUTION
-            choices:
-                "Native":   0
-                "4x":       1
-                "2x":       2
-                "Original": 3
-                "720p":     4
-                "1080P":    5
-        yabausesa_keep_ar:
-            group: VIDEO SETTINGS
-            prompt:      KEEP ASPECT RATE
-            choices:
-                "Original":    0
-                "4:3":         1
-                "16:9":        2
-                "Full Screen": 3
-        yabausesa_frameskip:
-            group: VIDEO SETTINGS
-            prompt:      FRAMESKIP
-            description: Skip frames to improve performance, at the cost of choppy motion.T RATE
-            choices:
-                "On":    true
-                "Off":   false
-        yabausesa_rotate:
-            group: VIDEO SETTINGS
-            prompt:      ROTATE SCREEN
-            choices:
-                "False":    false
-                "True":     true
-        yabausesa_rotate_resolution:
-            group: VIDEO SETTINGS
-            prompt:      ROTATE RESOLUTION
-            choices:
-                "Original": 0
-                "2x":       1
-                "720p":     2
-                "1080P":    3
-                "Native":   4
-        yabausesa_scps_sync_per_frame:
-            group: VIDEO SETTINGS
-            prompt:      USE COMPUTE SHADER
-            choices:
-                "False":    false
-                "True":     true
+    yaba_aspect:
+      prompt:      GAME ASPECT RATIO
+      description: Change the output resolution ratio.
+      choices:
+        "Original":    0
+        "4:3":         1
+        "16:9":        2
+        "Full Screen": 3
+    yaba_resolution:
+      prompt:      RENDER RESOLUTION
+      description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
+      choices:
+        "Native":   0
+        "4x":       1
+        "2x":       2
+        "Original": 3
+        "720p":     4
+        "1080p":    5
+    yaba_shader:
+      prompt:      COMPUTE SHADER
+      description: Enhancement. Use the compute shader.
+      choices:
+        "On":  False
+        "Off": True
+    yaba_player1:
+      prompt:      CONTROLLER 1 TYPE
+      description: Choose the controller 1 user mode.
+      choices:
+        "Digital": 0
+        "Analog":  1
+    yaba_player2:
+      prompt:      CONTROLLER 2 TYPE
+      description: Choose the controller 2 user mode.
+      choices:
+        "Digital": 0
+        "Analog":  1
 yquake2:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
