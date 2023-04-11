@@ -849,8 +849,8 @@ supracan:
   emulator: libretro
   core:     mame
 switch:
-  emulator: yuzu
-  core:     yuzu
+  emulator: ryujinx
+  core:     ryujinx
   options:
     forceNoBezel: true
     hud_support: false
