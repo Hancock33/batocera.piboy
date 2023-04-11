@@ -1,22 +1,21 @@
-diff --git a/GsKit/base/utils/FindFile.cpp b/GsKit/base/utils/FindFile.cpp
-index ef456d4ca..594f5100e 100644
---- a/GsKit/base/utils/FindFile.cpp
-+++ b/GsKit/base/utils/FindFile.cpp
+diff --git a/GsKit/base/interface/FindFile.cpp b/GsKit/base/interface/FindFile.cpp
+index 212d4152b..dcd443c7d 100644
+--- a/GsKit/base/interface/FindFile.cpp
++++ b/GsKit/base/interface/FindFile.cpp
 @@ -505,7 +505,7 @@ void InitBaseSearchPaths()
      AddToFileList(&basesearchpaths, SDL_AndroidGetInternalStoragePath());
      AddToFileList(&basesearchpaths, "/storage/emulated/0/Android/data/net.sourceforge.clonekeenplus/files/SaveData");
  #else
 -    AddToFileList(&basesearchpaths, "${HOME}/.CommanderGenius");
-+    AddToFileList(&basesearchpaths, "/userdata/system/configs/CommanderGenius");
++    AddToFileList(&basesearchpaths, "/userdata/roms/ports/cgenius");
  #endif
      AddToFileList(&basesearchpaths, ".");
      AddToFileList(&basesearchpaths, SYSTEM_DATA_DIR"/commandergenius"); // no use of ${SYSTEM_DATA}, because it is uncommon and could cause confusion to the user
-@@ -807,7 +807,7 @@ std::string GetHomeDir()
-     const char* home = "";
-     return home;
- #else
--    char* home = getenv("HOME");
-+    char* home = "/userdata/system/configs";
- #endif
-     if(home == nullptr || home[0] == '\0') {
-         passwd* userinfo = getpwuid(getuid());
+@@ -800,6 +800,7 @@ bool FileListIncludesExact(const searchpathlist* l, const std::string& f) {
+ 
+ std::string GetHomeDir()
+ {
++return "/userdata/system/config";
+ #ifndef WIN32
+ #if defined(CAANOO) || defined(WIZ) || defined(GP2X) || defined(DINGOO) || defined(PANDORA)
+     char* home = getenv("PWD");

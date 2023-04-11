@@ -6,11 +6,18 @@ en_GB
 es
 fi_FI
 fr
+id_ID
+it
 ja_JP
+ko
 nl
 pl
 pt_BR
-ru_RU"
+pt_PT
+ru_RU
+sk_SK
+tr
+zh_CN"
 
 for i in $loc
 do

@@ -14,32 +14,13 @@ class GzdoomGenerator(Generator):
 
         extra_config = 'bind ] weapnext\n'
 
-        if system.isOptSet('gzdoom_render'):
-            if system.config['gzdoom_render'] == 'gl':
-                extra_config += (
-                    # Use the OpenGL render:
-                    'vid_rendermode 4\n'
-                    'vid_preferbackend 0\n'
-                )
-            if system.config['gzdoom_render'] == 'vulkan':
+        f=open('/usr/share/batocera/batocera.arch')
+        arch=f.readline().strip('\n')
+        if 'x86_64' in arch:
                 extra_config += (
                     # Use the Vulkan render:
                     'vid_rendermode 4\n'
                     'vid_preferbackend 1\n'
-                )
-            if system.config['gzdoom_render'] == 'soft':
-                extra_config += (
-                    # Use the Softpoly render:
-                    'vid_rendermode 4\n'
-                    'vid_preferbackend 2\n'
-                )
-            if system.config['gzdoom_render'] == 'gles2':
-                extra_config += (
-                    # Use the GLES render:
-                    'vid_rendermode 4\n'
-                    'vid_preferbackend 3\n'
-                    # This setting greatly improves performance:
-                    'gles_use_mapped_buffer true\n'
                 )
         else:
             extra_config += (

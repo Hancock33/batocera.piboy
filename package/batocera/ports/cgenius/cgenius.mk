@@ -3,8 +3,8 @@
 # cgenius
 #
 ################################################################################
-# Version: Commits on Apr 08, 2023
-CGENIUS_VERSION = 7a365731f738aa3ba4ff5044ffcc9830afd8f23e
+# Version: Commits on Apr 10, 2023
+CGENIUS_VERSION = ff5447465b0d7b91147a395062268e9ddea9a53b
 CGENIUS_SITE = https://github.com/gerstrong/Commander-Genius
 
 CGENIUS_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf boost libcurl
@@ -24,6 +24,7 @@ endif
 CGENIUS_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF
 CGENIUS_CONF_OPTS += -DBUILD_COSMOS=1
 CGENIUS_CONF_OPTS += -DGAMES_SHAREDIR=/userdata/roms/ports/cgenius
+CGENIUS_CONF_OPTS += -DFULL_GAMES_SHAREDIR=/userdata/roms/ports/cgenius
 
 define CGENIUS_INSTALL_TARGET_EVMAP
 	rm -rf $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/cgenius
