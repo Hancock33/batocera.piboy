@@ -24,6 +24,7 @@ endif
 CGENIUS_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF
 CGENIUS_CONF_OPTS += -DBUILD_COSMOS=1
 CGENIUS_CONF_OPTS += -DGAMES_SHAREDIR=/userdata/roms/ports/cgenius
+CGENIUS_CONF_OPTS += -DFULL_GAMES_SHAREDIR=/userdata/roms/ports/cgenius
 
 define CGENIUS_INSTALL_TARGET_EVMAP
 	rm -rf $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/cgenius
