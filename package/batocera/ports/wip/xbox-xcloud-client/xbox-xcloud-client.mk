@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Mar 21, 2023
-XBOX_XCLOUD_CLIENT_VERSION = v2.0.0-beta6
+XBOX_XCLOUD_CLIENT_VERSION = 2.0.0-beta6
 XBOX_XCLOUD_CLIENT_SITE = https://github.com/unknownskl/xbox-xcloud-client/releases/download/v$(XBOX_XCLOUD_CLIENT_VERSION)
 XBOX_XCLOUD_CLIENT_SOURCE = greenlight_$(XBOX_XCLOUD_CLIENT_VERSION)_amd64.deb
 XBOX_XCLOUD_CLIENT_LICENSE =  MIT license

@@ -175,6 +175,10 @@ def getGenerator(emulator):
         from generators.gzdoom.gzdoomGenerator import GzdoomGenerator
         return GzdoomGenerator()
 
+    if emulator == 'halflife2':
+        from generators.halflife2.halflife2Generator import Halflife2Generator
+        return Halflife2Generator()
+
     if emulator == 'hatari':
         from generators.hatari.hatariGenerator import HatariGenerator
         return HatariGenerator()
