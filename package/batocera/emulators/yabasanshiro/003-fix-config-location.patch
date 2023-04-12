@@ -1,52 +1,3 @@
-diff --git a/yabause/src/retro_arena/InputManager.cpp b/yabause/src/retro_arena/InputManager.cpp
-index bd806736..3c0ba725 100644
---- a/yabause/src/retro_arena/InputManager.cpp
-+++ b/yabause/src/retro_arena/InputManager.cpp
-@@ -213,7 +213,7 @@ int mapKeys( const json & configs ){
- 
-   if( SDL_NumJoysticks() == 0 ){
- 
--    PADLOG("No joy stic is found force to keyboard\n");
-+    PADLOG("No joystick is found force to keyboard\n");
-     padbits = PerPadAdd(&PORTDATA1);
-     if( configs.find("player1") == configs.end() ){
-       return setDefalutSettings(padbits);
-@@ -460,22 +460,22 @@ int getPlayerJsonFromInputConfig( int joy, InputConfig * inputconfig, json & pla
-   }
- 
-   Input result;
--  inputconfig->getInputByName("a", &result);
-+  inputconfig->getInputByName("y", &result);
-   player[guid]["a"] ={ { "type", input_types[result.type] },{ "id", result.id },{ "value", result.value } };
- 
-   inputconfig->getInputByName("b", &result);
-   player[guid]["b"] = { { "type", input_types[result.type] },{ "id", result.id },{ "value", result.value } };
- 
--  inputconfig->getInputByName("rightshoulder", &result);
-+  inputconfig->getInputByName("a", &result);
-   player[guid]["c"] = { { "type", input_types[result.type] },{ "id", result.id },{ "value", result.value } } ;
- 
-   inputconfig->getInputByName("x", &result);
-   player[guid]["x"] = { { "type", input_types[result.type] },{ "id", result.id },{ "value", result.value } };
- 
--  inputconfig->getInputByName("y", &result);
-+  inputconfig->getInputByName("leftshoulder", &result);
-   player[guid]["y"] = { { "type", input_types[result.type] },{ "id", result.id },{ "value", result.value } };
- 
--  inputconfig->getInputByName("leftshoulder", &result);
-+  inputconfig->getInputByName("rightshoulder", &result);
-   player[guid]["z"] = { { "type", input_types[result.type] },{ "id", result.id },{ "value", result.value } };
- 
-   inputconfig->getInputByName("lefttrigger", &result);
-@@ -1209,7 +1209,7 @@ void InputManager::writeDeviceConfig(InputConfig* config)
- std::string InputManager::getConfigPath()
- {
-   std::string path = getenv("HOME");
--  path += "/.emulationstation/es_temporaryinput.cfg";
-+  path = "/userdata/system/configs/yabasanshiro/input.cfg";
-   return path;
- }
- 
 diff --git a/yabause/src/retro_arena/Preference.cpp b/yabause/src/retro_arena/Preference.cpp
 index 1108c843..8101a95c 100644
 --- a/yabause/src/retro_arena/Preference.cpp
@@ -61,7 +12,7 @@ index 1108c843..8101a95c 100644
    this->filename = home_dir + input_trace_filename + ".config";
  
 diff --git a/yabause/src/retro_arena/main.cpp b/yabause/src/retro_arena/main.cpp
-index 39029508..592c8cc6 100644
+index 39029508..59dcc2ff 100644
 --- a/yabause/src/retro_arena/main.cpp
 +++ b/yabause/src/retro_arena/main.cpp
 @@ -75,7 +75,7 @@ static char last_state_filename[256] = "\0";
@@ -88,17 +39,6 @@ index 39029508..592c8cc6 100644
    strcpy( buppath, bckup_dir.c_str() );
    strcpy( s_savepath, home_dir.c_str() );
    g_keymap_filename = home_dir + "keymapv2.json";
-@@ -401,8 +401,8 @@ int main(int argc, char** argv)
- 		SDL_GL_SetAttribute(SDL_GL_ACCELERATED_VISUAL, 1);
- 
- #if defined(__PC__)
--  int width = 1280;
--  int height = 720;
-+  int width = dsp.w;
-+  int height = dsp.h;
-   wnd = SDL_CreateWindow("Yaba Snashiro", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-       width, height, SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN );
- #else
 @@ -601,7 +601,7 @@ int main(int argc, char** argv)
          if( ret == 0 ){
            char pngname[256];
