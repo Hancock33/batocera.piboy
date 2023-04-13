@@ -20,7 +20,8 @@ class YuzuGenerator(Generator):
         return Command.Command(array=commandArray, env={
             "XDG_CONFIG_HOME":batoceraFiles.CONF, \
             "XDG_DATA_HOME":batoceraFiles.SAVES + "/switch", \
-            "XDG_CACHE_HOME":batoceraFiles.CACHE})
+            "XDG_CACHE_HOME":batoceraFiles.CACHE, \
+            "QT_QPA_PLATFORM":"xcb"})
 
     def writeYuzuConfig(yuzuConfigFile, system, playersControllers):
         # pads
@@ -56,12 +57,6 @@ class YuzuGenerator(Generator):
         yuzuConfig.optionxform=str
         if os.path.exists(yuzuConfigFile):
             yuzuConfig.read(yuzuConfigFile)
-
-        # UI section
-        if not yuzuConfig.has_section("Audio"):
-            yuzuConfig.add_section("Audio")
-        yuzuConfig.set("Audio", "output_engine", "cubeb")
-        yuzuConfig.set("Audio", "output_engine\\default", "false")
 
         # UI section
         if not yuzuConfig.has_section("UI"):
@@ -149,8 +144,8 @@ class YuzuGenerator(Generator):
         if system.isOptSet('yuzu_backend'):
             yuzuConfig.set("Renderer", "backend", system.config["yuzu_backend"])
         else:
-            yuzuConfig.set("Renderer", "backend", "1")
-        yuzuConfig.set("Renderer", "backend\\default", "true")
+            yuzuConfig.set("Renderer", "backend", "0")
+        yuzuConfig.set("Renderer", "backend\\default", "false")
 
         # Async Shader compilation
         if system.isOptSet('yuzu_async_shaders'):
@@ -184,8 +179,8 @@ class YuzuGenerator(Generator):
         if system.isOptSet('yuzu_gpuaccuracy'):
             yuzuConfig.set("Renderer", "gpu_accuracy", system.config["yuzu_gpuaccuracy"])
         else:
-            yuzuConfig.set("Renderer", "gpu_accuracy", "1")
-        yuzuConfig.set("Renderer", "gpu_accuracy\\default", "true")
+            yuzuConfig.set("Renderer", "gpu_accuracy", "0")
+        yuzuConfig.set("Renderer", "gpu_accuracy\\default", "false")
 
         # Vsync
         if system.isOptSet('yuzu_vsync'):
@@ -261,54 +256,55 @@ class YuzuGenerator(Generator):
          # controls section
         if not yuzuConfig.has_section("Controls"):
             yuzuConfig.add_section("Controls")
-            # Dock Mode
-            if system.isOptSet('yuzu_dock_mode'):
-                yuzuConfig.set("Controls", "use_docked_mode", system.config["yuzu_dock_mode"])
+
+        # Dock Mode
+        if system.isOptSet('yuzu_dock_mode'):
+            yuzuConfig.set("Controls", "use_docked_mode", system.config["yuzu_dock_mode"])
+        else:
+            yuzuConfig.set("Controls", "use_docked_mode", "true")
+        yuzuConfig.set("Controls", "use_docked_mode\\default", "false")
+
+        # Sound Mode
+        if system.isOptSet('yuzu_sound_mode'):
+            yuzuConfig.set("Controls", "sound_index", system.config["yuzu_sound_mode"])
+        else:
+            yuzuConfig.set("Controls", "sound_index", "1")
+        yuzuConfig.set("Controls", "sound_index\\default", "false")
+
+        # Timezone
+        if system.isOptSet('yuzu_timezone'):
+            yuzuConfig.set("Controls", "time_zone_index", system.config["yuzu_timezone"])
+        else:
+            yuzuConfig.set("Controls", "time_zone_index", "0")
+        yuzuConfig.set("Controls", "time_zone_index\\default", "false")
+
+        # controllers
+        nplayer = 1
+        for playercontroller, pad in sorted(playersControllers.items()):
+            if system.isOptSet('p{}_pad'.format(nplayer-1)):
+                yuzuConfig.set("Controls", "player_{}_type".format(nplayer-1), system.config["p{}_pad".format(nplayer)])
             else:
-                yuzuConfig.set("Controls", "use_docked_mode", "true")
-            yuzuConfig.set("Controls", "use_docked_mode\\default", "false")
+                yuzuConfig.set("Controls", "player_{}_type".format(nplayer-1), 0)
+            yuzuConfig.set("Controls", "player_{}_type\default".format(nplayer-1), "false")
 
-            # Sound Mode
-            if system.isOptSet('yuzu_sound_mode'):
-                yuzuConfig.set("Controls", "sound_index", system.config["yuzu_sound_mode"])
-            else:
-                yuzuConfig.set("Controls", "sound_index", "1")
-            yuzuConfig.set("Controls", "sound_index\\default", "false")
+            for x in yuzuButtonsMapping:
+                yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_" + x, '"{}"'.format(YuzuGenerator.setButton(yuzuButtonsMapping[x], pad.guid, pad.inputs, nplayer-1)))
+            for x in yuzuAxisMapping:
+                yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_" + x, '"{}"'.format(YuzuGenerator.setAxis(yuzuAxisMapping[x], pad.guid, pad.inputs, nplayer-1)))
+            yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_motionleft", '"[empty]"')
+            yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_motionright", '"[empty]"')
+            yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_connected", "true")
+            yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_connected\default", "false")
+            yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_vibration_enabled", "true")
+            yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_vibration_enabled\\default", "false")
+            nplayer += 1
 
-            # Timezone
-            if system.isOptSet('yuzu_timezone'):
-                yuzuConfig.set("Controls", "time_zone_index", system.config["yuzu_timezone"])
-            else:
-                yuzuConfig.set("Controls", "time_zone_index", "0")
-            yuzuConfig.set("Controls", "time_zone_index\\default", "false")
+        yuzuConfig.set("Controls", "vibration_enabled", "true")
+        yuzuConfig.set("Controls", "vibration_enabled\\default", "false")
 
-            # controllers
-            nplayer = 1
-            for playercontroller, pad in sorted(playersControllers.items()):
-                if system.isOptSet('p{}_pad'.format(nplayer-1)):
-                    yuzuConfig.set("Controls", "player_{}_type".format(nplayer-1), system.config["p{}_pad".format(nplayer)])
-                else:
-                    yuzuConfig.set("Controls", "player_{}_type".format(nplayer-1), 0)
-                yuzuConfig.set("Controls", "player_{}_type\default".format(nplayer-1), "false")
-
-                for x in yuzuButtonsMapping:
-                    yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_" + x, '"{}"'.format(YuzuGenerator.setButton(yuzuButtonsMapping[x], pad.guid, pad.inputs, nplayer-1)))
-                for x in yuzuAxisMapping:
-                    yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_" + x, '"{}"'.format(YuzuGenerator.setAxis(yuzuAxisMapping[x], pad.guid, pad.inputs, nplayer-1)))
-                yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_motionleft", '"[empty]"')
-                yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_motionright", '"[empty]"')
-                yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_connected", "true")
-                yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_connected\default", "false")
-                yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_vibration_enabled", "true")
-                yuzuConfig.set("Controls", "player_" + str(nplayer-1) + "_vibration_enabled\\default", "false")
-                nplayer += 1
-
-            yuzuConfig.set("Controls", "vibration_enabled", "true")
-            yuzuConfig.set("Controls", "vibration_enabled\\default", "false")
-
-            for y in range(nplayer, 9):
-                yuzuConfig.set("Controls", "player_" + str(y-1) + "_connected", "false")
-                yuzuConfig.set("Controls", "player_" + str(y-1) + "_connected\default", "false")
+        for y in range(nplayer, 9):
+            yuzuConfig.set("Controls", "player_" + str(y-1) + "_connected", "false")
+            yuzuConfig.set("Controls", "player_" + str(y-1) + "_connected\default", "false")
 
         # telemetry section
         if not yuzuConfig.has_section("WebService"):
@@ -335,11 +331,11 @@ class YuzuGenerator(Generator):
             input = padInputs[key]
 
             if input.type == "button":
-                return ("pad:0,button:{},port:{},guid:{},engine:sdl").format(input.id, port, padGuid)
+                return ("engine:sdl,button:{},guid:{},port:{}").format(input.id, padGuid, port)
             elif input.type == "hat":
                 return ("engine:sdl,hat:{},direction:{},guid:{},port:{}").format(input.id, YuzuGenerator.hatdirectionvalue(input.value), padGuid, port)
             elif input.type == "axis":
-                return ("threshold:0.500000,axis:{},pad:0,port:{},guid:{},engine:sdl").format(input.id, port, padGuid)
+                return ("engine:sdl,threshold:{},axis:{},guid:{},port:{},invert:{}").format(0.5, input.id, padGuid, port, "+")
         return ""
 
     @staticmethod
@@ -356,7 +352,7 @@ class YuzuGenerator(Generator):
                 inputy = padInputs["joystick1up"]
         elif key == "joystick2" and "joystick2up" in padInputs:
             inputy = padInputs["joystick2up"]
-        return ("range:0.950000,deadzone:0.150000,threshold:0.500000,axis_y:{},axis_x:{},pad:0,port:{},guid:{},engine:sdl").format(inputy.id, inputx.id, port, padGuid)
+        return ("engine:sdl,range:1.000000,deadzone:0.100000,invert_y:+,invert_x:+,offset_y:-0.000000,axis_y:{},offset_x:-0.000000,axis_x:{},guid:{},port:{}").format(inputy.id, inputx.id, padGuid, port)
 
     @staticmethod
     def hatdirectionvalue(value):

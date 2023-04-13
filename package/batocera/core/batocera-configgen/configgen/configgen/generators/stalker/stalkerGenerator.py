@@ -17,23 +17,23 @@ class StalkerGenerator(Generator):
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         if not os.path.exists(base_dir):
             os.mkdir(base_dir)
-            
+
         commandArray = ["xr_3da"]
-        
+
         # Skip Intro
         if system.isOptSet('stalker_intro') and system.getOptBoolean('stalker_intro'):
             commandArray.extend(['-nointro'])
-      
+
         # Call of Clear Sky
         if (rom.lower()).endswith('cs'):
             if not os.path.exists(cs_dir):
                 os.mkdir(cs_dir)
             for asset in assests:
                 if not os.path.islink(cs_dir + '/' + asset):
-                    os.symlink(cs_romdir + '/' + asset, cs_dir + '/' + asset)       
+                    os.symlink(cs_romdir + '/' + asset, cs_dir + '/' + asset)
             commandArray.extend(['-cs'])
         else:
-        # Call of Pripyat      
+        # Call of Pripyat
             if not os.path.exists(cop_dir):
                 os.mkdir(cop_dir)
             for asset in assests:
