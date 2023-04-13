@@ -2866,7 +2866,7 @@ nds:
   manufacturer:         Nintendo
   release:              2004
   hardware:             portable
-  extensions:           [nds, bin, zip, 7z]
+  extensions:           [nds, bin, ids, zip, 7z]
   emulators:
     libretro:
       desmume:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DESMUME] }
@@ -2874,7 +2874,7 @@ nds:
     melonds:
       melonds:          { requireAnyOf: [BR2_PACKAGE_MELONDS] }
     drastic:
-      drastic:          { requireAnyOf: [BR2_PACKAGE_DRASTIC], incompatible_extensions: [7z] }
+      drastic:          { requireAnyOf: [BR2_PACKAGE_DRASTIC], incompatible_extensions: [7z, ids] }
 
 nes:
   name:                 Nintendo Entertainment System
