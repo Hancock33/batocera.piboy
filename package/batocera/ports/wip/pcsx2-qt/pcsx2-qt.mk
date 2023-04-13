@@ -3,7 +3,7 @@
 # pcsx2-qt
 #
 ################################################################################
-# Version: Commits on Dec 24, 2022
+# Version: Commits on Apr 13, 2023
 PCSX2_QT_VERSION = v1.7.4378
 PCSX2_QT_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_QT_SITE_METHOD = git
