@@ -2866,7 +2866,7 @@ nds:
   manufacturer:         Nintendo
   release:              2004
   hardware:             portable
-  extensions:           [nds, bin, zip, 7z]
+  extensions:           [nds, bin, ids, zip, 7z]
   emulators:
     libretro:
       desmume:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DESMUME] }
@@ -2874,7 +2874,7 @@ nds:
     melonds:
       melonds:          { requireAnyOf: [BR2_PACKAGE_MELONDS] }
     drastic:
-      drastic:          { requireAnyOf: [BR2_PACKAGE_DRASTIC], incompatible_extensions: [7z] }
+      drastic:          { requireAnyOf: [BR2_PACKAGE_DRASTIC], incompatible_extensions: [7z, ids] }
 
 nes:
   name:                 Nintendo Entertainment System
@@ -4243,6 +4243,19 @@ xash3d_fwgs:
 
                         Para Half-Life 1, a pasta do jogo é `valve/`.
 
+halflife2:
+  name:                 Half-Life 2
+  manufacturer:         Ports
+  release:
+  hardware:             port
+  extensions:           [game]
+  platform:             pc
+  group:                ports
+  path:                 /userdata/roms/ports/halflife2
+  emulators:
+    halflife2:
+      halflife2:      { requireAnyOf: [BR2_PACKAGE_HALFLIFE2] }
+      
 xrick:
   name:                 Rick Dangerous
   manufacturer:         Ports
@@ -5244,8 +5257,8 @@ saturn:
       kronos:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_KRONOS] }
       yabasanshiro:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_YABASANSHIRO] }
       yabause:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_YABAUSE] }
-    yabausesa:
-      yabausesa:        { requireAnyOf: [BR2_PACKAGE_YABAUSESA] }
+    yabasanshiro:
+      yabasanshiro:     { requireAnyOf: [BR2_PACKAGE_YABASANSHIRO], incompatible_extensions: [ccd, m3u, zip] }
 
 sega32x:
   name:                 32x

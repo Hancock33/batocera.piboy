@@ -19,6 +19,7 @@
 - supermodel now supports start and coin buttons on the gun
 - samco guns support (https://github.com/samuelballantyne/IR-Light-Gun)
 - fusion lightguns support (https://github.com/Fusion-Lightguns/Fusion-Mini)
+- wiimote+nunchuk as a zapper gun support
 ### Fixed
 - System reverting to 40% volume with Nvidia cards
 - Remove bezel option for BigPemu
@@ -60,7 +61,8 @@
 - amiberry to v5.6.0
 - ppsspp to v1.14.4
 - libretro-ppsspp to v1.14.4
-- scummvm to v2.7.0
+- scummvm to Apr 12, 2023 build
+- libretro-scummvm to Apr 12, 2023 build
 ### Dev
 - buildroot upgrade to 2023.02
 - mesa3d update to 23.0.2

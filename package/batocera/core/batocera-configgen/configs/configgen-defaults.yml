@@ -378,6 +378,9 @@ gx4000:
 gzdoom:
   emulator: gzdoom
   core:     gzdoom
+halflife2:
+  emulator: halflife2
+  core:     halflife2
 hcl:
   emulator: hcl
   core:     hcl
