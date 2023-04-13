@@ -1,0 +1,63 @@
+diff --git a/pcsx2/CDVD/CDVD.cpp b/pcsx2/CDVD/CDVD.cpp
+index b4b121fc2..0e35a7ecd 100644
+--- a/pcsx2/CDVD/CDVD.cpp
++++ b/pcsx2/CDVD/CDVD.cpp
+@@ -33,7 +33,7 @@
+ #include "CDVD_internal.h"
+ #include "IsoFileFormats.h"
+ 
+-#include "GS.h" // for gsVideoMode
++#include "../GS.h" // for gsVideoMode
+ #include "Elfheader.h"
+ #include "ps2/BiosTools.h"
+ 
+diff --git a/pcsx2/DebugTools/DebugInterface.cpp b/pcsx2/DebugTools/DebugInterface.cpp
+index 9b2c804cc..e778ade14 100644
+--- a/pcsx2/DebugTools/DebugInterface.cpp
++++ b/pcsx2/DebugTools/DebugInterface.cpp
+@@ -20,7 +20,7 @@
+ #include "R5900.h"
+ #include "Debug.h"
+ #include "VU.h"
+-#include "GS.h" // Required for gsNonMirroredRead()
++#include "../GS.h" // Required for gsNonMirroredRead()
+ #include "Counters.h"
+ 
+ #include "R3000A.h"
+diff --git a/pcsx2/PAD/Host/Global.h b/pcsx2/PAD/Host/Global.h
+index c2ba2a9aa..56e3063b1 100644
+--- a/pcsx2/PAD/Linux/Global.h
++++ b/pcsx2/PAD/Linux/Global.h
+@@ -15,6 +15,9 @@
+ 
+ #pragma once
+ 
++static const int GAMEPAD_NUMBER = 2;
++static const int MAX_KEYS = 24;
++
+ #include <stdio.h>
+ #include <assert.h>
+ #include <array>
+@@ -34,9 +37,6 @@
+ 
+ #define PADdefs
+ 
+-static const u32 GAMEPAD_NUMBER = 2;
+-static const u32 MAX_KEYS = 24;
+-
+ #include "Config.h"
+ 
+ enum gamePadValues
+diff --git a/pcsx2/gui/App.h b/pcsx2/gui/App.h
+index 4505887a2..90afdec1e 100644
+--- a/pcsx2/gui/App.h
++++ b/pcsx2/gui/App.h
+@@ -33,7 +33,7 @@
+ class DisassemblyDialog;
+ struct HostKeyEvent;
+ 
+-#include "GS.h"
++#include "../GS.h"
+ #include "System.h"
+ 
+ // TODO: Not the best location for this, but it needs to be accessed by MTGS etc.
