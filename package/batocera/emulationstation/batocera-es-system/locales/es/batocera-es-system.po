@@ -3992,12 +3992,12 @@ msgctxt "game_options"
 msgid "CONTROL MAPPING"
 msgstr ""
 
-#. TRANSLATION: libretro/mame078plus
+#. TRANSLATION: libretro/mame078plus, yabasanshiro, yabasanshiro
 msgctxt "game_options"
 msgid "Analog"
 msgstr ""
 
-#. TRANSLATION: libretro/mame078plus
+#. TRANSLATION: libretro/mame078plus, yabasanshiro, yabasanshiro
 msgctxt "game_options"
 msgid "Digital"
 msgstr ""
@@ -6586,7 +6586,7 @@ msgctxt "game_options"
 msgid "EXPOSE MODE"
 msgstr ""
 
-#. TRANSLATION: libretro/yabasanshiro, yabausesa, yabausesa
+#. TRANSLATION: libretro/yabasanshiro, yabasanshiro
 msgctxt "game_options"
 msgid "720p"
 msgstr ""
@@ -7942,7 +7942,7 @@ msgctxt "game_options"
 msgid "Force the game to render in this aspect ratio."
 msgstr ""
 
-#. TRANSLATION: flycast
+#. TRANSLATION: flycast, yabasanshiro
 msgctxt "game_options"
 msgid "RENDER RESOLUTION"
 msgstr ""
@@ -11194,57 +11194,32 @@ msgctxt "game_options"
 msgid "1280x720 (Default)"
 msgstr ""
 
-#. TRANSLATION: yabausesa
-msgctxt "game_options"
-msgid "RESOLUTION"
-msgstr ""
-
-#. TRANSLATION: yabausesa, yabausesa
-msgctxt "game_options"
-msgid "Native"
-msgstr ""
-
-#. TRANSLATION: yabausesa, yabausesa
-msgctxt "game_options"
-msgid "1080P"
-msgstr ""
-
-#. TRANSLATION: yabausesa
-msgctxt "game_options"
-msgid "KEEP ASPECT RATE"
-msgstr ""
-
-#. TRANSLATION: yabausesa
+#. TRANSLATION: yabasanshiro
 msgctxt "game_options"
 msgid "Full Screen"
 msgstr ""
 
-#. TRANSLATION: yabausesa
+#. TRANSLATION: yabasanshiro
 msgctxt "game_options"
-msgid "Skip frames to improve performance, at the cost of choppy motion.T RATE"
+msgid "Native"
 msgstr ""
 
-#. TRANSLATION: yabausesa
+#. TRANSLATION: yabasanshiro
 msgctxt "game_options"
-msgid "ROTATE SCREEN"
+msgid "Enhancement. Use the compute shader."
 msgstr ""
 
-#. TRANSLATION: yabausesa, yabausesa
+#. TRANSLATION: yabasanshiro
 msgctxt "game_options"
-msgid "False"
+msgid "COMPUTE SHADER"
 msgstr ""
 
-#. TRANSLATION: yabausesa, yabausesa
+#. TRANSLATION: yabasanshiro
 msgctxt "game_options"
-msgid "True"
+msgid "Choose the controller 1 user mode."
 msgstr ""
 
-#. TRANSLATION: yabausesa
+#. TRANSLATION: yabasanshiro
 msgctxt "game_options"
-msgid "ROTATE RESOLUTION"
-msgstr ""
-
-#. TRANSLATION: yabausesa
-msgctxt "game_options"
-msgid "USE COMPUTE SHADER"
+msgid "Choose the controller 2 user mode."
 msgstr ""

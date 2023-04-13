@@ -1,0 +1,15 @@
+diff --git a/yabause/src/retro_arena/main.cpp b/yabause/src/retro_arena/main.cpp
+index 39029508..759c6ed4 100644
+--- a/yabause/src/retro_arena/main.cpp
++++ b/yabause/src/retro_arena/main.cpp
+@@ -401,8 +401,8 @@ int main(int argc, char** argv)
+ 		SDL_GL_SetAttribute(SDL_GL_ACCELERATED_VISUAL, 1);
+ 
+ #if defined(__PC__)
+-  int width = 1280;
+-  int height = 720;
++  int width = dsp.w;
++  int height = dsp.h;
+   wnd = SDL_CreateWindow("Yaba Snashiro", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+       width, height, SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN );
+ #else

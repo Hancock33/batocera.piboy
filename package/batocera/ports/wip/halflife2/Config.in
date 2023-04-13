@@ -1,0 +1,14 @@
+config BR2_PACKAGE_HALFLIFE2
+	bool "halflife2"
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+    select BR2_PACKAGE_SDL2_IMAGE
+	select BR2_PACKAGE_SDL2_TTF
+	select BR2_PACKAGE_FREETYPE
+	select BR2_PACKAGE_FONTCONFIG
+
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  Modified source engine (2017) developed by valve and leaked in 2020.
+
+	  https://github.com/nillerusr/source-engine
