@@ -219,8 +219,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_LIBCURL_CURL                         # download tools
     select BR2_PACKAGE_NGHTTP2                              # required for curl http2
     select BR2_PACKAGE_CA_CERTIFICATES                      # ssl certificates
-    select BR2_PACKAGE_ROCKCHIP_RGA                         if  BR2_PACKAGE_BATOCERA_TARGET_RK3326 || BR2_PACKAGE_BATOCERA_TARGET_RK3128    # Used for screen rotation (SDL, Retroarch, Moonlight)
-
+    select BR2_PACKAGE_ROCKCHIP_RGA                         if  BR2_PACKAGE_BATOCERA_TARGET_RK3128 # Used for screen rotation (SDL, Retroarch, Moonlight)
     select BR2_PACKAGE_LIBDRM                               if  !BR2_PACKAGE_BATOCERA_RPI_VCORE
     select BR2_PACKAGE_BATOCERA_DRMINFO                     if  BR2_PACKAGE_LIBDRM
     select BR2_PACKAGE_LIRC_TOOLS                           # lirc (remote control)
@@ -405,40 +404,40 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     bool "target images definitions"
     config BR2_TARGET_BATOCERA_IMAGES
     string "target images"
-    default "amlogic/s922x/odroidn2 amlogic/s922x/odroidn2plus amlogic/s922x/odroidn2l amlogic/s922x/vim3 amlogic/s922x/gtking amlogic/s922x/gtkingpro amlogic/s922x/zero2"  if  BR2_PACKAGE_BATOCERA_TARGET_S922X
-    default "amlogic/s905/odroidc2 amlogic/s905/tvbox amlogic/s905/lepotato amlogic/s905/vim amlogic/s905/p201" if  BR2_PACKAGE_BATOCERA_TARGET_S905 # amlogic/s905/fun-r1
-    default "amlogic/s905gen2"                                                                if  BR2_PACKAGE_BATOCERA_TARGET_S905GEN2
-    default "amlogic/s905gen3/odroidc4 amlogic/s905gen3/tvbox-gen3"                           if  BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
-    default "amlogic/a3gen2/vim4 amlogic/a3gen2/gtking2"                                      if  BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
-    default "amlogic/s912/vim2"                                                               if  BR2_PACKAGE_BATOCERA_TARGET_S912
-    default "broadcom/bcm2835"                                                                if  BR2_PACKAGE_BATOCERA_TARGET_BCM2835
-    default "broadcom/bcm2836"                                                                if  BR2_PACKAGE_BATOCERA_TARGET_BCM2836
-    default "broadcom/bcm2837"                                                                if  BR2_PACKAGE_BATOCERA_TARGET_BCM2837
-    default "broadcom/bcm2711"                                                                if  BR2_PACKAGE_BATOCERA_TARGET_BCM2711
-    default "raspberrypi/piboy3"                                                              if  BR2_PACKAGE_BATOCERA_TARGET_BCM2836 && BR2_PACKAGE_XPI_GAMECON_RPI
-    default "raspberrypi/piboy4"                                                              if  BR2_PACKAGE_BATOCERA_TARGET_BCM2711 && BR2_PACKAGE_XPI_GAMECON_RPI
-    default "rockchip/rk3326/rk3326 rockchip/rk3326/gameforce"                                if  BR2_PACKAGE_BATOCERA_TARGET_RK3326
-    default "rockchip/rk3328/rock64 rockchip/rk3328/roc-cc"                                   if  BR2_PACKAGE_BATOCERA_TARGET_RK3328
-    default "rockchip/rk3288/tinkerboard rockchip/rk3288/miqi"                                if  BR2_PACKAGE_BATOCERA_TARGET_RK3288
-    default \
-        "rockchip/rk3399/rock960 rockchip/rk3399/rockpro64 rockchip/rk3399/rg552 rockchip/rk3399/orangepi4-lts rockchip/rk3399/rock-pi-4" \
-        if  BR2_PACKAGE_BATOCERA_TARGET_RK3399
-    default "rockchip/rk3568/rock-3a" if  BR2_PACKAGE_BATOCERA_TARGET_RK3568
-    default \
-        "rockchip/rk3588/rock-5b rockchip/rk3588/rock-5a rockchip/rk3588/quartzpro64 rockchip/rk3588/orangepi-5 rockchip/rk3588/indiedroid-nova rockchip/rk3588/mekotronics-r58" \
-        if  BR2_PACKAGE_BATOCERA_TARGET_RK3588
-    default "rockchip/rk3128/ps5000 rockchip/rk3128/ps7000 rockchip/rk3128/powkiddy_a13"      if  BR2_PACKAGE_BATOCERA_TARGET_RK3128
-    default "allwinner/h5/tritium-h5"                                                         if  BR2_PACKAGE_BATOCERA_TARGET_TRITIUM_H5
-    default "allwinner/h616/orangepi-zero2"                                                   if  BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_ZERO2
-    default "allwinner/h3/orangepi-pc"                                                        if  BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_PC
-    default "allwinner/h3/cha"                                                                if  BR2_PACKAGE_BATOCERA_TARGET_CHA
-    default "amlogic/s812"                                                                    if  BR2_PACKAGE_BATOCERA_TARGET_S812
-    default "samsung/exynos5422/odroidxu4"                                                    if  BR2_PACKAGE_BATOCERA_TARGET_XU4
-    default "x86"                                                                             if  BR2_PACKAGE_BATOCERA_TARGET_X86
-    default "x86_64"                                                                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64
-    default "znver2"                                                                          if  BR2_PACKAGE_BATOCERA_TARGET_ZNVER2
-    default "qualcomm/sd845/odin"                                                             if  BR2_PACKAGE_BATOCERA_TARGET_ODIN
-    default "allwinner/h6/orangepi-3-lts"                                                     if  BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_3_LTS
+    default "amlogic/s905gen2"                                                              if BR2_PACKAGE_BATOCERA_TARGET_S905GEN2
+    default "amlogic/s905gen3/odroidc4 amlogic/s905gen3/tvbox-gen3"                         if BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
+    default "amlogic/a3gen2/vim4 amlogic/a3gen2/gtking2"                                    if BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
+    default "amlogic/s912/vim2"                                                             if BR2_PACKAGE_BATOCERA_TARGET_S912
+    default "broadcom/bcm2835"                                                              if BR2_PACKAGE_BATOCERA_TARGET_BCM2835
+    default "broadcom/bcm2836"                                                              if BR2_PACKAGE_BATOCERA_TARGET_BCM2836
+    default "broadcom/bcm2837"                                                              if BR2_PACKAGE_BATOCERA_TARGET_BCM2837
+    default "broadcom/bcm2711"                                                              if BR2_PACKAGE_BATOCERA_TARGET_BCM2711
+    default "raspberrypi/piboy3"                                                            if BR2_PACKAGE_BATOCERA_TARGET_BCM2836 && BR2_PACKAGE_XPI_GAMECON_RPI
+    default "raspberrypi/piboy4"                                                            if BR2_PACKAGE_BATOCERA_TARGET_BCM2711 && BR2_PACKAGE_XPI_GAMECON_RPI
+    default "rockchip/rk3326/rk3326 rockchip/rk3326/gameforce"                              if BR2_PACKAGE_BATOCERA_TARGET_RK3326
+    default "rockchip/rk3328/rock64 rockchip/rk3328/roc-cc"                                 if BR2_PACKAGE_BATOCERA_TARGET_RK3328
+    default "rockchip/rk3288/tinkerboard rockchip/rk3288/miqi"                              if BR2_PACKAGE_BATOCERA_TARGET_RK3288
+    default "rockchip/rk3568/rock-3a"                                                       if BR2_PACKAGE_BATOCERA_TARGET_RK3568
+    default "rockchip/rk3128/ps5000 rockchip/rk3128/ps7000 rockchip/rk3128/powkiddy_a13"    if BR2_PACKAGE_BATOCERA_TARGET_RK3128
+    default "allwinner/h5/tritium-h5"                                                       if BR2_PACKAGE_BATOCERA_TARGET_TRITIUM_H5
+    default "allwinner/h616/orangepi-zero2"                                                 if BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_ZERO2
+    default "allwinner/h3/orangepi-pc"                                                      if BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_PC
+    default "allwinner/h3/cha"                                                              if BR2_PACKAGE_BATOCERA_TARGET_CHA
+    default "amlogic/s812"                                                                  if BR2_PACKAGE_BATOCERA_TARGET_S812
+    default "samsung/exynos5422/odroidxu4"                                                  if BR2_PACKAGE_BATOCERA_TARGET_XU4
+    default "x86"                                                                           if BR2_PACKAGE_BATOCERA_TARGET_X86
+    default "x86_64"                                                                        if BR2_PACKAGE_BATOCERA_TARGET_X86_64
+    default "znver2"                                                                        if BR2_PACKAGE_BATOCERA_TARGET_ZNVER2
+    default "qualcomm/sd845/odin"                                                           if BR2_PACKAGE_BATOCERA_TARGET_ODIN
+    default "allwinner/h6/orangepi-3-lts"                                                   if BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_3_LTS
+    default "amlogic/s922x/gtking amlogic/s922x/gtkingpro amlogic/s922x/odroidn2l amlogic/s922x/vim3 amlogic/s922x/odroidn2 amlogic/s922x/odroidn2plus amlogic/s922x/zero2" \
+                                                                                            if BR2_PACKAGE_BATOCERA_TARGET_S922X
+    default "amlogic/s905/odroidc2 amlogic/s905/tvboxamlogic/s905/lepotato amlogic/s905/vim amlogic/s905/p201" \
+                                                                                            if BR2_PACKAGE_BATOCERA_TARGET_S905
+    default "rockchip/rk3399/rock960 rockchip/rk3399/rockpro64 rockchip/rk3399/rg552 rockchip/rk3399/orangepi4-lts rockchip/rk3399/rock-pi-4" \
+                                                                                            if BR2_PACKAGE_BATOCERA_TARGET_RK3399
+    default "rockchip/rk3588/rock-5b rockchip/rk3588/rock-5a rockchip/rk3588/quartzpro64 rockchip/rk3588/orangepi-5 rockchip/rk3588/indiedroid-nova rockchip/rk3588/mekotronics-r58" \
+                                                                                            if BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
 choice
     prompt "batocera.linux target"
@@ -872,17 +871,20 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # Flashback
     select BR2_PACKAGE_LIBRETRO_REMINISCENCE                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
-    #Super Flappy Birds
+    # Super Flappy Birds
     select BR2_PACKAGE_LIBRETRO_SUPERFLAPPYBIRDS            if  BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
-    #Zelda Classic
+    # Zelda Classic
     select BR2_PACKAGE_LIBRETRO_ZC210                       # ALL
     select BR2_PACKAGE_LIBRETRO_ZC250X                      # ALL
 
-    #Dinothwar
+    # Dinothwar
     select BR2_PACKAGE_LIBRETRO_DINOTHAWR                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
-    select BR2_PACKAGE_LIBRETRO_CRAFT                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
+    # Minecraft mini-clone
+    select BR2_PACKAGE_LIBRETRO_CRAFT                       if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
+    # ChaiScript engine
     select BR2_PACKAGE_LIBRETRO_CHAILOVE                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     select BR2_PACKAGE_LIBRETRO_LOWRESNX                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
@@ -1415,7 +1417,7 @@ config BR2_PACKAGE_BATOCERA_KODI19
     select BR2_PACKAGE_KODI_PVR_PCTV
     select BR2_PACKAGE_KODI_PVR_STALKER
     select BR2_PACKAGE_KODI_PVR_VBOX
-    select BR2_PACKAGE_KODI_PVR_VDR_VNSI if                 !BR2_PACKAGE_BATOCERA_TARGET_RK3399 && !BR2_PACKAGE_BATOCERA_TARGET_RK3588
+    select BR2_PACKAGE_KODI_PVR_VDR_VNSI                    if  !BR2_PACKAGE_BATOCERA_TARGET_RK3399 && !BR2_PACKAGE_BATOCERA_TARGET_RK3588
     select BR2_PACKAGE_KODI_PVR_VUPLUS
     select BR2_PACKAGE_KODI_PVR_WMC
     select BR2_PACKAGE_KODI_UPNP
