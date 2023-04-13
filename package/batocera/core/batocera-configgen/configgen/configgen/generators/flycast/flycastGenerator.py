@@ -174,9 +174,9 @@ class FlycastGenerator(Generator):
         if not os.path.exists(os.path.dirname(batoceraFiles.flycastConfig)):
             os.makedirs(os.path.dirname(batoceraFiles.flycastConfig))
         with open(batoceraFiles.flycastConfig, 'w+') as cfgfile:
-            Config.write(cfgfile)        
+            Config.write(cfgfile)
             cfgfile.close()
-            
+
         # internal config
         if not isdir(batoceraFiles.flycastSaves):
             os.mkdir(batoceraFiles.flycastSaves)
@@ -188,8 +188,8 @@ class FlycastGenerator(Generator):
         # vmuA2
         if not isfile(batoceraFiles.flycastVMUA2):
             copyfile(batoceraFiles.flycastVMUBlank, batoceraFiles.flycastVMUA2)
-        
-        # the command to run  
+
+        # the command to run
         commandArray = [batoceraFiles.batoceraBins[system.config['emulator']]]
         commandArray.append(rom)
         # Here is the trick to make flycast find files :

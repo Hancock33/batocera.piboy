@@ -27,8 +27,4 @@ class ViceGenerator(Generator):
 
         commandArray = [batoceraFiles.batoceraBins[system.config['emulator']] + system.config['core'], "-autostart", rom]
 
-        return Command.Command(
-            array=commandArray,
-            env={
-                'XDG_CONFIG_HOME': batoceraFiles.CONF
-            })
+        return Command.Command(array=commandArray, env={"XDG_CONFIG_HOME":batoceraFiles.CONF})

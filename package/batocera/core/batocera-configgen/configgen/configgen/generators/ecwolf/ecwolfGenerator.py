@@ -58,7 +58,7 @@ class ECWolfGenerator(Generator):
         try:
             if rom.endswith(".pk3"):
                 commandArray.extend(["--file", os.path.basename(rom)])
-                os.chdir(os.path.dirname(rom)) 
+                os.chdir(os.path.dirname(rom))
             else:
                 os.chdir(os.path.dirname(rom))
         # Only game directories, not .zip

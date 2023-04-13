@@ -365,7 +365,7 @@ def createLibretroConfig(generator, system, controllers, guns, rom, bezel, shade
             retroarchConfig['input_libretro_device_p4'] = system.config['controller4_dc']
         else:
             retroarchConfig['input_libretro_device_p4'] = '1'
-            
+
 
     ## Sega Megadrive controller
     if system.config['core'] == 'genesisplusgx' and system.name == 'megadrive':

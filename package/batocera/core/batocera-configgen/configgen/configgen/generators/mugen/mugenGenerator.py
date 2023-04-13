@@ -29,9 +29,4 @@ class MugenGenerator(Generator):
             os.makedirs(os.path.dirname(settings_path))
 
         commandArray = ["batocera-wine", "mugen", "play", rom]
-
-        return Command.Command(
-            array=commandArray,
-            env={
-                'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers)
-        })
+        return Command.Command(array=commandArray, env={ "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers) })

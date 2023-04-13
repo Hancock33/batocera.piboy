@@ -39,7 +39,7 @@ class FpinballGenerator(Generator):
         # create dir & copy fpinball files to wine bottle as necessary
         if not os.path.exists(emupath):
             shutil.copytree('/usr/fpinball', emupath)
-        
+
         # convert rom path
         rompath = PureWindowsPath(rom)
         rom = f"Z:{rompath}"
