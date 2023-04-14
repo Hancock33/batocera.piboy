@@ -1,11 +1,11 @@
 diff --git a/cmake/BuildParameters.cmake b/cmake/BuildParameters.cmake
-index a47da2581..475beeeca 100644
+index dbb9f1b8a..006e5cc1f 100644
 --- a/cmake/BuildParameters.cmake
 +++ b/cmake/BuildParameters.cmake
-@@ -193,7 +193,7 @@ option(USE_PGO_OPTIMIZE "Enable PGO optimization (use profile)")
- if(MSVC)
+@@ -151,7 +151,7 @@ option(USE_PGO_OPTIMIZE "Enable PGO optimization (use profile)")
+ if(MSVC AND NOT USE_CLANG_CL)
  	add_compile_options("$<$<COMPILE_LANGUAGE:CXX>:/Zc:externConstexpr>")
- else()
+ elseif(NOT MSVC)
 -	add_compile_options(-pipe -fvisibility=hidden -pthread -fno-builtin-strcmp -fno-builtin-memcmp -mfpmath=sse)
 +	add_compile_options(-pipe -pthread -fno-builtin-strcmp -fno-builtin-memcmp -mfpmath=sse -fno-operator-names)
  
