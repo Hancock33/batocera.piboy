@@ -3,8 +3,8 @@
 # batocera-emulationstation
 #
 ################################################################################
-# Version: Commits on Apr 12, 2023
-BATOCERA_EMULATIONSTATION_VERSION = 5e3388262306e253e61b953c4067c151122a77ff
+# Version: Commits on Apr 13, 2023
+BATOCERA_EMULATIONSTATION_VERSION = aa61db24bef97f4269edb9a48d2631a4acb4480f
 BATOCERA_EMULATIONSTATION_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_EMULATIONSTATION_SITE_METHOD = git
 BATOCERA_EMULATIONSTATION_LICENSE = MIT
@@ -85,7 +85,7 @@ define BATOCERA_EMULATIONSTATION_RPI_FIXUP
 endef
 
 define BATOCERA_EMULATIONSTATION_EXTERNAL_POS
-	cp $(STAGING_DIR)/usr/share/batocera-es-system/es_external_translations.h $(@D)/es-app/src
+	cp $(STAGING_DIR)/usr/share/batocera-es-system/es_external_translations.h $(STAGING_DIR)/usr/share/batocera-es-system/es_keys_translations.h $(@D)/es-app/src
 	for P in $(STAGING_DIR)/usr/share/batocera-es-system/locales/*; do if test -e $$P/batocera-es-system.po; then cp $(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po $(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po.tmp && $(HOST_DIR)/bin/msgcat $(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po.tmp $$P/batocera-es-system.po > $(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po; fi; done
 endef
 

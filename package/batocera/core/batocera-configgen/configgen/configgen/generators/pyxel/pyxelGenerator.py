@@ -11,8 +11,8 @@ class PyxelGenerator(Generator):
         if pathlib.Path(rom).suffix == '.pyxapp':
             cmd = 'play'
         else:
-            cmd = 'run' 
-	
+            cmd = 'run'
+
         commandArray = ["/usr/bin/pyxel", cmd, rom]
         return Command.Command(
             array=commandArray,

@@ -62,7 +62,7 @@ class XeniaGenerator(Generator):
             else:
                 eslog.error(f'Disc installation/XBLA title {firstLine} from {rom} not found, check path or filename.')
             openFile.close()
-        
+
         # adjust the config toml file accordingly
         config = {}
         if core == 'xenia-canary':
@@ -72,7 +72,7 @@ class XeniaGenerator(Generator):
         if os.path.isfile(toml_file):
             with open(toml_file) as f:
                 config = toml.load(f)
-        
+
         # [ Now adjust the config file defaults & options we want ]
         # add node CPU
         if 'CPU' not in config:
@@ -111,7 +111,7 @@ class XeniaGenerator(Generator):
         if 'General' not in config:
             config['General'] = {}
         # disable discord
-        config['General'] = {'discord': False} 
+        config['General'] = {'discord': False}
         # add node HID
         if 'HID' not in config:
             config['HID'] = {}
@@ -142,28 +142,28 @@ class XeniaGenerator(Generator):
             config['XConfig'] = {'user_language': int(system.config['xeniaLanguage'])}
         else:
             config['XConfig'] = {'user_language': 1}
-        
+
         # now write the updated toml
         with open(toml_file, 'w') as f:
             toml.dump(config, f)
 
         # now setup the command array for the emulator
         if rom == 'config':
-            if core == 'xenia':
-                commandArray = ['/usr/wine/proton/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe']
+            if core == 'xenia-canary':
+                commandArray = ['/usr/wine/lutris/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe']
             else:
-                commandArray = ['/usr/wine/proton/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe']
+                commandArray = ['/usr/wine/lutris/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe']
         else:
-            if core == 'xenia':
-                commandArray = ['/usr/wine/proton/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe', 'z:' + rom]
+            if core == 'xenia-canary':
+                commandArray = ['/usr/wine/lutris/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe', 'z:' + rom]
             else:
-                commandArray = ['/usr/wine/proton/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe', 'z:' + rom]
+                commandArray = ['/usr/wine/lutris/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe', 'z:' + rom]
 
         return Command.Command(
             array=commandArray,
             env={
                 'WINEPREFIX': wineprefix,
-                'LD_LIBRARY_PATH': '/usr/lib:/lib32:/usr/wine/proton/lib/wine',
+                'LD_LIBRARY_PATH': '/usr/lib:/lib32:/usr/wine/lutris/lib/wine',
                 'LIBGL_DRIVERS_PATH': '/usr/lib/dri',
                 'WINEESYNC': '1',
                 'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers),

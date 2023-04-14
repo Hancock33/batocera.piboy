@@ -134,7 +134,7 @@ class DaphneGenerator(Generator):
                 commandArray.extend(["-set_overlay", "full"])
             elif system.isOptSet('overlay_size') and system.config['overlay_size'] == 'half':
                 commandArray.extend(["-set_overlay", "half"])
-            
+
             # crosshair
             if system.isOptSet('daphne_crosshair'):
                 if not system.getOptBoolean("daphne_crosshair"):

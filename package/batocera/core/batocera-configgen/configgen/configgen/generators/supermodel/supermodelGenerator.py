@@ -14,13 +14,13 @@ class SupermodelGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         commandArray = ["supermodel", "-fullscreen", "-channels=2"]
-        
+
         # legacy3d
         if system.isOptSet("engine3D") and system.config["engine3D"] == "new3d":
             commandArray.append("-new3d")
         else:
              commandArray.extend(["-multi-texture", "-legacy-scsp", "-legacy3d"])
-        
+
         # widescreen
         if system.isOptSet("wideScreen") and system.getOptBoolean("wideScreen"):
             commandArray.append("-wide-screen")
@@ -271,7 +271,7 @@ def transformElement(elt, playersControllers, mapping, mapping_fallback):
         return input2input(playersControllers, matches.group(1), joy2realjoyid(playersControllers, matches.group(1)), mapping["button" + matches.group(2)])
     matches = re.search("^JOY([12])_UP$", elt)
     if matches:
-        # check joystick type if it's hat or axis 
+        # check joystick type if it's hat or axis
         joy_type = hatOrAxis(playersControllers, matches.group(1))
         if joy_type == "hat":
             key_up = "up"
