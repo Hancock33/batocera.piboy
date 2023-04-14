@@ -6,6 +6,11 @@
             "target": "killall -9 pcsx2"
 	},
 	{
+            "trigger": [ "b", "hotkey" ],
+            "type": "key",
+            "target": "KEY_ESC"
+	},
+	{
             "trigger": ["hotkey", "x"],
             "type": "key",
             "target": [ "KEY_F3" ]

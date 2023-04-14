@@ -40,13 +40,15 @@ class Pcsx2Generator(Generator):
             commandArray = ["/usr/pcsx2/bin/pcsx2", rom]
 
         # Fullscreen
-        commandArray.append("--fullscreen")
+        commandArray.append("-fullscreen")
+        commandArray.append("-nogui")
 
         # Fullboot
         if system.isOptSet('fullboot') and system.config['fullboot'] == '0':
+            commandArray.append("-fastboot")
             eslog.debug("Fast Boot and skip BIOS")
         else:
-            commandArray.append("--fullboot")
+            commandArray.append("-slowboot")
 
         # Arch
         arch = "x86"
