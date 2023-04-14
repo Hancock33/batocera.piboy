@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Apr 13, 2023
-SPIRV_TOOLS_VERSION = 1877a7f9094d0b8e4f9f4e90ab175b13cedb733d
+SPIRV_TOOLS_VERSION = 6f276e05ccab210584996bc40a0bef82b91f4f40
 SPIRV_TOOLS_SITE = $(call github,KhronosGroup,SPIRV-Tools,$(SPIRV_TOOLS_VERSION))
 SPIRV_TOOLS_DEPENDENCIES = spirv-headers
 SPIRV_TOOLS_INSTALL_STAGING = YES
