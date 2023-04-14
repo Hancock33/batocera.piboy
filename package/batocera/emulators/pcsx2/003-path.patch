@@ -1,73 +1,69 @@
-diff --git a/pcsx2/gui/AppConfig.cpp b/pcsx2/gui/AppConfig.cpp
-index 487d895a5..4b7f7fb5f 100644
---- a/pcsx2/gui/AppConfig.cpp
-+++ b/pcsx2/gui/AppConfig.cpp
-@@ -202,22 +202,22 @@ namespace PathDefs
+diff --git a/pcsx2/Pcsx2Config.cpp b/pcsx2/Pcsx2Config.cpp
+index 208b3048e..2e121e255 100644
+--- a/pcsx2/Pcsx2Config.cpp
++++ b/pcsx2/Pcsx2Config.cpp
+@@ -1461,18 +1461,18 @@ void Pcsx2Config::CopyRuntimeConfig(Pcsx2Config& cfg)
  
- 	wxDirName GetSnapshots()
- 	{
--		return GetDocuments() + Base::Snapshots();
-+		return wxDirName("/userdata/screenshots");
- 	}
- 
- 	wxDirName GetBios()
- 	{
--		return GetDocuments() + Base::Bios();
-+		return wxDirName("/userdata/bios");
- 	}
- 
- 	wxDirName GetCheats()
- 	{
--		return GetDocuments() + Base::Cheats();
-+		return wxDirName("/userdata/cheats/ps2/cheats");
- 	}
- 
- 	wxDirName GetCheatsWS()
- 	{
--		return GetDocuments() + Base::CheatsWS();
-+		return wxDirName("/userdata/cheats/ps2/cheats_ws");
- 	}
- 
- 	wxDirName GetDocs()
-@@ -231,12 +231,12 @@ namespace PathDefs
- 
- 	wxDirName GetSavestates()
- 	{
--		return GetDocuments() + Base::Savestates();
-+		return wxDirName("/userdata/saves/ps2");
- 	}
- 
- 	wxDirName GetMemoryCards()
- 	{
--		return GetDocuments() + Base::MemoryCards();
-+		return wxDirName("/userdata/saves/ps2");
- 	}
- 
- 	wxDirName GetSettings()
-@@ -246,7 +246,7 @@ namespace PathDefs
- 
- 	wxDirName GetLogs()
- 	{
--		return GetDocuments() + Base::Logs();
-+		return wxDirName("/userdata/system/logs");
- 	}
- 
- 	wxDirName GetResources()
-@@ -266,7 +266,7 @@ namespace PathDefs
- 
- 	wxDirName GetCache()
- 	{
--		return GetDocuments() + Base::Cache();
-+		return wxDirName("/userdata/system/cache/ps2");
- 	}
- 
- 	wxDirName GetTextures()
-@@ -1086,7 +1086,7 @@ void RelocateLogfile()
+ void EmuFolders::SetDefaults(SettingsInterface& si)
  {
- 	g_Conf->Folders.Logs.Mkdir();
+-	si.SetStringValue("Folders", "Bios", "bios");
+-	si.SetStringValue("Folders", "Snapshots", "snaps");
+-	si.SetStringValue("Folders", "Savestates", "sstates");
+-	si.SetStringValue("Folders", "MemoryCards", "memcards");
+-	si.SetStringValue("Folders", "Logs", "logs");
+-	si.SetStringValue("Folders", "Cheats", "cheats");
+-	si.SetStringValue("Folders", "CheatsWS", "cheats_ws");
+-	si.SetStringValue("Folders", "CheatsNI", "cheats_ni");
+-	si.SetStringValue("Folders", "Cache", "cache");
+-	si.SetStringValue("Folders", "Textures", "textures");
+-	si.SetStringValue("Folders", "InputProfiles", "inputprofiles");
+-	si.SetStringValue("Folders", "Videos", "videos");
++	si.SetStringValue("Folders", "Bios", "/userdata/bios");
++	si.SetStringValue("Folders", "Snapshots", "/userdata/screenshots/ps2");
++	si.SetStringValue("Folders", "Savestates", "/userdata/saves/ps2");
++	si.SetStringValue("Folders", "MemoryCards", "/userdata/saves/ps2");
++	si.SetStringValue("Folders", "Logs", "/userdata/system/logs");
++	si.SetStringValue("Folders", "Cheats", "/userdata/cheats/ps2/cheats");
++	si.SetStringValue("Folders", "CheatsWS", "/userdata/cheats/ps2/cheats_ws");
++	si.SetStringValue("Folders", "CheatsNI", "/userdata/cheats/ps2/cheats_ni");
++	si.SetStringValue("Folders", "Cache", "/userdata/system/cache/ps2");
++	si.SetStringValue("Folders", "Textures", "/userdata/system/configs/PCSX2/textures");
++	si.SetStringValue("Folders", "InputProfiles", "/userdata/system/configs/PCSX2/inputprofiles");
++	si.SetStringValue("Folders", "Videos", "userdata/system/configs/PCSX2/videos");
+ }
  
--	std::string newlogname(StringUtil::wxStringToUTF8String(Path::CombineWx(g_Conf->Folders.Logs.ToString(), L"emuLog.txt")));
-+	std::string newlogname(StringUtil::wxStringToUTF8String(Path::CombineWx(g_Conf->Folders.Logs.ToString(), L"PCSX2-emuLog.txt")));
+ static std::string LoadPathFromSettings(SettingsInterface& si, const std::string& root, const char* name, const char* def)
+@@ -1485,20 +1485,20 @@ static std::string LoadPathFromSettings(SettingsInterface& si, const std::string
  
- 	if ((emuLog != NULL) && (emuLogName != newlogname))
- 	{
+ void EmuFolders::LoadConfig(SettingsInterface& si)
+ {
+-	Bios = LoadPathFromSettings(si, DataRoot, "Bios", "bios");
+-	Snapshots = LoadPathFromSettings(si, DataRoot, "Snapshots", "snaps");
+-	Savestates = LoadPathFromSettings(si, DataRoot, "Savestates", "sstates");
+-	MemoryCards = LoadPathFromSettings(si, DataRoot, "MemoryCards", "memcards");
+-	Logs = LoadPathFromSettings(si, DataRoot, "Logs", "logs");
+-	Cheats = LoadPathFromSettings(si, DataRoot, "Cheats", "cheats");
+-	CheatsWS = LoadPathFromSettings(si, DataRoot, "CheatsWS", "cheats_ws");
+-	CheatsNI = LoadPathFromSettings(si, DataRoot, "CheatsNI", "cheats_ni");
+-	Covers = LoadPathFromSettings(si, DataRoot, "Covers", "covers");
++	Bios = LoadPathFromSettings(si, DataRoot, "Bios", "/userdata/bios");
++	Snapshots = LoadPathFromSettings(si, DataRoot, "Snapshots", "userdata/screenshots/ps2");
++	Savestates = LoadPathFromSettings(si, DataRoot, "Savestates", "/userdata/saves/ps2");
++	MemoryCards = LoadPathFromSettings(si, DataRoot, "MemoryCards", "/userdata/saves/ps2");
++	Logs = LoadPathFromSettings(si, DataRoot, "Logs", "userdata/system/logs");
++	Cheats = LoadPathFromSettings(si, DataRoot, "Cheats", "userdata/cheats/ps2/cheats");
++	CheatsWS = LoadPathFromSettings(si, DataRoot, "CheatsWS", "userdata/cheats/ps2/cheats_ws");
++	CheatsNI = LoadPathFromSettings(si, DataRoot, "CheatsNI", "userdata/cheats/ps2/cheats_ni");
++	Covers = LoadPathFromSettings(si, DataRoot, "Covers", "/userdata/system/configs/PCSX2/covers");
+ 	GameSettings = LoadPathFromSettings(si, DataRoot, "GameSettings", "gamesettings");
+-	Cache = LoadPathFromSettings(si, DataRoot, "Cache", "cache");
+-	Textures = LoadPathFromSettings(si, DataRoot, "Textures", "textures");
+-	InputProfiles = LoadPathFromSettings(si, DataRoot, "InputProfiles", "inputprofiles");
+-	Videos = LoadPathFromSettings(si, DataRoot, "Videos", "videos");
++	Cache = LoadPathFromSettings(si, DataRoot, "Cache", "/userdata/system/cache/ps2");
++	Textures = LoadPathFromSettings(si, DataRoot, "Textures", "/userdata/system/configs/PCSX2/textures");
++	InputProfiles = LoadPathFromSettings(si, DataRoot, "InputProfiles", "/userdata/system/configs/PCSX2/inputprofiles");
++	Videos = LoadPathFromSettings(si, DataRoot, "Videos", "/userdata/system/configs/PCSX2/videos");
+ 
+ 	Console.WriteLn("BIOS Directory: %s", Bios.c_str());
+ 	Console.WriteLn("Snapshots Directory: %s", Snapshots.c_str());

@@ -1,8 +1,8 @@
 diff --git a/src/files.c b/src/files.c
-index 620543d..b886988 100644
+index 08c0b22..26e99e1 100644
 --- a/src/files.c
 +++ b/src/files.c
-@@ -622,8 +622,8 @@ void InitGameDirectories(char *argv0)
+@@ -650,8 +650,8 @@ void InitGameDirectories(char *argv0)
      
  	localdir = (char *)malloc(strlen(homedir)+10);
  	strcpy(localdir, homedir);
@@ -13,12 +13,19 @@ index 620543d..b886988 100644
  
  	tmp = NULL;
  	
-@@ -709,7 +709,7 @@ void InitGameDirectories(char *argv0)
+@@ -740,13 +740,14 @@ void InitGameDirectories(char *argv0)
  #endif
  
- #if !defined __APPLE__ && !defined __WIN32
+ #if defined __linux__
 -	gamedir = "/usr/local/games/AliensVsPredator/";
 +	gamedir = "/userdata/roms/ports/avp/";
  #endif
  
+ #if defined _WIN32
+ 	gamedir = ".";
+ #endif
+ 
++	gamedir = "/userdata/roms/ports/avp/";
  	assert(gamedir != NULL);
+ 	
+ 	/* last chance sanity check */

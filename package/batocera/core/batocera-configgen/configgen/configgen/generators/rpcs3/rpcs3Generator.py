@@ -190,7 +190,7 @@ class Rpcs3Generator(Generator):
 
         with open(batoceraFiles.rpcs3config, "w") as file:
             yaml.dump(rpcs3ymlconfig, file, default_flow_style=False)
-                
+
         # determine the rom name
         if rom.endswith(".psn"):
             with open(rom) as fp:
@@ -200,7 +200,7 @@ class Rpcs3Generator(Generator):
         else:
             romBasename = path.basename(rom)
             romName = rom + "/PS3_GAME/USRDIR/EBOOT.BIN"
-        
+
         commandArray = [batoceraFiles.batoceraBins[system.config["emulator"]], romName]
 
         if not (system.isOptSet("gui") and system.getOptBoolean("gui")):
