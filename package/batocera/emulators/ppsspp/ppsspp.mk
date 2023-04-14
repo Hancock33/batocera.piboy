@@ -80,8 +80,6 @@ define PPSSPP_UPDATE_INCLUDES
 	sed -i "s+/opt/vc+$(STAGING_DIR)/usr+g" $(@D)/CMakeLists.txt
 endef
 
-PPSSPP_PRE_CONFIGURE_HOOKS += PPSSPP_UPDATE_INCLUDES
-
 define PPSSPP_INSTALL_TARGET_CMDS
     mkdir -p $(TARGET_DIR)/usr/bin
     $(INSTALL) -D -m 0755 $(@D)/$(PPSSPP_TARGET_BINARY) $(TARGET_DIR)/usr/bin/PPSSPP
@@ -93,5 +91,14 @@ define PPSSPP_INSTALL_TARGET_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/psp.ppsspp.keys $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/pspmini.ppsspp.keys $(TARGET_DIR)/usr/share/evmapy
 endef
+
+define PPSSPP_POST_PROCESS
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/psp.ppsspp.keys \
+        $(TARGET_DIR)/usr/share/evmapy
+endef
+
+PPSSPP_PRE_CONFIGURE_HOOKS += PPSSPP_UPDATE_INCLUDES
+PPSSPP_POST_INSTALL_TARGET_HOOKS += PPSSPP_POST_PROCESS
 
 $(eval $(cmake-package))
