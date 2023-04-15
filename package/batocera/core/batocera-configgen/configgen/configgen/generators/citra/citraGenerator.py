@@ -12,9 +12,9 @@ class CitraGenerator(Generator):
 
     # Main entry of the module
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        CitraGenerator.writeCITRAConfig(batoceraFiles.CONF + "/citra-emu/qt-config.ini", system, playersControllers)
+        CitraGenerator.writeCITRAConfig(batoceraFiles.CONF + "/citra-emu/sdl2-config.ini", system, playersControllers)
 
-        commandArray = ['/usr/bin/citra-qt', rom]
+        commandArray = ['/usr/bin/citra', rom]
         return Command.Command(array=commandArray, env={ \
         "XDG_CONFIG_HOME":batoceraFiles.CONF, \
         "XDG_DATA_HOME":batoceraFiles.SAVES + "/3ds", \

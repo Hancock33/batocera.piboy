@@ -245,7 +245,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_E2FSPROGS_RESIZE2FS                  # fs resize
     select BR2_PACKAGE_PACMAN                               # pacman package manager
     select BR2_PACKAGE_FLATPAK                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY    # flatpak app packaging system
-    select BR2_PACKAGE_BAUH                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY    # flatpak gui
+    select BR2_PACKAGE_BAUH                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY    # flatpak gui (Uses QT5)
     select BR2_PACKAGE_RYZENADJ                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY    # ryzen apu configuration
     select BR2_PACKAGE_SYNCTHING                            # sync files across multiple batoceras
     select BR2_PACKAGE_RCLONE                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY    # sync files in the cloud (require x86_64)
@@ -999,7 +999,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_DUCKSTATION                          if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835    && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_CHA        && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3326     && \
-                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3128
+                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3128     # Uses QT5
 
     select BR2_PACKAGE_LIBRETRO_SWANSTATION                 if  !BR2_PACKAGE_BATOCERA_TARGET_X86        && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_CHA        && \
@@ -1057,7 +1057,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_PCSX2                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Sony PS3
-    select BR2_PACKAGE_RPCS3                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_RPCS3                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  # Uses QT5
 
     # Wii U (requires Wine layer)
     select BR2_PACKAGE_CEMU                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
@@ -1222,7 +1222,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_OPENJAZZ                             # ALL
 
     # Sony PS2
-    select BR2_PACKAGE_PLAY                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    #select BR2_PACKAGE_PLAY                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  # Bad performance (Uses QT5)
     select BR2_PACKAGE_LIBRETRO_PLAY                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     #Extra libretro-cores

@@ -8,4 +8,4 @@ then
     export DISPLAY=:0.0
 fi
 
-XDG_CONFIG_HOME="/userdata/system/configs/play" XDG_DATA_HOME="/userdata/system/configs/play" XDG_CACHE_HOME="/userdata/system/cache" QT_QPA_PLATFORM="xcb" /usr/bin/play-emu -platform xcb
+XDG_CONFIG_HOME="/userdata/system/configs/play" XDG_DATA_HOME="/userdata/system/configs/play" XDG_CACHE_HOME="/userdata/system/cache" QT_QPA_PLATFORM="xcb" QT_XCB_NO_XI2="1" /usr/bin/play-emu -platform xcb

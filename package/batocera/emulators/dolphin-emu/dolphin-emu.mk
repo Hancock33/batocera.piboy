@@ -12,7 +12,7 @@ DOLPHIN_EMU_GIT_SUBMODULES = YES
 DOLPHIN_EMU_SUPPORTS_IN_SOURCE_BUILD = NO
 
 DOLPHIN_EMU_DEPENDENCIES = libevdev ffmpeg zlib libpng lzo libusb libcurl
-DOLPHIN_EMU_DEPENDENCIES += bluez5_utils hidapi xz host-xz sdl2 qt5base
+DOLPHIN_EMU_DEPENDENCIES += bluez5_utils hidapi xz host-xz sdl2
 
 DOLPHIN_EMU_CONF_OPTS  = -DCMAKE_BUILD_TYPE=Release
 DOLPHIN_EMU_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
@@ -28,7 +28,7 @@ DOLPHIN_EMU_MAKE_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
 DOLPHIN_EMU_CONF_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
 
 ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
-    DOLPHIN_EMU_DEPENDENCIES += xserver_xorg-server qt5base
+    DOLPHIN_EMU_DEPENDENCIES += xserver_xorg-server qt6base
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_X11=ON
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_EGL=OFF
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_NOGUI=OFF

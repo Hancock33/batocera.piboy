@@ -13,6 +13,7 @@ if [[ -x /usr/bin/citra-qt ]]; then
         XDG_DATA_HOME=/userdata/saves/3ds  \
         XDG_CACHE_HOME=/userdata/system/cache \
         QT_QPA_PLATFORM=xcb \
+        QT_XCB_NO_XI2=1 \
         /usr/bin/citra-qt
 elif [[ -x /usr/bin/citra ]]; then
     # DRM fallback
@@ -20,6 +21,7 @@ elif [[ -x /usr/bin/citra ]]; then
         XDG_DATA_HOME=/userdata/saves/3ds  \
         XDG_CACHE_HOME=/userdata/system/cache \
         QT_QPA_PLATFORM=xcb \
+        QT_XCB_NO_XI2=1 \
         /usr/bin/citra
 else
     echo "System not found";

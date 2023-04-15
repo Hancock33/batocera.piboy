@@ -303,6 +303,10 @@ def getGenerator(emulator):
         from generators.pcsx2.pcsx2Generator import Pcsx2Generator
         return Pcsx2Generator()
 
+    if emulator == 'play':
+        from generators.play.playGenerator import PlayGenerator
+        return PlayGenerator()
+
     if emulator == 'ppsspp':
         from generators.ppsspp.ppssppGenerator import PPSSPPGenerator
         return PPSSPPGenerator()
@@ -518,9 +522,5 @@ def getGenerator(emulator):
     if emulator == 'yuzu':
         from generators.yuzu.yuzuGenerator import YuzuGenerator
         return YuzuGenerator()
-
-#if emulator == #'play':
-#from generators.play.playGenerator import PlayGenerator
-#return PlayGenerator()
 
     raise Exception(f"no generator found for emulator {emulator}")
