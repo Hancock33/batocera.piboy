@@ -239,6 +239,7 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
 
         os.environ.update({'PIPEWIRE_LATENCY': '1024/48000'})
         os.environ.update({'QT_QPA_PLATFORM': 'xcb'})
+        os.environ.update({'QT_XCB_NO_XI2': '1'})
 
         if (system.config['core'] != 'pcsx2'):
             os.environ.update({'QT_PLUGIN_PATH': '/usr/lib/qt/plugins'})

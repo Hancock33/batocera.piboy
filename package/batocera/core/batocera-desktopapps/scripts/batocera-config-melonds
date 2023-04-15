@@ -7,4 +7,4 @@ fi
 
 PATH=$PATH:PATH=$PATH:/usr/wine/lutris/bin
 
-XDG_CONFIG_HOME=/userdata/system/configs XDG_CACHE_HOME=/userdata/system/cache QT_QPA_PLATFORM=xcb /usr/bin/melonDS
+XDG_CONFIG_HOME=/userdata/system/configs XDG_CACHE_HOME=/userdata/system/cache QT_QPA_PLATFORM=xcb QT_XCB_NO_XI2=1 /usr/bin/melonDS
