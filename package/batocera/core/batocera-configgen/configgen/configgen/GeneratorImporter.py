@@ -303,7 +303,7 @@ def getGenerator(emulator):
         from generators.pcsx2.pcsx2Generator import Pcsx2Generator
         return Pcsx2Generator()
 
-    if emulator == #'play':
+    if emulator == 'play':
         from generators.play.playGenerator import PlayGenerator
         return PlayGenerator()
 

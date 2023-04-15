@@ -775,7 +775,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
     #qt5 select BR2_PACKAGE_MELONDS                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # 3DS
-    #qt5 select BR2_PACKAGE_CITRA                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_CITRA                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_CITRA                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # PSP
