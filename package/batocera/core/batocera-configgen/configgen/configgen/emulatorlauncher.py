@@ -241,7 +241,7 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
         os.environ.update({'QT_QPA_PLATFORM': 'xcb'})
         os.environ.update({'QT_XCB_NO_XI2': '1'})
 
-        if (system.config['core'] != 'duckstation') or (system.config['core'] != 'flatpak') or (system.config['core'] != 'rpcs3'):
+        if (system.config['core'] != 'flatpak'):
             os.environ.update({'QT_PLUGIN_PATH': '/usr/plugins'})
         else:
             os.environ.update({'QT_PLUGIN_PATH': '/usr/lib/qt/plugins'})
