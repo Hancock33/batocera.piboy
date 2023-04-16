@@ -1371,7 +1371,7 @@ msgctxt "game_options"
 msgid "Apply a post-processing effect."
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox, openbor
+#. TRANSLATION: libretro/dosbox, openbor, cgenius
 msgctxt "game_options"
 msgid "VIDEO FILTER"
 msgstr ""
@@ -3307,7 +3307,7 @@ msgctxt "game_options"
 msgid "Select which joystick to emulate."
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, cgenius, mame/vitaquake3
 msgctxt "game_options"
 msgid "None (Default)"
 msgstr ""
@@ -7957,7 +7957,7 @@ msgctxt "game_options"
 msgid "Force the game to render in this aspect ratio."
 msgstr ""
 
-#. TRANSLATION: flycast, yabasanshiro
+#. TRANSLATION: flycast, cgenius, yabasanshiro
 msgctxt "game_options"
 msgid "RENDER RESOLUTION"
 msgstr ""
@@ -8472,7 +8472,7 @@ msgctxt "game_options"
 msgid "AUDIO BUFFER (SAMPLES)"
 msgstr ""
 
-#. TRANSLATION: mupen64plus
+#. TRANSLATION: mupen64plus, cgenius
 msgctxt "game_options"
 msgid "nearest"
 msgstr ""
@@ -9584,6 +9584,71 @@ msgstr ""
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "50 (Default)"
+msgstr ""
+
+#. TRANSLATION: cgenius
+msgctxt "game_options"
+msgid "Choose your preferred aspect ratio.."
+msgstr ""
+
+#. TRANSLATION: cgenius
+msgctxt "game_options"
+msgid "4x3 (Default)"
+msgstr ""
+
+#. TRANSLATION: cgenius
+msgctxt "game_options"
+msgid "Choose your preferred video filter."
+msgstr ""
+
+#. TRANSLATION: cgenius
+msgctxt "game_options"
+msgid "Scale2x"
+msgstr ""
+
+#. TRANSLATION: cgenius, f2bgl
+msgctxt "game_options"
+msgid "Scale3x"
+msgstr ""
+
+#. TRANSLATION: cgenius
+msgctxt "game_options"
+msgid "Scale4x"
+msgstr ""
+
+#. TRANSLATION: cgenius
+msgctxt "game_options"
+msgid "Choose your preferred video quality."
+msgstr ""
+
+#. TRANSLATION: cgenius
+msgctxt "game_options"
+msgid "VIDEO QUALITY"
+msgstr ""
+
+#. TRANSLATION: cgenius
+msgctxt "game_options"
+msgid "linear"
+msgstr ""
+
+#. TRANSLATION: cgenius
+msgctxt "game_options"
+msgid "best"
+msgstr ""
+
+#. TRANSLATION: cgenius
+msgctxt "game_options"
+msgid "Choose your preferred render resolution."
+msgstr ""
+
+#. TRANSLATION: cgenius
+msgctxt "game_options"
+msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
+msgstr ""
+
+#. TRANSLATION: cgenius
+msgctxt "game_options"
+msgid "CURSOR"
 msgstr ""
 
 #. TRANSLATION: vice, tsugaru
@@ -11018,11 +11083,6 @@ msgstr ""
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Scale2x (Default)"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "Scale3x"
 msgstr ""
 
 #. TRANSLATION: f2bgl
