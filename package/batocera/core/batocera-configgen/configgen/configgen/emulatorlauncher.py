@@ -242,7 +242,7 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
         os.environ.update({'QT_XCB_NO_XI2': '1'})
 
         if (system.config['core'] != 'flatpak'):
-            os.environ.update({'QT_PLUGIN_PATH': '/usr/plugins'})
+            os.environ.update({'QT_PLUGIN_PATH': '/usr/lib/qt6/plugins'})
         else:
             os.environ.update({'QT_PLUGIN_PATH': '/usr/lib/qt/plugins'})
 

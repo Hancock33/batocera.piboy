@@ -35,6 +35,7 @@ config BR2_PACKAGE_RPCS3
 	select BR2_PACKAGE_QT6SVG
 	select BR2_PACKAGE_QT6TOOLS
 	select BR2_PACKAGE_QT6MULTIMEDIA
+	select BR2_PACKAGE_QT6SVG
 
     help
       RPCS3 is a multi-platform open-source Sony PlayStation 3 emulator.
