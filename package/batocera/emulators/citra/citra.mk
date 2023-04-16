@@ -27,7 +27,7 @@ CITRA_CONF_ENV += LDFLAGS=-lpthread
 define CITRA_INSTALL_TARGET_CMDS
     mkdir -p $(TARGET_DIR)/usr/bin
     mkdir -p $(TARGET_DIR)/usr/lib
-	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/citra \
+	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/citra-qt \
 		$(TARGET_DIR)/usr/bin/citra-qt
 endef
 
