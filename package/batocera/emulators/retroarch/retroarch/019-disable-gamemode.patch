@@ -1,0 +1,17 @@
+diff --git a/frontend/drivers/platform_unix.c b/frontend/drivers/platform_unix.c
+index f10f8137b0..4a7544a0cd 100644
+--- a/frontend/drivers/platform_unix.c
++++ b/frontend/drivers/platform_unix.c
+@@ -29,10 +29,10 @@
+ 
+ #ifdef __linux__
+ #include <linux/version.h>
+-#if __STDC_VERSION__ >= 199901L && !defined(ANDROID)
++/*#if __STDC_VERSION__ >= 199901L && !defined(ANDROID)
+ #include "feralgamemode/gamemode_client.h"
+ #define FERAL_GAMEMODE
+-#endif
++#endif*/
+ /* inotify API was added in 2.6.13 */
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,13)
+ #define HAS_INOTIFY
