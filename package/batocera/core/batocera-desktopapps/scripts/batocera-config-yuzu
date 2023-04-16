@@ -8,4 +8,4 @@ then
     export DISPLAY=:0.0
 fi
 
-XDG_CONFIG_HOME="/userdata/system/configs" XDG_DATA_HOME="/userdata/saves/switch" XDG_CACHE_HOME="/userdata/system/cache" QT_PLUGIN_PATH="/usr/plugins" QT_QPA_PLATFORM="xcb" QT_XCB_NO_XI2="1"  /usr/bin/yuzu -platform xcb
+XDG_CONFIG_HOME="/userdata/system/configs" XDG_DATA_HOME="/userdata/saves/switch" XDG_CACHE_HOME="/userdata/system/cache" QT_PLUGIN_PATH="/usr/lib/qt6/plugins" QT_QPA_PLATFORM="xcb" QT_XCB_NO_XI2="1"  /usr/bin/yuzu -platform xcb
