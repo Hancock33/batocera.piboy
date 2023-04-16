@@ -1,0 +1,2290 @@
+From befa42549c137e6d92363cf76096932aa44f5a30 Mon Sep 17 00:00:00 2001
+From: Megamouse <studienricky89@googlemail.com>
+Date: Sat, 22 May 2021 10:42:05 +0200
+Subject: [PATCH] Qt6 port
+
+---
+ .ci/build-linux.sh                            |   2 +-
+ .ci/build-mac.sh                              |   6 +-
+ .ci/install-freebsd.sh                        |   8 +-
+ .ci/setup-windows.sh                          |  19 +-
+ .cirrus.yml                                   |   6 +-
+ 3rdparty/qt5.cmake                            |  45 ----
+ 3rdparty/qt6.cmake                            |  45 ++++
+ BUILDING.md                                   |  23 +-
+ azure-pipelines.yml                           |   6 +-
+ rpcs3/CMakeLists.txt                          |  30 +--
+ rpcs3/Emu/Cell/Modules/cellCamera.cpp         |   1 -
+ rpcs3/Emu/Io/camera_config.cpp                |   8 +-
+ rpcs3/Emu/Io/camera_config.h                  |   2 -
+ rpcs3/Emu/Io/camera_handler_base.h            |   3 +-
+ rpcs3/Emu/RSX/display.h                       |   2 +-
+ rpcs3/main.cpp                                |   9 +-
+ rpcs3/main_application.cpp                    |   2 +-
+ rpcs3/rpcs3.vcxproj                           |  21 +-
+ rpcs3/rpcs3.vcxproj.filters                   |   4 +-
+ rpcs3/rpcs3qt/CMakeLists.txt                  |   4 +-
+ rpcs3/rpcs3qt/camera_settings_dialog.cpp      | 167 +++++++--------
+ rpcs3/rpcs3qt/camera_settings_dialog.h        |   4 +-
+ rpcs3/rpcs3qt/camera_settings_dialog.ui       |   6 +-
+ rpcs3/rpcs3qt/gs_frame.h                      |   2 +-
+ rpcs3/rpcs3qt/gui_application.cpp             |   7 +-
+ rpcs3/rpcs3qt/main_window.cpp                 |  32 ++-
+ rpcs3/rpcs3qt/main_window.h                   |   4 +-
+ rpcs3/rpcs3qt/osk_dialog_frame.cpp            |   2 +-
+ rpcs3/rpcs3qt/progress_indicator.cpp          |  18 +-
+ rpcs3/rpcs3qt/progress_indicator.h            |   4 +-
+ rpcs3/rpcs3qt/qt_camera_error_handler.cpp     |  60 +-----
+ rpcs3/rpcs3qt/qt_camera_error_handler.h       |  12 +-
+ rpcs3/rpcs3qt/qt_camera_handler.cpp           | 196 +++++++-----------
+ rpcs3/rpcs3qt/qt_camera_handler.h             |  12 +-
+ ...o_surface.cpp => qt_camera_video_sink.cpp} |  73 ++-----
+ ...video_surface.h => qt_camera_video_sink.h} |  12 +-
+ rpcs3/rpcs3qt/qt_music_error_handler.cpp      |  24 +--
+ rpcs3/rpcs3qt/qt_music_error_handler.h        |   4 +-
+ rpcs3/rpcs3qt/qt_music_handler.cpp            |  17 +-
+ rpcs3/rpcs3qt/settings_dialog.cpp             |   7 +-
+ 40 files changed, 365 insertions(+), 544 deletions(-)
+ delete mode 100644 3rdparty/qt5.cmake
+ create mode 100644 3rdparty/qt6.cmake
+ rename rpcs3/rpcs3qt/{qt_camera_video_surface.cpp => qt_camera_video_sink.cpp} (78%)
+ rename rpcs3/rpcs3qt/{qt_camera_video_surface.h => qt_camera_video_sink.h} (66%)
+
+diff --git a/.ci/build-linux.sh b/.ci/build-linux.sh
+index 4e80f532a7a..8dc7801b5a3 100755
+--- a/.ci/build-linux.sh
++++ b/.ci/build-linux.sh
+@@ -1,7 +1,7 @@
+ #!/bin/sh -ex
+ 
+ # Setup Qt variables
+-export QT_BASE_DIR=/opt/qt"${QTVERMIN}"
++export QT_BASE_DIR=/opt/qt"${QT_VER_MAIN}"
+ export PATH="$QT_BASE_DIR"/bin:"$PATH"
+ export LD_LIBRARY_PATH="$QT_BASE_DIR"/lib/x86_64-linux-gnu:"$QT_BASE_DIR"/lib
+ 
+diff --git a/.ci/build-mac.sh b/.ci/build-mac.sh
+index eb8212d7961..c53bbbaca3e 100755
+--- a/.ci/build-mac.sh
++++ b/.ci/build-mac.sh
+@@ -28,13 +28,13 @@ git clone https://github.com/engnr/qt-downloader.git
+ cd qt-downloader
+ git checkout f52efee0f18668c6d6de2dec0234b8c4bc54c597
+ "/opt/homebrew/bin/pipenv" run pip3 install py7zr requests semantic_version lxml
+-"/opt/homebrew/bin/pipenv" run ./qt-downloader macos desktop 5.15.2 clang_64 --opensource
++"/opt/homebrew/bin/pipenv" run ./qt-downloader macos desktop $QT_VER clang_64 --opensource
+ cd ..
+ 
+-export Qt5_DIR="$WORKDIR/qt-downloader/5.15.2/clang_64/lib/cmake/Qt5"
++export Qt6_DIR="$WORKDIR/qt-downloader/$QT_VER/clang_64/lib/cmake/Qt$QT_VER_MAIN"
+ export SDL2_DIR="$BREW_X64_PATH/opt/sdl2/lib/cmake/SDL2"
+ 
+-export PATH="$BREW_X64_PATH/opt/llvm@16/bin:$WORKDIR/qt-downloader/5.15.2/clang_64/bin:$BREW_BIN:$BREW_SBIN:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Apple/usr/bin:$PATH"
++export PATH="$BREW_X64_PATH/opt/llvm@16/bin:$WORKDIR/qt-downloader/$QT_VER/clang_64/bin:$BREW_BIN:$BREW_SBIN:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Apple/usr/bin:$PATH"
+ export LDFLAGS="-L$BREW_X64_PATH/lib -Wl,-rpath,$BREW_X64_PATH/lib"
+ export CPPFLAGS="-I$BREW_X64_PATH/include -msse -msse2 -mcx16 -no-pie"
+ export LIBRARY_PATH="$BREW_X64_PATH/lib"
+diff --git a/.ci/install-freebsd.sh b/.ci/install-freebsd.sh
+index 2a63e5ddfce..0692efc267f 100755
+--- a/.ci/install-freebsd.sh
++++ b/.ci/install-freebsd.sh
+@@ -2,7 +2,7 @@
+ # NOTE: this script is run under root permissions
+ # shellcheck shell=sh disable=SC2096
+ 
+-# RPCS3 often needs recent Qt5 and Vulkan-Headers
++# RPCS3 often needs recent Qt and Vulkan-Headers
+ sed -i '' 's/quarterly/latest/' /etc/pkg/FreeBSD.conf
+ 
+ export ASSUME_ALWAYS_YES=true
+@@ -11,8 +11,8 @@ pkg info # debug
+ # Prefer newer Clang than in base system (see also .ci/build-freebsd.sh)
+ pkg install llvm16
+ 
+-# Mandatory dependencies (qt5-dbus and qt5-gui are pulled via qt5-widgets)
+-pkg install git ccache cmake ninja qt5-qmake qt5-buildtools qt5-widgets qt5-concurrent qt5-multimedia qt5-svg glew openal-soft ffmpeg
++# Mandatory dependencies (qt6-base and qt6-svg are pulled via qt6-multimedia)
++pkg install git ccache cmake ninja qt6-multimedia glew openal-soft ffmpeg
+ 
+-# Optional dependencies (libevdev is pulled by qt5-gui)
++# Optional dependencies (libevdev is pulled by qt6-base)
+ pkg install pkgconf alsa-lib pulseaudio sdl2 evdev-proto vulkan-headers vulkan-loader
+diff --git a/.ci/setup-windows.sh b/.ci/setup-windows.sh
+index 614ca9e98b7..0d7974f1f01 100755
+--- a/.ci/setup-windows.sh
++++ b/.ci/setup-windows.sh
+@@ -11,25 +11,26 @@ PR_NUMBER="$SYSTEM_PULLREQUEST_PULLREQUESTID"
+ QT_HOST="http://qt.mirror.constant.com/"
+ QT_URL_VER=$(echo "$QT_VER" | sed "s/\.//g")
+ QT_VER_MSVC_UP=$(echo "${QT_VER_MSVC}" | tr '[:lower:]' '[:upper:]')
+-QT_PREFIX="online/qtsdkrepository/windows_x86/desktop/qt${QT_VER_MAIN}_${QT_URL_VER}/qt.qt${QT_VER_MAIN}.${QT_URL_VER}.win64_${QT_VER_MSVC}_64/${QT_VER}-0-${QT_DATE}"
+-QT_SUFFIX="-Windows-Windows_10-${QT_VER_MSVC_UP}-Windows-Windows_10-X86_64.7z"
+-QT_BASE_URL="${QT_HOST}${QT_PREFIX}qtbase${QT_SUFFIX}"
+-QT_WINE_URL="${QT_HOST}${QT_PREFIX}qtwinextras${QT_SUFFIX}"
+-QT_DECL_URL="${QT_HOST}${QT_PREFIX}qtdeclarative${QT_SUFFIX}"
+-QT_TOOL_URL="${QT_HOST}${QT_PREFIX}qttools${QT_SUFFIX}"
+-QT_MM_URL="${QT_HOST}${QT_PREFIX}qtmultimedia${QT_SUFFIX}"
+-QT_SVG_URL="${QT_HOST}${QT_PREFIX}qtsvg${QT_SUFFIX}"
++QT_PREFIX="online/qtsdkrepository/windows_x86/desktop/qt${QT_VER_MAIN}_${QT_URL_VER}/qt.qt${QT_VER_MAIN}.${QT_URL_VER}."
++QT_PREFIX_2="win64_${QT_VER_MSVC}_64/${QT_VER}-0-${QT_DATE}"
++QT_SUFFIX="-Windows-Windows_10_22H2-${QT_VER_MSVC_UP}-Windows-Windows_10_22H2-X86_64.7z"
++QT_BASE_URL="${QT_HOST}${QT_PREFIX}${QT_PREFIX_2}qtbase${QT_SUFFIX}"
++QT_DECL_URL="${QT_HOST}${QT_PREFIX}${QT_PREFIX_2}qtdeclarative${QT_SUFFIX}"
++QT_TOOL_URL="${QT_HOST}${QT_PREFIX}${QT_PREFIX_2}qttools${QT_SUFFIX}"
++QT_MM_URL="${QT_HOST}${QT_PREFIX}addons.qtmultimedia.${QT_PREFIX_2}qtmultimedia${QT_SUFFIX}"
++QT_SVG_URL="${QT_HOST}${QT_PREFIX}${QT_PREFIX_2}qtsvg${QT_SUFFIX}"
++QT_5CMP_URL="${QT_HOST}${QT_PREFIX}qt5compat.${QT_PREFIX_2}qt5compat${QT_SUFFIX}"
+ LLVMLIBS_URL='https://github.com/RPCS3/llvm-mirror/releases/download/custom-build-win-16.0.1/llvmlibs_mt.7z'
+ GLSLANG_URL='https://github.com/RPCS3/glslang/releases/download/custom-build-win/glslanglibs_mt.7z'
+ VULKAN_SDK_URL="https://www.dropbox.com/s/cs77c3iv5mbo0bt/VulkanSDK-${VULKAN_VER}-Installer.exe"
+ 
+ DEP_URLS="         \
+     $QT_BASE_URL   \
+-    $QT_WINE_URL   \
+     $QT_DECL_URL   \
+     $QT_TOOL_URL   \
+     $QT_MM_URL     \
+     $QT_SVG_URL    \
++    $QT_5CMP_URL   \
+     $LLVMLIBS_URL  \
+     $GLSLANG_URL   \
+     $VULKAN_SDK_URL"
+diff --git a/.cirrus.yml b/.cirrus.yml
+index 0fbfebf1801..345c2d66261 100644
+--- a/.cirrus.yml
++++ b/.cirrus.yml
+@@ -6,6 +6,8 @@ env:
+   BUILD_SOURCEVERSION: $CIRRUS_CHANGE_IN_REPO
+   BUILD_SOURCEBRANCHNAME: $CIRRUS_BRANCH
+   RPCS3_TOKEN: ENCRYPTED[!a4c3850e29ab150692286a74bec29819d25971a7ec431b86de2a35f7ed90c5b2ab3c93469f9298e30924d843599110e9!]
++  QT_VER_MAIN: '6'
++  QT_VER: '6.4.3'
+ 
+ windows_task:
+   matrix:
+@@ -17,11 +19,9 @@ windows_task:
+   env:
+     CIRRUS_SHELL: "bash"
+     COMPILER: msvc
+-    QT_VER_MAIN: '5'
+     BUILD_ARTIFACTSTAGINGDIRECTORY: ${CIRRUS_WORKING_DIR}\artifacts\
+-    QT_VER: '5.15.2'
+     QT_VER_MSVC: 'msvc2019'
+-    QT_DATE: '202011130602'
++    QT_DATE: '202303290841'
+     QTDIR: C:\Qt\${QT_VER}\${QT_VER_MSVC}_64
+     VULKAN_VER: '1.3.224.1'
+     VULKAN_SDK_SHA: '2029e652e39ee6a6036cff3765da31e1e6c595fd2413d3cd111dfab7855621ea'
+diff --git a/3rdparty/qt5.cmake b/3rdparty/qt5.cmake
+deleted file mode 100644
+index ed42399f97a..00000000000
+--- a/3rdparty/qt5.cmake
++++ /dev/null
+@@ -1,45 +0,0 @@
+-add_library(3rdparty_qt5 INTERFACE)
+-
+-set(QT_MIN_VER 5.15.2)
+-
+-find_package(Qt5 ${QT_MIN_VER} CONFIG COMPONENTS Widgets Concurrent Multimedia MultimediaWidgets Svg)
+-if(WIN32)
+-	find_package(Qt5 ${QT_MIN_VER} COMPONENTS WinExtras REQUIRED)
+-	target_link_libraries(3rdparty_qt5 INTERFACE Qt5::Widgets Qt5::WinExtras Qt5::Concurrent Qt5::Multimedia Qt5::MultimediaWidgets Qt5::Svg)
+-else()
+-	find_package(Qt5 ${QT_MIN_VER} COMPONENTS DBus Gui)
+-	if(Qt5DBus_FOUND)
+-		target_link_libraries(3rdparty_qt5 INTERFACE Qt5::Widgets Qt5::DBus Qt5::Concurrent Qt5::Multimedia Qt5::MultimediaWidgets Qt5::Svg)
+-		target_compile_definitions(3rdparty_qt5 INTERFACE -DHAVE_QTDBUS)
+-	else()
+-		target_link_libraries(3rdparty_qt5 INTERFACE Qt5::Widgets Qt5::Concurrent Qt5::Multimedia Qt5::MultimediaWidgets Qt5::Svg)
+-	endif()
+-	target_include_directories(3rdparty_qt5 INTERFACE ${Qt5Gui_PRIVATE_INCLUDE_DIRS})
+-endif()
+-
+-if(NOT Qt5Widgets_FOUND)
+-	if(Qt5Widgets_VERSION VERSION_LESS ${QT_MIN_VER})
+-		message("Minimum supported Qt5 version is ${QT_MIN_VER}! You have version ${Qt5Widgets_VERSION} installed, please upgrade!")
+-		if(CMAKE_SYSTEM MATCHES "Linux")
+-			message(FATAL_ERROR "Most distros do not provide an up-to-date version of Qt.
+-If you're on Ubuntu or Linux Mint, there are PPAs you can use to install one of the latest qt5 versions.
+-Find the correct ppa at https://launchpad.net/~beineri and follow the instructions.")
+-		elseif(WIN32)
+-			message(FATAL_ERROR "You can download the latest version of Qt5 here: https://www.qt.io/download-open-source/")
+-		else()
+-			message(FATAL_ERROR "Look online for instructions on installing an up-to-date Qt5 on ${CMAKE_SYSTEM}.")
+-		endif()
+-	endif()
+-
+-	message("CMake was unable to find Qt5!")
+-	if(WIN32)
+-		message(FATAL_ERROR "Make sure the QTDIR env variable has been set properly. (for example C:\\Qt\\${QT_MIN_VER}\\msvc2019_64\\)
+-You can also try setting the Qt5_DIR preprocessor definiton.")
+-	elseif(CMAKE_SYSTEM MATCHES "Linux")
+-		message(FATAL_ERROR "Make sure to install your distro's qt5 package!")
+-	else()
+-		message(FATAL_ERROR "You need to have Qt5 installed, look online for instructions on installing Qt5 on ${CMAKE_SYSTEM}.")
+-	endif()
+-endif()
+-
+-add_library(3rdparty::qt5 ALIAS 3rdparty_qt5)
+diff --git a/3rdparty/qt6.cmake b/3rdparty/qt6.cmake
+new file mode 100644
+index 00000000000..8dc6a8762de
+--- /dev/null
++++ b/3rdparty/qt6.cmake
+@@ -0,0 +1,45 @@
++add_library(3rdparty_qt6 INTERFACE)
++
++set(QT_MIN_VER 6.4.3)
++
++find_package(Qt6 ${QT_MIN_VER} CONFIG COMPONENTS Widgets Concurrent Multimedia MultimediaWidgets Svg SvgWidgets)
++if(WIN32)
++	find_package(Qt6 ${QT_MIN_VER} COMPONENTS WinExtras REQUIRED)
++	target_link_libraries(3rdparty_qt6 INTERFACE Qt6::Widgets Qt6::WinExtras Qt6::Concurrent Qt6::Multimedia Qt6::MultimediaWidgets Qt6::Svg Qt6::SvgWidgets)
++else()
++	find_package(Qt6 ${QT_MIN_VER} COMPONENTS DBus Gui)
++	if(Qt6DBus_FOUND)
++		target_link_libraries(3rdparty_qt6 INTERFACE Qt6::Widgets Qt6::DBus Qt6::Concurrent Qt6::Multimedia Qt6::MultimediaWidgets Qt6::Svg Qt6::SvgWidgets)
++		target_compile_definitions(3rdparty_qt6 INTERFACE -DHAVE_QTDBUS)
++	else()
++		target_link_libraries(3rdparty_qt6 INTERFACE Qt6::Widgets Qt6::Concurrent Qt6::Multimedia Qt6::MultimediaWidgets Qt6::Svg Qt6::SvgWidgets)
++	endif()
++	target_include_directories(3rdparty_qt6 INTERFACE ${Qt6Gui_PRIVATE_INCLUDE_DIRS})
++endif()
++
++if(Qt6Widgets_FOUND)
++	if(Qt6Widgets_VERSION VERSION_LESS ${QT_MIN_VER})
++		message("Minimum supported Qt version is ${QT_MIN_VER}! You have version ${Qt6Widgets_VERSION} installed, please upgrade!")
++		if(CMAKE_SYSTEM MATCHES "Linux")
++			message(FATAL_ERROR "Most distros do not provide an up-to-date version of Qt.
++If you're on Ubuntu or Linux Mint, there are PPAs you can use to install one of the latest qt6 versions.
++Find the correct ppa at https://launchpad.net/~beineri and follow the instructions.")
++		elseif(WIN32)
++			message(FATAL_ERROR "You can download the latest version of Qt6 here: https://www.qt.io/download-open-source/")
++		else()
++			message(FATAL_ERROR "Look online for instructions on installing an up-to-date Qt6 on ${CMAKE_SYSTEM}.")
++		endif()
++	endif()
++else()
++	message("CMake was unable to find Qt6!")
++	if(WIN32)
++		message(FATAL_ERROR "Make sure the QTDIR env variable has been set properly. (for example C:\\Qt\\${QT_MIN_VER}\\msvc2019_64\\)
++You can also try setting the Qt6_DIR preprocessor definiton.")
++	elseif(CMAKE_SYSTEM MATCHES "Linux")
++		message(FATAL_ERROR "Make sure to install your distro's qt6 package!")
++	else()
++		message(FATAL_ERROR "You need to have Qt6 installed, look online for instructions on installing Qt6 on ${CMAKE_SYSTEM}.")
++	endif()
++endif()
++
++add_library(3rdparty::qt6 ALIAS 3rdparty_qt6)
+diff --git a/BUILDING.md b/BUILDING.md
+index e141ed189b8..8371a5b346e 100644
+--- a/BUILDING.md
++++ b/BUILDING.md
+@@ -9,11 +9,11 @@ Other instructions may be found [here](https://wiki.rpcs3.net/index.php?title=Bu
+ 
+ * [CMake 3.16.9+](https://www.cmake.org/download/) (add to PATH)
+ * [Python 3.6+](https://www.python.org/downloads/) (add to PATH)
+-* [Qt 5.15.2](https://www.qt.io/download-qt-installer)
++* [Qt 6.4.3](https://www.qt.io/download-qt-installer)
+ * [Visual Studio 2019](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community)
+ * [Vulkan SDK 1.3.224+](https://vulkan.lunarg.com/sdk/home) (See "Install the SDK" [here](https://vulkan.lunarg.com/doc/sdk/latest/windows/getting_started.html))
+ 
+-**Either add the** `QTDIR` **environment variable, e.g.** `<QtInstallFolder>\5.15.2\msvc2019_64\` **, or use the [Visual Studio Qt Plugin](https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools2019)**
++**Either add the** `QTDIR` **environment variable, e.g.** `<QtInstallFolder>\6.4.3\msvc2019_64\` **, or use the [Visual Studio Qt Plugin](https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools2019)**
+ 
+ ### Linux
+ 
+@@ -21,7 +21,7 @@ These are the essentials tools to build RPCS3 on Linux. Some of them can be inst
+ 
+ * Clang 12+ or GCC 11+
+ * [CMake 3.16.9+](https://www.cmake.org/download/)
+-* [Qt 5.15.2](https://www.qt.io/download-qt-installer)
++* [Qt 6.4.3](https://www.qt.io/download-qt-installer)
+ * [Vulkan SDK 1.3.224+](https://vulkan.lunarg.com/sdk/home) (See "Install the SDK" [here](https://vulkan.lunarg.com/doc/sdk/latest/linux/getting_started.html))
+ * [SDL2](https://github.com/libsdl-org/SDL/releases) (for the FAudio backend)
+ 
+@@ -29,7 +29,7 @@ These are the essentials tools to build RPCS3 on Linux. Some of them can be inst
+ 
+ #### Arch Linux
+ 
+-    sudo pacman -S glew openal cmake vulkan-validation-layers qt5-base qt5-declarative qt5-multimedia sdl2 sndio jack2 base-devel
++    sudo pacman -S glew openal cmake vulkan-validation-layers qt6-base qt6-declarative qt6-multimedia sdl2 sndio jack2 base-devel
+ 
+ #### Debian & Ubuntu
+ 
+@@ -38,14 +38,7 @@ These are the essentials tools to build RPCS3 on Linux. Some of them can be inst
+ Ubuntu is usually horrendously out of date, and some packages need to be downloaded by hand. This part is for Qt, GCC, Vulkan, and CMake
+ ##### Qt PPA
+ 
+-Ubuntu usually does not have a new enough Qt package to suit rpcs3's needs. There is a PPA available to work around this. Run the following:
+-```
+-. /etc/os-release
+-sudo add-apt-repository ppa:beineri/opt-qt-5.15.2-$UBUNTU_CODENAME
+-sudo apt-get update
+-sudo apt-get install qt515base qt515svg
+-. /opt/qt515/bin/qt515-env.sh >/dev/null 2>&1
+-```
++Ubuntu usually does not have a new enough Qt package to suit rpcs3's needs. There is currently no PPA available to work around this.
+ 
+ ##### GCC 11.x installation
+ 
+@@ -82,11 +75,11 @@ sudo apt-get install cmake
+ 
+ #### Fedora
+ 
+-    sudo dnf install alsa-lib-devel cmake glew glew-devel libatomic libevdev-devel libudev-devel openal-devel qt5-qtbase-devel qt5-qtbase-private-devel vulkan-devel pipewire-jack-audio-connection-kit-devel qt5-qtmultimedia-devel qt5-qtsvg-devel
++    sudo dnf install alsa-lib-devel cmake glew glew-devel libatomic libevdev-devel libudev-devel openal-devel qt6-qtbase-devel qt6-qtbase-private-devel vulkan-devel pipewire-jack-audio-connection-kit-devel qt6-qtmultimedia-devel qt6-qtsvg-devel
+ 
+ #### OpenSUSE
+ 
+-    sudo zypper install git cmake libasound2 libpulse-devel openal-soft-devel glew-devel zlib-devel libedit-devel vulkan-devel libudev-devel libqt5-qtbase-devel libqt5-qtmultimedia-devel libqt5-qtsvg-devel libQt5Gui-private-headers-devel libevdev-devel libsndio7_1 libjack-devel
++    sudo zypper install git cmake libasound2 libpulse-devel openal-soft-devel glew-devel zlib-devel libedit-devel vulkan-devel libudev-devel libqt6-qtbase-devel libqt6-qtmultimedia-devel libqt6-qtsvg-devel libQt6Gui-private-headers-devel libevdev-devel libsndio7_1 libjack-devel
+ 
+ ## Setup the project
+ 
+@@ -103,7 +96,7 @@ git submodule update --init
+ #### Configuring the Qt plugin (if used)
+ 
+ 1) Go to `Extensions->Qt VS Tools->Qt Versions`.
+-2) Add the path to your Qt installation with compiler e.g. `<QtInstallFolder>\5.15.2\msvc2019_64`, version will fill in automatically.
++2) Add the path to your Qt installation with compiler e.g. `<QtInstallFolder>\6.4.3\msvc2019_64`, version will fill in automatically.
+ 3) Go to `Extensions->Qt VS Tools->Options->Legacy Project Format`.
+ 4) Set `Build: Run pre-build setup` to `true`.
+ 
+diff --git a/azure-pipelines.yml b/azure-pipelines.yml
+index 67d18fe449f..a064a236690 100644
+--- a/azure-pipelines.yml
++++ b/azure-pipelines.yml
+@@ -65,10 +65,10 @@ jobs:
+ - job: Windows_Build
+   variables:
+     COMPILER: msvc
+-    QT_VER_MAIN: '5'
+-    QT_VER: '5.15.2'
++    QT_VER_MAIN: '6'
++    QT_VER: '6.4.3'
+     QT_VER_MSVC: 'msvc2019'
+-    QT_DATE: '202011130602'
++    QT_DATE: '202303290841'
+     QTDIR: C:\Qt\$(QT_VER)\$(QT_VER_MSVC)_64
+     VULKAN_VER: '1.3.224.1'
+     VULKAN_SDK_SHA: '2029e652e39ee6a6036cff3765da31e1e6c595fd2413d3cd111dfab7855621ea'
+diff --git a/rpcs3/CMakeLists.txt b/rpcs3/CMakeLists.txt
+index e372c66506c..95fdb7eb414 100644
+--- a/rpcs3/CMakeLists.txt
++++ b/rpcs3/CMakeLists.txt
+@@ -41,11 +41,11 @@ else()
+     message("-- Using Custom RPCS3_SRC_DIR=${RPCS3_SRC_DIR}")
+ endif()
+ 
+-# Qt5
++# Qt6
+ # finds Qt libraries and setups custom commands for MOC and UIC
+ # Must be done here because generated MOC and UIC targets cant
+ # be found otherwise
+-include(${CMAKE_SOURCE_DIR}/3rdparty/qt5.cmake)
++include(${CMAKE_SOURCE_DIR}/3rdparty/qt6.cmake)
+ 
+ # subdirectories
+ add_subdirectory(Emu)
+@@ -93,7 +93,7 @@ set_target_properties(rpcs3
+         AUTOUIC ON)
+ 
+ target_link_libraries(rpcs3 rpcs3_emu rpcs3_ui)
+-target_link_libraries(rpcs3 3rdparty::discordRPC 3rdparty::qt5 3rdparty::hidapi 3rdparty::libusb 3rdparty::wolfssl 3rdparty::libcurl)
++target_link_libraries(rpcs3 3rdparty::discordRPC 3rdparty::qt6 3rdparty::hidapi 3rdparty::libusb 3rdparty::wolfssl 3rdparty::libcurl)
+ target_link_libraries(rpcs3 ${ADDITIONAL_LIBS})
+ 
+ # Win resource file
+@@ -134,7 +134,7 @@ if(USE_PRECOMPILED_HEADERS)
+     endif()
+ endif()
+ 
+-get_target_property(_qmake_executable Qt5::qmake IMPORTED_LOCATION)
++get_target_property(_qmake_executable Qt6::qmake IMPORTED_LOCATION)
+ get_filename_component(_qt_bin_dir "${_qmake_executable}" DIRECTORY)
+ find_program(MACDEPLOYQT_EXECUTABLE macdeployqt HINTS "${_qt_bin_dir}")
+ 
+@@ -174,26 +174,26 @@ elseif(WIN32)
+ 
+     # Qt installed from Qt installer has following hierarchy:
+     # bin/ for release and debug dlls and windeployqt tools
+-    # lib/cmake/Qt5/ for Qt5_Dir
++    # lib/cmake/Qt6/ for Qt6_Dir
+     # Qt installed from vcpkg has following hierarchy:
+     # bin/ for release dlls
+     # debug/bin/ for debug dlls
+-    # tools/qt5/bin/ for tools including windeployqt
+-    # tools/qt5/debug/bin/ for tools with debug build including windeployqt
+-    # share/cmake/Qt5/ for Qt5_Dir
++    # tools/qt6/bin/ for tools including windeployqt
++    # tools/qt6/debug/bin/ for tools with debug build including windeployqt
++    # share/cmake/Qt6/ for Qt6_Dir
+ 
+-    # If Qt5 is installed from official Qt installer
+-    list(APPEND _QT5_TOOLS_PATHS "${Qt5_DIR}/../../../bin/")
++    # If Qt6 is installed from official Qt installer
++    list(APPEND _QT6_TOOLS_PATHS "${Qt6_DIR}/../../../bin/")
+ 
+-    # If Qt5 is installed from vcpkg
+-    list(APPEND _QT5_TOOLS_PATHS "${Qt5_DIR}/../../../tools/qt5$<$<CONFIG:Debug>:/debug>/bin/")
++    # If Qt6 is installed from vcpkg
++    list(APPEND _QT6_TOOLS_PATHS "${Qt6_DIR}/../../../tools/qt6$<$<CONFIG:Debug>:/debug>/bin/")
+ 
+     add_custom_command(TARGET rpcs3 POST_BUILD
+-        COMMAND set PATH=${_QT5_TOOLS_PATHS}$<SEMICOLON>%PATH%
++        COMMAND set PATH=${_QT6_TOOLS_PATHS}$<SEMICOLON>%PATH%
+         COMMAND "${CMAKE_COMMAND}" -E copy_directory "${CMAKE_SOURCE_DIR}/bin" "$<TARGET_FILE_DIR:rpcs3>"
+-        # If Qt5 is installed from vcpkg, add binary path to PATH
++        # If Qt6 is installed from vcpkg, add binary path to PATH
+         # otherwise windeployqt tool won't be able to locate necessary dlls
+-        COMMAND set PATH=${Qt5_DIR}/../../../$<$<CONFIG:Debug>:debug/>bin/$<SEMICOLON>%PATH%
++        COMMAND set PATH=${Qt6_DIR}/../../../$<$<CONFIG:Debug>:debug/>bin/$<SEMICOLON>%PATH%
+         COMMAND "${_WINDEPLOYQT}" --no-angle --no-compiler-runtime --no-opengl-sw --no-patchqt --no-translations --no-quick --plugindir "$<TARGET_FILE_DIR:rpcs3>/qt/plugins" $<$<CONFIG:Debug>:--debug> $<$<CONFIG:Release>:--release> "$<TARGET_FILE:rpcs3>")
+ endif()
+ 
+diff --git a/rpcs3/Emu/Cell/Modules/cellCamera.cpp b/rpcs3/Emu/Cell/Modules/cellCamera.cpp
+index acca4f08461..46ebdd838c2 100644
+--- a/rpcs3/Emu/Cell/Modules/cellCamera.cpp
++++ b/rpcs3/Emu/Cell/Modules/cellCamera.cpp
+@@ -1903,7 +1903,6 @@ bool camera_context::on_handler_state(camera_handler_base::camera_handler_state
+ {
+ 	switch (state)
+ 	{
+-	case camera_handler_base::camera_handler_state::not_available:
+ 	case camera_handler_base::camera_handler_state::closed:
+ 	{
+ 		if (is_attached)
+diff --git a/rpcs3/Emu/Io/camera_config.cpp b/rpcs3/Emu/Io/camera_config.cpp
+index bcc19c5786c..dce03e8cd71 100644
+--- a/rpcs3/Emu/Io/camera_config.cpp
++++ b/rpcs3/Emu/Io/camera_config.cpp
+@@ -67,7 +67,7 @@ void cfg_camera::set_camera_setting(const std::string& camera, const camera_sett
+ 
+ std::string cfg_camera::camera_setting::to_string() const
+ {
+-	return fmt::format("%d,%d,%f,%f,%d,%d,%d", width, height, min_fps, max_fps, format, pixel_aspect_width, pixel_aspect_height);
++	return fmt::format("%d,%d,%f,%f,%d", width, height, min_fps, max_fps, format);
+ }
+ 
+ void cfg_camera::camera_setting::from_string(const std::string& text)
+@@ -112,16 +112,12 @@ void cfg_camera::camera_setting::from_string(const std::string& text)
+ 		!to_integer(::at32(list, 1), height) ||
+ 		!to_double(::at32(list, 2), min_fps) ||
+ 		!to_double(::at32(list, 3), max_fps) ||
+-		!to_integer(::at32(list, 4), format) ||
+-		!to_integer(::at32(list, 5), pixel_aspect_width) ||
+-		!to_integer(::at32(list, 6), pixel_aspect_height))
++		!to_integer(::at32(list, 4), format))
+ 	{
+ 		width = 0;
+ 		height = 0;
+ 		min_fps = 0;
+ 		max_fps = 0;
+ 		format = 0;
+-		pixel_aspect_width = 0;
+-		pixel_aspect_height = 0;
+ 	}
+ }
+diff --git a/rpcs3/Emu/Io/camera_config.h b/rpcs3/Emu/Io/camera_config.h
+index ca737f120e7..07836a064dd 100644
+--- a/rpcs3/Emu/Io/camera_config.h
++++ b/rpcs3/Emu/Io/camera_config.h
+@@ -15,8 +15,6 @@ struct cfg_camera final : cfg::node
+ 		double min_fps = 0;
+ 		double max_fps = 0;
+ 		int format = 0;
+-		int pixel_aspect_width = 0;
+-		int pixel_aspect_height = 0;
+ 
+ 		static const u32 member_count = 7;
+ 
+diff --git a/rpcs3/Emu/Io/camera_handler_base.h b/rpcs3/Emu/Io/camera_handler_base.h
+index adcd2653f1e..1c0eb5588b0 100644
+--- a/rpcs3/Emu/Io/camera_handler_base.h
++++ b/rpcs3/Emu/Io/camera_handler_base.h
+@@ -8,7 +8,6 @@ class camera_handler_base
+ public:
+ 	enum class camera_handler_state
+ 	{
+-		not_available,
+ 		closed,
+ 		open,
+ 		running
+@@ -33,7 +32,7 @@ class camera_handler_base
+ 
+ protected:
+ 	std::mutex m_mutex;
+-	atomic_t<camera_handler_state> m_state = camera_handler_state::not_available;
++	atomic_t<camera_handler_state> m_state = camera_handler_state::closed;
+ 	bool m_mirrored = false;
+ 	s32 m_format = 2; // CELL_CAMERA_RAW8
+ 	u32 m_bytesize = 0;
+diff --git a/rpcs3/Emu/RSX/display.h b/rpcs3/Emu/RSX/display.h
+index e6d5fa657ed..88812756683 100644
+--- a/rpcs3/Emu/RSX/display.h
++++ b/rpcs3/Emu/RSX/display.h
+@@ -5,7 +5,7 @@
+ #elif defined(__APPLE__)
+ // nothing
+ #elif defined(HAVE_X11)
+-// Cannot include Xlib.h before Qt5
++// Cannot include Xlib.h before Qt
+ // and we don't need all of Xlib anyway
+ using Display = struct _XDisplay;
+ using Window  = unsigned long;
+diff --git a/rpcs3/main.cpp b/rpcs3/main.cpp
+index 5434cb0793c..a3e571312fc 100644
+--- a/rpcs3/main.cpp
++++ b/rpcs3/main.cpp
+@@ -1,4 +1,4 @@
+-// Qt5.10+ frontend implementation for rpcs3. Known to work on Windows, Linux, Mac
++// Qt6 frontend implementation for rpcs3. Known to work on Windows, Linux, Mac
+ // by Sacha Refshauge, Megamouse and flash-fire
+ 
+ #include <iostream>
+@@ -349,9 +349,6 @@ QCoreApplication* create_application(int& argc, char* argv[])
+ 		use_high_dpi = "1" == qEnvironmentVariable("QT_ENABLE_HIGHDPI_SCALING", high_dpi_setting);
+ 	}
+ 
+-	// AA_EnableHighDpiScaling has to be set before creating a QApplication
+-	QApplication::setAttribute(use_high_dpi ? Qt::AA_EnableHighDpiScaling : Qt::AA_DisableHighDpiScaling);
+-
+ 	if (use_high_dpi)
+ 	{
+ 		// Set QT_SCALE_FACTOR_ROUNDING_POLICY from environment. Defaults to cli argument, which defaults to PassThrough.
+@@ -944,8 +941,6 @@ int main(int argc, char** argv)
+ 
+ 	if (gui_application* gui_app = qobject_cast<gui_application*>(app.data()))
+ 	{
+-		gui_app->setAttribute(Qt::AA_UseHighDpiPixmaps);
+-		gui_app->setAttribute(Qt::AA_DisableWindowContextHelpButton);
+ 		gui_app->setAttribute(Qt::AA_DontCheckOpenGLContextThreadAffinity);
+ 
+ 		gui_app->SetShowGui(!s_no_gui);
+@@ -1027,7 +1022,7 @@ int main(int argc, char** argv)
+ 	bool got_timer_resolution = NtQueryTimerResolution(&min_res, &max_res, &orig_res) == 0;
+ 
+ 	// Set 0.5 msec timer resolution for best performance
+-	// - As QT5 timers (QTimer) sets the timer resolution to 1 msec, override it here.
++	// - As QT timers (QTimer) sets the timer resolution to 1 msec, override it here.
+ 	if (parser.value(arg_timer).toStdString() == "1")
+ 	{
+ 		ULONG new_res;
+diff --git a/rpcs3/main_application.cpp b/rpcs3/main_application.cpp
+index 5f0af7fe2a0..b2935287fd0 100644
+--- a/rpcs3/main_application.cpp
++++ b/rpcs3/main_application.cpp
+@@ -313,7 +313,7 @@ EmuCallbacks main_application::CreateCallbacks()
+ 					image = image.convertToFormat(QImage::Format::Format_RGBA8888);
+ 				}
+ 
+-				std::memcpy(dst, image.constBits(), std::min(4 * target_width * target_height, image.height() * image.bytesPerLine()));
++				std::memcpy(dst, image.constBits(), std::min(target_width * target_height * 4LL, image.height() * image.bytesPerLine()));
+ 				success = true;
+ 				sys_log.notice("get_scaled_image scaled image: path='%s', width=%d, height=%d", path, width, height);
+ 			}
+diff --git a/rpcs3/rpcs3.vcxproj b/rpcs3/rpcs3.vcxproj
+index c87940b4ccb..9a1db168408 100644
+--- a/rpcs3/rpcs3.vcxproj
++++ b/rpcs3/rpcs3.vcxproj
+@@ -1,4 +1,4 @@
+-<?xml version="1.0" encoding="utf-8"?>
++﻿<?xml version="1.0" encoding="utf-8"?>
+ <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Release|x64">
+@@ -71,8 +71,8 @@
+   </PropertyGroup>
+   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+     <ClCompile>
+-      <AdditionalIncludeDirectories>..\3rdparty\SoundTouch\soundtouch\include;..\3rdparty\cubeb\extra;..\3rdparty\cubeb\cubeb\include\;..\3rdparty\flatbuffers\include;..\3rdparty\wolfssl\wolfssl;..\3rdparty\curl\curl\include;..\3rdparty\libusb\libusb\libusb;$(VULKAN_SDK)\Include;..\3rdparty\libsdl-org\SDL\include;..\3rdparty\XAudio2Redist\include;$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtCore;.\release;$(QTDIR)\mkspecs\win32-msvc2015;.\QTGeneratedFiles\$(ConfigurationName);.\QTGeneratedFiles;$(QTDIR)\include\QtWinExtras;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtSvg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew- -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
++      <AdditionalIncludeDirectories>..\3rdparty\SoundTouch\soundtouch\include;..\3rdparty\cubeb\extra;..\3rdparty\cubeb\cubeb\include\;..\3rdparty\flatbuffers\include;..\3rdparty\wolfssl\wolfssl;..\3rdparty\curl\curl\include;..\3rdparty\libusb\libusb\libusb;$(VULKAN_SDK)\Include;..\3rdparty\libsdl-org\SDL\include;..\3rdparty\XAudio2Redist\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtCore5Compat;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSvg;$(QTDIR)\include\QtSvgWidgets;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\mkspecs\win32-msvc;.\release;.\QTGeneratedFiles\$(ConfigurationName);.\QTGeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
++      <AdditionalOptions>/Zc:__cplusplus -Zc:strictStrings -Zc:throwingNew- -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+       <AssemblerListingLocation>release\</AssemblerListingLocation>
+       <BrowseInformation>false</BrowseInformation>
+       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+@@ -88,7 +88,7 @@
+       <WarningLevel>Level3</WarningLevel>
+     </ClCompile>
+     <Link>
+-      <AdditionalDependencies>DbgHelp.lib;Ole32.lib;gdi32.lib;..\hidapi.lib;..\libusb-1.0.lib;winmm.lib;miniupnpc_static.lib;imm32.lib;ksuser.lib;version.lib;OpenAL32.lib;XAudio.lib;GLGSRender.lib;shlwapi.lib;VKGSRender.lib;vulkan-1.lib;wolfssl.lib;libcurl.lib;Wldap32.lib;glslang.lib;OSDependent.lib;OGLCompiler.lib;SPIRV.lib;MachineIndependent.lib;GenericCodeGen.lib;Advapi32.lib;user32.lib;zlib.lib;..\libpng16.lib;asmjit.lib;yaml-cpp.lib;discord-rpc.lib;emucore.lib;dxgi.lib;$(QTDIR)\lib\qtmain.lib;shell32.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Core.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5WinExtras.lib;Qt5Concurrent.lib;7zlib.lib;SPIRV-Tools.lib;SPIRV-Tools-opt.lib;Qt5Multimedia.lib;Qt5MultimediaWidgets.lib;Qt5Svg.lib;libcubeb.lib;cubeb.lib;soundtouch.lib;Avrt.lib;SDL.lib;%(AdditionalDependencies)</AdditionalDependencies>
++      <AdditionalDependencies>DbgHelp.lib;Ole32.lib;gdi32.lib;..\hidapi.lib;..\libusb-1.0.lib;winmm.lib;miniupnpc_static.lib;imm32.lib;ksuser.lib;version.lib;OpenAL32.lib;XAudio.lib;GLGSRender.lib;shlwapi.lib;VKGSRender.lib;vulkan-1.lib;wolfssl.lib;libcurl.lib;Wldap32.lib;glslang.lib;OSDependent.lib;OGLCompiler.lib;SPIRV.lib;MachineIndependent.lib;GenericCodeGen.lib;Advapi32.lib;user32.lib;zlib.lib;..\libpng16.lib;asmjit.lib;yaml-cpp.lib;discord-rpc.lib;emucore.lib;dxgi.lib;shell32.lib;Qt6Core.lib;Qt6Gui.lib;Qt6Widgets.lib;Qt6Concurrent.lib;Qt6Core5Compat.lib;Qt6Multimedia.lib;Qt6MultimediaWidgets.lib;Qt6Svg.lib;Qt6SvgWidgets.lib;7zlib.lib;SPIRV-Tools.lib;SPIRV-Tools-opt.lib;libcubeb.lib;cubeb.lib;soundtouch.lib;Avrt.lib;SDL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+       <AdditionalLibraryDirectories>..\3rdparty\OpenAL\libs\Win64;..\3rdparty\glslang\build\hlsl\Release;..\3rdparty\glslang\build\SPIRV\Release;..\3rdparty\glslang\build\OGLCompilersDLL\Release;..\3rdparty\glslang\build\glslang\OSDependent\Windows\Release;..\3rdparty\glslang\build\glslang\Release;..\3rdparty\SPIRV\build\source\Release;..\3rdparty\SPIRV\build\source\opt\Release;..\lib\$(CONFIGURATION)-$(PLATFORM);..\3rdparty\XAudio2Redist\libs;..\3rdparty\discord-rpc\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories);$(VULKAN_SDK)\Lib</AdditionalLibraryDirectories>
+       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+       <DataExecutionPrevention>true</DataExecutionPrevention>
+@@ -101,6 +101,7 @@
+       <SuppressStartupBanner>true</SuppressStartupBanner>
+       <BaseAddress>0x10000</BaseAddress>
+       <DelayLoadDLLs>xaudio2_9redist.dll</DelayLoadDLLs>
++      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+     </Link>
+     <Midl>
+       <DefaultCharType>Unsigned</DefaultCharType>
+@@ -112,7 +113,7 @@
+     </ResourceCompile>
+     <PostBuildEvent>
+       <Command>
+-        $(QTDIR)\bin\windeployqt --no-angle --no-opengl-sw --no-translations --no-quick --plugindir "$(TargetDir)qt\plugins" --release "$(TargetPath)"
++        $(QTDIR)\bin\windeployqt --no-opengl-sw --no-translations --no-quick --plugindir "$(TargetDir)qt\plugins" --release "$(TargetPath)"
+       </Command>
+     </PostBuildEvent>
+     <PostBuildEvent>
+@@ -122,7 +123,7 @@
+   </ItemDefinitionGroup>
+   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+     <ClCompile>
+-      <AdditionalIncludeDirectories>..\3rdparty\SoundTouch\soundtouch\include;..\3rdparty\cubeb\extra;..\3rdparty\cubeb\cubeb\include\;..\3rdparty\flatbuffers\include;..\3rdparty\wolfssl\wolfssl;..\3rdparty\curl\curl\include;..\3rdparty\libusb\libusb\libusb;$(VULKAN_SDK)\Include;..\3rdparty\XAudio2Redist\include;$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtCore;.\debug;$(QTDIR)\mkspecs\win32-msvc2015;.\QTGeneratedFiles\$(ConfigurationName);.\QTGeneratedFiles;$(QTDIR)\include\QtWinExtras;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtSvg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
++      <AdditionalIncludeDirectories>..\3rdparty\SoundTouch\soundtouch\include;..\3rdparty\cubeb\extra;..\3rdparty\cubeb\cubeb\include\;..\3rdparty\flatbuffers\include;..\3rdparty\wolfssl\wolfssl;..\3rdparty\curl\curl\include;..\3rdparty\libusb\libusb\libusb;$(VULKAN_SDK)\Include;..\3rdparty\XAudio2Redist\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtCore5Compat;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSvg;$(QTDIR)\include\QtSvgWidgets;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\mkspecs\win32-msvc;.\debug;.\QTGeneratedFiles\$(ConfigurationName);.\QTGeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+       <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew- -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+       <AssemblerListingLocation>debug\</AssemblerListingLocation>
+       <BrowseInformation>false</BrowseInformation>
+@@ -139,7 +140,7 @@
+       <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+     </ClCompile>
+     <Link>
+-      <AdditionalDependencies>DbgHelp.lib;Ole32.lib;gdi32.lib;..\hidapi.lib;..\libusb-1.0.lib;winmm.lib;miniupnpc_static.lib;ksuser.lib;OpenAL32.lib;XAudio.lib;GLGSRender.lib;shlwapi.lib;VKGSRender.lib;vulkan-1.lib;wolfssl.lib;libcurl.lib;Wldap32.lib;glslangd.lib;OSDependentd.lib;OGLCompilerd.lib;SPIRVd.lib;MachineIndependentd.lib;GenericCodeGend.lib;Advapi32.lib;user32.lib;zlib.lib;..\libpng16.lib;asmjit.lib;yaml-cpp.lib;discord-rpc.lib;emucore.lib;dxgi.lib;$(QTDIR)\lib\qtmaind.lib;shell32.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Cored.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5WinExtrasd.lib;Qt5Concurrentd.lib;7zlib.lib;SPIRV-Tools.lib;SPIRV-Tools-opt.lib;Qt5Multimediad.lib;Qt5MultimediaWidgetsd.lib;Qt5Svgd.lib;libcubeb.lib;cubeb.lib;soundtouch.lib;Avrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
++      <AdditionalDependencies>DbgHelp.lib;Ole32.lib;gdi32.lib;..\hidapi.lib;..\libusb-1.0.lib;winmm.lib;miniupnpc_static.lib;ksuser.lib;OpenAL32.lib;XAudio.lib;GLGSRender.lib;shlwapi.lib;VKGSRender.lib;vulkan-1.lib;wolfssl.lib;libcurl.lib;Wldap32.lib;glslangd.lib;OSDependentd.lib;OGLCompilerd.lib;SPIRVd.lib;MachineIndependentd.lib;GenericCodeGend.lib;Advapi32.lib;user32.lib;zlib.lib;..\libpng16.lib;asmjit.lib;yaml-cpp.lib;discord-rpc.lib;emucore.lib;dxgi.lib;shell32.lib;qtmaind.lib;Qt6Cored.lib;Qt6Guid.lib;Qt6Widgetsd.lib;Qt6Concurrentd.lib;Qt6Multimediad.lib;Qt6MultimediaWidgetsd.lib;Qt6Svgd.lib;Qt6SvgWidgetsd.lib;7zlib.lib;SPIRV-Tools.lib;SPIRV-Tools-opt.lib;libcubeb.lib;cubeb.lib;soundtouch.lib;Avrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+       <AdditionalLibraryDirectories>..\3rdparty\OpenAL\libs\Win64;..\3rdparty\glslang\build\hlsl\Debug;..\3rdparty\glslang\build\SPIRV\Debug;..\3rdparty\glslang\build\OGLCompilersDLL\Debug;..\3rdparty\glslang\build\glslang\OSDependent\Windows\Debug;..\3rdparty\glslang\build\glslang\Debug;..\3rdparty\SPIRV\build\source\opt\Debug;..\3rdparty\XAudio2Redist\libs;..\3rdparty\discord-rpc\lib;..\lib\$(CONFIGURATION)-$(PLATFORM);$(QTDIR)\lib;%(AdditionalLibraryDirectories);$(VULKAN_SDK)\Lib</AdditionalLibraryDirectories>
+       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"  /VERBOSE %(AdditionalOptions)</AdditionalOptions>
+       <DataExecutionPrevention>true</DataExecutionPrevention>
+@@ -164,7 +165,7 @@
+     </ResourceCompile>
+     <PostBuildEvent>
+       <Command>
+-        $(QTDIR)\bin\windeployqt --no-angle --no-opengl-sw --no-translations --no-quick --plugindir "$(TargetDir)qt\plugins" --debug "$(TargetPath)"
++        $(QTDIR)\bin\windeployqt --no-opengl-sw --no-translations --no-quick --plugindir "$(TargetDir)qt\plugins" --debug "$(TargetPath)"
+       </Command>
+     </PostBuildEvent>
+     <PostBuildEvent>
+@@ -698,7 +699,7 @@
+     <ClCompile Include="rpcs3qt\system_cmd_dialog.cpp" />
+     <ClCompile Include="rpcs3qt\tooltips.cpp" />
+     <ClCompile Include="rpcs3qt\update_manager.cpp" />
+-    <ClCompile Include="rpcs3qt\qt_camera_video_surface.cpp" />
++    <ClCompile Include="rpcs3qt\qt_camera_video_sink.cpp" />
+     <ClCompile Include="rpcs3qt\uuid.cpp" />
+     <ClCompile Include="rpcs3qt\vfs_dialog_path_widget.cpp" />
+     <ClCompile Include="rpcs3qt\vfs_dialog_usb_input.cpp" />
+@@ -1330,7 +1331,7 @@
+       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\QTGeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\QTGeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DWITH_DISCORD_RPC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_WINEXTRAS_LIB -DQT_CONCURRENT_LIB -D%(PreprocessorDefinitions)  "-I.\..\3rdparty\wolfssl\wolfssl" "-I.\..\3rdparty\curl\curl\include" "-I.\..\3rdparty\libusb\libusb\libusb" "-I$(VULKAN_SDK)\Include" "-I.\..\3rdparty\XAudio2Redist\include" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2015" "-I.\QTGeneratedFiles\$(ConfigurationName)" "-I.\QTGeneratedFiles" "-I$(QTDIR)\include\QtWinExtras" "-I$(QTDIR)\include\QtConcurrent"</Command>
+     </CustomBuild>
+-    <ClInclude Include="rpcs3qt\qt_camera_video_surface.h" />
++    <ClInclude Include="rpcs3qt\qt_camera_video_sink.h" />
+     <CustomBuild Include="rpcs3qt\vfs_dialog_usb_tab.h">
+       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing %(Identity)...</Message>
+diff --git a/rpcs3/rpcs3.vcxproj.filters b/rpcs3/rpcs3.vcxproj.filters
+index de35dad43e4..451d186ce7c 100644
+--- a/rpcs3/rpcs3.vcxproj.filters
++++ b/rpcs3/rpcs3.vcxproj.filters
+@@ -798,7 +798,7 @@
+     <ClCompile Include="rpcs3qt\qt_camera_handler.cpp">
+       <Filter>Io\camera</Filter>
+     </ClCompile>
+-    <ClCompile Include="rpcs3qt\qt_camera_video_surface.cpp">
++    <ClCompile Include="rpcs3qt\qt_camera_video_sink.cpp">
+       <Filter>Io\camera</Filter>
+     </ClCompile>
+     <ClCompile Include="rpcs3qt\qt_camera_error_handler.cpp">
+@@ -1070,7 +1070,7 @@
+     <ClInclude Include="QTGeneratedFiles\ui_patch_creator_dialog.h">
+       <Filter>Generated Files</Filter>
+     </ClInclude>
+-    <ClInclude Include="rpcs3qt\qt_camera_video_surface.h">
++    <ClInclude Include="rpcs3qt\qt_camera_video_sink.h">
+       <Filter>Io\camera</Filter>
+     </ClInclude>
+     <ClInclude Include="rpcs3qt\qt_camera_handler.h">
+diff --git a/rpcs3/rpcs3qt/CMakeLists.txt b/rpcs3/rpcs3qt/CMakeLists.txt
+index 6813c1f9fd0..2450fd39043 100644
+--- a/rpcs3/rpcs3qt/CMakeLists.txt
++++ b/rpcs3/rpcs3qt/CMakeLists.txt
+@@ -56,7 +56,7 @@ set(SRC_FILES
+     progress_indicator.cpp
+     qt_camera_error_handler.cpp
+     qt_camera_handler.cpp
+-    qt_camera_video_surface.cpp
++    qt_camera_video_sink.cpp
+     qt_music_error_handler.cpp
+     qt_music_handler.cpp
+     qt_utils.cpp
+@@ -133,7 +133,7 @@ target_compile_definitions(rpcs3_ui PRIVATE WIN32_LEAN_AND_MEAN)
+ 
+ target_link_libraries(rpcs3_ui
+     PUBLIC
+-        3rdparty::qt5 3rdparty::yaml-cpp
++        3rdparty::qt6 3rdparty::yaml-cpp
+ 
+     PRIVATE
+         rpcs3_emu
+diff --git a/rpcs3/rpcs3qt/camera_settings_dialog.cpp b/rpcs3/rpcs3qt/camera_settings_dialog.cpp
+index db2d4c6b287..89f72cef8d1 100644
+--- a/rpcs3/rpcs3qt/camera_settings_dialog.cpp
++++ b/rpcs3/rpcs3qt/camera_settings_dialog.cpp
+@@ -3,61 +3,56 @@
+ #include "ui_camera_settings_dialog.h"
+ #include "Emu/Io/camera_config.h"
+ 
+-#include <QCameraInfo>
++#include <QCameraDevice>
++#include <QMediaDevices>
+ #include <QMessageBox>
+ #include <QPushButton>
+ 
+ LOG_CHANNEL(camera_log, "Camera");
+ 
+ template <>
+-void fmt_class_string<QVideoFrame::PixelFormat>::format(std::string& out, u64 arg)
++void fmt_class_string<QVideoFrameFormat::PixelFormat>::format(std::string& out, u64 arg)
+ {
+-	format_enum(out, arg, [](QVideoFrame::PixelFormat value)
++	format_enum(out, arg, [](QVideoFrameFormat::PixelFormat value)
+ 	{
+ 		switch (value)
+ 		{
+-		case QVideoFrame::Format_Invalid: return "Invalid";
+-		case QVideoFrame::Format_ARGB32: return "ARGB32";
+-		case QVideoFrame::Format_ARGB32_Premultiplied: return "ARGB32_Premultiplied";
+-		case QVideoFrame::Format_RGB32: return "RGB32";
+-		case QVideoFrame::Format_RGB24: return "RGB24";
+-		case QVideoFrame::Format_RGB565: return "RGB565";
+-		case QVideoFrame::Format_RGB555: return "RGB555";
+-		case QVideoFrame::Format_ARGB8565_Premultiplied: return "ARGB8565_Premultiplied";
+-		case QVideoFrame::Format_BGRA32: return "BGRA32";
+-		case QVideoFrame::Format_BGRA32_Premultiplied: return "BGRA32_Premultiplied";
+-		case QVideoFrame::Format_BGR32: return "BGR32";
+-		case QVideoFrame::Format_BGR24: return "BGR24";
+-		case QVideoFrame::Format_BGR565: return "BGR565";
+-		case QVideoFrame::Format_BGR555: return "BGR555";
+-		case QVideoFrame::Format_BGRA5658_Premultiplied: return "BGRA5658_Premultiplied";
+-		case QVideoFrame::Format_AYUV444: return "AYUV444";
+-		case QVideoFrame::Format_AYUV444_Premultiplied: return "AYUV444_Premultiplied";
+-		case QVideoFrame::Format_YUV444: return "YUV444";
+-		case QVideoFrame::Format_YUV420P: return "YUV420P";
+-		case QVideoFrame::Format_YV12: return "YV12";
+-		case QVideoFrame::Format_UYVY: return "UYVY";
+-		case QVideoFrame::Format_YUYV: return "YUYV";
+-		case QVideoFrame::Format_NV12: return "NV12";
+-		case QVideoFrame::Format_NV21: return "NV21";
+-		case QVideoFrame::Format_IMC1: return "IMC1";
+-		case QVideoFrame::Format_IMC2: return "IMC2";
+-		case QVideoFrame::Format_IMC3: return "IMC3";
+-		case QVideoFrame::Format_IMC4: return "IMC4";
+-		case QVideoFrame::Format_Y8: return "Y8";
+-		case QVideoFrame::Format_Y16: return "Y16";
+-		case QVideoFrame::Format_Jpeg: return "Jpeg";
+-		case QVideoFrame::Format_CameraRaw: return "CameraRaw";
+-		case QVideoFrame::Format_AdobeDng: return "AdobeDng";
+-		case QVideoFrame::Format_ABGR32: return "ABGR32";
+-		case QVideoFrame::Format_YUV422P: return "YUV422P";
+-		case QVideoFrame::Format_User: return "User";
++		case QVideoFrameFormat::Format_ARGB8888: return "ARGB8888";
++		case QVideoFrameFormat::Format_ARGB8888_Premultiplied: return "ARGB8888_Premultiplied";
++		case QVideoFrameFormat::Format_XRGB8888: return "XRGB8888";
++		case QVideoFrameFormat::Format_BGRA8888: return "BGRA8888";
++		case QVideoFrameFormat::Format_BGRA8888_Premultiplied: return "BGRA8888_Premultiplied";
++		case QVideoFrameFormat::Format_BGRX8888: return "BGRX8888";
++		case QVideoFrameFormat::Format_ABGR8888: return "ABGR8888";
++		case QVideoFrameFormat::Format_XBGR8888: return "XBGR8888";
++		case QVideoFrameFormat::Format_RGBA8888: return "RGBA8888";
++		case QVideoFrameFormat::Format_RGBX8888: return "RGBX8888";
++		case QVideoFrameFormat::Format_AYUV: return "AYUV";
++		case QVideoFrameFormat::Format_AYUV_Premultiplied: return "AYUV_Premultiplied";
++		case QVideoFrameFormat::Format_YUV420P: return "YUV420P";
++		case QVideoFrameFormat::Format_YUV422P: return "YUV422P";
++		case QVideoFrameFormat::Format_YV12: return "YV12";
++		case QVideoFrameFormat::Format_UYVY: return "UYVY";
++		case QVideoFrameFormat::Format_YUYV: return "YUYV";
++		case QVideoFrameFormat::Format_NV12: return "NV12";
++		case QVideoFrameFormat::Format_NV21: return "NV21";
++		case QVideoFrameFormat::Format_IMC1: return "IMC1";
++		case QVideoFrameFormat::Format_IMC2: return "IMC2";
++		case QVideoFrameFormat::Format_IMC3: return "IMC3";
++		case QVideoFrameFormat::Format_IMC4: return "IMC4";
++		case QVideoFrameFormat::Format_Y8: return "Y8";
++		case QVideoFrameFormat::Format_Y16: return "Y16";
++		case QVideoFrameFormat::Format_P010: return "P010";
++		case QVideoFrameFormat::Format_P016: return "P016";
++		case QVideoFrameFormat::Format_SamplerExternalOES: return "SamplerExternalOES";
++		case QVideoFrameFormat::Format_Jpeg: return "Jpeg";
++		case QVideoFrameFormat::Format_SamplerRect: return "SamplerRect";
+ 		default: return unknown;
+ 		}
+ 	});
+ }
+ 
+-Q_DECLARE_METATYPE(QCameraInfo);
++Q_DECLARE_METATYPE(QCameraDevice);
+ 
+ camera_settings_dialog::camera_settings_dialog(QWidget* parent)
+ 	: QDialog(parent)
+@@ -67,7 +62,7 @@ camera_settings_dialog::camera_settings_dialog(QWidget* parent)
+ 
+ 	load_config();
+ 
+-	for (const QCameraInfo& camera_info : QCameraInfo::availableCameras())
++	for (const QCameraDevice& camera_info : QMediaDevices::videoInputs())
+ 	{
+ 		if (camera_info.isNull()) continue;
+ 		ui->combo_camera->addItem(camera_info.description(), QVariant::fromValue(camera_info));
+@@ -108,13 +103,13 @@ camera_settings_dialog::~camera_settings_dialog()
+ 
+ void camera_settings_dialog::handle_camera_change(int index)
+ {
+-	if (index < 0 || !ui->combo_camera->itemData(index).canConvert<QCameraInfo>())
++	if (index < 0 || !ui->combo_camera->itemData(index).canConvert<QCameraDevice>())
+ 	{
+ 		ui->combo_settings->clear();
+ 		return;
+ 	}
+ 
+-	const QCameraInfo camera_info = ui->combo_camera->itemData(index).value<QCameraInfo>();
++	const QCameraDevice camera_info = ui->combo_camera->itemData(index).value<QCameraDevice>();
+ 
+ 	if (camera_info.isNull())
+ 	{
+@@ -123,7 +118,9 @@ void camera_settings_dialog::handle_camera_change(int index)
+ 	}
+ 
+ 	m_camera.reset(new QCamera(camera_info));
+-	m_camera->setViewfinder(ui->viewfinder);
++	m_media_capture_session.reset(new QMediaCaptureSession(nullptr));
++	m_media_capture_session->setCamera(m_camera.get());
++	m_media_capture_session->setVideoSink(ui->videoWidget->videoSink());
+ 
+ 	if (!m_camera->isAvailable())
+ 	{
+@@ -132,42 +129,34 @@ void camera_settings_dialog::handle_camera_change(int index)
+ 		return;
+ 	}
+ 
+-	m_camera->load();
+-
+ 	ui->combo_settings->blockSignals(true);
+ 	ui->combo_settings->clear();
+ 
+-	QList<QCameraViewfinderSettings> settings = m_camera->supportedViewfinderSettings();
+-	std::sort(settings.begin(), settings.end(), [](const QCameraViewfinderSettings& l, const QCameraViewfinderSettings& r) -> bool
++	QList<QCameraFormat> settings = camera_info.videoFormats();
++	std::sort(settings.begin(), settings.end(), [](const QCameraFormat& l, const QCameraFormat& r) -> bool
+ 	{
+ 		if (l.resolution().width() > r.resolution().width()) return true;
+ 		if (l.resolution().width() < r.resolution().width()) return false;
+ 		if (l.resolution().height() > r.resolution().height()) return true;
+ 		if (l.resolution().height() < r.resolution().height()) return false;
+-		if (l.minimumFrameRate() > r.minimumFrameRate()) return true;
+-		if (l.minimumFrameRate() < r.minimumFrameRate()) return false;
+-		if (l.maximumFrameRate() > r.maximumFrameRate()) return true;
+-		if (l.maximumFrameRate() < r.maximumFrameRate()) return false;
++		if (l.minFrameRate() > r.minFrameRate()) return true;
++		if (l.minFrameRate() < r.minFrameRate()) return false;
++		if (l.maxFrameRate() > r.maxFrameRate()) return true;
++		if (l.maxFrameRate() < r.maxFrameRate()) return false;
+ 		if (l.pixelFormat() > r.pixelFormat()) return true;
+ 		if (l.pixelFormat() < r.pixelFormat()) return false;
+-		if (l.pixelAspectRatio().width() > r.pixelAspectRatio().width()) return true;
+-		if (l.pixelAspectRatio().width() < r.pixelAspectRatio().width()) return false;
+-		if (l.pixelAspectRatio().height() > r.pixelAspectRatio().height()) return true;
+-		if (l.pixelAspectRatio().height() < r.pixelAspectRatio().height()) return false;
+ 		return false;
+ 	});
+ 
+-	for (const QCameraViewfinderSettings& setting : settings)
++	for (const QCameraFormat& setting : settings)
+ 	{
+ 		if (setting.isNull()) continue;
+-		const QString description = tr("%0x%1, %2-%3 FPS, Format=%4, PixelAspectRatio=%5x%6")
++		const QString description = tr("%0x%1, %2-%3 FPS, Format=%4")
+ 			.arg(setting.resolution().width())
+ 			.arg(setting.resolution().height())
+-			.arg(setting.minimumFrameRate())
+-			.arg(setting.maximumFrameRate())
+-			.arg(QString::fromStdString(fmt::format("%s", setting.pixelFormat())))
+-			.arg(setting.pixelAspectRatio().width())
+-			.arg(setting.pixelAspectRatio().height());
++			.arg(setting.minFrameRate())
++			.arg(setting.maxFrameRate())
++			.arg(QString::fromStdString(fmt::format("%s", setting.pixelFormat())));
+ 		ui->combo_settings->addItem(description, QVariant::fromValue(setting));
+ 	}
+ 	ui->combo_settings->blockSignals(false);
+@@ -181,37 +170,27 @@ void camera_settings_dialog::handle_camera_change(int index)
+ 		// Load selected settings from config file
+ 		int index = 0;
+ 		bool success = false;
+-		const std::string key = camera_info.deviceName().toStdString();
++		const std::string key = camera_info.id().toStdString();
+ 		cfg_camera::camera_setting cfg_setting = g_cfg_camera.get_camera_setting(key, success);
+ 
+ 		if (success)
+ 		{
+ 			camera_log.notice("Found config entry for camera \"%s\"", key);
+ 
+-			// Convert to Qt data
+-			QCameraViewfinderSettings setting;
+-			setting.setResolution(cfg_setting.width, cfg_setting.height);
+-			setting.setMinimumFrameRate(cfg_setting.min_fps);
+-			setting.setMaximumFrameRate(cfg_setting.max_fps);
+-			setting.setPixelFormat(static_cast<QVideoFrame::PixelFormat>(cfg_setting.format));
+-			setting.setPixelAspectRatio(cfg_setting.pixel_aspect_width, cfg_setting.pixel_aspect_height);
+-
+ 			// Select matching drowdown entry
+ 			const double epsilon = 0.001;
+ 
+ 			for (int i = 0; i < ui->combo_settings->count(); i++)
+ 			{
+-				const QCameraViewfinderSettings tmp = ui->combo_settings->itemData(i).value<QCameraViewfinderSettings>();
+-
+-				if (tmp.resolution().width() == setting.resolution().width() &&
+-					tmp.resolution().height() == setting.resolution().height() &&
+-					tmp.minimumFrameRate() >= (setting.minimumFrameRate() - epsilon) &&
+-					tmp.minimumFrameRate() <= (setting.minimumFrameRate() + epsilon) &&
+-					tmp.maximumFrameRate() >= (setting.maximumFrameRate() - epsilon) &&
+-					tmp.maximumFrameRate() <= (setting.maximumFrameRate() + epsilon) &&
+-					tmp.pixelFormat() == setting.pixelFormat() &&
+-					tmp.pixelAspectRatio().width() == setting.pixelAspectRatio().width() &&
+-					tmp.pixelAspectRatio().height() == setting.pixelAspectRatio().height())
++				const QCameraFormat tmp = ui->combo_settings->itemData(i).value<QCameraFormat>();
++
++				if (tmp.resolution().width() == cfg_setting.width &&
++					tmp.resolution().height() == cfg_setting.height &&
++					tmp.minFrameRate() >= (cfg_setting.min_fps - epsilon) &&
++					tmp.minFrameRate() <= (cfg_setting.min_fps + epsilon) &&
++					tmp.maxFrameRate() >= (cfg_setting.max_fps - epsilon) &&
++					tmp.maxFrameRate() <= (cfg_setting.max_fps + epsilon) &&
++					tmp.pixelFormat() == static_cast<QVideoFrameFormat::PixelFormat>(cfg_setting.format))
+ 				{
+ 					index = i;
+ 					break;
+@@ -223,14 +202,12 @@ void camera_settings_dialog::handle_camera_change(int index)
+ 		ui->combo_settings->setEnabled(true);
+ 
+ 		// Update config to match user interface outcome
+-		const QCameraViewfinderSettings setting = ui->combo_settings->currentData().value<QCameraViewfinderSettings>();
++		const QCameraFormat setting = ui->combo_settings->currentData().value<QCameraFormat>();
+ 		cfg_setting.width = setting.resolution().width();
+ 		cfg_setting.height = setting.resolution().height();
+-		cfg_setting.min_fps = setting.minimumFrameRate();
+-		cfg_setting.max_fps = setting.maximumFrameRate();
++		cfg_setting.min_fps = setting.minFrameRate();
++		cfg_setting.max_fps = setting.maxFrameRate();
+ 		cfg_setting.format = static_cast<int>(setting.pixelFormat());
+-		cfg_setting.pixel_aspect_width = setting.pixelAspectRatio().width();
+-		cfg_setting.pixel_aspect_height = setting.pixelAspectRatio().height();
+ 		g_cfg_camera.set_camera_setting(key, cfg_setting);
+ 	}
+ }
+@@ -248,23 +225,21 @@ void camera_settings_dialog::handle_settings_change(int index)
+ 		return;
+ 	}
+ 
+-	if (index >= 0 && ui->combo_settings->itemData(index).canConvert<QCameraViewfinderSettings>() && ui->combo_camera->currentData().canConvert<QCameraInfo>())
++	if (index >= 0 && ui->combo_settings->itemData(index).canConvert<QCameraFormat>() && ui->combo_camera->currentData().canConvert<QCameraDevice>())
+ 	{
+-		const QCameraViewfinderSettings setting = ui->combo_settings->itemData(index).value<QCameraViewfinderSettings>();
++		const QCameraFormat setting = ui->combo_settings->itemData(index).value<QCameraFormat>();
+ 		if (!setting.isNull())
+ 		{
+-			m_camera->setViewfinderSettings(setting);
++			m_camera->setCameraFormat(setting);
+ 		}
+ 
+ 		cfg_camera::camera_setting cfg_setting;
+ 		cfg_setting.width = setting.resolution().width();
+ 		cfg_setting.height = setting.resolution().height();
+-		cfg_setting.min_fps = setting.minimumFrameRate();
+-		cfg_setting.max_fps = setting.maximumFrameRate();
++		cfg_setting.min_fps = setting.minFrameRate();
++		cfg_setting.max_fps = setting.maxFrameRate();
+ 		cfg_setting.format = static_cast<int>(setting.pixelFormat());
+-		cfg_setting.pixel_aspect_width = setting.pixelAspectRatio().width();
+-		cfg_setting.pixel_aspect_height = setting.pixelAspectRatio().height();
+-		g_cfg_camera.set_camera_setting(ui->combo_camera->currentData().value<QCameraInfo>().deviceName().toStdString(), cfg_setting);
++		g_cfg_camera.set_camera_setting(ui->combo_camera->currentData().value<QCameraDevice>().id().toStdString(), cfg_setting);
+ 	}
+ 
+ 	m_camera->start();
+diff --git a/rpcs3/rpcs3qt/camera_settings_dialog.h b/rpcs3/rpcs3qt/camera_settings_dialog.h
+index 56aa29a6cf7..da18f64cca8 100644
+--- a/rpcs3/rpcs3qt/camera_settings_dialog.h
++++ b/rpcs3/rpcs3qt/camera_settings_dialog.h
+@@ -2,6 +2,7 @@
+ 
+ #include <QCamera>
+ #include <QDialog>
++#include <QMediaCaptureSession>
+ 
+ namespace Ui
+ {
+@@ -25,5 +26,6 @@ private Q_SLOTS:
+ 	void save_config();
+ 
+ 	std::unique_ptr<Ui::camera_settings_dialog> ui;
+-	std::shared_ptr<QCamera> m_camera;
++	std::unique_ptr<QCamera> m_camera;
++	std::unique_ptr<QMediaCaptureSession> m_media_capture_session;
+ };
+diff --git a/rpcs3/rpcs3qt/camera_settings_dialog.ui b/rpcs3/rpcs3qt/camera_settings_dialog.ui
+index 6deef8173e6..8afe262f22c 100644
+--- a/rpcs3/rpcs3qt/camera_settings_dialog.ui
++++ b/rpcs3/rpcs3qt/camera_settings_dialog.ui
+@@ -57,7 +57,7 @@
+      </property>
+      <layout class="QVBoxLayout" name="preview_layout">
+       <item>
+-       <widget class="QCameraViewfinder" name="viewfinder" native="true">
++       <widget class="QVideoWidget" name="videoWidget" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>64</width>
+@@ -86,9 +86,9 @@
+  </widget>
+  <customwidgets>
+   <customwidget>
+-   <class>QCameraViewfinder</class>
++   <class>QVideoWidget</class>
+    <extends>QWidget</extends>
+-   <header>qcameraviewfinder.h</header>
++   <header>qvideowidget.h</header>
+    <container>1</container>
+   </customwidget>
+  </customwidgets>
+diff --git a/rpcs3/rpcs3qt/gs_frame.h b/rpcs3/rpcs3qt/gs_frame.h
+index feaaf88f238..b39c790e018 100644
+--- a/rpcs3/rpcs3qt/gs_frame.h
++++ b/rpcs3/rpcs3qt/gs_frame.h
+@@ -73,7 +73,7 @@ class gs_frame : public QWindow, public GSFrameBase
+ 	void take_screenshot(std::vector<u8> data, const u32 sshot_width, const u32 sshot_height, bool is_bgra) override;
+ 
+ protected:
+-	virtual void paintEvent(QPaintEvent *event);
++	void paintEvent(QPaintEvent *event) override;
+ 	void showEvent(QShowEvent *event) override;
+ 
+ 	void keyPressEvent(QKeyEvent *keyEvent) override;
+diff --git a/rpcs3/rpcs3qt/gui_application.cpp b/rpcs3/rpcs3qt/gui_application.cpp
+index e5388364849..68a8d237e21 100644
+--- a/rpcs3/rpcs3qt/gui_application.cpp
++++ b/rpcs3/rpcs3qt/gui_application.cpp
+@@ -32,7 +32,7 @@
+ #include <QLibraryInfo>
+ #include <QDirIterator>
+ #include <QFileInfo>
+-#include <QSound>
++#include <QSoundEffect>
+ #include <QMessageBox>
+ 
+ #include <clocale>
+@@ -509,7 +509,10 @@ void gui_application::InitializeCallbacks()
+ 		{
+ 			if (fs::is_file(path))
+ 			{
+-				QSound::play(qstr(path));
++				// TODO: ist this working? Or do we need a member?
++				QSoundEffect sound_effect{};
++				sound_effect.setSource(qstr(path));
++				sound_effect.play();
+ 			}
+ 		});
+ 	};
+diff --git a/rpcs3/rpcs3qt/main_window.cpp b/rpcs3/rpcs3qt/main_window.cpp
+index 48192143177..97991089885 100644
+--- a/rpcs3/rpcs3qt/main_window.cpp
++++ b/rpcs3/rpcs3qt/main_window.cpp
+@@ -183,7 +183,7 @@ bool main_window::Init([[maybe_unused]] bool with_cli_boot)
+ 	ui->toolbar_start->setEnabled(enable_play_last);
+ 
+ 	// create tool buttons for the taskbar thumbnail
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	m_thumb_bar = new QWinThumbnailToolBar(this);
+ 	m_thumb_bar->setWindow(windowHandle());
+ 
+@@ -1647,7 +1647,7 @@ void main_window::RepaintThumbnailIcons()
+ 		return gui::utils::get_colorized_icon(QPixmap::fromImage(gui::utils::get_opaque_image_area(path)), Qt::black, new_color);
+ 	};
+ 
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	if (!m_thumb_bar) return;
+ 
+ 	m_icon_thumb_play = icon(":/Icons/play.png");
+@@ -1734,14 +1734,6 @@ void main_window::RepaintToolBarIcons()
+ 
+ 	// resize toolbar elements
+ 
+-	// for highdpi resize toolbar icons and height dynamically
+-	// choose factors to mimic Gui-Design in main_window.ui
+-	// TODO: delete this in case Qt::AA_EnableHighDpiScaling is enabled in main.cpp
+-#ifdef _WIN32
+-	const int tool_icon_height = menuBar()->sizeHint().height() * 1.5;
+-	ui->toolBar->setIconSize(QSize(tool_icon_height, tool_icon_height));
+-#endif
+-
+ 	const int tool_bar_height = ui->toolBar->sizeHint().height();
+ 
+ 	for (const auto& act : ui->toolBar->actions())
+@@ -1767,7 +1759,7 @@ void main_window::OnEmuRun(bool /*start_playtime*/) const
+ 
+ 	m_debugger_frame->EnableButtons(true);
+ 
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	m_thumb_stop->setToolTip(stop_tooltip);
+ 	m_thumb_restart->setToolTip(restart_tooltip);
+ 	m_thumb_playPause->setToolTip(pause_tooltip);
+@@ -1790,7 +1782,7 @@ void main_window::OnEmuResume() const
+ 	const QString pause_tooltip = tr("Pause %0").arg(title);
+ 	const QString stop_tooltip = tr("Stop %0").arg(title);
+ 
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	m_thumb_stop->setToolTip(stop_tooltip);
+ 	m_thumb_restart->setToolTip(restart_tooltip);
+ 	m_thumb_playPause->setToolTip(pause_tooltip);
+@@ -1809,7 +1801,7 @@ void main_window::OnEmuPause() const
+ 	const QString title = GetCurrentTitle();
+ 	const QString resume_tooltip = tr("Resume %0").arg(title);
+ 
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	m_thumb_playPause->setToolTip(resume_tooltip);
+ 	m_thumb_playPause->setIcon(m_icon_thumb_play);
+ #endif
+@@ -1835,7 +1827,7 @@ void main_window::OnEmuStop()
+ 
+ 	ui->sysPauseAct->setText(Emu.IsReady() ? tr("&Play") : tr("&Resume"));
+ 	ui->sysPauseAct->setIcon(m_icon_play);
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	m_thumb_playPause->setToolTip(play_tooltip);
+ 	m_thumb_playPause->setIcon(m_icon_thumb_play);
+ #endif
+@@ -1857,7 +1849,7 @@ void main_window::OnEmuStop()
+ 		ui->toolbar_start->setText(tr("Restart"));
+ 		ui->toolbar_start->setToolTip(restart_tooltip);
+ 		ui->sysRebootAct->setEnabled(true);
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 		m_thumb_restart->setToolTip(restart_tooltip);
+ 		m_thumb_restart->setEnabled(true);
+ #endif
+@@ -1890,7 +1882,7 @@ void main_window::OnEmuReady() const
+ 	const QString play_tooltip = Emu.IsReady() ? tr("Play %0").arg(title) : tr("Resume %0").arg(title);
+ 
+ 	m_debugger_frame->EnableButtons(true);
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	m_thumb_playPause->setToolTip(play_tooltip);
+ 	m_thumb_playPause->setIcon(m_icon_thumb_play);
+ #endif
+@@ -1909,7 +1901,7 @@ void main_window::OnEmuReady() const
+ void main_window::EnableMenus(bool enabled) const
+ {
+ 	// Thumbnail Buttons
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	m_thumb_playPause->setEnabled(enabled);
+ 	m_thumb_stop->setEnabled(enabled);
+ 	m_thumb_restart->setEnabled(enabled);
+@@ -2878,14 +2870,14 @@ void main_window::CreateDockWindows()
+ 
+ 			ui->toolbar_start->setEnabled(enable_play_buttons);
+ 			ui->sysPauseAct->setEnabled(enable_play_buttons);
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 			m_thumb_playPause->setEnabled(enable_play_buttons);
+ #endif
+ 
+ 			if (!tooltip.isEmpty())
+ 			{
+ 				ui->toolbar_start->setToolTip(tooltip);
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 				m_thumb_playPause->setToolTip(tooltip);
+ #endif
+ 			}
+@@ -3247,7 +3239,7 @@ void main_window::dropEvent(QDropEvent* event)
+ 
+ 		for (const auto& path : drop_paths)
+ 		{
+-			const QFileInfo file_info = path;
++			const QFileInfo file_info(path);
+ 			const std::string extension = file_info.suffix().toLower().toStdString();
+ 			const std::string filename = sstr(file_info.fileName());
+ 
+diff --git a/rpcs3/rpcs3qt/main_window.h b/rpcs3/rpcs3qt/main_window.h
+index f4f86c87e4d..f197983caea 100644
+--- a/rpcs3/rpcs3qt/main_window.h
++++ b/rpcs3/rpcs3qt/main_window.h
+@@ -1,6 +1,6 @@
+ #pragma once
+ 
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ #include <QWinTHumbnailToolbar>
+ #include <QWinTHumbnailToolbutton>
+ #endif
+@@ -57,7 +57,7 @@ class main_window : public QMainWindow
+ 	QIcon m_icon_fullscreen_on;
+ 	QIcon m_icon_fullscreen_off;
+ 
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	QIcon m_icon_thumb_play;
+ 	QIcon m_icon_thumb_pause;
+ 	QIcon m_icon_thumb_stop;
+diff --git a/rpcs3/rpcs3qt/osk_dialog_frame.cpp b/rpcs3/rpcs3qt/osk_dialog_frame.cpp
+index 031199789a5..32336f44c5b 100644
+--- a/rpcs3/rpcs3qt/osk_dialog_frame.cpp
++++ b/rpcs3/rpcs3qt/osk_dialog_frame.cpp
+@@ -182,7 +182,7 @@ void osk_dialog_frame::Create(const osk_params& params)
+ 
+ void osk_dialog_frame::SetOskText(const QString& text)
+ {
+-	std::memcpy(osk_text.data(), utils::bless<char16_t>(text.constData()), std::min(osk_text.size(), text.size() + usz{1}) * sizeof(char16_t));
++	std::memcpy(osk_text.data(), utils::bless<char16_t>(text.constData()), std::min<usz>(osk_text.size(), text.size() + usz{1}) * sizeof(char16_t));
+ }
+ 
+ void osk_dialog_frame::Close(s32 status)
+diff --git a/rpcs3/rpcs3qt/progress_indicator.cpp b/rpcs3/rpcs3qt/progress_indicator.cpp
+index 335b5b09851..3130444fbf3 100644
+--- a/rpcs3/rpcs3qt/progress_indicator.cpp
++++ b/rpcs3/rpcs3qt/progress_indicator.cpp
+@@ -1,6 +1,6 @@
+ #include "progress_indicator.h"
+ 
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ #include <QCoreApplication>
+ #include <QWinTaskbarProgress>
+ #elif HAVE_QTDBUS
+@@ -10,7 +10,7 @@
+ 
+ progress_indicator::progress_indicator(int minimum, int maximum)
+ {
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	m_tb_button = std::make_unique<QWinTaskbarButton>();
+ 	m_tb_button->progress()->setRange(minimum, maximum);
+ 	m_tb_button->progress()->setVisible(false);
+@@ -25,7 +25,7 @@ progress_indicator::progress_indicator(int minimum, int maximum)
+ 
+ progress_indicator::~progress_indicator()
+ {
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	// QWinTaskbarProgress::hide() will crash if the application is already about to close, even if the object is not null.
+ 	if (!QCoreApplication::closingDown())
+ 	{
+@@ -38,7 +38,7 @@ progress_indicator::~progress_indicator()
+ 
+ void progress_indicator::show(QWindow* window)
+ {
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	m_tb_button->setWindow(window);
+ 	m_tb_button->progress()->show();
+ #else
+@@ -48,7 +48,7 @@ void progress_indicator::show(QWindow* window)
+ 
+ int progress_indicator::value() const
+ {
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	return m_tb_button->progress()->value();
+ #else
+ 	return m_value;
+@@ -57,7 +57,7 @@ int progress_indicator::value() const
+ 
+ void progress_indicator::set_value(int value)
+ {
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	m_tb_button->progress()->setValue(std::clamp(value, m_tb_button->progress()->minimum(), m_tb_button->progress()->maximum()));
+ #else
+ 	m_value = std::clamp(value, m_minimum, m_maximum);
+@@ -69,7 +69,7 @@ void progress_indicator::set_value(int value)
+ 
+ void progress_indicator::set_range(int minimum, int maximum)
+ {
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	m_tb_button->progress()->setRange(minimum, maximum);
+ #else
+ 	m_minimum = minimum;
+@@ -79,7 +79,7 @@ void progress_indicator::set_range(int minimum, int maximum)
+ 
+ void progress_indicator::reset()
+ {
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	m_tb_button->progress()->reset();
+ #else
+ 	m_value = m_minimum;
+@@ -91,7 +91,7 @@ void progress_indicator::reset()
+ 
+ void progress_indicator::signal_failure()
+ {
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	m_tb_button->progress()->stop();
+ #elif HAVE_QTDBUS
+ 	update_progress(0, false, true);
+diff --git a/rpcs3/rpcs3qt/progress_indicator.h b/rpcs3/rpcs3qt/progress_indicator.h
+index 1eccced1dbd..9e27f40ab4d 100644
+--- a/rpcs3/rpcs3qt/progress_indicator.h
++++ b/rpcs3/rpcs3qt/progress_indicator.h
+@@ -2,7 +2,7 @@
+ 
+ #include <QWindow>
+ 
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ #include <QWinTaskbarButton>
+ #endif
+ 
+@@ -23,7 +23,7 @@ class progress_indicator
+ 
+ private:
+ 
+-#ifdef _WIN32
++#ifdef HAS_QT_WIN_STUFF
+ 	std::unique_ptr<QWinTaskbarButton> m_tb_button;
+ #else
+ 	int m_value = 0;
+diff --git a/rpcs3/rpcs3qt/qt_camera_error_handler.cpp b/rpcs3/rpcs3qt/qt_camera_error_handler.cpp
+index 495384bc0e0..96763827329 100644
+--- a/rpcs3/rpcs3qt/qt_camera_error_handler.cpp
++++ b/rpcs3/rpcs3qt/qt_camera_error_handler.cpp
+@@ -3,40 +3,14 @@
+ 
+ LOG_CHANNEL(camera_log, "Camera");
+ 
+-template <>
+-void fmt_class_string<QCamera::Status>::format(std::string& out, u64 arg)
+-{
+-	format_enum(out, arg, [](QCamera::Status value)
+-	{
+-		switch (value)
+-		{
+-		case QCamera::Status::UnavailableStatus: return "Unavailable";
+-		case QCamera::Status::UnloadedStatus: return "Unloaded";
+-		case QCamera::Status::LoadingStatus: return "Loading";
+-		case QCamera::Status::UnloadingStatus: return "Unloading";
+-		case QCamera::Status::LoadedStatus: return "Loaded";
+-		case QCamera::Status::StandbyStatus: return "Standby";
+-		case QCamera::Status::StartingStatus: return "Starting";
+-		case QCamera::Status::StoppingStatus: return "Stopping";
+-		case QCamera::Status::ActiveStatus: return "Active";
+-		}
+-
+-		return unknown;
+-	});
+-}
+-
+-qt_camera_error_handler::qt_camera_error_handler(std::shared_ptr<QCamera> camera, std::function<void(QCamera::Status)> status_callback)
++qt_camera_error_handler::qt_camera_error_handler(std::shared_ptr<QCamera> camera, std::function<void(bool)> status_callback)
+ 	: m_camera(std::move(camera))
+ 	, m_status_callback(std::move(status_callback))
+ {
+ 	if (m_camera)
+ 	{
+-		connect(m_camera.get(), QOverload<QMultimedia::AvailabilityStatus>::of(&QCamera::availabilityChanged), this, &qt_camera_error_handler::handle_availability);
+-		connect(m_camera.get(), &QCamera::stateChanged, this, &qt_camera_error_handler::handle_camera_state);
+-		connect(m_camera.get(), &QCamera::statusChanged, this, &qt_camera_error_handler::handle_camera_status);
++		connect(m_camera.get(), &QCamera::activeChanged, this, &qt_camera_error_handler::handle_camera_active);
+ 		connect(m_camera.get(), &QCamera::errorOccurred, this, &qt_camera_error_handler::handle_camera_error);
+-		connect(m_camera.get(), &QCamera::captureModeChanged, this, &qt_camera_error_handler::handle_capture_modes);
+-		connect(m_camera.get(), QOverload<QCamera::LockStatus, QCamera::LockChangeReason>::of(&QCamera::lockStatusChanged), this, &qt_camera_error_handler::handle_lock_status);
+ 	}
+ }
+ 
+@@ -44,37 +18,17 @@ qt_camera_error_handler::~qt_camera_error_handler()
+ {
+ }
+ 
+-void qt_camera_error_handler::handle_availability(QMultimedia::AvailabilityStatus availability)
++void qt_camera_error_handler::handle_camera_active(bool is_active)
+ {
+-	camera_log.notice("Camera availability changed to %d", static_cast<int>(availability));
+-}
+-
+-void qt_camera_error_handler::handle_camera_state(QCamera::State state)
+-{
+-	camera_log.notice("Camera state changed to %d", static_cast<int>(state));
+-}
+-
+-void qt_camera_error_handler::handle_camera_status(QCamera::Status status)
+-{
+-	camera_log.notice("Camera status changed to %s", status);
++	camera_log.notice("Camera active status changed to %d", is_active);
+ 
+ 	if (m_status_callback)
+ 	{
+-		m_status_callback(status);
++		m_status_callback(is_active);
+ 	}
+ }
+ 
+-void qt_camera_error_handler::handle_lock_status(QCamera::LockStatus status, QCamera::LockChangeReason reason)
+-{
+-	camera_log.notice("Camera lock status changed to %d (reason=%d)", static_cast<int>(status), static_cast<int>(reason));
+-}
+-
+-void qt_camera_error_handler::handle_capture_modes(QCamera::CaptureModes capture_modes)
+-{
+-	camera_log.notice("Camera capture modes changed to %d", static_cast<int>(capture_modes));
+-}
+-
+-void qt_camera_error_handler::handle_camera_error(QCamera::Error error)
++void qt_camera_error_handler::handle_camera_error(QCamera::Error error, const QString& errorString)
+ {
+-	camera_log.error("Error event: \"%s\" (error=%d)", m_camera ? m_camera->errorString().toStdString() : "", static_cast<int>(error));
++	camera_log.error("Error event: \"%s\" (error=%d)", m_camera ? errorString.toStdString() : "", static_cast<int>(error));
+ }
+diff --git a/rpcs3/rpcs3qt/qt_camera_error_handler.h b/rpcs3/rpcs3qt/qt_camera_error_handler.h
+index cf97a120be7..a2d2c81bac0 100644
+--- a/rpcs3/rpcs3qt/qt_camera_error_handler.h
++++ b/rpcs3/rpcs3qt/qt_camera_error_handler.h
+@@ -8,18 +8,14 @@ class qt_camera_error_handler : public QObject
+ 	Q_OBJECT
+ 
+ public:
+-	qt_camera_error_handler(std::shared_ptr<QCamera> camera, std::function<void(QCamera::Status)> status_callback);
++	qt_camera_error_handler(std::shared_ptr<QCamera> camera, std::function<void(bool)> status_callback);
+ 	virtual ~qt_camera_error_handler();
+ 
+ private Q_SLOTS:
+-	void handle_availability(QMultimedia::AvailabilityStatus availability);
+-	void handle_lock_status(QCamera::LockStatus, QCamera::LockChangeReason);
+-	void handle_capture_modes(QCamera::CaptureModes capture_modes);
+-	void handle_camera_state(QCamera::State state);
+-	void handle_camera_status(QCamera::Status status);
+-	void handle_camera_error(QCamera::Error error);
++	void handle_camera_active(bool is_active);
++	void handle_camera_error(QCamera::Error error, const QString& errorString);
+ 
+ private:
+ 	std::shared_ptr<QCamera> m_camera;
+-	std::function<void(QCamera::Status)> m_status_callback = nullptr;
++	std::function<void(bool)> m_status_callback = nullptr;
+ };
+diff --git a/rpcs3/rpcs3qt/qt_camera_handler.cpp b/rpcs3/rpcs3qt/qt_camera_handler.cpp
+index cbb6f7ed460..a8f775cdfe4 100644
+--- a/rpcs3/rpcs3qt/qt_camera_handler.cpp
++++ b/rpcs3/rpcs3qt/qt_camera_handler.cpp
+@@ -5,17 +5,16 @@
+ #include "Emu/Io/camera_config.h"
+ #include "Emu/Cell/lv2/sys_event.h"
+ 
+-#include <QMediaService>
+-#include <QCameraInfo>
++#include <QMediaDevices>
+ 
+ LOG_CHANNEL(camera_log, "Camera");
+ 
+ qt_camera_handler::qt_camera_handler() : camera_handler_base()
+ {
+ 	// List available cameras
+-	for (const QCameraInfo& cameraInfo : QCameraInfo::availableCameras())
++	for (const QCameraDevice& camera_device : QMediaDevices::videoInputs())
+ 	{
+-		camera_log.success("Found camera: name=%s, description=%s", cameraInfo.deviceName().toStdString(), cameraInfo.description().toStdString());
++		camera_log.success("Found camera: id=%s, description=%s", camera_device.id().toStdString(), camera_device.description().toStdString());
+ 	}
+ 
+ 	if (!g_cfg_camera.load())
+@@ -29,60 +28,53 @@ qt_camera_handler::~qt_camera_handler()
+ 	Emu.BlockingCallFromMainThread([&]()
+ 	{
+ 		close_camera();
+-		m_surface.reset();
+-		m_camera.reset();
+-		m_error_handler.reset();
++		reset();
+ 	});
+ }
+ 
+-void qt_camera_handler::set_camera(const QCameraInfo& camera_info)
++void qt_camera_handler::reset()
++{
++	m_camera.reset();
++	m_error_handler.reset();
++	m_video_sink.reset();
++	m_media_capture_session.reset();
++}
++
++void qt_camera_handler::set_camera(const QCameraDevice& camera_info)
+ {
+ 	if (camera_info.isNull())
+ 	{
+-		m_surface.reset();
+-		m_camera.reset();
+-		m_error_handler.reset();
++		reset();
+ 		return;
+ 	}
+ 
+ 	// Determine if the camera is front facing, in which case we will need to flip the image horizontally.
+-	const bool front_facing = camera_info.position() == QCamera::Position::FrontFace;
++	const bool front_facing = camera_info.position() == QCameraDevice::Position::FrontFace;
+ 
+-	camera_log.success("Using camera: name=\"%s\", description=\"%s\", front_facing=%d", camera_info.deviceName().toStdString(), camera_info.description().toStdString(), front_facing);
++	camera_log.success("Using camera: id=\"%s\", description=\"%s\", front_facing=%d", camera_info.id().toStdString(), camera_info.description().toStdString(), front_facing);
+ 
+ 	// Create camera and video surface
+-	m_surface.reset(new qt_camera_video_surface(front_facing, nullptr));
++	m_media_capture_session.reset(new QMediaCaptureSession(nullptr));
++	m_video_sink.reset(new qt_camera_video_sink(front_facing, nullptr));
+ 	m_camera.reset(new QCamera(camera_info));
+ 	m_error_handler.reset(new qt_camera_error_handler(m_camera,
+-		[this](QCamera::Status status)
++		[this](bool is_active)
+ 		{
+-			switch (status)
++			if (is_active)
+ 			{
+-			case QCamera::UnavailableStatus:
+-				m_state = camera_handler_state::not_available;
+-				break;
+-			case QCamera::UnloadedStatus:
+-			case QCamera::UnloadingStatus:
+-				m_state = camera_handler_state::closed;
+-				break;
+-			case QCamera::StandbyStatus:
+-			case QCamera::StoppingStatus:
+-			case QCamera::LoadedStatus:
+-			case QCamera::LoadingStatus:
+-				m_state = camera_handler_state::open;
+-				break;
+-			case QCamera::StartingStatus:
+-			case QCamera::ActiveStatus:
+ 				m_state = camera_handler_state::running;
+-				break;
+-			default:
+-				camera_log.error("Ignoring unknown status %d", static_cast<int>(status));
+-				break;
++			}
++			else
++			{
++				m_state = camera_handler_state::closed;
+ 			}
+ 		}));
+ 
+-	// Set view finder and update the settings
+-	m_camera->setViewfinder(m_surface.get());
++	// Setup video sink
++	m_media_capture_session->setCamera(m_camera.get());
++	m_media_capture_session->setVideoSink(m_video_sink.get());
++
++	// Update the settings
+ 	update_camera_settings();
+ }
+ 
+@@ -94,25 +86,25 @@ void qt_camera_handler::open_camera()
+ 		m_camera_id != camera_id)
+ 	{
+ 		camera_log.notice("Switching camera from %s to %s", m_camera_id, camera_id);
+-		camera_log.notice("Unloading old camera...");
+-		if (m_camera) m_camera->unload();
++		camera_log.notice("Stopping old camera...");
++		if (m_camera) m_camera->stop();
+ 		m_camera_id = camera_id;
+ 	}
+ 
+-	QCameraInfo selected_camera;
++	QCameraDevice selected_camera{};
+ 
+ 	if (m_camera_id == g_cfg.io.camera_id.def)
+ 	{
+-		selected_camera = QCameraInfo::defaultCamera();
++		selected_camera = QMediaDevices::defaultVideoInput();
+ 	}
+ 	else if (!m_camera_id.empty())
+ 	{
+ 		const QString camera_id = QString::fromStdString(m_camera_id);
+-		for (const QCameraInfo& camera_info : QCameraInfo::availableCameras())
++		for (const QCameraDevice& camera_device : QMediaDevices::videoInputs())
+ 		{
+-			if (camera_id == camera_info.deviceName())
++			if (camera_id == camera_device.id())
+ 			{
+-				selected_camera = camera_info;
++				selected_camera = camera_device;
+ 				break;
+ 			}
+ 		}
+@@ -124,35 +116,26 @@ void qt_camera_handler::open_camera()
+ 	{
+ 		if (m_camera_id.empty()) camera_log.notice("Camera disabled");
+ 		else camera_log.error("No camera found");
+-		m_state = camera_handler_state::not_available;
++		m_state = camera_handler_state::closed;
+ 		return;
+ 	}
+ 
+-	if (m_camera->state() != QCamera::State::UnloadedState)
++	if (m_camera->isActive())
+ 	{
+-		camera_log.notice("Camera already loaded");
++		camera_log.notice("Camera already active");
+ 		return;
+ 	}
+ 
+-	// Load/open camera
+-	m_camera->load();
+-
+ 	// List all supported formats for debugging
+-	for (const QCamera::FrameRateRange& frame_rate : m_camera->supportedViewfinderFrameRateRanges())
++	for (const QCameraFormat& format : m_camera->cameraDevice().videoFormats())
+ 	{
+-		camera_log.notice("Supported frame rate range: %f-%f", frame_rate.minimumFrameRate, frame_rate.maximumFrameRate);
+-	}
+-	for (const QVideoFrame::PixelFormat& pixel_format : m_camera->supportedViewfinderPixelFormats())
+-	{
+-		camera_log.notice("Supported pixel format: %d", static_cast<int>(pixel_format));
+-	}
+-	for (const QSize& resolution : m_camera->supportedViewfinderResolutions())
+-	{
+-		camera_log.notice("Supported resolution: %dx%d", resolution.width(), resolution.height());
++		camera_log.notice("Supported format: pixelformat=%s, resolution=%dx%d framerate=%f-%f", format.pixelFormat(), format.resolution().width(), format.resolution().height(), format.minFrameRate(), format.maxFrameRate());
+ 	}
+ 
+ 	// Update camera and view finder settings
+ 	update_camera_settings();
++
++	m_state = camera_handler_state::open;
+ }
+ 
+ void qt_camera_handler::close_camera()
+@@ -163,18 +146,12 @@ void qt_camera_handler::close_camera()
+ 	{
+ 		if (m_camera_id.empty()) camera_log.notice("Camera disabled");
+ 		else camera_log.error("No camera found");
+-		m_state = camera_handler_state::not_available;
+-		return;
+-	}
+-
+-	if (m_camera->state() == QCamera::State::UnloadedState)
+-	{
+-		camera_log.notice("Camera already unloaded");
++		m_state = camera_handler_state::closed;
+ 		return;
+ 	}
+ 
+ 	// Unload/close camera
+-	m_camera->unload();
++	m_camera->stop();
+ }
+ 
+ void qt_camera_handler::start_camera()
+@@ -185,22 +162,16 @@ void qt_camera_handler::start_camera()
+ 	{
+ 		if (m_camera_id.empty()) camera_log.notice("Camera disabled");
+ 		else camera_log.error("No camera found");
+-		m_state = camera_handler_state::not_available;
++		m_state = camera_handler_state::closed;
+ 		return;
+ 	}
+ 
+-	if (m_camera->state() == QCamera::State::ActiveState)
++	if (m_camera->isActive())
+ 	{
+ 		camera_log.notice("Camera already started");
+ 		return;
+ 	}
+ 
+-	if (m_camera->state() == QCamera::State::UnloadedState)
+-	{
+-		camera_log.notice("Camera not open");
+-		open_camera();
+-	}
+-
+ 	// Start camera. We will start receiving frames now.
+ 	m_camera->start();
+ }
+@@ -213,11 +184,11 @@ void qt_camera_handler::stop_camera()
+ 	{
+ 		if (m_camera_id.empty()) camera_log.notice("Camera disabled");
+ 		else camera_log.error("No camera found");
+-		m_state = camera_handler_state::not_available;
++		m_state = camera_handler_state::closed;
+ 		return;
+ 	}
+ 
+-	if (m_camera->state() == QCamera::State::LoadedState)
++	if (!m_camera->isActive())
+ 	{
+ 		camera_log.notice("Camera already stopped");
+ 		return;
+@@ -232,9 +203,9 @@ void qt_camera_handler::set_format(s32 format, u32 bytesize)
+ 	m_format = format;
+ 	m_bytesize = bytesize;
+ 
+-	if (m_surface)
++	if (m_video_sink)
+ 	{
+-		m_surface->set_format(m_format, m_bytesize);
++		m_video_sink->set_format(m_format, m_bytesize);
+ 	}
+ }
+ 
+@@ -248,9 +219,9 @@ void qt_camera_handler::set_resolution(u32 width, u32 height)
+ 	m_width = width;
+ 	m_height = height;
+ 
+-	if (m_surface)
++	if (m_video_sink)
+ 	{
+-		m_surface->set_resolution(m_width, m_height);
++		m_video_sink->set_resolution(m_width, m_height);
+ 	}
+ }
+ 
+@@ -258,15 +229,15 @@ void qt_camera_handler::set_mirrored(bool mirrored)
+ {
+ 	m_mirrored = mirrored;
+ 
+-	if (m_surface)
++	if (m_video_sink)
+ 	{
+-		m_surface->set_mirrored(m_mirrored);
++		m_video_sink->set_mirrored(m_mirrored);
+ 	}
+ }
+ 
+ u64 qt_camera_handler::frame_number() const
+ {
+-	return m_surface ? m_surface->frame_number() : 0;
++	return m_video_sink ? m_video_sink->frame_number() : 0;
+ }
+ 
+ camera_handler_base::camera_handler_state qt_camera_handler::get_image(u8* buf, u64 size, u32& width, u32& height, u64& frame_number, u64& bytes_read)
+@@ -280,22 +251,22 @@ camera_handler_base::camera_handler_state qt_camera_handler::get_image(u8* buf,
+ 		m_camera_id != camera_id)
+ 	{
+ 		camera_log.notice("Switching cameras");
+-		m_state = camera_handler_state::not_available;
+-		return camera_handler_state::not_available;
++		m_state = camera_handler_state::closed;
++		return camera_handler_state::closed;
+ 	}
+ 
+ 	if (m_camera_id.empty())
+ 	{
+ 		camera_log.notice("Camera disabled");
+-		m_state = camera_handler_state::not_available;
+-		return camera_handler_state::not_available;
++		m_state = camera_handler_state::closed;
++		return camera_handler_state::closed;
+ 	}
+ 
+-	if (!m_camera || !m_surface)
++	if (!m_camera || !m_video_sink)
+ 	{
+ 		camera_log.fatal("Error: camera invalid");
+-		m_state = camera_handler_state::not_available;
+-		return camera_handler_state::not_available;
++		m_state = camera_handler_state::closed;
++		return camera_handler_state::closed;
+ 	}
+ 
+ 	// Backup current state. State may change through events.
+@@ -304,7 +275,7 @@ camera_handler_base::camera_handler_state qt_camera_handler::get_image(u8* buf,
+ 	if (current_state == camera_handler_state::running)
+ 	{
+ 		// Copy latest image into out buffer.
+-		m_surface->get_image(buf, size, width, height, frame_number, bytes_read);
++		m_video_sink->get_image(buf, size, width, height, frame_number, bytes_read);
+ 	}
+ 	else
+ 	{
+@@ -317,7 +288,7 @@ camera_handler_base::camera_handler_state qt_camera_handler::get_image(u8* buf,
+ void qt_camera_handler::update_camera_settings()
+ {
+ 	// Update camera if possible. We can only do this if it is already loaded.
+-	if (m_camera && m_camera->state() != QCamera::State::UnloadedState)
++	if (m_camera && m_camera->isAvailable())
+ 	{
+ 		// Load selected settings from config file
+ 		bool success = false;
+@@ -327,32 +298,23 @@ void qt_camera_handler::update_camera_settings()
+ 		{
+ 			camera_log.notice("Found config entry for camera \"%s\"", m_camera_id);
+ 
+-			QCameraViewfinderSettings setting;
+-			setting.setResolution(cfg_setting.width, cfg_setting.height);
+-			setting.setMinimumFrameRate(cfg_setting.min_fps);
+-			setting.setMaximumFrameRate(cfg_setting.max_fps);
+-			setting.setPixelFormat(static_cast<QVideoFrame::PixelFormat>(cfg_setting.format));
+-			setting.setPixelAspectRatio(cfg_setting.pixel_aspect_width, cfg_setting.pixel_aspect_height);
+-
+ 			// List all available settings and choose the proper value if possible.
+ 			const double epsilon = 0.001;
+ 			success = false;
+-			for (const QCameraViewfinderSettings& supported_setting : m_camera->supportedViewfinderSettings(setting))
++			for (const QCameraFormat& supported_setting : m_camera->cameraDevice().videoFormats())
+ 			{
+-				if (supported_setting.resolution().width() == setting.resolution().width() &&
+-					supported_setting.resolution().height() == setting.resolution().height() &&
+-					supported_setting.minimumFrameRate() >= (setting.minimumFrameRate() - epsilon) &&
+-					supported_setting.minimumFrameRate() <= (setting.minimumFrameRate() + epsilon) &&
+-					supported_setting.maximumFrameRate() >= (setting.maximumFrameRate() - epsilon) &&
+-					supported_setting.maximumFrameRate() <= (setting.maximumFrameRate() + epsilon) &&
+-					supported_setting.pixelFormat() == setting.pixelFormat() &&
+-					supported_setting.pixelAspectRatio().width() == setting.pixelAspectRatio().width() &&
+-					supported_setting.pixelAspectRatio().height() == setting.pixelAspectRatio().height())
++				if (supported_setting.resolution().width() == cfg_setting.width &&
++					supported_setting.resolution().height() == cfg_setting.height &&
++					supported_setting.minFrameRate() >= (cfg_setting.min_fps - epsilon) &&
++					supported_setting.minFrameRate() <= (cfg_setting.min_fps + epsilon) &&
++					supported_setting.maxFrameRate() >= (cfg_setting.max_fps - epsilon) &&
++					supported_setting.maxFrameRate() <= (cfg_setting.max_fps + epsilon) &&
++					supported_setting.pixelFormat() == static_cast<QVideoFrameFormat::PixelFormat>(cfg_setting.format))
+ 				{
+ 					// Apply settings.
+ 					camera_log.notice("Setting view finder settings: frame_rate=%f, width=%d, height=%d, pixel_format=%s",
+-						supported_setting.maximumFrameRate(), supported_setting.resolution().width(), supported_setting.resolution().height(), supported_setting.pixelFormat());
+-					m_camera->setViewfinderSettings(supported_setting);
++						supported_setting.maxFrameRate(), supported_setting.resolution().width(), supported_setting.resolution().height(), supported_setting.pixelFormat());
++					m_camera->setCameraFormat(supported_setting);
+ 					success = true;
+ 					break;
+ 				}
+@@ -372,10 +334,10 @@ void qt_camera_handler::update_camera_settings()
+ 	}
+ 
+ 	// Update video surface if possible
+-	if (m_surface)
++	if (m_video_sink)
+ 	{
+-		m_surface->set_resolution(m_width, m_height);
+-		m_surface->set_format(m_format, m_bytesize);
+-		m_surface->set_mirrored(m_mirrored);
++		m_video_sink->set_resolution(m_width, m_height);
++		m_video_sink->set_format(m_format, m_bytesize);
++		m_video_sink->set_mirrored(m_mirrored);
+ 	}
+ }
+diff --git a/rpcs3/rpcs3qt/qt_camera_handler.h b/rpcs3/rpcs3qt/qt_camera_handler.h
+index 0b4f707354b..4cf1f01a7e1 100644
+--- a/rpcs3/rpcs3qt/qt_camera_handler.h
++++ b/rpcs3/rpcs3qt/qt_camera_handler.h
+@@ -1,12 +1,12 @@
+ #pragma once
+ 
+ #include "Emu/Io/camera_handler_base.h"
+-#include "qt_camera_video_surface.h"
++#include "qt_camera_video_sink.h"
+ #include "qt_camera_error_handler.h"
+ 
+ #include <QCamera>
+-#include <QCameraImageCapture>
+-#include <QAbstractVideoSurface>
++#include <QMediaCaptureSession>
++#include <QVideoSink>
+ 
+ class qt_camera_handler final : public camera_handler_base
+ {
+@@ -14,7 +14,7 @@ class qt_camera_handler final : public camera_handler_base
+ 	qt_camera_handler();
+ 	virtual ~qt_camera_handler();
+ 
+-	void set_camera(const QCameraInfo& camera_info);
++	void set_camera(const QCameraDevice& camera_info);
+ 
+ 	void open_camera() override;
+ 	void close_camera() override;
+@@ -28,10 +28,12 @@ class qt_camera_handler final : public camera_handler_base
+ 	camera_handler_state get_image(u8* buf, u64 size, u32& width, u32& height, u64& frame_number, u64& bytes_read) override;
+ 
+ private:
++	void reset();
+ 	void update_camera_settings();
+ 
+ 	std::string m_camera_id;
+ 	std::shared_ptr<QCamera> m_camera;
+-	std::unique_ptr<qt_camera_video_surface> m_surface;
++	std::unique_ptr<QMediaCaptureSession> m_media_capture_session;
++	std::unique_ptr<qt_camera_video_sink> m_video_sink;
+ 	std::unique_ptr<qt_camera_error_handler> m_error_handler;
+ };
+diff --git a/rpcs3/rpcs3qt/qt_camera_video_surface.cpp b/rpcs3/rpcs3qt/qt_camera_video_sink.cpp
+similarity index 78%
+rename from rpcs3/rpcs3qt/qt_camera_video_surface.cpp
+rename to rpcs3/rpcs3qt/qt_camera_video_sink.cpp
+index 459c632d0d7..4f19155be94 100644
+--- a/rpcs3/rpcs3qt/qt_camera_video_surface.cpp
++++ b/rpcs3/rpcs3qt/qt_camera_video_sink.cpp
+@@ -1,5 +1,5 @@
+ #include "stdafx.h"
+-#include "qt_camera_video_surface.h"
++#include "qt_camera_video_sink.h"
+ 
+ #include "Emu/Cell/Modules/cellCamera.h"
+ #include "Emu/system_config.h"
+@@ -8,12 +8,13 @@
+ 
+ LOG_CHANNEL(camera_log, "Camera");
+ 
+-qt_camera_video_surface::qt_camera_video_surface(bool front_facing, QObject *parent)
+-	: QAbstractVideoSurface(parent), m_front_facing(front_facing)
++qt_camera_video_sink::qt_camera_video_sink(bool front_facing, QObject *parent)
++	: QVideoSink(parent), m_front_facing(front_facing)
+ {
++	connect(this, &QVideoSink::videoFrameChanged, this, &qt_camera_video_sink::present);
+ }
+ 
+-qt_camera_video_surface::~qt_camera_video_surface()
++qt_camera_video_sink::~qt_camera_video_sink()
+ {
+ 	std::lock_guard lock(m_mutex);
+ 
+@@ -28,51 +29,7 @@ qt_camera_video_surface::~qt_camera_video_surface()
+ 	}
+ }
+ 
+-QList<QVideoFrame::PixelFormat> qt_camera_video_surface::supportedPixelFormats(QAbstractVideoBuffer::HandleType type) const
+-{
+-	Q_UNUSED(type)
+-
+-	// Support all cameras
+-	QList<QVideoFrame::PixelFormat> result;
+-	result
+-		<< QVideoFrame::Format_ARGB32
+-		<< QVideoFrame::Format_ARGB32_Premultiplied
+-		<< QVideoFrame::Format_RGB32
+-		<< QVideoFrame::Format_RGB24
+-		<< QVideoFrame::Format_RGB565
+-		<< QVideoFrame::Format_RGB555
+-		<< QVideoFrame::Format_ARGB8565_Premultiplied
+-		<< QVideoFrame::Format_BGRA32
+-		<< QVideoFrame::Format_BGRA32_Premultiplied
+-		<< QVideoFrame::Format_BGR32
+-		<< QVideoFrame::Format_BGR24
+-		<< QVideoFrame::Format_BGR565
+-		<< QVideoFrame::Format_BGR555
+-		<< QVideoFrame::Format_BGRA5658_Premultiplied
+-		<< QVideoFrame::Format_AYUV444
+-		<< QVideoFrame::Format_AYUV444_Premultiplied
+-		<< QVideoFrame::Format_YUV444
+-		<< QVideoFrame::Format_YUV420P
+-		<< QVideoFrame::Format_YV12
+-		<< QVideoFrame::Format_UYVY
+-		<< QVideoFrame::Format_YUYV
+-		<< QVideoFrame::Format_NV12
+-		<< QVideoFrame::Format_NV21
+-		<< QVideoFrame::Format_IMC1
+-		<< QVideoFrame::Format_IMC2
+-		<< QVideoFrame::Format_IMC3
+-		<< QVideoFrame::Format_IMC4
+-		<< QVideoFrame::Format_Y8
+-		<< QVideoFrame::Format_Y16
+-		<< QVideoFrame::Format_Jpeg
+-		<< QVideoFrame::Format_CameraRaw
+-		<< QVideoFrame::Format_AdobeDng
+-		<< QVideoFrame::Format_ABGR32
+-		<< QVideoFrame::Format_YUV422P;
+-	return result;
+-}
+-
+-bool qt_camera_video_surface::present(const QVideoFrame& frame)
++bool qt_camera_video_sink::present(const QVideoFrame& frame)
+ {
+ 	if (!frame.isValid())
+ 	{
+@@ -82,18 +39,18 @@ bool qt_camera_video_surface::present(const QVideoFrame& frame)
+ 
+ 	// Get video image. Map frame for faster read operations.
+ 	QVideoFrame tmp(frame);
+-	if (!tmp.map(QAbstractVideoBuffer::ReadOnly))
++	if (!tmp.map(QVideoFrame::ReadOnly))
+ 	{
+ 		camera_log.error("Failed to map video frame");
+ 		return false;
+ 	}
+ 
+ 	// Get image. This usually also converts the image to ARGB32.
+-	QImage image = frame.image();
++	QImage image = frame.toImage();
+ 
+ 	if (image.isNull())
+ 	{
+-		camera_log.warning("Image is invalid: pixel_format=%s, format=%d", tmp.pixelFormat(), static_cast<int>(QVideoFrame::imageFormatFromPixelFormat(tmp.pixelFormat())));
++		camera_log.warning("Image is invalid: pixel_format=%s, format=%d", tmp.pixelFormat(), static_cast<int>(QVideoFrameFormat::imageFormatFromPixelFormat(tmp.pixelFormat())));
+ 	}
+ 	else
+ 	{
+@@ -293,7 +250,7 @@ bool qt_camera_video_surface::present(const QVideoFrame& frame)
+ 	return true;
+ }
+ 
+-void qt_camera_video_surface::set_format(s32 format, u32 bytesize)
++void qt_camera_video_sink::set_format(s32 format, u32 bytesize)
+ {
+ 	camera_log.notice("Setting format: format=%d, bytesize=%d", format, bytesize);
+ 
+@@ -301,7 +258,7 @@ void qt_camera_video_surface::set_format(s32 format, u32 bytesize)
+ 	m_bytesize = bytesize;
+ }
+ 
+-void qt_camera_video_surface::set_resolution(u32 width, u32 height)
++void qt_camera_video_sink::set_resolution(u32 width, u32 height)
+ {
+ 	camera_log.notice("Setting resolution: width=%d, height=%d", width, height);
+ 
+@@ -309,19 +266,19 @@ void qt_camera_video_surface::set_resolution(u32 width, u32 height)
+ 	m_height = height;
+ }
+ 
+-void qt_camera_video_surface::set_mirrored(bool mirrored)
++void qt_camera_video_sink::set_mirrored(bool mirrored)
+ {
+ 	camera_log.notice("Setting mirrored: mirrored=%d", mirrored);
+ 
+ 	m_mirrored = mirrored;
+ }
+ 
+-u64 qt_camera_video_surface::frame_number() const
++u64 qt_camera_video_sink::frame_number() const
+ {
+ 	return m_frame_number.load();
+ }
+ 
+-void qt_camera_video_surface::get_image(u8* buf, u64 size, u32& width, u32& height, u64& frame_number, u64& bytes_read)
++void qt_camera_video_sink::get_image(u8* buf, u64 size, u32& width, u32& height, u64& frame_number, u64& bytes_read)
+ {
+ 	// Lock read buffer
+ 	std::lock_guard lock(m_mutex);
+@@ -348,7 +305,7 @@ void qt_camera_video_surface::get_image(u8* buf, u64 size, u32& width, u32& heig
+ 	}
+ }
+ 
+-u32 qt_camera_video_surface::read_index() const
++u32 qt_camera_video_sink::read_index() const
+ {
+ 	// The read buffer index cannot be the same as the write index
+ 	return (m_write_index + 1u) % ::narrow<u32>(m_image_buffer.size());
+diff --git a/rpcs3/rpcs3qt/qt_camera_video_surface.h b/rpcs3/rpcs3qt/qt_camera_video_sink.h
+similarity index 66%
+rename from rpcs3/rpcs3qt/qt_camera_video_surface.h
+rename to rpcs3/rpcs3qt/qt_camera_video_sink.h
+index 4cd42a4cd54..3385a5048f7 100644
+--- a/rpcs3/rpcs3qt/qt_camera_video_surface.h
++++ b/rpcs3/rpcs3qt/qt_camera_video_sink.h
+@@ -1,18 +1,18 @@
+ #pragma once
+ 
+-#include <QAbstractVideoSurface>
++#include <QVideoFrame>
++#include <QVideoSink>
+ #include <QImage>
+ 
+ #include <array>
+ 
+-class qt_camera_video_surface final : public QAbstractVideoSurface
++class qt_camera_video_sink final : public QVideoSink
+ {
+ public:
+-	qt_camera_video_surface(bool front_facing, QObject *parent = nullptr);
+-	virtual ~qt_camera_video_surface();
++	qt_camera_video_sink(bool front_facing, QObject *parent = nullptr);
++	virtual ~qt_camera_video_sink();
+ 
+-	QList<QVideoFrame::PixelFormat> supportedPixelFormats(QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle) const override;
+-	bool present(const QVideoFrame& frame) override;
++	bool present(const QVideoFrame& frame);
+ 
+ 	void set_format(s32 format, u32 bytesize);
+ 	void set_resolution(u32 width, u32 height);
+diff --git a/rpcs3/rpcs3qt/qt_music_error_handler.cpp b/rpcs3/rpcs3qt/qt_music_error_handler.cpp
+index aa5af7af8e1..9f79dcaa76c 100644
+--- a/rpcs3/rpcs3qt/qt_music_error_handler.cpp
++++ b/rpcs3/rpcs3qt/qt_music_error_handler.cpp
+@@ -15,8 +15,6 @@ void fmt_class_string<QMediaPlayer::Error>::format(std::string& out, u64 arg)
+ 		case QMediaPlayer::Error::FormatError: return "FormatError";
+ 		case QMediaPlayer::Error::NetworkError: return "NetworkError";
+ 		case QMediaPlayer::Error::AccessDeniedError: return "AccessDeniedError";
+-		case QMediaPlayer::Error::ServiceMissingError: return "ServiceMissingError";
+-		case QMediaPlayer::Error::MediaIsPlaylist: return "MediaIsPlaylist";
+ 		}
+ 
+ 		return unknown;
+@@ -30,7 +28,6 @@ void fmt_class_string<QMediaPlayer::MediaStatus>::format(std::string& out, u64 a
+ 	{
+ 		switch (value)
+ 		{
+-		case QMediaPlayer::MediaStatus::UnknownMediaStatus: return "UnknownMediaStatus";
+ 		case QMediaPlayer::MediaStatus::NoMedia: return "NoMedia";
+ 		case QMediaPlayer::MediaStatus::LoadingMedia: return "LoadingMedia";
+ 		case QMediaPlayer::MediaStatus::LoadedMedia: return "LoadedMedia";
+@@ -46,15 +43,15 @@ void fmt_class_string<QMediaPlayer::MediaStatus>::format(std::string& out, u64 a
+ }
+ 
+ template <>
+-void fmt_class_string<QMediaPlayer::State>::format(std::string& out, u64 arg)
++void fmt_class_string<QMediaPlayer::PlaybackState>::format(std::string& out, u64 arg)
+ {
+-	format_enum(out, arg, [](QMediaPlayer::State value)
++	format_enum(out, arg, [](QMediaPlayer::PlaybackState value)
+ 	{
+ 		switch (value)
+ 		{
+-		case QMediaPlayer::State::StoppedState: return "StoppedState";
+-		case QMediaPlayer::State::PlayingState: return "PlayingState";
+-		case QMediaPlayer::State::PausedState: return "PausedState";
++		case QMediaPlayer::PlaybackState::StoppedState: return "StoppedState";
++		case QMediaPlayer::PlaybackState::PlayingState: return "PlayingState";
++		case QMediaPlayer::PlaybackState::PausedState: return "PausedState";
+ 		}
+ 
+ 		return unknown;
+@@ -68,8 +65,8 @@ qt_music_error_handler::qt_music_error_handler(std::shared_ptr<QMediaPlayer> med
+ 	if (m_media_player)
+ 	{
+ 		connect(m_media_player.get(), &QMediaPlayer::mediaStatusChanged, this, &qt_music_error_handler::handle_media_status);
+-		connect(m_media_player.get(), &QMediaPlayer::stateChanged, this, &qt_music_error_handler::handle_music_state);
+-		connect(m_media_player.get(), QOverload<QMediaPlayer::Error>::of(&QMediaPlayer::error), this, &qt_music_error_handler::handle_music_error);
++		connect(m_media_player.get(), &QMediaPlayer::playbackStateChanged, this, &qt_music_error_handler::handle_music_state);
++		connect(m_media_player.get(), &QMediaPlayer::errorOccurred, this, &qt_music_error_handler::handle_music_error);
+ 	}
+ }
+ 
+@@ -87,12 +84,11 @@ void qt_music_error_handler::handle_media_status(QMediaPlayer::MediaStatus statu
+ 	}
+ }
+ 
+-void qt_music_error_handler::handle_music_state(QMediaPlayer::State state)
++void qt_music_error_handler::handle_music_state(QMediaPlayer::PlaybackState state)
+ {
+ 	music_log.notice("New playback state: %s (state=%d)", state, static_cast<int>(state));
+ }
+-
+-void qt_music_error_handler::handle_music_error(QMediaPlayer::Error error)
++void qt_music_error_handler::handle_music_error(QMediaPlayer::Error error, const QString& errorString)
+ {
+-	music_log.error("Error event: \"%s\" (error=%s)", m_media_player ? m_media_player->errorString().toStdString() : "", error);
++	music_log.error("Error event: \"%s\" (error=%s)", m_media_player ? errorString.toStdString() : "", error);
+ }
+diff --git a/rpcs3/rpcs3qt/qt_music_error_handler.h b/rpcs3/rpcs3qt/qt_music_error_handler.h
+index 11c5ff3fbd8..7d19c22d5c8 100644
+--- a/rpcs3/rpcs3qt/qt_music_error_handler.h
++++ b/rpcs3/rpcs3qt/qt_music_error_handler.h
+@@ -13,8 +13,8 @@ class qt_music_error_handler : public QObject
+ 
+ private Q_SLOTS:
+ 	void handle_media_status(QMediaPlayer::MediaStatus status);
+-	void handle_music_state(QMediaPlayer::State state);
+-	void handle_music_error(QMediaPlayer::Error error);
++	void handle_music_state(QMediaPlayer::PlaybackState state);
++	void handle_music_error(QMediaPlayer::Error error, const QString& errorString);
+ 
+ private:
+ 	std::shared_ptr<QMediaPlayer> m_media_player;
+diff --git a/rpcs3/rpcs3qt/qt_music_handler.cpp b/rpcs3/rpcs3qt/qt_music_handler.cpp
+index 39c40a59152..ad980d238f9 100644
+--- a/rpcs3/rpcs3qt/qt_music_handler.cpp
++++ b/rpcs3/rpcs3qt/qt_music_handler.cpp
+@@ -4,6 +4,7 @@
+ #include "Utilities/Thread.h"
+ #include "util/logs.hpp"
+ 
++#include <QAudioOutput>
+ #include <QUrl>
+ 
+ LOG_CHANNEL(music_log, "Music");
+@@ -13,7 +14,7 @@ qt_music_handler::qt_music_handler()
+ 	music_log.notice("Constructing Qt music handler...");
+ 
+ 	m_media_player = std::make_shared<QMediaPlayer>();
+-	m_media_player->setAudioRole(QAudio::Role::MusicRole);
++	m_media_player->setAudioOutput(new QAudioOutput());
+ 
+ 	m_error_handler = std::make_unique<qt_music_error_handler>(m_media_player,
+ 		[this](QMediaPlayer::MediaStatus status)
+@@ -25,7 +26,6 @@ qt_music_handler::qt_music_handler()
+ 
+ 			switch (status)
+ 			{
+-			case QMediaPlayer::MediaStatus::UnknownMediaStatus:
+ 			case QMediaPlayer::MediaStatus::NoMedia:
+ 			case QMediaPlayer::MediaStatus::LoadingMedia:
+ 			case QMediaPlayer::MediaStatus::LoadedMedia:
+@@ -90,7 +90,7 @@ void qt_music_handler::play(const std::string& path)
+ 		if (m_path != path)
+ 		{
+ 			m_path = path;
+-			m_media_player->setMedia(QUrl(QString::fromStdString(path)));
++			m_media_player->setSource(QUrl(QString::fromStdString(path)));
+ 		}
+ 
+ 		music_log.notice("Playing music: %s", path);
+@@ -110,7 +110,7 @@ void qt_music_handler::fast_forward(const std::string& path)
+ 		if (m_path != path)
+ 		{
+ 			m_path = path;
+-			m_media_player->setMedia(QUrl(QString::fromStdString(path)));
++			m_media_player->setSource(QUrl(QString::fromStdString(path)));
+ 		}
+ 
+ 		music_log.notice("Fast-forwarding music...");
+@@ -130,7 +130,7 @@ void qt_music_handler::fast_reverse(const std::string& path)
+ 		if (m_path != path)
+ 		{
+ 			m_path = path;
+-			m_media_player->setMedia(QUrl(QString::fromStdString(path)));
++			m_media_player->setSource(QUrl(QString::fromStdString(path)));
+ 		}
+ 
+ 		music_log.notice("Fast-reversing music...");
+@@ -149,7 +149,7 @@ void qt_music_handler::set_volume(f32 volume)
+ 	{
+ 		const int new_volume = std::max<int>(0, std::min<int>(volume * 100, 100));
+ 		music_log.notice("Setting volume to %d%%", new_volume);
+-		m_media_player->setVolume(new_volume);
++		m_media_player->audioOutput()->setVolume(new_volume);
+ 	});
+ }
+ 
+@@ -160,9 +160,8 @@ f32 qt_music_handler::get_volume() const
+ 
+ 	Emu.BlockingCallFromMainThread([&volume, this]()
+ 	{
+-		const int current_volume = std::max(0, std::min(m_media_player->volume(), 100));
+-		music_log.notice("Getting volume: %d%%", current_volume);
+-		volume = current_volume / 100.0f;
++		volume = std::max(0.f, std::min(m_media_player->audioOutput()->volume(), 1.f));
++		music_log.notice("Getting volume: %d%%", volume);
+ 	});
+ 
+ 	return volume;
+diff --git a/rpcs3/rpcs3qt/settings_dialog.cpp b/rpcs3/rpcs3qt/settings_dialog.cpp
+index c9233da3a9d..e7ee599e675 100644
+--- a/rpcs3/rpcs3qt/settings_dialog.cpp
++++ b/rpcs3/rpcs3qt/settings_dialog.cpp
+@@ -1,5 +1,6 @@
+ #include <QButtonGroup>
+-#include <QCameraInfo>
++#include <QCameraDevice>
++#include <QMediaDevices>
+ #include <QDialogButtonBox>
+ #include <QFontMetrics>
+ #include <QPushButton>
+@@ -1207,10 +1208,10 @@ settings_dialog::settings_dialog(std::shared_ptr<gui_settings> gui_settings, std
+ 		const std::string selected_camera = m_emu_settings->GetSetting(emu_settings_type::CameraID);
+ 		ui->cameraIdBox->addItem(tr("None", "Camera Device"), "");
+ 		ui->cameraIdBox->addItem(tr("Default", "Camera Device"), qstr(default_camera));
+-		for (const QCameraInfo& camera_info : QCameraInfo::availableCameras())
++		for (const QCameraDevice& camera_info : QMediaDevices::videoInputs())
+ 		{
+ 			if (!camera_info.isNull())
+-				ui->cameraIdBox->addItem(camera_info.description(), camera_info.deviceName());
++				ui->cameraIdBox->addItem(camera_info.description(), camera_info.id());
+ 		}
+ 		if (const int index = ui->cameraIdBox->findData(qstr(selected_camera)); index >= 0)
+ 		{
