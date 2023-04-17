@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index a02270e7..23fdb565 100644
+index f14a4db2..646b5e29 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -40,6 +40,7 @@ if(SUPPORTS_WAYLAND)
+@@ -44,6 +44,7 @@ if(SUPPORTS_WAYLAND)
  endif()
  if((LINUX OR FREEBSD) OR ANDROID)
    option(USE_EGL "Support EGL OpenGL context creation" ON)
@@ -10,15 +10,6 @@ index a02270e7..23fdb565 100644
  endif()
  if((LINUX OR FREEBSD) AND NOT ANDROID)
    option(USE_DRMKMS "Support DRM/KMS OpenGL contexts" OFF)
-@@ -232,7 +233,7 @@ elseif(${CMAKE_SYSTEM_PROCESSOR} STREQUAL "x86" OR ${CMAKE_SYSTEM_PROCESSOR} STR
- elseif(${CMAKE_SYSTEM_PROCESSOR} STREQUAL "aarch64" OR ${CMAKE_SYSTEM_PROCESSOR} STREQUAL "arm64")
-   set(CPU_ARCH "aarch64")
- elseif(${CMAKE_SYSTEM_PROCESSOR} STREQUAL "arm" OR ${CMAKE_SYSTEM_PROCESSOR} STREQUAL "armv7-a" OR
--       ${CMAKE_SYSTEM_PROCESSOR} STREQUAL "armv7l")
-+       ${CMAKE_SYSTEM_PROCESSOR} STREQUAL "armv7l" OR ${CMAKE_SYSTEM_PROCESSOR} STREQUAL "armv8l")
-   set(CPU_ARCH "aarch32")
-   if(ANDROID)
-     # Force ARM mode, since apparently ANDROID_ARM_MODE isn't working..
 diff --git a/CMakeModules/FindEGL.cmake b/CMakeModules/FindEGL.cmake
 index 48e51728..c1c947b1 100644
 --- a/CMakeModules/FindEGL.cmake
@@ -81,30 +72,30 @@ index 24a4fb45..59eb66e5 100644
    if(USE_X11)
      target_sources(glad PRIVATE src/glad_glx.c)
 diff --git a/src/common/CMakeLists.txt b/src/common/CMakeLists.txt
-index a68e453e..4434328b 100644
+index ea086d19..da426ec9 100644
 --- a/src/common/CMakeLists.txt
 +++ b/src/common/CMakeLists.txt
-@@ -167,12 +167,13 @@ if(USE_EGL)
-     )
-   endif()
-   if(USE_DRMKMS)
-+    target_compile_definitions(common PRIVATE "-DEGL_NO_X11=1")
-     target_compile_definitions(common PRIVATE "-DUSE_GBM=1")
-     target_sources(common PRIVATE
-       gl/context_egl_gbm.cpp
-       gl/context_egl_gbm.h
-     )
--    target_link_libraries(common PUBLIC GBM::GBM)
-+    target_link_libraries(common PUBLIC gbm EGL)
-   endif()
-   if(USE_FBDEV)
-     target_compile_definitions(common PRIVATE "-DUSE_FBDEV=1")
+@@ -169,12 +169,13 @@ if(ENABLE_OPENGL)
+       )
+     endif()
+     if(USE_DRMKMS)
++      target_compile_definitions(common PRIVATE "-DEGL_NO_X11=1")
+       target_compile_definitions(common PRIVATE "-DUSE_GBM=1")
+       target_sources(common PRIVATE
+         gl/context_egl_gbm.cpp
+         gl/context_egl_gbm.h
+       )
+-      target_link_libraries(common PUBLIC GBM::GBM)
++      target_link_libraries(common PUBLIC gbm EGL)
+     endif()
+     if(USE_FBDEV)
+       target_compile_definitions(common PRIVATE "-DUSE_FBDEV=1")
 diff --git a/src/duckstation-nogui/CMakeLists.txt b/src/duckstation-nogui/CMakeLists.txt
-index b11cef47..9d5cdfaa 100644
+index 17301849..fbce73e1 100644
 --- a/src/duckstation-nogui/CMakeLists.txt
 +++ b/src/duckstation-nogui/CMakeLists.txt
-@@ -27,6 +27,10 @@ if(USE_EVDEV)
-   target_compile_definitions(duckstation-nogui PRIVATE "-DUSE_LIBEVDEV=1")
+@@ -74,4 +74,8 @@ if(USE_DRMKMS AND USE_EVDEV)
+   )
    target_include_directories(duckstation-nogui PRIVATE ${LIBEVDEV_INCLUDE_DIRS})
    target_link_libraries(duckstation-nogui PRIVATE ${LIBEVDEV_LIBRARIES})
 +if (USE_MALI)
@@ -112,5 +103,3 @@ index b11cef47..9d5cdfaa 100644
 +endif()
 +
  endif()
- 
- if(USE_DRMKMS)
