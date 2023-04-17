@@ -1,0 +1,59 @@
+diff --git a/src/frontend-common/input_manager.cpp b/src/frontend-common/input_manager.cpp
+index 4633593f..9d152095 100644
+--- a/src/frontend-common/input_manager.cpp
++++ b/src/frontend-common/input_manager.cpp
+@@ -1808,30 +1808,30 @@ std::vector<InputBindingKey> InputManager::EnumerateMotors()
+ 
+ static void GetKeyboardGenericBindingMapping(std::vector<std::pair<GenericInputBinding, std::string>>* mapping)
+ {
+-  mapping->emplace_back(GenericInputBinding::DPadUp, "Keyboard/Up");
+-  mapping->emplace_back(GenericInputBinding::DPadRight, "Keyboard/Right");
+-  mapping->emplace_back(GenericInputBinding::DPadDown, "Keyboard/Down");
+-  mapping->emplace_back(GenericInputBinding::DPadLeft, "Keyboard/Left");
+-  mapping->emplace_back(GenericInputBinding::LeftStickUp, "Keyboard/W");
+-  mapping->emplace_back(GenericInputBinding::LeftStickRight, "Keyboard/D");
+-  mapping->emplace_back(GenericInputBinding::LeftStickDown, "Keyboard/S");
+-  mapping->emplace_back(GenericInputBinding::LeftStickLeft, "Keyboard/A");
+-  mapping->emplace_back(GenericInputBinding::RightStickUp, "Keyboard/T");
+-  mapping->emplace_back(GenericInputBinding::RightStickRight, "Keyboard/H");
+-  mapping->emplace_back(GenericInputBinding::RightStickDown, "Keyboard/G");
+-  mapping->emplace_back(GenericInputBinding::RightStickLeft, "Keyboard/F");
+-  mapping->emplace_back(GenericInputBinding::Start, "Keyboard/Return");
+-  mapping->emplace_back(GenericInputBinding::Select, "Keyboard/Backspace");
+-  mapping->emplace_back(GenericInputBinding::Triangle, "Keyboard/I");
+-  mapping->emplace_back(GenericInputBinding::Circle, "Keyboard/L");
+-  mapping->emplace_back(GenericInputBinding::Cross, "Keyboard/K");
+-  mapping->emplace_back(GenericInputBinding::Square, "Keyboard/J");
+-  mapping->emplace_back(GenericInputBinding::L1, "Keyboard/Q");
+-  mapping->emplace_back(GenericInputBinding::L2, "Keyboard/1");
+-  mapping->emplace_back(GenericInputBinding::L3, "Keyboard/2");
+-  mapping->emplace_back(GenericInputBinding::R1, "Keyboard/E");
+-  mapping->emplace_back(GenericInputBinding::R2, "Keyboard/3");
+-  mapping->emplace_back(GenericInputBinding::R3, "Keyboard/4");
++  mapping->emplace_back(GenericInputBinding::DPadUp, "SDL-0/DPadUp");
++  mapping->emplace_back(GenericInputBinding::DPadRight, "SDL-0/DPadRight");
++  mapping->emplace_back(GenericInputBinding::DPadDown, "SDL-0/DPadDown");
++  mapping->emplace_back(GenericInputBinding::DPadLeft, "SDL-0/DPadLeft");
++  mapping->emplace_back(GenericInputBinding::LeftStickUp, "SDL-0/-LeftY");
++  mapping->emplace_back(GenericInputBinding::LeftStickRight, "SDL-0/+LeftX");
++  mapping->emplace_back(GenericInputBinding::LeftStickDown, "SDL-0/+LeftY");
++  mapping->emplace_back(GenericInputBinding::LeftStickLeft, "SDL-0/-LeftX");
++  mapping->emplace_back(GenericInputBinding::RightStickUp, "SDL-0/-RightY");
++  mapping->emplace_back(GenericInputBinding::RightStickRight, "SDL-0/+RightX");
++  mapping->emplace_back(GenericInputBinding::RightStickDown, "SDL-0/+RightY");
++  mapping->emplace_back(GenericInputBinding::RightStickLeft, "SDL-0/-RightX");
++  mapping->emplace_back(GenericInputBinding::Start, "SDL-0/Start");
++  mapping->emplace_back(GenericInputBinding::Select, "SDL-0/Back");
++  mapping->emplace_back(GenericInputBinding::Triangle, "SDL-0/Y");
++  mapping->emplace_back(GenericInputBinding::Circle, "SDL-0/B");
++  mapping->emplace_back(GenericInputBinding::Cross, "SDL-0/A");
++  mapping->emplace_back(GenericInputBinding::Square, "SDL-0/X");
++  mapping->emplace_back(GenericInputBinding::L1, "SDL-0/LeftShoulder");
++  mapping->emplace_back(GenericInputBinding::L2, "SDL-0/+LeftTrigger");
++  mapping->emplace_back(GenericInputBinding::L3, "SDL-0/LeftStick");
++  mapping->emplace_back(GenericInputBinding::R1, "SDL-0/RightShoulder");
++  mapping->emplace_back(GenericInputBinding::R2, "SDL-0/+RightTrigger");
++  mapping->emplace_back(GenericInputBinding::R3, "SDL-0/RightStick");
+ }
+ 
+ static bool GetInternalGenericBindingMapping(const std::string_view& device, GenericInputBindingMapping* mapping)

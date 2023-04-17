@@ -1,0 +1,66 @@
+diff --git a/src/core/settings.cpp b/src/core/settings.cpp
+index f3a92796..d23a95f0 100644
+--- a/src/core/settings.cpp
++++ b/src/core/settings.cpp
+@@ -1293,18 +1293,18 @@ std::string EmuFolders::Textures;
+ 
+ void EmuFolders::SetDefaults()
+ {
+-  Bios = Path::Combine(DataRoot, "bios");
+-  Cache = Path::Combine(DataRoot, "cache");
+-  Cheats = Path::Combine(DataRoot, "cheats");
+-  Covers = Path::Combine(DataRoot, "covers");
+-  Dumps = Path::Combine(DataRoot, "dump");
+-  GameSettings = Path::Combine(DataRoot, "gamesettings");
+-  InputProfiles = Path::Combine(DataRoot, "inputprofiles");
+-  MemoryCards = Path::Combine(DataRoot, "memcards");
+-  SaveStates = Path::Combine(DataRoot, "savestates");
+-  Screenshots = Path::Combine(DataRoot, "screenshots");
+-  Shaders = Path::Combine(DataRoot, "shaders");
+-  Textures = Path::Combine(DataRoot, "textures");
++  Bios = "/userdata/bios";
++  Cache = "/userdata/system/cache/psx";
++  Cheats = "/userdata/cheats/psx";
++  Covers = "/userdata/system/configs/duckstation/covers";
++  Dumps = "/userdata/system/configs/duckstation/dump";
++  GameSettings = "/userdata/system/configs/duckstation/gamesettings";
++  InputProfiles = "/userdata/system/configs/duckstation/inputprofiles";
++  MemoryCards = "/userdata/saves/psx";
++  SaveStates = "/userdata/saves/psx";
++  Screenshots = "/userdata/screenshots";
++  Shaders = "/usr/duckstation/bin/resources/shaders";
++  Textures = "/userdata/system/configs/duckstation/textures";
+ }
+ 
+ static std::string LoadPathFromSettings(SettingsInterface& si, const std::string& root, const char* section,
+@@ -1350,18 +1350,18 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
+ void EmuFolders::Save(SettingsInterface& si)
+ {
+   // convert back to relative
+-  si.SetStringValue("BIOS", "SearchDirectory", Path::MakeRelative(Bios, DataRoot).c_str());
+-  si.SetStringValue("Folders", "Cache", Path::MakeRelative(Cache, DataRoot).c_str());
+-  si.SetStringValue("Folders", "Cheats", Path::MakeRelative(Cheats, DataRoot).c_str());
+-  si.SetStringValue("Folders", "Covers", Path::MakeRelative(Covers, DataRoot).c_str());
+-  si.SetStringValue("Folders", "Dumps", Path::MakeRelative(Dumps, DataRoot).c_str());
+-  si.SetStringValue("Folders", "GameSettings", Path::MakeRelative(GameSettings, DataRoot).c_str());
+-  si.SetStringValue("Folders", "InputProfiles", Path::MakeRelative(InputProfiles, DataRoot).c_str());
+-  si.SetStringValue("MemoryCards", "Directory", Path::MakeRelative(MemoryCards, DataRoot).c_str());
+-  si.SetStringValue("Folders", "SaveStates", Path::MakeRelative(SaveStates, DataRoot).c_str());
+-  si.SetStringValue("Folders", "Screenshots", Path::MakeRelative(Screenshots, DataRoot).c_str());
+-  si.SetStringValue("Folders", "Shaders", Path::MakeRelative(Shaders, DataRoot).c_str());
+-  si.SetStringValue("Folders", "Textures", Path::MakeRelative(Textures, DataRoot).c_str());
++  si.SetStringValue("BIOS", "SearchDirectory", Bios.c_str());
++  si.SetStringValue("Folders", "Cache", Cache.c_str());
++  si.SetStringValue("Folders", "Cheats", Cheats.c_str());
++  si.SetStringValue("Folders", "Covers", Covers.c_str());
++  si.SetStringValue("Folders", "Dumps", Dumps.c_str());
++  si.SetStringValue("Folders", "GameSettings", GameSettings.c_str());
++  si.SetStringValue("Folders", "InputProfiles", InputProfiles.c_str());
++  si.SetStringValue("MemoryCards", "Directory", MemoryCards.c_str());
++  si.SetStringValue("Folders", "SaveStates", SaveStates.c_str());
++  si.SetStringValue("Folders", "Screenshots", Screenshots.c_str());
++  si.SetStringValue("Folders", "Shaders", Shaders.c_str());
++  si.SetStringValue("Folders", "Textures", Textures.c_str());
+ }
+ 
+ void EmuFolders::Update()
