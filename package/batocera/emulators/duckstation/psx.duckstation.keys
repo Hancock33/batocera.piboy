@@ -19,9 +19,9 @@
 	    "description": "Save State"
 	},
 	{
-            "trigger": ["hotkey", "a"],
+            "trigger": ["hotkey", "b"],
             "type": "key",
-            "target": [ "KEY_F7" ],
+            "target": [ "KEY_ESC" ],
 	    "description": "Open DuckStation Quick Menu"
 	}
     ]
