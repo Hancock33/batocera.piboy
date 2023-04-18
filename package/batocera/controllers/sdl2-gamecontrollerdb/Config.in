@@ -1,0 +1,6 @@
+config BR2_PACKAGE_SDL2_GAMECONTROLLERDB
+	bool "sdl2-gamecontrollerdb"
+	select BR2_PACKAGE_SDL2
+
+	help
+	  Kernel module to support hardware from piboy (experimental pi)
