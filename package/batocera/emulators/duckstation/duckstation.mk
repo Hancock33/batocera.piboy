@@ -65,9 +65,9 @@ endif
 
 define DUCKSTATION_INSTALL_TARGET_CMDS
     mkdir -p $(TARGET_DIR)/usr/duckstation/bin
-	@if [ "$(X86_INSTALL)" = "n" ]; then  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-nogui $(TARGET_DIR)/usr/duckstation/bin/duckstation ; fi
+	@if [ "$(X86_INSTALL)" = "n" ]; then  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-nogui $(TARGET_DIR)/usr/duckstation/bin/ ; fi
 	@if [ "$(X86_INSTALL)" = "y" ]; then  cp -pr  $(@D)/buildroot-build/bin/translations            $(TARGET_DIR)/usr/duckstation/bin/ ; fi
-	@if [ "$(X86_INSTALL)" = "y" ]; then  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-qt    $(TARGET_DIR)/usr/duckstation/bin/duckstation ; fi
+	@if [ "$(X86_INSTALL)" = "y" ]; then  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-qt    $(TARGET_DIR)/usr/duckstation/bin/duckstation-nogui ; fi
     $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation* $(TARGET_DIR)/usr/duckstation/bin
     cp -pr  $(@D)/buildroot-build/bin/resources          $(TARGET_DIR)/usr/duckstation/bin/
 
