@@ -210,11 +210,7 @@ class DuckstationGenerator(Generator):
             with open(psxConfigFile, 'w') as configfile:
                 psxconfig.write(configfile, False)
 
-        commandArray = ["/usr/duckstation/bin/duckstation-nogui", rom ]
-
-        # Fullscreen
-        commandArray.append("-fullscreen")
-        commandArray.append("-nogui")
+        commandArray = ["/usr/duckstation/bin/duckstation-nogui", "-fullscreen", rom ]
 
         return Command.Command(
             array=commandArray,
