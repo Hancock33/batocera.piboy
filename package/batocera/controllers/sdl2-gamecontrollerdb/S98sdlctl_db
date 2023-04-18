@@ -1,0 +1,25 @@
+#!/bin/sh
+
+case "$1" in
+	start)
+        rm -rf /usr/duckstation/bin/resources/gamecontrollerdb.txt > /dev/null 2>&1
+        rm -rf /usr/share/gamecontrollerdb.txt > /dev/null 2>&1
+        rm -rf /usr/share/moonlight/gamecontrollerdb.txt > /dev/null 2>&1
+        rm -rf /usr/share/scummvm/gamecontrollerdb.txt > /dev/null 2>&1
+        rm -rf /usr/share/sdl-jstest/gamecontrollerdb.txt > /dev/null 2>&1
+        rm -rf /usr/share/ppsspp/PPSSPP/gamecontrollerdb.txt > /dev/null 2>&1
+        rm -rf /usr/share/ppsspp/PPSSPP/assets/gamecontrollerdb.txt > /dev/null 2>&1
+        rm -rf /usr/share/cdogs/data/gamecontrollerdb.txt > /dev/null 2>&1
+
+        ln -sf /usr/share/sdlcontrollerdb/gamecontrollerdb.txt /usr/duckstation/bin/resources/gamecontrollerdb.txt > /dev/null 2>&1
+        ln -sf /usr/share/sdlcontrollerdb/gamecontrollerdb.txt /usr/share/gamecontrollerdb.txt > /dev/null 2>&1
+        ln -sf /usr/share/sdlcontrollerdb/gamecontrollerdb.txt /usr/share/moonlight/gamecontrollerdb.txt > /dev/null 2>&1
+        ln -sf /usr/share/sdlcontrollerdb/gamecontrollerdb.txt /usr/share/scummvm/gamecontrollerdb.txt > /dev/null 2>&1
+        ln -sf /usr/share/sdlcontrollerdb/gamecontrollerdb.txt /usr/share/sdl-jstest/gamecontrollerdb.txt > /dev/null 2>&1
+        ln -sf /usr/share/sdlcontrollerdb/gamecontrollerdb.txt /usr/share/ppsspp/PPSSPP/gamecontrollerdb.txt > /dev/null 2>&1
+        ln -sf /usr/share/sdlcontrollerdb/gamecontrollerdb.txt /usr/share/ppsspp/PPSSPP/assets/gamecontrollerdb.txt > /dev/null 2>&1
+        ln -sf /usr/share/sdlcontrollerdb/gamecontrollerdb.txt /usr/share/cdogs/data/gamecontrollerdb.txt > /dev/null 2>&1
+	;;
+esac
+
+exit 0

@@ -1703,6 +1703,7 @@ config BR2_PACKAGE_BATOCERA_SDL2
     select BR2_PACKAGE_FLAC                                 # flac
     select BR2_PACKAGE_LIBMAD                               # mp3
     select BR2_PACKAGE_LIBVORBIS                            # ogg
+    select BR2_PACKAGE_SDL2_GAMECONTROLLERDB                if  !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_TVTEXTVIEWER                         if  !BR2_PACKAGE_BATOCERA_LIB32
 
 config BR2_PACKAGE_BATOCERA_WAYLAND

@@ -17,8 +17,16 @@ DUCKSTATION_CONF_OPTS  = -DCMAKE_BUILD_TYPE=Release
 DUCKSTATION_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE
 DUCKSTATION_CONF_OPTS += -DENABLE_DISCORD_PRESENCE=OFF
 DUCKSTATION_CONF_OPTS += -DUSE_DRMKMS=ON
-DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=OFF -DBUILD_NOGUI_FRONTEND=ON
 DUCKSTATION_CONF_ENV += LDFLAGS=-lpthread
+
+ifeq ($(BR2_PACKAGE_QT6),y)
+    DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON -DBUILD_NOGUI_FRONTEND=OFF
+    DUCKSTATION_DEPENDENCIES += qt6base qt6svg qt6tools qt6multimedia
+	X86_INSTALL=y
+else
+    DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=OFF -DBUILD_NOGUI_FRONTEND=ON
+	X86_INSTALL=n
+endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588),y)
   DUCKSTATION_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lmali_hook -Wl,--whole-archive -lmali_hook_injector -Wl,--no-whole-archive -lmali"
@@ -57,6 +65,9 @@ endif
 
 define DUCKSTATION_INSTALL_TARGET_CMDS
     mkdir -p $(TARGET_DIR)/usr/duckstation/bin
+	@if [ "$(X86_INSTALL)" = "n" ]; then  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-nogui $(TARGET_DIR)/usr/duckstation/bin/ ; fi
+	@if [ "$(X86_INSTALL)" = "y" ]; then  cp -pr  $(@D)/buildroot-build/bin/translations            $(TARGET_DIR)/usr/duckstation/bin/ ; fi
+	@if [ "$(X86_INSTALL)" = "y" ]; then  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-qt    $(TARGET_DIR)/usr/duckstation/bin/duckstation-nogui ; fi
     $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation* $(TARGET_DIR)/usr/duckstation/bin
     cp -pr  $(@D)/buildroot-build/bin/resources          $(TARGET_DIR)/usr/duckstation/bin/
 
