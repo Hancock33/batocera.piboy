@@ -10858,22 +10858,22 @@ msgstr ""
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "This can be convenient if you're using laserdiscs."
-msgstr ""
+msgstr "Puo' essere conveniente se utilizzi laserdiscs."
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "LOADING SPEED"
-msgstr ""
+msgstr "VELOCITA' CARICAMENTO"
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Realistic Loading"
-msgstr ""
+msgstr "Caricamento Realistico"
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Full Speed (Default)"
-msgstr ""
+msgstr "Massima Velocita' (Default)"
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
