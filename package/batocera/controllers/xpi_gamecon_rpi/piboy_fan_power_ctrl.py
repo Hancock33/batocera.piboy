@@ -27,9 +27,9 @@ piboyXRSEnabled = subprocess.run(['batocera-settings-get', '-f', '/boot/batocera
                                  stdout=subprocess.PIPE, text=True).stdout.splitlines()
 
 fanFilename = ""
-if (piboyEnabled and piboyEnabled[0] == "1"): 
+if (piboyEnabled and piboyEnabled[0] == "1"):
     fanFilename = "fan.piboy.ini"
-elif (piboyXRSEnabled and piboyXRSEnabled[0] == "1"): 
+elif (piboyXRSEnabled and piboyXRSEnabled[0] == "1"):
     fanFilename = "fan.piboyxrs.ini"
 
 #Read Fan.ini file

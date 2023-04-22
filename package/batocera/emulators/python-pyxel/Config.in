@@ -11,5 +11,5 @@ config BR2_PACKAGE_PYTHON_PYXEL
 	  Pyxel is a retro game engine for Python.
 	  Inspired by other fantasy consoles like PICO-8 and TIC-80,
 	  it displays 16 colors, 4 sounds and is coded in Python
-	  
+
 	  https://github.com/kitao/pyxel

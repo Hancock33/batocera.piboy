@@ -629,22 +629,22 @@ msgctxt "game_options"
 msgid "Change the game's language."
 msgstr ""
 
-#. TRANSLATION: libretro/cap32, libretro/dolphin, hatari, redream, sonic2013, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, hatari, redream, ...
 msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr ""
 
-#. TRANSLATION: libretro/cap32, redream, xenia, xenia-canary
+#. TRANSLATION: libretro/cap32, libretro/melonds, redream, xenia, xenia-canary
 msgctxt "game_options"
 msgid "English (Default)"
 msgstr ""
 
-#. TRANSLATION: libretro/cap32, libretro/dolphin, cemu, flycast/vitaquake3, redream, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, ...
 msgctxt "game_options"
 msgid "Spanish"
 msgstr ""
 
-#. TRANSLATION: libretro/cap32, libretro/dolphin, cemu, flycast/vitaquake3, redream, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, ...
 msgctxt "game_options"
 msgid "French"
 msgstr ""
@@ -1081,12 +1081,69 @@ msgstr ""
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
+msgid "NDS VERSION"
+msgstr ""
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "DS (Default)"
+msgstr ""
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "DSi"
+msgstr ""
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
 msgid "Disable to access the system's settings, like time and language."
 msgstr ""
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "SKIP DS SYSTEM MENU"
+msgstr ""
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "Use language and username from the NDS Firmware"
+msgstr ""
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "USE FIRMWARE SETTINGS"
+msgstr ""
+
+#. TRANSLATION: libretro/melonds, amiberry, amiberry
+msgctxt "game_options"
+msgid "ON"
+msgstr ""
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "OFF (Default)"
+msgstr ""
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid ""
+"Select language will be used if 'Use Firmware Settings' is disabled or if "
+"firmware file was not found."
+msgstr ""
+
+#. TRANSLATION: libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, redream, ...
+msgctxt "game_options"
+msgid "German"
+msgstr ""
+
+#. TRANSLATION: libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, redream, ...
+msgctxt "game_options"
+msgid "Italian"
+msgstr ""
+
+#. TRANSLATION: libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, redream, ...
+msgctxt "game_options"
+msgid "Japanese"
 msgstr ""
 
 #. TRANSLATION: libretro/melonds
@@ -1154,24 +1211,9 @@ msgctxt "game_options"
 msgid "English"
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, cemu, flycast/vitaquake3, redream, sonic2013, ...
-msgctxt "game_options"
-msgid "German"
-msgstr ""
-
-#. TRANSLATION: libretro/dolphin, cemu, flycast/vitaquake3, redream, sonic2013, ...
-msgctxt "game_options"
-msgid "Italian"
-msgstr ""
-
 #. TRANSLATION: libretro/dolphin, cemu, yuzu, ryujinx, xenia, ...
 msgctxt "game_options"
 msgid "Dutch"
-msgstr ""
-
-#. TRANSLATION: libretro/dolphin, cemu, flycast/vitaquake3, redream, sonic2013, ...
-msgctxt "game_options"
-msgid "Japanese"
 msgstr ""
 
 #. TRANSLATION: libretro/dolphin, yuzu, ryujinx
@@ -6877,11 +6919,6 @@ msgctxt "game_options"
 msgid "REMOVE INTERLACE ARTIFACTS"
 msgstr ""
 
-#. TRANSLATION: amiberry, amiberry
-msgctxt "game_options"
-msgid "ON"
-msgstr ""
-
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Centers the image screen. Disabled when using Auto Crop. AUTO = Full."
@@ -10872,22 +10909,22 @@ msgstr ""
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
-msgid "Choose machine type only when playing ColecoVision roms."
+msgid "This can be convenient if you're using laserdiscs."
 msgstr ""
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
-msgid "COLECOVISION MACHINE"
+msgid "LOADING SPEED"
 msgstr ""
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
-msgid "ColecoVision"
+msgid "Realistic Loading"
 msgstr ""
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
-msgid "ColecoVision with SGM"
+msgid "Full Speed (Default)"
 msgstr ""
 
 #. TRANSLATION: awgl

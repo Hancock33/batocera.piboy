@@ -4,7 +4,7 @@ config BR2_PACKAGE_LIBRETRO_CITRA
     depends on BR2_INSTALL_LIBSTDCPP
     select BR2_PACKAGE_FMT
     select BR2_PACKAGE_BOOST
-    select BR2_PACKAGE_BOOST_SERIALIZATION	
+    select BR2_PACKAGE_BOOST_SERIALIZATION
       help
         A libretro Citra core for Nintendo 3DS.
 

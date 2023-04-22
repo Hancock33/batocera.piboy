@@ -48,7 +48,7 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/firmwares/firmware-rk3588/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/firmwares/rpi-eeprom/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/firmwares/rpi-userland-batocera/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/firmwares/sound-open-firmware/Config.in"	
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/firmwares/sound-open-firmware/Config.in"
   endmenu
 
   menu "GPU"

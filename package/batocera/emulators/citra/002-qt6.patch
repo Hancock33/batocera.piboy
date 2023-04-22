@@ -1,0 +1,1298 @@
+diff --git a/.ci/linux-mingw/docker.sh b/.ci/linux-mingw/docker.sh
+index 95f0b2720..c26bfa30c 100755
+--- a/.ci/linux-mingw/docker.sh
++++ b/.ci/linux-mingw/docker.sh
+@@ -17,15 +17,14 @@ echo 'Prepare binaries...'
+ cd ..
+ mkdir package
+ 
+-QT_PLATFORM_DLL_PATH='/usr/x86_64-w64-mingw32/lib/qt/plugins/platforms/'
++QT_PLATFORM_DLL_PATH='/usr/x86_64-w64-mingw32/lib/qt6/plugins/platforms/'
+ find build/ -name "citra*.exe" -exec cp {} 'package' \;
+ 
+ # copy Qt plugins
+ mkdir package/platforms
+ cp "${QT_PLATFORM_DLL_PATH}/qwindows.dll" package/platforms/
+-cp -rv "${QT_PLATFORM_DLL_PATH}/../mediaservice/" package/
++cp -rv "${QT_PLATFORM_DLL_PATH}/../multimedia/" package/
+ cp -rv "${QT_PLATFORM_DLL_PATH}/../imageformats/" package/
+ cp -rv "${QT_PLATFORM_DLL_PATH}/../styles/" package/
+-rm -f package/mediaservice/*d.dll
+ 
+ python3 .ci/linux-mingw/scan_dll.py package/*.exe package/imageformats/*.dll "package/"
+diff --git a/.ci/macos/deps.sh b/.ci/macos/deps.sh
+index cba18ffa7..ec9bb4311 100755
+--- a/.ci/macos/deps.sh
++++ b/.ci/macos/deps.sh
+@@ -1,20 +1,3 @@
+ #!/bin/sh -ex
+ 
+ brew install ccache ninja || true
+-pip3 install macpack
+-
+-export FFMPEG_VER=5.1
+-export QT_VER=5.15.8
+-
+-mkdir tmp
+-cd tmp/
+-
+-# install FFMPEG
+-wget https://github.com/SachinVin/ext-macos-bin/raw/main/ffmpeg/ffmpeg-${FFMPEG_VER}.7z
+-7z x ffmpeg-${FFMPEG_VER}.7z
+-cp -rv $(pwd)/ffmpeg-${FFMPEG_VER}/* /
+-
+-# install Qt
+-wget https://github.com/SachinVin/ext-macos-bin/raw/main/qt/qt-${QT_VER}.7z
+-7z x qt-${QT_VER}.7z
+-sudo cp -rv $(pwd)/qt-${QT_VER}/* /usr/local/
+diff --git a/.ci/macos/upload.sh b/.ci/macos/upload.sh
+index 3170673e9..c90c3038f 100755
+--- a/.ci/macos/upload.sh
++++ b/.ci/macos/upload.sh
+@@ -9,25 +9,8 @@ COMPRESSION_FLAGS="-czvf"
+ mkdir "$REV_NAME"
+ 
+ cp build/bin/Release/citra "$REV_NAME"
++cp -r build/bin/Release/libs "$REV_NAME"
+ cp -r build/bin/Release/citra-qt.app "$REV_NAME"
+ cp build/bin/Release/citra-room "$REV_NAME"
+ 
+-# move libs into folder for deployment
+-macpack "${REV_NAME}/citra-qt.app/Contents/MacOS/citra-qt" -d "../Frameworks"
+-# move qt frameworks into app bundle for deployment
+-macdeployqt "${REV_NAME}/citra-qt.app" -executable="${REV_NAME}/citra-qt.app/Contents/MacOS/citra-qt"
+-
+-# move libs into folder for deployment
+-macpack "${REV_NAME}/citra" -d "libs"
+-
+-# workaround for libc++
+-install_name_tool -change @loader_path/../Frameworks/libc++.1.0.dylib /usr/lib/libc++.1.dylib "${REV_NAME}/citra-qt.app/Contents/MacOS/citra-qt"
+-install_name_tool -change @loader_path/libs/libc++.1.0.dylib /usr/lib/libc++.1.dylib "${REV_NAME}/citra"
+-
+-# Make the launching script executable
+-chmod +x ${REV_NAME}/citra-qt.app/Contents/MacOS/citra-qt
+-
+-# Verify loader instructions
+-find "$REV_NAME" -type f -exec otool -L {} \;
+-
+ . .ci/common/post-upload.sh
+diff --git a/.ci/windows-msvc/build.sh b/.ci/windows-msvc/build.sh
+index 7daddc269..fdd7574e3 100644
+--- a/.ci/windows-msvc/build.sh
++++ b/.ci/windows-msvc/build.sh
+@@ -6,7 +6,6 @@ cmake .. \
+     -G Ninja \
+     -DCMAKE_TOOLCHAIN_FILE="$(pwd)/../CMakeModules/MSVCCache.cmake" \
+     -DCITRA_USE_CCACHE=ON \
+-    -DCITRA_USE_BUNDLED_QT=1 \
+     -DENABLE_QT_TRANSLATION=OFF \
+     -DCITRA_ENABLE_COMPATIBILITY_REPORTING=${ENABLE_COMPATIBILITY_REPORTING:-"OFF"} \
+     -DENABLE_COMPATIBILITY_LIST_DOWNLOAD=ON \
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 8dc1c757d..05df2b481 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -25,7 +25,7 @@ option(USE_SYSTEM_SDL2 "Use the system SDL2 lib (instead of the bundled one)" OF
+ # Set bundled qt as dependent options.
+ option(ENABLE_QT "Enable the Qt frontend" ON)
+ option(ENABLE_QT_TRANSLATION "Enable translations for the Qt frontend" OFF)
+-CMAKE_DEPENDENT_OPTION(CITRA_USE_BUNDLED_QT "Download bundled Qt binaries" ON "ENABLE_QT;MSVC" OFF)
++CMAKE_DEPENDENT_OPTION(CITRA_USE_BUNDLED_QT "Download bundled Qt binaries" ON "ENABLE_QT;MSVC OR APPLE" OFF)
+ 
+ option(ENABLE_WEB_SERVICE "Enable web services (telemetry, etc.)" ON)
+ if (MSVC)
+@@ -41,7 +41,7 @@ if (ENABLE_FFMPEG_AUDIO_DECODER OR ENABLE_FFMPEG_VIDEO_DUMPER)
+     set(ENABLE_FFMPEG ON)
+ endif()
+ 
+-CMAKE_DEPENDENT_OPTION(CITRA_USE_BUNDLED_FFMPEG "Download bundled FFmpeg binaries" ON "ENABLE_FFMPEG;MSVC" OFF)
++CMAKE_DEPENDENT_OPTION(CITRA_USE_BUNDLED_FFMPEG "Download bundled FFmpeg binaries" ON "ENABLE_FFMPEG;MSVC OR APPLE" OFF)
+ 
+ option(USE_DISCORD_PRESENCE "Enables Discord Rich Presence" OFF)
+ 
+@@ -55,6 +55,8 @@ option(USE_SYSTEM_BOOST "Use the system Boost libs (instead of the bundled ones)
+ 
+ CMAKE_DEPENDENT_OPTION(ENABLE_FDK "Use FDK AAC decoder" OFF "NOT ENABLE_FFMPEG_AUDIO_DECODER;NOT ENABLE_MF" OFF)
+ 
++CMAKE_DEPENDENT_OPTION(CITRA_BUNDLE_LIBRARIES "Bundle dependent libraries with the output executables" ON "APPLE" OFF)
++
+ if (CITRA_USE_PRECOMPILED_HEADERS)
+     if (MSVC AND CCACHE)
+         # buildcache does not properly cache PCH files, leading to compilation errors.
+@@ -195,31 +197,25 @@ find_package(Threads REQUIRED)
+ 
+ if (ENABLE_QT)
+     if (CITRA_USE_BUNDLED_QT)
+-        if (MSVC_VERSION GREATER_EQUAL 1920 AND "x86_64" IN_LIST ARCHITECTURE)
+-            set(QT_VER qt-5.15.7-msvc2019_64)
+-        else()
+-            message(FATAL_ERROR "No bundled Qt binaries for your toolchain. Disable CITRA_USE_BUNDLED_QT and provide your own.")
+-        endif()
+-
+-        if (DEFINED QT_VER)
+-            download_bundled_external("qt/" ${QT_VER} QT_PREFIX)
+-        endif()
+-
+-        set(QT_PREFIX_HINT HINTS "${QT_PREFIX}")
+-    else()
+-        # Passing an empty HINTS seems to cause default system paths to get ignored in CMake 2.8 so
+-        # make sure to not pass anything if we don't have one.
+-        set(QT_PREFIX_HINT)
++        download_qt_external(6.5.0 QT_PREFIX)
++        list(APPEND CMAKE_PREFIX_PATH ${QT_PREFIX})
+     endif()
+ 
+-    find_package(Qt5 REQUIRED COMPONENTS Widgets Multimedia Concurrent ${QT_PREFIX_HINT})
++    find_package(Qt6 REQUIRED COMPONENTS Widgets Multimedia Concurrent)
+ 
+     if (UNIX AND NOT APPLE)
+-        find_package(Qt5 REQUIRED COMPONENTS DBus ${QT_PREFIX_HINT})
++        find_package(Qt6 REQUIRED COMPONENTS DBus)
+     endif()
+ 
+     if (ENABLE_QT_TRANSLATION)
+-        find_package(Qt5 REQUIRED COMPONENTS LinguistTools ${QT_PREFIX_HINT})
++        find_package(Qt6 REQUIRED COMPONENTS LinguistTools)
++    endif()
++
++    if (NOT CITRA_USE_BUNDLED_QT)
++        # Make sure the Qt bin directory is in the prefix path for later use, such as in post-build scripts.
++        get_target_property(qmake_executable Qt6::qmake IMPORTED_LOCATION)
++        get_filename_component(qt_bin_dir "${qmake_executable}" DIRECTORY)
++        list(APPEND CMAKE_PREFIX_PATH ${qt_bin_dir})
+     endif()
+ endif()
+ 
+@@ -238,6 +234,8 @@ if (ENABLE_FFMPEG)
+     if (CITRA_USE_BUNDLED_FFMPEG)
+         if ((MSVC_VERSION GREATER_EQUAL 1920 AND MSVC_VERSION LESS 1940) AND "x86_64" IN_LIST ARCHITECTURE)
+             set(FFmpeg_VER "ffmpeg-4.1-win64")
++        elseif (APPLE)
++            set(FFmpeg_VER "ffmpeg-6.0")
+         else()
+             message(FATAL_ERROR "No bundled FFmpeg binaries for your toolchain. Disable CITRA_USE_BUNDLED_FFMPEG and provide your own.")
+         endif()
+@@ -277,8 +275,6 @@ if (APPLE)
+     find_library(AVFOUNDATION_LIBRARY AVFoundation)
+     set(PLATFORM_LIBRARIES ${COCOA_LIBRARY} ${AVFOUNDATION_LIBRARY} ${IOKIT_LIBRARY} ${COREVIDEO_LIBRARY})
+ elseif (WIN32)
+-    # WSAPoll and SHGetKnownFolderPath (AppData/Roaming) didn't exist before WinNT 6.x (Vista)
+-    add_definitions(-D_WIN32_WINNT=0x0601 -DWINVER=0x0601)
+     set(PLATFORM_LIBRARIES winmm ws2_32)
+     if (MINGW)
+         # PSAPI is the Process Status API
+diff --git a/CMakeModules/BuildInstaller.cmake b/CMakeModules/BuildInstaller.cmake
+index f1d65a0fa..2d8627876 100644
+--- a/CMakeModules/BuildInstaller.cmake
++++ b/CMakeModules/BuildInstaller.cmake
+@@ -1,4 +1,4 @@
+-# To use this as a script, make sure you pass in the variables SRC_DIR BUILD_DIR and TARGET_FILE
++# To use this as a script, make sure you pass in the variables BASE_DIR, SRC_DIR, BUILD_DIR, and TARGET_FILE
+ 
+ if(WIN32)
+     set(PLATFORM "windows")
+@@ -10,29 +10,15 @@ else()
+     message(FATAL_ERROR "Cannot build installer for this unsupported platform")
+ endif()
+ 
+-set(DIST_DIR "${BUILD_DIR}/dist")
+-set(ARCHIVE "${PLATFORM}.7z")
++list(APPEND CMAKE_MODULE_PATH "${BASE_DIR}/CMakeModules")
++include(DownloadExternals)
++download_qt_external(tools_ifw QT_PREFIX)
+ 
+-file(MAKE_DIRECTORY ${BUILD_DIR})
+-file(MAKE_DIRECTORY ${DIST_DIR})
+-file(DOWNLOAD https://github.com/citra-emu/ext-windows-bin/raw/master/qtifw/${ARCHIVE}
+-    "${BUILD_DIR}/${ARCHIVE}" SHOW_PROGRESS)
+-execute_process(COMMAND ${CMAKE_COMMAND} -E tar xf "${BUILD_DIR}/${ARCHIVE}"
+-    WORKING_DIRECTORY "${BUILD_DIR}/")
++file(GLOB_RECURSE INSTALLER_BASE "${QT_PREFIX}/**/installerbase*")
++file(GLOB_RECURSE BINARY_CREATOR "${QT_PREFIX}/**/binarycreator*")
+ 
+-set(TARGET_NAME "citra-setup-${PLATFORM}")
+ set(CONFIG_FILE "${SRC_DIR}/config/config_${PLATFORM}.xml")
+-set(INSTALLER_BASE "${BUILD_DIR}/installerbase_${PLATFORM}")
+-set(BINARY_CREATOR "${BUILD_DIR}/binarycreator_${PLATFORM}")
+ set(PACKAGES_DIR "${BUILD_DIR}/packages")
+ file(MAKE_DIRECTORY ${PACKAGES_DIR})
+ 
+-if (UNIX OR APPLE)
+-    execute_process(COMMAND chmod 744 ${BINARY_CREATOR})
+-endif()
+-
+ execute_process(COMMAND ${BINARY_CREATOR} -t ${INSTALLER_BASE} -n -c ${CONFIG_FILE} -p ${PACKAGES_DIR} ${TARGET_FILE})
+-
+-if (APPLE)
+-    execute_process(COMMAND chmod 744 ${TARGET_FILE}.app/Contents/MacOS/${TARGET_NAME})
+-endif()
+diff --git a/CMakeModules/CopyCitraQt5Deps.cmake b/CMakeModules/CopyCitraQt5Deps.cmake
+deleted file mode 100644
+index c2fdfb13c..000000000
+--- a/CMakeModules/CopyCitraQt5Deps.cmake
++++ /dev/null
+@@ -1,47 +0,0 @@
+-function(copy_citra_Qt5_deps target_dir)
+-    include(WindowsCopyFiles)
+-    set(DLL_DEST "${CMAKE_BINARY_DIR}/bin/$<CONFIG>/")
+-    set(Qt5_DLL_DIR "${Qt5_DIR}/../../../bin")
+-    set(Qt5_PLATFORMS_DIR "${Qt5_DIR}/../../../plugins/platforms/")
+-    set(Qt5_MEDIASERVICE_DIR "${Qt5_DIR}/../../../plugins/mediaservice/")
+-    set(Qt5_STYLES_DIR "${Qt5_DIR}/../../../plugins/styles/")
+-    set(Qt5_IMAGEFORMATS_DIR "${Qt5_DIR}/../../../plugins/imageformats/")
+-    set(PLATFORMS ${DLL_DEST}plugins/platforms/)
+-    set(MEDIASERVICE ${DLL_DEST}plugins/mediaservice/)
+-    set(STYLES ${DLL_DEST}plugins/styles/)
+-    set(IMAGEFORMATS ${DLL_DEST}plugins/imageformats/)
+-    windows_copy_files(${target_dir} ${Qt5_DLL_DIR} ${DLL_DEST}
+-        icudt*.dll
+-        icuin*.dll
+-        icuuc*.dll
+-        Qt5Core$<$<CONFIG:Debug>:d>.*
+-        Qt5Gui$<$<CONFIG:Debug>:d>.*
+-        Qt5Widgets$<$<CONFIG:Debug>:d>.*
+-        Qt5Concurrent$<$<CONFIG:Debug>:d>.*
+-        Qt5Multimedia$<$<CONFIG:Debug>:d>.*
+-        Qt5Network$<$<CONFIG:Debug>:d>.*
+-    )
+-    windows_copy_files(citra-qt ${Qt5_PLATFORMS_DIR} ${PLATFORMS} qwindows$<$<CONFIG:Debug>:d>.*)
+-    windows_copy_files(citra-qt ${Qt5_MEDIASERVICE_DIR} ${MEDIASERVICE}
+-        dsengine$<$<CONFIG:Debug>:d>.*
+-        wmfengine$<$<CONFIG:Debug>:d>.*
+-    )
+-    windows_copy_files(citra-qt ${Qt5_STYLES_DIR} ${STYLES} qwindowsvistastyle$<$<CONFIG:Debug>:d>.*)
+-    windows_copy_files(${target_dir} ${Qt5_IMAGEFORMATS_DIR} ${IMAGEFORMATS}
+-        qgif$<$<CONFIG:Debug>:d>.dll
+-        qicns$<$<CONFIG:Debug>:d>.dll
+-        qico$<$<CONFIG:Debug>:d>.dll
+-        qjpeg$<$<CONFIG:Debug>:d>.dll
+-        qsvg$<$<CONFIG:Debug>:d>.dll
+-        qtga$<$<CONFIG:Debug>:d>.dll
+-        qtiff$<$<CONFIG:Debug>:d>.dll
+-        qwbmp$<$<CONFIG:Debug>:d>.dll
+-        qwebp$<$<CONFIG:Debug>:d>.dll
+-    )
+-
+-    # Create an empty qt.conf file. Qt will detect that this file exists, and use the folder that its in as the root folder.
+-    # This way it'll look for plugins in the root/plugins/ folder
+-    add_custom_command(TARGET citra-qt POST_BUILD
+-        COMMAND ${CMAKE_COMMAND} -E touch ${DLL_DEST}qt.conf
+-    )
+-endfunction(copy_citra_Qt5_deps)
+diff --git a/CMakeModules/DownloadExternals.cmake b/CMakeModules/DownloadExternals.cmake
+index 138a15d5a..bfdcf71aa 100644
+--- a/CMakeModules/DownloadExternals.cmake
++++ b/CMakeModules/DownloadExternals.cmake
+@@ -4,15 +4,95 @@
+ #   remote_path: path to the file to download, relative to the remote repository root
+ #   prefix_var: name of a variable which will be set with the path to the extracted contents
+ function(download_bundled_external remote_path lib_name prefix_var)
+-set(prefix "${CMAKE_BINARY_DIR}/externals/${lib_name}")
+-if (NOT EXISTS "${prefix}")
+-    message(STATUS "Downloading binaries for ${lib_name}...")
+-    file(DOWNLOAD
+-        https://github.com/citra-emu/ext-windows-bin/raw/master/${remote_path}${lib_name}.7z
+-        "${CMAKE_BINARY_DIR}/externals/${lib_name}.7z" SHOW_PROGRESS)
+-    execute_process(COMMAND ${CMAKE_COMMAND} -E tar xf "${CMAKE_BINARY_DIR}/externals/${lib_name}.7z"
+-        WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/externals")
+-endif()
+-message(STATUS "Using bundled binaries at ${prefix}")
+-set(${prefix_var} "${prefix}" PARENT_SCOPE)
+-endfunction()
+\ No newline at end of file
++    get_external_prefix(${lib_name} prefix)
++    if (NOT EXISTS "${prefix}")
++        message(STATUS "Downloading binaries for ${lib_name}...")
++
++        if (WIN32)
++            set(repo_base "ext-windows-bin/raw/master")
++        elseif (APPLE)
++            set(repo_base "ext-macos-bin/raw/main")
++        else()
++            message(FATAL_ERROR "Bundled libraries are unsupported for this OS.")
++        endif()
++
++        file(DOWNLOAD
++            https://github.com/citra-emu/${repo_base}/${remote_path}${lib_name}.7z
++            "${CMAKE_BINARY_DIR}/externals/${lib_name}.7z" SHOW_PROGRESS)
++        execute_process(COMMAND ${CMAKE_COMMAND} -E tar xf "${CMAKE_BINARY_DIR}/externals/${lib_name}.7z"
++            WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/externals")
++    endif()
++
++    # For packages that include the /usr/local prefix, include it in the prefix path.
++    if (EXISTS "${prefix}/usr/local")
++        set(prefix "${prefix}/usr/local")
++    endif()
++
++    message(STATUS "Using bundled binaries at ${prefix}")
++    set(${prefix_var} "${prefix}" PARENT_SCOPE)
++endfunction()
++
++# This function downloads Qt using aqt.
++# Params:
++#   target: Qt dependency to install. Specify a version number to download Qt, or "tools_(name)" for a specific build tool.
++#   prefix_var: Name of a variable which will be set with the path to the extracted contents.
++function(download_qt_external target prefix_var)
++    # Determine installation parameters for OS, architecture, and compiler
++    if (WIN32)
++        set(host "windows")
++        if (MINGW)
++            set(arch_path "mingw81")
++        elseif ((MSVC_VERSION GREATER_EQUAL 1920 AND MSVC_VERSION LESS 1940) AND "x86_64" IN_LIST ARCHITECTURE)
++            if ("arm64" IN_LIST ARCHITECTURE)
++                set(arch_path "msvc2019_arm64")
++            elseif ("x86_64" IN_LIST ARCHITECTURE)
++                set(arch_path "msvc2019_64")
++            else()
++                message(FATAL_ERROR "Unsupported bundled Qt architecture. Disable CITRA_USE_BUNDLED_QT and provide your own.")
++            endif()
++        else()
++            message(FATAL_ERROR "Unsupported bundled Qt toolchain. Disable CITRA_USE_BUNDLED_QT and provide your own.")
++        endif()
++        set(arch "win64_${arch_path}")
++    elseif (APPLE)
++        set(host "mac")
++        set(arch "clang_64")
++        set(arch_path "macos")
++    else()
++        set(host "linux")
++        set(arch "gcc_64")
++        set(arch_path "linux")
++    endif()
++
++    get_external_prefix(qt base_path)
++    if (target MATCHES "tools_.*")
++        set(prefix "${base_path}")
++        set(install_args install-tool --outputdir ${base_path} ${host} desktop ${target})
++    else()
++        set(prefix "${base_path}/${target}/${arch_path}")
++        set(install_args install-qt --outputdir ${base_path} ${host} desktop ${target} ${arch} -m qtmultimedia)
++    endif()
++
++    if (NOT EXISTS "${prefix}")
++        message(STATUS "Downloading binaries for Qt...")
++        if (WIN32)
++            set(aqt_path "${CMAKE_BINARY_DIR}/externals/aqt.exe")
++            file(DOWNLOAD
++                https://github.com/miurahr/aqtinstall/releases/download/v3.1.4/aqt.exe
++                ${aqt_path} SHOW_PROGRESS)
++            execute_process(COMMAND ${aqt_path} ${install_args})
++        else()
++            # aqt does not offer binary releases for other platforms, so download and run from pip.
++            set(aqt_install_path "${CMAKE_BINARY_DIR}/externals/aqt")
++            execute_process(COMMAND python3 -m pip install --target=${aqt_install_path} aqtinstall)
++            execute_process(COMMAND ${CMAKE_COMMAND} -E env PYTHONPATH=${aqt_install_path} python3 -m aqt ${install_args})
++        endif()
++    endif()
++
++    message(STATUS "Using downloaded Qt binaries at ${prefix}")
++    set(${prefix_var} "${prefix}" PARENT_SCOPE)
++endfunction()
++
++function(get_external_prefix lib_name prefix_var)
++    set(${prefix_var} "${CMAKE_BINARY_DIR}/externals/${lib_name}" PARENT_SCOPE)
++endfunction()
+diff --git a/dist/installer/CMakeLists.txt b/dist/installer/CMakeLists.txt
+index 4fbebaf13..05f39edb0 100644
+--- a/dist/installer/CMakeLists.txt
++++ b/dist/installer/CMakeLists.txt
+@@ -5,18 +5,24 @@ elseif(APPLE)
+     set(PLATFORM "mac")
+ elseif(UNIX)
+     set(PLATFORM "linux")
++else()
++    message(FATAL_ERROR "Cannot build installer for this unsupported platform")
+ endif()
+ 
+ set(BUILD_DIR "${CMAKE_BINARY_DIR}/installer")
+ set(DIST_DIR "${BUILD_DIR}/dist")
+ set(TARGET_FILE "${DIST_DIR}/citra-setup-${PLATFORM}")
+-file(MAKE_DIRECTORY ${BUILD_DIR})
+ 
+ # Adds a custom target that will run the BuildInstaller.cmake file
+ # CMake can't just run a cmake function as a custom command, so this is a way around it.
+ # Calls the cmake command and runs a cmake file in "scripting" mode passing in variables with -D
+ add_custom_command(OUTPUT "${TARGET_FILE}"
+-    COMMAND ${CMAKE_COMMAND} -DSRC_DIR=${CMAKE_CURRENT_SOURCE_DIR} -D BUILD_DIR=${BUILD_DIR} -D TARGET_FILE=${TARGET_FILE} -P ${CMAKE_SOURCE_DIR}/CMakeModules/BuildInstaller.cmake
++    COMMAND ${CMAKE_COMMAND}
++        -DBASE_DIR=${CMAKE_SOURCE_DIR}
++        -DSRC_DIR=${CMAKE_CURRENT_SOURCE_DIR}
++        -DBUILD_DIR=${BUILD_DIR}
++        -DTARGET_FILE=${TARGET_FILE}
++        -P ${CMAKE_SOURCE_DIR}/CMakeModules/BuildInstaller.cmake
+     WORKING_DIRECTORY ${BUILD_DIR}
+ )
+ 
+diff --git a/externals/cmake-modules/FindFFmpeg.cmake b/externals/cmake-modules/FindFFmpeg.cmake
+index cac21c614..5a1a6c4b8 100644
+--- a/externals/cmake-modules/FindFFmpeg.cmake
++++ b/externals/cmake-modules/FindFFmpeg.cmake
+@@ -152,6 +152,11 @@ foreach(c ${_FFmpeg_ALL_COMPONENTS})
+       IMPORTED_LOCATION ${FFmpeg_LIBRARY_${c}}
+       INTERFACE_INCLUDE_DIRECTORIES ${FFmpeg_INCLUDE_${c}}
+     )
++    if(APPLE)
++      set_target_properties(FFmpeg::${c} PROPERTIES
++        MACOSX_RPATH 1
++      )
++    endif()
+     if(_FFmpeg_DEPS_${c})
+       set(deps)
+       foreach(dep ${_FFmpeg_DEPS_${c}})
+diff --git a/src/citra/CMakeLists.txt b/src/citra/CMakeLists.txt
+index 03006f984..4273c82ab 100644
+--- a/src/citra/CMakeLists.txt
++++ b/src/citra/CMakeLists.txt
+@@ -43,3 +43,14 @@ endif()
+ if (CITRA_USE_PRECOMPILED_HEADERS)
+     target_precompile_headers(citra PRIVATE precompiled_headers.h)
+ endif()
++
++if (CITRA_BUNDLE_LIBRARIES)
++    add_custom_command(TARGET citra
++        POST_BUILD
++        COMMAND ${CMAKE_COMMAND}
++        -DCMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}
++        -DTYPE=standalone
++        -DEXECUTABLE_PATH=$<TARGET_FILE:citra>
++        -P ${CMAKE_SOURCE_DIR}/CMakeModules/BundleLibraries.cmake
++        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
++endif()
+diff --git a/src/citra_qt/CMakeLists.txt b/src/citra_qt/CMakeLists.txt
+index ed4af583a..62d5a30a8 100644
+--- a/src/citra_qt/CMakeLists.txt
++++ b/src/citra_qt/CMakeLists.txt
+@@ -209,7 +209,7 @@ if (ENABLE_QT_TRANSLATION)
+     # Update source TS file if enabled
+     if (GENERATE_QT_TRANSLATION)
+         get_target_property(SRCS citra-qt SOURCES)
+-        qt5_create_translation(QM_FILES ${SRCS} ${UIS} ${CITRA_QT_LANGUAGES}/en.ts)
++        qt6_create_translation(QM_FILES ${SRCS} ${UIS} ${CITRA_QT_LANGUAGES}/en.ts)
+         add_custom_target(translation ALL DEPENDS ${CITRA_QT_LANGUAGES}/en.ts)
+     endif()
+ 
+@@ -218,7 +218,7 @@ if (ENABLE_QT_TRANSLATION)
+     list(REMOVE_ITEM LANGUAGES_TS ${CITRA_QT_LANGUAGES}/en.ts)
+ 
+     # Compile TS files to QM files
+-    qt5_add_translation(LANGUAGES_QM ${LANGUAGES_TS})
++    qt6_add_translation(LANGUAGES_QM ${LANGUAGES_TS})
+ 
+     # Build a QRC file from the QM file list
+     set(LANGUAGES_QRC ${CMAKE_CURRENT_BINARY_DIR}/languages.qrc)
+@@ -230,7 +230,7 @@ if (ENABLE_QT_TRANSLATION)
+     file(APPEND ${LANGUAGES_QRC} "</qresource></RCC>")
+ 
+     # Add the QRC file to package in all QM files
+-    qt5_add_resources(LANGUAGES ${LANGUAGES_QRC})
++    qt6_add_resources(LANGUAGES ${LANGUAGES_QRC})
+ else()
+     set(LANGUAGES)
+ endif()
+@@ -246,16 +246,18 @@ target_sources(citra-qt
+ if (APPLE)
+     set(MACOSX_ICON "../../dist/citra.icns")
+     set_source_files_properties(${MACOSX_ICON} PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
+-    target_sources(citra-qt PRIVATE ${MACOSX_ICON})
+-    set_target_properties(citra-qt PROPERTIES MACOSX_BUNDLE TRUE)
+-    set_target_properties(citra-qt PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/Info.plist)
+     target_sources(citra-qt PRIVATE
++        ${MACOSX_ICON}
+         macos_authorization.h
+         macos_authorization.mm
+     )
++    set_target_properties(citra-qt PROPERTIES
++        MACOSX_BUNDLE TRUE
++        MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/Info.plist
++    )
+ elseif(WIN32)
+     # compile as a win32 gui application instead of a console application
+-    target_link_libraries(citra-qt PRIVATE Qt5::WinMain)
++    target_link_libraries(citra-qt PRIVATE Qt6::EntryPointImplementation)
+     if(MSVC)
+         set_target_properties(citra-qt PROPERTIES LINK_FLAGS_RELEASE "/SUBSYSTEM:WINDOWS")
+     elseif(MINGW)
+@@ -263,18 +265,34 @@ elseif(WIN32)
+     endif()
+ endif()
+ 
++if (CITRA_BUNDLE_LIBRARIES)
++    if (APPLE)
++        set(BUNDLE_DIR "$<TARGET_BUNDLE_DIR:citra-qt>")
++    endif()
++
++    add_custom_command(TARGET citra-qt
++        POST_BUILD
++        COMMAND ${CMAKE_COMMAND}
++        -DCMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}
++        -DTYPE=qt
++        -DEXECUTABLE_PATH=$<TARGET_FILE:citra-qt>
++        -DBUNDLE_PATH=${BUNDLE_DIR}
++        -P ${CMAKE_SOURCE_DIR}/CMakeModules/BundleLibraries.cmake
++        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
++endif()
++
+ create_target_directory_groups(citra-qt)
+ 
+ target_link_libraries(citra-qt PRIVATE audio_core common core input_common network video_core)
+-target_link_libraries(citra-qt PRIVATE Boost::boost glad nihstro-headers Qt5::Widgets Qt5::Multimedia Qt5::Concurrent)
++target_link_libraries(citra-qt PRIVATE Boost::boost glad nihstro-headers Qt6::Widgets Qt6::Multimedia Qt6::Concurrent)
+ target_link_libraries(citra-qt PRIVATE ${PLATFORM_LIBRARIES} Threads::Threads)
+ 
+ if (NOT WIN32)
+-    target_include_directories(citra-qt PRIVATE ${Qt5Gui_PRIVATE_INCLUDE_DIRS})
++    target_include_directories(citra-qt PRIVATE ${Qt6Gui_PRIVATE_INCLUDE_DIRS})
+ endif()
+ 
+ if (UNIX AND NOT APPLE)
+-    target_link_libraries(citra-qt PRIVATE Qt5::DBus)
++    target_link_libraries(citra-qt PRIVATE Qt6::DBus)
+ endif()
+ 
+ target_compile_definitions(citra-qt PRIVATE
+@@ -318,9 +336,9 @@ if(UNIX AND NOT APPLE)
+ endif()
+ 
+ if (MSVC)
+-    include(CopyCitraQt5Deps)
++    include(CopyCitraQt6Deps)
+     include(CopyCitraSDLDeps)
+-    copy_citra_Qt5_deps(citra-qt)
++    copy_citra_Qt6_deps(citra-qt)
+     copy_citra_SDL_deps(citra-qt)
+     if (ENABLE_WEB_SERVICE AND OPENSSL_DLL_DIR)
+         include(CopyCitraOpensslDeps)
+diff --git a/src/citra_qt/bootmanager.cpp b/src/citra_qt/bootmanager.cpp
+index b13169bcd..39dd5bd85 100644
+--- a/src/citra_qt/bootmanager.cpp
++++ b/src/citra_qt/bootmanager.cpp
+@@ -532,7 +532,7 @@ void GRenderWindow::mouseReleaseEvent(QMouseEvent* event) {
+ 
+ void GRenderWindow::TouchBeginEvent(const QTouchEvent* event) {
+     // TouchBegin always has exactly one touch point, so take the .first()
+-    const auto [x, y] = ScaleTouch(event->touchPoints().first().pos());
++    const auto [x, y] = ScaleTouch(event->points().first().position());
+     this->TouchPressed(x, y);
+ }
+ 
+@@ -541,10 +541,10 @@ void GRenderWindow::TouchUpdateEvent(const QTouchEvent* event) {
+     int active_points = 0;
+ 
+     // average all active touch points
+-    for (const auto& tp : event->touchPoints()) {
++    for (const auto& tp : event->points()) {
+         if (tp.state() & (Qt::TouchPointPressed | Qt::TouchPointMoved | Qt::TouchPointStationary)) {
+             active_points++;
+-            pos += tp.pos();
++            pos += tp.position();
+         }
+     }
+ 
+diff --git a/src/citra_qt/camera/qt_multimedia_camera.cpp b/src/citra_qt/camera/qt_multimedia_camera.cpp
+index ec3a6f5a4..059911bc8 100644
+--- a/src/citra_qt/camera/qt_multimedia_camera.cpp
++++ b/src/citra_qt/camera/qt_multimedia_camera.cpp
+@@ -3,9 +3,8 @@
+ // Refer to the license.txt file included.
+ 
+ #include <QCamera>
+-#include <QCameraInfo>
+ #include <QImageReader>
+-#include <QMessageBox>
++#include <QMediaDevices>
+ #include <QThread>
+ #include "citra_qt/camera/qt_multimedia_camera.h"
+ #include "citra_qt/main.h"
+@@ -16,46 +15,6 @@
+ 
+ namespace Camera {
+ 
+-QList<QVideoFrame::PixelFormat> QtCameraSurface::supportedPixelFormats(
+-    [[maybe_unused]] QAbstractVideoBuffer::HandleType handleType) const {
+-    return QList<QVideoFrame::PixelFormat>()
+-           << QVideoFrame::Format_RGB32 << QVideoFrame::Format_RGB24
+-           << QVideoFrame::Format_ARGB32_Premultiplied << QVideoFrame::Format_ARGB32
+-           << QVideoFrame::Format_RGB565 << QVideoFrame::Format_RGB555
+-           << QVideoFrame::Format_Jpeg
+-           // the following formats are supported via Qt internal conversions
+-           << QVideoFrame::Format_ARGB8565_Premultiplied << QVideoFrame::Format_BGRA32
+-           << QVideoFrame::Format_BGRA32_Premultiplied << QVideoFrame::Format_BGR32
+-           << QVideoFrame::Format_BGR24 << QVideoFrame::Format_BGR565 << QVideoFrame::Format_BGR555
+-           << QVideoFrame::Format_AYUV444 << QVideoFrame::Format_YUV444
+-           << QVideoFrame::Format_YUV420P << QVideoFrame::Format_YV12 << QVideoFrame::Format_UYVY
+-           << QVideoFrame::Format_YUYV << QVideoFrame::Format_NV12
+-           << QVideoFrame::Format_NV21; // Supporting all the QImage convertible formats, ordered by
+-                                        // QImage decoding performance
+-}
+-
+-bool QtCameraSurface::present(const QVideoFrame& frame) {
+-    if (!frame.isValid()) {
+-        return false;
+-    }
+-#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+-    QMutexLocker locker(&mutex);
+-    // In Qt 5.15, the image is already flipped
+-    current_frame = frame.image();
+-    locker.unlock();
+-#else
+-    QVideoFrame cloneFrame(frame);
+-    cloneFrame.map(QAbstractVideoBuffer::ReadOnly);
+-    const QImage image(cloneFrame.bits(), cloneFrame.width(), cloneFrame.height(),
+-                       QVideoFrame::imageFormatFromPixelFormat(cloneFrame.pixelFormat()));
+-    QMutexLocker locker(&mutex);
+-    current_frame = image.mirrored(true, true);
+-    locker.unlock();
+-    cloneFrame.unmap();
+-#endif
+-    return true;
+-}
+-
+ QtMultimediaCamera::QtMultimediaCamera(const std::string& camera_name,
+                                        const Service::CAM::Flip& flip)
+     : QtCameraInterface(flip), handler(QtMultimediaCameraHandler::GetHandler(camera_name)) {
+@@ -63,7 +22,7 @@ QtMultimediaCamera::QtMultimediaCamera(const std::string& camera_name,
+         handler->CreateCamera(camera_name);
+     } else {
+         QMetaObject::invokeMethod(handler.get(), "CreateCamera", Qt::BlockingQueuedConnection,
+-                                  Q_ARG(const std::string&, camera_name));
++                                  Q_ARG(std::string, camera_name));
+     }
+ }
+ 
+@@ -84,34 +43,8 @@ void QtMultimediaCamera::StopCapture() {
+     handler->StopCamera();
+ }
+ 
+-void QtMultimediaCamera::SetFrameRate(Service::CAM::FrameRate frame_rate) {
+-    const std::array<QCamera::FrameRateRange, 13> FrameRateList = {
+-        /* Rate_15 */ QCamera::FrameRateRange(15, 15),
+-        /* Rate_15_To_5 */ QCamera::FrameRateRange(5, 15),
+-        /* Rate_15_To_2 */ QCamera::FrameRateRange(2, 15),
+-        /* Rate_10 */ QCamera::FrameRateRange(10, 10),
+-        /* Rate_8_5 */ QCamera::FrameRateRange(8.5, 8.5),
+-        /* Rate_5 */ QCamera::FrameRateRange(5, 5),
+-        /* Rate_20 */ QCamera::FrameRateRange(20, 20),
+-        /* Rate_20_To_5 */ QCamera::FrameRateRange(5, 20),
+-        /* Rate_30 */ QCamera::FrameRateRange(30, 30),
+-        /* Rate_30_To_5 */ QCamera::FrameRateRange(5, 30),
+-        /* Rate_15_To_10 */ QCamera::FrameRateRange(10, 15),
+-        /* Rate_20_To_10 */ QCamera::FrameRateRange(10, 20),
+-        /* Rate_30_To_10 */ QCamera::FrameRateRange(10, 30),
+-    };
+-
+-    auto framerate = FrameRateList[static_cast<int>(frame_rate)];
+-
+-    if (handler->camera->supportedViewfinderFrameRateRanges().contains(framerate)) {
+-        handler->settings.setMinimumFrameRate(framerate.minimumFrameRate);
+-        handler->settings.setMaximumFrameRate(framerate.maximumFrameRate);
+-    }
+-}
+-
+ QImage QtMultimediaCamera::QtReceiveFrame() {
+-    QMutexLocker locker(&handler->camera_surface.mutex);
+-    return handler->camera_surface.current_frame;
++    return handler->camera_surface.videoFrame().toImage();
+ }
+ 
+ bool QtMultimediaCamera::IsPreviewAvailable() {
+@@ -171,24 +104,17 @@ void QtMultimediaCameraHandler::ReleaseHandler(
+ }
+ 
+ void QtMultimediaCameraHandler::CreateCamera(const std::string& camera_name) {
+-    QList<QCameraInfo> cameras = QCameraInfo::availableCameras();
+-    for (const QCameraInfo& cameraInfo : cameras) {
+-        if (cameraInfo.deviceName().toStdString() == camera_name)
++    QList<QCameraDevice> cameras = QMediaDevices::videoInputs();
++    for (const QCameraDevice& cameraInfo : cameras) {
++        if (cameraInfo.description().toStdString() == camera_name) {
+             camera = std::make_unique<QCamera>(cameraInfo);
++        }
+     }
+     if (!camera) { // no cameras found, using default camera
+         camera = std::make_unique<QCamera>();
+     }
+-    settings.setMinimumFrameRate(30);
+-    settings.setMaximumFrameRate(30);
+-    camera->setViewfinder(&camera_surface);
+-    camera->load();
+-    if (camera->supportedViewfinderPixelFormats().isEmpty()) {
+-        // The gstreamer plugin (used on linux systems) returns an empty list on querying supported
+-        // viewfinder pixel formats, and will not work without expliciting setting it to some value,
+-        // so we are defaulting to RGB565 here which should be fairly widely supported.
+-        settings.setPixelFormat(QVideoFrame::PixelFormat::Format_RGB565);
+-    }
++    capture_session.setVideoSink(&camera_surface);
++    capture_session.setCamera(camera.get());
+ }
+ 
+ void QtMultimediaCameraHandler::StopCamera() {
+@@ -203,7 +129,6 @@ void QtMultimediaCameraHandler::StartCamera() {
+         return;
+     }
+ #endif
+-    camera->setViewfinderSettings(settings);
+     camera->start();
+     started = true;
+     paused = false;
+diff --git a/src/citra_qt/camera/qt_multimedia_camera.h b/src/citra_qt/camera/qt_multimedia_camera.h
+index 099000927..65f121e16 100644
+--- a/src/citra_qt/camera/qt_multimedia_camera.h
++++ b/src/citra_qt/camera/qt_multimedia_camera.h
+@@ -8,11 +8,11 @@
+ #include <string>
+ #include <unordered_map>
+ #include <vector>
+-#include <QAbstractVideoSurface>
+ #include <QCamera>
+-#include <QCameraViewfinderSettings>
+ #include <QImage>
++#include <QMediaCaptureSession>
+ #include <QMutex>
++#include <QVideoSink>
+ #include "citra_qt/camera/camera_util.h"
+ #include "citra_qt/camera/qt_camera_base.h"
+ #include "core/frontend/camera/interface.h"
+@@ -21,19 +21,6 @@ class GMainWindow;
+ 
+ namespace Camera {
+ 
+-class QtCameraSurface final : public QAbstractVideoSurface {
+-public:
+-    QList<QVideoFrame::PixelFormat> supportedPixelFormats(
+-        QAbstractVideoBuffer::HandleType) const override;
+-    bool present(const QVideoFrame&) override;
+-
+-private:
+-    QMutex mutex;
+-    QImage current_frame;
+-
+-    friend class QtMultimediaCamera; // For access to current_frame
+-};
+-
+ class QtMultimediaCameraHandler;
+ 
+ /// This class is only an interface. It just calls QtMultimediaCameraHandler.
+@@ -43,7 +30,7 @@ public:
+     ~QtMultimediaCamera();
+     void StartCapture() override;
+     void StopCapture() override;
+-    void SetFrameRate(Service::CAM::FrameRate frame_rate) override;
++    void SetFrameRate(Service::CAM::FrameRate frame_rate) override {}
+     QImage QtReceiveFrame() override;
+     bool IsPreviewAvailable() override;
+ 
+@@ -87,8 +74,8 @@ public:
+ 
+ private:
+     std::unique_ptr<QCamera> camera;
+-    QtCameraSurface camera_surface{};
+-    QCameraViewfinderSettings settings;
++    QVideoSink camera_surface{};
++    QMediaCaptureSession capture_session{};
+     bool started = false;
+     bool paused = false; // was previously started but was paused, to be resumed
+ 
+diff --git a/src/citra_qt/configuration/configure_camera.cpp b/src/citra_qt/configuration/configure_camera.cpp
+index 79f21bb74..deb979d2e 100644
+--- a/src/citra_qt/configuration/configure_camera.cpp
++++ b/src/citra_qt/configuration/configure_camera.cpp
+@@ -2,16 +2,16 @@
+ // Licensed under GPLv2 or any later version
+ // Refer to the license.txt file included.
+ 
+-#include <QCameraInfo>
++#include <QCameraDevice>
+ #include <QDirIterator>
+ #include <QFileDialog>
+ #include <QImageReader>
++#include <QMediaDevices>
+ #include <QMessageBox>
+ #include <QWidget>
+ #include "citra_qt/configuration/configure_camera.h"
+ #include "common/settings.h"
+ #include "core/frontend/camera/factory.h"
+-#include "core/frontend/camera/interface.h"
+ #include "core/hle/service/cam/cam.h"
+ #include "ui_configure_camera.h"
+ 
+@@ -32,9 +32,9 @@ ConfigureCamera::ConfigureCamera(QWidget* parent)
+     camera_name = Settings::values.camera_name;
+     camera_config = Settings::values.camera_config;
+     camera_flip = Settings::values.camera_flip;
+-    QList<QCameraInfo> cameras = QCameraInfo::availableCameras();
+-    for (const QCameraInfo& cameraInfo : cameras) {
+-        ui->system_camera->addItem(cameraInfo.deviceName());
++    const QList<QCameraDevice> cameras = QMediaDevices::videoInputs();
++    for (const QCameraDevice& camera : cameras) {
++        ui->system_camera->addItem(camera.description());
+     }
+     UpdateCameraMode();
+     SetConfiguration();
+diff --git a/src/citra_qt/configuration/configure_input.cpp b/src/citra_qt/configuration/configure_input.cpp
+index b13013c1a..77c7f601f 100644
+--- a/src/citra_qt/configuration/configure_input.cpp
++++ b/src/citra_qt/configuration/configure_input.cpp
+@@ -579,7 +579,7 @@ void ConfigureInput::AutoMap() {
+ void ConfigureInput::HandleClick(QPushButton* button,
+                                  std::function<void(const Common::ParamPackage&)> new_input_setter,
+                                  InputCommon::Polling::DeviceType type) {
+-    previous_key_code = QKeySequence(button->text())[0];
++    previous_key_code = QKeySequence(button->text())[0].toCombined();
+     button->setText(tr("[press key]"));
+     button->setFocus();
+ 
+diff --git a/src/citra_qt/configuration/configure_motion_touch.cpp b/src/citra_qt/configuration/configure_motion_touch.cpp
+index ed0c0b058..3bfbba71d 100644
+--- a/src/citra_qt/configuration/configure_motion_touch.cpp
++++ b/src/citra_qt/configuration/configure_motion_touch.cpp
+@@ -234,6 +234,8 @@ void ConfigureMotionTouch::ConnectEvents() {
+             &ConfigureMotionTouch::OnConfigureTouchCalibration);
+     connect(ui->touch_from_button_config_btn, &QPushButton::clicked, this,
+             &ConfigureMotionTouch::OnConfigureTouchFromButton);
++    connect(ui->buttonBox, &QDialogButtonBox::accepted, this,
++            &ConfigureMotionTouch::ApplyConfiguration);
+     connect(ui->buttonBox, &QDialogButtonBox::rejected, this, [this] {
+         if (CanCloseDialog()) {
+             reject();
+diff --git a/src/citra_qt/configuration/configure_motion_touch.ui b/src/citra_qt/configuration/configure_motion_touch.ui
+index 292b5c5bd..7f4a5c36a 100644
+--- a/src/citra_qt/configuration/configure_motion_touch.ui
++++ b/src/citra_qt/configuration/configure_motion_touch.ui
+@@ -324,22 +324,4 @@
+   </layout>
+  </widget>
+  <resources/>
+- <connections>
+-  <connection>
+-   <sender>buttonBox</sender>
+-   <signal>accepted()</signal>
+-   <receiver>ConfigureMotionTouch</receiver>
+-   <slot>ApplyConfiguration()</slot>
+-   <hints>
+-    <hint type="sourcelabel">
+-     <x>220</x>
+-     <y>380</y>
+-    </hint>
+-    <hint type="destinationlabel">
+-     <x>220</x>
+-     <y>200</y>
+-    </hint>
+-   </hints>
+-  </connection>
+- </connections>
+ </ui>
+diff --git a/src/citra_qt/configuration/configure_system.cpp b/src/citra_qt/configuration/configure_system.cpp
+index 0b86906ed..8cfbefedf 100644
+--- a/src/citra_qt/configuration/configure_system.cpp
++++ b/src/citra_qt/configuration/configure_system.cpp
+@@ -283,7 +283,7 @@ void ConfigureSystem::SetConfiguration() {
+ 
+     ui->combo_init_clock->setCurrentIndex(static_cast<u8>(Settings::values.init_clock.GetValue()));
+     QDateTime date_time;
+-    date_time.setTime_t(Settings::values.init_time.GetValue());
++    date_time.setSecsSinceEpoch(Settings::values.init_time.GetValue());
+     ui->edit_init_time->setDateTime(date_time);
+ 
+     long long init_time_offset = Settings::values.init_time_offset.GetValue();
+@@ -406,7 +406,7 @@ void ConfigureSystem::ApplyConfiguration() {
+ 
+         Settings::values.init_clock =
+             static_cast<Settings::InitClock>(ui->combo_init_clock->currentIndex());
+-        Settings::values.init_time = ui->edit_init_time->dateTime().toTime_t();
++        Settings::values.init_time = ui->edit_init_time->dateTime().toSecsSinceEpoch();
+ 
+         s64 time_offset_time = ui->edit_init_time_offset_time->time().msecsSinceStartOfDay() / 1000;
+         s64 time_offset_days = ui->edit_init_time_offset_days->value() * 86400;
+diff --git a/src/citra_qt/configuration/configure_touch_from_button.cpp b/src/citra_qt/configuration/configure_touch_from_button.cpp
+index dfab296ef..e4020a8c9 100644
+--- a/src/citra_qt/configuration/configure_touch_from_button.cpp
++++ b/src/citra_qt/configuration/configure_touch_from_button.cpp
+@@ -509,9 +509,10 @@ void TouchScreenPreview::mouseMoveEvent(QMouseEvent* event) {
+     if (!coord_label) {
+         return;
+     }
+-    const auto pos = MapToDeviceCoords(event->x(), event->y());
++    const auto point = event->position().toPoint();
++    const auto pos = MapToDeviceCoords(point.x(), point.y());
+     if (pos) {
+-        coord_label->setText(QStringLiteral("X: %1, Y: %2").arg(pos->x(), pos->y()));
++        coord_label->setText(QStringLiteral("X: %1, Y: %2").arg(pos->x()).arg(pos->y()));
+     } else {
+         coord_label->clear();
+     }
+@@ -527,7 +528,8 @@ void TouchScreenPreview::mousePressEvent(QMouseEvent* event) {
+     if (event->button() != Qt::MouseButton::LeftButton) {
+         return;
+     }
+-    const auto pos = MapToDeviceCoords(event->x(), event->y());
++    const auto point = event->position().toPoint();
++    const auto pos = MapToDeviceCoords(point.x(), point.y());
+     if (pos) {
+         emit DotAdded(*pos);
+     }
+@@ -543,7 +545,7 @@ bool TouchScreenPreview::eventFilter(QObject* obj, QEvent* event) {
+         emit DotSelected(obj->property(PropId).toInt());
+ 
+         drag_state.dot = qobject_cast<QLabel*>(obj);
+-        drag_state.start_pos = mouse_event->globalPos();
++        drag_state.start_pos = mouse_event->globalPosition().toPoint();
+         return true;
+     }
+     case QEvent::Type::MouseMove: {
+@@ -552,14 +554,13 @@ bool TouchScreenPreview::eventFilter(QObject* obj, QEvent* event) {
+         }
+         const auto mouse_event = static_cast<QMouseEvent*>(event);
+         if (!drag_state.active) {
+-            drag_state.active =
+-                (mouse_event->globalPos() - drag_state.start_pos).manhattanLength() >=
+-                QApplication::startDragDistance();
++            drag_state.active = (mouse_event->globalPosition().toPoint() - drag_state.start_pos)
++                                    .manhattanLength() >= QApplication::startDragDistance();
+             if (!drag_state.active) {
+                 break;
+             }
+         }
+-        auto current_pos = mapFromGlobal(mouse_event->globalPos());
++        auto current_pos = mapFromGlobal(mouse_event->globalPosition().toPoint());
+         current_pos.setX(std::clamp(current_pos.x(), contentsMargins().left(),
+                                     contentsMargins().left() + contentsRect().width() - 1));
+         current_pos.setY(std::clamp(current_pos.y(), contentsMargins().top(),
+diff --git a/src/citra_qt/debugger/graphics/graphics_surface.cpp b/src/citra_qt/debugger/graphics/graphics_surface.cpp
+index b86d4e2d6..9089c5724 100644
+--- a/src/citra_qt/debugger/graphics/graphics_surface.cpp
++++ b/src/citra_qt/debugger/graphics/graphics_surface.cpp
+@@ -40,8 +40,9 @@ void SurfacePicture::mousePressEvent(QMouseEvent* event) {
+     }
+ 
+     if (surface_widget) {
+-        surface_widget->Pick(event->x() * pixmap.width() / width(),
+-                             event->y() * pixmap.height() / height());
++        const auto pos = event->position().toPoint();
++        surface_widget->Pick(pos.x() * pixmap.width() / width(),
++                             pos.y() * pixmap.height() / height());
+     }
+ }
+ 
+diff --git a/src/citra_qt/debugger/profiler.cpp b/src/citra_qt/debugger/profiler.cpp
+index 9f195f1ee..33e331013 100644
+--- a/src/citra_qt/debugger/profiler.cpp
++++ b/src/citra_qt/debugger/profiler.cpp
+@@ -142,24 +142,28 @@ void MicroProfileWidget::hideEvent(QHideEvent* event) {
+ }
+ 
+ void MicroProfileWidget::mouseMoveEvent(QMouseEvent* event) {
+-    MicroProfileMousePosition(event->x() / x_scale, event->y() / y_scale, 0);
++    const auto point = event->position().toPoint();
++    MicroProfileMousePosition(point.x() / x_scale, point.y() / y_scale, 0);
+     event->accept();
+ }
+ 
+ void MicroProfileWidget::mousePressEvent(QMouseEvent* event) {
+-    MicroProfileMousePosition(event->x() / x_scale, event->y() / y_scale, 0);
++    const auto point = event->position().toPoint();
++    MicroProfileMousePosition(point.x() / x_scale, point.y() / y_scale, 0);
+     MicroProfileMouseButton(event->buttons() & Qt::LeftButton, event->buttons() & Qt::RightButton);
+     event->accept();
+ }
+ 
+ void MicroProfileWidget::mouseReleaseEvent(QMouseEvent* event) {
+-    MicroProfileMousePosition(event->x() / x_scale, event->y() / y_scale, 0);
++    const auto point = event->position().toPoint();
++    MicroProfileMousePosition(point.x() / x_scale, point.y() / y_scale, 0);
+     MicroProfileMouseButton(event->buttons() & Qt::LeftButton, event->buttons() & Qt::RightButton);
+     event->accept();
+ }
+ 
+ void MicroProfileWidget::wheelEvent(QWheelEvent* event) {
+-    MicroProfileMousePosition(event->position().x() / x_scale, event->position().y() / y_scale,
++    const auto point = event->position().toPoint();
++    MicroProfileMousePosition(point.x() / x_scale, point.y() / y_scale,
+                               event->angleDelta().y() / 120);
+     event->accept();
+ }
+diff --git a/src/citra_qt/game_list.cpp b/src/citra_qt/game_list.cpp
+index f9dbcdfee..73076300e 100644
+--- a/src/citra_qt/game_list.cpp
++++ b/src/citra_qt/game_list.cpp
+@@ -238,7 +238,8 @@ void GameList::OnTextChanged(const QString& new_text) {
+                     file_path.mid(file_path.lastIndexOf(QLatin1Char{'/'}) + 1) + QLatin1Char{' '} +
+                     file_title;
+                 if (ContainsAllWords(file_name, edit_filter_text) ||
+-                    (file_program_id.count() == 16 && edit_filter_text.contains(file_program_id))) {
++                    (file_program_id.length() == 16 &&
++                     edit_filter_text.contains(file_program_id))) {
+                     tree_view->setRowHidden(j, folder_index, false);
+                     ++result_count;
+                 } else {
+@@ -418,10 +419,10 @@ void GameList::DonePopulating(const QStringList& watch_list) {
+     // Workaround: Add the watch paths in chunks to allow the gui to refresh
+     // This prevents the UI from stalling when a large number of watch paths are added
+     // Also artificially caps the watcher to a certain number of directories
+-    constexpr int LIMIT_WATCH_DIRECTORIES = 5000;
++    constexpr qsizetype LIMIT_WATCH_DIRECTORIES = 5000;
+     constexpr int SLICE_SIZE = 25;
+-    int len = std::min(watch_list.length(), LIMIT_WATCH_DIRECTORIES);
+-    for (int i = 0; i < len; i += SLICE_SIZE) {
++    qsizetype len = std::min(watch_list.length(), LIMIT_WATCH_DIRECTORIES);
++    for (qsizetype i = 0; i < len; i += SLICE_SIZE) {
+         watcher->addPaths(watch_list.mid(i, i + SLICE_SIZE));
+         QCoreApplication::processEvents();
+     }
+diff --git a/src/citra_qt/hotkeys.cpp b/src/citra_qt/hotkeys.cpp
+index 0e5368517..2469457a7 100644
+--- a/src/citra_qt/hotkeys.cpp
++++ b/src/citra_qt/hotkeys.cpp
+@@ -26,7 +26,7 @@ void HotkeyRegistry::SaveHotkeys() {
+ void HotkeyRegistry::LoadHotkeys() {
+     // Make sure NOT to use a reference here because it would become invalid once we call
+     // beginGroup()
+-    for (auto shortcut : UISettings::values.shortcuts) {
++    for (const auto& shortcut : UISettings::values.shortcuts) {
+         Hotkey& hk = hotkey_groups[shortcut.group][shortcut.name];
+         if (!shortcut.shortcut.keyseq.isEmpty()) {
+             hk.keyseq =
+@@ -40,7 +40,7 @@ void HotkeyRegistry::LoadHotkeys() {
+     }
+ }
+ 
+-QShortcut* HotkeyRegistry::GetHotkey(const QString& group, const QString& action, QWidget* widget) {
++QShortcut* HotkeyRegistry::GetHotkey(const QString& group, const QString& action, QObject* widget) {
+     Hotkey& hk = hotkey_groups[group][action];
+ 
+     if (!hk.shortcut) {
+diff --git a/src/citra_qt/hotkeys.h b/src/citra_qt/hotkeys.h
+index 6a377f511..38c326b5b 100644
+--- a/src/citra_qt/hotkeys.h
++++ b/src/citra_qt/hotkeys.h
+@@ -45,7 +45,7 @@ public:
+      *          will be the same. Thus, you shouldn't rely on the caller really being the
+      *          QShortcut's parent.
+      */
+-    QShortcut* GetHotkey(const QString& group, const QString& action, QWidget* widget);
++    QShortcut* GetHotkey(const QString& group, const QString& action, QObject* widget);
+ 
+     /**
+      * Returns a QKeySequence object whose signal can be connected to QAction::setShortcut.
+diff --git a/src/citra_qt/loading_screen.cpp b/src/citra_qt/loading_screen.cpp
+index 7b9537ac9..56e4b4d64 100644
+--- a/src/citra_qt/loading_screen.cpp
++++ b/src/citra_qt/loading_screen.cpp
+@@ -198,7 +198,7 @@ void LoadingScreen::OnLoadProgress(VideoCore::LoadCallbackStage stage, std::size
+ 
+ void LoadingScreen::paintEvent(QPaintEvent* event) {
+     QStyleOption opt;
+-    opt.init(this);
++    opt.initFrom(this);
+     QPainter p(this);
+     style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+     QWidget::paintEvent(event);
+diff --git a/src/citra_qt/loading_screen.h b/src/citra_qt/loading_screen.h
+index fb18f2be9..98d18e243 100644
+--- a/src/citra_qt/loading_screen.h
++++ b/src/citra_qt/loading_screen.h
+@@ -73,5 +73,3 @@ private:
+     std::chrono::duration<double> rolling_average = {};
+     bool eta_shown = false;
+ };
+-
+-Q_DECLARE_METATYPE(VideoCore::LoadCallbackStage);
+diff --git a/src/citra_qt/main.cpp b/src/citra_qt/main.cpp
+index 35e6aa23a..877610e36 100644
+--- a/src/citra_qt/main.cpp
++++ b/src/citra_qt/main.cpp
+@@ -7,7 +7,6 @@
+ #include <fstream>
+ #include <memory>
+ #include <thread>
+-#include <QDesktopWidget>
+ #include <QFileDialog>
+ #include <QFutureWatcher>
+ #include <QLabel>
+@@ -643,7 +642,7 @@ void GMainWindow::ShowUpdaterWidgets() {
+ 
+ void GMainWindow::SetDefaultUIGeometry() {
+     // geometry: 55% of the window contents are in the upper screen half, 45% in the lower half
+-    const QRect screenRect = QApplication::desktop()->screenGeometry(this);
++    const QRect screenRect = screen()->geometry();
+ 
+     const int w = screenRect.width() * 2 / 3;
+     const int h = screenRect.height() / 2;
+@@ -1343,7 +1342,7 @@ void GMainWindow::StoreRecentFile(const QString& filename) {
+ 
+ void GMainWindow::UpdateRecentFiles() {
+     const int num_recent_files =
+-        std::min(UISettings::values.recent_files.size(), max_recent_files_item);
++        std::min(static_cast<int>(UISettings::values.recent_files.size()), max_recent_files_item);
+ 
+     for (int i = 0; i < num_recent_files; i++) {
+         const QString text = QStringLiteral("&%1. %2").arg(i + 1).arg(
+@@ -1647,7 +1646,7 @@ void GMainWindow::InstallCIA(QStringList filepaths) {
+     progress_bar->show();
+     progress_bar->setMaximum(INT_MAX);
+ 
+-    QtConcurrent::run([&, filepaths] {
++    (void)QtConcurrent::run([&, filepaths] {
+         Service::AM::InstallStatus status;
+         const auto cia_progress = [&](std::size_t written, std::size_t total) {
+             emit UpdateProgress(written, total);
+@@ -2737,9 +2736,6 @@ static void SetHighDPIAttributes() {
+     QApplication::setHighDpiScaleFactorRoundingPolicy(
+         Qt::HighDpiScaleFactorRoundingPolicy::PassThrough);
+ #endif
+-
+-    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+-    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+ }
+ 
+ int main(int argc, char* argv[]) {
+diff --git a/src/citra_qt/multiplayer/direct_connect.cpp b/src/citra_qt/multiplayer/direct_connect.cpp
+index 6cef55845..3b2b6549e 100644
+--- a/src/citra_qt/multiplayer/direct_connect.cpp
++++ b/src/citra_qt/multiplayer/direct_connect.cpp
+@@ -5,7 +5,7 @@
+ #include <QComboBox>
+ #include <QFuture>
+ #include <QIntValidator>
+-#include <QRegExpValidator>
++#include <QRegularExpression>
+ #include <QString>
+ #include <QtConcurrent/QtConcurrentRun>
+ #include "citra_qt/main.h"
+diff --git a/src/citra_qt/multiplayer/validation.h b/src/citra_qt/multiplayer/validation.h
+index ecf3069d9..8763459ed 100644
+--- a/src/citra_qt/multiplayer/validation.h
++++ b/src/citra_qt/multiplayer/validation.h
+@@ -4,7 +4,7 @@
+ 
+ #pragma once
+ 
+-#include <QRegExp>
++#include <QRegularExpression>
+ #include <QString>
+ #include <QValidator>
+ 
+@@ -30,15 +30,17 @@ public:
+ 
+ private:
+     /// room name can be alphanumeric and " " "_" "." and "-" and must have a size of 4-20
+-    QRegExp room_name_regex = QRegExp(QStringLiteral("^[a-zA-Z0-9._- ]{4,20}$"));
+-    QRegExpValidator room_name;
++    QRegularExpression room_name_regex =
++        QRegularExpression(QStringLiteral("^[a-zA-Z0-9._\\- ]{4,20}$"));
++    QRegularExpressionValidator room_name;
+ 
+     /// nickname can be alphanumeric and " " "_" "." and "-" and must have a size of 4-20
+-    QRegExp nickname_regex = QRegExp(QStringLiteral("^[a-zA-Z0-9._- ]{4,20}$"));
+-    QRegExpValidator nickname;
++    QRegularExpression nickname_regex =
++        QRegularExpression(QStringLiteral("^[a-zA-Z0-9._\\- ]{4,20}$"));
++    QRegularExpressionValidator nickname;
+ 
+     /// ipv4 / ipv6 / hostnames
+-    QRegExp ip_regex = QRegExp(QStringLiteral(
++    QRegularExpression ip_regex = QRegularExpression(QStringLiteral(
+         // IPv4 regex
+         "^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|"
+         // IPv6 regex
+@@ -59,7 +61,7 @@ private:
+         "\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:)))(%.+)?$|"
+         // Hostname regex
+         "^([a-zA-Z0-9]+(-[a-zA-Z0-9]+)*\\.)+[a-zA-Z]{2,}$"));
+-    QRegExpValidator ip;
++    QRegularExpressionValidator ip;
+ 
+     /// port must be between 0 and 65535
+     QIntValidator port;
+diff --git a/src/citra_qt/util/spinbox.cpp b/src/citra_qt/util/spinbox.cpp
+index b635c3a15..18af19695 100644
+--- a/src/citra_qt/util/spinbox.cpp
++++ b/src/citra_qt/util/spinbox.cpp
+@@ -30,7 +30,7 @@
+ 
+ #include <cstdlib>
+ #include <QLineEdit>
+-#include <QRegExpValidator>
++#include <QRegularExpression>
+ #include "citra_qt/util/spinbox.h"
+ #include "common/assert.h"
+ 
+@@ -244,14 +244,15 @@ QValidator::State CSpinBox::validate(QString& input, int& pos) const {
+     }
+ 
+     // Match string
+-    QRegExp num_regexp(regexp);
++    QRegularExpression num_regexp(QRegularExpression::anchoredPattern(regexp));
+     int num_pos = strpos;
+     QString sub_input = input.mid(strpos, input.length() - strpos - suffix.length());
+ 
+-    if (!num_regexp.exactMatch(sub_input) && num_regexp.matchedLength() == 0)
++    auto match = num_regexp.match(sub_input);
++    if (!match.hasMatch())
+         return QValidator::Invalid;
+ 
+-    sub_input = sub_input.left(num_regexp.matchedLength());
++    sub_input = sub_input.left(match.capturedLength());
+     bool ok;
+     qint64 val = sub_input.toLongLong(&ok, base);
+ 
+@@ -263,7 +264,7 @@ QValidator::State CSpinBox::validate(QString& input, int& pos) const {
+         return QValidator::Invalid;
+ 
+     // Make sure we are actually at the end of this string...
+-    strpos += num_regexp.matchedLength();
++    strpos += match.capturedLength();
+ 
+     if (!suffix.isEmpty() && input.mid(strpos) != suffix) {
+         return QValidator::Invalid;
+diff --git a/src/core/loader/smdh.cpp b/src/core/loader/smdh.cpp
+index 4773d08e5..4306a1f1b 100644
+--- a/src/core/loader/smdh.cpp
++++ b/src/core/loader/smdh.cpp
+@@ -44,11 +44,11 @@ std::vector<u16> SMDH::GetIcon(bool large) const {
+     return icon;
+ }
+ 
+-std::array<u16, 0x40> SMDH::GetShortTitle(Loader::SMDH::TitleLanguage language) const {
++std::array<char16_t, 0x40> SMDH::GetShortTitle(Loader::SMDH::TitleLanguage language) const {
+     return titles[static_cast<int>(language)].short_title;
+ }
+ 
+-std::array<u16, 0x80> SMDH::GetLongTitle(Loader::SMDH::TitleLanguage language) const {
++std::array<char16_t, 0x80> SMDH::GetLongTitle(Loader::SMDH::TitleLanguage language) const {
+     return titles[static_cast<int>(language)].long_title;
+ }
+ 
+diff --git a/src/core/loader/smdh.h b/src/core/loader/smdh.h
+index 831266982..ec37c4bba 100644
+--- a/src/core/loader/smdh.h
++++ b/src/core/loader/smdh.h
+@@ -26,9 +26,9 @@ struct SMDH {
+     INSERT_PADDING_BYTES(2);
+ 
+     struct Title {
+-        std::array<u16, 0x40> short_title;
+-        std::array<u16, 0x80> long_title;
+-        std::array<u16, 0x40> publisher;
++        std::array<char16_t, 0x40> short_title;
++        std::array<char16_t, 0x80> long_title;
++        std::array<char16_t, 0x40> publisher;
+     };
+     std::array<Title, 16> titles;
+ 
+@@ -88,14 +88,14 @@ struct SMDH {
+      * @param language title language
+      * @return UTF-16 array of the short title
+      */
+-    std::array<u16, 0x40> GetShortTitle(Loader::SMDH::TitleLanguage language) const;
++    std::array<char16_t, 0x40> GetShortTitle(Loader::SMDH::TitleLanguage language) const;
+ 
+     /**
+      * Gets the long game title from SMDH
+      * @param language title language
+      * @return UTF-16 array of the long title
+      */
+-    std::array<u16, 0x80> GetLongTitle(Loader::SMDH::TitleLanguage language) const;
++    std::array<char16_t, 0x80> GetLongTitle(Loader::SMDH::TitleLanguage language) const;
+ 
+     std::vector<GameRegion> GetRegions() const;
+ };

@@ -3,8 +3,8 @@
 # glslang
 #
 ################################################################################
-# Version: Commits on Apr 12, 2023
-GLSLANG_VERSION = 68f073b19569b580ecc7ba13fa96be3ecf65a0f6
+# Version: Commits on Apr 19, 2023
+GLSLANG_VERSION = 9c7fd1a33e5cecbe465e1cd70170167d5e40d398
 GLSLANG_SITE = $(call github,KhronosGroup,glslang,$(GLSLANG_VERSION))
 GLSLANG_DEPENDENCIES = vulkan-headers vulkan-loader
 GLSLANG_INSTALL_STAGING = YES

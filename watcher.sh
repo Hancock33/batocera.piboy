@@ -12,7 +12,7 @@ srcdir="${1:-/home/lee/batocera.piboy}"
 board="${2:-x86_64}"
 outdir="${3:-/home/lee/batocera.$board}"
 build_dir="$outdir/build"
-	
+
 watch() {
 	echo "Source Dir: $srcdir"
 	echo "Target:     $board"

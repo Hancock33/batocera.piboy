@@ -3,8 +3,8 @@
 # amiberry
 #
 ################################################################################
-# Version: Commits on Apr 16, 2023
-AMIBERRY_VERSION = 6aa1886a73e44ad9c7506e15a34f304fc79e6a20
+# Version: Commits on Apr 19, 2023
+AMIBERRY_VERSION = 5b7e0e1699ae6ef09c2afcc4fc4c2ee0d5710e16
 AMIBERRY_SITE = $(call github,BlitterStudio,amiberry,$(AMIBERRY_VERSION))
 AMIBERRY_LICENSE = GPLv3
 AMIBERRY_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf mpg123 libxml2 libmpeg2 flac libpng libserialport
@@ -37,7 +37,7 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3288),y)
 	AMIBERRY_BATOCERA_SYSTEM=RK3288
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588),y)
 # lowercase to accomodate amiberry Makefile being lower case for this board.
-	AMIBERRY_BATOCERA_SYSTEM=rk3588  
+	AMIBERRY_BATOCERA_SYSTEM=rk3588
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S905),y)
 	AMIBERRY_BATOCERA_SYSTEM=AMLGXBB
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S905GEN2),y)

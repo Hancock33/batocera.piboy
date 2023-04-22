@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Apr 18, 2023
-RETROARCH_VERSION = 97ad745f159f279bb76ac29282785ae7fb56078e
+# Version: Commits on Apr 22, 2023
+RETROARCH_VERSION = 6aa678542803443a5953517d7d6ad8a63f812df7
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac
@@ -37,6 +37,12 @@ else
 	else
         RETROARCH_CONF_OPTS += --disable-sdl
 	endif
+endif
+
+ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)
+    RETROARCH_CONF_OPTS += --enable-videocore
+else
+    RETROARCH_CONF_OPTS += --disable-videocore
 endif
 
 ifeq ($(BR2_PACKAGE_LIBDRM),y)

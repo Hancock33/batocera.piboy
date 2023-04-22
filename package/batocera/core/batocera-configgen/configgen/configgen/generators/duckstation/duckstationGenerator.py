@@ -57,12 +57,12 @@ class DuckstationGenerator(Generator):
                 psxconfig.set("Main","RewindEnable", "false")
 
             # gfxbackend
-            if system.isOptSet("gfxbackend") and system.config["gfxbackend"] == 'Vulkan':
-                psxconfig.set("GPU", "Renderer", "Vulkan")
+            if system.isOptSet("gfxbackend") and system.config["gfxbackend"] == 'OpenGL':
+                psxconfig.set("GPU", "Renderer", "OpenGL")
             elif system.isOptSet("gfxbackend") and system.config["gfxbackend"] == 'Software':
                 psxconfig.set("GPU", "Renderer", "Software")
             else:
-                psxconfig.set("GPU", "Renderer", "OpenGL")
+                psxconfig.set("GPU", "Renderer", "Vulkan")
 
             # duckstation_osd
             if system.isOptSet("duckstation_osd"):
@@ -210,11 +210,7 @@ class DuckstationGenerator(Generator):
             with open(psxConfigFile, 'w') as configfile:
                 psxconfig.write(configfile, False)
 
-        commandArray = ["/usr/duckstation/bin/duckstation-nogui", rom ]
-
-        # Fullscreen
-        commandArray.append("-fullscreen")
-        commandArray.append("-nogui")
+        commandArray = ["/usr/duckstation/bin/duckstation-nogui", "-fullscreen", rom ]
 
         return Command.Command(
             array=commandArray,

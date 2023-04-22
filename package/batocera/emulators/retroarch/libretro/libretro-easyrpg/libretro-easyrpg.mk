@@ -3,8 +3,8 @@
 # libretro-easyrpg
 #
 ################################################################################
-# Version: Commits on Apr 17, 2023
-LIBRETRO_EASYRPG_VERSION = 5ef595cd6619515df7dd82ae844b697e95014c66
+# Version: Commits on Apr 19, 2023
+LIBRETRO_EASYRPG_VERSION = 91e26908192f635f3396e62b3e93a9ed0c7a9471
 LIBRETRO_EASYRPG_SITE = https://github.com/EasyRPG/Player.git
 LIBRETRO_EASYRPG_GIT_SUBMODULES=YES
 LIBRETRO_EASYRPG_SITE_METHOD=git
