@@ -34,9 +34,9 @@ define SAMTSE_INSTALL_TARGET_CMDS
 	cp -av $(SAMTSE_BUILDDIR)/serioussamse                              $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/serioussam
 	$(TARGET_STRIP) $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/*
 
-	# link libraries 
+	# link libraries
 	ln -sf /usr/share/game_assets/samtse/Bin/libEngineMP.so             $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libEngine.so
-	ln -sf /usr/share/game_assets/samtse/Bin/libEntitiesMP.so           $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libEntities.so	
+	ln -sf /usr/share/game_assets/samtse/Bin/libEntitiesMP.so           $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libEntities.so
 	ln -sf /usr/share/game_assets/samtse/Bin/libGameMP.so               $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libGame.so
 	ln -sf /usr/lib/libvorbisfile.so                                    $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libvorbisfile.so
 

@@ -234,7 +234,7 @@
 - Future Pinball saves
 - Light guns on RPi4
     - they now start when connected/plugged
-### Dev  
+### Dev
 - buildroot upgrade to 2022.11.1
 - odroidxu4 upgrade kernel to 6.1.10
 - raspberrypi upgrade kernel to 6.1.8

@@ -5,4 +5,4 @@ config BR2_PACKAGE_PROJECTM
 	help
 	  projectM - A MilkDrop compatible opensource music visualizer.
 
-	  https://github.com/projectM-visualizer/projectm	  
+	  https://github.com/projectM-visualizer/projectm

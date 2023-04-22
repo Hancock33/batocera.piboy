@@ -147,7 +147,7 @@ class Pcsx2Generator(Generator):
                 pscx2config.set("EmuCore/GS", "UserHacks", system.config["ManualHWHacks"])
             else:
                 pscx2config.set("EmuCore/GS", "UserHacks", "true")
-            
+
             # Enable Multitap
             if system.isOptSet('multitap') and system.config['multitap'] != 'disabled':
                 if system.config['multitap'] == 'port1':
@@ -166,7 +166,7 @@ class Pcsx2Generator(Generator):
             # Write Ini File
             with open(pcsx2ConfigFile, 'w') as configfile:
                 pscx2config.write(configfile, False)
-            
+
         ######## Command line section ########
         if system.isOptSet('avx2'):
             if system.config['avx2'] == '1':

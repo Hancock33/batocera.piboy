@@ -24,7 +24,7 @@ VICE_CONF_OPTS += --without-pulse
 VICE_CONF_OPTS += --enable-x64
 VICE_CONF_OPTS += --enable-arch=yes
 VICE_CONF_OPTS += --enable-sdl2ui
-VICE_CONF_OPTS += --with-sdlsound 
+VICE_CONF_OPTS += --with-sdlsound
 VICE_CONF_OPTS += --disable-debug-gtk3ui
 
 VICE_CONF_ENV += LDFLAGS=-lSDL2
