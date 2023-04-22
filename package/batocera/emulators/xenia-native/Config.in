@@ -12,7 +12,6 @@ config BR2_PACKAGE_XENIA_NATIVE
     select BR2_PACKAGE_SDL2
     select BR2_PACKAGE_ZLIB
 
-	
     help
         Xenia is an open source research project for emulating Xbox 360 games on modern PCs.
 

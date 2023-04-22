@@ -20,7 +20,7 @@ class OpenmsxGenerator(Generator):
     def generate(self, system, rom, playersControllers, guns, gameResolution):
 
         share_dir = openMSX_Homedir + "/share"
-        source_settings = openMSX_Config + "/settings.xml" 
+        source_settings = openMSX_Config + "/settings.xml"
         settings_xml = share_dir + "/settings.xml"
         settings_tcl = share_dir + "/script.tcl"
 
@@ -32,14 +32,14 @@ class OpenmsxGenerator(Generator):
         if not os.path.exists(share_dir):
             os.mkdir(share_dir)
             copy_tree(openMSX_Config, share_dir)
-        
+
         # always use our settings.xml file as a base
         shutil.copy2(source_settings, share_dir)
 
         # Adjust settings.xml as needed
         tree = ET.parse(settings_xml)
         root = tree.getroot()
-        
+
         settings_elem = root.find("settings")
         if system.isOptSet("openmsx_loading"):
             fullspeed_elem = ET.Element("setting", {"id": "fullspeedwhenloading"})
@@ -47,18 +47,18 @@ class OpenmsxGenerator(Generator):
         else:
             fullspeed_elem = ET.Element("setting", {"id": "fullspeedwhenloading"})
             fullspeed_elem.text = "true"
-        
+
         settings_elem.append(fullspeed_elem)
-        
+
         # Create the bindings element
         bindings_elem = ET.Element("bindings")
         new_bind = ET.Element("bind", {"key": "keyb F6"})
         new_bind.text = "cycle videosource"
         bindings_elem.append(new_bind)
-        
+
         # Add the bindings element to the root element
         root.append(bindings_elem)
-        
+
         # Write the updated xml to the file
         with open(settings_xml, "w") as f:
             f.write("<!DOCTYPE settings SYSTEM 'settings.dtd'>\n")
@@ -66,11 +66,11 @@ class OpenmsxGenerator(Generator):
             xml_string = minidom.parseString(ET.tostring(root)).toprettyxml(indent="  ")
             formatted_xml = "\n".join([line for line in xml_string.split("\n") if line.strip()])
             f.write(formatted_xml)
-              
+
         # setup the blank tcl file
         with open(settings_tcl, "w") as file:
             file.write("")
-        
+
         # set the tcl file options - we can add other options later
         with open(settings_tcl, "a") as file:
             file.write("filepool add -path /userdata/bios/Machines -types system_rom -position 1\n")
@@ -114,7 +114,7 @@ class OpenmsxGenerator(Generator):
                         if input.name == "r3":
                             file.write('bind "joy{} button{} down" "toggle console"\n'.format(nplayer, input.id))
                 nplayer += 1
-        
+
         # now run the rom with the appropriate flags
         file_extension = os.path.splitext(rom)[1]
         commandArray = ["/usr/bin/openmsx", "-cart", rom, "-script", settings_tcl]
@@ -128,7 +128,7 @@ class OpenmsxGenerator(Generator):
                         commandArray[i] = "-laserdisc"
             else:
                 commandArray[1:1] = ["-machine", "Boosted_MSX2_EN"]
-        
+
         if system.name == "msx2":
             commandArray[1:1] = ["-machine", "Boosted_MSX2_EN"]
 

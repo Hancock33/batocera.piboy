@@ -9998,7 +9998,7 @@ xemu:
                 "Enabled":      "true"
                 "Disabled":     "false"
         use_zink:
-            group: ADVANCED OPTIONS            
+            group: ADVANCED OPTIONS
             prompt: USE ZINK RENDERER
             description: Use the Zink (OpenGL to Vulkan) renderer to fix graphics issues. May cause performance loss.
             choices:

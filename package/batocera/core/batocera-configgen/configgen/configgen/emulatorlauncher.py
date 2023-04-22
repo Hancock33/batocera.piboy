@@ -121,9 +121,9 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
 
     # find the system to run
     systemName = args.system
-    global endSystem  
+    global endSystem
     endSystem = args.system
-    
+
     eslog.debug(f"Running system: {systemName}")
     system = Emulator(systemName, romConfiguration)
 

@@ -42,7 +42,7 @@ define LIBRETRO_SCUMMVM_INSTALL_TARGET_CMDS
 		$(TARGET_DIR)/usr/lib/libretro/scummvm_libretro.so
 
 	$(INSTALL) -D $(@D)/backends/platform/libretro/scummvm_libretro.info \
-		$(TARGET_DIR)/usr/share/libretro/info/scummvm_libretro.info	
+		$(TARGET_DIR)/usr/share/libretro/info/scummvm_libretro.info
 endef
 
 $(eval $(generic-package))
