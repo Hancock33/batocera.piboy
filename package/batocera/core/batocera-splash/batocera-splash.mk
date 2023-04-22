@@ -76,7 +76,7 @@ define BATOCERA_SPLASH_INSTALL_BOOT_LOGO
     cp "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo-3-2-480-rotate.png"  "${TARGET_DIR}/usr/share/batocera/splash/boot-logo-320x480.png"
     cp "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo-16-9-480-rotate.png" "${TARGET_DIR}/usr/share/batocera/splash/boot-logo-480x854.png"
     cp "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo-720p-rotate.png"     "${TARGET_DIR}/usr/share/batocera/splash/boot-logo-720x1280.png"
-	
+
 	#piboy
 	cp "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/piboy-logo480p.png"       "${TARGET_DIR}/usr/share/batocera/splash/boot-piboy.png"
 endef

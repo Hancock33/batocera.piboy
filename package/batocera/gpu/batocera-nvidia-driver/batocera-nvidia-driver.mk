@@ -269,7 +269,7 @@ define BATOCERA_NVIDIA_DRIVER_RENAME_KERNEL_MODULES
 	cp $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-modeset.ko \
 	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia-modeset-production.ko
 	cp $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-drm.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia-drm-production.ko	
+	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia-drm-production.ko
 	cp $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-uvm.ko \
 	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia-uvm-production.ko
 	# set the driver version file

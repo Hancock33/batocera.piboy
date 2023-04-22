@@ -17,7 +17,7 @@ define ARCHIVE_ARM
 	mkdir -p $(DEST_DIR)
 	mkdir -p $(DEST_DIR)/bin32
 	mkdir -p $(DEST_DIR)/share
-	cp -a $(TARGET_DIR)/usr/bin/{sorr,box86,gmloader}        $(DEST_DIR)/bin32	
+	cp -a $(TARGET_DIR)/usr/bin/{sorr,box86,gmloader}        $(DEST_DIR)/bin32
 	cp -a $(TARGET_DIR)/usr/share/box86                      $(DEST_DIR)/share
 	cp -a $(TARGET_DIR)/usr/lib                              $(DEST_DIR)/lib32
 	cp -a $(TARGET_DIR)/lib/*                                $(DEST_DIR)/lib32
@@ -55,7 +55,7 @@ define ARCHIVE_X86
 	ln -sf libuuid.so.1                                      $(DEST_DIR)/usr/lib32/libuuid.so
 	ln -sf /usr/lib32                                        $(DEST_DIR)/lib32
 	ln -sf /usr/lib32/ld-linux.so.2                          $(DEST_DIR)/lib/ld-linux.so.2
-	
+
 	rm -rf $(DEST_DIR)/usr/lib32/{avahi,gconv,glslang,graphene-1.0,icu,libfm,locale}
 	rm -rf $(DEST_DIR)/usr/lib32/{pcmanfm,python3.*,terminfo,udev,xorg,X11}
 	cd $(DEST_DIR) && tar -Jcf $(DEST_DIR).tar.xz .

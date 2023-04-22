@@ -85,7 +85,9 @@ apple2gs:
   core:     gsplus
 arcadia:
   emulator: libretro
-  core:     mam
+  core:     mame
+  options:
+    sharemameart: 0
 archimedes:
   emulator: libretro
   core:     mame
@@ -244,9 +246,6 @@ doom3:
 dos:
   emulator: libretro
   core:     dosbox_pure
-  options:
-    videomode: default
-    video_threaded: false
 dreamcast:
   emulator: libretro
   core:     flycast2021
@@ -299,13 +298,11 @@ flash:
   emulator: ruffle
   core:     ruffle
   options:
-    forceNoBezel: true
     hud_support: false
 flatpak:
   emulator: flatpak
   core:     flatpak
   options:
-    forceNoBezel: true
     hud_support: false
 fm7:
   emulator: libretro
@@ -417,8 +414,8 @@ j2me:
   emulator: libretro
   core:     freej2me
 jaguar:
-  emulator: bigpemu
-  core:     bigpemu
+  emulator: libretro
+  core:     virtualjaguar
 jaguarcd:
   emulator: bigpemu
   core:     bigpemu
@@ -486,7 +483,6 @@ model2:
   emulator: model2emu
   core:     model2emu
   options:
-    forceNoBezel: true
     hud_support: false
 model3:
   emulator: supermodel
@@ -530,8 +526,6 @@ n64:
 n64dd:
   emulator: mupen64plus
   core:     glide64mk2
-  options:
-    videomode: max-640x480
 namco:
   emulator: libretro
   core:     mame078plus
@@ -598,7 +592,7 @@ openbor:
   emulator: openbor
   core:     openbor6412
   options:
-  # none because some games fails by default with textures (street of rage 2x)
+    # none because some games fails by default with textures (street of rage 2x)
     bezel: none
 openclaw:
   emulator: openclaw
@@ -752,7 +746,7 @@ sdlpop:
   emulator: sdlpop
   core:     sdlpop
   options:
-    hud_support: falseseibu
+    hud_support: false
 sega:
   emulator: libretro
   core:     mame078plus
@@ -931,7 +925,7 @@ vemulator:
   core:     vemulator
 vgmplay:
   emulator: libretro
-  core:     mamevirtual
+  core:     mame
 videopacplus:
   emulator: libretro
   core:     o2em
@@ -966,13 +960,11 @@ windows:
   emulator: wine
   core:     proton
   options:
-    forceNoBezel: true
     hud_support: false
 windows_installers:
   emulator: wine
   core:     proton
   options:
-    forceNoBezel: true
     hud_support: false
 witchaven:
   emulator: witchaven
@@ -993,16 +985,14 @@ xash3d_fwgs:
   emulator: xash3d_fwgs
   core:     xash3d_fwgs
   options:
-    forceNoBezel: true
     hud_support: false
 xbox:
   emulator: xemu
   core:     xemu
 xbox360:
-  emulator: xenia-canary
-  core:     xenia-canary
+  emulator: xenia
+  core:     xenia
   options:
-    forceNoBezel: true
     hud_support: false
 xboxcloud:
   emulator: xboxcloud

@@ -2,3 +2,4 @@
 alias mc='mc -xc'
 alias batocera-check-updates='batocera-es-swissknife --update'
 alias which='command -v'
+alias ls='ls --color'

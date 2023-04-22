@@ -3,8 +3,8 @@
 # xenia
 #
 ################################################################################
-# Version: Commits on Mar 30, 2023
-XENIA_VERSION = v1.0.2789-master
+# Version: Commits on Apr 19, 2023
+XENIA_VERSION = v1.0.2797-master
 XENIA_SOURCE = xenia_master.zip
 XENIA_SITE = https://github.com/xenia-project/release-builds-windows/releases/download/$(XENIA_VERSION)
 XENIA_LICENSE = BSD

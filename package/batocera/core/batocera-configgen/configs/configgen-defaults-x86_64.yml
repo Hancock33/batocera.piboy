@@ -16,8 +16,10 @@ apfm1000:
   emulator: mame
   core:     mame
 arcadia:
-  emulator: mame
+  emulator: libretro
   core:     mame
+  options:
+    sharemameart: 0
 archimedes:
   emulator: mame
   core:     mame
@@ -74,6 +76,11 @@ gp32:
 hikaru:
   options:
     videomode: max-640x480
+jaguar:
+  emulator: bigpemu
+  core:    bigpemu
+  options:
+    hud_support: false
 laser310:
   emulator: mame
   core:     mame

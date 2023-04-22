@@ -271,7 +271,7 @@ class EsSystemConf:
                             vals[action["description"]] = { basename(file): {} }
                         else:
                             vals[action["description"]][basename(file)] = {}
-        
+
         fd = open(esKeysTranslationFile, 'w')
         fd.write("// file generated automatically by batocera-es-system.py, don't modify it\n\n")
         n = 0

@@ -3,8 +3,8 @@
 # samtse
 #
 ################################################################################
-# Version: Commits on Apr 04, 2023
-SAMTSE_VERSION = 5725e8157c653c6671c2f8c5542a746023b0c439
+# Version: Commits on Apr 21, 2023
+SAMTSE_VERSION = 2270f2c431ff2b70ab4957906531056413661362
 SAMTSE_SITE = https://github.com/tx00100xt/SeriousSamClassic-VK.git
 SAMTSE_SITE_METHOD=git
 SAMTSE_GIT_SUBMODULES=YES
@@ -34,9 +34,9 @@ define SAMTSE_INSTALL_TARGET_CMDS
 	cp -av $(SAMTSE_BUILDDIR)/serioussamse                              $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/serioussam
 	$(TARGET_STRIP) $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/*
 
-	# link libraries 
+	# link libraries
 	ln -sf /usr/share/game_assets/samtse/Bin/libEngineMP.so             $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libEngine.so
-	ln -sf /usr/share/game_assets/samtse/Bin/libEntitiesMP.so           $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libEntities.so	
+	ln -sf /usr/share/game_assets/samtse/Bin/libEntitiesMP.so           $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libEntities.so
 	ln -sf /usr/share/game_assets/samtse/Bin/libGameMP.so               $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libGame.so
 	ln -sf /usr/lib/libvorbisfile.so                                    $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libvorbisfile.so
 
