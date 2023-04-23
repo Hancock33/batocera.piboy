@@ -8,6 +8,10 @@ import xml.etree.ElementTree as ET
 import shutil
 import xml.dom.minidom as minidom
 import re
+import zipfile
+from utils.logger import get_logger
+
+eslog = get_logger(__name__)
 
 openMSX_Homedir = '/userdata/system/configs/openmsx'
 openMSX_Config = '/usr/share/openmsx/'
@@ -116,18 +120,12 @@ class OpenmsxGenerator(Generator):
                 nplayer += 1
 
         # now run the rom with the appropriate flags
-        file_extension = os.path.splitext(rom)[1]
+        file_extension = os.path.splitext(rom)[1].lower()
         commandArray = ["/usr/bin/openmsx", "-cart", rom, "-script", settings_tcl]
 
         # set the best machine based on the system
         if system.name == "msx1":
-            if file_extension == ".ogv":
-                commandArray[1:1] = ["-machine", "Pioneer_PX-7"]
-                for i in range(len(commandArray)):
-                    if commandArray[i] == "-cart":
-                        commandArray[i] = "-laserdisc"
-            else:
-                commandArray[1:1] = ["-machine", "Boosted_MSX2_EN"]
+            commandArray[1:1] = ["-machine", "Boosted_MSX2_EN"]
 
         if system.name == "msx2":
             commandArray[1:1] = ["-machine", "Boosted_MSX2_EN"]
@@ -144,7 +142,67 @@ class OpenmsxGenerator(Generator):
         if system.isOptSet("hud") and system.config["hud"] != "":
             commandArray.insert(0, "mangohud")
 
-        return Command.Command(
-            array=commandArray,
-            env={"XDG_DATA_HOME": share_dir}
-        )
+        # setup the media types
+        if file_extension == ".zip":
+            with zipfile.ZipFile(rom, "r") as zip_file:
+                for zip_info in zip_file.infolist():
+                    file_extension = os.path.splitext(zip_info.filename)[1]
+                    # usually zip files only contain 1 file however break loop if file extension found
+                    if file_extension in [".cas", ".dsk", ".ogv"]:
+                        eslog.debug(f"Zip file contains: {file_extension}")
+                        break
+
+        if file_extension == ".ogv":
+            eslog.debug("File is a laserdisc")
+            for i in range(len(commandArray)):
+                if commandArray[i] == "-machine":
+                    commandArray[i+1] = "Pioneer_PX-7"
+                elif commandArray[i] == "-cart":
+                    commandArray[i] = "-laserdisc"
+
+        if file_extension == ".cas":
+            eslog.debug("File is a cassette")
+            for i in range(len(commandArray)):
+                if commandArray[i] == "-cart":
+                    commandArray[i] = "-cassetteplayer"
+
+        if file_extension == ".dsk":
+            eslog.debug("File is a disk")
+            disk_type = "-diska"
+            if system.isOptSet("openmsx_disk") and system.config["openmsx_disk"] == "hda":
+                disk_type = "-hda"
+            for i in range(len(commandArray)):
+                if commandArray[i] == "-cart":
+                    commandArray[i] = disk_type
+
+        # handle our own file format for stacked roms / disks
+        if file_extension == ".openmsx":
+            # read the contents of the file and extract the rom paths
+            with open(rom, "r") as file:
+                lines = file.readlines()
+                rom1 = ""
+                rom1 = lines[0].strip()
+                rom2 = ""
+                rom2 = lines[1].strip()
+            # get the directory path of the .openmsx file
+            openmsx_dir = os.path.dirname(rom)
+            # prepend the directory path to the .rom/.dsk file paths
+            rom1 = os.path.join(openmsx_dir, rom1)
+            rom2 = os.path.join(openmsx_dir, rom2)
+            # get the first lines extension
+            extension = rom1.split(".")[-1].lower()
+            # now start ammending the array
+            if extension == "rom":
+                cart_index = commandArray.index("-cart")
+                commandArray[cart_index] = "-carta"
+                commandArray[cart_index +1] = rom1
+            elif extension == "dsk":
+                cart_index = commandArray.index("-cart")
+                commandArray[cart_index] = "-diska"
+                commandArray[cart_index +1] = rom1
+            if extension == "rom" or extension == "dsk":
+                rom2_index = cart_index + 2
+                commandArray.insert(rom2_index, "-cartb" if extension == "rom" else "-diskb")
+                commandArray.insert(rom2_index + 1, rom2)
+
+        return Command.Command(array=commandArray, env={"XDG_DATA_HOME": share_dir})

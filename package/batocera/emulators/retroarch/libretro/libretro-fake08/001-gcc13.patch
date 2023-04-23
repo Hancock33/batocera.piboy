@@ -1,0 +1,94 @@
+diff --git a/platform/libretro/libretrohosthelpers.h b/platform/libretro/libretrohosthelpers.h
+index e898bf3..222b625 100644
+--- a/platform/libretro/libretrohosthelpers.h
++++ b/platform/libretro/libretrohosthelpers.h
+@@ -1,4 +1,5 @@
+ #include <string.h>
++#include <cstdint>
+ 
+ void setInputState(
+     uint8_t kDown,
+@@ -7,4 +8,4 @@ void setInputState(
+     int16_t mouseY,
+     uint8_t mouseBtnState);
+ 
+-void setCartDirectory(std::string dir);
+\ No newline at end of file
++void setCartDirectory(std::string dir);
+diff --git a/source/Audio.h b/source/Audio.h
+index 4d8f4db..9163fe8 100644
+--- a/source/Audio.h
++++ b/source/Audio.h
+@@ -3,6 +3,7 @@
+ #include "PicoRam.h"
+ 
+ #include <string>
++#include <cstdint>
+ 
+ #define MAX_SFX = 64
+ #define BYTES_PER_SFX = 68;
+diff --git a/source/PicoRam.h b/source/PicoRam.h
+index ff4c4e9..efe01ac 100644
+--- a/source/PicoRam.h
++++ b/source/PicoRam.h
+@@ -2,6 +2,7 @@
+ 
+ #include <cstring> 
+ #include <string>
++#include <cstdint>
+ 
+ /*
+ 0x0 	0x0fff 	Sprite sheet (0-127)
+diff --git a/source/emojiconversion.h b/source/emojiconversion.h
+index 4ad3049..990944c 100644
+--- a/source/emojiconversion.h
++++ b/source/emojiconversion.h
+@@ -1,4 +1,5 @@
+ #include <string>
++#include <cstdint>
+ #include <regex>
+ 
+ struct charset
+@@ -19,4 +20,4 @@ struct charset
+ private:
+     static std::regex static_init();
+     static std::regex utf8_regex;
+-};
+\ No newline at end of file
++};
+diff --git a/source/fontdata.cpp b/source/fontdata.cpp
+index 1fdda14..cef9b3f 100644
+--- a/source/fontdata.cpp
++++ b/source/fontdata.cpp
+@@ -1,6 +1,7 @@
+ 
+ //taken from tac08: https://github.com/0xcafed00d/tac08
+ #include <string>
++#include <cstdint>
+ 
+ const char* font_ss_str = R"(77700000000000000000000000000000000000000000000000700000700000007770000000000000707000000000000000000000000000007070000007000000
+ 77700000777000007770000070700000707000007070000007700000770000007000000000700000777000000000000000000000000000007070000070700000
+@@ -406,4 +407,4 @@ uint8_t defaultFontBinaryData[2048] = {
+ 0, 14, 30, 8, 14, 0, 0, 0, // char 253
+ 8, 4, 99, 16, 8, 0, 0, 0, // char 254
+ 8, 16, 99, 4, 8, 0, 0, 0, // char 255
+-};
+\ No newline at end of file
++};
+diff --git a/source/stringToDataHelpers.h b/source/stringToDataHelpers.h
+index dfa8336..3766d29 100644
+--- a/source/stringToDataHelpers.h
++++ b/source/stringToDataHelpers.h
+@@ -1,9 +1,10 @@
+ #pragma once
+ 
+ #include <string>
++#include <cstdint>
+ 
+ void copy_string_to_sprite_memory(uint8_t sprite_data[128 * 64], std::string data);
+ 
+ void copy_mini_label_to_sprite_memory(uint8_t sprite_data[128 * 64], std::string data, int labeloffset);
+ 
+-void copy_string_to_memory(uint8_t* sprite_flag_data, std::string data);
+\ No newline at end of file
++void copy_string_to_memory(uint8_t* sprite_flag_data, std::string data);

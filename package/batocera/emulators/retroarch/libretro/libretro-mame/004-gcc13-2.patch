@@ -1,0 +1,11 @@
+diff -Naur same_cdi-54cf493c2dee4c46666059c452f8aaaa0bd7c8e0.orig/src/osd/modules/lib/osdlib.h same_cdi-54cf493c2dee4c46666059c452f8aaaa0bd7c8e0/src/osd/modules/lib/osdlib.h
+--- same_cdi-54cf493c2dee4c46666059c452f8aaaa0bd7c8e0.orig/src/osd/modules/lib/osdlib.h	2023-02-28 18:16:04.000000000 +0000
++++ same_cdi-54cf493c2dee4c46666059c452f8aaaa0bd7c8e0/src/osd/modules/lib/osdlib.h	2023-04-23 12:06:49.864388154 +0100
+@@ -21,6 +21,7 @@
+ #include <type_traits>
+ #include <vector>
+ #include <memory>
++#include <cstdint>
+ 
+ /*-----------------------------------------------------------------------------
+     osd_process_kill: kill the current process

@@ -1,0 +1,52 @@
+diff --git a/include/wayland-client.hpp b/include/wayland-client.hpp
+index a3f782b..4598a0e 100644
+--- a/include/wayland-client.hpp
++++ b/include/wayland-client.hpp
+@@ -29,6 +29,7 @@
+ /** \file */
+ 
+ #include <atomic>
++#include <cstdint>
+ #include <functional>
+ #include <memory>
+ #include <string>
+diff --git a/include/wayland-server.hpp b/include/wayland-server.hpp
+index e2cc80f..77e3ee0 100644
+--- a/include/wayland-server.hpp
++++ b/include/wayland-server.hpp
+@@ -27,6 +27,7 @@
+ #define WAYLAND_SERVER_HPP
+ 
+ #include <atomic>
++#include <cstdint>
+ #include <functional>
+ #include <list>
+ #include <memory>
+diff --git a/scanner/scanner.cpp b/scanner/scanner.cpp
+index bebd71e..37cf7ff 100644
+--- a/scanner/scanner.cpp
++++ b/scanner/scanner.cpp
+@@ -23,6 +23,7 @@
+ #include <vector>
+ #include <cctype>
+ #include <cmath>
++#include <cstdint>
+ #include <stdexcept>
+ 
+ #include "pugixml.hpp"
+@@ -1106,6 +1107,7 @@ int main(int argc, char *argv[])
+   wayland_hpp << "#pragma once" << std::endl
+               << std::endl
+               << "#include <array>" << std::endl
++              << "#include <cstdint>" << std::endl
+               << "#include <functional>" << std::endl
+               << "#include <memory>" << std::endl
+               << "#include <string>" << std::endl
+@@ -1125,6 +1127,7 @@ int main(int argc, char *argv[])
+     wayland_server_hpp << "#pragma once" << std::endl
+                        << std::endl
+                        << "#include <array>" << std::endl
++                       << "#include <cstdint>" << std::endl
+                        << "#include <functional>" << std::endl
+                        << "#include <memory>" << std::endl
+                        << "#include <string>" << std::endl

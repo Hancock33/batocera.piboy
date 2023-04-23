@@ -10927,6 +10927,26 @@ msgctxt "game_options"
 msgid "Full Speed (Default)"
 msgstr ""
 
+#. TRANSLATION: openmsx
+msgctxt "game_options"
+msgid "Choose the appropriate media for disk image."
+msgstr ""
+
+#. TRANSLATION: openmsx
+msgctxt "game_options"
+msgid "DISK TYPE"
+msgstr ""
+
+#. TRANSLATION: openmsx
+msgctxt "game_options"
+msgid "Floppy Disk Image"
+msgstr ""
+
+#. TRANSLATION: openmsx
+msgctxt "game_options"
+msgid "Hard Disk Image"
+msgstr ""
+
 #. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "Select game difficulty."
