@@ -1,0 +1,11 @@
+diff --git a/lib/TinyEXIF/TinyEXIF.h b/lib/TinyEXIF/TinyEXIF.h
+index 9c19bdf..ac959e0 100644
+--- a/lib/TinyEXIF/TinyEXIF.h
++++ b/lib/TinyEXIF/TinyEXIF.h
+@@ -36,6 +36,7 @@
+ 
+ #pragma once
+ 
++#include <cstdint>
+ #include <string>
+ #include <vector>

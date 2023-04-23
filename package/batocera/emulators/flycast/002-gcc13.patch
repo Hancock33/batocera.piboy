@@ -1,0 +1,13 @@
+Submodule core/deps/breakpad contains modified content
+diff --git a/core/deps/breakpad/src/common/using_std_string.h b/core/deps/breakpad/src/common/using_std_string.h
+index f0e1aed9..159eeac9 100644
+--- a/core/deps/breakpad/src/common/using_std_string.h
++++ b/core/deps/breakpad/src/common/using_std_string.h
+@@ -56,6 +56,7 @@
+   typedef ::string google_breakpad_string;
+ #else
+ #include <string>
++#include <cstdint>
+   using std::string;
+   typedef std::string google_breakpad_string;
+ #endif

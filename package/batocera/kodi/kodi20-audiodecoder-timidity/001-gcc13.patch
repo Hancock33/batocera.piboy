@@ -1,0 +1,11 @@
+diff --git a/src/MidiScan.h b/src/MidiScan.h
+index 9c19bdf..ac959e0 100644
+--- a/src/MidiScan.h
++++ b/src/MidiScan.h
+@@ -8,6 +8,7 @@
+ 
+ #pragma once
+ 
++#include <cstdint>
+ #include <string>
+ #include <vector>

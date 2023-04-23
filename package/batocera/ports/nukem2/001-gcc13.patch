@@ -1,0 +1,13 @@
+diff --git a/src/assets/user_profile_import.hpp b/src/assets/user_profile_import.hpp
+index 55a56d33..e10b2c32 100644
+--- a/src/assets/user_profile_import.hpp
++++ b/src/assets/user_profile_import.hpp
+@@ -21,7 +21,7 @@
+ 
+ #include <array>
+ #include <optional>
+-
++#include <cstdint>
+ 
+ namespace rigel::assets
+ {

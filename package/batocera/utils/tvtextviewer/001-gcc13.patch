@@ -1,0 +1,13 @@
+diff --git a/main.cpp b/main.cpp
+index 2b5baf9..6a1c91c 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -34,7 +34,7 @@
+ #include <iostream>
+ #include <fstream>
+ #include <optional>
+-
++#include <cstdint>
+ 
+ namespace
+ {
