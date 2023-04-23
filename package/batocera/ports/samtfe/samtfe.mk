@@ -3,8 +3,8 @@
 # samtfe
 #
 ################################################################################
-# Version: Commits on Apr 22, 2023
-SAMTFE_VERSION = 977040050687a7c684d92f844417e11240add4ba
+# Version: Commits on Apr 23, 2023
+SAMTFE_VERSION = 56118c6edb140d07f09e5c2c970426feeb416f84
 SAMTFE_SITE = https://github.com/tx00100xt/SeriousSamClassic-VK.git
 SAMTFE_SITE_METHOD=git
 SAMTFE_GIT_SUBMODULES=YES
@@ -38,7 +38,7 @@ define SAMTFE_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/share/game_assets/samtfe
 	mkdir -p $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
 	cp -av $(SAMTFE_BUILDDIR)/Debug/* $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
-	cp -av $(SAMTFE_BUILDDIR)/{serioussam-ded,MakeFONT,serioussam} $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
+	cp -av $(SAMTFE_BUILDDIR)/{serioussam-ded,serioussam-mkfont,serioussam} $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
 	$(TARGET_STRIP) $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin/*
 	cp -av $(@D)/SamTFE/SE1_10b.gro                                   $(TARGET_DIR)/usr/share/game_assets/samtfe
 	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00.gro            $(TARGET_DIR)/usr/share/game_assets/samtfe

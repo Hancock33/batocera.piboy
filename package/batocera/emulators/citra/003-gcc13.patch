@@ -1,0 +1,13 @@
+Submodule externals/catch2 contains modified content
+diff --git a/externals/catch2/src/catch2/internal/catch_stringref.hpp b/externals/catch2/src/catch2/internal/catch_stringref.hpp
+index e7f1ab70..6064e5ff 100644
+--- a/externals/catch2/src/catch2/internal/catch_stringref.hpp
++++ b/externals/catch2/src/catch2/internal/catch_stringref.hpp
+@@ -12,6 +12,7 @@
+ #include <string>
+ #include <iosfwd>
+ #include <cassert>
++#include <cstdint>
+ 
+ namespace Catch {
+ 
