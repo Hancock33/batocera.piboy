@@ -1,0 +1,53 @@
+From a6b9dd0c30a6c9bbe0f2822a1d1e275b35dbd4f0 Mon Sep 17 00:00:00 2001
+From: Jan Engelhardt <jengelh@inai.de>
+Date: Thu, 30 Mar 2023 23:41:22 +0200
+Subject: [PATCH] build: resolve missing includes under gcc-13
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+$ make
+...
+~/gzdoom/libraries/ZVulkan/src/vulkanbuilders.cpp: In member function ‘std::unique_ptr<VulkanShader> ShaderBuilder::Create(const char*, VulkanDevice*)’:
+~/gzdoom/libraries/ZVulkan/src/vulkanbuilders.cpp:168:28: error: ‘runtime_error’ is not a member of ‘std’
+~/gzdoom/libraries/ZVulkan/include/zvulkan/vk_mem_alloc/vk_mem_alloc.h: In function ‘void VmaUint32ToStr(char*, size_t, uint32_t)’:
+~/gzdoom/libraries/ZVulkan/include/zvulkan/vk_mem_alloc/vk_mem_alloc.h:2410:9: error: ‘snprint ’ was not declared in this scope
+---
+ libraries/ZVulkan/include/zvulkan/vk_mem_alloc/vk_mem_alloc.h | 2 ++
+ libraries/ZVulkan/src/vulkanbuilders.cpp                      | 2 +-
+ libraries/ZVulkan/src/vulkanswapchain.cpp                     | 2 +-
+ 3 files changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/libraries/ZVulkan/include/zvulkan/vk_mem_alloc/vk_mem_alloc.h b/libraries/ZVulkan/include/zvulkan/vk_mem_alloc/vk_mem_alloc.h
+index fd4472286b4..db0b94f4e83 100644
+--- a/libraries/ZVulkan/include/zvulkan/vk_mem_alloc/vk_mem_alloc.h
++++ b/libraries/ZVulkan/include/zvulkan/vk_mem_alloc/vk_mem_alloc.h
+@@ -104,6 +104,8 @@ Documentation of all members: vk_mem_alloc.h
+ - [Source repository on GitHub](https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator)
+ */
+ 
++#include <stdio.h>
++
+ #ifdef __cplusplus
+ extern "C" {
+ #endif
+diff --git a/libraries/ZVulkan/src/vulkanbuilders.cpp b/libraries/ZVulkan/src/vulkanbuilders.cpp
+index bfa138080c6..c1d6a84f69c 100644
+--- a/libraries/ZVulkan/src/vulkanbuilders.cpp
++++ b/libraries/ZVulkan/src/vulkanbuilders.cpp
+@@ -1,4 +1,4 @@
+-
++#include <stdexcept>
+ #include "vulkanbuilders.h"
+ #include "vulkansurface.h"
+ #include "vulkancompatibledevice.h"
+diff --git a/libraries/ZVulkan/src/vulkanswapchain.cpp b/libraries/ZVulkan/src/vulkanswapchain.cpp
+index 9162109c428..ba528a95cae 100644
+--- a/libraries/ZVulkan/src/vulkanswapchain.cpp
++++ b/libraries/ZVulkan/src/vulkanswapchain.cpp
+@@ -1,4 +1,4 @@
+-
++#include <stdexcept>
+ #include "vulkanswapchain.h"
+ #include "vulkanobjects.h"
+ #include "vulkansurface.h"

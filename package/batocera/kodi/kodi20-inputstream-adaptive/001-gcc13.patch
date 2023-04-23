@@ -1,0 +1,103 @@
+diff --git a/src/Iaes_decrypter.h b/src/Iaes_decrypter.h
+index 7fdf604..d43377f 100644
+--- a/src/Iaes_decrypter.h
++++ b/src/Iaes_decrypter.h
+@@ -11,6 +11,7 @@
+ #include <bento4/Ap4Types.h>
+ 
+ #include <string>
++#include <cstdint>
+ 
+ class IAESDecrypter
+ {
+@@ -31,4 +32,4 @@ public:
+ 
+ private:
+   std::string m_licenseKey;
+-};
+\ No newline at end of file
++};
+diff --git a/src/SSD_dll.h b/src/SSD_dll.h
+index 6298d09..bf75346 100644
+--- a/src/SSD_dll.h
++++ b/src/SSD_dll.h
+@@ -10,6 +10,7 @@
+ 
+ #include <stdarg.h> // va_list, va_start, va_arg, va_end
+ #include <string_view>
++#include <cstdint>
+ 
+ //Functionality wich is supported by the Decrypter
+ class Adaptive_CencSingleSampleDecrypter;
+diff --git a/src/common/AdaptiveDecrypter.h b/src/common/AdaptiveDecrypter.h
+index 4e6529b..e362bc4 100644
+--- a/src/common/AdaptiveDecrypter.h
++++ b/src/common/AdaptiveDecrypter.h
+@@ -12,6 +12,7 @@
+ 
+ #include <stdexcept>
+ #include <string_view>
++#include <cstdint>
+ 
+ #include <bento4/Ap4.h>
+ 
+diff --git a/src/common/AdaptiveStream.h b/src/common/AdaptiveStream.h
+index 7abf66b..9e3ea05 100644
+--- a/src/common/AdaptiveStream.h
++++ b/src/common/AdaptiveStream.h
+@@ -16,6 +16,7 @@
+ #include <mutex>
+ #include <string>
+ #include <thread>
++#include <cstdint>
+ 
+ namespace adaptive
+ {
+diff --git a/src/utils/FileUtils.h b/src/utils/FileUtils.h
+index 40745b0..92e75b1 100644
+--- a/src/utils/FileUtils.h
++++ b/src/utils/FileUtils.h
+@@ -10,6 +10,7 @@
+ 
+ #include <string>
+ #include <string_view>
++#include <cstdint>
+ 
+ namespace UTILS
+ {
+diff --git a/src/utils/PropertiesUtils.h b/src/utils/PropertiesUtils.h
+index dee3e0a..45cdbb9 100644
+--- a/src/utils/PropertiesUtils.h
++++ b/src/utils/PropertiesUtils.h
+@@ -11,6 +11,7 @@
+ #include <map>
+ #include <string>
+ #include <utility>
++#include <cstdint>
+ 
+ namespace UTILS
+ {
+diff --git a/src/utils/StringUtils.h b/src/utils/StringUtils.h
+index 34d4744..8379438 100644
+--- a/src/utils/StringUtils.h
++++ b/src/utils/StringUtils.h
+@@ -11,6 +11,7 @@
+ #include <string>
+ #include <string_view>
+ #include <vector>
++#include <cstdint>
+ 
+ namespace UTILS
+ {
+diff --git a/src/utils/Utils.h b/src/utils/Utils.h
+index e7ae209..24bccaf 100644
+--- a/src/utils/Utils.h
++++ b/src/utils/Utils.h
+@@ -12,6 +12,7 @@
+ #include <string>
+ #include <string_view>
+ #include <vector>
++#include <cstdint>
+ 
+ namespace UTILS
+ {
