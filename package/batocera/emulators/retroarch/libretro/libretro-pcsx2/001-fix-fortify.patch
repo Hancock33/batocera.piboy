@@ -1,5 +1,5 @@
 diff --git a/cmake/BuildParameters.cmake b/cmake/BuildParameters.cmake
-index fe54c0aaa..6af76006c 100644
+index fe54c0aaa8..6af76006ca 100644
 --- a/cmake/BuildParameters.cmake
 +++ b/cmake/BuildParameters.cmake
 @@ -315,7 +315,7 @@ set(COMMON_FLAG "-pipe -fvisibility=hidden -pthread -fno-builtin-strcmp -fno-bui
