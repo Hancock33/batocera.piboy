@@ -4754,6 +4754,7 @@ gamegear:
       genesisplusgx:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX] }
       picodrive:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PICODRIVE] }
       smsplus:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SMSPLUS_GX]}
+      gearsystem:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GEARSYSTEM]}
 
 hikaru:
   name:                 Hikaru
@@ -4856,6 +4857,7 @@ mastersystem:
       genesisplusgx:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX] }
       picodrive:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PICODRIVE] }
       smsplus:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SMSPLUS_GX]}
+      gearsystem:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GEARSYSTEM]}
 
 megadrive:
   name:                 Mega Drive
@@ -5344,6 +5346,7 @@ sg1000:
   emulators:
     libretro:
       genesisplusgx:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX] }
+      gearsystem:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GEARSYSTEM]}
 
 sonicretro:
   name:                 Sonic Retro Engine
@@ -5815,6 +5818,17 @@ gamecom:
                         Requires MAME BIOS file gamecom.zip
   comment_br:           |
                         Requer o arquivo gamecom.zip da BIOS do MAME
+
+multivision:
+  name:                 Othello Multivision
+  manufacturer:         Tsukuda Original
+  release:              1983
+  hardware:             console
+  extensions:           [bin, sg, zip, 7z]
+  theme:                multivision
+  emulators:
+    libretro:
+      gearsystem:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GEARSYSTEM]}
 
 tutor:
   name:                 Tutor
