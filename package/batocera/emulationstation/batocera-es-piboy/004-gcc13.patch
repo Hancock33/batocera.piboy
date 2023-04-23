@@ -1,0 +1,23 @@
+diff --git a/es-app/src/Gamelist.h b/es-app/src/Gamelist.h
+index cab8a806..25561c38 100644
+--- a/es-app/src/Gamelist.h
++++ b/es-app/src/Gamelist.h
+@@ -5,6 +5,7 @@
+ #include <unordered_map>
+ #include <vector>
+ #include <string>
++#include <cstdint>
+ 
+ class SystemData;
+ class FileData;
+diff --git a/es-core/src/utils/ZipFile.h b/es-core/src/utils/ZipFile.h
+index 5a2d2788..72fcefb5 100644
+--- a/es-core/src/utils/ZipFile.h
++++ b/es-core/src/utils/ZipFile.h
+@@ -1,5 +1,6 @@
+ #pragma once
+ 
++#include <cstdint>
+ #include <string>
+ #include <vector>
+ #include <map>

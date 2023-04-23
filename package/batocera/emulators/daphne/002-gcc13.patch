@@ -1,0 +1,12 @@
+diff --git a/src/scoreboard/usb_scoreboard.cpp b/src/scoreboard/usb_scoreboard.cpp
+index 3236d5b..6267d46 100644
+--- a/src/scoreboard/usb_scoreboard.cpp
++++ b/src/scoreboard/usb_scoreboard.cpp
+@@ -27,6 +27,7 @@
+ #include "../hypseus.h"
+ #include <plog/Log.h>
+ #include <cstdio>
++#include <cstdint>
+ 
+ serialib g_usb_serial;
+ bool g_serial_rts = false, g_serial_saeboot = false;
