@@ -1,0 +1,12 @@
+diff --git a/src/common/gl/context.h b/src/common/gl/context.h
+index f4c90311..e86d658e 100644
+--- a/src/common/gl/context.h
++++ b/src/common/gl/context.h
+@@ -7,6 +7,7 @@
+ #include <array>
+ #include <memory>
+ #include <vector>
++#include <string>
+ 
+ namespace GL {
+ class Context

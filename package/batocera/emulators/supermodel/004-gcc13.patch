@@ -1,0 +1,12 @@
+diff --git a/Src/Util/BitCast.h b/Src/Util/BitCast.h
+index 6cdf602..cb4aee8 100644
+--- a/Src/Util/BitCast.h
++++ b/Src/Util/BitCast.h
+@@ -3,6 +3,7 @@
+ 
+ #include <stdexcept>
+ #include <cstring>
++#include <cstdint>
+ 
+ namespace Util
+ {

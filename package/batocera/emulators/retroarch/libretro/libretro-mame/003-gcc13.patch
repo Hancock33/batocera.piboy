@@ -1,0 +1,60 @@
+From 1664d7f87853a29e5477f5cb381f71c49f07b6cf Mon Sep 17 00:00:00 2001
+From: Julian Sikorski <belegdol+github@gmail.com>
+Date: Mon, 20 Feb 2023 23:23:45 +0100
+Subject: [PATCH] Fix building with gcc-13 (#10917)
+
+---
+ src/lib/netlist/plib/ptypes.h                | 1 +
+ src/osd/modules/monitor/monitor_module.h     | 1 +
+ src/osd/modules/render/bgfx/frameparameter.h | 1 +
+ src/osd/modules/render/bgfx/slider.h         | 1 +
+ 4 files changed, 4 insertions(+)
+
+diff --git a/src/lib/netlist/plib/ptypes.h b/src/lib/netlist/plib/ptypes.h
+index 1ae9b1edeb1f..971a509406cc 100644
+--- a/src/lib/netlist/plib/ptypes.h
++++ b/src/lib/netlist/plib/ptypes.h
+@@ -10,6 +10,7 @@
+ 
+ #include "pconfig.h"
+ 
++#include <cstdint>
+ #include <limits>
+ #include <string>
+ #include <type_traits>
+diff --git a/src/osd/modules/monitor/monitor_module.h b/src/osd/modules/monitor/monitor_module.h
+index 583f47d4b349..38e7e02fec21 100644
+--- a/src/osd/modules/monitor/monitor_module.h
++++ b/src/osd/modules/monitor/monitor_module.h
+@@ -8,6 +8,7 @@
+ #ifndef MAME_OSD_MODULES_MONITOR_MONITORMODULE_H
+ #define MAME_OSD_MODULES_MONITOR_MONITORMODULE_H
+ 
++#include <cstdint>
+ #include <vector>
+ 
+ #include "modules/osdmodule.h"
+diff --git a/src/osd/modules/render/bgfx/frameparameter.h b/src/osd/modules/render/bgfx/frameparameter.h
+index 0ac3868bc017..2a1e8f6094b0 100644
+--- a/src/osd/modules/render/bgfx/frameparameter.h
++++ b/src/osd/modules/render/bgfx/frameparameter.h
+@@ -13,6 +13,7 @@
+ 
+ #include "parameter.h"
+ 
++#include <cstdint>
+ #include <string>
+ 
+ class bgfx_frame_parameter : public bgfx_parameter
+diff --git a/src/osd/modules/render/bgfx/slider.h b/src/osd/modules/render/bgfx/slider.h
+index fd64351ebfc4..89a713da4b30 100644
+--- a/src/osd/modules/render/bgfx/slider.h
++++ b/src/osd/modules/render/bgfx/slider.h
+@@ -14,6 +14,7 @@
+ #include <bgfx/bgfx.h>
+ 
+ #include <cmath>
++#include <cstdint>
+ #include <memory>
+ #include <string>
+ #include <vector>

@@ -1,0 +1,179 @@
+From 28ed222150cea07c72ef3e063c1d3c70f67be4ba Mon Sep 17 00:00:00 2001
+From: Heiko Becker <heirecka@exherbo.org>
+Date: Sun, 29 Jan 2023 23:01:23 +0100
+Subject: [PATCH] Fix build with gcc 13 by including <cstdint>
+
+Like other versions before, gcc 13 moved some includes around and as a
+result <cstdint> is no longer transitively included. Explicitly include
+it for uint*_t.
+---
+ xbmc/cores/RetroPlayer/cheevos/Cheevos.h                     | 1 +
+ xbmc/cores/VideoPlayer/VideoRenderers/ColorManager.cpp       | 1 +
+ xbmc/cores/VideoPlayer/VideoRenderers/ColorManager.h         | 1 +
+ xbmc/cores/VideoPlayer/VideoRenderers/HwDecRender/VaapiEGL.h | 1 +
+ xbmc/pictures/Picture.h                                      | 2 ++
+ xbmc/platform/Filesystem.h                                   | 1 +
+ xbmc/platform/posix/Filesystem.cpp                           | 1 +
+ xbmc/utils/CSSUtils.cpp                                      | 1 +
+ xbmc/utils/CharArrayParser.cpp                               | 1 +
+ xbmc/utils/CharArrayParser.h                                 | 1 +
+ xbmc/utils/StreamUtils.h                                     | 1 +
+ xbmc/windowing/X11/GLContextEGL.h                            | 2 ++
+ 12 files changed, 14 insertions(+)
+
+diff --git a/xbmc/cores/RetroPlayer/cheevos/Cheevos.h b/xbmc/cores/RetroPlayer/cheevos/Cheevos.h
+index 71c5ed5896198..70ffe41ed8b8d 100644
+--- a/xbmc/cores/RetroPlayer/cheevos/Cheevos.h
++++ b/xbmc/cores/RetroPlayer/cheevos/Cheevos.h
+@@ -10,6 +10,7 @@
+ 
+ #include "RConsoleIDs.h"
+ 
++#include <cstdint>
+ #include <map>
+ #include <string>
+ 
+diff --git a/xbmc/cores/VideoPlayer/VideoRenderers/ColorManager.cpp b/xbmc/cores/VideoPlayer/VideoRenderers/ColorManager.cpp
+index 0c0d953aca79d..e1888814cf935 100644
+--- a/xbmc/cores/VideoPlayer/VideoRenderers/ColorManager.cpp
++++ b/xbmc/cores/VideoPlayer/VideoRenderers/ColorManager.cpp
+@@ -15,6 +15,7 @@
+ #include "utils/TimeUtils.h"
+ #include "utils/log.h"
+ 
++#include <cstdint>
+ #include <math.h>
+ #include <vector>
+ 
+diff --git a/xbmc/cores/VideoPlayer/VideoRenderers/ColorManager.h b/xbmc/cores/VideoPlayer/VideoRenderers/ColorManager.h
+index b23da958d92e8..1366c3a1d32d4 100644
+--- a/xbmc/cores/VideoPlayer/VideoRenderers/ColorManager.h
++++ b/xbmc/cores/VideoPlayer/VideoRenderers/ColorManager.h
+@@ -12,6 +12,7 @@
+ #include <lcms2.h>
+ #endif
+ 
++#include <cstdint>
+ #include <string>
+ 
+ extern "C"
+diff --git a/xbmc/cores/VideoPlayer/VideoRenderers/HwDecRender/VaapiEGL.h b/xbmc/cores/VideoPlayer/VideoRenderers/HwDecRender/VaapiEGL.h
+index fe65b40587dea..4607946365b55 100644
+--- a/xbmc/cores/VideoPlayer/VideoRenderers/HwDecRender/VaapiEGL.h
++++ b/xbmc/cores/VideoPlayer/VideoRenderers/HwDecRender/VaapiEGL.h
+@@ -13,6 +13,7 @@
+ #include "platform/posix/utils/FileHandle.h"
+ 
+ #include <array>
++#include <cstdint>
+ 
+ #include <va/va.h>
+ 
+diff --git a/xbmc/pictures/Picture.h b/xbmc/pictures/Picture.h
+index 2d469d795d5f1..ee5a270d868c7 100644
+--- a/xbmc/pictures/Picture.h
++++ b/xbmc/pictures/Picture.h
+@@ -11,6 +11,8 @@
+ #include "pictures/PictureScalingAlgorithm.h"
+ #include "utils/Job.h"
+ 
++#include <cstddef>
++#include <cstdint>
+ #include <string>
+ #include <vector>
+ 
+diff --git a/xbmc/platform/Filesystem.h b/xbmc/platform/Filesystem.h
+index 3e6b7ec52bf73..732be9294c53c 100644
+--- a/xbmc/platform/Filesystem.h
++++ b/xbmc/platform/Filesystem.h
+@@ -8,6 +8,7 @@
+ 
+ #pragma once
+ 
++#include <cstdint>
+ #include <string>
+ #include <system_error>
+ namespace KODI
+diff --git a/xbmc/platform/posix/Filesystem.cpp b/xbmc/platform/posix/Filesystem.cpp
+index 477e7b660f391..6e7282ca0013b 100644
+--- a/xbmc/platform/posix/Filesystem.cpp
++++ b/xbmc/platform/posix/Filesystem.cpp
+@@ -19,6 +19,7 @@
+ #include <sys/statfs.h>
+ #endif
+ 
++#include <cstdint>
+ #include <cstdlib>
+ #include <limits.h>
+ #include <string.h>
+diff --git a/xbmc/utils/CSSUtils.cpp b/xbmc/utils/CSSUtils.cpp
+index 96105878e0fd2..329d70cdbc99b 100644
+--- a/xbmc/utils/CSSUtils.cpp
++++ b/xbmc/utils/CSSUtils.cpp
+@@ -8,6 +8,7 @@
+ 
+ #include "CSSUtils.h"
+ 
++#include <cstdint>
+ #include <string>
+ 
+ namespace
+diff --git a/xbmc/utils/CharArrayParser.cpp b/xbmc/utils/CharArrayParser.cpp
+index 2e917e2ff2ba0..5aeec2040babe 100644
+--- a/xbmc/utils/CharArrayParser.cpp
++++ b/xbmc/utils/CharArrayParser.cpp
+@@ -10,6 +10,7 @@
+ 
+ #include "utils/log.h"
+ 
++#include <cstdint>
+ #include <cstring>
+ 
+ void CCharArrayParser::Reset()
+diff --git a/xbmc/utils/CharArrayParser.h b/xbmc/utils/CharArrayParser.h
+index 7e5e314161413..3430946dd3a02 100644
+--- a/xbmc/utils/CharArrayParser.h
++++ b/xbmc/utils/CharArrayParser.h
+@@ -8,6 +8,7 @@
+ 
+ #pragma once
+ 
++#include <cstdint>
+ #include <string>
+ 
+ /*!
+diff --git a/xbmc/utils/StreamUtils.h b/xbmc/utils/StreamUtils.h
+index 079cfa3f5c62b..3d16e8a2224da 100644
+--- a/xbmc/utils/StreamUtils.h
++++ b/xbmc/utils/StreamUtils.h
+@@ -8,6 +8,7 @@
+ 
+ #pragma once
+ 
++#include <cstdint>
+ #include <string>
+ 
+ static constexpr int MP4_BOX_HEADER_SIZE = 8;
+diff --git a/xbmc/windowing/X11/GLContextEGL.h b/xbmc/windowing/X11/GLContextEGL.h
+index afea0b7c43eac..441787b67197b 100644
+--- a/xbmc/windowing/X11/GLContextEGL.h
++++ b/xbmc/windowing/X11/GLContextEGL.h
+@@ -12,6 +12,8 @@
+ #include "system_egl.h"
+ #include "threads/CriticalSection.h"
+ 
++#include <cstdint>
++
+ #include <EGL/eglext.h>
+ #ifdef HAVE_EGLEXTANGLE
+ #include <EGL/eglext_angle.h>
+ diff --git a/xbmc/utils/DRMHelpers.h b/xbmc/utils/DRMHelpers.h
+index ea45823179549..dcc7f502f3603 100644
+--- a/xbmc/utils/DRMHelpers.h
++++ b/xbmc/utils/DRMHelpers.h
+@@ -8,6 +8,7 @@
+ 
+ #pragma once
+ 
++#include <cstdint>
+ #include <string>
