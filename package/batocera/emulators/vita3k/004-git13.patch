@@ -1,0 +1,67 @@
+diff --git a/vita3k/compat/include/compat/state.h b/vita3k/compat/include/compat/state.h
+index 9c6cbc04..43c1d72b 100644
+--- a/vita3k/compat/include/compat/state.h
++++ b/vita3k/compat/include/compat/state.h
+@@ -20,6 +20,7 @@
+ #include <imgui.h>
+ #include <map>
+ #include <string>
++#include <cstdint>
+ 
+ namespace compat {
+ 
+diff --git a/vita3k/cpu/include/cpu/disasm/functions.h b/vita3k/cpu/include/cpu/disasm/functions.h
+index a4563d5a..70a58d71 100644
+--- a/vita3k/cpu/include/cpu/disasm/functions.h
++++ b/vita3k/cpu/include/cpu/disasm/functions.h
+@@ -18,6 +18,7 @@
+ #pragma once
+ 
+ #include <string>
++#include <cstdint>
+ 
+ struct DisasmState;
+ 
+diff --git a/vita3k/crypto/include/crypto/hash.h b/vita3k/crypto/include/crypto/hash.h
+index bf2865ff..bc99e1e4 100644
+--- a/vita3k/crypto/include/crypto/hash.h
++++ b/vita3k/crypto/include/crypto/hash.h
+@@ -19,6 +19,7 @@
+ 
+ #include <array>
+ #include <string>
++#include <cstdint>
+ 
+ using Sha256Hash = std::array<uint8_t, 32>;
+ 
+diff --git a/vita3k/np/include/np/trophy/trp_parser.h b/vita3k/np/include/np/trophy/trp_parser.h
+index 00b5b656..8dcaedb7 100644
+--- a/vita3k/np/include/np/trophy/trp_parser.h
++++ b/vita3k/np/include/np/trophy/trp_parser.h
+@@ -21,6 +21,7 @@
+ #include <functional>
+ #include <string>
+ #include <vector>
++#include <cstdint>
+ 
+ namespace np::trophy {
+ 
+diff --git a/vita3k/renderer/include/renderer/shaders.h b/vita3k/renderer/include/renderer/shaders.h
+index e7d2f495..3d15fd0f 100644
+--- a/vita3k/renderer/include/renderer/shaders.h
++++ b/vita3k/renderer/include/renderer/shaders.h
+@@ -19,6 +19,7 @@
+ 
+ #include <string>
+ #include <vector>
++#include <cstdint>
+ 
+ namespace shader {
+ struct Hints;
+@@ -40,4 +41,4 @@ std::string load_glsl_shader(const SceGxmProgram &program, const FeatureState &f
+ std::vector<uint32_t> load_spirv_shader(const SceGxmProgram &program, const FeatureState &features, bool is_vulkan, const shader::Hints &hints, bool maskupdate, const char *base_path, const char *title_id, const char *self_name, const std::string &shader_version, bool shader_cache);
+ std::string pre_load_shader_glsl(const char *hash_text, const char *shader_type_str, const char *base_path, const char *title_id, const char *self_name);
+ std::vector<uint32_t> pre_load_shader_spirv(const char *hash_text, const char *shader_type_str, const char *base_path, const char *title_id, const char *self_name);
+-} // namespace renderer
+\ No newline at end of file
++} // namespace renderer

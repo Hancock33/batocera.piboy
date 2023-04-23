@@ -1,0 +1,248 @@
+From 9aea3c45aed3af9e5ba4a39d8f39b56a3a0d29b8 Mon Sep 17 00:00:00 2001
+From: Chips-fr <darcelf@gmail.com>
+Date: Tue, 24 Jan 2023 19:52:50 +0100
+Subject: [PATCH 1/2] Proper joystick management for snapshot
+
+---
+ fuse/peripherals/joystick.c |  4 ++++
+ fuse/ui/widget/widget.c     |  5 +++++
+ libspectrum/z80.c           |  5 +++++
+ src/externs.h               |  2 ++
+ src/fuse/settings.c         |  2 ++
+ src/libretro.c              | 19 ++++++++++++-------
+ 6 files changed, 30 insertions(+), 7 deletions(-)
+
+diff --git a/fuse/peripherals/joystick.c b/fuse/peripherals/joystick.c
+index d3edc0d..3b912c1 100644
+--- a/fuse/peripherals/joystick.c
++++ b/fuse/peripherals/joystick.c
+@@ -296,8 +296,10 @@ joystick_enabled_snapshot( libspectrum_snap *snap )
+     }
+ 
+     if( settings_current.joystick_keyboard_output != fuse_type &&
++#ifndef __LIBRETRO__
+         settings_current.joystick_1_output != fuse_type &&
+         settings_current.joystick_2_output != fuse_type &&
++#endif
+         !rzx_playback ) {
+       switch( ui_confirm_joystick( libspectrum_snap_joystick_list(snap,i),
+                                    libspectrum_snap_joystick_inputs(snap,i)) ) {
+@@ -318,7 +320,9 @@ joystick_enabled_snapshot( libspectrum_snap *snap )
+     /* If the snap was configured for a Kempston joystick, enable
+        our Kempston emulation in case the snap was reading from
+        the joystick to prevent things going haywire */
++#ifndef __LIBRETRO__
+     if( fuse_type == JOYSTICK_TYPE_KEMPSTON )
++#endif
+       settings_current.joy_kempston = 1;
+   }
+ }
+diff --git a/fuse/ui/widget/widget.c b/fuse/ui/widget/widget.c
+index d54478e..163d10a 100644
+--- a/fuse/ui/widget/widget.c
++++ b/fuse/ui/widget/widget.c
+@@ -756,6 +756,11 @@ ui_confirm_joystick( libspectrum_joystick libspectrum_type, int inputs )
+   int error;
+   char title[80];
+ 
++#ifdef __LIBRETRO__
++  if(( !settings_current.joy_prompt ) && (inputs & LIBSPECTRUM_JOYSTICK_INPUT_JOYSTICK_1))
++      return UI_CONFIRM_JOYSTICK_JOYSTICK_1;
++#endif
++
+   if( !settings_current.joy_prompt ) return UI_CONFIRM_JOYSTICK_NONE;
+ 
+   snprintf( title, sizeof( title ), "Configure %s joystick",
+diff --git a/libspectrum/z80.c b/libspectrum/z80.c
+index f7985f1..02118a5 100644
+--- a/libspectrum/z80.c
++++ b/libspectrum/z80.c
+@@ -396,6 +396,11 @@ read_header( const libspectrum_byte *buffer, libspectrum_snap *snap,
+     *version = 1;
+ 
+     libspectrum_snap_set_joystick_active_count( snap, 1 );
++#ifdef __LIBRETRO__
++    libspectrum_snap_set_joystick_inputs( snap, 0,
++                                        LIBSPECTRUM_JOYSTICK_INPUT_KEYBOARD |
++                                        LIBSPECTRUM_JOYSTICK_INPUT_JOYSTICK_1 );
++#endif
+     error = get_joystick_type_v1( snap, ( header[29] & 0xc0 ) >> 6 );
+     if( error ) return error;
+ 
+diff --git a/src/externs.h b/src/externs.h
+index f41ffab..d85154b 100644
+--- a/src/externs.h
++++ b/src/externs.h
+@@ -12,6 +12,8 @@
+ 
+ #define RETRO_DEVICE_SPECTRUM_KEYBOARD  RETRO_DEVICE_SUBCLASS(RETRO_DEVICE_KEYBOARD, 0)
+ 
++#define RETRO_DEVICE_AUTO_CFG           RETRO_DEVICE_JOYPAD
++
+ #define RETRO_DEVICE_CURSOR_JOYSTICK    RETRO_DEVICE_SUBCLASS(RETRO_DEVICE_JOYPAD, 0)
+ #define RETRO_DEVICE_KEMPSTON_JOYSTICK  RETRO_DEVICE_SUBCLASS(RETRO_DEVICE_JOYPAD, 1)
+ #define RETRO_DEVICE_SINCLAIR1_JOYSTICK RETRO_DEVICE_SUBCLASS(RETRO_DEVICE_JOYPAD, 2)
+diff --git a/src/fuse/settings.c b/src/fuse/settings.c
+index 4dd50bd..782b875 100644
+--- a/src/fuse/settings.c
++++ b/src/fuse/settings.c
+@@ -25,8 +25,10 @@ int settings_init(int *first_arg, int argc, char **argv)
+    
+    settings_current.joy_kempston = 1;
+    settings_current.fuller = 1;
++#ifndef __LIBRETRO__
+    settings_current.joystick_1_output = 1;
+    settings_current.joystick_2_output = 2;
++#endif
+    
+    update_variables(1);
+    return res;
+diff --git a/src/libretro.c b/src/libretro.c
+index d94b255..1647cf2 100644
+--- a/src/libretro.c
++++ b/src/libretro.c
+@@ -549,14 +549,15 @@ void retro_set_environment(retro_environment_t cb)
+    env_cb = cb;
+ 
+    static const struct retro_controller_description controllers_and_kb[] = {
+-      { "Cursor Joystick", RETRO_DEVICE_CURSOR_JOYSTICK },
+-      { "Kempston Joystick", RETRO_DEVICE_KEMPSTON_JOYSTICK },
++      { "Core defined Input",  RETRO_DEVICE_AUTO_CFG           },
++      { "Cursor Joystick",     RETRO_DEVICE_CURSOR_JOYSTICK    },
++      { "Kempston Joystick",   RETRO_DEVICE_KEMPSTON_JOYSTICK  },
+       { "Sinclair 1 Joystick", RETRO_DEVICE_SINCLAIR1_JOYSTICK },
+       { "Sinclair 2 Joystick", RETRO_DEVICE_SINCLAIR2_JOYSTICK },
+-      { "Timex 1 Joystick", RETRO_DEVICE_TIMEX1_JOYSTICK },
+-      { "Timex 2 Joystick", RETRO_DEVICE_TIMEX2_JOYSTICK },
+-      { "Fuller Joystick", RETRO_DEVICE_FULLER_JOYSTICK },
+-      { "Sinclair Keyboard", RETRO_DEVICE_SPECTRUM_KEYBOARD }
++      { "Timex 1 Joystick",    RETRO_DEVICE_TIMEX1_JOYSTICK    },
++      { "Timex 2 Joystick",    RETRO_DEVICE_TIMEX2_JOYSTICK    },
++      { "Fuller Joystick",     RETRO_DEVICE_FULLER_JOYSTICK    },
++      { "Sinclair Keyboard",   RETRO_DEVICE_SPECTRUM_KEYBOARD  }
+    };
+ 
+    static const struct retro_controller_info ports[MAX_PADS + 1] = {
+@@ -594,7 +595,7 @@ void retro_init(void)
+    active_cheats = NULL;
+ 
+    // Set default controllers
+-   retro_set_controller_port_device( 0, RETRO_DEVICE_CURSOR_JOYSTICK );
++   retro_set_controller_port_device( 0, RETRO_DEVICE_CURSOR_JOYSTICK   );
+    retro_set_controller_port_device( 1, RETRO_DEVICE_KEMPSTON_JOYSTICK );
+    retro_set_controller_port_device( 2, RETRO_DEVICE_SPECTRUM_KEYBOARD );
+ }
+@@ -1081,6 +1082,10 @@ void retro_deinit(void)
+ void retro_set_controller_port_device(unsigned port, unsigned device)
+ {
+    log_cb(RETRO_LOG_INFO, "port %u device %08x\n", port, device);
++
++   if (device == RETRO_DEVICE_AUTO_CFG)
++      return;
++
+    switch (device)
+    {
+       case RETRO_DEVICE_CURSOR_JOYSTICK:
+
+From c0262040008a7efba04dd01f8cc7a8f96102f83b Mon Sep 17 00:00:00 2001
+From: Chips-fr <darcelf@gmail.com>
+Date: Sun, 29 Jan 2023 17:36:01 +0100
+Subject: [PATCH 2/2] Display selected joystick at startup
+
+---
+ src/libretro.c | 46 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 46 insertions(+)
+
+diff --git a/src/libretro.c b/src/libretro.c
+index 1647cf2..7b72658 100644
+--- a/src/libretro.c
++++ b/src/libretro.c
+@@ -79,6 +79,9 @@ static const machine_t machine_list[] =
+ 
+ static int fuse_init_called = 0;
+ 
++static unsigned msg_interface_version = 0;
++static int display_joystick_type;
++
+ static retro_video_refresh_t video_cb;
+ static retro_input_poll_t input_poll_cb;
+ 
+@@ -298,6 +301,31 @@ static const struct retro_variable core_vars[] =
+    { NULL, NULL },
+ };
+ 
++void Retro_Msg(const char * msg_str)
++{
++   if (msg_interface_version >= 1)
++   {
++      struct retro_message_ext msg = {
++         msg_str,
++         3000,
++         3,
++         RETRO_LOG_WARN,
++         RETRO_MESSAGE_TARGET_ALL,
++         RETRO_MESSAGE_TYPE_NOTIFICATION,
++         -1
++      };
++      env_cb(RETRO_ENVIRONMENT_SET_MESSAGE_EXT, &msg);
++   }
++   else
++   {
++      struct retro_message msg = {
++         msg_str,
++         180
++      };
++      env_cb(RETRO_ENVIRONMENT_SET_MESSAGE, &msg);
++   }
++}
++
+ int update_variables(int force)
+ {
+    int flags = 0;
+@@ -590,6 +618,9 @@ void retro_init(void)
+       log_cb = log.log;
+    }
+ 
++   msg_interface_version = 0;
++   env_cb(RETRO_ENVIRONMENT_GET_MESSAGE_INTERFACE_VERSION, &msg_interface_version);
++
+    machine = machine_list;
+    total_time_ms = 0.0;
+    active_cheats = NULL;
+@@ -598,6 +629,8 @@ void retro_init(void)
+    retro_set_controller_port_device( 0, RETRO_DEVICE_CURSOR_JOYSTICK   );
+    retro_set_controller_port_device( 1, RETRO_DEVICE_KEMPSTON_JOYSTICK );
+    retro_set_controller_port_device( 2, RETRO_DEVICE_SPECTRUM_KEYBOARD );
++   
++   display_joystick_type = FALSE;
+ }
+ 
+ static libspectrum_id_t identify_file(const void* data, size_t size)
+@@ -1001,6 +1034,15 @@ void retro_run(void)
+ {
+    bool updated = false;
+ 
++   if (display_joystick_type == TRUE)
++   {
++      char title[80];
++      snprintf( title, sizeof( title ), "Configure port 1 as %s joystick",
++         libspectrum_joystick_name( settings_current.joystick_1_output ));
++      Retro_Msg(title);
++      display_joystick_type = FALSE;
++   }
++
+    if (env_cb(RETRO_ENVIRONMENT_GET_VARIABLE_UPDATE, &updated) && updated)
+    {
+       int flags = update_variables(0);
+@@ -1084,7 +1126,11 @@ void retro_set_controller_port_device(unsigned port, unsigned device)
+    log_cb(RETRO_LOG_INFO, "port %u device %08x\n", port, device);
+ 
+    if (device == RETRO_DEVICE_AUTO_CFG)
++   {
++      if (port == 0)
++         display_joystick_type = TRUE;
+       return;
++   }
+ 
+    switch (device)
+    {

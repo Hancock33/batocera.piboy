@@ -1,5 +1,5 @@
 diff --git a/mupen64plus-rsp-paraLLEl/rsp_disasm.hpp b/mupen64plus-rsp-paraLLEl/rsp_disasm.hpp
-index 22c464b..a5133e2 100644
+index 22c464b2..a5133e2e 100644
 --- a/mupen64plus-rsp-paraLLEl/rsp_disasm.hpp
 +++ b/mupen64plus-rsp-paraLLEl/rsp_disasm.hpp
 @@ -2,6 +2,7 @@
@@ -18,7 +18,7 @@ index 22c464b..a5133e2 100644
 \ No newline at end of file
 +#endif
 diff --git a/mupen64plus-video-angrylion/parallel_al.cpp b/mupen64plus-video-angrylion/parallel_al.cpp
-index a269e43..22aa453 100644
+index a269e433..22aa4534 100644
 --- a/mupen64plus-video-angrylion/parallel_al.cpp
 +++ b/mupen64plus-video-angrylion/parallel_al.cpp
 @@ -10,6 +10,7 @@
