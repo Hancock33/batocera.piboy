@@ -3,8 +3,8 @@
 # samtse
 #
 ################################################################################
-# Version: Commits on Apr 22, 2023
-SAMTSE_VERSION = 977040050687a7c684d92f844417e11240add4ba
+# Version: Commits on Apr 23, 2023
+SAMTSE_VERSION = 56118c6edb140d07f09e5c2c970426feeb416f84
 SAMTSE_SITE = https://github.com/tx00100xt/SeriousSamClassic-VK.git
 SAMTSE_SITE_METHOD=git
 SAMTSE_GIT_SUBMODULES=YES
@@ -29,7 +29,7 @@ define SAMTSE_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
 	# copy assets
 	cp -av $(SAMTSE_BUILDDIR)/Debug/*                                   $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
-	cp -av $(SAMTSE_BUILDDIR)/MakeFONT                                  $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
+	cp -av $(SAMTSE_BUILDDIR)/serioussamse-mkfont                       $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
 	cp -av $(SAMTSE_BUILDDIR)/serioussamse-ded                          $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/serioussam-ded
 	cp -av $(SAMTSE_BUILDDIR)/serioussamse                              $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/serioussam
 	$(TARGET_STRIP) $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/*

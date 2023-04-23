@@ -1,0 +1,12 @@
+diff --git a/src/core/frontend/mic.h b/src/core/frontend/mic.h
+index 28738df52..6a058b593 100644
+--- a/src/core/frontend/mic.h
++++ b/src/core/frontend/mic.h
+@@ -6,6 +6,7 @@
+ 
+ #include <memory>
+ #include <vector>
++#include <string>
+ #include "common/swap.h"
+ #include "common/threadsafe_queue.h"
+ 

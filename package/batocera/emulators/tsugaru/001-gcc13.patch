@@ -1,0 +1,62 @@
+diff --git a/src/device/device.h b/src/device/device.h
+index edae7f68..18de4c15 100644
+--- a/src/device/device.h
++++ b/src/device/device.h
+@@ -18,7 +18,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ 
+ #include <vector>
+ #include <string>
+-
++#include <cstdint>
+ 
+ 
+ class Device
+diff --git a/src/externals/d77/d77.h b/src/externals/d77/d77.h
+index 0989e9f5..fb1cc5d7 100644
+--- a/src/externals/d77/d77.h
++++ b/src/externals/d77/d77.h
+@@ -114,6 +114,7 @@ Offset    Size          Meaning
+ #include <array>
+ #include <vector>
+ #include <string>
++#include <cstdint>
+ 
+ class D77File
+ {
+diff --git a/src/osdependent/filesys/filesys.h b/src/osdependent/filesys/filesys.h
+index b8378900..91d66a1c 100644
+--- a/src/osdependent/filesys/filesys.h
++++ b/src/osdependent/filesys/filesys.h
+@@ -7,6 +7,7 @@
+ #include <fstream>
+ #include <vector>
+ #include <string>
++#include <cstdint>
+ 
+ // When C++17's filesystem library is commonly available and stable, I'll change it to
+ // non-platform dependent library.
+diff --git a/src/rf5c68/rf5c68.h b/src/rf5c68/rf5c68.h
+index 60480a4e..1427dd17 100644
+--- a/src/rf5c68/rf5c68.h
++++ b/src/rf5c68/rf5c68.h
+@@ -19,6 +19,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ 
+ #include <vector>
+ #include <string>
++#include <cstdint>
+ 
+ class RF5C68
+ {
+diff --git a/src/ym2612/ym2612.h b/src/ym2612/ym2612.h
+index 85342e22..7e8ae165 100644
+--- a/src/ym2612/ym2612.h
++++ b/src/ym2612/ym2612.h
+@@ -18,7 +18,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ 
+ #include <vector>
+ #include <string>
+-
++#include <cstdint>
+ 
+ 
+ // What exactly is the master clock given to YM2612 of TOWNS?

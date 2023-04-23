@@ -1,0 +1,36 @@
+diff --git a/pcsx2/CDVD/CDVDdiscReader.h b/pcsx2/CDVD/CDVDdiscReader.h
+index 6d1078ecb..dee2f8d40 100644
+--- a/pcsx2/CDVD/CDVDdiscReader.h
++++ b/pcsx2/CDVD/CDVDdiscReader.h
+@@ -26,6 +26,7 @@
+ #include <array>
+ #include <memory> /* for unique_ptr */
+ #include <vector>
++#include <string>
+ 
+ #include "Pcsx2Defs.h"
+ 
+diff --git a/pcsx2/CDVD/CDVDdiscThread.cpp b/pcsx2/CDVD/CDVDdiscThread.cpp
+index 3619b8205..19f030ef8 100644
+--- a/pcsx2/CDVD/CDVDdiscThread.cpp
++++ b/pcsx2/CDVD/CDVDdiscThread.cpp
+@@ -22,6 +22,7 @@
+ #include <queue>
+ #include <cstring> /* memcpy */
+ #include <thread>
++#include <system_error>
+ 
+ const u32 sectors_per_read = 16;
+ 
+diff --git a/pcsx2/MemoryPatchDatabase.h b/pcsx2/MemoryPatchDatabase.h
+index 6d0d17c8c..b927226f8 100644
+--- a/pcsx2/MemoryPatchDatabase.h
++++ b/pcsx2/MemoryPatchDatabase.h
+@@ -3,6 +3,7 @@
+ #include <unordered_map>
+ #include <string>
+ #include <vector>
++#include <cstdint>
+ 
+ class MemoryPatchDatabase
+ {

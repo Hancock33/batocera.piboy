@@ -1,8 +1,8 @@
 diff --git a/pcsx2/CMakeLists.txt b/pcsx2/CMakeLists.txt
-index c2b3a063a..09dc6f51e 100644
+index c228c94e95..92cf4014ae 100644
 --- a/pcsx2/CMakeLists.txt
 +++ b/pcsx2/CMakeLists.txt
-@@ -321,28 +321,24 @@ if (XXD)
+@@ -347,28 +347,24 @@ if (XXD)
  	add_custom_command(
  		OUTPUT ${db_res_bin}/cheats_ws.h
  		COMMAND ${XXD} -i cheats_ws.zip cheats_ws.h
