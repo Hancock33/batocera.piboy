@@ -10,7 +10,7 @@ HLSDK_XASH3D_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf libsodium
 HLSDK_XASH3D_LICENSE = Half Life 1 SDK LICENSE
 HLSDK_XASH3D_LICENSE_FILES = LICENSE
 
-HLSDK_XASH3D_CONF_OPTS = --build-type=release --enable-simple-mod-hacks
+HLSDK_XASH3D_CONF_OPTS = --build-type=release
 
 ifeq ($(BR2_ARCH_IS_64),y)
 	HLSDK_XASH3D_CONF_OPTS += --64bits
