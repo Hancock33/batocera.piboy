@@ -7,12 +7,16 @@
 BSTONE_VERSION = 9f34ded8013dca68d3a593bbcec7066b48971560
 BSTONE_SITE = $(call github,bibendovsky,bstone,$(BSTONE_VERSION))
 
-BSTONE_DEPENDENCIES = sdl2 sdl2_mixer
+BSTONE_DEPENDENCIES = sdl2 sdl2_mixer host-ninja
 BSTONE_LICENSE = GPL-2.0
 
 BSTONE_SUPPORTS_IN_SOURCE_BUILD = NO
 
-BSTONE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
+BSTONE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja
+
+define BSTONE_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(BSTONE_BUILDDIR)
+endef
 
 define BSTONE_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/buildroot-build/src/bstone $(TARGET_DIR)/usr/bin

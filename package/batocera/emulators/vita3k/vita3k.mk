@@ -3,22 +3,26 @@
 # vita3k
 #
 ################################################################################
-# Version: Commits on Apr 23, 2023
-VITA3K_VERSION = b946a8834e63ef14c7c3f7c9f445252f86c9ded6
+# Version: Commits on Apr 25, 2023
+VITA3K_VERSION = 06515bfedcb5d4fffd9f698d6548a7e0ecd6c5ea
 VITA3K_SITE = https://github.com/vita3k/vita3k
 VITA3K_SITE_METHOD=git
 VITA3K_GIT_SUBMODULES=YES
 VITA3K_LICENSE = GPLv3
-VITA3K_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf zlib libogg libvorbis python-ruamel-yaml
+VITA3K_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf zlib libogg libvorbis python-ruamel-yaml host-ninja
 
 VITA3K_SUPPORTS_IN_SOURCE_BUILD = NO
 
 VITA3K_CONF_OPTS = -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF \
-                   -DUSE_DISCORD_RICH_PRESENCE=OFF -DUSE_VITA3K_UPDATE=OFF
+                   -DUSE_DISCORD_RICH_PRESENCE=OFF -DUSE_VITA3K_UPDATE=OFF -GNinja
 
 define VITA3K_GET_SUBMODULE
     mkdir -p $(@D)/external
     cd $(@D)/external && git clone https://github.com/Vita3K/nativefiledialog-cmake
+endef
+
+define VITA3K_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(VITA3K_BUILDDIR)
 endef
 
 define VITA3K_INSTALL_TARGET_CMDS

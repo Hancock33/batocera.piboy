@@ -3,12 +3,22 @@
 # doomretro
 #
 ################################################################################
-# Version: Commits on Apr 23, 2023
-DOOMRETRO_VERSION = 8e9d2115b00127a03b704fc5b0c11d0989bb1865
+# Version: Commits on Apr 25, 2023
+DOOMRETRO_VERSION = 5749c75b0c5c3f5e869ad07c50fefe0af4554f72
 DOOMRETRO_SITE = $(call github,bradharding,doomretro,$(DOOMRETRO_VERSION))
 
-DOOMRETRO_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image
+DOOMRETRO_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image host-ninja
 DOOMRETRO_LICENSE = GPL-2.0
 DOOMRETRO_SUPPORTS_IN_SOURCE_BUILD = NO
+
+DOOMRETRO_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja
+
+define DOOMRETRO_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(DOOMRETRO_BUILDDIR)
+endef
+
+define DOOMRETRO_INSTALL_TARGET_CMDS
+	$(TARGET_MAKE_ENV) DESTDIR=$(TARGET_DIR) $(BR2_CMAKE) --install $(DOOMRETRO_BUILDDIR)
+endef
 
 $(eval $(cmake-package))

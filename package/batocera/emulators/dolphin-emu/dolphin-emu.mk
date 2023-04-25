@@ -3,8 +3,8 @@
 # dolphin-emu
 #
 ################################################################################
-# Version: Commits on Apr 22, 2023
-DOLPHIN_EMU_VERSION = 8fbfee03ab3dd743fd1091ff0abfc7b063df24d7
+# Version: Commits on Apr 25, 2023
+DOLPHIN_EMU_VERSION = 8c2e9242555bdcbaa0067658bf8a4a41d6936405
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
 DOLPHIN_EMU_SITE_METHOD = git
 DOLPHIN_EMU_LICENSE = GPLv2+
@@ -12,9 +12,9 @@ DOLPHIN_EMU_GIT_SUBMODULES = YES
 DOLPHIN_EMU_SUPPORTS_IN_SOURCE_BUILD = NO
 
 DOLPHIN_EMU_DEPENDENCIES = libevdev ffmpeg zlib libpng lzo libusb libcurl
-DOLPHIN_EMU_DEPENDENCIES += bluez5_utils hidapi xz host-xz sdl2
+DOLPHIN_EMU_DEPENDENCIES += bluez5_utils hidapi xz host-xz sdl2 host-ninja
 
-DOLPHIN_EMU_CONF_OPTS  = -DCMAKE_BUILD_TYPE=Release
+DOLPHIN_EMU_CONF_OPTS  = -DCMAKE_BUILD_TYPE=Release -GNinja
 DOLPHIN_EMU_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 DOLPHIN_EMU_CONF_OPTS += -DDISTRIBUTOR='batocera.linux'
 DOLPHIN_EMU_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
@@ -42,19 +42,19 @@ else
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_VULKAN=OFF
 endif
 
+define DOLPHIN_EMU_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(DOLPHIN_EMU_BUILDDIR)
+endef
+
+define DOLPHIN_EMU_INSTALL_TARGET_CMDS
+	$(TARGET_MAKE_ENV) DESTDIR=$(TARGET_DIR) $(BR2_CMAKE) --install $(DOLPHIN_EMU_BUILDDIR)
+endef
+
 define DOLPHIN_EMU_EVMAPY
     mkdir -p $(TARGET_DIR)/usr/share/evmapy
     cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/*.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-define DOLPHIN_EMU_REMOVE_GUI
-    rm $(TARGET_DIR)/usr/bin/dolphin-emu
-endef
-
 DOLPHIN_EMU_POST_INSTALL_TARGET_HOOKS += DOLPHIN_EMU_EVMAPY
-
-ifneq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
-    DOLPHIN_EMU_POST_INSTALL_TARGET_HOOKS += DOLPHIN_EMU_REMOVE_GUI
-endif
 
 $(eval $(cmake-package))

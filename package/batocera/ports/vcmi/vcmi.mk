@@ -3,14 +3,22 @@
 # vcmi
 #
 ################################################################################
-# Version: Commits on Apr 22, 2023
-VCMI_VERSION = 1fde8b588bbb12efc2a979fe4506a91753caca38
+# Version: Commits on Apr 24, 2023
+VCMI_VERSION = 3489c4fd5c748135ae8c804f4bf022a825e69a62
 VCMI_SITE = https://github.com/vcmi/vcmi.git
 VCMI_SITE_METHOD=git
 VCMI_GIT_SUBMODULES=YES
-VCMI_DEPENDENCIES = sdl2 sdl2_image sdl2_mixer sdl2_ttf ffmpeg tbb
+VCMI_DEPENDENCIES = sdl2 sdl2_image sdl2_mixer sdl2_ttf ffmpeg tbb host-ninja
 
-VCMI_CONF_OPTS += -DENABLE_TEST=OFF -DENABLE_LAUNCHER=OFF -DENABLE_EDITOR=OFF -DENABLE_GITVERSION=OFF
+VCMI_CONF_OPTS += -DENABLE_TEST=OFF -DENABLE_LAUNCHER=OFF -DENABLE_EDITOR=OFF -DENABLE_GITVERSION=OFF -GNinja
+
+define VCMI_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(VCMI_BUILDDIR)
+endef
+
+define VCMI_INSTALL_TARGET_CMDS
+	$(TARGET_MAKE_ENV) DESTDIR=$(TARGET_DIR) $(BR2_CMAKE) --install $(VCMI_BUILDDIR)
+endef
 
 define VCMI_EVMAPY
 	# evmap config

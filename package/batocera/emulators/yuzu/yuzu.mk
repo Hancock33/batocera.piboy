@@ -3,20 +3,20 @@
 # yuzu
 #
 ################################################################################
-# Version: Commits on Apr 22, 2023
-YUZU_VERSION = d60018358366304db271c76d64ee753f7dde14b4
+# Version: Commits on Apr 24, 2023
+YUZU_VERSION = 9bf19b04f6ba432e09caf387ca9b63db5585f140
 YUZU_SITE = https://github.com/yuzu-emu/yuzu.git
 YUZU_SITE_METHOD=git
 YUZU_GIT_SUBMODULES=YES
 YUZU_LICENSE = GPLv2
 YUZU_DEPENDENCIES += fmt boost ffmpeg zstd zlib libzip lz4 catch2 sdl2 opus
-YUZU_DEPENDENCIES += qt6base qt6svg qt6tools
+YUZU_DEPENDENCIES += qt6base qt6svg qt6tools host-ninja
 
 YUZU_SUPPORTS_IN_SOURCE_BUILD = NO
 
 YUZU_CONF_ENV += LDFLAGS=-lpthread ARCHITECTURE_x86_64=1
 
-YUZU_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
+YUZU_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja
 YUZU_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 YUZU_CONF_OPTS += -DARCHITECTURE_x86_64=ON
 YUZU_CONF_OPTS += -DENABLE_SDL2=ON
@@ -29,6 +29,10 @@ YUZU_CONF_OPTS += -DYUZU_USE_EXTERNAL_VULKAN_HEADERS=OFF
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
     YUZU_DEPENDENCIES += host-glslang
 endif
+
+define YUZU_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(YUZU_BUILDDIR)
+endef
 
 define YUZU_INSTALL_TARGET_CMDS
     mkdir -p $(TARGET_DIR)/usr/bin

@@ -8414,6 +8414,7 @@ scummvm:
                 "On":            1
 
 easyrpg:
+  features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         testplay:
@@ -8438,10 +8439,10 @@ easyrpg:
                 "Turkish":                       1254
                 "Baltic":                        1257
 redream:
+  features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
       redreamResolution:
-          group: VIDEO SETTINGS
           prompt:      RENDERING RESOLUTION
           description: Choose your render resolution (Requires personal redream.key file).
           choices:
@@ -8452,7 +8453,6 @@ redream:
               "5x (3200x2400)":          5
               "6x (3840x2880)":          6
       redreamRatio:
-          group: VIDEO SETTINGS
           prompt:      ASPECT RATIO
           description: Choose your preferred aspect ratio.
           choices:
@@ -8460,21 +8460,20 @@ redream:
               "16:9":          "16:9"
               "Stretch":       stretch
       redreamFrameSkip:
-          group: VIDEO SETTINGS
           prompt:      FRAMESKIP
           description: Enable auto frameskipping for performance on lower-end systems.
           choices:
               "Off (Default)" : 0
               "On"            : 1
       redreamVsync:
-          group: VIDEO SETTINGS
+          group: ADVANCED OPTIONS
           prompt:      VSYNC
           description: Enable vertical sync to avoid tearing in some cases.
           choices:
               "Off (Default)": 0
               "On"           : 1
       redreamPolygon:
-          group: VIDEO SETTINGS
+          group: ADVANCED OPTIONS
           prompt:      POLYGON SORT ACCURACY
           description: Choose the amount of polygon sort accuracy (Higher may cause artifacts).
           choices:

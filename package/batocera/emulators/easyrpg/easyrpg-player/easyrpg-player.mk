@@ -3,19 +3,28 @@
 # easyrpg-player
 #
 ################################################################################
-# Version: Commits on Apr 23, 2023
-EASYRPG_PLAYER_VERSION = b2427e5e8ab4dbd7cf5e08102838f9104226cb73
-EASYRPG_PLAYER_DEPENDENCIES = sdl2 zlib fmt libpng freetype mpg123 libvorbis opusfile liblcf pixman speexdsp libxmp wildmidi fluidsynth
+# Version: Commits on Apr 24, 2023
+EASYRPG_PLAYER_VERSION = 3ddf7eac8db7245c9a32f71c7190b58ba7b8cc95
+EASYRPG_PLAYER_DEPENDENCIES = sdl2 zlib fmt libpng freetype mpg123 libvorbis opusfile liblcf pixman speexdsp libxmp wildmidi fluidsynth host-ninja
 EASYRPG_PLAYER_LICENSE = MIT
 EASYRPG_PLAYER_SITE = $(call github,EasyRPG,Player,$(EASYRPG_PLAYER_VERSION))
 
 EASYRPG_PLAYER_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 EASYRPG_PLAYER_CONF_OPTS += -DPLAYER_BUILD_EXECUTABLE=ON
+EASYRPG_PLAYER_CONF_OPTS += -GNinja
 
 EASYRPG_PLAYER_CONF_ENV += LDFLAGS=-lpthread
 
 # Should be set when the package cannot be built inside the source tree but needs a separate build directory.
 EASYRPG_PLAYER_SUPPORTS_IN_SOURCE_BUILD = NO
+
+define EASYRPG_PLAYER_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(EASYRPG_PLAYER_BUILDDIR)
+endef
+
+define EASYRPG_PLAYER_INSTALL_TARGET_CMDS
+	$(TARGET_MAKE_ENV) DESTDIR=$(TARGET_DIR) $(BR2_CMAKE) --install $(EASYRPG_PLAYER_BUILDDIR)
+endef
 
 define EASYRPG_PLAYER_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
