@@ -11,15 +11,16 @@ LIBRETRO_SUPERFLAPPYBIRDS_LICENSE = GPL-3.0
 
 LIBRETRO_SUPERFLAPPYBIRDS_SUPPORTS_IN_SOURCE_BUILD = NO
 
-LIBRETRO_SUPERFLAPPYBIRDS_CONF_OPTS = -DCMAKE_BUILD_TYPE=Release
+LIBRETRO_SUPERFLAPPYBIRDS_CONF_OPTS = -DCMAKE_BUILD_TYPE=Release -GNinja
 
-LIBRETRO_SUPERFLAPPYBIRDS_PLATFORM = $(LIBRETRO_PLATFORM)
+define LIBRETRO_SUPERFLAPPYBIRDS_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(LIBRETRO_SUPERFLAPPYBIRDS_BUILDDIR)
+endef
 
 define LIBRETRO_SUPERFLAPPYBIRDS_INSTALL_TARGET_CMDS
-		cp -r $(@D)/resources $(TARGET_DIR)/usr/lib/libretro
-        $(INSTALL) -D $(@D)/buildroot-build/superflappybirds_libretro.so \
-                $(TARGET_DIR)/usr/lib/libretro/superflappybirds_libretro.so
-    mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/superflappybirds
+	cp -r $(@D)/resources $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/buildroot-build/superflappybirds_libretro.so $(TARGET_DIR)/usr/lib/libretro/superflappybirds_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/superflappybirds
 	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-superflappybirds/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/superflappybirds/
 endef
 
