@@ -7,7 +7,7 @@
 CGENIUS_VERSION = ff5447465b0d7b91147a395062268e9ddea9a53b
 CGENIUS_SITE = https://github.com/gerstrong/Commander-Genius
 
-CGENIUS_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf boost libcurl
+CGENIUS_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf boost libcurl host-ninja
 CGENIUS_SITE_METHOD=git
 CGENIUS_GIT_SUBMODULES=YES
 CGENIUS_SUPPORTS_IN_SOURCE_BUILD = NO
@@ -21,10 +21,18 @@ else
 CGENIUS_CONF_OPTS += -DUSE_OPENGL=OFF -DEMBEDDED=ON
 endif
 
-CGENIUS_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF
+CGENIUS_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -GNinja
 CGENIUS_CONF_OPTS += -DBUILD_COSMOS=1
 CGENIUS_CONF_OPTS += -DGAMES_SHAREDIR=/userdata/roms/ports/cgenius
 CGENIUS_CONF_OPTS += -DFULL_GAMES_SHAREDIR=/userdata/roms/ports/cgenius
+
+define CGENIUS_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(CGENIUS_BUILDDIR)
+endef
+
+define CGENIUS_INSTALL_TARGET_CMDS
+	$(TARGET_MAKE_ENV) DESTDIR=$(TARGET_DIR) $(BR2_CMAKE) --install $(CGENIUS_BUILDDIR)
+endef
 
 define CGENIUS_INSTALL_TARGET_EVMAP
 	rm -rf $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/cgenius

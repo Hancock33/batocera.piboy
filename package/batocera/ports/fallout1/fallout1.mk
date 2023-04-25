@@ -7,11 +7,15 @@
 FALLOUT1_VERSION = c1d244e1e5dfcfac4148bcaf6585141e2d39f3e5
 FALLOUT1_SITE = $(call github,alexbatalov,fallout1-ce,$(FALLOUT1_VERSION))
 
-FALLOUT1_DEPENDENCIES = sdl2 sdl2_image sdl2_mixer sdl2_net sdl2_ttf
+FALLOUT1_DEPENDENCIES = sdl2 sdl2_image sdl2_mixer sdl2_net sdl2_ttf host-ninja
 FALLOUT1_LICENSE = GPL-3.0
 FALLOUT1_SUPPORTS_IN_SOURCE_BUILD = NO
 
-FALLOUT1_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
+FALLOUT1_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja
+
+define FALLOUT1_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(FALLOUT1_BUILDDIR)
+endef
 
 define FALLOUT1_INSTALL_TARGET_CMDS
     $(INSTALL) -D -m 0755 $(@D)/buildroot-build/fallout-ce $(TARGET_DIR)/usr/bin/fallout-ce
