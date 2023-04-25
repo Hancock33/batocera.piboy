@@ -7,11 +7,15 @@
 OPENCLAW_VERSION = 5ee5740ca98377c76b13b50c84f610b0066a4717
 OPENCLAW_SITE = $(call github,pjasicek,OpenClaw,$(OPENCLAW_VERSION))
 
-OPENCLAW_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf sdl2_gfx
+OPENCLAW_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf sdl2_gfx host-ninja
 OPENCLAW_LICENSE = GPL-3.0
 OPENCLAW_SUPPORTS_IN_SOURCE_BUILD = NO
 
-OPENCLAW_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
+OPENCLAW_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja
+
+define OPENCLAW_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(OPENCLAW_BUILDDIR)
+endef
 
 define OPENCLAW_INSTALL_TARGET_CMDS
     $(INSTALL) -D $(@D)/Build_Release/openclaw $(TARGET_DIR)/usr/bin/openclaw

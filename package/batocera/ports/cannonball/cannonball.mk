@@ -7,7 +7,7 @@
 CANNONBALL_VERSION = 27493ebf62be3498dff93ed6a45e8e2db819bae1
 CANNONBALL_SITE = $(call github,djyt,cannonball,$(CANNONBALL_VERSION))
 CANNONBALL_LICENSE = GPLv2
-CANNONBALL_DEPENDENCIES = sdl2 boost
+CANNONBALL_DEPENDENCIES = sdl2 boost host-ninja
 CANNONBALL_SUPPORTS_IN_SOURCE_BUILD = NO
 CANNONBALL_SUBDIR = cmake
 CANNONBALL_TARGET = linux.cmake
@@ -27,7 +27,7 @@ CANNONBALL_TARGET = linux.cmake
 endif
 
 # Build as release with proper target and paths
-CANNONBALL_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DTARGET=$(CANNONBALL_TARGET)
+CANNONBALL_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja -DTARGET=$(CANNONBALL_TARGET)
 
 # Cannonball cmake files are hopelessly broken.
 # Link libmali manually. Ideally we should fix cannonball to use pkg-config instead.
@@ -41,6 +41,10 @@ endif
 CANNONBALL_EXE_LINKER_FLAGS += -flto
 CANNONBALL_SHARED_LINKER_FLAGS += -flto
 CANNONBALL_CONF_OPTS += -DCMAKE_CXX_FLAGS=-flto -DCMAKE_EXE_LINKER_FLAGS="$(CANNONBALL_EXE_LINKER_FLAGS)" -DCMAKE_SHARED_LINKER_FLAGS="$(CANNONBALL_SHARED_LINKER_FLAGS)"
+
+define CANNONBALL_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(CANNONBALL_BUILDDIR)
+endef
 
 define CANNONBALL_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/cmake/buildroot-build/cannonball $(TARGET_DIR)/usr/bin/

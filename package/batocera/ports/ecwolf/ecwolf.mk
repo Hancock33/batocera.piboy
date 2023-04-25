@@ -9,12 +9,12 @@ ECWOLF_SITE = https://bitbucket.org/ecwolf/ecwolf.git
 ECWOLF_SITE_METHOD=git
 ECWOLF_GIT_SUBMODULES=YES
 ECWOLF_LICENSE = Non-commercial
-ECWOLF_DEPENDENCIES = host-ecwolf sdl2 sdl2_mixer sdl2_net zlib bzip2 jpeg
+ECWOLF_DEPENDENCIES = host-ecwolf sdl2 sdl2_mixer sdl2_net zlib bzip2 jpeg host-ninja
 ECWOLF_SUPPORTS_IN_SOURCE_BUILD = YES
 
 HOST_ECWOLF_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DTOOLS_ONLY=ON
 
-ECWOLF_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DGPL=ON -DFORCE_CROSSCOMPILE=ON \
+ECWOLF_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja -DGPL=ON -DFORCE_CROSSCOMPILE=ON \
                     -DIMPORT_EXECUTABLES="$(HOST_ECWOLF_BUILDDIR)/ImportExecutables.cmake"
 
 define ECWOLF_CROSS
@@ -22,6 +22,10 @@ define ECWOLF_CROSS
     $(HOST_ECWOLF_BUILDDIR)/deps/gdtoa/qnan > $(@D)/deps/gdtoa/gd_qnan.h
 endef
 ECWOLF_POST_EXTRACT_HOOKS += ECWOLF_CROSS
+
+define ECWOLF_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(ECWOLF_BUILDDIR)
+endef
 
 define ECWOLF_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin

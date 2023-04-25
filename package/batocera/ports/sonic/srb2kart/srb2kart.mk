@@ -7,11 +7,11 @@
 SRB2KART_VERSION = 20a5adde02d134a1badaf22fa6f680eba0580308
 SRB2KART_SITE = $(call github,STJr,Kart-Public,$(SRB2KART_VERSION))
 
-SRB2KART_DEPENDENCIES = sdl2 sdl2_mixer libgme
+SRB2KART_DEPENDENCIES = sdl2 sdl2_mixer libgme host-ninja
 SRB2KART_LICENSE = GPL-2.0
 SRB2KART_SUPPORTS_IN_SOURCE_BUILD = NO
 
-SRB2KART_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
+SRB2KART_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja
 
 define SRB2KART_ASSETS
 	mkdir -p $(@D)/assets/installer
@@ -20,6 +20,10 @@ define SRB2KART_ASSETS
 endef
 
 SRB2KART_POST_EXTRACT_HOOKS += SRB2KART_ASSETS
+
+define SRB2KART_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(SRB2KART_BUILDDIR)
+endef
 
 define SRB2KART_INSTALL_TARGET_CMDS
 	cp -L $(@D)/buildroot-build/bin/srb2kart $(TARGET_DIR)/usr/bin/srb2kart

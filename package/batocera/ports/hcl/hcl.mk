@@ -7,11 +7,15 @@
 HCL_VERSION = a4000681a20cd6639183cf72a722f4c2daf30cc7
 HCL_SITE = $(call github,ptitSeb,hydracastlelabyrinth,$(HCL_VERSION))
 
-HCL_DEPENDENCIES = sdl2 sdl2_mixer
+HCL_DEPENDENCIES = sdl2 sdl2_mixer host-ninja
 HCL_LICENSE = GPL-2.0
 HCL_SUPPORTS_IN_SOURCE_BUILD = NO
 
-HCL_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DUSE_SDL2=ON
+HCL_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DUSE_SDL2=ON  -GNinja
+
+define HCL_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(HCL_BUILDDIR)
+endef
 
 define HCL_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/hcl
