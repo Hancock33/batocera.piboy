@@ -9406,16 +9406,6 @@ msgctxt "game_options"
 msgid "Choose your render resolution (Requires personal redream.key file)."
 msgstr ""
 
-#. TRANSLATION: redream, redream, redream, redream, redream
-msgctxt "game_options"
-msgid "VIDEO"
-msgstr ""
-
-#. TRANSLATION: redream, redream, redream, redream, redream
-msgctxt "game_options"
-msgid "VIDEO"
-msgstr ""
-
 #. TRANSLATION: redream
 msgctxt "game_options"
 msgid "2x (1280x960) (Default)"
@@ -10905,22 +10895,22 @@ msgstr ""
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "This can be convenient if you're using laserdiscs."
-msgstr "Puo' essere conveniente se utilizzi laserdiscs."
+msgstr ""
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "LOADING SPEED"
-msgstr "VELOCITA' CARICAMENTO"
+msgstr ""
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Realistic Loading"
-msgstr "Caricamento Realistico"
+msgstr ""
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Full Speed (Default)"
-msgstr "Massima Velocita' (Default)"
+msgstr ""
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
