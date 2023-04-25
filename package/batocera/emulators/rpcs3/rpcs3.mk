@@ -3,24 +3,27 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Apr 23, 2023
-RPCS3_VERSION = a6e4b772736d8fc7360bc0dada5dfbe8b821aa6b
+# Version: Commits on Apr 24, 2023
+RPCS3_VERSION = 7feb13671abcfb191e06c0ec70147c08ca651e61
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
 RPCS3_LICENSE = GPLv2
 RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg libxml2 mesa3d libglu openal alsa-lib
-RPCS3_DEPENDENCIES += libevdev libglew libusb ffmpeg faudio wolfssl
+RPCS3_DEPENDENCIES += libevdev libglew libusb ffmpeg faudio wolfssl host-ninja
 
 RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO
 
-RPCS3_CONF_OPTS = -DCMAKE_BUILD_TYPE=Release \
+RPCS3_CONF_OPTS = -DCMAKE_BUILD_TYPE=Release -GNinja\
     -DCMAKE_CROSSCOMPILING=ON -DBUILD_SHARED_LIBS=OFF \
     -DUSE_SYSTEM_FFMPEG=ON -DUSE_NATIVE_INSTRUCTIONS=OFF -DUSE_SYSTEM_CURL=ON
 
 define RPCS3_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) \
-		$(MAKE) -C $(@D)/buildroot-build
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(RPCS3_BUILDDIR)
+endef
+
+define RPCS3_INSTALL_TARGET_CMDS
+	$(TARGET_MAKE_ENV) DESTDIR=$(TARGET_DIR) $(BR2_CMAKE) --install $(RPCS3_BUILDDIR)
 endef
 
 define RPCS3_INSTALL_EVMAPY

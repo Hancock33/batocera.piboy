@@ -26,7 +26,7 @@ class RedreamGenerator(Generator):
         if not os.path.exists(redream_exec) or not filecmp.cmp(redream_file, redream_exec):
             copyfile(redream_file, redream_exec)
             os.chmod(redream_exec, 0o0775)
-
+        
         configFileName = redreamConfig + "/redream.cfg"
         f = codecs.open(configFileName, "w")
         # set the roms path
@@ -34,12 +34,12 @@ class RedreamGenerator(Generator):
         # force fullscreen
         f.write("mode=borderless fullscreen\n")
         f.write("fullmode=borderless fullscreen\n")
-
+        
         # configure controller
         # examples:
         # port - port0=dev:4,desc:03000000c82d00000660000011010000,type:controller
         # ctrl - profile0=name:03000000c82d00000660000011010000,type:controller,deadzone:12,crosshair:1,a:joy1,b:joy0,x:joy4,y:joy3,start:joy11,dpad_up:hat0,dpad_down:hat1,dpad_left:hat2,dpad_right:hat3,ljoy_up:-axis1,ljoy_down:+axis1,ljoy_left:-axis0,ljoy_right:+axis0,ltrig:axis2,rtrig:axis3,turbo:joy10,turbo:f6,menu:escape,lcd:f5,screenshot:f12,exit:joy12
-
+        
         ButtonMap = {
             "a":      "b",
             "b":      "a",
@@ -72,16 +72,16 @@ class RedreamGenerator(Generator):
                 # dev = ? seems to be 4+
                 ctrlport = f"port{controller.index}=dev:{4 + controller.index},desc:{controller.guid},type:controller"
                 f.write((ctrlport)+ "\n")
-
+                
                 ctrlprofile = "profile{}=name:{},type:controller,deadzone:12,crosshair:1,".format(controller.index, controller.guid)
                 fullprofile = ctrlprofile
-
+                
                 eslog.debug(f"CONTROLLER: {controller.index} - {controller.guid}")
-
+                
                 for index in controller.inputs:
                     input = controller.inputs[index]
                     eslog.debug(f"Name: {input.name}, Type: {input.type}, ID: {input.id}, Code: {input.code}")
-
+                    
                     # [buttons]
                     if input.type == "button" and input.name in ButtonMap:
                         buttonname = ButtonMap[input.name]
@@ -95,12 +95,12 @@ class RedreamGenerator(Generator):
                     if input.type == "button":
                         if input.name == "up" or input.name == "down" or input.name == "left" or input.name == "right":
                             fullprofile = fullprofile + "dpad_{}:joy{},".format(input.name, input.id)
-
+                    
                     # [hats]
                     if input.type == "hat" and input.name in HatMap:
                         hatid = HatMap[input.name]
                         fullprofile = fullprofile + "dpad_{}:hat{},".format(input.name, hatid)
-
+                    
                     # [axis]
                     if input.type == "axis" and input.name in AxisMap:
                         axisid = AxisMap[input.name]
@@ -116,12 +116,12 @@ class RedreamGenerator(Generator):
                         if input.name == "joystick1up":
                             fullprofile = fullprofile + "ljoy_up:-axis{},".format(axisid)
                             fullprofile = fullprofile + "ljoy_down:+axis{},".format(axisid)
-
+                    
                 # add key to exit for evmapy to the end
                 fullprofile = fullprofile + "exit:f10"
                 f.write((fullprofile)+ "\n")
                 nplayer = nplayer + 1
-
+        
         # change settings as per users options
         # [video]
         f.write("width={}\n".format(gameResolution["width"]))
@@ -165,7 +165,7 @@ class RedreamGenerator(Generator):
             f.write("cable={}".format(system.config["redreamCable"]) + "\n")
         else:
             f.write("cable=vga\n")
-
+        
         f.write
         f.close()
 

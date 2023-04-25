@@ -3,14 +3,14 @@
 # samtfe
 #
 ################################################################################
-# Version: Commits on Apr 23, 2023
-SAMTFE_VERSION = 56118c6edb140d07f09e5c2c970426feeb416f84
+# Version: Commits on Apr 25, 2023
+SAMTFE_VERSION = 6550154aecffa10c3919aa6b1349ed2f7faecc4d
 SAMTFE_SITE = https://github.com/tx00100xt/SeriousSamClassic-VK.git
 SAMTFE_SITE_METHOD=git
 SAMTFE_GIT_SUBMODULES=YES
 SAMTFE_SUBDIR = SamTFE/Sources
 SAMTFE_SUPPORTS_IN_SOURCE_BUILD = NO
-SAMTFE_DEPENDENCIES = sdl2 sdl2_mixer host-samtfe
+SAMTFE_DEPENDENCIES = sdl2 sdl2_mixer host-samtfe host-ninja
 SAMTFE_LICENSE = GPL-2.0
 
 define SAMTFE_CP_WEAPONS
@@ -28,7 +28,11 @@ endef
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 SAMTFE_CONF_OPTS += -DRPI4=ON
 endif
-SAMTFE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DECC=$(HOST_DIR)/bin/ecc -DTFE=ON
+SAMTFE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DECC=$(HOST_DIR)/bin/ecc -DTFE=ON -GNinja
+
+define SAMTFE_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(SAMTFE_BUILDDIR)
+endef
 
 define SAMTFE_INSTALL_TARGET_CMDS
 	# evmap config

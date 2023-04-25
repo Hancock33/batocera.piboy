@@ -3,13 +3,13 @@
 # citra
 #
 ################################################################################
-# Version: Commits on Apr 22, 2023
-CITRA_VERSION = 9ba6a901936bb40e1b724dc3792c1bd2da80ec4c
+# Version: Commits on Apr 23, 2023
+CITRA_VERSION = 2c74ed1a6d15fb1dd12ad4a5841811c841d1413c
 CITRA_SITE = https://github.com/citra-emu/citra-nightly.git
 CITRA_SITE_METHOD=git
 CITRA_GIT_SUBMODULES=YES
 CITRA_LICENSE = GPLv2
-CITRA_DEPENDENCIES += fmt boost ffmpeg sdl2 fdk-aac qt6base qt6multimedia
+CITRA_DEPENDENCIES += fmt boost ffmpeg sdl2 fdk-aac qt6base qt6multimedia host-ninja
 CITRA_SUPPORTS_IN_SOURCE_BUILD = NO
 
 CITRA_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
@@ -21,8 +21,13 @@ CITRA_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
 CITRA_CONF_OPTS += -DENABLE_COMPATIBILITY_LIST_DOWNLOAD=ON
 CITRA_CONF_OPTS += -DENABLE_FFMPEG_VIDEO_DUMPER=ON
 CITRA_CONF_OPTS += -DENABLE_FFMPEG_AUDIO_DECODER=ON
+CITRA_CONF_OPTS += -GNinja
 
 CITRA_CONF_ENV += LDFLAGS=-lpthread
+
+define CITRA_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(CITRA_BUILDDIR)
+endef
 
 define CITRA_INSTALL_TARGET_CMDS
     mkdir -p $(TARGET_DIR)/usr/bin

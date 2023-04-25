@@ -3,8 +3,8 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on Apr 21, 2023
-PCSX2_VERSION = 30a31d931a4570c30755594e898c640d231115dd
+# Version: Commits on Apr 22, 2023
+PCSX2_VERSION = 76014b7cb913910407455cd667c550d959c459b0
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
@@ -14,7 +14,7 @@ PCSX2_LICENSE_FILE = COPYING.GPLv3
 PCSX2_SUPPORTS_IN_SOURCE_BUILD = NO
 
 PCSX2_DEPENDENCIES += xserver_xorg-server alsa-lib freetype zlib libpng
-PCSX2_DEPENDENCIES += libaio portaudio libsoundtouch sdl2 libpcap yaml-cpp
+PCSX2_DEPENDENCIES += libaio portaudio libsoundtouch sdl2 libpcap yaml-cpp host-ninja
 PCSX2_DEPENDENCIES += libsamplerate fmt libgtk3
 PCSX2_DEPENDENCIES += qt6base qt6svg qt6tools
 
@@ -28,6 +28,7 @@ PCSX2_CONF_OPTS += -DDISABLE_ADVANCE_SIMD=ON
 PCSX2_CONF_OPTS += -DUSE_VTUNE=OFF
 PCSX2_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
 PCSX2_CONF_OPTS += -DUSE_ACHIEVEMENTS=ON
+PCSX2_CONF_OPTS += -GNinja
 
 ifeq ($(BR2_PACKAGE_XORG7),y)
     PCSX2_CONF_OPTS += -DX11_API=ON
@@ -52,6 +53,10 @@ ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
 else
     PCSX2_CONF_OPTS += -DUSE_VULKAN=OFF
 endif
+
+define PCSX2_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(PCSX2_BUILDDIR)
+endef
 
 define PCSX2_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/pcsx2/bin

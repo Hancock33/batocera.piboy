@@ -7,7 +7,13 @@
 GSPLUS_VERSION = dc1835d62bb485f69faf3fd50a2550629393ee38
 GSPLUS_SITE = $(call github,applemu,gsplus,$(GSPLUS_VERSION))
 GSPLUS_LICENSE = GPLv2
-GSPLUS_DEPENDENCIES = sdl2 libpcap host-re2c
+GSPLUS_DEPENDENCIES = sdl2 libpcap host-re2c host-ninja
+
+GSPLUS_CONF_OPTS  = -DCMAKE_BUILD_TYPE=Release -GNinja
+
+define GSPLUS_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(GSPLUS_BUILDDIR)
+endef
 
 define GSPLUS_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/bin/GSplus $(TARGET_DIR)/usr/bin/

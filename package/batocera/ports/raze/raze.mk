@@ -3,14 +3,14 @@
 # raze
 #
 ################################################################################
-# Version: Commits on Dec 31, 2022
-RAZE_VERSION = 0c5f3a5dcd21a0865ff44007ebed97d125b8de42
+# Version: Commits on Apr 25, 2023
+RAZE_VERSION = 64c47b038536a4da8e5fae54220fe37873a1c360
 RAZE_SITE = $(call github,ZDoom,Raze,$(RAZE_VERSION))
 RAZE_LICENSE = GPLv2
-RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic gzdoom
+RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic gzdoom host-gzdoom
 
 RAZE_SUPPORTS_IN_SOURCE_BUILD = NO
-RAZE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
+RAZE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja
 RAZE_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 RAZE_CONF_OPTS += -DNO_GTK=ON
 RAZE_CONF_OPTS += -DFORCE_CROSSCOMPILE=ON
@@ -30,6 +30,14 @@ ifeq ($(BR2_PACKAGE_BATOCERA_GLES2)$(BR2_PACKAGE_BATOCERA_GLES3),y)
 else
     RAZE_CONF_OPTS += -DHAVE_GLES2=OFF
 endif
+
+define RAZE_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(RAZE_BUILDDIR)
+endef
+
+define RAZE_INSTALL_TARGET_CMDS
+	$(TARGET_MAKE_ENV) DESTDIR=$(TARGET_DIR) $(BR2_CMAKE) --install $(RAZE_BUILDDIR)
+endef
 
 define RAZE_INSTALL
 	$(TARGET_STRIP) $(TARGET_DIR)/usr/bin/raze

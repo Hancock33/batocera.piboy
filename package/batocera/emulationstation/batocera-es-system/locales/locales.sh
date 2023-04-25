@@ -1,5 +1,6 @@
 #!/bin/bash
-loc="ca
+loc="ar
+ca
 cs_CZ
 de
 en_GB

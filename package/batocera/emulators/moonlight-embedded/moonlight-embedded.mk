@@ -11,9 +11,10 @@ MOONLIGHT_EMBEDDED_SITE_METHOD = git
 MOONLIGHT_EMBEDDED_GIT_SUBMODULES=y
 MOONLIGHT_EMBEDDED_LICENSE = GPLv3
 MOONLIGHT_EMBEDDED_DEPENDENCIES = opus expat libevdev avahi alsa-lib udev \
-                                  libcurl libcec ffmpeg sdl2 libenet
+                                  libcurl libcec ffmpeg sdl2 libenet host-ninja
 
 MOONLIGHT_EMBEDDED_CONF_OPTS = "-DCMAKE_INSTALL_SYSCONFDIR=/etc"
+MOONLIGHT_EMBEDDED_CONF_OPTS += -GNinja
 
 ifeq ($(BR2_PACKAGE_XORG7),y)
     MOONLIGHT_EMBEDDED_CONF_OPTS += -DENABLE_X11=ON
@@ -32,6 +33,14 @@ endif
 ifeq ($(BR2_PACKAGE_ROCKCHIP_RGA),y)
     MOONLIGHT_EMBEDDED_DEPENDENCIES += rockchip-mpp rockchip-rga
 endif
+
+define MOONLIGHT_EMBEDDED_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(MOONLIGHT_EMBEDDED_BUILDDIR)
+endef
+
+define MOONLIGHT_EMBEDDED_INSTALL_TARGET_CMDS
+	$(TARGET_MAKE_ENV) DESTDIR=$(TARGET_DIR) $(BR2_CMAKE) --install $(MOONLIGHT_EMBEDDED_BUILDDIR)
+endef
 
 define MOONLIGHT_EMBEDDED_INSTALL_SCRIPTS
     mkdir -p $(TARGET_DIR)/usr/share/evmapy
