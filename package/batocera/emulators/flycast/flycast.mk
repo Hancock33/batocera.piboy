@@ -9,13 +9,14 @@ FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
 FLYCAST_LICENSE = GPLv2
-FLYCAST_DEPENDENCIES = sdl2 libpng libzip libcurl libao libminiupnpc
+FLYCAST_DEPENDENCIES = sdl2 libpng libzip libcurl libao libminiupnpc host-ninja
 FLYCAST_SUPPORTS_IN_SOURCE_BUILD = NO
 
 FLYCAST_CONF_OPTS += -DLIBRETRO=OFF -DGDB_SERVER=OFF
 FLYCAST_CONF_OPTS += -DGIT_VERSION="$(shell echo $(FLYCAST_VERSION) | cut -c 1-7)"
 FLYCAST_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -Wno-error=array-bounds"
 FLYCAST_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -Wno-error=array-bounds"
+FLYCAST_CONF_OPTS  = -DCMAKE_BUILD_TYPE=Release -GNinja
 #FLYCAST_CONF_OPTS += -DCMAKE_VERBOSE_MAKEFILE=ON
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
@@ -41,6 +42,10 @@ ifeq ($(BR2_PACKAGE_HAS_LIBMALI),y)
     FLYCAST_DEPENDENCIES += libmali
     FLYCAST_CONF_OPTS += -DUSE_MALI=ON
 endif
+
+define FLYCAST_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(FLYCAST_BUILDDIR)
+endef
 
 define FLYCAST_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/buildroot-build/flycast $(TARGET_DIR)/usr/bin/flycast
