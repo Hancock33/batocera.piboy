@@ -1,8 +1,8 @@
-diff --git a/drivers/gpu/drm/drm_connector.c b/drivers/gpu/drm/drm_connector.c
-index 547356e00341..7a359ae5d5d3 100644
---- a/drivers/gpu/drm/drm_connector.c
-+++ b/drivers/gpu/drm/drm_connector.c
-@@ -272,6 +272,7 @@ static int __drm_connector_init(struct drm_device *dev,
+Index: linux-6.3/drivers/gpu/drm/drm_connector.c
+===================================================================
+--- linux-6.3.orig/drivers/gpu/drm/drm_connector.c
++++ linux-6.3/drivers/gpu/drm/drm_connector.c
+@@ -272,6 +272,7 @@ static int __drm_connector_init(struct d
  
  	INIT_LIST_HEAD(&connector->global_connector_list_entry);
  	INIT_LIST_HEAD(&connector->probed_modes);
@@ -10,7 +10,7 @@ index 547356e00341..7a359ae5d5d3 100644
  	INIT_LIST_HEAD(&connector->modes);
  	mutex_init(&connector->mutex);
  	mutex_init(&connector->edid_override_mutex);
-@@ -556,6 +557,11 @@ void drm_connector_cleanup(struct drm_connector *connector)
+@@ -556,6 +557,11 @@ void drm_connector_cleanup(struct drm_co
  	list_for_each_entry_safe(mode, t, &connector->probed_modes, head)
  		drm_mode_remove(connector, mode);
  
@@ -22,11 +22,11 @@ index 547356e00341..7a359ae5d5d3 100644
  	list_for_each_entry_safe(mode, t, &connector->modes, head)
  		drm_mode_remove(connector, mode);
  
-diff --git a/drivers/gpu/drm/drm_ioctl.c b/drivers/gpu/drm/drm_ioctl.c
-index ca2a6e6101dc..aafa31d8b26d 100644
---- a/drivers/gpu/drm/drm_ioctl.c
-+++ b/drivers/gpu/drm/drm_ioctl.c
-@@ -666,8 +666,8 @@ static const struct drm_ioctl_desc drm_ioctls[] = {
+Index: linux-6.3/drivers/gpu/drm/drm_ioctl.c
+===================================================================
+--- linux-6.3.orig/drivers/gpu/drm/drm_ioctl.c
++++ linux-6.3/drivers/gpu/drm/drm_ioctl.c
+@@ -666,8 +666,8 @@ static const struct drm_ioctl_desc drm_i
  	DRM_IOCTL_DEF(DRM_IOCTL_MODE_SETGAMMA, drm_mode_gamma_set_ioctl, DRM_MASTER),
  	DRM_IOCTL_DEF(DRM_IOCTL_MODE_GETENCODER, drm_mode_getencoder, 0),
  	DRM_IOCTL_DEF(DRM_IOCTL_MODE_GETCONNECTOR, drm_mode_getconnector, 0),
@@ -37,11 +37,11 @@ index ca2a6e6101dc..aafa31d8b26d 100644
  	DRM_IOCTL_DEF(DRM_IOCTL_MODE_GETPROPERTY, drm_mode_getproperty_ioctl, 0),
  	DRM_IOCTL_DEF(DRM_IOCTL_MODE_SETPROPERTY, drm_connector_property_set_ioctl, DRM_MASTER),
  	DRM_IOCTL_DEF(DRM_IOCTL_MODE_GETPROPBLOB, drm_mode_getblob_ioctl, 0),
-diff --git a/drivers/gpu/drm/drm_mode_object.c b/drivers/gpu/drm/drm_mode_object.c
-index ba1608effc0f..f228849e9b97 100644
---- a/drivers/gpu/drm/drm_mode_object.c
-+++ b/drivers/gpu/drm/drm_mode_object.c
-@@ -143,6 +143,7 @@ struct drm_mode_object *__drm_mode_object_find(struct drm_device *dev,
+Index: linux-6.3/drivers/gpu/drm/drm_mode_object.c
+===================================================================
+--- linux-6.3.orig/drivers/gpu/drm/drm_mode_object.c
++++ linux-6.3/drivers/gpu/drm/drm_mode_object.c
+@@ -143,6 +143,7 @@ struct drm_mode_object *__drm_mode_objec
  	obj = idr_find(&dev->mode_config.object_idr, id);
  	if (obj && type != DRM_MODE_OBJECT_ANY && obj->type != type)
  		obj = NULL;
@@ -49,11 +49,11 @@ index ba1608effc0f..f228849e9b97 100644
  	if (obj && obj->id != id)
  		obj = NULL;
  
-diff --git a/drivers/gpu/drm/drm_modes.c b/drivers/gpu/drm/drm_modes.c
-index 3c8034a8c27b..cb4a1a0cb296 100644
---- a/drivers/gpu/drm/drm_modes.c
-+++ b/drivers/gpu/drm/drm_modes.c
-@@ -40,6 +40,7 @@
+Index: linux-6.3/drivers/gpu/drm/drm_modes.c
+===================================================================
+--- linux-6.3.orig/drivers/gpu/drm/drm_modes.c
++++ linux-6.3/drivers/gpu/drm/drm_modes.c
+@@ -41,6 +41,7 @@
  #include <video/of_videomode.h>
  #include <video/videomode.h>
  
@@ -61,11 +61,10 @@ index 3c8034a8c27b..cb4a1a0cb296 100644
  #include <drm/drm_crtc.h>
  #include <drm/drm_device.h>
  #include <drm/drm_edid.h>
-@@ -116,6 +117,168 @@ void drm_mode_probed_add(struct drm_connector *connector,
- }
- EXPORT_SYMBOL(drm_mode_probed_add);
+@@ -595,6 +596,168 @@ err_free_mode:
+ EXPORT_SYMBOL(drm_analog_tv_mode);
  
-+/**
+ /**
 + * drm_mode_attachmode - add a mode to the user mode list
 + * @dev: DRM device
 + * @connector: connector to add the mode to
@@ -227,10 +226,11 @@ index 3c8034a8c27b..cb4a1a0cb296 100644
 +}
 +EXPORT_SYMBOL(drm_mode_detachmode_ioctl);
 +
- /**
++/**
   * drm_cvt_mode -create a modeline based on the CVT algorithm
   * @dev: drm device
-@@ -1407,7 +1570,7 @@ EXPORT_SYMBOL(drm_mode_sort);
+  * @hdisplay: hdisplay size
+@@ -1885,7 +2048,7 @@ EXPORT_SYMBOL(drm_mode_sort);
   */
  void drm_connector_list_update(struct drm_connector *connector)
  {
@@ -239,7 +239,7 @@ index 3c8034a8c27b..cb4a1a0cb296 100644
  
  	WARN_ON(!mutex_is_locked(&connector->dev->mode_config.mutex));
  
-@@ -1453,6 +1616,40 @@ void drm_connector_list_update(struct drm_connector *connector)
+@@ -1931,6 +2094,40 @@ void drm_connector_list_update(struct dr
  			list_move_tail(&pmode->head, &connector->modes);
  		}
  	}
@@ -280,11 +280,11 @@ index 3c8034a8c27b..cb4a1a0cb296 100644
  }
  EXPORT_SYMBOL(drm_connector_list_update);
  
-diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index bcd9611dabfd..677cc13c1c33 100644
---- a/drivers/gpu/drm/drm_probe_helper.c
-+++ b/drivers/gpu/drm/drm_probe_helper.c
-@@ -313,6 +313,23 @@ drm_helper_probe_detect_ctx(struct drm_connector *connector, bool force)
+Index: linux-6.3/drivers/gpu/drm/drm_probe_helper.c
+===================================================================
+--- linux-6.3.orig/drivers/gpu/drm/drm_probe_helper.c
++++ linux-6.3/drivers/gpu/drm/drm_probe_helper.c
+@@ -350,6 +350,23 @@ retry:
  	return ret;
  }
  
@@ -308,7 +308,7 @@ index bcd9611dabfd..677cc13c1c33 100644
  /**
   * drm_helper_probe_detect - probe connector status
   * @connector: connector to probe
-@@ -498,6 +515,8 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+@@ -543,6 +560,8 @@ int drm_helper_probe_single_connector_mo
  
  	drm_modeset_acquire_init(&ctx, 0);
  
@@ -317,7 +317,7 @@ index bcd9611dabfd..677cc13c1c33 100644
  	DRM_DEBUG_KMS("[CONNECTOR:%d:%s]\n", connector->base.id,
  			connector->name);
  
-@@ -515,6 +534,10 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+@@ -560,6 +579,10 @@ retry:
  
  	old_status = connector->status;
  
@@ -328,7 +328,7 @@ index bcd9611dabfd..677cc13c1c33 100644
  	if (connector->force) {
  		if (connector->force == DRM_FORCE_ON ||
  		    connector->force == DRM_FORCE_ON_DIGITAL)
-@@ -626,7 +649,13 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+@@ -671,7 +694,13 @@ exit:
  
  	drm_mode_sort(&connector->modes);
  
@@ -343,15 +343,14 @@ index bcd9611dabfd..677cc13c1c33 100644
  			connector->name);
  	list_for_each_entry(mode, &connector->modes, head) {
  		drm_mode_set_crtcinfo(mode, CRTC_INTERLACE_HALVE_V);
-diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
-index 565cf9d3c550..88be79f4ca48 100644
---- a/include/drm/drm_connector.h
-+++ b/include/drm/drm_connector.h
-@@ -1442,6 +1442,14 @@ struct drm_connector {
- 	 */
+Index: linux-6.3/include/drm/drm_connector.h
+===================================================================
+--- linux-6.3.orig/include/drm/drm_connector.h
++++ linux-6.3/include/drm/drm_connector.h
+@@ -1535,6 +1535,14 @@ struct drm_connector {
  	struct list_head probed_modes;
  
-+	/**
+ 	/**
 +	 * @user_modes:
 +	 * These are modes added by probing with DDC or the BIOS, before
 +	 * filtering is applied. Used by the probe helpers. Protected by
@@ -359,14 +358,15 @@ index 565cf9d3c550..88be79f4ca48 100644
 +	 */
 +	struct list_head user_modes;
 +
- 	/**
++	/**
  	 * @display_info: Display information is filled from EDID information
  	 * when a display is detected. For non hot-pluggable displays such as
-diff --git a/include/drm/drm_modes.h b/include/drm/drm_modes.h
-index b0c680e6f670..3052c3351e27 100644
---- a/include/drm/drm_modes.h
-+++ b/include/drm/drm_modes.h
-@@ -460,6 +460,10 @@ int drm_mode_convert_umode(struct drm_device *dev,
+ 	 * flat panels in embedded systems, the driver should initialize the
+Index: linux-6.3/include/drm/drm_modes.h
+===================================================================
+--- linux-6.3.orig/include/drm/drm_modes.h
++++ linux-6.3/include/drm/drm_modes.h
+@@ -460,6 +460,10 @@ int drm_mode_convert_umode(struct drm_de
  			   struct drm_display_mode *out,
  			   const struct drm_mode_modeinfo *in);
  void drm_mode_probed_add(struct drm_connector *connector, struct drm_display_mode *mode);
