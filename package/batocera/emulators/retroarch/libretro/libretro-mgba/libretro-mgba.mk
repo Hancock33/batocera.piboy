@@ -3,21 +3,33 @@
 # libretro-mgba
 #
 ################################################################################
-# Version: Commits on Jan 26, 2023
-LIBRETRO_MGBA_VERSION = a69c3434afe8b26cb8f9463077794edfa7d5efad
-LIBRETRO_MGBA_SITE = $(call github,libretro,mgba,$(LIBRETRO_MGBA_VERSION))
+# Version: Commits on Apr 26, 2023
+LIBRETRO_MGBA_VERSION = ba6865b570666bf63e0fe8f8954d108cd4addf8f
+LIBRETRO_MGBA_SITE = $(call github,mgba-emu,mgba,$(LIBRETRO_MGBA_VERSION))
 LIBRETRO_MGBA_LICENSE = MPLv2.0
 
 LIBRETRO_MGBA_DEPENDENCIES = libzip libpng zlib
 
-define LIBRETRO_MGBA_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile \
-        GIT_VERSION="-$(shell echo $(LIBRETRO_MGBA_VERSION) | cut -c 1-7)"
-endef
+LIBRETRO_MGBA_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DBUILD_LIBRETRO=ON \
+    -DSKIP_LIBRARY=ON -DBUILD_QT=OFF -DBUILD_SDL=OFF -DUSE_DISCORD_RPC=OFF \
+	-DUSE_GDB_STUB=OFF -DUSE_SQLITE3=OFF -DUSE_DEBUGGERS=OFF -DUSE_EDITLINE=OFF \
+	-DUSE_EPOXY=OFF
+
+ifeq ($(BR2_PACKAGE_BATOCERA_GLES3),y)
+    LIBRETRO_MGBA_CONF_OPTS += -DBUILD_GLES3=ON -DBUILD_GLES2=OFF
+else ifeq ($(BR2_PACKAGE_BATOCERA_GLES2),y)
+    LIBRETRO_MGBA_CONF_OPTS += -DBUILD_GLES2=ON -DBUILD_GLES3=OFF
+endif
+
+ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
+    LIBRETRO_MGBA_CONF_OPTS += -DBUILD_GL=ON
+else
+    LIBRETRO_MGBA_CONF_OPTS += -DBUILD_GL=OFF
+endif
 
 define LIBRETRO_MGBA_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/mgba_libretro.so \
 		$(TARGET_DIR)/usr/lib/libretro/mgba_libretro.so
 endef
 
-$(eval $(generic-package))
+$(eval $(cmake-package))
