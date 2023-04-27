@@ -23,10 +23,10 @@ index 546696476f..b528eb2c4e 100644
  extern const Info<std::string> MAIN_WII_SD_CARD_IMAGE_PATH;
  extern const Info<std::string> MAIN_WII_SD_CARD_SYNC_FOLDER_PATH;
 diff --git a/Source/Core/UICommon/UICommon.cpp b/Source/Core/UICommon/UICommon.cpp
-index 60f8ff3575..a3dff45a75 100644
+index 464646eb17..5ee5d616ff 100644
 --- a/Source/Core/UICommon/UICommon.cpp
 +++ b/Source/Core/UICommon/UICommon.cpp
-@@ -87,6 +87,12 @@ static void CreateResourcePackPath(std::string path)
+@@ -90,6 +90,12 @@ static void CreateResourcePackPath(std::string path)
      File::SetUserPath(D_RESOURCEPACK_IDX, std::move(path));
  }
  
@@ -39,7 +39,7 @@ index 60f8ff3575..a3dff45a75 100644
  static void CreateWFSPath(const std::string& path)
  {
    if (!path.empty())
-@@ -99,6 +105,7 @@ static void InitCustomPaths()
+@@ -102,6 +108,7 @@ static void InitCustomPaths()
    CreateLoadPath(Config::Get(Config::MAIN_LOAD_PATH));
    CreateDumpPath(Config::Get(Config::MAIN_DUMP_PATH));
    CreateResourcePackPath(Config::Get(Config::MAIN_RESOURCEPACK_PATH));

@@ -1,3 +1,15 @@
+diff --git a/src/game/singe/singeproxy.cpp b/src/game/singe/singeproxy.cpp
+index 7ae5bb6..edd8df5 100644
+--- a/src/game/singe/singeproxy.cpp
++++ b/src/game/singe/singeproxy.cpp
+@@ -28,6 +28,7 @@
+ 
+ #include <string>
+ #include <vector>
++#include <ctime>
+ 
+ using namespace std;
+ 
 diff --git a/src/scoreboard/usb_scoreboard.cpp b/src/scoreboard/usb_scoreboard.cpp
 index 3236d5b..6267d46 100644
 --- a/src/scoreboard/usb_scoreboard.cpp

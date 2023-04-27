@@ -1,3 +1,15 @@
+From a77f2da778f4a62695a6c7d26bba674d59ad9170 Mon Sep 17 00:00:00 2001
+From: Joan Bruguera <joanbrugueram@gmail.com>
+Date: Sat, 25 Feb 2023 10:57:09 +0000
+Subject: [PATCH] Tentative fix for NVIDIA 470.161.03 driver for Linux 6.3-rc1
+
+---
+ common/inc/nv-linux.h                   | 13 +++++++++++++
+ nvidia-drm/nvidia-drm-gem-user-memory.c |  7 ++++---
+ nvidia-uvm/uvm.c                        |  2 +-
+ nvidia/nv-mmap.c                        | 12 ++++++------
+ 4 files changed, 24 insertions(+), 10 deletions(-)
+
 diff --git a/kernel/common/inc/nv-linux.h b/kernel/common/inc/nv-linux.h
 index f8df9e3..5b22cf1 100644
 --- a/kernel/common/inc/nv-linux.h
@@ -58,7 +70,7 @@ index 3e7318d..7eddff7 100644
  
      vma->vm_ops = &uvm_vm_ops_managed;
  
-diff --git a/nvidia/nv-mmap.c b/nvidia/nv-mmap.c
+diff --git a/kernel/nvidia/nv-mmap.c b/kernel/nvidia/nv-mmap.c
 index df514c9..8f85ff6 100644
 --- a/kernel/nvidia/nv-mmap.c
 +++ b/kernel/nvidia/nv-mmap.c
