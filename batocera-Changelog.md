@@ -56,6 +56,7 @@
 - Pico-8: libretro-retro8 is deprecated in favor of libretro-fake08
 - ppsspp now fully uses SDL2 controller config
 ### Updated
+- lr-snes9x to v1.62.3
 - xenia to v1.0.2791
 - xenia canary to 5e0c674 (Commits on Apr 10, 2023)
 - cemu to 2.0-32
@@ -85,7 +86,7 @@
 - bigpemu to v1054
 - xpadneo to 15th April
 - moonlight options
-- lr-mGBA to April 7th build
+- lr-mGBA to v0.10.2
 - vice to v3.7.1
 - rpcs3 to v0.0.27
 ### Dev
@@ -93,7 +94,8 @@
 - mesa3d update to 23.0.3
 - dxvk to 2.1
 - linux firmware to 20230404
-- linux kernel for x86_64 to 6.2.12
+- linux kernel for x86_64 to 6.3
+- linux kernel for RPI to 6.1.25
 - nvidia production driver to 530.41.03
 - llvm to 15.0.7
 - vulkan stack to v1.3.248

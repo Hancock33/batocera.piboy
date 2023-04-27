@@ -331,7 +331,7 @@ gamecom:
   emulator: libretro
   core:     mame
 gamecube:
-  emulator: dolphin
+  emulator: libretro
   core:     dolphin
 gamegear:
   emulator: libretro
@@ -951,13 +951,13 @@ wasm4:
   emulator: libretro
   core:     wasm4
 wii:
-  emulator: dolphin
+  emulator: libretro
   core:     dolphin
 wiiu:
   emulator: cemu
   core:     cemu
 wiiware:
-  emulator: dolphin
+  emulator: libretro
   core:     dolphin
 windows:
   emulator: wine
