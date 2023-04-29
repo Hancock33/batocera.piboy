@@ -29,11 +29,8 @@ define DOLPHIN_TRIFORCE_BUILD_CMDS
 	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(DOLPHIN_TRIFORCE_BUILDDIR)
 endef
 
-#define DOLPHIN_TRIFORCE_INSTALL_TARGET_CMDS
-#	$(TARGET_MAKE_ENV) DESTDIR=$(TARGET_DIR) $(BR2_CMAKE) --install $(DOLPHIN_TRIFORCE_BUILDDIR)
-#endef
-
-define DOLPHIN_TRIFORCE_EVMAPY
+define DOLPHIN_TRIFORCE_INSTALL_TARGET_CMDS
+    cp $(@D)/buildroot-build/Binaries/dolphin-emu $(TARGET_DIR)/usr/duckstation/bin/dolphin-triforce
     mkdir -p $(TARGET_DIR)/usr/share/evmapy
     cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-triforce/*.keys $(TARGET_DIR)/usr/share/evmapy
 endef
