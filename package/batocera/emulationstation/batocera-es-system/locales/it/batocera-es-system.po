@@ -1115,7 +1115,8 @@ msgid ""
 "Select language will be used if 'Use Firmware Settings' is disabled or if "
 "firmware file was not found."
 msgstr ""
-"Seleziona la lingua che sara' usata se 'Usa impostazioni firmware' e' disabilitato e se 'il file del firmware non e' stato trovato."
+"Seleziona la lingua che sara' usata se 'Usa impostazioni firmware' e' "
+"disabilitato e se 'il file del firmware non e' stato trovato."
 
 #. TRANSLATION: libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, redream, ...
 msgctxt "game_options"
@@ -11572,7 +11573,7 @@ msgctxt "keys_files"
 msgid "Emulator configuration"
 msgstr ""
 
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys
 msgctxt "keys_files"
 msgid "Alternative exit the emulator for guns"
 msgstr ""

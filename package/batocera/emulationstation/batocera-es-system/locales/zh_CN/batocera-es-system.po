@@ -9406,11 +9406,6 @@ msgctxt "game_options"
 msgid "Choose your render resolution (Requires personal redream.key file)."
 msgstr ""
 
-#. TRANSLATION: redream, redream, redream, redream, redream
-msgctxt "game_options"
-msgid "VIDEO"
-msgstr "视频"
-
 #. TRANSLATION: redream
 msgctxt "game_options"
 msgid "2x (1280x960) (Default)"
@@ -11576,7 +11571,7 @@ msgctxt "keys_files"
 msgid "Emulator configuration"
 msgstr ""
 
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys
 msgctxt "keys_files"
 msgid "Alternative exit the emulator for guns"
 msgstr ""
