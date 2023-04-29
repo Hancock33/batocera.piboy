@@ -30,7 +30,7 @@ define DOLPHIN_TRIFORCE_BUILD_CMDS
 endef
 
 define DOLPHIN_TRIFORCE_INSTALL_TARGET_CMDS
-    cp $(@D)/buildroot-build/Binaries/dolphin-emu $(TARGET_DIR)/usr/duckstation/bin/dolphin-triforce
+    cp $(@D)/buildroot-build/Binaries/dolphin-emu $(TARGET_DIR)/usr/bin/dolphin-triforce
     mkdir -p $(TARGET_DIR)/usr/share/evmapy
     cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-triforce/*.keys $(TARGET_DIR)/usr/share/evmapy
 endef
