@@ -23,6 +23,9 @@ DOLPHIN_EMU_CONF_OPTS += -DUSE_UPNP=OFF
 DOLPHIN_EMU_CONF_OPTS += -DENABLE_TESTS=OFF
 DOLPHIN_EMU_CONF_OPTS += -DENABLE_AUTOUPDATE=OFF
 DOLPHIN_EMU_CONF_OPTS += -DENABLE_ANALYTICS=OFF
+# Disable QT until we fully support QT6, enable OpenGL as a result.
+DOLPHIN_EMU_CONF_OPTS += -DENABLE_QT=OFF
+DOLPHIN_EMU_CONF_OPTS += -DENABLE_EGL=ON
 
 DOLPHIN_EMU_MAKE_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
 DOLPHIN_EMU_CONF_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
@@ -30,8 +33,6 @@ DOLPHIN_EMU_CONF_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
 ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
     DOLPHIN_EMU_DEPENDENCIES += xserver_xorg-server qt6base
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_X11=ON
-    DOLPHIN_EMU_CONF_OPTS += -DENABLE_EGL=OFF
-    DOLPHIN_EMU_CONF_OPTS += -DENABLE_NOGUI=OFF
 else
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_X11=OFF
 endif
@@ -52,7 +53,8 @@ endef
 
 define DOLPHIN_EMU_EVMAPY
     mkdir -p $(TARGET_DIR)/usr/share/evmapy
-    cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/*.keys $(TARGET_DIR)/usr/share/evmapy
+    cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/*.keys \
+        $(TARGET_DIR)/usr/share/evmapy
 endef
 
 DOLPHIN_EMU_POST_INSTALL_TARGET_HOOKS += DOLPHIN_EMU_EVMAPY
