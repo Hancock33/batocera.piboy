@@ -5,6 +5,7 @@ import controllersConfig
 from generators.Generator import Generator
 import os
 from os import path
+import shlex
 
 class GzdoomGenerator(Generator):
     def generate(self, system, rom, playersControllers, guns, gameResolution):
@@ -34,16 +35,23 @@ class GzdoomGenerator(Generator):
         iwad = ''
         pwad = ''
 
-        if (rom.__contains__('.uwad')):
+        if rom.endswith(".gzdoom"):
+            with open(rom, "r") as f:
+                iwad_command = f.read().strip()
+            args = shlex.split(iwad_command)
+        elif rom.endswith(".uwad"):
             f=open(rom)
             content=f.readlines()
             for line in content:
                 if 'IWAD=/' in line:
-                    iwad = line.replace('IWAD=', '').replace('\n', '')
+                    iwad += line.replace('IWAD=', '').replace('\n', ' ')
                 elif 'PWAD=/' in line:
-                    pwad = line.replace('PWAD=', '').replace('\n', '')
+                    pwad += line.replace('PWAD=', '').replace('\n', ' ')
+            iwad_command = '-iwad ' + iwad + '-file ' + pwad
+            args = shlex.split(iwad_command)
         else:
-                    iwad = rom
+            iwad_command = '-iwad ' + rom
+            args = shlex.split(iwad_command)
 
         # A script file with console commands that are always ran when a game starts
         script_file = f"{config_dir}/gzdoom.cfg"
@@ -60,8 +68,7 @@ class GzdoomGenerator(Generator):
         return Command.Command(
             array=[
                 '/usr/share/gzdoom/gzdoom',
-                '-iwad', iwad,
-                '-file', pwad,
+                *args,
                 '-exec', script_file,
                 # Disable controllers because support is poor; use evmapy instead
                 '-nojoy',
