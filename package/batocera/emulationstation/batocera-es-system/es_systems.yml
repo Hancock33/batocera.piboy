@@ -1,4 +1,5 @@
 archimedes:
+archimedes:
   name:                 Archimedes
   manufacturer:         Acorn Computers
   release:              1987
@@ -4347,17 +4348,17 @@ prboom:
   manufacturer:         Ports (Doom)
   release:
   hardware:             port
-  extensions:           [wad, iwad, pwad, uwad]
+  extensions:           [wad, iwad, pwad, uwad, gzdoom]
   platform:             pc
   group:                doom
   path:                 /userdata/roms/ports/doom
   emulators:
     libretro:
-      prboom:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PRBOOM], incompatible_extensions: [uwad] }
+      prboom:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PRBOOM], incompatible_extensions: [uwad, gzdoom] }
     gzdoom:
       gzdoom:           { requireAnyOf: [BR2_PACKAGE_GZDOOM] }
     doomretro:
-      doomretro:        { requireAnyOf: [BR2_PACKAGE_DOOMRETRO] }
+      doomretro:        { requireAnyOf: [BR2_PACKAGE_DOOMRETRO], incompatible_extensions: [uwad, gzdoom] }
   comment_en:           |
                         Put DOOM 1 and 2 games (and their associated mods) in this directory.
                         Put your soundtrack in the directory ./game-musics
