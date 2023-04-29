@@ -85,10 +85,10 @@ class DolphinGenerator(Generator):
             dolphinSettings.set("Core", "FastDiscSpeed", "False")
 
         # Dual Core
-        if system.isOptSet("dual_core") and system.getOptBoolean("dual_core"):
-            dolphinSettings.set("Core", "CPUThread", "True")
-        else:
+        if system.isOptSet("dual_core") and system.getOptBoolean("dual_core") == False:
             dolphinSettings.set("Core", "CPUThread", "False")
+        else:
+            dolphinSettings.set("Core", "CPUThread", "True")
 
         # Gpu Sync
         if system.isOptSet("gpu_sync") and system.getOptBoolean("gpu_sync"):
