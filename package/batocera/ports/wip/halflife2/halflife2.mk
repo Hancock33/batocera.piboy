@@ -3,8 +3,8 @@
 # halflife2
 #
 ################################################################################
-# Version: Commits on Apr 26, 2023
-HALFLIFE2_VERSION = 823e437005e69ad0764b6aa1abe6e4b869d5b94c
+# Version: Commits on Apr 29, 2023
+HALFLIFE2_VERSION = 1a584655d9532a2f01897a9e8550cb90362d9943
 HALFLIFE2_SITE = https://github.com/nillerusr/source-engine.git
 HALFLIFE2_SITE_METHOD = git
 HALFLIFE2_GIT_SUBMODULES = yes

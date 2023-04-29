@@ -11571,7 +11571,7 @@ msgctxt "keys_files"
 msgid "Emulator configuration"
 msgstr ""
 
-#. TRANSLATION: gamecube.dolphin.keys, wii.dolphin.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys
 msgctxt "keys_files"
 msgid "Alternative exit the emulator for guns"
 msgstr ""
