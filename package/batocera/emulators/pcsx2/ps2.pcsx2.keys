@@ -3,7 +3,7 @@
 	{
             "trigger": ["hotkey", "start"],
             "type": "exec",
-            "target": "killall -9 pcsx2-qt"
+            "target": "killall -9 pcsx2"
 	},
 	{
             "trigger": [ "b", "hotkey" ],
