@@ -10917,7 +10917,7 @@ msgstr ""
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Choose the appropriate media for disk image."
-msgstr ""
+msgstr "Scegli il media appropriato per l'immagine disco."
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
