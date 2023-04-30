@@ -3,42 +3,56 @@
         {
             "trigger": "up",
             "type": "key",
-            "target": "KEY_UP"
+            "target": "KEY_T",
+            "description": "Move Forward / Up"
         },
         {
             "trigger": "down",
             "type": "key",
-            "target": "KEY_DOWN"
+            "target": "KEY_G",
+            "description": "Move Back / Down"
         },
         {
             "trigger": "left",
             "type": "key",
-            "target": "KEY_LEFT"
+            "target": "KEY_F",
+            "description": "Move Left"
         },
         {
             "trigger": "right",
             "type": "key",
-            "target": "KEY_RIGHT"
+            "target": "KEY_H",
+            "description": "Move Right"
         },
         {
             "trigger": "start",
             "type": "key",
-            "target": "KEY_C"
+            "target": "KEY_ENTER",
+            "description": "Start Button"
+        },
+        {
+            "trigger": "select",
+            "type": "key",
+            "target": "KEY_C",
+            "description": "Service / Insert Coins Button"
         },
         {
             "trigger": "a",
             "type": "key",
-            "target": "KEY_Z"
+            "target": "KEY_Q",
+            "description": "Break / Shoot"
         },
         {
             "trigger": "b",
             "type": "key",
-            "target": "KEY_W"
+            "target": "KEY_W",
+            "description": "Accelerate  / Short Pass"
         },
         {
             "trigger": "y",
             "type": "key",
-            "target": "KEY_Q"
+            "target": "KEY_X",
+            "description": "Action / Long Pass"
         },
         {
             "trigger": "joystick1up",
@@ -53,62 +67,98 @@
         {
             "trigger": "joystick1left",
             "type": "key",
-            "target": "KEY_LEFT"
+            "target": "KEY_LEFT",
+            "description": "Steer Left"
         },
         {
             "trigger": "joystick1right",
             "type": "key",
-            "target": "KEY_RIGHT"
+            "target": "KEY_RIGHT",
+            "description": "Steer Left"
         },
         {
             "trigger": "pageup",
             "type": "key",
-            "target": "KEY_Q"
+            "target": "KEY_X",
+            "description": "Action / Long Pass"
         },
         {
             "trigger": "pagedown",
             "type": "key",
-            "target": "KEY_W"
+            "target": "KEY_X",
+            "description": "Action / Long Pass"
         },
         {
             "trigger": "l2",
             "type": "key",
-            "target": "KEY_Q"
+            "target": "KEY_Q",
+            "description": "Break / Shoot"
         },
         {
             "trigger": "r2",
             "type": "key",
-            "target": "KEY_W"
+            "target": "KEY_W",
+            "description": "Accelerate  / Short Pass"
         },
         {
-            "trigger": ["hotkey", "start"],
+            "trigger": [
+                "hotkey",
+                "start"
+            ],
             "type": "exec",
             "target": "killall -9 dolphin-triforce",
             "description": "Exit emulator"
         },
         {
-            "trigger": ["hotkey", "b"],
+            "trigger": [
+                "b",
+                "hotkey"
+            ],
             "type": "key",
-            "target": ["KEY_LEFTALT", "KEY_ENTER"],
+            "target": [
+                "KEY_LEFTALT",
+                "KEY_ENTER"
+            ],
             "description": "Open Dolphin-triforce's menu"
         },
         {
-            "trigger": ["hotkey", "x"],
+            "trigger": [
+                "hotkey",
+                "x"
+            ],
             "type": "key",
-            "target": ["KEY_F1"],
+            "target": "KEY_F1",
             "description": "Load State Slot 1"
         },
         {
-            "trigger": ["hotkey", "y"],
+            "trigger": [
+                "hotkey",
+                "y"
+            ],
             "type": "key",
-            "target": ["KEY_LEFTSHIFT", "KEY_F1"],
+            "target": [
+                "KEY_LEFTSHIFT",
+                "KEY_F1"
+            ],
             "description": "Save State Slot 1"
         },
         {
-            "trigger": ["hotkey", "pageup"],
+            "trigger": [
+                "hotkey",
+                "pageup"
+            ],
             "type": "key",
             "target": "KEY_F9",
             "description": "Screenshot"
+        },
+        {
+            "trigger": [
+                "a",
+                "hotkey"
+            ],
+            "type": "key",
+            "target": "KEY_D",
+            "description": "Test Button"
         }
     ]
 }

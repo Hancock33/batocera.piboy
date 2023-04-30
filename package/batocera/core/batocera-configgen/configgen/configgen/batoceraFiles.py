@@ -79,7 +79,7 @@ dolphinSYSCONF = dolphinData + "/Wii/shared2/sys/SYSCONF"
 dolphinTriforceConfig  = CONF + "/dolphin-triforce"
 dolphinTriforceData    = SAVES + "/dolphin-triforce"
 dolphinTriforceIni     = dolphinTriforceConfig + '/Config/Dolphin.ini'
-dolphinTriforceGfxIni  = dolphinTriforceConfig + '/Config/gfx_opengl.ini'
+dolphinTriforceGfxIni  = dolphinTriforceConfig + '/Config/GFX.ini'
 dolphinTriforceLoggerIni    = dolphinTriforceConfig + '/Config/Logger.ini'
 dolphinTriforceGameSettings = dolphinTriforceConfig + "/GameSettings"
 
