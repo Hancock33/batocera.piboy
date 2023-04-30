@@ -3,8 +3,8 @@
 # vkquake
 #
 ################################################################################
-# Version: Commits on Apr 18, 2023
-VKQUAKE_VERSION = fa31bfdc539ef3a3b40bc365d12a56f4c34e5cc9
+# Version: Commits on Apr 30, 2023
+VKQUAKE_VERSION = 19d76588037977f59506c18aa3d307f8f5124d0f
 VKQUAKE_SITE = $(call github,Novum,vkQuake,$(VKQUAKE_VERSION))
 
 VKQUAKE_DEPENDENCIES = sdl2 sdl2_image
