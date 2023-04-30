@@ -3,8 +3,8 @@
 # omf2097
 #
 ################################################################################
-# Version: Commits on Apr 29, 2023
-OMF2097_VERSION = 5feab6aa03b842485b281ab7e42cefe68e4cf936
+# Version: Commits on Apr 30, 2023
+OMF2097_VERSION = 338584c138882bb80714377de6aa58749b8864ce
 OMF2097_SITE = $(call github,omf2097,openomf,$(OMF2097_VERSION))
 
 OMF2097_DEPENDENCIES = sdl2 sdl2_mixer libargtable2 enet libconfuse host-ninja
