@@ -44,7 +44,7 @@ class DolphinTriforceGenerator(Generator):
         # only 1 window (fixes exit and gui display)
         dolphinTriforceSettings.set("Display", "RenderToMain", "True")
         dolphinTriforceSettings.set("Display", "Fullscreen", "True")
-        dolphinTriforceSettings.set("Display", "RenderWindowAutoSize", "False")
+        dolphinTriforceSettings.set("Display", "RenderWindowAutoSize", "True")
 
         # Define default games path
         if "ISOPaths" not in dolphinTriforceSettings["General"]:
@@ -139,8 +139,8 @@ class DolphinTriforceGenerator(Generator):
         if system.isOptSet('dolphin_aspect_ratio'):
             dolphinTriforceGFXSettings.set("Settings", "AspectRatio", system.config["dolphin_aspect_ratio"])
         else:
-            # set to zero, which is 'Auto' in Dolphin & Batocera
-            dolphinTriforceGFXSettings.set("Settings", "AspectRatio", "0")
+            # set to one, which is '4:3' in Dolphin and stops auto switching ingame
+            dolphinTriforceGFXSettings.set("Settings", "AspectRatio", "1")
 
         # Show fps
         if system.isOptSet("showFPS") and system.getOptBoolean("showFPS"):

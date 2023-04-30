@@ -1,8 +1,8 @@
 diff --git a/src/floppybridge/CommonBridgeTemplate.h b/src/floppybridge/CommonBridgeTemplate.h
-index e17558cc..2dc157f3 100644
+index e70bbede..2c71d62c 100644
 --- a/src/floppybridge/CommonBridgeTemplate.h
 +++ b/src/floppybridge/CommonBridgeTemplate.h
-@@ -36,7 +36,9 @@
+@@ -32,7 +32,9 @@
  #include <thread>
  #include <functional>
  #include <queue>
@@ -12,18 +12,11 @@ index e17558cc..2dc157f3 100644
  #include <deque>
  #include <mutex>
  #include <condition_variable>
-@@ -541,4 +543,4 @@ public:
- 
- };
- 
--#endif
-\ No newline at end of file
-+#endif
 diff --git a/src/floppybridge/FloppyBridge.h b/src/floppybridge/FloppyBridge.h
-index 91c409d9..a8a45a04 100644
+index c3dd4c05..7083f4db 100644
 --- a/src/floppybridge/FloppyBridge.h
 +++ b/src/floppybridge/FloppyBridge.h
-@@ -29,7 +29,9 @@
+@@ -28,7 +28,9 @@
  // that uses this DLL. This way any other project whose source files include this file see
  // FLOPPYBRIDGE_API functions as being imported from a DLL, whereas this DLL sees symbols
  // defined with this macro as being exported.
@@ -35,10 +28,10 @@ index 91c409d9..a8a45a04 100644
  #ifdef _WIN32
  
 diff --git a/src/floppybridge/SerialIO.h b/src/floppybridge/SerialIO.h
-index 69b4ce73..6769b258 100644
+index abb43858..153b30a9 100644
 --- a/src/floppybridge/SerialIO.h
 +++ b/src/floppybridge/SerialIO.h
-@@ -27,6 +27,8 @@
+@@ -26,6 +26,8 @@
  
  #include <string>
  #include <vector>
@@ -47,29 +40,3 @@ index 69b4ce73..6769b258 100644
  
  #ifdef _WIN32
  #ifdef USING_MFC
-@@ -151,4 +153,4 @@ public:
- };
-  
- 
--#endif
-\ No newline at end of file
-+#endif
-diff --git a/src/floppybridge/floppybridge_config.h b/src/floppybridge/floppybridge_config.h
-index 4232b907..e02dbc53 100644
---- a/src/floppybridge/floppybridge_config.h
-+++ b/src/floppybridge/floppybridge_config.h
-@@ -35,7 +35,6 @@
- 	ROMTYPE_FLOPYBRDGEF 
- */
- 
--
- // DrawBridge aka Arduino floppy reader/writer
- #define ROMTYPE_ARDUINOREADER_WRITER			ROMTYPE_FLOPYBRDGE0
- #include "ArduinoFloppyBridge.h"
-@@ -118,4 +117,4 @@
- #endif
- 
- 
--#endif
-\ No newline at end of file
-+#endif
