@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Mar 15, 2023
-DOLPHIN_TRIFORCE_VERSION = 6b7664dd230de299bae22150be77f4766cddde83
+DOLPHIN_TRIFORCE_VERSION = 77c326231be19aed8b0aa5fdde9d39e8dd86f5da
 DOLPHIN_TRIFORCE_SITE = https://crediar.dev/crediar/dolphin.git
 DOLPHIN_TRIFORCE_SITE_METHOD = git
 DOLPHIN_TRIFORCE_LICENSE = GPLv2+
