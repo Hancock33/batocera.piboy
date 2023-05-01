@@ -22,7 +22,7 @@ ifeq ($(BR2_PACKAGE_PCSX2),y)
 endif
 
 # dolphin
-ifeq ($(BR2_PACKAGE_DOLPHIN_EMU),y)
+ifeq ($(BR2_PACKAGE_DOLPHIN_EMU)$(BR2_PACKAGE_XORG7),yy)
   BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-dolphin
   BATOCERA_DESKTOPAPPS_APPS    += dolphin-config.desktop
   BATOCERA_DESKTOPAPPS_ICONS   += dolphin.png
