@@ -1029,7 +1029,8 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_TRITIUM_H5  || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_S912        || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_S905GEN3    || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S922X
+                                                                BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
     select BR2_PACKAGE_YABASANSHIRO                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
@@ -1056,7 +1057,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_PCSX2                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_PCSX2_AVX2                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_LRPS2                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-    #select BR2_PACKAGE_LIBRETRO_PCSX2                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    #select BR2_PACKAGE_LIBRETRO_PCSX2                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Sony PS3
     select BR2_PACKAGE_RPCS3                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
