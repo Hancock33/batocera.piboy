@@ -16,9 +16,9 @@ class SdlPopGenerator(Generator):
         if not os.path.exists(batoceraFiles.sdlpopConfigDir):
             os.makedirs(batoceraFiles.sdlpopConfigDir)
         if not os.path.exists(batoceraFiles.sdlpopSrcCfg):
-            shutil.copyfile('/usr/share/sdlpop/cfg/SDLPoP.cfg', batoceraFiles.sdlpopSrcCfg)
+            shutil.copyfile('/usr/share/SDLPoP/cfg/SDLPoP.cfg', batoceraFiles.sdlpopSrcCfg)
         if not os.path.exists(batoceraFiles.sdlpopSrcIni):
-            shutil.copyfile('/usr/share/sdlpop/cfg/SDLPoP.ini', batoceraFiles.sdlpopSrcIni)
+            shutil.copyfile('/usr/share/SDLPoP/cfg/SDLPoP.ini', batoceraFiles.sdlpopSrcIni)
         # symbolic link cfg files
         if not os.path.exists(batoceraFiles.sdlpopDestCfg):
             os.symlink(batoceraFiles.sdlpopSrcCfg, batoceraFiles.sdlpopDestCfg)
@@ -27,7 +27,7 @@ class SdlPopGenerator(Generator):
         # symbolic link screenshot folder too
         if not os.path.exists('/userdata/screenshots/sdlpop'):
             os.makedirs('/userdata/screenshots/sdlpop')
-            os.symlink('/userdata/screenshots/sdlpop', '/usr/share/sdlpop/screenshots', target_is_directory = True)
+            os.symlink('/userdata/screenshots/sdlpop', '/usr/share/SDLPoP/screenshots', target_is_directory = True)
 
         # pad number
         nplayer = 1
@@ -37,5 +37,6 @@ class SdlPopGenerator(Generator):
             nplayer += 1
 
         return Command.Command(array=commandArray,env={
+            "SDLPOP_SAVE_PATH" : batoceraFiles.sdlpopConfigDir,
             "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
         })
