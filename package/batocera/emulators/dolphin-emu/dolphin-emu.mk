@@ -55,6 +55,6 @@ define DOLPHIN_EMU_EVMAPY
     cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/*.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-DOLPHIN_EMU_POST_INSTALL_TARGET_HOOKS += DOLPHIN_EMU_EVMAPY
+DOLPHIN_EMU_POST_INSTALL_TARGET_HOOKS = DOLPHIN_EMU_EVMAPY
 
 $(eval $(cmake-package))
