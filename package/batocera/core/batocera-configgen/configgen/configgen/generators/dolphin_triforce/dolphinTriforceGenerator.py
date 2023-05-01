@@ -42,9 +42,9 @@ class DolphinTriforceGenerator(Generator):
             dolphinTriforceSettings.add_section("Core")
 
         # only 1 window (fixes exit and gui display)
-        dolphinTriforceSettings.set("Display", "RenderToMain", "True")
-        dolphinTriforceSettings.set("Display", "Fullscreen", "True")
-        dolphinTriforceSettings.set("Display", "RenderWindowAutoSize", "True")
+        dolphinTriforceSettings.remove_option("Display", "RenderToMain")
+        dolphinTriforceSettings.remove_option("Display", "Fullscreen")
+        dolphinTriforceSettings.remove_option("Display", "RenderWindowAutoSize")
 
         # Define default games path
         if "ISOPaths" not in dolphinTriforceSettings["General"]:
@@ -139,8 +139,8 @@ class DolphinTriforceGenerator(Generator):
         if system.isOptSet('dolphin_aspect_ratio'):
             dolphinTriforceGFXSettings.set("Settings", "AspectRatio", system.config["dolphin_aspect_ratio"])
         else:
-            # set to one, which is '4:3' in Dolphin and stops auto switching ingame
-            dolphinTriforceGFXSettings.set("Settings", "AspectRatio", "1")
+            # set to two, which is '4:3' in Dolphin and stops auto switching ingame
+            dolphinTriforceGFXSettings.set("Settings", "AspectRatio", "2")
 
         # Show fps
         if system.isOptSet("showFPS") and system.getOptBoolean("showFPS"):
@@ -240,7 +240,7 @@ class DolphinTriforceGenerator(Generator):
         with open(batoceraFiles.dolphinTriforceLoggerIni, 'w') as configfile:
             dolphinTriforceLogSettings.write(configfile)
 
-        commandArray = ["dolphin-triforce", "-u", "/userdata/system/configs/dolphin-triforce", "-e", rom]
+        commandArray = ["dolphin-triforce", '-b', "-u", "/userdata/system/configs/dolphin-triforce", "-e", rom]
 
         # No environment variables work for now, paths are coded in above.
         return Command.Command(array=commandArray, env={"XDG_CONFIG_HOME":batoceraFiles.CONF, "XDG_DATA_HOME":batoceraFiles.SAVES})
