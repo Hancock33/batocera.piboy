@@ -1,17 +1,17 @@
 diff --git a/src/citra_qt/bootmanager.cpp b/src/citra_qt/bootmanager.cpp
-index ef89f890b..401c4993b 100644
+index b13169bcd..9bbf42dcd 100644
 --- a/src/citra_qt/bootmanager.cpp
 +++ b/src/citra_qt/bootmanager.cpp
-@@ -27,6 +27,8 @@
- #include "video_core/renderer_base.h"
- #include "video_core/video_core.h"
+@@ -42,6 +42,8 @@
+ 
+ static Frontend::WindowSystemType GetWindowSystemType();
  
 +extern int batocera_hotkey_exit;
 +
  EmuThread::EmuThread(Frontend::GraphicsContext& core_context) : core_context(core_context) {}
  
  EmuThread::~EmuThread() = default;
-@@ -103,8 +105,11 @@ void EmuThread::run() {
+@@ -119,8 +121,11 @@ void EmuThread::run() {
              std::unique_lock lock{running_mutex};
              running_cv.wait(lock, [this] { return IsRunning() || exec_step || stop_run; });
          }
@@ -25,10 +25,10 @@ index ef89f890b..401c4993b 100644
      system.Shutdown();
  
 diff --git a/src/citra_qt/main.cpp b/src/citra_qt/main.cpp
-index 40767a49a..c54906a43 100644
+index 1617968cc..d99faef61 100644
 --- a/src/citra_qt/main.cpp
 +++ b/src/citra_qt/main.cpp
-@@ -2655,3 +2655,8 @@ int main(int argc, char* argv[]) {
+@@ -2788,3 +2788,8 @@ int main(int argc, char* argv[]) {
      detached_tasks.WaitForAllTasks();
      return result;
  }
@@ -38,10 +38,10 @@ index 40767a49a..c54906a43 100644
 +    close();
 +}
 diff --git a/src/citra_qt/main.h b/src/citra_qt/main.h
-index 03689cc5f..410797e77 100644
+index 6ee7dc562..6e2a17a27 100644
 --- a/src/citra_qt/main.h
 +++ b/src/citra_qt/main.h
-@@ -78,6 +78,7 @@ public:
+@@ -84,6 +84,7 @@ public:
  
      bool DropAction(QDropEvent* event);
      void AcceptDropEvent(QDropEvent* event);

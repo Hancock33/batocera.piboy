@@ -1,8 +1,8 @@
 diff --git a/Source/Core/Core/HW/DVD/AMBaseboard.cpp b/Source/Core/Core/HW/DVD/AMBaseboard.cpp
-index c850756fc8..bc207c3d64 100644
+index 0134a5a25f..bc207c3d64 100644
 --- a/Source/Core/Core/HW/DVD/AMBaseboard.cpp
 +++ b/Source/Core/Core/HW/DVD/AMBaseboard.cpp
-@@ -45,106 +45,107 @@
+@@ -45,116 +45,117 @@
  #include "Core/System.h"
  #include "Core/WiiRoot.h"
  #include "Core/HLE/HLE.h"
@@ -197,7 +197,44 @@ index c850756fc8..bc207c3d64 100644
  } ;
  
  
-@@ -311,7 +312,7 @@ u8 *InitDIMM( void )
+ namespace AMBaseboard
+ {
+ 
+-static u32 NAMCAMInit = 0;
+ static u32 m_game_type = 0;
+ static u32 FIRMWAREMAP = 0;
+ static u32 m_segaboot = 0;
++static u32 m_v2_dma_adr = 0;
+ static u32 Timeouts[3] = {20000, 20000, 20000};
+ 
+ static u32 GCAMKeyA;
+@@ -170,7 +171,7 @@ static File::IOFile* m_dimm = nullptr;
+ unsigned char* m_dimm_disc = nullptr;
+ 
+ static unsigned char firmware[2*1024*1024];
+-static unsigned char media_buffer[0x60];
++static unsigned char media_buffer[0x300];
+ static unsigned char network_command_buffer[0x4FFE00];
+ static unsigned char network_buffer[64*1024];
+ 
+@@ -188,7 +189,7 @@ static inline void PrintMBBuffer( u32 Address, u32 Length )
+ 
+ 	for( u32 i=0; i < Length; i+=0x10 )
+ 	{
+-		DEBUG_LOG_FMT(DVDINTERFACE, "GC-AM: {:08x} {:08x} {:08x} {:08x}",	memory.Read_U32(Address+i),
++    NOTICE_LOG_FMT(DVDINTERFACE, "GC-AM: {:08x} {:08x} {:08x} {:08x}", memory.Read_U32(Address + i),
+ 																                            memory.Read_U32(Address+i+4),
+ 																                            memory.Read_U32(Address+i+8),
+ 																                            memory.Read_U32(Address+i+12) );
+@@ -215,7 +216,6 @@ void Init(void)
+   memset(network_command_buffer, 0, sizeof(network_command_buffer));
+   memset(firmware, -1, sizeof(firmware));
+ 
+-  NAMCAMInit = 0;
+   m_game_type = 0;
+   m_segaboot = 0;
+   FIRMWAREMAP = 0;
+@@ -312,7 +312,7 @@ u8 *InitDIMM( void )
  u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  {
    auto& system = Core::System::GetInstance();
@@ -206,7 +243,7 @@ index c850756fc8..bc207c3d64 100644
  
    /*
      The triforce IPL sends these commands first
-@@ -357,7 +358,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -358,7 +358,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  
    DICMDBUF[0] <<= 24;
    DICMDBUF[1] <<= 2;
@@ -215,7 +252,7 @@ index c850756fc8..bc207c3d64 100644
    // SegaBoot adds bits for some reason to offset/length
    // also adds 0x20 to offset
    if (DICMDBUF[1] == 0x00100440)
-@@ -367,7 +368,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -368,21 +368,16 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  
    u32 Command = DICMDBUF[0];
    u32 Offset  = DICMDBUF[1];
@@ -223,17 +260,23 @@ index c850756fc8..bc207c3d64 100644
 +
  	INFO_LOG_FMT(DVDINTERFACE, "GCAM: {:08x} {:08x} DMA=addr:{:08x},len:{:08x} Keys: {:08x} {:08x} {:08x}",
                                  Command, Offset, Address, Length, GCAMKeyA, GCAMKeyB, GCAMKeyC );
+-  //if (Address == 0x01300000)
+-  //{
+-  //  INFO_LOG_FMT(DVDINTERFACE, "GCAM: PC:{:08x}", PC);
+-  //  PowerPC::breakpoints.Add( PC, false );
+-  //}
  
-@@ -376,7 +377,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+   // Test menu exit to sega boot
+   //if (Offset == 0x0002440 && Address == 0x013103a0 )
    //{
    //  FIRMWAREMAP = 1;
    //}
--  
+-   
 +
  	switch(Command>>24)
  	{
  		// Inquiry
-@@ -401,15 +402,15 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -407,15 +402,15 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  				switch(Offset)
  				{
  				// Media board status (1)
@@ -252,7 +295,33 @@ index c850756fc8..bc207c3d64 100644
  					memset( memory.GetPointer(Address), 0xFF, Length );
  					// DIMM size (512MB)
  					memory.Write_U32( Common::swap32( 0x20000000 ), Address );
-@@ -458,7 +459,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -431,12 +426,21 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+           memory.Write_U32(Common::swap32( (u32)0x01FA ), Address);
+           break;
+ 				// Firmware status (2)
+-        case 0x80000140: 
+-					memory.Write_U32( Common::swap32( (u32)1 ), Address);
+-					break;
++        case 0x80000140:
++          memory.Write_U32(Common::swap32((u32)1), Address);
++          break;
++        case 0x80000160:
++          memory.Write_U32( 0x00001E00, Address);
++          break;
++        case 0x80000180:
++          memory.Write_U32( 0, Address);
++          break;
++        case 0x800001A0:
++          memory.Write_U32( 0xFFFFFFFF , Address);
++          break;
+ 				default:
+ 					PrintMBBuffer( Address, Length );
+-					PanicAlertFmtT("Unhandled Media Board Read:{0:08x}", Address);
++          PanicAlertFmtT("Unhandled Media Board Read:{0:08x}", Offset);
+ 					break;
+ 				}
+ 				return 0;
+@@ -455,7 +459,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
          m_extra->Seek(0, File::SeekOrigin::Begin);
          m_extra->ReadBytes(memory.GetPointer(Address), Length);
          return 0;
@@ -261,7 +330,7 @@ index c850756fc8..bc207c3d64 100644
  			// DIMM memory (8MB)
  			if( (Offset >= 0x1F000000) && (Offset <= 0x1F800000) )
  			{
-@@ -472,8 +473,8 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -469,8 +473,8 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  			{
          u32 dimmoffset = Offset - 0x1F900000;
  				memcpy( memory.GetPointer(Address), media_buffer + dimmoffset, Length );
@@ -272,7 +341,7 @@ index c850756fc8..bc207c3d64 100644
  				PrintMBBuffer( Address, Length );
  				return 0;
  			}
-@@ -481,16 +482,16 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -478,16 +482,16 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  			if( (Offset >= NetworkCommandAddress) && (Offset <= 0x1FCFFFFF) )
        {
          u32 dimmoffset = Offset - NetworkCommandAddress;
@@ -293,7 +362,7 @@ index c850756fc8..bc207c3d64 100644
          memcpy(memory.GetPointer(Address), network_buffer + dimmoffset, Length);
          return 0;
        }
-@@ -499,18 +500,18 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -496,7 +500,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
        if ((Offset >= 0x1FD00000) && (Offset <= 0x1FD0FFFF))
        {
          u32 dimmoffset = Offset - 0x1FD00000;
@@ -302,10 +371,7 @@ index c850756fc8..bc207c3d64 100644
          memcpy(memory.GetPointer(Address), network_buffer + dimmoffset, Length);
          return 0;
        }
--      
-+
- 			// DIMM command (V2)
- 			if( (Offset >= 0x84000000) && (Offset <= 0x8400005F) )
+@@ -506,12 +510,48 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  			{
  				u32 dimmoffset = Offset - 0x84000000;
  				memcpy( memory.GetPointer(Address), media_buffer + dimmoffset, Length );
@@ -316,25 +382,47 @@ index c850756fc8..bc207c3d64 100644
  				PrintMBBuffer( Address, Length );
  				return 0;
        }
-@@ -535,7 +536,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  
-         memcpy( memory.GetPointer(Address), media_buffer + dimmoffset, Length );
- 
--        NOTICE_LOG_FMT(DVDINTERFACE, "GC-AM: Read MEDIA BOARD COMM AREA (?) ({:08x})", dimmoffset);
++      // DIMM command (V2)
++      if( Offset == 0x88000000 )
++      {
++        u32 dimmoffset = Offset - 0x88000000;
++
++        memset(media_buffer, 0, 0x20);
++
++        INFO_LOG_FMT(DVDINTERFACE, "GC-AM: Execute command:{:03X}", *(u16*)(media_buffer + 0x202));
++
++        switch( *(u16*)(media_buffer + 0x202) )
++        {
++          case 1:
++            *(u32*)(media_buffer) = 0x1FFF8000;
++            break;
++          default:
++            break;
++        }
++
++        memcpy( memory.GetPointer(Address), media_buffer + dimmoffset, Length );
++
 +        //NOTICE_LOG_FMT(DVDINTERFACE, "GC-AM: Read MEDIA BOARD COMM AREA (?) ({:08x})", dimmoffset);
-         PrintMBBuffer(Address, Length);
-         return 0;
-       }
-@@ -546,7 +547,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
-         u32 dimmoffset = Offset - 0x89000000;
-         memcpy(memory.GetPointer(Address), media_buffer + dimmoffset, Length);
- 
--        NOTICE_LOG_FMT(DVDINTERFACE, "GC-AM: Read MEDIA BOARD COMM AREA (3) ({:08x})", dimmoffset);
++        PrintMBBuffer(Address, Length);
++        return 0;
++      }
++
++      // DIMM command (V2)
++      if ((Offset >= 0x89000000) && (Offset <= 0x89000200))
++      {
++        u32 dimmoffset = Offset - 0x89000000;
++        memcpy(memory.GetPointer(Address), media_buffer + dimmoffset, Length);
++
 +        //NOTICE_LOG_FMT(DVDINTERFACE, "GC-AM: Read MEDIA BOARD COMM AREA (3) ({:08x})", dimmoffset);
-         PrintMBBuffer(Address, Length);
-         return 0;
-       }
-@@ -590,7 +591,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
++        PrintMBBuffer(Address, Length);
++        return 0;
++      }
++
+ 			// DIMM memory (8MB)
+ 			if( (Offset >= 0xFF000000) && (Offset <= 0xFF800000) )
+ 			{
+@@ -551,7 +591,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
          return 0;
        }
  
@@ -343,7 +431,7 @@ index c850756fc8..bc207c3d64 100644
  			break;
  		// Write
  		case 0xAA:
-@@ -630,7 +631,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -591,7 +631,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
          m_extra->WriteBytes(memory.GetPointer(Address), Length);
          m_extra->Flush();
          return 0;
@@ -352,7 +440,7 @@ index c850756fc8..bc207c3d64 100644
  			// Backup memory (8MB)
  			if( (Offset >= 0x000006A0) && (Offset <= 0x00800000) )
  			{
-@@ -687,7 +688,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -648,7 +688,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  			{
  				u32 dimmoffset = Offset - 0x1F900000;
  				memcpy( media_buffer + dimmoffset, memory.GetPointer(Address), Length );
@@ -361,34 +449,125 @@ index c850756fc8..bc207c3d64 100644
  				INFO_LOG_FMT(DVDINTERFACE, "GC-AM: Write MEDIA BOARD COMM AREA (1) ({:08x})", dimmoffset );
  				PrintMBBuffer( Address, Length );
  				return 0;
-@@ -714,7 +715,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
-         //}
+@@ -663,8 +703,19 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  
+         u8 cmd_flag = memory.Read_U8(Address);
+ 
++        if (dimmoffset == 0x20 && cmd_flag != 0 )
++        {
++          m_v2_dma_adr = Address;
++        }
++
++        //if (dimmoffset == 0x40 && cmd_flag == 0)
++        //{
++        //  INFO_LOG_FMT(DVDINTERFACE, "GCAM: PC:{:08x}", PC);
++        //  PowerPC::breakpoints.Add( PC+8, false );
++        //}
++
  				if( dimmoffset == 0x40 && cmd_flag == 1 )
 -        { 
 +        {
            // Recast for easier access
            u32* media_buffer_in_32 = (u32*)(media_buffer + 0x20);
            u16* media_buffer_in_16 = (u16*)(media_buffer + 0x20);
-@@ -722,7 +723,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -672,12 +723,17 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
            u16* media_buffer_out_16 = (u16*)(media_buffer);
  
  					INFO_LOG_FMT(DVDINTERFACE, "GC-AM: Execute command:{:03X}", media_buffer_in_16[1] );
 -					
 +
  					memset(media_buffer, 0, 0x20);
+-          media_buffer_out_16[0] = media_buffer_in_16[0];
  
-           media_buffer_out_32[0] = media_buffer_in_32[0] | 0x80000000;  // Set command okay flag
-@@ -757,7 +758,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
-             media_buffer_out_16[2] = Common::swap16(0x0309);
+-          // Command
+-          media_buffer_out_16[1] = media_buffer_in_16[1] | 0x8000;  // Set command okay flag
++          media_buffer_out_32[0] = media_buffer_in_32[0] | 0x80000000;  // Set command okay flag
++
++          for (u32 i = 0; i < 0x20; i += 4)
++          {
++            *(u32*)(media_buffer + 0x40 + i) = *(u32*)(media_buffer);
++          }
++
++          //memory.Write_U8( 0xA9, m_v2_dma_adr + 0x20 );
+ 
+ 					switch (media_buffer_in_16[1])
+           {
+@@ -685,29 +741,30 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+           case 0x000:
+             media_buffer_out_32[1] = 1;
+             break;
+-          // DIMM size
++          // NAND size
+           case 0x001:
+-            media_buffer_out_32[1] = 0x20000000;
++            media_buffer_out_32[1] = 0x1FFF8000;
+             break;
++          // Loading Progress
+ 					case 0x100:
+ 						// Status
+             media_buffer_out_32[1] = 5;
+ 						// Progress in %
+             media_buffer_out_32[2] = 100;
+             break;
+-          // SegaBoot version: 3.11
++          // SegaBoot version: 3.09
+           case 0x101:
+             // Version
+-            media_buffer_out_16[2] = Common::swap16(0x1103);
++            media_buffer_out_16[2] = Common::swap16(0x0309);
              // Unknown
-             media_buffer_out_16[3] = 2;
--            media_buffer_out_32[2] = 0x4746; // "GF" 
+-            media_buffer_out_16[3] = 1;
+-            media_buffer_out_32[2] = 1;
++            media_buffer_out_16[3] = 2;
 +            media_buffer_out_32[2] = 0x4746; // "GF"
              media_buffer_out_32[4] = 0xFF;
              break;
            // System flags
-@@ -820,7 +821,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+           case 0x102:
+             // 1: GD-ROM
+-            media_buffer[4] = 1;
++            media_buffer[4] = 0;
+             media_buffer[5] = 1;
+             // enable development mode (Sega Boot)
+             // This also allows region free booting
+@@ -725,7 +782,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+               7: N/A
+               8: Unknown
+             */
+-            // media_buffer[7] = 0;
++            media_buffer[7] = 1;
+             break;
+           // Media board serial
+           case 0x103:
+@@ -736,10 +793,6 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+             break;
+           }
+ 
+-          for ( u32 i=0; i<0x20; i+=4)
+-          {
+-            *(u32*)(media_buffer + 0x40 + i) = *(u32*)(media_buffer);
+-          }
+ 
+           memset(media_buffer + 0x20, 0, 0x20 );
+           return 0;
+@@ -751,12 +804,24 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+         return 0;
+ 			}
+ 
++      // DIMM command, used when inquiry returns 0x29000000
++      if ((Offset >= 0x89000000) && (Offset <= 0x89000200))
++      {
++        u32 dimmoffset = Offset - 0x89000000;
++        INFO_LOG_FMT(DVDINTERFACE, "GC-AM: Write MEDIA BOARD COMM AREA (3) ({:08x})", dimmoffset );
++        PrintMBBuffer(Address, Length);
++
++        memcpy(media_buffer + dimmoffset, memory.GetPointer(Address), Length);
++
++        return 0;
++      }
++
+       // Firmware Write
+       if ((Offset >= 0x84800000) && (Offset <= 0x84818000))
        {
          u32 dimmoffset = Offset - 0x84800000;
  
@@ -397,7 +576,7 @@ index c850756fc8..bc207c3d64 100644
          PrintMBBuffer(Address, Length);
          return 0;
        }
-@@ -865,9 +866,9 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -801,9 +866,9 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  
  				// Command
          media_buffer_out_16[1] = media_buffer_in_16[1] | 0x8000;  // Set command okay flag
@@ -409,7 +588,7 @@ index c850756fc8..bc207c3d64 100644
  
  				switch (media_buffer_in_16[1])
  				{
-@@ -882,7 +883,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -818,7 +883,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  					// Media board status
  					/*
  					0x00: "Initializing media board. Please wait.."
@@ -418,7 +597,7 @@ index c850756fc8..bc207c3d64 100644
  					0x02: "Found a system disc. Insert a game disc"
  					0x03: "Testing a game program. {:d}%%"
  					0x04: "Loading a game program. {:d}%%"
-@@ -905,7 +906,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -841,7 +906,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
              else
              {
                status = 5;
@@ -427,7 +606,16 @@ index c850756fc8..bc207c3d64 100644
            }
            break;
  					// SegaBoot version: 3.11
-@@ -924,7 +925,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -851,7 +916,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+ 						// Unknown
+             media_buffer_out_16[3] = 1;
+             media_buffer_out_32[2] = 1;
+-            media_buffer_out_32[8] = 0xFFFFFFFF;
++            media_buffer_out_32[4] = 0xFF;
+ 						break;
+ 					// System flags
+           case 0x102:
+@@ -860,7 +925,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
              media_buffer[5] = 1;
  						// Enable development mode (Sega Boot)
              // This also allows region free booting
@@ -436,7 +624,7 @@ index c850756fc8..bc207c3d64 100644
              media_buffer_out_16[4] = 0;  // Access Count
  						break;
  					// Media board serial
-@@ -968,15 +969,11 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -904,15 +969,11 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
              u32 timeout = Timeouts[0] / 1000;
              while (timeout--)
              {
@@ -455,7 +643,7 @@ index c850756fc8..bc207c3d64 100644
                }
                else
                {
-@@ -985,14 +982,14 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -921,14 +982,14 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
                  u_long val = 1;
                  ioctlsocket(fd, FIONBIO, &val);
  #else
@@ -472,7 +660,7 @@ index c850756fc8..bc207c3d64 100644
              media_buffer_out_32[1] = ret;
  					} break;
  					case 0x402:
-@@ -1000,11 +997,11 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -936,11 +997,11 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  						struct sockaddr_in addr;
  
  						u32 fd  = media_buffer_in_32[2];
@@ -486,7 +674,7 @@ index c850756fc8..bc207c3d64 100644
  						addr.sin_family					= Common::swap16(addr.sin_family);
  						*(u32*)(&addr.sin_addr)	= Common::swap32(*(u32*)(&addr.sin_addr));
  
-@@ -1015,14 +1012,14 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -951,14 +1012,14 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
              addr.sin_addr.s_addr = INADDR_ANY;
  
  						int ret = bind( fd, (const sockaddr*)&addr, len );
@@ -505,7 +693,7 @@ index c850756fc8..bc207c3d64 100644
  
              media_buffer_out_32[1] = ret;
  					} break;
-@@ -1030,9 +1027,9 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -966,9 +1027,9 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  					{
              u32 fd = media_buffer_in_32[2];
  
@@ -517,7 +705,7 @@ index c850756fc8..bc207c3d64 100644
  
              media_buffer_out_32[1] = ret;
  					} break;
-@@ -1050,44 +1047,43 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -986,44 +1047,43 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  						memcpy( (void*)&addr, network_command_buffer + off , sizeof(struct sockaddr_in) );
  
              // CyCraft Connect IP, change to localhost
@@ -580,7 +768,7 @@ index c850756fc8..bc207c3d64 100644
  
              media_buffer_out_32[1] = ret;
  					} break;
-@@ -1101,7 +1097,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -1037,7 +1097,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  						//ERROR_LOG_FMT(DVDINTERFACE, "GC-AM:        ({:08x})", *(u32*)(media_buffer+0x2C) );
  
  						u32 offset = media_buffer_in_32[2] - NetworkCommandAddress;
@@ -589,7 +777,7 @@ index c850756fc8..bc207c3d64 100644
  					} break;
  					// inet_addr
  					case 0x406:
-@@ -1110,8 +1106,8 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -1046,8 +1106,8 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
              u32 IPLength = media_buffer_in_32[3];
  
  						memcpy( media_buffer + 8, IP, IPLength );
@@ -600,7 +788,7 @@ index c850756fc8..bc207c3d64 100644
              media_buffer_out_32[1] = Common::swap32(inet_addr(IP));
  					} break;
            /*
-@@ -1124,7 +1120,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -1060,7 +1120,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  
  						int ret = listen( fd, backlog );
  
@@ -609,16 +797,27 @@ index c850756fc8..bc207c3d64 100644
  
              media_buffer_out_32[1] = ret;
  					} break;
-@@ -1134,7 +1130,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -1069,18 +1129,8 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+             u32 fd  = media_buffer_in_32[2];
              u32 off = media_buffer_in_32[3];
              u16 len = media_buffer_in_32[4];
+-            							
+-            //if( NAMCAMInit == 1 )
+-            //{
+-            //  memcpy( network_buffer, JPEG, sizeof(JPEG) );
  
+-            //  *(u32*)(media_buffer+0x04) = sizeof(JPEG);
+-
+-            //  NAMCAMInit = 2;
+-            //  break;
+-            //}
+-
 -            int ret = 0; 
 +            int ret = 0;
              char* buffer = (char*)(network_buffer+off);
  
              if( off >= NetworkCommandAddress && off < 0x1FD00000 )
-@@ -1162,24 +1158,21 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -1108,24 +1158,21 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
                if (ret >= 0)
                  break;
  
@@ -650,16 +849,23 @@ index c850756fc8..bc207c3d64 100644
  
              media_buffer_out_32[1] = ret;
  					} break;
-@@ -1189,7 +1182,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
-             u32 fd     = media_buffer_in_32[2];
+@@ -1136,15 +1183,6 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
              u32 offset = media_buffer_in_32[3];
              u32 len    = media_buffer_in_32[4];
+ 
+-            // Fake NAMCAN request
+-						//if( len == 26 )
+-						//{
+-						//	NAMCAMInit = 1;
+-            // *(u32*)(media_buffer + 0x04) = (len);
+-						//	//ERROR_LOG_FMT(DVDINTERFACE, "GC-AM: NAMCAM HTTP request\n");
+-            //  break;
+-						//}
 -            
-+
              int ret = 0;
  
              if (offset >= NetworkBufferAddress1 && offset < 0x1FA01000)
-@@ -1200,37 +1193,38 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -1155,37 +1193,38 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
              {
                offset -= NetworkBufferAddress2;
              }
@@ -705,7 +911,7 @@ index c850756fc8..bc207c3d64 100644
  						media_buffer_out_32[1] = fd;
              media_buffer_out_32[2] = media_buffer_in_32[2];
              media_buffer_out_32[3] = media_buffer_in_32[3];
-@@ -1246,7 +1240,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -1201,12 +1240,10 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
              fd_set readfds_{};
              fd_set writefds_{};
  
@@ -713,8 +919,13 @@ index c850756fc8..bc207c3d64 100644
 +            fd_set* readfds  = &readfds_;
              fd_set* writefds = &writefds_;
  
+-
              // Either of these can be zero but select still expects two inputs
-@@ -1272,9 +1266,9 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+-
+             if (media_buffer_in_32[3])
+             {
+               readfds = (fd_set*)(network_command_buffer + NOffsetA);
+@@ -1229,9 +1266,9 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  
              int ret = select( nfds, readfds, writefds, nullptr, &timeout );
  
@@ -726,7 +937,7 @@ index c850756fc8..bc207c3d64 100644
  						//hexdump( NetworkCMDBuffer, 0x40 );
  
  						media_buffer_out_32[1] = ret;
-@@ -1284,8 +1278,8 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -1241,8 +1278,8 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
            */
  					// setsockopt
  					case 0x40E:
@@ -737,7 +948,7 @@ index c850756fc8..bc207c3d64 100644
              int level           =    (int)(media_buffer_in_32[3]);
              int optname         =    (int)(media_buffer_in_32[4]);
              const char* optval  =  (char*)(network_command_buffer + media_buffer_in_32[5] - NetworkCommandAddress );
-@@ -1293,9 +1287,9 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -1250,9 +1287,9 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  
  						int ret = setsockopt( s, level, optname, optval, optlen );
  
@@ -749,7 +960,7 @@ index c850756fc8..bc207c3d64 100644
  
              media_buffer_out_32[1] = ret;
  					} break;
-@@ -1313,8 +1307,8 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -1270,8 +1307,8 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
              Timeouts[1] = timeoutB;
              Timeouts[2] = timeoutC;
  
@@ -760,7 +971,7 @@ index c850756fc8..bc207c3d64 100644
  						media_buffer_out_32[1] = 0;
              media_buffer_out_32[3] = media_buffer_in_32[3];
              media_buffer_out_32[4] = media_buffer_in_32[4];
-@@ -1329,8 +1323,8 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -1286,8 +1323,8 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  
              //int ret = closesocket(fd);
  
@@ -771,7 +982,7 @@ index c850756fc8..bc207c3d64 100644
  						media_buffer_out_32[1] = 0x46;
  					} break;
            /*
-@@ -1343,7 +1337,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -1300,7 +1337,7 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  					{
              char* IP = (char*)( network_command_buffer + media_buffer_in_32[2] - NetworkCommandAddress );
  						//u32 IPLength	= (*(u32*)(media_buffer+0x2C));
@@ -780,7 +991,7 @@ index c850756fc8..bc207c3d64 100644
  					} break;
            /*
  *           0x416: recvfrom
-@@ -1360,41 +1354,41 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
+@@ -1317,41 +1354,41 @@ u32 ExecuteCommand(u32* DICMDBUF, u32 Address, u32 Length)
  
  					// Empty reply
  					case 0x601: // Init Link ?
@@ -845,7 +1056,7 @@ index c850756fc8..bc207c3d64 100644
  						}
  
  						media_buffer[4] = 23;
-@@ -1489,7 +1483,7 @@ u32 GetGameType(void)
+@@ -1446,7 +1483,7 @@ u32 GetGameType(void)
    // SBGX - Gekitou Pro Yakyuu (DIMM Uprade 3.17 shares the same ID)
    case 0x53424758:
        m_game_type = GekitouProYakyuu;

@@ -76,7 +76,7 @@
 - citra to nightly-1877
 - amiberry to v5.6.0
 - ppsspp to v1.14.4
-- libretro-ppsspp to v1.14.4
+- libretro-ppsspp to v1.15
 - scummvm to Apr 19, 2023 build
 - libretro-scummvm to Apr 19, 2023 build
 - wine proton to 8.0-1c
@@ -89,6 +89,7 @@
 - lr-mGBA to v0.10.2
 - vice to v3.7.1
 - rpcs3 to v0.0.27
+- pcsx2 to v1.7.4439 (Qt6 build)
 ### Dev
 - buildroot upgrade to 2023.02
 - mesa3d update to 23.0.3
