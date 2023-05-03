@@ -3,10 +3,10 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Apr 29, 2023
-DUCKSTATION_VERSION = a003832e33bb66857a5d9fe2d0ca11e9463771ed
+# Version: Commits on May 03, 2023
+DUCKSTATION_VERSION = 481174255ed5994cb5a043227f78e060d18a6eca
 DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
-DUCKSTATION_SITE_METHOD=git
+DDUCKSTATION_SITE_METHOD=git
 DUCKSTATION_GIT_SUBMODULES=YES
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = fmt boost ffmpeg libcurl ecm
