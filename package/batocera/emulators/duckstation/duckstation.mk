@@ -6,7 +6,7 @@
 # Version: Commits on May 03, 2023
 DUCKSTATION_VERSION = 481174255ed5994cb5a043227f78e060d18a6eca
 DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
-DDUCKSTATION_SITE_METHOD=git
+DUCKSTATION_SITE_METHOD=git
 DUCKSTATION_GIT_SUBMODULES=YES
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = fmt boost ffmpeg libcurl ecm
@@ -81,3 +81,4 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+
