@@ -1,10 +1,10 @@
 diff --git a/Common/GPU/Vulkan/VulkanLoader.cpp b/Common/GPU/Vulkan/VulkanLoader.cpp
-index 23f664ba9..d89cdf73b 100644
+index 7037d5889e..e2688b20e4 100644
 --- a/Common/GPU/Vulkan/VulkanLoader.cpp
 +++ b/Common/GPU/Vulkan/VulkanLoader.cpp
-@@ -245,8 +245,9 @@ typedef void *VulkanLibraryHandle;
- static VulkanLibraryHandle vulkanLibrary;
+@@ -238,8 +238,9 @@ static VulkanLibraryHandle vulkanLibrary;
  #endif
+ const char *VulkanResultToString(VkResult res);
  
 -bool g_vulkanAvailabilityChecked = false;
 -bool g_vulkanMayBeAvailable = false;
