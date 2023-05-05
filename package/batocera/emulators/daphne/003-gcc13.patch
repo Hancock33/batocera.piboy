@@ -1,5 +1,17 @@
+diff --git a/src/game/singe.h b/src/game/singe.h
+index e04d8b3..fb893d2 100644
+--- a/src/game/singe.h
++++ b/src/game/singe.h
+@@ -35,6 +35,7 @@
+ #include "../scoreboard/scoreboard_collection.h"
+ 
+ #include <string>
++#include <time.h> /* Needed for nanosleep */
+ 
+ using namespace std;
+ 
 diff --git a/src/game/singe/singeproxy.cpp b/src/game/singe/singeproxy.cpp
-index 7ae5bb6..edd8df5 100644
+index 0ff39ba..9036d64 100644
 --- a/src/game/singe/singeproxy.cpp
 +++ b/src/game/singe/singeproxy.cpp
 @@ -28,6 +28,7 @@
@@ -11,7 +23,7 @@ index 7ae5bb6..edd8df5 100644
  using namespace std;
  
 diff --git a/src/scoreboard/usb_scoreboard.cpp b/src/scoreboard/usb_scoreboard.cpp
-index 3236d5b..6267d46 100644
+index 10d5226..f579dbe 100644
 --- a/src/scoreboard/usb_scoreboard.cpp
 +++ b/src/scoreboard/usb_scoreboard.cpp
 @@ -27,6 +27,7 @@
