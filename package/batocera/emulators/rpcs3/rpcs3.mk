@@ -43,8 +43,11 @@ else
 endif
 
 define RPCS3_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) \
-		$(MAKE) -C $(@D)/buildroot-build
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(RPCS3_BUILDDIR)
+endef
+
+define RPCS3_INSTALL_TARGET_CMDS
+	$(TARGET_MAKE_ENV) DESTDIR=$(TARGET_DIR) $(BR2_CMAKE) --install $(RPCS3_BUILDDIR)
 endef
 
 define RPCS3_INSTALL_EVMAPY
