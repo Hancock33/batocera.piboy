@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Apr 29, 2023
-DUCKSTATION_VERSION = a003832e33bb66857a5d9fe2d0ca11e9463771ed
+# Version: Commits on May 05, 2023
+DUCKSTATION_VERSION = eb778943153cee9dcadca227f3b4fdae6f50ab84
 DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
 DUCKSTATION_SITE_METHOD=git
 DUCKSTATION_GIT_SUBMODULES=YES
@@ -81,3 +81,4 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+

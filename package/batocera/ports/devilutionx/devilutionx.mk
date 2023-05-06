@@ -3,8 +3,8 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Apr 30, 2023
-DEVILUTIONX_VERSION = 63ef6e7bb941b272883149da7f9b01dc25ecf865
+# Version: Commits on May 06, 2023
+DEVILUTIONX_VERSION = 8896a34a13d9c7268288546e1e7af44deeacd069
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_SUBDIR = dist-src
@@ -35,12 +35,11 @@ endif
 define DEVILUTIONX_FIX_SDL2MAIN
 	sed -i -e s+"SDL2::SDL2main"+"-lSDL2main"+ $(@D)/dist-src/CMakeLists.txt
 	sed -i -e s+"SDL2::SDL2_image"+"-lSDL2_image"+ $(@D)/dist-src/Source/CMakeLists.txt
-	#sed -i -e s+"VERSION ${VERSION_NUM}"+"VERSION 1.4.99"+ $(@D)/dist-src/CMakeLists.txt
 endef
 
 define DEVILUTIONX_BUILD_SRC_DIST
     rm -rf $(DEVILUTIONX_DL_DIR)/git/build-src-dist/
-	python $(DEVILUTIONX_DL_DIR)/git/tools/make_src_dist.py
+	cd $(DEVILUTIONX_DL_DIR)/git && python $(DEVILUTIONX_DL_DIR)/git/tools/make_src_dist.py
 	tar -xf $(DEVILUTIONX_DL_DIR)/git/build-src-dist/devilutionx-src-*.tar.xz -C $(@D)
 	mv $(@D)/devilutionx-src-* $(@D)/dist-src
 endef

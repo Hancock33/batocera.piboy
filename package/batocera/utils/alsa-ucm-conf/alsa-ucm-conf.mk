@@ -3,8 +3,8 @@
 # alsa-ucm-conf
 #
 ################################################################################
-# Version.: Commits on Mar 20, 2023
-ALSA_UCM_CONF_VERSION = f5d3c381e4471fb90601c4ecd1d3cf72874b2b27
+# Version.: Commits on May 4, 2023
+ALSA_UCM_CONF_VERSION = 906f692e4ed84dc136c270c05e1b490a554de99b
 ALSA_UCM_CONF_SITE = $(call github,alsa-project,alsa-ucm-conf,$(ALSA_UCM_CONF_VERSION))
 ALSA_UCM_CONF_LICENSE = BSD-3-Clause
 ALSA_UCM_CONF_LICENSE_FILES = LICENSE

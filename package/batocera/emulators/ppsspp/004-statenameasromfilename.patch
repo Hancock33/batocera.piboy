@@ -1,5 +1,5 @@
 diff --git a/Core/SaveState.cpp b/Core/SaveState.cpp
-index 3af497362..c1a5bfeac 100644
+index 08f5052b..b7a1fb08 100644
 --- a/Core/SaveState.cpp
 +++ b/Core/SaveState.cpp
 @@ -516,7 +516,7 @@ namespace SaveState
@@ -7,7 +7,20 @@ index 3af497362..c1a5bfeac 100644
  	Path GenerateSaveSlotFilename(const Path &gameFilename, int slot, const char *extension)
  	{
 -		std::string filename = StringFromFormat("%s_%d.%s", GenerateFullDiscId(gameFilename).c_str(), slot, extension);
-+	  std::string filename = StringFromFormat("%s_%d.%s", gameFilename.WithReplacedExtension("").GetFilename().c_str(), slot, extension);
++		std::string filename = StringFromFormat("%s_%d.%s", gameFilename.WithReplacedExtension("").GetFilename().c_str(), slot, extension);
  		return GetSysDirectory(DIRECTORY_SAVESTATE) / filename;
  	}
  
+diff --git a/Core/System.cpp b/Core/System.cpp
+index 4b753c8b..aa199eda 100644
+--- a/Core/System.cpp
++++ b/Core/System.cpp
+@@ -657,7 +657,7 @@ Path GetSysDirectory(PSPDirectories directoryType) {
+ 	case DIRECTORY_DUMP:
+ 		return pspDirectory / "SYSTEM/DUMP";
+ 	case DIRECTORY_SAVESTATE:
+-		return memStickDirectory / "PPSSPP_STATE";
++		return memStickDirectory;
+ 	case DIRECTORY_CACHE:
+ 		return Path("/userdata/system/cache/ppsspp/");
+ 	case DIRECTORY_TEXTURES:

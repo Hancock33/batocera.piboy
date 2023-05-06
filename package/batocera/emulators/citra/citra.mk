@@ -3,9 +3,9 @@
 # citra
 #
 ################################################################################
-# Version: Commits on Apr 30, 2023
-CITRA_VERSION = 9dc71e33478f4a9cfeac0b263ea6ddd8e8b7b1df
-CITRA_SITE = https://github.com/citra-emu/citra-nightly.git
+# Version: Commits on May 05, 2023
+CITRA_VERSION = 2273df4d70e2745853e661dcf676373518fb04fb
+CITRA_SITE = https://github.com/citra-emu/citra-nightly
 CITRA_SITE_METHOD=git
 CITRA_GIT_SUBMODULES=YES
 CITRA_LICENSE = GPLv2
@@ -21,6 +21,7 @@ CITRA_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
 CITRA_CONF_OPTS += -DENABLE_COMPATIBILITY_LIST_DOWNLOAD=ON
 CITRA_CONF_OPTS += -DENABLE_FFMPEG_VIDEO_DUMPER=ON
 CITRA_CONF_OPTS += -DENABLE_FFMPEG_AUDIO_DECODER=ON
+CITRA_CONF_OPTS += -DALSOFT_UPDATE_BUILD_VERSION=OFF
 CITRA_CONF_OPTS += -GNinja
 
 CITRA_CONF_ENV += LDFLAGS=-lpthread
