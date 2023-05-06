@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index eba3405e..62f2d4aa 100644
+index 9f4af151..62f2d4aa 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,179 +9,274 @@ namespace PlatformIds
+@@ -9,181 +9,274 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -44,6 +44,7 @@ index eba3405e..62f2d4aa 100644
 -		{ "atarijaguar",			ATARI_JAGUAR },
 -		{ "atarijaguarcd",			ATARI_JAGUAR_CD },
 -		{ "atarixe",				ATARI_XE },
+-		{ "bbc",					BBC_MICRO},
 +		{ "atari2600super",			ATARI2600SUPER },
 +		{ "atlus",					ATLUS },
 +		{ "atomiswave",				ATOMISWAVE },
@@ -285,6 +286,7 @@ index eba3405e..62f2d4aa 100644
 -		{ "sufami",					SUFAMITURBO },
  		{ "zx81",					ZX81 },
 -		{ "tic80",					TIC80 },
+-		{ "gp32",					GP32 },
 -
 -		// batocera specific names
 +		// Batocera Systems
@@ -408,10 +410,10 @@ index eba3405e..62f2d4aa 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index 97c230ae..5ea4ee1a 100644
+index 29c3f4e0..5ea4ee1a 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
-@@ -11,154 +11,248 @@ namespace PlatformIds
+@@ -11,156 +11,248 @@ namespace PlatformIds
  	{
  		PLATFORM_UNKNOWN = 0,
  
@@ -449,6 +451,7 @@ index 97c230ae..5ea4ee1a 100644
  		ATARI_JAGUAR,
  		ATARI_JAGUAR_CD,
 -		ATARI_XE,
+-		BBC_MICRO,
 +		ATARI_LYNX,
 +		ATARI_ST,
 +		ATARI2600SUPER,
@@ -649,6 +652,7 @@ index 97c230ae..5ea4ee1a 100644
 -		TIC80,
 -		MODEL3,
 -		IMAGEVIEWER,
+-		GP32,
 -
 -		// Windows Specific
 -		VISUALPINBALL,
@@ -762,10 +766,18 @@ index 97c230ae..5ea4ee1a 100644
  		PLATFORM_IGNORE, // do not allow scraping for this system
  		PLATFORM_COUNT
 diff --git a/es-app/src/scrapers/GamesDBJSONScraper.cpp b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-index 189d7754..b2c6d701 100644
+index 29408bfc..b2c6d701 100644
 --- a/es-app/src/scrapers/GamesDBJSONScraper.cpp
 +++ b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-@@ -102,10 +102,10 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+@@ -38,7 +38,6 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+ 	{ ATARI_LYNX, "4924" },
+ 	{ ATARI_ST, "4937" },
+ 	{ ATARI_XE, "30" },
+-	{ BBC_MICRO, "5013"},
+ 	{ COLECOVISION, "31" },	
+ 	{ COMMODORE_64, "40" },
+ 	{ INTELLIVISION, "32" },
+@@ -103,15 +102,14 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ VIC20, "4945" },
  	{ CHANNELF, "4928" },
  	{ SAMCOUPE, "4979" },
@@ -779,7 +791,12 @@ index 189d7754..b2c6d701 100644
  	{ FMTOWNS, "4932" },
  	{ PHILIPS_CDI, "4917" },
  	{ WATARA_SUPERVISION, "4959" },
-@@ -136,7 +136,13 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+ 	{ SONIC, "36,21" }, // Sega Mega Drive & Sega CD
+-	{ GP32, "5015"},
+ 
+ 	// 1 = PC
+ 	{ PC, "1" },
+@@ -138,7 +136,13 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ GAMATE, "5004" },
  	{ CREATONIC_MEGA_DUCK, "4948" },
  	{ TOMY_TUTOR, "4960" },
@@ -794,7 +811,7 @@ index 189d7754..b2c6d701 100644
  		
  	/* Non existing systems
  	{ AMIGACDTV, "129" },
-@@ -601,4 +607,4 @@ bool TheGamesDBJSONRequest::process(HttpReq* request, std::vector<ScraperSearchR
+@@ -603,4 +607,4 @@ bool TheGamesDBJSONRequest::process(HttpReq* request, std::vector<ScraperSearchR
  	return true;
  }
  
@@ -802,10 +819,10 @@ index 189d7754..b2c6d701 100644
 \ No newline at end of file
 +#endif
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index fb9cedfe..fe0dbefb 100644
+index a67ced0f..fe0dbefb 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -36,145 +36,231 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
+@@ -36,147 +36,231 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
@@ -824,6 +841,7 @@ index fb9cedfe..fe0dbefb 100644
 -	{ ATARI_LYNX, 28 },
 -	{ ATARI_ST, 42},
 -	// missing Atari XE ?
+-	{ BBC_MICRO, 37 },
 -	{ COLECOVISION, 48 },
 -	{ COMMODORE_64, 66 },
 -	{ INTELLIVISION, 115 },
@@ -910,6 +928,7 @@ index fb9cedfe..fe0dbefb 100644
 -	{ TRS80_COLOR_COMPUTER, 144 },
 -	{ TANDY, 144 },
 -	{ SUPERGRAFX, 105 },
+-	{ GP32, 101},
 -
 -	{ AMIGACD32, 130 },
 -	{ AMIGACDTV, 129 },
