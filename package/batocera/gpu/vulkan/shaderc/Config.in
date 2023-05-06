@@ -1,5 +1,5 @@
 config BR2_PACKAGE_SHADERC
-  bool "vulkan-tools"
+  bool "shaderc"
   select BR2_PACKAGE_VULKAN_HEADERS
   select BR2_PACKAGE_VULKAN_LOADER
   select BR2_PACKAGE_HOST_PYTHON3
@@ -9,6 +9,6 @@ config BR2_PACKAGE_SHADERC
   select BR2_PACKAGE_WAYLAND
 
   help
-    Vulkan tools from Khronos
+    A collection of tools, libraries, and tests for Vulkan shader compilation.
 
-    https://github.com/KhronosGroup/Vulkan-Tools
+    https://github.com/google/shaderc.git
