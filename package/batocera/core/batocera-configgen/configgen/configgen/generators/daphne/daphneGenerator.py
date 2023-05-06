@@ -27,6 +27,13 @@ class DaphneGenerator(Generator):
         if not os.path.exists(batoceraFiles.daphneDatadir + "/custom.ini"):
             shutil.copyfile(batoceraFiles.daphneConfig, batoceraFiles.daphneDatadir + "/custom.ini")
 
+        # delete resources
+        if os.path.exists(batoceraFiles.daphneDatadir + "/pics"):
+            shutil.rmtree(batoceraFiles.daphneDatadir + "/pics", ignore_errors=True)
+        if os.path.exists(batoceraFiles.daphneDatadir + "/sound"):
+            shutil.rmtree(batoceraFiles.daphneDatadir + "/sound", ignore_errors=True)
+        if os.path.exists(batoceraFiles.daphneDatadir + "/fonts"):
+            shutil.rmtree(batoceraFiles.daphneDatadir + "/fonts", ignore_errors=True)
         # copy required resources to config
         if not os.path.exists(batoceraFiles.daphneDatadir + "/pics"):
             shutil.copytree("/usr/share/daphne/pics", batoceraFiles.daphneDatadir + "/pics")
@@ -42,7 +49,6 @@ class DaphneGenerator(Generator):
         #    os.symlink(batoceraFiles.daphneHomedir + "/roms", batoceraFiles.daphneDatadir + "/singe")
         #if not os.path.islink(batoceraFiles.daphneDatadir + "/singe"):
         #    eslog.error("Your {} directory isn't a symlink, that's not good.".format(batoceraFiles.daphneDatadir + "/singe"))
-
 
         # extension used .daphne and the file to start the game is in the folder .daphne with the extension .txt
         romName = os.path.splitext(os.path.basename(rom))[0]
