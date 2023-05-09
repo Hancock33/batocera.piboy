@@ -42,13 +42,13 @@ else
     DUCKSTATION_CONF_OPTS += -DENABLE_VULKAN=OFF
 endif
 
-ifeq ($(BR2_PACKAGE_QT6),y)
-    DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON -DBUILD_SDL_FRONTEND=OFF
-    DUCKSTATION_DEPENDENCIES += qt6base qt6svg qt6tools qt6multimedia
-else
+#ifeq ($(BR2_PACKAGE_QT6),y)
+#    DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON -DBUILD_SDL_FRONTEND=OFF
+#    DUCKSTATION_DEPENDENCIES += qt6base qt6svg qt6tools qt6multimedia
+#else
     DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=OFF -DBUILD_SDL_FRONTEND=OFF -DBUILD_NOGUI_FRONTEND=ON
     DUCKSTATION_DEPENDENCIES += libdrm sdl2 libevdev
-endif
+#endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
     DUCKSTATION_CONF_OPTS += -DUSE_GLX=ON
@@ -69,9 +69,9 @@ endef
 
 define DUCKSTATION_INSTALL_TARGET_CMDS
     mkdir -p $(TARGET_DIR)/usr/duckstation/bin
-    @if [ "$(X86_INSTALL)" = "n" ]; then  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-nogui $(TARGET_DIR)/usr/duckstation/bin/ ; fi
-    @if [ "$(X86_INSTALL)" = "y" ]; then  cp -pr  $(@D)/buildroot-build/bin/translations            $(TARGET_DIR)/usr/duckstation/bin/ ; fi
-    @if [ "$(X86_INSTALL)" = "y" ]; then  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-qt    $(TARGET_DIR)/usr/duckstation/bin/duckstation-nogui ; fi
+#    @if [ "$(X86_INSTALL)" = "n" ]; then  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-nogui $(TARGET_DIR)/usr/duckstation/bin/ ; fi
+#    @if [ "$(X86_INSTALL)" = "y" ]; then  cp -pr  $(@D)/buildroot-build/bin/translations            $(TARGET_DIR)/usr/duckstation/bin/ ; fi
+#    @if [ "$(X86_INSTALL)" = "y" ]; then  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-qt    $(TARGET_DIR)/usr/duckstation/bin/duckstation-nogui ; fi
     $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation* $(TARGET_DIR)/usr/duckstation/bin
     cp -pr  $(@D)/buildroot-build/bin/resources          $(TARGET_DIR)/usr/duckstation/bin/
 

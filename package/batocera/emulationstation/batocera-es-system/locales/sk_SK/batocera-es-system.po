@@ -7959,11 +7959,6 @@ msgid ""
 "When running outside of 100%, adjusts the temp instead of dropping frames."
 msgstr ""
 
-#. TRANSLATION: duckstation, rpcs3, rpcs3, rpcs3
-msgctxt "game_options"
-msgid "AUDIO"
-msgstr ""
-
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "STRETCH MODE"
@@ -9740,6 +9735,11 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Choose number of audio channels."
+msgstr ""
+
+#. TRANSLATION: rpcs3, rpcs3, rpcs3
+msgctxt "game_options"
+msgid "AUDIO"
 msgstr ""
 
 #. TRANSLATION: rpcs3
