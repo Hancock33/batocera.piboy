@@ -50,7 +50,7 @@ msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
 msgstr "Pomer strán hry"
 
-#. TRANSLATION: shared, pcsx2
+#. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Full"
 msgstr "Plné"
@@ -780,12 +780,12 @@ msgctxt "game_options"
 msgid "Low"
 msgstr "Nízke"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, mupen64plus
+#. TRANSLATION: libretro/mesens, libretro/mesen, mupen64plus, pcsx2
 msgctxt "game_options"
 msgid "Medium"
 msgstr "Stredné"
 
-#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, amiberry, mupen64plus
+#. TRANSLATION: libretro/mesens, libretro/mesen, libretro/fceumm, amiberry, mupen64plus, ...
 msgctxt "game_options"
 msgid "High"
 msgstr "Vysoké"
@@ -2017,7 +2017,7 @@ msgctxt "game_options"
 msgid "TEXTURE FILTERING"
 msgstr "Filtrovanie textúr"
 
-#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/parallel_n64, ppsspp, rpcs3, ...
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/parallel_n64, pcsx2, ppsspp, ...
 msgctxt "game_options"
 msgid "Nearest"
 msgstr "Najbližšie"
@@ -3009,7 +3009,7 @@ msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr "Plugin najvyššieho skóre"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, duckstation, flycast, ...
+#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, duckstation, duckstation, ...
 msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "Povolené (predvolené)"
@@ -4196,12 +4196,12 @@ msgctxt "game_options"
 msgid "DMA Only (Slightly Faster)"
 msgstr "Iba DMA (mierne rýchlejšie)"
 
-#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, duckstation, pcsx2
+#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Allows up to 5 or 8 controllers in supported games."
 msgstr "Umožní 5 až 8 ovládačov v podporovaných hrách."
 
-#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, duckstation, pcsx2
+#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro
 msgctxt "game_options"
 msgid "MULTITAP"
 msgstr "MULTITAP"
@@ -4216,7 +4216,7 @@ msgctxt "game_options"
 msgid "Port 2"
 msgstr "Port 2"
 
-#. TRANSLATION: libretro/mednafen_psx, duckstation
+#. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Port 1+2"
 msgstr "Port 1+2"
@@ -4981,17 +4981,17 @@ msgctxt "game_options"
 msgid "On (Speed hack)"
 msgstr "Zapnuté (rýchlostný hack)"
 
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/yabasanshiro, pcsx2
+#. TRANSLATION: libretro/pcsx_rearmed, libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Port1"
 msgstr "Port1"
 
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/yabasanshiro, pcsx2
+#. TRANSLATION: libretro/pcsx_rearmed, libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Port2"
 msgstr "Port2"
 
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/yabasanshiro, pcsx2
+#. TRANSLATION: libretro/pcsx_rearmed, libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Port1+2"
 msgstr "Port1+2"
@@ -6203,7 +6203,7 @@ msgctxt "game_options"
 msgid "160fps"
 msgstr "160fps"
 
-#. TRANSLATION: libretro/tyrquake, cemu, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: libretro/tyrquake, cemu, dolphin, dolphin_triforce, supermodel
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "Rachot"
@@ -7047,7 +7047,7 @@ msgctxt "game_options"
 msgid "SOUND BUFFER SIZE"
 msgstr ""
 
-#. TRANSLATION: amiberry
+#. TRANSLATION: amiberry, pcsx2
 msgctxt "game_options"
 msgid "Minimum"
 msgstr "Minimálne"
@@ -7785,6 +7785,342 @@ msgstr "Zakázať správy na obrazovke"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
+msgid "Determines the speed and the runahead behaviour of the system."
+msgstr ""
+
+#. TRANSLATION: duckstation, duckstation, duckstation
+msgctxt "game_options"
+msgid "EMULATION"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "EMULATION SPEED"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Unlimited"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "VSync and Audio Resampling need to be enabled."
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "SYNC TO HOST REFRESH RATE"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Ensure every frame the console renders is displayed to screen."
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "OPTIMAL FRAME PACING"
+msgstr ""
+
+#. TRANSLATION: duckstation, duckstation, duckstation, duckstation, duckstation, ...
+msgctxt "game_options"
+msgid "DISPLAY"
+msgstr "Zobrazenie"
+
+#. TRANSLATION: duckstation, melonds, pcsx2, awgl, yquake2
+msgctxt "game_options"
+msgid "Software"
+msgstr "Softvér"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Improve performance if VSync is disabled and using Vulkan."
+msgstr "Zlepší výkon, ak je VSync zakázaný a používa Vulkan."
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "THREADED PRESENTATION"
+msgstr "Vláknová prezentácia"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Auto (Match Window)"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "PAR 1:1"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "May result in a sharper image in some 2D games."
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "INTEGER UPSCALING"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "ENabling will smooth out the image."
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "LINEAR UPSCALING"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Fills the screen regardless of the aspect ratio."
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "STRETCH TO FILL"
+msgstr ""
+
+#. TRANSLATION: duckstation, duckstation, duckstation, duckstation, duckstation, ...
+msgctxt "game_options"
+msgid "RENDERING"
+msgstr "Renderovanie"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "1x native (320x240)"
+msgstr "1x natívne (320x240)"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "9x 4K (2880x2160)"
+msgstr "9x 4K (2880x2160)"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Enhancement. Smooth/upscale textures on 3D objects."
+msgstr "Rozšírenie. Vyhladí textúry na 3D objektoch."
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Nearest-Neighbor"
+msgstr "Najbližší sused"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Bilinear (No Edge Blending)"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "JINC2 (Slow)"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "JINC2 (Slow, No Edge Blending)"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "xBR (Very Slow)"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "xBR (Very Slow, No Edge Blending)"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "24-bit, disables dithering."
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "TRUE COLOUR RENDERING"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Makes the dither pattern much less obvious at higher resolutions."
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "SCALED DITHERING"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid ""
+"When running outside of 100%, adjusts the temp instead of dropping frames."
+msgstr ""
+
+#. TRANSLATION: duckstation, rpcs3, rpcs3, rpcs3
+msgctxt "game_options"
+msgid "AUDIO"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "STRETCH MODE"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Off (Noisy)"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Resampling (Pirch Shift)"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Time Stretch (Tempo Change, Best Sound)"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Force progressive render / scan."
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "DISABLE INTERLACING"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Hack. Increases most PAL games' speed by 17%."
+msgstr "Hack. Zvýši rýchlosť väčšiny PAL hier o 17 percent."
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "FORCE NTSC TIMINGS ON PAL"
+msgstr "Vynútiť NTSC časovanie na PAL"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "NTSC-U/C"
+msgstr "NTSC-U/C"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Preload requires more RAM."
+msgstr "Prednačítanie potrebuje viac RAM."
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Preload"
+msgstr "Prednačítať"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Use Analog joysticks in addition to D-Pad for DualShock controllers."
+msgstr ""
+
+#. TRANSLATION: duckstation, duckstation, duckstation
+msgctxt "game_options"
+msgid "CONTROLLERS"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "JOYSTICK TO DPAD"
+msgstr "Joystick na Dpad"
+
+#. TRANSLATION: duckstation, duckstation
+msgctxt "game_options"
+msgid "Not Connected"
+msgstr ""
+
+#. TRANSLATION: duckstation, duckstation
+msgctxt "game_options"
+msgid "PS1 Digital Controller"
+msgstr "Digitálny ovládač PS1"
+
+#. TRANSLATION: duckstation, duckstation
+msgctxt "game_options"
+msgid "PS1 Analog Joystick"
+msgstr "PS1 analógový joystick"
+
+#. TRANSLATION: duckstation, duckstation
+msgctxt "game_options"
+msgid "DualShock / Xbox Type"
+msgstr "Typ DualShock/Xbox"
+
+#. TRANSLATION: duckstation, duckstation
+msgctxt "game_options"
+msgid "Namco GunCon (Rumble)"
+msgstr "Namco GunCon (rachot)"
+
+#. TRANSLATION: duckstation, duckstation
+msgctxt "game_options"
+msgid "NeGcon (Rumble)"
+msgstr "NeGcon (rachot)"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Reduces wobbly polygongs & warping textures."
+msgstr "Znižuje vratké polygongy a deformujúce sa textúry."
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "ENABLE PGXP CORRECTIONS"
+msgstr "Povoliť opravy PGXP"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Allows loading protected games without subchannel information."
+msgstr "Umožňuje načítanie chránených hier bez informácií o podkanáli."
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "ALLOW BOOTING WITHOUT SBI FILE"
+msgstr "Povoliť bootovanie bez SBI súboru"
+
+#. TRANSLATION: duckstation, melonds
+msgctxt "game_options"
+msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
+msgstr "Zobraziť správy na obrazovke"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Skipping it can break some games."
+msgstr "Preskočenie môže poškodiť niektoré hry."
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Interpreter is the most accurate, but is the slowest."
+msgstr "Interpreter je najpresnejší, ale je najpomalší."
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "CPU EXECUTION MODE"
+msgstr "Režim spustenia CPU"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Interpreter (Slowest)"
+msgstr "Interpreter (najpomalšie)"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Cached Interpreter (Faster)"
+msgstr "Cachovaný interpreter (rýchlejšie)"
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
+msgid "Recompiler (Fastest)(Default)"
+msgstr ""
+
+#. TRANSLATION: duckstation
+msgctxt "game_options"
 msgid "System requirements at native; (RAM|VRAM)."
 msgstr "Požiadavky na systém natívny; (RAM|VRAM)."
 
@@ -7823,160 +8159,10 @@ msgctxt "game_options"
 msgid "Per 1s, 120s total (1320MB|240MB)"
 msgstr "Za 1s, 120s celkovo (1320MB|240MB)"
 
-#. TRANSLATION: duckstation, melonds
-msgctxt "game_options"
-msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
-msgstr "Zobraziť správy na obrazovke"
-
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Interpreter is the most accurate, but is the slowest."
-msgstr "Interpreter je najpresnejší, ale je najpomalší."
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "CPU EXECUTION MODE"
-msgstr "Režim spustenia CPU"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Recompiler (Fastest)"
-msgstr "Recompiler (najrýchlejšie)"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Cached Interpreter (Faster)"
-msgstr "Cachovaný interpreter (rýchlejšie)"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Interpreter (Slowest)"
-msgstr "Interpreter (najpomalšie)"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Improve performance if VSync is disabled and using Vulkan."
-msgstr "Zlepší výkon, ak je VSync zakázaný a používa Vulkan."
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "THREADED PRESENTATION"
-msgstr "Vláknová prezentácia"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Skipping it can break some games."
-msgstr "Preskočenie môže poškodiť niektoré hry."
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "1x native (320x240)"
-msgstr "1x natívne (320x240)"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "9x 4K (2880x2160)"
-msgstr "9x 4K (2880x2160)"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Enhancement. Smooth/upscale textures on 3D objects."
-msgstr "Rozšírenie. Vyhladí textúry na 3D objektoch."
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Nearest-Neighbor"
-msgstr "Najbližší sused"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Bilinear (no edge blending)"
-msgstr "Bilineárne (bez prelínania okrajov)"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "JINC2 (no edge blending)"
-msgstr "JINC2 (bez prelínania okrajov)"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "xBR (no edge blending)"
-msgstr "xBR (bez prelínania hrán)"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "NTSC-U/C"
-msgstr "NTSC-U/C"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Hack. Increases most PAL games' speed by 17%."
-msgstr "Hack. Zvýši rýchlosť väčšiny PAL hier o 17 percent."
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "FORCE NTSC TIMINGS ON PAL"
-msgstr "Vynútiť NTSC časovanie na PAL"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Preload requires more RAM."
-msgstr "Prednačítanie potrebuje viac RAM."
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Preload"
-msgstr "Prednačítať"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Activate rumble on supported controllers."
-msgstr "Aktivovať rachot na podporovaných ovládačoch."
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "For digital controller mode."
-msgstr "Pre režim digitálneho ovládača."
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "JOYSTICK TO DPAD"
-msgstr "Joystick na Dpad"
-
-#. TRANSLATION: duckstation, duckstation
-msgctxt "game_options"
-msgid "PS1 Digital Controller"
-msgstr "Digitálny ovládač PS1"
-
-#. TRANSLATION: duckstation, duckstation
-msgctxt "game_options"
-msgid "PS1 Analog Joystick"
-msgstr "PS1 analógový joystick"
-
-#. TRANSLATION: duckstation, duckstation
-msgctxt "game_options"
-msgid "DualShock / Xbox Type"
-msgstr "Typ DualShock/Xbox"
-
-#. TRANSLATION: duckstation, duckstation
-msgctxt "game_options"
-msgid "Namco GunCon (Rumble)"
-msgstr "Namco GunCon (rachot)"
-
-#. TRANSLATION: duckstation, duckstation
-msgctxt "game_options"
-msgid "NeGcon (Rumble)"
-msgstr "NeGcon (rachot)"
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "Reduces wobbly polygongs & warping textures."
-msgstr "Znižuje vratké polygongy a deformujúce sa textúry."
-
-#. TRANSLATION: duckstation
-msgctxt "game_options"
-msgid "ENABLE PGXP CORRECTIONS"
-msgstr "Povoliť opravy PGXP"
+msgid "ACHIEVEMENTS"
+msgstr "Úspechy"
 
 #. TRANSLATION: flycast/vitaquake3
 msgctxt "game_options"
@@ -8261,11 +8447,6 @@ msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "Vyberte, ktorú grafickú API knižnicu použiť."
 
-#. TRANSLATION: melonds, pcsx2, awgl, yquake2
-msgctxt "game_options"
-msgid "Software"
-msgstr "Softvér"
-
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "LIMIT FRAME RATE"
@@ -8376,7 +8557,7 @@ msgctxt "game_options"
 msgid "Bottom only"
 msgstr "Iba dolu"
 
-#. TRANSLATION: melonds
+#. TRANSLATION: melonds, pcsx2
 msgctxt "game_options"
 msgid "INTEGER SCALING"
 msgstr "Celočíselná mierka"
@@ -8698,13 +8879,346 @@ msgstr "Jednoduché 2x"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "AVX2 is the fastest but not all computers can run it."
-msgstr ""
+msgid "Fit to Window / Fullscreen"
+msgstr "Roztiahnuť do okna / obrzovky"
+
+#. TRANSLATION: pcsx2, pcsx2
+msgctxt "game_options"
+msgid "Auto Standard (4:3 interlaced / 3:2 progressive)"
+msgstr "Automatický štandard (4:3 prekladané / 3:2 progresívne)"
+
+#. TRANSLATION: pcsx2, pcsx2
+msgctxt "game_options"
+msgid "Standard (4:3)"
+msgstr "Štandardné (4:3)"
+
+#. TRANSLATION: pcsx2, pcsx2
+msgctxt "game_options"
+msgid "Widescreen (16:9)"
+msgstr "Širokouhlé (16:9)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "USE AVX2"
+msgid "Adjusts Full Motion Video movies aspect ratio."
+msgstr "Upraví pomer strán plného videa."
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "FMV ASPECT RATIO"
+msgstr "Pomer strán FMV"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "FMV movie deinterlacing."
+msgstr "Odstránenie prekladania FMV filmu."
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "DEINTERLACING"
+msgstr "Odstraňovanie prekladania"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Weave (Top Field First)"
+msgstr "Väzba (najprv horné pole)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Weave (Bottom Field First)"
+msgstr "Väzba (najprv spodné pole)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Bob (Top Field First)"
+msgstr "Hop (najprv horné pole)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Bob (Bottom Field First)"
+msgstr "Hop (najprv dolné pole)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Blend (Top Field First)"
+msgstr "Zmiešať (najprv horné pole)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Blend (Bottom Field First)"
+msgstr "Zmiešať (najprv spodné pole)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Adaptive (Top Field First)"
+msgstr "Adaptívne (najprv horné pole)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Adaptive (Bottom Field First)"
+msgstr "Adaptívne (najprv spodné pole)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid ""
+"Smooths the overall picture as it is displayed on the screen. Corrects "
+"positioning between pixels."
 msgstr ""
+"Vyhladí celkový obraz ako je zobrazený na obrazovke. Opraví polohy medzi "
+"bodmi."
+
+#. TRANSLATION: pcsx2, scummvm, model2emu
+msgctxt "game_options"
+msgid "BILINEAR FILTERING"
+msgstr "Bilineárne filtrovanie"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Bilinear (Smooth)"
+msgstr "Bilineárne (plynulé)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Bilinear (Sharp)"
+msgstr "Bilineárne (ostré)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "ENABLE WIDESCREEN PATCHES"
+msgstr "Povoliť širokouhlé záplaty"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Enable to improve bluriness."
+msgstr "Povoľte na zlepšenie rozmazania."
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "ANTI-BLUR"
+msgstr "Anti rozmazanie"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Enable No-interlacing Patches."
+msgstr "Povoliť neprekladané záplaty."
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "INTERLACING PATCHES"
+msgstr "Prekladacie záplaty"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Can sharpen images in lower resolutions."
+msgstr "Môže zostriť obrázky v nižších rozlíšeniach."
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Native (PS2)(Default)"
+msgstr "Natívne (PS2) (predvolené)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "1.25x Native"
+msgstr "1.25x natívme"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "1.5x Native"
+msgstr "1.5x natívne"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "1.75x Native"
+msgstr "1.75x natívne"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "2x Native (~720p)"
+msgstr "2x natívne (~720p)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "2.25x Native"
+msgstr "2.25x  natívme"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "2.5x Native"
+msgstr "2.5x natívne"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "2.75x Native"
+msgstr "2.75x natívne"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "3x Native (~1080p)"
+msgstr "3x natívne (~1080p)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "3.5x Native"
+msgstr "3.5x natívne"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "4x Native (~1440p/2K)"
+msgstr "4x natívne (~1440p/2K)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "5x Native (~1620p)"
+msgstr "5x natívne(~1620p)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "6x Native (~2160p/4K)"
+msgstr "6x natívne (~2160p/4K)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "7x Native (~2520p)"
+msgstr "7x natívne (~2520p)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "8x Native (~2880p/5K)"
+msgstr "8x natívne (~2880p/5K)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Choose mipmapping type."
+msgstr "Vyberte typ mipmappingu."
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "MIPMAPPING"
+msgstr "Mipmapping"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Basic (generated Mipmaps)"
+msgstr "Základné (generované mipmapy)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Full (PS2 Mipmaps)"
+msgstr "Plné (PS2 mipmapy)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Control the texture filtering of the emulation."
+msgstr "Ovládanie filtrovania textúr emulácie."
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Bilinear (Forced)"
+msgstr "Bilineárne (vynútené)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Bilinear (PS2)"
+msgstr "Bilineárne (PS2)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Bilinear (Forced excluding sprite)"
+msgstr "Bilineárne (vynútiť vylúčený sprite)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Control the texture's trilinear filtering of the emulation."
+msgstr "Ovládanie trilineárneho filtrovania textúr emulácie."
+
+#. TRANSLATION: pcsx2, model2emu
+msgctxt "game_options"
+msgid "TRILINEAR FILTERING"
+msgstr "Trilineárne filtrovanie"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Off (None)"
+msgstr "Vypnuté (žiadne)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Trilinear (PS2)"
+msgstr "Trilineárne (PS2)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Trilinear (Forced)"
+msgstr "Trilineárne (vynútené)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid ""
+"Reduces banding between colours and improves the preceived colour depth."
+msgstr "Redukuje pruhy medzi farbami a zlepšuje vnímanú farebnú hĺbku."
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "DITHERING"
+msgstr "Rozklad"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Unscaled (Default)"
+msgstr "Bez mierky (predvolené)"
+
+#. TRANSLATION: pcsx2, pcsx2
+msgctxt "game_options"
+msgid "Basic (Recommended)"
+msgstr "Základné (odporúčané)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid ""
+"The higher the setting, the more blending is emulated in the shader "
+"accurately, and the higher the speed penalty will be."
+msgstr ""
+"Čím vyššie nastavenie, tým viac rozmazania sa emuluje v shaderi presne a tým "
+"vyššia bude pokuta za rýchlosť."
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "BLENDING ACCURACY"
+msgstr "Presnosť miešania"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Full (Slow)"
+msgstr "Plné (pomalé)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Maximum (Very Slow)"
+msgstr "Maximálne (veľmi pomalé)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid ""
+"Uploads entire textures at once instead of small pieces. Improves "
+"performance in most games."
+msgstr ""
+"Nahrá celé textúry naraz namiesto po malých častiach. Zlepší výkon vo "
+"väčšine hier."
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "TEXTURE PRELOADING"
+msgstr "Prednačítanie textúr"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Partial"
+msgstr "Čiastočné"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Full (Hash Cache)"
+msgstr "Plné (Hash Cache)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -8713,251 +9227,46 @@ msgstr "Niektoré hry majú problémy so zobrazením animácie, iné to vyžaduj
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Show (specific games)"
-msgstr "Zobraziť (špecifické hry)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
 msgid "Skip (safer)"
 msgstr "Preskočiť (bezpečnejšie)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Skip drawing screen effects. Cumulative."
-msgstr "Preskočiť vykreslenie obrazovkových efektov. Kumulatívne."
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "SKIPDRAW HACK"
-msgstr "Skipdraw hack"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "1 (post FX)"
-msgstr "1 (post FX)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "2 (shadows)"
-msgstr "2 (tiene)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "3 (shadows)"
-msgstr "3 (tiene)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "4 (special FX)"
-msgstr "4 (špeciálne FX)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "5 (other)"
-msgstr "5 (iné)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Remove lines in internal resolution (fixes Soul Calibur)."
-msgstr "Odstrániť riadky vo vnútornom rozlíšení (opraví Soul Calibur)."
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "ALIGN SPRITE (HACK)"
-msgstr "Zarovnať sprity (hack)"
+msgid "Show (specific games)"
+msgstr "Zobraziť (špecifické hry)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
-"Render this many frames ahead to improve performance at the cost of input "
-"lag."
+"Applies the FXAA anti-aliasing algorithm to improve the visual quality of "
+"games."
 msgstr ""
-"Renderovať toľko snímok dopredu, aby sa zlepšili výkon za cenu oneskorenia "
-"vstupu."
+"Použije anti aliasingový algoritmus FXAA na zlepšenie vizuálnej kvality hier."
+
+#. TRANSLATION: pcsx2, yuzu, vita3k
+msgctxt "game_options"
+msgid "FXAA"
+msgstr "FXAA"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "VSYNCS IN MTGS QUEUE"
-msgstr "VSYNCS v MTGS fronte"
+msgid "Automatically loads and applies cheats on game start."
+msgstr "Automaticky načíta a použije cheaty pri spustení hry."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Good speedup and high compatibility; recommended but may cause issues."
+msgid "CHEATS"
+msgstr "Cheaty"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "AVX2 is the fastest but not all computers can run it."
 msgstr ""
-"Dobrá rýchlosť a vysoká kompatibilita; odporúčané, ale môže spôsobiť "
-"problémy."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "MICRO VU SPEED HACKS"
-msgstr "Micro VU rýchlostné hacky"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "mVU Flag Hack. May cause bad graphics (recommended)"
-msgstr "mVU Flag Hack. Môže spôsobiť zlú grafiku (odporúča sa)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "MTVU. May cause hanging (recommended on 3+ cores)"
-msgstr "MTVU. Môže spôsobiť padanie (odporúča sa na 3+ jadrách)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Instant VU1. May cause some graphical errors"
-msgstr "Okamžitá VU1. Môže spôsobiť určité grafické chyby"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "mVU Flag Hack + MTVU"
-msgstr "mVU Flag Hack + MTVU"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "mVU Flag Hack + Instant VU1"
-msgstr "mVU Flag Hack + Instant VU1"
-
-#. TRANSLATION: pcsx2, ppsspp
-msgctxt "game_options"
-msgid "Enables Action Replay cheats."
-msgstr "Povolí cheaty Action Replay."
-
-#. TRANSLATION: pcsx2, ppsspp
-msgctxt "game_options"
-msgid "GAME CHEATS"
-msgstr "Herné cheaty"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "WIDESCREEN PATCHES"
-msgstr "Širokouhlé záplaty"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid ""
-"Automatically use gamefixes as appropriate. Stacks with manual gamefixes."
+msgid "USE AVX2"
 msgstr ""
-"Automaticky podľa potreby používať opravy hier. Hromady s manuálnymi "
-"opravami hier."
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "AUTOMATIC GAMEFIXES"
-msgstr "Automatické herné opravy"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Stacks with auto gamefixes."
-msgstr "Hromady s automatickými opravami hier."
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "MANUAL GAMEFIXES"
-msgstr "Ručné opravy hier"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "VU Add hack (Fixes Tri-Ace games boot crash)"
-msgstr "VU Add hack (opravuje zlyhanie spúšťania hier Tri-Ace)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "FPU Compare hack (For Digimon Rumble Arena 2)"
-msgstr "Porovnanie FPU hack (pre Digimon Rumble Arena 2)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "FPU Multiply hack (For Tales of Destiny)"
-msgstr "FPU Multiply hack (pre Tales of Destiny)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "FPU Negative Div hack (For Gundam Games)"
-msgstr "FPU Negative Div hack (pre Gundam Games)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "VU XGkick hack (For Eremental Gerad)"
-msgstr "VU XGkick hack (pre Eremental Gerada)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "FFX videos fix (Fixes bad graphic overlays)"
-msgstr "Oprava videí FFX (opravuje zlé grafické prekrytia)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "EE timing hack (Try if all else fails)"
-msgstr "EE timing hack (skúste, ak iné zlyhajú)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Skip MPEG hack (Skips videos/FMVs that freeze)"
-msgstr "Preskočiť MPEG hack (preskočí videá/FMV, ktoré zamrznú)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "OPH Flag hack (Try if game freezes)"
-msgstr "OPH Flag hack (skúste, ak hra mrzne)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Handle DMAC writes when it busy"
-msgstr "Spracovať zápisy DMAC, keď je zaneprázdnený"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Simulate VIF1 FIFO read (Fix slow loading)"
-msgstr "Simulovať čítanie VIF1 FIFO (opraviť pomalé načítavanie)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Delay VIF1 Stalls (For SOCOM2 & Spy Hunter)"
-msgstr "Pozastaviť VIF1 Stalls (pre SOCOM2 a Spy Hunter)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Enable the GIF FIFO (Wallace and Gromit, DJ Hero)"
-msgstr "Povoliť GIF FIFO (Wallace a Gromit, DJ Hero)"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "Preload TLB hack to avoid tlb miss on Goemon"
-msgstr "Prednahrať hack TLB, aby ste sa vyhli zmeškaniu tlb na Goemon"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "VU I bit hack - Scarface The World is Yours"
-msgstr "VU I bit hack - Scarface The World is Yours"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "VU I bit hack - Crash Tag Team Racing"
-msgstr "VU I bit hack - Crash Tag Team Racing"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "VU0 Kickstart to avoid sync problems with VU1"
-msgstr "VU0 Kickstart, aby ste sa vyhli problémom so synchronizáciou s VU1"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid ""
-"Automatically use hardware hacks as appropriate. Refer to pcsx2-config for "
-"individual hacks."
-msgstr ""
-"Podľa potreby automaticky použiť hardvérové hacky. Jednotlivé hacky nájdete "
-"v pcsx2-config."
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "AUTOMATIC GRAPHICS HARDWARE HACKS"
-msgstr "Automatické grafické hardvérové hacky"
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "On (default)"
-msgstr "Zapnuté (predvolené)"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -9056,6 +9365,16 @@ msgstr "Lineárne"
 msgctxt "game_options"
 msgid "Auto Max Quality"
 msgstr "Auto max kvalita"
+
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "Enables Action Replay cheats."
+msgstr "Povolí cheaty Action Replay."
+
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "GAME CHEATS"
+msgstr "Herné cheaty"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -9423,11 +9742,6 @@ msgctxt "game_options"
 msgid "Choose number of audio channels."
 msgstr ""
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3
-msgctxt "game_options"
-msgid "AUDIO"
-msgstr ""
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "AUDIO FORMAT"
@@ -9609,11 +9923,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Smooth textures."
 msgstr "Plynulé textúry."
-
-#. TRANSLATION: scummvm, model2emu
-msgctxt "game_options"
-msgid "BILINEAR FILTERING"
-msgstr "Bilineárne filtrovanie"
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
@@ -10588,11 +10897,6 @@ msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
-msgid "TRILINEAR FILTERING"
-msgstr "Trilineárne filtrovanie"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
 msgid ""
 "Enables bilinear filtering on tilemaps. Looks good, but can cause some "
 "stretch artifacts."
@@ -10986,11 +11290,6 @@ msgstr "Asynchrónne kompilovať shader"
 msgctxt "game_options"
 msgid "ANTI-ALIASING METHOD"
 msgstr "Metóda anti aliasingu"
-
-#. TRANSLATION: yuzu, vita3k
-msgctxt "game_options"
-msgid "FXAA"
-msgstr "FXAA"
 
 #. TRANSLATION: yuzu
 msgctxt "game_options"
@@ -12246,6 +12545,216 @@ msgid "Open"
 msgstr ""
 
 #~ msgctxt "game_options"
+#~ msgid "Recompiler (Fastest)"
+#~ msgstr "Recompiler (najrýchlejšie)"
+
+#~ msgctxt "game_options"
+#~ msgid "Bilinear (no edge blending)"
+#~ msgstr "Bilineárne (bez prelínania okrajov)"
+
+#~ msgctxt "game_options"
+#~ msgid "JINC2 (no edge blending)"
+#~ msgstr "JINC2 (bez prelínania okrajov)"
+
+#~ msgctxt "game_options"
+#~ msgid "xBR (no edge blending)"
+#~ msgstr "xBR (bez prelínania hrán)"
+
+#~ msgctxt "game_options"
+#~ msgid "Activate rumble on supported controllers."
+#~ msgstr "Aktivovať rachot na podporovaných ovládačoch."
+
+#~ msgctxt "game_options"
+#~ msgid "For digital controller mode."
+#~ msgstr "Pre režim digitálneho ovládača."
+
+#~ msgctxt "game_options"
+#~ msgid "Skip drawing screen effects. Cumulative."
+#~ msgstr "Preskočiť vykreslenie obrazovkových efektov. Kumulatívne."
+
+#~ msgctxt "game_options"
+#~ msgid "SKIPDRAW HACK"
+#~ msgstr "Skipdraw hack"
+
+#~ msgctxt "game_options"
+#~ msgid "1 (post FX)"
+#~ msgstr "1 (post FX)"
+
+#~ msgctxt "game_options"
+#~ msgid "2 (shadows)"
+#~ msgstr "2 (tiene)"
+
+#~ msgctxt "game_options"
+#~ msgid "3 (shadows)"
+#~ msgstr "3 (tiene)"
+
+#~ msgctxt "game_options"
+#~ msgid "4 (special FX)"
+#~ msgstr "4 (špeciálne FX)"
+
+#~ msgctxt "game_options"
+#~ msgid "5 (other)"
+#~ msgstr "5 (iné)"
+
+#~ msgctxt "game_options"
+#~ msgid "Remove lines in internal resolution (fixes Soul Calibur)."
+#~ msgstr "Odstrániť riadky vo vnútornom rozlíšení (opraví Soul Calibur)."
+
+#~ msgctxt "game_options"
+#~ msgid "ALIGN SPRITE (HACK)"
+#~ msgstr "Zarovnať sprity (hack)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Render this many frames ahead to improve performance at the cost of input "
+#~ "lag."
+#~ msgstr ""
+#~ "Renderovať toľko snímok dopredu, aby sa zlepšili výkon za cenu "
+#~ "oneskorenia vstupu."
+
+#~ msgctxt "game_options"
+#~ msgid "VSYNCS IN MTGS QUEUE"
+#~ msgstr "VSYNCS v MTGS fronte"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Good speedup and high compatibility; recommended but may cause issues."
+#~ msgstr ""
+#~ "Dobrá rýchlosť a vysoká kompatibilita; odporúčané, ale môže spôsobiť "
+#~ "problémy."
+
+#~ msgctxt "game_options"
+#~ msgid "MICRO VU SPEED HACKS"
+#~ msgstr "Micro VU rýchlostné hacky"
+
+#~ msgctxt "game_options"
+#~ msgid "mVU Flag Hack. May cause bad graphics (recommended)"
+#~ msgstr "mVU Flag Hack. Môže spôsobiť zlú grafiku (odporúča sa)"
+
+#~ msgctxt "game_options"
+#~ msgid "MTVU. May cause hanging (recommended on 3+ cores)"
+#~ msgstr "MTVU. Môže spôsobiť padanie (odporúča sa na 3+ jadrách)"
+
+#~ msgctxt "game_options"
+#~ msgid "Instant VU1. May cause some graphical errors"
+#~ msgstr "Okamžitá VU1. Môže spôsobiť určité grafické chyby"
+
+#~ msgctxt "game_options"
+#~ msgid "mVU Flag Hack + MTVU"
+#~ msgstr "mVU Flag Hack + MTVU"
+
+#~ msgctxt "game_options"
+#~ msgid "mVU Flag Hack + Instant VU1"
+#~ msgstr "mVU Flag Hack + Instant VU1"
+
+#~ msgctxt "game_options"
+#~ msgid "WIDESCREEN PATCHES"
+#~ msgstr "Širokouhlé záplaty"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Automatically use gamefixes as appropriate. Stacks with manual gamefixes."
+#~ msgstr ""
+#~ "Automaticky podľa potreby používať opravy hier. Hromady s manuálnymi "
+#~ "opravami hier."
+
+#~ msgctxt "game_options"
+#~ msgid "AUTOMATIC GAMEFIXES"
+#~ msgstr "Automatické herné opravy"
+
+#~ msgctxt "game_options"
+#~ msgid "Stacks with auto gamefixes."
+#~ msgstr "Hromady s automatickými opravami hier."
+
+#~ msgctxt "game_options"
+#~ msgid "MANUAL GAMEFIXES"
+#~ msgstr "Ručné opravy hier"
+
+#~ msgctxt "game_options"
+#~ msgid "VU Add hack (Fixes Tri-Ace games boot crash)"
+#~ msgstr "VU Add hack (opravuje zlyhanie spúšťania hier Tri-Ace)"
+
+#~ msgctxt "game_options"
+#~ msgid "FPU Compare hack (For Digimon Rumble Arena 2)"
+#~ msgstr "Porovnanie FPU hack (pre Digimon Rumble Arena 2)"
+
+#~ msgctxt "game_options"
+#~ msgid "FPU Multiply hack (For Tales of Destiny)"
+#~ msgstr "FPU Multiply hack (pre Tales of Destiny)"
+
+#~ msgctxt "game_options"
+#~ msgid "FPU Negative Div hack (For Gundam Games)"
+#~ msgstr "FPU Negative Div hack (pre Gundam Games)"
+
+#~ msgctxt "game_options"
+#~ msgid "VU XGkick hack (For Eremental Gerad)"
+#~ msgstr "VU XGkick hack (pre Eremental Gerada)"
+
+#~ msgctxt "game_options"
+#~ msgid "FFX videos fix (Fixes bad graphic overlays)"
+#~ msgstr "Oprava videí FFX (opravuje zlé grafické prekrytia)"
+
+#~ msgctxt "game_options"
+#~ msgid "EE timing hack (Try if all else fails)"
+#~ msgstr "EE timing hack (skúste, ak iné zlyhajú)"
+
+#~ msgctxt "game_options"
+#~ msgid "Skip MPEG hack (Skips videos/FMVs that freeze)"
+#~ msgstr "Preskočiť MPEG hack (preskočí videá/FMV, ktoré zamrznú)"
+
+#~ msgctxt "game_options"
+#~ msgid "OPH Flag hack (Try if game freezes)"
+#~ msgstr "OPH Flag hack (skúste, ak hra mrzne)"
+
+#~ msgctxt "game_options"
+#~ msgid "Handle DMAC writes when it busy"
+#~ msgstr "Spracovať zápisy DMAC, keď je zaneprázdnený"
+
+#~ msgctxt "game_options"
+#~ msgid "Simulate VIF1 FIFO read (Fix slow loading)"
+#~ msgstr "Simulovať čítanie VIF1 FIFO (opraviť pomalé načítavanie)"
+
+#~ msgctxt "game_options"
+#~ msgid "Delay VIF1 Stalls (For SOCOM2 & Spy Hunter)"
+#~ msgstr "Pozastaviť VIF1 Stalls (pre SOCOM2 a Spy Hunter)"
+
+#~ msgctxt "game_options"
+#~ msgid "Enable the GIF FIFO (Wallace and Gromit, DJ Hero)"
+#~ msgstr "Povoliť GIF FIFO (Wallace a Gromit, DJ Hero)"
+
+#~ msgctxt "game_options"
+#~ msgid "Preload TLB hack to avoid tlb miss on Goemon"
+#~ msgstr "Prednahrať hack TLB, aby ste sa vyhli zmeškaniu tlb na Goemon"
+
+#~ msgctxt "game_options"
+#~ msgid "VU I bit hack - Scarface The World is Yours"
+#~ msgstr "VU I bit hack - Scarface The World is Yours"
+
+#~ msgctxt "game_options"
+#~ msgid "VU I bit hack - Crash Tag Team Racing"
+#~ msgstr "VU I bit hack - Crash Tag Team Racing"
+
+#~ msgctxt "game_options"
+#~ msgid "VU0 Kickstart to avoid sync problems with VU1"
+#~ msgstr "VU0 Kickstart, aby ste sa vyhli problémom so synchronizáciou s VU1"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Automatically use hardware hacks as appropriate. Refer to pcsx2-config "
+#~ "for individual hacks."
+#~ msgstr ""
+#~ "Podľa potreby automaticky použiť hardvérové hacky. Jednotlivé hacky "
+#~ "nájdete v pcsx2-config."
+
+#~ msgctxt "game_options"
+#~ msgid "AUTOMATIC GRAPHICS HARDWARE HACKS"
+#~ msgstr "Automatické grafické hardvérové hacky"
+
+#~ msgctxt "game_options"
+#~ msgid "On (default)"
+#~ msgstr "Zapnuté (predvolené)"
+
+#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Uložiť minulé stavy na pretočenie v reálnom čase, ak to jadro podporuje."
@@ -12334,26 +12843,6 @@ msgstr ""
 #~ msgstr "Prispôsobiť emulovaný Wiimote a gamepad"
 
 #~ msgctxt "game_options"
-#~ msgid "DISPLAY"
-#~ msgstr "Zobrazenie"
-
-#~ msgctxt "game_options"
-#~ msgid "RENDERING"
-#~ msgstr "Renderovanie"
-
-#~ msgctxt "game_options"
-#~ msgid "Allows loading protected games without subchannel information."
-#~ msgstr "Umožňuje načítanie chránených hier bez informácií o podkanáli."
-
-#~ msgctxt "game_options"
-#~ msgid "ALLOW BOOTING WITHOUT SBI FILE"
-#~ msgstr "Povoliť bootovanie bez SBI súboru"
-
-#~ msgctxt "game_options"
-#~ msgid "ACHIEVEMENTS"
-#~ msgstr "Úspechy"
-
-#~ msgctxt "game_options"
 #~ msgid "OpenGL (Default)"
 #~ msgstr "OpenGL (predvolené)"
 
@@ -12372,291 +12861,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Per Pixel"
 #~ msgstr "Po bodoch"
-
-#~ msgctxt "game_options"
-#~ msgid "Fit to Window / Fullscreen"
-#~ msgstr "Roztiahnuť do okna / obrzovky"
-
-#~ msgctxt "game_options"
-#~ msgid "Auto Standard (4:3 interlaced / 3:2 progressive)"
-#~ msgstr "Automatický štandard (4:3 prekladané / 3:2 progresívne)"
-
-#~ msgctxt "game_options"
-#~ msgid "Standard (4:3)"
-#~ msgstr "Štandardné (4:3)"
-
-#~ msgctxt "game_options"
-#~ msgid "Widescreen (16:9)"
-#~ msgstr "Širokouhlé (16:9)"
-
-#~ msgctxt "game_options"
-#~ msgid "Adjusts Full Motion Video movies aspect ratio."
-#~ msgstr "Upraví pomer strán plného videa."
-
-#~ msgctxt "game_options"
-#~ msgid "FMV ASPECT RATIO"
-#~ msgstr "Pomer strán FMV"
-
-#~ msgctxt "game_options"
-#~ msgid "FMV movie deinterlacing."
-#~ msgstr "Odstránenie prekladania FMV filmu."
-
-#~ msgctxt "game_options"
-#~ msgid "DEINTERLACING"
-#~ msgstr "Odstraňovanie prekladania"
-
-#~ msgctxt "game_options"
-#~ msgid "Weave (Top Field First)"
-#~ msgstr "Väzba (najprv horné pole)"
-
-#~ msgctxt "game_options"
-#~ msgid "Weave (Bottom Field First)"
-#~ msgstr "Väzba (najprv spodné pole)"
-
-#~ msgctxt "game_options"
-#~ msgid "Bob (Top Field First)"
-#~ msgstr "Hop (najprv horné pole)"
-
-#~ msgctxt "game_options"
-#~ msgid "Bob (Bottom Field First)"
-#~ msgstr "Hop (najprv dolné pole)"
-
-#~ msgctxt "game_options"
-#~ msgid "Blend (Top Field First)"
-#~ msgstr "Zmiešať (najprv horné pole)"
-
-#~ msgctxt "game_options"
-#~ msgid "Blend (Bottom Field First)"
-#~ msgstr "Zmiešať (najprv spodné pole)"
-
-#~ msgctxt "game_options"
-#~ msgid "Adaptive (Top Field First)"
-#~ msgstr "Adaptívne (najprv horné pole)"
-
-#~ msgctxt "game_options"
-#~ msgid "Adaptive (Bottom Field First)"
-#~ msgstr "Adaptívne (najprv spodné pole)"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Smooths the overall picture as it is displayed on the screen. Corrects "
-#~ "positioning between pixels."
-#~ msgstr ""
-#~ "Vyhladí celkový obraz ako je zobrazený na obrazovke. Opraví polohy medzi "
-#~ "bodmi."
-
-#~ msgctxt "game_options"
-#~ msgid "Bilinear (Smooth)"
-#~ msgstr "Bilineárne (plynulé)"
-
-#~ msgctxt "game_options"
-#~ msgid "Bilinear (Sharp)"
-#~ msgstr "Bilineárne (ostré)"
-
-#~ msgctxt "game_options"
-#~ msgid "ENABLE WIDESCREEN PATCHES"
-#~ msgstr "Povoliť širokouhlé záplaty"
-
-#~ msgctxt "game_options"
-#~ msgid "Enable to improve bluriness."
-#~ msgstr "Povoľte na zlepšenie rozmazania."
-
-#~ msgctxt "game_options"
-#~ msgid "ANTI-BLUR"
-#~ msgstr "Anti rozmazanie"
-
-#~ msgctxt "game_options"
-#~ msgid "Enable No-interlacing Patches."
-#~ msgstr "Povoliť neprekladané záplaty."
-
-#~ msgctxt "game_options"
-#~ msgid "INTERLACING PATCHES"
-#~ msgstr "Prekladacie záplaty"
-
-#~ msgctxt "game_options"
-#~ msgid "Can sharpen images in lower resolutions."
-#~ msgstr "Môže zostriť obrázky v nižších rozlíšeniach."
-
-#~ msgctxt "game_options"
-#~ msgid "Native (PS2)(Default)"
-#~ msgstr "Natívne (PS2) (predvolené)"
-
-#~ msgctxt "game_options"
-#~ msgid "1.25x Native"
-#~ msgstr "1.25x natívme"
-
-#~ msgctxt "game_options"
-#~ msgid "1.5x Native"
-#~ msgstr "1.5x natívne"
-
-#~ msgctxt "game_options"
-#~ msgid "1.75x Native"
-#~ msgstr "1.75x natívne"
-
-#~ msgctxt "game_options"
-#~ msgid "2x Native (~720p)"
-#~ msgstr "2x natívne (~720p)"
-
-#~ msgctxt "game_options"
-#~ msgid "2.25x Native"
-#~ msgstr "2.25x  natívme"
-
-#~ msgctxt "game_options"
-#~ msgid "2.5x Native"
-#~ msgstr "2.5x natívne"
-
-#~ msgctxt "game_options"
-#~ msgid "2.75x Native"
-#~ msgstr "2.75x natívne"
-
-#~ msgctxt "game_options"
-#~ msgid "3x Native (~1080p)"
-#~ msgstr "3x natívne (~1080p)"
-
-#~ msgctxt "game_options"
-#~ msgid "3.5x Native"
-#~ msgstr "3.5x natívne"
-
-#~ msgctxt "game_options"
-#~ msgid "4x Native (~1440p/2K)"
-#~ msgstr "4x natívne (~1440p/2K)"
-
-#~ msgctxt "game_options"
-#~ msgid "5x Native (~1620p)"
-#~ msgstr "5x natívne(~1620p)"
-
-#~ msgctxt "game_options"
-#~ msgid "6x Native (~2160p/4K)"
-#~ msgstr "6x natívne (~2160p/4K)"
-
-#~ msgctxt "game_options"
-#~ msgid "7x Native (~2520p)"
-#~ msgstr "7x natívne (~2520p)"
-
-#~ msgctxt "game_options"
-#~ msgid "8x Native (~2880p/5K)"
-#~ msgstr "8x natívne (~2880p/5K)"
-
-#~ msgctxt "game_options"
-#~ msgid "Choose mipmapping type."
-#~ msgstr "Vyberte typ mipmappingu."
-
-#~ msgctxt "game_options"
-#~ msgid "MIPMAPPING"
-#~ msgstr "Mipmapping"
-
-#~ msgctxt "game_options"
-#~ msgid "Basic (generated Mipmaps)"
-#~ msgstr "Základné (generované mipmapy)"
-
-#~ msgctxt "game_options"
-#~ msgid "Full (PS2 Mipmaps)"
-#~ msgstr "Plné (PS2 mipmapy)"
-
-#~ msgctxt "game_options"
-#~ msgid "Control the texture filtering of the emulation."
-#~ msgstr "Ovládanie filtrovania textúr emulácie."
-
-#~ msgctxt "game_options"
-#~ msgid "Bilinear (Forced)"
-#~ msgstr "Bilineárne (vynútené)"
-
-#~ msgctxt "game_options"
-#~ msgid "Bilinear (PS2)"
-#~ msgstr "Bilineárne (PS2)"
-
-#~ msgctxt "game_options"
-#~ msgid "Bilinear (Forced excluding sprite)"
-#~ msgstr "Bilineárne (vynútiť vylúčený sprite)"
-
-#~ msgctxt "game_options"
-#~ msgid "Control the texture's trilinear filtering of the emulation."
-#~ msgstr "Ovládanie trilineárneho filtrovania textúr emulácie."
-
-#~ msgctxt "game_options"
-#~ msgid "Off (None)"
-#~ msgstr "Vypnuté (žiadne)"
-
-#~ msgctxt "game_options"
-#~ msgid "Trilinear (PS2)"
-#~ msgstr "Trilineárne (PS2)"
-
-#~ msgctxt "game_options"
-#~ msgid "Trilinear (Forced)"
-#~ msgstr "Trilineárne (vynútené)"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Reduces banding between colours and improves the preceived colour depth."
-#~ msgstr "Redukuje pruhy medzi farbami a zlepšuje vnímanú farebnú hĺbku."
-
-#~ msgctxt "game_options"
-#~ msgid "DITHERING"
-#~ msgstr "Rozklad"
-
-#~ msgctxt "game_options"
-#~ msgid "Unscaled (Default)"
-#~ msgstr "Bez mierky (predvolené)"
-
-#~ msgctxt "game_options"
-#~ msgid "Basic (Recommended)"
-#~ msgstr "Základné (odporúčané)"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "The higher the setting, the more blending is emulated in the shader "
-#~ "accurately, and the higher the speed penalty will be."
-#~ msgstr ""
-#~ "Čím vyššie nastavenie, tým viac rozmazania sa emuluje v shaderi presne a "
-#~ "tým vyššia bude pokuta za rýchlosť."
-
-#~ msgctxt "game_options"
-#~ msgid "BLENDING ACCURACY"
-#~ msgstr "Presnosť miešania"
-
-#~ msgctxt "game_options"
-#~ msgid "Full (Slow)"
-#~ msgstr "Plné (pomalé)"
-
-#~ msgctxt "game_options"
-#~ msgid "Maximum (Very Slow)"
-#~ msgstr "Maximálne (veľmi pomalé)"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Uploads entire textures at once instead of small pieces. Improves "
-#~ "performance in most games."
-#~ msgstr ""
-#~ "Nahrá celé textúry naraz namiesto po malých častiach. Zlepší výkon vo "
-#~ "väčšine hier."
-
-#~ msgctxt "game_options"
-#~ msgid "TEXTURE PRELOADING"
-#~ msgstr "Prednačítanie textúr"
-
-#~ msgctxt "game_options"
-#~ msgid "Partial"
-#~ msgstr "Čiastočné"
-
-#~ msgctxt "game_options"
-#~ msgid "Full (Hash Cache)"
-#~ msgstr "Plné (Hash Cache)"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Applies the FXAA anti-aliasing algorithm to improve the visual quality of "
-#~ "games."
-#~ msgstr ""
-#~ "Použije anti aliasingový algoritmus FXAA na zlepšenie vizuálnej kvality "
-#~ "hier."
-
-#~ msgctxt "game_options"
-#~ msgid "Automatically loads and applies cheats on game start."
-#~ msgstr "Automaticky načíta a použije cheaty pri spustení hry."
-
-#~ msgctxt "game_options"
-#~ msgid "CHEATS"
-#~ msgstr "Cheaty"
 
 #~ msgctxt "game_options"
 #~ msgid ""
