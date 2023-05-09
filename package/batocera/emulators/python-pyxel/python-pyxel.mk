@@ -3,7 +3,6 @@
 # python-pyxel
 #
 ################################################################################
-
 # Version: Commits on Apr 29, 2023
 PYTHON_PYXEL_VERSION = 779dc3ff29b01289cf3217610e6fdbd947cbc027
 PYTHON_PYXEL_SITE =  $(call github,kitao,pyxel,$(PYTHON_PYXEL_VERSION))
