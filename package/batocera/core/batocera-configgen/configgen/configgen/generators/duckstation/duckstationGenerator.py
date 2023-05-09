@@ -46,7 +46,7 @@ class DuckstationGenerator(Generator):
         if system.isOptSet("duckstation_clocking"):
             settings.set("Main","EmulationSpeed", system.config["duckstation_clocking"])
         else:
-            settings.set("Main","EmulationSpeed", "0")
+            settings.set("Main","EmulationSpeed", "1")
         # host refresh rate
         if system.isOptSet("duckstation_hrr"):
             settings.set("Main","SyncToHostRefreshRate", system.config["duckstation_hrr"])
