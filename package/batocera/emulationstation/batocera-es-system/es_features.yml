@@ -1,4 +1,5 @@
 # this file describes which features each emulator/core supports
+# this file describes which features each emulator/core supports
 # the aim is to display in es only the available options
 shared:
   cfeatures:
@@ -7274,6 +7275,7 @@ duckstation:
   cfeatures:
         duckstation_clocking:
             submenu: EMULATION
+            group: ADVANCED OPTIONS
             prompt: EMULATION SPEED
             description: Determines the speed and the runahead behaviour of the system.
             choices:
@@ -7305,6 +7307,7 @@ duckstation:
                 "1000%":     "10"
         duckstation_hrr:
             submenu: EMULATION
+            group: ADVANCED OPTIONS
             prompt: SYNC TO HOST REFRESH RATE
             description: VSync and Audio Resampling need to be enabled.
             choices:
@@ -7312,6 +7315,7 @@ duckstation:
                 "Enabled":            "true"
         duckstation_ofp:
             submenu: EMULATION
+            group: ADVANCED OPTIONS
             prompt: OPTIMAL FRAME PACING
             description: Ensure every frame the console renders is displayed to screen.
             choices:
@@ -7319,6 +7323,7 @@ duckstation:
                 "Enabled":            "true"
         duckstation_gfxbackend:
             submenu: DISPLAY
+            group: ADVANCED OPTIONS
             archs_include: [x86, x86_64, bcm2711, rk3326]
             prompt: GRAPHICS API
             description: Choose which graphics API library to use. Vulkan is better, when supported.
@@ -7328,6 +7333,7 @@ duckstation:
                 "Software": Software                
         duckstation_vsync:
             submenu: DISPLAY
+            group: ADVANCED OPTIONS
             prompt: VSYNC
             description: Fix screen tearing. CPU heavy.
             choices:
@@ -7335,6 +7341,7 @@ duckstation:
                 "On":  "true"
         duckstation_threadedpresentation:
             submenu: DISPLAY
+            group: ADVANCED OPTIONS
             prompt: THREADED PRESENTATION
             description: Improve performance if VSync is disabled and using Vulkan.
             choices:
@@ -7342,6 +7349,7 @@ duckstation:
                 "On":  "true"
         duckstation_ratio:
             submenu: DISPLAY
+            group: ADVANCED OPTIONS
             prompt: ASPECT RATIO
             description: Change the output resolution ratio.
             choices:
@@ -7353,6 +7361,7 @@ duckstation:
                 "PAR 1:1":             "PAR 1:1"
         duckstation_CropMode:
             submenu: DISPLAY
+            group: ADVANCED OPTIONS
             prompt: CROP OVERSCAN
             description: Zooms in to hide black borders. Borders are different per game.
             choices:
@@ -7361,6 +7370,7 @@ duckstation:
                 "All Borders":        "Borders"
         duckstation_integer:
             submenu: DISPLAY
+            group: ADVANCED OPTIONS
             prompt: INTEGER UPSCALING
             description: May result in a sharper image in some 2D games.
             choices:
@@ -7368,6 +7378,7 @@ duckstation:
                 "Enabled":            "true"
         duckstation_linear:
             submenu: DISPLAY
+            group: ADVANCED OPTIONS
             prompt: LINEAR UPSCALING
             description: ENabling will smooth out the image.
             choices:
@@ -7375,6 +7386,7 @@ duckstation:
                 "Enabled":            "true"
         duckstation_stretch:
             submenu: DISPLAY
+            group: ADVANCED OPTIONS
             prompt: STRETCH TO FILL
             description: Fills the screen regardless of the aspect ratio.
             choices:
@@ -7382,6 +7394,7 @@ duckstation:
                 "Enabled":            "true"
         duckstation_resolution_scale:
             submenu: RENDERING
+            group: ADVANCED OPTIONS
             prompt: RENDERING RESOLUTION
             description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
             choices:
@@ -7403,6 +7416,7 @@ duckstation:
                 "16x (5120x3840)":      16
         duckstation_texture_filtering:
             submenu: RENDERING
+            group: ADVANCED OPTIONS
             prompt: TEXTURE FILTERING
             description: Enhancement. Smooth/upscale textures on 3D objects.
             choices:
@@ -7415,6 +7429,7 @@ duckstation:
                 "xBR (Very Slow, No Edge Blending)": xBRBinAlpha
         duckstation_truecolour:
             submenu: RENDERING
+            group: ADVANCED OPTIONS
             prompt: TRUE COLOUR RENDERING
             description: 24-bit, disables dithering.
             choices:
@@ -7422,6 +7437,7 @@ duckstation:
                 "Enabled":            "true"
         duckstation_dithering:
             submenu: RENDERING
+            group: ADVANCED OPTIONS
             prompt: SCALED DITHERING
             description: Makes the dither pattern much less obvious at higher resolutions.
             choices:
@@ -7429,6 +7445,7 @@ duckstation:
                 "Enabled (Default)": "true"
         duckstation_widescreen_hack:
             submenu: RENDERING
+            group: ADVANCED OPTIONS
             prompt: WIDESCREEN HACK (GLITCHY)
             description: Enhancement. Only works with a 16/9 ratio and bezels disabled.
             choices:
@@ -7436,6 +7453,7 @@ duckstation:
                 "Enabled":            "true"
         duckstation_audio_mode:
             group: AUDIO
+            group: ADVANCED OPTIONS
             prompt: STRETCH MODE
             description: When running outside of 100%, adjusts the temp instead of dropping frames.
             choices:
