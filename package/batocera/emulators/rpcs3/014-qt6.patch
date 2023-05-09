@@ -19,7 +19,6 @@ Subject: [PATCH] Qt6 port
  rpcs3/Emu/Io/camera_config.h                  |   2 -
  rpcs3/Emu/Io/camera_handler_base.h            |   3 +-
  rpcs3/Emu/RSX/display.h                       |   2 +-
- rpcs3/Emu/System.cpp                          |   5 +-
  rpcs3/Input/basic_mouse_handler.cpp           |   5 +-
  rpcs3/Input/keyboard_pad_handler.cpp          |  11 +-
  rpcs3/main.cpp                                |   9 +-
@@ -553,22 +552,6 @@ index e6d5fa657ed..88812756683 100644
  // and we don't need all of Xlib anyway
  using Display = struct _XDisplay;
  using Window  = unsigned long;
-diff --git a/rpcs3/Emu/System.cpp b/rpcs3/Emu/System.cpp
-index 3bb09d565ab..b0fd748e1ab 100644
---- a/rpcs3/Emu/System.cpp
-+++ b/rpcs3/Emu/System.cpp
-@@ -3218,7 +3218,10 @@ bool Emulator::IsPathInsideDir(std::string_view path, std::string_view dir) cons
- 	return !dir_path.empty() && (GetCallbacks().resolve_path(path) + '/').starts_with((dir_path.back() == '/') ? dir_path : (dir_path + '/'));
- }
- 
--game_boot_result Emulator::VerifyPathCasing(std::string_view path, std::string_view dir, bool from_dir) const
-+game_boot_result Emulator::VerifyPathCasing(
-+	[[maybe_unused]] std::string_view path,
-+	[[maybe_unused]] std::string_view dir,
-+	[[maybe_unused]] bool from_dir) const
- {
- #ifdef _WIN32
- 	// path might be passed from command line with differences in uppercase/lowercase on windows.
 diff --git a/rpcs3/Input/basic_mouse_handler.cpp b/rpcs3/Input/basic_mouse_handler.cpp
 index ac1c061aa92..9e065522444 100644
 --- a/rpcs3/Input/basic_mouse_handler.cpp
@@ -2502,3 +2485,4 @@ index 55899d4662c..15488073122 100644
  		}
  		if (const int index = ui->cameraIdBox->findData(qstr(selected_camera)); index >= 0)
  		{
+

@@ -43,6 +43,7 @@
 - mame exit causing settings not to save
 - mednafen_psx settings
 - a bunch of libretro emulator settings not applying
+- P2 gun for GUN4IR now working properly
 ### Changed
 - Samba now allows wide symbolic links
 - Unicode support for x86 files systems
@@ -91,6 +92,7 @@
 - vice to v3.7.1
 - rpcs3 to v0.0.27
 - pcsx2 to v1.7.4439 (Qt6 build)
+- Pyxel to 1.9.15
 ### Dev
 - buildroot upgrade to 2023.02
 - mesa3d update to 23.0.3

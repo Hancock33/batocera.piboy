@@ -2843,10 +2843,10 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         else:
             coreSettings.save('mrboom-aspect', '"Native"')
         # Monsters
-        if system.isOptSet('mrboom-nomonster') and system.config['mrboom-nomonster'] == "True":
-            coreSettings.save('mrboom-nomonster', '"ON"')
+        if system.isOptSet('mrboom-nomonster'):
+            coreSettings.save('mrboom-nomonster', '"' + system.config['mrboom-nomonster'] + '"')
         else:
-            coreSettings.save('mrboom-nomonster', '"OFF"')
+            coreSettings.save('mrboom-nomonster', '"ON"')
 
     if (system.config['core'] == 'boom3'):
         # Invert Controls
