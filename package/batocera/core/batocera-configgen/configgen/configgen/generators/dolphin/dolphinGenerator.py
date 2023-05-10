@@ -85,10 +85,10 @@ class DolphinGenerator(Generator):
             dolphinSettings.set("Core", "FastDiscSpeed", "False")
 
         # Dual Core
-        if system.isOptSet("dual_core") and system.getOptBoolean("dual_core") == False:
-            dolphinSettings.set("Core", "CPUThread", "False")
-        else:
+        if system.isOptSet("dual_core") and system.getOptBoolean("dual_core"):
             dolphinSettings.set("Core", "CPUThread", "True")
+        else:
+            dolphinSettings.set("Core", "CPUThread", "False")
 
         # Gpu Sync
         if system.isOptSet("gpu_sync") and system.getOptBoolean("gpu_sync"):
@@ -284,7 +284,8 @@ class DolphinGenerator(Generator):
 
         return Command.Command(array=commandArray, \
             env={ "XDG_CONFIG_HOME":batoceraFiles.CONF, \
-            "XDG_DATA_HOME":batoceraFiles.SAVES})
+            "XDG_DATA_HOME":batoceraFiles.SAVES, \
+            "QT_QPA_PLATFORM":"xcb"})
 
     def getInGameRatio(self, config, gameResolution, rom):
 
