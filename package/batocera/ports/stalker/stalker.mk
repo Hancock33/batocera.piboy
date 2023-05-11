@@ -3,8 +3,8 @@
 # stalker
 #
 ################################################################################
-# Version: Commits on May 06, 2023
-STALKER_VERSION = d44cd796f80fcc3993d2394a47f3e582f7c8a697
+# Version: Commits on May 10, 2023
+STALKER_VERSION = 075cd7022dd91c6c7b08cccb57f0742aa9091999
 STALKER_SITE = https://github.com/OpenXRay/xray-16.git
 STALKER_SITE_METHOD=git
 STALKER_GIT_SUBMODULES=YES
