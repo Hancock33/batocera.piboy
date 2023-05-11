@@ -1,4 +1,4 @@
-From 9e0b4ac56138b980db0afb3932a520d210da0b45 Mon Sep 17 00:00:00 2001
+From 1ca0470f02b21140e20499e402d6f14afe793717 Mon Sep 17 00:00:00 2001
 From: Megamouse <studienricky89@googlemail.com>
 Date: Sat, 22 May 2021 10:42:05 +0200
 Subject: [PATCH] Qt6 port
@@ -50,7 +50,7 @@ Subject: [PATCH] Qt6 port
  rpcs3/rpcs3qt/qt_utils.h                      |   2 +-
  rpcs3/rpcs3qt/register_editor_dialog.cpp      |   2 +-
  rpcs3/rpcs3qt/settings_dialog.cpp             |   7 +-
- 47 files changed, 400 insertions(+), 578 deletions(-)
+ 46 files changed, 396 insertions(+), 577 deletions(-)
  delete mode 100644 3rdparty/qt5.cmake
  create mode 100644 3rdparty/qt6.cmake
  rename rpcs3/rpcs3qt/{qt_camera_video_surface.cpp => qt_camera_video_sink.cpp} (78%)
@@ -2485,4 +2485,3 @@ index 55899d4662c..15488073122 100644
  		}
  		if (const int index = ui->cameraIdBox->findData(qstr(selected_camera)); index >= 0)
  		{
-
