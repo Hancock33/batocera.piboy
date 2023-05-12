@@ -11182,7 +11182,7 @@ virtualjaguar:
 # vita3k doesn't handle the hud - so no deocrations etc
 vita3k:
   shared: [videomode]
-  features: []
+  features: [padtokeyboard]
   cfeatures:
     vita3k_gfxbackend:
       prompt:      GRAPHICS API
