@@ -17,7 +17,7 @@ vitaConfigFile = vitaConfig + '/config.yml'
 class Vita3kGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        
+
         # Create config folder
         if not path.isdir(vitaConfig):
             os.mkdir(vitaConfig)
@@ -27,7 +27,7 @@ class Vita3kGenerator(Generator):
         # Create save folder
         if not path.isdir(vitaSaves):
             os.mkdir(vitaSaves)
-        
+
         # Create the config.yml file if it doesn't exist
         vita3kymlconfig = {}
         if os.path.isfile(vitaConfigFile):
