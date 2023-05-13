@@ -5317,6 +5317,17 @@ saturn:
     yabasanshiro:
       yabasanshiro:     { requireAnyOf: [BR2_PACKAGE_YABASANSHIRO], incompatible_extensions: [ccd, m3u, zip] }
 
+segastv:
+  name:                 S-TV
+  manufacturer:         Arcade
+  release:              1994
+  hardware:             arcade
+  extensions:           [zip]
+  platform:             arcade
+  emulators:
+    libretro:
+      kronos:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_KRONOS] }
+
 sega32x:
   name:                 32x
   manufacturer:         Sega
