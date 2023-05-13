@@ -60,8 +60,8 @@
 - ppsspp now fully uses SDL2 controller config
 ### Updated
 - lr-snes9x to v1.62.3
-- xenia to v1.0.2791
-- xenia canary to 5e0c674 (Commits on Apr 10, 2023)
+- xenia to v1.0.2798
+- xenia canary to 1319ff6 (Commits on May 2, 2023)
 - cemu to 2.0-39
 - retroarch to 1.15.0
 - libretro-wasm4 to 2.5.4
@@ -72,7 +72,7 @@
 - redream to 1.5.0-1051
 - hypseus to 2.10.2
 - abuse to 0.9.1
-- supermodel to Mar 19, 2023 build
+- supermodel to May 8, 2023 build
 - Updated libretro cores [#8411](https://github.com/batocera-linux/batocera.linux/pull/8411)
 - Updated mupen64plus cores [#8413](https://github.com/batocera-linux/batocera.linux/pull/8413)
 - dosbox to v2023.03.31
@@ -95,6 +95,7 @@
 - pcsx2 to v1.7.4439 (Qt6 build)
 - Pyxel to 1.9.15
 - Cirta to nightly-1903
+- xemu v0.7.88
 ### Dev
 - buildroot upgrade to 2023.02.01
 - mesa3d update to 23.1.0
