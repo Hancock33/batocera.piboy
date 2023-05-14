@@ -101,12 +101,9 @@
             "description": "Accelerate  / Short Pass"
         },
         {
-            "trigger": [
-                "hotkey",
-                "start"
-            ],
-            "type": "exec",
-            "target": "killall -9 dolphin-triforce",
+            "trigger": [ "hotkey", "start" ],
+            "type": "key",
+            "target": [ "KEY_LEFTALT", "KEY_F4" ],
             "description": "Exit emulator"
         },
         {
@@ -122,25 +119,28 @@
             "description": "Open Dolphin-triforce's menu"
         },
         {
-            "trigger": [
-                "hotkey",
-                "x"
-            ],
+            "trigger": [ "hotkey", "up" ],
             "type": "key",
-            "target": "KEY_F1",
-            "description": "Load State Slot 1"
+            "target": [ "KEY_LEFTSHIFT", "KEY_F1" ],
+            "description": "Select State/Select State Slot 1"
         },
         {
-            "trigger": [
-                "hotkey",
-                "y"
-            ],
+            "trigger": [ "hotkey", "down" ],
             "type": "key",
-            "target": [
-                "KEY_LEFTSHIFT",
-                "KEY_F1"
-            ],
-            "description": "Save State Slot 1"
+            "target": [ "KEY_LEFTSHIFT", "KEY_F2" ],
+            "description": "Select State/Select State Slot 2"
+        },
+        {
+            "trigger": [ "hotkey", "y" ],
+            "type": "key",
+            "target": "KEY_F5",
+            "description": "Save State/Save to Selected Slot"
+        },
+        {
+            "trigger": [ "hotkey", "x" ],
+            "type": "key",
+            "target": "KEY_F8",
+            "description": "State/Load from Selected Slot"
         },
         {
             "trigger": [
