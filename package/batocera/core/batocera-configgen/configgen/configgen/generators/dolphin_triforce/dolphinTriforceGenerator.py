@@ -274,7 +274,7 @@ class DolphinTriforceGenerator(Generator):
         hotkeyConfig.set('Hotkeys', 'GBA Window Size/4x', '`KP_4`')
         # 
         # Write the configuration to the file
-        hotkey_path = '/userdata/system/configs/dolphin-triforce/Hotkeys.ini'
+        hotkey_path = '/userdata/system/configs/dolphin-triforce/Config/Hotkeys.ini'
         with open(hotkey_path, 'w') as configfile:
             hotkeyConfig.write(configfile)
 
