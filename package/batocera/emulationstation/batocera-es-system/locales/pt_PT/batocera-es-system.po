@@ -7713,7 +7713,7 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "VSync and Audio Resampling need to be enabled."
-msgstr "O VSync e Resampling de áudio precisam estar ativados."
+msgstr "O VSync e Resampling de udio precisam estar ativados."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -12021,7 +12021,7 @@ msgctxt "keys_files"
 msgid "Set to full screen"
 msgstr ""
 
-#. TRANSLATION: xbox360.xenia.keys, wiiware.dolphin-emu.keys, wiiu.keys, daphne.daphne.keys, xbox360.xenia-canary.keys, ...
+#. TRANSLATION: xbox360.xenia.keys, wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, wiiu.keys, ...
 msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr ""
@@ -12031,9 +12031,24 @@ msgctxt "keys_files"
 msgid "Emulator configuration"
 msgstr ""
 
-#. TRANSLATION: wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, triforce.dolphin_triforce.keys
 msgctxt "keys_files"
-msgid "Alternative exit the emulator for guns"
+msgid "Select State/Select State Slot 1"
+msgstr ""
+
+#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "Select State/Select State Slot 2"
+msgstr ""
+
+#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys
+msgctxt "keys_files"
+msgid "Save State/Save to Selected Slot"
+msgstr ""
+
+#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "State/Load from Selected Slot"
 msgstr ""
 
 #. TRANSLATION: wiiu.keys
@@ -12158,12 +12173,7 @@ msgstr ""
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
-msgid "Load State Slot 1"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Save State Slot 1"
+msgid "State/Save to Selected Slot"
 msgstr ""
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
