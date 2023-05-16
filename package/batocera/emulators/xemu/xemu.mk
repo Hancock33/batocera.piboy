@@ -3,8 +3,8 @@
 # xemu
 #
 ################################################################################
-# Version: Commits on Mar 31, 2023
-XEMU_VERSION = 9e1f5f2f19a8b0e880e034d455b359d426f6d386
+# Version: Commits on May 12, 2023
+XEMU_VERSION = 546fe068de83c188afda8d0c4a880f9f3b0eeb74
 XEMU_SITE = https://github.com/xemu-project/xemu
 XEMU_SITE_METHOD=git
 XEMU_GIT_SUBMODULES=YES
