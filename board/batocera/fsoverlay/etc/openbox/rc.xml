@@ -9,5 +9,11 @@
 	    <fullscreen>yes</fullscreen>
 	    <decor>no</decor>
 	  </application>
+      <application class="flatpak-bwrap">
+        <fullscreen>no</fullscreen>
+      </application>
+      <application class="Lutris">
+        <fullscreen>no</fullscreen>
+      </application>
 	</applications>
 </openbox_config>
