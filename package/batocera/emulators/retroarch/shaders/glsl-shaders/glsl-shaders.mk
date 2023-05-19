@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on May 18, 2023
-GLSL_SHADERS_VERSION = 5e2e80061d933148ed22a840aee7b7bf427c1af3
+GLSL_SHADERS_VERSION = c4833516cfe344c1a33df4b2f169aebe2dc47c9f
 GLSL_SHADERS_SITE = $(call github,libretro,glsl-shaders,$(GLSL_SHADERS_VERSION))
 GLSL_SHADERS_LICENSE = GPL
 
