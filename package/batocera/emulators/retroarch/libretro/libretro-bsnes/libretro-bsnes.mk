@@ -3,8 +3,8 @@
 # libretro-bsnes
 #
 ################################################################################
-# Version: Commits on May 12, 2023
-LIBRETRO_BSNES_VERSION = ff89e0c0af18d3c150c2d5467be8a3e82ad7501b
+# Version: Commits on May 19, 2023
+LIBRETRO_BSNES_VERSION = 9ba020d1c845aeafee53db60fa244ac25d64d9eb
 LIBRETRO_BSNES_SITE = $(call github,libretro,bsnes-libretro,$(LIBRETRO_BSNES_VERSION))
 
 LIBRETRO_BSNES_LICENSE = GPLv3
