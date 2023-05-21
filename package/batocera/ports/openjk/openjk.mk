@@ -3,8 +3,8 @@
 # openjk
 #
 ################################################################################
-# Version: Commits on May 01, 2023
-OPENJK_VERSION = 90e8005b0cef3ce3405ad3f0011a204ca78e4c37
+# Version: Commits on May 20, 2023
+OPENJK_VERSION = 995d0dd461ce41755cb54dc78059cd42aeef0445
 OPENJK_SITE = $(call github,JACoders,OpenJK,$(OPENJK_VERSION))
 
 OPENJK_DEPENDENCIES = sdl2 openal host-ninja
