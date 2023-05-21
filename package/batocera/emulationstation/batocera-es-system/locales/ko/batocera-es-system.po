@@ -1467,6 +1467,12 @@ msgstr ""
 "모든 하드웨어에서 제대로 작동하지 않을 수 있습니다. 지원되는 경우 하이브리드"
 "가 선호됩니다."
 
+#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/same_cdi, libretro/same_cdi, libretro/mame, ...
+#, fuzzy
+msgctxt "game_options"
+msgid "ADVANCED OPTIONS"
+msgstr "고급 옵션"
+
 #. TRANSLATION: libretro/dolphin, dolphin
 #, fuzzy
 msgctxt "game_options"
@@ -2688,12 +2694,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enhancement. Upscales screen textures (2D games only)."
 msgstr "향상. 화면 텍스처를 업스케일합니다(2D 게임만 해당)."
-
-#. TRANSLATION: libretro/flycast, libretro/same_cdi, libretro/same_cdi, libretro/mame, libretro/mame, ...
-#, fuzzy
-msgctxt "game_options"
-msgid "ADVANCED OPTIONS"
-msgstr "고급 옵션"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, flycast
 msgctxt "game_options"
@@ -8620,11 +8620,21 @@ msgctxt "game_options"
 msgid "CUSTOM CONTROLLER"
 msgstr "커스텀 컨트롤러"
 
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin, dolphin, ...
+msgctxt "game_options"
+msgid "DISPLAY"
+msgstr ""
+
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 #, fuzzy
 msgctxt "game_options"
 msgid "Map your controller to an emulated Wiimote."
 msgstr "컨트롤러를 에뮬레이트된 Wiimote에 매핑합니다."
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
+msgctxt "game_options"
+msgid "CONTROLLERS"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 #, fuzzy
@@ -8633,9 +8643,10 @@ msgid "EMULATE WIIMOTE"
 msgstr "에뮬레이트 위모트"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+#, fuzzy
 msgctxt "game_options"
-msgid "CUSTOMISE EMULATED WIIMOTE & GAMEPAD"
-msgstr ""
+msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
+msgstr "에뮬레이트 된 WIIMOTE & GAMEPAD 사용자 정의"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 #, fuzzy
@@ -8664,12 +8675,6 @@ msgctxt "game_options"
 msgid "Wiimote Sideway + Nunchuk"
 msgstr "위모트 사이드웨이 + 쌍절곤"
 
-#. TRANSLATION: dolphin
-#, fuzzy
-msgctxt "game_options"
-msgid "8x 5K (5120x4224)"
-msgstr "5K 8개(5120x4224)"
-
 #. TRANSLATION: dolphin, dolphin_triforce
 #, fuzzy
 msgctxt "game_options"
@@ -8687,6 +8692,17 @@ msgstr "힘 16:9"
 msgctxt "game_options"
 msgid "Stretch to window"
 msgstr "창으로 늘이기"
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
+msgctxt "game_options"
+msgid "RENDERING"
+msgstr ""
+
+#. TRANSLATION: dolphin
+#, fuzzy
+msgctxt "game_options"
+msgid "8x 5K (5120x4224)"
+msgstr "5K 8개(5120x4224)"
 
 #. TRANSLATION: dolphin
 #, fuzzy
@@ -8891,6 +8907,18 @@ msgctxt "game_options"
 msgid "MOUSE AS WIIMOTE POINTER"
 msgstr "위모트 좌표를 마우스로"
 
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid ""
+"Skips Vertical Blank Interrupts when lag is detected, allowing for smooth "
+"audio playback when emulation speed is not 100%."
+msgstr ""
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "VBI SKIP"
+msgstr ""
+
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "1.5x 720p (960x792)"
@@ -8978,11 +9006,6 @@ msgctxt "game_options"
 msgid "OPTIMAL FRAME PACING"
 msgstr ""
 
-#. TRANSLATION: duckstation, duckstation, duckstation, duckstation, duckstation, ...
-msgctxt "game_options"
-msgid "DISPLAY"
-msgstr ""
-
 #. TRANSLATION: duckstation, melonds, pcsx2, awgl, yquake2
 #, fuzzy
 msgctxt "game_options"
@@ -9039,11 +9062,6 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "STRETCH TO FILL"
-msgstr ""
-
-#. TRANSLATION: duckstation, duckstation, duckstation, duckstation, duckstation, ...
-msgctxt "game_options"
-msgid "RENDERING"
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -9181,11 +9199,6 @@ msgstr "프리로드"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Use Analog joysticks in addition to D-Pad for DualShock controllers."
-msgstr ""
-
-#. TRANSLATION: duckstation, duckstation, duckstation
-msgctxt "game_options"
-msgid "CONTROLLERS"
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -14224,11 +14237,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "자동 높이"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
-#~ msgstr "에뮬레이트 된 WIIMOTE & GAMEPAD 사용자 정의"
 
 #, fuzzy
 #~ msgctxt "game_options"
