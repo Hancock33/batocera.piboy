@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Batocera\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-05 13:13+0100\n"
-"PO-Revision-Date: 2023-05-03 14:02+0200\n"
+"PO-Revision-Date: 2023-05-08 12:53+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk_SK\n"
@@ -7518,7 +7518,7 @@ msgstr "Mapovať váš ovládač na emulovaný Wiimote."
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
 msgctxt "game_options"
 msgid "CONTROLLERS"
-msgstr ""
+msgstr "Ovládače"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -7813,42 +7813,44 @@ msgstr "Zakázať správy na obrazovke"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Determines the speed and the runahead behaviour of the system."
-msgstr ""
+msgstr "Určuje rýchlosť a nábehové správanie systému."
 
 #. TRANSLATION: duckstation, duckstation, duckstation
 msgctxt "game_options"
 msgid "EMULATION"
-msgstr ""
+msgstr "Emulácia"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "EMULATION SPEED"
-msgstr ""
+msgstr "Rýchlost emulácie"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Unlimited"
-msgstr ""
+msgstr "Bez obmedzenia"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "VSync and Audio Resampling need to be enabled."
-msgstr ""
+msgstr "Vsync a resamplovanie zvuku musí byť povolené."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "SYNC TO HOST REFRESH RATE"
-msgstr ""
+msgstr "Synchronizovať s frekvenciou hostiteľa"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Ensure every frame the console renders is displayed to screen."
 msgstr ""
+"Zabezpečiť, aby sa na obrazovke zobrazil každý snímok, ktorý konzola "
+"vykreslí."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "OPTIMAL FRAME PACING"
-msgstr ""
+msgstr "Optimálna rýchlosť snímky"
 
 #. TRANSLATION: duckstation, melonds, pcsx2, awgl, yquake2
 msgctxt "game_options"
@@ -7868,42 +7870,42 @@ msgstr "Vláknová prezentácia"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Auto (Match Window)"
-msgstr ""
+msgstr "Auto (podľa okna)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "PAR 1:1"
-msgstr ""
+msgstr "PAR 1:1"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
-msgstr ""
+msgstr "Výsledkom môže byť ostrejší obraz v niektorých 2D hrách."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "INTEGER UPSCALING"
-msgstr ""
+msgstr "Celočíselné zväčšovanie"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "ENabling will smooth out the image."
-msgstr ""
+msgstr "Povolenie vyhladí obraz."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "LINEAR UPSCALING"
-msgstr ""
+msgstr "Lineárne škálovanie"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Fills the screen regardless of the aspect ratio."
-msgstr ""
+msgstr "Vyplní obrazovku bez ohľadu na pomer strán."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "STRETCH TO FILL"
-msgstr ""
+msgstr "Roztiahnuť na vyplnenie"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7928,83 +7930,83 @@ msgstr "Najbližší sused"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Bilinear (No Edge Blending)"
-msgstr ""
+msgstr "Bilineárne (bez prelínania okrajov)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "JINC2 (Slow)"
-msgstr ""
+msgstr "JINC2 (pomalé)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "JINC2 (Slow, No Edge Blending)"
-msgstr ""
+msgstr "JINC2 (pomalé, bez prelínania okrajov)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "xBR (Very Slow)"
-msgstr ""
+msgstr "xBR (veľmi pomalé)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "xBR (Very Slow, No Edge Blending)"
-msgstr ""
+msgstr "xBR (veľmi pomalé, bez prelínania hrán)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "24-bit, disables dithering."
-msgstr ""
+msgstr "24-bit, zakáže rozklad."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "TRUE COLOUR RENDERING"
-msgstr ""
+msgstr "Renderovanie v pravých farbách"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Makes the dither pattern much less obvious at higher resolutions."
-msgstr ""
+msgstr "Pri vyšších rozlíšeniach je vzor rozkladu oveľa menej zreteľný."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "SCALED DITHERING"
-msgstr ""
+msgstr "Škálovaný rozklad"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid ""
 "When running outside of 100%, adjusts the temp instead of dropping frames."
-msgstr ""
+msgstr "Pri behu mimo 100% upraví temp namiesto vynechania snímok."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "STRETCH MODE"
-msgstr ""
+msgstr "Režim roztiahnutia"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Off (Noisy)"
-msgstr ""
+msgstr "Vypnuté (šum)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Resampling (Pirch Shift)"
-msgstr ""
+msgstr "Resamplovanie (Pirch Shift)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Time Stretch (Tempo Change, Best Sound)"
-msgstr ""
+msgstr "Time Stretch (zmena tempa, najlepší zvuk)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Force progressive render / scan."
-msgstr ""
+msgstr "Vynútiť progresívne renderovanie."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "DISABLE INTERLACING"
-msgstr ""
+msgstr "Zakázať prekladanie"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -8034,7 +8036,7 @@ msgstr "Prednačítať"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Use Analog joysticks in addition to D-Pad for DualShock controllers."
-msgstr ""
+msgstr "Pre ovládače DualShock použiť okrem D-Padu aj analógové joysticky."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -8044,7 +8046,7 @@ msgstr "Joystick na Dpad"
 #. TRANSLATION: duckstation, duckstation
 msgctxt "game_options"
 msgid "Not Connected"
-msgstr ""
+msgstr "Nepripojený"
 
 #. TRANSLATION: duckstation, duckstation
 msgctxt "game_options"
@@ -8124,7 +8126,7 @@ msgstr "Cachovaný interpreter (rýchlejšie)"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Recompiler (Fastest)(Default)"
-msgstr ""
+msgstr "Recompiler (najrýchlejšie, predvolené)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9392,7 +9394,7 @@ msgstr ""
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3
 msgctxt "game_options"
 msgid "CPU"
-msgstr ""
+msgstr "CPU"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -9520,7 +9522,7 @@ msgstr "Nastavenie vnútorného pomeru PS3. Niektoré hry podporujú iba 16/9."
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3
 msgctxt "game_options"
 msgid "VIDEO"
-msgstr ""
+msgstr "Video"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -9530,7 +9532,7 @@ msgstr "16:9 (predvolené)"
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "RENDER"
-msgstr ""
+msgstr "Renderovanie"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -9550,32 +9552,32 @@ msgstr "Vypnuté (rýchlejšie, nestabilné)"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTER"
-msgstr ""
+msgstr "Anizotropické filtrovanie"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Can improve performance at the expense of graphics accuracy."
-msgstr ""
+msgstr "Môže zlepšiť výkon na úkor presnosti grafiky."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ZCULL ACCURACY"
-msgstr ""
+msgstr "Presnosť ZCULL"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Precise (Slowest)(Default)"
-msgstr ""
+msgstr "Presné (najpomalšie, predvolené)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Approximate (Fast)"
-msgstr ""
+msgstr "Približné (rýchle)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Relaxed (Fastest)"
-msgstr ""
+msgstr "Uvoľnené (najrýchlejšie)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -9583,21 +9585,22 @@ msgid ""
 "Controls precision of generated shaders. Low quality can improved "
 "performance."
 msgstr ""
+"Ovláda presnosť generovaných shaderov. Nízka kvalita môže zlepšiť výkon."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SHADER QUALITY"
-msgstr ""
+msgstr "Kvalita shadera"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Ultra"
-msgstr ""
+msgstr "Ultra"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "High (Default)"
-msgstr ""
+msgstr "Vysoké (predvolené)"
 
 #. TRANSLATION: rpcs3, cgenius
 msgctxt "game_options"
@@ -9612,17 +9615,17 @@ msgstr "1280x720 (predvolené)"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Final image filtering."
-msgstr ""
+msgstr "Konečné filtrovanie obrazu."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "OUTPUT SCALING"
-msgstr ""
+msgstr "Škálovanie výstupu"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "FidelityFX Super Resolution"
-msgstr ""
+msgstr "Super rozlíšenie FidelityFX"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -9638,32 +9641,33 @@ msgstr "Režim shadera"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Legacy (single threaded)"
-msgstr ""
+msgstr "Staré (jedno vlákno)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Async (multi threaded)(Deafult)"
-msgstr ""
+msgstr "Async (viac vlákien, predvolené)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Async with Shader Interpreter"
-msgstr ""
+msgstr "Asynchrónne s interpreterom shadera"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Shader Interpreter only"
-msgstr ""
+msgstr "Iba interpreter shadera"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Only applicable when either Async Shader mode is set."
 msgstr ""
+"Použiteľné iba vtedy, keď je nastavený niektorý z režimov Async Shader."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "NUMBER OF SHADER COMPILER THREADS"
-msgstr ""
+msgstr "Počet vlákien kompilera shadera"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -9682,11 +9686,13 @@ msgid ""
 "Straict API specification. Can resolve rare cases of missing graphics and "
 "flickering."
 msgstr ""
+"Presná špecifikácia API. Dokáže vyriešiť zriedkavé prípady chýbajúcej "
+"grafiky a blikania."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "STRICT RENDERING MODE"
-msgstr ""
+msgstr "Prísny renderovací režim"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -9699,7 +9705,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Distorts the output to fill the display fully Overrides aspect ratio."
-msgstr ""
+msgstr "Skresľuje výstup, aby úplne vyplnil displej. Prepíše pomer strán."
 
 #. TRANSLATION: rpcs3, scummvm
 msgctxt "game_options"
@@ -9726,11 +9732,13 @@ msgid ""
 "Offloads some RSX operations to a secondary thread. Improves performance in "
 "high-core processors."
 msgstr ""
+"Presunie niektoré operácie RSX do sekundárneho vlákna. Zlepšuje výkon vo "
+"vysokojadrových procesoroch."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "MULTITHREADED RSX"
-msgstr ""
+msgstr "Viacvláknové RSX"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -9738,26 +9746,27 @@ msgid ""
 "Stream texture to GPU in parrallel. Can improve performance on more powerful "
 "GPU's."
 msgstr ""
+"Streamuje textúru do GPU paralelne. Môže zlepšiť výkon na výkonnejších GPU."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ASYNCHRONOUS TEXTURE STREAMING"
-msgstr ""
+msgstr "Asynchrónne streamovanie textúr"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Choose number of audio channels."
-msgstr ""
+msgstr "Vyberte počet zvukových kanálov."
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3
 msgctxt "game_options"
 msgid "AUDIO"
-msgstr ""
+msgstr "Zvuk"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "AUDIO FORMAT"
-msgstr ""
+msgstr "Formát zvuku"
 
 #. TRANSLATION: rpcs3, yuzu
 msgctxt "game_options"
@@ -9767,12 +9776,12 @@ msgstr "Stereo"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Surround 5.1"
-msgstr ""
+msgstr "Surround 5.1"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Surround 7.1"
-msgstr ""
+msgstr "Surround 7.1"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -12588,9 +12597,145 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
+#~ msgctxt "game_options"
+#~ msgid "Store past states to rewind to in realtime, if the core supports it."
+#~ msgstr ""
+#~ "Uložiť minulé stavy na pretočenie v reálnom čase, ak to jadro podporuje."
+
+#~ msgctxt "game_options"
+#~ msgid "Treats the right analog stick as the second joystick."
+#~ msgstr "Považuje pravú analógovú páčku za druhý joystick."
+
+#~ msgctxt "game_options"
+#~ msgid "Optimized (auto)"
+#~ msgstr "Optimalizované (auto)"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the deadzone of the joystick analog sticks."
+#~ msgstr "Nastavte mŕtvu zónu analógových páčok joysticku."
+
+#~ msgctxt "game_options"
+#~ msgid "ANALOG JOYSTICK DEADZONE"
+#~ msgstr "Analógová mŕtva zóna"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Crop MAME artwork to maximize the game screen and only fill unused space."
+#~ msgstr ""
+#~ "Orezať grafiku MAME, aby ste maximalizovali hernú obrazovku a zaplnili "
+#~ "nevyužitý priestor."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Install the image reader card to read disk image files (Mac IIx only). "
+#~ "Minimum 4MB ram size recommended."
+#~ msgstr ""
+#~ "Nainštalovať čítačku obrazov kariet, aby ste mohli čítať obrazové súbory "
+#~ "disku (len Mac IIx). Odporúčaná minimálna veľkosť RAM 4 MB."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
+#~ "switches to Super-High when needed."
+#~ msgstr ""
+#~ "Manuálne definujte, ktoré rozlíšenie sa má použiť.&#x0a;Automaticky sa "
+#~ "predvolene nastaví na Vysoké a v prípade potreby sa prepne na Supervysoké."
+
+#~ msgctxt "game_options"
+#~ msgid "JUMP ON B"
+#~ msgstr "Skočiť na B"
+
+#~ msgctxt "game_options"
+#~ msgid "Keypad to joyport mappings for 2 players."
+#~ msgstr "Mapovania keypadu na joyport pre 2 hráčov."
+
+#~ msgctxt "game_options"
+#~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
+#~ msgstr "Mapovanie gamepadu 2. hráča (keyrah)"
+
+#~ msgctxt "game_options"
+#~ msgid "Passes all physical keyboard events for Pad2Key."
+#~ msgstr "Prejde všetky udalosti fyzickej klávesnice pre Pad2Key."
+
+#~ msgctxt "game_options"
+#~ msgid "DISABLE EMULATOR JOYSTICK"
+#~ msgstr "Zakázať joystick emulátora"
+
+#~ msgctxt "game_options"
+#~ msgid "ANALOG DEADZONE"
+#~ msgstr "Analógová mŕtva zóna"
+
+#~ msgctxt "game_options"
+#~ msgid "For Gyro-enabled games (bound to left analog stick)"
+#~ msgstr "Pre hry s podporou gyroskopu (viazané na ľavú analógovú páčku)"
+
+#~ msgctxt "game_options"
+#~ msgid "For Gyro-enabled games (bound to right analog stick)"
+#~ msgstr "Pre hry s podporou gyroskopu (viazané na pravú analógovú páčku)"
+
+#~ msgctxt "game_options"
+#~ msgid "Resize automatically screen height."
+#~ msgstr "Automaticky zmeniť výšku obrazovky."
+
+#~ msgctxt "game_options"
+#~ msgid "AUTO HEIGHT"
+#~ msgstr "Automatická výška"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGL (Default)"
+#~ msgstr "OpenGL (predvolené)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per pixel is the most accurate, but also the most demanding."
+#~ msgstr "Podľa bodu je najpresnejšie, ale aj najnáročnejšie."
+
+#~ msgctxt "game_options"
+#~ msgid "Per Strip"
+#~ msgstr "Na pásik"
+
+#~ msgctxt "game_options"
+#~ msgid "Per Triangle (Default)"
+#~ msgstr "Podľa trojuholníka (predvolené)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per Pixel"
+#~ msgstr "Po bodoch"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable this mode if you have issue for run your game on NTFS storage (by "
+#~ "default is better to use LinuxFS)."
+#~ msgstr ""
+#~ "Povoľte tento režim, ak máte problém so spustením hry na úložisku NTFS (v "
+#~ "predvolenom nastavení je lepšie použiť LinuxFS)."
+
+#~ msgctxt "game_options"
+#~ msgid "Configuring controllers in GZDoom can cause problems."
+#~ msgstr "Konfigurácia ovládačov v GZDoom môže spôsobiť problémy."
+
+#~ msgctxt "game_options"
+#~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
+#~ msgstr "Použiť nastavenie joysticku GZDoom"
+
 #~ msgctxt "keys_files"
-#~ msgid "Alternative exit the emulator for guns"
-#~ msgstr "Alternatívne ukončiť emulátor pre zbrane"
+#~ msgid "Restart Game"
+#~ msgstr "Reštartovať hru"
+
+#~ msgctxt "keys_files"
+#~ msgid "Slot -"
+#~ msgstr "Slot -"
+
+#~ msgctxt "keys_files"
+#~ msgid "Slot +"
+#~ msgstr "Slot +"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Ďalší disk (m3u)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Fast Forward"
+#~ msgstr "Rýchlo dopredu"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
@@ -12599,6 +12744,118 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Uložiť slot stavu 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Joy2Pad Up"
+#~ msgstr "Joy2Pad hore"
+
+#~ msgctxt "keys_files"
+#~ msgid "Joy2Pad Down"
+#~ msgstr "Joy2Pad dolu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Joy2Pad Left"
+#~ msgstr "Joy2Pad  vľavo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Joy2Pad Right"
+#~ msgstr "Joy2Pad  vpravo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Hat Up"
+#~ msgstr "Klobúk hore"
+
+#~ msgctxt "keys_files"
+#~ msgid "Hat Down"
+#~ msgstr "Klobúk dolu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Hat Left"
+#~ msgstr "Klobúk vľavo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Hat Right"
+#~ msgstr "Klobúk vpravo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button Start"
+#~ msgstr "Tlačidlo Start"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button Select"
+#~ msgstr "Tlačidlo Select"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button L"
+#~ msgstr "Tlačidlo L"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button R"
+#~ msgstr "Tlačidlo R"
+
+#~ msgctxt "keys_files"
+#~ msgid "Disposition A"
+#~ msgstr "Dispozícia A"
+
+#~ msgctxt "keys_files"
+#~ msgid "Disposition B"
+#~ msgstr "Dispozícia B"
+
+#~ msgctxt "keys_files"
+#~ msgid "Microphone"
+#~ msgstr "Mikrofón"
+
+#~ msgctxt "keys_files"
+#~ msgid "TouchScreen"
+#~ msgstr "Dotyková obrazovka"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Drastic"
+#~ msgstr "Ukončiť Drastic"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screens"
+#~ msgstr "Vymeniť obrazovky"
+
+#~ msgctxt "keys_files"
+#~ msgid "QuickMenu"
+#~ msgstr "Rýchla ponuka"
+
+#~ msgctxt "keys_files"
+#~ msgid "FastForward"
+#~ msgstr "Rýchlo dopredu"
+
+#~ msgctxt "game_options"
+#~ msgid "Distorts the output to fill the display fully."
+#~ msgstr "Skresľuje výstup tak, aby úplne vyplnil displej."
+
+#~ msgctxt "game_options"
+#~ msgid "TV MODE"
+#~ msgstr "Režim TV"
+
+#~ msgctxt "game_options"
+#~ msgid "Legacy (laggy)"
+#~ msgstr "Staré (lagové)"
+
+#~ msgctxt "game_options"
+#~ msgid "Async (skip draw, recommended)"
+#~ msgstr "Async (preskočiť kresbu, odporúčané)"
+
+#~ msgctxt "game_options"
+#~ msgid "Async with interp. (hybrid)"
+#~ msgstr "Async s interp. (hybridné)"
+
+#~ msgctxt "game_options"
+#~ msgid "Interpreter only (experimental)"
+#~ msgstr "Iba interpreter (experimentálne)"
+
+#~ msgctxt "game_options"
+#~ msgid "May fix broken graphics in some games."
+#~ msgstr "Môže opraviť pokazenú grafiku v niektorých hrách."
+
+#~ msgctxt "game_options"
+#~ msgid "WRITE DEPTH BUFFER"
+#~ msgstr "Buffer hĺbkového zápisu"
 
 #~ msgctxt "game_options"
 #~ msgid "Recompiler (Fastest)"
@@ -12623,6 +12880,38 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "For digital controller mode."
 #~ msgstr "Pre režim digitálneho ovládača."
+
+#~ msgctxt "keys_files"
+#~ msgid "Navigate menu up"
+#~ msgstr "Navigovať ponuku hore"
+
+#~ msgctxt "keys_files"
+#~ msgid "Navigate menu down"
+#~ msgstr "Navigovať v ponuke dolu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Navigate menu left"
+#~ msgstr "Navigovať v ponuke vľavo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Navigate menu right"
+#~ msgstr "Navigovať v ponuke vpravo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Navigate menu confirm"
+#~ msgstr "Navigovať v ponuke potvrdiť"
+
+#~ msgctxt "keys_files"
+#~ msgid "Navigate menu page up"
+#~ msgstr "Navigovať v ponuke stranu hore"
+
+#~ msgctxt "keys_files"
+#~ msgid "Navigate menu page down"
+#~ msgstr "Navigovať v ponuke stranu dolu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Alternative exit the emulator for guns"
+#~ msgstr "Alternatívne ukončiť emulátor pre zbrane"
 
 #~ msgctxt "game_options"
 #~ msgid "Skip drawing screen effects. Cumulative."
@@ -12809,286 +13098,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "On (default)"
 #~ msgstr "Zapnuté (predvolené)"
-
-#~ msgctxt "game_options"
-#~ msgid "Store past states to rewind to in realtime, if the core supports it."
-#~ msgstr ""
-#~ "Uložiť minulé stavy na pretočenie v reálnom čase, ak to jadro podporuje."
-
-#~ msgctxt "game_options"
-#~ msgid "Treats the right analog stick as the second joystick."
-#~ msgstr "Považuje pravú analógovú páčku za druhý joystick."
-
-#~ msgctxt "game_options"
-#~ msgid "Optimized (auto)"
-#~ msgstr "Optimalizované (auto)"
-
-#~ msgctxt "game_options"
-#~ msgid "Set the deadzone of the joystick analog sticks."
-#~ msgstr "Nastavte mŕtvu zónu analógových páčok joysticku."
-
-#~ msgctxt "game_options"
-#~ msgid "ANALOG JOYSTICK DEADZONE"
-#~ msgstr "Analógová mŕtva zóna"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Crop MAME artwork to maximize the game screen and only fill unused space."
-#~ msgstr ""
-#~ "Orezať grafiku MAME, aby ste maximalizovali hernú obrazovku a zaplnili "
-#~ "nevyužitý priestor."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Install the image reader card to read disk image files (Mac IIx only). "
-#~ "Minimum 4MB ram size recommended."
-#~ msgstr ""
-#~ "Nainštalovať čítačku obrazov kariet, aby ste mohli čítať obrazové súbory "
-#~ "disku (len Mac IIx). Odporúčaná minimálna veľkosť RAM 4 MB."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
-#~ "switches to Super-High when needed."
-#~ msgstr ""
-#~ "Manuálne definujte, ktoré rozlíšenie sa má použiť.&#x0a;Automaticky sa "
-#~ "predvolene nastaví na Vysoké a v prípade potreby sa prepne na Supervysoké."
-
-#~ msgctxt "game_options"
-#~ msgid "JUMP ON B"
-#~ msgstr "Skočiť na B"
-
-#~ msgctxt "game_options"
-#~ msgid "Keypad to joyport mappings for 2 players."
-#~ msgstr "Mapovania keypadu na joyport pre 2 hráčov."
-
-#~ msgctxt "game_options"
-#~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
-#~ msgstr "Mapovanie gamepadu 2. hráča (keyrah)"
-
-#~ msgctxt "game_options"
-#~ msgid "Passes all physical keyboard events for Pad2Key."
-#~ msgstr "Prejde všetky udalosti fyzickej klávesnice pre Pad2Key."
-
-#~ msgctxt "game_options"
-#~ msgid "DISABLE EMULATOR JOYSTICK"
-#~ msgstr "Zakázať joystick emulátora"
-
-#~ msgctxt "game_options"
-#~ msgid "ANALOG DEADZONE"
-#~ msgstr "Analógová mŕtva zóna"
-
-#~ msgctxt "game_options"
-#~ msgid "For Gyro-enabled games (bound to left analog stick)"
-#~ msgstr "Pre hry s podporou gyroskopu (viazané na ľavú analógovú páčku)"
-
-#~ msgctxt "game_options"
-#~ msgid "For Gyro-enabled games (bound to right analog stick)"
-#~ msgstr "Pre hry s podporou gyroskopu (viazané na pravú analógovú páčku)"
-
-#~ msgctxt "game_options"
-#~ msgid "Resize automatically screen height."
-#~ msgstr "Automaticky zmeniť výšku obrazovky."
-
-#~ msgctxt "game_options"
-#~ msgid "AUTO HEIGHT"
-#~ msgstr "Automatická výška"
-
-#~ msgctxt "game_options"
-#~ msgid "OpenGL (Default)"
-#~ msgstr "OpenGL (predvolené)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per pixel is the most accurate, but also the most demanding."
-#~ msgstr "Podľa bodu je najpresnejšie, ale aj najnáročnejšie."
-
-#~ msgctxt "game_options"
-#~ msgid "Per Strip"
-#~ msgstr "Na pásik"
-
-#~ msgctxt "game_options"
-#~ msgid "Per Triangle (Default)"
-#~ msgstr "Podľa trojuholníka (predvolené)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per Pixel"
-#~ msgstr "Po bodoch"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable this mode if you have issue for run your game on NTFS storage (by "
-#~ "default is better to use LinuxFS)."
-#~ msgstr ""
-#~ "Povoľte tento režim, ak máte problém so spustením hry na úložisku NTFS (v "
-#~ "predvolenom nastavení je lepšie použiť LinuxFS)."
-
-#~ msgctxt "game_options"
-#~ msgid "Configuring controllers in GZDoom can cause problems."
-#~ msgstr "Konfigurácia ovládačov v GZDoom môže spôsobiť problémy."
-
-#~ msgctxt "game_options"
-#~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
-#~ msgstr "Použiť nastavenie joysticku GZDoom"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Reštartovať hru"
-
-#~ msgctxt "keys_files"
-#~ msgid "Slot -"
-#~ msgstr "Slot -"
-
-#~ msgctxt "keys_files"
-#~ msgid "Slot +"
-#~ msgstr "Slot +"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Ďalší disk (m3u)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Fast Forward"
-#~ msgstr "Rýchlo dopredu"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Up"
-#~ msgstr "Joy2Pad hore"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Down"
-#~ msgstr "Joy2Pad dolu"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Left"
-#~ msgstr "Joy2Pad  vľavo"
-
-#~ msgctxt "keys_files"
-#~ msgid "Joy2Pad Right"
-#~ msgstr "Joy2Pad  vpravo"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Up"
-#~ msgstr "Klobúk hore"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Down"
-#~ msgstr "Klobúk dolu"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Left"
-#~ msgstr "Klobúk vľavo"
-
-#~ msgctxt "keys_files"
-#~ msgid "Hat Right"
-#~ msgstr "Klobúk vpravo"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Start"
-#~ msgstr "Tlačidlo Start"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Select"
-#~ msgstr "Tlačidlo Select"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button L"
-#~ msgstr "Tlačidlo L"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button R"
-#~ msgstr "Tlačidlo R"
-
-#~ msgctxt "keys_files"
-#~ msgid "Disposition A"
-#~ msgstr "Dispozícia A"
-
-#~ msgctxt "keys_files"
-#~ msgid "Disposition B"
-#~ msgstr "Dispozícia B"
-
-#~ msgctxt "keys_files"
-#~ msgid "Microphone"
-#~ msgstr "Mikrofón"
-
-#~ msgctxt "keys_files"
-#~ msgid "TouchScreen"
-#~ msgstr "Dotyková obrazovka"
-
-#~ msgctxt "keys_files"
-#~ msgid "Exit Drastic"
-#~ msgstr "Ukončiť Drastic"
-
-#~ msgctxt "keys_files"
-#~ msgid "Swap Screens"
-#~ msgstr "Vymeniť obrazovky"
-
-#~ msgctxt "keys_files"
-#~ msgid "QuickMenu"
-#~ msgstr "Rýchla ponuka"
-
-#~ msgctxt "keys_files"
-#~ msgid "FastForward"
-#~ msgstr "Rýchlo dopredu"
-
-#~ msgctxt "game_options"
-#~ msgid "Distorts the output to fill the display fully."
-#~ msgstr "Skresľuje výstup tak, aby úplne vyplnil displej."
-
-#~ msgctxt "game_options"
-#~ msgid "TV MODE"
-#~ msgstr "Režim TV"
-
-#~ msgctxt "game_options"
-#~ msgid "Legacy (laggy)"
-#~ msgstr "Staré (lagové)"
-
-#~ msgctxt "game_options"
-#~ msgid "Async (skip draw, recommended)"
-#~ msgstr "Async (preskočiť kresbu, odporúčané)"
-
-#~ msgctxt "game_options"
-#~ msgid "Async with interp. (hybrid)"
-#~ msgstr "Async s interp. (hybridné)"
-
-#~ msgctxt "game_options"
-#~ msgid "Interpreter only (experimental)"
-#~ msgstr "Iba interpreter (experimentálne)"
-
-#~ msgctxt "game_options"
-#~ msgid "May fix broken graphics in some games."
-#~ msgstr "Môže opraviť pokazenú grafiku v niektorých hrách."
-
-#~ msgctxt "game_options"
-#~ msgid "WRITE DEPTH BUFFER"
-#~ msgstr "Buffer hĺbkového zápisu"
-
-#~ msgctxt "keys_files"
-#~ msgid "Navigate menu up"
-#~ msgstr "Navigovať ponuku hore"
-
-#~ msgctxt "keys_files"
-#~ msgid "Navigate menu down"
-#~ msgstr "Navigovať v ponuke dolu"
-
-#~ msgctxt "keys_files"
-#~ msgid "Navigate menu left"
-#~ msgstr "Navigovať v ponuke vľavo"
-
-#~ msgctxt "keys_files"
-#~ msgid "Navigate menu right"
-#~ msgstr "Navigovať v ponuke vpravo"
-
-#~ msgctxt "keys_files"
-#~ msgid "Navigate menu confirm"
-#~ msgstr "Navigovať v ponuke potvrdiť"
-
-#~ msgctxt "keys_files"
-#~ msgid "Navigate menu page up"
-#~ msgstr "Navigovať v ponuke stranu hore"
-
-#~ msgctxt "keys_files"
-#~ msgid "Navigate menu page down"
-#~ msgstr "Navigovať v ponuke stranu dolu"
 
 #~ msgctxt "game_options"
 #~ msgid "Choose machine type only when playing ColecoVision roms."

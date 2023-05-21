@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-06 12:45+0200\n"
-"PO-Revision-Date: 2023-04-10 18:06+0200\n"
+"PO-Revision-Date: 2023-05-16 20:35+0200\n"
 "Last-Translator: pedrobarbosa\n"
 "Language-Team: \n"
 "Language: ca\n"
@@ -1120,17 +1120,17 @@ msgstr "SALT DE QUADRES"
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "NDS VERSION"
-msgstr ""
+msgstr "VERSIÓ NDS"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "DS (Default)"
-msgstr ""
+msgstr "DS (Per defecte)"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "DSi"
-msgstr ""
+msgstr "DSi"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -1145,12 +1145,12 @@ msgstr "OMETRE EL MENÚ DE SISTEMA DS"
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "Use language and username from the NDS Firmware"
-msgstr ""
+msgstr "Usar idioma i nom d'usuari del firmware de la NDS"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "USE FIRMWARE SETTINGS"
-msgstr ""
+msgstr "USAR AJUSTOS DE FIRMWARE"
 
 #. TRANSLATION: libretro/melonds, amiberry, amiberry
 msgctxt "game_options"
@@ -1160,7 +1160,7 @@ msgstr "ENGEGAT"
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "OFF (Default)"
-msgstr ""
+msgstr "Apagat (Per defecte)"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -7526,7 +7526,7 @@ msgstr "COMANDAMENT PERSONALITZAT"
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin, dolphin, ...
 msgctxt "game_options"
 msgid "DISPLAY"
-msgstr ""
+msgstr "VISUALITZACIÓ"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -7593,7 +7593,7 @@ msgstr "Estirar a finestra"
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
 msgctxt "game_options"
 msgid "RENDERING"
-msgstr ""
+msgstr "RENDERITZACIÓ"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -7837,17 +7837,17 @@ msgstr ""
 #. TRANSLATION: duckstation, duckstation, duckstation
 msgctxt "game_options"
 msgid "EMULATION"
-msgstr ""
+msgstr "EMULACIÓ"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "EMULATION SPEED"
-msgstr ""
+msgstr "VELOCITAT D'EMULACIÓ"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Unlimited"
-msgstr ""
+msgstr "Il·limitat"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7857,7 +7857,7 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "SYNC TO HOST REFRESH RATE"
-msgstr ""
+msgstr "TASA DE REFRESC SINCRONITZADA AMB NATIU"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7889,32 +7889,32 @@ msgstr "PRESENTACIÓ MILLORADA"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Auto (Match Window)"
-msgstr ""
+msgstr "Automàtica (Coincidir amb finestra)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "PAR 1:1"
-msgstr ""
+msgstr "PAR 1:1"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
-msgstr ""
+msgstr "Pot produïr imatges més definides en alguns jocs 2D."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "INTEGER UPSCALING"
-msgstr ""
+msgstr "REESCALAT MITJANÇANT SENCERS"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "ENabling will smooth out the image."
-msgstr ""
+msgstr "Es suavitzarà la imatge."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "LINEAR UPSCALING"
-msgstr ""
+msgstr "REESCALAT LINIAL"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7954,22 +7954,22 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "JINC2 (Slow)"
-msgstr ""
+msgstr "JINC2 (Lent)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "JINC2 (Slow, No Edge Blending)"
-msgstr ""
+msgstr "JINC2 (Lent, no fusiona eixos)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "xBR (Very Slow)"
-msgstr ""
+msgstr "xBR (Molt lent)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "xBR (Very Slow, No Edge Blending)"
-msgstr ""
+msgstr "xBR (Molt lent, no fusiona eixos)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7979,7 +7979,7 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "TRUE COLOUR RENDERING"
-msgstr ""
+msgstr "RENDERITZACIÓ AMB COLOR REAL"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9047,77 +9047,77 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Native (PS2)(Default)"
-msgstr ""
+msgstr "Natiu (PS2)(Per defecte)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "1.25x Native"
-msgstr ""
+msgstr "Natiu x1,25"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "1.5x Native"
-msgstr ""
+msgstr "Natiu x1,5"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "1.75x Native"
-msgstr ""
+msgstr "Natiu x1,75"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2x Native (~720p)"
-msgstr ""
+msgstr "Natiu x2 (~720p)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2.25x Native"
-msgstr ""
+msgstr "Natiu x2,25"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2.5x Native"
-msgstr ""
+msgstr "Natiu x2,5"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2.75x Native"
-msgstr ""
+msgstr "Natiu x2,75"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "3x Native (~1080p)"
-msgstr ""
+msgstr "Natiu x3 (~1080p)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "3.5x Native"
-msgstr ""
+msgstr "Natiu x3,5"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "4x Native (~1440p/2K)"
-msgstr ""
+msgstr "Natiu x4 (~1440p/2K)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "5x Native (~1620p)"
-msgstr ""
+msgstr "Natiu x5 (~1620p)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "6x Native (~2160p/4K)"
-msgstr ""
+msgstr "Natiu x6 (~2160p/4K)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "7x Native (~2520p)"
-msgstr ""
+msgstr "Natiu x7 (~2520p)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "8x Native (~2880p/5K)"
-msgstr ""
+msgstr "Natiu x8 (~2880p/5K)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9777,7 +9777,7 @@ msgstr ""
 #. TRANSLATION: rpcs3, rpcs3, rpcs3
 msgctxt "game_options"
 msgid "AUDIO"
-msgstr ""
+msgstr "SO"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -12089,22 +12089,22 @@ msgstr ""
 #. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
 msgctxt "keys_files"
 msgid "Button B"
-msgstr ""
+msgstr "Botó B"
 
 #. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
 msgctxt "keys_files"
 msgid "Button A"
-msgstr ""
+msgstr "Botó A"
 
 #. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
 msgctxt "keys_files"
 msgid "Button Y"
-msgstr ""
+msgstr "Botó Y"
 
 #. TRANSLATION: switch.ryujinx.keys
 msgctxt "keys_files"
 msgid "Button X"
-msgstr ""
+msgstr "Botó X"
 
 #. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
 msgctxt "keys_files"
@@ -12129,12 +12129,12 @@ msgstr ""
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Start"
-msgstr ""
+msgstr "Start"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Coin"
-msgstr ""
+msgstr "Moneda"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
@@ -12179,62 +12179,62 @@ msgstr ""
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Digital Left"
-msgstr ""
+msgstr "Digital, Esquerra"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Digital Right"
-msgstr ""
+msgstr "Digital, Dreta"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Digital Up"
-msgstr ""
+msgstr "Digital, Amunt"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Digital Down"
-msgstr ""
+msgstr "Digital, Avall"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Analog 1 Left"
-msgstr ""
+msgstr "Analògic 1, Esquerra"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Analog 1 Right"
-msgstr ""
+msgstr "Analògic 1, Dreta"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Analog 1 Up"
-msgstr ""
+msgstr "Analògic 1, Amunt"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Analog 1 Down"
-msgstr ""
+msgstr "Analògic 1, Avall"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Analog 2 Left"
-msgstr ""
+msgstr "Analògic 2, Esquerra"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Analog 2 Right"
-msgstr ""
+msgstr "Analògic 2, Dreta"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Analog 2 Up"
-msgstr ""
+msgstr "Analògic 2, Amunt"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Analog 2 Down"
-msgstr ""
+msgstr "Analògic 2, Avall"
 
 #. TRANSLATION: hikaru.demul.keys, gaelco.demul.keys
 msgctxt "keys_files"
@@ -12314,7 +12314,7 @@ msgstr ""
 #. TRANSLATION: scummvm.keys
 msgctxt "keys_files"
 msgid "Menu"
-msgstr ""
+msgstr "Menú"
 
 #. TRANSLATION: scummvm.keys
 msgctxt "keys_files"
@@ -12484,17 +12484,17 @@ msgstr ""
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
 msgid "quicksave"
-msgstr ""
+msgstr "desat ràpid"
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
 msgid "quickload"
-msgstr ""
+msgstr "càrrega ràpida"
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
 msgid "screenshot"
-msgstr ""
+msgstr "captura"
 
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -12753,6 +12753,78 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "UTILITZA CONFIGURACIÓ DEL JOYSTICK DE GZDOOM"
+
+#~ msgctxt "keys_files"
+#~ msgid "Joy2Pad Up"
+#~ msgstr "Joy2Pad Amunt"
+
+#~ msgctxt "keys_files"
+#~ msgid "Joy2Pad Down"
+#~ msgstr "Joy2Pad Avall"
+
+#~ msgctxt "keys_files"
+#~ msgid "Joy2Pad Left"
+#~ msgstr "Joy2Pad Esquerra"
+
+#~ msgctxt "keys_files"
+#~ msgid "Joy2Pad Right"
+#~ msgstr "Joy2Pad Dreta"
+
+#~ msgctxt "keys_files"
+#~ msgid "Hat Up"
+#~ msgstr "Creu digital, Amunt"
+
+#~ msgctxt "keys_files"
+#~ msgid "Hat Down"
+#~ msgstr "Creu digital, Avall"
+
+#~ msgctxt "keys_files"
+#~ msgid "Hat Left"
+#~ msgstr "Creu digital, Esquerra"
+
+#~ msgctxt "keys_files"
+#~ msgid "Hat Right"
+#~ msgstr "Creu digital, Dreta"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button Start"
+#~ msgstr "Botó Start"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button Select"
+#~ msgstr "Botó Select"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button L"
+#~ msgstr "Botó L"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button R"
+#~ msgstr "Botó R"
+
+#~ msgctxt "keys_files"
+#~ msgid "Disposition A"
+#~ msgstr "Disposició A"
+
+#~ msgctxt "keys_files"
+#~ msgid "Disposition B"
+#~ msgstr "Disposició B"
+
+#~ msgctxt "keys_files"
+#~ msgid "Microphone"
+#~ msgstr "Micròfon"
+
+#~ msgctxt "keys_files"
+#~ msgid "TouchScreen"
+#~ msgstr "Pantalla tàctil"
+
+#~ msgctxt "keys_files"
+#~ msgid "Exit Drastic"
+#~ msgstr "Sortir de Drastic"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap Screens"
+#~ msgstr "Intercanviar pantalles"
 
 #~ msgctxt "game_options"
 #~ msgid "Distorts the output to fill the display fully."
