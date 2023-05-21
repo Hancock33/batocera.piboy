@@ -3,8 +3,8 @@
 # yquake2
 #
 ################################################################################
-# Version: Commits on May 14, 2023
-YQUAKE2_VERSION = 5f03705c5d4b07fb19a1e2582c0df200569b352e
+# Version: Commits on May 20, 2023
+YQUAKE2_VERSION = 218ac53ce9e27f1ce0275389cc6beca5547d3cdf
 YQUAKE2_SITE = $(call github,yquake2,yquake2,$(YQUAKE2_VERSION))
 
 YQUAKE2_DEPENDENCIES = sdl2 sdl2_mixer host-ninja
