@@ -3,8 +3,8 @@
 # python-pyxel
 #
 ################################################################################
-# Version: Commits on Apr 29, 2023
-PYTHON_PYXEL_VERSION = 779dc3ff29b01289cf3217610e6fdbd947cbc027
+# Version: Commits on May 21, 2023
+PYTHON_PYXEL_VERSION = d9915fe3cfb589f780e2d3a0cfc1fb6fe2fa4ee3
 PYTHON_PYXEL_SITE =  $(call github,kitao,pyxel,$(PYTHON_PYXEL_VERSION))
 PYTHON_PYXEL_SETUP_TYPE = setuptools
 PYTHON_PYXEL_LICENSE = MIT
@@ -26,7 +26,9 @@ define PYTHON_PYXEL_REMOVE_PREVIOUS
 endef
 
 define PYTHON_PYXEL_SAMPLE_AND_KEYS
+	cp -rf $(@D)/python/pyxel $(TARGET_DIR)/usr/lib/python*/site-packages/
 	rm -rf $(TARGET_DIR)/usr/lib/python*/site-packages/pyxel/examples
+	cd $(TARGET_DIR)/usr/lib/python*/site-packages/pyxel && ln -sf ../pyxel_extension .
 	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/python-pyxel/pyxel.keys $(TARGET_DIR)/usr/share/evmapy/
 endef
 

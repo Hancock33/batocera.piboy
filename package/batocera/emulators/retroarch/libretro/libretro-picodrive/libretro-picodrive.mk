@@ -3,8 +3,8 @@
 # libretro-picodrive
 #
 ################################################################################
-# Version: Commits on May 01, 2023
-LIBRETRO_PICODRIVE_VERSION = 83a9e3050807584bc7ee2ea79519ecd3b8a94c80
+# Version: Commits on May 19, 2023
+LIBRETRO_PICODRIVE_VERSION = 178a9b683c5246fae3f5ddad4b53dfc3670ed7cb
 LIBRETRO_PICODRIVE_SITE = https://github.com/irixxxx/picodrive.git
 LIBRETRO_PICODRIVE_SITE_METHOD=git
 LIBRETRO_PICODRIVE_GIT_SUBMODULES=YES
@@ -41,7 +41,7 @@ define LIBRETRO_PICODRIVE_BUILD_CMDS
 
 	$(MAKE) -C $(@D)/cpu/cyclone CONFIG_FILE=$(@D)/cpu/cyclone_config.h
 	cd $(@D) && $(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C  $(@D) -f Makefile.libretro platform="$(LIBRETRO_PICODRIVE_PLATFORM)" \
-        GIT_VERSION=" $(shell echo $(LIBRETRO_PICODRIVE_VERSION) | cut -c 1-7)"
+		REVISION=" $(shell echo $(LIBRETRO_PICODRIVE_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_PICODRIVE_INSTALL_TARGET_CMDS
