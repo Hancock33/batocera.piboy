@@ -5311,9 +5311,9 @@ saturn:
   emulators:
     libretro:
       beetle-saturn:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_SATURN] }
-      kronos:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_KRONOS] }
-      yabasanshiro:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_YABASANSHIRO] }
-      yabause:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_YABAUSE] }
+      kronos:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_KRONOS]        }
+      yabasanshiro:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_YABASANSHIRO]  }
+      yabause:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_YABAUSE]       }
     yabasanshiro:
       yabasanshiro:     { requireAnyOf: [BR2_PACKAGE_YABASANSHIRO], incompatible_extensions: [ccd, m3u, zip] }
 
@@ -5326,7 +5326,8 @@ segastv:
   platform:             arcade
   emulators:
     libretro:
-      kronos:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_KRONOS] }
+      kronos:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_KRONOS]   }
+      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010] }
 
 sega32x:
   name:                 32x
