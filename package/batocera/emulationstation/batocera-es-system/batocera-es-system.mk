@@ -15,7 +15,7 @@ define BATOCERA_ES_SYSTEM_BUILD_CMDS
 		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/es_features.yml       \
 		$(@D)/es_external_translations.h \
 		$(@D)/es_keys_translations.h \
-                $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera \
+		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera \
 		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/locales/blacklisted-words.txt \
 		$(CONFIG_DIR)/.config \
 		$(@D)/es_systems.cfg \
@@ -40,18 +40,18 @@ define BATOCERA_ES_SYSTEM_BUILD_CMDS
 endef
 
 define BATOCERA_ES_SYSTEM_INSTALL_TARGET_CMDS
-        mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit
-	    $(INSTALL) -m 0644 -D $(@D)/es_systems.cfg $(TARGET_DIR)/usr/share/emulationstation/es_systems.cfg
-	    $(INSTALL) -m 0644 -D $(@D)/es_features.cfg $(TARGET_DIR)/usr/share/emulationstation/es_features.cfg
-        mkdir -p $(@D)/roms # in case there is no rom
-	    cp -pr $(@D)/roms $(TARGET_DIR)/usr/share/batocera/datainit/
-	    cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/bios $(TARGET_DIR)/usr/share/batocera/datainit/
-		cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/roms/ports $(TARGET_DIR)/usr/share/batocera/datainit/roms
-		# create saves dirs
-		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/saves/dreamcast/flycast
-		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/saves/sm64
-		# create configdirs
-		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/xash3d_fwgs
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit
+	$(INSTALL) -m 0644 -D $(@D)/es_systems.cfg $(TARGET_DIR)/usr/share/emulationstation/es_systems.cfg
+	$(INSTALL) -m 0644 -D $(@D)/es_features.cfg $(TARGET_DIR)/usr/share/emulationstation/es_features.cfg
+	mkdir -p $(@D)/roms # in case there is no rom
+	cp -pr $(@D)/roms $(TARGET_DIR)/usr/share/batocera/datainit/
+	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/bios $(TARGET_DIR)/usr/share/batocera/datainit/
+	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/roms/ports $(TARGET_DIR)/usr/share/batocera/datainit/roms
+	# create saves dirs
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/saves/dreamcast/flycast
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/saves/sm64
+	# create configdirs
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/xash3d_fwgs
 endef
 
 $(eval $(generic-package))

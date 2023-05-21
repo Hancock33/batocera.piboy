@@ -8,7 +8,7 @@ import os
 from os import path
 import ruamel.yaml
 import ruamel.yaml.util
-import shutil
+from distutils.dir_util import copy_tree
 
 vitaConfig = batoceraFiles.CONF + '/vita3k'
 vitaSaves = batoceraFiles.SAVES + '/psvita'
@@ -22,7 +22,7 @@ class Vita3kGenerator(Generator):
         if not path.isdir(vitaConfig):
             os.mkdir(vitaConfig)
             # copy /usr/bin/vita3k contents here
-            shutil.copytree("/usr/bin/vita3k", vitaConfig)
+            copy_tree("/usr/bin/vita3k", vitaConfig)
 
         # Create save folder
         if not path.isdir(vitaSaves):
@@ -42,37 +42,44 @@ class Vita3kGenerator(Generator):
             vita3kymlconfig["backend-renderer"] = system.config["vita3k_gfxbackend"]
         else:
             vita3kymlconfig["backend-renderer"] = "OpenGL"
-
         # Set the resolution multiplier
         if system.isOptSet("vita3k_resolution"):
             vita3kymlconfig["resolution-multiplier"] = int(system.config["vita3k_resolution"])
         else:
             vita3kymlconfig["resolution-multiplier"] = 1
-
         # Set FXAA
         if system.isOptSet("vita3k_fxaa"):
             vita3kymlconfig["enable-fxaa"] = system.config["vita3k_fxaa"]
         else:
-            vita3kymlconfig["enable-fxaa"] = False
-
+            vita3kymlconfig["enable-fxaa"] = "false"
         # Set VSync
         if system.isOptSet("vita3k_vsync"):
             vita3kymlconfig["v-sync"] = system.config["vita3k_vsync"]
         else:
-            vita3kymlconfig["v-sync"] = True
-
+            vita3kymlconfig["v-sync"] = "true"
         # Set the anisotropic filtering
         if system.isOptSet("vita3k_anisotropic"):
-            vita3kymlconfig["resolution-multiplier"] = int(system.config["vita3k_anisotropic"])
+            vita3kymlconfig["anisotropic-filtering"] = int(system.config["vita3k_anisotropic"])
         else:
-            vita3kymlconfig["resolution-multiplier"] = 1
+            vita3kymlconfig["anisotropic-filtering"] = 1
+        # Set the linear filtering option
+        if system.isOptSet("vita3k_linear"):
+            vita3kymlconfig["enable-linear-filter"] = int(system.config["vita3k_linear"])
+        else:
+            vita3kymlconfig["enable-linear-filter"] = "false"
+        # Surface Sync
+        if system.isOptSet("vita3k_surface"):
+            vita3kymlconfig["disable-surface-sync"] = int(system.config["vita3k_surface"])
+        else:
+            vita3kymlconfig["enable-linear-filter"] = "true"
 
-        # Vita3k is fussy over it's yml file
-        # We try to match it as close as possible but the 'vectors' cause yml formatting issues
+        # Vita3k is fussy over its yml file
+        # We try to match it as close as possible, but the 'vectors' cause yml formatting issues
         yaml = ruamel.yaml.YAML()
         yaml.explicit_start = True
         yaml.explicit_end = True
         yaml.indent(mapping=indent, sequence=indent, offset=block_seq_indent)
+
         with open(vitaConfigFile, 'w') as fp:
             yaml.dump(vita3kymlconfig, fp)
 

@@ -1250,6 +1250,11 @@ msgid ""
 "May not work well on all hardware. Hybrid is preferred, where supported."
 msgstr ""
 
+#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/same_cdi, libretro/same_cdi, libretro/mame, ...
+msgctxt "game_options"
+msgid "ADVANCED OPTIONS"
+msgstr ""
+
 #. TRANSLATION: libretro/dolphin, dolphin
 msgctxt "game_options"
 msgid "UBERSHADERS"
@@ -2299,11 +2304,6 @@ msgstr ""
 #. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "Enhancement. Upscales screen textures (2D games only)."
-msgstr ""
-
-#. TRANSLATION: libretro/flycast, libretro/same_cdi, libretro/same_cdi, libretro/mame, libretro/mame, ...
-msgctxt "game_options"
-msgid "ADVANCED OPTIONS"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, flycast
@@ -7432,9 +7432,19 @@ msgctxt "game_options"
 msgid "CUSTOM CONTROLLER"
 msgstr ""
 
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin, dolphin, ...
+msgctxt "game_options"
+msgid "DISPLAY"
+msgstr ""
+
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Map your controller to an emulated Wiimote."
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
+msgctxt "game_options"
+msgid "CONTROLLERS"
 msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
@@ -7444,7 +7454,7 @@ msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "CUSTOMISE EMULATED WIIMOTE & GAMEPAD"
+msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
 msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
@@ -7472,11 +7482,6 @@ msgctxt "game_options"
 msgid "Wiimote Sideway + Nunchuk"
 msgstr ""
 
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "8x 5K (5120x4224)"
-msgstr ""
-
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
 msgid "The final output image, unrelated to the Wii's emulated NAND setting."
@@ -7490,6 +7495,16 @@ msgstr ""
 #. TRANSLATION: dolphin, dolphin_triforce, yuzu
 msgctxt "game_options"
 msgid "Stretch to window"
+msgstr ""
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, dolphin, ...
+msgctxt "game_options"
+msgid "RENDERING"
+msgstr ""
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "8x 5K (5120x4224)"
 msgstr ""
 
 #. TRANSLATION: dolphin
@@ -7663,6 +7678,18 @@ msgctxt "game_options"
 msgid "MOUSE AS WIIMOTE POINTER"
 msgstr ""
 
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid ""
+"Skips Vertical Blank Interrupts when lag is detected, allowing for smooth "
+"audio playback when emulation speed is not 100%."
+msgstr ""
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "VBI SKIP"
+msgstr ""
+
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "1.5x 720p (960x792)"
@@ -7748,11 +7775,6 @@ msgctxt "game_options"
 msgid "OPTIMAL FRAME PACING"
 msgstr ""
 
-#. TRANSLATION: duckstation, duckstation, duckstation, duckstation, duckstation, ...
-msgctxt "game_options"
-msgid "DISPLAY"
-msgstr ""
-
 #. TRANSLATION: duckstation, melonds, pcsx2, awgl, yquake2
 msgctxt "game_options"
 msgid "Software"
@@ -7806,11 +7828,6 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "STRETCH TO FILL"
-msgstr ""
-
-#. TRANSLATION: duckstation, duckstation, duckstation, duckstation, duckstation, ...
-msgctxt "game_options"
-msgid "RENDERING"
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -7942,11 +7959,6 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Use Analog joysticks in addition to D-Pad for DualShock controllers."
-msgstr ""
-
-#. TRANSLATION: duckstation, duckstation, duckstation
-msgctxt "game_options"
-msgid "CONTROLLERS"
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -11680,6 +11692,28 @@ msgstr ""
 
 #. TRANSLATION: vita3k
 msgctxt "game_options"
+msgid ""
+"Speed hack, enable to disable surface syncing between CPU and GPU. Surface "
+"syncing is needed by a few games."
+msgstr ""
+
+#. TRANSLATION: vita3k
+msgctxt "game_options"
+msgid "DISABLE SURFACE SYNC"
+msgstr ""
+
+#. TRANSLATION: vita3k
+msgctxt "game_options"
+msgid "The image will be softer which could help with aliasing."
+msgstr ""
+
+#. TRANSLATION: vita3k
+msgctxt "game_options"
+msgid "LINEAR FILTERING"
+msgstr ""
+
+#. TRANSLATION: vita3k
+msgctxt "game_options"
 msgid "Anti-aliasing is a technique for smoothing out jagged edges."
 msgstr ""
 
@@ -12017,7 +12051,7 @@ msgctxt "keys_files"
 msgid "Set to full screen"
 msgstr ""
 
-#. TRANSLATION: xbox360.xenia.keys, wiiware.dolphin-emu.keys, wiiu.keys, daphne.daphne.keys, xbox360.xenia-canary.keys, ...
+#. TRANSLATION: xbox360.xenia.keys, wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, wiiu.keys, ...
 msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr ""
@@ -12027,9 +12061,24 @@ msgctxt "keys_files"
 msgid "Emulator configuration"
 msgstr ""
 
-#. TRANSLATION: wiiware.dolphin-emu.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, triforce.dolphin_triforce.keys
 msgctxt "keys_files"
-msgid "Alternative exit the emulator for guns"
+msgid "Select State/Select State Slot 1"
+msgstr ""
+
+#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "Select State/Select State Slot 2"
+msgstr ""
+
+#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys
+msgctxt "keys_files"
+msgid "Save State/Save to Selected Slot"
+msgstr ""
+
+#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "State/Load from Selected Slot"
 msgstr ""
 
 #. TRANSLATION: wiiu.keys
@@ -12154,12 +12203,7 @@ msgstr ""
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
-msgid "Load State Slot 1"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Save State Slot 1"
+msgid "State/Save to Selected Slot"
 msgstr ""
 
 #. TRANSLATION: triforce.dolphin_triforce.keys

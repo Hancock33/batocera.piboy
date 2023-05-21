@@ -37,7 +37,7 @@ class Pcsx2Generator(Generator):
 
         # Config files
         configureReg(pcsx2ConfigDir)
-        configureINI(pcsx2ConfigDir, batoceraFiles.BIOS, system, playersControllers)
+        configureINI(pcsx2ConfigDir, batoceraFiles.BIOS, system, playersControllers, guns)
         configureAudio(pcsx2ConfigDir)
 
         # write our own game_controller_db.txt file before launching the game
@@ -105,7 +105,7 @@ def configureAudio(config_directory):
     f.write("HostApi=alsa\n")
     f.close()
 
-def configureINI(config_directory, bios_directory, system, controllers):
+def configureINI(config_directory, bios_directory, system, controllers, guns):
     configFileName = "{}/{}".format(config_directory + "/inis", "PCSX2.ini")
 
     if not os.path.exists(config_directory + "/inis"):
@@ -137,6 +137,7 @@ def configureINI(config_directory, bios_directory, system, controllers):
     pcsx2INIConfig.set("UI", "HideMouseCursor", "true")
     pcsx2INIConfig.set("UI", "RenderToSeparateWindow", "false")
     pcsx2INIConfig.set("UI", "HideMainWindowWhenRunning", "true")
+    pcsx2INIConfig.set("UI", "DoubleClickTogglesFullscreen", "false")
 
     ## [Folders]
     if not pcsx2INIConfig.has_section("Folders"):
@@ -381,6 +382,33 @@ def configureINI(config_directory, bios_directory, system, controllers):
     pcsx2INIConfig.set("Hotkeys", "ToggleSlowMotion", "Keyboard/Shift & Keyboard/Backtab")
     pcsx2INIConfig.set("Hotkeys", "ToggleTurbo", "Keyboard/Tab")
     pcsx2INIConfig.set("Hotkeys", "HoldTurbo", "Keyboard/Period")
+
+    # guns
+    if pcsx2INIConfig.has_section("USB1") and pcsx2INIConfig.has_option("USB1", "Type") and pcsx2INIConfig.get("USB1", "Type") == "guncon2":
+        pcsx2INIConfig.remove_option("USB1", "Type")
+    if pcsx2INIConfig.has_section("USB2") and pcsx2INIConfig.has_option("USB2", "Type") and pcsx2INIConfig.get("USB2", "Type") == "guncon2":
+        pcsx2INIConfig.remove_option("USB2", "Type")
+    if system.isOptSet('use_guns') and system.getOptBoolean('use_guns') and len(guns) > 0:
+        if len(guns) >= 1:
+            if not pcsx2INIConfig.has_section("USB1"):
+                pcsx2INIConfig.add_section("USB1")
+            pcsx2INIConfig.set("USB1", "Type", "guncon2")
+            nc = 1
+            for controller, pad in sorted(controllers.items()):
+                if nc == 1:
+                    if "start" in pad.inputs:
+                        pcsx2INIConfig.set("USB1", "guncon2_Start", "SDL-{}/{}".format(pad.index, "Start"))
+                nc = nc + 1
+        if len(guns) >= 2:
+            if not pcsx2INIConfig.has_section("USB2"):
+                pcsx2INIConfig.add_section("USB2")
+            pcsx2INIConfig.set("USB2", "Type", "guncon2")
+            nc = 1
+            for controller, pad in sorted(controllers.items()):
+                if nc == 2:
+                    if "start" in pad.inputs:
+                        pcsx2INIConfig.set("USB2", "guncon2_Start", "SDL-{}/{}".format(pad.index, "Start"))
+                nc = nc + 1
 
     ## [Pad]
     if not pcsx2INIConfig.has_section("Pad"):

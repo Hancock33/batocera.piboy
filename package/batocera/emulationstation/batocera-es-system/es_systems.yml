@@ -706,7 +706,7 @@ mame:
       mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
-      mame:             { requireAnyOf: [BR2_PACKAGE_MAME]                                                }
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME]                    }
 
   comment_en:           |
                         The system uses libretro mame2003+ as default core: compatible ROMs must come from set 0.78+
@@ -5311,11 +5311,24 @@ saturn:
   emulators:
     libretro:
       beetle-saturn:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_SATURN] }
-      kronos:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_KRONOS] }
-      yabasanshiro:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_YABASANSHIRO] }
-      yabause:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_YABAUSE] }
+      kronos:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_KRONOS]        }
+      yabasanshiro:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_YABASANSHIRO]  }
+      yabause:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_YABAUSE]       }
     yabasanshiro:
       yabasanshiro:     { requireAnyOf: [BR2_PACKAGE_YABASANSHIRO], incompatible_extensions: [ccd, m3u, zip] }
+
+segastv:
+  name:                 S-TV
+  manufacturer:         Arcade
+  release:              1994
+  hardware:             arcade
+  extensions:           [zip]
+  platform:             arcade
+  emulators:
+    libretro:
+      kronos:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_KRONOS]   }
+      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010] }
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]     }
 
 sega32x:
   name:                 32x
@@ -5600,16 +5613,16 @@ ps2:
   manufacturer:         Sony
   release:              2000
   hardware:             console
-  extensions:           [iso, mdf, nrg, bin, img, dump, gz, cso, chd]
+  extensions:           [bin, chd, cso, dump, gz, img, iso, m3u, mdf, nrg]
   emulators:
     pcsx2:
-      pcsx2:            { requireAnyOf: [BR2_PACKAGE_PCSX2, BR2_PACKAGE_PCSX2_AVX2, BR2_PACKAGE_PCSX2_X86] }
+      pcsx2:            { requireAnyOf: [BR2_PACKAGE_PCSX2, BR2_PACKAGE_PCSX2_AVX2], incompatible_extensions: [m3u] }
     libretro:
       lrps2:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_LRPS2] }
       pcsx2:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PCSX2] }
-      play:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PLAY]  }
+      play:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PLAY], incompatible_extensions: [m3u]  }
     play:
-      play:             { requireAnyOf: [BR2_PACKAGE_PLAY] }
+      play:             { requireAnyOf: [BR2_PACKAGE_PLAY], incompatible_extensions: [m3u] }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:ps2
   comment_fr:           |

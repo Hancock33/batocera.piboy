@@ -1,4 +1,4 @@
-From 9e0b4ac56138b980db0afb3932a520d210da0b45 Mon Sep 17 00:00:00 2001
+From 0ace2c3164441b05c771aee76d64820933c05c52 Mon Sep 17 00:00:00 2001
 From: Megamouse <studienricky89@googlemail.com>
 Date: Sat, 22 May 2021 10:42:05 +0200
 Subject: [PATCH] Qt6 port
@@ -32,7 +32,8 @@ Subject: [PATCH] Qt6 port
  rpcs3/rpcs3qt/config_checker.cpp              |   6 +-
  rpcs3/rpcs3qt/custom_table_widget_item.cpp    |  28 +--
  rpcs3/rpcs3qt/gs_frame.h                      |   2 +-
- rpcs3/rpcs3qt/gui_application.cpp             |  11 +-
+ rpcs3/rpcs3qt/gui_application.cpp             |  15 +-
+ rpcs3/rpcs3qt/gui_application.h               |   3 +
  rpcs3/rpcs3qt/main_window.cpp                 |  32 ++-
  rpcs3/rpcs3qt/main_window.h                   |   4 +-
  rpcs3/rpcs3qt/osk_dialog_frame.cpp            |   2 +-
@@ -49,8 +50,11 @@ Subject: [PATCH] Qt6 port
  rpcs3/rpcs3qt/qt_music_handler.cpp            |  17 +-
  rpcs3/rpcs3qt/qt_utils.h                      |   2 +-
  rpcs3/rpcs3qt/register_editor_dialog.cpp      |   2 +-
- rpcs3/rpcs3qt/settings_dialog.cpp             |   7 +-
- 47 files changed, 400 insertions(+), 578 deletions(-)
+ rpcs3/rpcs3qt/save_manager_dialog.cpp         |   1 -
+ rpcs3/rpcs3qt/settings_dialog.cpp             |   8 +-
+ rpcs3/rpcs3qt/trophy_manager_dialog.cpp       |   1 -
+ rpcs3/rpcs3qt/user_manager_dialog.cpp         |   1 -
+ 50 files changed, 401 insertions(+), 583 deletions(-)
  delete mode 100644 3rdparty/qt5.cmake
  create mode 100644 3rdparty/qt6.cmake
  rename rpcs3/rpcs3qt/{qt_camera_video_surface.cpp => qt_camera_video_sink.cpp} (78%)
@@ -614,7 +618,7 @@ index 57682654bed..c720c48bf9d 100644
  		input_log.notice("GetKeyCode(%s): seq.count() = %d", sstr(keyName), seq.count());
  
 diff --git a/rpcs3/main.cpp b/rpcs3/main.cpp
-index 0d466892806..ddef4d85996 100644
+index ba699b07ef9..cfb8662b36d 100644
 --- a/rpcs3/main.cpp
 +++ b/rpcs3/main.cpp
 @@ -1,4 +1,4 @@
@@ -623,7 +627,7 @@ index 0d466892806..ddef4d85996 100644
  // by Sacha Refshauge, Megamouse and flash-fire
  
  #include <iostream>
-@@ -349,9 +349,6 @@ QCoreApplication* create_application(int& argc, char* argv[])
+@@ -351,9 +351,6 @@ QCoreApplication* create_application(int& argc, char* argv[])
  		use_high_dpi = "1" == qEnvironmentVariable("QT_ENABLE_HIGHDPI_SCALING", high_dpi_setting);
  	}
  
@@ -633,7 +637,7 @@ index 0d466892806..ddef4d85996 100644
  	if (use_high_dpi)
  	{
  		// Set QT_SCALE_FACTOR_ROUNDING_POLICY from environment. Defaults to cli argument, which defaults to PassThrough.
-@@ -944,8 +941,6 @@ int main(int argc, char** argv)
+@@ -970,8 +967,6 @@ int main(int argc, char** argv)
  
  	if (gui_application* gui_app = qobject_cast<gui_application*>(app.data()))
  	{
@@ -642,7 +646,7 @@ index 0d466892806..ddef4d85996 100644
  		gui_app->setAttribute(Qt::AA_DontCheckOpenGLContextThreadAffinity);
  
  		gui_app->SetShowGui(!s_no_gui);
-@@ -1027,7 +1022,7 @@ int main(int argc, char** argv)
+@@ -1053,7 +1048,7 @@ int main(int argc, char** argv)
  	bool got_timer_resolution = NtQueryTimerResolution(&min_res, &max_res, &orig_res) == 0;
  
  	// Set 0.5 msec timer resolution for best performance
@@ -652,10 +656,10 @@ index 0d466892806..ddef4d85996 100644
  	{
  		ULONG new_res;
 diff --git a/rpcs3/main_application.cpp b/rpcs3/main_application.cpp
-index 5f0af7fe2a0..b2935287fd0 100644
+index 42c8667312e..b5d0de202d3 100644
 --- a/rpcs3/main_application.cpp
 +++ b/rpcs3/main_application.cpp
-@@ -313,7 +313,7 @@ EmuCallbacks main_application::CreateCallbacks()
+@@ -314,7 +314,7 @@ EmuCallbacks main_application::CreateCallbacks()
  					image = image.convertToFormat(QImage::Format::Format_RGBA8888);
  				}
  
@@ -665,7 +669,7 @@ index 5f0af7fe2a0..b2935287fd0 100644
  				sys_log.notice("get_scaled_image scaled image: path='%s', width=%d, height=%d", path, width, height);
  			}
 diff --git a/rpcs3/rpcs3.vcxproj b/rpcs3/rpcs3.vcxproj
-index eb20fe5be96..b2022f01d1c 100644
+index 3d915b1eaad..04268325c66 100644
 --- a/rpcs3/rpcs3.vcxproj
 +++ b/rpcs3/rpcs3.vcxproj
 @@ -1,4 +1,4 @@
@@ -678,9 +682,9 @@ index eb20fe5be96..b2022f01d1c 100644
    </PropertyGroup>
    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
      <ClCompile>
--      <AdditionalIncludeDirectories>..\3rdparty\SoundTouch\soundtouch\include;..\3rdparty\cubeb\extra;..\3rdparty\cubeb\cubeb\include\;..\3rdparty\flatbuffers\include;..\3rdparty\wolfssl\wolfssl;..\3rdparty\curl\curl\include;..\3rdparty\libusb\libusb\libusb;$(VULKAN_SDK)\Include;..\3rdparty\libsdl-org\SDL\include;..\3rdparty\XAudio2Redist\include;$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtCore;.\release;$(QTDIR)\mkspecs\win32-msvc2015;.\QTGeneratedFiles\$(ConfigurationName);.\QTGeneratedFiles;$(QTDIR)\include\QtWinExtras;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtSvg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <AdditionalIncludeDirectories>..\3rdparty\SoundTouch\soundtouch\include;..\3rdparty\cubeb\extra;..\3rdparty\cubeb\cubeb\include\;..\3rdparty\flatbuffers\include;..\3rdparty\wolfssl\wolfssl;..\3rdparty\curl\curl\include;..\3rdparty\rtmidi\rtmidi;..\3rdparty\libusb\libusb\libusb;$(VULKAN_SDK)\Include;..\3rdparty\libsdl-org\SDL\include;..\3rdparty\XAudio2Redist\include;$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtCore;.\release;$(QTDIR)\mkspecs\win32-msvc2015;.\QTGeneratedFiles\$(ConfigurationName);.\QTGeneratedFiles;$(QTDIR)\include\QtWinExtras;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtSvg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
 -      <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew- -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
-+      <AdditionalIncludeDirectories>..\3rdparty\SoundTouch\soundtouch\include;..\3rdparty\cubeb\extra;..\3rdparty\cubeb\cubeb\include\;..\3rdparty\flatbuffers\include;..\3rdparty\wolfssl\wolfssl;..\3rdparty\curl\curl\include;..\3rdparty\libusb\libusb\libusb;$(VULKAN_SDK)\Include;..\3rdparty\libsdl-org\SDL\include;..\3rdparty\XAudio2Redist\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtCore5Compat;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSvg;$(QTDIR)\include\QtSvgWidgets;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\mkspecs\win32-msvc;.\release;.\QTGeneratedFiles\$(ConfigurationName);.\QTGeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
++      <AdditionalIncludeDirectories>..\3rdparty\SoundTouch\soundtouch\include;..\3rdparty\cubeb\extra;..\3rdparty\cubeb\cubeb\include\;..\3rdparty\flatbuffers\include;..\3rdparty\wolfssl\wolfssl;..\3rdparty\curl\curl\include;..\3rdparty\rtmidi\rtmidi;..\3rdparty\libusb\libusb\libusb;$(VULKAN_SDK)\Include;..\3rdparty\libsdl-org\SDL\include;..\3rdparty\XAudio2Redist\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtCore5Compat;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSvg;$(QTDIR)\include\QtSvgWidgets;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\mkspecs\win32-msvc;.\release;.\QTGeneratedFiles\$(ConfigurationName);.\QTGeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
 +      <AdditionalOptions>/Zc:__cplusplus -Zc:strictStrings -Zc:throwingNew- -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
        <AssemblerListingLocation>release\</AssemblerListingLocation>
        <BrowseInformation>false</BrowseInformation>
@@ -689,8 +693,8 @@ index eb20fe5be96..b2022f01d1c 100644
        <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
      </ClCompile>
      <Link>
--      <AdditionalDependencies>DbgHelp.lib;Ole32.lib;gdi32.lib;..\hidapi.lib;..\libusb-1.0.lib;winmm.lib;miniupnpc_static.lib;imm32.lib;ksuser.lib;version.lib;OpenAL32.lib;XAudio.lib;GLGSRender.lib;shlwapi.lib;VKGSRender.lib;vulkan-1.lib;wolfssl.lib;libcurl.lib;Wldap32.lib;glslang.lib;OSDependent.lib;OGLCompiler.lib;SPIRV.lib;MachineIndependent.lib;GenericCodeGen.lib;Advapi32.lib;user32.lib;zlib.lib;..\libpng16.lib;asmjit.lib;yaml-cpp.lib;discord-rpc.lib;emucore.lib;dxgi.lib;$(QTDIR)\lib\qtmain.lib;shell32.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Core.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5WinExtras.lib;Qt5Concurrent.lib;7zlib.lib;SPIRV-Tools.lib;SPIRV-Tools-opt.lib;Qt5Multimedia.lib;Qt5MultimediaWidgets.lib;Qt5Svg.lib;libcubeb.lib;cubeb.lib;soundtouch.lib;Avrt.lib;SDL.lib;%(AdditionalDependencies)</AdditionalDependencies>
-+      <AdditionalDependencies>DbgHelp.lib;Ole32.lib;gdi32.lib;..\hidapi.lib;..\libusb-1.0.lib;winmm.lib;miniupnpc_static.lib;imm32.lib;ksuser.lib;version.lib;OpenAL32.lib;XAudio.lib;GLGSRender.lib;shlwapi.lib;VKGSRender.lib;vulkan-1.lib;wolfssl.lib;libcurl.lib;Wldap32.lib;glslang.lib;OSDependent.lib;OGLCompiler.lib;SPIRV.lib;MachineIndependent.lib;GenericCodeGen.lib;Advapi32.lib;user32.lib;zlib.lib;..\libpng16.lib;asmjit.lib;yaml-cpp.lib;discord-rpc.lib;emucore.lib;dxgi.lib;shell32.lib;Qt6Core.lib;Qt6Gui.lib;Qt6Widgets.lib;Qt6Concurrent.lib;Qt6Core5Compat.lib;Qt6Multimedia.lib;Qt6MultimediaWidgets.lib;Qt6Svg.lib;Qt6SvgWidgets.lib;7zlib.lib;SPIRV-Tools.lib;SPIRV-Tools-opt.lib;libcubeb.lib;cubeb.lib;soundtouch.lib;Avrt.lib;SDL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+-      <AdditionalDependencies>DbgHelp.lib;Ole32.lib;gdi32.lib;..\hidapi.lib;..\libusb-1.0.lib;winmm.lib;miniupnpc_static.lib;rtmidi.lib;imm32.lib;ksuser.lib;version.lib;OpenAL32.lib;XAudio.lib;GLGSRender.lib;shlwapi.lib;VKGSRender.lib;vulkan-1.lib;wolfssl.lib;libcurl.lib;Wldap32.lib;glslang.lib;OSDependent.lib;OGLCompiler.lib;SPIRV.lib;MachineIndependent.lib;GenericCodeGen.lib;Advapi32.lib;user32.lib;zlib.lib;..\libpng16.lib;asmjit.lib;yaml-cpp.lib;discord-rpc.lib;emucore.lib;dxgi.lib;$(QTDIR)\lib\qtmain.lib;shell32.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Core.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5WinExtras.lib;Qt5Concurrent.lib;7zlib.lib;SPIRV-Tools.lib;SPIRV-Tools-opt.lib;Qt5Multimedia.lib;Qt5MultimediaWidgets.lib;Qt5Svg.lib;libcubeb.lib;cubeb.lib;soundtouch.lib;Avrt.lib;SDL.lib;%(AdditionalDependencies)</AdditionalDependencies>
++      <AdditionalDependencies>DbgHelp.lib;Ole32.lib;gdi32.lib;..\hidapi.lib;..\libusb-1.0.lib;winmm.lib;miniupnpc_static.lib;rtmidi.lib;imm32.lib;ksuser.lib;version.lib;OpenAL32.lib;XAudio.lib;GLGSRender.lib;shlwapi.lib;VKGSRender.lib;vulkan-1.lib;wolfssl.lib;libcurl.lib;Wldap32.lib;glslang.lib;OSDependent.lib;OGLCompiler.lib;SPIRV.lib;MachineIndependent.lib;GenericCodeGen.lib;Advapi32.lib;user32.lib;zlib.lib;..\libpng16.lib;asmjit.lib;yaml-cpp.lib;discord-rpc.lib;emucore.lib;dxgi.lib;shell32.lib;Qt6Core.lib;Qt6Gui.lib;Qt6Widgets.lib;Qt6Concurrent.lib;Qt6Core5Compat.lib;Qt6Multimedia.lib;Qt6MultimediaWidgets.lib;Qt6Svg.lib;Qt6SvgWidgets.lib;7zlib.lib;SPIRV-Tools.lib;SPIRV-Tools-opt.lib;libcubeb.lib;cubeb.lib;soundtouch.lib;Avrt.lib;SDL.lib;%(AdditionalDependencies)</AdditionalDependencies>
        <AdditionalLibraryDirectories>..\3rdparty\OpenAL\libs\Win64;..\3rdparty\glslang\build\hlsl\Release;..\3rdparty\glslang\build\SPIRV\Release;..\3rdparty\glslang\build\OGLCompilersDLL\Release;..\3rdparty\glslang\build\glslang\OSDependent\Windows\Release;..\3rdparty\glslang\build\glslang\Release;..\3rdparty\SPIRV\build\source\Release;..\3rdparty\SPIRV\build\source\opt\Release;..\lib\$(CONFIGURATION)-$(PLATFORM);..\3rdparty\XAudio2Redist\libs;..\3rdparty\discord-rpc\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories);$(VULKAN_SDK)\Lib</AdditionalLibraryDirectories>
        <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
        <DataExecutionPrevention>true</DataExecutionPrevention>
@@ -715,8 +719,8 @@ index eb20fe5be96..b2022f01d1c 100644
    </ItemDefinitionGroup>
    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
      <ClCompile>
--      <AdditionalIncludeDirectories>..\3rdparty\SoundTouch\soundtouch\include;..\3rdparty\cubeb\extra;..\3rdparty\cubeb\cubeb\include\;..\3rdparty\flatbuffers\include;..\3rdparty\wolfssl\wolfssl;..\3rdparty\curl\curl\include;..\3rdparty\libusb\libusb\libusb;$(VULKAN_SDK)\Include;..\3rdparty\XAudio2Redist\include;$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtCore;.\debug;$(QTDIR)\mkspecs\win32-msvc2015;.\QTGeneratedFiles\$(ConfigurationName);.\QTGeneratedFiles;$(QTDIR)\include\QtWinExtras;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtSvg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-+      <AdditionalIncludeDirectories>..\3rdparty\SoundTouch\soundtouch\include;..\3rdparty\cubeb\extra;..\3rdparty\cubeb\cubeb\include\;..\3rdparty\flatbuffers\include;..\3rdparty\wolfssl\wolfssl;..\3rdparty\curl\curl\include;..\3rdparty\libusb\libusb\libusb;$(VULKAN_SDK)\Include;..\3rdparty\XAudio2Redist\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtCore5Compat;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSvg;$(QTDIR)\include\QtSvgWidgets;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\mkspecs\win32-msvc;.\debug;.\QTGeneratedFiles\$(ConfigurationName);.\QTGeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <AdditionalIncludeDirectories>..\3rdparty\SoundTouch\soundtouch\include;..\3rdparty\cubeb\extra;..\3rdparty\cubeb\cubeb\include\;..\3rdparty\flatbuffers\include;..\3rdparty\wolfssl\wolfssl;..\3rdparty\curl\curl\include;..\3rdparty\rtmidi\rtmidi;..\3rdparty\libusb\libusb\libusb;$(VULKAN_SDK)\Include;..\3rdparty\XAudio2Redist\include;$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtCore;.\debug;$(QTDIR)\mkspecs\win32-msvc2015;.\QTGeneratedFiles\$(ConfigurationName);.\QTGeneratedFiles;$(QTDIR)\include\QtWinExtras;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtSvg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
++      <AdditionalIncludeDirectories>..\3rdparty\SoundTouch\soundtouch\include;..\3rdparty\cubeb\extra;..\3rdparty\cubeb\cubeb\include\;..\3rdparty\flatbuffers\include;..\3rdparty\wolfssl\wolfssl;..\3rdparty\curl\curl\include;..\3rdparty\rtmidi\rtmidi;..\3rdparty\libusb\libusb\libusb;$(VULKAN_SDK)\Include;..\3rdparty\XAudio2Redist\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtCore5Compat;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSvg;$(QTDIR)\include\QtSvgWidgets;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\mkspecs\win32-msvc;.\debug;.\QTGeneratedFiles\$(ConfigurationName);.\QTGeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
        <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew- -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
        <AssemblerListingLocation>debug\</AssemblerListingLocation>
        <BrowseInformation>false</BrowseInformation>
@@ -724,8 +728,8 @@ index eb20fe5be96..b2022f01d1c 100644
        <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
      </ClCompile>
      <Link>
--      <AdditionalDependencies>DbgHelp.lib;Ole32.lib;gdi32.lib;..\hidapi.lib;..\libusb-1.0.lib;winmm.lib;miniupnpc_static.lib;ksuser.lib;OpenAL32.lib;XAudio.lib;GLGSRender.lib;shlwapi.lib;VKGSRender.lib;vulkan-1.lib;wolfssl.lib;libcurl.lib;Wldap32.lib;glslangd.lib;OSDependentd.lib;OGLCompilerd.lib;SPIRVd.lib;MachineIndependentd.lib;GenericCodeGend.lib;Advapi32.lib;user32.lib;zlib.lib;..\libpng16.lib;asmjit.lib;yaml-cpp.lib;discord-rpc.lib;emucore.lib;dxgi.lib;$(QTDIR)\lib\qtmaind.lib;shell32.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Cored.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5WinExtrasd.lib;Qt5Concurrentd.lib;7zlib.lib;SPIRV-Tools.lib;SPIRV-Tools-opt.lib;Qt5Multimediad.lib;Qt5MultimediaWidgetsd.lib;Qt5Svgd.lib;libcubeb.lib;cubeb.lib;soundtouch.lib;Avrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
-+      <AdditionalDependencies>DbgHelp.lib;Ole32.lib;gdi32.lib;..\hidapi.lib;..\libusb-1.0.lib;winmm.lib;miniupnpc_static.lib;ksuser.lib;OpenAL32.lib;XAudio.lib;GLGSRender.lib;shlwapi.lib;VKGSRender.lib;vulkan-1.lib;wolfssl.lib;libcurl.lib;Wldap32.lib;glslangd.lib;OSDependentd.lib;OGLCompilerd.lib;SPIRVd.lib;MachineIndependentd.lib;GenericCodeGend.lib;Advapi32.lib;user32.lib;zlib.lib;..\libpng16.lib;asmjit.lib;yaml-cpp.lib;discord-rpc.lib;emucore.lib;dxgi.lib;shell32.lib;qtmaind.lib;Qt6Cored.lib;Qt6Guid.lib;Qt6Widgetsd.lib;Qt6Concurrentd.lib;Qt6Multimediad.lib;Qt6MultimediaWidgetsd.lib;Qt6Svgd.lib;Qt6SvgWidgetsd.lib;7zlib.lib;SPIRV-Tools.lib;SPIRV-Tools-opt.lib;libcubeb.lib;cubeb.lib;soundtouch.lib;Avrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+-      <AdditionalDependencies>DbgHelp.lib;Ole32.lib;gdi32.lib;..\hidapi.lib;..\libusb-1.0.lib;winmm.lib;miniupnpc_static.lib;rtmidi.lib;ksuser.lib;OpenAL32.lib;XAudio.lib;GLGSRender.lib;shlwapi.lib;VKGSRender.lib;vulkan-1.lib;wolfssl.lib;libcurl.lib;Wldap32.lib;glslangd.lib;OSDependentd.lib;OGLCompilerd.lib;SPIRVd.lib;MachineIndependentd.lib;GenericCodeGend.lib;Advapi32.lib;user32.lib;zlib.lib;..\libpng16.lib;asmjit.lib;yaml-cpp.lib;discord-rpc.lib;emucore.lib;dxgi.lib;$(QTDIR)\lib\qtmaind.lib;shell32.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Cored.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5WinExtrasd.lib;Qt5Concurrentd.lib;7zlib.lib;SPIRV-Tools.lib;SPIRV-Tools-opt.lib;Qt5Multimediad.lib;Qt5MultimediaWidgetsd.lib;Qt5Svgd.lib;libcubeb.lib;cubeb.lib;soundtouch.lib;Avrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
++      <AdditionalDependencies>DbgHelp.lib;Ole32.lib;gdi32.lib;..\hidapi.lib;..\libusb-1.0.lib;winmm.lib;miniupnpc_static.lib;rtmidi.lib;ksuser.lib;OpenAL32.lib;XAudio.lib;GLGSRender.lib;shlwapi.lib;VKGSRender.lib;vulkan-1.lib;wolfssl.lib;libcurl.lib;Wldap32.lib;glslangd.lib;OSDependentd.lib;OGLCompilerd.lib;SPIRVd.lib;MachineIndependentd.lib;GenericCodeGend.lib;Advapi32.lib;user32.lib;zlib.lib;..\libpng16.lib;asmjit.lib;yaml-cpp.lib;discord-rpc.lib;emucore.lib;dxgi.lib;shell32.lib;qtmaind.lib;Qt6Cored.lib;Qt6Guid.lib;Qt6Widgetsd.lib;Qt6Concurrentd.lib;Qt6Multimediad.lib;Qt6MultimediaWidgetsd.lib;Qt6Svgd.lib;Qt6SvgWidgetsd.lib;7zlib.lib;SPIRV-Tools.lib;SPIRV-Tools-opt.lib;libcubeb.lib;cubeb.lib;soundtouch.lib;Avrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
        <AdditionalLibraryDirectories>..\3rdparty\OpenAL\libs\Win64;..\3rdparty\glslang\build\hlsl\Debug;..\3rdparty\glslang\build\SPIRV\Debug;..\3rdparty\glslang\build\OGLCompilersDLL\Debug;..\3rdparty\glslang\build\glslang\OSDependent\Windows\Debug;..\3rdparty\glslang\build\glslang\Debug;..\3rdparty\SPIRV\build\source\opt\Debug;..\3rdparty\XAudio2Redist\libs;..\3rdparty\discord-rpc\lib;..\lib\$(CONFIGURATION)-$(PLATFORM);$(QTDIR)\lib;%(AdditionalLibraryDirectories);$(VULKAN_SDK)\Lib</AdditionalLibraryDirectories>
        <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"  /VERBOSE %(AdditionalOptions)</AdditionalOptions>
        <DataExecutionPrevention>true</DataExecutionPrevention>
@@ -738,7 +742,7 @@ index eb20fe5be96..b2022f01d1c 100644
        </Command>
      </PostBuildEvent>
      <PostBuildEvent>
-@@ -740,7 +741,7 @@
+@@ -755,7 +756,7 @@
      <ClCompile Include="rpcs3qt\table_item_delegate.cpp" />
      <ClCompile Include="rpcs3qt\tooltips.cpp" />
      <ClCompile Include="rpcs3qt\update_manager.cpp" />
@@ -747,7 +751,7 @@ index eb20fe5be96..b2022f01d1c 100644
      <ClCompile Include="rpcs3qt\uuid.cpp" />
      <ClCompile Include="rpcs3qt\vfs_dialog_path_widget.cpp" />
      <ClCompile Include="rpcs3qt\vfs_dialog_usb_input.cpp" />
-@@ -1428,7 +1429,7 @@
+@@ -1464,7 +1465,7 @@
        <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\QTGeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
        <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\QTGeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DWITH_DISCORD_RPC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_WINEXTRAS_LIB -DQT_CONCURRENT_LIB -D%(PreprocessorDefinitions)  "-I.\..\3rdparty\wolfssl\wolfssl" "-I.\..\3rdparty\curl\curl\include" "-I.\..\3rdparty\libusb\libusb\libusb" "-I$(VULKAN_SDK)\Include" "-I.\..\3rdparty\XAudio2Redist\include" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2015" "-I.\QTGeneratedFiles\$(ConfigurationName)" "-I.\QTGeneratedFiles" "-I$(QTDIR)\include\QtWinExtras" "-I$(QTDIR)\include\QtConcurrent"</Command>
      </CustomBuild>
@@ -757,10 +761,10 @@ index eb20fe5be96..b2022f01d1c 100644
        <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
        <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing %(Identity)...</Message>
 diff --git a/rpcs3/rpcs3.vcxproj.filters b/rpcs3/rpcs3.vcxproj.filters
-index 53695940561..b415ec28802 100644
+index 11aebfff590..9b7b2161a1a 100644
 --- a/rpcs3/rpcs3.vcxproj.filters
 +++ b/rpcs3/rpcs3.vcxproj.filters
-@@ -795,7 +795,7 @@
+@@ -807,7 +807,7 @@
      <ClCompile Include="rpcs3qt\qt_camera_handler.cpp">
        <Filter>Io\camera</Filter>
      </ClCompile>
@@ -769,7 +773,7 @@ index 53695940561..b415ec28802 100644
        <Filter>Io\camera</Filter>
      </ClCompile>
      <ClCompile Include="rpcs3qt\qt_camera_error_handler.cpp">
-@@ -1130,7 +1130,7 @@
+@@ -1154,7 +1154,7 @@
      <ClInclude Include="QTGeneratedFiles\ui_patch_creator_dialog.h">
        <Filter>Generated Files</Filter>
      </ClInclude>
@@ -779,10 +783,10 @@ index 53695940561..b415ec28802 100644
      </ClInclude>
      <ClInclude Include="rpcs3qt\qt_camera_handler.h">
 diff --git a/rpcs3/rpcs3qt/CMakeLists.txt b/rpcs3/rpcs3qt/CMakeLists.txt
-index fab08637244..bc5b3628166 100644
+index c25f35d6429..e2369198d9e 100644
 --- a/rpcs3/rpcs3qt/CMakeLists.txt
 +++ b/rpcs3/rpcs3qt/CMakeLists.txt
-@@ -64,7 +64,7 @@ set(SRC_FILES
+@@ -67,7 +67,7 @@ set(SRC_FILES
      progress_indicator.cpp
      qt_camera_error_handler.cpp
      qt_camera_handler.cpp
@@ -791,7 +795,7 @@ index fab08637244..bc5b3628166 100644
      qt_music_error_handler.cpp
      qt_music_handler.cpp
      qt_utils.cpp
-@@ -143,7 +143,7 @@ target_compile_definitions(rpcs3_ui PRIVATE WIN32_LEAN_AND_MEAN)
+@@ -146,7 +146,7 @@ target_compile_definitions(rpcs3_ui PRIVATE WIN32_LEAN_AND_MEAN)
  
  target_link_libraries(rpcs3_ui
      PUBLIC
@@ -1220,19 +1224,18 @@ index feaaf88f238..b39c790e018 100644
  
  	void keyPressEvent(QKeyEvent *keyEvent) override;
 diff --git a/rpcs3/rpcs3qt/gui_application.cpp b/rpcs3/rpcs3qt/gui_application.cpp
-index 388f3086c21..e892023cc2a 100644
+index 388f3086c21..be0ae8eee0f 100644
 --- a/rpcs3/rpcs3qt/gui_application.cpp
 +++ b/rpcs3/rpcs3qt/gui_application.cpp
-@@ -34,7 +34,7 @@
+@@ -34,7 +34,6 @@
  #include <QLibraryInfo>
  #include <QDirIterator>
  #include <QFileInfo>
 -#include <QSound>
-+#include <QSoundEffect>
  #include <QMessageBox>
  #include <QTextDocument>
  
-@@ -171,7 +171,7 @@ void gui_application::SwitchTranslator(QTranslator& translator, const QString& f
+@@ -171,7 +170,7 @@ void gui_application::SwitchTranslator(QTranslator& translator, const QString& f
  	// remove the old translator
  	removeTranslator(&translator);
  
@@ -1241,7 +1244,7 @@ index 388f3086c21..e892023cc2a 100644
  	const QString file_path = lang_path + filename;
  
  	if (QFileInfo(file_path).isFile())
-@@ -234,7 +234,7 @@ QStringList gui_application::GetAvailableLanguageCodes()
+@@ -234,7 +233,7 @@ QStringList gui_application::GetAvailableLanguageCodes()
  {
  	QStringList language_codes;
  
@@ -1250,23 +1253,53 @@ index 388f3086c21..e892023cc2a 100644
  
  	if (QFileInfo(language_path).isDir())
  	{
-@@ -549,7 +549,10 @@ void gui_application::InitializeCallbacks()
+@@ -543,13 +542,17 @@ void gui_application::InitializeCallbacks()
+ 		return localized_emu::get_u32string(id, args);
+ 	};
+ 
+-	callbacks.play_sound = [](const std::string& path)
++	callbacks.play_sound = [this](const std::string& path)
+ 	{
+-		Emu.CallFromMainThread([path]()
++		Emu.CallFromMainThread([this, path]()
  		{
  			if (fs::is_file(path))
  			{
 -				QSound::play(qstr(path));
-+				// TODO: ist this working? Or do we need a member?
-+				QSoundEffect sound_effect{};
-+				sound_effect.setSource(qstr(path));
-+				sound_effect.play();
++				m_sound_effect.stop();
++				m_sound_effect.setSource(QUrl::fromLocalFile(qstr(path)));
++				m_sound_effect.setVolume(g_cfg.audio.volume * 0.01f);
++				m_sound_effect.setLoopCount(1);
++				m_sound_effect.play();
  			}
  		});
  	};
+diff --git a/rpcs3/rpcs3qt/gui_application.h b/rpcs3/rpcs3qt/gui_application.h
+index 762a8a045a4..321e17479d6 100644
+--- a/rpcs3/rpcs3qt/gui_application.h
++++ b/rpcs3/rpcs3qt/gui_application.h
+@@ -7,6 +7,7 @@
+ #include <QElapsedTimer>
+ #include <QTimer>
+ #include <QTranslator>
++#include <QSoundEffect>
+ 
+ #include "main_application.h"
+ 
+@@ -85,6 +86,8 @@ class gui_application : public QApplication, public main_application
+ 	QTimer m_timer;
+ 	QElapsedTimer m_timer_playtime;
+ 
++	QSoundEffect m_sound_effect{};
++
+ 	std::shared_ptr<emu_settings> m_emu_settings;
+ 	std::shared_ptr<gui_settings> m_gui_settings;
+ 	std::shared_ptr<persistent_settings> m_persistent_settings;
 diff --git a/rpcs3/rpcs3qt/main_window.cpp b/rpcs3/rpcs3qt/main_window.cpp
-index f2909f50105..1f241c6f631 100644
+index 15bc6ffe98d..ed373e5ce4d 100644
 --- a/rpcs3/rpcs3qt/main_window.cpp
 +++ b/rpcs3/rpcs3qt/main_window.cpp
-@@ -154,7 +154,7 @@ bool main_window::Init([[maybe_unused]] bool with_cli_boot)
+@@ -155,7 +155,7 @@ bool main_window::Init([[maybe_unused]] bool with_cli_boot)
  	ui->toolbar_start->setEnabled(enable_play_last);
  
  	// create tool buttons for the taskbar thumbnail
@@ -1275,7 +1308,7 @@ index f2909f50105..1f241c6f631 100644
  	m_thumb_bar = new QWinThumbnailToolBar(this);
  	m_thumb_bar->setWindow(windowHandle());
  
-@@ -1622,7 +1622,7 @@ void main_window::RepaintThumbnailIcons()
+@@ -1623,7 +1623,7 @@ void main_window::RepaintThumbnailIcons()
  		return gui::utils::get_colorized_icon(QPixmap::fromImage(gui::utils::get_opaque_image_area(path)), Qt::black, new_color);
  	};
  
@@ -1284,7 +1317,7 @@ index f2909f50105..1f241c6f631 100644
  	if (!m_thumb_bar) return;
  
  	m_icon_thumb_play = icon(":/Icons/play.png");
-@@ -1709,14 +1709,6 @@ void main_window::RepaintToolBarIcons()
+@@ -1710,14 +1710,6 @@ void main_window::RepaintToolBarIcons()
  
  	// resize toolbar elements
  
@@ -1299,7 +1332,7 @@ index f2909f50105..1f241c6f631 100644
  	const int tool_bar_height = ui->toolBar->sizeHint().height();
  
  	for (const auto& act : ui->toolBar->actions())
-@@ -1742,7 +1734,7 @@ void main_window::OnEmuRun(bool /*start_playtime*/) const
+@@ -1743,7 +1735,7 @@ void main_window::OnEmuRun(bool /*start_playtime*/) const
  
  	m_debugger_frame->EnableButtons(true);
  
@@ -1308,7 +1341,7 @@ index f2909f50105..1f241c6f631 100644
  	m_thumb_stop->setToolTip(stop_tooltip);
  	m_thumb_restart->setToolTip(restart_tooltip);
  	m_thumb_playPause->setToolTip(pause_tooltip);
-@@ -1765,7 +1757,7 @@ void main_window::OnEmuResume() const
+@@ -1766,7 +1758,7 @@ void main_window::OnEmuResume() const
  	const QString pause_tooltip = tr("Pause %0").arg(title);
  	const QString stop_tooltip = tr("Stop %0").arg(title);
  
@@ -1317,7 +1350,7 @@ index f2909f50105..1f241c6f631 100644
  	m_thumb_stop->setToolTip(stop_tooltip);
  	m_thumb_restart->setToolTip(restart_tooltip);
  	m_thumb_playPause->setToolTip(pause_tooltip);
-@@ -1784,7 +1776,7 @@ void main_window::OnEmuPause() const
+@@ -1785,7 +1777,7 @@ void main_window::OnEmuPause() const
  	const QString title = GetCurrentTitle();
  	const QString resume_tooltip = tr("Resume %0").arg(title);
  
@@ -1326,7 +1359,7 @@ index f2909f50105..1f241c6f631 100644
  	m_thumb_playPause->setToolTip(resume_tooltip);
  	m_thumb_playPause->setIcon(m_icon_thumb_play);
  #endif
-@@ -1810,7 +1802,7 @@ void main_window::OnEmuStop()
+@@ -1811,7 +1803,7 @@ void main_window::OnEmuStop()
  
  	ui->sysPauseAct->setText(Emu.IsReady() ? tr("&Play") : tr("&Resume"));
  	ui->sysPauseAct->setIcon(m_icon_play);
@@ -1335,7 +1368,7 @@ index f2909f50105..1f241c6f631 100644
  	m_thumb_playPause->setToolTip(play_tooltip);
  	m_thumb_playPause->setIcon(m_icon_thumb_play);
  #endif
-@@ -1832,7 +1824,7 @@ void main_window::OnEmuStop()
+@@ -1833,7 +1825,7 @@ void main_window::OnEmuStop()
  		ui->toolbar_start->setText(tr("Restart"));
  		ui->toolbar_start->setToolTip(restart_tooltip);
  		ui->sysRebootAct->setEnabled(true);
@@ -1344,7 +1377,7 @@ index f2909f50105..1f241c6f631 100644
  		m_thumb_restart->setToolTip(restart_tooltip);
  		m_thumb_restart->setEnabled(true);
  #endif
-@@ -1865,7 +1857,7 @@ void main_window::OnEmuReady() const
+@@ -1866,7 +1858,7 @@ void main_window::OnEmuReady() const
  	const QString play_tooltip = Emu.IsReady() ? tr("Play %0").arg(title) : tr("Resume %0").arg(title);
  
  	m_debugger_frame->EnableButtons(true);
@@ -1353,7 +1386,7 @@ index f2909f50105..1f241c6f631 100644
  	m_thumb_playPause->setToolTip(play_tooltip);
  	m_thumb_playPause->setIcon(m_icon_thumb_play);
  #endif
-@@ -1884,7 +1876,7 @@ void main_window::OnEmuReady() const
+@@ -1885,7 +1877,7 @@ void main_window::OnEmuReady() const
  void main_window::EnableMenus(bool enabled) const
  {
  	// Thumbnail Buttons
@@ -1362,7 +1395,7 @@ index f2909f50105..1f241c6f631 100644
  	m_thumb_playPause->setEnabled(enabled);
  	m_thumb_stop->setEnabled(enabled);
  	m_thumb_restart->setEnabled(enabled);
-@@ -2863,14 +2855,14 @@ void main_window::CreateDockWindows()
+@@ -2886,14 +2878,14 @@ void main_window::CreateDockWindows()
  
  			ui->toolbar_start->setEnabled(enable_play_buttons);
  			ui->sysPauseAct->setEnabled(enable_play_buttons);
@@ -1379,7 +1412,7 @@ index f2909f50105..1f241c6f631 100644
  				m_thumb_playPause->setToolTip(tooltip);
  #endif
  			}
-@@ -3223,7 +3215,7 @@ void main_window::dropEvent(QDropEvent* event)
+@@ -3246,7 +3238,7 @@ void main_window::dropEvent(QDropEvent* event)
  
  		for (const auto& path : drop_paths)
  		{
@@ -2358,7 +2391,7 @@ index 11c5ff3fbd8..7d19c22d5c8 100644
  private:
  	std::shared_ptr<QMediaPlayer> m_media_player;
 diff --git a/rpcs3/rpcs3qt/qt_music_handler.cpp b/rpcs3/rpcs3qt/qt_music_handler.cpp
-index 39c40a59152..ad980d238f9 100644
+index 39c40a59152..d92d379cd9c 100644
 --- a/rpcs3/rpcs3qt/qt_music_handler.cpp
 +++ b/rpcs3/rpcs3qt/qt_music_handler.cpp
 @@ -4,6 +4,7 @@
@@ -2391,7 +2424,7 @@ index 39c40a59152..ad980d238f9 100644
  		{
  			m_path = path;
 -			m_media_player->setMedia(QUrl(QString::fromStdString(path)));
-+			m_media_player->setSource(QUrl(QString::fromStdString(path)));
++			m_media_player->setSource(QUrl::fromLocalFile(QString::fromStdString(path)));
  		}
  
  		music_log.notice("Playing music: %s", path);
@@ -2400,7 +2433,7 @@ index 39c40a59152..ad980d238f9 100644
  		{
  			m_path = path;
 -			m_media_player->setMedia(QUrl(QString::fromStdString(path)));
-+			m_media_player->setSource(QUrl(QString::fromStdString(path)));
++			m_media_player->setSource(QUrl::fromLocalFile(QString::fromStdString(path)));
  		}
  
  		music_log.notice("Fast-forwarding music...");
@@ -2409,7 +2442,7 @@ index 39c40a59152..ad980d238f9 100644
  		{
  			m_path = path;
 -			m_media_player->setMedia(QUrl(QString::fromStdString(path)));
-+			m_media_player->setSource(QUrl(QString::fromStdString(path)));
++			m_media_player->setSource(QUrl::fromLocalFile(QString::fromStdString(path)));
  		}
  
  		music_log.notice("Fast-reversing music...");
@@ -2460,8 +2493,20 @@ index 14073c587dd..47970e16031 100644
  		{
  			updateRegister(qvar.toInt());
  		}
+diff --git a/rpcs3/rpcs3qt/save_manager_dialog.cpp b/rpcs3/rpcs3qt/save_manager_dialog.cpp
+index 07e9a8caf4e..0a3bdb0d50e 100644
+--- a/rpcs3/rpcs3qt/save_manager_dialog.cpp
++++ b/rpcs3/rpcs3qt/save_manager_dialog.cpp
+@@ -18,7 +18,6 @@
+ #include <QMenu>
+ #include <QMessageBox>
+ #include <QGuiApplication>
+-#include <QUrl>
+ #include <QDesktopServices>
+ #include <QPainter>
+ #include <QScreen>
 diff --git a/rpcs3/rpcs3qt/settings_dialog.cpp b/rpcs3/rpcs3qt/settings_dialog.cpp
-index 55899d4662c..15488073122 100644
+index 5b2e4517b5e..22b83dccd8a 100644
 --- a/rpcs3/rpcs3qt/settings_dialog.cpp
 +++ b/rpcs3/rpcs3qt/settings_dialog.cpp
 @@ -1,5 +1,6 @@
@@ -2472,7 +2517,15 @@ index 55899d4662c..15488073122 100644
  #include <QDialogButtonBox>
  #include <QFontMetrics>
  #include <QPushButton>
-@@ -1207,10 +1208,10 @@ settings_dialog::settings_dialog(std::shared_ptr<gui_settings> gui_settings, std
+@@ -10,7 +11,6 @@
+ #include <QSpinBox>
+ #include <QTimer>
+ #include <QScreen>
+-#include <QUrl>
+ 
+ #include "gui_settings.h"
+ #include "display_sleep_control.h"
+@@ -1207,10 +1207,10 @@ settings_dialog::settings_dialog(std::shared_ptr<gui_settings> gui_settings, std
  		const std::string selected_camera = m_emu_settings->GetSetting(emu_settings_type::CameraID);
  		ui->cameraIdBox->addItem(tr("None", "Camera Device"), "");
  		ui->cameraIdBox->addItem(tr("Default", "Camera Device"), qstr(default_camera));
@@ -2485,4 +2538,27 @@ index 55899d4662c..15488073122 100644
  		}
  		if (const int index = ui->cameraIdBox->findData(qstr(selected_camera)); index >= 0)
  		{
-
+diff --git a/rpcs3/rpcs3qt/trophy_manager_dialog.cpp b/rpcs3/rpcs3qt/trophy_manager_dialog.cpp
+index de187de6d60..d12a4e57adf 100644
+--- a/rpcs3/rpcs3qt/trophy_manager_dialog.cpp
++++ b/rpcs3/rpcs3qt/trophy_manager_dialog.cpp
+@@ -27,7 +27,6 @@
+ #include <QDir>
+ #include <QMenu>
+ #include <QDesktopServices>
+-#include <QUrl>
+ #include <QScrollBar>
+ #include <QWheelEvent>
+ #include <QGuiApplication>
+diff --git a/rpcs3/rpcs3qt/user_manager_dialog.cpp b/rpcs3/rpcs3qt/user_manager_dialog.cpp
+index c1a2f1d9419..8314e6182cf 100644
+--- a/rpcs3/rpcs3qt/user_manager_dialog.cpp
++++ b/rpcs3/rpcs3qt/user_manager_dialog.cpp
+@@ -10,7 +10,6 @@
+ #include <QDesktopServices>
+ #include <QMessageBox>
+ #include <QGuiApplication>
+-#include <QUrl>
+ 
+ #include "user_manager_dialog.h"
+ #include "table_item_delegate.h"
