@@ -761,7 +761,7 @@ segacd:
   core:     genesisplusgx
 segastv:
   emulator: libretro
-  core:     kronos
+  core:     mame0139
 seibu:
   emulator: libretro
   core:     mame078plus

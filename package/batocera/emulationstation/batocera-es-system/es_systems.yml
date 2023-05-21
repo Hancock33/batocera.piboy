@@ -706,7 +706,7 @@ mame:
       mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010]       }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
-      mame:             { requireAnyOf: [BR2_PACKAGE_MAME]                                                }
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME]                    }
 
   comment_en:           |
                         The system uses libretro mame2003+ as default core: compatible ROMs must come from set 0.78+
@@ -5328,6 +5328,7 @@ segastv:
     libretro:
       kronos:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_KRONOS]   }
       mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010] }
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]     }
 
 sega32x:
   name:                 32x
