@@ -3,8 +3,8 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on May 18, 2023 (branch@proton_8.0)
-WINE_PROTON_VERSION = 7b89d6df161fa6c87aed216598dc7602f7efac5e
+# Version: Commits on May 23, 2023 (branch@proton_8.0)
+WINE_PROTON_VERSION = fec1929689acdff7084175c1f51a5cf43b5595a9
 WINE_PROTON_SOURCE = wine-proton-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
