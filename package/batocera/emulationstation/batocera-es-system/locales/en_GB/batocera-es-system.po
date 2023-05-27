@@ -12118,12 +12118,12 @@ msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr ""
 
-#. TRANSLATION: psx.duckstation.keys
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Load State"
 msgstr ""
 
-#. TRANSLATION: psx.duckstation.keys
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Save State"
 msgstr ""
@@ -12158,7 +12158,7 @@ msgctxt "keys_files"
 msgid "Cycle through stretch modes"
 msgstr ""
 
-#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys
+#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr ""
@@ -12263,24 +12263,14 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr ""
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
-msgid "Emulator menu"
+msgid "Slot -"
 msgstr ""
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
-msgid "Quick save slot"
-msgstr ""
-
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Quick load slot"
-msgstr ""
-
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Select save slot number"
+msgid "Slot +"
 msgstr ""
 
 #. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
@@ -12288,22 +12278,47 @@ msgctxt "keys_files"
 msgid "Rewind"
 msgstr ""
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Fast Forward"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
+msgctxt "keys_files"
+msgid "Emulator menu"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
+msgctxt "keys_files"
+msgid "Quick save slot"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
+msgctxt "keys_files"
+msgid "Quick load slot"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
+msgctxt "keys_files"
+msgid "Select save slot number"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Fast-forward"
 msgstr ""
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Rapid Fire"
 msgstr ""
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Enter on the menu"
 msgstr ""
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Back on the menu"
 msgstr ""
