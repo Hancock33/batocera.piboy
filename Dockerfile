@@ -37,6 +37,10 @@ RUN dpkg --add-architecture i386 && \
 		locales \
 		graphviz \
 		python3 \
+		smpq \
+		libsodium-dev \
+		libbz2-dev \
+		libgtest-dev \
 		gcc-multilib \
 		g++-multilib \
 	&& apt-get clean \
