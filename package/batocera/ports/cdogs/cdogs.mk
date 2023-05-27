@@ -38,7 +38,6 @@ define CDOGS_INSTALL_TARGET_CMDS
     cp -pa $(@D)/missions  $(TARGET_DIR)/usr/share/cdogs
     cp -pa $(@D)/music     $(TARGET_DIR)/usr/share/cdogs
     cp -pa $(@D)/sounds    $(TARGET_DIR)/usr/share/cdogs
-    cp -f  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/cdogs/gamecontrollerdb.txt $(TARGET_DIR)/usr/share/cdogs/data
 	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/cdogs/media/*              $(TARGET_DIR)/usr/share/emulationstation/ports/cdogs/
 
     # evmap config
