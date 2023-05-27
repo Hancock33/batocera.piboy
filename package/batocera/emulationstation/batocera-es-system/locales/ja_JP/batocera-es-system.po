@@ -12217,12 +12217,12 @@ msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr "Duckstation 終了"
 
-#. TRANSLATION: psx.duckstation.keys
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Load State"
 msgstr "ステートロード"
 
-#. TRANSLATION: psx.duckstation.keys
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "ステートセーブ"
@@ -12257,7 +12257,7 @@ msgctxt "keys_files"
 msgid "Cycle through stretch modes"
 msgstr "ストレッチモード切り替え"
 
-#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys
+#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "スクリーンショット"
@@ -12362,47 +12362,62 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "マウス クリック"
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
-msgid "Emulator menu"
-msgstr ""
+msgid "Slot -"
+msgstr "スロット ー"
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
-msgid "Quick save slot"
-msgstr ""
-
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Quick load slot"
-msgstr ""
-
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Select save slot number"
-msgstr ""
+msgid "Slot +"
+msgstr "スロット +"
 
 #. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "巻き戻し"
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Fast Forward"
+msgstr "早送り"
+
+#. TRANSLATION: pspmini.ppsspp.keys
+msgctxt "keys_files"
+msgid "Emulator menu"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
+msgctxt "keys_files"
+msgid "Quick save slot"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
+msgctxt "keys_files"
+msgid "Quick load slot"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
+msgctxt "keys_files"
+msgid "Select save slot number"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Fast-forward"
 msgstr ""
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Rapid Fire"
 msgstr ""
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Enter on the menu"
 msgstr ""
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Back on the menu"
 msgstr ""
@@ -12679,20 +12694,8 @@ msgstr ""
 #~ msgstr "ゲームを再開"
 
 #~ msgctxt "keys_files"
-#~ msgid "Slot -"
-#~ msgstr "スロット ー"
-
-#~ msgctxt "keys_files"
-#~ msgid "Slot +"
-#~ msgstr "スロット +"
-
-#~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
 #~ msgstr "次のディスク (m3u)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Fast Forward"
-#~ msgstr "早送り"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
