@@ -1,8 +1,8 @@
 diff --git a/Core/Config.cpp b/Core/Config.cpp
-index 4a687683..c4580ab7 100644
+index 7ce91c706..29b2965ed 100644
 --- a/Core/Config.cpp
 +++ b/Core/Config.cpp
-@@ -934,10 +934,10 @@ void Config::Reload() {
+@@ -966,10 +966,10 @@ void Config::Reload() {
  void Config::UpdateIniLocation(const char *iniFileName, const char *controllerIniFilename) {
  	const bool useIniFilename = iniFileName != nullptr && strlen(iniFileName) > 0;
  	const char *ppssppIniFilename = IsVREnabled() ? "ppssppvr.ini" : "ppsspp.ini";
@@ -16,7 +16,7 @@ index 4a687683..c4580ab7 100644
  
  bool Config::LoadAppendedConfig() {
 diff --git a/Core/System.cpp b/Core/System.cpp
-index fc4d207f..4b753c8b 100644
+index fc4d207fd..4b753c8bc 100644
 --- a/Core/System.cpp
 +++ b/Core/System.cpp
 @@ -633,26 +633,21 @@ std::string PSP_GetLoading() {
@@ -93,7 +93,7 @@ index fc4d207f..4b753c8b 100644
  }
  
 diff --git a/SDL/SDLJoystick.cpp b/SDL/SDLJoystick.cpp
-index 2f6b4717..4feccfc1 100644
+index f51335912..12478c42f 100644
 --- a/SDL/SDLJoystick.cpp
 +++ b/SDL/SDLJoystick.cpp
 @@ -25,7 +25,7 @@ SDLJoystick::SDLJoystick(bool init_SDL ) : registeredAsEventHandler(false) {
@@ -115,10 +115,10 @@ index 2f6b4717..4feccfc1 100644
  		delete[] mappingData;
  	} else {
 diff --git a/UI/NativeApp.cpp b/UI/NativeApp.cpp
-index e1f858c2..418c7742 100644
+index f5f6b0e50..0398cef16 100644
 --- a/UI/NativeApp.cpp
 +++ b/UI/NativeApp.cpp
-@@ -433,7 +433,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -449,7 +449,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	g_VFS.Register("", new DirectoryReader(File::GetExeDirectory()));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/ppsspp/assets")));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/games/ppsspp/assets")));
@@ -127,7 +127,7 @@ index e1f858c2..418c7742 100644
  	g_VFS.Register("", new DirectoryReader(Path("/usr/share/games/ppsspp/assets")));
  #endif
  
-@@ -512,7 +512,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -528,7 +528,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	else // Just in case
  		config = "./config";
  
