@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on May 26, 2023
-LIBRETRO_PICODRIVE_VERSION = 02ff025479b6c78bcfcd78dc80581287a226a2b9
+LIBRETRO_PICODRIVE_VERSION = f27a1749fe8f4b98a8edc62f05dbbc99a730a643
 LIBRETRO_PICODRIVE_SITE = https://github.com/irixxxx/picodrive.git
 LIBRETRO_PICODRIVE_SITE_METHOD=git
 LIBRETRO_PICODRIVE_GIT_SUBMODULES=YES
