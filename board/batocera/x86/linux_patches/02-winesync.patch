@@ -14,10 +14,10 @@ index 06c525e01ea5..21f07941d86c 100644
  
    11 char	Raw keyboard device	(Linux/SPARC only)
 diff --git a/Documentation/userspace-api/index.rst b/Documentation/userspace-api/index.rst
-index f16337bdb852..4f62a95d8ed9 100644
+index 72a65db0c498..ce5d0df572eb 100644
 --- a/Documentation/userspace-api/index.rst
 +++ b/Documentation/userspace-api/index.rst
-@@ -31,6 +31,7 @@ place where this information is gathered.
+@@ -32,6 +32,7 @@ place where this information is gathered.
     sysfs-platform_profile
     vduse
     futex2
@@ -26,10 +26,10 @@ index f16337bdb852..4f62a95d8ed9 100644
  .. only::  subproject and html
  
 diff --git a/Documentation/userspace-api/ioctl/ioctl-number.rst b/Documentation/userspace-api/ioctl/ioctl-number.rst
-index eb045fc495a4..5909a1abf11f 100644
+index 176e8fc3f31b..28d4173baa82 100644
 --- a/Documentation/userspace-api/ioctl/ioctl-number.rst
 +++ b/Documentation/userspace-api/ioctl/ioctl-number.rst
-@@ -375,6 +375,8 @@ Code  Seq#    Include File                                           Comments
+@@ -374,6 +374,8 @@ Code  Seq#    Include File                                           Comments
                                                                       <mailto:thomas@winischhofer.net>
  0xF6  all                                                            LTTng Linux Trace Toolkit Next Generation
                                                                       <mailto:mathieu.desnoyers@efficios.com>
@@ -39,10 +39,10 @@ index eb045fc495a4..5909a1abf11f 100644
                                                                       <mailto:nchatrad@amd.com>
  0xFD  all    linux/dm-ioctl.h
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 135d93368d36..4b2017996db1 100644
+index 27ef11624748..d2e403bb7ebd 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -22474,6 +22474,15 @@ M:	David Härdeman <david@hardeman.nu>
+@@ -22711,6 +22711,15 @@ M:	David Härdeman <david@hardeman.nu>
  S:	Maintained
  F:	drivers/media/rc/winbond-cir.c
  
@@ -56,15 +56,15 @@ index 135d93368d36..4b2017996db1 100644
 +F:	tools/testing/selftests/drivers/winesync/
 +
  WINSYSTEMS EBC-C384 WATCHDOG DRIVER
- M:	William Breathitt Gray <william.gray@linaro.org>
  L:	linux-watchdog@vger.kernel.org
+ S:	Orphan
 diff --git a/drivers/misc/Kconfig b/drivers/misc/Kconfig
-index 9947b7892bd5..70ad04109d35 100644
+index 433aa4197785..30d9907fe1c3 100644
 --- a/drivers/misc/Kconfig
 +++ b/drivers/misc/Kconfig
-@@ -518,6 +518,17 @@ config VCPU_STALL_DETECTOR
+@@ -538,6 +538,17 @@ config TMR_INJECT
  
- 	  If you do not intend to run this kernel as a guest, say N.
+ 	  Say N here unless you know what you are doing.
  
 +config WINESYNC
 +	tristate "Synchronization primitives for Wine"
@@ -81,10 +81,10 @@ index 9947b7892bd5..70ad04109d35 100644
  source "drivers/misc/eeprom/Kconfig"
  source "drivers/misc/cb710/Kconfig"
 diff --git a/drivers/misc/Makefile b/drivers/misc/Makefile
-index 87b54a4a4422..00e107e26160 100644
+index 56de43943cd5..9d6a29aed0db 100644
 --- a/drivers/misc/Makefile
 +++ b/drivers/misc/Makefile
-@@ -60,6 +60,7 @@ obj-$(CONFIG_HABANA_AI)		+= habanalabs/
+@@ -59,6 +59,7 @@ obj-$(CONFIG_PVPANIC)   	+= pvpanic/
  obj-$(CONFIG_UACCE)		+= uacce/
  obj-$(CONFIG_XILINX_SDFEC)	+= xilinx_sdfec.o
  obj-$(CONFIG_HISI_HIKEY_USB)	+= hisi_hikey_usb.o
@@ -105,7 +105,7 @@ index c0fea6ca5076..36fc5d5315a4 100644
  
  struct device;
 diff --git a/tools/testing/selftests/Makefile b/tools/testing/selftests/Makefile
-index 41b649452560..8c5b26c671d2 100644
+index 90a62cf75008..4df1c9510fae 100644
 --- a/tools/testing/selftests/Makefile
 +++ b/tools/testing/selftests/Makefile
 @@ -13,6 +13,7 @@ TARGETS += cpu-hotplug
