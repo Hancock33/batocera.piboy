@@ -41,6 +41,7 @@ RUN dpkg --add-architecture i386 && \
 		libsodium-dev \
 		libbz2-dev \
 		libgtest-dev \
+		spirv-tools \
 		gcc-multilib \
 		g++-multilib \
 	&& apt-get clean \
