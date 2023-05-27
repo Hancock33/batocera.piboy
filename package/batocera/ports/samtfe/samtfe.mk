@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on May 27, 2023
-SAMTFE_VERSION = 01a5fd33cc3681adb3c6bee584dd93a369c4f40f
+SAMTFE_VERSION = fccd0c0ddde8ed31138e44a80f5ed344b8600149
 SAMTFE_SITE = https://github.com/tx00100xt/SeriousSamClassic-VK.git
 SAMTFE_SITE_METHOD=git
 SAMTFE_GIT_SUBMODULES=YES
