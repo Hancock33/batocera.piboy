@@ -3,8 +3,8 @@
 # scummvm
 #
 ################################################################################
-# Version: Commits on May 21, 2023
-SCUMMVM_VERSION = 12da77457f00e49e0b3d8ed3929d8dc55515d127
+# Version: Commits on May 28, 2023
+SCUMMVM_VERSION = c7b2b9c33208fe01586c7cf660f507daa5ec7c72
 SCUMMVM_SITE = $(call github,scummvm,scummvm,$(SCUMMVM_VERSION))
 SCUMMVM_LICENSE = GPLv2
 SCUMMVM_DEPENDENCIES = sdl2 zlib jpeg libmpeg2 libogg libvorbis flac libmad libpng libtheora faad2 freetype
@@ -30,8 +30,6 @@ define SCUMMVM_ADD_VIRTUAL_KEYBOARD
     cp -f $(@D)/backends/vkeybd/packs/vkeybd_default.zip $(TARGET_DIR)/usr/share/scummvm
     cp -f $(@D)/backends/vkeybd/packs/vkeybd_small.zip $(TARGET_DIR)/usr/share/scummvm
     cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/scummvm/scummvm.keys $(TARGET_DIR)/usr/share/evmapy/
-	#Work around for now
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/scummvm/gamecontrollerdb.txt $(TARGET_DIR)/usr/share/scummvm/
 endef
 
 SCUMMVM_POST_INSTALL_TARGET_HOOKS += SCUMMVM_ADD_VIRTUAL_KEYBOARD

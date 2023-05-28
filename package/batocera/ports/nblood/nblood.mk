@@ -3,8 +3,8 @@
 # nblood
 #
 ################################################################################
-# Version: Commits on May 04, 2023
-NBLOOD_VERSION = 4ec6d500ee1dc01ff4fd516108eb48bd949c0e49
+# Version: Commits on May 27, 2023
+NBLOOD_VERSION = 6b9904be8c8ace975da31c2f20ee63610a501bff
 NBLOOD_SITE = https://github.com/nukeykt/NBlood.git
 
 NBLOOD_DEPENDENCIES = sdl2 flac libvpx
@@ -17,10 +17,6 @@ NBLOOD_BUILD_ARGS += HAVE_GTK2=0
 NBLOOD_BUILD_ARGS += LTO=0
 NBLOOD_BUILD_ARGS += PACKAGE_REPOSITORY=1
 NBLOOD_BUILD_ARGS += VC_REV=$(NBLOOD_VC_REV)
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
-    NBLOOD_BUILD_ARGS += USE_OPENGL=0
-endif
 
 define NBLOOD_BUILD_CMDS
     $(MAKE) $(TARGET_CONFIGURE_OPTS) $(NBLOOD_BUILD_ARGS) -C $(@D) blood

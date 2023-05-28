@@ -3,8 +3,8 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on May 21, 2023
-PCSX2_VERSION = 90a6088d61d95490e811f6df9c84aac6c2a11993
+# Version: Commits on May 28, 2023
+PCSX2_VERSION = 63a141abe63ec74c9f6e1632b09bb3e30eda327f
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
@@ -70,5 +70,13 @@ define PCSX2_EVMAPY
 endef
 
 PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_EVMAPY
+
+define PCSX2_TEXTURES
+	mkdir -p $(TARGET_DIR)/usr/pcsx2/bin/resources/textures
+	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/textures/ $(TARGET_DIR)/usr/pcsx2/bin/resources/
+endef
+
+PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_TEXTURES
+
 
 $(eval $(cmake-package))
