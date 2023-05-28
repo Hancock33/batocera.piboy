@@ -4534,6 +4534,21 @@ msgctxt "game_options"
 msgid "Full speed"
 msgstr "Plná rychlost"
 
+#. TRANSLATION: libretro/mupen64plus-next
+msgctxt "game_options"
+msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next
+msgctxt "game_options"
+msgid "PARALLEL-RDP UPSCALER"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next
+msgctxt "game_options"
+msgid "1x (Default)"
+msgstr "1x (Výchozí)"
+
 #. TRANSLATION: libretro/neocd
 msgctxt "game_options"
 msgid "Can change the language of some games."
@@ -11985,116 +12000,6 @@ msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Ukončení emulátoru"
 
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Stick Up"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Stick Down"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Stick Left"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Stick Right"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Stick Up"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Stick Down"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Stick Left"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Stick right"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Direction Pad Stick Up"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Direction Pad Stick Down"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Direction Pad Stick Left"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Direction Pad Stick Right"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Plus"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Minus"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Button B"
-msgstr "Tlačítko B"
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Button A"
-msgstr "Tlačítko A"
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Button Y"
-msgstr "Tlačítko Y"
-
-#. TRANSLATION: switch.ryujinx.keys
-msgctxt "keys_files"
-msgid "Button X"
-msgstr "Tlačítko X"
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Bumper"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Bumper"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Trigger"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Trigger"
-msgstr ""
-
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Start"
@@ -12250,22 +12155,17 @@ msgctxt "keys_files"
 msgid "Exit emulator using SDL"
 msgstr "Ukončení emulátoru pomocí SDL"
 
-#. TRANSLATION: switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Button Z"
-msgstr ""
-
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr "Odchod z Duckstation"
 
-#. TRANSLATION: psx.duckstation.keys
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Load State"
 msgstr "Načíst pozici"
 
-#. TRANSLATION: psx.duckstation.keys
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "Uložit pozici"
@@ -12300,7 +12200,7 @@ msgctxt "keys_files"
 msgid "Cycle through stretch modes"
 msgstr "Cyklus režimů protažení"
 
-#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys
+#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Snímek obrazovky"
@@ -12405,47 +12305,62 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Kliknutí myší"
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
-msgid "Emulator menu"
-msgstr ""
+msgid "Slot -"
+msgstr "Slot -"
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
-msgid "Quick save slot"
-msgstr ""
-
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Quick load slot"
-msgstr ""
-
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Select save slot number"
-msgstr ""
+msgid "Slot +"
+msgstr "Slot +"
 
 #. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Přetočit"
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Fast Forward"
+msgstr "Rychle vpřed"
+
+#. TRANSLATION: pspmini.ppsspp.keys
+msgctxt "keys_files"
+msgid "Emulator menu"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
+msgctxt "keys_files"
+msgid "Quick save slot"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
+msgctxt "keys_files"
+msgid "Quick load slot"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
+msgctxt "keys_files"
+msgid "Select save slot number"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Fast-forward"
 msgstr ""
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Rapid Fire"
 msgstr ""
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Enter on the menu"
 msgstr ""
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Back on the menu"
 msgstr ""
@@ -12600,6 +12515,22 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
+#~ msgctxt "keys_files"
+#~ msgid "Button B"
+#~ msgstr "Tlačítko B"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button A"
+#~ msgstr "Tlačítko A"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button Y"
+#~ msgstr "Tlačítko Y"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button X"
+#~ msgstr "Tlačítko X"
+
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
@@ -12726,20 +12657,8 @@ msgstr ""
 #~ msgstr "Restart hry"
 
 #~ msgctxt "keys_files"
-#~ msgid "Slot -"
-#~ msgstr "Slot -"
-
-#~ msgctxt "keys_files"
-#~ msgid "Slot +"
-#~ msgstr "Slot +"
-
-#~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
 #~ msgstr "Další disk (m3u)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Fast Forward"
-#~ msgstr "Rychle vpřed"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
@@ -13548,10 +13467,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Choose the screen size."
 #~ msgstr "Zvolte velikost obrazovky."
-
-#~ msgctxt "game_options"
-#~ msgid "1x (Default)"
-#~ msgstr "1x (Výchozí)"
 
 #~ msgctxt "game_options"
 #~ msgid "Choose the preferred screen layout."

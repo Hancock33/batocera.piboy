@@ -4053,6 +4053,15 @@ libretro:
                 choices:
                     "Original":   Original
                     "Full speed": Fullspeed
+            mupen64plus-parallel-rdp-upscaling:
+                group: ADVANCED OPTIONS
+                prompt: PARALLEL-RDP UPSCALER
+                description: Only applies when using Parallel-RDP as the chosen RDP Plugin.
+                choices:
+                    "1x (Default)": 1x
+                    "2x":           2x
+                    "4x":           4x
+                    "8x":           8x
     neocd:
       shared: [rewind, autosave]
       cfeatures:
@@ -8113,7 +8122,7 @@ openbor:
                 "Dot Matrix":     11
 pcsx2:
   features: [padtokeyboard, cheevos]
-  shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns]
   cfeatures:
         pcsx2_ratio:
             submenu: DISPLAY

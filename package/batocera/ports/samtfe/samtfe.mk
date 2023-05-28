@@ -3,8 +3,8 @@
 # samtfe
 #
 ################################################################################
-# Version: Commits on May 15, 2023
-SAMTFE_VERSION = 1cd1912f19b76cdcc43f65b4fc9bf36b41916524
+# Version: Commits on May 28, 2023
+SAMTFE_VERSION = 836ed2e76e81d161e58e3aabf0324c157d7e55f7
 SAMTFE_SITE = https://github.com/tx00100xt/SeriousSamClassic-VK.git
 SAMTFE_SITE_METHOD=git
 SAMTFE_GIT_SUBMODULES=YES
@@ -29,6 +29,7 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 SAMTFE_CONF_OPTS += -DRPI4=ON
 endif
 SAMTFE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DECC=$(HOST_DIR)/bin/ecc -DTFE=ON -GNinja
+SAMTFE_CONF_OPTS += -DImageMagick_EXECUTABLE_DIR=/usr/bin
 
 define SAMTFE_BUILD_CMDS
 	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(SAMTFE_BUILDDIR)

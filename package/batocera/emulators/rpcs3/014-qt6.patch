@@ -1,4 +1,4 @@
-From 0ace2c3164441b05c771aee76d64820933c05c52 Mon Sep 17 00:00:00 2001
+From 248c4cf8c3f7c299685b8b158e82bf8d102984ec Mon Sep 17 00:00:00 2001
 From: Megamouse <studienricky89@googlemail.com>
 Date: Sat, 22 May 2021 10:42:05 +0200
 Subject: [PATCH] Qt6 port
@@ -467,10 +467,10 @@ index e372c66506c..95fdb7eb414 100644
  endif()
  
 diff --git a/rpcs3/Emu/Cell/Modules/cellCamera.cpp b/rpcs3/Emu/Cell/Modules/cellCamera.cpp
-index 836ae106f3e..459929db2f8 100644
+index 7e6a631d47e..76a59c11c45 100644
 --- a/rpcs3/Emu/Cell/Modules/cellCamera.cpp
 +++ b/rpcs3/Emu/Cell/Modules/cellCamera.cpp
-@@ -1904,7 +1904,6 @@ bool camera_context::on_handler_state(camera_handler_base::camera_handler_state
+@@ -1891,7 +1891,6 @@ bool camera_context::on_handler_state(camera_handler_base::camera_handler_state
  {
  	switch (state)
  	{
@@ -669,7 +669,7 @@ index 42c8667312e..b5d0de202d3 100644
  				sys_log.notice("get_scaled_image scaled image: path='%s', width=%d, height=%d", path, width, height);
  			}
 diff --git a/rpcs3/rpcs3.vcxproj b/rpcs3/rpcs3.vcxproj
-index 3d915b1eaad..04268325c66 100644
+index dd6818ca488..579561824c7 100644
 --- a/rpcs3/rpcs3.vcxproj
 +++ b/rpcs3/rpcs3.vcxproj
 @@ -1,4 +1,4 @@
@@ -742,7 +742,7 @@ index 3d915b1eaad..04268325c66 100644
        </Command>
      </PostBuildEvent>
      <PostBuildEvent>
-@@ -755,7 +756,7 @@
+@@ -763,7 +764,7 @@
      <ClCompile Include="rpcs3qt\table_item_delegate.cpp" />
      <ClCompile Include="rpcs3qt\tooltips.cpp" />
      <ClCompile Include="rpcs3qt\update_manager.cpp" />
@@ -751,7 +751,7 @@ index 3d915b1eaad..04268325c66 100644
      <ClCompile Include="rpcs3qt\uuid.cpp" />
      <ClCompile Include="rpcs3qt\vfs_dialog_path_widget.cpp" />
      <ClCompile Include="rpcs3qt\vfs_dialog_usb_input.cpp" />
-@@ -1464,7 +1465,7 @@
+@@ -1482,7 +1483,7 @@
        <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\QTGeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
        <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\QTGeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DWITH_DISCORD_RPC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_WINEXTRAS_LIB -DQT_CONCURRENT_LIB -D%(PreprocessorDefinitions)  "-I.\..\3rdparty\wolfssl\wolfssl" "-I.\..\3rdparty\curl\curl\include" "-I.\..\3rdparty\libusb\libusb\libusb" "-I$(VULKAN_SDK)\Include" "-I.\..\3rdparty\XAudio2Redist\include" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I$(QTDIR)\mkspecs\win32-msvc2015" "-I.\QTGeneratedFiles\$(ConfigurationName)" "-I.\QTGeneratedFiles" "-I$(QTDIR)\include\QtWinExtras" "-I$(QTDIR)\include\QtConcurrent"</Command>
      </CustomBuild>
@@ -761,7 +761,7 @@ index 3d915b1eaad..04268325c66 100644
        <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
        <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing %(Identity)...</Message>
 diff --git a/rpcs3/rpcs3.vcxproj.filters b/rpcs3/rpcs3.vcxproj.filters
-index 11aebfff590..9b7b2161a1a 100644
+index 76d205b0866..4de7e725a58 100644
 --- a/rpcs3/rpcs3.vcxproj.filters
 +++ b/rpcs3/rpcs3.vcxproj.filters
 @@ -807,7 +807,7 @@
@@ -773,7 +773,7 @@ index 11aebfff590..9b7b2161a1a 100644
        <Filter>Io\camera</Filter>
      </ClCompile>
      <ClCompile Include="rpcs3qt\qt_camera_error_handler.cpp">
-@@ -1154,7 +1154,7 @@
+@@ -1166,7 +1166,7 @@
      <ClInclude Include="QTGeneratedFiles\ui_patch_creator_dialog.h">
        <Filter>Generated Files</Filter>
      </ClInclude>
@@ -783,10 +783,10 @@ index 11aebfff590..9b7b2161a1a 100644
      </ClInclude>
      <ClInclude Include="rpcs3qt\qt_camera_handler.h">
 diff --git a/rpcs3/rpcs3qt/CMakeLists.txt b/rpcs3/rpcs3qt/CMakeLists.txt
-index c25f35d6429..e2369198d9e 100644
+index a505c92d6c1..e26752e1909 100644
 --- a/rpcs3/rpcs3qt/CMakeLists.txt
 +++ b/rpcs3/rpcs3qt/CMakeLists.txt
-@@ -67,7 +67,7 @@ set(SRC_FILES
+@@ -68,7 +68,7 @@ set(SRC_FILES
      progress_indicator.cpp
      qt_camera_error_handler.cpp
      qt_camera_handler.cpp
@@ -795,7 +795,7 @@ index c25f35d6429..e2369198d9e 100644
      qt_music_error_handler.cpp
      qt_music_handler.cpp
      qt_utils.cpp
-@@ -146,7 +146,7 @@ target_compile_definitions(rpcs3_ui PRIVATE WIN32_LEAN_AND_MEAN)
+@@ -147,7 +147,7 @@ target_compile_definitions(rpcs3_ui PRIVATE WIN32_LEAN_AND_MEAN)
  
  target_link_libraries(rpcs3_ui
      PUBLIC
@@ -1296,10 +1296,10 @@ index 762a8a045a4..321e17479d6 100644
  	std::shared_ptr<gui_settings> m_gui_settings;
  	std::shared_ptr<persistent_settings> m_persistent_settings;
 diff --git a/rpcs3/rpcs3qt/main_window.cpp b/rpcs3/rpcs3qt/main_window.cpp
-index 15bc6ffe98d..ed373e5ce4d 100644
+index 3d52b88a672..756e4cff7b0 100644
 --- a/rpcs3/rpcs3qt/main_window.cpp
 +++ b/rpcs3/rpcs3qt/main_window.cpp
-@@ -155,7 +155,7 @@ bool main_window::Init([[maybe_unused]] bool with_cli_boot)
+@@ -156,7 +156,7 @@ bool main_window::Init([[maybe_unused]] bool with_cli_boot)
  	ui->toolbar_start->setEnabled(enable_play_last);
  
  	// create tool buttons for the taskbar thumbnail
@@ -1308,7 +1308,7 @@ index 15bc6ffe98d..ed373e5ce4d 100644
  	m_thumb_bar = new QWinThumbnailToolBar(this);
  	m_thumb_bar->setWindow(windowHandle());
  
-@@ -1623,7 +1623,7 @@ void main_window::RepaintThumbnailIcons()
+@@ -1624,7 +1624,7 @@ void main_window::RepaintThumbnailIcons()
  		return gui::utils::get_colorized_icon(QPixmap::fromImage(gui::utils::get_opaque_image_area(path)), Qt::black, new_color);
  	};
  
@@ -1317,7 +1317,7 @@ index 15bc6ffe98d..ed373e5ce4d 100644
  	if (!m_thumb_bar) return;
  
  	m_icon_thumb_play = icon(":/Icons/play.png");
-@@ -1710,14 +1710,6 @@ void main_window::RepaintToolBarIcons()
+@@ -1711,14 +1711,6 @@ void main_window::RepaintToolBarIcons()
  
  	// resize toolbar elements
  
@@ -1332,7 +1332,7 @@ index 15bc6ffe98d..ed373e5ce4d 100644
  	const int tool_bar_height = ui->toolBar->sizeHint().height();
  
  	for (const auto& act : ui->toolBar->actions())
-@@ -1743,7 +1735,7 @@ void main_window::OnEmuRun(bool /*start_playtime*/) const
+@@ -1744,7 +1736,7 @@ void main_window::OnEmuRun(bool /*start_playtime*/) const
  
  	m_debugger_frame->EnableButtons(true);
  
@@ -1341,7 +1341,7 @@ index 15bc6ffe98d..ed373e5ce4d 100644
  	m_thumb_stop->setToolTip(stop_tooltip);
  	m_thumb_restart->setToolTip(restart_tooltip);
  	m_thumb_playPause->setToolTip(pause_tooltip);
-@@ -1766,7 +1758,7 @@ void main_window::OnEmuResume() const
+@@ -1767,7 +1759,7 @@ void main_window::OnEmuResume() const
  	const QString pause_tooltip = tr("Pause %0").arg(title);
  	const QString stop_tooltip = tr("Stop %0").arg(title);
  
@@ -1350,7 +1350,7 @@ index 15bc6ffe98d..ed373e5ce4d 100644
  	m_thumb_stop->setToolTip(stop_tooltip);
  	m_thumb_restart->setToolTip(restart_tooltip);
  	m_thumb_playPause->setToolTip(pause_tooltip);
-@@ -1785,7 +1777,7 @@ void main_window::OnEmuPause() const
+@@ -1786,7 +1778,7 @@ void main_window::OnEmuPause() const
  	const QString title = GetCurrentTitle();
  	const QString resume_tooltip = tr("Resume %0").arg(title);
  
@@ -1359,7 +1359,7 @@ index 15bc6ffe98d..ed373e5ce4d 100644
  	m_thumb_playPause->setToolTip(resume_tooltip);
  	m_thumb_playPause->setIcon(m_icon_thumb_play);
  #endif
-@@ -1811,7 +1803,7 @@ void main_window::OnEmuStop()
+@@ -1812,7 +1804,7 @@ void main_window::OnEmuStop()
  
  	ui->sysPauseAct->setText(Emu.IsReady() ? tr("&Play") : tr("&Resume"));
  	ui->sysPauseAct->setIcon(m_icon_play);
@@ -1368,7 +1368,7 @@ index 15bc6ffe98d..ed373e5ce4d 100644
  	m_thumb_playPause->setToolTip(play_tooltip);
  	m_thumb_playPause->setIcon(m_icon_thumb_play);
  #endif
-@@ -1833,7 +1825,7 @@ void main_window::OnEmuStop()
+@@ -1834,7 +1826,7 @@ void main_window::OnEmuStop()
  		ui->toolbar_start->setText(tr("Restart"));
  		ui->toolbar_start->setToolTip(restart_tooltip);
  		ui->sysRebootAct->setEnabled(true);
@@ -1377,7 +1377,7 @@ index 15bc6ffe98d..ed373e5ce4d 100644
  		m_thumb_restart->setToolTip(restart_tooltip);
  		m_thumb_restart->setEnabled(true);
  #endif
-@@ -1866,7 +1858,7 @@ void main_window::OnEmuReady() const
+@@ -1867,7 +1859,7 @@ void main_window::OnEmuReady() const
  	const QString play_tooltip = Emu.IsReady() ? tr("Play %0").arg(title) : tr("Resume %0").arg(title);
  
  	m_debugger_frame->EnableButtons(true);
@@ -1386,7 +1386,7 @@ index 15bc6ffe98d..ed373e5ce4d 100644
  	m_thumb_playPause->setToolTip(play_tooltip);
  	m_thumb_playPause->setIcon(m_icon_thumb_play);
  #endif
-@@ -1885,7 +1877,7 @@ void main_window::OnEmuReady() const
+@@ -1886,7 +1878,7 @@ void main_window::OnEmuReady() const
  void main_window::EnableMenus(bool enabled) const
  {
  	// Thumbnail Buttons
@@ -1395,7 +1395,7 @@ index 15bc6ffe98d..ed373e5ce4d 100644
  	m_thumb_playPause->setEnabled(enabled);
  	m_thumb_stop->setEnabled(enabled);
  	m_thumb_restart->setEnabled(enabled);
-@@ -2886,14 +2878,14 @@ void main_window::CreateDockWindows()
+@@ -2917,14 +2909,14 @@ void main_window::CreateDockWindows()
  
  			ui->toolbar_start->setEnabled(enable_play_buttons);
  			ui->sysPauseAct->setEnabled(enable_play_buttons);
@@ -1412,7 +1412,7 @@ index 15bc6ffe98d..ed373e5ce4d 100644
  				m_thumb_playPause->setToolTip(tooltip);
  #endif
  			}
-@@ -3246,7 +3238,7 @@ void main_window::dropEvent(QDropEvent* event)
+@@ -3277,7 +3269,7 @@ void main_window::dropEvent(QDropEvent* event)
  
  		for (const auto& path : drop_paths)
  		{
@@ -2539,10 +2539,10 @@ index 5b2e4517b5e..22b83dccd8a 100644
  		if (const int index = ui->cameraIdBox->findData(qstr(selected_camera)); index >= 0)
  		{
 diff --git a/rpcs3/rpcs3qt/trophy_manager_dialog.cpp b/rpcs3/rpcs3qt/trophy_manager_dialog.cpp
-index de187de6d60..d12a4e57adf 100644
+index 2d68fbd73ef..8cd9770f56f 100644
 --- a/rpcs3/rpcs3qt/trophy_manager_dialog.cpp
 +++ b/rpcs3/rpcs3qt/trophy_manager_dialog.cpp
-@@ -27,7 +27,6 @@
+@@ -29,7 +29,6 @@
  #include <QDir>
  #include <QMenu>
  #include <QDesktopServices>

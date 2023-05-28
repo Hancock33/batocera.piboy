@@ -12,10 +12,26 @@ eslog = get_logger(__name__)
 ppssppControlsIni  = batoceraFiles.CONF + '/ppsspp/PSP/SYSTEM/controls.ini'
 ppssppControlsInit = batoceraFiles.HOME_INIT + 'configs/ppsspp/PSP/SYSTEM/controls.ini'
 
+# This configgen is based on PPSSPP 1.5.4.
+# Therefore, all code/github references are valid at this version, and may not be valid with later updates
 
-# This configgen is based on PPSSPP 1.2.2. Therefore, all code/github references are valid at this version, and may not be valid with later updates
+# PPSSPP internal "NKCodes" https://github.com/hrydgard/ppsspp/blob/master/Common/Input/KeyCodes.h
 
-# PPSSPP internal "NKCodes" https://github.com/hrydgard/ppsspp/blob/master/ext/native/input/keycodes.h#L198
+# Hotkeys - %d-%d
+# DEVICE_ID_KEYBOARD = 1
+# NKCODE_F1 = 131,
+# NKCODE_F2 = 132,
+# NKCODE_F3 = 133,
+# NKCODE_F4 = 134,
+# NKCODE_F5 = 135,
+# NKCODE_F6 = 136,
+# NKCODE_F7 = 137,
+# NKCODE_F8 = 138,
+# NKCODE_F9 = 139,
+# NKCODE_F10 = 140,
+# NKCODE_F11 = 141,
+# NKCODE_F12 = 142,
+
 # Will later be used to convert SDL input ids
 NKCODE_BUTTON_1 = 188
 NKCODE_BUTTON_2 = 189
@@ -47,14 +63,12 @@ NKCODE_DPAD_DOWN = 20
 NKCODE_DPAD_LEFT = 21
 NKCODE_DPAD_RIGHT = 22
 
-# PPSSPP defined an offset for axis, see https://github.com/hrydgard/ppsspp/blob/eaeddc6c23cf86514f45199659ecc7396c91a3c0/Common/KeyMap.cpp#L694
+# PPSSPP defined an offset for axis
 AXIS_BIND_NKCODE_START = 4000
 
-# From https://github.com/hrydgard/ppsspp/blob/master/ext/native/input/input_state.h#L26
 DEVICE_ID_PAD_0 = 10
-# SDL 2.0.4 input ids conversion table to NKCodes
+# SDL2 input ids conversion table to NKCodes
 # See https://hg.libsdl.org/SDL/file/e12c38730512/include/SDL_gamecontroller.h#l262
-# See https://github.com/hrydgard/ppsspp/blob/master/SDL/SDLJoystick.h#L91
 sdlNameToNKCode = {
     "b" : NKCODE_BUTTON_2, # A
     "a" : NKCODE_BUTTON_3, # B
@@ -63,8 +77,6 @@ sdlNameToNKCode = {
     "select" : NKCODE_BUTTON_9, # SELECT/BACK
     "hotkey" : NKCODE_BACK, # GUIDE
     "start" : NKCODE_BUTTON_10, # START
-    # "7" : NKCODE_BUTTON_?, # L3, unsued
-    # "8" : NKCODE_BUTTON_?, # R3, unsued
     "pageup" : NKCODE_BUTTON_6, # L
     "pagedown" : NKCODE_BUTTON_5, # R
     "up" : NKCODE_DPAD_UP,
@@ -100,8 +112,6 @@ ppssppMapping =  { 'a' :             {'button': 'Circle'},
                    'pagedown' :      {'button': 'R'},
                    'joystick1left' : {'axis': 'An.Left'},
                    'joystick1up' :   {'axis': 'An.Up'},
-                   'joystick2left' : {'axis': 'RightAn.Left'},
-                   'joystick2up' :   {'axis': 'RightAn.Up'},
                    # The DPAD can be an axis (for gpio sticks for example) or a hat
                    'up' :            {'hat': 'Up',    'axis': 'Up',    'button': 'Up'},
                    'down' :          {'hat': 'Down',  'axis': 'Down',  'button': 'Down'},
@@ -110,52 +120,36 @@ ppssppMapping =  { 'a' :             {'button': 'Circle'},
                    # Need to add pseudo inputs as PPSSPP doesn't manually invert axises, and these are not referenced in es_input.cfg
                    'joystick1right' :{'axis': 'An.Right'},
                    'joystick1down' : {'axis': 'An.Down'},
-                   'joystick2right' :{'axis': 'RightAn.Right'},
-                   'joystick2down' : {'axis': 'RightAn.Down'}
 }
 
-
 # Create the controller configuration file
-# returns its name
 def generateControllerConfig(controller):
     # Set config file name
     configFileName = ppssppControlsIni
     Config = configparser.ConfigParser(interpolation=None)
     Config.optionxform = str
-    # We need to read the default file as PPSSPP needs the keyboard defs ine the controlls.ini file otherwise the GYUI won't repond
     Config.read(ppssppControlsInit)
     # As we start with the default ini file, no need to create the section
     section = "ControlMapping"
     if not Config.has_section(section):
         Config.add_section(section)
 
-    Config.set(section, 'Analog limiter', '1-60')
-    Config.set(section, 'RapidFire', '1-138')
-    Config.set(section, 'Fast-forward', '1-135')
-    Config.set(section, 'SpeedToggle', '1-137')
-    Config.set(section, 'Pause', '1-142,10-109,10-104')
-    Config.set(section, 'Rewind', '1-136')
-    Config.set(section, 'Save State', '1-132')
-    Config.set(section, 'Load State', '1-133')
-    Config.set(section, 'Next Slot', '1-134')
-    Config.set(section, 'DevMenu', '1-131')
-
     # Parse controller inputs
     for index in controller.inputs:
         input = controller.inputs[index]
         if input.name not in ppssppMapping or input.type not in ppssppMapping[input.name]:
             continue
-
+        
         var = ppssppMapping[input.name][input.type]
         padnum = controller.index
-
+        
         code = input.code
         if input.type == 'button':
             pspcode = sdlNameToNKCode[input.name]
             val = f"{DEVICE_ID_PAD_0 + padnum}-{pspcode}"
             val = optionValue(Config, section, var, val)
             Config.set(section, var, val)
-
+            
         elif input.type == 'axis':
             # Get the axis code
             nkAxisId = SDLJoyAxisMap[input.id]
@@ -165,7 +159,7 @@ def generateControllerConfig(controller):
             val = optionValue(Config, section, var, val)
             eslog.debug(f"Adding {var} to {val}")
             Config.set(section, var, val)
-
+            
             # Skip the rest if it's an axis dpad
             if input.name in [ 'up', 'down', 'left', 'right' ] : continue
             # Also need to do the opposite direction manually. The input.id is the same as up/left, but the direction is opposite
@@ -173,16 +167,12 @@ def generateControllerConfig(controller):
                 var = ppssppMapping['joystick1down'][input.type]
             elif input.name == 'joystick1left':
                 var = ppssppMapping['joystick1right'][input.type]
-            elif input.name == 'joystick2up':
-                var = ppssppMapping['joystick2down'][input.type]
-            elif input.name == 'joystick2left':
-                var = ppssppMapping['joystick2right'][input.type]
-
+                
             pspcode = axisToCode(nkAxisId, -int(input.value))
             val = f"{DEVICE_ID_PAD_0 + padnum}-{pspcode}"
             val = optionValue(Config, section, var, val)
             Config.set(section, var, val)
-
+        
         elif input.type == 'hat' and input.name in SDLHatMap:
             var = ppssppMapping[input.name][input.type]
             pspcode = SDLHatMap[input.name]
@@ -192,13 +182,22 @@ def generateControllerConfig(controller):
 
         if not os.path.exists(os.path.dirname(configFileName)):
                 os.makedirs(os.path.dirname(configFileName))
+    
+    # hotkey controls are called via evmapy.
+    # configuring specific hotkey in ppsspp is not simple without patching
+    Config.set(section, "Rewind",        "1-131")
+    Config.set(section, "Fast-forward",  "1-132")
+    Config.set(section, "Save State",    "1-133")
+    Config.set(section, "Load State",    "1-134")
+    Config.set(section, "Previous Slot", "1-135")
+    Config.set(section, "Next Slot",     "1-136")
+    Config.set(section, "Screenshot",    "1-137")
+    
     cfgfile = open(configFileName,'w+')
     Config.write(cfgfile)
     cfgfile.close()
     return configFileName
 
-
-# Simple rewrite of https://github.com/hrydgard/ppsspp/blob/eaeddc6c23cf86514f45199659ecc7396c91a3c0/Common/KeyMap.cpp#L747
 def axisToCode(axisId, direction) :
     if direction < 0:
         direction = 1

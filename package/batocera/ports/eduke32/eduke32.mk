@@ -3,8 +3,8 @@
 # eduke32
 #
 ################################################################################
-# Version: Commits on 14 Mar, 2023
-EDUKE32_VERSION = ef5f15e456e70a9a65a4623795b74a353c1157aa
+# Version: Commits on 27 May, 2023
+EDUKE32_VERSION = 7b83289542d69f28addd781196d3764e94f5919c
 EDUKE32_SITE = https://voidpoint.io/terminx/eduke32.git
 
 EDUKE32_DEPENDENCIES = sdl2 flac libvpx
@@ -30,8 +30,6 @@ define EDUKE32_INSTALL_TARGET_CMDS
     $(INSTALL) -D -m 0755 $(@D)/eduke32 $(TARGET_DIR)/usr/bin/eduke32
     $(INSTALL) -D -m 0755 $(@D)/voidsw  $(TARGET_DIR)/usr/bin/voidsw
     $(INSTALL) -D -m 0755 $(@D)/fury    $(TARGET_DIR)/usr/bin/ionfury
-    #copy sdl game contoller info
-    cp $(@D)/package/common/gamecontrollerdb.txt $(TARGET_DIR)/usr/share/gamecontrollerdb.txt
 endef
 
 $(eval $(generic-package))

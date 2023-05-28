@@ -1,8 +1,8 @@
 diff --git a/sound/pci/hda/patch_hdmi.c b/sound/pci/hda/patch_hdmi.c
-index 9ea633fe9339..8d76bd5bbba7 100644
+index 5c0b1a09fd57..9e411e66f8cd 100644
 --- a/sound/pci/hda/patch_hdmi.c
 +++ b/sound/pci/hda/patch_hdmi.c
-@@ -1970,6 +1970,14 @@ static int hdmi_add_cvt(struct hda_codec *codec, hda_nid_t cvt_nid)
+@@ -1981,6 +1981,14 @@ static int hdmi_add_cvt(struct hda_codec *codec, hda_nid_t cvt_nid)
  	if (err < 0)
  		return err;
  
@@ -17,7 +17,7 @@ index 9ea633fe9339..8d76bd5bbba7 100644
  	if (spec->num_cvts < ARRAY_SIZE(spec->cvt_nids))
  		spec->cvt_nids[spec->num_cvts] = cvt_nid;
  	spec->num_cvts++;
-@@ -2169,6 +2177,12 @@ static int hdmi_pcm_close(struct hda_pcm_stream *hinfo,
+@@ -2176,6 +2184,12 @@ static int hdmi_pcm_close(struct hda_pcm_stream *hinfo,
  
  	mutex_lock(&spec->pcm_lock);
  	if (hinfo->nid) {

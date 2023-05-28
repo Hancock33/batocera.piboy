@@ -1,8 +1,8 @@
 diff --git a/Quake/Makefile b/Quake/Makefile
-index ff2bb9c..c2c5e09 100644
+index beea5e1..ef58532 100644
 --- a/Quake/Makefile
 +++ b/Quake/Makefile
-@@ -5,21 +5,21 @@
+@@ -5,24 +5,24 @@
  # "make DO_USERDIRS=1" to enable user directories support
  
  # Enable/Disable user directories support
@@ -12,6 +12,9 @@ index ff2bb9c..c2c5e09 100644
  ### Enable/Disable SDL2
 -USE_SDL2=0
 +USE_SDL2=1
+ 
+ ### Do we need to link the math library?
+ LINK_M=1
  
  ### Enable/Disable codecs for streaming music support
  USE_CODEC_WAVE=1
@@ -29,7 +32,7 @@ index ff2bb9c..c2c5e09 100644
  USE_CODEC_UMX=0
  
  # which library to use for mp3 decoding: mad or mpg123
-@@ -102,8 +102,8 @@ SDL_CONFIG ?= sdl2-config
+@@ -107,8 +107,8 @@ SDL_CONFIG ?= sdl2-config
  else
  SDL_CONFIG ?= sdl-config
  endif

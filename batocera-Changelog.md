@@ -48,6 +48,8 @@
 - mednafen_psx settings
 - a bunch of libretro emulator settings not applying
 - P2 gun for GUN4IR now working properly
+- Light gun controls correctly mapped for various cores (SNES9x, Genesis Plus GX, Flycast, PCSX_reARMed, FBNeo)
+- Adstick arcade games for second player now working in MAME standalone (ex.: T2, Jurassic Park)
 ### Changed
 - Samba now allows wide symbolic links
 - Unicode support for x86 files systems
@@ -83,8 +85,8 @@
 - dosbox to v2023.03.31
 - citra to nightly-1877
 - amiberry to v5.6.0
-- ppsspp to v1.15.3
-- libretro-ppsspp to v1.15.3
+- ppsspp to v1.15.4
+- libretro-ppsspp to v1.15.4
 - scummvm to Apr 19, 2023 build
 - libretro-scummvm to Apr 19, 2023 build
 - wine proton to 8.0-2c
@@ -111,7 +113,7 @@
 - mesa3d update to 23.1.0
 - dxvk to 2.1
 - linux firmware to 20230404
-- linux kernel for x86_64 to 6.3.3
+- linux kernel for x86_64 to 6.3.4
 - linux kernel for RPI to 6.1.25
 - nvidia production driver to 530.41.03
 - llvm to 16.0.3

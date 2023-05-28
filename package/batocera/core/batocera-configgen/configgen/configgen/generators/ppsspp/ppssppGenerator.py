@@ -4,13 +4,11 @@ import Command
 import batoceraFiles
 from generators.Generator import Generator
 import shutil
-import os.path
+import os
 import configparser
-import codecs
+import controllersConfig
 from . import ppssppConfig
 from . import ppssppControllers
-
-ppssppControls = batoceraFiles.CONF + '/ppsspp/gamecontrollerdb.txt'
 
 class PPSSPPGenerator(Generator):
 
@@ -18,21 +16,24 @@ class PPSSPPGenerator(Generator):
     # Configure fba and return a command
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         ppssppConfig.writePPSSPPConfig(system)
-        # For each pad detected
+
+        # Remove the old gamecontrollerdb.txt file
+        dbpath = "/userdata/system/configs/ppsspp/gamecontrollerdb.txt"
+        if os.path.exists(dbpath):
+            os.remove(dbpath)
+        
+        # Generate the controls.ini
         for index in playersControllers :
             controller = playersControllers[index]
             # We only care about player 1
             if controller.player != "1":
                 continue
             ppssppControllers.generateControllerConfig(controller)
-            # TODO: python 3 - workawround to encode files in utf-8
-            cfgFile = codecs.open(ppssppControls, "w", "utf-8")
-            cfgFile.write(controller.generateSDLGameDBLine())
-            cfgFile.close()
             break
 
         # The command to run
-        commandArray = ["PPSSPP", rom]
+        commandArray = ['/usr/bin/PPSSPP']
+        commandArray.append(rom)
         commandArray.append("--fullscreen")
 
         # Adapt the menu size to low defenition
@@ -46,7 +47,20 @@ class PPSSPPGenerator(Generator):
 
         # The next line is a reminder on how to quit PPSSPP with just the HK
         #commandArray = ['/usr/bin/PPSSPP'], rom, "--escape-exit"]
-        return Command.Command(array=commandArray, env={"XDG_CONFIG_HOME":batoceraFiles.CONF, "XDG_RUNTIME_DIR":batoceraFiles.HOME_INIT, "PPSSPP_GAME_CONTROLLER_DB_PATH": ppssppControls})
+
+        # select the correct pad
+        nplayer = 1
+        for playercontroller, pad in sorted(playersControllers.items()):
+            if nplayer == 1:
+                commandArray.extend(["--njoy", str(pad.index)])
+            nplayer = nplayer +1
+
+        return Command.Command(
+            array=commandArray, 
+            env={"XDG_CONFIG_HOME":batoceraFiles.CONF, 
+            "XDG_RUNTIME_DIR":batoceraFiles.HOME_INIT,
+            "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)}
+        )
 
     @staticmethod
     def isLowResolution(gameResolution):

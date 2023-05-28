@@ -3,8 +3,8 @@
 # srb2
 #
 ################################################################################
-# Version: Commits on May 04, 2023
-SRB2_VERSION = 2c689bae5207babf95c54c0b5091a833ed212e92
+# Version: Commits on May 23, 2023
+SRB2_VERSION = eb1492fe6e501001a2271fa133bd76c0b0612715
 SRB2_SITE = $(call github,STJr,SRB2,$(SRB2_VERSION))
 
 SRB2_DEPENDENCIES = sdl2 sdl2_mixer libgme libopenmpt host-ninja

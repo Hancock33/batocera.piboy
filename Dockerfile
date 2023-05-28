@@ -6,6 +6,7 @@ RUN dpkg --add-architecture i386 && \
 		libncurses6:i386 \
 		libstdc++6:i386 \
 		build-essential \
+		libclang-dev \
 		cmake \
 		git \
 		libncurses6 \
@@ -36,6 +37,11 @@ RUN dpkg --add-architecture i386 && \
 		locales \
 		graphviz \
 		python3 \
+		smpq \
+		libsodium-dev \
+		libbz2-dev \
+		libgtest-dev \
+		spirv-tools \
 		gcc-multilib \
 		g++-multilib \
 	&& apt-get clean \

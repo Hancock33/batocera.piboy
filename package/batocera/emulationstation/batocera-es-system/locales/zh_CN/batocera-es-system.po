@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-05-13 01:29+0800\n"
+"PO-Revision-Date: 2023-05-20 23:20+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二\n"
 "Language: zh_CN\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -4486,6 +4486,21 @@ msgctxt "game_options"
 msgid "Full speed"
 msgstr "满速"
 
+#. TRANSLATION: libretro/mupen64plus-next
+msgctxt "game_options"
+msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next
+msgctxt "game_options"
+msgid "PARALLEL-RDP UPSCALER"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next
+msgctxt "game_options"
+msgid "1x (Default)"
+msgstr ""
+
 #. TRANSLATION: libretro/neocd
 msgctxt "game_options"
 msgid "Can change the language of some games."
@@ -7686,11 +7701,13 @@ msgid ""
 "Skips Vertical Blank Interrupts when lag is detected, allowing for smooth "
 "audio playback when emulation speed is not 100%."
 msgstr ""
+"当检测到模拟器运行缓慢时跳过垂直空白中断，以在模拟速度不为100%时实现平滑的音"
+"频播放."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "VBI SKIP"
-msgstr ""
+msgstr "垂直空白中断跳过"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
@@ -11832,116 +11849,6 @@ msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "退出模拟器"
 
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Stick Up"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Stick Down"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Stick Left"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Stick Right"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Stick Up"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Stick Down"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Stick Left"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Stick right"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Direction Pad Stick Up"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Direction Pad Stick Down"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Direction Pad Stick Left"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Direction Pad Stick Right"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Plus"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Minus"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Button B"
-msgstr "B键"
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Button A"
-msgstr "A键"
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Button Y"
-msgstr "Y键"
-
-#. TRANSLATION: switch.ryujinx.keys
-msgctxt "keys_files"
-msgid "Button X"
-msgstr "X键"
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Bumper"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Bumper"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Trigger"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Trigger"
-msgstr ""
-
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Start"
@@ -12097,22 +12004,17 @@ msgctxt "keys_files"
 msgid "Exit emulator using SDL"
 msgstr "使用SDL退出模拟器"
 
-#. TRANSLATION: switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Button Z"
-msgstr ""
-
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Exit Duckstation"
 msgstr "退出Duckstation"
 
-#. TRANSLATION: psx.duckstation.keys
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Load State"
 msgstr "载入状态"
 
-#. TRANSLATION: psx.duckstation.keys
+#. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Save State"
 msgstr "保存状态"
@@ -12147,7 +12049,7 @@ msgctxt "keys_files"
 msgid "Cycle through stretch modes"
 msgstr "在拉伸模式中循环"
 
-#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys
+#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "截图"
@@ -12252,47 +12154,62 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "鼠标点击"
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
-msgid "Emulator menu"
-msgstr ""
+msgid "Slot -"
+msgstr "插槽-"
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
-msgid "Quick save slot"
-msgstr ""
-
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Quick load slot"
-msgstr ""
-
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Select save slot number"
-msgstr ""
+msgid "Slot +"
+msgstr "插槽+"
 
 #. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "倒带"
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Fast Forward"
+msgstr "快进"
+
+#. TRANSLATION: pspmini.ppsspp.keys
+msgctxt "keys_files"
+msgid "Emulator menu"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
+msgctxt "keys_files"
+msgid "Quick save slot"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
+msgctxt "keys_files"
+msgid "Quick load slot"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
+msgctxt "keys_files"
+msgid "Select save slot number"
+msgstr ""
+
+#. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Fast-forward"
 msgstr ""
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Rapid Fire"
 msgstr ""
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Enter on the menu"
 msgstr ""
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Back on the menu"
 msgstr ""
@@ -12447,6 +12364,22 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
+#~ msgctxt "keys_files"
+#~ msgid "Button B"
+#~ msgstr "B键"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button A"
+#~ msgstr "A键"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button Y"
+#~ msgstr "Y键"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button X"
+#~ msgstr "X键"
+
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr "如果核心支持，存储过去的状态以实时回放."
@@ -12567,20 +12500,8 @@ msgstr ""
 #~ msgstr "重置游戏"
 
 #~ msgctxt "keys_files"
-#~ msgid "Slot -"
-#~ msgstr "插槽-"
-
-#~ msgctxt "keys_files"
-#~ msgid "Slot +"
-#~ msgstr "插槽+"
-
-#~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
 #~ msgstr "下一个光盘（m3u）"
-
-#~ msgctxt "keys_files"
-#~ msgid "Fast Forward"
-#~ msgstr "快进"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"

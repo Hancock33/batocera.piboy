@@ -1,18 +1,15 @@
 diff --git a/sound/soc/amd/vangogh/acp5x-mach.c b/sound/soc/amd/vangogh/acp5x-mach.c
-index eebf2650ad27..8b8b4e21313e 100644
+index e5bcd1e6eb73..d58f78bbab0b 100644
 --- a/sound/soc/amd/vangogh/acp5x-mach.c
 +++ b/sound/soc/amd/vangogh/acp5x-mach.c
-@@ -212,11 +212,11 @@ static const struct snd_soc_ops acp5x_cs35l41_play_ops = {
+@@ -27,8 +27,8 @@
+ #define ACP5X_NAU8821_FREQ_OUT		12288000
+ #define ACP5X_NAU8821_COMP_NAME 	"i2c-NVTN2020:00"
+ #define ACP5X_NAU8821_DAI_NAME		"nau8821-hifi"
+-#define ACP5X_CS35L41_COMP_LNAME	"spi-VLV1776:00"
+-#define ACP5X_CS35L41_COMP_RNAME	"spi-VLV1776:01"
++#define ACP5X_CS35L41_COMP_LNAME	"spi-VLV1776:01"
++#define ACP5X_CS35L41_COMP_RNAME	"spi-VLV1776:00"
+ #define ACP5X_CS35L41_DAI_NAME		"cs35l41-pcm"
  
- static struct snd_soc_codec_conf cs35l41_conf[] = {
- 	{
--		.dlc = COMP_CODEC_CONF("spi-VLV1776:00"),
-+		.dlc = COMP_CODEC_CONF("spi-VLV1776:01"),
- 		.name_prefix = "Left",
- 	},
- 	{
--		.dlc = COMP_CODEC_CONF("spi-VLV1776:01"),
-+		.dlc = COMP_CODEC_CONF("spi-VLV1776:00"),
- 		.name_prefix = "Right",
- 	},
- };
+ static unsigned long acp5x_machine_id;
