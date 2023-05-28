@@ -5128,13 +5128,14 @@ msu-md:
   manufacturer:         Sega
   release:              2020
   hardware:             console
-  extensions:           [md, zip, 7z]
+  extensions:           [cue, md, zip, 7z]
   platform:             genesis, megadrive
   group:                megadrive
   emulators:
     libretro:
-      genesisplusgx:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX] }
-      genesisplusgx-wide: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_WIDE] }
+      genesisplusgx:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX], incompatible_extensions: [cue]      } 
+      genesisplusgx-wide: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_WIDE], incompatible_extensions: [cue] }
+      picodrive:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PICODRIVE], incompatible_extensions: [md]           }
 
 naomi:
   name:                 Naomi
