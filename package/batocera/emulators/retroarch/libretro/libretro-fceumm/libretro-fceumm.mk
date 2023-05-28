@@ -3,8 +3,8 @@
 # libretro-fceumm
 #
 ################################################################################
-# Version: Commits on May 10, 2023
-LIBRETRO_FCEUMM_VERSION = 154ee559c0d5c592d2f5fc06380b94b7516ab899
+# Version: Commits on May 28, 2023
+LIBRETRO_FCEUMM_VERSION = ad2c71d8b6ce1f7b99b2d4cade3bd139b67f3efa
 LIBRETRO_FCEUMM_SITE = $(call github,libretro,libretro-fceumm,$(LIBRETRO_FCEUMM_VERSION))
 LIBRETRO_FCEUMM_LICENSE = GPLv2
 
