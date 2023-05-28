@@ -12046,116 +12046,6 @@ msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr ""
 
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Stick Up"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Stick Down"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Stick Left"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Stick Right"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Stick Up"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Stick Down"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Stick Left"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Stick right"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Direction Pad Stick Up"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Direction Pad Stick Down"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Direction Pad Stick Left"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Direction Pad Stick Right"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Plus"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Minus"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Button B"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Button A"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Button Y"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys
-msgctxt "keys_files"
-msgid "Button X"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Bumper"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Bumper"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Left Trigger"
-msgstr ""
-
-#. TRANSLATION: switch.ryujinx.keys, switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Right Trigger"
-msgstr ""
-
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Start"
@@ -12309,11 +12199,6 @@ msgstr ""
 #. TRANSLATION: moonlight.moonlight.keys
 msgctxt "keys_files"
 msgid "Exit emulator using SDL"
-msgstr ""
-
-#. TRANSLATION: switch.yuzu.keys
-msgctxt "keys_files"
-msgid "Button Z"
 msgstr ""
 
 #. TRANSLATION: psx.duckstation.keys
