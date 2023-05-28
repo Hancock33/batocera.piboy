@@ -1,0 +1,21 @@
+From 57f370b6bd4422ac03cfe66199881518af147198 Mon Sep 17 00:00:00 2001
+From: LittlePlanetCD <littleplanetcd1993@gmail.com>
+Date: Wed, 24 May 2023 14:33:40 -0500
+Subject: [PATCH] fix itembox content render
+
+---
+ SonicMania/Objects/Global/ItemBox.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/SonicMania/Objects/Global/ItemBox.c b/SonicMania/Objects/Global/ItemBox.c
+index a27a7f7b..2360ddf2 100644
+--- a/SonicMania/Objects/Global/ItemBox.c
++++ b/SonicMania/Objects/Global/ItemBox.c
+@@ -1205,6 +1205,7 @@ void ItemBox_EditorDraw(void)
+     self->inkEffect = INK_ALPHA;
+     self->alpha     = self->hidden ? 0x80 : 0x100;
+ 
++    RSDK.SetSpriteAnimation(ItemBox->aniFrames, 2, &self->contentsAnimator, true, self->type);
+     RSDK.DrawSprite(&self->boxAnimator, NULL, false);
+     RSDK.DrawSprite(&self->contentsAnimator, &self->contentsPos, false);
+ 
