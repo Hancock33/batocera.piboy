@@ -237,7 +237,7 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
             system.config["sdlvsync"] = '1'
         os.environ.update({'SDL_RENDER_VSYNC': system.config["sdlvsync"]})
 
-        os.environ.update({'PIPEWIRE_LATENCY': '1024/48000'})
+        #os.environ.update({'PIPEWIRE_LATENCY': '1024/48000'})
         os.environ.update({'QT_QPA_PLATFORM': 'xcb'})
         os.environ.update({'QT_XCB_NO_XI2': '1'})
 
