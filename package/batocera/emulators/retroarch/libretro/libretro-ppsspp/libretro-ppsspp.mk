@@ -3,8 +3,8 @@
 # libretro-ppsspp
 #
 ################################################################################
-# Version: Commits on May 27, 2023
-LIBRETRO_PPSSPP_VERSION = c533187e24a9cb587ec61e56140857c5e2864f98
+# Version: Commits on May 28, 2023
+LIBRETRO_PPSSPP_VERSION = 7912eef0b7d3bba822c8a23fed91b4312d3d5df8
 LIBRETRO_PPSSPP_SOURCE = ppsspp-$(LIBRETRO_PPSSPP_VERSION)-br1.tar.gz
 LIBRETRO_PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 LIBRETRO_PPSSPP_SITE_METHOD=git
