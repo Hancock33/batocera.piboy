@@ -1,4 +1,4 @@
-From 248c4cf8c3f7c299685b8b158e82bf8d102984ec Mon Sep 17 00:00:00 2001
+From c196f09833b447c0ec8816f921bde7116af46f05 Mon Sep 17 00:00:00 2001
 From: Megamouse <studienricky89@googlemail.com>
 Date: Sat, 22 May 2021 10:42:05 +0200
 Subject: [PATCH] Qt6 port
@@ -2539,7 +2539,7 @@ index 5b2e4517b5e..22b83dccd8a 100644
  		if (const int index = ui->cameraIdBox->findData(qstr(selected_camera)); index >= 0)
  		{
 diff --git a/rpcs3/rpcs3qt/trophy_manager_dialog.cpp b/rpcs3/rpcs3qt/trophy_manager_dialog.cpp
-index 2d68fbd73ef..8cd9770f56f 100644
+index aa070c900eb..14a680a5958 100644
 --- a/rpcs3/rpcs3qt/trophy_manager_dialog.cpp
 +++ b/rpcs3/rpcs3qt/trophy_manager_dialog.cpp
 @@ -29,7 +29,6 @@
