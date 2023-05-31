@@ -12,7 +12,7 @@ DOLPHIN_EMU_GIT_SUBMODULES = YES
 DOLPHIN_EMU_SUPPORTS_IN_SOURCE_BUILD = NO
 
 DOLPHIN_EMU_DEPENDENCIES = libevdev ffmpeg zlib libpng lzo libusb libcurl
-DOLPHIN_EMU_DEPENDENCIES += bluez5_utils hidapi xz host-xz sdl2 host-ninja
+DOLPHIN_EMU_DEPENDENCIES += bluez5_utils hidapi xz host-xz sdl2 qt6base qt6svg host-ninja
 
 DOLPHIN_EMU_CONF_OPTS  = -DCMAKE_BUILD_TYPE=Release -GNinja
 DOLPHIN_EMU_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
