@@ -3,8 +3,8 @@
 # flycast
 #
 ################################################################################
-# Version: Commits on May 26, 2023
-FLYCAST_VERSION = b92b7a3ece1b0e083f2b7e4193610f0d161b3387
+# Version: Commits on May 30, 2023
+FLYCAST_VERSION = c0a286532a4fc3134056e4c36522a0d9972e2bb3
 FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
@@ -16,7 +16,8 @@ FLYCAST_CONF_OPTS += -DLIBRETRO=OFF -DGDB_SERVER=OFF
 FLYCAST_CONF_OPTS += -DGIT_VERSION="$(shell echo $(FLYCAST_VERSION) | cut -c 1-7)"
 FLYCAST_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -Wno-error=array-bounds"
 FLYCAST_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -Wno-error=array-bounds"
-FLYCAST_CONF_OPTS  = -DCMAKE_BUILD_TYPE=Release -GNinja
+FLYCAST_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+FLYCAST_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja
 #FLYCAST_CONF_OPTS += -DCMAKE_VERBOSE_MAKEFILE=ON
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
