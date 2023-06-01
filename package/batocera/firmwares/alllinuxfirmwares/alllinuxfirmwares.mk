@@ -9,7 +9,7 @@ ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.gz
 ALLLINUXFIRMWARES_SITE = https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot
 
 # exclude some dirs not required on batocera
-ALLLINUXFIRMWARES_REMOVE_DIRS = $(@D)/liquidio $(@D)/netronome
+ALLLINUXFIRMWARES_REMOVE_DIRS = $(@D)/liquidio $(@D)/netronome $(@D)/mellanox $(@D)/dpaa2 $(@D)/mrvl/prestera $(@D)/qcom 
 
 ifeq ($(BR2_arm)$(BR2_aarch64),y)
     ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/*-fw-usb-*.sbcf \
@@ -21,20 +21,16 @@ ifeq ($(BR2_arm)$(BR2_aarch64),y)
 									$(@D)/c*.bin \
 									$(@D)/cxgb4 \
 									$(@D)/cypress \
-									$(@D)/dpaa2 \
 									$(@D)/i915 \
 									$(@D)/intel \
 									$(@D)/iwlwifi* \
 									$(@D)/LICENCE* \
 									$(@D)/LICENSE* \
-									$(@D)/mellanox \
-									$(@D)/mrvl/prestera \
 									$(@D)/myri* \
 									$(@D)/nvidia \
 									$(@D)/phanfw.bin \
 									$(@D)/q*.bin \
 									$(@D)/qat_* \
-									$(@D)/qcom \
 									$(@D)/qed \
 									$(@D)/ql2* \
 									$(@D)/radeon \
@@ -45,10 +41,7 @@ endif
 ifeq ($(BR2_x86_i686)$(BR2_x86_64),y)
     ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/bnx2x \
 									$(@D)/LICENCE* \
-									$(@D)/LICENSE* \
-									$(@D)/mellanox \
-									$(@D)/mrvl/prestera \
-									$(@D)/qcom
+									$(@D)/LICENSE*
 endif
 
 ifeq ($(BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI)$(BR2_PACKAGE_EXTRALINUXFIRMWARES),y)

@@ -3,8 +3,8 @@
 # dolphin-emu
 #
 ################################################################################
-# Version: Commits on May 28, 2023
-DOLPHIN_EMU_VERSION = afbc604f425ac74863c2f5908713ff8675537889
+# Version: Commits on Jun 01, 2023
+DOLPHIN_EMU_VERSION = 82d27fa7a86e8cda54200a9561fff2ea36dbff10
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
 DOLPHIN_EMU_SITE_METHOD = git
 DOLPHIN_EMU_LICENSE = GPLv2+
@@ -12,7 +12,7 @@ DOLPHIN_EMU_GIT_SUBMODULES = YES
 DOLPHIN_EMU_SUPPORTS_IN_SOURCE_BUILD = NO
 
 DOLPHIN_EMU_DEPENDENCIES = libevdev ffmpeg zlib libpng lzo libusb libcurl
-DOLPHIN_EMU_DEPENDENCIES += bluez5_utils hidapi xz host-xz sdl2 host-ninja
+DOLPHIN_EMU_DEPENDENCIES += bluez5_utils hidapi xz host-xz sdl2 qt6base qt6svg host-ninja
 
 DOLPHIN_EMU_CONF_OPTS  = -DCMAKE_BUILD_TYPE=Release -GNinja
 DOLPHIN_EMU_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF

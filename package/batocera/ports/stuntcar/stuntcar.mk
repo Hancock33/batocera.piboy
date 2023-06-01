@@ -3,8 +3,8 @@
 # stuntcar
 #
 ################################################################################
-# Version: Commits on Jul 18, 2021
-STUNTCAR_VERSION = f90f3851a44872c874baade0aad7206ce860f1c8
+# Version: Commits on May 29, 2023
+STUNTCAR_VERSION = 50037b89c682f00a45942eee10583c8db063ac3f
 STUNTCAR_SITE = $(call github,ptitSeb,stuntcarremake,$(STUNTCAR_VERSION))
 
 STUNTCAR_DEPENDENCIES = sdl2 sdl2_mixer sdl2_ttf openal
