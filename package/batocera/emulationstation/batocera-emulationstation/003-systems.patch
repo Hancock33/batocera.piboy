@@ -43,7 +43,7 @@ index 9f4af151..62f2d4aa 100644
 -		{ "jaguar",					ATARI_JAGUAR },
 -		{ "atarijaguar",			ATARI_JAGUAR },
 -		{ "atarijaguarcd",			ATARI_JAGUAR_CD },
--		{ "atarixe",				ATARI_XE },
+-		{ "xegs",				ATARI_XE },
 -		{ "bbc",					BBC_MICRO},
 +		{ "atari2600super",			ATARI2600SUPER },
 +		{ "atlus",					ATLUS },
