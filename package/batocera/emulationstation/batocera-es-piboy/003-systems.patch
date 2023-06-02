@@ -296,7 +296,7 @@ index 9f4af151..62f2d4aa 100644
 +		{ "arduous",				ARDUBOY },
 +		{ "astrocde",				ASTROCADE },
 +		{ "jaguar",					ATARI_JAGUAR },
-+		{ "atarixe",				ATARI_XE },
++		{ "xegs",					ATARI_XE },
 +		{ "cannonball",				CANNONBALL },
 +		{ "cavestory",				CAVESTORY },
 +		{ "pet",					COMMODORE_PET },
