@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jun 03, 2023
-DEVILUTIONX_VERSION = 4bdc61dd307c91d9d7006850dcdec40da760cb1a
+DEVILUTIONX_VERSION = 1cb367ab9145cc55274bc66b6c233f150019c161
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_SUBDIR = dist-src
