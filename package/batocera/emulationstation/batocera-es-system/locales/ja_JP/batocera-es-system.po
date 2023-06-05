@@ -2992,7 +2992,7 @@ msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr "HIGH SCORE プラグイン"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, duckstation, duckstation, ...
+#. TRANSLATION: libretro/mame, libretro/mame, duckstation, duckstation, flycast, ...
 msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "使用する (標準)"
@@ -3007,12 +3007,12 @@ msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "コイン投入効果音プラグイン"
 
-#. TRANSLATION: libretro/mame, cemu, cemu, cemu, cemu, ...
+#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
 msgctxt "game_options"
 msgid "Enabled"
 msgstr "使用（有効）"
 
-#. TRANSLATION: libretro/mame, cemu, cemu, cemu, cemu, ...
+#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
 msgctxt "game_options"
 msgid "Disabled (Default)"
 msgstr "無効（通常）"
@@ -4178,7 +4178,7 @@ msgctxt "game_options"
 msgid "Allows up to 5 or 8 controllers in supported games."
 msgstr "多人数対応ゲームで5～8のコントローラーを使用できます"
 
-#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro
+#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, pcsx2
 msgctxt "game_options"
 msgid "MULTITAP"
 msgstr "マルチタップ"
@@ -9243,6 +9243,26 @@ msgctxt "game_options"
 msgid "USE AVX2"
 msgstr ""
 
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Allows up to 8 controllers in supported games."
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Maximum 2 Players (Default)"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Maximum 4 Players"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Maximum 8 Players"
+msgstr ""
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid ""
@@ -12457,22 +12477,6 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
-#~ msgctxt "keys_files"
-#~ msgid "Button B"
-#~ msgstr "ボタン B"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button A"
-#~ msgstr "ボタン A"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Y"
-#~ msgstr "ボタン Y"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button X"
-#~ msgstr "ボタン X"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
@@ -12637,6 +12641,22 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "Hat Right"
 #~ msgstr "ハットキー　右"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button A"
+#~ msgstr "ボタン A"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button B"
+#~ msgstr "ボタン B"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button X"
+#~ msgstr "ボタン X"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button Y"
+#~ msgstr "ボタン Y"
 
 #~ msgctxt "keys_files"
 #~ msgid "Button Start"
