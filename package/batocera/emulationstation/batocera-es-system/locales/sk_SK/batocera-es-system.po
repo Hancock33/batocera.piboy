@@ -3009,7 +3009,7 @@ msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr "Plugin najvyššieho skóre"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, duckstation, duckstation, ...
+#. TRANSLATION: libretro/mame, libretro/mame, duckstation, duckstation, flycast, ...
 msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "Povolené (predvolené)"
@@ -3025,12 +3025,12 @@ msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "Plugin zvuku mince"
 
-#. TRANSLATION: libretro/mame, cemu, cemu, cemu, cemu, ...
+#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
 msgctxt "game_options"
 msgid "Enabled"
 msgstr "Povolené"
 
-#. TRANSLATION: libretro/mame, cemu, cemu, cemu, cemu, ...
+#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
 msgctxt "game_options"
 msgid "Disabled (Default)"
 msgstr "Zakázané (predvolené)"
@@ -4201,7 +4201,7 @@ msgctxt "game_options"
 msgid "Allows up to 5 or 8 controllers in supported games."
 msgstr "Umožní 5 až 8 ovládačov v podporovaných hrách."
 
-#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro
+#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, pcsx2
 msgctxt "game_options"
 msgid "MULTITAP"
 msgstr "MULTITAP"
@@ -9292,6 +9292,26 @@ msgctxt "game_options"
 msgid "USE AVX2"
 msgstr ""
 
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Allows up to 8 controllers in supported games."
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Maximum 2 Players (Default)"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Maximum 4 Players"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Maximum 8 Players"
+msgstr ""
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid ""
@@ -12514,22 +12534,6 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
-#~ msgctxt "keys_files"
-#~ msgid "Button B"
-#~ msgstr "Tlačidlo B"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button A"
-#~ msgstr "Tlačidlo A"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Y"
-#~ msgstr "Tlačidlo Y"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button X"
-#~ msgstr "Tlačidlo X"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
@@ -12697,6 +12701,22 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "Hat Right"
 #~ msgstr "Klobúk vpravo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button A"
+#~ msgstr "Tlačidlo A"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button B"
+#~ msgstr "Tlačidlo B"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button X"
+#~ msgstr "Tlačidlo X"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button Y"
+#~ msgstr "Tlačidlo Y"
 
 #~ msgctxt "keys_files"
 #~ msgid "Button Start"

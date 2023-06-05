@@ -3475,7 +3475,7 @@ msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr "고득점 플러그인"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, duckstation, duckstation, ...
+#. TRANSLATION: libretro/mame, libretro/mame, duckstation, duckstation, flycast, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Enabled (Default)"
@@ -3493,13 +3493,13 @@ msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "코인 사운드 플러그인"
 
-#. TRANSLATION: libretro/mame, cemu, cemu, cemu, cemu, ...
+#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Enabled"
 msgstr "사용"
 
-#. TRANSLATION: libretro/mame, cemu, cemu, cemu, cemu, ...
+#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Disabled (Default)"
@@ -4858,7 +4858,7 @@ msgctxt "game_options"
 msgid "Allows up to 5 or 8 controllers in supported games."
 msgstr "지원되는 게임에서 최대 5개 또는 8개의 컨트롤러를 허용합니다."
 
-#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro
+#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, pcsx2
 #, fuzzy
 msgctxt "game_options"
 msgid "MULTITAP"
@@ -10569,6 +10569,26 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "USE AVX2"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Allows up to 8 controllers in supported games."
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Maximum 2 Players (Default)"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Maximum 4 Players"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Maximum 8 Players"
 msgstr ""
 
 #. TRANSLATION: ppsspp

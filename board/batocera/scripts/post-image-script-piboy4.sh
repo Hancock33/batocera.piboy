@@ -9,7 +9,7 @@
 
 ##### constants ################
 BATOCERA_BINARIES_DIR="${BINARIES_DIR}/batocera"
-GENIMAGE_TMP="/run/qemu/genimage.tmp"
+GENIMAGE_TMP="/tmp/genimage.tmp"
 ################################
 
 ##### find images to build #####

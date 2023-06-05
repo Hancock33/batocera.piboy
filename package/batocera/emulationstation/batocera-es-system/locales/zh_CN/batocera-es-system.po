@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-05-20 23:20+0800\n"
+"PO-Revision-Date: 2023-05-24 23:50+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二\n"
 "Language: zh_CN\n"
@@ -2976,7 +2976,7 @@ msgctxt "game_options"
 msgid "HIGH SCORE PLUGIN"
 msgstr "高分插件"
 
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, duckstation, duckstation, ...
+#. TRANSLATION: libretro/mame, libretro/mame, duckstation, duckstation, flycast, ...
 msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "启用(默认)"
@@ -2991,12 +2991,12 @@ msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "硬币声音插件"
 
-#. TRANSLATION: libretro/mame, cemu, cemu, cemu, cemu, ...
+#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
 msgctxt "game_options"
 msgid "Enabled"
 msgstr "启用"
 
-#. TRANSLATION: libretro/mame, cemu, cemu, cemu, cemu, ...
+#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
 msgctxt "game_options"
 msgid "Disabled (Default)"
 msgstr "禁用(默认)"
@@ -4159,7 +4159,7 @@ msgctxt "game_options"
 msgid "Allows up to 5 or 8 controllers in supported games."
 msgstr "在支持的游戏中最多允许5或8个控制器."
 
-#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro
+#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, pcsx2
 msgctxt "game_options"
 msgid "MULTITAP"
 msgstr "多点定位"
@@ -4489,17 +4489,17 @@ msgstr "满速"
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
-msgstr ""
+msgstr "仅在使用并行RDP作为所选RDP插件时适用."
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "PARALLEL-RDP UPSCALER"
-msgstr ""
+msgstr "并行RDP升频器"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "1x (Default)"
-msgstr ""
+msgstr "1x (默认)"
 
 #. TRANSLATION: libretro/neocd
 msgctxt "game_options"
@@ -9197,6 +9197,26 @@ msgctxt "game_options"
 msgid "USE AVX2"
 msgstr ""
 
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Allows up to 8 controllers in supported games."
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Maximum 2 Players (Default)"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Maximum 4 Players"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Maximum 8 Players"
+msgstr ""
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid ""
@@ -12364,22 +12384,6 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
-#~ msgctxt "keys_files"
-#~ msgid "Button B"
-#~ msgstr "B键"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button A"
-#~ msgstr "A键"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button Y"
-#~ msgstr "Y键"
-
-#~ msgctxt "keys_files"
-#~ msgid "Button X"
-#~ msgstr "X键"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr "如果核心支持，存储过去的状态以实时回放."
@@ -12542,6 +12546,22 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "Hat Right"
 #~ msgstr "右"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button A"
+#~ msgstr "A键"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button B"
+#~ msgstr "B键"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button X"
+#~ msgstr "X键"
+
+#~ msgctxt "keys_files"
+#~ msgid "Button Y"
+#~ msgstr "Y键"
 
 #~ msgctxt "keys_files"
 #~ msgid "Button Start"

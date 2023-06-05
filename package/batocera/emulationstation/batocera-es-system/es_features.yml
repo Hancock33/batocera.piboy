@@ -3412,15 +3412,15 @@ libretro:
                       prompt:      32K RAM EXPANSION
                       description: 32k RAM expansion card installed
                       choices:
-                          "Enabled (Default)": 1
-                          "Disabled":          0
+                          "Disabled (Default)": 0
+                          "Enabled":            1
                   ti99_speech:
                       group: ADVANCED OPTIONS
                       prompt:      SPEECH MODULE
                       description: Speech module installed
                       choices:
-                          "Enabled (Default)": 1
                           "Disabled":          0
+                          "Enabled (Default)": 1
                   altromtype:
                       group: ADVANCED OPTIONS
                       prompt:      MEDIA TYPE
@@ -8314,6 +8314,13 @@ pcsx2:
             choices:
                 "Off":      0
                 "On":       1
+        pcsx2_multitap:
+            prompt: MULTITAP
+            description: Allows up to 8 controllers in supported games.
+            choices:
+                "Maximum 2 Players (Default)": 2
+                "Maximum 4 Players":           4
+                "Maximum 8 Players":           8
 ppsspp:
   features: [padtokeyboard]
   shared: [videomode, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, rewind]
