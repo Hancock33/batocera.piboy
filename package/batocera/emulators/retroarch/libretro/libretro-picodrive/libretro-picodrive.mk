@@ -41,7 +41,7 @@ define LIBRETRO_PICODRIVE_BUILD_CMDS
 
 	$(MAKE) -C $(@D)/cpu/cyclone CONFIG_FILE=$(@D)/cpu/cyclone_config.h
 	cd $(@D) && $(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C  $(@D) -f Makefile.libretro platform="$(LIBRETRO_PICODRIVE_PLATFORM)" \
-		REVISION=" $(shell echo $(LIBRETRO_PICODRIVE_VERSION) | cut -c 1-7)"
+		GIT_REVISION=" $(shell echo $(LIBRETRO_PICODRIVE_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_PICODRIVE_INSTALL_TARGET_CMDS
