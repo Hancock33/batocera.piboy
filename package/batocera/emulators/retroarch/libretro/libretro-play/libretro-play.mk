@@ -3,8 +3,8 @@
 # libretro-play
 #
 ################################################################################
-# Version: Commits on May 31, 2023
-LIBRETRO_PLAY_VERSION = 599bcfb8405ed43fb5db18d4a2eb8a5db124b745
+# Version: Commits on Jun 02, 2023
+LIBRETRO_PLAY_VERSION = 331b14c1745d749d29b57855f7bcd99a41ec6457
 LIBRETRO_PLAY_SOURCE = play-$(LIBRETRO_PLAY_VERSION)-br1.tar.gz
 LIBRETRO_PLAY_SITE = https://github.com/jpd002/Play-.git
 LIBRETRO_PLAY_LICENSE = BSD
