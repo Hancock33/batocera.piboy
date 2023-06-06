@@ -3,8 +3,8 @@
 # dosbox-staging
 #
 ################################################################################
-# Version: Commits on Jun 04, 2023
-DOSBOX_STAGING_VERSION = 143e1de48ea14036294093a0014383cea0c5fa86
+# Version: Commits on Jun 05, 2023
+DOSBOX_STAGING_VERSION = 98b9804c2417a399b60d3445d9d0326d7cbdaa22
 DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGING_VERSION))
 DOSBOX_STAGING_DEPENDENCIES = alsa-lib sdl2 sdl2_net sdl2_image fluidsynth zlib libpng libogg libvorbis opus opusfile slirp iir speexdsp
 DOSBOX_STAGING_LICENSE = GPLv2
@@ -35,7 +35,7 @@ DOSBOX_STAGING_CXXFLAGS += -march=armv8-a+crc -mcpu=cortex-a72 -mtune=cortex-a72
 DOSBOX_STAGING_CONF_OPTS += -Duse_opengl=false
 endif
 
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S905GEN3),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S905GEN3)$(BR2_PACKAGE_BATOCERA_TARGET_RK3568),y)
 DOSBOX_STAGING_CFLAGS   += -march=armv8-a+crc -mtune=cortex-a55
 DOSBOX_STAGING_CXXFLAGS += -march=armv8-a+crc -mtune=cortex-a55
 DOSBOX_STAGING_CONF_OPTS += -Duse_opengl=false
