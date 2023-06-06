@@ -3,8 +3,8 @@
 # citra
 #
 ################################################################################
-# Version: Commits on Jun 05, 2023
-CITRA_VERSION = 54c499ed5b840102f5d25321d7015d25e6bf0ba2
+# Version: Commits on Jun 03, 2023
+CITRA_VERSION = 52f88f8fb49154cf6389981c8d208de6019702ae
 CITRA_SITE = https://github.com/citra-emu/citra-nightly
 CITRA_SITE_METHOD=git
 CITRA_GIT_SUBMODULES=YES
