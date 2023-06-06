@@ -9341,21 +9341,43 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Allows up to 8 controllers in supported games."
-msgstr ""
+msgstr "Permite até 8 comandos em jogos suportados."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Maximum 2 Players (Default)"
-msgstr ""
+msgstr "Máximo 2 jogadores (padrão)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Maximum 4 Players"
-msgstr ""
+msgstr "Máximo 4 jogadores"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Maximum 8 Players"
+msgstr "Máximo 8 jogadores"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Allows user replaceable textures."
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "TEXTURE REPLACEMENTS"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid ""
+"Necessary for some guns to replace fog textures as a workaround in Time "
+"Crisis - Crisis Zone."
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "TIME CRISIS FOG HACK"
 msgstr ""
 
 #. TRANSLATION: ppsspp
