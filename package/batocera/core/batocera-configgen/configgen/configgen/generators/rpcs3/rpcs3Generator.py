@@ -235,6 +235,13 @@ class Rpcs3Generator(Generator):
         with open(batoceraFiles.rpcs3config, "w") as file:
             yaml.dump(rpcs3ymlconfig, file, default_flow_style=False)
 
+        # copy icon files to config
+        icon_source = '/usr/share/rpcs3/Icons/'
+        icon_target = batoceraFiles.CONF + '/rpcs3/Icons'
+        if not os.path.exists(icon_target):
+            os.makedirs(icon_target)
+        shutil.copytree(icon_source, icon_target, dirs_exist_ok=True, copy_function=shutil.copy2)
+
         # determine the rom name
         if rom.endswith(".psn"):
             with open(rom) as fp:

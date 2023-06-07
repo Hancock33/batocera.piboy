@@ -10926,17 +10926,23 @@ msgstr "UTILIZAR AUDIO DSP"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
-msgid ""
-"Use the Zink (OpenGL to Vulkan) renderer to fix graphics issues. May cause "
-"performance loss."
+msgid "Increase to 128 MiB for debug or homebrew applications."
 msgstr ""
-"Usa el renderizador Zink (OpenGL a Vulkan) para solucionar problemas "
-"gráficos. Puede causar pérdida de rendimiento."
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
-msgid "USE ZINK RENDERER"
-msgstr "USAR ZINK RENDERER"
+msgid "SYSTEM MEMORY"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "64MiB (Default)"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "128MiB"
+msgstr ""
 
 #. TRANSLATION: sonic2013
 msgctxt "game_options"
@@ -12865,6 +12871,18 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance Rápido"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use the Zink (OpenGL to Vulkan) renderer to fix graphics issues. May "
+#~ "cause performance loss."
+#~ msgstr ""
+#~ "Usa el renderizador Zink (OpenGL a Vulkan) para solucionar problemas "
+#~ "gráficos. Puede causar pérdida de rendimiento."
+
+#~ msgctxt "game_options"
+#~ msgid "USE ZINK RENDERER"
+#~ msgstr "USAR ZINK RENDERER"
 
 #~ msgctxt "game_options"
 #~ msgid "Distorts the output to fill the display fully."
