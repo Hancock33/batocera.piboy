@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jun 06, 2023 (branch@0255)
-LIBRETRO_MAME_VERSION = 88ec2001c84cc1a9c90a5fd127ec3675dbc3c7ce
+LIBRETRO_MAME_VERSION = a0d0d0f03a7c0180cc915c6e606be713b64f236f
 #LIBRETRO_MAME_SITE = $(call github,libretro,mame,$(LIBRETRO_MAME_VERSION)) use temporary repo
 LIBRETRO_MAME_SITE = $(call github,sonninnos,mame,$(LIBRETRO_MAME_VERSION))
 LIBRETRO_MAME_LICENSE = MAME
