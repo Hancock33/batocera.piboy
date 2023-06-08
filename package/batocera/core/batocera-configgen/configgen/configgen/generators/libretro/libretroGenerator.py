@@ -248,12 +248,12 @@ class LibretroGenerator(Generator):
             elif "zaero" in directory_path:
                 system.config['core'] = "vitaquake2-zaero"
             # set the updated core name
+            retroarchCore = batoceraFiles.retroarchCores + system.config['core'] + "_libretro.so"
+            commandArray = [batoceraFiles.batoceraBins[system.config['emulator']], "-L", retroarchCore, "--config", system.config['configfile']]
         else:
             commandArray = [batoceraFiles.batoceraBins[system.config['emulator']], "-L", retroarchCore, "--config", system.config['configfile']]
 
-
         configToAppend = []
-
 
         # Custom configs - per core
         customCfg = f"{batoceraFiles.retroarchRoot}/{system.name}.cfg"
