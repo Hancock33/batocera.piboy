@@ -50,7 +50,7 @@ find ${TARGET_DIR}/usr -type f -name ".files-list*.before" -exec rm {} \;
 find ${TARGET_DIR}/usr -type f -name ".stamp_*" -exec rm {} \;
 
 # remove static libraries
-find ${TARGET_DIR}/usr -type f -name ".a" -exec rm {} \;
+find ${TARGET_DIR}/usr -type f -name "*.a" -exec rm {} \;
 
 # we don't want default xorg files
 rm -f "${TARGET_DIR}/etc/X11/xorg.conf"  || exit 1
