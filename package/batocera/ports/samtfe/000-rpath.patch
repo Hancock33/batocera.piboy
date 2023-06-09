@@ -76,3 +76,4 @@ index 3adf412..48d9179 100644
          target_link_libraries(MakeFONT "m")
          target_link_libraries(MakeFONT "dl")
          target_link_libraries(MakeFONT "pthread")
+
