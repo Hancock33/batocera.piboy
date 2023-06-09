@@ -3,10 +3,9 @@
 # libretro-mame
 #
 ################################################################################
-# Version: Commits on Jun 06, 2023 (branch@0255)
-LIBRETRO_MAME_VERSION = a0d0d0f03a7c0180cc915c6e606be713b64f236f
-#LIBRETRO_MAME_SITE = $(call github,libretro,mame,$(LIBRETRO_MAME_VERSION)) use temporary repo
-LIBRETRO_MAME_SITE = $(call github,sonninnos,mame,$(LIBRETRO_MAME_VERSION))
+# Version: Commits on Jun 09, 2023 (branch@0255)
+LIBRETRO_MAME_VERSION = 0df2de0e2d0fe5006d33b6be2e076e39007ee470
+LIBRETRO_MAME_SITE = $(call github,libretro,mame,$(LIBRETRO_MAME_VERSION))
 LIBRETRO_MAME_LICENSE = MAME
 
 # Limit number of jobs not to eat too much RAM....
