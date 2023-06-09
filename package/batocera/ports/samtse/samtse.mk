@@ -3,8 +3,8 @@
 # samtse
 #
 ################################################################################
-# Version: Commits on Jun 09, 2023
-SAMTSE_VERSION = 7f0c60eb7e0dea667c5810f7f52346d9e2692490
+# Version: Commits on Jun 04, 2023
+SAMTSE_VERSION = aa5859cbfeb557dcdc027be2749d9104b7f7f07c
 SAMTSE_SITE = https://github.com/tx00100xt/SeriousSamClassic-VK.git
 SAMTSE_SITE_METHOD=git
 SAMTSE_GIT_SUBMODULES=YES
@@ -22,12 +22,8 @@ SAMTSE_POST_EXTRACT_HOOKS += SAMTSE_CP_WEAPONS
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 	SAMTSE_CONF_OPTS += -DRPI4=ON
 endif
-SAMTSE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DECC=$(HOST_DIR)/bin/ecc -DTSE=ON -GNinja
+SAMTSE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DECC=$(HOST_DIR)/bin/ecc -DTSE=ON
 SAMTSE_CONF_OPTS += -DImageMagick_EXECUTABLE_DIR=/usr/bin
-
-define SAMTSE_BUILD_CMDS
-	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(SAMTSE_BUILDDIR)
-endef
 
 define SAMTSE_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/share/game_assets/samtse
