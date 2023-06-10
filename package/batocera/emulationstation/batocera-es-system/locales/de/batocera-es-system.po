@@ -12945,6 +12945,14 @@ msgstr ""
 #~ msgstr "Schnelles Vorspulen"
 
 #~ msgctxt "game_options"
+#~ msgid "Double the rendering resolution."
+#~ msgstr "Verdoppellung der Rendering Auflösung."
+
+#~ msgctxt "game_options"
+#~ msgid "On (Speed hack)"
+#~ msgstr "Ein (Geschwindigkeitshack)"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Use the Zink (OpenGL to Vulkan) renderer to fix graphics issues. May "
 #~ "cause performance loss."

@@ -12804,6 +12804,14 @@ msgstr ""
 #~ msgstr "Intercanviar pantalles"
 
 #~ msgctxt "game_options"
+#~ msgid "Double the rendering resolution."
+#~ msgstr "Dobla la resolució de renderitzat."
+
+#~ msgctxt "game_options"
+#~ msgid "On (Speed hack)"
+#~ msgstr "Engegat (Truc de velocitat)"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Use the Zink (OpenGL to Vulkan) renderer to fix graphics issues. May "
 #~ "cause performance loss."

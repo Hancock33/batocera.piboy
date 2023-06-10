@@ -12896,6 +12896,14 @@ msgstr ""
 #~ msgstr "Avanço Rápido"
 
 #~ msgctxt "game_options"
+#~ msgid "Double the rendering resolution."
+#~ msgstr "Dobra a resolução de renderização."
+
+#~ msgctxt "game_options"
+#~ msgid "On (Speed hack)"
+#~ msgstr "Ligado (truque de velocidade)"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Use the Zink (OpenGL to Vulkan) renderer to fix graphics issues. May "
 #~ "cause performance loss."

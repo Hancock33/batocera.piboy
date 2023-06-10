@@ -12797,6 +12797,14 @@ msgstr ""
 #~ msgstr "Rýchlo dopredu"
 
 #~ msgctxt "game_options"
+#~ msgid "Double the rendering resolution."
+#~ msgstr "Zdvojiť renderovacie rozlíšenie."
+
+#~ msgctxt "game_options"
+#~ msgid "On (Speed hack)"
+#~ msgstr "Zapnuté (rýchlostný hack)"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Use the Zink (OpenGL to Vulkan) renderer to fix graphics issues. May "
 #~ "cause performance loss."

@@ -12537,6 +12537,10 @@ msgstr ""
 #~ msgstr "AUTO HOOGTE"
 
 #~ msgctxt "game_options"
+#~ msgid "On (Speed hack)"
+#~ msgstr "Aan (Speed Hack)"
+
+#~ msgctxt "game_options"
 #~ msgid "Recompiler (Fastest)"
 #~ msgstr "Recompiler (Snelst)"
 
