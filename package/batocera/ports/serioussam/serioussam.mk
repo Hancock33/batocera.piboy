@@ -27,7 +27,7 @@ SERIOUSSAM_CONF_OPTS += -DImageMagick_EXECUTABLE_DIR=/usr/bin
 define SERIOUSSAM_INSTALL_TARGET_CMDS
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/samtfe/*.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/serioussam/*.keys $(TARGET_DIR)/usr/share/evmapy
 	# TFE Assets
 	rm -rf $(TARGET_DIR)/usr/share/game_assets/samtfe
 	mkdir -p $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
