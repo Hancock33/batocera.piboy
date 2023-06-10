@@ -1,13 +1,13 @@
 diff --git a/src/common/fs/path_util.cpp b/src/common/fs/path_util.cpp
-index defa3e918..babdef6b7 100644
+index d71cfacc6..a9590f610 100644
 --- a/src/common/fs/path_util.cpp
 +++ b/src/common/fs/path_util.cpp
-@@ -107,19 +107,20 @@ private:
-             yuzu_path_config = GetDataDirectory("XDG_CONFIG_HOME") / YUZU_DIR;
+@@ -113,19 +113,19 @@ public:
          }
  #endif
--
+ 
 -        GenerateYuzuPath(YuzuPath::YuzuDir, yuzu_path);
+-        GenerateYuzuPath(YuzuPath::AmiiboDir, yuzu_path / AMIIBO_DIR);
 -        GenerateYuzuPath(YuzuPath::CacheDir, yuzu_path_cache);
 -        GenerateYuzuPath(YuzuPath::ConfigDir, yuzu_path_config);
 -        GenerateYuzuPath(YuzuPath::DumpDir, yuzu_path / DUMP_DIR);
@@ -19,9 +19,8 @@ index defa3e918..babdef6b7 100644
 -        GenerateYuzuPath(YuzuPath::SDMCDir, yuzu_path / SDMC_DIR);
 -        GenerateYuzuPath(YuzuPath::ShaderDir, yuzu_path / SHADER_DIR);
 -        GenerateYuzuPath(YuzuPath::TASDir, yuzu_path / TAS_DIR);
-+        
-+
 +        GenerateYuzuPath(YuzuPath::YuzuDir, "/userdata/saves/switch/yuzu");
++        GenerateYuzuPath(YuzuPath::AmiiboDir, "/userdata/bios/switch/amiibo");
 +        GenerateYuzuPath(YuzuPath::CacheDir, "/userdata/system/cache/yuzu");
 +        GenerateYuzuPath(YuzuPath::ConfigDir, "/userdata/system/configs/yuzu");
 +        GenerateYuzuPath(YuzuPath::DumpDir, "/userdata/saves/switch/yuzu/dump");
@@ -35,4 +34,4 @@ index defa3e918..babdef6b7 100644
 +        GenerateYuzuPath(YuzuPath::TASDir, "/userdata/saves/switch/yuzu/tas");
      }
  
-     ~PathManagerImpl() = default;
+ private:
