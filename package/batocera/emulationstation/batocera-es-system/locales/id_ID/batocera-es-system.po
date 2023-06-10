@@ -12676,6 +12676,14 @@ msgstr ""
 #~ msgstr "GUNAKAN KONFIGURASI JOYSTICK GZDOOM"
 
 #~ msgctxt "game_options"
+#~ msgid "Double the rendering resolution."
+#~ msgstr "Gandakan resolusi rendering."
+
+#~ msgctxt "game_options"
+#~ msgid "On (Speed hack)"
+#~ msgstr "AKTTIFKAN (PERETASAN KECEPATAN)"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Use the Zink (OpenGL to Vulkan) renderer to fix graphics issues. May "
 #~ "cause performance loss."

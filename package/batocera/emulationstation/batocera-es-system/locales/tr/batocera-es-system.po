@@ -12707,6 +12707,14 @@ msgstr ""
 #~ msgstr "GZDOOM JOYSTICK YAPILANDIRMASINI KULLAN"
 
 #~ msgctxt "game_options"
+#~ msgid "Double the rendering resolution."
+#~ msgstr "İşleme çözünürlüğünü ikiye katla."
+
+#~ msgctxt "game_options"
+#~ msgid "On (Speed hack)"
+#~ msgstr "Açık (Hız hack'i)"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Use the Zink (OpenGL to Vulkan) renderer to fix graphics issues. May "
 #~ "cause performance loss."

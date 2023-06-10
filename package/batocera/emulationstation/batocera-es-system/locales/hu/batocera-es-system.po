@@ -12592,5 +12592,9 @@ msgstr ""
 #~ msgstr "Gyors előre"
 
 #~ msgctxt "game_options"
+#~ msgid "On (Speed hack)"
+#~ msgstr "Be (Sebesség hack)"
+
+#~ msgctxt "game_options"
 #~ msgid "USE ZINK RENDERER"
 #~ msgstr "ZNK RENDERELŐ HASZNÁLATA"

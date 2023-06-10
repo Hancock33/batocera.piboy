@@ -14238,6 +14238,16 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "game_options"
+#~ msgid "Double the rendering resolution."
+#~ msgstr "렌더링 해상도를 두 배로 높입니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "On (Speed hack)"
+#~ msgstr "켜기(스피드 해킹)"
+
+#, fuzzy
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Use the Zink (OpenGL to Vulkan) renderer to fix graphics issues. May "
 #~ "cause performance loss."
