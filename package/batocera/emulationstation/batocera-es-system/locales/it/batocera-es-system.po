@@ -3010,10 +3010,10 @@ msgctxt "game_options"
 msgid "Rotated 4-Way Stick (Q*Bert)"
 msgstr "Manopola Rotata a 4-direzioni (Q*Bert)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
 msgctxt "game_options"
-msgid "Emable or disable high score saving"
-msgstr "Abilita o disabilita il salvataggio punteggi massimi"
+msgid "Enable or disable high score saving"
+msgstr "Abilita o disabilita il salvataggio del tabellone di punteggio"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
 msgctxt "game_options"
@@ -7890,8 +7890,8 @@ msgstr "PRESENTAZIONE THREADED"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Auto (Match Window)"
-msgstr "Auto (Adatta alla finestra)"
+msgid "Match Window"
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7910,8 +7910,8 @@ msgstr "UPSCALING INTEGER"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "ENabling will smooth out the image."
-msgstr "Abilitato sfuma l'immagine"
+msgid "Enabling will smooth out the image."
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7920,8 +7920,10 @@ msgstr "UPSCALING LINEARE"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Fills the screen regardless of the aspect ratio."
-msgstr "Riempe lo schermo senza tener conto delle proporzioni."
+msgid ""
+"Fills the screen regardless of the aspect ratio. Doesn't work with Integer "
+"Upscaling."
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -10454,11 +10456,6 @@ msgstr "Cartucce Interton VC 4000"
 
 #. TRANSLATION: mame/vitaquake3
 msgctxt "game_options"
-msgid "Enable or disable high score saving"
-msgstr "Abilita o disabilita il salvataggio del tabellone di punteggio"
-
-#. TRANSLATION: mame/vitaquake3
-msgctxt "game_options"
 msgid ""
 "Enable mouse input for trackballs, spinners, lightguns (if no gun "
 "connected), and similar controls"
@@ -12602,14 +12599,6 @@ msgid "Open"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid "Double the rendering resolution."
-#~ msgstr "Raddopia la risoluzione di rendering."
-
-#~ msgctxt "game_options"
-#~ msgid "On (Speed hack)"
-#~ msgstr "On (Hack per la velocita')"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Archivia gli stati per riavvolgere in realtime, se il core lo supporta."
@@ -12629,6 +12618,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "ANALOG JOYSTICK DEADZONE"
 #~ msgstr "ZONA DI ESCLUSIONE JOYSTICK ANALOGICO"
+
+#~ msgctxt "game_options"
+#~ msgid "Emable or disable high score saving"
+#~ msgstr "Abilita o disabilita il salvataggio punteggi massimi"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -12694,6 +12687,18 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "ALTEZZA AUTO"
+
+#~ msgctxt "game_options"
+#~ msgid "Auto (Match Window)"
+#~ msgstr "Auto (Adatta alla finestra)"
+
+#~ msgctxt "game_options"
+#~ msgid "ENabling will smooth out the image."
+#~ msgstr "Abilitato sfuma l'immagine"
+
+#~ msgctxt "game_options"
+#~ msgid "Fills the screen regardless of the aspect ratio."
+#~ msgstr "Riempe lo schermo senza tener conto delle proporzioni."
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (Default)"

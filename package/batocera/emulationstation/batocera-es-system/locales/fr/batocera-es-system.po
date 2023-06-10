@@ -3018,10 +3018,10 @@ msgctxt "game_options"
 msgid "Rotated 4-Way Stick (Q*Bert)"
 msgstr "Rotated 4-Way Stick (Q*Bert)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
 msgctxt "game_options"
-msgid "Emable or disable high score saving"
-msgstr "Activer ou désactiver l'enregistrement des meilleurs scores"
+msgid "Enable or disable high score saving"
+msgstr "Active/désactive la sauvegarde des scores"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
 msgctxt "game_options"
@@ -7913,8 +7913,8 @@ msgstr "RENDU THREADÉ"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Auto (Match Window)"
-msgstr "Auto (même que la fenêtre)"
+msgid "Match Window"
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7933,8 +7933,8 @@ msgstr "MISE À L'ÉCHELLE PAR ENTIERS"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "ENabling will smooth out the image."
-msgstr "Activer pour lisser l'image."
+msgid "Enabling will smooth out the image."
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7943,8 +7943,10 @@ msgstr "MISE À L'ÉCHELLE LINÉAIRE"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Fills the screen regardless of the aspect ratio."
-msgstr "Remplir l'écran peu importe le ratio d'écran."
+msgid ""
+"Fills the screen regardless of the aspect ratio. Doesn't work with Integer "
+"Upscaling."
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -10500,11 +10502,6 @@ msgstr "Cartouches Interton VC 4000"
 
 #. TRANSLATION: mame/vitaquake3
 msgctxt "game_options"
-msgid "Enable or disable high score saving"
-msgstr "Active/désactive la sauvegarde des scores"
-
-#. TRANSLATION: mame/vitaquake3
-msgctxt "game_options"
 msgid ""
 "Enable mouse input for trackballs, spinners, lightguns (if no gun "
 "connected), and similar controls"
@@ -12674,6 +12671,10 @@ msgstr ""
 #~ msgstr "ZONE MORTE DU JOYSTICK ANALOGIQUE"
 
 #~ msgctxt "game_options"
+#~ msgid "Emable or disable high score saving"
+#~ msgstr "Activer ou désactiver l'enregistrement des meilleurs scores"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
 #~ msgstr ""
@@ -12687,14 +12688,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Installer la carte pour lire les fichiers images disque (Mac IIx "
 #~ "seulement). 4 Mo de mémoire RAM minimum recommandée."
-
-#~ msgctxt "game_options"
-#~ msgid "Double the rendering resolution."
-#~ msgstr "Double la résolution de rendu."
-
-#~ msgctxt "game_options"
-#~ msgid "On (Speed hack)"
-#~ msgstr "Activé (Speed hack)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -12743,6 +12736,18 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "HAUTEUR AUTOMATIQUE"
+
+#~ msgctxt "game_options"
+#~ msgid "Auto (Match Window)"
+#~ msgstr "Auto (même que la fenêtre)"
+
+#~ msgctxt "game_options"
+#~ msgid "ENabling will smooth out the image."
+#~ msgstr "Activer pour lisser l'image."
+
+#~ msgctxt "game_options"
+#~ msgid "Fills the screen regardless of the aspect ratio."
+#~ msgstr "Remplir l'écran peu importe le ratio d'écran."
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (Default)"
