@@ -9,7 +9,7 @@ WINE_LUTRIS_SOURCE = wine-lutris-$(WINE_LUTRIS_VERSION).tar.gz
 WINE_LUTRIS_SITE = $(call github,wine-mirror,wine,$(WINE_LUTRIS_VERSION))
 WINE_LUTRIS_LICENSE = LGPL-2.1+
 WINE_LUTRIS_DEPENDENCIES = host-bison host-flex host-wine-lutris
-HOST_WINE_LUTRIS_DEPENDENCIES = host-bison host-flex
+HOST_WINE_LUTRIS_DEPENDENCIES = host-bison host-flex host-clang host-lld
 
 # That create folder for install
 define WINE_LUTRIS_CREATE_WINE_FOLDER
@@ -408,38 +408,27 @@ HOST_WINE_LUTRIS_CONF_OPTS += \
 	--disable-win16 \
 	--without-alsa \
 	--without-capi \
-	--without-cms \
 	--without-coreaudio \
-	--without-faudio \
 	--without-cups \
-	--without-curses \
 	--without-dbus \
 	--without-fontconfig \
 	--without-gphoto \
-	--without-glu \
 	--without-gnutls \
-	--without-gsm \
 	--without-gssapi \
 	--without-gstreamer \
-	--without-hal \
-	--without-jpeg \
 	--without-krb5 \
-	--without-ldap \
-	--without-mpg123 \
+	--without-mingw \
 	--without-netapi \
-	--without-openal \
 	--without-opencl \
 	--without-opengl \
 	--without-osmesa \
 	--without-oss \
 	--without-pcap \
 	--without-pulse \
-	--without-png \
 	--without-sane \
 	--without-sdl \
-	--without-tiff \
-	--without-v4l \
-	--without-vkd3d \
+	--without-usb \
+	--without-v4l2 \
 	--without-vulkan \
 	--without-x \
 	--without-xcomposite \
@@ -447,14 +436,11 @@ HOST_WINE_LUTRIS_CONF_OPTS += \
 	--without-xinerama \
 	--without-xinput \
 	--without-xinput2 \
-	--without-xml \
 	--without-xrandr \
 	--without-xrender \
 	--without-xshape \
 	--without-xshm \
-	--without-xslt \
-	--without-xxf86vm \
-	--without-zlib
+	--without-xxf86vm
 
 $(eval $(autotools-package))
 $(eval $(host-autotools-package))
