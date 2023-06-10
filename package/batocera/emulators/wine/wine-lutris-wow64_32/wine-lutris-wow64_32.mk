@@ -12,11 +12,11 @@ WINE_LUTRIS_WOW64_32_DEPENDENCIES = host-bison host-flex host-wine-lutris
 HOST_WINE_LUTRIS_WOW64_32_DEPENDENCIES = host-bison host-flex host-clang host-lld
 
 # That create folder for install
-define WINE_LUTRIS_CREATE_WINE_FOLDER
+define WINE_LUTRIS_WOW64_32_CREATE_WINE_FOLDER
 	mkdir -p $(TARGET_DIR)/usr/wine/lutris
 endef
 
-WINE_LUTRIS_PRE_CONFIGURE_HOOKS += WINE_LUTRIS_CREATE_WINE_FOLDER
+WINE_LUTRIS_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_LUTRIS_WOW64_32_CREATE_WINE_FOLDER
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_LUTRIS_WOW64_32_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
@@ -27,45 +27,24 @@ WINE_LUTRIS_WOW64_32_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMP
 	--without-gettext \
 	--without-gettextpo \
 	--without-gphoto \
-	--without-gsm \
-	--without-hal \
 	--without-opencl \
 	--without-oss \
 	--prefix=/usr/wine/lutris \
 	--exec-prefix=/usr/wine/lutris
 
-	# breaks build... ???
-	# --with-wine64=/build/output/images/wow64_32_part64/
-
 # batocera
-# gcrypt
-ifeq ($(BR2_PACKAGE_LIBGCRYPT),y)
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-gcrypt
-WINE_LUTRIS_WOW64_32_DEPENDENCIES += libgcrypt
+ifeq ($(BR2_x86_64),y)
+	WINE_LUTRIS_WOW64_32_CONF_OPTS += --enable-win64
 else
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-gcrypt
+	WINE_LUTRIS_WOW64_32_CONF_OPTS += --disable-win64
 endif
 
-# Add FAudio if available
-ifeq ($(BR2_PACKAGE_FAUDIO),y)
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-faudio
-WINE_LUTRIS_WOW64_32_DEPENDENCIES += faudio
-else
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-faudio
-endif
 # Add Vulkan if available
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
 WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-vulkan
 WINE_LUTRIS_WOW64_32_DEPENDENCIES += vulkan-headers vulkan-loader
 else
 WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-vulkan
-endif
-# Add VKD3D if available
-ifeq ($(BR2_PACKAGE_VKD3D)$(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yyy)
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-vkd3d
-WINE_LUTRIS_WOW64_32_DEPENDENCIES += vkd3d
-else
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-vkd3d
 endif
 # TODO Add DXVK if available
 
@@ -135,32 +114,11 @@ else
 WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-gstreamer
 endif
 
-ifeq ($(BR2_PACKAGE_JPEG),y)
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-jpeg
-WINE_LUTRIS_WOW64_32_DEPENDENCIES += jpeg
-else
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-jpeg
-endif
-
-ifeq ($(BR2_PACKAGE_LCMS2),y)
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-cms
-WINE_LUTRIS_WOW64_32_DEPENDENCIES += lcms2
-else
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-cms
-endif
-
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
 WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-opengl
 WINE_LUTRIS_WOW64_32_DEPENDENCIES += libgl
 else
 WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-opengl
-endif
-
-ifeq ($(BR2_PACKAGE_LIBGLU),y)
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-glu
-WINE_LUTRIS_WOW64_32_DEPENDENCIES += libglu
-else
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-glu
 endif
 
 ifeq ($(BR2_PACKAGE_LIBKRB5),y)
@@ -175,64 +133,6 @@ WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-pcap
 WINE_LUTRIS_WOW64_32_DEPENDENCIES += libpcap
 else
 WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-pcap
-endif
-
-ifeq ($(BR2_PACKAGE_LIBPNG),y)
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-png
-WINE_LUTRIS_WOW64_32_DEPENDENCIES += libpng
-else
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-png
-endif
-
-ifeq ($(BR2_PACKAGE_LIBV4L),y)
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-v4l
-WINE_LUTRIS_WOW64_32_DEPENDENCIES += libv4l
-else
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-v4l
-endif
-
-ifeq ($(BR2_PACKAGE_LIBXML2),y)
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-xml
-WINE_LUTRIS_WOW64_32_DEPENDENCIES += libxml2
-WINE_LUTRIS_WOW64_32_CONF_ENV += XML2_CONFIG=$(STAGING_DIR)/usr/bin/xml2-config
-else
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-xml
-endif
-
-ifeq ($(BR2_PACKAGE_LIBXSLT),y)
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-xslt
-WINE_LUTRIS_WOW64_32_DEPENDENCIES += libxslt
-WINE_LUTRIS_WOW64_32_CONF_ENV += XSLT_CONFIG=$(STAGING_DIR)/usr/bin/xslt-config
-else
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-xslt
-endif
-
-ifeq ($(BR2_PACKAGE_MPG123),y)
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-mpg123
-WINE_LUTRIS_WOW64_32_DEPENDENCIES += mpg123
-else
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-mpg123
-endif
-
-ifeq ($(BR2_PACKAGE_NCURSES),y)
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-curses
-WINE_LUTRIS_WOW64_32_DEPENDENCIES += ncurses
-else
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-curses
-endif
-
-ifeq ($(BR2_PACKAGE_OPENAL),y)
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-openal
-WINE_LUTRIS_WOW64_32_DEPENDENCIES += openal
-else
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-openal
-endif
-
-ifeq ($(BR2_PACKAGE_OPENLDAP),y)
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-ldap
-WINE_LUTRIS_WOW64_32_DEPENDENCIES += openldap
-else
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-ldap
 endif
 
 ifeq ($(BR2_PACKAGE_MESA3D_OSMESA_CLASSIC),y)
@@ -269,13 +169,6 @@ WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-sdl
 WINE_LUTRIS_WOW64_32_DEPENDENCIES += sdl2
 else
 WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-sdl
-endif
-
-ifeq ($(BR2_PACKAGE_TIFF),y)
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-tiff
-WINE_LUTRIS_WOW64_32_DEPENDENCIES += tiff
-else
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-tiff
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_UDEV),y)
@@ -348,12 +241,12 @@ else
 WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-xxf86vm
 endif
 
-ifeq ($(BR2_PACKAGE_ZLIB),y)
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-zlib
-WINE_LUTRIS_WOW64_32_DEPENDENCIES += zlib
-else
-WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-zlib
-endif
+# Cleanup final directory
+define WINE_LUTRIS_WOW64_32_REMOVE_INCLUDES_HOOK
+        rm -Rf $(TARGET_DIR)/usr/wine/lutris/include
+endef
+
+WINE_LUTRIS_WOW64_32_POST_INSTALL_TARGET_HOOKS += WINE_LUTRIS_WOW64_32_REMOVE_INCLUDES_HOOK
 
 # host-gettext is essential for .po file support in host-wine wrc
 ifeq ($(BR2_SYSTEM_ENABLE_NLS),y)
@@ -371,14 +264,14 @@ endif
 # Wine only needs the host tools to be built, so cut-down the
 # build time by building just what we need.
 define HOST_WINE_LUTRIS_WOW64_32_BUILD_CMDS
-	$(HOST_MAKE_ENV) $(MAKE) -C $(@D) \
-	  tools \
-	  tools/sfnt2fon \
-	  tools/widl \
-	  tools/winebuild \
-	  tools/winegcc \
-	  tools/wmc \
-	  tools/wrc
+	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)
+	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools
+	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/sfnt2fon
+	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/widl
+	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/winebuild
+	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/winegcc
+	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/wmc
+	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/wrc
 endef
 
 # Wine only needs its host variant to be built, not that it is
@@ -429,19 +322,6 @@ HOST_WINE_LUTRIS_WOW64_32_CONF_OPTS += \
 	--without-xshape \
 	--without-xshm \
 	--without-xxf86vm
-
-define WINE_LUTRIS_WOW64_32_WOWDIRS_HOOK
-	mkdir -p $(BINARIES_DIR)/wow64_32_part64/loader
-endef
-
-define WINE_LUTRIS_WOW64_32_SHAREDIR_HOOK
-	mkdir -p $(TARGET_DIR)/share/wine/
-	cp -pr $(@D)/nls $(TARGET_DIR)/share/wine/
-	rm -Rf $(TARGET_DIR)/usr/wine/lutris/include
-endef
-
-WINE_LUTRIS_WOW64_32_PRE_BUILD_HOOKS += WINE_LUTRIS_WOW64_32_WOWDIRS_HOOK
-WINE_LUTRIS_WOW64_32_POST_INSTALL_TARGET_HOOKS += WINE_LUTRIS_WOW64_32_SHAREDIR_HOOK
 
 $(eval $(autotools-package))
 $(eval $(host-autotools-package))

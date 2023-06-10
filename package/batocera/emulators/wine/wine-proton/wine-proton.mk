@@ -29,21 +29,13 @@ WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_CREATE_WINE_FOLDER
 WINE_PROTON_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
 	--with-wine-tools=../host-wine-proton-$(WINE_PROTON_VERSION) \
 	--disable-tests \
-	--disable-win16 \
-	--disable-winemenubuilder \
 	--without-capi \
 	--without-coreaudio \
-	--without-faudio \
 	--without-gettext \
 	--without-gettextpo \
 	--without-gphoto \
-	--without-gsm \
-	--without-hal \
 	--without-opencl \
 	--without-oss \
-	--without-vkd3d \
-	--without-vulkan \
-	--without-ldap \
 	--prefix=/usr/wine/proton \
 	--exec-prefix=/usr/wine/proton
 
@@ -62,26 +54,12 @@ else
 WINE_PROTON_CONF_OPTS += --without-gcrypt
 endif
 
-# Add FAudio if available
-ifeq ($(BR2_PACKAGE_FAUDIO),y)
-WINE_PROTON_CONF_OPTS += --with-faudio
-WINE_PROTON_DEPENDENCIES += faudio
-else
-WINE_PROTON_CONF_OPTS += --without-vulkan
-endif
 # Add Vulkan if available
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
 WINE_PROTON_CONF_OPTS += --with-vulkan
 WINE_PROTON_DEPENDENCIES += vulkan-headers vulkan-loader
 else
 WINE_PROTON_CONF_OPTS += --without-vulkan
-endif
-# Add VKD3D if available
-ifeq ($(BR2_PACKAGE_VKD3D)$(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yyy)
-WINE_PROTON_CONF_OPTS += --with-vkd3d
-WINE_PROTON_DEPENDENCIES += vkd3d
-else
-WINE_PROTON_CONF_OPTS += --without-vkd3d
 endif
 # TODO Add DXVK if available
 
@@ -158,32 +136,11 @@ else
 WINE_PROTON_CONF_OPTS += --without-gstreamer
 endif
 
-ifeq ($(BR2_PACKAGE_JPEG),y)
-WINE_PROTON_CONF_OPTS += --with-jpeg
-WINE_PROTON_DEPENDENCIES += jpeg
-else
-WINE_PROTON_CONF_OPTS += --without-jpeg
-endif
-
-ifeq ($(BR2_PACKAGE_LCMS2),y)
-WINE_PROTON_CONF_OPTS += --with-cms
-WINE_PROTON_DEPENDENCIES += lcms2
-else
-WINE_PROTON_CONF_OPTS += --without-cms
-endif
-
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
 WINE_PROTON_CONF_OPTS += --with-opengl
 WINE_PROTON_DEPENDENCIES += libgl
 else
 WINE_PROTON_CONF_OPTS += --without-opengl
-endif
-
-ifeq ($(BR2_PACKAGE_LIBGLU),y)
-WINE_PROTON_CONF_OPTS += --with-glu
-WINE_PROTON_DEPENDENCIES += libglu
-else
-WINE_PROTON_CONF_OPTS += --without-glu
 endif
 
 ifeq ($(BR2_PACKAGE_LIBKRB5),y)
@@ -198,64 +155,6 @@ WINE_PROTON_CONF_OPTS += --with-pcap
 WINE_PROTON_DEPENDENCIES += libpcap
 else
 WINE_PROTON_CONF_OPTS += --without-pcap
-endif
-
-ifeq ($(BR2_PACKAGE_LIBPNG),y)
-WINE_PROTON_CONF_OPTS += --with-png
-WINE_PROTON_DEPENDENCIES += libpng
-else
-WINE_PROTON_CONF_OPTS += --without-png
-endif
-
-ifeq ($(BR2_PACKAGE_LIBV4L),y)
-WINE_PROTON_CONF_OPTS += --with-v4l
-WINE_PROTON_DEPENDENCIES += libv4l
-else
-WINE_PROTON_CONF_OPTS += --without-v4l
-endif
-
-ifeq ($(BR2_PACKAGE_LIBXML2),y)
-WINE_PROTON_CONF_OPTS += --with-xml
-WINE_PROTON_DEPENDENCIES += libxml2
-WINE_PROTON_CONF_ENV += XML2_CONFIG=$(STAGING_DIR)/usr/bin/xml2-config
-else
-WINE_PROTON_CONF_OPTS += --without-xml
-endif
-
-ifeq ($(BR2_PACKAGE_LIBXSLT),y)
-WINE_PROTON_CONF_OPTS += --with-xslt
-WINE_PROTON_DEPENDENCIES += libxslt
-WINE_PROTON_CONF_ENV += XSLT_CONFIG=$(STAGING_DIR)/usr/bin/xslt-config
-else
-WINE_PROTON_CONF_OPTS += --without-xslt
-endif
-
-ifeq ($(BR2_PACKAGE_MPG123),y)
-WINE_PROTON_CONF_OPTS += --with-mpg123
-WINE_PROTON_DEPENDENCIES += mpg123
-else
-WINE_PROTON_CONF_OPTS += --without-mpg123
-endif
-
-ifeq ($(BR2_PACKAGE_NCURSES),y)
-WINE_PROTON_CONF_OPTS += --with-curses
-WINE_PROTON_DEPENDENCIES += ncurses
-else
-WINE_PROTON_CONF_OPTS += --without-curses
-endif
-
-ifeq ($(BR2_PACKAGE_OPENAL),y)
-WINE_PROTON_CONF_OPTS += --with-openal
-WINE_PROTON_DEPENDENCIES += openal
-else
-WINE_PROTON_CONF_OPTS += --without-openal
-endif
-
-ifeq ($(BR2_PACKAGE_OPENLDAP),y)
-WINE_PROTON_CONF_OPTS += --with-ldap
-WINE_PROTON_DEPENDENCIES += openldap
-else
-WINE_PROTON_CONF_OPTS += --without-ldap
 endif
 
 ifeq ($(BR2_PACKAGE_MESA3D_OSMESA_CLASSIC),y)
@@ -292,13 +191,6 @@ WINE_PROTON_CONF_OPTS += --with-sdl
 WINE_PROTON_DEPENDENCIES += sdl2
 else
 WINE_PROTON_CONF_OPTS += --without-sdl
-endif
-
-ifeq ($(BR2_PACKAGE_TIFF),y)
-WINE_PROTON_CONF_OPTS += --with-tiff
-WINE_PROTON_DEPENDENCIES += tiff
-else
-WINE_PROTON_CONF_OPTS += --without-tiff
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_UDEV),y)
@@ -369,13 +261,6 @@ WINE_PROTON_CONF_OPTS += --with-xxf86vm
 WINE_PROTON_DEPENDENCIES += xlib_libXxf86vm
 else
 WINE_PROTON_CONF_OPTS += --without-xxf86vm
-endif
-
-ifeq ($(BR2_PACKAGE_ZLIB),y)
-WINE_PROTON_CONF_OPTS += --with-zlib
-WINE_PROTON_DEPENDENCIES += zlib
-else
-WINE_PROTON_CONF_OPTS += --without-zlib
 endif
 
 # host-gettext is essential for .po file support in host-wine wrc
