@@ -1,0 +1,78 @@
+diff --git a/SamTFE/Sources/CMakeLists.txt b/SamTFE/Sources/CMakeLists.txt
+index 3220171..54a1b6d 100644
+--- a/SamTFE/Sources/CMakeLists.txt
++++ b/SamTFE/Sources/CMakeLists.txt
+@@ -1240,7 +1240,7 @@ if(FREEBSD OR MACOSX)
+ set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+ else()
+ target_link_libraries(${ENGINELIB} vulkan)
+-set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
++#set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
+ endif()
+ 
+ add_executable(SeriousSam${MP}
+@@ -1335,14 +1335,14 @@ if(MACOSX)
+ endif()
+ 
+ if(LINUX)
+-    set_target_properties(SeriousSam${MP} PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
++    #set_target_properties(SeriousSam${MP} PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+     target_link_libraries(SeriousSam${MP} "m")
+     target_link_libraries(SeriousSam${MP} "dl")
+     target_link_libraries(SeriousSam${MP} "pthread")
+     target_link_libraries(SeriousSam${MP} ${SDL2_LIBRARY})
+     target_link_libraries(SeriousSam${MP} ${ZLIB_LIBRARIES})
+     if(BUILD_DEDICATED_SERVER)
+-        set_target_properties(DedicatedServer${MP} PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
++        #set_target_properties(DedicatedServer${MP} PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+         target_link_libraries(DedicatedServer${MP} "m")
+         target_link_libraries(DedicatedServer${MP} "dl")
+         target_link_libraries(DedicatedServer${MP} "pthread")
+@@ -1350,7 +1350,7 @@ if(LINUX)
+         target_link_libraries(DedicatedServer${MP} ${ZLIB_LIBRARIES})
+     endif()
+     if(BUILD_MAKEFONT)
+-        set_target_properties(MakeFONT${MP} PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
++        #set_target_properties(MakeFONT${MP} PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+         target_link_libraries(MakeFONT${MP} "m")
+         target_link_libraries(MakeFONT${MP} "dl")
+         target_link_libraries(MakeFONT${MP} "pthread")
+diff --git a/SamTSE/Sources/CMakeLists.txt b/SamTSE/Sources/CMakeLists.txt
+index a376f5e..b2742fa 100644
+--- a/SamTSE/Sources/CMakeLists.txt
++++ b/SamTSE/Sources/CMakeLists.txt
+@@ -1240,7 +1240,7 @@ if(FREEBSD OR MACOSX)
+ set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+ else()
+ target_link_libraries(${ENGINELIB} vulkan)
+-set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
++#set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
+ endif()
+ 
+ add_executable(SeriousSam${MP}
+@@ -1335,14 +1335,14 @@ if(MACOSX)
+ endif()
+ 
+ if(LINUX)
+-    set_target_properties(SeriousSam${MP} PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
++    #set_target_properties(SeriousSam${MP} PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+     target_link_libraries(SeriousSam${MP} "m")
+     target_link_libraries(SeriousSam${MP} "dl")
+     target_link_libraries(SeriousSam${MP} "pthread")
+     target_link_libraries(SeriousSam${MP} ${SDL2_LIBRARY})
+     target_link_libraries(SeriousSam${MP} ${ZLIB_LIBRARIES})
+     if(BUILD_DEDICATED_SERVER)
+-        set_target_properties(DedicatedServer${MP} PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
++        #set_target_properties(DedicatedServer${MP} PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+         target_link_libraries(DedicatedServer${MP} "m")
+         target_link_libraries(DedicatedServer${MP} "dl")
+         target_link_libraries(DedicatedServer${MP} "pthread")
+@@ -1350,7 +1350,7 @@ if(LINUX)
+         target_link_libraries(DedicatedServer${MP} ${ZLIB_LIBRARIES})
+     endif()
+     if(BUILD_MAKEFONT)
+-        set_target_properties(MakeFONT${MP} PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
++        #set_target_properties(MakeFONT${MP} PROPERTIES LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+         target_link_libraries(MakeFONT${MP} "m")
+         target_link_libraries(MakeFONT${MP} "dl")
+         target_link_libraries(MakeFONT${MP} "pthread")

@@ -3,13 +3,13 @@
 # wine-proton-wow64_32
 #
 ################################################################################
-# Version: Commits on Jun 02, 2023 (branch@proton_8.0)
-WINE_PROTON_WOW64_32_VERSION = a4d4c5a35197cfa148d5fabdd2e2f69c3cab954c
+# Version: Commits on Jun 07, 2023 (branch@proton_8.0-rc)
+WINE_PROTON_WOW64_32_VERSION = 2f5c7d198c8f05bdc25a750b60f9a7ec64396f2b
 WINE_PROTON_WOW64_32_SOURCE = wine-proton-$(WINE_PROTON_WOW64_32_VERSION).tar.gz
 WINE_PROTON_WOW64_32_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_WOW64_32_VERSION))
 WINE_PROTON_WOW64_32_LICENSE = LGPL-2.1+
 WINE_PROTON_WOW64_32_DEPENDENCIES = host-bison host-flex host-wine-proton
-HOST_WINE_PROTON_WOW64_32_DEPENDENCIES = host-bison host-flex
+HOST_WINE_PROTON_WOW64_32_DEPENDENCIES = host-bison host-flex host-clang host-lld
 
 # Configure Proton
 define WINE_PROTON_WOW64_32_AUTOGEN
@@ -19,35 +19,33 @@ define WINE_PROTON_WOW64_32_AUTOGEN
 endef
 
 # That create folder for install
-define WINE_PROTON_CREATE_WINE_FOLDER
+define WINE_PROTON_WOW64_32_CREATE_WINE_FOLDER
 	mkdir -p $(TARGET_DIR)/usr/wine/proton
 endef
 
-WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_CREATE_WINE_FOLDER
+WINE_PROTON_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_PROTON_WOW64_32_CREATE_WINE_FOLDER
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_PROTON_WOW64_32_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
 	--with-wine-tools=../host-wine-proton-$(WINE_PROTON_WOW64_32_VERSION) \
 	--disable-tests \
-	--disable-win16 \
-	--disable-winemenubuilder \
 	--without-capi \
 	--without-coreaudio \
 	--without-gettext \
 	--without-gettextpo \
 	--without-gphoto \
-	--without-gsm \
-	--without-hal \
 	--without-opencl \
 	--without-oss \
-	--without-ldap \
 	--prefix=/usr/wine/proton \
 	--exec-prefix=/usr/wine/proton
 
-	# breaks build ??
-	# --with-wine64=/build/output/images/wow64_32_part64/
-
 # batocera
+ifeq ($(BR2_x86_64),y)
+	WINE_PROTON_WOW64_32_CONF_OPTS += --enable-win64
+else
+	WINE_PROTON_WOW64_32_CONF_OPTS += --disable-win64
+endif
+
 # gcrypt
 ifeq ($(BR2_PACKAGE_LIBGCRYPT),y)
 WINE_PROTON_WOW64_32_CONF_OPTS += --with-gcrypt
@@ -56,26 +54,12 @@ else
 WINE_PROTON_WOW64_32_CONF_OPTS += --without-gcrypt
 endif
 
-# Add FAudio if available
-ifeq ($(BR2_PACKAGE_FAUDIO),y)
-WINE_PROTON_WOW64_32_CONF_OPTS += --with-faudio
-WINE_PROTON_WOW64_32_DEPENDENCIES += faudio
-else
-WINE_PROTON_WOW64_32_CONF_OPTS += --without-faudio
-endif
 # Add Vulkan if available
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
 WINE_PROTON_WOW64_32_CONF_OPTS += --with-vulkan
 WINE_PROTON_WOW64_32_DEPENDENCIES += vulkan-headers vulkan-loader
 else
 WINE_PROTON_WOW64_32_CONF_OPTS += --without-vulkan
-endif
-# Add VKD3D if available
-ifeq ($(BR2_PACKAGE_VKD3D)$(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yyy)
-WINE_PROTON_WOW64_32_CONF_OPTS += --with-vkd3d
-WINE_PROTON_WOW64_32_DEPENDENCIES += vkd3d
-else
-WINE_PROTON_WOW64_32_CONF_OPTS += --without-vkd3d
 endif
 # TODO Add DXVK if available
 
@@ -119,6 +103,13 @@ else
 WINE_PROTON_WOW64_32_CONF_OPTS += --without-fontconfig
 endif
 
+# Cleanup final directory
+define WINE_PROTON_WOW64_32_REMOVE_INCLUDES_HOOK
+        rm -Rf $(TARGET_DIR)/usr/wine/proton/include
+endef
+
+WINE_PROTON_WOW64_32_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_WOW64_32_REMOVE_INCLUDES_HOOK
+
 # To support freetype in wine we also need freetype in host-wine for the cross compiling tools
 ifeq ($(BR2_PACKAGE_FREETYPE),y)
 WINE_PROTON_WOW64_32_CONF_OPTS += --with-freetype
@@ -145,32 +136,11 @@ else
 WINE_PROTON_WOW64_32_CONF_OPTS += --without-gstreamer
 endif
 
-ifeq ($(BR2_PACKAGE_JPEG),y)
-WINE_PROTON_WOW64_32_CONF_OPTS += --with-jpeg
-WINE_PROTON_WOW64_32_DEPENDENCIES += jpeg
-else
-WINE_PROTON_WOW64_32_CONF_OPTS += --without-jpeg
-endif
-
-ifeq ($(BR2_PACKAGE_LCMS2),y)
-WINE_PROTON_WOW64_32_CONF_OPTS += --with-cms
-WINE_PROTON_WOW64_32_DEPENDENCIES += lcms2
-else
-WINE_PROTON_WOW64_32_CONF_OPTS += --without-cms
-endif
-
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
 WINE_PROTON_WOW64_32_CONF_OPTS += --with-opengl
 WINE_PROTON_WOW64_32_DEPENDENCIES += libgl
 else
 WINE_PROTON_WOW64_32_CONF_OPTS += --without-opengl
-endif
-
-ifeq ($(BR2_PACKAGE_LIBGLU),y)
-WINE_PROTON_WOW64_32_CONF_OPTS += --with-glu
-WINE_PROTON_WOW64_32_DEPENDENCIES += libglu
-else
-WINE_PROTON_WOW64_32_CONF_OPTS += --without-glu
 endif
 
 ifeq ($(BR2_PACKAGE_LIBKRB5),y)
@@ -185,64 +155,6 @@ WINE_PROTON_WOW64_32_CONF_OPTS += --with-pcap
 WINE_PROTON_WOW64_32_DEPENDENCIES += libpcap
 else
 WINE_PROTON_WOW64_32_CONF_OPTS += --without-pcap
-endif
-
-ifeq ($(BR2_PACKAGE_LIBPNG),y)
-WINE_PROTON_WOW64_32_CONF_OPTS += --with-png
-WINE_PROTON_WOW64_32_DEPENDENCIES += libpng
-else
-WINE_PROTON_WOW64_32_CONF_OPTS += --without-png
-endif
-
-ifeq ($(BR2_PACKAGE_LIBV4L),y)
-WINE_PROTON_WOW64_32_CONF_OPTS += --with-v4l
-WINE_PROTON_WOW64_32_DEPENDENCIES += libv4l
-else
-WINE_PROTON_WOW64_32_CONF_OPTS += --without-v4l
-endif
-
-ifeq ($(BR2_PACKAGE_LIBXML2),y)
-WINE_PROTON_WOW64_32_CONF_OPTS += --with-xml
-WINE_PROTON_WOW64_32_DEPENDENCIES += libxml2
-WINE_PROTON_WOW64_32_CONF_ENV += XML2_CONFIG=$(STAGING_DIR)/usr/bin/xml2-config
-else
-WINE_PROTON_WOW64_32_CONF_OPTS += --without-xml
-endif
-
-ifeq ($(BR2_PACKAGE_LIBXSLT),y)
-WINE_PROTON_WOW64_32_CONF_OPTS += --with-xslt
-WINE_PROTON_WOW64_32_DEPENDENCIES += libxslt
-WINE_PROTON_WOW64_32_CONF_ENV += XSLT_CONFIG=$(STAGING_DIR)/usr/bin/xslt-config
-else
-WINE_PROTON_WOW64_32_CONF_OPTS += --without-xslt
-endif
-
-ifeq ($(BR2_PACKAGE_MPG123),y)
-WINE_PROTON_WOW64_32_CONF_OPTS += --with-mpg123
-WINE_PROTON_WOW64_32_DEPENDENCIES += mpg123
-else
-WINE_PROTON_WOW64_32_CONF_OPTS += --without-mpg123
-endif
-
-ifeq ($(BR2_PACKAGE_NCURSES),y)
-WINE_PROTON_WOW64_32_CONF_OPTS += --with-curses
-WINE_PROTON_WOW64_32_DEPENDENCIES += ncurses
-else
-WINE_PROTON_WOW64_32_CONF_OPTS += --without-curses
-endif
-
-ifeq ($(BR2_PACKAGE_OPENAL),y)
-WINE_PROTON_WOW64_32_CONF_OPTS += --with-openal
-WINE_PROTON_WOW64_32_DEPENDENCIES += openal
-else
-WINE_PROTON_WOW64_32_CONF_OPTS += --without-openal
-endif
-
-ifeq ($(BR2_PACKAGE_OPENLDAP),y)
-WINE_PROTON_WOW64_32_CONF_OPTS += --with-ldap
-WINE_PROTON_WOW64_32_DEPENDENCIES += openldap
-else
-WINE_PROTON_WOW64_32_CONF_OPTS += --without-ldap
 endif
 
 ifeq ($(BR2_PACKAGE_MESA3D_OSMESA_CLASSIC),y)
@@ -279,13 +191,6 @@ WINE_PROTON_WOW64_32_CONF_OPTS += --with-sdl
 WINE_PROTON_WOW64_32_DEPENDENCIES += sdl2
 else
 WINE_PROTON_WOW64_32_CONF_OPTS += --without-sdl
-endif
-
-ifeq ($(BR2_PACKAGE_TIFF),y)
-WINE_PROTON_WOW64_32_CONF_OPTS += --with-tiff
-WINE_PROTON_WOW64_32_DEPENDENCIES += tiff
-else
-WINE_PROTON_WOW64_32_CONF_OPTS += --without-tiff
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_UDEV),y)
@@ -358,13 +263,6 @@ else
 WINE_PROTON_WOW64_32_CONF_OPTS += --without-xxf86vm
 endif
 
-ifeq ($(BR2_PACKAGE_ZLIB),y)
-WINE_PROTON_WOW64_32_CONF_OPTS += --with-zlib
-WINE_PROTON_WOW64_32_DEPENDENCIES += zlib
-else
-WINE_PROTON_WOW64_32_CONF_OPTS += --without-zlib
-endif
-
 # host-gettext is essential for .po file support in host-wine wrc
 ifeq ($(BR2_SYSTEM_ENABLE_NLS),y)
 HOST_WINE_PROTON_WOW64_32_DEPENDENCIES += host-gettext
@@ -381,14 +279,14 @@ endif
 # Wine only needs the host tools to be built, so cut-down the
 # build time by building just what we need.
 define HOST_WINE_PROTON_WOW64_32_BUILD_CMDS
-	$(HOST_MAKE_ENV) $(MAKE) -C $(@D) \
-	  tools \
-	  tools/sfnt2fon \
-	  tools/widl \
-	  tools/winebuild \
-	  tools/winegcc \
-	  tools/wmc \
-	  tools/wrc
+        $(HOST_MAKE_ENV) $(MAKE) -C $(@D)
+        $(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools
+        $(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/sfnt2fon
+        $(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/widl
+        $(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/winebuild
+        $(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/winegcc
+        $(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/wmc
+        $(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/wrc
 endef
 
 # Wine only needs its host variant to be built, not that it is
@@ -403,41 +301,30 @@ endef
 HOST_WINE_PROTON_WOW64_32_CONF_OPTS += \
 	--disable-tests \
 	--disable-win16 \
-	--disable-winemenubuilder \
 	--without-alsa \
 	--without-capi \
-	--without-cms \
 	--without-coreaudio \
-	--without-faudio \
 	--without-cups \
-	--without-curses \
 	--without-dbus \
 	--without-fontconfig \
 	--without-gphoto \
-	--without-glu \
 	--without-gnutls \
-	--without-gsm \
 	--without-gssapi \
 	--without-gstreamer \
-	--without-hal \
-	--without-jpeg \
+	--without-unwind \
 	--without-krb5 \
-	--without-ldap \
-	--without-mpg123 \
+	--without-mingw \
 	--without-netapi \
-	--without-openal \
 	--without-opencl \
 	--without-opengl \
 	--without-osmesa \
 	--without-oss \
 	--without-pcap \
 	--without-pulse \
-	--without-png \
 	--without-sane \
 	--without-sdl \
-	--without-tiff \
-	--without-v4l \
-	--without-vkd3d \
+	--without-usb \
+	--without-v4l2 \
 	--without-vulkan \
 	--without-x \
 	--without-xcomposite \
@@ -445,28 +332,14 @@ HOST_WINE_PROTON_WOW64_32_CONF_OPTS += \
 	--without-xinerama \
 	--without-xinput \
 	--without-xinput2 \
-	--without-xml \
 	--without-xrandr \
 	--without-xrender \
 	--without-xshape \
 	--without-xshm \
-	--without-xslt \
-	--without-xxf86vm \
-	--without-zlib
-
-define WINE_PROTON_WOW64_32_WOWDIRS_HOOK
-	mkdir -p $(BINARIES_DIR)/wow64_32_part64/loader
-endef
-
-define WINE_PROTON_WOW64_32_SHAREDIR_HOOK
-	mkdir -p $(TARGET_DIR)/share/wine/
-	cp -pr $(@D)/nls $(TARGET_DIR)/share/wine/
-	rm -Rf $(TARGET_DIR)/usr/wine/proton/include
-endef
+	--without-xxf86vm
 
 WINE_PROTON_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_PROTON_WOW64_32_AUTOGEN
-WINE_PROTON_WOW64_32_PRE_BUILD_HOOKS += WINE_PROTON_WOW64_32_WOWDIRS_HOOK
-WINE_PROTON_WOW64_32_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_WOW64_32_SHAREDIR_HOOK
+HOST_WINE_PROTON_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_PROTON_WOW64_32_AUTOGEN
 
 $(eval $(autotools-package))
 $(eval $(host-autotools-package))

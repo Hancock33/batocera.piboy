@@ -3,8 +3,8 @@
 # pcsx2-avx2
 #
 ################################################################################
-# Version: Commits on Jun 05, 2023
-PCSX2_AVX2_VERSION = d6e2dcd25be42445e81ca27022204b18e8c7d427
+# Version: Commits on Jun 10, 2023
+PCSX2_AVX2_VERSION = 4df27e6efba82e691e878eeda8550e5f9ab10651
 PCSX2_AVX2_SOURCE = pcsx2-$(PCSX2_AVX2_VERSION)-br1.tar.gz
 PCSX2_AVX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_AVX2_SITE_METHOD = git

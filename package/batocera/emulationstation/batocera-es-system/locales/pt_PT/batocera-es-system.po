@@ -3011,10 +3011,10 @@ msgctxt "game_options"
 msgid "Rotated 4-Way Stick (Q*Bert)"
 msgstr "Stick giratório de 4 direções (Q*Bert)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
 msgctxt "game_options"
-msgid "Emable or disable high score saving"
-msgstr "Ativar ou desativar o recorde guardado de puntos"
+msgid "Enable or disable high score saving"
+msgstr "Ativa ou desativa o save de pontuação alta"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
 msgctxt "game_options"
@@ -3239,6 +3239,11 @@ msgstr "Discos originais do Apple II"
 msgctxt "game_options"
 msgid "Cassette"
 msgstr "Cassete"
+
+#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+msgctxt "game_options"
+msgid "Hard Drive"
+msgstr "Disco Rígido"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -3963,11 +3968,6 @@ msgstr "Tipo de arquivo ROM para carregar"
 msgctxt "game_options"
 msgid "CD"
 msgstr "CD"
-
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
-msgctxt "game_options"
-msgid "Hard Drive"
-msgstr "Disco Rígido"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4997,21 +4997,6 @@ msgstr "Rato do PCE"
 msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "Desligado é mais seguro, Ativado para jogos específicos."
-
-#. TRANSLATION: libretro/pcsx_rearmed
-msgctxt "game_options"
-msgid "Double the rendering resolution."
-msgstr "Dobra a resolução de renderização."
-
-#. TRANSLATION: libretro/pcsx_rearmed, drastic
-msgctxt "game_options"
-msgid "ENHANCED RENDERING RESOLUTION"
-msgstr "RESOLUÇÃO DE RENDERIZAÇÃO APRIMORADA"
-
-#. TRANSLATION: libretro/pcsx_rearmed
-msgctxt "game_options"
-msgid "On (Speed hack)"
-msgstr "Ligado (Speed hack)"
 
 #. TRANSLATION: libretro/pcsx_rearmed, libretro/yabasanshiro
 msgctxt "game_options"
@@ -7916,8 +7901,8 @@ msgstr "APRESENTAÇÃO MELHORADA"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Auto (Match Window)"
-msgstr "Automático (janela de correspondência)"
+msgid "Match Window"
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7936,8 +7921,8 @@ msgstr "AUMENTO NA TOTALIDADE "
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "ENabling will smooth out the image."
-msgstr "Ligado irá suavizar a imagem."
+msgid "Enabling will smooth out the image."
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7946,8 +7931,10 @@ msgstr "AUMENTO LINEAR"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Fills the screen regardless of the aspect ratio."
-msgstr "Preenche o ecrã independentemente da proporção."
+msgid ""
+"Fills the screen regardless of the aspect ratio. Doesn't work with Integer "
+"Upscaling."
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9361,12 +9348,12 @@ msgstr "Máximo 8 jogadores"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Allows user replaceable textures."
-msgstr ""
+msgstr "Permite texturas substituíveis pelo utilizador."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TEXTURE REPLACEMENTS"
-msgstr ""
+msgstr "SUBSTITUIÇÕES DE TEXTURA"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9374,11 +9361,13 @@ msgid ""
 "Necessary for some guns to replace fog textures as a workaround in Time "
 "Crisis - Crisis Zone."
 msgstr ""
+"Necessário para algumas armas para substituir as texturas de névoa como uma "
+"solução alternativa no Tempo Crisis - Crisis Zone."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TIME CRISIS FOG HACK"
-msgstr ""
+msgstr "HACK DE NÉVOA DE TEMPO DO CRISIS"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -10487,11 +10476,6 @@ msgstr "Cartuchos Interton VC 4000"
 
 #. TRANSLATION: mame/vitaquake3
 msgctxt "game_options"
-msgid "Enable or disable high score saving"
-msgstr "Ativa ou desativa o save de pontuação alta"
-
-#. TRANSLATION: mame/vitaquake3
-msgctxt "game_options"
 msgid ""
 "Enable mouse input for trackballs, spinners, lightguns (if no gun "
 "connected), and similar controls"
@@ -10817,6 +10801,11 @@ msgstr ""
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
+msgid "ENHANCED RENDERING RESOLUTION"
+msgstr "RESOLUÇÃO DE RENDERIZAÇÃO APRIMORADA"
+
+#. TRANSLATION: drastic
+msgctxt "game_options"
 msgid ""
 "Skip frames to improve performance, at the cost of choppy motion. Can cause "
 "visual glitches."
@@ -10924,17 +10913,23 @@ msgstr "USAR PROCESSADOR DE ÁUDIO DIGITAL (DSP)"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
-msgid ""
-"Use the Zink (OpenGL to Vulkan) renderer to fix graphics issues. May cause "
-"performance loss."
-msgstr ""
-"Use o renderizador Zink (OpenGL para Vulkan) para corrigir problemas "
-"gráficos. Pode causar perda de desempenho."
+msgid "Increase to 128 MiB for debug or homebrew applications."
+msgstr "Aumento para 128 MiB para aplicações de depuração ou homebrew."
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
-msgid "USE ZINK RENDERER"
-msgstr "USAR O RENDERIZADOR ZINK"
+msgid "SYSTEM MEMORY"
+msgstr "MEMORIA DO SISTEMA"
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "64MiB (Default)"
+msgstr "64MiB (Padrão)"
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "128MiB"
+msgstr "128MiB"
 
 #. TRANSLATION: sonic2013
 msgctxt "game_options"
@@ -12650,6 +12645,10 @@ msgstr ""
 #~ msgstr "ZONA MORTA DO JOYSTICK ANALÓGICO"
 
 #~ msgctxt "game_options"
+#~ msgid "Emable or disable high score saving"
+#~ msgstr "Ativar ou desativar o recorde guardado de puntos"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
 #~ msgstr ""
@@ -12713,6 +12712,18 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "ALTURA AUTOMÁTICA"
+
+#~ msgctxt "game_options"
+#~ msgid "Auto (Match Window)"
+#~ msgstr "Automático (janela de correspondência)"
+
+#~ msgctxt "game_options"
+#~ msgid "ENabling will smooth out the image."
+#~ msgstr "Ligado irá suavizar a imagem."
+
+#~ msgctxt "game_options"
+#~ msgid "Fills the screen regardless of the aspect ratio."
+#~ msgstr "Preenche o ecrã independentemente da proporção."
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (Default)"
@@ -12862,3 +12873,11 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "Double the rendering resolution."
+#~ msgstr "Dobra a resolução de renderização."
+
+#~ msgctxt "game_options"
+#~ msgid "On (Speed hack)"
+#~ msgstr "Ligado (Speed hack)"

@@ -2488,7 +2488,7 @@ libretro:
             hiscoreplugin:
                 group: ADVANCED OPTIONS
                 prompt:      HIGH SCORE PLUGIN
-                description: Emable or disable high score saving
+                description: Enable or disable high score saving
                 choices:
                     "Enabled (Default)": 1
                     "Disabled":          0
@@ -2625,6 +2625,7 @@ libretro:
                           "Cassette":       cass
                           "Disk (Drive 1)": flop1
                           "Disk (Drive 2)": flop2
+                          "Hard Drive":     hard1
                   gameio:
                       group: ADVANCED OPTIONS
                       prompt:      JOYSTICK TYPE
@@ -4508,13 +4509,6 @@ libretro:
                     "1":                1
                     "2":                2
                     "3":                3
-            neon_enhancement:
-                prompt:      ENHANCED RENDERING RESOLUTION
-                description: Double the rendering resolution.
-                choices:
-                    "Off":              disabled
-                    "On":               enabled
-                    "On (Speed hack)":  enabled_with_speedhack
             pcsx_rearmed_multitap:
                 group: CONTROLLER SETTINGS
                 prompt:      MULTITAP
@@ -7387,12 +7381,12 @@ duckstation:
             prompt: ASPECT RATIO
             description: Change the output resolution ratio.
             choices:
-                "Auto (Match Window)": "Auto (Match Window)"
-                "4:3":                 "4:3"
-                "16:9":                "16:9"
-                "19:9":                "19:9"
-                "20:9":                "20:9"
-                "PAR 1:1":             "PAR 1:1"
+                "Match Window": "Auto (Match Window)"
+                "4:3":          "4:3"
+                "16:9":         "16:9"
+                "19:9":         "19:9"
+                "20:9":         "20:9"
+                "PAR 1:1":      "PAR 1:1"
         duckstation_CropMode:
             submenu: DISPLAY
             group: ADVANCED OPTIONS
@@ -7414,7 +7408,7 @@ duckstation:
             submenu: DISPLAY
             group: ADVANCED OPTIONS
             prompt: LINEAR UPSCALING
-            description: ENabling will smooth out the image.
+            description: Enabling will smooth out the image.
             choices:
                 "Disabled (Default)": "false"
                 "Enabled":            "true"
@@ -7422,7 +7416,7 @@ duckstation:
             submenu: DISPLAY
             group: ADVANCED OPTIONS
             prompt: STRETCH TO FILL
-            description: Fills the screen regardless of the aspect ratio.
+            description: Fills the screen regardless of the aspect ratio. Doesn't work with Integer Upscaling.
             choices:
                 "Disabled (Default)": "false"
                 "Enabled":            "true"
@@ -10055,7 +10049,7 @@ mame:
                         "Rotated 4-Way Stick (Q*Bert)": "qbert"
                 hiscoreplugin:
                     prompt:      HIGH SCORE PLUGIN
-                    description: Emable or disable high score saving
+                    description: Enable or disable high score saving
                     choices:
                         "Enabled (Default)": 1
                         "Disabled":          0
@@ -10286,7 +10280,7 @@ xemu:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
-        scaling:
+        xemu_scaling:
             group: VIDEO SETTINGS
             prompt:      SCALING MODE
             description: Choose the scaling mode for the game screen.
@@ -10296,7 +10290,7 @@ xemu:
                 "Stretch to full":     stretch
                 "Stretch to 16:9":     scale_16_9
                 "Stretch to 4:3":      scale_4_3
-        render:
+        xemu_render:
             group: VIDEO SETTINGS
             prompt:       RENDERING RESOLUTION
             choices:
@@ -10316,19 +10310,18 @@ xemu:
             choices:
                 "Show":        "false"
                 "Skip":        "true"
-        use_dsp:
+        xemu_use_dsp:
             prompt:      USE DSP AUDIO
             description: Improve audio accuracy (experimental).
             choices:
                 "Enabled":      "true"
                 "Disabled":     "false"
-        use_zink:
-            group: ADVANCED OPTIONS
-            prompt: USE ZINK RENDERER
-            description: Use the Zink (OpenGL to Vulkan) renderer to fix graphics issues. May cause performance loss.
+        xemu_memory:
+            prompt: SYSTEM MEMORY
+            description: Increase to 128 MiB for debug or homebrew applications.
             choices:
-                "Enabled":            "true"
-                "Disabled (Default)": "false"
+                "64MiB (Default)": 64
+                "128MiB":          128
 lexaloffle:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

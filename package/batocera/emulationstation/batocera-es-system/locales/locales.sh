@@ -11,6 +11,7 @@ id_ID
 it
 ja_JP
 ko
+hu
 nl
 pl
 pt_BR
