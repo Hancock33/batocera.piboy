@@ -416,6 +416,7 @@ HOST_WINE_LUTRIS_CONF_OPTS += \
 	--without-gnutls \
 	--without-gssapi \
 	--without-gstreamer \
+	--without-unwind \
 	--without-krb5 \
 	--without-mingw \
 	--without-netapi \
