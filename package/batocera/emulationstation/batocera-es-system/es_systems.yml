@@ -4093,7 +4093,7 @@ serioussam:
   path:                 /userdata/roms/ports/serioussam
   emulators:
     serioussam:
-      serioussam:       { requireAnyOf: [BR2_PACKAGE_SAMTFE] }
+      serioussam:       { requireAnyOf: [BR2_PACKAGE_SERIOUSSAM] }
 
 sorr:
   name:                 Streets of Rage Remake
