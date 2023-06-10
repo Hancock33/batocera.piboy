@@ -3010,10 +3010,10 @@ msgctxt "game_options"
 msgid "Rotated 4-Way Stick (Q*Bert)"
 msgstr "Rotasi 4-Way Stick (Q*Bert"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
 msgctxt "game_options"
-msgid "Emable or disable high score saving"
-msgstr "Aktifkan atau matikan skor tertinggi"
+msgid "Enable or disable high score saving"
+msgstr "Aktif atau matikan penyimpanan skor tertinggi"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
 msgctxt "game_options"
@@ -7882,7 +7882,7 @@ msgstr "PRESENTASI THREADED"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Auto (Match Window)"
+msgid "Match Window"
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -7902,7 +7902,7 @@ msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "ENabling will smooth out the image."
+msgid "Enabling will smooth out the image."
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -7912,7 +7912,9 @@ msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Fills the screen regardless of the aspect ratio."
+msgid ""
+"Fills the screen regardless of the aspect ratio. Doesn't work with Integer "
+"Upscaling."
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -10421,11 +10423,6 @@ msgstr "Katrid - Interton VC 4000"
 
 #. TRANSLATION: mame/vitaquake3
 msgctxt "game_options"
-msgid "Enable or disable high score saving"
-msgstr "Aktif atau matikan penyimpanan skor tertinggi"
-
-#. TRANSLATION: mame/vitaquake3
-msgctxt "game_options"
 msgid ""
 "Enable mouse input for trackballs, spinners, lightguns (if no gun "
 "connected), and similar controls"
@@ -12559,14 +12556,6 @@ msgid "Open"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid "Double the rendering resolution."
-#~ msgstr "Gandakan resolusi rendering."
-
-#~ msgctxt "game_options"
-#~ msgid "On (Speed hack)"
-#~ msgstr "AKTTIFKAN (PERETASAN KECEPATAN)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Simpan status sebelumnya untuk diputar ulang secara langsung, jika Core "
@@ -12587,6 +12576,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "ANALOG JOYSTICK DEADZONE"
 #~ msgstr "ZONA-MATI ANALOG JOYSTICK"
+
+#~ msgctxt "game_options"
+#~ msgid "Emable or disable high score saving"
+#~ msgstr "Aktifkan atau matikan skor tertinggi"
 
 #~ msgctxt "game_options"
 #~ msgid ""

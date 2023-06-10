@@ -3000,9 +3000,9 @@ msgctxt "game_options"
 msgid "Rotated 4-Way Stick (Q*Bert)"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
 msgctxt "game_options"
-msgid "Emable or disable high score saving"
+msgid "Enable or disable high score saving"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
@@ -7835,7 +7835,7 @@ msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Auto (Match Window)"
+msgid "Match Window"
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -7855,7 +7855,7 @@ msgstr "EGÉSZ SZÁMOS FELSKÁLÁZÁS"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "ENabling will smooth out the image."
+msgid "Enabling will smooth out the image."
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -7865,7 +7865,9 @@ msgstr "LINEÁRIS FELSKÁLÁZÁS"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Fills the screen regardless of the aspect ratio."
+msgid ""
+"Fills the screen regardless of the aspect ratio. Doesn't work with Integer "
+"Upscaling."
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -10328,11 +10330,6 @@ msgstr "Interton VC 4000 kazetták"
 
 #. TRANSLATION: mame/vitaquake3
 msgctxt "game_options"
-msgid "Enable or disable high score saving"
-msgstr ""
-
-#. TRANSLATION: mame/vitaquake3
-msgctxt "game_options"
 msgid ""
 "Enable mouse input for trackballs, spinners, lightguns (if no gun "
 "connected), and similar controls"
@@ -12444,10 +12441,6 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Open"
 msgstr ""
-
-#~ msgctxt "game_options"
-#~ msgid "On (Speed hack)"
-#~ msgstr "Be (Sebesség hack)"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

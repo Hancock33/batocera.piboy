@@ -3463,10 +3463,10 @@ msgctxt "game_options"
 msgid "Rotated 4-Way Stick (Q*Bert)"
 msgstr "회전식 4방향 스틱(Q*버트)"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
 #, fuzzy
 msgctxt "game_options"
-msgid "Emable or disable high score saving"
+msgid "Enable or disable high score saving"
 msgstr "최고 점수 저장 사용 또는 사용 안 함"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
@@ -9023,7 +9023,7 @@ msgstr "스레드 프레젠테이션"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Auto (Match Window)"
+msgid "Match Window"
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -9043,7 +9043,7 @@ msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "ENabling will smooth out the image."
+msgid "Enabling will smooth out the image."
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -9053,7 +9053,9 @@ msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Fills the screen regardless of the aspect ratio."
+msgid ""
+"Fills the screen regardless of the aspect ratio. Doesn't work with Integer "
+"Upscaling."
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -11799,12 +11801,6 @@ msgstr "인터톤 VC 4000 카트리지"
 #. TRANSLATION: mame/vitaquake3
 #, fuzzy
 msgctxt "game_options"
-msgid "Enable or disable high score saving"
-msgstr "최고 점수 저장 사용 또는 사용 안 함"
-
-#. TRANSLATION: mame/vitaquake3
-#, fuzzy
-msgctxt "game_options"
 msgid ""
 "Enable mouse input for trackballs, spinners, lightguns (if no gun "
 "connected), and similar controls"
@@ -14098,16 +14094,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "game_options"
-#~ msgid "Double the rendering resolution."
-#~ msgstr "렌더링 해상도를 두 배로 높입니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "On (Speed hack)"
-#~ msgstr "켜기(스피드 해킹)"
-
-#, fuzzy
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr "코어가 지원하는 경우 실시간으로 되감기할 과거 상태를 저장합니다."
 
@@ -14130,6 +14116,11 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "ANALOG JOYSTICK DEADZONE"
 #~ msgstr "아날로그 조이스틱 데드존"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Emable or disable high score saving"
+#~ msgstr "최고 점수 저장 사용 또는 사용 안 함"
 
 #, fuzzy
 #~ msgctxt "game_options"
