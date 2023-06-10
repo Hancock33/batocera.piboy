@@ -3,8 +3,8 @@
 # xenia-native
 #
 ################################################################################
-# Version: Commits on Feb 06, 2023
-XENIA_NATIVE_VERSION = 6ee2e3718f81748f3f2c6cae7287dffa7f87b14e
+# Version: Commits on Jan 05, 2023
+XENIA_NATIVE_VERSION = 00aba94b98b1369d604f233fcd6a9dbbc233f3bb
 XENIA_NATIVE_SITE = https://github.com/xenia-project/xenia.git
 XENIA_NATIVE_LICENSE = BSD
 XENIA_NATIVE_LICENSE_FILE = LICENSE

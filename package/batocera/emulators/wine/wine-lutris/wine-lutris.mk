@@ -3,13 +3,13 @@
 # wine-lutris
 #
 ################################################################################
-# Version: Commits on Apr 19, 2023
-WINE_LUTRIS_VERSION = 4e88f44270e57e6536134c3323645733b71dcac0
+# Version: Commits on Jun 09, 2023
+WINE_LUTRIS_VERSION = 68a3b0077e64d1b5232ff75996b82766bcc64ced
 WINE_LUTRIS_SOURCE = wine-lutris-$(WINE_LUTRIS_VERSION).tar.gz
 WINE_LUTRIS_SITE = $(call github,wine-mirror,wine,$(WINE_LUTRIS_VERSION))
 WINE_LUTRIS_LICENSE = LGPL-2.1+
 WINE_LUTRIS_DEPENDENCIES = host-bison host-flex host-wine-lutris
-HOST_WINE_LUTRIS_DEPENDENCIES = host-bison host-flex
+HOST_WINE_LUTRIS_DEPENDENCIES = host-bison host-flex host-clang host-lld
 
 # That create folder for install
 define WINE_LUTRIS_CREATE_WINE_FOLDER
@@ -24,16 +24,11 @@ WINE_LUTRIS_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 	--disable-tests \
 	--without-capi \
 	--without-coreaudio \
-	--without-faudio \
 	--without-gettext \
 	--without-gettextpo \
 	--without-gphoto \
-	--without-gsm \
-	--without-hal \
 	--without-opencl \
 	--without-oss \
-	--without-vkd3d \
-	--without-vulkan \
 	--prefix=/usr/wine/lutris \
 	--exec-prefix=/usr/wine/lutris
 
@@ -44,34 +39,12 @@ else
 	WINE_LUTRIS_CONF_OPTS += --disable-win64
 endif
 
-# gcrypt
-ifeq ($(BR2_PACKAGE_LIBGCRYPT),y)
-WINE_LUTRIS_CONF_OPTS += --with-gcrypt
-WINE_LUTRIS_DEPENDENCIES += libgcrypt
-else
-WINE_LUTRIS_CONF_OPTS += --without-gcrypt
-endif
-
-# Add FAudio if available
-ifeq ($(BR2_PACKAGE_FAUDIO),y)
-WINE_LUTRIS_CONF_OPTS += --with-faudio
-WINE_LUTRIS_DEPENDENCIES += faudio
-else
-WINE_LUTRIS_CONF_OPTS += --without-vulkan
-endif
 # Add Vulkan if available
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
 WINE_LUTRIS_CONF_OPTS += --with-vulkan
 WINE_LUTRIS_DEPENDENCIES += vulkan-headers vulkan-loader
 else
 WINE_LUTRIS_CONF_OPTS += --without-vulkan
-endif
-# Add VKD3D if available
-ifeq ($(BR2_PACKAGE_VKD3D)$(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yyy)
-WINE_LUTRIS_CONF_OPTS += --with-vkd3d
-WINE_LUTRIS_DEPENDENCIES += vkd3d
-else
-WINE_LUTRIS_CONF_OPTS += --without-vkd3d
 endif
 # TODO Add DXVK if available
 
@@ -141,32 +114,11 @@ else
 WINE_LUTRIS_CONF_OPTS += --without-gstreamer
 endif
 
-ifeq ($(BR2_PACKAGE_JPEG),y)
-WINE_LUTRIS_CONF_OPTS += --with-jpeg
-WINE_LUTRIS_DEPENDENCIES += jpeg
-else
-WINE_LUTRIS_CONF_OPTS += --without-jpeg
-endif
-
-ifeq ($(BR2_PACKAGE_LCMS2),y)
-WINE_LUTRIS_CONF_OPTS += --with-cms
-WINE_LUTRIS_DEPENDENCIES += lcms2
-else
-WINE_LUTRIS_CONF_OPTS += --without-cms
-endif
-
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
 WINE_LUTRIS_CONF_OPTS += --with-opengl
 WINE_LUTRIS_DEPENDENCIES += libgl
 else
 WINE_LUTRIS_CONF_OPTS += --without-opengl
-endif
-
-ifeq ($(BR2_PACKAGE_LIBGLU),y)
-WINE_LUTRIS_CONF_OPTS += --with-glu
-WINE_LUTRIS_DEPENDENCIES += libglu
-else
-WINE_LUTRIS_CONF_OPTS += --without-glu
 endif
 
 ifeq ($(BR2_PACKAGE_LIBKRB5),y)
@@ -181,64 +133,6 @@ WINE_LUTRIS_CONF_OPTS += --with-pcap
 WINE_LUTRIS_DEPENDENCIES += libpcap
 else
 WINE_LUTRIS_CONF_OPTS += --without-pcap
-endif
-
-ifeq ($(BR2_PACKAGE_LIBPNG),y)
-WINE_LUTRIS_CONF_OPTS += --with-png
-WINE_LUTRIS_DEPENDENCIES += libpng
-else
-WINE_LUTRIS_CONF_OPTS += --without-png
-endif
-
-ifeq ($(BR2_PACKAGE_LIBV4L),y)
-WINE_LUTRIS_CONF_OPTS += --with-v4l
-WINE_LUTRIS_DEPENDENCIES += libv4l
-else
-WINE_LUTRIS_CONF_OPTS += --without-v4l
-endif
-
-ifeq ($(BR2_PACKAGE_LIBXML2),y)
-WINE_LUTRIS_CONF_OPTS += --with-xml
-WINE_LUTRIS_DEPENDENCIES += libxml2
-WINE_LUTRIS_CONF_ENV += XML2_CONFIG=$(STAGING_DIR)/usr/bin/xml2-config
-else
-WINE_LUTRIS_CONF_OPTS += --without-xml
-endif
-
-ifeq ($(BR2_PACKAGE_LIBXSLT),y)
-WINE_LUTRIS_CONF_OPTS += --with-xslt
-WINE_LUTRIS_DEPENDENCIES += libxslt
-WINE_LUTRIS_CONF_ENV += XSLT_CONFIG=$(STAGING_DIR)/usr/bin/xslt-config
-else
-WINE_LUTRIS_CONF_OPTS += --without-xslt
-endif
-
-ifeq ($(BR2_PACKAGE_MPG123),y)
-WINE_LUTRIS_CONF_OPTS += --with-mpg123
-WINE_LUTRIS_DEPENDENCIES += mpg123
-else
-WINE_LUTRIS_CONF_OPTS += --without-mpg123
-endif
-
-ifeq ($(BR2_PACKAGE_NCURSES),y)
-WINE_LUTRIS_CONF_OPTS += --with-curses
-WINE_LUTRIS_DEPENDENCIES += ncurses
-else
-WINE_LUTRIS_CONF_OPTS += --without-curses
-endif
-
-ifeq ($(BR2_PACKAGE_OPENAL),y)
-WINE_LUTRIS_CONF_OPTS += --with-openal
-WINE_LUTRIS_DEPENDENCIES += openal
-else
-WINE_LUTRIS_CONF_OPTS += --without-openal
-endif
-
-ifeq ($(BR2_PACKAGE_OPENLDAP),y)
-WINE_LUTRIS_CONF_OPTS += --with-ldap
-WINE_LUTRIS_DEPENDENCIES += openldap
-else
-WINE_LUTRIS_CONF_OPTS += --without-ldap
 endif
 
 ifeq ($(BR2_PACKAGE_MESA3D_OSMESA_CLASSIC),y)
@@ -275,13 +169,6 @@ WINE_LUTRIS_CONF_OPTS += --with-sdl
 WINE_LUTRIS_DEPENDENCIES += sdl2
 else
 WINE_LUTRIS_CONF_OPTS += --without-sdl
-endif
-
-ifeq ($(BR2_PACKAGE_TIFF),y)
-WINE_LUTRIS_CONF_OPTS += --with-tiff
-WINE_LUTRIS_DEPENDENCIES += tiff
-else
-WINE_LUTRIS_CONF_OPTS += --without-tiff
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_UDEV),y)
@@ -354,13 +241,6 @@ else
 WINE_LUTRIS_CONF_OPTS += --without-xxf86vm
 endif
 
-ifeq ($(BR2_PACKAGE_ZLIB),y)
-WINE_LUTRIS_CONF_OPTS += --with-zlib
-WINE_LUTRIS_DEPENDENCIES += zlib
-else
-WINE_LUTRIS_CONF_OPTS += --without-zlib
-endif
-
 # Cleanup final directory
 define WINE_LUTRIS_REMOVE_INCLUDES_HOOK
         rm -Rf $(TARGET_DIR)/usr/wine/lutris/include
@@ -408,38 +288,28 @@ HOST_WINE_LUTRIS_CONF_OPTS += \
 	--disable-win16 \
 	--without-alsa \
 	--without-capi \
-	--without-cms \
 	--without-coreaudio \
-	--without-faudio \
 	--without-cups \
-	--without-curses \
 	--without-dbus \
 	--without-fontconfig \
 	--without-gphoto \
-	--without-glu \
 	--without-gnutls \
-	--without-gsm \
 	--without-gssapi \
 	--without-gstreamer \
-	--without-hal \
-	--without-jpeg \
+	--without-unwind \
 	--without-krb5 \
-	--without-ldap \
-	--without-mpg123 \
+	--without-mingw \
 	--without-netapi \
-	--without-openal \
 	--without-opencl \
 	--without-opengl \
 	--without-osmesa \
 	--without-oss \
 	--without-pcap \
 	--without-pulse \
-	--without-png \
 	--without-sane \
 	--without-sdl \
-	--without-tiff \
-	--without-v4l \
-	--without-vkd3d \
+	--without-usb \
+	--without-v4l2 \
 	--without-vulkan \
 	--without-x \
 	--without-xcomposite \
@@ -447,14 +317,11 @@ HOST_WINE_LUTRIS_CONF_OPTS += \
 	--without-xinerama \
 	--without-xinput \
 	--without-xinput2 \
-	--without-xml \
 	--without-xrandr \
 	--without-xrender \
 	--without-xshape \
 	--without-xshm \
-	--without-xslt \
-	--without-xxf86vm \
-	--without-zlib
+	--without-xxf86vm
 
 $(eval $(autotools-package))
 $(eval $(host-autotools-package))
