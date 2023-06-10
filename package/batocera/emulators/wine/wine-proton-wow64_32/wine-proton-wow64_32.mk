@@ -9,7 +9,7 @@ WINE_PROTON_WOW64_32_SOURCE = wine-proton-$(WINE_PROTON_WOW64_32_VERSION).tar.gz
 WINE_PROTON_WOW64_32_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_WOW64_32_VERSION))
 WINE_PROTON_WOW64_32_LICENSE = LGPL-2.1+
 WINE_PROTON_WOW64_32_DEPENDENCIES = host-bison host-flex host-wine-proton
-HOST_WINE_PROTON_WOW64_32_DEPENDENCIES = host-bison host-flex
+HOST_WINE_PROTON_WOW64_32_DEPENDENCIES = host-bison host-flex host-clang host-lld
 
 # Configure Proton
 define WINE_PROTON_WOW64_32_AUTOGEN
@@ -403,41 +403,30 @@ endef
 HOST_WINE_PROTON_WOW64_32_CONF_OPTS += \
 	--disable-tests \
 	--disable-win16 \
-	--disable-winemenubuilder \
 	--without-alsa \
 	--without-capi \
-	--without-cms \
 	--without-coreaudio \
-	--without-faudio \
 	--without-cups \
-	--without-curses \
 	--without-dbus \
 	--without-fontconfig \
 	--without-gphoto \
-	--without-glu \
 	--without-gnutls \
-	--without-gsm \
 	--without-gssapi \
 	--without-gstreamer \
-	--without-hal \
-	--without-jpeg \
+	--without-unwind \
 	--without-krb5 \
-	--without-ldap \
-	--without-mpg123 \
+	--without-mingw \
 	--without-netapi \
-	--without-openal \
 	--without-opencl \
 	--without-opengl \
 	--without-osmesa \
 	--without-oss \
 	--without-pcap \
 	--without-pulse \
-	--without-png \
 	--without-sane \
 	--without-sdl \
-	--without-tiff \
-	--without-v4l \
-	--without-vkd3d \
+	--without-usb \
+	--without-v4l2 \
 	--without-vulkan \
 	--without-x \
 	--without-xcomposite \
@@ -445,14 +434,11 @@ HOST_WINE_PROTON_WOW64_32_CONF_OPTS += \
 	--without-xinerama \
 	--without-xinput \
 	--without-xinput2 \
-	--without-xml \
 	--without-xrandr \
 	--without-xrender \
 	--without-xshape \
 	--without-xshm \
-	--without-xslt \
-	--without-xxf86vm \
-	--without-zlib
+	--without-xxf86vm
 
 define WINE_PROTON_WOW64_32_WOWDIRS_HOOK
 	mkdir -p $(BINARIES_DIR)/wow64_32_part64/loader
