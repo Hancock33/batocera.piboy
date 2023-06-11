@@ -3240,6 +3240,11 @@ msgctxt "game_options"
 msgid "Cassette"
 msgstr "Casset"
 
+#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+msgctxt "game_options"
+msgid "Hard Drive"
+msgstr "Disc dur"
+
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Type of joystick connected to the game port."
@@ -3959,11 +3964,6 @@ msgstr "Tipus del fitxer ROM a carregar"
 msgctxt "game_options"
 msgid "CD"
 msgstr "CD"
-
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
-msgctxt "game_options"
-msgid "Hard Drive"
-msgstr "Disc dur"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
