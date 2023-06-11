@@ -3191,6 +3191,11 @@ msgctxt "game_options"
 msgid "Cassette"
 msgstr ""
 
+#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+msgctxt "game_options"
+msgid "Hard Drive"
+msgstr ""
+
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Type of joystick connected to the game port."
@@ -3904,11 +3909,6 @@ msgstr ""
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "CD"
-msgstr ""
-
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
-msgctxt "game_options"
-msgid "Hard Drive"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3

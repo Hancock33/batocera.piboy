@@ -3189,6 +3189,11 @@ msgctxt "game_options"
 msgid "Cassette"
 msgstr "盒式"
 
+#. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
+msgctxt "game_options"
+msgid "Hard Drive"
+msgstr "硬盘"
+
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Type of joystick connected to the game port."
@@ -3903,11 +3908,6 @@ msgstr "要加载的ROM文件的类型"
 msgctxt "game_options"
 msgid "CD"
 msgstr "CD"
-
-#. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
-msgctxt "game_options"
-msgid "Hard Drive"
-msgstr "硬盘"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
