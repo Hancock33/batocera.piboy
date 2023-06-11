@@ -1,8 +1,8 @@
 diff --git a/src/configuration.c b/src/configuration.c
-index d487469..f066bc3 100644
+index de6006d0..1a53ae4a 100644
 --- a/src/configuration.c
 +++ b/src/configuration.c
-@@ -865,7 +865,7 @@ void Configuration_SetDefault(void)
+@@ -736,7 +736,7 @@ void Configuration_SetDefault(void)
  	/* Set defaults for Rom */
  	File_MakePathBuf(ConfigureParams.Rom.szTosImageFileName,
  	                 sizeof(ConfigureParams.Rom.szTosImageFileName),

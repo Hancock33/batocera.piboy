@@ -1,8 +1,8 @@
 diff --git a/src/configuration.c b/src/configuration.c
-index f066bc3..0f29e30 100644
+index de6006d0..95925b60 100644
 --- a/src/configuration.c
 +++ b/src/configuration.c
-@@ -121,6 +121,9 @@ static const struct Config_Tag configs_Joystick0_Sdl1[] =
+@@ -105,6 +105,9 @@ static const struct Config_Tag configs_Screen[] =
  static const struct Config_Tag configs_Joystick0[] =
  {
  	{ "nJoystickMode", Int_Tag, &ConfigureParams.Joysticks.Joy[0].nJoystickMode },
@@ -12,7 +12,7 @@ index f066bc3..0f29e30 100644
  	{ "bEnableAutoFire", Bool_Tag, &ConfigureParams.Joysticks.Joy[0].bEnableAutoFire },
  	{ "bEnableJumpOnFire2", Bool_Tag, &ConfigureParams.Joysticks.Joy[0].bEnableJumpOnFire2 },
  	{ "nJoyId", Int_Tag, &ConfigureParams.Joysticks.Joy[0].nJoyId },
-@@ -147,6 +150,9 @@ static const struct Config_Tag configs_Joystick1_Sdl1[] =
+@@ -120,6 +123,9 @@ static const struct Config_Tag configs_Joystick0[] =
  static const struct Config_Tag configs_Joystick1[] =
  {
  	{ "nJoystickMode", Int_Tag, &ConfigureParams.Joysticks.Joy[1].nJoystickMode },
@@ -22,7 +22,7 @@ index f066bc3..0f29e30 100644
  	{ "bEnableAutoFire", Bool_Tag, &ConfigureParams.Joysticks.Joy[1].bEnableAutoFire },
  	{ "bEnableJumpOnFire2", Bool_Tag, &ConfigureParams.Joysticks.Joy[1].bEnableJumpOnFire2 },
  	{ "nJoyId", Int_Tag, &ConfigureParams.Joysticks.Joy[1].nJoyId },
-@@ -173,6 +179,9 @@ static const struct Config_Tag configs_Joystick2_Sdl1[] =
+@@ -135,6 +141,9 @@ static const struct Config_Tag configs_Joystick1[] =
  static const struct Config_Tag configs_Joystick2[] =
  {
  	{ "nJoystickMode", Int_Tag, &ConfigureParams.Joysticks.Joy[2].nJoystickMode },
@@ -32,7 +32,7 @@ index f066bc3..0f29e30 100644
  	{ "bEnableAutoFire", Bool_Tag, &ConfigureParams.Joysticks.Joy[2].bEnableAutoFire },
  	{ "bEnableJumpOnFire2", Bool_Tag, &ConfigureParams.Joysticks.Joy[2].bEnableJumpOnFire2 },
  	{ "nJoyId", Int_Tag, &ConfigureParams.Joysticks.Joy[2].nJoyId },
-@@ -199,6 +208,9 @@ static const struct Config_Tag configs_Joystick3_Sdl1[] =
+@@ -150,6 +159,9 @@ static const struct Config_Tag configs_Joystick2[] =
  static const struct Config_Tag configs_Joystick3[] =
  {
  	{ "nJoystickMode", Int_Tag, &ConfigureParams.Joysticks.Joy[3].nJoystickMode },
@@ -42,7 +42,7 @@ index f066bc3..0f29e30 100644
  	{ "bEnableAutoFire", Bool_Tag, &ConfigureParams.Joysticks.Joy[3].bEnableAutoFire },
  	{ "bEnableJumpOnFire2", Bool_Tag, &ConfigureParams.Joysticks.Joy[3].bEnableJumpOnFire2 },
  	{ "nJoyId", Int_Tag, &ConfigureParams.Joysticks.Joy[3].nJoyId },
-@@ -225,6 +237,9 @@ static const struct Config_Tag configs_Joystick4_Sdl1[] =
+@@ -165,6 +177,9 @@ static const struct Config_Tag configs_Joystick3[] =
  static const struct Config_Tag configs_Joystick4[] =
  {
  	{ "nJoystickMode", Int_Tag, &ConfigureParams.Joysticks.Joy[4].nJoystickMode },
@@ -52,7 +52,7 @@ index f066bc3..0f29e30 100644
  	{ "bEnableAutoFire", Bool_Tag, &ConfigureParams.Joysticks.Joy[4].bEnableAutoFire },
  	{ "bEnableJumpOnFire2", Bool_Tag, &ConfigureParams.Joysticks.Joy[4].bEnableJumpOnFire2 },
  	{ "nJoyId", Int_Tag, &ConfigureParams.Joysticks.Joy[4].nJoyId },
-@@ -251,6 +266,9 @@ static const struct Config_Tag configs_Joystick5_Sdl1[] =
+@@ -180,6 +195,9 @@ static const struct Config_Tag configs_Joystick4[] =
  static const struct Config_Tag configs_Joystick5[] =
  {
  	{ "nJoystickMode", Int_Tag, &ConfigureParams.Joysticks.Joy[5].nJoystickMode },
@@ -62,7 +62,7 @@ index f066bc3..0f29e30 100644
  	{ "bEnableAutoFire", Bool_Tag, &ConfigureParams.Joysticks.Joy[5].bEnableAutoFire },
  	{ "bEnableJumpOnFire2", Bool_Tag, &ConfigureParams.Joysticks.Joy[5].bEnableJumpOnFire2 },
  	{ "nJoyId", Int_Tag, &ConfigureParams.Joysticks.Joy[5].nJoyId },
-@@ -732,6 +750,9 @@ void Configuration_SetDefault(void)
+@@ -606,6 +624,9 @@ void Configuration_SetDefault(void)
  	for (i = 0; i < JOYSTICK_COUNT; i++)
  	{
  		ConfigureParams.Joysticks.Joy[i].nJoystickMode = JOYSTICK_DISABLED;
@@ -70,13 +70,13 @@ index f066bc3..0f29e30 100644
 +		ConfigureParams.Joysticks.Joy[i].nButton2 = 1;
 +		ConfigureParams.Joysticks.Joy[i].nButton3 = 2;
  		ConfigureParams.Joysticks.Joy[i].bEnableAutoFire = false;
- 		ConfigureParams.Joysticks.Joy[i].bEnableJumpOnFire2 = false;
+ 		ConfigureParams.Joysticks.Joy[i].bEnableJumpOnFire2 = true;
  		ConfigureParams.Joysticks.Joy[i].nJoyId = (i > maxjoy ? maxjoy : i);
 diff --git a/src/includes/configuration.h b/src/includes/configuration.h
-index ace9065..f28e452 100644
+index 86e26c37..31d7b796 100644
 --- a/src/includes/configuration.h
 +++ b/src/includes/configuration.h
-@@ -163,6 +163,7 @@ typedef enum
+@@ -166,6 +166,7 @@ typedef enum
  typedef struct
  {
    JOYSTICKMODE nJoystickMode;
@@ -85,10 +85,10 @@ index ace9065..f28e452 100644
    bool bEnableJumpOnFire2;
    int nJoyId;
 diff --git a/src/joy.c b/src/joy.c
-index af2a4da..305f0af 100644
+index 3fd0b884..8e10e031 100644
 --- a/src/joy.c
 +++ b/src/joy.c
-@@ -199,7 +199,7 @@ void Joy_UnInit(void)
+@@ -194,7 +194,7 @@ void Joy_UnInit(void)
   * Read details from joystick using SDL calls
   * NOTE ID is that of SDL
   */
@@ -97,7 +97,7 @@ index af2a4da..305f0af 100644
  {
  	unsigned hat = SDL_JoystickGetHat(sdlJoystick[nSdlJoyID], 0);
  
-@@ -216,12 +216,12 @@ static bool Joy_ReadJoystick(int nSdlJoyID, JOYREADING *pJoyReading)
+@@ -211,12 +211,12 @@ static bool Joy_ReadJoystick(int nSdlJoyID, JOYREADING *pJoyReading)
  	if (hat & SDL_HAT_DOWN)
  		pJoyReading->YPos = 32767;
  	/* Sets bit #0 if button #1 is pressed: */
@@ -113,7 +113,7 @@ index af2a4da..305f0af 100644
  		pJoyReading->Buttons |= JOYREADING_BUTTON3;
  
  	return true;
-@@ -275,7 +275,7 @@ Uint8 Joy_GetStickData(int nStJoyId)
+@@ -308,7 +308,7 @@ uint8_t Joy_GetStickData(int nStJoyId)
  		}
  
  		/* Read real joystick and map to emulated ST joystick for emulation */
