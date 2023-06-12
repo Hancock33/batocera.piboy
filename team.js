@@ -20,7 +20,7 @@
     "f.caruso": {
         "latitude": 47.950001,
         "longitude": 1.88333 ,
-	"town": "Saran",
+	"town": "Orléans",
 	"last_contribution" : 2023
     },
     "joinski": {
@@ -81,6 +81,30 @@
         "latitude": 45.508888,
         "longitude": -73.561668,
 	"town": "Montreal",
+	"last_contribution" : 2023
+    },
+    "darknior": {
+        "latitude": 43.836699,
+        "longitude": 4.360054,
+	"town": "Nîmes",
+	"last_contribution" : 2022
+    },
+    "rafdog": {
+        "latitude": 34.052235,
+        "longitude": -118.243683,
+	"town": "Los Angeles",
+	"last_contribution" : 2023
+    },
+    "cag": {
+        "latitude": 33.448376,
+        "longitude": -112.074036,
+	"town": "Phoenix",
+	"last_contribution" : 2023
+    },
+    "mikhailzrick": {
+        "latitude": 35.481918,
+        "longitude": -97.508469,
+	"town": "Oklahoma City",
 	"last_contribution" : 2023
     }
 }
