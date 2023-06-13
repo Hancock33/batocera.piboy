@@ -1,5 +1,5 @@
 diff --git a/SDL/SDLJoystick.cpp b/SDL/SDLJoystick.cpp
-index b9e0a83..45e470c 100644
+index 12478c42f..429cce5dd 100644
 --- a/SDL/SDLJoystick.cpp
 +++ b/SDL/SDLJoystick.cpp
 @@ -19,7 +19,7 @@ static int SDLJoystickEventHandlerWrapper(void* userdata, SDL_Event* event)
@@ -26,7 +26,7 @@ index b9e0a83..45e470c 100644
 -		setUpController(i);
 -	}
 -	if (controllers.size() > 0) {
--		cout << "pad 1 has been assigned to control pad: " << SDL_JoystickNameForIndex(0) << endl;
+-		cout << "pad 1 has been assigned to control pad: " << SDL_GameControllerName(controllers.front()) << endl;
 +
 +	if(_njoy < numjoys) {
 +          setUpController(_njoy);
@@ -36,7 +36,34 @@ index b9e0a83..45e470c 100644
  	}
  }
  
-@@ -200,11 +202,9 @@ void SDLJoystick::ProcessInput(SDL_Event &event){
+@@ -164,7 +166,7 @@ void SDLJoystick::ProcessInput(SDL_Event &event){
+ 				KeyInput key;
+ 				key.flags = KEY_DOWN;
+ 				key.keyCode = code;
+-				key.deviceId = DEVICE_ID_PAD_0 + getDeviceIndex(event.cbutton.which);
++				key.deviceId = DEVICE_ID_PAD_0;
+ 				NativeKey(key);
+ 			}
+ 		}
+@@ -176,7 +178,7 @@ void SDLJoystick::ProcessInput(SDL_Event &event){
+ 				KeyInput key;
+ 				key.flags = KEY_UP;
+ 				key.keyCode = code;
+-				key.deviceId = DEVICE_ID_PAD_0 + getDeviceIndex(event.cbutton.which);
++				key.deviceId = DEVICE_ID_PAD_0;
+ 				NativeKey(key);
+ 			}
+ 		}
+@@ -188,7 +190,7 @@ void SDLJoystick::ProcessInput(SDL_Event &event){
+ 		axis.value = event.caxis.value / 32767.0f;
+ 		if (axis.value > 1.0f) axis.value = 1.0f;
+ 		if (axis.value < -1.0f) axis.value = -1.0f;
+-		axis.deviceId = DEVICE_ID_PAD_0 + getDeviceIndex(event.caxis.which);
++		axis.deviceId = DEVICE_ID_PAD_0;
+ 		NativeAxis(axis);
+ 		break;
+ 	case SDL_CONTROLLERDEVICEREMOVED:
+@@ -202,11 +204,9 @@ void SDLJoystick::ProcessInput(SDL_Event &event){
  		}
  		break;
  	case SDL_CONTROLLERDEVICEADDED:
@@ -44,7 +71,7 @@ index b9e0a83..45e470c 100644
 -		int prevNumControllers = controllers.size();
 -		setUpController(event.cdevice.which);
 -		if (prevNumControllers == 0 && controllers.size() > 0) {
--                       cout << "pad 1 has been assigned to control pad: " << SDL_JoystickNameForIndex(0) << endl;
+-			cout << "pad 1 has been assigned to control pad: " << SDL_GameControllerName(controllers.front()) << endl;
 + 	        if(event.cdevice.which == _njoy) {
 +		  setUpController(_njoy);
 +                  cout << "pad 1 has been assigned to control pad: " << SDL_JoystickNameForIndex(_njoy) << endl;
@@ -52,7 +79,7 @@ index b9e0a83..45e470c 100644
  		break;
  	}
 diff --git a/SDL/SDLJoystick.h b/SDL/SDLJoystick.h
-index d7494f8..173a865 100644
+index 1046a5f28..09865ccf4 100644
 --- a/SDL/SDLJoystick.h
 +++ b/SDL/SDLJoystick.h
 @@ -16,7 +16,7 @@
@@ -71,7 +98,7 @@ index d7494f8..173a865 100644
 +	int _njoy;
  };
 diff --git a/SDL/SDLMain.cpp b/SDL/SDLMain.cpp
-index d7a1b3a..b251904 100644
+index c49df319a..2025eb64b 100644
 --- a/SDL/SDLMain.cpp
 +++ b/SDL/SDLMain.cpp
 @@ -646,6 +646,7 @@ int main(int argc, char *argv[]) {
@@ -100,7 +127,7 @@ index d7a1b3a..b251904 100644
  		else {
  			remain_argv[remain_argc++] = argv[i];
  		}
-@@ -906,7 +911,7 @@ int main(int argc, char *argv[]) {
+@@ -908,7 +913,7 @@ int main(int argc, char *argv[]) {
  	InitSDLAudioDevice();
  
  	if (joystick_enabled) {
