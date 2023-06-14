@@ -334,6 +334,7 @@ menu "Emulators"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/simcoupe/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/solarus-engine/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/supermodel/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/supermodel-legacy/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/tsugaru/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/vice/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/virtualjaguar/Config.in"
@@ -575,3 +576,4 @@ menu "Libraries"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/wxwidgets/Config.in"
 endmenu
 endmenu
+

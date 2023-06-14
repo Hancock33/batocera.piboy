@@ -3,8 +3,8 @@
 # amiberry
 #
 ################################################################################
-# Version: Commits on Jun 09, 2023
-AMIBERRY_VERSION = 771bfdd6da49cde4b24624355f329cf89c14ca34
+# Version: Commits on Jun 13, 2023
+AMIBERRY_VERSION = 4bd019c45042186775405973474ba6db6b94f68f
 AMIBERRY_SITE = $(call github,BlitterStudio,amiberry,$(AMIBERRY_VERSION))
 AMIBERRY_LICENSE = GPLv3
 AMIBERRY_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf mpg123 libxml2 libmpeg2 flac libpng libserialport
@@ -23,7 +23,7 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2835),y)
 	AMIBERRY_BATOCERA_SYSTEM=rpi1-sdl2
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_XU4),y)
 	AMIBERRY_BATOCERA_SYSTEM=xu4
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S922X),y)
+else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S922X)$(BR2_PACKAGE_BATOCERA_TARGET_A3GEN2),y)
 	AMIBERRY_BATOCERA_SYSTEM=AMLG12B
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_TRITIUM_H5),y)
     AMIBERRY_BATOCERA_SYSTEM=lePotato
