@@ -20,7 +20,7 @@
     "f.caruso": {
         "latitude": 47.950001,
         "longitude": 1.88333 ,
-	"town": "Saran",
+	"town": "Orléans",
 	"last_contribution" : 2023
     },
     "joinski": {
@@ -29,7 +29,7 @@
 	"town": "Hamburg",
 	"last_contribution" : 2023
     },
-    "poke": {
+    "poke-1,0": {
         "latitude": -29.754994,
         "longitude": -51.150283,
 	"town": "São Leopoldo",
@@ -81,6 +81,60 @@
         "latitude": 45.508888,
         "longitude": -73.561668,
 	"town": "Montreal",
+	"last_contribution" : 2023
+    },
+    "darknior": {
+        "latitude": 43.836699,
+        "longitude": 4.360054,
+	"town": "Nîmes",
+	"last_contribution" : 2022
+    },
+    "rafdog": {
+        "latitude": 34.052235,
+        "longitude": -118.243683,
+	"town": "Los Angeles",
+	"last_contribution" : 2023
+    },
+    "cag": {
+        "latitude": 33.448376,
+        "longitude": -112.074036,
+	"town": "Phoenix",
+	"last_contribution" : 2023
+    },
+    "mikhailzrick": {
+        "latitude": 35.481918,
+        "longitude": -97.508469,
+	"town": "Oklahoma City",
+	"last_contribution" : 2023
+    },
+    "maximumentropy": {
+        "latitude": 40.730610,
+        "longitude": -73.935242,
+	"town": "New York",
+	"last_contribution" : 2023
+    },
+    "kycho": {
+	"latitude": 50.26612301276186,
+        "longitude": 19.018863912638437,
+	"town": "Katowice",
+	"last_contribution" : 2023
+    },
+    "wanger": {
+	"latitude": 39.916668,
+        "longitude": 116.383331,
+	"town": "Beijing",
+	"last_contribution" : 2023
+    },
+    "neil9000": {
+	"latitude": 50.768036,
+        "longitude": 0.290472,
+	"town": "Eastbourne",
+	"last_contribution" : 2023
+    },
+    "ordovice": {
+	"latitude": 27.964157,
+        "longitude": -82.452606,
+	"town": "Tampa",
 	"last_contribution" : 2023
     }
 }

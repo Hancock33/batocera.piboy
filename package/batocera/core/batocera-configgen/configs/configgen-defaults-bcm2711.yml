@@ -34,6 +34,8 @@ jaguar:
   emulator: virtualjaguar
   core:     virtualjaguar
 model3:
+  emulator: supermodel
+  core:     supermodel-legacy
   options:
     videomode: max-720x576
     decorations: none
