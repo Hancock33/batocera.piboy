@@ -1,4 +1,4 @@
-From 2a5e2d4dc1adb2680be5b40a33df86a1182735a1 Mon Sep 17 00:00:00 2001
+From b1f76399f65b4228967b1a211a206f4df2975c49 Mon Sep 17 00:00:00 2001
 From: Megamouse <studienricky89@googlemail.com>
 Date: Sat, 22 May 2021 10:42:05 +0200
 Subject: [PATCH] Qt6 port
@@ -6,6 +6,7 @@ Subject: [PATCH] Qt6 port
 ---
  .ci/build-linux.sh                            |   5 -
  .ci/build-mac.sh                              |   7 +-
+ .ci/install-freebsd.sh                        |   8 +-
  .ci/setup-windows.sh                          |  19 +-
  .cirrus.yml                                   |   8 +-
  3rdparty/qt5.cmake                            |  45 ----
@@ -96,6 +97,33 @@ index eb8212d7961..9a0916faca9 100755
  export LDFLAGS="-L$BREW_X64_PATH/lib -Wl,-rpath,$BREW_X64_PATH/lib"
  export CPPFLAGS="-I$BREW_X64_PATH/include -msse -msse2 -mcx16 -no-pie"
  export LIBRARY_PATH="$BREW_X64_PATH/lib"
+diff --git a/.ci/install-freebsd.sh b/.ci/install-freebsd.sh
+index 2a63e5ddfce..0692efc267f 100755
+--- a/.ci/install-freebsd.sh
++++ b/.ci/install-freebsd.sh
+@@ -2,7 +2,7 @@
+ # NOTE: this script is run under root permissions
+ # shellcheck shell=sh disable=SC2096
+ 
+-# RPCS3 often needs recent Qt5 and Vulkan-Headers
++# RPCS3 often needs recent Qt and Vulkan-Headers
+ sed -i '' 's/quarterly/latest/' /etc/pkg/FreeBSD.conf
+ 
+ export ASSUME_ALWAYS_YES=true
+@@ -11,8 +11,8 @@ pkg info # debug
+ # Prefer newer Clang than in base system (see also .ci/build-freebsd.sh)
+ pkg install llvm16
+ 
+-# Mandatory dependencies (qt5-dbus and qt5-gui are pulled via qt5-widgets)
+-pkg install git ccache cmake ninja qt5-qmake qt5-buildtools qt5-widgets qt5-concurrent qt5-multimedia qt5-svg glew openal-soft ffmpeg
++# Mandatory dependencies (qt6-base and qt6-svg are pulled via qt6-multimedia)
++pkg install git ccache cmake ninja qt6-multimedia glew openal-soft ffmpeg
+ 
+-# Optional dependencies (libevdev is pulled by qt5-gui)
++# Optional dependencies (libevdev is pulled by qt6-base)
+ pkg install pkgconf alsa-lib pulseaudio sdl2 evdev-proto vulkan-headers vulkan-loader
+diff --git a/.ci/setup-windows.sh b/.ci/setup-windows.sh
+index 614ca9e98b7..0d7974f1f01 100755
 --- a/.ci/setup-windows.sh
 +++ b/.ci/setup-windows.sh
 @@ -11,25 +11,26 @@ PR_NUMBER="$SYSTEM_PULLREQUEST_PULLREQUESTID"
@@ -559,7 +587,7 @@ index ac1c061aa92..9e065522444 100644
  	}
  }
 diff --git a/rpcs3/Input/keyboard_pad_handler.cpp b/rpcs3/Input/keyboard_pad_handler.cpp
-index 0bf0c922708..636115506cc 100644
+index b97479ce511..b08e75972ee 100644
 --- a/rpcs3/Input/keyboard_pad_handler.cpp
 +++ b/rpcs3/Input/keyboard_pad_handler.cpp
 @@ -439,12 +439,13 @@ void keyboard_pad_handler::mouseMoveEvent(QMouseEvent* event)
@@ -587,10 +615,10 @@ index 0bf0c922708..636115506cc 100644
 -		key_code = seq[0];
 +		key_code = seq[0].key();
  	else
- 		input_log.notice("GetKeyCode(%s): seq.count() = %d", sstr(keyName), seq.count());
+ 		input_log.notice("GetKeyCode(%s): seq.count() = %d", keyName, seq.count());
  
 diff --git a/rpcs3/main.cpp b/rpcs3/main.cpp
-index ba699b07ef9..cfb8662b36d 100644
+index 08716c4f428..a02fcf4bd7e 100644
 --- a/rpcs3/main.cpp
 +++ b/rpcs3/main.cpp
 @@ -1,4 +1,4 @@
@@ -599,7 +627,7 @@ index ba699b07ef9..cfb8662b36d 100644
  // by Sacha Refshauge, Megamouse and flash-fire
  
  #include <iostream>
-@@ -351,9 +351,6 @@ QCoreApplication* create_application(int& argc, char* argv[])
+@@ -349,9 +349,6 @@ QCoreApplication* create_application(int& argc, char* argv[])
  		use_high_dpi = "1" == qEnvironmentVariable("QT_ENABLE_HIGHDPI_SCALING", high_dpi_setting);
  	}
  
@@ -609,7 +637,7 @@ index ba699b07ef9..cfb8662b36d 100644
  	if (use_high_dpi)
  	{
  		// Set QT_SCALE_FACTOR_ROUNDING_POLICY from environment. Defaults to cli argument, which defaults to PassThrough.
-@@ -970,8 +967,6 @@ int main(int argc, char** argv)
+@@ -974,8 +971,6 @@ int main(int argc, char** argv)
  
  	if (gui_application* gui_app = qobject_cast<gui_application*>(app.data()))
  	{
@@ -618,7 +646,7 @@ index ba699b07ef9..cfb8662b36d 100644
  		gui_app->setAttribute(Qt::AA_DontCheckOpenGLContextThreadAffinity);
  
  		gui_app->SetShowGui(!s_no_gui);
-@@ -1053,7 +1048,7 @@ int main(int argc, char** argv)
+@@ -1057,7 +1052,7 @@ int main(int argc, char** argv)
  	bool got_timer_resolution = NtQueryTimerResolution(&min_res, &max_res, &orig_res) == 0;
  
  	// Set 0.5 msec timer resolution for best performance
@@ -628,7 +656,7 @@ index ba699b07ef9..cfb8662b36d 100644
  	{
  		ULONG new_res;
 diff --git a/rpcs3/main_application.cpp b/rpcs3/main_application.cpp
-index de8eafc6c8c..32f2134ab1a 100644
+index 184c4f4ff4b..f1c44a8301a 100644
 --- a/rpcs3/main_application.cpp
 +++ b/rpcs3/main_application.cpp
 @@ -314,7 +314,7 @@ EmuCallbacks main_application::CreateCallbacks()
@@ -1109,7 +1137,7 @@ index 6deef8173e6..8afe262f22c 100644
    </customwidget>
   </customwidgets>
 diff --git a/rpcs3/rpcs3qt/config_checker.cpp b/rpcs3/rpcs3qt/config_checker.cpp
-index 88c847edef0..83740e6632b 100644
+index c838b8831cd..3cf34955c89 100644
 --- a/rpcs3/rpcs3qt/config_checker.cpp
 +++ b/rpcs3/rpcs3qt/config_checker.cpp
 @@ -64,12 +64,12 @@ bool config_checker::check_config(QString content, QString& result, bool is_log)
@@ -1196,7 +1224,7 @@ index feaaf88f238..b39c790e018 100644
  
  	void keyPressEvent(QKeyEvent *keyEvent) override;
 diff --git a/rpcs3/rpcs3qt/gui_application.cpp b/rpcs3/rpcs3qt/gui_application.cpp
-index 9b92cfdab3c..a25de06ab6f 100644
+index cae79875056..acb2b57aca7 100644
 --- a/rpcs3/rpcs3qt/gui_application.cpp
 +++ b/rpcs3/rpcs3qt/gui_application.cpp
 @@ -34,7 +34,6 @@
@@ -1268,7 +1296,7 @@ index 762a8a045a4..321e17479d6 100644
  	std::shared_ptr<gui_settings> m_gui_settings;
  	std::shared_ptr<persistent_settings> m_persistent_settings;
 diff --git a/rpcs3/rpcs3qt/main_window.cpp b/rpcs3/rpcs3qt/main_window.cpp
-index 73b10541684..bb1c02b78b3 100644
+index e02bd6161d5..f700e641a22 100644
 --- a/rpcs3/rpcs3qt/main_window.cpp
 +++ b/rpcs3/rpcs3qt/main_window.cpp
 @@ -156,7 +156,7 @@ bool main_window::Init([[maybe_unused]] bool with_cli_boot)
@@ -1280,7 +1308,7 @@ index 73b10541684..bb1c02b78b3 100644
  	m_thumb_bar = new QWinThumbnailToolBar(this);
  	m_thumb_bar->setWindow(windowHandle());
  
-@@ -1645,7 +1645,7 @@ void main_window::RepaintThumbnailIcons()
+@@ -1669,7 +1669,7 @@ void main_window::RepaintThumbnailIcons()
  		return gui::utils::get_colorized_icon(QPixmap::fromImage(gui::utils::get_opaque_image_area(path)), Qt::black, new_color);
  	};
  
@@ -1289,7 +1317,7 @@ index 73b10541684..bb1c02b78b3 100644
  	if (!m_thumb_bar) return;
  
  	m_icon_thumb_play = icon(":/Icons/play.png");
-@@ -1732,14 +1732,6 @@ void main_window::RepaintToolBarIcons()
+@@ -1756,14 +1756,6 @@ void main_window::RepaintToolBarIcons()
  
  	// resize toolbar elements
  
@@ -1304,7 +1332,7 @@ index 73b10541684..bb1c02b78b3 100644
  	const int tool_bar_height = ui->toolBar->sizeHint().height();
  
  	for (const auto& act : ui->toolBar->actions())
-@@ -1765,7 +1757,7 @@ void main_window::OnEmuRun(bool /*start_playtime*/) const
+@@ -1789,7 +1781,7 @@ void main_window::OnEmuRun(bool /*start_playtime*/) const
  
  	m_debugger_frame->EnableButtons(true);
  
@@ -1313,7 +1341,7 @@ index 73b10541684..bb1c02b78b3 100644
  	m_thumb_stop->setToolTip(stop_tooltip);
  	m_thumb_restart->setToolTip(restart_tooltip);
  	m_thumb_playPause->setToolTip(pause_tooltip);
-@@ -1788,7 +1780,7 @@ void main_window::OnEmuResume() const
+@@ -1812,7 +1804,7 @@ void main_window::OnEmuResume() const
  	const QString pause_tooltip = tr("Pause %0").arg(title);
  	const QString stop_tooltip = tr("Stop %0").arg(title);
  
@@ -1322,7 +1350,7 @@ index 73b10541684..bb1c02b78b3 100644
  	m_thumb_stop->setToolTip(stop_tooltip);
  	m_thumb_restart->setToolTip(restart_tooltip);
  	m_thumb_playPause->setToolTip(pause_tooltip);
-@@ -1807,7 +1799,7 @@ void main_window::OnEmuPause() const
+@@ -1831,7 +1823,7 @@ void main_window::OnEmuPause() const
  	const QString title = GetCurrentTitle();
  	const QString resume_tooltip = tr("Resume %0").arg(title);
  
@@ -1331,7 +1359,7 @@ index 73b10541684..bb1c02b78b3 100644
  	m_thumb_playPause->setToolTip(resume_tooltip);
  	m_thumb_playPause->setIcon(m_icon_thumb_play);
  #endif
-@@ -1833,7 +1825,7 @@ void main_window::OnEmuStop()
+@@ -1857,7 +1849,7 @@ void main_window::OnEmuStop()
  
  	ui->sysPauseAct->setText(tr("&Play"));
  	ui->sysPauseAct->setIcon(m_icon_play);
@@ -1340,7 +1368,7 @@ index 73b10541684..bb1c02b78b3 100644
  	m_thumb_playPause->setToolTip(play_tooltip);
  	m_thumb_playPause->setIcon(m_icon_thumb_play);
  #endif
-@@ -1855,7 +1847,7 @@ void main_window::OnEmuStop()
+@@ -1879,7 +1871,7 @@ void main_window::OnEmuStop()
  		ui->toolbar_start->setText(tr("Restart"));
  		ui->toolbar_start->setToolTip(restart_tooltip);
  		ui->sysRebootAct->setEnabled(true);
@@ -1349,7 +1377,7 @@ index 73b10541684..bb1c02b78b3 100644
  		m_thumb_restart->setToolTip(restart_tooltip);
  		m_thumb_restart->setEnabled(true);
  #endif
-@@ -1888,7 +1880,7 @@ void main_window::OnEmuReady() const
+@@ -1912,7 +1904,7 @@ void main_window::OnEmuReady() const
  	const QString play_tooltip = tr("Play %0").arg(title);
  
  	m_debugger_frame->EnableButtons(true);
@@ -1358,7 +1386,7 @@ index 73b10541684..bb1c02b78b3 100644
  	m_thumb_playPause->setToolTip(play_tooltip);
  	m_thumb_playPause->setIcon(m_icon_thumb_play);
  #endif
-@@ -1907,7 +1899,7 @@ void main_window::OnEmuReady() const
+@@ -1931,7 +1923,7 @@ void main_window::OnEmuReady() const
  void main_window::EnableMenus(bool enabled) const
  {
  	// Thumbnail Buttons
@@ -1367,7 +1395,7 @@ index 73b10541684..bb1c02b78b3 100644
  	m_thumb_playPause->setEnabled(enabled);
  	m_thumb_stop->setEnabled(enabled);
  	m_thumb_restart->setEnabled(enabled);
-@@ -2938,14 +2930,14 @@ void main_window::CreateDockWindows()
+@@ -2962,14 +2954,14 @@ void main_window::CreateDockWindows()
  
  			ui->toolbar_start->setEnabled(enable_play_buttons);
  			ui->sysPauseAct->setEnabled(enable_play_buttons);
@@ -1384,7 +1412,7 @@ index 73b10541684..bb1c02b78b3 100644
  				m_thumb_playPause->setToolTip(tooltip);
  #endif
  			}
-@@ -3298,7 +3290,7 @@ void main_window::dropEvent(QDropEvent* event)
+@@ -3322,7 +3314,7 @@ void main_window::dropEvent(QDropEvent* event)
  
  		for (const auto& path : drop_paths)
  		{
@@ -1534,7 +1562,7 @@ index 1eccced1dbd..9e27f40ab4d 100644
  #else
  	int m_value = 0;
 diff --git a/rpcs3/rpcs3qt/qt_camera_error_handler.cpp b/rpcs3/rpcs3qt/qt_camera_error_handler.cpp
-index 495384bc0e0..96763827329 100644
+index 9a058162683..f7bec4fee85 100644
 --- a/rpcs3/rpcs3qt/qt_camera_error_handler.cpp
 +++ b/rpcs3/rpcs3qt/qt_camera_error_handler.cpp
 @@ -3,40 +3,14 @@
@@ -1620,8 +1648,8 @@ index 495384bc0e0..96763827329 100644
 -void qt_camera_error_handler::handle_camera_error(QCamera::Error error)
 +void qt_camera_error_handler::handle_camera_error(QCamera::Error error, const QString& errorString)
  {
--	camera_log.error("Error event: \"%s\" (error=%d)", m_camera ? m_camera->errorString().toStdString() : "", static_cast<int>(error));
-+	camera_log.error("Error event: \"%s\" (error=%d)", m_camera ? errorString.toStdString() : "", static_cast<int>(error));
+-	camera_log.error("Error event: \"%s\" (error=%d)", m_camera ? m_camera->errorString() : "", static_cast<int>(error));
++	camera_log.error("Error event: \"%s\" (error=%d)", errorString, static_cast<int>(error));
  }
 diff --git a/rpcs3/rpcs3qt/qt_camera_error_handler.h b/rpcs3/rpcs3qt/qt_camera_error_handler.h
 index cf97a120be7..a2d2c81bac0 100644
@@ -1651,7 +1679,7 @@ index cf97a120be7..a2d2c81bac0 100644
 +	std::function<void(bool)> m_status_callback = nullptr;
  };
 diff --git a/rpcs3/rpcs3qt/qt_camera_handler.cpp b/rpcs3/rpcs3qt/qt_camera_handler.cpp
-index cbb6f7ed460..a8f775cdfe4 100644
+index 8a7d0c55ea7..7be35825d25 100644
 --- a/rpcs3/rpcs3qt/qt_camera_handler.cpp
 +++ b/rpcs3/rpcs3qt/qt_camera_handler.cpp
 @@ -5,17 +5,16 @@
@@ -1670,8 +1698,8 @@ index cbb6f7ed460..a8f775cdfe4 100644
 -	for (const QCameraInfo& cameraInfo : QCameraInfo::availableCameras())
 +	for (const QCameraDevice& camera_device : QMediaDevices::videoInputs())
  	{
--		camera_log.success("Found camera: name=%s, description=%s", cameraInfo.deviceName().toStdString(), cameraInfo.description().toStdString());
-+		camera_log.success("Found camera: id=%s, description=%s", camera_device.id().toStdString(), camera_device.description().toStdString());
+-		camera_log.success("Found camera: name=%s, description=%s", cameraInfo.deviceName(), cameraInfo.description());
++		camera_log.success("Found camera: id=%s, description=%s", camera_device.id(), camera_device.description());
  	}
  
  	if (!g_cfg_camera.load())
@@ -1710,8 +1738,8 @@ index cbb6f7ed460..a8f775cdfe4 100644
 -	const bool front_facing = camera_info.position() == QCamera::Position::FrontFace;
 +	const bool front_facing = camera_info.position() == QCameraDevice::Position::FrontFace;
  
--	camera_log.success("Using camera: name=\"%s\", description=\"%s\", front_facing=%d", camera_info.deviceName().toStdString(), camera_info.description().toStdString(), front_facing);
-+	camera_log.success("Using camera: id=\"%s\", description=\"%s\", front_facing=%d", camera_info.id().toStdString(), camera_info.description().toStdString(), front_facing);
+-	camera_log.success("Using camera: name=\"%s\", description=\"%s\", front_facing=%d", camera_info.deviceName(), camera_info.description(), front_facing);
++	camera_log.success("Using camera: id=\"%s\", description=\"%s\", front_facing=%d", camera_info.id(), camera_info.description(), front_facing);
  
  	// Create camera and video surface
 -	m_surface.reset(new qt_camera_video_surface(front_facing, nullptr));
@@ -2279,7 +2307,7 @@ index 4cd42a4cd54..3385a5048f7 100644
  	void set_format(s32 format, u32 bytesize);
  	void set_resolution(u32 width, u32 height);
 diff --git a/rpcs3/rpcs3qt/qt_music_error_handler.cpp b/rpcs3/rpcs3qt/qt_music_error_handler.cpp
-index aa5af7af8e1..9f79dcaa76c 100644
+index a75bde94b8c..842662f20e4 100644
 --- a/rpcs3/rpcs3qt/qt_music_error_handler.cpp
 +++ b/rpcs3/rpcs3qt/qt_music_error_handler.cpp
 @@ -15,8 +15,6 @@ void fmt_class_string<QMediaPlayer::Error>::format(std::string& out, u64 arg)
@@ -2344,8 +2372,8 @@ index aa5af7af8e1..9f79dcaa76c 100644
 -void qt_music_error_handler::handle_music_error(QMediaPlayer::Error error)
 +void qt_music_error_handler::handle_music_error(QMediaPlayer::Error error, const QString& errorString)
  {
--	music_log.error("Error event: \"%s\" (error=%s)", m_media_player ? m_media_player->errorString().toStdString() : "", error);
-+	music_log.error("Error event: \"%s\" (error=%s)", m_media_player ? errorString.toStdString() : "", error);
+-	music_log.error("Error event: \"%s\" (error=%s)", m_media_player ? m_media_player->errorString() : "", error);
++	music_log.error("Error event: \"%s\" (error=%s)", errorString, error);
  }
 diff --git a/rpcs3/rpcs3qt/qt_music_error_handler.h b/rpcs3/rpcs3qt/qt_music_error_handler.h
 index 11c5ff3fbd8..7d19c22d5c8 100644
@@ -2440,10 +2468,10 @@ index 39c40a59152..d92d379cd9c 100644
  
  	return volume;
 diff --git a/rpcs3/rpcs3qt/qt_utils.h b/rpcs3/rpcs3qt/qt_utils.h
-index 32312b34ae7..c238e7b00d0 100644
+index 6aa6032242c..197898a5be3 100644
 --- a/rpcs3/rpcs3qt/qt_utils.h
 +++ b/rpcs3/rpcs3qt/qt_utils.h
-@@ -133,7 +133,7 @@ namespace gui
+@@ -142,7 +142,7 @@ namespace gui
  		template <typename T>
  		void stop_future_watcher(QFutureWatcher<T>& watcher, bool cancel, std::shared_ptr<atomic_t<bool>> cancel_flag = nullptr)
  		{
@@ -2466,7 +2494,7 @@ index d941ee77626..98da5fe7da8 100644
  			updateRegister(qvar.toInt());
  		}
 diff --git a/rpcs3/rpcs3qt/save_manager_dialog.cpp b/rpcs3/rpcs3qt/save_manager_dialog.cpp
-index 07e9a8caf4e..0a3bdb0d50e 100644
+index b4014a73ea0..b0e3f2fe5b6 100644
 --- a/rpcs3/rpcs3qt/save_manager_dialog.cpp
 +++ b/rpcs3/rpcs3qt/save_manager_dialog.cpp
 @@ -18,7 +18,6 @@
@@ -2478,7 +2506,7 @@ index 07e9a8caf4e..0a3bdb0d50e 100644
  #include <QPainter>
  #include <QScreen>
 diff --git a/rpcs3/rpcs3qt/settings_dialog.cpp b/rpcs3/rpcs3qt/settings_dialog.cpp
-index 5b2e4517b5e..22b83dccd8a 100644
+index fdf922911ae..cb2b8fe88c5 100644
 --- a/rpcs3/rpcs3qt/settings_dialog.cpp
 +++ b/rpcs3/rpcs3qt/settings_dialog.cpp
 @@ -1,5 +1,6 @@
@@ -2497,7 +2525,7 @@ index 5b2e4517b5e..22b83dccd8a 100644
  
  #include "gui_settings.h"
  #include "display_sleep_control.h"
-@@ -1207,10 +1207,10 @@ settings_dialog::settings_dialog(std::shared_ptr<gui_settings> gui_settings, std
+@@ -1191,10 +1191,10 @@ settings_dialog::settings_dialog(std::shared_ptr<gui_settings> gui_settings, std
  		const std::string selected_camera = m_emu_settings->GetSetting(emu_settings_type::CameraID);
  		ui->cameraIdBox->addItem(tr("None", "Camera Device"), "");
  		ui->cameraIdBox->addItem(tr("Default", "Camera Device"), qstr(default_camera));
