@@ -1,5 +1,5 @@
 diff --git a/rpcs3/Input/evdev_joystick_handler.cpp b/rpcs3/Input/evdev_joystick_handler.cpp
-index e465377fc..a921789d4 100644
+index c872167be..941cee138 100644
 --- a/rpcs3/Input/evdev_joystick_handler.cpp
 +++ b/rpcs3/Input/evdev_joystick_handler.cpp
 @@ -16,6 +16,7 @@
@@ -108,9 +108,9 @@ index e465377fc..a921789d4 100644
  		auto it = data.find(static_cast<u64>(key));
  		return it != data.end() && dir == it->second.second ? it->second.first : 0;
  	};
-@@ -366,8 +381,12 @@ PadHandlerBase::connection evdev_joystick_handler::get_next_button_press(const s
- 		std::string name;
- 	} pressed_button{};
+@@ -370,8 +385,12 @@ PadHandlerBase::connection evdev_joystick_handler::get_next_button_press(const s
+ 	const bool is_sony_controller = !is_xbox_360_controller && padId.find("Sony") != umax;
+ 	const bool is_sony_guitar = is_sony_controller && padId.find("Guitar") != umax;
  
 -	for (const auto& [code, name] : button_list)
 +	for (const auto& [code, name2] : button_list)
@@ -122,7 +122,7 @@ index e465377fc..a921789d4 100644
  		// Handle annoying useless buttons
  		if (code == NO_BUTTON)
  			continue;
-@@ -394,8 +413,12 @@ PadHandlerBase::connection evdev_joystick_handler::get_next_button_press(const s
+@@ -398,8 +417,12 @@ PadHandlerBase::connection evdev_joystick_handler::get_next_button_press(const s
  		}
  	}
  
@@ -136,7 +136,7 @@ index e465377fc..a921789d4 100644
  		if (data[code].second)
  			continue;
  
-@@ -419,8 +442,12 @@ PadHandlerBase::connection evdev_joystick_handler::get_next_button_press(const s
+@@ -423,8 +446,12 @@ PadHandlerBase::connection evdev_joystick_handler::get_next_button_press(const s
  		}
  	}
  
@@ -150,7 +150,7 @@ index e465377fc..a921789d4 100644
  		if (!data[code].second)
  			continue;
  
-@@ -650,7 +677,7 @@ u32 evdev_joystick_handler::GetButtonInfo(const input_event& evt, const std::sha
+@@ -654,7 +681,7 @@ u32 evdev_joystick_handler::GetButtonInfo(const input_event& evt, const std::sha
  		const int max = libevdev_get_abs_maximum(dev, code);
  
  		// Triggers do not need handling of negative values
@@ -159,7 +159,7 @@ index e465377fc..a921789d4 100644
  		{
  			m_is_negative          = false;
  			m_is_button_or_trigger = true;
-@@ -706,7 +733,7 @@ std::vector<pad_list_entry> evdev_joystick_handler::list_devices()
+@@ -710,7 +737,7 @@ std::vector<pad_list_entry> evdev_joystick_handler::list_devices()
  				if (is_pad_device || is_motion_device)
  				{
  					// It's a joystick or motion device.
@@ -168,7 +168,7 @@ index e465377fc..a921789d4 100644
  
  					if (unique_names.find(name) == unique_names.end())
  						unique_names.emplace(name, 1);
-@@ -751,7 +778,7 @@ std::shared_ptr<evdev_joystick_handler::EvdevDevice> evdev_joystick_handler::add
+@@ -755,7 +782,7 @@ std::shared_ptr<evdev_joystick_handler::EvdevDevice> evdev_joystick_handler::add
  				continue;
  			}
  
@@ -177,7 +177,7 @@ index e465377fc..a921789d4 100644
  
  			if (unique_names.find(name) == unique_names.end())
  				unique_names.emplace(name, 1);
-@@ -781,6 +808,19 @@ std::shared_ptr<evdev_joystick_handler::EvdevDevice> evdev_joystick_handler::add
+@@ -785,6 +812,19 @@ std::shared_ptr<evdev_joystick_handler::EvdevDevice> evdev_joystick_handler::add
  					}
  				}
  
@@ -197,7 +197,7 @@ index e465377fc..a921789d4 100644
  				// Alright, now that we've confirmed we haven't added this joystick yet, les do dis.
  				m_dev->device     = dev;
  				m_dev->path       = path;
-@@ -1198,25 +1238,19 @@ bool evdev_joystick_handler::bindPadToDevice(std::shared_ptr<Pad> pad, u8 player
+@@ -1202,25 +1242,19 @@ bool evdev_joystick_handler::bindPadToDevice(std::shared_ptr<Pad> pad, u8 player
  	{
  		EvdevButton button{ 0, -1, EV_ABS };
  
