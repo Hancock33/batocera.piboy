@@ -12865,7 +12865,7 @@ msgstr ""
 #~ msgstr "Avance Rápido"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
+#~ msgid "Enable or disable high score saving"
 #~ msgstr "Activar o desactivar el guardado de récord de puntos"
 
 #~ msgctxt "game_options"
@@ -12873,7 +12873,7 @@ msgstr ""
 #~ msgstr "Auto (Coincidir con ventana)"
 
 #~ msgctxt "game_options"
-#~ msgid "ENabling will smooth out the image."
+#~ msgid "Enabling will smooth out the image."
 #~ msgstr "Habilitar para suavizar la imagen."
 
 #~ msgctxt "game_options"

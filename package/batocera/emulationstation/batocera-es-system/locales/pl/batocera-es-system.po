@@ -12874,7 +12874,7 @@ msgstr ""
 #~ msgstr "Przewijanie do przodu"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
+#~ msgid "Enable or disable high score saving"
 #~ msgstr "Włączenie lub wyłączenie zapisywania wyników"
 
 #~ msgctxt "game_options"
@@ -12882,7 +12882,7 @@ msgstr ""
 #~ msgstr "Auto (dopasuj do okna)"
 
 #~ msgctxt "game_options"
-#~ msgid "ENabling will smooth out the image."
+#~ msgid "Enabling will smooth out the image."
 #~ msgstr "Włączenie spowoduje wygładzenie obrazu."
 
 #~ msgctxt "game_options"

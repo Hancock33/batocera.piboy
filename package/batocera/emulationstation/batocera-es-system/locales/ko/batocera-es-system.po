@@ -14224,7 +14224,7 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
+#~ msgid "Enable or disable high score saving"
 #~ msgstr "최고 점수 저장 사용 또는 사용 안 함"
 
 #, fuzzy

@@ -12933,7 +12933,7 @@ msgstr ""
 #~ msgstr "Schnelles Vorspulen"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
+#~ msgid "Enable or disable high score saving"
 #~ msgstr "Speichern von Highscores aktivieren oder deaktivieren"
 
 #~ msgctxt "game_options"
@@ -12941,7 +12941,7 @@ msgstr ""
 #~ msgstr "Auto (Angleichen an Fenster)"
 
 #~ msgctxt "game_options"
-#~ msgid "ENabling will smooth out the image."
+#~ msgid "Enabling will smooth out the image."
 #~ msgstr "Aktivierung dieser Funktion führt zu einer Bildglättung."
 
 #~ msgctxt "game_options"
