@@ -1,0 +1,510 @@
+From 774638ffcf207ab3efee858f63571976b6257691 Mon Sep 17 00:00:00 2001
+From: Mike Schuchardt <mikes@lunarg.com>
+Date: Mon, 12 Jun 2023 11:22:14 -0700
+Subject: [PATCH] build: Update to header 1.3.253
+
+- Update known-good
+- Generate source
+---
+ build-android/vulkan-headers_revision_android |   2 +-
+ common/vulkan_wrapper.cpp                     |   7 +
+ common/vulkan_wrapper.h                       |   2 +
+ icd/generated/mock_icd.cpp                    |  21 ++
+ icd/generated/mock_icd.h                      |  26 ++-
+ icd/generated/vk_typemap_helper.h             | 194 +++++++++++++++++-
+ scripts/generate_vulkan_wrapper.py            |  12 +-
+ scripts/known_good.json                       |   4 +-
+ 8 files changed, 249 insertions(+), 19 deletions(-)
+
+diff --git a/build-android/vulkan-headers_revision_android b/build-android/vulkan-headers_revision_android
+index 6d483bbf0..0d3178b53 100644
+--- a/build-android/vulkan-headers_revision_android
++++ b/build-android/vulkan-headers_revision_android
+@@ -1 +1 @@
+-v1.3.251
++v1.3.253
+diff --git a/common/vulkan_wrapper.cpp b/common/vulkan_wrapper.cpp
+index 4f9935362..f7804a9c2 100644
+--- a/common/vulkan_wrapper.cpp
++++ b/common/vulkan_wrapper.cpp
+@@ -579,6 +579,11 @@ int InitVulkan(void) {
+ #endif
+ 
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
++    vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR =
++        reinterpret_cast<PFN_vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR>(
++            dlsym(libvulkan, "vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR"));
++    vkGetEncodedVideoSessionParametersKHR =
++        reinterpret_cast<PFN_vkGetEncodedVideoSessionParametersKHR>(dlsym(libvulkan, "vkGetEncodedVideoSessionParametersKHR"));
+     vkCmdEncodeVideoKHR = reinterpret_cast<PFN_vkCmdEncodeVideoKHR>(dlsym(libvulkan, "vkCmdEncodeVideoKHR"));
+ #endif
+     return 1;
+@@ -1297,6 +1302,8 @@ PFN_vkGetPhysicalDeviceScreenPresentationSupportQNX vkGetPhysicalDeviceScreenPre
+ #endif
+ 
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
++PFN_vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR;
++PFN_vkGetEncodedVideoSessionParametersKHR vkGetEncodedVideoSessionParametersKHR;
+ PFN_vkCmdEncodeVideoKHR vkCmdEncodeVideoKHR;
+ #endif
+ 
+diff --git a/common/vulkan_wrapper.h b/common/vulkan_wrapper.h
+index fe47d4332..ded43c016 100644
+--- a/common/vulkan_wrapper.h
++++ b/common/vulkan_wrapper.h
+@@ -533,6 +533,8 @@ extern PFN_vkGetPhysicalDeviceXlibPresentationSupportKHR vkGetPhysicalDeviceXlib
+ 
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
+ // VK_KHR_video_encode_queue
++extern PFN_vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR;
++extern PFN_vkGetEncodedVideoSessionParametersKHR vkGetEncodedVideoSessionParametersKHR;
+ extern PFN_vkCmdEncodeVideoKHR vkCmdEncodeVideoKHR;
+ #endif
+ 
+diff --git a/icd/generated/mock_icd.cpp b/icd/generated/mock_icd.cpp
+index 7d1a90f29..a0994b088 100644
+--- a/icd/generated/mock_icd.cpp
++++ b/icd/generated/mock_icd.cpp
+@@ -3988,6 +3988,26 @@ static VKAPI_ATTR VkResult VKAPI_CALL UnmapMemory2KHR(
+ 
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
+ 
++static VKAPI_ATTR VkResult VKAPI_CALL GetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR(
++    VkPhysicalDevice                            physicalDevice,
++    const VkPhysicalDeviceVideoEncodeQualityLevelInfoKHR* pQualityLevelInfo,
++    VkVideoEncodeQualityLevelPropertiesKHR*     pQualityLevelProperties)
++{
++//Not a CREATE or DESTROY function
++    return VK_SUCCESS;
++}
++
++static VKAPI_ATTR VkResult VKAPI_CALL GetEncodedVideoSessionParametersKHR(
++    VkDevice                                    device,
++    const VkVideoEncodeSessionParametersGetInfoKHR* pVideoSessionParametersInfo,
++    VkVideoEncodeSessionParametersFeedbackInfoKHR* pFeedbackInfo,
++    size_t*                                     pDataSize,
++    void*                                       pData)
++{
++//Not a CREATE or DESTROY function
++    return VK_SUCCESS;
++}
++
+ static VKAPI_ATTR void VKAPI_CALL CmdEncodeVideoKHR(
+     VkCommandBuffer                             commandBuffer,
+     const VkVideoEncodeInfoKHR*                 pEncodeInfo)
+@@ -6309,6 +6329,7 @@ static VKAPI_ATTR void VKAPI_CALL CmdDecompressMemoryIndirectCountNV(
+ 
+ 
+ 
++
+ static VKAPI_ATTR void VKAPI_CALL CmdSetTessellationDomainOriginEXT(
+     VkCommandBuffer                             commandBuffer,
+     VkTessellationDomainOrigin                  domainOrigin)
+diff --git a/icd/generated/mock_icd.h b/icd/generated/mock_icd.h
+index 79dc78074..6f4b3f96f 100644
+--- a/icd/generated/mock_icd.h
++++ b/icd/generated/mock_icd.h
+@@ -112,8 +112,8 @@ static const std::unordered_map<std::string, uint32_t> device_extension_map = {
+     {"VK_AMD_negative_viewport_height", 1},
+     {"VK_AMD_gpu_shader_half_float", 2},
+     {"VK_AMD_shader_ballot", 1},
+-    {"VK_EXT_video_encode_h264", 10},
+-    {"VK_EXT_video_encode_h265", 10},
++    {"VK_EXT_video_encode_h264", 11},
++    {"VK_EXT_video_encode_h265", 11},
+     {"VK_KHR_video_decode_h264", 8},
+     {"VK_AMD_texture_gather_bias_lod", 1},
+     {"VK_AMD_shader_info", 1},
+@@ -289,7 +289,7 @@ static const std::unordered_map<std::string, uint32_t> device_extension_map = {
+     {"VK_KHR_present_id", 1},
+     {"VK_EXT_private_data", 1},
+     {"VK_EXT_pipeline_creation_cache_control", 3},
+-    {"VK_KHR_video_encode_queue", 8},
++    {"VK_KHR_video_encode_queue", 9},
+     {"VK_NV_device_diagnostics_config", 2},
+     {"VK_QCOM_render_pass_store_ops", 2},
+     {"VK_NV_low_latency", 1},
+@@ -359,6 +359,7 @@ static const std::unordered_map<std::string, uint32_t> device_extension_map = {
+     {"VK_NV_linear_color_attachment", 1},
+     {"VK_EXT_image_compression_control_swapchain", 1},
+     {"VK_QCOM_image_processing", 1},
++    {"VK_EXT_external_memory_acquire_unmodified", 1},
+     {"VK_EXT_extended_dynamic_state3", 2},
+     {"VK_EXT_subpass_merge_feedback", 2},
+     {"VK_EXT_shader_module_identifier", 1},
+@@ -2324,6 +2325,18 @@ static VKAPI_ATTR VkResult VKAPI_CALL UnmapMemory2KHR(
+ 
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
+ 
++static VKAPI_ATTR VkResult VKAPI_CALL GetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR(
++    VkPhysicalDevice                            physicalDevice,
++    const VkPhysicalDeviceVideoEncodeQualityLevelInfoKHR* pQualityLevelInfo,
++    VkVideoEncodeQualityLevelPropertiesKHR*     pQualityLevelProperties);
++
++static VKAPI_ATTR VkResult VKAPI_CALL GetEncodedVideoSessionParametersKHR(
++    VkDevice                                    device,
++    const VkVideoEncodeSessionParametersGetInfoKHR* pVideoSessionParametersInfo,
++    VkVideoEncodeSessionParametersFeedbackInfoKHR* pFeedbackInfo,
++    size_t*                                     pDataSize,
++    void*                                       pData);
++
+ static VKAPI_ATTR void VKAPI_CALL CmdEncodeVideoKHR(
+     VkCommandBuffer                             commandBuffer,
+     const VkVideoEncodeInfoKHR*                 pEncodeInfo);
+@@ -3830,6 +3843,7 @@ static VKAPI_ATTR void VKAPI_CALL CmdDecompressMemoryIndirectCountNV(
+ 
+ 
+ 
++
+ static VKAPI_ATTR void VKAPI_CALL CmdSetTessellationDomainOriginEXT(
+     VkCommandBuffer                             commandBuffer,
+     VkTessellationDomainOrigin                  domainOrigin);
+@@ -4594,6 +4608,12 @@ static const std::unordered_map<std::string, void*> name_to_funcptr_map = {
+     {"vkGetPipelineExecutableInternalRepresentationsKHR", (void*)GetPipelineExecutableInternalRepresentationsKHR},
+     {"vkMapMemory2KHR", (void*)MapMemory2KHR},
+     {"vkUnmapMemory2KHR", (void*)UnmapMemory2KHR},
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++    {"vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR", (void*)GetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR},
++#endif
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++    {"vkGetEncodedVideoSessionParametersKHR", (void*)GetEncodedVideoSessionParametersKHR},
++#endif
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
+     {"vkCmdEncodeVideoKHR", (void*)CmdEncodeVideoKHR},
+ #endif
+diff --git a/icd/generated/vk_typemap_helper.h b/icd/generated/vk_typemap_helper.h
+index f962f28f0..447c21dab 100644
+--- a/icd/generated/vk_typemap_helper.h
++++ b/icd/generated/vk_typemap_helper.h
+@@ -3085,6 +3085,61 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_RATE_CONTROL_INFO_
+     typedef VkVideoEncodeRateControlInfoKHR Type;
+ };
+ 
++#endif // VK_ENABLE_BETA_EXTENSIONS
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++// Map type VkPhysicalDeviceVideoEncodeQualityLevelInfoKHR to id VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VIDEO_ENCODE_QUALITY_LEVEL_INFO_KHR
++template <> struct LvlTypeMap<VkPhysicalDeviceVideoEncodeQualityLevelInfoKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VIDEO_ENCODE_QUALITY_LEVEL_INFO_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VIDEO_ENCODE_QUALITY_LEVEL_INFO_KHR> {
++    typedef VkPhysicalDeviceVideoEncodeQualityLevelInfoKHR Type;
++};
++
++#endif // VK_ENABLE_BETA_EXTENSIONS
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++// Map type VkVideoEncodeQualityLevelPropertiesKHR to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_QUALITY_LEVEL_PROPERTIES_KHR
++template <> struct LvlTypeMap<VkVideoEncodeQualityLevelPropertiesKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_QUALITY_LEVEL_PROPERTIES_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_QUALITY_LEVEL_PROPERTIES_KHR> {
++    typedef VkVideoEncodeQualityLevelPropertiesKHR Type;
++};
++
++#endif // VK_ENABLE_BETA_EXTENSIONS
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++// Map type VkVideoEncodeQualityLevelInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_QUALITY_LEVEL_INFO_KHR
++template <> struct LvlTypeMap<VkVideoEncodeQualityLevelInfoKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_QUALITY_LEVEL_INFO_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_QUALITY_LEVEL_INFO_KHR> {
++    typedef VkVideoEncodeQualityLevelInfoKHR Type;
++};
++
++#endif // VK_ENABLE_BETA_EXTENSIONS
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++// Map type VkVideoEncodeSessionParametersGetInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_SESSION_PARAMETERS_GET_INFO_KHR
++template <> struct LvlTypeMap<VkVideoEncodeSessionParametersGetInfoKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_SESSION_PARAMETERS_GET_INFO_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_SESSION_PARAMETERS_GET_INFO_KHR> {
++    typedef VkVideoEncodeSessionParametersGetInfoKHR Type;
++};
++
++#endif // VK_ENABLE_BETA_EXTENSIONS
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++// Map type VkVideoEncodeSessionParametersFeedbackInfoKHR to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_SESSION_PARAMETERS_FEEDBACK_INFO_KHR
++template <> struct LvlTypeMap<VkVideoEncodeSessionParametersFeedbackInfoKHR> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_SESSION_PARAMETERS_FEEDBACK_INFO_KHR;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_SESSION_PARAMETERS_FEEDBACK_INFO_KHR> {
++    typedef VkVideoEncodeSessionParametersFeedbackInfoKHR Type;
++};
++
+ #endif // VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkQueueFamilyCheckpointProperties2NV to id VK_STRUCTURE_TYPE_QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV
+ template <> struct LvlTypeMap<VkQueueFamilyCheckpointProperties2NV> {
+@@ -3312,6 +3367,28 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_CAPABILITIES_
+     typedef VkVideoEncodeH264CapabilitiesEXT Type;
+ };
+ 
++#endif // VK_ENABLE_BETA_EXTENSIONS
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++// Map type VkVideoEncodeH264QualityLevelPropertiesEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_QUALITY_LEVEL_PROPERTIES_EXT
++template <> struct LvlTypeMap<VkVideoEncodeH264QualityLevelPropertiesEXT> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_QUALITY_LEVEL_PROPERTIES_EXT;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_QUALITY_LEVEL_PROPERTIES_EXT> {
++    typedef VkVideoEncodeH264QualityLevelPropertiesEXT Type;
++};
++
++#endif // VK_ENABLE_BETA_EXTENSIONS
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++// Map type VkVideoEncodeH264SessionCreateInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT
++template <> struct LvlTypeMap<VkVideoEncodeH264SessionCreateInfoEXT> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT> {
++    typedef VkVideoEncodeH264SessionCreateInfoEXT Type;
++};
++
+ #endif // VK_ENABLE_BETA_EXTENSIONS
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoEncodeH264SessionParametersAddInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT
+@@ -3334,6 +3411,28 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_SESSION_PARAM
+     typedef VkVideoEncodeH264SessionParametersCreateInfoEXT Type;
+ };
+ 
++#endif // VK_ENABLE_BETA_EXTENSIONS
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++// Map type VkVideoEncodeH264SessionParametersGetInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_SESSION_PARAMETERS_GET_INFO_EXT
++template <> struct LvlTypeMap<VkVideoEncodeH264SessionParametersGetInfoEXT> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_SESSION_PARAMETERS_GET_INFO_EXT;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_SESSION_PARAMETERS_GET_INFO_EXT> {
++    typedef VkVideoEncodeH264SessionParametersGetInfoEXT Type;
++};
++
++#endif // VK_ENABLE_BETA_EXTENSIONS
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++// Map type VkVideoEncodeH264SessionParametersFeedbackInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_SESSION_PARAMETERS_FEEDBACK_INFO_EXT
++template <> struct LvlTypeMap<VkVideoEncodeH264SessionParametersFeedbackInfoEXT> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_SESSION_PARAMETERS_FEEDBACK_INFO_EXT;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_SESSION_PARAMETERS_FEEDBACK_INFO_EXT> {
++    typedef VkVideoEncodeH264SessionParametersFeedbackInfoEXT Type;
++};
++
+ #endif // VK_ENABLE_BETA_EXTENSIONS
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoEncodeH264NaluSliceInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_NALU_SLICE_INFO_EXT
+@@ -3347,13 +3446,13 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_NALU_SLICE_IN
+ 
+ #endif // VK_ENABLE_BETA_EXTENSIONS
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
+-// Map type VkVideoEncodeH264VclFrameInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT
+-template <> struct LvlTypeMap<VkVideoEncodeH264VclFrameInfoEXT> {
+-    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT;
++// Map type VkVideoEncodeH264PictureInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_PICTURE_INFO_EXT
++template <> struct LvlTypeMap<VkVideoEncodeH264PictureInfoEXT> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_PICTURE_INFO_EXT;
+ };
+ 
+-template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT> {
+-    typedef VkVideoEncodeH264VclFrameInfoEXT Type;
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_PICTURE_INFO_EXT> {
++    typedef VkVideoEncodeH264PictureInfoEXT Type;
+ };
+ 
+ #endif // VK_ENABLE_BETA_EXTENSIONS
+@@ -3400,6 +3499,17 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_RATE_CONTROL_
+     typedef VkVideoEncodeH264RateControlLayerInfoEXT Type;
+ };
+ 
++#endif // VK_ENABLE_BETA_EXTENSIONS
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++// Map type VkVideoEncodeH264GopRemainingFrameInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_GOP_REMAINING_FRAME_INFO_EXT
++template <> struct LvlTypeMap<VkVideoEncodeH264GopRemainingFrameInfoEXT> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_GOP_REMAINING_FRAME_INFO_EXT;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H264_GOP_REMAINING_FRAME_INFO_EXT> {
++    typedef VkVideoEncodeH264GopRemainingFrameInfoEXT Type;
++};
++
+ #endif // VK_ENABLE_BETA_EXTENSIONS
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoEncodeH265CapabilitiesEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_CAPABILITIES_EXT
+@@ -3411,6 +3521,28 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_CAPABILITIES_
+     typedef VkVideoEncodeH265CapabilitiesEXT Type;
+ };
+ 
++#endif // VK_ENABLE_BETA_EXTENSIONS
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++// Map type VkVideoEncodeH265SessionCreateInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_SESSION_CREATE_INFO_EXT
++template <> struct LvlTypeMap<VkVideoEncodeH265SessionCreateInfoEXT> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_SESSION_CREATE_INFO_EXT;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_SESSION_CREATE_INFO_EXT> {
++    typedef VkVideoEncodeH265SessionCreateInfoEXT Type;
++};
++
++#endif // VK_ENABLE_BETA_EXTENSIONS
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++// Map type VkVideoEncodeH265QualityLevelPropertiesEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_QUALITY_LEVEL_PROPERTIES_EXT
++template <> struct LvlTypeMap<VkVideoEncodeH265QualityLevelPropertiesEXT> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_QUALITY_LEVEL_PROPERTIES_EXT;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_QUALITY_LEVEL_PROPERTIES_EXT> {
++    typedef VkVideoEncodeH265QualityLevelPropertiesEXT Type;
++};
++
+ #endif // VK_ENABLE_BETA_EXTENSIONS
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoEncodeH265SessionParametersAddInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT
+@@ -3433,6 +3565,28 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_SESSION_PARAM
+     typedef VkVideoEncodeH265SessionParametersCreateInfoEXT Type;
+ };
+ 
++#endif // VK_ENABLE_BETA_EXTENSIONS
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++// Map type VkVideoEncodeH265SessionParametersGetInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_SESSION_PARAMETERS_GET_INFO_EXT
++template <> struct LvlTypeMap<VkVideoEncodeH265SessionParametersGetInfoEXT> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_SESSION_PARAMETERS_GET_INFO_EXT;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_SESSION_PARAMETERS_GET_INFO_EXT> {
++    typedef VkVideoEncodeH265SessionParametersGetInfoEXT Type;
++};
++
++#endif // VK_ENABLE_BETA_EXTENSIONS
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++// Map type VkVideoEncodeH265SessionParametersFeedbackInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_SESSION_PARAMETERS_FEEDBACK_INFO_EXT
++template <> struct LvlTypeMap<VkVideoEncodeH265SessionParametersFeedbackInfoEXT> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_SESSION_PARAMETERS_FEEDBACK_INFO_EXT;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_SESSION_PARAMETERS_FEEDBACK_INFO_EXT> {
++    typedef VkVideoEncodeH265SessionParametersFeedbackInfoEXT Type;
++};
++
+ #endif // VK_ENABLE_BETA_EXTENSIONS
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkVideoEncodeH265NaluSliceSegmentInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_NALU_SLICE_SEGMENT_INFO_EXT
+@@ -3446,13 +3600,13 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_NALU_SLICE_SE
+ 
+ #endif // VK_ENABLE_BETA_EXTENSIONS
+ #ifdef VK_ENABLE_BETA_EXTENSIONS
+-// Map type VkVideoEncodeH265VclFrameInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_VCL_FRAME_INFO_EXT
+-template <> struct LvlTypeMap<VkVideoEncodeH265VclFrameInfoEXT> {
+-    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_VCL_FRAME_INFO_EXT;
++// Map type VkVideoEncodeH265PictureInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_PICTURE_INFO_EXT
++template <> struct LvlTypeMap<VkVideoEncodeH265PictureInfoEXT> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_PICTURE_INFO_EXT;
+ };
+ 
+-template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_VCL_FRAME_INFO_EXT> {
+-    typedef VkVideoEncodeH265VclFrameInfoEXT Type;
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_PICTURE_INFO_EXT> {
++    typedef VkVideoEncodeH265PictureInfoEXT Type;
+ };
+ 
+ #endif // VK_ENABLE_BETA_EXTENSIONS
+@@ -3499,6 +3653,17 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_RATE_CONTROL_
+     typedef VkVideoEncodeH265RateControlLayerInfoEXT Type;
+ };
+ 
++#endif // VK_ENABLE_BETA_EXTENSIONS
++#ifdef VK_ENABLE_BETA_EXTENSIONS
++// Map type VkVideoEncodeH265GopRemainingFrameInfoEXT to id VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_GOP_REMAINING_FRAME_INFO_EXT
++template <> struct LvlTypeMap<VkVideoEncodeH265GopRemainingFrameInfoEXT> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_GOP_REMAINING_FRAME_INFO_EXT;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_VIDEO_ENCODE_H265_GOP_REMAINING_FRAME_INFO_EXT> {
++    typedef VkVideoEncodeH265GopRemainingFrameInfoEXT Type;
++};
++
+ #endif // VK_ENABLE_BETA_EXTENSIONS
+ // Map type VkTextureLODGatherFormatPropertiesAMD to id VK_STRUCTURE_TYPE_TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD
+ template <> struct LvlTypeMap<VkTextureLODGatherFormatPropertiesAMD> {
+@@ -6556,6 +6721,15 @@ template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_IMAGE_PROCESSIN
+     typedef VkPhysicalDeviceImageProcessingPropertiesQCOM Type;
+ };
+ 
++// Map type VkExternalMemoryAcquireUnmodifiedEXT to id VK_STRUCTURE_TYPE_EXTERNAL_MEMORY_ACQUIRE_UNMODIFIED_EXT
++template <> struct LvlTypeMap<VkExternalMemoryAcquireUnmodifiedEXT> {
++    static const VkStructureType kSType = VK_STRUCTURE_TYPE_EXTERNAL_MEMORY_ACQUIRE_UNMODIFIED_EXT;
++};
++
++template <> struct LvlSTypeMap<VK_STRUCTURE_TYPE_EXTERNAL_MEMORY_ACQUIRE_UNMODIFIED_EXT> {
++    typedef VkExternalMemoryAcquireUnmodifiedEXT Type;
++};
++
+ // Map type VkPhysicalDeviceExtendedDynamicState3FeaturesEXT to id VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_3_FEATURES_EXT
+ template <> struct LvlTypeMap<VkPhysicalDeviceExtendedDynamicState3FeaturesEXT> {
+     static const VkStructureType kSType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_3_FEATURES_EXT;
+diff --git a/scripts/generate_vulkan_wrapper.py b/scripts/generate_vulkan_wrapper.py
+index e02b00afc..99b702bda 100755
+--- a/scripts/generate_vulkan_wrapper.py
++++ b/scripts/generate_vulkan_wrapper.py
+@@ -1439,6 +1439,9 @@ def __repr__(self):
+ VK_QCOM_image_processing = Extension(name='VK_QCOM_image_processing', version=1, guard=None, commands=[
+ ])
+ 
++VK_EXT_external_memory_acquire_unmodified = Extension(name='VK_EXT_external_memory_acquire_unmodified', version=1, guard=None, commands=[
++])
++
+ VK_EXT_extended_dynamic_state3 = Extension(name='VK_EXT_extended_dynamic_state3', version=2, guard=None, commands=[
+     Command(name='vkCmdSetTessellationDomainOriginEXT', dispatch='VkCommandBuffer'),
+     Command(name='vkCmdSetDepthClampEnableEXT', dispatch='VkCommandBuffer'),
+@@ -1711,14 +1714,16 @@ def __repr__(self):
+ VK_KHR_portability_subset = Extension(name='VK_KHR_portability_subset', version=1, guard='VK_ENABLE_BETA_EXTENSIONS', commands=[
+ ])
+ 
+-VK_KHR_video_encode_queue = Extension(name='VK_KHR_video_encode_queue', version=8, guard='VK_ENABLE_BETA_EXTENSIONS', commands=[
++VK_KHR_video_encode_queue = Extension(name='VK_KHR_video_encode_queue', version=9, guard='VK_ENABLE_BETA_EXTENSIONS', commands=[
++    Command(name='vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR', dispatch='VkPhysicalDevice'),
++    Command(name='vkGetEncodedVideoSessionParametersKHR', dispatch='VkDevice'),
+     Command(name='vkCmdEncodeVideoKHR', dispatch='VkCommandBuffer'),
+ ])
+ 
+-VK_EXT_video_encode_h264 = Extension(name='VK_EXT_video_encode_h264', version=10, guard='VK_ENABLE_BETA_EXTENSIONS', commands=[
++VK_EXT_video_encode_h264 = Extension(name='VK_EXT_video_encode_h264', version=11, guard='VK_ENABLE_BETA_EXTENSIONS', commands=[
+ ])
+ 
+-VK_EXT_video_encode_h265 = Extension(name='VK_EXT_video_encode_h265', version=10, guard='VK_ENABLE_BETA_EXTENSIONS', commands=[
++VK_EXT_video_encode_h265 = Extension(name='VK_EXT_video_encode_h265', version=11, guard='VK_ENABLE_BETA_EXTENSIONS', commands=[
+ ])
+ 
+ VK_NV_displacement_micromap = Extension(name='VK_NV_displacement_micromap', version=1, guard='VK_ENABLE_BETA_EXTENSIONS', commands=[
+@@ -2000,6 +2005,7 @@ def __repr__(self):
+     VK_GOOGLE_surfaceless_query,
+     VK_EXT_image_compression_control_swapchain,
+     VK_QCOM_image_processing,
++    VK_EXT_external_memory_acquire_unmodified,
+     VK_EXT_extended_dynamic_state3,
+     VK_EXT_subpass_merge_feedback,
+     VK_LUNARG_direct_driver_loading,
+diff --git a/scripts/known_good.json b/scripts/known_good.json
+index 9b82d2bc5..edf070e09 100644
+--- a/scripts/known_good.json
++++ b/scripts/known_good.json
+@@ -7,7 +7,7 @@
+       "sub_dir" : "Vulkan-Headers",
+       "build_dir" : "Vulkan-Headers/build",
+       "install_dir" : "Vulkan-Headers/build/install",
+-      "commit": "v1.3.251"
++      "commit": "v1.3.253"
+     },
+     {
+       "name" : "MoltenVK",
+@@ -32,7 +32,7 @@
+       "sub_dir" : "Vulkan-Loader",
+       "build_dir" : "Vulkan-Loader/build",
+       "install_dir" : "Vulkan-Loader/build/install",
+-      "commit": "v1.3.251",
++      "commit": "v1.3.253",
+       "deps" : [
+         {
+           "var_name" : "VULKAN_HEADERS_INSTALL_DIR",
