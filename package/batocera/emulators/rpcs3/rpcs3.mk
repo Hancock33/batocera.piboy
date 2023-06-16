@@ -3,9 +3,9 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Jun 12, 2023
-RPCS3_VERSION = 16f869fe5a1b14640368bedbb30814c1dc56b93f
-RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
+# Version: Commits on Jun 15, 2023 (branch@Qt6-fun)
+RPCS3_VERSION = 0116a8c0718c1d6164dfac0163cb9e5eafdef0a2
+RPCS3_SITE = https://github.com/Megamouse/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
 RPCS3_LICENSE = GPLv2
@@ -27,6 +27,7 @@ RPCS3_CONF_OPTS += -DUSE_PRECOMPILED_HEADERS=OFF
 RPCS3_CONF_OPTS += -DSTATIC_LINK_LLVM=OFF
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_CURL=ON
+RPCS3_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=-Wl,--unresolved-symbols=ignore-all
 
 RPCS3_CONF_ENV = LIBS="-ncurses -ltinfo"
 
