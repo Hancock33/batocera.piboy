@@ -12620,10 +12620,6 @@ msgstr ""
 #~ msgstr "ZONA DI ESCLUSIONE JOYSTICK ANALOGICO"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
-#~ msgstr "Abilita o disabilita il salvataggio punteggi massimi"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
 #~ msgstr ""
@@ -12687,18 +12683,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "ALTEZZA AUTO"
-
-#~ msgctxt "game_options"
-#~ msgid "Auto (Match Window)"
-#~ msgstr "Auto (Adatta alla finestra)"
-
-#~ msgctxt "game_options"
-#~ msgid "ENabling will smooth out the image."
-#~ msgstr "Abilitato sfuma l'immagine"
-
-#~ msgctxt "game_options"
-#~ msgid "Fills the screen regardless of the aspect ratio."
-#~ msgstr "Riempe lo schermo senza tener conto delle proporzioni."
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (Default)"
@@ -12847,6 +12831,22 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "AvanzamentoRapido"
+
+#~ msgctxt "game_options"
+#~ msgid "Emable or disable high score saving"
+#~ msgstr "Abilita o disabilita il salvataggio punteggi massimi"
+
+#~ msgctxt "game_options"
+#~ msgid "Auto (Match Window)"
+#~ msgstr "Auto (Adatta alla finestra)"
+
+#~ msgctxt "game_options"
+#~ msgid "ENabling will smooth out the image."
+#~ msgstr "Abilitato sfuma l'immagine"
+
+#~ msgctxt "game_options"
+#~ msgid "Fills the screen regardless of the aspect ratio."
+#~ msgstr "Riempe lo schermo senza tener conto delle proporzioni."
 
 #~ msgctxt "game_options"
 #~ msgid "Double the rendering resolution."

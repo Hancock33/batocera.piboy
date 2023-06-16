@@ -12577,10 +12577,6 @@ msgstr ""
 #~ msgstr "Analógová mŕtva zóna"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
-#~ msgstr "Povoliť alebo zakázať ukladanie najvyššieho skóre"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
 #~ msgstr ""
@@ -12642,18 +12638,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "Automatická výška"
-
-#~ msgctxt "game_options"
-#~ msgid "Auto (Match Window)"
-#~ msgstr "Auto (podľa okna)"
-
-#~ msgctxt "game_options"
-#~ msgid "ENabling will smooth out the image."
-#~ msgstr "Povolenie vyhladí obraz."
-
-#~ msgctxt "game_options"
-#~ msgid "Fills the screen regardless of the aspect ratio."
-#~ msgstr "Vyplní obrazovku bez ohľadu na pomer strán."
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (Default)"
@@ -12802,6 +12786,22 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rýchlo dopredu"
+
+#~ msgctxt "game_options"
+#~ msgid "Emable or disable high score saving"
+#~ msgstr "Povoliť alebo zakázať ukladanie najvyššieho skóre"
+
+#~ msgctxt "game_options"
+#~ msgid "Auto (Match Window)"
+#~ msgstr "Auto (podľa okna)"
+
+#~ msgctxt "game_options"
+#~ msgid "ENabling will smooth out the image."
+#~ msgstr "Povolenie vyhladí obraz."
+
+#~ msgctxt "game_options"
+#~ msgid "Fills the screen regardless of the aspect ratio."
+#~ msgstr "Vyplní obrazovku bez ohľadu na pomer strán."
 
 #~ msgctxt "game_options"
 #~ msgid "Double the rendering resolution."

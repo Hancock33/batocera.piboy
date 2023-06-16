@@ -12516,10 +12516,6 @@ msgstr ""
 #~ msgstr "アナログスティックデッドゾーン"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
-#~ msgstr "HIGH SCORE の保存を有効または無効にします"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
 #~ msgstr "ゲーム表示を最大化し、未使用の画面部にアートワークを表示します"
@@ -12578,18 +12574,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "高さを調整する"
-
-#~ msgctxt "game_options"
-#~ msgid "Auto (Match Window)"
-#~ msgstr "自動 (ウィンドウに合わせる)"
-
-#~ msgctxt "game_options"
-#~ msgid "ENabling will smooth out the image."
-#~ msgstr "有効にすると画像が滑らかになります"
-
-#~ msgctxt "game_options"
-#~ msgid "Fills the screen regardless of the aspect ratio."
-#~ msgstr "アスペクト比に関係なく、画面いっぱいに表示します"
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (Default)"
@@ -12738,6 +12722,22 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid "Emable or disable high score saving"
+#~ msgstr "HIGH SCORE の保存を有効または無効にします"
+
+#~ msgctxt "game_options"
+#~ msgid "Auto (Match Window)"
+#~ msgstr "自動 (ウィンドウに合わせる)"
+
+#~ msgctxt "game_options"
+#~ msgid "ENabling will smooth out the image."
+#~ msgstr "有効にすると画像が滑らかになります"
+
+#~ msgctxt "game_options"
+#~ msgid "Fills the screen regardless of the aspect ratio."
+#~ msgstr "アスペクト比に関係なく、画面いっぱいに表示します"
 
 #~ msgctxt "game_options"
 #~ msgid "Double the rendering resolution."

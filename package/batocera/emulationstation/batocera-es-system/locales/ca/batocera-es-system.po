@@ -12604,10 +12604,6 @@ msgstr ""
 #~ msgstr "ZONA MORTA DE LA PALANCA ANALÒGICA"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
-#~ msgstr "Habilitar o deshabilitar desat de puntacions"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
 #~ msgstr ""
@@ -12671,14 +12667,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "ALTURA AUTOMÀTICA"
-
-#~ msgctxt "game_options"
-#~ msgid "Auto (Match Window)"
-#~ msgstr "Automàtica (Coincidir amb finestra)"
-
-#~ msgctxt "game_options"
-#~ msgid "ENabling will smooth out the image."
-#~ msgstr "Es suavitzarà la imatge."
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (Default)"
@@ -12803,6 +12791,18 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "Swap Screens"
 #~ msgstr "Intercanviar pantalles"
+
+#~ msgctxt "game_options"
+#~ msgid "Emable or disable high score saving"
+#~ msgstr "Habilitar o deshabilitar desat de puntacions"
+
+#~ msgctxt "game_options"
+#~ msgid "Auto (Match Window)"
+#~ msgstr "Automàtica (Coincidir amb finestra)"
+
+#~ msgctxt "game_options"
+#~ msgid "ENabling will smooth out the image."
+#~ msgstr "Es suavitzarà la imatge."
 
 #~ msgctxt "game_options"
 #~ msgid "Double the rendering resolution."

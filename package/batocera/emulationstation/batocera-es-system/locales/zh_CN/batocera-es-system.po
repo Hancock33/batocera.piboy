@@ -12422,10 +12422,6 @@ msgstr ""
 #~ msgstr "模拟操纵杆死区"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
-#~ msgstr "启用或禁用高分保存"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
 #~ msgstr "裁剪MAME艺术品以最大化游戏屏幕，只填充未使用的空间."
@@ -12483,18 +12479,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "自动高度"
-
-#~ msgctxt "game_options"
-#~ msgid "Auto (Match Window)"
-#~ msgstr "自动（匹配窗口）"
-
-#~ msgctxt "game_options"
-#~ msgid "ENabling will smooth out the image."
-#~ msgstr "启用将使图像平滑."
-
-#~ msgctxt "game_options"
-#~ msgid "Fills the screen regardless of the aspect ratio."
-#~ msgstr "填充屏幕，而不考虑纵横比."
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (Default)"
@@ -12643,6 +12627,22 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
+
+#~ msgctxt "game_options"
+#~ msgid "Emable or disable high score saving"
+#~ msgstr "启用或禁用高分保存"
+
+#~ msgctxt "game_options"
+#~ msgid "Auto (Match Window)"
+#~ msgstr "自动（匹配窗口）"
+
+#~ msgctxt "game_options"
+#~ msgid "ENabling will smooth out the image."
+#~ msgstr "启用将使图像平滑."
+
+#~ msgctxt "game_options"
+#~ msgid "Fills the screen regardless of the aspect ratio."
+#~ msgstr "填充屏幕，而不考虑纵横比."
 
 #~ msgctxt "game_options"
 #~ msgid "Double the rendering resolution."

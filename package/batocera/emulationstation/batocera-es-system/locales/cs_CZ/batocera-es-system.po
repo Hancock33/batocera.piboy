@@ -12573,10 +12573,6 @@ msgstr ""
 #~ msgstr "MRTVÁ ZÓNA ANALOG. JOSTICKU"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
-#~ msgstr "Umožnit nebo zakázat ukládání vysokého skóre"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
 #~ msgstr ""
@@ -12786,6 +12782,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rychle vpřed"
+
+#~ msgctxt "game_options"
+#~ msgid "Emable or disable high score saving"
+#~ msgstr "Umožnit nebo zakázat ukládání vysokého skóre"
 
 #~ msgctxt "game_options"
 #~ msgid "Double the rendering resolution."

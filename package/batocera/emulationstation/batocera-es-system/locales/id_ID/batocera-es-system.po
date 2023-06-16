@@ -12578,10 +12578,6 @@ msgstr ""
 #~ msgstr "ZONA-MATI ANALOG JOYSTICK"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
-#~ msgstr "Aktifkan atau matikan skor tertinggi"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
 #~ msgstr ""
@@ -12667,6 +12663,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GUNAKAN KONFIGURASI JOYSTICK GZDOOM"
+
+#~ msgctxt "game_options"
+#~ msgid "Emable or disable high score saving"
+#~ msgstr "Aktifkan atau matikan skor tertinggi"
 
 #~ msgctxt "game_options"
 #~ msgid "Double the rendering resolution."
