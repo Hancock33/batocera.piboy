@@ -9,7 +9,7 @@
 
 ##### constants ################
 BATOCERA_BINARIES_DIR="${BINARIES_DIR}/batocera"
-GENIMAGE_TMP="/tmp/genimage.tmp"
+GENIMAGE_TMP="/mnt/ramdisk/genimage.tmp"
 ################################
 
 ##### find images to build #####
