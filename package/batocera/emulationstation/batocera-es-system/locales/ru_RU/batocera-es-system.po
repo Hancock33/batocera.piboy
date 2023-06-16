@@ -12590,10 +12590,6 @@ msgstr ""
 #~ msgstr "МЕРТВАЯ ЗОНА АНАЛОГОВОГО ДЖОЙСТИКА"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
-#~ msgstr "Включить или отключить сохранение рекордов"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
 #~ msgstr ""
@@ -12682,6 +12678,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "ИСПОЛЬЗОВАТЬ КОНФИГУРАЦИЮ ДЖОЙСТИКА GZDOOM"
+
+#~ msgctxt "game_options"
+#~ msgid "Emable or disable high score saving"
+#~ msgstr "Включить или отключить сохранение рекордов"
 
 #~ msgctxt "game_options"
 #~ msgid "Double the rendering resolution."

@@ -4556,7 +4556,8 @@ msgstr "Máxima velocidad"
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
-msgstr "Solo se aplica cuando se usa Parallel-RDP como el complemento RDP elegido."
+msgstr ""
+"Solo se aplica cuando se usa Parallel-RDP como el complemento RDP elegido."
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -7931,7 +7932,9 @@ msgctxt "game_options"
 msgid ""
 "Fills the screen regardless of the aspect ratio. Doesn't work with Integer "
 "Upscaling."
-msgstr "Llena la pantalla independientemente de la relación de aspecto. No funciona con escalado de enteros."
+msgstr ""
+"Llena la pantalla independientemente de la relación de aspecto. No funciona "
+"con escalado de enteros."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9360,7 +9363,9 @@ msgctxt "game_options"
 msgid ""
 "Necessary for some guns to replace fog textures as a workaround in Time "
 "Crisis - Crisis Zone."
-msgstr "Necesario para que algunas armas reemplacen las texturas de niebla como solución en Time Crisis - Crisis Zone."
+msgstr ""
+"Necesario para que algunas armas reemplacen las texturas de niebla como "
+"solución en Time Crisis - Crisis Zone."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12646,10 +12651,6 @@ msgstr ""
 #~ msgstr "ZONA MUERTA DEL JOYSTICK ANALÓGICO"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
-#~ msgstr "Activar o desactivar el guardado de récord de puntos"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
 #~ msgstr ""
@@ -12713,18 +12714,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "ALTURA AUTOMÁTICA"
-
-#~ msgctxt "game_options"
-#~ msgid "Auto (Match Window)"
-#~ msgstr "Auto (Coincidir con ventana)"
-
-#~ msgctxt "game_options"
-#~ msgid "ENabling will smooth out the image."
-#~ msgstr "Habilitar para suavizar la imagen."
-
-#~ msgctxt "game_options"
-#~ msgid "Fills the screen regardless of the aspect ratio."
-#~ msgstr "Llena la pantalla sin importar la relación de aspecto."
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (Default)"
@@ -12874,6 +12863,22 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance Rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "Emable or disable high score saving"
+#~ msgstr "Activar o desactivar el guardado de récord de puntos"
+
+#~ msgctxt "game_options"
+#~ msgid "Auto (Match Window)"
+#~ msgstr "Auto (Coincidir con ventana)"
+
+#~ msgctxt "game_options"
+#~ msgid "ENabling will smooth out the image."
+#~ msgstr "Habilitar para suavizar la imagen."
+
+#~ msgctxt "game_options"
+#~ msgid "Fills the screen regardless of the aspect ratio."
+#~ msgstr "Llena la pantalla sin importar la relación de aspecto."
 
 #~ msgctxt "game_options"
 #~ msgid "Double the rendering resolution."

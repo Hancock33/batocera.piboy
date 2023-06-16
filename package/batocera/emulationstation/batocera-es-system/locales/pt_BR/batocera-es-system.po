@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-02 20:13-0300\n"
+"PO-Revision-Date: 2023-06-15 20:20-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -7919,7 +7919,7 @@ msgstr "ENCADEAMENTO DE EXECUÇÃO DE APRESENTAÇÃO"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Match Window"
-msgstr ""
+msgstr "Coincidir com a janela"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7939,7 +7939,7 @@ msgstr "AUMENTAR ESCALA DE INTEIROS"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Enabling will smooth out the image."
-msgstr ""
+msgstr "A ativação suavizará a imagem."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7952,6 +7952,8 @@ msgid ""
 "Fills the screen regardless of the aspect ratio. Doesn't work with Integer "
 "Upscaling."
 msgstr ""
+"Preenche a tela independentemente da proporção de aspecto. Não funciona com "
+"o aumento de escala de inteiro."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9365,12 +9367,12 @@ msgstr "Máximo de 8 Jogadores"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Allows user replaceable textures."
-msgstr ""
+msgstr "Permite que o usuário substitua texturas."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TEXTURE REPLACEMENTS"
-msgstr ""
+msgstr "SUBSTITUIÇÃO DE TEXTURA"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9378,11 +9380,13 @@ msgid ""
 "Necessary for some guns to replace fog textures as a workaround in Time "
 "Crisis - Crisis Zone."
 msgstr ""
+"Necessário para algumas pistolas para substituir as texturas de névoa como "
+"uma solução alternativa em Time Crisis - Crisis Zone."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TIME CRISIS FOG HACK"
-msgstr ""
+msgstr "TIME CRISIS - TRUQUE DA NÉVOA"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -10935,22 +10939,22 @@ msgstr "USAR PROCESSADOR DE ÁUDIO DIGITAL (DSP)"
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "Increase to 128 MiB for debug or homebrew applications."
-msgstr ""
+msgstr "Aumentar para 128 MiB para aplicativos de depuração ou jogos caseiros."
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "SYSTEM MEMORY"
-msgstr ""
+msgstr "MEMORIA DO SISTEMA"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "64MiB (Default)"
-msgstr ""
+msgstr "64MiB (Padrão)"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "128MiB"
-msgstr ""
+msgstr "128MiB"
 
 #. TRANSLATION: sonic2013
 msgctxt "game_options"
@@ -12005,7 +12009,7 @@ msgstr "DESATIVAR SINCRONIZAÇÃO DE SUPERFÍCIE"
 #. TRANSLATION: vita3k
 msgctxt "game_options"
 msgid "The image will be softer which could help with aliasing."
-msgstr "A imagem ficará mais suave, o que pode ajudar com o serrilhado"
+msgstr "A imagem ficará mais suave, o que pode ajudar com o serrilhado."
 
 #. TRANSLATION: vita3k
 msgctxt "game_options"
@@ -12669,10 +12673,6 @@ msgstr ""
 #~ msgstr "ZONA MORTA DO CONTROLE ANALÓGICO"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
-#~ msgstr "Ativa ou desativa a economia de pontuação alta"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Crop MAME artwork to maximize the game screen and only fill unused space."
 #~ msgstr ""
@@ -12738,18 +12738,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "ALTURA AUTOMÁTICA"
-
-#~ msgctxt "game_options"
-#~ msgid "Auto (Match Window)"
-#~ msgstr "Automático (Coincidir com a janela)"
-
-#~ msgctxt "game_options"
-#~ msgid "ENabling will smooth out the image."
-#~ msgstr "A ativação suavizará a imagem."
-
-#~ msgctxt "game_options"
-#~ msgid "Fills the screen regardless of the aspect ratio."
-#~ msgstr "Preenche a tela independentemente da proporção de aspecto."
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (Default)"
@@ -12899,6 +12887,22 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "Emable or disable high score saving"
+#~ msgstr "Ativa ou desativa a economia de pontuação alta"
+
+#~ msgctxt "game_options"
+#~ msgid "Auto (Match Window)"
+#~ msgstr "Automático (Coincidir com a janela)"
+
+#~ msgctxt "game_options"
+#~ msgid "ENabling will smooth out the image."
+#~ msgstr "A ativação suavizará a imagem."
+
+#~ msgctxt "game_options"
+#~ msgid "Fills the screen regardless of the aspect ratio."
+#~ msgstr "Preenche a tela independentemente da proporção de aspecto."
 
 #~ msgctxt "game_options"
 #~ msgid "Double the rendering resolution."
