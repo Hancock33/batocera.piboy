@@ -12724,7 +12724,7 @@ msgstr ""
 #~ msgstr "早送り"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
+#~ msgid "Enable or disable high score saving"
 #~ msgstr "HIGH SCORE の保存を有効または無効にします"
 
 #~ msgctxt "game_options"
@@ -12732,7 +12732,7 @@ msgstr ""
 #~ msgstr "自動 (ウィンドウに合わせる)"
 
 #~ msgctxt "game_options"
-#~ msgid "ENabling will smooth out the image."
+#~ msgid "Enabling will smooth out the image."
 #~ msgstr "有効にすると画像が滑らかになります"
 
 #~ msgctxt "game_options"

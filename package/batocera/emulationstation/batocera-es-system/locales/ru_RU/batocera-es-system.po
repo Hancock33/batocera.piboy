@@ -12680,7 +12680,7 @@ msgstr ""
 #~ msgstr "ИСПОЛЬЗОВАТЬ КОНФИГУРАЦИЮ ДЖОЙСТИКА GZDOOM"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
+#~ msgid "Enable or disable high score saving"
 #~ msgstr "Включить или отключить сохранение рекордов"
 
 #~ msgctxt "game_options"

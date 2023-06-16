@@ -12665,7 +12665,7 @@ msgstr ""
 #~ msgstr "GUNAKAN KONFIGURASI JOYSTICK GZDOOM"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
+#~ msgid "Enable or disable high score saving"
 #~ msgstr "Aktifkan atau matikan skor tertinggi"
 
 #~ msgctxt "game_options"

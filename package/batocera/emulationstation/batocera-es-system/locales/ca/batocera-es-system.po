@@ -12793,7 +12793,7 @@ msgstr ""
 #~ msgstr "Intercanviar pantalles"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
+#~ msgid "Enable or disable high score saving"
 #~ msgstr "Habilitar o deshabilitar desat de puntacions"
 
 #~ msgctxt "game_options"
@@ -12801,7 +12801,7 @@ msgstr ""
 #~ msgstr "Automàtica (Coincidir amb finestra)"
 
 #~ msgctxt "game_options"
-#~ msgid "ENabling will smooth out the image."
+#~ msgid "Enabling will smooth out the image."
 #~ msgstr "Es suavitzarà la imatge."
 
 #~ msgctxt "game_options"

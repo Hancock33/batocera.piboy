@@ -12629,7 +12629,7 @@ msgstr ""
 #~ msgstr "快进"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
+#~ msgid "Enable or disable high score saving"
 #~ msgstr "启用或禁用高分保存"
 
 #~ msgctxt "game_options"
@@ -12637,7 +12637,7 @@ msgstr ""
 #~ msgstr "自动（匹配窗口）"
 
 #~ msgctxt "game_options"
-#~ msgid "ENabling will smooth out the image."
+#~ msgid "Enabling will smooth out the image."
 #~ msgstr "启用将使图像平滑."
 
 #~ msgctxt "game_options"

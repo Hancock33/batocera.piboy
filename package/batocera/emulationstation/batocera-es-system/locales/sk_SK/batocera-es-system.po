@@ -12788,7 +12788,7 @@ msgstr ""
 #~ msgstr "Rýchlo dopredu"
 
 #~ msgctxt "game_options"
-#~ msgid "Emable or disable high score saving"
+#~ msgid "Enable or disable high score saving"
 #~ msgstr "Povoliť alebo zakázať ukladanie najvyššieho skóre"
 
 #~ msgctxt "game_options"
@@ -12796,7 +12796,7 @@ msgstr ""
 #~ msgstr "Auto (podľa okna)"
 
 #~ msgctxt "game_options"
-#~ msgid "ENabling will smooth out the image."
+#~ msgid "Enabling will smooth out the image."
 #~ msgstr "Povolenie vyhladí obraz."
 
 #~ msgctxt "game_options"
