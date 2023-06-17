@@ -1,0 +1,12 @@
+diff --git a/src/bstone_r3r_shader_var.h b/src/bstone_r3r_shader_var.h
+index 2bfee08..ec3f5d5 100644
+--- a/src/bstone_r3r_shader_var.h
++++ b/src/bstone_r3r_shader_var.h
+@@ -11,6 +11,7 @@ SPDX-License-Identifier: MIT
+ 
+ #include <memory>
+ #include <string>
++#include <cstdint>
+ 
+ namespace bstone {
+ 
