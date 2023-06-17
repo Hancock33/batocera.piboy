@@ -1,5 +1,5 @@
 diff --git a/pcsx2/USB/usb-lightgun/guncon2.cpp b/pcsx2/USB/usb-lightgun/guncon2.cpp
-index 069349566..f22f7ee20 100644
+index c32328048..7b067882c 100644
 --- a/pcsx2/USB/usb-lightgun/guncon2.cpp
 +++ b/pcsx2/USB/usb-lightgun/guncon2.cpp
 @@ -27,6 +27,12 @@
@@ -73,22 +73,22 @@ index 069349566..f22f7ee20 100644
 +		updateState(us, BID_TRIGGER, event->value != 0); // 0: unpressed, 1: pressed, 2: maintained
 +		break;
 +	    case BTN_RIGHT:
-+		updateState(us, BID_C, event->value != 0);
++		updateState(us, BID_SHOOT_OFFSCREEN, event->value != 0);
 +		break;
 +	    case BTN_MIDDLE:
-+		updateState(us, BID_A, event->value != 0);
-+		break;
-+	    case BTN_1:
-+		updateState(us, BID_B, event->value != 0);
-+		break;
-+	    case BTN_2:
 +		updateState(us, BID_RECALIBRATE, event->value != 0);
 +		break;
-+	    case BTN_3:
++	    case BTN_1:
 +		updateState(us, BID_START, event->value != 0);
 +		break;
++	    case BTN_2:
++		updateState(us, BID_A, event->value != 0);
++		break;
++	    case BTN_3:
++		updateState(us, BID_B, event->value != 0);
++		break;
 +	    case BTN_4:
-+		updateState(us, BID_SELECT, event->value != 0);
++		updateState(us, BID_C, event->value != 0);
 +		break;
 +	    case BTN_5:
 +		updateState(us, BID_DPAD_UP, event->value != 0);
@@ -143,7 +143,7 @@ index 069349566..f22f7ee20 100644
  
  		switch (p->pid)
  		{
-@@ -328,11 +431,20 @@ namespace usb_lightgun
+@@ -328,6 +431,14 @@ namespace usb_lightgun
  	GunCon2State::GunCon2State(u32 port_)
  		: port(port_)
  	{
@@ -158,13 +158,7 @@ index 069349566..f22f7ee20 100644
  	}
  
  	void GunCon2State::AutoConfigure()
- 	{
- 		const std::string serial(VMManager::GetGameSerial());
-+
- 		for (const GameConfig& gc : s_game_config)
- 		{
- 			if (serial != gc.serial)
-@@ -359,7 +471,13 @@ namespace usb_lightgun
+@@ -359,7 +470,13 @@ namespace usb_lightgun
  	{
  		float pointer_x, pointer_y;
  		const std::pair<float, float> abs_pos(InputManager::GetPointerAbsolutePosition(0));
@@ -179,7 +173,7 @@ index 069349566..f22f7ee20 100644
  
  		s16 pos_x, pos_y;
  		if (pointer_x < 0.0f || pointer_y < 0.0f)
-@@ -412,9 +530,148 @@ namespace usb_lightgun
+@@ -412,9 +529,148 @@ namespace usb_lightgun
  		return "guncon2";
  	}
  

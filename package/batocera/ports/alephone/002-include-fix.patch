@@ -1,0 +1,12 @@
+diff --git a/Source_Files/Sound/Decoder.h b/Source_Files/Sound/Decoder.h
+index 247ee767..1aaa488a 100644
+--- a/Source_Files/Sound/Decoder.h
++++ b/Source_Files/Sound/Decoder.h
+@@ -27,6 +27,7 @@
+ #include "cseries.h"
+ #include "FileHandler.h"
+ #include "SoundManagerEnums.h"
++#include <memory>
+ 
+ class StreamDecoder
+ {
