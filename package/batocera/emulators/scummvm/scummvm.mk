@@ -7,7 +7,7 @@
 SCUMMVM_VERSION = fed5c2669bc14e5be9daeedf097344b07558e3ef
 SCUMMVM_SITE = $(call github,scummvm,scummvm,$(SCUMMVM_VERSION))
 SCUMMVM_LICENSE = GPLv2
-SCUMMVM_DEPENDENCIES = sdl2 zlib jpeg libmpeg2 libogg libvorbis flac libmad libpng libtheora faad2 freetype
+SCUMMVM_DEPENDENCIES = sdl2 zlib libjpeg libmpeg2 libogg libvorbis flac libmad libpng libtheora faad2 freetype
 
 SCUMMVM_ADDITIONAL_FLAGS= -I$(STAGING_DIR)/usr/include -lpthread -lm -L$(STAGING_DIR)/usr/lib -lGLESv2 -lEGL
 
