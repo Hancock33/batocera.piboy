@@ -3,8 +3,8 @@
 # cemu
 #
 ################################################################################
-# Version: Commits on Jun 16, 2023
-CEMU_VERSION = f0ef8f3cc2a4be273acd7f9934cc625f99d143ef
+# Version: Commits on Jun 17, 2023
+CEMU_VERSION = a533c485d91edafe9032c92c6b8d63a5117e967a
 CEMU_SITE = https://github.com/cemu-project/Cemu
 CEMU_LICENSE = GPLv2
 CEMU_SITE_METHOD=git
