@@ -1,5 +1,5 @@
 diff --git a/src/joystick/SDL_joystick.c b/src/joystick/SDL_joystick.c
-index cfb8353..832bcd7 100644
+index 5e46bc15c..3af0f13f8 100644
 --- a/src/joystick/SDL_joystick.c
 +++ b/src/joystick/SDL_joystick.c
 @@ -27,6 +27,8 @@
@@ -11,9 +11,9 @@ index cfb8353..832bcd7 100644
  #include "../SDL_hints_c.h"
  
  #if !SDL_EVENTS_DISABLED
-@@ -114,6 +116,70 @@ static SDL_atomic_t SDL_next_joystick_instance_id;
- static int SDL_joystick_player_count = 0;
- static SDL_JoystickID *SDL_joystick_players = NULL;
+@@ -132,6 +134,70 @@ char SDL_joystick_magic;
+         return retval;                                     \
+     }
  
 +void custom_restore_initial_state(SDL_Joystick * joystick) {
 +  char filename[256];
@@ -79,10 +79,10 @@ index cfb8353..832bcd7 100644
 +  fclose(fd);
 +}
 +
- void
- SDL_LockJoysticks(void)
+ SDL_bool SDL_JoysticksInitialized(void)
  {
-@@ -450,6 +516,9 @@ SDL_JoystickOpen(int device_index)
+     return SDL_joysticks_initialized;
+@@ -521,6 +587,9 @@ SDL_Joystick *SDL_JoystickOpen(int device_index)
      joystick->epowerlevel = SDL_JOYSTICK_POWER_UNKNOWN;
      joystick->led_expiration = SDL_GetTicks();
  
@@ -92,7 +92,7 @@ index cfb8353..832bcd7 100644
      if (driver->Open(joystick, device_index) < 0) {
          SDL_free(joystick);
          SDL_UnlockJoysticks();
-@@ -503,6 +572,8 @@ SDL_JoystickOpen(int device_index)
+@@ -571,6 +640,8 @@ SDL_Joystick *SDL_JoystickOpen(int device_index)
          }
      }
  
@@ -101,9 +101,9 @@ index cfb8353..832bcd7 100644
      joystick->is_game_controller = SDL_IsGameController(device_index);
  
      /* Add joystick to list */
-@@ -1464,6 +1535,11 @@ SDL_PrivateJoystickAxis(SDL_Joystick *joystick, Uint8 axis, Sint16 value)
-     int posted;
-     SDL_JoystickAxisInfo *info;
+@@ -1596,6 +1667,11 @@ int SDL_PrivateJoystickAxis(SDL_Joystick *joystick, Uint8 axis, Sint16 value)
+ 
+     SDL_AssertJoysticksLocked();
  
 +    // ignore axis events until a button is released
 +    if (joystick->initial_state_is_valid == SDL_FALSE) {
@@ -113,7 +113,7 @@ index cfb8353..832bcd7 100644
      /* Make sure we're not getting garbage or duplicate events */
      if (axis >= joystick->naxes) {
          return 0;
-@@ -1556,6 +1632,14 @@ SDL_PrivateJoystickHat(SDL_Joystick *joystick, Uint8 hat, Uint8 value)
+@@ -1690,6 +1766,14 @@ int SDL_PrivateJoystickHat(SDL_Joystick *joystick, Uint8 hat, Uint8 value)
          event.jhat.which = joystick->instance_id;
          event.jhat.hat = hat;
          event.jhat.value = value;
@@ -128,7 +128,7 @@ index cfb8353..832bcd7 100644
          posted = SDL_PushEvent(&event) == 1;
      }
  #endif /* !SDL_EVENTS_DISABLED */
-@@ -1610,6 +1694,12 @@ SDL_PrivateJoystickButton(SDL_Joystick *joystick, Uint8 button, Uint8 state)
+@@ -1745,6 +1829,12 @@ int SDL_PrivateJoystickButton(SDL_Joystick *joystick, Uint8 button, Uint8 state)
          event.type = SDL_JOYBUTTONDOWN;
          break;
      case SDL_RELEASED:
@@ -142,26 +142,26 @@ index cfb8353..832bcd7 100644
          break;
      default:
 diff --git a/src/joystick/SDL_sysjoystick.h b/src/joystick/SDL_sysjoystick.h
-index d673ddd..9c7da51 100644
+index a93fa662c..ffb4b63a7 100644
 --- a/src/joystick/SDL_sysjoystick.h
 +++ b/src/joystick/SDL_sysjoystick.h
-@@ -121,6 +121,9 @@ struct _SDL_Joystick
+@@ -128,6 +128,9 @@ struct _SDL_Joystick
  
-     int ref_count;              /* Reference count for multiple opens */
+     int ref_count _guarded; /* Reference count for multiple opens */
  
 +    SDL_bool initial_state_is_valid; // true once a first button is released (axis initial values are incorrect on some pad until this happen (ie 8bitdo nes)
 +    SDL_bool initial_state_initialized; // true once the initialisation is done
 +
-     struct _SDL_Joystick *next; /* pointer to next joystick we have allocated */
+     struct _SDL_Joystick *next _guarded; /* pointer to next joystick we have allocated */
  };
  
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
-index 134fa72..0c7f787 100644
+index e6db86781..eb3a665d7 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
-@@ -1482,7 +1482,7 @@ HandleInputEvents(SDL_Joystick *joystick)
-     struct input_event events[32];
-     int i, len, code, hat_index;
+@@ -1493,7 +1493,7 @@ static void HandleInputEvents(SDL_Joystick *joystick)
+ 
+     SDL_AssertJoysticksLocked();
  
 -    if (joystick->hwdata->fresh) {
 +    if (joystick->hwdata->fresh || (joystick->initial_state_is_valid == SDL_TRUE && joystick->initial_state_initialized == SDL_FALSE)) {
