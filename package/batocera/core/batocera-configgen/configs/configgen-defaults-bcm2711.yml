@@ -52,6 +52,12 @@ psp:
 psx:
   options:
     gfxbackend: vulkan
+scummvm:
+  emulator: scummvm
+  core:     scummvm
+  options:
+    decorations: none
+    hud_support: none
 sgb:
   emulator: libretro
   core:     mgba
@@ -61,3 +67,4 @@ wii:
 wiiware:
   emulator: libretro
   core:     dolphin
+ 

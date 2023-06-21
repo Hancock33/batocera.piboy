@@ -1,8 +1,8 @@
 diff --git a/src/video/kmsdrm/SDL_kmsdrmvideo.c b/src/video/kmsdrm/SDL_kmsdrmvideo.c
-index fbc2c96..cedc739 100644
+index ebe15fe9c..f7857ba2d 100644
 --- a/src/video/kmsdrm/SDL_kmsdrmvideo.c
 +++ b/src/video/kmsdrm/SDL_kmsdrmvideo.c
-@@ -609,6 +609,24 @@ void KMSDRM_AddDisplay (_THIS, drmModeConnector *connector, drmModeRes *resource
+@@ -740,6 +740,24 @@ static void KMSDRM_AddDisplay(_THIS, drmModeConnector *connector, drmModeRes *re
          goto cleanup;
      }
  
@@ -27,7 +27,7 @@ index fbc2c96..cedc739 100644
      /* Try to find a CRTC connected to this encoder */
      crtc = KMSDRM_drmModeGetCrtc(viddata->drm_fd, encoder->crtc_id);
  
-@@ -1107,8 +1125,27 @@ KMSDRM_GetDisplayModes(_THIS, SDL_VideoDisplay * display)
+@@ -1265,8 +1283,27 @@ void KMSDRM_GetDisplayModes(_THIS, SDL_VideoDisplay *display)
      SDL_DisplayMode mode;
      int i;
  

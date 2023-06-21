@@ -25,7 +25,7 @@ ifeq ($(BR2_PACKAGE_BATOCERA_SPLASH_MPV),y)
     ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
         # drm doesn't work on my nvidia card. sdl run smoothly.
         BATOCERA_SPLASH_PLAYER_OPTIONS=--vo=drm,sdl --hwdec=yes
-    else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY)$(BR2_PACKAGE_BATOCERA_RPI_ANY)$(BR2_PACKAGE_BATOCERA_TARGET_RK3326)$(BR2_PACKAGE_BATOCERA_TARGET_RK3399)$(BR2_PACKAGE_BATOCERA_TARGET_RK3128)$(BR2_PACKAGE_BATOCERA_TARGET_ORANGEPI_3_LTS)$(BR2_PACKAGE_BATOCERA_TARGET_H616)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588),y)
+    else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY)$(BR2_PACKAGE_BATOCERA_RPI_ANY)$(BR2_PACKAGE_BATOCERA_TARGET_RK3326)$(BR2_PACKAGE_BATOCERA_TARGET_RK3399)$(BR2_PACKAGE_BATOCERA_TARGET_RK3128)$(BR2_PACKAGE_BATOCERA_TARGET_H6)$(BR2_PACKAGE_BATOCERA_TARGET_H616)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588),y)
         # hwdec=yes doesnt work for n2
         BATOCERA_SPLASH_PLAYER_OPTIONS=
     else
@@ -43,13 +43,16 @@ ifeq ($(BATOCERA_SPLASH_MEDIA),video)
     BATOCERA_SPLASH_POST_INSTALL_TARGET_HOOKS += BATOCERA_SPLASH_INSTALL_VIDEO
     BATOCERA_SPLASH_POST_INSTALL_TARGET_HOOKS += BATOCERA_SPLASH_INSTALL_BOOT_LOGO
 
+    # Capcom video only for H3 build (for CHA)
+    ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_H3),y)
+        BATOCERA_SPLASH_POST_INSTALL_TARGET_HOOKS += BATOCERA_SPLASH_INSTALL_VIDEO_CAPCOM
+    endif
+
     # alternative video
-    ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_CHA),y)
-        BATO_SPLASH=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/Capcom.mp4
+    ifeq ($(BR2_PACKAGE_BATOCERA_RPI_ANY)$(BR2_PACKAGE_BATOCERA_TARGET_RK3326)$(BR2_PACKAGE_BATOCERA_TARGET_RK3128)$(BR2_PACKAGE_BATOCERA_TARGET_H3),y)
+        BATO_SPLASH=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/splash720p.mp4
 	else ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI),y)
 		BATO_SPLASH=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/piboy.mp4
-    else ifeq ($(BR2_PACKAGE_BATOCERA_RPI_ANY)$(BR2_PACKAGE_BATOCERA_TARGET_RK3326)$(BR2_PACKAGE_BATOCERA_TARGET_RK3128),y)
-        BATO_SPLASH=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/splash720p.mp4
     else
         BATO_SPLASH=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/splash.mp4
     endif
@@ -81,6 +84,13 @@ endef
 define BATOCERA_SPLASH_INSTALL_VIDEO
     mkdir -p $(TARGET_DIR)/usr/share/batocera/splash
     cp $(BATO_SPLASH) $(TARGET_DIR)/usr/share/batocera/splash/splash.mp4
+    echo -e "1\n00:00:00,000 --> 00:00:02,000\n$(BATOCERA_SPLASH_TGVERSION)" > "${TARGET_DIR}/usr/share/batocera/splash/splash.srt"
+endef
+
+# Hack for CHA, custom Capcom splash video
+define BATOCERA_SPLASH_INSTALL_VIDEO_CAPCOM
+    mkdir -p $(TARGET_DIR)/usr/share/batocera/splash
+    cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/Capcom.mp4 $(TARGET_DIR)/usr/share/batocera/splash/Capcom.mp4
     echo -e "1\n00:00:00,000 --> 00:00:02,000\n$(BATOCERA_SPLASH_TGVERSION)" > "${TARGET_DIR}/usr/share/batocera/splash/splash.srt"
 endef
 
