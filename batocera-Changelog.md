@@ -3,8 +3,11 @@
 
 ### Added
 - battery remaining time in batocera-info (f2)
+- libretro core boom3, A Doom 3 port
+- libretro core reminiscence, A Flashback port
+- libretro core openlara, An original Tomb Raider port
 ### Fixed
-
+- Fix wifi/bluetooth on Tinkerboard
 ### Changed
 - if using the manual batocera.conf `splash.screen.resize` option, this will now adjust the playback resolution too
 ### Updated
