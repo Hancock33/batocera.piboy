@@ -3829,13 +3829,13 @@ openlara:
   manufacturer:         Ports
   release:              1996
   hardware:             port
-  extensions:           [game]
+  extensions:           [game, phd, psx, tr2]
   platform:             pc
   group:                ports
   path:                 /userdata/roms/ports/openlara
   emulators:
     openlara:
-      openlara:         { requireAnyOf: [BR2_PACKAGE_OPENLARA] }
+      openlara:         { requireAnyOf: [BR2_PACKAGE_OPENLARA], incompatible_extensions: [xdf, phd, psx, tr2] }
     libretro:
       openlara:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_OPENLARA] }
 
@@ -4015,9 +4015,9 @@ raze:
 reminiscence:
   name:                 Flashback
   manufacturer:         Ports
-  release:
+  release:              1992
   hardware:             port
-  extensions:           [map,MAP]
+  extensions:           [map, MAP, rem]
   platform:             pc
   group:                ports
   path:                 /userdata/roms/ports/reminiscence
@@ -4341,7 +4341,7 @@ doom3:
   manufacturer:         Ports (Doom)
   release:              2004
   hardware:             port
-  extensions:           [base, d3xp, demo]
+  extensions:           [base, d3xp, demo, boom3]
   platform:             pc
   theme:                doom3
   group:                doom
