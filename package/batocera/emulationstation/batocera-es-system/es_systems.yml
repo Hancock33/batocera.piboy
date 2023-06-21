@@ -3377,7 +3377,7 @@ cdogs:
 
 cgenius:
   name:                 Commander Genius
-  manufacturer:         port
+  manufacturer:         Ports
   release:              1990
   hardware:             port
   extensions:           [cgenius, zip]
