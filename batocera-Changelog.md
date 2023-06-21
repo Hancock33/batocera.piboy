@@ -1,4 +1,24 @@
-# 2023/xx/xx - batocera.linux 37 - Red Admiral
+# 2023/xx/xx - batocera.linux 38 -
+### Hardware
+
+### Added
+- battery remaining time in batocera-info (f2)
+### Fixed
+
+### Changed
+- if using the manual batocera.conf `splash.screen.resize` option, this will now adjust the playback resolution too
+### Updated
+
+### Dev
+- linux kernel for x86_64 to 6.3.8
+- xf86-video-amdgpu to 23.0.0
+- xf86-video-ati to 22.0.0
+- xwayland to 23.1.2
+- linux kernel for RPI to 6.1.32
+- Enable exFAT and NTFS Linux kernel drivers on x86_64
+
+
+# 2023/06/18 - batocera.linux 37 - Red Admiral
 ### hardware
 - steamdeck virtual mouse/gun support from trackpad (left/right hand options)
 - JAMMAsd support (convert it in 2 pads)

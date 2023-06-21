@@ -3,8 +3,8 @@
 # yuzu
 #
 ################################################################################
-# Version: Commits on Jun 18, 2023
-YUZU_VERSION = ce191ba32bed6506878ebf2b01573e67aeee2938
+# Version: Commits on Jun 20, 2023
+YUZU_VERSION = a67bdeb2c244419c5b50fc3975d4efefcdfcc855
 YUZU_SITE = https://github.com/yuzu-emu/yuzu.git
 YUZU_SITE_METHOD=git
 YUZU_GIT_SUBMODULES=YES
@@ -26,6 +26,7 @@ YUZU_CONF_OPTS += -DYUZU_TESTS=OFF
 YUZU_CONF_OPTS += -DENABLE_QT6=ON
 YUZU_CONF_OPTS += -DYUZU_ENABLE_LTO=ON
 YUZU_CONF_OPTS += -DYUZU_USE_EXTERNAL_VULKAN_HEADERS=OFF
+YUZU_CONF_OPTS += -DYUZU_DOWNLOAD_TIME_ZONE_DATA=ON
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
     YUZU_DEPENDENCIES += host-glslang

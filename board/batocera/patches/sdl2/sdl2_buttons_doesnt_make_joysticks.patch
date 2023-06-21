@@ -1,8 +1,8 @@
 diff --git a/src/core/linux/SDL_evdev_capabilities.c b/src/core/linux/SDL_evdev_capabilities.c
-index 1373f0e..96eff1a 100644
+index b8f112b51..a1c4468b4 100644
 --- a/src/core/linux/SDL_evdev_capabilities.c
 +++ b/src/core/linux/SDL_evdev_capabilities.c
-@@ -87,19 +87,19 @@ SDL_EVDEV_GuessDeviceClass(unsigned long bitmask_ev[NBITS(EV_MAX)],
+@@ -89,19 +89,19 @@ SDL_EVDEV_GuessDeviceClass(const unsigned long bitmask_ev[NBITS(EV_MAX)],
              devclass |= SDL_UDEV_DEVICE_TOUCHSCREEN; /* ID_INPUT_TOUCHSCREEN */
          }
  
