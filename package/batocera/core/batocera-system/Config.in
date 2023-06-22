@@ -420,7 +420,7 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     default "allwinner/h3/orangepi-pc allwinner/h3/orangepi-one allwinner/h3/orangepi-plus2e allwinner/h3/bananapi-m2-zero allwinner/h3/cha"                                         if BR2_PACKAGE_BATOCERA_TARGET_H3
     default "allwinner/h5/tritium-h5 allwinner/h5/orangepi-pc2"                                                                                                                      if BR2_PACKAGE_BATOCERA_TARGET_H5
     default "allwinner/h6/orangepi-3-lts allwinner/h6/orangepi-3 allwinner/h6/orangepi-one-plus"                                                                                     if BR2_PACKAGE_BATOCERA_TARGET_H6
-    default "allwinner/h616/orangepi-zero2"                                                                                                                                          if BR2_PACKAGE_BATOCERA_TARGET_H616
+    default "allwinner/h616/orangepi-zero2 allwinner/h616/x96-mate"                                                                                                                  if BR2_PACKAGE_BATOCERA_TARGET_H616
     default "amlogic/s812"                                                                                                                                                           if BR2_PACKAGE_BATOCERA_TARGET_S812
     default "samsung/exynos5422/odroidxu4"                                                                                                                                           if BR2_PACKAGE_BATOCERA_TARGET_XU4
     default "x86"                                                                                                                                                                    if BR2_PACKAGE_BATOCERA_TARGET_X86
@@ -1666,6 +1666,9 @@ config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
     bool "batocera.linux Firmwares packages selection"
 
     select BR2_PACKAGE_ALLLINUXFIRMWARES
+
+    # buildroot firmware
+    select BR2_PACKAGE_LINUX_FIRMWARE                       if BR2_PACKAGE_BATOCERA_TARGET_RK3288
 
     # common firmwares
     select BR2_PACKAGE_UX500_FIRMWARE
