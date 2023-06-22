@@ -1,5 +1,5 @@
 diff --git a/src/gapi_gl.h b/src/gapi_gl.h
-index 4e9b47d..f42a44b 100644
+index b6edb7c..b34d40e 100644
 --- a/src/gapi_gl.h
 +++ b/src/gapi_gl.h
 @@ -752,7 +752,11 @@ namespace GAPI {
