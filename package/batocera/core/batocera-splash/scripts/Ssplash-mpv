@@ -66,7 +66,7 @@ do_videostart ()
 {
     video="$1"
     printf 'Video: %s: ' "$video"
-    mpv_audio=
+    mpv_audio=--ao=sdl
 
     soundDisabled=$(batocera-settings-get splash.screen.sound)
     if [[ $? -eq 0 ]]; then
@@ -89,7 +89,8 @@ do_videostart ()
 	# --vf-add=sub : rotation of subtitles
         [[ $? -eq 0 ]] && mpv_video="--video-rotate=${video_rotation} --vf-add=sub"
     fi
-    video_resize=$(batocera-settings-get splash.screen.resize)
+    drm_mode="preferred"
+    video_resize=$(batocera-settings-get-master splash.screen.resize)
     if [[ $? -eq 0 ]]; then
         resize=$(echo "${video_resize}" | sed "s/x/:/")
         mpv_video="${mpv_video} --vf=scale=${resize}"
