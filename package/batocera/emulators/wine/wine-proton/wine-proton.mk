@@ -3,10 +3,10 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Jun 07, 2023 (branch@proton_8.0-rc)
-WINE_PROTON_VERSION = e2250b61348357e2d05a7482abc6f924c560adbf
+# Version: Commits on Jun 05, 2023 (branch@Proton8-8)
+WINE_PROTON_VERSION = d48c657a1364248c1aaed099e5cbee30c1d8c09e
 WINE_PROTON_SOURCE = wine-proton-$(WINE_PROTON_VERSION).tar.gz
-WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
+WINE_PROTON_SITE = $(call github,GloriousEggroll,proton-wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
 WINE_PROTON_DEPENDENCIES = host-bison host-flex host-wine-proton
 HOST_WINE_PROTON_DEPENDENCIES = host-bison host-flex host-clang host-lld
