@@ -652,22 +652,22 @@ msgctxt "game_options"
 msgid "Change the game's language."
 msgstr "Ubah bahasa permainan"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, hatari, redream, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/yabasanshiro, hatari, ...
 msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "BAHASA"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, redream, xenia, xenia-canary
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/yabasanshiro, redream, xenia, ...
 msgctxt "game_options"
 msgid "English (Default)"
 msgstr "Inggris (Standar)"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/yabasanshiro, cemu, ...
 msgctxt "game_options"
 msgid "Spanish"
 msgstr "Spanyol"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/dolphin, libretro/yabasanshiro, cemu, ...
 msgctxt "game_options"
 msgid "French"
 msgstr "Prancis"
@@ -1171,12 +1171,12 @@ msgctxt "game_options"
 msgid "German"
 msgstr "Jerman"
 
-#. TRANSLATION: libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, redream, ...
+#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/yabasanshiro, cemu, flycast/vitaquake3, ...
 msgctxt "game_options"
 msgid "Italian"
 msgstr "Italia"
 
-#. TRANSLATION: libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, redream, ...
+#. TRANSLATION: libretro/melonds, libretro/dolphin, libretro/yabasanshiro, cemu, flycast/vitaquake3, ...
 msgctxt "game_options"
 msgid "Japanese"
 msgstr "Jepang"
@@ -4881,7 +4881,7 @@ msgctxt "game_options"
 msgid "Set desired framerate."
 msgstr ""
 
-#. TRANSLATION: libretro/openlara
+#. TRANSLATION: libretro/openlara, libretro
 msgctxt "game_options"
 msgid "FRAMERATE"
 msgstr ""
@@ -6768,6 +6768,16 @@ msgctxt "game_options"
 msgid "Allows up to 7 or 12 controllers in supported games."
 msgstr "Terima 7  sampai 12 kontroler dalam game yang didukung"
 
+#. TRANSLATION: libretro/yabasanshiro
+msgctxt "game_options"
+msgid "Change the system's language."
+msgstr ""
+
+#. TRANSLATION: libretro/yabasanshiro, awgl
+msgctxt "game_options"
+msgid "Deutsch"
+msgstr ""
+
 #. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
 msgctxt "game_options"
 msgid "Invert the gamepad right analogue stick's Y axis."
@@ -6949,11 +6959,6 @@ msgstr ""
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Display the current frames per second."
-msgstr ""
-
-#. TRANSLATION: libretro
-msgctxt "game_options"
-msgid "FRAMERATE"
 msgstr ""
 
 #. TRANSLATION: libretro
@@ -11697,11 +11702,6 @@ msgstr ""
 #. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "Francais"
-msgstr ""
-
-#. TRANSLATION: awgl
-msgctxt "game_options"
-msgid "Deutsch"
 msgstr ""
 
 #. TRANSLATION: awgl
