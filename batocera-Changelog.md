@@ -10,10 +10,11 @@
 - Fix wifi/bluetooth on Tinkerboard
 ### Changed
 - if using the manual batocera.conf `splash.screen.resize` option, this will now adjust the playback resolution too
+- Default crop overscan setting for NES is now vertical only
 ### Updated
 
 ### Dev
-- linux kernel for x86_64 to 6.3.8
+- linux kernel for x86_64 to 6.3.9
 - xf86-video-amdgpu to 23.0.0
 - xf86-video-ati to 22.0.0
 - xwayland to 23.1.2
