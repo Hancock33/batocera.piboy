@@ -36,7 +36,7 @@ index b55cc041..45ddccca 100644
  if(DISABLE_KODI)
    MESSAGE("kodi disabled")
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 938485bf..07a9cbd4 100644
+index 5518a5b9..8ce830a5 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -72,8 +72,15 @@
@@ -92,7 +92,7 @@ index 938485bf..07a9cbd4 100644
  		updateGui->addGroup(_("SOFTWARE UPDATES"));
  
  		// Enable updates
-@@ -856,11 +871,11 @@ void GuiMenu::openUpdatesSettings()
+@@ -862,11 +877,11 @@ void GuiMenu::openUpdatesSettings()
  
  		std::string updatesType = SystemConf::getInstance()->get("updates.type");
  
@@ -103,10 +103,10 @@ index 938485bf..07a9cbd4 100644
  		else
 -#endif
 +    #endif
- 			if (updatesType.empty() || updatesType != "butterfly")
+ 			if (updatesType.empty() || updatesType != BETA_NAME)
  				updatesType = "stable";
  
-@@ -889,6 +904,7 @@ void GuiMenu::openUpdatesSettings()
+@@ -895,6 +910,7 @@ void GuiMenu::openUpdatesSettings()
  				mWindow->pushGui(new GuiUpdate(mWindow));
  			}
  		});
@@ -115,7 +115,7 @@ index 938485bf..07a9cbd4 100644
  
  	mWindow->pushGui(updateGui);
 diff --git a/es-core/src/platform.cpp b/es-core/src/platform.cpp
-index 737919f4..6a9945f3 100644
+index 0c1d9fca..f701494d 100644
 --- a/es-core/src/platform.cpp
 +++ b/es-core/src/platform.cpp
 @@ -28,6 +28,8 @@ int runShutdownCommand()
