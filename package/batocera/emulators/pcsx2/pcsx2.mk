@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jun 23, 2023
-PCSX2_VERSION = cd4d829f9f22a8c2ddfbc360413e170a852bbaa1
+PCSX2_VERSION = c9e9f92c9309cd91c29c22969b0173b8e762865d
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
