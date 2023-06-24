@@ -3,11 +3,14 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Jun 07, 2023 (branch@proton_8.0-rc)
-WINE_PROTON_VERSION = e2250b61348357e2d05a7482abc6f924c560adbf
+# Version: Commits on Jun 05, 2023 (branch@Proton8-8)
+WINE_PROTON_VERSION = d48c657a1364248c1aaed099e5cbee30c1d8c09e
 WINE_PROTON_SOURCE = wine-proton-$(WINE_PROTON_VERSION).tar.gz
-WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
+WINE_PROTON_SITE = $(call github,GloriousEggroll,proton-wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
+WINE_PROTON_LICENSE_FILES = COPYING.LIB LICENSE
+WINE_PROTON_CPE_ID_VENDOR = winehq
+WINE_PROTON_SELINUX_MODULES = wine
 WINE_PROTON_DEPENDENCIES = host-bison host-flex host-wine-proton
 HOST_WINE_PROTON_DEPENDENCIES = host-bison host-flex host-clang host-lld
 
@@ -34,6 +37,7 @@ WINE_PROTON_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 	--without-gettext \
 	--without-gettextpo \
 	--without-gphoto \
+	--without-mingw \
 	--without-opencl \
 	--without-oss \
 	--prefix=/usr/wine/proton \
@@ -44,14 +48,6 @@ ifeq ($(BR2_x86_64),y)
 	WINE_PROTON_CONF_OPTS += --enable-win64
 else
 	WINE_PROTON_CONF_OPTS += --disable-win64
-endif
-
-# gcrypt
-ifeq ($(BR2_PACKAGE_LIBGCRYPT),y)
-WINE_PROTON_CONF_OPTS += --with-gcrypt
-WINE_PROTON_DEPENDENCIES += libgcrypt
-else
-WINE_PROTON_CONF_OPTS += --without-gcrypt
 endif
 
 # Add Vulkan if available
@@ -74,7 +70,7 @@ ifeq ($(BR2_TOOLCHAIN_EXTERNAL),y)
 WINE_PROTON_CONF_OPTS += TARGETFLAGS="-b $(TOOLCHAIN_EXTERNAL_PREFIX)"
 endif
 
-ifeq ($(BR2_PACKAGE_ALSA_LIB)$(BR2_PACKAGE_ALSA_LIB_SEQ)$(BR2_PACKAGE_ALSA_LIB_RAWMIDI),yyy)
+ifeq ($(BR2_PACKAGE_ALSA_LIB),y)
 WINE_PROTON_CONF_OPTS += --with-alsa
 WINE_PROTON_DEPENDENCIES += alsa-lib
 else
@@ -102,13 +98,6 @@ WINE_PROTON_DEPENDENCIES += fontconfig
 else
 WINE_PROTON_CONF_OPTS += --without-fontconfig
 endif
-
-# Cleanup final directory
-define WINE_PROTON_REMOVE_INCLUDES_HOOK
-        rm -Rf $(TARGET_DIR)/usr/wine/proton/include
-endef
-
-WINE_PROTON_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_REMOVE_INCLUDES_HOOK
 
 # To support freetype in wine we also need freetype in host-wine for the cross compiling tools
 ifeq ($(BR2_PACKAGE_FREETYPE),y)
@@ -155,6 +144,20 @@ WINE_PROTON_CONF_OPTS += --with-pcap
 WINE_PROTON_DEPENDENCIES += libpcap
 else
 WINE_PROTON_CONF_OPTS += --without-pcap
+endif
+
+ifeq ($(BR2_PACKAGE_LIBUSB),y)
+WINE_PROTON_CONF_OPTS += --with-usb
+WINE_PROTON_DEPENDENCIES += libusb
+else
+WINE_PROTON_CONF_OPTS += --without-usb
+endif
+
+ifeq ($(BR2_PACKAGE_LIBV4L),y)
+WINE_PROTON_CONF_OPTS += --with-v4l2
+WINE_PROTON_DEPENDENCIES += libv4l
+else
+WINE_PROTON_CONF_OPTS += --without-v4l2
 endif
 
 ifeq ($(BR2_PACKAGE_MESA3D_OSMESA_CLASSIC),y)
@@ -263,6 +266,13 @@ else
 WINE_PROTON_CONF_OPTS += --without-xxf86vm
 endif
 
+# Cleanup final directory
+define WINE_PROTON_REMOVE_INCLUDES_HOOK
+        rm -Rf $(TARGET_DIR)/usr/wine/proton/include
+endef
+
+WINE_PROTON_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_REMOVE_INCLUDES_HOOK
+
 # host-gettext is essential for .po file support in host-wine wrc
 ifeq ($(BR2_SYSTEM_ENABLE_NLS),y)
 HOST_WINE_PROTON_DEPENDENCIES += host-gettext
@@ -279,14 +289,7 @@ endif
 # Wine only needs the host tools to be built, so cut-down the
 # build time by building just what we need.
 define HOST_WINE_PROTON_BUILD_CMDS
-        $(HOST_MAKE_ENV) $(MAKE) -C $(@D)
-        $(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools
-        $(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/sfnt2fon
-        $(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/widl
-        $(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/winebuild
-        $(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/winegcc
-        $(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/wmc
-        $(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/wrc
+	$(HOST_MAKE_ENV) $(MAKE) -C $(@D) __tooldeps__
 endef
 
 # Wine only needs its host variant to be built, not that it is
@@ -311,7 +314,6 @@ HOST_WINE_PROTON_CONF_OPTS += \
 	--without-gnutls \
 	--without-gssapi \
 	--without-gstreamer \
-	--without-unwind \
 	--without-krb5 \
 	--without-mingw \
 	--without-netapi \
@@ -337,9 +339,6 @@ HOST_WINE_PROTON_CONF_OPTS += \
 	--without-xshape \
 	--without-xshm \
 	--without-xxf86vm
-
-WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
-HOST_WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
 
 $(eval $(autotools-package))
 $(eval $(host-autotools-package))

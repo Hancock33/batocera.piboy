@@ -13,8 +13,8 @@ define FPINBALL_EXTRACT_CMDS
 endef
 
 define FPINBALL_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/fpinball/
-	cp -prn $(@D)/* $(TARGET_DIR)/usr/fpinball/
+	mkdir -p $(TARGET_DIR)/usr/bin/fpinball/
+	cp -prn $(@D)/* $(TARGET_DIR)/usr/bin/fpinball/
 
 	#evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

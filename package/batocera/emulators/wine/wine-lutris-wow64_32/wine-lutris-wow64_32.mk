@@ -3,13 +3,23 @@
 # wine-lutris-wow64_32
 #
 ################################################################################
-# Version: Commits on Jun 13, 2023
-WINE_LUTRIS_WOW64_32_VERSION = wine-8.10
+# Version: Commits on Jun 23, 2023
+WINE_LUTRIS_WOW64_32_VERSION = wine-8.11
 WINE_LUTRIS_WOW64_32_SOURCE = wine-lutris-$(WINE_LUTRIS_WOW64_32_VERSION).tar.gz
 WINE_LUTRIS_WOW64_32_SITE = $(call github,wine-mirror,wine,$(WINE_LUTRIS_WOW64_32_VERSION))
 WINE_LUTRIS_WOW64_32_LICENSE = LGPL-2.1+
+WINE_LUTRIS_WOW64_32_LICENSE_FILES = COPYING.LIB LICENSE
+WINE_LUTRIS_WOW64_32_CPE_ID_VENDOR = winehq
+WINE_LUTRIS_WOW64_32_SELINUX_MODULES = wine
 WINE_LUTRIS_WOW64_32_DEPENDENCIES = host-bison host-flex host-wine-lutris
 HOST_WINE_LUTRIS_WOW64_32_DEPENDENCIES = host-bison host-flex host-clang host-lld
+
+# Configure Lutris
+define WINE_LUTRIS_WOW64_32_AUTOGEN
+	cd $(@D); autoreconf -fiv
+	cd $(@D); ./tools/make_requests
+	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
+endef
 
 # That create folder for install
 define WINE_LUTRIS_WOW64_32_CREATE_WINE_FOLDER
@@ -22,22 +32,17 @@ WINE_LUTRIS_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_LUTRIS_WOW64_32_CREATE_WINE_FOL
 WINE_LUTRIS_WOW64_32_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
 	--with-wine-tools=../host-wine-lutris-$(WINE_LUTRIS_WOW64_32_VERSION) \
 	--disable-tests \
+	--disable-win64 \
 	--without-capi \
 	--without-coreaudio \
 	--without-gettext \
 	--without-gettextpo \
 	--without-gphoto \
+	--without-mingw \
 	--without-opencl \
 	--without-oss \
 	--prefix=/usr/wine/lutris \
 	--exec-prefix=/usr/wine/lutris
-
-# batocera
-ifeq ($(BR2_x86_64),y)
-	WINE_LUTRIS_WOW64_32_CONF_OPTS += --enable-win64
-else
-	WINE_LUTRIS_WOW64_32_CONF_OPTS += --disable-win64
-endif
 
 # Add Vulkan if available
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
@@ -59,7 +64,7 @@ ifeq ($(BR2_TOOLCHAIN_EXTERNAL),y)
 WINE_LUTRIS_WOW64_32_CONF_OPTS += TARGETFLAGS="-b $(TOOLCHAIN_EXTERNAL_PREFIX)"
 endif
 
-ifeq ($(BR2_PACKAGE_ALSA_LIB)$(BR2_PACKAGE_ALSA_LIB_SEQ)$(BR2_PACKAGE_ALSA_LIB_RAWMIDI),yyy)
+ifeq ($(BR2_PACKAGE_ALSA_LIB),y)
 WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-alsa
 WINE_LUTRIS_WOW64_32_DEPENDENCIES += alsa-lib
 else
@@ -133,6 +138,20 @@ WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-pcap
 WINE_LUTRIS_WOW64_32_DEPENDENCIES += libpcap
 else
 WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-pcap
+endif
+
+ifeq ($(BR2_PACKAGE_LIBUSB),y)
+WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-usb
+WINE_LUTRIS_WOW64_32_DEPENDENCIES += libusb
+else
+WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-usb
+endif
+
+ifeq ($(BR2_PACKAGE_LIBV4L),y)
+WINE_LUTRIS_WOW64_32_CONF_OPTS += --with-v4l2
+WINE_LUTRIS_WOW64_32_DEPENDENCIES += libv4l
+else
+WINE_LUTRIS_WOW64_32_CONF_OPTS += --without-v4l2
 endif
 
 ifeq ($(BR2_PACKAGE_MESA3D_OSMESA_CLASSIC),y)
@@ -264,14 +283,7 @@ endif
 # Wine only needs the host tools to be built, so cut-down the
 # build time by building just what we need.
 define HOST_WINE_LUTRIS_WOW64_32_BUILD_CMDS
-	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)
-	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools
-	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/sfnt2fon
-	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/widl
-	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/winebuild
-	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/winegcc
-	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/wmc
-	$(HOST_MAKE_ENV) $(MAKE) -C $(@D)/tools/wrc
+	$(HOST_MAKE_ENV) $(MAKE) -C $(@D) __tooldeps__
 endef
 
 # Wine only needs its host variant to be built, not that it is
@@ -296,7 +308,6 @@ HOST_WINE_LUTRIS_WOW64_32_CONF_OPTS += \
 	--without-gnutls \
 	--without-gssapi \
 	--without-gstreamer \
-	--without-unwind \
 	--without-krb5 \
 	--without-mingw \
 	--without-netapi \

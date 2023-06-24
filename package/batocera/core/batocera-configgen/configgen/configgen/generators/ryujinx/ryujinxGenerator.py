@@ -83,8 +83,8 @@ class RyujinxGenerator(Generator):
             os.makedirs(ryujinxConf + "/system")
 
         # Copy file & make executable (workaround)
-        if not os.path.exists(ryujinxExec) or not filecmp.cmp("/usr/ryujinx/Ryujinx", ryujinxExec):
-            shutil.copyfile("/usr/ryujinx/Ryujinx", ryujinxExec)
+        if not os.path.exists(ryujinxExec) or not filecmp.cmp("/usr/bin/ryujinx/Ryujinx", ryujinxExec):
+            shutil.copyfile("/usr/bin/ryujinx/Ryujinx", ryujinxExec)
             os.chmod(ryujinxExec, 0o0775)
 
         # Copy the prod.keys file to where ryujinx reads it

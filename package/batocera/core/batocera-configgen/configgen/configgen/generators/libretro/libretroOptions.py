@@ -1805,11 +1805,11 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         elif system.isOptSet('nestopia_cropoverscan') and system.config['nestopia_cropoverscan'] == "h":
             coreSettings.save('nestopia_overscan_h',    '"enabled"')
             coreSettings.save('nestopia_overscan_v',    '"disabled"')
-        elif system.isOptSet('nestopia_cropoverscan') and system.config['nestopia_cropoverscan'] == "v":
-            coreSettings.save('nestopia_overscan_h',    '"disabled"')
+        elif system.isOptSet('nestopia_cropoverscan') and system.config['nestopia_cropoverscan'] == "both":
+            coreSettings.save('nestopia_overscan_h',    '"enabled"')
             coreSettings.save('nestopia_overscan_v',    '"enabled"')
         else:
-            coreSettings.save('nestopia_overscan_h',    '"enabled"')
+            coreSettings.save('nestopia_overscan_h',    '"disabled"')
             coreSettings.save('nestopia_overscan_v',    '"enabled"')
         # Palette Choice
         if system.isOptSet('nestopia_palette'):
@@ -1862,11 +1862,11 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         elif system.isOptSet('fceumm_cropoverscan') and system.config['fceumm_cropoverscan'] == "h":
             coreSettings.save('fceumm_overscan_h',    '"enabled"')
             coreSettings.save('fceumm_overscan_v',    '"disabled"')
-        elif system.isOptSet('fceumm_cropoverscan') and system.config['fceumm_cropoverscan'] == "v":
-            coreSettings.save('fceumm_overscan_h',    '"disabled"')
+        elif system.isOptSet('fceumm_cropoverscan') and system.config['fceumm_cropoverscan'] == "both":
+            coreSettings.save('fceumm_overscan_h',    '"enabled"')
             coreSettings.save('fceumm_overscan_v',    '"enabled"')
         else:
-            coreSettings.save('fceumm_overscan_h',    '"enabled"')
+            coreSettings.save('fceumm_overscan_h',    '"disabled"')
             coreSettings.save('fceumm_overscan_v',    '"enabled"')
         # Palette Choice
         if system.isOptSet('fceumm_palette'):
@@ -2411,7 +2411,12 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         else:
             coreSettings.save('yabasanshiro_multitap_port1', '"disabled"')
             coreSettings.save('yabasanshiro_multitap_port2', '"disabled"')
-
+        # Language
+        if system.isOptSet('yabasanshiro_language'):
+            coreSettings.save('yabasanshiro_system_language', '"' + system.config['yabasanshiro_language'] + '"')
+        else:
+            coreSettings.save('yabasanshiro_system_language', '"english"')
+    
     if (system.config['core'] == 'kronos'):
         # Share saves with Beetle
         if system.isOptSet('kronos_use_beetle_saves') and system.config['kronos_use_beetle_saves'] == 'disabled':
@@ -2865,6 +2870,20 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('vitaquakeiii_invert_y_axis', system.config['vitaquake3_invertctl'])
         else:
             coreSettings.save('vitaquakeiii_invert_y_axis', '"disabled"')
+
+    # OpenLara
+    if (system.config['core'] == 'openlara'):
+        # Internal resolution
+        if system.isOptSet('lara-resolution'):
+            coreSettings.save('openlara_resolution', '"' + system.config['lara-resolution'] + '"')
+        else:
+            coreSettings.save('openlara_resolution', '"1280x720"')
+                
+        # Framerate
+        if system.isOptSet('lara-framerate'):
+            coreSettings.save('openlara_framerate', '"' + system.config['lara-framerate'] + '"')
+        else:
+            coreSettings.save('openlara_framerate', '"60fps"')
 
     # Custom : Allow the user to configure directly retroarchcore.cfg via batocera.conf via lines like : snes.retroarchcore.opt=val
     for user_config in system.config:
