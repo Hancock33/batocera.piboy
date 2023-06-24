@@ -45,6 +45,7 @@ menu "System"
 
   menu "Fonts"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/fonts/nanum-font/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/fonts/noto-cjk-fonts/Config.in"
   endmenu
 
   menu "Firmwares"
