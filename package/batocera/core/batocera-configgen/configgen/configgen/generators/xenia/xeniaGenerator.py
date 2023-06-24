@@ -35,7 +35,7 @@ class XeniaGenerator(Generator):
         if not filecmp.cmp('/usr/bin/xenia/xenia.exe', emupath + '/xenia.exe'):
             shutil.copytree('/usr/bin/xenia', emupath, dirs_exist_ok=True)
         if not filecmp.cmp('/usr/bin/xenia-canary/xenia_canary.exe', canarypath + '/xenia_canary.exe'):
-            shutil.copytree('/usr/bin/xenia', canarypath, dirs_exist_ok=True)
+            shutil.copytree('/usr/bin/xenia-canary', canarypath, dirs_exist_ok=True)
 
         # create portable txt file to try & stop file spam
         if not os.path.exists(emupath + '/portable.txt'):
