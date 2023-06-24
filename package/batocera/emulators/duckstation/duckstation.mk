@@ -68,12 +68,12 @@ define DUCKSTATION_BUILD_CMDS
 endef
 
 define DUCKSTATION_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/duckstation/bin
+    mkdir -p $(TARGET_DIR)/usr/bin/duckstation
 #    @if [ "$(X86_INSTALL)" = "n" ]; then  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-nogui $(TARGET_DIR)/usr/duckstation/bin/ ; fi
 #    @if [ "$(X86_INSTALL)" = "y" ]; then  cp -pr  $(@D)/buildroot-build/bin/translations            $(TARGET_DIR)/usr/duckstation/bin/ ; fi
 #    @if [ "$(X86_INSTALL)" = "y" ]; then  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-qt    $(TARGET_DIR)/usr/duckstation/bin/duckstation-nogui ; fi
-    $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation* $(TARGET_DIR)/usr/duckstation/bin
-    cp -pr  $(@D)/buildroot-build/bin/resources          $(TARGET_DIR)/usr/duckstation/bin/
+    $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation* $(TARGET_DIR)/usr/bin/duckstation
+    cp -pr  $(@D)/buildroot-build/bin/resources          $(TARGET_DIR)/usr/bin/duckstation/
 
     mkdir -p $(TARGET_DIR)/usr/share/evmapy
     cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy

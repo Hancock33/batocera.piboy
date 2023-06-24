@@ -59,9 +59,9 @@ define PCSX2_BUILD_CMDS
 endef
 
 define PCSX2_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/pcsx2/bin
-	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/pcsx2-qt $(TARGET_DIR)/usr/pcsx2/bin/pcsx2
-	cp -pr  $(@D)/buildroot-build/bin/resources $(TARGET_DIR)/usr/pcsx2/bin/
+	mkdir -p $(TARGET_DIR)/usr/bin/pcsx2
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/pcsx2-qt $(TARGET_DIR)/usr/bin/pcsx2/pcsx2
+	cp -pr  $(@D)/buildroot-build/bin/resources $(TARGET_DIR)/usr/bin/pcsx2
 endef
 
 define PCSX2_EVMAPY
@@ -72,9 +72,9 @@ endef
 PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_EVMAPY
 
 define PCSX2_TEXTURES
-	mkdir -p $(TARGET_DIR)/usr/pcsx2/bin/resources/textures
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/textures/ $(TARGET_DIR)/usr/pcsx2/bin/resources/
-	curl -L https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip -o $(TARGET_DIR)/usr/pcsx2/bin/resources/patches.zip
+	mkdir -p $(TARGET_DIR)/usr/bin/pcsx2/resources/textures
+	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/textures/ $(TARGET_DIR)/usr/bin/pcsx2/resources/
+	curl -L https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip -o $(TARGET_DIR)/usr/bin/pcsx2/resources/patches.zip
 endef
 
 PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_TEXTURES

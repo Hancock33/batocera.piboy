@@ -17,8 +17,8 @@ define XENIA_CANARY_EXTRACT_CMDS
 endef
 
 define XENIA_CANARY_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/xenia-canary
-	cp -avr $(@D)/xenia_canary.exe $(TARGET_DIR)/usr/xenia-canary
+	mkdir -p $(TARGET_DIR)/usr/bin/xenia-canary
+	cp -avr $(@D)/xenia_canary.exe $(TARGET_DIR)/usr/bin/xenia-canary
 endef
 
 define XENIA_CANARY_POST_PROCESS

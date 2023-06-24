@@ -28,7 +28,7 @@ index f3a92796..d23a95f0 100644
 +  MemoryCards = "/userdata/saves/psx";
 +  SaveStates = "/userdata/saves/psx";
 +  Screenshots = "/userdata/screenshots";
-+  Shaders = "/usr/duckstation/bin/resources/shaders";
++  Shaders = "/usr/bin/duckstation/resources/shaders";
 +  Textures = "/userdata/system/configs/duckstation/textures";
  }
  

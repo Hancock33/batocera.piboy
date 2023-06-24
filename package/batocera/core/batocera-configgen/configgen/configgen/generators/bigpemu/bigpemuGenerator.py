@@ -25,11 +25,11 @@ class BigPEmuGenerator(Generator):
 
         #copy bigpemu files to wine bottle
         if not os.path.exists(emupath):
-            shutil.copytree("/usr/bigpemu", emupath)
+            shutil.copytree("/usr/bin/bigpemu", emupath)
 
         # check we have the latest version in the wine bottle
-        if not filecmp.cmp("/usr/bigpemu/BigPEmu.exe", emupath + "/BigPEmu.exe"):
-            shutil.copytree("/usr/bigpemu", emupath, dirs_exist_ok=True)
+        if not filecmp.cmp("/usr/bin/bigpemu/BigPEmu.exe", emupath + "/BigPEmu.exe"):
+            shutil.copytree("/usr/bin/bigpemu", emupath, dirs_exist_ok=True)
 
         # install windows libraries required
         if not os.path.exists(wineprefix + "/d3dcompiler_43.done"):

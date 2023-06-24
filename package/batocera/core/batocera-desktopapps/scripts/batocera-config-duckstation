@@ -10,8 +10,8 @@ fi
 
 # We don't have QT library installed on SBC
 if [ -f /usr/bin/duckstation-qt ]; then
-    XDG_CONFIG_HOME=/userdata/system/configs XDG_DATA_HOME=/userdata/saves QT_QPA_PLATFORM=xcb /usr/duckstation/bin/duckstation-qt
+    XDG_CONFIG_HOME=/userdata/system/configs XDG_DATA_HOME=/userdata/saves QT_QPA_PLATFORM=xcb /usr/bin/duckstation/duckstation-qt
 else
-    XDG_CONFIG_HOME=/userdata/system/configs XDG_DATA_HOME=/userdata/saves QT_QPA_PLATFORM=xcb /usr/duckstation/bin/duckstation-nogui
+    XDG_CONFIG_HOME=/userdata/system/configs XDG_DATA_HOME=/userdata/saves QT_QPA_PLATFORM=xcb /usr/bin/duckstation/duckstation-nogui
 fi
 
