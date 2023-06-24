@@ -13,8 +13,8 @@ define BIGPEMU_EXTRACT_CMDS
 endef
 
 define BIGPEMU_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bigpemu
-	cp -pr $(@D)/* $(TARGET_DIR)/usr/bigpemu/
+	mkdir -p $(TARGET_DIR)/usr/bin/bigpemu
+	cp -pr $(@D)/* $(TARGET_DIR)/usr/bin/bigpemu/
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/bigpemu/jaguar.bigpemu.keys $(TARGET_DIR)/usr/share/evmapy

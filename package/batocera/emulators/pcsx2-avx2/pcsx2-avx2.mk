@@ -3,8 +3,8 @@
 # pcsx2-avx2
 #
 ################################################################################
-# Version: Commits on Jun 21, 2023
-PCSX2_AVX2_VERSION = 10d5261153fcfaea6ce33096614b3c3798b69195
+# Version: Commits on Jun 24, 2023
+PCSX2_AVX2_VERSION = 585868f9302eba28abeb28d8502530a7279e2cc4
 PCSX2_AVX2_SOURCE = pcsx2-$(PCSX2_AVX2_VERSION)-br1.tar.gz
 PCSX2_AVX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_AVX2_SITE_METHOD = git
@@ -60,9 +60,8 @@ define PCSX2_AVX2_BUILD_CMDS
 endef
 
 define PCSX2_AVX2_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/pcsx2/bin
-	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/pcsx2-qt $(TARGET_DIR)/usr/pcsx2-avx2/bin/pcsx2
-	ln -sf /usr/pcsx2/bin/resources $(TARGET_DIR)/usr/pcsx2-avx2/bin/
+	mkdir -p $(TARGET_DIR)/usr/bin/pcsx2
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/pcsx2-qt $(TARGET_DIR)/usr/bin/pcsx2/pcsx2-avx2
 endef
 
 define PCSX2_AVX2_EVMAPY
