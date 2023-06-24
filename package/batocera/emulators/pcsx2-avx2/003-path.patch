@@ -23,7 +23,7 @@ index 7ccc48b76..39860cbcb 100644
 +	si.SetStringValue("Folders", "MemoryCards", "/userdata/saves/ps2");
 +	si.SetStringValue("Folders", "Logs", "/userdata/system/logs");
 +	si.SetStringValue("Folders", "Cheats", "/userdata/cheats/ps2/cheats");
-+	si.SetStringValue("Folders", "Patches", "/usr/pcsx2/bin/resources");
++	si.SetStringValue("Folders", "Patches", "/usr/bin/pcsx2/resources");
 +	si.SetStringValue("Folders", "Cache", "/userdata/system/cache/ps2");
 +	si.SetStringValue("Folders", "Textures", "/userdata/system/configs/PCSX2/textures");
 +	si.SetStringValue("Folders", "InputProfiles", "/userdata/system/configs/PCSX2/inputprofiles");
@@ -49,7 +49,7 @@ index 7ccc48b76..39860cbcb 100644
 +	MemoryCards = LoadPathFromSettings(si, DataRoot, "MemoryCards", "/userdata/saves/ps2");
 +	Logs = LoadPathFromSettings(si, DataRoot, "Logs", "/userdata/system/logs");
 +	Cheats = LoadPathFromSettings(si, DataRoot, "Cheats", "/userdata/cheats/ps2/cheats");
-+	Patches = LoadPathFromSettings(si, DataRoot, "Patches", "/usr/pcsx2/bin/resources");
++	Patches = LoadPathFromSettings(si, DataRoot, "Patches", "/usr/bin/pcsx2/resources");
 +	Covers = LoadPathFromSettings(si, DataRoot, "Covers", "/userdata/system/configs/PCSX2/covers");
  	GameSettings = LoadPathFromSettings(si, DataRoot, "GameSettings", "gamesettings");
 -	Cache = LoadPathFromSettings(si, DataRoot, "Cache", "cache");

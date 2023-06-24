@@ -60,9 +60,8 @@ define PCSX2_AVX2_BUILD_CMDS
 endef
 
 define PCSX2_AVX2_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/pcsx2/bin
-	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/pcsx2-qt $(TARGET_DIR)/usr/pcsx2-avx2/bin/pcsx2
-	ln -sf /usr/pcsx2/bin/resources $(TARGET_DIR)/usr/pcsx2-avx2/bin/
+	mkdir -p $(TARGET_DIR)/usr/bin/pcsx2
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/pcsx2-qt $(TARGET_DIR)/usr/bin/pcsx2/pcsx2-avx2
 endef
 
 define PCSX2_AVX2_EVMAPY

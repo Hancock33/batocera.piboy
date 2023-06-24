@@ -47,11 +47,11 @@ class Pcsx2Generator(Generator):
 
         if system.isOptSet('avx2'):
             if system.config['avx2'] == '1':
-                commandArray = ["/usr/pcsx2-avx2/bin/pcsx2", "-nogui", "-fullscreen", rom]
+                commandArray = ["/usr/bin/pcsx2/pcsx2-avx2", "-nogui", "-fullscreen", rom]
             elif system.config['avx2'] == '0':
-                commandArray = ["/usr/pcsx2/bin/pcsx2", "-nogui", "-fullscreen", rom]
+                commandArray = ["/usr/bin/pcsx2/pcsx2", "-nogui", "-fullscreen", rom]
         else:
-            commandArray = ["/usr/pcsx2/bin/pcsx2", "-nogui", "-fullscreen", rom]
+            commandArray = ["/usr/bin/pcsx2/pcsx2", "-nogui", "-fullscreen", rom]
 
         return Command.Command(
             array=commandArray,
@@ -77,10 +77,10 @@ def configureReg(config_directory):
         os.makedirs(config_directory)
     f = open(configFileName, "w")
     f.write("DocumentsFolderMode=User\n")
-    f.write("CustomDocumentsFolder=/usr/pcsx2/bin\n")
+    f.write("CustomDocumentsFolder=/usr/pcsx2\n")
     f.write("UseDefaultSettingsFolder=enabled\n")
     f.write("SettingsFolder=/userdata/system/configs/PCSX2/inis\n")
-    f.write("Install_Dir=/usr/pcsx2/bin\n")
+    f.write("Install_Dir=/usr/pcsx2\n")
     f.write("RunWizard=0\n")
     f.close()
 
@@ -431,8 +431,8 @@ def configureINI(config_directory, bios_directory, system, controllers, guns):
 
     # hack for the fog bug for guns (time crisis - crisis zone)
     fog_files = [
-        "/usr/pcsx2/bin/resources/textures/SCES-52530/replacements/c321d53987f3986d-eadd4df7c9d76527-00005dd4.png",
-        "/usr/pcsx2/bin/resources/textures/SLUS-20927/replacements/c321d53987f3986d-eadd4df7c9d76527-00005dd4.png"
+        "/usr/bin/pcsx2/resources/textures/SCES-52530/replacements/c321d53987f3986d-eadd4df7c9d76527-00005dd4.png",
+        "/usr/bin/pcsx2/resources/textures/SLUS-20927/replacements/c321d53987f3986d-eadd4df7c9d76527-00005dd4.png"
     ]
     texture_dir = config_directory + "/textures"
     # copy textures if necessary to PCSX2 config folder
