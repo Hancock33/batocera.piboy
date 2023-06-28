@@ -21,6 +21,9 @@ define WINE_PROTON_AUTOGEN
 	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
 endef
 
+WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
+HOST_WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
+
 # That create folder for install
 define WINE_PROTON_CREATE_WINE_FOLDER
 	mkdir -p $(TARGET_DIR)/usr/wine/proton
