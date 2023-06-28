@@ -21,6 +21,9 @@ define WINE_LUTRIS_AUTOGEN
 	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
 endef
 
+WINE_LUTRIS_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
+HOST_WINE_LUTRIS_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
+
 # That create folder for install
 define WINE_LUTRIS_CREATE_WINE_FOLDER
 	mkdir -p $(TARGET_DIR)/usr/wine/lutris
