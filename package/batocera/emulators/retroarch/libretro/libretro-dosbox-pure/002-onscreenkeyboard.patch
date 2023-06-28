@@ -1,5 +1,5 @@
 diff --git a/core_options.h b/core_options.h
-index a00b36a..243b09a 100644
+index affdfc6..aa880db 100644
 --- a/core_options.h
 +++ b/core_options.h
 @@ -151,11 +151,20 @@ static retro_core_option_v2_definition option_defs[] =
@@ -22,21 +22,21 @@ index a00b36a..243b09a 100644
 +	},
 +
  	{
- 		"dosbox_pure_mouse_wheel",
- 		"Bind Mouse Wheel To Key", NULL,
+ 		"dosbox_pure_mouse_input",
+ 		"Mouse Input Mode", NULL,
 diff --git a/dosbox_pure_libretro.cpp b/dosbox_pure_libretro.cpp
-index 1452b77..3ba98a3 100644
+index 68c3bcd..cf02005 100644
 --- a/dosbox_pure_libretro.cpp
 +++ b/dosbox_pure_libretro.cpp
-@@ -127,6 +127,7 @@ static DBP_Port_Device dbp_port_devices[DBP_MAX_PORTS];
+@@ -133,6 +133,7 @@ static DBP_Port_Device dbp_port_devices[DBP_MAX_PORTS];
  static bool dbp_input_binds_modified;
  static bool dbp_bind_unused;
  static bool dbp_on_screen_keyboard;
 +static bool dbp_selectbtn_screen_keyboard;
- static bool dbp_mouse_input;
- static bool dbp_optionsupdatecallback;
- static bool dbp_last_hideadvanced;
-@@ -3161,7 +3162,11 @@ static void refresh_input_binds(bool set_controller_info = false, unsigned refre
+ static char dbp_mouse_input;
+ static char dbp_auto_mapping_mode;
+ static Bit16s dbp_bind_mousewheel, dbp_mouse_x, dbp_mouse_y;
+@@ -1887,7 +1888,11 @@ static void DBP_RefreshInputBinds(bool set_input_descriptors, bool set_controlle
  
  		if (dbp_on_screen_keyboard && port == 0)
  		{
@@ -49,18 +49,18 @@ index 1452b77..3ba98a3 100644
  		}
  
  		if (mapping)
-@@ -3707,11 +3712,13 @@ static bool check_variables(bool is_startup = false)
+@@ -2420,11 +2425,12 @@ static bool check_variables(bool is_startup = false)
  
  	bool bind_unused = (retro_get_variable("dosbox_pure_bind_unused", "true")[0] != 'f');
  	bool on_screen_keyboard = (retro_get_variable("dosbox_pure_on_screen_keyboard", "true")[0] != 'f');
 +	bool selectbtn_screen_keyboard = (retro_get_variable("dosbox_pure_selectbtn_screen_keyboard", "true")[0] != 'f');
- 	bool mouse_input = (retro_get_variable("dosbox_pure_mouse_input", "true")[0] != 'f');
+ 	char mouse_input = retro_get_variable("dosbox_pure_mouse_input", "true")[0];
 -	if (bind_unused != dbp_bind_unused || on_screen_keyboard != dbp_on_screen_keyboard || mouse_input != dbp_mouse_input || bind_mousewheel != dbp_bind_mousewheel)
-+	if (bind_unused != dbp_bind_unused || on_screen_keyboard != dbp_on_screen_keyboard || selectbtn_screen_keyboard != dbp_selectbtn_screen_keyboard || mouse_input != dbp_mouse_input || bind_mousewheel != dbp_bind_mousewheel)
- 	{
+-	{
++	if (bind_unused != dbp_bind_unused || on_screen_keyboard != dbp_on_screen_keyboard || selectbtn_screen_keyboard != dbp_selectbtn_screen_keyboard || mouse_input != dbp_mouse_input || bind_mousewheel != dbp_bind_mousewheel)	{
  		dbp_bind_unused = bind_unused;
  		dbp_on_screen_keyboard = on_screen_keyboard;
 +		dbp_selectbtn_screen_keyboard = selectbtn_screen_keyboard;
  		dbp_mouse_input = mouse_input;
  		dbp_bind_mousewheel = bind_mousewheel;
- 		if (dbp_state > DBPSTATE_SHUTDOWN) refresh_input_binds();
+ 		if (dbp_state > DBPSTATE_SHUTDOWN) DBP_RefreshInputBinds(true);
