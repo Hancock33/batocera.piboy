@@ -7936,7 +7936,7 @@ msgstr "PRESENTAZIONE THREADED"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Match Window"
-msgstr ""
+msgstr "Adatta alla finestra"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7956,7 +7956,7 @@ msgstr "UPSCALING INTEGER"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Enabling will smooth out the image."
-msgstr ""
+msgstr "Quanto abilitato sfuma l'immagine."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7969,6 +7969,8 @@ msgid ""
 "Fills the screen regardless of the aspect ratio. Doesn't work with Integer "
 "Upscaling."
 msgstr ""
+"Riempi lo schermo senza tener conto delle proporzioni. Non funziona con "
+"Integer Upscaling"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9384,7 +9386,7 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TEXTURE REPLACEMENTS"
-msgstr ""
+msgstr "SOSTITUZIONI TEXTURE"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9392,11 +9394,13 @@ msgid ""
 "Necessary for some guns to replace fog textures as a workaround in Time "
 "Crisis - Crisis Zone."
 msgstr ""
+"Necessario perche' alcune pistole possano rimpiazzare le texture della "
+"nebbia in un workaround di Time Crisis - Crisis Zone."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TIME CRISIS FOG HACK"
-msgstr ""
+msgstr "HACK PER LA NEBBIA IN TIME CRISIS"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -9768,8 +9772,8 @@ msgstr "Legacy (a singolo thread)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "Async (multi threaded)(Deafult)"
-msgstr "Asynch (multi threaded)(Default)"
+msgid "Async (multi threaded)(Default)"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10937,7 +10941,7 @@ msgstr "USA DSP AUDIO"
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "Increase to 128 MiB for debug or homebrew applications."
-msgstr ""
+msgstr "Aumenta a 120 MiB per debug o applicazioni homebrew."
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -10947,12 +10951,12 @@ msgstr ""
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "64MiB (Default)"
-msgstr ""
+msgstr "64MiB (Default"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "128MiB"
-msgstr ""
+msgstr "128MiB"
 
 #. TRANSLATION: sonic2013
 msgctxt "game_options"
@@ -12871,6 +12875,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "AvanzamentoRapido"
+
+#~ msgctxt "game_options"
+#~ msgid "Async (multi threaded)(Deafult)"
+#~ msgstr "Asynch (multi threaded)(Default)"
 
 #~ msgctxt "game_options"
 #~ msgid "Emable or disable high score saving"

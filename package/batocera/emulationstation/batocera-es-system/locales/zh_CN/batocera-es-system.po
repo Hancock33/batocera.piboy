@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-10 23:54+0800\n"
+"PO-Revision-Date: 2023-06-28 22:11+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二\n"
 "Language: zh_CN\n"
@@ -4824,12 +4824,12 @@ msgstr "音频过滤"
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "Set desired framerate."
-msgstr ""
+msgstr "设置所需的帧速率."
 
 #. TRANSLATION: libretro/openlara, libretro
 msgctxt "game_options"
 msgid "FRAMERATE"
-msgstr ""
+msgstr "帧速率"
 
 #. TRANSLATION: libretro/openlara, libretro/tyrquake
 msgctxt "game_options"
@@ -4839,17 +4839,17 @@ msgstr "30fps"
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "60fps (Default)"
-msgstr ""
+msgstr "60fps (默认)"
 
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "70fps"
-msgstr ""
+msgstr "70fps"
 
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "72fps"
-msgstr ""
+msgstr "72fps"
 
 #. TRANSLATION: libretro/openlara, libretro/tyrquake
 msgctxt "game_options"
@@ -4869,7 +4869,7 @@ msgstr "100fps"
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "119fps"
-msgstr ""
+msgstr "119fps"
 
 #. TRANSLATION: libretro/openlara, libretro/tyrquake
 msgctxt "game_options"
@@ -4884,12 +4884,12 @@ msgstr "144fps"
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "240fps"
-msgstr ""
+msgstr "240fps"
 
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "244fps"
-msgstr ""
+msgstr "244fps"
 
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
@@ -6706,12 +6706,12 @@ msgstr "在支持的游戏中最多允许7或12个控制器."
 #. TRANSLATION: libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Change the system's language."
-msgstr ""
+msgstr "更改系统语言."
 
 #. TRANSLATION: libretro/yabasanshiro, awgl
 msgctxt "game_options"
 msgid "Deutsch"
-msgstr ""
+msgstr "德国"
 
 #. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
 msgctxt "game_options"
@@ -9631,8 +9631,8 @@ msgstr "传统(单线程)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "Async (multi threaded)(Deafult)"
-msgstr "异步(多线程)(默认)"
+msgid "Async (multi threaded)(Default)"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -12440,6 +12440,10 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Open"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "Async (multi threaded)(Deafult)"
+#~ msgstr "异步(多线程)(默认)"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

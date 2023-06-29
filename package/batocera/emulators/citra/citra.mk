@@ -3,8 +3,8 @@
 # citra
 #
 ################################################################################
-# Version: Commits on Jun 23, 2023
-CITRA_VERSION = 9b82de6b24ea06496846a5fa211a23879b0ff644
+# Version: Commits on Jun 29, 2023
+CITRA_VERSION = d26dcc8e31bc713dafd1a4ff552ae626351f58f5
 CITRA_SITE = https://github.com/citra-emu/citra.git
 CITRA_SITE_METHOD=git
 CITRA_GIT_SUBMODULES=YES
@@ -21,6 +21,7 @@ CITRA_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 CITRA_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
 CITRA_CONF_OPTS += -DENABLE_COMPATIBILITY_LIST_DOWNLOAD=ON
 CITRA_CONF_OPTS += -DALSOFT_UPDATE_BUILD_VERSION=OFF
+CITRA_CONF_OPTS += -DENABLE_LTO=ON
 CITRA_CONF_OPTS += -GNinja
 
 CITRA_CONF_ENV += LDFLAGS=-lpthread
