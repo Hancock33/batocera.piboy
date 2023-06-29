@@ -3,10 +3,10 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Jun 05, 2023 (branch@Proton8-8)
-WINE_PROTON_VERSION = d48c657a1364248c1aaed099e5cbee30c1d8c09e
+# Version: Commits on Jun 05, 2023 (branch@proton_8.0-rc)
+WINE_PROTON_VERSION = 8115fef674742c5be90b52fce0c15ca38af2e8c7
 WINE_PROTON_SOURCE = wine-proton-$(WINE_PROTON_VERSION).tar.gz
-WINE_PROTON_SITE = $(call github,GloriousEggroll,proton-wine,$(WINE_PROTON_VERSION))
+WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
 WINE_PROTON_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_PROTON_CPE_ID_VENDOR = winehq
@@ -20,6 +20,9 @@ define WINE_PROTON_AUTOGEN
 	cd $(@D); ./tools/make_requests
 	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
 endef
+
+WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
+HOST_WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
 
 # That create folder for install
 define WINE_PROTON_CREATE_WINE_FOLDER

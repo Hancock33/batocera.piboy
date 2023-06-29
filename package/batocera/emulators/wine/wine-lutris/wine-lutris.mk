@@ -3,8 +3,8 @@
 # wine-lutris
 #
 ################################################################################
-# Version: Commits on Jun 23, 2023
-WINE_LUTRIS_VERSION = wine-8.11
+# Version: Commits on Jun 22, 2023
+WINE_LUTRIS_VERSION = fca833678f3b2588cc539d04693e7f9d8bca3278
 WINE_LUTRIS_SOURCE = wine-lutris-$(WINE_LUTRIS_VERSION).tar.gz
 WINE_LUTRIS_SITE = $(call github,wine-mirror,wine,$(WINE_LUTRIS_VERSION))
 WINE_LUTRIS_LICENSE = LGPL-2.1+
@@ -20,6 +20,9 @@ define WINE_LUTRIS_AUTOGEN
 	cd $(@D); ./tools/make_requests
 	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
 endef
+
+WINE_LUTRIS_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
+HOST_WINE_LUTRIS_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
 
 # That create folder for install
 define WINE_LUTRIS_CREATE_WINE_FOLDER
