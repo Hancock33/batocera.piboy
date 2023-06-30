@@ -14,6 +14,7 @@ if [[ -x /usr/bin/citra-qt ]]; then
         XDG_CACHE_HOME=/userdata/system/cache \
         QT_QPA_PLATFORM=xcb \
         QT_XCB_NO_XI2=1 \
+        SDL_JOYSTICK_HIDAPI=0 \
         /usr/bin/citra-qt
 elif [[ -x /usr/bin/citra ]]; then
     # DRM fallback
