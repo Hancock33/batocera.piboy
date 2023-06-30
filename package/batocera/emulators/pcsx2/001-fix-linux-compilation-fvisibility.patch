@@ -1,13 +1,13 @@
 diff --git a/cmake/BuildParameters.cmake b/cmake/BuildParameters.cmake
-index 86faa7193..fdc180e34 100644
+index 2f1bcd9d4..fa640a7ed 100644
 --- a/cmake/BuildParameters.cmake
 +++ b/cmake/BuildParameters.cmake
-@@ -145,7 +145,7 @@ if(MSVC AND NOT USE_CLANG_CL)
- 		"/utf-8"
- 	)
- elseif(NOT MSVC)
--	add_compile_options(-pipe -fvisibility=hidden -pthread -fno-builtin-strcmp -fno-builtin-memcmp -mfpmath=sse)
+@@ -151,7 +151,7 @@ if(MSVC)
+ 	# Disable Exceptions
+ 	string(REPLACE "/EHsc" "" CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS})
+ else()
+-	add_compile_options(-pipe -fvisibility=hidden -pthread)
 +	add_compile_options(-pipe -pthread -fno-builtin-strcmp -fno-builtin-memcmp -mfpmath=sse -fno-operator-names)
- endif()
- 
- set(CONFIG_REL_NO_DEB $<OR:$<CONFIG:Release>,$<CONFIG:MinSizeRel>>)
+ 	add_compile_options(
+ 		"$<$<COMPILE_LANGUAGE:CXX>:-fno-rtti>"
+ 		"$<$<COMPILE_LANGUAGE:CXX>:-fno-exceptions>"

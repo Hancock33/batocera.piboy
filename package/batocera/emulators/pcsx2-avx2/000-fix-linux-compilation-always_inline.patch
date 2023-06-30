@@ -1,13 +1,1 @@
-diff --git a/common/Pcsx2Defs.h b/common/Pcsx2Defs.h
-index 214e01cd3..bb5be66d6 100644
---- a/common/Pcsx2Defs.h
-+++ b/common/Pcsx2Defs.h
-@@ -122,7 +122,7 @@ static constexpr size_t __pagemask = PCSX2_PAGESIZE - 1;
- 
- 	#define _inline __inline__ __attribute__((unused))
- 	#ifdef NDEBUG
--		#define __forceinline __attribute__((always_inline, unused))
-+		#define __forceinline __attribute__((unused))
- 	#else
- 		#define __forceinline __attribute__((unused))
- 	#endif
+../pcsx2/000-fix-linux-compilation-always_inline.patch
