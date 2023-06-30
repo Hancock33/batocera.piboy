@@ -1,8 +1,8 @@
 diff --git a/pcsx2/USB/usb-lightgun/guncon2.cpp b/pcsx2/USB/usb-lightgun/guncon2.cpp
-index c32328048..7b067882c 100644
+index 3666084b5..a6c632ef3 100644
 --- a/pcsx2/USB/usb-lightgun/guncon2.cpp
 +++ b/pcsx2/USB/usb-lightgun/guncon2.cpp
-@@ -27,6 +27,12 @@
+@@ -28,6 +28,12 @@
  
  #include <tuple>
  
@@ -15,7 +15,7 @@ index c32328048..7b067882c 100644
  namespace usb_lightgun
  {
  	enum : u32
-@@ -122,6 +128,7 @@ namespace usb_lightgun
+@@ -123,6 +129,7 @@ namespace usb_lightgun
  	struct GunCon2State
  	{
  		explicit GunCon2State(u32 port_);
@@ -23,7 +23,7 @@ index c32328048..7b067882c 100644
  
  		USBDevice dev{};
  		USBDesc desc{};
-@@ -161,6 +168,12 @@ namespace usb_lightgun
+@@ -162,6 +169,12 @@ namespace usb_lightgun
  		void AutoConfigure();
  
  		std::tuple<s16, s16> CalculatePosition();
@@ -36,7 +36,7 @@ index c32328048..7b067882c 100644
  	};
  
  	static const USBDescStrings desc_strings = {
-@@ -222,6 +235,12 @@ namespace usb_lightgun
+@@ -223,6 +236,12 @@ namespace usb_lightgun
  		0x08, // Polling interval (frame counts)
  	};
  
@@ -49,7 +49,7 @@ index c32328048..7b067882c 100644
  	static void guncon2_handle_control(
  		USBDevice* dev, USBPacket* p, int request, int value, int index, int length, uint8_t* data)
  	{
-@@ -251,9 +270,93 @@ namespace usb_lightgun
+@@ -252,9 +271,93 @@ namespace usb_lightgun
  		p->status = USB_RET_STALL;
  	}
  
@@ -143,7 +143,7 @@ index c32328048..7b067882c 100644
  
  		switch (p->pid)
  		{
-@@ -328,6 +431,14 @@ namespace usb_lightgun
+@@ -329,6 +432,14 @@ namespace usb_lightgun
  	GunCon2State::GunCon2State(u32 port_)
  		: port(port_)
  	{
@@ -158,7 +158,7 @@ index c32328048..7b067882c 100644
  	}
  
  	void GunCon2State::AutoConfigure()
-@@ -359,7 +470,13 @@ namespace usb_lightgun
+@@ -360,7 +471,13 @@ namespace usb_lightgun
  	{
  		float pointer_x, pointer_y;
  		const std::pair<float, float> abs_pos(InputManager::GetPointerAbsolutePosition(0));
@@ -173,7 +173,7 @@ index c32328048..7b067882c 100644
  
  		s16 pos_x, pos_y;
  		if (pointer_x < 0.0f || pointer_y < 0.0f)
-@@ -412,9 +529,148 @@ namespace usb_lightgun
+@@ -413,9 +530,148 @@ namespace usb_lightgun
  		return "guncon2";
  	}
  
