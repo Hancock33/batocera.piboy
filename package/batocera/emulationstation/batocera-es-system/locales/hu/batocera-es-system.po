@@ -9771,7 +9771,7 @@ msgctxt "game_options"
 msgid "Choose number of audio channels."
 msgstr ""
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3
+#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3
 msgctxt "game_options"
 msgid "AUDIO"
 msgstr "AUDIÓ"
@@ -9804,6 +9804,21 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ENABLE AUDIO BUFFERING"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Duration of audio buffer in milliseconds."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "AUDIO BUFFER DURATION"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "100 (Default)"
 msgstr ""
 
 #. TRANSLATION: rpcs3

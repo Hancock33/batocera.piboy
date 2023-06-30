@@ -23,8 +23,8 @@ zh_CN"
 
 for i in $loc
 do
-    rm -r $i
-    mkdir -p $i
-    touch $i/batocera-es-system.po
+    rm -r locales/$i
+    mkdir -p locales/$i
+    touch locales/$i/batocera-es-system.po
 done
 
