@@ -467,21 +467,20 @@ menu "Ports"
 endmenu
 
 menu "Kodi"
-source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi20/Config.in"
-if BR2_PACKAGE_KODI20
-#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi20-resource-language-de_de/Config.in"
-#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi20-resource-language-es_es/Config.in"
-#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi20-resource-language-eu_es/Config.in"
-#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi20-resource-language-fr_fr/Config.in"
-#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi20-resource-language-it_it/Config.in"
-#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi20-resource-language-pt_br/Config.in"
-#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi20-resource-language-sv_se/Config.in"
-#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi20-resource-language-tr_tr/Config.in"
-#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi20-resource-language-zh_cn/Config.in"
-#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi20-resource-language-el_gr/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi20-pvr-freebox/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi20-p8-platform/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi20-kodi-platform/Config.in"
+if BR2_PACKAGE_KODI
+#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-resource-language-de_de/Config.in"
+#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-resource-language-es_es/Config.in"
+#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-resource-language-eu_es/Config.in"
+#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-resource-language-fr_fr/Config.in"
+#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-resource-language-it_it/Config.in"
+#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-resource-language-pt_br/Config.in"
+#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-resource-language-sv_se/Config.in"
+#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-resource-language-tr_tr/Config.in"
+#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-resource-language-zh_cn/Config.in"
+#  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-resource-language-el_gr/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-pvr-freebox/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-p8-platform/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/kodi/kodi-platform/Config.in"
 endif
 endmenu
 
