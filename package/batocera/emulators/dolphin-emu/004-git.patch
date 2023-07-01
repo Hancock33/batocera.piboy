@@ -1,13 +1,13 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index c702c69dce..7756409cdc 100644
+index ed6c64a2fa..72dcf2ef51 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -172,7 +172,7 @@ endif()
- include(CCache)
+@@ -784,7 +784,7 @@ if (NOT EXISTS ${CMAKE_CURRENT_BINARY_DIR}/Source/Core/Common/scmrev.h)
+ 	file(TOUCH ${CMAKE_CURRENT_BINARY_DIR}/Source/Core/Common/scmrev.h)
+ endif()
  
- # for revision info
 -find_package(Git)
 +#find_package(Git)
- if(GIT_FOUND)
-   # make sure version information gets re-run when the current Git HEAD changes
-   execute_process(WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} COMMAND ${GIT_EXECUTABLE} rev-parse --git-path HEAD
+ if(NOT GIT_FOUND)
+ 	set(GIT_EXECUTABLE "")
+ endif()
