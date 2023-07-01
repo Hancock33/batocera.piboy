@@ -1,0 +1,5 @@
+config BR2_PACKAGE_KODI_PLATFORM
+	bool "kodi-platform"
+	help
+
+	  https://github.com/xbmc/kodi-platform
