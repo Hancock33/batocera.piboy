@@ -16,6 +16,10 @@ ryujinxConf = batoceraFiles.CONF + "/Ryujinx"
 ryujinxConfFile = ryujinxConf + "/Config.json"
 ryujinxKeys = batoceraFiles.BIOS + "/switch/prod.keys"
 ryujinxExec = ryujinxConf + "/ryujinx"
+btn_a = "A"
+btn_b = "B"
+btn_x = "X"
+btn_y = "Y"
 
 ryujinxCtrl = {
         "left_joycon_stick": {
@@ -65,10 +69,10 @@ ryujinxCtrl = {
         "button_zr": "RightTrigger",
         "button_sl": "Unbound",
         "button_sr": "Unbound",
-        "button_x": "Y",
-        "button_b": "A",
-        "button_y": "X",
-        "button_a": "B"
+        "button_x": btn_x,
+        "button_b": btn_b,
+        "button_y": btn_y,
+        "button_a": btn_a
     },
     "version": 1,
     "backend": "GamepadSDL2",
@@ -158,6 +162,17 @@ class RyujinxGenerator(Generator):
         # Now add Controllers
         nplayer = 1
         for controller, pad in sorted(playersControllers.items()):
+            if system.isOptSet('ryujinx_btnlabels'):
+                btn_a = "A"
+                btn_b = "B"
+                btn_x = "X"
+                btn_y = "Y"
+            else:
+                btn_a = "B"
+                btn_b = "A"
+                btn_x = "Y"
+                btn_y = "X"
+
             if nplayer <= 8:
                 ctrlConf = ryujinxCtrl
                 # we need to get the uuid for ryujinx controllers
