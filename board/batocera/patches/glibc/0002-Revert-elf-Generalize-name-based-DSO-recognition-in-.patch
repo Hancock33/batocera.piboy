@@ -1,0 +1,35 @@
+diff --git a/elf/Makefile b/elf/Makefile
+index 0d19964d42..8d146bdb42 100644
+--- a/elf/Makefile
++++ b/elf/Makefile
+@@ -398,7 +398,6 @@ tests += \
+   tst-big-note \
+   tst-debug1 \
+   tst-deep1 \
+-  tst-dl-is_dso \
+   tst-dlmodcount \
+   tst-dlmopen1 \
+   tst-dlmopen3 \
+diff --git a/elf/ldconfig.c b/elf/ldconfig.c
+index 5b1c9139f6..fe856fd536 100644
+--- a/elf/ldconfig.c
++++ b/elf/ldconfig.c
+@@ -42,7 +42,6 @@
+ #include <ldconfig.h>
+ #include <dl-cache.h>
+ #include <dl-hwcaps.h>
+-#include <dl-is_dso.h>
+ 
+ #include <dl-procinfo.h>
+ 
+@@ -716,7 +715,9 @@ search_dir (const struct dir_entry *entry)
+ 	continue;
+       /* Does this file look like a shared library?  The dynamic linker
+ 	 is also considered as shared library.  */
+-      if (!_dl_is_dso (direntry->d_name)
++      if (((strncmp (direntry->d_name, "lib", 3) != 0
++       && strncmp (direntry->d_name, "ld-", 3) != 0)
++      || strstr (direntry->d_name, ".so") == NULL)
+ 	  && (direntry->d_type == DT_REG || entry->hwcaps == NULL))
+ 	continue;
+ 

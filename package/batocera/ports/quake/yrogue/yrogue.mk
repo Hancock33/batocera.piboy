@@ -3,8 +3,8 @@
 # yrogue
 #
 ################################################################################
-# Version: Commits on Jun 17, 2023
-YROGUE_VERSION = 0742bc24d7b917ccc8339a2f9abaef8a2faa3bca
+# Version: Commits on Jul 01, 2023
+YROGUE_VERSION = 391128e0ac1678d9e14f35341242917c367db10f
 YROGUE_SITE = $(call github,yquake2,rogue,$(YROGUE_VERSION))
 
 YROGUE_DEPENDENCIES = sdl2 sdl2_mixer yquake2 host-ninja

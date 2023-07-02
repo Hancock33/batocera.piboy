@@ -1933,6 +1933,72 @@ msgctxt "game_options"
 msgid "2nd Joystick (2 Axes, 2 Btns)"
 msgstr "第二个摇杆（ 2轴， 2键）"
 
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "Type of emulated SoundBlaster card."
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "SOUNDBLASTER TYPE"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "SounBlaster 16 (Default)"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "SounBlaster Pro 2"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "SounBlaster Pro"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "SounBlaster 2.0"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "SounBlaster 1.0"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "GameBlaster"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid ""
+"Select the .SF2 SoundFont file, .ROM file, or interface used for MIDI output."
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "MIDI OUTPUT"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "General MIDI SoundFont (Default)"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "Roland MT-32/CM-32L"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "Frontend MIDI driver"
+msgstr ""
+
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Enhancement. Skipping it can break some games."
@@ -5246,6 +5312,11 @@ msgctxt "game_options"
 msgid "8 Frames"
 msgstr "8 帧延迟"
 
+#. TRANSLATION: libretro/ppsspp
+msgctxt "game_options"
+msgid "480x272 (Default)"
+msgstr ""
+
 #. TRANSLATION: libretro/prboom, libretro/tyrquake
 msgctxt "game_options"
 msgid "CONTROLLER PROFILE"
@@ -8422,6 +8493,26 @@ msgctxt "game_options"
 msgid "4M"
 msgstr "4M"
 
+#. TRANSLATION: hatari
+msgctxt "game_options"
+msgid "Choose your Atari hard drive type for the .hd extension file."
+msgstr ""
+
+#. TRANSLATION: hatari
+msgctxt "game_options"
+msgid "ATARI HARD DRIVE TYPE"
+msgstr ""
+
+#. TRANSLATION: hatari
+msgctxt "game_options"
+msgid "IDE (Default)"
+msgstr ""
+
+#. TRANSLATION: hatari
+msgctxt "game_options"
+msgid "ASCI"
+msgstr ""
+
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
@@ -9734,7 +9825,7 @@ msgctxt "game_options"
 msgid "Choose number of audio channels."
 msgstr "选择音频通道的数量."
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3
+#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3
 msgctxt "game_options"
 msgid "AUDIO"
 msgstr "音频"
@@ -9768,6 +9859,21 @@ msgstr "可以减少裂纹和卡顿，但增加音频延迟。"
 msgctxt "game_options"
 msgid "ENABLE AUDIO BUFFERING"
 msgstr "启用音频缓冲"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Duration of audio buffer in milliseconds."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "AUDIO BUFFER DURATION"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "100 (Default)"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11278,6 +11384,16 @@ msgctxt "game_options"
 msgid "AMD FidelityFX (Vulkan Only)"
 msgstr "AMD FidelityFX (仅Vulkan)"
 
+#. TRANSLATION: yuzu, ryujinx
+msgctxt "game_options"
+msgid "User XBOX button layout"
+msgstr ""
+
+#. TRANSLATION: yuzu, ryujinx
+msgctxt "game_options"
+msgid "CONTROLLER BUTTONS"
+msgstr ""
+
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
 msgid "Stretch to fit window"
@@ -12041,10 +12157,20 @@ msgctxt "keys_files"
 msgid "Set to full screen"
 msgstr "设置为全屏"
 
-#. TRANSLATION: xbox360.xenia.keys, wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, wiiu.keys, ...
+#. TRANSLATION: xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys, ...
 msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "退出模拟器"
+
+#. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
+msgctxt "keys_files"
+msgid "Virtual Keyboard"
+msgstr ""
+
+#. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
+msgctxt "keys_files"
+msgid "Settings GUI"
+msgstr ""
 
 #. TRANSLATION: amigacd32.amiberry.keys, amiga500.amiberry.keys, amiga1200.amiberry.keys
 msgctxt "keys_files"
@@ -12442,10 +12568,6 @@ msgid "Open"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid "Async (multi threaded)(Deafult)"
-#~ msgstr "异步(多线程)(默认)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr "如果核心支持，存储过去的状态以实时回放."
 
@@ -12671,6 +12793,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
+
+#~ msgctxt "game_options"
+#~ msgid "Async (multi threaded)(Deafult)"
+#~ msgstr "异步(多线程)(默认)"
 
 #~ msgctxt "game_options"
 #~ msgid "Emable or disable high score saving"

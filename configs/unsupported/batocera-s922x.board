@@ -31,7 +31,7 @@ BR2_LINUX_KERNEL_INTREE_DTS_NAME="amlogic/meson-g12b-odroid-n2 amlogic/meson-g12
 BR2_LINUX_KERNEL_CUSTOM_DTS_PATH="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/amlogic/s922x/dts/meson-g12b-odroid-go-ultra.dts"
 
 # System
-BR2_PACKAGE_BATOCERA_KODI20=y
+BR2_PACKAGE_BATOCERA_KODI=y
 BR2_TARGET_ROOTFS_SQUASHFS4_ZSTD=y
 
 # GPU
