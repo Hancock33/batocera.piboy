@@ -1,5 +1,5 @@
 diff --git a/localedata/locales/ca_ES b/localedata/locales/ca_ES
-index 0ba74cc..50a7e0c 100644
+index d9a29d10a2..e8c5cd299d 100644
 --- a/localedata/locales/ca_ES
 +++ b/localedata/locales/ca_ES
 @@ -100,18 +100,6 @@ day        "diumenge";/
@@ -41,7 +41,7 @@ index 0ba74cc..50a7e0c 100644
             "de febrer";/
             "de mar<U00E7>";/
 diff --git a/localedata/locales/el_GR b/localedata/locales/el_GR
-index 7362492..8b922ef 100644
+index 7362492fbd..8b922ef4a2 100644
 --- a/localedata/locales/el_GR
 +++ b/localedata/locales/el_GR
 @@ -104,30 +104,12 @@ day     "<U039A><U03C5><U03C1><U03B9><U03B1><U03BA><U03AE>";/
@@ -76,7 +76,7 @@ index 7362492..8b922ef 100644
          "<U03A6><U03B5><U03B2><U03C1><U03BF><U03C5><U03B1><U03C1><U03AF><U03BF><U03C5>";/
          "<U039C><U03B1><U03C1><U03C4><U03AF><U03BF><U03C5>";/
 diff --git a/localedata/locales/pl_PL b/localedata/locales/pl_PL
-index 4c1b2a8..0c1b5ff 100644
+index 4c1b2a869d..0c1b5ff373 100644
 --- a/localedata/locales/pl_PL
 +++ b/localedata/locales/pl_PL
 @@ -189,18 +189,6 @@ abmon   "sty";"lut";/
@@ -99,7 +99,7 @@ index 4c1b2a8..0c1b5ff 100644
          "lutego";/
          "marca";/
 diff --git a/localedata/locales/ru_RU b/localedata/locales/ru_RU
-index fdb2059..13c0031 100644
+index b1e2366f20..2c842a54d3 100644
 --- a/localedata/locales/ru_RU
 +++ b/localedata/locales/ru_RU
 @@ -118,18 +118,6 @@ abday   "<U0412><U0441>";/
