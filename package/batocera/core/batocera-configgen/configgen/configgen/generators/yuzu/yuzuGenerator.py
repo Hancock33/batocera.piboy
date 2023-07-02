@@ -25,11 +25,22 @@ class YuzuGenerator(Generator):
 
     def writeYuzuConfig(yuzuConfigFile, system, playersControllers):
         # pads
+        if system.isOptSet('yuzu_btnlabels'):
+            btn_a = "a"
+            btn_b = "b"
+            btn_x = "x"
+            btn_y = "y"
+        else:
+            btn_a = "b"
+            btn_b = "a"
+            btn_x = "y"
+            btn_y = "x"
+
         yuzuButtonsMapping = {
-            "button_a":      "a",
-            "button_b":      "b",
-            "button_x":      "x",
-            "button_y":      "y",
+            "button_a":      btn_a,
+            "button_b":      btn_b,
+            "button_x":      btn_x,
+            "button_y":      btn_y,
             "button_dup":    "up",
             "button_ddown":  "down",
             "button_dleft":  "left",

@@ -10703,7 +10703,7 @@ yuzu:
             "China":     4
             "Korea":     5
             "Taiwan":    6
-        ryujinx_timezone:
+        yuzu_timezone:
           prompt: CHOOSE CONSOLE TIMEZONE
           description: Choose your console timezone.
           choices:
@@ -10789,6 +10789,13 @@ yuzu:
             "Gaussian":                     3
             "ScaleForce":                   4
             "AMD FidelityFX (Vulkan Only)": 5
+        yuzu_btnlabels:
+          group: CONTROLLER SETTINGS
+          prompt: CONTROLLER BUTTONS
+          description: User XBOX button layout
+          choices:
+            "Disabled": "false"
+            "Enabled":  "true"
 ryujinx:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -10887,6 +10894,13 @@ ryujinx:
             "UTC+10": 10
             "UTC+11": 11
             "UTC+12": 12
+        ryujinx_btnlabels:
+          group: CONTROLLER SETTINGS
+          prompt: CONTROLLER BUTTONS
+          description: User XBOX button layout
+          choices:
+            "Disabled": "false"
+            "Enabled":  "true"
 samcoupe:
   features: [padtokeyboard]
   shared: [videomode, hud, hud_corner]
