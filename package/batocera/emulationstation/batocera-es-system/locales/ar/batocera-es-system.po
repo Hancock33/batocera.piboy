@@ -1935,6 +1935,72 @@ msgctxt "game_options"
 msgid "2nd Joystick (2 Axes, 2 Btns)"
 msgstr ""
 
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "Type of emulated SoundBlaster card."
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "SOUNDBLASTER TYPE"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "SounBlaster 16 (Default)"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "SounBlaster Pro 2"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "SounBlaster Pro"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "SounBlaster 2.0"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "SounBlaster 1.0"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "GameBlaster"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid ""
+"Select the .SF2 SoundFont file, .ROM file, or interface used for MIDI output."
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "MIDI OUTPUT"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "General MIDI SoundFont (Default)"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "Roland MT-32/CM-32L"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "Frontend MIDI driver"
+msgstr ""
+
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Enhancement. Skipping it can break some games."
@@ -5248,6 +5314,11 @@ msgctxt "game_options"
 msgid "8 Frames"
 msgstr "٨ إطارات"
 
+#. TRANSLATION: libretro/ppsspp
+msgctxt "game_options"
+msgid "480x272 (Default)"
+msgstr ""
+
 #. TRANSLATION: libretro/prboom, libretro/tyrquake
 msgctxt "game_options"
 msgid "CONTROLLER PROFILE"
@@ -8425,6 +8496,26 @@ msgctxt "game_options"
 msgid "4M"
 msgstr ""
 
+#. TRANSLATION: hatari
+msgctxt "game_options"
+msgid "Choose your Atari hard drive type for the .hd extension file."
+msgstr ""
+
+#. TRANSLATION: hatari
+msgctxt "game_options"
+msgid "ATARI HARD DRIVE TYPE"
+msgstr ""
+
+#. TRANSLATION: hatari
+msgctxt "game_options"
+msgid "IDE (Default)"
+msgstr ""
+
+#. TRANSLATION: hatari
+msgctxt "game_options"
+msgid "ASCI"
+msgstr ""
+
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
@@ -9738,7 +9829,7 @@ msgctxt "game_options"
 msgid "Choose number of audio channels."
 msgstr ""
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3
+#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3
 msgctxt "game_options"
 msgid "AUDIO"
 msgstr ""
@@ -9771,6 +9862,21 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ENABLE AUDIO BUFFERING"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Duration of audio buffer in milliseconds."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "AUDIO BUFFER DURATION"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "100 (Default)"
 msgstr ""
 
 #. TRANSLATION: rpcs3
@@ -11286,6 +11392,16 @@ msgctxt "game_options"
 msgid "AMD FidelityFX (Vulkan Only)"
 msgstr ""
 
+#. TRANSLATION: yuzu, ryujinx
+msgctxt "game_options"
+msgid "User XBOX button layout"
+msgstr ""
+
+#. TRANSLATION: yuzu, ryujinx
+msgctxt "game_options"
+msgid "CONTROLLER BUTTONS"
+msgstr ""
+
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
 msgid "Stretch to fit window"
@@ -12048,10 +12164,20 @@ msgctxt "keys_files"
 msgid "Set to full screen"
 msgstr ""
 
-#. TRANSLATION: xbox360.xenia.keys, wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, wiiu.keys, ...
+#. TRANSLATION: xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys, ...
 msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "الخروج من المحاكي"
+
+#. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
+msgctxt "keys_files"
+msgid "Virtual Keyboard"
+msgstr ""
+
+#. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
+msgctxt "keys_files"
+msgid "Settings GUI"
+msgstr ""
 
 #. TRANSLATION: amigacd32.amiberry.keys, amiga500.amiberry.keys, amiga1200.amiberry.keys
 msgctxt "keys_files"
