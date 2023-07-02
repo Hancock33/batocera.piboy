@@ -1,5 +1,6 @@
 config BR2_PACKAGE_BATOCERA_AUDIO
 	bool "batocera-audio"
+	select BR2_PACKAGE_BLUEZ_ALSA # Not longer needed
 	select BR2_PACKAGE_ALSA_UTILS
 	select BR2_PACKAGE_ALSA_UTILS_AMIXER #	Not longer needed
 	select BR2_PACKAGE_ALSA_UTILS_APLAY #	Not longer needed
