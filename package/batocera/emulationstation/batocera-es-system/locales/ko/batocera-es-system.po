@@ -13048,6 +13048,16 @@ msgctxt "game_options"
 msgid "AMD FidelityFX (Vulkan Only)"
 msgstr "AMD 피델리티FX (불칸 전용)"
 
+#. TRANSLATION: yuzu, ryujinx
+msgctxt "game_options"
+msgid "User XBOX button layout"
+msgstr ""
+
+#. TRANSLATION: yuzu, ryujinx
+msgctxt "game_options"
+msgid "CONTROLLER BUTTONS"
+msgstr ""
+
 #. TRANSLATION: ryujinx
 #, fuzzy
 msgctxt "game_options"
