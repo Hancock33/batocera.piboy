@@ -19,7 +19,7 @@ mkdir -p $DEST_DIR/lib32/dri
 mv $DEST_DIR/lib32/dri.old/{v3d_dri.so,vc4_dri.so}     $DEST_DIR/lib32/dri
 rm -r $DEST_DIR/lib32/dri.old
 cd $DEST_DIR && tar -cf $DEST_DIR.tar .
-xz -T0 -e -7 -v $DEST_DIR.tar
+xz -T0 -7 -v $DEST_DIR.tar
 rm -r $DEST_DIR
 cp -av $DEST_DIR.tar.xz /mnt/smb
 mv $DEST_DIR.tar.xz  $HOME/dl/lib32bit
