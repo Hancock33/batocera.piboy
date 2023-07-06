@@ -9456,16 +9456,6 @@ msgstr "TRUCOS"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "AVX2 is the fastest but not all computers can run it."
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "USE AVX2"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
 msgid "Allows up to 8 controllers in supported games."
 msgstr "Permite hasta 8 jugadores en juegos que lo soporten."
 

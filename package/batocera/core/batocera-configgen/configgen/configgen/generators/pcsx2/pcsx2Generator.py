@@ -45,7 +45,6 @@ class Pcsx2Generator(Generator):
         controllersConfig.writeSDLGameDBAllControllers(playersControllers, dbfile)
 
         commandArray = ["/usr/bin/pcsx2/pcsx2", "-nogui", "-fullscreen", rom]
-r
         return Command.Command(
             array=commandArray,
             env={ "XDG_CONFIG_HOME":batoceraFiles.CONF,

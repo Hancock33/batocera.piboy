@@ -9312,16 +9312,6 @@ msgstr "作弊"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "AVX2 is the fastest but not all computers can run it."
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "USE AVX2"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
 msgid "Allows up to 8 controllers in supported games."
 msgstr "在支持的游戏中最多允许8个控制器."
 
