@@ -2,13 +2,8 @@
     "actions_player1": [
 	{
             "trigger": ["hotkey", "start"],
-            "type": "exec",
-            "target": "killall -9 pcsx2 && killall -9 pcsx2-avx2"
-	},
-	{
-            "trigger": [ "b", "hotkey" ],
             "type": "key",
-            "target": "KEY_ESC"
+            "target": [ "KEY_LEFTALT", "KEY_F4" ]
 	},
 	{
             "trigger": ["hotkey", "x"],

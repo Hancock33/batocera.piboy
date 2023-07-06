@@ -8397,12 +8397,6 @@ pcsx2:
             choices:
                 "Disabled": "false"
                 "Enabled":  "true"
-        avx2:
-            prompt: USE AVX2
-            description: AVX2 is the fastest but not all computers can run it.
-            choices:
-                "Off":      0
-                "On":       1
         pcsx2_multitap:
             prompt: MULTITAP
             description: Allows up to 8 controllers in supported games.
