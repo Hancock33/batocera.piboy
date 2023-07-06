@@ -1,5 +1,202 @@
+ Documentation/admin-guide/kernel-parameters.txt |   18 +
+ Documentation/admin-guide/sysctl/kernel.rst     |   10 +
+ Documentation/process/changes.rst               |    7 +
+ Documentation/scheduler/sched-BMQ.txt           |  110 +
+ Makefile                                        |   14 +-
+ arch/alpha/Kconfig                              |    1 +
+ arch/alpha/kernel/syscalls/syscall.tbl          |    3 +
+ arch/alpha/mm/fault.c                           |   13 +-
+ arch/arc/Kconfig                                |    1 +
+ arch/arc/mm/fault.c                             |   11 +-
+ arch/arm/Kconfig                                |    1 +
+ arch/arm/mm/fault.c                             |   63 +-
+ arch/arm/tools/syscall.tbl                      |    3 +
+ arch/arm64/Kconfig                              |    1 +
+ arch/arm64/include/asm/unistd.h                 |    2 +-
+ arch/arm64/include/asm/unistd32.h               |    6 +
+ arch/arm64/mm/fault.c                           |   49 +-
+ arch/csky/Kconfig                               |    1 +
+ arch/csky/mm/fault.c                            |   22 +-
+ arch/hexagon/Kconfig                            |    1 +
+ arch/hexagon/mm/vm_fault.c                      |   18 +-
+ arch/ia64/kernel/syscalls/syscall.tbl           |    3 +
+ arch/ia64/mm/fault.c                            |   36 +-
+ arch/loongarch/Kconfig                          |    1 +
+ arch/loongarch/mm/fault.c                       |   16 +-
+ arch/m68k/kernel/syscalls/syscall.tbl           |    3 +
+ arch/m68k/mm/fault.c                            |    9 +-
+ arch/microblaze/kernel/syscalls/syscall.tbl     |    3 +
+ arch/microblaze/mm/fault.c                      |    5 +-
+ arch/mips/Kconfig                               |    1 +
+ arch/mips/kernel/syscalls/syscall_n32.tbl       |    3 +
+ arch/mips/kernel/syscalls/syscall_n64.tbl       |    3 +
+ arch/mips/kernel/syscalls/syscall_o32.tbl       |    3 +
+ arch/mips/mm/fault.c                            |   12 +-
+ arch/nios2/Kconfig                              |    1 +
+ arch/nios2/mm/fault.c                           |   17 +-
+ arch/openrisc/mm/fault.c                        |    5 +-
+ arch/parisc/kernel/syscalls/syscall.tbl         |    3 +
+ arch/parisc/mm/fault.c                          |   23 +-
+ arch/powerpc/Kconfig                            |    1 +
+ arch/powerpc/kernel/syscalls/syscall.tbl        |    3 +
+ arch/powerpc/mm/copro_fault.c                   |   14 +-
+ arch/powerpc/mm/fault.c                         |   39 +-
+ arch/riscv/Kconfig                              |    1 +
+ arch/riscv/mm/fault.c                           |   31 +-
+ arch/s390/kernel/syscalls/syscall.tbl           |    3 +
+ arch/s390/mm/fault.c                            |    5 +-
+ arch/sh/Kconfig                                 |    1 +
+ arch/sh/kernel/syscalls/syscall.tbl             |    3 +
+ arch/sh/mm/fault.c                              |   17 +-
+ arch/sparc/Kconfig                              |    1 +
+ arch/sparc/kernel/syscalls/syscall.tbl          |    3 +
+ arch/sparc/mm/fault_32.c                        |   32 +-
+ arch/sparc/mm/fault_64.c                        |    8 +-
+ arch/um/kernel/trap.c                           |   11 +-
+ arch/x86/Kconfig                                |    1 +
+ arch/x86/Kconfig.cpu                            |  427 +-
+ arch/x86/Makefile                               |   46 +-
+ arch/x86/entry/syscalls/syscall_32.tbl          |    3 +
+ arch/x86/entry/syscalls/syscall_64.tbl          |    3 +
+ arch/x86/include/asm/cpu.h                      |    2 +
+ arch/x86/include/asm/pci.h                      |    6 +
+ arch/x86/include/asm/smp.h                      |    2 +
+ arch/x86/include/asm/vermagic.h                 |   74 +
+ arch/x86/kernel/cpu/microcode/amd.c             |    2 +-
+ arch/x86/kernel/process.c                       |   28 +-
+ arch/x86/kernel/smp.c                           |   73 +-
+ arch/x86/kernel/smpboot.c                       |   81 +-
+ arch/x86/mm/fault.c                             |   52 +-
+ arch/x86/pci/common.c                           |    7 +-
+ arch/xtensa/Kconfig                             |    1 +
+ arch/xtensa/kernel/syscalls/syscall.tbl         |    3 +
+ arch/xtensa/mm/fault.c                          |   14 +-
+ block/elevator.c                                |   10 +
+ drivers/Makefile                                |   15 +-
+ drivers/ata/ahci.c                              |   23 +-
+ drivers/cpufreq/Kconfig.x86                     |    2 -
+ drivers/cpufreq/amd-pstate.c                    |    2 +-
+ drivers/cpufreq/cpufreq_ondemand.c              |   10 +-
+ drivers/cpufreq/intel_pstate.c                  |    2 +
+ drivers/cxl/core/pci.c                          |   27 +-
+ drivers/cxl/cxl.h                               |    1 -
+ drivers/cxl/port.c                              |   14 +-
+ drivers/gpu/drm/amd/amdgpu/amdgpu_vm.c          |    4 +
+ drivers/hid/hid-logitech-hidpp.c                |    2 +-
+ drivers/hid/hidraw.c                            |    9 +-
+ drivers/hid/wacom_wac.c                         |    6 +-
+ drivers/hid/wacom_wac.h                         |    2 +-
+ drivers/i2c/busses/Kconfig                      |    9 +
+ drivers/i2c/busses/Makefile                     |    1 +
+ drivers/i2c/busses/i2c-nct6775.c                |  647 ++
+ drivers/i2c/busses/i2c-piix4.c                  |    4 +-
+ drivers/input/evdev.c                           |   19 +-
+ drivers/iommu/amd/iommu_v2.c                    |    4 +-
+ drivers/iommu/iommu-sva.c                       |    2 +-
+ drivers/md/dm-crypt.c                           |    5 +
+ drivers/md/dm-ioctl.c                           |   33 +-
+ drivers/nubus/proc.c                            |   22 +-
+ drivers/pci/controller/Makefile                 |    6 +
+ drivers/pci/controller/intel-nvme-remap.c       |  462 ++
+ drivers/pci/pci-acpi.c                          |   53 +-
+ drivers/pci/quirks.c                            |  101 +
+ drivers/scsi/Kconfig                            |    2 +
+ drivers/scsi/Makefile                           |    1 +
+ drivers/scsi/vhba/Kconfig                       |    9 +
+ drivers/scsi/vhba/Makefile                      |    4 +
+ drivers/scsi/vhba/vhba.c                        | 1124 +++
+ drivers/thermal/mediatek/auxadc_thermal.c       |   14 +-
+ drivers/video/fbdev/core/sysimgblt.c            |    2 +-
+ fs/binfmt_elf.c                                 |    6 +-
+ fs/exec.c                                       |   38 +-
+ fs/hugetlbfs/inode.c                            |    8 +-
+ fs/nfs/inode.c                                  |    2 +-
+ fs/proc/base.c                                  |    2 +-
+ include/asm-generic/resource.h                  |    2 +-
+ include/linux/mm.h                              |   23 +-
+ include/linux/pageblock-flags.h                 |    4 +
+ include/linux/sched.h                           |   33 +-
+ include/linux/sched/deadline.h                  |   20 +
+ include/linux/sched/prio.h                      |   26 +
+ include/linux/sched/rt.h                        |    2 +
+ include/linux/sched/topology.h                  |    3 +-
+ include/linux/syscalls.h                        |    3 +
+ include/linux/tcp.h                             |    3 +-
+ include/linux/user_namespace.h                  |    4 +
+ include/net/inet_connection_sock.h              |    3 +-
+ include/net/tcp.h                               |   41 +-
+ include/uapi/asm-generic/unistd.h               |   11 +-
+ include/uapi/linux/inet_diag.h                  |   33 +
+ init/Kconfig                                    |   98 +
+ init/Makefile                                   |    2 +-
+ init/init_task.c                                |   18 +
+ kernel/Kconfig.preempt                          |    2 +-
+ kernel/cgroup/cpuset.c                          |    4 +-
+ kernel/delayacct.c                              |    2 +-
+ kernel/exit.c                                   |    4 +-
+ kernel/fork.c                                   |   14 +
+ kernel/locking/rtmutex.c                        |   16 +-
+ kernel/sched/Makefile                           |    5 +
+ kernel/sched/alt_core.c                         | 8737 +++++++++++++++++++++++
+ kernel/sched/alt_debug.c                        |   31 +
+ kernel/sched/alt_sched.h                        |  906 +++
+ kernel/sched/bmq.h                              |  110 +
+ kernel/sched/build_policy.c                     |    8 +-
+ kernel/sched/build_utility.c                    |    2 +
+ kernel/sched/cpufreq_schedutil.c                |   10 +
+ kernel/sched/cputime.c                          |   10 +-
+ kernel/sched/debug.c                            |   10 +
+ kernel/sched/fair.c                             |   60 +
+ kernel/sched/features.h                         |    1 +
+ kernel/sched/idle.c                             |    2 +
+ kernel/sched/pds.h                              |  152 +
+ kernel/sched/pelt.c                             |    4 +-
+ kernel/sched/pelt.h                             |    8 +-
+ kernel/sched/sched.h                            |   11 +
+ kernel/sched/stats.c                            |    4 +
+ kernel/sched/stats.h                            |    2 +
+ kernel/sched/topology.c                         |   22 +
+ kernel/sys.c                                    |  147 +
+ kernel/sys_ni.c                                 |    3 +
+ kernel/sysctl.c                                 |   27 +
+ kernel/time/hrtimer.c                           |    4 +-
+ kernel/time/posix-cpu-timers.c                  |   10 +-
+ kernel/trace/trace_selftest.c                   |    5 +
+ kernel/user_namespace.c                         |    7 +
+ lib/maple_tree.c                                |   11 +-
+ mm/Kconfig                                      |    9 +-
+ mm/compaction.c                                 |    4 +
+ mm/gup.c                                        |   14 +-
+ mm/huge_memory.c                                |    4 +
+ mm/hugetlb.c                                    |   12 +-
+ mm/internal.h                                   |    1 +
+ mm/khugepaged.c                                 |    7 +-
+ mm/memory.c                                     |  127 +
+ mm/mmap.c                                       |  121 +-
+ mm/nommu.c                                      |   23 +-
+ mm/page_alloc.c                                 |   21 +-
+ mm/swap.c                                       |    5 +
+ mm/vmscan.c                                     |   24 +-
+ net/can/isotp.c                                 |    5 +-
+ net/ipv4/Kconfig                                |   22 +
+ net/ipv4/Makefile                               |    1 +
+ net/ipv4/tcp.c                                  |    1 +
+ net/ipv4/tcp_bbr.c                              |   38 +-
+ net/ipv4/tcp_bbr2.c                             | 2674 +++++++
+ net/ipv4/tcp_cong.c                             |    1 +
+ net/ipv4/tcp_input.c                            |   27 +-
+ net/ipv4/tcp_output.c                           |   26 +-
+ net/ipv4/tcp_rate.c                             |   30 +-
+ net/ipv4/tcp_timer.c                            |    1 +
+ net/netfilter/nf_tables_api.c                   |    2 +
+ scripts/tags.sh                                 |    9 +-
+ tools/include/nolibc/arch-x86_64.h              |    2 +-
+ tools/testing/cxl/Kbuild                        |    1 -
+ tools/testing/cxl/test/mock.c                   |   15 -
+ 195 files changed, 17361 insertions(+), 755 deletions(-)
+
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index 9e5bab29685ff..f1537cec5f21a 100644
+index 9e5bab29685f..f1537cec5f21 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
 @@ -2117,6 +2117,9 @@
@@ -42,7 +239,7 @@ index 9e5bab29685ff..f1537cec5f21a 100644
  
  	schedstats=	[KNL,X86] Enable or disable scheduled statistics.
 diff --git a/Documentation/admin-guide/sysctl/kernel.rst b/Documentation/admin-guide/sysctl/kernel.rst
-index d85d90f5d000d..f730195a3adb4 100644
+index d85d90f5d000..f730195a3adb 100644
 --- a/Documentation/admin-guide/sysctl/kernel.rst
 +++ b/Documentation/admin-guide/sysctl/kernel.rst
 @@ -1616,3 +1616,13 @@ is 10 seconds.
@@ -60,7 +257,7 @@ index d85d90f5d000d..f730195a3adb4 100644
 +  1 - Deboost and requeue task. (default)
 +  2 - Set run queue skip task.
 diff --git a/Documentation/process/changes.rst b/Documentation/process/changes.rst
-index ef540865ad22e..a9ef00509c9b1 100644
+index ef540865ad22..a9ef00509c9b 100644
 --- a/Documentation/process/changes.rst
 +++ b/Documentation/process/changes.rst
 @@ -60,6 +60,7 @@ openssl & libcrypto    1.0.0            openssl version
@@ -86,7 +283,7 @@ index ef540865ad22e..a9ef00509c9b1 100644
  ****************
 diff --git a/Documentation/scheduler/sched-BMQ.txt b/Documentation/scheduler/sched-BMQ.txt
 new file mode 100644
-index 0000000000000..05c84eec0f31a
+index 000000000000..05c84eec0f31
 --- /dev/null
 +++ b/Documentation/scheduler/sched-BMQ.txt
 @@ -0,0 +1,110 @@
@@ -201,7 +398,7 @@ index 0000000000000..05c84eec0f31a
 +priority boost from unblocking while background threads that do most of the
 +processing receive the priority penalty for using their entire timeslice.
 diff --git a/Makefile b/Makefile
-index e51e4d9174ab3..51502cc5c62fa 100644
+index e51e4d9174ab..4d5eda88683c 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -1,9 +1,9 @@
@@ -212,7 +409,7 @@ index e51e4d9174ab3..51502cc5c62fa 100644
 -EXTRAVERSION =
 -NAME = Hurr durr I'ma ninja sloth
 +SUBLEVEL = 2
-+EXTRAVERSION = -lqx1
++EXTRAVERSION = -zen1
 +NAME = Finding Humor In Nothing
  
  # *DOCUMENTATION*
@@ -240,7 +437,7 @@ index e51e4d9174ab3..51502cc5c62fa 100644
  KBUILD_CFLAGS   += -Werror=date-time
  
 diff --git a/arch/alpha/Kconfig b/arch/alpha/Kconfig
-index a5c2b1aa46b02..d6968d090d49a 100644
+index a5c2b1aa46b0..d6968d090d49 100644
 --- a/arch/alpha/Kconfig
 +++ b/arch/alpha/Kconfig
 @@ -30,6 +30,7 @@ config ALPHA
@@ -252,7 +449,7 @@ index a5c2b1aa46b02..d6968d090d49a 100644
  	select ODD_RT_SIGACTION
  	select OLD_SIGSUSPEND
 diff --git a/arch/alpha/kernel/syscalls/syscall.tbl b/arch/alpha/kernel/syscalls/syscall.tbl
-index 8ebacf37a8cf4..9b8afad2ba086 100644
+index 8ebacf37a8cf..9b8afad2ba08 100644
 --- a/arch/alpha/kernel/syscalls/syscall.tbl
 +++ b/arch/alpha/kernel/syscalls/syscall.tbl
 @@ -490,3 +490,6 @@
@@ -263,7 +460,7 @@ index 8ebacf37a8cf4..9b8afad2ba086 100644
 +562	common	process_ksm_disable		sys_process_ksm_disable
 +563	common	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/alpha/mm/fault.c b/arch/alpha/mm/fault.c
-index 7b01ae4f3bc6c..8c9850437e674 100644
+index 7b01ae4f3bc6..8c9850437e67 100644
 --- a/arch/alpha/mm/fault.c
 +++ b/arch/alpha/mm/fault.c
 @@ -119,20 +119,12 @@ do_page_fault(unsigned long address, unsigned long mmcsr,
@@ -298,7 +495,7 @@ index 7b01ae4f3bc6c..8c9850437e674 100644
  		goto do_sigsegv;
  
 diff --git a/arch/arc/Kconfig b/arch/arc/Kconfig
-index ab6d701365bb0..96cf8720bb939 100644
+index ab6d701365bb..96cf8720bb93 100644
 --- a/arch/arc/Kconfig
 +++ b/arch/arc/Kconfig
 @@ -41,6 +41,7 @@ config ARC
@@ -310,7 +507,7 @@ index ab6d701365bb0..96cf8720bb939 100644
  	select OF
  	select OF_EARLY_FLATTREE
 diff --git a/arch/arc/mm/fault.c b/arch/arc/mm/fault.c
-index 5ca59a482632a..f59e722d147f9 100644
+index 5ca59a482632..f59e722d147f 100644
 --- a/arch/arc/mm/fault.c
 +++ b/arch/arc/mm/fault.c
 @@ -113,15 +113,9 @@ void do_page_fault(unsigned long address, struct pt_regs *regs)
@@ -340,7 +537,7 @@ index 5ca59a482632a..f59e722d147f9 100644
  	 * Major/minor page fault accounting
  	 * (in case of retry we only land here once)
 diff --git a/arch/arm/Kconfig b/arch/arm/Kconfig
-index 0fb4b218f6658..9ed7f03ba15a3 100644
+index 0fb4b218f665..9ed7f03ba15a 100644
 --- a/arch/arm/Kconfig
 +++ b/arch/arm/Kconfig
 @@ -125,6 +125,7 @@ config ARM
@@ -352,7 +549,7 @@ index 0fb4b218f6658..9ed7f03ba15a3 100644
  	select NEED_DMA_MAP_STATE
  	select OF_EARLY_FLATTREE if OF
 diff --git a/arch/arm/mm/fault.c b/arch/arm/mm/fault.c
-index 2418f1efabd87..0860eeba8bd34 100644
+index 2418f1efabd8..0860eeba8bd3 100644
 --- a/arch/arm/mm/fault.c
 +++ b/arch/arm/mm/fault.c
 @@ -232,37 +232,11 @@ static inline bool is_permission_fault(unsigned int fsr)
@@ -447,7 +644,7 @@ index 2418f1efabd87..0860eeba8bd34 100644
  	 * If we are in kernel mode at this point, we
  	 * have no context to handle this fault with.
 diff --git a/arch/arm/tools/syscall.tbl b/arch/arm/tools/syscall.tbl
-index ac964612d8b07..b8a2f2689caa2 100644
+index ac964612d8b0..b8a2f2689caa 100644
 --- a/arch/arm/tools/syscall.tbl
 +++ b/arch/arm/tools/syscall.tbl
 @@ -464,3 +464,6 @@
@@ -458,7 +655,7 @@ index ac964612d8b07..b8a2f2689caa2 100644
 +452	common	process_ksm_disable		sys_process_ksm_disable
 +453	common	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/arm64/Kconfig b/arch/arm64/Kconfig
-index 343e1e1cae10a..92f3fff2522b0 100644
+index 343e1e1cae10..92f3fff2522b 100644
 --- a/arch/arm64/Kconfig
 +++ b/arch/arm64/Kconfig
 @@ -225,6 +225,7 @@ config ARM64
@@ -470,7 +667,7 @@ index 343e1e1cae10a..92f3fff2522b0 100644
  	select NEED_DMA_MAP_STATE
  	select NEED_SG_DMA_LENGTH
 diff --git a/arch/arm64/include/asm/unistd.h b/arch/arm64/include/asm/unistd.h
-index 037feba03a51d..6a28fb91b85de 100644
+index 037feba03a51..6a28fb91b85d 100644
 --- a/arch/arm64/include/asm/unistd.h
 +++ b/arch/arm64/include/asm/unistd.h
 @@ -39,7 +39,7 @@
@@ -483,7 +680,7 @@ index 037feba03a51d..6a28fb91b85de 100644
  
  #define __ARCH_WANT_SYS_CLONE
 diff --git a/arch/arm64/include/asm/unistd32.h b/arch/arm64/include/asm/unistd32.h
-index 604a2053d0067..72e380b954614 100644
+index 604a2053d006..72e380b95461 100644
 --- a/arch/arm64/include/asm/unistd32.h
 +++ b/arch/arm64/include/asm/unistd32.h
 @@ -907,6 +907,12 @@ __SYSCALL(__NR_process_mrelease, sys_process_mrelease)
@@ -500,7 +697,7 @@ index 604a2053d0067..72e380b954614 100644
  /*
   * Please add new compat syscalls above this comment and update
 diff --git a/arch/arm64/mm/fault.c b/arch/arm64/mm/fault.c
-index 6045a5117ac15..df1386a60d521 100644
+index 6045a5117ac1..df1386a60d52 100644
 --- a/arch/arm64/mm/fault.c
 +++ b/arch/arm64/mm/fault.c
 @@ -483,27 +483,14 @@ static void do_bad_area(unsigned long far, unsigned long esr,
@@ -543,7 +740,7 @@ index 6045a5117ac15..df1386a60d521 100644
  
  	if (kprobe_page_fault(regs, esr))
  		return 0;
-@@ -617,31 +602,15 @@ static int __kprobes do_page_fault(unsigned long far, unsigned long esr,
+@@ -617,52 +602,34 @@ static int __kprobes do_page_fault(unsigned long far, unsigned long esr,
  	}
  lock_mmap:
  #endif /* CONFIG_PER_VMA_LOCK */
@@ -581,7 +778,18 @@ index 6045a5117ac15..df1386a60d521 100644
  
  	/* Quick path to respond to signals */
  	if (fault_signal_pending(fault, regs)) {
-@@ -660,9 +629,7 @@ static int __kprobes do_page_fault(unsigned long far, unsigned long esr,
+ 		if (!user_mode(regs))
+ 			goto no_context;
+ 		return 0;
+ 	}
+ 
+ 	/* The fault is fully completed (including releasing mmap lock) */
+ 	if (fault & VM_FAULT_COMPLETED)
+ 		return 0;
+ 
+ 	if (fault & VM_FAULT_RETRY) {
+ 		mm_flags |= FAULT_FLAG_TRIED;
+ 		goto retry;
  	}
  	mmap_read_unlock(mm);
  
@@ -592,7 +800,7 @@ index 6045a5117ac15..df1386a60d521 100644
  	 * Handle the "normal" (no error) case first.
  	 */
 diff --git a/arch/csky/Kconfig b/arch/csky/Kconfig
-index 4df1f8c9d170b..03e9f66661570 100644
+index 4df1f8c9d170..03e9f6666157 100644
 --- a/arch/csky/Kconfig
 +++ b/arch/csky/Kconfig
 @@ -96,6 +96,7 @@ config CSKY
@@ -604,7 +812,7 @@ index 4df1f8c9d170b..03e9f66661570 100644
  	select MODULES_USE_ELF_RELA if MODULES
  	select OF
 diff --git a/arch/csky/mm/fault.c b/arch/csky/mm/fault.c
-index e15f736cca4b4..a885518ce1dd2 100644
+index e15f736cca4b..a885518ce1dd 100644
 --- a/arch/csky/mm/fault.c
 +++ b/arch/csky/mm/fault.c
 @@ -97,13 +97,12 @@ static inline void mm_fault_error(struct pt_regs *regs, unsigned long addr, vm_f
@@ -622,7 +830,7 @@ index e15f736cca4b4..a885518ce1dd2 100644
  	/* User mode accesses just cause a SIGSEGV */
  	if (user_mode(regs)) {
  		do_trap(regs, SIGSEGV, code, addr);
-@@ -238,20 +237,9 @@ asmlinkage void do_page_fault(struct pt_regs *regs)
+@@ -238,32 +237,21 @@ asmlinkage void do_page_fault(struct pt_regs *regs)
  	if (is_write(regs))
  		flags |= FAULT_FLAG_WRITE;
  retry:
@@ -645,7 +853,7 @@ index e15f736cca4b4..a885518ce1dd2 100644
  		return;
  	}
  
-@@ -259,11 +247,11 @@ asmlinkage void do_page_fault(struct pt_regs *regs)
+ 	/*
  	 * Ok, we have a good vm_area for this memory access, so
  	 * we can handle it.
  	 */
@@ -660,7 +868,7 @@ index e15f736cca4b4..a885518ce1dd2 100644
  	}
  
 diff --git a/arch/hexagon/Kconfig b/arch/hexagon/Kconfig
-index 54eadf2651786..6726f4941015f 100644
+index 54eadf265178..6726f4941015 100644
 --- a/arch/hexagon/Kconfig
 +++ b/arch/hexagon/Kconfig
 @@ -28,6 +28,7 @@ config HEXAGON
@@ -672,7 +880,7 @@ index 54eadf2651786..6726f4941015f 100644
  	select GENERIC_CPU_DEVICES
  	select ARCH_WANT_LD_ORPHAN_WARN
 diff --git a/arch/hexagon/mm/vm_fault.c b/arch/hexagon/mm/vm_fault.c
-index 4b578d02fd01a..7295ea3f8cc8d 100644
+index 4b578d02fd01..7295ea3f8cc8 100644
 --- a/arch/hexagon/mm/vm_fault.c
 +++ b/arch/hexagon/mm/vm_fault.c
 @@ -57,21 +57,10 @@ void do_page_fault(unsigned long address, long cause, struct pt_regs *regs)
@@ -709,7 +917,7 @@ index 4b578d02fd01a..7295ea3f8cc8d 100644
  		force_sig_fault(SIGSEGV, si_code, (void __user *)address);
  		return;
 diff --git a/arch/ia64/kernel/syscalls/syscall.tbl b/arch/ia64/kernel/syscalls/syscall.tbl
-index 72c929d9902b9..aa698c590a1ef 100644
+index 72c929d9902b..aa698c590a1e 100644
 --- a/arch/ia64/kernel/syscalls/syscall.tbl
 +++ b/arch/ia64/kernel/syscalls/syscall.tbl
 @@ -371,3 +371,6 @@
@@ -720,7 +928,7 @@ index 72c929d9902b9..aa698c590a1ef 100644
 +452	common	process_ksm_disable		sys_process_ksm_disable
 +453	common	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/ia64/mm/fault.c b/arch/ia64/mm/fault.c
-index 85c4d9ac8686d..5458b52b40099 100644
+index 85c4d9ac8686..5458b52b4009 100644
 --- a/arch/ia64/mm/fault.c
 +++ b/arch/ia64/mm/fault.c
 @@ -110,10 +110,12 @@ ia64_do_page_fault (unsigned long address, unsigned long isr, struct pt_regs *re
@@ -777,7 +985,7 @@ index 85c4d9ac8686d..5458b52b40099 100644
  	    || ((isr & IA64_ISR_NA) && (isr & IA64_ISR_CODE_MASK) == IA64_ISR_CODE_LFETCH))
  	{
 diff --git a/arch/loongarch/Kconfig b/arch/loongarch/Kconfig
-index d38b066fc931b..73519e13bbb39 100644
+index d38b066fc931..73519e13bbb3 100644
 --- a/arch/loongarch/Kconfig
 +++ b/arch/loongarch/Kconfig
 @@ -130,6 +130,7 @@ config LOONGARCH
@@ -789,7 +997,7 @@ index d38b066fc931b..73519e13bbb39 100644
  	select MODULES_USE_ELF_RELA if MODULES
  	select NEED_PER_CPU_EMBED_FIRST_CHUNK
 diff --git a/arch/loongarch/mm/fault.c b/arch/loongarch/mm/fault.c
-index 449087bd589d3..da5b6d518cdb1 100644
+index 449087bd589d..da5b6d518cdb 100644
 --- a/arch/loongarch/mm/fault.c
 +++ b/arch/loongarch/mm/fault.c
 @@ -169,22 +169,18 @@ static void __kprobes __do_page_fault(struct pt_regs *regs,
@@ -822,7 +1030,7 @@ index 449087bd589d3..da5b6d518cdb1 100644
  	return;
  
 diff --git a/arch/m68k/kernel/syscalls/syscall.tbl b/arch/m68k/kernel/syscalls/syscall.tbl
-index b1f3940bc2981..4e9d10dfd0793 100644
+index b1f3940bc298..4e9d10dfd079 100644
 --- a/arch/m68k/kernel/syscalls/syscall.tbl
 +++ b/arch/m68k/kernel/syscalls/syscall.tbl
 @@ -450,3 +450,6 @@
@@ -833,7 +1041,7 @@ index b1f3940bc2981..4e9d10dfd0793 100644
 +452	common	process_ksm_disable		sys_process_ksm_disable
 +453	common	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/m68k/mm/fault.c b/arch/m68k/mm/fault.c
-index 228128e45c673..c290c5c0cfb93 100644
+index 228128e45c67..c290c5c0cfb9 100644
 --- a/arch/m68k/mm/fault.c
 +++ b/arch/m68k/mm/fault.c
 @@ -105,8 +105,9 @@ int do_page_fault(struct pt_regs *regs, unsigned long address,
@@ -863,7 +1071,7 @@ index 228128e45c673..c290c5c0cfb93 100644
  acc_err:
  	current->thread.signo = SIGSEGV;
 diff --git a/arch/microblaze/kernel/syscalls/syscall.tbl b/arch/microblaze/kernel/syscalls/syscall.tbl
-index 820145e473501..f89d989f9058b 100644
+index 820145e47350..f89d989f9058 100644
 --- a/arch/microblaze/kernel/syscalls/syscall.tbl
 +++ b/arch/microblaze/kernel/syscalls/syscall.tbl
 @@ -456,3 +456,6 @@
@@ -874,7 +1082,7 @@ index 820145e473501..f89d989f9058b 100644
 +452	common	process_ksm_disable		sys_process_ksm_disable
 +453	common	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/microblaze/mm/fault.c b/arch/microblaze/mm/fault.c
-index 687714db6f4d0..d3c3c33b73a6e 100644
+index 687714db6f4d..d3c3c33b73a6 100644
 --- a/arch/microblaze/mm/fault.c
 +++ b/arch/microblaze/mm/fault.c
 @@ -192,8 +192,9 @@ void do_page_fault(struct pt_regs *regs, unsigned long address,
@@ -890,7 +1098,7 @@ index 687714db6f4d0..d3c3c33b73a6e 100644
  good_area:
  	code = SEGV_ACCERR;
 diff --git a/arch/mips/Kconfig b/arch/mips/Kconfig
-index 675a8660cb85a..6796d839bcfdf 100644
+index 675a8660cb85..6796d839bcfd 100644
 --- a/arch/mips/Kconfig
 +++ b/arch/mips/Kconfig
 @@ -91,6 +91,7 @@ config MIPS
@@ -902,7 +1110,7 @@ index 675a8660cb85a..6796d839bcfdf 100644
  	select MODULES_USE_ELF_RELA if MODULES && 64BIT
  	select PERF_USE_VMALLOC
 diff --git a/arch/mips/kernel/syscalls/syscall_n32.tbl b/arch/mips/kernel/syscalls/syscall_n32.tbl
-index 253ff994ed2ec..fbd19a4195b92 100644
+index 253ff994ed2e..fbd19a4195b9 100644
 --- a/arch/mips/kernel/syscalls/syscall_n32.tbl
 +++ b/arch/mips/kernel/syscalls/syscall_n32.tbl
 @@ -389,3 +389,6 @@
@@ -913,7 +1121,7 @@ index 253ff994ed2ec..fbd19a4195b92 100644
 +452	n32	process_ksm_disable		sys_process_ksm_disable
 +453	n32	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/mips/kernel/syscalls/syscall_n64.tbl b/arch/mips/kernel/syscalls/syscall_n64.tbl
-index 3f1886ad9d806..32694bd4a2fe2 100644
+index 3f1886ad9d80..32694bd4a2fe 100644
 --- a/arch/mips/kernel/syscalls/syscall_n64.tbl
 +++ b/arch/mips/kernel/syscalls/syscall_n64.tbl
 @@ -365,3 +365,6 @@
@@ -924,7 +1132,7 @@ index 3f1886ad9d806..32694bd4a2fe2 100644
 +452	n64	process_ksm_disable		sys_process_ksm_disable
 +453	n64	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/mips/kernel/syscalls/syscall_o32.tbl b/arch/mips/kernel/syscalls/syscall_o32.tbl
-index 8f243e35a7b20..6463565ed41be 100644
+index 8f243e35a7b2..6463565ed41b 100644
 --- a/arch/mips/kernel/syscalls/syscall_o32.tbl
 +++ b/arch/mips/kernel/syscalls/syscall_o32.tbl
 @@ -438,3 +438,6 @@
@@ -935,7 +1143,7 @@ index 8f243e35a7b20..6463565ed41be 100644
 +452	o32	process_ksm_disable		sys_process_ksm_disable
 +453	o32	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/mips/mm/fault.c b/arch/mips/mm/fault.c
-index a27045f5a556d..d7878208bd3fa 100644
+index a27045f5a556..d7878208bd3f 100644
 --- a/arch/mips/mm/fault.c
 +++ b/arch/mips/mm/fault.c
 @@ -99,21 +99,13 @@ static void __do_page_fault(struct pt_regs *regs, unsigned long write,
@@ -963,7 +1171,7 @@ index a27045f5a556d..d7878208bd3fa 100644
  
  	if (write) {
 diff --git a/arch/nios2/Kconfig b/arch/nios2/Kconfig
-index e5936417d3cd3..d54464021a618 100644
+index e5936417d3cd..d54464021a61 100644
 --- a/arch/nios2/Kconfig
 +++ b/arch/nios2/Kconfig
 @@ -16,6 +16,7 @@ config NIOS2
@@ -975,7 +1183,7 @@ index e5936417d3cd3..d54464021a618 100644
  	select OF
  	select OF_EARLY_FLATTREE
 diff --git a/arch/nios2/mm/fault.c b/arch/nios2/mm/fault.c
-index ca64eccea5511..e3fa9c15181df 100644
+index ca64eccea551..e3fa9c15181d 100644
 --- a/arch/nios2/mm/fault.c
 +++ b/arch/nios2/mm/fault.c
 @@ -86,27 +86,14 @@ asmlinkage void do_page_fault(struct pt_regs *regs, unsigned long cause,
@@ -1009,7 +1217,7 @@ index ca64eccea5511..e3fa9c15181df 100644
  
  	switch (cause) {
 diff --git a/arch/openrisc/mm/fault.c b/arch/openrisc/mm/fault.c
-index 6734fee3134f4..a9dcd4381d1a1 100644
+index 6734fee3134f..a9dcd4381d1a 100644
 --- a/arch/openrisc/mm/fault.c
 +++ b/arch/openrisc/mm/fault.c
 @@ -127,8 +127,9 @@ asmlinkage void do_page_fault(struct pt_regs *regs, unsigned long address,
@@ -1025,7 +1233,7 @@ index 6734fee3134f4..a9dcd4381d1a1 100644
  	/*
  	 * Ok, we have a good vm_area for this memory access, so
 diff --git a/arch/parisc/kernel/syscalls/syscall.tbl b/arch/parisc/kernel/syscalls/syscall.tbl
-index 0e42fceb2d5e2..7862be4cea702 100644
+index 0e42fceb2d5e..7862be4cea70 100644
 --- a/arch/parisc/kernel/syscalls/syscall.tbl
 +++ b/arch/parisc/kernel/syscalls/syscall.tbl
 @@ -448,3 +448,6 @@
@@ -1036,7 +1244,7 @@ index 0e42fceb2d5e2..7862be4cea702 100644
 +452	common	process_ksm_disable		sys_process_ksm_disable
 +453	common	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/parisc/mm/fault.c b/arch/parisc/mm/fault.c
-index 6941fdbf25173..a4c7c7630f48b 100644
+index 6941fdbf2517..a4c7c7630f48 100644
 --- a/arch/parisc/mm/fault.c
 +++ b/arch/parisc/mm/fault.c
 @@ -288,15 +288,19 @@ void do_page_fault(struct pt_regs *regs, unsigned long code,
@@ -1091,7 +1299,7 @@ index 6941fdbf25173..a4c7c7630f48b 100644
  	struct task_struct *tsk;
  	struct mm_struct *mm;
  	unsigned long address;
-@@ -485,7 +485,7 @@ handle_nadtlb_fault(struct pt_regs *regs)
+@@ -485,16 +485,15 @@ handle_nadtlb_fault(struct pt_regs *regs)
  				/* Search for VMA */
  				address = regs->ior;
  				mmap_read_lock(mm);
@@ -1100,7 +1308,8 @@ index 6941fdbf25173..a4c7c7630f48b 100644
  				mmap_read_unlock(mm);
  
  				/*
-@@ -494,7 +494,6 @@ handle_nadtlb_fault(struct pt_regs *regs)
+ 				 * Check if access to the VMA is okay.
+ 				 * We don't allow for stack expansion.
  				 */
  				acc_type = (insn & 0x40) ? VM_WRITE : VM_READ;
  				if (vma
@@ -1109,7 +1318,7 @@ index 6941fdbf25173..a4c7c7630f48b 100644
  					val = 1;
  			}
 diff --git a/arch/powerpc/Kconfig b/arch/powerpc/Kconfig
-index bff5820b7cda1..a243fcdf346de 100644
+index bff5820b7cda..a243fcdf346d 100644
 --- a/arch/powerpc/Kconfig
 +++ b/arch/powerpc/Kconfig
 @@ -278,6 +278,7 @@ config PPC
@@ -1121,7 +1330,7 @@ index bff5820b7cda1..a243fcdf346de 100644
  	select MMU_GATHER_RCU_TABLE_FREE
  	select MMU_GATHER_MERGE_VMAS
 diff --git a/arch/powerpc/kernel/syscalls/syscall.tbl b/arch/powerpc/kernel/syscalls/syscall.tbl
-index a0be127475b1f..8d986c713b517 100644
+index a0be127475b1..8d986c713b51 100644
 --- a/arch/powerpc/kernel/syscalls/syscall.tbl
 +++ b/arch/powerpc/kernel/syscalls/syscall.tbl
 @@ -537,3 +537,6 @@
@@ -1132,7 +1341,7 @@ index a0be127475b1f..8d986c713b517 100644
 +452	common	process_ksm_disable		sys_process_ksm_disable
 +453	common	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/powerpc/mm/copro_fault.c b/arch/powerpc/mm/copro_fault.c
-index 7c507fb48182b..f49fd873df8da 100644
+index 7c507fb48182..f49fd873df8d 100644
 --- a/arch/powerpc/mm/copro_fault.c
 +++ b/arch/powerpc/mm/copro_fault.c
 @@ -33,19 +33,11 @@ int copro_handle_mm_fault(struct mm_struct *mm, unsigned long ea,
@@ -1159,7 +1368,7 @@ index 7c507fb48182b..f49fd873df8da 100644
  	if (is_write) {
  		if (!(vma->vm_flags & VM_WRITE))
 diff --git a/arch/powerpc/mm/fault.c b/arch/powerpc/mm/fault.c
-index 531177a4ee088..5bfdf6ecfa965 100644
+index 531177a4ee08..5bfdf6ecfa96 100644
 --- a/arch/powerpc/mm/fault.c
 +++ b/arch/powerpc/mm/fault.c
 @@ -84,11 +84,6 @@ static int __bad_area(struct pt_regs *regs, unsigned long address, int si_code)
@@ -1219,7 +1428,7 @@ index 531177a4ee088..5bfdf6ecfa965 100644
  	if (unlikely(access_pkey_error(is_write, is_exec,
  				       (error_code & DSISR_KEYFAULT), vma)))
 diff --git a/arch/riscv/Kconfig b/arch/riscv/Kconfig
-index 5966ad97c30c3..a11b1c038c6d1 100644
+index 5966ad97c30c..a11b1c038c6d 100644
 --- a/arch/riscv/Kconfig
 +++ b/arch/riscv/Kconfig
 @@ -126,6 +126,7 @@ config RISCV
@@ -1231,10 +1440,10 @@ index 5966ad97c30c3..a11b1c038c6d1 100644
  	select MODULE_SECTIONS if MODULES
  	select OF
 diff --git a/arch/riscv/mm/fault.c b/arch/riscv/mm/fault.c
-index 8685f85a7474e..35a84ec69a9fd 100644
+index 8685f85a7474..35a84ec69a9f 100644
 --- a/arch/riscv/mm/fault.c
 +++ b/arch/riscv/mm/fault.c
-@@ -84,13 +84,13 @@ static inline void mm_fault_error(struct pt_regs *regs, unsigned long addr, vm_f
+@@ -84,22 +84,31 @@ static inline void mm_fault_error(struct pt_regs *regs, unsigned long addr, vm_f
  	BUG();
  }
  
@@ -1250,7 +1459,9 @@ index 8685f85a7474e..35a84ec69a9fd 100644
  	/* User mode accesses just cause a SIGSEGV */
  	if (user_mode(regs)) {
  		do_trap(regs, SIGSEGV, code, addr);
-@@ -100,6 +100,15 @@ static inline void bad_area(struct pt_regs *regs, struct mm_struct *mm, int code
+ 		return;
+ 	}
+ 
  	no_context(regs, addr);
  }
  
@@ -1266,7 +1477,7 @@ index 8685f85a7474e..35a84ec69a9fd 100644
  static inline void vmalloc_fault(struct pt_regs *regs, int code, unsigned long addr)
  {
  	pgd_t *pgd, *pgd_k;
-@@ -287,23 +296,10 @@ void handle_page_fault(struct pt_regs *regs)
+@@ -287,31 +296,17 @@ void handle_page_fault(struct pt_regs *regs)
  	else if (cause == EXC_INST_PAGE_FAULT)
  		flags |= FAULT_FLAG_INSTRUCTION;
  retry:
@@ -1292,7 +1503,7 @@ index 8685f85a7474e..35a84ec69a9fd 100644
  		return;
  	}
  
-@@ -311,7 +307,6 @@ void handle_page_fault(struct pt_regs *regs)
+ 	/*
  	 * Ok, we have a good vm_area for this memory access, so
  	 * we can handle it.
  	 */
@@ -1301,7 +1512,7 @@ index 8685f85a7474e..35a84ec69a9fd 100644
  
  	if (unlikely(access_error(cause, vma))) {
 diff --git a/arch/s390/kernel/syscalls/syscall.tbl b/arch/s390/kernel/syscalls/syscall.tbl
-index b68f47541169f..388f208236d9f 100644
+index b68f47541169..388f208236d9 100644
 --- a/arch/s390/kernel/syscalls/syscall.tbl
 +++ b/arch/s390/kernel/syscalls/syscall.tbl
 @@ -453,3 +453,6 @@
@@ -1312,7 +1523,7 @@ index b68f47541169f..388f208236d9f 100644
 +452  common	process_ksm_disable	sys_process_ksm_disable		sys_process_ksm_disable
 +453  common	process_ksm_status	sys_process_ksm_status		sys_process_ksm_status
 diff --git a/arch/s390/mm/fault.c b/arch/s390/mm/fault.c
-index b65144c392b01..dbe8394234e2b 100644
+index b65144c392b0..dbe8394234e2 100644
 --- a/arch/s390/mm/fault.c
 +++ b/arch/s390/mm/fault.c
 @@ -457,8 +457,9 @@ static inline vm_fault_t do_exception(struct pt_regs *regs, int access)
@@ -1328,7 +1539,7 @@ index b65144c392b01..dbe8394234e2b 100644
  
  	/*
 diff --git a/arch/sh/Kconfig b/arch/sh/Kconfig
-index 9652d367fc377..393023d092450 100644
+index 9652d367fc37..393023d09245 100644
 --- a/arch/sh/Kconfig
 +++ b/arch/sh/Kconfig
 @@ -59,6 +59,7 @@ config SUPERH
@@ -1340,7 +1551,7 @@ index 9652d367fc377..393023d092450 100644
  	select NEED_SG_DMA_LENGTH
  	select NO_DMA if !MMU && !DMA_COHERENT
 diff --git a/arch/sh/kernel/syscalls/syscall.tbl b/arch/sh/kernel/syscalls/syscall.tbl
-index 2de85c977f54f..df431a526a786 100644
+index 2de85c977f54..df431a526a78 100644
 --- a/arch/sh/kernel/syscalls/syscall.tbl
 +++ b/arch/sh/kernel/syscalls/syscall.tbl
 @@ -453,3 +453,6 @@
@@ -1351,10 +1562,10 @@ index 2de85c977f54f..df431a526a786 100644
 +452	common	process_ksm_disable		sys_process_ksm_disable
 +453	common	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/sh/mm/fault.c b/arch/sh/mm/fault.c
-index acd2f5e50bfcd..06e6b49529245 100644
+index acd2f5e50bfc..06e6b4952924 100644
 --- a/arch/sh/mm/fault.c
 +++ b/arch/sh/mm/fault.c
-@@ -439,21 +439,9 @@ asmlinkage void __kprobes do_page_fault(struct pt_regs *regs,
+@@ -439,29 +439,16 @@ asmlinkage void __kprobes do_page_fault(struct pt_regs *regs,
  	}
  
  retry:
@@ -1378,7 +1589,7 @@ index acd2f5e50bfcd..06e6b49529245 100644
  		return;
  	}
  
-@@ -461,7 +449,6 @@ asmlinkage void __kprobes do_page_fault(struct pt_regs *regs,
+ 	/*
  	 * Ok, we have a good vm_area for this memory access, so
  	 * we can handle it..
  	 */
@@ -1387,7 +1598,7 @@ index acd2f5e50bfcd..06e6b49529245 100644
  		bad_area_access_error(regs, error_code, address);
  		return;
 diff --git a/arch/sparc/Kconfig b/arch/sparc/Kconfig
-index 8535e19062f65..8c196990558b2 100644
+index 8535e19062f6..8c196990558b 100644
 --- a/arch/sparc/Kconfig
 +++ b/arch/sparc/Kconfig
 @@ -57,6 +57,7 @@ config SPARC32
@@ -1399,7 +1610,7 @@ index 8535e19062f65..8c196990558b2 100644
  	select ZONE_DMA
  
 diff --git a/arch/sparc/kernel/syscalls/syscall.tbl b/arch/sparc/kernel/syscalls/syscall.tbl
-index 4398cc6fb68dd..f757d9623ff3d 100644
+index 4398cc6fb68d..f757d9623ff3 100644
 --- a/arch/sparc/kernel/syscalls/syscall.tbl
 +++ b/arch/sparc/kernel/syscalls/syscall.tbl
 @@ -496,3 +496,6 @@
@@ -1410,7 +1621,7 @@ index 4398cc6fb68dd..f757d9623ff3d 100644
 +452	common	process_ksm_disable		sys_process_ksm_disable
 +453	common	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/sparc/mm/fault_32.c b/arch/sparc/mm/fault_32.c
-index 179295b14664a..86a831ebd8c8e 100644
+index 179295b14664..86a831ebd8c8 100644
 --- a/arch/sparc/mm/fault_32.c
 +++ b/arch/sparc/mm/fault_32.c
 @@ -143,28 +143,19 @@ asmlinkage void do_sparc_fault(struct pt_regs *regs, int text_fault, int write,
@@ -1447,7 +1658,7 @@ index 179295b14664a..86a831ebd8c8e 100644
  	code = SEGV_ACCERR;
  	if (write) {
  		if (!(vma->vm_flags & VM_WRITE))
-@@ -321,17 +312,9 @@ static void force_user_fault(unsigned long address, int write)
+@@ -321,35 +312,28 @@ static void force_user_fault(unsigned long address, int write)
  
  	code = SEGV_MAPERR;
  
@@ -1467,7 +1678,18 @@ index 179295b14664a..86a831ebd8c8e 100644
  	code = SEGV_ACCERR;
  	if (write) {
  		if (!(vma->vm_flags & VM_WRITE))
-@@ -350,6 +333,7 @@ static void force_user_fault(unsigned long address, int write)
+ 			goto bad_area;
+ 		flags |= FAULT_FLAG_WRITE;
+ 	} else {
+ 		if (!(vma->vm_flags & (VM_READ | VM_EXEC)))
+ 			goto bad_area;
+ 	}
+ 	switch (handle_mm_fault(vma, address, flags, NULL)) {
+ 	case VM_FAULT_SIGBUS:
+ 	case VM_FAULT_OOM:
+ 		goto do_sigbus;
+ 	}
+ 	mmap_read_unlock(mm);
  	return;
  bad_area:
  	mmap_read_unlock(mm);
@@ -1476,7 +1698,7 @@ index 179295b14664a..86a831ebd8c8e 100644
  	return;
  
 diff --git a/arch/sparc/mm/fault_64.c b/arch/sparc/mm/fault_64.c
-index d91305de694c5..69ff07bc6c07d 100644
+index d91305de694c..69ff07bc6c07 100644
 --- a/arch/sparc/mm/fault_64.c
 +++ b/arch/sparc/mm/fault_64.c
 @@ -383,8 +383,9 @@ asmlinkage void __kprobes do_sparc64_fault(struct pt_regs *regs)
@@ -1503,7 +1725,7 @@ index d91305de694c5..69ff07bc6c07d 100644
  handle_kernel_fault:
  	do_kernel_fault(regs, si_code, fault_code, insn, address);
 diff --git a/arch/um/kernel/trap.c b/arch/um/kernel/trap.c
-index d3ce21c4ca32a..6d8ae86ae978f 100644
+index d3ce21c4ca32..6d8ae86ae978 100644
 --- a/arch/um/kernel/trap.c
 +++ b/arch/um/kernel/trap.c
 @@ -47,14 +47,15 @@ int handle_page_fault(unsigned long address, unsigned long ip,
@@ -1528,7 +1750,7 @@ index d3ce21c4ca32a..6d8ae86ae978f 100644
  good_area:
  	*code_out = SEGV_ACCERR;
 diff --git a/arch/x86/Kconfig b/arch/x86/Kconfig
-index 53bab123a8ee4..cb1031018afa5 100644
+index 53bab123a8ee..cb1031018afa 100644
 --- a/arch/x86/Kconfig
 +++ b/arch/x86/Kconfig
 @@ -276,6 +276,7 @@ config X86
@@ -1540,10 +1762,10 @@ index 53bab123a8ee4..cb1031018afa5 100644
  	select NEED_PER_CPU_PAGE_FIRST_CHUNK
  	select NEED_SG_DMA_LENGTH
 diff --git a/arch/x86/Kconfig.cpu b/arch/x86/Kconfig.cpu
-index 542377cd419d7..c54f7f0622886 100644
+index 542377cd419d..c54f7f062288 100644
 --- a/arch/x86/Kconfig.cpu
 +++ b/arch/x86/Kconfig.cpu
-@@ -157,7 +157,7 @@ config MPENTIUM4
+@@ -157,28 +157,122 @@ config MPENTIUM4
  
  
  config MK6
@@ -1552,7 +1774,7 @@ index 542377cd419d7..c54f7f0622886 100644
  	depends on X86_32
  	help
  	  Select this for an AMD K6-family processor.  Enables use of
-@@ -165,7 +165,7 @@ config MK6
+ 	  some extended instructions, and passes appropriate optimization
  	  flags to GCC.
  
  config MK7
@@ -1561,7 +1783,7 @@ index 542377cd419d7..c54f7f0622886 100644
  	depends on X86_32
  	help
  	  Select this for an AMD Athlon K7-family processor.  Enables use of
-@@ -173,12 +173,106 @@ config MK7
+ 	  some extended instructions, and passes appropriate optimization
  	  flags to GCC.
  
  config MK8
@@ -1669,7 +1891,7 @@ index 542377cd419d7..c54f7f0622886 100644
  config MCRUSOE
  	bool "Crusoe"
  	depends on X86_32
-@@ -270,7 +364,7 @@ config MPSC
+@@ -270,118 +364,421 @@ config MPSC
  	  in /proc/cpuinfo. Family 15 is an older Xeon, Family 6 a newer one.
  
  config MCORE2
@@ -1678,7 +1900,7 @@ index 542377cd419d7..c54f7f0622886 100644
  	help
  
  	  Select this for Intel Core 2 and newer Core 2 Xeons (Xeon 51xx and
-@@ -278,6 +372,8 @@ config MCORE2
+ 	  53xx) CPUs. You can distinguish newer from older Xeons by the CPU
  	  family in /proc/cpuinfo. Newer ones have 6 and older ones 15
  	  (not a typo)
  
@@ -1687,7 +1909,9 @@ index 542377cd419d7..c54f7f0622886 100644
  config MATOM
  	bool "Intel Atom"
  	help
-@@ -287,6 +383,212 @@ config MATOM
+ 
+ 	  Select this for the Intel Atom platform. Intel Atom CPUs have an
+ 	  in-order pipelining architecture and thus can benefit from
  	  accordingly optimized code. Use a recent GCC with specific Atom
  	  support in order to fully benefit from selecting this option.
  
@@ -1900,7 +2124,7 @@ index 542377cd419d7..c54f7f0622886 100644
  config GENERIC_CPU
  	bool "Generic-x86-64"
  	depends on X86_64
-@@ -294,6 +596,50 @@ config GENERIC_CPU
+ 	help
  	  Generic x86-64 CPU.
  	  Run equally well on all x86-64 CPUs.
  
@@ -1951,7 +2175,24 @@ index 542377cd419d7..c54f7f0622886 100644
  endchoice
  
  config X86_GENERIC
-@@ -318,9 +664,17 @@ config X86_INTERNODE_CACHE_SHIFT
+ 	bool "Generic x86 support"
+ 	depends on X86_32
+ 	help
+ 	  Instead of just including optimizations for the selected
+ 	  x86 variant (e.g. PII, Crusoe or Athlon), include some more
+ 	  generic optimizations as well. This will make the kernel
+ 	  perform better on x86 CPUs other than that selected.
+ 
+ 	  This is really intended for distributors who need more
+ 	  generic optimizations.
+ 
+ #
+ # Define implied options from the CPU selection here
+ config X86_INTERNODE_CACHE_SHIFT
+ 	int
+ 	default "12" if X86_VSMP
+ 	default X86_L1_CACHE_SHIFT
+ 
  config X86_L1_CACHE_SHIFT
  	int
  	default "7" if MPENTIUM4 || MPSC
@@ -1971,7 +2212,11 @@ index 542377cd419d7..c54f7f0622886 100644
  
  config X86_F00F_BUG
  	def_bool y
-@@ -332,15 +686,27 @@ config X86_INVD_BUG
+ 	depends on M586MMX || M586TSC || M586 || M486SX || M486
+ 
+ config X86_INVD_BUG
+ 	def_bool y
+ 	depends on M486SX || M486
  
  config X86_ALIGNMENT_16
  	def_bool y
@@ -2002,7 +2247,15 @@ index 542377cd419d7..c54f7f0622886 100644
  
  #
  # P6_NOPs are a relatively minor optimization that require a family >=
-@@ -356,32 +722,63 @@ config X86_USE_PPRO_CHECKSUM
+ # 6 processor, except that it is broken on certain VIA chips.
+ # Furthermore, AMD chips prefer a totally different sequence of NOPs
+ # (which work on all CPUs).  In addition, it looks like Virtual PC
+ # does not understand them.
+ #
+ # As a result, disallow these if we're not compiling for X86_64 (these
+ # NOPs do work on all x86-64 capable chips); the list of processors in
+ # the right-hand clause are the cores that benefit from this optimization.
+ #
  config X86_P6_NOP
  	def_bool y
  	depends on X86_64
@@ -2073,7 +2326,7 @@ index 542377cd419d7..c54f7f0622886 100644
  config IA32_FEAT_CTL
  	def_bool y
 diff --git a/arch/x86/Makefile b/arch/x86/Makefile
-index fdc2e3abd6152..4d160617dc388 100644
+index fdc2e3abd615..4d160617dc38 100644
 --- a/arch/x86/Makefile
 +++ b/arch/x86/Makefile
 @@ -67,7 +67,7 @@ export BITS
@@ -2137,7 +2390,7 @@ index fdc2e3abd6152..4d160617dc388 100644
          KBUILD_CFLAGS += $(cflags-y)
  
 diff --git a/arch/x86/entry/syscalls/syscall_32.tbl b/arch/x86/entry/syscalls/syscall_32.tbl
-index 320480a8db4f8..f18baa583fb49 100644
+index 320480a8db4f..f18baa583fb4 100644
 --- a/arch/x86/entry/syscalls/syscall_32.tbl
 +++ b/arch/x86/entry/syscalls/syscall_32.tbl
 @@ -455,3 +455,6 @@
@@ -2148,7 +2401,7 @@ index 320480a8db4f8..f18baa583fb49 100644
 +452	i386	process_ksm_disable		sys_process_ksm_disable
 +453	i386	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/x86/entry/syscalls/syscall_64.tbl b/arch/x86/entry/syscalls/syscall_64.tbl
-index c84d12608cd2d..03187452c6ee8 100644
+index c84d12608cd2..03187452c6ee 100644
 --- a/arch/x86/entry/syscalls/syscall_64.tbl
 +++ b/arch/x86/entry/syscalls/syscall_64.tbl
 @@ -372,6 +372,9 @@
@@ -2162,7 +2415,7 @@ index c84d12608cd2d..03187452c6ee8 100644
  #
  # Due to a historical design error, certain syscalls are numbered differently
 diff --git a/arch/x86/include/asm/cpu.h b/arch/x86/include/asm/cpu.h
-index 78796b98a5449..9ba3c3dec6f30 100644
+index 78796b98a544..9ba3c3dec6f3 100644
 --- a/arch/x86/include/asm/cpu.h
 +++ b/arch/x86/include/asm/cpu.h
 @@ -98,4 +98,6 @@ extern u64 x86_read_arch_cap_msr(void);
@@ -2173,7 +2426,7 @@ index 78796b98a5449..9ba3c3dec6f30 100644
 +
  #endif /* _ASM_X86_CPU_H */
 diff --git a/arch/x86/include/asm/pci.h b/arch/x86/include/asm/pci.h
-index b40c462b4af36..c4e66e60d559d 100644
+index b40c462b4af3..c4e66e60d559 100644
 --- a/arch/x86/include/asm/pci.h
 +++ b/arch/x86/include/asm/pci.h
 @@ -27,6 +27,7 @@ struct pci_sysdata {
@@ -2197,7 +2450,7 @@ index b40c462b4af36..c4e66e60d559d 100644
     already-configured bus numbers - to be used for buggy BIOSes
     or architectures with incomplete PCI setup by the loader */
 diff --git a/arch/x86/include/asm/smp.h b/arch/x86/include/asm/smp.h
-index 4e91054c84be9..d4ce5cb5c9534 100644
+index 4e91054c84be..d4ce5cb5c953 100644
 --- a/arch/x86/include/asm/smp.h
 +++ b/arch/x86/include/asm/smp.h
 @@ -132,6 +132,8 @@ void wbinvd_on_cpu(int cpu);
@@ -2210,10 +2463,10 @@ index 4e91054c84be9..d4ce5cb5c9534 100644
  void native_send_call_func_ipi(const struct cpumask *mask);
  void native_send_call_func_single_ipi(int cpu);
 diff --git a/arch/x86/include/asm/vermagic.h b/arch/x86/include/asm/vermagic.h
-index 75884d2cdec37..02c1386eb653e 100644
+index 75884d2cdec3..02c1386eb653 100644
 --- a/arch/x86/include/asm/vermagic.h
 +++ b/arch/x86/include/asm/vermagic.h
-@@ -17,6 +17,54 @@
+@@ -17,24 +17,98 @@
  #define MODULE_PROC_FAMILY "586MMX "
  #elif defined CONFIG_MCORE2
  #define MODULE_PROC_FAMILY "CORE2 "
@@ -2268,7 +2521,18 @@ index 75884d2cdec37..02c1386eb653e 100644
  #elif defined CONFIG_MATOM
  #define MODULE_PROC_FAMILY "ATOM "
  #elif defined CONFIG_M686
-@@ -35,6 +83,32 @@
+ #define MODULE_PROC_FAMILY "686 "
+ #elif defined CONFIG_MPENTIUMII
+ #define MODULE_PROC_FAMILY "PENTIUMII "
+ #elif defined CONFIG_MPENTIUMIII
+ #define MODULE_PROC_FAMILY "PENTIUMIII "
+ #elif defined CONFIG_MPENTIUMM
+ #define MODULE_PROC_FAMILY "PENTIUMM "
+ #elif defined CONFIG_MPENTIUM4
+ #define MODULE_PROC_FAMILY "PENTIUM4 "
+ #elif defined CONFIG_MK6
+ #define MODULE_PROC_FAMILY "K6 "
+ #elif defined CONFIG_MK7
  #define MODULE_PROC_FAMILY "K7 "
  #elif defined CONFIG_MK8
  #define MODULE_PROC_FAMILY "K8 "
@@ -2302,7 +2566,7 @@ index 75884d2cdec37..02c1386eb653e 100644
  #define MODULE_PROC_FAMILY "ELAN "
  #elif defined CONFIG_MCRUSOE
 diff --git a/arch/x86/kernel/cpu/microcode/amd.c b/arch/x86/kernel/cpu/microcode/amd.c
-index f5fdeb1e3606e..46a679388d19b 100644
+index f5fdeb1e3606..46a679388d19 100644
 --- a/arch/x86/kernel/cpu/microcode/amd.c
 +++ b/arch/x86/kernel/cpu/microcode/amd.c
 @@ -705,7 +705,7 @@ static enum ucode_state apply_microcode_amd(int cpu)
@@ -2315,10 +2579,10 @@ index f5fdeb1e3606e..46a679388d19b 100644
  		goto out;
  	}
 diff --git a/arch/x86/kernel/process.c b/arch/x86/kernel/process.c
-index dac41a0072ea1..ff9b80a0e3e3b 100644
+index dac41a0072ea..ff9b80a0e3e3 100644
 --- a/arch/x86/kernel/process.c
 +++ b/arch/x86/kernel/process.c
-@@ -759,15 +759,26 @@ bool xen_set_default_idle(void)
+@@ -759,30 +759,50 @@ bool xen_set_default_idle(void)
  }
  #endif
  
@@ -2348,7 +2612,13 @@ index dac41a0072ea1..ff9b80a0e3e3b 100644
  
  	/*
  	 * Use wbinvd on processors that support SME. This provides support
-@@ -781,8 +792,17 @@ void __noreturn stop_this_cpu(void *dummy)
+ 	 * for performing a successful kexec when going from SME inactive
+ 	 * to SME active (or vice-versa). The cache must be cleared so that
+ 	 * if there are entries with the same physical address, both with and
+ 	 * without the encryption bit, they don't race each other when flushed
+ 	 * and potentially end up with the wrong entry being committed to
+ 	 * memory.
+ 	 *
  	 * Test the CPUID bit directly because the machine might've cleared
  	 * X86_FEATURE_SME due to cmdline options.
  	 */
@@ -2368,7 +2638,7 @@ index dac41a0072ea1..ff9b80a0e3e3b 100644
  		/*
  		 * Use native_halt() so that memory contents don't change
 diff --git a/arch/x86/kernel/smp.c b/arch/x86/kernel/smp.c
-index 375b33ecafa27..174d6232b87fd 100644
+index 375b33ecafa2..174d6232b87f 100644
 --- a/arch/x86/kernel/smp.c
 +++ b/arch/x86/kernel/smp.c
 @@ -21,12 +21,14 @@
@@ -2386,7 +2656,7 @@ index 375b33ecafa27..174d6232b87fd 100644
  #include <asm/idtentry.h>
  #include <asm/nmi.h>
  #include <asm/mce.h>
-@@ -146,34 +148,47 @@ static int register_stop_handler(void)
+@@ -146,76 +148,93 @@ static int register_stop_handler(void)
  
  static void native_stop_other_cpus(int wait)
  {
@@ -2454,7 +2724,9 @@ index 375b33ecafa27..174d6232b87fd 100644
  		apic_send_IPI_allbutself(REBOOT_VECTOR);
  
  		/*
-@@ -183,24 +198,22 @@ static void native_stop_other_cpus(int wait)
+ 		 * Don't wait longer than a second for IPI completion. The
+ 		 * wait request is not checked here because that would
+ 		 * prevent an NMI shutdown attempt in case that not all
  		 * CPUs reach shutdown state.
  		 */
  		timeout = USEC_PER_SEC;
@@ -2483,7 +2755,7 @@ index 375b33ecafa27..174d6232b87fd 100644
  		}
  		/*
  		 * Don't wait longer than 10 ms if the caller didn't
-@@ -208,7 +221,7 @@ static void native_stop_other_cpus(int wait)
+ 		 * request it. If wait is true, the machine hangs here if
  		 * one or more CPUs do not reach shutdown state.
  		 */
  		timeout = USEC_PER_MSEC * 10;
@@ -2492,7 +2764,7 @@ index 375b33ecafa27..174d6232b87fd 100644
  			udelay(1);
  	}
  
-@@ -216,6 +229,12 @@ static void native_stop_other_cpus(int wait)
+ 	local_irq_save(flags);
  	disable_local_APIC();
  	mcheck_cpu_clear(this_cpu_ptr(&cpu_info));
  	local_irq_restore(flags);
@@ -2506,7 +2778,7 @@ index 375b33ecafa27..174d6232b87fd 100644
  
  /*
 diff --git a/arch/x86/kernel/smpboot.c b/arch/x86/kernel/smpboot.c
-index 352f0ce1ece42..483df04276784 100644
+index 352f0ce1ece4..483df0427678 100644
 --- a/arch/x86/kernel/smpboot.c
 +++ b/arch/x86/kernel/smpboot.c
 @@ -53,6 +53,7 @@
@@ -2561,7 +2833,7 @@ index 352f0ce1ece42..483df04276784 100644
  	int i;
  
  	if (boot_cpu_data.x86_vendor == X86_VENDOR_AMD ||
-@@ -1796,12 +1815,9 @@ static inline void mwait_play_dead(void)
+@@ -1796,34 +1815,78 @@ static inline void mwait_play_dead(void)
  			(highest_subcstate - 1);
  	}
  
@@ -2577,7 +2849,12 @@ index 352f0ce1ece42..483df04276784 100644
  
  	wbinvd();
  
-@@ -1814,16 +1830,63 @@ static inline void mwait_play_dead(void)
+ 	while (1) {
+ 		/*
+ 		 * The CLFLUSH is a workaround for erratum AAI65 for
+ 		 * the Xeon 7400 series.  It's not clear it is actually
+ 		 * needed, but it should be harmless in either case.
+ 		 * The WBINVD is insufficient due to the spurious-wakeup
  		 * case where we return around the loop.
  		 */
  		mb();
@@ -2644,7 +2921,7 @@ index 352f0ce1ece42..483df04276784 100644
  {
  	if (__this_cpu_read(cpu_info.x86) >= 4)
 diff --git a/arch/x86/mm/fault.c b/arch/x86/mm/fault.c
-index e4399983c50c0..e8711b2cafaf7 100644
+index e4399983c50c..e8711b2cafaf 100644
 --- a/arch/x86/mm/fault.c
 +++ b/arch/x86/mm/fault.c
 @@ -880,12 +880,6 @@ __bad_area(struct pt_regs *regs, unsigned long error_code,
@@ -2660,7 +2937,7 @@ index e4399983c50c0..e8711b2cafaf7 100644
  static inline bool bad_area_access_from_pkeys(unsigned long error_code,
  		struct vm_area_struct *vma)
  {
-@@ -1366,51 +1360,10 @@ void do_user_addr_fault(struct pt_regs *regs,
+@@ -1366,59 +1360,17 @@ void do_user_addr_fault(struct pt_regs *regs,
  lock_mmap:
  #endif /* CONFIG_PER_VMA_LOCK */
  
@@ -2714,7 +2991,7 @@ index e4399983c50c0..e8711b2cafaf7 100644
  		return;
  	}
  
-@@ -1418,7 +1371,6 @@ void do_user_addr_fault(struct pt_regs *regs,
+ 	/*
  	 * Ok, we have a good vm_area for this memory access, so
  	 * we can handle it..
  	 */
@@ -2723,7 +3000,7 @@ index e4399983c50c0..e8711b2cafaf7 100644
  		bad_area_access_error(regs, error_code, address, vma);
  		return;
 diff --git a/arch/x86/pci/common.c b/arch/x86/pci/common.c
-index ddb798603201e..7c20387d82029 100644
+index ddb798603201..7c20387d8202 100644
 --- a/arch/x86/pci/common.c
 +++ b/arch/x86/pci/common.c
 @@ -723,12 +723,15 @@ int pci_ext_cfg_avail(void)
@@ -2745,7 +3022,7 @@ index ddb798603201e..7c20387d82029 100644
  }
 -#endif
 diff --git a/arch/xtensa/Kconfig b/arch/xtensa/Kconfig
-index 3c6e5471f025b..2d0d6440b9796 100644
+index 3c6e5471f025..2d0d6440b979 100644
 --- a/arch/xtensa/Kconfig
 +++ b/arch/xtensa/Kconfig
 @@ -49,6 +49,7 @@ config XTENSA
@@ -2757,7 +3034,7 @@ index 3c6e5471f025b..2d0d6440b9796 100644
  	select PERF_USE_VMALLOC
  	select TRACE_IRQFLAGS_SUPPORT
 diff --git a/arch/xtensa/kernel/syscalls/syscall.tbl b/arch/xtensa/kernel/syscalls/syscall.tbl
-index 52c94ab5c2058..4002ab7833378 100644
+index 52c94ab5c205..4002ab783337 100644
 --- a/arch/xtensa/kernel/syscalls/syscall.tbl
 +++ b/arch/xtensa/kernel/syscalls/syscall.tbl
 @@ -421,3 +421,6 @@
@@ -2768,7 +3045,7 @@ index 52c94ab5c2058..4002ab7833378 100644
 +452	common	process_ksm_disable		sys_process_ksm_disable
 +453	common	process_ksm_status		sys_process_ksm_status
 diff --git a/arch/xtensa/mm/fault.c b/arch/xtensa/mm/fault.c
-index faf7cf35a0ee3..d1eb8d6c5b826 100644
+index faf7cf35a0ee..d1eb8d6c5b82 100644
 --- a/arch/xtensa/mm/fault.c
 +++ b/arch/xtensa/mm/fault.c
 @@ -130,23 +130,14 @@ void do_page_fault(struct pt_regs *regs)
@@ -2806,7 +3083,7 @@ index faf7cf35a0ee3..d1eb8d6c5b826 100644
  		force_sig_fault(SIGSEGV, code, (void *) address);
  		return;
 diff --git a/block/elevator.c b/block/elevator.c
-index 24909069f8728..757a188b952f5 100644
+index 24909069f872..757a188b952f 100644
 --- a/block/elevator.c
 +++ b/block/elevator.c
 @@ -571,9 +571,19 @@ static struct elevator_type *elevator_get_default(struct request_queue *q)
@@ -2830,10 +3107,10 @@ index 24909069f8728..757a188b952f5 100644
  
  /*
 diff --git a/drivers/Makefile b/drivers/Makefile
-index 7241d80a7b293..ac0ca3498f43e 100644
+index 7241d80a7b29..ac0ca3498f43 100644
 --- a/drivers/Makefile
 +++ b/drivers/Makefile
-@@ -64,15 +64,8 @@ obj-y				+= char/
+@@ -64,26 +64,27 @@ obj-y				+= char/
  # iommu/ comes before gpu as gpu are using iommu controllers
  obj-y				+= iommu/
  
@@ -2849,7 +3126,11 @@ index 7241d80a7b293..ac0ca3498f43e 100644
  obj-$(CONFIG_PARPORT)		+= parport/
  obj-y				+= base/ block/ misc/ mfd/ nfc/
  obj-$(CONFIG_LIBNVDIMM)		+= nvdimm/
-@@ -84,6 +77,14 @@ obj-y				+= macintosh/
+ obj-y				+= dax/
+ obj-$(CONFIG_DMA_SHARED_BUFFER) += dma-buf/
+ obj-$(CONFIG_NUBUS)		+= nubus/
+ obj-y				+= cxl/
+ obj-y				+= macintosh/
  obj-y				+= scsi/
  obj-y				+= nvme/
  obj-$(CONFIG_ATA)		+= ata/
@@ -2865,10 +3146,10 @@ index 7241d80a7b293..ac0ca3498f43e 100644
  obj-$(CONFIG_MTD)		+= mtd/
  obj-$(CONFIG_SPI)		+= spi/
 diff --git a/drivers/ata/ahci.c b/drivers/ata/ahci.c
-index addba109406be..f819ee132ffa2 100644
+index addba109406b..f819ee132ffa 100644
 --- a/drivers/ata/ahci.c
 +++ b/drivers/ata/ahci.c
-@@ -1522,7 +1522,7 @@ static irqreturn_t ahci_thunderx_irq_handler(int irq, void *dev_instance)
+@@ -1522,46 +1522,39 @@ static irqreturn_t ahci_thunderx_irq_handler(int irq, void *dev_instance)
  }
  #endif
  
@@ -2877,7 +3158,12 @@ index addba109406be..f819ee132ffa2 100644
  		struct ahci_host_priv *hpriv)
  {
  	int i;
-@@ -1535,7 +1535,7 @@ static void ahci_remap_check(struct pci_dev *pdev, int bar,
+ 	u32 cap;
+ 
+ 	/*
+ 	 * Check if this device might have remapped nvme devices.
+ 	 */
+ 	if (pdev->vendor != PCI_VENDOR_ID_INTEL ||
  	    pci_resource_len(pdev, bar) < SZ_512K ||
  	    bar != AHCI_PCI_BAR_STANDARD ||
  	    !(readl(hpriv->mmio + AHCI_VSCAP) & 1))
@@ -2886,18 +3172,25 @@ index addba109406be..f819ee132ffa2 100644
  
  	cap = readq(hpriv->mmio + AHCI_REMAP_CAP);
  	for (i = 0; i < AHCI_MAX_REMAP; i++) {
-@@ -1550,18 +1550,11 @@ static void ahci_remap_check(struct pci_dev *pdev, int bar,
+ 		if ((cap & (1 << i)) == 0)
+ 			continue;
+ 		if (readl(hpriv->mmio + ahci_remap_dcc(i))
+ 				!= PCI_CLASS_STORAGE_EXPRESS)
+ 			continue;
+ 
+ 		/* We've found a remapped device */
+ 		hpriv->remapped_nvme++;
  	}
  
  	if (!hpriv->remapped_nvme)
 -		return;
--
++		return 0;
+ 
 -	dev_warn(&pdev->dev, "Found %u remapped NVMe devices.\n",
 -		 hpriv->remapped_nvme);
 -	dev_warn(&pdev->dev,
 -		 "Switch your BIOS from RAID to AHCI mode to use them.\n");
-+		return 0;
- 
+-
 -	/*
 -	 * Don't rely on the msi-x capability in the remap case,
 -	 * share the legacy interrupt across ahci and remapped devices.
@@ -2921,7 +3214,7 @@ index addba109406be..f819ee132ffa2 100644
  	sysfs_add_file_to_group(&pdev->dev.kobj,
  				&dev_attr_remapped_nvme.attr,
 diff --git a/drivers/cpufreq/Kconfig.x86 b/drivers/cpufreq/Kconfig.x86
-index 00476e94db905..c3a219218fac4 100644
+index 00476e94db90..c3a219218fac 100644
 --- a/drivers/cpufreq/Kconfig.x86
 +++ b/drivers/cpufreq/Kconfig.x86
 @@ -9,7 +9,6 @@ config X86_INTEL_PSTATE
@@ -2941,7 +3234,7 @@ index 00476e94db905..c3a219218fac4 100644
  	  This driver adds a CPUFreq driver which utilizes a fine grain
  	  processor performance frequency control range instead of legacy
 diff --git a/drivers/cpufreq/amd-pstate.c b/drivers/cpufreq/amd-pstate.c
-index ddd346a239e0b..a5764946434c6 100644
+index ddd346a239e0..a5764946434c 100644
 --- a/drivers/cpufreq/amd-pstate.c
 +++ b/drivers/cpufreq/amd-pstate.c
 @@ -1356,7 +1356,7 @@ static struct cpufreq_driver amd_pstate_epp_driver = {
@@ -2954,7 +3247,7 @@ index ddd346a239e0b..a5764946434c6 100644
  };
  
 diff --git a/drivers/cpufreq/cpufreq_ondemand.c b/drivers/cpufreq/cpufreq_ondemand.c
-index c52d19d67557f..03c8da688a8cd 100644
+index c52d19d67557..03c8da688a8c 100644
 --- a/drivers/cpufreq/cpufreq_ondemand.c
 +++ b/drivers/cpufreq/cpufreq_ondemand.c
 @@ -18,10 +18,16 @@
@@ -2967,16 +3260,17 @@ index c52d19d67557f..03c8da688a8cd 100644
 +#define DEF_SAMPLING_DOWN_FACTOR		(5)
 +#else
  #define DEF_FREQUENCY_UP_THRESHOLD		(80)
-+#define MICRO_FREQUENCY_UP_THRESHOLD		(95)
- #define DEF_SAMPLING_DOWN_FACTOR		(1)
+-#define DEF_SAMPLING_DOWN_FACTOR		(1)
+-#define MAX_SAMPLING_DOWN_FACTOR		(100000)
+ #define MICRO_FREQUENCY_UP_THRESHOLD		(95)
++#define DEF_SAMPLING_DOWN_FACTOR		(1)
 +#endif
- #define MAX_SAMPLING_DOWN_FACTOR		(100000)
--#define MICRO_FREQUENCY_UP_THRESHOLD		(95)
++#define MAX_SAMPLING_DOWN_FACTOR		(100000)
  #define MICRO_FREQUENCY_MIN_SAMPLE_RATE		(10000)
  #define MIN_FREQUENCY_UP_THRESHOLD		(1)
  #define MAX_FREQUENCY_UP_THRESHOLD		(100)
 diff --git a/drivers/cpufreq/intel_pstate.c b/drivers/cpufreq/intel_pstate.c
-index 2548ec92faa28..381ddedcf6930 100644
+index 2548ec92faa2..381ddedcf693 100644
 --- a/drivers/cpufreq/intel_pstate.c
 +++ b/drivers/cpufreq/intel_pstate.c
 @@ -3485,6 +3485,8 @@ static int __init intel_pstate_setup(char *str)
@@ -2989,7 +3283,7 @@ index 2548ec92faa28..381ddedcf6930 100644
  		default_driver = &intel_pstate;
  	else if (!strcmp(str, "passive"))
 diff --git a/drivers/cxl/core/pci.c b/drivers/cxl/core/pci.c
-index 67f4ab6daa34f..74962b18e3b21 100644
+index 67f4ab6daa34..74962b18e3b2 100644
 --- a/drivers/cxl/core/pci.c
 +++ b/drivers/cxl/core/pci.c
 @@ -308,36 +308,17 @@ static void disable_hdm(void *_cxlhdm)
@@ -3042,7 +3336,7 @@ index 67f4ab6daa34f..74962b18e3b21 100644
  		return rc;
  
 diff --git a/drivers/cxl/cxl.h b/drivers/cxl/cxl.h
-index f93a285389621..044a92d9813e2 100644
+index f93a28538962..044a92d9813e 100644
 --- a/drivers/cxl/cxl.h
 +++ b/drivers/cxl/cxl.h
 @@ -710,7 +710,6 @@ struct cxl_endpoint_dvsec_info {
@@ -3054,20 +3348,20 @@ index f93a285389621..044a92d9813e2 100644
  				struct cxl_endpoint_dvsec_info *info);
  int devm_cxl_add_passthrough_decoder(struct cxl_port *port);
 diff --git a/drivers/cxl/port.c b/drivers/cxl/port.c
-index c23b6164e1c0f..07c5ac598da1c 100644
+index c23b6164e1c0..07c5ac598da1 100644
 --- a/drivers/cxl/port.c
 +++ b/drivers/cxl/port.c
-@@ -60,17 +60,13 @@ static int discover_region(struct device *dev, void *root)
+@@ -60,26 +60,22 @@ static int discover_region(struct device *dev, void *root)
  static int cxl_switch_port_probe(struct cxl_port *port)
  {
  	struct cxl_hdm *cxlhdm;
 -	int rc, nr_dports;
--
++	int rc;
+ 
 -	nr_dports = devm_cxl_port_enumerate_dports(port);
 -	if (nr_dports < 0)
 -		return nr_dports;
-+	int rc;
- 
+-
 -	cxlhdm = devm_cxl_setup_hdm(port, NULL);
 -	rc = devm_cxl_enable_hdm(port, cxlhdm);
 -	if (rc)
@@ -3079,7 +3373,8 @@ index c23b6164e1c0f..07c5ac598da1c 100644
  	if (!IS_ERR(cxlhdm))
  		return devm_cxl_enumerate_decoders(cxlhdm, NULL);
  
-@@ -79,7 +75,7 @@ static int cxl_switch_port_probe(struct cxl_port *port)
+ 	if (PTR_ERR(cxlhdm) != -ENODEV) {
+ 		dev_err(&port->dev, "Failed to map HDM decoder capability\n");
  		return PTR_ERR(cxlhdm);
  	}
  
@@ -3089,7 +3384,7 @@ index c23b6164e1c0f..07c5ac598da1c 100644
  		return devm_cxl_add_passthrough_decoder(port);
  	}
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_vm.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_vm.c
-index 3c0310576b3bf..5b3a70becbdf4 100644
+index 3c0310576b3b..5b3a70becbdf 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_vm.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_vm.c
 @@ -2368,6 +2368,10 @@ int amdgpu_vm_ioctl(struct drm_device *dev, void *data, struct drm_file *filp)
@@ -3104,7 +3399,7 @@ index 3c0310576b3bf..5b3a70becbdf4 100644
  	case AMDGPU_VM_OP_RESERVE_VMID:
  		/* We only have requirement to reserve vmid from gfxhub */
 diff --git a/drivers/hid/hid-logitech-hidpp.c b/drivers/hid/hid-logitech-hidpp.c
-index 5e1a412fd28fa..f7e06d433a915 100644
+index 5e1a412fd28f..f7e06d433a91 100644
 --- a/drivers/hid/hid-logitech-hidpp.c
 +++ b/drivers/hid/hid-logitech-hidpp.c
 @@ -4553,7 +4553,7 @@ static const struct hid_device_id hidpp_devices[] = {
@@ -3117,7 +3412,7 @@ index 5e1a412fd28fa..f7e06d433a915 100644
  	  LDJ_DEVICE(0x1017), .driver_data = HIDPP_QUIRK_HI_RES_SCROLL_1P0 },
  	{ /* Mouse logitech M560 */
 diff --git a/drivers/hid/hidraw.c b/drivers/hid/hidraw.c
-index 93e62b161501c..e63c56a0d57fb 100644
+index 93e62b161501..e63c56a0d57f 100644
 --- a/drivers/hid/hidraw.c
 +++ b/drivers/hid/hidraw.c
 @@ -272,7 +272,12 @@ static int hidraw_open(struct inode *inode, struct file *file)
@@ -3144,7 +3439,7 @@ index 93e62b161501c..e63c56a0d57fb 100644
  	if (err < 0)
  		kfree(list);
 diff --git a/drivers/hid/wacom_wac.c b/drivers/hid/wacom_wac.c
-index 2ccf838371343..174bf03908d7c 100644
+index 2ccf83837134..174bf03908d7 100644
 --- a/drivers/hid/wacom_wac.c
 +++ b/drivers/hid/wacom_wac.c
 @@ -1314,7 +1314,7 @@ static void wacom_intuos_pro2_bt_pen(struct wacom_wac *wacom)
@@ -3156,7 +3451,7 @@ index 2ccf838371343..174bf03908d7c 100644
  	ktime_t time_packet_received = ktime_get();
  	int i;
  
-@@ -1348,7 +1348,7 @@ static void wacom_intuos_pro2_bt_pen(struct wacom_wac *wacom)
+@@ -1348,18 +1348,18 @@ static void wacom_intuos_pro2_bt_pen(struct wacom_wac *wacom)
  	if (number_of_valid_frames) {
  		if (wacom->hid_data.time_delayed)
  			time_interval = ktime_get() - wacom->hid_data.time_delayed;
@@ -3165,7 +3460,10 @@ index 2ccf838371343..174bf03908d7c 100644
  		wacom->hid_data.time_delayed = time_packet_received;
  	}
  
-@@ -1359,7 +1359,7 @@ static void wacom_intuos_pro2_bt_pen(struct wacom_wac *wacom)
+ 	for (i = 0; i < number_of_valid_frames; i++) {
+ 		unsigned char *frame = &data[i*pen_frame_len + 1];
+ 		bool valid = frame[0] & 0x80;
+ 		bool prox = frame[0] & 0x40;
  		bool range = frame[0] & 0x20;
  		bool invert = frame[0] & 0x10;
  		int frames_number_reversed = number_of_valid_frames - i - 1;
@@ -3175,7 +3473,7 @@ index 2ccf838371343..174bf03908d7c 100644
  		if (!valid)
  			continue;
 diff --git a/drivers/hid/wacom_wac.h b/drivers/hid/wacom_wac.h
-index 1a40bb8c5810c..ee21bb260f22f 100644
+index 1a40bb8c5810..ee21bb260f22 100644
 --- a/drivers/hid/wacom_wac.h
 +++ b/drivers/hid/wacom_wac.h
 @@ -324,7 +324,7 @@ struct hid_data {
@@ -3188,7 +3486,7 @@ index 1a40bb8c5810c..ee21bb260f22f 100644
  
  struct wacom_remote_data {
 diff --git a/drivers/i2c/busses/Kconfig b/drivers/i2c/busses/Kconfig
-index 87600b4aacb3f..9cf3bae52edfc 100644
+index 87600b4aacb3..9cf3bae52edf 100644
 --- a/drivers/i2c/busses/Kconfig
 +++ b/drivers/i2c/busses/Kconfig
 @@ -229,6 +229,15 @@ config I2C_CHT_WC
@@ -3208,7 +3506,7 @@ index 87600b4aacb3f..9cf3bae52edfc 100644
  	tristate "Nvidia nForce2, nForce3 and nForce4"
  	depends on PCI
 diff --git a/drivers/i2c/busses/Makefile b/drivers/i2c/busses/Makefile
-index af56fe2c75c09..76be74584719e 100644
+index af56fe2c75c0..76be74584719 100644
 --- a/drivers/i2c/busses/Makefile
 +++ b/drivers/i2c/busses/Makefile
 @@ -20,6 +20,7 @@ obj-$(CONFIG_I2C_CHT_WC)	+= i2c-cht-wc.o
@@ -3221,7 +3519,7 @@ index af56fe2c75c09..76be74584719e 100644
  obj-$(CONFIG_I2C_NVIDIA_GPU)	+= i2c-nvidia-gpu.o
 diff --git a/drivers/i2c/busses/i2c-nct6775.c b/drivers/i2c/busses/i2c-nct6775.c
 new file mode 100644
-index 0000000000000..0462f09520431
+index 000000000000..0462f0952043
 --- /dev/null
 +++ b/drivers/i2c/busses/i2c-nct6775.c
 @@ -0,0 +1,647 @@
@@ -3873,7 +4171,7 @@ index 0000000000000..0462f09520431
 +module_init(i2c_nct6775_init);
 +module_exit(i2c_nct6775_exit);
 diff --git a/drivers/i2c/busses/i2c-piix4.c b/drivers/i2c/busses/i2c-piix4.c
-index 809fbd014cd68..d54b35b147ee9 100644
+index 809fbd014cd6..d54b35b147ee 100644
 --- a/drivers/i2c/busses/i2c-piix4.c
 +++ b/drivers/i2c/busses/i2c-piix4.c
 @@ -568,11 +568,11 @@ static int piix4_transaction(struct i2c_adapter *piix4_adapter)
@@ -3891,7 +4189,7 @@ index 809fbd014cd68..d54b35b147ee9 100644
  	/* If the SMBus is still busy, we give up */
  	if (timeout == MAX_TIMEOUT) {
 diff --git a/drivers/input/evdev.c b/drivers/input/evdev.c
-index 95f90699d2b17..2b10fe29d2c8d 100644
+index 95f90699d2b1..2b10fe29d2c8 100644
 --- a/drivers/input/evdev.c
 +++ b/drivers/input/evdev.c
 @@ -46,6 +46,7 @@ struct evdev_client {
@@ -3926,7 +4224,7 @@ index 95f90699d2b17..2b10fe29d2c8d 100644
  }
  
  static int evdev_open_device(struct evdev *evdev)
-@@ -436,7 +446,6 @@ static int evdev_release(struct inode *inode, struct file *file)
+@@ -436,23 +446,17 @@ static int evdev_release(struct inode *inode, struct file *file)
  {
  	struct evdev_client *client = file->private_data;
  	struct evdev *evdev = client->evdev;
@@ -3934,7 +4232,11 @@ index 95f90699d2b17..2b10fe29d2c8d 100644
  
  	mutex_lock(&evdev->mutex);
  
-@@ -448,11 +457,6 @@ static int evdev_release(struct inode *inode, struct file *file)
+ 	if (evdev->exist && !client->revoked)
+ 		input_flush_device(&evdev->handle, file);
+ 
+ 	evdev_ungrab(evdev, client);
+ 	mutex_unlock(&evdev->mutex);
  
  	evdev_detach_client(evdev, client);
  
@@ -3955,7 +4257,7 @@ index 95f90699d2b17..2b10fe29d2c8d 100644
  }
  
 diff --git a/drivers/iommu/amd/iommu_v2.c b/drivers/iommu/amd/iommu_v2.c
-index 864e4ffb6aa94..261352a232716 100644
+index 864e4ffb6aa9..261352a23271 100644
 --- a/drivers/iommu/amd/iommu_v2.c
 +++ b/drivers/iommu/amd/iommu_v2.c
 @@ -485,8 +485,8 @@ static void do_fault(struct work_struct *work)
@@ -3970,7 +4272,7 @@ index 864e4ffb6aa94..261352a232716 100644
  		goto out;
  
 diff --git a/drivers/iommu/iommu-sva.c b/drivers/iommu/iommu-sva.c
-index 9821bc44f5ac1..3ebd4b6586b3e 100644
+index 9821bc44f5ac..3ebd4b6586b3 100644
 --- a/drivers/iommu/iommu-sva.c
 +++ b/drivers/iommu/iommu-sva.c
 @@ -175,7 +175,7 @@ iommu_sva_handle_iopf(struct iommu_fault *fault, void *data)
@@ -3983,7 +4285,7 @@ index 9821bc44f5ac1..3ebd4b6586b3e 100644
  		/* Unmapped area */
  		goto out_put_mm;
 diff --git a/drivers/md/dm-crypt.c b/drivers/md/dm-crypt.c
-index 8b47b913ee831..301b5fce475e2 100644
+index 8b47b913ee83..301b5fce475e 100644
 --- a/drivers/md/dm-crypt.c
 +++ b/drivers/md/dm-crypt.c
 @@ -3213,6 +3213,11 @@ static int crypt_ctr(struct dm_target *ti, unsigned int argc, char **argv)
@@ -3999,10 +4301,10 @@ index 8b47b913ee831..301b5fce475e2 100644
  	if (ret < 0)
  		goto bad;
 diff --git a/drivers/md/dm-ioctl.c b/drivers/md/dm-ioctl.c
-index 7d5c9c582ed2d..0d2fa7f86a544 100644
+index 7d5c9c582ed2..0d2fa7f86a54 100644
 --- a/drivers/md/dm-ioctl.c
 +++ b/drivers/md/dm-ioctl.c
-@@ -1830,30 +1830,36 @@ static ioctl_fn lookup_ioctl(unsigned int cmd, int *ioctl_flags)
+@@ -1830,56 +1830,65 @@ static ioctl_fn lookup_ioctl(unsigned int cmd, int *ioctl_flags)
   * As well as checking the version compatibility this always
   * copies the kernel interface version out.
   */
@@ -4049,7 +4351,25 @@ index 7d5c9c582ed2d..0d2fa7f86a544 100644
  		return -EFAULT;
  
  	return r;
-@@ -1879,7 +1885,10 @@ static int copy_params(struct dm_ioctl __user *user, struct dm_ioctl *param_kern
+ }
+ 
+ #define DM_PARAMS_MALLOC	0x0001	/* Params allocated with kvmalloc() */
+ #define DM_WIPE_BUFFER		0x0010	/* Wipe input buffer before returning from ioctl */
+ 
+ static void free_params(struct dm_ioctl *param, size_t param_size, int param_flags)
+ {
+ 	if (param_flags & DM_WIPE_BUFFER)
+ 		memset(param, 0, param_size);
+ 
+ 	if (param_flags & DM_PARAMS_MALLOC)
+ 		kvfree(param);
+ }
+ 
+ static int copy_params(struct dm_ioctl __user *user, struct dm_ioctl *param_kernel,
+ 		       int ioctl_flags, struct dm_ioctl **param, int *param_flags)
+ {
+ 	struct dm_ioctl *dmi;
+ 	int secure_data;
  	const size_t minimum_data_size = offsetof(struct dm_ioctl, data);
  	unsigned int noio_flag;
  
@@ -4071,10 +4391,10 @@ index 7d5c9c582ed2d..0d2fa7f86a544 100644
  		return r;
  
 diff --git a/drivers/nubus/proc.c b/drivers/nubus/proc.c
-index 1fd667852271f..cd4bd06cf3094 100644
+index 1fd667852271..cd4bd06cf309 100644
 --- a/drivers/nubus/proc.c
 +++ b/drivers/nubus/proc.c
-@@ -137,6 +137,18 @@ static int nubus_proc_rsrc_show(struct seq_file *m, void *v)
+@@ -137,38 +137,50 @@ static int nubus_proc_rsrc_show(struct seq_file *m, void *v)
  	return 0;
  }
  
@@ -4093,7 +4413,15 @@ index 1fd667852271f..cd4bd06cf3094 100644
  void nubus_proc_add_rsrc_mem(struct proc_dir_entry *procdir,
  			     const struct nubus_dirent *ent,
  			     unsigned int size)
-@@ -152,8 +164,8 @@ void nubus_proc_add_rsrc_mem(struct proc_dir_entry *procdir,
+ {
+ 	char name[9];
+ 	struct nubus_proc_pde_data *pded;
+ 
+ 	if (!procdir)
+ 		return;
+ 
+ 	snprintf(name, sizeof(name), "%x", ent->type);
+ 	if (size)
  		pded = nubus_proc_alloc_pde_data(nubus_dirptr(ent), size);
  	else
  		pded = NULL;
@@ -4104,7 +4432,12 @@ index 1fd667852271f..cd4bd06cf3094 100644
  }
  
  void nubus_proc_add_rsrc(struct proc_dir_entry *procdir,
-@@ -166,9 +178,9 @@ void nubus_proc_add_rsrc(struct proc_dir_entry *procdir,
+ 			 const struct nubus_dirent *ent)
+ {
+ 	char name[9];
+ 	unsigned char *data = (unsigned char *)ent->data;
+ 
+ 	if (!procdir)
  		return;
  
  	snprintf(name, sizeof(name), "%x", ent->type);
@@ -4118,7 +4451,7 @@ index 1fd667852271f..cd4bd06cf3094 100644
  
  /*
 diff --git a/drivers/pci/controller/Makefile b/drivers/pci/controller/Makefile
-index 37c8663de7fe1..897d19f92edeb 100644
+index 37c8663de7fe..897d19f92ede 100644
 --- a/drivers/pci/controller/Makefile
 +++ b/drivers/pci/controller/Makefile
 @@ -1,4 +1,10 @@
@@ -4134,7 +4467,7 @@ index 37c8663de7fe1..897d19f92edeb 100644
  obj-$(CONFIG_PCI_IXP4XX) += pci-ixp4xx.o
 diff --git a/drivers/pci/controller/intel-nvme-remap.c b/drivers/pci/controller/intel-nvme-remap.c
 new file mode 100644
-index 0000000000000..e105e6f5cc91d
+index 000000000000..e105e6f5cc91
 --- /dev/null
 +++ b/drivers/pci/controller/intel-nvme-remap.c
 @@ -0,0 +1,462 @@
@@ -4601,10 +4934,10 @@ index 0000000000000..e105e6f5cc91d
 +MODULE_AUTHOR("Daniel Drake <drake@endlessm.com>");
 +MODULE_LICENSE("GPL v2");
 diff --git a/drivers/pci/pci-acpi.c b/drivers/pci/pci-acpi.c
-index 052a611081ecd..a05350a4e49cb 100644
+index 052a611081ec..a05350a4e49c 100644
 --- a/drivers/pci/pci-acpi.c
 +++ b/drivers/pci/pci-acpi.c
-@@ -1043,6 +1043,16 @@ bool acpi_pci_bridge_d3(struct pci_dev *dev)
+@@ -1043,42 +1043,69 @@ bool acpi_pci_bridge_d3(struct pci_dev *dev)
  	return false;
  }
  
@@ -4621,7 +4954,10 @@ index 052a611081ecd..a05350a4e49cb 100644
  int acpi_pci_set_power_state(struct pci_dev *dev, pci_power_t state)
  {
  	struct acpi_device *adev = ACPI_COMPANION(&dev->dev);
-@@ -1053,32 +1063,49 @@ int acpi_pci_set_power_state(struct pci_dev *dev, pci_power_t state)
+ 	static const u8 state_conv[] = {
+ 		[PCI_D0] = ACPI_STATE_D0,
+ 		[PCI_D1] = ACPI_STATE_D1,
+ 		[PCI_D2] = ACPI_STATE_D2,
  		[PCI_D3hot] = ACPI_STATE_D3_HOT,
  		[PCI_D3cold] = ACPI_STATE_D3_COLD,
  	};
@@ -4649,25 +4985,25 @@ index 052a611081ecd..a05350a4e49cb 100644
 +		break;
 +	default:
 +		return -EINVAL;
-+	}
-+
-+	if (state == PCI_D3cold) {
-+		if (dev_pm_qos_flags(&dev->dev, PM_QOS_FLAG_NO_POWER_OFF) ==
-+				PM_QOS_FLAGS_ALL)
-+			return -EBUSY;
-+
-+		/* Notify AML lack of PCI config space availability */
-+		acpi_pci_config_space_access(dev, false);
  	}
  
 -	if (!error)
 -		pci_dbg(dev, "power state changed by ACPI to %s\n",
 -		        acpi_power_state_string(adev->power.state));
++	if (state == PCI_D3cold) {
++		if (dev_pm_qos_flags(&dev->dev, PM_QOS_FLAG_NO_POWER_OFF) ==
++				PM_QOS_FLAGS_ALL)
++			return -EBUSY;
+ 
+-	return error;
++		/* Notify AML lack of PCI config space availability */
++		acpi_pci_config_space_access(dev, false);
++	}
++
 +	error = acpi_device_set_power(adev, state_conv[state]);
 +	if (error)
 +		return error;
- 
--	return error;
++
 +	pci_dbg(dev, "power state changed by ACPI to %s\n",
 +	        acpi_power_state_string(adev->power.state));
 +
@@ -4685,7 +5021,7 @@ index 052a611081ecd..a05350a4e49cb 100644
  
  pci_power_t acpi_pci_get_power_state(struct pci_dev *dev)
 diff --git a/drivers/pci/quirks.c b/drivers/pci/quirks.c
-index c525867760bf8..9232b0fcb945d 100644
+index c525867760bf..9232b0fcb945 100644
 --- a/drivers/pci/quirks.c
 +++ b/drivers/pci/quirks.c
 @@ -3625,6 +3625,106 @@ static void quirk_no_bus_reset(struct pci_dev *dev)
@@ -4804,7 +5140,7 @@ index c525867760bf8..9232b0fcb945d 100644
  };
  
 diff --git a/drivers/scsi/Kconfig b/drivers/scsi/Kconfig
-index 0704809d9d99a..9af5c307c91a0 100644
+index 0704809d9d99..9af5c307c91a 100644
 --- a/drivers/scsi/Kconfig
 +++ b/drivers/scsi/Kconfig
 @@ -1523,4 +1523,6 @@ endif # SCSI_LOWLEVEL
@@ -4815,7 +5151,7 @@ index 0704809d9d99a..9af5c307c91a0 100644
 +
  endmenu
 diff --git a/drivers/scsi/Makefile b/drivers/scsi/Makefile
-index f055bfd54a683..e16e95f2c3ded 100644
+index f055bfd54a68..e16e95f2c3de 100644
 --- a/drivers/scsi/Makefile
 +++ b/drivers/scsi/Makefile
 @@ -151,6 +151,7 @@ obj-$(CONFIG_CHR_DEV_SCH)	+= ch.o
@@ -4828,7 +5164,7 @@ index f055bfd54a683..e16e95f2c3ded 100644
  obj-$(CONFIG_SCSI_DEBUG)	+= scsi_debug.o
 diff --git a/drivers/scsi/vhba/Kconfig b/drivers/scsi/vhba/Kconfig
 new file mode 100644
-index 0000000000000..e70a381fe3dff
+index 000000000000..e70a381fe3df
 --- /dev/null
 +++ b/drivers/scsi/vhba/Kconfig
 @@ -0,0 +1,9 @@
@@ -4843,7 +5179,7 @@ index 0000000000000..e70a381fe3dff
 +	  will be called vhba.
 diff --git a/drivers/scsi/vhba/Makefile b/drivers/scsi/vhba/Makefile
 new file mode 100644
-index 0000000000000..ad8b7c6442af0
+index 000000000000..ad8b7c6442af
 --- /dev/null
 +++ b/drivers/scsi/vhba/Makefile
 @@ -0,0 +1,4 @@
@@ -4853,7 +5189,7 @@ index 0000000000000..ad8b7c6442af0
 +ccflags-y := -DVHBA_VERSION=\"$(VHBA_VERSION)\" -Werror
 diff --git a/drivers/scsi/vhba/vhba.c b/drivers/scsi/vhba/vhba.c
 new file mode 100644
-index 0000000000000..676af31c33ad9
+index 000000000000..676af31c33ad
 --- /dev/null
 +++ b/drivers/scsi/vhba/vhba.c
 @@ -0,0 +1,1124 @@
@@ -5982,10 +6318,10 @@ index 0000000000000..676af31c33ad9
 +module_exit(vhba_exit);
 +
 diff --git a/drivers/thermal/mediatek/auxadc_thermal.c b/drivers/thermal/mediatek/auxadc_thermal.c
-index 0b5528804bbd6..f59d36de20a09 100644
+index 0b5528804bbd..f59d36de20a0 100644
 --- a/drivers/thermal/mediatek/auxadc_thermal.c
 +++ b/drivers/thermal/mediatek/auxadc_thermal.c
-@@ -1222,12 +1222,7 @@ static int mtk_thermal_probe(struct platform_device *pdev)
+@@ -1222,33 +1222,23 @@ static int mtk_thermal_probe(struct platform_device *pdev)
  		return -ENODEV;
  	}
  
@@ -5999,7 +6335,15 @@ index 0b5528804bbd6..f59d36de20a09 100644
  	auxadc_phys_base = of_get_phys_base(auxadc);
  
  	of_node_put(auxadc);
-@@ -1243,12 +1238,7 @@ static int mtk_thermal_probe(struct platform_device *pdev)
+ 
+ 	if (auxadc_phys_base == OF_BAD_ADDR) {
+ 		dev_err(&pdev->dev, "Can't get auxadc phys address\n");
+ 		return -EINVAL;
+ 	}
+ 
+ 	apmixedsys = of_parse_phandle(np, "mediatek,apmixedsys", 0);
+ 	if (!apmixedsys) {
+ 		dev_err(&pdev->dev, "missing apmixedsys node\n");
  		return -ENODEV;
  	}
  
@@ -6014,7 +6358,7 @@ index 0b5528804bbd6..f59d36de20a09 100644
  
  	of_node_put(apmixedsys);
 diff --git a/drivers/video/fbdev/core/sysimgblt.c b/drivers/video/fbdev/core/sysimgblt.c
-index 335e92b813fc4..665ef7a0a2495 100644
+index 335e92b813fc..665ef7a0a249 100644
 --- a/drivers/video/fbdev/core/sysimgblt.c
 +++ b/drivers/video/fbdev/core/sysimgblt.c
 @@ -189,7 +189,7 @@ static void fast_imageblit(const struct fb_image *image, struct fb_info *p,
@@ -6027,7 +6371,7 @@ index 335e92b813fc4..665ef7a0a2495 100644
  	const u32 *tab;
  	size_t tablen;
 diff --git a/fs/binfmt_elf.c b/fs/binfmt_elf.c
-index 1033fbdfdbec7..befa93582ed79 100644
+index 1033fbdfdbec..befa93582ed7 100644
 --- a/fs/binfmt_elf.c
 +++ b/fs/binfmt_elf.c
 @@ -320,10 +320,10 @@ create_elf_tables(struct linux_binprm *bprm, const struct elfhdr *exec,
@@ -6045,7 +6389,7 @@ index 1033fbdfdbec7..befa93582ed79 100644
  		return -EFAULT;
  
 diff --git a/fs/exec.c b/fs/exec.c
-index a466e797c8e2e..b84b4fee0f82f 100644
+index a466e797c8e2..b84b4fee0f82 100644
 --- a/fs/exec.c
 +++ b/fs/exec.c
 @@ -200,33 +200,39 @@ static struct page *get_arg_page(struct linux_binprm *bprm, unsigned long pos,
@@ -6113,10 +6457,10 @@ index a466e797c8e2e..b84b4fee0f82f 100644
  		ret = -EFAULT;
  
 diff --git a/fs/hugetlbfs/inode.c b/fs/hugetlbfs/inode.c
-index ecfdfb2529a36..581201818ed8f 100644
+index ecfdfb2529a3..581201818ed8 100644
 --- a/fs/hugetlbfs/inode.c
 +++ b/fs/hugetlbfs/inode.c
-@@ -821,7 +821,6 @@ static long hugetlbfs_fallocate(struct file *file, int mode, loff_t offset,
+@@ -821,34 +821,32 @@ static long hugetlbfs_fallocate(struct file *file, int mode, loff_t offset,
  		 */
  		struct folio *folio;
  		unsigned long addr;
@@ -6124,7 +6468,23 @@ index ecfdfb2529a36..581201818ed8f 100644
  
  		cond_resched();
  
-@@ -845,10 +844,9 @@ static long hugetlbfs_fallocate(struct file *file, int mode, loff_t offset,
+ 		/*
+ 		 * fallocate(2) manpage permits EINTR; we may have been
+ 		 * interrupted because we are using up too much memory.
+ 		 */
+ 		if (signal_pending(current)) {
+ 			error = -EINTR;
+ 			break;
+ 		}
+ 
+ 		/* Set numa allocation policy based on index */
+ 		hugetlb_set_vma_policy(&pseudo_vma, inode, index);
+ 
+ 		/* addr is the offset within the file (zero based) */
+ 		addr = index * hpage_size;
+ 
+ 		/* mutex taken here, fault path and hole punch */
+ 		hash = hugetlb_fault_mutex_hash(mapping, index);
  		mutex_lock(&hugetlb_fault_mutex_table[hash]);
  
  		/* See if already present in mapping to avoid alloc/free */
@@ -6139,7 +6499,7 @@ index ecfdfb2529a36..581201818ed8f 100644
  			hugetlb_drop_vma_policy(&pseudo_vma);
  			continue;
 diff --git a/fs/nfs/inode.c b/fs/nfs/inode.c
-index a910b9a638c5e..8172dd4135a1d 100644
+index a910b9a638c5..8172dd4135a1 100644
 --- a/fs/nfs/inode.c
 +++ b/fs/nfs/inode.c
 @@ -845,7 +845,7 @@ int nfs_getattr(struct mnt_idmap *idmap, const struct path *path,
@@ -6152,7 +6512,7 @@ index a910b9a638c5e..8172dd4135a1d 100644
  
  	if ((query_flags & AT_STATX_DONT_SYNC) && !force_sync) {
 diff --git a/fs/proc/base.c b/fs/proc/base.c
-index 05452c3b9872b..fa1ceb85ad24b 100644
+index 05452c3b9872..fa1ceb85ad24 100644
 --- a/fs/proc/base.c
 +++ b/fs/proc/base.c
 @@ -480,7 +480,7 @@ static int proc_pid_schedstat(struct seq_file *m, struct pid_namespace *ns,
@@ -6165,7 +6525,7 @@ index 05452c3b9872b..fa1ceb85ad24b 100644
  		   task->sched_info.pcount);
  
 diff --git a/include/asm-generic/resource.h b/include/asm-generic/resource.h
-index 8874f681b0567..59eb72bf7d5fd 100644
+index 8874f681b056..59eb72bf7d5f 100644
 --- a/include/asm-generic/resource.h
 +++ b/include/asm-generic/resource.h
 @@ -23,7 +23,7 @@
@@ -6178,7 +6538,7 @@ index 8874f681b0567..59eb72bf7d5fd 100644
  	[RLIMIT_RTTIME]		= {  RLIM_INFINITY,  RLIM_INFINITY },	\
  }
 diff --git a/include/linux/mm.h b/include/linux/mm.h
-index 27ce77080c79c..3c6c4c836da74 100644
+index 27ce77080c79..3c6c4c836da7 100644
 --- a/include/linux/mm.h
 +++ b/include/linux/mm.h
 @@ -191,7 +191,7 @@ static inline void __mm_zero_struct_page(struct page *page)
@@ -6190,7 +6550,7 @@ index 27ce77080c79c..3c6c4c836da74 100644
  
  extern int sysctl_max_map_count;
  
-@@ -377,7 +377,7 @@ extern unsigned int kobjsize(const void *objp);
+@@ -377,30 +377,32 @@ extern unsigned int kobjsize(const void *objp);
  #endif /* CONFIG_HAVE_ARCH_USERFAULTFD_MINOR */
  
  /* Bits set in the VMA until the stack is in its final location */
@@ -6199,7 +6559,21 @@ index 27ce77080c79c..3c6c4c836da74 100644
  
  #define TASK_EXEC ((current->personality & READ_IMPLIES_EXEC) ? VM_EXEC : 0)
  
-@@ -399,8 +399,10 @@ extern unsigned int kobjsize(const void *objp);
+ /* Common data flag combinations */
+ #define VM_DATA_FLAGS_TSK_EXEC	(VM_READ | VM_WRITE | TASK_EXEC | \
+ 				 VM_MAYREAD | VM_MAYWRITE | VM_MAYEXEC)
+ #define VM_DATA_FLAGS_NON_EXEC	(VM_READ | VM_WRITE | VM_MAYREAD | \
+ 				 VM_MAYWRITE | VM_MAYEXEC)
+ #define VM_DATA_FLAGS_EXEC	(VM_READ | VM_WRITE | VM_EXEC | \
+ 				 VM_MAYREAD | VM_MAYWRITE | VM_MAYEXEC)
+ 
+ #ifndef VM_DATA_DEFAULT_FLAGS		/* arch can override this */
+ #define VM_DATA_DEFAULT_FLAGS  VM_DATA_FLAGS_EXEC
+ #endif
+ 
+ #ifndef VM_STACK_DEFAULT_FLAGS		/* arch can override this */
+ #define VM_STACK_DEFAULT_FLAGS VM_DATA_DEFAULT_FLAGS
+ #endif
  
  #ifdef CONFIG_STACK_GROWSUP
  #define VM_STACK	VM_GROWSUP
@@ -6251,7 +6625,7 @@ index 27ce77080c79c..3c6c4c836da74 100644
  			unsigned long pfn, unsigned long size, pgprot_t);
  int remap_pfn_range_notrack(struct vm_area_struct *vma, unsigned long addr,
 diff --git a/include/linux/pageblock-flags.h b/include/linux/pageblock-flags.h
-index e83c4c0950417..a029ac2e35540 100644
+index e83c4c095041..a029ac2e3554 100644
 --- a/include/linux/pageblock-flags.h
 +++ b/include/linux/pageblock-flags.h
 @@ -48,7 +48,11 @@ extern unsigned int pageblock_order;
@@ -6267,10 +6641,10 @@ index e83c4c0950417..a029ac2e35540 100644
  #endif /* CONFIG_HUGETLB_PAGE */
  
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index eed5d65b8d1f4..cdfd9263ddd63 100644
+index eed5d65b8d1f..cdfd9263ddd6 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
-@@ -764,8 +764,14 @@ struct task_struct {
+@@ -764,39 +764,61 @@ struct task_struct {
  	unsigned int			ptrace;
  
  #ifdef CONFIG_SMP
@@ -6286,7 +6660,13 @@ index eed5d65b8d1f4..cdfd9263ddd63 100644
  	unsigned int			wakee_flips;
  	unsigned long			wakee_flip_decay_ts;
  	struct task_struct		*last_wakee;
-@@ -779,6 +785,7 @@ struct task_struct {
+ 
+ 	/*
+ 	 * recent_used_cpu is initially set as the last CPU used by a task
+ 	 * that wakes affine another task. Waker/wakee relationships can
+ 	 * push tasks around a CPU where each wakeup moves to the next one.
+ 	 * Tracking a recently used CPU allows a quick search for a recently
+ 	 * used CPU that may be idle.
  	 */
  	int				recent_used_cpu;
  	int				wake_cpu;
@@ -6294,7 +6674,8 @@ index eed5d65b8d1f4..cdfd9263ddd63 100644
  #endif
  	int				on_rq;
  
-@@ -787,6 +794,20 @@ struct task_struct {
+ 	int				prio;
+ 	int				static_prio;
  	int				normal_prio;
  	unsigned int			rt_priority;
  
@@ -6315,7 +6696,10 @@ index eed5d65b8d1f4..cdfd9263ddd63 100644
  	struct sched_entity		se;
  	struct sched_rt_entity		rt;
  	struct sched_dl_entity		dl;
-@@ -797,6 +818,7 @@ struct task_struct {
+ 	const struct sched_class	*sched_class;
+ 
+ #ifdef CONFIG_SCHED_CORE
+ 	struct rb_node			core_node;
  	unsigned long			core_cookie;
  	unsigned int			core_occupation;
  #endif
@@ -6340,10 +6724,10 @@ index eed5d65b8d1f4..cdfd9263ddd63 100644
  {
  	return task->thread_pid;
 diff --git a/include/linux/sched/deadline.h b/include/linux/sched/deadline.h
-index 7c83d4d5a9719..fa30f98cb2be9 100644
+index 7c83d4d5a971..fa30f98cb2be 100644
 --- a/include/linux/sched/deadline.h
 +++ b/include/linux/sched/deadline.h
-@@ -1,5 +1,24 @@
+@@ -1,26 +1,46 @@
  /* SPDX-License-Identifier: GPL-2.0 */
  
 +#ifdef CONFIG_SCHED_ALT
@@ -6368,7 +6752,21 @@ index 7c83d4d5a9719..fa30f98cb2be9 100644
  /*
   * SCHED_DEADLINE tasks has negative priorities, reflecting
   * the fact that any of them has higher prio than RT and
-@@ -21,6 +40,7 @@ static inline int dl_task(struct task_struct *p)
+  * NORMAL/BATCH tasks.
+  */
+ 
+ #include <linux/sched.h>
+ 
+ #define MAX_DL_PRIO		0
+ 
+ static inline int dl_prio(int prio)
+ {
+ 	if (unlikely(prio < MAX_DL_PRIO))
+ 		return 1;
+ 	return 0;
+ }
+ 
+ static inline int dl_task(struct task_struct *p)
  {
  	return dl_prio(p->prio);
  }
@@ -6377,7 +6775,7 @@ index 7c83d4d5a9719..fa30f98cb2be9 100644
  static inline bool dl_time_before(u64 a, u64 b)
  {
 diff --git a/include/linux/sched/prio.h b/include/linux/sched/prio.h
-index ab83d85e1183a..6af9ae6811160 100644
+index ab83d85e1183..6af9ae681116 100644
 --- a/include/linux/sched/prio.h
 +++ b/include/linux/sched/prio.h
 @@ -18,6 +18,32 @@
@@ -6414,7 +6812,7 @@ index ab83d85e1183a..6af9ae6811160 100644
   * Convert user-nice values [ -20 ... 0 ... 19 ]
   * to static priority [ MAX_RT_PRIO..MAX_PRIO-1 ],
 diff --git a/include/linux/sched/rt.h b/include/linux/sched/rt.h
-index 994c25640e156..8c050a59ece13 100644
+index 994c25640e15..8c050a59ece1 100644
 --- a/include/linux/sched/rt.h
 +++ b/include/linux/sched/rt.h
 @@ -24,8 +24,10 @@ static inline bool task_is_realtime(struct task_struct *tsk)
@@ -6429,7 +6827,7 @@ index 994c25640e156..8c050a59ece13 100644
  }
  
 diff --git a/include/linux/sched/topology.h b/include/linux/sched/topology.h
-index 816df6cc444e1..c8da08e18c918 100644
+index 816df6cc444e..c8da08e18c91 100644
 --- a/include/linux/sched/topology.h
 +++ b/include/linux/sched/topology.h
 @@ -234,7 +234,8 @@ static inline bool cpus_share_cache(int this_cpu, int that_cpu)
@@ -6443,7 +6841,7 @@ index 816df6cc444e1..c8da08e18c918 100644
  #else
  static inline void rebuild_sched_domains_energy(void)
 diff --git a/include/linux/syscalls.h b/include/linux/syscalls.h
-index 33a0ee3bcb2ed..9f5c1a0707676 100644
+index 33a0ee3bcb2e..9f5c1a070767 100644
 --- a/include/linux/syscalls.h
 +++ b/include/linux/syscalls.h
 @@ -919,6 +919,9 @@ asmlinkage long sys_madvise(unsigned long start, size_t len, int behavior);
@@ -6457,7 +6855,7 @@ index 33a0ee3bcb2ed..9f5c1a0707676 100644
  			unsigned long prot, unsigned long pgoff,
  			unsigned long flags);
 diff --git a/include/linux/tcp.h b/include/linux/tcp.h
-index b4c08ac869835..4297c9176435f 100644
+index b4c08ac86983..4297c9176435 100644
 --- a/include/linux/tcp.h
 +++ b/include/linux/tcp.h
 @@ -255,7 +255,8 @@ struct tcp_sock {
@@ -6471,7 +6869,7 @@ index b4c08ac869835..4297c9176435f 100644
  	u32	chrono_stat[3];	/* Time in jiffies for chrono_stat stats */
  	u8	chrono_type:2,	/* current chronograph type */
 diff --git a/include/linux/user_namespace.h b/include/linux/user_namespace.h
-index 45f09bec02c48..87b20e2ee2744 100644
+index 45f09bec02c4..87b20e2ee274 100644
 --- a/include/linux/user_namespace.h
 +++ b/include/linux/user_namespace.h
 @@ -148,6 +148,8 @@ static inline void set_userns_rlimit_max(struct user_namespace *ns,
@@ -6493,7 +6891,7 @@ index 45f09bec02c48..87b20e2ee2744 100644
  {
  	return &init_user_ns;
 diff --git a/include/net/inet_connection_sock.h b/include/net/inet_connection_sock.h
-index c2b15f7e55161..d85858efa571d 100644
+index c2b15f7e5516..d85858efa571 100644
 --- a/include/net/inet_connection_sock.h
 +++ b/include/net/inet_connection_sock.h
 @@ -135,7 +135,8 @@ struct inet_connection_sock {
@@ -6507,7 +6905,7 @@ index c2b15f7e55161..d85858efa571d 100644
  };
  
 diff --git a/include/net/tcp.h b/include/net/tcp.h
-index 5066e4586cf09..b346612043157 100644
+index 5066e4586cf0..b34661204315 100644
 --- a/include/net/tcp.h
 +++ b/include/net/tcp.h
 @@ -375,6 +375,7 @@ static inline void tcp_dec_quickack_mode(struct sock *sk,
@@ -6547,7 +6945,7 @@ index 5066e4586cf09..b346612043157 100644
  		} tx;   /* only used for outgoing skbs */
  		union {
  			struct inet_skb_parm	h4;
-@@ -1027,7 +1038,11 @@ enum tcp_ca_ack_event_flags {
+@@ -1027,66 +1038,77 @@ enum tcp_ca_ack_event_flags {
  #define TCP_CONG_NON_RESTRICTED 0x1
  /* Requires ECN/ECT set on all packets */
  #define TCP_CONG_NEEDS_ECN	0x2
@@ -6560,7 +6958,19 @@ index 5066e4586cf09..b346612043157 100644
  
  union tcp_cc_info;
  
-@@ -1047,8 +1062,11 @@ struct ack_sample {
+ struct ack_sample {
+ 	u32 pkts_acked;
+ 	s32 rtt_us;
+ 	u32 in_flight;
+ };
+ 
+ /* A rate sample measures the number of (original/retransmitted) data
+  * packets delivered "delivered" over an interval of time "interval_us".
+  * The tcp_rate.c code fills in the rate sample, and congestion
+  * control modules that define a cong_control function to run at the end
+  * of ACK processing can optionally chose to consult this sample when
+  * setting cwnd and pacing rate.
+  * A sample is invalid if "delivered" or "interval_us" is negative.
   */
  struct rate_sample {
  	u64  prior_mstamp; /* starting timestamp for interval */
@@ -6572,7 +6982,13 @@ index 5066e4586cf09..b346612043157 100644
  	s32  delivered;		/* number of packets delivered over interval */
  	s32  delivered_ce;	/* number of packets delivered w/ CE marks*/
  	long interval_us;	/* time for tp->delivered to incr "delivered" */
-@@ -1062,6 +1080,7 @@ struct rate_sample {
+ 	u32 snd_interval_us;	/* snd interval for delivered packets */
+ 	u32 rcv_interval_us;	/* rcv interval for delivered packets */
+ 	long rtt_us;		/* RTT of last (S)ACKed packet (or -1) */
+ 	int  losses;		/* number of packets marked lost upon ACK */
+ 	u32  acked_sacked;	/* number of packets newly (S)ACKed upon ACK */
+ 	u32  prior_in_flight;	/* in flight before this ACK */
+ 	u32  last_end_seq;	/* end_seq of most recently ACKed packet */
  	bool is_app_limited;	/* is sample from packet with bubble in pipe? */
  	bool is_retrans;	/* is sample from retransmission? */
  	bool is_ack_delayed;	/* is this (likely) a delayed ACK? */
@@ -6580,7 +6996,23 @@ index 5066e4586cf09..b346612043157 100644
  };
  
  struct tcp_congestion_ops {
-@@ -1085,8 +1104,11 @@ struct tcp_congestion_ops {
+ /* fast path fields are put first to fill one cache line */
+ 
+ 	/* return slow start threshold (required) */
+ 	u32 (*ssthresh)(struct sock *sk);
+ 
+ 	/* do new cwnd calculation (required) */
+ 	void (*cong_avoid)(struct sock *sk, u32 ack, u32 acked);
+ 
+ 	/* call before changing ca_state (optional) */
+ 	void (*set_state)(struct sock *sk, u8 new_state);
+ 
+ 	/* call when cwnd event occurs (optional) */
+ 	void (*cwnd_event)(struct sock *sk, enum tcp_ca_event ev);
+ 
+ 	/* call when ack arrives (optional) */
+ 	void (*in_ack_event)(struct sock *sk, u32 flags);
+ 
  	/* hook for packet ack accounting (optional) */
  	void (*pkts_acked)(struct sock *sk, const struct ack_sample *sample);
  
@@ -6594,7 +7026,7 @@ index 5066e4586cf09..b346612043157 100644
  
  	/* call when packets are delivered to update cwnd and pacing rate,
  	 * after all the ca_state processing. (optional)
-@@ -1152,6 +1174,14 @@ static inline char *tcp_ca_get_name_by_key(u32 key, char *buffer)
+@@ -1152,25 +1174,34 @@ static inline char *tcp_ca_get_name_by_key(u32 key, char *buffer)
  }
  #endif
  
@@ -6609,7 +7041,19 @@ index 5066e4586cf09..b346612043157 100644
  static inline bool tcp_ca_needs_ecn(const struct sock *sk)
  {
  	const struct inet_connection_sock *icsk = inet_csk(sk);
-@@ -1171,6 +1201,7 @@ static inline void tcp_ca_event(struct sock *sk, const enum tcp_ca_event event)
+ 
+ 	return icsk->icsk_ca_ops->flags & TCP_CONG_NEEDS_ECN;
+ }
+ 
+ static inline void tcp_ca_event(struct sock *sk, const enum tcp_ca_event event)
+ {
+ 	const struct inet_connection_sock *icsk = inet_csk(sk);
+ 
+ 	if (icsk->icsk_ca_ops->cwnd_event)
+ 		icsk->icsk_ca_ops->cwnd_event(sk, event);
+ }
+ 
+ /* From tcp_cong.c */
  void tcp_set_ca_state(struct sock *sk, const u8 ca_state);
  
  /* From tcp_rate.c */
@@ -6618,7 +7062,7 @@ index 5066e4586cf09..b346612043157 100644
  void tcp_rate_skb_delivered(struct sock *sk, struct sk_buff *skb,
  			    struct rate_sample *rs);
 diff --git a/include/uapi/asm-generic/unistd.h b/include/uapi/asm-generic/unistd.h
-index 45fa180cc56ad..98731e18ad84f 100644
+index 45fa180cc56a..98731e18ad84 100644
 --- a/include/uapi/asm-generic/unistd.h
 +++ b/include/uapi/asm-generic/unistd.h
 @@ -886,8 +886,17 @@ __SYSCALL(__NR_futex_waitv, sys_futex_waitv)
@@ -6641,7 +7085,7 @@ index 45fa180cc56ad..98731e18ad84f 100644
  /*
   * 32 bit systems traditionally used different
 diff --git a/include/uapi/linux/inet_diag.h b/include/uapi/linux/inet_diag.h
-index 50655de04c9b6..0e24f11627d51 100644
+index 50655de04c9b..0e24f11627d5 100644
 --- a/include/uapi/linux/inet_diag.h
 +++ b/include/uapi/linux/inet_diag.h
 @@ -231,9 +231,42 @@ struct tcp_bbr_info {
@@ -6688,7 +7132,7 @@ index 50655de04c9b6..0e24f11627d51 100644
  };
  #endif /* _UAPI_INET_DIAG_H_ */
 diff --git a/init/Kconfig b/init/Kconfig
-index 32c24950c4ced..54c83a0f3072a 100644
+index 32c24950c4ce..54c83a0f3072 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -123,6 +123,47 @@ config THREAD_INFO_IN_TASK
@@ -6799,7 +7243,7 @@ index 32c24950c4ced..54c83a0f3072a 100644
  	help
  	  This option adds support for automatic NUMA aware memory/task placement.
  	  The mechanism is quite primitive and is based on migrating memory when
-@@ -989,6 +1062,7 @@ config FAIR_GROUP_SCHED
+@@ -989,28 +1062,30 @@ config FAIR_GROUP_SCHED
  	depends on CGROUP_SCHED
  	default CGROUP_SCHED
  
@@ -6807,7 +7251,22 @@ index 32c24950c4ced..54c83a0f3072a 100644
  config CFS_BANDWIDTH
  	bool "CPU bandwidth provisioning for FAIR_GROUP_SCHED"
  	depends on FAIR_GROUP_SCHED
-@@ -1011,6 +1085,7 @@ config RT_GROUP_SCHED
+ 	default n
+ 	help
+ 	  This option allows users to define CPU bandwidth rates (limits) for
+ 	  tasks running within the fair group scheduler.  Groups with no limit
+ 	  set are considered to be unconstrained and will run with no
+ 	  restriction.
+ 	  See Documentation/scheduler/sched-bwc.rst for more information.
+ 
+ config RT_GROUP_SCHED
+ 	bool "Group scheduling for SCHED_RR/FIFO"
+ 	depends on CGROUP_SCHED
+ 	default n
+ 	help
+ 	  This feature lets you explicitly allocate real CPU bandwidth
+ 	  to task groups. If enabled, it will also make it impossible to
+ 	  schedule realtime tasks for non-root users until you allocate
  	  realtime bandwidth for them.
  	  See Documentation/scheduler/sched-rt-group.rst for more information.
  
@@ -6860,7 +7319,7 @@ index 32c24950c4ced..54c83a0f3072a 100644
  	bool "Optimize for size (-Os)"
  	help
 diff --git a/init/Makefile b/init/Makefile
-index 26de459006c4e..320c9d4c8e030 100644
+index 26de459006c4..320c9d4c8e03 100644
 --- a/init/Makefile
 +++ b/init/Makefile
 @@ -33,7 +33,7 @@ build-timestamp = $(or $(KBUILD_BUILD_TIMESTAMP), $(build-timestamp-auto))
@@ -6873,10 +7332,10 @@ index 26de459006c4e..320c9d4c8e030 100644
  
  #
 diff --git a/init/init_task.c b/init/init_task.c
-index ff6c4b9bfe6b1..19e9c662d1a16 100644
+index ff6c4b9bfe6b..19e9c662d1a1 100644
 --- a/init/init_task.c
 +++ b/init/init_task.c
-@@ -75,9 +75,15 @@ struct task_struct init_task
+@@ -75,26 +75,44 @@ struct task_struct init_task
  	.stack		= init_stack,
  	.usage		= REFCOUNT_INIT(2),
  	.flags		= PF_KTHREAD,
@@ -6892,7 +7351,10 @@ index ff6c4b9bfe6b1..19e9c662d1a16 100644
  	.policy		= SCHED_NORMAL,
  	.cpus_ptr	= &init_task.cpus_mask,
  	.user_cpus_ptr	= NULL,
-@@ -88,6 +94,17 @@ struct task_struct init_task
+ 	.cpus_mask	= CPU_MASK_ALL,
+ 	.nr_cpus_allowed= NR_CPUS,
+ 	.mm		= NULL,
+ 	.active_mm	= &init_mm,
  	.restart_block	= {
  		.fn = do_no_restart_syscall,
  	},
@@ -6910,7 +7372,7 @@ index ff6c4b9bfe6b1..19e9c662d1a16 100644
  	.se		= {
  		.group_node 	= LIST_HEAD_INIT(init_task.se.group_node),
  	},
-@@ -95,6 +112,7 @@ struct task_struct init_task
+ 	.rt		= {
  		.run_list	= LIST_HEAD_INIT(init_task.rt.run_list),
  		.time_slice	= RR_TIMESLICE,
  	},
@@ -6919,7 +7381,7 @@ index ff6c4b9bfe6b1..19e9c662d1a16 100644
  #ifdef CONFIG_SMP
  	.pushable_tasks	= PLIST_NODE_INIT(init_task.pushable_tasks, MAX_PRIO),
 diff --git a/kernel/Kconfig.preempt b/kernel/Kconfig.preempt
-index c2f1fd95a8214..41654679b1b27 100644
+index c2f1fd95a821..41654679b1b2 100644
 --- a/kernel/Kconfig.preempt
 +++ b/kernel/Kconfig.preempt
 @@ -117,7 +117,7 @@ config PREEMPT_DYNAMIC
@@ -6932,7 +7394,7 @@ index c2f1fd95a8214..41654679b1b27 100644
  	  This option permits Core Scheduling, a means of coordinated task
  	  selection across SMT siblings. When enabled -- see
 diff --git a/kernel/cgroup/cpuset.c b/kernel/cgroup/cpuset.c
-index e4ca2dd2b7648..82786dbb220c6 100644
+index e4ca2dd2b764..82786dbb220c 100644
 --- a/kernel/cgroup/cpuset.c
 +++ b/kernel/cgroup/cpuset.c
 @@ -791,7 +791,7 @@ static int validate_change(struct cpuset *cur, struct cpuset *trial)
@@ -6954,7 +7416,7 @@ index e4ca2dd2b7648..82786dbb220c6 100644
  {
  }
 diff --git a/kernel/delayacct.c b/kernel/delayacct.c
-index 6f0c358e73d80..8111481ce8b1d 100644
+index 6f0c358e73d8..8111481ce8b1 100644
 --- a/kernel/delayacct.c
 +++ b/kernel/delayacct.c
 @@ -150,7 +150,7 @@ int delayacct_add_tsk(struct taskstats *d, struct task_struct *tsk)
@@ -6967,10 +7429,10 @@ index 6f0c358e73d80..8111481ce8b1d 100644
  	d->cpu_count += t1;
  
 diff --git a/kernel/exit.c b/kernel/exit.c
-index edb50b4c99728..09e72bba7cc2c 100644
+index edb50b4c9972..09e72bba7cc2 100644
 --- a/kernel/exit.c
 +++ b/kernel/exit.c
-@@ -173,7 +173,7 @@ static void __exit_signal(struct task_struct *tsk)
+@@ -173,28 +173,28 @@ static void __exit_signal(struct task_struct *tsk)
  			sig->curr_target = next_thread(tsk);
  	}
  
@@ -6979,7 +7441,20 @@ index edb50b4c99728..09e72bba7cc2c 100644
  			      sizeof(unsigned long long));
  
  	/*
-@@ -194,7 +194,7 @@ static void __exit_signal(struct task_struct *tsk)
+ 	 * Accumulate here the counters for all threads as they die. We could
+ 	 * skip the group leader because it is the last user of signal_struct,
+ 	 * but we want to avoid the race with thread_group_cputime() which can
+ 	 * see the empty ->thread_head list.
+ 	 */
+ 	task_cputime(tsk, &utime, &stime);
+ 	write_seqlock(&sig->stats_lock);
+ 	sig->utime += utime;
+ 	sig->stime += stime;
+ 	sig->gtime += task_gtime(tsk);
+ 	sig->min_flt += tsk->min_flt;
+ 	sig->maj_flt += tsk->maj_flt;
+ 	sig->nvcsw += tsk->nvcsw;
+ 	sig->nivcsw += tsk->nivcsw;
  	sig->inblock += task_io_get_inblock(tsk);
  	sig->oublock += task_io_get_oublock(tsk);
  	task_io_accounting_add(&sig->ioac, &tsk->ioac);
@@ -6989,7 +7464,7 @@ index edb50b4c99728..09e72bba7cc2c 100644
  	__unhash_process(tsk, group_dead);
  	write_sequnlock(&sig->stats_lock);
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 41c964104b584..915ad6dae416a 100644
+index 41c964104b58..915ad6dae416 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -100,6 +100,10 @@
@@ -7028,10 +7503,10 @@ index 41c964104b584..915ad6dae416a 100644
  	if (err)
  		goto bad_unshare_out;
 diff --git a/kernel/locking/rtmutex.c b/kernel/locking/rtmutex.c
-index 728f434de2bbf..0e1082a4e878e 100644
+index 728f434de2bb..0e1082a4e878 100644
 --- a/kernel/locking/rtmutex.c
 +++ b/kernel/locking/rtmutex.c
-@@ -337,21 +337,25 @@ static __always_inline void
+@@ -337,49 +337,61 @@ static __always_inline void
  waiter_update_prio(struct rt_mutex_waiter *waiter, struct task_struct *task)
  {
  	waiter->prio = __waiter_prio(task);
@@ -7059,7 +7534,8 @@ index 728f434de2bbf..0e1082a4e878e 100644
  	/*
  	 * If both waiters have dl_prio(), we check the deadlines of the
  	 * associated tasks.
-@@ -360,16 +364,22 @@ static __always_inline int rt_mutex_waiter_less(struct rt_mutex_waiter *left,
+ 	 * If left waiter has a dl_prio(), and we didn't return 1 above,
+ 	 * then right waiter has a dl_prio() too.
  	 */
  	if (dl_prio(left->prio))
  		return dl_time_before(left->deadline, right->deadline);
@@ -7082,7 +7558,8 @@ index 728f434de2bbf..0e1082a4e878e 100644
  	/*
  	 * If both waiters have dl_prio(), we check the deadlines of the
  	 * associated tasks.
-@@ -378,8 +388,10 @@ static __always_inline int rt_mutex_waiter_equal(struct rt_mutex_waiter *left,
+ 	 * If left waiter has a dl_prio(), and we didn't return 0 above,
+ 	 * then right waiter has a dl_prio() too.
  	 */
  	if (dl_prio(left->prio))
  		return left->deadline == right->deadline;
@@ -7094,7 +7571,7 @@ index 728f434de2bbf..0e1082a4e878e 100644
  
  static inline bool rt_mutex_steal(struct rt_mutex_waiter *waiter,
 diff --git a/kernel/sched/Makefile b/kernel/sched/Makefile
-index 976092b7bd452..31d587c16ec1a 100644
+index 976092b7bd45..31d587c16ec1 100644
 --- a/kernel/sched/Makefile
 +++ b/kernel/sched/Makefile
 @@ -28,7 +28,12 @@ endif
@@ -7112,7 +7589,7 @@ index 976092b7bd452..31d587c16ec1a 100644
  obj-y += build_utility.o
 diff --git a/kernel/sched/alt_core.c b/kernel/sched/alt_core.c
 new file mode 100644
-index 0000000000000..93192a7e6ed05
+index 000000000000..93192a7e6ed0
 --- /dev/null
 +++ b/kernel/sched/alt_core.c
 @@ -0,0 +1,8737 @@
@@ -15855,7 +16332,7 @@ index 0000000000000..93192a7e6ed05
 +#endif
 diff --git a/kernel/sched/alt_debug.c b/kernel/sched/alt_debug.c
 new file mode 100644
-index 0000000000000..1212a031700e2
+index 000000000000..1212a031700e
 --- /dev/null
 +++ b/kernel/sched/alt_debug.c
 @@ -0,0 +1,31 @@
@@ -15892,7 +16369,7 @@ index 0000000000000..1212a031700e2
 +{}
 diff --git a/kernel/sched/alt_sched.h b/kernel/sched/alt_sched.h
 new file mode 100644
-index 0000000000000..5494f27cdb04a
+index 000000000000..5494f27cdb04
 --- /dev/null
 +++ b/kernel/sched/alt_sched.h
 @@ -0,0 +1,906 @@
@@ -16804,7 +17281,7 @@ index 0000000000000..5494f27cdb04a
 +#endif /* ALT_SCHED_H */
 diff --git a/kernel/sched/bmq.h b/kernel/sched/bmq.h
 new file mode 100644
-index 0000000000000..f29b8f3aa786d
+index 000000000000..f29b8f3aa786
 --- /dev/null
 +++ b/kernel/sched/bmq.h
 @@ -0,0 +1,110 @@
@@ -16919,7 +17396,7 @@ index 0000000000000..f29b8f3aa786d
 +
 +static inline void update_rq_time_edge(struct rq *rq) {}
 diff --git a/kernel/sched/build_policy.c b/kernel/sched/build_policy.c
-index d9dc9ab3773f2..71a25540d65e9 100644
+index d9dc9ab3773f..71a25540d65e 100644
 --- a/kernel/sched/build_policy.c
 +++ b/kernel/sched/build_policy.c
 @@ -42,13 +42,19 @@
@@ -16944,7 +17421,7 @@ index d9dc9ab3773f2..71a25540d65e9 100644
 +#include "deadline.c"
 +#endif
 diff --git a/kernel/sched/build_utility.c b/kernel/sched/build_utility.c
-index 99bdd96f454f4..23f80a86d2d7a 100644
+index 99bdd96f454f..23f80a86d2d7 100644
 --- a/kernel/sched/build_utility.c
 +++ b/kernel/sched/build_utility.c
 @@ -85,7 +85,9 @@
@@ -16958,7 +17435,7 @@ index 99bdd96f454f4..23f80a86d2d7a 100644
  #endif
  
 diff --git a/kernel/sched/cpufreq_schedutil.c b/kernel/sched/cpufreq_schedutil.c
-index e3211455b2032..87f7a4f732c80 100644
+index e3211455b203..87f7a4f732c8 100644
 --- a/kernel/sched/cpufreq_schedutil.c
 +++ b/kernel/sched/cpufreq_schedutil.c
 @@ -157,9 +157,14 @@ static void sugov_get_util(struct sugov_cpu *sg_cpu)
@@ -17006,10 +17483,10 @@ index e3211455b2032..87f7a4f732c80 100644
  static DECLARE_WORK(rebuild_sd_work, rebuild_sd_workfn);
  
 diff --git a/kernel/sched/cputime.c b/kernel/sched/cputime.c
-index af7952f12e6cf..6461cbbb734df 100644
+index af7952f12e6c..6461cbbb734d 100644
 --- a/kernel/sched/cputime.c
 +++ b/kernel/sched/cputime.c
-@@ -126,7 +126,7 @@ void account_user_time(struct task_struct *p, u64 cputime)
+@@ -126,31 +126,31 @@ void account_user_time(struct task_struct *p, u64 cputime)
  	p->utime += cputime;
  	account_group_user_time(p, cputime);
  
@@ -17018,7 +17495,23 @@ index af7952f12e6cf..6461cbbb734df 100644
  
  	/* Add user time to cpustat. */
  	task_group_account_field(p, index, cputime);
-@@ -150,7 +150,7 @@ void account_guest_time(struct task_struct *p, u64 cputime)
+ 
+ 	/* Account for user time used */
+ 	acct_account_cputime(p);
+ }
+ 
+ /*
+  * Account guest CPU time to a process.
+  * @p: the process that the CPU time gets accounted to
+  * @cputime: the CPU time spent in virtual machine since the last update
+  */
+ void account_guest_time(struct task_struct *p, u64 cputime)
+ {
+ 	u64 *cpustat = kcpustat_this_cpu->cpustat;
+ 
+ 	/* Add guest time to process. */
+ 	p->utime += cputime;
+ 	account_group_user_time(p, cputime);
  	p->gtime += cputime;
  
  	/* Add guest time to cpustat. */
@@ -17027,7 +17520,7 @@ index af7952f12e6cf..6461cbbb734df 100644
  		task_group_account_field(p, CPUTIME_NICE, cputime);
  		cpustat[CPUTIME_GUEST_NICE] += cputime;
  	} else {
-@@ -288,7 +288,7 @@ static inline u64 account_other_time(u64 max)
+@@ -288,17 +288,17 @@ static inline u64 account_other_time(u64 max)
  #ifdef CONFIG_64BIT
  static inline u64 read_sum_exec_runtime(struct task_struct *t)
  {
@@ -17036,7 +17529,9 @@ index af7952f12e6cf..6461cbbb734df 100644
  }
  #else
  static u64 read_sum_exec_runtime(struct task_struct *t)
-@@ -298,7 +298,7 @@ static u64 read_sum_exec_runtime(struct task_struct *t)
+ {
+ 	u64 ns;
+ 	struct rq_flags rf;
  	struct rq *rq;
  
  	rq = task_rq_lock(t, &rf);
@@ -17055,7 +17550,7 @@ index af7952f12e6cf..6461cbbb734df 100644
  
  	if (task_cputime(p, &cputime.utime, &cputime.stime))
 diff --git a/kernel/sched/debug.c b/kernel/sched/debug.c
-index 0b2340a79b653..cfcce8276892e 100644
+index 0b2340a79b65..cfcce8276892 100644
 --- a/kernel/sched/debug.c
 +++ b/kernel/sched/debug.c
 @@ -7,6 +7,7 @@
@@ -17082,7 +17577,7 @@ index 0b2340a79b653..cfcce8276892e 100644
  __read_mostly bool sched_debug_verbose;
  
  #ifdef CONFIG_SMP
-@@ -332,6 +335,7 @@ static const struct file_operations sched_debug_fops = {
+@@ -332,21 +335,25 @@ static const struct file_operations sched_debug_fops = {
  	.llseek		= seq_lseek,
  	.release	= seq_release,
  };
@@ -17090,7 +17585,9 @@ index 0b2340a79b653..cfcce8276892e 100644
  
  static struct dentry *debugfs_sched;
  
-@@ -341,12 +345,15 @@ static __init int sched_init_debug(void)
+ static __init int sched_init_debug(void)
+ {
+ 	struct dentry __maybe_unused *numa;
  
  	debugfs_sched = debugfs_create_dir("sched", NULL);
  
@@ -17129,10 +17626,10 @@ index 0b2340a79b653..cfcce8276892e 100644
  void resched_latency_warn(int cpu, u64 latency)
  {
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index 373ff5f558844..5dcb1ac868a0b 100644
+index 373ff5f55884..5dcb1ac868a0 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
-@@ -69,8 +69,13 @@
+@@ -69,60 +69,79 @@
   *
   * (default: 6ms * (1 + ilog(ncpus)), units: nanoseconds)
   */
@@ -17146,7 +17643,19 @@ index 373ff5f558844..5dcb1ac868a0b 100644
  
  /*
   * The initial- and re-scaling of tunables is configurable
-@@ -90,8 +95,13 @@ unsigned int sysctl_sched_tunable_scaling = SCHED_TUNABLESCALING_LOG;
+  *
+  * Options are:
+  *
+  *   SCHED_TUNABLESCALING_NONE - unscaled, always *1
+  *   SCHED_TUNABLESCALING_LOG - scaled logarithmical, *1+ilog(ncpus)
+  *   SCHED_TUNABLESCALING_LINEAR - scaled linear, *ncpus
+  *
+  * (default SCHED_TUNABLESCALING_LOG = *(1+ilog(ncpus))
+  */
+ unsigned int sysctl_sched_tunable_scaling = SCHED_TUNABLESCALING_LOG;
+ 
+ /*
+  * Minimal preemption granularity for CPU-bound tasks:
   *
   * (default: 0.75 msec * (1 + ilog(ncpus)), units: nanoseconds)
   */
@@ -17160,7 +17669,12 @@ index 373ff5f558844..5dcb1ac868a0b 100644
  
  /*
   * Minimal preemption granularity for CPU-bound SCHED_IDLE tasks.
-@@ -104,7 +114,11 @@ unsigned int sysctl_sched_idle_min_granularity			= 750000ULL;
+  * Applies only when SCHED_IDLE tasks compete with normal tasks.
+  *
+  * (default: 0.75 msec)
+  */
+ unsigned int sysctl_sched_idle_min_granularity			= 750000ULL;
+ 
  /*
   * This value is kept at sysctl_sched_latency/sysctl_sched_min_granularity
   */
@@ -17172,7 +17686,16 @@ index 373ff5f558844..5dcb1ac868a0b 100644
  
  /*
   * After fork, child runs first. If set to 0 (default) then
-@@ -121,8 +135,13 @@ unsigned int sysctl_sched_child_runs_first __read_mostly;
+  * parent will (try to) run first.
+  */
+ unsigned int sysctl_sched_child_runs_first __read_mostly;
+ 
+ /*
+  * SCHED_OTHER wake-up granularity.
+  *
+  * This option delays the preemption effects of decoupled workloads
+  * and reduces their over-scheduling. Synchronous workloads will still
+  * have immediate wakeup/sleep latencies.
   *
   * (default: 1 msec * (1 + ilog(ncpus)), units: nanoseconds)
   */
@@ -17251,7 +17774,7 @@ index 373ff5f558844..5dcb1ac868a0b 100644
  }
  
 diff --git a/kernel/sched/features.h b/kernel/sched/features.h
-index ee7f23c76bd33..9e390eb82e384 100644
+index ee7f23c76bd3..9e390eb82e38 100644
 --- a/kernel/sched/features.h
 +++ b/kernel/sched/features.h
 @@ -62,6 +62,7 @@ SCHED_FEAT(TTWU_QUEUE, true)
@@ -17263,7 +17786,7 @@ index ee7f23c76bd33..9e390eb82e384 100644
  /*
   * Issue a WARN when we do multiple update_rq_clock() calls
 diff --git a/kernel/sched/idle.c b/kernel/sched/idle.c
-index 342f58a329f52..ab493e7590846 100644
+index 342f58a329f5..ab493e759084 100644
 --- a/kernel/sched/idle.c
 +++ b/kernel/sched/idle.c
 @@ -379,6 +379,7 @@ void cpu_startup_entry(enum cpuhp_state state)
@@ -17281,7 +17804,7 @@ index 342f58a329f52..ab493e7590846 100644
 +#endif
 diff --git a/kernel/sched/pds.h b/kernel/sched/pds.h
 new file mode 100644
-index 0000000000000..15cc4887efedb
+index 000000000000..15cc4887efed
 --- /dev/null
 +++ b/kernel/sched/pds.h
 @@ -0,0 +1,152 @@
@@ -17438,7 +17961,7 @@ index 0000000000000..15cc4887efedb
 +#endif
 +static inline void sched_task_deactivate(struct task_struct *p, struct rq *rq) {}
 diff --git a/kernel/sched/pelt.c b/kernel/sched/pelt.c
-index 0f310768260c1..bd38bf738fe94 100644
+index 0f310768260c..bd38bf738fe9 100644
 --- a/kernel/sched/pelt.c
 +++ b/kernel/sched/pelt.c
 @@ -266,6 +266,7 @@ ___update_load_avg(struct sched_avg *sa, unsigned long load)
@@ -17461,7 +17984,7 @@ index 0f310768260c1..bd38bf738fe94 100644
   * thermal:
   *
 diff --git a/kernel/sched/pelt.h b/kernel/sched/pelt.h
-index 3a0e0dc287219..e8a7d84aa5a50 100644
+index 3a0e0dc28721..e8a7d84aa5a5 100644
 --- a/kernel/sched/pelt.h
 +++ b/kernel/sched/pelt.h
 @@ -1,13 +1,15 @@
@@ -17489,7 +18012,7 @@ index 3a0e0dc287219..e8a7d84aa5a50 100644
  static inline void cfs_se_util_change(struct sched_avg *avg)
  {
  	unsigned int enqueued;
-@@ -180,9 +183,11 @@ static inline u64 cfs_rq_clock_pelt(struct cfs_rq *cfs_rq)
+@@ -180,26 +183,29 @@ static inline u64 cfs_rq_clock_pelt(struct cfs_rq *cfs_rq)
  	return rq_clock_pelt(rq_of(cfs_rq));
  }
  #endif
@@ -17501,7 +18024,17 @@ index 3a0e0dc287219..e8a7d84aa5a50 100644
  static inline int
  update_cfs_rq_load_avg(u64 now, struct cfs_rq *cfs_rq)
  {
-@@ -200,6 +205,7 @@ update_dl_rq_load_avg(u64 now, struct rq *rq, int running)
+ 	return 0;
+ }
+ 
+ static inline int
+ update_rt_rq_load_avg(u64 now, struct rq *rq, int running)
+ {
+ 	return 0;
+ }
+ 
+ static inline int
+ update_dl_rq_load_avg(u64 now, struct rq *rq, int running)
  {
  	return 0;
  }
@@ -17510,7 +18043,7 @@ index 3a0e0dc287219..e8a7d84aa5a50 100644
  static inline int
  update_thermal_load_avg(u64 now, struct rq *rq, u64 capacity)
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index ec7b3e0a2b207..eab1ff20c9463 100644
+index ec7b3e0a2b20..eab1ff20c946 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -5,6 +5,10 @@
@@ -17544,10 +18077,10 @@ index ec7b3e0a2b207..eab1ff20c9463 100644
 +#endif /* !CONFIG_SCHED_ALT */
  #endif /* _KERNEL_SCHED_SCHED_H */
 diff --git a/kernel/sched/stats.c b/kernel/sched/stats.c
-index 857f837f52cbe..5486c63e47904 100644
+index 857f837f52cb..5486c63e4790 100644
 --- a/kernel/sched/stats.c
 +++ b/kernel/sched/stats.c
-@@ -125,8 +125,10 @@ static int show_schedstat(struct seq_file *seq, void *v)
+@@ -125,24 +125,27 @@ static int show_schedstat(struct seq_file *seq, void *v)
  	} else {
  		struct rq *rq;
  #ifdef CONFIG_SMP
@@ -17558,7 +18091,16 @@ index 857f837f52cbe..5486c63e47904 100644
  #endif
  		cpu = (unsigned long)(v - 2);
  		rq = cpu_rq(cpu);
-@@ -143,6 +145,7 @@ static int show_schedstat(struct seq_file *seq, void *v)
+ 
+ 		/* runqueue-specific stats */
+ 		seq_printf(seq,
+ 		    "cpu%d %u 0 %u %u %u %u %llu %llu %lu",
+ 		    cpu, rq->yld_count,
+ 		    rq->sched_count, rq->sched_goidle,
+ 		    rq->ttwu_count, rq->ttwu_local,
+ 		    rq->rq_cpu_time,
+ 		    rq->rq_sched_info.run_delay, rq->rq_sched_info.pcount);
+ 
  		seq_printf(seq, "\n");
  
  #ifdef CONFIG_SMP
@@ -17575,10 +18117,10 @@ index 857f837f52cbe..5486c63e47904 100644
  	}
  	return 0;
 diff --git a/kernel/sched/stats.h b/kernel/sched/stats.h
-index 38f3698f5e5b3..b9d597394316d 100644
+index 38f3698f5e5b..b9d597394316 100644
 --- a/kernel/sched/stats.h
 +++ b/kernel/sched/stats.h
-@@ -89,6 +89,7 @@ static inline void rq_sched_info_depart  (struct rq *rq, unsigned long long delt
+@@ -89,22 +89,24 @@ static inline void rq_sched_info_depart  (struct rq *rq, unsigned long long delt
  
  #endif /* CONFIG_SCHEDSTATS */
  
@@ -17586,7 +18128,16 @@ index 38f3698f5e5b3..b9d597394316d 100644
  #ifdef CONFIG_FAIR_GROUP_SCHED
  struct sched_entity_stats {
  	struct sched_entity     se;
-@@ -105,6 +106,7 @@ __schedstats_from_se(struct sched_entity *se)
+ 	struct sched_statistics stats;
+ } __no_randomize_layout;
+ #endif
+ 
+ static inline struct sched_statistics *
+ __schedstats_from_se(struct sched_entity *se)
+ {
+ #ifdef CONFIG_FAIR_GROUP_SCHED
+ 	if (!entity_is_task(se))
+ 		return &container_of(se, struct sched_entity_stats, se)->stats;
  #endif
  	return &task_of(se)->stats;
  }
@@ -17595,7 +18146,7 @@ index 38f3698f5e5b3..b9d597394316d 100644
  #ifdef CONFIG_PSI
  void psi_task_change(struct task_struct *task, int clear, int set);
 diff --git a/kernel/sched/topology.c b/kernel/sched/topology.c
-index 6682535e37c82..144875e2728d5 100644
+index 6682535e37c8..144875e2728d 100644
 --- a/kernel/sched/topology.c
 +++ b/kernel/sched/topology.c
 @@ -3,6 +3,7 @@
@@ -17655,7 +18206,7 @@ index 6682535e37c82..144875e2728d5 100644
 +#endif /* CONFIG_NUMA */
 +#endif
 diff --git a/kernel/sys.c b/kernel/sys.c
-index 339fee3eff6a2..6af3987e735cd 100644
+index 339fee3eff6a..6af3987e735c 100644
 --- a/kernel/sys.c
 +++ b/kernel/sys.c
 @@ -2715,6 +2715,153 @@ SYSCALL_DEFINE5(prctl, int, option, unsigned long, arg2, unsigned long, arg3,
@@ -17813,7 +18364,7 @@ index 339fee3eff6a2..6af3987e735cd 100644
  		struct getcpu_cache __user *, unused)
  {
 diff --git a/kernel/sys_ni.c b/kernel/sys_ni.c
-index 860b2dcf3ac46..96fe36a6d0f55 100644
+index 860b2dcf3ac4..96fe36a6d0f5 100644
 --- a/kernel/sys_ni.c
 +++ b/kernel/sys_ni.c
 @@ -292,6 +292,9 @@ COND_SYSCALL(mincore);
@@ -17827,10 +18378,10 @@ index 860b2dcf3ac46..96fe36a6d0f55 100644
  COND_SYSCALL(mbind);
  COND_SYSCALL(get_mempolicy);
 diff --git a/kernel/sysctl.c b/kernel/sysctl.c
-index bfe53e8355245..b90abfd6c6a9a 100644
+index bfe53e835524..b90abfd6c6a9 100644
 --- a/kernel/sysctl.c
 +++ b/kernel/sysctl.c
-@@ -80,6 +80,9 @@
+@@ -80,18 +80,25 @@
  #ifdef CONFIG_RT_MUTEXES
  #include <linux/rtmutex.h>
  #endif
@@ -17840,7 +18391,12 @@ index bfe53e8355245..b90abfd6c6a9a 100644
  
  /* shared constants to be used in various sysctls */
  const int sysctl_vals[] = { 0, 1, 2, 3, 4, 100, 200, 1000, 3000, INT_MAX, 65535, -1 };
-@@ -92,6 +95,10 @@ EXPORT_SYMBOL_GPL(sysctl_long_vals);
+ EXPORT_SYMBOL(sysctl_vals);
+ 
+ const unsigned long sysctl_long_vals[] = { 0, 1, LONG_MAX };
+ EXPORT_SYMBOL_GPL(sysctl_long_vals);
+ 
+ #if defined(CONFIG_SYSCTL)
  
  /* Constants used for minimum and maximum */
  
@@ -17886,7 +18442,7 @@ index bfe53e8355245..b90abfd6c6a9a 100644
  	{
  		.procname	= "spin_retry",
 diff --git a/kernel/time/hrtimer.c b/kernel/time/hrtimer.c
-index e8c08292defcb..3823ff0ddc0f9 100644
+index e8c08292defc..3823ff0ddc0f 100644
 --- a/kernel/time/hrtimer.c
 +++ b/kernel/time/hrtimer.c
 @@ -2088,8 +2088,10 @@ long hrtimer_nanosleep(ktime_t rqtp, const enum hrtimer_mode mode,
@@ -17902,7 +18458,7 @@ index e8c08292defcb..3823ff0ddc0f9 100644
  
  	hrtimer_init_sleeper_on_stack(&t, clockid, mode);
 diff --git a/kernel/time/posix-cpu-timers.c b/kernel/time/posix-cpu-timers.c
-index e9c6f9d0e42ce..43ee0a94abdde 100644
+index e9c6f9d0e42c..43ee0a94abdd 100644
 --- a/kernel/time/posix-cpu-timers.c
 +++ b/kernel/time/posix-cpu-timers.c
 @@ -223,7 +223,7 @@ static void task_sample_cputime(struct task_struct *p, u64 *samples)
@@ -17914,7 +18470,7 @@ index e9c6f9d0e42ce..43ee0a94abdde 100644
  }
  
  static void proc_sample_cputime_atomic(struct task_cputime_atomic *at,
-@@ -867,6 +867,7 @@ static void collect_posix_cputimers(struct posix_cputimers *pct, u64 *samples,
+@@ -867,13 +867,15 @@ static void collect_posix_cputimers(struct posix_cputimers *pct, u64 *samples,
  	}
  }
  
@@ -17922,7 +18478,7 @@ index e9c6f9d0e42ce..43ee0a94abdde 100644
  static inline void check_dl_overrun(struct task_struct *tsk)
  {
  	if (tsk->dl.dl_overrun) {
-@@ -874,6 +875,7 @@ static inline void check_dl_overrun(struct task_struct *tsk)
+ 		tsk->dl.dl_overrun = 0;
  		send_signal_locked(SIGXCPU, SEND_SIG_PRIV, tsk, PIDTYPE_TGID);
  	}
  }
@@ -17930,7 +18486,7 @@ index e9c6f9d0e42ce..43ee0a94abdde 100644
  
  static bool check_rlimit(u64 time, u64 limit, int signo, bool rt, bool hard)
  {
-@@ -901,8 +903,10 @@ static void check_thread_timers(struct task_struct *tsk,
+@@ -901,22 +903,24 @@ static void check_thread_timers(struct task_struct *tsk,
  	u64 samples[CPUCLOCK_MAX];
  	unsigned long soft;
  
@@ -17941,7 +18497,13 @@ index e9c6f9d0e42ce..43ee0a94abdde 100644
  
  	if (expiry_cache_is_inactive(pct))
  		return;
-@@ -916,7 +920,7 @@ static void check_thread_timers(struct task_struct *tsk,
+ 
+ 	task_sample_cputime(tsk, samples);
+ 	collect_posix_cputimers(pct, samples, firing);
+ 
+ 	/*
+ 	 * Check for the special case thread timers.
+ 	 */
  	soft = task_rlimit(tsk, RLIMIT_RTTIME);
  	if (soft != RLIM_INFINITY) {
  		/* Task RT timeout is accounted in jiffies. RTTIME is usec */
@@ -17962,7 +18524,7 @@ index e9c6f9d0e42ce..43ee0a94abdde 100644
  	return false;
  }
 diff --git a/kernel/trace/trace_selftest.c b/kernel/trace/trace_selftest.c
-index 529590499b1fa..d04bb99b4f0e7 100644
+index 529590499b1f..d04bb99b4f0e 100644
 --- a/kernel/trace/trace_selftest.c
 +++ b/kernel/trace/trace_selftest.c
 @@ -1155,10 +1155,15 @@ static int trace_wakeup_test_thread(void *data)
@@ -17982,7 +18544,7 @@ index 529590499b1fa..d04bb99b4f0e7 100644
  	struct wakeup_test_data *x = data;
  
 diff --git a/kernel/user_namespace.c b/kernel/user_namespace.c
-index 1d8e47bed3f11..fec01d016a351 100644
+index 1d8e47bed3f1..fec01d016a35 100644
 --- a/kernel/user_namespace.c
 +++ b/kernel/user_namespace.c
 @@ -22,6 +22,13 @@
@@ -18000,7 +18562,7 @@ index 1d8e47bed3f11..fec01d016a351 100644
  static DEFINE_MUTEX(userns_state_mutex);
  
 diff --git a/lib/maple_tree.c b/lib/maple_tree.c
-index 8ebc43d4cc8c5..35264f1936a37 100644
+index 8ebc43d4cc8c..35264f1936a3 100644
 --- a/lib/maple_tree.c
 +++ b/lib/maple_tree.c
 @@ -4263,11 +4263,13 @@ static inline bool mas_wr_slot_store(struct ma_wr_state *wr_mas)
@@ -18030,7 +18592,7 @@ index 8ebc43d4cc8c5..35264f1936a37 100644
  
  	if (!wr_mas->entry)
 diff --git a/mm/Kconfig b/mm/Kconfig
-index 7672a22647b4a..bf4472af012db 100644
+index 7672a22647b4..c8cce399199d 100644
 --- a/mm/Kconfig
 +++ b/mm/Kconfig
 @@ -605,7 +605,7 @@ config COMPACTION
@@ -18042,16 +18604,17 @@ index 7672a22647b4a..bf4472af012db 100644
  	default 1
  
  #
-@@ -1198,7 +1198,7 @@ config ARCH_SUPPORTS_PER_VMA_LOCK
+@@ -1198,14 +1198,19 @@ config ARCH_SUPPORTS_PER_VMA_LOCK
         def_bool n
  
  config PER_VMA_LOCK
 -	def_bool y
 +	bool "Enable per-vma locking during page fault handling."
  	depends on ARCH_SUPPORTS_PER_VMA_LOCK && MMU && SMP
++	depends on BROKEN
  	help
  	  Allow per-vma locking during page fault handling.
-@@ -1206,6 +1206,10 @@ config PER_VMA_LOCK
+ 
  	  This feature allows locking each virtual memory area separately when
  	  handling page faults instead of taking mmap_lock.
  
@@ -18063,7 +18626,7 @@ index 7672a22647b4a..bf4472af012db 100644
  
  endmenu
 diff --git a/mm/compaction.c b/mm/compaction.c
-index c8bcdea15f5f9..40c29a6acd09a 100644
+index c8bcdea15f5f..40c29a6acd09 100644
 --- a/mm/compaction.c
 +++ b/mm/compaction.c
 @@ -1734,7 +1734,11 @@ static int sysctl_compact_unevictable_allowed __read_mostly = CONFIG_COMPACT_UNE
@@ -18079,7 +18642,7 @@ index c8bcdea15f5f9..40c29a6acd09a 100644
  
  static inline void
 diff --git a/mm/gup.c b/mm/gup.c
-index bbe4162365933..94102390b273a 100644
+index bbe416236593..94102390b273 100644
 --- a/mm/gup.c
 +++ b/mm/gup.c
 @@ -1096,7 +1096,11 @@ static long __get_user_pages(struct mm_struct *mm,
@@ -18103,16 +18666,16 @@ index bbe4162365933..94102390b273a 100644
 -	if (!vma || address < vma->vm_start)
 +	vma = find_vma(mm, address);
 +	if (!vma)
-+		return -EFAULT;
+ 		return -EFAULT;
 +	if (address < vma->vm_start ) {
 +		WARN_ON_ONCE(vma->vm_flags & VM_GROWSDOWN);
- 		return -EFAULT;
++		return -EFAULT;
 +	}
  
  	if (!vma_permits_fault(vma, fault_flags))
  		return -EFAULT;
 diff --git a/mm/huge_memory.c b/mm/huge_memory.c
-index 624671aaa60d0..ecd6f8de1a38c 100644
+index 624671aaa60d..ecd6f8de1a38 100644
 --- a/mm/huge_memory.c
 +++ b/mm/huge_memory.c
 @@ -61,7 +61,11 @@ unsigned long transparent_hugepage_flags __read_mostly =
@@ -18128,7 +18691,7 @@ index 624671aaa60d0..ecd6f8de1a38c 100644
  	(1<<TRANSPARENT_HUGEPAGE_USE_ZERO_PAGE_FLAG);
  
 diff --git a/mm/hugetlb.c b/mm/hugetlb.c
-index f154019e6b840..f791076da157c 100644
+index f154019e6b84..f791076da157 100644
 --- a/mm/hugetlb.c
 +++ b/mm/hugetlb.c
 @@ -5731,13 +5731,13 @@ static bool hugetlbfs_pagecache_present(struct hstate *h,
@@ -18136,12 +18699,12 @@ index f154019e6b840..f791076da157c 100644
  	struct address_space *mapping = vma->vm_file->f_mapping;
  	pgoff_t idx = vma_hugecache_offset(h, vma, address);
 -	bool present;
--
++	struct folio *folio;
+ 
 -	rcu_read_lock();
 -	present = page_cache_next_miss(mapping, idx, 1) != idx;
 -	rcu_read_unlock();
-+	struct folio *folio;
- 
+-
 -	return present;
 +	folio = filemap_get_folio(mapping, idx);
 +	if (IS_ERR(folio))
@@ -18152,7 +18715,7 @@ index f154019e6b840..f791076da157c 100644
  
  int hugetlb_add_to_page_cache(struct folio *folio, struct address_space *mapping,
 diff --git a/mm/internal.h b/mm/internal.h
-index 68410c6d97aca..66745a176e74e 100644
+index 68410c6d97ac..66745a176e74 100644
 --- a/mm/internal.h
 +++ b/mm/internal.h
 @@ -403,6 +403,7 @@ extern void prep_compound_page(struct page *page, unsigned int order);
@@ -18164,10 +18727,10 @@ index 68410c6d97aca..66745a176e74e 100644
  extern void free_unref_page(struct page *page, unsigned int order);
  extern void free_unref_page_list(struct list_head *list);
 diff --git a/mm/khugepaged.c b/mm/khugepaged.c
-index 2d0d58fb4e7fa..47b59f2843f60 100644
+index 2d0d58fb4e7f..47b59f2843f6 100644
 --- a/mm/khugepaged.c
 +++ b/mm/khugepaged.c
-@@ -1918,9 +1918,9 @@ static int collapse_file(struct mm_struct *mm, unsigned long addr,
+@@ -1918,24 +1918,23 @@ static int collapse_file(struct mm_struct *mm, unsigned long addr,
  		}
  	} while (1);
  
@@ -18179,7 +18742,14 @@ index 2d0d58fb4e7fa..47b59f2843f60 100644
  
  		VM_BUG_ON(index != xas.xa_index);
  		if (is_shmem) {
-@@ -1935,7 +1935,6 @@ static int collapse_file(struct mm_struct *mm, unsigned long addr,
+ 			if (!page) {
+ 				/*
+ 				 * Stop if extent has been truncated or
+ 				 * hole-punched, and is now completely
+ 				 * empty.
+ 				 */
+ 				if (index == start) {
+ 					if (!xas_next_entry(&xas, end - 1)) {
  						result = SCAN_TRUNCATED;
  						goto xa_locked;
  					}
@@ -18197,7 +18767,7 @@ index 2d0d58fb4e7fa..47b59f2843f60 100644
  		/*
  		 * We control three references to the page:
 diff --git a/mm/memory.c b/mm/memory.c
-index f69fbc2511984..5ce82a76201d5 100644
+index f69fbc251198..5ce82a76201d 100644
 --- a/mm/memory.c
 +++ b/mm/memory.c
 @@ -5262,6 +5262,125 @@ vm_fault_t handle_mm_fault(struct vm_area_struct *vma, unsigned long address,
@@ -18342,7 +18912,7 @@ index f69fbc2511984..5ce82a76201d5 100644
  	while (len) {
  		int bytes, ret, offset;
 diff --git a/mm/mmap.c b/mm/mmap.c
-index d600404580b28..bc510361acec2 100644
+index d600404580b2..bc510361acec 100644
 --- a/mm/mmap.c
 +++ b/mm/mmap.c
 @@ -1935,7 +1935,7 @@ static int acct_stack_growth(struct vm_area_struct *vma,
@@ -18354,7 +18924,7 @@ index d600404580b28..bc510361acec2 100644
  {
  	struct mm_struct *mm = vma->vm_mm;
  	struct vm_area_struct *next;
-@@ -2027,6 +2027,7 @@ int expand_upwards(struct vm_area_struct *vma, unsigned long address)
+@@ -2027,24 +2027,29 @@ int expand_upwards(struct vm_area_struct *vma, unsigned long address)
  
  /*
   * vma is the first one with address < vma->vm_start.  Have to extend vma.
@@ -18362,7 +18932,8 @@ index d600404580b28..bc510361acec2 100644
   */
  int expand_downwards(struct vm_area_struct *vma, unsigned long address)
  {
-@@ -2035,16 +2036,20 @@ int expand_downwards(struct vm_area_struct *vma, unsigned long address)
+ 	struct mm_struct *mm = vma->vm_mm;
+ 	MA_STATE(mas, &mm->mm_mt, vma->vm_start, vma->vm_start);
  	struct vm_area_struct *prev;
  	int error = 0;
  
@@ -18387,7 +18958,7 @@ index d600404580b28..bc510361acec2 100644
  			return -ENOMEM;
  	}
  
-@@ -2124,13 +2129,12 @@ static int __init cmdline_parse_stack_guard_gap(char *p)
+@@ -2124,56 +2129,140 @@ static int __init cmdline_parse_stack_guard_gap(char *p)
  __setup("stack_guard_gap=", cmdline_parse_stack_guard_gap);
  
  #ifdef CONFIG_STACK_GROWSUP
@@ -18403,7 +18974,7 @@ index d600404580b28..bc510361acec2 100644
  {
  	struct vm_area_struct *vma, *prev;
  
-@@ -2138,20 +2142,23 @@ find_extend_vma(struct mm_struct *mm, unsigned long addr)
+ 	addr &= PAGE_MASK;
  	vma = find_vma_prev(mm, addr, &prev);
  	if (vma && (vma->vm_start <= addr))
  		return vma;
@@ -18431,7 +19002,10 @@ index d600404580b28..bc510361acec2 100644
  {
  	struct vm_area_struct *vma;
  	unsigned long start;
-@@ -2162,10 +2169,8 @@ find_extend_vma(struct mm_struct *mm, unsigned long addr)
+ 
+ 	addr &= PAGE_MASK;
+ 	vma = find_vma(mm, addr);
+ 	if (!vma)
  		return NULL;
  	if (vma->vm_start <= addr)
  		return vma;
@@ -18443,7 +19017,7 @@ index d600404580b28..bc510361acec2 100644
  		return NULL;
  	if (vma->vm_flags & VM_LOCKED)
  		populate_vma_page_range(vma, addr, start, NULL);
-@@ -2173,7 +2178,91 @@ find_extend_vma(struct mm_struct *mm, unsigned long addr)
+ 	return vma;
  }
  #endif
  
@@ -18537,7 +19111,7 @@ index d600404580b28..bc510361acec2 100644
  /*
   * Ok - we have the memory areas we should free on a maple tree so release them,
 diff --git a/mm/nommu.c b/mm/nommu.c
-index f670d9979a261..c072a660ec2cf 100644
+index f670d9979a26..c072a660ec2c 100644
 --- a/mm/nommu.c
 +++ b/mm/nommu.c
 @@ -631,23 +631,36 @@ struct vm_area_struct *find_vma(struct mm_struct *mm, unsigned long addr)
@@ -18583,7 +19157,7 @@ index f670d9979a261..c072a660ec2cf 100644
   * look up the first VMA exactly that exactly matches addr
   * - should be called with mm->mmap_lock at least held readlocked
 diff --git a/mm/page_alloc.c b/mm/page_alloc.c
-index 47421bedc12b7..85b8e1d044593 100644
+index 47421bedc12b..85b8e1d04459 100644
 --- a/mm/page_alloc.c
 +++ b/mm/page_alloc.c
 @@ -110,6 +110,8 @@ typedef int __bitwise fpi_t;
@@ -18646,10 +19220,10 @@ index 47421bedc12b7..85b8e1d044593 100644
  }
  
 diff --git a/mm/swap.c b/mm/swap.c
-index 423199ee8478c..feeafc5e5ed84 100644
+index 423199ee8478..feeafc5e5ed8 100644
 --- a/mm/swap.c
 +++ b/mm/swap.c
-@@ -1090,6 +1090,10 @@ void folio_batch_remove_exceptionals(struct folio_batch *fbatch)
+@@ -1090,15 +1090,20 @@ void folio_batch_remove_exceptionals(struct folio_batch *fbatch)
   */
  void __init swap_setup(void)
  {
@@ -18660,14 +19234,18 @@ index 423199ee8478c..feeafc5e5ed84 100644
  	unsigned long megs = totalram_pages() >> (20 - PAGE_SHIFT);
  
  	/* Use a smaller cluster for small-memory machines */
-@@ -1101,4 +1105,5 @@ void __init swap_setup(void)
+ 	if (megs < 16)
+ 		page_cluster = 2;
+ 	else
+ 		page_cluster = 3;
+ 	/*
  	 * Right now other parts of the system means that we
  	 * _really_ don't want to cluster much more
  	 */
 +#endif
  }
 diff --git a/mm/vmscan.c b/mm/vmscan.c
-index 5bf98d0a22c9a..db77656633a7f 100644
+index 5bf98d0a22c9..db77656633a7 100644
 --- a/mm/vmscan.c
 +++ b/mm/vmscan.c
 @@ -4558,7 +4558,11 @@ static bool lruvec_is_reclaimable(struct lruvec *lruvec, struct scan_control *sc
@@ -18702,7 +19280,7 @@ index 5bf98d0a22c9a..db77656633a7f 100644
  	/* kswapd must be awake if processes are being throttled */
  	if (!wmark_ok && waitqueue_active(&pgdat->kswapd_wait)) {
  		if (READ_ONCE(pgdat->kswapd_highest_zoneidx) > ZONE_NORMAL)
-@@ -6946,7 +6954,7 @@ static bool throttle_direct_reclaim(gfp_t gfp_mask, struct zonelist *zonelist,
+@@ -6946,33 +6954,36 @@ static bool throttle_direct_reclaim(gfp_t gfp_mask, struct zonelist *zonelist,
  
  		/* Throttle based on the first usable node */
  		pgdat = zone->zone_pgdat;
@@ -18711,7 +19289,21 @@ index 5bf98d0a22c9a..db77656633a7f 100644
  			goto out;
  		break;
  	}
-@@ -6968,11 +6976,14 @@ static bool throttle_direct_reclaim(gfp_t gfp_mask, struct zonelist *zonelist,
+ 
+ 	/* If no zone was usable by the allocation flags then do not throttle */
+ 	if (!pgdat)
+ 		goto out;
+ 
+ 	/* Account for the throttling */
+ 	count_vm_event(PGSCAN_DIRECT_THROTTLE);
+ 
+ 	/*
+ 	 * If the caller cannot enter the filesystem, it's possible that it
+ 	 * is due to the caller holding an FS lock or performing a journal
+ 	 * transaction in the case of a filesystem like ext[3|4]. In this case,
+ 	 * it is not safe to block on pfmemalloc_wait as kswapd could be
+ 	 * blocked waiting on the same lock. Instead, throttle for up to a
+ 	 * second before continuing.
  	 */
  	if (!(gfp_mask & __GFP_FS))
  		wait_event_interruptible_timeout(pgdat->pfmemalloc_wait,
@@ -18747,7 +19339,7 @@ index 5bf98d0a22c9a..db77656633a7f 100644
  
  		/*
 diff --git a/net/can/isotp.c b/net/can/isotp.c
-index 84f9aba029017..ca9d728d6d727 100644
+index 84f9aba02901..ca9d728d6d72 100644
 --- a/net/can/isotp.c
 +++ b/net/can/isotp.c
 @@ -1112,8 +1112,9 @@ static int isotp_sendmsg(struct socket *sock, struct msghdr *msg, size_t size)
@@ -18763,7 +19355,7 @@ index 84f9aba029017..ca9d728d6d727 100644
  
  	return size;
 diff --git a/net/ipv4/Kconfig b/net/ipv4/Kconfig
-index 2dfb12230f089..b6bec331a82e4 100644
+index 2dfb12230f08..b6bec331a82e 100644
 --- a/net/ipv4/Kconfig
 +++ b/net/ipv4/Kconfig
 @@ -678,6 +678,24 @@ config TCP_CONG_BBR
@@ -18791,7 +19383,7 @@ index 2dfb12230f089..b6bec331a82e4 100644
  choice
  	prompt "Default TCP congestion control"
  	default DEFAULT_CUBIC
-@@ -715,6 +733,9 @@ choice
+@@ -715,30 +733,34 @@ choice
  	config DEFAULT_BBR
  		bool "BBR" if TCP_CONG_BBR=y
  
@@ -18801,7 +19393,24 @@ index 2dfb12230f089..b6bec331a82e4 100644
  	config DEFAULT_RENO
  		bool "Reno"
  endchoice
-@@ -739,6 +760,7 @@ config DEFAULT_TCP_CONG
+ 
+ endif
+ 
+ config TCP_CONG_CUBIC
+ 	tristate
+ 	depends on !TCP_CONG_ADVANCED
+ 	default y
+ 
+ config DEFAULT_TCP_CONG
+ 	string
+ 	default "bic" if DEFAULT_BIC
+ 	default "cubic" if DEFAULT_CUBIC
+ 	default "htcp" if DEFAULT_HTCP
+ 	default "hybla" if DEFAULT_HYBLA
+ 	default "vegas" if DEFAULT_VEGAS
+ 	default "westwood" if DEFAULT_WESTWOOD
+ 	default "veno" if DEFAULT_VENO
+ 	default "reno" if DEFAULT_RENO
  	default "dctcp" if DEFAULT_DCTCP
  	default "cdg" if DEFAULT_CDG
  	default "bbr" if DEFAULT_BBR
@@ -18810,7 +19419,7 @@ index 2dfb12230f089..b6bec331a82e4 100644
  
  config TCP_MD5SIG
 diff --git a/net/ipv4/Makefile b/net/ipv4/Makefile
-index b18ba8ef93ad2..b4e3dcb27a20b 100644
+index b18ba8ef93ad..b4e3dcb27a20 100644
 --- a/net/ipv4/Makefile
 +++ b/net/ipv4/Makefile
 @@ -47,6 +47,7 @@ obj-$(CONFIG_INET_TCP_DIAG) += tcp_diag.o
@@ -18822,7 +19431,7 @@ index b18ba8ef93ad2..b4e3dcb27a20b 100644
  obj-$(CONFIG_TCP_CONG_CDG) += tcp_cdg.o
  obj-$(CONFIG_TCP_CONG_CUBIC) += tcp_cubic.o
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index 8d20d9221238c..99c2e0357decf 100644
+index 8d20d9221238..99c2e0357dec 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
 @@ -3192,6 +3192,7 @@ int tcp_disconnect(struct sock *sk, int flags)
@@ -18834,7 +19443,7 @@ index 8d20d9221238c..99c2e0357decf 100644
  
  	/* Clean up fastopen related fields */
 diff --git a/net/ipv4/tcp_bbr.c b/net/ipv4/tcp_bbr.c
-index 146792cd26fed..16038f6ee52a7 100644
+index 146792cd26fe..16038f6ee52a 100644
 --- a/net/ipv4/tcp_bbr.c
 +++ b/net/ipv4/tcp_bbr.c
 @@ -294,26 +294,40 @@ static void bbr_set_pacing_rate(struct sock *sk, u32 bw, int gain)
@@ -18875,7 +19484,7 @@ index 146792cd26fed..16038f6ee52a7 100644
  {
  	struct tcp_sock *tp = tcp_sk(sk);
 -	u32 segs, bytes;
--
+ 
 -	/* Sort of tcp_tso_autosize() but ignoring
 -	 * driver provided sk_gso_max_size.
 -	 */
@@ -18883,7 +19492,7 @@ index 146792cd26fed..16038f6ee52a7 100644
 -		      sk->sk_pacing_rate >> READ_ONCE(sk->sk_pacing_shift),
 -		      GSO_LEGACY_MAX_SIZE - 1 - MAX_TCP_HEADER);
 -	segs = max_t(u32, bytes / tp->mss_cache, bbr_min_tso_segs(sk));
- 
+-
 -	return min(segs, 0x7FU);
 +	return  bbr_tso_segs_generic(sk, tp->mss_cache, GSO_LEGACY_MAX_SIZE);
  }
@@ -18900,7 +19509,7 @@ index 146792cd26fed..16038f6ee52a7 100644
  };
 diff --git a/net/ipv4/tcp_bbr2.c b/net/ipv4/tcp_bbr2.c
 new file mode 100644
-index 0000000000000..85f8052144d1f
+index 000000000000..85f8052144d1
 --- /dev/null
 +++ b/net/ipv4/tcp_bbr2.c
 @@ -0,0 +1,2674 @@
@@ -21579,7 +22188,7 @@ index 0000000000000..85f8052144d1f
 +MODULE_LICENSE("Dual BSD/GPL");
 +MODULE_DESCRIPTION("TCP BBR (Bottleneck Bandwidth and RTT)");
 diff --git a/net/ipv4/tcp_cong.c b/net/ipv4/tcp_cong.c
-index 1b34050a7538b..66d40449b3f4f 100644
+index 1b34050a7538..66d40449b3f4 100644
 --- a/net/ipv4/tcp_cong.c
 +++ b/net/ipv4/tcp_cong.c
 @@ -241,6 +241,7 @@ void tcp_init_congestion_control(struct sock *sk)
@@ -21591,10 +22200,10 @@ index 1b34050a7538b..66d40449b3f4f 100644
  		icsk->icsk_ca_ops->init(sk);
  	if (tcp_ca_needs_ecn(sk))
 diff --git a/net/ipv4/tcp_input.c b/net/ipv4/tcp_input.c
-index bf8b22218dd46..3ae56b0676a86 100644
+index bf8b22218dd4..3ae56b0676a8 100644
 --- a/net/ipv4/tcp_input.c
 +++ b/net/ipv4/tcp_input.c
-@@ -349,7 +349,7 @@ static void __tcp_ecn_check_ce(struct sock *sk, const struct sk_buff *skb)
+@@ -349,18 +349,18 @@ static void __tcp_ecn_check_ce(struct sock *sk, const struct sk_buff *skb)
  			tcp_enter_quickack_mode(sk, 2);
  		break;
  	case INET_ECN_CE:
@@ -21603,7 +22212,10 @@ index bf8b22218dd46..3ae56b0676a86 100644
  			tcp_ca_event(sk, CA_EVENT_ECN_IS_CE);
  
  		if (!(tp->ecn_flags & TCP_ECN_DEMAND_CWR)) {
-@@ -360,7 +360,7 @@ static void __tcp_ecn_check_ce(struct sock *sk, const struct sk_buff *skb)
+ 			/* Better not delay acks, sender can have a very low cwnd */
+ 			tcp_enter_quickack_mode(sk, 2);
+ 			tp->ecn_flags |= TCP_ECN_DEMAND_CWR;
+ 		}
  		tp->ecn_flags |= TCP_ECN_SEEN;
  		break;
  	default:
@@ -21677,7 +22289,7 @@ index bf8b22218dd46..3ae56b0676a86 100644
  	    tcp_in_quickack_mode(sk) ||
  	    /* Protocol state mandates a one-time immediate ACK */
 diff --git a/net/ipv4/tcp_output.c b/net/ipv4/tcp_output.c
-index cfe128b81a010..6166db9a85710 100644
+index cfe128b81a01..6166db9a8571 100644
 --- a/net/ipv4/tcp_output.c
 +++ b/net/ipv4/tcp_output.c
 @@ -375,7 +375,8 @@ static void tcp_ecn_send(struct sock *sk, struct sk_buff *skb,
@@ -21720,12 +22332,12 @@ index cfe128b81a010..6166db9a85710 100644
  {
  	const struct tcp_congestion_ops *ca_ops = inet_csk(sk)->icsk_ca_ops;
 -	u32 min_tso, tso_segs;
--
++	u32 tso_segs;
+ 
 -	min_tso = ca_ops->min_tso_segs ?
 -			ca_ops->min_tso_segs(sk) :
 -			READ_ONCE(sock_net(sk)->ipv4.sysctl_tcp_min_tso_segs);
-+	u32 tso_segs;
- 
+-
 -	tso_segs = tcp_tso_autosize(sk, mss_now, min_tso);
 +	tso_segs = ca_ops->tso_segs ?
 +		ca_ops->tso_segs(sk, mss_now) :
@@ -21743,7 +22355,7 @@ index cfe128b81a010..6166db9a85710 100644
  		}
  
 diff --git a/net/ipv4/tcp_rate.c b/net/ipv4/tcp_rate.c
-index a8f6d9d06f2eb..a8b4c95045701 100644
+index a8f6d9d06f2e..a8b4c9504570 100644
 --- a/net/ipv4/tcp_rate.c
 +++ b/net/ipv4/tcp_rate.c
 @@ -34,6 +34,24 @@
@@ -21771,7 +22383,7 @@ index a8f6d9d06f2eb..a8b4c95045701 100644
  /* Snapshot the current delivery information in the skb, to generate
   * a rate sample later when the skb is (s)acked in tcp_rate_skb_delivered().
   */
-@@ -66,7 +84,9 @@ void tcp_rate_skb_sent(struct sock *sk, struct sk_buff *skb)
+@@ -66,43 +84,48 @@ void tcp_rate_skb_sent(struct sock *sk, struct sk_buff *skb)
  	TCP_SKB_CB(skb)->tx.delivered_mstamp	= tp->delivered_mstamp;
  	TCP_SKB_CB(skb)->tx.delivered		= tp->delivered;
  	TCP_SKB_CB(skb)->tx.delivered_ce	= tp->delivered_ce;
@@ -21781,7 +22393,24 @@ index a8f6d9d06f2eb..a8b4c95045701 100644
  }
  
  /* When an skb is sacked or acked, we fill in the rate sample with the (prior)
-@@ -91,18 +111,21 @@ void tcp_rate_skb_delivered(struct sock *sk, struct sk_buff *skb,
+  * delivery information when the skb was last transmitted.
+  *
+  * If an ACK (s)acks multiple skbs (e.g., stretched-acks), this function is
+  * called multiple times. We favor the information from the most recently
+  * sent skb, i.e., the skb with the most recently sent time and the highest
+  * sequence.
+  */
+ void tcp_rate_skb_delivered(struct sock *sk, struct sk_buff *skb,
+ 			    struct rate_sample *rs)
+ {
+ 	struct tcp_sock *tp = tcp_sk(sk);
+ 	struct tcp_skb_cb *scb = TCP_SKB_CB(skb);
+ 	u64 tx_tstamp;
+ 
+ 	if (!scb->tx.delivered_mstamp)
+ 		return;
+ 
+ 	tx_tstamp = tcp_skb_timestamp_us(skb);
  	if (!rs->prior_delivered ||
  	    tcp_skb_sent_after(tx_tstamp, tp->first_tx_mstamp,
  			       scb->end_seq, rs->last_end_seq)) {
@@ -21805,7 +22434,7 @@ index a8f6d9d06f2eb..a8b4c95045701 100644
  
  	}
  	/* Mark off the skb delivered once it's sacked to avoid being
-@@ -144,6 +167,7 @@ void tcp_rate_gen(struct sock *sk, u32 delivered, u32 lost,
+@@ -144,18 +167,19 @@ void tcp_rate_gen(struct sock *sk, u32 delivered, u32 lost,
  		return;
  	}
  	rs->delivered   = tp->delivered - rs->prior_delivered;
@@ -21813,7 +22442,11 @@ index a8f6d9d06f2eb..a8b4c95045701 100644
  
  	rs->delivered_ce = tp->delivered_ce - rs->prior_delivered_ce;
  	/* delivered_ce occupies less than 32 bits in the skb control block */
-@@ -155,7 +179,7 @@ void tcp_rate_gen(struct sock *sk, u32 delivered, u32 lost,
+ 	rs->delivered_ce &= TCPCB_DELIVERED_CE_MASK;
+ 
+ 	/* Model sending data and receiving ACKs as separate pipeline phases
+ 	 * for a window. Usually the ACK phase is longer, but with ACK
+ 	 * compression the send phase can be longer. To be safe we use the
  	 * longer phase.
  	 */
  	snd_us = rs->interval_us;				/* send phase */
@@ -21823,7 +22456,7 @@ index a8f6d9d06f2eb..a8b4c95045701 100644
  	rs->interval_us = max(snd_us, ack_us);
  
 diff --git a/net/ipv4/tcp_timer.c b/net/ipv4/tcp_timer.c
-index 39eb947fe3920..61ab4ee55b226 100644
+index 39eb947fe392..61ab4ee55b22 100644
 --- a/net/ipv4/tcp_timer.c
 +++ b/net/ipv4/tcp_timer.c
 @@ -615,6 +615,7 @@ void tcp_write_timer_handler(struct sock *sk)
@@ -21835,7 +22468,7 @@ index 39eb947fe3920..61ab4ee55b226 100644
  	event = icsk->icsk_pending;
  
 diff --git a/net/netfilter/nf_tables_api.c b/net/netfilter/nf_tables_api.c
-index 4c7937fd803f9..1d64c163076a1 100644
+index 4c7937fd803f..1d64c163076a 100644
 --- a/net/netfilter/nf_tables_api.c
 +++ b/net/netfilter/nf_tables_api.c
 @@ -5343,6 +5343,8 @@ void nf_tables_deactivate_set(const struct nft_ctx *ctx, struct nft_set *set,
@@ -21848,7 +22481,7 @@ index 4c7937fd803f9..1d64c163076a1 100644
  		set->use--;
  		break;
 diff --git a/scripts/tags.sh b/scripts/tags.sh
-index ea31640b26715..f6b3c7cd39c7c 100755
+index ea31640b2671..f6b3c7cd39c7 100755
 --- a/scripts/tags.sh
 +++ b/scripts/tags.sh
 @@ -32,6 +32,13 @@ else
@@ -21875,7 +22508,7 @@ index ea31640b26715..f6b3c7cd39c7c 100755
  
  # Basic regular expressions with an optional /kind-spec/ for ctags and
 diff --git a/tools/include/nolibc/arch-x86_64.h b/tools/include/nolibc/arch-x86_64.h
-index f7f2a11d4c3b0..f52725f51fca6 100644
+index f7f2a11d4c3b..f52725f51fca 100644
 --- a/tools/include/nolibc/arch-x86_64.h
 +++ b/tools/include/nolibc/arch-x86_64.h
 @@ -190,7 +190,7 @@ const unsigned long *_auxv __attribute__((weak));
@@ -21888,7 +22521,7 @@ index f7f2a11d4c3b0..f52725f51fca6 100644
  	__asm__ volatile (
  #ifdef NOLIBC_STACKPROTECTOR
 diff --git a/tools/testing/cxl/Kbuild b/tools/testing/cxl/Kbuild
-index 6f9347ade82cd..fba7bec96acd1 100644
+index 6f9347ade82c..fba7bec96acd 100644
 --- a/tools/testing/cxl/Kbuild
 +++ b/tools/testing/cxl/Kbuild
 @@ -6,7 +6,6 @@ ldflags-y += --wrap=acpi_pci_find_root
@@ -21900,7 +22533,7 @@ index 6f9347ade82cd..fba7bec96acd1 100644
  ldflags-y += --wrap=devm_cxl_enumerate_decoders
  ldflags-y += --wrap=cxl_await_media_ready
 diff --git a/tools/testing/cxl/test/mock.c b/tools/testing/cxl/test/mock.c
-index 2844165276440..de3933a776fdb 100644
+index 284416527644..de3933a776fd 100644
 --- a/tools/testing/cxl/test/mock.c
 +++ b/tools/testing/cxl/test/mock.c
 @@ -149,21 +149,6 @@ struct cxl_hdm *__wrap_devm_cxl_setup_hdm(struct cxl_port *port,
