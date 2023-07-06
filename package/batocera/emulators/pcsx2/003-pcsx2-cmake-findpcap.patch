@@ -1,5 +1,5 @@
 diff --git a/cmake/FindPCAP.cmake b/cmake/FindPCAP.cmake
-index 4712b31b5e..5b96656bab 100644
+index 4712b31b5..5b96656ba 100644
 --- a/cmake/FindPCAP.cmake
 +++ b/cmake/FindPCAP.cmake
 @@ -44,26 +44,7 @@ find_package_handle_standard_args(PCAP DEFAULT_MSG
