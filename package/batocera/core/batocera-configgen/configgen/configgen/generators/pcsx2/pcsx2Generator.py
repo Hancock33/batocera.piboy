@@ -25,7 +25,6 @@ class Pcsx2Generator(Generator):
         return 4/3
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-
         pcsx2ConfigDir = "/userdata/system/configs/PCSX2"
 
         # Remove older config files if present
@@ -45,14 +44,8 @@ class Pcsx2Generator(Generator):
         dbfile = pcsx2ConfigDir + "/game_controller_db.txt"
         controllersConfig.writeSDLGameDBAllControllers(playersControllers, dbfile)
 
-        if system.isOptSet('avx2'):
-            if system.config['avx2'] == '1':
-                commandArray = ["/usr/bin/pcsx2/pcsx2-avx2", "-nogui", "-fullscreen", rom]
-            elif system.config['avx2'] == '0':
-                commandArray = ["/usr/bin/pcsx2/pcsx2", "-nogui", "-fullscreen", rom]
-        else:
-            commandArray = ["/usr/bin/pcsx2/pcsx2", "-nogui", "-fullscreen", rom]
-
+        commandArray = ["/usr/bin/pcsx2/pcsx2", "-nogui", "-fullscreen", rom]
+r
         return Command.Command(
             array=commandArray,
             env={ "XDG_CONFIG_HOME":batoceraFiles.CONF,
@@ -565,9 +558,3 @@ def configureINI(config_directory, bios_directory, system, controllers, guns):
 
     with open(configFileName, 'w') as configfile:
         pcsx2INIConfig.write(configfile)
-
-def checkAvx2():
-    for line in open("/proc/cpuinfo").readlines():
-        if re.match("^flags[\t ]*:.* avx2", line):
-            return True
-    return False

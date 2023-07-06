@@ -331,7 +331,6 @@ menu "Emulators"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/openbor/openbor6510/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/openbor/openbor7142/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/pcsx2/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/pcsx2-avx2/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/pifba/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/play/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/ppsspp/Config.in"
@@ -573,4 +572,3 @@ menu "Libraries"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/wxwidgets/Config.in"
 endmenu
 endmenu
-
