@@ -10827,14 +10827,9 @@ msgctxt "game_options"
 msgid "Stretch to full"
 msgstr ""
 
-#. TRANSLATION: xemu
+#. TRANSLATION: xemu, yabasanshiro
 msgctxt "game_options"
-msgid "Stretch to 16:9"
-msgstr ""
-
-#. TRANSLATION: xemu
-msgctxt "game_options"
-msgid "Stretch to 4:3"
+msgid "Native"
 msgstr ""
 
 #. TRANSLATION: xemu
@@ -12003,11 +11998,6 @@ msgstr ""
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
 msgid "Full Screen"
-msgstr ""
-
-#. TRANSLATION: yabasanshiro
-msgctxt "game_options"
-msgid "Native"
 msgstr ""
 
 #. TRANSLATION: yabasanshiro

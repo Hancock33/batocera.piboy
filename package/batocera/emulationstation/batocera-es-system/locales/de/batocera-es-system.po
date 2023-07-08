@@ -11105,7 +11105,7 @@ msgctxt "game_options"
 msgid "Stretch to full"
 msgstr "Strecken auf Vollbild"
 
-#. TRANSLATION: xemu
+#. TRANSLATION: xemu, yabasanshiro
 msgctxt "game_options"
 msgid "Native"
 msgstr ""
@@ -12298,11 +12298,6 @@ msgstr "INTERNE ANZEIGEAUFLÖSUNG"
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
 msgid "Full Screen"
-msgstr ""
-
-#. TRANSLATION: yabasanshiro
-msgctxt "game_options"
-msgid "Native"
 msgstr ""
 
 #. TRANSLATION: yabasanshiro
