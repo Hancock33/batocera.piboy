@@ -1,13 +1,13 @@
 diff --git a/pcsx2/Input/SDLInputSource.cpp b/pcsx2/Input/SDLInputSource.cpp
-index 2802e798b..6a725e1c6 100644
+index 236e52a56..177253bc4 100644
 --- a/pcsx2/Input/SDLInputSource.cpp
 +++ b/pcsx2/Input/SDLInputSource.cpp
-@@ -118,7 +118,7 @@ SDLInputSource::~SDLInputSource()
- 
- bool SDLInputSource::Initialize(SettingsInterface& si, std::unique_lock<std::mutex>& settings_lock)
+@@ -226,7 +226,7 @@ bool SDLInputSource::LoadControllerDB()
  {
--	std::optional<std::vector<u8>> controller_db_data = Host::ReadResourceFile("game_controller_db.txt");
-+	std::optional<std::vector<u8>> controller_db_data = Host::ReadResourceFile("/userdata/system/configs/PCSX2/game_controller_db.txt");
- 	if (controller_db_data.has_value())
+ 	Error error;
+ 	std::FILE* fp =
+-		FileSystem::OpenCFile(Path::Combine(EmuFolders::Resources, CONTROLLER_DB_FILENAME).c_str(), "rb", &error);
++		FileSystem::OpenCFile(Path::Combine("/userdata/system/configs/PCSX2/", CONTROLLER_DB_FILENAME).c_str(), "rb", &error);
+ 	if (!fp)
  	{
- 		SDL_RWops* ops = SDL_RWFromConstMem(controller_db_data->data(), static_cast<int>(controller_db_data->size()));
+ 		Console.Error(fmt::format("SDLInputSource: Failed to open controller database: {}", error.GetDescription()));
