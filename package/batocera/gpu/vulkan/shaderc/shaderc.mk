@@ -35,6 +35,4 @@ define SHADERC_INSTALL_TARGET_CMDS
 	$(TARGET_MAKE_ENV) DESTDIR=$(TARGET_DIR) $(BR2_CMAKE) --install $(SHADERC_BUILDDIR)
 endef
 
-
-
 $(eval $(cmake-package))
