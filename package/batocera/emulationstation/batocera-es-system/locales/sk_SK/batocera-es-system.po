@@ -10965,7 +10965,7 @@ msgctxt "game_options"
 msgid "Stretch to full"
 msgstr "Roztiahnuť na plné"
 
-#. TRANSLATION: xemu
+#. TRANSLATION: xemu, yabasanshiro
 msgctxt "game_options"
 msgid "Native"
 msgstr ""
@@ -12147,11 +12147,6 @@ msgstr "Vnútorné rozlíšenie obrazovky"
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
 msgid "Full Screen"
-msgstr ""
-
-#. TRANSLATION: yabasanshiro
-msgctxt "game_options"
-msgid "Native"
 msgstr ""
 
 #. TRANSLATION: yabasanshiro

@@ -10859,7 +10859,7 @@ msgctxt "game_options"
 msgid "Stretch to full"
 msgstr "Nyújtsd ki teljesen"
 
-#. TRANSLATION: xemu
+#. TRANSLATION: xemu, yabasanshiro
 msgctxt "game_options"
 msgid "Native"
 msgstr ""
@@ -12036,11 +12036,6 @@ msgstr "BELSŐ KÉPERNYŐFELBONTÁS"
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
 msgid "Full Screen"
-msgstr ""
-
-#. TRANSLATION: yabasanshiro
-msgctxt "game_options"
-msgid "Native"
 msgstr ""
 
 #. TRANSLATION: yabasanshiro
