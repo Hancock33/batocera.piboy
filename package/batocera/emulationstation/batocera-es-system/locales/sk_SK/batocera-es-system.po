@@ -10967,13 +10967,8 @@ msgstr "Roztiahnuť na plné"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
-msgid "Stretch to 16:9"
-msgstr "Roztiahnuť na 16:9"
-
-#. TRANSLATION: xemu
-msgctxt "game_options"
-msgid "Stretch to 4:3"
-msgstr "Roztiahnuť na 4:3"
+msgid "Native"
+msgstr ""
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -12940,6 +12935,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rýchlo dopredu"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 16:9"
+#~ msgstr "Roztiahnuť na 16:9"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 4:3"
+#~ msgstr "Roztiahnuť na 4:3"
 
 #~ msgctxt "game_options"
 #~ msgid "Async (multi threaded)(Deafult)"
