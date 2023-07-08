@@ -9,7 +9,7 @@ CITRA_SITE = https://github.com/citra-emu/citra.git
 CITRA_SITE_METHOD=git
 CITRA_GIT_SUBMODULES=YES
 CITRA_LICENSE = GPLv2
-CITRA_DEPENDENCIES += fmt boost ffmpeg sdl2 fdk-aac qt6base qt6multimedia host-ninja
+CITRA_DEPENDENCIES += boost fdk-aac ffmpeg fmt libbacktrace qt6base qt6multimedia sdl2 host-ninja
 CITRA_SUPPORTS_IN_SOURCE_BUILD = NO
 
 CITRA_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
