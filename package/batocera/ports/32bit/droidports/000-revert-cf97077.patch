@@ -1,24 +1,24 @@
 diff --git a/ports/gmloader/main.c b/ports/gmloader/main.c
-index eba5c94..94c448f 100644
+index 72193f5..52d201c 100644
 --- a/ports/gmloader/main.c
 +++ b/ports/gmloader/main.c
-@@ -5,7 +5,6 @@
- #include <fcntl.h>
+@@ -6,7 +6,6 @@
  #include <errno.h>
+ #include <getopt.h>
  
 -#include "io_util.h"
  #include "platform.h"
  #include "so_util.h"
  #include "fake_jni.h"
-@@ -38,7 +37,6 @@ DynLibFunction *so_dynamic_libraries[] = {
- int main(int argc, char *argv[])
+@@ -48,7 +47,6 @@ int main(int argc, char *argv[])
  {
-     uintptr_t address = 0x40000000;
--    uintptr_t address2 = 0;
-     char *apk_path = argv[1];
-     int extract = 0;
- 
-@@ -67,43 +65,22 @@ int main(int argc, char *argv[])
+     int disp_w = -1, disp_h = -1;
+     uintptr_t addr_yoyo = 0x40000000;
+-    uintptr_t addr_stdcpp = addr_yoyo - (0x200000 + 0x10000);
+     static struct option long_options[] = {
+         {"width", required_argument, 0, 'w'},
+         {"height", required_argument, 0, 'h'},
+@@ -103,43 +101,22 @@ int main(int argc, char *argv[])
      }
  
      /* Load elf module */
@@ -47,7 +47,7 @@ index eba5c94..94c448f 100644
 -
 -    warning("Loading runner elf %s (%p, %d bytes)...\n", libcpp, stdcpp_inflated_ptr, inflated_bytes);
 -    so_module cpp = {};
--    int ret = so_load(&cpp, libcpp, address2, stdcpp_inflated_ptr, inflated_bytes);
+-    int ret = so_load(&cpp, libcpp, addr_stdcpp, stdcpp_inflated_ptr, inflated_bytes);
 -    if (ret != 0) {
 -        fatal_error("Unable to load library!\n");
 -        return -1;
@@ -64,8 +64,8 @@ index eba5c94..94c448f 100644
 -    warning("Loading runner elf %s (%p, %d bytes)...\n", libyoyo, yoyo_inflated_ptr, inflated_bytes);
 +    warning("Loading runner elf %s (%p, %d bytes)...\n", lib, inflated_ptr, inflated_bytes);
      so_module runner = {};
--    ret = so_load(&runner, libyoyo, address, yoyo_inflated_ptr, inflated_bytes);
-+    int ret = so_load(&runner, lib, address, inflated_ptr, inflated_bytes);
+-    ret = so_load(&runner, libyoyo, addr_yoyo, yoyo_inflated_ptr, inflated_bytes);
++    int ret = so_load(&runner, lib, addr_yoyo, inflated_ptr, inflated_bytes);
      if (ret != 0) {
          fatal_error("Unable to load library!\n");
          return -1;
