@@ -9419,16 +9419,6 @@ msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "AVX2 is the fastest but not all computers can run it."
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "USE AVX2"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
 msgid "Allows up to 8 controllers in supported games."
 msgstr ""
 
@@ -10990,15 +10980,10 @@ msgctxt "game_options"
 msgid "Stretch to full"
 msgstr "Tamamen uzat"
 
-#. TRANSLATION: xemu
+#. TRANSLATION: xemu, yabasanshiro
 msgctxt "game_options"
-msgid "Stretch to 16:9"
-msgstr "16:9'a Uzat"
-
-#. TRANSLATION: xemu
-msgctxt "game_options"
-msgid "Stretch to 4:3"
-msgstr "4:3'e Uzat"
+msgid "Native"
+msgstr ""
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -12187,11 +12172,6 @@ msgstr ""
 
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
-msgid "Native"
-msgstr ""
-
-#. TRANSLATION: yabasanshiro
-msgctxt "game_options"
 msgid "Enhancement. Use the compute shader."
 msgstr ""
 
@@ -12860,6 +12840,14 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM JOYSTICK YAPILANDIRMASINI KULLAN"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 16:9"
+#~ msgstr "16:9'a Uzat"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 4:3"
+#~ msgstr "4:3'e Uzat"
 
 #~ msgctxt "game_options"
 #~ msgid "Emable or disable high score saving"

@@ -9409,16 +9409,6 @@ msgstr "CHEATY"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "AVX2 is the fastest but not all computers can run it."
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "USE AVX2"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
 msgid "Allows up to 8 controllers in supported games."
 msgstr ""
 
@@ -10971,15 +10961,10 @@ msgctxt "game_options"
 msgid "Stretch to full"
 msgstr "Roztažení do plna"
 
-#. TRANSLATION: xemu
+#. TRANSLATION: xemu, yabasanshiro
 msgctxt "game_options"
-msgid "Stretch to 16:9"
-msgstr "Roztažení na 16:9"
-
-#. TRANSLATION: xemu
-msgctxt "game_options"
-msgid "Stretch to 4:3"
-msgstr "Roztažení na 4:3"
+msgid "Native"
+msgstr ""
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -12163,11 +12148,6 @@ msgstr ""
 
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
-msgid "Native"
-msgstr ""
-
-#. TRANSLATION: yabasanshiro
-msgctxt "game_options"
 msgid "Enhancement. Use the compute shader."
 msgstr ""
 
@@ -12948,6 +12928,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rychle vpřed"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 16:9"
+#~ msgstr "Roztažení na 16:9"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 4:3"
+#~ msgstr "Roztažení na 4:3"
 
 #~ msgctxt "game_options"
 #~ msgid "Emable or disable high score saving"

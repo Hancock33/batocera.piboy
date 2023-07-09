@@ -1,8 +1,8 @@
 diff --git a/vita3k/main.cpp b/vita3k/main.cpp
-index e93e5289..bb2fffb2 100644
+index 9f70a5a8..6ff79431 100644
 --- a/vita3k/main.cpp
 +++ b/vita3k/main.cpp
-@@ -84,8 +84,8 @@ static void run_execv(char *argv[], EmuEnvState &emuenv) {
+@@ -86,8 +86,8 @@ static void run_execv(char *argv[], EmuEnvState &emuenv) {
  int main(int argc, char *argv[]) {
      ZoneScoped; // Tracy - Track main function scope
      Root root_paths;

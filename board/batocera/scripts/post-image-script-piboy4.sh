@@ -65,7 +65,7 @@ do
     echo "creating images/${BATOCERA_SUBTARGET}/boot-${BATOCERA_LOWER_TARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.tar.xz"
     mkdir -p "${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}" || exit 1
     mkdir -p "${GENIMAGE_TMP}" || exit 1
-    (cd "${BATOCERA_BINARIES_DIR}/boot" && tar -I "xz -T0 -v" -cf "$GENIMAGE_TMP/boot-${BATOCERA_LOWER_TARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.tar.xz" *) || exit 1
+     (cd "${BATOCERA_BINARIES_DIR}/boot" && tar -cf "$GENIMAGE_TMP/boot-${BATOCERA_LOWER_TARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.tar" * && xz -T0 -7 -v "$GENIMAGE_TMP/boot-${BATOCERA_LOWER_TARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.tar") || exit 1
     mv "$GENIMAGE_TMP/boot-${BATOCERA_LOWER_TARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.tar.xz" "${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}/boot-${BATOCERA_LOWER_TARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.tar.xz" || exit 1
     rm -rf "${GENIMAGE_TMP}" || exit 1
 
@@ -105,7 +105,7 @@ do
  
     rm -f "${BATOCERA_BINARIES_DIR}/boot.vfat" || exit 1
     rm -f "${BATOCERA_BINARIES_DIR}/userdata.ext4" || exit 1
-    xz -T0 -v "${GENFINALIMAGE_TMP}/batocera.img" || exit 1
+    xz -T0 -7 -v "${GENFINALIMAGE_TMP}/batocera.img" || exit 1
     mv "${GENFINALIMAGE_TMP}/batocera.img.xz" "${BATOCERAIMG}" || exit 1
 
     # rename the boot to boot_arch

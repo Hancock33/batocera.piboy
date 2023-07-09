@@ -1,8 +1,8 @@
 diff --git a/vita3k/CMakeLists.txt b/vita3k/CMakeLists.txt
-index 3dd5571b..cfeb6c1e 100644
+index f1474f56..81f27af5 100644
 --- a/vita3k/CMakeLists.txt
 +++ b/vita3k/CMakeLists.txt
-@@ -212,7 +212,7 @@ if(APPLE)
+@@ -213,7 +213,7 @@ if(APPLE)
  	target_sources(vita3k PRIVATE ${MOLTENVK_DYLIB})
  	set_source_files_properties(${MOLTENVK_DYLIB} PROPERTIES MACOSX_PACKAGE_LOCATION Frameworks)
  elseif(LINUX)

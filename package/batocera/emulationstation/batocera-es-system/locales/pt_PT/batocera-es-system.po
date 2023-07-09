@@ -1972,68 +1972,70 @@ msgstr "2º Comando (2 eixos, 2 botões)"
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Type of emulated SoundBlaster card."
-msgstr ""
+msgstr "Tipo de placa SoundBlaster emulada."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SOUNDBLASTER TYPE"
-msgstr ""
+msgstr "TIPO SOUNDBLASTER"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster 16 (Default)"
-msgstr ""
+msgstr "SounBlaster 16 (Padrão)"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster Pro 2"
-msgstr ""
+msgstr "SounBlaster Pro 2"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster Pro"
-msgstr ""
+msgstr "SounBlaster Pro"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster 2.0"
-msgstr ""
+msgstr "SounBlaster 2.0"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster 1.0"
-msgstr ""
+msgstr "SounBlaster 1.0"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "GameBlaster"
-msgstr ""
+msgstr "GameBlaster"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid ""
 "Select the .SF2 SoundFont file, .ROM file, or interface used for MIDI output."
 msgstr ""
+"Selecione o ficheiro .SF2 SoundFont, ficheiro .ROM ou interface usada para "
+"saída MIDI."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "MIDI OUTPUT"
-msgstr ""
+msgstr "SAÍDA MIDI"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "General MIDI SoundFont (Default)"
-msgstr ""
+msgstr "General MIDI SoundFont (Padrão)"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Roland MT-32/CM-32L"
-msgstr ""
+msgstr "Roland MT-32/CM-32L"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Frontend MIDI driver"
-msgstr ""
+msgstr "Driver MIDI frontend"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/mednafen_psx
 msgctxt "game_options"
@@ -5377,7 +5379,7 @@ msgstr "8 Frames"
 #. TRANSLATION: libretro/ppsspp
 msgctxt "game_options"
 msgid "480x272 (Default)"
-msgstr ""
+msgstr "480 x 272 (Padrão)"
 
 #. TRANSLATION: libretro/prboom, libretro/tyrquake
 msgctxt "game_options"
@@ -8607,22 +8609,22 @@ msgstr "4M"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Choose your Atari hard drive type for the .hd extension file."
-msgstr ""
+msgstr "Escolha o tipo de disco rígido Atari para o ficheiro de extensão .hd."
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "ATARI HARD DRIVE TYPE"
-msgstr ""
+msgstr "TIPO DE DISCO RÍGIDO ATARI"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "IDE (Default)"
-msgstr ""
+msgstr "IDE (Padrão)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "ASCI"
-msgstr ""
+msgstr "ASCI"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -9455,16 +9457,6 @@ msgstr "CHEATS"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "AVX2 is the fastest but not all computers can run it."
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "USE AVX2"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
 msgid "Allows up to 8 controllers in supported games."
 msgstr "Permite até 8 comandos em jogos suportados."
 
@@ -9882,7 +9874,7 @@ msgstr "Legado (single threaded)"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Async (multi threaded)(Default)"
-msgstr ""
+msgstr "Assíncrono (multi threaded)(Padrão)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10034,17 +10026,17 @@ msgstr "ATIVAR ÁUDIO BUFFERING"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Duration of audio buffer in milliseconds."
-msgstr ""
+msgstr "Duração do buffer de áudio em milissegundos."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "AUDIO BUFFER DURATION"
-msgstr ""
+msgstr "DURAÇÃO DO BUFFER DE ÁUDIO"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "100 (Default)"
-msgstr ""
+msgstr "100 (Padrão)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11039,15 +11031,10 @@ msgctxt "game_options"
 msgid "Stretch to full"
 msgstr "Esticar ao máximo"
 
-#. TRANSLATION: xemu
+#. TRANSLATION: xemu, yabasanshiro
 msgctxt "game_options"
-msgid "Stretch to 16:9"
-msgstr "Esticar para 16:9"
-
-#. TRANSLATION: xemu
-msgctxt "game_options"
-msgid "Stretch to 4:3"
-msgstr "Esticar para 4:3"
+msgid "Native"
+msgstr ""
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -12237,11 +12224,6 @@ msgstr ""
 
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
-msgid "Native"
-msgstr ""
-
-#. TRANSLATION: yabasanshiro
-msgctxt "game_options"
 msgid "Enhancement. Use the compute shader."
 msgstr ""
 
@@ -12388,12 +12370,12 @@ msgstr "Sair do emulador"
 #. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
 msgctxt "keys_files"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Teclado virtual"
 
 #. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
 msgctxt "keys_files"
 msgid "Settings GUI"
-msgstr ""
+msgstr "GUI de configurações"
 
 #. TRANSLATION: amigacd32.amiberry.keys, amiga500.amiberry.keys, amiga1200.amiberry.keys
 msgctxt "keys_files"
@@ -13027,5 +13009,9 @@ msgstr ""
 #~ msgstr "Avanço Rápido"
 
 #~ msgctxt "game_options"
-#~ msgid "Async (multi threaded)(Deafult)"
-#~ msgstr "Assíncrono (multithread) (Padrão)"
+#~ msgid "Stretch to 16:9"
+#~ msgstr "Esticar para 16:9"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 4:3"
+#~ msgstr "Esticar para 4:3"

@@ -10683,16 +10683,6 @@ msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "AVX2 is the fastest but not all computers can run it."
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "USE AVX2"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
 msgid "Allows up to 8 controllers in supported games."
 msgstr ""
 
@@ -12421,17 +12411,10 @@ msgctxt "game_options"
 msgid "Stretch to full"
 msgstr "완전히 스트레칭"
 
-#. TRANSLATION: xemu
-#, fuzzy
+#. TRANSLATION: xemu, yabasanshiro
 msgctxt "game_options"
-msgid "Stretch to 16:9"
-msgstr "16:9까지 늘이기"
-
-#. TRANSLATION: xemu
-#, fuzzy
-msgctxt "game_options"
-msgid "Stretch to 4:3"
-msgstr "4:3까지 늘이기"
+msgid "Native"
+msgstr ""
 
 #. TRANSLATION: xemu
 #, fuzzy
@@ -13705,11 +13688,6 @@ msgstr ""
 
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
-msgid "Native"
-msgstr ""
-
-#. TRANSLATION: yabasanshiro
-msgctxt "game_options"
 msgid "Enhancement. Use the compute shader."
 msgstr ""
 
@@ -14387,6 +14365,16 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM 조이스틱 구성 사용"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 16:9"
+#~ msgstr "16:9까지 늘이기"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 4:3"
+#~ msgstr "4:3까지 늘이기"
 
 #, fuzzy
 #~ msgctxt "game_options"

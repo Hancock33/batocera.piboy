@@ -3,8 +3,8 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Jun 28, 2023
-DEVILUTIONX_VERSION = 8e7c29ecd32482e59f93fce5507acbb3128b7554
+# Version: Commits on Jul 09, 2023
+DEVILUTIONX_VERSION = 2d299ca2d62b6385afb6213b296564dd5cad042e
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_SUBDIR = dist-src
@@ -12,10 +12,12 @@ DEVILUTIONX_SUBDIR = dist-src
 DEVILUTIONX_DEPENDENCIES = sdl2 sdl2_image fmt libsodium libpng bzip2 host-ninja
 DEVILUTIONX_SUPPORTS_IN_SOURCE_BUILD = NO
 
-# Prefill the player name when creating a new character, in case the device does
-# not have a keyboard.
-DEVILUTIONX_CONF_OPTS += -DBUILD_TESTING=OFF -DPREFILL_PLAYER_NAME=ON \
-                         -DCMAKE_BUILD_TYPE=Release -GNinja
+DEVILUTIONX_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja 
+DEVILUTIONX_CONF_OPTS += -DBUILD_TESTING=OFF 
+DEVILUTIONX_CONF_OPTS += -DUSE_LD_MOLD=ON
+ # Prefill the player name when creating a new character, in case the device does
+# not have a keyboard.                        
+DEVILUTIONX_CONF_OPTS += -DPREFILL_PLAYER_NAME=ON
 
 # Ensure that DevilutionX's vendored dependencies are not accidentally fetched from network.
 # They should all be present in the source package.
