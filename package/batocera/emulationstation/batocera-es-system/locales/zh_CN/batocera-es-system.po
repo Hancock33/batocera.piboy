@@ -12655,14 +12655,6 @@ msgstr ""
 #~ "LinuxFS）。"
 
 #~ msgctxt "game_options"
-#~ msgid "Stretch to 16:9"
-#~ msgstr "拉伸到 16:9"
-
-#~ msgctxt "game_options"
-#~ msgid "Stretch to 4:3"
-#~ msgstr "拉伸到 4:3"
-
-#~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "在GZDoom中配置控制器可能会导致问题。"
 

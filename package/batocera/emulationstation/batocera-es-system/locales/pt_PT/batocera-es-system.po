@@ -12889,14 +12889,6 @@ msgstr ""
 #~ "Linux - EXT4)."
 
 #~ msgctxt "game_options"
-#~ msgid "Stretch to 16:9"
-#~ msgstr "Esticar para 16:9"
-
-#~ msgctxt "game_options"
-#~ msgid "Stretch to 4:3"
-#~ msgstr "Esticar para 4:3"
-
-#~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "Configurar os comandos no GZDoom pode causar problemas."
 
@@ -13015,3 +13007,11 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 16:9"
+#~ msgstr "Esticar para 16:9"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 4:3"
+#~ msgstr "Esticar para 4:3"
