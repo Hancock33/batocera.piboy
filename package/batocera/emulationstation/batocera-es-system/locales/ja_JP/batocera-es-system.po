@@ -12755,14 +12755,6 @@ msgstr ""
 #~ "お勧めします)"
 
 #~ msgctxt "game_options"
-#~ msgid "Stretch to 16:9"
-#~ msgstr "16：9 に合わせる"
-
-#~ msgctxt "game_options"
-#~ msgid "Stretch to 4:3"
-#~ msgstr "4:3 に合わせる"
-
-#~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "GZDoom でコントローラーを構成すると、問題が出る場合があります"
 
@@ -12881,6 +12873,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 16:9"
+#~ msgstr "16：9 に合わせる"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 4:3"
+#~ msgstr "4:3 に合わせる"
 
 #~ msgid "Sets the display's resolution for emulationstation."
 #~ msgstr "emulationstationが表示する解像度を設定します"
