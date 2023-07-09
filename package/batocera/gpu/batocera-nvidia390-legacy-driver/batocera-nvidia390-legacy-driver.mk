@@ -166,7 +166,7 @@ define BATOCERA_NVIDIA390_LEGACY_DRIVER_INSTALL_32
 		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/usr/lib32/$(notdir $(lib))
 	)
 	$(foreach lib,$(BATOCERA_NVIDIA390_LEGACY_DRIVER_LIBS_VDPAU),\
-		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/lib32/vdpau/$(notdir $(lib))
+		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/usr/lib32/vdpau/$(notdir $(lib))
 	)
 endef
 

@@ -205,16 +205,16 @@ define BATOCERA_NVIDIA_DRIVER_INSTALL_32
 		fi
 	)
 	$(foreach lib,$(BATOCERA_NVIDIA_DRIVER_LIBS_VDPAU),\
-		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/lib32/vdpau/$(notdir $(lib))
+		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/usr/lib32/vdpau/$(notdir $(lib))
 		libsoname="$$( $(TARGET_READELF) -d "$(@D)/$(lib)" \
 			|sed -r -e '/.*\(SONAME\).*\[(.*)\]$$/!d; s//\1/;' )"; \
 		if [ -n "$${libsoname}" -a "$${libsoname}" != "$(notdir $(lib))" ]; then \
 			ln -sf $(notdir $(lib)) \
-				$(1)/lib32/vdpau/$${libsoname}; \
+				$(1)/usr/lib32/vdpau/$${libsoname}; \
 		fi
 		baseso=$(firstword $(subst .,$(space),$(notdir $(lib)))).so; \
 		if [ -n "$${baseso}" -a "$${baseso}" != "$(notdir $(lib))" ]; then \
-			ln -sf $(notdir $(lib)) $(1)/lib32/vdpau/$${baseso}; \
+			ln -sf $(notdir $(lib)) $(1)/usr/lib32/vdpau/$${baseso}; \
 		fi
 	)
 endef
