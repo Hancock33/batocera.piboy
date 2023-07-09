@@ -1,0 +1,13 @@
+diff --git a/pcsx2/Input/SDLInputSource.cpp b/pcsx2/Input/SDLInputSource.cpp
+index eea3babd9..6dde2065e 100644
+--- a/pcsx2/Input/SDLInputSource.cpp
++++ b/pcsx2/Input/SDLInputSource.cpp
+@@ -225,7 +225,7 @@ void SDLInputSource::SetHints()
+ bool SDLInputSource::LoadControllerDB()
+ {
+ 	Error error;
+-	auto fp = FileSystem::OpenManagedCFile(Path::Combine(EmuFolders::Resources, CONTROLLER_DB_FILENAME).c_str(), "rb", &error);
++	auto fp = FileSystem::OpenManagedCFile(Path::Combine("/userdata/system/configs/PCSX2/", CONTROLLER_DB_FILENAME).c_str(), "rb", &error);
+ 	std::optional<std::string> data;
+ 	if (!fp || !(data = FileSystem::ReadFileToString(fp.get())))
+ 	{

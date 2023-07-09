@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-06 12:45+0200\n"
-"PO-Revision-Date: 2023-05-16 20:35+0200\n"
+"PO-Revision-Date: 2023-07-05 19:13+0200\n"
 "Last-Translator: pedrobarbosa\n"
 "Language-Team: \n"
 "Language: ca\n"
@@ -1975,42 +1975,42 @@ msgstr "2a Palanca (2 Eixos, 2 Botons)"
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Type of emulated SoundBlaster card."
-msgstr ""
+msgstr "Tipus de la tarja SoundBlaster emulada."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SOUNDBLASTER TYPE"
-msgstr ""
+msgstr "TIPUS DE SOUNDBLASTER"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster 16 (Default)"
-msgstr ""
+msgstr "SounBlaster 16 (per defecte)"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster Pro 2"
-msgstr ""
+msgstr "SounBlaster Pro 2"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster Pro"
-msgstr ""
+msgstr "SounBlaster Pro"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster 2.0"
-msgstr ""
+msgstr "SounBlaster 2.0"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster 1.0"
-msgstr ""
+msgstr "SounBlaster 1.0"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "GameBlaster"
-msgstr ""
+msgstr "GameBlaster"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -2021,7 +2021,7 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "MIDI OUTPUT"
-msgstr ""
+msgstr "SORTIDA MIDI"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -2031,7 +2031,7 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Roland MT-32/CM-32L"
-msgstr ""
+msgstr "Roland MT-32/CM-32L"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -4965,17 +4965,17 @@ msgstr "30fps"
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "60fps (Default)"
-msgstr ""
+msgstr "60fps (per defecte)"
 
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "70fps"
-msgstr ""
+msgstr "70fps"
 
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "72fps"
-msgstr ""
+msgstr "72fps"
 
 #. TRANSLATION: libretro/openlara, libretro/tyrquake
 msgctxt "game_options"
@@ -4995,7 +4995,7 @@ msgstr "100fps"
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "119fps"
-msgstr ""
+msgstr "119fps"
 
 #. TRANSLATION: libretro/openlara, libretro/tyrquake
 msgctxt "game_options"
@@ -5010,12 +5010,12 @@ msgstr "144fps"
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "240fps"
-msgstr ""
+msgstr "240fps"
 
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "244fps"
-msgstr ""
+msgstr "244fps"
 
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
@@ -7180,7 +7180,7 @@ msgstr ""
 #. TRANSLATION: amiberry, pcsx2
 msgctxt "game_options"
 msgid "Minimum"
-msgstr ""
+msgstr "Mínim"
 
 #. TRANSLATION: cannonball
 msgctxt "game_options"
@@ -8118,7 +8118,7 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "STRETCH MODE"
-msgstr ""
+msgstr "MODE D'ESTIRAT"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -8183,7 +8183,7 @@ msgstr "PALANCA A JOYPAD"
 #. TRANSLATION: duckstation, duckstation
 msgctxt "game_options"
 msgid "Not Connected"
-msgstr ""
+msgstr "No connectat"
 
 #. TRANSLATION: duckstation, duckstation
 msgctxt "game_options"
@@ -9063,12 +9063,12 @@ msgstr ""
 #. TRANSLATION: pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Standard (4:3)"
-msgstr ""
+msgstr "Estándard (4:3)"
 
 #. TRANSLATION: pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Widescreen (16:9)"
-msgstr ""
+msgstr "Panoràmica (16:9)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9290,7 +9290,7 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bilinear (PS2)"
-msgstr ""
+msgstr "Bilinear (PS2)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9310,7 +9310,7 @@ msgstr "FILTRATGE TRILINEAL"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Off (None)"
-msgstr ""
+msgstr "Apagat (cap)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9358,12 +9358,12 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Full (Slow)"
-msgstr ""
+msgstr "Complet (lent)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Maximum (Very Slow)"
-msgstr ""
+msgstr "Màxim (molt lent)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9375,12 +9375,12 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "TEXTURE PRELOADING"
-msgstr ""
+msgstr "PRECÀRREGA DE TEXTURES"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Partial"
-msgstr ""
+msgstr "Parcial"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9424,16 +9424,6 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "CHEATS"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "AVX2 is the fastest but not all computers can run it."
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "USE AVX2"
 msgstr ""
 
 #. TRANSLATION: pcsx2
@@ -9792,22 +9782,22 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SHADER QUALITY"
-msgstr ""
+msgstr "QUALITAT DE SOMBREJADOR"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Ultra"
-msgstr ""
+msgstr "Ultra"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "High (Default)"
-msgstr ""
+msgstr "Alta (per defecte)"
 
 #. TRANSLATION: rpcs3, cgenius
 msgctxt "game_options"
 msgid "Choose your preferred render resolution."
-msgstr ""
+msgstr "Triï la resolució de renderitzat preferida."
 
 #. TRANSLATION: rpcs3, xenia-canary
 msgctxt "game_options"
@@ -9817,7 +9807,7 @@ msgstr "1280x720 (Per defecte)"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Final image filtering."
-msgstr ""
+msgstr "Filtratge de la imatge final."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -9827,7 +9817,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "FidelityFX Super Resolution"
-msgstr ""
+msgstr "FidelityFX Super Resolution"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -9962,7 +9952,7 @@ msgstr "SO"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "AUDIO FORMAT"
-msgstr ""
+msgstr "FORMAT D'ÀUDIO"
 
 #. TRANSLATION: rpcs3, yuzu
 msgctxt "game_options"
@@ -9972,12 +9962,12 @@ msgstr "Estèreo"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Surround 5.1"
-msgstr ""
+msgstr "Surround 5.1"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Surround 7.1"
-msgstr ""
+msgstr "Surround 7.1"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10002,7 +9992,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "100 (Default)"
-msgstr ""
+msgstr "100 (per defecte)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10439,42 +10429,42 @@ msgstr "50 (Per defecte)"
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "Choose your preferred aspect ratio.."
-msgstr ""
+msgstr "Triï la seva relació d'aspecte preferida."
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "4x3 (Default)"
-msgstr ""
+msgstr "4x3 (per defecte)"
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "Choose your preferred video filter."
-msgstr ""
+msgstr "Triï el seu filtre d'imatge preferit."
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "Scale2x"
-msgstr ""
+msgstr "Scale2x"
 
 #. TRANSLATION: cgenius, f2bgl
 msgctxt "game_options"
 msgid "Scale3x"
-msgstr ""
+msgstr "Scale3x"
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "Scale4x"
-msgstr ""
+msgstr "Scale4x"
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "Choose your preferred video quality."
-msgstr ""
+msgstr "Triï la qualitat d'imatge preferida."
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "VIDEO QUALITY"
-msgstr ""
+msgstr "QUALITAT D'IMATGE"
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
@@ -10484,7 +10474,7 @@ msgstr ""
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "best"
-msgstr ""
+msgstr "millorada"
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
@@ -10995,15 +10985,10 @@ msgctxt "game_options"
 msgid "Stretch to full"
 msgstr "Estirar a pantalla completa"
 
-#. TRANSLATION: xemu
+#. TRANSLATION: xemu, yabasanshiro
 msgctxt "game_options"
-msgid "Stretch to 16:9"
-msgstr "Estirar a 16:9"
-
-#. TRANSLATION: xemu
-msgctxt "game_options"
-msgid "Stretch to 4:3"
-msgstr "Estirar fins 4:3"
+msgid "Native"
+msgstr ""
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -11028,17 +11013,17 @@ msgstr ""
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "SYSTEM MEMORY"
-msgstr ""
+msgstr "MEMÒRIA DE SISTEMA"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "64MiB (Default)"
-msgstr ""
+msgstr "64MiB (per defecte)"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "128MiB"
-msgstr ""
+msgstr "128MiB"
 
 #. TRANSLATION: sonic2013
 msgctxt "game_options"
@@ -11763,42 +11748,42 @@ msgstr ""
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "This can be convenient if you're using laserdiscs."
-msgstr ""
+msgstr "Això pot ser convenient si està usant laserdiscs."
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "LOADING SPEED"
-msgstr ""
+msgstr "VELOCITAT DE CÀRREGA"
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Realistic Loading"
-msgstr ""
+msgstr "Càrrega realista"
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Full Speed (Default)"
-msgstr ""
+msgstr "Velocitat completa (per defecte)"
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Choose the appropriate media for disk image."
-msgstr ""
+msgstr "Triï el contingut apropiat per la imatge de disc."
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "DISK TYPE"
-msgstr ""
+msgstr "TIPUS DE DISC"
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Floppy Disk Image"
-msgstr ""
+msgstr "Imatge de disquet"
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Hard Disk Image"
-msgstr ""
+msgstr "Imatge de disc dur"
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -12194,11 +12179,6 @@ msgstr ""
 
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
-msgid "Native"
-msgstr ""
-
-#. TRANSLATION: yabasanshiro
-msgctxt "game_options"
 msgid "Enhancement. Use the compute shader."
 msgstr ""
 
@@ -12220,7 +12200,7 @@ msgstr ""
 #. TRANSLATION: switch.ryujinx.keys, naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, ...
 msgctxt "keys_files"
 msgid "Exit the emulator"
-msgstr ""
+msgstr "Sortir de l'emulador"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
@@ -12235,42 +12215,42 @@ msgstr "Moneda"
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Push 2"
-msgstr ""
+msgstr "Botó 2"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Push 1"
-msgstr ""
+msgstr "Botó 1"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Push 4"
-msgstr ""
+msgstr "Botó 4"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Push 3"
-msgstr ""
+msgstr "Botó 3"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Push 5"
-msgstr ""
+msgstr "Botó 5"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Push 6"
-msgstr ""
+msgstr "Botó 6"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Push 7"
-msgstr ""
+msgstr "Botó 7"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
 msgid "Push 8"
-msgstr ""
+msgstr "Botó 8"
 
 #. TRANSLATION: naomi.demul.keys, naomi2.demul.keys, hikaru.demul.keys, dreamcast.demul.keys, gaelco.demul.keys, ...
 msgctxt "keys_files"
@@ -12335,22 +12315,22 @@ msgstr "Analògic 2, Avall"
 #. TRANSLATION: hikaru.demul.keys, gaelco.demul.keys
 msgctxt "keys_files"
 msgid "Set to full screen"
-msgstr ""
+msgstr "Establir pantalla completa"
 
 #. TRANSLATION: xbox360.xenia.keys, amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys, ...
 msgctxt "keys_files"
 msgid "Exit emulator"
-msgstr ""
+msgstr "Sortir de l'emulador"
 
 #. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
 msgctxt "keys_files"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Teclat virtual"
 
 #. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
 msgctxt "keys_files"
 msgid "Settings GUI"
-msgstr ""
+msgstr "Ajustos d'interfície gràfica"
 
 #. TRANSLATION: amigacd32.amiberry.keys, amiga500.amiberry.keys, amiga1200.amiberry.keys
 msgctxt "keys_files"
@@ -12380,32 +12360,32 @@ msgstr ""
 #. TRANSLATION: wiiu.keys
 msgctxt "keys_files"
 msgid "Display the controller screen"
-msgstr ""
+msgstr "Mostrar la pantalla del comandament"
 
 #. TRANSLATION: moonlight.moonlight.keys
 msgctxt "keys_files"
 msgid "Exit emulator using SDL"
-msgstr ""
+msgstr "Sortir de l'emulador usant SDL"
 
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Exit Duckstation"
-msgstr ""
+msgstr "Sortir de Duckstation"
 
 #. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Load State"
-msgstr ""
+msgstr "Carregar estat"
 
 #. TRANSLATION: psx.duckstation.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Save State"
-msgstr ""
+msgstr "Desar estat"
 
 #. TRANSLATION: psx.duckstation.keys
 msgctxt "keys_files"
 msgid "Open DuckStation Quick Menu"
-msgstr ""
+msgstr "Obrir menú ràpid de DuckStation"
 
 #. TRANSLATION: dreamcast.redream.keys, naomi2.flycast.keys, atomiswave.flycast.keys, naomi.flycast.keys, dreamcast.flycast.keys, ...
 msgctxt "keys_files"
@@ -12420,22 +12400,22 @@ msgstr "Menú"
 #. TRANSLATION: scummvm.keys
 msgctxt "keys_files"
 msgid "Aspect ratio correction on/off"
-msgstr ""
+msgstr "Correcció de relació d'aspecte engegat/apagat"
 
 #. TRANSLATION: scummvm.keys
 msgctxt "keys_files"
 msgid "Graphics filtering on/off"
-msgstr ""
+msgstr "Filtratge de gràfics engegat/apagat"
 
 #. TRANSLATION: scummvm.keys
 msgctxt "keys_files"
 msgid "Cycle through stretch modes"
-msgstr ""
+msgstr "Iterar els modes d'estirament"
 
 #. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Screenshot"
-msgstr ""
+msgstr "Captura de pantalla"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -12490,7 +12470,7 @@ msgstr ""
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "Open Dolphin-triforce's menu"
-msgstr ""
+msgstr "Obrir el menú Dolphin-Triforce"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -12505,57 +12485,57 @@ msgstr ""
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
-msgstr ""
+msgstr "Moure cursor a la pantalla tàctil"
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Restart Emulation"
-msgstr ""
+msgstr "Reiniciar emulació"
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Continue/Pause emulation"
-msgstr ""
+msgstr "Continuar/Pausar emulació"
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap Screen"
-msgstr ""
+msgstr "Intercanviar pantalles"
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Screen Layout"
-msgstr ""
+msgstr "Alternar disposició de pantalla"
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
-msgstr ""
+msgstr "Alternar límit de velocitat"
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Mouse Click"
-msgstr ""
+msgstr "Pitjar la pantalla tàctil"
 
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Slot -"
-msgstr ""
+msgstr "Ranura -"
 
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Slot +"
-msgstr ""
+msgstr "Ranura +"
 
 #. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
 msgctxt "keys_files"
 msgid "Rewind"
-msgstr ""
+msgstr "Rebobinar"
 
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Fast Forward"
-msgstr ""
+msgstr "Avançar"
 
 #. TRANSLATION: pspmini.ppsspp.keys
 msgctxt "keys_files"
@@ -12871,6 +12851,22 @@ msgstr ""
 #~ msgstr "UTILITZA CONFIGURACIÓ DEL JOYSTICK DE GZDOOM"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Reiniciar joc"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Disc següent (m3u)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Load State Slot 1"
+#~ msgstr "Carregar ranura d'estat 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Save State Slot 1"
+#~ msgstr "Desar ranura d'estat 1"
+
+#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad Amunt"
 
@@ -12957,6 +12953,22 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "Swap Screens"
 #~ msgstr "Intercanviar pantalles"
+
+#~ msgctxt "keys_files"
+#~ msgid "QuickMenu"
+#~ msgstr "Menú ràpid"
+
+#~ msgctxt "keys_files"
+#~ msgid "FastForward"
+#~ msgstr "Avançar"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 16:9"
+#~ msgstr "Estirar a 16:9"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 4:3"
+#~ msgstr "Estirar fins 4:3"
 
 #~ msgctxt "game_options"
 #~ msgid "Emable or disable high score saving"

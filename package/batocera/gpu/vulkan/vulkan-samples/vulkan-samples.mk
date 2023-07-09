@@ -3,16 +3,16 @@
 # vulkan-samples
 #
 ################################################################################
-# Version: Commits on Jun 28, 2023
-VULKAN_SAMPLES_VERSION = f6389c2336e2d1dbbc5450107b3ab947e8d7e6c1
+# Version: Commits on Jul 08, 2023
+VULKAN_SAMPLES_VERSION = 947ca9929a23e869db61614842213770e4de72f6
 VULKAN_SAMPLES_SITE =  https://github.com/KhronosGroup/Vulkan-Samples
 VULKAN_SAMPLES_GIT_SUBMODULES=YES
 VULKAN_SAMPLES_SITE_METHOD=git
-VULKAN_SAMPLES_DEPENDENCIES = vulkan-headers vulkan-loader
+VULKAN_SAMPLES_DEPENDENCIES = vulkan-headers vulkan-loader host-ninja
 VULKAN_SAMPLES_INSTALL_STAGING = YES
 VULKAN_SAMPLES_SUPPORTS_IN_SOURCE_BUILD = NO
 
-VULKAN_SAMPLES_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
+VULKAN_SAMPLES_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja
 VULKAN_SAMPLES_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 VULKAN_SAMPLES_CONF_ENV += LDFLAGS="--lpthread -ldl"
 
@@ -31,6 +31,14 @@ endif
 ifeq ($(BR2_PACKAGE_MESA3D),y)
 VULKAN_SAMPLES_DEPENDENCIES += mesa3d
 endif
+
+define VULKAN_SAMPLES_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(VULKAN_SAMPLES_BUILDDIR)
+endef
+
+define VULKAN_SAMPLES_INSTALL_STAGING_CMDS
+	$(TARGET_MAKE_ENV) DESTDIR=$(STAGING_DIR) $(BR2_CMAKE) --install $(VULKAN_SAMPLES_BUILDDIR)
+endef
 
 define VULKAN_SAMPLES_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/app/bin/Release/$(VULKAN_SAMPLES_INSTALL_ARCH)/vulkan_samples $(TARGET_DIR)/usr/bin/vulkan_samples

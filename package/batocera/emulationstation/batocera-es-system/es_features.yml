@@ -8397,12 +8397,6 @@ pcsx2:
             choices:
                 "Disabled": "false"
                 "Enabled":  "true"
-        avx2:
-            prompt: USE AVX2
-            description: AVX2 is the fastest but not all computers can run it.
-            choices:
-                "Off":      0
-                "On":       1
         pcsx2_multitap:
             prompt: MULTITAP
             description: Allows up to 8 controllers in supported games.
@@ -10390,14 +10384,19 @@ xemu:
   cfeatures:
         xemu_scaling:
             group: VIDEO SETTINGS
-            prompt:      SCALING MODE
+            prompt: SCALING MODE
             description: Choose the scaling mode for the game screen.
             choices:
                 "Original resolution": center
                 "Scale to best fit":   scale
                 "Stretch to full":     stretch
-                "Stretch to 16:9":     scale_16_9
-                "Stretch to 4:3":      scale_4_3
+        xemu_aspect:
+            prompt: ASPECT RATIO
+            description: Change the output resolution ratio.
+            choices:
+                "Native": native
+                "4x3":    4x3
+                "16x9":   16x9
         xemu_render:
             group: VIDEO SETTINGS
             prompt:       RENDERING RESOLUTION

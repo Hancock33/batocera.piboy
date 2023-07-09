@@ -4947,12 +4947,12 @@ msgstr "FILTRO AUDIO"
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "Set desired framerate."
-msgstr ""
+msgstr "Seleziona il framerate desiderato."
 
 #. TRANSLATION: libretro/openlara, libretro
 msgctxt "game_options"
 msgid "FRAMERATE"
-msgstr ""
+msgstr "FRAMERATE"
 
 #. TRANSLATION: libretro/openlara, libretro/tyrquake
 msgctxt "game_options"
@@ -4962,17 +4962,17 @@ msgstr "30fps"
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "60fps (Default)"
-msgstr ""
+msgstr "60fps (Default)"
 
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "70fps"
-msgstr ""
+msgstr "70fps"
 
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "72fps"
-msgstr ""
+msgstr "72fps"
 
 #. TRANSLATION: libretro/openlara, libretro/tyrquake
 msgctxt "game_options"
@@ -4992,7 +4992,7 @@ msgstr "100fps"
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "119fps"
-msgstr ""
+msgstr "119fps"
 
 #. TRANSLATION: libretro/openlara, libretro/tyrquake
 msgctxt "game_options"
@@ -5007,12 +5007,12 @@ msgstr "144fps"
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "240fps"
-msgstr ""
+msgstr "240fps"
 
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "244fps"
-msgstr ""
+msgstr "244fps"
 
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
@@ -6846,12 +6846,12 @@ msgstr "Permette fino a 7 o 12 controller nei giochi che lo supportano."
 #. TRANSLATION: libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Change the system's language."
-msgstr ""
+msgstr "Cambia la lingua di sistema."
 
 #. TRANSLATION: libretro/yabasanshiro, awgl
 msgctxt "game_options"
 msgid "Deutsch"
-msgstr ""
+msgstr "Tedesco"
 
 #. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
 msgctxt "game_options"
@@ -9441,16 +9441,6 @@ msgstr "CHEATS"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "AVX2 is the fastest but not all computers can run it."
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "USE AVX2"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
 msgid "Allows up to 8 controllers in supported games."
 msgstr "Permette fino a 8 controller nei giochi che lo supportano."
 
@@ -9472,7 +9462,7 @@ msgstr "Massimo 8 Giocatori"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Allows user replaceable textures."
-msgstr ""
+msgstr "Permette all'utente il cambio textures."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9864,7 +9854,7 @@ msgstr "Legacy (a singolo thread)"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Async (multi threaded)(Default)"
-msgstr ""
+msgstr "Async (multi threaded)(Default)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11019,15 +11009,10 @@ msgctxt "game_options"
 msgid "Stretch to full"
 msgstr "Allarga al massimo"
 
-#. TRANSLATION: xemu
+#. TRANSLATION: xemu, yabasanshiro
 msgctxt "game_options"
-msgid "Stretch to 16:9"
-msgstr "Allarga a 16:9"
-
-#. TRANSLATION: xemu
-msgctxt "game_options"
-msgid "Stretch to 4:3"
-msgstr "Allarga a 4:3"
+msgid "Native"
+msgstr ""
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -11052,7 +11037,7 @@ msgstr "Aumenta a 120 MiB per debug o applicazioni homebrew."
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "SYSTEM MEMORY"
-msgstr ""
+msgstr "MEMORIA DI SISTEMA"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -12215,11 +12200,6 @@ msgstr ""
 
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
-msgid "Native"
-msgstr ""
-
-#. TRANSLATION: yabasanshiro
-msgctxt "game_options"
 msgid "Enhancement. Use the compute shader."
 msgstr ""
 
@@ -13001,6 +12981,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "AvanzamentoRapido"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 16:9"
+#~ msgstr "Allarga a 16:9"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 4:3"
+#~ msgstr "Allarga a 4:3"
 
 #~ msgctxt "game_options"
 #~ msgid "Async (multi threaded)(Deafult)"

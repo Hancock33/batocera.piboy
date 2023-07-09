@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-28 22:11+0800\n"
+"PO-Revision-Date: 2023-07-07 09:13+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二\n"
 "Language: zh_CN\n"
@@ -1936,68 +1936,68 @@ msgstr "第二个摇杆（ 2轴， 2键）"
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Type of emulated SoundBlaster card."
-msgstr ""
+msgstr "模拟创新声卡(SoundBlaster)的型号."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SOUNDBLASTER TYPE"
-msgstr ""
+msgstr "创新声卡型号"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster 16 (Default)"
-msgstr ""
+msgstr "SounBlaster 16 (默认)"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster Pro 2"
-msgstr ""
+msgstr "SounBlaster Pro 2"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster Pro"
-msgstr ""
+msgstr "SounBlaster Pro"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster 2.0"
-msgstr ""
+msgstr "SounBlaster 2.0"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster 1.0"
-msgstr ""
+msgstr "SounBlaster 1.0"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "GameBlaster"
-msgstr ""
+msgstr "GameBlaster"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid ""
 "Select the .SF2 SoundFont file, .ROM file, or interface used for MIDI output."
-msgstr ""
+msgstr "选择.SF2 SoundFont文件, .ROM文件或用于MIDI的输出接口."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "MIDI OUTPUT"
-msgstr ""
+msgstr "MIDI 输出"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "General MIDI SoundFont (Default)"
-msgstr ""
+msgstr "通用MIDI SoundFont (默认)"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Roland MT-32/CM-32L"
-msgstr ""
+msgstr "Roland MT-32/CM-32L"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Frontend MIDI driver"
-msgstr ""
+msgstr "前端MIDI驱动"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/mednafen_psx
 msgctxt "game_options"
@@ -5315,7 +5315,7 @@ msgstr "8 帧延迟"
 #. TRANSLATION: libretro/ppsspp
 msgctxt "game_options"
 msgid "480x272 (Default)"
-msgstr ""
+msgstr "480x272 (默认)"
 
 #. TRANSLATION: libretro/prboom, libretro/tyrquake
 msgctxt "game_options"
@@ -8496,22 +8496,22 @@ msgstr "4M"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Choose your Atari hard drive type for the .hd extension file."
-msgstr ""
+msgstr "为.hd扩展文件选择您的雅达利硬盘驱动器类型."
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "ATARI HARD DRIVE TYPE"
-msgstr ""
+msgstr "雅达利硬盘类型"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "IDE (Default)"
-msgstr ""
+msgstr "IDE (默认)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "ASCI"
-msgstr ""
+msgstr "ASCI"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -9312,16 +9312,6 @@ msgstr "作弊"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "AVX2 is the fastest but not all computers can run it."
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
-msgid "USE AVX2"
-msgstr ""
-
-#. TRANSLATION: pcsx2
-msgctxt "game_options"
 msgid "Allows up to 8 controllers in supported games."
 msgstr "在支持的游戏中最多允许8个控制器."
 
@@ -9723,7 +9713,7 @@ msgstr "传统(单线程)"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Async (multi threaded)(Default)"
-msgstr ""
+msgstr "异步(多线程)(默认)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -9863,17 +9853,17 @@ msgstr "启用音频缓冲"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Duration of audio buffer in milliseconds."
-msgstr ""
+msgstr "音频缓冲区的持续时间(以毫秒为单位)."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "AUDIO BUFFER DURATION"
-msgstr ""
+msgstr "音频缓冲持续时间"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "100 (Default)"
-msgstr ""
+msgstr "100 (默认)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10832,15 +10822,10 @@ msgctxt "game_options"
 msgid "Stretch to full"
 msgstr "拉伸到全屏"
 
-#. TRANSLATION: xemu
+#. TRANSLATION: xemu, yabasanshiro
 msgctxt "game_options"
-msgid "Stretch to 16:9"
-msgstr "拉伸到 16:9"
-
-#. TRANSLATION: xemu
-msgctxt "game_options"
-msgid "Stretch to 4:3"
-msgstr "拉伸到 4:3"
+msgid "Native"
+msgstr ""
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -12014,11 +11999,6 @@ msgstr ""
 
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
-msgid "Native"
-msgstr ""
-
-#. TRANSLATION: yabasanshiro
-msgctxt "game_options"
 msgid "Enhancement. Use the compute shader."
 msgstr ""
 
@@ -12165,12 +12145,12 @@ msgstr "退出模拟器"
 #. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
 msgctxt "keys_files"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "虚拟键盘"
 
 #. TRANSLATION: amigacdtv.fsuae.keys, amiga500.fsuae.keys, amigacd32.fsuae.keys, amiga1200.fsuae.keys
 msgctxt "keys_files"
 msgid "Settings GUI"
-msgstr ""
+msgstr "设置界面"
 
 #. TRANSLATION: amigacd32.amiberry.keys, amiga500.amiberry.keys, amiga1200.amiberry.keys
 msgctxt "keys_files"
@@ -12793,6 +12773,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 16:9"
+#~ msgstr "拉伸到 16:9"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 4:3"
+#~ msgstr "拉伸到 4:3"
 
 #~ msgctxt "game_options"
 #~ msgid "Async (multi threaded)(Deafult)"
