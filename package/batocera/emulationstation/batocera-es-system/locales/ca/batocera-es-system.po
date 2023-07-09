@@ -12971,6 +12971,14 @@ msgstr ""
 #~ msgstr "Avançar"
 
 #~ msgctxt "game_options"
+#~ msgid "Stretch to 16:9"
+#~ msgstr "Estirar a 16:9"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 4:3"
+#~ msgstr "Estirar fins 4:3"
+
+#~ msgctxt "game_options"
 #~ msgid "Emable or disable high score saving"
 #~ msgstr "Habilitar o deshabilitar desat de puntacions"
 
