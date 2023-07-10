@@ -8,6 +8,7 @@
 - libretro core openlara, An original Tomb Raider port
 - mosquitto client command line tools
 - es : from developper menu, you can change the es resolution
+- xenia canary can now apply patches
 ### Fixed
 - Fix wifi/bluetooth on Tinkerboard
 - Fixed crop overscan settings for NES to work with newer core builds
@@ -31,6 +32,7 @@
 - ppsspp to July 8th build
 - lr-ppsspp to July 8th build
 - xemu to v0.7.96
+- devilutionX to 1.5.0
 ### Dev
 - linux kernel for x86_64 to 6.4.2
 - xf86-video-amdgpu to 23.0.0
