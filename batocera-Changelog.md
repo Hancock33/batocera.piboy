@@ -24,7 +24,7 @@
 - xenia canary to ff09bb4 (Commits on Jun 28, 2023)
 - citra to nightly-1936
 - groovy mame to 0.256
-- cemu to v2.0-42
+- cemu to v2.0-44
 - amiberry to 5.6.1
 - dosbox-x to v2023.05.01
 - tsugaru to v20230420
@@ -34,7 +34,7 @@
 - melonds to July 8th build
 - ppsspp to July 8th build
 - lr-ppsspp to July 8th build
-- xemu to v0.7.96
+- xemu to v0.7.98
 - devilutionX to 1.5.0
 ### Dev
 - linux kernel for x86_64 to 6.4.2
