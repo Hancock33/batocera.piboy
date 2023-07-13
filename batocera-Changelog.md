@@ -1,5 +1,6 @@
 # 2023/xx/xx - batocera.linux 38 -
 ### Hardware
+- Support for Orange Pi Zero 2, Orange Pi 3 LTS, HardKernel ODROID-M1
 
 ### Added
 - battery remaining time in batocera-info (f2)
@@ -8,19 +9,25 @@
 - libretro core openlara, An original Tomb Raider port
 - mosquitto client command line tools
 - es : from developper menu, you can change the es resolution
+- xenia canary can now apply patches
+- Raze source port enabled for AArch64: Duke Nukem 3D, Shadow Warrior, Blood, etc.
+- vitaquake2 libretro core enabled for AArch64
+- vitaquake3 to libretro cores
 ### Fixed
 - Fix wifi/bluetooth on Tinkerboard
 - Fixed crop overscan settings for NES to work with newer core builds
+- DVD playback in Kodi
 ### Changed
 - if using the manual batocera.conf `splash.screen.resize` option, this will now adjust the playback resolution too
 - Default crop overscan setting for NES is now vertical only
 - n64 mupen states files are now named with rom names (renaming necessary when migrating to keep old states)
+- Enable lr-beetle-pcfx and lr-prboom libretro cores on RK3588
 ### Updated
 - xenia to v1.0.2805
 - xenia canary to ff09bb4 (Commits on Jun 28, 2023)
 - citra to nightly-1936
 - groovy mame to 0.256
-- cemu to v2.0-42
+- cemu to v2.0-44
 - amiberry to 5.6.1
 - dosbox-x to v2023.05.01
 - tsugaru to v20230420
@@ -30,16 +37,20 @@
 - melonds to July 8th build
 - ppsspp to July 8th build
 - lr-ppsspp to July 8th build
-- xemu to v0.7.96
+- xemu to v0.7.98
+- devilutionX to 1.5.0
 ### Dev
 - linux kernel for x86_64 to 6.4.2
+- linux kernel for RPI to 6.1.32
+- linux kernel for most ARM SBCs to 6.1.38
+- linux kernel for Rockchip RK3566/RK3568 to 6.4.3
 - xf86-video-amdgpu to 23.0.0
 - xf86-video-ati to 22.0.0
 - xwayland to 23.1.2
-- linux kernel for RPI to 6.1.32
 - Enable exFAT and NTFS Linux kernel drivers on x86_64
 - bluez to 5.68
 - wildmidi to 0.4.5
+- vulkan stack to 1.3.257
 
 # 2023/06/18 - batocera.linux 37 - Red Admiral
 ### hardware

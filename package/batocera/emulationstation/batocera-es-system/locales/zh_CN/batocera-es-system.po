@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-07-07 09:13+0800\n"
+"PO-Revision-Date: 2023-07-10 19:25+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二\n"
 "Language: zh_CN\n"
@@ -185,7 +185,7 @@ msgstr "左上（NW）"
 #. TRANSLATION: shared, shared
 msgctxt "game_options"
 msgid "TOP RIGHT (NE)"
-msgstr "右上（NE）"
+msgstr "右上(NE)"
 
 #. TRANSLATION: shared, shared
 msgctxt "game_options"
@@ -10825,7 +10825,7 @@ msgstr "拉伸到全屏"
 #. TRANSLATION: xemu, yabasanshiro
 msgctxt "game_options"
 msgid "Native"
-msgstr ""
+msgstr "原生"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -11992,6 +11992,18 @@ msgctxt "game_options"
 msgid "INTERNAL DISPLAY RESOLUTION"
 msgstr "内部显示器分辨率"
 
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid ""
+"Enable or disable Xenia patches. These patches can fix graphics problems in "
+"some games."
+msgstr ""
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "GAME PATCHES"
+msgstr ""
+
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
 msgid "Full Screen"
@@ -12663,14 +12675,6 @@ msgstr ""
 #~ msgstr "使用GZDOOM操纵杆配置"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "重置游戏"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "下一个光盘（m3u）"
-
-#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "载入状态插槽1"
 
@@ -12773,6 +12777,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "重置游戏"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "下一个光盘（m3u）"
 
 #~ msgctxt "game_options"
 #~ msgid "Stretch to 16:9"

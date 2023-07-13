@@ -11508,6 +11508,12 @@ xenia-canary:
                 "Turkish":           14
                 "Norwegian":         15
                 "Dutch":             16
+        xeniaPatches:
+            prompt: GAME PATCHES
+            description: Enable or disable Xenia patches. These patches can fix graphics problems in some games.
+            choices:
+                "Disabled (Default)": false
+                "Enabled": true     
 yabasanshiro:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
