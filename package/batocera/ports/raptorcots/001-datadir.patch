@@ -101,7 +101,7 @@ index b9d583b..c47fb09 100644
  
  int INI_GetPreferenceLong(const char *section, const char *key, int defValue)
 diff --git a/src/rap.cpp b/src/rap.cpp
-index b60480b..42d927c 100644
+index d46dc99..6c3bb67 100644
 --- a/src/rap.cpp
 +++ b/src/rap.cpp
 @@ -32,6 +32,7 @@
@@ -112,18 +112,18 @@ index b60480b..42d927c 100644
  
  #ifdef _WIN32
  #include <io.h>
-@@ -176,8 +177,8 @@ void InitScreen(void)
- 
- void ShutDown(int a1)
+@@ -210,8 +211,8 @@ ShutDown(
  {
--    if (!a1 && !godmode)
+     char* mem;
+ 
+-    if (!errcode && !godmode)
 -        WIN_Order();
-+    //if (!a1 && !godmode)
++    //if (!errcode && !godmode)
 +    //    WIN_Order();
  
      //IPT_DeInit();
      //DMX_DeInit();
-@@ -996,6 +997,18 @@ void RAP_InitMem(void)
+@@ -1233,6 +1234,18 @@ RAP_InitMem(
      GLB_UseVM();
  }
  
@@ -139,46 +139,50 @@ index b60480b..42d927c 100644
 +    }
 +}
 +
- int main(int argc, char *argv[])
- {
-     char *shost, *reg_text, *pal;
-@@ -1044,11 +1057,11 @@ int main(int argc, char *argv[])
-         printf("GOD mode enabled\n");
+ /***************************************************************************
+ main() -
+  ***************************************************************************/
+@@ -1290,13 +1303,13 @@ main(
+     
      cur_diff = 0;
  
 -    if (!access("FILE0001.GLB", 0))
 +    if (checkfile("/userdata/roms/ports/raptor/FILE0001.GLB"))
          gameflag[0] = 1;
+     
 -    if (!access("FILE0002.GLB", 0))
 +    if (checkfile("/userdata/roms/ports/raptor/FILE0002.GLB"))
          gameflag[1] = 1;
+     
 -    if (!access("FILE0003.GLB", 0) && !access("FILE0004.GLB", 0))
 +    if (checkfile("/userdata/roms/ports/raptor/FILE0003.GLB") && checkfile("/userdata/roms/ports/raptor/FILE0004.GLB"))
      {
          gameflag[2] = 1;
          gameflag[3] = 1;
-@@ -1062,14 +1075,14 @@ int main(int argc, char *argv[])
-         if (gameflag[i])
-             eps++;
+@@ -1313,15 +1326,15 @@ main(
+             numfiles++;
+     }
  
--    if (access("FILE0000.GLB", 0) || !eps)
-+     if (!checkfile("/userdata/roms/ports/raptor/FILE0000.GLB") || !eps)
-     {
+-    if (access("FILE0000.GLB", 0) || !numfiles)
+-    {
++   if (!checkfile("/userdata/roms/ports/raptor/FILE0000.GLB") || !numfiles)
++   {
          printf("All game data files NOT FOUND cannot proceed !!\n");
 -        SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,
 -            "Raptor", "All game data files NOT FOUND cannot proceed !!", NULL);
 -        exit(0);
-+        //SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,
-+        //    "Raptor", "All game data files NOT FOUND cannot proceed !!", NULL);
-+        //exit(0);
++    //    SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,
++    //        "Raptor", "All game data files NOT FOUND cannot proceed !!", NULL);
++    //    exit(0);
      }
+     
 -    printf("Init -\n");
 +    //printf("Init -\n");
      EXIT_Install(ShutDown);
-     memset(bday, 0, sizeof(bday));
-     bday[0].f_0 = 5;
-@@ -1108,10 +1121,10 @@ int main(int argc, char *argv[])
-         printf("Birthday() = %s\n", bday[bday_num].f_c);
+     
+     // ================================================
+@@ -1368,10 +1381,10 @@ main(
+     // ================================================
  
      if (access(RAP_SetupFilename(), 0))
 -        EXIT_Error("You Must run SETUP.EXE First !!");
@@ -189,13 +193,13 @@ index b60480b..42d927c 100644
 +        printf("SETUP Error");
  
      fflush(stdout);
- 
+     KBD_Install();
 diff --git a/src/rap.h b/src/rap.h
-index bbe4794..48d98a0 100644
+index 4b398d0..866a339 100644
 --- a/src/rap.h
 +++ b/src/rap.h
-@@ -168,3 +168,4 @@ void RAP_LoadMap(void);
+@@ -170,3 +170,4 @@ void RAP_LoadMap(void);
  int Do_Game(void);
  int RAP_LoadWin(void);
- void ShutDown(int a1);
+ void ShutDown(int errcode);
 +bool checkfile(const char* path);

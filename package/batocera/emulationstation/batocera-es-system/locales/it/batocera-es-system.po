@@ -12193,6 +12193,18 @@ msgctxt "game_options"
 msgid "INTERNAL DISPLAY RESOLUTION"
 msgstr "RISOLUZIONE DISPLAY INTERNA"
 
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid ""
+"Enable or disable Xenia patches. These patches can fix graphics problems in "
+"some games."
+msgstr ""
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "GAME PATCHES"
+msgstr ""
+
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
 msgid "Full Screen"

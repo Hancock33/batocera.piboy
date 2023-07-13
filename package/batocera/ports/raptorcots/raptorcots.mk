@@ -3,8 +3,8 @@
 # raptorcots
 #
 ################################################################################
-# Version: Commits on Apr 21, 2023
-RAPTORCOTS_VERSION = 6ff18c55d0c9a4ed3b91a10cd93e3fe0f92d8811
+# Version: Commits on Jul 10, 2023
+RAPTORCOTS_VERSION = 756a23a93da7a19e2c700e0fb5fae62bf22853de
 RAPTORCOTS_SITE = $(call github,skynettx,raptor,$(RAPTORCOTS_VERSION))
 
 RAPTORCOTS_DEPENDENCIES = sdl2 openal host-ninja
