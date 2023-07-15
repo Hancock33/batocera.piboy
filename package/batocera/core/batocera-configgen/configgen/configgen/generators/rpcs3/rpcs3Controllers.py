@@ -114,11 +114,11 @@ def rpcs3_mappingValue(name, type, code, value):
     elif name == "x":              #Triangle
         return "Y"
     elif name == "left":           #Left
-        return "Hat0 X-"
+        return "D-Pad Left"
     elif name == "down":           #Down
         return "D-Pad Down"
     elif name == "right":          #Right
-        return "Hat0 X+"
+        return "D-Pad Right"
     elif name == "up":             #Up
         return "D-Pad Up"
     elif name == "pagedown":       #R1
