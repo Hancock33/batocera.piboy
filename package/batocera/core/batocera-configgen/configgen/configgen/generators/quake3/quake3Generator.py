@@ -15,7 +15,6 @@ class Quake3Generator(Generator):
         quake3Config.writeCfgFiles(system, rom, playersControllers, gameResolution)
 
         commandArray = ["ioquake3", "+set", "cl_renderer", "vulkan", "+set", "fs_basePath", "/userdata/roms/ports/quake3" ]
-        os.chdir("/usr/share/quake3")
 
         return Command.Command(
             array=commandArray,
