@@ -49,10 +49,10 @@ ifeq ($(BATOCERA_SPLASH_MEDIA),video)
     endif
 
     # alternative video
-    ifeq ($(BR2_PACKAGE_BATOCERA_RPI_ANY)$(BR2_PACKAGE_BATOCERA_TARGET_RK3326)$(BR2_PACKAGE_BATOCERA_TARGET_RK3128)$(BR2_PACKAGE_BATOCERA_TARGET_H3),y)
+    ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI),y)
+        BATO_SPLASH=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/piboy.mp4
+    else ifeq ($(BR2_PACKAGE_BATOCERA_RPI_ANY)$(BR2_PACKAGE_BATOCERA_TARGET_RK3326)$(BR2_PACKAGE_BATOCERA_TARGET_RK3128)$(BR2_PACKAGE_BATOCERA_TARGET_H3),y)
         BATO_SPLASH=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/splash720p.mp4
-	else ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI),y)
-		BATO_SPLASH=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/piboy.mp4
     else
         BATO_SPLASH=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/splash.mp4
     endif
