@@ -3,8 +3,8 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Jul 02, 2023 (branch@Proton8-10)
-WINE_PROTON_VERSION = experimental-wine-8.0-20230713
+# Version: Commits on Jul 14, 2023 (branch@Proton8-10)
+WINE_PROTON_VERSION = 1e2d83d34a1b25e2821b3a34c35379b89e9f55e4
 WINE_PROTON_SOURCE = wine-proton-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
 #WINE_PROTON_SITE = $(call github,GloriousEggroll,proton-wine,$(WINE_PROTON_VERSION))
