@@ -14,7 +14,14 @@ class Quake3Generator(Generator):
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         quake3Config.writeCfgFiles(system, rom, playersControllers, gameResolution)
 
-        commandArray = ["ioquake3", "+set", "cl_renderer", "vulkan", "+set", "fs_basePath", "/userdata/roms/ports/quake3" ]
+        commandArray = ["ioquake3", "+set", "fs_basePath", "/userdata/roms/ports/quake3" ]
+
+        # get the game / mod to launch
+        with open(rom, "r") as file:
+            command_line = file.readline().strip()
+            command_line_words = command_line.split()
+
+        commandArray.extend(command_line_words)
 
         return Command.Command(
             array=commandArray,
