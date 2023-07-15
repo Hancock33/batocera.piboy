@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Jun 15, 2023 (branch@Qt6-fun)
-RPCS3_VERSION = 0116a8c0718c1d6164dfac0163cb9e5eafdef0a2
+# Version: Commits on Jul 12, 2023 (branch@Qt6-fun)
+RPCS3_VERSION = 22380bc2ebac3c29903bf760da11c207d9575171
 RPCS3_SITE = https://github.com/Megamouse/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
@@ -27,21 +27,11 @@ RPCS3_CONF_OPTS += -DUSE_PRECOMPILED_HEADERS=OFF
 RPCS3_CONF_OPTS += -DSTATIC_LINK_LLVM=OFF
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_CURL=ON
-RPCS3_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=-Wl,--unresolved-symbols=ignore-all
+RPCS3_CONF_OPTS += -DUSE_SDL=ON
+RPCS3_CONF_OPTS += -DUSE_SYSTEM_SDL=ON
+RPCS3_CONF_OPTS += -DUSE_VULKAN=ON
 
 RPCS3_CONF_ENV = LIBS="-ncurses -ltinfo"
-
-ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
-    RPCS3_CONF_OPTS += -DUSE_VULKAN=ON
-else
-    RPCS3_CONF_OPTS += -DUSE_VULKAN=OFF
-endif
-
-ifeq ($(BR2_PACKAGE_SDL2),y)
-    RPCS3_CONF_OPTS += -DUSE_SDL=ON
-else
-    RPCS3_CONF_OPTS += -DUSE_SDL=ON
-endif
 
 define RPCS3_BUILD_CMDS
 	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(RPCS3_BUILDDIR)

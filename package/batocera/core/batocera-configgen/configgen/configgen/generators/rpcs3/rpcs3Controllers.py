@@ -17,7 +17,7 @@ def generateControllerConfig(system, controllers, rom):
         if nplayer <= 7:
             f.write(f"Player {nplayer} Input:\n")
             f.write("  Handler: Evdev\n")
-            f.write(f"  Device: {pad.dev}\n")
+            f.write(f"  Device: {pad.realName}\n")
             f.write("  Config:\n")
             for inputIdx in pad.inputs:
                 input = pad.inputs[inputIdx]
@@ -52,6 +52,14 @@ def rpcs3_reverseMapping(name):
 
 def rpcs3_mappingKey(input):
     keys = {
+        "joystick1left":  "Left Stick Left",
+        "joystick1down":  "Left Stick Down",
+        "joystick1right": "Left Stick Right",
+        "joystick1up":    "Left Stick Up",
+        "joystick2left":  "Right Stick Left",
+        "joystick2down":  "Right Stick Down",
+        "joystick2right": "Right Stick Right",
+        "joystick2up":    "Right Stick Up",
         "start":          "Start",
         "select":         "Select",
         "hotkey":         "PS Button",
@@ -63,46 +71,68 @@ def rpcs3_mappingKey(input):
         "down":           "Down",
         "right":          "Right",
         "up":             "Up",
-        "pageup":         "L1",
+        "pagedown":       "R1",
         "r2":             "R2",
         "r3":             "R3",
-        "pagedown":       "R1",
+        "pageup":         "L1",
         "l2":             "L2",
-        "l3":             "L3",
-        "joystick1left":  "Left Stick Left",
-        "joystick1down":  "Left Stick Down",
-        "joystick1right": "Left Stick Right",
-        "joystick1up":    "Left Stick Up",
-        "joystick2left":  "Right Stick Left",
-        "joystick2down":  "Right Stick Down",
-        "joystick2right": "Right Stick Right",
-        "joystick2up":    "Right Stick Up"
+        "l3":             "L3"
     }
     if input in keys:
         return keys[input]
     return None
 
 def rpcs3_mappingValue(name, type, code, value):
-    if   type == "button":
-        return code
-    elif type == "hat":
-        if value == 1:
-            return -1017
-        if value == 2:
-            return 1016
-        if value == 4:
-            return 1017
-        if value == 8:
-            return -1016
-        raise Exception(f"invalid hat value {value}")
-    elif type == "axis":
-        if code is None:
-            return ""
-        res = int(code)+1000
-        if value < 0:
-            eslog.debug(f"name = {name} and value = {value}")
-            res = res * -1
-        return res
+    if name == "joystick1left":    #Left Stick Left
+        return "LX-"
+    elif name == "joystick1down":  #Left Stick Down
+        return "LY+"
+    elif name == "joystick1right": #Left Stick Right
+        return "LX+"
+    elif name == "joystick1up":    #Left Stick Up
+        return "LY-"
+    elif name == "joystick2left":  #Right Stick Left
+        return "RX-"
+    elif name == "joystick2down":  #Right Stick Down
+        return "RY+"
+    elif name == "joystick2right": #Right Stick Right
+        return "RX+"
+    elif name == "joystick2up":    #Right Stick Up
+        return "RY-"
+    elif name == "start":          #Start
+        return "Start"
+    elif name == "select":         #Select
+        return "Select"
+    elif name == "hotkey":         #PS Button
+        return "Mode"
+    elif name == "y":              #Square
+        return "X"
+    elif name == "b":              #Cross
+        return "A"
+    elif name == "a":              #Circle
+        return "B"
+    elif name == "x":              #Triangle
+        return "Y"
+    elif name == "left":           #Left
+        return "Hat0 X-"
+    elif name == "down":           #Down
+        return "D-Pad Down"
+    elif name == "right":          #Right
+        return "Hat0 X+"
+    elif name == "up":             #Up
+        return "D-Pad Up"
+    elif name == "pagedown":       #R1
+        return "TR"
+    elif name == "r2":             #R2
+        return "RZ+"
+    elif name == "r3":             #R3
+        return "Thumb R"
+    elif name == "pageup":         #L1
+        return "TL"
+    elif name == "l2":             #L2
+        return "LZ+"
+    elif name == "l3":             #L3
+        return "Thumb L"
     return None
 
 def rpcs3_otherKeys(f, controller):
