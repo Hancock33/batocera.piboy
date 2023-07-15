@@ -1421,12 +1421,12 @@ msgctxt "game_options"
 msgid "GameCube Controller"
 msgstr "GameCube vezérlő"
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/flycast2021, libretro/snes9x
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/flycast2021, libretro/mupen64plus-next, ...
 msgctxt "game_options"
 msgid "CONTROLLER 3 TYPE"
 msgstr "VEZÉRLŐ 3 TÍPUS"
 
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/flycast2021, libretro/mupen64plus-next, ...
 msgctxt "game_options"
 msgid "CONTROLLER 4 TYPE"
 msgstr "VEZÉRLŐ 4 TÍPUS"
@@ -4565,6 +4565,33 @@ msgstr "CONTROLLER PAK 3"
 msgctxt "game_options"
 msgid "CONTROLLER PAK 4"
 msgstr "CONTROLLER PAK 4"
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid ""
+"Useful for N64 style controllers. Limited hotkeys for controllers without "
+"dedicated hotkey."
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+msgctxt "game_options"
+msgid "RetroPad (Default)"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
+msgctxt "game_options"
+msgid "N64"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+msgctxt "game_options"
+msgid "N64 (Limited Hotkeys)"
+msgstr ""
+
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, ...
+msgctxt "game_options"
+msgid "Useful for N64 style controllers."
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"

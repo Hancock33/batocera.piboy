@@ -1,12 +1,12 @@
 diff --git a/3rdparty/libusb/libusb.cmake b/3rdparty/libusb/libusb.cmake
-index 7df04c32e..73a3b6fbc 100644
+index 6de23c352..0056c95c7 100644
 --- a/3rdparty/libusb/libusb.cmake
 +++ b/3rdparty/libusb/libusb.cmake
-@@ -3,6 +3,7 @@ include(os.cmake)
+@@ -2,6 +2,7 @@ include(os.cmake)
+ 
  include(config.cmake)
  include(FindThreads)
- 
 +set(CMAKE_POSITION_INDEPENDENT_CODE ON)
- set (LIBUSB_COMMON
- 	core.c
- 	descriptor.c
+ 
+ include_directories(${LIBUSB_SOURCE_DIR}/libusb)
+ include_directories(${LIBUSB_SOURCE_DIR}/libusb/os)
