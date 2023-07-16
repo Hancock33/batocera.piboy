@@ -1618,7 +1618,7 @@ msgctxt "game_options"
 msgid "48MB"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/vitaquake3, quakespasm
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/np2kai, mame/vitaquake3, quake3
 msgctxt "game_options"
 msgid "64MB"
 msgstr ""
@@ -1628,7 +1628,7 @@ msgctxt "game_options"
 msgid "96MB"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/vitaquake3, quakespasm
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame/vitaquake3, quake3
 msgctxt "game_options"
 msgid "128MB"
 msgstr ""
@@ -4729,7 +4729,7 @@ msgctxt "game_options"
 msgid "230MB"
 msgstr ""
 
-#. TRANSLATION: libretro/np2kai, quakespasm
+#. TRANSLATION: libretro/np2kai, quake3
 msgctxt "game_options"
 msgid "512MB"
 msgstr ""
@@ -11867,19 +11867,19 @@ msgctxt "game_options"
 msgid "START LEVEL"
 msgstr ""
 
-#. TRANSLATION: quakespasm
+#. TRANSLATION: quake3
 msgctxt "game_options"
 msgid ""
 "Select how much graphics memory is allocated for the GPU, may need modifying "
 "for some games / systems."
 msgstr ""
 
-#. TRANSLATION: quakespasm
+#. TRANSLATION: quake3
 msgctxt "game_options"
 msgid "GRAPHICS MEMORY"
 msgstr ""
 
-#. TRANSLATION: quakespasm
+#. TRANSLATION: quake3
 msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr ""
