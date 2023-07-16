@@ -1,9 +1,9 @@
 diff --git a/gfx/drivers/oga_gfx.c b/gfx/drivers/oga_gfx.c
-index a290b3d7d0..293a15a349 100644
+index 99c435decd..e834357088 100644
 --- a/gfx/drivers/oga_gfx.c
 +++ b/gfx/drivers/oga_gfx.c
-@@ -22,7 +22,7 @@
- #include "../../verbosity.h"
+@@ -21,7 +21,7 @@
+ 
  #include <fcntl.h>
  #include <rga/RgaApi.h>
 -#include <rga/RockchipRgaMacro.h>
