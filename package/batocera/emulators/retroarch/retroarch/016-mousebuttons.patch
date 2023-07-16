@@ -1,8 +1,8 @@
 diff --git a/configuration.c b/configuration.c
-index 8340898de1..c3ad7985d1 100644
+index e6d89a9479..e0dc3a51b8 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -4564,12 +4564,33 @@ static void save_keybind_mbutton(config_file_t *conf,
+@@ -4678,12 +4678,33 @@ static void save_keybind_mbutton(config_file_t *conf,
        case RETRO_DEVICE_ID_MOUSE_MIDDLE:
           config_set_uint64(conf, key, 3);
           break;
@@ -38,7 +38,7 @@ index 8340898de1..c3ad7985d1 100644
        case RETRO_DEVICE_ID_MOUSE_WHEELUP:
           config_set_string(conf, key, "wu");
           break;
-@@ -6083,11 +6104,32 @@ void input_config_parse_mouse_button(
+@@ -6166,11 +6187,32 @@ void input_config_parse_mouse_button(
                 bind->mbutton = RETRO_DEVICE_ID_MOUSE_MIDDLE;
                 break;
              case 4:
@@ -73,10 +73,10 @@ index 8340898de1..c3ad7985d1 100644
        }
     }
 diff --git a/input/drivers/udev_input.c b/input/drivers/udev_input.c
-index b16c4d3837..aa99ac7635 100644
+index f555b27aa8..8936d43f54 100644
 --- a/input/drivers/udev_input.c
 +++ b/input/drivers/udev_input.c
-@@ -117,7 +117,7 @@ typedef struct
+@@ -225,7 +225,7 @@ typedef struct
     int32_t x_min, y_min;
     int32_t x_max, y_max;
     int32_t x_rel, y_rel;
@@ -85,7 +85,7 @@ index b16c4d3837..aa99ac7635 100644
     bool wu, wd, whu, whd;
     bool pp;
     int32_t abs;
-@@ -487,6 +487,34 @@ static void udev_handle_mouse(void *data,
+@@ -894,6 +894,34 @@ static void udev_handle_mouse(void *data,
              case BTN_TOUCH:
                 mouse->pp = event->value;
                 break;
@@ -121,7 +121,7 @@ index b16c4d3837..aa99ac7635 100644
                 mouse->b4 = event->value;
                 break;*/
 diff --git a/libretro-common/include/libretro.h b/libretro-common/include/libretro.h
-index 6aaefc88be..a1e2d0a282 100644
+index 8d6a1664a4..868ae9bdd1 100644
 --- a/libretro-common/include/libretro.h
 +++ b/libretro-common/include/libretro.h
 @@ -221,8 +221,15 @@ extern "C" {
@@ -143,10 +143,10 @@ index 6aaefc88be..a1e2d0a282 100644
  /* Id values for LIGHTGUN. */
  #define RETRO_DEVICE_ID_LIGHTGUN_SCREEN_X        13 /*Absolute Position*/
 diff --git a/menu/menu_driver.c b/menu/menu_driver.c
-index 3371617206..7110d87ec9 100644
+index db5e85281c..732d5de7cd 100644
 --- a/menu/menu_driver.c
 +++ b/menu/menu_driver.c
-@@ -1505,8 +1505,15 @@ static bool menu_input_key_bind_poll_find_hold_pad(
+@@ -1519,8 +1519,15 @@ static bool menu_input_key_bind_poll_find_hold_pad(
           case RETRO_DEVICE_ID_MOUSE_LEFT:
           case RETRO_DEVICE_ID_MOUSE_RIGHT:
           case RETRO_DEVICE_ID_MOUSE_MIDDLE:
@@ -162,7 +162,7 @@ index 3371617206..7110d87ec9 100644
           case RETRO_DEVICE_ID_MOUSE_WHEELUP:
           case RETRO_DEVICE_ID_MOUSE_WHEELDOWN:
           case RETRO_DEVICE_ID_MOUSE_HORIZ_WHEELUP:
-@@ -1612,8 +1619,15 @@ static bool menu_input_key_bind_poll_find_trigger_pad(
+@@ -1626,8 +1633,15 @@ static bool menu_input_key_bind_poll_find_trigger_pad(
           case RETRO_DEVICE_ID_MOUSE_LEFT:
           case RETRO_DEVICE_ID_MOUSE_RIGHT:
           case RETRO_DEVICE_ID_MOUSE_MIDDLE:
