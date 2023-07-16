@@ -26,6 +26,16 @@
             "target": "KEY_ENTER"
         },
         {
+            "trigger": "select",
+            "type": "key",
+            "target": "KEY_ESC"
+        },
+        {
+            "trigger": "start",
+            "type": "key",
+            "target": "KEY_ENTER"
+        },
+        {
             "trigger": ["hotkey", "start"],
             "type": "key",
             "target": [ "KEY_LEFTALT", "KEY_F4" ]
