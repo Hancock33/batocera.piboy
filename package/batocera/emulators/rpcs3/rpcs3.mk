@@ -3,9 +3,10 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Jul 12, 2023 (branch@Qt6-fun)
-RPCS3_VERSION = 22380bc2ebac3c29903bf760da11c207d9575171
-RPCS3_SITE = https://github.com/Megamouse/rpcs3.git
+# Version: Commits on Jul 16, 2023 #(branch@Qt6-fun)
+RPCS3_VERSION = 43cfb3cd105a7492869312bcbb651703d76e6f20
+#RPCS3_SITE = https://github.com/Megamouse/rpcs3.git
+RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
 RPCS3_LICENSE = GPLv2
