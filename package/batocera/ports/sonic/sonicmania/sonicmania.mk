@@ -3,8 +3,8 @@
 # sonicmania
 #
 ################################################################################
-# Version: Commits on Jul 11, 2023
-SONICMANIA_VERSION = b49b64d86d26f0ebe7380a35e80654f3cf75c260
+# Version: Commits on Jul 15, 2023
+SONICMANIA_VERSION = c86db96b9a84643af4e0e3b8f4cb83f5aeaca662
 SONICMANIA_SITE = https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation.git
 SONICMANIA_SITE_METHOD = git
 SONICMANIA_GIT_SUBMODULES = YES
