@@ -5840,16 +5840,18 @@ psx:
                         Para mais informações: https://wiki.batocera.org/systems:psx
 
 namco2x6:
-  name: Namco System 246/256
-  manufacturer: Sony / Namco
-  release: 2000
-  hardware: arcade
-  extensions: [zip]
+  name:                 Namco System 246/256
+  manufacturer:         Sony / Namco
+  release:              2000
+  hardware:             arcade
+  extensions:           [zip]
   emulators:
+    libretro:
+      play:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PLAY] }
     play:
-      play: { requireAnyOf: [BR2_PACKAGE_PLAY] }
+      play:             { requireAnyOf: [BR2_PACKAGE_PLAY] }
   comment_en: |
-    For more info: https://wiki.batocera.org/systems:namco2x6
+                        For more info: https://wiki.batocera.org/systems:namco2x6
 
 j2me:
   name:                 Java 2 MicroEdition

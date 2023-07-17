@@ -3,10 +3,9 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Jul 16, 2023 #(branch@Qt6-fun)
-RPCS3_VERSION = 43cfb3cd105a7492869312bcbb651703d76e6f20
-#RPCS3_SITE = https://github.com/Megamouse/rpcs3.git
-RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
+# Version: Commits on Jul 16, 2021 (branch@Qt6-fun)
+RPCS3_VERSION = d235b5789e28cfd3afdb533791f290b9179d30d8
+RPCS3_SITE = https://github.com/Megamouse/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
 RPCS3_LICENSE = GPLv2
@@ -24,13 +23,11 @@ RPCS3_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 RPCS3_CONF_OPTS += -DUSE_NATIVE_INSTRUCTIONS=OFF
 RPCS3_CONF_OPTS += -DBUILD_LLVM_SUBMODULE=OFF
 RPCS3_CONF_OPTS += -DLLVM_DIR=$(STAGING_DIR)/usr/lib/cmake/llvm/
-RPCS3_CONF_OPTS += -DUSE_PRECOMPILED_HEADERS=OFF
 RPCS3_CONF_OPTS += -DSTATIC_LINK_LLVM=OFF
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_CURL=ON
 RPCS3_CONF_OPTS += -DUSE_SDL=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_SDL=ON
-RPCS3_CONF_OPTS += -DUSE_VULKAN=ON
 
 RPCS3_CONF_ENV = LIBS="-ncurses -ltinfo"
 
