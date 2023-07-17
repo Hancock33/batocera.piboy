@@ -1,16 +1,16 @@
 ################################################################################
 #
-# play!
+# play
 #
 ################################################################################
-# Version: Commits on Jul 10, 2023
-PLAY_VERSION = 3d0389eecbddffdba46fbd9f1d3ecbe1bf48d5bb
+# Version: Commits on Jul 17, 2023
+PLAY_VERSION = afcd7d163a6d51cb9579ede9fdfd345c38044d9e
 PLAY_SITE = https://github.com/jpd002/Play-.git
 PLAY_SITE_METHOD = git
 PLAY_GIT_SUBMODULES = YES
 PLAY_LICENSE = BSD
 
-PLAY_DEPENDENCIES = openal qt5base sqlite
+PLAY_DEPENDENCIES = openal qt5base sqlite host-ninja
 
 PLAY_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 PLAY_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
@@ -31,11 +31,14 @@ ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
     PLAY_DEPENDENCIES += vulkan-headers vulkan-loader
 endif
 
+define PLAY_BUILD_CMDS
+    $(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(PLAY_BUILDDIR)
+endef
+
 define PLAY_EVMAPY
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/play/*.keys \
-	    $(TARGET_DIR)/usr/share/evmapy
+    # evmap config
+    mkdir -p $(TARGET_DIR)/usr/share/evmapy
+    cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/play/*.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 PLAY_POST_INSTALL_TARGET_HOOKS += PLAY_EVMAPY
