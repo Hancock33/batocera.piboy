@@ -532,6 +532,9 @@ n64dd:
 namco:
   emulator: libretro
   core:     mame078plus
+namco2x6:
+  emulator: play
+  core:     play
 naomi:
   emulator: libretro
   core:     flycast2021
