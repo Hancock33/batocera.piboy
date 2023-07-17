@@ -633,8 +633,10 @@ systems = {
                                                 { "md5": "2020aa1413ff77fe29353f3ee72dc295", "zippedFile": "341-0027-a.p5", "file": "bios/a2diskiing.zip"},
                                                 { "md5": "", "file": "bios/a2cffa02.zip" },
                                                 { "md5": "80adbc2d79f347ec63f4b771ea32984d", "zippedFile": "cffa20ee02.bin", "file": "bios/a2cffa02.zip"},
-                                                { "md5": "", "file": "bios/votrax.zip" },
-                                                { "md5": "95b91e4a2fe7d6f13d353ba1827d37f9", "zippedFile": "sc01a.bin", "file": "bios/votrax.zip"},
+                                                { "md5": "", "file": "bios/votrsc01.zip" },
+                                                { "md5": "8ccf35a06f5e9a2131b0f42380ee5c15", "zippedFile": "sc01.bin", "file": "bios/votrsc01.zip"},
+                                                { "md5": "", "file": "bios/votrsc01a.zip" },
+                                                { "md5": "95b91e4a2fe7d6f13d353ba1827d37f9", "zippedFile": "sc01a.bin", "file": "bios/votrsc01a.zip"},
                                                 { "md5": "", "file": "bios/d2fdc.zip" },
                                                 { "md5": "5f1be0c1cdff26f5956eef9643911886", "zippedFile": "341-0028-a.rom", "file": "bios/d2fdc.zip"} ] },
 
@@ -799,6 +801,10 @@ systems = {
                                                           { "md5": "afa4b5f2944334f84971af814a24bd5a", "file": "bios/openmsx/ide250.zip" },
                                                           { "md5": "2ce20986da024e9a0e271961c6bc9f01", "file": "bios/openmsx/phc-70fd2_basickun.rom" },
                                                           { "md5": "42af93619160ef2116416f74a6cb12f2", "file": "bios/openmsx/yrw801.rom" } ] },
+    
+    # ---------- Supr'A'can  ---------- #
+    "supracan":   { "name": "Supr'A'can", "biosFiles":  [ { "md5": "", "file": "bios/supracan.zip"  },
+                                    { "md5": "53c4343e062bb3b337370bbb58e64d16", "zippedFile": "internal_68k.bin", "file": "bios/supracan.zip" } ] },
 }
 
 class BiosStatus:
