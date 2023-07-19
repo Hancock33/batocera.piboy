@@ -566,7 +566,7 @@ config BR2_PACKAGE_BATOCERA_TOOLS
     select BR2_PACKAGE_HTOP                                 # multi-cpus usage
     select BR2_PACKAGE_NCDU                                 # Disk Usage
     select BR2_PACKAGE_FFMPEG_XCBGRAB                       if  BR2_PACKAGE_XORG7
-    select BR2_PACKAGE_SWITCHRES                            if  BR2_PACKAGE_XORG7 && !BR2_PACKAGE_BATOCERA_WAYLAND # switchres 15kHz
+    select BR2_PACKAGE_SWITCHRES                            if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835 && !BR2_PACKAGE_BATOCERA_WAYLAND # switchres 15kHz
 
     help
         System tools
@@ -902,6 +902,20 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # ZMusic: standalone library used by gzdoom and raze source ports
     select BR2_PACKAGE_ZMUSIC                               if  BR2_PACKAGE_GZDOOM || BR2_PACKAGE_RAZE
 
+    # Boom3 (Doom 3)
+    select BR2_PACKAGE_LIBRETRO_BOOM3                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
+    # OpenLara (Tomb Raider)
+    select BR2_PACKAGE_LIBRETRO_OPENLARA                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY   || BR2_aarch64
+
+    # Quake 3
+    select BR2_PACKAGE_QUAKE3                               if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835    && \
+                                                                !BR2_PACKAGE_BATOCERA_TARGET_H6         && \
+                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3128     && \
+                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3326     && \
+                                                                !BR2_PACKAGE_BATOCERA_TARGET_RISCV      && \
+                                                                !BR2_PACKAGE_BATOCERA_TARGET_ODIN
+
     help
         Ports
 
@@ -1228,13 +1242,12 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_OPENJAZZ                             # ALL
 
     # Sony PS2
-    #select BR2_PACKAGE_PLAY                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  # Bad performance (Uses QT5)
+    select BR2_PACKAGE_PLAY                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_PLAY                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     #Extra libretro-cores
     select BR2_PACKAGE_LIBRETRO_2048
     select BR2_PACKAGE_LIBRETRO_BK_EMULATOR
-    select BR2_PACKAGE_LIBRETRO_BOOM3                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_CANNONBALL
     select BR2_PACKAGE_LIBRETRO_EP128EMU                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
     #select BR2_PACKAGE_LIBRETRO_FFMPEG
@@ -1246,7 +1259,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_LIBRETRO_JUMPNBUMP
     select BR2_PACKAGE_LIBRETRO_MOJOZORK                    # Z-Machine
     select BR2_PACKAGE_LIBRETRO_MU
-    select BR2_PACKAGE_LIBRETRO_OPENLARA                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY   || BR2_aarch64
     select BR2_PACKAGE_LIBRETRO_QUICKNES
     select BR2_PACKAGE_LIBRETRO_RACE                        # Neo Geo Pocket
     select BR2_PACKAGE_LIBRETRO_SAMEBOY                     # Gameboy
@@ -1277,7 +1289,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_YROGUE                               if  BR2_PACKAGE_YQUAKE2
     select BR2_PACKAGE_VKQUAKE                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_XATRIX                               if  BR2_PACKAGE_YQUAKE2
-    select BR2_PACKAGE_QUAKE3                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
     select BR2_PACKAGE_QUAKESPASM                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     select BR2_PACKAGE_ALEPHONE                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Alephone

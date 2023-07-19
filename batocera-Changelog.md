@@ -3,6 +3,7 @@
 - Support for Orange Pi Zero 2, Orange Pi 3 LTS, HardKernel ODROID-M1
 
 ### Added
+- Added ES settings for N64 controllers in N64 libretro cores.
 - battery remaining time in batocera-info (f2)
 - libretro core boom3, A Doom 3 port
 - libretro core reminiscence, A Flashback port
@@ -13,6 +14,7 @@
 - Raze source port enabled for AArch64: Duke Nukem 3D, Shadow Warrior, Blood, etc.
 - vitaquake2 libretro core enabled for AArch64
 - ioquake3 to ports, An updated Quake III engine
+- play! emulator for PS2 but also Namco 246 & 256 systems
 ### Fixed
 - Fix wifi/bluetooth on Tinkerboard
 - Fixed crop overscan settings for NES to work with newer core builds

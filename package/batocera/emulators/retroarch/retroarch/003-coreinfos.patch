@@ -1,8 +1,8 @@
 diff --git a/retroarch.c b/retroarch.c
-index f029da52c8..41c72fadd5 100644
+index a51919ccce..5e35e64d32 100644
 --- a/retroarch.c
 +++ b/retroarch.c
-@@ -5407,6 +5407,36 @@ static bool retroarch_parse_input_and_config(
+@@ -5622,6 +5622,36 @@ static bool retroarch_parse_input_and_config(
        { NULL, 0, NULL, 0 }
     };
  
@@ -38,4 +38,4 @@ index f029da52c8..41c72fadd5 100644
 +
     if (first_run)
     {
-       /* Copy the args into a buffer so launch arguments can be reused */
+       size_t _len = 0;
