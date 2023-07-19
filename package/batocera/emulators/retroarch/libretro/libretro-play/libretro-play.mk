@@ -3,8 +3,8 @@
 # libretro-play
 #
 ################################################################################
-# Version: Commits on Jul 10, 2023
-LIBRETRO_PLAY_VERSION = 3d0389eecbddffdba46fbd9f1d3ecbe1bf48d5bb
+# Version: Commits on Jul 18, 2023
+LIBRETRO_PLAY_VERSION = 16610576ab8b8323c27110df066faf71c9059672
 LIBRETRO_PLAY_SOURCE = play-$(LIBRETRO_PLAY_VERSION)-br1.tar.gz
 LIBRETRO_PLAY_SITE = https://github.com/jpd002/Play-.git
 LIBRETRO_PLAY_LICENSE = BSD
@@ -24,12 +24,11 @@ LIBRETRO_PLAY_CONF_OPTS += -DENABLE_AMAZON_S3=ON
 #LIBRETRO_PLAY_CONF_OPTS += -DUSE_GLES=ON
 
 define LIBRETRO_PLAY_BUILD_CMDS
-	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(LIBRETRO_PLAY_BUILDDIR)
+    $(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(LIBRETRO_PLAY_BUILDDIR)
 endef
 
 define LIBRETRO_PLAY_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/Source/ui_libretro/play_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/play_libretro.so
+    $(INSTALL) -D $(@D)/Source/ui_libretro/play_libretro.so $(TARGET_DIR)/usr/lib/libretro/play_libretro.so
 endef
 
 $(eval $(cmake-package))

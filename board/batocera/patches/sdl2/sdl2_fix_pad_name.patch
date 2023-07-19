@@ -1,8 +1,8 @@
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
-index e6db86781..48f29fdad 100644
+index 9f82452..af9d10c 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
-@@ -255,10 +255,7 @@ static int IsJoystick(const char *path, int fd, char **name_return, SDL_Joystick
+@@ -255,10 +255,7 @@
          }
      }
  

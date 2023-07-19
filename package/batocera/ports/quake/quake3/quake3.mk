@@ -20,24 +20,30 @@ QUAKE3_BUILD_ARGS += BUILD_GAME_QVM=0
 QUAKE3_BUILD_ARGS += CROSS_COMPILING=1
 QUAKE3_BUILD_ARGS += USE_RENDERER_DLOPEN=0
 
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
-    QUAKE3_BUILD_ARGS +=COMPILE_ARCH=arm64
-else
-    QUAKE3_BUILD_ARGS +=COMPILE_ARCH=x86_64
+ifeq ($(BR2_PACKAGE_GL4ES),y)
+    QUAKE3_DEPENDENCIES += gl4es
+endif
+
+ifeq ($(BR2_aarch64),y)
+    QUAKE3_BUILD_ARGS += COMPILE_ARCH=arm64
+else ifeq ($(BR2_arm),y)
+    QUAKE3_BUILD_ARGS += COMPILE_ARCH=armv7l
+else ifeq ($(BR2_x86_64),y)
+    QUAKE3_BUILD_ARGS += COMPILE_ARCH=x86_64
 endif
 
 define QUAKE3_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile \
-	DEFAULT_BASEDIR=/userdata/roms/ports/quake3 \
-	$(QUAKE3_BUILD_ARGS) -C $(@D) -f Makefile
+    $(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile \
+    DEFAULT_BASEDIR=/userdata/roms/ports/quake3 \
+    $(QUAKE3_BUILD_ARGS) -C $(@D) -f Makefile
 endef
 
 define QUAKE3_INSTALL_TARGET_CMDS
     mkdir -p $(TARGET_DIR)/usr/share/quake3
     cp -pvr $(@D)/build/release-linux-*/ioquake3_opengl2.* $(TARGET_DIR)/usr/bin/ioquake3
     # evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/quake3/quake3.keys $(TARGET_DIR)/usr/share/evmapy
+    mkdir -p $(TARGET_DIR)/usr/share/evmapy
+    cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/quake3/quake3.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(generic-package))

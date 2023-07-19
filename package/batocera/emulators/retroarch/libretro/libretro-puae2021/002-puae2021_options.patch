@@ -1,5 +1,5 @@
 diff --git a/libretro/libretro-core.c b/libretro/libretro-core.c
-index 88cd9cc..0c0deb1 100644
+index cc3fde3..4db514b 100644
 --- a/libretro/libretro-core.c
 +++ b/libretro/libretro-core.c
 @@ -106,7 +106,7 @@ extern uae_u32 natmem_size;
@@ -331,12 +331,21 @@ index 88cd9cc..0c0deb1 100644
           "PAL auto"
        },
        {
+-         "puae_video_aspect",
++         "puae2021_video_aspect",
+          "Video > Pixel Aspect Ratio",
+          "Pixel Aspect Ratio",
+          "Hotkey toggling disables this option until core restart.\n- 'PAL': 1/1 = 1.000\n- 'NTSC': 44/52 = 0.846",
+@@ -1319,7 +1319,7 @@ static void retro_set_core_options()
+          "auto"
+       },
+       {
 -         "puae_video_resolution",
 +         "puae2021_video_resolution",
           "Video > Resolution",
           "Resolution",
           "Output width:\n- 'Automatic' defaults to 'High' and switches to 'Super-High' when needed.",
-@@ -1320,7 +1320,7 @@ static void retro_set_core_options()
+@@ -1335,7 +1335,7 @@ static void retro_set_core_options()
           "auto"
        },
        {
@@ -345,15 +354,6 @@ index 88cd9cc..0c0deb1 100644
           "Video > Line Mode",
           "Line Mode",
           "Output height:\n- 'Automatic' defaults to 'Single Line' and switches to 'Double Line' on interlaced screens.",
-@@ -1335,7 +1335,7 @@ static void retro_set_core_options()
-          "auto"
-       },
-       {
--         "puae_video_aspect",
-+         "puae2021_video_aspect",
-          "Video > Pixel Aspect Ratio",
-          "Pixel Aspect Ratio",
-          "Hotkey toggling disables this option until core restart.\n- 'PAL': 1/1 = 1.000\n- 'NTSC': 44/52 = 0.846",
 @@ -1350,7 +1350,7 @@ static void retro_set_core_options()
           "auto"
        },
@@ -1352,7 +1352,7 @@ index 88cd9cc..0c0deb1 100644
     environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
  }
  
-@@ -3262,42 +3262,42 @@ static void update_variables(void)
+@@ -3260,42 +3260,42 @@ static void update_variables(void)
     uae_model[0]  = '\0';
     uae_config[0] = '\0';
  
@@ -1401,7 +1401,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3317,7 +3317,7 @@ static void update_variables(void)
+@@ -3315,7 +3315,7 @@ static void update_variables(void)
        }
     }
  
@@ -1410,7 +1410,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3356,7 +3356,7 @@ static void update_variables(void)
+@@ -3354,7 +3354,7 @@ static void update_variables(void)
        }
     }
  
@@ -1419,7 +1419,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3371,7 +3371,7 @@ static void update_variables(void)
+@@ -3369,7 +3369,7 @@ static void update_variables(void)
           video_config_aspect = video_config_aspect_prev;
     }
  
@@ -1428,7 +1428,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3393,7 +3393,7 @@ static void update_variables(void)
+@@ -3391,7 +3391,7 @@ static void update_variables(void)
        }
     }
  
@@ -1437,7 +1437,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3455,7 +3455,7 @@ static void update_variables(void)
+@@ -3453,7 +3453,7 @@ static void update_variables(void)
           request_init_custom_timer = 2;
     }
  
@@ -1446,7 +1446,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3504,7 +3504,7 @@ static void update_variables(void)
+@@ -3502,7 +3502,7 @@ static void update_variables(void)
           request_init_custom_timer = 2;
     }
  
@@ -1455,7 +1455,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3530,7 +3530,7 @@ static void update_variables(void)
+@@ -3528,7 +3528,7 @@ static void update_variables(void)
        opt_statusbar_position_old = opt_statusbar_position;
     }
  
@@ -1464,7 +1464,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3543,7 +3543,7 @@ static void update_variables(void)
+@@ -3541,7 +3541,7 @@ static void update_variables(void)
        }
     }
  
@@ -1473,7 +1473,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3551,7 +3551,7 @@ static void update_variables(void)
+@@ -3549,7 +3549,7 @@ static void update_variables(void)
           opt_statusbar |= STATUSBAR_MESSAGES;
     }
  
@@ -1482,7 +1482,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3564,7 +3564,7 @@ static void update_variables(void)
+@@ -3562,7 +3562,7 @@ static void update_variables(void)
        if      (strstr(var.value, "outline")) opt_vkbd_theme |= 0x80;
     }
  
@@ -1491,7 +1491,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3575,7 +3575,7 @@ static void update_variables(void)
+@@ -3573,7 +3573,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "100%")) opt_vkbd_alpha = GRAPH_ALPHA_0;
     }
  
@@ -1500,7 +1500,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3586,7 +3586,7 @@ static void update_variables(void)
+@@ -3584,7 +3584,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "100%")) opt_vkbd_dim_alpha = GRAPH_ALPHA_100;
     }
  
@@ -1509,7 +1509,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3601,7 +3601,7 @@ static void update_variables(void)
+@@ -3599,7 +3599,7 @@ static void update_variables(void)
        }
     }
  
@@ -1518,7 +1518,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3616,7 +3616,7 @@ static void update_variables(void)
+@@ -3614,7 +3614,7 @@ static void update_variables(void)
        }
     }
  
@@ -1527,7 +1527,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3631,7 +3631,7 @@ static void update_variables(void)
+@@ -3629,7 +3629,7 @@ static void update_variables(void)
        }
     }
  
@@ -1536,7 +1536,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3648,7 +3648,7 @@ static void update_variables(void)
+@@ -3646,7 +3646,7 @@ static void update_variables(void)
        }
     }
  
@@ -1545,7 +1545,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3678,7 +3678,7 @@ static void update_variables(void)
+@@ -3676,7 +3676,7 @@ static void update_variables(void)
        }
     }
  
@@ -1554,7 +1554,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3704,7 +3704,7 @@ static void update_variables(void)
+@@ -3702,7 +3702,7 @@ static void update_variables(void)
        }
     }
  
@@ -1563,7 +1563,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3747,7 +3747,7 @@ static void update_variables(void)
+@@ -3745,7 +3745,7 @@ static void update_variables(void)
        }
     }
  
@@ -1572,7 +1572,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3759,7 +3759,7 @@ static void update_variables(void)
+@@ -3757,7 +3757,7 @@ static void update_variables(void)
           changed_prefs.m68k_speed_throttle = atof(var.value);
     }
  
@@ -1581,7 +1581,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3771,7 +3771,7 @@ static void update_variables(void)
+@@ -3769,7 +3769,7 @@ static void update_variables(void)
           changed_prefs.cpu_clock_multiplier = atoi(var.value) * 256;
     }
  
@@ -1590,7 +1590,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3787,7 +3787,7 @@ static void update_variables(void)
+@@ -3785,7 +3785,7 @@ static void update_variables(void)
           changed_prefs.sound_stereo_separation = val;
     }
  
@@ -1599,7 +1599,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3805,7 +3805,7 @@ static void update_variables(void)
+@@ -3803,7 +3803,7 @@ static void update_variables(void)
        }
     }
  
@@ -1608,7 +1608,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3821,7 +3821,7 @@ static void update_variables(void)
+@@ -3819,7 +3819,7 @@ static void update_variables(void)
        }
     }
  
@@ -1617,7 +1617,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3841,7 +3841,7 @@ static void update_variables(void)
+@@ -3839,7 +3839,7 @@ static void update_variables(void)
        }
     }
  
@@ -1626,7 +1626,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3858,7 +3858,7 @@ static void update_variables(void)
+@@ -3856,7 +3856,7 @@ static void update_variables(void)
           changed_prefs.sound_volume_cd = val;
     }
  
@@ -1635,7 +1635,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3871,7 +3871,7 @@ static void update_variables(void)
+@@ -3869,7 +3869,7 @@ static void update_variables(void)
                                                                           AUTOLOADFASTFORWARD_CD;
     }
  
@@ -1644,7 +1644,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3883,7 +3883,7 @@ static void update_variables(void)
+@@ -3881,7 +3881,7 @@ static void update_variables(void)
           changed_prefs.cd_speed = atoi(var.value);
     }
  
@@ -1653,7 +1653,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3895,7 +3895,7 @@ static void update_variables(void)
+@@ -3893,7 +3893,7 @@ static void update_variables(void)
           changed_prefs.floppy_speed = atoi(var.value);
     }
  
@@ -1662,7 +1662,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3903,7 +3903,7 @@ static void update_variables(void)
+@@ -3901,7 +3901,7 @@ static void update_variables(void)
        else                                opt_floppy_multidrive = true;
     }
  
@@ -1671,7 +1671,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3936,7 +3936,7 @@ static void update_variables(void)
+@@ -3934,7 +3934,7 @@ static void update_variables(void)
        }
     }
  
@@ -1680,7 +1680,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3974,7 +3974,7 @@ static void update_variables(void)
+@@ -3972,7 +3972,7 @@ static void update_variables(void)
        }
     }
  
@@ -1689,7 +1689,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -3996,7 +3996,7 @@ static void update_variables(void)
+@@ -3994,7 +3994,7 @@ static void update_variables(void)
           changed_prefs.dfxclickvolume = atoi(val);
     }
  
@@ -1698,7 +1698,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4004,7 +4004,7 @@ static void update_variables(void)
+@@ -4002,7 +4002,7 @@ static void update_variables(void)
        else                                opt_floppy_sound_empty_mute = true;
     }
  
@@ -1707,7 +1707,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4053,7 +4053,7 @@ static void update_variables(void)
+@@ -4051,7 +4051,7 @@ static void update_variables(void)
        }
     }
  
@@ -1716,7 +1716,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4069,7 +4069,7 @@ static void update_variables(void)
+@@ -4067,7 +4067,7 @@ static void update_variables(void)
        }
     }
  
@@ -1725,7 +1725,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4109,7 +4109,7 @@ static void update_variables(void)
+@@ -4107,7 +4107,7 @@ static void update_variables(void)
        }
     }
  
@@ -1734,7 +1734,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4126,7 +4126,7 @@ static void update_variables(void)
+@@ -4124,7 +4124,7 @@ static void update_variables(void)
        }
     }
  
@@ -1743,7 +1743,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4148,7 +4148,7 @@ static void update_variables(void)
+@@ -4146,7 +4146,7 @@ static void update_variables(void)
           changed_prefs.gfx_framerate = val;
     }
  
@@ -1752,7 +1752,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4160,7 +4160,7 @@ static void update_variables(void)
+@@ -4158,7 +4158,7 @@ static void update_variables(void)
        }
     }
  
@@ -1761,7 +1761,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4182,7 +4182,7 @@ static void update_variables(void)
+@@ -4180,7 +4180,7 @@ static void update_variables(void)
        }
     }
  
@@ -1770,7 +1770,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4202,7 +4202,7 @@ static void update_variables(void)
+@@ -4200,7 +4200,7 @@ static void update_variables(void)
        }
     }
  
@@ -1779,7 +1779,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4219,7 +4219,7 @@ static void update_variables(void)
+@@ -4217,7 +4217,7 @@ static void update_variables(void)
        opt_crop_id = crop_id;
     }
  
@@ -1788,7 +1788,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4232,7 +4232,7 @@ static void update_variables(void)
+@@ -4230,7 +4230,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "5:4"))        crop_mode_id = CROP_MODE_5_4;
     }
  
@@ -1797,7 +1797,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4255,7 +4255,7 @@ static void update_variables(void)
+@@ -4253,7 +4253,7 @@ static void update_variables(void)
        }
     }
  
@@ -1806,7 +1806,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4276,7 +4276,7 @@ static void update_variables(void)
+@@ -4274,7 +4274,7 @@ static void update_variables(void)
        }
     }
  
@@ -1815,7 +1815,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4285,7 +4285,7 @@ static void update_variables(void)
+@@ -4283,7 +4283,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "hdfs"))     opt_use_whdload = 2;
     }
  
@@ -1824,7 +1824,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4293,7 +4293,7 @@ static void update_variables(void)
+@@ -4291,7 +4291,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "native"))   opt_use_whdload_theme = 1;
     }
  
@@ -1833,7 +1833,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4303,7 +4303,7 @@ static void update_variables(void)
+@@ -4301,7 +4301,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "both"))     opt_use_whdload_prefs = 3;
     }
  
@@ -1842,7 +1842,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4311,7 +4311,7 @@ static void update_variables(void)
+@@ -4309,7 +4309,7 @@ static void update_variables(void)
        else                                opt_use_whdload_nowritecache = true;
     }
  
@@ -1851,7 +1851,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4319,7 +4319,7 @@ static void update_variables(void)
+@@ -4317,7 +4317,7 @@ static void update_variables(void)
        else                                opt_cd_startup_delayed_insert = true;
     }
  
@@ -1860,7 +1860,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4327,7 +4327,7 @@ static void update_variables(void)
+@@ -4325,7 +4325,7 @@ static void update_variables(void)
        else                                opt_shared_nvram = true;
     }
  
@@ -1869,7 +1869,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4341,7 +4341,7 @@ static void update_variables(void)
+@@ -4339,7 +4339,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "hdf512"))   opt_use_boot_hd = 7;
     }
  
@@ -1878,7 +1878,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4351,28 +4351,28 @@ static void update_variables(void)
+@@ -4349,28 +4349,28 @@ static void update_variables(void)
        else if (!strcmp(var.value, "both"))     opt_analogmouse = 3;
     }
  
@@ -1911,7 +1911,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4381,7 +4381,7 @@ static void update_variables(void)
+@@ -4379,7 +4379,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "double"))   opt_physicalmouse = 2;
     }
  
@@ -1920,7 +1920,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4389,7 +4389,7 @@ static void update_variables(void)
+@@ -4387,7 +4387,7 @@ static void update_variables(void)
        else                                opt_keyrah_keypad = true;
     }
  
@@ -1929,7 +1929,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4397,7 +4397,7 @@ static void update_variables(void)
+@@ -4395,7 +4395,7 @@ static void update_variables(void)
        else                                opt_keyboard_pass_through = true;
     }
  
@@ -1938,7 +1938,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4405,7 +4405,7 @@ static void update_variables(void)
+@@ -4403,7 +4403,7 @@ static void update_variables(void)
        else                                opt_model_options_display = 1;
     }
  
@@ -1947,7 +1947,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4413,7 +4413,7 @@ static void update_variables(void)
+@@ -4411,7 +4411,7 @@ static void update_variables(void)
        else                                opt_mapping_options_display = 1;
     }
  
@@ -1956,7 +1956,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4421,7 +4421,7 @@ static void update_variables(void)
+@@ -4419,7 +4419,7 @@ static void update_variables(void)
        else                                opt_video_options_display = 1;
     }
  
@@ -1965,7 +1965,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4429,7 +4429,7 @@ static void update_variables(void)
+@@ -4427,7 +4427,7 @@ static void update_variables(void)
        else                                opt_audio_options_display = 1;
     }
  
@@ -1974,7 +1974,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4440,14 +4440,14 @@ static void update_variables(void)
+@@ -4438,14 +4438,14 @@ static void update_variables(void)
        }
     }
  
@@ -1991,7 +1991,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4457,7 +4457,7 @@ static void update_variables(void)
+@@ -4455,7 +4455,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "rotate_jump")) opt_retropad_options = RETROPAD_OPTIONS_ROTATE_JUMP;
     }
  
@@ -2000,7 +2000,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4467,7 +4467,7 @@ static void update_variables(void)
+@@ -4465,7 +4465,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "rotate_jump")) opt_cd32pad_options = RETROPAD_OPTIONS_ROTATE_JUMP;
     }
  
@@ -2009,7 +2009,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4478,7 +4478,7 @@ static void update_variables(void)
+@@ -4476,7 +4476,7 @@ static void update_variables(void)
        }
     }
  
@@ -2018,7 +2018,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4492,7 +4492,7 @@ static void update_variables(void)
+@@ -4490,7 +4490,7 @@ static void update_variables(void)
        else if (!strcmp(var.value, "R2")) turbo_fire_button = RETRO_DEVICE_ID_JOYPAD_R2;
     }
  
@@ -2027,7 +2027,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4500,168 +4500,168 @@ static void update_variables(void)
+@@ -4498,168 +4498,168 @@ static void update_variables(void)
     }
  
     /* Mapper */
@@ -2220,7 +2220,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4669,56 +4669,56 @@ static void update_variables(void)
+@@ -4667,56 +4667,56 @@ static void update_variables(void)
     }
  
     /* Mapper hotkeys */
@@ -2285,7 +2285,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4812,7 +4812,7 @@ static void update_variables(void)
+@@ -4810,7 +4810,7 @@ static void update_variables(void)
     char legacy_zoom_crop_string[20]   = {0};
     char legacy_zoom_toggle_string[20] = {0};
  
@@ -2294,7 +2294,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4829,7 +4829,7 @@ static void update_variables(void)
+@@ -4827,7 +4827,7 @@ static void update_variables(void)
        strlcpy(legacy_zoom_string, var.value, sizeof(legacy_zoom_string));
     }
  
@@ -2303,7 +2303,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4844,7 +4844,7 @@ static void update_variables(void)
+@@ -4842,7 +4842,7 @@ static void update_variables(void)
        strlcpy(legacy_zoom_crop_string, var.value, sizeof(legacy_zoom_crop_string));
     }
  
@@ -2312,7 +2312,7 @@ index 88cd9cc..0c0deb1 100644
     var.value = NULL;
     if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value)
     {
-@@ -4855,32 +4855,32 @@ static void update_variables(void)
+@@ -4853,32 +4853,32 @@ static void update_variables(void)
     if (legacy_zoom > CROP_NONE)
     {
        log_cb(RETRO_LOG_INFO, "Migrating 'zoom_mode' to 'crop'..\n");
@@ -2351,7 +2351,7 @@ index 88cd9cc..0c0deb1 100644
  
     updating_variables = false;
     if (request_update_variables)
-@@ -5216,7 +5216,7 @@ void retro_deinit(void)
+@@ -5211,7 +5211,7 @@ void retro_deinit(void)
        dc_free(dc);
  
     /* Clean dynamic cartridge info */
@@ -2382,7 +2382,7 @@ index 30bffa1..46cf112 100644
  /* Video */
  #define PUAE_VIDEO_PAL          0x01
 diff --git a/retrodep/sysconfig.h b/retrodep/sysconfig.h
-index 2cbea46..479da11 100644
+index 43edd83..8cd0202 100644
 --- a/retrodep/sysconfig.h
 +++ b/retrodep/sysconfig.h
 @@ -366,7 +366,7 @@
