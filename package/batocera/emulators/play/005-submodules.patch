@@ -1,0 +1,13 @@
+Submodule deps/Framework contains modified content
+diff --git a/deps/Framework/src/vulkan/Instance.cpp b/deps/Framework/src/vulkan/Instance.cpp
+index 8a3b7b3..b39cb76 100644
+--- a/deps/Framework/src/vulkan/Instance.cpp
++++ b/deps/Framework/src/vulkan/Instance.cpp
+@@ -1,6 +1,7 @@
+ #include "vulkan/VulkanDef.h"
+ #include "vulkan/Instance.h"
+ #include "vulkan/Loader.h"
++#include <stdexcept>
+ 
+ #define SET_PROC_ADDR(functionName) this->functionName = reinterpret_cast<PFN_##functionName>(CLoader::GetInstance().vkGetInstanceProcAddr(m_handle, #functionName));
+ 

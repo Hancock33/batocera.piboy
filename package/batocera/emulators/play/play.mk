@@ -10,7 +10,7 @@ PLAY_SITE_METHOD = git
 PLAY_GIT_SUBMODULES = YES
 PLAY_LICENSE = BSD
 
-PLAY_DEPENDENCIES = openal qt5base sqlite host-ninja
+PLAY_DEPENDENCIES = openal sqlite qt6base host-ninja
 
 PLAY_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 PLAY_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
@@ -19,7 +19,7 @@ PLAY_CONF_OPTS += -DBUILD_TESTS=OFF
 PLAY_CONF_OPTS += -DENABLE_AMAZON_S3=OFF
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
-    PLAY_DEPENDENCIES += xserver_xorg-server libglew qt5x11extras
+    PLAY_DEPENDENCIES += xserver_xorg-server libglew
     PLAY_CONF_OPTS += -DOpenGL_GL_PREFERENCE=GLVND
 else
     # Force to use GLES on ARM
