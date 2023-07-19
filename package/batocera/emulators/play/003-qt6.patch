@@ -1,0 +1,241 @@
+diff --git a/Source/ui_qt/CMakeLists.txt b/Source/ui_qt/CMakeLists.txt
+index acb51501..76d82cb4 100644
+--- a/Source/ui_qt/CMakeLists.txt
++++ b/Source/ui_qt/CMakeLists.txt
+@@ -245,21 +245,21 @@ set(QT_RESOURCES
+ )
+ 
+ set(QT_COMPONENTS Widgets Core)
+-if(TARGET_PLATFORM_UNIX)
+-	list(APPEND QT_COMPONENTS X11Extras)
+-endif()
+-find_package(Qt5 REQUIRED COMPONENTS ${QT_COMPONENTS})
++#if(TARGET_PLATFORM_UNIX)
++#	list(APPEND QT_COMPONENTS X11Extras)
++#endif()
++find_package(Qt6 REQUIRED COMPONENTS ${QT_COMPONENTS})
+ 
+-list(APPEND PROJECT_LIBS Qt5::Widgets Qt5::Core)
+-if(TARGET_PLATFORM_UNIX)
+-	list(APPEND PROJECT_LIBS Qt5::X11Extras)
+-endif()
++list(APPEND PROJECT_LIBS Qt6::Widgets Qt6::Core Qt6::GuiPrivate)
++#if(TARGET_PLATFORM_UNIX)
++#	list(APPEND PROJECT_LIBS Qt6::X11Extras)
++#endif()
+ 
+ add_definitions(${QT_DEFINITIONS})
+ 
+-QT5_ADD_RESOURCES(QT_RES_SOURCES ${QT_RESOURCES})
+-QT5_WRAP_UI(QT_UI_HEADERS ${QT_UIS})
+-QT5_WRAP_CPP(QT_MOC_SRCS ${QT_MOC_HEADERS})
++Qt6_ADD_RESOURCES(QT_RES_SOURCES ${QT_RESOURCES})
++Qt6_WRAP_UI(QT_UI_HEADERS ${QT_UIS})
++Qt6_WRAP_CPP(QT_MOC_SRCS ${QT_MOC_HEADERS})
+ 
+ if(TARGET_PLATFORM_MACOS)
+ 	set(QT_SOURCES
+diff --git a/Source/ui_qt/DebugSupport/FrameDebugger/PixelBufferView.cpp b/Source/ui_qt/DebugSupport/FrameDebugger/PixelBufferView.cpp
+index e4cab0f1..5ff307ea 100644
+--- a/Source/ui_qt/DebugSupport/FrameDebugger/PixelBufferView.cpp
++++ b/Source/ui_qt/DebugSupport/FrameDebugger/PixelBufferView.cpp
+@@ -157,7 +157,12 @@ void CPixelBufferView::OnMouseMoveEvent(QMouseEvent* event)
+ void CPixelBufferView::OnMouseWheelEvent(QWheelEvent* event)
+ {
+ 	float newZoom = 0;
+-	auto z = event->delta();
++	auto z = 0;
++	auto delta = event->angleDelta();
++	if(!delta.isNull())
++	{
++		z = delta.y();
++	}
+ 	if(z <= -1)
+ 	{
+ 		newZoom = m_zoomFactor / 2;
+@@ -170,7 +175,7 @@ void CPixelBufferView::OnMouseWheelEvent(QWheelEvent* event)
+ 	if(newZoom != 0)
+ 	{
+ 		auto clientRect = m_openglpanel->size();
+-		auto mousePoint = event->posF();
++		auto mousePoint = event->position();
+ 		float relPosX = static_cast<float>(mousePoint.x()) / static_cast<float>(clientRect.width());
+ 		float relPosY = static_cast<float>(mousePoint.y()) / static_cast<float>(clientRect.height());
+ 		relPosX = std::max(relPosX, 0.f);
+diff --git a/Source/ui_qt/DebugSupport/FrameDebugger/QtFramedebugger.cpp b/Source/ui_qt/DebugSupport/FrameDebugger/QtFramedebugger.cpp
+index d38b9257..111815b3 100644
+--- a/Source/ui_qt/DebugSupport/FrameDebugger/QtFramedebugger.cpp
++++ b/Source/ui_qt/DebugSupport/FrameDebugger/QtFramedebugger.cpp
+@@ -18,6 +18,7 @@
+ #include "gs/GSH_Vulkan/GSH_VulkanOffscreen.h"
+ #endif
+ 
++#include <QActionGroup>
+ #include <QMessageBox>
+ #include <QFileDialog>
+ #include <QOffscreenSurface>
+diff --git a/Source/ui_qt/DebugSupport/MemoryViewTable.cpp b/Source/ui_qt/DebugSupport/MemoryViewTable.cpp
+index c006c439..b2d3e1fc 100644
+--- a/Source/ui_qt/DebugSupport/MemoryViewTable.cpp
++++ b/Source/ui_qt/DebugSupport/MemoryViewTable.cpp
+@@ -1,4 +1,5 @@
+ #include <QAction>
++#include <QActionGroup>
+ #include <QApplication>
+ #include <QInputDialog>
+ #include <QMenu>
+diff --git a/Source/ui_qt/GSH_VulkanQt.cpp b/Source/ui_qt/GSH_VulkanQt.cpp
+index d59270fe..ef9f36df 100644
+--- a/Source/ui_qt/GSH_VulkanQt.cpp
++++ b/Source/ui_qt/GSH_VulkanQt.cpp
+@@ -8,7 +8,8 @@
+ #endif
+ 
+ #ifdef __linux__
+-#include <QX11Info>
++//#include <QX11Info>
++#include <QtGui/private/qtx11extras_p.h>
+ #endif
+ 
+ CGSH_VulkanQt::CGSH_VulkanQt(QWindow* renderWindow)
+diff --git a/Source/ui_qt/Qt_ui/s3filebrowser.ui b/Source/ui_qt/Qt_ui/s3filebrowser.ui
+index 73896d06..d04cbb7f 100644
+--- a/Source/ui_qt/Qt_ui/s3filebrowser.ui
++++ b/Source/ui_qt/Qt_ui/s3filebrowser.ui
+@@ -104,53 +104,5 @@
+     </hint>
+    </hints>
+   </connection>
+-  <connection>
+-   <sender>refreshButton</sender>
+-   <signal>clicked()</signal>
+-   <receiver>S3FileBrowser</receiver>
+-   <slot>refreshButton_clicked()</slot>
+-   <hints>
+-    <hint type="sourcelabel">
+-     <x>400</x>
+-     <y>21</y>
+-    </hint>
+-    <hint type="destinationlabel">
+-     <x>223</x>
+-     <y>186</y>
+-    </hint>
+-   </hints>
+-  </connection>
+-  <connection>
+-   <sender>objectList</sender>
+-   <signal>itemSelectionChanged()</signal>
+-   <receiver>S3FileBrowser</receiver>
+-   <slot>objectList_itemSelectionChanged()</slot>
+-   <hints>
+-    <hint type="sourcelabel">
+-     <x>223</x>
+-     <y>187</y>
+-    </hint>
+-    <hint type="destinationlabel">
+-     <x>223</x>
+-     <y>186</y>
+-    </hint>
+-   </hints>
+-  </connection>
+-  <connection>
+-   <sender>searchFilterEdit</sender>
+-   <signal>textChanged(QString)</signal>
+-   <receiver>S3FileBrowser</receiver>
+-   <slot>searchFilterEdit_textChanged(QString)</slot>
+-   <hints>
+-    <hint type="sourcelabel">
+-     <x>223</x>
+-     <y>49</y>
+-    </hint>
+-    <hint type="destinationlabel">
+-     <x>223</x>
+-     <y>186</y>
+-    </hint>
+-   </hints>
+-  </connection>
+  </connections>
+ </ui>
+diff --git a/Source/ui_qt/S3FileBrowser.cpp b/Source/ui_qt/S3FileBrowser.cpp
+index 3e45592a..27587e1e 100644
+--- a/Source/ui_qt/S3FileBrowser.cpp
++++ b/Source/ui_qt/S3FileBrowser.cpp
+@@ -41,17 +41,17 @@ fs::path S3FileBrowser::GetSelectedPath() const
+ 	return m_selectedPath;
+ }
+ 
+-void S3FileBrowser::refreshButton_clicked()
++void S3FileBrowser::on_refreshButton_clicked()
+ {
+ 	launchUpdate();
+ }
+ 
+-void S3FileBrowser::objectList_itemSelectionChanged()
++void S3FileBrowser::on_objectList_itemSelectionChanged()
+ {
+ 	updateOkButtonState();
+ }
+ 
+-void S3FileBrowser::searchFilterEdit_textChanged(QString)
++void S3FileBrowser::on_searchFilterEdit_textChanged(QString)
+ {
+ 	m_filterTimer->start(100);
+ }
+diff --git a/Source/ui_qt/S3FileBrowser.h b/Source/ui_qt/S3FileBrowser.h
+index 2e349a10..daee2413 100644
+--- a/Source/ui_qt/S3FileBrowser.h
++++ b/Source/ui_qt/S3FileBrowser.h
+@@ -24,9 +24,9 @@ public:
+ 	fs::path GetSelectedPath() const;
+ 
+ private slots:
+-	void refreshButton_clicked();
+-	void objectList_itemSelectionChanged();
+-	void searchFilterEdit_textChanged(QString);
++	void on_refreshButton_clicked();
++	void on_objectList_itemSelectionChanged();
++	void on_searchFilterEdit_textChanged(QString);
+ 	void updateFilter();
+ 
+ private:
+diff --git a/Source/ui_qt/memorycardmanagerdialog.cpp b/Source/ui_qt/memorycardmanagerdialog.cpp
+index c318a42a..ff67f6b1 100644
+--- a/Source/ui_qt/memorycardmanagerdialog.cpp
++++ b/Source/ui_qt/memorycardmanagerdialog.cpp
+@@ -117,7 +117,7 @@ void MemoryCardManagerDialog::on_savelistWidget_currentRowChanged(int currentRow
+ 	{
+ 		const CSave* save = m_pCurrentMemoryCard->GetSaveByIndex(saveIndex);
+ 		QDateTime* dt = new QDateTime;
+-		dt->setTime_t(save->GetLastModificationTime());
++		dt->setSecsSinceEpoch(save->GetLastModificationTime());
+ 		QString datetime = dt->toUTC().toString("hh:mm - dd.MM.yyyy");
+ 
+ 		ui->label_name->setText(QString::fromWCharArray(save->GetName()));
+diff --git a/tools/ElfView/CMakeLists.txt b/tools/ElfView/CMakeLists.txt
+index cf087e9a..3347eaa4 100644
+--- a/tools/ElfView/CMakeLists.txt
++++ b/tools/ElfView/CMakeLists.txt
+@@ -17,8 +17,8 @@ endif()
+ list(APPEND PROJECT_LIBS PlayCore)
+ 
+ set(QT_COMPONENTS Widgets Core)
+-find_package(Qt5 REQUIRED COMPONENTS ${QT_COMPONENTS})
+-list(APPEND PROJECT_LIBS Qt5::Widgets Qt5::Core)
++find_package(Qt6 REQUIRED COMPONENTS ${QT_COMPONENTS})
++list(APPEND PROJECT_LIBS Qt6::Widgets Qt6::Core)
+ 
+ set(DEBUG_SUPPORT_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../../Source/ui_qt/DebugSupport)
+ 
+@@ -63,9 +63,9 @@ set(QT_RESOURCES
+ 	qt_ui/resources.qrc
+ )
+ 
+-QT5_ADD_RESOURCES(QT_RES_SOURCES ${QT_RESOURCES})
+-QT5_WRAP_UI(ELFVIEW_UI_HEADERS ${ELFVIEW_UI})
+-QT5_WRAP_CPP(ELFVIEW_MOC_SRCS ${ELFVIEW_MOC_HEADERS})
++Qt6_ADD_RESOURCES(QT_RES_SOURCES ${QT_RESOURCES})
++Qt6_WRAP_UI(ELFVIEW_UI_HEADERS ${ELFVIEW_UI})
++Qt6_WRAP_CPP(ELFVIEW_MOC_SRCS ${ELFVIEW_MOC_HEADERS})
+ 
+ add_executable(ElfView WIN32 ${ELFVIEW_SRC} ${ELFVIEW_MOC_SRCS} ${QT_RES_SOURCES} ${ELFVIEW_UI_HEADERS})
+ target_link_libraries(ElfView PRIVATE ${PROJECT_LIBS})
