@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jul 20, 2023
-DOOMRETRO_VERSION = 55e8eeff818d5542409a706d9e71fb35428e61a4
+DOOMRETRO_VERSION = 8e7fd44e9a109c8a33a7c9fffde3880c1da73870
 DOOMRETRO_SITE = $(call github,bradharding,doomretro,$(DOOMRETRO_VERSION))
 
 DOOMRETRO_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image host-ninja

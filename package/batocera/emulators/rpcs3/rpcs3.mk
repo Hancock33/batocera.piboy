@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on May 22, 2021 (branch@Qt6-fun)
-RPCS3_VERSION = d8185ce62f69c8c4ac24c6568a642a8c44ab9546
+RPCS3_VERSION = 45595ba875642c8fc7f870699a716397cba95a7f
 RPCS3_SITE = https://github.com/Megamouse/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
