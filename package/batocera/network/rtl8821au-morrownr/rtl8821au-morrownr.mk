@@ -3,8 +3,8 @@
 # rtl8821au-morrownr
 #
 ################################################################################
-# Version: Commits on Mar 22, 2023
-RTL8821AU_MORROWNR_VERSION = a133274b0532c17318e8790b771566f4a6b12b7c
+# Version: Commits on Jul 13, 2023
+RTL8821AU_MORROWNR_VERSION = eade7b8803a6ecea5bef9f9a87f7c8186190e987
 RTL8821AU_MORROWNR_SITE = $(call github,morrownr,8821au-20210708,$(RTL8821AU_MORROWNR_VERSION))
 RTL8821AU_MORROWNR_LICENSE = GPL-2.0
 RTL8821AU_MORROWNR_LICENSE_FILES = LICENSE
