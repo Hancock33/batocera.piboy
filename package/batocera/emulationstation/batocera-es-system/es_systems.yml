@@ -5845,9 +5845,8 @@ namco2x6:
   release:              2000
   hardware:             arcade
   extensions:           [zip]
+  platform:             arcade
   emulators:
-    libretro:
-      play:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PLAY] }
     play:
       play:             { requireAnyOf: [BR2_PACKAGE_PLAY] }
   comment_en: |
