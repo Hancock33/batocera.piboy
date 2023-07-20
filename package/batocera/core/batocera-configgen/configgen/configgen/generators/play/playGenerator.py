@@ -135,9 +135,11 @@ class PlayGenerator(Generator):
                 rom = os.path.basename(rom)
                 rom = os.path.splitext(rom)[0]
                 commandArray.extend(["--arcade", rom])
+            elif (rom.lower().endswith("elf")):
+                commandArray.extend(["--elf", rom])
             else:
                 commandArray.extend(["--disc", rom])
-        
+
         return Command.Command(
             array=commandArray,
             env={
