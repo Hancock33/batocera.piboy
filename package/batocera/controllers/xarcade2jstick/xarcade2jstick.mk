@@ -3,8 +3,8 @@
 # xarcade2jstick
 #
 ################################################################################
-# Version: Commits on 05 Apr 2019
-XARCADE2JSTICK_VERSION = d080123958dee9b2197e656e28c7859564a30893
+# Version: Commits on Apr 10, 2023
+XARCADE2JSTICK_VERSION = 7b579e9e9554e6d997978d069ddeb566ff381007
 XARCADE2JSTICK_SITE =  $(call github,petrockblog,xarcade2jstick,$(XARCADE2JSTICK_VERSION))
 XARCADE2JSTICK_LICENSE = gpl3
 XARCADE2JSTICK_DEPENDENCIES = linux
