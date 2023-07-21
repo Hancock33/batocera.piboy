@@ -9572,7 +9572,7 @@ msgctxt "game_options"
 msgid "LLVM is fastest, use the Interpreter settings if there are issues."
 msgstr ""
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3
+#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3
 msgctxt "game_options"
 msgid "CPU"
 msgstr "المعالج"
@@ -9689,6 +9689,18 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "6 threads"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"May provide performance gain on CPUs with low core/thread count at the "
+"expense of possible broken timings."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "SPU LOOP DETECTION"
 msgstr ""
 
 #. TRANSLATION: rpcs3
@@ -12781,14 +12793,6 @@ msgstr ""
 #~ msgid "Per Pixel"
 #~ msgstr "لكل بكسل"
 
-#~ msgctxt "game_options"
-#~ msgid "Stretch to 16:9"
-#~ msgstr "تمديد إلى ٩:١٦"
-
-#~ msgctxt "game_options"
-#~ msgid "Stretch to 4:3"
-#~ msgstr "تمديد إلى ٣:٤"
-
 #~ msgctxt "keys_files"
 #~ msgid "Restart Game"
 #~ msgstr "أعد تشغيل اللعبة"
@@ -12852,3 +12856,11 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "تسريع إلى الأمام"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 16:9"
+#~ msgstr "تمديد إلى ٩:١٦"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch to 4:3"
+#~ msgstr "تمديد إلى ٣:٤"
