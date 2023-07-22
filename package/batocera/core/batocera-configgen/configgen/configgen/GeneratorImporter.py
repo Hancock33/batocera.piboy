@@ -387,6 +387,10 @@ def getGenerator(emulator):
         from generators.serioussam.serioussamGenerator import SerioussamGenerator
         return SerioussamGenerator()
 
+    if emulator == "thextech":
+        from generators.thextech.thextechGenerator import TheXTechGenerator
+        return TheXTechGenerator()
+
     if emulator == 'sh':
         from generators.sh.shGenerator import ShGenerator
         return ShGenerator()
