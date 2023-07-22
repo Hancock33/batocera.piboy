@@ -3,8 +3,8 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Jul 21, 2023 (branch@Proton8-11)
-WINE_PROTON_VERSION = ffa8ccd4eac0d99eb5989dd58cae0b82cac0ebe8
+# Version: Commits on Jul 22, 2023 (branch@Proton8-12)
+WINE_PROTON_VERSION = 60227516f6eecb358cfb5533367c3ee0218c4954
 WINE_PROTON_SOURCE = wine-proton-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = $(call github,GloriousEggroll,proton-wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
