@@ -881,6 +881,11 @@ tg-cd:
 themehospital:
   emulator: themehospital
   core:     themehospital
+thextech:
+  emulator: thextech
+  core:     thextech
+  options:
+    bezel: none
 thomson:
   emulator: libretro
   core:     theodore
