@@ -2132,15 +2132,25 @@ msgid "DualShock has rumble support. Not all games support DualShock."
 msgstr ""
 "DualShock memiliki dukungan getaran, tidak semua games DualShock di dukung"
 
-#. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, ...
+#. TRANSLATION: libretro/swanstation, libretro/swanstation
 msgctxt "game_options"
-msgid "Digital Controller"
-msgstr "Kontroler Digital"
+msgid "Digital Controller (Gamepad)"
+msgstr ""
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/duckstation, libretro/duckstation
 msgctxt "game_options"
 msgid "Analog Controller (DualShock)"
 msgstr "Kontroler Analog (DualShock)"
+
+#. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/puae, libretro/puae, libretro/puae, ...
+msgctxt "game_options"
+msgid "Analog Joystick"
+msgstr "Joystik Analog"
+
+#. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, ...
+msgctxt "game_options"
+msgid "NeGcon"
+msgstr "NeGcon"
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, ...
 msgctxt "game_options"
@@ -2152,10 +2162,10 @@ msgctxt "game_options"
 msgid "PlayStation Mouse"
 msgstr "PlayStation Mouse"
 
-#. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, ...
+#. TRANSLATION: libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, ...
 msgctxt "game_options"
-msgid "NeGcon"
-msgstr "NeGcon"
+msgid "Digital Controller"
+msgstr "Kontroler Digital"
 
 #. TRANSLATION: libretro/duckstation, libretro/duckstation
 msgctxt "game_options"
@@ -5708,11 +5718,6 @@ msgstr "Pilih jenis pengontrol untuk Amiga P1."
 msgctxt "game_options"
 msgid "CD32 Pad"
 msgstr "Pad CD32"
-
-#. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
-msgctxt "game_options"
-msgid "Analog Joystick"
-msgstr "Joystik Analog"
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
@@ -9599,7 +9604,7 @@ msgctxt "game_options"
 msgid "LLVM is fastest, use the Interpreter settings if there are issues."
 msgstr "LLVM tercepat, gunakan pengaturan Interpreter jika ada masalah."
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3
+#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3
 msgctxt "game_options"
 msgid "CPU"
 msgstr ""
@@ -9720,6 +9725,18 @@ msgstr "5 threads"
 msgctxt "game_options"
 msgid "6 threads"
 msgstr "6　threads"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"May provide performance gain on CPUs with low core/thread count at the "
+"expense of possible broken timings."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "SPU LOOP DETECTION"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"

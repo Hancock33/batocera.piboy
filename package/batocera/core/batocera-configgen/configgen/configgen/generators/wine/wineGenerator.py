@@ -17,6 +17,11 @@ class WineGenerator(Generator):
             return Command.Command(array=commandArray,env={
                 "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers),
             })
+        elif system.name == "popcap":
+            commandArray = ["batocera-wine", "windows", "play", rom]
+            return Command.Command(array=commandArray,env={
+                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers),
+            })
 
         raise Exception("invalid system " + system.name)
 

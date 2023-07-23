@@ -274,6 +274,9 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_DESKPIPRO_CASE                       if BR2_PACKAGE_BATOCERA_TARGET_BCM2711                                             # deskpi pro case rpi4 only
     select BR2_PACKAGE_PICADE                               if BR2_PACKAGE_BATOCERA_RPI_ANY                                                    # picade arcade case
 
+    # screens
+    select BR2_PACKAGE_PIXELCADE
+
     # swap
     select BR2_PACKAGE_SWAPIT                               if  BR2_PACKAGE_BATOCERA_TARGET_RK3128
 
@@ -663,6 +666,9 @@ config BR2_PACKAGE_BATOCERA_HOMEBREW_SYSTEMS
 
     # Fighting games engine
     select BR2_PACKAGE_IKEMEN                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
+    # SMBX engine
+    select BR2_PACKAGE_THEXTECH                             # ALL
 
 #### Sega Dreamcast, Naomi and Atomiswave ####
 config BR2_PACKAGE_BATOCERA_SEGADC

@@ -1280,23 +1280,25 @@ libretro:
                 prompt:      CONTROLLER 1 TYPE
                 description: DualShock has rumble support. Not all games support DualShock.
                 choices:
-                    "None":                          None
-                    "Digital Controller":            DigitalController
-                    "Analog Controller (DualShock)": AnalogController
-                    "Namco GunCon":                  NamcoGunCon
-                    "PlayStation Mouse":             PlayStationMouse
-                    "NeGcon":                        NeGcon
+                    "None":                          0
+                    "Digital Controller (Gamepad)":  1
+                    "Analog Controller (DualShock)": 261
+                    "Analog Joystick":               517
+                    "NeGcon":                        773
+                    "Namco GunCon":                  260
+                    "PlayStation Mouse":             258
             swanstation_Controller2:
                 group: CONTROLLER SETTINGS
                 prompt:      CONTROLLER 2 TYPE
                 description: DualShock has rumble support. Not all games support DualShock.
                 choices:
-                    "None":                          None
-                    "Digital Controller":            DigitalController
-                    "Analog Controller (DualShock)": AnalogController
-                    "Namco GunCon":                  NamcoGunCon
-                    "PlayStation Mouse":             PlayStationMouse
-                    "NeGcon":                        NeGcon
+                    "None":                          0
+                    "Digital Controller (Gamepad)":  1
+                    "Analog Controller (DualShock)": 261
+                    "Analog Joystick":               517
+                    "NeGcon":                        773
+                    "Namco GunCon":                  260
+                    "PlayStation Mouse":             258
     duckstation:
       features: [padtokeyboard, cheevos]
       shared: [autosave]
@@ -8622,6 +8624,13 @@ rpcs3:
                 "4 threads": 4
                 "5 threads": 5
                 "6 threads": 6
+        rpcs3_spuloopdetection:
+            submenu: CPU
+            prompt: SPU LOOP DETECTION
+            description: May provide performance gain on CPUs with low core/thread count at the expense of possible broken timings.
+            choices:
+                "Off (Default)": False
+                "On": True
         rpcs3_ratio:
             submenu: VIDEO
             prompt: ASPECT RATIO
@@ -11312,6 +11321,9 @@ opentyrian:
 pcexhumed:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+popcap:
+  features: [padtokeyboard]
+  shared: [videomode]
 pre2:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -11411,6 +11423,9 @@ supertux2:
 themehospital:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+thextech:
+  features: [padtokeyboard]
+  shared: [videomode, hud, hud_corner]
 vanillara:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

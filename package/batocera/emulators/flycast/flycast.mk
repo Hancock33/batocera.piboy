@@ -5,7 +5,6 @@
 ################################################################################
 # Version: Commits on Jul 16, 2023
 FLYCAST_VERSION = 9c61006941daf5ee387480eacf95b9115950787c
-
 FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
@@ -16,6 +15,7 @@ FLYCAST_SUPPORTS_IN_SOURCE_BUILD = NO
 FLYCAST_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja
 FLYCAST_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF 
 FLYCAST_CONF_OPTS += -DLIBRETRO=OFF
+FLYCAST_CONF_OPTS += -DUSE_HOST_SDL=ON
 FLYCAST_CONF_OPTS += -DGDB_SERVER=OFF
 FLYCAST_CONF_OPTS += -DGIT_VERSION="$(shell echo $(FLYCAST_VERSION) | cut -c 1-7)"
 FLYCAST_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -Wno-error=array-bounds"

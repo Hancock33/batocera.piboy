@@ -455,6 +455,10 @@ def getGenerator(emulator):
         from generators.tsugaru.tsugaruGenerator import TsugaruGenerator
         return TsugaruGenerator()
 
+    if emulator == "thextech":
+        from generators.thextech.thextechGenerator import TheXTechGenerator
+        return TheXTechGenerator()
+
     if emulator == 'vanillara':
         from generators.vanillara.vanillaraGenerator import VanillaraGenerator
         return VanillaraGenerator()

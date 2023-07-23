@@ -11,7 +11,7 @@ BATOCERA_CONFIGGEN_DEPENDENCIES = python3 python-pyyaml
 BATOCERA_CONFIGGEN_INSTALL_STAGING = YES
 
 define BATOCERA_CONFIGGEN_EXTRACT_CMDS
-	cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/configgen/* $(@D)
+	cp -avf $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/configgen/* $(@D)
 endef
 
 ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI),y)
@@ -89,6 +89,7 @@ define BATOCERA_CONFIGGEN_CONFIGS
 	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/data $(TARGET_DIR)/usr/share/batocera/configgen/
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/configs/configgen-defaults.yml $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults.yml
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/configs/configgen-defaults-$(BATOCERA_CONFIGGEN_SYSTEM).yml $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/scripts/call_achievements_hooks.sh $(TARGET_DIR)/usr/share/batocera/configgen/
 
     @if [ "$(BATOCERA_CONFIGGEN_SYSTEM)" = "piboy4" ]; then \
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/configs/configgen-defaults-bcm2711.yml $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
