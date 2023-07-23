@@ -1,5 +1,4 @@
 archimedes:
-archimedes:
   name:                 Archimedes
   manufacturer:         Acorn Computers
   release:              1987
@@ -798,6 +797,30 @@ namco:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+namco2x6:
+  name:                 Namco System 246/256
+  manufacturer:         Arcade
+  release:              2000
+  hardware:             arcade
+  extensions:           [zip]
+  platform:             arcade
+  emulators:
+    play:
+      play:             { requireAnyOf: [BR2_PACKAGE_PLAY] }
+  comment_en: |
+                        The Play! emulator provides `work in progress` support for Namco 246 & 256 systems.
+                        Currently you will need a high performance system to be able to emulate supported games.
+                        We recommend using the OpenGL API for now.
+
+                        This rom directory should include a zip file based on the arcade id and a supporting folder with associated .chd file.
+                        i.e. Tekken 4 - tekken4.zip
+                        |
+                        tekken4
+                        |
+                        ---tef1dvd0.chd
+
+                        For more info: https://wiki.batocera.org/systems:namco2x6
 
 nichibutsu:
   name:                 Nichibutsu
@@ -1969,6 +1992,16 @@ tic80:
   comment_br:           |
                         Para mais informações: https://wiki.batocera.org/systems:tic-80
 
+thextech:
+  name:                 TheXTech
+  manufacturer:         Homebrew Systems
+  release:              2020
+  hardware:             library
+  extensions:           [smbx]
+  emulators:
+    thextech:
+      thextech:         { requireAnyOf: [BR2_PACKAGE_THEXTECH] }
+
 uzebox:
   name:                 Uzebox
   manufacturer:         Homebrew Systems
@@ -3132,7 +3165,7 @@ wiiu:
   manufacturer:         Nintendo
   release:              2012
   hardware:             console
-  extensions:           [wua, wup, wud, rpx, squashfs]
+  extensions:           [wua, wup, wud, wux, rpx, squashfs]
   platform:             wiiu
   theme:                wiiu
   emulators:
@@ -4600,6 +4633,18 @@ yquake2:
                         Les sous-répertoires pris en charge pour les ROM de packs de missions sont : xatrix, rogue et zaero.
                         Pour le répertoire standard de Quake II, utilisez 'baseq2' pour utiliser le cœur vitaquake2 standard.
 
+popcap:
+  name:                 Popcap
+  manufacturer:         Popcap
+  release:              2000
+  hardware:             computer
+  extensions:           [exe]
+  platform:             pc
+  emulators:
+    wine:
+      lutris:           { requireAnyOf: [BR2_PACKAGE_WINE_LUTRIS] }
+      proton:           { requireAnyOf: [BR2_PACKAGE_WINE_PROTON] }
+
 atomiswave:
   name:                 Atomiswave
   manufacturer:         Sammy
@@ -5685,7 +5730,7 @@ ps2:
   manufacturer:         Sony
   release:              2000
   hardware:             console
-  extensions:           [bin, chd, cso, dump, gz, img, iso, m3u, mdf, nrg]
+  extensions:           [bin, chd, cso, elf, dump, gz, img, iso, m3u, mdf, nrg]
   emulators:
     pcsx2:
       pcsx2:            { requireAnyOf: [BR2_PACKAGE_PCSX2, BR2_PACKAGE_PCSX2_AVX2], incompatible_extensions: [m3u] }
@@ -5838,30 +5883,6 @@ psx:
                         Trouvez la documentation ici: https://wiki.batocera.org/systems:psx
   comment_br:           |
                         Para mais informações: https://wiki.batocera.org/systems:psx
-
-namco2x6:
-  name:                 Namco System 246/256
-  manufacturer:         Sony / Namco
-  release:              2000
-  hardware:             arcade
-  extensions:           [zip]
-  platform:             arcade
-  emulators:
-    play:
-      play:             { requireAnyOf: [BR2_PACKAGE_PLAY] }
-  comment_en: |
-                        The Play! emulator provides `work in progress` support for Namco 246 & 256 systems.
-                        Currently you will need a high performance system to be able to emulate supported games.
-                        We recommend using the OpenGL API for now.
-
-                        This rom directory should include a zip file based on the arcade id and a supporting folder with associated .chd file.
-                        i.e. Tekken 4 - tekken4.zip
-                        |
-                        tekken4
-                        |
-                        ---tef1dvd0.chd
-
-                        For more info: https://wiki.batocera.org/systems:namco2x6
 
 j2me:
   name:                 Java 2 MicroEdition

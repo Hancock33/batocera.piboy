@@ -15,6 +15,7 @@
 - vitaquake2 libretro core enabled for AArch64
 - ioquake3 to ports, An updated Quake III engine
 - play! emulator for PS2 but also Namco 246 & 256 systems
+- TheXTech game engine for Super Mario-like SMBX platform games
 ### Fixed
 - Fix wifi/bluetooth on Tinkerboard
 - Fixed crop overscan settings for NES to work with newer core builds
@@ -42,8 +43,9 @@
 - xemu to v0.7.99
 - devilutionX to 1.5.0
 - ScummVM (standalone and libretro core) to July 18th build
+- redream to 1.5.0-1079-g5ac7859
 ### Dev
-- linux kernel for x86_64 to 6.4.2
+- linux kernel for x86_64 to 6.4.4
 - linux kernel for RPI to 6.1.32
 - linux kernel for most ARM SBCs to 6.1.38
 - linux kernel for Rockchip RK3566/RK3568 to 6.4.3
@@ -55,6 +57,7 @@
 - wildmidi to 0.4.5
 - vulkan stack to 1.3.257
 - SDL2 to 2.28.1
+- nvidia production driver to 535.86.05
 
 # 2023/06/18 - batocera.linux 37 - Red Admiral
 ### hardware

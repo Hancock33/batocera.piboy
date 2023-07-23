@@ -41,10 +41,10 @@ index 26e4f3ed..42cc07dd 100644
  	};
  
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 2bb9afab..e29df860 100644
+index 2d563f30..47ced05c 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
-@@ -1897,7 +1897,7 @@ void GuiMenu::openGamesSettings()
+@@ -1898,7 +1898,7 @@ void GuiMenu::openGamesSettings()
  	}
  	
  
@@ -53,7 +53,7 @@ index 2bb9afab..e29df860 100644
  
  	// Screen ratio choice
  	if (!hasGlobalFeature("ratio"))
-@@ -1915,6 +1915,61 @@ void GuiMenu::openGamesSettings()
+@@ -1916,6 +1916,61 @@ void GuiMenu::openGamesSettings()
  		s->addSaveFunc([this, videoModeOptionList] { SystemConf::getInstance()->set("global.videomode", videoModeOptionList->getSelected()); });
  	}
  

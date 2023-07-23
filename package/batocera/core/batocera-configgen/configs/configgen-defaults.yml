@@ -665,6 +665,11 @@ ports:
   core:     sh
   options:
     bezel: none
+popcap:
+  emulator: wine
+  core:     proton
+  options:
+    hud_support: false
 prboom:
   emulator: libretro
   core:     prboom
@@ -881,6 +886,11 @@ tg-cd:
 themehospital:
   emulator: themehospital
   core:     themehospital
+thextech:
+  emulator: thextech
+  core:     thextech
+  options:
+    bezel: none
 thomson:
   emulator: libretro
   core:     theodore
