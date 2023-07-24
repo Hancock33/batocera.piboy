@@ -3,8 +3,8 @@
 # libretro-fake08
 #
 ################################################################################
-# Version: Commits on Jul 08, 2023
-LIBRETRO_FAKE08_VERSION = df31feb98d6192cbde593118fc6b49247a5a2e71
+# Version: Commits on Jul 24, 2023
+LIBRETRO_FAKE08_VERSION = aebd6b9648d1c450910ad79c78f9280dfbd20b25
 LIBRETRO_FAKE08_SITE = https://github.com/jtothebell/fake-08.git
 LIBRETRO_FAKE08_SITE_METHOD = git
 LIBRETRO_FAKE08_GIT_SUBMODULES = YES
