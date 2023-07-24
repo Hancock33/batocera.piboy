@@ -5733,7 +5733,7 @@ ps2:
   extensions:           [bin, chd, cso, elf, dump, gz, img, iso, m3u, mdf, nrg]
   emulators:
     pcsx2:
-      pcsx2:            { requireAnyOf: [BR2_PACKAGE_PCSX2, BR2_PACKAGE_PCSX2_AVX2], incompatible_extensions: [m3u] }
+      pcsx2:            { requireAnyOf: [BR2_PACKAGE_PCSX2], incompatible_extensions: [m3u] }
     libretro:
       lrps2:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_LRPS2] }
       pcsx2:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PCSX2] }
