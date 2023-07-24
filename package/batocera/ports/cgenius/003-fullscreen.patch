@@ -12,7 +12,7 @@ index 0afc17ae7..6d5defc8d 100644
  
      m_ScaleXFilter = VidFilter::NONE;
 diff --git a/GsKit/base/video/CVidConfig.h b/GsKit/base/video/CVidConfig.h
-index 4ea403902..563abfc5d 100644
+index 57ab72ff6..a91f8e256 100644
 --- a/GsKit/base/video/CVidConfig.h
 +++ b/GsKit/base/video/CVidConfig.h
 @@ -60,13 +60,13 @@ public:
@@ -33,23 +33,23 @@ index 4ea403902..563abfc5d 100644
      bool m_normal_scale;
  
 diff --git a/src/engine/core/CSettings.cpp b/src/engine/core/CSettings.cpp
-index f977f2590..79af1face 100644
+index 7a4766002..5daa86249 100644
 --- a/src/engine/core/CSettings.cpp
 +++ b/src/engine/core/CSettings.cpp
-@@ -56,8 +56,8 @@ bool CSettings::saveDrvCfg()
-             Configuration.WriteString("FileHandling", "SearchPath" + itoa(i), *p);
+@@ -89,8 +89,8 @@ bool CSettings::saveDrvCfg()
+             config.WriteString("FileHandling", "SearchPath" + itoa(i), *p);
  
          CVidConfig &VidConf = gVideoDriver.getVidConfig();
--        Configuration.SetKeyword("Video", "fullscreen", VidConf.mFullscreen);
--        Configuration.SetKeyword("Video", "integerScaling", VidConf.mIntegerScaling);
-+        Configuration.SetKeyword("Video", "fullscreen", true);
-+        Configuration.SetKeyword("Video", "integerScaling", false);
-         Configuration.SetKeyword("Video", "OpenGL", VidConf.mOpengl);
+-        config.SetKeyword("Video", "fullscreen", VidConf.mFullscreen);
+-        config.SetKeyword("Video", "integerScaling", VidConf.mIntegerScaling);
++        config.SetKeyword("Video", "fullscreen", true);
++        config.SetKeyword("Video", "integerScaling", false);
+         config.SetKeyword("Video", "OpenGL", VidConf.mOpengl);
  #ifdef USE_VIRTUALPAD
-         Configuration.SetKeyword("Video", "VirtPad", VidConf.mVPad);
-@@ -196,13 +196,13 @@ bool CSettings::loadDrvCfg()
-         return false;
-     }
+         config.SetKeyword("Video", "VirtPad", VidConf.mVPad);
+@@ -235,13 +235,13 @@ bool CSettings::loadDrvCfg()
+ 
+     int value = 0;
  
 -#ifdef __SWITCH__
 +//#ifdef __SWITCH__
