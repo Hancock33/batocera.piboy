@@ -8,8 +8,6 @@ config BR2_PACKAGE_CORSIXTH
     depends on BR2_INSTALL_LIBSTDCPP
 
     help
-      Build retro games using WebAssembly for a fantasy console.
+	  CorsixTH - Theme Hospital engine
 
-	    https://github.com/aduros/wasm4
-
-
+	  https://github.com/CorsixTH/CorsixTH
