@@ -2468,7 +2468,7 @@ msgctxt "game_options"
 msgid "Normal"
 msgstr "Normal"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, flycast, rpcs3
 msgctxt "game_options"
 msgid "Maximum"
 msgstr ""
@@ -7219,7 +7219,7 @@ msgctxt "game_options"
 msgid "SOUND BUFFER SIZE"
 msgstr ""
 
-#. TRANSLATION: amiberry, pcsx2
+#. TRANSLATION: amiberry, pcsx2, rpcs3
 msgctxt "game_options"
 msgid "Minimum"
 msgstr "Mínimo"
@@ -9412,7 +9412,7 @@ msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr "PRECISIÓN DE MEZCLA"
 
-#. TRANSLATION: pcsx2, rpcs3
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Full (Slow)"
 msgstr "Completo (Lento)"
@@ -9822,11 +9822,6 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Moderate"
-msgstr ""
-
-#. TRANSLATION: rpcs3
-msgctxt "game_options"
-msgid "Maximum"
 msgstr ""
 
 #. TRANSLATION: rpcs3
