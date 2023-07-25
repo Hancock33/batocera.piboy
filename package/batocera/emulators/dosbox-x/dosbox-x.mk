@@ -1,6 +1,6 @@
 ################################################################################
 #
-# DosBox-X
+# dosbox-x
 #
 ################################################################################
 # Version: Commits on Jul 17, 2023
@@ -10,7 +10,9 @@ DOSBOX_X_DEPENDENCIES = sdl2 sdl2_net fluidsynth zlib libpng libogg libvorbis li
 DOSBOX_X_LICENSE = GPLv2
 
 define DOSBOX_X_CONFIGURE_CMDS
-    cd $(@D); ./autogen.sh; $(TARGET_CONFIGURE_OPTS) CROSS_COMPILE="$(HOST_DIR)/usr/bin/" LIBS="-lvorbisfile -lvorbis -logg" \
+    cd $(@D); ./autogen.sh; \
+        $(TARGET_CONFIGURE_OPTS) CROSS_COMPILE="$(HOST_DIR)/usr/bin/" \
+        LIBS="-lvorbisfile -lvorbis -logg" \
         ./configure --host="$(GNU_TARGET_NAME)" \
                     --enable-core-inline \
                     --enable-dynrec \
@@ -23,7 +25,6 @@ endef
 
 define DOSBOX_X_CONFIGURE_CONFIG
     mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/dosbox
-
     cp -rf $(@D)/dosbox-x.reference.conf \
         $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/dosbox/dosboxx.conf
 endef
