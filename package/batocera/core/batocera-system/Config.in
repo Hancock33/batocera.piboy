@@ -912,7 +912,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_BOOM3                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # OpenLara (Tomb Raider)
-    select BR2_PACKAGE_LIBRETRO_OPENLARA                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY   || BR2_aarch64
+    select BR2_PACKAGE_LIBRETRO_OPENLARA                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY   || BR2_aarch64
 
     # Quake 3
     select BR2_PACKAGE_QUAKE3                               if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835    && \
@@ -921,6 +921,12 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3326     && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RISCV      && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_ODIN
+
+    # Hydra Castle Labyrinth
+    select BR2_PACKAGE_HCL                                  # ALL
+
+    # C-Dogs SDL
+    select BR2_PACKAGE_CDOGS                                # ALL
 
     help
         Ports
@@ -1224,12 +1230,8 @@ config BR2_PACKAGE_BATOCERA_MUPEN64
 config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     bool "add experimental cores"
 
-    # Hydra Castle Labyrinth
-    select BR2_PACKAGE_HCL                                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
-
-    # C-Dogs SDL
-    select BR2_PACKAGE_CDOGS                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
-    select BR2_PACKAGE_HOST_PYTHON_PROTOBUF                 if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL && BR2_PACKAGE_CDOGS
+    # CorsixTH (Theme Hospital engine)
+    select BR2_PACKAGE_CORSIXTH             if BR2_x86_64 || BR2_aarch64
 
     # Turrican Port
     select BR2_PACKAGE_LIBEPOXY
