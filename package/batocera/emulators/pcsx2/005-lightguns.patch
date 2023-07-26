@@ -1,5 +1,5 @@
 diff --git a/pcsx2/USB/usb-lightgun/guncon2.cpp b/pcsx2/USB/usb-lightgun/guncon2.cpp
-index d026fb302..061579a1e 100644
+index d026fb302..8b3a6c53e 100644
 --- a/pcsx2/USB/usb-lightgun/guncon2.cpp
 +++ b/pcsx2/USB/usb-lightgun/guncon2.cpp
 @@ -31,6 +31,12 @@
@@ -160,13 +160,14 @@ index d026fb302..061579a1e 100644
  	void GunCon2State::AutoConfigure()
  	{
  		const std::string serial = VMManager::GetDiscSerial();
-@@ -380,9 +491,13 @@ namespace usb_lightgun
+@@ -380,9 +491,14 @@ namespace usb_lightgun
  	std::tuple<s16, s16> GunCon2State::CalculatePosition()
  	{
  		float pointer_x, pointer_y;
 -		const auto& [window_x, window_y] =
 -			(has_relative_binds) ? GetAbsolutePositionFromRelativeAxes() : InputManager::GetPointerAbsolutePosition(0);
 -		GSTranslateWindowToDisplayCoordinates(window_x, window_y, &pointer_x, &pointer_y);
++		const std::pair<float, float> abs_pos(InputManager::GetPointerAbsolutePosition(0));
 +
 +		if(udev_has(this)) {
 +		  GSTranslateWindowToDisplayCoordinates(udev_internalGunX, udev_internalGunY, &pointer_x, &pointer_y);
@@ -177,7 +178,7 @@ index d026fb302..061579a1e 100644
  
  		s16 pos_x, pos_y;
  		if (pointer_x < 0.0f || pointer_y < 0.0f)
-@@ -458,9 +573,148 @@ namespace usb_lightgun
+@@ -458,9 +574,148 @@ namespace usb_lightgun
  		return "guncon2";
  	}
  
