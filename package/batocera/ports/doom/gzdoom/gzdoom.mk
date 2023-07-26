@@ -7,7 +7,7 @@
 GZDOOM_VERSION = 62f37079a7834b813f251818d1db6c80e644d209
 GZDOOM_SITE = $(call github,ZDoom,gzdoom,$(GZDOOM_VERSION))
 GZDOOM_LICENSE = GPL-3.0
-GZDOOM_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew host-zmusic zmusic host-ninja
+GZDOOM_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew host-zmusic zmusic libvpx host-ninja
 
 GZDOOM_SUPPORTS_IN_SOURCE_BUILD = YES
 HOST_GZDOOM_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
