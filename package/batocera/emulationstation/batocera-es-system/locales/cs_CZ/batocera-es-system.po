@@ -12513,6 +12513,11 @@ msgctxt "keys_files"
 msgid "State/Load from Selected Slot"
 msgstr ""
 
+#. TRANSLATION: dos.dosbox-x.keys
+msgctxt "keys_files"
+msgid "Exit Dosbox-X"
+msgstr ""
+
 #. TRANSLATION: wiiu.keys
 msgctxt "keys_files"
 msgid "Display the controller screen"
