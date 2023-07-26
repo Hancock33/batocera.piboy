@@ -1,8 +1,8 @@
 diff --git a/pcsx2/Input/SDLInputSource.cpp b/pcsx2/Input/SDLInputSource.cpp
-index eea3babd9..6dde2065e 100644
+index 87e8ef8a3..28b359e7f 100644
 --- a/pcsx2/Input/SDLInputSource.cpp
 +++ b/pcsx2/Input/SDLInputSource.cpp
-@@ -225,7 +225,7 @@ void SDLInputSource::SetHints()
+@@ -224,7 +224,7 @@ void SDLInputSource::SetHints()
  bool SDLInputSource::LoadControllerDB()
  {
  	Error error;
