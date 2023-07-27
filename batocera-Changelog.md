@@ -27,14 +27,14 @@
 - Enable lr-beetle-pcfx and lr-prboom libretro cores on RK3588
 ### Updated
 - xenia to v1.0.2805
-- xenia canary to ff09bb4 (Commits on Jun 28, 2023)
+- xenia canary to ba936e8 (Commits on Jul 22, 2023)
 - citra to nightly-1936
 - groovy mame to 0.256
 - libretro-mame to 0.256
 - cemu to v2.0-44
 - amiberry to 5.6.1
 - dosbox-x to v2023.05.01
-- tsugaru to v20230420
+- tsugaru to v20230722
 - dolphin to 5.0-19776
 - duckstation to Jun 30, 2023 build
 - flycast to July 5th build
@@ -46,11 +46,14 @@
 - ScummVM (standalone and libretro core) to July 18th build
 - redream to 1.5.0-1079-g5ac7859
 - kodi to 20.2
+- EDuke32 to July, 3th 2023
+- OpenMSX to v19
+- btop to 1.2.13
 ### Dev
 - linux kernel for x86_64 to 6.4.6
 - linux kernel for RPI to 6.1.32
-- linux kernel for most ARM SBCs to 6.1.38
-- linux kernel for Rockchip RK3566/RK3568 to 6.4.3
+- linux kernel for most ARM SBCs to 6.1.41
+- linux kernel for Rockchip RK3566/RK3568 to 6.4.6
 - xf86-video-amdgpu to 23.0.0
 - xf86-video-ati to 22.0.0
 - xwayland to 23.1.2
@@ -60,6 +63,7 @@
 - vulkan stack to 1.3.257
 - SDL2 to 2.28.1
 - nvidia production driver to 535.86.05
+- faudio to 23.07
 
 # 2023/06/18 - batocera.linux 37 - Red Admiral
 ### hardware
