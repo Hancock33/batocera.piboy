@@ -20,6 +20,7 @@ SOLARUS_ENGINE_DEPENDENCIES = luajit glm libmodplug libogg libvorbis openal phys
 
 SOLARUS_ENGINE_CONF_OPTS = \
 	-DSOLARUS_GUI=OFF \
+	-GNinja \
 	-DSOLARUS_TESTS=OFF
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGLES),y)
