@@ -31,7 +31,7 @@
 - citra to nightly-1936
 - groovy mame to 0.256
 - libretro-mame to 0.256
-- cemu to v2.0-44
+- cemu to v2.0-45
 - amiberry to 5.6.1
 - dosbox-x to v2023.05.01
 - tsugaru to v20230722
@@ -50,7 +50,7 @@
 - OpenMSX to v19
 - btop to 1.2.13
 ### Dev
-- linux kernel for x86_64 to 6.4.6
+- linux kernel for x86_64 to 6.4.7
 - linux kernel for RPI to 6.1.32
 - linux kernel for most ARM SBCs to 6.1.41
 - linux kernel for Rockchip RK3566/RK3568 to 6.4.6
@@ -64,6 +64,8 @@
 - SDL2 to 2.28.1
 - nvidia production driver to 535.86.05
 - faudio to 23.07
+- llvm to 16.0.6
+- Buildroot to 2023.05.01
 
 # 2023/06/18 - batocera.linux 37 - Red Admiral
 ### hardware
