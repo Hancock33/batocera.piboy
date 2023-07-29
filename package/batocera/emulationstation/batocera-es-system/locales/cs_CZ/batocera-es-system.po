@@ -4590,7 +4590,7 @@ msgctxt "game_options"
 msgid "CONTROLLER PAK 4"
 msgstr "OVLADAČ PAK 4"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
 msgid ""
 "Useful for N64 style controllers. Limited hotkeys for controllers without "
@@ -4607,7 +4607,7 @@ msgctxt "game_options"
 msgid "N64"
 msgstr ""
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
 msgid "N64 (Limited Hotkeys)"
 msgstr ""
@@ -9044,6 +9044,56 @@ msgctxt "game_options"
 msgid "Enable"
 msgstr "Povolit"
 
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "CONTROLLER 1"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "CONTROLLER 2"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "CONTROLLER 3"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "CONTROLLER 4"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "Set the sensitivity of the joystick analog sticks."
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "SENSITIVITY"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "100% (Default)"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "Set the deadzone of the joystick analog sticks."
+msgstr "Nastavení mrtvé zóny analogových páček joysticku."
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "DEADZONE"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "5% (Default)"
+msgstr ""
+
 #. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Stretch games to full-screen, but may distort the aspect ratio"
@@ -12901,10 +12951,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Optimized (auto)"
 #~ msgstr "Optimalizováno (auto)"
-
-#~ msgctxt "game_options"
-#~ msgid "Set the deadzone of the joystick analog sticks."
-#~ msgstr "Nastavení mrtvé zóny analogových páček joysticku."
 
 #~ msgctxt "game_options"
 #~ msgid "ANALOG JOYSTICK DEADZONE"
