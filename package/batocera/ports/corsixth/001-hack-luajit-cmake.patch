@@ -1,6 +1,8 @@
---- a/CorsixTH/CMakeLists.txt	2022-06-25 14:50:47.000000000 +0200
-+++ b/CorsixTH/CMakeLists.txt	2022-07-18 14:20:50.741856563 +0200
-@@ -133,28 +133,7 @@
+diff --git a/CorsixTH/CMakeLists.txt b/CorsixTH/CMakeLists.txt
+index 85856df3..4da54d70 100644
+--- a/CorsixTH/CMakeLists.txt
++++ b/CorsixTH/CMakeLists.txt
+@@ -132,28 +132,7 @@ if(MSVC AND USE_VCPKG_DEPS)
    target_link_libraries(CorsixTH_lib lua)
    target_link_libraries(CorsixTH lua)
  else()
