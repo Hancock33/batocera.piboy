@@ -1,17 +1,17 @@
 diff --git a/GsKit/base/interface/FindFile.cpp b/GsKit/base/interface/FindFile.cpp
-index 212d4152b..dcd443c7d 100644
+index fc7b503e0..6c01ddfab 100644
 --- a/GsKit/base/interface/FindFile.cpp
 +++ b/GsKit/base/interface/FindFile.cpp
-@@ -505,7 +505,7 @@ void InitBaseSearchPaths()
-     AddToFileList(&basesearchpaths, SDL_AndroidGetInternalStoragePath());
-     AddToFileList(&basesearchpaths, "/storage/emulated/0/Android/data/net.sourceforge.clonekeenplus/files/SaveData");
- #else
+@@ -511,7 +511,7 @@ void InitBaseSearchPaths()
+   #ifdef FLATPAK_HOME
+     AddToFileList(&basesearchpaths, FLATPAK_HOME"/CommanderGenius");
+   #else
 -    AddToFileList(&basesearchpaths, "${HOME}/.CommanderGenius");
 +    AddToFileList(&basesearchpaths, "/userdata/roms/ports/cgenius");
+   #endif
  #endif
      AddToFileList(&basesearchpaths, ".");
-     AddToFileList(&basesearchpaths, SYSTEM_DATA_DIR"/commandergenius"); // no use of ${SYSTEM_DATA}, because it is uncommon and could cause confusion to the user
-@@ -800,6 +800,7 @@ bool FileListIncludesExact(const searchpathlist* l, const std::string& f) {
+@@ -807,6 +807,7 @@ bool FileListIncludesExact(const searchpathlist* l, const std::string& f) {
  
  std::string GetHomeDir()
  {
