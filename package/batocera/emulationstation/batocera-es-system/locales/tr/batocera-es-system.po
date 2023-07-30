@@ -2461,7 +2461,7 @@ msgctxt "game_options"
 msgid "Normal"
 msgstr "Normal"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, flycast
+#. TRANSLATION: libretro/flycast, libretro/flycast2021, flycast, rpcs3
 msgctxt "game_options"
 msgid "Maximum"
 msgstr ""
@@ -4596,7 +4596,7 @@ msgctxt "game_options"
 msgid "CONTROLLER PAK 4"
 msgstr "KONTROL AYGITI PAK 4"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
 msgid ""
 "Useful for N64 style controllers. Limited hotkeys for controllers without "
@@ -4613,7 +4613,7 @@ msgctxt "game_options"
 msgid "N64"
 msgstr ""
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
 msgid "N64 (Limited Hotkeys)"
 msgstr ""
@@ -7208,7 +7208,7 @@ msgctxt "game_options"
 msgid "SOUND BUFFER SIZE"
 msgstr ""
 
-#. TRANSLATION: amiberry, pcsx2
+#. TRANSLATION: amiberry, pcsx2, rpcs3
 msgctxt "game_options"
 msgid "Minimum"
 msgstr ""
@@ -9058,6 +9058,56 @@ msgctxt "game_options"
 msgid "Enable"
 msgstr "Etkinleştir"
 
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "CONTROLLER 1"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "CONTROLLER 2"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "CONTROLLER 3"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "CONTROLLER 4"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "Set the sensitivity of the joystick analog sticks."
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "SENSITIVITY"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "100% (Default)"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "Set the deadzone of the joystick analog sticks."
+msgstr "Joystick analog çubuklarının ölü bölgesini ayarla."
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "DEADZONE"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "5% (Default)"
+msgstr ""
+
 #. TRANSLATION: openbor
 msgctxt "game_options"
 msgid "Stretch games to full-screen, but may distort the aspect ratio"
@@ -9605,7 +9655,7 @@ msgctxt "game_options"
 msgid "LLVM is fastest, use the Interpreter settings if there are issues."
 msgstr "LLVM en hızlıdır, sorun varsa Yorumlayıcı ayarlarını kullan."
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3
+#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "CPU"
 msgstr ""
@@ -9738,6 +9788,50 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SPU LOOP DETECTION"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"Mega and Giga modes may improve performance. Use the Safe mode for maximum "
+"compatibility."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "SPU BLOCK SIZE"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Safe (Default)"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Mega"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Giga"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"Helps reduce CPU power consumption by throttling the CPU when not needed. "
+"Useful for handhelds."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "MAX POWER SAVING CPU-PREEMPTIONS"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "Moderate"
 msgstr ""
 
 #. TRANSLATION: rpcs3
@@ -12493,6 +12587,11 @@ msgctxt "keys_files"
 msgid "State/Load from Selected Slot"
 msgstr ""
 
+#. TRANSLATION: dos.dosbox-x.keys
+msgctxt "keys_files"
+msgid "Exit Dosbox-X"
+msgstr ""
+
 #. TRANSLATION: wiiu.keys
 msgctxt "keys_files"
 msgid "Display the controller screen"
@@ -12876,10 +12975,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Optimized (auto)"
 #~ msgstr "Optimize edilmiş (otomatik)"
-
-#~ msgctxt "game_options"
-#~ msgid "Set the deadzone of the joystick analog sticks."
-#~ msgstr "Joystick analog çubuklarının ölü bölgesini ayarla."
 
 #~ msgctxt "game_options"
 #~ msgid "ANALOG JOYSTICK DEADZONE"

@@ -3,8 +3,8 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on Jul 24, 2023
-PPSSPP_VERSION = f3c89e49f0beeca9b1fba62993e3350b181387df
+# Version: Commits on Jul 30, 2023
+PPSSPP_VERSION = a28acf26620753eed677747a162fb3eca33eccd7
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
@@ -88,8 +88,10 @@ endif
 PPSSPP_CONF_OPTS += -DCMAKE_C_FLAGS="$(PPSSPP_TARGET_CFLAGS)" -DCMAKE_CXX_FLAGS="$(PPSSPP_TARGET_CFLAGS)"
 
 define PPSSPP_UPDATE_INCLUDES
-	sed -i 's/unknown/"$(shell echo $(PPSSPP_VERSION) | cut -c 1-7)"/g' $(@D)/git-version.cmake
-	sed -i "s+/opt/vc+$(STAGING_DIR)/usr+g" $(@D)/CMakeLists.txt
+    sed -i 's/unknown/"$(shell echo $(PPSSPP_VERSION) | cut -c 1-7)"/g' $(@D)/git-version.cmake
+    sed -i "s+/opt/vc+$(STAGING_DIR)/usr+g" $(@D)/CMakeLists.txt
+    # Fix SDL2 tff
+    sed -i -e s+"SDL2_ttf::SDL2_ttf"+"-lSDL2_ttf"+ $(@D)/CMakeLists.txt
 endef
 
 define PPSSPP_BUILD_CMDS
@@ -104,8 +106,8 @@ define PPSSPP_INSTALL_TARGET_CMDS
     # Fix PSP font for languages like Japanese
     # (font from https://github.com/minoryorg/Noto-Sans-CJK-JP/blob/master/fonts/)
     cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/NotoSansCJKjp-DemiLight.ttf $(TARGET_DIR)/usr/share/ppsspp/PPSSPP/Roboto-Condensed.ttf
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/psp.ppsspp.keys $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/pspmini.ppsspp.keys $(TARGET_DIR)/usr/share/evmapy
+    cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/psp.ppsspp.keys $(TARGET_DIR)/usr/share/evmapy
+    cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/pspmini.ppsspp.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 PPSSPP_PRE_CONFIGURE_HOOKS += PPSSPP_UPDATE_INCLUDES

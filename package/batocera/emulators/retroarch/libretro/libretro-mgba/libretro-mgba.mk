@@ -3,8 +3,8 @@
 # libretro-mgba
 #
 ################################################################################
-# Version: Commits on Jul 24, 2023
-LIBRETRO_MGBA_VERSION = 974272221392e5c7bd5b94cd194efa01bf0be85f
+# Version: Commits on Jul 30, 2023
+LIBRETRO_MGBA_VERSION = ec52154112589c10316b03a246bd35a14288abe7
 LIBRETRO_MGBA_SITE = $(call github,mgba-emu,mgba,$(LIBRETRO_MGBA_VERSION))
 LIBRETRO_MGBA_LICENSE = MPLv2.0
 
