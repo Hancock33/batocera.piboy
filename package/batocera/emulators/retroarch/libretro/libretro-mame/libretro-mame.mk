@@ -3,8 +3,8 @@
 # libretro-mame
 #
 ################################################################################
-# Version: Commits on Jul 24, 2023
-LIBRETRO_MAME_VERSION = 4a1b3031ab09c5f8565ff7457bbda3f3cd4f68e2
+# Version: Commits on Jul 30, 2023
+LIBRETRO_MAME_VERSION = 7f3a3e4da00e8c3c9621dcac95fba61af0eea2d7
 LIBRETRO_MAME_SITE = $(call github,libretro,mame,$(LIBRETRO_MAME_VERSION))
 LIBRETRO_MAME_LICENSE = MAME
 
@@ -17,6 +17,8 @@ else ifeq ($(BR2_i386),y)
 LIBRETRO_MAME_EXTRA_ARGS += PTR64=0 LIBRETRO_CPU=x86 PLATFORM=x86
 else ifeq ($(BR2_arm),y)
 LIBRETRO_MAME_EXTRA_ARGS += PTR64=0 LIBRETRO_CPU=arm PLATFORM=arm
+# workaround for linkage failure using ld on arm 32-bit targets
+LIBRETRO_MAME_ARCHOPTS += -fuse-ld=gold -Wl,--long-plt
 # workaround for asmjit broken build system (arm backend is not public)
 LIBRETRO_MAME_ARCHOPTS += -D__arm__ -DASMJIT_BUILD_X86
 else ifeq ($(BR2_aarch64),y)

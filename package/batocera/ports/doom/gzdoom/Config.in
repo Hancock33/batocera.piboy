@@ -8,9 +8,10 @@ config BR2_PACKAGE_GZDOOM
     select BR2_PACKAGE_LIBGL
     select BR2_PACKAGE_OPENAL
     select BR2_PACKAGE_ZMUSIC
-	select BR2_HOST_PACKAGE_ZMUSIC
+    select BR2_PACKAGE_LIBVPX
+    select BR2_HOST_PACKAGE_ZMUSIC
 
-	help
-	  GZDoom is a feature centric port for all Doom engine games, based on ZDoom, adding an OpenGL renderer and powerful scripting capabilities
+    help
+      GZDoom is a 3D-accelerated Doom source port based on ZDoom.
 
-	  gzdoom.drdteam.org
+	    https://zdoom.org

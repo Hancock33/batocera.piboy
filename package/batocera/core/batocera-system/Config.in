@@ -203,6 +203,13 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_UMTOOL                               # command line tool for configuring Ultimarc arcade hardware
     select BR2_PACKAGE_PYTHON_HIDAPI                        # Communication with USB HID devices via Python
 
+    # Python and SSL
+    select BR2_PACKAGE_HOST_PYTHON3
+    select BR2_PACKAGE_HOST_PYTHON3_SSL
+    select BR2_PACKAGE_PYTHON3
+    select BR2_PACKAGE_PYTHON3_SSL
+    select BR2_PACKAGE_PYTHON3_PYOPENSSL
+
     # Deprecated, which what library should we replace ?
     select BR2_PACKAGE_PARTED                               # partition management (for the first boot)
     select BR2_PACKAGE_USBMOUNT                             # usb key/sd card mounter
@@ -648,9 +655,7 @@ config BR2_PACKAGE_BATOCERA_HOMEBREW_SYSTEMS
     select BR2_PACKAGE_BATOCERA_PYGAME                      if  !BR2_PACKAGE_BATOCERA_TARGET_H3
 
     # RPG engine : Solarus
-    select BR2_PACKAGE_LUAJIT                               if  !BR2_aarch64 # for performance
-    select BR2_PACKAGE_LUA                                  if  BR2_aarch64
-    select BR2_PACKAGE_SOLARUS_ENGINE                       # engine itself
+    select BR2_PACKAGE_SOLARUS_ENGINE                       # ALL
 
     # RPG engine : EasyRPG / RPG MAker
     select BR2_PACKAGE_EASYRPG_PLAYER                       # standalone
@@ -912,7 +917,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_BOOM3                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # OpenLara (Tomb Raider)
-    select BR2_PACKAGE_LIBRETRO_OPENLARA                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY   || BR2_aarch64
+    select BR2_PACKAGE_LIBRETRO_OPENLARA                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY   || BR2_aarch64
 
     # Quake 3
     select BR2_PACKAGE_QUAKE3                               if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835    && \
@@ -921,6 +926,12 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3326     && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RISCV      && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_ODIN
+
+    # Hydra Castle Labyrinth
+    select BR2_PACKAGE_HCL                                  # ALL
+
+    # C-Dogs SDL
+    select BR2_PACKAGE_CDOGS                                # ALL
 
     help
         Ports
@@ -1042,16 +1053,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_KRONOS                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
     select BR2_PACKAGE_LIBRETRO_YABASANSHIRO                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2711     || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_XU4         || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_ODIN        || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3288      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3399      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S912        || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S905GEN3    || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588
+                                                                BR2_PACKAGE_BATOCERA_GLES3
 
     select BR2_PACKAGE_YABASANSHIRO                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
@@ -1233,12 +1235,8 @@ config BR2_PACKAGE_BATOCERA_MUPEN64
 config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     bool "add experimental cores"
 
-    # Hydra Castle Labyrinth
-    select BR2_PACKAGE_HCL                                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
-
-    # C-Dogs SDL
-    select BR2_PACKAGE_CDOGS                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
-    select BR2_PACKAGE_HOST_PYTHON_PROTOBUF                 if  BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL && BR2_PACKAGE_CDOGS
+    # CorsixTH (Theme Hospital engine)
+    select BR2_PACKAGE_CORSIXTH             if BR2_x86_64 || BR2_aarch64
 
     # Turrican Port
     select BR2_PACKAGE_LIBEPOXY
@@ -1334,7 +1332,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_SUPERTUX2                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Super Tux2 (Mario Land Clone)
     select BR2_PACKAGE_TEKWAR                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Tekwar
     select BR2_PACKAGE_VCMI                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Heroes of Might and Magic III
-    #select BR2_PACKAGE_XBOX_XCLOUD_CLIENT                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                            # Xbox Cloud Gaming
+    select BR2_PACKAGE_XBOX_XCLOUD_CLIENT                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                            # Xbox Cloud Gaming
 
     help
         Emulators under development (Experimental)

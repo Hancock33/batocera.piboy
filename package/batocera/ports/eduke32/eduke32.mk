@@ -3,10 +3,9 @@
 # eduke32
 #
 ################################################################################
-# Version: Commits on 09 Jun, 2023
-EDUKE32_VERSION = c126d1ea3211f5df12e090a24d38f9703aedc047
+# Version: Commits on 02 Jul, 2023
+EDUKE32_VERSION = 77e6bb66fc27b54f9b2fa448a138047c71fab02e
 EDUKE32_SITE = https://voidpoint.io/terminx/eduke32.git
-
 EDUKE32_DEPENDENCIES = sdl2 flac libvpx
 EDUKE32_SITE_METHOD=git
 EDUKE32_LICENSE = GPL-2.0
@@ -18,6 +17,11 @@ EDUKE32_BUILD_ARGS += HAVE_GTK2=0
 EDUKE32_BUILD_ARGS += LTO=0
 EDUKE32_BUILD_ARGS += PACKAGE_REPOSITORY=1
 EDUKE32_BUILD_ARGS += VC_REV=$(EDUKE32_VC_REV)
+
+ifeq ($(BR2_aarch64),y)
+    EDUKE32_BUILD_ARGS += USE_OPENGL=0
+    EDUKE32_BUILD_ARGS += OPTOPT="-ffast-math"
+endif
 
 define EDUKE32_BUILD_CMDS
     $(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) -C $(@D) duke3d

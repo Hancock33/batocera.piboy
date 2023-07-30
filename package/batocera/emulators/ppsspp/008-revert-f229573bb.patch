@@ -1,0 +1,26 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index e4ea188c7..055935e73 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -182,13 +182,14 @@ if(UNIX AND NOT (APPLE OR ANDROID) AND VULKAN)
+ 	endif()
+ 
+ 	# add_definitions(-DVK_USE_PLATFORM_XCB_KHR)
+-	find_package(Wayland)
+-	if(NOT WAYLAND_FOUND)
+-		message(STATUS "Could not find Wayland libraries, disabling Wayland WSI support for Vulkan.")
+-	else()
+-		include_directories(${WAYLAND_INCLUDE_DIR})
+-		add_definitions(-DVK_USE_PLATFORM_WAYLAND_KHR)
+-		add_definitions(-DUSE_WAYLAND_WSI=ON)
++	if(USE_WAYLAND_WSI)
++		find_package(Wayland)
++		if(NOT WAYLAND_FOUND)
++			message(STATUS "Could not find Wayland libraries, disabling Wayland WSI support for Vulkan.")
++		else()
++			include_directories(${WAYLAND_INCLUDE_DIR})
++			add_definitions(-DVK_USE_PLATFORM_WAYLAND_KHR)
++		endif()
+ 	endif()
+ 
+ 	if(USE_VULKAN_DISPLAY_KHR)
