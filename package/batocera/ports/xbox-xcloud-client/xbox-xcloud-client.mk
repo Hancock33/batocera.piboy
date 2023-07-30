@@ -18,11 +18,11 @@ endef
 
 define XBOX_XCLOUD_CLIENT_INSTALL_TARGET_CMDS
     # es media
-    mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/xboxcloud
-	cp -a $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/wip/xbox-xcloud-client/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/xboxcloud
+    #mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/xboxcloud
+	#cp -a $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/xbox-xcloud-client/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/xboxcloud
     # evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/wip/xbox-xcloud-client/xboxcloud.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/xbox-xcloud-client/xboxcloud.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(generic-package))
