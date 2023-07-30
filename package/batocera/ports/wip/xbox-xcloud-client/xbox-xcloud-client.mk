@@ -3,15 +3,17 @@
 # xbox-xcloud-client
 #
 ################################################################################
-# Version: Commits on Mar 21, 2023
-XBOX_XCLOUD_CLIENT_VERSION = 2.0.0-beta6
+# Version: Commits on Jul 26, 2023
+XBOX_XCLOUD_CLIENT_VERSION = 2.0.0-beta10
 XBOX_XCLOUD_CLIENT_SITE = https://github.com/unknownskl/xbox-xcloud-client/releases/download/v$(XBOX_XCLOUD_CLIENT_VERSION)
-XBOX_XCLOUD_CLIENT_SOURCE = greenlight_$(XBOX_XCLOUD_CLIENT_VERSION)_amd64.deb
+XBOX_XCLOUD_CLIENT_SOURCE = Greenlight-$(XBOX_XCLOUD_CLIENT_VERSION).AppImage
+
 XBOX_XCLOUD_CLIENT_LICENSE =  MIT license
-XBOX_XCLOUD_CLIENT_DEPENDENCIES = libnss at-spi2-atk
+XBOX_XCLOUD_CLIENT_DEPENDENCIES = libnss
 
 define XBOX_XCLOUD_CLIENT_EXTRACT_CMDS
-    dpkg-deb -x $(XBOX_XCLOUD_CLIENT_DL_DIR)/$(XBOX_XCLOUD_CLIENT_SOURCE) $(TARGET_DIR)
+    cp -av $(XBOX_XCLOUD_CLIENT_DL_DIR)/$(XBOX_XCLOUD_CLIENT_SOURCE) $(TARGET_DIR)/usr/bin/greenlight
+    chmod 754 $(TARGET_DIR)/usr/bin/greenlight
 endef
 
 define XBOX_XCLOUD_CLIENT_INSTALL_TARGET_CMDS
