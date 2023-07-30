@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if test -z "${DISPLAY}"
+then
+    export DISPLAY=:0.0
+fi
+
+/usr/bin/greenlight --no-sandbox --fullscreen
+
+exit 0
