@@ -173,6 +173,13 @@ ifeq ($(BR2_PACKAGE_PLAY),y)
   BATOCERA_DESKTOPAPPS_ICONS   += play.png
 endif
 
+# Xbox Streaming
+ifeq ($(BR2_PACKAGE_XBOX_XCLOUD_CLIENT),y)
+  BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-greenlight
+  BATOCERA_DESKTOPAPPS_APPS    += greenlight.desktop
+  BATOCERA_DESKTOPAPPS_ICONS   += greenlight.png
+endif
+
 define BATOCERA_DESKTOPAPPS_INSTALL_TARGET_CMDS
 	# scripts
 	mkdir -p $(TARGET_DIR)/usr/bin
