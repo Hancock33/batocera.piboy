@@ -4035,63 +4035,67 @@ libretro:
                     "Dynarec (Fastest)":                dynamic_recompiler
                     "Cached Interpreter":               cached_interpreter
                     "Pure Interpreter (Most Accurate)": pure_interpreter
-            mupen64plus-pak1:
-                group: CONTROLLER SETTINGS
-                prompt:      CONTROLLER PAK 1
-                description: Emulate a pak in the controller expansion port.
-                choices:
-                    "Off":         none
-                    "Memory Pak":  memory
-                    "Rumble Pak":  rumble
-            mupen64plus-pak2:
-                group: CONTROLLER SETTINGS
-                prompt:      CONTROLLER PAK 2
-                description: Emulate a pak in the controller expansion port.
-                choices:
-                    "Off":         none
-                    "Memory Pak":  memory
-                    "Rumble Pak":  rumble
-            mupen64plus-pak3:
-                group: CONTROLLER SETTINGS
-                prompt:      CONTROLLER PAK 3
-                description: Emulate a pak in the controller expansion port.
-                choices:
-                    "Off":         none
-                    "Memory Pak":  memory
-                    "Rumble Pak":  rumble
-            mupen64plus-pak4:
-                group: CONTROLLER SETTINGS
-                prompt:      CONTROLLER PAK 4
-                description: Emulate a pak in the controller expansion port.
-                choices:
-                    "Off":         none
-                    "Memory Pak":  memory
-                    "Rumble Pak":  rumble
             mupen64plus-controller1:
-                prompt:     CONTROLLER 1 TYPE
+                submenu:     CONTROLLER 1
+                prompt:      CONTROLLER TYPE
                 description: Useful for N64 style controllers. Limited hotkeys for controllers without dedicated hotkey.
                 choices:
                     "RetroPad (Default)": retropad
                     "N64": n64
                     "N64 (Limited Hotkeys)": n64limited
             mupen64plus-controller2:
-                prompt:     CONTROLLER 2 TYPE
+                submenu:     CONTROLLER 2
+                prompt:      CONTROLLER TYPE
                 description: Useful for N64 style controllers.
                 choices:
                     "RetroPad (Default)": retropad
                     "N64": n64
             mupen64plus-controller3:
-                prompt:     CONTROLLER 3 TYPE
+                submenu:     CONTROLLER 3
+                prompt:      CONTROLLER TYPE
                 description: Useful for N64 style controllers.
                 choices:
                     "RetroPad (Default)": retropad
                     "N64": n64
             mupen64plus-controller4:
-                prompt:     CONTROLLER 4 TYPE
+                submenu:     CONTROLLER 4
+                prompt:      CONTROLLER TYPE
                 description: Useful for N64 style controllers.
                 choices:
                     "RetroPad (Default)": retropad
-                    "N64": n64                   
+                    "N64": n64
+            mupen64plus-pak1:
+                submenu:     CONTOLLER 1
+                prompt:      CONTROLLER PAK
+                description: Emulate a pak in the controller expansion port.
+                choices:
+                    "Off":         none
+                    "Memory Pak":  memory
+                    "Rumble Pak":  rumble
+            mupen64plus-pak2:
+                submenu:     CONTROLLER 2
+                prompt:      CONTROLLER PAK
+                description: Emulate a pak in the controller expansion port.
+                choices:
+                    "Off":         none
+                    "Memory Pak":  memory
+                    "Rumble Pak":  rumble
+            mupen64plus-pak3:
+                submenu:     CONTROLLER 3
+                prompt:      CONTROLLER PAK
+                description: Emulate a pak in the controller expansion port.
+                choices:
+                    "Off":         none
+                    "Memory Pak":  memory
+                    "Rumble Pak":  rumble
+            mupen64plus-pak4:
+                submenu:     CONTROLLER 4
+                prompt:      CONTROLLER PAK
+                description: Emulate a pak in the controller expansion port.
+                choices:
+                    "Off":         none
+                    "Memory Pak":  memory
+                    "Rumble Pak":  rumble
             mupen64plus-Framerate:
                 group: ADVANCED OPTIONS
                 prompt: FRAME RATE
@@ -4508,63 +4512,67 @@ libretro:
                 choices:
                     "Original":   original
                     "Full speed": fullspeed
-            parallel-n64-pak1:
-                group: CONTROLLER SETTINGS
-                prompt:      CONTROLLER PAK 1
-                description: Emulate a pak in the controller expansion port.
-                choices:
-                    "Off":         none
-                    "Memory Pak":  memory
-                    "Rumble Pak":  rumble
-            parallel-n64-pak2:
-                group: CONTROLLER SETTINGS
-                prompt:      CONTROLLER PAK 2
-                description: Emulate a pak in the controller expansion port.
-                choices:
-                    "Off":         none
-                    "Memory Pak":  memory
-                    "Rumble Pak":  rumble
-            parallel-n64-pak3:
-                group: CONTROLLER SETTINGS
-                prompt:      CONTROLLER PAK 3
-                description: Emulate a pak in the controller expansion port.
-                choices:
-                    "Off":         none
-                    "Memory Pak":  memory
-                    "Rumble Pak":  rumble
-            parallel-n64-pak4:
-                group: CONTROLLER SETTINGS
-                prompt:      CONTROLLER PAK 4
-                description: Emulate a pak in the controller expansion port.
-                choices:
-                    "Off":         none
-                    "Memory Pak":  memory
-                    "Rumble Pak":  rumble
             parallel-n64-controller1:
-                prompt:     CONTROLLER 1 TYPE
+                submenu:     CONTROLLER 1
+                prompt:      CONTROLLER TYPE
                 description: Useful for N64 style controllers. Limited hotkeys for controllers without dedicated hotkey.
                 choices:
                     "RetroPad (Default)": retropad
                     "N64": n64
                     "N64 (Limited Hotkeys)": n64limited
             parallel-n64-controller2:
-                prompt:     CONTROLLER 2 TYPE
+                submenu:     CONTOLLER 2
+                prompt:      CONTROLLER TYPE
                 description: Useful for N64 style controllers.
                 choices:
                     "RetroPad (Default)": retropad
                     "N64": n64
             parallel-n64-controller3:
-                prompt:     CONTROLLER 3 TYPE
+                submenu:     CONTROLLER 3
+                prompt:      CONTROLLER TYPE
                 description: Useful for N64 style controllers.
                 choices:
                     "RetroPad (Default)": retropad
                     "N64": n64
             parallel-n64-controller4:
-                prompt:     CONTROLLER 4 TYPE
+                submenu:     CONTROLLER 4
+                prompt:      CONTROLLER TYPE
                 description: Useful for N64 style controllers.
                 choices:
                     "RetroPad (Default)": retropad
-                    "N64": n64               
+                    "N64": n64
+            parallel-n64-pak1:
+                submenu:     CONTROLLER 1
+                prompt:      CONTROLLER PAK
+                description: Emulate a pak in the controller expansion port.
+                choices:
+                    "Off":         none
+                    "Memory Pak":  memory
+                    "Rumble Pak":  rumble
+            parallel-n64-pak2:
+                submenu:     CONTROLLER 2
+                prompt:      CONTROLLER PAK
+                description: Emulate a pak in the controller expansion port.
+                choices:
+                    "Off":         none
+                    "Memory Pak":  memory
+                    "Rumble Pak":  rumble
+            parallel-n64-pak3:
+                submenu:     CONTROLLER 3
+                prompt:      CONTROLLER PAK
+                description: Emulate a pak in the controller expansion port.
+                choices:
+                    "Off":         none
+                    "Memory Pak":  memory
+                    "Rumble Pak":  rumble
+            parallel-n64-pak4:
+                submenu:     CONTROLLER 4
+                prompt:      CONTROLLER PAK
+                description: Emulate a pak in the controller expansion port.
+                choices:
+                    "Off":         none
+                    "Memory Pak":  memory
+                    "Rumble Pak":  rumble
     pce:
       features: [padtokeyboard, netplay, cheevos]
       shared: [rewind, autosave]
@@ -4783,7 +4791,7 @@ libretro:
                     "3360x1904":         3360x1904
                     "3840x2176":         3840x2176
                     "4320x2448":         4320x2448
-                    "4800x2720":         4800x2720      
+                    "4800x2720":         4800x2720
     prboom:
       shared: [rewind, autosave]
       cfeatures:
@@ -8238,7 +8246,7 @@ mupen64plus:
                 "Enable":       1
         mupen64-controller1:
             submenu: CONTROLLER 1
-            prompt: CONTROLLER TYPE             
+            prompt: CONTROLLER TYPE
             description: Useful for N64 style controllers. Limited hotkeys for controllers without dedicated hotkey.
             choices:
                 "RetroPad (Default)": retropad
@@ -8296,7 +8304,7 @@ mupen64plus:
                 "120%": 120
                 "130%": 130
                 "140%": 140
-                "150%": 150        
+                "150%": 150
         mupen64-sensitivity3:
             submenu: CONTROLLER 3
             prompt: SENSITIVITY
@@ -10877,7 +10885,7 @@ play:
           description: Only applicable when using OpenGL.
           choices:
               "Disabled": "false"
-              "Enabled":  "true"     
+              "Enabled":  "true"
       play_language:
           prompt: LANGUAGE
           description: Change the game's language.
@@ -11580,6 +11588,20 @@ themehospital:
 thextech:
   features: [padtokeyboard]
   shared: [videomode, hud, hud_corner]
+  cfeatures:
+    frameskip:
+      prompt:      FRAMESKIP
+      description: Skip frames to improve performance, at the cost of choppy motion.
+      choices:
+        "On (default)": 1
+        "Off":          0
+    rendering_mode:
+      prompt:      RENDERING MODE
+      description: Better performance with hardware rendering.
+      choices:
+        "Hardware (default)": "hw"
+        "Software":           "sw"
+        "Vsync":              "vsync"
 vanillara:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -11800,7 +11822,7 @@ xenia-canary:
             description: Enable or disable Xenia patches. These patches can fix graphics problems in some games.
             choices:
                 "Disabled (Default)": false
-                "Enabled": true     
+                "Enabled": true
 yabasanshiro:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

@@ -3,8 +3,8 @@
 # yuzu
 #
 ################################################################################
-# Version: Commits on Jul 28, 2023
-YUZU_VERSION = 689dc4a17bb5f849b644705b54c3667db03d8f5d
+# Version: Commits on Jul 31, 2023
+YUZU_VERSION = 06fa13a0147c5af6691f21860a278ddd6e7c1564
 YUZU_SITE = https://github.com/yuzu-emu/yuzu.git
 YUZU_SITE_METHOD=git
 YUZU_GIT_SUBMODULES=YES
@@ -46,5 +46,11 @@ define YUZU_INSTALL_TARGET_CMDS
     cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/yuzu/switch.yuzu.keys \
         $(TARGET_DIR)/usr/share/evmapy
 endef
+
+define YUZU_DL_TZ
+    mkdir -p $(@D)/buildroot-build/externals/nx_tzdb
+    wget -O $(@D)/buildroot-build/externals/nx_tzdb/220816.zip https://github.com/lat9nq/tzdb_to_nx/releases/download/220816/220816.zip
+endef
+YUZU_POST_EXTRACT_HOOKS += YUZU_DL_TZ
 
 $(eval $(cmake-package))
