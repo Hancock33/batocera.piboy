@@ -142,6 +142,11 @@ bbja:
 bermuda:
   emulator: bermuda
   core:     bermuda
+bigfish:
+  emulator: wine
+  core:     proton
+  options:
+    hud_support: false
 bk:
   emulator: libretro
   core:     bk
