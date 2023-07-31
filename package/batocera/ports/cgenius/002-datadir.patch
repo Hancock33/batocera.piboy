@@ -1,17 +1,17 @@
 diff --git a/GsKit/base/interface/FindFile.cpp b/GsKit/base/interface/FindFile.cpp
-index fc7b503e0..6c01ddfab 100644
+index 64fb916a5..e3cb62d5b 100644
 --- a/GsKit/base/interface/FindFile.cpp
 +++ b/GsKit/base/interface/FindFile.cpp
-@@ -511,7 +511,7 @@ void InitBaseSearchPaths()
-   #ifdef FLATPAK_HOME
-     AddToFileList(&basesearchpaths, FLATPAK_HOME"/CommanderGenius");
-   #else
--    AddToFileList(&basesearchpaths, "${HOME}/.CommanderGenius");
-+    AddToFileList(&basesearchpaths, "/userdata/roms/ports/cgenius");
-   #endif
+@@ -509,7 +509,7 @@ void InitBaseSearchPaths()
+     #ifdef ALTERNATE_HOME
+       AddToFileList(&basesearchpaths, ALTERNATE_HOME"/CommanderGenius");
+     #else
+-      AddToFileList(&basesearchpaths, "${HOME}/.CommanderGenius");
++      AddToFileList(&basesearchpaths, "/userdata/roms/ports/cgenius");
+     #endif
  #endif
      AddToFileList(&basesearchpaths, ".");
-@@ -807,6 +807,7 @@ bool FileListIncludesExact(const searchpathlist* l, const std::string& f) {
+@@ -805,6 +805,7 @@ bool FileListIncludesExact(const searchpathlist* l, const std::string& f) {
  
  std::string GetHomeDir()
  {
