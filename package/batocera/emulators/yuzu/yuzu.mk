@@ -47,4 +47,10 @@ define YUZU_INSTALL_TARGET_CMDS
         $(TARGET_DIR)/usr/share/evmapy
 endef
 
+define YUZU_DL_TZ
+    mkdir -p $(@D)/buildroot-build/externals/nx_tzdb
+    wget -O $(@D)/buildroot-build/externals/nx_tzdb/220816.zip https://github.com/lat9nq/tzdb_to_nx/releases/download/220816/220816.zip
+endef
+YUZU_POST_EXTRACT_HOOKS += YUZU_DL_TZ
+
 $(eval $(cmake-package))
