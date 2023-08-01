@@ -65,9 +65,10 @@ def generateMAMEConfigs(playersControllers, system, rom):
             cfgPath = "/userdata/saves/mame/mame/cfg/"
         if not os.path.exists(cfgPath):
             os.makedirs(cfgPath)
-        commandLine += [ romDrivername ]
+        else:
+            commandLine += [ romDrivername ]
         commandLine += [ '-cfg_directory', cfgPath ]
-        commandLine += [ '-rompath', romDirname ]
+        commandLine += [ '-rompath', romDirname + ';/userdata/bios/' ]
         pluginsToLoad = []
         if not (system.isOptSet("hiscoreplugin") and system.getOptBoolean("hiscoreplugin") == False):
             pluginsToLoad += [ "hiscore" ]
@@ -248,7 +249,7 @@ def generateMAMEConfigs(playersControllers, system, rom):
                         else:
                             commandLine += [ "-" + messRomType[messMode] ]
                 # Use the full filename for MESS non-softlist ROMs
-                commandLine += [ f'"{rom}"' ]
+                commandLine += [ f'"{romBasename}"' ]
                 commandLine += [ "-rompath", romDirname + ";/userdata/bios/" ]
 
                 # Boot disk for Macintosh
@@ -392,8 +393,14 @@ def generateMAMEConfigs(playersControllers, system, rom):
 
     # Delete old cmd files & prepare path
     cmdPath = "/var/run/cmdfiles/"
-    if not os.path.exists(cmdPath):
+    if os.path.exists(cmdPath):
+        shutil.rmtree(cmdPath)
         os.makedirs(cmdPath)
+        os.symlink(rom, cmdPath + romBasename)
+    else:
+        os.makedirs(cmdPath)
+        os.symlink(rom, cmdPath + romBasename)
+
     cmdFileList = os.listdir(cmdPath)
     for file in cmdFileList:
         if file.endswith(".cmd"):
