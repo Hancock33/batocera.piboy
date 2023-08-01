@@ -56,7 +56,7 @@ def generateMAMEConfigs(playersControllers, system, rom):
     else:
         corePath = system.config['core']
 
-    if system.name in [ 'mame', 'neogeo', 'lcdgames', 'plugnplay', 'acclaim', 'alg', 'alphadenshi', 'amcoe', 'atari', 'atlus', 'banpresto', 'cave', 'centurye', 'cinematronics', 'comad', 'cps1', 'cps2', 'cps3', 'dataeast', 'dynax', 'eighting', 'exidy', 'gaelco', 'gottlieb', 'igs', 'incredibletech', 'irem', 'jaleco', 'kaneko', 'konami', 'midway', 'mitchell', 'namco', 'nichibutsu', 'nintendo', 'nmk', 'pgm', 'playchoice', 'psikyo', 'sammy', 'sega', 'segastv', 'seibu', 'semicom', 'seta', 'snk', 'taito', 'technos', 'tecmo', 'toaplan', 'unico', 'universal', 'visco', 'vis' ]:
+    if system.name in [ 'mame', 'neogeo', 'lcdgames', 'plugnplay', 'acclaim', 'alg', 'alphadenshi', 'amcoe', 'atari', 'atlus', 'banpresto', 'cave', 'centurye', 'cinematronics', 'comad', 'cps1', 'cps2', 'cps3', 'dataeast', 'dynax', 'eighting', 'exidy', 'gaelco', 'gottlieb', 'igs', 'incredibletech', 'irem', 'jaleco', 'kaneko', 'konami', 'midway', 'mitchell', 'namco', 'nichibutsu', 'nintendo', 'nmk', 'pgm', 'playchoice', 'psikyo', 'sammy', 'sega', 'segastv', 'seibu', 'semicom', 'seta', 'snk', 'taito', 'technos', 'tecmo', 'toaplan', 'unico', 'universal', 'visco' ]:
         # Set up command line for basic systems
         # ie. no media, softlists, etc.
         if system.getOptBoolean("customcfg"):
@@ -65,8 +65,6 @@ def generateMAMEConfigs(playersControllers, system, rom):
             cfgPath = "/userdata/saves/mame/mame/cfg/"
         if not os.path.exists(cfgPath):
             os.makedirs(cfgPath)
-        if system.name == 'vis':
-            commandLine += [ 'vis', '-cdrom', f'"{rom}"' ]
         else:
             commandLine += [ romDrivername ]
         commandLine += [ '-cfg_directory', cfgPath ]
@@ -251,7 +249,7 @@ def generateMAMEConfigs(playersControllers, system, rom):
                         else:
                             commandLine += [ "-" + messRomType[messMode] ]
                 # Use the full filename for MESS non-softlist ROMs
-                commandLine += [ f'"{rom}"' ]
+                commandLine += [ f'"{romBasename}"' ]
                 commandLine += [ "-rompath", romDirname + ";/userdata/bios/" ]
 
                 # Boot disk for Macintosh
@@ -395,8 +393,14 @@ def generateMAMEConfigs(playersControllers, system, rom):
 
     # Delete old cmd files & prepare path
     cmdPath = "/var/run/cmdfiles/"
-    if not os.path.exists(cmdPath):
+    if os.path.exists(cmdPath):
+        shutil.rmtree(cmdPath)
         os.makedirs(cmdPath)
+        os.symlink(rom, cmdPath + romBasename)
+    else:
+        os.makedirs(cmdPath)
+        os.symlink(rom, cmdPath + romBasename)
+
     cmdFileList = os.listdir(cmdPath)
     for file in cmdFileList:
         if file.endswith(".cmd"):
