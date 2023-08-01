@@ -656,6 +656,9 @@ pgm:
 piboy:
   emulator: libretro
   core:     mame
+pico:
+  emulator: libretro
+  core:     genesisplusgx
 pico8:
   emulator: libretro
   core:     fake08
