@@ -1,13 +1,13 @@
 diff --git a/pcsx2/Input/SDLInputSource.cpp b/pcsx2/Input/SDLInputSource.cpp
-index 87e8ef8a3..28b359e7f 100644
+index 4993e43514..38f6a1da47 100644
 --- a/pcsx2/Input/SDLInputSource.cpp
 +++ b/pcsx2/Input/SDLInputSource.cpp
-@@ -224,7 +224,7 @@ void SDLInputSource::SetHints()
- bool SDLInputSource::LoadControllerDB()
- {
- 	Error error;
--	auto fp = FileSystem::OpenManagedCFile(Path::Combine(EmuFolders::Resources, CONTROLLER_DB_FILENAME).c_str(), "rb", &error);
-+	auto fp = FileSystem::OpenManagedCFile(Path::Combine("/userdata/system/configs/PCSX2/", CONTROLLER_DB_FILENAME).c_str(), "rb", &error);
- 	std::optional<std::string> data;
- 	if (!fp || !(data = FileSystem::ReadFileToString(fp.get())))
- 	{
+@@ -29,7 +29,7 @@
+ #include <bit>
+ #include <cmath>
+ 
+-static constexpr const char* CONTROLLER_DB_FILENAME = "game_controller_db.txt";
++static constexpr const char* CONTROLLER_DB_FILENAME = "/userdata/system/configs/PCSX2/game_controller_db.txt";
+ 
+ static constexpr const char* s_sdl_axis_names[] = {
+ 	"LeftX", // SDL_CONTROLLER_AXIS_LEFTX

@@ -4633,6 +4633,18 @@ yquake2:
                         Les sous-répertoires pris en charge pour les ROM de packs de missions sont : xatrix, rogue et zaero.
                         Pour le répertoire standard de Quake II, utilisez 'baseq2' pour utiliser le cœur vitaquake2 standard.
 
+bigfish:
+  name:                 Big Fish Games
+  manufacturer:         Big Fish Games
+  release:              2002
+  hardware:             computer
+  extensions:           [exe]
+  platform:             pc
+  emulators:
+    wine:
+      lutris:           { requireAnyOf: [BR2_PACKAGE_WINE_LUTRIS] }
+      proton:           { requireAnyOf: [BR2_PACKAGE_WINE_PROTON] }
+
 popcap:
   name:                 Popcap
   manufacturer:         Popcap
@@ -5419,6 +5431,19 @@ naomigd:
     demul:
       demul:            { requireAnyOf: [BR2_PACKAGE_DEMUL]                }
 
+pico:
+  name:                 Sega Pico
+  manufacturer:         Sega
+  release:              1993
+  hardware:             console
+  extensions:           [bin, md, zip, 7z]
+  group:                megadrive
+  emulators:
+    libretro:
+      genesisplusgx:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX] }
+      genesisplusgx-wide: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_WIDE] }
+      picodrive:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PICODRIVE] }
+
 saturn:
   name:                 Saturn
   manufacturer:         Sega
@@ -5894,6 +5919,16 @@ j2me:
     libretro:
       squirreljme:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SQUIRRELJME] }
       freej2me:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FREEJ2ME] }
+
+vis:
+  name:                 Tandy Video Information System
+  manufacturer:         Tandy / Memorex
+  release:              1992
+  hardware:             computer
+  extensions:           [chd, cue, toc, nrg, gdi, iso, cdr]
+  emulators:
+    libretro:
+      mame: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
 
 coco:
   name:                 Color Computer

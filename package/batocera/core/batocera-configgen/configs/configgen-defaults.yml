@@ -142,6 +142,11 @@ bbja:
 bermuda:
   emulator: bermuda
   core:     bermuda
+bigfish:
+  emulator: wine
+  core:     proton
+  options:
+    hud_support: false
 bk:
   emulator: libretro
   core:     bk
@@ -651,6 +656,9 @@ pgm:
 piboy:
   emulator: libretro
   core:     mame
+pico:
+  emulator: libretro
+  core:     genesisplusgx
 pico8:
   emulator: libretro
   core:     fake08
@@ -954,6 +962,9 @@ videosystem:
 virtualboy:
   emulator: libretro
   core:     vb
+vis:
+  emulator: libretro
+  core:     mame
 visco:
   emulator: libretro
   core:     mame078plus

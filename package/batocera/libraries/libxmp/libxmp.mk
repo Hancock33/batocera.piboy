@@ -1,10 +1,11 @@
 ################################################################################
 #
-# libxmp
+# LIBXMP
 #
 ################################################################################
-# Version: Commits on Jan 21, 2023
-LIBXMP_VERSION = bb3a502c10b9c16961c72ee72c5c14296d3109f5
+
+LIBXMP_VERSION = libxmp-4.6.0
+LIBXMP_SOURCE = enet-${LIBXMP_VERSION}.tar.gz
 LIBXMP_SITE =  $(call github,libxmp,libxmp,$(LIBXMP_VERSION))
 LIBXMP_INSTALL_STAGING = YES
 LIBXMP_AUTORECONF = YES

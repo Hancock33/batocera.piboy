@@ -3,13 +3,17 @@
 # faudio
 #
 ################################################################################
-# Version: Commits on Jul 01, 2023
-FAUDIO_VERSION = 23.07
+# Version: Commits on Aug 01, 2023
+FAUDIO_VERSION = 23.08
 FAUDIO_SITE = $(call github,FNA-XNA,FAudio,$(FAUDIO_VERSION))
 
 FAUDIO_LICENSE = ZLIB
 FAUDIO_LICENSE_FILES = LICENSE
-FAUDIO_DEPENDENCIES = host-bison host-flex host-wine-lutris host-libtool gstreamer1 gst1-plugins-base
+FAUDIO_DEPENDENCIES = host-bison host-flex host-libtool gstreamer1 gst1-plugins-base
+
+ifeq ($(BR2_PACKAGE_WINE_LUTRIS),y)
+FAUDIO_DEPENDENCIES += host-wine-lutris
+endif
 
 FAUDIO_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 FAUDIO_CONF_OPTS += -DSDL2_INCLUDE_DIRS=$(STAGING_DIR)/usr/include/SDL2
