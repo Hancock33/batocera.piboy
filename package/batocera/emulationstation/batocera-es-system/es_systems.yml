@@ -5432,7 +5432,7 @@ naomigd:
       demul:            { requireAnyOf: [BR2_PACKAGE_DEMUL]                }
 
 pico:
-  name:                 pico
+  name:                 Sega Pico
   manufacturer:         Sega
   release:              1993
   hardware:             console
@@ -5919,6 +5919,16 @@ j2me:
     libretro:
       squirreljme:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SQUIRRELJME] }
       freej2me:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FREEJ2ME] }
+
+vis:
+  name:                 Tandy Video Information System
+  manufacturer:         Tandy / Memorex
+  release:              1992
+  hardware:             computer
+  extensions:           [chd, cue, toc, nrg, gdi, iso, cdr]
+  emulators:
+    libretro:
+      mame: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
 
 coco:
   name:                 Color Computer
