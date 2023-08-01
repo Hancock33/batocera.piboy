@@ -56,7 +56,7 @@ def generateMAMEConfigs(playersControllers, system, rom):
     else:
         corePath = system.config['core']
 
-    if system.name in [ 'mame', 'neogeo', 'lcdgames', 'plugnplay', 'acclaim', 'alg', 'alphadenshi', 'amcoe', 'atari', 'atlus', 'banpresto', 'cave', 'centurye', 'cinematronics', 'comad', 'cps1', 'cps2', 'cps3', 'dataeast', 'dynax', 'eighting', 'exidy', 'gaelco', 'gottlieb', 'igs', 'incredibletech', 'irem', 'jaleco', 'kaneko', 'konami', 'midway', 'mitchell', 'namco', 'nichibutsu', 'nintendo', 'nmk', 'pgm', 'playchoice', 'psikyo', 'sammy', 'sega', 'segastv', 'seibu', 'semicom', 'seta', 'snk', 'taito', 'technos', 'tecmo', 'toaplan', 'unico', 'universal', 'visco' ]:
+    if system.name in [ 'mame', 'neogeo', 'lcdgames', 'plugnplay', 'acclaim', 'alg', 'alphadenshi', 'amcoe', 'atari', 'atlus', 'banpresto', 'cave', 'centurye', 'cinematronics', 'comad', 'cps1', 'cps2', 'cps3', 'dataeast', 'dynax', 'eighting', 'exidy', 'gaelco', 'gottlieb', 'igs', 'incredibletech', 'irem', 'jaleco', 'kaneko', 'konami', 'midway', 'mitchell', 'namco', 'nichibutsu', 'nintendo', 'nmk', 'pgm', 'playchoice', 'psikyo', 'sammy', 'sega', 'segastv', 'seibu', 'semicom', 'seta', 'snk', 'taito', 'technos', 'tecmo', 'toaplan', 'unico', 'universal', 'visco', 'vis' ]:
         # Set up command line for basic systems
         # ie. no media, softlists, etc.
         if system.getOptBoolean("customcfg"):
@@ -65,9 +65,12 @@ def generateMAMEConfigs(playersControllers, system, rom):
             cfgPath = "/userdata/saves/mame/mame/cfg/"
         if not os.path.exists(cfgPath):
             os.makedirs(cfgPath)
-        commandLine += [ romDrivername ]
+        if system.name == 'vis':
+            commandLine += [ 'vis', '-cdrom', f'"{rom}"' ]
+        else:
+            commandLine += [ romDrivername ]
         commandLine += [ '-cfg_directory', cfgPath ]
-        commandLine += [ '-rompath', romDirname ]
+        commandLine += [ '-rompath', romDirname + ';/userdata/bios/' ]
         pluginsToLoad = []
         if not (system.isOptSet("hiscoreplugin") and system.getOptBoolean("hiscoreplugin") == False):
             pluginsToLoad += [ "hiscore" ]

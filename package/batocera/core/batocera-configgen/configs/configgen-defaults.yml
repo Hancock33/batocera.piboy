@@ -962,6 +962,9 @@ videosystem:
 virtualboy:
   emulator: libretro
   core:     vb
+vis:
+  emulator: libretro
+  core:     mame
 visco:
   emulator: libretro
   core:     mame078plus
