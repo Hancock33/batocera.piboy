@@ -43,7 +43,7 @@
 - melonds to July 8th build
 - ppsspp to July 8th build
 - lr-ppsspp to July 8th build
-- xemu to v0.7.99
+- xemu to v0.7.110
 - devilutionX to 1.5.0
 - ScummVM (standalone and libretro core) to July 18th build
 - redream to 1.5.0-1079-g5ac7859
@@ -52,6 +52,7 @@
 - OpenMSX to v19
 - btop to 1.2.13
 - slang and glsl shaders to July 29th 2023
+- pcsx2 to v1.7.4857 (Aug, 1st 2023)
 ### Dev
 - linux kernel for x86_64 to 6.4.7
 - linux kernel for RPI to 6.1.32
@@ -66,7 +67,7 @@
 - vulkan stack to 1.3.257
 - SDL2 to 2.28.1
 - nvidia production driver to 535.86.05
-- faudio to 23.07
+- faudio to 23.08
 - llvm to 16.0.6
 - Buildroot to 2023.05.01
 
