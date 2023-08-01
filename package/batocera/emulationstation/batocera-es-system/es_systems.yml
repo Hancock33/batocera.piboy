@@ -5431,6 +5431,19 @@ naomigd:
     demul:
       demul:            { requireAnyOf: [BR2_PACKAGE_DEMUL]                }
 
+pico:
+  name:                 pico
+  manufacturer:         Sega
+  release:              1993
+  hardware:             console
+  extensions:           [bin, md, zip, 7z]
+  group:                megadrive
+  emulators:
+    libretro:
+      genesisplusgx:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX] }
+      genesisplusgx-wide: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_WIDE] }
+      picodrive:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PICODRIVE] }
+
 saturn:
   name:                 Saturn
   manufacturer:         Sega
