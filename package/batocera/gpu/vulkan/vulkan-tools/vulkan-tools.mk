@@ -3,8 +3,8 @@
 # vulkan-tools
 #
 ################################################################################
-# Version: Commits on Jul 31, 2023
-VULKAN_TOOLS_VERSION = adf8532bc503066a9c4cf8ea30cc0f8217044f0f
+# Version: Commits on Jul 26, 2023
+VULKAN_TOOLS_VERSION = b8f2f1406ef3e7b9a2e01edaaaf62d82eef1eb00
 VULKAN_TOOLS_SITE =  $(call github,KhronosGroup,Vulkan-Tools,$(VULKAN_TOOLS_VERSION))
 VULKAN_TOOLS_DEPENDENCIES = vulkan-headers vulkan-loader host-python3 host-glslang wayland host-ninja
 VULKAN_TOOLS_INSTALL_STAGING = YES
@@ -44,7 +44,6 @@ define VULKAN_TOOLS_SERVICE
 	    $(TARGET_DIR)/etc/init.d/S55vulkaninfo
 endef
 
-# remove (at least temporary) while it prevents es to open windows with some nvidia cards
-#VULKAN_TOOLS_POST_INSTALL_TARGET_HOOKS += VULKAN_TOOLS_SERVICE
+VULKAN_TOOLS_POST_INSTALL_TARGET_HOOKS += VULKAN_TOOLS_SERVICE
 
 $(eval $(cmake-package))
