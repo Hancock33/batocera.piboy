@@ -8,10 +8,10 @@ index 1c7d7a8a01..74bfbb419e 100644
  }
 +libc_hidden_def (_dlerror_run)
 diff --git a/elf/Makefile b/elf/Makefile
-index 0d19964d42..809a3037a7 100644
+index c00e2ccfc5..d468905633 100644
 --- a/elf/Makefile
 +++ b/elf/Makefile
-@@ -284,6 +284,7 @@ tests-static-internal := \
+@@ -280,6 +280,7 @@ tests-static-internal := \
    tst-stackguard1-static \
    tst-tls1-static \
    tst-tls1-static-non-pie \
@@ -19,7 +19,15 @@ index 0d19964d42..809a3037a7 100644
    # tests-static-internal
  
  CRT-tst-tls1-static-non-pie := $(csu-objpfx)crt1.o
-@@ -497,6 +498,7 @@ tests-internal += \
+@@ -421,6 +422,7 @@ tests += \
+   tst-initorder \
+   tst-initorder2 \
+   tst-latepthread \
++  tst-libc_dlvsym-dso \
+   tst-main1 \
+   tst-next-ver \
+   tst-nodelete-dlclose \
+@@ -495,6 +497,7 @@ tests-internal += \
    tst-dlmopen2 \
    tst-ptrguard1 \
    tst-stackguard1 \
@@ -27,15 +35,7 @@ index 0d19964d42..809a3037a7 100644
    tst-tls-surplus \
    tst-tls3 \
    tst-tls6 \
-@@ -863,6 +865,7 @@ modules-names += \
-   tst-ldconfig-soname-lib-with-soname \
-   tst-ldconfig-soname-lib-without-soname \
-   tst-main1mod \
-+  tst-libc_dlvsym-dso \
-   tst-nodelete2mod \
-   tst-nodelete-dlclose-dso \
-   tst-nodelete-dlclose-plugin \
-@@ -982,7 +985,7 @@ modules-names += \
+@@ -972,7 +975,7 @@ modules-names += \
  
  # Most modules build with _ISOMAC defined, but those filtered out
  # depend on internal headers.
@@ -44,7 +44,7 @@ index 0d19964d42..809a3037a7 100644
  				   $(modules-names))
  
  # For +depfiles in Makerules.
-@@ -2480,6 +2483,14 @@ LDLIBS-tst-absolute-zero-lib.so = tst-absolute-zero-lib.lds
+@@ -2487,6 +2490,14 @@ LDLIBS-tst-absolute-zero-lib.so = tst-absolute-zero-lib.lds
  $(objpfx)tst-absolute-zero-lib.so: $(LDLIBS-tst-absolute-zero-lib.so)
  $(objpfx)tst-absolute-zero: $(objpfx)tst-absolute-zero-lib.so
  
@@ -83,7 +83,7 @@ index 44f0103687..0e45bbdb36 100644
  }
 +libc_hidden_def (_dl_addr)
 diff --git a/elf/dl-libc.c b/elf/dl-libc.c
-index 7e71bfb534..62000cd347 100644
+index c12e52f330..30bcd9801a 100644
 --- a/elf/dl-libc.c
 +++ b/elf/dl-libc.c
 @@ -161,6 +161,7 @@ __libc_dlopen_mode (const char *name, int mode)
@@ -117,7 +117,7 @@ index 7e71bfb534..62000cd347 100644
 +libc_hidden_def (__libc_dlclose)
  
  
- static bool __libc_freeres_fn_section
+ static bool
 diff --git a/elf/dl-sym.c b/elf/dl-sym.c
 index b1ed1f2006..b7008d7164 100644
 --- a/elf/dl-sym.c
