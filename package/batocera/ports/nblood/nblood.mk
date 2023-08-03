@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Aug 03, 2023
-NBLOOD_VERSION = ee70808e8764fe4f28ae201e55edd668fb7c9fcf
+NBLOOD_VERSION = 1245014027ae13de516aa1bbc0baa0b4618946d4
 NBLOOD_SITE = https://github.com/nukeykt/NBlood.git
 
 NBLOOD_DEPENDENCIES = sdl2 flac libvpx
