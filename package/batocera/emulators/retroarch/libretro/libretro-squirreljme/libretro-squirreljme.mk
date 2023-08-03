@@ -3,8 +3,8 @@
 # libretro-squirreljme
 #
 ################################################################################
-# Version: Commits on Aug 01, 2023
-LIBRETRO_SQUIRRELJME_VERSION = ab8d91914aa7ed40008e64b5158d678b2cddcaa3
+# Version: Commits on Aug 02, 2023
+LIBRETRO_SQUIRRELJME_VERSION = 8d0f59a411e6e2606fc19ccd48c8a8fb3f52c7ae
 LIBRETRO_SQUIRRELJME_SITE = $(call github,SquirrelJME,SquirrelJME,$(LIBRETRO_SQUIRRELJME_VERSION))
 LIBRETRO_SQUIRRELJME_LICENSE = GPL-3.0
 
