@@ -13157,14 +13157,6 @@ msgstr ""
 #~ msgstr "UŻYJ KONFIGURACJI JOYSTICKA W GZDOOM"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Restart gry"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Następny dysk (m3u)"
-
-#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "Ładowanie stanu gniazda 1"
 
@@ -13267,6 +13259,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Przewijanie do przodu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Restart gry"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Następny dysk (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "CONTROLLER PAK 1"

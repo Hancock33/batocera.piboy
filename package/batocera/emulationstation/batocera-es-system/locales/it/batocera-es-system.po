@@ -13120,14 +13120,6 @@ msgstr ""
 #~ msgstr "USA LA CONFIGURAZIONE JOYSTICK GZDOOM"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Riavvia Gioco"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Disco Successivo (m3u)"
-
-#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "Carica Stato Slot 1"
 
@@ -13230,6 +13222,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "AvanzamentoRapido"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Riavvia Gioco"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Disco Successivo (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "CONTROLLER PAK 1"
