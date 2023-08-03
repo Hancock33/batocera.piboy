@@ -12802,14 +12802,6 @@ msgstr ""
 #~ msgstr "將右邊的模擬搖桿視為第二個搖桿"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "重啟遊戲"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "下一個光盤(m3u)"
-
-#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "載入存檔1"
 
@@ -12912,3 +12904,11 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快進"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "重啟遊戲"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "下一個光盤(m3u)"
