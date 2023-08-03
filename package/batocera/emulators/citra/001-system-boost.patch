@@ -1,0 +1,112 @@
+From 7e6a761f078c85a70cb0fb219d985dc625965d95 Mon Sep 17 00:00:00 2001
+From: liushuyu <liushuyu011@gmail.com>
+Date: Thu, 3 Aug 2023 03:20:35 +0800
+Subject: [PATCH] cmake: fix USE_SYSTEM_BOOST behavior ... (#6837)
+
+---
+ CMakeLists.txt           | 25 ++++++++++++------------
+ externals/CMakeLists.txt | 42 +++++++++++++++++++++-------------------
+ 2 files changed, 34 insertions(+), 33 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 12c511b052c..6b6dc9c40b6 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -341,13 +341,6 @@ function(get_timestamp _var)
+     set(${_var} "${timestamp}" PARENT_SCOPE)
+ endfunction()
+ 
+-# Prevent boost from linking against libs when building
+-add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY
+-    -DBOOST_SYSTEM_NO_LIB
+-    -DBOOST_DATE_TIME_NO_LIB
+-    -DBOOST_REGEX_NO_LIB
+-)
+-
+ # generate git/build information
+ include(GetGitRevisionDescription)
+ get_git_head_revision(GIT_REF_SPEC GIT_REV)
+@@ -355,17 +348,23 @@ git_describe(GIT_DESC --always --long --dirty)
+ git_branch_name(GIT_BRANCH)
+ get_timestamp(BUILD_DATE)
+ 
+-if (NOT USE_SYSTEM_BOOST)
+-    add_definitions( -DBOOST_ALL_NO_LIB )
++# Boost
++# Prevent boost from linking against libs when building
++add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY
++    -DBOOST_SYSTEM_NO_LIB
++    -DBOOST_DATE_TIME_NO_LIB
++    -DBOOST_REGEX_NO_LIB
++)
++if (USE_SYSTEM_BOOST)
++    find_package(Boost 1.70.0 COMPONENTS container locale serialization iostreams REQUIRED)
+ endif()
+ 
+ enable_testing()
+ add_subdirectory(externals)
+ 
+-# Boost
+-if (USE_SYSTEM_BOOST)
+-    find_package(Boost 1.70.0 COMPONENTS serialization iostreams REQUIRED)
+-else()
++# Boost (bundled)
++if (NOT USE_SYSTEM_BOOST)
++    add_definitions( -DBOOST_ALL_NO_LIB )
+     add_library(Boost::boost ALIAS boost)
+     add_library(Boost::serialization ALIAS boost_serialization)
+     add_library(Boost::iostreams ALIAS boost_iostreams)
+diff --git a/externals/CMakeLists.txt b/externals/CMakeLists.txt
+index 4406c3d660c..1927d2ef631 100644
+--- a/externals/CMakeLists.txt
++++ b/externals/CMakeLists.txt
+@@ -12,27 +12,29 @@ include(DownloadExternals)
+ include(ExternalProject)
+ 
+ # Boost
+-set(BOOST_ROOT "${CMAKE_SOURCE_DIR}/externals/boost" CACHE STRING "")
+-set(Boost_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/externals/boost" CACHE STRING "")
+-set(Boost_NO_SYSTEM_PATHS ON CACHE BOOL "")
+-add_library(boost INTERFACE)
+-target_include_directories(boost SYSTEM INTERFACE ${Boost_INCLUDE_DIR})
+-
+-# Boost::serialization
+-file(GLOB boost_serialization_SRC "${CMAKE_SOURCE_DIR}/externals/boost/libs/serialization/src/*.cpp")
+-add_library(boost_serialization STATIC ${boost_serialization_SRC})
+-target_link_libraries(boost_serialization PUBLIC boost)
+-
+-# Boost::iostreams
+-add_library(
+-    boost_iostreams
+-    STATIC
+-    ${CMAKE_SOURCE_DIR}/externals/boost/libs/iostreams/src/file_descriptor.cpp
+-    ${CMAKE_SOURCE_DIR}/externals/boost/libs/iostreams/src/mapped_file.cpp
+-)
+-target_link_libraries(boost_iostreams PUBLIC boost)
+-
++if (NOT USE_SYSTEM_BOOST)
++    message(STATUS "Including vendored Boost library")
++    set(BOOST_ROOT "${CMAKE_SOURCE_DIR}/externals/boost" CACHE STRING "")
++    set(Boost_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/externals/boost" CACHE STRING "")
++    set(Boost_NO_SYSTEM_PATHS ON CACHE BOOL "")
++    add_library(boost INTERFACE)
++    target_include_directories(boost SYSTEM INTERFACE ${Boost_INCLUDE_DIR})
++
++    # Boost::serialization
++    file(GLOB boost_serialization_SRC "${CMAKE_SOURCE_DIR}/externals/boost/libs/serialization/src/*.cpp")
++    add_library(boost_serialization STATIC ${boost_serialization_SRC})
++    target_link_libraries(boost_serialization PUBLIC boost)
++
++    # Boost::iostreams
++    add_library(
++        boost_iostreams
++        STATIC
++        ${CMAKE_SOURCE_DIR}/externals/boost/libs/iostreams/src/file_descriptor.cpp
++        ${CMAKE_SOURCE_DIR}/externals/boost/libs/iostreams/src/mapped_file.cpp
++    )
++    target_link_libraries(boost_iostreams PUBLIC boost)
+ # Add additional boost libs here; remember to ALIAS them in the root CMakeLists!
++endif()
+ 
+ # Catch2
+ set(CATCH_INSTALL_DOCS OFF CACHE BOOL "")
