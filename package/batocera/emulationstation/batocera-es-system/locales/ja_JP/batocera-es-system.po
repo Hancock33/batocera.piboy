@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v38beta(2023/07/02)\n"
+"Project-Id-Version: batocera-es v38beta(2023/07/22)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-07-15 19:26+0900\n"
+"PO-Revision-Date: 2023-07-24 18:13+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -1163,22 +1163,22 @@ msgstr "日本語"
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "hybrid top ratio 2"
-msgstr "hybrid top ratio 2"
+msgstr "ハイブリッド上/下比率2"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "hybrid top ratio 3"
-msgstr "hybrid top ratio 3"
+msgstr "ハイブリッド上/下比率3"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "hybrid bottom ratio 2"
-msgstr "hybrid bottom ratio 2"
+msgstr "ハイブリッド下/上比率2"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "hybrid bottom ratio 3"
-msgstr "hybrid bottom ratio 3"
+msgstr "ハイブリッド下/上比率3"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -2111,7 +2111,7 @@ msgstr "デュアルショックには振動機能がありますが、非対応
 #. TRANSLATION: libretro/swanstation, libretro/swanstation
 msgctxt "game_options"
 msgid "Digital Controller (Gamepad)"
-msgstr ""
+msgstr "デジタルコントローラー（ゲームパッド）"
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/duckstation, libretro/duckstation
 msgctxt "game_options"
@@ -7460,12 +7460,12 @@ msgstr "ゲームパッド画面を有効"
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "hybrid top ratio 4"
-msgstr "hybrid top ratio 4"
+msgstr "ハイブリッド上/下比率4"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "hybrid bottom ratio 4"
-msgstr "hybrid bottom ratio 4"
+msgstr "ハイブリッド下/上比率4"
 
 #. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, pcsx2
 msgctxt "game_options"
@@ -9205,17 +9205,17 @@ msgstr "標準 (PS2実機)(通常)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "1.25x Native"
-msgstr "1.25x 標準 "
+msgstr "1.25x 標準"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "1.5x Native"
-msgstr "1.5x 標準 "
+msgstr "1.5x 標準"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "1.75x Native"
-msgstr "1.75x 標準 "
+msgstr "1.75x 標準"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9225,17 +9225,17 @@ msgstr "2x 標準 (~720p)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2.25x Native"
-msgstr "2.25x 標準 "
+msgstr "2.25x 標準"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2.5x Native"
-msgstr "2.5x 標準 "
+msgstr "2.5x 標準"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "2.75x Native"
-msgstr "2.75x 標準 "
+msgstr "2.75x 標準"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9245,7 +9245,7 @@ msgstr "3x 標準 (~1080p)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "3.5x Native"
-msgstr "3.5x 標準 "
+msgstr "3.5x 標準"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9725,11 +9725,13 @@ msgid ""
 "May provide performance gain on CPUs with low core/thread count at the "
 "expense of possible broken timings."
 msgstr ""
+"コア/スレッド数が少ない CPU では、タイミングが壊れる可能性があるが、パフォー"
+"マンスが向上する可能性があります"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SPU LOOP DETECTION"
-msgstr ""
+msgstr "SPU ループの検出"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11271,67 +11273,67 @@ msgstr "OpenGL (通常)"
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "OPENGL RENDERING RESOLUTION"
-msgstr ""
+msgstr "OPENGL レンダリング解像度"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "1x (~480)"
-msgstr ""
+msgstr "1x (~480)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "2x (~960)"
-msgstr ""
+msgstr "2x (~960)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "4x (~1920p)"
-msgstr ""
+msgstr "4x (~1920p)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "8x (~4320p / 8k)"
-msgstr ""
+msgstr "8x (~4320p / 8k)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "16x (~7680p / 16k)"
-msgstr ""
+msgstr "16x (~7680p / 16k)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "PRESENTATION MODE"
-msgstr ""
+msgstr "視覚情報モード"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Fill Screen"
-msgstr ""
+msgstr "画面全体表示"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Fit Screen"
-msgstr ""
+msgstr "画面に合わせる"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Original Size"
-msgstr ""
+msgstr "オリジナルサイズ"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Enable widescreen support."
-msgstr ""
+msgstr "ワイドスクリーンのサポートを有効にします"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
-msgstr ""
+msgstr "ワイドスクリーン 有効"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Only applicable when using OpenGL."
-msgstr ""
+msgstr "OpenGL を使用する場合にのみ適用されます"
 
 #. TRANSLATION: yuzu, ryujinx
 msgctxt "game_options"
@@ -12149,16 +12151,18 @@ msgid ""
 "Select how much graphics memory is allocated for the GPU, may need modifying "
 "for some games / systems."
 msgstr ""
+"GPU に割り当てるグラフィック メモリの量を選択します。一部のゲーム/システムで"
+"は変更が必要な場合があります"
 
 #. TRANSLATION: quake3
 msgctxt "game_options"
 msgid "GRAPHICS MEMORY"
-msgstr ""
+msgstr "グラフィックメモリ"
 
 #. TRANSLATION: quake3
 msgctxt "game_options"
 msgid "256MB (Default)"
-msgstr ""
+msgstr "256MB (通常)"
 
 #. TRANSLATION: sm64
 msgctxt "game_options"
@@ -12937,6 +12941,22 @@ msgstr ""
 #~ "小 4MBメモリを推奨"
 
 #~ msgctxt "game_options"
+#~ msgid "CONTROLLER PAK 1"
+#~ msgstr "コントローラー パック1"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTROLLER PAK 2"
+#~ msgstr "コントローラー パック2"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTROLLER PAK 3"
+#~ msgstr "コントローラー パック3"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTROLLER PAK 4"
+#~ msgstr "コントローラー パック4"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
 #~ "switches to Super-High when needed."
@@ -13126,22 +13146,6 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
-
-#~ msgctxt "game_options"
-#~ msgid "CONTROLLER PAK 1"
-#~ msgstr "コントローラー パック1"
-
-#~ msgctxt "game_options"
-#~ msgid "CONTROLLER PAK 2"
-#~ msgstr "コントローラー パック2"
-
-#~ msgctxt "game_options"
-#~ msgid "CONTROLLER PAK 3"
-#~ msgstr "コントローラー パック3"
-
-#~ msgctxt "game_options"
-#~ msgid "CONTROLLER PAK 4"
-#~ msgstr "コントローラー パック4"
 
 #~ msgctxt "game_options"
 #~ msgid "Stretch to 16:9"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-07-14 10:46+0800\n"
+"PO-Revision-Date: 2023-07-23 17:30+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二\n"
 "Language: zh_CN\n"
@@ -2097,7 +2097,7 @@ msgstr "DualShock有力反馈支持，并非所有游戏都支持DualShock."
 #. TRANSLATION: libretro/swanstation, libretro/swanstation
 msgctxt "game_options"
 msgid "Digital Controller (Gamepad)"
-msgstr ""
+msgstr "数字控制器(游戏手柄)"
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/duckstation, libretro/duckstation
 msgctxt "game_options"
@@ -4512,7 +4512,7 @@ msgctxt "game_options"
 msgid ""
 "Useful for N64 style controllers. Limited hotkeys for controllers without "
 "dedicated hotkey."
-msgstr ""
+msgstr "适用于N64风格的控制器, 对于没有专门热键的控制器, 热键功能有限."
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, mupen64plus, ...
 msgctxt "game_options"
@@ -4527,22 +4527,22 @@ msgstr "控制器类型"
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "RetroPad (Default)"
-msgstr ""
+msgstr "复古手柄(默认设置)"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "N64"
-msgstr ""
+msgstr "N64"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
 msgid "N64 (Limited Hotkeys)"
-msgstr ""
+msgstr "N64 (有限热键)"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "Useful for N64 style controllers."
-msgstr ""
+msgstr "适用于N64控制器."
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus, mupen64plus, ...
 msgctxt "game_options"
@@ -9665,12 +9665,12 @@ msgctxt "game_options"
 msgid ""
 "May provide performance gain on CPUs with low core/thread count at the "
 "expense of possible broken timings."
-msgstr ""
+msgstr "在核心/线程较少的CPU上可能会提供性能增益, 但可能会以破坏时序为代价."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SPU LOOP DETECTION"
-msgstr ""
+msgstr "SPU循环检测"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11175,67 +11175,67 @@ msgstr "OpenGL (默认)"
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "OPENGL RENDERING RESOLUTION"
-msgstr ""
+msgstr "OPENGL渲染分辨率"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "1x (~480)"
-msgstr ""
+msgstr "1x (~480)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "2x (~960)"
-msgstr ""
+msgstr "2x (~960)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "4x (~1920p)"
-msgstr ""
+msgstr "4x (~1920p)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "8x (~4320p / 8k)"
-msgstr ""
+msgstr "8x (~4320p / 8k)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "16x (~7680p / 16k)"
-msgstr ""
+msgstr "16x (~7680p / 16k)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "PRESENTATION MODE"
-msgstr ""
+msgstr "演示模式"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Fill Screen"
-msgstr ""
+msgstr "填充屏幕"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Fit Screen"
-msgstr ""
+msgstr "适应屏幕"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Original Size"
-msgstr ""
+msgstr "原始大小"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Enable widescreen support."
-msgstr ""
+msgstr "启用宽屏支持."
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
-msgstr ""
+msgstr "启用宽屏"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Only applicable when using OpenGL."
-msgstr ""
+msgstr "仅在使用OpenGL时适用."
 
 #. TRANSLATION: yuzu, ryujinx
 msgctxt "game_options"
@@ -12052,17 +12052,17 @@ msgctxt "game_options"
 msgid ""
 "Select how much graphics memory is allocated for the GPU, may need modifying "
 "for some games / systems."
-msgstr ""
+msgstr "选择为GPU分配多少图形内存, 可能需要根据一些游戏或系统进行修改."
 
 #. TRANSLATION: quake3
 msgctxt "game_options"
 msgid "GRAPHICS MEMORY"
-msgstr ""
+msgstr "图形内存"
 
 #. TRANSLATION: quake3
 msgctxt "game_options"
 msgid "256MB (Default)"
-msgstr ""
+msgstr "256MB (Default)"
 
 #. TRANSLATION: sm64
 msgctxt "game_options"
@@ -12832,6 +12832,22 @@ msgstr ""
 #~ msgstr "安装图像读卡器以读取磁盘图像文件（仅限Mac IIx）。建议最小4MB内存。"
 
 #~ msgctxt "game_options"
+#~ msgid "CONTROLLER PAK 1"
+#~ msgstr "控制器卡1"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTROLLER PAK 2"
+#~ msgstr "控制器卡2"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTROLLER PAK 3"
+#~ msgstr "控制器卡3"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTROLLER PAK 4"
+#~ msgstr "控制器卡4"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
 #~ "switches to Super-High when needed."
@@ -13022,22 +13038,6 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
-
-#~ msgctxt "game_options"
-#~ msgid "CONTROLLER PAK 1"
-#~ msgstr "控制器卡1"
-
-#~ msgctxt "game_options"
-#~ msgid "CONTROLLER PAK 2"
-#~ msgstr "控制器卡2"
-
-#~ msgctxt "game_options"
-#~ msgid "CONTROLLER PAK 3"
-#~ msgstr "控制器卡3"
-
-#~ msgctxt "game_options"
-#~ msgid "CONTROLLER PAK 4"
-#~ msgstr "控制器卡4"
 
 #~ msgctxt "game_options"
 #~ msgid "Stretch to 16:9"
