@@ -59,6 +59,10 @@ case "$1" in
     # Remove carriage return characters from Windows files
     dos2unix /userdata/system/batocera.conf
 
+    # Max cpus
+    sed_param=s/9999/$(($(nproc) - 1))/g
+    sed -i "$sed_param" /usr/bin/batocera-cpucores
+
     # configure
     ba_keyboard_lang &
     ba_timezone &

@@ -1,0 +1,38 @@
+#!/bin/sh
+max_cpu=9999
+mid_cpu=$(echo "$max_cpu / 2"|bc)
+
+if [ $# -eq 0 ]
+  then
+    exit
+fi
+
+if [ $1 = 'min' ]; then
+    echo "using two cpu cores"
+    for i in $(seq 2 $max_cpu);
+    do
+        echo 0 > /sys/devices/system/cpu/cpu$i/online
+    done
+fi
+
+if [ $1 = 'mid' ]; then
+    echo "using half of the cpu cores"
+
+        for i in $(seq $mid_cpu $max_cpu);
+    do
+        echo 0 > /sys/devices/system/cpu/cpu$i/online
+    done
+
+    for i in $(seq 0 $mid_cpu);
+    do
+        echo 1 > /sys/devices/system/cpu/cpu$i/online
+    done
+fi
+
+if [ $1 = 'max' ]; then
+    echo "using all cpu cores"
+    for i in $(seq 2 $max_cpu);
+    do
+        echo 1 > /sys/devices/system/cpu/cpu$i/online
+    done
+fi
