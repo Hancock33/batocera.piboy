@@ -249,7 +249,7 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
         # run a script before emulator starts
         callExternalScripts("/usr/share/batocera/configgen/scripts", "gameStart", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
         callExternalScripts("/userdata/system/scripts", "gameStart", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
-        subprocess.call(['/usr/bin/batocera-cpucores', 'max'])
+        subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
 
         # run the emulator
         try:
