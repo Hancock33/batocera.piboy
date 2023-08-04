@@ -3625,7 +3625,7 @@ flatpak:
 
 fpinball:
   name:                 Future Pinball
-  manufacturer:         Ports
+  manufacturer:         Pinball Systems
   release:              2005
   hardware:             port
   extensions:           [fpt]
@@ -4155,7 +4155,7 @@ sorr:
 
 spacecadetpinball:
   name:                 3D Pinball Space Cadet
-  manufacturer:         Ports
+  manufacturer:         Pinball Systems
   release:              1995
   hardware:             port
   extensions:           [game]
@@ -4308,7 +4308,7 @@ vcmi:
 
 vpinball:
   name:                 Visual Pinball X
-  manufacturer:         Randy Davis
+  manufacturer:         Pinball Systems
   release:              2000
   hardware:             pinball
   extensions:           [vpx]
