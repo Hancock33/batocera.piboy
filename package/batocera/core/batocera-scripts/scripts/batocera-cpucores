@@ -23,7 +23,7 @@ if [ $1 = 'mid' ]; then
         echo 0 > /sys/devices/system/cpu/cpu$i/online
     done
 
-    for i in $(seq 0 $mid_cpu);
+    for i in $(seq 1 $mid_cpu);
     do
         echo 1 > /sys/devices/system/cpu/cpu$i/online
     done
