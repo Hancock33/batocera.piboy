@@ -11,6 +11,8 @@ VPINBALL_LICENSE_FILES = LICENSE
 VPINBALL_DEPENDENCIES = libfreeimage libpinmame libserum libzedmd sdl2 sdl2_image sdl2_ttf 
 VPINBALL_SUPPORTS_IN_SOURCE_BUILD = NO
 
+VPINBALL_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS=""
+
 # handle supported target platforms
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588),y)
     SOURCE = CMakeLists_gl-rk3588-aarch64.txt
