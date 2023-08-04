@@ -3,6 +3,7 @@
 - Support for Orange Pi Zero 2, Orange Pi 3 LTS, HardKernel ODROID-M1
 
 ### Added
+- ES settings for both types of classic controllers for dolphin. 
 - Additional ES settings for rpcs3
 - ES settings for joystick deadzone/sensitivity for mupen64plus
 - ES settings for N64 controllers for N64 emulators.
@@ -20,6 +21,7 @@
 - TheXTech game engine for Super Mario-like SMBX platform games
 - Tandy / Memorex Video Information System (VIS)
 - Visual Pinball X (Standalone) for X86_64, RPi4 & RK3588 boards
+- Added Sega Pico system entry utilizing existing emulator cores
 ### Fixed
 - Fix wifi/bluetooth on Tinkerboard
 - Fixed crop overscan settings for NES to work with newer core builds
