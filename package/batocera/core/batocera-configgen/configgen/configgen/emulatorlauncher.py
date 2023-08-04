@@ -249,7 +249,16 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
         # run a script before emulator starts
         callExternalScripts("/usr/share/batocera/configgen/scripts", "gameStart", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
         callExternalScripts("/userdata/system/scripts", "gameStart", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
-        subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
+
+        if system.isOptSet("powersave"):
+            if system.config['powersave'] == 0:
+                subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
+            elif system.config['powersave'] == 1:
+                subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
+            elif system.config['powersave'] == 2:
+                subprocess.call(['/usr/bin/batocera-cpucores', 'max'])
+        else:
+            subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
 
         # run the emulator
         try:
