@@ -39,7 +39,7 @@
 - citra to nightly-1936
 - groovy mame to 0.257
 - libretro-mame to 0.257
-- cemu to v2.0-45
+- cemu to v2.0-46
 - amiberry to 5.6.1
 - dosbox-x to v2023.05.01
 - tsugaru to v20230722
@@ -59,6 +59,7 @@
 - btop to 1.2.13
 - slang and glsl shaders to July 29th 2023
 - pcsx2 to v1.7.4857 (Aug, 1st 2023)
+- SDLPoP to v1.23 (Feb, 4th 2023)
 ### Dev
 - linux kernel for x86_64 to 6.4.8
 - linux kernel for RPI to 6.1.32
