@@ -387,6 +387,10 @@ def getGenerator(emulator):
         from generators.serioussam.serioussamGenerator import SerioussamGenerator
         return SerioussamGenerator()
 
+    if emulator == 'vpinball':
+        from generators.vpinball.vpinballGenerator import VPinballGenerator
+        return VPinballGenerator()
+
     if emulator == 'sh':
         from generators.sh.shGenerator import ShGenerator
         return ShGenerator()
