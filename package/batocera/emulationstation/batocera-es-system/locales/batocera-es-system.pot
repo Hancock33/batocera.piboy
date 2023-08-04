@@ -7625,6 +7625,11 @@ msgctxt "game_options"
 msgid "Classic Controller"
 msgstr ""
 
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Classic Controller Pro"
+msgstr ""
+
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Wiimote Sideway"
