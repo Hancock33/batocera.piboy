@@ -7737,6 +7737,11 @@ msgctxt "game_options"
 msgid "Classic Controller"
 msgstr "Kontroler klasyczny"
 
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Classic Controller Pro"
+msgstr ""
+
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Wiimote Sideway"
@@ -12640,6 +12645,46 @@ msgctxt "keys_files"
 msgid "Settings GUI"
 msgstr ""
 
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Start game"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Insert coin"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Nudge up"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Nudge left"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Nudge right"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Pull plunger"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Left flipper"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Right flipper"
+msgstr ""
+
 #. TRANSLATION: amigacd32.amiberry.keys, amiga500.amiberry.keys, amiga1200.amiberry.keys
 msgctxt "keys_files"
 msgid "Emulator configuration"
@@ -13157,14 +13202,6 @@ msgstr ""
 #~ msgstr "UŻYJ KONFIGURACJI JOYSTICKA W GZDOOM"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Restart gry"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Następny dysk (m3u)"
-
-#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "Ładowanie stanu gniazda 1"
 
@@ -13267,6 +13304,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Przewijanie do przodu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Restart gry"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Następny dysk (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "CONTROLLER PAK 1"
