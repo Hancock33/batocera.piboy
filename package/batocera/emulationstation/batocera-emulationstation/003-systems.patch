@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index a4d1fec0..4cae13ea 100644
+index 9b57c5cb..4cae13ea 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,181 +9,274 @@ namespace PlatformIds
+@@ -9,182 +9,274 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -198,6 +198,7 @@ index a4d1fec0..4cae13ea 100644
  		{ "genesis",				SEGA_GENESIS },
  		{ "mastersystem",			SEGA_MASTER_SYSTEM },
 -		{ "megadrive",				SEGA_MEGA_DRIVE },
+-		{ "pico",				SEGA_PICO },
  		{ "saturn",					SEGA_SATURN },
 -		{ "sg-1000",				SEGA_SG1000 },
 -		{ "psx",					PLAYSTATION },
@@ -410,10 +411,10 @@ index a4d1fec0..4cae13ea 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index 29c3f4e0..5ea4ee1a 100644
+index 6ad14c07..5ea4ee1a 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
-@@ -11,156 +11,248 @@ namespace PlatformIds
+@@ -11,157 +11,248 @@ namespace PlatformIds
  	{
  		PLATFORM_UNKNOWN = 0,
  
@@ -604,6 +605,7 @@ index 29c3f4e0..5ea4ee1a 100644
  		SEGA_GENESIS,
  		SEGA_MASTER_SYSTEM,
 -		SEGA_MEGA_DRIVE,
+-		SEGA_PICO,
  		SEGA_SATURN,
  		SEGA_SG1000,
 -		PLAYSTATION,
@@ -766,7 +768,7 @@ index 29c3f4e0..5ea4ee1a 100644
  		PLATFORM_IGNORE, // do not allow scraping for this system
  		PLATFORM_COUNT
 diff --git a/es-app/src/scrapers/GamesDBJSONScraper.cpp b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-index 29408bfc..b2c6d701 100644
+index 80c3b917..b2c6d701 100644
 --- a/es-app/src/scrapers/GamesDBJSONScraper.cpp
 +++ b/es-app/src/scrapers/GamesDBJSONScraper.cpp
 @@ -38,7 +38,6 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
@@ -777,7 +779,15 @@ index 29408bfc..b2c6d701 100644
  	{ COLECOVISION, "31" },	
  	{ COMMODORE_64, "40" },
  	{ INTELLIVISION, "32" },
-@@ -103,15 +102,14 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+@@ -69,7 +68,6 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+ 	{ SEGA_GENESIS, "18" },
+ 	{ SEGA_MASTER_SYSTEM, "35" },
+ 	{ SEGA_MEGA_DRIVE, "36" },
+-	{ SEGA_PICO, "4958" },
+ 	{ SEGA_SATURN, "17" },
+ 	{ SEGA_SG1000, "4949" },
+ 	{ PLAYSTATION, "10" },
+@@ -104,15 +102,14 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ VIC20, "4945" },
  	{ CHANNELF, "4928" },
  	{ SAMCOUPE, "4979" },
@@ -796,7 +806,7 @@ index 29408bfc..b2c6d701 100644
  
  	// 1 = PC
  	{ PC, "1" },
-@@ -138,7 +136,13 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+@@ -139,7 +136,13 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ GAMATE, "5004" },
  	{ CREATONIC_MEGA_DUCK, "4948" },
  	{ TOMY_TUTOR, "4960" },
@@ -811,18 +821,23 @@ index 29408bfc..b2c6d701 100644
  		
  	/* Non existing systems
  	{ AMIGACDTV, "129" },
-@@ -603,4 +607,4 @@ bool TheGamesDBJSONRequest::process(HttpReq* request, std::vector<ScraperSearchR
- 	return true;
- }
- 
--#endif
-\ No newline at end of file
-+#endif
+diff --git a/es-app/src/scrapers/HfsDBScraper.cpp b/es-app/src/scrapers/HfsDBScraper.cpp
+index 91ffed30..6989553d 100644
+--- a/es-app/src/scrapers/HfsDBScraper.cpp
++++ b/es-app/src/scrapers/HfsDBScraper.cpp
+@@ -73,7 +73,6 @@ const std::map<PlatformId, std::string> hfsdb_platformids
+ 	{ GX4000, "30250" },
+ 	{ INTELLIVISION, "84444" },
+ 	{ SEGA_MASTER_SYSTEM, "82166" },
+-	{ SEGA_PICO, "175183" },
+ 	{ THOMSON_TO_MO, "183673" },
+ 	{ MSX, "113089" },
+ 	{ NOKIA_NGAGE, "128704" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index a67ced0f..fe0dbefb 100644
+index 7425b0dd..fe0dbefb 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -36,147 +36,231 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
+@@ -36,148 +36,231 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
@@ -889,6 +904,7 @@ index a67ced0f..fe0dbefb 100644
 -	{ SEGA_GENESIS, 1 },
 -	{ SEGA_MASTER_SYSTEM, 2 },
 -	{ SEGA_MEGA_DRIVE, 1 },
+-	{ SEGA_PICO, 250 },
  	{ SEGA_SATURN, 22 },
 -	{ SEGA_SG1000, 109 },
 -	{ SHARP_X1, 220 },
@@ -1164,3 +1180,10 @@ index a67ced0f..fe0dbefb 100644
  	{ WASM4, 262 }
  };
  
+@@ -919,4 +1002,4 @@ int ScreenScraperScraper::getThreadCount(std::string &result)
+ 	return 1;
+ }
+ 
+-#endif
++#endif
+\ No newline at end of file

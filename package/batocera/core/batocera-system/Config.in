@@ -419,7 +419,7 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     string "target images"
     default "amlogic/s905gen2"                                                                                                                                                       if BR2_PACKAGE_BATOCERA_TARGET_S905GEN2
     default "amlogic/s905gen3/odroidc4 amlogic/s905gen3/tvbox-gen3"                                                                                                                  if BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
-    default "amlogic/a3gen2/vim4"                                                                                                                                                    if BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
+    default "amlogic/a3gen2/khadas-vim-4 amlogic/a3gen2/khadas-vim-1s"                                                                                                               if BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
     default "amlogic/s912/vim2"                                                                                                                                                      if BR2_PACKAGE_BATOCERA_TARGET_S912
     default "broadcom/bcm2835"                                                                                                                                                       if BR2_PACKAGE_BATOCERA_TARGET_BCM2835
     default "broadcom/bcm2836"                                                                                                                                                       if BR2_PACKAGE_BATOCERA_TARGET_BCM2836
@@ -1089,6 +1089,9 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 
     # future pinball
     select BR2_PACKAGE_FPINBALL                             if  BR2_PACKAGE_BATOCERA_WINE
+    select BR2_PACKAGE_VPINBALL                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     # Panasonic 3DO
     select BR2_PACKAGE_LIBRETRO_OPERA                       if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835    && \
