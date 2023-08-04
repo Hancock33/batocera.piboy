@@ -29,6 +29,9 @@ rm -f "${TARGET_DIR}/etc/init.d/S50kodi" || exit 1
 # we have custom urandom scripts
 rm -f "${TARGET_DIR}/etc/init.d/S20urandom" || exit 1
 
+# we dont use cups / printing?
+rm -f "${TARGET_DIR}/etc/init.d/S81cupsd" || exit 1
+
 # acpid requires /var/run, so, requires S03populate
 if test -e "${TARGET_DIR}/etc/init.d/S02acpid"
 then
@@ -41,7 +44,7 @@ then
     rm -frv ${TARGET_DIR}/usr/lib/dri/{armada-drm_dri.so,exynos_dri.so,hx8357d_dri.so,ili9225_dri.so,ili9341_dri.so,imx-*.so,ingenic-drm_dri.so}
     rm -frv ${TARGET_DIR}/usr/lib/dri/{mali-dp_dri.so,mcde_dri.so,mediatek_dri.so,meson_dri.so,mi0283qt_dri.so,mxsfb-drm_dri.so,pl111_dri.so,repaper_dri.so,rockchip_dri.so}
     rm -frv ${TARGET_DIR}/usr/lib/dri/{st7586_dri.so,st7735r_dri.so,stm_dri.so,sun4i-drm_dri.so}
-    rm -frv ${TARGET_DIR}/usr/lib/dri/{kirin_dri.so,komeda_dri.so,rcar-du_dri.so}  
+    rm -frv ${TARGET_DIR}/usr/lib/dri/{kirin_dri.so,komeda_dri.so,rcar-du_dri.so}
 fi
 
 # remove buildlogs
