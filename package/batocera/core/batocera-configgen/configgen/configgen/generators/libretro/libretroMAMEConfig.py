@@ -249,8 +249,11 @@ def generateMAMEConfigs(playersControllers, system, rom):
                         else:
                             commandLine += [ "-" + messRomType[messMode] ]
                 # Use the full filename for MESS non-softlist ROMs
-                #commandLine += [ f'"{romBasename}"' ]
-                commandLine += [ f'"{rom}"' ]
+                if system.config['core'] != 'same_cdi':
+                    commandLine += [ f'"{romBasename}"' ]
+                else:
+                    commandLine += [ f'"{rom}"' ]
+
                 commandLine += [ "-rompath", romDirname + ";/userdata/bios/" ]
 
                 # Boot disk for Macintosh
