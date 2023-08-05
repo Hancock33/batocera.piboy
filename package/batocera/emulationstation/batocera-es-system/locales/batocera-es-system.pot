@@ -431,7 +431,7 @@ msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
-msgid "Medium Saving (Default)"
+msgid "Med Saving"
 msgstr ""
 
 #. TRANSLATION: shared
