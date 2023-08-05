@@ -251,14 +251,18 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
         callExternalScripts("/userdata/system/scripts", "gameStart", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
 
         if system.isOptSet("powersave"):
-            if system.config['powersave'] == 0:
+            if system.config['powersave'] == '0':
                 subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
-            elif system.config['powersave'] == 1:
+                eslog.debug("CPU power config set to maximum power saving")
+            elif system.config['powersave'] == '1':
                 subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
-            elif system.config['powersave'] == 2:
+                eslog.debug("CPU power config set to medium power saving")
+            elif system.config['powersave'] == '2':
                 subprocess.call(['/usr/bin/batocera-cpucores', 'max'])
+                eslog.debug("CPU power config set to no power saving")
         else:
             subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
+            eslog.debug("CPU power config set to medium power saving")
 
         # run the emulator
         try:

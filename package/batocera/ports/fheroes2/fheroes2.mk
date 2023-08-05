@@ -3,8 +3,8 @@
 # Free Heroes (of Might and Magic) 2 engine
 #
 ################################################################################
-# Version: Commits on Aug 02, 2023
-FHEROES2_VERSION = b3d3ad14dd1e3272050c81c45b33981a660f2031
+# Version: Commits on Aug 05, 2023
+FHEROES2_VERSION = d7ee1140e99a8dabff638de59bd002f9d52cc367
 FHEROES2_SITE = $(call github,ihhub,fheroes2,$(FHEROES2_VERSION))
 FHEROES2_DEPENDENCIES = sdl2 sdl2_image
 
