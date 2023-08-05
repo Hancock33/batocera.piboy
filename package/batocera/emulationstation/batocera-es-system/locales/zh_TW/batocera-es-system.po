@@ -408,6 +408,38 @@ msgctxt "game_options"
 msgid "hidden"
 msgstr "隱藏"
 
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Disables CPU cores to helps reduce CPU power consumption. Useful for "
+"handhelds."
+msgstr ""
+
+#. TRANSLATION: shared, rpcs3, rpcs3, rpcs3, rpcs3, ...
+msgctxt "game_options"
+msgid "CPU"
+msgstr "CPU"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "POWER SAVE"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Max Saving"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Medium Saving (Default)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "No Saving"
+msgstr ""
+
 #. TRANSLATION: libretro/81
 msgctxt "game_options"
 msgid "Emulate Chroma 81 interface (colorization)."
@@ -7168,10 +7200,9 @@ msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr ""
 
-#. TRANSLATION: cemu, dolphin, duckstation, pcsx2, ppsspp, ...
+#. TRANSLATION: cemu, dolphin, duckstation, melonds, pcsx2, ...
 msgctxt "game_options"
-msgid ""
-"Choose which graphics API library to use. Vulkan is better, when supported."
+msgid "Choose which graphics API library to use."
 msgstr ""
 
 #. TRANSLATION: cemu, flycast
@@ -8562,11 +8593,6 @@ msgctxt "game_options"
 msgid "ASCI"
 msgstr ""
 
-#. TRANSLATION: melonds, play
-msgctxt "game_options"
-msgid "Choose which graphics API library to use."
-msgstr ""
-
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "LIMIT FRAME RATE"
@@ -9541,11 +9567,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "LLVM is fastest, use the Interpreter settings if there are issues."
 msgstr ""
-
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
-msgctxt "game_options"
-msgid "CPU"
-msgstr "CPU"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10594,8 +10615,7 @@ msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
-msgid ""
-"Depends on video mode being set to BGFX. Vulkan is better, when supported."
+msgid "Depends on video mode being set to BGFX."
 msgstr ""
 
 #. TRANSLATION: mame
@@ -12847,6 +12867,14 @@ msgstr ""
 #~ msgstr "將右邊的模擬搖桿視為第二個搖桿"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "重啟遊戲"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "下一個光盤(m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "載入存檔1"
 
@@ -12949,11 +12977,3 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快進"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "重啟遊戲"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "下一個光盤(m3u)"
