@@ -1,5 +1,4 @@
 # this file describes which features each emulator/core supports
-# this file describes which features each emulator/core supports
 # the aim is to display in es only the available options
 shared:
   cfeatures:
@@ -273,9 +272,9 @@ shared:
         "No Saving":                2
 
 global:
-  shared: [videomode, powersave, ratio, shaderset, smooth, integerscale, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, ai_service_enabled, ai_target_lang, ai_service_url, ai_service_pause, rewind, runahead, secondinstance, video_frame_delay_auto, vrr_runloop_enable, video_threaded, rumble_gain]
+  shared: [videomode, ratio, shaderset, smooth, integerscale, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, ai_service_enabled, ai_target_lang, ai_service_url, ai_service_pause, rewind, runahead, secondinstance, video_frame_delay_auto, vrr_runloop_enable, video_threaded, rumble_gain]
 libretro:
-  shared: [videomode, powersave, ratio, shaderset, smooth, integerscale, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, ai_service_enabled, ai_target_lang, ai_service_url, ai_service_pause, runahead, secondinstance, video_frame_delay_auto, vrr_runloop_enable, video_threaded, rumble_gain, audio_volume, bordersmode]
+  shared: [videomode, ratio, shaderset, smooth, integerscale, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, ai_service_enabled, ai_target_lang, ai_service_url, ai_service_pause, runahead, secondinstance, video_frame_delay_auto, vrr_runloop_enable, video_threaded, rumble_gain, audio_volume, bordersmode]
   cfeatures:
     gfxbackend:
       group: DRIVERS
@@ -371,7 +370,7 @@ libretro:
   cores:
     '81':
       features: [padtokeyboard, netplay]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             81_chroma_81:
                 prompt:      COLORIZATION
@@ -469,10 +468,10 @@ libretro:
                     "Saturn 3D Pad": 5
     fmsx:
        features: [padtokeyboard, netplay, cheevos]
-       shared: [rewind, autosave]
+       shared: [autosave, rewind]
     bluemsx:
       features: [padtokeyboard, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             bluemsx_overscan:
                 prompt:      ZOOM (HIDE BORDERS)
@@ -489,13 +488,13 @@ libretro:
                     "On":  ON
     bsnes:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave, use_guns]
+      shared: [autosave, rewind,use_guns]
     bsnes_hd:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     cap32:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             cap32_model:
                 prompt:      CPC MODEL
@@ -527,7 +526,7 @@ libretro:
 
     mesens:
       features: [padtokeyboard, netplay]
-      shared: [rewind, autosave, use_guns]
+      shared: [autosave, rewind,use_guns]
       cfeatures:
             mesens_ntsc_filter:
                 prompt:      BLARGG NTSC FILTER
@@ -590,7 +589,7 @@ libretro:
                     "1000%": 1000%
     mesen:
       features: [padtokeyboard, netplay]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
         mesen_region:
           prompt:      CONSOLE REGION
@@ -680,10 +679,10 @@ libretro:
             "Before NMI": Before NMI (Recommended)
             "After NMI":  After NMI
     citra:
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     desmume:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             internal_resolution_desmume:
                 group: VIDEO SETTINGS
@@ -1400,10 +1399,10 @@ libretro:
                     "NeGcon":                        773
     ep128emu:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     fbneo:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave, use_guns]
+      shared: [autosave, rewind,use_guns]
       cfeatures:
             fbneo-cpu-speed-adjust:
                 prompt:      CPU CLOCK
@@ -1462,7 +1461,7 @@ libretro:
                             "Per-game":                           per-game
     fceumm:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave, use_guns]
+      shared: [autosave, rewind,use_guns]
       cfeatures:
             fceumm_show_crosshair:
                 group: LIGHT GUN
@@ -2111,7 +2110,7 @@ libretro:
                     "On":                      259
     gambatte:
       features: [padtokeyboard, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             gb_bootloader:
                 prompt:      SHOW BIOS BOOTLOGO
@@ -2200,10 +2199,10 @@ libretro:
                             "Custom":                           custom
     genesisplusgx-wide:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     genesisplusgx:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             gpgx_region:
                 prompt:      REGION
@@ -2377,16 +2376,16 @@ libretro:
                             "On":        enabled
     gpsp:
       features: [padtokeyboard, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     handy:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     hatari:
       features: [padtokeyboard]
       shared: [autosave]
     imame4all:
       features: [padtokeyboard, netplay]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     kronos:
       features: [padtokeyboard, cheevos]
       shared: [autosave]
@@ -3667,7 +3666,7 @@ libretro:
       shared: [use_guns]
     mame078plus:
       features: [padtokeyboard, netplay]
-      shared: [rewind, autosave, use_guns]
+      shared: [autosave, rewind,use_guns]
       cfeatures:
             mame2003-plus_analog:
                 group: CONTROLLER SETTINGS
@@ -3716,10 +3715,10 @@ libretro:
                     "On":         enabled
     mednafen_lynx:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     mednafen_ngp:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     mednafen_psx:
       features: [padtokeyboard, cheevos]
       shared: [autosave, use_guns]
@@ -3835,7 +3834,7 @@ libretro:
                     "PlayStation Mouse":             258
     mednafen_supergrafx:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             sgx_nospritelimit:
                 prompt:      REDUCE SPRITE FLICKERING
@@ -3845,7 +3844,7 @@ libretro:
                     "On":         enabled
     mednafen_wswan:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             wswan_rotate_display:
                 group: VIDEO SETTINGS
@@ -3857,7 +3856,7 @@ libretro:
                     "Landscape":    landscape
     mgba:
       features: [padtokeyboard, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             skip_bios_mgba:
                 prompt:      SHOW BIOS BOOTLOGO
@@ -3928,7 +3927,7 @@ libretro:
                             "10": 10
     mrboom:
       features: [padtokeyboard, netplay]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             mrboom-aspect:
                 prompt:      TEAM COLOR MODE
@@ -4122,7 +4121,7 @@ libretro:
                     "4x":           4x
                     "8x":           8x
     neocd:
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             neocd_region:
                 prompt:      CONSOLE REGION
@@ -4146,7 +4145,7 @@ libretro:
                     "On":           On
     nestopia:
       features: [padtokeyboard, netplay]
-      shared: [rewind, autosave, use_guns]
+      shared: [autosave, rewind,use_guns]
       cfeatures:
             nestopia_show_crosshair:
                 group: LIGHT GUN
@@ -4206,7 +4205,7 @@ libretro:
                     "Famicom (FDS)":        famicom
     np2kai:
       features: [padtokeyboard, netplay]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             np2kai_model:
                 prompt:      PC MODEL
@@ -4334,7 +4333,7 @@ libretro:
                     "Atari Joypad":                 Atari Joypad
     o2em:
       features: [padtokeyboard, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             o2em_bios:
                 prompt:      EMULATED SYSTEM
@@ -4434,7 +4433,7 @@ libretro:
                     "244fps":          244fps
     opera:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave, use_guns]
+      shared: [autosave, rewind,use_guns]
       cfeatures:
             high_resolution:
                 group: VIDEO SETTINGS
@@ -4584,7 +4583,7 @@ libretro:
                     "Rumble Pak":  rumble
     pce:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             pce_nospritelimit:
                 prompt:      REDUCE SPRITE FLICKERING
@@ -4600,7 +4599,7 @@ libretro:
                     "PCE Mouse":  2
     pce_fast:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             pce_nospritelimit:
                 prompt:      REDUCE SPRITE FLICKERING
@@ -4616,7 +4615,7 @@ libretro:
                     "PCE Mouse":  2
     pcfx:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             pcfx_nospritelimit:
                 prompt:      REDUCE SPRITE FLICKERING
@@ -4717,10 +4716,10 @@ libretro:
                     "Joypad 6 Button": 6 button pad
     pocketsnes:
       features: [padtokeyboard, netplay]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     pokemini:
       features: [padtokeyboard, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             pokemini_lcdfilter:
                 prompt:      LCD FILTER
@@ -4736,7 +4735,7 @@ libretro:
                     "On":   analog
     potator:
       features: [padtokeyboard, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             watara_palette:
                 prompt:      COLOR PALETTE
@@ -4785,7 +4784,7 @@ libretro:
                     "8 Frames":                       8
     ppsspp:
       features: [padtokeyboard, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             ppsspp_resolution:
                 prompt: RENDERING RESOLUTION
@@ -4802,7 +4801,7 @@ libretro:
                     "4320x2448":         4320x2448
                     "4800x2720":         4800x2720
     prboom:
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             prboom-resolution:
                 group: VIDEO SETTINGS
@@ -4826,10 +4825,10 @@ libretro:
                     "Keyboard + Mouse":   3
     prosystem:
       features: [padtokeyboard, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     puae:
       features: [padtokeyboard]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             puae_model:
                 prompt:      AMIGA MODEL
@@ -5098,7 +5097,7 @@ libretro:
                             "On":     0
     puae2021:
       features: [padtokeyboard]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             puae2021_model:
                 prompt:      AMIGA MODEL
@@ -5366,7 +5365,7 @@ libretro:
                             "On":     0
     uae4arm:
       features: [padtokeyboard]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             uae4arm_model:
                 prompt:      AMIGA MODEL
@@ -5495,7 +5494,7 @@ libretro:
                     "Super Famicom (8 Buttons)": CPSF-SFC (8 Buttons)
     quasi88:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             q88_basic_mode:
                 prompt:      PC MODEL
@@ -5523,10 +5522,10 @@ libretro:
                     "On":                   enabled
     quicknes:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     sameboy:
       features: [padtokeyboard, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       systems:
             gb:
                 cfeatures:
@@ -5594,7 +5593,7 @@ libretro:
                     "On":         enabled
     snes9x:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave, use_guns]
+      shared: [autosave, rewind,use_guns]
       cfeatures:
             reduce_sprite_flicker:
                 prompt:      REDUCE SPRITE FLICKERING (UNSTABLE)
@@ -5667,7 +5666,7 @@ libretro:
                     "On":                                 enabled
     snes9x_next:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave, use_guns]
+      shared: [autosave, rewind,use_guns]
       cfeatures:
             2010_reduce_sprite_flicker:
                 prompt:      REDUCE SPRITE FLICKERING
@@ -5724,13 +5723,13 @@ libretro:
                     "On":                                 enabled
     supafaust:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     stella:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave, use_guns]
+      shared: [autosave, rewind,use_guns]
     tgbdual:
       features: [padtokeyboard, netplay]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             sync_saves:
                 prompt:      SYNC SAVE FILES
@@ -5740,12 +5739,12 @@ libretro:
                     "Off":  0
     theodore:
       features: [padtokeyboard, netplay]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     tic80:
       features: [padtokeyboard]
     tyrquake:
       features: [padtokeyboard]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             tyrquake_resolution:
                 group: VIDEO SETTINGS
@@ -5793,7 +5792,7 @@ libretro:
                     "Keyboard + Mouse":       3
     vb:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             2d_color_mode:
                 prompt:      COLOR PALETTE (2D)
@@ -5818,7 +5817,7 @@ libretro:
                     "yellow/blue":         yellow & blue
     vba-m:
       features: [padtokeyboard, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       systems:
             gb:
                 cfeatures:
@@ -5934,7 +5933,7 @@ libretro:
                             "120": 120
     vecx:
       features: [padtokeyboard, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             res_multi:
                 prompt:      RESOLUTION MULTIPLIER
@@ -5946,7 +5945,7 @@ libretro:
                     "4":    4
     vice_x64:
       features: [padtokeyboard]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             c64_model:
                 prompt:      MODEL TYPE
@@ -6040,7 +6039,7 @@ libretro:
                     "On":                       enabled
     vice_x64sc:
       features: [padtokeyboard]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             c64_model:
                 prompt:      MODEL TYPE
@@ -6134,7 +6133,7 @@ libretro:
                     "On":                       enabled
     vice_xscpu64:
       features: [padtokeyboard]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             c64_model:
                 prompt:      MODEL TYPE
@@ -6228,7 +6227,7 @@ libretro:
                     "On":                       enabled
     vice_x128:
       features: [padtokeyboard]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             c128_model:
                 prompt:      MODEL TYPE
@@ -6312,7 +6311,7 @@ libretro:
                     "On":                       enabled
     vice_xplus4:
       features: [padtokeyboard]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             plus4_model:
                 prompt:      MODEL TYPE
@@ -6385,7 +6384,7 @@ libretro:
                     "On":                       enabled
     vice_xvic:
       features: [padtokeyboard]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             vic20_model:
                 prompt:      MODEL TYPE
@@ -6459,7 +6458,7 @@ libretro:
                     "On":                       enabled
     vice_xpet:
       features: [padtokeyboard]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
       cfeatures:
             pet_model:
                 prompt:      MODEL TYPE
@@ -6560,10 +6559,10 @@ libretro:
                     "On":       enabled
     wasm4:
       features: [padtokeyboard, netplay, cheevos]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     x1:
       features: [padtokeyboard]
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     xrick:
       cfeatures:
             xrick_crop_borders:
@@ -6638,9 +6637,9 @@ libretro:
     gong:
       shared: [autosave]
     emuscv:
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     uzem:
-      shared: [rewind, autosave]
+      shared: [autosave, rewind]
     zmachine:
       shared: [autosave]
     boom3:
@@ -6767,7 +6766,7 @@ cemu:
   cfeatures:
         cemu_gfxbackend:
             prompt:      GRAPHICS API
-            description: Choose which graphics API library to use. Vulkan is better, when supported.
+            description: Choose which graphics API library to use.
             choices:
                 "OpenGL":           0
                 "Vulkan (Default)": 1
@@ -7062,7 +7061,7 @@ dolphin:
             archs_include: [x86, x86_64, bcm2711, rk3326]
             submenu: RENDERING
             prompt:  GRAPHICS API
-            description: Choose which graphics API library to use. Vulkan is better, when supported.
+            description: Choose which graphics API library to use.
             choices:
                 "OpenGL": OGL
                 "Vulkan": Vulkan
@@ -7512,7 +7511,7 @@ duckstation:
             group: ADVANCED OPTIONS
             archs_include: [x86, x86_64, bcm2711, rk3326]
             prompt: GRAPHICS API
-            description: Choose which graphics API library to use. Vulkan is better, when supported.
+            description: Choose which graphics API library to use.
             choices:
                 "Vulkan":   Vulkan
                 "OpenGL":   OpenGL
@@ -8497,7 +8496,7 @@ pcsx2:
         pcsx2_gfxbackend:
             submenu: RENDERING
             prompt: GRAPHICS API
-            description: Choose which graphics API library to use. Vulkan is better, when supported.
+            description: Choose which graphics API library to use.
             choices:
                 "OpenGL":   12
                 "Software": 13
@@ -8632,7 +8631,7 @@ ppsspp:
             archs_include: [x86, x86_64, bcm2711, rk3326]
             group: DRIVERS
             prompt: GRAPHICS API
-            description: Choose which graphics API library to use. Vulkan is better, when supported.
+            description: Choose which graphics API library to use.
             choices:
                 "OpenGL": 0 (OPENGL)
                 "Vulkan": 3 (VULKAN)
@@ -8812,7 +8811,7 @@ rpcs3:
         rpcs3_gfxbackend:
             submenu: RENDER
             prompt: GRAPHICS API
-            description: Choose which graphics API library to use. Vulkan is better, when supported.
+            description: Choose which graphics API library to use.
             choices:
                 "OpenGL": OpenGL
                 "Vulkan": Vulkan
@@ -9323,7 +9322,7 @@ mame:
         bgfxbackend:
             archs_include: [x86, x86_64, bcm2711, rk3326]
             prompt:      BGFX GRAPHICS API
-            description: Depends on video mode being set to BGFX. Vulkan is better, when supported.
+            description: Depends on video mode being set to BGFX.
             choices:
                 "MAME Detect":     automatic
                 "OpenGL":          opengl
@@ -10393,7 +10392,7 @@ mame:
                         "Disabled (Default)": 0
 wine:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [videomode, powersave, powersave]
   cfeatures:
         dxvk:
             prompt:      DXVK FEATURE
@@ -10548,7 +10547,7 @@ ikemen:
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 ruffle:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [videomode, powersave, powersave]
 lightspark:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -10913,17 +10912,17 @@ play:
               "Simplified Chinese":  "11"
 flatpak:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [videomode, powersave, powersave]
 steam:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [videomode, powersave, powersave]
 yuzu:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         yuzu_backend:
           prompt: GRAPHICS API
-          description: Choose which graphics API library to use. Vulkan is better, when supported.
+          description: Choose which graphics API library to use.
           choices:
             "OpenGL": 0
             "Vulkan": 1
@@ -11087,7 +11086,7 @@ ryujinx:
   cfeatures:
         ryujinx_api:
           prompt: GRAPHICS API
-          description: Choose which graphics API library to use. Vulkan is better, when supported.
+          description: Choose which graphics API library to use.
           choices:
             "OpenGL": "OpenGL"
             "Vulkan": "Vulkan"
@@ -11244,7 +11243,7 @@ openmsx:
                 "Hard Disk Image":   "hda"
 demul:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [videomode, powersave, powersave]
   cfeatures:
         demulRatio:
             group: VIDEO SETTINGS
@@ -11317,7 +11316,7 @@ awgl:
                 "Off":            disabled
 bermuda:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [videomode, powersave, powersave]
   cfeatures:
         bermuda_aspect:
             group: VIDEO SETTINGS
@@ -11331,10 +11330,10 @@ bbja:
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 bigfish:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [videomode, powersave, powersave]
 bigpemu:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [videomode, powersave, powersave]
 blues:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -11497,7 +11496,7 @@ pcexhumed:
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 popcap:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [videomode, powersave, powersave]
 pre2:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -11625,7 +11624,7 @@ vcmi:
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 virtualjaguar:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [videomode, powersave, powersave]
   cfeatures:
         virtualjaguar_frameskip:
             group: VIDEO SETTINGS
@@ -11669,12 +11668,12 @@ virtualjaguar:
                 "PAL":  pal
 # vita3k doesn't handle the hud - so no deocrations etc
 vita3k:
-  shared: [videomode, powersave]
+  shared: [videomode, powersave, powersave]
   features: [padtokeyboard]
   cfeatures:
     vita3k_gfxbackend:
       prompt:      GRAPHICS API
-      description: Choose which graphics API library to use. Vulkan is better, when supported.
+      description: Choose which graphics API library to use.
       choices:
         "OpenGL": "OpenGL"
         "Vulkan": "Vulkan"
@@ -11778,7 +11777,7 @@ xenia:
                 "Dutch":             16
 xenia-canary:
   features: [padtokeyboard]
-  shared: [videomode, powersave]
+  shared: [videomode, powersave, powersave]
   cfeatures:
         xeniaLicense:
             prompt: XBOX LIVE ARCADE
