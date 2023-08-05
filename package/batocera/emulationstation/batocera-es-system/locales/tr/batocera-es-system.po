@@ -425,6 +425,38 @@ msgctxt "game_options"
 msgid "hidden"
 msgstr "gizli"
 
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Disables CPU cores to helps reduce CPU power consumption. Useful for "
+"handhelds."
+msgstr ""
+
+#. TRANSLATION: shared, rpcs3, rpcs3, rpcs3, rpcs3, ...
+msgctxt "game_options"
+msgid "CPU"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "POWER SAVE"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Max Saving"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Medium Saving (Default)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "No Saving"
+msgstr ""
+
 #. TRANSLATION: libretro/81
 msgctxt "game_options"
 msgid "Emulate Chroma 81 interface (colorization)."
@@ -7242,13 +7274,10 @@ msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr "YÜKSEK ÇÖZÜNÜRLÜK MODU"
 
-#. TRANSLATION: cemu, dolphin, duckstation, pcsx2, ppsspp, ...
+#. TRANSLATION: cemu, dolphin, duckstation, melonds, pcsx2, ...
 msgctxt "game_options"
-msgid ""
-"Choose which graphics API library to use. Vulkan is better, when supported."
-msgstr ""
-"Hangi grafik API kitaplığının kullanılacağını seçin. Vulkan desteklendiğinde "
-"daha iyi."
+msgid "Choose which graphics API library to use."
+msgstr "Hangi grafik API kitaplığının kullanılacağını seçin."
 
 #. TRANSLATION: cemu, flycast
 msgctxt "game_options"
@@ -8656,11 +8685,6 @@ msgctxt "game_options"
 msgid "ASCI"
 msgstr ""
 
-#. TRANSLATION: melonds, play
-msgctxt "game_options"
-msgid "Choose which graphics API library to use."
-msgstr "Hangi grafik API kitaplığının kullanılacağını seçin."
-
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "LIMIT FRAME RATE"
@@ -9654,11 +9678,6 @@ msgstr "OYUN HİLELERİ"
 msgctxt "game_options"
 msgid "LLVM is fastest, use the Interpreter settings if there are issues."
 msgstr "LLVM en hızlıdır, sorun varsa Yorumlayıcı ayarlarını kullan."
-
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
-msgctxt "game_options"
-msgid "CPU"
-msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10740,11 +10759,8 @@ msgstr "Ekran Kırılmasını düzelt, ancak kare düşebilir."
 
 #. TRANSLATION: mame
 msgctxt "game_options"
-msgid ""
-"Depends on video mode being set to BGFX. Vulkan is better, when supported."
+msgid "Depends on video mode being set to BGFX."
 msgstr ""
-"Video modunun BGFX olarak ayarlanmasına bağlıdır. Vulkan desteklendiğinde "
-"daha iyi."
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -13134,6 +13150,21 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM JOYSTICK YAPILANDIRMASINI KULLAN"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose which graphics API library to use. Vulkan is better, when "
+#~ "supported."
+#~ msgstr ""
+#~ "Hangi grafik API kitaplığının kullanılacağını seçin. Vulkan "
+#~ "desteklendiğinde daha iyi."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Depends on video mode being set to BGFX. Vulkan is better, when supported."
+#~ msgstr ""
+#~ "Video modunun BGFX olarak ayarlanmasına bağlıdır. Vulkan desteklendiğinde "
+#~ "daha iyi."
 
 #~ msgctxt "game_options"
 #~ msgid "CONTROLLER PAK 1"

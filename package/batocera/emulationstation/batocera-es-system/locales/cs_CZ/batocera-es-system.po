@@ -420,6 +420,38 @@ msgctxt "game_options"
 msgid "hidden"
 msgstr "skrytý"
 
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Disables CPU cores to helps reduce CPU power consumption. Useful for "
+"handhelds."
+msgstr ""
+
+#. TRANSLATION: shared, rpcs3, rpcs3, rpcs3, rpcs3, ...
+msgctxt "game_options"
+msgid "CPU"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "POWER SAVE"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Max Saving"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Medium Saving (Default)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "No Saving"
+msgstr ""
+
 #. TRANSLATION: libretro/81
 msgctxt "game_options"
 msgid "Emulate Chroma 81 interface (colorization)."
@@ -7228,13 +7260,10 @@ msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr "REŽIM VYSOKÉHO ROZLIŠENÍ"
 
-#. TRANSLATION: cemu, dolphin, duckstation, pcsx2, ppsspp, ...
+#. TRANSLATION: cemu, dolphin, duckstation, melonds, pcsx2, ...
 msgctxt "game_options"
-msgid ""
-"Choose which graphics API library to use. Vulkan is better, when supported."
-msgstr ""
-"Zvolte, kterou knihovnu grafického rozhraní API chcete použít. Vulkan je "
-"lepší, pokud je podporován."
+msgid "Choose which graphics API library to use."
+msgstr "Zvolte, kterou knihovnu grafického rozhraní API chcete použít."
 
 #. TRANSLATION: cemu, flycast
 msgctxt "game_options"
@@ -8642,11 +8671,6 @@ msgctxt "game_options"
 msgid "ASCI"
 msgstr ""
 
-#. TRANSLATION: melonds, play
-msgctxt "game_options"
-msgid "Choose which graphics API library to use."
-msgstr "Zvolte, kterou knihovnu grafického rozhraní API chcete použít."
-
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "LIMIT FRAME RATE"
@@ -9644,11 +9668,6 @@ msgctxt "game_options"
 msgid "LLVM is fastest, use the Interpreter settings if there are issues."
 msgstr ""
 "LLVM je nejrychlejší, v případě problémů použijte nastavení Překladače."
-
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
-msgctxt "game_options"
-msgid "CPU"
-msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10723,11 +10742,8 @@ msgstr "Oprava trhání obrazovky, ale může dojít k poklesu snímků."
 
 #. TRANSLATION: mame
 msgctxt "game_options"
-msgid ""
-"Depends on video mode being set to BGFX. Vulkan is better, when supported."
+msgid "Depends on video mode being set to BGFX."
 msgstr ""
-"Závisí na režimu videa nastaveném na BGFX. Vulkan je lepší, pokud je "
-"podporován."
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -13112,6 +13128,14 @@ msgstr ""
 #~ msgstr "POUŽÍT KONFIGURACI JOYSTICKU GZDOOM"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Restart hry"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Další disk (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "Načtení pozice Slot 1"
 
@@ -13215,13 +13239,20 @@ msgstr ""
 #~ msgid "FastForward"
 #~ msgstr "Rychle vpřed"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Restart hry"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose which graphics API library to use. Vulkan is better, when "
+#~ "supported."
+#~ msgstr ""
+#~ "Zvolte, kterou knihovnu grafického rozhraní API chcete použít. Vulkan je "
+#~ "lepší, pokud je podporován."
 
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Další disk (m3u)"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Depends on video mode being set to BGFX. Vulkan is better, when supported."
+#~ msgstr ""
+#~ "Závisí na režimu videa nastaveném na BGFX. Vulkan je lepší, pokud je "
+#~ "podporován."
 
 #~ msgctxt "game_options"
 #~ msgid "CONTROLLER PAK 1"
