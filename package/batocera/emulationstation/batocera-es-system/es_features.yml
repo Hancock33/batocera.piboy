@@ -267,9 +267,9 @@ shared:
       prompt: POWER SAVE
       description: Disables CPU cores to helps reduce CPU power consumption. Useful for handhelds.
       choices:
-        "Max Saving":               0
-        "Medium Saving (Default)":  1
-        "No Saving":                2
+        "Max Saving":  0
+        "Med Saving":  1
+        "No Saving":   2
 
 global:
   shared: [videomode, powersave, ratio, shaderset, smooth, integerscale, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, ai_service_enabled, ai_target_lang, ai_service_url, ai_service_pause, rewind, runahead, secondinstance, video_frame_delay_auto, vrr_runloop_enable, video_threaded, rumble_gain]
