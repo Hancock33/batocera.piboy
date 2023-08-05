@@ -486,6 +486,38 @@ msgctxt "game_options"
 msgid "hidden"
 msgstr "숨겨진"
 
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Disables CPU cores to helps reduce CPU power consumption. Useful for "
+"handhelds."
+msgstr ""
+
+#. TRANSLATION: shared, rpcs3, rpcs3, rpcs3, rpcs3, ...
+msgctxt "game_options"
+msgid "CPU"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "POWER SAVE"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Max Saving"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Medium Saving (Default)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "No Saving"
+msgstr ""
+
 #. TRANSLATION: libretro/81
 #, fuzzy
 msgctxt "game_options"
@@ -8267,14 +8299,11 @@ msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr "고해상도 모드"
 
-#. TRANSLATION: cemu, dolphin, duckstation, pcsx2, ppsspp, ...
+#. TRANSLATION: cemu, dolphin, duckstation, melonds, pcsx2, ...
 #, fuzzy
 msgctxt "game_options"
-msgid ""
-"Choose which graphics API library to use. Vulkan is better, when supported."
-msgstr ""
-"사용할 그래픽 API 라이브러리를 선택합니다. Vulkan은 지원되는 경우 더 좋습니"
-"다."
+msgid "Choose which graphics API library to use."
+msgstr "사용할 그래픽 API 라이브러리를 선택합니다."
 
 #. TRANSLATION: cemu, flycast
 msgctxt "game_options"
@@ -9846,12 +9875,6 @@ msgctxt "game_options"
 msgid "ASCI"
 msgstr ""
 
-#. TRANSLATION: melonds, play
-#, fuzzy
-msgctxt "game_options"
-msgid "Choose which graphics API library to use."
-msgstr "사용할 그래픽 API 라이브러리를 선택합니다."
-
 #. TRANSLATION: melonds
 #, fuzzy
 msgctxt "game_options"
@@ -10935,11 +10958,6 @@ msgstr "게임 치트"
 msgctxt "game_options"
 msgid "LLVM is fastest, use the Interpreter settings if there are issues."
 msgstr "LLVM이 가장 빠르며 문제가있는 경우 통역사 설정을 사용하십시오."
-
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
-msgctxt "game_options"
-msgid "CPU"
-msgstr ""
 
 #. TRANSLATION: rpcs3
 #, fuzzy
@@ -12108,13 +12126,9 @@ msgid "Fix screen tearing, but may drop frames."
 msgstr "화면 찢어짐을 수정하지만 프레임이 떨어질 수 있습니다."
 
 #. TRANSLATION: mame
-#, fuzzy
 msgctxt "game_options"
-msgid ""
-"Depends on video mode being set to BGFX. Vulkan is better, when supported."
+msgid "Depends on video mode being set to BGFX."
 msgstr ""
-"BGFX로 설정되는 비디오 모드에 따라 다릅니다. Vulkan은 지원되는 경우 더 좋습니"
-"다."
 
 #. TRANSLATION: mame
 #, fuzzy
@@ -14655,6 +14669,23 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM 조이스틱 구성 사용"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose which graphics API library to use. Vulkan is better, when "
+#~ "supported."
+#~ msgstr ""
+#~ "사용할 그래픽 API 라이브러리를 선택합니다. Vulkan은 지원되는 경우 더 좋습"
+#~ "니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Depends on video mode being set to BGFX. Vulkan is better, when supported."
+#~ msgstr ""
+#~ "BGFX로 설정되는 비디오 모드에 따라 다릅니다. Vulkan은 지원되는 경우 더 좋"
+#~ "습니다."
 
 #, fuzzy
 #~ msgctxt "game_options"
