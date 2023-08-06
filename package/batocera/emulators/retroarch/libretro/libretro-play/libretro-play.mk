@@ -14,7 +14,7 @@ LIBRETRO_PLAY_SITE_METHOD = git
 LIBRETRO_PLAY_GIT_SUBMODULES = YES
 LIBRETRO_PLAY_LICENSE = BSD
 
-LIBRETRO_PLAY_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
+LIBRETRO_PLAY_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja
 LIBRETRO_PLAY_CONF_OPTS += -DBUILD_STATIC_LIBS=ON
 LIBRETRO_PLAY_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 LIBRETRO_PLAY_CONF_OPTS += -DBUILD_TESTS=OFF
@@ -38,9 +38,12 @@ else ifeq ($(BR2_arm),y)
 LIBRETRO_PLAY_CONF_OPTS += -DTARGET_PLATFORM_UNIX_ARM=YES
 endif
 
+define LIBRETRO_PLAY_BUILD_CMDS
+    $(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(LIBRETRO_PLAY_BUILDDIR)
+endef
+
 define LIBRETRO_PLAY_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/Source/ui_libretro/play_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/play_libretro.so
+    $(INSTALL) -D $(@D)/Source/ui_libretro/play_libretro.so $(TARGET_DIR)/usr/lib/libretro/play_libretro.so
 endef
 
 $(eval $(cmake-package))
