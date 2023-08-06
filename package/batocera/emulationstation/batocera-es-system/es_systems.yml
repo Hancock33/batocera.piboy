@@ -4270,7 +4270,7 @@ twentyfourtyeight:
                         Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
 
 vanillara:
-  name:                 Command & Conquer Red Alert
+  name:                 Command and Conquer Red Alert
   manufacturer:         Ports
   release:              1996
   hardware:             port
@@ -4282,7 +4282,7 @@ vanillara:
       vanillara:        { requireAnyOf: [BR2_PACKAGE_CANDC] }
 
 vanillatd:
-  name:                 Command & Conquer Tiberian Dawn
+  name:                 Command and Conquer Tiberian Dawn
   manufacturer:         Ports
   release:              1995
   hardware:             port
@@ -4415,7 +4415,7 @@ doom3:
       boom3_xp:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BOOM3] }
 
 prboom:
-  name:                 Doom 1 & 2
+  name:                 Doom 1 / 2
   manufacturer:         Ports (Doom)
   release:
   hardware:             port

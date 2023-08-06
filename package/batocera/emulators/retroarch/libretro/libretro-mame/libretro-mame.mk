@@ -3,8 +3,8 @@
 # libretro-mame
 #
 ################################################################################
-# Version: Commits on Aug 03, 2023
-LIBRETRO_MAME_VERSION = 64d5ccce0ea7d18aa2c08ca36a7431ba723cd6df
+# Version: Commits on Aug 05, 2023
+LIBRETRO_MAME_VERSION = 1ede3ae1f21173e2245df9d08c0864a812aca8bd
 LIBRETRO_MAME_SITE = $(call github,libretro,mame,$(LIBRETRO_MAME_VERSION))
 LIBRETRO_MAME_LICENSE = MAME
 

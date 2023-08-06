@@ -5,6 +5,7 @@ from os import path
 import Command
 from generators.Generator import Generator
 import controllersConfig
+import utils.videoMode as videoMode
 
 q1_src = "/usr/share/game_assets/quake1/id1/quakespasm.pak"
 q1_dst = "/userdata/roms/ports/quake1/id1/quakespasm.pak"
@@ -12,7 +13,8 @@ q1_dst = "/userdata/roms/ports/quake1/id1/quakespasm.pak"
 class QuakespasmGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        commandArray = ["quakespasm", "-basedir", "/userdata/roms/ports/quake1", "-sndspeed", "44100"]
+        gameResolution = videoMode.getCurrentResolution()
+        commandArray = ["quakespasm", "-basedir", "/userdata/roms/ports/quake1", "-sndspeed", "44100", "+set" , "vid_fullscreen", "1", "+set", "vid_width", str(gameResolution["width"]), "+set", "vid_height",str(gameResolution["height"])]
 
         shutil.copy(q1_src, q1_dst)
 

@@ -250,6 +250,23 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
         callExternalScripts("/usr/share/batocera/configgen/scripts", "gameStart", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
         callExternalScripts("/userdata/system/scripts", "gameStart", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
 
+        f=open('/usr/share/batocera/batocera.arch')
+        arch=f.readline().strip('\n')
+        if 'x86_64' in arch:
+            if system.isOptSet("powersave"):
+                if system.config['powersave'] == '0':
+                    subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
+                    eslog.debug("CPU power config set to maximum power saving")
+                elif system.config['powersave'] == '1':
+                    subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
+                    eslog.debug("CPU power config set to medium power saving")
+                elif system.config['powersave'] == '2':
+                    subprocess.call(['/usr/bin/batocera-cpucores', 'max'])
+                    eslog.debug("CPU power config set to no power saving")
+            else:
+                subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
+                eslog.debug("CPU power config set to maximum power saving")
+
         # run the emulator
         try:
             from Evmapy import Evmapy
@@ -284,6 +301,7 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
         # run a script after emulator shuts down
         callExternalScripts("/userdata/system/scripts", "gameStop", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
         callExternalScripts("/usr/share/batocera/configgen/scripts", "gameStop", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
+        subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
 
     finally:
         # always restore the resolution
