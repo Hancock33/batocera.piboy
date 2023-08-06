@@ -3,8 +3,8 @@
 # corsixth
 #
 ################################################################################
-# Version: Commits on Aug 05, 2023
-CORSIXTH_VERSION = 4c348a6926479d67abc855446989ae7e0f2d0c73
+# Version: Commits on Aug 06, 2023
+CORSIXTH_VERSION = fc38c4f46913b7b91c0b1b53efd7c7f2764adb20
 CORSIXTH_SITE = $(call github,CorsixTH,CorsixTH,$(CORSIXTH_VERSION))
 CORSIXTH_DEPENDENCIES = sdl2 sdl2_mixer host-ninja
 CORSIXTH_LICENSE = GPL-2.0
