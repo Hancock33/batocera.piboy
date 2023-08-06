@@ -10771,6 +10771,12 @@ model2emu:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
+        ratio:
+            prompt: ENABLE WIDESCREEN
+            description: Enable widescreen support.
+            choices:
+                "Off":      1
+                "On":       4 
         fakeGouraud:
             group: ADVANCED OPTIONS
             prompt:      FAKE GOURAUD
