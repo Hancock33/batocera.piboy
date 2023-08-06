@@ -6976,8 +6976,8 @@ daphne:
         bilinear_filter:
             prompt:      SMOOTH GAMES (BILINEAR FILTERING)
             choices:
-                "On":  0
-                "Off": 1
+                "On":  1
+                "Off": 0
         daphne_scanlines:
             archs_include: [x86, x86_64]
             prompt:      SCANLINES
@@ -6991,14 +6991,6 @@ daphne:
             choices:
                 "Off": 0
                 "On":  1
-        overlay_size:
-            group: ADVANCED OPTIONS
-            prompt:      OVERLAY SIZE (SINGE)
-            choices:
-                "Standard": 0
-                "HD Gun Games":  oversize
-                "Singe 2 Full":  full
-                "Singe 2 Half":  half
         abs_mouse_input:
             group: ADVANCED OPTIONS
             prompt:      ABSOLUTE MOUSE INPUT

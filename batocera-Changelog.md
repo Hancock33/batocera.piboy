@@ -37,15 +37,15 @@
 ### Updated
 - xenia to v1.0.2805
 - xenia canary to ba936e8 (Commits on Jul 22, 2023)
-- citra to nightly-1936
+- citra to nightly-1962
 - groovy mame to 0.257
 - libretro-mame to 0.257
 - cemu to v2.0-46
 - amiberry to 5.6.1
 - dosbox-x to v2023.05.01
 - tsugaru to v20230722
-- dolphin to 5.0-19776
-- duckstation to Jun 30, 2023 build
+- dolphin to 5.0-19864
+- duckstation to Aug 4, 2023 build
 - flycast to July 5th build
 - melonds to July 8th build
 - ppsspp to July 8th build
@@ -62,6 +62,8 @@
 - pcsx2 to v1.7.4857 (Aug, 1st 2023)
 - SDLPoP to v1.23 (Feb, 4th 2023)
 - BigPemu to v107
+- commander genius to v3.4.9
+- play! to v0.62
 ### Dev
 - linux kernel for x86_64 to 6.4.8
 - linux kernel for RPI to 6.1.32
