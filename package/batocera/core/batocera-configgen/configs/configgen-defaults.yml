@@ -411,6 +411,8 @@ hode:
 hurrican:
   emulator: hurrican
   core:     hurrican
+  options:
+    bezel: none
 igs:
   emulator: libretro
   core:     mame078plus
