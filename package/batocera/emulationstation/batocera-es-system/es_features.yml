@@ -263,6 +263,7 @@ shared:
         "normal": "normal"
         "hidden": "hidden"
     powersave:
+      archs_include: [x86, x86_64]
       group:  CPU
       prompt: POWER SAVE
       description: Disables CPU cores to helps reduce CPU power consumption. Useful for handhelds.
