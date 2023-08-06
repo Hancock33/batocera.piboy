@@ -81,6 +81,7 @@ then
     else
             echo "CPU Cores: ${V_CPUNB}/${V_CPUMAXNB}"
     fi
+    echo "CPU Usage: "$[100-$(vmstat 1 2|tail -1|awk '{print $15}')]"%"
     exit 0
 fi
 ###
