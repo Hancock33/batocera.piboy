@@ -27,6 +27,7 @@
 - Fixed crop overscan settings for NES to work with newer core builds
 - DVD playback in Kodi
 ### Changed
+- ES music volume on a logarithmic scale instead of linear one
 - if using the manual batocera.conf `splash.screen.resize` option, this will now adjust the playback resolution too
 - Default crop overscan setting for NES is now vertical only
 - n64 mupen states files are now named with rom names (renaming necessary when migrating to keep old states)
@@ -36,15 +37,15 @@
 ### Updated
 - xenia to v1.0.2805
 - xenia canary to ba936e8 (Commits on Jul 22, 2023)
-- citra to nightly-1936
+- citra to nightly-1962
 - groovy mame to 0.257
 - libretro-mame to 0.257
-- cemu to v2.0-45
+- cemu to v2.0-46
 - amiberry to 5.6.1
 - dosbox-x to v2023.05.01
 - tsugaru to v20230722
-- dolphin to 5.0-19776
-- duckstation to Jun 30, 2023 build
+- dolphin to 5.0-19864
+- duckstation to Aug 4, 2023 build
 - flycast to July 5th build
 - melonds to July 8th build
 - ppsspp to July 8th build
@@ -59,6 +60,10 @@
 - btop to 1.2.13
 - slang and glsl shaders to July 29th 2023
 - pcsx2 to v1.7.4857 (Aug, 1st 2023)
+- SDLPoP to v1.23 (Feb, 4th 2023)
+- BigPemu to v107
+- commander genius to v3.4.9
+- play! to v0.62
 ### Dev
 - linux kernel for x86_64 to 6.4.8
 - linux kernel for RPI to 6.1.32
@@ -77,6 +82,7 @@
 - llvm to 16.0.6
 - Buildroot to 2023.05.01
 - Preliminary support for Khadas VIM4, Khadas VIM1S
+- linux firmware to 20230804
 
 # 2023/06/18 - batocera.linux 37 - Red Admiral
 ### hardware

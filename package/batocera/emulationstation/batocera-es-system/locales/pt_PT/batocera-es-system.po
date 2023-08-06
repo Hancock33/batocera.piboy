@@ -419,6 +419,38 @@ msgctxt "game_options"
 msgid "hidden"
 msgstr "oculto"
 
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Disables CPU cores to helps reduce CPU power consumption. Useful for "
+"handhelds."
+msgstr ""
+
+#. TRANSLATION: shared, rpcs3, rpcs3, rpcs3, rpcs3, ...
+msgctxt "game_options"
+msgid "CPU"
+msgstr "CPU"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "POWER SAVE"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Max Saving"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Med Saving"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "No Saving"
+msgstr ""
+
 #. TRANSLATION: libretro/81
 msgctxt "game_options"
 msgid "Emulate Chroma 81 interface (colorization)."
@@ -7252,12 +7284,10 @@ msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr "MODO DE ALTA RESOLUÇÃO"
 
-#. TRANSLATION: cemu, dolphin, duckstation, pcsx2, ppsspp, ...
+#. TRANSLATION: cemu, dolphin, duckstation, melonds, pcsx2, ...
 msgctxt "game_options"
-msgid ""
-"Choose which graphics API library to use. Vulkan is better, when supported."
-msgstr ""
-"Escolha qual biblioteca API gráfica usar. Vulkan é melhor, quando suportado."
+msgid "Choose which graphics API library to use."
+msgstr "Escolha qual biblioteca API gráfica usar."
 
 #. TRANSLATION: cemu, flycast
 msgctxt "game_options"
@@ -8680,11 +8710,6 @@ msgctxt "game_options"
 msgid "ASCI"
 msgstr "ASCI"
 
-#. TRANSLATION: melonds, play
-msgctxt "game_options"
-msgid "Choose which graphics API library to use."
-msgstr "Escolha qual biblioteca API gráfica usar."
-
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "LIMIT FRAME RATE"
@@ -9698,11 +9723,6 @@ msgctxt "game_options"
 msgid "LLVM is fastest, use the Interpreter settings if there are issues."
 msgstr ""
 "O LLVM é mais rápido, usar os ajustes do interpretador se houver problemas."
-
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
-msgctxt "game_options"
-msgid "CPU"
-msgstr "CPU"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10792,11 +10812,8 @@ msgstr "Corrige o engasgo do ecrã, mas pode diminuir quadros."
 
 #. TRANSLATION: mame
 msgctxt "game_options"
-msgid ""
-"Depends on video mode being set to BGFX. Vulkan is better, when supported."
+msgid "Depends on video mode being set to BGFX."
 msgstr ""
-"Depende do modo de vídeo ser definido como BGFX. Vulkan é melhor, quando "
-"suportado."
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -13199,6 +13216,14 @@ msgstr ""
 #~ msgstr "USAR A CONFIGURAÇÃO DO COMANDO NO GZDOOM"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Reiniciar o Jogo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Próximo Disco (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "Carregar Estado do Slot 1"
 
@@ -13302,13 +13327,20 @@ msgstr ""
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Reiniciar o Jogo"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose which graphics API library to use. Vulkan is better, when "
+#~ "supported."
+#~ msgstr ""
+#~ "Escolha qual biblioteca API gráfica usar. Vulkan é melhor, quando "
+#~ "suportado."
 
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Próximo Disco (m3u)"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Depends on video mode being set to BGFX. Vulkan is better, when supported."
+#~ msgstr ""
+#~ "Depende do modo de vídeo ser definido como BGFX. Vulkan é melhor, quando "
+#~ "suportado."
 
 #~ msgctxt "game_options"
 #~ msgid "CONTROLLER PAK 1"

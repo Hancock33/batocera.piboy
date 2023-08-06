@@ -1,0 +1,16 @@
+config BR2_PACKAGE_PEMU
+	bool "pemu"
+	select BR2_PACKAGE_OPENAL
+	select BR2_PACKAGE_LIBZLIB
+	select BR2_PACKAGE_LIBZIP
+	select BR2_PACKAGE_BZIP2
+	select BR2_PACKAGE_LIBPNG
+	select BR2_PACKAGE_FREETYPE
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_IMAGE
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+      pEMU Portable Emulator
+
+comment "BR2_PACKAGE_PEMU needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

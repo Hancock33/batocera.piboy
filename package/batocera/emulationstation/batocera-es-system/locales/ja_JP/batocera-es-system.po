@@ -412,6 +412,38 @@ msgctxt "game_options"
 msgid "hidden"
 msgstr "非表示"
 
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Disables CPU cores to helps reduce CPU power consumption. Useful for "
+"handhelds."
+msgstr ""
+
+#. TRANSLATION: shared, rpcs3, rpcs3, rpcs3, rpcs3, ...
+msgctxt "game_options"
+msgid "CPU"
+msgstr "CPU"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "POWER SAVE"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Max Saving"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Med Saving"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "No Saving"
+msgstr ""
+
 #. TRANSLATION: libretro/81
 msgctxt "game_options"
 msgid "Emulate Chroma 81 interface (colorization)."
@@ -7202,12 +7234,10 @@ msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr "高解像度モード"
 
-#. TRANSLATION: cemu, dolphin, duckstation, pcsx2, ppsspp, ...
+#. TRANSLATION: cemu, dolphin, duckstation, melonds, pcsx2, ...
 msgctxt "game_options"
-msgid ""
-"Choose which graphics API library to use. Vulkan is better, when supported."
-msgstr ""
-"グラフィックAPIを選択します。対応している場合、Vulkanの方が優れています"
+msgid "Choose which graphics API library to use."
+msgstr "使用するグラフィック API を選択します"
 
 #. TRANSLATION: cemu, flycast
 msgctxt "game_options"
@@ -8610,11 +8640,6 @@ msgctxt "game_options"
 msgid "ASCI"
 msgstr "ASCI"
 
-#. TRANSLATION: melonds, play
-msgctxt "game_options"
-msgid "Choose which graphics API library to use."
-msgstr "使用するグラフィック API を選択します"
-
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "LIMIT FRAME RATE"
@@ -9601,11 +9626,6 @@ msgctxt "game_options"
 msgid "LLVM is fastest, use the Interpreter settings if there are issues."
 msgstr ""
 "LLVMが最速です。問題がある場合は、インタープリター設定を使用してください"
-
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
-msgctxt "game_options"
-msgid "CPU"
-msgstr "CPU"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10680,11 +10700,8 @@ msgstr "画面のずれを修正しますが、フレームドロップする可
 
 #. TRANSLATION: mame
 msgctxt "game_options"
-msgid ""
-"Depends on video mode being set to BGFX. Vulkan is better, when supported."
+msgid "Depends on video mode being set to BGFX."
 msgstr ""
-"BGFX設定のビデオモードに依存します。対応している場合、Vulkanの方が優れていま"
-"す"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -13065,6 +13082,14 @@ msgstr ""
 #~ msgstr "GZDOOM ジョイスティック構成を使用"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "ゲームを再開"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "次のディスク (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "ステートロード - スロット  1"
 
@@ -13168,13 +13193,19 @@ msgstr ""
 #~ msgid "FastForward"
 #~ msgstr "早送り"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "ゲームを再開"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose which graphics API library to use. Vulkan is better, when "
+#~ "supported."
+#~ msgstr ""
+#~ "グラフィックAPIを選択します。対応している場合、Vulkanの方が優れています"
 
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "次のディスク (m3u)"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Depends on video mode being set to BGFX. Vulkan is better, when supported."
+#~ msgstr ""
+#~ "BGFX設定のビデオモードに依存します。対応している場合、Vulkanの方が優れてい"
+#~ "ます"
 
 #~ msgctxt "game_options"
 #~ msgid "CONTROLLER PAK 1"

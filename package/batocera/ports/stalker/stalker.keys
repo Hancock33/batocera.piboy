@@ -5,8 +5,11 @@
                 "hotkey",
                 "start"
             ],
-            "type": "exec",
-            "target": "killall -9 xr_3da && reset"
+            "type": "key",
+            "target": [
+                "KEY_LEFTALT",
+                "KEY_F4"
+            ]
         }
     ]
 }

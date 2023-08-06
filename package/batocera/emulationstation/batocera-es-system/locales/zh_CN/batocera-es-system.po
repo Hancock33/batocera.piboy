@@ -409,6 +409,38 @@ msgctxt "game_options"
 msgid "hidden"
 msgstr "隐藏"
 
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Disables CPU cores to helps reduce CPU power consumption. Useful for "
+"handhelds."
+msgstr ""
+
+#. TRANSLATION: shared, rpcs3, rpcs3, rpcs3, rpcs3, ...
+msgctxt "game_options"
+msgid "CPU"
+msgstr "CPU处理器"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "POWER SAVE"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Max Saving"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Med Saving"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "No Saving"
+msgstr ""
+
 #. TRANSLATION: libretro/81
 msgctxt "game_options"
 msgid "Emulate Chroma 81 interface (colorization)."
@@ -7169,11 +7201,10 @@ msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr "高分辨率模式"
 
-#. TRANSLATION: cemu, dolphin, duckstation, pcsx2, ppsspp, ...
+#. TRANSLATION: cemu, dolphin, duckstation, melonds, pcsx2, ...
 msgctxt "game_options"
-msgid ""
-"Choose which graphics API library to use. Vulkan is better, when supported."
-msgstr "选择要使用的图形API库,如果支持,Vulkan会更好."
+msgid "Choose which graphics API library to use."
+msgstr "选择要使用的图形API库."
 
 #. TRANSLATION: cemu, flycast
 msgctxt "game_options"
@@ -8565,11 +8596,6 @@ msgctxt "game_options"
 msgid "ASCI"
 msgstr "ASCI"
 
-#. TRANSLATION: melonds, play
-msgctxt "game_options"
-msgid "Choose which graphics API library to use."
-msgstr "选择要使用的图形API库."
-
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "LIMIT FRAME RATE"
@@ -9544,11 +9570,6 @@ msgstr "游戏金手指"
 msgctxt "game_options"
 msgid "LLVM is fastest, use the Interpreter settings if there are issues."
 msgstr "LLVM是最快的，如果有问题，请使用解释器设置。"
-
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
-msgctxt "game_options"
-msgid "CPU"
-msgstr "CPU处理器"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10599,9 +10620,8 @@ msgstr "修复屏幕撕裂.但可能会掉帧."
 
 #. TRANSLATION: mame
 msgctxt "game_options"
-msgid ""
-"Depends on video mode being set to BGFX. Vulkan is better, when supported."
-msgstr "取决于视频模式设置为BGFX.如果支持.Vulkan会更好."
+msgid "Depends on video mode being set to BGFX."
+msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -12957,6 +12977,14 @@ msgstr ""
 #~ msgstr "使用GZDOOM操纵杆配置"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "重置游戏"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "下一个光盘（m3u）"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "载入状态插槽1"
 
@@ -13060,13 +13088,16 @@ msgstr ""
 #~ msgid "FastForward"
 #~ msgstr "快进"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "重置游戏"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Choose which graphics API library to use. Vulkan is better, when "
+#~ "supported."
+#~ msgstr "选择要使用的图形API库,如果支持,Vulkan会更好."
 
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "下一个光盘（m3u）"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Depends on video mode being set to BGFX. Vulkan is better, when supported."
+#~ msgstr "取决于视频模式设置为BGFX.如果支持.Vulkan会更好."
 
 #~ msgctxt "game_options"
 #~ msgid "CONTROLLER PAK 1"
