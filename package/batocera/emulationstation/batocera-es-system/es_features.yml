@@ -10392,7 +10392,7 @@ wine:
             description: Choose whether to pass SDL Game Controller config to the Windows game. Disabling may help with some games.
             choices:
                 "Off":          0
-                "On (Deafult)": 1
+                "On (Default)": 1
         dxvk:
             prompt:      DXVK FEATURE
             description: Converts DirectX 9/10/11/12 calls to Vulkan.
