@@ -10752,6 +10752,23 @@ msgstr "データ プラグイン"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid ""
+"Choose whether to pass SDL Game Controller config to the Windows game. "
+"Disabling may help with some games."
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "SDL CONFIG"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "On (Deafult)"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
 msgstr "DirectX 9/10/11/12の呼び出しをVulkanに変換します"
 
@@ -11163,6 +11180,11 @@ msgctxt "game_options"
 msgid "Sonic CD (hold jump)"
 msgstr "ソニックCD（ホールドジャンプ）"
 
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "Screen Resolution (Default)"
+msgstr ""
+
 #. TRANSLATION: model2emu, play
 msgctxt "game_options"
 msgid "Enable widescreen support."
@@ -11172,6 +11194,16 @@ msgstr "ワイドスクリーンのサポートを有効にします"
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
 msgstr "ワイドスクリーン 有効"
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "Enable scanlines for roms that support it."
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "ENABLE SCANLINES"
+msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
