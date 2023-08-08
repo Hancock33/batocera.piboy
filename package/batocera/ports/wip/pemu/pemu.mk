@@ -10,7 +10,7 @@ PEMU_SITE_METHOD=git
 PEMU_GIT_SUBMODULES=YES
 PEMU_SUPPORTS_IN_SOURCE_BUILD = NO
 
-PEMU_DEPENDENCIES = sdl2 sdl2_image zlib libzip freetype bzip2 libpng openal host-ninja
+PEMU_DEPENDENCIES = sdl2 sdl2_image zlib libzip freetype bzip2 libpng openal
 PEMU_LICENSE = GPL-3.0
 
 PEMU_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS=""

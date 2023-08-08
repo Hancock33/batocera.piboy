@@ -9,8 +9,8 @@ PLAY_SITE = https://github.com/jpd002/Play-.git
 PLAY_SITE_METHOD = git
 PLAY_GIT_SUBMODULES = YES
 PLAY_LICENSE = BSD
-
-PLAY_DEPENDENCIES = openal sqlite qt6base host-ninja
+PLAY_DEPENDENCIES = openal sqlite qt6base
+PLAY_CMAKE_BACKEND = ninja
 
 PLAY_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 PLAY_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
@@ -30,10 +30,6 @@ endif
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
     PLAY_DEPENDENCIES += vulkan-headers vulkan-loader
 endif
-
-define PLAY_BUILD_CMDS
-    $(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(PLAY_BUILDDIR)
-endef
 
 define PLAY_EVMAPY
     # evmap config

@@ -7,15 +7,12 @@
 XATRIX_VERSION = 751f3f56fa68dfb6a7b248149c7647280d14eeca
 XATRIX_SITE = $(call github,yquake2,xatrix,$(XATRIX_VERSION))
 
-XATRIX_DEPENDENCIES = sdl2 sdl2_mixer yquake2 host-ninja
+XATRIX_DEPENDENCIES = sdl2 sdl2_mixer yquake2
 XATRIX_LICENSE = GPL-2.0
-
 XATRIX_SUPPORTS_IN_SOURCE_BUILD = NO
-XATRIX_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja
+XATRIX_CMAKE_BACKEND = ninja
 
-define XATRIX_BUILD_CMDS
-	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(XATRIX_BUILDDIR)
-endef
+XATRIX_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 
 define XATRIX_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/game_assets/quake2/xatrix
