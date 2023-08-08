@@ -7,11 +7,12 @@
 SRB2_VERSION = ea7682648978b8bb8398e5ffbdd104193fadfa6e
 SRB2_SITE = $(call github,STJr,SRB2,$(SRB2_VERSION))
 
-SRB2_DEPENDENCIES = sdl2 sdl2_mixer libgme libopenmpt host-ninja
+SRB2_DEPENDENCIES = sdl2 sdl2_mixer libgme libopenmpt
 SRB2_LICENSE = GPL-2.0
 SRB2_SUPPORTS_IN_SOURCE_BUILD = NO
+SRB2_CMAKE_BACKEND = ninja
 
-SRB2_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DSRB2_ASSET_INSTALL=OFF -GNinja
+SRB2_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DSRB2_ASSET_INSTALL=OFF
 
 define SRB2_ASSETS
 	mkdir -p $(@D)/assets/installer
@@ -21,10 +22,6 @@ define SRB2_ASSETS
 endef
 
 SRB2_POST_EXTRACT_HOOKS += SRB2_ASSETS
-
-define SRB2_BUILD_CMDS
-	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(SRB2_BUILDDIR)
-endef
 
 define SRB2_INSTALL_TARGET_CMDS
 	cp -L $(@D)/buildroot-build/bin/lsdlsrb2 $(TARGET_DIR)/usr/bin/srb2

@@ -9,6 +9,7 @@ SUPERTUX2_SITE = https://github.com/SuperTux/supertux.git
 SUPERTUX2_SITE_METHOD=git
 SUPERTUX2_GIT_SUBMODULES=YES
 SUPERTUX2_SUPPORTS_IN_SOURCE_BUILD = NO
+SUPERTUX2_CMAKE_BACKEND = ninja
 
 # Supertux itself is GPL-3.0+, but it bundles a few libraries with different
 # licenses (sexp-cpp, squirrel, tinygettext) which are linked statically.
@@ -16,10 +17,10 @@ SUPERTUX2_LICENSE = GPL-3.0+ (code), CC-BY-SA-2.0, CC-BY-SA-3.0, CC-BY-SA-4.0, G
 SUPERTUX2_LICENSE_FILES = LICENSE.txt data/AUTHORS
 
 SUPERTUX2_DEPENDENCIES = host-pkgconf boost freetype libcurl \
-	libogg libpng libvorbis openal physfs sdl2 sdl2_image zlib host-ninja
+	libogg libpng libvorbis openal physfs sdl2 sdl2_image zlib
 
 SUPERTUX2_CONF_OPTS += \
-	-DCMAKE_BUILD_TYPE=Release -GNinja \
+	-DCMAKE_BUILD_TYPE=Release \
 	-DCMAKE_CXX_FLAGS="$(TARGET_CXXFLAGS) -DGLEW_NO_GLU" \
 	-DENABLE_BOOST_STATIC_LIBS=OFF \
 	-DBUILD_DOCUMENTATION=OFF \
@@ -40,10 +41,6 @@ define SUPERTUX2_REMOVE_PEDANTIC
 endef
 SUPERTUX2_POST_PATCH_HOOKS += SUPERTUX2_REMOVE_PEDANTIC
 endif
-
-define SUPERTUX2_BUILD_CMDS
-	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(SUPERTUX2_BUILDDIR)
-endef
 
 define SUPERTUX2_INSTALL_TARGET_CMDS
 	# install media

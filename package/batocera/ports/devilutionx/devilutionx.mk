@@ -8,15 +8,15 @@ DEVILUTIONX_VERSION = 1b42a17153e943dfbf5da095e4df9a16015db5db
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_SUBDIR = dist-src
-
-DEVILUTIONX_DEPENDENCIES = sdl2 sdl2_image fmt libsodium libpng bzip2 host-ninja
+DEVILUTIONX_DEPENDENCIES = sdl2 sdl2_image fmt libsodium libpng bzip2
 DEVILUTIONX_SUPPORTS_IN_SOURCE_BUILD = NO
+DEVILUTIONX_CMAKE_BACKEND = ninja
 
-DEVILUTIONX_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja 
-DEVILUTIONX_CONF_OPTS += -DBUILD_TESTING=OFF 
+DEVILUTIONX_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
+DEVILUTIONX_CONF_OPTS += -DBUILD_TESTING=OFF
 DEVILUTIONX_CONF_OPTS += -DUSE_LD_MOLD=ON
  # Prefill the player name when creating a new character, in case the device does
-# not have a keyboard.                        
+# not have a keyboard.
 DEVILUTIONX_CONF_OPTS += -DPREFILL_PLAYER_NAME=ON
 
 # Ensure that DevilutionX's vendored dependencies are not accidentally fetched from network.
@@ -48,14 +48,6 @@ endef
 
 DEVILUTIONX_PRE_CONFIGURE_HOOKS += DEVILUTIONX_FIX_SDL2MAIN
 DEVILUTIONX_POST_EXTRACT_HOOKS += DEVILUTIONX_BUILD_SRC_DIST
-
-define DEVILUTIONX_BUILD_CMDS
-	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(DEVILUTIONX_BUILDDIR)
-endef
-
-define DEVILUTIONX_INSTALL_TARGET_CMDS
-	$(TARGET_MAKE_ENV) DESTDIR=$(TARGET_DIR) $(BR2_CMAKE) --install $(DEVILUTIONX_BUILDDIR)
-endef
 
 define DEVILUTIONX_INSTALL_TARGET_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
