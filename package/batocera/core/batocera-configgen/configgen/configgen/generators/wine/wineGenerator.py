@@ -15,10 +15,14 @@ class WineGenerator(Generator):
             return Command.Command(array=commandArray)
         elif system.name == "windows" or system.name == "popcap" or system.name == "bigfish":
             commandArray = ["batocera-wine", "windows", "play", rom]
-            
+
             environment = {}
             #system.language
-            language = subprocess.check_output("batocera-settings-get system.language", shell=True, text=True).strip()
+            try:
+                language = subprocess.check_output("batocera-settings-get system.language", shell=True, text=True).strip()
+            except:
+                language = en
+
             if language:
                 environment.update({
                     "LANG": language + ".UTF-8",
