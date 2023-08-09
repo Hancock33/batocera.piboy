@@ -22,6 +22,8 @@
 - Tandy / Memorex Video Information System (VIS)
 - Visual Pinball X (Standalone) for X86_64, RPi4 & RK3588 boards
 - Added Sega Pico system entry utilizing existing emulator cores
+- Added Hydra Castle Labyrinth, a 16-bit platformer game (through content downloader)
+- Added Hurrican, a Turrican clone (through content downloader)
 ### Fixed
 - Fix wifi/bluetooth on Tinkerboard
 - Fixed crop overscan settings for NES to work with newer core builds
@@ -34,6 +36,9 @@
 - Enable lr-beetle-pcfx and lr-prboom libretro cores on RK3588
 - To enable Analog mode in Duckstation it's now hotkey + left trigger (l2)
 - kodi splash removed (if the advancedsettings file was not already created)
+- Model2 emulator will now default to 4:3 unless widescreen selected
+- Model2 emulator now allows rendering resolution to be selected
+- Model2 now allows you to enable scanlines
 ### Updated
 - xenia to v1.0.2805
 - xenia canary to ba936e8 (Commits on Jul 22, 2023)
@@ -65,10 +70,10 @@
 - commander genius to v3.4.9
 - play! to v0.62
 ### Dev
-- linux kernel for x86_64 to 6.4.8
+- linux kernel for x86_64 to 6.4.9
 - linux kernel for RPI to 6.1.32
 - linux kernel for most ARM SBCs to 6.1.43
-- linux kernel for Rockchip RK3566/RK3568 to 6.4.8
+- linux kernel for Rockchip RK3566/RK3568 to 6.4.9
 - xf86-video-amdgpu to 23.0.0
 - xf86-video-ati to 22.0.0
 - xwayland to 23.1.2
@@ -76,13 +81,14 @@
 - bluez to 5.68
 - wildmidi to 0.4.5
 - vulkan stack to 1.3.257
-- SDL2 to 2.28.1
+- SDL2 to 2.28.2
 - nvidia production driver to 535.86.05
 - faudio to 23.08
 - llvm to 16.0.6
 - Buildroot to 2023.05.01
 - Preliminary support for Khadas VIM4, Khadas VIM1S
 - linux firmware to 20230804
+- pacman to 5.2.2 with fix for GNU sed on batocera-makepkg
 
 # 2023/06/18 - batocera.linux 37 - Red Admiral
 ### hardware

@@ -411,6 +411,8 @@ hode:
 hurrican:
   emulator: hurrican
   core:     hurrican
+  options:
+    bezel: none
 igs:
   emulator: libretro
   core:     mame078plus
@@ -975,6 +977,9 @@ triforce:
 tutor:
   emulator: libretro
   core:     mame
+tyrian:
+  emulator: tyrian
+  core:     tyrian
 tyrquake:
   emulator: libretro
   core:     tyrquake

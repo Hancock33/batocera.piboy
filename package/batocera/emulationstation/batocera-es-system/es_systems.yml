@@ -3706,7 +3706,7 @@ hode:
 hurrican:
   name:                 Hurrican
   manufacturer:         Ports
-  release:              1990
+  release:              2007
   hardware:             port
   extensions:           [game]
   platform:             pc

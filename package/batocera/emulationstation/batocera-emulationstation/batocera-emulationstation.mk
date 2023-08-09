@@ -3,19 +3,18 @@
 # batocera-emulationstation
 #
 ################################################################################
-# Version: Commits on Aug 04, 2023
-BATOCERA_EMULATIONSTATION_VERSION = 3d0823598cf8fefb35c00626b733e2adb5780092
+# Version: Commits on Aug 07, 2023
+BATOCERA_EMULATIONSTATION_VERSION = 5a52e6c057fa51807cbe13bb110891e9d6e77173
 BATOCERA_EMULATIONSTATION_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_EMULATIONSTATION_SITE_METHOD = git
 BATOCERA_EMULATIONSTATION_LICENSE = MIT
 BATOCERA_EMULATIONSTATION_GIT_SUBMODULES = YES
 BATOCERA_EMULATIONSTATION_LICENSE = MIT, Apache-2.0
-BATOCERA_EMULATIONSTATION_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib libcurl vlc rapidjson pulseaudio batocera-es-system host-gettext host-ninja
+BATOCERA_EMULATIONSTATION_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib libcurl vlc rapidjson pulseaudio batocera-es-system host-gettext
+BATOCERA_EMULATIONSTATION_CMAKE_BACKEND = ninja
 # install in staging for debugging (gdb)
 BATOCERA_EMULATIONSTATION_INSTALL_STAGING = YES
 # BATOCERA_EMULATIONSTATION_OVERRIDE_SRCDIR = /sources/batocera-emulationstation
-
-BATOCERA_EMULATIONSTATION_CONF_OPTS += -GNinja
 
 ifeq ($(BR2_PACKAGE_HAS_LIBMALI),y)
 BATOCERA_EMULATIONSTATION_DEPENDENCIES += libmali
@@ -81,18 +80,6 @@ endif
 define BATOCERA_EMULATIONSTATION_RPI_FIXUP
 	$(SED) 's|.{CMAKE_FIND_ROOT_PATH}/opt/vc|$(STAGING_DIR)/usr|g' $(@D)/CMakeLists.txt
 	$(SED) 's|.{CMAKE_FIND_ROOT_PATH}/usr|$(STAGING_DIR)/usr|g'    $(@D)/CMakeLists.txt
-endef
-
-define BATOCERA_EMULATIONSTATION_BUILD_CMDS
-	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(BATOCERA_EMULATIONSTATION_BUILDDIR)
-endef
-
-define BATOCERA_EMULATIONSTATION_INSTALL_STAGING_CMDS
-	$(TARGET_MAKE_ENV) DESTDIR=$(STAGING_DIR) $(BR2_CMAKE) --install $(BATOCERA_EMULATIONSTATION_BUILDDIR)
-endef
-
-define BATOCERA_EMULATIONSTATION_INSTALL_TARGET_CMDS
-	$(TARGET_MAKE_ENV) DESTDIR=$(TARGET_DIR) $(BR2_CMAKE) --install $(BATOCERA_EMULATIONSTATION_BUILDDIR)
 endef
 
 define BATOCERA_EMULATIONSTATION_EXTERNAL_POS

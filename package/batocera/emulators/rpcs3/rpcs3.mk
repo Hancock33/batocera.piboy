@@ -3,20 +3,20 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Aug 06, 2023
-RPCS3_VERSION = ee869a49f4a69d2ce6bb7e417fa4c468ece028ee
+# Version: Commits on Aug 07, 2023
+RPCS3_VERSION = edf4f7eacc4d1c87fc1fade32f1662e49e2748ad
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
 RPCS3_LICENSE = GPLv2
 RPCS3_DEPENDENCIES += alsa-lib faudio ffmpeg libevdev
-RPCS3_DEPENDENCIES += libglew libglu libpng libusb mesa3d ncurses openal 
-RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg host-ninja
+RPCS3_DEPENDENCIES += libglew libglu libpng libusb mesa3d ncurses openal
+RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg
 RPCS3_DEPENDENCIES += wolfssl libxml2
-
 RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO
+RPCS3_CMAKE_BACKEND = ninja
 
-RPCS3_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja
+RPCS3_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 RPCS3_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 RPCS3_CONF_OPTS += -DCMAKE_CROSSCOMPILING=ON
 RPCS3_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
@@ -29,17 +29,9 @@ RPCS3_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_CURL=ON
 RPCS3_CONF_OPTS += -DUSE_SDL=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_SDL=ON
-RPCS3_CONF_OPTS += -DUSE_PRECOMPILED_HEADERS=ON 
+RPCS3_CONF_OPTS += -DUSE_PRECOMPILED_HEADERS=ON
 
 RPCS3_CONF_ENV = LIBS="-ncurses -ltinfo"
-
-define RPCS3_BUILD_CMDS
-	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(RPCS3_BUILDDIR)
-endef
-
-define RPCS3_INSTALL_TARGET_CMDS
-	$(TARGET_MAKE_ENV) DESTDIR=$(TARGET_DIR) $(BR2_CMAKE) --install $(RPCS3_BUILDDIR)
-endef
 
 define RPCS3_INSTALL_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

@@ -7613,31 +7613,6 @@ msgstr "Zmiešané sprity (jeden)"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
-msgid "OVERLAY SIZE (SINGE)"
-msgstr "Veľkosť prekryvu (jeden)"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Standard"
-msgstr "Štandardné"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "HD Gun Games"
-msgstr "HD hry s pištoľou"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Singe 2 Full"
-msgstr "Jednoduché 2 plné"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Singe 2 Half"
-msgstr "Jednoduché 2 polovica"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr ""
 "Táto možnosť je potrebná pri niektorých hrách so zbraňami pri hraní s myšou."
@@ -10827,6 +10802,18 @@ msgstr "Dátový plugin"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid ""
+"Choose whether to pass SDL Game Controller config to the Windows game. "
+"Disabling may help with some games."
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "SDL CONFIG"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
 msgstr "Konvertuje DirectX 9/10/11/12 volania na Vulkan."
 
@@ -11241,6 +11228,31 @@ msgstr "Sonic CD (skok držaním)"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
+msgid "Screen Resolution (Default)"
+msgstr ""
+
+#. TRANSLATION: model2emu, play
+msgctxt "game_options"
+msgid "Enable widescreen support."
+msgstr ""
+
+#. TRANSLATION: model2emu, play
+msgctxt "game_options"
+msgid "ENABLE WIDESCREEN"
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "Enable scanlines for roms that support it."
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "ENABLE SCANLINES"
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
 msgid ""
 "Tries to guess Per-vertex colour (gouraud) from the Model2 per-poly "
 "information (flat)."
@@ -11389,16 +11401,6 @@ msgstr ""
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Original Size"
-msgstr ""
-
-#. TRANSLATION: play
-msgctxt "game_options"
-msgid "Enable widescreen support."
-msgstr ""
-
-#. TRANSLATION: play
-msgctxt "game_options"
-msgid "ENABLE WIDESCREEN"
 msgstr ""
 
 #. TRANSLATION: play
@@ -13242,6 +13244,26 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rýchlo dopredu"
+
+#~ msgctxt "game_options"
+#~ msgid "OVERLAY SIZE (SINGE)"
+#~ msgstr "Veľkosť prekryvu (jeden)"
+
+#~ msgctxt "game_options"
+#~ msgid "Standard"
+#~ msgstr "Štandardné"
+
+#~ msgctxt "game_options"
+#~ msgid "HD Gun Games"
+#~ msgstr "HD hry s pištoľou"
+
+#~ msgctxt "game_options"
+#~ msgid "Singe 2 Full"
+#~ msgstr "Jednoduché 2 plné"
+
+#~ msgctxt "game_options"
+#~ msgid "Singe 2 Half"
+#~ msgstr "Jednoduché 2 polovica"
 
 #~ msgctxt "game_options"
 #~ msgid ""

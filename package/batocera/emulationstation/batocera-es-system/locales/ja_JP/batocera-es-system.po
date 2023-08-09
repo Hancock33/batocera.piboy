@@ -7585,31 +7585,6 @@ msgstr "ブレンドスプライト（SINGE）"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
-msgid "OVERLAY SIZE (SINGE)"
-msgstr "オーバーレイ サイズ（SINGE）"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Standard"
-msgstr "標準"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "HD Gun Games"
-msgstr "HD ガン ゲーム"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Singe 2 Full"
-msgstr "Singe 2 フル"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Singe 2 Half"
-msgstr "Singe 2 ハーフ"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr "マウスを使ってプレイする時に、一部のガン専用ゲームに必要です"
 
@@ -10777,6 +10752,18 @@ msgstr "データ プラグイン"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid ""
+"Choose whether to pass SDL Game Controller config to the Windows game. "
+"Disabling may help with some games."
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "SDL CONFIG"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
 msgstr "DirectX 9/10/11/12の呼び出しをVulkanに変換します"
 
@@ -11190,6 +11177,31 @@ msgstr "ソニックCD（ホールドジャンプ）"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
+msgid "Screen Resolution (Default)"
+msgstr ""
+
+#. TRANSLATION: model2emu, play
+msgctxt "game_options"
+msgid "Enable widescreen support."
+msgstr "ワイドスクリーンのサポートを有効にします"
+
+#. TRANSLATION: model2emu, play
+msgctxt "game_options"
+msgid "ENABLE WIDESCREEN"
+msgstr "ワイドスクリーン 有効"
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "Enable scanlines for roms that support it."
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "ENABLE SCANLINES"
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
 msgid ""
 "Tries to guess Per-vertex colour (gouraud) from the Model2 per-poly "
 "information (flat)."
@@ -11341,16 +11353,6 @@ msgstr "画面に合わせる"
 msgctxt "game_options"
 msgid "Original Size"
 msgstr "オリジナルサイズ"
-
-#. TRANSLATION: play
-msgctxt "game_options"
-msgid "Enable widescreen support."
-msgstr "ワイドスクリーンのサポートを有効にします"
-
-#. TRANSLATION: play
-msgctxt "game_options"
-msgid "ENABLE WIDESCREEN"
-msgstr "ワイドスクリーン 有効"
 
 #. TRANSLATION: play
 msgctxt "game_options"
@@ -13192,6 +13194,26 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid "OVERLAY SIZE (SINGE)"
+#~ msgstr "オーバーレイ サイズ（SINGE）"
+
+#~ msgctxt "game_options"
+#~ msgid "Standard"
+#~ msgstr "標準"
+
+#~ msgctxt "game_options"
+#~ msgid "HD Gun Games"
+#~ msgstr "HD ガン ゲーム"
+
+#~ msgctxt "game_options"
+#~ msgid "Singe 2 Full"
+#~ msgstr "Singe 2 フル"
+
+#~ msgctxt "game_options"
+#~ msgid "Singe 2 Half"
+#~ msgstr "Singe 2 ハーフ"
 
 #~ msgctxt "game_options"
 #~ msgid ""
