@@ -3,8 +3,8 @@
 # candc
 #
 ################################################################################
-# Version: Commits on Jun 01, 2023
-CANDC_VERSION = a36cba357ee2331e37d45ee3b7e3b7ca8c528f4c
+# Version: Commits on Aug 03, 2023
+CANDC_VERSION = 59efc8949b4bbe3f1fe9961fbcf828b927064f8e
 CANDC_SITE = $(call github,TheAssemblyArmada,Vanilla-Conquer,$(CANDC_VERSION))
 
 CANDC_DEPENDENCIES = sdl2 openal
