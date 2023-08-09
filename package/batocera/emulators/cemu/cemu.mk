@@ -10,18 +10,19 @@ CEMU_LICENSE = GPLv2
 CEMU_SITE_METHOD=git
 CEMU_GIT_SUBMODULES=YES
 CEMU_DEPENDENCIES = sdl2 host-libcurl host-pugixml pugixml rapidjson boost libpng \
-                    libzip host-glslang glslang zlib zstd wxwidgets fmt glm host-ninja
+                    libzip host-glslang glslang zlib zstd wxwidgets fmt glm
 
 CEMU_SUPPORTS_IN_SOURCE_BUILD = NO
+CEMU_CMAKE_BACKEND = ninja
 
-CEMU_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja
+CEMU_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 CEMU_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 CEMU_CONF_OPTS += -DENABLE_DISCORD_RPC=OFF
 CEMU_CONF_OPTS += -DENABLE_VCPKG=OFF
 CEMU_CONF_OPTS += -DPORTABLE=OFF
 CEMU_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CXXFLAGS) -I$(STAGING_DIR)/usr/include/glslang"
 CEMU_CONF_OPTS += -DENABLE_FERAL_GAMEMODE=OFF
-CEMU_CONF_OPTS += -Wno-dev 
+CEMU_CONF_OPTS += -Wno-dev
 
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
     CEMU_CONF_OPTS += -DENABLE_WAYLAND=ON
@@ -29,10 +30,6 @@ ifeq ($(BR2_PACKAGE_WAYLAND),y)
 else
     CEMU_CONF_OPTS += -DENABLE_WAYLAND=OFF
 endif
-
-define CEMU_BUILD_CMDS
-	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(CEMU_BUILDDIR)
-endef
 
 define CEMU_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/cemu/

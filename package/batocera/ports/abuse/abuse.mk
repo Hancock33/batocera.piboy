@@ -7,13 +7,10 @@
 ABUSE_VERSION = 9d1f66f57377859bae10e28eabebea0b9c750490
 ABUSE_SITE = $(call github,Xenoveritas,abuse,$(ABUSE_VERSION))
 
-ABUSE_DEPENDENCIES = sdl2 sdl2_mixer abuse-data host-ninja
+ABUSE_DEPENDENCIES = sdl2 sdl2_mixer abuse-data
 ABUSE_SUPPORTS_IN_SOURCE_BUILD = NO
-ABUSE_CONF_OPTS += -DASSETDIR=/usr/share/abuse -GNinja
-
-define ABUSE_BUILD_CMDS
-	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(ABUSE_BUILDDIR)
-endef
+ABUSE_CONF_OPTS += -DASSETDIR=/usr/share/abuse
+ABUSE_CMAKE_BACKEND = ninja
 
 define ABUSE_INSTALL_TARGET_CMDS
     mkdir -p $(TARGET_DIR)/usr/share/abuse

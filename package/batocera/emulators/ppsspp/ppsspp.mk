@@ -3,15 +3,16 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on Aug 06, 2023
-PPSSPP_VERSION = 014fbeabf2d827d0961f3abbaeebed21ba1a2911
+# Version: Commits on Aug 07, 2023
+PPSSPP_VERSION = 1f3136155b8dd455abb503246eda4ef78f634aa7
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
 PPSSPP_LICENSE = GPLv2
-PPSSPP_DEPENDENCIES = sdl2 libzip host-ninja
+PPSSPP_DEPENDENCIES = sdl2 libzip
+PPSSPP_CMAKE_BACKEND = ninja
 
-PPSSPP_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja
+PPSSPP_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 PPSSPP_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 PPSSPP_CONF_OPTS += -DCMAKE_SYSTEM_NAME=Linux
 PPSSPP_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=OFF
@@ -92,10 +93,6 @@ define PPSSPP_UPDATE_INCLUDES
     sed -i "s+/opt/vc+$(STAGING_DIR)/usr+g" $(@D)/CMakeLists.txt
     # Fix SDL2 tff
     sed -i -e s+"SDL2_ttf::SDL2_ttf"+"-lSDL2_ttf"+ $(@D)/CMakeLists.txt
-endef
-
-define PPSSPP_BUILD_CMDS
-	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(PPSSPP_BUILDDIR)
 endef
 
 define PPSSPP_INSTALL_TARGET_CMDS

@@ -7641,31 +7641,6 @@ msgstr "BLEND SPRITES (SINGE)"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
-msgid "OVERLAY SIZE (SINGE)"
-msgstr "TAMAÑO DE SUPERPOSICIÓN (SINGE)"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Standard"
-msgstr "Estándar"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "HD Gun Games"
-msgstr "Juegos de pistola lightgun en alta definición"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Singe 2 Full"
-msgstr "Singe 2 completo"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
-msgid "Singe 2 Half"
-msgstr "Singe 2 medio"
-
-#. TRANSLATION: daphne
-msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr ""
 "Esta opción es necesaria para algunos juegos de pistola lightgun cuando se "
@@ -10893,6 +10868,18 @@ msgstr "COMPLEMENTO DE DATOS"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid ""
+"Choose whether to pass SDL Game Controller config to the Windows game. "
+"Disabling may help with some games."
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "SDL CONFIG"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
 msgstr "Convierte llamadas DirectX 9/10/11/12 a Vulkan."
 
@@ -11311,6 +11298,31 @@ msgstr "Sonic CD (mantener salto)"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
+msgid "Screen Resolution (Default)"
+msgstr ""
+
+#. TRANSLATION: model2emu, play
+msgctxt "game_options"
+msgid "Enable widescreen support."
+msgstr ""
+
+#. TRANSLATION: model2emu, play
+msgctxt "game_options"
+msgid "ENABLE WIDESCREEN"
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "Enable scanlines for roms that support it."
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "ENABLE SCANLINES"
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
 msgid ""
 "Tries to guess Per-vertex colour (gouraud) from the Model2 per-poly "
 "information (flat)."
@@ -11461,16 +11473,6 @@ msgstr ""
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Original Size"
-msgstr ""
-
-#. TRANSLATION: play
-msgctxt "game_options"
-msgid "Enable widescreen support."
-msgstr ""
-
-#. TRANSLATION: play
-msgctxt "game_options"
-msgid "ENABLE WIDESCREEN"
 msgstr ""
 
 #. TRANSLATION: play
@@ -13320,6 +13322,26 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance Rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "OVERLAY SIZE (SINGE)"
+#~ msgstr "TAMAÑO DE SUPERPOSICIÓN (SINGE)"
+
+#~ msgctxt "game_options"
+#~ msgid "Standard"
+#~ msgstr "Estándar"
+
+#~ msgctxt "game_options"
+#~ msgid "HD Gun Games"
+#~ msgstr "Juegos de pistola lightgun en alta definición"
+
+#~ msgctxt "game_options"
+#~ msgid "Singe 2 Full"
+#~ msgstr "Singe 2 completo"
+
+#~ msgctxt "game_options"
+#~ msgid "Singe 2 Half"
+#~ msgstr "Singe 2 medio"
 
 #~ msgctxt "game_options"
 #~ msgid ""

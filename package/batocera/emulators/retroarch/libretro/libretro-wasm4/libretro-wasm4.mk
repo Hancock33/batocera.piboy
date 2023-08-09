@@ -3,19 +3,16 @@
 # libretro-wasm4
 #
 ################################################################################
-# Version: Commits on Jul 15, 2023
-LIBRETRO_WASM4_VERSION = 05248ada8b687e893cc6b771625e897b22813f52
+# Version: Commits on Aug 06, 2023
+LIBRETRO_WASM4_VERSION = 664a06fbedbb454b291ea928663061d0c11a36b1
 LIBRETRO_WASM4_SITE = https://github.com/aduros/wasm4
 LIBRETRO_WASM4_SITE_METHOD = git
 LIBRETRO_WASM4_GIT_SUBMODULES = yes
 LIBRETRO_WASM4_LICENSE = ISC
 LIBRETRO_WASM4_SUPPORTS_IN_SOURCE_BUILD = YES
 LIBRETRO_WASM4_SUBDIR = runtimes/native
-LIBRETRO_WASM4_CONF_OPTS = -DCMAKE_BUILD_TYPE=Release -GNinja
-
-define LIBRETRO_WASM4_BUILD_CMDS
-	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(LIBRETRO_WASM4_BUILDDIR)
-endef
+LIBRETRO_WASM4_CMAKE_BACKEND = ninja
+LIBRETRO_WASM4_CONF_OPTS = -DCMAKE_BUILD_TYPE=Release
 
 define LIBRETRO_WASM4_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/runtimes/native/wasm4_libretro.so $(TARGET_DIR)/usr/lib/libretro/wasm4_libretro.so

@@ -3,13 +3,13 @@
 # cdogs
 #
 ################################################################################
-# Version: Commits on Jul 29, 2023
-CDOGS_VERSION = c5c4a949efd366b239aaf2cad95041d95758b72b
+# Version: Commits on Aug 07, 2023
+CDOGS_VERSION = 92cbaa267a79dd9f2797c8dd2a204f2640e68787
 CDOGS_SITE = $(call github,cxong,cdogs-sdl,$(CDOGS_VERSION))
-CDOGS_DEPENDENCIES = sdl2 sdl2_image sdl2_mixer python-protobuf enet host-ninja
+CDOGS_DEPENDENCIES = sdl2 sdl2_image sdl2_mixer python-protobuf enet
 CDOGS_LICENSE = GPL-2.0
-
 CDOGS_SUPPORTS_IN_SOURCE_BUILD = NO
+CDOGS_CMAKE_BACKEND = ninja
 
 define CDOGS_FIX_SDL2MAIN
 	sed -i -e s+"SDL2_image::SDL2_image"+"-lSDL2_image"+ $(@D)/src/cdogs/CMakeLists.txt
@@ -19,7 +19,7 @@ endef
 
 CDOGS_PRE_CONFIGURE_HOOKS += CDOGS_FIX_SDL2MAIN
 
-CDOGS_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -GNinja
+CDOGS_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 CDOGS_CONF_OPTS += -DCDOGS_DATA_DIR=/usr/share/cdogs/
 CDOGS_CONF_OPTS += -DBUILD_EDITOR=OFF
 CDOGS_CONF_OPTS += -DUSE_SHARED_ENET=ON
@@ -27,10 +27,6 @@ CDOGS_CONF_OPTS += -DBUILD_TESTING=OFF
 
 define CDOGS_REMOVE_TESTS
 	rm -Rf $(@D)/src/tests
-endef
-
-define CDOGS_BUILD_CMDS
-	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(CDOGS_BUILDDIR)
 endef
 
 define CDOGS_INSTALL_TARGET_CMDS

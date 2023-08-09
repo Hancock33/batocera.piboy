@@ -3,16 +3,15 @@
 # batocera-es-piboy
 #
 ################################################################################
-# Version: Commits on Aug 04, 2023
-BATOCERA_ES_PIBOY_VERSION = 3d0823598cf8fefb35c00626b733e2adb5780092
+# Version: Commits on Aug 07, 2023
+BATOCERA_ES_PIBOY_VERSION = 5a52e6c057fa51807cbe13bb110891e9d6e77173
 BATOCERA_ES_PIBOY_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_ES_PIBOY_SITE_METHOD = git
 BATOCERA_ES_PIBOY_LICENSE = MIT
 BATOCERA_ES_PIBOY_GIT_SUBMODULES = YES
 BATOCERA_ES_PIBOY_LICENSE = MIT, Apache-2.0
-BATOCERA_ES_PIBOY_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib libcurl vlc rapidjson pulseaudio batocera-es-system host-gettext espeak host-ninja
-
-BATOCERA_ES_PIBOY_CONF_OPTS += -GNinja
+BATOCERA_ES_PIBOY_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib libcurl vlc rapidjson pulseaudio batocera-es-system host-gettext espeak
+BATOCERA_ES_PIBOY_CMAKE_BACKEND = ninja
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGLES),y)
 BATOCERA_ES_PIBOY_CONF_OPTS += -DGLES2=ON
@@ -80,10 +79,6 @@ define BATOCERA_ES_PIBOY_RPI_FIXUP
 endef
 
 BATOCERA_ES_PIBOY_PRE_CONFIGURE_HOOKS += BATOCERA_ES_PIBOY_RPI_FIXUP
-
-define BATOCERA_ES_PIBOY_BUILD_CMDS
-	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(BATOCERA_ES_PIBOY_BUILDDIR)
-endef
 
 define BATOCERA_ES_PIBOY_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/emulationstation -D $(TARGET_DIR)/usr/bin/emulationstation_piboy

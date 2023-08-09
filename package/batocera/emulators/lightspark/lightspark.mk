@@ -7,13 +7,10 @@
 LIGHTSPARK_VERSION = 4bec700511efadf6ce66e0921f71a6d9beb08714
 LIGHTSPARK_SITE = $(call github,lightspark,lightspark,$(LIGHTSPARK_VERSION))
 LIGHTSPARK_LICENSE = LGPLv3
-LIGHTSPARK_DEPENDENCIES = sdl2 sdl2_mixer freetype pcre jpeg libpng cairo ffmpeg libcurl rtmpdump host-ninja
+LIGHTSPARK_DEPENDENCIES = sdl2 sdl2_mixer freetype pcre jpeg libpng cairo ffmpeg libcurl rtmpdump
+LIGHTSPARK_CMAKE_BACKEND = ninja
 
-LIGHTSPARK_CONF_OPTS  = -DCMAKE_BUILD_TYPE=Release -GNinja
-
-define LIGHTSPARK_BUILD_CMDS
-	$(TARGET_MAKE_ENV) $(BR2_CMAKE) --build $(LIGHTSPARK_BUILDDIR)
-endef
+LIGHTSPARK_CONF_OPTS  = -DCMAKE_BUILD_TYPE=Release
 
 define LIGHTSPARK_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin

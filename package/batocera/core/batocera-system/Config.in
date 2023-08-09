@@ -83,14 +83,6 @@ if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711 |
     default y
 endif
 
-# add cortex a53 group support for use cases like dosbox-staging
-if  BR2_PACKAGE_BATOCERA_TARGET_S905 || BR2_PACKAGE_BATOCERA_TARGET_S905GEN2   || BR2_PACKAGE_BATOCERA_TARGET_S912   || BR2_PACKAGE_BATOCERA_TARGET_H6 \
- || BR2_PACKAGE_BATOCERA_TARGET_H616 || BR2_PACKAGE_BATOCERA_TARGET_H5         || BR2_PACKAGE_BATOCERA_TARGET_RK3328 || BR2_PACKAGE_BATOCERA_TARGET_BCM2837
-    config BR2_PACKAGE_BATOCERA_CORTEX_A53
-    bool "target cortex a53 socs"
-    default y
-endif
-
 config BR2_PACKAGE_BATOCERA_CORES_STILL_COMMERCIALIZED
     bool "batocera is limited to abandoned systems"
 
@@ -211,7 +203,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_PYTHON3_SSL
     select BR2_PACKAGE_PYTHON3_PYOPENSSL
 
-    # Deprecated, which what library should we replace ?
     select BR2_PACKAGE_PARTED                               # partition management (for the first boot)
     select BR2_PACKAGE_USBMOUNT                             # usb key/sd card mounter
     select BR2_PACKAGE_USBUTILS                             # usb key/sd card tools
@@ -311,25 +302,19 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3128     && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_ODIN
 
-    select BR2_PACKAGE_RTL8821AU_MORROWNR                   if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2 ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-    select BR2_PACKAGE_RTL88X2BU                            if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2 ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-
-    select BR2_PACKAGE_RTL8821CU                            if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2 ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY || BR2_PACKAGE_BATOCERA_TARGET_RK3588
-    select BR2_PACKAGE_RTL8723BU                            if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2 ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-    select BR2_PACKAGE_RTL8188EU                            if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2 ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-    select BR2_PACKAGE_RTL8189FS                            if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2 ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-    select BR2_PACKAGE_RTL8189FS                            if  BR2_PACKAGE_BATOCERA_TARGET_H3          || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_RTL8821AU_MORROWNR                   if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2   ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_RTL88X2BU                            if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2   ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_RTL8723BU                            if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2   ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_RTL8188EU                            if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2   ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_RTL8821CU                            if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2   ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY  || BR2_PACKAGE_BATOCERA_TARGET_RK3588
+    select BR2_PACKAGE_RTL8189FS                            if  BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_H3       ||  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY  || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
+    select BR2_PACKAGE_RTL8189ES                            if  BR2_PACKAGE_BATOCERA_TARGET_S905        || BR2_PACKAGE_BATOCERA_TARGET_S905GEN2 ||  BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
 
     # do NOT remove this one for OGA
     select BR2_PACKAGE_RTL8192EU                            if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835    && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H3         && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3128     && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3588
-
-    select BR2_PACKAGE_RTL8189ES                            if  BR2_PACKAGE_BATOCERA_TARGET_S905        || BR2_PACKAGE_BATOCERA_TARGET_S905GEN2 || BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
 
     select BR2_PACKAGE_RTW89_TEMP                           if  BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
@@ -766,16 +751,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
     # NDS
     select BR2_PACKAGE_LIBRETRO_DESMUME                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
-    select BR2_PACKAGE_LIBRETRO_MELONDS                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S905GEN2    || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S905GEN3    || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2711     || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3326      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_H616        || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3568      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588
+    select BR2_PACKAGE_LIBRETRO_MELONDS                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_aarch64 && BR2_PACKAGE_BATOCERA_GLES3)
 
     select BR2_PACKAGE_DRASTIC                              if  BR2_PACKAGE_BATOCERA_RPI_MESA3D         || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
@@ -961,8 +937,6 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     # Atari 800 computers
     select BR2_PACKAGE_LIBRETRO_ATARI800                    # ALL
 
-    # Atari 5200 computers
-    select BR2_PACKAGE_LIBRETRO_A5200                       # ALL
 
     # Sinclair ZX Spectrum
     select BR2_PACKAGE_LIBRETRO_FUSE                        # ALL
@@ -1146,6 +1120,9 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     # Atari 2600
     select BR2_PACKAGE_LIBRETRO_STELLA                      # ALL
     select BR2_PACKAGE_LIBRETRO_STELLA2014                  if  BR2_PACKAGE_BATOCERA_TARGET_BCM2835
+
+    # Atari 5200
+    select BR2_PACKAGE_LIBRETRO_A5200                       # ALL
 
     # NEC PC-Engine / TurboGrafx / SuperGrafx range
     select BR2_PACKAGE_LIBRETRO_BEETLE_PCE                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
@@ -1362,13 +1339,19 @@ config BR2_PACKAGE_BATOCERA_KODI
     bool "batocera.linux Kodi packages selection"
     default n
     select BR2_PACKAGE_KODI                                 # kodi
-    select BR2_PACKAGE_PYTHON3                              # kodi is based on python3
     select BR2_PACKAGE_PYTHON_PYOPENSSL                     # used by some kodi plugins
     select BR2_PACKAGE_X264                                 # decoder
     select BR2_PACKAGE_X265                                 # decoder
     select BR2_PACKAGE_LIBAACS                              # decoder
-    select BR2_PACKAGE_LIBDVDCSS                            # decoder
     select BR2_PACKAGE_GNUTLS                               # https streams
+
+    # Kodi disc decoding
+    select BR2_PACKAGE_LIBDVDCSS                            # decoder
+    select BR2_PACKAGE_LIBUDFREAD                           # Bluray
+
+    # Kodi game controllers
+    select BR2_PACKAGE_KODI_PERIPHERAL_JOYSTICK             # joysticks for kodi
+    select BR2_PACKAGE_KODI_PERIPHERAL_XARCADE              # xarcade for kodi
 
     # ffmpeg enabler that i'm not sure it has an impact on kodi
     select BR2_PACKAGE_FFMPEG_GPL                           # video recording
@@ -1422,8 +1405,6 @@ config BR2_PACKAGE_BATOCERA_KODI
     select BR2_PACKAGE_KODI_LIBSMBCLIENT
     select BR2_PACKAGE_KODI_LIBVDPAU                        if  BR2_PACKAGE_XORG7 && BR2_PACKAGE_KODI_PLATFORM_SUPPORTS_X11 && BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
     select BR2_PACKAGE_KODI_MYSQL
-    select BR2_PACKAGE_KODI_PERIPHERAL_JOYSTICK             # joysticks for kodi
-    select BR2_PACKAGE_KODI_PERIPHERAL_XARCADE              # xarcade for kodi
     select BR2_PACKAGE_KODI_PVR_ARGUSTV
     select BR2_PACKAGE_KODI_PVR_DVBLINK
     select BR2_PACKAGE_KODI_PVR_DVBVIEWER

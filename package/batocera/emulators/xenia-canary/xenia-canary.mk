@@ -33,7 +33,7 @@ define XENIA_CANARY_POST_PROCESS
 	  $(GIT) pull --depth=1 origin main && \
 	  mv -f patches/*.toml $(TARGET_DIR)/usr/bin/xenia-canary/patches \
 	)
-	
+
 	# Clean up the temporary directory
 	rm -rf $(@D)/temp
 

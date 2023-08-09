@@ -5,6 +5,7 @@ import Command
 import os
 from os import path
 import controllersConfig
+import subprocess
 
 class WineGenerator(Generator):
 
@@ -12,25 +13,31 @@ class WineGenerator(Generator):
         if system.name == "windows_installers":
             commandArray = ["batocera-wine", "windows", "install", rom]
             return Command.Command(array=commandArray)
-        elif system.name == "windows":
+        elif system.name == "windows" or system.name == "popcap" or system.name == "bigfish":
             commandArray = ["batocera-wine", "windows", "play", rom]
-            return Command.Command(array=commandArray,env={
-                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers),
-                "SDL_JOYSTICK_HIDAPI": "0"
-            })
-        elif system.name == "bigfish":
-            commandArray = ["batocera-wine", "windows", "play", rom]
-            return Command.Command(array=commandArray,env={
-                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers),
-                "SDL_JOYSTICK_HIDAPI": "0"
-            })
-        elif system.name == "popcap":
-            commandArray = ["batocera-wine", "windows", "play", rom]
-            return Command.Command(array=commandArray,env={
-                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers),
-                "SDL_JOYSTICK_HIDAPI": "0"
-            })
 
+            environment = {}
+            #system.language
+            try:
+                language = subprocess.check_output("batocera-settings-get system.language", shell=True, text=True).strip()
+            except:
+                language = en
+
+            if language:
+                environment.update({
+                    "LANG": language + ".UTF-8",
+                    "LC_ALL": language + ".UTF-8"
+                    }
+                )
+            # sdl controller option - default is on
+            if not system.isOptSet("sdl_config") or system.getOptBoolean("sdl_config"):
+                environment.update({
+                    "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers),
+                    "SDL_JOYSTICK_HIDAPI": "0"
+                    }
+                )
+            return Command.Command(array=commandArray, env=environment)
+        
         raise Exception("invalid system " + system.name)
 
     def getMouseMode(self, config):

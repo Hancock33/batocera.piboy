@@ -8709,36 +8709,6 @@ msgstr "블렌드 스프라이트 (싱글)"
 #. TRANSLATION: daphne
 #, fuzzy
 msgctxt "game_options"
-msgid "OVERLAY SIZE (SINGE)"
-msgstr "오버레이 크기(단일)"
-
-#. TRANSLATION: daphne
-#, fuzzy
-msgctxt "game_options"
-msgid "Standard"
-msgstr "표준"
-
-#. TRANSLATION: daphne
-#, fuzzy
-msgctxt "game_options"
-msgid "HD Gun Games"
-msgstr "HD 총 게임"
-
-#. TRANSLATION: daphne
-#, fuzzy
-msgctxt "game_options"
-msgid "Singe 2 Full"
-msgstr "싱글 2 풀"
-
-#. TRANSLATION: daphne
-#, fuzzy
-msgctxt "game_options"
-msgid "Singe 2 Half"
-msgstr "싱글 2 하프"
-
-#. TRANSLATION: daphne
-#, fuzzy
-msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr "이 옵션은 마우스로 플레이할 때 일부 총기 게임에 필요합니다."
 
@@ -12216,6 +12186,18 @@ msgid "DATA PLUGIN"
 msgstr "데이터 플러그인"
 
 #. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Choose whether to pass SDL Game Controller config to the Windows game. "
+"Disabling may help with some games."
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "SDL CONFIG"
+msgstr ""
+
+#. TRANSLATION: wine
 #, fuzzy
 msgctxt "game_options"
 msgid "Converts DirectX 9/10/11/12 calls to Vulkan."
@@ -12698,6 +12680,31 @@ msgid "Sonic CD (hold jump)"
 msgstr "소닉 CD (홀드 점프)"
 
 #. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "Screen Resolution (Default)"
+msgstr ""
+
+#. TRANSLATION: model2emu, play
+msgctxt "game_options"
+msgid "Enable widescreen support."
+msgstr ""
+
+#. TRANSLATION: model2emu, play
+msgctxt "game_options"
+msgid "ENABLE WIDESCREEN"
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "Enable scanlines for roms that support it."
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
+msgid "ENABLE SCANLINES"
+msgstr ""
+
+#. TRANSLATION: model2emu
 #, fuzzy
 msgctxt "game_options"
 msgid ""
@@ -12866,16 +12873,6 @@ msgstr ""
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Original Size"
-msgstr ""
-
-#. TRANSLATION: play
-msgctxt "game_options"
-msgid "Enable widescreen support."
-msgstr ""
-
-#. TRANSLATION: play
-msgctxt "game_options"
-msgid "ENABLE WIDESCREEN"
 msgstr ""
 
 #. TRANSLATION: play
@@ -14669,6 +14666,31 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM 조이스틱 구성 사용"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "OVERLAY SIZE (SINGE)"
+#~ msgstr "오버레이 크기(단일)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Standard"
+#~ msgstr "표준"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "HD Gun Games"
+#~ msgstr "HD 총 게임"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Singe 2 Full"
+#~ msgstr "싱글 2 풀"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Singe 2 Half"
+#~ msgstr "싱글 2 하프"
 
 #, fuzzy
 #~ msgctxt "game_options"
