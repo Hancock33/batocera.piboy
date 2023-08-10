@@ -1,8 +1,21 @@
 diff --git a/SDL/SDLMain.cpp b/SDL/SDLMain.cpp
-index 6d3c47d00..bca58b3eb 100644
+index e2a71beae..5c1e267a0 100644
 --- a/SDL/SDLMain.cpp
 +++ b/SDL/SDLMain.cpp
-@@ -933,9 +933,7 @@ int main(int argc, char *argv[]) {
+@@ -795,12 +795,6 @@ static void ProcessSDLEvent(SDL_Window *window, const SDL_Event &event, InputSta
+ 				g_Config.iWindowWidth = new_width;
+ 				g_Config.iWindowHeight = new_height;
+ 			}
+-			// Hide/Show cursor correctly toggling fullscreen
+-			if (lastUIState == UISTATE_INGAME && fullscreen && !g_Config.bShowTouchControls) {
+-				SDL_ShowCursor(SDL_DISABLE);
+-			} else if (lastUIState != UISTATE_INGAME || !fullscreen) {
+-				SDL_ShowCursor(SDL_ENABLE);
+-			}
+ 			break;
+ 		}
+ 
+@@ -1382,9 +1376,7 @@ int main(int argc, char *argv[]) {
  		printf("Init from thread error: '%s'\n", error_message.c_str());
  	}
  
@@ -12,20 +25,7 @@ index 6d3c47d00..bca58b3eb 100644
  
  	if (!useEmuThread) {
  		NativeInitGraphics(graphicsContext);
-@@ -1038,12 +1036,6 @@ int main(int argc, char *argv[]) {
- 						g_Config.iWindowWidth = new_width;
- 						g_Config.iWindowHeight = new_height;
- 					}
--					// Hide/Show cursor correctly toggling fullscreen
--					if (lastUIState == UISTATE_INGAME && fullscreen && !g_Config.bShowTouchControls) {
--						SDL_ShowCursor(SDL_DISABLE);
--					} else if (lastUIState != UISTATE_INGAME || !fullscreen) {
--						SDL_ShowCursor(SDL_ENABLE);
--					}
- 					break;
- 				}
- 
-@@ -1340,15 +1332,6 @@ int main(int argc, char *argv[]) {
+@@ -1433,15 +1425,6 @@ int main(int argc, char *argv[]) {
  		if (g_QuitRequested || g_RestartRequested)
  			break;
  
@@ -39,5 +39,5 @@ index 6d3c47d00..bca58b3eb 100644
 -		}
 -#endif
  
- 		// Disabled by default, needs a workaround to map to psp keys.
- 		if (g_Config.bMouseControl) {
+ 		inputTracker.MouseControl();
+ 		inputTracker.MouseCaptureControl();

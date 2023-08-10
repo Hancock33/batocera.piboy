@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v38beta(2023/07/22)\n"
+"Project-Id-Version: batocera-es v38beta(2023/08/08)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-07-24 18:13+0900\n"
+"PO-Revision-Date: 2023-08-08 10:33+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -2468,7 +2468,7 @@ msgstr "標準"
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, flycast, rpcs3
 msgctxt "game_options"
 msgid "Maximum"
-msgstr ""
+msgstr "最大"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/quasi88, flycast/vitaquake3
 msgctxt "game_options"
@@ -4574,7 +4574,7 @@ msgstr ""
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, mupen64plus, ...
 msgctxt "game_options"
 msgid "CONTROLLER 1"
-msgstr ""
+msgstr "コントローラ 1"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -4604,17 +4604,17 @@ msgstr "N64 スタイルのコントローラーに便利"
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus, mupen64plus, ...
 msgctxt "game_options"
 msgid "CONTROLLER 2"
-msgstr ""
+msgstr "コントローラ 2"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
 msgctxt "game_options"
 msgid "CONTROLLER 3"
-msgstr ""
+msgstr "コントローラ 3"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
 msgctxt "game_options"
 msgid "CONTROLLER 4"
-msgstr ""
+msgstr "コントローラ 4"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -4624,12 +4624,12 @@ msgstr "コントローラ拡張ポートで拡張パックをエミュレート
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "CONTOLLER 1"
-msgstr ""
+msgstr "コントローラ 1"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "CONTROLLER PAK"
-msgstr ""
+msgstr "コントローラー パック"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -5169,7 +5169,7 @@ msgstr "N64 3ポイントモード"
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
 msgid "CONTOLLER 2"
-msgstr ""
+msgstr "コントローラ 2"
 
 #. TRANSLATION: libretro/pce, libretro/pce_fast
 msgctxt "game_options"
@@ -7672,7 +7672,7 @@ msgstr "クラシックコントローラ"
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Classic Controller Pro"
-msgstr ""
+msgstr "クラシックコントローラー Pro"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -9027,17 +9027,17 @@ msgstr "有効（使用）"
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "Set the sensitivity of the joystick analog sticks."
-msgstr ""
+msgstr "アナログスティックの感度を設定します"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "SENSITIVITY"
-msgstr ""
+msgstr "感度"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "100% (Default)"
-msgstr ""
+msgstr "100% (通常)"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
@@ -9047,12 +9047,12 @@ msgstr "アナログスティックのデッドゾーン(遊び幅)を設定し�
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "DEADZONE"
-msgstr ""
+msgstr "遊び幅"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "5% (Default)"
-msgstr ""
+msgstr "5%（通常）"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -9739,26 +9739,28 @@ msgid ""
 "Mega and Giga modes may improve performance. Use the Safe mode for maximum "
 "compatibility."
 msgstr ""
+"メガ モードとギガ モードによりパフォーマンスが向上する可能性があります。互換"
+"性を最大限に高めるには、セーフ モードを使用してください"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "SPU BLOCK SIZE"
-msgstr ""
+msgstr "SPU ブロック サイズ"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Safe (Default)"
-msgstr ""
+msgstr "安全 モード(標準)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Mega"
-msgstr ""
+msgstr "メガ モード"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Giga"
-msgstr ""
+msgstr "ギガ モード"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -9766,16 +9768,18 @@ msgid ""
 "Helps reduce CPU power consumption by throttling the CPU when not needed. "
 "Useful for handhelds."
 msgstr ""
+"不要なときに CPU を制限することで、CPU の電力消費を削減します。ハンドヘルドに"
+"便利です"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "MAX POWER SAVING CPU-PREEMPTIONS"
-msgstr ""
+msgstr "最大省電力 CPU切り替え"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Moderate"
-msgstr ""
+msgstr "適度"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10676,7 +10680,7 @@ msgstr "画面のずれを修正しますが、フレームドロップする可
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "Depends on video mode being set to BGFX."
-msgstr ""
+msgstr "BGFX に設定されているビデオ モードによって異なります"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -11337,7 +11341,7 @@ msgstr "16x (~7680p / 16k)"
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "PRESENTATION MODE"
-msgstr "視覚情報モード"
+msgstr "表示モード"
 
 #. TRANSLATION: play
 msgctxt "game_options"
@@ -11347,7 +11351,7 @@ msgstr "画面全体表示"
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Fit Screen"
-msgstr "画面に合わせる"
+msgstr "画面に合わせる(アス比維持)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
@@ -12211,22 +12215,22 @@ msgstr ""
 #. TRANSLATION: thextech
 msgctxt "game_options"
 msgid "On (default)"
-msgstr ""
+msgstr "オン (標準)"
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
 msgid "Better performance with hardware rendering."
-msgstr ""
+msgstr "ハードウェア レンダリングによるパフォーマンスの向上"
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
 msgid "Hardware (default)"
-msgstr ""
+msgstr "ハードウェア (標準)"
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
 msgid "Vsync"
-msgstr ""
+msgstr "VSYNC(垂直同期)"
 
 #. TRANSLATION: virtualjaguar
 msgctxt "game_options"
@@ -12537,42 +12541,42 @@ msgstr "GUI設定"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Start game"
-msgstr ""
+msgstr "ゲームを開始"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Insert coin"
-msgstr ""
+msgstr "コイン投入"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Nudge up"
-msgstr ""
+msgstr "少し　上"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Nudge left"
-msgstr ""
+msgstr "少し　左"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Nudge right"
-msgstr ""
+msgstr "少し　右"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Pull plunger"
-msgstr ""
+msgstr "レバー　引く"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
-msgstr ""
+msgstr "左 フリップ"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Right flipper"
-msgstr ""
+msgstr "右 フリップ"
 
 #. TRANSLATION: amigacd32.amiberry.keys, amiga500.amiberry.keys, amiga1200.amiberry.keys
 msgctxt "keys_files"
@@ -12602,7 +12606,7 @@ msgstr ""
 #. TRANSLATION: dos.dosbox-x.keys
 msgctxt "keys_files"
 msgid "Exit Dosbox-X"
-msgstr ""
+msgstr "Dosbox-X を終了"
 
 #. TRANSLATION: wiiu.keys
 msgctxt "keys_files"
@@ -12767,7 +12771,7 @@ msgstr "マウス クリック"
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Slot -"
-msgstr "スロット ー"
+msgstr "スロット -"
 
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
