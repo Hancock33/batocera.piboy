@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Aug 10, 2023
-SHADERC_VERSION = 171b8d0a6eac01abf597d00fc4a012a5003b9f4a
+SHADERC_VERSION = e166325b24d79d64bfa47065328890ce116ea642
 SHADERC_SITE =  $(call github,google,shaderc,$(SHADERC_VERSION))
 SHADERC_DEPENDENCIES = vulkan-headers vulkan-loader glslang spirv-tools
 SHADERC_INSTALL_STAGING = YES
