@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-08-04 10:43+0800\n"
+"PO-Revision-Date: 2023-08-06 00:01+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二\n"
 "Language: zh_CN\n"
@@ -7636,7 +7636,7 @@ msgstr "经典控制器"
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Classic Controller Pro"
-msgstr ""
+msgstr "经典控制器Pro"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -10596,7 +10596,7 @@ msgstr "修复屏幕撕裂.但可能会掉帧."
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "Depends on video mode being set to BGFX."
-msgstr ""
+msgstr "取决于视频模式设置为BGFX."
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -12434,42 +12434,42 @@ msgstr "设置界面"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Start game"
-msgstr ""
+msgstr "开始游戏"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Insert coin"
-msgstr ""
+msgstr "投币"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Nudge up"
-msgstr ""
+msgstr "向上微移"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Nudge left"
-msgstr ""
+msgstr "向左微移"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Nudge right"
-msgstr ""
+msgstr "向右微移"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Pull plunger"
-msgstr ""
+msgstr "拉动弹板"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left flipper"
-msgstr ""
+msgstr "左侧弹板"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Right flipper"
-msgstr ""
+msgstr "右侧弹板"
 
 #. TRANSLATION: amigacd32.amiberry.keys, amiga500.amiberry.keys, amiga1200.amiberry.keys
 msgctxt "keys_files"
@@ -12947,6 +12947,26 @@ msgstr ""
 #~ msgstr "自动高度"
 
 #~ msgctxt "game_options"
+#~ msgid "OVERLAY SIZE (SINGE)"
+#~ msgstr "覆盖尺寸 (单)"
+
+#~ msgctxt "game_options"
+#~ msgid "Standard"
+#~ msgstr "标准"
+
+#~ msgctxt "game_options"
+#~ msgid "HD Gun Games"
+#~ msgstr "高清射击游戏"
+
+#~ msgctxt "game_options"
+#~ msgid "Singe 2 Full"
+#~ msgstr "单变量到全变量"
+
+#~ msgctxt "game_options"
+#~ msgid "Singe 2 Half"
+#~ msgstr "单变量到半变量"
+
+#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "每像素是最准确的，但也是最苛刻的."
 
@@ -13089,26 +13109,6 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
-
-#~ msgctxt "game_options"
-#~ msgid "OVERLAY SIZE (SINGE)"
-#~ msgstr "覆盖尺寸 (单)"
-
-#~ msgctxt "game_options"
-#~ msgid "Standard"
-#~ msgstr "标准"
-
-#~ msgctxt "game_options"
-#~ msgid "HD Gun Games"
-#~ msgstr "高清射击游戏"
-
-#~ msgctxt "game_options"
-#~ msgid "Singe 2 Full"
-#~ msgstr "单变量到全变量"
-
-#~ msgctxt "game_options"
-#~ msgid "Singe 2 Half"
-#~ msgstr "单变量到半变量"
 
 #~ msgctxt "game_options"
 #~ msgid ""
