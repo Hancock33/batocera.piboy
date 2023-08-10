@@ -3,7 +3,7 @@
 # bstone
 #
 ################################################################################
-# Version: Commits on Jul 17, 2023
+# Version: Commits on Jul 19, 2023
 BSTONE_VERSION = dd93a185a5a79344722f40de384dac4ce73f8108
 BSTONE_SITE = $(call github,bibendovsky,bstone,$(BSTONE_VERSION))
 

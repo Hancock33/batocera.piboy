@@ -3,7 +3,7 @@
 # quakespasm
 #
 ################################################################################
-# Version: Commits on Jul 15, 2023
+# Version: Commits on Jul 16, 2023
 QUAKESPASM_VERSION = e132da234ba8e9a77e1dcb7f518ace39bec6521d
 QUAKESPASM_SITE = $(call github,sezero,quakespasm,$(QUAKESPASM_VERSION))
 

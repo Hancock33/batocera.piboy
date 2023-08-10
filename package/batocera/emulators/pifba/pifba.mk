@@ -3,6 +3,7 @@
 # pifba
 #
 ################################################################################
+# Version: Commits on Dec 22, 2015
 PIFBA_VERSION = 419faa7c3967560f6fa149f2f78b5aedca5b123a
 PIFBA_SITE = $(call github,batocera-linux,pifba,$(PIFBA_VERSION))
 PIFBA_LICENSE = GPLv2

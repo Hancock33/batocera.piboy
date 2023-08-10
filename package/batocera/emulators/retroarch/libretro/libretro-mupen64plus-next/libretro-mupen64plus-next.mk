@@ -3,7 +3,7 @@
 # libretro-mupen64plus-next
 #
 ################################################################################
-# Version: Commits on May 21, 2023
+# Version: Commits on Aug 08, 2023
 LIBRETRO_MUPEN64PLUS_NEXT_VERSION = 26fd1edd640ff3db49dd5ebb7e54f0de6600fc45
 LIBRETRO_MUPEN64PLUS_NEXT_SITE = $(call github,libretro,mupen64plus-libretro-nx,$(LIBRETRO_MUPEN64PLUS_NEXT_VERSION))
 LIBRETRO_MUPEN64PLUS_NEXT_LICENSE = GPLv2
