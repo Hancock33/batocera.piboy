@@ -359,6 +359,16 @@ centurye:
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
 
+chihiro:
+  name:                 Sega Chihiro
+  manufacturer:         Arcade
+  release:              2003
+  hardware:             console
+  extensions:           [iso]
+  emulators:
+    xemu:
+      xemu:             { requireAnyOf: [BR2_PACKAGE_XEMU] }
+
 cinematronics:
   name:                 Cinematronics
   manufacturer:         Arcade
