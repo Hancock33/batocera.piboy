@@ -56,8 +56,8 @@ if  BR2_PACKAGE_BATOCERA_TARGET_S905 || BR2_PACKAGE_BATOCERA_TARGET_S812
 endif
 
 if  BR2_PACKAGE_BATOCERA_TARGET_S905GEN2 || BR2_PACKAGE_BATOCERA_TARGET_S905GEN3 || \
-    BR2_PACKAGE_BATOCERA_TARGET_S912     || BR2_PACKAGE_BATOCERA_TARGET_S922X    || \
-    BR2_PACKAGE_BATOCERA_TARGET_A3GEN2   || BR2_PACKAGE_BATOCERA_TARGET_S9GEN4
+    BR2_PACKAGE_BATOCERA_TARGET_S922X    || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2   || \
+    BR2_PACKAGE_BATOCERA_TARGET_S9GEN4
     config BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_GLES3
     bool "amlogic gles3"
     default y
@@ -407,7 +407,6 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     default "amlogic/s905gen3/odroidc4 amlogic/s905gen3/tvbox-gen3"                                                                                                                  if BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
     default "amlogic/s9gen4/khadas-vim1s"                                                                                                                                            if BR2_PACKAGE_BATOCERA_TARGET_S9GEN4
     default "amlogic/a3gen2/khadas-vim-4 amlogic/a3gen2/khadas-vim-1s"                                                                                                               if BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
-    default "amlogic/s912/vim2"                                                                                                                                                      if BR2_PACKAGE_BATOCERA_TARGET_S912
     default "broadcom/bcm2835"                                                                                                                                                       if BR2_PACKAGE_BATOCERA_TARGET_BCM2835
     default "broadcom/bcm2836"                                                                                                                                                       if BR2_PACKAGE_BATOCERA_TARGET_BCM2836
     default "broadcom/bcm2837"                                                                                                                                                       if BR2_PACKAGE_BATOCERA_TARGET_BCM2837
@@ -485,9 +484,6 @@ config BR2_PACKAGE_BATOCERA_TARGET_S812
 
 config BR2_PACKAGE_BATOCERA_TARGET_S905
     bool "s905"
-
-config BR2_PACKAGE_BATOCERA_TARGET_S912
-    bool "s912"
 
 config BR2_PACKAGE_BATOCERA_TARGET_S905GEN2
     bool "s905gen2"
@@ -610,7 +606,7 @@ config BR2_PACKAGE_BATOCERA_FLASH_SYSTEMS
 
     # Flash Player Emulator
     select BR2_PACKAGE_RUFFLE                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  && BR2_PACKAGE_XORG7 # need to be configured to support crosscompilation
-    select BR2_PACKAGE_LIGHTSPARK                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  && BR2_PACKAGE_XORG7 || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
+    select BR2_PACKAGE_LIGHTSPARK                           if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
 
 #### Moonlight / Gamestream ####
 config BR2_PACKAGE_BATOCERA_GAMESTREAM_SYSTEMS
@@ -801,6 +797,9 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
 
     # Sony PS Vita
     select BR2_PACKAGE_VITA3K                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
+    # MegaDuck
+    select BR2_PACKAGE_LIBRETRO_SAMEDUCK        # ALL
 
     help
         Handheld cores/emulators
@@ -997,7 +996,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3399      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3288      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3128      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S912        || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
@@ -1099,7 +1097,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3326     && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_S905       && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H5         && \
-                                                                !BR2_PACKAGE_BATOCERA_TARGET_S912       && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H616       && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H6
 
@@ -1206,10 +1203,7 @@ config BR2_PACKAGE_BATOCERA_MUPEN64
     # Video plugin
     select BR2_PACKAGE_MUPEN64PLUS_VIDEO_GLIDE64MK2
     select BR2_PACKAGE_MUPEN64PLUS_GLIDEN64
-    select BR2_PACKAGE_MUPEN64PLUS_VIDEO_RICE               if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     || BR2_PACKAGE_BATOCERA_TARGET_RK3399   || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588      || BR2_PACKAGE_BATOCERA_TARGET_RK3288   || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_S905GEN2 || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S905GEN3    || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
+    select BR2_PACKAGE_MUPEN64PLUS_VIDEO_RICE               if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     || BR2_PACKAGE_BATOCERA_GLES3
 
     help
       Mupen64
