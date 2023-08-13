@@ -12474,6 +12474,11 @@ msgstr ""
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
+msgid "Reset the table, sometimes required for PinMame"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
 msgid "Start game"
 msgstr ""
 
@@ -12959,14 +12964,6 @@ msgstr ""
 #~ msgstr "A GZDOOM JOYSTICK KONFIGURÁCIÓJÁNAK HASZNÁLATA"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Játék újrakezdése"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Következő lemez (m3u)"
-
-#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "Betöltési állapot Slot 1"
 
@@ -13045,6 +13042,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Gyors előre"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Játék újrakezdése"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Következő lemez (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "OVERLAY SIZE (SINGE)"

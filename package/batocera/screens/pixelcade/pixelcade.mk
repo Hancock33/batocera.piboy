@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-PIXELCADE_VERSION = 3b85f6aedc6ed05d2aca053a35f7ab12f8c9da1b
+PIXELCADE_VERSION = 5bf13124c2a8ca0392284f791952383ebc7e4a8f
 PIXELCADE_SITE = $(call github,alinke,pixelcade-linux-builds,$(PIXELCADE_VERSION))
 
 ifeq ($(BR2_x86_64),y)
@@ -24,6 +24,7 @@ endif
 define PIXELCADE_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 -D $(@D)/$(PIXELCADE_ARCH_DIR)/pixelweb $(TARGET_DIR)/usr/bin/pixelweb
 	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/screens/pixelcade/pixelcade-tools    $(TARGET_DIR)/usr/bin/pixelcade-tools
+	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/screens/pixelcade/pixelcade-add      $(TARGET_DIR)/usr/bin/pixelcade-add
 	$(INSTALL) -m 0644 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/screens/pixelcade/99-pixelcade.rules $(TARGET_DIR)/etc/udev/rules.d/99-pixelcade.rules
 
 	mkdir -p $(TARGET_DIR)/usr/share/pixelcade/images/system

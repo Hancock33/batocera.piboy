@@ -4,8 +4,8 @@ default:
     video_threaded: true
 
 nds:
-  emulator: drastic
-  core:     drastic
+  emulator: libretro
+  core:     melonds
 fmtowns:
   emulator: libretro
   core:     mame
@@ -18,3 +18,7 @@ dreamcast:
 naomi:
   emulator: libretro
   core:     flycast
+flash:
+  emulator: lightspark
+  core:     lightspark
+

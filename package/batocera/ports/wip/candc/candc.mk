@@ -3,7 +3,7 @@
 # candc
 #
 ################################################################################
-# Version: Commits on Aug 03, 2023
+# Version: Commits on Aug 08, 2023
 CANDC_VERSION = 59efc8949b4bbe3f1fe9961fbcf828b927064f8e
 CANDC_SITE = $(call github,TheAssemblyArmada,Vanilla-Conquer,$(CANDC_VERSION))
 

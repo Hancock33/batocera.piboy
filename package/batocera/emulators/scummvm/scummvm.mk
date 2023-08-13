@@ -3,8 +3,8 @@
 # scummvm
 #
 ################################################################################
-# Version: Commits on Aug 10, 2023
-SCUMMVM_VERSION = 871d7dc7d3187526f6c43e69b8995ac6f7aea032
+# Version: Commits on Aug 13, 2023
+SCUMMVM_VERSION = cc03a0adc5f0e76e57b69de625dcf9cfc691f742
 SCUMMVM_SITE = $(call github,scummvm,scummvm,$(SCUMMVM_VERSION))
 SCUMMVM_LICENSE = GPLv2
 SCUMMVM_DEPENDENCIES = sdl2 zlib libmpeg2 libogg libvorbis flac libmad libpng libtheora faad2 freetype
@@ -31,6 +31,10 @@ SCUMMVM_CONF_OPTS += --disable-static --enable-c++11 --enable-opengl --disable-d
             --enable-keymapper --disable-eventrecorder --prefix=/usr --with-sdl-prefix="$(STAGING_DIR)/usr/bin"
 
 SCUMMVM_MAKE_OPTS += RANLIB="$(TARGET_RANLIB)" STRIP="$(TARGET_STRIP)" AR="$(TARGET_AR) cru" AS="$(TARGET_AS)" LD="$(TARGET_CXX)"
+
+ifeq ($(BR2_ARCH_IS_64),y)
+    SCUMMVM_CONF_OPTS += --disable-ext-neon
+endif
 
 define SCUMMVM_ADD_VIRTUAL_KEYBOARD
     cp -f $(@D)/backends/vkeybd/packs/vkeybd_default.zip $(TARGET_DIR)/usr/share/scummvm

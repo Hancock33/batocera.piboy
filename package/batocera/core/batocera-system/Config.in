@@ -56,8 +56,8 @@ if  BR2_PACKAGE_BATOCERA_TARGET_S905 || BR2_PACKAGE_BATOCERA_TARGET_S812
 endif
 
 if  BR2_PACKAGE_BATOCERA_TARGET_S905GEN2 || BR2_PACKAGE_BATOCERA_TARGET_S905GEN3 || \
-    BR2_PACKAGE_BATOCERA_TARGET_S912     || BR2_PACKAGE_BATOCERA_TARGET_S922X    || \
-    BR2_PACKAGE_BATOCERA_TARGET_A3GEN2   || BR2_PACKAGE_BATOCERA_TARGET_S9GEN4
+    BR2_PACKAGE_BATOCERA_TARGET_S922X    || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2   || \
+    BR2_PACKAGE_BATOCERA_TARGET_S9GEN4
     config BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_GLES3
     bool "amlogic gles3"
     default y
@@ -407,7 +407,6 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     default "amlogic/s905gen3/odroidc4 amlogic/s905gen3/tvbox-gen3"                                                                                                                  if BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
     default "amlogic/s9gen4/khadas-vim1s"                                                                                                                                            if BR2_PACKAGE_BATOCERA_TARGET_S9GEN4
     default "amlogic/a3gen2/khadas-vim-4 amlogic/a3gen2/khadas-vim-1s"                                                                                                               if BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
-    default "amlogic/s912/vim2"                                                                                                                                                      if BR2_PACKAGE_BATOCERA_TARGET_S912
     default "broadcom/bcm2835"                                                                                                                                                       if BR2_PACKAGE_BATOCERA_TARGET_BCM2835
     default "broadcom/bcm2836"                                                                                                                                                       if BR2_PACKAGE_BATOCERA_TARGET_BCM2836
     default "broadcom/bcm2837"                                                                                                                                                       if BR2_PACKAGE_BATOCERA_TARGET_BCM2837
@@ -485,9 +484,6 @@ config BR2_PACKAGE_BATOCERA_TARGET_S812
 
 config BR2_PACKAGE_BATOCERA_TARGET_S905
     bool "s905"
-
-config BR2_PACKAGE_BATOCERA_TARGET_S912
-    bool "s912"
 
 config BR2_PACKAGE_BATOCERA_TARGET_S905GEN2
     bool "s905gen2"
@@ -610,7 +606,7 @@ config BR2_PACKAGE_BATOCERA_FLASH_SYSTEMS
 
     # Flash Player Emulator
     select BR2_PACKAGE_RUFFLE                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  && BR2_PACKAGE_XORG7 # need to be configured to support crosscompilation
-    select BR2_PACKAGE_LIGHTSPARK                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  && BR2_PACKAGE_XORG7 || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
+    select BR2_PACKAGE_LIGHTSPARK                           if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
 
 #### Moonlight / Gamestream ####
 config BR2_PACKAGE_BATOCERA_GAMESTREAM_SYSTEMS
@@ -801,6 +797,9 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
 
     # Sony PS Vita
     select BR2_PACKAGE_VITA3K                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
+    # MegaDuck
+    select BR2_PACKAGE_LIBRETRO_SAMEDUCK                    # ALL
 
     help
         Handheld cores/emulators
@@ -997,7 +996,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3399      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3288      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3128      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S912        || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
@@ -1099,7 +1097,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3326     && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_S905       && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H5         && \
-                                                                !BR2_PACKAGE_BATOCERA_TARGET_S912       && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H616       && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H6
 
@@ -1206,10 +1203,7 @@ config BR2_PACKAGE_BATOCERA_MUPEN64
     # Video plugin
     select BR2_PACKAGE_MUPEN64PLUS_VIDEO_GLIDE64MK2
     select BR2_PACKAGE_MUPEN64PLUS_GLIDEN64
-    select BR2_PACKAGE_MUPEN64PLUS_VIDEO_RICE               if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     || BR2_PACKAGE_BATOCERA_TARGET_RK3399   || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588      || BR2_PACKAGE_BATOCERA_TARGET_RK3288   || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_S905GEN2 || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S905GEN3    || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
+    select BR2_PACKAGE_MUPEN64PLUS_VIDEO_RICE               if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     || BR2_PACKAGE_BATOCERA_GLES3
 
     help
       Mupen64
@@ -1249,7 +1243,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_LIBRETRO_QUICKNES
     select BR2_PACKAGE_LIBRETRO_RACE                        # Neo Geo Pocket
     select BR2_PACKAGE_LIBRETRO_SAMEBOY                     # Gameboy
-    select BR2_PACKAGE_LIBRETRO_SAMEDUCK                    # Sameduck
     select BR2_PACKAGE_LIBRETRO_SUPAFAUST
     select BR2_PACKAGE_LIBRETRO_VAPORSPEC
     select BR2_PACKAGE_LIBRETRO_VEMULATOR                   # Dreamcast VMU
@@ -1287,8 +1280,8 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     #select BR2_PACKAGE_CANDC                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Red Alert / Tiberian Dawn (WIP)
     select BR2_PACKAGE_CORSIXTH                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Theme Hospital
     select BR2_PACKAGE_F2BGL                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Fade To Black
-    select BR2_PACKAGE_FALLOUT1                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Fallout1
-    select BR2_PACKAGE_FALLOUT2                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Fallout2
+    select BR2_PACKAGE_FALLOUT1_CE                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Fallout1
+    select BR2_PACKAGE_FALLOUT2_CE                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Fallout2
     select BR2_PACKAGE_FREEDROID                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Paradroid
     #select BR2_PACKAGE_HALFLIFE2                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Half-Life 2
     select BR2_PACKAGE_HODE                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Heart of Darkness
@@ -1316,6 +1309,12 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_TEKWAR                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Tekwar
     select BR2_PACKAGE_VCMI                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Heroes of Might and Magic III
     select BR2_PACKAGE_XBOX_XCLOUD_CLIENT                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                            # Xbox Cloud Gaming
+
+    # Fallout 1 open source engine
+    select BR2_PACKAGE_FALLOUT1_CE          # ALL
+
+    # Fallout 2 open source engine
+    select BR2_PACKAGE_FALLOUT2_CE          # ALL
 
     help
         Emulators under development (Experimental)
