@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Aug 09, 2023
-RPCS3_VERSION = 4bbe885f35390194d0377195d9024cfb8499262b
+# Version: Commits on Aug 13, 2023
+RPCS3_VERSION = 219ee76bf23972de7e8452bf9a6b496300b4e2ca
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
@@ -23,21 +23,27 @@ RPCS3_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 RPCS3_CONF_OPTS += -DUSE_NATIVE_INSTRUCTIONS=OFF
 #RPCS3_CONF_OPTS += -DBUILD_LLVM_SUBMODULE=OFF
 #RPCS3_CONF_OPTS += -DLLVM_DIR=$(STAGING_DIR)/usr/lib/cmake/llvm/
-#RPCS3_CONF_OPTS += -DSTATIC_LINK_LLVM=OFF
 RPCS3_CONF_OPTS += -DBUILD_LLVM=ON
-RPCS3_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=ON
+RPCS3_CONF_OPTS += -DUSE_PRECOMPILED_HEADERS=OFF
+#RPCS3_CONF_OPTS += -DSTATIC_LINK_LLVM=OFF
+RPCS3_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=OFF
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_CURL=ON
 RPCS3_CONF_OPTS += -DUSE_SDL=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_SDL=ON
-RPCS3_CONF_OPTS += -DUSE_PRECOMPILED_HEADERS=ON
+# this is ugly, but necessary... for now...
+RPCS3_CONF_OPTS += -DFFMPEG_LIB_AVCODEC=../3rdparty/ffmpeg/lib/linux/ubuntu-22.04/x86_64/libavcodec.a
+RPCS3_CONF_OPTS += -DFFMPEG_LIB_AVFORMAT=../3rdparty/ffmpeg/lib/linux/ubuntu-22.04/x86_64/libavformat.a
+RPCS3_CONF_OPTS += -DFFMPEG_LIB_AVUTIL=../3rdparty/ffmpeg/lib/linux/ubuntu-22.04/x86_64/libavutil.a
+RPCS3_CONF_OPTS += -DFFMPEG_LIB_SWSCALE=../3rdparty/ffmpeg/lib/linux/ubuntu-22.04/x86_64/libswscale.a
+RPCS3_CONF_OPTS += -DFFMPEG_LIB_SWRESAMPLE=../3rdparty/ffmpeg/lib/linux/ubuntu-22.04/x86_64/libswresample.a
 
 RPCS3_CONF_ENV = LIBS="-ncurses -ltinfo"
 
 define RPCS3_INSTALL_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	$(INSTALL) -D -m 0644 \
-	    $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/rpcs3/evmapy.keys \
-	    $(TARGET_DIR)/usr/share/evmapy/ps3.keys
+    mkdir -p $(TARGET_DIR)/usr/share/evmapy
+    $(INSTALL) -D -m 0644 \
+        $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/rpcs3/evmapy.keys \
+        $(TARGET_DIR)/usr/share/evmapy/ps3.keys
 endef
 
 RPCS3_POST_INSTALL_TARGET_HOOKS = RPCS3_INSTALL_EVMAPY

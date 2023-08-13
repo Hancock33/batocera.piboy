@@ -24,6 +24,9 @@
 - Added Sega Pico system entry utilizing existing emulator cores
 - Added Hydra Castle Labyrinth, a 16-bit platformer game (through content downloader)
 - Added Hurrican, a Turrican clone (through content downloader)
+- Added Tyrian, a vertical shooter (through content downloader)
+- Re-enabled lr-sameduck for MegaDuck with retroachievements and zip/7z support
+- initialize wheel support : new automatic collection ; es wheel icon ; wheel game database
 ### Fixed
 - Fix wifi/bluetooth on Tinkerboard
 - Fixed crop overscan settings for NES to work with newer core builds
@@ -39,6 +42,7 @@
 - Model2 emulator will now default to 4:3 unless widescreen selected
 - Model2 emulator now allows rendering resolution to be selected
 - Model2 now allows you to enable scanlines
+- batocera-services - custom.sh is deprecated and may be removed in a later version. Put your services into /userdata/system/services, and enable them in batocera.conf (syncthing may be reenabled).
 ### Updated
 - xenia to v1.0.2805
 - xenia canary to ba936e8 (Commits on Jul 22, 2023)
@@ -193,7 +197,7 @@
 - moonlight options
 - lr-mGBA to v0.10.2
 - vice to v3.7.1
-- rpcs3 to v0.0.28
+- rpcs3 to 0.0.29-15479
 - pcsx2 to v1.7.4439 (Qt6) (note: memory cards now saved to /userdata/saves/ps2/pcsx2)
 - Pyxel to 1.9.15
 - Citra to nightly-1903

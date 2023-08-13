@@ -3,20 +3,19 @@
 # gzdoom
 #
 ################################################################################
-# Version: Commits on Aug 10, 2023
-GZDOOM_VERSION = d99ed7628cfb804a346ca826b27f863fe7f48385
+# Version: Commits on Aug 13, 2023
+GZDOOM_VERSION = c727e40e6cd127fe937118bdfb185a8eb8a1e5e4
 GZDOOM_SITE = $(call github,ZDoom,gzdoom,$(GZDOOM_VERSION))
 GZDOOM_LICENSE = GPL-3.0
-GZDOOM_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew host-zmusic zmusic libvpx
+GZDOOM_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew host-zmusic zmusic libvpx host-raze
 GZDOOM_CMAKE_BACKEND = ninja
 
 GZDOOM_SUPPORTS_IN_SOURCE_BUILD = YES
-HOST_GZDOOM_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 GZDOOM_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 GZDOOM_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 GZDOOM_CONF_OPTS += -DNO_GTK=ON
 GZDOOM_CONF_OPTS += -DFORCE_CROSSCOMPILE=ON
-GZDOOM_CONF_OPTS += -DIMPORT_EXECUTABLES=$(HOST_GZDOOM_BUILDDIR)/ImportExecutables.cmake
+GZDOOM_CONF_OPTS += -DIMPORT_EXECUTABLES=$(HOST_RAZE_BUILDDIR)/ImportExecutables.cmake
 GZDOOM_CONF_OPTS += -DINSTALL_SOUNDFONT_PATH="/usr/share/gzdoom"
 GZDOOM_CONF_OPTS += -DINSTALL_PK3_PATH="/usr/share/gzdoom"
 
@@ -40,4 +39,4 @@ endef
 GZDOOM_POST_INSTALL_TARGET_HOOKS += GZDOOM_INSTALL
 
 $(eval $(cmake-package))
-$(eval $(host-cmake-package))
+

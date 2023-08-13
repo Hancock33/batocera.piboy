@@ -7,7 +7,7 @@
 RAZE_VERSION = 85b6c1944232bb9caa562647336f4b8ef828cd17
 RAZE_SITE = $(call github,ZDoom,Raze,$(RAZE_VERSION))
 RAZE_LICENSE = GPLv2
-RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic gzdoom host-gzdoom
+RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic gzdoom
 RAZE_SUPPORTS_IN_SOURCE_BUILD = NO
 RAZE_CMAKE_BACKEND = ninja
 
@@ -15,7 +15,7 @@ RAZE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 RAZE_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 RAZE_CONF_OPTS += -DNO_GTK=ON
 RAZE_CONF_OPTS += -DFORCE_CROSSCOMPILE=ON
-RAZE_CONF_OPTS += -DIMPORT_EXECUTABLES=$(HOST_GZDOOM_BUILDDIR)/ImportExecutables.cmake
+RAZE_CONF_OPTS += -DIMPORT_EXECUTABLES=$(HOST_RAZE_BUILDDIR)/ImportExecutables.cmake
 RAZE_CONF_OPTS += -DINSTALL_SOUNDFONT_PATH="/usr/share/raze"
 RAZE_CONF_OPTS += -DINSTALL_PK3_PATH="/usr/share/raze/"
 RAZE_CONF_OPTS += -DPROGDIR="/usr/share/raze"
@@ -41,7 +41,19 @@ define RAZE_INSTALL
     mkdir -p $(TARGET_DIR)/usr/share/evmapy
     cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/raze/raze.keys $(TARGET_DIR)/usr/share/evmapy
 endef
-
 RAZE_POST_INSTALL_TARGET_HOOKS += RAZE_INSTALL
 
+define HOST_RAZE_BUILDTOOLS
+	sed -i '/( wadsrc )/d' $(@D)/CMakeLists.txt
+	sed -i '/( source )/d' $(@D)/CMakeLists.txt
+endef
+HOST_RAZE_PRE_CONFIGURE_HOOKS += HOST_RAZE_BUILDTOOLS
+
+define HOST_RAZE_INSTALL
+    cp -av $(@D)/buildroot-build/libraries/gdtoa/arithchk $(HOST_DIR)/bin
+    cp -av $(@D)/buildroot-build/libraries/gdtoa/qnan     $(HOST_DIR)/bin
+endef
+HOST_RAZE_POST_INSTALL_HOOKS += HOST_RAZE_INSTALL
+
 $(eval $(cmake-package))
+$(eval $(host-cmake-package))

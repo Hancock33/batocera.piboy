@@ -3,7 +3,7 @@
 # xemu
 #
 ################################################################################
-# Version: Commits on Aug 01, 2023
+# Version: Commits on Aug 02, 2023
 XEMU_VERSION = edecb41b9723d680f8e6ed87a8f709b8db6ca32f
 XEMU_SITE = https://github.com/xemu-project/xemu
 XEMU_SITE_METHOD=git
@@ -101,6 +101,7 @@ endef
 define XEMU_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/xemu/xbox.xemu.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/xemu/xbox.xemu.keys $(TARGET_DIR)/usr/share/evmapy/chihiro.keys
 endef
 
 XEMU_POST_INSTALL_TARGET_HOOKS += XEMU_EVMAPY
