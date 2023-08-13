@@ -3584,7 +3584,7 @@ fallout1:
   path:                 /userdata/roms/ports/fallout1
   emulators:
     fallout2:
-      fallout2:         { requireAnyOf: [BR2_PACKAGE_FALLOUT1] }
+      fallout2:         { requireAnyOf: [BR2_PACKAGE_FALLOUT1_CE] }
 
 fallout2:
   name:                 Fallout 2
@@ -3597,7 +3597,7 @@ fallout2:
   path:                 /userdata/roms/ports/fallout2
   emulators:
     fallout2:
-      fallout2:         { requireAnyOf: [BR2_PACKAGE_FALLOUT2] }
+      fallout2:         { requireAnyOf: [BR2_PACKAGE_FALLOUT2_CE] }
 
 flatpak:
   name:                 Applications
