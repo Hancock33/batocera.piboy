@@ -32,6 +32,10 @@ SCUMMVM_CONF_OPTS += --disable-static --enable-c++11 --enable-opengl --disable-d
 
 SCUMMVM_MAKE_OPTS += RANLIB="$(TARGET_RANLIB)" STRIP="$(TARGET_STRIP)" AR="$(TARGET_AR) cru" AS="$(TARGET_AS)" LD="$(TARGET_CXX)"
 
+ifeq ($(BR2_ARCH_IS_64),y)
+    SCUMMVM_CONF_OPTS += --disable-ext-neon
+endif
+
 define SCUMMVM_ADD_VIRTUAL_KEYBOARD
     cp -f $(@D)/backends/vkeybd/packs/vkeybd_default.zip $(TARGET_DIR)/usr/share/scummvm
     cp -f $(@D)/backends/vkeybd/packs/vkeybd_small.zip $(TARGET_DIR)/usr/share/scummvm
