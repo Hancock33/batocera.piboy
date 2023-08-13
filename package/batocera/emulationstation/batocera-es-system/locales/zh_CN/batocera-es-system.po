@@ -12433,6 +12433,11 @@ msgstr "设置界面"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
+msgid "Reset the table, sometimes required for PinMame"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
 msgid "Start game"
 msgstr "开始游戏"
 
@@ -12947,26 +12952,6 @@ msgstr ""
 #~ msgstr "自动高度"
 
 #~ msgctxt "game_options"
-#~ msgid "OVERLAY SIZE (SINGE)"
-#~ msgstr "覆盖尺寸 (单)"
-
-#~ msgctxt "game_options"
-#~ msgid "Standard"
-#~ msgstr "标准"
-
-#~ msgctxt "game_options"
-#~ msgid "HD Gun Games"
-#~ msgstr "高清射击游戏"
-
-#~ msgctxt "game_options"
-#~ msgid "Singe 2 Full"
-#~ msgstr "单变量到全变量"
-
-#~ msgctxt "game_options"
-#~ msgid "Singe 2 Half"
-#~ msgstr "单变量到半变量"
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "每像素是最准确的，但也是最苛刻的."
 
@@ -12997,14 +12982,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "使用GZDOOM操纵杆配置"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "重置游戏"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "下一个光盘（m3u）"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
@@ -13109,6 +13086,34 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "重置游戏"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "下一个光盘（m3u）"
+
+#~ msgctxt "game_options"
+#~ msgid "OVERLAY SIZE (SINGE)"
+#~ msgstr "覆盖尺寸 (单)"
+
+#~ msgctxt "game_options"
+#~ msgid "Standard"
+#~ msgstr "标准"
+
+#~ msgctxt "game_options"
+#~ msgid "HD Gun Games"
+#~ msgstr "高清射击游戏"
+
+#~ msgctxt "game_options"
+#~ msgid "Singe 2 Full"
+#~ msgstr "单变量到全变量"
+
+#~ msgctxt "game_options"
+#~ msgid "Singe 2 Half"
+#~ msgstr "单变量到半变量"
 
 #~ msgctxt "game_options"
 #~ msgid ""
