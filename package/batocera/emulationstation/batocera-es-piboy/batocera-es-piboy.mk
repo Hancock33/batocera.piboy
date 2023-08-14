@@ -11,7 +11,6 @@ BATOCERA_ES_PIBOY_LICENSE = MIT
 BATOCERA_ES_PIBOY_GIT_SUBMODULES = YES
 BATOCERA_ES_PIBOY_LICENSE = MIT, Apache-2.0
 BATOCERA_ES_PIBOY_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib libcurl vlc rapidjson pulseaudio batocera-es-system host-gettext espeak
-BATOCERA_ES_PIBOY_CMAKE_BACKEND = ninja
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGLES),y)
 BATOCERA_ES_PIBOY_CONF_OPTS += -DGLES2=ON
