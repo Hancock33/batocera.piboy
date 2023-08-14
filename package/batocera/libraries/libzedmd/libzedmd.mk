@@ -12,6 +12,4 @@ LIBZEDMD_LICENSE_FILES = LICENSE
 # Install to staging to build Visual Pinball Standalone
 LIBZEDMD_INSTALL_STAGING = YES
 
-LIBZEDMD_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
-
 $(eval $(cmake-package))

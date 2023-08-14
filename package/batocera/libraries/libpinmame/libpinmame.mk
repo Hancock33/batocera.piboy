@@ -16,8 +16,6 @@ define LIBPINMAME_RENAME_CMAKE
     rm $(@D)/makefile
 endef
 
-LIBPINMAME_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
-
 define LIBPINMAME_INSTALL_TARGET_CMDS
     # staging files
     $(INSTALL) -D -m 0755 $(@D)/buildroot-build/libpinmame.so.3.6 \

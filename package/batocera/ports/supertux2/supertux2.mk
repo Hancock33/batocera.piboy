@@ -9,7 +9,6 @@ SUPERTUX2_SITE = https://github.com/SuperTux/supertux.git
 SUPERTUX2_SITE_METHOD=git
 SUPERTUX2_GIT_SUBMODULES=YES
 SUPERTUX2_SUPPORTS_IN_SOURCE_BUILD = NO
-SUPERTUX2_CMAKE_BACKEND = ninja
 
 # Supertux itself is GPL-3.0+, but it bundles a few libraries with different
 # licenses (sexp-cpp, squirrel, tinygettext) which are linked statically.

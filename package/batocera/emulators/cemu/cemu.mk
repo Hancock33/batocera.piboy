@@ -13,9 +13,7 @@ CEMU_DEPENDENCIES = sdl2 host-libcurl host-pugixml pugixml rapidjson boost libpn
                     libzip host-glslang glslang zlib zstd wxwidgets fmt glm
 
 CEMU_SUPPORTS_IN_SOURCE_BUILD = NO
-CEMU_CMAKE_BACKEND = ninja
 
-CEMU_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 CEMU_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 CEMU_CONF_OPTS += -DENABLE_DISCORD_RPC=OFF
 CEMU_CONF_OPTS += -DENABLE_VCPKG=OFF

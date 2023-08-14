@@ -9,9 +9,8 @@ HCL_SITE = $(call github,ptitSeb,hydracastlelabyrinth,$(HCL_VERSION))
 HCL_DEPENDENCIES = sdl2 sdl2_mixer
 HCL_LICENSE = GPL-2.0
 HCL_SUPPORTS_IN_SOURCE_BUILD = NO
-HCL_CMAKE_BACKEND = ninja
 
-HCL_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DUSE_SDL2=ON
+HCL_CONF_OPTS += -DUSE_SDL2=ON
 
 define HCL_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/hcl
