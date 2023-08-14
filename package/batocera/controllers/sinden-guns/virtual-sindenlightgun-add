@@ -18,11 +18,11 @@ then
     PARENTHASH=$(evsieve-helper parent-raw "${DEVNAME}" video usb | sed -e s+"\.1$"+".2"+ | md5sum | cut -c 1-32)
     PARENTVIDEOSHASH=$(evsieve-helper parent "${DEVNAME}" video usb)
 fi
-BASEFILE="/var/run/virtual-sindenlightgun-devices.${PARENTHASH}"
-PIDFILE="${BASEFILE}.pid"
-LOCKFILE="${BASEFILE}.lock"
-LOGFILE="${BASEFILE}.log"
-LOGFILE2="${BASEFILE}.log2"
+BASEFILE="virtual-sindenlightgun-devices.${PARENTHASH}"
+PIDFILE="/var/run/${BASEFILE}.pid"
+LOCKFILE="/var/run/${BASEFILE}.lock"
+LOGFILE="/var/log/${BASEFILE}.log"
+LOGFILE2="/var/log/${BASEFILE}.log2"
 
 unlockAndExit() {
     rmdir "${LOCKFILE}"
@@ -65,19 +65,6 @@ NDEVSINPUTS=$(echo "${CHILDRENINPUTS}" | wc -l)
 
 CHILDRENVIDEOS=$(evsieve-helper children "${PARENTVIDEOSHASH}" video usb)
 NDEVSVIDEOS=$(echo "${CHILDRENVIDEOS}" | wc -l)
-
-### hack to fix the sinden code ###
-if test "${DEVTYPE}" = "video"
-then
-    for L in ${DEVLINKS}
-    do
-	if echo "${L}" | grep -qE "^/dev/v4l/by-id/"
-	then
-	    ln -sf "${L}" "/dev/input/by-id/"$(basename "${L}")
-	fi
-    done
-fi
-### ###
 
 if test "${NDEVSINPUTS}" = 2 -a "${NDEVSVIDEOS}" -ge 1
 then
