@@ -45,6 +45,11 @@ class Pcsx2Generator(Generator):
         controllersConfig.writeSDLGameDBAllControllers(playersControllers, dbfile)
 
         commandArray = ["/usr/bin/pcsx2/pcsx2", "-nogui", "-fullscreen", rom]
+
+        with open("/proc/cpuinfo") as cpuinfo:
+            if not re.search(r'^flags\s*:.*\ssse4_1\W', cpuinfo.read(), re.MULTILINE):
+                eslog.warning("CPU does not support SSE4.1 which is required by pcsx2.  The emulator will likely crash with SIGILL (illegal instruction).")
+
         return Command.Command(
             array=commandArray,
             env={ "XDG_CONFIG_HOME":batoceraFiles.CONF,
