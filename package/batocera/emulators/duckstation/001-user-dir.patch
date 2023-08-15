@@ -1,8 +1,8 @@
 diff --git a/src/core/settings.cpp b/src/core/settings.cpp
-index f3a92796..d23a95f0 100644
+index 6b8946cd..735c38a2 100644
 --- a/src/core/settings.cpp
 +++ b/src/core/settings.cpp
-@@ -1293,18 +1293,18 @@ std::string EmuFolders::Textures;
+@@ -1304,18 +1304,18 @@ std::string EmuFolders::Textures;
  
  void EmuFolders::SetDefaults()
  {
@@ -33,7 +33,7 @@ index f3a92796..d23a95f0 100644
  }
  
  static std::string LoadPathFromSettings(SettingsInterface& si, const std::string& root, const char* section,
-@@ -1350,18 +1350,18 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
+@@ -1361,18 +1361,18 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
  void EmuFolders::Save(SettingsInterface& si)
  {
    // convert back to relative
