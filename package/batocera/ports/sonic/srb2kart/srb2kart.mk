@@ -3,8 +3,8 @@
 # srb2kart
 #
 ################################################################################
-# Version: Commits on Aug 03, 2023
-SRB2KART_VERSION = c499a8387e1daf9519d443251444beafbdeacea2
+# Version: Commits on Aug 14, 2023
+SRB2KART_VERSION = 684b016487823dbb2922b480455fd6dff78aedee
 SRB2KART_SITE = $(call github,STJr,Kart-Public,$(SRB2KART_VERSION))
 
 SRB2KART_DEPENDENCIES = sdl2 sdl2_mixer libgme

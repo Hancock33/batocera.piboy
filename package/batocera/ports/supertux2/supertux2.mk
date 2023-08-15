@@ -3,8 +3,8 @@
 # supertux2
 #
 ################################################################################
-# Version: Commits on Aug 13, 2023
-SUPERTUX2_VERSION = 879ec46cf976b41b21d6c72a2dde35ae495f3783
+# Version: Commits on Aug 15, 2023
+SUPERTUX2_VERSION = e77c5e04967f26c24306e4a84a6bc16879a27873
 SUPERTUX2_SITE = https://github.com/SuperTux/supertux.git
 SUPERTUX2_SITE_METHOD=git
 SUPERTUX2_GIT_SUBMODULES=YES
