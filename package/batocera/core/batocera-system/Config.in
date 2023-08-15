@@ -319,7 +319,8 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_RTW89_TEMP                           if  BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
     # ethernet
-    select BR2_PACKAGE_R8125                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_R8125                                if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_R8168                                if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
     # gpu drivers
     select BR2_PACKAGE_BATOCERA_GPU_X86                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
@@ -1034,7 +1035,11 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_YABASANSHIRO                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     # Gamecube / Wii
-    select BR2_PACKAGE_DOLPHIN_EMU                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_DOLPHIN_EMU                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588
+
     select BR2_PACKAGE_LIBRETRO_DOLPHIN                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      || \
