@@ -103,7 +103,6 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8812au/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8821au-morrownr/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl88x2bu/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtw89-temp/Config.in"
   endmenu
 
   menu "Device trees"
