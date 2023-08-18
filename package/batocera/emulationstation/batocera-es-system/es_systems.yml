@@ -5995,6 +5995,18 @@ psx:
   comment_br:           |
                         Para mais informações: https://wiki.batocera.org/systems:psx
 
+spectravideo:
+  name:                 Spectravideo SV-328
+  manufacturer:         Spectravideo
+  release:              1983
+  hardware:             computer
+  extensions:           [zip, 7z, cas]
+  platform:             spectravideo
+  theme:                spectravideo
+  emulators:
+    openmsx:
+      openmsx:          { requireAnyOf: [BR2_PACKAGE_OPENMSX] }
+
 j2me:
   name:                 Java 2 MicroEdition
   manufacturer:         Sun
