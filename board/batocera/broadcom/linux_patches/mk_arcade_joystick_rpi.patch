@@ -1,17 +1,5 @@
-From d895668ec29a0a00b5771cc6f36e6febe561dd87 Mon Sep 17 00:00:00 2001
-From: Lee <lee.hancock4@ntlworld.com>
-Date: Mon, 20 Feb 2023 19:35:50 +0000
-Subject: [PATCH] add arcade joystick (gpio)
-
----
- drivers/gpio/Kconfig                  |   8 +
- drivers/gpio/Makefile                 |   1 +
- drivers/gpio/mk_arcade_joystick_rpi.c | 706 ++++++++++++++++++++++++++
- 3 files changed, 715 insertions(+)
- create mode 100644 drivers/gpio/mk_arcade_joystick_rpi.c
-
 diff --git a/drivers/gpio/Kconfig b/drivers/gpio/Kconfig
-index ba917cebef987..19de794b4b7f8 100644
+index f662fdcdc850..dafb80ed4a5d 100644
 --- a/drivers/gpio/Kconfig
 +++ b/drivers/gpio/Kconfig
 @@ -3,6 +3,14 @@
@@ -26,11 +14,11 @@ index ba917cebef987..19de794b4b7f8 100644
 +         The mk_arcade_joystick_rpi is fully integrated
 +         in the Batocera.linux distribution
 +
- config ARCH_HAVE_CUSTOM_GPIO_H
- 	bool
+ menuconfig GPIOLIB
+ 	bool "GPIO Support"
  	help
 diff --git a/drivers/gpio/Makefile b/drivers/gpio/Makefile
-index 54326bb9d928b..6bedfb68c6ada 100644
+index 7a2216ea1797..2782b5056d84 100644
 --- a/drivers/gpio/Makefile
 +++ b/drivers/gpio/Makefile
 @@ -3,6 +3,7 @@
@@ -43,7 +31,7 @@ index 54326bb9d928b..6bedfb68c6ada 100644
  obj-$(CONFIG_GPIOLIB)		+= gpiolib-legacy.o
 diff --git a/drivers/gpio/mk_arcade_joystick_rpi.c b/drivers/gpio/mk_arcade_joystick_rpi.c
 new file mode 100644
-index 0000000000000..09a609271a90d
+index 000000000000..09a609271a90
 --- /dev/null
 +++ b/drivers/gpio/mk_arcade_joystick_rpi.c
 @@ -0,0 +1,706 @@
