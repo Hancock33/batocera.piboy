@@ -3,17 +3,16 @@
 # tsugaru
 #
 ################################################################################
-# Version: Commits on Jul 23, 2023
-TSUGARU_VERSION = ac19237dcd9e8757d46b05bdf712327142cf14e4
+# Version: Commits on Aug 18, 2023
+TSUGARU_VERSION = 37e9f70032a5e48321450af1ac00786ae9e86c99
 TSUGARU_SITE = $(call github,captainys,TOWNSEMU,$(TSUGARU_VERSION))
 TSUGARU_DEPENDENCIES = libglu
 TSUGARU_LICENSE = GPLv2
 TSUGARU_SUPPORTS_IN_SOURCE_BUILD = NO
-TSUGARU_CMAKE_BACKEND = ninja
 # CMakeLists.txt in src subfolder
 TSUGARU_SUBDIR = src
 
-TSUGARU_CONF_OPTS = -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=FALSE
+TSUGARU_CONF_OPTS = -DBUILD_SHARED_LIBS=FALSE
 TSUGARU_CONF_ENV += LDFLAGS=-lpthread
 
 define TSUGARU_INSTALL_TARGET_CMDS

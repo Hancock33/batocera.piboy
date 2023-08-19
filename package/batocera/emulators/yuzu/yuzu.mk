@@ -3,8 +3,8 @@
 # yuzu
 #
 ################################################################################
-# Version: Commits on Aug 11, 2023
-YUZU_VERSION = 26ff2147197352b571c394404de2be1a65d0cf9b
+# Version: Commits on Aug 18, 2023
+YUZU_VERSION = ae1421265abe1fd5633cab5a54b59dcd818866c7
 YUZU_SITE = https://github.com/yuzu-emu/yuzu.git
 YUZU_SITE_METHOD=git
 YUZU_GIT_SUBMODULES=YES
@@ -12,11 +12,9 @@ YUZU_LICENSE = GPLv2
 YUZU_DEPENDENCIES += fmt boost ffmpeg zstd zlib libzip lz4 catch2 sdl2 opus
 YUZU_DEPENDENCIES += qt6base qt6svg qt6tools
 YUZU_SUPPORTS_IN_SOURCE_BUILD = NO
-YUZU_CMAKE_BACKEND = ninja
 
 YUZU_CONF_ENV += LDFLAGS=-lpthread ARCHITECTURE_x86_64=1
 
-YUZU_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 YUZU_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 YUZU_CONF_OPTS += -DARCHITECTURE_x86_64=ON
 YUZU_CONF_OPTS += -DENABLE_SDL2=ON

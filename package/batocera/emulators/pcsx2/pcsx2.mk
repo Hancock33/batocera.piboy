@@ -3,21 +3,19 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on Aug 12, 2023
-PCSX2_VERSION = 2eb125f6e2f95e70b78a98f086a354be2a8ff67f
+# Version: Commits on Aug 18, 2023
+PCSX2_VERSION = 1a79e23b128a95226090209c8cbef9bfe8735410
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
 PCSX2_LICENSE = GPLv3
 PCSX2_LICENSE_FILE = COPYING.GPLv3
 PCSX2_SUPPORTS_IN_SOURCE_BUILD = NO
-PCSX2_CMAKE_BACKEND = ninja
 
 PCSX2_DEPENDENCIES += xorgproto alsa-lib freetype zlib libpng
 PCSX2_DEPENDENCIES += libaio portaudio libsoundtouch sdl2 libpcap yaml-cpp
 PCSX2_DEPENDENCIES += libsamplerate fmt libgtk3 qt6base qt6tools qt6svg
 
-PCSX2_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 PCSX2_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 PCSX2_CONF_OPTS += -DPCSX2_TARGET_ARCHITECTURES=x86_64
 PCSX2_CONF_OPTS += -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=TRUE

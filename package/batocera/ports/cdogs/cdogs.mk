@@ -9,7 +9,6 @@ CDOGS_SITE = $(call github,cxong,cdogs-sdl,$(CDOGS_VERSION))
 CDOGS_DEPENDENCIES = sdl2 sdl2_image sdl2_mixer python-protobuf enet
 CDOGS_LICENSE = GPL-2.0
 CDOGS_SUPPORTS_IN_SOURCE_BUILD = NO
-CDOGS_CMAKE_BACKEND = ninja
 
 define CDOGS_FIX_SDL2MAIN
 	sed -i -e s+"SDL2_image::SDL2_image"+"-lSDL2_image"+ $(@D)/src/cdogs/CMakeLists.txt
@@ -19,7 +18,6 @@ endef
 
 CDOGS_PRE_CONFIGURE_HOOKS += CDOGS_FIX_SDL2MAIN
 
-CDOGS_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 CDOGS_CONF_OPTS += -DCDOGS_DATA_DIR=/usr/share/cdogs/
 CDOGS_CONF_OPTS += -DBUILD_EDITOR=OFF
 CDOGS_CONF_OPTS += -DUSE_SHARED_ENET=ON

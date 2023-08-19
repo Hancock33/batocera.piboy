@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-08-06 00:01+0800\n"
+"PO-Revision-Date: 2023-08-14 23:22+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二\n"
 "Language: zh_CN\n"
@@ -10676,11 +10676,12 @@ msgid ""
 "Choose whether to pass SDL Game Controller config to the Windows game. "
 "Disabling may help with some games."
 msgstr ""
+"选择是否将SDL游戏控制器配置传递到Windows游戏. 禁用可能对某些游戏有所帮助."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "SDL CONFIG"
-msgstr ""
+msgstr "SDL配置"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -11090,7 +11091,7 @@ msgstr "Sonic CD (长按跳跃)"
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Screen Resolution (Default)"
-msgstr ""
+msgstr "屏幕分辨率(默认)"
 
 #. TRANSLATION: model2emu, play
 msgctxt "game_options"
@@ -11105,12 +11106,12 @@ msgstr "启用宽屏"
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable scanlines for roms that support it."
-msgstr ""
+msgstr "为支持它的rom启用扫描线."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "ENABLE SCANLINES"
-msgstr ""
+msgstr "启用扫描线"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -12434,7 +12435,7 @@ msgstr "设置界面"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Reset the table, sometimes required for PinMame"
-msgstr ""
+msgstr "重置表格, 有时PinMame需要"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -12984,6 +12985,14 @@ msgstr ""
 #~ msgstr "使用GZDOOM操纵杆配置"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "重置游戏"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "下一个光盘（m3u）"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "载入状态插槽1"
 
@@ -13086,14 +13095,6 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "重置游戏"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "下一个光盘（m3u）"
 
 #~ msgctxt "game_options"
 #~ msgid "OVERLAY SIZE (SINGE)"

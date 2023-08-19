@@ -3,15 +3,13 @@
 # vpinball
 #
 ################################################################################
-# Version: Commits on Aug 13, 2023 (branch@standalone)
-VPINBALL_VERSION = 1fbf25d139ebb5af4ba88a72892034bc5b8299a8
+# Version: Commits on Aug 19, 2023 (branch@standalone)
+VPINBALL_VERSION = e323b88083d0236cbb8120a872e2e238ddfc85d8
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
 VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
 VPINBALL_DEPENDENCIES = libfreeimage libpinmame libserum libzedmd sdl2 sdl2_image sdl2_ttf
 VPINBALL_SUPPORTS_IN_SOURCE_BUILD = NO
-
-VPINBALL_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS=""
 
 # handle supported target platforms
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588),y)
@@ -48,7 +46,8 @@ define VPINBALL_CMAKE_HACKS
     $(INSTALL) -D -m 0755 $(@D)/tmp/libs/$(ARCH)/libbass.so $(TARGET_DIR)/usr/lib
 endef
 
-VPINBALL_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
+VPINBALL_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=""
+VPINBALL_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 
 define VPINBALL_INSTALL_TARGET_CMDS
     mkdir -p $(TARGET_DIR)/usr/bin/vpinball
@@ -60,9 +59,6 @@ define VPINBALL_INSTALL_TARGET_CMDS
     cp -R $(@D)/buildroot-build/res $(TARGET_DIR)/usr/bin/vpinball/
     cp -R $(@D)/buildroot-build/scripts $(TARGET_DIR)/usr/bin/vpinball/
     cp -R $(@D)/buildroot-build/shader $(TARGET_DIR)/usr/bin/vpinball/
-    # install last library
-    $(INSTALL) -D -m 0755 $(@D)/buildroot-build/libglad.so \
-        $(TARGET_DIR)/usr/lib
 endef
 
 define VPINBALL_EVMAPY

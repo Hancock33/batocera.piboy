@@ -3,8 +3,8 @@
 # citra
 #
 ################################################################################
-# Version: Commits on Aug 11, 2023
-CITRA_VERSION = a27971e72331d11f171b4adb8ffc365c21da1fbc
+# Version: Commits on Aug 17, 2023
+CITRA_VERSION = 6ddf4b241f19ecec89b867fc8d5fa30d1645fd12
 CITRA_SITE = https://github.com/citra-emu/citra.git
 
 CITRA_SITE_METHOD=git
@@ -12,9 +12,7 @@ CITRA_GIT_SUBMODULES=YES
 CITRA_LICENSE = GPLv2
 CITRA_DEPENDENCIES += boost fdk-aac ffmpeg fmt libbacktrace qt6base qt6multimedia sdl2
 CITRA_SUPPORTS_IN_SOURCE_BUILD = NO
-CITRA_CMAKE_BACKEND = ninja
 
-CITRA_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 CITRA_CONF_OPTS += -DENABLE_SDL2=ON
 CITRA_CONF_OPTS += -DUSE_SYSTEM_SDL2=ON
 CITRA_CONF_OPTS += -DUSE_SYSTEM_BOOST=ON

@@ -3,13 +3,12 @@
 # supertux2
 #
 ################################################################################
-# Version: Commits on Aug 13, 2023
-SUPERTUX2_VERSION = 879ec46cf976b41b21d6c72a2dde35ae495f3783
+# Version: Commits on Aug 19, 2023
+SUPERTUX2_VERSION = 2f5c6ec9503bd1879a44a74cbb6481b65d5fc97a
 SUPERTUX2_SITE = https://github.com/SuperTux/supertux.git
 SUPERTUX2_SITE_METHOD=git
 SUPERTUX2_GIT_SUBMODULES=YES
 SUPERTUX2_SUPPORTS_IN_SOURCE_BUILD = NO
-SUPERTUX2_CMAKE_BACKEND = ninja
 
 # Supertux itself is GPL-3.0+, but it bundles a few libraries with different
 # licenses (sexp-cpp, squirrel, tinygettext) which are linked statically.

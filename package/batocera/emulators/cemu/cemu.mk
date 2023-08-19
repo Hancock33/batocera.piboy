@@ -3,8 +3,8 @@
 # cemu
 #
 ################################################################################
-# Version: Commits on Aug 13, 2023
-CEMU_VERSION = 892ae13680a30d71b489ca754ddaa2b17828f85e
+# Version: Commits on Aug 16, 2023
+CEMU_VERSION = d8b9a74d861dbf857d2debc00f9ba12ea890c6ad
 CEMU_SITE = https://github.com/cemu-project/Cemu
 CEMU_LICENSE = GPLv2
 CEMU_SITE_METHOD=git
@@ -13,15 +13,14 @@ CEMU_DEPENDENCIES = sdl2 host-libcurl host-pugixml pugixml rapidjson boost libpn
                     libzip host-glslang glslang zlib zstd wxwidgets fmt glm
 
 CEMU_SUPPORTS_IN_SOURCE_BUILD = NO
-CEMU_CMAKE_BACKEND = ninja
 
-CEMU_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 CEMU_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 CEMU_CONF_OPTS += -DENABLE_DISCORD_RPC=OFF
 CEMU_CONF_OPTS += -DENABLE_VCPKG=OFF
 CEMU_CONF_OPTS += -DPORTABLE=OFF
 CEMU_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CXXFLAGS) -I$(STAGING_DIR)/usr/include/glslang"
 CEMU_CONF_OPTS += -DENABLE_FERAL_GAMEMODE=OFF
+CEMU_CONF_OPTS += -DENABLE_HIDAPI=OFF
 CEMU_CONF_OPTS += -Wno-dev
 
 ifeq ($(BR2_PACKAGE_WAYLAND),y)

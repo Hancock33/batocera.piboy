@@ -3,15 +3,14 @@
 # batocera-emulationstation
 #
 ################################################################################
-# Version: Commits on Aug 10, 2023
-BATOCERA_EMULATIONSTATION_VERSION = 8d3d81d4f15c604448cc68dde9fecd0058db274f
+# Version: Commits on Aug 18, 2023
+BATOCERA_EMULATIONSTATION_VERSION = 1a574e54560ad2ac02966bdfa422b4b8f26a8357
 BATOCERA_EMULATIONSTATION_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_EMULATIONSTATION_SITE_METHOD = git
 BATOCERA_EMULATIONSTATION_LICENSE = MIT
 BATOCERA_EMULATIONSTATION_GIT_SUBMODULES = YES
 BATOCERA_EMULATIONSTATION_LICENSE = MIT, Apache-2.0
 BATOCERA_EMULATIONSTATION_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib libcurl vlc rapidjson pulseaudio batocera-es-system host-gettext
-BATOCERA_EMULATIONSTATION_CMAKE_BACKEND = ninja
 # install in staging for debugging (gdb)
 BATOCERA_EMULATIONSTATION_INSTALL_STAGING = YES
 # BATOCERA_EMULATIONSTATION_OVERRIDE_SRCDIR = /sources/batocera-emulationstation

@@ -3,8 +3,8 @@
 # box86
 #
 ################################################################################
-# Version: Commits on Jul 31, 2023
-BOX86_VERSION = e8d4ffc78268698eb4c9bf9574a216776bd81cb5
+# Version: Commits on Aug 18, 2023
+BOX86_VERSION = 58b0338dff36a067b252992dfbfa8a9a9f512854
 BOX86_SITE = https://github.com/ptitseb/box86.git
 BOX86_SITE_METHOD=git
 BOX86_GIT_SUBMODULES=YES
@@ -13,7 +13,7 @@ BOX86_SUPPORTS_IN_SOURCE_BUILD = NO
 BOX86_DEPENDENCIES = sdl2 sdl2_image zlib libzip freetype bzip2 libpng openal
 BOX86_LICENSE = GPL-3.0
 
-BOX86_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS=""
+BOX86_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=""
 ifeq ($(BR2_arm),y)
 	BOX86_CONF_OPTS += -DRPI4=1
 endif

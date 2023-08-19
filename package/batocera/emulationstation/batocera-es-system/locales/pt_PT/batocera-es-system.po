@@ -10876,11 +10876,13 @@ msgid ""
 "Choose whether to pass SDL Game Controller config to the Windows game. "
 "Disabling may help with some games."
 msgstr ""
+"Escolha se deseja passar a configuração do SDL Game Controller para o jogo "
+"do Windows. Desativar pode ajudar em alguns jogos."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "SDL CONFIG"
-msgstr ""
+msgstr "SDL CONFIG"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -11306,7 +11308,7 @@ msgstr "Sonic CD (segure o salto)"
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Screen Resolution (Default)"
-msgstr ""
+msgstr "Resolução do ecrã (padrão)"
 
 #. TRANSLATION: model2emu, play
 msgctxt "game_options"
@@ -11321,12 +11323,12 @@ msgstr "ATIVAR WIDESCREEN"
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable scanlines for roms that support it."
-msgstr ""
+msgstr "Ativar scanlines para roms que o suportam."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "ENABLE SCANLINES"
-msgstr ""
+msgstr "ATIVAR SCANLINES"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -12668,7 +12670,7 @@ msgstr "GUI de configurações"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Reset the table, sometimes required for PinMame"
-msgstr ""
+msgstr "Redefina a tabela, às vezes necessária para o PinMame"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -13227,6 +13229,14 @@ msgstr ""
 #~ msgstr "USAR A CONFIGURAÇÃO DO COMANDO NO GZDOOM"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Reiniciar o Jogo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Próximo Disco (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "Carregar Estado do Slot 1"
 
@@ -13329,14 +13339,6 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Reiniciar o Jogo"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Próximo Disco (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "OVERLAY SIZE (SINGE)"

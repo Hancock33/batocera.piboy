@@ -3,16 +3,14 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Aug 12, 2023
-DEVILUTIONX_VERSION = 98927e7a6eb002cc9f4dc2554ae7a713a885aa4d
+# Version: Commits on Aug 17, 2023
+DEVILUTIONX_VERSION = 8bcf520263b30493cf3924c0fe5a7c28560617d6
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_SUBDIR = dist-src
 DEVILUTIONX_DEPENDENCIES = sdl2 sdl2_image fmt libsodium libpng bzip2
 DEVILUTIONX_SUPPORTS_IN_SOURCE_BUILD = NO
-DEVILUTIONX_CMAKE_BACKEND = ninja
 
-DEVILUTIONX_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 DEVILUTIONX_CONF_OPTS += -DBUILD_TESTING=OFF
 DEVILUTIONX_CONF_OPTS += -DUSE_LD_MOLD=ON
  # Prefill the player name when creating a new character, in case the device does

@@ -1,0 +1,66 @@
+diff --git a/3rdparty/llvm/CMakeLists.txt b/3rdparty/llvm/CMakeLists.txt
+index 679cb23a6..246a8b46d 100644
+--- a/3rdparty/llvm/CMakeLists.txt
++++ b/3rdparty/llvm/CMakeLists.txt
+@@ -37,7 +37,7 @@ if(WITH_LLVM)
+ 		set(STATIC_LINK_LLVM ON CACHE BOOL "Link against LLVM statically. This will get set to ON if you build LLVM from the submodule." FORCE)
+ 
+ 		# now tries to find LLVM again
+-		find_package(LLVM 16.0 CONFIG)
++		find_package(LLVM 17.0 CONFIG)
+ 		if(NOT LLVM_FOUND)
+ 			message(FATAL_ERROR "Couldn't build LLVM from the submodule. You might need to run `git submodule update --init`")
+ 		endif()
+@@ -49,10 +49,10 @@ if(WITH_LLVM)
+ 			set(LLVM_DIR ${CMAKE_SOURCE_DIR}/${LLVM_DIR})
+ 		endif()
+ 
+-		find_package(LLVM 16.0 CONFIG)
++		find_package(LLVM 17.0 CONFIG)
+ 
+ 		if (NOT LLVM_FOUND)
+-			if (LLVM_VERSION AND LLVM_VERSION_MAJOR LESS 16)
++			if (LLVM_VERSION AND LLVM_VERSION_MAJOR LESS 17)
+ 				message(FATAL_ERROR "Found LLVM version ${LLVM_VERSION}. Required version 16. \
+ 														 Enable BUILD_LLVM option to build LLVM from included as a git submodule.")
+ 			endif()
+diff --git a/rpcs3/Emu/CPU/CPUTranslator.h b/rpcs3/Emu/CPU/CPUTranslator.h
+index c08af85f6..8423c96a7 100644
+--- a/rpcs3/Emu/CPU/CPUTranslator.h
++++ b/rpcs3/Emu/CPU/CPUTranslator.h
+@@ -971,7 +971,7 @@ struct llvm_neg
+ 		{
+ 			v1 = i->getOperand(1);
+ 
+-			if (i->getOperand(0) == llvm::ConstantFP::getZeroValueForNegation(v1->getType()))
++			if (i->getOperand(0) == llvm::ConstantInt::get(v1->getType(), 0))
+ 			{
+ 				if (auto r1 = a1.match(v1, _m); v1)
+ 				{
+diff --git a/rpcs3/Emu/Cell/SPURecompiler.cpp b/rpcs3/Emu/Cell/SPURecompiler.cpp
+index dc5ddc657..af12bae3a 100644
+--- a/rpcs3/Emu/Cell/SPURecompiler.cpp
++++ b/rpcs3/Emu/Cell/SPURecompiler.cpp
+@@ -5761,9 +5761,9 @@ public:
+ 		pm.add(createEarlyCSEPass());
+ 		pm.add(createCFGSimplificationPass());
+ 		//pm.add(createNewGVNPass());
+-		pm.add(createDeadStoreEliminationPass());
++		//pm.add(createDeadStoreEliminationPass());
+ 		pm.add(createLICMPass());
+-		pm.add(createAggressiveDCEPass());
++		//pm.add(createAggressiveDCEPass());
+ 		//pm.add(createLintPass()); // Check
+ 
+ 		for (auto& f : *m_module)
+@@ -6229,8 +6229,8 @@ public:
+ 		// Basic optimizations
+ 		pm.add(createEarlyCSEPass());
+ 		pm.add(createCFGSimplificationPass());
+-		pm.add(createDeadStoreEliminationPass());
+-		pm.add(createAggressiveDCEPass());
++		//pm.add(createDeadStoreEliminationPass());
++		//pm.add(createAggressiveDCEPass());
+ 		//pm.add(createLintPass());
+ 
+ 		for (auto& f : *_module)

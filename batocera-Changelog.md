@@ -31,6 +31,7 @@
 - Fix wifi/bluetooth on Tinkerboard
 - Fixed crop overscan settings for NES to work with newer core builds
 - DVD playback in Kodi
+- workaround BT firmware with Intel AX101 chipset
 ### Changed
 - ES music volume on a logarithmic scale instead of linear one
 - if using the manual batocera.conf `splash.screen.resize` option, this will now adjust the playback resolution too
@@ -74,10 +75,10 @@
 - commander genius to v3.4.9
 - play! to v0.62
 ### Dev
-- linux kernel for x86_64 to 6.4.9
+- linux kernel for x86_64 to 6.4.11
 - linux kernel for RPI to 6.1.32
 - linux kernel for most ARM SBCs to 6.1.43
-- linux kernel for Rockchip RK3566/RK3568 to 6.4.9
+- linux kernel for Rockchip RK3566/RK3568 to 6.4.11
 - xf86-video-amdgpu to 23.0.0
 - xf86-video-ati to 22.0.0
 - xwayland to 23.1.2
@@ -93,6 +94,7 @@
 - Preliminary support for Khadas VIM4, Khadas VIM1S
 - linux firmware to 20230804
 - pacman to 5.2.2 with fix for GNU sed on batocera-makepkg
+- sound open firmware to v2.2.6
 
 # 2023/06/18 - batocera.linux 37 - Red Admiral
 ### hardware

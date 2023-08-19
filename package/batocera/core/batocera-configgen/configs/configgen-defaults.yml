@@ -891,6 +891,9 @@ sorr:
 spacecadetpinball:
   emulator: spacecadetpinball
   core:     spacecadetpinball
+spectravideo:
+  emulator: openmsx
+  core:     openmsx
 srb2:
   emulator: srb2
   core:     srb2
