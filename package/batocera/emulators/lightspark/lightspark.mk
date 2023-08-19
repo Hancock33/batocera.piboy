@@ -3,14 +3,12 @@
 # lightspark
 #
 ################################################################################
-# Version: Commits on Aug 13, 2023
-LIGHTSPARK_VERSION = 2dcd2b62c1f59e5ef5bf60cc7ab0abeb7be54964
+# Version: Commits on Aug 18, 2023
+LIGHTSPARK_VERSION = 7c8e0f1c36a74e33df1db924dd4c0805a73870ba
 LIGHTSPARK_SITE = $(call github,lightspark,lightspark,$(LIGHTSPARK_VERSION))
 LIGHTSPARK_LICENSE = LGPLv3
 LIGHTSPARK_DEPENDENCIES = sdl2 freetype pcre jpeg libpng cairo pango ffmpeg libcurl rtmpdump
-LIGHTSPARK_CMAKE_BACKEND = ninja
 
-LIGHTSPARK_CONF_OPTS  = -DCMAKE_BUILD_TYPE=Release
 LIGHTSPARK_CONF_OPTS += -DCOMPILE_NPAPI_PLUGIN=FALSE -DCOMPILE_PPAPI_PLUGIN=FALSE
 ifneq ($(BR2_x86_64),y)
 LIGHTSPARK_CONF_OPTS += -DENABLE_GLES2=TRUE -DCMAKE_C_FLAGS=-DEGL_NO_X11 -DCMAKE_CXX_FLAGS=-DEGL_NO_X11

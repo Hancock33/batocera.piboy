@@ -3,14 +3,12 @@
 # vulkan-loader
 #
 ################################################################################
-# Version: Commits on Aug 09, 2023
-VULKAN_LOADER_VERSION = 4830af39dce87b415de1c99edbc3283844d38903
+# Version: Commits on Aug 18, 2023
+VULKAN_LOADER_VERSION = dd8332d253cfaf3a9be306af4194e4dffc2e3b3c
 VULKAN_LOADER_SITE =  $(call github,KhronosGroup,Vulkan-Loader,$(VULKAN_LOADER_VERSION))
 VULKAN_LOADER_DEPENDENCIES = vulkan-headers
 VULKAN_LOADER_INSTALL_STAGING = YES
-VULKAN_LOADER_CMAKE_BACKEND = ninja
 
-VULKAN_LOADER_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 VULKAN_LOADER_CONF_OPTS += -DVULKAN_HEADERS_INSTALL_DIR=$(STAGING_DIR)/usr
 
 ifeq ($(BR2_PACKAGE_XORG7),y)

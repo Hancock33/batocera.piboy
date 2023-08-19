@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Aug 13, 2023
-RPCS3_VERSION = 219ee76bf23972de7e8452bf9a6b496300b4e2ca
+# Version: Commits on Aug 19, 2023
+RPCS3_VERSION = 373e50250139f4cc6fb7496a3d53c583f8cb7ea6
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
@@ -14,28 +14,19 @@ RPCS3_DEPENDENCIES += libglew libglu libpng libusb mesa3d ncurses openal
 RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg
 RPCS3_DEPENDENCIES += wolfssl libxml2
 RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO
-RPCS3_CMAKE_BACKEND = ninja
 
-RPCS3_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 RPCS3_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 RPCS3_CONF_OPTS += -DCMAKE_CROSSCOMPILING=ON
 RPCS3_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 RPCS3_CONF_OPTS += -DUSE_NATIVE_INSTRUCTIONS=OFF
-#RPCS3_CONF_OPTS += -DBUILD_LLVM_SUBMODULE=OFF
-#RPCS3_CONF_OPTS += -DLLVM_DIR=$(STAGING_DIR)/usr/lib/cmake/llvm/
-RPCS3_CONF_OPTS += -DBUILD_LLVM=ON
+RPCS3_CONF_OPTS += -DBUILD_LLVM_SUBMODULE=OFF
+RPCS3_CONF_OPTS += -DLLVM_DIR=$(STAGING_DIR)/usr/lib/cmake/llvm/
 RPCS3_CONF_OPTS += -DUSE_PRECOMPILED_HEADERS=OFF
-#RPCS3_CONF_OPTS += -DSTATIC_LINK_LLVM=OFF
-RPCS3_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=OFF
+RPCS3_CONF_OPTS += -DSTATIC_LINK_LLVM=OFF
+RPCS3_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_CURL=ON
 RPCS3_CONF_OPTS += -DUSE_SDL=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_SDL=ON
-# this is ugly, but necessary... for now...
-RPCS3_CONF_OPTS += -DFFMPEG_LIB_AVCODEC=../3rdparty/ffmpeg/lib/linux/ubuntu-22.04/x86_64/libavcodec.a
-RPCS3_CONF_OPTS += -DFFMPEG_LIB_AVFORMAT=../3rdparty/ffmpeg/lib/linux/ubuntu-22.04/x86_64/libavformat.a
-RPCS3_CONF_OPTS += -DFFMPEG_LIB_AVUTIL=../3rdparty/ffmpeg/lib/linux/ubuntu-22.04/x86_64/libavutil.a
-RPCS3_CONF_OPTS += -DFFMPEG_LIB_SWSCALE=../3rdparty/ffmpeg/lib/linux/ubuntu-22.04/x86_64/libswscale.a
-RPCS3_CONF_OPTS += -DFFMPEG_LIB_SWRESAMPLE=../3rdparty/ffmpeg/lib/linux/ubuntu-22.04/x86_64/libswresample.a
 
 RPCS3_CONF_ENV = LIBS="-ncurses -ltinfo"
 

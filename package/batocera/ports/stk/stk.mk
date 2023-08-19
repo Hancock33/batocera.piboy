@@ -3,17 +3,15 @@
 # stk
 #
 ################################################################################
-# Version: Commits on Jul 27, 2023
-STK_VERSION = a47e69d74eed240e94827a71608141418764afe4
+# Version: Commits on Aug 15, 2023
+STK_VERSION = e00a81a96197b5a040359cffeb651189927401d6
 STK_SITE = https://github.com/supertuxkart/stk-code.git
 STK_SITE_METHOD=git
 STK_GIT_SUBMODULES=YES
 STK_DEPENDENCIES = sdl2 sdl2_mixer shaderc
 STK_LICENSE = GPL-2.0
 STK_SUPPORTS_IN_SOURCE_BUILD = NO
-STK_CMAKE_BACKEND = ninja
 
-STK_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 STK_CONF_OPTS += -USE_GLES2=ON
 STK_CONF_OPTS += -DCHECK_ASSETS=OFF
 STK_CONF_OPTS += -DUSE_WIIUSE=OFF

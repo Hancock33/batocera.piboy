@@ -3,16 +3,14 @@
 # play
 #
 ################################################################################
-# Version: Commits on Aug 10, 2023
-PLAY_VERSION = 58216c3110abcaf582c6eb9c8fad62ec92945ae6
+# Version: Commits on Aug 18, 2023
+PLAY_VERSION = 4cefe445651de9cbba9a4c76c8d8345a903857f6
 PLAY_SITE = https://github.com/jpd002/Play-.git
 PLAY_SITE_METHOD = git
 PLAY_GIT_SUBMODULES = YES
 PLAY_LICENSE = BSD
 PLAY_DEPENDENCIES = openal sqlite qt6base
-PLAY_CMAKE_BACKEND = ninja
 
-PLAY_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 PLAY_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 PLAY_CONF_OPTS += -DINSTALL_STATIC_LIBS=ON
 PLAY_CONF_OPTS += -DBUILD_TESTS=OFF

@@ -11,7 +11,6 @@ CANNONBALL_DEPENDENCIES = sdl2 boost
 CANNONBALL_SUPPORTS_IN_SOURCE_BUILD = NO
 CANNONBALL_SUBDIR = cmake
 CANNONBALL_TARGET = linux.cmake
-CANNONBALL_CMAKE_BACKEND = ninja
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2835),y)
 CANNONBALL_TARGET = pi-opengles.camke
@@ -28,7 +27,7 @@ CANNONBALL_TARGET = linux.cmake
 endif
 
 # Build as release with proper target and paths
-CANNONBALL_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release -DTARGET=$(CANNONBALL_TARGET)
+CANNONBALL_CONF_OPTS += -DTARGET=$(CANNONBALL_TARGET)
 
 # Cannonball cmake files are hopelessly broken.
 # Link libmali manually. Ideally we should fix cannonball to use pkg-config instead.

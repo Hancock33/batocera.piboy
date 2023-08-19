@@ -15,7 +15,6 @@ XENIA_NATIVE_SUBDIR = build
 
 XENIA_NATIVE_DEPENDENCIES = xserver_xorg-server alsa-lib fmt freetype libgtk3 libpng lz4 sdl2 zlib
 
-XENIA_NATIVE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 #XENIA_NATIVE_CONF_OPTS += -DCMAKE_VERBOSE_MAKEFILE=ON
 
 define XENIA_CMAKE_FILES

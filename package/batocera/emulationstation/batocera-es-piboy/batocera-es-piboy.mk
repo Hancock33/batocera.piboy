@@ -3,15 +3,14 @@
 # batocera-es-piboy
 #
 ################################################################################
-# Version: Commits on Aug 10, 2023
-BATOCERA_ES_PIBOY_VERSION = 8d3d81d4f15c604448cc68dde9fecd0058db274f
+# Version: Commits on Aug 18, 2023
+BATOCERA_ES_PIBOY_VERSION = 1a574e54560ad2ac02966bdfa422b4b8f26a8357
 BATOCERA_ES_PIBOY_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_ES_PIBOY_SITE_METHOD = git
 BATOCERA_ES_PIBOY_LICENSE = MIT
 BATOCERA_ES_PIBOY_GIT_SUBMODULES = YES
 BATOCERA_ES_PIBOY_LICENSE = MIT, Apache-2.0
 BATOCERA_ES_PIBOY_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib libcurl vlc rapidjson pulseaudio batocera-es-system host-gettext espeak
-BATOCERA_ES_PIBOY_CMAKE_BACKEND = ninja
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGLES),y)
 BATOCERA_ES_PIBOY_CONF_OPTS += -DGLES2=ON

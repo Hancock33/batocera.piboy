@@ -3,8 +3,8 @@
 # libpinmame
 #
 ################################################################################
-# Version: Commits on Aug 3, 2023
-LIBPINMAME_VERSION = 7b8e993b0e856c277300ee28c9621e5d2aa278e8
+# Version: Commits on Aug 16, 2023
+LIBPINMAME_VERSION = 7182247c5dec3e7403c8893f95dd687ab07ab84a
 LIBPINMAME_SITE = $(call github,vpinball,pinmame,$(LIBPINMAME_VERSION))
 LIBPINMAME_LICENSE = BSD-3-Clause
 LIBPINMAME_LICENSE_FILES = LICENSE
@@ -15,8 +15,6 @@ define LIBPINMAME_RENAME_CMAKE
     cp $(@D)/cmake/libpinmame/CMakeLists_linux-x64.txt $(@D)/CMakeLists.txt
     rm $(@D)/makefile
 endef
-
-LIBPINMAME_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 
 define LIBPINMAME_INSTALL_TARGET_CMDS
     # staging files

@@ -3,17 +3,15 @@
 # melonds
 #
 ################################################################################
-# Version: Commits on Aug 13, 2023
-MELONDS_VERSION = f454eba3c3243b095f0e6b9ddde3e68b095c5d8d
+# Version: Commits on Aug 18, 2023
+MELONDS_VERSION = ee5567708630441d8d3210e81d6e03d028fb7bbd
 MELONDS_SITE = https://github.com/melonDS-emu/melonDS.git
 MELONDS_SITE_METHOD=git
 MELONDS_GIT_SUBMODULES=YES
 MELONDS_LICENSE = GPLv2
 MELONDS_DEPENDENCIES = sdl2 qt6base qt6multimedia slirp libepoxy libarchive
 MELONDS_SUPPORTS_IN_SOURCE_BUILD = NO
-MELONDS_CMAKE_BACKEND = ninja
 
-MELONDS_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 MELONDS_CONF_OPTS += -DCMAKE_INSTALL_PREFIX="/usr"
 MELONDS_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 MELONDS_CONF_OPTS += -DUSE_QT6=ON

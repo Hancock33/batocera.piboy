@@ -12,6 +12,4 @@ LIBSERUM_LICENSE_FILES = LICENSE.md
 # Install to staging to build Visual Pinball Standalone
 LIBSERUM_INSTALL_STAGING = YES
 
-LIBSERUM_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
-
 $(eval $(cmake-package))

@@ -1,8 +1,8 @@
-diff --git a/src/frontend-common/input_manager.cpp b/src/frontend-common/input_manager.cpp
-index 4633593f..9d152095 100644
---- a/src/frontend-common/input_manager.cpp
-+++ b/src/frontend-common/input_manager.cpp
-@@ -1808,30 +1808,30 @@ std::vector<InputBindingKey> InputManager::EnumerateMotors()
+diff --git a/src/util/input_manager.cpp b/src/util/input_manager.cpp
+index 5e48982b..dd2dab19 100644
+--- a/src/util/input_manager.cpp
++++ b/src/util/input_manager.cpp
+@@ -1804,30 +1804,30 @@ std::vector<InputBindingKey> InputManager::EnumerateMotors()
  
  static void GetKeyboardGenericBindingMapping(std::vector<std::pair<GenericInputBinding, std::string>>* mapping)
  {

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v38beta(2023/08/08)\n"
+"Project-Id-Version: batocera-es v38beta(2023/08/14)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-08-08 10:33+0900\n"
+"PO-Revision-Date: 2023-08-14 12:04+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -10760,11 +10760,13 @@ msgid ""
 "Choose whether to pass SDL Game Controller config to the Windows game. "
 "Disabling may help with some games."
 msgstr ""
+"SDL ゲームコントローラー設定をWindowsゲームに渡すかどうかを選択します。 無効"
+"にすると、ゲームによっては有効な場合があります"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "SDL CONFIG"
-msgstr ""
+msgstr "SDL 構成"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -11182,7 +11184,7 @@ msgstr "ソニックCD（ホールドジャンプ）"
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Screen Resolution (Default)"
-msgstr ""
+msgstr "画面解像度 (標準)"
 
 #. TRANSLATION: model2emu, play
 msgctxt "game_options"
@@ -11197,12 +11199,12 @@ msgstr "ワイドスクリーン 有効"
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Enable scanlines for roms that support it."
-msgstr ""
+msgstr "サポートするROMのスキャンラインを有効にします"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "ENABLE SCANLINES"
-msgstr ""
+msgstr "スキャンラインを有効"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -12541,7 +12543,7 @@ msgstr "GUI設定"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Reset the table, sometimes required for PinMame"
-msgstr ""
+msgstr "テーブルをリセットします。PinMame で必要になる場合があります"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"

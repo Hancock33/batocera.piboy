@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index f14a4db2..646b5e29 100644
+index d8e9893d..dcd163c4 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -44,6 +44,7 @@ if(SUPPORTS_WAYLAND)
+@@ -48,6 +48,7 @@ if(SUPPORTS_WAYLAND)
  endif()
  if((LINUX OR FREEBSD) OR ANDROID)
    option(USE_EGL "Support EGL OpenGL context creation" ON)
@@ -72,10 +72,10 @@ index 24a4fb45..59eb66e5 100644
    if(USE_X11)
      target_sources(glad PRIVATE src/glad_glx.c)
 diff --git a/src/common/CMakeLists.txt b/src/common/CMakeLists.txt
-index ea086d19..da426ec9 100644
+index ba996ade..4a6d7154 100644
 --- a/src/common/CMakeLists.txt
 +++ b/src/common/CMakeLists.txt
-@@ -169,12 +169,13 @@ if(ENABLE_OPENGL)
+@@ -195,12 +195,13 @@ if(ENABLE_OPENGL)
        )
      endif()
      if(USE_DRMKMS)
@@ -91,10 +91,10 @@ index ea086d19..da426ec9 100644
      if(USE_FBDEV)
        target_compile_definitions(common PRIVATE "-DUSE_FBDEV=1")
 diff --git a/src/duckstation-nogui/CMakeLists.txt b/src/duckstation-nogui/CMakeLists.txt
-index 17301849..fbce73e1 100644
+index 60b97ec8..b7cc8f05 100644
 --- a/src/duckstation-nogui/CMakeLists.txt
 +++ b/src/duckstation-nogui/CMakeLists.txt
-@@ -74,4 +74,8 @@ if(USE_DRMKMS AND USE_EVDEV)
+@@ -77,4 +77,8 @@ if(USE_DRMKMS AND USE_EVDEV)
    )
    target_include_directories(duckstation-nogui PRIVATE ${LIBEVDEV_INCLUDE_DIRS})
    target_link_libraries(duckstation-nogui PRIVATE ${LIBEVDEV_LIBRARIES})
