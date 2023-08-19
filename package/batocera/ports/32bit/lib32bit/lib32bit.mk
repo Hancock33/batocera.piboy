@@ -9,7 +9,15 @@ LIB32BIT_SITE = https://github.com/Hancock33/batocera-32bit-libs/releases/downlo
 
 define LIB32BIT_EXTRACT_CMDS
 	tar xf $(DL_DIR)/$(LIB32BIT_DL_SUBDIR)/$(LIB32BIT_SOURCE) -C $(TARGET_DIR)/usr
+
+ifeq ($(BR2_TOOLCHAIN_BUILDROOT_GLIBC),y)
 	ln -sf /usr/lib32/ld-linux-armhf.so.3 $(TARGET_DIR)/lib
+endif
+
+ifeq ($(BR2_TOOLCHAIN_BUILDROOT_MUSL),y)
+	ln -sf /lib/ld-musl-armhf.so.1        $(TARGET_DIR)/lib
+endif
+
 endef
 
 define LIB32BIT_INSTALL_TARGET_CMDS
