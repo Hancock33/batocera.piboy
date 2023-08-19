@@ -1,5 +1,5 @@
 diff --git a/src/frontend/qt_sdl/Config.cpp b/src/frontend/qt_sdl/Config.cpp
-index 898e4a16..7ca28935 100644
+index 898e4a16..1fbdb9f6 100644
 --- a/src/frontend/qt_sdl/Config.cpp
 +++ b/src/frontend/qt_sdl/Config.cpp
 @@ -355,14 +355,7 @@ ConfigEntry ConfigFile[] =
@@ -14,7 +14,7 @@ index 898e4a16..7ca28935 100644
 -    }
 -    else
 -        f = Platform::OpenLocalFile(kConfigFile, Platform::FileMode::ReadText);
-+    f = Platform::OpenLocalFile(kConfigFile, "r");
++    f = Platform::OpenLocalFile(kConfigFile, Platform::FileMode::ReadText);
  
      if (!f) return;
  
@@ -51,7 +51,7 @@ index 898e4a16..7ca28935 100644
 -    }
 -    else
 -        f = Platform::OpenLocalFile(kConfigFile, Platform::FileMode::WriteText);
-+    f = Platform::OpenLocalFile(kConfigFile, "w");
++    f = Platform::OpenLocalFile(kConfigFile, Platform::FileMode::WriteText);
  
      if (!f) return;
  
