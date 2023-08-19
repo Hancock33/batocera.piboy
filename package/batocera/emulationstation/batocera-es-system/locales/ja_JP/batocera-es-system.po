@@ -13095,6 +13095,14 @@ msgstr ""
 #~ msgstr "GZDOOM ジョイスティック構成を使用"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "ゲームを再開"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "次のディスク (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "ステートロード - スロット  1"
 
@@ -13197,14 +13205,6 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "ゲームを再開"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "次のディスク (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "OVERLAY SIZE (SINGE)"
