@@ -3,8 +3,8 @@
 # imgui
 #
 ################################################################################
-# Version: Commits on Jan 05, 2023
-IMGUI_VERSION = v1.89.2
+# Version: Commits on Aug 01, 2023
+IMGUI_VERSION = v1.89.8
 IMGUI_SITE = $(call github,ocornut,imgui,$(IMGUI_VERSION))
 
 HOST_IMGUI_CONF_OPTS = -DCMAKE_INSTALL_PREFIX=$(STAGING_DIR)/usr

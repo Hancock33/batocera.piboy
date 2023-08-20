@@ -1,8 +1,69 @@
+diff --git a/CMakeModules/FindEGL.cmake b/CMakeModules/FindEGL.cmake
+index 48e51728..c1c947b1 100644
+--- a/CMakeModules/FindEGL.cmake
++++ b/CMakeModules/FindEGL.cmake
+@@ -86,6 +86,17 @@ find_library(EGL_LIBRARY
+         ${PKG_EGL_LIBRARY_DIRS}
+ )
+ 
++if(USE_MALI)
++pkg_check_modules(PKG_MALI QUIET mali)
++find_library(MALI_LIBRARY
++    NAMES
++        mali
++    HINTS
++        ${PKG_MALI_LIBRARY_DIRS}
++)
++endif()
++
++
+ # NB: We do *not* use the version information from pkg-config, as that
+ #     is the implementation version (eg: the Mesa version)
+ if(EGL_INCLUDE_DIR)
+@@ -117,7 +128,11 @@ endif()
+ 
+ cmake_push_check_state(RESET)
+ list(APPEND CMAKE_REQUIRED_LIBRARIES "${EGL_LIBRARY}")
++if(USE_MALI)
++list(APPEND CMAKE_REQUIRED_LIBRARIES "${MALI_LIBRARY}")
++endif()
+ list(APPEND CMAKE_REQUIRED_INCLUDES "${EGL_INCLUDE_DIR}")
++list(APPEND CMAKE_REQUIRED_DEFINITIONS "-DEGL_NO_X11")
+ 
+ check_cxx_source_compiles("
+ #include <EGL/egl.h>
+@@ -161,7 +176,11 @@ endif()
+ mark_as_advanced(EGL_LIBRARY EGL_INCLUDE_DIR HAVE_EGL)
+ 
+ # compatibility variables
++if (USE_MALI)
++set(EGL_LIBRARIES ${EGL_LIBRARY} ${MALI_LIBRARY})
++else()
+ set(EGL_LIBRARIES ${EGL_LIBRARY})
++endif()
+ set(EGL_INCLUDE_DIRS ${EGL_INCLUDE_DIR})
+ set(EGL_VERSION_STRING ${EGL_VERSION})
+ 
+diff --git a/dep/glad/CMakeLists.txt b/dep/glad/CMakeLists.txt
+index 24a4fb45..59eb66e5 100644
+--- a/dep/glad/CMakeLists.txt
++++ b/dep/glad/CMakeLists.txt
+@@ -17,8 +17,9 @@ if(WIN32)
+   target_sources(glad PRIVATE src/glad_wgl.c)
+ else()
+   if(USE_EGL)
++    target_compile_definitions(glad PRIVATE -DEGL_NO_X11)
+     target_sources(glad PRIVATE src/glad_egl.c)
+-    target_link_libraries(glad PRIVATE EGL::EGL)
++    target_link_libraries(glad PRIVATE EGL)
+   endif()
+   if(USE_X11)
+     target_sources(glad PRIVATE src/glad_glx.c)
 diff --git a/src/core/settings.cpp b/src/core/settings.cpp
-index 6b8946cd..735c38a2 100644
+index aa349319..f556d5fa 100644
 --- a/src/core/settings.cpp
 +++ b/src/core/settings.cpp
-@@ -1304,18 +1304,18 @@ std::string EmuFolders::Textures;
+@@ -1323,18 +1323,18 @@ std::string EmuFolders::Textures;
  
  void EmuFolders::SetDefaults()
  {
@@ -33,7 +94,7 @@ index 6b8946cd..735c38a2 100644
  }
  
  static std::string LoadPathFromSettings(SettingsInterface& si, const std::string& root, const char* section,
-@@ -1361,18 +1361,18 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
+@@ -1380,18 +1380,18 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
  void EmuFolders::Save(SettingsInterface& si)
  {
    // convert back to relative
