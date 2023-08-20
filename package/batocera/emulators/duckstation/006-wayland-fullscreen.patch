@@ -1,5 +1,5 @@
 diff --git a/src/duckstation-nogui/wayland_nogui_platform.cpp b/src/duckstation-nogui/wayland_nogui_platform.cpp
-index c6d4ec21..bc5c9e66 100644
+index 52bf9672..b551b041 100644
 --- a/src/duckstation-nogui/wayland_nogui_platform.cpp
 +++ b/src/duckstation-nogui/wayland_nogui_platform.cpp
 @@ -137,7 +137,13 @@ bool WaylandNoGUIPlatform::CreatePlatformWindow(std::string title)
@@ -17,7 +17,7 @@ index c6d4ec21..bc5c9e66 100644
    m_window_info.surface_width = static_cast<u32>(window_width);
    m_window_info.surface_height = static_cast<u32>(window_height);
    m_window_info.surface_scale = 1.0f;
-@@ -234,6 +240,11 @@ void WaylandNoGUIPlatform::GlobalRegistryHandler(void* data, wl_registry* regist
+@@ -239,6 +245,11 @@ void WaylandNoGUIPlatform::GlobalRegistryHandler(void* data, wl_registry* regist
      platform->m_decoration_manager = static_cast<zxdg_decoration_manager_v1*>(
        wl_registry_bind(platform->m_registry, id, &zxdg_decoration_manager_v1_interface, 1));
    }
@@ -30,10 +30,10 @@ index c6d4ec21..bc5c9e66 100644
    {
      static const wl_seat_listener seat_listener = {&WaylandNoGUIPlatform::SeatCapabilities};
 diff --git a/src/duckstation-nogui/wayland_nogui_platform.h b/src/duckstation-nogui/wayland_nogui_platform.h
-index 25f8b371..40996468 100644
+index 2423abee..cca1a077 100644
 --- a/src/duckstation-nogui/wayland_nogui_platform.h
 +++ b/src/duckstation-nogui/wayland_nogui_platform.h
-@@ -95,6 +95,7 @@ private:
+@@ -96,6 +96,7 @@ private:
    xkb_context* m_xkb_context = nullptr;
    xkb_keymap* m_xkb_keymap = nullptr;
    xkb_state* m_xkb_state = nullptr;
