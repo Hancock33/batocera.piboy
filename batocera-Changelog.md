@@ -53,10 +53,10 @@
 ### Updated
 - xenia to v1.0.2805
 - xenia canary to ba936e8 (Commits on Jul 22, 2023)
-- citra to nightly-1962
+- citra to nightly-1973
 - groovy mame to 0.257
 - libretro-mame to 0.257
-- cemu to v2.0-46
+- cemu to v2.0-47
 - amiberry to 5.6.1
 - dosbox-x to v2023.05.01
 - tsugaru to v20230722
@@ -77,7 +77,7 @@
 - slang and glsl shaders to July 29th 2023
 - pcsx2 to v1.7.4857 (Aug, 1st 2023)
 - SDLPoP to v1.23 (Feb, 4th 2023)
-- BigPemu to v107
+- BigPemu to v1071
 - commander genius to v3.4.9
 - play! to v0.62
 ### Dev
