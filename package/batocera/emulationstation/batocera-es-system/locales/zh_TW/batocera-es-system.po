@@ -1167,7 +1167,7 @@ msgid ""
 "firmware file was not found."
 msgstr ""
 
-#. TRANSLATION: libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, redream, ...
+#. TRANSLATION: libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, scummvm, ...
 msgctxt "game_options"
 msgid "German"
 msgstr "德語"
@@ -1242,7 +1242,7 @@ msgctxt "game_options"
 msgid "Wii NAND's language setting."
 msgstr ""
 
-#. TRANSLATION: libretro/dolphin, cemu, flycast/vitaquake3, sonic2013, soniccd, ...
+#. TRANSLATION: libretro/dolphin, cemu, flycast/vitaquake3, scummvm, sonic2013, ...
 msgctxt "game_options"
 msgid "English"
 msgstr "英語"
@@ -1262,7 +1262,7 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "繁體中文"
 
-#. TRANSLATION: libretro/dolphin, cemu, easyrpg, sonic2013, play, ...
+#. TRANSLATION: libretro/dolphin, cemu, scummvm, easyrpg, sonic2013, ...
 msgctxt "game_options"
 msgid "Korean"
 msgstr "韓語"
@@ -7280,12 +7280,12 @@ msgctxt "game_options"
 msgid "Chinese"
 msgstr "中文"
 
-#. TRANSLATION: cemu, play, yuzu, ryujinx, xenia, ...
+#. TRANSLATION: cemu, scummvm, play, yuzu, ryujinx, ...
 msgctxt "game_options"
 msgid "Portuguese"
 msgstr "葡萄牙文"
 
-#. TRANSLATION: cemu, sonic2013, play, yuzu, ryujinx, ...
+#. TRANSLATION: cemu, scummvm, sonic2013, play, yuzu, ...
 msgctxt "game_options"
 msgid "Russian"
 msgstr "俄文"
@@ -7950,7 +7950,7 @@ msgctxt "game_options"
 msgid "OPTIMAL FRAME PACING"
 msgstr ""
 
-#. TRANSLATION: duckstation, melonds, pcsx2, awgl, thextech, ...
+#. TRANSLATION: duckstation, melonds, pcsx2, scummvm, awgl, ...
 msgctxt "game_options"
 msgid "Software"
 msgstr ""
@@ -8078,7 +8078,7 @@ msgid ""
 "When running outside of 100%, adjusts the temp instead of dropping frames."
 msgstr ""
 
-#. TRANSLATION: duckstation
+#. TRANSLATION: duckstation, scummvm
 msgctxt "game_options"
 msgid "STRETCH MODE"
 msgstr ""
@@ -9103,7 +9103,7 @@ msgid ""
 "positioning between pixels."
 msgstr ""
 
-#. TRANSLATION: pcsx2, scummvm, model2emu
+#. TRANSLATION: pcsx2, model2emu
 msgctxt "game_options"
 msgid "BILINEAR FILTERING"
 msgstr ""
@@ -9898,7 +9898,7 @@ msgctxt "game_options"
 msgid "Distorts the output to fill the display fully Overrides aspect ratio."
 msgstr ""
 
-#. TRANSLATION: rpcs3, scummvm
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "STRETCH TO DISPLAY AREA"
 msgstr ""
@@ -10018,68 +10018,32 @@ msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid ""
-"Change the graphics backend used to render the ScummVM window on the screen."
+msgid "Select scale resolution of the game."
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "GRAPHICS MODE"
+msgid "SCALE FACTOR"
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "SDL (Default)"
+msgid "Sets the scaler filter mode when rendering."
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Select stretch mode."
+msgid "SCALER MODE"
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Center"
+msgid "HQ (bilinear filter)"
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Pixel-Perfect"
-msgstr ""
-
-#. TRANSLATION: scummvm
-msgctxt "game_options"
-msgid "Fit to Window"
-msgstr ""
-
-#. TRANSLATION: scummvm
-msgctxt "game_options"
-msgid "Stretch to Window"
-msgstr ""
-
-#. TRANSLATION: scummvm
-msgctxt "game_options"
-msgid "Fit to Window (4:3)"
-msgstr ""
-
-#. TRANSLATION: scummvm, f2bgl
-msgctxt "game_options"
-msgid "Select which filter is used to scale up the resolution."
-msgstr ""
-
-#. TRANSLATION: scummvm
-msgctxt "game_options"
-msgid "SCALE FILTER"
-msgstr ""
-
-#. TRANSLATION: scummvm
-msgctxt "game_options"
-msgid "HQ"
-msgstr ""
-
-#. TRANSLATION: scummvm
-msgctxt "game_options"
-msgid "Edge"
+msgid "Edge (sharper filet)"
 msgstr ""
 
 #. TRANSLATION: scummvm
@@ -10089,7 +10053,7 @@ msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "SAI"
+msgid "Scanline Interpolation Filter (SAI)"
 msgstr ""
 
 #. TRANSLATION: scummvm
@@ -10104,44 +10068,97 @@ msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "PM"
+msgid "Pixel-Perfect"
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Dotmatrix"
+msgid "DotMatrix"
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "TV"
+msgid "TV2x CRT Television Filter"
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Changes the resolution of the game."
+msgid "Stretches the output to fill the display area."
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "SCALE FACTOR"
+msgid "Center (Default)"
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "0x (Default)"
+msgid "Pixel Perfect"
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid ""
-"Corrects the aspect ratio so that games appear the same as they would on "
-"original."
+msgid "Even Pixels"
 msgstr ""
 
-#. TRANSLATION: scummvm, model2emu
+#. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Smooth textures."
+msgid "Fit resolution scale"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Stretch to screen"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Fit 4:3 Aspect Ratio"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Choose your preferred renderer."
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "RENDERER"
+msgstr ""
+
+#. TRANSLATION: scummvm, play
+msgctxt "game_options"
+msgid "OpenGL (Default)"
+msgstr "OpenGL (預設)"
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "OpenGL with Shaders"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Choose your preferred language."
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Chinese (Mandarin)"
+msgstr ""
+
+#. TRANSLATION: scummvm, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Swedish"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Hebrew"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Czech"
 msgstr ""
 
 #. TRANSLATION: easyrpg
@@ -11121,6 +11138,11 @@ msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
+msgid "Smooth textures."
+msgstr ""
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
 msgid ""
 "Enables mipmap usage and trilinear filtering. Doesn't work with some games."
 msgstr ""
@@ -11198,11 +11220,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "ENABLE SOFTWARE RENDERER"
 msgstr ""
-
-#. TRANSLATION: play
-msgctxt "game_options"
-msgid "OpenGL (Default)"
-msgstr "OpenGL (預設)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
@@ -11976,6 +11993,11 @@ msgstr ""
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
+msgid "Select which filter is used to scale up the resolution."
+msgstr ""
+
+#. TRANSLATION: f2bgl
+msgctxt "game_options"
 msgid "TEXTURE FILTER"
 msgstr ""
 
@@ -12228,11 +12250,6 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Polish"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Swedish"
 msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
@@ -12541,18 +12558,8 @@ msgstr "菜單"
 
 #. TRANSLATION: scummvm.keys
 msgctxt "keys_files"
-msgid "Aspect ratio correction on/off"
-msgstr "打開/關閉寬高比較正"
-
-#. TRANSLATION: scummvm.keys
-msgctxt "keys_files"
 msgid "Graphics filtering on/off"
 msgstr "打開/關閉圖像過濾"
-
-#. TRANSLATION: scummvm.keys
-msgctxt "keys_files"
-msgid "Cycle through stretch modes"
-msgstr "循環拉伸模式"
 
 #. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -12868,6 +12875,14 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Open"
 msgstr ""
+
+#~ msgctxt "keys_files"
+#~ msgid "Aspect ratio correction on/off"
+#~ msgstr "打開/關閉寬高比較正"
+
+#~ msgctxt "keys_files"
+#~ msgid "Cycle through stretch modes"
+#~ msgstr "循環拉伸模式"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
