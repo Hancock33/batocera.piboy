@@ -32,6 +32,10 @@
 - Fixed crop overscan settings for NES to work with newer core builds
 - DVD playback in Kodi
 - workaround BT firmware with Intel AX101 chipset
+- Fix Star Wars Trilogy (supermodel) not working with the light gun
+- Mame2003plus light gun controls properly mapped
+- Lr-swanstation light gun controls properly mapped
+- Sinden Lightgun will now start when booting Batocera
 ### Changed
 - ES music volume on a logarithmic scale instead of linear one
 - if using the manual batocera.conf `splash.screen.resize` option, this will now adjust the playback resolution too
@@ -44,13 +48,15 @@
 - Model2 emulator now allows rendering resolution to be selected
 - Model2 now allows you to enable scanlines
 - batocera-services - custom.sh is deprecated and may be removed in a later version. Put your services into /userdata/system/services, and enable them in batocera.conf (syncthing may be reenabled).
+- Model2 now loads 16:9 bezels accordingly to your screen and border size in ES
+- Model2 crosshair disabled by default with light guns connected
 ### Updated
 - xenia to v1.0.2805
 - xenia canary to ba936e8 (Commits on Jul 22, 2023)
-- citra to nightly-1962
+- citra to nightly-1973
 - groovy mame to 0.257
 - libretro-mame to 0.257
-- cemu to v2.0-46
+- cemu to v2.0-47
 - amiberry to 5.6.1
 - dosbox-x to v2023.05.01
 - tsugaru to v20230722
@@ -71,7 +77,7 @@
 - slang and glsl shaders to July 29th 2023
 - pcsx2 to v1.7.4857 (Aug, 1st 2023)
 - SDLPoP to v1.23 (Feb, 4th 2023)
-- BigPemu to v107
+- BigPemu to v1071
 - commander genius to v3.4.9
 - play! to v0.62
 ### Dev
