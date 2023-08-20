@@ -1191,7 +1191,7 @@ msgstr ""
 "Vybraný jazyk bude použitý ak je zakázané 'Použiť nastavenia firmvéru' alebo "
 "ak sa nenájde súbor firmvéru."
 
-#. TRANSLATION: libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, redream, ...
+#. TRANSLATION: libretro/melonds, libretro/dolphin, cemu, flycast/vitaquake3, scummvm, ...
 msgctxt "game_options"
 msgid "German"
 msgstr "Nemčina"
@@ -1266,7 +1266,7 @@ msgctxt "game_options"
 msgid "Wii NAND's language setting."
 msgstr "Jazykové nastavenia Wii NAND."
 
-#. TRANSLATION: libretro/dolphin, cemu, flycast/vitaquake3, sonic2013, soniccd, ...
+#. TRANSLATION: libretro/dolphin, cemu, flycast/vitaquake3, scummvm, sonic2013, ...
 msgctxt "game_options"
 msgid "English"
 msgstr "Angličtina"
@@ -1286,7 +1286,7 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Tradičná čínština"
 
-#. TRANSLATION: libretro/dolphin, cemu, easyrpg, sonic2013, play, ...
+#. TRANSLATION: libretro/dolphin, cemu, scummvm, easyrpg, sonic2013, ...
 msgctxt "game_options"
 msgid "Korean"
 msgstr "Kórejčina"
@@ -7338,12 +7338,12 @@ msgctxt "game_options"
 msgid "Chinese"
 msgstr "Čínština"
 
-#. TRANSLATION: cemu, play, yuzu, ryujinx, xenia, ...
+#. TRANSLATION: cemu, scummvm, play, yuzu, ryujinx, ...
 msgctxt "game_options"
 msgid "Portuguese"
 msgstr "Portugalčina"
 
-#. TRANSLATION: cemu, sonic2013, play, yuzu, ryujinx, ...
+#. TRANSLATION: cemu, scummvm, sonic2013, play, yuzu, ...
 msgctxt "game_options"
 msgid "Russian"
 msgstr "Ruština"
@@ -8024,7 +8024,7 @@ msgctxt "game_options"
 msgid "OPTIMAL FRAME PACING"
 msgstr "Optimálna rýchlosť snímky"
 
-#. TRANSLATION: duckstation, melonds, pcsx2, awgl, thextech, ...
+#. TRANSLATION: duckstation, melonds, pcsx2, scummvm, awgl, ...
 msgctxt "game_options"
 msgid "Software"
 msgstr "Softvér"
@@ -8154,7 +8154,7 @@ msgid ""
 "When running outside of 100%, adjusts the temp instead of dropping frames."
 msgstr "Pri behu mimo 100% upraví temp namiesto vynechania snímok."
 
-#. TRANSLATION: duckstation
+#. TRANSLATION: duckstation, scummvm
 msgctxt "game_options"
 msgid "STRETCH MODE"
 msgstr "Režim roztiahnutia"
@@ -9196,7 +9196,7 @@ msgstr ""
 "Vyhladí celkový obraz ako je zobrazený na obrazovke. Opraví polohy medzi "
 "bodmi."
 
-#. TRANSLATION: pcsx2, scummvm, model2emu
+#. TRANSLATION: pcsx2, model2emu
 msgctxt "game_options"
 msgid "BILINEAR FILTERING"
 msgstr "Bilineárne filtrovanie"
@@ -10013,7 +10013,7 @@ msgctxt "game_options"
 msgid "Distorts the output to fill the display fully Overrides aspect ratio."
 msgstr "Skresľuje výstup, aby úplne vyplnil displej. Prepíše pomer strán."
 
-#. TRANSLATION: rpcs3, scummvm
+#. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "STRETCH TO DISPLAY AREA"
 msgstr "Roztiahnuť na oblasť obrazovky"
@@ -10140,68 +10140,32 @@ msgstr "Grafické používateľské rozhranie"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid ""
-"Change the graphics backend used to render the ScummVM window on the screen."
+msgid "Select scale resolution of the game."
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "GRAPHICS MODE"
+msgid "SCALE FACTOR"
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "SDL (Default)"
+msgid "Sets the scaler filter mode when rendering."
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Select stretch mode."
+msgid "SCALER MODE"
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Center"
+msgid "HQ (bilinear filter)"
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Pixel-Perfect"
-msgstr ""
-
-#. TRANSLATION: scummvm
-msgctxt "game_options"
-msgid "Fit to Window"
-msgstr ""
-
-#. TRANSLATION: scummvm
-msgctxt "game_options"
-msgid "Stretch to Window"
-msgstr ""
-
-#. TRANSLATION: scummvm
-msgctxt "game_options"
-msgid "Fit to Window (4:3)"
-msgstr ""
-
-#. TRANSLATION: scummvm, f2bgl
-msgctxt "game_options"
-msgid "Select which filter is used to scale up the resolution."
-msgstr ""
-
-#. TRANSLATION: scummvm
-msgctxt "game_options"
-msgid "SCALE FILTER"
-msgstr ""
-
-#. TRANSLATION: scummvm
-msgctxt "game_options"
-msgid "HQ"
-msgstr ""
-
-#. TRANSLATION: scummvm
-msgctxt "game_options"
-msgid "Edge"
+msgid "Edge (sharper filet)"
 msgstr ""
 
 #. TRANSLATION: scummvm
@@ -10211,7 +10175,7 @@ msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "SAI"
+msgid "Scanline Interpolation Filter (SAI)"
 msgstr ""
 
 #. TRANSLATION: scummvm
@@ -10226,45 +10190,98 @@ msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "PM"
+msgid "Pixel-Perfect"
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Dotmatrix"
+msgid "DotMatrix"
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "TV"
+msgid "TV2x CRT Television Filter"
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Changes the resolution of the game."
+msgid "Stretches the output to fill the display area."
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "SCALE FACTOR"
+msgid "Center (Default)"
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "0x (Default)"
+msgid "Pixel Perfect"
 msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid ""
-"Corrects the aspect ratio so that games appear the same as they would on "
-"original."
+msgid "Even Pixels"
 msgstr ""
 
-#. TRANSLATION: scummvm, model2emu
+#. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Smooth textures."
-msgstr "Plynulé textúry."
+msgid "Fit resolution scale"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Stretch to screen"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Fit 4:3 Aspect Ratio"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Choose your preferred renderer."
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "RENDERER"
+msgstr ""
+
+#. TRANSLATION: scummvm, play
+msgctxt "game_options"
+msgid "OpenGL (Default)"
+msgstr "OpenGL (predvolené)"
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "OpenGL with Shaders"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Choose your preferred language."
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Chinese (Mandarin)"
+msgstr ""
+
+#. TRANSLATION: scummvm, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Swedish"
+msgstr "Švédčina"
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Hebrew"
+msgstr ""
+
+#. TRANSLATION: scummvm
+msgctxt "game_options"
+msgid "Czech"
+msgstr ""
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
@@ -11266,6 +11283,11 @@ msgstr "Falošné Gouraudovo"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
+msgid "Smooth textures."
+msgstr "Plynulé textúry."
+
+#. TRANSLATION: model2emu
+msgctxt "game_options"
 msgid ""
 "Enables mipmap usage and trilinear filtering. Doesn't work with some games."
 msgstr ""
@@ -11347,11 +11369,6 @@ msgstr "Použite, ak máte s týmto emulátorom problémy s grafikou alebo GPU."
 msgctxt "game_options"
 msgid "ENABLE SOFTWARE RENDERER"
 msgstr "Povoliť softvérový renderer"
-
-#. TRANSLATION: play
-msgctxt "game_options"
-msgid "OpenGL (Default)"
-msgstr "OpenGL (predvolené)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
@@ -12125,6 +12142,11 @@ msgstr ""
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
+msgid "Select which filter is used to scale up the resolution."
+msgstr ""
+
+#. TRANSLATION: f2bgl
+msgctxt "game_options"
 msgid "TEXTURE FILTER"
 msgstr ""
 
@@ -12382,11 +12404,6 @@ msgstr "Zakázať UI výzvy"
 msgctxt "game_options"
 msgid "Polish"
 msgstr "Poľština"
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Swedish"
-msgstr "Švédčina"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -12698,18 +12715,8 @@ msgstr "Ponuka"
 
 #. TRANSLATION: scummvm.keys
 msgctxt "keys_files"
-msgid "Aspect ratio correction on/off"
-msgstr "Korekciu pomeru strán zapnúť/vypnúť"
-
-#. TRANSLATION: scummvm.keys
-msgctxt "keys_files"
 msgid "Graphics filtering on/off"
 msgstr "Grafické filtrovanie zapnúť/vypnúť"
-
-#. TRANSLATION: scummvm.keys
-msgctxt "keys_files"
-msgid "Cycle through stretch modes"
-msgstr "Cyklovať cez režimy roztiahnutia"
 
 #. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys
 msgctxt "keys_files"
@@ -13025,6 +13032,14 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Open"
 msgstr ""
+
+#~ msgctxt "keys_files"
+#~ msgid "Aspect ratio correction on/off"
+#~ msgstr "Korekciu pomeru strán zapnúť/vypnúť"
+
+#~ msgctxt "keys_files"
+#~ msgid "Cycle through stretch modes"
+#~ msgstr "Cyklovať cez režimy roztiahnutia"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
