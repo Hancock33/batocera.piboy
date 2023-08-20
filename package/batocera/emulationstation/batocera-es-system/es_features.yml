@@ -8995,67 +8995,68 @@ rpcs3:
                 "On":  1
 scummvm:
   features: [padtokeyboard]
-  shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
-        scummvm_render:
-            group: VIDEO SETTINGS
-            prompt:      GRAPHICS MODE
-            description: Change the graphics backend used to render the ScummVM window on the screen.
-            choices:
-                "SDL (Default)": sdl
-                "OpenGL":        gl
-        scummvm_strech:
-            group: VIDEO SETTINGS
-            prompt:      STRETCH TO DISPLAY AREA
-            description: Select stretch mode.
-            choices:
-                "Center":              0
-                "Pixel-Perfect":       1
-                "Fit to Window":       2
-                "Stretch to Window":   3
-                "Fit to Window (4:3)": 4
-                "Off (Default)":       5
-        scummvm_scaler:
-            group: VIDEO SETTINGS
-            prompt:      SCALE FILTER
-            description: Select which filter is used to scale up the resolution.
-            choices:
-                "Normal":        0
-                "HQ":            1
-                "Edge":          2
-                "AdvMame":       3
-                "SAI":           4
-                "SuperSAI":      5
-                "SuperEagle":    6
-                "PM":            7
-                "Dotmatrix":     8
-                "TV":            9
-                "Off (Default)": 10
-        scummvm_scale_factor:
-            group: VIDEO SETTINGS
-            prompt:      SCALE FACTOR
-            description: Changes the resolution of the game.
-            choices:
-                "0x (Default)": 0
-                "1x":           1
-                "2x":           2
-                "3x":           3
-                "4x":           4
-                "5x":           5
-        scummvm_aspect_ratio:
-            group: VIDEO SETTINGS
-            prompt:      ASPECT RATIO
-            description: Corrects the aspect ratio so that games appear the same as they would on original.
-            choices:
-                "Off":           0
-                "On (Default)":  1
-        scummvm_filtering:
-            group: VIDEO SETTINGS
-            prompt:      BILINEAR FILTERING
-            description: Smooth textures.
-            choices:
-                "Off (Default)": 0
-                "On":            1
+      scumm_scale:
+          prompt: SCALE FACTOR
+          description: Select scale resolution of the game.
+          choices:
+              "1x (320x200)":   1
+              "2x (640x400)":   2
+              "3x (960x600)":   3
+              "4x (1280x800)":  4
+              "5x (1600x1000)": 5
+              "6x (1920x1200)": 6
+              "7x (2240x1400)": 7
+              "8x (2560x1600)": 8
+      scumm_scaler_mode:
+          prompt: SCALER MODE
+          description: Sets the scaler filter mode when rendering.
+          choices:
+              "Normal":                              "normal"
+              "HQ (bilinear filter)":                "hq"
+              "Edge (sharper filet)":                "edge"
+              "AdvMame":                             "advmame"
+              "Scanline Interpolation Filter (SAI)": "sai"
+              "SuperSAI":                            "supersai"
+              "SuperEagle":                          "supereagle"
+              "Pixel-Perfect":                       "pm"
+              "DotMatrix":                           "dotmatrix"
+              "TV2x CRT Television Filter":          "tv2x"
+      scumm_stretch:
+          prompt: STRETCH MODE
+          description: Stretches the output to fill the display area.
+          choices:
+              "Center (Default)":     "centre"
+              "Pixel Perfect":        "pixel-perfect"
+              "Even Pixels":          "even-pixels"
+              "Fit resolution scale": "fit"
+              "Stretch to screen":    "stretch"
+              "Fit 4:3 Aspect Ratio": "fit_force_aspect"
+      scumm_renderer:
+          prompt: RENDERER
+          description: Choose your preferred renderer.
+          choices:
+                "Software":            "software"
+                "OpenGL (Default)":    "opengl"
+                "OpenGL with Shaders": "opengl_shaders"
+      scumm_language:
+          prompt: LANGUAGE
+          description: Choose your preferred language.
+          choices:
+              "English":            "en"
+              "German":             "de"
+              "French":             "fr"
+              "Italian":            "it"
+              "Portuguese":         "pt"
+              "Spanish":            "es"
+              "Japanese":           "jp"
+              "Chinese (Mandarin)": "zh"
+              "Korean":             "kr"
+              "Swedish":            "se"
+              "Hebrew":             "hb"
+              "Russian":            "ru"
+              "Czech":              "cz"
 
 easyrpg:
   features: [padtokeyboard]
