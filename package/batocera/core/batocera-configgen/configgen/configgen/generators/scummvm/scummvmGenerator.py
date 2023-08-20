@@ -5,14 +5,10 @@ from generators.Generator import Generator
 import controllersConfig
 import os.path
 import glob
-import utils.videoMode as videoMode
 
-class ScummVMGenerator(Generator):
-    # Main entry of the module
-    # Configure mupen and return a command
+class ScummVMGenerator(Generator):  
+
     def generate(self, system, rom, playersControllers, guns, gameResolution):
-        gameResolution = videoMode.getCurrentResolution()
-        sWH = "--window-size=" + str(gameResolution["width"]) + "," + str(gameResolution["height"])
         # crete /userdata/bios/scummvm/extra folder if it doesn't exist
         if not os.path.exists('/userdata/bios/scummvm/extra'):
             os.makedirs('/userdata/bios/scummvm/extra')
@@ -37,98 +33,64 @@ class ScummVMGenerator(Generator):
                 id=pad.index
             nplayer += 1
 
-        commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
-                        "-f",
-                        f"--joystick={id}",
-                        "--screenshotspath="+batoceraFiles.screenshotsDir,
-                        "--extrapath=/userdata/bios/scummvm/extra",
-                        "--savepath="+batoceraFiles.scummvmSaves]
-        # gfx mode
-        if system.isOptSet('scummvm_render'):
-            if system.config['scummvm_render'] == 'sdl':
-                commandArray.extend(["--gfx-mode=surfacesdl"])
-            elif system.config['scummvm_render'] == 'gl':
-                commandArray.extend(["--gfx-mode=opengl"])
-                commandArray.extend([sWH])
-        else:
-                commandArray.extend(["--gfx-mode=''"])
+        commandArray = [batoceraFiles.batoceraBins[system.config['emulator']], "-f"]
+        
+        # set the resolution
+        window_width = str(gameResolution["width"])
+        window_height = str(gameResolution["height"])
+        commandArray.append(f"--window-size={window_width},{window_height}")
 
-        # strech mode
-        if system.isOptSet('scummvm_strech'):
-            if system.config['scummvm_strech'] == '0':
-                commandArray.extend(["--stretch-mode=center"])
-            if system.config['scummvm_strech'] == '1':
-                commandArray.extend(["--stretch-mode=pixel-perfect"])
-            if system.config['scummvm_strech'] == '2':
-                commandArray.extend(["--stretch-mode=fit"])
-            if system.config['scummvm_strech'] == '3':
-                commandArray.extend(["--stretch-mode=stretch"])
-            if system.config['scummvm_strech'] == '4':
-                commandArray.extend(["--stretch-mode=fit_force_aspect"])
-        else:
-                commandArray.extend(["--stretch-mode=''"])
-
-        # scaler
-        if system.isOptSet('scummvm_scaler'):
-            if system.config['scummvm_scaler'] == '0':
-                commandArray.extend(["--scaler=normal"])
-            if system.config['scummvm_scaler'] == '1':
-                commandArray.extend(["--scaler=hq"])
-            if system.config['scummvm_scaler'] == '2':
-                commandArray.extend(["--scaler=edge"])
-            if system.config['scummvm_scaler'] == '3':
-                commandArray.extend(["--scaler=advmame"])
-            if system.config['scummvm_scaler'] == '4':
-                commandArray.extend(["--scaler=sai"])
-            if system.config['scummvm_scaler'] == '5':
-                commandArray.extend(["--scaler=supersai"])
-            if system.config['scummvm_scaler'] == '6':
-                commandArray.extend(["--scaler=supereagle"])
-            if system.config['scummvm_scaler'] == '7':
-                commandArray.extend(["--scaler=pm"])
-            if system.config['scummvm_scaler'] == '8':
-                commandArray.extend(["--scaler=dotmatrix"])
-            if system.config['scummvm_scaler'] == '9':
-                commandArray.extend(["--scaler=tv2x"])
-        else:
-                commandArray.extend(["--scaler=''"])
+        ## user options
 
         # scale factor
-        if system.isOptSet('scummvm_scale_factor'):
-            if system.config['scummvm_scale_factor'] == '1':
-                commandArray.extend(["--scale-factor=1"])
-            if system.config['scummvm_scale_factor'] == '2':
-                commandArray.extend(["--scale-factor=2"])
-            if system.config['scummvm_scale_factor'] == '3':
-                commandArray.extend(["--scale-factor=3"])
-            if system.config['scummvm_scale_factor'] == '4':
-                commandArray.extend(["--scale-factor=4"])
-            if system.config['scummvm_scale_factor'] == '5':
-                commandArray.extend(["--scale-factor=5"])
+        if system.isOptSet("scumm_scale"):
+            commandArray.append(f"--scale-factor={system.config['scumm_scale']}")
         else:
-                commandArray.extend(["--scale-factor=0"])
+            commandArray.append("--scale-factor=3")
 
-        # aspect ratio
-        if system.isOptSet('scummvm_aspect_ratio'):
-            if system.config['scummvm_aspect_ratio'] == '0':
-                commandArray.extend(["--no-aspect-ratio"])
-            if system.config['scummvm_aspect_ratio'] == '1':
-                commandArray.extend(["--aspect-ratio"])
+        # sclaer mode
+        if system.isOptSet("scumm_scaler_mode"):
+            commandArray.append(f"--scaler={system.config['scumm_scaler_mode']}")
         else:
-                commandArray.extend(["--aspect-ratio"])
-
-        # bilinear filtering
-        if system.isOptSet('scummvm_filtering'):
-            if system.config['scummvm_filtering'] == '0':
-                commandArray.extend(["--no-filtering"])
-            if system.config['scummvm_filtering'] == '1':
-                commandArray.extend(["--filtering"])
+            commandArray.append("--scaler=normal")
+                
+        #  stretch mode
+        if system.isOptSet("scumm_stretch"):
+            commandArray.append(f"--stretch-mode={system.config['scumm_stretch']}")
         else:
-                commandArray.extend(["--no-filtering"])
+            commandArray.append("--stretch-mode=center")
 
-        commandArray.append("--path=""{}""".format(romPath))
-        commandArray.append(f"""{romName}""")
+        # renderer
+        if system.isOptSet("scumm_renderer"):
+            commandArray.append(f"--renderer={system.config['scumm_renderer']}")
+        else:
+            commandArray.append("--renderer=opengl")
 
-        return Command.Command(array=commandArray,env={
-            "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
-        })
+        # language
+        if system.isOptSet("scumm_language"):
+            commandArray.extend(["-q", f"{system.config['scumm_language']}"])
+        else:
+            commandArray.extend(["-q", "en"])
+
+        # logging
+        commandArray.append("--logfile=/userdata/system/logs")
+
+        commandArray.extend(
+            [f"--joystick={id}",
+            "--screenshotspath="+batoceraFiles.screenshotsDir,
+            "--extrapath=/userdata/bios/scummvm/extra",
+            "--savepath="+batoceraFiles.scummvmSaves,
+            "--path=""{}""".format(romPath),
+            f"""{romName}"""]
+        )
+
+        return Command.Command(
+            array=commandArray, env={
+                "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
+            }
+        )
+    
+    def getInGameRatio(self, config, gameResolution, rom):
+        if ("scumm_stretch" in config and config["scumm_stretch"] == "fit_force_aspect") or ("scumm_stretch" in config and config["scumm_stretch"] == "pixel-perfect"):
+            return 4/3
+        return 16/9
