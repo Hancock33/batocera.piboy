@@ -13029,18 +13029,6 @@ msgid "Open"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid "Center"
-#~ msgstr "Střed"
-
-#~ msgctxt "keys_files"
-#~ msgid "Aspect ratio correction on/off"
-#~ msgstr "Zapnutí/vypnutí korekce poměru stran"
-
-#~ msgctxt "keys_files"
-#~ msgid "Cycle through stretch modes"
-#~ msgstr "Cyklus režimů protažení"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Uložení minulých pozic pro přetáčení v reálném čase, pokud to jádro "
@@ -13264,6 +13252,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rychle vpřed"
+
+#~ msgctxt "keys_files"
+#~ msgid "Aspect ratio correction on/off"
+#~ msgstr "Zapnutí/vypnutí korekce poměru stran"
+
+#~ msgctxt "keys_files"
+#~ msgid "Cycle through stretch modes"
+#~ msgstr "Cyklus režimů protažení"
 
 #~ msgctxt "game_options"
 #~ msgid "OVERLAY SIZE (SINGE)"
@@ -14430,6 +14426,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Disk"
 #~ msgstr "Disk"
+
+#~ msgctxt "game_options"
+#~ msgid "Center"
+#~ msgstr "Střed"
 
 #~ msgctxt "game_options"
 #~ msgid "Scale"

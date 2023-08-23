@@ -12944,10 +12944,6 @@ msgid "Open"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid "Center"
-#~ msgstr "Centrum"
-
-#~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
 #~ msgstr "Behandeld de rechter analoge stick als de tweede joystick."
 
@@ -13423,6 +13419,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "CDZ (MAME)"
 #~ msgstr "CDZ (MAME)"
+
+#~ msgctxt "game_options"
+#~ msgid "Center"
+#~ msgstr "Centrum"
 
 #~ msgctxt "game_options"
 #~ msgid "Scale"
