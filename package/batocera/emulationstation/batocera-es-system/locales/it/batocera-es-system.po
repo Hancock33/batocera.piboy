@@ -13080,14 +13080,6 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
-#~ msgctxt "keys_files"
-#~ msgid "Aspect ratio correction on/off"
-#~ msgstr "Correzione proporzioni on/off"
-
-#~ msgctxt "keys_files"
-#~ msgid "Cycle through stretch modes"
-#~ msgstr "Scorri tra le modalita' di allungamento"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
@@ -13313,6 +13305,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "AvanzamentoRapido"
+
+#~ msgctxt "keys_files"
+#~ msgid "Aspect ratio correction on/off"
+#~ msgstr "Correzione proporzioni on/off"
+
+#~ msgctxt "keys_files"
+#~ msgid "Cycle through stretch modes"
+#~ msgstr "Scorri tra le modalita' di allungamento"
 
 #~ msgctxt "game_options"
 #~ msgid "OVERLAY SIZE (SINGE)"

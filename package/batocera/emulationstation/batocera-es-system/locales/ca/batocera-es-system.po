@@ -13060,14 +13060,6 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
-#~ msgctxt "keys_files"
-#~ msgid "Aspect ratio correction on/off"
-#~ msgstr "Correcció de relació d'aspecte engegat/apagat"
-
-#~ msgctxt "keys_files"
-#~ msgid "Cycle through stretch modes"
-#~ msgstr "Iterar els modes d'estirament"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
@@ -13294,6 +13286,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avançar"
+
+#~ msgctxt "keys_files"
+#~ msgid "Aspect ratio correction on/off"
+#~ msgstr "Correcció de relació d'aspecte engegat/apagat"
+
+#~ msgctxt "keys_files"
+#~ msgid "Cycle through stretch modes"
+#~ msgstr "Iterar els modes d'estirament"
 
 #~ msgctxt "game_options"
 #~ msgid "OVERLAY SIZE (SINGE)"

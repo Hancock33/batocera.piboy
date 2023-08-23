@@ -12972,10 +12972,6 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
-#~ msgctxt "keys_files"
-#~ msgid "Aspect ratio correction on/off"
-#~ msgstr "تصحيح التحجيم تفعيل/تعطيل"
-
 #, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
@@ -13053,6 +13049,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "تسريع إلى الأمام"
+
+#~ msgctxt "keys_files"
+#~ msgid "Aspect ratio correction on/off"
+#~ msgstr "تصحيح التحجيم تفعيل/تعطيل"
 
 #~ msgctxt "game_options"
 #~ msgid "Stretch to 16:9"

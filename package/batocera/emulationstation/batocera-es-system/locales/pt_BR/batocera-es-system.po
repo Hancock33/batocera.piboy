@@ -13130,18 +13130,6 @@ msgid "Open"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid "Center"
-#~ msgstr "Central"
-
-#~ msgctxt "keys_files"
-#~ msgid "Aspect ratio correction on/off"
-#~ msgstr "Liga/Desliga a correção da proporção"
-
-#~ msgctxt "keys_files"
-#~ msgid "Cycle through stretch modes"
-#~ msgstr "Alternar entre os modos de alongamento"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Armazena estados passados para rebobinar em tempo real, se o núcleo "
@@ -13370,6 +13358,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
+
+#~ msgctxt "keys_files"
+#~ msgid "Aspect ratio correction on/off"
+#~ msgstr "Liga/Desliga a correção da proporção"
+
+#~ msgctxt "keys_files"
+#~ msgid "Cycle through stretch modes"
+#~ msgstr "Alternar entre os modos de alongamento"
 
 #~ msgctxt "game_options"
 #~ msgid "OVERLAY SIZE (SINGE)"
@@ -14552,6 +14548,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Disk"
 #~ msgstr "Disquete"
+
+#~ msgctxt "game_options"
+#~ msgid "Center"
+#~ msgstr "Central"
 
 #~ msgctxt "game_options"
 #~ msgid "Scale"

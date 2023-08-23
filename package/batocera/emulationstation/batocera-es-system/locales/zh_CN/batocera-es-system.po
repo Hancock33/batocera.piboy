@@ -12884,14 +12884,6 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
-#~ msgctxt "keys_files"
-#~ msgid "Aspect ratio correction on/off"
-#~ msgstr "打开/关闭纵横比校正"
-
-#~ msgctxt "keys_files"
-#~ msgid "Cycle through stretch modes"
-#~ msgstr "在拉伸模式中循环"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr "如果核心支持，存储过去的状态以实时回放."
@@ -13110,6 +13102,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
+
+#~ msgctxt "keys_files"
+#~ msgid "Aspect ratio correction on/off"
+#~ msgstr "打开/关闭纵横比校正"
+
+#~ msgctxt "keys_files"
+#~ msgid "Cycle through stretch modes"
+#~ msgstr "在拉伸模式中循环"
 
 #~ msgctxt "game_options"
 #~ msgid "OVERLAY SIZE (SINGE)"

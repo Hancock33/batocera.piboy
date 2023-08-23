@@ -13094,18 +13094,6 @@ msgid "Open"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid "Center"
-#~ msgstr "Центр"
-
-#~ msgctxt "keys_files"
-#~ msgid "Aspect ratio correction on/off"
-#~ msgstr "Коррекция соотношения сторон вкл/выкл"
-
-#~ msgctxt "keys_files"
-#~ msgid "Cycle through stretch modes"
-#~ msgstr "Переключение между режимами растяжения"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Сохраняет прошлые состояния для перемотки в реальном времени, если ядро "
@@ -13332,6 +13320,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Перемотка"
+
+#~ msgctxt "keys_files"
+#~ msgid "Aspect ratio correction on/off"
+#~ msgstr "Коррекция соотношения сторон вкл/выкл"
+
+#~ msgctxt "keys_files"
+#~ msgid "Cycle through stretch modes"
+#~ msgstr "Переключение между режимами растяжения"
 
 #~ msgctxt "game_options"
 #~ msgid "OVERLAY SIZE (SINGE)"
@@ -14301,6 +14297,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Disk"
 #~ msgstr "Диск"
+
+#~ msgctxt "game_options"
+#~ msgid "Center"
+#~ msgstr "Центр"
 
 #~ msgctxt "game_options"
 #~ msgid "Scale"
