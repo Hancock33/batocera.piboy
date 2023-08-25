@@ -1,7 +1,11 @@
 # 2023/xx/xx - batocera.linux 38 -
 ### Hardware
-- Support for Orange Pi Zero 2, Orange Pi 3 LTS, HardKernel ODROID-M1
-
+- Added support for:
+  - Orange Pi Zero 2
+  - Orange Pi 3 LTS
+  - HardKernel ODROID-M1
+  - ODROID-GO ULTRA
+  - Orange Pi 5b
 ### Added
 - ES settings for both types of classic controllers for dolphin. 
 - Additional ES settings for rpcs3
@@ -36,6 +40,8 @@
 - Mame2003plus light gun controls properly mapped
 - Lr-swanstation light gun controls properly mapped
 - Sinden Lightgun will now start when booting Batocera
+- Fixed PS3 controllers not repairing after standby or poweroff
+- USB 2.0 with the Orange Pi 5.
 ### Changed
 - ES music volume on a logarithmic scale instead of linear one
 - if using the manual batocera.conf `splash.screen.resize` option, this will now adjust the playback resolution too
@@ -47,9 +53,11 @@
 - Model2 emulator will now default to 4:3 unless widescreen selected
 - Model2 emulator now allows rendering resolution to be selected
 - Model2 now allows you to enable scanlines
-- batocera-services - custom.sh is deprecated and may be removed in a later version. Put your services into /userdata/system/services, and enable them in batocera.conf (syncthing may be reenabled).
+- batocera-services - custom.sh is deprecated and may be removed in a later version.
+  - Put your services into /userdata/system/services, and enable them in batocera.conf (syncthing may be reenabled).
 - Model2 now loads 16:9 bezels accordingly to your screen and border size in ES
 - Model2 crosshair disabled by default with light guns connected
+- Laptops / Systems with 2 GPUs will now automatically set the environment variables to use the best GPU.
 ### Updated
 - xenia to v1.0.2805
 - xenia canary to ba936e8 (Commits on Jul 22, 2023)
@@ -94,7 +102,7 @@
 - wildmidi to 0.4.5
 - vulkan stack to 1.3.257
 - SDL2 to 2.28.2
-- nvidia production driver to 535.86.05
+- nvidia production driver to 535.104.05
 - faudio to 23.08
 - llvm to 16.0.6
 - Buildroot to 2023.05.01
