@@ -164,7 +164,8 @@ if [[ "${FULL_DISPLAY}" != 0 ]]; then
 	# VULKAN
 	if test -e /var/run/vulkaninfo.version
 	then
-	    APIVERSION=$(cat /var/run/vulkaninfo.version)
+	    APIVERSION=$(sed '2q;d' /var/run/vulkaninfo.version)
+        [ -z "$APIVERSION" ] && APIVERSION=$(head -n 1 /var/run/vulkaninfo.version)
 	    if test -n "${APIVERSION}"; then
 		    echo "Vulkan Driver Version: ${APIVERSION}"
 	    else
@@ -177,7 +178,7 @@ fi
 INTERNALDEVICE=$(batocera-part "share")
 INTERNALDEVICETYPE=$(blkid "${INTERNALDEVICE}" | sed -e s+'^.* TYPE="\([^"]*\)\".*'+'\1'+)
 echo "Data Partition Format: ${INTERNALDEVICETYPE}"
-echo "Data Partition Available Space: $(df -h | awk '/\/userdata$/ {print $4}')"
+echo "Data Partition Available Space: $(df -h ${INTERNALDEVICE} | awk '/\/userdata$/ {print $4}')"
 
 PREFSRC=$(ip -j route get 8.8.8.8 2>/dev/null | jq -r '.[].prefsrc')
 test -n "${PREFSRC}" && echo "Network IP Address: ${PREFSRC}"

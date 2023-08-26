@@ -3,8 +3,8 @@
 # libretro-mame
 #
 ################################################################################
-# Version: Commits on Aug 16, 2023
-LIBRETRO_MAME_VERSION = b187489b66dff418d326ec2a49e04d1c67ef37a2
+# Version: Commits on Aug 26, 2023
+LIBRETRO_MAME_VERSION = 1808a1cc4bf9148505bc97a3f392b55e6121993c
 LIBRETRO_MAME_SITE = $(call github,libretro,mame,$(LIBRETRO_MAME_VERSION))
 LIBRETRO_MAME_LICENSE = MAME
 
@@ -39,8 +39,8 @@ define LIBRETRO_MAME_BUILD_CMDS
 		CONFIG=libretro LIBRETRO_OS="unix" ARCH="" PROJECT="" ARCHOPTS="$(LIBRETRO_MAME_ARCHOPTS)" \
 		DISTRO="debian-stable" OVERRIDE_CC="$(TARGET_CC)" OVERRIDE_CXX="$(TARGET_CXX)"             \
 		OVERRIDE_LD="$(TARGET_LD)" RANLIB="$(TARGET_RANLIB)" AR="$(TARGET_AR)"                     \
-		$(LIBRETRO_MAME_EXTRA_ARGS) CROSS_BUILD=1 TARGET="mame" SUBTARGET="mame" RETRO=1         \
-		OSD="retro" DEBUG=0
+		$(LIBRETRO_MAME_EXTRA_ARGS) CROSS_BUILD=1 TARGET="mame" SUBTARGET="mame" RETRO=1           \
+		OSD="retro" DEBUG=0 PRECOMPILE=0
 endef
 
 define LIBRETRO_MAME_INSTALL_TARGET_CMDS

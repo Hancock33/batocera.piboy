@@ -91,6 +91,10 @@ done
 # ssh : create directory, but not keys because lack of entropy, dropbear will automatically generate key on client connection
 mkdir -p /userdata/system/ssh
 
+# ssh : create directory for SSH user data (including identity keys, authorized_keys, known_hosts)
+mkdir -p -m 0700 /userdata/system/.ssh
+chmod 0700 /userdata/system/.ssh
+
 # udev : create a link for rules persistance
 mkdir -p /userdata/system/udev/rules.d
 rm -rf /run/udev/rules.d
@@ -102,7 +106,10 @@ ln -sf /userdata/system/machine-id /var/lib/dbus/machine-id
 ln -sf /userdata/system/machine-id /etc/machine-id
 
 # save to avoid to redo that all the times
-cp /usr/share/batocera/batocera.version /userdata/system/data.version || exit 1
+cp /usr/share/batocera/batocera.version /userdata/system/data.version
+
+# call user script
+test -e /boot/postshare.sh && bash /boot/postshare.sh
 
 ### cleaning old alsa files - 08/07/2021
 rm -f /userdata/system/.asoundrc

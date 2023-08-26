@@ -3,8 +3,8 @@
 # retroarch-assets
 #
 ################################################################################
-# Version: Commits on Jul 10, 2023
-RETROARCH_ASSETS_VERSION = ded629fd9ba2d9da5e379c9c526be79801824c26
+# Version: Commits on Aug 22, 2023
+RETROARCH_ASSETS_VERSION = b57c6e5d2ef67e514f0085b754698e7dc7a36e75
 RETROARCH_ASSETS_SITE = $(call github,libretro,retroarch-assets,$(RETROARCH_ASSETS_VERSION))
 RETROARCH_ASSETS_LICENSE = GPL
 
