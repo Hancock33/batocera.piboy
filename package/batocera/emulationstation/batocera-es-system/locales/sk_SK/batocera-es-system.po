@@ -2034,6 +2034,23 @@ msgstr "GameBlaster"
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid ""
+"Enable Gravis Utrasound emulation. Ensure the ULTRASND folder is in the root "
+"of your <game>.pc rom folder."
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "ENABLE GRAVIS ULTRASOUND"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/mame, libretro/mamevirtual, libretro/xrick, ...
+msgctxt "game_options"
+msgid "Off (Default)"
+msgstr "Vypnuté (predvolené)"
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid ""
 "Select the .SF2 SoundFont file, .ROM file, or interface used for MIDI output."
 msgstr ""
 "Vyberte súbor soundfontu .SF2, .ROM súbor alebo rozhranie pre MIDI výstup"
@@ -3180,11 +3197,6 @@ msgstr "Nastaviť tlačidlo 2 zbrane na nabitie."
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "Tlačidlo na znovunačítanie mimo obrazovky"
-
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mamevirtual, libretro/xrick, libretro/xrick, ...
-msgctxt "game_options"
-msgid "Off (Default)"
-msgstr "Vypnuté (predvolené)"
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -13033,14 +13045,6 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
-#~ msgctxt "keys_files"
-#~ msgid "Aspect ratio correction on/off"
-#~ msgstr "Korekciu pomeru strán zapnúť/vypnúť"
-
-#~ msgctxt "keys_files"
-#~ msgid "Cycle through stretch modes"
-#~ msgstr "Cyklovať cez režimy roztiahnutia"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
@@ -13264,6 +13268,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rýchlo dopredu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Aspect ratio correction on/off"
+#~ msgstr "Korekciu pomeru strán zapnúť/vypnúť"
+
+#~ msgctxt "keys_files"
+#~ msgid "Cycle through stretch modes"
+#~ msgstr "Cyklovať cez režimy roztiahnutia"
 
 #~ msgctxt "game_options"
 #~ msgid "OVERLAY SIZE (SINGE)"

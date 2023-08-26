@@ -3,11 +3,11 @@
 # raze
 #
 ################################################################################
-# Version: Commits on Aug 06, 2023
-RAZE_VERSION = 85b6c1944232bb9caa562647336f4b8ef828cd17
+# Version: Commits on Aug 23, 2023
+RAZE_VERSION = e88d2fb6b4743db606c9312626b8d1a044e38c7f
 RAZE_SITE = $(call github,ZDoom,Raze,$(RAZE_VERSION))
 RAZE_LICENSE = GPLv2
-RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic gzdoom
+RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic
 RAZE_SUPPORTS_IN_SOURCE_BUILD = NO
 
 RAZE_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
@@ -46,12 +46,6 @@ define HOST_RAZE_BUILDTOOLS
 	sed -i '/( source )/d' $(@D)/CMakeLists.txt
 endef
 HOST_RAZE_PRE_CONFIGURE_HOOKS += HOST_RAZE_BUILDTOOLS
-
-define HOST_RAZE_INSTALL
-    cp -av $(@D)/buildroot-build/libraries/gdtoa/arithchk $(HOST_DIR)/bin
-    cp -av $(@D)/buildroot-build/libraries/gdtoa/qnan     $(HOST_DIR)/bin
-endef
-HOST_RAZE_POST_INSTALL_HOOKS += HOST_RAZE_INSTALL
 
 $(eval $(cmake-package))
 $(eval $(host-cmake-package))

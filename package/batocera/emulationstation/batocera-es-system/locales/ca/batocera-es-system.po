@@ -2047,6 +2047,23 @@ msgstr "GameBlaster"
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid ""
+"Enable Gravis Utrasound emulation. Ensure the ULTRASND folder is in the root "
+"of your <game>.pc rom folder."
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid "ENABLE GRAVIS ULTRASOUND"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/mame, libretro/mamevirtual, libretro/xrick, ...
+msgctxt "game_options"
+msgid "Off (Default)"
+msgstr "Apagat (Per defecte)"
+
+#. TRANSLATION: libretro/dosbox_pure
+msgctxt "game_options"
+msgid ""
 "Select the .SF2 SoundFont file, .ROM file, or interface used for MIDI output."
 msgstr ""
 
@@ -3197,11 +3214,6 @@ msgstr "Estableix el botó 2 de la pistola per a recarregar."
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "BOTÓ DE RECÀRREGA FORA DE PANTALLA"
-
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mamevirtual, libretro/xrick, libretro/xrick, ...
-msgctxt "game_options"
-msgid "Off (Default)"
-msgstr "Apagat (Per defecte)"
 
 #. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -13060,14 +13072,6 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
-#~ msgctxt "keys_files"
-#~ msgid "Aspect ratio correction on/off"
-#~ msgstr "Correcció de relació d'aspecte engegat/apagat"
-
-#~ msgctxt "keys_files"
-#~ msgid "Cycle through stretch modes"
-#~ msgstr "Iterar els modes d'estirament"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
@@ -13294,6 +13298,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avançar"
+
+#~ msgctxt "keys_files"
+#~ msgid "Aspect ratio correction on/off"
+#~ msgstr "Correcció de relació d'aspecte engegat/apagat"
+
+#~ msgctxt "keys_files"
+#~ msgid "Cycle through stretch modes"
+#~ msgstr "Iterar els modes d'estirament"
 
 #~ msgctxt "game_options"
 #~ msgid "OVERLAY SIZE (SINGE)"

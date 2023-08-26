@@ -28,7 +28,7 @@ class Model2EmuGenerator(Generator):
 
         #copy model2emu to /userdata for rw & emulator directory creation reasons
         if not os.path.exists(emupath):
-            shutil.copytree("/usr/model2emu", emupath)
+            shutil.copytree("/usr/bin/model2emu", emupath)
             os.chmod(emupath + "/EMULATOR.INI", stat.S_IRWXO)
         
         # install windows libraries required
@@ -103,7 +103,7 @@ class Model2EmuGenerator(Generator):
                 f.write("done")
         
         # for existing bottles we want to ensure files are updated as necessary
-        copy_updated_files("/usr/model2emu/scripts", emupath + "/scripts")
+        copy_updated_files("/usr/bin/model2emu/scripts", emupath + "/scripts")
 
         # move to the emulator path to ensure configs are saved etc
         os.chdir(emupath)
