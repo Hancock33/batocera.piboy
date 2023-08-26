@@ -159,6 +159,9 @@ do
     # save the current output in which es is started (used to switch screen, when unplugged)
     batocera-resolution currentOutput > "/var/run/switch_screen_current"
 
+    # dbus launch is required for the gio/gvfs/trash:///...
+    eval "$(dbus-launch --sh-syntax --exit-with-session)"
+
     cd /userdata # es need a PWD
     enabledpi="$(batocera-settings-get -f /boot/batocera-boot.conf key piboy.enabled)"
     enabledxrs="$(batocera-settings-get -f /boot/batocera-boot.conf key piboyxrs.enabled)"
