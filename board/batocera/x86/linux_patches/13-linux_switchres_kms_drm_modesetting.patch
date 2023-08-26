@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/drm_connector.c b/drivers/gpu/drm/drm_connector.c
-index 48df7a5ea503..5b1c9410da97 100644
+index 3ed4cfcb350c..3ca2de3344ac 100644
 --- a/drivers/gpu/drm/drm_connector.c
 +++ b/drivers/gpu/drm/drm_connector.c
 @@ -275,6 +275,7 @@ static int __drm_connector_init(struct drm_device *dev,
@@ -281,10 +281,10 @@ index ac9a406250c5..c935335ede48 100644
  EXPORT_SYMBOL(drm_connector_list_update);
  
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index 2fb9bf901a2c..a7709143974c 100644
+index 3f479483d7d8..67d28ee427e9 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
-@@ -347,6 +347,23 @@ drm_helper_probe_detect_ctx(struct drm_connector *connector, bool force)
+@@ -371,6 +371,23 @@ drm_helper_probe_detect_ctx(struct drm_connector *connector, bool force)
  	return ret;
  }
  
@@ -308,7 +308,7 @@ index 2fb9bf901a2c..a7709143974c 100644
  /**
   * drm_helper_probe_detect - probe connector status
   * @connector: connector to probe
-@@ -532,6 +549,8 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+@@ -556,6 +573,8 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
  
  	drm_modeset_acquire_init(&ctx, 0);
  
@@ -317,7 +317,7 @@ index 2fb9bf901a2c..a7709143974c 100644
  	DRM_DEBUG_KMS("[CONNECTOR:%d:%s]\n", connector->base.id,
  			connector->name);
  
-@@ -549,6 +568,10 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+@@ -573,6 +592,10 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
  
  	old_status = connector->status;
  
@@ -328,7 +328,7 @@ index 2fb9bf901a2c..a7709143974c 100644
  	if (connector->force) {
  		if (connector->force == DRM_FORCE_ON ||
  		    connector->force == DRM_FORCE_ON_DIGITAL)
-@@ -658,7 +681,13 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+@@ -682,7 +705,13 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
  
  	drm_mode_sort(&connector->modes);
  
@@ -344,10 +344,10 @@ index 2fb9bf901a2c..a7709143974c 100644
  	list_for_each_entry(mode, &connector->modes, head) {
  		drm_mode_set_crtcinfo(mode, CRTC_INTERLACE_HALVE_V);
 diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
-index 7b5048516185..c2fe5a36f54f 100644
+index d300fde6c1a4..37412701c0b1 100644
 --- a/include/drm/drm_connector.h
 +++ b/include/drm/drm_connector.h
-@@ -1527,6 +1527,14 @@ struct drm_connector {
+@@ -1610,6 +1610,14 @@ struct drm_connector {
  	 */
  	struct list_head probed_modes;
  

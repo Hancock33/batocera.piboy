@@ -1,8 +1,8 @@
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 8b4b186c57f5..fad7a36bea67 100644
+index e5554a36e8c8..c497e3792482 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -5456,6 +5456,8 @@ static void fill_stream_properties_from_drm_display_mode(
+@@ -5418,6 +5418,8 @@ static void fill_stream_properties_from_drm_display_mode(
  			timing_out->flags.HSYNC_POSITIVE_POLARITY = 1;
  		if (mode_in->flags & DRM_MODE_FLAG_PVSYNC)
  			timing_out->flags.VSYNC_POSITIVE_POLARITY = 1;
@@ -11,16 +11,7 @@ index 8b4b186c57f5..fad7a36bea67 100644
  	}
  
  	if (stream->signal == SIGNAL_TYPE_HDMI_TYPE_A) {
-@@ -6029,7 +6031,7 @@ create_stream_for_sink(struct amdgpu_dm_connector *aconnector,
- 
- 	if (recalculate_timing)
- 		drm_mode_set_crtcinfo(&saved_mode, 0);
--	else if (!dm_state)
-+	else if (!dm_state || mode.flags & DRM_MODE_FLAG_INTERLACE)
- 		drm_mode_set_crtcinfo(&mode, 0);
- 
- 	/*
-@@ -6538,8 +6540,7 @@ enum drm_mode_status amdgpu_dm_connector_mode_valid(struct drm_connector *connec
+@@ -6533,8 +6535,7 @@ enum drm_mode_status amdgpu_dm_connector_mode_valid(struct drm_connector *connec
  	struct dc_stream_state *stream;
  	struct amdgpu_dm_connector *aconnector = to_amdgpu_dm_connector(connector);
  
@@ -30,7 +21,7 @@ index 8b4b186c57f5..fad7a36bea67 100644
  		return result;
  
  	/*
-@@ -7217,7 +7218,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
+@@ -7229,7 +7230,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
  	aconnector->connector_id = link_index;
  	aconnector->bl_idx = -1;
  	aconnector->dc_link = link;
@@ -40,10 +31,10 @@ index 8b4b186c57f5..fad7a36bea67 100644
  	aconnector->base.stereo_allowed = false;
  	aconnector->base.dpms = DRM_MODE_DPMS_OFF;
 diff --git a/drivers/gpu/drm/amd/display/dc/dcn10/dcn10_hw_sequencer.c b/drivers/gpu/drm/amd/display/dc/dcn10/dcn10_hw_sequencer.c
-index 1c3b6f25a782..a6dd2de58a47 100644
+index 9834b75f1837..c233d294471f 100644
 --- a/drivers/gpu/drm/amd/display/dc/dcn10/dcn10_hw_sequencer.c
 +++ b/drivers/gpu/drm/amd/display/dc/dcn10/dcn10_hw_sequencer.c
-@@ -2706,6 +2706,9 @@ static void update_scaler(struct pipe_ctx *pipe_ctx)
+@@ -2679,6 +2679,9 @@ static void update_scaler(struct pipe_ctx *pipe_ctx)
  	pipe_ctx->plane_res.scl_data.lb_params.alpha_en = per_pixel_alpha;
  	pipe_ctx->plane_res.scl_data.lb_params.depth = LB_PIXEL_DEPTH_36BPP;
  	/* scaler configuration */
@@ -53,7 +44,7 @@ index 1c3b6f25a782..a6dd2de58a47 100644
  	pipe_ctx->plane_res.dpp->funcs->dpp_set_scaler(
  			pipe_ctx->plane_res.dpp, &pipe_ctx->plane_res.scl_data);
  }
-@@ -3736,8 +3739,7 @@ int dcn10_get_vupdate_offset_from_vsync(struct pipe_ctx *pipe_ctx)
+@@ -3706,8 +3709,7 @@ int dcn10_get_vupdate_offset_from_vsync(struct pipe_ctx *pipe_ctx)
  
  	asic_blank_end = (patched_crtc_timing.v_total -
  			vesa_sync_start -
@@ -64,10 +55,10 @@ index 1c3b6f25a782..a6dd2de58a47 100644
  	return asic_blank_end -
  			pipe_ctx->pipe_dlg_param.vstartup_start + 1;
 diff --git a/drivers/gpu/drm/amd/display/dc/dcn10/dcn10_optc.c b/drivers/gpu/drm/amd/display/dc/dcn10/dcn10_optc.c
-index c9e53dc49c92..f0f3f8b1f2c9 100644
+index 0e8f4f36c87c..97d3d533aba4 100644
 --- a/drivers/gpu/drm/amd/display/dc/dcn10/dcn10_optc.c
 +++ b/drivers/gpu/drm/amd/display/dc/dcn10/dcn10_optc.c
-@@ -589,10 +589,6 @@ bool optc1_validate_timing(
+@@ -608,10 +608,6 @@ bool optc1_validate_timing(
  		timing->timing_3d_format != TIMING_3D_FORMAT_INBAND_FA)
  		return false;
  
@@ -79,10 +70,10 @@ index c9e53dc49c92..f0f3f8b1f2c9 100644
  	 * (Currently will never fail, in order to fail needs display which
  	 * needs more than 8192 horizontal and
 diff --git a/drivers/gpu/drm/amd/display/dc/dcn20/dcn20_hwseq.c b/drivers/gpu/drm/amd/display/dc/dcn20/dcn20_hwseq.c
-index 422fbf79da64..52248e73af4e 100644
+index 4492bc2392b6..a35a3a6542c4 100644
 --- a/drivers/gpu/drm/amd/display/dc/dcn20/dcn20_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/dcn20/dcn20_hwseq.c
-@@ -1593,6 +1593,9 @@ static void dcn20_update_dchubp_dpp(
+@@ -1602,6 +1602,9 @@ static void dcn20_update_dchubp_dpp(
  		pipe_ctx->plane_res.scl_data.lb_params.alpha_en = pipe_ctx->plane_state->per_pixel_alpha;
  		ASSERT(pipe_ctx->plane_res.scl_data.lb_params.depth == LB_PIXEL_DEPTH_36BPP);
  		/* scaler configuration */
@@ -145,10 +136,10 @@ index e73f089c84bb..71a8f4fc5d50 100644
  			pipe->pipe_dlg_param.vblank_start = asic_blank_start;
  			pipe->pipe_dlg_param.vblank_end = asic_blank_end;
 diff --git a/drivers/gpu/drm/amd/display/dc/dml/display_mode_vba.c b/drivers/gpu/drm/amd/display/dc/dml/display_mode_vba.c
-index f9653f511baa..32c148f98f96 100644
+index 9a3ded311195..ea41d9d3ed68 100644
 --- a/drivers/gpu/drm/amd/display/dc/dml/display_mode_vba.c
 +++ b/drivers/gpu/drm/amd/display/dc/dml/display_mode_vba.c
-@@ -588,9 +588,11 @@ static void fetch_pipe_params(struct display_mode_lib *mode_lib)
+@@ -592,9 +592,11 @@ static void fetch_pipe_params(struct display_mode_lib *mode_lib)
  		mode_lib->vba.VRatioChroma[mode_lib->vba.NumberOfActivePlanes] = scl->vscl_ratio_c;
  		mode_lib->vba.ScalerEnabled[mode_lib->vba.NumberOfActivePlanes] = scl->scl_enable;
  		mode_lib->vba.Interlace[mode_lib->vba.NumberOfActivePlanes] = dst->interlaced;
@@ -163,7 +154,7 @@ index f9653f511baa..32c148f98f96 100644
  		mode_lib->vba.htaps[mode_lib->vba.NumberOfActivePlanes] = taps->htaps;
  		mode_lib->vba.vtaps[mode_lib->vba.NumberOfActivePlanes] = taps->vtaps;
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index 2fb9bf901a2c..d79d4f13eb34 100644
+index 3f479483d7d8..0fecdda431b9 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
 @@ -162,6 +162,9 @@ static int drm_helper_probe_add_cmdline_mode(struct drm_connector *connector)
