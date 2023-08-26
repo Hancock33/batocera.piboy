@@ -3,8 +3,8 @@
 # libretro-genesisplusgx-wide
 #
 ################################################################################
-# Version: Commits on Aug 11, 2023
-LIBRETRO_GENESISPLUSGX_WIDE_VERSION = a68a3398634816be0704566a14ea2f4ce1e2a585
+# Version: Commits on Aug 26, 2023
+LIBRETRO_GENESISPLUSGX_WIDE_VERSION = cbc0f6c5e08fbbe13623ecb16073c87c96114ea1
 LIBRETRO_GENESISPLUSGX_WIDE_SITE = $(call github,libretro,Genesis-Plus-GX-Wide,$(LIBRETRO_GENESISPLUSGX_WIDE_VERSION))
 LIBRETRO_GENESISPLUSGX_WIDE_LICENSE = Non-commercial
 
