@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Aug 24, 2023 (branch@ge-lol-8.13-1)
-WINE_LUTRIS_WOW64_32_VERSION = bd10252332491bc39100f230540b14d59f02255d
+WINE_LUTRIS_WOW64_32_VERSION = 221d5aba3f19c1014dad30cad04c4b14c284d9d2
 WINE_LUTRIS_WOW64_32_SOURCE = wine-lutris-$(WINE_LUTRIS_WOW64_32_VERSION).tar.gz
 WINE_LUTRIS_WOW64_32_SITE = $(call github,wine-mirror,wine,$(WINE_LUTRIS_WOW64_32_VERSION))
 #WINE_LUTRIS_WOW64_32_SITE = $(call github,GloriousEggroll,wine,$(WINE_LUTRIS_WOW64_32_VERSION))
