@@ -3,8 +3,8 @@
   <game>
     <path>./Ionfury.grp</path>
     <name>Ion Fury</name>
-    <desc>Ion Fury is a prequel to Bombshell. Shelly "Bombshell" Harrison, a bomb disposal expert working for the Global Defense Force (GDF), returns as the game's protagonist, fighting against the cybernetic forces of Dr. Jadus Heskel. 
- 
+    <desc>Ion Fury is a prequel to Bombshell. Shelly "Bombshell" Harrison, a bomb disposal expert working for the Global Defense Force (GDF), returns as the game's protagonist, fighting against the cybernetic forces of Dr. Jadus Heskel.
+
 The game is built in a modified version of the EDuke32 source port of the famed Build engine that powered Duke Nukem 3D, Shadow Warrior, and Blood, which brings modern additions to an otherwise quite old-school experience, such as high resolution support, higher-quality textures, and autosaves running alongside regular manual game saving options, while retaining the bulk of the gameplay from these titles.</desc>
     <rating>0.75</rating>
     <releasedate>20180228T000000</releasedate>

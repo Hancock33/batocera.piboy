@@ -61,8 +61,8 @@
   <game id="41952" source="ScreenScraper.fr">
     <path>./karatblz.zip</path>
     <name>Karate Blazers (World, set 1)</name>
-    <desc>A horizontally scrolling fighting game for 1 to 4 players. Each playable character (chosen from Mark, Glen, Akira and Gil) kicks and punches their way through a number of enemy-packed levels. In addition to kicking and punching, each character also has their own unique 'special attack'; a move that injures multiple on-screen enemies at the cost of some of the player's health. 
- 
+    <desc>A horizontally scrolling fighting game for 1 to 4 players. Each playable character (chosen from Mark, Glen, Akira and Gil) kicks and punches their way through a number of enemy-packed levels. In addition to kicking and punching, each character also has their own unique 'special attack'; a move that injures multiple on-screen enemies at the cost of some of the player's health.
+
 While in no way original (drawing most of its inspiration from Capcom's "Final Fight"), Karate Blazers is both hugely playable and very fast and frenetic, with the amount of on-screen enemies at times overwhelming. The graphics are also well drawn and nicely animated.</desc>
     <rating>0.7</rating>
     <releasedate>19910101T000000</releasedate>
@@ -76,8 +76,8 @@ While in no way original (drawing most of its inspiration from Capcom's "Final F
   <game id="40726" source="ScreenScraper.fr">
     <path>./crshrace.zip</path>
     <name>Lethal Crash Race (set 1)</name>
-    <desc>Lethal Crash Race is, as the title suggests, a racing game. The player chooses one of eight international characters then races one-on-one against the other characters (and the recolor of her/his own). Each race takes place in a different location around the world, and each character has her or his own ending, making the character interaction rather similar to that of Sonic Wings. 
- 
+    <desc>Lethal Crash Race is, as the title suggests, a racing game. The player chooses one of eight international characters then races one-on-one against the other characters (and the recolor of her/his own). Each race takes place in a different location around the world, and each character has her or his own ending, making the character interaction rather similar to that of Sonic Wings.
+
 Lethal Crash Race marks the first appearance of Ellen and Cincia, who later feature in most of the Sonic Wings games.</desc>
     <rating>0.7</rating>
     <releasedate>19930101T000000</releasedate>
@@ -117,12 +117,12 @@ Lethal Crash Race marks the first appearance of Ellen and Cincia, who later feat
   <game id="39948" source="ScreenScraper.fr">
     <path>./sncwgltd.zip</path>
     <name>Sonic Wings Limited (Japan)</name>
-    <desc>A vertical scrolling shooter for 1 or 2 players. Controls are directional and 2 buttons. Button 1 fires your main weapon and button 2 fires your special. 
- 
-You choose from one of four nation's aircraft: US, Japan, Russia, France, Sweden or The UN. Once chosen you embark on various missions. 
- 
-During the mission you shoot various baddies and at the end of the level you fight a boss. Power-ups are available during the mission and these either recharge your special weapon or upgrade your main weapon. All main weapon upgrades are lost on death and your special is restored to the default number of uses. 
- 
+    <desc>A vertical scrolling shooter for 1 or 2 players. Controls are directional and 2 buttons. Button 1 fires your main weapon and button 2 fires your special.
+
+You choose from one of four nation's aircraft: US, Japan, Russia, France, Sweden or The UN. Once chosen you embark on various missions.
+
+During the mission you shoot various baddies and at the end of the level you fight a boss. Power-ups are available during the mission and these either recharge your special weapon or upgrade your main weapon. All main weapon upgrades are lost on death and your special is restored to the default number of uses.
+
 When playing as player 2 you get a different plane type. 2 player mode is co-operative.</desc>
     <rating>0.7</rating>
     <releasedate>19960101T000000</releasedate>

@@ -113,7 +113,7 @@ class DolphinTriforceGenerator(Generator):
         # Serial Port 1 to AM-Baseband
         dolphinTriforceSettings.set("Core", "SerialPort1", "6")
         dolphinTriforceSettings.set("Core", "SIDevice0", "11")
-        
+
         # Save dolphin.ini
         with open(batoceraFiles.dolphinTriforceIni, 'w') as configfile:
             dolphinTriforceSettings.write(configfile)
@@ -272,7 +272,7 @@ class DolphinTriforceGenerator(Generator):
         hotkeyConfig.set('Hotkeys', 'GBA Window Size/2x', '`KP_2`')
         hotkeyConfig.set('Hotkeys', 'GBA Window Size/3x', '`KP_3`')
         hotkeyConfig.set('Hotkeys', 'GBA Window Size/4x', '`KP_4`')
-        # 
+        #
         # Write the configuration to the file
         hotkey_path = '/userdata/system/configs/dolphin-triforce/Config/Hotkeys.ini'
         with open(hotkey_path, 'w') as configfile:

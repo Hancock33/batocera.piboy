@@ -43,7 +43,7 @@ def setControllersConfig(iniConfig, controllers, system):
         section = "Input-SDL-Control"+str(x)
         if iniConfig.has_section(section):
             cleanPlayer(nplayer, iniConfig)
-         
+
 def getPeakandDeadzoneValues(start_value, config_value, system, default_multiplier):
     number = int(start_value.split(',')[0])
     if config_value in system.config:
@@ -52,21 +52,21 @@ def getPeakandDeadzoneValues(start_value, config_value, system, default_multipli
     else:
         result = int(round(number * default_multiplier))
     return f"{result},{result}"
-         
+
 def defineControllerKeys(nplayer, controller, system):
         if f"mupen64-controller{nplayer}" in system.config and system.config[f"mupen64-controller{nplayer}"] != "retropad":
             mupenmapping = getMupenMapping(True)
-        else:    
+        else:
             mupenmapping = getMupenMapping(False)
 
         # config holds the final pad configuration in the mupen style
         # ex: config['DPad U'] = "button(1)"
         config = dict()
 
-        # determine joystick deadzone and peak       
+        # determine joystick deadzone and peak
         config['AnalogPeak'] = getPeakandDeadzoneValues(mupenmapping['AnalogPeak'], f"mupen64-sensitivity{nplayer}", system, 1)
         config['AnalogDeadzone'] = getPeakandDeadzoneValues(mupenmapping['AnalogPeak'], f"mupen64-deadzone{nplayer}", system, 0.05)
-        
+
         # z is important, in case l2 is not available for this pad, use l1
         # assume that l2 is for "Z Trig" in the mapping
         if 'l2' not in controller.inputs:

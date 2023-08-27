@@ -111,8 +111,8 @@
 	<game id="41144" source="ScreenScraper.fr">
 		<path>./exvania.zip</path>
 		<name>Exvania (World)</name>
-		<desc>The queen of darkness, Erinyes, has kidnapped Princess Electra. The four heroes: Ward, Emilio, Charles, and Karl embark on a quest to save the princess. They compete with each other to reach the Castle of Darkness and defeat Erinyes, so one of them might be able to marry the rescued Electra and rule the land Exvania. 
- 
+		<desc>The queen of darkness, Erinyes, has kidnapped Princess Electra. The four heroes: Ward, Emilio, Charles, and Karl embark on a quest to save the princess. They compete with each other to reach the Castle of Darkness and defeat Erinyes, so one of them might be able to marry the rescued Electra and rule the land Exvania.
+
 The players must take up control of four medieval lords who are fighting for control of the land. They have to battle through eight different castles, and try to gain control of each one. When one of the lords wins a battle, he shall receive a medal - and once he has won three medals, he will gain control of the current castle (which means that they can be up to six rooms long) and the game will proceed to the next castle. The gameplay is similar to that of Hudson Soft's Bomberman series, the initial title of which was adapted by Irem for the arcade in 1991. </desc>
 		<rating>0.6</rating>
 		<releasedate>19920101T000000</releasedate>
@@ -126,8 +126,8 @@ The players must take up control of four medieval lords who are fighting for con
 	<game id="41146" source="ScreenScraper.fr">
 		<path>./eyes.zip</path>
 		<name>Eyes (US set 1)</name>
-		<desc>The player controls a hat-wearing eyeball in a maze. As in Pac-Man, the goal is to collect all of the dots to advance to next level, but in Eyes you shoot the dots rather than eat them. Computer-controlled eyes chase and shoot at the player. Shooting a computer eye gives points and removes it from the level, but it will reappear a short time later. Being shot by a computer eye is fatal. 
- 
+		<desc>The player controls a hat-wearing eyeball in a maze. As in Pac-Man, the goal is to collect all of the dots to advance to next level, but in Eyes you shoot the dots rather than eat them. Computer-controlled eyes chase and shoot at the player. Shooting a computer eye gives points and removes it from the level, but it will reappear a short time later. Being shot by a computer eye is fatal.
+
 As the game progresses, more computer eyes are added to levels and they take less time to shoot at the player. They also move faster.</desc>
 		<rating>0.7</rating>
 		<releasedate>19820101T000000</releasedate>
@@ -141,14 +141,14 @@ As the game progresses, more computer eyes are added to levels and they take les
 	<game id="41160" source="ScreenScraper.fr">
 		<path>./faceoff.zip</path>
 		<name>Face Off (Japan 2 Players)</name>
-		<desc>Face Off is a 4-player overhead-view hockey game, featuring 8 countries: 
-U.S.S.R. 
-CANADA 
-SWEDEN 
-CZEKOSLOVAKIA 
-U.S.A. 
-FINLAND 
-FRANCE 
+		<desc>Face Off is a 4-player overhead-view hockey game, featuring 8 countries:
+U.S.S.R.
+CANADA
+SWEDEN
+CZEKOSLOVAKIA
+U.S.A.
+FINLAND
+FRANCE
 JAPAN</desc>
 		<rating>0.3</rating>
 		<releasedate>19880101T000000</releasedate>
@@ -188,10 +188,10 @@ JAPAN</desc>
 	<game id="41224" source="ScreenScraper.fr">
 		<path>./finalapr.zip</path>
 		<name>Final Lap R (rev. B)</name>
-		<desc>Final Lap R is the last game in Namco's seminal F1 series, which began eleven years' earlier with 1982's "Pole Position". Final Lap R features the same loose handling and demanding game-play of its predecessors, but has the obligatory improved graphics, due to the more powerful host hardware. The game offers players a choice of four race tracks: 
-Germany 
-Brazil 
-Hungary 
+		<desc>Final Lap R is the last game in Namco's seminal F1 series, which began eleven years' earlier with 1982's "Pole Position". Final Lap R features the same loose handling and demanding game-play of its predecessors, but has the obligatory improved graphics, due to the more powerful host hardware. The game offers players a choice of four race tracks:
+Germany
+Brazil
+Hungary
 Belgium</desc>
 		<rating>0.7</rating>
 		<releasedate>19950101T000000</releasedate>
@@ -218,8 +218,8 @@ Belgium</desc>
 	<game id="41271" source="ScreenScraper.fr">
 		<path>./fourtrax.zip</path>
 		<name>Four Trax</name>
-		<desc>The player must take control for four quad bikes (red for Player 1, white for Player 2, yellow for Player 3, and green for Player 4), which are competing in an "off-road" race - and they all have a preset amount of time in which to complete a full lap of the track. For each lap of the track that is successfully completed, the players' time is extended. However, if one of the players cannot manage to successfully complete his current lap of the track before the time runs out, his or her game will instantly be over and the race will continue without them.  
- 
+		<desc>The player must take control for four quad bikes (red for Player 1, white for Player 2, yellow for Player 3, and green for Player 4), which are competing in an "off-road" race - and they all have a preset amount of time in which to complete a full lap of the track. For each lap of the track that is successfully completed, the players' time is extended. However, if one of the players cannot manage to successfully complete his current lap of the track before the time runs out, his or her game will instantly be over and the race will continue without them.
+
 The players must complete between three and six full laps of the track in order to win (the number is dependent on how both of the cabinets are set, as with Namco's own Final Lap). The players will also encounter between four and seven blue CPU-controlled bikes on the track, as the number is dependent on how many people are playing (seven for one player, six for two players, five for three, and four for four).</desc>
 		<rating>0.7</rating>
 		<releasedate>19890101T000000</releasedate>
@@ -233,8 +233,8 @@ The players must complete between three and six full laps of the track in order 
 	<game id="41331" source="ScreenScraper.fr">
 		<path>./galaga.zip</path>
 		<name>Galaga (Namco rev. B)</name>
-		<desc>Galaga is a single-screen shoot-em-up in which the player controls a 'Fighter' spaceship and must defend the home planet against the on-coming hordes of alien invaders called "Galagans". The Fighter can only move left and right along the bottom of the screen.  
- 
+		<desc>Galaga is a single-screen shoot-em-up in which the player controls a 'Fighter' spaceship and must defend the home planet against the on-coming hordes of alien invaders called "Galagans". The Fighter can only move left and right along the bottom of the screen.
+
 Galagans fly onto the screen in a variety of formations before forming troop lines at the top of the screen. Once all troop lines are formed the Galagans separate and start attacking the player's Fighter in ones, twos and threes. The top-line Boss Galaga need to be shot twice before they are destroyed. </desc>
 		<rating>0.9</rating>
 		<releasedate>19810101T000000</releasedate>
@@ -248,19 +248,19 @@ Galagans fly onto the screen in a variety of formations before forming troop lin
 	<game id="41332" source="ScreenScraper.fr">
 		<path>./galaga88.zip</path>
 		<name>Galaga '88</name>
-		<desc>Galaga '88 is an updated version of the old favorite, "Galaga", with more invaders and more player firepower. Galaga '88 gives players a chance to once again repel the invaders from the Galagan Kingdom. One or two players can try their hand at fighting the invaders. This time the Galagans have four more allies, each with unique weapons and defenses that a player must overcome.  
- 
-By destroying special enemies or obstacles the player can get 'items'. When a player has two items, they can warp to another dimension to confront more Galagan ships with new strategies. In the Challenging Stages (labelled in this game as 'That's Galactic Dancin'), the player shoots down as many invaders as possible as the Galagans dance to a waltz, tango, march or jazz tune.  
- 
-The player selects single or dual ship power. The objective is to destroy all the Galagan foes in each of the 29 sectors of the galaxy, with each sector more difficult than the last.  
- 
-Unique Features:  
-More opponents. In addition to Boss, Goei and Zako, the original Galagan crew, Don, Nin, Ban, and Gan have been added. Each of the Galagans has a unique way of challenging the players.  
-Different types of ships. Players can choose single or dual ships (if the game option is set for dual and single). When the player retrieves a dual ship from the Boss's tractor beam, it turns into a triple ship with ten times the power of a single ship.  
-Challenging Stages. In the 'That's Galactic Dancin' stages, the Galagan invaders dance to a waltz, tango, Sousa march or jazz tune, while the player shoots down Galagans to earn bonus points.  
-Warping to a new dimension. By destroying particular enemies or obstacles and capturing two of their items, the player can warp to the next dimension.  
-Player challenge. Each dimension has different mix of Galagans with different strategies to be overcome.  
-Win back captured ships. The player can win back ships captured in the Boss Galaga's tractor beam. When the player destroys the Boss, the ships are released. If the player retrieves them, the ships become dual ships if they were single and triple if they were dual.  
+		<desc>Galaga '88 is an updated version of the old favorite, "Galaga", with more invaders and more player firepower. Galaga '88 gives players a chance to once again repel the invaders from the Galagan Kingdom. One or two players can try their hand at fighting the invaders. This time the Galagans have four more allies, each with unique weapons and defenses that a player must overcome.
+
+By destroying special enemies or obstacles the player can get 'items'. When a player has two items, they can warp to another dimension to confront more Galagan ships with new strategies. In the Challenging Stages (labelled in this game as 'That's Galactic Dancin'), the player shoots down as many invaders as possible as the Galagans dance to a waltz, tango, march or jazz tune.
+
+The player selects single or dual ship power. The objective is to destroy all the Galagan foes in each of the 29 sectors of the galaxy, with each sector more difficult than the last.
+
+Unique Features:
+More opponents. In addition to Boss, Goei and Zako, the original Galagan crew, Don, Nin, Ban, and Gan have been added. Each of the Galagans has a unique way of challenging the players.
+Different types of ships. Players can choose single or dual ships (if the game option is set for dual and single). When the player retrieves a dual ship from the Boss's tractor beam, it turns into a triple ship with ten times the power of a single ship.
+Challenging Stages. In the 'That's Galactic Dancin' stages, the Galagan invaders dance to a waltz, tango, Sousa march or jazz tune, while the player shoots down Galagans to earn bonus points.
+Warping to a new dimension. By destroying particular enemies or obstacles and capturing two of their items, the player can warp to the next dimension.
+Player challenge. Each dimension has different mix of Galagans with different strategies to be overcome.
+Win back captured ships. The player can win back ships captured in the Boss Galaga's tractor beam. When the player destroys the Boss, the ships are released. If the player retrieves them, the ships become dual ships if they were single and triple if they were dual.
 High Score Mode. Upon completing a game, a player can enter his initials if they are among the top eight scorers on the game.</desc>
 		<rating>0.9</rating>
 		<releasedate>19870101T000000</releasedate>
@@ -326,8 +326,8 @@ High Score Mode. Upon completing a game, a player can enter his initials if they
 	<game id="41419" source="ScreenScraper.fr">
 		<path>./genpeitd.zip</path>
 		<name>Genpei Toumaden</name>
-		<desc>Genpei Touma Den is a multi-genre birds-eye view action, 2D side-scroller beat 'em up, and 2D side-scroller platform arcade game that was released by Namco in 1986 only in Japan.  
- 
+		<desc>Genpei Touma Den is a multi-genre birds-eye view action, 2D side-scroller beat 'em up, and 2D side-scroller platform arcade game that was released by Namco in 1986 only in Japan.
+
 The character controlled by the player is that of a real Japanese samurai, Taira no Kagekiyo, who fell at the Battle of Dan-no-ura at the end of the Genpei War in 1185. Over eight hundred years later he is resurrected and has to make his way over the Imperial Regalia of Japan - fighting other characters who actually existed such as Minamoto no Yoshitsune and Saito Musashibo Benkei on his travels, as well as collecting the three sacred game items and defeating his arch-enemy Minamoto no Yoritomo.</desc>
 		<rating>0.5</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -505,12 +505,12 @@ The character controlled by the player is that of a real Japanese samurai, Taira
 	<game id="78914" source="ScreenScraper.fr">
 		<path>./metrocrs.zip</path>
 		<name>Metro-cross (set 1)</name>
-		<desc>Metro-Cross is an abstract, horizontally-scrolling single player racing game set in an automated futuristic city. Players take on the role of 'The Runner', who must run through each of the game's 32 stages to cross the finish line before the time limit expires. If the Runner finishes a round within the time limit, remaining time is converted to bonus points and the next round begins.  
- 
-Obstacles that hinder the runner's progress include 'Slip Zones' that slow him down if he tries to run over them, 'Pitfalls' that  break under the Runner's weight and drop him into the holes and 'Crackers' that launch the Runner up into the air and cause him to land on his back. Later rounds also feature 'Jumbo Tires' that bounce towards the Runner, barriers that emerge from the ground before receding back into it, Cubes that move through particular columns of tiles, Mice that attempt to jump onto the Runner and slow him down and Chess Knights and Kings that bounce from one tile to another. Clinging mice fall off the runner if he leaps from a springboard. 
- 
-Progress is aided by yellow springboards that hurl the runner forwards at great speed (players must press the fire button while on the springboard) and a skateboard, that is unaffected by the green 'Slip Zone' tiles that would otherwise slow the player's progress. Bonus points can be earned by kicking the static drinks cans that can be found throughout each level. 
- 
+		<desc>Metro-Cross is an abstract, horizontally-scrolling single player racing game set in an automated futuristic city. Players take on the role of 'The Runner', who must run through each of the game's 32 stages to cross the finish line before the time limit expires. If the Runner finishes a round within the time limit, remaining time is converted to bonus points and the next round begins.
+
+Obstacles that hinder the runner's progress include 'Slip Zones' that slow him down if he tries to run over them, 'Pitfalls' that  break under the Runner's weight and drop him into the holes and 'Crackers' that launch the Runner up into the air and cause him to land on his back. Later rounds also feature 'Jumbo Tires' that bounce towards the Runner, barriers that emerge from the ground before receding back into it, Cubes that move through particular columns of tiles, Mice that attempt to jump onto the Runner and slow him down and Chess Knights and Kings that bounce from one tile to another. Clinging mice fall off the runner if he leaps from a springboard.
+
+Progress is aided by yellow springboards that hurl the runner forwards at great speed (players must press the fire button while on the springboard) and a skateboard, that is unaffected by the green 'Slip Zone' tiles that would otherwise slow the player's progress. Bonus points can be earned by kicking the static drinks cans that can be found throughout each level.
+
 Every fourth round is special, using the remaining time from the three previous rounds as additional completion time. However, if the Runner has not finished the round before the time limit runs out, he will be electrocuted and the game is immediately over.</desc>
 		<rating>0.7</rating>
 		<releasedate>19850101T000000</releasedate>
@@ -524,9 +524,9 @@ Every fourth round is special, using the remaining time from the three previous 
 	<game id="78933" source="ScreenScraper.fr">
 		<path>./mirninja.zip</path>
 		<name>Mirai Ninja (Japan)</name>
-		<desc>The title of this game translates from Japanese as 'Future Ninja - Stealth Joy Cloud Device Side Story'. 
- 
-Mirai Ninja was based on a Japanese movie of the same name, also produced by Namco. Both the game and the movie were released the same year. 
+		<desc>The title of this game translates from Japanese as 'Future Ninja - Stealth Joy Cloud Device Side Story'.
+
+Mirai Ninja was based on a Japanese movie of the same name, also produced by Namco. Both the game and the movie were released the same year.
 The plot of the movie: A man's body and soul are stolen and used as part of a demon castle. What's left becomes Cyber Ninja. He teams up with the chi students whose cyber-earmuffs show matching red symbols. They fill their swords with ammunition, grab some neo-retro-cyber-antique guns and attack the demon robot expendable ninja squad. Each fight is won by whichever side uses more gratuitous special effects. They slay the Tron-like hover droids, who are destroyed in their shame. There's a showdown with a white-armored guy with dreadlocks, who is later reincarnated by the eclipse and a lot of multicolored lightning. After killing the make-up wearing effeminate spider person, the chi school fires a giant gun at the demon castle spider cyber robot. It blows up.</desc>
 		<rating>0.7</rating>
 		<releasedate>19880101T000000</releasedate>
@@ -553,14 +553,14 @@ The plot of the movie: A man's body and soul are stolen and used as part of a de
 	<game id="78978" source="ScreenScraper.fr">
 		<path>./motos.zip</path>
 		<name>Motos</name>
-		<desc>The object of the game is to bump your enemies - space bugs - off the solar base using Motos, your ship. When you bump all of them off, you move to the next base or round. If Motos is knocked off the base, you lose one life. The game is over when you lose all your lives. 
- 
-You can collect Power parts and Jump parts lying on the solar base by simply having Motos touch them. The collected parts will be displayed in the lower left corner of the screen and you can use them in the next round. Motos can be outfitted with no more than seven power parts; the more power parts added, the more powerful Motos is. However, Motos can only be outfitted with only one jump part per round. With a jump part, Motos can jump over two squares by moving the joystick in the desired direction and pressing the Jump button. One jump on a square cracks the square and a second jump in the same spot makes a hole in the solar base. 
- 
-You can outfit Motos with these parts in the Power Parts or Jump Parts screen displayed at the beginning of each round. Select the number of parts you want by moving left and right with the joystick, and lock them in place by pressing the Jump button. You can use the selected parts for one round only; they will not be available in subsequent rounds. 
- 
-Linger too long on the playing field and Shooting Stars will begin to fall periodically onto the solar base. The Stars are aimed at Motos, and when they miss they crack a square or break a hole in the solar base (like they do to the base behind the Motos logo in the attract mode's title sequence).  
- 
+		<desc>The object of the game is to bump your enemies - space bugs - off the solar base using Motos, your ship. When you bump all of them off, you move to the next base or round. If Motos is knocked off the base, you lose one life. The game is over when you lose all your lives.
+
+You can collect Power parts and Jump parts lying on the solar base by simply having Motos touch them. The collected parts will be displayed in the lower left corner of the screen and you can use them in the next round. Motos can be outfitted with no more than seven power parts; the more power parts added, the more powerful Motos is. However, Motos can only be outfitted with only one jump part per round. With a jump part, Motos can jump over two squares by moving the joystick in the desired direction and pressing the Jump button. One jump on a square cracks the square and a second jump in the same spot makes a hole in the solar base.
+
+You can outfit Motos with these parts in the Power Parts or Jump Parts screen displayed at the beginning of each round. Select the number of parts you want by moving left and right with the joystick, and lock them in place by pressing the Jump button. You can use the selected parts for one round only; they will not be available in subsequent rounds.
+
+Linger too long on the playing field and Shooting Stars will begin to fall periodically onto the solar base. The Stars are aimed at Motos, and when they miss they crack a square or break a hole in the solar base (like they do to the base behind the Motos logo in the attract mode's title sequence).
+
 </desc>
 		<rating>0.7</rating>
 		<releasedate>19850101T000000</releasedate>
@@ -587,9 +587,9 @@ Linger too long on the playing field and Shooting Stars will begin to fall perio
 	<game id="39882" source="ScreenScraper.fr">
 		<path>./20pacgal.zip</path>
 		<name>Ms. Pac-Man/Galaga - 20th Anniversary Class of 1981 Reunion (V1.08)</name>
-		<desc>Classic Reunion! Class of '81 
- 
-Two of the Greatest Hits at One Great Price! 
+		<desc>Classic Reunion! Class of '81
+
+Two of the Greatest Hits at One Great Price!
 </desc>
 		<rating>0.7</rating>
 		<releasedate>20000101T000000</releasedate>
@@ -629,12 +629,12 @@ Two of the Greatest Hits at One Great Price!
 	<game id="79144" source="ScreenScraper.fr">
 		<path>./nmouse.zip</path>
 		<name>Naughty Mouse (set 1)</name>
-		<desc>Naughty Mouse, also known as Woodpecker, is a platform arcade game where the player must take control of Naughty Mouse, who must make it from his own house at the bottom of the screen to his girlfriend's house at the top.  
- 
-There are several differently colored woodpeckers that hatch from the large eggs positioned on the left and right sides of the screen, which set out to stop him. The player has a single button with which to make Naughty Mouse jump over them. 
- 
-Some of the ladders may also become electrified after Naughty Mouse has climbed them, forbidding him to go back down them again on pain of death. Once he has reached his girlfriend's house, he will receive the stage's remaining time as bonus points and proceed to the next stage. 
- 
+		<desc>Naughty Mouse, also known as Woodpecker, is a platform arcade game where the player must take control of Naughty Mouse, who must make it from his own house at the bottom of the screen to his girlfriend's house at the top.
+
+There are several differently colored woodpeckers that hatch from the large eggs positioned on the left and right sides of the screen, which set out to stop him. The player has a single button with which to make Naughty Mouse jump over them.
+
+Some of the ladders may also become electrified after Naughty Mouse has climbed them, forbidding him to go back down them again on pain of death. Once he has reached his girlfriend's house, he will receive the stage's remaining time as bonus points and proceed to the next stage.
+
 The main difference between Naughty Mouse and Woodpecker is the color palettes, and stage arrangements.</desc>
 		<rating>0.5</rating>
 		<releasedate>19810101T000000</releasedate>
@@ -648,21 +648,21 @@ The main difference between Naughty Mouse and Woodpecker is the color palettes, 
 	<game id="79070" source="ScreenScraper.fr">
 		<path>./nebulray.zip</path>
 		<name>Nebulas Ray (World, NR2)</name>
-		<desc>NebulasRay is a vertically scrolling shoot'em up for one or two players. Civil war has broken out in the Austral star system, with the militaristic 'Master Forces' ousting the ruling government and looking to seize control of the entire system.  
- 
-Taking on the role of resistance fighters, players must battle through waves of enemy ships across 6 levels, before finally reaching and destroying the 'Master Fortress'. As well as forward-firing weapons, each player ship also carries a limited number of powerful bombs that inflict much greater damage on the enemy than the standard weapons. Initially, each player ship is armed with only 3 bombs.  
- 
-Numerous weapons and power-ups can be picked up during play, each of which can itself be powered-up:  
-WIDE SHOT - Increases shot width. 5 levels available.  
-GAIN POWER - Increases destructive power. 5 levels available.  
-SPEED UP - Increases player ship speed. 5 levels available.  
-BOMB - Extra bomb. Maximum of 7 can be carried.  
-FOUR-BARREL PHOTON - Powerful Photon torpedoes. Time-based.  
-HOMING LASER - Powerful lasers that automatically target enemies. Time-based.  
-LIGHTING BURST - Powerful short-range lightning burst. Time-based.  
-DEFLECTOR - Shield to protect player ships. Time-based.  
-EXTRA POINTS - Pick up for 3000 points.  
- 
+		<desc>NebulasRay is a vertically scrolling shoot'em up for one or two players. Civil war has broken out in the Austral star system, with the militaristic 'Master Forces' ousting the ruling government and looking to seize control of the entire system.
+
+Taking on the role of resistance fighters, players must battle through waves of enemy ships across 6 levels, before finally reaching and destroying the 'Master Fortress'. As well as forward-firing weapons, each player ship also carries a limited number of powerful bombs that inflict much greater damage on the enemy than the standard weapons. Initially, each player ship is armed with only 3 bombs.
+
+Numerous weapons and power-ups can be picked up during play, each of which can itself be powered-up:
+WIDE SHOT - Increases shot width. 5 levels available.
+GAIN POWER - Increases destructive power. 5 levels available.
+SPEED UP - Increases player ship speed. 5 levels available.
+BOMB - Extra bomb. Maximum of 7 can be carried.
+FOUR-BARREL PHOTON - Powerful Photon torpedoes. Time-based.
+HOMING LASER - Powerful lasers that automatically target enemies. Time-based.
+LIGHTING BURST - Powerful short-range lightning burst. Time-based.
+DEFLECTOR - Shield to protect player ships. Time-based.
+EXTRA POINTS - Pick up for 3000 points.
+
 Visually, NebulasRay employs complex sprite rotation and scaling techniques - as well as multi-layered parallax scrolling - to create impressive and highly detailed graphics with a true sense of depth.</desc>
 		<rating>0.8</rating>
 		<releasedate>19940101T000000</releasedate>
@@ -688,16 +688,16 @@ Visually, NebulasRay employs complex sprite rotation and scaling techniques - as
 	<game id="79155" source="ScreenScraper.fr">
 		<path>./nrallyx.zip</path>
 		<name>New Rally X</name>
-		<desc>New Rally-X is a scrolling, overhead mazed-based racing game in which the player drives a racing car around a maze and must collect ten yellow flags before the car's fuel runs out. In-game opponents consist of red enemy cars that pursue and try to ram into and destroy the player's car. The enemy cars are faster moving than the player's vehicle.  
- 
-The player's car automatically moves in whichever direction the joystick is pushed and if it runs into a wall, it will turn automatically and continue moving. To disrupt the chasing enemy cars a smoke-screen can be activated that trails behind the player's car, causing any pursuing vehicles to crash. Activating the smoke screen uses a small amount of fuel, however, so players must be careful to not overuse it. 
- 
-Each maze also has rock formations and crashing into these will result in the loss of a player car. A radar display to the right-hand side of the playing area shows the relative positions of the flags, rocks and enemy vehicles.  
- 
-In addition to the standard ten flags, each maze also contains a special flag (indicated by the letter "S"). If collected, the value earned for the round's remaining flags doubles from 100 to 200 points. If the player dies before the end of that round, the flag value is set back to 100 points and the double bonus is lost.  
- 
-The mazes also contain a 'lucky flag'. This is marked with the letter 'L' and - providing there are still standard flags remaining - awards the player extra points for remaining fuel, after which the round will continue as normal. Upon completion of a round, bonus points are awarded based on how much fuel the player has remaining. 
- 
+		<desc>New Rally-X is a scrolling, overhead mazed-based racing game in which the player drives a racing car around a maze and must collect ten yellow flags before the car's fuel runs out. In-game opponents consist of red enemy cars that pursue and try to ram into and destroy the player's car. The enemy cars are faster moving than the player's vehicle.
+
+The player's car automatically moves in whichever direction the joystick is pushed and if it runs into a wall, it will turn automatically and continue moving. To disrupt the chasing enemy cars a smoke-screen can be activated that trails behind the player's car, causing any pursuing vehicles to crash. Activating the smoke screen uses a small amount of fuel, however, so players must be careful to not overuse it.
+
+Each maze also has rock formations and crashing into these will result in the loss of a player car. A radar display to the right-hand side of the playing area shows the relative positions of the flags, rocks and enemy vehicles.
+
+In addition to the standard ten flags, each maze also contains a special flag (indicated by the letter "S"). If collected, the value earned for the round's remaining flags doubles from 100 to 200 points. If the player dies before the end of that round, the flag value is set back to 100 points and the double bonus is lost.
+
+The mazes also contain a 'lucky flag'. This is marked with the letter 'L' and - providing there are still standard flags remaining - awards the player extra points for remaining fuel, after which the round will continue as normal. Upon completion of a round, bonus points are awarded based on how much fuel the player has remaining.
+
 As players progress through the rounds, the number or pursuing enemy cars increases.</desc>
 		<rating>0.8</rating>
 		<releasedate>19810101T000000</releasedate>
@@ -711,30 +711,30 @@ As players progress through the rounds, the number or pursuing enemy cars increa
 	<game id="79166" source="ScreenScraper.fr">
 		<path>./numanath.zip</path>
 		<name>Numan Athletics (World)</name>
-		<desc>An athletics game featuring 8 tournaments: 
- 
-Interceptor 
-A real life missile defense style-contest as missiles are being launched from a ship, and you must use your mystical powers to stop the oncoming missiles. The outside buttons (1 &amp; 3) make you step to the left or right, and the middle button is fire. Failure to hit the missile results in you being blown up. If you select Sharon from France, most of her clothes would disappear except for the bottom part of her suit. 
- 
-Niagara Jumps 
-The final competition in the tournament. It is also considered to be the most difficult competition in the game. Very similar to the Triple Jump competition in the Olympics. The object is this contest is to make it across the falls. Alternately press buttons 1 and 3 to build up speed, then press button 2 three times. If you don't time yourself properly, you will sink and drown and you will go down the steep falls. 
- 
-Nonstop Rock Chop 
-You must smash as many rocks as you can before time runs out. Rapidly press buttons 1 and 3 alternately until the gauge is full, then press button 2 to smash the rock. 
- 
-Numan Sniper 
-In this contest, monsters will jump out of the sea from three different locations. Your object, destroy them. Press buttons 1, 2 or 3 varying by their location to shoot. 
- 
-Scud Toss 
-Just as in the Javelin competition in the Olympics. Played on a "Track and Field"-like field with an only exception -- a missile. Rapidly and continuously press the two run buttons and then push and hold the middle button to set the angle of which you would throw the missile. Again, like Interceptor, if you select Sharon -- then again if she is faulted, she will be missing most of her clothes. 
- 
-Tower Topper 
-Here you are expected to climb up to the building rooftop with the fastest time possible. Press button 2 repeatedly to scale the side of a building. If you press it too early -- you won't move, but if you press it too late -- you will fall off. 
- 
-Turbo Dash 
-Much like the 100m Dash in the Olympics -- only the core elements have slightly changed. You are racing against a drag racer and another player. Press the two outside buttons (1 &amp; 3) in alternate fashion until your RSI (or 'special speed') sets in. 
- 
-VS. Express 
+		<desc>An athletics game featuring 8 tournaments:
+
+Interceptor
+A real life missile defense style-contest as missiles are being launched from a ship, and you must use your mystical powers to stop the oncoming missiles. The outside buttons (1 &amp; 3) make you step to the left or right, and the middle button is fire. Failure to hit the missile results in you being blown up. If you select Sharon from France, most of her clothes would disappear except for the bottom part of her suit.
+
+Niagara Jumps
+The final competition in the tournament. It is also considered to be the most difficult competition in the game. Very similar to the Triple Jump competition in the Olympics. The object is this contest is to make it across the falls. Alternately press buttons 1 and 3 to build up speed, then press button 2 three times. If you don't time yourself properly, you will sink and drown and you will go down the steep falls.
+
+Nonstop Rock Chop
+You must smash as many rocks as you can before time runs out. Rapidly press buttons 1 and 3 alternately until the gauge is full, then press button 2 to smash the rock.
+
+Numan Sniper
+In this contest, monsters will jump out of the sea from three different locations. Your object, destroy them. Press buttons 1, 2 or 3 varying by their location to shoot.
+
+Scud Toss
+Just as in the Javelin competition in the Olympics. Played on a "Track and Field"-like field with an only exception -- a missile. Rapidly and continuously press the two run buttons and then push and hold the middle button to set the angle of which you would throw the missile. Again, like Interceptor, if you select Sharon -- then again if she is faulted, she will be missing most of her clothes.
+
+Tower Topper
+Here you are expected to climb up to the building rooftop with the fastest time possible. Press button 2 repeatedly to scale the side of a building. If you press it too early -- you won't move, but if you press it too late -- you will fall off.
+
+Turbo Dash
+Much like the 100m Dash in the Olympics -- only the core elements have slightly changed. You are racing against a drag racer and another player. Press the two outside buttons (1 &amp; 3) in alternate fashion until your RSI (or 'special speed') sets in.
+
+VS. Express
 Very similar to a familiar scene in the Superman comic books. You must stop the oncoming train using your magical powers and send it in the opposite direction backwards. Press button 2 to stop the train, then hammer the outside buttons to build up power before bunging it back down the track. If you don't time this right -- the train will run you over.</desc>
 		<rating>0.7</rating>
 		<releasedate>19930101T000000</releasedate>
@@ -774,12 +774,12 @@ Very similar to a familiar scene in the Superman comic books. You must stop the 
 	<game id="60859" source="ScreenScraper.fr">
 		<path>./pacland.zip</path>
 		<name>Pac-Land (World)</name>
-		<desc>Pac-Land is a horizontally-scrolling platform game set in the cartoon world of the game's title. A fairy has lost her way and needs Pac-Man to help her get back to her home of Fairyland. Pac-Man, with the fairy safely hidden beneath his hat, must run and jump through the colourful world until he reaches and enters the magical door to Fairyland. Upon being rescued, the fairy gives Pac-Man a pair of magical shoes for his trip back home. These enable him to jump wherever he wants, without the need for a platform to jump from. This effectively means Pac-Man can 'sky-jump' back home if he so wishes. 
- 
-Directional buttons make Pac-Man walk left and right and it's possible to make him run by tapping the desired directional button twice. Pac-Man is pursued by his ever-present enemies in the form of five ghosts - Pinky, Inky, Blinky, Clyde and Sue. Pac-Man must avoid the ghosts and other deadly objects that populate the levels. As with previous games in the series, a small number of 'Powerpills' appear. Eating a Powerpill makes Pac-Man temporarily invincible and turns the ghosts purple and vulnerable to being eaten. On some stages, Pac-Man must use a springboard to jump over large ponds by leaping from the springboard and rapidly moving left and right while in the air. 
- 
-The game's stages are called 'trips', with players able to start on any one of the first five. Each trip made up of four rounds (three rounds to reach Fairyland and one round to return home) with a short interval between each one. The objective in all trips is to get the fairy safely back to Fairyland then return home to Pac-Man's family. The majority of the trip involves moving from left to right, avoiding various obstacles such as the enemy ghosts, water spurts and quicksand traps. The journey home, however, scrolls right to left. 
- 
+		<desc>Pac-Land is a horizontally-scrolling platform game set in the cartoon world of the game's title. A fairy has lost her way and needs Pac-Man to help her get back to her home of Fairyland. Pac-Man, with the fairy safely hidden beneath his hat, must run and jump through the colourful world until he reaches and enters the magical door to Fairyland. Upon being rescued, the fairy gives Pac-Man a pair of magical shoes for his trip back home. These enable him to jump wherever he wants, without the need for a platform to jump from. This effectively means Pac-Man can 'sky-jump' back home if he so wishes.
+
+Directional buttons make Pac-Man walk left and right and it's possible to make him run by tapping the desired directional button twice. Pac-Man is pursued by his ever-present enemies in the form of five ghosts - Pinky, Inky, Blinky, Clyde and Sue. Pac-Man must avoid the ghosts and other deadly objects that populate the levels. As with previous games in the series, a small number of 'Powerpills' appear. Eating a Powerpill makes Pac-Man temporarily invincible and turns the ghosts purple and vulnerable to being eaten. On some stages, Pac-Man must use a springboard to jump over large ponds by leaping from the springboard and rapidly moving left and right while in the air.
+
+The game's stages are called 'trips', with players able to start on any one of the first five. Each trip made up of four rounds (three rounds to reach Fairyland and one round to return home) with a short interval between each one. The objective in all trips is to get the fairy safely back to Fairyland then return home to Pac-Man's family. The majority of the trip involves moving from left to right, avoiding various obstacles such as the enemy ghosts, water spurts and quicksand traps. The journey home, however, scrolls right to left.
+
 Each stage must be completed within a set time limit and if the player runs out of time before finishing a round, Sue (the purple ghost) will speed up considerably and kill Pac-Man. At the end of each round, players are awarded bonus points based on how much of the time limit remains. On each stage, cherries and other items can be collected for extra points. There are a total of 8 different trips in the game, totalling 32 levels. After the 8th trip, the 9th trip is a repeat of the 5th trip, with level 33 effectively being level 17, with an increased difficulty level.</desc>
 		<rating>0.8</rating>
 		<releasedate>19840101T000000</releasedate>
@@ -819,10 +819,10 @@ Each stage must be completed within a set time limit and if the player runs out 
 	<game id="79257" source="ScreenScraper.fr">
 		<path>./phelios.zip</path>
 		<name>Phelios</name>
-		<desc>A great vertical shoot'em up game based on Greek mythology.   
- 
-The player controls the sun god Apollo who is riding of his winged horse Pegasus flying through ancient Greece on a mission to rescue his sister Artemis the goddess of the moon, from the clutches of the fiend Typhon. Shoot all enemies like harpies and skeletons along with goblins and colossal enemy bosses. 
- 
+		<desc>A great vertical shoot'em up game based on Greek mythology.
+
+The player controls the sun god Apollo who is riding of his winged horse Pegasus flying through ancient Greece on a mission to rescue his sister Artemis the goddess of the moon, from the clutches of the fiend Typhon. Shoot all enemies like harpies and skeletons along with goblins and colossal enemy bosses.
+
 Pressing the fire button makes his sword fire a tiny shot, while holding it down charges the sword, firing a bigger fireball upon release. Even the smallest enemies take multiple hits, so the standard shot is of little use.</desc>
 		<rating>0.6</rating>
 		<releasedate>19880101T000000</releasedate>
@@ -862,10 +862,10 @@ Pressing the fire button makes his sword fire a tiny shot, while holding it down
 	<game id="42538" source="ScreenScraper.fr">
 		<path>./ptblank.zip</path>
 		<name>Point Blank (World, GN2 Rev B, set 1)</name>
-		<desc>Point Blank is a challenging light gun game where players can select from a variety of target practice mini games. 
- 
-Many games require skill and accuracy, such as shooting cardboard cutouts of criminals, a one-shot chance at hitting a leaf, aiming for a specific toy from a shelf, and shooting at objects that move across the screen or rush towards the player. 
- 
+		<desc>Point Blank is a challenging light gun game where players can select from a variety of target practice mini games.
+
+Many games require skill and accuracy, such as shooting cardboard cutouts of criminals, a one-shot chance at hitting a leaf, aiming for a specific toy from a shelf, and shooting at objects that move across the screen or rush towards the player.
+
 Your 'judgement' is based on your shooting accuracy in some games, and others require you to hit a certain number of targets within the given time.</desc>
 		<rating>0.9</rating>
 		<releasedate>19940101T000000</releasedate>
@@ -879,8 +879,8 @@ Your 'judgement' is based on your shooting accuracy in some games, and others re
 	<game id="42447" source="ScreenScraper.fr">
 		<path>./polepos1.zip</path>
 		<name>Pole Position (Atari version 1)</name>
-		<desc>Pole Position is a 1-player game using a color raster-scan video display. Game action takes place at the Fuji Speedway in Japan. The country around the speedway consists of green meadows, hills, and snow-capped Mt. Fuji.  
- 
+		<desc>Pole Position is a 1-player game using a color raster-scan video display. Game action takes place at the Fuji Speedway in Japan. The country around the speedway consists of green meadows, hills, and snow-capped Mt. Fuji.
+
 The player drives a Formula-1 race car on the track. The first objective of the game is to finish the qualifying lap as quickly as possible. If the player beats the clock, he or she qualifies for the race. If not, he or she drives out the remainder of the time along the qualifying course. </desc>
 		<rating>0.9</rating>
 		<releasedate>19820101T000000</releasedate>
@@ -894,9 +894,9 @@ The player drives a Formula-1 race car on the track. The first objective of the 
 	<game id="42448" source="ScreenScraper.fr">
 		<path>./polepos2.zip</path>
 		<name>Pole Position 2 (Japan)</name>
-		<desc>Pole Position II is a 1-player game using a color raster-scan video display. Game action takes place at four different raceways - the Fuji Speedway in Japan, the Test Track (an oval track like Indy), the Seaside Speedway (with the Long Beach Pike in the background), and the Suzuka Speedway in Japan. The unique and picturesque scenery around each raceway adds exciting realism to each race!  
- 
-The player drives a Formula-1 race car on each track. The first objective of the game is to finish the qualifying lap as quickly as possible. If the player beats the time, he or she qualifies for the race. If not, he or she drives the remainder of his time along the qualifying course.  
+		<desc>Pole Position II is a 1-player game using a color raster-scan video display. Game action takes place at four different raceways - the Fuji Speedway in Japan, the Test Track (an oval track like Indy), the Seaside Speedway (with the Long Beach Pike in the background), and the Suzuka Speedway in Japan. The unique and picturesque scenery around each raceway adds exciting realism to each race!
+
+The player drives a Formula-1 race car on each track. The first objective of the game is to finish the qualifying lap as quickly as possible. If the player beats the time, he or she qualifies for the race. If not, he or she drives the remainder of his time along the qualifying course.
 </desc>
 		<rating>0.8</rating>
 		<releasedate>19830101T000000</releasedate>
@@ -910,8 +910,8 @@ The player drives a Formula-1 race car on each track. The first objective of the
 	<game id="42457" source="ScreenScraper.fr">
 		<path>./ponpoko.zip</path>
 		<name>Ponpoko</name>
-		<desc>Ponpoko  is a platform game similar to Donkey Kong and Mario Bros. 
-  
+		<desc>Ponpoko  is a platform game similar to Donkey Kong and Mario Bros.
+
 In Ponpoko, the player controls a Tanuki (a Japanese raccoon dog) that can climb ladders, walk across floors and jump over gaps and tacks while trying to avoid red and yellow snakes. The player must collect all the fruits and vegetables in order to advance to the next level. There are also baskets that contain either points or snakes. Once the final level is reached (the beer mug level) the game will repeat that level endlessly.</desc>
 		<rating>0.6</rating>
 		<releasedate>19820101T000000</releasedate>
@@ -988,8 +988,8 @@ In Ponpoko, the player controls a Tanuki (a Japanese raccoon dog) that can climb
 	<game id="42690" source="ScreenScraper.fr">
 		<path>./rallyx.zip</path>
 		<name>Rally X (32k Ver.?)</name>
-		<desc>In Rally-X, the player drives a car around a maze picking up all of the yellow flags, of which there are ten, before the car's fuel runs out. The game-play has a similar feel to another Namco legend, "Pac-Man"; although in Rally-X, the mazes are much larger and, with each maze having only ten flags to collect, is more sparsely populated than Namco's pill-eating legend. 
- 
+		<desc>In Rally-X, the player drives a car around a maze picking up all of the yellow flags, of which there are ten, before the car's fuel runs out. The game-play has a similar feel to another Namco legend, "Pac-Man"; although in Rally-X, the mazes are much larger and, with each maze having only ten flags to collect, is more sparsely populated than Namco's pill-eating legend.
+
 In-game opponents consist of red enemy cars that try to ram into and destroy the player's car, a problem compounded by the fact that enemy cars are faster than the player's. A smoke screen can be activated which trails behind the player's car and causes any pursuing enemies to crash. Each maze also has rock formations which, if crashed into, will result in the loss of a player car. A radar display to the right hand side of the playing area shows the positions of both the flags, and the enemy vehicles.</desc>
 		<rating>0.8</rating>
 		<releasedate>19800101T000000</releasedate>
@@ -1003,8 +1003,8 @@ In-game opponents consist of red enemy cars that try to ram into and destroy the
 	<game id="42810" source="ScreenScraper.fr">
 		<path>./roishtar.zip</path>
 		<name>Return Of Ishtar, The</name>
-		<desc>The Return of Ishtar is a sequel to The Tower of Druaga. It is an action game with light puzzle-solving elements that requires two players. One person is in control of the maiden Ki who fights with magic and the other controls Gilgamesh, the sword-wielding knight. Search for keys and special items. The tower has a few different ways to exit, and the aggregate total of levels is 128. 
- 
+		<desc>The Return of Ishtar is a sequel to The Tower of Druaga. It is an action game with light puzzle-solving elements that requires two players. One person is in control of the maiden Ki who fights with magic and the other controls Gilgamesh, the sword-wielding knight. Search for keys and special items. The tower has a few different ways to exit, and the aggregate total of levels is 128.
+
 Players are presented a password to allow them to continue from where they left off.</desc>
 		<rating>0.5</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -1083,10 +1083,10 @@ Players are presented a password to allow them to continue from where they left 
 	<game id="43119" source="ScreenScraper.fr">
 		<path>./skykiddx.zip</path>
 		<name>Sky Kid Deluxe (set 1)</name>
-		<desc>Sky Kid Deluxe is an update to the original featuring: 
-Battle report between each mission. 
-New missions (X1-4). 
-Snow on missions X1 and X3. 
+		<desc>Sky Kid Deluxe is an update to the original featuring:
+Battle report between each mission.
+New missions (X1-4).
+Snow on missions X1 and X3.
 Many new characters.</desc>
 		<rating>0.7</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -1100,10 +1100,10 @@ Many new characters.</desc>
 	<game id="43174" source="ScreenScraper.fr">
 		<path>./solvalou.zip</path>
 		<name>Solvalou (Japan)</name>
-		<desc>Solvalou is a great sequel, with a first-person 3-D viewpoint. 
- 
-You be once again the pilot of mighty combat aircraft 'Solvalou' this time under a first-person view, through the perspective of the pilot and armed with the classic weaponry the forward-firing gun for aerial targets, and the bombs to destroying ground-based targets.  
- 
+		<desc>Solvalou is a great sequel, with a first-person 3-D viewpoint.
+
+You be once again the pilot of mighty combat aircraft 'Solvalou' this time under a first-person view, through the perspective of the pilot and armed with the classic weaponry the forward-firing gun for aerial targets, and the bombs to destroying ground-based targets.
+
 Your pilot skills will be tested! destroy's all the air and ground enemies and dodge all his attacks, to reach the end and destroy the giant mothership 'Andor Genesis' to restore peace in the planet.</desc>
 		<rating>0.7</rating>
 		<releasedate>19910101T000000</releasedate>
@@ -1195,22 +1195,22 @@ Your pilot skills will be tested! destroy's all the air and ground enemies and d
 	<game id="43432" source="ScreenScraper.fr">
 		<path>./superpac.zip</path>
 		<name>Super Pac-Man</name>
-		<desc>Super Pac-Man is a 1- or 2-player game where you are in control of the legendary Pac-Man. As in the original "Pac-Man" game, the goal is to clear each maze, but this time, instead of dots, the maze consists of prizes which are locked away behind gates. There are two ways to access the prizes. You can eat the keys which open a particular gate, and not always the gate which is closest to that key. Or you can crash through the gate after you eat a Super Pill and become Super Pac-Man. You are not required to eat all of the keys in order to complete the stage.  
- 
-Four Power Pills are in maze and allow Pac-Man to turn the tables on the ghosts and eat them for a short time. When the ghosts begin to flash, time is running out and they will switch back, so beware.  
- 
-New in this game is the Super Pill. There are two Super Pills in the maze which allow Pac-Man to become Super Pac-Man for a limited period of time. While in Super form, Pac-Man can crash through the maze gates, fly over the ghosts and avoid being killed (or eat them when they're blue), and travel at super speed whenever the player presses and holds the Super Speed button. When the super power is about to run out, Pac-Man flashes white and then returns to his normal form. You can extend the duration of Super time by eating a regular Power Pill. The Super time will then be extended by the duration of the ghosts' blue time.  
- 
-Pac-Man loses one life whenever a ghost catches him when the ghost is not blue and Pac-Man is not in Super form. You start with a set number of lives ('Lives' dip switch), and bonus lives can be awarded to you as you reach or pass certain preselected point values ('Extra Lives' dip switch).  
- 
-The tunnel is a great way to put some space between you and any ghosts that are on your tail since they can only move half as fast as you when they are in it. In Super Pac-Man, the ghosts are also slowed down by travelling through the passage directly beneath the ghost pen. 
- 
-Occasionally, a star will appear in the middle of the screen with a picture on the left, and a rotating picture on the right. You may eat the star at any time for bonus points, but if you manage to eat the star when the right picture matches the left one, you will receive a larger bonus.  
- 
-As the stages increases, the ghosts speed up their pursuit of Pac-Man and they stay blue for shorter and shorter periods of time after he eats a Power Pill until, in the high stages, they do not turn blue at all.  
- 
-Super Pac-Man also features bonus stages in Stage 3, Stage 7, and every fourth stage thereafter, where there are no ghosts, a time limit, and Pac-Man is in Super form throughout the stage. Your goal is to eat all of the prizes in the given time limit. As with gameplay on the regular levels, you don't need to eat all (or any) of the keys. You are awarded the remaining time in the counter as points for successfully eating everything. With each Bonus stage, the walls and gates change color.  
- 
+		<desc>Super Pac-Man is a 1- or 2-player game where you are in control of the legendary Pac-Man. As in the original "Pac-Man" game, the goal is to clear each maze, but this time, instead of dots, the maze consists of prizes which are locked away behind gates. There are two ways to access the prizes. You can eat the keys which open a particular gate, and not always the gate which is closest to that key. Or you can crash through the gate after you eat a Super Pill and become Super Pac-Man. You are not required to eat all of the keys in order to complete the stage.
+
+Four Power Pills are in maze and allow Pac-Man to turn the tables on the ghosts and eat them for a short time. When the ghosts begin to flash, time is running out and they will switch back, so beware.
+
+New in this game is the Super Pill. There are two Super Pills in the maze which allow Pac-Man to become Super Pac-Man for a limited period of time. While in Super form, Pac-Man can crash through the maze gates, fly over the ghosts and avoid being killed (or eat them when they're blue), and travel at super speed whenever the player presses and holds the Super Speed button. When the super power is about to run out, Pac-Man flashes white and then returns to his normal form. You can extend the duration of Super time by eating a regular Power Pill. The Super time will then be extended by the duration of the ghosts' blue time.
+
+Pac-Man loses one life whenever a ghost catches him when the ghost is not blue and Pac-Man is not in Super form. You start with a set number of lives ('Lives' dip switch), and bonus lives can be awarded to you as you reach or pass certain preselected point values ('Extra Lives' dip switch).
+
+The tunnel is a great way to put some space between you and any ghosts that are on your tail since they can only move half as fast as you when they are in it. In Super Pac-Man, the ghosts are also slowed down by travelling through the passage directly beneath the ghost pen.
+
+Occasionally, a star will appear in the middle of the screen with a picture on the left, and a rotating picture on the right. You may eat the star at any time for bonus points, but if you manage to eat the star when the right picture matches the left one, you will receive a larger bonus.
+
+As the stages increases, the ghosts speed up their pursuit of Pac-Man and they stay blue for shorter and shorter periods of time after he eats a Power Pill until, in the high stages, they do not turn blue at all.
+
+Super Pac-Man also features bonus stages in Stage 3, Stage 7, and every fourth stage thereafter, where there are no ghosts, a time limit, and Pac-Man is in Super form throughout the stage. Your goal is to eat all of the prizes in the given time limit. As with gameplay on the regular levels, you don't need to eat all (or any) of the keys. You are awarded the remaining time in the counter as points for successfully eating everything. With each Bonus stage, the walls and gates change color.
+
 </desc>
 		<rating>0.9</rating>
 		<releasedate>19820101T000000</releasedate>
@@ -1336,8 +1336,8 @@ Super Pac-Man also features bonus stages in Stage 3, Stage 7, and every fourth s
 	<game id="43513" source="ScreenScraper.fr">
 		<path>./tankbatt.zip</path>
 		<name>Tank Battalion</name>
-		<desc>Tank Battalion is a multi-directional shooter arcade video game. 
- 
+		<desc>Tank Battalion is a multi-directional shooter arcade video game.
+
 The player, controlling a tank, must destroy 20 enemy tanks in each level, which enter the playfield from the top of the screen. The enemy tanks attempt to destroy the player's base (represented on the map as an eagle), as well as the player's tank. A level is completed when the player destroys all 20 enemy tanks, but the game ends if the player's base is destroyed or the player loses all his lives.</desc>
 		<rating>0.5</rating>
 		<releasedate>19800101T000000</releasedate>
@@ -1377,8 +1377,8 @@ The player, controlling a tank, must destroy 20 enemy tanks in each level, which
 	<game id="43625" source="ScreenScraper.fr">
 		<path>./tinklpit.zip</path>
 		<name>Tinkle Pit (Japan)</name>
-		<desc>The player contols Pitt and Patti, who must walk around the mazes, collecting items and avoiding enemies. They have the power to drop their Tinker power balls, which are both invulnerable to the enemies, and move around by pressing the Line button, therefore creating a line between them and their power balls. Releasing the button makes their power balls come back to them; the enemies are killed by having the power balls slam into them. There are also pieces of popcorn which can be picked up around the mazes - and pressing the Popcorn button, Pitt and Patti can throw them at the enemies, and they shall bounce off the walls until they hit one (or evaporate if they have not done so by the end of the stage).  
- 
+		<desc>The player contols Pitt and Patti, who must walk around the mazes, collecting items and avoiding enemies. They have the power to drop their Tinker power balls, which are both invulnerable to the enemies, and move around by pressing the Line button, therefore creating a line between them and their power balls. Releasing the button makes their power balls come back to them; the enemies are killed by having the power balls slam into them. There are also pieces of popcorn which can be picked up around the mazes - and pressing the Popcorn button, Pitt and Patti can throw them at the enemies, and they shall bounce off the walls until they hit one (or evaporate if they have not done so by the end of the stage).
+
 Killing all enemies in a maze advances the player to the next stage; however, in the event of one enemy remaining, he will make for the nearest corner of the maze, say "Bye-bye!", and disappear - which will detract from the "Pursuit Bonus" that the players will receive after they defeat Mao at the end of the game.</desc>
 		<rating>0.7</rating>
 		<releasedate>19930101T000000</releasedate>
@@ -1392,23 +1392,23 @@ Killing all enemies in a maze advances the player to the next stage; however, in
 	<game id="43652" source="ScreenScraper.fr">
 		<path>./todruaga.zip</path>
 		<name>Tower Of Druaga, The (New Ver.)</name>
-		<desc>You control the heroic prince Gilgamesh who must attempt to rescue the maiden Ki from the demon Druaga. You are armed with a sword and shield to attack and defend. Find hidden chests (and special items) when special conditions are met, some of which are required to beat the game. 
- 
-Original story: 
-IN ANOTHER TIME 
-IN ANOTHER WORLD... 
-THE BLUE CRYSTAL ROD 
-KEPT THE KINGDOM IN PEACE 
- 
-BUT THE EVIL DRUAGA 
-HID THE ROD 
-AND THE MAIDEN KI 
-IN A TOWER 
- 
-THE PRINCE GILGAMESH 
-WORE GOLD ARMOR 
-AND ATTACKED MONSTERS 
-TO HELP KI IN 
+		<desc>You control the heroic prince Gilgamesh who must attempt to rescue the maiden Ki from the demon Druaga. You are armed with a sword and shield to attack and defend. Find hidden chests (and special items) when special conditions are met, some of which are required to beat the game.
+
+Original story:
+IN ANOTHER TIME
+IN ANOTHER WORLD...
+THE BLUE CRYSTAL ROD
+KEPT THE KINGDOM IN PEACE
+
+BUT THE EVIL DRUAGA
+HID THE ROD
+AND THE MAIDEN KI
+IN A TOWER
+
+THE PRINCE GILGAMESH
+WORE GOLD ARMOR
+AND ATTACKED MONSTERS
+TO HELP KI IN
 THE TOWER OF DRUAGA</desc>
 		<rating>0.7</rating>
 		<releasedate>19840101T000000</releasedate>
@@ -1521,8 +1521,8 @@ THE TOWER OF DRUAGA</desc>
 	<game id="44036" source="ScreenScraper.fr">
 		<path>./warpwarp.zip</path>
 		<name>Warp And Warp</name>
-		<desc>The objective of the game is to pursue the mystery aliens by warping across 2 different worlds: the Space World and Maze World.  The player may choose when to warp to a different world, so it is possible to continue playing in the same world throughout the game. In Space World, the character uses a gun to shoot up enemy aliens, and in Maze World, aliens are killed using a time-delay bomb. The delay is controlled by the length of time the button is held down, and the player loses if the character is caught in the resulting explosion. 
- 
+		<desc>The objective of the game is to pursue the mystery aliens by warping across 2 different worlds: the Space World and Maze World.  The player may choose when to warp to a different world, so it is possible to continue playing in the same world throughout the game. In Space World, the character uses a gun to shoot up enemy aliens, and in Maze World, aliens are killed using a time-delay bomb. The delay is controlled by the length of time the button is held down, and the player loses if the character is caught in the resulting explosion.
+
 Power-ups may appear on some levels, and allow the player to shoot exploding bullets or attach bombs directly onto enemy aliens. However, the exploding bullets usable in Space World can only obtained in Maze World, and the power-up to attach bombs onto enemies in Maze World only appears in Space World. Players must alternate turns on the screen in the multiplayer mode.</desc>
 		<rating>0.3</rating>
 		<releasedate>19810101T000000</releasedate>
@@ -1575,21 +1575,21 @@ Power-ups may appear on some levels, and allow the player to shoot exploding bul
 	<game id="40074" source="ScreenScraper.fr">
 		<path>./assaultj.zip</path>
 		<name>Assault (Japan)</name>
-		<desc>Your mission is to reclaim your homeland by destroying the enemy forces that have taken over. You have an Assault tank, the supreme mobile weapon. Your tank has artillery guns and grenades, can perform Rapid Rolls to dodge enemy shots, and uses Power Wheelies to launch grenades. 
- 
-Your controls are two 4-position joysticks with triggers. These controls make Assault like no other tank game. You have a quick, highly responsive vehicle with fast movement in all directions. To avoid enemy shots, Rapid Roll your tank left or right by moving both joysticks to the same side. To launch grenades, put the tank in the Power Wheelie position by moving both joysticks to the outside, then pressing either trigger. Your grenades are triple the fire power of your tank's standard shots. 
- 
-Your tank is always in the center of the screen no matter what direction you are going. With Assault's 360-degree scrolling playfield, the world rotates around you as you move. An arrow always points you towards the exit to the next level. 
- 
-The lift zone gives you an advantage over the invaders and a spectacular view of the playfield. Each lift zone is a five-sided platform on the playfield that flashes red when you can use it. When you drive onto the lift zone, your tank jets straight up to get a bird's eye view of the surrounding terrain and enemy lines. From this overhead position, you can reconnoiter enemy forces and bomb enemy outposts. 
- 
-Fight your way through 11 different levels to seek out and destroy the invaderâ€™s headquarters. To succeed, you must: 
-Dodge enemy gunfire with the Rapid Roll maneuver. 
-Assault enemy lines with long-range powerful grenades launched from Power Wheelies. 
-Destroy all enemy tanks you encounter to prevent rear attacks. 
-Bomb enemy outposts and reconnoiter enemy emplacements using the lift zones. 
-Protect yourself against enemy artillery using buildings and trees. 
-Blow up the large cannons on each level while you avoid enemy attacks. 
+		<desc>Your mission is to reclaim your homeland by destroying the enemy forces that have taken over. You have an Assault tank, the supreme mobile weapon. Your tank has artillery guns and grenades, can perform Rapid Rolls to dodge enemy shots, and uses Power Wheelies to launch grenades.
+
+Your controls are two 4-position joysticks with triggers. These controls make Assault like no other tank game. You have a quick, highly responsive vehicle with fast movement in all directions. To avoid enemy shots, Rapid Roll your tank left or right by moving both joysticks to the same side. To launch grenades, put the tank in the Power Wheelie position by moving both joysticks to the outside, then pressing either trigger. Your grenades are triple the fire power of your tank's standard shots.
+
+Your tank is always in the center of the screen no matter what direction you are going. With Assault's 360-degree scrolling playfield, the world rotates around you as you move. An arrow always points you towards the exit to the next level.
+
+The lift zone gives you an advantage over the invaders and a spectacular view of the playfield. Each lift zone is a five-sided platform on the playfield that flashes red when you can use it. When you drive onto the lift zone, your tank jets straight up to get a bird's eye view of the surrounding terrain and enemy lines. From this overhead position, you can reconnoiter enemy forces and bomb enemy outposts.
+
+Fight your way through 11 different levels to seek out and destroy the invaderâ€™s headquarters. To succeed, you must:
+Dodge enemy gunfire with the Rapid Roll maneuver.
+Assault enemy lines with long-range powerful grenades launched from Power Wheelies.
+Destroy all enemy tanks you encounter to prevent rear attacks.
+Bomb enemy outposts and reconnoiter enemy emplacements using the lift zones.
+Protect yourself against enemy artillery using buildings and trees.
+Blow up the large cannons on each level while you avoid enemy attacks.
 Follow the arrow to find the exit to the next level. Before you can exit, you must destroy the large cannons defending the enemy strongholds.</desc>
 		<image>/userdata/roms/mame/images/assaultj.png</image>
 		<rating>0.7</rating>
@@ -1633,14 +1633,14 @@ Follow the arrow to find the exit to the next level. Before you can exit, you mu
 	<game id="40200" source="ScreenScraper.fr">
 		<path>./berabohm.zip</path>
 		<name>Beraboh Man (Japan, Rev C)</name>
-		<desc>Bravoman is a sentai parody action game. 
- 
-The subtitle of this game translates from Japanese as 'Unequaled Man'. 
- 
-This game is called 'Berabow Man' by Namco though this is likely a mistranslation as the later NEC PC-Engine port is called 'Bravoman'. The name 'BERABOW' appears in the default high score list. 
- 
-In Stage 8, the main character from "Pistol-Shogun - Pistol Daimyo no Bouken" (which was released 2 years later) must be fought. 
- 
+		<desc>Bravoman is a sentai parody action game.
+
+The subtitle of this game translates from Japanese as 'Unequaled Man'.
+
+This game is called 'Berabow Man' by Namco though this is likely a mistranslation as the later NEC PC-Engine port is called 'Bravoman'. The name 'BERABOW' appears in the default high score list.
+
+In Stage 8, the main character from "Pistol-Shogun - Pistol Daimyo no Bouken" (which was released 2 years later) must be fought.
+
 Bravoman did a cameo appearance in Namco x Capcom released for the Sony PS2 in 2005.</desc>
 		<image>/userdata/roms/mame/images/berabohm.png</image>
 		<rating>0.3</rating>
@@ -1656,8 +1656,8 @@ Bravoman did a cameo appearance in Namco x Capcom released for the Sony PS2 in 2
 	<game id="40256" source="ScreenScraper.fr">
 		<path>./blastoff.zip</path>
 		<name>Blast Off (Japan)</name>
-		<desc>Blast Off is a vertically scrolling shoot'em up. Despite the drastically different gameplay, Blast Off is the sequel to Bosconian which was released eight years earlier. 
- 
+		<desc>Blast Off is a vertically scrolling shoot'em up. Despite the drastically different gameplay, Blast Off is the sequel to Bosconian which was released eight years earlier.
+
 As in many other vertical scrolling shooters (including Namco's own Xevious), the player controls a ship, facing the top of the screen, that can move freely while the background scrolls down, bringing enemies in to view; the player may destroy enemies for points. The game uses two buttons - one is used to make the ship fire circular lasers, while the other is used to cycle through its four firing patterns. The red pattern is two lasers in a spiral pattern, while the blue one is one laser straight ahead and one behind, the yellow one is one laser straight ahead, one left, and one right and the green one is two lasers diagonally forward (one to the left and one to the right), and one straight behind; by holding down the button, the ship fires more powerful, spherical lasers.</desc>
 		<image>/userdata/roms/mame/images/blastoff.png</image>
 		<rating>0.5</rating>
@@ -1735,8 +1735,8 @@ As in many other vertical scrolling shooters (including Namco's own Xevious), th
 	<game id="40409" source="ScreenScraper.fr">
 		<path>./burnforc.zip</path>
 		<name>Burning Force (Japan, new version (Rev C))</name>
-		<desc>Burning Force is a chase-view shoot'em up where you battle high-tech enemies on a futuristic motor scooter. 
- 
+		<desc>Burning Force is a chase-view shoot'em up where you battle high-tech enemies on a futuristic motor scooter.
+
 The gameplay is similar to that of Sega's Space Harrier, but the worlds are divided into four areas and there is no vertical mobility. In the first two sections the player controls Hiromi on the airbike, which can move to the left and right, as well as braking and accelerating. The airbike can also fire bullets and missiles at the enemies. The third area of every world is a boss area. The airbike will be transformed into a flying ship which can move in all directions. The fourth area of each world is a bonus stage and the player has to collect as many spheres as possible for bonus points.</desc>
 		<image>/userdata/roms/mame/images/burnforc.png</image>
 		<rating>0.5</rating>
@@ -1797,8 +1797,8 @@ The gameplay is similar to that of Sega's Space Harrier, but the worlds are divi
 	<game id="40815" source="ScreenScraper.fr">
 		<path>./dangseed.zip</path>
 		<name>Dangerous Seed (Japan)</name>
-		<desc>The player assumes control of three separate ships. Each ship has a different firing pattern. When the three ships are combined together, they form the Moon Diver. Their mission is to quell an alien invasion which is spanning all of the Milky Way and destroy the alien headquarters: the Danger-Seed. 
- 
+		<desc>The player assumes control of three separate ships. Each ship has a different firing pattern. When the three ships are combined together, they form the Moon Diver. Their mission is to quell an alien invasion which is spanning all of the Milky Way and destroy the alien headquarters: the Danger-Seed.
+
 The player starts the game with three separate fighters and has to make it through four tubes using the fighters separately. If one gets destroyed, then the next, more powerful ship makes an attempt to get through. If the player makes it to the fifth stage, the three ships combine into a singular composite ship called the "Moon Diver", which has a massive amount of firepower.</desc>
 		<image>/userdata/roms/mame/images/dangseed.png</image>
 		<rating>0.7</rating>
@@ -1829,8 +1829,8 @@ The player starts the game with three separate fighters and has to make it throu
 	<game id="40921" source="ScreenScraper.fr">
 		<path>./digdug2.zip</path>
 		<name>Dig Dug 2 (New Ver.)</name>
-		<desc>For this sequel to the 1982 classic, "Dig Dug", Namco changed the game's perspective from a cutaway side-on viewpoint to an overhead one. The action now takes place on a series of small islands, the gameplay itself retains much from its predecessor, with Dig Dug still being chased by the 'Pookas' (round, goggle-wearing red enemies) and the 'Fygers' (green, fire-breathing dragons). 
- 
+		<desc>For this sequel to the 1982 classic, "Dig Dug", Namco changed the game's perspective from a cutaway side-on viewpoint to an overhead one. The action now takes place on a series of small islands, the gameplay itself retains much from its predecessor, with Dig Dug still being chased by the 'Pookas' (round, goggle-wearing red enemies) and the 'Fygers' (green, fire-breathing dragons).
+
 As with the first game, Dig Dug is still armed with a pump that allows him to inflate and burst the enemies. For the sequel, however, he is also armed with a jackhammer. This can be used at the round ground-pegs scattered around each island to create and connect up fault lines in the ground. If both ends of a system of faults reaches the water, the ground surrounded by them will sink into the ocean killing all creatures on it, including Dig Dug himself if he is standing on the destroyed section of land.</desc>
 		<image>/userdata/roms/mame/images/digdug2.png</image>
 		<rating>0.8</rating>
@@ -1890,10 +1890,10 @@ As with the first game, Dig Dug is still armed with a pump that allows him to in
 	<game id="44109" source="ScreenScraper.fr">
 		<path>./wndrmomo.zip</path>
 		<name>Wonder Momo</name>
-		<desc>An excellent side-scrolling beat em up game. 
- 
-We play with a beautiful teen actress named Momo, through various theater levels, she must face of all enemies from the 'Warudemon' Phantom Army, with kicks and double kicks and must pick up a tornado item to get the ability to turn into 'Wonder Momo' using his super suit that lets throw his 'Wonder hoop' and the powerful 'Wonder Typhoon'. 
- 
+		<desc>An excellent side-scrolling beat em up game.
+
+We play with a beautiful teen actress named Momo, through various theater levels, she must face of all enemies from the 'Warudemon' Phantom Army, with kicks and double kicks and must pick up a tornado item to get the ability to turn into 'Wonder Momo' using his super suit that lets throw his 'Wonder hoop' and the powerful 'Wonder Typhoon'.
+
 When you reach the end of each level, a boss appears and has to be defeated to unlock the next stage.</desc>
 		<image>/userdata/roms/mame/images/wndrmomo.png</image>
 		<rating>0.5</rating>

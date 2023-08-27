@@ -11,7 +11,7 @@ config BR2_PACKAGE_LIBRETRO_BOOM3
     select BR2_PACKAGE_ZLIB
     help
       boom3 is a Doom 3 GPL source port.
-      
+
       https://github.com/libretro/boom3
 
 comment "BR2_PACKAGE_LIBRETRO_BOOM3 needs a toolchain w/ C++"

@@ -35,9 +35,9 @@ class ViceGenerator(Generator):
             with zipfile.ZipFile(rom, "r") as zip_file:
                 for zip_info in zip_file.infolist():
                     rom_extension = os.path.splitext(zip_info.filename)[1]
-        
+
         # TODO - add some logic for various extension types
-        
+
         commandArray.append(rom)
 
         return Command.Command(

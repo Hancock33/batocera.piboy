@@ -48,8 +48,8 @@
 	<game id="40532" source="ScreenScraper.fr">
 		<path>./cheyenne.zip</path>
 		<name>Cheyenne (version 1.0)</name>
-		<desc>A first-person shoot'em up game, with a western motif. The player uses a gun (mounted to the cabinet) to escort the sheriff through a variety of dangers, gathering bounty for capturing criminals. There are 7 levels or scenes plus the bonus level: 
- 
+		<desc>A first-person shoot'em up game, with a western motif. The player uses a gun (mounted to the cabinet) to escort the sheriff through a variety of dangers, gathering bounty for capturing criminals. There are 7 levels or scenes plus the bonus level:
+
 </desc>
 		<rating>0.5</rating>
 		<releasedate>19840101T000000</releasedate>
@@ -63,12 +63,12 @@
 	<game id="40535" source="ScreenScraper.fr">
 		<path>./chiller.zip</path>
 		<name>Chiller (version 3.0)</name>
-		<desc>This is a gun game, and there are four different screens (plus two different bonus screens). The object is simply to shoot everything in sight (and to try and locate any hidden targets on the screen). The game is based on time, and the timer moves faster when you are shooting poorly. 
-The first screen is a torture chamber. There are four (still living) human targets on this screen. From left to right they are; a man chained to the wall, a person in a guillotine (shoot the top of the guillotine to decapitate them), a woman strapped in a strange machine, and a man in a head vise (shoot the vise to crush his head). The rest of the room is strewn with blood and loose body parts. You don't simply shoot each target once, instead you shoot each part of the target, which reduces that part to a mess of blood and bones. This is thankfully the most disturbing level in the game. 
-The second room is another torture chamber with a river of blood flowing through the middle. This one has five human targets; a man strapped to a board, a man chained to the floor, two people on stretching racks (shoot the wheels to pull them apart), and a woman hung from rope over the river (shoot a pulley to slowly lower her into the river to be eaten by crocodiles). Body parts will flow down the river randomly, and a man will pop out of a door from time to time to toss a blade into one of the helpless victims. 
-The third level is a haunted house hallway. There is only one human victim on this level. It is a woman who runs from one doorway to another, shoot out the trapdoor to cause her to fall inside (and then shoot the beast that was chasing her). Your other targets are mostly assorted ghosts, and a few random body parts that will fall from the ceiling. 
-The final level is a graveyard. Your only human victim on this level is a woman who is half buried in the ground, shooting her torso multiple times strips off her clothing until she is topless, and the last shot kills her. You other targets are bats, hands that pop up from the ground, and a man who pulls a cart full of body parts (you can't kill him, shooting him just makes him run away, only to return later). 
- 
+		<desc>This is a gun game, and there are four different screens (plus two different bonus screens). The object is simply to shoot everything in sight (and to try and locate any hidden targets on the screen). The game is based on time, and the timer moves faster when you are shooting poorly.
+The first screen is a torture chamber. There are four (still living) human targets on this screen. From left to right they are; a man chained to the wall, a person in a guillotine (shoot the top of the guillotine to decapitate them), a woman strapped in a strange machine, and a man in a head vise (shoot the vise to crush his head). The rest of the room is strewn with blood and loose body parts. You don't simply shoot each target once, instead you shoot each part of the target, which reduces that part to a mess of blood and bones. This is thankfully the most disturbing level in the game.
+The second room is another torture chamber with a river of blood flowing through the middle. This one has five human targets; a man strapped to a board, a man chained to the floor, two people on stretching racks (shoot the wheels to pull them apart), and a woman hung from rope over the river (shoot a pulley to slowly lower her into the river to be eaten by crocodiles). Body parts will flow down the river randomly, and a man will pop out of a door from time to time to toss a blade into one of the helpless victims.
+The third level is a haunted house hallway. There is only one human victim on this level. It is a woman who runs from one doorway to another, shoot out the trapdoor to cause her to fall inside (and then shoot the beast that was chasing her). Your other targets are mostly assorted ghosts, and a few random body parts that will fall from the ceiling.
+The final level is a graveyard. Your only human victim on this level is a woman who is half buried in the ground, shooting her torso multiple times strips off her clothing until she is topless, and the last shot kills her. You other targets are bats, hands that pop up from the ground, and a man who pulls a cart full of body parts (you can't kill him, shooting him just makes him run away, only to return later).
+
 The game repeats the levels over and over again until you manage to find every secret target on each screen (it gives you hints between the levels). Finding all the targets on a single screen earns you a bonus game (a slot machine), while finding all the hidden targets in the game gives you the second bonus game (a shooting gallery), and a free game.</desc>
 		<rating>0.5</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -105,8 +105,8 @@ The game repeats the levels over and over again until you manage to find every s
 	<game id="40619" source="ScreenScraper.fr">
 		<path>./combat.zip</path>
 		<name>Combat (version 3.0)</name>
-		<desc>A shooting game with a military motif. The player uses a gun, mounted to the cabinet, to protect allies from a variety of dangers while attempting to break through and conquer enemy lines and get promoted to a higher rank (from Private to General Of The Army) and be awarded a campaign medal. 
- 
+		<desc>A shooting game with a military motif. The player uses a gun, mounted to the cabinet, to protect allies from a variety of dangers while attempting to break through and conquer enemy lines and get promoted to a higher rank (from Private to General Of The Army) and be awarded a campaign medal.
+
 This game was known under Combat or Catch-22</desc>
 		<rating>0.5</rating>
 		<releasedate>19850101T000000</releasedate>
@@ -146,12 +146,12 @@ This game was known under Combat or Catch-22</desc>
 	<game id="40723" source="ScreenScraper.fr">
 		<path>./crossbow.zip</path>
 		<name>Crossbow (Version 2.0)</name>
-		<desc>Early first-person shoot'em up game with a dungeons and dragons feel about it. Features good speech and screams. 
- 
-Gameplay requires the player to protect a band of adventurers (referred to as "friends" by the game) from afar by shooting objects that threaten them. The adventurers enter from the left-hand side of the screen and attempt to cross the screen unharmed. If the player helps them reach the opposite side of the screen safely, the adventurers survive to the next scenario, and new adventurers are occasionally granted between scenarios. In addition to the obstacles, the adventurers are vulnerable to the player's shots. The first time the player shoots an adventurer, an on-screen message is shown: "DON'T SHOOT YOUR FRIENDS!" Thereafter, shooting an adventurer will cause him/her to emit a cry of pain, and to walk at a slower pace the rest of the way. A second shot will kill the adventurer.Scenarios are chosen by shooting a destination on a map screen, which include: town, desert, volcano, cave, bridge, jungle, and castle. 
- 
-The short path to reach the castle is by using the following Color paths -&gt;  Green -&gt; Blue -&gt; Blue -&gt; Red. 
- 
+		<desc>Early first-person shoot'em up game with a dungeons and dragons feel about it. Features good speech and screams.
+
+Gameplay requires the player to protect a band of adventurers (referred to as "friends" by the game) from afar by shooting objects that threaten them. The adventurers enter from the left-hand side of the screen and attempt to cross the screen unharmed. If the player helps them reach the opposite side of the screen safely, the adventurers survive to the next scenario, and new adventurers are occasionally granted between scenarios. In addition to the obstacles, the adventurers are vulnerable to the player's shots. The first time the player shoots an adventurer, an on-screen message is shown: "DON'T SHOOT YOUR FRIENDS!" Thereafter, shooting an adventurer will cause him/her to emit a cry of pain, and to walk at a slower pace the rest of the way. A second shot will kill the adventurer.Scenarios are chosen by shooting a destination on a map screen, which include: town, desert, volcano, cave, bridge, jungle, and castle.
+
+The short path to reach the castle is by using the following Color paths -&gt;  Green -&gt; Blue -&gt; Blue -&gt; Red.
+
 The goal is to reach the final scenario, past the castle, in which the player confronts the Masterâ€”who presumably created the dangers in the game. Defeating the Master of Darkness requires shooting him in the eyes when they turn red (and deadly). The player is treated to a brief congratulation and a challenge to defeat the Master again, but if you dare. Following this screen the player starts over with however many adventurers survived the confrontation.</desc>
 		<rating>0.7</rating>
 		<releasedate>19830101T000000</releasedate>
@@ -178,10 +178,10 @@ The goal is to reach the final scenario, past the castle, in which the player co
 	<game id="41240" source="ScreenScraper.fr">
 		<path>./fireone.zip</path>
 		<name>Fire One</name>
-		<desc>Fire One! was a player-versus-player or player-versus-computer submarine showdown. 
- 
-The primary objective of the game is to find and destroy the enemy's submarine, while avoiding the enemy's torpedoes. Through your virtual periscope you are free to launch one of your 8 torpedoes to take out any of the enemy's various ships for extra points. It takes some time to reload each torpedo tube, so you must be judicious in how you plan your attacks. 
- 
+		<desc>Fire One! was a player-versus-player or player-versus-computer submarine showdown.
+
+The primary objective of the game is to find and destroy the enemy's submarine, while avoiding the enemy's torpedoes. Through your virtual periscope you are free to launch one of your 8 torpedoes to take out any of the enemy's various ships for extra points. It takes some time to reload each torpedo tube, so you must be judicious in how you plan your attacks.
+
 In addition to being able to control the left/right rotation of your periscope, the game also features a submerge button which you can use to temporarily hide from the enemy. Holding this button down keeps you hidden but also keeps you out of the action, allowing the enemy free reign over the seas.</desc>
 		<rating>0.5</rating>
 		<releasedate>19790101T000000</releasedate>
@@ -245,14 +245,14 @@ In addition to being able to control the left/right rotation of your periscope, 
 	<game id="79247" source="ScreenScraper.fr">
 		<path>./pepper2.zip</path>
 		<name>Pepper 2 (version 8)</name>
-		<desc>Despite its name, there was no predecessor named Pepper or Pepper I. The gameplay is similar to the game Amidar by Konami and Stern. 
- 
-There are four mazes per level in Pepper II. Each maze has exits leading to 3 other mazes. All four mazes must be filled to advance to the next level. To fill in a maze, the player maneuvers "Pepper" around different segments of the maze. As Pepper travels, he leaves a "zipper". Once he encloses or "zips" a segment, it fills in and points are awarded. If Pepper backtracks on an uncompleted segment, it unzips. 
- 
-The character "Pepper" is an angel. There are two types of enemies that must be avoided: "Roaming Eyes" and the " Whippersnapper" who unzips all uncompleted, zipped segments by moving over them. Pepper's one defense is to enclose an area containing a pitchfork "energizer", which turns him into a devil for approximately four seconds. At that time he can go after all Roaming Eyes for points. At the same time, the Whippersnapper freezes. There are four pitchforks in the corners of every maze. A deluxe energizer is located in the center of each maze. This energizer alternates between being a pitchfork and a halo symbol. If Pepper encloses the middle area when the energizer is a halo, the Whippersnapper will disappear from the maze. 
- 
-Points are made for enclosing a segment, consuming a pair of roaming eyes when energized by the pitchfork (similar to Pac-Man), obtaining prizes, completing a maze, and completing 4 mazes. A bonus turn is awarded at 40,000, 50,000, 70,000 or 90,000 points, depending on the dip switch settings. 
- 
+		<desc>Despite its name, there was no predecessor named Pepper or Pepper I. The gameplay is similar to the game Amidar by Konami and Stern.
+
+There are four mazes per level in Pepper II. Each maze has exits leading to 3 other mazes. All four mazes must be filled to advance to the next level. To fill in a maze, the player maneuvers "Pepper" around different segments of the maze. As Pepper travels, he leaves a "zipper". Once he encloses or "zips" a segment, it fills in and points are awarded. If Pepper backtracks on an uncompleted segment, it unzips.
+
+The character "Pepper" is an angel. There are two types of enemies that must be avoided: "Roaming Eyes" and the " Whippersnapper" who unzips all uncompleted, zipped segments by moving over them. Pepper's one defense is to enclose an area containing a pitchfork "energizer", which turns him into a devil for approximately four seconds. At that time he can go after all Roaming Eyes for points. At the same time, the Whippersnapper freezes. There are four pitchforks in the corners of every maze. A deluxe energizer is located in the center of each maze. This energizer alternates between being a pitchfork and a halo symbol. If Pepper encloses the middle area when the energizer is a halo, the Whippersnapper will disappear from the maze.
+
+Points are made for enclosing a segment, consuming a pair of roaming eyes when energized by the pitchfork (similar to Pac-Man), obtaining prizes, completing a maze, and completing 4 mazes. A bonus turn is awarded at 40,000, 50,000, 70,000 or 90,000 points, depending on the dip switch settings.
+
 Each maze also contains a prize in one of the segments. The player must enclose the area it appears in to gain the prize and points, and then the prize is shown beneath the maze.</desc>
 		<rating>0.9</rating>
 		<releasedate>19820101T000000</releasedate>
@@ -266,8 +266,8 @@ Each maze also contains a prize in one of the segments. The player must enclose 
 	<game id="42771" source="ScreenScraper.fr">
 		<path>./ripcord.zip</path>
 		<name>Rip Cord</name>
-		<desc>The goal of the game is to jump out of the plane and land safely on one of the many targets down below. The challenge is to avoid the numerous enemy helicopters that occupy the sky in between your plane and the ground. 
- 
+		<desc>The goal of the game is to jump out of the plane and land safely on one of the many targets down below. The challenge is to avoid the numerous enemy helicopters that occupy the sky in between your plane and the ground.
+
 You control the timing of your jump with the Jump button, at which point your parachutist begins hurtling toward the ground out of control. Pressing the D-Ring button shortly afterwards releases the chute and slows your descent. More importantly, it allows you at this point to control your left/right position via the paddle control to help you avoid the enemies.</desc>
 		<rating>0.1</rating>
 		<releasedate>19790101T000000</releasedate>
@@ -305,8 +305,8 @@ You control the timing of your jump with the Jump button, at which point your pa
 	<game id="149685" source="ScreenScraper.fr">
 		<path>./sidetrac.zip</path>
 		<name>Side Trak</name>
-		<desc>Side Trak is a black &amp; white man-versus-machine game where the goal is to pick up all of the waiting passengers with your train while avoiding the computer-driver 'killer engine' which aims to take you out in a head-on collision. You can control your train via the 'fast' button which allows you to temporarily increase your speed on the tracks. You can also use the joystick to switch between several tracks at various junction points. 
- 
+		<desc>Side Trak is a black &amp; white man-versus-machine game where the goal is to pick up all of the waiting passengers with your train while avoiding the computer-driver 'killer engine' which aims to take you out in a head-on collision. You can control your train via the 'fast' button which allows you to temporarily increase your speed on the tracks. You can also use the joystick to switch between several tracks at various junction points.
+
 Each time you make a complete circuit around the track and pass the start marker on the outside track, another car is added to your train.</desc>
 		<rating>0.3</rating>
 		<releasedate>19790101T000000</releasedate>
@@ -315,12 +315,12 @@ Each time you make a complete circuit around the track and pass the start marker
 	<game id="43231" source="ScreenScraper.fr">
 		<path>./spectar.zip</path>
 		<name>Spectar (revision 3)</name>
-		<desc>Spectar, released by Exidy in 1980, is the follow-up of "Targ". Gameplay is apparently unchanged, you control a vehicle called Whummel into a 9x9 grid maze, chasing down, and being chased by, the alien invaders. Targs have evolved into the more dangerous Rammers, and Spectars appears more often, shooting at player's ship. 
- 
-You use a 4-Way joystick to guide your vehicle in the maze, and a pushbutton to shoot at enemies. Up to 2 players can alternate in gameplay. 
- 
-The most noticeable difference from his predecessors is that to complete a level you can now collect all the gems in the maze, in a "Pacman"-like game or destroy all of the Rammers (like in "Targ"). Rammers and Spectars continue to appear from flashing pods, so you cannot rest and plan your course easily, or you will be overwhelmed by the alien force. 
- 
+		<desc>Spectar, released by Exidy in 1980, is the follow-up of "Targ". Gameplay is apparently unchanged, you control a vehicle called Whummel into a 9x9 grid maze, chasing down, and being chased by, the alien invaders. Targs have evolved into the more dangerous Rammers, and Spectars appears more often, shooting at player's ship.
+
+You use a 4-Way joystick to guide your vehicle in the maze, and a pushbutton to shoot at enemies. Up to 2 players can alternate in gameplay.
+
+The most noticeable difference from his predecessors is that to complete a level you can now collect all the gems in the maze, in a "Pacman"-like game or destroy all of the Rammers (like in "Targ"). Rammers and Spectars continue to appear from flashing pods, so you cannot rest and plan your course easily, or you will be overwhelmed by the alien force.
+
 Graphic is highly improved compared to his predecessor: The maze now has barricades that must be avoided or can be used as a shielding against the enemies, and has ten environment settings, changing from the 'square-block town' of Targ to a city, a forest, a lunar landscape and many more. The enemies too are smarter and faster, and the fact that they go on spawning from the pods makes the game a even more frenzy challenge.</desc>
 		<rating>0.6</rating>
 		<releasedate>19800101T000000</releasedate>
@@ -334,8 +334,8 @@ Graphic is highly improved compared to his predecessor: The maze now has barrica
 	<game id="43348" source="ScreenScraper.fr">
 		<path>./starfire.zip</path>
 		<name>Star Fire (set 1)</name>
-		<desc>Exidy STARFIRE is a single player game which simulates combat between space-going fighters. The player can control the speed and direction of his fighter and attack enemy fighters with his lasers; the enemy fighters shoot fireballs at the player. The object of play is to accumulate points by destroying enemy fighters. A player can buy extra playtime during play and continue the game he is playing, as long as he has any time left; he earns bonus playtime each time he exceeds a bonus score. The game keeps track of 20 high scores - one score for each number of coins accumulated. The initials of high scoring players are displayed during the game's attract mode. 
- 
+		<desc>Exidy STARFIRE is a single player game which simulates combat between space-going fighters. The player can control the speed and direction of his fighter and attack enemy fighters with his lasers; the enemy fighters shoot fireballs at the player. The object of play is to accumulate points by destroying enemy fighters. A player can buy extra playtime during play and continue the game he is playing, as long as he has any time left; he earns bonus playtime each time he exceeds a bonus score. The game keeps track of 20 high scores - one score for each number of coins accumulated. The initials of high scoring players are displayed during the game's attract mode.
+
 </desc>
 		<rating>0.5</rating>
 		<releasedate>19790101T000000</releasedate>
@@ -349,8 +349,8 @@ Graphic is highly improved compared to his predecessor: The maze now has barrica
 	<game id="43347" source="ScreenScraper.fr">
 		<path>./starfir2.zip</path>
 		<name>Star Fire 2</name>
-		<desc>Exidy STARFIRE is a single player game which simulates combat between space-going fighters. The player can control the speed and direction of his fighter and attack enemy fighters with his lasers; the enemy fighters shoot fireballs at the player. The object of play is to accumulate points by destroying enemy fighters. A player can buy extra playtime during play and continue the game he is playing, as long as he has any time left; he earns bonus playtime each time he exceeds a bonus score. The game keeps track of 20 high scores - one score for each number of coins accumulated. The initials of high scoring players are displayed during the game's attract mode. 
- 
+		<desc>Exidy STARFIRE is a single player game which simulates combat between space-going fighters. The player can control the speed and direction of his fighter and attack enemy fighters with his lasers; the enemy fighters shoot fireballs at the player. The object of play is to accumulate points by destroying enemy fighters. A player can buy extra playtime during play and continue the game he is playing, as long as he has any time left; he earns bonus playtime each time he exceeds a bonus score. The game keeps track of 20 high scores - one score for each number of coins accumulated. The initials of high scoring players are displayed during the game's attract mode.
+
 </desc>
 		<rating>0.5</rating>
 		<releasedate>19790101T000000</releasedate>
@@ -364,8 +364,8 @@ Graphic is highly improved compared to his predecessor: The maze now has barrica
 	<game id="43520" source="ScreenScraper.fr">
 		<path>./targ.zip</path>
 		<name>Targ</name>
-		<desc>Targ is a 1 or 2-player shooter game released by Exidy in 1980. Your town is invaded by Targ riders, you must maneuver the heroic vehicle Wummel to destroy them. From time to time, a Spectar comes into screen, and can be destroyed for extra bonus. 
- 
+		<desc>Targ is a 1 or 2-player shooter game released by Exidy in 1980. Your town is invaded by Targ riders, you must maneuver the heroic vehicle Wummel to destroy them. From time to time, a Spectar comes into screen, and can be destroyed for extra bonus.
+
 Action takes place into a 9x9 grid, 'Crystal City', where the player's vehicle must avoid and chase down 10 enemy wedge-shaped vehicles. When all enemies are destroyed, you are awarded an extra bonus and can access the following level. 2 players can alternate in the game. You use a 4-way joystick to control the Wummel, and a pushbutton to fire at enemies. Progressing in the gameplay causes the Targs to become faster and smarter, for a fast and furious gameplay.</desc>
 		<rating>0.5</rating>
 		<releasedate>19800101T000000</releasedate>
@@ -418,10 +418,10 @@ Action takes place into a 9x9 grid, 'Crystal City', where the player's vehicle m
 	<game id="43933" source="ScreenScraper.fr">
 		<path>./venture.zip</path>
 		<name>Venture (version 5 set 1)</name>
-		<desc>Venture is a 1- or 2-player "Gauntlet" style game (although Venture pre-dates the Atari legend by 4 years) set in a multi-level dungeon. The player, armed with a bow and arrow fights through enemy infested levels in the quest to collect treasure. 
- 
-Each dungeon is represented as a floor plan, populated with a number of "Space Invader" like monsters. Numerous rooms and their corresponding doors are clearly marked; these rooms are the treasure rooms and each one must be cleared. When the player enters a room, the viewpoint zooms in on the action and the room takes up the whole screen. Each room has a treasure or weapon guarded by one or more creatures. Players must try to retrieve the treasure while avoiding (or killing) creatures and obstacles. Only in the rooms themselves can players use their bow and arrow. 
- 
+		<desc>Venture is a 1- or 2-player "Gauntlet" style game (although Venture pre-dates the Atari legend by 4 years) set in a multi-level dungeon. The player, armed with a bow and arrow fights through enemy infested levels in the quest to collect treasure.
+
+Each dungeon is represented as a floor plan, populated with a number of "Space Invader" like monsters. Numerous rooms and their corresponding doors are clearly marked; these rooms are the treasure rooms and each one must be cleared. When the player enters a room, the viewpoint zooms in on the action and the room takes up the whole screen. Each room has a treasure or weapon guarded by one or more creatures. Players must try to retrieve the treasure while avoiding (or killing) creatures and obstacles. Only in the rooms themselves can players use their bow and arrow.
+
 When the treasure is successfully taken out of the chamber, bonus points are awarded. The screen image then returns to the original, zoomed-out floor plan and the player moves on to the next room of their choice. Once a room has been cleared of its item, the player no longer has access to that room. The player must collect all of the treasures on the current level before descending to another dungeon.</desc>
 		<rating>0.9</rating>
 		<releasedate>19810101T000000</releasedate>

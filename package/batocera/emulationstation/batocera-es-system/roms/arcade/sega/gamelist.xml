@@ -43,8 +43,8 @@
 	<game id="40077" source="ScreenScraper.fr">
 		<path>./astorm.zip</path>
 		<name>Alien Storm (World, 2 Players, FD1094 317-0154)</name>
-		<desc>Alien Storm is a side-scrolling beat-em-up in which up to 3 players take on the role of one of 3 futuristic warriors. The game heroes are charged with destroying the hoards of repulsive aliens who are invading the Earth. Many of the aliens are disguised as a variety of everyday street objects; such as telephone booths, oil cans, trash cans and mailboxes. The aliens reveal their true forms as the warriors approach. 
- 
+		<desc>Alien Storm is a side-scrolling beat-em-up in which up to 3 players take on the role of one of 3 futuristic warriors. The game heroes are charged with destroying the hoards of repulsive aliens who are invading the Earth. Many of the aliens are disguised as a variety of everyday street objects; such as telephone booths, oil cans, trash cans and mailboxes. The aliens reveal their true forms as the warriors approach.
+
 Each of the 3 heroes carries their own individual weapon; Gordon has his plasma gun, Karla has a flamethrower and Scooter has an electric whip. At the end of each level, the warriors will enter a building and the shoot-em-up action will switch to a first-person perspective.</desc>
 		<rating>0.4</rating>
 		<releasedate>19900101T000000</releasedate>
@@ -58,12 +58,12 @@ Each of the 3 heroes carries their own individual weapon; Gordon has his plasma 
 	<game id="39979" source="ScreenScraper.fr">
 		<path>./aliensyn2.zip</path>
 		<name>Alien Syndrome (set 2, System 16A, FD1089A 317-0033)</name>
-		<desc>Alien Syndrome is a overhead-view run and gun game for one or two players in which a number of Mankind's space ships and bases have been overrun by an alien race, who have taken the human inhabitants hostage. 
- 
-Players control two soldiers named Ricky and Mary and must fight their way through large eight-way scrolling levels to rescue their captured comrades. Once a set number of hostages have been rescued, an exit opens and players can pass through it to fight the end-of-level guardian. Once the guardian is defeated, play moves onto the next stage. 
- 
-A time-bomb is automatically set at the start of each stage, which must then be completed before the bomb's timer runs down. Failure to finish the level in time results in the death of the player characters. Weapon upgrades and maps of the current level are available at certain points and are accessed via hatchways in the wall. 
- 
+		<desc>Alien Syndrome is a overhead-view run and gun game for one or two players in which a number of Mankind's space ships and bases have been overrun by an alien race, who have taken the human inhabitants hostage.
+
+Players control two soldiers named Ricky and Mary and must fight their way through large eight-way scrolling levels to rescue their captured comrades. Once a set number of hostages have been rescued, an exit opens and players can pass through it to fight the end-of-level guardian. Once the guardian is defeated, play moves onto the next stage.
+
+A time-bomb is automatically set at the start of each stage, which must then be completed before the bomb's timer runs down. Failure to finish the level in time results in the death of the player characters. Weapon upgrades and maps of the current level are available at certain points and are accessed via hatchways in the wall.
+
 Alien Syndrome consists of 6 full stages plus a 7th final mini-stage, consisting solely of a fight to the death against the game's final, massive guardian.</desc>
 		<rating>0.5</rating>
 		<releasedate>19870101T000000</releasedate>
@@ -356,10 +356,10 @@ Alien Syndrome consists of 6 full stages plus a 7th final mini-stage, consisting
 	<game id="40525" source="ScreenScraper.fr">
 		<path>./chboxing.zip</path>
 		<name>Champion Boxing</name>
-		<desc>Champion Boxing is a simplistic boxing game built for the SG-1000. It was later re-released in arcades for SG-1000-based arcade hardware. 
- 
-There are five difficulty levels, and the aim is to knock out the opponent. 1 attacks, 2 selects an attack. Interestingly, if a player wins Pengo will make a cameo. 
- 
+		<desc>Champion Boxing is a simplistic boxing game built for the SG-1000. It was later re-released in arcades for SG-1000-based arcade hardware.
+
+There are five difficulty levels, and the aim is to knock out the opponent. 1 attacks, 2 selects an attack. Interestingly, if a player wins Pengo will make a cameo.
+
 Champion Boxing is also noteworthy for being the first game coded by Yu Suzuki in his first year at Sega.</desc>
 		<rating>0.3</rating>
 		<releasedate>19840101T000000</releasedate>
@@ -386,10 +386,10 @@ Champion Boxing is also noteworthy for being the first game coded by Yu Suzuki i
 	<game id="40521" source="ScreenScraper.fr">
 		<path>./changes.zip</path>
 		<name>Changes</name>
-		<desc>This maze game is quite similar to "Pac-Man". The player controls a caterpillar that crawls along the branches of a maze-like tree eating nuts and strawberries while avoiding deadly bugs and a hungry bird. The caterpillar changes into a butterfly after everything has been eaten. 
- 
-The caterpillar must eat all the strawberries and nuts on each level to become a butterfly. Eating a strawberry temporarily makes the caterpillar invincible allowing it to kill the deadly bugs and score 400 bonus points ber bug. If the caterpillar remains still for too long, an invincible owl (replaced by an invincible bat in later levels) will appear. If your catepillar moves, the owl or bat will disappear.  If your catepillar remains still, the invincible owl or bat will chase the caterpillar, albiet not very effrctively.   
- 
+		<desc>This maze game is quite similar to "Pac-Man". The player controls a caterpillar that crawls along the branches of a maze-like tree eating nuts and strawberries while avoiding deadly bugs and a hungry bird. The caterpillar changes into a butterfly after everything has been eaten.
+
+The caterpillar must eat all the strawberries and nuts on each level to become a butterfly. Eating a strawberry temporarily makes the caterpillar invincible allowing it to kill the deadly bugs and score 400 bonus points ber bug. If the caterpillar remains still for too long, an invincible owl (replaced by an invincible bat in later levels) will appear. If your catepillar moves, the owl or bat will disappear.  If your catepillar remains still, the invincible owl or bat will chase the caterpillar, albiet not very effrctively.
+
 When the caterpillar crosses over a pivot branch, all the branches will rotate at once, and any bugs that are on those branches will fall off and score 400, 800, 1600 and 3200 points, depending on the amount of bugs killed. Keep an eye out for the flowers that will appear below the house - they will reward you between 400 and 3200 points, depending on the level.</desc>
 		<rating>0.5</rating>
 		<releasedate>19820101T000000</releasedate>
@@ -416,10 +416,10 @@ When the caterpillar crosses over a pivot branch, all the branches will rotate a
 	<game id="40587" source="ScreenScraper.fr">
 		<path>./cltchitr.zip</path>
 		<name>Clutch Hitter (US, FD1094 317-0176)</name>
-		<desc>Clutch Hitter is a baseball game originally released for Sega System 18 hardware before being ported to the Sega Game Gear. The Game Gear version was only released in North America. 
- 
-There are noticeable differences between the Japanese and US versions of the arcade game - the US version has a MLB license and uses US teams, while the Japanese version opts for Japanese players and teams. There are also subtle changes to the presentation to reflect the two regions. A Chicken Leg, an enemy seen in Altered Beast and Golden Axe, makes a cameo appearance in the results screen. 
- 
+		<desc>Clutch Hitter is a baseball game originally released for Sega System 18 hardware before being ported to the Sega Game Gear. The Game Gear version was only released in North America.
+
+There are noticeable differences between the Japanese and US versions of the arcade game - the US version has a MLB license and uses US teams, while the Japanese version opts for Japanese players and teams. There are also subtle changes to the presentation to reflect the two regions. A Chicken Leg, an enemy seen in Altered Beast and Golden Axe, makes a cameo appearance in the results screen.
+
 Clutch Hitter is considered to be an entry in the Super League series of baseball games, directly inspiring the improvements Pro Yakyuu Super League '91 made to Super League.</desc>
 		<rating>0.7</rating>
 		<releasedate>19910101T000000</releasedate>
@@ -433,8 +433,8 @@ Clutch Hitter is considered to be an entry in the Super League series of basebal
 	<game id="40618" source="ScreenScraper.fr">
 		<path>./columns2.zip</path>
 		<name>Columns 2 - The Voyage Through Time (World)</name>
-		<desc>Align 3 or more items of the same color vertically, horizontally or diagonally. 
- 
+		<desc>Align 3 or more items of the same color vertically, horizontally or diagonally.
+
 Columns II: The Voyage Through Time was the sequel to Columns. It featured the normal puzzle game play, but was only released in Japan in the arcades. It is not clear as to why it was subtitled "The Voyage Through Time", other than the minor tile differences which seem to  attempt to indicate future and past ages: they are labeled as Machine Theme, Pale Green Theme, and Classic Theme.</desc>
 		<rating>0.5</rating>
 		<releasedate>19900101T000000</releasedate>
@@ -499,8 +499,8 @@ Columns II: The Voyage Through Time was the sequel to Columns. It featured the n
 	<game id="40721" source="ScreenScraper.fr">
 		<path>./crkdown.zip</path>
 		<name>Crack Down (World, Floppy Based, FD1094 317-0058-04c)</name>
-		<desc>A futuristic city has been over-taken by a powerful, bio-mechanical army; created by an evil scientist in a bid to take over the world. 2 elite agents must plant a series of time bombs to destroy their base and crush the rebellion. 
- 
+		<desc>A futuristic city has been over-taken by a powerful, bio-mechanical army; created by an evil scientist in a bid to take over the world. 2 elite agents must plant a series of time bombs to destroy their base and crush the rebellion.
+
 The 1- or 2-player shoot-em-up action is displayed via an innovative split screen that allows 2 players to work either individually or as a team. A timer countdown timers adds to the tension. Time bombs must be set by running over areas marked with an 'X'; while machine guns and cannons can be reloaded by finding the ammo caches that appear on each level. If ammo runs out, players must result to punching and kicking to defeat opponents.</desc>
 		<rating>0.5</rating>
 		<releasedate>19900101T000000</releasedate>
@@ -540,8 +540,8 @@ The 1- or 2-player shoot-em-up action is displayed via an innovative split scree
 	<game id="40896" source="ScreenScraper.fr">
 		<path>./depthch.zip</path>
 		<name>Depthcharge</name>
-		<desc>Depthcharge is a 2-Dimensional shooter. You control your destroyer on the surface of the water while submarines patrol underneath. Your job is to drop depth charges to eliminate these submarines. The submarines aren't defenseless as they launch mines straight up toward your ship. 
- 
+		<desc>Depthcharge is a 2-Dimensional shooter. You control your destroyer on the surface of the water while submarines patrol underneath. Your job is to drop depth charges to eliminate these submarines. The submarines aren't defenseless as they launch mines straight up toward your ship.
+
 Depthcharge was one of the early video games. Action was simple. This game also had the ability to retain the highest score (without the initials of course). Although the game is simple in concept, just trying to get enough points was enough to keep you working at it. Good luck on your submarine hunting mission.</desc>
 		<rating>0.3</rating>
 		<releasedate>19770101T000000</releasedate>
@@ -568,10 +568,10 @@ Depthcharge was one of the early video games. Action was simple. This game also 
 	<game id="40923" source="ScreenScraper.fr">
 		<path>./digger.zip</path>
 		<name>Digger</name>
-		<desc>Digger is a game that requires you to dig strategically placed holes within a maze format so you can capture and fill in over the invading creatures before they can attack and destroy your man. The maze format changes with every round played. 
- 
-The creatures are confined behind a wall. In the first of three rounds of game play, four creatures are let out of the holding area through a gate. You must conquer these four before advancing to the next round, where you face six creatures. Your third round has you battling eight creatures. This process is repeated and the point value increased with each three-round victory. Also, creatures' speed increases each round. Any contact at all with the creatures will be fatal to your man. 
- 
+		<desc>Digger is a game that requires you to dig strategically placed holes within a maze format so you can capture and fill in over the invading creatures before they can attack and destroy your man. The maze format changes with every round played.
+
+The creatures are confined behind a wall. In the first of three rounds of game play, four creatures are let out of the holding area through a gate. You must conquer these four before advancing to the next round, where you face six creatures. Your third round has you battling eight creatures. This process is repeated and the point value increased with each three-round victory. Also, creatures' speed increases each round. Any contact at all with the creatures will be fatal to your man.
+
 While you are busy digging holes and entrapping creatures, the rest are behind the retaining wall scurrying back and forth. After about three minutes, the gates at each end will open and all of the remaining creatures will stream into the play area at once. However, a skillful player will conquer all of the creatures of each round and the gate will not be a threat.</desc>
 		<rating>0.3</rating>
 		<releasedate>19800101T000000</releasedate>
@@ -585,8 +585,8 @@ While you are busy digging holes and entrapping creatures, the rest are behind t
 	<game id="40963" source="ScreenScraper.fr">
 		<path>./dokidoki.zip</path>
 		<name>Doki Doki Penguin Land</name>
-		<desc>Doki Doki Penguin Land is a platform puzzle game in which the player controls a penguin called Adelie and must safely guide an egg - by digging downwards - from the roof at the top of each stage down to the penguin's living room and waiting wife. 
- 
+		<desc>Doki Doki Penguin Land is a platform puzzle game in which the player controls a penguin called Adelie and must safely guide an egg - by digging downwards - from the roof at the top of each stage down to the penguin's living room and waiting wife.
+
 The penguin can push the egg left or right and can jump on it to make sure it doesn't get stuck against a wall. Digging affects the tile one block away from the penguin's position, making it impossible to dig directly downwards. If the egg gets into a position where it cannot be moved left or right, jumping and landing on it will cause it to smash. </desc>
 		<rating>0.5</rating>
 		<releasedate>19850101T000000</releasedate>
@@ -687,10 +687,10 @@ The penguin can push the egg left or right and can jump on it to make sure it do
 	<game id="41110" source="ScreenScraper.fr">
 		<path>./enduror.zip</path>
 		<name>Enduro Racer (YM2151, FD1089B 317-0013A)</name>
-		<desc>Enduro Racer is an off-road racing game in which players ride a dirt bike across five extremely hilly and twisting courses. Each course is littered with logs, rocks, trees and rival racers that must be either jumped over or avoided. 
- 
-Jumps can only be performed at specific locations on each track. These locations feature a dirt ramp that spreads across the width of the track. Players must have the bike in the 'wheelie' position when the ramp is struck, the bike will then be launched into the air. If the bike is not in a wheelie position when the ramps are struck, the bike will still clear the ramp, but will land front-wheel first and crash. 
- 
+		<desc>Enduro Racer is an off-road racing game in which players ride a dirt bike across five extremely hilly and twisting courses. Each course is littered with logs, rocks, trees and rival racers that must be either jumped over or avoided.
+
+Jumps can only be performed at specific locations on each track. These locations feature a dirt ramp that spreads across the width of the track. Players must have the bike in the 'wheelie' position when the ramp is struck, the bike will then be launched into the air. If the bike is not in a wheelie position when the ramps are struck, the bike will still clear the ramp, but will land front-wheel first and crash.
+
 Enduro Racer is perhaps best remembered for its 'Wheelie' feature, which required the player to physically lift the cabinet's handlebars to raise the front wheel of the game's on-screen counterpart.</desc>
 		<rating>0.7</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -704,8 +704,8 @@ Enduro Racer is perhaps best remembered for its 'Wheelie' feature, which require
 	<game id="41122" source="ScreenScraper.fr">
 		<path>./eswat.zip</path>
 		<name>E-swat - Cyber Police (set 4, World, FD1094 317-0130)</name>
-		<desc>Cyber Police ESWAT is a 1989 scrolling shooter arcade game developed and published by Sega. Players take control of Duke Oda, a member of the Liberty City Cyber Police Force tasked with finding and arresting the city's most wanted criminals, and eventually dismantling a terrorist organization planning world domination. 
- 
+		<desc>Cyber Police ESWAT is a 1989 scrolling shooter arcade game developed and published by Sega. Players take control of Duke Oda, a member of the Liberty City Cyber Police Force tasked with finding and arresting the city's most wanted criminals, and eventually dismantling a terrorist organization planning world domination.
+
 The gameplay is very similar to Sega's own Shinobi, as the player has the ability to jump up and down between planes where possible. The goal of each of the game's 15 stages is to find and arrest a specific wanted criminal, who is usually fought at the end of the stage as a boss. Duke is initially armed with only a single-shot pistol, but upon arresting the first three criminals and being promoted to ESWAT, Duke is equipped with a Power Suit with a mounted machine gun for the rest of the game. The suit also has access to limited-use special weapons which can be found within stages. However, both of Duke's standard weapons require ammunition, without which the player can only attack with a kick. Additional ammunition can be found in boxes throughout each stage.</desc>
 		<rating>0.6</rating>
 		<releasedate>19890101T000000</releasedate>
@@ -770,8 +770,8 @@ The gameplay is very similar to Sega's own Shinobi, as the player has the abilit
 	<game id="41252" source="ScreenScraper.fr">
 		<path>./flicky.zip</path>
 		<name>Flicky (128k Version, 315-5051)</name>
-		<desc>Flicky is a side-scrolling platform game in which the player controls 'Flicky', a flightless bird who must collect her lost chicks - called 'chirps' - and guide them safely to the exit, represented as a door with Flicky's name shown above it.  
- 
+		<desc>Flicky is a side-scrolling platform game in which the player controls 'Flicky', a flightless bird who must collect her lost chicks - called 'chirps' - and guide them safely to the exit, represented as a door with Flicky's name shown above it.
+
 Flicky must watch out for the house cats that emerge from cat-flaps and start roam the levels, as any contact with a cat results in the loss of a life. Any chicks that are touched by a cat will be separated from Flicky and must again be retrieved.  </desc>
 		<rating>0.7</rating>
 		<releasedate>19840101T000000</releasedate>
@@ -810,8 +810,8 @@ Flicky must watch out for the house cats that emerge from cat-flaps and start ro
 	<game id="41311" source="ScreenScraper.fr">
 		<path>./futspy.zip</path>
 		<name>Future Spy (315-5061)</name>
-		<desc>Future Spy is an arcade game released by Sega in 1984 that runs on Sega Zaxxon hardware. 
- 
+		<desc>Future Spy is an arcade game released by Sega in 1984 that runs on Sega Zaxxon hardware.
+
 Like Zaxxon it is a isometric shoot-'em-up, but unlike Zaxxon the player does not spend time adjusting the height of his ship (or plane in this circumstance). One button fires at air targets while another drops bombs on ground targets.</desc>
 		<rating>0.5</rating>
 		<releasedate>19840101T000000</releasedate>
@@ -864,8 +864,8 @@ Like Zaxxon it is a isometric shoot-'em-up, but unlike Zaxxon the player does no
 	<game id="41414" source="ScreenScraper.fr">
 		<path>./gekisou.zip</path>
 		<name>Gekisou (Japan)</name>
-		<desc>Gekisou is an excellent and exciting, high-speed scrolling racing game. 
- 
+		<desc>Gekisou is an excellent and exciting, high-speed scrolling racing game.
+
 The players control a futuristic armored car at full speed to escape of attack from a variety of enemies vehicles on the city, for this you have powerful weapons at your disposal, you must bump the enemy's car to destroy them and jump to evade obstacles in road or crush the enemies, while reaches the garage to go the next level.</desc>
 		<rating>0.7</rating>
 		<releasedate>19850101T000000</releasedate>
@@ -905,8 +905,8 @@ The players control a futuristic armored car at full speed to escape of attack f
 	<game id="41461" source="ScreenScraper.fr">
 		<path>./gloc.zip</path>
 		<name>G-loc Air Battle (World)</name>
-		<desc>G-Loc - Air Battle is a direct sequel to 1987's "After Burner", G-loc adopts its predecessor's action-packed, if somewhat limited, gameplay, although the game's pace has been noticeably reduced, making survival more a matter of skill than the shoot-and-hope gameplay of "After Burner". 
- 
+		<desc>G-Loc - Air Battle is a direct sequel to 1987's "After Burner", G-loc adopts its predecessor's action-packed, if somewhat limited, gameplay, although the game's pace has been noticeably reduced, making survival more a matter of skill than the shoot-and-hope gameplay of "After Burner".
+
 The object of the game is to shoot a set number of enemy planes as they approach from front and behind; rolling and swerving to avoid incoming enemy fire. Certain stages feature ground-based enemy installations which must also be destroyed. The player's jet fighter is armed with both a machine gun, and a limited supply of missiles which can be 'locked-on' to enemy targets. G-Loc's levels take the player through a variety of different landscapes, including wide, rolling plains and rock-strewn canyons. Later in the game, the player must attempt to land their fighter onto an aircraft carrier. Failure to do so results in the game ending.</desc>
 		<rating>0.8</rating>
 		<releasedate>19900101T000000</releasedate>
@@ -933,8 +933,8 @@ The object of the game is to shoot a set number of enemy planes as they approach
 	<game id="41484" source="ScreenScraper.fr">
 		<path>./goldnaxe.zip</path>
 		<name>Golden Axe (set 6, US, 8751 317-123A)</name>
-		<desc>Golden Axe is a sideways scrolling beat-em-up set in a traditional fantasy world, in which up to three warriors take up arms to rescue the kidnapped King and his Queen from the evil Death Adder. 
- 
+		<desc>Golden Axe is a sideways scrolling beat-em-up set in a traditional fantasy world, in which up to three warriors take up arms to rescue the kidnapped King and his Queen from the evil Death Adder.
+
 The game's three different playable characters are an Amazonian warrior named Tyris Flare, a Barbarian hero named Ax Battler, and a Viking dwarf named Gilius Thunderhead. Each character has a special attack move that is activated by pressing both JUMP and ATTACK at the same time. Also, double-tapping the joystick right or left will make the character charge and smash into opponents.</desc>
 		<rating>0.8</rating>
 		<releasedate>19890101T000000</releasedate>
@@ -1090,8 +1090,8 @@ as far as arcade games go, it's definately a fun, challenging product of Japanes
 	<game id="214725" source="ScreenScraper.fr">
 		<path>./invds.zip</path>
 		<name>Invinco / Deep Scan</name>
-		<desc>Invinco is a game inspired by "Space Invaders", with some innovation on the aliens: One row blinks in and out of view, another row's aliens roll so as to make themselves harder or easier to hit, and a 3rd row of aliens each take (at least) 3 hits to kill. A 4th row has aliens that turn into bombs, blowing up everything around them to make your job somewhat easier. 
- 
+		<desc>Invinco is a game inspired by "Space Invaders", with some innovation on the aliens: One row blinks in and out of view, another row's aliens roll so as to make themselves harder or easier to hit, and a 3rd row of aliens each take (at least) 3 hits to kill. A 4th row has aliens that turn into bombs, blowing up everything around them to make your job somewhat easier.
+
 Deep Scan is a sub hunting game.</desc>
 		<rating>0.3</rating>
 		<releasedate>19790101T000000</releasedate>
@@ -1103,8 +1103,8 @@ Deep Scan is a sub hunting game.</desc>
 	<game id="150362" source="ScreenScraper.fr">
 		<path>./invho2.zip</path>
 		<name>Invinco / Head On 2</name>
-		<desc>Head On 2 is a 2-D maze racing game. You control your car through the maze to pick up the dots while at the same time avoiding the car, or cars, that are constantly trying to ram you. Successfully get through one maze and many more await you. This is good practice for freeway driving in the big city. 
- 
+		<desc>Head On 2 is a 2-D maze racing game. You control your car through the maze to pick up the dots while at the same time avoiding the car, or cars, that are constantly trying to ram you. Successfully get through one maze and many more await you. This is good practice for freeway driving in the big city.
+
 Invinco is a game inspired by "Space Invaders" with some innovation on the aliens: One row blinks in and out of view, another row's aliens roll so as to make themselves harder or easier to hit, and a 3rd row of aliens each take (at least) 3 hits to kill. A 4th row has aliens that turn into bombs, blowing up everything around them to make your job somewhat easier.</desc>
 		<rating>0.3</rating>
 		<releasedate>19790101T000000</releasedate>
@@ -1128,8 +1128,8 @@ Invinco is a game inspired by "Space Invaders" with some innovation on the alien
 	<game id="41847" source="ScreenScraper.fr">
 		<path>./ixion.zip</path>
 		<name>Ixion (Prototype)</name>
-		<desc>Ixion is a shoot 'em up game where the player has to collect letters for points. 
- 
+		<desc>Ixion is a shoot 'em up game where the player has to collect letters for points.
+
 All the letters must be collected to reach the KAILO round. The player receives 500 to 8000 points for collecting gold letters. Enemies are worth 200 points &amp; crystals are worth 1000 points. The KAILO ball heals tiles while the OLIAK ball destroys tiles. A bonus ship is awarded every 100000 points.</desc>
 		<rating>0.7</rating>
 		<releasedate>19830101T000000</releasedate>
@@ -1143,8 +1143,8 @@ All the letters must be collected to reach the KAILO round. The player receives 
 	<game id="150352" source="ScreenScraper.fr">
 		<path>./jpark.zip</path>
 		<name>Jurassic Park (World)</name>
-		<desc>Jurassic Park is an on-the-rails lightgun game for 1 or 2 players, based on the groundbreaking Steven Spielberg movie of the same name. 
- 
+		<desc>Jurassic Park is an on-the-rails lightgun game for 1 or 2 players, based on the groundbreaking Steven Spielberg movie of the same name.
+
 Jurassic Park features Sega's often-used and highly effective sprite scaled graphics and is very similar in style to another Sega Lightgun shoot-em-up, 1991's "Rail Chase". For subsequent games in the series, graphics technology had moved on somewhat and scaled sprites were dropped in favour of far superior textured polygons.</desc>
 		<rating>0.8</rating>
 		<releasedate>19930101T000000</releasedate>
@@ -1210,15 +1210,15 @@ Jurassic Park features Sega's often-used and highly effective sprite scaled grap
 	<game id="62993" source="ScreenScraper.fr">
 		<path>./monsterb.zip</path>
 		<name>Monster Bash</name>
-		<desc>MONSTER BASH is a fascinating cartoon theme game featuring colorful graphics in three exciting scenes of hunt-and-hide adventure. Light-hearted, suspenseful music and audio sounds add to the fun, and heighten player interest and intrigue. 
- 
-DRACULA'S HOUSE 
-The player-hero of the game is LITTLE RED, a wily, red-headed boy who chases Dracula throughout his five-story haunted house. Up and down staircases and through Warp Doors leading to secret passageways, Little Red zaps defending bats while attempting to light candles in certain rooms. When a candle is lit a Magic Sword is energized with mystical powers. Little Red must touch the flashing Magic Sword to gain SuperZap power... only a SuperZap will defeat the sly Dracula. 
- 
-FRANKENSTEIN'S CASTLE 
-Little Red enters the eerie castle of the hulking Frankenstein. He pursues Frankenstein around his six-story castle while avoiding the fierce Wolfmen.  The tricky Wolfmen can be zapped, but be careful, they can duck under the zap and attack Little Red. Fewer candles are now available to be lit. Warp doors to secret passageways can be used only when they flash. Special jump-down zones allow Little Red to jump down several levels at once, eliminating any Wolfmen in the way as he descends, but Frankenstein can only be defeated with a SuperZap. 
- 
-CHAMELEON MAN'S GRAVEYARD 
+		<desc>MONSTER BASH is a fascinating cartoon theme game featuring colorful graphics in three exciting scenes of hunt-and-hide adventure. Light-hearted, suspenseful music and audio sounds add to the fun, and heighten player interest and intrigue.
+
+DRACULA'S HOUSE
+The player-hero of the game is LITTLE RED, a wily, red-headed boy who chases Dracula throughout his five-story haunted house. Up and down staircases and through Warp Doors leading to secret passageways, Little Red zaps defending bats while attempting to light candles in certain rooms. When a candle is lit a Magic Sword is energized with mystical powers. Little Red must touch the flashing Magic Sword to gain SuperZap power... only a SuperZap will defeat the sly Dracula.
+
+FRANKENSTEIN'S CASTLE
+Little Red enters the eerie castle of the hulking Frankenstein. He pursues Frankenstein around his six-story castle while avoiding the fierce Wolfmen.  The tricky Wolfmen can be zapped, but be careful, they can duck under the zap and attack Little Red. Fewer candles are now available to be lit. Warp doors to secret passageways can be used only when they flash. Special jump-down zones allow Little Red to jump down several levels at once, eliminating any Wolfmen in the way as he descends, but Frankenstein can only be defeated with a SuperZap.
+
+CHAMELEON MAN'S GRAVEYARD
 The greatest challenge yet... to dispatch the sneaky Chameleon Man and his horde of Spiders.  Entering the spooky graveyard, Little Red finds that only one candle is available for lighting which is found in a crypt guarded by giant Spiders. Chameleon Man changes his color to match that of the background and thus becomes invisible. Little Red must pass over one of the Color-Change Spots to change the background color making Chameleon Man visible again. Chameleon Man can do away with Little Red with a flick of his long tongue. Chameleon Man can only be done in with a SuperZap.</desc>
 		<rating>0.7</rating>
 		<releasedate>19820101T000000</releasedate>
@@ -1271,12 +1271,12 @@ The greatest challenge yet... to dispatch the sneaky Chameleon Man and his horde
 	<game id="63306" source="ScreenScraper.fr">
 		<path>./outrun.zip</path>
 		<name>Out Run (sitdown/upright, Rev B)</name>
-		<desc>Out Run is a ground-breaking racing game in which the player drives a red Ferrari Testarossa through a number of colourful European locations, trying to reach each end-of-level checkpoint before the tight time limit expires. 
- 
-Each of the game's stages is packed with civilian traffic that must be carefully avoided, as players try to negotiate the game's twisting, hilly roads.  
- 
-At the end of every stage players are presented with a fork in the road, allowing them to chose which route they wish to take next. This was not the first time this feature had appeared (Tatsumi's 1983 racer, TX-1, was the first to introduce forked roads). 
- 
+		<desc>Out Run is a ground-breaking racing game in which the player drives a red Ferrari Testarossa through a number of colourful European locations, trying to reach each end-of-level checkpoint before the tight time limit expires.
+
+Each of the game's stages is packed with civilian traffic that must be carefully avoided, as players try to negotiate the game's twisting, hilly roads.
+
+At the end of every stage players are presented with a fork in the road, allowing them to chose which route they wish to take next. This was not the first time this feature had appeared (Tatsumi's 1983 racer, TX-1, was the first to introduce forked roads).
+
 As well as being able to choose routes, players could also - via the game's "in-car radio" - choose one of three different catchy tunes to listen to while driving. The songs are 'Magical Sound Shower', 'Passing Breeze' and 'Splash Wave'.</desc>
 		<rating>0.9</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -1290,8 +1290,8 @@ As well as being able to choose routes, players could also - via the game's "in-
 	<game id="79195" source="ScreenScraper.fr">
 		<path>./passshtb.zip</path>
 		<name>Passing Shot (2 Players, bootleg)</name>
-		<desc>Passing Shot has 4 levels. The first level is in France, then in Australia, U.S.A. and finally the level 4 is in England. For the first 3 levels the player only plays the final. However, in England the player goes to the quarter-finals then the semi-finals before reaching the final. 
- 
+		<desc>Passing Shot has 4 levels. The first level is in France, then in Australia, U.S.A. and finally the level 4 is in England. For the first 3 levels the player only plays the final. However, in England the player goes to the quarter-finals then the semi-finals before reaching the final.
+
 This game can be played with men or women. It can also be played with 2 persons in pairs matches.</desc>
 		<rating>0.7</rating>
 		<releasedate>19880101T000000</releasedate>
@@ -1305,8 +1305,8 @@ This game can be played with men or women. It can also be played with 2 persons 
 	<game id="79195" source="ScreenScraper.fr">
 		<path>./passsht.zip</path>
 		<name>Passing Shot (World, 2 Players, FD1094 317-0080)</name>
-		<desc>Passing Shot has 4 levels. The first level is in France, then in Australia, U.S.A. and finally the level 4 is in England. For the first 3 levels the player only plays the final. However, in England the player goes to the quarter-finals then the semi-finals before reaching the final. 
- 
+		<desc>Passing Shot has 4 levels. The first level is in France, then in Australia, U.S.A. and finally the level 4 is in England. For the first 3 levels the player only plays the final. However, in England the player goes to the quarter-finals then the semi-finals before reaching the final.
+
 This game can be played with men or women. It can also be played with 2 persons in pairs matches.</desc>
 		<rating>0.7</rating>
 		<releasedate>19880101T000000</releasedate>
@@ -1320,8 +1320,8 @@ This game can be played with men or women. It can also be played with 2 persons 
 	<game id="79195" source="ScreenScraper.fr">
 		<path>./passshta.zip</path>
 		<name>Passing Shot (World, 4 Players, FD1094 317-0074)</name>
-		<desc>Passing Shot has 4 levels. The first level is in France, then in Australia, U.S.A. and finally the level 4 is in England. For the first 3 levels the player only plays the final. However, in England the player goes to the quarter-finals then the semi-finals before reaching the final. 
- 
+		<desc>Passing Shot has 4 levels. The first level is in France, then in Australia, U.S.A. and finally the level 4 is in England. For the first 3 levels the player only plays the final. However, in England the player goes to the quarter-finals then the semi-finals before reaching the final.
+
 This game can be played with men or women. It can also be played with 2 persons in pairs matches.</desc>
 		<rating>0.7</rating>
 		<releasedate>19880101T000000</releasedate>
@@ -1398,8 +1398,8 @@ This game can be played with men or women. It can also be played with 2 persons 
 	<game id="42556" source="ScreenScraper.fr">
 		<path>./puyo.zip</path>
 		<name>Puyo Puyo (World)</name>
-		<desc>Puyo Puyo is an incredibly addictive and original puzzle game in which players must form chains of four or more beans (known as 'Puyos') of the same colour to make to disappear. 
- 
+		<desc>Puyo Puyo is an incredibly addictive and original puzzle game in which players must form chains of four or more beans (known as 'Puyos') of the same colour to make to disappear.
+
 Players can hinder their opponent by forming Puyo combinations; a successfully formed chain removes some some of the player's Puyos and causes 'junk' Puyos to fall into the opponent's play area. As these Junk Puyos are transparent, they cannot be used to form a chain and can only be destroyed when a nearby chain is created.</desc>
 		<rating>0.9</rating>
 		<releasedate>19920101T000000</releasedate>
@@ -1438,8 +1438,8 @@ Players can hinder their opponent by forming Puyo combinations; a successfully f
 	<game id="42612" source="ScreenScraper.fr">
 		<path>./quartet.zip</path>
 		<name>Quartet (Rev A, 8751 315-5194)</name>
-		<desc>Quartet is a platform shoot-em-up hybrid from Sega for one to four players, selected from either Joe (yellow), Mary (red), Lee (blue) and Edgar (green). The action takes place over a number of sideways scrolling levels, the bulk of which consist of straightforward platform action. On some levels, however, there are jet packs for the players to collect, and the gameplay's emphasis switched to that of a standard, sideways scrolling shoot-em-up. 
- 
+		<desc>Quartet is a platform shoot-em-up hybrid from Sega for one to four players, selected from either Joe (yellow), Mary (red), Lee (blue) and Edgar (green). The action takes place over a number of sideways scrolling levels, the bulk of which consist of straightforward platform action. On some levels, however, there are jet packs for the players to collect, and the gameplay's emphasis switched to that of a standard, sideways scrolling shoot-em-up.
+
 The object of the game is to destroy an army of robots that have taken over an Earth colony satellite station. Each level has a boss character that must be destroyed. Upon its death it releases a door key that must be used to exit the level. Weapon and character power-ups can be collected to aid players in their task.</desc>
 		<rating>0.7</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -1453,8 +1453,8 @@ The object of the game is to destroy an army of robots that have taken over an E
 	<game id="42666" source="ScreenScraper.fr">
 		<path>./rachero.zip</path>
 		<name>Racing Hero (FD1094 317-0144)</name>
-		<desc>Race a motorcycle against other bikes, cars, trucks and the obligatory tight time limit. Racing Hero is the spiritual successor both to Sega's wonderful "Hang-On" series, and to their most famous racing game, "Out Run". 
- 
+		<desc>Race a motorcycle against other bikes, cars, trucks and the obligatory tight time limit. Racing Hero is the spiritual successor both to Sega's wonderful "Hang-On" series, and to their most famous racing game, "Out Run".
+
 Some of Racing Hero's stages mirrored the racing-through-traffic gameplay of the Ferrari-based racer, for example perhaps the biggest similarity to Out Run is that at the end of each stage, the player can choose which route he or she wishes to take next. This differs somewhat from "Out Run"'s highly impressive forked-road method. In Racing Hero, the player is presented with a seperate stage-select screen and simply highlights the flag of whichever country they wish to tackle next.</desc>
 		<rating>0.9</rating>
 		<releasedate>19890101T000000</releasedate>
@@ -1481,10 +1481,10 @@ Some of Racing Hero's stages mirrored the racing-through-traffic gameplay of the
 	<game id="42680" source="ScreenScraper.fr">
 		<path>./raflesia.zip</path>
 		<name>Rafflesia (315-5162)</name>
-		<desc>Rafflesia is a deep space shooter from Coreland - it has a similar eerie feel to it as in other space shooters such as "Brain" and "4-D Warriors". 
- 
-The game scrolls vertically as you maneuver your ship through hordes of enemies while collecting the tears of Rafflesia to power up your weapons. Each sector has a large boss enemy to defeat. 
- 
+		<desc>Rafflesia is a deep space shooter from Coreland - it has a similar eerie feel to it as in other space shooters such as "Brain" and "4-D Warriors".
+
+The game scrolls vertically as you maneuver your ship through hordes of enemies while collecting the tears of Rafflesia to power up your weapons. Each sector has a large boss enemy to defeat.
+
 Can you survive to reach the final battle against Rafflesia himself?</desc>
 		<rating>0.7</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -1523,8 +1523,8 @@ Can you survive to reach the final battle against Rafflesia himself?</desc>
 	<game id="42759" source="ScreenScraper.fr">
 		<path>./ribbit.zip</path>
 		<name>Ribbit!</name>
-		<desc>Ribbit! is a one or co-operative two-player abstract arcade game and is an unofficial sequel to Konami's seminal 1981 release, "Frogger". 
- 
+		<desc>Ribbit! is a one or co-operative two-player abstract arcade game and is an unofficial sequel to Konami's seminal 1981 release, "Frogger".
+
 Unlike its legendary prequel (in which players had to guide a frog to his home at top of each screen without being killed) the aim here is to guide a toad around a screen, eating benign insects - such as Ants and Dragon-flies - while avoiding harmful ones - such as Spiders and Rats. A level is only complete once a set amount of insects have been eaten.</desc>
 		<rating>0.7</rating>
 		<releasedate>19910101T000000</releasedate>
@@ -1550,8 +1550,8 @@ Unlike its legendary prequel (in which players had to guide a frog to his home a
 	<game id="42770" source="ScreenScraper.fr">
 		<path>./riotcity.zip</path>
 		<name>Riot City (Japan)</name>
-		<desc>Riot City is a side-scrolling beat-em-up for one or two players who take on the roles of 'Paul' or 'Bobby', two talented fighters who are given the task of breaking a drug syndicate known as "MID". It has also been discovered that Paul's girlfriend has been kidnapped by the syndicate and must be rescued. 
- 
+		<desc>Riot City is a side-scrolling beat-em-up for one or two players who take on the roles of 'Paul' or 'Bobby', two talented fighters who are given the task of breaking a drug syndicate known as "MID". It has also been discovered that Paul's girlfriend has been kidnapped by the syndicate and must be rescued.
+
 MID's hideout is located on Riot Island, an island full of abandoned, run-down buildings that has since become a slum. Locations include apartments, a hospital, a factory and a casino.</desc>
 		<rating>0.5</rating>
 		<releasedate>19910101T000000</releasedate>
@@ -1578,8 +1578,8 @@ MID's hideout is located on Riot Island, an island full of abandoned, run-down b
 	<game id="42821" source="ScreenScraper.fr">
 		<path>./roughrac.zip</path>
 		<name>Rough Racer (Japan, Floppy Based, FD1094 317-0058-06b)</name>
-		<desc>Rough Racer is a colourful top-down racing game for one to four players; Rough Racer takes most of its inspiration from Atari's "Sprint" series, and from "Championship" and "Super Sprint" in particular. 
- 
+		<desc>Rough Racer is a colourful top-down racing game for one to four players; Rough Racer takes most of its inspiration from Atari's "Sprint" series, and from "Championship" and "Super Sprint" in particular.
+
 The game features ten different tracks, each with its own graphical theme. After the first race, in addition to the four racing cars a fifth 'drone' vehicle is added, whose sole intention is to hinder the four racers. The drone is visibly different from the racers and can be anything from a steam roller to a cement mixer.</desc>
 		<rating>0.7</rating>
 		<releasedate>19900101T000000</releasedate>
@@ -1642,10 +1642,10 @@ The game features ten different tracks, each with its own graphical theme. After
 	<game id="43175" source="ScreenScraper.fr">
 		<path>./sonic.zip</path>
 		<name>Segasonic The Hedgehog (Japan, rev. C)</name>
-		<desc>Segasonic The Hedgehog is a scrolling, isometric racing game for one to three players featuring Sega's legendary mascot, 'Sonic the Hedgehog'. Sonic's nemesis, 'Dr. Robotnik', is once again intent on World domination and is preparing to launch his latest attack from his new island base, Eggman Island. 
- 
-When 'Sonic', 'Ray', and 'Mighty' drop in to thwart his plans, Robotnik catches them with one of his devious machines. After finding themselves imprisoned in a tower, the trio break free onto the island, and proceed to make their escape and try to defeat Robotnik and his evil plans. 
- 
+		<desc>Segasonic The Hedgehog is a scrolling, isometric racing game for one to three players featuring Sega's legendary mascot, 'Sonic the Hedgehog'. Sonic's nemesis, 'Dr. Robotnik', is once again intent on World domination and is preparing to launch his latest attack from his new island base, Eggman Island.
+
+When 'Sonic', 'Ray', and 'Mighty' drop in to thwart his plans, Robotnik catches them with one of his devious machines. After finding themselves imprisoned in a tower, the trio break free onto the island, and proceed to make their escape and try to defeat Robotnik and his evil plans.
+
 Sega Sonic's gameplay retains elements of the original console games, such as Sonic's ability to jump on the heads of enemies to kill them. The golden rings that Sonic collects are also included. Each level is littered with Dr Robotnik's devious traps; with lava flows, collapsible platforms, locked gates etc. all serving to hamper Sonic's progress.</desc>
 		<rating>0.9</rating>
 		<releasedate>19920101T000000</releasedate>
@@ -1672,8 +1672,8 @@ Sega Sonic's gameplay retains elements of the original console games, such as So
 	<game id="43046" source="ScreenScraper.fr">
 		<path>./shinobi.zip</path>
 		<name>Shinobi (set 6, System 16A, unprotected)</name>
-		<desc>Shinobi is a scrolling platform beat-em-up in which the player takes on the role of Joe Musashi, a Shinobi Ninja, who must fight his way through 5 tough missions - each made up of between 3 to 5 stages - in his quest to rescue the kidnapped Ninja children of the Iga clan; now hostages of an evil Ninja syndicate called "Zeed". To complete a mission, the player must rescue all of the kidnapped children on each level, with the number of hostages remaining displayed on a meter in the bottom left corner of the screen. 
- 
+		<desc>Shinobi is a scrolling platform beat-em-up in which the player takes on the role of Joe Musashi, a Shinobi Ninja, who must fight his way through 5 tough missions - each made up of between 3 to 5 stages - in his quest to rescue the kidnapped Ninja children of the Iga clan; now hostages of an evil Ninja syndicate called "Zeed". To complete a mission, the player must rescue all of the kidnapped children on each level, with the number of hostages remaining displayed on a meter in the bottom left corner of the screen.
+
 Shinobi was a huge success for Sega, and deservedly so. Its perfectly realized blend of platform and fighting action and is as fine an exponent of the 'easy to get into, difficult to master' gameplay ethic as video games have seen.</desc>
 		<rating>0.7</rating>
 		<releasedate>19870101T000000</releasedate>
@@ -1744,7 +1744,7 @@ Shinobi was a huge success for Sega, and deservedly so. Its perfectly realized b
 	<game id="46402" source="ScreenScraper.fr">
 		<path>./spacfury.zip</path>
 		<name>Space Fury (Revision C)</name>
-		<desc>Space Fury is a rather simple alien blasting shoot-em-up. It uses almost industry standard vector controls, which are four buttons, Left Rotate, Right Rotate, Thrust, and Fire. You begin the game in the center of four strange looking shapes. These shapes are both level selects and upgrades. Run into one of them and it will add itself to your ship, and then you get to do the level associated with it. Each level is different mainly because you have wildly different shot patterns on each one. But all of them are the same when it comes to your objective. What you have to do is blast all the spaceship parts before they can form into dangerous enemy spaceships. Blast them all, and you get to select a new level and watch a little interlude where the alien taunts you with his evil computer voice. 
+		<desc>Space Fury is a rather simple alien blasting shoot-em-up. It uses almost industry standard vector controls, which are four buttons, Left Rotate, Right Rotate, Thrust, and Fire. You begin the game in the center of four strange looking shapes. These shapes are both level selects and upgrades. Run into one of them and it will add itself to your ship, and then you get to do the level associated with it. Each level is different mainly because you have wildly different shot patterns on each one. But all of them are the same when it comes to your objective. What you have to do is blast all the spaceship parts before they can form into dangerous enemy spaceships. Blast them all, and you get to select a new level and watch a little interlude where the alien taunts you with his evil computer voice.
 </desc>
 		<rating>0.5</rating>
 		<releasedate>19810101T000000</releasedate>
@@ -1758,12 +1758,12 @@ Shinobi was a huge success for Sega, and deservedly so. Its perfectly realized b
 	<game id="43038" source="ScreenScraper.fr">
 		<path>./sharrier.zip</path>
 		<name>Space Harrier (Rev A, 8751 315-5163A)</name>
-		<desc>Space Harrier is a sprite-scaling 3D shoot-em-up set in the 'Fantasy Zone'; a surreal world composed of abstract structures and a checkerboard landscape. The game's enemies are as abstract as its setting; with creatures including prehistoric Mammoths, alien pods, giant mushrooms and, at the end of most stages, a huge, fireball-spitting Chinese Dragon. 
- 
-The player's on-screen counterpart carries a portable jetpack under his arm which allows him to fly. The player can also run along the ground to avoid overhead structures and enemies. 
- 
-In addition to its flight capability, the jetpack is also equipped with a laser, used to destroy both the game's many enemies as well as some (but not all) obstructions, such as the trees and floating rocks on the first stage. 
- 
+		<desc>Space Harrier is a sprite-scaling 3D shoot-em-up set in the 'Fantasy Zone'; a surreal world composed of abstract structures and a checkerboard landscape. The game's enemies are as abstract as its setting; with creatures including prehistoric Mammoths, alien pods, giant mushrooms and, at the end of most stages, a huge, fireball-spitting Chinese Dragon.
+
+The player's on-screen counterpart carries a portable jetpack under his arm which allows him to fly. The player can also run along the ground to avoid overhead structures and enemies.
+
+In addition to its flight capability, the jetpack is also equipped with a laser, used to destroy both the game's many enemies as well as some (but not all) obstructions, such as the trees and floating rocks on the first stage.
+
 Space Harrier has a total of 18 stages, each with a boss fight at the end. Three exceptions are the bonus stages (5th and 12th) and the 18th stage, which is a 'boss rush' featuring some of the bosses encountered up to that point.</desc>
 		<rating>0.8</rating>
 		<releasedate>19850101T000000</releasedate>
@@ -1777,15 +1777,15 @@ Space Harrier has a total of 18 stages, each with a boss fight at the end. Three
 	<game id="43203" source="ScreenScraper.fr">
 		<path>./spaceod.zip</path>
 		<name>Space Odyssey (version 2)</name>
-		<desc>Destroy attacking UFO-s for points. 
-Round ends after seven sectors. 
-Faster ship speed awards higher bonus at end of round. 
-Extra points awarded for passing through gaps blown in targets. 
-Passing over black hole momentarily disables ship. 
-Avoid meteors. They are indestructible 
-Bonus ship awarded for outstanding play. 
-Point values increase with each round. 
- 
+		<desc>Destroy attacking UFO-s for points.
+Round ends after seven sectors.
+Faster ship speed awards higher bonus at end of round.
+Extra points awarded for passing through gaps blown in targets.
+Passing over black hole momentarily disables ship.
+Avoid meteors. They are indestructible
+Bonus ship awarded for outstanding play.
+Point values increase with each round.
+
 Good luck.</desc>
 		<rating>0.6</rating>
 		<releasedate>19810101T000000</releasedate>
@@ -1812,8 +1812,8 @@ Good luck.</desc>
 	<game id="46409" source="ScreenScraper.fr">
 		<path>./tacscan.zip</path>
 		<name>Tac/scan</name>
-		<desc>TAC/SCAN is a one or two-player vector-based shoot-em-up in which players control a formation squadron of seven fighter ships. All seven ships fire at once when the FIRE button is pressed, producing a spectacular missile salvo. 
- 
+		<desc>TAC/SCAN is a one or two-player vector-based shoot-em-up in which players control a formation squadron of seven fighter ships. All seven ships fire at once when the FIRE button is pressed, producing a spectacular missile salvo.
+
 The player begins the game with a seven ship formation and a supply of reserve ships (shown above the player score). The object of the game is to accumulate points by destroying enemy ships while avoiding incoming fire. As well as the main squadron, there are a number of reserve ships and an ADD SHIP button. This transfers one of the reserve ships into the squadron formation. The 'add ship' position continuously cycles between the empty squadron positions, allowing players to time the ADD SHIP function to place fighters at their desired location.</desc>
 		<rating>0.9</rating>
 		<releasedate>19820101T000000</releasedate>
@@ -1827,8 +1827,8 @@ The player begins the game with a seven ship formation and a supply of reserve s
 	<game id="43544" source="ScreenScraper.fr">
 		<path>./teddybb.zip</path>
 		<name>Teddyboy Blues (315-5115, New Ver.)</name>
-		<desc>Teddy Boy Blues - Yohko Ishino is a strange and unique platform game by Sega. Guide Teddy Boy through an ever scrolling maze to defeat ninjas, snails, big mouthed hippos and other bizarre creatures. 
- 
+		<desc>Teddy Boy Blues - Yohko Ishino is a strange and unique platform game by Sega. Guide Teddy Boy through an ever scrolling maze to defeat ninjas, snails, big mouthed hippos and other bizarre creatures.
+
 You shoot your enemies with a gun that shrinks them - then you must collect your shrunken foes for bonus points. If you don't collect them quick enough, they will fly down to the bottom of the screen and eat a portion of your time meter.</desc>
 		<rating>0.7</rating>
 		<releasedate>19850101T000000</releasedate>
@@ -1842,12 +1842,12 @@ You shoot your enemies with a gun that shrinks them - then you must collect your
 	<game id="43597" source="ScreenScraper.fr">
 		<path>./thndrbld.zip</path>
 		<name>Thunder Blade (upright, FD1094 317-0056)</name>
-		<desc>Taking control of a heavily-armed battle chopper, the player must battle through a variety of both overhead and 'into-the-screen' 3-D stages. 
- 
-Thunder Blade consists of four stages, which are as follows: 
-Stage 1: The game begins in a skyscraper-packed city. Enemies consist of rival choppers, jets, and ground-based tanks and gun emplacements. The level ends over the sea, with the player facing a huge and heavily-armed battleship.  
-Stage 2: This stage begins with the player navigating a desert canyon, before switching to the into-the-screen view and taking the player through a number of stalactite-packed and densely populated caves. A huge ground-based tank awaits the player at the end of the stage. 
-Stage 3: This begins in a river canyon, before moving on to a rain-forest river network. As well the the usual line-up of enemies, heavily-armed boats are introduced. the end-of-level battle takes place in the skies as the player attempts to destroy a massive jet fighter. 
+		<desc>Taking control of a heavily-armed battle chopper, the player must battle through a variety of both overhead and 'into-the-screen' 3-D stages.
+
+Thunder Blade consists of four stages, which are as follows:
+Stage 1: The game begins in a skyscraper-packed city. Enemies consist of rival choppers, jets, and ground-based tanks and gun emplacements. The level ends over the sea, with the player facing a huge and heavily-armed battleship.
+Stage 2: This stage begins with the player navigating a desert canyon, before switching to the into-the-screen view and taking the player through a number of stalactite-packed and densely populated caves. A huge ground-based tank awaits the player at the end of the stage.
+Stage 3: This begins in a river canyon, before moving on to a rain-forest river network. As well the the usual line-up of enemies, heavily-armed boats are introduced. the end-of-level battle takes place in the skies as the player attempts to destroy a massive jet fighter.
 Stage 4: The 4th and final stage begins with a repeat of the first stage's city level, only this time the action takes place at night. The second half of this stage takes the player deep into an industrial complex, eventually leading to an end-of-game showdown with a massive and heavily-armed gun emplacement.</desc>
 		<rating>0.7</rating>
 		<releasedate>19870101T000000</releasedate>
@@ -1861,11 +1861,11 @@ Stage 4: The 4th and final stage begins with a repeat of the first stage's city 
 	<game id="149454" source="ScreenScraper.fr">
 		<path>./tfrceac.zip</path>
 		<name>Thunder Force AC</name>
-		<desc>This game is a port of the Sega Mega Drive game "Thunder Force III". The main changes from the home console version are: 
--No stage select screen 
--Stages are shorter. 
--Slightly different enemy layout. 
--Some graphics are changed, including title screen. 
+		<desc>This game is a port of the Sega Mega Drive game "Thunder Force III". The main changes from the home console version are:
+-No stage select screen
+-Stages are shorter.
+-Slightly different enemy layout.
+-Some graphics are changed, including title screen.
 -Many voice tracks added.</desc>
 		<rating>0.3</rating>
 		<releasedate>19900101T000000</releasedate>
@@ -1996,8 +1996,8 @@ Stage 4: The 4th and final stage begins with a repeat of the first stage's city 
 	<game id="43840" source="ScreenScraper.fr">
 		<path>./upndown.zip</path>
 		<name>Up'n Down (315-5030)</name>
-		<desc>Up'n Down is an abstract racing game viewed in a forced third-person perspective.  
- 
+		<desc>Up'n Down is an abstract racing game viewed in a forced third-person perspective.
+
 The goal of the game is to collect coloured flags, while avoiding the enemy vehicles and obstacles that litter each course. The flags needed are displayed at the top of the screen and are coloured as follows: Light green, blue, red, olive, dark green, magenta, yellow and black. If the flags are collected quickly enough, bonus points are awarded. Collected flags remain visible on the track but are changed to white in colour.</desc>
 		<rating>0.9</rating>
 		<releasedate>19830101T000000</releasedate>
@@ -2023,8 +2023,8 @@ The goal of the game is to collect coloured flags, while avoiding the enemy vehi
 	<game id="44029" source="ScreenScraper.fr">
 		<path>./wanted.zip</path>
 		<name>Wanted</name>
-		<desc>Wanted is a third person shooter based in the wild west. 
- 
+		<desc>Wanted is a third person shooter based in the wild west.
+
 In the old wild west, times has get tough, you play on the role of a renegade cowboy surrounded by hostiles native indians, mexican bandits and the most wanted outlaws, in the most varied and iconic west landscapes and they attacking you from all directions, must shoot them all to defend and advance to the next level.</desc>
 		<rating>0.3</rating>
 		<releasedate>19840101T000000</releasedate>
@@ -2106,8 +2106,8 @@ In the old wild west, times has get tough, you play on the role of a renegade co
 	<game id="39926" source="ScreenScraper.fr">
 		<path>./abcop.zip</path>
 		<name>A.B. Cop (World, FD1094 317-0169b)</name>
-		<desc>A.B. Cop is a futuristically-themed racing game from Sega in which the player takes on the role of a law enforcement officer - riding a heavily armoured and heavily armed hover-bike - who must chase down and destroy the perpetrators of an armed robbery before the time limit expires.  
- 
+		<desc>A.B. Cop is a futuristically-themed racing game from Sega in which the player takes on the role of a law enforcement officer - riding a heavily armoured and heavily armed hover-bike - who must chase down and destroy the perpetrators of an armed robbery before the time limit expires.
+
 A.B. Cop is hugely reminiscent of Taito's superb racing legend, "Chase HQ", released two years earlier.</desc>
 		<image>/userdata/roms/mame/images/abcop.png</image>
 		<rating>0.7</rating>
@@ -2138,10 +2138,10 @@ A.B. Cop is hugely reminiscent of Taito's superb racing legend, "Chase HQ", rele
 	<game id="39930" source="ScreenScraper.fr">
 		<path>./aburner2.zip</path>
 		<name>After Burner II</name>
-		<desc>After Burner is another Sega game rendered with their then-ubiquitous 3-D sprite-scaling technology; this time putting the player into the seat of a powerful F14 Tomcat jet fighter.  
- 
-Players must fight their way through 21 colourful, fast-moving stages, shooting down waves of enemy fighters while avoiding the enemy's incoming missiles. The F14 is equipped with a machine gun and a limited number of homing missiles. The gun has infinite ammunition and targeting is achieved by maneuvering the Tomcat so that the targeting cursor situated just in front of the jet is placed over an enemy fighter.  
- 
+		<desc>After Burner is another Sega game rendered with their then-ubiquitous 3-D sprite-scaling technology; this time putting the player into the seat of a powerful F14 Tomcat jet fighter.
+
+Players must fight their way through 21 colourful, fast-moving stages, shooting down waves of enemy fighters while avoiding the enemy's incoming missiles. The F14 is equipped with a machine gun and a limited number of homing missiles. The gun has infinite ammunition and targeting is achieved by maneuvering the Tomcat so that the targeting cursor situated just in front of the jet is placed over an enemy fighter.
+
 After Burner's straightforward shoot-em-up gameplay is simple and repetitive, but the game's incredible visuals ensured its success.</desc>
 		<image>/userdata/roms/mame/images/aburner2.png</image>
 		<rating>0.7</rating>
@@ -2157,8 +2157,8 @@ After Burner's straightforward shoot-em-up gameplay is simple and repetitive, bu
 	<game id="150935" source="ScreenScraper.fr">
 		<path>./aburner.zip</path>
 		<name>After Burner</name>
-		<desc>After Burner is another 3-D Sega game rendered with their superb sprite-scaling technology; this time putting the player into the seat of a powerful jet fighter. 
- 
+		<desc>After Burner is another 3-D Sega game rendered with their superb sprite-scaling technology; this time putting the player into the seat of a powerful jet fighter.
+
 A number of colorful, fast-moving environments await the player, as he or she takes on the hordes of enemy planes intent on the player's destruction.</desc>
 		<image>/userdata/roms/mame/images/aburner.png</image>
 		<rating>0.8</rating>
@@ -2219,8 +2219,8 @@ A number of colorful, fast-moving environments await the player, as he or she ta
 	<game id="41624" source="ScreenScraper.fr">
 		<path>./hangon.zip</path>
 		<name>Hang-on (rev A)</name>
-		<desc>Hang-On is a superb point-to-point sprite scaling racing game in which the player takes control of a superbike and must race over five twisting circuits, avoiding rival bikers and trying to reach the end of each stage before the time limit expires. 
- 
+		<desc>Hang-On is a superb point-to-point sprite scaling racing game in which the player takes control of a superbike and must race over five twisting circuits, avoiding rival bikers and trying to reach the end of each stage before the time limit expires.
+
 Hang-On's handling and superb graphics were unlike anything seen before in the arcades and, like many Yu Suzuki games that followed, revolutionised the racing genre.</desc>
 		<image>/userdata/roms/mame/images/hangon.png</image>
 		<rating>0.9</rating>
@@ -2281,26 +2281,26 @@ Hang-On's handling and superb graphics were unlike anything seen before in the a
 	<game id="79240" source="ScreenScraper.fr">
 		<path>./pdrift.zip</path>
 		<name>Power Drift (World, Rev A)</name>
-		<desc>Power Drift is a fast-moving lap-based racing game in which players choose to race on one of five different circuits, each made up of five stages. The game's tracks have a 'roller-coaster' feel to them, with steep climbs, sudden drops and tight chicanes. It's also possible to fall from many of the higher, raised sections of a track, sending the car crashing to the ground below and losing valuable seconds. Each race takes place over four laps and players must finish in 3rd place or better to progress to the next stage. Finishing lower than third place results in a 'game over' but players can insert more credits to continue from the current stage. 
- 
-In addition to its twisting, abstract courses, Power Drift also features a tilting axis; as players steer left and right, the screen display mirrors the controller's movements and tilts on its axis (in a fashion similar to another Sega game, "After Burner"). The game's difficulty level is determined by the type of car the player chooses to race with. The RED car (with bigger wheels) sets the difficulty level at 'easy', the BLUE car at 'normal', the ORANGE car at 'hard' and GREY car at 'hardest'.  
- 
-The game's five circuits are labelled from A to E, with each having its own visual theme (for example, circuit A is city-based, circuit B desert-based, circuit C beach-based etc.)  
- 
-The circuits and their corresponding stages are: 
-Course A - Springfield Ovalshape, Foofy Hilltop, Snowhill Drive, Octopus Oval, Curry De Parl 
-Course B - Swingshot City, Phantom Riverbend, Octangular Ovalshape, Charlotte Beach, Highland Spheres 
-Course C - Bum Beach, Jason Bendyline, Nighthawk City, Zanussi Island, Wasteman Freefall 
-Course D - Mexico Colours, Oxygen Desert, Jamie Road, Monaco Da Farce, Blow Hairpin 
-Course E - Aisthorpe Springrose Valley, Patterson Nightcity, Lydia Rightaway, Bungalow Ridgeway, Karen Longway 
- 
-"Power Drift" features two hidden bonus courses. Finishing in first place on all tracks of courses B and D will allow players will get to race a special track using the bike from Sega's classic 1985 racer, "Hang-On". Finish first on all five tracks of any given group (A to E) and players will get to race a special track using the jet from "After Burner".  
- 
-Each course has its own theme song, and they are as follows: 
-Course A - Side Street 
-Course B - Like the Wind 
-Course C - Silent Language 
-Course D - Adjustment Mind 
+		<desc>Power Drift is a fast-moving lap-based racing game in which players choose to race on one of five different circuits, each made up of five stages. The game's tracks have a 'roller-coaster' feel to them, with steep climbs, sudden drops and tight chicanes. It's also possible to fall from many of the higher, raised sections of a track, sending the car crashing to the ground below and losing valuable seconds. Each race takes place over four laps and players must finish in 3rd place or better to progress to the next stage. Finishing lower than third place results in a 'game over' but players can insert more credits to continue from the current stage.
+
+In addition to its twisting, abstract courses, Power Drift also features a tilting axis; as players steer left and right, the screen display mirrors the controller's movements and tilts on its axis (in a fashion similar to another Sega game, "After Burner"). The game's difficulty level is determined by the type of car the player chooses to race with. The RED car (with bigger wheels) sets the difficulty level at 'easy', the BLUE car at 'normal', the ORANGE car at 'hard' and GREY car at 'hardest'.
+
+The game's five circuits are labelled from A to E, with each having its own visual theme (for example, circuit A is city-based, circuit B desert-based, circuit C beach-based etc.)
+
+The circuits and their corresponding stages are:
+Course A - Springfield Ovalshape, Foofy Hilltop, Snowhill Drive, Octopus Oval, Curry De Parl
+Course B - Swingshot City, Phantom Riverbend, Octangular Ovalshape, Charlotte Beach, Highland Spheres
+Course C - Bum Beach, Jason Bendyline, Nighthawk City, Zanussi Island, Wasteman Freefall
+Course D - Mexico Colours, Oxygen Desert, Jamie Road, Monaco Da Farce, Blow Hairpin
+Course E - Aisthorpe Springrose Valley, Patterson Nightcity, Lydia Rightaway, Bungalow Ridgeway, Karen Longway
+
+"Power Drift" features two hidden bonus courses. Finishing in first place on all tracks of courses B and D will allow players will get to race a special track using the bike from Sega's classic 1985 racer, "Hang-On". Finish first on all five tracks of any given group (A to E) and players will get to race a special track using the jet from "After Burner".
+
+Each course has its own theme song, and they are as follows:
+Course A - Side Street
+Course B - Like the Wind
+Course C - Silent Language
+Course D - Adjustment Mind
 Course E - Artistic Traps</desc>
 		<image>/userdata/roms/mame/images/pdrift.png</image>
 		<rating>0.9</rating>
@@ -2345,8 +2345,8 @@ Course E - Artistic Traps</desc>
 	<game id="43245" source="ScreenScraper.fr">
 		<path>./spidey.zip</path>
 		<name>Spider-man - The Videogame (World)</name>
-		<desc>Spider-man - The Video Game is a sideways scrolling beat-em-up for 1 to 4 players; choosing from Spider-Man, Black-Cat, Hawkeye or Sub-Mariner. The heroes must fight their way through four levels of Dr. Doom's villains; including Venom, The Scorpion, The Lizard, The Green Goblin, The Sandman, The Kingpin, The Hobgoblin, Electro, Dr. Octopus and, of course, Dr. Doom himself. 
- 
+		<desc>Spider-man - The Video Game is a sideways scrolling beat-em-up for 1 to 4 players; choosing from Spider-Man, Black-Cat, Hawkeye or Sub-Mariner. The heroes must fight their way through four levels of Dr. Doom's villains; including Venom, The Scorpion, The Lizard, The Green Goblin, The Sandman, The Kingpin, The Hobgoblin, Electro, Dr. Octopus and, of course, Dr. Doom himself.
+
 Each player character has a different weapon or power that can be used throughout the game while fighting. Spider-Man uses his webs, The Black Cat uses her 'cat's claw' grappling hook and cable, Hawkeye uses his bow and arrows and The Sub-Mariner uses his hydro-electric charges. The game's viewpoint pans in and out between alternate large and small scale (4-way scrolling) sections. The game's 'camera' zooms out on alternate levels with the zoomed-out view introducing four-way scrolling platform sections to the gameplay. The game ends when the fourth and final chapter has been completed.</desc>
 		<image>/userdata/roms/mame/images/spidey.png</image>
 		<rating>0.7</rating>
@@ -2392,8 +2392,8 @@ Each player character has a different weapon or power that can be used throughou
 	<game id="43353" source="ScreenScraper.fr">
 		<path>./starjack.zip</path>
 		<name>Star Jacker (Sega)</name>
-		<desc>Star Jacker is an early vertical scrolling shooter with some interesting characteristics.  The player starts out with three fighters with all of the fighters moving and shooting at the same time. Two fighters trail the lead fighter. Star Jacker features a similar scheme with the Namco game Xevious in that the fighters shoot at enemy fighters in the air while dropping bombs on enemies and targets on the ground level. 
- 
+		<desc>Star Jacker is an early vertical scrolling shooter with some interesting characteristics.  The player starts out with three fighters with all of the fighters moving and shooting at the same time. Two fighters trail the lead fighter. Star Jacker features a similar scheme with the Namco game Xevious in that the fighters shoot at enemy fighters in the air while dropping bombs on enemies and targets on the ground level.
+
 When any of the fighters is killed, the game momentarily pauses and re-centers the player fighters before continuing at the same point.  The game is over when all of the player's fighters are destroyed. Star Jacker allows no continues.</desc>
 		<image>/userdata/roms/mame/images/starjack.png</image>
 		<rating>0.5</rating>
@@ -2441,10 +2441,10 @@ When any of the fighters is killed, the game momentarily pauses and re-centers t
 	<game id="150938" source="ScreenScraper.fr">
 		<path>./shangon.zip</path>
 		<name>Super Hang-on (sitdown/upright, unprotected)</name>
-		<desc>Super Hang-On is a checkpoint-based racing game and is the sequel to the acclaimed "Hang-On", released two years earlier. As with the prequel, players take control of a superbike and must race over twisting road-based circuits, avoiding rival bikers and trying to reach the end-of-stage checkpoint before the time limit expires. 
- 
-For the sequel, Sega introduced the hilly, undulating roads that had been executed so superbly in 1986's "Out Run". The gameplay was further enhanced with the introduction of the 'turbo' button. Upon reaching the bike's maximum speed of 280kph, players could press and hold the turbo and push the bike up to 324kph - something that was necessary to beat the game's extremely tight time limits. This had to be used carefully, however, as the increase in speed made the bike harder to control and accelerating at the wrong time would invariably see a head-on collision with either rival bikers or the road-side objects that litter the stages. 
- 
+		<desc>Super Hang-On is a checkpoint-based racing game and is the sequel to the acclaimed "Hang-On", released two years earlier. As with the prequel, players take control of a superbike and must race over twisting road-based circuits, avoiding rival bikers and trying to reach the end-of-stage checkpoint before the time limit expires.
+
+For the sequel, Sega introduced the hilly, undulating roads that had been executed so superbly in 1986's "Out Run". The gameplay was further enhanced with the introduction of the 'turbo' button. Upon reaching the bike's maximum speed of 280kph, players could press and hold the turbo and push the bike up to 324kph - something that was necessary to beat the game's extremely tight time limits. This had to be used carefully, however, as the increase in speed made the bike harder to control and accelerating at the wrong time would invariably see a head-on collision with either rival bikers or the road-side objects that litter the stages.
+
 Players could chose to race on any one of four courses: Africa, Asia, America and Europe. Africa is the easiest and shortest of the four, with each subsequent course becoming both more demanding - with tighter bends and more aggressive rival racers - and having a greater number of stages to have to beat. Africa, for example, is made up of only six stages, while the hardest course, Europe, has eighteen stages.</desc>
 		<image>/userdata/roms/mame/images/shangon.png</image>
 		<rating>0.9</rating>
@@ -2490,8 +2490,8 @@ Players could chose to race on any one of four courses: Africa, Asia, America an
 	<game id="43149" source="ScreenScraper.fr">
 		<path>./smgp.zip</path>
 		<name>Super Monaco Gp (World, Rev B, FD1094 317-0126a)</name>
-		<desc>Super Monaco GP is a superb Formula One racing game from Sega that took sprite-scaled graphics to a whole new level. The game's single track offered a very reasonable representation of the famous Monaco Grand Prix circuit. 
- 
+		<desc>Super Monaco GP is a superb Formula One racing game from Sega that took sprite-scaled graphics to a whole new level. The game's single track offered a very reasonable representation of the famous Monaco Grand Prix circuit.
+
 Before entering the Grand Prix, a qualification lap had to be completed. In the event of qualifying, the qualifying time determined the player's position on the starting grid. During the race itself, checkpoints had to be reached within a set time, or the race was over.</desc>
 		<image>/userdata/roms/mame/images/smgp.png</image>
 		<rating>0.8</rating>
@@ -2536,8 +2536,8 @@ Before entering the Grand Prix, a qualification lap had to be completed. In the 
 	<game id="43472" source="ScreenScraper.fr">
 		<path>./swat.zip</path>
 		<name>SWAT (315-5048)</name>
-		<desc>SWAT is an abstract one or two player shoot-em-up in which the aim is to stop swarms of aliens from building a sectional tunnel from the bottom of the screen to the top. 
- 
+		<desc>SWAT is an abstract one or two player shoot-em-up in which the aim is to stop swarms of aliens from building a sectional tunnel from the bottom of the screen to the top.
+
 At the top of each level are blue tunnel sections, while at the bottom are purple ones. Aliens start at the bottom of the screen in the purple sections. As they move through a tunnel, they can build new sections in any direction.</desc>
 		<image>/userdata/roms/mame/images/swat.png</image>
 		<rating>0.7</rating>
@@ -2606,11 +2606,11 @@ At the top of each level are blue tunnel sections, while at the bottom are purpl
 	<game id="46471" source="ScreenScraper.fr">
 		<path>./zektor.zip</path>
 		<name>Zektor (Revision B)</name>
-		<desc>Zektor is a one- or two-player game that tasks you with the liberation of eight cities that have been seized by the evil cadre of alien robots. In order to liberate a city, you must defeat three attack waves of fighters and robo-probes. Fighters and Robo-probes are often shielded (in red), and each consecutive hit reduces the enemies shield strength, until, when the shield drops, a hit will destroy it. In addition, you will encounter three types of Moboids: 
-Green Moboids spin the players ship on contact, and bounce enemy ships. 
-Blue Moboids bounce all ships. 
-Red Moboids destroy all un-shielded ships (including the players ship). 
- 
+		<desc>Zektor is a one- or two-player game that tasks you with the liberation of eight cities that have been seized by the evil cadre of alien robots. In order to liberate a city, you must defeat three attack waves of fighters and robo-probes. Fighters and Robo-probes are often shielded (in red), and each consecutive hit reduces the enemies shield strength, until, when the shield drops, a hit will destroy it. In addition, you will encounter three types of Moboids:
+Green Moboids spin the players ship on contact, and bounce enemy ships.
+Blue Moboids bounce all ships.
+Red Moboids destroy all un-shielded ships (including the players ship).
+
 After defeating three attack waves, the Alien Robot holding that city will reappear within rotating protective rings, through which a 'slot shot' neutralizes that Robot, awarding the player a bonus ship and advancement to the next round.</desc>
 		<image>/userdata/roms/mame/images/zektor.png</image>
 		<rating>0.4</rating>
