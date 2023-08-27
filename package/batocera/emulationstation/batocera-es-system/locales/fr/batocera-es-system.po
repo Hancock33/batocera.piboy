@@ -7728,19 +7728,19 @@ msgctxt "game_options"
 msgid "DISPLAY"
 msgstr "AFFICHAGE"
 
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+#. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid ""
 "Enable Gamecube BIOS access (requires IPL.bin BIOS in appropriate user "
 "directory)."
 msgstr ""
 
-#. TRANSLATION: dolphin/uzem
+#. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "ENABLE BIOS ACCESS"
 msgstr ""
 
-#. TRANSLATION: dolphin/uzem
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Map your controller to an emulated Wiimote."
 msgstr "Associer votre manette à une Wiimote émulée."
