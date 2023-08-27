@@ -242,7 +242,7 @@ class LibretroGenerator(Generator):
         elif system.name == 'vitaquake2':
             directory_path = os.path.dirname(rom)
             if "xatrix" in directory_path:
-                system.config['core'] = "vitaquake2-xatrix"            
+                system.config['core'] = "vitaquake2-xatrix"
             elif "rogue" in directory_path:
                 system.config['core'] = "vitaquake2-rogue"
             elif "zaero" in directory_path:

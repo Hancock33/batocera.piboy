@@ -9,12 +9,12 @@
 	<game id="40281" source="ScreenScraper.fr">
 		<path>./bloodstm.zip</path>
 		<name>Blood Storm (v2.22)</name>
-		<desc>Blood Storm is considered by many as a quasi-'sequel' to Time Killers. The game had a rather dark storyline as there were few ambiguously good characters as the other ranged from being sociopathically insane or deceptive folk. 
- 
-BloodStorm was dubbed as a possible MK-killer in an attempt to surpass rival Midway's success with Mortal Kombat, though it did not prevail. It was the last game Strata produced before the company went out of business. 
- 
-As with its predecessor Time Killers, BloodStorm features many of the aspects carried down from it, such as the removal of an opponent s arms and an instant kill attack, as well as a Special Death Move. The button layout is virtually the same. They are labeled as "back leg", "front leg", "back arm" and "front arm" respectively. A button in the center is used to make the character block. As one would suspect, if a particular limb is lost in combat, its corresponding button is rendered useless. 
- 
+		<desc>Blood Storm is considered by many as a quasi-'sequel' to Time Killers. The game had a rather dark storyline as there were few ambiguously good characters as the other ranged from being sociopathically insane or deceptive folk.
+
+BloodStorm was dubbed as a possible MK-killer in an attempt to surpass rival Midway's success with Mortal Kombat, though it did not prevail. It was the last game Strata produced before the company went out of business.
+
+As with its predecessor Time Killers, BloodStorm features many of the aspects carried down from it, such as the removal of an opponent s arms and an instant kill attack, as well as a Special Death Move. The button layout is virtually the same. They are labeled as "back leg", "front leg", "back arm" and "front arm" respectively. A button in the center is used to make the character block. As one would suspect, if a particular limb is lost in combat, its corresponding button is rendered useless.
+
 </desc>
 		<rating>0.7</rating>
 		<releasedate>19940101T000000</releasedate>
@@ -183,16 +183,16 @@ As with its predecessor Time Killers, BloodStorm features many of the aspects ca
 	<game id="41743" source="ScreenScraper.fr">
 		<path>./hstennis.zip</path>
 		<name>Hot Shots Tennis (v1.1)</name>
-		<desc>A tennis game from Strata. 
- 
-- One or two can play, simultaneously, and see the action from their own points of view. 
-- 32 top seeded players to choose from as opponents. 
-- Racket may be swung using a hard, soft or lob shot. 
-- Helpful blue dot turns red when player should swing. 
-- Place serve anywhere in opponent's service box by moving joystick left or right. 
-- Place ball anywhere in opponent's court by swinging either early or late. 
-- Earn bonus time by accumulating skill points. 
-- Buy additional time, when prompted, to complete a set or match. 
+		<desc>A tennis game from Strata.
+
+- One or two can play, simultaneously, and see the action from their own points of view.
+- 32 top seeded players to choose from as opponents.
+- Racket may be swung using a hard, soft or lob shot.
+- Helpful blue dot turns red when player should swing.
+- Place serve anywhere in opponent's service box by moving joystick left or right.
+- Place ball anywhere in opponent's court by swinging either early or late.
+- Earn bonus time by accumulating skill points.
+- Buy additional time, when prompted, to complete a set or match.
 - Regulation tennis rules apply.</desc>
 		<rating>0.5</rating>
 		<releasedate>19900101T000000</releasedate>
@@ -219,8 +219,8 @@ As with its predecessor Time Killers, BloodStorm features many of the aspects ca
 	<game id="79132" source="ScreenScraper.fr">
 		<path>./ninclown.zip</path>
 		<name>Ninja Clowns (27 oct 91)</name>
-		<desc>A strange and hugely abstract beat-em-up for one or two players, in which circus clowns take to the streets to beat up other circus performers; as well as lawyers, maintenance workers, and other assorted professionals. 
- 
+		<desc>A strange and hugely abstract beat-em-up for one or two players, in which circus clowns take to the streets to beat up other circus performers; as well as lawyers, maintenance workers, and other assorted professionals.
+
 In addition to the standard beat-em-up kick and punch moves, the clowns can use their 'clown equipment' against their enemies; using items such as spring-loaded boxing gloves, bottles of soda water and, of course, cream pies.</desc>
 		<rating>0.5</rating>
 		<releasedate>19910101T000000</releasedate>
@@ -234,8 +234,8 @@ In addition to the standard beat-em-up kick and punch moves, the clowns can use 
 	<game id="63309" source="ScreenScraper.fr">
 		<path>./pairs.zip</path>
 		<name>Pairs - Featuring The Giffy Girls (V1.2, 09/30/94)</name>
-		<desc>This is the classic memory game played with a deck of cards laid out in a 6x10 grid. You begin by selecting a card, it turns over, and then you try to select another card that matches. If both of your cards match, then they are both taken away (and a bit of the picture is revealed underneath them). If they don't match, then they are flipped back over and you must try again. The number of chances you have is kept track of with hearts at the top of the screen, you get an extra heart each time you guess correctly, and you lose a heart each time you guess incorrectly. Matching pairs also adds time to the timer. If you lose all of your hearts or the timer runs out then it is game over. 
- 
+		<desc>This is the classic memory game played with a deck of cards laid out in a 6x10 grid. You begin by selecting a card, it turns over, and then you try to select another card that matches. If both of your cards match, then they are both taken away (and a bit of the picture is revealed underneath them). If they don't match, then they are flipped back over and you must try again. The number of chances you have is kept track of with hearts at the top of the screen, you get an extra heart each time you guess correctly, and you lose a heart each time you guess incorrectly. Matching pairs also adds time to the timer. If you lose all of your hearts or the timer runs out then it is game over.
+
 </desc>
 		<rating>0.8</rating>
 		<releasedate>19940901T000000</releasedate>

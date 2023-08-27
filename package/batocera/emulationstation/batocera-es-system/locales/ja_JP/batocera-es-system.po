@@ -7656,6 +7656,18 @@ msgctxt "game_options"
 msgid "DISPLAY"
 msgstr "表示系設定"
 
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid ""
+"Enable Gamecube BIOS access (requires IPL.bin BIOS in appropriate user "
+"directory)."
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "ENABLE BIOS ACCESS"
+msgstr ""
+
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Map your controller to an emulated Wiimote."

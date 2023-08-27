@@ -3,8 +3,8 @@
 # es-theme-carbon
 #
 ################################################################################
-# Version: Commits on Aug 12, 2023
-ES_THEME_CARBON_VERSION = 3ab96846d4551e8b0768c9c558c98f6e68a434cf
+# Version: Commits on Aug 27, 2023
+ES_THEME_CARBON_VERSION = d9a5d1b4d5f415d0031a72f7535995a040991a1a
 ES_THEME_CARBON_SITE = $(call github,hancock33,es-theme-carbon,$(ES_THEME_CARBON_VERSION))
 
 define ES_THEME_CARBON_INSTALL_TARGET_CMDS
@@ -16,6 +16,8 @@ define ES_THEME_CARBON_DELETE_EXTRAS
 	rm -rf $(@D)/art/background/arcademachines
 	rm -rf $(@D)/art/background/category
 	rm -rf $(@D)/art/background/extras
+	rm -rf $(@D)/art/consoles/extras
+	rm -rf $(@D)/art/controllers/extras
 	rm -rf $(@D)/art/logos/extras
 endef
 

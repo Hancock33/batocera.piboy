@@ -68,11 +68,11 @@
 	<game id="41571" source="ScreenScraper.fr">
 		<path>./gulfwar2.zip</path>
 		<name>Gulf War 2 (set 1)</name>
-		<desc>A vertically scrolling shoot-em-up from Comad. 
- 
-Gulf War-II is more like a bootleg or hack than an original game; a LOT of the game code is taken directly from Taito's "Twin Cobra". The gameplay is nearly identical but the theme and all the GFX have been changed. 
- 
-Like many game from Korea, Comad used the Gulf war theme in the 90's. This was a great theme, because based on the actuality, and the game sold very well (hundred thousand of boards) 
+		<desc>A vertically scrolling shoot-em-up from Comad.
+
+Gulf War-II is more like a bootleg or hack than an original game; a LOT of the game code is taken directly from Taito's "Twin Cobra". The gameplay is nearly identical but the theme and all the GFX have been changed.
+
+Like many game from Korea, Comad used the Gulf war theme in the 90's. This was a great theme, because based on the actuality, and the game sold very well (hundred thousand of boards)
 </desc>
 		<rating>0.5</rating>
 		<releasedate>19910101T000000</releasedate>
@@ -172,8 +172,8 @@ Like many game from Korea, Comad used the Gulf war theme in the 90's. This was a
 	<game id="43441" source="ScreenScraper.fr">
 		<path>./supmodel.zip</path>
 		<name>Super Model</name>
-		<desc>Super Model is a non-nude clone of "New Fantasia" featuring photographic images of both Japanese and western models. The objective is to reveal 80% of the silhouetted girl's image within the time limit while avoiding the enemies. 
- 
+		<desc>Super Model is a non-nude clone of "New Fantasia" featuring photographic images of both Japanese and western models. The objective is to reveal 80% of the silhouetted girl's image within the time limit while avoiding the enemies.
+
 To complicate things, there is a bar with a pointer at the top of the screen. If the pointer dips below a certain level (indicated by the change in color) the image will change to that of a monster. The pointer slowly creeps towards the monster side of the bar over time and moves dramatically towards the monster side whenever the player reveals a significant piece of the silhouette. Revealing the un-silhouetted part of the image moves the pointer back towards the girl side of the bar. If a round is completed while the monster's image is shown then the round must be repeated.</desc>
 		<rating>0.5</rating>
 		<releasedate>19940101T000000</releasedate>

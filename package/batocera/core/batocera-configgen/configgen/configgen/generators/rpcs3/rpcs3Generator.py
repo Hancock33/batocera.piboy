@@ -129,7 +129,7 @@ class Rpcs3Generator(Generator):
                 rpcs3ymlconfig["Core"]["Max CPU Preempt Count"] = 50
         else:
             rpcs3ymlconfig["Core"]["Max CPU Preempt Count"] = 0
-            
+
         # -= [Video] =-
         # gfx backend - default to Vulkan
         if system.isOptSet("rpcs3_gfxbackend"):
@@ -217,7 +217,7 @@ class Rpcs3Generator(Generator):
             rpcs3ymlconfig["Video"]["Multithreaded RSX"] = system.config["rpcs3_rsx"]
         else:
             rpcs3ymlconfig["Video"]["Multithreaded RSX"] = False
-        
+
         # -= [Audio] =-
         # defaults
         rpcs3ymlconfig["Audio"]["Renderer"] = "Cubeb"

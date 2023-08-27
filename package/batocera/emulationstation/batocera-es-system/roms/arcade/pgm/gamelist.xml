@@ -22,14 +22,14 @@
   <game id="40737" source="ScreenScraper.fr">
     <path>./crysking.zip</path>
     <name>Crystal Of Kings, The</name>
-    <desc>A nice beat'em up featuring transparencies, rowscroll effects and eight levels... 
-Stage 1: The Pull Off Evil - Boss: Great Destructer 
-Stage 2: Across The Currents - Boss: Serpent 
-Stage 3: The Cave Of Darkness - Boss: Master Of Underground 
-Stage 4: The Congress Of Cystals - Boss: Harpies 
-Stage 5: Into The Darkness - Boss: 2 Minotaurs 
-Stage 6: Estorea - Boss: Sinister Dragon 
-Stage 7: Nero Filone - Boss: Black Knight 
+    <desc>A nice beat'em up featuring transparencies, rowscroll effects and eight levels...
+Stage 1: The Pull Off Evil - Boss: Great Destructer
+Stage 2: Across The Currents - Boss: Serpent
+Stage 3: The Cave Of Darkness - Boss: Master Of Underground
+Stage 4: The Congress Of Cystals - Boss: Harpies
+Stage 5: Into The Darkness - Boss: 2 Minotaurs
+Stage 6: Estorea - Boss: Sinister Dragon
+Stage 7: Nero Filone - Boss: Black Knight
 Stage 8: Crystal Of The King - Boss: Night Spirit, Dark Spirit</desc>
     <rating>0.4</rating>
     <releasedate>20010101T000000</releasedate>
@@ -43,11 +43,11 @@ Stage 8: Crystal Of The King - Boss: Night Spirit, Dark Spirit</desc>
   <game id="40946" source="ScreenScraper.fr">
     <path>./dmnfrnt.zip</path>
     <name>Demon Front (68k label V105, ROM M105XX 08/05/02, ARM label V10)</name>
-    <desc>Demon Front is a platform run 'n' Gun game for up to four players (two simultaneously) that is very reminscent of SNK's "Metal Slug" series, although there are significant additions to the gameplay.  
- 
-20 light years from Earth lies the planet of Andres, a peaceful and civilised place. In the year A.C. 2016 Andres experienced a solar eclipse that lasted for over three months. All living creatures were exposed to a strange, dark red light and many began to mutate in both appearance and character. Few inhabitants would survive the torture inflicted by these crazed mutants.  
- 
-A lucky few escaped and lived in exile. Four of the survivers decided to join forces, to fight back and overthrow the evil that dominates the planet. 
+    <desc>Demon Front is a platform run 'n' Gun game for up to four players (two simultaneously) that is very reminscent of SNK's "Metal Slug" series, although there are significant additions to the gameplay.
+
+20 light years from Earth lies the planet of Andres, a peaceful and civilised place. In the year A.C. 2016 Andres experienced a solar eclipse that lasted for over three months. All living creatures were exposed to a strange, dark red light and many began to mutate in both appearance and character. Few inhabitants would survive the torture inflicted by these crazed mutants.
+
+A lucky few escaped and lived in exile. Four of the survivers decided to join forces, to fight back and overthrow the evil that dominates the planet.
 </desc>
     <rating>0.8</rating>
     <releasedate>20020101T000000</releasedate>
@@ -100,10 +100,10 @@ A lucky few escaped and lived in exile. Four of the survivers decided to join fo
   <game id="37330" source="ScreenScraper.fr">
     <path>./espgal.zip</path>
     <name>Espgaluda (2003/10/15 Master Ver)</name>
-    <desc>A great vertically scrolling manic shooter.  
- 
-In an otherwise peaceful world, the Shinra Empire began conquering nearby nations one by one to expand their territory gradually. Meanwhile, in the Shinra weapons lab, the Espgaluda project produced two successful prototypes: Agaha and Tateha. Fearing for their future, the project's head scientist, Hiodoshi, escaped with the two prototypes to a nearby kingdom, but time after were found by Shinra's troops and Hiodoshi was killed by the attack of the imperial army, the power of the galuda has awaken.  
- 
+    <desc>A great vertically scrolling manic shooter.
+
+In an otherwise peaceful world, the Shinra Empire began conquering nearby nations one by one to expand their territory gradually. Meanwhile, in the Shinra weapons lab, the Espgaluda project produced two successful prototypes: Agaha and Tateha. Fearing for their future, the project's head scientist, Hiodoshi, escaped with the two prototypes to a nearby kingdom, but time after were found by Shinra's troops and Hiodoshi was killed by the attack of the imperial army, the power of the galuda has awaken.
+
 You have the option of controlling one of two siblings each with different skills, Ageha  faster but with narrower shooting capabilities or Tateha slower but with a wider attack. As you fly through the various stages various mechanical enemies attack with a high number of bullets, often nearly filling the screen. Aside from the regular shots, Ageha and Tateha also have additional abilities which help the player navigate through the numerous bullets. The first is a guard barrier; when activated the player is immune to collisions and as a bonus when the barrier button is released a more powerful laser shot is fired. A meter at the bottom of the screen indicates how much power is left in the barrier. The second ability is called the Kakusei mode; when this mode is activated your character gender is altered and is able to fire a more powerful shot. More importantly, when this mode is activated all of the enemies and their bullets slow down considerably while the players speed remains the same making it easier to navigate through a tricky pattern of bullets. Activating Kakusei mode will rapidly deplete the players supply of green gems; since the number of gems isn't limitless the player may not be able to remain in Kakusei mode for long. When not in Kakusei mode additional gems can be collected by destroying the various enemies. If the player completely runs out of gems, enemy bullets begin travelling faster than usual. Another bonus in the game is gold inguts which greatly increase the players score. These are found when in Kakusei mode; when an enemy is destroyed, all of its bullets will turn into ingots which can be collected by the player.</desc>
     <rating>0.85</rating>
     <releasedate>20030101T000000</releasedate>
@@ -117,7 +117,7 @@ You have the option of controlling one of two siblings each with different skill
   <game id="109000" source="ScreenScraper.fr">
     <path>./pgmfrog.zip</path>
     <name>Frog Feast</name>
-    <desc>Home Made game. Frog Feast is an adaptation of the Intellvision game "Frog Bog". 
+    <desc>Home Made game. Frog Feast is an adaptation of the Intellvision game "Frog Bog".
 The game concept is pretty simple: 2 Frogs who have to eat as much insects as possible in a limited time.</desc>
     <releasedate>20060101T000000</releasedate>
     <developer>Rastersoft (Ho</developer>
@@ -141,8 +141,8 @@ The game concept is pretty simple: 2 Frogs who have to eat as much insects as po
   <game id="37341" source="ScreenScraper.fr">
     <path>./ket.zip</path>
     <name>Ketsui: Kizuna Jigoku Tachi (2003/01/01. Master Ver.)</name>
-    <desc>2054 (western calendar) 
- 
+    <desc>2054 (western calendar)
+
 The continuous industrialization that started in 1900, finally led to unavoidable consequences in the middle of the 21st century. The waterlevel rose worldwide and threatened many coastal countries. So the shorelines had to be modified In order to save the human civilisation from drowning. It was a time of great confusion about the future, and nobody thought about war. Well, almost ... There was one company called EVAC corporation, who made a great profit from underhand productions and exports of weapon systems. When the United Nations discovered their illegal trades, they pointed EVAC to the global ban of weapon imports and exports, and asked them to stop their productions and to destroy their weapon facilities immediately. EVAC rejected all accusations and refused to take any actions. So a preventive war was started by the United Nations to stop the EVAC corporation.</desc>
     <rating>0.9</rating>
     <releasedate>20020101T000000</releasedate>
@@ -241,14 +241,14 @@ The continuous industrialization that started in 1900, finally led to unavoidabl
   <game id="78860" source="ScreenScraper.fr">
     <path>./martmast.zip</path>
     <name>Martial Masters (ver. 104, 102, 102US)</name>
-    <desc>At the end of the Qin's Dynasty, the government weakened by corruption was attacked by foreign influences. 
- 
-The people were flung into misery and became quite unsatisfied with the situation. They did not believe in the government anymore and turned their faith back to religion. 
- 
-The White Lotus sect saw this as an opportunity and took over. They claimed to help the government to defeat foreigners and bring peace to the world. Their Ideology was quickly adopted. Everything related with the Western world was killed or destroyed. Anyone against this principal was considered an enemy and accused of being bound with the devil.  
- 
-Dragon of Martial Master and Master Huang of Po Chi Lam could not accept these outrageous actions so they band together in order to prevent much bloodshed. One day the leader of White Lotus Sect sent an invitation to Dragon and Master Huang but Dragon's disciples saw this as a trap and recommended that they wait for Master Huang, who was out of town collecting medicine. 
- 
+    <desc>At the end of the Qin's Dynasty, the government weakened by corruption was attacked by foreign influences.
+
+The people were flung into misery and became quite unsatisfied with the situation. They did not believe in the government anymore and turned their faith back to religion.
+
+The White Lotus sect saw this as an opportunity and took over. They claimed to help the government to defeat foreigners and bring peace to the world. Their Ideology was quickly adopted. Everything related with the Western world was killed or destroyed. Anyone against this principal was considered an enemy and accused of being bound with the devil.
+
+Dragon of Martial Master and Master Huang of Po Chi Lam could not accept these outrageous actions so they band together in order to prevent much bloodshed. One day the leader of White Lotus Sect sent an invitation to Dragon and Master Huang but Dragon's disciples saw this as a trap and recommended that they wait for Master Huang, who was out of town collecting medicine.
+
 The Master did not want to miss this opportunity to make peace and went alone. Unfortunately, he was captured and put in prison. Both parties started confrontations and have struggled since then. Now dangers are hidden all over the place. Who is capable of resolving the situation? Let's find out!</desc>
     <rating>0.9</rating>
     <releasedate>20010101T000000</releasedate>
@@ -352,8 +352,8 @@ The Master did not want to miss this opportunity to make peace and went alone. U
   <game id="149843" source="ScreenScraper.fr">
     <path>./theglad.zip</path>
     <name>The Gladiator / Road Of The Sword / Shen Jian (M68k label V101, ARM label V107, ROM 06/06/03 SHEN)</name>
-    <desc>The cursed Sacred Sword appeared once again, took lives of hundreds people. Two prominent families were killed, just because they possessed it. Behind these entire massacres more mysteries were secretly hidden, the rumors said perhaps even the government seemed to take part of it. Chu Xing Han, San Kuan Ging and Wu Ping decided to revenge. Chu is good friend and partner Greg Tien Ray also wanted to help them. Mysterious woman Huang Her decided to kill her own father for committing all these crimes. Wu-Lin Sword master's disciple Siong Chien Chien had an eye on the power of the sword and determined to seize the object. 
- 
+    <desc>The cursed Sacred Sword appeared once again, took lives of hundreds people. Two prominent families were killed, just because they possessed it. Behind these entire massacres more mysteries were secretly hidden, the rumors said perhaps even the government seemed to take part of it. Chu Xing Han, San Kuan Ging and Wu Ping decided to revenge. Chu is good friend and partner Greg Tien Ray also wanted to help them. Mysterious woman Huang Her decided to kill her own father for committing all these crimes. Wu-Lin Sword master's disciple Siong Chien Chien had an eye on the power of the sword and determined to seize the object.
+
 The conflict in Wu-Lin seemed to trigger at any moment, unconsciously all sword masters were falling into a sophisticated conspiracy designed by Yuen Dynasty Government and...</desc>
     <releasedate>20030101T000000</releasedate>
     <developer>IGS</developer>

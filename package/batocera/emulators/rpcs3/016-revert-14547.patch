@@ -1,21 +1,8 @@
-diff --git a/rpcs3/Emu/Cell/Modules/cellPad.cpp b/rpcs3/Emu/Cell/Modules/cellPad.cpp
-index 107be92a9..2c3f0f695 100644
---- a/rpcs3/Emu/Cell/Modules/cellPad.cpp
-+++ b/rpcs3/Emu/Cell/Modules/cellPad.cpp
-@@ -67,8 +67,6 @@ void pad_info::save(utils::serial& ar)
- 	USING_SERIALIZATION_VERSION(sys_io);
- 
- 	ar(max_connect, port_setting);
--
--	sys_io_serialize(ar);
- }
- 
- extern void send_sys_io_connect_event(u32 index, u32 state);
 diff --git a/rpcs3/Emu/Cell/PPUAnalyser.cpp b/rpcs3/Emu/Cell/PPUAnalyser.cpp
-index 844cd18fb..79ff56fb6 100644
+index 2968190f4..f402ddf43 100644
 --- a/rpcs3/Emu/Cell/PPUAnalyser.cpp
 +++ b/rpcs3/Emu/Cell/PPUAnalyser.cpp
-@@ -1390,9 +1390,9 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
+@@ -1395,9 +1395,9 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
  					block.second = _ptr.addr() - block.first;
  					break;
  				}
@@ -27,7 +14,7 @@ index 844cd18fb..79ff56fb6 100644
  					{
  						add_block(_ptr.addr());
  					}
-@@ -1618,8 +1618,6 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
+@@ -1623,8 +1623,6 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
  		end = 0;
  	}
  
@@ -36,7 +23,7 @@ index 844cd18fb..79ff56fb6 100644
  	for (auto&& [_, func] : as_rvalue(fmap))
  	{
  		if (func.attr & ppu_attr::no_size && entry)
-@@ -1638,7 +1636,6 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
+@@ -1643,7 +1641,6 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
  				block.attr = ppu_attr::no_size;
  			}
  
@@ -44,7 +31,7 @@ index 844cd18fb..79ff56fb6 100644
  			continue;
  		}
  
-@@ -1719,8 +1716,11 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
+@@ -1724,8 +1721,11 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
  	u32 exp = start;
  	u32 lim = end;
  
@@ -58,7 +45,7 @@ index 844cd18fb..79ff56fb6 100644
  
  	// Add entries from patches (on per-instruction basis)
  	for (u32 addr : applied)
-@@ -1754,17 +1754,14 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
+@@ -1759,17 +1759,14 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
  		{
  			u32 i_pos = exp;
  
@@ -78,7 +65,7 @@ index 844cd18fb..79ff56fb6 100644
  				{
  				case ppu_itype::UNK:
  				case ppu_itype::ECIWX:
-@@ -1774,20 +1771,10 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
+@@ -1779,20 +1776,10 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
  					is_good = false;
  					break;
  				}
@@ -101,7 +88,7 @@ index 844cd18fb..79ff56fb6 100644
  				case ppu_itype::B:
  				case ppu_itype::BC:
  				{
-@@ -1798,14 +1785,14 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
+@@ -1803,14 +1790,14 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
  
  					if (type == ppu_itype::B || type == ppu_itype::BC)
  					{
@@ -118,7 +105,7 @@ index 844cd18fb..79ff56fb6 100644
  
  						if (target < segs[0].addr || target >= segs[0].addr + segs[0].size)
  						{
-@@ -1814,43 +1801,9 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
+@@ -1819,43 +1806,9 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
  							break;
  						}
  
@@ -163,7 +150,7 @@ index 844cd18fb..79ff56fb6 100644
  							{
  								ppu_log.trace("Block target found: 0x%x (i_pos=0x%x)", target, i_pos);
  								block_queue.emplace_back(target, 0);
-@@ -1865,38 +1818,27 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
+@@ -1870,38 +1823,27 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
  				case ppu_itype::BCLR:
  				case ppu_itype::SC:
  				{
@@ -205,7 +192,7 @@ index 844cd18fb..79ff56fb6 100644
  					// Good block terminator found, add single block
  					break;
  				}
-@@ -1927,23 +1869,17 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
+@@ -1932,23 +1874,17 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
  
  			if (is_good)
  			{
@@ -237,7 +224,7 @@ index 844cd18fb..79ff56fb6 100644
  					}
  				}
  			}
-@@ -1966,8 +1902,9 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
+@@ -1971,8 +1907,9 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
  	// Convert map to vector (destructive)
  	for (auto&& [_, block] : as_rvalue(std::move(fmap)))
  	{
@@ -248,7 +235,7 @@ index 844cd18fb..79ff56fb6 100644
  			ppu_log.warning("Block 0x%x will be compiled on per-instruction basis (size=0x%x)", block.addr, block.size);
  
  			for (u32 addr = block.addr; addr < block.addr + block.size; addr += 4)
-@@ -1979,19 +1916,12 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
+@@ -1984,19 +1921,12 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
  				i.attr = ppu_attr::no_size;
  			}
  
@@ -329,151 +316,3 @@ index ccbd743f9..ef02faa53 100644
  };
  
  struct ppu_iname
-diff --git a/rpcs3/Emu/Cell/PPUModule.cpp b/rpcs3/Emu/Cell/PPUModule.cpp
-index ff8f3c1c8..4df1749bc 100644
---- a/rpcs3/Emu/Cell/PPUModule.cpp
-+++ b/rpcs3/Emu/Cell/PPUModule.cpp
-@@ -1356,6 +1356,12 @@ std::shared_ptr<lv2_prx> ppu_load_prx(const ppu_prx_object& elf, bool virtual_lo
- 				// Initialize executable code if necessary
- 				if (prog.p_flags & 0x1 && !virtual_load)
- 				{
-+					if (ar)
-+					{
-+						// Disable analysis optimization for savestates (it's not compatible with savestate with patches applied)
-+						end = std::max(end, utils::align<u32>(addr + mem_size, 0x10000));
-+					}
-+
- 					ppu_register_range(addr, mem_size);
- 				}
- 			}
-@@ -1645,36 +1651,6 @@ std::shared_ptr<lv2_prx> ppu_load_prx(const ppu_prx_object& elf, bool virtual_lo
- 		}
- 	}
- 
--	// Disabled for PRX for now (problematic and does not seem to have any benefit)
--	end = 0;
--
--	if (!applied.empty() || ar)
--	{
--		// Compare memory changes in memory after executable code sections end
--		if (end >= prx->segs[0].addr && end < prx->segs[0].addr + prx->segs[0].size)
--		{
--			for (const auto& prog : elf.progs)
--			{
--				// Find the first segment
--				if (prog.p_type == 0x1u /* LOAD */ && prog.p_memsz)
--				{
--					std::basic_string_view<uchar> elf_memory{prog.bin.data(), prog.bin.size()};
--					elf_memory.remove_prefix(end - prx->segs[0].addr);
--
--					if (elf_memory != std::basic_string_view<uchar>{&prx->get_ref<uchar>(end), elf_memory.size()})
--					{
--						// There are changes, disable analysis optimization
--						ppu_loader.notice("Disabling analysis optimization due to memory changes from original file");
--
--						end = 0;
--					}
--
--					break;
--				}
--			}
--		}
--	}
--
- 	// Embedded SPU elf patching
- 	for (const auto& seg : prx->segs)
- 	{
-@@ -1934,6 +1910,12 @@ bool ppu_load_exec(const ppu_exec_object& elf, bool virtual_load, const std::str
- 			// Initialize executable code if necessary
- 			if (prog.p_flags & 0x1 && !virtual_load)
- 			{
-+				if (already_loaded && ar)
-+				{
-+					// Disable analysis optimization for savestates (it's not compatible with savestate with patches applied)
-+					end = std::max(end, utils::align<u32>(addr + size, 0x10000));
-+				}
-+
- 				ppu_register_range(addr, size);
- 			}
- 		}
-@@ -1987,33 +1969,6 @@ bool ppu_load_exec(const ppu_exec_object& elf, bool virtual_load, const std::str
- 		applied += g_fxo->get<patch_engine>().apply(Emu.GetTitleID() + '-' + hash, [&](u32 addr, u32 size) { return _main.get_ptr<u8>(addr, size); });
- 	}
- 
--	if (!applied.empty() || ar)
--	{
--		// Compare memory changes in memory after executable code sections end
--		if (end >= _main.segs[0].addr && end < _main.segs[0].addr + _main.segs[0].size)
--		{
--			for (const auto& prog : elf.progs)
--			{
--				// Find the first segment
--				if (prog.p_type == 0x1u /* LOAD */ && prog.p_memsz)
--				{
--					std::basic_string_view<uchar> elf_memory{prog.bin.data(), prog.bin.size()};
--					elf_memory.remove_prefix(end - _main.segs[0].addr);
--
--					if (elf_memory != std::basic_string_view<uchar>{&_main.get_ref<u8>(end), elf_memory.size()})
--					{
--						// There are changes, disable analysis optimization
--						ppu_loader.notice("Disabling analysis optimization due to memory changes from original file");
--
--						end = 0;
--					}
--
--					break;
--				}
--			}
--		}
--	}
--
- 	if (applied.empty())
- 	{
- 		ppu_loader.warning("PPU executable hash: %s", hash);
-@@ -2619,6 +2574,12 @@ std::pair<std::shared_ptr<lv2_overlay>, CellError> ppu_load_overlay(const ppu_ex
- 			// Initialize executable code if necessary
- 			if (prog.p_flags & 0x1 && !virtual_load)
- 			{
-+				if (ar)
-+				{
-+					// Disable analysis optimization for savestates (it's not compatible with savestate with patches applied)
-+					end = std::max(end, utils::align<u32>(addr + size, 0x10000));
-+				}
-+
- 				ppu_register_range(addr, size);
- 			}
- 		}
-@@ -2670,33 +2631,6 @@ std::pair<std::shared_ptr<lv2_overlay>, CellError> ppu_load_overlay(const ppu_ex
- 		applied += g_fxo->get<patch_engine>().apply(Emu.GetTitleID() + '-' + hash, [ovlm](u32 addr, u32 size) { return ovlm->get_ptr<u8>(addr, size); });
- 	}
- 
--	if (!applied.empty() || ar)
--	{
--		// Compare memory changes in memory after executable code sections end
--		if (end >= ovlm->segs[0].addr && end < ovlm->segs[0].addr + ovlm->segs[0].size)
--		{
--			for (const auto& prog : elf.progs)
--			{
--				// Find the first segment
--				if (prog.p_type == 0x1u /* LOAD */ && prog.p_memsz)
--				{
--					std::basic_string_view<uchar> elf_memory{prog.bin.data(), prog.bin.size()};
--					elf_memory.remove_prefix(end - ovlm->segs[0].addr);
--
--					if (elf_memory != std::basic_string_view<uchar>{&ovlm->get_ref<u8>(end), elf_memory.size()})
--					{
--						// There are changes, disable analysis optimization
--						ppu_loader.notice("Disabling analysis optimization due to memory changes from original file");
--
--						end = 0;
--					}
--
--					break;
--				}
--			}
--		}
--	}
--
- 	// Embedded SPU elf patching
- 	for (const auto& seg : ovlm->segs)
- 	{
