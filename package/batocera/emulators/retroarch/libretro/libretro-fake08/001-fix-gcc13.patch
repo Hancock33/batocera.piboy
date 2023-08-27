@@ -1,12 +1,13 @@
-diff --git a/platform/libretro/libretrohosthelpers.h b/platform/libretro/libretrohosthelpers.h.new
-index e898bf37d9..4fa7a161b6 100644
+diff --git a/platform/libretro/libretrohosthelpers.h b/platform/libretro/libretrohosthelpers.h
+index e898bf3..222b625 100644
 --- a/platform/libretro/libretrohosthelpers.h
-+++ b/platform/libretro/libretrohosthelpers.h.new
-@@ -1,3 +1,4 @@
-+#include <cstdint>
++++ b/platform/libretro/libretrohosthelpers.h
+@@ -1,4 +1,5 @@
  #include <string.h>
++#include <cstdint>
  
  void setInputState(
+     uint8_t kDown,
 @@ -7,4 +8,4 @@ void setInputState(
      int16_t mouseY,
      uint8_t mouseBtnState);
