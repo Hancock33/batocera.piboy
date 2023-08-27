@@ -34,12 +34,12 @@
 	<game id="41887" source="ScreenScraper.fr">
 		<path>./jjsquawk.zip</path>
 		<name>J. J. Squawkers</name>
-		<desc>J.J. Squarkers is a scrolling run 'n' gun platform shoot-em-up for one or two players in which several residents from the peaceful village if Pistachio have been kidnapped. Most of the remaining villagers have fallen under a mysterious spell, making them violent. Players take on the roles of two ducks called 'Ani Karasukun' and 'Ototo Karasukun' who set out to defeat the enemy minions and restore peace to their village.  
- 
-The ducks can fire projectiles to defeat the abstract enemies they face, with their default weapon being tomatoes. Other weapons - as well as bonus and health power-ups - become available when certain enemies are killed. Available weapons include pumpkins, watermelon seeds, screws and slinkys wearing red sneakers.  
- 
-Each weapon has different strengths and weaknesses; for example the slinkys simply walk in a straight line until they either meet obstacles or the edge of screen, making it easy to deal with enemies from a distance. On the other hand, watermelon seeds can only be thrown a short distance but several are thrown at once. This effectively gives players a 'spread shot' and is more effective when multiple enemies are attacking from several directions at once. 
- 
+		<desc>J.J. Squarkers is a scrolling run 'n' gun platform shoot-em-up for one or two players in which several residents from the peaceful village if Pistachio have been kidnapped. Most of the remaining villagers have fallen under a mysterious spell, making them violent. Players take on the roles of two ducks called 'Ani Karasukun' and 'Ototo Karasukun' who set out to defeat the enemy minions and restore peace to their village.
+
+The ducks can fire projectiles to defeat the abstract enemies they face, with their default weapon being tomatoes. Other weapons - as well as bonus and health power-ups - become available when certain enemies are killed. Available weapons include pumpkins, watermelon seeds, screws and slinkys wearing red sneakers.
+
+Each weapon has different strengths and weaknesses; for example the slinkys simply walk in a straight line until they either meet obstacles or the edge of screen, making it easy to deal with enemies from a distance. On the other hand, watermelon seeds can only be thrown a short distance but several are thrown at once. This effectively gives players a 'spread shot' and is more effective when multiple enemies are attacking from several directions at once.
+
 J.J. Squarkers consists of five stages with a powerful end-of-level guardian waiting at the end of each.</desc>
 		<rating>0.7</rating>
 		<releasedate>19930101T000000</releasedate>
@@ -140,8 +140,8 @@ J.J. Squarkers consists of five stages with a powerful end-of-level guardian wai
 	<game id="43802" source="ScreenScraper.fr">
 		<path>./twineagl.zip</path>
 		<name>Twin Eagle - Revenge Joe's Brother</name>
-		<desc>A vertical shoot-em-up that places the player's helicopter against multiple attacking targets in the air, sea, and land. Collecting the weapon and speed power-ups throughout the game is vital since the gameplay is quite difficult. 
- 
+		<desc>A vertical shoot-em-up that places the player's helicopter against multiple attacking targets in the air, sea, and land. Collecting the weapon and speed power-ups throughout the game is vital since the gameplay is quite difficult.
+
 The object of the game, which is not explained further, is to avenge Joe's brother - which is probably not assumed to be the player, but presumably a friend of the player who lost his brother to the enemy. (It uses bad English grammar on the subtitle of the screen, using "revenge" as a verb, as apposed to "avenge".  That being said, it's a pretty tight game otherwise.)  To do so, you must destroy the fortress on the very last level. When you start the game and it scrolls onto the starting screen, the background contains the different levels that you must survive. The starting position of the various enemies does not vary from game to game.</desc>
 		<rating>0.3</rating>
 		<releasedate>19880101T000000</releasedate>
@@ -154,8 +154,8 @@ The object of the game, which is not explained further, is to avenge Joe's broth
 	<game id="43801" source="ScreenScraper.fr">
 		<path>./twineag2.zip</path>
 		<name>Twin Eagle 2 - The Rescue Mission</name>
-		<desc>Twin Eagle II is a vertical scrolling shooter where one or two players pilot heavily armed helicopters through three stages with three areas each. 
- 
+		<desc>Twin Eagle II is a vertical scrolling shooter where one or two players pilot heavily armed helicopters through three stages with three areas each.
+
 At the start of each stage, the players select their path of attack through the three areas.  Areas with ground level enemies and targets are presented in a 3/4 isometric view, while areas with no ground targets feature scrolling landscape images.  Players use their guns to attack flying enemy aircraft and bombs to attack ground targets such as tanks, rocket launchers and high-rise skyscrapers.  If things get too hairy, the player can use a missile barrage to clear the screen of enemies and enemy firepower.  Destroying some buildings reveal primary colored trucks which drop weapon power-ups and point items when destroyed.  Each area features a boss at the end, which must be destroyed to advance past the area.  The final stage features one additional boss before the end of the game.</desc>
 		<rating>0.5</rating>
 		<releasedate>19940101T000000</releasedate>
@@ -261,10 +261,10 @@ At the start of each stage, the players select their path of attack through the 
 	<game id="40432" source="ScreenScraper.fr">
 		<path>./calibr50.zip</path>
 		<name>Caliber 50</name>
-		<desc>Caliber Fifty is a multi-directional scrolling shoot-em-up for one or two players taking on the roles of captured US pilots who have been taken prisoner during the Vietnam war in 1972. The pilots must escape the prison compound by battling enemy soldiers and vehicles, including tanks planes and helicopters. 
- 
-The game is very similar in play to SNK's Ikari and Heavy Barrel games, with players able to fully rotate their on-screen characters to fire and move in all directions. Players are initially armed with a machine gun and limited number of grenades but power-ups - including a rocket launcher, a flamethrower and grenades - can be found in the destructible wooden crates that litter the stages.  
- 
+		<desc>Caliber Fifty is a multi-directional scrolling shoot-em-up for one or two players taking on the roles of captured US pilots who have been taken prisoner during the Vietnam war in 1972. The pilots must escape the prison compound by battling enemy soldiers and vehicles, including tanks planes and helicopters.
+
+The game is very similar in play to SNK's Ikari and Heavy Barrel games, with players able to fully rotate their on-screen characters to fire and move in all directions. Players are initially armed with a machine gun and limited number of grenades but power-ups - including a rocket launcher, a flamethrower and grenades - can be found in the destructible wooden crates that litter the stages.
+
 Enemy vehicles such as a plane can also be commandeered and the stages take place both above ground in the Vietnamese jungles and below ground in hidden tunnels. Caliber Fifty is a quite short but very challenging game, with constantly spawning enemies attacking from all sides.</desc>
 		<image>/userdata/roms/mame/images/calibr50.png</image>
 		<rating>0.7</rating>

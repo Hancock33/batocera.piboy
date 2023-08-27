@@ -21,7 +21,7 @@ class PPSSPPGenerator(Generator):
         dbpath = "/userdata/system/configs/ppsspp/gamecontrollerdb.txt"
         if os.path.exists(dbpath):
             os.remove(dbpath)
-        
+
         # Generate the controls.ini
         for index in playersControllers :
             controller = playersControllers[index]
@@ -56,8 +56,8 @@ class PPSSPPGenerator(Generator):
             nplayer = nplayer +1
 
         return Command.Command(
-            array=commandArray, 
-            env={"XDG_CONFIG_HOME":batoceraFiles.CONF, 
+            array=commandArray,
+            env={"XDG_CONFIG_HOME":batoceraFiles.CONF,
             "XDG_RUNTIME_DIR":batoceraFiles.HOME_INIT,
             "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)}
         )

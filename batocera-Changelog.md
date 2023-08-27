@@ -59,6 +59,7 @@
 - Model2 now loads 16:9 bezels accordingly to your screen and border size in ES
 - Model2 crosshair disabled by default with light guns connected
 - Laptops / Systems with 2 GPUs will now automatically set the environment variables to use the best GPU.
+- Model2 start and coins now mapped on light guns when playing gun games
 ### Updated
 - xenia to v1.0.2805
 - xenia canary to ba936e8 (Commits on Jul 22, 2023)
@@ -91,10 +92,10 @@
 - play! to v0.62
 - Vita3K to 0.1.9
 ### Dev
-- linux kernel for x86_64 to 6.4.11
+- linux kernel for x86_64 to 6.4.12
 - linux kernel for RPI to 6.1.32
 - linux kernel for most ARM SBCs to 6.1.43
-- linux kernel for Rockchip RK3566/RK3568 to 6.4.11
+- linux kernel for Rockchip RK3566/RK3568 to 6.4.12
 - xf86-video-amdgpu to 23.0.0
 - xf86-video-ati to 22.0.0
 - xwayland to 23.1.2

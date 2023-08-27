@@ -46,8 +46,8 @@
 	<game id="41490" source="ScreenScraper.fr">
 		<path>./gomoku.zip</path>
 		<name>Gomoku Narabe Renju</name>
-		<desc>A table top game consisted of an Asian Version of Go. Released in Japan. The Object in this game is to get five chips in a row to win. 
- 
+		<desc>A table top game consisted of an Asian Version of Go. Released in Japan. The Object in this game is to get five chips in a row to win.
+
 This game is endless. The game will keep going until you lose.</desc>
 		<rating>0.3</rating>
 		<releasedate>19810101T000000</releasedate>
@@ -157,7 +157,7 @@ A Japanese quiz game.</desc>
 	<game id="41711" source="ScreenScraper.fr">
 		<path>./horekid.zip</path>
 		<name>Kid No Hore Hore Daisakusen</name>
-		<desc>'Kid's Horehore Daisakusen' is an action game that was released from Nichibutsu in 1987. 
+		<desc>'Kid's Horehore Daisakusen' is an action game that was released from Nichibutsu in 1987.
 Kid, who has been drawn into the space-time labyrinth from the 23 century, fights to escape from a large track of the enemy in order to return to the present day. Players defeat enemies with dropping in holes with using items, to escape from the times, such as primitive times and the Edo era and contemporary.</desc>
 		<rating>0.7</rating>
 		<releasedate>19870101T000000</releasedate>
@@ -196,12 +196,12 @@ Kid, who has been drawn into the space-time labyrinth from the 23 century, fight
 	<game id="57919" source="ScreenScraper.fr">
 		<path>./magmax.zip</path>
 		<name>Mag Max</name>
-		<desc>Mag Max is a horizontally scrolling shoot-em-up in which a single player takes control of the 'Maxcraft' hover-ship and must battle their way through an packed enemy installation to find and destroy the invading alien 'Dragonia' fleet. 
- 
-The action takes place both above and below ground and transporters appear throughout the game that allows the Maxcraft warp between the two as players search for the three-headed 'Dragonship'. 
- 
-At various points the player will come across robot components - either a torso, a pair of legs or a plasma gun - and collecting these will eventually see the player's hover-ship become a towering robot, vastly increasing its firepower in the process. 
- 
+		<desc>Mag Max is a horizontally scrolling shoot-em-up in which a single player takes control of the 'Maxcraft' hover-ship and must battle their way through an packed enemy installation to find and destroy the invading alien 'Dragonia' fleet.
+
+The action takes place both above and below ground and transporters appear throughout the game that allows the Maxcraft warp between the two as players search for the three-headed 'Dragonship'.
+
+At various points the player will come across robot components - either a torso, a pair of legs or a plasma gun - and collecting these will eventually see the player's hover-ship become a towering robot, vastly increasing its firepower in the process.
+
 If the Maxcraft takes an enemy hit when additional components are attached, a component is lost. If the ship is hit when only in basic form, however, a life is lost.</desc>
 		<rating>0.7</rating>
 		<releasedate>19850101T000000</releasedate>
@@ -227,14 +227,14 @@ If the Maxcraft takes an enemy hit when additional components are attached, a co
 	<game id="78970" source="ScreenScraper.fr">
 		<path>./mooncrst.zip</path>
 		<name>Moon Cresta (Nichibutsu)</name>
-		<desc>Moon Cresta is a single screen shoot-em-up with the player controlling an armed ship that moves horizontally along the bottom of the screen and must use their ship to destroy waves of attacking aliens.  
- 
-The player begins the game with a small ship armed with a single laser cannon. Upon successful completion of the first four waves of alien attacks, the player's ship will be able to dock with the next 'stage' of fighter ship, although the docking procedure must be completed within a set time. This larger, two-stage ship has increased fire power (three lasers). 
- 
-After successfully clearing a further two alien waves and surviving a meteor shower, the two-stage ship will be able to dock with the third and final piece, giving the player the largest and most powerful ship, which is now armed with five lasers. Bonus points are awarded depending on how quickly the docking procedures are completed. 
- 
-If the multi-stage ship is hit, the player continues with whatever stages remain. If players achieve a score of 30,000, they are awarded a free game and their score continues to accumulate. 
- 
+		<desc>Moon Cresta is a single screen shoot-em-up with the player controlling an armed ship that moves horizontally along the bottom of the screen and must use their ship to destroy waves of attacking aliens.
+
+The player begins the game with a small ship armed with a single laser cannon. Upon successful completion of the first four waves of alien attacks, the player's ship will be able to dock with the next 'stage' of fighter ship, although the docking procedure must be completed within a set time. This larger, two-stage ship has increased fire power (three lasers).
+
+After successfully clearing a further two alien waves and surviving a meteor shower, the two-stage ship will be able to dock with the third and final piece, giving the player the largest and most powerful ship, which is now armed with five lasers. Bonus points are awarded depending on how quickly the docking procedures are completed.
+
+If the multi-stage ship is hit, the player continues with whatever stages remain. If players achieve a score of 30,000, they are awarded a free game and their score continues to accumulate.
+
 Upon completion of the first eight screens, the player's ship will revert back to its small, single-stage incarnation and the game begins again with an increased level of difficulty.</desc>
 		<rating>0.7</rating>
 		<releasedate>19800101T000000</releasedate>
@@ -298,8 +298,8 @@ Upon completion of the first eight screens, the player's ship will revert back t
 	<game id="79138" source="ScreenScraper.fr">
 		<path>./ninjemak.zip</path>
 		<name>Ninja Emaki (US)</name>
-		<desc>Evil demons and enemies are closing into forever confine this world into darkness... but a young and brave ninja arose to conquer the witch castle and defeat the evil. 
- 
+		<desc>Evil demons and enemies are closing into forever confine this world into darkness... but a young and brave ninja arose to conquer the witch castle and defeat the evil.
+
 Fly at full speed on your magic cloud to reach enemy lands and battle your way through a variety of landscapes, shooting plenty of enemies as you go. Grab special ninja scrolls that allow you to use a limited-time power-up weapon. Beat the end boss to move on to the next stage and save the royal princess from the clutches of evil!</desc>
 		<rating>0.7</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -338,14 +338,14 @@ Fly at full speed on your magic cloud to reach enemy lands and battle your way t
 	<game id="42679" source="ScreenScraper.fr">
 		<path>./radrad.zip</path>
 		<name>Radical Radial (US)</name>
-		<desc>This is an interesting take on the shooter genre, with three unique sections in each stage. You control a tire with the ability to jump and shoot. When you jump, you can only be hit by the enemies in the first stage. 
- 
-In the first level, you need to dodge or jump over rocks as bat-like enemies rush down the screen, weaving across it. Occasionally a string of enemies will appear that give a bonus of 1000 if you hit them all. You can also pick up bonus items worth 300 points each. 
- 
-In the second level, you are driving down a busy road. You need to doge cars as they erratically move across the screen. Occasionally an ambulance will drive up the screen, and if it hits a vehicle it will go flying across the screen. Watch out for the blue trucks in this section. Midway through this part, a green truck appears which drops stars. They are worth 500 each. There are broken down vehicles on the road, along with oil slicks. The pickups worth 300 points make a return. 
- 
-The third level is a bonus round. You continue driving down the road, but now there are only oil slicks. You need to collect as many point pickups as possible. If you die in this section, it jumps to the next level, and you do not lose a life. You get a bonus if you get every pickup. You are then given a bonus based on your time for the last stage. 
- 
+		<desc>This is an interesting take on the shooter genre, with three unique sections in each stage. You control a tire with the ability to jump and shoot. When you jump, you can only be hit by the enemies in the first stage.
+
+In the first level, you need to dodge or jump over rocks as bat-like enemies rush down the screen, weaving across it. Occasionally a string of enemies will appear that give a bonus of 1000 if you hit them all. You can also pick up bonus items worth 300 points each.
+
+In the second level, you are driving down a busy road. You need to doge cars as they erratically move across the screen. Occasionally an ambulance will drive up the screen, and if it hits a vehicle it will go flying across the screen. Watch out for the blue trucks in this section. Midway through this part, a green truck appears which drops stars. They are worth 500 each. There are broken down vehicles on the road, along with oil slicks. The pickups worth 300 points make a return.
+
+The third level is a bonus round. You continue driving down the road, but now there are only oil slicks. You need to collect as many point pickups as possible. If you die in this section, it jumps to the next level, and you do not lose a life. You get a bonus if you get every pickup. You are then given a bonus based on your time for the last stage.
+
 There is a difficulty spike at the third stage. The extra life is at 50000. You only get one extra life during the course of the game. The game is infinite.</desc>
 		<rating>0.7</rating>
 		<releasedate>19820101T000000</releasedate>
@@ -436,12 +436,12 @@ There is a difficulty spike at the third stage. The extra life is at 50000. You 
 	<game id="43567" source="ScreenScraper.fr">
 		<path>./terracre.zip</path>
 		<name>Terra Cresta (YM3526 set 1)</name>
-		<desc>Terra Cresta is a vertically-scrolling shoot-em-up set over a constantly scrolling landscape of islands and enemy installations. The player is under constant attack from enemy spaceship waves, ground-based guns and turrets, dinosaurs and three different mothercraft ships.  
- 
-The levels are littered with ground-based silos bearing numbers between 2 and 5. These can be shot to release a player ship component, which then attaches to the player's current ship, increasing both its size and firepower. Power-ups available are 2-Wide shot, 3-Rear Shot, 4-Front cannon and 5-Rear shield.  
- 
-Using the 'Formation' button splits the ship parts into a formation for limited time, giving increased fire power. The number of parts acquired determines the formation. For example, if the player has picked up two ship parts then a triangle is formed, with the player's main ship at the rear of the formation, with additional two ship components positioned at the front edge of the triangle.  
- 
+		<desc>Terra Cresta is a vertically-scrolling shoot-em-up set over a constantly scrolling landscape of islands and enemy installations. The player is under constant attack from enemy spaceship waves, ground-based guns and turrets, dinosaurs and three different mothercraft ships.
+
+The levels are littered with ground-based silos bearing numbers between 2 and 5. These can be shot to release a player ship component, which then attaches to the player's current ship, increasing both its size and firepower. Power-ups available are 2-Wide shot, 3-Rear Shot, 4-Front cannon and 5-Rear shield.
+
+Using the 'Formation' button splits the ship parts into a formation for limited time, giving increased fire power. The number of parts acquired determines the formation. For example, if the player has picked up two ship parts then a triangle is formed, with the player's main ship at the rear of the formation, with additional two ship components positioned at the front edge of the triangle.
+
 When all four numbered parts have been collected, the player's ship transforms into a flaming Phoenix, and is indestructible for a limited time.</desc>
 		<rating>0.7</rating>
 		<releasedate>19850101T000000</releasedate>
@@ -468,10 +468,10 @@ When all four numbered parts have been collected, the player's ship transforms i
 	<game id="43772" source="ScreenScraper.fr">
 		<path>./tubep.zip</path>
 		<name>Tube Panic</name>
-		<desc>An early 3-D shoot'em up game. 
- 
-Pilot your ship through vast zones and large tubular vortex levels full of enemies. The vast zones are similar in gameplay to William's Blaster, while the tubular levels are similar to Konami's Gyruss. Upon the completion of the tubular levels, the player must dock with the mothership. 
- 
+		<desc>An early 3-D shoot'em up game.
+
+Pilot your ship through vast zones and large tubular vortex levels full of enemies. The vast zones are similar in gameplay to William's Blaster, while the tubular levels are similar to Konami's Gyruss. Upon the completion of the tubular levels, the player must dock with the mothership.
+
 Good luck, fighter pilot!</desc>
 		<rating>0.5</rating>
 		<releasedate>19840101T000000</releasedate>
@@ -498,8 +498,8 @@ Good luck, fighter pilot!</desc>
 	<game id="44088" source="ScreenScraper.fr">
 		<path>./wiping.zip</path>
 		<name>Wiping</name>
-		<desc>Wiping, later rereleased as Rug Rats, is Dig Dug-style arcade game that was released by Nichibutsu in 1982; it utilises two Zilog Z80 microprocessors (running up at 3.072 MHz) and a custom sound chip running at the same speed. The player must use a 4-way joystick to take control of a vacuum cleaner (which bears a striking resemblance to Numatic International's then-new "Henry") with a single button to make it spray soapbubbles at germs (of which there are three different types, "Baddons", "Bilbolas" and "Bigimbas"), and roll over them while they're stunned to suck them up - and it can also pass over rugs to make them roll up and squash any germs standing on them, but it can also be a victim of this. 
- 
+		<desc>Wiping, later rereleased as Rug Rats, is Dig Dug-style arcade game that was released by Nichibutsu in 1982; it utilises two Zilog Z80 microprocessors (running up at 3.072 MHz) and a custom sound chip running at the same speed. The player must use a 4-way joystick to take control of a vacuum cleaner (which bears a striking resemblance to Numatic International's then-new "Henry") with a single button to make it spray soapbubbles at germs (of which there are three different types, "Baddons", "Bilbolas" and "Bigimbas"), and roll over them while they're stunned to suck them up - and it can also pass over rugs to make them roll up and squash any germs standing on them, but it can also be a victim of this.
+
 </desc>
 		<rating>0.7</rating>
 		<releasedate>19820101T000000</releasedate>
@@ -543,16 +543,16 @@ Good luck, fighter pilot!</desc>
 	<game id="41344" source="ScreenScraper.fr">
 		<path>./galivan.zip</path>
 		<name>Cosmo Police Galivan (12/26/1985)</name>
-		<desc>Galivan is a single player platform shoot-em-up in which the player takes on the roll of a 'Cosmo Police' officer who runs and jumps around a multi-directional scrolling cave system, destroying or avoiding waves of constantly attacking robots, aliens and alien ships. 
- 
-The player starts the game as an unarmed human, whose only attacking options are kicking and punching, but picking up a POW item encases the human in a robotic suit and arms the player with a laser gun. 
- 
-Collecting the blue POW items while in the suit awards the player with a powerful beam weapon for a limited time, while the red POW item gives the player a three-shot cannon. POW items are dotted throughout the levels and can also be gained by shooting the blue robot aliens. 
- 
-The player's character has an energy bar that decreases whenever the player is hit. Should this fall below the halfway point, the robot suit will be lost and the player will once again be an unarmed human. 
- 
-Collecting a POW item while in human form will restore the player's energy. If a POW is collected while wearing the suit, however, the player's energy will NOT be increased but their weapon will receive a power-up. 
- 
+		<desc>Galivan is a single player platform shoot-em-up in which the player takes on the roll of a 'Cosmo Police' officer who runs and jumps around a multi-directional scrolling cave system, destroying or avoiding waves of constantly attacking robots, aliens and alien ships.
+
+The player starts the game as an unarmed human, whose only attacking options are kicking and punching, but picking up a POW item encases the human in a robotic suit and arms the player with a laser gun.
+
+Collecting the blue POW items while in the suit awards the player with a powerful beam weapon for a limited time, while the red POW item gives the player a three-shot cannon. POW items are dotted throughout the levels and can also be gained by shooting the blue robot aliens.
+
+The player's character has an energy bar that decreases whenever the player is hit. Should this fall below the halfway point, the robot suit will be lost and the player will once again be an unarmed human.
+
+Collecting a POW item while in human form will restore the player's energy. If a POW is collected while wearing the suit, however, the player's energy will NOT be increased but their weapon will receive a power-up.
+
 The game's platforms are littered with springboards that fire the player high into the air when stepped on. Some platforms - often containing POW items - can only be reached via a springboard.</desc>
 		<image>/userdata/roms/mame/images/galivan.png</image>
 		<rating>0.5</rating>

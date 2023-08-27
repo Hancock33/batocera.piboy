@@ -39,10 +39,10 @@
 	<game id="43127" source="ScreenScraper.fr">
 		<path>./skysoldr.zip</path>
 		<name>Sky Soldiers (US)</name>
-		<desc>Sky Soldiers is a vertical scrolling Shoot em' Up developed by Alpha Denshi and released to arcades in 1988 by Romstar in North America and SNK for the rest of the world. The game features a time travel theme as well as an organized weapon select screen at the beginning of each stage. 
- 
-Players travel back in time starting in Great Britain 1945, Germany 1915, Japan 1945, Germany 1944, Vietnam 1974, France 1914, Russia 1974 and finally the space station in the present time, 2110. Each time stage has two levels, both ending in a boss battle save for the final stage, resulting in a total of 15 Areas. 
- 
+		<desc>Sky Soldiers is a vertical scrolling Shoot em' Up developed by Alpha Denshi and released to arcades in 1988 by Romstar in North America and SNK for the rest of the world. The game features a time travel theme as well as an organized weapon select screen at the beginning of each stage.
+
+Players travel back in time starting in Great Britain 1945, Germany 1915, Japan 1945, Germany 1944, Vietnam 1974, France 1914, Russia 1974 and finally the space station in the present time, 2110. Each time stage has two levels, both ending in a boss battle save for the final stage, resulting in a total of 15 Areas.
+
 The ship's weapon system is accessed in the beginning of each stage. The shipâ€™s main shot consists of a semi-automatic Wave Shot. The shipâ€™s bomb weapons include forward firing missiles, fireballs, homing missiles and the buster bomb. The ship can be equipped with only one bomb weapon from either category at a time. The ship can only be loaded with a certain number of Bomb weapons and they can only be resupplied at the end of the level. The only pick-up item in the game is a parachuting human pilot shot down from malfunctioning fighter planes/jets; collecting these pilots results in random bonus points.</desc>
 		<image>/userdata/roms/mame/images/skysoldr.png</image>
 		<rating>0.5</rating>
@@ -58,8 +58,8 @@ The ship's weapon system is accessed in the beginning of each stage. The shipâ�
 	<game id="43259" source="ScreenScraper.fr">
 		<path>./splndrbt.zip</path>
 		<name>Splendor Blast (set 1)</name>
-		<desc>Splendor Blast is a futuristic spaceship racing game. 
- 
+		<desc>Splendor Blast is a futuristic spaceship racing game.
+
 Join the intergalactic race, drive your racing spaceship at full speed and destroy the opponents spaceships, grab the energy and ammo items, in this engrossing space race, evade all obstacles and dangerous curves to move to the next race to victory!</desc>
 		<image>/userdata/roms/mame/images/splndrbt.png</image>
 		<rating>0.7</rating>
@@ -90,8 +90,8 @@ Join the intergalactic race, drive your racing spaceship at full speed and destr
 	<game id="43333" source="ScreenScraper.fr">
 		<path>./sstingry.zip</path>
 		<name>Super Stingray (Japan)</name>
-		<desc>Super Stingray is a semi-strategic top-down tank action shooter game. 
- 
+		<desc>Super Stingray is a semi-strategic top-down tank action shooter game.
+
 Control your tank across the battlefield and destroy all the enemies in the way and defeated the enemy fortress.</desc>
 		<image>/userdata/roms/mame/images/sstingry.png</image>
 		<rating>0.7</rating>
@@ -176,10 +176,10 @@ You are on a time limit. If you run out of time, a black creature appears out of
 	<game id="43509" source="ScreenScraper.fr">
 		<path>./talbot.zip</path>
 		<name>Talbot</name>
-		<desc>In Talbot, the player controls a peasant with a red pointed hat, he is a rabbit breeder and accompanied with his loyal hunting dog talbot breed, must recapture all the rabbits that have escaped and are running around the maze field.  
- 
-You must prevent the thieves with sunglasses, steal your rabbits while you avoid his attacks, it is a race against time, as you progress through the maze field you must find some food like milk to replenish your energy and give orders to your dog to put traps along the way to stop the sneaky thieves and also catch the rabbits more easy and bring them to the cage again, to go to the next round. With each round changes the maze pattern. 
- 
+		<desc>In Talbot, the player controls a peasant with a red pointed hat, he is a rabbit breeder and accompanied with his loyal hunting dog talbot breed, must recapture all the rabbits that have escaped and are running around the maze field.
+
+You must prevent the thieves with sunglasses, steal your rabbits while you avoid his attacks, it is a race against time, as you progress through the maze field you must find some food like milk to replenish your energy and give orders to your dog to put traps along the way to stop the sneaky thieves and also catch the rabbits more easy and bring them to the cage again, to go to the next round. With each round changes the maze pattern.
+
 While more rabbits you catch more points you earn and you win the game, if the enemies catch more rabbits, you lose the game!</desc>
 		<image>/userdata/roms/mame/images/talbot.png</image>
 		<rating>0.5</rating>
@@ -288,8 +288,8 @@ Featuring a cast of characters ranging from ninjas to a cybernetic supersoldier,
 	<game id="41114" source="ScreenScraper.fr">
 		<path>./equites.zip</path>
 		<name>Equites</name>
-		<desc>Equites is an early vertically scrolling shoot'em up. 
- 
+		<desc>Equites is an early vertically scrolling shoot'em up.
+
 Transform from land-walking mech to a soaring jet and back again in this 1984 shooter from Alpha Denshi.</desc>
 		<image>/userdata/roms/mame/images/equites.png</image>
 		<rating>0.7</rating>
@@ -324,8 +324,8 @@ Transform from land-walking mech to a soaring jet and back again in this 1984 sh
 	<game id="41135" source="ScreenScraper.fr">
 		<path>./exctsccr.zip</path>
 		<name>Exciting Soccer</name>
-		<desc>Exciting Soccer is an association football game which includes penalty shootout if the game ends in a tie. If you win the game you move on to the next level, each time the opponent gets harder to beat. When you start playing you can choose one of 6 teams: Italy, England, Brazil, West Germany, Austria, or France. The sequel Exciting Soccer II was released in 1984 with Japan replacing Austria and new music, but identical gameplay.  
- 
+		<desc>Exciting Soccer is an association football game which includes penalty shootout if the game ends in a tie. If you win the game you move on to the next level, each time the opponent gets harder to beat. When you start playing you can choose one of 6 teams: Italy, England, Brazil, West Germany, Austria, or France. The sequel Exciting Soccer II was released in 1984 with Japan replacing Austria and new music, but identical gameplay.
+
 The game allows for one or two players to play and has a control scheme where they can tackle, shoot, short pass, and long pass. Exciting Soccer had realistic touches for the time: corner kicks, throw-ins, penalty shots, and cheerleaders, as well as digitized voices and an influential overhead view.</desc>
 		<image>/userdata/roms/mame/images/exctsccr.png</image>
 		<rating>0.5</rating>

@@ -57,7 +57,7 @@ def createXemuConfig(iniConfig, system, rom, playersControllers, gameResolution)
     iniConfig.set("general", "show_welcome", "false")
 
     # Set Screenshot directory
-    iniConfig.set("general", "screenshot_dir", '"/userdata/screenshots"') 
+    iniConfig.set("general", "screenshot_dir", '"/userdata/screenshots"')
 
     # Fill sys sections
     if system.isOptSet("xemu_memory"):
@@ -82,17 +82,17 @@ def createXemuConfig(iniConfig, system, rom, playersControllers, gameResolution)
         iniConfig.set("display.quality", "surface_scale", system.config["xemu_render"])
     else:
         iniConfig.set("display.quality", "surface_scale", "1") #render scale by default
-    
+
     # start fullscreen
     iniConfig.set("display.window", "fullscreen_on_startup", "true")
-    
+
     # Window size
     window_res = format(gameResolution["width"]) + "x" + format(gameResolution["height"])
     iniConfig.set("display.window", "startup_size", '"' + window_res + '"')
-    
+
     # turn vsync on, doesn't improve framerate when off
     iniConfig.set("display.window", "vsync", "true")
-    
+
     # don't show the menubar
     iniConfig.set("display.ui", "show_menubar", "false")
 
@@ -101,13 +101,13 @@ def createXemuConfig(iniConfig, system, rom, playersControllers, gameResolution)
         iniConfig.set("display.ui", "fit", '"' + system.config["xemu_scaling"] + '"')
     else:
         iniConfig.set("display.ui", "fit", '"scale"')
-    
+
     # Aspect ratio
     if system.isOptSet("xemu_aspect"):
         iniConfig.set("display.ui", "aspect_ratio", '"' + system.config["xemu_aspect"] + '"')
     else:
         iniConfig.set("display.ui", "aspect_ratio", '"auto"')
-    
+
     # Fill input section
     # first, clear
     for i in range(1,5):

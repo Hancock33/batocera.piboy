@@ -104,8 +104,8 @@ config BR2_PACKAGE_BATOCERA_MUSIC_SUPPORT
     select BR2_PACKAGE_FLUID_SOUNDFONT
 
     # MIDI tools
-    select BR2_PACKAGE_ALSA_UTILS_ACONNECT  if  BR2_PACKAGE_ALSA_UTILS
-    select BR2_PACKAGE_ALSA_UTILS_APLAYMIDI if  BR2_PACKAGE_ALSA_UTILS
+    select BR2_PACKAGE_ALSA_UTILS_ACONNECT                  if  BR2_PACKAGE_ALSA_UTILS
+    select BR2_PACKAGE_ALSA_UTILS_APLAYMIDI                 if  BR2_PACKAGE_ALSA_UTILS
 
     # Modules
     select BR2_PACKAGE_LIBMODPLUG
@@ -1219,7 +1219,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     bool "add experimental cores"
 
     # CorsixTH (Theme Hospital engine)
-    select BR2_PACKAGE_CORSIXTH             if BR2_x86_64 || BR2_aarch64
+    select BR2_PACKAGE_CORSIXTH                             if  BR2_x86_64 || BR2_aarch64
 
     # Turrican Port
     select BR2_PACKAGE_LIBEPOXY
@@ -1556,7 +1556,7 @@ config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
     select BR2_PACKAGE_ALLLINUXFIRMWARES
 
     # buildroot firmware
-    select BR2_PACKAGE_LINUX_FIRMWARE                       if BR2_PACKAGE_BATOCERA_TARGET_RK3288
+    select BR2_PACKAGE_LINUX_FIRMWARE                       if  BR2_PACKAGE_BATOCERA_TARGET_RK3288
 
     # common firmwares
     select BR2_PACKAGE_UX500_FIRMWARE
@@ -1680,19 +1680,23 @@ config BR2_PACKAGE_BATOCERA_XORG
     select BR2_PACKAGE_LIBGTK3                              if  !BR2_PACKAGE_BATOCERA_LIB32             # gtk3 library
     select BR2_PACKAGE_L3AFPAD                              if  !BR2_PACKAGE_BATOCERA_LIB32             # gtk3 text editor
     select BR2_PACKAGE_PCMANFM                              if  !BR2_PACKAGE_BATOCERA_LIB32             # file manager
-    select BR2_PACKAGE_GVFS                                 if  BR2_PACKAGE_PCMANFM                     # file systems (trash, smb, ... in pcmanfm)
-    select BR2_PACKAGE_ADWAITA_ICON_THEME_LIGHT             if  BR2_PACKAGE_PCMANFM                     # theme for file manager
+    select BR2_PACKAGE_GVFS                                 if   BR2_PACKAGE_PCMANFM                    # file systems (trash, smb, ... in pcmanfm)
+    select BR2_PACKAGE_ADWAITA_ICON_THEME_LIGHT             if   BR2_PACKAGE_PCMANFM                    # theme for file manager
     select BR2_PACKAGE_XTERM                                if  !BR2_PACKAGE_BATOCERA_LIB32             # terminal
     select BR2_PACKAGE_OPENBOX                              if  !BR2_PACKAGE_BATOCERA_LIB32             # window manager
     select BR2_PACKAGE_UNCLUTTER                            if  !BR2_PACKAGE_BATOCERA_LIB32             # hide mouse
     select BR2_PACKAGE_TOUCHEGG                             if  !BR2_PACKAGE_BATOCERA_LIB32             # touchscreen extended gestures
 
-    #Openbox wallpaper
+    # Openbox wallpaper
     select BR2_PACKAGE_IMLIB2_X                             if  !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_IMLIB2_JPEG                          if  !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_IMLIB2_PNG                           if  !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_IMLIB2_GIF                           if  !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_FEH                                  if  !BR2_PACKAGE_BATOCERA_LIB32
+
+    # Mouse Cursor
+    select BR2_PACKAGE_XDATA_XCURSOR_THEMES                 if  !BR2_PACKAGE_BATOCERA_LIB32
+    select BR2_PACKAGE_XAPP_XRDB                            if  !BR2_PACKAGE_BATOCERA_LIB32
 
     # vendor neutral GL dispatch library
     # already set by nvidia for x86_64, but required on x86 for pcsx2
@@ -1738,6 +1742,6 @@ config BR2_PACKAGE_BATOCERA_GPU_X86
     # utils
     select BR2_PACKAGE_LIBVA_INTEL_DRIVER                   if  BR2_PACKAGE_XORG7 && BR2_PACKAGE_MESA3D_DRI_DRIVER
     select BR2_PACKAGE_LIBVA_UTILS                          if  BR2_PACKAGE_XORG7 && BR2_PACKAGE_MESA3D_DRI_DRIVER
-    select BR2_PACKAGE_VDPAUINFO                            if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_VDPAUINFO                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
 ### ### ###

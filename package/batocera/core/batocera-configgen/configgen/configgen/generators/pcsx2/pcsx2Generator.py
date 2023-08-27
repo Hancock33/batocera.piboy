@@ -158,7 +158,7 @@ def configureINI(config_directory, bios_directory, system, controllers, guns):
     # create cache folder
     if not os.path.exists("/userdata/system/cache/ps2"):
         os.makedirs("/userdata/system/cache/ps2")
-    
+
     ## [EmuCore]
     if not pcsx2INIConfig.has_section("EmuCore"):
         pcsx2INIConfig.add_section("EmuCore")
@@ -248,17 +248,24 @@ def configureINI(config_directory, bios_directory, system, controllers, guns):
         pcsx2INIConfig.add_section("Filenames")
 
     # Find the first BIOS
-    bios = [ "PS2 Bios 30004R V6 Pal.bin", "scph10000.bin", "scph39001.bin", "SCPH-70004_BIOS_V12_PAL_200.BIN" ]
-    biosFound = False
-    for bio in bios:
-        if os.path.exists(bios_directory + "/" + bio):
-            biosFile = bio
-            biosFound = True
-            break;
-    if not biosFound:
+    bios_filenames = [
+        "SCPH30004R.bin",
+        "PS2 Bios 30004R V6 Pal.bin",
+        "scph39001.bin",
+        "SCPH-70004_BIOS_V12_PAL_200.BIN",
+        "scph10000.bin"
+    ]
+
+    for bio in bios_filenames:
+        if os.path.exists(os.path.join(bios_directory, bio)):
+            bios_file = bio
+            bios_found = True
+            break
+
+    if not bios_found:
         raise Exception("No bios found")
 
-    pcsx2INIConfig.set("Filenames", "BIOS", biosFile)
+    pcsx2INIConfig.set("Filenames", "BIOS", bios_file)
 
     ## [EMUCORE/GS]
     if not pcsx2INIConfig.has_section("EmuCore/GS"):
@@ -442,7 +449,7 @@ def configureINI(config_directory, bios_directory, system, controllers, guns):
             file_name = os.path.basename(file_path)
             texture_directory_path = os.path.join(texture_dir, parent_directory_name, "replacements")
             os.makedirs(texture_directory_path, exist_ok=True)
-            
+
             destination_file_path = os.path.join(texture_directory_path, file_name)
 
             shutil.copyfile(file_path, destination_file_path)
@@ -454,10 +461,10 @@ def configureINI(config_directory, bios_directory, system, controllers, guns):
             file_name = os.path.basename(file_path)
             texture_directory_path = os.path.join(texture_dir, parent_directory_name, "replacements")
             target_file_path = os.path.join(texture_directory_path, file_name)
-            
+
             if os.path.isfile(target_file_path):
                 os.remove(target_file_path)
-    
+
     ## [Pad]
     if not pcsx2INIConfig.has_section("Pad"):
         pcsx2INIConfig.add_section("Pad")
@@ -494,13 +501,13 @@ def configureINI(config_directory, bios_directory, system, controllers, guns):
             eslog.debug("*** You don't have enough connected controllers for this option ***")
     else:
         multiTap = 2
-    
+
     # remove the previous [Padx] sections to avoid phantom controllers
     section_names = ["Pad1", "Pad2", "Pad3", "Pad4", "Pad5", "Pad6", "Pad7", "Pad8"]
     for section_name in section_names:
         if pcsx2INIConfig.has_section(section_name):
             pcsx2INIConfig.remove_section(section_name)
-    
+
     # Now add Controllers
     nplayer = 1
     for controller, pad in sorted(controllers.items()):
@@ -512,7 +519,7 @@ def configureINI(config_directory, bios_directory, system, controllers, guns):
                 pad_index = nplayer + 1
             pad_num = "Pad{}".format(pad_index)
             sdl_num = "SDL-" + "{}".format(pad.index)
-            
+
             if not pcsx2INIConfig.has_section(pad_num):
                 pcsx2INIConfig.add_section(pad_num)
 

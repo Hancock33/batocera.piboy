@@ -1,8 +1,8 @@
 diff --git a/deps/switchres/custom_video_drmkms.cpp b/deps/switchres/custom_video_drmkms.cpp
-index f71c49ca1d..7d015491c5 100755
+index 93019484f0..f72565b2cb 100755
 --- a/deps/switchres/custom_video_drmkms.cpp
 +++ b/deps/switchres/custom_video_drmkms.cpp
-@@ -549,12 +549,12 @@ bool drmkms_timing::init()
+@@ -563,12 +563,12 @@ bool drmkms_timing::init()
  		log_verbose("DRM/KMS: <%d> (init) version %d.%d.%d type %s\n", m_id, version->version_major, version->version_minor, version->version_patchlevel, version->name);
  		drmFreeVersion(version);
  

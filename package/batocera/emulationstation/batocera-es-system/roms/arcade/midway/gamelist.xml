@@ -33,8 +33,8 @@
 	<game id="40748" source="ScreenScraper.fr">
 		<path>./cshift.zip</path>
 		<name>Chicken Shift</name>
-		<desc>An addictive puzzle game in which the object is to guide eggs through a maze of egg-runs and guide them safely to the basket at the bottom of the screen. 
- 
+		<desc>An addictive puzzle game in which the object is to guide eggs through a maze of egg-runs and guide them safely to the basket at the bottom of the screen.
+
 This is achieved by switching red and blue pipes to face the left or right-hand side at exactly the right moment. Players must manipulate different pipes on BOTH halves of the screen at the same time, making for demanding and rewarding gameplay.</desc>
 		<rating>0.7</rating>
 		<releasedate>19840101T000000</releasedate>
@@ -48,15 +48,15 @@ This is achieved by switching red and blue pipes to face the left or right-hand 
 	<game id="39884" source="ScreenScraper.fr">
 		<path>./280zzzap.zip</path>
 		<name>Datsun 280 Zzzap</name>
-		<desc>Thrilling action matches skills against tight bends... 
-fast straights... S-curves &amp; more for real driving excitement! 
- 
-Realistic Engine, Crash &amp; Accelerator Sound Effects 
-3-Dimensional Driving Game with HIgh &amp; Low Gear Shift 
-Constantly Changing Race Course 
-High Score of the Day Feature 
-Adjustable Extended PLay 
-Adjustable Time Control 
+		<desc>Thrilling action matches skills against tight bends...
+fast straights... S-curves &amp; more for real driving excitement!
+
+Realistic Engine, Crash &amp; Accelerator Sound Effects
+3-Dimensional Driving Game with HIgh &amp; Low Gear Shift
+Constantly Changing Race Course
+High Score of the Day Feature
+Adjustable Extended PLay
+Adjustable Time Control
 Proven Midway Micro Processor Logic Cards</desc>
 		<rating>0.5</rating>
 		<releasedate>19760101T000000</releasedate>
@@ -95,16 +95,16 @@ Proven Midway Micro Processor Logic Cards</desc>
 	<game id="40969" source="ScreenScraper.fr">
 		<path>./domino.zip</path>
 		<name>Domino Man</name>
-		<desc>The player controls Domino Man, a bespectacled, moustachioed artist who must set up a chain of giant dominoes across the screen, to form a chain of dominoes which can then be toppled. 
- 
-The dominoes must be placed on sites marked by black spots, achieved by simply running over each spot. Once all of the spots are covered with a domino, the chain is complete. The player will then have the choice of either knocking them all down to clear the level, or simply wait for a few seconds to continue to the next screen, in hope of completing the chain on THAT level, and so on. In this way, the player can set up several chains and knock them all down in one fell swoop, earning many bonus points in the process. Multiple chains are, of course, very difficult to achieve. 
- 
-Domino Man's progress is hampered by a neighborhood bully who walks onto the screen and tries to knock over the first dominoes he comes across. The player must either try to complete and topple the chain of dominoes before the bully knocks them over, or hit the bully with a domino; causing the bully's trousers to fall down and disabling him for a few seconds. A killer bee also appears, and if it manages to sting the player, a life is lost. A bag lady and a boy pushing a shopping cart wander blindly around the levels, occasionally knocking over some of the dominoes. Domino Man can hit them, however, causing them to change direction. 
- 
-Once a game is over, a poem is displayed on-screen to evaluate the player's performance on the game. For example: 
-Roses are red 
-Or so goes the verse 
-You set up fifty-two 
+		<desc>The player controls Domino Man, a bespectacled, moustachioed artist who must set up a chain of giant dominoes across the screen, to form a chain of dominoes which can then be toppled.
+
+The dominoes must be placed on sites marked by black spots, achieved by simply running over each spot. Once all of the spots are covered with a domino, the chain is complete. The player will then have the choice of either knocking them all down to clear the level, or simply wait for a few seconds to continue to the next screen, in hope of completing the chain on THAT level, and so on. In this way, the player can set up several chains and knock them all down in one fell swoop, earning many bonus points in the process. Multiple chains are, of course, very difficult to achieve.
+
+Domino Man's progress is hampered by a neighborhood bully who walks onto the screen and tries to knock over the first dominoes he comes across. The player must either try to complete and topple the chain of dominoes before the bully knocks them over, or hit the bully with a domino; causing the bully's trousers to fall down and disabling him for a few seconds. A killer bee also appears, and if it manages to sting the player, a life is lost. A bag lady and a boy pushing a shopping cart wander blindly around the levels, occasionally knocking over some of the dominoes. Domino Man can hit them, however, causing them to change direction.
+
+Once a game is over, a poem is displayed on-screen to evaluate the player's performance on the game. For example:
+Roses are red
+Or so goes the verse
+You set up fifty-two
 You could have done worse.</desc>
 		<rating>0.7</rating>
 		<releasedate>19820101T000000</releasedate>
@@ -157,14 +157,14 @@ You could have done worse.</desc>
 	<game id="41496" source="ScreenScraper.fr">
 		<path>./gorf.zip</path>
 		<name>Gorf</name>
-		<desc>The player's goal is to defeat the Gorfian Empire and safeguard the future of mankind. Gorf is a single screen shoot-em-up in the classic "Space Invaders" mould, the prime difference being that Gorf offers five distinct levels of shooting action. The levels are as follows:  
- 
-Mission 1 - Astro Battles: The first mission is more or less a straight clone of "Space Invaders", set against a sky-blue background. The player is protected by a glittering parabolic force field, which is gradually worn away by enemy projectiles. The force field also works in BOTH directions, and therefore must momentarily deactivate in order for the player's ship to fire out. To advance to the next mission, the player must destroy all the invaders.  
-Mission 2 - Laser Attack: The other missions are all set in space. In this mission, the player is faced with two formations each made up of five enemies. The formations are cross-shaped, and at the bottom of each formation is a single laser gun. The laser guns fire a long, dangerous yellow beam at regular intervals. At the same time, the other enemies may break formation and attempt to dive-bomb the player. Destroying a laser gun causes the corresponding formation to break apart. To advance to the next mission, the player must destroy all the enemies.  
-Mission 3 - Galaxians: This mission is a clone of "Galaxian". The player is faced with a swarm of galaxians, which continually dive-bomb and shower the player with deadly projectiles. To advance to the next mission, the player must destroy all the galaxians.  
-Mission 4 - Space Warp: A wormhole is situated in the middle of the screen out of which enemies ships emerge, one at a time, and spiral outward at increasing speed; whilst growing larger and flinging fireballs at the player. The Space Warp level would have an influence on Konami's superb "Gyruss", released two years later. To advance to the next mission, the player must survive a number of these enemies.  
-Mission 5, Flag Ship: The final mission is a one-on-one confrontation with the alien Flag Ship itself. The Flag Ship is one of the earliest examples of the 'boss' enemy in mainstream video games. It is equipped with its own force field, through which the player must blast in order to get a clean shot on the ship. It is also armed with a powerful fireball weapon. The player's weapon has a minor effect on the Flag Ship's hull, and can only blast off tiny pieces of it. This adds to the player's problems, as stray pieces of hull can destroy their ship. These pieces can be destroyed with a single shot. The only way to destroy the Flag Ship is to hit the glowing reactor at the heart of the ship, either by first blasting away the hull to expose it, or by managing to fire a shot directly into the tiny vent that leads to the reactor.  
- 
+		<desc>The player's goal is to defeat the Gorfian Empire and safeguard the future of mankind. Gorf is a single screen shoot-em-up in the classic "Space Invaders" mould, the prime difference being that Gorf offers five distinct levels of shooting action. The levels are as follows:
+
+Mission 1 - Astro Battles: The first mission is more or less a straight clone of "Space Invaders", set against a sky-blue background. The player is protected by a glittering parabolic force field, which is gradually worn away by enemy projectiles. The force field also works in BOTH directions, and therefore must momentarily deactivate in order for the player's ship to fire out. To advance to the next mission, the player must destroy all the invaders.
+Mission 2 - Laser Attack: The other missions are all set in space. In this mission, the player is faced with two formations each made up of five enemies. The formations are cross-shaped, and at the bottom of each formation is a single laser gun. The laser guns fire a long, dangerous yellow beam at regular intervals. At the same time, the other enemies may break formation and attempt to dive-bomb the player. Destroying a laser gun causes the corresponding formation to break apart. To advance to the next mission, the player must destroy all the enemies.
+Mission 3 - Galaxians: This mission is a clone of "Galaxian". The player is faced with a swarm of galaxians, which continually dive-bomb and shower the player with deadly projectiles. To advance to the next mission, the player must destroy all the galaxians.
+Mission 4 - Space Warp: A wormhole is situated in the middle of the screen out of which enemies ships emerge, one at a time, and spiral outward at increasing speed; whilst growing larger and flinging fireballs at the player. The Space Warp level would have an influence on Konami's superb "Gyruss", released two years later. To advance to the next mission, the player must survive a number of these enemies.
+Mission 5, Flag Ship: The final mission is a one-on-one confrontation with the alien Flag Ship itself. The Flag Ship is one of the earliest examples of the 'boss' enemy in mainstream video games. It is equipped with its own force field, through which the player must blast in order to get a clean shot on the ship. It is also armed with a powerful fireball weapon. The player's weapon has a minor effect on the Flag Ship's hull, and can only blast off tiny pieces of it. This adds to the player's problems, as stray pieces of hull can destroy their ship. These pieces can be destroyed with a single shot. The only way to destroy the Flag Ship is to hit the glowing reactor at the heart of the ship, either by first blasting away the hull to expose it, or by managing to fire a shot directly into the tiny vent that leads to the reactor.
+
 Each time the Flag Ship is destroyed, the player advances in rank. Initially, the player begins with the rank of Space Cadet, before moving on to Space Captain, Space Colonel, Space General, Space Warrior, and finally Space Avenger. The player's spaceship is equipped with a Quark Laser which allows the player to cancel a poorly aimed shot and fire another shot.</desc>
 		<rating>0.9</rating>
 		<releasedate>19810101T000000</releasedate>
@@ -239,11 +239,11 @@ Each time the Flag Ship is destroyed, the player advances in rank. Initially, th
 	<game id="41909" source="ScreenScraper.fr">
 		<path>./journey.zip</path>
 		<name>Journey</name>
-		<desc>The Play mode begins when either the 1-PLAYER or the 2-PLAYER START button is pressed. The Play mode ends when all of your performers have been eliminated. When this happens, GAME OVER is written across the center of the monitor screen. 
- 
-ON THE SCREEN: The game is made up of groups of 5 sequences for each rack. When play begins, all the performers run onto the screen and jump aboard their transport ship, the Scarab. The Scarab then lifts off and heads for a point in space that is at the center of a grouping of five planets. (The song that is played in the background during this scene is 'Lights'.) Each group member's instrument is on a different planet. 
- 
-At the beginning of each sequence, when a 2-PLAYER game has been selected, the game tells which player is up. 
+		<desc>The Play mode begins when either the 1-PLAYER or the 2-PLAYER START button is pressed. The Play mode ends when all of your performers have been eliminated. When this happens, GAME OVER is written across the center of the monitor screen.
+
+ON THE SCREEN: The game is made up of groups of 5 sequences for each rack. When play begins, all the performers run onto the screen and jump aboard their transport ship, the Scarab. The Scarab then lifts off and heads for a point in space that is at the center of a grouping of five planets. (The song that is played in the background during this scene is 'Lights'.) Each group member's instrument is on a different planet.
+
+At the beginning of each sequence, when a 2-PLAYER game has been selected, the game tells which player is up.
 </desc>
 		<rating>0.8</rating>
 		<releasedate>19830101T000000</releasedate>
@@ -257,14 +257,14 @@ At the beginning of each sequence, when a 2-PLAYER game has been selected, the g
 	<game id="41910" source="ScreenScraper.fr">
 		<path>./joust.zip</path>
 		<name>Joust (White/Green label)</name>
-		<desc>Joust is a platform-based action combat game for one or two-players (with the two-player game offering either team-up OR head-to-head combat; the first time arcade gamers were given this choice) in which each player controls a knight riding on the back of a flying ostrich.  
- 
-The object of the game is to progress through platform-based levels by defeating groups of buzzard-riding enemy knights. This is achieved by 'jousting'; both enemy and player knights carry a lance and must fly around the level (actioned by repeatedly hitting the 'Flap' button) trying to oust rival knights from their steeds by ramming them with the lance. This can only be achieved if the attacking rider is above the enemy knight when the lance connects. A collision of equal elevations results in the two knights bouncing off each other, but if a player is lower than their enemy at the instant of contact, they themselves will be knocked from their steed and lose a life.  
- 
-A defeated enemy will turn into an egg that falls to the bottom of the screen. This must be quickly collected by players as if the egg lands on a platform and isn't retrieved in time, it will eventually hatch into another enemy knight that must be defeated again.  
- 
-Joust features three different types of enemy knights - Bounder, Hunter, and Shadow Lord - with each earning players different points values when defeated. A pterodactyl will appear after a predetermined time to hunt the players.  
- 
+		<desc>Joust is a platform-based action combat game for one or two-players (with the two-player game offering either team-up OR head-to-head combat; the first time arcade gamers were given this choice) in which each player controls a knight riding on the back of a flying ostrich.
+
+The object of the game is to progress through platform-based levels by defeating groups of buzzard-riding enemy knights. This is achieved by 'jousting'; both enemy and player knights carry a lance and must fly around the level (actioned by repeatedly hitting the 'Flap' button) trying to oust rival knights from their steeds by ramming them with the lance. This can only be achieved if the attacking rider is above the enemy knight when the lance connects. A collision of equal elevations results in the two knights bouncing off each other, but if a player is lower than their enemy at the instant of contact, they themselves will be knocked from their steed and lose a life.
+
+A defeated enemy will turn into an egg that falls to the bottom of the screen. This must be quickly collected by players as if the egg lands on a platform and isn't retrieved in time, it will eventually hatch into another enemy knight that must be defeated again.
+
+Joust features three different types of enemy knights - Bounder, Hunter, and Shadow Lord - with each earning players different points values when defeated. A pterodactyl will appear after a predetermined time to hunt the players.
+
 Accurately navigating the player Knights can be initially quite difficult as control is strongly affected by both gravity and inertia. Players can lose a life by either being knocked from their steed by an enemy knight, or by falling into the lava pit at the bottom of each level.</desc>
 		<rating>0.8</rating>
 		<releasedate>19820101T000000</releasedate>
@@ -278,14 +278,14 @@ Accurately navigating the player Knights can be initially quite difficult as con
 	<game id="41911" source="ScreenScraper.fr">
 		<path>./joust2.zip</path>
 		<name>Joust 2: Survival of the Fittest (revision 2)</name>
-		<desc>Joust 2 - Survival of the Fittest © 1986 Williams Electronics, Incorporated. 
- 
-On the planet of the floating cliffs, society calls upon its wing-mounted Gladiators to solve conflicts. You, the Gladiator, must enter the fray, participating in a challenge of honor, a Joust... where only the fittest survive!  
- 
-The legend of "Joust" continues in Joust 2. Players must solve the puzzle of what strategy will be most effective in dealing with the buzzards and other winged enemies on each of Joust 2's 35 different backgrounds.  
- 
-The object of Joust 2 is to defeat all winged enemies by colliding with them. To survive a collision (joust), the Gladiator's lance must be higher.  
- 
+		<desc>Joust 2 - Survival of the Fittest © 1986 Williams Electronics, Incorporated.
+
+On the planet of the floating cliffs, society calls upon its wing-mounted Gladiators to solve conflicts. You, the Gladiator, must enter the fray, participating in a challenge of honor, a Joust... where only the fittest survive!
+
+The legend of "Joust" continues in Joust 2. Players must solve the puzzle of what strategy will be most effective in dealing with the buzzards and other winged enemies on each of Joust 2's 35 different backgrounds.
+
+The object of Joust 2 is to defeat all winged enemies by colliding with them. To survive a collision (joust), the Gladiator's lance must be higher.
+
 </desc>
 		<rating>0.7</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -299,14 +299,14 @@ The object of Joust 2 is to defeat all winged enemies by colliding with them. To
 	<game id="41919" source="ScreenScraper.fr">
 		<path>./jrpacman.zip</path>
 		<name>Jr. Pac-Man (11/9/83)</name>
-		<desc>One of many sequels to the legendary "Pac-Man", Jr. Pac-Man features the character of Pac-Man's son. For the first time in the series' history, side-scrolling mazes were introduced, with each maze being two screens wide.  
- 
-This time, the mazes have no exit tunnels through which players can make an escape. The bonus items that appear move around the maze and are now something of a mixed blessing, as not only will they destroy any Power Pills they come across, but they will also turn any normal dots they pass over into large dots that slow the player's movements considerably, but are worth more points than normal dots if eaten by the player. Any mutated dots in the maze will disappear if the player loses a life.  
- 
-The Pac character is once again pursued by four ghosts (Blinky, Pinky, Inky and Tim) in his quest to eat all of the dots in each maze. And, as before, numerous Power Pills litter the mazes that, when eaten, allow Jr. to eat the pursuing ghosts.  
- 
-As with previous "Pac-Man" games, intermissions are featured between certain levels. Jr. Pac-Man's intermissions are episodic in nature, like those found in "Ms. Pac-Man". Jr. Pac-Man's story tells of the blossoming love between Jr. Pac-Man and a small ghost named Yum-Yum.  
- 
+		<desc>One of many sequels to the legendary "Pac-Man", Jr. Pac-Man features the character of Pac-Man's son. For the first time in the series' history, side-scrolling mazes were introduced, with each maze being two screens wide.
+
+This time, the mazes have no exit tunnels through which players can make an escape. The bonus items that appear move around the maze and are now something of a mixed blessing, as not only will they destroy any Power Pills they come across, but they will also turn any normal dots they pass over into large dots that slow the player's movements considerably, but are worth more points than normal dots if eaten by the player. Any mutated dots in the maze will disappear if the player loses a life.
+
+The Pac character is once again pursued by four ghosts (Blinky, Pinky, Inky and Tim) in his quest to eat all of the dots in each maze. And, as before, numerous Power Pills litter the mazes that, when eaten, allow Jr. to eat the pursuing ghosts.
+
+As with previous "Pac-Man" games, intermissions are featured between certain levels. Jr. Pac-Man's intermissions are episodic in nature, like those found in "Ms. Pac-Man". Jr. Pac-Man's story tells of the blossoming love between Jr. Pac-Man and a small ghost named Yum-Yum.
+
 </desc>
 		<rating>0.9</rating>
 		<releasedate>19830101T000000</releasedate>
@@ -424,8 +424,8 @@ As with previous "Pac-Man" games, intermissions are featured between certain lev
 	<game id="78876" source="ScreenScraper.fr">
 		<path>./mayday.zip</path>
 		<name>Mayday!! (set 1)</name>
-		<desc>The player's ship flies over a horizontally scrolling planet surface. Waves of enemy ships attack and must be destroyed for the player to advance to the next planet. The Mayday button slows the game down for five seconds. The player's ship fires both forward and back. 
- 
+		<desc>The player's ship flies over a horizontally scrolling planet surface. Waves of enemy ships attack and must be destroyed for the player to advance to the next planet. The Mayday button slows the game down for five seconds. The player's ship fires both forward and back.
+
 The game itself is not a direct copy of Defender. It has an 8-Way joystick, two fire buttons (forward and backwards) and a Mayday button. The Mayday button slows everything on-screen down for a few seconds and makes the screen flash. Although it only scrolls from right to left, you can speed up and slow down your ship's forward momentum. The first wave that is over the sea of submarines. The submarines, which look a lot like Baiters in Defender, shoot along the bottom of the screen and fire up at the player's ship. The player's shots are aimed diagonally down at the waves. The second wave is flying through a cavern with swarms of aliens flying and bouncing from right to left towards the player. Unlike Defender, you can crash into the cavern walls. The third wave is set over a gently rolling planet surface. Later waves follow a similar pattern.</desc>
 		<rating>0.3</rating>
 		<releasedate>19800101T000000</releasedate>
@@ -452,17 +452,17 @@ The game itself is not a direct copy of Defender. It has an 8-Way joystick, two 
 	<game id="78947" source="ScreenScraper.fr">
 		<path>./mk.zip</path>
 		<name>Mortal Kombat (rev 5.0 T-Unit 03/19/93)</name>
-		<desc>Mortal Kombat, first in the Mortal Kombat series, is a 1-on-1 fighting game featuring a cast of seven different characters. Mortal Kombat took ideas from Capcom's seminal Street Fighter II, such as the game's special moves and projectiles. It also introduced a cast of photo-realistic digitized fighters for players to fight either as or against.  
- 
-Mortal Kombat characters list: 
-JOHNNY CAGE 
-KANO 
-RAIDEN 
-LIU KANG 
-SCORPION 
-SUB-ZERO 
-SONYA BLADE 
- 
+		<desc>Mortal Kombat, first in the Mortal Kombat series, is a 1-on-1 fighting game featuring a cast of seven different characters. Mortal Kombat took ideas from Capcom's seminal Street Fighter II, such as the game's special moves and projectiles. It also introduced a cast of photo-realistic digitized fighters for players to fight either as or against.
+
+Mortal Kombat characters list:
+JOHNNY CAGE
+KANO
+RAIDEN
+LIU KANG
+SCORPION
+SUB-ZERO
+SONYA BLADE
+
 Battles are fought over the best of three rounds. At the end of a battle, a voice instructs the winner to 'Finish Him/Her!' and players have only a couple of seconds to try and execute their character's 'fatality', which sees the winner killing the loser in a spectacular and grisly fashion.</desc>
 		<rating>0.9</rating>
 		<releasedate>19921008T000000</releasedate>
@@ -502,10 +502,10 @@ Battles are fought over the best of three rounds. At the end of a battle, a voic
 	<game id="46396" source="ScreenScraper.fr">
 		<path>./omegrace.zip</path>
 		<name>Omega Race (set 1)</name>
-		<desc>Omega Race is a vector-based single-screen shoot-em-up set in the year 2003, in which the Omegan system has developed a way of training its warriors to protect their star colonies against invading alien androids. Players must pilot an Omegan Space Fighter to engage and destroy the aliens and the mines they have planted.  
- 
-The Omegan Fighter can rotate through 360 degrees and thrust to move forwards, it's also armed with forward-firing lasers with which to shoot the enemy ships. Battles take place in an enclosed area and when the player's ship reaches the edge of the screen it bounces off an invisible barrier, although the barrier briefly appears when hit or shot.  
- 
+		<desc>Omega Race is a vector-based single-screen shoot-em-up set in the year 2003, in which the Omegan system has developed a way of training its warriors to protect their star colonies against invading alien androids. Players must pilot an Omegan Space Fighter to engage and destroy the aliens and the mines they have planted.
+
+The Omegan Fighter can rotate through 360 degrees and thrust to move forwards, it's also armed with forward-firing lasers with which to shoot the enemy ships. Battles take place in an enclosed area and when the player's ship reaches the edge of the screen it bounces off an invisible barrier, although the barrier briefly appears when hit or shot.
+
 As well as firing lasers at the player, some enemy ships also drop mines that must be shot or avoided. As players progress through the waves, the number of enemy attackers and their aggression increases.</desc>
 		<rating>0.9</rating>
 		<releasedate>19810101T000000</releasedate>
@@ -557,7 +557,7 @@ As well as firing lasers at the player, some enemy ships also drop mines that mu
 	<game id="42490" source="ScreenScraper.fr">
 		<path>./powerdrv.zip</path>
 		<name>Power Drive</name>
-		<desc>Up to three players choose to be one of three monster truck characters, each indicated by a different name and color: Daddy's Girl (red), Captain Crush (yellow) or Sheriff Perry (blue). If only one or two people are playing the game, there will be one or two black, computer-controlled monster trucks called Black Lightning who will compete in the race. Players repeatedly press both of the Tire buttons to propel their monster truck and use the "Wheelie" lever to make the truck do a wheelie to help overcome obstacles. 
+		<desc>Up to three players choose to be one of three monster truck characters, each indicated by a different name and color: Daddy's Girl (red), Captain Crush (yellow) or Sheriff Perry (blue). If only one or two people are playing the game, there will be one or two black, computer-controlled monster trucks called Black Lightning who will compete in the race. Players repeatedly press both of the Tire buttons to propel their monster truck and use the "Wheelie" lever to make the truck do a wheelie to help overcome obstacles.
 Some of the races on this game include speed rallies, car crushes, high jumps, sled pulls, etc. The game will continue if you manage to make to first place in one of the races during the play. If you only get second place, third place or fail to finish the race three times, the game will end. However, continuous play is available.</desc>
 		<rating>0.7</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -584,23 +584,23 @@ Some of the races on this game include speed rallies, car crushes, high jumps, s
 	<game id="42242" source="ScreenScraper.fr">
 		<path>./rampage.zip</path>
 		<name>Rampage (Rev 3, 8/27/86)</name>
-		<desc>Rampage is a classic B-movie inspired smash-em-up in which up to three players take on the roles of three mutated monsters - George the giant ape, Lizzie the giant lizard and Ralph the giant wolf - who move from city to city destroying skyscrapers and vehicles, while eating or killing any people that get in their way.  
- 
-The monsters' health can be damaged in a number of ways: by being shot by National Guardsmen, by being hit by another monster, by falling from a building, by being hit by police cars or tanks, by going underwater, by being struck by lightning, or by eating something bad, such as dynamite. Health is replenished by eating food found in damaged buildings.  
- 
-If the players' health gauge diminishes completely, the monsters will revert back to their original human form and walk sideways off the screen. Rampage has a "buy back in" option, however; if players chose to continue the game before the human figure leaves the play area, the game will continue from that stage.  
- 
-Rampage is set over the course of 128 days in cities across North America. The game starts in Peoria, Illinois and ends in Plano, Illinois. In Plano, players receive a mega vitamin bonus which heals all the monsters and provides a large point bonus. After this, the cycle of cities repeats five times. After 768 days, the game resets back to Day One.  
- 
-Examples of bonuses and hazards found inside damaged buildings:  
-Food: Milk, Turkey, Hot Toast, Fruit  
-Bonus: Flower Pot, TV Set, Money Bag  
-Hazard: Cactus, Poison, Toaster  
- 
-Examples of bonuses and hazards found outside damaged buildings:  
-Bonus: Auto (or Truck), Commuter Train, Person in Manhole  
-Hazard: National Guard Tank, Police Car, Storm Cloud  
- 
+		<desc>Rampage is a classic B-movie inspired smash-em-up in which up to three players take on the roles of three mutated monsters - George the giant ape, Lizzie the giant lizard and Ralph the giant wolf - who move from city to city destroying skyscrapers and vehicles, while eating or killing any people that get in their way.
+
+The monsters' health can be damaged in a number of ways: by being shot by National Guardsmen, by being hit by another monster, by falling from a building, by being hit by police cars or tanks, by going underwater, by being struck by lightning, or by eating something bad, such as dynamite. Health is replenished by eating food found in damaged buildings.
+
+If the players' health gauge diminishes completely, the monsters will revert back to their original human form and walk sideways off the screen. Rampage has a "buy back in" option, however; if players chose to continue the game before the human figure leaves the play area, the game will continue from that stage.
+
+Rampage is set over the course of 128 days in cities across North America. The game starts in Peoria, Illinois and ends in Plano, Illinois. In Plano, players receive a mega vitamin bonus which heals all the monsters and provides a large point bonus. After this, the cycle of cities repeats five times. After 768 days, the game resets back to Day One.
+
+Examples of bonuses and hazards found inside damaged buildings:
+Food: Milk, Turkey, Hot Toast, Fruit
+Bonus: Flower Pot, TV Set, Money Bag
+Hazard: Cactus, Poison, Toaster
+
+Examples of bonuses and hazards found outside damaged buildings:
+Bonus: Auto (or Truck), Commuter Train, Person in Manhole
+Hazard: National Guard Tank, Police Car, Storm Cloud
+
 Further bonus points can be earned by grabbing a fleeing 'Townie' from a building window. This has two benefits: 1) While holding the Townie, all swat team members disappear from the building windows and 2) accumulating points are scored during the time the Townie is held.</desc>
 		<rating>0.9</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -629,10 +629,10 @@ Further bonus points can be earned by grabbing a fleeing 'Townie' from a buildin
 	<game id="42789" source="ScreenScraper.fr">
 		<path>./robby.zip</path>
 		<name>Adventures Of Robby Roto!, The</name>
-		<desc>When playing this game. YOU are ROTO's mentor. He takes his directions ONLY from YOU and will do your bidding exclusively. YOU determine the strategies he will use to defeat the evil monster VOLTAR who has invaded the Earth, stealing all types of treasures and burying them deep within the earth. VOLTAR also takes hostages and seals them in vaults deep within the earth. 
- 
-There is only one way to save the hostages and recover the stolen treasures. We must send in ROTO. He will follow VOLTAR right into his own home tunnels to rescue the hostages and recover the stolen treasures VOLTAR has salted away. 
- 
+		<desc>When playing this game. YOU are ROTO's mentor. He takes his directions ONLY from YOU and will do your bidding exclusively. YOU determine the strategies he will use to defeat the evil monster VOLTAR who has invaded the Earth, stealing all types of treasures and burying them deep within the earth. VOLTAR also takes hostages and seals them in vaults deep within the earth.
+
+There is only one way to save the hostages and recover the stolen treasures. We must send in ROTO. He will follow VOLTAR right into his own home tunnels to rescue the hostages and recover the stolen treasures VOLTAR has salted away.
+
 To say the least, this makes VOLTAR more than just a little bit upset with ROTO. To help protect his stolen treasures and kidnapped hostages. VOLTAR has developed a breed of giant SPIDER that can sense ROTO's location and that can also travel through solid earth. These SPIDERS attempt to corner and capture ROTO. And to direct their hunt for ROTO, VOLTAR turns himself into a TROLL that can travel through solid earth.</desc>
 		<image>/userdata/roms/mame/images/robby.png</image>
 		<rating>0.5</rating>
@@ -662,18 +662,18 @@ To say the least, this makes VOLTAR more than just a little bit upset with ROTO.
 	<game id="40050" source="ScreenScraper.fr">
 		<path>./archrivl.zip</path>
 		<name>Arch Rivals (rev 4.0 6/29/89)</name>
-		<desc>Arch Rivals is a hilarious basketball game featuring customizing team names and colors. A full game consists of four quarters, with four minutes each. Each team has two players, and the objective of the game is to outscore the opponent until the final buzzer sounds.  
- 
-If the game results in a tie after four quarters, a sudden death overtime period is added, in which case the next basket to go in will win the game for the team who scored it. The overtime period is one minute long. A player can call for his teammate to pass him the ball or to shoot it.  
- 
-There are eight characters that the player can play as, each with a unique characteristic. They are:  
-Blade: A crowd pleaser.  
-Hammer: Rebound king.  
-Lewis: Top shooter.  
-Mohawk: Tough &amp; mean.  
-Moose: A real champ.  
-Reggie: All-American.  
-Tyrone: Defensive giant.  
+		<desc>Arch Rivals is a hilarious basketball game featuring customizing team names and colors. A full game consists of four quarters, with four minutes each. Each team has two players, and the objective of the game is to outscore the opponent until the final buzzer sounds.
+
+If the game results in a tie after four quarters, a sudden death overtime period is added, in which case the next basket to go in will win the game for the team who scored it. The overtime period is one minute long. A player can call for his teammate to pass him the ball or to shoot it.
+
+There are eight characters that the player can play as, each with a unique characteristic. They are:
+Blade: A crowd pleaser.
+Hammer: Rebound king.
+Lewis: Top shooter.
+Mohawk: Tough &amp; mean.
+Moose: A real champ.
+Reggie: All-American.
+Tyrone: Defensive giant.
 Vinnie: A great player.</desc>
 		<image>/userdata/roms/mame/images/archrivl.png</image>
 		<rating>0.5</rating>
@@ -704,14 +704,14 @@ Vinnie: A great player.</desc>
 	<game id="40254" source="ScreenScraper.fr">
 		<path>./blaster.zip</path>
 		<name>Blaster</name>
-		<desc>The player takes control of a spaceship and must fight against wave after wave of enemy fighters, while trying to rescue the stranded astronauts that represent the last surviving remnants of the human race. Enemies attack the player both with weapons, and by making 'suicide runs' at the player's ship. The game consists of eleven different levels, nine of which are repeated, bringing the total number of levels to 20.  
- 
-The levels are: Planetoid Waves, Robot Grid Waves, Saucerland Waves, Vampire Waves, Time Tunnel Waves, Outer Space Waves, Enduro Waves, Cat World Waves, and Mastermind Waves (there are two of each of these).  
- 
-There are also two unique waves that occur only once, they are Armageddon and Paradise.  
- 
-Players can select their starting wave at the start of the game; choosing from Planetoids, Robot Grid, Saucerland, and Vampires. During the game, players must be careful to NOT shoot the human astronauts that drift through the levels. These must be rescued by 'running' into them.  
- 
+		<desc>The player takes control of a spaceship and must fight against wave after wave of enemy fighters, while trying to rescue the stranded astronauts that represent the last surviving remnants of the human race. Enemies attack the player both with weapons, and by making 'suicide runs' at the player's ship. The game consists of eleven different levels, nine of which are repeated, bringing the total number of levels to 20.
+
+The levels are: Planetoid Waves, Robot Grid Waves, Saucerland Waves, Vampire Waves, Time Tunnel Waves, Outer Space Waves, Enduro Waves, Cat World Waves, and Mastermind Waves (there are two of each of these).
+
+There are also two unique waves that occur only once, they are Armageddon and Paradise.
+
+Players can select their starting wave at the start of the game; choosing from Planetoids, Robot Grid, Saucerland, and Vampires. During the game, players must be careful to NOT shoot the human astronauts that drift through the levels. These must be rescued by 'running' into them.
+
 Despite the presence of an energy meter, the player can take exactly three hits before he or she dies. Upon death, the window of the player's virtual cockpit breaks and one of the player's lives is lost. Blaster has a 'Continue' option but this can only be used once.</desc>
 		<image>/userdata/roms/mame/images/blaster.png</image>
 		<rating>0.7</rating>
@@ -742,8 +742,8 @@ Despite the presence of an energy meter, the player can take exactly three hits 
 	<game id="40338" source="ScreenScraper.fr">
 		<path>./boothill.zip</path>
 		<name>Boot Hill</name>
-		<desc>A classic 1 or 2-player western gunfight game, featuring a monochrome display overlaid via mirror onto back-lit plastic background. Each player uses a small joystick to move their cowboy up and down the play area, while a second, much larger joystick is used to aim the pistol and shoot - this larger stick also has a trigger button. The game's single goal is simply to shoot the other player, who is situated on the opposite side of the game area. Wagons and cacti litter the middle of the play area, providing temporary cover from the opponent's gunfire (while, of course, providing the opponent with cover from the PLAYER'S shots). These obstacles slowly disintegrate as they are shot; much like the shields in Taito's "Space Invaders". 
- 
+		<desc>A classic 1 or 2-player western gunfight game, featuring a monochrome display overlaid via mirror onto back-lit plastic background. Each player uses a small joystick to move their cowboy up and down the play area, while a second, much larger joystick is used to aim the pistol and shoot - this larger stick also has a trigger button. The game's single goal is simply to shoot the other player, who is situated on the opposite side of the game area. Wagons and cacti litter the middle of the play area, providing temporary cover from the opponent's gunfire (while, of course, providing the opponent with cover from the PLAYER'S shots). These obstacles slowly disintegrate as they are shot; much like the shields in Taito's "Space Invaders".
+
 Boot Hill is time-based NOT life based, with the factory default set at ninety seconds. This is, of course, operator adjustable via the dip settings. The computer opponent is quite easy to beat with a little practice, but a human opponent provides a much stronger challenge.</desc>
 		<image>/userdata/roms/mame/images/boothill.png</image>
 		<rating>0.3</rating>
@@ -791,14 +791,14 @@ Space Invaders II allowed for 2-player simultaneous competitive play (although b
 	<game id="78948" source="ScreenScraper.fr">
 		<path>./mk2.zip</path>
 		<name>Mortal Kombat 2 (rev L3.1)</name>
-		<desc>Mortal Kombat II is a direct sequel to the 1992 original featuring new fighters (increasing the character roster from 7 to 12) and improved graphics.  
- 
-As with its predecessor, MKII's matches are divided into rounds, with victory awarded to the first player to win two rounds. At the point of defeat, the losing fighter will become dazed and the winner is given the opportunity to execute a 'finishing move'.  
- 
-Some of the standard fighting moves (moves shared by all characters) have now been expanded or enhanced. A crouching punch has been added and the 'roundhouse kick' is more powerful and now knocks opponents across the screen. Also, the difference in hit boxes between high and low kicks is now more marked.  
- 
-Additionally, returning characters gain new special moves and MKII marks the first appearence of multiple Fatalities - as well as additional, non-lethal finishing moves - in the series. In addition to the Fatalities of its predecessor, MKII offers 'Babalities' (turning a defeated opponent into a crying baby), 'Friendships' (a non-malicious interaction, such as dancing or giving a gift to the defeated opponent) and stage-specific Fatalities (the winner uppercutting their opponent into an abyss below, spikes above, or a pool of acid in the background).  
- 
+		<desc>Mortal Kombat II is a direct sequel to the 1992 original featuring new fighters (increasing the character roster from 7 to 12) and improved graphics.
+
+As with its predecessor, MKII's matches are divided into rounds, with victory awarded to the first player to win two rounds. At the point of defeat, the losing fighter will become dazed and the winner is given the opportunity to execute a 'finishing move'.
+
+Some of the standard fighting moves (moves shared by all characters) have now been expanded or enhanced. A crouching punch has been added and the 'roundhouse kick' is more powerful and now knocks opponents across the screen. Also, the difference in hit boxes between high and low kicks is now more marked.
+
+Additionally, returning characters gain new special moves and MKII marks the first appearence of multiple Fatalities - as well as additional, non-lethal finishing moves - in the series. In addition to the Fatalities of its predecessor, MKII offers 'Babalities' (turning a defeated opponent into a crying baby), 'Friendships' (a non-malicious interaction, such as dancing or giving a gift to the defeated opponent) and stage-specific Fatalities (the winner uppercutting their opponent into an abyss below, spikes above, or a pool of acid in the background).
+
 Each character still shares generic attributes - speed, power, jump height and airtime - albeit with differing hit boxes. The sequel drops the points system of its prequel in favour of a consecutive win tally.</desc>
 		<image>/userdata/roms/mame/images/mk2.png</image>
 		<rating>0.8</rating>
@@ -829,12 +829,12 @@ Each character still shares generic attributes - speed, power, jump height and a
 	<game id="60558" source="ScreenScraper.fr">
 		<path>./mspacman.zip</path>
 		<name>Ms. Pac-Man</name>
-		<desc>In this, the first proper sequel to Namco's legendary pill eating maze game, players must once again run around a number of mazes, eating all of the pills that are scattered throughout. The ever-present ghosts (Blinky, Pinky, Inky and Sue) return to hamper the player's progress. The infamous 'Power Pills' are also present and correct, with four appearing in each maze.  
- 
-Namco introduced a number of changes and enhancements over the original game. The first difference is in the main character. For the first time in video-game history, the game's lead character was female. Ms. Pac-Man is almost identical to the original character with two main differences; she wears a bow in her 'hair', and is also wearing lipstick.  
- 
-Another change from the original is that the bonus fruit items are no longer static but now move randomly around the mazes.  
- 
+		<desc>In this, the first proper sequel to Namco's legendary pill eating maze game, players must once again run around a number of mazes, eating all of the pills that are scattered throughout. The ever-present ghosts (Blinky, Pinky, Inky and Sue) return to hamper the player's progress. The infamous 'Power Pills' are also present and correct, with four appearing in each maze.
+
+Namco introduced a number of changes and enhancements over the original game. The first difference is in the main character. For the first time in video-game history, the game's lead character was female. Ms. Pac-Man is almost identical to the original character with two main differences; she wears a bow in her 'hair', and is also wearing lipstick.
+
+Another change from the original is that the bonus fruit items are no longer static but now move randomly around the mazes.
+
 Ms Pac-Man features four different maze layouts, which alternate every two to four rounds:</desc>
 		<image>/userdata/roms/mame/images/mspacman.png</image>
 		<rating>0.9</rating>
@@ -864,8 +864,8 @@ Ms Pac-Man features four different maze layouts, which alternate every two to fo
 	<game id="60805" source="ScreenScraper.fr">
 		<path>./narc.zip</path>
 		<name>Narc (rev 7.00)</name>
-		<desc>NARC is a graphically violent one or two-player side-scrolling shoot-em-up in which players take on the role of "Narcs"; futuristic police officers whose duty it is to either arrest or kill drug dealers, junkies and attack dogs as players fight to crush the criminal empire known as K.R.A.K.  
- 
+		<desc>NARC is a graphically violent one or two-player side-scrolling shoot-em-up in which players take on the role of "Narcs"; futuristic police officers whose duty it is to either arrest or kill drug dealers, junkies and attack dogs as players fight to crush the criminal empire known as K.R.A.K.
+
 The Narcs have both machine guns and rocket launchers at their disposal and players can also pick up (confiscate) discarded drugs and money to earn extra points. These are totaled up at the end of each level. On many stages a special colour-specific 'Keycard' needs to be found before players can progress to the next section of the level.</desc>
 		<image>/userdata/roms/mame/images/narc.png</image>
 		<rating>0.5</rating>
@@ -956,8 +956,8 @@ The Narcs have both machine guns and rocket launchers at their disposal and play
 	<game id="42780" source="ScreenScraper.fr">
 		<path>./rmpgwt.zip</path>
 		<name>Rampage - World Tour (rev 1.3)</name>
-		<desc>A sequel to the 1986 original, Rampage World Tour once again has George, Lizzie, and Ralph bent on a trail of destruction. The 'World Tour' of the title refers to the fact that the action now takes place around the entire world, instead of just North America. Graphics are much improved and a kick button has been added to allow even more chaos. 
- 
+		<desc>A sequel to the 1986 original, Rampage World Tour once again has George, Lizzie, and Ralph bent on a trail of destruction. The 'World Tour' of the title refers to the fact that the action now takes place around the entire world, instead of just North America. Graphics are much improved and a kick button has been added to allow even more chaos.
+
 Hidden bonus items have also been added to the game; two examples are an item that allows any player character to transport to almost any location in the game instantly. A second gives the players more destructive power. Some stages have a vat of toxic chemicals that can mutate any player character into a huge purple bat-like creature called V.E.R.N (Violently Enraged Radioactive Nemesis) for the duration of the stage.</desc>
 		<image>/userdata/roms/mame/images/rmpgwt.png</image>
 		<rating>0.9</rating>
@@ -973,12 +973,12 @@ Hidden bonus items have also been added to the game; two examples are an item th
 	<game id="42795" source="ScreenScraper.fr">
 		<path>./robotron.zip</path>
 		<name>Robotron - 2084 (Solid Blue label)</name>
-		<desc>Set in the year 2084, Robotron is a single-screen shoot-em-up in which super-intelligent self-aware robots known as 'Robotrons' - designed and built to help mankind - have revolted against their creators and vowed to either reprogram the humans into Robotrons or, failing this, wipe-out the human race entirely.  
- 
-The player must destroy the robots and rescue the Earth's remaining human families. The player's only weapon is a multi-directional Anti-Robot Laser Gun. Used effectively, it will give players the power to destroy all the Robot waves, with the exception of the indestructible 'Hulk' unit.  
- 
-At the start of the attack wave, players will have three chances to wipe out the enemy and advance to the next wave. Every 25,000 points players are granted another chance to complete their mission.  
- 
+		<desc>Set in the year 2084, Robotron is a single-screen shoot-em-up in which super-intelligent self-aware robots known as 'Robotrons' - designed and built to help mankind - have revolted against their creators and vowed to either reprogram the humans into Robotrons or, failing this, wipe-out the human race entirely.
+
+The player must destroy the robots and rescue the Earth's remaining human families. The player's only weapon is a multi-directional Anti-Robot Laser Gun. Used effectively, it will give players the power to destroy all the Robot waves, with the exception of the indestructible 'Hulk' unit.
+
+At the start of the attack wave, players will have three chances to wipe out the enemy and advance to the next wave. Every 25,000 points players are granted another chance to complete their mission.
+
 MAN, WOMAN, CHILD: These are the only three types of human clones left on Earth. Defenseless and easy prey to the Robots, they are totally dependent upon players for their survival and will wander aimlessly until the player makes contact with them. Touching them will place them under the player's protective powers and earn them the following points: 1,000 for rescuing the 1st human; 2,000 for the 2nd: 3,000 for the 3rd; 4,000 for the 4th; 5,000 for the 5th; and 5,000 for every additional human saved. At the beginning of each new wave and when the player loses a turn, rescue scoring will again begin at 1,000.</desc>
 		<image>/userdata/roms/mame/images/robotron.png</image>
 		<rating>0.9</rating>
@@ -1023,7 +1023,7 @@ MAN, WOMAN, CHILD: These are the only three types of human clones left on Earth.
 	<game id="43002" source="ScreenScraper.fr">
 		<path>./sfootbal.zip</path>
 		<name>Street Football (11/12/86)</name>
-		<desc>Un jeu de football americain... dans la rue ! 
+		<desc>Un jeu de football americain... dans la rue !
 Très peu jouable, pas très beau, sons pourris dignes du speaker... Pas de quoi fouetter un chat.</desc>
 		<image>/userdata/roms/mame/images/sfootbal.png</image>
 		<rating>0.3</rating>
@@ -1054,18 +1054,18 @@ Très peu jouable, pas très beau, sons pourris dignes du speaker... Pas de quoi
 	<game id="43052" source="ScreenScraper.fr">
 		<path>./shollow.zip</path>
 		<name>Satan's Hollow (set 1)</name>
-		<desc>Satan's Hollow is a 1- or a 2-player game. When playing this game, the Rocket Launcher is under YOUR control. YOU make it move back and forth across the screen to launch Rockets that will eliminate your attackers. These attackers are displayed in groups, called 'racks', across the top of the screen. The first rack is made up of a small number of attackers. The second rack is made up of a larger number of these attackers. And intermixed with the racks of attackers is a rack with only a single fire-breathing Devil's head.  
- 
-The attackers and the Devil's Head will try to wipe out your Rocket Launcher. If they do, you lose one player. In emergencies, you have a Shield which goes all around your Rocket Launcher for a short period of time. It is activated by pushing the Shield button on the control console. BUT BE CAREFUL!! This consumes a lot of power and will only last a VERY SHORT TIME!  
- 
-Each attacker eliminated will cause a Bridge Section to appear at the lower left corner of the screen EXCEPT: when there is already a Bridge Section there or when you have a Bridge Section in tow under your Rocket Launcher. Pick these Sections up with your Rocket Launcher and move them over to build a Bridge across the gorge at the right side of the screen leading into the land of SATAN.  
- 
-When you complete your Bridge into the land of SATAN, you can cross it and do battle with him. If you win you will be rewarded by increased fire power for your Rocket Launcher. If SATAN defeats you, you lose one player.  
- 
-As your skill level increases, the number of attackers is increased and the speed that the fire-breathing Devil's Head moves is increased also.  
- 
-Bonus Rocket Launchers are awarded to you periodically throughout the game as you reach or pass certain preselected point values. Each attacker has an assigned point value.  
- 
+		<desc>Satan's Hollow is a 1- or a 2-player game. When playing this game, the Rocket Launcher is under YOUR control. YOU make it move back and forth across the screen to launch Rockets that will eliminate your attackers. These attackers are displayed in groups, called 'racks', across the top of the screen. The first rack is made up of a small number of attackers. The second rack is made up of a larger number of these attackers. And intermixed with the racks of attackers is a rack with only a single fire-breathing Devil's head.
+
+The attackers and the Devil's Head will try to wipe out your Rocket Launcher. If they do, you lose one player. In emergencies, you have a Shield which goes all around your Rocket Launcher for a short period of time. It is activated by pushing the Shield button on the control console. BUT BE CAREFUL!! This consumes a lot of power and will only last a VERY SHORT TIME!
+
+Each attacker eliminated will cause a Bridge Section to appear at the lower left corner of the screen EXCEPT: when there is already a Bridge Section there or when you have a Bridge Section in tow under your Rocket Launcher. Pick these Sections up with your Rocket Launcher and move them over to build a Bridge across the gorge at the right side of the screen leading into the land of SATAN.
+
+When you complete your Bridge into the land of SATAN, you can cross it and do battle with him. If you win you will be rewarded by increased fire power for your Rocket Launcher. If SATAN defeats you, you lose one player.
+
+As your skill level increases, the number of attackers is increased and the speed that the fire-breathing Devil's Head moves is increased also.
+
+Bonus Rocket Launchers are awarded to you periodically throughout the game as you reach or pass certain preselected point values. Each attacker has an assigned point value.
+
 The object of the game is to HAVE FUN while constantly improving your skills as you play, eliminating as many attackers as possible each time to get the highest score.</desc>
 		<image>/userdata/roms/mame/images/shollow.png</image>
 		<rating>0.9</rating>
@@ -1081,14 +1081,14 @@ The object of the game is to HAVE FUN while constantly improving your skills as 
 	<game id="43097" source="ScreenScraper.fr">
 		<path>./sinistar.zip</path>
 		<name>Sinistar (revision 3)</name>
-		<desc>Your intergalactic crystal-mining mission takes you to the antipodes of the known universe. But your parametric DeepSpace scanner faithfully displays the sector of the galaxy you presently occupy (including an area fully three parsecs across, no less)!  
- 
-Keep the galaxy safe for all its sinizens! Fiendish Worker ships from the planet Sporg will attempt to fabricate a Sinistar from the remains of derelict planetoids in your very sector. You must not let them do this for two reasons:  
-1) These planetoids contain the life-sustaining crystals that your civilization requires for its vital technologies.  
-2) With the eminently unstable Sinistar in their possession, the Sprogites can lay waste to any civilization in your sector. You alone stand in their way.  
- 
-You must mine the sinisite crystals. Williams has equipped you with the latest heuristic electret cannon technology. All you need to do is aim at a planetoid and shoot. Now collect your motherlode!  
- 
+		<desc>Your intergalactic crystal-mining mission takes you to the antipodes of the known universe. But your parametric DeepSpace scanner faithfully displays the sector of the galaxy you presently occupy (including an area fully three parsecs across, no less)!
+
+Keep the galaxy safe for all its sinizens! Fiendish Worker ships from the planet Sporg will attempt to fabricate a Sinistar from the remains of derelict planetoids in your very sector. You must not let them do this for two reasons:
+1) These planetoids contain the life-sustaining crystals that your civilization requires for its vital technologies.
+2) With the eminently unstable Sinistar in their possession, the Sprogites can lay waste to any civilization in your sector. You alone stand in their way.
+
+You must mine the sinisite crystals. Williams has equipped you with the latest heuristic electret cannon technology. All you need to do is aim at a planetoid and shoot. Now collect your motherlode!
+
 In fact, only with sinisite can you manufacture sinibombs to eradicate the Sinistar. But you must also rebuff the Workers and disintegrate their even more aggressive comrades-at-arms, the evil skelomorphic Warriors! Intelligent beings everywhere depend on your courage, your dedication, your reserve, your shrewd command of tactical invention! It's up to you, space cadet!</desc>
 		<image>/userdata/roms/mame/images/sinistar.png</image>
 		<rating>0.9</rating>
@@ -1104,12 +1104,12 @@ In fact, only with sinisite can you manufacture sinibombs to eradicate the Sinis
 	<game id="43147" source="ScreenScraper.fr">
 		<path>./smashtv.zip</path>
 		<name>Smash T.v. (rev 8.00)</name>
-		<desc>Smash TV is a single-screen shoot-em-up for one or two players and is set in a futuristic game show in the year 1999. Contestants must enter enclosed arenas and compete to collect prizes, money and keys, while fighting to stay alive as they are attacked on all sides by waves of enemies.  
- 
-The game is a sequel to the legendary "Robotron: 2084" and like its prequel, utilises a dual joystick control system, with the left stick controlling player movement and the right controlling the direction of fire.  
- 
-Enemy waves enter each arena from four directions via open doorways and all must be killed before players can progress to the next stage. Some arenas feature static gun emplacements set into a wall that must also be destroyed. Power-ups that improve weapons, speed and armour appear at regular intervals, although each only lasts for a limited time. 
- 
+		<desc>Smash TV is a single-screen shoot-em-up for one or two players and is set in a futuristic game show in the year 1999. Contestants must enter enclosed arenas and compete to collect prizes, money and keys, while fighting to stay alive as they are attacked on all sides by waves of enemies.
+
+The game is a sequel to the legendary "Robotron: 2084" and like its prequel, utilises a dual joystick control system, with the left stick controlling player movement and the right controlling the direction of fire.
+
+Enemy waves enter each arena from four directions via open doorways and all must be killed before players can progress to the next stage. Some arenas feature static gun emplacements set into a wall that must also be destroyed. Power-ups that improve weapons, speed and armour appear at regular intervals, although each only lasts for a limited time.
+
 Smash TV is broken down into stages, each with a set number of arenas. Tough end-of-level bosses await at the end of each stage. As well as the prizes and power-ups, keys can be collected and if enough have been picked up by the end of the game, players can access a bonus level called the Pleasure Dome.</desc>
 		<image>/userdata/roms/mame/images/smashtv.png</image>
 		<rating>0.75</rating>
@@ -1155,8 +1155,8 @@ Smash TV is broken down into stages, each with a set number of arenas. Tough end
 	<game id="43208" source="ScreenScraper.fr">
 		<path>./spacezap.zip</path>
 		<name>Space Zap</name>
-		<desc>A multi-directional space shoot'em up game.  
- 
+		<desc>A multi-directional space shoot'em up game.
+
 The space colony is in danger his defense base is being attacked by a alien threat it comes in four differents quadrants and their attacks are devastating, quickly use the cannon to destroy them and release the base of the hostile threat must be quick because time passes, the enemy increases the intensity and speed of attack and can exploit its base you must avoid this, you must using your control skills at win the mission and defend your base.</desc>
 		<image>/userdata/roms/mame/images/spacezap.png</image>
 		<rating>0.3</rating>
@@ -1245,10 +1245,10 @@ The space colony is in danger his defense base is being attacked by a alien thre
 	<game id="145766" source="ScreenScraper.fr">
 		<path>./spyhunt.zip</path>
 		<name>Spy Hunter</name>
-		<desc>Spy Hunter is an action/driving game. It places the player as the driver of a G-6155 CIA Prototype Interceptor sports car. The object of the game is to travel the freeways and waterways, hunting down and destroying as many enemy vehicles as possible, all the while not harming civilian vehicles. The view is top-down and the screen scrolls vertically underneath the player's car. 
- 
-The game begins with the player driving the G-6155. Soon, the player starts to encounter enemy vehicles which try to force the player's car off the road and crash. Each enemy vehicle has its own special feature, such as tire slashers or bulletproof armor. 
- 
+		<desc>Spy Hunter is an action/driving game. It places the player as the driver of a G-6155 CIA Prototype Interceptor sports car. The object of the game is to travel the freeways and waterways, hunting down and destroying as many enemy vehicles as possible, all the while not harming civilian vehicles. The view is top-down and the screen scrolls vertically underneath the player's car.
+
+The game begins with the player driving the G-6155. Soon, the player starts to encounter enemy vehicles which try to force the player's car off the road and crash. Each enemy vehicle has its own special feature, such as tire slashers or bulletproof armor.
+
 Points are scored for driving on the road and for destroying enemy vehicles. There is a lead-in time when the player has an endless supply of cars. After this time expires, the player will lose a life each time the car crashes. Extra cars can be earned with high scores. The first extra car is earned at a default value of 30,000 points, but this value can vary depending on settings.</desc>
 		<image>/userdata/roms/mame/images/spyhunt.png</image>
 		<rating>0.9</rating>
@@ -1293,10 +1293,10 @@ Points are scored for driving on the road and for destroying enemy vehicles. The
 	<game id="149776" source="ScreenScraper.fr">
 		<path>./stargate.zip</path>
 		<name>Stargate</name>
-		<desc>Stargate, also known as 'Defender II', will transport you to a whole new dimension in video games! Not only will the skills you learned with "Defender" be challenged and refined, but new strategies must come into play if you are to be victorious in rescuing the humanoids from the clutches of the aliens and in entering the Stargate! Your ability to react quickly and with on-target precision will be tested against the evil Yllabian Space Guppies, Dynamos, Space Hums, Firebombers and their Fireballs, Phreds, Big Reds and Munchies! If you succeed in maneuvering your ship into the Stargate, you'll be instantly trans-located to that part of the planet where the humanoids are being abducted! To open up spectacular scoring possibilities, rescue four Humanoids, re-enter Stargate and you'll warp 3 waves ahead in space and time, setting off dazzling special effects and racking up high points!  
- 
-If you must destroy everything in your path or risk self-destruction, activate the Inviso anti-matter cloaking device and become invisible and invulnerable! Inviso time plus a new ship and a Smart Bomb are earned with every 10,000 points you score!  
- 
+		<desc>Stargate, also known as 'Defender II', will transport you to a whole new dimension in video games! Not only will the skills you learned with "Defender" be challenged and refined, but new strategies must come into play if you are to be victorious in rescuing the humanoids from the clutches of the aliens and in entering the Stargate! Your ability to react quickly and with on-target precision will be tested against the evil Yllabian Space Guppies, Dynamos, Space Hums, Firebombers and their Fireballs, Phreds, Big Reds and Munchies! If you succeed in maneuvering your ship into the Stargate, you'll be instantly trans-located to that part of the planet where the humanoids are being abducted! To open up spectacular scoring possibilities, rescue four Humanoids, re-enter Stargate and you'll warp 3 waves ahead in space and time, setting off dazzling special effects and racking up high points!
+
+If you must destroy everything in your path or risk self-destruction, activate the Inviso anti-matter cloaking device and become invisible and invulnerable! Inviso time plus a new ship and a Smart Bomb are earned with every 10,000 points you score!
+
 If all ten Humanoids in a wave are abducted, the universe will explode into smithereens, leaving deadly Mutants on the attack! Survive until Wave 5 and the universe will be restored, the humanoids safe... but you'll be the target of an Yllabian Dog Fight! There'll be no Landers to abduct the Humanoids, but all the other aliens will have stronger and larger forces concentrated against you! It will be an out space battle reaching the outer limits of aggression and will call up your last ounce of determination and courage!</desc>
 		<image>/userdata/roms/mame/images/stargate.png</image>
 		<rating>0.9</rating>
@@ -1341,10 +1341,10 @@ If all ten Humanoids in a wave are abducted, the universe will explode into smit
 	<game id="43400" source="ScreenScraper.fr">
 		<path>./strkforc.zip</path>
 		<name>Strike Force (rev 1 02/25/91)</name>
-		<desc>Strike Force is a side-scrolling shoot-em-up and is the third game in Midway's seminal "Defender" series. Saurian lizard men have overrun all twenty-two planets that form the New Earth Solar System colonies, capturing and mutating the resident humans into reptiles to use as slave labour at their stronghold base, the Saurian 'Mega-Star Apocalypse'. 
- 
-Players fly a spaceship over the surface of the of planets, destroying enemy waves and rescuing humans from the alien invaders, with rescued humans hanging from the underside of the player's ship. Once these tasks have been completed, the mothership arrives to pick up the player's ship, together with any humans they have rescued. Players can decide which planets to attack, when to purchase additional firepower and when to attack the Apocalypse. 
- 
+		<desc>Strike Force is a side-scrolling shoot-em-up and is the third game in Midway's seminal "Defender" series. Saurian lizard men have overrun all twenty-two planets that form the New Earth Solar System colonies, capturing and mutating the resident humans into reptiles to use as slave labour at their stronghold base, the Saurian 'Mega-Star Apocalypse'.
+
+Players fly a spaceship over the surface of the of planets, destroying enemy waves and rescuing humans from the alien invaders, with rescued humans hanging from the underside of the player's ship. Once these tasks have been completed, the mothership arrives to pick up the player's ship, together with any humans they have rescued. Players can decide which planets to attack, when to purchase additional firepower and when to attack the Apocalypse.
+
 Strike Force adds several new features to the series. Two players can now share the screen at one time and the surface of each planet is littered with various special weapons that can be picked up and deployed. Humans can be 'mutated' into small green creatures that will fight against the player (although players can still pick them up for points as, with the unmutated humans). The mutants can also use vehicles found on the planet's surface against the player.</desc>
 		<image>/userdata/roms/mame/images/strkforc.png</image>
 		<rating>0.9</rating>
@@ -1360,9 +1360,9 @@ Strike Force adds several new features to the series. Two players can now share 
 	<game id="43470" source="ScreenScraper.fr">
 		<path>./svolley.zip</path>
 		<name>Super Volleyball (Japan)</name>
-		<desc>Super Volleyball est un jeu de sport sur borne d'arcade. 
-Selon la version, vous incarnez l'équipe du Japon ou des Etats-Unis et devez affronter Cuba, la Chine, l'URSS, ... 
-Le jeu présente le terrain de côté et vous permet de choisir le type de service, blocage, passe ou smatch à réaliser. 
+		<desc>Super Volleyball est un jeu de sport sur borne d'arcade.
+Selon la version, vous incarnez l'équipe du Japon ou des Etats-Unis et devez affronter Cuba, la Chine, l'URSS, ...
+Le jeu présente le terrain de côté et vous permet de choisir le type de service, blocage, passe ou smatch à réaliser.
 Lorsqu'un point est marqué, le joueur responsable est présenté en gros plan, sous les cris de la foule en liesse.</desc>
 		<image>/userdata/roms/mame/images/svolley.png</image>
 		<rating>0.5</rating>
@@ -1378,10 +1378,10 @@ Lorsqu'un point est marqué, le joueur responsable est présenté en gros plan, 
 	<game id="43519" source="ScreenScraper.fr">
 		<path>./tapper.zip</path>
 		<name>Tapper (Budweiser, set 1)</name>
-		<desc>Taking on the role of an overworked bartender, the player must serve beer to the ever-thirsty patrons that populate his bar. All customers must be served before they work their way up to the beer kegs. Empty glasses must also be collected before they slide off the end of the bar and smash to the floor. Extra points are awarded for collecting tips, while bonus rounds involve locating the one beer that has not been shaken, and serving it. The game features four different levels: 
-Cowboys 
-Athletes 
-Punk Rockers 
+		<desc>Taking on the role of an overworked bartender, the player must serve beer to the ever-thirsty patrons that populate his bar. All customers must be served before they work their way up to the beer kegs. Empty glasses must also be collected before they slide off the end of the bar and smash to the floor. Extra points are awarded for collecting tips, while bonus rounds involve locating the one beer that has not been shaken, and serving it. The game features four different levels:
+Cowboys
+Athletes
+Punk Rockers
 Aliens</desc>
 		<image>/userdata/roms/mame/images/tapper.png</image>
 		<rating>0.9</rating>
@@ -1397,8 +1397,8 @@ Aliens</desc>
 	<game id="43565" source="ScreenScraper.fr">
 		<path>./term2.zip</path>
 		<name>Terminator 2 - Judgment Day (rev LA4 08/03/92)</name>
-		<desc>Help to John connor future leader of the human resistance against the machines and his valiant mother Sarah Connor to be avoid being killed by a prototype robot from Skynet the T-1000 sent from the future composed of a "mimetic poly-alloy" but soon a unexpected savior an reprogrammed T-800 Terminator, will come from the future to help and stop together the judgment day. 
- 
+		<desc>Help to John connor future leader of the human resistance against the machines and his valiant mother Sarah Connor to be avoid being killed by a prototype robot from Skynet the T-1000 sent from the future composed of a "mimetic poly-alloy" but soon a unexpected savior an reprogrammed T-800 Terminator, will come from the future to help and stop together the judgment day.
+
 Hasta La Vista, Baby!</desc>
 		<image>/userdata/roms/mame/images/term2.png</image>
 		<rating>0.8</rating>
@@ -1414,12 +1414,12 @@ Hasta La Vista, Baby!</desc>
 	<game id="43614" source="ScreenScraper.fr">
 		<path>./timber.zip</path>
 		<name>Timber</name>
-		<desc>Timber is an abstract action game in which one or two players assume the role of a lumberjack and have a limited amount of time to chop down a given number of trees that pop up from the ground. The game is controlled with two joysticks, with one stick controlling the player's movement and the other corresponding to left or right chops with the player's axe. Difficulty increases with each level, with the number of trees needed to be chopped down gradually increasing (maxing out at 19) and the allotted time decreasing.  
- 
-During a round players must avoid beehives that are thrown at them by grizzly bears. The beehives, however, can be destroyed with the player's axe for a 500-point reward. Some trees contain birds that will run around the level after they have been chopped down, awarding 1,000 points if touched by the player. 
- 
-Every couple of levels players are given the opportunity to amass bonus points. The bonus round begins with the lumberjack standing on a floating log. As the log begins to rotate, players must use their reflexes to stay on top of the log. The first two times this is played, the log is relatively large; on future attempts, the size of the log shrinks considerably. The bonus round ends if the player falls off the log or balances atop it for the duration of the round, in which case 1,000 bonus points are earned. 
- 
+		<desc>Timber is an abstract action game in which one or two players assume the role of a lumberjack and have a limited amount of time to chop down a given number of trees that pop up from the ground. The game is controlled with two joysticks, with one stick controlling the player's movement and the other corresponding to left or right chops with the player's axe. Difficulty increases with each level, with the number of trees needed to be chopped down gradually increasing (maxing out at 19) and the allotted time decreasing.
+
+During a round players must avoid beehives that are thrown at them by grizzly bears. The beehives, however, can be destroyed with the player's axe for a 500-point reward. Some trees contain birds that will run around the level after they have been chopped down, awarding 1,000 points if touched by the player.
+
+Every couple of levels players are given the opportunity to amass bonus points. The bonus round begins with the lumberjack standing on a floating log. As the log begins to rotate, players must use their reflexes to stay on top of the log. The first two times this is played, the log is relatively large; on future attempts, the size of the log shrinks considerably. The bonus round ends if the player falls off the log or balances atop it for the duration of the round, in which case 1,000 bonus points are earned.
+
 The two-player simultaneous mode can be played either competitively or cooperatively. In this mode, chopping or pushing down a tree such that it falls on the opponent awards you with 1,000 points.</desc>
 		<image>/userdata/roms/mame/images/timber.png</image>
 		<rating>0.6</rating>
@@ -1450,10 +1450,10 @@ The two-player simultaneous mode can be played either competitively or cooperati
 	<game id="43688" source="ScreenScraper.fr">
 		<path>./totcarn.zip</path>
 		<name>Total Carnage (rev LA1 03/10/92)</name>
-		<desc>A pseudo-sequel to Williams' superb 1990 shoot-em-up, "Smash TV", Total Carnage is set in a futuristic parody of the first Gulf War. General Ahkboob, himself an obvious parody of Sadam Hussein, has set his vast army of infantry, tanks and BioGenetic Mutants onto the world. 
- 
-1 or 2 players must fight through the enemy-packed levels, rescuing reporters and civilians as they go. Total Carnage retains the dual-joystick control of its predecessor, but introduced new weapons, enemies and large, scrolling levels to the original game-play. 
- 
+		<desc>A pseudo-sequel to Williams' superb 1990 shoot-em-up, "Smash TV", Total Carnage is set in a futuristic parody of the first Gulf War. General Ahkboob, himself an obvious parody of Sadam Hussein, has set his vast army of infantry, tanks and BioGenetic Mutants onto the world.
+
+1 or 2 players must fight through the enemy-packed levels, rescuing reporters and civilians as they go. Total Carnage retains the dual-joystick control of its predecessor, but introduced new weapons, enemies and large, scrolling levels to the original game-play.
+
 As with "Smash TV", Total Carnage features the infamous 'Pleasuredome'; accessible only if players manage to collect the 220 keys that are hidden throughout the game's levels. Total Carnage has a much higher difficulty level than that of "Smash TV".</desc>
 		<image>/userdata/roms/mame/images/totcarn.png</image>
 		<rating>0.9</rating>
@@ -1469,13 +1469,13 @@ As with "Smash TV", Total Carnage features the infamous 'Pleasuredome'; accessib
 	<game id="43740" source="ScreenScraper.fr">
 		<path>./trog.zip</path>
 		<name>Trog (rev LA5 03/29/91)</name>
-		<desc>1 to 4 players take on the role of a cute dinosaur, selected from the four on offer: Rex (red), Bloop (blue), Spike (yellow) and Gwen (lavender). The game takes place in a prehistoric land called 'Og' and is made up of forty-nine different islands; the dinos must collect all of the dinosaur eggs that lay on the islands, while avoiding the unwanted attention of a tribe of one-eyed cavemen, called 'Trogs'. The dinos can punch the attacking Trogs; one punch will only stun a Trog but several punches will knock the enemy off the screen. There are 4 different Trogs who pursue the dinos: 
-Brown Trogs who use only their fists. 
-Red Trogs who use clubs and create fires or holes in the ground. 
-Blue Trogs who pop up out of the ground and roll stone wheels. 
-Green Trogs who bounce around trying to crush you with their springs. 
-On each island, after the dinos have gathered up all of their eggs, they must make their way to the base labeled 'Home'; from here they will move on to the next island. 
- 
+		<desc>1 to 4 players take on the role of a cute dinosaur, selected from the four on offer: Rex (red), Bloop (blue), Spike (yellow) and Gwen (lavender). The game takes place in a prehistoric land called 'Og' and is made up of forty-nine different islands; the dinos must collect all of the dinosaur eggs that lay on the islands, while avoiding the unwanted attention of a tribe of one-eyed cavemen, called 'Trogs'. The dinos can punch the attacking Trogs; one punch will only stun a Trog but several punches will knock the enemy off the screen. There are 4 different Trogs who pursue the dinos:
+Brown Trogs who use only their fists.
+Red Trogs who use clubs and create fires or holes in the ground.
+Blue Trogs who pop up out of the ground and roll stone wheels.
+Green Trogs who bounce around trying to crush you with their springs.
+On each island, after the dinos have gathered up all of their eggs, they must make their way to the base labeled 'Home'; from here they will move on to the next island.
+
 Between each stage, there is an intermission where the players' Dinos will dance, with an on-screen caption proudly declaring 'Excellent!', 'Congratulations!', 'Nice Work!', 'Good Job!' or 'Dino-Mite!'. On occasion, an intermission screen appears that shows a Trog planning another attempt to eat a Dino.</desc>
 		<image>/userdata/roms/mame/images/trog.png</image>
 		<rating>0.7</rating>
@@ -1491,17 +1491,17 @@ Between each stage, there is an intermission where the players' Dinos will dance
 	<game id="43742" source="ScreenScraper.fr">
 		<path>./tron.zip</path>
 		<name>Tron (8/9)</name>
-		<desc>Tron is a 1- or 2-player game set inside the 'Tron' computer, and is based on the ground-breaking Disney movie of the same name. 
- 
-Tron consists of twenty-two stages - or 'phases' - of play. Each phase consists of four separate games called "domains", all of which must be completed before moving on to the next phase. Players can determine the order in which each of the four domains is attempted, but the domain position is random and is only revealed once that domain has been chosen. 
- 
-The four domains that make up a phase never change throughout the game, although both the difficulty level and number of enemies increases with each subsequent phase. The domains are as follows: 
- 
-LIGHT CYCLES: The player controls a Light Cycle that leaves a blue light trail in its wake. The aim is to 'box in' the yellow enemy Light Cycles, making them crash into either a cycle trail (theirs or the player's) or a wall. The player must also avoid any collision with either walls or light trails. The joystick controls the direction of the bike and the trigger controls its speed. 
-I/O TOWER: Destroy the Grid Bugs that emerge from the grid surrounding the tower. The bugs will multiply and fill the entire screen if not stopped. Players must attempt to clear a path to - and enter - the I/O Tower before the timer runs out. The stick controls the movement of the player's character and the spinner controls the direction of fire. 
-TANK MAZE: Destroy all enemy tanks that are patrolling the maze. The player's tank can fire in all directions and can bounce shots off walls, but can be destroyed by a single shot; while enemy tanks can only fire in the direction of travel but need three shots before they are destroyed. "Recognizer" tanks also feature in later phases; these Do NOT shoot but move quickly and will try to ram the player's tank. The joystick controls the movement of the player's tank and the spinner controls the direction of fire. 
-MCP CONE: Destroy the blocks in the descending, rotating coloured column to clear a path and move the character up into the light cone above the blocks. A bonus is awarded if all of the blocks are destroyed. The stick controls the movement of the character and the spinner controls the direction of fire. 
- 
+		<desc>Tron is a 1- or 2-player game set inside the 'Tron' computer, and is based on the ground-breaking Disney movie of the same name.
+
+Tron consists of twenty-two stages - or 'phases' - of play. Each phase consists of four separate games called "domains", all of which must be completed before moving on to the next phase. Players can determine the order in which each of the four domains is attempted, but the domain position is random and is only revealed once that domain has been chosen.
+
+The four domains that make up a phase never change throughout the game, although both the difficulty level and number of enemies increases with each subsequent phase. The domains are as follows:
+
+LIGHT CYCLES: The player controls a Light Cycle that leaves a blue light trail in its wake. The aim is to 'box in' the yellow enemy Light Cycles, making them crash into either a cycle trail (theirs or the player's) or a wall. The player must also avoid any collision with either walls or light trails. The joystick controls the direction of the bike and the trigger controls its speed.
+I/O TOWER: Destroy the Grid Bugs that emerge from the grid surrounding the tower. The bugs will multiply and fill the entire screen if not stopped. Players must attempt to clear a path to - and enter - the I/O Tower before the timer runs out. The stick controls the movement of the player's character and the spinner controls the direction of fire.
+TANK MAZE: Destroy all enemy tanks that are patrolling the maze. The player's tank can fire in all directions and can bounce shots off walls, but can be destroyed by a single shot; while enemy tanks can only fire in the direction of travel but need three shots before they are destroyed. "Recognizer" tanks also feature in later phases; these Do NOT shoot but move quickly and will try to ram the player's tank. The joystick controls the movement of the player's tank and the spinner controls the direction of fire.
+MCP CONE: Destroy the blocks in the descending, rotating coloured column to clear a path and move the character up into the light cone above the blocks. A bonus is awarded if all of the blocks are destroyed. The stick controls the movement of the character and the spinner controls the direction of fire.
+
 Bonus lives are awarded periodically throughout the game as specific point scores are reached. Each enemy and item has an assigned point value (see the "SCORING" section for details).</desc>
 		<image>/userdata/roms/mame/images/tron.png</image>
 		<rating>0.9</rating>
@@ -1517,10 +1517,10 @@ Bonus lives are awarded periodically throughout the game as specific point score
 	<game id="43766" source="ScreenScraper.fr">
 		<path>./tshoot.zip</path>
 		<name>Turkey Shoot (Prototype)</name>
-		<desc>The year is 1989, one year after the great gobble blight which plagued the world. One-third of the earth's populace was transformed by the ailment. The side effect of the turkey transformation is a tendency toward violence and comradery between these turkeys to organize for rabble-rousing in the urban areas. In February of '89, a group of specially trained agents (the turkey terminators) was formed for the sole task of destroying the turkey menace... 
- 
-And so it begins. As a Turkey Terminator, the player is given 100 missions and 3 weapons to eliminate all the turkeys, leaving no 'left-overs'. He can take aim with his lethal laser gun using the position dot on the screen Screen-shot to hone in on his enemies with deadly accuracy. He can launch a lit grenade to annihilate all the turkeys within range or he can activate his gobble button (available one time each mission) to freeze all the turkeys for an instant, making them 'sitting ducks'. Missions are varied and include reacting quickly to clever ploys such as turkey air raids, turkeys disguising themselves as businessmen and turkey helicopter get-aways. Every 8th round is a rapid-fire bonus wave where the player has 15 seconds to eliminate as many criminals as possible. Shooting fire hydrants and trash cans as well as freeing bystanders who have been taken hostage also score bonus points. 
- 
+		<desc>The year is 1989, one year after the great gobble blight which plagued the world. One-third of the earth's populace was transformed by the ailment. The side effect of the turkey transformation is a tendency toward violence and comradery between these turkeys to organize for rabble-rousing in the urban areas. In February of '89, a group of specially trained agents (the turkey terminators) was formed for the sole task of destroying the turkey menace...
+
+And so it begins. As a Turkey Terminator, the player is given 100 missions and 3 weapons to eliminate all the turkeys, leaving no 'left-overs'. He can take aim with his lethal laser gun using the position dot on the screen Screen-shot to hone in on his enemies with deadly accuracy. He can launch a lit grenade to annihilate all the turkeys within range or he can activate his gobble button (available one time each mission) to freeze all the turkeys for an instant, making them 'sitting ducks'. Missions are varied and include reacting quickly to clever ploys such as turkey air raids, turkeys disguising themselves as businessmen and turkey helicopter get-aways. Every 8th round is a rapid-fire bonus wave where the player has 15 seconds to eliminate as many criminals as possible. Shooting fire hydrants and trash cans as well as freeing bystanders who have been taken hostage also score bonus points.
+
 Three 'fowl-ups' are allowed and occur whenever any turkey... a Pilot Turkey, Boss Turkey, Cyborg Turkey or Thug Turkey... escapes or when an innocent bystander... a businessman, shopper or policeman... is damaged.</desc>
 		<image>/userdata/roms/mame/images/tshoot.png</image>
 		<rating>0.7</rating>
@@ -1581,8 +1581,8 @@ Three 'fowl-ups' are allowed and occur whenever any turkey... a Pilot Turkey, Bo
 	<game id="44117" source="ScreenScraper.fr">
 		<path>./wow.zip</path>
 		<name>Wizard Of Wor</name>
-		<desc>Wizard of Wor is a maze-based shoot-em-up featuring one or co-operative two-player gameplay. In a two-player game, player one controls yellow Worriors while player two controls blue Worriors. Players are also able to shoot each other's Worriors, earning bonus points and causing the other player to lose a life. Team-oriented players can successfully advance through the game by standing back-to-back and firing at anything that comes at them. 
- 
+		<desc>Wizard of Wor is a maze-based shoot-em-up featuring one or co-operative two-player gameplay. In a two-player game, player one controls yellow Worriors while player two controls blue Worriors. Players are also able to shoot each other's Worriors, earning bonus points and causing the other player to lose a life. Team-oriented players can successfully advance through the game by standing back-to-back and firing at anything that comes at them.
+
 Each single-screen dungeon consists of a grid forming walls and corridors. There are doors situated at the left and right edges of the screen that are inter-connected, making the dungeon wrap around. Whenever a door is used by a player or monster, it deactivates for a short period, making it impassable. A small radar display indicates the positions of all active monsters.</desc>
 		<image>/userdata/roms/mame/images/wow.png</image>
 		<rating>0.9</rating>

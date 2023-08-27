@@ -55,7 +55,7 @@
 		<green>KEY_GREEN</green>
 		<yellow>KEY_YELLOW</yellow>
 		<blue>KEY_BLUE</blue>
-		<recordedtv>KEY_PVR</recordedtv> 
-		<liveradio>KEY_RADIO</liveradio> 
+		<recordedtv>KEY_PVR</recordedtv>
+		<liveradio>KEY_RADIO</liveradio>
 	</remote>
 </lircmap>
