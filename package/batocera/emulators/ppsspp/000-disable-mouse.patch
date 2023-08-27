@@ -1,8 +1,8 @@
 diff --git a/SDL/SDLMain.cpp b/SDL/SDLMain.cpp
-index e2a71beae..5c1e267a0 100644
+index 27695ec2d..da015011a 100644
 --- a/SDL/SDLMain.cpp
 +++ b/SDL/SDLMain.cpp
-@@ -795,12 +795,6 @@ static void ProcessSDLEvent(SDL_Window *window, const SDL_Event &event, InputSta
+@@ -803,12 +803,6 @@ static void ProcessSDLEvent(SDL_Window *window, const SDL_Event &event, InputSta
  				g_Config.iWindowWidth = new_width;
  				g_Config.iWindowHeight = new_height;
  			}
@@ -15,7 +15,7 @@ index e2a71beae..5c1e267a0 100644
  			break;
  		}
  
-@@ -1382,9 +1376,7 @@ int main(int argc, char *argv[]) {
+@@ -1390,9 +1384,7 @@ int main(int argc, char *argv[]) {
  		printf("Init from thread error: '%s'\n", error_message.c_str());
  	}
  
@@ -25,7 +25,7 @@ index e2a71beae..5c1e267a0 100644
  
  	if (!useEmuThread) {
  		NativeInitGraphics(graphicsContext);
-@@ -1433,15 +1425,6 @@ int main(int argc, char *argv[]) {
+@@ -1441,15 +1433,6 @@ int main(int argc, char *argv[]) {
  		if (g_QuitRequested || g_RestartRequested)
  			break;
  
