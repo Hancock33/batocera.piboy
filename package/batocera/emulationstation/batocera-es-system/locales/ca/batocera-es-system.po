@@ -7710,6 +7710,18 @@ msgstr "VISUALITZACIÓ"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
+msgid ""
+"Enable Gamecube BIOS access (requires IPL.bin BIOS in appropriate user "
+"directory)."
+msgstr ""
+
+#. TRANSLATION: dolphin/uzem
+msgctxt "game_options"
+msgid "ENABLE BIOS ACCESS"
+msgstr ""
+
+#. TRANSLATION: dolphin/uzem
+msgctxt "game_options"
 msgid "Map your controller to an emulated Wiimote."
 msgstr "Mapeja el comandament com un Wiimote emulat."
 
