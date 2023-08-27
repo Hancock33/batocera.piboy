@@ -35,12 +35,12 @@
 	<game id="40513" source="ScreenScraper.fr">
 		<path>./chameleo.zip</path>
 		<name>Chameleon</name>
-		<desc>A colourful platform game in which the player controls a long-tongued chameleon that must make around a series of single-screen, platform-strewn levels; stealing chicken eggs from their nests and being careful to avoid contact with angry chickens. 
- 
-As well as walking along the platforms and poles, the chameleon can use its tongue to pull itself up to higher platforms; and to escape from any nearby chickens. Each level also has a number of bombs placed at various points; the chameleon can hit these with its tongue to send them crashing towards nearby chickens. The player must keep an eye out for projectiles thrown by the chickens, such as flashing eggs. 
- 
-If the nesting eggs are left for too long, they will hatch into a baby chick. The player can eat the chick for bonus points, but if the chick is left alone for too long, it will grow into an adult chicken and start attacking the player. 
- 
+		<desc>A colourful platform game in which the player controls a long-tongued chameleon that must make around a series of single-screen, platform-strewn levels; stealing chicken eggs from their nests and being careful to avoid contact with angry chickens.
+
+As well as walking along the platforms and poles, the chameleon can use its tongue to pull itself up to higher platforms; and to escape from any nearby chickens. Each level also has a number of bombs placed at various points; the chameleon can hit these with its tongue to send them crashing towards nearby chickens. The player must keep an eye out for projectiles thrown by the chickens, such as flashing eggs.
+
+If the nesting eggs are left for too long, they will hatch into a baby chick. The player can eat the chick for bonus points, but if the chick is left alone for too long, it will grow into an adult chicken and start attacking the player.
+
 A level is over once all of the eggs have been collected and all of the chickens killed.</desc>
 		<rating>0.7</rating>
 		<releasedate>19830101T000000</releasedate>
@@ -54,12 +54,12 @@ A level is over once all of the eggs have been collected and all of the chickens
 	<game id="40537" source="ScreenScraper.fr">
 		<path>./chimerab.zip</path>
 		<name>Chimera Beast (Japan, prototype)</name>
-		<desc>A horizontally scrolling shoot'em up where 1 or 2 players control creatures known as 'eaters' which are capable of eating other creatures and taking their DNA, thus acquiring their abilities or characteristics. 
- 
-Chimera Beast takes place on a planet which is described as distant and Earth-like. The planet is overrun by animals known as eaters, capable of eating other creatures and acquiring their abilities or characteristics. The player controls one of these eaters and progresses through the game by means of evolution, consuming microscopic organisms in the first stage, fish in the second, and so on. When the player's creature gets big enough to take on humanity, the goal of the game is revealed. The planet's humans have developed space travel, which the player must thwart, so as not to give the eaters a means of escaping the planet. There are two possible endings: one in which the player is able to stop the eaters from escaping the planet, and one in which the eaters do escape and, we are told, will eventually make their way to Earth. 
- 
-The chief innovation of Chimera Beast is its power-up system. Instead of collecting gun upgrades as in most games of this genre, the player's eater enhances itself by eating other creatures and assuming their abilities and defenses. Instead of simply having various types of projectile weaponry, the game attempts to make these new abilities as varied as possible. Consuming a crustacean might give the player's eater a hard protective shell, for example, while an insectoid creature might offer a poisonous tail instead. The game even includes the ability to use cancer as a weapon. 
- 
+		<desc>A horizontally scrolling shoot'em up where 1 or 2 players control creatures known as 'eaters' which are capable of eating other creatures and taking their DNA, thus acquiring their abilities or characteristics.
+
+Chimera Beast takes place on a planet which is described as distant and Earth-like. The planet is overrun by animals known as eaters, capable of eating other creatures and acquiring their abilities or characteristics. The player controls one of these eaters and progresses through the game by means of evolution, consuming microscopic organisms in the first stage, fish in the second, and so on. When the player's creature gets big enough to take on humanity, the goal of the game is revealed. The planet's humans have developed space travel, which the player must thwart, so as not to give the eaters a means of escaping the planet. There are two possible endings: one in which the player is able to stop the eaters from escaping the planet, and one in which the eaters do escape and, we are told, will eventually make their way to Earth.
+
+The chief innovation of Chimera Beast is its power-up system. Instead of collecting gun upgrades as in most games of this genre, the player's eater enhances itself by eating other creatures and assuming their abilities and defenses. Instead of simply having various types of projectile weaponry, the game attempts to make these new abilities as varied as possible. Consuming a crustacean might give the player's eater a hard protective shell, for example, while an insectoid creature might offer a poisonous tail instead. The game even includes the ability to use cancer as a weapon.
+
 Another difference from typical shooter mechanics is that the player's eater does not die after being hit. It has a life bar, which can be charged by consuming enemies. It is even possible to eat enough charge the life bar past its starting position, creating a larger eater which is not only more powerful but can take more damage as well.</desc>
 		<rating>0.5</rating>
 		<releasedate>19930101T000000</releasedate>
@@ -73,8 +73,8 @@ Another difference from typical shooter mechanics is that the player's eater doe
 	<game id="40562" source="ScreenScraper.fr">
 		<path>./cischeat.zip</path>
 		<name>Cisco Heat</name>
-		<desc>A colourful racing game in which the player takes on the role of a police officer who must race his squad car (from a choice of 2; offering either improved 'Speed' or 'Cornering' respectively) through the undulating, winding streets of San Francisco', in an attempt to win the first ever 'National Championship Police Car Steeplechase'. 
- 
+		<desc>A colourful racing game in which the player takes on the role of a police officer who must race his squad car (from a choice of 2; offering either improved 'Speed' or 'Cornering' respectively) through the undulating, winding streets of San Francisco', in an attempt to win the first ever 'National Championship Police Car Steeplechase'.
+
 Each stage is packed with rival squad cars, as well as civilian traffic such as taxis, trams and fire-engines. Ninety-degree turns must also be negotiated in this tricky driving game. Cisco Heat features five different stages.</desc>
 		<rating>0.5</rating>
 		<releasedate>19900101T000000</releasedate>
@@ -165,8 +165,8 @@ Each stage is packed with rival squad cars, as well as civilian traffic such as 
 	<game id="41137" source="ScreenScraper.fr">
 		<path>./exerion.zip</path>
 		<name>Exerion</name>
-		<desc>Exerion is a vertical shooter that is operated with an 8 direction joystick and two fire buttons. The game's biggest features are the parallax scrolling which occurs in the background, and the sensation of inertia that is applied to the motion of the ship. The ship is equipped with two kinds of weapons. You can fire the dual shot gun which can only release one pair of shots on the screen at a time, but has an unlimited supply, by tapping the first fire button. The single shot gun can fire a rapid stream of shots on the screen at one time by holding the second fire button down, but it is limited in ammo according to the number of charges indicated on the bottom. Each weapon is best used in different situations, in order to defeat the enemies which come flying down from the top part of the screen. 
- 
+		<desc>Exerion is a vertical shooter that is operated with an 8 direction joystick and two fire buttons. The game's biggest features are the parallax scrolling which occurs in the background, and the sensation of inertia that is applied to the motion of the ship. The ship is equipped with two kinds of weapons. You can fire the dual shot gun which can only release one pair of shots on the screen at a time, but has an unlimited supply, by tapping the first fire button. The single shot gun can fire a rapid stream of shots on the screen at one time by holding the second fire button down, but it is limited in ammo according to the number of charges indicated on the bottom. Each weapon is best used in different situations, in order to defeat the enemies which come flying down from the top part of the screen.
+
 Due to the inertia of the ship, you must input any reverse in direction much sooner in order to cancel the ships momentum. This was not a common feature for similar games that came out around the same time, so it distinguished Exerion from other shooters. Because the Famicom conversion was played on a horizontal screen, the enemies appeared much closer to the player's ship, which changes the feel of the game since you have to react to the enemies' location much sooner.</desc>
 		<rating>0.4</rating>
 		<releasedate>19830101T000000</releasedate>
@@ -180,15 +180,15 @@ Due to the inertia of the ship, you must input any reverse in direction much soo
 	<game id="149902" source="ScreenScraper.fr">
 		<path>./gametngk.zip</path>
 		<name>Game Paradise - Master Of Shooting! / Game Tengoku - The Game Paradise, The</name>
-		<desc>Game Tengoku - The Game Paradise is a vertically-scrolling shoot-em-up set in a video arcade. Players take on the role of one of five different characters/ships, with each offering different weapons. 
- 
-The game is an affectionate parody of video games and features many characters from various Jaleco titles (both arcade and home formats) blasting their way through themed stages, All of the game's enemies are also from previous Jaleco games. The five characters players can use are: 
-Exerion 
-Plus Alpha 
-Butasan 
-Formation Z 
-Momoko 120%  
- 
+		<desc>Game Tengoku - The Game Paradise is a vertically-scrolling shoot-em-up set in a video arcade. Players take on the role of one of five different characters/ships, with each offering different weapons.
+
+The game is an affectionate parody of video games and features many characters from various Jaleco titles (both arcade and home formats) blasting their way through themed stages, All of the game's enemies are also from previous Jaleco games. The five characters players can use are:
+Exerion
+Plus Alpha
+Butasan
+Formation Z
+Momoko 120%
+
 Game Tengoku - The Game Paradise offers both 'Standard' and 'Time Attack' modes and features the usual array of weapon power-ups, smart bombs and bonus items.</desc>
 		<rating>0.7</rating>
 		<releasedate>19950101T000000</releasedate>
@@ -228,8 +228,8 @@ Game Tengoku - The Game Paradise offers both 'Standard' and 'Time Attack' modes 
 	<game id="41514" source="ScreenScraper.fr">
 		<path>./gratia.zip</path>
 		<name>Gratia - Second Earth (92047-01 version)</name>
-		<desc>Gratia offers a rather particular perspective where the ground fills the whole screen (yes, yes!). This graphic bias is important, since your ship has, in addition to primary fire, an air-to-ground laser. This air-to-air / air-to-ground weaponry, after all very classic, is well highlighted here: there are permanently on the whole screen two types of enemies for which two different types of weapons must be used (nothing to do with Ikaruga however ...) 
- 
+		<desc>Gratia offers a rather particular perspective where the ground fills the whole screen (yes, yes!). This graphic bias is important, since your ship has, in addition to primary fire, an air-to-ground laser. This air-to-air / air-to-ground weaponry, after all very classic, is well highlighted here: there are permanently on the whole screen two types of enemies for which two different types of weapons must be used (nothing to do with Ikaruga however ...)
+
 The game is rather pleasant to play without reaching peaks, and will no doubt appeal to fans of Darius from whom it is quite clearly inspired. Its great strength, however, is its graphics: once past the surprise of this visualization "in-profile-but-with-the-ground-above", we find ourselves in front of a game with colorful backgrounds, fine and varied sprites. and which even allows itself some well-felt zoom effects. No complaints on this point, it's all good.</desc>
 		<rating>0.5</rating>
 		<releasedate>19960101T000000</releasedate>
@@ -343,8 +343,8 @@ The game is rather pleasant to play without reaching peaks, and will no doubt ap
 	<game id="60845" source="ScreenScraper.fr">
 		<path>./p47.zip</path>
 		<name>P47 Thunderbolt (World)</name>
-		<desc>P-47 is a two-dimensional, scrolling shooter type of game. You play as the pilot of a P-47. Your mission is to basically destroy as many of the enemies as you possibly can. This means eliminating as many air and ground units as you can. You will be going through four missions (each being broken up into two parts) and at the end of each of these parts is an enemy boss for you to tangle with. Although you have unlimited ammunition, the enemy will make you pay for the invasion into their homeland. You will be able to accomplish this with various power-ups and also a second player (if they buy in). Your mission won't be easy but it is necessary so you can secure both the skies and ground for our troops. 
- 
+		<desc>P-47 is a two-dimensional, scrolling shooter type of game. You play as the pilot of a P-47. Your mission is to basically destroy as many of the enemies as you possibly can. This means eliminating as many air and ground units as you can. You will be going through four missions (each being broken up into two parts) and at the end of each of these parts is an enemy boss for you to tangle with. Although you have unlimited ammunition, the enemy will make you pay for the invasion into their homeland. You will be able to accomplish this with various power-ups and also a second player (if they buy in). Your mission won't be easy but it is necessary so you can secure both the skies and ground for our troops.
+
 The game is broken up into four missions. Within these four missions, there are 2 parts. One part involves going over land and the other part has you either going over water or being up in the air. Regardless of which part you are on, you will still have to deal with the same basic things. After part two of mission four, the missions will repeat again with mission one.</desc>
 		<rating>0.5</rating>
 		<releasedate>19880101T000000</releasedate>
@@ -358,13 +358,13 @@ The game is broken up into four missions. Within these four missions, there are 
 	<game id="42542" source="ScreenScraper.fr">
 		<path>./pturn.zip</path>
 		<name>Parallel Turn</name>
-		<desc>A skiing game with six events. The screen scrolls from top to bottom with the player viewed directly from above. Events are: 
- 
-    Ski Lift - Hit Run to move and Jump to mount the empty ski chair. You have 30 seconds to pick a chair. Each chair passed puts you higher up in the rankings. 
-    Slalom - Control the skier downhill past slalom flags and through the time-bonus gates. Overtake the other skiers to increase your ranking. 
-    Ski Jump - Run to increase your speed and jump to takeoff. 
-    Biathalon - Ski to a set of targets then aim the crosshairs and shoot. Each target gives a one second bonus. 
-    Dog Sled - A 100m distance race against the computer. Hit the run button to move. 
+		<desc>A skiing game with six events. The screen scrolls from top to bottom with the player viewed directly from above. Events are:
+
+    Ski Lift - Hit Run to move and Jump to mount the empty ski chair. You have 30 seconds to pick a chair. Each chair passed puts you higher up in the rankings.
+    Slalom - Control the skier downhill past slalom flags and through the time-bonus gates. Overtake the other skiers to increase your ranking.
+    Ski Jump - Run to increase your speed and jump to takeoff.
+    Biathalon - Ski to a set of targets then aim the crosshairs and shoot. Each target gives a one second bonus.
+    Dog Sled - A 100m distance race against the computer. Hit the run button to move.
     Downhill - Similar to the slalom event.</desc>
 		<rating>0.7</rating>
 		<releasedate>19840101T000000</releasedate>
@@ -416,8 +416,8 @@ The game is broken up into four missions. Within these four missions, there are 
 	<game id="42466" source="ScreenScraper.fr">
 		<path>./popflame.zip</path>
 		<name>Pop Flamer (protected)</name>
-		<desc>Players control a mouse with a flamethrower and must pops all the balloons on the level and burn off all the annoying monsters while avoiding being touched by them, also can get the power drink power-up to transform into the 'Super Mouse' and you can score high points by swallowing the nearby monsters in one gulp! 
- 
+		<desc>Players control a mouse with a flamethrower and must pops all the balloons on the level and burn off all the annoying monsters while avoiding being touched by them, also can get the power drink power-up to transform into the 'Super Mouse' and you can score high points by swallowing the nearby monsters in one gulp!
+
 Once are pops all the balloons on the level, you advance to the next round.</desc>
 		<rating>0.6</rating>
 		<releasedate>19820101T000000</releasedate>
@@ -431,11 +431,11 @@ Once are pops all the balloons on the level, you advance to the next round.</des
 	<game id="42532" source="ScreenScraper.fr">
 		<path>./psychic5.zip</path>
 		<name>Psychic 5 (World)</name>
-		<desc>Psychic 5 is a 2D action platformer game. It is the prequel to the Famicom game Esper Boukentai. You control one of five Espers, characters with psychic abilities, and have to maneuver through a total of 8 maze-like levels, finding and defeating Satan at the end of each. Players can jump and attack, or slow their descent in mid-air by hovering (holding up).  
- 
-Two Espers are available at the start, with the rest unlocked by finding and breaking Magic Jars. Each Esper has different attributes; for example, the large Bunta is slow, but extremely powerful and very good at pushing open the many doors that block progress throughout the stages.  
- 
-Players can switch between Espers at the start of each level, after beginning a new life or by using phone booths scattered throughout the stages. The enemies are possessed objects like clocks and furniture, as well as a witch named Zara who is perpetually flying across the stage; if defeated, she will grant temporary access to a useful broom power-up. 
+		<desc>Psychic 5 is a 2D action platformer game. It is the prequel to the Famicom game Esper Boukentai. You control one of five Espers, characters with psychic abilities, and have to maneuver through a total of 8 maze-like levels, finding and defeating Satan at the end of each. Players can jump and attack, or slow their descent in mid-air by hovering (holding up).
+
+Two Espers are available at the start, with the rest unlocked by finding and breaking Magic Jars. Each Esper has different attributes; for example, the large Bunta is slow, but extremely powerful and very good at pushing open the many doors that block progress throughout the stages.
+
+Players can switch between Espers at the start of each level, after beginning a new life or by using phone booths scattered throughout the stages. The enemies are possessed objects like clocks and furniture, as well as a witch named Zara who is perpetually flying across the stage; if defeated, she will grant temporary access to a useful broom power-up.
 </desc>
 		<rating>0.6</rating>
 		<releasedate>19870101T000000</releasedate>
@@ -449,14 +449,14 @@ Players can switch between Espers at the start of each level, after beginning a 
 	<game id="42808" source="ScreenScraper.fr">
 		<path>./rodland.zip</path>
 		<name>Rod Land (World)</name>
-		<desc>Rod-Land is a cute and colourful platform game for one or two players in which two fairy sisters - 'Tam' and 'Rit' - must rescue their kidnapped mother from the 'Maboots Tower' fortress. 
- 
-The fairies are armed with the 'Rods of Sheesanomo' - two magical rods that enable the fairies to catch enemies in a force-field and slam them into the platforms to kill them - and must clear each level of enemies to move onto the next and eventually reach and infiltrate the Tower. 
- 
-As well as the magical rods used for attacking enemies, the fairies can also create a magical ladder - in a fashion very similar to that used in Taito's "Rainbow islands" - which can be utilised anywhere on a level and allows players to reach other platforms or escape from pursuing enemies. Each player can utilise only one magically-created ladder at any one time and the creation of a new ladder removes the previously-created one. 
- 
-A level is only completed when all enemies have been killed. Some defeated enemies drop bonus items, such as fruit, missiles and bombs. 
- 
+		<desc>Rod-Land is a cute and colourful platform game for one or two players in which two fairy sisters - 'Tam' and 'Rit' - must rescue their kidnapped mother from the 'Maboots Tower' fortress.
+
+The fairies are armed with the 'Rods of Sheesanomo' - two magical rods that enable the fairies to catch enemies in a force-field and slam them into the platforms to kill them - and must clear each level of enemies to move onto the next and eventually reach and infiltrate the Tower.
+
+As well as the magical rods used for attacking enemies, the fairies can also create a magical ladder - in a fashion very similar to that used in Taito's "Rainbow islands" - which can be utilised anywhere on a level and allows players to reach other platforms or escape from pursuing enemies. Each player can utilise only one magically-created ladder at any one time and the creation of a new ladder removes the previously-created one.
+
+A level is only completed when all enemies have been killed. Some defeated enemies drop bonus items, such as fruit, missiles and bombs.
+
 Each of the game's levels features brightly coloured flowers. If players manage to collect all of these, the 'Extra Game' mode begins. During this time-limited mode all of the level's enemies turn red and move much faster. If the enemies are killed in time, they drop an alphabetic letter that can be collected to spell the word 'EXTRA' and earn players an extra life.</desc>
 		<rating>0.7</rating>
 		<releasedate>19900101T000000</releasedate>
@@ -494,8 +494,8 @@ Each of the game's levels features brightly coloured flowers. If players manage 
 	<game id="43117" source="ScreenScraper.fr">
 		<path>./skyfox.zip</path>
 		<name>Sky Fox</name>
-		<desc>At the player's disposal to fight the approaching enemies, some of them made in pseudo-depth 2.5D graphics with scaled sprites, is a small space fighter capable of firing two types of projectiles: the unlimited but slow rockets and the fast laser shots that are limited by draining the ship's power. The power can be refilled and the ship itself upgraded by collecting the power ups that appear after destroying certain enemies. 
- 
+		<desc>At the player's disposal to fight the approaching enemies, some of them made in pseudo-depth 2.5D graphics with scaled sprites, is a small space fighter capable of firing two types of projectiles: the unlimited but slow rockets and the fast laser shots that are limited by draining the ship's power. The power can be refilled and the ship itself upgraded by collecting the power ups that appear after destroying certain enemies.
+
 Similar to Gorf, the game features several different types of waves. The player progresses through most of them by either destroying all the enemies or alternatively just surviving their attacks for long enough time. For instance, one stage has a Galaga-style gameplay against rows of monsters led by four witches who are vulnerable only when they open their cloaks, while another features enemy warriors saddle perched on either serpent-like Chinese dragons or Western-style winged dragons. The dragons must to be hit repeatedly in the weak point of their heads to be killed, after which the riders themselves can be shot for a bonus.</desc>
 		<rating>0.5</rating>
 		<releasedate>19870101T000000</releasedate>
@@ -568,12 +568,12 @@ Similar to Gorf, the game features several different types of waves. The player 
 	<game id="39910" source="ScreenScraper.fr">
 		<path>./64street.zip</path>
 		<name>64th. Street - A Detective Story (World)</name>
-		<desc>Rick. PRIVATE DETECTIVE 
-OCT. 1939 file no. 238 
-The kidnapping of a rich man's daughter. 
- 
-Beat the bad guys and throw them into the wall! 
- 
+		<desc>Rick. PRIVATE DETECTIVE
+OCT. 1939 file no. 238
+The kidnapping of a rich man's daughter.
+
+Beat the bad guys and throw them into the wall!
+
 Rick and Allen's Detective Agency is on 64th st. They have specialized maneuvres to beat the enemy. When you are in trouble... call on a partner to join the game and assist you. A great new action game from Jaleco.</desc>
 		<image>/userdata/roms/mame/images/64street.png</image>
 		<rating>0.5</rating>
@@ -591,8 +591,8 @@ Rick and Allen's Detective Agency is on 64th st. They have specialized maneuvres
 	<game id="40084" source="ScreenScraper.fr">
 		<path>./astyanax.zip</path>
 		<name>Astyanax, The</name>
-		<desc>The Astyanax is a side-scrolling platform action game set in a fantasy world. The hero sets out to slay the evil wizard terrorizing the land. He is armed with an ax and also has a magic lightning spell that can be powered-up two times. Magic upgrades and health potions can be found in small stone pillars. The player needs to beat monsters in a number of locales, jumping across pits and fighting bosses at the end of stages. Two-palyer co-op is supported, with the second player being palette-swap of Player 1. 
- 
+		<desc>The Astyanax is a side-scrolling platform action game set in a fantasy world. The hero sets out to slay the evil wizard terrorizing the land. He is armed with an ax and also has a magic lightning spell that can be powered-up two times. Magic upgrades and health potions can be found in small stone pillars. The player needs to beat monsters in a number of locales, jumping across pits and fighting bosses at the end of stages. Two-palyer co-op is supported, with the second player being palette-swap of Player 1.
+
 The game was designed by Tokuhiro Takemori who previously worked on Legendary Axe, and the basic game mechanic is similar -- in order to deal heavy blow with the axe the player needs to stop swinging it for a while. The NES version released after the Arcade game, while generally having same gameplay, features completely different level layouts, enemy designs and story.</desc>
 		<image>/userdata/roms/mame/images/astyanax.png</image>
 		<rating>0.7</rating>
@@ -608,8 +608,8 @@ The game was designed by Tokuhiro Takemori who previously worked on Legendary Ax
 	<game id="40118" source="ScreenScraper.fr">
 		<path>./avspirit.zip</path>
 		<name>Avenging Spirit</name>
-		<desc>While walking out with his girlfriend the game's hero is ambushed by unknown enemies who snatch his girlfriend and shoot the hero dead. Now, as a wandering spirit with the ability to possess almost anybody he comes across, the hero is summoned by his girlfriend's father and given a mission to save her from the mysterious crime syndicate that holds her hostage. Only then can the hero rest in peace. 
- 
+		<desc>While walking out with his girlfriend the game's hero is ambushed by unknown enemies who snatch his girlfriend and shoot the hero dead. Now, as a wandering spirit with the ability to possess almost anybody he comes across, the hero is summoned by his girlfriend's father and given a mission to save her from the mysterious crime syndicate that holds her hostage. Only then can the hero rest in peace.
+
 The player's character 'inhabits' a body with which to combat the game's enemies. When that body is killed, providing there is a living enemy nearby (other than that of a boss) the player can posses them and continue playing. Each time this is done, it costs the player some of their 'spirit energy'. Should the hero die when there are no enemies close by for the player to possess; the game is over.</desc>
 		<image>/userdata/roms/mame/images/avspirit.png</image>
 		<rating>0.5</rating>

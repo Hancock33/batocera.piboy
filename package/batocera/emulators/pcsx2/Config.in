@@ -35,5 +35,5 @@ config BR2_PACKAGE_PCSX2
     select BR2_PACKAGE_QT6SVG
     help
       PCSX2 is a free and open-source PlayStation 2 (PS2) emulator.
-      
+
       https://github.com/PCSX2/pcsx2

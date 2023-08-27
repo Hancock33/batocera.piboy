@@ -2,7 +2,7 @@
    "actions_player1": [
        {
            "trigger": ["hotkey", "start"],
-            "type": "key", 
+            "type": "key",
             "target": ["KEY_LEFTALT", "KEY_F4"],
             "description": "Exit emulator"
         }

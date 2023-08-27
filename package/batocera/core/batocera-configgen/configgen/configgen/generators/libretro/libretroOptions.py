@@ -2447,7 +2447,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('yabasanshiro_system_language', '"' + system.config['yabasanshiro_language'] + '"')
         else:
             coreSettings.save('yabasanshiro_system_language', '"english"')
-    
+
     if (system.config['core'] == 'kronos'):
         # Share saves with Beetle
         if system.isOptSet('kronos_use_beetle_saves') and system.config['kronos_use_beetle_saves'] == 'disabled':
@@ -2615,7 +2615,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('neocd_per_content_saves', '"Off"')
         else:
             coreSettings.save('neocd_per_content_saves', '"On"')
-    
+
     # Sony PSP
     if (system.config['core'] == 'ppsspp'):
         if system.isOptSet('ppsspp_resolution'):
@@ -2916,7 +2916,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
             coreSettings.save('openlara_resolution', '"' + system.config['lara-resolution'] + '"')
         else:
             coreSettings.save('openlara_resolution', '"1280x720"')
-                
+
         # Framerate
         if system.isOptSet('lara-framerate'):
             coreSettings.save('openlara_framerate', '"' + system.config['lara-framerate'] + '"')

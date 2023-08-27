@@ -55,7 +55,7 @@ def writeControllersConfig(retroconfig, system, controllers, lightgun):
     # No menu in non full uimode
     if system.config["uimode"] != "Full":
         del retroarchspecials['b']
-    
+
     # Check if hotkeys need to be removed/disabled (Needed for N64 controllers without a dedicated hotkey button)
     # Assign value based on core
     if (system.config['core'] == 'mupen64plus-next'):
@@ -67,7 +67,7 @@ def writeControllersConfig(retroconfig, system, controllers, lightgun):
     # Check for limited hotkey setting
     if option and option in system.config and system.config[option] in ['n64limited']:
         retroarchspecials = {'start': 'exit_emulator'}
-    
+
     for controller in controllers:
         mouseIndex = None
         if system.name in ['nds', '3ds']:

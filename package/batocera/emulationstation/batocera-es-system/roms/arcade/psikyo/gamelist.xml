@@ -61,8 +61,8 @@
 	<game id="40816" source="ScreenScraper.fr">
 		<path>./daraku.zip</path>
 		<name>The Fallen Angels</name>
-		<desc>Fallen Angels is a two dimensional fighting game that takes a somewhat realistic approach in its gameplay, with no supernatural attacks and fluid movements animated using real motions. Projectile attacks are limited to three characters, atypical for the game's genre. The game featured eight playable characters: Cool, Harry Ness, Yuiren, Yuiran, Tarō, Torao Onigawara, Ruccio Roche, Haiji Mibu. The boss characters are Trigger and Carlos. 
- 
+		<desc>Fallen Angels is a two dimensional fighting game that takes a somewhat realistic approach in its gameplay, with no supernatural attacks and fluid movements animated using real motions. Projectile attacks are limited to three characters, atypical for the game's genre. The game featured eight playable characters: Cool, Harry Ness, Yuiren, Yuiran, Tarō, Torao Onigawara, Ruccio Roche, Haiji Mibu. The boss characters are Trigger and Carlos.
+
 The game takes place in 2010, ten years after a massive earthquake that shook an unnamed city. The earthquake severed the city from its surrounding areas, leaving criminals to run as they please. The game revolves around the inhabitants fighting against one another to accomplish their goals.</desc>
 		<rating>0.7</rating>
 		<releasedate>19980101T000000</releasedate>
@@ -123,18 +123,18 @@ The gameplay has a 6-button layout, but with command inputs different compared t
 	<game id="41573" source="ScreenScraper.fr">
 		<path>./gunbird.zip</path>
 		<name>Gunbird (World)</name>
-		<desc>Gunbird is a vertically scrolling shoot 'em up developed and published by Psikyo and released in Japanese arcades in 1994. It has been re-released multiple times, including on the Sega Saturn, PlayStation, and Steam. When originally localized outside Japan by XS Games, Gunbird was retitled Mobile Light Force. The game was followed by Gunbird 2 in 1998 and was included in Gunbird Special Edition. 
- 
-When a player collides with the body of an enemy unit, the player loses a shot power level, and a power up flies around the screen and disappears as soon as it reaches the edge. If a player is at the lowest level of shot, the player loses a bomb instead. 
-There are seven stages in each of the game's two loops. The first four stages are randomly chosen from possible five. In the second loop enemies fire denser bullet patterns moving at faster speeds. Stage 2-1 takes place at the only stage not available on the first loop, instead of the 1-1 counterpart. The remaining three stages are chosen at random, but does not include the replaced stage. After completing first loop with only one player, the player can choose one of two choices for a wish with a magic potion, with unique endings for each choice. If the first loop is completed with two players, a combination-specific ending is played. 
-The cutscenes between the battles with two players fighting cooperatively are frequently packed with hilarious dialogue and situations. This is often a recurring theme with Psikyo games, the Gunbird games being no exception. There are no cutscenes when playing second loop stages. The Korean arcade version contains English dialog but some sound samples are missing during play. 
- 
-Gunbird uses manga-styled character as the player's chosen craft. A story plays out in between levels and before boss fights, telling a tale of how the protagonists are trying to collect pieces of a magic mirror to make a wish. 
-Ash: A 28-year-old German man with a jet pack on his back, who in some of the scenes between battles is discovered to be an inventor, and when two players choose Marion and Ash as cooperative partners, he takes an unhealthy interest in her. Voiced by Ry?tar? Okiayu. 
-Marion: A 13-year-old witch from England who flies on a broomstick. She is accompanied by her talking pet rabbit, Pom-Pom, and frequently abuses the poor creature verbally and physically. Marion is fun-loving and thrill-seeking but also selfish, and has a mean streak (which Pom-Pom is often witness to). Voiced by Chiharu Tanaka. 
-Valnus: A big robot created in Russia six months ago that has some of the best firepower in the game. Secretly wishes to be human. Voiced by Kazuya Tatekabe. 
-Yuan Nang: A strong-willed and courageous woman whose character design is highly influenced by that of Sun Wukong from the Chinese classical story Journey to the West, including a cloud-somersault parody, Ruyi Jingu Bang, and the size-changing headband that was used by the monk Xuánzàng. Voiced by Naoko Matsui. 
-Tetsu: A strong, white-haired old man of 60 years. He is homosexual in a rather uncloseted manner and rides in a man-powered helicopter. Voiced by Sakunosuke Maya. 
+		<desc>Gunbird is a vertically scrolling shoot 'em up developed and published by Psikyo and released in Japanese arcades in 1994. It has been re-released multiple times, including on the Sega Saturn, PlayStation, and Steam. When originally localized outside Japan by XS Games, Gunbird was retitled Mobile Light Force. The game was followed by Gunbird 2 in 1998 and was included in Gunbird Special Edition.
+
+When a player collides with the body of an enemy unit, the player loses a shot power level, and a power up flies around the screen and disappears as soon as it reaches the edge. If a player is at the lowest level of shot, the player loses a bomb instead.
+There are seven stages in each of the game's two loops. The first four stages are randomly chosen from possible five. In the second loop enemies fire denser bullet patterns moving at faster speeds. Stage 2-1 takes place at the only stage not available on the first loop, instead of the 1-1 counterpart. The remaining three stages are chosen at random, but does not include the replaced stage. After completing first loop with only one player, the player can choose one of two choices for a wish with a magic potion, with unique endings for each choice. If the first loop is completed with two players, a combination-specific ending is played.
+The cutscenes between the battles with two players fighting cooperatively are frequently packed with hilarious dialogue and situations. This is often a recurring theme with Psikyo games, the Gunbird games being no exception. There are no cutscenes when playing second loop stages. The Korean arcade version contains English dialog but some sound samples are missing during play.
+
+Gunbird uses manga-styled character as the player's chosen craft. A story plays out in between levels and before boss fights, telling a tale of how the protagonists are trying to collect pieces of a magic mirror to make a wish.
+Ash: A 28-year-old German man with a jet pack on his back, who in some of the scenes between battles is discovered to be an inventor, and when two players choose Marion and Ash as cooperative partners, he takes an unhealthy interest in her. Voiced by Ry?tar? Okiayu.
+Marion: A 13-year-old witch from England who flies on a broomstick. She is accompanied by her talking pet rabbit, Pom-Pom, and frequently abuses the poor creature verbally and physically. Marion is fun-loving and thrill-seeking but also selfish, and has a mean streak (which Pom-Pom is often witness to). Voiced by Chiharu Tanaka.
+Valnus: A big robot created in Russia six months ago that has some of the best firepower in the game. Secretly wishes to be human. Voiced by Kazuya Tatekabe.
+Yuan Nang: A strong-willed and courageous woman whose character design is highly influenced by that of Sun Wukong from the Chinese classical story Journey to the West, including a cloud-somersault parody, Ruyi Jingu Bang, and the size-changing headband that was used by the monk Xuánzàng. Voiced by Naoko Matsui.
+Tetsu: A strong, white-haired old man of 60 years. He is homosexual in a rather uncloseted manner and rides in a man-powered helicopter. Voiced by Sakunosuke Maya.
 The Trump: A group of sky pirates consist of Ace (voiced by J?ji Yanami), Claude (voiced by Kazuya Tatekabe), and their female leader Rouge (voiced by Noriko Ohara). They are not playable and serve as the players' rivals in the story.</desc>
 		<image>/userdata/roms/mame/images/gunbird.png</image>
 		<rating>0.7</rating>
@@ -150,8 +150,8 @@ The Trump: A group of sky pirates consist of Ace (voiced by J?ji Yanami), Claude
 	<game id="41574" source="ScreenScraper.fr">
 		<path>./gunbird2.zip</path>
 		<name>Gunbird 2</name>
-		<desc>Seven warriors are challenged to head on a quest to find three powerful elements of Sun, Moon and Stars. Whoever brings the elements to the Potion God will be rewarded the legendary Almighty Potion and all its magical powers. 
- 
+		<desc>Seven warriors are challenged to head on a quest to find three powerful elements of Sun, Moon and Stars. Whoever brings the elements to the Potion God will be rewarded the legendary Almighty Potion and all its magical powers.
+
 There are seven stages in each game loop (two loops total). The first three stages are randomly chosen from possible four. At the second loop, enemies fire denser bullet patterns moving at faster speeds. Stage 2-1 takes place at the only stage not available in 1st loop, instead of the 1-1 counterpart. After completing the first loop with only one player, player can choose one of two choices for a wish with magic potion, with unique ending for each choice. If 1st loop is completed with two players, a combination-specific ending is played.</desc>
 		<image>/userdata/roms/mame/images/gunbird2.png</image>
 		<rating>0.9</rating>
@@ -167,7 +167,7 @@ There are seven stages in each game loop (two loops total). The first three stag
 	<game id="42162" source="ScreenScraper.fr">
 		<path>./loderndf.zip</path>
 		<name>Lode Runner: The Dig Fight (ver. B)</name>
-		<desc>Maintenance Code: In test mode enter this code... 
+		<desc>Maintenance Code: In test mode enter this code...
 5-0-8-2-0: Some nice features appear include stages select, obj test, etc... and a complete Map editor!!</desc>
 		<image>/userdata/roms/mame/images/loderndf.png</image>
 		<rating>0.9</rating>
@@ -198,10 +198,10 @@ There are seven stages in each game loop (two loops total). The first three stag
 	<game id="42888" source="ScreenScraper.fr">
 		<path>./samuraia.zip</path>
 		<name>Samurai Aces (World)</name>
-		<desc>This game is known in Japan as "Sengoku Ace" (translates from Japanese as 'Civil War Ace'). 
- 
-Samurai Aces is the very first game developed by Psikyo (Psikyo was founded in 1992 in Tokyo). 
- 
+		<desc>This game is known in Japan as "Sengoku Ace" (translates from Japanese as 'Civil War Ace').
+
+Samurai Aces is the very first game developed by Psikyo (Psikyo was founded in 1992 in Tokyo).
+
 Note: There are 22 different endings!</desc>
 		<image>/userdata/roms/mame/images/samuraia.png</image>
 		<rating>0.9</rating>

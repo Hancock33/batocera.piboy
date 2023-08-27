@@ -144,7 +144,7 @@ class DolphinGenerator(Generator):
                 dolphinSettings.set("Core", "SkipIPL", "True")
         else:
             dolphinSettings.set("Core", "SkipIPL", "True")
-        
+
         # Save dolphin.ini
         with open(batoceraFiles.dolphinIni, 'w') as configfile:
             dolphinSettings.write(configfile)
@@ -246,7 +246,7 @@ class DolphinGenerator(Generator):
                 dolphinGFXSettings.remove_option("Enhancements", "ArbitraryMipmapDetection")
                 dolphinGFXSettings.remove_option("Enhancements", "DisableCopyFilter")
                 dolphinGFXSettings.remove_option("Enhancements", "ForceTrueColor")
-        
+
         if system.isOptSet('vbi_hack'):
             dolphinGFXSettings.set("Hacks", "VISkip", system.config["vbi_hack"])
         else:
@@ -344,7 +344,7 @@ class DolphinGenerator(Generator):
         hotkey_path = '/userdata/system/configs/dolphin-emu/Hotkeys.ini'
         with open(hotkey_path, 'w') as configfile:
             hotkeyConfig.write(configfile)
-        
+
         # Update SYSCONF
         try:
             dolphinSYSCONF.update(system.config, batoceraFiles.dolphinSYSCONF, gameResolution)
