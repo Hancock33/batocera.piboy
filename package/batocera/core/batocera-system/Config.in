@@ -1687,12 +1687,16 @@ config BR2_PACKAGE_BATOCERA_XORG
     select BR2_PACKAGE_UNCLUTTER                            if  !BR2_PACKAGE_BATOCERA_LIB32             # hide mouse
     select BR2_PACKAGE_TOUCHEGG                             if  !BR2_PACKAGE_BATOCERA_LIB32             # touchscreen extended gestures
 
-    #Openbox wallpaper
+    # Openbox wallpaper
     select BR2_PACKAGE_IMLIB2_X                             if  !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_IMLIB2_JPEG                          if  !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_IMLIB2_PNG                           if  !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_IMLIB2_GIF                           if  !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_FEH                                  if  !BR2_PACKAGE_BATOCERA_LIB32
+
+    # Mouse Cursor
+    select BR2_PACKAGE_XDATA_XCURSOR_THEMES                 if  !BR2_PACKAGE_BATOCERA_LIB32
+    select BR2_PACKAGE_XAPP_XRDB                            if  !BR2_PACKAGE_BATOCERA_LIB32
 
     # vendor neutral GL dispatch library
     # already set by nvidia for x86_64, but required on x86 for pcsx2
