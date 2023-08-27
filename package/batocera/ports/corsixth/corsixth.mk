@@ -3,8 +3,8 @@
 # corsixth
 #
 ################################################################################
-# Version: Commits on Aug 06, 2023
-CORSIXTH_VERSION = fc38c4f46913b7b91c0b1b53efd7c7f2764adb20
+# Version: Commits on Aug 27, 2023
+CORSIXTH_VERSION = 5a9b41f4e78f4fa2e03adae5863fe5525d5c6a05
 CORSIXTH_SITE = $(call github,CorsixTH,CorsixTH,$(CORSIXTH_VERSION))
 CORSIXTH_DEPENDENCIES = sdl2 sdl2_mixer
 CORSIXTH_LICENSE = GPL-2.0
