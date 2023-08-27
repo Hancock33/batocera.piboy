@@ -27,7 +27,7 @@
             "type": "key",
             "target": "KEY_4"
 	}
-    ]		
+    ]
     ,"actions_gun1": [
 	{
             "trigger": "middle",

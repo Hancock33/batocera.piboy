@@ -39,7 +39,7 @@
         <xr591 solved="none" best_while_slower="false"/>
         <zengarden solved="none" best_while_slower="false"/>
       </story-mode>
-      <achievements online="true"> 
+      <achievements online="true">
         <achievement id="1" achieved="false"/>
         <achievement id="2" achieved="false"/>
         <achievement id="3" achieved="false"/>

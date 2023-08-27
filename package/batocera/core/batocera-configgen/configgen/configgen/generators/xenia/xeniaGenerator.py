@@ -41,7 +41,7 @@ class XeniaGenerator(Generator):
             shutil.copytree('/usr/bin/xenia-canary', canarypath, dirs_exist_ok=True)
         if not os.path.exists(canarypath + '/patches'):
             shutil.copytree('/usr/bin/xenia-canary', canarypath, dirs_exist_ok=True)
-        
+
         # create portable txt file to try & stop file spam
         if not os.path.exists(emupath + '/portable.txt'):
             with open(emupath + '/portable.txt', 'w') as fp:

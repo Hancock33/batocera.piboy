@@ -78,8 +78,8 @@ class Emulator():
 
         rom = os.path.basename(rom)
 
-        # sanitize rule by EmulationStation 
-        # see FileData::getConfigurationName() on batocera-emulationstation 
+        # sanitize rule by EmulationStation
+        # see FileData::getConfigurationName() on batocera-emulationstation
         rom = rom.replace('=','')
         rom = rom.replace('#','')
         eslog.info("game settings name: "+rom)

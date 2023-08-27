@@ -7,7 +7,7 @@ config BR2_PACKAGE_D8VK
 	select BR2_PACKAGE_DXVK
 	help
 	  Direct3D 8 to Vulkan translation for DXVK.
-	  
+
 	  https://github.com/AlpyneDreams/d8vk
 
 comment "d8vk needs a toolchain w/ dynamic library"
