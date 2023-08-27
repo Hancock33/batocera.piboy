@@ -8,7 +8,7 @@ config BR2_PACKAGE_DXVK_NVAPI
 	help
       Provides an alternative implementation of NVIDIA's NVAPI library
 	  for use with DXVK and VKD3D-Proton.
-	  
+
 	  https://github.com/jp7677/dxvk-nvapi
 
 comment "dxvk_nvapi needs a toolchain w/ dynamic library"

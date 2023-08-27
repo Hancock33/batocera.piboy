@@ -31,10 +31,10 @@
 	<game id="108036" source="ScreenScraper.fr">
 		<path>./mario.zip</path>
 		<name>Mario Bros. (US, Revision F)</name>
-		<desc>Mario Bros. is a superb, single-screen platform game in which the legendary "Mario Bros.", Mario and Luigi, must try to rid each level of a number of pests that have infested the waterworks: Shellcreepers (turtles), Sidesteppers (crabs that need to be hit twice) and Fighterflies (flies that can only be attacked when they touch a platform). 
- 
-Players can jump upwards to hit the platform above them, which will 'flip' any enemies on the above platform onto their backs. The prone enemies can then be kicked into the water to remove them. A 'POW' button also appears on a number of screen; this can be 'butted' by a player, causing all on-screen enemies to flip onto their backs; as well as destroying any enemy fireballs that may be around. Each POW can only be used a maximum of three times.  
- 
+		<desc>Mario Bros. is a superb, single-screen platform game in which the legendary "Mario Bros.", Mario and Luigi, must try to rid each level of a number of pests that have infested the waterworks: Shellcreepers (turtles), Sidesteppers (crabs that need to be hit twice) and Fighterflies (flies that can only be attacked when they touch a platform).
+
+Players can jump upwards to hit the platform above them, which will 'flip' any enemies on the above platform onto their backs. The prone enemies can then be kicked into the water to remove them. A 'POW' button also appears on a number of screen; this can be 'butted' by a player, causing all on-screen enemies to flip onto their backs; as well as destroying any enemy fireballs that may be around. Each POW can only be used a maximum of three times.
+
 As well as the game's enemies, players are also hampered by the huge amount of inertia that comes into play when controlling Mario or Luigi. This is due to the low degree of traction that exists between the Mario brothers and the platforms. On later phases, ice appears on the platforms reducing the amount of traction even further. As the game progresses, water droplets hang below the platforms and freeze into deadly icicles, which will eventually break off and fall.</desc>
 		<rating>0.9</rating>
 		<releasedate>19830101T000000</releasedate>
@@ -61,7 +61,7 @@ As well as the game's enemies, players are also hampered by the huge amount of i
 	<game id="79219" source="ScreenScraper.fr">
 		<path>./pc_mtoid.zip</path>
 		<name>Metroid (playchoice-10) (PlayChoice-10)</name>
-		<desc>In the future, the Galactic Federation and the pirates of planet Zebes are at war. Pirates have stolen an unknown life-form, recently discovered on the planet SR388. The life-form, designated "Metroid", is in a state of suspended animation and, according to analysis, was the cause of the complete destruction of SR388. If the Metroid ever got loose, the alien could destroy countless other systems. It is up to the space bounty hunter Samus Aran to land on Zebes and find her way through the perilous terrains of Brinstar and Norfair, destroy the Pirates, as well as their alien enforcers, Ridley and Kraid, and rid the planet of the alien life form before the pirates complete their plans of world destruction. 
+		<desc>In the future, the Galactic Federation and the pirates of planet Zebes are at war. Pirates have stolen an unknown life-form, recently discovered on the planet SR388. The life-form, designated "Metroid", is in a state of suspended animation and, according to analysis, was the cause of the complete destruction of SR388. If the Metroid ever got loose, the alien could destroy countless other systems. It is up to the space bounty hunter Samus Aran to land on Zebes and find her way through the perilous terrains of Brinstar and Norfair, destroy the Pirates, as well as their alien enforcers, Ridley and Kraid, and rid the planet of the alien life form before the pirates complete their plans of world destruction.
 </desc>
 		<rating>0.9</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -88,8 +88,8 @@ As well as the game's enemies, players are also hampered by the huge amount of i
 	<game id="42465" source="ScreenScraper.fr">
 		<path>./popeye.zip</path>
 		<name>Popeye (revision D)</name>
-		<desc>Popeye is a superb and demanding platform game featuring characters from the famous King Features Syndicate cartoon show of the same name. The aim of the game is to rescue Popeye's girlfriend, Olive Oyl. This is achieved by catching a set number of objects thrown down by Olive from the top of the screen; such as hearts, letters and musical notes. Popeye is constantly pursued in his quest by love rival, Brutus (originally known as Bluto). Popeye must either run away from Brutus or grab some spinach and punch him off the screen (he will, of course, return). 
- 
+		<desc>Popeye is a superb and demanding platform game featuring characters from the famous King Features Syndicate cartoon show of the same name. The aim of the game is to rescue Popeye's girlfriend, Olive Oyl. This is achieved by catching a set number of objects thrown down by Olive from the top of the screen; such as hearts, letters and musical notes. Popeye is constantly pursued in his quest by love rival, Brutus (originally known as Bluto). Popeye must either run away from Brutus or grab some spinach and punch him off the screen (he will, of course, return).
+
 Should any of Olive Oyl's items fail to be caught, they will fall into the water at the bottom of the screen. Popeye will then have only a few seconds to retrieve the object or a life is lost. Several other Popeye characters also make an appearance in the game; namely Wimpy, Swee'Pea, the Sea Hag, and her vulture Bernard. The game's three levels are the dock scene, the street scene and the shipboard scene. These repeat with increasing difficulty.</desc>
 		<rating>0.9</rating>
 		<releasedate>19820101T000000</releasedate>
@@ -116,10 +116,10 @@ Should any of Olive Oyl's items fail to be caught, they will fall into the water
 	<game id="42550" source="ScreenScraper.fr">
 		<path>./punchout.zip</path>
 		<name>Punch-out!! (rev B)</name>
-		<desc>The player assumes the role of a green-haired boxer, who must fight his way through six increasingly larger-than-life boxers to earn the title of 'Champ' in this superb 1-on-1 fighting game. 
- 
-During matches, the player's boxer is viewed from behind as a wire-frame (so the player's opponent can be seen). Players must time their punches, dodges and blocks in order to defeat the opposing boxer. 
- 
+		<desc>The player assumes the role of a green-haired boxer, who must fight his way through six increasingly larger-than-life boxers to earn the title of 'Champ' in this superb 1-on-1 fighting game.
+
+During matches, the player's boxer is viewed from behind as a wire-frame (so the player's opponent can be seen). Players must time their punches, dodges and blocks in order to defeat the opposing boxer.
+
 The player's opponents are each rendered as humorous cartoon-like caricatures - adding much to the game's atmosphere - and each boxer fights in a slightly different style, forcing players to adapt to their strategy. The top monitor is used for statistics while the bottom one is used to display the actual fight.</desc>
 		<rating>0.6</rating>
 		<releasedate>19840101T000000</releasedate>
@@ -133,10 +133,10 @@ The player's opponents are each rendered as humorous cartoon-like caricatures - 
 	<game id="42673" source="ScreenScraper.fr">
 		<path>./radarscp.zip</path>
 		<name>Radar Scope</name>
-		<desc>As captain of the Sonic Spaceport, players must defend their station against enemy spaceships called Gamma Raiders, which attack with vengeance and swiftly retreat to formation. The object of the game is to destroy 48 enemy Gamma Raiders before there is total disintegration of all the Spaceports on the player's side. 
- 
-Players can counterattack with the Rapid-Fire Laser Blaster which zooms the lasers over the three-dimensional-esque field of curving vectors, while it intercepts enemies. The lower on the radar screen that you destroy a Gamma Raider, the more points will be earned. If exploding decoys damage the Sonic Spaceport, the Laser Blaster's firing speed will reduce. The Laser Blaster's "Damage Meter" will light up as damage is incurred and when fully illuminated, will weaken the Laser Blaster's offensive powers. To reverse this, the players must attack and destroy all remaining Gamma Raiders. 
- 
+		<desc>As captain of the Sonic Spaceport, players must defend their station against enemy spaceships called Gamma Raiders, which attack with vengeance and swiftly retreat to formation. The object of the game is to destroy 48 enemy Gamma Raiders before there is total disintegration of all the Spaceports on the player's side.
+
+Players can counterattack with the Rapid-Fire Laser Blaster which zooms the lasers over the three-dimensional-esque field of curving vectors, while it intercepts enemies. The lower on the radar screen that you destroy a Gamma Raider, the more points will be earned. If exploding decoys damage the Sonic Spaceport, the Laser Blaster's firing speed will reduce. The Laser Blaster's "Damage Meter" will light up as damage is incurred and when fully illuminated, will weaken the Laser Blaster's offensive powers. To reverse this, the players must attack and destroy all remaining Gamma Raiders.
+
 Players are given a wide range of flexibility in controlling the difficulty levels of the game. Extra Spaceports are awarded at 7,000, 10,000, 15,000 and 20,000 points, as determined by the players. The initial number of Spaceports may also be pre-programmed at 3, 4, 5 or 6. When the required number of spaceships is destroyed, players receive an extra point bonus.</desc>
 		<rating>0.5</rating>
 		<releasedate>19800101T000000</releasedate>
@@ -176,11 +176,11 @@ Players are given a wide range of flexibility in controlling the difficulty leve
 	<game id="43196" source="ScreenScraper.fr">
 		<path>./spacefev.zip</path>
 		<name>Space Fever (New Ver.)</name>
-		<desc>The Earth is under attack from alien invaders. Shoot them out of the sky before they land. Space Fever is Nintendo's take on the "Space Invaders" franchise. The game is almost identical in terms of how it plays. The alien craft are arranged in rows and they slowly move left and right across the screen. When the row reaches the edge, the ships drop down a row and move in the opposite direction. As you shoot more enemies the speed will increase, as will the number of enemy bullets. You have four blocks above you that absorb the enemy shots until they are worn through, and being hit by an enemy shot will cost you a life. Sometimes a UFO will fly along the top of the screen and can be hit for Bonus points. 
- 
-There are three different game modes for 1- or 2-player games: 
-Game A - There are two 'blocks' of aliens that move in opposite directions to each other. 
-Game B - The aliens move as one 'block', but they only appear one row at a time. 
+		<desc>The Earth is under attack from alien invaders. Shoot them out of the sky before they land. Space Fever is Nintendo's take on the "Space Invaders" franchise. The game is almost identical in terms of how it plays. The alien craft are arranged in rows and they slowly move left and right across the screen. When the row reaches the edge, the ships drop down a row and move in the opposite direction. As you shoot more enemies the speed will increase, as will the number of enemy bullets. You have four blocks above you that absorb the enemy shots until they are worn through, and being hit by an enemy shot will cost you a life. Sometimes a UFO will fly along the top of the screen and can be hit for Bonus points.
+
+There are three different game modes for 1- or 2-player games:
+Game A - There are two 'blocks' of aliens that move in opposite directions to each other.
+Game B - The aliens move as one 'block', but they only appear one row at a time.
 Game C - The same as "Space Invaders" - all the aliens move as one 'block' in the same direction.</desc>
 		<rating>0.6</rating>
 		<releasedate>19790101T000000</releasedate>
@@ -194,11 +194,11 @@ Game C - The same as "Space Invaders" - all the aliens move as one 'block' in th
 	<game id="41676" source="ScreenScraper.fr">
 		<path>./highsplt.zip</path>
 		<name>Space Fever High Splitter (set 1)</name>
-		<desc>Space Fever High Splitter is another of Nintendo's takes on the "Space Invaders" franchise, only with a twist: if you don't quite hit the alien in the middle, you'll split the alien in two, both of which you'll have to shoot. The alien crafts are arranged in rows and they slowly move left and right across the screen. When the row reaches the edge, the ships drop down a row and move in the opposite direction (one exception: see below). As you shoot more enemies the speed will increase, as will the number of enemy bullets. You have four blocks above you that absorb the enemy shots until they are worn through, and being hit by an enemy shot will cost you a life. Sometimes a UFO will fly along the top of the screen; hit it and you'll get points and a smaller alien, hit the smaller alien and get more points. 
- 
-There are three different game modes for 1- or 2-player games: 
-Game A: aliens go down two, up one, down two, up one. 
-Game B: aliens show up in one up-and-down row, they add a row each time they reach the edge and turn around. 
+		<desc>Space Fever High Splitter is another of Nintendo's takes on the "Space Invaders" franchise, only with a twist: if you don't quite hit the alien in the middle, you'll split the alien in two, both of which you'll have to shoot. The alien crafts are arranged in rows and they slowly move left and right across the screen. When the row reaches the edge, the ships drop down a row and move in the opposite direction (one exception: see below). As you shoot more enemies the speed will increase, as will the number of enemy bullets. You have four blocks above you that absorb the enemy shots until they are worn through, and being hit by an enemy shot will cost you a life. Sometimes a UFO will fly along the top of the screen; hit it and you'll get points and a smaller alien, hit the smaller alien and get more points.
+
+There are three different game modes for 1- or 2-player games:
+Game A: aliens go down two, up one, down two, up one.
+Game B: aliens show up in one up-and-down row, they add a row each time they reach the edge and turn around.
 Game C: The same as "Space Invaders" - all the aliens move as one 'block' in the same direction.</desc>
 		<rating>0.5</rating>
 		<releasedate>19790101T000000</releasedate>
@@ -212,17 +212,17 @@ Game C: The same as "Space Invaders" - all the aliens move as one 'block' in the
 	<game id="43195" source="ScreenScraper.fr">
 		<path>./spacefb.zip</path>
 		<name>Space Firebird (rev. 04-u)</name>
-		<desc>Space Firebird is a one or two player game in which players are attacked from all sides by highly maneuverable Firebirds. Players can move space ship left or right and shoot a rapid-fire laser at attacking Firebirds. A special Warp Mode allows the space ship to escape danger and fire at the flock of aliens. 
- 
-FIREBIRDS 
-The space Firebirds are a unique set of adversaries. There are three different birds, the Emperor, Eagle and Gull, which fly together in complex looping formations, firing and attacking from all directions. The player must keep track of the laser hits because each bird has a different resistance level to hits. The fearless Emperor is destroyed by four hits, the Eagle with two hits and the soaring Gull with one hit. The Eagle also has a deadly bomb which is launched at the space ship. Extra points are scored by hitting the bomb before it explodes. The bomb when hit, scatters into deadly shrapnel. To avoid the flying shrapnel, the bomb must be hit from directly underneath. 
- 
-SPACE SHIP 
-The space ship can be moved right or left to evade attacking Firebirds. Depressing the fire button enables the space ship to shoot its laser at approaching Firebirds. Players receive 3 (adjustable) space ships per play. 
- 
-WARP MODE 
-Activate warp mode to escape impeding danger or to strike out at approaching birds. There is only warp mode per space ship. When activated, the space ship is launched into space with a force field around it that deflects enemy fire. In warp mode, Firebirds can be eliminated by ramming into them or by firing at close range. 
- 
+		<desc>Space Firebird is a one or two player game in which players are attacked from all sides by highly maneuverable Firebirds. Players can move space ship left or right and shoot a rapid-fire laser at attacking Firebirds. A special Warp Mode allows the space ship to escape danger and fire at the flock of aliens.
+
+FIREBIRDS
+The space Firebirds are a unique set of adversaries. There are three different birds, the Emperor, Eagle and Gull, which fly together in complex looping formations, firing and attacking from all directions. The player must keep track of the laser hits because each bird has a different resistance level to hits. The fearless Emperor is destroyed by four hits, the Eagle with two hits and the soaring Gull with one hit. The Eagle also has a deadly bomb which is launched at the space ship. Extra points are scored by hitting the bomb before it explodes. The bomb when hit, scatters into deadly shrapnel. To avoid the flying shrapnel, the bomb must be hit from directly underneath.
+
+SPACE SHIP
+The space ship can be moved right or left to evade attacking Firebirds. Depressing the fire button enables the space ship to shoot its laser at approaching Firebirds. Players receive 3 (adjustable) space ships per play.
+
+WARP MODE
+Activate warp mode to escape impeding danger or to strike out at approaching birds. There is only warp mode per space ship. When activated, the space ship is launched into space with a force field around it that deflects enemy fire. In warp mode, Firebirds can be eliminated by ramming into them or by firing at close range.
+
 If all Firebirds are destroyed, the player moves into a new battle sequence that increases in difficulty. One new space ship is awarded for a score of 5,000 (adjustable) points. Game ends when all space ships are destroyed.</desc>
 		<rating>0.8</rating>
 		<releasedate>19800101T000000</releasedate>
@@ -236,8 +236,8 @@ If all Firebirds are destroyed, the player moves into a new battle sequence that
 	<game id="43202" source="ScreenScraper.fr">
 		<path>./spacelnc.zip</path>
 		<name>Space Launcher</name>
-		<desc>Space Launcher is a game by Nintendo that was surprisingly original - the game is similar to Frogger, though is not a clone since it predates it by at least two years.  
- 
+		<desc>Space Launcher is a game by Nintendo that was surprisingly original - the game is similar to Frogger, though is not a clone since it predates it by at least two years.
+
 The game takes place in space, and your goal is to maneuver around space objects and dodge oncoming enemy fire from the aliens that are stationed above. There are treasures at the top: and your goal is to fly up, grab the treasure, and come soaring back down. You must repeat this until all of the treasures have been scavenged.</desc>
 		<rating>0.5</rating>
 		<releasedate>19790101T000000</releasedate>
@@ -251,9 +251,9 @@ The game takes place in space, and your goal is to maneuver around space objects
 	<game id="79231" source="ScreenScraper.fr">
 		<path>./pc_smb.zip</path>
 		<name>Super Mario Bros. (playchoice-10) (PlayChoice-10)</name>
-		<desc>The Princess has been kidnapped by the evil Bowser, and it is up to Mario and brother Luigi to save the day. 
- 
-The first ever platform adventure for the Mario Brothers has the player exploring level after level, with Bowser to contend with as the end of level boss. Power-ups include the Super Mushroom, which increases Mario's size and power, the fire flower, allowing him to shoot fireballs at enemies, and the ever important starman for a short burst of invincibility. 
+		<desc>The Princess has been kidnapped by the evil Bowser, and it is up to Mario and brother Luigi to save the day.
+
+The first ever platform adventure for the Mario Brothers has the player exploring level after level, with Bowser to contend with as the end of level boss. Power-ups include the Super Mushroom, which increases Mario's size and power, the fire flower, allowing him to shoot fireballs at enemies, and the ever important starman for a short burst of invincibility.
 </desc>
 		<rating>0.9</rating>
 		<releasedate>19850101T000000</releasedate>
@@ -267,11 +267,11 @@ The first ever platform adventure for the Mario Brothers has the player explorin
 	<game id="79232" source="ScreenScraper.fr">
 		<path>./pc_smb2.zip</path>
 		<name>Super Mario Bros. 2 (playchoice-10) (PlayChoice-10)</name>
-		<desc>One night Mario has a strange dream, where he opens a door to another world filled with even stranger creatures and lands then those in his last adventure against Bowser. Amazingly, the next day, Mario, Luigi, Toad, and the Princess stumble upon a cave, which leads to the world that was in Mario's dream. 
- 
-Subcon, the land of dreams, is under an evil spell thanks to Wart, so Mario and the gang must save the day. New creatures to defeat and plenty of nasty surprises await. 
- 
-Choose from the four characters, each differing in speed and jumping ability, and head on through 7 levels each filled with puzzles, bosses, bonus money, the always helpful mushroom, and invincible star, plus bombs and magic potions.  
+		<desc>One night Mario has a strange dream, where he opens a door to another world filled with even stranger creatures and lands then those in his last adventure against Bowser. Amazingly, the next day, Mario, Luigi, Toad, and the Princess stumble upon a cave, which leads to the world that was in Mario's dream.
+
+Subcon, the land of dreams, is under an evil spell thanks to Wart, so Mario and the gang must save the day. New creatures to defeat and plenty of nasty surprises await.
+
+Choose from the four characters, each differing in speed and jumping ability, and head on through 7 levels each filled with puzzles, bosses, bonus money, the always helpful mushroom, and invincible star, plus bombs and magic potions.
 After each level, depending on the coins you collect, you can use them in the bonus game to collect extra lives.</desc>
 		<rating>0.9</rating>
 		<releasedate>19880101T000000</releasedate>
@@ -285,11 +285,11 @@ After each level, depending on the coins you collect, you can use them in the bo
 	<game id="79233" source="ScreenScraper.fr">
 		<path>./pc_smb3.zip</path>
 		<name>Super Mario Bros. 3 (playchoice-10) (PlayChoice-10)</name>
-		<desc>Bowser is back, and along with the Bowser kids, he's out to spoil Mario's day once again.  
- 
-This time, along with nabbing the Princess, the Bowser crew have also taken the magic wands from the Kings of each land and turned them into creatures. 
-It's up to Mario and Luigi to get back the magic wands, defeat Bowser, and save the Princess all before the day is done. 
- 
+		<desc>Bowser is back, and along with the Bowser kids, he's out to spoil Mario's day once again.
+
+This time, along with nabbing the Princess, the Bowser crew have also taken the magic wands from the Kings of each land and turned them into creatures.
+It's up to Mario and Luigi to get back the magic wands, defeat Bowser, and save the Princess all before the day is done.
+
 Old and new power-ups abound in each level for the Mario Brothers, including the return of the Super Mushroom and Fire Flower, plus the new power-ups including the frog suit, the warp flute, and the most important of all, the leaf, which allows the player to fly and attack enemies with your tail.</desc>
 		<rating>0.9</rating>
 		<releasedate>19880101T000000</releasedate>
@@ -315,12 +315,12 @@ Old and new power-ups abound in each level for the Mario Brothers, including the
 	<game id="43260" source="ScreenScraper.fr">
 		<path>./spnchout.zip</path>
 		<name>Super Punch-out!! (rev B)</name>
-		<desc>Super Punch-Out!! is an update of the superb boxing game, "Punch-Out!!", featuring five new larger-than-life opponents. The player once again assumes the role of a green-haired boxer who must fight his way up through five boxers to earn the title of 'Champ'.  
- 
-As with the original game, the player's boxer is viewed from behind with his torso rendered with wire-frame graphics (allowing the player's opponent to be easily seen). Punches, dodges and blocks must all be well-timed in order to defeat the opponent.  
- 
-Both the player and the opponent have stamina meters displayed at the top of the screen. These decrease when either boxer takes a punch and boxers will get knocked down if their stamina meter runs out completely. Faster knockdowns will cause the fallen boxer to recover less stamina upon getting up; the same happens if a boxer is knocked down by a knockout punch.  
- 
+		<desc>Super Punch-Out!! is an update of the superb boxing game, "Punch-Out!!", featuring five new larger-than-life opponents. The player once again assumes the role of a green-haired boxer who must fight his way up through five boxers to earn the title of 'Champ'.
+
+As with the original game, the player's boxer is viewed from behind with his torso rendered with wire-frame graphics (allowing the player's opponent to be easily seen). Punches, dodges and blocks must all be well-timed in order to defeat the opponent.
+
+Both the player and the opponent have stamina meters displayed at the top of the screen. These decrease when either boxer takes a punch and boxers will get knocked down if their stamina meter runs out completely. Faster knockdowns will cause the fallen boxer to recover less stamina upon getting up; the same happens if a boxer is knocked down by a knockout punch.
+
 Thanks to the refined roster of new and hugely distinctive enemy fighters, Super Punch-Out!! is considered to be an improvement over the first game.</desc>
 		<rating>0.9</rating>
 		<releasedate>19840101T000000</releasedate>
@@ -345,8 +345,8 @@ Thanks to the refined roster of new and hugely distinctive enemy fighters, Super
 	<game id="127767" source="ScreenScraper.fr">
 		<path>./pc_tenis.zip</path>
 		<name>Tennis (playchoice-10) (PlayChoice-10)</name>
-		<desc>Tennis is, as the name implies, Nintendo's version of the sport for the Game Boy. One player vs computer or two players will compete in tennis in a more or less standard suite of rules (scoring, sets etc.). 
- 
+		<desc>Tennis is, as the name implies, Nintendo's version of the sport for the Game Boy. One player vs computer or two players will compete in tennis in a more or less standard suite of rules (scoring, sets etc.).
+
 Players are controlled by the movement buttons, but while button A indicates a low hit, button B indicates a high one. You have the choice of four levels of computer AI, or two player via Game Boy link cable.</desc>
 		<rating>0.5</rating>
 		<releasedate>19830101T000000</releasedate>
@@ -397,7 +397,7 @@ Players are controlled by the movement buttons, but while button A indicates a l
 	<game id="40591" source="ScreenScraper.fr">
 		<path>./cluclu.zip</path>
 		<name>Vs. Clu Clu Land</name>
-		<desc>L'histoire de Clu Clu Land commence avec un l'Unira, qui a volé tous les trésors du royaume sous-marin de Clu Clu Land. Bubbles, l'héroïne, se met à récupérer les trésors. L'objet du jeu est de découvrir tous les lingots d'or dans chaque niveau tout en évitant l'Unira et les trous noirs. les Lingots forment des formes telle qu'un coeur ou un champignon.Les bulles peuvent étourdir l'Unira en utilisant une onde sonore. Lorsque l'unira est étourdi, Bubbles peut le pousser dans un mur pour s'en débarrasser. Si Bubbles est blessé par l'Unira, elle perdra une vie. Une vie est également perdue quand Bubbles tombe dans un trou noir, ou quand le temps s'épuise. Le jeu se termine si Bubbles a perdu toute ses vie. 
+		<desc>L'histoire de Clu Clu Land commence avec un l'Unira, qui a volé tous les trésors du royaume sous-marin de Clu Clu Land. Bubbles, l'héroïne, se met à récupérer les trésors. L'objet du jeu est de découvrir tous les lingots d'or dans chaque niveau tout en évitant l'Unira et les trous noirs. les Lingots forment des formes telle qu'un coeur ou un champignon.Les bulles peuvent étourdir l'Unira en utilisant une onde sonore. Lorsque l'unira est étourdi, Bubbles peut le pousser dans un mur pour s'en débarrasser. Si Bubbles est blessé par l'Unira, elle perdra une vie. Une vie est également perdue quand Bubbles tombe dans un trou noir, ou quand le temps s'épuise. Le jeu se termine si Bubbles a perdu toute ses vie.
 </desc>
 		<rating>0.7</rating>
 		<releasedate>19840101T000000</releasedate>
@@ -424,7 +424,7 @@ Players are controlled by the movement buttons, but while button A indicates a l
 	<game id="41054" source="ScreenScraper.fr">
 		<path>./duckhunt.zip</path>
 		<name>Vs. Duck Hunt (set DH3 E)</name>
-		<desc>The arcade version of Duck Hunt has many differences compared to the NES version. 
+		<desc>The arcade version of Duck Hunt has many differences compared to the NES version.
 It has more animations, a slightly different palette and zero game modes. Instead the game starts with the duck hunting game (with multiple ducks, just like Game B on the NES version), the second stage is the clay pigeon shooting game (the dog makes an appearance if you miss), a bonus stage follows where you can shoot lots of ducks for bonus points (as an even bigger bonus you can shoot the dog to make him appear with a cast and crutches and yell at you), then both levels and bonus repeat again followed by an intermission (called "Break Time") where the dog is chasing a duck.</desc>
 		<rating>0.7</rating>
 		<releasedate>19850101T000000</releasedate>
@@ -451,8 +451,8 @@ It has more animations, a slightly different palette and zero game modes. Instea
 	<game id="43999" source="ScreenScraper.fr">
 		<path>./vsgshoe.zip</path>
 		<name>Vs. Gumshoe (set GM5)</name>
-		<desc>A platform game where you use a gun to shoot various baddies including birds and cars and to make Stevenson jump. 
- 
+		<desc>A platform game where you use a gun to shoot various baddies including birds and cars and to make Stevenson jump.
+
 </desc>
 		<rating>0.7</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -529,10 +529,10 @@ It has more animations, a slightly different palette and zero game modes. Instea
 	<game id="44003" source="ScreenScraper.fr">
 		<path>./vspinbal.zip</path>
 		<name>Vs. Pinball (US, set PN4 E-1)</name>
-		<desc>A great pinball simulator game from Nintendo.  
- 
-Enjoy a familiar pinball game where the player controls the paddles of a virtual pinball machine. The game has two screens to represent the traditional pinball table and one for a bonus mode. Play begins when the player launches a ball with the plunger from the first screen the bottom of the pinball table through the top of the screen to the second screen. Play will move to the first screen if the ball falls through the bottom of the top screen and will return to the top screen if the ball is hit back through the space at the top of the first screen. The player controls the flippers on either screen to deflect the ball to keep it from falling off the bottom of the lower screen. 
- 
+		<desc>A great pinball simulator game from Nintendo.
+
+Enjoy a familiar pinball game where the player controls the paddles of a virtual pinball machine. The game has two screens to represent the traditional pinball table and one for a bonus mode. Play begins when the player launches a ball with the plunger from the first screen the bottom of the pinball table through the top of the screen to the second screen. Play will move to the first screen if the ball falls through the bottom of the top screen and will return to the top screen if the ball is hit back through the space at the top of the first screen. The player controls the flippers on either screen to deflect the ball to keep it from falling off the bottom of the lower screen.
+
 Pinball has some many bonnus and also had a secondary Breakout like mode, which the player reaches by hitting the ball into a bonus hole that takes the player to a bonus stage where they control Mario carrying a platform. The object of this mode is to rescue Pauline. The player achieves this by bouncing the ball on the Mario's platform and hitting various targets, the destruction of which also earns them points. When the blocks under her are all gone, she will drop. you must catching her on Mario's platform to earns  bonus points, but you must release pauline it in one of the side platforms and not let it fall, while holding the ball bounce to continue to earn points until the ball falls and go to start.</desc>
 		<rating>0.3</rating>
 		<releasedate>19840101T000000</releasedate>
@@ -572,8 +572,8 @@ Pinball has some many bonnus and also had a secondary Breakout like mode, which 
 	<game id="43148" source="ScreenScraper.fr">
 		<path>./smgolf.zip</path>
 		<name>Vs. Stroke And Match Golf (Men Version, set GF4-2 F)</name>
-		<desc>Vs. Stroke &amp; Match: Golf is a golf game developed for the Vs. Arcade Systems and manufactured by Nintendo Company Limited in 1984. It is an 18 hole golf game where the player chooses stroke play or match play against a human or computer player. It is set to allow a certain number of swings per credit. The player gains or loses swings depending on the outcome of each hole. This same game was ported to the Famicom and Nintendo Entertainment System with very few differences. 
- 
+		<desc>Vs. Stroke &amp; Match: Golf is a golf game developed for the Vs. Arcade Systems and manufactured by Nintendo Company Limited in 1984. It is an 18 hole golf game where the player chooses stroke play or match play against a human or computer player. It is set to allow a certain number of swings per credit. The player gains or loses swings depending on the outcome of each hole. This same game was ported to the Famicom and Nintendo Entertainment System with very few differences.
+
 This game was released in two editions, a Men's Golf and Ladies Golf edition featuring male and female characters. The unnamed golfer starring in the Men's Golf edition, shares a striking resemblance to Mario.</desc>
 		<rating>0.5</rating>
 		<releasedate>19840101T000000</releasedate>
@@ -733,14 +733,14 @@ This game was released in two editions, a Men's Golf and Ladies Golf edition fea
 	<game id="40940" source="ScreenScraper.fr">
 		<path>./dkongjr.zip</path>
 		<name>Donkey Kong Junior (US set F-2)</name>
-		<desc>Fate has turned the tables on the inimitable Donkey Kong. 
- 
-After Mario saved the Beautiful Girl from the lustful clutches of Donkey Kong, he led the brokenhearted ape into captivity, locking him behind steel bars, never again to strut his stuff before the fair maidens of the world. 
- 
-As the frustration of confinement enrages Donkey Kong, Mario complacently stands guard over the cell, holding the sought after key to freedom. 
- 
-But wait! Unbeknownst to Little Mario, Donkey Kong has produced an offspring - Donkey Kong Junior! A death-defying little monkey, shrewd and cunning, who resists all enemies to rescue Papa Donkey Kong. 
- 
+		<desc>Fate has turned the tables on the inimitable Donkey Kong.
+
+After Mario saved the Beautiful Girl from the lustful clutches of Donkey Kong, he led the brokenhearted ape into captivity, locking him behind steel bars, never again to strut his stuff before the fair maidens of the world.
+
+As the frustration of confinement enrages Donkey Kong, Mario complacently stands guard over the cell, holding the sought after key to freedom.
+
+But wait! Unbeknownst to Little Mario, Donkey Kong has produced an offspring - Donkey Kong Junior! A death-defying little monkey, shrewd and cunning, who resists all enemies to rescue Papa Donkey Kong.
+
 As Mario's brigade of snapping jaws, ape-eating birds and energy pods launch their offensive, Junior bombards them with a fusillade of Fruit Bombs that aim to annihilate his every foe.</desc>
 		<image>/userdata/roms/mame/images/dkongjr.png</image>
 		<rating>0.9</rating>
@@ -771,8 +771,8 @@ As Mario's brigade of snapping jaws, ape-eating birds and energy pods launch the
 	<game id="57832" source="ScreenScraper.fr">
 		<path>./pc_duckh.zip</path>
 		<name>Duck Hunt (playchoice-10) (PlayChoice-10)</name>
-		<desc>Duck Hunt is a shooting simulation where the player goes out with his faithful dogs to hunt ducks. It requires the use of the Zapper light gun. In game modes A and B, players view a swampland from a first-person perspective. The dog scares ducks (one or two at a time) out of the swamp, and they go flying around in the air. The player has three shots and a limited amount of time to shoot the ducks before they fly away. Each round only allows a limited number of misses in order to move on successfully. As the rounds progress, the ducks begin flying faster and faster, and fewer misses are allowed. 
- 
+		<desc>Duck Hunt is a shooting simulation where the player goes out with his faithful dogs to hunt ducks. It requires the use of the Zapper light gun. In game modes A and B, players view a swampland from a first-person perspective. The dog scares ducks (one or two at a time) out of the swamp, and they go flying around in the air. The player has three shots and a limited amount of time to shoot the ducks before they fly away. Each round only allows a limited number of misses in order to move on successfully. As the rounds progress, the ducks begin flying faster and faster, and fewer misses are allowed.
+
 Mode C features target practice on clay pigeons rather than ducks. The perspective and rules here are the same, with only three shots to destroy two clay pigeons before they disappear off the horizon. Destroy enough clay pigeons to move on to the next, tougher round.</desc>
 		<image>/userdata/roms/mame/images/pc_duckh.png</image>
 		<rating>0.5</rating>
@@ -788,8 +788,8 @@ Mode C features target practice on clay pigeons rather than ducks. The perspecti
 	<game id="57834" source="ScreenScraper.fr">
 		<path>./pc_ebike.zip</path>
 		<name>Excite Bike (playchoice-10) (PlayChoice-10)</name>
-		<desc>Race by yourself against the clock or compete with other motocross riders on 5 tracks full of long straights, large jumps and obstacles to win the Excitebike championship. 
- 
+		<desc>Race by yourself against the clock or compete with other motocross riders on 5 tracks full of long straights, large jumps and obstacles to win the Excitebike championship.
+
 Create your own tracks by placing jumps and obstacles of all different sizes and shapes on the track and choosing how many laps each race will have, then race against the clock or other riders to see how your track fares in competition.</desc>
 		<image>/userdata/roms/mame/images/pc_ebike.png</image>
 		<rating>0.7</rating>
@@ -848,16 +848,16 @@ Create your own tracks by placing jumps and obstacles of all different sizes and
 	<game id="149801" source="ScreenScraper.fr">
 		<path>./dkong.zip</path>
 		<name>Donkey Kong (US set 1)</name>
-		<desc>EVERYONE'S GOING APE OVER DONKEY KONG! 
- 
-"HELP! HELP!" cries the beautiful maiden as she is dragged up a labyrinth of structural beams by the ominous Donkey Kong. "SNORT. SNORT" Foreboding music warns of the eventual doom that awaits the poor girl, lest she somehow be miraculously rescued. "But, wait! Fear not, fair maiden. Little Mario, the carpenter, is in hot pursuit of you this very moment" 
- 
-Throwing fate to the wind, risking life and limb, or worse, little Mario tries desperately to climb the mighty fortress of steel, to save the lovely lady from the evil Mr. Kong. Little Mario must dodge all manner of obstacles - fireballs, plummeting beams and a barrage of exploding barrels fired at him by Donkey Kong. 
- 
-Amidst me beautiful girl's constant pleas for help, your challenge is to maneuver little Mario up the steel structure, while helping him to avoid the rapid-fire succession of hazards that come his way. 
- 
-As little Mario gallantly battles his way up the barriers, he is taunted and teased by Donkey Kong, who brazenly struts back and forth, beating his chest in joyful exuberance at the prospect of having the beautiful girl all to himself. It is your job to get little Mario to the top. For it is there, and only there, that he can send the mighty Donkey Kong to hit mortal doom. Leaving little Mario and the beautiful girl to live happily ever after. "SIGH. SIGH.” 
- 
+		<desc>EVERYONE'S GOING APE OVER DONKEY KONG!
+
+"HELP! HELP!" cries the beautiful maiden as she is dragged up a labyrinth of structural beams by the ominous Donkey Kong. "SNORT. SNORT" Foreboding music warns of the eventual doom that awaits the poor girl, lest she somehow be miraculously rescued. "But, wait! Fear not, fair maiden. Little Mario, the carpenter, is in hot pursuit of you this very moment"
+
+Throwing fate to the wind, risking life and limb, or worse, little Mario tries desperately to climb the mighty fortress of steel, to save the lovely lady from the evil Mr. Kong. Little Mario must dodge all manner of obstacles - fireballs, plummeting beams and a barrage of exploding barrels fired at him by Donkey Kong.
+
+Amidst me beautiful girl's constant pleas for help, your challenge is to maneuver little Mario up the steel structure, while helping him to avoid the rapid-fire succession of hazards that come his way.
+
+As little Mario gallantly battles his way up the barriers, he is taunted and teased by Donkey Kong, who brazenly struts back and forth, beating his chest in joyful exuberance at the prospect of having the beautiful girl all to himself. It is your job to get little Mario to the top. For it is there, and only there, that he can send the mighty Donkey Kong to hit mortal doom. Leaving little Mario and the beautiful girl to live happily ever after. "SIGH. SIGH.”
+
 So, if you want the most exciting, most fun-filled, most talked about family video game on the market, don't monkey around with anything but the original Donkey Kong.</desc>
 		<image>/userdata/roms/mame/images/dkong.png</image>
 		<rating>0.9</rating>

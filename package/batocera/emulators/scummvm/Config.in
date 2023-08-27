@@ -17,7 +17,7 @@ config BR2_PACKAGE_SCUMMVM
     select BR2_PACKAGE_ZLIB
     help
       ScummVM point and click
-      
+
       http://wiki.scummvm.org/
 
 comment "Scummvm  needs a toolchain w/ C++,  SDL2"

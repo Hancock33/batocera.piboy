@@ -139,17 +139,17 @@ def generateControllerConfig(controller):
         input = controller.inputs[index]
         if input.name not in ppssppMapping or input.type not in ppssppMapping[input.name]:
             continue
-        
+
         var = ppssppMapping[input.name][input.type]
         padnum = controller.index
-        
+
         code = input.code
         if input.type == 'button':
             pspcode = sdlNameToNKCode[input.name]
             val = f"{DEVICE_ID_PAD_0 + padnum}-{pspcode}"
             val = optionValue(Config, section, var, val)
             Config.set(section, var, val)
-            
+
         elif input.type == 'axis':
             # Get the axis code
             nkAxisId = SDLJoyAxisMap[input.id]
@@ -159,7 +159,7 @@ def generateControllerConfig(controller):
             val = optionValue(Config, section, var, val)
             eslog.debug(f"Adding {var} to {val}")
             Config.set(section, var, val)
-            
+
             # Skip the rest if it's an axis dpad
             if input.name in [ 'up', 'down', 'left', 'right' ] : continue
             # Also need to do the opposite direction manually. The input.id is the same as up/left, but the direction is opposite
@@ -167,12 +167,12 @@ def generateControllerConfig(controller):
                 var = ppssppMapping['joystick1down'][input.type]
             elif input.name == 'joystick1left':
                 var = ppssppMapping['joystick1right'][input.type]
-                
+
             pspcode = axisToCode(nkAxisId, -int(input.value))
             val = f"{DEVICE_ID_PAD_0 + padnum}-{pspcode}"
             val = optionValue(Config, section, var, val)
             Config.set(section, var, val)
-        
+
         elif input.type == 'hat' and input.name in SDLHatMap:
             var = ppssppMapping[input.name][input.type]
             pspcode = SDLHatMap[input.name]
@@ -182,7 +182,7 @@ def generateControllerConfig(controller):
 
         if not os.path.exists(os.path.dirname(configFileName)):
                 os.makedirs(os.path.dirname(configFileName))
-    
+
     # hotkey controls are called via evmapy.
     # configuring specific hotkey in ppsspp is not simple without patching
     Config.set(section, "Rewind",        "1-131")
@@ -192,7 +192,7 @@ def generateControllerConfig(controller):
     Config.set(section, "Previous Slot", "1-135")
     Config.set(section, "Next Slot",     "1-136")
     Config.set(section, "Screenshot",    "1-137")
-    
+
     cfgfile = open(configFileName,'w+')
     Config.write(cfgfile)
     cfgfile.close()

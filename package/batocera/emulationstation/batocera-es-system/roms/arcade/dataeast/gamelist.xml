@@ -34,10 +34,10 @@
 	<game id="40333" source="ScreenScraper.fr">
 		<path>./boogwing.zip</path>
 		<name>Boogie Wings (Euro v1.5, 92.12.07)</name>
-		<desc>A superbly playable, humourous and utterly unique shoot-em-up from the Date East stable. The player begins each life in control of a bi-plane with a huge metal hook attached to its rear. This hook can be used to pick up enemies, objects, bombs and vehicles which can then be thrown both at other enemies, and at any walls and doorways that may be barring the player's route. 
- 
-If the bi-plane takes two hits from enemy forces, it will explode and the player is forced to continue on foot. The on-foot sections play in a vaguely similar fashion to SNK's legendary "Metal Slug" series, but while on foot, the player has no protection from enemy hits and is very vulnerable to attack. As such, a replacement vehicle (which appear in the form of tanks, motorbikes, giant robots, elephants etc.) must be found quickly. 
- 
+		<desc>A superbly playable, humourous and utterly unique shoot-em-up from the Date East stable. The player begins each life in control of a bi-plane with a huge metal hook attached to its rear. This hook can be used to pick up enemies, objects, bombs and vehicles which can then be thrown both at other enemies, and at any walls and doorways that may be barring the player's route.
+
+If the bi-plane takes two hits from enemy forces, it will explode and the player is forced to continue on foot. The on-foot sections play in a vaguely similar fashion to SNK's legendary "Metal Slug" series, but while on foot, the player has no protection from enemy hits and is very vulnerable to attack. As such, a replacement vehicle (which appear in the form of tanks, motorbikes, giant robots, elephants etc.) must be found quickly.
+
 Boogie Wings features highly detailed and completely destructible scenery, with a multitude of background animations making the game feel 'alive' and giving it much of its distinctive character. The game's settings are as original as its gameplay; with museums, fairgrounds, the inside of skyscrapers etc. all making an appearance. Boogie Wings soundtrack is also unique to the genre, with a mixture of well-known jazz and blues tunes accompanying the frenetic on-screen action.</desc>
 		<rating>0.8</rating>
 		<releasedate>19920101T000000</releasedate>
@@ -74,8 +74,8 @@ Boogie Wings features highly detailed and completely destructible scenery, with 
 	<game id="40369" source="ScreenScraper.fr">
 		<path>./brkthru.zip</path>
 		<name>Break Thru (US)</name>
-		<desc>This is a horizontally scrolling shoot'em up in which the player drives an armoured car, equipped with a front-mounted gun and super jump capability. The aim of the game is to fight through five enemy-controlled zones to retrieve a stolen top-secret fighter plane, the PK430. 
- 
+		<desc>This is a horizontally scrolling shoot'em up in which the player drives an armoured car, equipped with a front-mounted gun and super jump capability. The aim of the game is to fight through five enemy-controlled zones to retrieve a stolen top-secret fighter plane, the PK430.
+
 The game's levels force-scroll from right to left, although the vehicle's speed - and rate of scrolling - can be slowed down and speeded up to some degree. As well as a forward-firing gun, the car can be made to jump huge distances. This is necessary to avoid background obstacles such as rock falls and broken bridges. It can also be used to avoid incoming enemy fire and vehicles. Land mines also litter the levels and need to be shot or avoided.</desc>
 		<rating>0.7</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -89,10 +89,10 @@ The game's levels force-scroll from right to left, although the vehicle's speed 
 	<game id="40475" source="ScreenScraper.fr">
 		<path>./btime.zip</path>
 		<name>Burger Time (Data East set 1)</name>
-		<desc>A platform game in which one or two players take on the role of burger chef 'Peter Pepper'. The chef must create a set number of burgers per level by collecting the separate ingredients needed to make each one (two pieces of bun, the burger itself and/or a garnish, such as lettuce or cheese).  
- 
-Each screen is made up of platforms joined by connecting ladders. At the bottom of the screen are a number of empty plates while the burger ingredients lay across the platforms directly above the plates. The chef must walk across the entire width of the ingredients to make them drop to the platform below. A burger is only completed once all of its ingredients have been dropped onto the corresponding plate at the bottom of the screen.  
- 
+		<desc>A platform game in which one or two players take on the role of burger chef 'Peter Pepper'. The chef must create a set number of burgers per level by collecting the separate ingredients needed to make each one (two pieces of bun, the burger itself and/or a garnish, such as lettuce or cheese).
+
+Each screen is made up of platforms joined by connecting ladders. At the bottom of the screen are a number of empty plates while the burger ingredients lay across the platforms directly above the plates. The chef must walk across the entire width of the ingredients to make them drop to the platform below. A burger is only completed once all of its ingredients have been dropped onto the corresponding plate at the bottom of the screen.
+
 The chef's efforts are hampered by the rogue ingredients that are constantly chasing him. They are called 'Mr. Hot Dog', 'Mr. Egg' and 'Mr. Pickle'. Any contact with them results in the loss of a life. The chef can temporarily freeze the enemies by throwing pepper at them. He only carries a limited amount of pepper but this can be replenished by collecting the bonus food items that randomly appear (ice cream cones, coffee, and fries). In addition to the pepper, any enemies located on a platform below the chef can be killed by dropping an available burger ingredient on top of them. .</desc>
 		<rating>0.9</rating>
 		<releasedate>19820101T000000</releasedate>
@@ -132,12 +132,12 @@ The chef's efforts are hampered by the rogue ingredients that are constantly cha
 	<game id="40607" source="ScreenScraper.fr">
 		<path>./cninja.zip</path>
 		<name>Caveman Ninja (World ver 4)</name>
-		<desc>Caveman Ninja is a horizontally-scrolling platform beat-em-up set in prehistoric times with one or two players taking on the roles of cavemen Joe and Mac. Rival caveman have invaded Joe and Mac's village and kidnapped all of their women and it's up to the two heroes to venture forth and save them.  
- 
-Joe and Mac must battle through numerous prehistorically-themed stages, fighting enemy cavemen and marauding dinosaurs. The heroes are initially armed with throwing axes that can be tossed either vertically or horizontally, travelling in a short arc. By holding down the attack button, larger, more powerful weapons will be thrown. When close to an enemy, Joe and Mac will utilise a wooden club to whack them. Players can also jump much higher by holding UP and JUMP. 
- 
-Joe and Mac each have a life meter that gradually depletes over time, with additional energy losses incurred when players are hit by a enemies or projectile. Food can be collected from defeated enemies to top up the players' energy levels. Different weapons can be found throughout the stages including stone wheels, fireballs, and shadowy doppelgangers that charge forward and attack enemies. Other power-ups include hot sauce or jalapeno peppers that give players temporary invincibility and fiery breath.  
- 
+		<desc>Caveman Ninja is a horizontally-scrolling platform beat-em-up set in prehistoric times with one or two players taking on the roles of cavemen Joe and Mac. Rival caveman have invaded Joe and Mac's village and kidnapped all of their women and it's up to the two heroes to venture forth and save them.
+
+Joe and Mac must battle through numerous prehistorically-themed stages, fighting enemy cavemen and marauding dinosaurs. The heroes are initially armed with throwing axes that can be tossed either vertically or horizontally, travelling in a short arc. By holding down the attack button, larger, more powerful weapons will be thrown. When close to an enemy, Joe and Mac will utilise a wooden club to whack them. Players can also jump much higher by holding UP and JUMP.
+
+Joe and Mac each have a life meter that gradually depletes over time, with additional energy losses incurred when players are hit by a enemies or projectile. Food can be collected from defeated enemies to top up the players' energy levels. Different weapons can be found throughout the stages including stone wheels, fireballs, and shadowy doppelgangers that charge forward and attack enemies. Other power-ups include hot sauce or jalapeno peppers that give players temporary invincibility and fiery breath.
+
 Certain enemy strikes - such as being hit by a thrown boulder - will flatten Joe and Mac like pancakes for a few seconds, although they can still move and attack while in this form, albeit more slowly. During the simultaneous two-player game, both characters are capable of damaging each other. The game allows players to select between different routes after each boss battle. Also, after defeating the final boss, the players can choose between three exits, each one leading to a slightly different ending sequence.</desc>
 		<rating>0.7</rating>
 		<releasedate>19910101T000000</releasedate>
@@ -163,8 +163,8 @@ Certain enemy strikes - such as being hit by a thrown boulder - will flatten Joe
 	<game id="40523" source="ScreenScraper.fr">
 		<path>./charlien.zip</path>
 		<name>Charlie Ninja</name>
-		<desc>A colourful, 1 or 2-player platform shoot-em-up consisting of 5 stages, in which the player controls a Ninja who must jump and shoot his way through each of the game's stages, before taking on the archetypal end-of-level 'Boss'. 
- 
+		<desc>A colourful, 1 or 2-player platform shoot-em-up consisting of 5 stages, in which the player controls a Ninja who must jump and shoot his way through each of the game's stages, before taking on the archetypal end-of-level 'Boss'.
+
 Bonuses can be picked up to increase the firepower, and barrels can either be smashed to reveal bonuses, or picked up and thrown at the enemies. In addition; the Ninja can perform high jump by pressing the JUMP button, then pressing it again while the Ninja is in the air. This is useful for avoiding enemies and essential for reaching high platforms.</desc>
 		<rating>0.7</rating>
 		<releasedate>19950101T000000</releasedate>
@@ -257,10 +257,10 @@ In the near future, ruthless gangs are the new rulers of the streets. Only a bra
 	<game id="40919" source="ScreenScraper.fr">
 		<path>./dietgo.zip</path>
 		<name>Diet Go Go (Euro v1.1 1992.09.26)</name>
-		<desc>Diet Go Go is a single-screen platform game for one or two players, in which the aim is to clear each screen of monsters and avoid getting fat. Monsters are defeated by throwing food at them until they inflate (get fat), then touching them to burst them, sending them flying around the screen and killing any other monsters they come into contact with. Many monsters also throw food at the players, making them increasingly fat. If players get too fat, they lose a life, although bonus diet sodas occasionally appear and can be picked up to reverse the effect. Contact with monsters who aren't fully inflated is fatal.  
- 
-When monsters are destroyed, they leave behind rings, gems, power-ups and diet tonic. Power-ups include roller-skates to move faster, compressed air to blow monsters up and increased fire power. Data East coins also appear on each level. If players collect these coins, they shoot up to the top of the screen where a fruit machine display rolls over and dispenses gems, power-ups and rings. If the fruit machine reads 777, a bonus round appears in which players jump on clouds to collect falling gems while avoiding the falling food that will make them fat. 
- 
+		<desc>Diet Go Go is a single-screen platform game for one or two players, in which the aim is to clear each screen of monsters and avoid getting fat. Monsters are defeated by throwing food at them until they inflate (get fat), then touching them to burst them, sending them flying around the screen and killing any other monsters they come into contact with. Many monsters also throw food at the players, making them increasingly fat. If players get too fat, they lose a life, although bonus diet sodas occasionally appear and can be picked up to reverse the effect. Contact with monsters who aren't fully inflated is fatal.
+
+When monsters are destroyed, they leave behind rings, gems, power-ups and diet tonic. Power-ups include roller-skates to move faster, compressed air to blow monsters up and increased fire power. Data East coins also appear on each level. If players collect these coins, they shoot up to the top of the screen where a fruit machine display rolls over and dispenses gems, power-ups and rings. If the fruit machine reads 777, a bonus round appears in which players jump on clouds to collect falling gems while avoiding the falling food that will make them fat.
+
 The game starts with one player selecting an area on a world map, then progresses through two levels of play to reach a giant boss on the third round. After the boss is destroyed that world is complete and play moves onto the next. Each world has a different theme and boss.</desc>
 		<releasedate>19920101T000000</releasedate>
 		<developer>Data East</developer>
@@ -299,10 +299,10 @@ The game starts with one player selecting an area on a world map, then progresse
 	<game id="41140" source="ScreenScraper.fr">
 		<path>./exprraid.zip</path>
 		<name>Express Raider (World, Rev 4)</name>
-		<desc>The wild west-themed Express Raider is separated into two different game types; a sideways scrolling fighting sequence and a shooting sequence. The player controls a train robber, or 'Express Raider', and must try to steal the bags of money from the moving locomotives. 
- 
-During the fighting sequence, the Raider must fight the bank teller, hit the coyotes and then jump onto the train before it speeds away. Once on the train, he must fight his way past other enemies and avoid various projectiles, such as bottles, bullets and shovels full of coal. Players must be careful to duck under the low signs that come along as the train is travelling. Also, once a train carriage is clear of enemies, a bomb will appear between the current carriage and the next; players must quickly jump over to the next carriage before the bomb goes off, otherwise the Raider will fall from the train and a life is lost. If the Express Raider manages to reach the train engine, the loot will be captured and the game will then move on to the shooting sequence. 
- 
+		<desc>The wild west-themed Express Raider is separated into two different game types; a sideways scrolling fighting sequence and a shooting sequence. The player controls a train robber, or 'Express Raider', and must try to steal the bags of money from the moving locomotives.
+
+During the fighting sequence, the Raider must fight the bank teller, hit the coyotes and then jump onto the train before it speeds away. Once on the train, he must fight his way past other enemies and avoid various projectiles, such as bottles, bullets and shovels full of coal. Players must be careful to duck under the low signs that come along as the train is travelling. Also, once a train carriage is clear of enemies, a bomb will appear between the current carriage and the next; players must quickly jump over to the next carriage before the bomb goes off, otherwise the Raider will fall from the train and a life is lost. If the Express Raider manages to reach the train engine, the loot will be captured and the game will then move on to the shooting sequence.
+
 In the shooting sequence, the Express Raider rides a horse and must shoot at the enemies that appear from the windows of a train carriage. They will shoot back at the player and throw various objects. Players can hit the DUCK button to avoid the enemy attacks. A woman will appear at regular intervals offering the player a bag of money, if the player shoots the woman, a life is lost. After the shooting sequence has been completed, the game will start over again with an increased level of difficulty.</desc>
 		<rating>0.6</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -316,10 +316,10 @@ In the shooting sequence, the Express Raider rides a horse and must shoot at the
 	<game id="41210" source="ScreenScraper.fr">
 		<path>./fghthist.zip</path>
 		<name>Fighter's History (World ver 43-09, DE-0395-1 PCB)</name>
-		<desc>Fighter's History is the first attempt of Data East to enter in competition with Capcom and its omnipresent Street Fighter II. Because the many similarities shared by the game with the Capcom masterpiece (like the character select screen, the vs and winner/loser screens, the controls and the design and moves of some characters), Fighter's History was at least simply stamped by most of the  players like another SFII clone, and in this way remained ignored and obscured to the mass audience. 
- 
-Although time after, the many beat'em up fans learnt to appreciate this maybe too underestimated fighting game, especially for its combo system, quite simple to execute even for those players not so able with timing and button pressing, and for its fast gameplay: at this purpose most of the contribution was made by the updated version released in 1994, Fighter's History Dynamite (known as Karnov's Revenge in USA and Europe) that made the gameplay more polished. Despite this at least Fighter's History never reached that great success that maybe Data East still tried to achieve. 
- 
+		<desc>Fighter's History is the first attempt of Data East to enter in competition with Capcom and its omnipresent Street Fighter II. Because the many similarities shared by the game with the Capcom masterpiece (like the character select screen, the vs and winner/loser screens, the controls and the design and moves of some characters), Fighter's History was at least simply stamped by most of the  players like another SFII clone, and in this way remained ignored and obscured to the mass audience.
+
+Although time after, the many beat'em up fans learnt to appreciate this maybe too underestimated fighting game, especially for its combo system, quite simple to execute even for those players not so able with timing and button pressing, and for its fast gameplay: at this purpose most of the contribution was made by the updated version released in 1994, Fighter's History Dynamite (known as Karnov's Revenge in USA and Europe) that made the gameplay more polished. Despite this at least Fighter's History never reached that great success that maybe Data East still tried to achieve.
+
 Players choose one of 9 international fighters and battle to be the best in the world. Every character has his ending sequence and his own stage. There are also two not-selectable bosses to challenge for reach the end, and the last one of them is real surprising!</desc>
 		<rating>0.6</rating>
 		<releasedate>19930101T000000</releasedate>
@@ -385,16 +385,16 @@ Players choose one of 9 international fighters and battle to be the best in the 
 	<game id="41681" source="ScreenScraper.fr">
 		<path>./hippodrm.zip</path>
 		<name>Hippodrome (US)</name>
-		<desc>The brave knight takes on a slew of medieval opponents. Money won during fights can be used to purchase fighter upgrades. 
- 
-The game has 9 different selectable colosseums, each with a different opponent to face: 
-Pandemonium: Cawnus the Lamia Noble 
-Gehenna: Gran the Gargoyle 
-Tarterus: Norfolk the Lizard Man 
-Gadsheim: Sharon the Armor Dragon 
-Archeron: Daldnoa the Scorpion Man 
-Elysium: Solomon the Wizard 
-Twin Paradises: Charry Steve The Assassins 
+		<desc>The brave knight takes on a slew of medieval opponents. Money won during fights can be used to purchase fighter upgrades.
+
+The game has 9 different selectable colosseums, each with a different opponent to face:
+Pandemonium: Cawnus the Lamia Noble
+Gehenna: Gran the Gargoyle
+Tarterus: Norfolk the Lizard Man
+Gadsheim: Sharon the Armor Dragon
+Archeron: Daldnoa the Scorpion Man
+Elysium: Solomon the Wizard
+Twin Paradises: Charry Steve The Assassins
 Abyss: Pon the Giant</desc>
 		<rating>0.3</rating>
 		<releasedate>19890101T000000</releasedate>
@@ -420,7 +420,7 @@ Abyss: Pon the Giant</desc>
 	<game id="41894" source="ScreenScraper.fr">
 		<path>./joemacr.zip</path>
 		<name>Joe And Mac Returns (World, Version 1.1, 1994.05.27)</name>
-		<desc> 
+		<desc>
 For this sequel to the sideways scrolling 1991 beat-em-up, "Caveman Ninja", Data East chose to eschew the former's gameplay and create a single-screen platformer with gameplay hugely similar to Toaplan's "Snow Bros.", released in 1990.</desc>
 		<rating>0.8</rating>
 		<releasedate>19940101T000000</releasedate>
@@ -434,15 +434,15 @@ For this sequel to the sideways scrolling 1991 beat-em-up, "Caveman Ninja", Data
 	<game id="41948" source="ScreenScraper.fr">
 		<path>./kamikcab.zip</path>
 		<name>Kamikaze Cabbie</name>
-		<desc>Vous vouliez jouer à l'ancêtre des GTA et autres crazy taxi ? 
-le voici !  
- 
-Au grès des niveaux dans les quartier d'une ville , une petite bagnole qui doit faire attention à la fois au carburent qui descend , aux passager qui veulent être conduit (l'indicatif de la direction à prendre s'affiche sommairement en haut de l'écran) mais aussi au véhicules de la police qui patrouille et au bulldozer qui passent là ! 
-explosion garantie!! 
-pas la peine de faire gaffe aux feux tricolore, il n'y en a pas ... 
- 
-l'animation a quelque saccade et les collisions avec les décors sont assez approximatif , mais ce jeu reste prenant le temps d'une bonne partie  
- 
+		<desc>Vous vouliez jouer à l'ancêtre des GTA et autres crazy taxi ?
+le voici !
+
+Au grès des niveaux dans les quartier d'une ville , une petite bagnole qui doit faire attention à la fois au carburent qui descend , aux passager qui veulent être conduit (l'indicatif de la direction à prendre s'affiche sommairement en haut de l'écran) mais aussi au véhicules de la police qui patrouille et au bulldozer qui passent là !
+explosion garantie!!
+pas la peine de faire gaffe aux feux tricolore, il n'y en a pas ...
+
+l'animation a quelque saccade et les collisions avec les décors sont assez approximatif , mais ce jeu reste prenant le temps d'une bonne partie
+
 </desc>
 		<rating>0.5</rating>
 		<releasedate>19840101T000000</releasedate>
@@ -492,8 +492,8 @@ A seminal 1-on-1 fighting game set over the course of a karate tournament, Karat
 	<game id="42112" source="ScreenScraper.fr">
 		<path>./lastmisn.zip</path>
 		<name>Last Mission (US revision 6)</name>
-		<desc>Last Mission is a top-down multidirectional shooter developed by Data East and distributed in world wide release for the arcades in 1986. 
- 
+		<desc>Last Mission is a top-down multidirectional shooter developed by Data East and distributed in world wide release for the arcades in 1986.
+
 The player assumes the role of an space pilot who has been exiled from their home galaxy for committing an unknown crime. The only way the player character can return is to restore their honor - and the only way to do so is to invade and defeat the alien nemesis.</desc>
 		<rating>0.7</rating>
 		<releasedate>19860101T000000</releasedate>
@@ -549,12 +549,12 @@ The game is a maze game. Like "Pac-Man", you're trying to eat up dots while four
 	<game id="78910" source="ScreenScraper.fr">
 		<path>./metlclsh.zip</path>
 		<name>Metal Clash (Japan)</name>
-		<desc>Metal Clash is a futuristic fighter game for one or two players. In one player mode, the player pilots the metariod 'Saiber' to annihilate the alien robots.   
- 
-The player pilots his robot around the screen destroying enemy robots using punches and kicks. Flying saucers can be destroyed for a life energy boost.  Items in the background can be destroyed for points. After defeating a set number of enemies the stage's boss will appear. The boss is more powerful than regular enemies, and has his own life energy bar shown on screen. Some of these bosses can be disarmed of their powerful weapons (such as guns and energy shields) which the player can equip and carry on into further levels. 
- 
-When hit by enemies, the player will lose energy and will drop any weapons that he has equipped. When the player's life energy is completely depleted he will lose a life. The game is over once all of the player's lives are lost.  The game features no continues. 
- 
+		<desc>Metal Clash is a futuristic fighter game for one or two players. In one player mode, the player pilots the metariod 'Saiber' to annihilate the alien robots.
+
+The player pilots his robot around the screen destroying enemy robots using punches and kicks. Flying saucers can be destroyed for a life energy boost.  Items in the background can be destroyed for points. After defeating a set number of enemies the stage's boss will appear. The boss is more powerful than regular enemies, and has his own life energy bar shown on screen. Some of these bosses can be disarmed of their powerful weapons (such as guns and energy shields) which the player can equip and carry on into further levels.
+
+When hit by enemies, the player will lose energy and will drop any weapons that he has equipped. When the player's life energy is completely depleted he will lose a life. The game is over once all of the player's lives are lost.  The game features no continues.
+
 The two player game is a vs. match between players. Gameplay continues until one player has lost all of his lives.</desc>
 		<rating>0.5</rating>
 		<releasedate>19850101T000000</releasedate>
@@ -568,12 +568,12 @@ The two player game is a vs. match between players. Gameplay continues until one
 	<game id="78919" source="ScreenScraper.fr">
 		<path>./midres.zip</path>
 		<name>Midnight Resistance (World)</name>
-		<desc>"Midnight Resistance" is a scrolling platform shoot-em-up for one or two players, taking on the role of two commando brothers whose entire family has been kidnapped and must be rescued. The game consists of nine large, eight-way scrolling levels made up of platforms, ledges and ladders. Each is populated with enemy soldiers and gun emplacements, as well as occasional armoured vehicles. At the end of each stage players must defeat a large, powerful enemy boss.  
- 
-Players can rotate their guns through 360 degrees, allowing them to fire in all directions. Some enemies, when killed, will drop a red key; collecting these keys allows players to upgrade their weapons at the shop that awaits at the end of each level. A maximum of six keys can be carried at any one time and when the player loses a life, all weapons and keys in their possession are dropped. These can be recovered at the start of the next life providing they haven't fallen off-screen.  
- 
-In addition to main weapon upgrades, secondary weapons can also be bought. These appear as backpacks attached to the player characters and fire when the player pushes up on the joystick while firing their main weapon. Both the main and secondary weapons have only a limited amount of ammo but more can be bought from the end-of-level shops.  
- 
+		<desc>"Midnight Resistance" is a scrolling platform shoot-em-up for one or two players, taking on the role of two commando brothers whose entire family has been kidnapped and must be rescued. The game consists of nine large, eight-way scrolling levels made up of platforms, ledges and ladders. Each is populated with enemy soldiers and gun emplacements, as well as occasional armoured vehicles. At the end of each stage players must defeat a large, powerful enemy boss.
+
+Players can rotate their guns through 360 degrees, allowing them to fire in all directions. Some enemies, when killed, will drop a red key; collecting these keys allows players to upgrade their weapons at the shop that awaits at the end of each level. A maximum of six keys can be carried at any one time and when the player loses a life, all weapons and keys in their possession are dropped. These can be recovered at the start of the next life providing they haven't fallen off-screen.
+
+In addition to main weapon upgrades, secondary weapons can also be bought. These appear as backpacks attached to the player characters and fire when the player pushes up on the joystick while firing their main weapon. Both the main and secondary weapons have only a limited amount of ammo but more can be bought from the end-of-level shops.
+
 </desc>
 		<rating>0.6</rating>
 		<releasedate>19890101T000000</releasedate>
@@ -587,7 +587,7 @@ In addition to main weapon upgrades, secondary weapons can also be bought. These
 	<game id="79042" source="ScreenScraper.fr">
 		<path>./mutantf.zip</path>
 		<name>Mutant Fighter (World ver EM-5)</name>
-		<desc>8 mythical creatures battle each other in this wrestling-style fighting game. 
+		<desc>8 mythical creatures battle each other in this wrestling-style fighting game.
 </desc>
 		<rating>0.5</rating>
 		<releasedate>19920101T000000</releasedate>
@@ -614,7 +614,7 @@ In addition to main weapon upgrades, secondary weapons can also be bought. These
 	<game id="79141" source="ScreenScraper.fr">
 		<path>./nitrobal.zip</path>
 		<name>Nitro Ball (World, set 1)</name>
-		<desc> 
+		<desc>
 Futuristic, fast and furious vertical action game, it's a sort of "Smash T.V." in a pinball environment.</desc>
 		<rating>0.7</rating>
 		<releasedate>19920101T000000</releasedate>
@@ -638,10 +638,10 @@ Futuristic, fast and furious vertical action game, it's a sort of "Smash T.V." i
 	<game id="79103" source="ScreenScraper.fr">
 		<path>./osman.zip</path>
 		<name>Osman (World)</name>
-		<desc>Osman is a side-scrolling action platforming game produced by Mitchell Corp. that was released exclusively to arcades in 1996. Many ex-Capcom staff including Kouichi Yotsui (credited as Isuke), worked on the original arcade version of Strider and designed Osman as an unofficial sequel to Strider. Yotsui directed both titles. 
- 
-In contrast to Strider's futuristic Kazakh-Soviet setting, Osman is set in a neon-lit cyberpunk Arabian setting, while Strider Hiryu is replaced by a Middle Eastern protagonist named Kirin who fights without any weapons.The game's bizarre plot supposedly mocks director Kouichi Yotsui's experience at Capcom after Strider. 
- 
+		<desc>Osman is a side-scrolling action platforming game produced by Mitchell Corp. that was released exclusively to arcades in 1996. Many ex-Capcom staff including Kouichi Yotsui (credited as Isuke), worked on the original arcade version of Strider and designed Osman as an unofficial sequel to Strider. Yotsui directed both titles.
+
+In contrast to Strider's futuristic Kazakh-Soviet setting, Osman is set in a neon-lit cyberpunk Arabian setting, while Strider Hiryu is replaced by a Middle Eastern protagonist named Kirin who fights without any weapons.The game's bizarre plot supposedly mocks director Kouichi Yotsui's experience at Capcom after Strider.
+
 </desc>
 		<rating>0.7</rating>
 		<releasedate>19960101T000000</releasedate>
@@ -804,12 +804,12 @@ In contrast to Strider's futuristic Kazakh-Soviet setting, Osman is set in a neo
 	<game id="61361" source="ScreenScraper.fr">
 		<path>./secretag.zip</path>
 		<name>Secret Agent (World revision 3)</name>
-		<desc>Secret Agent is a side-scrolling platform shoot-em-up which the player takes on the role of a James Bond-esque secret agent who must fight his way through a terrorist group called 'CWD' to reach the final Boss confrontation and prevent a stolen nuclear missile being launched. 
- 
-The player starts the game armed only with a pistol, and this has a limited amount of ammunition. Once the ammo has run out, players can only kick their enemies. Machine guns are occasionally dropped by defeated enemies and can be picked up and used. Also, Golden Gun components are sometimes dropped; there are six of these in total and once all have been collected, the player is rewarded with a very powerful golden rifle. This weapon kills all enemies instantly but will only last for twenty-five seconds, indicated by a meter at the top-right of the screen. 
- 
-Most of the game's eight stages are platform-based, but there are also two underwater scuba levels and a motorbike chase. All of the game's end-of-level bosses reappear on the final 'underground lair' level. 
- 
+		<desc>Secret Agent is a side-scrolling platform shoot-em-up which the player takes on the role of a James Bond-esque secret agent who must fight his way through a terrorist group called 'CWD' to reach the final Boss confrontation and prevent a stolen nuclear missile being launched.
+
+The player starts the game armed only with a pistol, and this has a limited amount of ammunition. Once the ammo has run out, players can only kick their enemies. Machine guns are occasionally dropped by defeated enemies and can be picked up and used. Also, Golden Gun components are sometimes dropped; there are six of these in total and once all have been collected, the player is rewarded with a very powerful golden rifle. This weapon kills all enemies instantly but will only last for twenty-five seconds, indicated by a meter at the top-right of the screen.
+
+Most of the game's eight stages are platform-based, but there are also two underwater scuba levels and a motorbike chase. All of the game's end-of-level bosses reappear on the final 'underground lair' level.
+
 While not officially licensed as a James Bond game, Secret Agent is unmistakably meant to represent both the Bond character and movie series. The Bond villain Jaws shows up at the end of stage two and another famous Bond villain, Odd Job also appears. Another memorable Bond reference is the use of a Shaun Connery impersonator who tells players that they have done a Great job upon completion of a level.</desc>
 		<image>/userdata/roms/mame/images/secretag.png</image>
 		<rating>0.8</rating>
@@ -885,14 +885,14 @@ While not officially licensed as a James Bond game, Secret Agent is unmistakably
 	<game id="43107" source="ScreenScraper.fr">
 		<path>./skullfng.zip</path>
 		<name>Skull Fang (World)</name>
-		<desc>Special Mode (boss battle only): on the scroll selection screen, hold UP then press B3(x5), B2(x3). 
-Very Hard: on the scroll selection screen, hold Right then press B2(x4), B3, B2, B3, B2(x2). 
-Hardest Mode: on the scroll selection screen, hold Left then press B2, B3(x2), B2, B3(x2), B2, B3(x3). 
-Thrust: if you select a 'Fighter' type pilot, you can use Thrust by 'code input' during ingame action. 
-1) Back Thrust: Up, Left or Right, Down + B3 - Back attack. 
-2) Side Thrust: Right or Left, Down + B3 - Side attack. 
-3) Air Brake: Down(x2) + B3 - Temporary invincibility. 
-4) Hi-Ion Shield: Left, Right + B3 or Right, Left + B3 - B.Roll Power-Up. 
+		<desc>Special Mode (boss battle only): on the scroll selection screen, hold UP then press B3(x5), B2(x3).
+Very Hard: on the scroll selection screen, hold Right then press B2(x4), B3, B2, B3, B2(x2).
+Hardest Mode: on the scroll selection screen, hold Left then press B2, B3(x2), B2, B3(x2), B2, B3(x3).
+Thrust: if you select a 'Fighter' type pilot, you can use Thrust by 'code input' during ingame action.
+1) Back Thrust: Up, Left or Right, Down + B3 - Back attack.
+2) Side Thrust: Right or Left, Down + B3 - Side attack.
+3) Air Brake: Down(x2) + B3 - Temporary invincibility.
+4) Hi-Ion Shield: Left, Right + B3 or Right, Left + B3 - B.Roll Power-Up.
 5) SECRET: Down(x4), Up(x2), Down + B3 - Enabled rolling attack.</desc>
 		<image>/userdata/roms/mame/images/skullfng.png</image>
 		<rating>0.8</rating>
@@ -968,8 +968,8 @@ Peter Pepper returns almost eight years after the original Burger Time - and thi
 	<game id="43287" source="ScreenScraper.fr">
 		<path>./srdarwin.zip</path>
 		<name>Super Real Darwin (World)</name>
-		<desc>SRD: Super Real Darwin is a vertical scrolling shooter arcade game developed and published by Data East. It is the sequel to Data East's 1986 arcade game, Darwin 4078. The player takes control of a small fighter ship capable of mutating into different shapes. The ship's appearance will change with upgraded weapons as the player obtains more powerups. 
- 
+		<desc>SRD: Super Real Darwin is a vertical scrolling shooter arcade game developed and published by Data East. It is the sequel to Data East's 1986 arcade game, Darwin 4078. The player takes control of a small fighter ship capable of mutating into different shapes. The ship's appearance will change with upgraded weapons as the player obtains more powerups.
+
 The story starts on the planet Lakya where the technologically advanced inhabitants of the planet unwittingly unleash the planet's life force known as Evol. As the released Evol drifts from planet Lakya, it is received by the inhabitants of the nearby planet Cokyo; the people of Cokyo initiate the Shlohe project, a plan to use their captured Evol to develop advanced biologic ships and weapons to invade planet Lakya. The inhabitants of Lakya retaliate the Cokyo invasion by using their own evolving fighter ships.</desc>
 		<image>/userdata/roms/mame/images/srdarwin.png</image>
 		<rating>0.6</rating>
@@ -1059,10 +1059,10 @@ The story starts on the planet Lakya where the technologically advanced inhabita
 	<game id="43774" source="ScreenScraper.fr">
 		<path>./tumblep.zip</path>
 		<name>Tumble Pop (World)</name>
-		<desc>Tumble Pop is a platform game for one or two players in which the aim is to clear each level of enemies by sucking them into - then ejecting them from - a portable vacuum-cleaner.  
- 
-Holding down the fire button sucks the enemies into the cleaner, releasing the button causes them to be expelled back out. Ejected enemies act as projectiles that can damage and kill any other on-screen enemies that they collide with. All enemies must be killed before players can progress to the next stage.  
- 
+		<desc>Tumble Pop is a platform game for one or two players in which the aim is to clear each level of enemies by sucking them into - then ejecting them from - a portable vacuum-cleaner.
+
+Holding down the fire button sucks the enemies into the cleaner, releasing the button causes them to be expelled back out. Ejected enemies act as projectiles that can damage and kill any other on-screen enemies that they collide with. All enemies must be killed before players can progress to the next stage.
+
 Throughout the game, letters of the alphabet randomly appear in bubbles. These can be collected to eventually spell the word "TUMBLEPOP". Once this has been achieved players are transported to a time-limited bonus level, giving them the opportunity to earn bonus points and extra lives.</desc>
 		<image>/userdata/roms/mame/images/tumblep.png</image>
 		<rating>0.8</rating>
@@ -1095,8 +1095,8 @@ Export release. Game developed in Japan. For more information about the game its
 	<game id="44097" source="ScreenScraper.fr">
 		<path>./wizdfire.zip</path>
 		<name>Wizard Fire (Over Sea v2.1)</name>
-		<desc>Five legendary heroes must fight through the evil monsters in order to eradicate the evil presence from their kingdom, in this colourful, isometric scrolling multi-player beat-em-up. 
- 
+		<desc>Five legendary heroes must fight through the evil monsters in order to eradicate the evil presence from their kingdom, in this colourful, isometric scrolling multi-player beat-em-up.
+
 Wizard Fire / Dark Seal II is another in a long line of derivative but playable fantasy-themed beat-em-ups that came to typify the arcade scene of the early nineties.</desc>
 		<image>/userdata/roms/mame/images/wizdfire.png</image>
 		<rating>0.7</rating>
@@ -1215,7 +1215,7 @@ Wizard Fire / Dark Seal II is another in a long line of derivative but playable 
 	<game id="40130" source="ScreenScraper.fr">
 		<path>./baddudes.zip</path>
 		<name>Bad Dudes vs. Dragonninja (US)</name>
-		<desc>The game starts in New York City, where President Ronnie has been kidnapped by the nefarious DragonNinja. The game's intro begins with the following introduction: "Rampant ninja related crimes these days... Whitehouse is not the exception...". As soon as that occurs, a Secret Service agent asks two street-smart brawlers, named Blade and Striker: "President Ronnie has been kidnapped by the ninjas. Are you a bad enough dude to rescue Ronnie?". 
+		<desc>The game starts in New York City, where President Ronnie has been kidnapped by the nefarious DragonNinja. The game's intro begins with the following introduction: "Rampant ninja related crimes these days... Whitehouse is not the exception...". As soon as that occurs, a Secret Service agent asks two street-smart brawlers, named Blade and Striker: "President Ronnie has been kidnapped by the ninjas. Are you a bad enough dude to rescue Ronnie?".
 
 After hearing that, the Bad Dudes pursue the DragonNinja through the city streets, highway, sewers, transport train, forest, cave and into the secret ninja base in order to save President Ronnie.</desc>
 		<image>/userdata/roms/mame/images/baddudes.png</image>
@@ -1247,12 +1247,12 @@ After hearing that, the Bad Dudes pursue the DragonNinja through the city street
 	<game id="40827" source="ScreenScraper.fr">
 		<path>./darwin.zip</path>
 		<name>Darwin 4078 (Japan)</name>
-		<desc>The game takes place within a gigantic spaceship which has virtually infinite capacity because of its ability to manipulate time and space. The player must deal with enigmatic creatures called EVOL, which consist only of pure energy and need to keep themselves in capsules in order to maintain their existence in the world. 
- 
-All of the characters in the game are designed to resemble microscopic organisms, both in their appearance and their quick, tricky movements. The player's ship undergoes over 10 types of transformations throughout the game, each with offensive and defensive maneuvers specific to their design. The sound effects used are minimal, but different types of sounds are used according to the type of shots or their speed. A sound resembling a long scream results when the player's ship is hit and returns to its weakest evolutionary state. 
- 
-The player must progress through 16 different levels, defeating the boss at the end of each level. The player controls their ship using an 8-way joystick and 2 buttons (one button targets enemies in the air, and the other targets the enemies on the ground). The power of the player's ship increases as it evolves. 
- 
+		<desc>The game takes place within a gigantic spaceship which has virtually infinite capacity because of its ability to manipulate time and space. The player must deal with enigmatic creatures called EVOL, which consist only of pure energy and need to keep themselves in capsules in order to maintain their existence in the world.
+
+All of the characters in the game are designed to resemble microscopic organisms, both in their appearance and their quick, tricky movements. The player's ship undergoes over 10 types of transformations throughout the game, each with offensive and defensive maneuvers specific to their design. The sound effects used are minimal, but different types of sounds are used according to the type of shots or their speed. A sound resembling a long scream results when the player's ship is hit and returns to its weakest evolutionary state.
+
+The player must progress through 16 different levels, defeating the boss at the end of each level. The player controls their ship using an 8-way joystick and 2 buttons (one button targets enemies in the air, and the other targets the enemies on the ground). The power of the player's ship increases as it evolves.
+
 There are two broad categories that define how enemies attack. The first type only shoots in the forward direction at a constant speed, but the second type shoots bullets that travel at different speeds depending on its distance with the player's ship (the bullets travel quicker if the player is farther away, and slower if the player is close by). This makes it so that staying away from enemies will not necessarily make it easier to avoid attacks. The game's difficulty also does not change over time, and enemies do not become stronger as the player's ship evolves.</desc>
 		<image>/userdata/roms/mame/images/darwin.png</image>
 		<rating>0.5</rating>
@@ -1318,10 +1318,10 @@ A vertically scrolling shoot'em up game.</desc>
 	<game id="42791" source="ScreenScraper.fr">
 		<path>./robocop.zip</path>
 		<name>Robocop (World revision 4)</name>
-		<desc>RoboCop - The Future of Law Enforcement is a single player, side-scrolling platform shoot-em-up based on the 1987 movie of the same name. The game's story mirrors that of the film, with former cop Murphy, now a half-human cyborg called 'RoboCop', on a quest to bring down the evil OCP corporation. 
- 
-RoboCop features nine levels of action, with two of the game's nine stages being into-the-screen target ranges, in which players can try to accrue bonus points and earn extra health. Wooden crates occasionally bar RoboCop's progress, but these can be punched to remove them. Marked crates can be smashed to reveal one of three Weapon power-ups; Three-way Gun, Dual Laser and the incredibly powerful Cobra Gun. 
- 
+		<desc>RoboCop - The Future of Law Enforcement is a single player, side-scrolling platform shoot-em-up based on the 1987 movie of the same name. The game's story mirrors that of the film, with former cop Murphy, now a half-human cyborg called 'RoboCop', on a quest to bring down the evil OCP corporation.
+
+RoboCop features nine levels of action, with two of the game's nine stages being into-the-screen target ranges, in which players can try to accrue bonus points and earn extra health. Wooden crates occasionally bar RoboCop's progress, but these can be punched to remove them. Marked crates can be smashed to reveal one of three Weapon power-ups; Three-way Gun, Dual Laser and the incredibly powerful Cobra Gun.
+
 The film's incidental music plays throughout the game and RoboCop's speech is sampled directly from the original film.</desc>
 		<image>/userdata/roms/mame/images/robocop.png</image>
 		<rating>0.6</rating>

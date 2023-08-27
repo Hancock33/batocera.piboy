@@ -16,7 +16,7 @@ class CitraGenerator(Generator):
         CitraGenerator.writeCITRAConfig(batoceraFiles.CONF + "/citra-emu/qt-config.ini", system, playersControllers)
 
         commandArray = ['/usr/bin/citra-qt', rom]
-        return Command.Command(array=commandArray, env={ 
+        return Command.Command(array=commandArray, env={
             "XDG_CONFIG_HOME":batoceraFiles.CONF,
             "XDG_DATA_HOME":batoceraFiles.SAVES + "/3ds",
             "XDG_CACHE_HOME":batoceraFiles.CACHE,
@@ -94,7 +94,7 @@ class CitraGenerator(Generator):
 
         ## [UI]
         if not citraConfig.has_section("UI"):
-            citraConfig.add_section("UI")       
+            citraConfig.add_section("UI")
         # Start Fullscreen
         citraConfig.set("UI", "fullscreen", "true")
         citraConfig.set("UI", "fullscreen\default", "false")
@@ -151,7 +151,7 @@ class CitraGenerator(Generator):
             citraConfig.set("Renderer", "use_frame_limit", "false")
         else:
             citraConfig.set("Renderer", "use_frame_limit", "true")
-        
+
         ## [WEB SERVICE]
         if not citraConfig.has_section("WebService"):
             citraConfig.add_section("WebService")
@@ -185,7 +185,7 @@ class CitraGenerator(Generator):
         # Options required to load the functions when the configuration file is created
         if not citraConfig.has_option("Controls", "profiles\\size"):
             citraConfig.set("Controls", "profile", 0)
-            citraConfig.set("Controls", "profile\\default", "true")    
+            citraConfig.set("Controls", "profile\\default", "true")
             citraConfig.set("Controls", "profiles\\1\\name", "default")
             citraConfig.set("Controls", "profiles\\1\\name\\default", "true")
             citraConfig.set("Controls", "profiles\\size", 1)

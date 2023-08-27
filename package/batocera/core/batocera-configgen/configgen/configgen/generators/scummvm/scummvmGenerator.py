@@ -6,7 +6,7 @@ import controllersConfig
 import os.path
 import glob
 
-class ScummVMGenerator(Generator):  
+class ScummVMGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, gameResolution):
         # crete /userdata/bios/scummvm/extra folder if it doesn't exist
@@ -34,7 +34,7 @@ class ScummVMGenerator(Generator):
             nplayer += 1
 
         commandArray = [batoceraFiles.batoceraBins[system.config['emulator']], "-f"]
-        
+
         # set the resolution
         window_width = str(gameResolution["width"])
         window_height = str(gameResolution["height"])
@@ -53,7 +53,7 @@ class ScummVMGenerator(Generator):
             commandArray.append(f"--scaler={system.config['scumm_scaler_mode']}")
         else:
             commandArray.append("--scaler=normal")
-                
+
         #  stretch mode
         if system.isOptSet("scumm_stretch"):
             commandArray.append(f"--stretch-mode={system.config['scumm_stretch']}")
@@ -89,7 +89,7 @@ class ScummVMGenerator(Generator):
                 "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
             }
         )
-    
+
     def getInGameRatio(self, config, gameResolution, rom):
         if ("scumm_stretch" in config and config["scumm_stretch"] == "fit_force_aspect") or ("scumm_stretch" in config and config["scumm_stretch"] == "pixel-perfect"):
             return 4/3
