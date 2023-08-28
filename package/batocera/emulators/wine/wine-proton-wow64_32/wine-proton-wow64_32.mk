@@ -17,7 +17,7 @@ HOST_WINE_PROTON_WOW64_32_DEPENDENCIES = host-bison host-flex host-clang host-ll
 # Configure Proton
 define WINE_PROTON_WOW64_32_AUTOGEN
 	# Create folder for install
-	mkdir -p $(TARGET_DIR)/usr/wine/lutris
+	mkdir -p $(TARGET_DIR)/usr/wine/proton
 	# Autotools generation
 	cd $(@D); autoreconf -fiv
 	cd $(@D); ./tools/make_requests
@@ -25,7 +25,7 @@ define WINE_PROTON_WOW64_32_AUTOGEN
 endef
 
 WINE_PROTON_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_PROTON_WOW64_32_AUTOGEN
-HOST_PROTON_LUTRIS_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_PROTON_WOW64_32_AUTOGEN
+HOST_WINE_PROTON_WOW64_32_PRE_CONFIGURE_HOOKS+= WINE_PROTON_WOW64_32_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_PROTON_WOW64_32_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
