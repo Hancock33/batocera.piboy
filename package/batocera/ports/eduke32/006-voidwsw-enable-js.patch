@@ -1,5 +1,5 @@
 diff --git a/source/sw/src/config.h b/source/sw/src/config.h
-index 4caf0c71f..dda073c71 100644
+index 7eeda452b..5875db374 100644
 --- a/source/sw/src/config.h
 +++ b/source/sw/src/config.h
 @@ -36,7 +36,7 @@ Prepared for public release: 03/28/2005 - Charlie Wiederhold, 3D Realms
