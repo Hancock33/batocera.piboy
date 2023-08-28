@@ -3,10 +3,10 @@
 # wine-proton-wow64_32
 #
 ################################################################################
-# Version: Commits on Aug 20, 2023 (branch@Proton8-14)
-WINE_PROTON_WOW64_32_VERSION = 0bee1bf20f5ae0f0548bbf0e1882aad6be377887
-WINE_PROTON_WOW64_32_SOURCE = wine-proton-$(WINE_PROTON_WOW64_32_VERSION).tar.gz
-WINE_PROTON_WOW64_32_SITE = $(call github,GloriousEggroll,proton-wine,$(WINE_PROTON_WOW64_32_VERSION))
+# Version: Commits on Aug 22, 2023
+WINE_PROTON_WOW64_32_VERSION = 8.0-20230822
+WINE_PROTON_WOW64_32_SOURCE = experimental-wine-$(WINE_PROTON_WOW64_32_VERSION).tar.gz
+WINE_PROTON_WOW64_32_SITE = https://github.com/ValveSoftware/wine/archive/refs/tags
 WINE_PROTON_WOW64_32_LICENSE = LGPL-2.1+
 WINE_PROTON_WOW64_32_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_PROTON_WOW64_32_CPE_ID_VENDOR = winehq
@@ -16,20 +16,16 @@ HOST_WINE_PROTON_WOW64_32_DEPENDENCIES = host-bison host-flex host-clang host-ll
 
 # Configure Proton
 define WINE_PROTON_WOW64_32_AUTOGEN
+	# That create folder for install
+	mkdir -p $(TARGET_DIR)/usr/wine/lutris
+	# Autotools generation
 	cd $(@D); autoreconf -fiv
 	cd $(@D); ./tools/make_requests
 	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
 endef
 
-WINE_PROTON_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
-HOST_PROTON_LUTRIS_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
-
-# That create folder for install
-define WINE_PROTON_WOW64_32_CREATE_WINE_FOLDER
-	mkdir -p $(TARGET_DIR)/usr/wine/proton
-endef
-
-WINE_PROTON_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_PROTON_WOW64_32_CREATE_WINE_FOLDER
+WINE_PROTON_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_PROTON_WOW64_32_AUTOGEN
+HOST_PROTON_LUTRIS_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_PROTON_WOW64_32_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_PROTON_WOW64_32_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \

@@ -3,11 +3,10 @@
 # wine-lutris-wow64_32
 #
 ################################################################################
-# Version: Commits on Aug 24, 2023 (branch@ge-lol-8.13-1)
-WINE_LUTRIS_WOW64_32_VERSION = 221d5aba3f19c1014dad30cad04c4b14c284d9d2
-WINE_LUTRIS_WOW64_32_SOURCE = wine-lutris-$(WINE_LUTRIS_WOW64_32_VERSION).tar.gz
-WINE_LUTRIS_WOW64_32_SITE = $(call github,wine-mirror,wine,$(WINE_LUTRIS_WOW64_32_VERSION))
-#WINE_LUTRIS_WOW64_32_SITE = $(call github,GloriousEggroll,wine,$(WINE_LUTRIS_WOW64_32_VERSION))
+# Version: Commits on Aug 18, 2023
+WINE_LUTRIS_WOW64_32_VERSION = 8.14
+WINE_LUTRIS_WOW64_32_SOURCE = wine-$(WINE_LUTRIS_VERSION).tar.gz
+WINE_LUTRIS_WOW64_32_SITE = https://github.com/wine-mirror/wine/archive/refs/tags
 WINE_LUTRIS_WOW64_32_LICENSE = LGPL-2.1+
 WINE_LUTRIS_WOW64_32_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_LUTRIS_WOW64_32_CPE_ID_VENDOR = winehq
@@ -17,20 +16,21 @@ HOST_WINE_LUTRIS_WOW64_32_DEPENDENCIES = host-bison host-flex host-clang host-ll
 
 # Configure Lutris
 define WINE_LUTRIS_WOW64_32_AUTOGEN
+	# That create folder for install
+	mkdir -p $(TARGET_DIR)/usr/wine/lutris
+	# Use Staging Patches
+	curl -L https://github.com/wine-staging/wine-staging/archive/v$(WINE_LUTRIS_WOW64_32_VERSION)/wine-staging-v$(WINE_LUTRIS_WOW64_32_VERSION).tar.gz \
+	-o $(@D)/wine-staging-v$(WINE_LUTRIS_WOW64_32_VERSION).tar.gz
+	tar -xf $(@D)/wine-staging-v$(WINE_LUTRIS_WOW64_32_VERSION).tar.gz -C $(@D)
+	cd $(@D); ./wine-staging-$(WINE_LUTRIS_WOW64_32_VERSION)/staging/patchinstall.py --all
+	# Autotools generation
 	cd $(@D); autoreconf -fiv
 	cd $(@D); ./tools/make_requests
 	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
 endef
 
-WINE_LUTRIS_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
-HOST_WINE_LUTRIS_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
-
-# That create folder for install
-define WINE_LUTRIS_WOW64_32_CREATE_WINE_FOLDER
-	mkdir -p $(TARGET_DIR)/usr/wine/lutris
-endef
-
-WINE_LUTRIS_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_LUTRIS_WOW64_32_CREATE_WINE_FOLDER
+WINE_LUTRIS_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_LUTRIS_WOW64_32_AUTOGEN
+HOST_WINE_LUTRIS_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_LUTRIS_WOW64_32_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_LUTRIS_WOW64_32_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
