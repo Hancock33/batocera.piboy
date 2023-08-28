@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Aug 27, 2023
-LIBRETRO_STELLA_VERSION = 647f3d48a5afaa0ec56915d43da84c1d8ca04dd4
+LIBRETRO_STELLA_VERSION = 074c6ae4caac398b0e94d4088acd48003774fb99
 LIBRETRO_STELLA_SITE = $(call github,stella-emu,stella,$(LIBRETRO_STELLA_VERSION))
 LIBRETRO_STELLA_LICENSE = GPLv2
 
