@@ -3,8 +3,8 @@
 # vpinball
 #
 ################################################################################
-# Version: Commits on Aug 24, 2023 (branch@standalone)
-VPINBALL_VERSION = 086f52ef4b9e7507d9bc1feac2a057a07f9ac2be
+# Version: Commits on Aug 28, 2023 (branch@standalone)
+VPINBALL_VERSION = 4c33a655cf9a14aa3b326035c9b7a9366733a315
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
 VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
