@@ -69,4 +69,5 @@ else
     echo "Only one GPU detected in the system" >> "$display_log"
 fi
 
+xrdb -merge /etc/openbox/Xresources
 openbox --config-file /etc/openbox/rc.xml --startup "emulationstation-standalone"
