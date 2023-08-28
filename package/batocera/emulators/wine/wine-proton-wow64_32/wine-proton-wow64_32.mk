@@ -16,7 +16,7 @@ HOST_WINE_PROTON_WOW64_32_DEPENDENCIES = host-bison host-flex host-clang host-ll
 
 # Configure Proton
 define WINE_PROTON_WOW64_32_AUTOGEN
-	# That create folder for install
+	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/lutris
 	# Autotools generation
 	cd $(@D); autoreconf -fiv
