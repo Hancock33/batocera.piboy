@@ -16,7 +16,7 @@ HOST_WINE_LUTRIS_DEPENDENCIES = host-bison host-flex host-clang host-lld
 
 # Configure Lutris
 define WINE_LUTRIS_AUTOGEN
-	# That create folder for install
+	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/lutris
 	# Use Staging Patches
 	curl -L https://github.com/wine-staging/wine-staging/archive/v$(WINE_LUTRIS_VERSION)/wine-staging-v$(WINE_LUTRIS_VERSION).tar.gz \
