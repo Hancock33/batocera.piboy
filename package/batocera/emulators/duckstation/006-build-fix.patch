@@ -1,0 +1,61 @@
+diff --git a/src/core/system.cpp b/src/core/system.cpp
+index 9117f5ca..bc90b99c 100644
+--- a/src/core/system.cpp
++++ b/src/core/system.cpp
+@@ -3711,13 +3711,13 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
+ 
+   FullscreenUI::CheckForConfigChanges(old_settings);
+ 
+-  if (g_settings.enable_discord_presence != old_settings.enable_discord_presence)
++  /*if (g_settings.enable_discord_presence != old_settings.enable_discord_presence)
+   {
+     if (g_settings.enable_discord_presence)
+       InitializeDiscordPresence();
+     else
+       ShutdownDiscordPresence();
+-  }
++  }*/
+ 
+   if (g_settings.log_level != old_settings.log_level || g_settings.log_filter != old_settings.log_filter ||
+       g_settings.log_to_console != old_settings.log_to_console ||
+diff --git a/src/duckstation-nogui/nogui_host.cpp b/src/duckstation-nogui/nogui_host.cpp
+index 1a905b45..413b79bd 100644
+--- a/src/duckstation-nogui/nogui_host.cpp
++++ b/src/duckstation-nogui/nogui_host.cpp
+@@ -426,8 +426,8 @@ void NoGUIHost::ProcessPlatformWindowResize(s32 width, s32 height, float scale)
+ 
+ void NoGUIHost::ProcessPlatformMouseMoveEvent(float x, float y)
+ {
+-  if (g_gpu_device)
+-    g_gpu_device->SetMousePosition(static_cast<s32>(x), static_cast<s32>(y));
++  //if (g_gpu_device)
++   // g_gpu_device->SetMousePosition(static_cast<s32>(x), static_cast<s32>(y));
+ 
+   InputManager::UpdatePointerAbsolutePosition(0, x, y);
+   ImGuiManager::UpdateMousePosition(x, y);
+diff --git a/src/duckstation-nogui/wayland_nogui_platform.cpp b/src/duckstation-nogui/wayland_nogui_platform.cpp
+index b551b041..01105605 100644
+--- a/src/duckstation-nogui/wayland_nogui_platform.cpp
++++ b/src/duckstation-nogui/wayland_nogui_platform.cpp
+@@ -7,7 +7,7 @@
+ #include "common/string_util.h"
+ #include "common/threading.h"
+ #include "core/host.h"
+-#include "core/host_settings.h"
++#include "core/settings.h"
+ #include "nogui_host.h"
+ #include "nogui_platform.h"
+ 
+diff --git a/src/duckstation-nogui/x11_nogui_platform.h b/src/duckstation-nogui/x11_nogui_platform.h
+index 395353e7..73ca495d 100644
+--- a/src/duckstation-nogui/x11_nogui_platform.h
++++ b/src/duckstation-nogui/x11_nogui_platform.h
+@@ -12,7 +12,7 @@
+ #include "common/string_util.h"
+ #include "common/threading.h"
+ #include "core/host.h"
+-#include "core/host_settings.h"
++#include "core/settings.h"
+ #include "nogui_host.h"
+ #include "nogui_platform.h"
+ 
