@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v38beta(2023/08/14)\n"
+"Project-Id-Version: batocera-es v38beta(2023/08/24)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-08-14 12:04+0900\n"
+"PO-Revision-Date: 2023-08-24 19:00+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -10127,112 +10127,112 @@ msgstr "グラフィカル ユーザー インターフェース"
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Select scale resolution of the game."
-msgstr ""
+msgstr "ゲームのスケール解像度を選択します"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "SCALE FACTOR"
-msgstr ""
+msgstr "スケールファクター"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Sets the scaler filter mode when rendering."
-msgstr ""
+msgstr "レンダリング時のスケーラー フィルター モードを設定します"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "SCALER MODE"
-msgstr ""
+msgstr "スケーラーモード"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "HQ (bilinear filter)"
-msgstr ""
+msgstr "HQ (バイリニアフィルター)"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Edge (sharper filet)"
-msgstr ""
+msgstr "エッジ（よりシャープなフィレ）"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "AdvMame"
-msgstr ""
+msgstr "Advance Mame"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Scanline Interpolation Filter (SAI)"
-msgstr ""
+msgstr "スキャンライン補間フィルター（SAI）"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "SuperSAI"
-msgstr ""
+msgstr "SuperSAI"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "SuperEagle"
-msgstr ""
+msgstr "SuperEagle"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Pixel-Perfect"
-msgstr ""
+msgstr "ピクセルパーフェクト (ピクセルを正方形表示)"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "DotMatrix"
-msgstr ""
+msgstr "ドットマトリクス"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "TV2x CRT Television Filter"
-msgstr ""
+msgstr "TV2xブラウン管テレビ用フィルター"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Stretches the output to fill the display area."
-msgstr ""
+msgstr "領域全体に拡大して表示します"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Center (Default)"
-msgstr ""
+msgstr "中央 (標準)"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Pixel Perfect"
-msgstr ""
+msgstr "ピクセルパーフェクト (ピクセルを正方形表示)"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Even Pixels"
-msgstr ""
+msgstr "偶数ピクセル"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Fit resolution scale"
-msgstr ""
+msgstr "解像度スケールに合わせる"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Stretch to screen"
-msgstr ""
+msgstr "画面全体に引き伸ばし"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Fit 4:3 Aspect Ratio"
-msgstr ""
+msgstr "アスペクト比を 4:3 に合わせる"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Choose your preferred renderer."
-msgstr ""
+msgstr "好みのレンダラーを選択してください"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "RENDERER"
-msgstr ""
+msgstr "レンダラー"
 
 #. TRANSLATION: scummvm, play
 msgctxt "game_options"
@@ -10242,17 +10242,17 @@ msgstr "OpenGL (通常)"
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "OpenGL with Shaders"
-msgstr ""
+msgstr "OpenGL　と　シェーダー"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Choose your preferred language."
-msgstr ""
+msgstr "使用する言語を選択してください"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Chinese (Mandarin)"
-msgstr ""
+msgstr "中国語（北京語）"
 
 #. TRANSLATION: scummvm, xenia, xenia-canary
 msgctxt "game_options"
@@ -10262,12 +10262,12 @@ msgstr "スウェーデン語"
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Hebrew"
-msgstr ""
+msgstr "ヘブライ語"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Czech"
-msgstr ""
+msgstr "チェコ語"
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
