@@ -1,8 +1,8 @@
 diff --git a/rpcs3/Emu/savestate_utils.cpp b/rpcs3/Emu/savestate_utils.cpp
-index 12c348cb6..8c90c872b 100644
+index d2ac671cc..c6d0f399c 100644
 --- a/rpcs3/Emu/savestate_utils.cpp
 +++ b/rpcs3/Emu/savestate_utils.cpp
-@@ -180,7 +180,7 @@ bool boot_last_savestate()
+@@ -201,7 +201,7 @@ bool boot_last_savestate(bool testing)
  	{
  		extern bool is_savestate_compatible(const fs::file& file);
  
