@@ -1,5 +1,5 @@
 diff --git a/rpcs3/Input/evdev_gun_handler.cpp b/rpcs3/Input/evdev_gun_handler.cpp
-index e506920..293b9cb 100644
+index e5069203a..293b9cbf3 100644
 --- a/rpcs3/Input/evdev_gun_handler.cpp
 +++ b/rpcs3/Input/evdev_gun_handler.cpp
 @@ -214,7 +214,7 @@ bool evdev_gun_handler::init()

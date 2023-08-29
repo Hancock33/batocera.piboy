@@ -1,5 +1,5 @@
 diff --git a/libretro/libretro-core.h b/libretro/libretro-core.h
-index b613b73..7281032 100644
+index 46cf112..d1b1b5e 100644
 --- a/libretro/libretro-core.h
 +++ b/libretro/libretro-core.h
 @@ -3,6 +3,7 @@
@@ -23,7 +23,7 @@ index a312e4c..c82c2f7 100644
  
  #define DEBUG_AUDIO 0
 diff --git a/sources/src/custom.c b/sources/src/custom.c
-index aec5348..296d363 100644
+index ce46ef1..85e2a92 100644
 --- a/sources/src/custom.c
 +++ b/sources/src/custom.c
 @@ -13,6 +13,7 @@

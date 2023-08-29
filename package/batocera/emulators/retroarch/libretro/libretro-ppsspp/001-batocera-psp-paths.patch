@@ -1,6 +1,8 @@
---- libretro-ppsspp-lbrpdx/Core/System.cpp	2022-06-26 00:30:14.000000000 -0700
-+++ libretro-ppsspp-04affb19582eb2294a63b2b4c6d5421dcfdbb832/Core/System.cpp	2022-08-21 19:16:34.709966352 -0700
-@@ -594,63 +594,58 @@
+diff --git a/Core/System.cpp b/Core/System.cpp
+index bb06f06c9..b67efda85 100644
+--- a/Core/System.cpp
++++ b/Core/System.cpp
+@@ -648,63 +648,58 @@ std::string PSP_GetLoading() {
  }
  
  Path GetSysDirectory(PSPDirectories directoryType) {
@@ -12,10 +14,7 @@
 -	} else {
 -		pspDirectory = memStickDirectory / "PSP";
 -	}
-+	// Batocera config directories
-+        Path memStickDirectory = Path("/userdata/saves/psp/");
-+        Path pspDirectory = Path("/userdata/system/configs/ppsspp/PSP/");
- 
+-
 -	switch (directoryType) {
 -	case DIRECTORY_PSP:
 -		return pspDirectory;
@@ -56,6 +55,18 @@
 -		return pspDirectory / "shaders";
 -	case DIRECTORY_CUSTOM_THEMES:
 -		return pspDirectory / "themes";
+-
+-	case DIRECTORY_MEMSTICK_ROOT:
+-		return g_Config.memStickDirectory;
+-	// Just return the memory stick root if we run into some sort of problem.
+-	default:
+-		ERROR_LOG(FILESYS, "Unknown directory type.");
+-		return g_Config.memStickDirectory;
+-	}
++	// Batocera config directories
++        Path memStickDirectory = Path("/userdata/saves/psp/");
++        Path pspDirectory = Path("/userdata/system/configs/ppsspp/PSP/");
++
 +        switch (directoryType) {
 +        case DIRECTORY_PSP:
 +                return pspDirectory;
@@ -96,14 +107,7 @@
 +                return pspDirectory / "shaders";
 +        case DIRECTORY_CUSTOM_THEMES:
 +                return pspDirectory / "themes";
- 
--	case DIRECTORY_MEMSTICK_ROOT:
--		return g_Config.memStickDirectory;
--	// Just return the memory stick root if we run into some sort of problem.
--	default:
--		ERROR_LOG(FILESYS, "Unknown directory type.");
--		return g_Config.memStickDirectory;
--	}
++
 +        case DIRECTORY_MEMSTICK_ROOT:
 +                return memStickDirectory;
 +        // Just return the memory stick root if we run into some sort of problem.
@@ -113,4 +117,4 @@
 +        }	
  }
  
- #if PPSSPP_PLATFORM(WINDOWS)
+ bool CreateSysDirectories() {
