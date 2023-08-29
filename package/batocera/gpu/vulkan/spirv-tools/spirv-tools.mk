@@ -3,8 +3,8 @@
 # spirv-tools
 #
 ################################################################################
-# Version: Commits on Aug 24, 2023
-SPIRV_TOOLS_VERSION = 1b3c4cb6855f7db1636985e1652ebbf91f81cd50
+# Version: Commits on Aug 29, 2023
+SPIRV_TOOLS_VERSION = b6893ccdfb6e46fa3e093f557b1e5ee124d51f35
 SPIRV_TOOLS_SITE = https://github.com/KhronosGroup/SPIRV-Tools.git
 SPIRV_TOOLS_SITE_METHOD = git
 SPIRV_TOOLS_GIT_SUBMODULES = YES
