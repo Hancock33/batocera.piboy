@@ -60,10 +60,10 @@ index 24a4fb45..59eb66e5 100644
    if(USE_X11)
      target_sources(glad PRIVATE src/glad_glx.c)
 diff --git a/src/core/settings.cpp b/src/core/settings.cpp
-index aa349319..f556d5fa 100644
+index 10a548bd..b785e2e2 100644
 --- a/src/core/settings.cpp
 +++ b/src/core/settings.cpp
-@@ -1323,18 +1323,18 @@ std::string EmuFolders::Textures;
+@@ -1361,18 +1361,18 @@ std::string EmuFolders::Textures;
  
  void EmuFolders::SetDefaults()
  {
@@ -94,7 +94,7 @@ index aa349319..f556d5fa 100644
  }
  
  static std::string LoadPathFromSettings(SettingsInterface& si, const std::string& root, const char* section,
-@@ -1380,18 +1380,18 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
+@@ -1418,18 +1418,18 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
  void EmuFolders::Save(SettingsInterface& si)
  {
    // convert back to relative

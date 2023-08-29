@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index ed6c64a2fa..72dcf2ef51 100644
+index 2cff081391..2c07916ecf 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -784,7 +784,7 @@ if (NOT EXISTS ${CMAKE_CURRENT_BINARY_DIR}/Source/Core/Common/scmrev.h)
