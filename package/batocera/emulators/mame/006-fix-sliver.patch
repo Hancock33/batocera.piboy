@@ -1,5 +1,5 @@
 diff --git a/src/mame/misc/sliver.cpp b/src/mame/misc/sliver.cpp
-index e3b1b2afab..db63e517b8 100644
+index e3b1b2afab2..db63e517b8a 100644
 --- a/src/mame/misc/sliver.cpp
 +++ b/src/mame/misc/sliver.cpp
 @@ -281,7 +281,7 @@ void sliver_state::render_jpeg()
