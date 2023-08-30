@@ -1,8 +1,8 @@
 diff --git a/makefile b/makefile
-index 8d6330e5..b0b22554 100644
+index 25c9108a..64c8840a 100644
 --- a/makefile
 +++ b/makefile
-@@ -385,14 +385,14 @@ ifndef FORCE_DRC_C_BACKEND
+@@ -370,14 +370,14 @@ ifndef FORCE_DRC_C_BACKEND
  endif
  endif
  

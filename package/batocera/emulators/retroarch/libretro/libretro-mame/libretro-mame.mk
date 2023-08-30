@@ -3,9 +3,9 @@
 # libretro-mame
 #
 ################################################################################
-# Version: Commits on Aug 26, 2023
-LIBRETRO_MAME_VERSION = 1808a1cc4bf9148505bc97a3f392b55e6121993c
-LIBRETRO_MAME_SITE = $(call github,libretro,mame,$(LIBRETRO_MAME_VERSION))
+# Version: Commits on Aug 30, 2023
+LIBRETRO_MAME_VERSION = 1e70868667738d9052417798eddb7b19ae1bf083
+LIBRETRO_MAME_SITE = $(call github,sonninnos,mame,$(LIBRETRO_MAME_VERSION))
 LIBRETRO_MAME_LICENSE = MAME
 
 # Limit number of jobs not to eat too much RAM....
@@ -53,7 +53,7 @@ define LIBRETRO_MAME_BUILD_CMDS
 		DISTRO="debian-stable" OVERRIDE_CC="$(TARGET_CC)" OVERRIDE_CXX="$(TARGET_CXX)"             \
 		OVERRIDE_LD="$(TARGET_LD)" RANLIB="$(TARGET_RANLIB)" AR="$(TARGET_AR)"                     \
 		$(LIBRETRO_MAME_EXTRA_ARGS) CROSS_BUILD=1 TARGET="mame" SUBTARGET="mame" RETRO=1           \
-		OSD="retro" DEBUG=0 PRECOMPILE=0
+		OSD="retro" DEBUG=0 PRECOMPILE=0 OPTIMIZE=s
 endef
 
 define LIBRETRO_MAME_INSTALL_TARGET_CMDS

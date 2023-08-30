@@ -37,12 +37,14 @@ ifeq ($(BR2_x86_64),y)
 endif
 
 define LIBRETRO_EMUSCV_FIXSDL2_PATH
-	sed -i "s+\`sdl2-config+\`$(STAGING_DIR)/usr/bin/sdl2-config+g" $(@D)/Makefile.libretro
+	$(SED) "s+\`sdl2-config+\`$(STAGING_DIR)/usr/bin/sdl2-config+g" $(@D)/Makefile.libretro
 endef
 
 LIBRETRO_EMUSCV_PRE_CONFIGURE_HOOKS += LIBRETRO_EMUSCV_FIXSDL2_PATH
 
 define LIBRETRO_EMUSCV_BUILD_CMDS
+	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile.libretro
+	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile.libretro
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile platform="$(LIBRETRO_EMUSCV_PLATFORM)" $(LIBRETRO_EMUSCV_EXTRA_ARGS)
 endef
 
