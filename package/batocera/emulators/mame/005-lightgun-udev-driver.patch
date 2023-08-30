@@ -13,7 +13,7 @@ Signed-off-by: Nicolas Adenis-Lamarre <nicolas.adenis.lamarre@gmail.com>
  create mode 100644 src/osd/modules/input/input_udev.cpp
 
 diff --git a/scripts/src/main.lua b/scripts/src/main.lua
-index 32d5b7c..13e9f73 100644
+index 53b496cdfad..90e2dd163b3 100644
 --- a/scripts/src/main.lua
 +++ b/scripts/src/main.lua
 @@ -166,6 +166,7 @@ end
@@ -25,7 +25,7 @@ index 32d5b7c..13e9f73 100644
  	}
  if (STANDALONE~=true) then
 diff --git a/scripts/src/osd/modules.lua b/scripts/src/osd/modules.lua
-index 4bbd42b..b7fa7ef 100644
+index cc4a6653386..e2fd0d39cd5 100644
 --- a/scripts/src/osd/modules.lua
 +++ b/scripts/src/osd/modules.lua
 @@ -87,6 +87,7 @@ function osdmodulesbuild()
@@ -38,7 +38,7 @@ index 4bbd42b..b7fa7ef 100644
  		MAME_DIR .. "src/osd/modules/input/input_windows.cpp",
 diff --git a/src/osd/modules/input/input_udev.cpp b/src/osd/modules/input/input_udev.cpp
 new file mode 100644
-index 0000000..ad7a63c
+index 00000000000..ba49546dbe5
 --- /dev/null
 +++ b/src/osd/modules/input/input_udev.cpp
 @@ -0,0 +1,391 @@
@@ -434,10 +434,10 @@ index 0000000..ad7a63c
 +
 +MODULE_DEFINITION(LIGHTGUN_UDEV, udev_lightgun_module)
 diff --git a/src/osd/modules/lib/osdobj_common.cpp b/src/osd/modules/lib/osdobj_common.cpp
-index d2fb751..1e785d1 100644
+index 90bb63bf7f5..dbff9bf9bb4 100644
 --- a/src/osd/modules/lib/osdobj_common.cpp
 +++ b/src/osd/modules/lib/osdobj_common.cpp
-@@ -348,6 +348,7 @@ void osd_common_t::register_options()
+@@ -309,6 +309,7 @@ void osd_common_t::register_options()
  	REGISTER_MODULE(m_mod_man, MOUSE_NONE);
  
  	REGISTER_MODULE(m_mod_man, LIGHTGUN_X11);
@@ -445,6 +445,3 @@ index d2fb751..1e785d1 100644
  	REGISTER_MODULE(m_mod_man, LIGHTGUNINPUT_RAWINPUT);
  	REGISTER_MODULE(m_mod_man, LIGHTGUNINPUT_WIN32);
  	REGISTER_MODULE(m_mod_man, LIGHTGUN_NONE);
--- 
-2.34.1
-
