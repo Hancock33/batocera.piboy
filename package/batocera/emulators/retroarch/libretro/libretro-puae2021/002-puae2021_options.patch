@@ -1,5 +1,5 @@
 diff --git a/libretro/libretro-core.c b/libretro/libretro-core.c
-index 86b3c99..4e6accb 100644
+index 0fde7de..8c134d7 100644
 --- a/libretro/libretro-core.c
 +++ b/libretro/libretro-core.c
 @@ -106,7 +106,7 @@ extern uae_u32 natmem_size;
@@ -727,21 +727,12 @@ index 86b3c99..4e6accb 100644
           "---"
        },
        {
--         "puae_mapper_reset",
-+         "puae2021_mapper_reset",
-          "Hotkey > Reset",
-          "Reset",
-          "Press the mapped key to trigger soft reset (Ctrl-Amiga-Amiga).",
-@@ -2195,7 +2195,7 @@ static void retro_set_core_options()
-          "---"
-       },
-       {
 -         "puae_mapper_aspect_ratio_toggle",
 +         "puae2021_mapper_aspect_ratio_toggle",
           "Hotkey > Toggle Aspect Ratio",
           "Toggle Aspect Ratio",
           "Press the mapped key to toggle between PAL/NTSC pixel aspect ratio.",
-@@ -2205,7 +2205,7 @@ static void retro_set_core_options()
+@@ -2195,7 +2195,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -750,7 +741,7 @@ index 86b3c99..4e6accb 100644
           "Hotkey > Toggle Crop",
           "Toggle Crop",
           "Press the mapped key to toggle crop.",
-@@ -2215,7 +2215,7 @@ static void retro_set_core_options()
+@@ -2205,7 +2205,7 @@ static void retro_set_core_options()
           "---"
        },
        {
@@ -759,6 +750,15 @@ index 86b3c99..4e6accb 100644
           "Hotkey > Toggle Zoom Mode",
           "Toggle Zoom Mode",
           "Hidden placeholder for backwards compatibility.",
+@@ -2215,7 +2215,7 @@ static void retro_set_core_options()
+          "---"
+       },
+       {
+-         "puae_mapper_reset",
++         "puae2021_mapper_reset",
+          "Hotkey > Reset",
+          "Reset",
+          "Press the mapped key to trigger soft reset (Ctrl-Amiga-Amiga).",
 @@ -2226,7 +2226,7 @@ static void retro_set_core_options()
        },
        /* Button mappings */
