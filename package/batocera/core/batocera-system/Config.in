@@ -287,7 +287,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 
     # vulkan
     select BR2_PACKAGE_BATOCERA_VULKAN                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM27118
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     # wireless drivers
     # use the morrownr RTL8812au & RTL8821au drivers
