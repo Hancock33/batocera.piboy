@@ -12,7 +12,7 @@ RYUJINX_DEPENDENCIES = sdl2 openal hicolor-icon-theme adwaita-icon-theme librsvg
 
 define RYUJINX_EXTRACT_CMDS
 	mkdir -p $(@D)/target && cd $(@D)/target && \
-	    tar xf $(DL_DIR)/$(RYUJINX_DL_SUBDIR)/$(RYUJINX_SOURCE)
+		tar xf $(DL_DIR)/$(RYUJINX_DL_SUBDIR)/$(RYUJINX_SOURCE)
 endef
 
 define RYUJINX_INSTALL_TARGET_CMDS
@@ -22,7 +22,7 @@ define RYUJINX_INSTALL_TARGET_CMDS
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ryujinx/switch.ryujinx.keys \
-	    $(TARGET_DIR)/usr/share/evmapy
+		$(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(generic-package))

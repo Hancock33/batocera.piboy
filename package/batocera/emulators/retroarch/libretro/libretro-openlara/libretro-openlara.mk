@@ -15,10 +15,10 @@ LIBRETRO_OPENLARA_EXTRA_ARGS = CORE=1
 
 # x86 should use opengl for retroarch
 ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
-    ifeq ($(BR2_PACKAGE_BATOCERA_GLES3),y)
-        LIBRETRO_OPENLARA_EXTRA_ARGS += GLES=1 GLES31=1
+	ifeq ($(BR2_PACKAGE_BATOCERA_GLES3),y)
+		LIBRETRO_OPENLARA_EXTRA_ARGS += GLES=1 GLES31=1
 	else ifeq ($(BR2_PACKAGE_BATOCERA_GLES2),y)
-	    LIBRETRO_OPENLARA_EXTRA_ARGS += GLES=1
+		LIBRETRO_OPENLARA_EXTRA_ARGS += GLES=1
 	endif
 endif
 
@@ -26,7 +26,7 @@ define LIBRETRO_OPENLARA_BUILD_CMDS
 	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/src/platform/libretro/Makefile
 	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/src/platform/libretro/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
-	    -C $(@D)/src/platform/libretro -f Makefile $(LIBRETRO_OPENLARA_EXTRA_ARGS) \
+		-C $(@D)/src/platform/libretro -f Makefile $(LIBRETRO_OPENLARA_EXTRA_ARGS) \
 		platform="$(LIBRETRO_OPENLARA_PLATFORM)"
 endef
 

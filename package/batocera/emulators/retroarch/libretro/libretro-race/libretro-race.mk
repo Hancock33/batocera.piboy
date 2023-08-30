@@ -16,7 +16,7 @@ endef
 
 define LIBRETRO_RACE_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/race_libretro.so \
-    $(TARGET_DIR)/usr/lib/libretro/race_libretro.so
+	$(TARGET_DIR)/usr/lib/libretro/race_libretro.so
 endef
 
 $(eval $(generic-package))

@@ -48,7 +48,7 @@ define LIBRETRO_FBNEO_BUILD_CMDS
 	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/src/burner/libretro/Makefile
 	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/src/burner/libretro/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/src/burner/libretro -f Makefile platform="$(LIBRETRO_FBNEO_PLATFORM)" $(LIBRETRO_FBNEO_EXTRA_ARGS) \
-        GIT_VERSION="$(shell echo $(LIBRETRO_FBNEO_VERSION) | cut -c 1-7)"
+		GIT_VERSION="$(shell echo $(LIBRETRO_FBNEO_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_FBNEO_INSTALL_TARGET_CMDS
@@ -60,9 +60,9 @@ define LIBRETRO_FBNEO_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/metadata/* \
 		$(TARGET_DIR)/usr/share/batocera/datainit/bios/fbneo
 
-    # Need to think of another way to use these files.
-    # They take up a lot of space on tmpfs.
-    # --exclude light as those are for the n3ds build of fbneo, not used by Batocera at all
+	# Need to think of another way to use these files.
+	# They take up a lot of space on tmpfs.
+	# --exclude light as those are for the n3ds build of fbneo, not used by Batocera at all
 	rsync -a $(@D)/dats/* \
 		$(TARGET_DIR)/usr/share/batocera/datainit/bios/fbneo --exclude light
 endef

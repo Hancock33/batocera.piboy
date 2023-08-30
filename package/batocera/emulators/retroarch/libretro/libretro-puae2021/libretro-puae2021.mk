@@ -27,7 +27,7 @@ define LIBRETRO_PUAE2021_BUILD_CMDS
 	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
 	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile platform="$(LIBRETRO_PUAE2021_PLATFORM)" \
-        GIT_VERSION="-$(shell echo $(LIBRETRO_PUAE2021_VERSION) | cut -c 1-7)"
+		GIT_VERSION="-$(shell echo $(LIBRETRO_PUAE2021_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_PUAE2021_INSTALL_TARGET_CMDS

@@ -29,48 +29,48 @@ PCSX2_CONF_OPTS += -DLTO_PCSX2_CORE=ON
 PCSX2_CONF_OPTS += -DUSE_ACHIEVEMENTS=ON
 
 ifeq ($(BR2_PACKAGE_XORG7),y)
-    PCSX2_CONF_OPTS += -DX11_API=ON
+	PCSX2_CONF_OPTS += -DX11_API=ON
 else
-    PCSX2_CONF_OPTS += -DX11_API=OFF
+	PCSX2_CONF_OPTS += -DX11_API=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
-    PCSX2_CONF_OPTS += -DWAYLAND_API=ON
+	PCSX2_CONF_OPTS += -DWAYLAND_API=ON
 else
-    PCSX2_CONF_OPTS += -DWAYLAND_API=OFF
+	PCSX2_CONF_OPTS += -DWAYLAND_API=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
-    PCSX2_CONF_OPTS += -DUSE_OPENGL=ON
+	PCSX2_CONF_OPTS += -DUSE_OPENGL=ON
 else
-    PCSX2_CONF_OPTS += -DUSE_OPENGL=OFF
+	PCSX2_CONF_OPTS += -DUSE_OPENGL=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
-    PCSX2_CONF_OPTS += -DUSE_VULKAN=ON
+	PCSX2_CONF_OPTS += -DUSE_VULKAN=ON
 else
-    PCSX2_CONF_OPTS += -DUSE_VULKAN=OFF
+	PCSX2_CONF_OPTS += -DUSE_VULKAN=OFF
 endif
 
 define PCSX2_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/bin/pcsx2
-    $(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/pcsx2-qt $(TARGET_DIR)/usr/bin/pcsx2/pcsx2
-    cp -pr  $(@D)/buildroot-build/bin/resources $(TARGET_DIR)/usr/bin/pcsx2
-    # use our SDL config
-    rm $(TARGET_DIR)/usr/bin/pcsx2/resources/game_controller_db.txt
-    curl -L https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip -o $(TARGET_DIR)/usr/bin/pcsx2/resources/patches.zip
+	mkdir -p $(TARGET_DIR)/usr/bin/pcsx2
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/pcsx2-qt $(TARGET_DIR)/usr/bin/pcsx2/pcsx2
+	cp -pr  $(@D)/buildroot-build/bin/resources $(TARGET_DIR)/usr/bin/pcsx2
+	# use our SDL config
+	rm $(TARGET_DIR)/usr/bin/pcsx2/resources/game_controller_db.txt
+	curl -L https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip -o $(TARGET_DIR)/usr/bin/pcsx2/resources/patches.zip
 endef
 
 define PCSX2_EVMAPY
-    mkdir -p $(TARGET_DIR)/usr/share/evmapy
-    cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/ps2.pcsx2.keys $(TARGET_DIR)/usr/share/evmapy
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/ps2.pcsx2.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_EVMAPY
 
 define PCSX2_TEXTURES
-    mkdir -p $(TARGET_DIR)/usr/bin/pcsx2/resources/textures
-    cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/textures/ $(TARGET_DIR)/usr/bin/pcsx2/resources/
+	mkdir -p $(TARGET_DIR)/usr/bin/pcsx2/resources/textures
+	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/textures/ $(TARGET_DIR)/usr/bin/pcsx2/resources/
 endef
 
 PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_TEXTURES

@@ -25,7 +25,7 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588),y)
 endif
 
 define SUGARBOX_QT6_FIX_CMAKE
-    cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/sugarbox/CMakeLists.txt $(@D)/Sugarbox/CMakeLists.txt
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/sugarbox/CMakeLists.txt $(@D)/Sugarbox/CMakeLists.txt
 endef
 
 SUGARBOX_PRE_CONFIGURE_HOOKS += SUGARBOX_QT6_FIX_CMAKE

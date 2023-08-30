@@ -261,7 +261,7 @@ endif
 
 # Cleanup final directory
 define WINE_PROTON_WOW64_32_REMOVE_INCLUDES_HOOK
-        rm -Rf $(TARGET_DIR)/usr/wine/proton/include
+		rm -Rf $(TARGET_DIR)/usr/wine/proton/include
 endef
 
 WINE_PROTON_WOW64_32_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_WOW64_32_REMOVE_INCLUDES_HOOK

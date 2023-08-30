@@ -23,7 +23,7 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 LIBRETRO_UAE4ARM_PLATFORM = rpi4-aarch64
 
 else ifeq ($(BR2_aarch64),y)
-        LIBRETRO_UAE4ARM_PLATFORM = unix aarch64
+		LIBRETRO_UAE4ARM_PLATFORM = unix aarch64
 endif
 
 define LIBRETRO_UAE4ARM_BUILD_CMDS
