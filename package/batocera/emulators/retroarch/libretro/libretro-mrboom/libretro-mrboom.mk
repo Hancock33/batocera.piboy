@@ -18,13 +18,13 @@ define LIBRETRO_MRBOOM_BUILD_CMDS
 	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
 	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile platform=unix $(LIBRETRO_MRBOOM_EXTRA_ARGS) \
-        GIT_VERSION="-$(shell echo $(LIBRETRO_MRBOOM_VERSION) | cut -c 1-7)"
+		GIT_VERSION="-$(shell echo $(LIBRETRO_MRBOOM_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_MRBOOM_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/mrboom_libretro.so \
 		$(TARGET_DIR)/usr/lib/libretro/mrboom_libretro.so
-    mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/mrboom
+	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/mrboom
 	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-mrboom/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/mrboom/
 endef
 

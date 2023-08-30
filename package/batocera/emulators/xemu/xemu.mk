@@ -82,9 +82,9 @@ define XEMU_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
 		CC_FOR_BUILD="$(TARGET_CC)" GCC_FOR_BUILD="$(TARGET_CC)" \
 		CXX_FOR_BUILD="$(TARGET_CXX)" LD_FOR_BUILD="$(TARGET_LD)" \
-                CROSS_COMPILE="$(STAGING_DIR)/usr/bin/" \
-                PREFIX="/x86_64/host/x86_64-buildroot-linux-gnu/sysroot/" \
-                PKG_CONFIG="/x86_64/host/x86_64-buildroot-linux-gnu/sysroot/usr/bin/pkg-config" \
+				CROSS_COMPILE="$(STAGING_DIR)/usr/bin/" \
+				PREFIX="/x86_64/host/x86_64-buildroot-linux-gnu/sysroot/" \
+				PKG_CONFIG="/x86_64/host/x86_64-buildroot-linux-gnu/sysroot/usr/bin/pkg-config" \
 		$(MAKE) -C $(@D)
 endef
 

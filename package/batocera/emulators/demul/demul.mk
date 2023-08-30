@@ -19,7 +19,7 @@ define DEMUL_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr
 	cp -pr $(@D) $(TARGET_DIR)/usr/demul
 
-    # copy english faq & evmap config
+	# copy english faq & evmap config
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/demul/faq_en.txt $(TARGET_DIR)/usr/demul/
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/demul/*.keys $(TARGET_DIR)/usr/share/evmapy
