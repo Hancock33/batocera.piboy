@@ -17,7 +17,7 @@ FREEDROID_AUTORECONF = YES
 define FREEDROID_INSTALL_TARGET_CMDS
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) PREFIX=/usr STRIP=/bin/true DESTDIR=$(TARGET_DIR) install
 	# install es media
-    mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/freedroid
+	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/freedroid
 	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/freedroid/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/freedroid/
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

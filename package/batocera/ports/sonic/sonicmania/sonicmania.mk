@@ -13,8 +13,8 @@ SONICMANIA_DEPENDENCIES = sdl2 libogg libvorbis
 SONICMANIA_LICENSE = Custom
 
 define SONICMANIA_BUILD_CMDS
-    $(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D)/dependencies/RSDKv5 -f Makefile PLATFORM=Linux SUBSYSTEM=SDL2
-    $(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) -f Makefile
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D)/dependencies/RSDKv5 -f Makefile PLATFORM=Linux SUBSYSTEM=SDL2
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) -f Makefile
 endef
 
 define SONICMANIA_INSTALL_TARGET_CMDS

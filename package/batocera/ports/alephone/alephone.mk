@@ -12,12 +12,12 @@ ALEPHONE_LICENSE = GPLv3
 #ALEPHONE_AUTORECONF = YES
 ALEPHONE_SUPPORTS_IN_SOURCE_BUILD = NO
 ALEPHONE_CONF_OPTS = \
-	                --disable-sdltest \
-	                --with-sdl-prefix="$(STAGING_DIR)/usr" \
-	                --with-boost="$(STAGING_DIR)/usr" \
-	                --with-boost-libdir="$(STAGING_DIR)/usr/lib" \
-	                --prefix=/usr \
-	                --without-miniupnpc
+					--disable-sdltest \
+					--with-sdl-prefix="$(STAGING_DIR)/usr" \
+					--with-boost="$(STAGING_DIR)/usr" \
+					--with-boost-libdir="$(STAGING_DIR)/usr/lib" \
+					--prefix=/usr \
+					--without-miniupnpc
 
 define ALEPHONE_INSTALL_TARGET_CMDS
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) STRIP=/bin/true DESTDIR=$(TARGET_DIR) install

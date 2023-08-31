@@ -1,6 +1,6 @@
 ################################################################################
 #
-# dxx-rebirth (Descent 1 & 2) engine
+# dxx-rebirth
 #
 ################################################################################
 
@@ -22,11 +22,11 @@ DXX_REBIRTH_SCONS_OPTS += opengles=yes
 endif
 
 define DXX_REBIRTH_BUILD_CMDS
-        (cd $(@D); \
+		(cd $(@D); \
 		PKG_CONFIG_PATH="$(STAGING_DIR)/usr/lib/pkgconfig" \
-                $(DXX_REBIRTH_SCONS_ENV) \
-                $(SCONS) \
-                $(DXX_REBIRTH_SCONS_OPTS))
+				$(DXX_REBIRTH_SCONS_ENV) \
+				$(SCONS) \
+				$(DXX_REBIRTH_SCONS_OPTS))
 endef
 
 define DXX_REBIRTH_INSTALL_TARGET_CMDS

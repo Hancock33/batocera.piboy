@@ -11,10 +11,10 @@ ROTT_DEPENDENCIES = sdl2 sdl2_mixer
 ROTT_LICENSE = GPLv2
 
 define ROTT_BUILD_CMDS
-		$(TARGET_CONFIGURE_OPTS) $(MAKE) \
-		CPP="$(TARGET_CPP)" CXX="$(TARGET_CXX)" CC="$(TARGET_CC) -fPIC" \
-		AS="$(TARGET_CC)" LD="$(TARGET_LD)" STRIP="$(TARGET_STRIP)" \
-		-C $(@D)/src -f Makefile DATADIR="/userdata/roms/ports/rott"
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) \
+	CPP="$(TARGET_CPP)" CXX="$(TARGET_CXX)" CC="$(TARGET_CC) -fPIC" \
+	AS="$(TARGET_CC)" LD="$(TARGET_LD)" STRIP="$(TARGET_STRIP)" \
+	-C $(@D)/src -f Makefile DATADIR="/userdata/roms/ports/rott"
 endef
 
 define ROTT_INSTALL_TARGET_CMDS
