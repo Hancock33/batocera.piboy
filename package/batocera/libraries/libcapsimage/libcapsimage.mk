@@ -48,7 +48,7 @@ define LIBCAPSIMAGE_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/fs-uae/Plugins
 	ln -sf /usr/lib/libcapsimage.so.5.1 \
 		$(TARGET_DIR)/usr/share/fs-uae/Plugins/capsimg.so
-        echo "$(CAPSIMG_VERSION)" > $(TARGET_DIR)/usr/share/fs-uae/Plugins/Version.txt
+		echo "$(CAPSIMG_VERSION)" > $(TARGET_DIR)/usr/share/fs-uae/Plugins/Version.txt
 endef
 
 define LIBCAPSIMAGE_PRE_CONFIGURE_FIXUP

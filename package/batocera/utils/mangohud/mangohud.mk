@@ -44,12 +44,12 @@ endif
 # i don't know why meson uses bad ssl certificates and doesn't manage to download them
 define MANGOHUD_DWD_DEPENDENCIES
 	mkdir -p $(@D)/subprojects/packagecache
-	curl -L https://github.com/ocornut/imgui/archive/v1.81.tar.gz     -o $(@D)/subprojects/packagecache/imgui-1.81.tar.gz
-	curl -L https://wrapdb.mesonbuild.com/v2/imgui_1.81-1/get_patch   -o $(@D)/subprojects/packagecache/imgui-1.81-1-wrap.zip
-	curl -L https://github.com/gabime/spdlog/archive/v1.8.5.tar.gz    -o $(@D)/subprojects/packagecache/v1.8.5.tar.gz
-	curl -L https://wrapdb.mesonbuild.com/v2/spdlog_1.8.5-1/get_patch -o $(@D)/subprojects/packagecache/spdlog-1.8.5-1-wrap.zip
-	curl -L https://github.com/KhronosGroup/Vulkan-Headers/archive/v1.2.158.tar.gz -o $(@D)/subprojects/packagecache/vulkan-headers-1.2.158.tar.gz
-	curl -L https://wrapdb.mesonbuild.com/v2/vulkan-headers_1.2.158-2/get_patch    -o $(@D)/subprojects/packagecache/vulkan-headers-1.2.158-2-wrap.zip
+	curl -L https://github.com/ocornut/imgui/archive/v1.81.tar.gz		-o $(@D)/subprojects/packagecache/imgui-1.81.tar.gz
+	curl -L https://wrapdb.mesonbuild.com/v2/imgui_1.81-1/get_patch		-o $(@D)/subprojects/packagecache/imgui-1.81-1-wrap.zip
+	curl -L https://github.com/gabime/spdlog/archive/v1.8.5.tar.gz		-o $(@D)/subprojects/packagecache/v1.8.5.tar.gz
+	curl -L https://wrapdb.mesonbuild.com/v2/spdlog_1.8.5-1/get_patch	-o $(@D)/subprojects/packagecache/spdlog-1.8.5-1-wrap.zip
+	curl -L https://github.com/KhronosGroup/Vulkan-Headers/archive/v1.2.158.tar.gz	-o $(@D)/subprojects/packagecache/vulkan-headers-1.2.158.tar.gz
+	curl -L https://wrapdb.mesonbuild.com/v2/vulkan-headers_1.2.158-2/get_patch		-o $(@D)/subprojects/packagecache/vulkan-headers-1.2.158-2-wrap.zip
 endef
 MANGOHUD_PRE_CONFIGURE_HOOKS += MANGOHUD_DWD_DEPENDENCIES
 

@@ -12,8 +12,8 @@ L3AFPAD_LICENSE = GPL-2.0+
 L3AFPAD_LICENSE_FILES = COPYING
 
 define L3AFPAD_CONFIGURE_CMDS
-    cd $(@D); PATH=$(HOST_DIR)/bin:$(PATH) ./autogen.sh ; \
-    $(TARGET_CONFIGURE_OPTS) PREFIX=$(STAGING_DIR) CFLAGS="-I$(STAGING_DIR)/usr/include" LDFLAGS="-L$(STAGING_DIR)/usr/lib" ./configure --host --disable-nls --prefix=/usr
+	cd $(@D); PATH=$(HOST_DIR)/bin:$(PATH) ./autogen.sh ; \
+	$(TARGET_CONFIGURE_OPTS) PREFIX=$(STAGING_DIR) CFLAGS="-I$(STAGING_DIR)/usr/include" LDFLAGS="-L$(STAGING_DIR)/usr/lib" ./configure --host --disable-nls --prefix=/usr
 endef
 
 $(eval $(autotools-package))

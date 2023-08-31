@@ -179,7 +179,7 @@ define BATOCERA_NVIDIA340_LEGACY_DRIVER_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0644 $(@D)/nvidia_drv.so \
 			$(TARGET_DIR)/usr/lib/xorg/modules/drivers/nvidia340_legacy_drv.so
 	$(INSTALL) -D -m 0644 $(@D)/libnvidia-wfb.so.$(BATOCERA_NVIDIA340_LEGACY_DRIVER_VERSION) \
-	        $(TARGET_DIR)/usr/lib/xorg/modules/drivers/libnvidia-wfb.so.$(BATOCERA_NVIDIA340_LEGACY_DRIVER_VERSION)
+			$(TARGET_DIR)/usr/lib/xorg/modules/drivers/libnvidia-wfb.so.$(BATOCERA_NVIDIA340_LEGACY_DRIVER_VERSION)
 	$(foreach p,$(BATOCERA_NVIDIA340_LEGACY_DRIVER_PROGS), \
 		$(INSTALL) -D -m 0755 $(@D)/$(p) \
 			$(TARGET_DIR)/usr/bin/$(p)
@@ -208,15 +208,15 @@ KVER = $(shell expr $(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE))
 define BATOCERA_NVIDIA340_LEGACY_DRIVER_RENAME_KERNEL_MODULES
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia/modules
-    # rename the kernel modules to avoid conflict
+	# rename the kernel modules to avoid conflict
 	mv -f $(TARGET_DIR)/lib/modules/$(KVER)/updates/nvidia.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia340-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia340-legacy.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(KVER)/updates/nvidia-modeset.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia340-modeset-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia340-modeset-legacy.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(KVER)/updates/nvidia-drm.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia340-drm-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia340-drm-legacy.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(KVER)/updates/nvidia-uvm.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia340-uvm-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia340-uvm-legacy.ko
 	# set the driver version file
 	echo $(BATOCERA_NVIDIA340_LEGACY_DRIVER_VERSION) > $(TARGET_DIR)/usr/share/nvidia/legacy340.version
 endef

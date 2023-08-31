@@ -15,7 +15,7 @@ define BATOCERA_NVIDIA_INSTALL_TARGET_CMDS
 
 	# [Blacklist & Modprobe]
 	ln -sf /var/run/nvidia/modprobe/blacklist-nouveau.conf $(TARGET_DIR)/etc/modprobe.d/blacklist-nouveau.conf
-	ln -sf /var/run/nvidia/modprobe/nvidia-drm.conf        $(TARGET_DIR)/etc/modprobe.d/nvidia-drm.conf
+	ln -sf /var/run/nvidia/modprobe/nvidia-drm.conf		$(TARGET_DIR)/etc/modprobe.d/nvidia-drm.conf
 endef
 
 $(eval $(generic-package))

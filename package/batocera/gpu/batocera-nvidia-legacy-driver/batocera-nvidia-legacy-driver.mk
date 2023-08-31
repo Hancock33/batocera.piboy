@@ -208,21 +208,21 @@ define BATOCERA_NVIDIA_LEGACY_DRIVER_INSTALL_TARGET_CMDS
 	 	$(TARGET_DIR)/usr/lib/xorg/modules/extensions/libglxserver_nvidia.so.$(BATOCERA_NVIDIA_LEGACY_DRIVER_VERSION)
 
 # firmware
-    mkdir -p $(TARGET_DIR)/lib/firmware/nvidia/$(BATOCERA_NVIDIA_LEGACY_DRIVER_VERSION)
+	mkdir -p $(TARGET_DIR)/lib/firmware/nvidia/$(BATOCERA_NVIDIA_LEGACY_DRIVER_VERSION)
 	$(INSTALL) -D -m 0644 $(@D)/firmware/* $(TARGET_DIR)/lib/firmware/nvidia/$(BATOCERA_NVIDIA_LEGACY_DRIVER_VERSION)
 
 endef
 
 define BATOCERA_NVIDIA_LEGACY_DRIVER_VULKANJSON_X86_64
-    mkdir -p $(TARGET_DIR)/usr/share/vulkan/nvidia
+	mkdir -p $(TARGET_DIR)/usr/share/vulkan/nvidia
 	$(INSTALL) -D -m 0644 $(@D)/nvidia_icd.json $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_legacy_icd.x86_64.json
-        sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/usr/lib/libGLX_nvidia'+ $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_legacy_icd.x86_64.json
+		sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/usr/lib/libGLX_nvidia'+ $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_legacy_icd.x86_64.json
 	$(INSTALL) -D -m 0644 $(@D)/nvidia_icd.json $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_legacy_icd.i686.json
-        sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/usr/lib32/libGLX_nvidia'+ $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_legacy_icd.i686.json
+		sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/usr/lib32/libGLX_nvidia'+ $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_legacy_icd.i686.json
 endef
 
 define BATOCERA_NVIDIA_LEGACY_DRIVER_VULKANJSON_X86
-    mkdir -p $(TARGET_DIR)/usr/share/vulkan/nvidia
+	mkdir -p $(TARGET_DIR)/usr/share/vulkan/nvidia
 	$(INSTALL) -D -m 0644 $(@D)/nvidia_icd.json $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia_legacy_icd.i686.json
 endef
 
@@ -235,17 +235,17 @@ endif
 
 # move to avoid the production driver
 define BATOCERA_NVIDIA_LEGACY_DRIVER_RENAME_KERNEL_MODULES
-    mkdir -p $(TARGET_DIR)/usr/share/nvidia
+	mkdir -p $(TARGET_DIR)/usr/share/nvidia
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia/modules
 	# rename the kernel modules to avoid conflict
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia-legacy.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-modeset.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia-modeset-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia-modeset-legacy.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-drm.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia-drm-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia-drm-legacy.ko
 	mv -f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-uvm.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia-uvm-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia-uvm-legacy.ko
 	# set the driver version file
 	echo $(BATOCERA_NVIDIA_LEGACY_DRIVER_VERSION) > $(TARGET_DIR)/usr/share/nvidia/legacy.version
 endef

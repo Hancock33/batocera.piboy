@@ -14,7 +14,7 @@ UMTOOL_AUTORECONF = YES
 define UMTOOL_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/src/umtool/umtool $(TARGET_DIR)/usr/bin/umtool
 
-    # out-of-the-box configs
+	# out-of-the-box configs
 	mkdir -p $(TARGET_DIR)/usr/share/umtool
 	cp $(@D)/src/umtool/*.json $(TARGET_DIR)/usr/share/umtool
 

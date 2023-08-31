@@ -17,7 +17,7 @@ endif
 define SWITCHRES_BUILD_CMDS
 	# Cross-compile standalone and libswitchres
 	cd $(@D) && \
-        PATH="$(HOST_DIR)/bin:$$PATH" \
+		PATH="$(HOST_DIR)/bin:$$PATH" \
 	CC="$(TARGET_CC)" \
 	CXX="$(TARGET_CXX)" \
 	PREFIX="$(STAGING_DIR)/usr" \
@@ -28,7 +28,7 @@ endef
 
 define SWITCHRES_INSTALL_STAGING_CMDS
 	cd $(@D) && \
-        PATH="$(HOST_DIR)/bin:$$PATH" \
+		PATH="$(HOST_DIR)/bin:$$PATH" \
 	CC="$(TARGET_CC)" \
 	CXX="$(TARGET_CXX)" \
 	BASE_DIR="" \
