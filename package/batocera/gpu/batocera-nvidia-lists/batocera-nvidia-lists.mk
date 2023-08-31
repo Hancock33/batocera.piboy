@@ -10,7 +10,7 @@ BATOCERA_NVIDIA_LISTS_LICENSE = GPL-3.0+
 BATOCERA_NVIDIA_LISTS_LICENSE_FILES = LICENSE
 
 define BATOCERA_NVIDIA_LISTS_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/share/nvidia
+	mkdir -p $(TARGET_DIR)/usr/share/nvidia
 	cp -r $(@D)/*.list $(TARGET_DIR)/usr/share/nvidia
 endef
 

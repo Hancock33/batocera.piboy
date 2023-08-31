@@ -11,8 +11,8 @@ BATOCERA_ES_SYSTEM_VERSION=1.03
 define BATOCERA_ES_SYSTEM_BUILD_CMDS
 	$(HOST_DIR)/bin/python \
 		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/batocera-es-system.py \
-		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/es_systems.yml        \
-		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/es_features.yml       \
+		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/es_systems.yml		\
+		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/es_features.yml	   \
 		$(@D)/es_external_translations.h \
 		$(@D)/es_keys_translations.h \
 		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera \
@@ -34,8 +34,8 @@ define BATOCERA_ES_SYSTEM_BUILD_CMDS
 
 		# install staging
 		mkdir -p $(STAGING_DIR)/usr/share/batocera-es-system/locales
-		cp $(@D)/es_external_translations.h      $(STAGING_DIR)/usr/share/batocera-es-system/
-		cp $(@D)/es_keys_translations.h          $(STAGING_DIR)/usr/share/batocera-es-system/
+		cp $(@D)/es_external_translations.h	  $(STAGING_DIR)/usr/share/batocera-es-system/
+		cp $(@D)/es_keys_translations.h		  $(STAGING_DIR)/usr/share/batocera-es-system/
 		cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/locales $(STAGING_DIR)/usr/share/batocera-es-system
 endef
 

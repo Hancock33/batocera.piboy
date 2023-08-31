@@ -54,19 +54,18 @@ define OD_COMMANDER_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)$(OD_COMMANDER_RESOURCES_DIR)
 	mkdir -p $(TARGET_DIR)/usr/share/fonts/truetype/droid
 	$(INSTALL) -m 0644 $(@D)/res/Fiery_Turk.ttf \
-	  $(TARGET_DIR)$(OD_COMMANDER_RESOURCES_DIR)
+		$(TARGET_DIR)$(OD_COMMANDER_RESOURCES_DIR)
 	$(INSTALL) -m 0644 $(@D)/res/DroidSansFallback.ttf \
-	  $(TARGET_DIR)/usr/share/fonts/truetype/droid/
+		$(TARGET_DIR)/usr/share/fonts/truetype/droid/
 	$(INSTALL) -m 0644 $(@D)/res/*.png \
-	  $(TARGET_DIR)$(OD_COMMANDER_RESOURCES_DIR)
+			$(TARGET_DIR)$(OD_COMMANDER_RESOURCES_DIR)
 	$(INSTALL) -m 0755 -D $(OD_COMMANDER_BUILDDIR)commander \
-	  $(TARGET_DIR)/usr/bin/od-commander
+		$(TARGET_DIR)/usr/bin/od-commander
 	# install media
-    mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/od-commander
+	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/od-commander
 	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/od-commander/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/od-commander/
-    # evmap config
-	 cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/od-commander/odcommander.keys \
-	  $(TARGET_DIR)/usr/share/evmapy/
+	# evmap config
+	 cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/od-commander/odcommander.keys $(TARGET_DIR)/usr/share/evmapy/
 endef
 
 $(eval $(cmake-package))

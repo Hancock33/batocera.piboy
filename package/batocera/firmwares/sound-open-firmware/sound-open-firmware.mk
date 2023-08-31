@@ -13,7 +13,7 @@ SOUND_OPEN_FIRMWARE_LICENSE_FILES = LICENSE
 SOUND_OPEN_FIRMWARE_DEPENDENCIES = alsa-lib alsa-utils alllinuxfirmwares
 
 define SOUND_OPEN_FIRMWARE_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/lib/firmware/intel
+	mkdir -p $(TARGET_DIR)/lib/firmware/intel
 	rsync -arv $(@D)/sof-$(SOUND_OPEN_FIRMWARE_VERSION) $(TARGET_DIR)/lib/firmware/intel/
 	rsync -arv $(@D)/sof-tplg-$(SOUND_OPEN_FIRMWARE_VERSION) $(TARGET_DIR)/lib/firmware/intel/
 	# symbolic links

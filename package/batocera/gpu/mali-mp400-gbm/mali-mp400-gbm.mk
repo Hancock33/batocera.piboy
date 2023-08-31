@@ -35,12 +35,12 @@ define MALI_MP400_GBM_INSTALL_STAGING_CMDS
 	cp -pr $(@D)/include	$(STAGING_DIR)/usr
 	cp $(@D)/include/GBM/gbm.h 	$(STAGING_DIR)/usr/include/gbm.h
 
-        for X in gbm egl glesv1_cm glesv2; \
-        do \
-                cp  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/gpu/mali-mp400-gbm/pkgconfig/$${X}.pc.cmake                       $(STAGING_DIR)/usr/lib/pkgconfig/$${X}.pc; \
-                sed -i -e s+@CMAKE_INSTALL_INCLUDEDIR@+include+g        $(STAGING_DIR)/usr/lib/pkgconfig/$${X}.pc; \
-                sed -i -e s+@CMAKE_INSTALL_LIBDIR@+lib+g                $(STAGING_DIR)/usr/lib/pkgconfig/$${X}.pc; \
-        done
+		for X in gbm egl glesv1_cm glesv2; \
+		do \
+				cp  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/gpu/mali-mp400-gbm/pkgconfig/$${X}.pc.cmake	$(STAGING_DIR)/usr/lib/pkgconfig/$${X}.pc; \
+				sed -i -e s+@CMAKE_INSTALL_INCLUDEDIR@+include+g		$(STAGING_DIR)/usr/lib/pkgconfig/$${X}.pc; \
+				sed -i -e s+@CMAKE_INSTALL_LIBDIR@+lib+g				$(STAGING_DIR)/usr/lib/pkgconfig/$${X}.pc; \
+		done
 
 
 endef

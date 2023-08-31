@@ -64,7 +64,7 @@ define BATOCERA_AUDIO_INSTALL_TARGET_CMDS
 		/usr/share/alsa/alsa.conf.d/{50-pipewire,99-pipewire-default}.conf
 
 	# pipewire-media-session config: disable dbus device reservation
-    mkdir -p $(TARGET_DIR)/usr/share/wireplumber/main.lua.d
+	mkdir -p $(TARGET_DIR)/usr/share/wireplumber/main.lua.d
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/50-alsa-config.lua \
 		$(TARGET_DIR)/usr/share/wireplumber/main.lua.d/50-alsa-config.lua
 
@@ -78,7 +78,7 @@ define BATOCERA_AUDIO_X86_INTEL_DSP
 endef
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
-    BATOCERA_AUDIO_POST_INSTALL_TARGET_HOOKS = BATOCERA_AUDIO_X86_INTEL_DSP
+	BATOCERA_AUDIO_POST_INSTALL_TARGET_HOOKS = BATOCERA_AUDIO_X86_INTEL_DSP
 endif
 
 $(eval $(generic-package))
