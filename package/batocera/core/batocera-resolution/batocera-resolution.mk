@@ -48,7 +48,7 @@ define BATOCERA_RESOLUTION_INSTALL_TARGET_CMDS
 endef
 
 define BATOCERA_RESOLUTION_INSTALL_RK3128
-        install -m 0755 $(BATOCERA_RESOLUTION_PATH)/resolution/batocera-resolution-post-rk3128 $(TARGET_DIR)/usr/bin/batocera-resolution-post
+		install -m 0755 $(BATOCERA_RESOLUTION_PATH)/resolution/batocera-resolution-post-rk3128 $(TARGET_DIR)/usr/bin/batocera-resolution-post
 endef
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3128),y)
@@ -65,11 +65,11 @@ ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
 endif
 
 define BATOCERA_RESOLUTION_INSTALL_RECORDER
-    install -m 0755 $(BATOCERA_RESOLUTION_PATH)/recorder/batocera-record.$(BATOCERA_SCRIPT_RECORDER_TYPE) $(TARGET_DIR)/usr/bin/batocera-record
+	install -m 0755 $(BATOCERA_RESOLUTION_PATH)/recorder/batocera-record.$(BATOCERA_SCRIPT_RECORDER_TYPE) $(TARGET_DIR)/usr/bin/batocera-record
 endef
 
 ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER)$(BR2_PACKAGE_SWAY),y)
-    BATOCERA_RESOLUTION_POST_INSTALL_TARGET_HOOKS += BATOCERA_RESOLUTION_INSTALL_RECORDER
+	BATOCERA_RESOLUTION_POST_INSTALL_TARGET_HOOKS += BATOCERA_RESOLUTION_INSTALL_RECORDER
 endif
 
 $(eval $(generic-package))

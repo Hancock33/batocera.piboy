@@ -76,9 +76,9 @@ else
 endif
 
 ifneq (,$(findstring dev,$(BATOCERA_SYSTEM_VERSION)))
-    BATOCERA_SYSTEM_COMMIT = "-$(shell cd $(BR2_EXTERNAL_BATOCERA_PATH) && git rev-parse --short HEAD)"
+	BATOCERA_SYSTEM_COMMIT = "-$(shell cd $(BR2_EXTERNAL_BATOCERA_PATH) && git rev-parse --short HEAD)"
 else
-    BATOCERA_SYSTEM_COMMIT =
+	BATOCERA_SYSTEM_COMMIT =
 endif
 
 define BATOCERA_SYSTEM_INSTALL_TARGET_CMDS
@@ -98,7 +98,7 @@ define BATOCERA_SYSTEM_INSTALL_TARGET_CMDS
 
 	# sysconfigs (default batocera.conf for boards)
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/sysconfigs
-        if test -d $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-system/sysconfigs/${BATOCERA_SYSTEM_ARCH}; then cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-system/sysconfigs/${BATOCERA_SYSTEM_ARCH}/* $(TARGET_DIR)/usr/share/batocera/sysconfigs; fi
+		if test -d $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-system/sysconfigs/${BATOCERA_SYSTEM_ARCH}; then cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-system/sysconfigs/${BATOCERA_SYSTEM_ARCH}/* $(TARGET_DIR)/usr/share/batocera/sysconfigs; fi
 
 	# mounts
 	mkdir -p $(TARGET_DIR)/boot $(TARGET_DIR)/overlay $(TARGET_DIR)/userdata

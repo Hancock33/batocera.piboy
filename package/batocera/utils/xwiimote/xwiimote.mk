@@ -10,10 +10,9 @@ XWIIMOTE_SITE = $(call github,dvdhrm,xwiimote,$(XWIIMOTE_VERSION))
 XWIIMOTE_DEPENDENCIES = udev
 
 define XWIIMOTE_AUTOGEN
-    cd $(@D); PKG_CONFIG="$(HOST_DIR)/usr/bin/pkg-config" ./autogen.sh
+	cd $(@D); PKG_CONFIG="$(HOST_DIR)/usr/bin/pkg-config" ./autogen.sh
 endef
 
 XWIIMOTE_PRE_CONFIGURE_HOOKS += XWIIMOTE_AUTOGEN
-
 
 $(eval $(autotools-package))

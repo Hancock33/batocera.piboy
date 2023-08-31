@@ -77,31 +77,31 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RISCV),y)
 endif
 
 define BATOCERA_CONFIGGEN_INSTALL_STAGING_CMDS
-    mkdir -p $(STAGING_DIR)/usr/share/batocera/configgen
-    cp $(CONFIGGEN_DIR)/configs/configgen-defaults.yml                               $(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults.yml
-    cp $(CONFIGGEN_DIR)/configs/configgen-defaults-$(BATOCERA_CONFIGGEN_SYSTEM).yml  $(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml
+	mkdir -p $(STAGING_DIR)/usr/share/batocera/configgen
+	cp $(CONFIGGEN_DIR)/configs/configgen-defaults.yml									$(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults.yml
+	cp $(CONFIGGEN_DIR)/configs/configgen-defaults-$(BATOCERA_CONFIGGEN_SYSTEM).yml		$(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml
 
-    @if [ "$(BATOCERA_CONFIGGEN_SYSTEM)" = "piboy4" ]; then \
-    cp $(CONFIGGEN_DIR)/configs/configgen-defaults-bcm2711.yml                       $(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
-    cp $(CONFIGGEN_DIR)/configs/configgen-defaults-piboy4.yml                        $(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi
+	@if [ "$(BATOCERA_CONFIGGEN_SYSTEM)" = "piboy4" ]; then \
+	cp $(CONFIGGEN_DIR)/configs/configgen-defaults-bcm2711.yml							$(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
+	cp $(CONFIGGEN_DIR)/configs/configgen-defaults-piboy4.yml							$(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi
 endef
 
 define BATOCERA_CONFIGGEN_CONFIGS
-    mkdir -p $(TARGET_DIR)/usr/share/batocera/configgen
-    cp -pr $(CONFIGGEN_DIR)/data                                                     $(TARGET_DIR)/usr/share/batocera/configgen/
-    cp $(CONFIGGEN_DIR)/configs/configgen-defaults.yml                               $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults.yml
-    cp $(CONFIGGEN_DIR)/configs/configgen-defaults-$(BATOCERA_CONFIGGEN_SYSTEM).yml  $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml
-    cp $(CONFIGGEN_DIR)/scripts/call_achievements_hooks.sh                           $(TARGET_DIR)/usr/share/batocera/configgen/
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/configgen
+	cp -pr $(CONFIGGEN_DIR)/data														$(TARGET_DIR)/usr/share/batocera/configgen/
+	cp $(CONFIGGEN_DIR)/configs/configgen-defaults.yml									$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults.yml
+	cp $(CONFIGGEN_DIR)/configs/configgen-defaults-$(BATOCERA_CONFIGGEN_SYSTEM).yml		$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml
+	cp $(CONFIGGEN_DIR)/scripts/call_achievements_hooks.sh								$(TARGET_DIR)/usr/share/batocera/configgen/
 
-    @if [ "$(BATOCERA_CONFIGGEN_SYSTEM)" = "piboy4" ]; then \
-    cp $(CONFIGGEN_DIR)/configs/configgen-defaults-bcm2711.yml                       $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
-    cp $(CONFIGGEN_DIR)/configs/configgen-defaults-piboy4.yml                        $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi
+	@if [ "$(BATOCERA_CONFIGGEN_SYSTEM)" = "piboy4" ]; then \
+	cp $(CONFIGGEN_DIR)/configs/configgen-defaults-bcm2711.yml							$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
+	cp $(CONFIGGEN_DIR)/configs/configgen-defaults-piboy4.yml							$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi
 endef
 
 define BATOCERA_CONFIGGEN_BINS
-    chmod a+x $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/configgen/emulatorlauncher.py
+	chmod a+x $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/configgen/emulatorlauncher.py
 	(mkdir -p $(TARGET_DIR)/usr/bin/ && cd $(TARGET_DIR)/usr/bin/ && \
-	    ln -sf /usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/configgen/emulatorlauncher.py emulatorlauncher)
+		ln -sf /usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/configgen/emulatorlauncher.py emulatorlauncher)
 endef
 
 BATOCERA_CONFIGGEN_POST_INSTALL_TARGET_HOOKS = BATOCERA_CONFIGGEN_CONFIGS

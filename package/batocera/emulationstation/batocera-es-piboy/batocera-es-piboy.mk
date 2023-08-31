@@ -74,7 +74,7 @@ endif
 
 define BATOCERA_ES_PIBOY_RPI_FIXUP
 	$(SED) 's|.{CMAKE_FIND_ROOT_PATH}/opt/vc|$(STAGING_DIR)/usr|g' $(@D)/CMakeLists.txt
-	$(SED) 's|.{CMAKE_FIND_ROOT_PATH}/usr|$(STAGING_DIR)/usr|g'    $(@D)/CMakeLists.txt
+	$(SED) 's|.{CMAKE_FIND_ROOT_PATH}/usr|$(STAGING_DIR)/usr|g'	$(@D)/CMakeLists.txt
 endef
 
 BATOCERA_ES_PIBOY_PRE_CONFIGURE_HOOKS += BATOCERA_ES_PIBOY_RPI_FIXUP

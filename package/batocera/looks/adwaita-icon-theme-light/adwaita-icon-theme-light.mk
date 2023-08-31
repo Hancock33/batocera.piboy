@@ -14,8 +14,8 @@ ADWAITA_ICON_THEME_LIGHT_LICENSE_FILES = COPYING COPYING_LGPL COPYING_CCBYSA3
 ADWAITA_ICON_THEME_LIGHT_DEPENDENCIES = host-intltool host-libgtk3
 
 define ADWAITA_ICON_THEME_LIGHT_REDUCE
-        mkdir -p $(STAGING_DIR)/usr/share/icons/Adwaita/cursors
-        mkdir -p $(TARGET_DIR)/usr/share/icons/Adwaita/cursors
+	mkdir -p $(STAGING_DIR)/usr/share/icons/Adwaita/cursors
+	mkdir -p $(TARGET_DIR)/usr/share/icons/Adwaita/cursors
 	rm -rf $(@D)/Adwaita/96x96
 	rm -rf $(@D)/Adwaita/256x256
 	rm -rf $(@D)/Adwaita/512x512

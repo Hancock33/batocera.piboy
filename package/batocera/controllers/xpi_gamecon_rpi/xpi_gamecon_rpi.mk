@@ -9,18 +9,18 @@ XPI_GAMECON_RPI_SITE = $(call github,hancock33,piboycontrols,$(XPI_GAMECON_RPI_V
 XPI_GAMECON_RPI_DEPENDENCIES = linux batocera-es-piboy
 
 #define XPI_GAMECON_RPI_BUILD_CMDS
-#        $(MAKE) -C $(@D) $(LINUX_MAKE_FLAGS) KERNELDIR=$(LINUX_DIR) KVERSION=$(LINUX_DIR)
+#		$(MAKE) -C $(@D) $(LINUX_MAKE_FLAGS) KERNELDIR=$(LINUX_DIR) KVERSION=$(LINUX_DIR)
 #endef
 
 define XPI_GAMECON_RPI_INSTALL_TARGET_CMDS
-    $(TARGET_CC) $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/volumed.c -o $(TARGET_DIR)/usr/sbin/volumed -L$(STAGING_DIR)/usr/lib -lpulse
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/S19piboy             	 $(TARGET_DIR)/etc/init.d/S19piboy
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/piboy_fan_power_ctrl.py $(TARGET_DIR)/usr/bin/piboy_fan_power_ctrl.py
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/piboy_audctrl.py        $(TARGET_DIR)/usr/bin/piboy_audctrl.py
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/piboy_powerswitch.rules $(TARGET_DIR)/etc/udev/rules.d/60-piboy_powerswitch.rules
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/piboy_keys              $(TARGET_DIR)/usr/bin/piboy_keys
-    chmod 754 $(TARGET_DIR)/usr/sbin/volumed
-    chmod 754 $(TARGET_DIR)/usr/bin/piboy_keys
+	$(TARGET_CC) $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/volumed.c -o $(TARGET_DIR)/usr/sbin/volumed -L$(STAGING_DIR)/usr/lib -lpulse
+	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/S19piboy					$(TARGET_DIR)/etc/init.d/S19piboy
+	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/piboy_fan_power_ctrl.py	$(TARGET_DIR)/usr/bin/piboy_fan_power_ctrl.py
+	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/piboy_audctrl.py			$(TARGET_DIR)/usr/bin/piboy_audctrl.py
+	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/piboy_powerswitch.rules	$(TARGET_DIR)/etc/udev/rules.d/60-piboy_powerswitch.rules
+	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/piboy_keys					$(TARGET_DIR)/usr/bin/piboy_keys
+	chmod 754 $(TARGET_DIR)/usr/sbin/volumed
+	chmod 754 $(TARGET_DIR)/usr/bin/piboy_keys
 
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms
 	cp -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xpi_gamecon_rpi/roms/piboy $(TARGET_DIR)/usr/share/batocera/datainit/roms

@@ -24,13 +24,13 @@ define SINDEN_GUNS_INSTALL_TARGET_CMDS
 
 	$(INSTALL) -m 0644 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/sinden-guns/LightgunMono.exe.config.template $(TARGET_DIR)/usr/share/sinden/LightgunMono.exe.config
 
-	$(INSTALL) -m 0644 -D $(@D)/$(SINDEN_GUNS_ARCHIVE_DIR_PLAYER1)/LightgunMono.exe      $(TARGET_DIR)/usr/share/sinden/LightgunMono.exe
-	$(INSTALL) -m 0644 -D $(@D)/$(SINDEN_GUNS_ARCHIVE_DIR_PLAYER1)/AForge.Math.dll       $(TARGET_DIR)/usr/share/sinden/AForge.Math.dll
-	$(INSTALL) -m 0644 -D $(@D)/$(SINDEN_GUNS_ARCHIVE_DIR_PLAYER1)/AForge.dll            $(TARGET_DIR)/usr/share/sinden/AForge.dll
-	$(INSTALL) -m 0644 -D $(@D)/$(SINDEN_GUNS_ARCHIVE_DIR_PLAYER1)/AForge.Imaging.dll    $(TARGET_DIR)/usr/share/sinden/AForge.Imaging.dll
-	#$(INSTALL) -m 0644 -D $(@D)/$(SINDEN_GUNS_ARCHIVE_DIR_PLAYER1)/libSdlInterface.so    $(TARGET_DIR)/usr/share/sinden/libSdlInterface.so
+	$(INSTALL) -m 0644 -D $(@D)/$(SINDEN_GUNS_ARCHIVE_DIR_PLAYER1)/LightgunMono.exe		$(TARGET_DIR)/usr/share/sinden/LightgunMono.exe
+	$(INSTALL) -m 0644 -D $(@D)/$(SINDEN_GUNS_ARCHIVE_DIR_PLAYER1)/AForge.Math.dll		$(TARGET_DIR)/usr/share/sinden/AForge.Math.dll
+	$(INSTALL) -m 0644 -D $(@D)/$(SINDEN_GUNS_ARCHIVE_DIR_PLAYER1)/AForge.dll			$(TARGET_DIR)/usr/share/sinden/AForge.dll
+	$(INSTALL) -m 0644 -D $(@D)/$(SINDEN_GUNS_ARCHIVE_DIR_PLAYER1)/AForge.Imaging.dll	$(TARGET_DIR)/usr/share/sinden/AForge.Imaging.dll
+	#$(INSTALL) -m 0644 -D $(@D)/$(SINDEN_GUNS_ARCHIVE_DIR_PLAYER1)/libSdlInterface.so	$(TARGET_DIR)/usr/share/sinden/libSdlInterface.so
 	#$(INSTALL) -m 0644 -D $(@D)/$(SINDEN_GUNS_ARCHIVE_DIR_PLAYER1)/libCameraInterface.so $(TARGET_DIR)/usr/share/sinden/libCameraInterface.so
-	$(INSTALL) -m 0644 -D $(@D)/$(SINDEN_GUNS_ARCHIVE_DIR_PLAYER1)/License.txt           $(TARGET_DIR)/usr/share/sinden/License.txt
+	$(INSTALL) -m 0644 -D $(@D)/$(SINDEN_GUNS_ARCHIVE_DIR_PLAYER1)/License.txt		   $(TARGET_DIR)/usr/share/sinden/License.txt
 endef
 
 $(eval $(generic-package))
