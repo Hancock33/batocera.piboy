@@ -11,13 +11,13 @@ XARCADE2JSTICK_DEPENDENCIES = linux
 
 
 define XARCADE2JSTICK_BUILD_CMDS
-    $(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D) all
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D) all
 endef
 
 define XARCADE2JSTICK_INSTALL_TARGET_CMDS
-    $(INSTALL) -D -m 0755 $(@D)/src/xarcade2jstick $(TARGET_DIR)/usr/bin/xarcade2jstick
+	$(INSTALL) -D -m 0755 $(@D)/src/xarcade2jstick $(TARGET_DIR)/usr/bin/xarcade2jstick
 
-    # config
+	# config
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/xarcade2jstick
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/xarcade2jstick/config/* \
 		$(TARGET_DIR)/usr/share/batocera/datainit/system/configs/xarcade2jstick

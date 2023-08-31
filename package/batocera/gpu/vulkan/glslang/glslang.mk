@@ -19,7 +19,7 @@ endif
 
 define GLSLANG_INSTALL_OSDEPENENT
 	cp -av $(GLSLANG_BUILDDIR)/glslang/OSDependent/Unix/libOSDependent.a $(STAGING_DIR)/usr/lib
-	cp -av $(GLSLANG_BUILDDIR)/OGLCompilersDLL/libOGLCompiler.a          $(STAGING_DIR)/usr/lib
+	cp -av $(GLSLANG_BUILDDIR)/OGLCompilersDLL/libOGLCompiler.a		  $(STAGING_DIR)/usr/lib
 endef
 
 GLSLANG_POST_INSTALL_TARGET_HOOKS = GLSLANG_INSTALL_OSDEPENENT

@@ -16,17 +16,17 @@ MALI_G52_PROVIDES = libegl libgbm libgles libmali
 MALI_G52_DEPENDENCIES = host-patchelf libdrm libglvnd wayland
 
 define MALI_G52_INSTALL_STAGING_CMDS
-        mkdir -p $(STAGING_DIR)/usr/lib/pkgconfig
-        cp -R $(@D)/etc/* $(STAGING_DIR)/etc/
-        cp -R $(@D)/usr/include/* $(STAGING_DIR)/usr/include/
-        cp -R $(@D)/usr/lib/aarch64-linux-gnu/* $(STAGING_DIR)/usr/lib/
+	mkdir -p $(STAGING_DIR)/usr/lib/pkgconfig
+	cp -R $(@D)/etc/* $(STAGING_DIR)/etc/
+	cp -R $(@D)/usr/include/* $(STAGING_DIR)/usr/include/
+	cp -R $(@D)/usr/lib/aarch64-linux-gnu/* $(STAGING_DIR)/usr/lib/
 endef
 
 define MALI_G52_INSTALL_TARGET_CMDS
-        mkdir -p $(TARGET_DIR)/usr/lib/pkgconfig
-        cp -R $(@D)/etc/* $(TARGET_DIR)/etc/
-        cp -R $(@D)/usr/include/* $(TARGET_DIR)/usr/include/
-        cp -R $(@D)/usr/lib/aarch64-linux-gnu/* $(TARGET_DIR)/usr/lib/
+	mkdir -p $(TARGET_DIR)/usr/lib/pkgconfig
+	cp -R $(@D)/etc/* $(TARGET_DIR)/etc/
+	cp -R $(@D)/usr/include/* $(TARGET_DIR)/usr/include/
+	cp -R $(@D)/usr/lib/aarch64-linux-gnu/* $(TARGET_DIR)/usr/lib/
 endef
 
 #MALI_G52_GPU = bifrost-g52
