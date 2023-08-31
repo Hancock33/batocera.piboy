@@ -22,6 +22,7 @@ ifeq ($(BR2_arm)$(BR2_aarch64),y)
 endif
 
 define OPENBOR7142_BUILD_CMDS
+	$(SED) "s|-O0|$(TARGET_OPTIMIZATION)|g" $(@D)/engine/Makefile
 	cd $(@D)/engine && $(@D)/engine/version.sh
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/engine -f Makefile $(OPENBOR7142_EXTRAOPTS)
 endef
