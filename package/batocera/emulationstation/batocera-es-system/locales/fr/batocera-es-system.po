@@ -7733,16 +7733,14 @@ msgstr "AFFICHAGE"
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid ""
-"Enable Gamecube BIOS access (requires IPL.bin BIOS in appropriate user "
-"directory)."
+"Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
+"appropriate user directory)."
 msgstr ""
-"Activer l'accès au BIOS Gamecube (nécessite IPL.bin dans le répertoire "
-"utilisateur approprié)"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
-msgid "ENABLE BIOS ACCESS"
-msgstr "ACTIVER L'ACCÈS AU BIOS"
+msgid "ENABLE BOOT ANIMATION"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -13398,6 +13396,18 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rapide"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable Gamecube BIOS access (requires IPL.bin BIOS in appropriate user "
+#~ "directory)."
+#~ msgstr ""
+#~ "Activer l'accès au BIOS Gamecube (nécessite IPL.bin dans le répertoire "
+#~ "utilisateur approprié)"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE BIOS ACCESS"
+#~ msgstr "ACTIVER L'ACCÈS AU BIOS"
 
 #~ msgctxt "keys_files"
 #~ msgid "Aspect ratio correction on/off"
