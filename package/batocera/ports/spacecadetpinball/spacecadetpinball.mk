@@ -12,7 +12,7 @@ SPACECADETPINBALL_LICENSE = MIT
 SPACECADETPINBALL_SUPPORTS_IN_SOURCE_BUILD = NO
 
 define SPACECADETPINBALL_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/spacecadetpinball
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/spacecadetpinball
 	$(INSTALL) -D $(@D)/bin/SpaceCadetPinball $(TARGET_DIR)/usr/bin
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

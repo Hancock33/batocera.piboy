@@ -14,8 +14,8 @@ endef
 
 define LIBRETRO_EP128EMU_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/ep128emu_core_libretro.so $(TARGET_DIR)/usr/lib/libretro/ep128emu_libretro.so
-	mkdir -p                                      $(TARGET_DIR)/usr/share/libretro/info
-	cp $(@D)/ep128emu_core_libretro.info          $(TARGET_DIR)/usr/share/libretro/info/ep128emu_libretro.info
+	mkdir -p									  $(TARGET_DIR)/usr/share/libretro/info
+	cp $(@D)/ep128emu_core_libretro.info		  $(TARGET_DIR)/usr/share/libretro/info/ep128emu_libretro.info
 endef
 
 $(eval $(generic-package))

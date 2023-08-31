@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Aug 20, 2023
-WINE_PROTON_VERSION = 8.0-20230822
+WINE_PROTON_VERSION = 8.0-20230830
 WINE_PROTON_SOURCE = experimental-wine-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = https://github.com/ValveSoftware/wine/archive/refs/tags
 WINE_PROTON_LICENSE = LGPL-2.1+
@@ -267,7 +267,7 @@ endif
 
 # Cleanup final directory
 define WINE_PROTON_REMOVE_INCLUDES_HOOK
-        rm -Rf $(TARGET_DIR)/usr/wine/proton/include
+		rm -Rf $(TARGET_DIR)/usr/wine/proton/include
 endef
 
 WINE_PROTON_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_REMOVE_INCLUDES_HOOK

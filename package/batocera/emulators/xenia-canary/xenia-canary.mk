@@ -39,7 +39,7 @@ define XENIA_CANARY_POST_PROCESS
 
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/xenia-canary/xbox360.xenia-canary.keys \
-	    $(TARGET_DIR)/usr/share/evmapy
+		$(TARGET_DIR)/usr/share/evmapy
 endef
 
 XENIA_CANARY_POST_INSTALL_TARGET_HOOKS += XENIA_CANARY_POST_PROCESS

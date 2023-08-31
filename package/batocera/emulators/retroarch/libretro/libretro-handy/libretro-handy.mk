@@ -24,8 +24,10 @@ LIBRETRO_HANDY_PLATFORM = rpi4_64
 endif
 
 define LIBRETRO_HANDY_BUILD_CMDS
+	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
+	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile platform="$(LIBRETRO_HANDY_PLATFORM)" \
-        GIT_VERSION="-$(shell echo $(LIBRETRO_HANDY_VERSION) | cut -c 1-7)"
+		GIT_VERSION="-$(shell echo $(LIBRETRO_HANDY_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_HANDY_INSTALL_TARGET_CMDS

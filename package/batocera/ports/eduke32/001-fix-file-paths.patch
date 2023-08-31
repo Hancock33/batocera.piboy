@@ -12,7 +12,7 @@ index a6b36170f..f868f57fa 100644
          // test unmolested filename first
          if (buildvfs_exists(fn))
 diff --git a/source/duke3d/src/common.cpp b/source/duke3d/src/common.cpp
-index ec518d8c9..1fddfc4ef 100644
+index 10d4b35fb..1fa16a4ee 100644
 --- a/source/duke3d/src/common.cpp
 +++ b/source/duke3d/src/common.cpp
 @@ -300,15 +300,7 @@ void G_ExtInit(void)
@@ -55,14 +55,14 @@ index 1a01ff905..7f9984aaa 100644
      CONFIG_SetDefaultKeys(keydefaults, true);
  
 diff --git a/source/duke3d/src/startgtk.game.cpp b/source/duke3d/src/startgtk.game.cpp
-index 26b5d566c..9e6aad913 100644
+index 3eac47882..9e6aad913 100644
 --- a/source/duke3d/src/startgtk.game.cpp
 +++ b/source/duke3d/src/startgtk.game.cpp
 @@ -282,7 +282,7 @@ static unsigned char GetModsDirNames(GtkListStore *list)
          if (buildvfs_exists("user_profiles_disabled"))
              buildvfs_getcwd(pdir, sizeof(pdir));
          else
--            Bsnprintf(pdir, sizeof(pdir), "%s/" ".config/eduke32", homedir);
+-            Bsnprintf(pdir, sizeof(pdir), "%s/.config/" APPBASENAME, homedir);
 +            Bsnprintf(pdir, sizeof(pdir), "/userdata/saves/" APPBASENAME);
  
          dirs = klistpath(pdir, "*", BUILDVFS_FIND_DIR);

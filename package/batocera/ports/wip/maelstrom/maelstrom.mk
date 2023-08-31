@@ -13,8 +13,8 @@ MAELSTROM_DEPENDENCIES = sdl2 sdl2_net
 #MAELSTROM_AUTORECONF = YES
 MAELSTROM_SUPPORTS_IN_SOURCE_BUILD = NO
 MAELSTROM_CONF_OPTS = \
-	                --disable-sdltest \
-	                --with-sdl-prefix="$(STAGING_DIR)/usr" \
+					--disable-sdltest \
+					--with-sdl-prefix="$(STAGING_DIR)/usr" \
 
 $(eval $(autotools-package))
 

@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Aug 29, 2023
-TSUGARU_VERSION = d0b6c8a7f77cb705a1f0a578948d89011e3d17fc
+TSUGARU_VERSION = 1331e7bfe27ab8e9313a52d4e130e4f6511c4d71
 TSUGARU_SITE = $(call github,captainys,TOWNSEMU,$(TSUGARU_VERSION))
 TSUGARU_DEPENDENCIES = libglu
 TSUGARU_LICENSE = GPLv2
@@ -16,9 +16,9 @@ TSUGARU_CONF_OPTS = -DBUILD_SHARED_LIBS=FALSE
 TSUGARU_CONF_ENV += LDFLAGS=-lpthread
 
 define TSUGARU_INSTALL_TARGET_CMDS
-        mkdir -p $(TARGET_DIR)/usr/bin
-        $(INSTALL) -D $(@D)/src/buildroot-build/main_cui/Tsugaru_CUI \
-                $(TARGET_DIR)/usr/bin/
+		mkdir -p $(TARGET_DIR)/usr/bin
+		$(INSTALL) -D $(@D)/src/buildroot-build/main_cui/Tsugaru_CUI \
+				$(TARGET_DIR)/usr/bin/
 
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/tsugaru/fmtowns.keys $(TARGET_DIR)/usr/share/evmapy

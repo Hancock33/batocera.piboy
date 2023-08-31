@@ -3,8 +3,8 @@
 # xash3d-fwgs
 #
 ################################################################################
-# Version: Commits on Aug 29, 2023
-XASH3D_FWGS_VERSION = 75e5da071c3da5034da29f273c0705f6e5cef2d2
+# Version: Commits on Aug 31, 2023
+XASH3D_FWGS_VERSION = 435b95fc5ab3fc5b1a79212ffdc901a47769d056
 XASH3D_FWGS_SITE = https://github.com/FWGS/xash3d-fwgs.git
 XASH3D_FWGS_SITE_METHOD = git
 XASH3D_FWGS_GIT_SUBMODULES = yes
@@ -12,10 +12,10 @@ XASH3D_LICENSE = GPL-3.0+
 XASH3D_FWGS_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf freetype fontconfig hlsdk-xash3d
 
 XASH3D_FWGS_CONF_OPTS += --build-type=release \
-  --enable-packaging \
-  --sdl2=$(STAGING_DIR)/usr/ \
-  --disable-vgui \
-  --disable-menu-changegame
+						 --enable-packaging \
+						 --sdl2=$(STAGING_DIR)/usr/ \
+						 --disable-vgui \
+						 --disable-menu-changegame
 
 ifeq ($(BR2_ARCH_IS_64),y)
   XASH3D_FWGS_CONF_OPTS += --64bits

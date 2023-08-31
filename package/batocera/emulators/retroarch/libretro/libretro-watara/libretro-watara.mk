@@ -35,8 +35,10 @@ LIBRETRO_WATARA_EXTRA_ARGS += ARCH=x86_64
 endif
 
 define LIBRETRO_WATARA_BUILD_CMDS
+	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/platform/libretro/Makefile
+	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/platform/libretro/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/platform/libretro -f Makefile platform="$(LIBRETRO_WATARA_PLATFORM)" $(LIBRETRO_WATARA_EXTRA_ARGS) \
-        GIT_VERSION="-$(shell echo $(LIBRETRO_WATARA_VERSION) | cut -c 1-7)"
+		GIT_VERSION="-$(shell echo $(LIBRETRO_WATARA_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_WATARA_INSTALL_TARGET_CMDS
