@@ -834,7 +834,7 @@ index 91ffed30..6989553d 100644
  	{ MSX, "113089" },
  	{ NOKIA_NGAGE, "128704" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index 7425b0dd..fe0dbefb 100644
+index 9c62dbcf..f8ea788a 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
 @@ -36,148 +36,231 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
@@ -1177,13 +1177,6 @@ index 7425b0dd..fe0dbefb 100644
 +	{ FMTOWNS, 253 },
 +	{ HIKARU, 258 },
 +	{ VG5000, 261 },
- 	{ WASM4, 262 }
+ 	{ WASM4, 262 },
+ 	{ GAMATE, 266 }
  };
- 
-@@ -919,4 +1002,4 @@ int ScreenScraperScraper::getThreadCount(std::string &result)
- 	return 1;
- }
- 
--#endif
-+#endif
-\ No newline at end of file
