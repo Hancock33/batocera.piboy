@@ -7,7 +7,7 @@
   - ODROID-GO ULTRA
   - Orange Pi 5b
 ### Added
-- ES settings for both types of classic controllers for dolphin. 
+- ES settings for both types of classic controllers for dolphin.
 - Additional ES settings for rpcs3
 - ES settings for joystick deadzone/sensitivity for mupen64plus
 - ES settings for N64 controllers for N64 emulators.
@@ -32,6 +32,7 @@
 - Re-enabled lr-sameduck for MegaDuck with retroachievements and zip/7z support
 - initialize wheel support : new automatic collection ; es wheel icon ; wheel game database
 - guncon3 support
+- plane mode (disable wifi/bt)
 ### Fixed
 - Fix wifi/bluetooth on Tinkerboard
 - Fixed crop overscan settings for NES to work with newer core builds
@@ -64,7 +65,7 @@
 - xenia to v1.0.2805
 - xenia canary to ba936e8 (Commits on Jul 22, 2023)
 - citra to nightly-1973
-- groovy mame to 0.257
+- groovy mame to 0.258
 - libretro-mame to 0.257
 - cemu to v2.0-47
 - amiberry to 5.6.1
@@ -92,7 +93,7 @@
 - play! to v0.62
 - Vita3K to 0.1.9
 ### Dev
-- linux kernel for x86_64 to 6.4.12
+- linux kernel for x86_64 to 6.5
 - linux kernel for RPI to 6.1.47
 - linux kernel for most ARM SBCs to 6.1.49
 - linux kernel for Rockchip RK3566/RK3568 to 6.4.12
@@ -114,6 +115,7 @@
 - sound open firmware to v2.2.6
 - evsieve to v1.4.0
 - wf-recorder to 0.4.0
+- pipewire to 0.3.79
 
 # 2023/06/18 - batocera.linux 37 - Red Admiral
 ### hardware
