@@ -43,7 +43,7 @@ endif
 
 define SUPERTUX2_INSTALL_TARGET_CMDS
 	# install media
-    mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2
+	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2
 	touch $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2/SuperTux2.game
 	cp -a $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/supertux2/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2
 	ln -sf /userdata/roms/ports/supertux2 $(TARGET_DIR)/usr/share/supertux2

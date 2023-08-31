@@ -19,21 +19,21 @@ EDUKE32_BUILD_ARGS += PACKAGE_REPOSITORY=1
 EDUKE32_BUILD_ARGS += VC_REV=$(EDUKE32_VC_REV)
 
 ifeq ($(BR2_aarch64),y)
-    EDUKE32_BUILD_ARGS += USE_OPENGL=0
-    EDUKE32_BUILD_ARGS += OPTOPT="-ffast-math"
+	EDUKE32_BUILD_ARGS += USE_OPENGL=0
+	EDUKE32_BUILD_ARGS += OPTOPT="-ffast-math"
 endif
 
 define EDUKE32_BUILD_CMDS
-    $(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) -C $(@D) duke3d
-    $(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) -C $(@D) sw
-    $(RM) -r $(@D)/obj
-    $(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) FURY=1 -C $(@D)
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) -C $(@D) duke3d
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) -C $(@D) sw
+	$(RM) -r $(@D)/obj
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) $(EDUKE32_BUILD_ARGS) FURY=1 -C $(@D)
 endef
 
 define EDUKE32_INSTALL_TARGET_CMDS
-    $(INSTALL) -D -m 0755 $(@D)/eduke32 $(TARGET_DIR)/usr/bin/eduke32
-    $(INSTALL) -D -m 0755 $(@D)/voidsw  $(TARGET_DIR)/usr/bin/voidsw
-    $(INSTALL) -D -m 0755 $(@D)/fury    $(TARGET_DIR)/usr/bin/ionfury
+	$(INSTALL) -D -m 0755 $(@D)/eduke32 $(TARGET_DIR)/usr/bin/eduke32
+	$(INSTALL) -D -m 0755 $(@D)/voidsw  $(TARGET_DIR)/usr/bin/voidsw
+	$(INSTALL) -D -m 0755 $(@D)/fury	$(TARGET_DIR)/usr/bin/ionfury
 endef
 
 $(eval $(generic-package))

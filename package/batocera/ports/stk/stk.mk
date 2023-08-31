@@ -22,7 +22,7 @@ STK_CONF_OPTS += -DBUILD_RECORDER=0
 define STK_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/buildroot-build/bin/supertuxkart -D $(TARGET_DIR)/usr/bin/supertuxkart
 	# config
-    mkdir -p $(TARGET_DIR)/usr/share/game_assets/supertuxkart
+	mkdir -p $(TARGET_DIR)/usr/share/game_assets/supertuxkart
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stk/players.xml $(TARGET_DIR)/usr/share/game_assets/supertuxkart
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

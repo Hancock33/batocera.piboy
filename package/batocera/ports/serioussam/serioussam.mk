@@ -13,7 +13,7 @@ SERIOUSSAM_DEPENDENCIES = sdl2 sdl2_mixer host-serioussam
 SERIOUSSAM_LICENSE = GPL-2.0
 
 define HOST_SERIOUSSAM_INSTALL_CMDS
-	cp -av $(HOST_SERIOUSSAM_BUILDDIR)/SamTFE/Sources/ecc    $(HOST_DIR)/bin
+	cp -av $(HOST_SERIOUSSAM_BUILDDIR)/SamTFE/Sources/ecc	$(HOST_DIR)/bin
 	cp -av $(HOST_SERIOUSSAM_BUILDDIR)/SamTSE/Sources/ecc-se $(HOST_DIR)/bin
 endef
 
@@ -32,47 +32,47 @@ define SERIOUSSAM_INSTALL_TARGET_CMDS
 	cp -av $(SERIOUSSAM_BUILDDIR)/SamTFE/Sources/Debug/* $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
 	cp -av $(SERIOUSSAM_BUILDDIR)/SamTFE/Sources/{serioussam-ded,serioussam-mkfont,serioussam} $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
 	$(TARGET_STRIP) $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin/*
-	cp -av $(@D)/SamTFE/SE1_10b.gro                                     $(TARGET_DIR)/usr/share/game_assets/samtfe
-	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00.gro              $(TARGET_DIR)/usr/share/game_assets/samtfe
-	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00c.gro             $(TARGET_DIR)/usr/share/game_assets/samtfe
-	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00_ExtraTools.gro   $(TARGET_DIR)/usr/share/game_assets/samtfe
-	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00c_Logo.gro        $(TARGET_DIR)/usr/share/game_assets/samtfe
-	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00_music.gro        $(TARGET_DIR)/usr/share/game_assets/samtfe
-	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_04_patch.gro        $(TARGET_DIR)/usr/share/game_assets/samtfe
-	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00c_scripts.gro     $(TARGET_DIR)/usr/share/game_assets/samtfe
-	ln -sf /userdata/roms/ports/serioussam/SamTFE/Help                  $(TARGET_DIR)/usr/share/game_assets/samtfe
-	ln -sf /userdata/roms/ports/serioussam/SamTFE/Levels                $(TARGET_DIR)/usr/share/game_assets/samtfe
-	ln -sf /userdata/roms/ports/serioussam/SamTFE/Mods                  $(TARGET_DIR)/usr/share/game_assets/samtfe
+	cp -av $(@D)/SamTFE/SE1_10b.gro										$(TARGET_DIR)/usr/share/game_assets/samtfe
+	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00.gro				$(TARGET_DIR)/usr/share/game_assets/samtfe
+	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00c.gro				$(TARGET_DIR)/usr/share/game_assets/samtfe
+	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00_ExtraTools.gro	$(TARGET_DIR)/usr/share/game_assets/samtfe
+	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00c_Logo.gro		$(TARGET_DIR)/usr/share/game_assets/samtfe
+	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00_music.gro		$(TARGET_DIR)/usr/share/game_assets/samtfe
+	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_04_patch.gro		$(TARGET_DIR)/usr/share/game_assets/samtfe
+	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00c_scripts.gro		$(TARGET_DIR)/usr/share/game_assets/samtfe
+	ln -sf /userdata/roms/ports/serioussam/SamTFE/Help					$(TARGET_DIR)/usr/share/game_assets/samtfe
+	ln -sf /userdata/roms/ports/serioussam/SamTFE/Levels				$(TARGET_DIR)/usr/share/game_assets/samtfe
+	ln -sf /userdata/roms/ports/serioussam/SamTFE/Mods					$(TARGET_DIR)/usr/share/game_assets/samtfe
 
 	# TSE Assets
 	rm -rf $(TARGET_DIR)/usr/share/game_assets/samtse
 	mkdir -p $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
 	# copy assets
-	cp -av $(SERIOUSSAM_BUILDDIR)/SamTSE/Sources/Debug/*                $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
-	cp -av $(SERIOUSSAM_BUILDDIR)/SamTSE/Sources/serioussamse-mkfont    $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
-	cp -av $(SERIOUSSAM_BUILDDIR)/SamTSE/Sources/serioussamse-ded       $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/serioussam-ded
-	cp -av $(SERIOUSSAM_BUILDDIR)/SamTSE/Sources/serioussamse           $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/serioussam
+	cp -av $(SERIOUSSAM_BUILDDIR)/SamTSE/Sources/Debug/*				$(TARGET_DIR)/usr/share/game_assets/samtse/Bin
+	cp -av $(SERIOUSSAM_BUILDDIR)/SamTSE/Sources/serioussamse-mkfont	$(TARGET_DIR)/usr/share/game_assets/samtse/Bin
+	cp -av $(SERIOUSSAM_BUILDDIR)/SamTSE/Sources/serioussamse-ded		$(TARGET_DIR)/usr/share/game_assets/samtse/Bin/serioussam-ded
+	cp -av $(SERIOUSSAM_BUILDDIR)/SamTSE/Sources/serioussamse			$(TARGET_DIR)/usr/share/game_assets/samtse/Bin/serioussam
 	$(TARGET_STRIP) $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/*
 
 	# link libraries
-	ln -sf /usr/share/game_assets/samtse/Bin/libEngineMP.so             $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libEngine.so
-	ln -sf /usr/share/game_assets/samtse/Bin/libEntitiesMP.so           $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libEntities.so
-	ln -sf /usr/share/game_assets/samtse/Bin/libGameMP.so               $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libGame.so
-	ln -sf /usr/lib/libvorbisfile.so                                    $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libvorbisfile.so
+	ln -sf /usr/share/game_assets/samtse/Bin/libEngineMP.so				$(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libEngine.so
+	ln -sf /usr/share/game_assets/samtse/Bin/libEntitiesMP.so			$(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libEntities.so
+	ln -sf /usr/share/game_assets/samtse/Bin/libGameMP.so				$(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libGame.so
+	ln -sf /usr/lib/libvorbisfile.so									$(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libvorbisfile.so
 
 	# link game files
-	cp -av $(@D)/SamTSE/SE1_10b.gro                                     $(TARGET_DIR)/usr/share/game_assets/samtse
-	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00.gro            $(TARGET_DIR)/usr/share/game_assets/samtse
-	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_Extra.gro      $(TARGET_DIR)/usr/share/game_assets/samtse
+	cp -av $(@D)/SamTSE/SE1_10b.gro										$(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00.gro			$(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_Extra.gro		$(TARGET_DIR)/usr/share/game_assets/samtse
 	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_ExtraTools.gro $(TARGET_DIR)/usr/share/game_assets/samtse
-	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_Levels.gro     $(TARGET_DIR)/usr/share/game_assets/samtse
-	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_Logo.gro       $(TARGET_DIR)/usr/share/game_assets/samtse
-	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_Music.gro      $(TARGET_DIR)/usr/share/game_assets/samtse
-	ln -sf /userdata/roms/ports/serioussam/SamTSE/1_04_patch.gro        $(TARGET_DIR)/usr/share/game_assets/samtse
-	ln -sf /userdata/roms/ports/serioussam/SamTSE/1_07_tools.gro        $(TARGET_DIR)/usr/share/game_assets/samtse
-	ln -sf /userdata/roms/ports/serioussam/SamTSE/Help                  $(TARGET_DIR)/usr/share/game_assets/samtse
-	ln -sf /userdata/roms/ports/serioussam/SamTSE/Levels                $(TARGET_DIR)/usr/share/game_assets/samtse
-	ln -sf /userdata/roms/ports/serioussam/SamTSE/Mods                  $(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_Levels.gro		$(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_Logo.gro		$(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_Music.gro		$(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/1_04_patch.gro		$(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/1_07_tools.gro		$(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/Help					$(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/Levels				$(TARGET_DIR)/usr/share/game_assets/samtse
+	ln -sf /userdata/roms/ports/serioussam/SamTSE/Mods					$(TARGET_DIR)/usr/share/game_assets/samtse
 endef
 
 define SERIOUSSAM_CP_WEAPONS
