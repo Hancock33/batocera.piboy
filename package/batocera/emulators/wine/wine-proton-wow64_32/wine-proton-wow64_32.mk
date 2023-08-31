@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Aug 22, 2023
-WINE_PROTON_WOW64_32_VERSION = 8.0-20230822
+WINE_PROTON_WOW64_32_VERSION = 8.0-20230830
 WINE_PROTON_WOW64_32_SOURCE = experimental-wine-$(WINE_PROTON_WOW64_32_VERSION).tar.gz
 WINE_PROTON_WOW64_32_SITE = https://github.com/ValveSoftware/wine/archive/refs/tags
 WINE_PROTON_WOW64_32_LICENSE = LGPL-2.1+
@@ -261,7 +261,7 @@ endif
 
 # Cleanup final directory
 define WINE_PROTON_WOW64_32_REMOVE_INCLUDES_HOOK
-        rm -Rf $(TARGET_DIR)/usr/wine/proton/include
+		rm -Rf $(TARGET_DIR)/usr/wine/proton/include
 endef
 
 WINE_PROTON_WOW64_32_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_WOW64_32_REMOVE_INCLUDES_HOOK

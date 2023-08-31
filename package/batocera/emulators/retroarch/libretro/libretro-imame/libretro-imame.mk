@@ -15,9 +15,11 @@ LIBRETRO_IMAME_PLATFORM = rpi1
 endif
 
 define LIBRETRO_IMAME_BUILD_CMDS
+	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
+	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
 	mkdir -p $(@D)/obj_libretro_libretro/cpu
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D) -f Makefile platform="$(LIBRETRO_IMAME_PLATFORM)" \
-        GIT_VERSION="-$(shell echo $(LIBRETRO_IMAME_VERSION) | cut -c 1-7)"
+		GIT_VERSION="-$(shell echo $(LIBRETRO_IMAME_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_IMAME_INSTALL_TARGET_CMDS

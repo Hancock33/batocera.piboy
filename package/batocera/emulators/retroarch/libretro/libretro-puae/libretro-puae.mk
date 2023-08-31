@@ -3,8 +3,8 @@
 # libretro-puae
 #
 ################################################################################
-# Version: Commits on Aug 26, 2023
-LIBRETRO_PUAE_VERSION = 90fc9d03aae5c9e574ad3529003c9df6e3526e5c
+# Version: Commits on Aug 29, 2023
+LIBRETRO_PUAE_VERSION = 5417f4333f4727ec389d05d5495e3ad296486d22
 LIBRETRO_PUAE_SITE = $(call github,sonninnos,libretro-uae,$(LIBRETRO_PUAE_VERSION))
 LIBRETRO_PUAE__LICENSE = GPLv2
 
@@ -24,8 +24,10 @@ LIBRETRO_PUAE_PLATFORM = rpi4
 endif
 
 define LIBRETRO_PUAE_BUILD_CMDS
+	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
+	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile platform="$(LIBRETRO_PUAE_PLATFORM)" \
-        GIT_VERSION="-$(shell echo $(LIBRETRO_PUAE_VERSION) | cut -c 1-7)"
+		GIT_VERSION="-$(shell echo $(LIBRETRO_PUAE_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_PUAE_INSTALL_TARGET_CMDS

@@ -3,14 +3,14 @@
 # cemu
 #
 ################################################################################
-# Version: Commits on Aug 16, 2023
-CEMU_VERSION = d8b9a74d861dbf857d2debc00f9ba12ea890c6ad
+# Version: Commits on Aug 31, 2023
+CEMU_VERSION = 5e84862e287b0403bc5d9f853020738d858af22d
 CEMU_SITE = https://github.com/cemu-project/Cemu
 CEMU_LICENSE = GPLv2
 CEMU_SITE_METHOD=git
 CEMU_GIT_SUBMODULES=YES
 CEMU_DEPENDENCIES = sdl2 host-libcurl host-pugixml pugixml rapidjson boost libpng \
-                    libzip host-glslang glslang zlib zstd wxwidgets fmt glm
+					libzip host-glslang glslang zlib zstd wxwidgets fmt glm
 
 CEMU_SUPPORTS_IN_SOURCE_BUILD = NO
 
@@ -23,10 +23,10 @@ CEMU_CONF_OPTS += -DENABLE_FERAL_GAMEMODE=OFF
 CEMU_CONF_OPTS += -DENABLE_HIDAPI=OFF
 
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
-    CEMU_CONF_OPTS += -DENABLE_WAYLAND=ON
-    CEMU_DEPENDENCIES += wayland wayland-protocols
+	CEMU_CONF_OPTS += -DENABLE_WAYLAND=ON
+	CEMU_DEPENDENCIES += wayland wayland-protocols
 else
-    CEMU_CONF_OPTS += -DENABLE_WAYLAND=OFF
+	CEMU_CONF_OPTS += -DENABLE_WAYLAND=OFF
 endif
 
 define CEMU_INSTALL_TARGET_CMDS
@@ -34,14 +34,14 @@ define CEMU_INSTALL_TARGET_CMDS
 	mv -f $(@D)/bin/Cemu_release $(@D)/bin/cemu
 	cp -pr $(@D)/bin/{cemu,gameProfiles,resources} $(TARGET_DIR)/usr/bin/cemu/
 	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/cemu/get-audio-device \
-	    $(TARGET_DIR)/usr/bin/cemu/
+		$(TARGET_DIR)/usr/bin/cemu/
 	# keys.txt
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/cemu
 	touch $(TARGET_DIR)/usr/share/batocera/datainit/bios/cemu/keys.txt
 	#evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/cemu/wiiu.keys \
-	    $(TARGET_DIR)/usr/share/evmapy
+		$(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(cmake-package))

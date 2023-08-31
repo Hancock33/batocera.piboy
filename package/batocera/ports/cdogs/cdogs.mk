@@ -28,18 +28,18 @@ define CDOGS_REMOVE_TESTS
 endef
 
 define CDOGS_INSTALL_TARGET_CMDS
-    $(INSTALL) -D $(@D)/buildroot-build/src/cdogs-sdl $(TARGET_DIR)/usr/bin/cdogs
-    mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/cdogs
+	$(INSTALL) -D $(@D)/buildroot-build/src/cdogs-sdl $(TARGET_DIR)/usr/bin/cdogs
+	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/cdogs
 	mkdir -p $(TARGET_DIR)/usr/share/cdogs
-    cp -pa $(@D)/data      $(TARGET_DIR)/usr/share/cdogs
-    cp -pa $(@D)/dogfights $(TARGET_DIR)/usr/share/cdogs
-    cp -pa $(@D)/graphics  $(TARGET_DIR)/usr/share/cdogs
-    cp -pa $(@D)/missions  $(TARGET_DIR)/usr/share/cdogs
-    cp -pa $(@D)/music     $(TARGET_DIR)/usr/share/cdogs
-    cp -pa $(@D)/sounds    $(TARGET_DIR)/usr/share/cdogs
-	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/cdogs/media/*              $(TARGET_DIR)/usr/share/emulationstation/ports/cdogs/
+	cp -pa $(@D)/data	  $(TARGET_DIR)/usr/share/cdogs
+	cp -pa $(@D)/dogfights $(TARGET_DIR)/usr/share/cdogs
+	cp -pa $(@D)/graphics  $(TARGET_DIR)/usr/share/cdogs
+	cp -pa $(@D)/missions  $(TARGET_DIR)/usr/share/cdogs
+	cp -pa $(@D)/music	 $(TARGET_DIR)/usr/share/cdogs
+	cp -pa $(@D)/sounds	$(TARGET_DIR)/usr/share/cdogs
+	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/cdogs/media/*			  $(TARGET_DIR)/usr/share/emulationstation/ports/cdogs/
 
-    # evmap config
+	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/cdogs/cdogs.keys $(TARGET_DIR)/usr/share/evmapy
 endef

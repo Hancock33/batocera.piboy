@@ -19,8 +19,8 @@ ECWOLF_CONF_OPTS += -DFORCE_CROSSCOMPILE=ON
 ECWOLF_CONF_OPTS += -DIMPORT_EXECUTABLES="$(HOST_ECWOLF_BUILDDIR)/ImportExecutables.cmake"
 
 define ECWOLF_CROSS
-    $(HOST_ECWOLF_BUILDDIR)/deps/gdtoa/arithchk > $(@D)/deps/gdtoa/arith.h
-    $(HOST_ECWOLF_BUILDDIR)/deps/gdtoa/qnan > $(@D)/deps/gdtoa/gd_qnan.h
+	$(HOST_ECWOLF_BUILDDIR)/deps/gdtoa/arithchk > $(@D)/deps/gdtoa/arith.h
+	$(HOST_ECWOLF_BUILDDIR)/deps/gdtoa/qnan > $(@D)/deps/gdtoa/gd_qnan.h
 endef
 ECWOLF_POST_EXTRACT_HOOKS += ECWOLF_CROSS
 

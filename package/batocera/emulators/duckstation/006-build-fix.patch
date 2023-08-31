@@ -1,8 +1,8 @@
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index 9117f5ca..bc90b99c 100644
+index 3ee1e266..6155946b 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -3711,13 +3711,13 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
+@@ -3722,13 +3722,13 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
  
    FullscreenUI::CheckForConfigChanges(old_settings);
  
@@ -19,7 +19,7 @@ index 9117f5ca..bc90b99c 100644
    if (g_settings.log_level != old_settings.log_level || g_settings.log_filter != old_settings.log_filter ||
        g_settings.log_to_console != old_settings.log_to_console ||
 diff --git a/src/duckstation-nogui/nogui_host.cpp b/src/duckstation-nogui/nogui_host.cpp
-index 1a905b45..413b79bd 100644
+index 1a905b45..f581e7c6 100644
 --- a/src/duckstation-nogui/nogui_host.cpp
 +++ b/src/duckstation-nogui/nogui_host.cpp
 @@ -426,8 +426,8 @@ void NoGUIHost::ProcessPlatformWindowResize(s32 width, s32 height, float scale)
@@ -33,8 +33,17 @@ index 1a905b45..413b79bd 100644
  
    InputManager::UpdatePointerAbsolutePosition(0, x, y);
    ImGuiManager::UpdateMousePosition(x, y);
+@@ -650,7 +650,7 @@ void NoGUIHost::CPUThreadMainLoop()
+ 
+     Host::PumpMessagesOnCPUThread();
+     System::Internal::IdlePollUpdate();
+-    Host::RenderDisplay(false);
++    System::InvalidateDisplay();
+     if (!g_gpu_device->IsVsyncEnabled())
+       g_gpu_device->ThrottlePresentation();
+   }
 diff --git a/src/duckstation-nogui/wayland_nogui_platform.cpp b/src/duckstation-nogui/wayland_nogui_platform.cpp
-index b551b041..01105605 100644
+index 52bf9672..b276dafb 100644
 --- a/src/duckstation-nogui/wayland_nogui_platform.cpp
 +++ b/src/duckstation-nogui/wayland_nogui_platform.cpp
 @@ -7,7 +7,7 @@

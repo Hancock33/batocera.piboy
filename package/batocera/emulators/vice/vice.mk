@@ -32,7 +32,7 @@ VICE_CONF_ENV += LDFLAGS=-lSDL2
 define VICE_POST_PROCESS
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/vice/c64.vice.keys \
-        $(TARGET_DIR)/usr/share/evmapy
+		$(TARGET_DIR)/usr/share/evmapy
 endef
 
 VICE_POST_INSTALL_TARGET_HOOKS += VICE_POST_PROCESS

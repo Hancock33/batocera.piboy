@@ -834,10 +834,10 @@ index 91ffed30..6989553d 100644
  	{ MSX, "113089" },
  	{ NOKIA_NGAGE, "128704" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index 7425b0dd..fe0dbefb 100644
+index 9c62dbcf..60b1b1f5 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -36,148 +36,231 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
+@@ -36,149 +36,233 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
@@ -1177,13 +1177,8 @@ index 7425b0dd..fe0dbefb 100644
 +	{ FMTOWNS, 253 },
 +	{ HIKARU, 258 },
 +	{ VG5000, 261 },
- 	{ WASM4, 262 }
+ 	{ WASM4, 262 },
++	{ ARDUBOY, 263 },
+ 	{ GAMATE, 266 }
  };
  
-@@ -919,4 +1002,4 @@ int ScreenScraperScraper::getThreadCount(std::string &result)
- 	return 1;
- }
- 
--#endif
-+#endif
-\ No newline at end of file

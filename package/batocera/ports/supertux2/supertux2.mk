@@ -3,8 +3,8 @@
 # supertux2
 #
 ################################################################################
-# Version: Commits on Aug 29, 2023
-SUPERTUX2_VERSION = 1bb3629cbc17d13a6dcc6401c1955603939849f7
+# Version: Commits on Aug 30, 2023
+SUPERTUX2_VERSION = 974c0df0976f270b072412c11bb62d6149067820
 SUPERTUX2_SITE = https://github.com/SuperTux/supertux.git
 SUPERTUX2_SITE_METHOD=git
 SUPERTUX2_GIT_SUBMODULES=YES
@@ -43,7 +43,7 @@ endif
 
 define SUPERTUX2_INSTALL_TARGET_CMDS
 	# install media
-    mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2
+	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2
 	touch $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2/SuperTux2.game
 	cp -a $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/supertux2/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2
 	ln -sf /userdata/roms/ports/supertux2 $(TARGET_DIR)/usr/share/supertux2

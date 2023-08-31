@@ -10,7 +10,7 @@ LIBRETRO_GEARSYSTEM_LICENSE = GPLv3
 
 define LIBRETRO_GEARSYSTEM_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C \
-        $(@D)/platforms/libretro -f Makefile platform="unix"
+		$(@D)/platforms/libretro -f Makefile platform="unix"
 endef
 
 define LIBRETRO_GEARSYSTEM_INSTALL_TARGET_CMDS

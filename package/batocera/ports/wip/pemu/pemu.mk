@@ -21,14 +21,14 @@ PEMU_CONF_OPTS += -DOPTION_RENDER_GLES2=ON
 PEMU_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=-Wl,--unresolved-symbols=ignore-all
 
 define PEMU_INSTALL_TARGET_CMDS
-	cp -a $(@D)/buildroot-build/pgen/data_romfs   /tmp/pgen
-	cp -a $(@D)/buildroot-build/pgen/pgen         /tmp/pgen/
-	cp -a $(@D)/buildroot-build/pnes/data_romfs   /tmp/pnes
-	cp -a $(@D)/buildroot-build/pnes/pnes         /tmp/pnes/
-	cp -a $(@D)/buildroot-build/psnes/data_romfs  /tmp/psnes
-	cp -a $(@D)/buildroot-build/psnes/psnes       /tmp/psnes/
-	cp -a $(@D)/buildroot-build/pfbneo/data_romfs  /tmp/pfbneo
-	cp -a $(@D)/buildroot-build/pfbneo/pfbneo       /tmp/pfbneo/
+	cp -a $(@D)/buildroot-build/pgen/data_romfs		/tmp/pgen
+	cp -a $(@D)/buildroot-build/pgen/pgen			/tmp/pgen/
+	cp -a $(@D)/buildroot-build/pnes/data_romfs		/tmp/pnes
+	cp -a $(@D)/buildroot-build/pnes/pnes			/tmp/pnes/
+	cp -a $(@D)/buildroot-build/psnes/data_romfs	/tmp/psnes
+	cp -a $(@D)/buildroot-build/psnes/psnes			/tmp/psnes/
+	cp -a $(@D)/buildroot-build/pfbneo/data_romfs	/tmp/pfbneo
+	cp -a $(@D)/buildroot-build/pfbneo/pfbneo		/tmp/pfbneo/
 endef
 
 define GENERATE_DEPS

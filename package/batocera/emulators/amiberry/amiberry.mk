@@ -16,7 +16,7 @@ endif
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 	AMIBERRY_BATOCERA_SYSTEM=rpi4-64-sdl2
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2837),y)
-    AMIBERRY_BATOCERA_SYSTEM=rpi3-64-sdl2
+	AMIBERRY_BATOCERA_SYSTEM=rpi3-64-sdl2
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
 	AMIBERRY_BATOCERA_SYSTEM=rpi2-sdl2
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2835),y)
@@ -26,9 +26,9 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_XU4),y)
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S922X)$(BR2_PACKAGE_BATOCERA_TARGET_A3GEN2),y)
 	AMIBERRY_BATOCERA_SYSTEM=AMLG12B
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_H5),y)
-    AMIBERRY_BATOCERA_SYSTEM=lePotato
+	AMIBERRY_BATOCERA_SYSTEM=lePotato
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_H616),y)
-    AMIBERRY_BATOCERA_SYSTEM=a64
+	AMIBERRY_BATOCERA_SYSTEM=a64
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3326),y)
 	AMIBERRY_BATOCERA_SYSTEM=oga
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S9GEN4),y)
@@ -49,7 +49,7 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S905GEN3)$(BR2_PACKAGE_BATOCERA_TARGET_
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_H3),y)
 	AMIBERRY_BATOCERA_SYSTEM=orangepi-pc
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S812),y)
-    AMIBERRY_BATOCERA_SYSTEM=s812
+	AMIBERRY_BATOCERA_SYSTEM=s812
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3328),y)
 	AMIBERRY_BATOCERA_SYSTEM=AMLGXBB
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3128),y)
@@ -77,7 +77,7 @@ define AMIBERRY_BUILD_CMDS
 		AS="$(TARGET_CC)" \
 		LD="$(TARGET_LD)" \
 		STRIP="$(TARGET_STRIP)" \
-        SDL_CONFIG=$(STAGING_DIR)/usr/bin/sdl2-config \
+		SDL_CONFIG=$(STAGING_DIR)/usr/bin/sdl2-config \
 		-C $(@D) \
 		-f Makefile \
 		PLATFORM=$(AMIBERRY_BATOCERA_SYSTEM)
@@ -85,11 +85,11 @@ endef
 
 define AMIBERRY_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/amiberry $(TARGET_DIR)/usr/bin/amiberry
-        mkdir -p $(TARGET_DIR)/usr/share/amiberry
+		mkdir -p $(TARGET_DIR)/usr/share/amiberry
 
 	ln -sf /userdata/system/configs/amiberry/whdboot $(TARGET_DIR)/usr/share/amiberry/whdboot
-        mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/amiberry
-    ln -sf /usr/lib/libcapsimage.so.5.1 $(TARGET_DIR)/usr/share/amiberry/capsimg.so
+		mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/amiberry
+	ln -sf /usr/lib/libcapsimage.so.5.1 $(TARGET_DIR)/usr/share/amiberry/capsimg.so
 
 	cp -pr $(@D)/whdboot $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/amiberry/
 	cp -rf $(@D)/data $(TARGET_DIR)/usr/share/amiberry

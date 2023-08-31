@@ -3,8 +3,8 @@
 # sonicmania
 #
 ################################################################################
-# Version: Commits on Aug 28, 2023
-SONICMANIA_VERSION = 5379b9bab34e7ff7409f5bd36363b310e2a15fcd
+# Version: Commits on Aug 30, 2023
+SONICMANIA_VERSION = ca126a0ab5e5e9159b680f5e694cd937b38f80da
 SONICMANIA_SITE = https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation.git
 SONICMANIA_SITE_METHOD = git
 SONICMANIA_GIT_SUBMODULES = YES
@@ -13,8 +13,10 @@ SONICMANIA_DEPENDENCIES = sdl2 libogg libvorbis
 SONICMANIA_LICENSE = Custom
 
 define SONICMANIA_BUILD_CMDS
-    $(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D)/dependencies/RSDKv5 -f Makefile PLATFORM=Linux SUBSYSTEM=SDL2
-    $(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) -f Makefile
+	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/dependencies/RSDKv5/Makefile
+	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D)/dependencies/RSDKv5 -f Makefile PLATFORM=Linux SUBSYSTEM=SDL2
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) -f Makefile
 endef
 
 define SONICMANIA_INSTALL_TARGET_CMDS

@@ -37,8 +37,8 @@ endif
 define LIBRETRO_MAME2003_PLUS_BUILD_CMDS
 	mkdir -p $(@D)/obj/mame/cpu/ccpu
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile platform="$(LIBRETRO_MAME2003_PLUS_PLATFORM)" \
-        OPTIMIZE=3 SYMBOLS=1 SYMLEVEL=1 STRIP_SYMBOLS=1 \
-        GIT_VERSION=" $(shell echo $(LIBRETRO_MAME2003_PLUS_VERSION) | cut -c 1-7)"
+		OPTIMIZE=s SYMBOLS=1 SYMLEVEL=1 STRIP_SYMBOLS=1 \
+		GIT_VERSION=" $(shell echo $(LIBRETRO_MAME2003_PLUS_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_MAME2003_PLUS_INSTALL_TARGET_CMDS
@@ -46,8 +46,8 @@ define LIBRETRO_MAME2003_PLUS_INSTALL_TARGET_CMDS
 		$(TARGET_DIR)/usr/lib/libretro/mame078plus_libretro.so
 
 	# Bios
-    # Need to think of another way to use these files.
-    # They take up a lot of space on tmpfs.
+	# Need to think of another way to use these files.
+	# They take up a lot of space on tmpfs.
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2003-plus/samples
 	find $(@D)/metadata -maxdepth 1 -iname "*.xml" -print0 | xargs -0 -I{} xz {}
 	find $(@D)/metadata -maxdepth 1 -iname "*.xml" -print0 | xargs -0 -I{} rm {}
@@ -56,7 +56,6 @@ define LIBRETRO_MAME2003_PLUS_INSTALL_TARGET_CMDS
 endef
 
 define LIBRETRO_MAME2003_PLUS_NAMCO_QUICK_FIX
-	$(SED) 's|O3|O2|g' $(@D)/Makefile
 	$(SED) 's|to continue|on Keyboard, or Left, Right on Joystick to continue|g' $(@D)/src/ui_text.c
 endef
 

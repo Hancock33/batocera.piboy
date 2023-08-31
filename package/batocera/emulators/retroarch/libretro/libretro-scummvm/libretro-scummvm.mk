@@ -3,8 +3,8 @@
 # libretro-scummvm
 #
 ################################################################################
-# Version: Commits on Aug 29, 2023
-LIBRETRO_SCUMMVM_VERSION = fa450e060e8a9eb140722b9976d2a8bb56922ed3
+# Version: Commits on Aug 30, 2023
+LIBRETRO_SCUMMVM_VERSION = 4e2c2094a0aa287f747e0759cd63229480128d66
 LIBRETRO_SCUMMVM_SOURCE = scummvm-$(LIBRETRO_SCUMMVM_VERSION).tar.gz
 LIBRETRO_SCUMMVM_SITE = $(call github,scummvm,scummvm,$(LIBRETRO_SCUMMVM_VERSION))
 LIBRETRO_SCUMMVM_LICENSE = GPLv2
@@ -33,6 +33,8 @@ LIBRETRO_SCUMMVM_MAKE_OPTS += TARGET_64BIT=1
 endif
 
 define LIBRETRO_SCUMMVM_BUILD_CMDS
+	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/backends/platform/libretro/Makefile
+	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/backends/platform/libretro/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/backends/platform/libretro \
 	platform="$(LIBRETRO_SCUMMVM_PLATFORM)" $(LIBRETRO_SCUMMVM_MAKE_OPTS) all
 endef

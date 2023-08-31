@@ -13,7 +13,7 @@ SRB2KART_SUPPORTS_IN_SOURCE_BUILD = NO
 
 define SRB2KART_ASSETS
 	mkdir -p $(@D)/assets/installer
-    cp -avr /home/lee/srb2kart/* $(@D)/assets/installer
+	cp -avr /home/lee/srb2kart/* $(@D)/assets/installer
 	sed -i 's/-Wno-trigraphs//g' $(@D)/src/CMakeLists.txt
 endef
 

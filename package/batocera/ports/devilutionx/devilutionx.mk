@@ -3,8 +3,8 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Aug 29, 2023
-DEVILUTIONX_VERSION = 37614c496f13694322d68e7c48012c93460dbef2
+# Version: Commits on Aug 31, 2023
+DEVILUTIONX_VERSION = 26977f37c5904ec7652c2c14c3acf016c1284217
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_SUBDIR = dist-src
@@ -25,11 +25,11 @@ DEVILUTIONX_CONF_OPTS += -DFETCHCONTENT_FULLY_DISCONNECTED=ON
 # These extension are optional and only certain Armv8-A CPUs support them.
 # Disables ZeroTier if the CPU compilation flags do not specify the "+crypto" extension.
 ifeq ($(BR2_aarch64)$(BR2_ARM_CPU_ARMV8A),yy)
-    ifneq ($(findstring +crypto,$(BR2_TARGET_OPTIMIZATION)),+crypto)
-        DEVILUTIONX_CONF_OPTS += -DDISABLE_ZERO_TIER=ON
-    endif
+	ifneq ($(findstring +crypto,$(BR2_TARGET_OPTIMIZATION)),+crypto)
+		DEVILUTIONX_CONF_OPTS += -DDISABLE_ZERO_TIER=ON
+	endif
 else ifeq ($(BR2_arm),y)
-    DEVILUTIONX_CONF_OPTS += -DDISABLE_ZERO_TIER=ON
+	DEVILUTIONX_CONF_OPTS += -DDISABLE_ZERO_TIER=ON
 endif
 
 define DEVILUTIONX_FIX_SDL2MAIN
@@ -38,7 +38,7 @@ define DEVILUTIONX_FIX_SDL2MAIN
 endef
 
 define DEVILUTIONX_BUILD_SRC_DIST
-    rm -rf $(DEVILUTIONX_DL_DIR)/git/build-src-dist/
+	rm -rf $(DEVILUTIONX_DL_DIR)/git/build-src-dist/
 	cd $(DEVILUTIONX_DL_DIR)/git && python $(DEVILUTIONX_DL_DIR)/git/tools/make_src_dist.py
 	tar -xf $(DEVILUTIONX_DL_DIR)/git/build-src-dist/devilutionx-src-*.tar.xz -C $(@D)
 	mv $(@D)/devilutionx-src-* $(@D)/dist-src

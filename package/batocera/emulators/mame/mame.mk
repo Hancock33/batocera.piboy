@@ -3,15 +3,16 @@
 # mame
 #
 ################################################################################
-# Version: Release 0.257
-MAME_VERSION = mame0257
+# Version: Release 0.258
+MAME_VERSION = mame0258
 MAME_SITE = $(call github,mamedev,mame,$(MAME_VERSION))
 MAME_DEPENDENCIES = sdl2 sdl2_ttf zlib libpng fontconfig sqlite jpeg flac rapidjson expat glm
 MAME_LICENSE = MAME
 
 MAME_CROSS_ARCH = unknown
 MAME_CROSS_OPTS = PRECOMPILE=0
-MAME_CFLAGS =
+MAME_CFLAGS = $(TARGET_OPTIMIZATION)
+MAME_LDFLAGS = -fuse-ld=mold
 
 # Limit number of jobs not to eat too much RAM....
 MAME_JOBS = $(shell expr $(shell nproc))
@@ -72,8 +73,9 @@ define MAME_BUILD_CMDS
 	cd $(@D); \
 	PATH="$(HOST_DIR)/bin:$$PATH" \
 	SYSROOT="$(STAGING_DIR)" \
-	CFLAGS="--sysroot=$(STAGING_DIR) $(MAME_CFLAGS) -fpch-preprocess"   \
-	LDFLAGS="--sysroot=$(STAGING_DIR)"  MPARAM="" \
+	CFLAGS="$(MAME_CFLAGS)" \
+	CXXFLAGS="$(MAME_CFLAGS)" \
+	LDFLAGS="--sysroot=$(STAGING_DIR) $(MAME_LDFLAGS)" \
 	PKG_CONFIG="$(HOST_DIR)/usr/bin/pkg-config --define-prefix" \
 	PKG_CONFIG_PATH="$(STAGING_DIR)/usr/lib/pkgconfig" \
 	CCACHE_SLOPPINESS="pch_defines,time_macros" \
@@ -103,7 +105,7 @@ define MAME_BUILD_CMDS
 	LDOPTS="-lasound -lfontconfig" \
 	SYMBOLS=0 \
 	STRIP_SYMBOLS=1 \
-	TOOLS=1 NOWERROR=1
+	TOOLS=1 NOWERROR=1 OPTIMIZE=s
 endef
 
 define MAME_INSTALL_TARGET_CMDS

@@ -7,7 +7,7 @@
   - ODROID-GO ULTRA
   - Orange Pi 5b
 ### Added
-- ES settings for both types of classic controllers for dolphin. 
+- ES settings for both types of classic controllers for dolphin.
 - Additional ES settings for rpcs3
 - ES settings for joystick deadzone/sensitivity for mupen64plus
 - ES settings for N64 controllers for N64 emulators.
@@ -32,6 +32,7 @@
 - Re-enabled lr-sameduck for MegaDuck with retroachievements and zip/7z support
 - initialize wheel support : new automatic collection ; es wheel icon ; wheel game database
 - guncon3 support
+- plane mode (disable wifi/bt)
 ### Fixed
 - Fix wifi/bluetooth on Tinkerboard
 - Fixed crop overscan settings for NES to work with newer core builds
@@ -64,7 +65,7 @@
 - xenia to v1.0.2805
 - xenia canary to ba936e8 (Commits on Jul 22, 2023)
 - citra to nightly-1973
-- groovy mame to 0.257
+- groovy mame to 0.258
 - libretro-mame to 0.257
 - cemu to v2.0-47
 - amiberry to 5.6.1
@@ -82,7 +83,7 @@
 - redream to 1.5.0-1079-g5ac7859
 - kodi to 20.2
 - EDuke32 to July, 3th 2023
-- OpenMSX to v19
+- OpenMSX to v19.1
 - btop to 1.2.13
 - slang and glsl shaders to July 29th 2023
 - pcsx2 to v1.7.4857 (Aug, 1st 2023)
@@ -91,8 +92,14 @@
 - commander genius to v3.4.9
 - play! to v0.62
 - Vita3K to 0.1.9
+- vcmi to 1.3.1
+- libretro-mupen64plus-next to Aug 8 build
+- raze to 1.7.1
+- gzdoom to Aug 26 build
+- libretro-fake08 to Aug 21 build
+- libretro-bsnes to Aug 18 build
 ### Dev
-- linux kernel for x86_64 to 6.4.12
+- linux kernel for x86_64 to 6.5
 - linux kernel for RPI to 6.1.47
 - linux kernel for most ARM SBCs to 6.1.49
 - linux kernel for Rockchip RK3566/RK3568 to 6.4.12
@@ -113,6 +120,8 @@
 - pacman to 5.2.2 with fix for GNU sed on batocera-makepkg
 - sound open firmware to v2.2.6
 - evsieve to v1.4.0
+- wf-recorder to 0.4.0
+- pipewire to 0.3.79
 
 # 2023/06/18 - batocera.linux 37 - Red Admiral
 ### hardware

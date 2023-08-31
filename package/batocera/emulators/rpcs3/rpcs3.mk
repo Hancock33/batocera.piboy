@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Aug 29, 2023
-RPCS3_VERSION = 565a208f2027f7e5c67bf0648cd835f7fd4fa7e0
+# Version: Commits on Aug 31, 2023
+RPCS3_VERSION = 133ddb118c4e1d67085d61e62aee3208c8ddc99f
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
@@ -31,10 +31,10 @@ RPCS3_CONF_OPTS += -DUSE_SYSTEM_SDL=ON
 RPCS3_CONF_ENV = LIBS="-ncurses -ltinfo"
 
 define RPCS3_INSTALL_EVMAPY
-    mkdir -p $(TARGET_DIR)/usr/share/evmapy
-    $(INSTALL) -D -m 0644 \
-        $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/rpcs3/evmapy.keys \
-        $(TARGET_DIR)/usr/share/evmapy/ps3.keys
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -D -m 0644 \
+		$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/rpcs3/evmapy.keys \
+		$(TARGET_DIR)/usr/share/evmapy/ps3.keys
 endef
 
 RPCS3_POST_INSTALL_TARGET_HOOKS = RPCS3_INSTALL_EVMAPY

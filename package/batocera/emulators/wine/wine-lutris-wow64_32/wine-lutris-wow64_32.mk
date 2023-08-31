@@ -266,7 +266,7 @@ endif
 
 # Cleanup final directory
 define WINE_LUTRIS_WOW64_32_REMOVE_INCLUDES_HOOK
-        rm -Rf $(TARGET_DIR)/usr/wine/lutris/include
+		rm -Rf $(TARGET_DIR)/usr/wine/lutris/include
 endef
 
 WINE_LUTRIS_WOW64_32_POST_INSTALL_TARGET_HOOKS += WINE_LUTRIS_WOW64_32_REMOVE_INCLUDES_HOOK

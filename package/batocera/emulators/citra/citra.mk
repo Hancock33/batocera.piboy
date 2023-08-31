@@ -3,8 +3,8 @@
 # citra
 #
 ################################################################################
-# Version: Commits on Aug 28, 2023
-CITRA_VERSION = 81a5e2355ac8a5a36b0b7908774f0002feb76bf3
+# Version: Commits on Aug 30, 2023
+CITRA_VERSION = 1159e4d928d1e1fa53bf83980bf700e97c2b2490
 CITRA_SITE = https://github.com/citra-emu/citra.git
 
 CITRA_SITE_METHOD=git
@@ -30,8 +30,8 @@ CITRA_CONF_OPTS += -DCITRA_WARNINGS_AS_ERRORS=OFF
 CITRA_CONF_ENV += LDFLAGS=-lpthread
 
 define CITRA_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/bin
-    mkdir -p $(TARGET_DIR)/usr/lib
+	mkdir -p $(TARGET_DIR)/usr/bin
+	mkdir -p $(TARGET_DIR)/usr/lib
 	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/citra-qt \
 		$(TARGET_DIR)/usr/bin/citra-qt
 endef

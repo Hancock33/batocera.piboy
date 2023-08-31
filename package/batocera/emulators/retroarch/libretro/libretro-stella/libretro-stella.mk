@@ -3,8 +3,8 @@
 # libretro-stella
 #
 ################################################################################
-# Version: Commits on Aug 29, 2023
-LIBRETRO_STELLA_VERSION = 1f40abef3fc2a8d4154fa9d5c94f6778df14ecdb
+# Version: Commits on Aug 30, 2023
+LIBRETRO_STELLA_VERSION = 667ea467fc414a45a4be7de595c782f8ecd51fa7
 LIBRETRO_STELLA_SITE = $(call github,stella-emu,stella,$(LIBRETRO_STELLA_VERSION))
 LIBRETRO_STELLA_LICENSE = GPLv2
 
@@ -25,7 +25,7 @@ endif
 
 define LIBRETRO_STELLA_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/src/os/libretro -f Makefile platform="$(LIBRETRO_STELLA_PLATFORM)" \
-        GIT_VERSION="-$(shell echo $(LIBRETRO_STELLA_VERSION) | cut -c 1-7)"
+		GIT_VERSION="-$(shell echo $(LIBRETRO_STELLA_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_STELLA_INSTALL_TARGET_CMDS
