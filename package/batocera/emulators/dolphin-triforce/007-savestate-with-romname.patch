@@ -51,7 +51,7 @@ index 6a6045c0f8..a4931f74d9 100644
    std::string m_gametdb_id;
    std::string m_title_name;
 diff --git a/Source/Core/Core/Core.cpp b/Source/Core/Core/Core.cpp
-index 332cc00857..acabac9b20 100644
+index 332cc00857..d5a8a99538 100644
 --- a/Source/Core/Core/Core.cpp
 +++ b/Source/Core/Core/Core.cpp
 @@ -741,10 +741,14 @@ void SaveScreenShot()
@@ -68,7 +68,7 @@ index 332cc00857..acabac9b20 100644
 -  Core::RunAsCPUThread([&name] {
 -    g_renderer->SaveScreenshot(fmt::format("{}{}.png", GenerateScreenshotFolderPath(), name));
 +  Core::RunAsCPUThread([&path, &name] {
-+    g_frame_dumper->SaveScreenshot(fmt::format("{}{}.png", path, name));
++    g_renderer->SaveScreenshot(fmt::format("{}{}.png", path, name));
    });
  }
  
