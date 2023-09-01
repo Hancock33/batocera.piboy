@@ -490,6 +490,16 @@ libretro:
     bsnes:
       features: [padtokeyboard, cheevos, netplay]
       shared: [autosave, rewind, use_guns]
+      cfeatures:
+            bsnes_video_filter:
+                prompt: VIDEO FILTERS
+                description: Apply a video filter to mimic various NTSC TV signals.
+                choices:
+                    "Off":              "None"
+                    "NTSC (RF)":        "NTSC (RF)"
+                    "NTSC (RGB)":       "NTSC (RGB)"
+                    "NTSC (S-Video)":   "NTSC (S-Video)"
+                    "NTSC (Composite)": "NTSC (Composite)"
     bsnes_hd:
       features: [padtokeyboard, cheevos, netplay]
       shared: [autosave, rewind]
@@ -5671,6 +5681,16 @@ libretro:
                 choices:
                     "Off":                                disabled
                     "On":                                 enabled
+            snes9x_blargg_filter:
+                prompt: BLARGG NTSC FILTER
+                description: Apply a video filter to mimic various NTSC TV signals.
+                choices:
+                    "Off":        "disabled"
+                    "Monochrome": "monochrome"
+                    "RF":         "rf"
+                    "RGB":        "rgb"
+                    "S-Video":    "s-video"
+                    "Composite":  "composite"
     snes9x_next:
       features: [padtokeyboard, cheevos, netplay]
       shared: [autosave, rewind, use_guns]
@@ -5728,6 +5748,16 @@ libretro:
                 choices:
                     "Off":                                disabled
                     "On":                                 enabled
+            snes9x_2010_blargg_filter:
+                prompt: BLARGG NTSC FILTER
+                description: Apply a video filter to mimic various NTSC TV signals.
+                choices:
+                    "Off":        "disabled"
+                    "Monochrome": "monochrome"
+                    "RF":         "rf"
+                    "RGB":        "rgb"
+                    "S-Video":    "s-video"
+                    "Composite":  "composite"
     supafaust:
       features: [padtokeyboard, cheevos, netplay]
       shared: [autosave, rewind]
@@ -7389,12 +7419,6 @@ dolphin_triforce:
                 "4x":  2
                 "8x":  3
                 "16x": 4
-        dual_core:
-            prompt:      DUAL CORE MODE
-            description: Usually not much faster than single core mode.
-            choices:
-                "Off": 0
-                "On":  1
         gpu_sync:
             prompt:      GPU SYNC
             description: Speed hack for dual core mode to fix some glitches.

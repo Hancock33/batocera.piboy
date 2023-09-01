@@ -634,6 +634,36 @@ msgctxt "game_options"
 msgid "REDUCE SPRITE FLICKERING"
 msgstr "SPRITE-FLIMMERN REDUZIEREN"
 
+#. TRANSLATION: libretro/bsnes, libretro/snes9x, libretro/snes9x_next
+msgctxt "game_options"
+msgid "Apply a video filter to mimic various NTSC TV signals."
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes
+msgctxt "game_options"
+msgid "VIDEO FILTERS"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes
+msgctxt "game_options"
+msgid "NTSC (RF)"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes
+msgctxt "game_options"
+msgid "NTSC (RGB)"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes
+msgctxt "game_options"
+msgid "NTSC (S-Video)"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes
+msgctxt "game_options"
+msgid "NTSC (Composite)"
+msgstr ""
+
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
 msgid "CPC MODEL"
@@ -719,7 +749,7 @@ msgctxt "game_options"
 msgid "Core-powered video filter."
 msgstr "Core-betriebener Videofilter."
 
-#. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
+#. TRANSLATION: libretro/mesens, libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia, ...
 msgctxt "game_options"
 msgid "BLARGG NTSC FILTER"
 msgstr "BLARGG NTSC FILTER"
@@ -6333,6 +6363,31 @@ msgctxt "game_options"
 msgid "Konami Justifier (P2)"
 msgstr "Konami Justifier (P2)"
 
+#. TRANSLATION: libretro/snes9x, libretro/snes9x_next
+msgctxt "game_options"
+msgid "Monochrome"
+msgstr ""
+
+#. TRANSLATION: libretro/snes9x, libretro/snes9x_next
+msgctxt "game_options"
+msgid "RF"
+msgstr ""
+
+#. TRANSLATION: libretro/snes9x, libretro/snes9x_next, redream
+msgctxt "game_options"
+msgid "RGB"
+msgstr "RGB"
+
+#. TRANSLATION: libretro/snes9x, libretro/snes9x_next
+msgctxt "game_options"
+msgid "S-Video"
+msgstr ""
+
+#. TRANSLATION: libretro/snes9x, libretro/snes9x_next, redream
+msgctxt "game_options"
+msgid "Composite"
+msgstr "Composite"
+
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
 msgid "5 MHz (Underclock)"
@@ -7940,12 +7995,12 @@ msgctxt "game_options"
 msgid "GAMECUBE PORT 4 TYPE"
 msgstr "GAMECUBE ANSCHLUSS 4 TYP"
 
-#. TRANSLATION: dolphin, dolphin_triforce
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Usually not much faster than single core mode."
 msgstr "Normalerweise nicht viel schneller als im Single-Core-Modus."
 
-#. TRANSLATION: dolphin, dolphin_triforce
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr "DUAL CORE MODUS"
@@ -10610,16 +10665,6 @@ msgstr "KABEL"
 msgctxt "game_options"
 msgid "VGA (Default)"
 msgstr "VGA (Standard)"
-
-#. TRANSLATION: redream
-msgctxt "game_options"
-msgid "RGB"
-msgstr "RGB"
-
-#. TRANSLATION: redream
-msgctxt "game_options"
-msgid "Composite"
-msgstr "Composite"
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
