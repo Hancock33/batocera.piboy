@@ -11,10 +11,14 @@ cfg_fzero = batoceraFiles.dolphinTriforceGameSettings + "/SBGG.ini"
 cfg_vs42006 = batoceraFiles.dolphinTriforceGameSettings + "/SBLL.ini"
 cfg_mkagp =batoceraFiles.dolphinTriforceGameSettings + "/SBKP.ini"
 cfg_mkagp2 = batoceraFiles.dolphinTriforceGameSettings + "/SBNL.ini"
+cfg_fzeromr = batoceraFiles.dolphinTriforceGameSettings + "/SBHA.ini"
 
 def generateGameConfig():
     if not os.path.exists(batoceraFiles.dolphinTriforceGameSettings):
         os.makedirs(batoceraFiles.dolphinTriforceGameSettings)
+    else:
+        for f in os.listdir(batoceraFiles.dolphinTriforceGameSettings):
+            os.remove(os.path.join(batoceraFiles.dolphinTriforceGameSettings, f))
 
     #F-Zero
     if not os.path.exists(cfg_fzero):
@@ -93,18 +97,7 @@ $SkipBoot
 0x80031BF0:dword:0x60000000
 0x80031BFC:dword:0x60000000
 0x800BE10C:dword:0x4800002C
-0x8009F1E0:dword:0x6000000
-[Gecko]
-$Slowdowns Fix
-041b2238 60000000
-$Link Check Skip
-04032410 60000000
-$Skip boot checks
-040320fc 60000000
-[Gecko_Enabled]
-$Slowdowns Fix
-$Link Check Skip
-$Skip boot checks""")
+0x8009F1E0:dword:0x6000000""")
 
     #Mario Kart Arcade GP2
     if not os.path.exists(cfg_mkagp2):
@@ -112,6 +105,8 @@ $Skip boot checks""")
             script.write("""[OnFrame_Enabled]
 $GameTestMode Patch
 $SeatLoopPatch
+$Disable CARD
+$99Credits
 [OnFrame]
 $GameTestMode Patch
 0x8002E340:dword:0x60000000
@@ -119,6 +114,11 @@ $GameTestMode Patch
 $SeatLoopPatch
 0x80084FC4:dword:0x4800000C
 0x80085000:dword:0x60000000
+$Disable CARD
+0x80073BF4:dword:0x98650023
+0x80073C10:dword:0x98650023
+$99Credits
+0x80690AC0:dword:0x00000063
 [Gecko]
 $Slowdowns Fix (US)
 04086150 60000000
@@ -133,9 +133,27 @@ $Link Check Skip (JPN)
 $Skip boot checks (JPN)
 0402e8b8 60000000
 [Gecko_Enabled]
-$Slowdowns Fix  (US)
+$Slowdowns Fix (US)
 $Link Check Skip (US)
 $Skip boot checks (US)
-$Slowdowns Fix  (JPN)
+$Slowdowns Fix (JPN)
 $Link Check Skip (JPN)
 $Skip boot checks (JPN)""")
+
+    #F-ZERO AX Monster Ride
+    if not os.path.exists(cfg_fzeromr):
+        with open(cfg_fzeromr, "w") as script:
+            script.write("""[OnFrame]
+$Disable Motor Setup
+0x8023A0F4:dword:0x8016B4EC
+0x8023A0F8:dword:0x8016B350
+[Gecko]
+$Bypass Cycraft
+0043137B 00000086
+$Slowdown Fix
+0043137E 00000000
+[Gecko_Enabled]
+$Bypass Cycraft
+$Slowdown Fix
+[OnFrame_Enabled]
+$Disable Motor Setup""")
