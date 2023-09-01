@@ -488,8 +488,8 @@ libretro:
                     "Off": OFF
                     "On":  ON
     bsnes:
-      features: [netplay, cheevos]
-      shared: [rewind, autosave, use_guns]
+      features: [padtokeyboard, cheevos, netplay]
+      shared: [autosave, rewind, use_guns]
       cfeatures:
             bsnes_video_filter:
                 prompt: VIDEO FILTERS
@@ -5691,7 +5691,6 @@ libretro:
                     "RGB":        "rgb"
                     "S-Video":    "s-video"
                     "Composite":  "composite"
-                
     snes9x_next:
       features: [padtokeyboard, cheevos, netplay]
       shared: [autosave, rewind, use_guns]
