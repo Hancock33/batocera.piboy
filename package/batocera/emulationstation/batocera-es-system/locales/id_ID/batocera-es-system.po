@@ -7933,12 +7933,12 @@ msgctxt "game_options"
 msgid "GAMECUBE PORT 4 TYPE"
 msgstr "TIPE GAMECUBRE - PORT 4"
 
-#. TRANSLATION: dolphin, dolphin_triforce
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Usually not much faster than single core mode."
 msgstr "Biasanya tidak cukup cepat dari mode single core"
 
-#. TRANSLATION: dolphin, dolphin_triforce
+#. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr "MODE DUAL CORE"
