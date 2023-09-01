@@ -86,12 +86,8 @@ class DolphinTriforceGenerator(Generator):
         dolphinTriforceSettings.set("Core", "EnableCheats", "True")
 
         # Dual Core
-        if system.isOptSet("dual_core") and system.getOptBoolean("dual_core"):
-            dolphinTriforceSettings.set("Core", "CPUThread", "True")
-        else:
-            dolphinTriforceSettings.set("Core", "CPUThread", "True")
-
-            dolphinTriforceSettings.set("Core", "FPRF", "True")
+        dolphinTriforceSettings.set("Core", "CPUThread", "True")
+        dolphinTriforceSettings.set("Core", "FPRF", "True")
 
         # Gpu Sync
         if system.isOptSet("gpu_sync") and system.getOptBoolean("gpu_sync"):

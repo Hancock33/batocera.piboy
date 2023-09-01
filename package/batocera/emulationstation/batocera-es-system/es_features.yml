@@ -7419,12 +7419,6 @@ dolphin_triforce:
                 "4x":  2
                 "8x":  3
                 "16x": 4
-        dual_core:
-            prompt:      DUAL CORE MODE
-            description: Usually not much faster than single core mode.
-            choices:
-                "Off": 0
-                "On":  1
         gpu_sync:
             prompt:      GPU SYNC
             description: Speed hack for dual core mode to fix some glitches.
