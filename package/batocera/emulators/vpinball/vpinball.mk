@@ -10,6 +10,7 @@ VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
 VPINBALL_DEPENDENCIES = libfreeimage libpinmame libserum libzedmd sdl2 sdl2_image sdl2_ttf
 VPINBALL_SUPPORTS_IN_SOURCE_BUILD = NO
+VPINBALL_EXTRA_DOWNLOADS = https://www.un4seen.com/files/bass24-linux.zip
 
 # handle supported target platforms
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588),y)
@@ -36,12 +37,9 @@ define VPINBALL_CMAKE_HACKS
 	cp $(@D)/standalone/cmake/$(SOURCE) $(@D)/CMakeLists.txt
 	$(SED) 's:$${CMAKE_SOURCE_DIR}/standalone/$(SOURCE_DIR)/external/include:$(STAGING_DIR)/usr/include/:g' $(@D)/CMakeLists.txt
 	$(SED) 's:$${CMAKE_SOURCE_DIR}/standalone/$(SOURCE_DIR)/external/lib/:$(STAGING_DIR)/usr/lib/:g' $(@D)/CMakeLists.txt
-	# make tmp
-	rm -rf $(@D)/tmp
-	mkdir $(@D)/tmp
 	# bass24 - this is ugly...
-	cd $(@D)/tmp && $(HOST_DIR)/bin/curl -s https://www.un4seen.com/files/bass24-linux.zip -o bass.zip
-	cd $(@D)/tmp && unzip -x bass.zip
+	rm -rf $(@D)/tmp && mkdir $(@D)/tmp
+	$(UNZIP) -o $(VPINBALL_DL_DIR)/bass24-linux.zip -d $(@D)/tmp
 	$(INSTALL) -D -m 0755 $(@D)/tmp/libs/$(ARCH)/libbass.so $(STAGING_DIR)/usr/lib
 	$(INSTALL) -D -m 0755 $(@D)/tmp/libs/$(ARCH)/libbass.so $(TARGET_DIR)/usr/lib
 endef
