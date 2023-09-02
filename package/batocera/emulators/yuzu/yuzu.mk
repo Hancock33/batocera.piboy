@@ -12,6 +12,8 @@ YUZU_LICENSE = GPLv2
 YUZU_DEPENDENCIES += fmt boost ffmpeg zstd zlib libzip lz4 catch2 sdl2 opus
 YUZU_DEPENDENCIES += qt6base qt6svg qt6tools
 YUZU_SUPPORTS_IN_SOURCE_BUILD = NO
+YUZU_TZDB_VERSION = 220816
+YUZU_EXTRA_DOWNLOADS = https://github.com/lat9nq/tzdb_to_nx/releases/download/$(YUZU_TZDB_VERSION)/$(YUZU_TZDB_VERSION).zip
 
 YUZU_CONF_ENV += LDFLAGS=-lpthread ARCHITECTURE_x86_64=1
 
@@ -43,7 +45,7 @@ endef
 
 define YUZU_DL_TZ
 	mkdir -p $(@D)/buildroot-build/externals/nx_tzdb
-	wget -O $(@D)/buildroot-build/externals/nx_tzdb/220816.zip https://github.com/lat9nq/tzdb_to_nx/releases/download/220816/220816.zip
+	cp $(YUZU_DL_DIR)/$(YUZU_TZDB_VERSION).zip $(@D)/buildroot-build/externals/nx_tzdb
 endef
 YUZU_POST_EXTRACT_HOOKS += YUZU_DL_TZ
 
