@@ -5,7 +5,7 @@
 ################################################################################
 
 WINE_PROTON_WOW64_32_VERSION = $(WINE_PROTON_VERSION)
-WINE_PROTON_WOW64_32_SOURCE = experimental-wine-$(WINE_PROTON_WOW64_32_VERSION).tar.gz
+WINE_PROTON_WOW64_32_SOURCE = experimental-wine-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_WOW64_32_SITE = https://github.com/ValveSoftware/wine/archive/refs/tags
 WINE_PROTON_WOW64_32_LICENSE = LGPL-2.1+
 WINE_PROTON_WOW64_32_LICENSE_FILES = COPYING.LIB LICENSE
@@ -23,7 +23,7 @@ define WINE_PROTON_WOW64_32_AUTOGEN
 	cd $(@D); ./tools/make_requests
 	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
 	# Add Version
-	$(SED) "s|The Wine configuration|Proton-86-$(WINE_PROTON_WOW64_32_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|The Wine configuration|Proton-86-$(WINE_PROTON_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
 	$(SED) "s|IDD_WAITDLG DIALOG 0, 0, 200, 50|IDD_WAITDLG DIALOG 0, 0, 220, 50|g" $(@D)/programs/wineboot/wineboot.rc
 endef
 
@@ -32,7 +32,7 @@ HOST_WINE_PROTON_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_PROTON_WOW64_32_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_PROTON_WOW64_32_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
-	--with-wine-tools=../host-wine-proton-$(WINE_PROTON_WOW64_32_VERSION) \
+	--with-wine-tools=../host-wine-proton-$(WINE_PROTON_VERSION) \
 	--disable-tests \
 	--disable-win64 \
 	--without-capi \
