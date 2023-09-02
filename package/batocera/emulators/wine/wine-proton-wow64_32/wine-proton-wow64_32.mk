@@ -22,6 +22,9 @@ define WINE_PROTON_WOW64_32_AUTOGEN
 	cd $(@D); autoreconf -fiv
 	cd $(@D); ./tools/make_requests
 	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
+	# Add Version
+	$(SED) "s|The Wine configuration|Proton-86-$(WINE_PROTON_WOW64_32_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|IDD_WAITDLG DIALOG 0, 0, 200, 50|IDD_WAITDLG DIALOG 0, 0, 220, 50|g" $(@D)/programs/wineboot/wineboot.rc
 endef
 
 WINE_PROTON_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_PROTON_WOW64_32_AUTOGEN
