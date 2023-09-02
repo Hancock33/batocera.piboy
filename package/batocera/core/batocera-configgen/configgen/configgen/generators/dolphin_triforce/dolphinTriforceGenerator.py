@@ -249,10 +249,10 @@ class DolphinTriforceGenerator(Generator):
         hotkeyConfig.set('Hotkeys', 'Wii/Connect Wii Remote 4', '@(Alt+F8)')
         hotkeyConfig.set('Hotkeys', 'Wii/Connect Balance Board', '@(Alt+F9)')
         # Select
-        hotkeyConfig.set('Hotkeys', 'Other State Hotkeys/Increase Selected State Slot', '@(Shift+F1)')
-        hotkeyConfig.set('Hotkeys', 'Other State Hotkeys/Decrease Selected State Slot', '@(Shift+F2)')
+        hotkeyConfig.set('Hotkeys', 'Select State/Select State Slot 1', '@(Shift+F1)')
+        hotkeyConfig.set('Hotkeys', 'Select State/Select State Slot 2', '@(Shift+F2)')
         # Load
-        hotkeyConfig.set('Hotkeys', 'State/Load from Selected Slot', 'F8')
+        hotkeyConfig.set('Hotkeys', 'Load State/Load from Selected Slot', 'F8')
         # Save State
         hotkeyConfig.set('Hotkeys', 'Save State/Save to Selected Slot', 'F5')
         # Other State Hotkeys
@@ -270,6 +270,9 @@ class DolphinTriforceGenerator(Generator):
         hotkeyConfig.set('Hotkeys', 'GBA Window Size/2x', '`KP_2`')
         hotkeyConfig.set('Hotkeys', 'GBA Window Size/3x', '`KP_3`')
         hotkeyConfig.set('Hotkeys', 'GBA Window Size/4x', '`KP_4`')
+        # Skylanders Portal
+        hotkeyConfig.set('Hotkeys', 'USB Emulation Devices/Show Skylanders Portal', '@(Ctrl+P)')
+        hotkeyConfig.set('Hotkeys', 'USB Emulation Devices/Show Infinity Base', '@(Ctrl+I)')
         #
         # Write the configuration to the file
         hotkey_path = '/userdata/system/configs/dolphin-triforce/Config/Hotkeys.ini'

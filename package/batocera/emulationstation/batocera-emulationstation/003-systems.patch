@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index 9b57c5cb..4cae13ea 100644
+index 6d8ea976..d9ebffd3 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,182 +9,274 @@ namespace PlatformIds
+@@ -9,185 +9,274 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -43,7 +43,7 @@ index 9b57c5cb..4cae13ea 100644
 -		{ "jaguar",					ATARI_JAGUAR },
 -		{ "atarijaguar",			ATARI_JAGUAR },
 -		{ "atarijaguarcd",			ATARI_JAGUAR_CD },
--		{ "xegs",				ATARI_XE },
+-		{ "xegs",				    ATARI_XE },
 -		{ "bbc",					BBC_MICRO},
 +		{ "atari2600super",			ATARI2600SUPER },
 +		{ "atlus",					ATLUS },
@@ -122,9 +122,10 @@ index 9b57c5cb..4cae13ea 100644
 +		{ "model3",					MODEL3 },
 +		{ "moonlight",				MOONLIGHT },
  		{ "msx",					MSX },
-+		{ "msx2",					MSX2 },
-+		{ "msx2+",					MSX2PLUS },
-+		{ "msxturbor",				MSXTURBOR },
+ 		{ "msx2",					MSX2 },
+ 		{ "msx2+",					MSX2_PLUS },
+-		{ "msx2turbor",				MSX_TURBO_R },
++		{ "msxturbor",				MSX_TURBO_R },
 +		{ "namco",					NAMCO },
 +		{ "namco22",				NAMCO22 },
 +		{ "naomi",					NAOMI },
@@ -198,7 +199,7 @@ index 9b57c5cb..4cae13ea 100644
  		{ "genesis",				SEGA_GENESIS },
  		{ "mastersystem",			SEGA_MASTER_SYSTEM },
 -		{ "megadrive",				SEGA_MEGA_DRIVE },
--		{ "pico",				SEGA_PICO },
+-		{ "pico",				    SEGA_PICO },
  		{ "saturn",					SEGA_SATURN },
 -		{ "sg-1000",				SEGA_SG1000 },
 -		{ "psx",					PLAYSTATION },
@@ -319,8 +320,10 @@ index 9b57c5cb..4cae13ea 100644
 +		{ "prboom",					PRBOOM },
  		{ "tyrquake",				QUAKE },
 -		{ "mrboom",					MRBOOM },
--		{ "sonicretro",					SONIC },
--		{ "cannonball",					CANNONBALL },
++		{ "megadrive",				SEGA_MEGA_DRIVE },
++		{ "sg-1000",				SEGA_SG1000 },
+ 		{ "sonicretro",				SONIC },
+-		{ "cannonball",				CANNONBALL },
 -
 -		// windows specific systems & names
 -		{ "windows",				MOONLIGHT },
@@ -344,9 +347,6 @@ index 9b57c5cb..4cae13ea 100644
 -		{ "vic20",					VIC20 },
 -		{ "c20",					VIC20 },
 -		{ "ti99",					TI99 },
-+		{ "megadrive",				SEGA_MEGA_DRIVE },
-+		{ "sg-1000",				SEGA_SG1000 },
-+		{ "sonicretro",				SONIC },
 +		{ "coco",					TANDY },
  		{ "ti99_4a",				TI99 },
 -		{ "pico8",					PICO8 },
@@ -411,10 +411,10 @@ index 9b57c5cb..4cae13ea 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index 6ad14c07..5ea4ee1a 100644
+index a00471c6..b9394762 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
-@@ -11,157 +11,248 @@ namespace PlatformIds
+@@ -11,160 +11,248 @@ namespace PlatformIds
  	{
  		PLATFORM_UNKNOWN = 0,
  
@@ -532,9 +532,9 @@ index 6ad14c07..5ea4ee1a 100644
 +		MODEL3,
 +		MOONLIGHT,
  		MSX,
-+		MSX2,
-+		MSX2PLUS,
-+		MSXTURBOR,
+ 		MSX2,
+ 		MSX2_PLUS,
+ 		MSX_TURBO_R,
 +		NAMCO,
 +		NAMCO22,
 +		NAOMI,
@@ -834,10 +834,10 @@ index 91ffed30..6989553d 100644
  	{ MSX, "113089" },
  	{ NOKIA_NGAGE, "128704" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index 9c62dbcf..60b1b1f5 100644
+index 6e03a8bb..ecc699d3 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -36,149 +36,233 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
+@@ -36,152 +36,233 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
@@ -864,6 +864,9 @@ index 9c62dbcf..60b1b1f5 100644
 -	{ XBOX, 32 },
 -	{ XBOX_360, 33 },
 -	{ MSX, 113 },
+-	{ MSX2, 116 },
+-	{ MSX2_PLUS, 117 },
+-	{ MSX_TURBO_R, 118 },
 -	{ NEOGEO, 142 },
 -	{ NEOGEO_POCKET, 25},
 -	{ NEOGEO_POCKET_COLOR, 82 },
@@ -1034,8 +1037,8 @@ index 9c62dbcf..60b1b1f5 100644
 +	{ TURBOGRAFX_CD, 114 },
 +	{ INTELLIVISION, 115 },
 +	{ MSX2, 116 },
-+	{ MSX2PLUS, 117 },
-+	{ MSXTURBOR, 118 },
++	{ MSX2_PLUS, 117 },
++	{ MSX_TURBO_R, 118 },
 +	{ GBA_EREADER, 119 },
 +	{ VTECH_VSMILE, 120 },
 +	{ TIGER_GAMECOM, 121 },

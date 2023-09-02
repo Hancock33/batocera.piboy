@@ -315,8 +315,8 @@ class DolphinGenerator(Generator):
         hotkeyConfig.set('Hotkeys', 'Wii/Connect Wii Remote 4', '@(Alt+F8)')
         hotkeyConfig.set('Hotkeys', 'Wii/Connect Balance Board', '@(Alt+F9)')
         # Select
-        hotkeyConfig.set('Hotkeys', 'Other State Hotkeys/Increase Selected State Slot', '@(Shift+F1)')
-        hotkeyConfig.set('Hotkeys', 'Other State Hotkeys/Decrease Selected State Slot', '@(Shift+F2)')
+        hotkeyConfig.set('Hotkeys', 'Select State/Select State Slot 1', '@(Shift+F1)')
+        hotkeyConfig.set('Hotkeys', 'Select State/Select State Slot 2', '@(Shift+F2)')
         # Load
         hotkeyConfig.set('Hotkeys', 'Load State/Load from Selected Slot', 'F8')
         # Save State
@@ -357,6 +357,10 @@ class DolphinGenerator(Generator):
             commandArray = ["dolphin-emu", "-b", "-e", rom]
         else:
             commandArray = ["dolphin-emu-nogui", "-e", rom]
+
+        # state_slot option
+        if system.isOptSet('state_filename'):
+            commandArray.extend(["--save_state", system.config['state_filename']])
 
         return Command.Command(array=commandArray, \
             env={ "XDG_CONFIG_HOME":batoceraFiles.CONF, \
