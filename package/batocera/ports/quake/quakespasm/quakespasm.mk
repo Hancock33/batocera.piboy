@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Sept 02, 2023
-QUAKESPASM_VERSION = 88536d92745e6e417496e9c6f11ea028b8ef8f61
+QUAKESPASM_VERSION = 5e2d5bf0aff541d47014cbb95ccb4081b9a313e1
 QUAKESPASM_SITE = $(call github,sezero,quakespasm,$(QUAKESPASM_VERSION))
 
 QUAKESPASM_DEPENDENCIES = sdl2 sdl2_image
