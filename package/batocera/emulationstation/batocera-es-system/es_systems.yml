@@ -2220,8 +2220,7 @@ msx1:
   release:              1983
   hardware:             computer
   extensions:           [dsk, mx1, rom, zip, 7z, cas, m3u, ogv, openmsx]
-  platform:             msx
-  group:                msx
+  platform:             pc
   emulators:
     libretro:
       bluemsx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BLUEMSX], incompatible_extensions: [ogv, openmsx] }
@@ -2319,8 +2318,7 @@ msx2:
   release:              1985
   hardware:             computer
   extensions:           [dsk, mx2, rom, zip, 7z, cas, m3u, openmsx]
-  platform:             msx
-  group:                msx
+  platform:             pc
   emulators:
     libretro:
       bluemsx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BLUEMSX], incompatible_extensions: [openmsx] }
@@ -2418,8 +2416,7 @@ msx2+:
   release:              1988
   hardware:             computer
   extensions:           [dsk, mx2, rom, zip, 7z, cas, m3u, openmsx]
-  platform:             msx
-  group:                msx
+  platform:             pc
   emulators:
     libretro:
       bluemsx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BLUEMSX], incompatible_extensions: [openmsx] }
@@ -2517,8 +2514,7 @@ msxturbor:
   release:              1990
   hardware:             computer
   extensions:           [dsk, m3u, mx2, rom, zip, 7z, openmsx]
-  platform:             msx
-  group:                msx
+  platform:             pc
   emulators:
     libretro:
       bluemsx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BLUEMSX], incompatible_extensions: [openmsx] }

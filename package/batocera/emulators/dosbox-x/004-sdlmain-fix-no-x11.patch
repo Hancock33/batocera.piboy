@@ -1,5 +1,5 @@
 diff --git a/src/gui/sdlmain_linux.cpp b/src/gui/sdlmain_linux.cpp
-index b22e987a8..1bba726f6 100644
+index 8e7b6cd08..20948b550 100644
 --- a/src/gui/sdlmain_linux.cpp
 +++ b/src/gui/sdlmain_linux.cpp
 @@ -24,6 +24,7 @@

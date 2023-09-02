@@ -66,7 +66,7 @@
 - xenia canary to ba936e8 (Commits on Jul 22, 2023)
 - citra to nightly-1973
 - groovy mame to 0.258
-- libretro-mame to 0.257
+- libretro-mame to 0.258
 - cemu to v2.0-47
 - amiberry to 5.6.1
 - dosbox-x to v2023.05.01
@@ -101,7 +101,7 @@
 ### Dev
 - linux kernel for x86_64 to 6.5
 - linux kernel for RPI to 6.1.47
-- linux kernel for most ARM SBCs to 6.1.50
+- linux kernel for most ARM SBCs to 6.1.51
 - linux kernel for Rockchip RK3566/RK3568 to 6.4.12
 - xf86-video-amdgpu to 23.0.0
 - xf86-video-ati to 22.0.0

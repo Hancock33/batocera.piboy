@@ -3,8 +3,8 @@
 # fheroes2
 #
 ################################################################################
-# Version: Commits on Sept 01, 2023
-FHEROES2_VERSION = 7dd15ae387e47d18edbf3377db4300c00d2d8016
+# Version: Commits on Sept 02, 2023
+FHEROES2_VERSION = 280e9be0da54c0ed98626bf079f0efd00793dc04
 FHEROES2_SITE = $(call github,ihhub,fheroes2,$(FHEROES2_VERSION))
 FHEROES2_DEPENDENCIES = sdl2 sdl2_image
 
