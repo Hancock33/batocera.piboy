@@ -1,10 +1,10 @@
 diff --git a/src/gui/sdlmain.cpp b/src/gui/sdlmain.cpp
-index 27ca9ae17..f2842157f 100644
+index aedb5d82f..8bfb4642b 100644
 --- a/src/gui/sdlmain.cpp
 +++ b/src/gui/sdlmain.cpp
-@@ -819,7 +819,7 @@ const char *modifier;
+@@ -830,7 +830,7 @@ const char *modifier;
  #elif defined(HAIKU)
- #define DEFAULT_CONFIG_FILE "~/config/settings/dosbox-x/dosbox-x.conf"
+ #define DEFAULT_CONFIG_FILE             "~/config/settings/dosbox-x/dosbox-x.conf"
  #else /*linux freebsd*/
 -# define DEFAULT_CONFIG_FILE            "/.dosboxrc"
 +# define DEFAULT_CONFIG_FILE            "/dosboxx.conf"
