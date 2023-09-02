@@ -13,20 +13,22 @@ WINE_LUTRIS_WOW64_32_CPE_ID_VENDOR = winehq
 WINE_LUTRIS_WOW64_32_SELINUX_MODULES = wine
 WINE_LUTRIS_WOW64_32_DEPENDENCIES = host-bison host-flex host-wine-lutris
 HOST_WINE_LUTRIS_WOW64_32_DEPENDENCIES = host-bison host-flex host-clang host-lld
+WINE_LUTRIS_WOW64_32_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/v$(WINE_LUTRIS_WOW64_32_VERSION)/wine-staging-v$(WINE_LUTRIS_WOW64_32_VERSION).tar.gz
 
 # Configure Lutris
 define WINE_LUTRIS_WOW64_32_AUTOGEN
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/lutris
 	# Use Staging Patches
-	curl -L https://github.com/wine-staging/wine-staging/archive/v$(WINE_LUTRIS_WOW64_32_VERSION)/wine-staging-v$(WINE_LUTRIS_WOW64_32_VERSION).tar.gz \
-	-o $(@D)/wine-staging-v$(WINE_LUTRIS_WOW64_32_VERSION).tar.gz
-	tar -xf $(@D)/wine-staging-v$(WINE_LUTRIS_WOW64_32_VERSION).tar.gz -C $(@D)
+	tar -xf $(WINE_LUTRIS_DL_DIR)/wine-staging-v$(WINE_LUTRIS_WOW64_32_VERSION).tar.gz -C $(@D)
 	cd $(@D); ./wine-staging-$(WINE_LUTRIS_WOW64_32_VERSION)/staging/patchinstall.py --all
 	# Autotools generation
 	cd $(@D); autoreconf -fiv
 	cd $(@D); ./tools/make_requests
 	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
+	# Add Version
+	$(SED) "s|The Wine configuration|Wine-86-$(WINE_LUTRIS_WOW64_32_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|IDD_WAITDLG DIALOG 0, 0, 200, 50|IDD_WAITDLG DIALOG 0, 0, 220, 50|g" $(@D)/programs/wineboot/wineboot.rc
 endef
 
 WINE_LUTRIS_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_LUTRIS_WOW64_32_AUTOGEN
