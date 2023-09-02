@@ -7,7 +7,7 @@
 RAZE_VERSION = 4e53f3bd81e0dacc447a1acdf54bc4bacd7a820c
 RAZE_SITE = $(call github,ZDoom,Raze,$(RAZE_VERSION))
 RAZE_LICENSE = GPLv2
-RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic
+RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic webp
 RAZE_SUPPORTS_IN_SOURCE_BUILD = NO
 
 RAZE_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
