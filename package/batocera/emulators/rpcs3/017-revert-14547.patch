@@ -1,5 +1,5 @@
 diff --git a/rpcs3/Emu/Cell/PPUAnalyser.cpp b/rpcs3/Emu/Cell/PPUAnalyser.cpp
-index 074b2dd89..f402ddf43 100644
+index 2968190f4..3ba3cab56 100644
 --- a/rpcs3/Emu/Cell/PPUAnalyser.cpp
 +++ b/rpcs3/Emu/Cell/PPUAnalyser.cpp
 @@ -1395,7 +1395,7 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
@@ -9,7 +9,7 @@ index 074b2dd89..f402ddf43 100644
 -				else if (type & ppu_itype::trap)
 +				else if (type == ppu_itype::TW || type == ppu_itype::TWI || type == ppu_itype::TD || type == ppu_itype::TDI)
  				{
- 					if (op.opcode != ppu_instructions::TRAP())
+ 					if (op.bo != 31)
  					{
 @@ -1623,8 +1623,6 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
  		end = 0;
