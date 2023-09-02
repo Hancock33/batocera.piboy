@@ -3,7 +3,7 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Aug 30, 2023
+# Version: Commits on Aug 31, 2023
 WINE_PROTON_VERSION = 8.0-20230831
 WINE_PROTON_SOURCE = experimental-wine-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = https://github.com/ValveSoftware/wine/archive/refs/tags
