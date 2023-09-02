@@ -3,7 +3,7 @@
 # wine-lutris-wow64_32
 #
 ################################################################################
-# Version: Commits on Aug 18, 2023
+# Version: Commits on Sept 01, 2023
 WINE_LUTRIS_WOW64_32_VERSION = 8.14
 WINE_LUTRIS_WOW64_32_SOURCE = wine-$(WINE_LUTRIS_VERSION).tar.gz
 WINE_LUTRIS_WOW64_32_SITE = https://github.com/wine-mirror/wine/archive/refs/tags
