@@ -16,15 +16,16 @@ HOST_WINE_PROTON_WOW64_32_DEPENDENCIES = host-bison host-flex host-clang host-ll
 
 # Configure Proton
 define WINE_PROTON_WOW64_32_AUTOGEN
+	# Add Version
+	$(SED) "s|The Wine configuration|Proton-86-$(WINE_PROTON_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|IDD_WAITDLG DIALOG 0, 0, 200, 50|IDD_WAITDLG DIALOG 0, 0, 300, 50|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|8.0|$(WINE_PROTON_VERSION)|g" $(@D)/VERSION
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/proton
 	# Autotools generation
 	cd $(@D); autoreconf -fiv
 	cd $(@D); ./tools/make_requests
 	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
-	# Add Version
-	$(SED) "s|The Wine configuration|Proton-86-$(WINE_PROTON_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
-	$(SED) "s|IDD_WAITDLG DIALOG 0, 0, 200, 50|IDD_WAITDLG DIALOG 0, 0, 220, 50|g" $(@D)/programs/wineboot/wineboot.rc
 endef
 
 WINE_PROTON_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_PROTON_WOW64_32_AUTOGEN
