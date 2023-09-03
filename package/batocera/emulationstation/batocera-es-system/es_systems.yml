@@ -1156,7 +1156,8 @@ atarist:
   extensions:           [st, msa, stx, dim, ipf, m3u, zip, 7z, hd]
   emulators:
     libretro:
-      hatari:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_HATARI], incompatible_extensions: [ hd ] }
+      hatari:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_HATARI],  incompatible_extensions: [ hd ] }
+      hatarib:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_HATARIB], incompatible_extensions: [ hd ] }
     hatari:
       hatari:           { requireAnyOf: [BR2_PACKAGE_HATARI] }
 
