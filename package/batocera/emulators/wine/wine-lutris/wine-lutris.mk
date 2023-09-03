@@ -17,6 +17,9 @@ WINE_LUTRIS_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archi
 
 # Configure Lutris
 define WINE_LUTRIS_AUTOGEN
+	# Add Version
+	$(SED) "s|The Wine configuration|Wine-86_64-$(WINE_LUTRIS_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|IDD_WAITDLG DIALOG 0, 0, 200, 50|IDD_WAITDLG DIALOG 0, 0, 300, 50|g" $(@D)/programs/wineboot/wineboot.rc
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/lutris
 	# Use Staging Patches
@@ -26,9 +29,6 @@ define WINE_LUTRIS_AUTOGEN
 	cd $(@D); autoreconf -fiv
 	cd $(@D); ./tools/make_requests
 	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
-	# Add Version
-	$(SED) "s|The Wine configuration|Wine-86_64-$(WINE_LUTRIS_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
-	$(SED) "s|IDD_WAITDLG DIALOG 0, 0, 200, 50|IDD_WAITDLG DIALOG 0, 0, 220, 50|g" $(@D)/programs/wineboot/wineboot.rc
 endef
 
 WINE_LUTRIS_PRE_CONFIGURE_HOOKS += WINE_LUTRIS_AUTOGEN
