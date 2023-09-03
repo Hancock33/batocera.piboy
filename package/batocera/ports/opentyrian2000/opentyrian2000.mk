@@ -9,6 +9,7 @@ OPENTYRIAN2000_SITE = $(call github,KScl,opentyrian2000,$(OPENTYRIAN2000_VERSION
 
 OPENTYRIAN2000_DEPENDENCIES = sdl2 sdl2_mixer sdl2_ttf openal
 OPENTYRIAN2000_LICENSE = GPL-2.0
+OPENTYRIAN2000_EXTRA_DOWNLOADS = https://www.camanis.net/tyrian/tyrian2000.zip
 
 define OPENTYRIAN2000_BUILD_CMDS
 	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
@@ -21,9 +22,7 @@ endef
 define OPENTYRIAN2000_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/opentyrian2000 -D $(TARGET_DIR)/usr/bin/opentyrian2000
 	# download datafiles
-	mkdir -p $(@D)/data
-	curl -L https://www.camanis.net/tyrian/tyrian2000.zip -o $(@D)/data/tyrian2000.zip
-	$(UNZIP) -q $(@D)/data/tyrian2000.zip -d $(TARGET_DIR)/usr/share
+	$(UNZIP) -o $(OPENTYRIAN2000_DL_DIR)/tyrian2000.zip -d $(TARGET_DIR)/usr/share
 	# install media
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/opentyrian
 	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/opentyrian2000/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/opentyrian/
