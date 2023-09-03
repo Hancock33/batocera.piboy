@@ -12832,12 +12832,12 @@ msgctxt "keys_files"
 msgid "Emulator configuration"
 msgstr ""
 
-#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, triforce.dolphin_triforce.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys
 msgctxt "keys_files"
 msgid "Select State/Select State Slot 1"
 msgstr ""
 
-#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys, triforce.dolphin_triforce.keys
+#. TRANSLATION: wiiware.dolphin-emu.keys, gamecube.dolphin.keys, wii.dolphin.keys
 msgctxt "keys_files"
 msgid "Select State/Select State Slot 2"
 msgstr ""
@@ -12909,22 +12909,22 @@ msgstr "Capture d'écran"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
-msgid "Move Forward / Up"
+msgid "Change View 3 / Up"
 msgstr ""
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
-msgid "Move Back / Down"
+msgid "Change View 4 / Down"
 msgstr ""
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
-msgid "Move Left"
+msgid "Change View 2 / Left"
 msgstr ""
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
-msgid "Move Right"
+msgid "Change View 1 / Right"
 msgstr ""
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
@@ -12939,37 +12939,42 @@ msgstr ""
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
-msgid "Break / Shoot"
+msgid "Paddle Left / Long Pass"
 msgstr ""
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
-msgid "Accelerate  / Short Pass"
+msgid "Paddle Right"
 msgstr ""
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
-msgid "Action / Long Pass"
+msgid "Brake / Shoot"
 msgstr ""
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
-msgid "Steer Left"
+msgid "Gas / Accelerate / Short Pass"
 msgstr ""
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
-msgid "Open Dolphin-triforce's menu"
-msgstr "Ouvrir le menu de Dolphin-triforce"
+msgid "Boost"
+msgstr ""
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
-msgid "State/Save to Selected Slot"
+msgid "Long Pass"
 msgstr ""
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
 msgid "Test Button"
+msgstr ""
+
+#. TRANSLATION: triforce.dolphin_triforce.keys
+msgctxt "keys_files"
+msgid "State/Save to Selected Slot"
 msgstr ""
 
 #. TRANSLATION: 3ds.citra.keys
@@ -13216,6 +13221,10 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Open"
 msgstr ""
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Ouvrir le menu de Dolphin-triforce"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
