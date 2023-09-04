@@ -1314,7 +1314,7 @@ msgid ""
 "May not work well on all hardware. Hybrid is preferred, where supported."
 msgstr "可能无法在所有硬件上正常工作。如果支持的话，Hybrid将是首选的。"
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/same_cdi, libretro/same_cdi, libretro/mame, ...
+#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, libretro/same_cdi, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "高级选项"
@@ -13205,10 +13205,6 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
-#~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "打开Dolphin triforce的菜单"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr "如果核心支持，存储过去的状态以实时回放."
@@ -13323,6 +13319,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
 #~ msgstr "下一个光盘（m3u）"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "打开Dolphin triforce的菜单"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"

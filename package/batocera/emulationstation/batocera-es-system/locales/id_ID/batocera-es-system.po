@@ -1347,7 +1347,7 @@ msgstr ""
 "Mungkin tidak berfungsi dengan baik disemua hardware, Hibrid lebih disukai, "
 "bila di dukung."
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/same_cdi, libretro/same_cdi, libretro/mame, ...
+#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, libretro/same_cdi, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "PENGATURAN LANJUTAN"
