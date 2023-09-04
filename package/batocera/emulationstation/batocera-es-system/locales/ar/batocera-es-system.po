@@ -1360,7 +1360,7 @@ msgid ""
 msgstr ""
 "قد لا تعمل بشكل جيد على جميع الأجهزة. يُفضل الهجين(Hybrid)، حيث يتم دعمه."
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/same_cdi, libretro/same_cdi, libretro/mame, ...
+#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, libretro/same_cdi, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "الإعدادات المتقدمة"

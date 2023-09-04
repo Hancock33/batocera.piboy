@@ -1324,7 +1324,7 @@ msgid ""
 msgstr ""
 "うまく機能しない場合があります。対応している場合は、ハイブリッドを推奨します"
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/same_cdi, libretro/same_cdi, libretro/mame, ...
+#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, libretro/same_cdi, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "詳細設定"
@@ -13313,10 +13313,6 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
-#~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Dolphin-triforce　メニューを開く"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
@@ -13433,6 +13429,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
 #~ msgstr "次のディスク (m3u)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Dolphin-triforce　メニューを開く"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"

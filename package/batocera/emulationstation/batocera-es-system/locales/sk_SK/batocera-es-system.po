@@ -1339,7 +1339,7 @@ msgstr ""
 "Nemusí fungovať dobre na všetkých hardvéroch. Hybrid je preferovaný, ak je "
 "podporovaný."
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/same_cdi, libretro/same_cdi, libretro/mame, ...
+#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, libretro/same_cdi, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "Pokročilé voľby"
@@ -13354,10 +13354,6 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
-#~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Otvoriť ponuku Dolphin triforce"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
@@ -13477,6 +13473,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
 #~ msgstr "Ďalší disk (m3u)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Otvoriť ponuku Dolphin triforce"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"

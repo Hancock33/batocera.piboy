@@ -1353,7 +1353,7 @@ msgstr ""
 "Może nie działać dobrze na każdym sprzęcie. Preferowany jest tryb hybrydowy, "
 "tam gdzie jest obsługiwany."
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/same_cdi, libretro/same_cdi, libretro/mame, ...
+#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, libretro/same_cdi, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "OPCJE ZAAWANSOWANE"
@@ -13436,10 +13436,6 @@ msgctxt "keys_files"
 msgid "Open"
 msgstr ""
 
-#~ msgctxt "keys_files"
-#~ msgid "Open Dolphin-triforce's menu"
-#~ msgstr "Otwarcie menu Dolphin-triforce"
-
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
@@ -13563,6 +13559,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
 #~ msgstr "Następny dysk (m3u)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Open Dolphin-triforce's menu"
+#~ msgstr "Otwarcie menu Dolphin-triforce"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"

@@ -1323,7 +1323,7 @@ msgid ""
 msgstr ""
 "Werkt niet goed op alle hardware. Hybride is geprefereerd, waar ondersteund."
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/same_cdi, libretro/same_cdi, libretro/mame, ...
+#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, libretro/same_cdi, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr ""

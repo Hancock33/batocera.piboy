@@ -1349,7 +1349,7 @@ msgstr ""
 "Tüm donanımlarda iyi çalışmayabilir. Desteklendiği durumlarda hibrit tercih "
 "edilir."
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/same_cdi, libretro/same_cdi, libretro/mame, ...
+#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, libretro/same_cdi, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "GELİŞMİŞ AYARLAR"
