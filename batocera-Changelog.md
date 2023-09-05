@@ -70,7 +70,7 @@
 - libretro-mame to 0.258
 - cemu to v2.0-47
 - amiberry to 5.6.1
-- dosbox-x to v2023.05.01
+- dosbox-x to v2023.09.01
 - tsugaru to v20230722
 - dolphin to 5.0-19864
 - duckstation to Aug 4, 2023 build
@@ -113,7 +113,7 @@
 - vulkan stack to 1.3.257
 - SDL2 to 2.28.2
 - nvidia production driver to 535.104.05
-- faudio to 23.08
+- faudio to 23.09
 - llvm to 16.0.6
 - Buildroot to 2023.05.01
 - Preliminary support for Khadas VIM4, Khadas VIM1S & Khadas VIM3L
@@ -123,6 +123,8 @@
 - evsieve to v1.4.0
 - wf-recorder to 0.4.0
 - pipewire to 0.3.79
+- dxvk to 2.3
+- winetricks to 20230212
 
 # 2023/06/18 - batocera.linux 37 - Red Admiral
 ### hardware
