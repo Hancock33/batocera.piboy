@@ -1,8 +1,8 @@
 diff --git a/es-core/src/InputManager.cpp b/es-core/src/InputManager.cpp
-index 987e394..6555688 100644
+index 1576b2b4..8012af2a 100644
 --- a/es-core/src/InputManager.cpp
 +++ b/es-core/src/InputManager.cpp
-@@ -1244,7 +1244,7 @@ void InputManager::updateBatteryLevel(int id, const std::string& device, const s
+@@ -1243,7 +1243,7 @@ void InputManager::updateBatteryLevel(int id, const std::string& device, const s
  		{
  			if (!devicePath.empty())
  			{
@@ -11,7 +11,7 @@ index 987e394..6555688 100644
  				{
  					config->updateBatteryLevel(level);
  					changed = true;
-@@ -1252,7 +1252,7 @@ void InputManager::updateBatteryLevel(int id, const std::string& device, const s
+@@ -1251,7 +1251,7 @@ void InputManager::updateBatteryLevel(int id, const std::string& device, const s
  			}
  			else
  			{
