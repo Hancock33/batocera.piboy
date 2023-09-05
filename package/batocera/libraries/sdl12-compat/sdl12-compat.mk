@@ -3,8 +3,8 @@
 # sdl12_compat
 #
 ################################################################################
-# Version: Commits on Aug 26, 2023
-SDL12_COMPAT_VERSION = 1.2.64-24-ge64f78dd5309ac632398f19998e47c3d0307a82d
+# Version: Commits on Sept 04, 2023
+SDL12_COMPAT_VERSION = 1.2.64-25-g9359cfa28993dca770fd2079351c4c8029a786c2
 SDL12_COMPAT_SITE = $(call github,libsdl-org,sdl12-compat,$(SDL12_COMPAT_VERSION))
 
 SDL12_COMPAT_DEPENDENCIES += sdl2
