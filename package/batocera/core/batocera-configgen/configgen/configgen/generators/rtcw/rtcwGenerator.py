@@ -12,7 +12,7 @@ rtcw_dst = "/userdata/roms/ports/rtcw/main"
 
 class RtcwGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, gameResolution):
+    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         gameResolution = videoMode.getCurrentResolution()
         commandArray = ["iowolfsp", "+set", "r_mode", "-1", "+set" , "r_fullscreen", "1", "+set", "r_customwidth", str(gameResolution["width"]), "+set", "r_customheight",str(gameResolution["height"]), "+set", "r_swapInterval", "1"]
 

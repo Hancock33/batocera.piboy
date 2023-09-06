@@ -7,7 +7,7 @@ import controllersConfig
 
 class VoidswGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, gameResolution):
+    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         addon = "-addon0"
         if (rom.__contains__("WD")):
             addon = "-addon1"

@@ -7,7 +7,7 @@ import os
 
 class BbjaGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, gameResolution):
+    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         commandArray = ["bbja", "--datapath=/userdata/roms/ports/bbja", "--fullscreen"]
 
         return Command.Command(

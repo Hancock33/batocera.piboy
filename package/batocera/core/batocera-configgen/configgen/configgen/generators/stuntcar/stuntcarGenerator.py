@@ -7,7 +7,7 @@ import os
 
 class StuntcarGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, gameResolution):
+    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         os.chdir("/usr/share/stuntcar")
         commandArray = ["/usr/share/stuntcar/stuntcar", "-f"]
 

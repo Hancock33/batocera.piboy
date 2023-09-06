@@ -7,7 +7,7 @@ import controllersConfig
 
 class AvpGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, gameResolution):
+    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         commandArray = ["avp"]
 
         return Command.Command(
