@@ -1315,7 +1315,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_XBOX_XCLOUD_CLIENT                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                            # Xbox Cloud Gaming
 
     # Symbian OS / Nokia N-Gage emulator
-    select BR2_PACKAGE_EKA2L1		    if BR2_x86_64 # depends on X11 and Qt6 (mostly)
+    #select BR2_PACKAGE_EKA2L1		                        if BR2_x86_64 # depends on X11 and Qt6 (mostly)
 
     help
         Emulators under development (Experimental)
