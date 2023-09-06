@@ -1,5 +1,5 @@
 diff --git a/es-app/src/CustomFeatures.cpp b/es-app/src/CustomFeatures.cpp
-index c53310e0..a1e7e463 100644
+index 0d243b88..910d3617 100644
 --- a/es-app/src/CustomFeatures.cpp
 +++ b/es-app/src/CustomFeatures.cpp
 @@ -39,6 +39,8 @@ EmulatorFeatures::Features EmulatorFeatures::parseFeatures(const std::string fea
@@ -10,8 +10,8 @@ index c53310e0..a1e7e463 100644
 +		if (trim == "framecount_show") ret = ret | EmulatorFeatures::Features::framecount_show;
  		if (trim == "smooth") ret = ret | EmulatorFeatures::Features::smooth;
  		if (trim == "shaders") ret = ret | EmulatorFeatures::Features::shaders;
- 		if (trim == "pixel_perfect") ret = ret | EmulatorFeatures::Features::pixel_perfect;
-@@ -52,6 +54,10 @@ EmulatorFeatures::Features EmulatorFeatures::parseFeatures(const std::string fea
+ 		if (trim == "videofilters") ret = ret | EmulatorFeatures::Features::videofilters;
+@@ -53,6 +55,10 @@ EmulatorFeatures::Features EmulatorFeatures::parseFeatures(const std::string fea
  		if (trim == "videomode") ret = ret | EmulatorFeatures::Features::videomode;
  		if (trim == "colorization") ret = ret | EmulatorFeatures::Features::colorization;
  		if (trim == "autocontrollers") ret = ret | EmulatorFeatures::Features::autocontrollers;
@@ -23,28 +23,28 @@ index c53310e0..a1e7e463 100644
  
  	return ret;
 diff --git a/es-app/src/CustomFeatures.h b/es-app/src/CustomFeatures.h
-index 26e4f3ed..42cc07dd 100644
+index a8f3dbfa..7e1fd314 100644
 --- a/es-app/src/CustomFeatures.h
 +++ b/es-app/src/CustomFeatures.h
-@@ -89,7 +89,12 @@ public:
- 		padTokeyboard = 65536,
+@@ -90,7 +90,12 @@ public:
  		cheevos = 131072,
  		autocontrollers = 262144,
+ 		videofilters = 524288,
 -
-+		framecount_show = 524288,
 +		fps_show = 1048576,
 +		gfxbackend = 2097152,
 +		audio_driver = 4194304,
 +		input_driver = 8388608,
 +		input_joypad_driver = 16777216,
++		framecount_show = 33554432,
  		all = 0x0FFFFFFF
  	};
  
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 2d563f30..47ced05c 100644
+index d3ac8d32..000a46aa 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
-@@ -1898,7 +1898,7 @@ void GuiMenu::openGamesSettings()
+@@ -1911,7 +1911,7 @@ void GuiMenu::openGamesSettings()
  	}
  	
  
@@ -53,7 +53,7 @@ index 2d563f30..47ced05c 100644
  
  	// Screen ratio choice
  	if (!hasGlobalFeature("ratio"))
-@@ -1916,6 +1916,61 @@ void GuiMenu::openGamesSettings()
+@@ -1929,6 +1929,61 @@ void GuiMenu::openGamesSettings()
  		s->addSaveFunc([this, videoModeOptionList] { SystemConf::getInstance()->set("global.videomode", videoModeOptionList->getSelected()); });
  	}
  
