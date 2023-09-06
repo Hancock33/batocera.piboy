@@ -3,17 +3,11 @@
 # scummvm
 #
 ################################################################################
-# Version: Commits on Sept 03, 2023
-SCUMMVM_VERSION = 418683c96681e970a948d5070c4d3d1f9cce9569
+# Version: Commits on Sept 06, 2023
+SCUMMVM_VERSION = 95fc3b8c423b59f8749aba7e05f13e4b266b7714
 SCUMMVM_SITE = $(call github,scummvm,scummvm,$(SCUMMVM_VERSION))
 SCUMMVM_LICENSE = GPLv2
-SCUMMVM_DEPENDENCIES = sdl2 zlib libmpeg2 libogg libvorbis flac libmad libpng libtheora faad2 freetype
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
-	SCUMMVM_DEPENDENCIES += libjpeg-bato
-else
-	SCUMMVM_DEPENDENCIES += jpeg
-endif
+SCUMMVM_DEPENDENCIES += sdl2 zlib libmpeg2 libogg libvorbis flac libmad libpng libtheora faad2 freetype libjpeg-bato
 
 SCUMMVM_ADDITIONAL_FLAGS= -I$(STAGING_DIR)/usr/include -lpthread -lm -L$(STAGING_DIR)/usr/lib -lGLESv2 -lEGL
 

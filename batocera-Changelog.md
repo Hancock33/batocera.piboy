@@ -17,7 +17,7 @@
 - libretro core openlara, An original Tomb Raider port
 - Mosquitto client command line tools
 - ES you can now change the resolution from developer menu
-- Xenia canary can now apply patches
+- Xenia canary can now apply patches and load ZAR (ZArchive) files
 - Raze source port enabled for AArch64: Duke Nukem 3D, Shadow Warrior, Blood, etc.
 - Vitaquake2 libretro core enabled for AArch64
 - Ioquake3 to ports, An updated Quake III engine
@@ -64,13 +64,13 @@
 - Model2 start and coins now mapped on light guns when playing gun games
 ### Updated
 - xenia to v1.0.2805
-- xenia canary to ba936e8 (Commits on Jul 22, 2023)
+- xenia canary to 9554f82 (Commits on Sep 4, 2023)
 - citra to nightly-1973
 - groovy mame to 0.258
 - libretro-mame to 0.258
 - cemu to v2.0-47
 - amiberry to 5.6.1
-- dosbox-x to v2023.05.01
+- dosbox-x to v2023.09.01
 - tsugaru to v20230722
 - dolphin to 5.0-19864
 - duckstation to Aug 4, 2023 build
@@ -113,7 +113,7 @@
 - vulkan stack to 1.3.257
 - SDL2 to 2.28.2
 - nvidia production driver to 535.104.05
-- faudio to 23.08
+- faudio to 23.09
 - llvm to 16.0.6
 - Buildroot to 2023.05.01
 - Preliminary support for Khadas VIM4, Khadas VIM1S & Khadas VIM3L
@@ -123,6 +123,8 @@
 - evsieve to v1.4.0
 - wf-recorder to 0.4.0
 - pipewire to 0.3.79
+- dxvk to 2.3
+- winetricks to 20230212
 
 # 2023/06/18 - batocera.linux 37 - Red Admiral
 ### hardware

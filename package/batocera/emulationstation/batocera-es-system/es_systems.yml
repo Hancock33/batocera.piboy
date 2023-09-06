@@ -1153,13 +1153,23 @@ atarist:
   manufacturer:         Atari
   release:              1985
   hardware:             computer
-  extensions:           [st, msa, stx, dim, ipf, m3u, zip, 7z, hd]
+  extensions:           [7z, dim, gemdos, hd, ipf, m3u, msa, stx, zip, st]
+
   emulators:
     libretro:
-      hatari:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_HATARI],  incompatible_extensions: [ hd ] }
-      hatarib:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_HATARIB], incompatible_extensions: [ hd ] }
+      hatari:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_HATARI],  incompatible_extensions: [ gemdos, hd ] }
+      hatarib:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_HATARIB], incompatible_extensions: [ gemdos, hd ] }
     hatari:
       hatari:           { requireAnyOf: [BR2_PACKAGE_HATARI] }
+
+  comment_en:           |
+                        To enable GEMDOS support within the non-libretro version of Hatari.
+                        Create a directory within the roms folder that has a .gemdos extension.
+                        i.e. /userdata/roms/atarist/<drive name>.gemdos
+  comment_fr:           |
+                        Pour activer le support GEMDOS dans la version non libretro de Hatari.
+                        Créez un répertoire dans le dossier roms portant une extension .gemdos.
+                        c'est-à-dire /userdata/roms/atarist/<nom du lecteur>.gemdos
 
 jaguar:
   name:                 Jaguar
@@ -2581,10 +2591,10 @@ xbox360:
   manufacturer:         Microsoft
   release:              2005
   hardware:             console
-  extensions:           [iso, xex, xbox360, squashfs]
+  extensions:           [iso, xex, xbox360, squashfs, zar]
   emulators:
     xenia:
-      xenia:            { requireAnyOf: [BR2_PACKAGE_XENIA] }
+      xenia:            { requireAnyOf: [BR2_PACKAGE_XENIA], incompatible_extensions: [zar] }
     xenia-canary:
       xenia-canary:     { requireAnyOf: [BR2_PACKAGE_XENIA_CANARY] }
   comment_en:           |

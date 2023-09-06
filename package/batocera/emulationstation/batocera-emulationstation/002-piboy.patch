@@ -29,7 +29,7 @@ index 1247627c..47b19f1f 100644
  if(DISABLE_KODI)
    MESSAGE("Kodi disabled")
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 2d563f30..6592a6aa 100644
+index 000a46aa..8b08b6b3 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -73,8 +73,15 @@
@@ -108,10 +108,10 @@ index 2d563f30..6592a6aa 100644
  
  	mWindow->pushGui(updateGui);
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
-index e0919f2e..d41511d5 100644
+index 02024860..a42f571b 100644
 --- a/es-core/src/utils/Platform.cpp
 +++ b/es-core/src/utils/Platform.cpp
-@@ -153,6 +153,8 @@ namespace Utils
+@@ -168,6 +168,8 @@ namespace Utils
  		{
  #ifdef WIN32 // windows
  			return system("shutdown -s -t 0");
@@ -120,7 +120,7 @@ index e0919f2e..d41511d5 100644
  #else // osx / linux	
  			return system("shutdown -h now");
  #endif
-@@ -162,6 +164,8 @@ namespace Utils
+@@ -177,6 +179,8 @@ namespace Utils
  		{
  #ifdef WIN32 // windows	
  			return system("shutdown -r -t 0");
@@ -129,7 +129,7 @@ index e0919f2e..d41511d5 100644
  #else // osx / linux	
  			return system("shutdown -r now");
  #endif
-@@ -383,9 +387,20 @@ namespace Utils
+@@ -398,9 +402,20 @@ namespace Utils
  				std::string fuelgaugeRootPath;
  				std::string chargerRootPath;
  
@@ -151,7 +151,7 @@ index e0919f2e..d41511d5 100644
  					if ((Utils::String::toLower(file).find("/bat") != std::string::npos) && (batteryRootPath.empty()))
  						batteryRootPath = file;
  
-@@ -394,7 +409,8 @@ namespace Utils
+@@ -409,7 +424,8 @@ namespace Utils
  
  					if ((Utils::String::toLower(file).find("charger") != std::string::npos) && (chargerRootPath.empty()))
  						chargerRootPath = file;
@@ -161,7 +161,7 @@ index e0919f2e..d41511d5 100644
  
  				// If there's no battery device, look for discrete charger and fuel gauge
  				if (batteryRootPath.empty())
-@@ -418,8 +434,13 @@ namespace Utils
+@@ -433,8 +449,13 @@ namespace Utils
  				}
  				else
  				{
@@ -177,7 +177,7 @@ index e0919f2e..d41511d5 100644
  				}
  			}
  
-@@ -432,9 +453,13 @@ namespace Utils
+@@ -447,9 +468,13 @@ namespace Utils
  			else
  			{
  				ret.hasBattery = true;

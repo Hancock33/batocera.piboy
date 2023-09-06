@@ -3,8 +3,8 @@
 # raze
 #
 ################################################################################
-# Version: Commits on Sept 02, 2023
-RAZE_VERSION = 4e53f3bd81e0dacc447a1acdf54bc4bacd7a820c
+# Version: Commits on Sept 05, 2023
+RAZE_VERSION = fa7a16a77512a92002a630a9370bf1676cdb5271
 RAZE_SITE = $(call github,ZDoom,Raze,$(RAZE_VERSION))
 RAZE_LICENSE = GPLv2
 RAZE_DEPENDENCIES = sdl2 bzip2 fluidsynth openal mesa3d libglu libglew zmusic webp
@@ -18,10 +18,19 @@ RAZE_CONF_OPTS += -DINSTALL_SOUNDFONT_PATH="/usr/share/raze"
 RAZE_CONF_OPTS += -DINSTALL_PK3_PATH="/usr/share/raze/"
 RAZE_CONF_OPTS += -DPROGDIR="/usr/share/raze"
 
+# ZVulkan has an X11 dependency
 ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
-	RAZE_CONF_OPTS += -DHAVE_VULKAN=ON
+	ifeq ($(BR2_PACKAGE_XORG7),y)
+		RAZE_CONF_OPTS += -DHAVE_VULKAN=ON
+		HOST_RAZE_CONF_OPTS += -DHAVE_VULKAN=ON
+		RAZE_DEPENDENCIES += vulkan-headers vulkan-loader
+	else
+		RAZE_CONF_OPTS += -DHAVE_VULKAN=OFF
+		HOST_RAZE_CONF_OPTS += -DHAVE_VULKAN=OFF
+	endif
 else
 	RAZE_CONF_OPTS += -DHAVE_VULKAN=OFF
+	HOST_RAZE_CONF_OPTS += -DHAVE_VULKAN=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_GLES2)$(BR2_PACKAGE_BATOCERA_GLES3),y)

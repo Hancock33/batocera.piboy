@@ -1,8 +1,8 @@
 diff --git a/es-core/src/InputConfig.cpp b/es-core/src/InputConfig.cpp
-index 04e900b5..6b9801d7 100644
+index 2056a9e7..ad825625 100644
 --- a/es-core/src/InputConfig.cpp
 +++ b/es-core/src/InputConfig.cpp
-@@ -226,6 +226,10 @@ void InputConfig::writeToXML(pugi::xml_node& parent)
+@@ -272,6 +272,10 @@ void InputConfig::writeToXML(pugi::xml_node& parent)
  		input.append_attribute("type") = inputTypeToString(iterator->second.type).c_str();
  		input.append_attribute("id").set_value(iterator->second.id);
  		input.append_attribute("value").set_value(iterator->second.value);
@@ -14,10 +14,10 @@ index 04e900b5..6b9801d7 100644
  }
  
 diff --git a/es-core/src/InputConfig.h b/es-core/src/InputConfig.h
-index d4e90d97..7dc7baba 100644
+index bbaff22f..ef7f75c3 100644
 --- a/es-core/src/InputConfig.h
 +++ b/es-core/src/InputConfig.h
-@@ -41,6 +41,7 @@ public:
+@@ -42,6 +42,7 @@ public:
  	InputType type;
  	int id;
  	int value;
@@ -25,7 +25,7 @@ index d4e90d97..7dc7baba 100644
  	bool configured;
  
  	Input()
-@@ -49,6 +50,7 @@ public:
+@@ -50,6 +51,7 @@ public:
  		configured = false;
  		id = -1;
  		value = -999;
@@ -33,7 +33,7 @@ index d4e90d97..7dc7baba 100644
  		type = TYPE_COUNT;
  	}
  
-@@ -101,6 +103,25 @@ public:
+@@ -102,6 +104,25 @@ public:
  
  		return stream.str();
  	}
@@ -60,10 +60,10 @@ index d4e90d97..7dc7baba 100644
  
  class InputConfig
 diff --git a/es-core/src/InputManager.cpp b/es-core/src/InputManager.cpp
-index 972c0300..56915458 100644
+index 8012af2a..65556881 100644
 --- a/es-core/src/InputManager.cpp
 +++ b/es-core/src/InputManager.cpp
-@@ -1193,6 +1193,7 @@ std::string InputManager::configureEmulators() {
+@@ -1223,6 +1223,7 @@ std::string InputManager::configureEmulators() {
        command << " -p" << player+1 << "nbbuttons "  << playerInputConfig->getDeviceNbButtons();
        command << " -p" << player+1 << "nbhats "     << playerInputConfig->getDeviceNbHats();
        command << " -p" << player+1 << "nbaxes "     << playerInputConfig->getDeviceNbAxes();
