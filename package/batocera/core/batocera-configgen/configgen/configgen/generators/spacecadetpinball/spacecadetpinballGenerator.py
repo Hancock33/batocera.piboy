@@ -7,7 +7,7 @@ import controllersConfig
 
 class SpacecadetpinballGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, gameResolution):
+    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         commandArray = ["SpaceCadetPinball", "-fullscreen"]
 
         return Command.Command(

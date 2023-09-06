@@ -7,7 +7,7 @@ import controllersConfig
 
 class Srb2Generator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, gameResolution):
+    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         commandArray = ["srb2", rom]
 
         return Command.Command(

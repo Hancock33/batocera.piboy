@@ -80,7 +80,7 @@ ryujinxCtrl = {
 
 class RyujinxGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, gameResolution):
+    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         if not os.path.exists(ryujinxConf):
             os.makedirs(ryujinxConf)
         if not os.path.exists(ryujinxConf + "/system"):
