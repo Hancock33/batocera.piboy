@@ -7,7 +7,7 @@ import controllersConfig
 
 class ThemehospitalGenerator(Generator):
 
-    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         commandArray = ["corsix-th"]
 
         return Command.Command(

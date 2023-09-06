@@ -8,7 +8,7 @@ import controllersConfig
 
 class XboxcloudGenerator(Generator):
 
-    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         commandArray = ["/usr/bin/greenlight", "--no-sandbox", "--fullscreen"]
 
         return Command.Command(

@@ -7,7 +7,7 @@ import controllersConfig
 
 class VanillatdGenerator(Generator):
 
-    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         commandArray = ["vanillatd"]
         return Command.Command(
             array=commandArray,

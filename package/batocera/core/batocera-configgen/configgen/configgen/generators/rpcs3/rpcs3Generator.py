@@ -15,7 +15,7 @@ from . import rpcs3Controllers
 
 class Rpcs3Generator(Generator):
 
-    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
 
         rpcs3Controllers.generateControllerConfig(system, playersControllers, rom)
 

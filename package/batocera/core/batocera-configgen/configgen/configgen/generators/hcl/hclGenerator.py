@@ -7,7 +7,7 @@ import os
 
 class HclGenerator(Generator):
 
-    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         os.chdir("/usr/share/hcl")
         commandArray = ["hcl", "--fullscreen"]
 

@@ -11,7 +11,7 @@ vpinballMusicPath = vpinballConfigPath + "/music"
 
 class VPinballGenerator(Generator):
 
-    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
 
         # create vpinball config directory
         if not os.path.exists(vpinballConfigPath):

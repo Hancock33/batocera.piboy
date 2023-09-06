@@ -8,7 +8,7 @@ from os import path
 import shlex
 
 class GzdoomGenerator(Generator):
-    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         config_dir = f"{batoceraFiles.CONF}/gzdoom"
         if not os.path.exists(config_dir):
             os.mkdir(config_dir)
