@@ -1,15 +1,5 @@
-From cf89048eff0e46f0d32147425b10eb533d37b4c7 Mon Sep 17 00:00:00 2001
-From: Eladash <elad3356p@gmail.com>
-Date: Tue, 5 Sep 2023 11:10:40 +0300
-Subject: [PATCH] PPU LLVM: Fix optimization of branch string
-
----
- rpcs3/Emu/Cell/PPUTranslator.cpp | 53 +++++++++++++++++++++++---------
- rpcs3/Emu/Cell/PPUTranslator.h   |  4 +--
- 2 files changed, 40 insertions(+), 17 deletions(-)
-
 diff --git a/rpcs3/Emu/Cell/PPUTranslator.cpp b/rpcs3/Emu/Cell/PPUTranslator.cpp
-index c0a55da26de..a88ca62940f 100644
+index c0a55da26..a88ca6294 100644
 --- a/rpcs3/Emu/Cell/PPUTranslator.cpp
 +++ b/rpcs3/Emu/Cell/PPUTranslator.cpp
 @@ -266,7 +266,7 @@ Function* PPUTranslator::Translate(const ppu_function& info)
@@ -168,10 +158,10 @@ index c0a55da26de..a88ca62940f 100644
  
  	UseCondition(CheckBranchProbability(op.bo | 0x4), CheckBranchCondition(op.bo | 0x4, op.bi));
 diff --git a/rpcs3/Emu/Cell/PPUTranslator.h b/rpcs3/Emu/Cell/PPUTranslator.h
-index d72dc1de20c..8b357dffbca 100644
+index d72dc1de2..8b357dffb 100644
 --- a/rpcs3/Emu/Cell/PPUTranslator.h
 +++ b/rpcs3/Emu/Cell/PPUTranslator.h
-@@ -148,7 +148,7 @@ class PPUTranslator final : public cpu_translator
+@@ -148,7 +148,7 @@ public:
  	llvm::Value* RotateLeft(llvm::Value* arg, llvm::Value* n);
  
  	// Emit function call
@@ -180,7 +170,7 @@ index d72dc1de20c..8b357dffbca 100644
  
  	// Initialize global for writing
  	llvm::Value* RegInit(llvm::Value*& local);
-@@ -292,7 +292,7 @@ class PPUTranslator final : public cpu_translator
+@@ -292,7 +292,7 @@ public:
  	llvm::MDNode* CheckBranchProbability(u32 bo);
  
  	// Branch to next instruction if condition failed, never branch on nullptr
