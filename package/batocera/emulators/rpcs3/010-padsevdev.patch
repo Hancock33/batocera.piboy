@@ -1,0 +1,22 @@
+diff --git a/rpcs3/Input/evdev_joystick_handler.cpp b/rpcs3/Input/evdev_joystick_handler.cpp
+index b6dab60..bbc9d3b 100644
+--- a/rpcs3/Input/evdev_joystick_handler.cpp
++++ b/rpcs3/Input/evdev_joystick_handler.cpp
+@@ -733,7 +733,7 @@
+ 				if (is_pad_device || is_motion_device)
+ 				{
+ 					// It's a joystick or motion device.
+-					std::string name = get_device_name(dev);
++					std::string name = "/dev/input/" + et.name;
+ 
+ 					if (unique_names.find(name) == unique_names.end())
+ 						unique_names.emplace(name, 1);
+@@ -642,7 +669,7 @@ int evdev_joystick_handler::add_device(const std::string& device, const std::sha
+ 				continue;
+ 			}
+ 
+-			std::string name = get_device_name(dev);
++			std::string name = path;
+ 
+ 			if (unique_names.find(name) == unique_names.end())
+ 				unique_names.emplace(name, 1);
