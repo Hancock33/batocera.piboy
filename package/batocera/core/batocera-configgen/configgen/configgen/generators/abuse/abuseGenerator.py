@@ -9,7 +9,7 @@ class AbuseGenerator(Generator):
     if os.path.isfile('/tmp/piboy'):
         os.system('piboy_keys abuse.keys')
 
-    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         commandArray = ["abuse", "-datadir", "/usr/share/abuse"]
 
         return Command.Command(

@@ -6,7 +6,7 @@ from generators.Generator import Generator
 import controllersConfig
 
 class VirtualjaguarGenerator(Generator):
-    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         commandArray = ['virtualjaguar', rom]
 
         # Rendering mode

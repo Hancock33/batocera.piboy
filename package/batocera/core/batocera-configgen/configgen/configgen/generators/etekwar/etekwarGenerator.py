@@ -9,7 +9,7 @@ import utils.videoMode as videoMode
 
 class EtekwarGenerator(Generator):
 
-    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         gameResolution = videoMode.getCurrentResolution()
         commandArray = ["etekwar"]
         os.chdir(os.path.dirname(os.path.abspath(rom)))

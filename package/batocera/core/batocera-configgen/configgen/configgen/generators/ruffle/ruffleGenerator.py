@@ -7,7 +7,7 @@ import controllersConfig
 
 class RuffleGenerator(Generator):
 
-    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         commandArray = ["ruffle", rom]
         return Command.Command(
             array=commandArray)

@@ -10,7 +10,7 @@ eslog = get_logger(__name__)
 
 class Fallout2Generator(Generator):
 
-    def def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         romdir = os.path.dirname(os.path.abspath(rom))
         eslog.info(f"Game directory {str(romdir)}")
 
