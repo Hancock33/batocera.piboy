@@ -38,10 +38,10 @@ index c08af85f6..8423c96a7 100644
  				if (auto r1 = a1.match(v1, _m); v1)
  				{
 diff --git a/rpcs3/Emu/Cell/SPURecompiler.cpp b/rpcs3/Emu/Cell/SPURecompiler.cpp
-index 62cf32f2b..6180614ee 100644
+index 4e2c90a63..64c07b137 100644
 --- a/rpcs3/Emu/Cell/SPURecompiler.cpp
 +++ b/rpcs3/Emu/Cell/SPURecompiler.cpp
-@@ -6187,9 +6187,9 @@ public:
+@@ -6203,9 +6203,9 @@ public:
  		pm.add(createEarlyCSEPass());
  		pm.add(createCFGSimplificationPass());
  		//pm.add(createNewGVNPass());
@@ -53,7 +53,7 @@ index 62cf32f2b..6180614ee 100644
  		//pm.add(createLintPass()); // Check
  
  		for (auto& f : *m_module)
-@@ -6655,8 +6655,8 @@ public:
+@@ -6671,8 +6671,8 @@ public:
  		// Basic optimizations
  		pm.add(createEarlyCSEPass());
  		pm.add(createCFGSimplificationPass());
