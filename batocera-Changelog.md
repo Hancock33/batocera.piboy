@@ -62,6 +62,7 @@
 - Model2 crosshair disabled by default with light guns connected
 - Laptops / Systems with 2 GPUs will now automatically set the environment variables to use the best GPU.
 - Model2 start and coins now mapped on light guns when playing gun games
+- RPCS3 now requires specific Sony controller selection via EmulationStation
 ### Updated
 - xenia to v1.0.2805
 - xenia canary to 9554f82 (Commits on Sep 4, 2023)
@@ -241,7 +242,7 @@
 - MAME to 0.253
 ### Dev
 - buildroot upgrade to 2023.02.01
-- mesa3d update to 23.1.5
+- mesa3d update to 23.1.7
 - dxvk to 2.1
 - linux firmware to 20230404
 - linux kernel for x86_64 to 6.3.6
@@ -250,7 +251,7 @@
 - llvm to 16.0.3
 - vulkan stack to v1.3.248
 - add multiple Qt6 packages
-- alsa stack to 1.2.9
+- alsa stack to 1.2.10
 
 
 # 2023/03/09 - batocera.linux 36 - Luna Moth
