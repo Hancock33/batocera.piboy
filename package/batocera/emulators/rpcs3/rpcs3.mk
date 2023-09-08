@@ -11,7 +11,7 @@ RPCS3_GIT_SUBMODULES=YES
 RPCS3_LICENSE = GPLv2
 RPCS3_DEPENDENCIES += alsa-lib llvm faudio ffmpeg libevdev libxml2
 RPCS3_DEPENDENCIES += libglew libglu libpng libusb mesa3d ncurses openal
-RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg wolfssl
+RPCS3_DEPENDENCIES += qt6base qt6declarative qt6multimedia qt6svg wolfssl
 RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO
 
 RPCS3_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
@@ -22,7 +22,7 @@ RPCS3_CONF_OPTS += -DUSE_NATIVE_INSTRUCTIONS=OFF
 RPCS3_CONF_OPTS += -DLLVM_DIR=$(STAGING_DIR)/usr/lib/cmake/llvm/
 RPCS3_CONF_OPTS += -DUSE_PRECOMPILED_HEADERS=OFF
 RPCS3_CONF_OPTS += -DSTATIC_LINK_LLVM=OFF
-RPCS3_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=OFF
+RPCS3_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_CURL=ON
 RPCS3_CONF_OPTS += -DUSE_LIBEVDEV=ON
 # sdl controller config seems broken...
@@ -38,7 +38,7 @@ endif
 
 define RPCS3_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) \
-		$(MAKE) -C $(@D)/buildroot-build
+		$(NINJA) -C $(@D)/buildroot-build
 endef
 
 define RPCS3_INSTALL_EVMAPY
