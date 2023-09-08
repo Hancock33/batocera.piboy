@@ -27,6 +27,7 @@ else
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_RPI_ANY),y)
+	LEDSPICER_DEPENDENCIES += pigpio
 	LEDSPICER_CONF_OPTS += --enable-raspberrypi
 else
 	LEDSPICER_CONF_OPTS += --disable-raspberrypi
