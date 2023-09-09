@@ -1,18 +1,3 @@
-From 796af5ec6c6bb2eadf78a96f629e2c7fba11123b Mon Sep 17 00:00:00 2001
-From: Stefan Binding <sbinding@opensource.cirrus.com>
-Date: Fri, 21 Jul 2023 16:18:08 +0100
-Subject: [PATCH 03/11] ALSA: hda: cs35l41: Check mailbox status of pause
- command after firmware load
-
-Currently, we do not check the return status of the pause command,
-immediately after we load firmware. If the pause has failed,
-the firmware is not running.
-
-Signed-off-by: Stefan Binding <sbinding@opensource.cirrus.com>
----
- sound/pci/hda/cs35l41_hda.c | 7 ++++++-
- 1 file changed, 6 insertions(+), 1 deletion(-)
-
 diff --git a/sound/pci/hda/cs35l41_hda.c b/sound/pci/hda/cs35l41_hda.c
 index f9c97270db6f..29f1dce45f1d 100644
 --- a/sound/pci/hda/cs35l41_hda.c
@@ -31,6 +16,3 @@ index f9c97270db6f..29f1dce45f1d 100644
  	cs35l41->firmware_running = true;
  
  	return 0;
--- 
-2.41.0
-
