@@ -1,30 +1,3 @@
-From 4f3b42e2f126f96b1e512871d7073fb10d9a7283 Mon Sep 17 00:00:00 2001
-From: Stefan Binding <sbinding@opensource.cirrus.com>
-Date: Fri, 21 Jul 2023 16:18:13 +0100
-Subject: [PATCH 08/11] ALSA: hda: cs35l41: Use pre and post playback hooks
-
-Use new hooks to ensure separation between play/pause actions,
-as required by external boost.
-
-External Boost on CS35L41 requires the amp to go through a
-particular sequence of steps. One of these steps involes
-the setting of a GPIO. This GPIO is connected to one or
-more of the amps, and it may control the boost for all of
-the amps. To ensure that the GPIO is set when it is safe
-to do so, and to ensure that boost is ready for the rest of
-the sequence to be able to continue, we must ensure that
-the each part of the sequence is executed for each amp
-before moving on to the next part of the sequence.
-
-Some of the Play and Pause actions have moved from Open to
-Prepare. This is because Open is not guaranteed to be called
-again on system resume, whereas Prepare should.
-
-Signed-off-by: Stefan Binding <sbinding@opensource.cirrus.com>
----
- sound/pci/hda/cs35l41_hda.c | 53 ++++++++++++++++++++++++++++++-------
- 1 file changed, 43 insertions(+), 10 deletions(-)
-
 diff --git a/sound/pci/hda/cs35l41_hda.c b/sound/pci/hda/cs35l41_hda.c
 index f77583b46b6b..a482d4752b3f 100644
 --- a/sound/pci/hda/cs35l41_hda.c
@@ -117,6 +90,3 @@ index f77583b46b6b..a482d4752b3f 100644
  
  	mutex_unlock(&cs35l41->fw_mutex);
  
--- 
-2.41.0
-

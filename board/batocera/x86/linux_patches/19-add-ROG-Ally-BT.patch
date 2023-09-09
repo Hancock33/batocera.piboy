@@ -1,5 +1,5 @@
 diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
-index bd27eddc18200..ae65cff8a2f05 100644
+index 764d176e9735..0376437824b4 100644
 --- a/drivers/bluetooth/btusb.c
 +++ b/drivers/bluetooth/btusb.c
 @@ -628,6 +628,9 @@ static const struct usb_device_id blacklist_table[] = {

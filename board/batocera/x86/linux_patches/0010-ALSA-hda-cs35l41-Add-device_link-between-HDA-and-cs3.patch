@@ -1,20 +1,3 @@
-From 74c165859e33b62888b93891d82680350b9a615f Mon Sep 17 00:00:00 2001
-From: Stefan Binding <sbinding@opensource.cirrus.com>
-Date: Fri, 21 Jul 2023 16:18:15 +0100
-Subject: [PATCH 10/11] ALSA: hda: cs35l41: Add device_link between HDA and
- cs35l41_hda
-
-To ensure consistency between the HDA core and the CS35L41 HDA
-driver, add a device_link between them. This ensures that the
-HDA core will suspend first, and resume second, meaning the
-amp driver will not miss any events from the playback hook from
-the HDA core during system suspend and resume.
-
-Signed-off-by: Stefan Binding <sbinding@opensource.cirrus.com>
----
- sound/pci/hda/cs35l41_hda.c | 13 ++++++++++++-
- 1 file changed, 12 insertions(+), 1 deletion(-)
-
 diff --git a/sound/pci/hda/cs35l41_hda.c b/sound/pci/hda/cs35l41_hda.c
 index 70aa819cfbd6..175378cdf9df 100644
 --- a/sound/pci/hda/cs35l41_hda.c
@@ -55,6 +38,3 @@ index 70aa819cfbd6..175378cdf9df 100644
  }
  
  static const struct component_ops cs35l41_hda_comp_ops = {
--- 
-2.41.0
-

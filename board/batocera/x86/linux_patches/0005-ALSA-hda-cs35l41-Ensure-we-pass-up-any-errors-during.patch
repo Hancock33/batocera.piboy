@@ -1,18 +1,3 @@
-From 05bfc01172a34466e660465922d1cab5b460880f Mon Sep 17 00:00:00 2001
-From: Stefan Binding <sbinding@opensource.cirrus.com>
-Date: Fri, 21 Jul 2023 16:18:10 +0100
-Subject: [PATCH 05/11] ALSA: hda: cs35l41: Ensure we pass up any errors during
- system suspend.
-
-There are several steps required to put the system into system suspend.
-Some of these steps may fail, so the driver should pass up the errors
-if they occur.
-
-Signed-off-by: Stefan Binding <sbinding@opensource.cirrus.com>
----
- sound/pci/hda/cs35l41_hda.c | 17 +++++++++++++----
- 1 file changed, 13 insertions(+), 4 deletions(-)
-
 diff --git a/sound/pci/hda/cs35l41_hda.c b/sound/pci/hda/cs35l41_hda.c
 index f42457147ce4..d4a11f7b5dbd 100644
 --- a/sound/pci/hda/cs35l41_hda.c
@@ -58,6 +43,3 @@ index f42457147ce4..d4a11f7b5dbd 100644
  		cs35l41->fw_request_ongoing = true;
  		schedule_work(&cs35l41->fw_load_work);
  	}
--- 
-2.41.0
-

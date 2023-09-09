@@ -1,26 +1,3 @@
-From c21139c6470a5b08c7463e451f2ff404e55f652f Mon Sep 17 00:00:00 2001
-From: Stefan Binding <sbinding@opensource.cirrus.com>
-Date: Fri, 21 Jul 2023 16:18:06 +0100
-Subject: [PATCH 01/11] ALSA: cs35l41: Use mbox command to enable speaker
- output for external boost
-
-To enable the speaker output in external boost mode, 2 registers must
-be set, one after another. The longer the time between the writes of
-the two registers, the more likely, and more loudly a pop may occur.
-To minimize this, an mbox command can be used to allow the firmware
-to perform this action, minimizing any delay between write, thus
-minimizing any pop or click as a result. The old method will remain
-when running without firmware.
-
-Acked-by: Mark Brown <broonie@kernel.org>
-Signed-off-by: Stefan Binding <sbinding@opensource.cirrus.com>
----
- include/sound/cs35l41.h        |  5 ++-
- sound/pci/hda/cs35l41_hda.c    |  9 ++--
- sound/soc/codecs/cs35l41-lib.c | 76 +++++++++++++++++++++++++++-------
- sound/soc/codecs/cs35l41.c     |  8 ++--
- 4 files changed, 74 insertions(+), 24 deletions(-)
-
 diff --git a/include/sound/cs35l41.h b/include/sound/cs35l41.h
 index 7239d943942c..1bf757901d02 100644
 --- a/include/sound/cs35l41.h
@@ -213,7 +190,7 @@ index 1e4205295a0d..a7556fa33cdd 100644
  		return false;
  	}
 diff --git a/sound/soc/codecs/cs35l41.c b/sound/soc/codecs/cs35l41.c
-index 6ac501f008ec..d4e9c9d9b50a 100644
+index 8a879b6f4829..6c742dc24d54 100644
 --- a/sound/soc/codecs/cs35l41.c
 +++ b/sound/soc/codecs/cs35l41.c
 @@ -500,12 +500,12 @@ static int cs35l41_main_amp_event(struct snd_soc_dapm_widget *w,
@@ -233,6 +210,3 @@ index 6ac501f008ec..d4e9c9d9b50a 100644
  
  		ret = regmap_read_poll_timeout(cs35l41->regmap, CS35L41_IRQ1_STATUS1,
  					       val, val &  CS35L41_PDN_DONE_MASK,
--- 
-2.41.0
-
