@@ -13613,6 +13613,22 @@ msgstr ""
 #~ msgstr "早送り"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables Sony DualSense / DualShock capabilities. Won't work with clone "
+#~ "controllers."
+#~ msgstr ""
+#~ "Sony DualSense / DualShock 機能を有効にします。クローンコントローラーでは"
+#~ "動作しません"
+
+#~ msgctxt "game_options"
+#~ msgid "Other"
+#~ msgstr "その他"
+
+#~ msgctxt "game_options"
+#~ msgid "PS3 CONTROLLER 8"
+#~ msgstr "PS3 コントローラ 8"
+
+#~ msgctxt "game_options"
 #~ msgid "ENABLE BIOS ACCESS"
 #~ msgstr "BIOS を有効"
 
