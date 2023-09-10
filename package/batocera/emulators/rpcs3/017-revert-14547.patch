@@ -1,5 +1,5 @@
 diff --git a/rpcs3/Emu/Cell/PPUAnalyser.cpp b/rpcs3/Emu/Cell/PPUAnalyser.cpp
-index ad5894ea7..3ba3cab56 100644
+index d195d749c..3ba3cab56 100644
 --- a/rpcs3/Emu/Cell/PPUAnalyser.cpp
 +++ b/rpcs3/Emu/Cell/PPUAnalyser.cpp
 @@ -587,23 +587,6 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
@@ -189,7 +189,7 @@ index ad5894ea7..3ba3cab56 100644
 -							}
 -						}
 -						else if (u32 target0 = (test_op.aa ? 0 : target) + (type0 == ppu_itype::B ? +test_op.bt24 : +test_op.bt14);
--							(type0 == ppu_itype::B || type0 == ppu_itype::BC) && target0 < segs[0].addr || target0 >= segs[0].addr + segs[0].size)
+-							(type0 == ppu_itype::B || type0 == ppu_itype::BC) && (target0 < segs[0].addr || target0 >= segs[0].addr + segs[0].size))
 -						{
 -							// Sanity check
 -							is_good = false;
@@ -311,7 +311,7 @@ index ad5894ea7..3ba3cab56 100644
  	return true;
  }
 diff --git a/rpcs3/Emu/Cell/PPUAnalyser.h b/rpcs3/Emu/Cell/PPUAnalyser.h
-index 0f2e94cd8..a5ba65d4a 100644
+index c1515c65c..e5c704d65 100644
 --- a/rpcs3/Emu/Cell/PPUAnalyser.h
 +++ b/rpcs3/Emu/Cell/PPUAnalyser.h
 @@ -263,7 +263,6 @@ struct ppu_pattern_matrix
