@@ -11206,6 +11206,17 @@ msgstr ""
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
+"NVAPI is NVIDIA's core software that allows direct access to NVIDIA GPU."
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "NVAPI"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
 "Reset the cache can fix some crashes if your game was running under Batocera "
 "29."
 msgstr ""
