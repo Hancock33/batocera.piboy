@@ -366,6 +366,21 @@ msgstr "使用光枪"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
+msgid "Use wheels instead of pads if wheels are connected."
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEELS"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "USE WHEELS"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
 msgid "For emulators and controllers supporting force feedback."
 msgstr "用于支持力反馈的模拟器和控制器."
 

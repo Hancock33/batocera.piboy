@@ -383,6 +383,21 @@ msgstr "GUNAKAN PISTOL RINGAN"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
+msgid "Use wheels instead of pads if wheels are connected."
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEELS"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "USE WHEELS"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
 msgid "For emulators and controllers supporting force feedback."
 msgstr "Untuk emulator dan kontroler yang mendukung umpan balik (getaran)"
 
