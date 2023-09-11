@@ -11374,7 +11374,7 @@ msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
-msgid "NVAPI"
+msgid "ENABLE NVAPI"
 msgstr ""
 
 #. TRANSLATION: wine
