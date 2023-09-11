@@ -11429,8 +11429,8 @@ msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
-msgid "NVAPI"
-msgstr "NVAPI"
+msgid "ENABLE NVAPI"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13505,6 +13505,10 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Open"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "NVAPI"
+#~ msgstr "NVAPI"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
