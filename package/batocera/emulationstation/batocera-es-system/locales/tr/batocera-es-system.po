@@ -381,6 +381,21 @@ msgstr "SİLAH KULLAN"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
+msgid "Use wheels instead of pads if wheels are connected."
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEELS"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "USE WHEELS"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
 msgid "For emulators and controllers supporting force feedback."
 msgstr ""
 "Emülatörler ve kontrol aygıtları için kuvvet geri bildirimi desteklenir."

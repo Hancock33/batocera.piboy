@@ -28,6 +28,9 @@ sed -i s@/usr/lib/@/lib32/@g                                           $DEST_DIR
 
 rm -rf $DEST_DIR/usr/lib32/{avahi,gconv,glslang,graphene-1.0,icu,libfm,locale}
 rm -rf $DEST_DIR/usr/lib32/{pcmanfm,python3.*,terminfo,udev,xorg,X11}
+rm -rf $DEST_DIR/usr/lib32/firmware
+rm -rf $DEST_DIR/usr/wine/proton/share
+rm -rf $DEST_DIR/usr/wine/lutris/share
 find $DEST_DIR/usr -type f -name "*.a" -exec rm {} \;
 cd $DEST_DIR && tar -cf $DEST_DIR.tar .
 xz -T0 -7 -v $DEST_DIR.tar

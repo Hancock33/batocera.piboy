@@ -376,6 +376,21 @@ msgstr "USAR PISTOLAS"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
+msgid "Use wheels instead of pads if wheels are connected."
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEELS"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "USE WHEELS"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
 msgid "For emulators and controllers supporting force feedback."
 msgstr "Para emuladores e comandos que suportam force feedback."
 
@@ -2077,8 +2092,8 @@ msgid ""
 "Enable Gravis Utrasound emulation. Ensure the ULTRASND folder is in the root "
 "of your <game>.pc rom folder."
 msgstr ""
-"Ativar a emulação do Gravis Ultrasound. Certifique-se de que a pasta ULTRASOUND "
-"esteja na sua pasta <game>.pc rom."
+"Ativar a emulação do Gravis Ultrasound. Certifique-se de que a pasta "
+"ULTRASOUND esteja na sua pasta <game>.pc rom."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -3301,8 +3316,8 @@ msgid ""
 "Atari ST monitors had a visible border around the main screen area, but most "
 "software does not display anything in it."
 msgstr ""
-"Os monitores Atari ST tinham uma borda visível ao redor da área do ecrã principal, mas a maioria "
-"o software não exibe nada nele."
+"Os monitores Atari ST tinham uma borda visível ao redor da área do ecrã "
+"principal, mas a maioria o software não exibe nada nele."
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -8030,8 +8045,8 @@ msgid ""
 "Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
 "appropriate user directory)."
 msgstr ""
-"Ativar a animação de inicialização do Gamecube e o acesso ao BIOS (requer BIOS IPL.bin em "
-"diretório de utilizador apropriado)."
+"Ativar a animação de inicialização do Gamecube e o acesso ao BIOS (requer "
+"BIOS IPL.bin em diretório de utilizador apropriado)."
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
