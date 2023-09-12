@@ -3,8 +3,8 @@
 # EKA2L1
 #
 ################################################################################
-# Version: Commits on Jun 06, 2023
-EKA2L1_VERSION = c518e36ad1a0a896b8f81226978baa4379bfeffc
+# Version: Commits on Sept 10, 2023
+EKA2L1_VERSION = 22fe6c97cead08cb8ea630c47789adec9f2b4246
 EKA2L1_SITE = https://github.com/rtissera/EKA2L1.git
 EKA2L1_SITE_METHOD=git
 EKA2L1_GIT_SUBMODULES=YES
