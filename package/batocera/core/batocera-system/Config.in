@@ -195,6 +195,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_USB_MODESWITCH                       # USB modeswitch support
     select BR2_PACKAGE_UMTOOL                               # command line tool for configuring Ultimarc arcade hardware
     select BR2_PACKAGE_PYTHON_HIDAPI                        # Communication with USB HID devices via Python
+    select BR2_PACKAGE_LEDSPICER                            # LED Manager for Linux
 
     # Python and SSL
     select BR2_PACKAGE_HOST_PYTHON3
@@ -1314,6 +1315,9 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_VCMI                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Heroes of Might and Magic III
     select BR2_PACKAGE_XBOX_XCLOUD_CLIENT                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                            # Xbox Cloud Gaming
 
+    # Symbian OS / Nokia N-Gage emulator
+    #select BR2_PACKAGE_EKA2L1		                        if BR2_x86_64 # depends on X11 and Qt6 (mostly)
+
     help
         Emulators under development (Experimental)
 
@@ -1545,7 +1549,7 @@ config BR2_PACKAGE_BATOCERA_FREEDRENO_MESA3D
 config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
     bool "batocera.linux Firmwares packages selection"
 
-    select BR2_PACKAGE_ALLLINUXFIRMWARES
+    select BR2_PACKAGE_ALLLINUXFIRMWARES                    if !BR2_PACKAGE_BATOCERA_LIB32
 
     # buildroot firmware
     select BR2_PACKAGE_LINUX_FIRMWARE                       if  BR2_PACKAGE_BATOCERA_TARGET_RK3288
@@ -1657,7 +1661,8 @@ config BR2_PACKAGE_BATOCERA_XORG
     select BR2_PACKAGE_XDRIVER_XF86_VIDEO_AMDGPU            if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     && !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_XDRIVER_XF86_VIDEO_ATI               if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     && !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_XDRIVER_XF86_VIDEO_NOUVEAU           if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     && !BR2_PACKAGE_BATOCERA_LIB32
-    select BR2_PACKAGE_XDRIVER_XF86_INTEL                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     && !BR2_PACKAGE_BATOCERA_LIB32
+    # select BR2_PACKAGE_XDRIVER_XF86_VIDEO_INTEL           if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     && !BR2_PACKAGE_BATOCERA_LIB32
+
     # nvidia xorg packages are selected by batocera-nvidia package
 
     # applications

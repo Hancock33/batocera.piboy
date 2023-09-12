@@ -7,7 +7,7 @@ import controllersConfig
 
 class VanillaraGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         commandArray = ["vanillara"]
         return Command.Command(
             array=commandArray,

@@ -15,7 +15,7 @@ playInputFile = playConfig + '/Play Data Files/inputprofiles/default.xml'
 
 class PlayGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
 
         # Create config folder
         if not path.isdir(playConfig):
@@ -120,12 +120,6 @@ class PlayGenerator(Generator):
             with open(playConfigFile, "wb") as file:
                 tree.write(file)
 
-        ## Controller config
-        if not os.path.exists(playInputFile):
-            os.makedirs(os.path.dirname(playInputFile))
-        # Create xml each launch
-
-
         commandArray = ["/usr/bin/Play"]
 
         if rom != "config":
@@ -135,8 +129,6 @@ class PlayGenerator(Generator):
                 rom = os.path.basename(rom)
                 rom = os.path.splitext(rom)[0]
                 commandArray.extend(["--arcade", rom])
-            elif (rom.lower().endswith("elf")):
-                commandArray.extend(["--elf", rom])
             else:
                 commandArray.extend(["--disc", rom])
 
