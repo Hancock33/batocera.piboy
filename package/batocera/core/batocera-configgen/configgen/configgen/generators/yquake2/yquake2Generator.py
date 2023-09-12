@@ -14,7 +14,7 @@ rogue_dst = "/userdata/roms/ports/quake2/rogue"
 xatrix_dst = "/userdata/roms/ports/quake2/xatrix"
 
 class Yquake2Generator(Generator):
-    def generate(self, system, rom, playersControllers, guns, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         gamemod = 'baseq2'
         shutil.copytree(baseq2_src, baseq2_dst, dirs_exist_ok=True)
 

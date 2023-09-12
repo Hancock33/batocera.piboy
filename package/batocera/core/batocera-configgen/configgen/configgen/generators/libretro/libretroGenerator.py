@@ -24,7 +24,7 @@ class LibretroGenerator(Generator):
 
     # Main entry of the module
     # Configure retroarch and return a command
-    def generate(self, system, rom, playersControllers, guns, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         # Fix for the removed MESS/MAMEVirtual cores
         if system.config['core'] in [ 'mess', 'mamevirtual' ]:
             system.config['core'] = 'mame'
@@ -75,7 +75,7 @@ class LibretroGenerator(Generator):
                 lightgun = system.getOptBoolean('lightgun_map')
             else:
                 # Lightgun button mapping breaks lr-mame's inputs, disable if left on auto
-                if system.config['core'] in [ 'mame', 'mess', 'mamevirtual', 'same_cdi', 'mame078plus', 'mame0139' ]:
+                if system.config['core'] in [ 'mess', 'mamevirtual', 'same_cdi', 'mame078plus', 'mame0139' ]:
                     lightgun = False
                 else:
                     lightgun = True

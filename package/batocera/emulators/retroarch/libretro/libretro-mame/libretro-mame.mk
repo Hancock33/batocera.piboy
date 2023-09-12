@@ -3,8 +3,8 @@
 # libretro-mame
 #
 ################################################################################
-# Version: Commits on Sept 02, 2023
-LIBRETRO_MAME_VERSION = 861cee072de04a9b6f24b91da72c9c6a97e66346
+# Version: Commits on Sept 12, 2023
+LIBRETRO_MAME_VERSION = b6d4105ea44385d5c54b2755a215311d3e0231b7
 LIBRETRO_MAME_SITE = $(call github,sonninnos,mame,$(LIBRETRO_MAME_VERSION))
 LIBRETRO_MAME_LICENSE = MAME
 
@@ -45,7 +45,7 @@ define LIBRETRO_MAME_BUILD_CMDS
 	TARGET=mame SUBTARGET=tiny \
 	NO_USE_PORTAUDIO=1 NO_X11=1 USE_SDL=0 \
 	USE_QTDEBUG=0 DEBUG=0 IGNORE_GIT=1 MPARAM=""
-	
+
 	# Compile emulation target (MAME)
 	$(MAKE) -j$(LIBRETRO_MAME_JOBS) -C $(@D)/ OPENMP=1 REGENIE=1 VERBOSE=1 NOWERROR=1 PYTHON_EXECUTABLE=python3 \
 		CFLAGS="$(LIBRETRO_MAME_CFLAGS)" LDFLAGS="$(LIBRETRO_MAME_LDFLAGS)"							\

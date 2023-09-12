@@ -3,14 +3,15 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on Sept 05, 2023
-PPSSPP_VERSION = 828328b50d7ea1d4b5ba76ac1c2c3f4afc17d05e
+# Version: Commits on Sept 12, 2023
+PPSSPP_VERSION = 961e0068f7b859b56fecfaaceddea74b355ee1ba
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
 PPSSPP_LICENSE = GPLv2
-PPSSPP_DEPENDENCIES = sdl2 libzip
+PPSSPP_DEPENDENCIES = sdl2 sdl2_ttf libzip
 
+PPSSPP_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 PPSSPP_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 PPSSPP_CONF_OPTS += -DCMAKE_SYSTEM_NAME=Linux
 PPSSPP_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=OFF
@@ -44,7 +45,7 @@ else
 	PPSSPP_CONF_OPTS += -DVULKAN=OFF
 endif
 # enable x11/vulkan interface only if xorg
-ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
+ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
 	PPSSPP_CONF_OPTS += -DUSING_X11_VULKAN=ON
 else
 	PPSSPP_CONF_OPTS += -DUSING_X11_VULKAN=OFF
@@ -89,8 +90,6 @@ PPSSPP_CONF_OPTS += -DCMAKE_C_FLAGS="$(PPSSPP_TARGET_CFLAGS)" -DCMAKE_CXX_FLAGS=
 define PPSSPP_UPDATE_INCLUDES
 	sed -i 's/unknown/"$(shell echo $(PPSSPP_VERSION) | cut -c 1-7)"/g' $(@D)/git-version.cmake
 	sed -i "s+/opt/vc+$(STAGING_DIR)/usr+g" $(@D)/CMakeLists.txt
-	# Fix SDL2 tff
-	sed -i -e s+"SDL2_ttf::SDL2_ttf"+"-lSDL2_ttf"+ $(@D)/CMakeLists.txt
 endef
 
 define PPSSPP_INSTALL_TARGET_CMDS
@@ -101,10 +100,15 @@ define PPSSPP_INSTALL_TARGET_CMDS
 	# Fix PSP font for languages like Japanese
 	# (font from https://github.com/minoryorg/Noto-Sans-CJK-JP/blob/master/fonts/)
 	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/NotoSansCJKjp-DemiLight.ttf $(TARGET_DIR)/usr/share/ppsspp/PPSSPP/Roboto-Condensed.ttf
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/psp.ppsspp.keys $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/pspmini.ppsspp.keys $(TARGET_DIR)/usr/share/evmapy
+endef
+
+define PPSSPP_POST_PROCESS
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/psp.ppsspp.keys \
+		$(TARGET_DIR)/usr/share/evmapy
 endef
 
 PPSSPP_PRE_CONFIGURE_HOOKS += PPSSPP_UPDATE_INCLUDES
+PPSSPP_POST_INSTALL_TARGET_HOOKS += PPSSPP_POST_PROCESS
 
 $(eval $(cmake-package))

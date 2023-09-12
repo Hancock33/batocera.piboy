@@ -8,6 +8,6 @@ class MplayerGenerator(Generator):
 
     # Main entry of the module
     # Configure kodi inputs and return the command to run
-    def generate(self, system, rom, playersControllers, guns, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         commandArray = ["mpv", "--fs", rom]
         return Command.Command(array=commandArray)

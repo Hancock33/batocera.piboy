@@ -228,6 +228,13 @@ shared:
       choices:
         "On":  1
         "Off": 0
+    use_wheels:
+      group: WHEELS
+      prompt: USE WHEELS
+      description: Use wheels instead of pads if wheels are connected.
+      choices:
+        "On":  1
+        "Off": 0
     rumble_gain:
       prompt:      RUMBLE LEVEL
       description: For emulators and controllers supporting force feedback.
@@ -7370,6 +7377,7 @@ dolphin:
 
   systems:
     gamecube:
+        shared: [use_wheels]
         cfeatures:
             widescreen_hack:
                 submenu: DISPLAY
@@ -7385,7 +7393,7 @@ dolphin:
                     "Off": 0
                     "On":  1
     wii:
-        shared: [use_guns]
+        shared: [use_guns, use_wheels]
         cfeatures:
             tv_mode:
                 submenu: DISPLAY
@@ -8525,7 +8533,7 @@ openbor:
                 "Dot Matrix":     11
 pcsx2:
   features: [padtokeyboard, cheevos]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns]
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, use_wheels]
   cfeatures:
         pcsx2_ratio:
             submenu: DISPLAY
@@ -9109,6 +9117,55 @@ rpcs3:
             choices:
                 "Off": 0
                 "On":  1
+        rpcs3_controller1:
+            submenu: CONTROLLERS
+            prompt: PS3 CONTROLLER 1
+            description: Enables controller specific capabilities. Sony DS won't work with clone controllers.
+            choices:
+                "DirectInput": "Direct"
+                "Sony DS":     "Sony"
+        rpcs3_controller2:
+            submenu: CONTROLLERS
+            prompt: PS3 CONTROLLER 2
+            description: Enables controller specific capabilities. Sony DS won't work with clone controllers.
+            choices:
+                "DirectInput": "Direct"
+                "Sony DS":     "Sony"
+        rpcs3_controller3:
+            submenu: CONTROLLERS
+            prompt: PS3 CONTROLLER 3
+            description: Enables controller specific capabilities. Sony DS won't work with clone controllers.
+            choices:
+                "DirectInput": "Direct"
+                "Sony DS":     "Sony"
+        rpcs3_controller4:
+            submenu: CONTROLLERS
+            prompt: PS3 CONTROLLER 4
+            description: Enables controller specific capabilities. Sony DS won't work with clone controllers.
+            choices:
+                "DirectInput": "Direct"
+                "Sony DS":     "Sony"
+        rpcs3_controller5:
+            submenu: CONTROLLERS
+            prompt: PS3 CONTROLLER 5
+            description: Enables controller specific capabilities. Sony DS won't work with clone controllers.
+            choices:
+                "DirectInput": "Direct"
+                "Sony DS":     "Sony"
+        rpcs3_controller6:
+            submenu: CONTROLLERS
+            prompt: PS3 CONTROLLER 6
+            description: Enables controller specific capabilities. Sony DS won't work with clone controllers.
+            choices:
+                "DirectInput": "Direct"
+                "Sony DS":     "Sony"
+        rpcs3_controller7:
+            submenu: CONTROLLERS
+            prompt: PS3 CONTROLLER 7
+            description: Enables controller specific capabilities. Sony DS won't work with clone controllers.
+            choices:
+                "DirectInput": "Direct"
+                "Sony DS":     "Sony"
 scummvm:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -9414,7 +9471,7 @@ tsugaru:
                 "YES":            1
 mame:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns]
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns, use_wheels]
   cfeatures:
         video:
             prompt:      VIDEO MODE
@@ -10596,6 +10653,13 @@ wine:
         hide_nvidia_gpu:
             prompt:      HIDE NVIDIA GPU
             description: Force Nvidia GPUs to always be reported as AMD GPUs.
+            choices:
+                "Off": 0
+                "On":  1
+        enable_nvapi:
+            group: ADVANCED OPTIONS
+            prompt:      ENABLE NVAPI
+            description: NVAPI is NVIDIA's core software that allows direct access to NVIDIA GPU.
             choices:
                 "Off": 0
                 "On":  1

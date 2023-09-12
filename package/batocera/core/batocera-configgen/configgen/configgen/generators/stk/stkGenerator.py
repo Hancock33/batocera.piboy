@@ -9,7 +9,7 @@ import utils.videoMode as videoMode
 
 class StkGenerator(Generator):
 
-    def generate(self, system, rom, playersControllers, guns, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         # ini file
         config_src = '/usr/share/game_assets/supertuxkart'
         config_root = '/userdata/system/.config/supertuxkart'

@@ -3,14 +3,15 @@
 # glslang
 #
 ################################################################################
-# Version: Commits on Sept 05, 2023
-GLSLANG_VERSION = 0bbe74c7094138f08ee5493ac288ed9e70d4f3ea
+# Version: Commits on Sept 12, 2023
+GLSLANG_VERSION = 323836e46b9e453806e9eb5c1bf76c659c870fb2
 GLSLANG_SITE = $(call github,KhronosGroup,glslang,$(GLSLANG_VERSION))
-GLSLANG_DEPENDENCIES = vulkan-headers vulkan-loader
+GLSLANG_DEPENDENCIES = vulkan-headers vulkan-loader spirv-tools
 GLSLANG_INSTALL_STAGING = YES
 GLSLANG_SUPPORTS_IN_SOURCE_BUILD = NO
 
-GLSLANG_CONF_OPTS += -DENABLE_HLSL=ON
+HOST_GLSLANG_CONF_OPTS += -DENABLE_OPT=0
+GLSLANG_CONF_OPTS += -DENABLE_HLSL=ON -DENABLE_OPT=0
 GLSLANG_CONF_ENV += LDFLAGS="--lpthread -ldl"
 
 ifeq ($(BR2_PACKAGE_MESA3D),y)
