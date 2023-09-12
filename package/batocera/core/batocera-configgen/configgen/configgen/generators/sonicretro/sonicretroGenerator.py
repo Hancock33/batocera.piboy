@@ -11,7 +11,7 @@ sm_src = "/usr/share/game_assets/sonicmania/Game.so"
 sm_dst = "/userdata/roms/ports/sonicretro/Sonic Mania.som/Game.so"
 
 class SonicRetroGenerator(Generator):
-    def generate(self, system, rom, playersControllers, guns, gameResolution):
+    def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
 
         # Determine the emulator to use
         if (rom.lower()).endswith('son'):

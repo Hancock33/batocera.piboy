@@ -743,8 +743,6 @@ ps2:
   options:
     powersave: '1'
     fullboot: true
-    # temporarily disable until mangohud fixed
-    hud_support: false
 ps3:
   emulator: rpcs3
   core:     rpcs3
