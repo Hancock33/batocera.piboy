@@ -13507,10 +13507,6 @@ msgid "Open"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid "NVAPI"
-#~ msgstr "NVAPI"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Almacena estados pasados del juego en caché para rebobinar en tiempo "
