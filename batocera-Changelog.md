@@ -31,9 +31,11 @@
 - Added Tyrian, a vertical shooter (through content downloader)
 - Re-enabled lr-sameduck for MegaDuck with retroachievements and zip/7z support
 - Initialize wheel support : new automatic collection ; es wheel icon ; wheel game database
+- ps2 native wheel support with force feedback
 - Guncon3 support
 - Plane mode (enable/disable wifi/bt on the fly)
 - hatariB libretro core
+- Better Chromebook audio support
 ### Fixed
 - Fix wifi/bluetooth on Tinkerboard
 - Fixed crop overscan settings for NES to work with newer core builds
@@ -62,13 +64,14 @@
 - Model2 crosshair disabled by default with light guns connected
 - Laptops / Systems with 2 GPUs will now automatically set the environment variables to use the best GPU.
 - Model2 start and coins now mapped on light guns when playing gun games
+- RPCS3 now requires specific Sony controller selection via EmulationStation
 ### Updated
 - xenia to v1.0.2805
 - xenia canary to 9554f82 (Commits on Sep 4, 2023)
 - citra to nightly-1973
 - groovy mame to 0.258
 - libretro-mame to 0.258
-- cemu to v2.0-47
+- cemu to v2.0-48
 - amiberry to 5.6.1
 - dosbox-x to v2023.09.01
 - tsugaru to v20230722
@@ -76,7 +79,7 @@
 - duckstation to Aug 4, 2023 build
 - flycast to July 5th build
 - melonds to July 8th build
-- ppsspp to July 8th build
+- ppsspp to v1.16.1
 - lr-ppsspp to July 8th build
 - xemu to v0.7.110
 - devilutionX to 1.5.0
@@ -241,7 +244,7 @@
 - MAME to 0.253
 ### Dev
 - buildroot upgrade to 2023.02.01
-- mesa3d update to 23.1.5
+- mesa3d update to 23.1.7
 - dxvk to 2.1
 - linux firmware to 20230404
 - linux kernel for x86_64 to 6.3.6
@@ -250,7 +253,7 @@
 - llvm to 16.0.3
 - vulkan stack to v1.3.248
 - add multiple Qt6 packages
-- alsa stack to 1.2.9
+- alsa stack to 1.2.10
 
 
 # 2023/03/09 - batocera.linux 36 - Luna Moth

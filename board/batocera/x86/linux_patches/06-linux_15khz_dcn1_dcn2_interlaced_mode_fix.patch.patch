@@ -154,7 +154,7 @@ index 9a3ded311195..ea41d9d3ed68 100644
  		mode_lib->vba.htaps[mode_lib->vba.NumberOfActivePlanes] = taps->htaps;
  		mode_lib->vba.vtaps[mode_lib->vba.NumberOfActivePlanes] = taps->vtaps;
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index 3f479483d7d8..0fecdda431b9 100644
+index 969313f8c5fc..ebe140e8838f 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
 @@ -162,6 +162,9 @@ static int drm_helper_probe_add_cmdline_mode(struct drm_connector *connector)

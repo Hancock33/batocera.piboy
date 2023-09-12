@@ -4,8 +4,8 @@
 #
 ################################################################################
 # Version: Commits on Oct 4, 2021
-MF_VERSION = f8d24e9b600bad038911e8618721c8bfb83872e9
-MF_SITE = $(call github,z0z0z,mf-install,$(MF_VERSION))
+MF_VERSION = 680890e6f93d0b601a641c7fd69d5f124fd65538
+MF_SITE = $(call github,liberodark,mf-install,$(MF_VERSION))
 MF_LICENSE = zlib/libpng
 
 define MF_EXTRACT_CMDS
