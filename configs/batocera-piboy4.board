@@ -17,10 +17,10 @@ BR2_ROOTFS_POST_IMAGE_SCRIPT="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/scrip
 # Linux headers same as kernel, a 6.4 series
 BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_6_4=y
 
-# Kernel - Version: 6.5
+# Kernel - Version: 6.5.2
 BR2_LINUX_KERNEL=y
 BR2_LINUX_KERNEL_CUSTOM_TARBALL=y
-BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,d3f2064eb192d69bbcba5c6cad99c105a799c3a1)/d3f2064eb192d69bbcba5c6cad99c105a799c3a1.tar.gz"
+BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,ddc52c6ef4edefd0ea1b6d74f958f551db1177c9)/ddc52c6ef4edefd0ea1b6d74f958f551db1177c9.tar.gz"
 BR2_KERNEL_HEADERS_AS_KERNEL=y
 BR2_LINUX_KERNEL_DEFCONFIG="bcm2711"
 BR2_LINUX_KERNEL_PATCH="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/linux_patches"
