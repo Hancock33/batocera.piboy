@@ -11561,7 +11561,6 @@ droidports:
 eduke32:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-  features: [padtokeyboard]
   cfeatures:
     nologo:
       prompt: SKIP INTRO VIDEOS
@@ -11569,6 +11568,9 @@ eduke32:
       choices:
         "Skip": 1
         "Show (Default)": 0
+eka2l1:
+  features: [padtokeyboard]
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 f2bgl:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
