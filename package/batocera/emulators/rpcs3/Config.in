@@ -1,19 +1,20 @@
 config BR2_PACKAGE_RPCS3
-    bool "rpcs3"
-    depends on BR2_TOOLCHAIN_GCC_AT_LEAST_8
-    select BR2_PACKAGE_LIBXML2
-    select BR2_PACKAGE_MESA3D
-    select BR2_PACKAGE_OPENAL
-    select BR2_PACKAGE_ALSA_LIB
-    select BR2_PACKAGE_LIBEVDEV
-    select BR2_PACKAGE_LIBGLEW
-    select BR2_PACKAGE_LIBUSB
-    select BR2_PACKAGE_LIBGLU
-    select BR2_PACKAGE_FFMPEG_SWSCALE
-    select BR2_PACKAGE_NCURSES
-    select BR2_PACKAGE_FAUDIO
-    select BR2_PACKAGE_WOLFSSL
-    select BR2_PACKAGE_WOLFSSL_ALL
+	bool "rpcs3"
+	depends on BR2_TOOLCHAIN_GCC_AT_LEAST_8
+	select BR2_PACKAGE_ALSA_LIB
+	select BR2_PACKAGE_FAUDIO
+	select BR2_PACKAGE_FFMPEG_SWSCALE
+	select BR2_PACKAGE_LIBEVDEV
+	select BR2_PACKAGE_LIBGLEW
+	select BR2_PACKAGE_LIBGLU
+	select BR2_PACKAGE_LIBUSB
+	select BR2_PACKAGE_LIBXML2
+	select BR2_PACKAGE_MESA3D
+	select BR2_PACKAGE_NCURSES
+	select BR2_PACKAGE_OPENAL
+	select BR2_PACKAGE_RTMPDUMP
+	select BR2_PACKAGE_WOLFSSL
+	select BR2_PACKAGE_WOLFSSL_ALL
 	# QT6
 	select BR2_PACKAGE_QT6
 	select BR2_PACKAGE_QT6BASE
@@ -32,13 +33,13 @@ config BR2_PACKAGE_RPCS3
 	select BR2_PACKAGE_QT6BASE_WIDGETS
 	select BR2_PACKAGE_QT6BASE_XCB
 	select BR2_PACKAGE_QT6BASE_XML
-	select BR2_PACKAGE_QT6SVG
-	select BR2_PACKAGE_QT6TOOLS
+	select BR2_PACKAGE_QT6DECLARATIVE
 	select BR2_PACKAGE_QT6MULTIMEDIA
 	select BR2_PACKAGE_QT6SVG
-	select BR2_PACKAGE_QT6DECLARATIVE
+	select BR2_PACKAGE_QT6SVG
+	select BR2_PACKAGE_QT6TOOLS
 
-    help
-      RPCS3 is a multi-platform open-source Sony PlayStation 3 emulator.
+	help
+	  RPCS3 is a multi-platform open-source Sony PlayStation 3 emulator.
 
-      https://rpcs3.net/
+	  https://rpcs3.net/
