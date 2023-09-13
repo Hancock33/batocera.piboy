@@ -10457,7 +10457,7 @@ msgctxt "game_options"
 msgid "Choose number of audio channels."
 msgstr "Elige el número de canales de audio."
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3
+#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "AUDIO"
 msgstr "AUDIO"
@@ -10484,6 +10484,18 @@ msgstr "Surround 7.1"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
+msgid ""
+"Use 16 bit audio samples for audio drivers that don't support 32bit. Only "
+"use if you get no audio."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "CONVERT TO 16-BIT"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
 msgid "Can reduce crackle and stutter but increases audio latency."
 msgstr ""
 "Puede reducir chasquidos y cortes, pero incrementa la latencia de audio."
@@ -10495,7 +10507,9 @@ msgstr "ACTIVAR EL BÚFER DE AUDIO"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "Duration of audio buffer in milliseconds."
+msgid ""
+"Duration of audio buffer in milliseconds. Higher numbers may cause audio "
+"latency."
 msgstr ""
 
 #. TRANSLATION: rpcs3
@@ -10505,7 +10519,67 @@ msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "100 (Default)"
+msgid "10ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "20ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "40ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "60ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "80ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "100ms (Default)"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "120ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "140ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "160ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "180ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "200ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "220ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "240ms"
 msgstr ""
 
 #. TRANSLATION: rpcs3
@@ -10521,6 +10595,22 @@ msgstr ""
 msgctxt "game_options"
 msgid "ENABLE TIME STRETCHING"
 msgstr "ACTIVAR TIME STRETCH"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"Buffer fill level (in percentage) below which time stretching will start."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "TIME STRETCHING THRESHOLD"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "75% (Default)"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
