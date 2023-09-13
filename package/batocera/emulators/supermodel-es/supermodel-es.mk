@@ -3,7 +3,7 @@
 # supermodel-es
 #
 ################################################################################
-# rtissera fork of supermodel for OpenGL ES 3.2
+# Version: Commits on Sept 10, 2023 (branch@gles32)
 SUPERMODEL_ES_VERSION = 3b2165a3aad5d4480e9dd8bfba746fea9a4d9e38
 SUPERMODEL_ES_SITE = $(call github,rtissera,Supermodel,$(SUPERMODEL_ES_VERSION))
 SUPERMODEL_ES_DEPENDENCIES = sdl2 zlib libzip sdl2_net
