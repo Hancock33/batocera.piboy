@@ -3,9 +3,7 @@
 # EKA2L1
 #
 ################################################################################
-# Dirty version and repo while:
-# -fixing gcc13
-# - upstreaming needed changes (wayland, ffmpeg, gles)
+# Version: Commits on Sept 11, 2023 (branch@wayland-system-ffmpeg)
 EKA2L1_VERSION = e2aaf64c5b0e2081d640d358bdd5fad69726ab2e
 EKA2L1_SITE = https://github.com/rtissera/EKA2L1.git
 EKA2L1_SITE_METHOD=git
