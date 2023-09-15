@@ -30,6 +30,10 @@ ifeq ($(BR2_ARCH_IS_64),y)
 	SCUMMVM_CONF_OPTS += --disable-ext-neon
 endif
 
+ifeq ($(BR2_riscv),y)
+    SCUMMVM_CONF_OPTS += --host=riscv64-linux
+endif
+
 define SCUMMVM_ADD_VIRTUAL_KEYBOARD
 	cp -f $(@D)/backends/vkeybd/packs/vkeybd_default.zip $(TARGET_DIR)/usr/share/scummvm
 	cp -f $(@D)/backends/vkeybd/packs/vkeybd_small.zip $(TARGET_DIR)/usr/share/scummvm
