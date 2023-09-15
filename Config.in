@@ -67,6 +67,8 @@ menu "System"
   endmenu
 
   menu "GPU"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/img-gpu-powervr/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/img-mesa3d/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/libmali/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/mali-G610/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/mali-G52/Config.in"
@@ -309,6 +311,7 @@ menu "Emulators"
 
   menu "Standalone Emulators"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/amiberry/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/applewin/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/bigpemu/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/cemu/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/citra/Config.in"
