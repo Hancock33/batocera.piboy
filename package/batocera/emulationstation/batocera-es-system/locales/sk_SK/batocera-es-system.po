@@ -3963,13 +3963,18 @@ msgstr "Camputers Lynx kazety"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
+msgid "Camputers Lynx floppies"
+msgstr ""
+
+#. TRANSLATION: libretro/mame, mame/vitaquake3
+msgctxt "game_options"
 msgid "LYNX MODEL"
 msgstr "Model Lynx"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "Lynx 128k (Default)"
-msgstr "Lynx 128k (predvolené)"
+msgid "Lynx 48k"
+msgstr "Lynx 48k"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -3978,8 +3983,8 @@ msgstr "Lynx 96k"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "Lynx 48k"
-msgstr "Lynx 48k"
+msgid "Lynx 128k"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -7268,7 +7273,7 @@ msgctxt "game_options"
 msgid "DRIVERS"
 msgstr ""
 
-#. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
+#. TRANSLATION: libretro, cemu, citra, daphne, dolphin, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "Grafické API"
@@ -7288,7 +7293,7 @@ msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
 
-#. TRANSLATION: libretro, daphne, dolphin, duckstation, pcsx2, ...
+#. TRANSLATION: libretro, citra, daphne, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
@@ -7587,7 +7592,7 @@ msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr "Režim vysokého rozlíšenia"
 
-#. TRANSLATION: cemu, dolphin, duckstation, melonds, pcsx2, ...
+#. TRANSLATION: cemu, citra, dolphin, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "Vyberte, ktorú grafickú API knižnicu použiť."
@@ -7851,6 +7856,21 @@ msgctxt "game_options"
 msgid "hybrid bottom ratio 4"
 msgstr "hybridný spodný pomer 4"
 
+#. TRANSLATION: citra, citra, citra, citra, citra, ...
+msgctxt "game_options"
+msgid "GRAPHICS"
+msgstr ""
+
+#. TRANSLATION: citra, duckstation, melonds, pcsx2, scummvm, ...
+msgctxt "game_options"
+msgid "Software"
+msgstr "Softvér"
+
+#. TRANSLATION: citra, scummvm, play
+msgctxt "game_options"
+msgid "OpenGL (Default)"
+msgstr "OpenGL (predvolené)"
+
 #. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, pcsx2
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
@@ -7875,6 +7895,18 @@ msgstr "Znížiť zasekávanie, ku ktorému dochádza pri kompilácii shaderov."
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
 msgstr "Disková cache shadera"
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid ""
+"Compile shaders using background threads to avoid shader compilation "
+"stutter. May cause graphical glitches."
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "ENABLE ASYNC SHADER COMPILATION"
+msgstr ""
 
 #. TRANSLATION: citra
 msgctxt "game_options"
@@ -8226,6 +8258,18 @@ msgstr "SSAA"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
+msgid ""
+"Enabling will allow for correct emulation of texture wrapping. This comes at "
+"a cost of potential worse performance."
+msgstr ""
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "MANUAL TEXTURE SAMPLING"
+msgstr ""
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "Ak chcete použiť cheaty na hry alebo kódy 16/9 Aspect Ratio Fix."
 
@@ -8364,11 +8408,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "OPTIMAL FRAME PACING"
 msgstr "Optimálna rýchlosť snímky"
-
-#. TRANSLATION: duckstation, melonds, pcsx2, scummvm, awgl, ...
-msgctxt "game_options"
-msgid "Software"
-msgstr "Softvér"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -10730,11 +10769,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "RENDERER"
 msgstr ""
-
-#. TRANSLATION: scummvm, play
-msgctxt "game_options"
-msgid "OpenGL (Default)"
-msgstr "OpenGL (predvolené)"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -13523,14 +13557,6 @@ msgid "Open"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid "Duration of audio buffer in milliseconds."
-#~ msgstr "Trvanie zvukového buffera v milisekundách"
-
-#~ msgctxt "game_options"
-#~ msgid "100 (Default)"
-#~ msgstr "100 (predvolené)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Uložiť minulé stavy na pretočenie v reálnom čase, ak to jadro podporuje."
@@ -13757,6 +13783,18 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rýchlo dopredu"
+
+#~ msgctxt "game_options"
+#~ msgid "Lynx 128k (Default)"
+#~ msgstr "Lynx 128k (predvolené)"
+
+#~ msgctxt "game_options"
+#~ msgid "Duration of audio buffer in milliseconds."
+#~ msgstr "Trvanie zvukového buffera v milisekundách"
+
+#~ msgctxt "game_options"
+#~ msgid "100 (Default)"
+#~ msgstr "100 (predvolené)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Aspect ratio correction on/off"
