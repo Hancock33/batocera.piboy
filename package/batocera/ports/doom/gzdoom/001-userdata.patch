@@ -41,7 +41,7 @@ index 196504b54..bf028b807 100644
  	I_StartupJoysticks();
  
 diff --git a/src/common/platform/posix/unix/i_specialpaths.cpp b/src/common/platform/posix/unix/i_specialpaths.cpp
-index 524f94c60..7c75e0934 100644
+index f844f0dd0..22ea63a7a 100644
 --- a/src/common/platform/posix/unix/i_specialpaths.cpp
 +++ b/src/common/platform/posix/unix/i_specialpaths.cpp
 @@ -45,59 +45,7 @@
@@ -154,8 +154,8 @@ index 524f94c60..7c75e0934 100644
  
  FString M_GetSavegamesPath()
  {
--	return NicePath("$HOME/" GAME_DIR "/");
-+	return FString("/userdata/saves/gzdoom/");
+-	return NicePath("$HOME/" GAME_DIR "/savegames/");
++	return M_GetSavegamesPath();
  }
  
  //===========================================================================
@@ -164,12 +164,12 @@ index 524f94c60..7c75e0934 100644
  FString M_GetDocumentsPath()
  {
 -	return NicePath("$HOME/" GAME_DIR "/");
-+	return M_GetSavegamesPath();
++	return FString("/userdata/saves/gzdoom/");
  }
  
  //===========================================================================
 diff --git a/src/gameconfigfile.cpp b/src/gameconfigfile.cpp
-index 82b8071b6..8d772ec37 100644
+index 5a801bff3..0efe6132a 100644
 --- a/src/gameconfigfile.cpp
 +++ b/src/gameconfigfile.cpp
 @@ -145,7 +145,7 @@ FGameConfigFile::FGameConfigFile ()
