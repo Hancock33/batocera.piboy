@@ -3951,13 +3951,18 @@ msgstr "Camputers Lynx カセット"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
+msgid "Camputers Lynx floppies"
+msgstr ""
+
+#. TRANSLATION: libretro/mame, mame/vitaquake3
+msgctxt "game_options"
 msgid "LYNX MODEL"
 msgstr "LYNX モデル"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "Lynx 128k (Default)"
-msgstr "Lynx 128k (標準)"
+msgid "Lynx 48k"
+msgstr "Lynx 48k"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -3966,8 +3971,8 @@ msgstr "Lynx 96k"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "Lynx 48k"
-msgstr "Lynx 48k"
+msgid "Lynx 128k"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -7249,7 +7254,7 @@ msgctxt "game_options"
 msgid "DRIVERS"
 msgstr ""
 
-#. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
+#. TRANSLATION: libretro, cemu, citra, daphne, dolphin, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "グラフィック API"
@@ -7269,7 +7274,7 @@ msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
 
-#. TRANSLATION: libretro, daphne, dolphin, duckstation, pcsx2, ...
+#. TRANSLATION: libretro, citra, daphne, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
@@ -7567,7 +7572,7 @@ msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr "高解像度モード"
 
-#. TRANSLATION: cemu, dolphin, duckstation, melonds, pcsx2, ...
+#. TRANSLATION: cemu, citra, dolphin, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "使用するグラフィック API を選択します"
@@ -7830,6 +7835,21 @@ msgctxt "game_options"
 msgid "hybrid bottom ratio 4"
 msgstr "ハイブリッド下/上比率4"
 
+#. TRANSLATION: citra, citra, citra, citra, citra, ...
+msgctxt "game_options"
+msgid "GRAPHICS"
+msgstr ""
+
+#. TRANSLATION: citra, duckstation, melonds, pcsx2, scummvm, ...
+msgctxt "game_options"
+msgid "Software"
+msgstr "ソフトウェア"
+
+#. TRANSLATION: citra, scummvm, play
+msgctxt "game_options"
+msgid "OpenGL (Default)"
+msgstr "OpenGL (通常)"
+
 #. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, pcsx2
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
@@ -7855,6 +7875,18 @@ msgstr "シェーダーを構築するときに発生するカクつきを減ら
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
 msgstr "ディスクシェーダーキャッシュ"
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid ""
+"Compile shaders using background threads to avoid shader compilation "
+"stutter. May cause graphical glitches."
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "ENABLE ASYNC SHADER COMPILATION"
+msgstr ""
 
 #. TRANSLATION: citra
 msgctxt "game_options"
@@ -8201,6 +8233,18 @@ msgstr "SSAA"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
+msgid ""
+"Enabling will allow for correct emulation of texture wrapping. This comes at "
+"a cost of potential worse performance."
+msgstr ""
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "MANUAL TEXTURE SAMPLING"
+msgstr ""
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr "チートまたは16/9アスペクト比修正コードを使用します"
 
@@ -8338,11 +8382,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "OPTIMAL FRAME PACING"
 msgstr "最適なフレームペーシング"
-
-#. TRANSLATION: duckstation, melonds, pcsx2, scummvm, awgl, ...
-msgctxt "game_options"
-msgid "Software"
-msgstr "ソフトウェア"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -10698,11 +10737,6 @@ msgstr "好みのレンダラーを選択してください"
 msgctxt "game_options"
 msgid "RENDERER"
 msgstr "レンダラー"
-
-#. TRANSLATION: scummvm, play
-msgctxt "game_options"
-msgid "OpenGL (Default)"
-msgstr "OpenGL (通常)"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -13488,14 +13522,6 @@ msgid "Open"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid "Duration of audio buffer in milliseconds."
-#~ msgstr "音声バッファの持続時間 (ミリ秒単位)"
-
-#~ msgctxt "game_options"
-#~ msgid "100 (Default)"
-#~ msgstr "100 (通常)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "コアが対応している場合は、過去の状態を保存してリアルタイムで巻き戻します"
@@ -13719,6 +13745,18 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid "Lynx 128k (Default)"
+#~ msgstr "Lynx 128k (標準)"
+
+#~ msgctxt "game_options"
+#~ msgid "Duration of audio buffer in milliseconds."
+#~ msgstr "音声バッファの持続時間 (ミリ秒単位)"
+
+#~ msgctxt "game_options"
+#~ msgid "100 (Default)"
+#~ msgstr "100 (通常)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
