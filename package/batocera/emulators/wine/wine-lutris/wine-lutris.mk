@@ -3,8 +3,8 @@
 # wine-lutris
 #
 ################################################################################
-# Version: Commits on Sept 01, 2023
-WINE_LUTRIS_VERSION = 8.15
+# Version: Commits on Sept 15, 2023
+WINE_LUTRIS_VERSION = 8.16
 WINE_LUTRIS_SOURCE = wine-$(WINE_LUTRIS_VERSION).tar.gz
 WINE_LUTRIS_SITE = https://github.com/wine-mirror/wine/archive/refs/tags
 WINE_LUTRIS_LICENSE = LGPL-2.1+
@@ -13,7 +13,7 @@ WINE_LUTRIS_CPE_ID_VENDOR = winehq
 WINE_LUTRIS_SELINUX_MODULES = wine
 WINE_LUTRIS_DEPENDENCIES = host-bison host-flex host-wine-lutris
 HOST_WINE_LUTRIS_DEPENDENCIES = host-bison host-flex host-clang host-lld
-WINE_LUTRIS_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/v$(WINE_LUTRIS_VERSION)/wine-staging-v$(WINE_LUTRIS_VERSION).tar.gz
+HOST_WINE_LUTRIS_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/v$(WINE_LUTRIS_VERSION)/wine-staging-v$(WINE_LUTRIS_VERSION).tar.gz
 
 # Configure Lutris
 define WINE_LUTRIS_AUTOGEN

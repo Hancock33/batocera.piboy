@@ -90,7 +90,7 @@ msgstr "بكسل مربع"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Core provided"
-msgstr ""
+msgstr "الكور المستخدم"
 
 #. TRANSLATION: shared, shared, libretro/mesen, libretro/gambatte
 msgctxt "game_options"
@@ -180,12 +180,12 @@ msgstr "تمديد الحواف (٤K و ULTRAWIDE)"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Show context-sensitive info over the game."
-msgstr ""
+msgstr "عرض معلومات حساسة للسياق على اللعبة"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "HEADS UP DISPLAY"
-msgstr ""
+msgstr "عرض فوق الرأس"
 
 #. TRANSLATION: shared, shared, libretro/mesens, libretro/mesen, libretro/mesen, ...
 msgctxt "game_options"
@@ -205,7 +205,7 @@ msgstr "الأداء"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "HEADS UP DISPLAY CORNER"
-msgstr ""
+msgstr "زوايا العرض فوق الرأس"
 
 #. TRANSLATION: shared, shared
 msgctxt "game_options"
@@ -230,12 +230,12 @@ msgstr "أسفل يسار"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Show an image overlaid on top of the bezel."
-msgstr ""
+msgstr "عرض صورة فوق الإطار"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "SHOW TATTOO OVER BEZEL"
-msgstr ""
+msgstr "عرض الوشم فوق الاطار"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -256,7 +256,7 @@ msgstr "صورة مخصصة"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "TATTOO CORNER"
-msgstr ""
+msgstr "حواف الوشم"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -266,12 +266,12 @@ msgstr "مسار صورو الـPNG المخصصة"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Shrink/expand tattoo to fit within the bezel's border."
-msgstr ""
+msgstr "تقليص/توسيع الوشم ليناسب حدود الإطار."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "RESIZE TATTOO"
-msgstr ""
+msgstr "اعادة تحجيم الوشم"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -320,14 +320,15 @@ msgstr "رابط خدمة الترجمة الآلية"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "PAUSE ON TRANSLATED SCREEN"
-msgstr ""
+msgstr "اوقف مؤقتا على الشاشه المترجمة"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid ""
 "Enables run-ahead. Doubles CPU requirements. High numbers can result in "
 "visible jitter."
-msgstr ""
+msgstr "تمكين التشغيل للأمام. يضاعف متطلبات وحدة المعالجة المركزية. الأعداد الكبيرة يمكن أن تؤدي إلى "
+"ارتعاش واضح."
 
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
@@ -337,24 +338,25 @@ msgstr "التقليل من التباطؤ"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "RUN-AHEAD FRAMES"
-msgstr ""
+msgstr "اطارات مسبقة التشغيل"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Can prevent audio skips on button presses when using run-ahead."
-msgstr ""
+msgstr "مكن منع تخطي الصوت عند الضغط على الزر عند استخدام التشغيل المسبق"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "USE SECOND INSTANCE FOR RUN-AHEAD"
-msgstr ""
+msgstr "استخدام الحالة الثانية للتشغيل المسبق"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid ""
 "Automatically decrease frame delay temporarily to prevent frame drops. Can "
 "introduce stuttering."
-msgstr ""
+msgstr "قم تلقائيًا بتقليل تأخير الإطار مؤقتًا لمنع انخفاض الإطار. يمكن "
+"ان يؤدي الى التأتأة."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -365,7 +367,7 @@ msgstr "التأخير التلقائي للإطارات"
 msgctxt "game_options"
 msgid ""
 "Don't deviate from core requested timing. G-Sync, FreeSync, HDMI 2.1 VRR."
-msgstr ""
+msgstr "لا تحيد عن التوقيت الأساسي المطلوب. جي سينك، فري سينك، HDMI 2.1 VRR."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -381,7 +383,7 @@ msgstr "يحسن الأداء على حساب وقت الإستجابة و ال�
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "THREADED VIDEO"
-msgstr ""
+msgstr "فيديو مرتبط"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -401,22 +403,22 @@ msgstr "استخدام المسدس الضوئي"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Use wheels instead of pads if wheels are connected."
-msgstr ""
+msgstr "استخدام عجلة القيادة بدلا من الاتجاهات اذا كانت متصلة"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "WHEELS"
-msgstr ""
+msgstr "عجلة القيادة"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "USE WHEELS"
-msgstr ""
+msgstr "استخدم عجلة القيادة"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "For emulators and controllers supporting force feedback."
-msgstr ""
+msgstr "للمحاكيات ووحدات التحكم التي تدعم ردود الفعل القوية"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -426,12 +428,12 @@ msgstr "مستوى اهتزاز لوحة التحكم"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Set game audio level gain in dB."
-msgstr ""
+msgstr "ضبط مستوى الصوت بالديسبل"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "AUDIO VOLUME GAIN"
-msgstr ""
+msgstr "مستوى الصوت"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -493,7 +495,7 @@ msgstr ""
 #. TRANSLATION: libretro/81
 msgctxt "game_options"
 msgid "Emulate Chroma 81 interface (colorization)."
-msgstr ""
+msgstr "محاكاة واجهة Chroma 81 (التلوين)."
 
 #. TRANSLATION: libretro/81, libretro/gambatte
 msgctxt "game_options"
@@ -513,12 +515,12 @@ msgstr "تفعيل(إجباري)"
 #. TRANSLATION: libretro/81
 msgctxt "game_options"
 msgid "Required for some homebrew."
-msgstr ""
+msgstr "مطلوب لبعض الوحدات المخصصة"
 
 #. TRANSLATION: libretro/81
 msgctxt "game_options"
 msgid "WRX HIGH RESOLUTION"
-msgstr ""
+msgstr "WRX عالية الدقة"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -3984,12 +3986,17 @@ msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
+msgid "Camputers Lynx floppies"
+msgstr ""
+
+#. TRANSLATION: libretro/mame, mame/vitaquake3
+msgctxt "game_options"
 msgid "LYNX MODEL"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "Lynx 128k (Default)"
+msgid "Lynx 48k"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
@@ -3999,7 +4006,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "Lynx 48k"
+msgid "Lynx 128k"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
@@ -7277,7 +7284,7 @@ msgctxt "game_options"
 msgid "DRIVERS"
 msgstr ""
 
-#. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
+#. TRANSLATION: libretro, cemu, citra, daphne, dolphin, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr ""
@@ -7297,7 +7304,7 @@ msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
 
-#. TRANSLATION: libretro, daphne, dolphin, duckstation, pcsx2, ...
+#. TRANSLATION: libretro, citra, daphne, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "فولكان"
@@ -7596,7 +7603,7 @@ msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
 msgstr ""
 
-#. TRANSLATION: cemu, dolphin, duckstation, melonds, pcsx2, ...
+#. TRANSLATION: cemu, citra, dolphin, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr ""
@@ -7860,6 +7867,21 @@ msgctxt "game_options"
 msgid "hybrid bottom ratio 4"
 msgstr ""
 
+#. TRANSLATION: citra, citra, citra, citra, citra, ...
+msgctxt "game_options"
+msgid "GRAPHICS"
+msgstr ""
+
+#. TRANSLATION: citra, duckstation, melonds, pcsx2, scummvm, ...
+msgctxt "game_options"
+msgid "Software"
+msgstr ""
+
+#. TRANSLATION: citra, scummvm, play
+msgctxt "game_options"
+msgid "OpenGL (Default)"
+msgstr "أوبن جي إل (افتراضي)"
+
 #. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, pcsx2
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
@@ -7883,6 +7905,18 @@ msgstr ""
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid ""
+"Compile shaders using background threads to avoid shader compilation "
+"stutter. May cause graphical glitches."
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "ENABLE ASYNC SHADER COMPILATION"
 msgstr ""
 
 #. TRANSLATION: citra
@@ -8226,6 +8260,18 @@ msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
+msgid ""
+"Enabling will allow for correct emulation of texture wrapping. This comes at "
+"a cost of potential worse performance."
+msgstr ""
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "MANUAL TEXTURE SAMPLING"
+msgstr ""
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
 msgid "To use game cheats or 16/9 Aspect Ratio Fix codes."
 msgstr ""
 
@@ -8359,11 +8405,6 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "OPTIMAL FRAME PACING"
-msgstr ""
-
-#. TRANSLATION: duckstation, melonds, pcsx2, scummvm, awgl, ...
-msgctxt "game_options"
-msgid "Software"
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -10366,7 +10407,7 @@ msgctxt "game_options"
 msgid "Choose number of audio channels."
 msgstr ""
 
-#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3
+#. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "AUDIO"
 msgstr "الصوت"
@@ -10394,6 +10435,18 @@ msgstr "محيطي ٧.١"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
+msgid ""
+"Use 16 bit audio samples for audio drivers that don't support 32bit. Only "
+"use if you get no audio."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "CONVERT TO 16-BIT"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
 msgid "Can reduce crackle and stutter but increases audio latency."
 msgstr ""
 
@@ -10404,7 +10457,9 @@ msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "Duration of audio buffer in milliseconds."
+msgid ""
+"Duration of audio buffer in milliseconds. Higher numbers may cause audio "
+"latency."
 msgstr ""
 
 #. TRANSLATION: rpcs3
@@ -10414,7 +10469,67 @@ msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "100 (Default)"
+msgid "10ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "20ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "40ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "60ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "80ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "100ms (Default)"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "120ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "140ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "160ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "180ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "200ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "220ms"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "240ms"
 msgstr ""
 
 #. TRANSLATION: rpcs3
@@ -10427,6 +10542,22 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ENABLE TIME STRETCHING"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid ""
+"Buffer fill level (in percentage) below which time stretching will start."
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "TIME STRETCHING THRESHOLD"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "75% (Default)"
 msgstr ""
 
 #. TRANSLATION: rpcs3
@@ -10600,11 +10731,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "RENDERER"
 msgstr ""
-
-#. TRANSLATION: scummvm, play
-msgctxt "game_options"
-msgid "OpenGL (Default)"
-msgstr "أوبن جي إل (افتراضي)"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"

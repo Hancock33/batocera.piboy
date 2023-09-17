@@ -3,8 +3,8 @@
 # scummvm
 #
 ################################################################################
-# Version: Commits on Sept 12, 2023
-SCUMMVM_VERSION = ff050b75cabcb2e4df847a8a2ccc72b4e9d9c338
+# Version: Commits on Sept 17, 2023
+SCUMMVM_VERSION = e0b8e6685e1e317bcced3678db7160dda763f636
 SCUMMVM_SITE = $(call github,scummvm,scummvm,$(SCUMMVM_VERSION))
 SCUMMVM_LICENSE = GPLv2
 SCUMMVM_DEPENDENCIES += sdl2 zlib libmpeg2 libogg libvorbis flac libmad libpng libtheora faad2 freetype libjpeg-bato
@@ -28,6 +28,10 @@ SCUMMVM_MAKE_OPTS += RANLIB="$(TARGET_RANLIB)" STRIP="$(TARGET_STRIP)" AR="$(TAR
 
 ifeq ($(BR2_ARCH_IS_64),y)
 	SCUMMVM_CONF_OPTS += --disable-ext-neon
+endif
+
+ifeq ($(BR2_riscv),y)
+    SCUMMVM_CONF_OPTS += --host=riscv64-linux
 endif
 
 define SCUMMVM_ADD_VIRTUAL_KEYBOARD
