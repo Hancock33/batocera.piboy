@@ -3,8 +3,8 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on Sept 12, 2023
-PPSSPP_VERSION = 961e0068f7b859b56fecfaaceddea74b355ee1ba
+# Version: Commits on Sept 17, 2023
+PPSSPP_VERSION = 99b2d2b2e94414a02566cb2e093b48190303635d
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
@@ -65,6 +65,14 @@ ifeq ($(BR2_aarch64),y)
 	PPSSPP_CONF_OPTS += -DARM64=ON
 	PPSSPP_CONF_OPTS += -DUSING_GLES2=ON
 	PPSSPP_CONF_OPTS += -DUSING_EGL=OFF
+endif
+
+# riscv
+ifeq ($(BR2_riscv),y)
+    PPSSPP_CONF_OPTS += -DRISCV=ON
+    PPSSPP_CONF_OPTS += -DRISCV64=ON
+    PPSSPP_CONF_OPTS += -DUSING_GLES2=ON
+    PPSSPP_CONF_OPTS += -DUSING_EGL=OFF
 endif
 
 # x86

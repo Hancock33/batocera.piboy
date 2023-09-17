@@ -3,8 +3,8 @@
 # libretro-ppsspp
 #
 ################################################################################
-# Version: Commits on Sept 12, 2023
-LIBRETRO_PPSSPP_VERSION = 961e0068f7b859b56fecfaaceddea74b355ee1ba
+# Version: Commits on Sept 17, 2023
+LIBRETRO_PPSSPP_VERSION = 99b2d2b2e94414a02566cb2e093b48190303635d
 LIBRETRO_PPSSPP_SOURCE = ppsspp-$(LIBRETRO_PPSSPP_VERSION)-br1.tar.gz
 LIBRETRO_PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 LIBRETRO_PPSSPP_SITE_METHOD=git
@@ -61,6 +61,15 @@ ifeq ($(BR2_aarch64),y)
 	LIBRETRO_PPSSPP_CONF_OPTS += -DUSING_GLES2=ON
 	LIBRETRO_PPSSPP_CONF_OPTS += -DUSING_EGL=ON
 endif
+
+# riscv
+ifeq ($(BR2_riscv),y)
+    LIBRETRO_PPSSPP_CONF_OPTS += -DRISCV=ON
+    LIBRETRO_PPSSPP_CONF_OPTS += -DRISCV64=ON
+    LIBRETRO_PPSSPP_CONF_OPTS += -DUSING_GLES2=ON
+    LIBRETRO_PPSSPP_CONF_OPTS += -DUSING_EGL=OFF
+endif
+
 
 # x86
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86),y)

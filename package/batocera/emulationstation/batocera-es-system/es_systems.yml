@@ -163,10 +163,12 @@ apple2gs:
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+      applewin:         { requireAnyOf: [BR2_PACKAGE_APPLEWIN]      }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
     gsplus:
       gsplus:           { requireAnyOf: [BR2_PACKAGE_GSPLUS], incompatible_extensions: [mfi, dfi, rti, edd, woz, hfe, mfm, td0, imd, d77, d88, 1dd, cqm, cqui, ima, img, ufi, 360, ipf, dc42, zip, 7z] }
+      applewin:         { requireAnyOf: [BR2_PACKAGE_APPLEWIN], incompatible_extensions: [chd] }
 
 macintosh:
   name:                 Macintosh
@@ -1304,7 +1306,7 @@ camplynx:
   manufacturer:         Camputers
   release:              1983
   hardware:             computer
-  extensions:           [wav, tap, zip, 7z]
+  extensions:           [wav, tap, ldf, zip, 7z]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
@@ -5839,6 +5841,18 @@ ngpc:
     libretro:
       mednafen_ngp:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_NGP] }
       race:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_RACE] }
+
+ngage:
+  name:                 N-Gage
+  manufacturer:         Nokia
+  release:              2003
+  hardware:             portable
+  extensions:           [n-gage, sisx, sis, zip]
+  platform:             ngage
+  theme:                ngage
+  emulators:
+    eka2l1:
+      eka2l1:           { requireAnyOf: [BR2_PACKAGE_EKA2L1] }
 
 solarus:
   name:                 Solarus
