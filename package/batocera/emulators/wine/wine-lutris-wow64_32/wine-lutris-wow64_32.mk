@@ -13,7 +13,7 @@ WINE_LUTRIS_WOW64_32_CPE_ID_VENDOR = winehq
 WINE_LUTRIS_WOW64_32_SELINUX_MODULES = wine
 WINE_LUTRIS_WOW64_32_DEPENDENCIES = host-bison host-flex host-wine-lutris
 HOST_WINE_LUTRIS_WOW64_32_DEPENDENCIES = host-bison host-flex host-clang host-lld
-WINE_LUTRIS_WOW64_32_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/v$(WINE_LUTRIS_VERSION)/wine-staging-v$(WINE_LUTRIS_VERSION).tar.gz
+HOST_WINE_LUTRIS_WOW64_32_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/v$(WINE_LUTRIS_VERSION)/wine-staging-v$(WINE_LUTRIS_VERSION).tar.gz
 
 # Configure Lutris
 define WINE_LUTRIS_WOW64_32_AUTOGEN

@@ -45,25 +45,25 @@ index 48e51728..c1c947b1 100644
  set(EGL_VERSION_STRING ${EGL_VERSION})
  
 diff --git a/dep/glad/CMakeLists.txt b/dep/glad/CMakeLists.txt
-index 24a4fb45..59eb66e5 100644
+index 1c0f2014..fcfbd08f 100644
 --- a/dep/glad/CMakeLists.txt
 +++ b/dep/glad/CMakeLists.txt
 @@ -17,8 +17,9 @@ if(WIN32)
    target_sources(glad PRIVATE src/glad_wgl.c)
  else()
-   if(USE_EGL)
+   if(ENABLE_EGL)
 +    target_compile_definitions(glad PRIVATE -DEGL_NO_X11)
      target_sources(glad PRIVATE src/glad_egl.c)
 -    target_link_libraries(glad PRIVATE EGL::EGL)
 +    target_link_libraries(glad PRIVATE EGL)
    endif()
-   if(USE_X11)
+   if(ENABLE_X11)
      target_sources(glad PRIVATE src/glad_glx.c)
 diff --git a/src/core/settings.cpp b/src/core/settings.cpp
-index 10a548bd..b785e2e2 100644
+index 179fa7e7..2e2d129b 100644
 --- a/src/core/settings.cpp
 +++ b/src/core/settings.cpp
-@@ -1361,18 +1361,18 @@ std::string EmuFolders::Textures;
+@@ -1431,18 +1431,18 @@ std::string EmuFolders::Textures;
  
  void EmuFolders::SetDefaults()
  {
@@ -94,7 +94,7 @@ index 10a548bd..b785e2e2 100644
  }
  
  static std::string LoadPathFromSettings(SettingsInterface& si, const std::string& root, const char* section,
-@@ -1418,18 +1418,18 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
+@@ -1488,18 +1488,18 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
  void EmuFolders::Save(SettingsInterface& si)
  {
    // convert back to relative

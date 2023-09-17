@@ -3,8 +3,8 @@
 # libretro-snes9x
 #
 ################################################################################
-# Version: Commits on Aug 28, 2023
-LIBRETRO_SNES9X_VERSION = 1c97117fbfd5bd5d7e9a890759f82d0dbbb3ddc0
+# Version: Commits on Sept 15, 2023
+LIBRETRO_SNES9X_VERSION = 9fcd99d124872cc2aafe806974eb28789dd6827e
 LIBRETRO_SNES9X_SITE = $(call github,libretro,snes9x,$(LIBRETRO_SNES9X_VERSION))
 LIBRETRO_SNES9X_LICENSE = Non-commercial
 

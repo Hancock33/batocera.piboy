@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Sept 12, 2023
-RETROARCH_VERSION = cf2ee94c9f61885802ca56bc3bfb3e4430d6a236
+# Version: Commits on Sept 17, 2023
+RETROARCH_VERSION = 90521927babb562966c36aee201f70ae9978a392
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
@@ -151,6 +151,10 @@ endif
 ifeq ($(BR2_PACKAGE_VULKAN_LOADER)$(BR2_PACKAGE_VULKAN_HEADERS),yy)
 	RETROARCH_CONF_OPTS += --enable-vulkan
 	RETROARCH_DEPENDENCIES += vulkan-headers vulkan-loader slang-shaders
+endif
+
+ifeq ($(BR2_riscv),y)
+	RETROARCH_TARGET_CFLAGS += -DMESA_EGL_NO_X11_HEADERS=1
 endif
 
 define RETROARCH_CONFIGURE_CMDS
