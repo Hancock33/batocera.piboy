@@ -68,13 +68,13 @@
 ### Updated
 - xenia to v1.0.2805
 - xenia canary to 9554f82 (Commits on Sep 4, 2023)
-- citra to nightly-1973
+- citra to nightly-1989 (now includes Vulkan support)
 - groovy mame to 0.258
 - libretro-mame to 0.258
 - cemu to v2.0-48
 - amiberry to 5.6.1
 - dosbox-x to v2023.09.01
-- tsugaru to v20230722
+- tsugaru to v20230913
 - dolphin to 5.0-19864
 - duckstation to Aug 4, 2023 build
 - flycast to July 5th build
@@ -92,16 +92,17 @@
 - slang and glsl shaders to July 29th 2023
 - pcsx2 to v1.7.4857 (Aug, 1st 2023)
 - SDLPoP to v1.23 (Feb, 4th 2023)
-- BigPemu to v1071
+- BigPemu to v108
 - commander genius to v3.4.9
 - play! to v0.62
 - Vita3K to 0.1.9
-- vcmi to 1.3.1
+- vcmi to 1.3.2
 - libretro-mupen64plus-next to Aug 8 build
 - raze to 1.7.1
 - gzdoom to Aug 26 build
 - libretro-fake08 to Aug 21 build
 - libretro-bsnes to Aug 18 build
+- rpcs3 to 0.0.29-15617
 ### Dev
 - linux kernel for x86_64 to 6.5
 - linux kernel for RPI to 6.1.47
@@ -124,10 +125,11 @@
 - pacman to 5.2.2 with fix for GNU sed on batocera-makepkg
 - sound open firmware to v2.2.6
 - evsieve to v1.4.0
-- wf-recorder to 0.4.0
+- wf-recorder to 0.4.1
 - pipewire to 0.3.79
 - dxvk to 2.3
 - winetricks to 20230212
+- grim to 1.4.1
 
 # 2023/06/18 - batocera.linux 37 - Red Admiral
 ### hardware

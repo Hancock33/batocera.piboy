@@ -15,6 +15,10 @@ def getGenerator(emulator):
         from generators.amiberry.amiberryGenerator import AmiberryGenerator
         return AmiberryGenerator()
 
+    if emulator == 'applewin':
+        from generators.applewin.applewinGenerator import AppleWinGenerator
+        return AppleWinGenerator()
+
     if emulator == 'alephone':
         from generators.alephone.alephoneGenerator import AlephoneGenerator
         return AlephoneGenerator()

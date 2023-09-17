@@ -1,0 +1,10 @@
+diff --git a/libraries/ZVulkan/src/vulkanswapchain.cpp b/libraries/ZVulkan/src/vulkanswapchain.cpp
+index 495c68416..5cdd14768 100644
+--- a/libraries/ZVulkan/src/vulkanswapchain.cpp
++++ b/libraries/ZVulkan/src/vulkanswapchain.cpp
+@@ -1,4 +1,4 @@
+-
++#include <stdexcept>
+ #include "vulkanswapchain.h"
+ #include "vulkanobjects.h"
+ #include "vulkansurface.h"

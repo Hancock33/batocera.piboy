@@ -3000,13 +3000,14 @@ libretro:
                       choices:
                           "Don't Use (Default)":      none
                           "Camputers Lynx cassettes": camplynx_cass
+                          "Camputers Lynx floppies":  camplynx_flop
                   altmodel:
                       group: ADVANCED OPTIONS
                       prompt:      LYNX MODEL
                       choices:
-                          "Lynx 128k (Default)": lynx128k
-                          "Lynx 96k":            lynx96k
-                          "Lynx 48k":            lynx48k
+                          "Lynx 48k":  lynx48k
+                          "Lynx 96k":  lynx96k
+                          "Lynx 128k": lynx128k
                   enableui:
                       group: ADVANCED OPTIONS
                       prompt:      UI KEYS
@@ -7009,10 +7010,10 @@ cemu:
                "Enabled":            true
 
 citra:
-  shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         citra_screen_layout:
-            prompt:      SCREEN LAYOUT
+            prompt: SCREEN LAYOUT
             description: Arrange the dual screen layout.
             choices:
                 "top/bottom":            4-false
@@ -7024,52 +7025,71 @@ citra:
                 "hybrid top ratio 4":    2-false
                 "hybrid bottom ratio 4": 2-true
         citra_resolution_factor:
-            group: VIDEO SETTINGS
-            prompt:      RENDERING RESOLUTION
+            submenu: GRAPHICS
+            prompt: RENDERING RESOLUTION
             description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
             choices:
-                "1x (400x240)":          1
-                "2x (800x480)":          2
-                "3x (1200x720)":         3
-                "4x (1600x960)":         4
-                "5x (2000x1200)":        5
-                "6x (2400x1440)":        6
-                "7x (2800x1680)":        7
-                "8x (3200x1920)":        8
-                "9x (3600x2160)":        9
-                "10x (4000x2400)":       10
-        use_vsync_new:
-            group: VIDEO SETTINGS
-            prompt:      VSYNC
+                "1x (400x240)":    1
+                "2x (800x480)":    2
+                "3x (1200x720)":   3
+                "4x (1600x960)":   4
+                "5x (2000x1200)":  5
+                "6x (2400x1440)":  6
+                "7x (2800x1680)":  7
+                "8x (3200x1920)":  8
+                "9x (3600x2160)":  9
+                "10x (4000x2400)": 10
+        citra_graphics_api:
+            submenu: GRAPHICS
+            prompt: GRAPHICS API
+            description: Choose which graphics API library to use.
+            choices:
+                "Software":         0 
+                "OpenGL (Default)": 1
+                "Vulkan":           2
+        citra_use_vsync_new:
+            submenu: GRAPHICS
+            prompt: VSYNC
             description: Fix screen tearing. CPU heavy.
             choices:
-                "Off":                   0
-                "On":                    1
+                "Off": 0
+                "On":  1
         citra_use_frame_limit:
-            prompt:      FRAME LIMIT
+            submenu: GRAPHICS
+            prompt: FRAME LIMIT
             description: Off will help some games, others will run too fast.
             choices:
-                "Off":                   0
-                "On":                    1
+                "Off": 0
+                "On":  1
         citra_use_disk_shader_cache:
-            prompt:      DISK SHADER CACHE
+            submenu: GRAPHICS
+            prompt: DISK SHADER CACHE
             description: Reduce stutter that happens when compiling shaders.
             choices:
-                "Off":                   0
-                "On":                    1
+                "Off": 0
+                "On":  1
+        citra_async_shader_compilation:
+            submenu: GRAPHICS
+            prompt: ENABLE ASYNC SHADER COMPILATION
+            description: Compile shaders using background threads to avoid shader compilation stutter. May cause graphical glitches.
+            choices:
+                "Off": 0
+                "On":  1            
         citra_custom_textures:
-            prompt:      LOAD CUSTOM TEXTURES
+            submenu: GRAPHICS
+            prompt: LOAD CUSTOM TEXTURES
             description: Preloading is impossible from ES.
             choices:
-                "Off":                   0
-                "On":                    1-normal
-                #"Preload":               1-preload
+                "Off": 0
+                "On":  1-normal
+                #"Preload": 1-preload
         citra_is_new_3ds:
-            prompt:      NEW 3DS MODE
+            group: ADVANCED OPTIONS
+            prompt: NEW 3DS MODE
             description: The New 3DS has a faster processor, ZL/ZR buttons and a C-stick.
             choices:
-                "Off":                   0
-                "On":                    1
+                "Off": 0
+                "On":  1
 daphne:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns]
@@ -7316,6 +7336,13 @@ dolphin:
         hires_textures:
             submenu: RENDERING
             prompt: LOAD CUSTOM TEXTURES
+            choices:
+                "Off": 0
+                "On":  1
+        manual_texture_sampling:
+            submenu: RENDERING
+            prompt: MANUAL TEXTURE SAMPLING
+            description: Enabling will allow for correct emulation of texture wrapping. This comes at a cost of potential worse performance.
             choices:
                 "Off": 0
                 "On":  1
@@ -9076,40 +9103,65 @@ rpcs3:
                 "Off (Default)": False
                 "On":            True
         rpcs3_audio_format:
-            group: AUDIO
+            submenu: AUDIO
             prompt: AUDIO FORMAT
             description: Choose number of audio channels.
             choices:
                 "Stereo":       Stereo
                 "Surround 5.1": Surround 5.1
                 "Surround 7.1": Surround 7.1
+        rpcs3_audio_16bit:
+            submenu: AUDIO
+            prompt: CONVERT TO 16-BIT
+            description: Use 16 bit audio samples for audio drivers that don't support 32bit. Only use if you get no audio.
+            choices:
+                "Off (Default)": False
+                "On":            True
         rpcs3_audiobuffer:
-            group: AUDIO
+            submenu: AUDIO
             prompt: ENABLE AUDIO BUFFERING
             description: Can reduce crackle and stutter but increases audio latency.
             choices:
                 "Off":          False
                 "On (Default)": True
         rpcs3_audiobuffer_duration:
-            group: AUDIO
+            submenu: AUDIO
             prompt: AUDIO BUFFER DURATION
-            description: Duration of audio buffer in milliseconds.
+            description: Duration of audio buffer in milliseconds. Higher numbers may cause audio latency.
             choices:
-                "10": 10
-                "20": 20
-                "40": 40
-                "60": 60
-                "80": 80
-                "100 (Default)": 100
-                "120": 120
-                "140": 140
+                "10ms":            10
+                "20ms":            20
+                "40ms":            40
+                "60ms":            60
+                "80ms":            80
+                "100ms (Default)": 100
+                "120ms":           120
+                "140ms":           140
+                "160ms":           160
+                "180ms":           180
+                "200ms":           200
+                "220ms":           220
+                "240ms":           240
         rpcs3_timestretch:
-            group: AUDIO
+            submenu: AUDIO
             prompt: ENABLE TIME STRETCHING
             description: Reduces crackle and stutter further, but may cause a very noticeable reduction in audio quality on slower CPUs.
             choices:
                 "Off (Default)": False
                 "On":            True
+        rpcs3_timestretch_threshold:
+            submenu: AUDIO
+            prompt: TIME STRETCHING THRESHOLD
+            description: Buffer fill level (in percentage) below which time stretching will start.
+            choices:
+                "Off":           0
+                "15%":           15
+                "30%":           30
+                "45%":           45
+                "60%":           60
+                "75% (Default)": 75
+                "90%":           90
+                "100%":          100
         rpcs3_gui:
             group: ADVANCED OPTIONS
             prompt: GRAPHICAL USER INTERFACE
@@ -9841,12 +9893,13 @@ mame:
                     choices:
                         "Don't Use (Default)":      none
                         "Camputers Lynx cassettes": camplynx_cass
+                        "Camputers Lynx floppies":  camplynx_flop
                 altmodel:
                     prompt:      LYNX MODEL
                     choices:
-                        "Lynx 128k (Default)": lynx128k
-                        "Lynx 96k":            lynx96k
-                        "Lynx 48k":            lynx48k
+                        "Lynx 48k":  lynx48k
+                        "Lynx 96k":  lynx96k
+                        "Lynx 128k": lynx128k
                 enableui:
                     prompt:      UI KEYS
                     description: Toggle with hotkey + D-pad up or Scroll Lock in-game.
@@ -11561,7 +11614,6 @@ droidports:
 eduke32:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-  features: [padtokeyboard]
   cfeatures:
     nologo:
       prompt: SKIP INTRO VIDEOS
@@ -11569,6 +11621,9 @@ eduke32:
       choices:
         "Skip": 1
         "Show (Default)": 0
+eka2l1:
+  features: [padtokeyboard]
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 f2bgl:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Sept 06, 2023
-DUCKSTATION_VERSION = e6d5fa43af49c3407af8229f893dbdd738c9d3dd
+# Version: Commits on Sept 17, 2023
+DUCKSTATION_VERSION = 7fc4b89719caf0c62e6ec5ac15d3ad663397b3c8
 DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
 DUCKSTATION_SITE_METHOD=git
 DUCKSTATION_GIT_SUBMODULES=YES
@@ -65,8 +65,8 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
 #	@if [ "$(X86_INSTALL)" = "n" ]; then  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-nogui $(TARGET_DIR)/usr/duckstation/bin/ ; fi
 #	@if [ "$(X86_INSTALL)" = "y" ]; then  cp -pr  $(@D)/buildroot-build/bin/translations			$(TARGET_DIR)/usr/duckstation/bin/ ; fi
 #	@if [ "$(X86_INSTALL)" = "y" ]; then  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-qt	$(TARGET_DIR)/usr/duckstation/bin/duckstation-nogui ; fi
-	$(INSTALL) -D $(@D)/buildroot-build/bin/duckstation* $(TARGET_DIR)/usr/bin/duckstation
-	cp -pr  $(@D)/buildroot-build/bin/resources		  $(TARGET_DIR)/usr/bin/duckstation/
+	$(INSTALL) -D $(@D)/buildroot-build/bin/duckstation*	$(TARGET_DIR)/usr/bin/duckstation
+	cp -pr  $(@D)/data/resources							$(TARGET_DIR)/usr/bin/duckstation/
 
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy
