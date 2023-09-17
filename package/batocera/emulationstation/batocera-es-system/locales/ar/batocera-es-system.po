@@ -327,8 +327,9 @@ msgctxt "game_options"
 msgid ""
 "Enables run-ahead. Doubles CPU requirements. High numbers can result in "
 "visible jitter."
-msgstr "تمكين التشغيل للأمام. يضاعف متطلبات وحدة المعالجة المركزية. الأعداد الكبيرة يمكن أن تؤدي إلى "
-"ارتعاش واضح."
+msgstr ""
+"تمكين التشغيل للأمام. يضاعف متطلبات وحدة المعالجة المركزية. الأعداد الكبيرة "
+"يمكن أن تؤدي إلى ارتعاش واضح."
 
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
@@ -355,8 +356,9 @@ msgctxt "game_options"
 msgid ""
 "Automatically decrease frame delay temporarily to prevent frame drops. Can "
 "introduce stuttering."
-msgstr "قم تلقائيًا بتقليل تأخير الإطار مؤقتًا لمنع انخفاض الإطار. يمكن "
-"ان يؤدي الى التأتأة."
+msgstr ""
+"قم تلقائيًا بتقليل تأخير الإطار مؤقتًا لمنع انخفاض الإطار. يمكن ان يؤدي الى "
+"التأتأة."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
