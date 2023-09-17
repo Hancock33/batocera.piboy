@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Sept 16, 2023
-SCUMMVM_VERSION = 182e82f7f221d5945100ceb68ac643d0e77f6186
+SCUMMVM_VERSION = b79414f88c82ed5e09e3496bc40106ef18cf1973
 SCUMMVM_SITE = $(call github,scummvm,scummvm,$(SCUMMVM_VERSION))
 SCUMMVM_LICENSE = GPLv2
 SCUMMVM_DEPENDENCIES += sdl2 zlib libmpeg2 libogg libvorbis flac libmad libpng libtheora faad2 freetype libjpeg-bato
