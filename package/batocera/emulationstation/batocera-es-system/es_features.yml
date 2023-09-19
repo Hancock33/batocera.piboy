@@ -11855,8 +11855,15 @@ supertux2:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 themehospital:
+  shared: [videomode, powersave]
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+    cth_new_graphics:
+      prompt: USE NEW GRAPHICS
+      description: Use new graphics created from CorsixTH project
+      choices:
+        "Enabled (Default)": "true"
+        "Disabled": "false"
 thextech:
   features: [padtokeyboard]
   shared: [videomode, powersave, hud, hud_corner]
