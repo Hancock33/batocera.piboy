@@ -25,4 +25,12 @@ endef
 
 CORSIXTH_PRE_INSTALL_TARGET_HOOKS += CORSIXTH_INSTALL_EXTRAS
 
+define CORSIXTH_INSTALL_EVMAPY
+        # evmap config
+        mkdir -p $(TARGET_DIR)/usr/share/evmapy
+        cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/corsixth/corsixth.keys $(TARGET_DIR)/usr/share/evmapy
+endef
+
+CORSIXTH_POST_INSTALL_TARGET_HOOKS += CORSIXTH_INSTALL_EVMAPY
+
 $(eval $(cmake-package))
