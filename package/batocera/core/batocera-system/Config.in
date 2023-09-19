@@ -719,7 +719,7 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_MAME2003_PLUS               # ALL
     select BR2_PACKAGE_LIBRETRO_IMAME                       if  BR2_PACKAGE_BATOCERA_TARGET_BCM2835       # IMAME
     select BR2_PACKAGE_LIBRETRO_MAME2010                    if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835      # MAME2010
-    select BR2_PACKAGE_LIBRETRO_MAME                        if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835      && \
+    select BR2_PACKAGE_LIBRETRO_MAME                        if  !BR2_riscv && !BR2_PACKAGE_BATOCERA_TARGET_BCM2835      && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H3           && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3128
 
@@ -1330,7 +1330,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
 config BR2_PACKAGE_BATOCERA_GUNS
     bool "batocera guns support"
-
     select BR2_PACKAGE_AIMTRAK_GUNS                         # aimtrak guns
     select BR2_PACKAGE_SAMCO_GUNS                           # samco guns
     select BR2_PACKAGE_FUSION_LIGHTGUNS                     # fusion lightguns
@@ -1480,6 +1479,7 @@ config BR2_PACKAGE_BATOCERA_KODI
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3399      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_S905GEN3    || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RISCV       || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_ODIN
 
 config BR2_PACKAGE_BATOCERA_WPA
