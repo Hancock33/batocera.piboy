@@ -79,12 +79,12 @@
 - duckstation to Aug 4, 2023 build
 - flycast to July 5th build
 - melonds to July 8th build
-- ppsspp to v1.16.1
-- lr-ppsspp to July 8th build
+- ppsspp to v1.16.2
+- lr-ppsspp to v1.16.2
 - xemu to v0.7.110
 - devilutionX to 1.5.0
 - ScummVM (standalone and libretro core) to July 18th build
-- redream to 1.5.0-1079-g5ac7859
+- redream to 1.5.0-1080
 - kodi to 20.2
 - EDuke32 to July, 3th 2023
 - OpenMSX to v19.1
@@ -102,7 +102,7 @@
 - gzdoom to Aug 26 build
 - libretro-fake08 to Aug 21 build
 - libretro-bsnes to Aug 18 build
-- rpcs3 to 0.0.29-15617
+- rpcs3 to 0.0.29-15620
 ### Dev
 - linux kernel for x86_64 to 6.5
 - linux kernel for RPI to 6.1.47

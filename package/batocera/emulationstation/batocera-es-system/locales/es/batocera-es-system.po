@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-16 12:57+0100\n"
-"PO-Revision-Date: 2023-06-04 21:00+0200\n"
+"PO-Revision-Date: 2023-09-19 22:20+0200\n"
 "Last-Translator: pajarorrojo\n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -384,17 +384,17 @@ msgstr "USAR PISTOLAS"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Use wheels instead of pads if wheels are connected."
-msgstr ""
+msgstr "Usar volante en lugar del mando si el volante está conectado."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "WHEELS"
-msgstr ""
+msgstr "VOLANTES"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "USE WHEELS"
-msgstr ""
+msgstr "USAR VOLANTES"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -644,31 +644,32 @@ msgstr "REDUCIR EL PARPADEO DE SPRITES"
 msgctxt "game_options"
 msgid "Apply a video filter to mimic various NTSC TV signals."
 msgstr ""
+"Aplica un filtro para imitar las señales de video de los televisores NTSC."
 
 #. TRANSLATION: libretro/bsnes
 msgctxt "game_options"
 msgid "VIDEO FILTERS"
-msgstr ""
+msgstr "FILTROS DE VIDEO"
 
 #. TRANSLATION: libretro/bsnes
 msgctxt "game_options"
 msgid "NTSC (RF)"
-msgstr ""
+msgstr "NTSC (RF)"
 
 #. TRANSLATION: libretro/bsnes
 msgctxt "game_options"
 msgid "NTSC (RGB)"
-msgstr ""
+msgstr "NTSC (RGB)"
 
 #. TRANSLATION: libretro/bsnes
 msgctxt "game_options"
 msgid "NTSC (S-Video)"
-msgstr ""
+msgstr "NTSC (S-Video)"
 
 #. TRANSLATION: libretro/bsnes
 msgctxt "game_options"
 msgid "NTSC (Composite)"
-msgstr ""
+msgstr "NTSC (Compuesto)"
 
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
@@ -2058,37 +2059,37 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SOUNDBLASTER TYPE"
-msgstr ""
+msgstr "TIPO DE SOUNDBLASTER"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster 16 (Default)"
-msgstr ""
+msgstr "SounBlaster 16 (Defecto)"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster Pro 2"
-msgstr ""
+msgstr "SounBlaster Pro 2"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster Pro"
-msgstr ""
+msgstr "SounBlaster Pro"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster 2.0"
-msgstr ""
+msgstr "SounBlaster 2.0"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SounBlaster 1.0"
-msgstr ""
+msgstr "SounBlaster 1.0"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "GameBlaster"
-msgstr ""
+msgstr "GameBlaster"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -2116,7 +2117,7 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "MIDI OUTPUT"
-msgstr ""
+msgstr "SALIDA MIDI"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -2126,7 +2127,7 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Roland MT-32/CM-32L"
-msgstr ""
+msgstr "Roland MT-32/CM-32L"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -2235,7 +2236,7 @@ msgstr ""
 #. TRANSLATION: libretro/swanstation, libretro/swanstation
 msgctxt "game_options"
 msgid "Digital Controller (Gamepad)"
-msgstr ""
+msgstr "Mando Digital (Gamepad)"
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/duckstation, libretro/duckstation
 msgctxt "game_options"
@@ -2565,7 +2566,7 @@ msgstr "Normal"
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, flycast, rpcs3
 msgctxt "game_options"
 msgid "Maximum"
-msgstr ""
+msgstr "Máximo"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/quasi88, flycast/vitaquake3
 msgctxt "game_options"
@@ -3138,152 +3139,152 @@ msgstr ""
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "ATARI MACHINE TYPE"
-msgstr ""
+msgstr "TIPO DE ATARI"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "ST"
-msgstr ""
+msgstr "ST"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Mega ST"
-msgstr ""
+msgstr "Mega ST"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "STE"
-msgstr ""
+msgstr "STE"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Mega STE"
-msgstr ""
+msgstr "Mega STE"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "TT"
-msgstr ""
+msgstr "TT"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Falcon"
-msgstr ""
+msgstr "Falcon"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Choose your desired Atari CPU type."
-msgstr ""
+msgstr "Selecciona el tipo de CPU"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "ATARI CPU TYPE"
-msgstr ""
+msgstr "TIPO DE CPU DEL ATARI"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Choose your desired Atari CPU clock rate."
-msgstr ""
+msgstr "Selecciona la velocidad del procesador del Atari."
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "ATARI CPU CLOCK RATE"
-msgstr ""
+msgstr "VELOCIDAD DEL PROCESADOR DEL ATARI"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "8 MHz"
-msgstr ""
+msgstr "8 MHz"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "16 MHz"
-msgstr ""
+msgstr "16 MHz"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "32 MHz"
-msgstr ""
+msgstr "32 MHz"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Choose your desired Atari ST memory size."
-msgstr ""
+msgstr "Selecciona el tamaño de la memoria del Atari ST."
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "ATARI ST MEMORY SIZE"
-msgstr ""
+msgstr "TAMAÑO DE MEMORIA DEL ATARI"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "256 KB"
-msgstr ""
+msgstr "256 KB"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "512 KB"
-msgstr ""
+msgstr "512 KB"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "1 MB"
-msgstr ""
+msgstr "1 MB"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "2 MB"
-msgstr ""
+msgstr "2 MB"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "2.5 MB"
-msgstr ""
+msgstr "2.5 MB"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "4 MB"
-msgstr ""
+msgstr "4 MB"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "8 MB"
-msgstr ""
+msgstr "8 MB"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "10 MB"
-msgstr ""
+msgstr "10 MB"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "14 MB"
-msgstr ""
+msgstr "14 MB"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Choose your desired Atari Monitor."
-msgstr ""
+msgstr "Selecciona el tipo de monitor del Atari."
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "ATARI MONITOR TYPE"
-msgstr ""
+msgstr "TIPO DE MONITOR DEL ATARI"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Monochrome High-Resolution"
-msgstr ""
+msgstr "Monocromo Alta Resolución"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "RGB Colour Low/Medium-Resolution"
-msgstr ""
+msgstr "Color RGB Baja/Media resolución"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "TV"
-msgstr ""
+msgstr "TV"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -3298,22 +3299,22 @@ msgstr "RELACIÓN DE ASPECTO"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Square Pixels"
-msgstr ""
+msgstr "Square Pixels"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Atari Monitor"
-msgstr ""
+msgstr "Monitor Atari"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "NTSC TV"
-msgstr ""
+msgstr "NTSC TV"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "PAL TV"
-msgstr ""
+msgstr "PAL TV"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -3321,26 +3322,28 @@ msgid ""
 "Atari ST monitors had a visible border around the main screen area, but most "
 "software does not display anything in it."
 msgstr ""
+"Los monitores del Atari ST tenían un borde visible alrededor de la pantalla, "
+"pero la mayoría del software no muestra nada en él."
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "SCREEN BORDERS"
-msgstr ""
+msgstr "BORDES DE LA PANTALLA"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Hide"
-msgstr ""
+msgstr "Ocultar"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Crop 720p (240, 480)"
-msgstr ""
+msgstr "720p Recortado (240, 480)"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Crop 1080p (270, 540)"
-msgstr ""
+msgstr "1080p Recortado (270, 540)"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -3355,12 +3358,12 @@ msgstr ""
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Help and Information"
-msgstr ""
+msgstr "Ayuda e información"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Floppy Disk List"
-msgstr ""
+msgstr "Lista de Diskettes"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -3380,7 +3383,7 @@ msgstr ""
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "No Indicator"
-msgstr ""
+msgstr "Sin indicador"
 
 #. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual, mame
 msgctxt "game_options"
@@ -4007,7 +4010,7 @@ msgstr "Lynx 96k"
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Lynx 128k"
-msgstr ""
+msgstr "Lynx 128k"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4926,11 +4929,13 @@ msgid ""
 "Useful for N64 style controllers. Limited hotkeys for controllers without "
 "dedicated hotkey."
 msgstr ""
+"Útil para mandos estilo N64. Hotkeys limitados para mandos sin botón hotkey "
+"dedicado."
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, mupen64plus, ...
 msgctxt "game_options"
 msgid "CONTROLLER 1"
-msgstr ""
+msgstr "MANDO 1"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -4940,37 +4945,37 @@ msgstr "TIPO DE MANDO"
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "RetroPad (Default)"
-msgstr ""
+msgstr "RetroPad (Defecto)"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "N64"
-msgstr ""
+msgstr "N64"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
 msgid "N64 (Limited Hotkeys)"
-msgstr ""
+msgstr "N64 (Hotkeys Limitados)"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "Useful for N64 style controllers."
-msgstr ""
+msgstr "Útil para mandos estilo N64."
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus, mupen64plus, ...
 msgctxt "game_options"
 msgid "CONTROLLER 2"
-msgstr ""
+msgstr "MANDO 2"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
 msgctxt "game_options"
 msgid "CONTROLLER 3"
-msgstr ""
+msgstr "MANDO 3"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
 msgctxt "game_options"
 msgid "CONTROLLER 4"
-msgstr ""
+msgstr "MANDO 4"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -4980,7 +4985,7 @@ msgstr "Emula un pak en el puerto de expansión del mando."
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "CONTOLLER 1"
-msgstr ""
+msgstr "MANDO 1"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -5356,7 +5361,7 @@ msgstr "FILTRO DE AUDIO"
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "Set desired framerate."
-msgstr ""
+msgstr "Selecciona la velocidad de fotogramas."
 
 #. TRANSLATION: libretro/openlara, libretro
 msgctxt "game_options"
@@ -5371,17 +5376,17 @@ msgstr "30fps"
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "60fps (Default)"
-msgstr ""
+msgstr "60fps (Defecto)"
 
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "70fps"
-msgstr ""
+msgstr "70fps"
 
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "72fps"
-msgstr ""
+msgstr "72fps"
 
 #. TRANSLATION: libretro/openlara, libretro/tyrquake
 msgctxt "game_options"
@@ -5401,7 +5406,7 @@ msgstr "100fps"
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "119fps"
-msgstr ""
+msgstr "119fps"
 
 #. TRANSLATION: libretro/openlara, libretro/tyrquake
 msgctxt "game_options"
@@ -5416,12 +5421,12 @@ msgstr "144fps"
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "240fps"
-msgstr ""
+msgstr "240fps"
 
 #. TRANSLATION: libretro/openlara
 msgctxt "game_options"
 msgid "244fps"
-msgstr ""
+msgstr "244fps"
 
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
@@ -5526,7 +5531,7 @@ msgstr "N64 3-puntos"
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
 msgid "CONTOLLER 2"
-msgstr ""
+msgstr "MANDO 2"
 
 #. TRANSLATION: libretro/pce, libretro/pce_fast
 msgctxt "game_options"
@@ -5786,7 +5791,7 @@ msgstr "8 Frames"
 #. TRANSLATION: libretro/ppsspp
 msgctxt "game_options"
 msgid "480x272 (Default)"
-msgstr ""
+msgstr "480x272 (Defecto)"
 
 #. TRANSLATION: libretro/prboom, libretro/tyrquake
 msgctxt "game_options"
@@ -6607,12 +6612,12 @@ msgstr "Pistola Konami Justifier (P2)"
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Monochrome"
-msgstr ""
+msgstr "Monocromo"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "RF"
-msgstr ""
+msgstr "RF"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next, redream
 msgctxt "game_options"
@@ -6622,7 +6627,7 @@ msgstr "RGB"
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "S-Video"
-msgstr ""
+msgstr "S-Video"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next, redream
 msgctxt "game_options"
@@ -7270,12 +7275,12 @@ msgstr "Permite hasta 7 o 12 mandos en juegos compatibles."
 #. TRANSLATION: libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Change the system's language."
-msgstr ""
+msgstr "Cambia el idioma del sistema."
 
 #. TRANSLATION: libretro/yabasanshiro, awgl
 msgctxt "game_options"
 msgid "Deutsch"
-msgstr ""
+msgstr "Alemán"
 
 #. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
 msgctxt "game_options"
@@ -7886,7 +7891,7 @@ msgstr "híbrido abajo proporción 4"
 #. TRANSLATION: citra, citra, citra, citra, citra, ...
 msgctxt "game_options"
 msgid "GRAPHICS"
-msgstr ""
+msgstr "GRÁFICOS"
 
 #. TRANSLATION: citra, duckstation, melonds, pcsx2, scummvm, ...
 msgctxt "game_options"
@@ -8075,7 +8080,7 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "ENABLE BOOT ANIMATION"
-msgstr ""
+msgstr "ACTIVAR LA ANIMACIÓN DE ARRANQUE"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -8105,7 +8110,7 @@ msgstr "Mando Clásico"
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Classic Controller Pro"
-msgstr ""
+msgstr "Mando Clásico Pro"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -9051,17 +9056,17 @@ msgstr ""
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "ATARI HARD DRIVE TYPE"
-msgstr ""
+msgstr "TIPO DE DISCO DURO DEL ATARI"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "IDE (Default)"
-msgstr ""
+msgstr "IDE (Defecto)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "ASCI"
-msgstr ""
+msgstr "ASCI"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -9492,12 +9497,12 @@ msgstr ""
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "SENSITIVITY"
-msgstr ""
+msgstr "SENSIBILIDAD"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "100% (Default)"
-msgstr ""
+msgstr "100% (Defecto)"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
@@ -9507,12 +9512,12 @@ msgstr "Ajusta la zona muerta de los sticks analógicos."
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "DEADZONE"
-msgstr ""
+msgstr "ZONA MUERTA"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "5% (Default)"
-msgstr ""
+msgstr "5% (Defecto)"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -10220,17 +10225,17 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Safe (Default)"
-msgstr ""
+msgstr "Seguro (Defecto)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Mega"
-msgstr ""
+msgstr "Mega"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Giga"
-msgstr ""
+msgstr "Giga"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10247,7 +10252,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Moderate"
-msgstr ""
+msgstr "Moderado"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10531,7 +10536,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "CONVERT TO 16-BIT"
-msgstr ""
+msgstr "CONVERTIR A 16-BIT"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10550,76 +10555,78 @@ msgid ""
 "Duration of audio buffer in milliseconds. Higher numbers may cause audio "
 "latency."
 msgstr ""
+"Duración del búfer de audio en milisegundos. Los valores más altos pueden "
+"causar latencia."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "AUDIO BUFFER DURATION"
-msgstr ""
+msgstr "DURACIÓN DEL BUFFER DE AUDIO"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "10ms"
-msgstr ""
+msgstr "10ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "20ms"
-msgstr ""
+msgstr "20ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "40ms"
-msgstr ""
+msgstr "40ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "60ms"
-msgstr ""
+msgstr "60ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "80ms"
-msgstr ""
+msgstr "80ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "100ms (Default)"
-msgstr ""
+msgstr "100ms (Defecto)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "120ms"
-msgstr ""
+msgstr "120ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "140ms"
-msgstr ""
+msgstr "140ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "160ms"
-msgstr ""
+msgstr "160ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "180ms"
-msgstr ""
+msgstr "180ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "200ms"
-msgstr ""
+msgstr "200ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "220ms"
-msgstr ""
+msgstr "220ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "240ms"
-msgstr ""
+msgstr "240ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10649,7 +10656,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "75% (Default)"
-msgstr ""
+msgstr "75% (Defecto)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10665,54 +10672,54 @@ msgstr "INTERFAZ GRÁFICA DEL USUARIO"
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid ""
-"Enables controller specific capabilities. Sony DS won't work with clone "
-"controllers."
+"Default uses SDL2, otherwise enable controller specific capabilities. Sony "
+"DS won't work with clone controllers."
 msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "PS3 CONTROLLER 1"
-msgstr ""
+msgstr "MANDO PS3 1"
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
-msgid "DirectInput"
+msgid "Legacy Evdev"
 msgstr ""
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "Sony DS"
-msgstr ""
+msgstr "Sony DS"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "PS3 CONTROLLER 2"
-msgstr ""
+msgstr "MANDO PS3 2"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "PS3 CONTROLLER 3"
-msgstr ""
+msgstr "MANDO PS3 3"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "PS3 CONTROLLER 4"
-msgstr ""
+msgstr "MANDO PS3 4"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "PS3 CONTROLLER 5"
-msgstr ""
+msgstr "MANDO PS3 5"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "PS3 CONTROLLER 6"
-msgstr ""
+msgstr "MANDO PS3 6"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "PS3 CONTROLLER 7"
-msgstr ""
+msgstr "MANDO PS3 7"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -10747,7 +10754,7 @@ msgstr ""
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "AdvMame"
-msgstr ""
+msgstr "AdvMame"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -10757,22 +10764,22 @@ msgstr ""
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "SuperSAI"
-msgstr ""
+msgstr "SuperSAI"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "SuperEagle"
-msgstr ""
+msgstr "SuperEagle"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Pixel-Perfect"
-msgstr ""
+msgstr "Pixel-Perfect"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "DotMatrix"
-msgstr ""
+msgstr "DotMatrix"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -10787,12 +10794,12 @@ msgstr ""
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Center (Default)"
-msgstr ""
+msgstr "Centro (Defecto)"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Pixel Perfect"
-msgstr ""
+msgstr "Pixel Perfect"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -10847,12 +10854,12 @@ msgstr "Sueco"
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Hebrew"
-msgstr ""
+msgstr "Hebreo"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Czech"
-msgstr ""
+msgstr "Checo"
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
@@ -11712,7 +11719,7 @@ msgstr "Estirar a pantalla completa"
 #. TRANSLATION: xemu, yabasanshiro
 msgctxt "game_options"
 msgid "Native"
-msgstr ""
+msgstr "Nativo"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -11742,12 +11749,12 @@ msgstr ""
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "64MiB (Default)"
-msgstr ""
+msgstr "64MiB (Defecto)"
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "128MiB"
-msgstr ""
+msgstr "128MiB"
 
 #. TRANSLATION: sonic2013
 msgctxt "game_options"
@@ -11834,17 +11841,17 @@ msgstr "Sonic CD (mantener salto)"
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Screen Resolution (Default)"
-msgstr ""
+msgstr "Resolución de pantalla (Defecto)"
 
 #. TRANSLATION: model2emu, play
 msgctxt "game_options"
 msgid "Enable widescreen support."
-msgstr ""
+msgstr "Activar soporte panorámico (widescreen)."
 
 #. TRANSLATION: model2emu, play
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
-msgstr ""
+msgstr "ACTIVAR WIDESCREEN"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -11968,27 +11975,27 @@ msgstr ""
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "1x (~480)"
-msgstr ""
+msgstr "1x (~480)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "2x (~960)"
-msgstr ""
+msgstr "2x (~960)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "4x (~1920p)"
-msgstr ""
+msgstr "4x (~1920p)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "8x (~4320p / 8k)"
-msgstr ""
+msgstr "8x (~4320p / 8k)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "16x (~7680p / 16k)"
-msgstr ""
+msgstr "16x (~7680p / 16k)"
 
 #. TRANSLATION: play
 msgctxt "game_options"
@@ -12008,7 +12015,7 @@ msgstr ""
 #. TRANSLATION: play
 msgctxt "game_options"
 msgid "Original Size"
-msgstr ""
+msgstr "Tamaño original"
 
 #. TRANSLATION: play
 msgctxt "game_options"
@@ -12845,7 +12852,7 @@ msgstr ""
 #. TRANSLATION: quake3
 msgctxt "game_options"
 msgid "256MB (Default)"
-msgstr ""
+msgstr "256MB (Defecto)"
 
 #. TRANSLATION: sm64
 msgctxt "game_options"
@@ -12867,6 +12874,38 @@ msgctxt "game_options"
 msgid "SKIP SPLASH SCREEN"
 msgstr ""
 
+#. TRANSLATION: themehospital
+msgctxt "game_options"
+msgid "Use new graphics created from CorsixTH project"
+msgstr ""
+
+#. TRANSLATION: themehospital
+msgctxt "game_options"
+msgid "USE NEW GRAPHICS"
+msgstr ""
+
+#. TRANSLATION: themehospital
+msgctxt "game_options"
+msgid ""
+"Free Build or Sandbox mode. You cannot win or lose custom made maps if this "
+"is set to true. You also don't have to worry about money."
+msgstr ""
+
+#. TRANSLATION: themehospital
+msgctxt "game_options"
+msgid "ENABLE SANDBOX MODE"
+msgstr ""
+
+#. TRANSLATION: themehospital
+msgctxt "game_options"
+msgid "Enable or Disable Intro movie (Enabled by default)."
+msgstr ""
+
+#. TRANSLATION: themehospital
+msgctxt "game_options"
+msgid "PLAY INTRO MOVIE"
+msgstr ""
+
 #. TRANSLATION: thextech
 msgctxt "game_options"
 msgid "On (default)"
@@ -12880,7 +12919,7 @@ msgstr ""
 #. TRANSLATION: thextech
 msgctxt "game_options"
 msgid "Hardware (default)"
-msgstr ""
+msgstr "Hardware (defecto)"
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
@@ -13578,6 +13617,156 @@ msgstr ""
 #. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, raze.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Move camera up"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Move camera down"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Move camera to the left"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Move camera to the right"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Quit the application"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Start / Valid"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Shows or hides the menu bar"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Rotates the current object"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Select"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Quick save"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Quick load"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Zoom in x5"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Zoom out x5"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Take a screenshot"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Reset the application"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Hire staff"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Edit room"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Open build room menu"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Open furnish corridor menu"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Quits the current level"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Speeds up the game"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Set speed normal"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Show the cheat menu"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Zoom the camera out"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Zoom in the camera"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Open LUA console"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Town map"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Casebook"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Research"
+msgstr ""
+
+#. TRANSLATION: corsixth.keys
+msgctxt "keys_files"
+msgid "Manage Staff"
 msgstr ""
 
 #. TRANSLATION: raze.keys
