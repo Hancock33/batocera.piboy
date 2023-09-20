@@ -1,6 +1,8 @@
---- a/CMakeLists.txt	2023-09-12 21:56:18.564659166 +0200
-+++ b/CMakeLists.txt	2023-09-12 21:56:33.821031424 +0200
-@@ -1337,7 +1337,7 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index d143ca837..cb794ca28 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1337,7 +1337,7 @@ else()
  	endif()
  	if(SDL2_ttf_FOUND)
  		add_definitions(-DUSE_SDL2_TTF)
