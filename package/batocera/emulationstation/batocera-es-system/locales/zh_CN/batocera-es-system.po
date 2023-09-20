@@ -13688,16 +13688,6 @@ msgstr ""
 
 #~ msgctxt "game_options"
 #~ msgid ""
-#~ "Enables controller specific capabilities. Sony DS won't work with clone "
-#~ "controllers."
-#~ msgstr "启用特定于控制器的功能. Sony DS无法与克隆控制器配合使用."
-
-#~ msgctxt "game_options"
-#~ msgid "DirectInput"
-#~ msgstr "直接输入"
-
-#~ msgctxt "game_options"
-#~ msgid ""
 #~ "Enable this mode if you have issue for run your game on NTFS storage (by "
 #~ "default is better to use LinuxFS)."
 #~ msgstr ""
@@ -13827,6 +13817,16 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables controller specific capabilities. Sony DS won't work with clone "
+#~ "controllers."
+#~ msgstr "启用特定于控制器的功能. Sony DS无法与克隆控制器配合使用."
+
+#~ msgctxt "game_options"
+#~ msgid "DirectInput"
+#~ msgstr "直接输入"
 
 #~ msgctxt "game_options"
 #~ msgid "Lynx 128k (Default)"
