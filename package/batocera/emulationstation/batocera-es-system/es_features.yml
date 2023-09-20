@@ -9172,52 +9172,52 @@ rpcs3:
         rpcs3_controller1:
             submenu: CONTROLLERS
             prompt: PS3 CONTROLLER 1
-            description: Enables controller specific capabilities. Sony DS won't work with clone controllers.
+            description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "DirectInput": "Direct"
-                "Sony DS":     "Sony"
+                "Legacy Evdev": "Evdev"
+                "Sony DS":      "Sony"
         rpcs3_controller2:
             submenu: CONTROLLERS
             prompt: PS3 CONTROLLER 2
-            description: Enables controller specific capabilities. Sony DS won't work with clone controllers.
+            description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "DirectInput": "Direct"
-                "Sony DS":     "Sony"
+                "Legacy Evdev": "Evdev"
+                "Sony DS":      "Sony"
         rpcs3_controller3:
             submenu: CONTROLLERS
             prompt: PS3 CONTROLLER 3
-            description: Enables controller specific capabilities. Sony DS won't work with clone controllers.
+            description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "DirectInput": "Direct"
-                "Sony DS":     "Sony"
+                "Legacy Evdev": "Evdev"
+                "Sony DS":      "Sony"
         rpcs3_controller4:
             submenu: CONTROLLERS
             prompt: PS3 CONTROLLER 4
-            description: Enables controller specific capabilities. Sony DS won't work with clone controllers.
+            description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "DirectInput": "Direct"
-                "Sony DS":     "Sony"
+                "Legacy Evdev": "Evdev"
+                "Sony DS":      "Sony"
         rpcs3_controller5:
             submenu: CONTROLLERS
             prompt: PS3 CONTROLLER 5
-            description: Enables controller specific capabilities. Sony DS won't work with clone controllers.
+            description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "DirectInput": "Direct"
-                "Sony DS":     "Sony"
+                "Legacy Evdev": "Evdev"
+                "Sony DS":      "Sony"
         rpcs3_controller6:
             submenu: CONTROLLERS
             prompt: PS3 CONTROLLER 6
-            description: Enables controller specific capabilities. Sony DS won't work with clone controllers.
+            description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "DirectInput": "Direct"
-                "Sony DS":     "Sony"
+                "Legacy Evdev": "Evdev"
+                "Sony DS":      "Sony"
         rpcs3_controller7:
             submenu: CONTROLLERS
             prompt: PS3 CONTROLLER 7
-            description: Enables controller specific capabilities. Sony DS won't work with clone controllers.
+            description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "DirectInput": "Direct"
-                "Sony DS":     "Sony"
+                "Legacy Evdev": "Evdev"
+                "Sony DS":      "Sony"
 scummvm:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -11855,8 +11855,27 @@ supertux2:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 themehospital:
+  shared: [videomode, powersave]
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+    cth_new_graphics:
+      prompt: USE NEW GRAPHICS
+      description: Use new graphics created from CorsixTH project
+      choices:
+        "Enabled (Default)": "true"
+        "Disabled": "false"
+    cth_free_build_mode:
+      prompt: ENABLE SANDBOX MODE
+      description: Free Build or Sandbox mode. You cannot win or lose custom made maps if this is set to true. You also don't have to worry about money.
+      choices:
+        "Disabled (Default)": "false"
+        "Enabled": "true"
+    cth_play_intro:
+      prompt: PLAY INTRO MOVIE
+      description: Enable or Disable Intro movie (Enabled by default).
+      choices:
+        "Enabled (Default)": "true"
+        "Disabled": "false"
 thextech:
   features: [padtokeyboard]
   shared: [videomode, powersave, hud, hud_corner]
