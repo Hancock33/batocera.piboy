@@ -1,5 +1,5 @@
 diff --git a/SDL/SDLJoystick.cpp b/SDL/SDLJoystick.cpp
-index 923f50d24..f6422b89e 100644
+index 5de53bd0b..c93d62354 100644
 --- a/SDL/SDLJoystick.cpp
 +++ b/SDL/SDLJoystick.cpp
 @@ -50,7 +50,7 @@ void SDLJoystick::setUpControllers() {
