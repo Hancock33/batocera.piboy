@@ -381,17 +381,17 @@ msgstr "USA PISTOLE"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Use wheels instead of pads if wheels are connected."
-msgstr ""
+msgstr "Usa i manubri al posto dei pad se le ruote sono connesse."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "WHEELS"
-msgstr ""
+msgstr "MANUBRI"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "USE WHEELS"
-msgstr ""
+msgstr "USA MANUBRI"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -1111,7 +1111,7 @@ msgctxt "game_options"
 msgid "TEXTURE SMOOTHING"
 msgstr "SFUMATURA TEXTURE"
 
-#. TRANSLATION: libretro/desmume, libretro/dolphin, libretro/swanstation, libretro/duckstation, dolphin, ...
+#. TRANSLATION: libretro/desmume, libretro/swanstation, libretro/duckstation, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D object polygons."
 msgstr "Miglioramento. Sfuma i bordi dei poligoni per gli oggetti 3D."
@@ -1360,7 +1360,7 @@ msgstr ""
 "Potrebbe non funzionare bene con tutti gli hardware. Preferire ibrido, "
 "laddove supportato."
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, libretro/same_cdi, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "OPZIONI AVANZATE"
@@ -1399,41 +1399,6 @@ msgstr "Migliora la chiarezza delle texture distanti."
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "FILTRAGGIO ANISOTROPICO"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "ANTI-ALIASING (MSAA/SSAA)"
-msgstr "ANTI-ALIASING (MSAA/SSAA)"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "2x MSAA"
-msgstr "2x MSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "4x MSAA"
-msgstr "4x MSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "8x MSAA"
-msgstr "8x MSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "2x SSAA"
-msgstr "2x SSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "4x SSAA"
-msgstr "4x SSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "8x SSAA"
-msgstr "8x SSAA"
 
 #. TRANSLATION: libretro/dolphin, dolphin
 msgctxt "game_options"
@@ -2163,6 +2128,26 @@ msgstr "USA RENDERING SOFTWARE"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
+msgid "ANTI-ALIASING (MSAA/SSAA)"
+msgstr "ANTI-ALIASING (MSAA/SSAA)"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "2x MSAA"
+msgstr "2x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "4x MSAA"
+msgstr "4x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "8x MSAA"
+msgstr "8x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
 msgid "16x MSAA"
 msgstr "16x MSAA"
 
@@ -2170,6 +2155,21 @@ msgstr "16x MSAA"
 msgctxt "game_options"
 msgid "32x MSAA"
 msgstr "32x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "2x SSAA"
+msgstr "2x SSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "4x SSAA"
+msgstr "4x SSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "8x SSAA"
+msgstr "8x SSAA"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
@@ -3983,7 +3983,7 @@ msgstr "Cassette Camputers Lynx"
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Camputers Lynx floppies"
-msgstr ""
+msgstr "Floppies Camputers Lynx"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -5504,6 +5504,41 @@ msgstr "SALVATAGGIO NVRAM"
 msgctxt "game_options"
 msgid "Per Game"
 msgstr "Per Gioco"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Choose the Parallel N64 graphics plugin."
+msgstr "Scegli il plugin grafico Parallel N64."
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "GRAPHICS PLUGIN"
+msgstr "PLUGIN GRAFICI"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Glide64"
+msgstr "Glide64"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Gln64"
+msgstr "Gln64"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Rice"
+msgstr "Rice"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Angrylion"
+msgstr "Angrylion"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Parallel"
+msgstr "Parallel"
 
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
@@ -7883,7 +7918,7 @@ msgstr "bottom ratio ibrido 4"
 #. TRANSLATION: citra, citra, citra, citra, citra, ...
 msgctxt "game_options"
 msgid "GRAPHICS"
-msgstr ""
+msgstr "GRAFICA"
 
 #. TRANSLATION: citra, duckstation, melonds, pcsx2, scummvm, ...
 msgctxt "game_options"
@@ -7927,11 +7962,13 @@ msgid ""
 "Compile shaders using background threads to avoid shader compilation "
 "stutter. May cause graphical glitches."
 msgstr ""
+"Compula gli shaders utilizzando i threads in background per evitare che "
+"lacompilazione vada a scatti. Puo' causare artefatti grafici."
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
-msgstr ""
+msgstr "ABILITA COMPILAZIONE SHADER ASINCRONA"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
@@ -8293,11 +8330,13 @@ msgid ""
 "Enabling will allow for correct emulation of texture wrapping. This comes at "
 "a cost of potential worse performance."
 msgstr ""
+"Quando abilitato facilita la corratta emulazione delle texture wrapping. "
+"Questo avviene a discapito della perfromance."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "MANUAL TEXTURE SAMPLING"
-msgstr ""
+msgstr "SAMPLING TEXTURE MANUALE"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -10529,11 +10568,13 @@ msgid ""
 "Use 16 bit audio samples for audio drivers that don't support 32bit. Only "
 "use if you get no audio."
 msgstr ""
+"Usa samples audio 16 bit per drivers audio che non supportano 32bit.Usalo "
+"solo se non riesci a sentire alcun audio."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "CONVERT TO 16-BIT"
-msgstr ""
+msgstr "CONVERTI A 16-BIT"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10552,6 +10593,8 @@ msgid ""
 "Duration of audio buffer in milliseconds. Higher numbers may cause audio "
 "latency."
 msgstr ""
+"Durata del buffer audio in millisecondi. Numeri grandi possono causare "
+"latenzeaudio."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10561,67 +10604,67 @@ msgstr "DURATA BUFFER AUDIO"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "10ms"
-msgstr ""
+msgstr "10ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "20ms"
-msgstr ""
+msgstr "20ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "40ms"
-msgstr ""
+msgstr "40ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "60ms"
-msgstr ""
+msgstr "60ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "80ms"
-msgstr ""
+msgstr "80ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "100ms (Default)"
-msgstr ""
+msgstr "100ms (Default)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "120ms"
-msgstr ""
+msgstr "120ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "140ms"
-msgstr ""
+msgstr "140ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "160ms"
-msgstr ""
+msgstr "160ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "180ms"
-msgstr ""
+msgstr "180ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "200ms"
-msgstr ""
+msgstr "200ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "220ms"
-msgstr ""
+msgstr "220ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "240ms"
-msgstr ""
+msgstr "240ms"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10642,16 +10685,17 @@ msgctxt "game_options"
 msgid ""
 "Buffer fill level (in percentage) below which time stretching will start."
 msgstr ""
+"Livello di buffer (percentuale) sotto cui viene avviato il time stretching."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "TIME STRETCHING THRESHOLD"
-msgstr ""
+msgstr "SOGLIA DI TIME STRETCHING"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "75% (Default)"
-msgstr ""
+msgstr "75% (Default)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10669,6 +10713,8 @@ msgid ""
 "Default uses SDL2, otherwise enable controller specific capabilities. Sony "
 "DS won't work with clone controllers."
 msgstr ""
+"Usa SDL2 di default, altrimenti abilita le funzioni specifiche del "
+"controller.Sony DS non funzione con controllers non originali."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10678,7 +10724,7 @@ msgstr "PS3 CONTROLLER 1"
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "Legacy Evdev"
-msgstr ""
+msgstr "Legacy Evdev"
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
@@ -11543,11 +11589,13 @@ msgctxt "game_options"
 msgid ""
 "NVAPI is NVIDIA's core software that allows direct access to NVIDIA GPU."
 msgstr ""
+"NVAPI e' il software core NVIDIA che permette l'accesso diretto alla GPU "
+"NVIDIA."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "ENABLE NVAPI"
-msgstr ""
+msgstr "ABILITA NVAPI"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -12868,12 +12916,12 @@ msgstr ""
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "Use new graphics created from CorsixTH project"
-msgstr ""
+msgstr "Utilizza la nuova grafica creata dal progetto CirsixTH"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "USE NEW GRAPHICS"
-msgstr ""
+msgstr "USA NUOVA GRAFICA"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
@@ -12881,21 +12929,24 @@ msgid ""
 "Free Build or Sandbox mode. You cannot win or lose custom made maps if this "
 "is set to true. You also don't have to worry about money."
 msgstr ""
+"Modalita' Free build o Sandbox. Non puoi vincere o perdere nelle mappe "
+"customse questa opzione e' abilitata. Non devi neanche preoccuparti di "
+"perdere soldi."
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "ENABLE SANDBOX MODE"
-msgstr ""
+msgstr "ABILITA MODALITA' SANDBOX"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "Enable or Disable Intro movie (Enabled by default)."
-msgstr ""
+msgstr "Abilita o Disabilita il filmato d'introduzione (Abilitati di default)."
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "PLAY INTRO MOVIE"
-msgstr ""
+msgstr "GUARDA IL FILMATO D'INTRODUZIONE"
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
@@ -13611,152 +13662,152 @@ msgstr ""
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera up"
-msgstr ""
+msgstr "Muovi la telecamera su"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera down"
-msgstr ""
+msgstr "Muovi la telecamera giu"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera to the left"
-msgstr ""
+msgstr "Muovi la telecamera a sinistra"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera to the right"
-msgstr ""
+msgstr "Muovi la telecamera a destra"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quit the application"
-msgstr ""
+msgstr "Esci dall'applicazione"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Start / Valid"
-msgstr ""
+msgstr "Start / Valido"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Shows or hides the menu bar"
-msgstr ""
+msgstr "Mostra o nascondi la barra del menu'"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Rotates the current object"
-msgstr ""
+msgstr "Ruota l'oggetto attuale"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Select"
-msgstr ""
+msgstr "Seleziona"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quick save"
-msgstr ""
+msgstr "Salvataggio rapido"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quick load"
-msgstr ""
+msgstr "Caricamento rapido"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom in x5"
-msgstr ""
+msgstr "Ingrandisci x5"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom out x5"
-msgstr ""
+msgstr "Rimpicciolisci x5"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Take a screenshot"
-msgstr ""
+msgstr "Fai uno screenshot"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Reset the application"
-msgstr ""
+msgstr "Resetta l'applicazione"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Hire staff"
-msgstr ""
+msgstr "Assumi personale"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Edit room"
-msgstr ""
+msgstr "Modifica stanza"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open build room menu"
-msgstr ""
+msgstr "Apri il menu costruzione stanza"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open furnish corridor menu"
-msgstr ""
+msgstr "April il menu arredamento corridoio"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quits the current level"
-msgstr ""
+msgstr "Esci dal livello attuale"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Speeds up the game"
-msgstr ""
+msgstr "Velocizza il gioco"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Set speed normal"
-msgstr ""
+msgstr "Imposta la velocita' normale"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Show the cheat menu"
-msgstr ""
+msgstr "Mostra il menu di cheat"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom the camera out"
-msgstr ""
+msgstr "Rimpicciolisci lo zoom"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom in the camera"
-msgstr ""
+msgstr "Ingrandisci lo zoom"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open LUA console"
-msgstr ""
+msgstr "Apri la console LUA"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Town map"
-msgstr ""
+msgstr "Mappa della citta'"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Casebook"
-msgstr ""
+msgstr "Libro del caso"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Research"
-msgstr ""
+msgstr "Ricerca"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Manage Staff"
-msgstr ""
+msgstr "Gestisci personale"
 
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
