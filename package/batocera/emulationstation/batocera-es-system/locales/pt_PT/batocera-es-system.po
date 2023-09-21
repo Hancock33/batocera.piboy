@@ -7353,7 +7353,7 @@ msgctxt "game_options"
 msgid "GLCore"
 msgstr "GLCore"
 
-#. TRANSLATION: libretro, libretro, libretro, libretro
+#. TRANSLATION: libretro, libretro, libretro, libretro, rpcs3, ...
 msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
@@ -10738,8 +10738,8 @@ msgstr "COMANDO PS3 1"
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
-msgid "Legacy Evdev"
-msgstr "Legacy Evdev"
+msgid "Evdev (Default)"
+msgstr ""
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
@@ -13881,6 +13881,10 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Open"
 msgstr ""
+
+#~ msgctxt "game_options"
+#~ msgid "Legacy Evdev"
+#~ msgstr "Legacy Evdev"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
