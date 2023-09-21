@@ -142,10 +142,14 @@ ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),)
 endif
 
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
-	RETROARCH_CONF_OPTS += --enable-wayland
-	RETROARCH_DEPENDENCIES += wayland
+    ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
+        RETROARCH_CONF_OPTS += --enable-wayland
+        RETROARCH_DEPENDENCIES += wayland
+    else
+        RETROARCH_CONF_OPTS += --disable-wayland
+    endif
 else
-	RETROARCH_CONF_OPTS += --disable-wayland
+    RETROARCH_CONF_OPTS += --disable-wayland
 endif
 
 ifeq ($(BR2_PACKAGE_VULKAN_LOADER)$(BR2_PACKAGE_VULKAN_HEADERS),yy)
