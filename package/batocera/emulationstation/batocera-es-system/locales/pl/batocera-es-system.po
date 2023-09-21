@@ -1117,7 +1117,7 @@ msgctxt "game_options"
 msgid "TEXTURE SMOOTHING"
 msgstr "WYGŁADZANIE TEKSTURY"
 
-#. TRANSLATION: libretro/desmume, libretro/dolphin, libretro/swanstation, libretro/duckstation, dolphin, ...
+#. TRANSLATION: libretro/desmume, libretro/swanstation, libretro/duckstation, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D object polygons."
 msgstr ""
@@ -1368,7 +1368,7 @@ msgstr ""
 "Może nie działać dobrze na każdym sprzęcie. Preferowany jest tryb hybrydowy, "
 "tam gdzie jest obsługiwany."
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, libretro/same_cdi, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "OPCJE ZAAWANSOWANE"
@@ -1407,41 +1407,6 @@ msgstr "Poprawia wyrazistość odległych tekstur."
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "FILTROWANIE ANIZOTROPOWE"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "ANTI-ALIASING (MSAA/SSAA)"
-msgstr "ANTYALIASING (MSAA/SSAA)"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "2x MSAA"
-msgstr "2x MSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "4x MSAA"
-msgstr "4x MSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "8x MSAA"
-msgstr "8x MSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "2x SSAA"
-msgstr "2x SSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "4x SSAA"
-msgstr "4x SSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "8x SSAA"
-msgstr "8x SSAA"
 
 #. TRANSLATION: libretro/dolphin, dolphin
 msgctxt "game_options"
@@ -2167,6 +2132,26 @@ msgstr "UŻYJ PROGRAMOWEGO RENDEROWANIA"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
+msgid "ANTI-ALIASING (MSAA/SSAA)"
+msgstr "ANTYALIASING (MSAA/SSAA)"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "2x MSAA"
+msgstr "2x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "4x MSAA"
+msgstr "4x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "8x MSAA"
+msgstr "8x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
 msgid "16x MSAA"
 msgstr "16x MSAA"
 
@@ -2174,6 +2159,21 @@ msgstr "16x MSAA"
 msgctxt "game_options"
 msgid "32x MSAA"
 msgstr "32x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "2x SSAA"
+msgstr "2x SSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "4x SSAA"
+msgstr "4x SSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "8x SSAA"
+msgstr "8x SSAA"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
@@ -5513,6 +5513,41 @@ msgstr "PAMIĘĆ NVRAM"
 msgctxt "game_options"
 msgid "Per Game"
 msgstr "Na grę"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Choose the Parallel N64 graphics plugin."
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "GRAPHICS PLUGIN"
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Glide64"
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Gln64"
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Rice"
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Angrylion"
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Parallel"
+msgstr ""
 
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
@@ -13937,14 +13972,6 @@ msgstr ""
 #~ msgstr "UŻYJ KONFIGURACJI JOYSTICKA W GZDOOM"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Restart gry"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Następny dysk (m3u)"
-
-#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Otwarcie menu Dolphin-triforce"
 
@@ -14051,6 +14078,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Przewijanie do przodu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Restart gry"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Następny dysk (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "Lynx 128k (Default)"
