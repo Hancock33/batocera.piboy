@@ -1265,7 +1265,7 @@ msgctxt "game_options"
 msgid "TEXTURE SMOOTHING"
 msgstr "텍스처 스무딩"
 
-#. TRANSLATION: libretro/desmume, libretro/dolphin, libretro/swanstation, libretro/duckstation, dolphin, ...
+#. TRANSLATION: libretro/desmume, libretro/swanstation, libretro/duckstation, dolphin, dolphin_triforce, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D object polygons."
@@ -1544,7 +1544,7 @@ msgstr ""
 "모든 하드웨어에서 제대로 작동하지 않을 수 있습니다. 지원되는 경우 하이브리드"
 "가 선호됩니다."
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, libretro/same_cdi, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
@@ -1591,47 +1591,6 @@ msgstr "멀리 있는 텍스처의 선명도를 향상시킵니다."
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "이방성 필터링"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-#, fuzzy
-msgctxt "game_options"
-msgid "ANTI-ALIASING (MSAA/SSAA)"
-msgstr "앤티앨리어싱(MSAA/SSAA)"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-#, fuzzy
-msgctxt "game_options"
-msgid "2x MSAA"
-msgstr "2x MSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-#, fuzzy
-msgctxt "game_options"
-msgid "4x MSAA"
-msgstr "4x MSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-#, fuzzy
-msgctxt "game_options"
-msgid "8x MSAA"
-msgstr "8x MSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-#, fuzzy
-msgctxt "game_options"
-msgid "2x SSAA"
-msgstr "2x SSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-#, fuzzy
-msgctxt "game_options"
-msgid "4x SSAA"
-msgstr "4x SSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "8x SSAA"
-msgstr "8x SSAA"
 
 #. TRANSLATION: libretro/dolphin, dolphin
 #, fuzzy
@@ -2450,6 +2409,30 @@ msgstr "소프트웨어 렌더링 사용"
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 #, fuzzy
 msgctxt "game_options"
+msgid "ANTI-ALIASING (MSAA/SSAA)"
+msgstr "앤티앨리어싱(MSAA/SSAA)"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+#, fuzzy
+msgctxt "game_options"
+msgid "2x MSAA"
+msgstr "2x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+#, fuzzy
+msgctxt "game_options"
+msgid "4x MSAA"
+msgstr "4x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+#, fuzzy
+msgctxt "game_options"
+msgid "8x MSAA"
+msgstr "8x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+#, fuzzy
+msgctxt "game_options"
 msgid "16x MSAA"
 msgstr "16x MSAA"
 
@@ -2458,6 +2441,23 @@ msgstr "16x MSAA"
 msgctxt "game_options"
 msgid "32x MSAA"
 msgstr "32x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+#, fuzzy
+msgctxt "game_options"
+msgid "2x SSAA"
+msgstr "2x SSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+#, fuzzy
+msgctxt "game_options"
+msgid "4x SSAA"
+msgstr "4x SSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "8x SSAA"
+msgstr "8x SSAA"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 #, fuzzy
@@ -6267,6 +6267,41 @@ msgstr "NVRAM 스토리지"
 msgctxt "game_options"
 msgid "Per Game"
 msgstr "게임당"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Choose the Parallel N64 graphics plugin."
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "GRAPHICS PLUGIN"
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Glide64"
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Gln64"
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Rice"
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Angrylion"
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Parallel"
+msgstr ""
 
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"

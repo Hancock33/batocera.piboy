@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2023-09-20 11:55+0200\n"
+"PO-Revision-Date: 2023-09-21 10:46+0200\n"
 "Last-Translator: THa MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl_NL\n"
@@ -1118,7 +1118,7 @@ msgctxt "game_options"
 msgid "TEXTURE SMOOTHING"
 msgstr "TEXTURE SMOOTHING"
 
-#. TRANSLATION: libretro/desmume, libretro/dolphin, libretro/swanstation, libretro/duckstation, dolphin, ...
+#. TRANSLATION: libretro/desmume, libretro/swanstation, libretro/duckstation, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D object polygons."
 msgstr "Uitbreiding. Maakt harde randen op 3D object polygonen gladder."
@@ -1368,7 +1368,7 @@ msgid ""
 msgstr ""
 "Werkt niet goed op alle hardware. Hybride is geprefereerd, waar ondersteund."
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, libretro/same_cdi, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "GEAVANCEERDE OPTIES"
@@ -1407,41 +1407,6 @@ msgstr "Verbeterd helderheid van verre textures."
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "ANISOTROPISCH FILTEREN"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "ANTI-ALIASING (MSAA/SSAA)"
-msgstr "ANTI-ALIASING (MSAA/SSAA)"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "2x MSAA"
-msgstr "2x MSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "4x MSAA"
-msgstr "4x MSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "8x MSAA"
-msgstr "8x MSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "2x SSAA"
-msgstr "2x SSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "4x SSAA"
-msgstr "4x SSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "8x SSAA"
-msgstr "8x SSAA"
 
 #. TRANSLATION: libretro/dolphin, dolphin
 msgctxt "game_options"
@@ -2171,6 +2136,26 @@ msgstr "GEBRUIK SOFTWARE RENDERING"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
+msgid "ANTI-ALIASING (MSAA/SSAA)"
+msgstr "ANTI-ALIASING (MSAA/SSAA)"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "2x MSAA"
+msgstr "2x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "4x MSAA"
+msgstr "4x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "8x MSAA"
+msgstr "8x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
 msgid "16x MSAA"
 msgstr "16x MSAA"
 
@@ -2178,6 +2163,21 @@ msgstr "16x MSAA"
 msgctxt "game_options"
 msgid "32x MSAA"
 msgstr "32x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "2x SSAA"
+msgstr "2x SSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "4x SSAA"
+msgstr "4x SSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "8x SSAA"
+msgstr "8x SSAA"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
@@ -5514,6 +5514,41 @@ msgstr "NVRAM OPSLAG"
 msgctxt "game_options"
 msgid "Per Game"
 msgstr "Per Spel"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Choose the Parallel N64 graphics plugin."
+msgstr "Kies de Parallel N64 grafische plug-in."
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "GRAPHICS PLUGIN"
+msgstr "GRAFISCHE PLUGIN"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Glide64"
+msgstr "Glide64"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Gln64"
+msgstr "Gln64"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Rice"
+msgstr "Rice"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Angrylion"
+msgstr "Angrylion"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Parallel"
+msgstr "Parallel"
 
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
@@ -12915,12 +12950,12 @@ msgstr ""
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "Use new graphics created from CorsixTH project"
-msgstr ""
+msgstr "Gebruik nieuwe afbeeldingen gemaakt met het CorsixTH-project"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "USE NEW GRAPHICS"
-msgstr ""
+msgstr "GEBRUIK NIEUWE AFBEELDINGEN"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
@@ -12928,21 +12963,24 @@ msgid ""
 "Free Build or Sandbox mode. You cannot win or lose custom made maps if this "
 "is set to true. You also don't have to worry about money."
 msgstr ""
+"Gratis Build- of Sandbox-modus. Als dit is ingesteld op waar, kun je geen op "
+"maat gemaakte kaarten winnen of verliezen. Ook over geld hoeft u zich geen "
+"zorgen te maken."
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "ENABLE SANDBOX MODE"
-msgstr ""
+msgstr "SANDBOX-MODUS INSCHAKELEN"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "Enable or Disable Intro movie (Enabled by default)."
-msgstr ""
+msgstr "Introfilm in- of uitschakelen (standaard ingeschakeld)."
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "PLAY INTRO MOVIE"
-msgstr ""
+msgstr "SPEEL INTROFILM"
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
@@ -13660,152 +13698,152 @@ msgstr ""
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera up"
-msgstr ""
+msgstr "Beweeg camera omhoog"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera down"
-msgstr ""
+msgstr "Beweeg camera omlaag"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera to the left"
-msgstr ""
+msgstr "Beweeg camera naar links"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera to the right"
-msgstr ""
+msgstr "Beweeg camera naar rechts"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quit the application"
-msgstr ""
+msgstr "Stop de applicatie"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Start / Valid"
-msgstr ""
+msgstr "Begin / Geldig"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Shows or hides the menu bar"
-msgstr ""
+msgstr "Toont of verbergt de menubalk"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Rotates the current object"
-msgstr ""
+msgstr "Roteert het huidige object"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Select"
-msgstr ""
+msgstr "Selecteer"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quick save"
-msgstr ""
+msgstr "Snel opslaan"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quick load"
-msgstr ""
+msgstr "Snel laden"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom in x5"
-msgstr ""
+msgstr "Zoom in x5"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom out x5"
-msgstr ""
+msgstr "Zoom uit x5"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Take a screenshot"
-msgstr ""
+msgstr "Maak een screenshot"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Reset the application"
-msgstr ""
+msgstr "Reset de applicatie"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Hire staff"
-msgstr ""
+msgstr "Huur personeel"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Edit room"
-msgstr ""
+msgstr "Bewerk kamer"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open build room menu"
-msgstr ""
+msgstr "Open bouw kamer menu"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open furnish corridor menu"
-msgstr ""
+msgstr "Open het menu voor het inrichten van de gang"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quits the current level"
-msgstr ""
+msgstr "Sluit het huidige niveau af"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Speeds up the game"
-msgstr ""
+msgstr "Versnel het spel"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Set speed normal"
-msgstr ""
+msgstr "Zet snelheid op normaal"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Show the cheat menu"
-msgstr ""
+msgstr "Toon het cheat menu"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom the camera out"
-msgstr ""
+msgstr "Zoom de camera uit"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom in the camera"
-msgstr ""
+msgstr "Zoom de camera in"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open LUA console"
-msgstr ""
+msgstr "Open de LUA console"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Town map"
-msgstr ""
+msgstr "Stadsplattegrond"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Casebook"
-msgstr ""
+msgstr "Casebook"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Research"
-msgstr ""
+msgstr "Onderzoek"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Manage Staff"
-msgstr ""
+msgstr "Beheer personeel"
 
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"

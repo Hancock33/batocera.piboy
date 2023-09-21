@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v38beta(2023/09/16)\n"
+"Project-Id-Version: batocera-es v38beta(2023/09/21)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-09-16 19:25+0900\n"
+"PO-Revision-Date: 2023-09-21 19:12+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -1093,7 +1093,7 @@ msgctxt "game_options"
 msgid "TEXTURE SMOOTHING"
 msgstr "テクスチャスムージング"
 
-#. TRANSLATION: libretro/desmume, libretro/dolphin, libretro/swanstation, libretro/duckstation, dolphin, ...
+#. TRANSLATION: libretro/desmume, libretro/swanstation, libretro/duckstation, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D object polygons."
 msgstr "強化：3Dオブジェクトポリゴンのギザギザのエッジを滑らかにします"
@@ -1339,7 +1339,7 @@ msgid ""
 msgstr ""
 "うまく機能しない場合があります。対応している場合は、ハイブリッドを推奨します"
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, libretro/same_cdi, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "詳細設定"
@@ -1378,41 +1378,6 @@ msgstr "離れたテクスチャの鮮明度を向上させます"
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "異方性フィルタリング"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "ANTI-ALIASING (MSAA/SSAA)"
-msgstr "アンチエイリアシング (MSAA/SSAA)"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "2x MSAA"
-msgstr "2x MSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "4x MSAA"
-msgstr "4x MSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "8x MSAA"
-msgstr "8x MSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "2x SSAA"
-msgstr "2x SSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "4x SSAA"
-msgstr "4x SSAA"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "8x SSAA"
-msgstr "8x SSAA"
 
 #. TRANSLATION: libretro/dolphin, dolphin
 msgctxt "game_options"
@@ -2141,6 +2106,26 @@ msgstr "ソフトウェアレンダリングを使用"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
+msgid "ANTI-ALIASING (MSAA/SSAA)"
+msgstr "アンチエイリアシング (MSAA/SSAA)"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "2x MSAA"
+msgstr "2x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "4x MSAA"
+msgstr "4x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "8x MSAA"
+msgstr "8x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
 msgid "16x MSAA"
 msgstr "16x MSAA"
 
@@ -2148,6 +2133,21 @@ msgstr "16x MSAA"
 msgctxt "game_options"
 msgid "32x MSAA"
 msgstr "32x MSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "2x SSAA"
+msgstr "2x SSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "4x SSAA"
+msgstr "4x SSAA"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "8x SSAA"
+msgstr "8x SSAA"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
@@ -5468,6 +5468,41 @@ msgstr "NVRAM ストレージ"
 msgctxt "game_options"
 msgid "Per Game"
 msgstr "ゲームごと"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Choose the Parallel N64 graphics plugin."
+msgstr "Parallel N64 グラフィックス プラグインを選択します"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "GRAPHICS PLUGIN"
+msgstr "グラフィック プラグイン"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Glide64"
+msgstr "Glide64"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Gln64"
+msgstr "Gln64"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Rice"
+msgstr "Rice"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Angrylion"
+msgstr "Angrylion"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Parallel"
+msgstr "平行"
 
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
@@ -10590,6 +10625,8 @@ msgid ""
 "Default uses SDL2, otherwise enable controller specific capabilities. Sony "
 "DS won't work with clone controllers."
 msgstr ""
+"通常、SDL2 を使用します。それ以外は、コントローラー固有の機能を有効にしま"
+"す。 Sony DualSense のクローンコントローラーは動作しません"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10599,7 +10636,7 @@ msgstr "PS3 コントローラ 1"
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
 msgid "Legacy Evdev"
-msgstr ""
+msgstr "レガシー Evdev"
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
@@ -12772,12 +12809,12 @@ msgstr ""
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "Use new graphics created from CorsixTH project"
-msgstr ""
+msgstr "CorsixTH プロジェクトから作成された新しいグラフィックを使用"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "USE NEW GRAPHICS"
-msgstr ""
+msgstr "新しいグラフィックを使用"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
@@ -12785,21 +12822,23 @@ msgid ""
 "Free Build or Sandbox mode. You cannot win or lose custom made maps if this "
 "is set to true. You also don't have to worry about money."
 msgstr ""
+"無料のビルド モードまたはサンドボックス モード。これが true に設定されている"
+"場合、カスタムメイドのマップに勝ち負けはできません。お金の心配も要りません。"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "ENABLE SANDBOX MODE"
-msgstr ""
+msgstr "サンドボックスモードを有効"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "Enable or Disable Intro movie (Enabled by default)."
-msgstr ""
+msgstr "イントロ 映像を有効または無効にします (通常は有効)"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "PLAY INTRO MOVIE"
-msgstr ""
+msgstr "イントロ映像を再生"
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
@@ -13515,152 +13554,152 @@ msgstr ""
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera up"
-msgstr ""
+msgstr "カメラを上に移動"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera down"
-msgstr ""
+msgstr "カメラを下に移動"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera to the left"
-msgstr ""
+msgstr "カメラを左に移動"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera to the right"
-msgstr ""
+msgstr "カメラを右に移動"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quit the application"
-msgstr ""
+msgstr "アプリケーションを終了"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Start / Valid"
-msgstr ""
+msgstr "開始 / 有効"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Shows or hides the menu bar"
-msgstr ""
+msgstr "メニューバーを表示/非表示"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Rotates the current object"
-msgstr ""
+msgstr "現在のオブジェクトを回転"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Select"
-msgstr ""
+msgstr "選択"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quick save"
-msgstr ""
+msgstr "クイックセーブ"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quick load"
-msgstr ""
+msgstr "クイックロード"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom in x5"
-msgstr ""
+msgstr "拡大 x5"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom out x5"
-msgstr ""
+msgstr "縮小 x5"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Take a screenshot"
-msgstr ""
+msgstr "スクリーンショットを撮る"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Reset the application"
-msgstr ""
+msgstr "アプリケーションをリセット"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Hire staff"
-msgstr ""
+msgstr "スタッフを増やす"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Edit room"
-msgstr ""
+msgstr "編集室"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open build room menu"
-msgstr ""
+msgstr "ビルド ルーム メニューを開く"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open furnish corridor menu"
-msgstr ""
+msgstr "furnish corridor メニューを開く"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quits the current level"
-msgstr ""
+msgstr "現在のレベルを終了"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Speeds up the game"
-msgstr ""
+msgstr "ゲームの速度アップ"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Set speed normal"
-msgstr ""
+msgstr "速度を通常に設定"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Show the cheat menu"
-msgstr ""
+msgstr "チートメニューを表示"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom the camera out"
-msgstr ""
+msgstr "カメラをズームアウト"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom in the camera"
-msgstr ""
+msgstr "カメラをズームイン"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open LUA console"
-msgstr ""
+msgstr "LUA コンソールを開く"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Town map"
-msgstr ""
+msgstr "タウンマップ"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Casebook"
-msgstr ""
+msgstr "ケースブック"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Research"
-msgstr ""
+msgstr "リサーチ"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Manage Staff"
-msgstr ""
+msgstr "スタッフ管理"
 
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
@@ -13936,14 +13975,6 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enables controller specific capabilities. Sony DS won't work with clone "
-#~ "controllers."
-#~ msgstr ""
-#~ "コントローラー固有の機能を有効にします。 Sony DualSense のクローンコント"
-#~ "ローラーは動作しません"
 
 #~ msgctxt "game_options"
 #~ msgid "DirectInput"
