@@ -2743,7 +2743,7 @@ pcfx:
   manufacturer:         NEC
   release:              1994
   hardware:             console
-  extensions:           [cue, ccd, toc, chd, zip, 7z]
+  extensions:           [7z, ccd, chd, cue, m3u, toc, zip]
   emulators:
     libretro:
       pcfx:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PCFX] }

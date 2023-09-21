@@ -7358,7 +7358,7 @@ msgctxt "game_options"
 msgid "GLCore"
 msgstr "GLCore"
 
-#. TRANSLATION: libretro, libretro, libretro, libretro
+#. TRANSLATION: libretro, libretro, libretro, libretro, rpcs3, ...
 msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
@@ -10744,7 +10744,7 @@ msgstr ""
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
-msgid "Legacy Evdev"
+msgid "Evdev (Default)"
 msgstr ""
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
