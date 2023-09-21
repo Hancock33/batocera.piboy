@@ -9169,50 +9169,57 @@ rpcs3:
             prompt: PS3 CONTROLLER 1
             description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "Legacy Evdev": "Evdev"
-                "Sony DS":      "Sony"
+                "Evdev (Default)": "Evdev"
+                "SDL2":            "Sdl2"
+                "Sony DS":         "Sony"
         rpcs3_controller2:
             submenu: CONTROLLERS
             prompt: PS3 CONTROLLER 2
             description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "Legacy Evdev": "Evdev"
-                "Sony DS":      "Sony"
+                "Evdev (Default)": "Evdev"
+                "SDL2":            "Sdl2"
+                "Sony DS":         "Sony"
         rpcs3_controller3:
             submenu: CONTROLLERS
             prompt: PS3 CONTROLLER 3
             description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "Legacy Evdev": "Evdev"
-                "Sony DS":      "Sony"
+                "Evdev (Default)": "Evdev"
+                "SDL2":            "Sdl2"
+                "Sony DS":         "Sony"
         rpcs3_controller4:
             submenu: CONTROLLERS
             prompt: PS3 CONTROLLER 4
             description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "Legacy Evdev": "Evdev"
-                "Sony DS":      "Sony"
+                "Evdev (Default)": "Evdev"
+                "SDL2":            "Sdl2"
+                "Sony DS":         "Sony"
         rpcs3_controller5:
             submenu: CONTROLLERS
             prompt: PS3 CONTROLLER 5
             description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "Legacy Evdev": "Evdev"
-                "Sony DS":      "Sony"
+                "Evdev (Default)": "Evdev"
+                "SDL2":            "Sdl2"
+                "Sony DS":         "Sony"
         rpcs3_controller6:
             submenu: CONTROLLERS
             prompt: PS3 CONTROLLER 6
             description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "Legacy Evdev": "Evdev"
-                "Sony DS":      "Sony"
+                "Evdev (Default)": "Evdev"
+                "SDL2":            "Sdl2"
+                "Sony DS":         "Sony"
         rpcs3_controller7:
             submenu: CONTROLLERS
             prompt: PS3 CONTROLLER 7
             description: Default uses SDL2, otherwise enable controller specific capabilities. Sony DS won't work with clone controllers.
             choices:
-                "Legacy Evdev": "Evdev"
-                "Sony DS":      "Sony"
+                "Evdev (Default)": "Evdev"
+                "SDL2":            "Sdl2"
+                "Sony DS":         "Sony"
 scummvm:
   features: [padtokeyboard]
   shared: [videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
