@@ -23,12 +23,25 @@ LIBRETRO_SAME_CDI_ARCHOPTS += -D__aarch64__ -DASMJIT_BUILD_X86
 endif
 
 define LIBRETRO_SAME_CDI_BUILD_CMDS
+<<<<<<< HEAD
 	$(MAKE) -C $(@D)/ OPENMP=1 REGENIE=1 VERBOSE=1 NOWERROR=1 PYTHON_EXECUTABLE=python3				\
 		CONFIG=libretro LIBRETRO_OS="unix" ARCH="" PROJECT="" ARCHOPTS="$(LIBRETRO_MAME_ARCHOPTS)"	\
 		DISTRO="debian-stable" OVERRIDE_CC="$(TARGET_CC)" OVERRIDE_CXX="$(TARGET_CXX)"				\
 		OVERRIDE_LD="$(TARGET_LD)" RANLIB="$(TARGET_RANLIB)" AR="$(TARGET_AR)"						\
 		$(LIBRETRO_MAME_EXTRA_ARGS) CROSS_BUILD=1 RETRO=1 OSD="retro" DEBUG=0 OPTIMIZE=s			\
 		-f Makefile.libretro
+=======
+	# First, we need to build genie for host
+	cd $(@D); \
+	PATH="$(HOST_DIR)/bin:$$PATH" \
+	$(MAKE) TARGETOS=linux OSD=sdl genie \
+	TARGET=mame SUBTARGET=tiny \
+	NO_USE_PORTAUDIO=1 NO_X11=1 USE_SDL=0 \
+	USE_QTDEBUG=0 DEBUG=0 IGNORE_GIT=1 MPARAM="" OPTIMIZE=s
+
+	# Then build lr-same-cdi for target
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" GIT_VERSION="" -C $(@D) -f Makefile.libretro
+>>>>>>> upstream/master
 endef
 
 define LIBRETRO_SAME_CDI_INSTALL_TARGET_CMDS
