@@ -3,8 +3,8 @@
 # easyrpg-player
 #
 ################################################################################
-# Version: Commits on Sept 21, 2023
-EASYRPG_PLAYER_VERSION = 942883508672da3d403f6ce04a900834e88bf910
+# Version: Commits on Sept 22, 2023
+EASYRPG_PLAYER_VERSION = a32e965840f1297a4cefe1778087e5ee115de44b
 EASYRPG_PLAYER_DEPENDENCIES = sdl2 zlib fmt libpng freetype mpg123 libvorbis opusfile liblcf pixman speexdsp libxmp wildmidi fluidsynth
 EASYRPG_PLAYER_LICENSE = MIT
 EASYRPG_PLAYER_SITE = $(call github,EasyRPG,Player,$(EASYRPG_PLAYER_VERSION))
