@@ -1,53 +1,8 @@
-From bb12b2fcfa7e49835f5d678012a606ae85542875 Mon Sep 17 00:00:00 2001
-From: Alexandre Bouvier <contact@amb.tf>
-Date: Mon, 31 Jul 2023 16:58:07 +0200
-Subject: [PATCH] fmt: enable compatibility with fmt>=10
-
----
- CMakeLists.txt                                |  2 +-
- src/Cafe/HW/Latte/Core/LatteConst.h           |  2 +
- src/Cafe/HW/Latte/ISA/LatteInstructions.h     |  5 +++
- src/Cafe/HW/Latte/ISA/LatteReg.h              |  2 +
- .../HW/Latte/Renderer/Vulkan/CocoaSurface.mm  |  2 +-
- .../Renderer/Vulkan/RendererShaderVk.cpp      |  2 +-
- .../Latte/Renderer/Vulkan/SwapchainInfoVk.cpp | 14 +++----
- .../Vulkan/VulkanPipelineCompiler.cpp         |  2 +-
- .../Latte/Renderer/Vulkan/VulkanRenderer.cpp  | 42 +++++++++----------
- .../Renderer/Vulkan/VulkanSurfaceCopy.cpp     |  2 +-
- src/Cafe/IOSU/fsa/fsa_types.h                 |  5 +++
- src/Cafe/OS/libs/TCL/TCL.cpp                  |  1 +
- src/Cafe/OS/libs/coreinit/coreinit_FS.cpp     |  2 +
- .../OS/libs/coreinit/coreinit_HWInterface.cpp |  2 +
- src/Cafe/OS/libs/coreinit/coreinit_MEM.h      |  2 +
- .../OS/libs/coreinit/coreinit_MEM_FrmHeap.h   |  2 +
- src/Cafe/OS/libs/coreinit/coreinit_Thread.h   |  6 +++
- src/Cafe/OS/libs/gx2/GX2_Blit.h               |  2 +
- src/Cafe/OS/libs/gx2/GX2_Command.cpp          |  2 +
- src/Cafe/OS/libs/gx2/GX2_Event.cpp            |  1 +
- src/Cafe/OS/libs/gx2/GX2_Event.h              |  2 +
- src/Cafe/OS/libs/gx2/GX2_Misc.h               |  2 +
- src/Cafe/OS/libs/gx2/GX2_Shader.h             |  5 +++
- src/Cafe/OS/libs/gx2/GX2_State.cpp            |  2 +
- src/Cafe/OS/libs/nn_acp/nn_acp.h              |  2 +
- src/Cafe/OS/libs/nn_boss/nn_boss.cpp          |  2 +
- src/Cafe/OS/libs/nn_ndm/nn_ndm.cpp            |  1 +
- src/Cafe/OS/libs/nn_olv/nn_olv_PostTypes.h    |  2 +
- src/Cemu/Logging/CemuLogging.h                | 17 +-------
- src/Cemu/napi/napi.h                          |  7 ++++
- src/Common/MemPtr.h                           |  2 +-
- src/Common/betype.h                           |  6 +++
- src/Common/precompiled.h                      | 10 ++---
- src/audio/IAudioAPI.h                         |  5 +++
- src/audio/IAudioInputAPI.h                    |  5 +++
- src/input/api/InputAPI.h                      |  5 +++
- src/util/EventService.h                       |  5 +++
- 37 files changed, 123 insertions(+), 57 deletions(-)
-
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 57615e867..26d676bc2 100644
+index 1377ad8..fc131ed 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -114,7 +114,7 @@ find_package(ZLIB REQUIRED)
+@@ -134,7 +134,7 @@ find_package(ZLIB REQUIRED)
  find_package(zstd MODULE REQUIRED) # MODULE so that zstd::zstd is available
  find_package(OpenSSL COMPONENTS Crypto SSL REQUIRED)
  find_package(glm REQUIRED)
@@ -57,7 +12,7 @@ index 57615e867..26d676bc2 100644
  
  # glslang versions older than 11.11.0 define targets without a namespace
 diff --git a/src/Cafe/HW/Latte/Core/LatteConst.h b/src/Cafe/HW/Latte/Core/LatteConst.h
-index ffbead1cf..0f8a7cecf 100644
+index ffbead1..0f8a7ce 100644
 --- a/src/Cafe/HW/Latte/Core/LatteConst.h
 +++ b/src/Cafe/HW/Latte/Core/LatteConst.h
 @@ -103,6 +103,8 @@ using LatteIndexType = Latte::LATTE_VGT_DMA_INDEX_TYPE::E_INDEX_TYPE;
@@ -70,10 +25,10 @@ index ffbead1cf..0f8a7cecf 100644
  	{
  		Reserved = 0,
 diff --git a/src/Cafe/HW/Latte/ISA/LatteInstructions.h b/src/Cafe/HW/Latte/ISA/LatteInstructions.h
-index 702911045..b1d372e9a 100644
+index 7029110..b1d372e 100644
 --- a/src/Cafe/HW/Latte/ISA/LatteInstructions.h
 +++ b/src/Cafe/HW/Latte/ISA/LatteInstructions.h
-@@ -117,6 +117,11 @@ class LatteCFInstruction
+@@ -117,6 +117,11 @@ protected:
  	uint32 word1;
  };
  
@@ -86,7 +41,7 @@ index 702911045..b1d372e9a 100644
  // used for opcodes: See list in MatchesOpcode()
  class LatteCFInstruction_DEFAULT : public LatteCFInstruction
 diff --git a/src/Cafe/HW/Latte/ISA/LatteReg.h b/src/Cafe/HW/Latte/ISA/LatteReg.h
-index e539902f0..1b2d3955b 100644
+index d571dc6..d6a1c1a 100644
 --- a/src/Cafe/HW/Latte/ISA/LatteReg.h
 +++ b/src/Cafe/HW/Latte/ISA/LatteReg.h
 @@ -2,6 +2,8 @@
@@ -99,7 +54,7 @@ index e539902f0..1b2d3955b 100644
  	enum class E_DIM : uint32 // shared between Latte backend and GX2 code
  	{
 diff --git a/src/Cafe/HW/Latte/Renderer/Vulkan/CocoaSurface.mm b/src/Cafe/HW/Latte/Renderer/Vulkan/CocoaSurface.mm
-index 731a6a267..30ac686c8 100644
+index 731a6a2..30ac686 100644
 --- a/src/Cafe/HW/Latte/Renderer/Vulkan/CocoaSurface.mm
 +++ b/src/Cafe/HW/Latte/Renderer/Vulkan/CocoaSurface.mm
 @@ -53,7 +53,7 @@ VkSurfaceKHR CreateCocoaSurface(VkInstance instance, void* handle)
@@ -112,7 +67,7 @@ index 731a6a267..30ac686c8 100644
  
  	return result;
 diff --git a/src/Cafe/HW/Latte/Renderer/Vulkan/RendererShaderVk.cpp b/src/Cafe/HW/Latte/Renderer/Vulkan/RendererShaderVk.cpp
-index 804d03cc3..c813249a7 100644
+index 4061be3..190387a 100644
 --- a/src/Cafe/HW/Latte/Renderer/Vulkan/RendererShaderVk.cpp
 +++ b/src/Cafe/HW/Latte/Renderer/Vulkan/RendererShaderVk.cpp
 @@ -240,7 +240,7 @@ void RendererShaderVk::CreateVkShaderModule(std::span<uint32> spirvBuffer)
@@ -125,7 +80,7 @@ index 804d03cc3..c813249a7 100644
  
  	// set debug name
 diff --git a/src/Cafe/HW/Latte/Renderer/Vulkan/SwapchainInfoVk.cpp b/src/Cafe/HW/Latte/Renderer/Vulkan/SwapchainInfoVk.cpp
-index 14b7a17cb..2c03ec10c 100644
+index 14b7a17..2c03ec1 100644
 --- a/src/Cafe/HW/Latte/Renderer/Vulkan/SwapchainInfoVk.cpp
 +++ b/src/Cafe/HW/Latte/Renderer/Vulkan/SwapchainInfoVk.cpp
 @@ -214,7 +214,7 @@ bool SwapchainInfoVk::AcquireImage(uint64 timeout)
@@ -192,7 +147,7 @@ index 14b7a17cb..2c03ec10c 100644
  	}
  
 diff --git a/src/Cafe/HW/Latte/Renderer/Vulkan/VulkanPipelineCompiler.cpp b/src/Cafe/HW/Latte/Renderer/Vulkan/VulkanPipelineCompiler.cpp
-index ce582b9ac..e945d60bb 100644
+index ce582b9..e945d60 100644
 --- a/src/Cafe/HW/Latte/Renderer/Vulkan/VulkanPipelineCompiler.cpp
 +++ b/src/Cafe/HW/Latte/Renderer/Vulkan/VulkanPipelineCompiler.cpp
 @@ -921,7 +921,7 @@ bool PipelineCompiler::InitFromCurrentGPUState(PipelineInfo* pipelineInfo, const
@@ -205,7 +160,7 @@ index ce582b9ac..e945d60bb 100644
  		return false;
  	}
 diff --git a/src/Cafe/HW/Latte/Renderer/Vulkan/VulkanRenderer.cpp b/src/Cafe/HW/Latte/Renderer/Vulkan/VulkanRenderer.cpp
-index 937e32663..f9be5879f 100644
+index 2b8376d..7eb317a 100644
 --- a/src/Cafe/HW/Latte/Renderer/Vulkan/VulkanRenderer.cpp
 +++ b/src/Cafe/HW/Latte/Renderer/Vulkan/VulkanRenderer.cpp
 @@ -141,7 +141,7 @@ std::vector<VulkanRenderer::DeviceInfo> VulkanRenderer::GetDevices()
@@ -320,7 +275,7 @@ index 937e32663..f9be5879f 100644
  	}
  
  	for (auto& semItr : m_commandBufferSemaphores)
-@@ -1963,7 +1963,7 @@ void VulkanRenderer::SubmitCommandBuffer(VkSemaphore signalSemaphore, VkSemaphor
+@@ -1972,7 +1972,7 @@ void VulkanRenderer::SubmitCommandBuffer(VkSemaphore signalSemaphore, VkSemaphor
  
  	const VkResult result = vkQueueSubmit(m_graphicsQueue, 1, &submitInfo, m_cmd_buffer_fences[m_commandBufferIndex]);
  	if (result != VK_SUCCESS)
@@ -329,7 +284,7 @@ index 937e32663..f9be5879f 100644
  	m_numSubmittedCmdBuffers++;
  
  	// check if any previously submitted command buffers have finished execution
-@@ -2101,7 +2101,7 @@ void VulkanRenderer::PipelineCacheSaveThread(size_t cache_size)
+@@ -2110,7 +2110,7 @@ void VulkanRenderer::PipelineCacheSaveThread(size_t cache_size)
  			}
  			else
  			{
@@ -338,16 +293,16 @@ index 937e32663..f9be5879f 100644
  			}
  		}
  		else
-@@ -2140,7 +2140,7 @@ void VulkanRenderer::CreatePipelineCache()
- 	createInfo.pInitialData = cacheData.data();
- 	VkResult result = vkCreatePipelineCache(m_logicalDevice, &createInfo, nullptr, &m_pipeline_cache);
- 	if (result != VK_SUCCESS)
--		UnrecoverableError(fmt::format("Failed to create pipeline cache: {}", result).c_str());
-+		UnrecoverableError(fmt::format("Failed to create pipeline cache: {}", fmt::underlying(result)).c_str());
+@@ -2153,7 +2153,7 @@ void VulkanRenderer::CreatePipelineCache()
+ 		createInfo.pInitialData = nullptr;
+ 		result = vkCreatePipelineCache(m_logicalDevice, &createInfo, nullptr, &m_pipeline_cache);
+ 		if (result != VK_SUCCESS)
+-			UnrecoverableError(fmt::format("Failed to create new Vulkan pipeline cache: {}", result).c_str());
++			UnrecoverableError(fmt::format("Failed to create new Vulkan pipeline cache: {}", fmt::underlying(result)).c_str());
+ 	}
  
  	size_t cache_size = 0;
- 	vkGetPipelineCacheData(m_logicalDevice, m_pipeline_cache, &cache_size, nullptr);
-@@ -2565,7 +2565,7 @@ VkPipeline VulkanRenderer::backbufferBlit_createGraphicsPipeline(VkDescriptorSet
+@@ -2579,7 +2579,7 @@ VkPipeline VulkanRenderer::backbufferBlit_createGraphicsPipeline(VkDescriptorSet
  
  	VkResult result = vkCreatePipelineLayout(m_logicalDevice, &pipelineLayoutInfo, nullptr, &m_pipelineLayout);
  	if (result != VK_SUCCESS)
@@ -356,7 +311,7 @@ index 937e32663..f9be5879f 100644
  
  	VkGraphicsPipelineCreateInfo pipelineInfo = {};
  	pipelineInfo.sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;
-@@ -2588,8 +2588,8 @@ VkPipeline VulkanRenderer::backbufferBlit_createGraphicsPipeline(VkDescriptorSet
+@@ -2602,8 +2602,8 @@ VkPipeline VulkanRenderer::backbufferBlit_createGraphicsPipeline(VkDescriptorSet
  	result = vkCreateGraphicsPipelines(m_logicalDevice, m_pipeline_cache, 1, &pipelineInfo, nullptr, &pipeline);
  	if (result != VK_SUCCESS)
  	{
@@ -367,7 +322,7 @@ index 937e32663..f9be5879f 100644
  	}
  
  	s_pipeline_cache[hash] = pipeline;
-@@ -2730,7 +2730,7 @@ void VulkanRenderer::SwapBuffer(bool mainWindow)
+@@ -2744,7 +2744,7 @@ void VulkanRenderer::SwapBuffer(bool mainWindow)
  	VkResult result = vkQueuePresentKHR(m_presentQueue, &presentInfo);
  	if (result < 0 && result != VK_ERROR_OUT_OF_DATE_KHR)
  	{
@@ -377,7 +332,7 @@ index 937e32663..f9be5879f 100644
  	if(result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR)
  		chainInfo.m_shouldRecreate = true;
 diff --git a/src/Cafe/HW/Latte/Renderer/Vulkan/VulkanSurfaceCopy.cpp b/src/Cafe/HW/Latte/Renderer/Vulkan/VulkanSurfaceCopy.cpp
-index 6d5d94025..37681b51a 100644
+index 6d5d940..37681b5 100644
 --- a/src/Cafe/HW/Latte/Renderer/Vulkan/VulkanSurfaceCopy.cpp
 +++ b/src/Cafe/HW/Latte/Renderer/Vulkan/VulkanSurfaceCopy.cpp
 @@ -353,7 +353,7 @@ CopySurfacePipelineInfo* VulkanRenderer::copySurface_getOrCreateGraphicsPipeline
@@ -390,7 +345,7 @@ index 6d5d94025..37681b51a 100644
  		return copyPipeline;
  	}
 diff --git a/src/Cafe/IOSU/fsa/fsa_types.h b/src/Cafe/IOSU/fsa/fsa_types.h
-index a7757486f..de1e46f34 100644
+index a775748..de1e46f 100644
 --- a/src/Cafe/IOSU/fsa/fsa_types.h
 +++ b/src/Cafe/IOSU/fsa/fsa_types.h
 @@ -40,6 +40,11 @@ enum class FSA_RESULT : sint32 // aka FSError/FSAStatus
@@ -406,7 +361,7 @@ index a7757486f..de1e46f34 100644
  {
  	CHANGEDIR = 0x5,
 diff --git a/src/Cafe/OS/libs/TCL/TCL.cpp b/src/Cafe/OS/libs/TCL/TCL.cpp
-index d0c29d445..dff4050c5 100644
+index d0c29d4..dff4050 100644
 --- a/src/Cafe/OS/libs/TCL/TCL.cpp
 +++ b/src/Cafe/OS/libs/TCL/TCL.cpp
 @@ -3,6 +3,7 @@
@@ -418,20 +373,19 @@ index d0c29d445..dff4050c5 100644
  	enum class TCL_SUBMISSION_FLAG : uint32
  	{
 diff --git a/src/Cafe/OS/libs/coreinit/coreinit_FS.cpp b/src/Cafe/OS/libs/coreinit/coreinit_FS.cpp
-index 26636eaed..3b79b65ad 100644
+index a2f59d4..07157cd 100644
 --- a/src/Cafe/OS/libs/coreinit/coreinit_FS.cpp
 +++ b/src/Cafe/OS/libs/coreinit/coreinit_FS.cpp
-@@ -42,6 +42,8 @@ bool strcpy_whole(char* dst, size_t dstLength, const char* src)
+@@ -42,6 +42,7 @@ bool strcpy_whole(char* dst, size_t dstLength, const char* src)
  
  namespace coreinit
  {
 +	using fmt::enums::format_as;
-+
- 	std::mutex sFSClientLock;
- 	std::recursive_mutex sFSGlobalMutex;
+ 	SysAllocator<OSMutex> s_fsGlobalMutex;
  
+ 	inline void FSLockMutex()
 diff --git a/src/Cafe/OS/libs/coreinit/coreinit_HWInterface.cpp b/src/Cafe/OS/libs/coreinit/coreinit_HWInterface.cpp
-index b95720f70..a32d43b6a 100644
+index b95720f..a32d43b 100644
 --- a/src/Cafe/OS/libs/coreinit/coreinit_HWInterface.cpp
 +++ b/src/Cafe/OS/libs/coreinit/coreinit_HWInterface.cpp
 @@ -3,6 +3,8 @@
@@ -444,7 +398,7 @@ index b95720f70..a32d43b6a 100644
  	{
  		INTERFACE_VI_UKN = 0, // 0x0C1E0000
 diff --git a/src/Cafe/OS/libs/coreinit/coreinit_MEM.h b/src/Cafe/OS/libs/coreinit/coreinit_MEM.h
-index 7e5831951..7d6dff487 100644
+index 7e58319..7d6dff4 100644
 --- a/src/Cafe/OS/libs/coreinit/coreinit_MEM.h
 +++ b/src/Cafe/OS/libs/coreinit/coreinit_MEM.h
 @@ -49,6 +49,8 @@ void coreinitExport_MEMGetBaseHeapHandle(PPCInterpreter_t* hCPU);
@@ -457,7 +411,7 @@ index 7e5831951..7d6dff487 100644
  #define MEM_HEAP_DEFAULT_ALIGNMENT 4
  #define MIN_ALIGNMENT 4
 diff --git a/src/Cafe/OS/libs/coreinit/coreinit_MEM_FrmHeap.h b/src/Cafe/OS/libs/coreinit/coreinit_MEM_FrmHeap.h
-index 43556ec43..bcb1c7252 100644
+index 43556ec..bcb1c72 100644
 --- a/src/Cafe/OS/libs/coreinit/coreinit_MEM_FrmHeap.h
 +++ b/src/Cafe/OS/libs/coreinit/coreinit_MEM_FrmHeap.h
 @@ -3,6 +3,8 @@
@@ -470,7 +424,7 @@ index 43556ec43..bcb1c7252 100644
  	{
  		uint32be id;
 diff --git a/src/Cafe/OS/libs/coreinit/coreinit_Thread.h b/src/Cafe/OS/libs/coreinit/coreinit_Thread.h
-index e2f5bef2b..a3cbfa973 100644
+index e2f5bef..a3cbfa9 100644
 --- a/src/Cafe/OS/libs/coreinit/coreinit_Thread.h
 +++ b/src/Cafe/OS/libs/coreinit/coreinit_Thread.h
 @@ -87,6 +87,7 @@ static_assert(sizeof(crt_t) == 0x1D8, "");
@@ -494,7 +448,7 @@ index e2f5bef2b..a3cbfa973 100644
  
  namespace coreinit
 diff --git a/src/Cafe/OS/libs/gx2/GX2_Blit.h b/src/Cafe/OS/libs/gx2/GX2_Blit.h
-index f8256f515..d1b8a70c0 100644
+index f8256f5..d1b8a70 100644
 --- a/src/Cafe/OS/libs/gx2/GX2_Blit.h
 +++ b/src/Cafe/OS/libs/gx2/GX2_Blit.h
 @@ -2,6 +2,8 @@
@@ -507,7 +461,7 @@ index f8256f515..d1b8a70c0 100644
  	{
  		CLEAR_DEPTH = 0x01, // clear depth to given clear value
 diff --git a/src/Cafe/OS/libs/gx2/GX2_Command.cpp b/src/Cafe/OS/libs/gx2/GX2_Command.cpp
-index 8d5841904..b3edd939c 100644
+index 6da1974..fb1fb1b 100644
 --- a/src/Cafe/OS/libs/gx2/GX2_Command.cpp
 +++ b/src/Cafe/OS/libs/gx2/GX2_Command.cpp
 @@ -42,6 +42,8 @@ void gx2WriteGather_submitU32AsLEArray(uint32* v, uint32 numValues)
@@ -520,7 +474,7 @@ index 8d5841904..b3edd939c 100644
  	bool gx2WriteGatherInited = false;
  
 diff --git a/src/Cafe/OS/libs/gx2/GX2_Event.cpp b/src/Cafe/OS/libs/gx2/GX2_Event.cpp
-index ba498477d..1b8c2a75d 100644
+index ba49847..1b8c2a7 100644
 --- a/src/Cafe/OS/libs/gx2/GX2_Event.cpp
 +++ b/src/Cafe/OS/libs/gx2/GX2_Event.cpp
 @@ -12,6 +12,7 @@
@@ -532,7 +486,7 @@ index ba498477d..1b8c2a75d 100644
  	SysAllocator<coreinit::OSThreadQueue> g_vsyncThreadQueue;
  	SysAllocator<coreinit::OSThreadQueue> g_flipThreadQueue;
 diff --git a/src/Cafe/OS/libs/gx2/GX2_Event.h b/src/Cafe/OS/libs/gx2/GX2_Event.h
-index 09cb073c2..e59fa89b5 100644
+index 09cb073..e59fa89 100644
 --- a/src/Cafe/OS/libs/gx2/GX2_Event.h
 +++ b/src/Cafe/OS/libs/gx2/GX2_Event.h
 @@ -2,6 +2,8 @@
@@ -545,7 +499,7 @@ index 09cb073c2..e59fa89b5 100644
  	void GX2EventResetToDefaultState();
  
 diff --git a/src/Cafe/OS/libs/gx2/GX2_Misc.h b/src/Cafe/OS/libs/gx2/GX2_Misc.h
-index e6ac8010c..f7a76c799 100644
+index e6ac801..f7a76c7 100644
 --- a/src/Cafe/OS/libs/gx2/GX2_Misc.h
 +++ b/src/Cafe/OS/libs/gx2/GX2_Misc.h
 @@ -2,6 +2,8 @@
@@ -557,24 +511,8 @@ index e6ac8010c..f7a76c799 100644
  	extern uint32 sGX2MainCoreIndex;
  
  	enum class E_TVRES
-diff --git a/src/Cafe/OS/libs/gx2/GX2_Shader.h b/src/Cafe/OS/libs/gx2/GX2_Shader.h
-index 1d1c79cc6..d48a9b0ec 100644
---- a/src/Cafe/OS/libs/gx2/GX2_Shader.h
-+++ b/src/Cafe/OS/libs/gx2/GX2_Shader.h
-@@ -23,6 +23,11 @@ struct GX2FetchShader_t
- 	}
- };
- 
-+inline auto format_as(GX2FetchShader_t::FetchShaderType type)
-+{
-+	return fmt::underlying(type);
-+}
-+
- static_assert(sizeof(GX2FetchShader_t) == 0x20);
- static_assert(sizeof(betype<GX2FetchShader_t::FetchShaderType>) == 4);
- 
 diff --git a/src/Cafe/OS/libs/gx2/GX2_State.cpp b/src/Cafe/OS/libs/gx2/GX2_State.cpp
-index d9c0420f3..e09933209 100644
+index d9c0420..e099332 100644
 --- a/src/Cafe/OS/libs/gx2/GX2_State.cpp
 +++ b/src/Cafe/OS/libs/gx2/GX2_State.cpp
 @@ -7,6 +7,8 @@
@@ -587,7 +525,7 @@ index d9c0420f3..e09933209 100644
  
  	void GX2InitAlphaTestReg(GX2AlphaTestReg* reg, uint32 alphaTestEnable, GX2_ALPHAFUNC alphaFunc, float alphaRef)
 diff --git a/src/Cafe/OS/libs/nn_acp/nn_acp.h b/src/Cafe/OS/libs/nn_acp/nn_acp.h
-index cbf36c643..586f8af4d 100644
+index cbf36c6..586f8af 100644
 --- a/src/Cafe/OS/libs/nn_acp/nn_acp.h
 +++ b/src/Cafe/OS/libs/nn_acp/nn_acp.h
 @@ -4,6 +4,8 @@ namespace nn
@@ -600,7 +538,7 @@ index cbf36c643..586f8af4d 100644
  	{
  		SUCCESS = 0,
 diff --git a/src/Cafe/OS/libs/nn_boss/nn_boss.cpp b/src/Cafe/OS/libs/nn_boss/nn_boss.cpp
-index c2d65a5f3..0cdfe1a41 100644
+index c2d65a5..0cdfe1a 100644
 --- a/src/Cafe/OS/libs/nn_boss/nn_boss.cpp
 +++ b/src/Cafe/OS/libs/nn_boss/nn_boss.cpp
 @@ -23,6 +23,8 @@ memset(bossRequest, 0, sizeof(iosuBossCemuRequest_t)); \
@@ -613,7 +551,7 @@ index c2d65a5f3..0cdfe1a41 100644
  	sint32 g_initCounter = 0;
  	bool g_isInitialized = false;
 diff --git a/src/Cafe/OS/libs/nn_ndm/nn_ndm.cpp b/src/Cafe/OS/libs/nn_ndm/nn_ndm.cpp
-index 5a69b787e..1d87c39a4 100644
+index 5a69b78..1d87c39 100644
 --- a/src/Cafe/OS/libs/nn_ndm/nn_ndm.cpp
 +++ b/src/Cafe/OS/libs/nn_ndm/nn_ndm.cpp
 @@ -6,6 +6,7 @@ namespace nn
@@ -625,7 +563,7 @@ index 5a69b787e..1d87c39a4 100644
  		enum class DAEMON_NAME : uint32
  		{
 diff --git a/src/Cafe/OS/libs/nn_olv/nn_olv_PostTypes.h b/src/Cafe/OS/libs/nn_olv/nn_olv_PostTypes.h
-index e6078a7aa..547253c7f 100644
+index 62dad75..df1398e 100644
 --- a/src/Cafe/OS/libs/nn_olv/nn_olv_PostTypes.h
 +++ b/src/Cafe/OS/libs/nn_olv/nn_olv_PostTypes.h
 @@ -6,6 +6,8 @@ namespace nn
@@ -638,10 +576,10 @@ index e6078a7aa..547253c7f 100644
  		{
  			enum class FLAGS : uint32
 diff --git a/src/Cemu/Logging/CemuLogging.h b/src/Cemu/Logging/CemuLogging.h
-index d55256c9d..75f3c4cae 100644
+index e6599c5..a773434 100644
 --- a/src/Cemu/Logging/CemuLogging.h
 +++ b/src/Cemu/Logging/CemuLogging.h
-@@ -60,21 +60,6 @@ bool cemuLog_log(LogType type, std::u8string_view text);
+@@ -71,21 +71,6 @@ bool cemuLog_log(LogType type, std::u8string_view text);
  bool cemuLog_log(LogType type, std::wstring_view text);
  void cemuLog_waitForFlush(); // wait until all log lines are written
  
@@ -663,7 +601,7 @@ index d55256c9d..75f3c4cae 100644
  template<typename T, typename ... TArgs>
  bool cemuLog_log(LogType type, std::basic_string<T> formatStr, TArgs&&... args)
  {
-@@ -88,7 +73,7 @@ bool cemuLog_log(LogType type, std::basic_string<T> formatStr, TArgs&&... args)
+@@ -99,7 +84,7 @@ bool cemuLog_log(LogType type, std::basic_string<T> formatStr, TArgs&&... args)
  	else
  	{
  		const auto format_view = fmt::basic_string_view<T>(formatStr);
@@ -673,7 +611,7 @@ index d55256c9d..75f3c4cae 100644
  	}
  	return true;
 diff --git a/src/Cemu/napi/napi.h b/src/Cemu/napi/napi.h
-index ab17a7b30..df346daa8 100644
+index ab17a7b..df346da 100644
 --- a/src/Cemu/napi/napi.h
 +++ b/src/Cemu/napi/napi.h
 @@ -11,8 +11,15 @@ enum class NAPI_RESULT
@@ -693,7 +631,7 @@ index ab17a7b30..df346daa8 100644
  	struct AuthInfo
  	{
 diff --git a/src/Common/MemPtr.h b/src/Common/MemPtr.h
-index dc1ecd36d..d8e4e945d 100644
+index dc1ecd3..d8e4e94 100644
 --- a/src/Common/MemPtr.h
 +++ b/src/Common/MemPtr.h
 @@ -159,5 +159,5 @@ template <typename T>
@@ -704,10 +642,10 @@ index dc1ecd36d..d8e4e945d 100644
 +	auto format(const MEMPTR<T>& v, FormatContext& ctx) const { return formatter<string_view>::format(fmt::format("{:#x}", v.GetMPTR()), ctx); }
  };
 diff --git a/src/Common/betype.h b/src/Common/betype.h
-index e684fb933..27e43af86 100644
+index e684fb9..27e43af 100644
 --- a/src/Common/betype.h
 +++ b/src/Common/betype.h
-@@ -204,6 +204,12 @@ class betype
+@@ -204,6 +204,12 @@ private:
  	T m_value;
  };
  
@@ -721,7 +659,7 @@ index e684fb933..27e43af86 100644
  using uint32be = betype<uint32>;
  using uint16be = betype<uint16>;
 diff --git a/src/Common/precompiled.h b/src/Common/precompiled.h
-index 7152f2c12..2c4dfa9ea 100644
+index 7152f2c..2c4dfa9 100644
 --- a/src/Common/precompiled.h
 +++ b/src/Common/precompiled.h
 @@ -16,13 +16,9 @@
@@ -742,10 +680,10 @@ index 7152f2c12..2c4dfa9ea 100644
  // arch defines
  
 diff --git a/src/audio/IAudioAPI.h b/src/audio/IAudioAPI.h
-index 935e30245..846be84db 100644
+index 935e302..846be84 100644
 --- a/src/audio/IAudioAPI.h
 +++ b/src/audio/IAudioAPI.h
-@@ -82,6 +82,11 @@ class IAudioAPI
+@@ -82,6 +82,11 @@ private:
  	
  };
  
@@ -758,10 +696,10 @@ index 935e30245..846be84db 100644
  extern std::shared_mutex g_audioMutex;
  extern AudioAPIPtr g_tvAudio;
 diff --git a/src/audio/IAudioInputAPI.h b/src/audio/IAudioInputAPI.h
-index 66c431657..a85bf406e 100644
+index 66c4316..a85bf40 100644
 --- a/src/audio/IAudioInputAPI.h
 +++ b/src/audio/IAudioInputAPI.h
-@@ -66,6 +66,11 @@ class IAudioInputAPI
+@@ -66,6 +66,11 @@ protected:
  private:
  };
  
@@ -774,7 +712,7 @@ index 66c431657..a85bf406e 100644
  extern std::shared_mutex g_audioInputMutex;
  extern AudioInputAPIPtr g_inputAudio;
 diff --git a/src/input/api/InputAPI.h b/src/input/api/InputAPI.h
-index 07ae16cfd..128cb3d68 100644
+index 07ae16c..128cb3d 100644
 --- a/src/input/api/InputAPI.h
 +++ b/src/input/api/InputAPI.h
 @@ -49,6 +49,11 @@ namespace InputAPI
@@ -790,7 +728,7 @@ index 07ae16cfd..128cb3d68 100644
  	{
  		if (str == to_string(Keyboard))
 diff --git a/src/util/EventService.h b/src/util/EventService.h
-index 4fe1737a6..6b1ece77e 100644
+index 4fe1737..6b1ece7 100644
 --- a/src/util/EventService.h
 +++ b/src/util/EventService.h
 @@ -10,6 +10,11 @@ enum class Events : int32_t
