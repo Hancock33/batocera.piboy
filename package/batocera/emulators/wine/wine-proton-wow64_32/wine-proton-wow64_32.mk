@@ -19,6 +19,7 @@ define WINE_PROTON_WOW64_32_AUTOGEN
 	# Add Version
 	$(SED) "s|The Wine configuration|Proton-86-$(WINE_PROTON_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
 	$(SED) "s|IDD_WAITDLG DIALOG 0, 0, 200, 50|IDD_WAITDLG DIALOG 0, 0, 300, 50|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|FONT 8,|FONT 10,|g" $(@D)/programs/wineboot/wineboot.rc
 	$(SED) "s|8.0|$(WINE_PROTON_VERSION)|g" $(@D)/VERSION
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/proton
