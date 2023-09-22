@@ -13883,10 +13883,6 @@ msgid "Open"
 msgstr ""
 
 #~ msgctxt "game_options"
-#~ msgid "Legacy Evdev"
-#~ msgstr "Legacy Evdev"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Armazenar estados antigos para rebobinar em tempo real, se o núcleo "
@@ -13992,6 +13988,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Per Pixel"
 #~ msgstr "Por Pixel"
+
+#~ msgctxt "game_options"
+#~ msgid "Legacy Evdev"
+#~ msgstr "Legacy Evdev"
 
 #~ msgctxt "game_options"
 #~ msgid ""
