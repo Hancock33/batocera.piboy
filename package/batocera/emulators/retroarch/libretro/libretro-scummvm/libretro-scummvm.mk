@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Sept 22, 2023
-LIBRETRO_SCUMMVM_VERSION = 547c8f3e0340b37ef2191b9afcb2c4cfaa23facc
+LIBRETRO_SCUMMVM_VERSION = e7a8def2521a44be4ac625467dafbaee7ce1b309
 LIBRETRO_SCUMMVM_SOURCE = scummvm-$(LIBRETRO_SCUMMVM_VERSION).tar.gz
 LIBRETRO_SCUMMVM_SITE = $(call github,scummvm,scummvm,$(LIBRETRO_SCUMMVM_VERSION))
 LIBRETRO_SCUMMVM_LICENSE = GPLv2
