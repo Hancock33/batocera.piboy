@@ -1,21 +1,21 @@
 diff --git a/dep/reshadefx/include/effect_module.hpp b/dep/reshadefx/include/effect_module.hpp
-index 6c4d00df..085dedc3 100644
+index ccf2cbe2..4af2d23c 100644
 --- a/dep/reshadefx/include/effect_module.hpp
 +++ b/dep/reshadefx/include/effect_module.hpp
-@@ -8,6 +8,7 @@
+@@ -7,6 +7,7 @@
+ 
  #include "effect_expression.hpp"
- #include <cstdint>
  #include <unordered_set>
 +#include <cstdint>
  
  namespace reshadefx
  {
 diff --git a/dep/reshadefx/include/effect_token.hpp b/dep/reshadefx/include/effect_token.hpp
-index e4bb633c..64815003 100644
+index 072d4398..2753c77f 100644
 --- a/dep/reshadefx/include/effect_token.hpp
 +++ b/dep/reshadefx/include/effect_token.hpp
-@@ -8,6 +8,7 @@
- #include <cstdint>
+@@ -7,6 +7,7 @@
+ 
  #include <string>
  #include <vector>
 +#include <cstdint>

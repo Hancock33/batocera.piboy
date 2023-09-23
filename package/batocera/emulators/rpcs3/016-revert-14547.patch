@@ -1,5 +1,5 @@
 diff --git a/rpcs3/Emu/Cell/PPUAnalyser.cpp b/rpcs3/Emu/Cell/PPUAnalyser.cpp
-index d195d749c..3ba3cab56 100644
+index d3ba3e142..3ba3cab56 100644
 --- a/rpcs3/Emu/Cell/PPUAnalyser.cpp
 +++ b/rpcs3/Emu/Cell/PPUAnalyser.cpp
 @@ -587,23 +587,6 @@ bool ppu_module::analyse(u32 lib_toc, u32 entry, const u32 sec_end, const std::b
@@ -133,7 +133,7 @@ index d195d749c..3ba3cab56 100644
  
  					if (type == ppu_itype::B || type == ppu_itype::BC)
  					{
--						if (type == ppu_itype::BC && (op.bo & 0x14) == 0x14 && op.bo & 0xd)
+-						if (type == ppu_itype::BC && (op.bo & 0x14) == 0x14 && op.bo & 0xB)
 -						{
 -							// Invalid form
 -							is_good = false;
@@ -310,64 +310,3 @@ index d195d749c..3ba3cab56 100644
  	ppu_log.notice("Block analysis: %zu blocks (%zu enqueued)", funcs.size(), block_queue.size());
  	return true;
  }
-diff --git a/rpcs3/Emu/Cell/PPUAnalyser.h b/rpcs3/Emu/Cell/PPUAnalyser.h
-index c1515c65c..e5c704d65 100644
---- a/rpcs3/Emu/Cell/PPUAnalyser.h
-+++ b/rpcs3/Emu/Cell/PPUAnalyser.h
-@@ -263,7 +263,6 @@ struct ppu_pattern_matrix
- struct ppu_itype
- {
- 	static constexpr struct branch_tag{} branch{}; // Branch Instructions
--	static constexpr struct trap_tag{} trap{}; // Branch Instructions
- 
- 	enum class type
- 	{
-@@ -426,6 +425,8 @@ struct ppu_itype
- 		VUPKLSB,
- 		VUPKLSH,
- 		VXOR,
-+		TDI,
-+		TWI,
- 		MULLI,
- 		SUBFIC,
- 		CMPLI,
-@@ -460,6 +461,7 @@ struct ppu_itype
- 		RLDCL,
- 		RLDCR,
- 		CMP,
-+		TW,
- 		LVSL,
- 		LVEBX,
- 		SUBFC,
-@@ -486,6 +488,7 @@ struct ppu_itype
- 		LWZUX,
- 		CNTLZD,
- 		ANDC,
-+		TD,
- 		LVEWX,
- 		MULHD,
- 		MULHW,
-@@ -781,11 +784,6 @@ struct ppu_itype
- 		BC,
- 		BCLR,
- 		BCCTR, // branch_tag last
--
--		TD, // trap_tag first
--		TW,
--		TDI,
--		TWI, // trap_tag last
- 	};
- 
- 	using enum type;
-@@ -800,11 +798,6 @@ struct ppu_itype
- 	{
- 		return value >= B && value <= BCCTR;
- 	}
--
--	friend constexpr bool operator &(type value, trap_tag)
--	{
--		return value >= TD && value <= TWI;
--	}
- };
- 
- struct ppu_iname
