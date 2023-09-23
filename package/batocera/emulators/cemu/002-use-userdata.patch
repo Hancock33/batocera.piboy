@@ -1,8 +1,8 @@
 diff --git a/src/Cafe/HW/Latte/Renderer/Renderer.cpp b/src/Cafe/HW/Latte/Renderer/Renderer.cpp
-index 63ba5a7..12fca97 100644
+index 4db8835..f49c2b3 100644
 --- a/src/Cafe/HW/Latte/Renderer/Renderer.cpp
 +++ b/src/Cafe/HW/Latte/Renderer/Renderer.cpp
-@@ -115,7 +115,7 @@ uint8 Renderer::RGBComponentToSRGB(uint8 cli)
+@@ -116,7 +116,7 @@ uint8 Renderer::RGBComponentToSRGB(uint8 cli)
  
  static std::optional<fs::path> GenerateScreenshotFilename(bool isDRC)
  {
@@ -12,10 +12,10 @@ index 63ba5a7..12fca97 100644
  	// if the file already exists add a suffix counter (_2.png, _3.png etc)
  	std::time_t time_t = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
 diff --git a/src/Cemu/Logging/CemuLogging.cpp b/src/Cemu/Logging/CemuLogging.cpp
-index 95614a9..d50e78b 100644
+index ac22853..aebd33a 100644
 --- a/src/Cemu/Logging/CemuLogging.cpp
 +++ b/src/Cemu/Logging/CemuLogging.cpp
-@@ -94,7 +94,7 @@ void cemuLog_thread()
+@@ -87,7 +87,7 @@ void cemuLog_thread()
  
  fs::path cemuLog_GetLogFilePath()
  {
@@ -38,10 +38,10 @@ index 6b205d2..74120a4 100644
  
  	exit(0);
 diff --git a/src/gui/CemuApp.cpp b/src/gui/CemuApp.cpp
-index 92ba943..50e5aae 100644
+index 74ef684..1897fcc 100644
 --- a/src/gui/CemuApp.cpp
 +++ b/src/gui/CemuApp.cpp
-@@ -87,7 +87,7 @@ bool CemuApp::OnInit()
+@@ -65,7 +65,7 @@ bool CemuApp::OnInit()
  #endif
  	user_data_path = config_path = cache_path = data_path = exePath.parent_path();
  #else
@@ -50,7 +50,7 @@ index 92ba943..50e5aae 100644
  	wxString appName=GetAppName();
  	#if BOOST_OS_LINUX
  	standardPaths.SetFileLayout(wxStandardPaths::FileLayout::FileLayout_XDG);
-@@ -99,14 +99,14 @@ bool CemuApp::OnInit()
+@@ -77,14 +77,14 @@ bool CemuApp::OnInit()
  		return dir;
  	};
  	wxString homeDir=wxFileName::GetHomeDir();
@@ -67,5 +67,5 @@ index 92ba943..50e5aae 100644
 + 
 +	cache_path = (getEnvDir(wxS("XDG_CACHE_HOME"), wxS("userdata/system/cache")) + "/" + appName).ToStdString();
  #endif
- 	auto failed_write_access = ActiveSettings::LoadOnce(user_data_path, config_path, cache_path, data_path);
+ 	auto failed_write_access = ActiveSettings::LoadOnce(exePath, user_data_path, config_path, cache_path, data_path);
  	for (auto&& path : failed_write_access)

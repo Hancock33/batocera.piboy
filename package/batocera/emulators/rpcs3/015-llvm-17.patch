@@ -38,7 +38,7 @@ index c08af85f6..8423c96a7 100644
  				if (auto r1 = a1.match(v1, _m); v1)
  				{
 diff --git a/rpcs3/Emu/Cell/SPURecompiler.cpp b/rpcs3/Emu/Cell/SPURecompiler.cpp
-index 4e2c90a63..64c07b137 100644
+index 4fa6cf475..e2466542d 100644
 --- a/rpcs3/Emu/Cell/SPURecompiler.cpp
 +++ b/rpcs3/Emu/Cell/SPURecompiler.cpp
 @@ -6203,9 +6203,9 @@ public:

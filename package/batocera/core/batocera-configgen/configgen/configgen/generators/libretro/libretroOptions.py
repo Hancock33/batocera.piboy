@@ -955,45 +955,45 @@ def generateCoreSettings(coreSettings, system, rom, guns):
     # Dolpin Wii
     if (system.config['core'] == 'dolphin'):
         # Wii System Languages
-            if system.isOptSet('wii_language'):
-                coreSettings.save('dolphin_language', '"' + system.config['wii_language'] + '"')
-            else:
-                coreSettings.save('dolphin_language', '"English"')
+        if system.isOptSet('wii_language'):
+            coreSettings.save('dolphin_language', '"' + system.config['wii_language'] + '"')
+        else:
+            coreSettings.save('dolphin_language', '"English"')
         # Wii Resolution Scale
-            if system.isOptSet('wii_resolution'):
-                coreSettings.save('dolphin_efb_scale', '"' + system.config['wii_resolution'] + '"')
-            else:
-                coreSettings.save('dolphin_efb_scale', '"x1 (640 x 528)"')
+        if system.isOptSet('wii_resolution'):
+            coreSettings.save('dolphin_efb_scale', '"' + system.config['wii_resolution'] + '"')
+        else:
+            coreSettings.save('dolphin_efb_scale', '"x1 (640 x 528)"')
         # Anisotropic Filtering
-            if system.isOptSet('wii_anisotropic'):
-                coreSettings.save('dolphin_max_anisotropy', '"' + system.config['wii_anisotropic'] + '"')
-            else:
-                coreSettings.save('dolphin_max_anisotropy', '"x1"')
-        # Anti-Aliasing
-            if system.isOptSet('wii_antialiasing'):
-                coreSettings.save('dolphin_anti_aliasing', chr(34) + system.config['wii_antialiasing'] + chr(34))
-            else:
-                coreSettings.save('dolphin_anti_aliasing', '"None"')
+        if system.isOptSet('wii_anisotropic'):
+            coreSettings.save('dolphin_max_anisotropy', '"' + system.config['wii_anisotropic'] + '"')
+        else:
+            coreSettings.save('dolphin_max_anisotropy', '"x1"')
         # Wii Tv Mode
-            if system.isOptSet('wii_widescreen'):
-                coreSettings.save('dolphin_widescreen', '"' + system.config['wii_widescreen'] + '"')
-            else:
-                coreSettings.save('dolphin_widescreen', '"enabled"')
+        if system.isOptSet('wii_widescreen'):
+            coreSettings.save('dolphin_widescreen', '"' + system.config['wii_widescreen'] + '"')
+        else:
+            coreSettings.save('dolphin_widescreen', '"enabled"')
         # Widescreen Hack
-            if system.isOptSet('wii_widescreen_hack'):
-                coreSettings.save('dolphin_widescreen_hack', '"' + system.config['wii_widescreen_hack'] + '"')
-            else:
-                coreSettings.save('dolphin_widescreen_hack', '"disabled"')
+        if system.isOptSet('wii_widescreen_hack'):
+            coreSettings.save('dolphin_widescreen_hack', '"' + system.config['wii_widescreen_hack'] + '"')
+        else:
+            coreSettings.save('dolphin_widescreen_hack', '"disabled"')
         # Shader Compilation Mode
-            if system.isOptSet('wii_shader_mode'):
-                coreSettings.save('dolphin_shader_compilation_mode', '"' + system.config['wii_shader_mode'] + '"')
-            else:
-                coreSettings.save('dolphin_shader_compilation_mode', '"sync"')
-        # Fast Disc Speed
-            if system.isOptSet('wii_fast_disc_speed'):
-                coreSettings.save('dolphin_fast_disc_speed', system.config['wii_fast_disc_speed'])
-            else:
-                coreSettings.save('dolphin_fast_disc_speed', '"enabled"')
+        if system.isOptSet('wii_shader_mode'):
+            coreSettings.save('dolphin_shader_compilation_mode', '"' + system.config['wii_shader_mode'] + '"')
+        else:
+            coreSettings.save('dolphin_shader_compilation_mode', '"sync"')
+        # OSD
+        if system.isOptSet('wii_osd'):
+            coreSettings.save('dolphin_osd_enabled', '"' + system.config['wii_osd'] + '"')
+        else:
+            coreSettings.save('dolphin_osd_enabled', '"disabled"')
+        # Fast Disc
+        if system.isOptSet('wii_fast_disc_speed'):
+            coreSettings.save('dolphin_fast_disc_speed', system.config['wii_fast_disc_speed'])
+        else:
+            coreSettings.save('dolphin_fast_disc_speed', '"enabled"')
 
     # Magnavox - Odyssey2 / Phillips Videopac+
     if (system.config['core'] == 'o2em'):
@@ -1480,6 +1480,15 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         coreSettings.save('parallel-n64-64dd-hardware', '"disabled"')
         coreSettings.save('parallel-n64-boot-device',   '"Default"')
 
+        # Graphics Plugin
+        if system.isOptSet('parallel-n64-gfxplugin'):
+            coreSettings.save('parallel-n64-gfxplugin', '"' + system.config['parallel-n64-gfxplugin'] + '"')
+        else:
+            # vulkan doesn't work with auto
+            if system.isOptSet('gfxbackend') and system.config['gfxbackend'] == "vulkan":
+                coreSettings.save('parallel-n64-gfxplugin', '"parallel"')
+            else:
+                coreSettings.save('parallel-n64-gfxplugin', '"auto"')
         # Video Resolution
         if system.isOptSet('parallel-n64-screensize'):
             coreSettings.save('parallel-n64-screensize', '"' + system.config['parallel-n64-screensize'] + '"')

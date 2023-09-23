@@ -3,13 +3,13 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Sept 20, 2023
-DUCKSTATION_VERSION = 7d76643c02ddd404097b0f8839fc50f64be9faf4
+# Version: Commits on Aug 23, 2023
+DUCKSTATION_VERSION = 82cdef45b377eae34180af01cdd329cfd957d507
 DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
 DUCKSTATION_SITE_METHOD=git
 DUCKSTATION_GIT_SUBMODULES=YES
 DUCKSTATION_LICENSE = GPLv2
-DUCKSTATION_DEPENDENCIES = fmt boost ffmpeg libcurl ecm
+DUCKSTATION_DEPENDENCIES = fmt boost ffmpeg libcurl ecm libdrm sdl2 libevdev
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 
 DUCKSTATION_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE
@@ -18,7 +18,7 @@ DUCKSTATION_CONF_OPTS += -DUSE_DRMKMS=ON
 DUCKSTATION_CONF_ENV += LDFLAGS=-lpthread
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588),y)
-  DUCKSTATION_CONF_OPTS += -DUSE_EVDEV=ON -DCMAKE_EXE_LINKER_FLAGS="-lmali_hook -Wl,--whole-archive -lmali_hook_injector -Wl,--no-whole-archive -lmali"
+	DUCKSTATION_CONF_OPTS += -DUSE_EVDEV=ON -DCMAKE_EXE_LINKER_FLAGS="-lmali_hook -Wl,--whole-archive -lmali_hook_injector -Wl,--no-whole-archive -lmali"
 endif
 
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
@@ -39,13 +39,7 @@ else
 	DUCKSTATION_CONF_OPTS += -DENABLE_VULKAN=OFF
 endif
 
-#ifeq ($(BR2_PACKAGE_QT6),y)
-#	DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON -DBUILD_SDL_FRONTEND=OFF
-#	DUCKSTATION_DEPENDENCIES += qt6base qt6svg qt6tools qt6multimedia
-#else
-	DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=OFF -DBUILD_SDL_FRONTEND=OFF -DBUILD_NOGUI_FRONTEND=ON
-	DUCKSTATION_DEPENDENCIES += libdrm sdl2 libevdev
-#endif
+DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=OFF -DBUILD_SDL_FRONTEND=OFF -DBUILD_NOGUI_FRONTEND=ON
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 	DUCKSTATION_CONF_OPTS += -DUSE_GLX=ON
@@ -62,15 +56,11 @@ endif
 
 define DUCKSTATION_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/duckstation
-#	@if [ "$(X86_INSTALL)" = "n" ]; then  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-nogui $(TARGET_DIR)/usr/duckstation/bin/ ; fi
-#	@if [ "$(X86_INSTALL)" = "y" ]; then  cp -pr  $(@D)/buildroot-build/bin/translations			$(TARGET_DIR)/usr/duckstation/bin/ ; fi
-#	@if [ "$(X86_INSTALL)" = "y" ]; then  $(INSTALL) -D $(@D)/buildroot-build/bin/duckstation-qt	$(TARGET_DIR)/usr/duckstation/bin/duckstation-nogui ; fi
 	$(INSTALL) -D $(@D)/buildroot-build/bin/duckstation*	$(TARGET_DIR)/usr/bin/duckstation
-	cp -pr  $(@D)/data/resources							$(TARGET_DIR)/usr/bin/duckstation/
+	cp -pr	$(@D)/buildroot-build/bin/resources				$(TARGET_DIR)/usr/bin/duckstation/
 
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(cmake-package))
-
