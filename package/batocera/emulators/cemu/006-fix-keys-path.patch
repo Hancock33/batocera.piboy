@@ -1,8 +1,8 @@
 diff --git a/src/Cafe/Filesystem/FST/KeyCache.cpp b/src/Cafe/Filesystem/FST/KeyCache.cpp
-index 5d8d51c..aca26e7 100644
+index 29903e8..09d8fc8 100644
 --- a/src/Cafe/Filesystem/FST/KeyCache.cpp
 +++ b/src/Cafe/Filesystem/FST/KeyCache.cpp
-@@ -59,7 +59,18 @@ void KeyCache_Prepare()
+@@ -60,7 +60,18 @@ void KeyCache_Prepare()
  	sKeyCachePrepared = true;
  	g_keyCache.clear();
  	// load keys

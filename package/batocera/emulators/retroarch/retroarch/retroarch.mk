@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Sept 20, 2023
-RETROARCH_VERSION = ef12e43522109a47f337bf6f53ee053774f336f9
+# Version: Commits on Sept 23, 2023
+RETROARCH_VERSION = 712b9350a5c2b1b9129d939a2ae622093dfabd04
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
@@ -142,10 +142,14 @@ ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),)
 endif
 
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
-	RETROARCH_CONF_OPTS += --enable-wayland
-	RETROARCH_DEPENDENCIES += wayland
+    ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
+        RETROARCH_CONF_OPTS += --enable-wayland
+        RETROARCH_DEPENDENCIES += wayland
+    else
+        RETROARCH_CONF_OPTS += --disable-wayland
+    endif
 else
-	RETROARCH_CONF_OPTS += --disable-wayland
+    RETROARCH_CONF_OPTS += --disable-wayland
 endif
 
 ifeq ($(BR2_PACKAGE_VULKAN_LOADER)$(BR2_PACKAGE_VULKAN_HEADERS),yy)

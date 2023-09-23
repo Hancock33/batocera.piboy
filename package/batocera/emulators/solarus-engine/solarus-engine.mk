@@ -15,8 +15,7 @@ SOLARUS_ENGINE_LICENSE_FILES = license.txt
 # Install libsolarus.so
 SOLARUS_ENGINE_INSTALL_STAGING = YES
 
-SOLARUS_ENGINE_DEPENDENCIES = luajit glm libmodplug libogg libvorbis openal physfs \
-	sdl2 sdl2_image sdl2_ttf
+SOLARUS_ENGINE_DEPENDENCIES = glm libmodplug libogg libvorbis lpeg luajit openal physfs sdl2 sdl2_image sdl2_ttf
 
 SOLARUS_ENGINE_CONF_OPTS = \
 	-DSOLARUS_GUI=OFF \

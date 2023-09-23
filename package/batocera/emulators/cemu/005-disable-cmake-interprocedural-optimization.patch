@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index c45ea34..1b6f768 100644
+index a5749ac..1377ad8 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -46,8 +46,8 @@ endif()
+@@ -50,8 +50,8 @@ endif()
  set_property(GLOBAL PROPERTY USE_FOLDERS ON)
  
  # enable link time optimization for release builds

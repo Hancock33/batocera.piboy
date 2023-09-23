@@ -1131,7 +1131,7 @@ msgctxt "game_options"
 msgid "TEXTURE SMOOTHING"
 msgstr ""
 
-#. TRANSLATION: libretro/desmume, libretro/dolphin, libretro/swanstation, libretro/duckstation, dolphin, ...
+#. TRANSLATION: libretro/desmume, libretro/swanstation, libretro/duckstation, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D object polygons."
 msgstr ""
@@ -1379,7 +1379,7 @@ msgid ""
 msgstr ""
 "قد لا تعمل بشكل جيد على جميع الأجهزة. يُفضل الهجين(Hybrid)، حيث يتم دعمه."
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, libretro/same_cdi, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "الإعدادات المتقدمة"
@@ -1417,41 +1417,6 @@ msgstr ""
 #. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/flycast2021, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
-msgstr ""
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "ANTI-ALIASING (MSAA/SSAA)"
-msgstr ""
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "2x MSAA"
-msgstr ""
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "4x MSAA"
-msgstr ""
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "8x MSAA"
-msgstr ""
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "2x SSAA"
-msgstr ""
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "4x SSAA"
-msgstr ""
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "8x SSAA"
 msgstr ""
 
 #. TRANSLATION: libretro/dolphin, dolphin
@@ -2181,12 +2146,47 @@ msgstr ""
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
+msgid "ANTI-ALIASING (MSAA/SSAA)"
+msgstr ""
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "2x MSAA"
+msgstr ""
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "4x MSAA"
+msgstr ""
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "8x MSAA"
+msgstr ""
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
 msgid "16x MSAA"
 msgstr ""
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
 msgid "32x MSAA"
+msgstr ""
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "2x SSAA"
+msgstr ""
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "4x SSAA"
+msgstr ""
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "8x SSAA"
 msgstr ""
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
@@ -5504,6 +5504,41 @@ msgstr ""
 
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
+msgid "Choose the Parallel N64 graphics plugin."
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "GRAPHICS PLUGIN"
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Glide64"
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Gln64"
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Rice"
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Angrylion"
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Parallel"
+msgstr ""
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
 msgid "4.5x (1440x1080)"
 msgstr ""
 
@@ -7301,7 +7336,7 @@ msgctxt "game_options"
 msgid "GLCore"
 msgstr ""
 
-#. TRANSLATION: libretro, libretro, libretro, libretro
+#. TRANSLATION: libretro, libretro, libretro, libretro, rpcs3, ...
 msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
@@ -10586,7 +10621,7 @@ msgstr ""
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
-msgid "Legacy Evdev"
+msgid "Evdev (Default)"
 msgstr ""
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
@@ -13696,10 +13731,6 @@ msgstr ""
 #~ msgstr "لكل بكسل"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "أعد تشغيل اللعبة"
-
-#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "حمل الحالة من فتحة ١"
 
@@ -13758,6 +13789,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "تسريع إلى الأمام"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "أعد تشغيل اللعبة"
 
 #~ msgctxt "keys_files"
 #~ msgid "Aspect ratio correction on/off"
