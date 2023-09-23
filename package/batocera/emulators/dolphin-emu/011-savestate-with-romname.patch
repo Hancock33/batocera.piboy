@@ -1,5 +1,5 @@
 diff --git a/Source/Core/Core/BootManager.cpp b/Source/Core/Core/BootManager.cpp
-index 1c9e2f0..a66c157 100644
+index 1c9e2f03d4..a66c157365 100644
 --- a/Source/Core/Core/BootManager.cpp
 +++ b/Source/Core/Core/BootManager.cpp
 @@ -65,6 +65,11 @@ bool BootCore(std::unique_ptr<BootParameters> boot, const WindowSystemInfo& wsi)
@@ -15,10 +15,10 @@ index 1c9e2f0..a66c157 100644
    if (Movie::IsPlayingInput() && Movie::IsConfigSaved())
    {
 diff --git a/Source/Core/Core/ConfigManager.cpp b/Source/Core/Core/ConfigManager.cpp
-index 64aa1e1..ae08878 100644
+index 27b7b2a51b..3ab040b3a4 100644
 --- a/Source/Core/Core/ConfigManager.cpp
 +++ b/Source/Core/Core/ConfigManager.cpp
-@@ -139,6 +139,10 @@ void SConfig::SetRunningGameMetadata(const std::string& game_id)
+@@ -141,6 +141,10 @@ void SConfig::SetRunningGameMetadata(const std::string& game_id)
    SetRunningGameMetadata(game_id, "", 0, 0, DiscIO::Region::Unknown);
  }
  
@@ -30,7 +30,7 @@ index 64aa1e1..ae08878 100644
                                       u64 title_id, u16 revision, DiscIO::Region region)
  {
 diff --git a/Source/Core/Core/ConfigManager.h b/Source/Core/Core/ConfigManager.h
-index 4c0eac3..60fc668 100644
+index 4c0eac3fe5..60fc668c9d 100644
 --- a/Source/Core/Core/ConfigManager.h
 +++ b/Source/Core/Core/ConfigManager.h
 @@ -64,6 +64,8 @@ struct SConfig
@@ -51,10 +51,10 @@ index 4c0eac3..60fc668 100644
    std::string m_gametdb_id;
    std::string m_title_name;
 diff --git a/Source/Core/Core/Core.cpp b/Source/Core/Core/Core.cpp
-index 1e940d1..ca68b1a 100644
+index 5396c8439b..3822ff5cbd 100644
 --- a/Source/Core/Core/Core.cpp
 +++ b/Source/Core/Core/Core.cpp
-@@ -767,10 +767,14 @@ void SaveScreenShot()
+@@ -800,10 +800,14 @@ void SaveScreenShot()
    Core::RunAsCPUThread([] { g_frame_dumper->SaveScreenshot(GenerateScreenshotName()); });
  }
  
@@ -73,10 +73,10 @@ index 1e940d1..ca68b1a 100644
  }
  
 diff --git a/Source/Core/Core/Core.h b/Source/Core/Core/Core.h
-index e237e25..542effa 100644
+index 0ff8c32b5c..2644be66ff 100644
 --- a/Source/Core/Core/Core.h
 +++ b/Source/Core/Core/Core.h
-@@ -148,6 +148,7 @@ void SetState(State state);
+@@ -151,6 +151,7 @@ void SetState(State state);
  State GetState();
  
  void SaveScreenShot();
@@ -85,7 +85,7 @@ index e237e25..542effa 100644
  
  // This displays messages in a user-visible way.
 diff --git a/Source/Core/Core/State.cpp b/Source/Core/Core/State.cpp
-index c298dd1..e6d71f4 100644
+index c298dd121e..e6d71f4c44 100644
 --- a/Source/Core/Core/State.cpp
 +++ b/Source/Core/Core/State.cpp
 @@ -327,7 +327,10 @@ static std::string SystemTimeAsDoubleToString(double time)

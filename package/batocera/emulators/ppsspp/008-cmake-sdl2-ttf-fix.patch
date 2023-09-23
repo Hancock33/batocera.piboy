@@ -1,13 +1,13 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index d143ca837..cb794ca28 100644
+index 8b455b21b..39476bdc5 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -1337,7 +1337,7 @@ else()
+@@ -1351,7 +1351,7 @@ else()
+ 		endif()
  	endif()
  	if(SDL2_ttf_FOUND)
- 		add_definitions(-DUSE_SDL2_TTF)
 -		set(nativeExtraLibs ${nativeExtraLibs} SDL2_ttf::SDL2_ttf)
 +		set(nativeExtraLibs ${nativeExtraLibs} SDL2_ttf)
- 
- 		if(FONTCONFIG_FOUND)
- 			add_definitions(-DUSE_SDL2_TTF_FONTCONFIG)
+ 	elseif(SDL2_ttf_PKGCONFIG_FOUND)
+ 		add_definitions(-DUSE_SDL2_TTF_PKGCONFIG)
+ 		set(nativeExtraLibs ${nativeExtraLibs} PkgConfig::SDL2_ttf_PKGCONFIG)

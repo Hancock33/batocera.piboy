@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-09-17 23:49+0800\n"
+"PO-Revision-Date: 2023-09-22 14:48+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二\n"
 "Language: zh_CN\n"
@@ -1086,7 +1086,7 @@ msgctxt "game_options"
 msgid "TEXTURE SMOOTHING"
 msgstr "纹理平滑"
 
-#. TRANSLATION: libretro/desmume, libretro/dolphin, libretro/swanstation, libretro/duckstation, dolphin, ...
+#. TRANSLATION: libretro/desmume, libretro/swanstation, libretro/duckstation, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D object polygons."
 msgstr "增强.平滑3D对象多边形上的锯齿边."
@@ -1329,7 +1329,7 @@ msgid ""
 "May not work well on all hardware. Hybrid is preferred, where supported."
 msgstr "可能无法在所有硬件上正常工作。如果支持的话，Hybrid将是首选的。"
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, libretro/same_cdi, ...
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/hatarib, libretro/hatarib, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "高级选项"
@@ -1368,41 +1368,6 @@ msgstr "提高远处纹理的清晰度."
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "各向异性滤波"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "ANTI-ALIASING (MSAA/SSAA)"
-msgstr "抗锯齿（ MSAA/SSAA ）"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "2x MSAA"
-msgstr "2x MSAA抗锯齿"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "4x MSAA"
-msgstr "4x MSAA抗锯齿"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "8x MSAA"
-msgstr "8x MSAA抗锯齿"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "2x SSAA"
-msgstr "2x SSAA抗锯齿"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "4x SSAA"
-msgstr "4x SSAA抗锯齿"
-
-#. TRANSLATION: libretro/dolphin, libretro/swanstation, libretro/duckstation, duckstation
-msgctxt "game_options"
-msgid "8x SSAA"
-msgstr "8x SSAA抗锯齿"
 
 #. TRANSLATION: libretro/dolphin, dolphin
 msgctxt "game_options"
@@ -2127,6 +2092,26 @@ msgstr "使用软件渲染"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
+msgid "ANTI-ALIASING (MSAA/SSAA)"
+msgstr "抗锯齿（ MSAA/SSAA ）"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "2x MSAA"
+msgstr "2x MSAA抗锯齿"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "4x MSAA"
+msgstr "4x MSAA抗锯齿"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "8x MSAA"
+msgstr "8x MSAA抗锯齿"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
 msgid "16x MSAA"
 msgstr "16x MSAA抗锯齿"
 
@@ -2134,6 +2119,21 @@ msgstr "16x MSAA抗锯齿"
 msgctxt "game_options"
 msgid "32x MSAA"
 msgstr "32x MSAA抗锯齿"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "2x SSAA"
+msgstr "2x SSAA抗锯齿"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "4x SSAA"
+msgstr "4x SSAA抗锯齿"
+
+#. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
+msgctxt "game_options"
+msgid "8x SSAA"
+msgstr "8x SSAA抗锯齿"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
@@ -5446,6 +5446,41 @@ msgstr "每场比赛"
 
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
+msgid "Choose the Parallel N64 graphics plugin."
+msgstr "选择Parallel N64图形插件."
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "GRAPHICS PLUGIN"
+msgstr "图形插件"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Glide64"
+msgstr "Glide64"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Gln64"
+msgstr "Gln64"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Rice"
+msgstr "Rice"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Angrylion"
+msgstr "Angrylion"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
+msgid "Parallel"
+msgstr "Parallel"
+
+#. TRANSLATION: libretro/parallel_n64
+msgctxt "game_options"
 msgid "4.5x (1440x1080)"
 msgstr "4.5x (1440x1080)"
 
@@ -7237,7 +7272,7 @@ msgctxt "game_options"
 msgid "GLCore"
 msgstr "GLCore"
 
-#. TRANSLATION: libretro, libretro, libretro, libretro
+#. TRANSLATION: libretro, libretro, libretro, libretro, rpcs3, ...
 msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
@@ -10503,6 +10538,8 @@ msgid ""
 "Default uses SDL2, otherwise enable controller specific capabilities. Sony "
 "DS won't work with clone controllers."
 msgstr ""
+"默认情况下使用SDL2, 否则启用特定控制器功能. Sony DS控制器无法与克隆控制器兼"
+"容."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10511,7 +10548,7 @@ msgstr "PS3 控制器1"
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
 msgctxt "game_options"
-msgid "Legacy Evdev"
+msgid "Evdev (Default)"
 msgstr ""
 
 #. TRANSLATION: rpcs3, rpcs3, rpcs3, rpcs3, rpcs3, ...
@@ -12661,12 +12698,12 @@ msgstr ""
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "Use new graphics created from CorsixTH project"
-msgstr ""
+msgstr "使用从CorsixTH项目创建的新图形"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "USE NEW GRAPHICS"
-msgstr ""
+msgstr "使用新图形"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
@@ -12674,21 +12711,23 @@ msgid ""
 "Free Build or Sandbox mode. You cannot win or lose custom made maps if this "
 "is set to true. You also don't have to worry about money."
 msgstr ""
+"自由建造或沙盒模式, 如果设置为true, 则您无法在定制地图中获胜或失败, 您也不必"
+"担心金钱问题."
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "ENABLE SANDBOX MODE"
-msgstr ""
+msgstr "启用沙盒模式"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "Enable or Disable Intro movie (Enabled by default)."
-msgstr ""
+msgstr "启用或禁用简介影片(默认情况下已启用)."
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "PLAY INTRO MOVIE"
-msgstr ""
+msgstr "播放简介影片"
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
@@ -13398,152 +13437,152 @@ msgstr ""
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera up"
-msgstr ""
+msgstr "向上移动相机"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera down"
-msgstr ""
+msgstr "向下移动相机"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera to the left"
-msgstr ""
+msgstr "向左移动相机"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera to the right"
-msgstr ""
+msgstr "向右移动相机"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quit the application"
-msgstr ""
+msgstr "退出应用程序"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Start / Valid"
-msgstr ""
+msgstr "开始/确定"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Shows or hides the menu bar"
-msgstr ""
+msgstr "显示或隐藏菜单栏"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Rotates the current object"
-msgstr ""
+msgstr "旋转当前对象"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Select"
-msgstr ""
+msgstr "选择"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quick save"
-msgstr ""
+msgstr "快速保存"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quick load"
-msgstr ""
+msgstr "快速载入"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom in x5"
-msgstr ""
+msgstr "放大x5"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom out x5"
-msgstr ""
+msgstr "缩小x5"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Take a screenshot"
-msgstr ""
+msgstr "截屏"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Reset the application"
-msgstr ""
+msgstr "重置应用程序"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Hire staff"
-msgstr ""
+msgstr "雇佣员工"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Edit room"
-msgstr ""
+msgstr "编辑房间"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open build room menu"
-msgstr ""
+msgstr "打开建造房间菜单"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open furnish corridor menu"
-msgstr ""
+msgstr "打开家具走廊菜单"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Quits the current level"
-msgstr ""
+msgstr "退出当前关卡"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Speeds up the game"
-msgstr ""
+msgstr "加快游戏速度"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Set speed normal"
-msgstr ""
+msgstr "设置正常速度"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Show the cheat menu"
-msgstr ""
+msgstr "显示作弊菜单"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom the camera out"
-msgstr ""
+msgstr "缩小相机"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Zoom in the camera"
-msgstr ""
+msgstr "放大相机"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Open LUA console"
-msgstr ""
+msgstr "打开LUA控制台"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Town map"
-msgstr ""
+msgstr "城镇地图"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Casebook"
-msgstr ""
+msgstr "案例集"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Research"
-msgstr ""
+msgstr "研究"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Manage Staff"
-msgstr ""
+msgstr "管理员工"
 
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
@@ -13602,6 +13641,14 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
 #~ msgstr "将右边的模拟摇杆视为第二个摇杆。"
+
+#~ msgctxt "game_options"
+#~ msgid "Enables or disable on screen messages."
+#~ msgstr "启用或禁用屏幕消息."
+
+#~ msgctxt "game_options"
+#~ msgid "OSD MESSAGES"
+#~ msgstr "屏幕消息"
 
 #~ msgctxt "game_options"
 #~ msgid "Optimized (auto)"
@@ -13687,6 +13734,10 @@ msgstr ""
 #~ msgstr "每像素"
 
 #~ msgctxt "game_options"
+#~ msgid "Legacy Evdev"
+#~ msgstr "传统Evdev"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enable this mode if you have issue for run your game on NTFS storage (by "
 #~ "default is better to use LinuxFS)."
@@ -13701,14 +13752,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "使用GZDOOM操纵杆配置"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "重置游戏"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "下一个光盘（m3u）"
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
@@ -13817,6 +13860,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "重置游戏"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "下一个光盘（m3u）"
 
 #~ msgctxt "game_options"
 #~ msgid ""
