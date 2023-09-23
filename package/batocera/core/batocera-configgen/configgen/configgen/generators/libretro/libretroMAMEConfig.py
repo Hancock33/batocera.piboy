@@ -62,7 +62,7 @@ def generateMAMEConfigs(playersControllers, system, rom):
         if system.getOptBoolean("customcfg"):
             cfgPath = "/userdata/system/configs/{}/custom/".format(corePath)
         else:
-            cfgPath = "/userdata/saves/mame/mame/cfg/"
+            cfgPath = "/userdata/saves/mame/cfg/"
         if not os.path.exists(cfgPath):
             os.makedirs(cfgPath)
         else:
@@ -121,7 +121,7 @@ def generateMAMEConfigs(playersControllers, system, rom):
             if system.getOptBoolean("customcfg"):
                 cfgPath = "/userdata/system/configs/{}/custom/".format(corePath)
             else:
-                cfgPath = "/userdata/saves/mame/mame/cfg/"
+                cfgPath = "/userdata/saves/mame/cfg/"
             if not os.path.exists(cfgPath):
                 os.makedirs(cfgPath)
             commandLine += [ romDrivername ]
@@ -296,7 +296,7 @@ def generateMAMEConfigs(playersControllers, system, rom):
             if system.getOptBoolean("customcfg"):
                 cfgPath = "/userdata/system/configs/{}/{}/custom/".format(corePath, messSysName[messMode])
             else:
-                cfgPath = "/userdata/saves/mame/mame/cfg/{}/".format(messSysName[messMode])
+                cfgPath = "/userdata/saves/mame/cfg/{}/".format(messSysName[messMode])
             if system.getOptBoolean("pergamecfg"):
                 cfgPath = "/userdata/system/configs/{}/{}/{}/".format(corePath, messSysName[messMode], romBasename)
             if not os.path.exists(cfgPath):
@@ -309,10 +309,10 @@ def generateMAMEConfigs(playersControllers, system, rom):
             # Using computer.ini since autorun only applies to computers, and this would be unlikely to be used otherwise
             autoRunCmd = ""
             autoRunDelay = 0
-            if not os.path.exists('/userdata/saves/mame/mame/ini/'):
-                     os.makedirs('/userdata/saves/mame/mame/ini/')
-            if os.path.exists('/userdata/saves/mame/mame/ini/computer.ini'):
-                os.remove('/userdata/saves/mame/mame/ini/computer.ini')
+            if not os.path.exists('/userdata/saves/mame/ini/'):
+                     os.makedirs('/userdata/saves/mame/ini/')
+            if os.path.exists('/userdata/saves/mame/ini/computer.ini'):
+                os.remove('/userdata/saves/mame/ini/computer.ini')
             # bbc has different boots for floppy & cassette, no special boot for carts
             if system.name == "bbc":
                 if system.isOptSet("altromtype") or softList != "":
@@ -343,11 +343,11 @@ def generateMAMEConfigs(playersControllers, system, rom):
                             if row[0].casefold() == os.path.splitext(romBasename)[0].casefold():
                                 autoRunCmd = row[1] + "\\n"
                                 autoRunDelay = 3
-            commandLine += [ '-inipath', '/userdata/saves/mame/mame/ini/' ]
+            commandLine += [ '-inipath', '/userdata/saves/mame/ini/' ]
             if autoRunCmd != "":
                 if autoRunCmd.startswith("'"):
                     autoRunCmd.replace("'", "")
-                iniFile = open('/userdata/saves/mame/mame/ini/computer.ini', "w")
+                iniFile = open('/userdata/saves/mame/ini/computer.ini', "w")
                 iniFile.write('autoboot_command          ' + autoRunCmd + "\n")
                 iniFile.write('autoboot_delay            ' + str(autoRunDelay))
                 iniFile.close()
