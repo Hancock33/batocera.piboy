@@ -9622,6 +9622,16 @@ msgstr "Simple 2x"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "Display on screen information like savestate, config warning etc..."
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "OSD MESSAGES"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Fit to Window / Fullscreen"
 msgstr "Anzeige anpassen an Fenstergröße / Vollbild"
 

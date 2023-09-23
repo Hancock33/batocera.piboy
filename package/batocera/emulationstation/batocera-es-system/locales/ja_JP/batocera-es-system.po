@@ -9497,6 +9497,16 @@ msgstr "シンプル 2x"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "Display on screen information like savestate, config warning etc..."
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "OSD MESSAGES"
+msgstr "OSD メッセージを表示"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Fit to Window / Fullscreen"
 msgstr "ウィンドウ合わせ/ フルスクリーン"
 
@@ -13763,10 +13773,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Enables or disable on screen messages."
 #~ msgstr "画面上のメッセージを有効または無効にします"
-
-#~ msgctxt "game_options"
-#~ msgid "OSD MESSAGES"
-#~ msgstr "OSD メッセージを表示"
 
 #~ msgctxt "game_options"
 #~ msgid "Optimized (auto)"
