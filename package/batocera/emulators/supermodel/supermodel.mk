@@ -3,17 +3,11 @@
 # supermodel
 #
 ################################################################################
-# Version: Commits on Sept 03, 2023
-SUPERMODEL_VERSION = 38a95088e8278e8a2b6c50d7f8a7e187819de449
+# Version: Commits on Sept 23, 2023
+SUPERMODEL_VERSION = a00e8de98897ced8fedf700bdca714d578694ff5
 SUPERMODEL_SITE = $(call github,trzy,Supermodel,$(SUPERMODEL_VERSION))
 SUPERMODEL_DEPENDENCIES = sdl2 zlib libzip sdl2_net
 SUPERMODEL_LICENSE = GPLv3
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
-	SUPERMODEL_VERSION = 4c727abdc84e5c9eb56b3a178c2dd473d7581725
-else
-	X86_INSTALL=y
-endif
 
 ifeq ($(BR2_PACKAGE_LIBGLEW),y)
 	SUPERMODEL_DEPENDENCIES += libglew
@@ -32,7 +26,6 @@ define SUPERMODEL_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/supermodel
 	$(INSTALL) -D -m 0755 $(@D)/bin/supermodel $(TARGET_DIR)/usr/bin/supermodel
 	$(INSTALL) -D -m 0644 $(@D)/Config/Games.xml $(TARGET_DIR)/usr/share/supermodel/Games.xml
-	@if [ "$(X86_INSTALL)" = "y" ]; then cp -av $(@D)/Assets $(TARGET_DIR)/usr/share/supermodel ; fi
 	$(INSTALL) -D -m 0644 $(@D)/Config/Supermodel.ini $(TARGET_DIR)/usr/share/supermodel/Supermodel.ini.template
 	$(INSTALL) -D -m 0644 $(@D)/Config/Supermodel.ini $(TARGET_DIR)/usr/share/supermodel/Supermodel-Driving.ini.template
 	$(SED) 's|InputAccelerator = "KEY_UP,JOY1_UP"|InputAccelerator = "KEY_UP,JOY1_RZAXIS_POS"|g' $(TARGET_DIR)/usr/share/supermodel/Supermodel-Driving.ini.template
@@ -43,13 +36,25 @@ define SUPERMODEL_INSTALL_TARGET_CMDS
 	$(SED) 's|InputGearShift4 = "KEY_R,JOY1_BUTTON8"|InputGearShift4 = "KEY_R"|g' $(TARGET_DIR)/usr/share/supermodel/Supermodel-Driving.ini.template
 	$(SED) 's|InputGearShiftUp = "KEY_Y"|InputGearShiftUp = "KEY_Y,JOY1_BUTTON6,JOY1_RYAXIS_NEG"|g' $(TARGET_DIR)/usr/share/supermodel/Supermodel-Driving.ini.template
 	$(SED) 's|InputGearShiftDown = "KEY_H"|InputGearShiftDown = "KEY_H,JOY1_BUTTON5,JOY1_RYAXIS_POS"|g' $(TARGET_DIR)/usr/share/supermodel/Supermodel-Driving.ini.template
+	mkdir -p $(TARGET_DIR)/usr/share/supermodel/Assets
+	$(INSTALL) -D -m 0644 $(@D)/Assets/* $(TARGET_DIR)/usr/share/supermodel/Assets/
+endef
+
+define SUPERMODEL_LINE_ENDINGS_FIXUP
+	# DOS2UNIX Supermodel.ini and Main.cpp - patch system does not support different line endings
+	sed -i -E -e "s|\r$$||g" $(@D)/Src/OSD/SDL/Main.cpp
+	sed -i -E -e "s|\r$$||g" $(@D)/Src/Inputs/Inputs.cpp
+	sed -i -E -e "s|\r$$||g" $(@D)/Src/Graphics/New3D/R3DShaderTriangles.h
+	sed -i -E -e "s|\r$$||g" $(@D)/Src/OSD/Unix/FileSystemPath.cpp
 endef
 
 define SUPERMODEL_POST_PROCESS
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy $(TARGET_DIR)/usr/share/supermodel
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/supermodel/model3.supermodel.keys $(TARGET_DIR)/usr/share/evmapy
-		cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/supermodel/NVRAM $(TARGET_DIR)/usr/share/supermodel
+	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/supermodel/NVRAM $(TARGET_DIR)/usr/share/supermodel
 endef
+
+SUPERMODEL_PRE_PATCH_HOOKS += SUPERMODEL_LINE_ENDINGS_FIXUP
 
 SUPERMODEL_POST_INSTALL_TARGET_HOOKS += SUPERMODEL_POST_PROCESS
 
