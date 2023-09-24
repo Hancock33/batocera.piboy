@@ -314,7 +314,8 @@ def start_rom(args, maxnbplayers, rom, romConfiguration):
         # run a script after emulator shuts down
         callExternalScripts("/userdata/system/scripts", "gameStop", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
         callExternalScripts("/usr/share/batocera/configgen/scripts", "gameStop", [systemName, system.config['emulator'], effectiveCore, effectiveRom])
-        subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
+        if 'x86_64' in arch:
+            subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
 
     finally:
         # always restore the resolution
