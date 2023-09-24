@@ -19,9 +19,9 @@ HOST_WINE_LUTRIS_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/
 define WINE_LUTRIS_AUTOGEN
 	# Add Version
 	$(SED) "s|The Wine configuration|Wine-86_64-$(WINE_LUTRIS_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
-	$(SED) "s|IDD_WAITDLG DIALOG 0, 0, 200, 50|IDD_WAITDLG DIALOG 0, 0, 300, 50|g" $(@D)/programs/wineboot/wineboot.rc
-	$(SED) "s|IDC_WAITTEXT, 40, 5, 150, 40|IDC_WAITTEXT, 40, 5, 250, 40|g" $(@D)/programs/wineboot/wineboot.rc
-	$(SED) "s|FONT 8,|FONT 12,|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|IDD_WAITDLG DIALOG 0, 0, 200, 50|IDD_WAITDLG DIALOG 0, 0, 300, 30|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|IDC_WAITTEXT, 40, 5, 150, 40|IDC_WAITTEXT, 20, 5, 250, 20|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|FONT 8,|FONT 14,|g" $(@D)/programs/wineboot/wineboot.rc
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/lutris
 	# Use Staging Patches
