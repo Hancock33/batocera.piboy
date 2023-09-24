@@ -5009,7 +5009,7 @@ msgctxt "game_options"
 msgid "USA"
 msgstr "USA"
 
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, redream, yuzu, ryujinx
+#. TRANSLATION: libretro/neocd, flycast/vitaquake3, pcsx2, redream, yuzu, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "ヨーロッパ"
@@ -9844,6 +9844,21 @@ msgstr "フル (ハッシュキャッシュ)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "Choose PS2 Bios to use (USA Recommended)"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "PS2 BIOS"
+msgstr ""
+
+#. TRANSLATION: pcsx2, redream
+msgctxt "game_options"
+msgid "USA (Default)"
+msgstr "USA (通常)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Some games have issues when the animation is shown, others require it."
 msgstr "アニメ表示で問題が出る場合とアニメ表示が必須の場合があります"
 
@@ -10954,11 +10969,6 @@ msgstr "ピクセルごと(64レイヤー)"
 msgctxt "game_options"
 msgid "Choose the Dreamcast console region."
 msgstr "ドリームキャストのコンソールリージョンを選択します"
-
-#. TRANSLATION: redream
-msgctxt "game_options"
-msgid "USA (Default)"
-msgstr "USA (通常)"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
