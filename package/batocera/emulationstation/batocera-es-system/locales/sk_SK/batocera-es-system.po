@@ -5022,7 +5022,7 @@ msgctxt "game_options"
 msgid "USA"
 msgstr "USA"
 
-#. TRANSLATION: libretro/neocd, flycast/vitaquake3, redream, yuzu, ryujinx
+#. TRANSLATION: libretro/neocd, flycast/vitaquake3, pcsx2, redream, yuzu, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "Európa"
@@ -9877,6 +9877,21 @@ msgstr "Plné (Hash Cache)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "Choose PS2 Bios to use (USA Recommended)"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "PS2 BIOS"
+msgstr ""
+
+#. TRANSLATION: pcsx2, redream
+msgctxt "game_options"
+msgid "USA (Default)"
+msgstr "USA (predvolené)"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Some games have issues when the animation is shown, others require it."
 msgstr "Niektoré hry majú problémy so zobrazením animácie, iné to vyžadujú."
 
@@ -10978,11 +10993,6 @@ msgstr "Po bode (64 vrstiev)"
 msgctxt "game_options"
 msgid "Choose the Dreamcast console region."
 msgstr "Vyberte región konzoly Dreamcast."
-
-#. TRANSLATION: redream
-msgctxt "game_options"
-msgid "USA (Default)"
-msgstr "USA (predvolené)"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
