@@ -3,8 +3,8 @@
 # xenia-canary
 #
 ################################################################################
-# Version: Commits on Sept 05, 2023
-XENIA_CANARY_VERSION = 08a3899accaffe7ff730f17613e06d2563ae186f
+# Version: Commits on Sept 24, 2023
+XENIA_CANARY_VERSION = 6a4e37c7b0dd5849ca8768e4aabd93bf0bbbe756
 XENIA_CANARY_SOURCE = xenia_canary.zip
 XENIA_CANARY_SITE = https://github.com/Hancock33/xenia-canary-issue-158/releases/download/08a3899
 #XENIA_CANARY_SITE = https://github.com/xenia-canary/xenia-canary/releases/download/"$(shell echo $(XENIA_CANARY_VERSION) | cut -c 1-7)"
