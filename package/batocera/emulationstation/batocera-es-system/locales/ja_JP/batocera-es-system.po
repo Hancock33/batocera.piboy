@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v38beta(2023/09/21)\n"
+"Project-Id-Version: batocera-es v38beta(2023/09/26)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-09-22 19:56+0900\n"
+"PO-Revision-Date: 2023-09-26 19:40+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -9498,7 +9498,7 @@ msgstr "シンプル 2x"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Display on screen information like savestate, config warning etc..."
-msgstr ""
+msgstr "ステートセーブ、設定警告などの情報を画面に表示します"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -13888,6 +13888,22 @@ msgstr ""
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM ジョイスティック構成を使用"
 
+#~ msgctxt "game_options"
+#~ msgid "OpenGL (x86 only)"
+#~ msgstr "OpenGL (PCのみ)"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (通常)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "ゲームを再開"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "次のディスク (m3u)"
+
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Dolphin-triforce　メニューを開く"
@@ -13995,14 +14011,6 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "ゲームを再開"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "次のディスク (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "DirectInput"

@@ -13902,6 +13902,14 @@ msgstr ""
 #~ msgstr "POUŽÍT KONFIGURACI JOYSTICKU GZDOOM"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Restart hry"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Další disk (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Otevřít menu Dolphin-triforce"
 
@@ -14008,14 +14016,6 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rychle vpřed"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Restart hry"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Další disk (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "Lynx 128k (Default)"

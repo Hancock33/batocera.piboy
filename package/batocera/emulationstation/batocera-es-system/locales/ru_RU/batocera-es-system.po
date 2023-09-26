@@ -13970,6 +13970,14 @@ msgstr ""
 #~ msgstr "ИСПОЛЬЗОВАТЬ КОНФИГУРАЦИЮ ДЖОЙСТИКА GZDOOM"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Перезапустить игру"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Следующий диск (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Открыть меню Dolphin-triforce"
 
@@ -14076,14 +14084,6 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Перемотка"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Перезапустить игру"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Следующий диск (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "Lynx 128k (Default)"
