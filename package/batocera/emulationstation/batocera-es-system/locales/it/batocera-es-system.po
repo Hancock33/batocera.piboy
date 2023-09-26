@@ -4003,7 +4003,7 @@ msgstr "Lynx 96k"
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Lynx 128k"
-msgstr ""
+msgstr "Lynx 128k"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -9568,12 +9568,12 @@ msgstr "Semplice 2x"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Display on screen information like savestate, config warning etc..."
-msgstr ""
+msgstr "Mostra informazioni a schermo tipo savestate, avvertenze etc..."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "OSD MESSAGES"
-msgstr ""
+msgstr "MESSAGGI OSD"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -13889,6 +13889,10 @@ msgstr ""
 #~ msgstr "Usa la leva analogica di destra come secondo joystick"
 
 #~ msgctxt "game_options"
+#~ msgid "Enables or disable on screen messages."
+#~ msgstr "Abilita o disabilita i messaggi sullo schermo"
+
+#~ msgctxt "game_options"
 #~ msgid "Optimized (auto)"
 #~ msgstr "Ottimizzato (auto)"
 
@@ -13996,6 +14000,14 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "USA LA CONFIGURAZIONE JOYSTICK GZDOOM"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGL (x86 only)"
+#~ msgstr "OpenGL (solo per x86)"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (Default)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Restart Game"
