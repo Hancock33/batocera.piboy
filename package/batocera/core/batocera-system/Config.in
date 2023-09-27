@@ -280,7 +280,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_PIXELCADE
 
     # swap
-    select BR2_PACKAGE_SWAPIT                               if  BR2_PACKAGE_BATOCERA_TARGET_RK3128
+    select BR2_PACKAGE_SWAPIT                               if  BR2_PACKAGE_BATOCERA_TARGET_RK3128      || BR2_PACKAGE_BATOCERA_TARGET_RK3326
 
     # irq balancing
     select BR2_PACKAGE_IRQBALANCE
@@ -1061,6 +1061,8 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_PCSX2                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_LRPS2                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     #select BR2_PACKAGE_LIBRETRO_PCSX2                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_PLAY                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_LIBRETRO_PLAY                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Sony PS3
     select BR2_PACKAGE_RPCS3                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
@@ -1225,10 +1227,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
     # Jazz Jackrabbit
     select BR2_PACKAGE_OPENJAZZ                             # ALL
-
-    # Sony PS2
-    select BR2_PACKAGE_PLAY                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-    select BR2_PACKAGE_LIBRETRO_PLAY                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     #Extra libretro-cores
     select BR2_PACKAGE_LIBRETRO_2048
