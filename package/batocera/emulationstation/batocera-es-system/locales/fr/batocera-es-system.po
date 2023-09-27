@@ -14050,6 +14050,14 @@ msgstr ""
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "UTILISE LA CONFIGURATION DES MANETTES DANS GZDOOM"
 
+#~ msgctxt "game_options"
+#~ msgid "OpenGL (x86 only)"
+#~ msgstr "OpenGL (x86 uniquement)"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (par défaut)"
+
 #~ msgctxt "keys_files"
 #~ msgid "Restart Game"
 #~ msgstr "Redémarrer le jeu"
