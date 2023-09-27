@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2023-09-25 00:02+0200\n"
-"Last-Translator: THa MuSHeR\n"
+"PO-Revision-Date: 2023-09-27 01:47+0200\n"
+"Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -638,7 +638,7 @@ msgstr "Uitbreiding. Verwijder de vier sprites per lijn limiet."
 #. TRANSLATION: libretro/bluemsx, libretro/mesen, libretro/fceumm, libretro/genesisplusgx, libretro/mednafen_supergrafx, ...
 msgctxt "game_options"
 msgid "REDUCE SPRITE FLICKERING"
-msgstr "VERMINDER SPRITE FLIKKEREN"
+msgstr "VERMINDER SPRITE FLIKKERING"
 
 #. TRANSLATION: libretro/bsnes, libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -649,7 +649,7 @@ msgstr ""
 #. TRANSLATION: libretro/bsnes
 msgctxt "game_options"
 msgid "VIDEO FILTERS"
-msgstr "VIDEO FILTERS"
+msgstr "VIDEOFILTERS"
 
 #. TRANSLATION: libretro/bsnes
 msgctxt "game_options"
@@ -918,7 +918,7 @@ msgstr "Dendy is een populaire Russische kloon met unieke kenmerken."
 #. TRANSLATION: libretro/mesen, libretro/neocd, libretro/o2em, duckstation, flycast/vitaquake3
 msgctxt "game_options"
 msgid "CONSOLE REGION"
-msgstr "CONSOLE REGION"
+msgstr "CONSOLE REGIO"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -934,7 +934,7 @@ msgstr ""
 #. TRANSLATION: libretro/mesen, libretro/mednafen_wswan
 msgctxt "game_options"
 msgid "DISPLAY ROTATION"
-msgstr "SCHERM ROTATIE"
+msgstr "SCHERMROTATIE"
 
 #. TRANSLATION: libretro/mesen, daphne, flycast, melonds, moonlight
 msgctxt "game_options"
@@ -1166,7 +1166,7 @@ msgstr "alleen boven"
 #. TRANSLATION: libretro/desmume, libretro/melonds, citra
 msgctxt "game_options"
 msgid "bottom only"
-msgstr "alleen onderkant"
+msgstr "alleen onder"
 
 #. TRANSLATION: libretro/desmume
 msgctxt "game_options"
@@ -1218,7 +1218,7 @@ msgstr "Schakel toegang tot de systeem instellingen uit, zoals tijd en taal."
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "SKIP DS SYSTEM MENU"
-msgstr "SLA DS SYSTEEM MENU OVER"
+msgstr "SLA DS SYSTEEMMENU OVER"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -1510,7 +1510,7 @@ msgstr "Pas post-processing effecten toe."
 #. TRANSLATION: libretro/dosbox, openbor, cgenius
 msgctxt "game_options"
 msgid "VIDEO FILTER"
-msgstr "VIDEO FILTER"
+msgstr "VIDEOFILTER"
 
 #. TRANSLATION: libretro/dosbox, libretro/dosbox
 msgctxt "game_options"
@@ -6535,7 +6535,7 @@ msgstr "2.0 (480p)"
 #. TRANSLATION: libretro/scummvm
 msgctxt "game_options"
 msgid "Improve speed, at a minor cost of accuracy."
-msgstr "Verhoog snelheid, ten koste van een beetje nauwkeurigheid"
+msgstr "Verhoog snelheid, ten koste van een beetje nauwkeurigheid."
 
 #. TRANSLATION: libretro/scummvm
 msgctxt "game_options"
@@ -6754,7 +6754,7 @@ msgstr "SYNC SAVE BESTANDEN"
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "FRAME RATE LIMIT"
-msgstr "FRAME RATE LIMIET"
+msgstr "FRAMERATE LIMIET"
 
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
@@ -7019,7 +7019,7 @@ msgstr "C64 Japanse NTSC"
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
 msgid "Change the output resolution ratio."
-msgstr "Verander de output resolutie ratio."
+msgstr "Verander de uitvoer resolutie ratio."
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -7279,7 +7279,7 @@ msgstr "Niets kan Rick doden, kan mogelijk het spel breken."
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "INVULNERABILITY MODE"
-msgstr "ONKWETSBAARHEID MODUS"
+msgstr "ONKWETSBAARHEIDSMODUS"
 
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
@@ -7289,7 +7289,7 @@ msgstr "Markeer alle entiteiten op de gamekaart."
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "EXPOSE MODE"
-msgstr "BLOOTSTELLINGS MODUS"
+msgstr "BLOOTSTELLINGSMODUS"
 
 #. TRANSLATION: libretro/yabasanshiro, yabasanshiro
 msgctxt "game_options"
@@ -9586,11 +9586,13 @@ msgstr "Simpel 2x"
 msgctxt "game_options"
 msgid "Display on screen information like savestate, config warning etc..."
 msgstr ""
+"Informatieweergave op het scherm zoals savestate, configuratiewaarschuwing "
+"enz..."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "OSD MESSAGES"
-msgstr ""
+msgstr "OSD BERICHTEN"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -13926,6 +13928,10 @@ msgstr ""
 #~ msgstr "Behandelt de rechter analoge stick als de tweede joystick."
 
 #~ msgctxt "game_options"
+#~ msgid "Enables or disable on screen messages."
+#~ msgstr "Schakelt schermberichten in of uit."
+
+#~ msgctxt "game_options"
 #~ msgid "Optimized (auto)"
 #~ msgstr "Geoptimaliseerd (auto)"
 
@@ -14032,6 +14038,14 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GEBRUIK GZDOOM JOYSTICK CONFIGURATIE"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGL (x86 only)"
+#~ msgstr "OpenGL (alleen x86)"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (Standaard)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Restart Game"
