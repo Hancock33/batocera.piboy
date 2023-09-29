@@ -106,6 +106,10 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl88x2bu/Config.in"
   endmenu
 
+  menu "LED"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/leds/ayn-platform/Config.in"
+  endmenu
+
   menu "Device trees"
   endmenu
 endmenu
