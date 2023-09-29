@@ -14060,6 +14060,14 @@ msgstr ""
 #~ msgstr "Avançar"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable gamepad view for games that have interaction across two screens. "
+#~ "Use L1+R1 to switch screens."
+#~ msgstr ""
+#~ "Habilita la vista del comandament per a jocs que tenen interacció entre "
+#~ "les 2 pantalles. Useu L1+R1 per a intercanviar-les."
+
+#~ msgctxt "game_options"
 #~ msgid "Lynx 128k (Default)"
 #~ msgstr "Lynx 128k (Per defecte)"
 

@@ -13932,6 +13932,14 @@ msgstr ""
 #~ msgstr "GZDOOM JOYSTICK YAPILANDIRMASINI KULLAN"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable gamepad view for games that have interaction across two screens. "
+#~ "Use L1+R1 to switch screens."
+#~ msgstr ""
+#~ "İki ekranda da etkileşimli oyunlar için gamepad görünümünü etkinleştir. "
+#~ "Ekranları değiştirmek için L1+R1'i kullanın."
+
+#~ msgctxt "game_options"
 #~ msgid "Lynx 128k (Default)"
 #~ msgstr "Lynx 128k (Varsayılan)"
 

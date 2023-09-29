@@ -14161,6 +14161,14 @@ msgstr ""
 #~ msgstr "Przewijanie do przodu"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable gamepad view for games that have interaction across two screens. "
+#~ "Use L1+R1 to switch screens."
+#~ msgstr ""
+#~ "Włącz widok z gamepada w grach, w których interakcja odbywa się na dwóch "
+#~ "ekranach. Użyj L1+R1, aby przełączyć ekrany."
+
+#~ msgctxt "game_options"
 #~ msgid "Lynx 128k (Default)"
 #~ msgstr "Lynx 128k (domyślnie)"
 
