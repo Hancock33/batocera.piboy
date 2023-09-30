@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Aug 23, 2023
-DUCKSTATION_VERSION = 82cdef45b377eae34180af01cdd329cfd957d507
+# Version: Commits on Sept 30, 2023
+DUCKSTATION_VERSION = fa6ef1d04e080a12534930961b4505c52dc9fe36
 DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
 DUCKSTATION_SITE_METHOD=git
 DUCKSTATION_GIT_SUBMODULES=YES
@@ -57,7 +57,7 @@ endif
 define DUCKSTATION_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/duckstation
 	$(INSTALL) -D $(@D)/buildroot-build/bin/duckstation*	$(TARGET_DIR)/usr/bin/duckstation
-	cp -pr	$(@D)/buildroot-build/bin/resources				$(TARGET_DIR)/usr/bin/duckstation/
+	cp -pr	$(@D)/data/resources							$(TARGET_DIR)/usr/bin/duckstation/
 
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy
