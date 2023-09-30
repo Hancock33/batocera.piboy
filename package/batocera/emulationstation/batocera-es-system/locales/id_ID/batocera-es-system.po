@@ -13865,14 +13865,6 @@ msgstr ""
 #~ msgstr "TINGGI OTOMATIS"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable gamepad view for games that have interaction across two screens. "
-#~ "Use L1+R1 to switch screens."
-#~ msgstr ""
-#~ "Aktifkan tampilan gamepad untuk game yang memiliki interaksi di dua "
-#~ "layar. Gunakan L1+R1 untuk beralih layar."
-
-#~ msgctxt "game_options"
 #~ msgid "Per Strip"
 #~ msgstr "Setiap Strip"
 

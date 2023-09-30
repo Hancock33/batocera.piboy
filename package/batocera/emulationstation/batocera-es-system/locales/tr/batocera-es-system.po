@@ -13892,14 +13892,6 @@ msgstr ""
 #~ msgstr "OTOMATİK YÜKSEKLİK"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable gamepad view for games that have interaction across two screens. "
-#~ "Use L1+R1 to switch screens."
-#~ msgstr ""
-#~ "İki ekranda da etkileşimli oyunlar için gamepad görünümünü etkinleştir. "
-#~ "Ekranları değiştirmek için L1+R1'i kullanın."
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Piksel başına, en doğru ama aynı zamanda en ısrarcı olanıdır."
 

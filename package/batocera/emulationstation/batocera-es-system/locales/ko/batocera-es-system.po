@@ -15404,15 +15404,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable gamepad view for games that have interaction across two screens. "
-#~ "Use L1+R1 to switch screens."
-#~ msgstr ""
-#~ "두 화면에서 상호 작용이 있는 게임에 대해 게임패드 보기를 사용하도록 설정합"
-#~ "니다. L1+R1을 사용하여 화면을 전환합니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
 #~ msgid "Per Strip"
 #~ msgstr "스트립 당"
 

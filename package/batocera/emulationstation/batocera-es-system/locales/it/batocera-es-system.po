@@ -13964,14 +13964,6 @@ msgstr ""
 #~ msgstr "ALTEZZA AUTO"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable gamepad view for games that have interaction across two screens. "
-#~ "Use L1+R1 to switch screens."
-#~ msgstr ""
-#~ "Abilita la visualizzazione gamepad per i giochi dove due schermi "
-#~ "interagiscono.Utilizza L1+R1 per scambiare gli schermi."
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Per pixel e' il piu' accurato, ma anche il piu' oneroso."
 

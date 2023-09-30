@@ -13936,14 +13936,6 @@ msgstr ""
 #~ msgstr "АВТО ВЫСОТА"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable gamepad view for games that have interaction across two screens. "
-#~ "Use L1+R1 to switch screens."
-#~ msgstr ""
-#~ "Включить просмотр геймпада для игр, в которых взаимодействие происходит "
-#~ "на двух экранах. Используйте L1+R1 для переключения экранов."
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Попиксельно - является наиболее точным, но и самым требовательным."
 

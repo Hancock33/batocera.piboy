@@ -14001,14 +14001,6 @@ msgstr ""
 #~ msgstr "AUTOMATYCZNA WYSOKOŚĆ"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable gamepad view for games that have interaction across two screens. "
-#~ "Use L1+R1 to switch screens."
-#~ msgstr ""
-#~ "Włącz widok z gamepada w grach, w których interakcja odbywa się na dwóch "
-#~ "ekranach. Użyj L1+R1, aby przełączyć ekrany."
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Pikselowo jest najdokładniejsze, ale też najbardziej wymagające."
 

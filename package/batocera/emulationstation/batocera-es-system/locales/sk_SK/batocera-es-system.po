@@ -13912,14 +13912,6 @@ msgstr ""
 #~ msgstr "Automatická výška"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable gamepad view for games that have interaction across two screens. "
-#~ "Use L1+R1 to switch screens."
-#~ msgstr ""
-#~ "Povoľte zobrazenie gamepadu pre hry, ktoré majú interakciu na dvoch "
-#~ "obrazovkách. Na prepínanie obrazoviek použite L1+R1."
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Podľa bodu je najpresnejšie, ale aj najnáročnejšie."
 
