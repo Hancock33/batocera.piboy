@@ -13734,12 +13734,6 @@ msgstr ""
 #~ msgstr "自动高度"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable gamepad view for games that have interaction across two screens. "
-#~ "Use L1+R1 to switch screens."
-#~ msgstr "为在两个屏幕上进行交互的游戏启用游戏板视图。使用L1+R1切换屏幕。"
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "每像素是最准确的，但也是最苛刻的."
 

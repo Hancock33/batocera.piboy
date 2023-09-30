@@ -13852,13 +13852,6 @@ msgstr ""
 #~ msgstr "高さを調整する"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable gamepad view for games that have interaction across two screens. "
-#~ "Use L1+R1 to switch screens."
-#~ msgstr ""
-#~ "２画面でプレイするゲームのパッド画面を有効にします (L1+R1で画面切り替え)"
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "ピクセル単位は最も正確ですが、最もマシン性能を要求します"
 
