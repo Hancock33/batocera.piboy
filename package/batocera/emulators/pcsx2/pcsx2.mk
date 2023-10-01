@@ -3,8 +3,8 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on Sept 24, 2023
-PCSX2_VERSION = 8b84b0403b4db66eeaec728936fe9692d39a1deb
+# Version: Commits on Oct 01, 2023
+PCSX2_VERSION = a9959bcd62f2cfd305e467aa159dfd9c3d1b4921
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
@@ -27,6 +27,8 @@ PCSX2_CONF_OPTS += -DUSE_VTUNE=OFF
 PCSX2_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
 PCSX2_CONF_OPTS += -DLTO_PCSX2_CORE=ON
 PCSX2_CONF_OPTS += -DUSE_ACHIEVEMENTS=ON
+# The following flag is misleading and *needed* ON to avoid doing -march=native
+PCSX2_CONF_OPTS += -DDISABLE_ADVANCE_SIMD=ON
 
 ifeq ($(BR2_PACKAGE_XORG7),y)
 	PCSX2_CONF_OPTS += -DX11_API=ON

@@ -50,3 +50,13 @@ saturn:
 sgb:
   emulator: libretro
   core:     mgba
+gamecube:
+  emulator: libretro
+  core:     dolphin
+  options:
+    videomode: max-480x240
+wii:
+  emulator: libretro
+  core:     dolphin
+  options:
+    videomode: max-480x240

@@ -3,8 +3,8 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Sept 09, 2023
-WINE_PROTON_VERSION = bleeding-edge-8.0-56798-20230923-pce3dba-wa20f0c-d494f7f-v942594
+# Version: Commits on Sept 29, 2023
+WINE_PROTON_VERSION = 8.0-20230929
 WINE_PROTON_SOURCE = experimental-wine-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = https://github.com/ValveSoftware/wine/archive/refs/tags
 WINE_PROTON_LICENSE = LGPL-2.1+
@@ -17,9 +17,10 @@ HOST_WINE_PROTON_DEPENDENCIES = host-bison host-flex host-clang host-lld
 # Configure Proton
 define WINE_PROTON_AUTOGEN
 	# Add Version
-	$(SED) "s|The Wine configuration|Proton-86_64-$(WINE_PROTON_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
-	$(SED) "s|IDD_WAITDLG DIALOG 0, 0, 200, 50|IDD_WAITDLG DIALOG 0, 0, 300, 50|g" $(@D)/programs/wineboot/wineboot.rc
-	$(SED) "s|FONT 8,|FONT 10,|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|The Wine configuration|Proton-86_64-$(WINE_LUTRIS_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|IDD_WAITDLG DIALOG 0, 0, 200, 50|IDD_WAITDLG DIALOG 0, 0, 300, 30|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|IDC_WAITTEXT, 40, 5, 150, 40|IDC_WAITTEXT, 40, 5, 250, 15|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|FONT 8,|FONT 14,|g" $(@D)/programs/wineboot/wineboot.rc
 	$(SED) "s|8.0|$(WINE_PROTON_VERSION)|g" $(@D)/VERSION
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/proton

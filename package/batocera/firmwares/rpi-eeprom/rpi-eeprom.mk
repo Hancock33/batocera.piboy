@@ -3,8 +3,8 @@
 # rpi-eeprom
 #
 ################################################################################
-# Version: Commits on Sept 04, 2023
-RPI_EEPROM_VERSION = 3e2de88bcb228b46310bac7cfc9f63ea28c0f9dc
+# Version: Commits on Sept 29, 2023
+RPI_EEPROM_VERSION = 4f2d676b4e2a9c2d9ee1ab42015ce711fde97afa
 RPI_EEPROM_SITE = $(call github,raspberrypi,rpi-eeprom,$(RPI_EEPROM_VERSION))
 RPI_EEPROM_DEPENDENCIES = rpi-userland-batocera
 
@@ -12,7 +12,7 @@ RPI_EEPROM_LICENSE = BSD-3-Clause
 EEPROM_VERSION=2023-05-11
 define RPI_EEPROM_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/lib/firmware/raspberrypi/bootloader/default
-	cp -pvr $(@D)/firmware/stable/{pieeprom-$(EEPROM_VERSION).bin,recovery.bin,vl805-000137ad.bin,vl805-000138a1.bin,vl805-000138c0.bin} \
+	cp -pvr $(@D)/firmware-2711/stable/{pieeprom-$(EEPROM_VERSION).bin,recovery.bin,vl805-000137ad.bin,vl805-000138a1.bin,vl805-000138c0.bin} \
 			$(TARGET_DIR)/lib/firmware/raspberrypi/bootloader/default
 	cp -pvr $(@D)/rpi-eeprom-{config,digest,update} $(TARGET_DIR)/usr/bin
 	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/rpi-eeprom/batocera-update-rpi4-fw $(TARGET_DIR)/usr/bin

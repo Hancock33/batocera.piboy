@@ -6999,7 +6999,7 @@ cemu:
                "Enabled":            true
         cemu_gamepad:
             prompt: ENABLE GAMEPAD VIEW
-            description: Enable gamepad view for games that have interaction across two screens. Use L1+R1 to switch screens.
+            description: Enable gamepad view for games that have interaction across two screens. Use Hotkey+R2 to switch screens.
             choices:
                "Disabled (Default)": false
                "Enabled":            true
@@ -7366,6 +7366,13 @@ dolphin:
             submenu: DISPLAY
             prompt: VSYNC
             description: Fix screen tearing. CPU heavy.
+            choices:
+                "Off": 0
+                "On":  1
+        ShowDpMsg:
+            submenu: DISPLAY
+            prompt: SHOW ON-SCREEN DISPLAY MESSAGES
+            description: Show on screen display messages (memory card saves..).
             choices:
                 "Off": 0
                 "On":  1
@@ -8886,7 +8893,7 @@ ppsspp:
                 "On":  True
 pygame:
   features: [padtokeyboard]
-  shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns]
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns]
 reicast:
   shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 rpcs3:

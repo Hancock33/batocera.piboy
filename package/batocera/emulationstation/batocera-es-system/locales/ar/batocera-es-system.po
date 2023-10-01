@@ -7886,7 +7886,7 @@ msgstr "تفعيل الإشعارات"
 msgctxt "game_options"
 msgid ""
 "Enable gamepad view for games that have interaction across two screens. Use "
-"L1+R1 to switch screens."
+"Hotkey+R2 to switch screens."
 msgstr ""
 
 #. TRANSLATION: cemu
@@ -13751,6 +13751,10 @@ msgstr ""
 #~ msgstr "لكل بكسل"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "أعد تشغيل اللعبة"
+
+#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "حمل الحالة من فتحة ١"
 
@@ -13809,10 +13813,6 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "تسريع إلى الأمام"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "أعد تشغيل اللعبة"
 
 #~ msgctxt "keys_files"
 #~ msgid "Aspect ratio correction on/off"
