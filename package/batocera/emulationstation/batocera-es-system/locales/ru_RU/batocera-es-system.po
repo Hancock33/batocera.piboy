@@ -8344,6 +8344,16 @@ msgstr "БЛОК УПРАВЛЕНИЯ ПАМЯТЬЮ"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
+msgid "Show on screen display messages (memory card saves..)."
+msgstr ""
+
+#. TRANSLATION: dolphin, duckstation, melonds
+msgctxt "game_options"
+msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
+msgstr "ОТОБРАЖАТЬ СООБЩЕНИЯ НА ЭКРАНЕ"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
 msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
 msgstr "Эмуляция указателя Wiimote с помощью гироскопа DS4."
 
@@ -8702,11 +8712,6 @@ msgstr "Позволяет загружать защищенные игры бе
 msgctxt "game_options"
 msgid "ALLOW BOOTING WITHOUT SBI FILE"
 msgstr "РАЗРЕШИТЬ ЗАГРУЗКУ БЕЗ SBI ФАЙЛА"
-
-#. TRANSLATION: duckstation, melonds
-msgctxt "game_options"
-msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
-msgstr "ОТОБРАЖАТЬ СООБЩЕНИЯ НА ЭКРАНЕ"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"

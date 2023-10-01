@@ -8329,6 +8329,16 @@ msgstr "JEDNOTKA PRO SPRÁVU PAMĚTI"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
+msgid "Show on screen display messages (memory card saves..)."
+msgstr ""
+
+#. TRANSLATION: dolphin, duckstation, melonds
+msgctxt "game_options"
+msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
+msgstr "ZOBRAZIT ZPRÁVY NA DISPLEJI"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
 msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
 msgstr "Emuluje ukazatel Wiimote pomocí gyroskopu DS4."
 
@@ -8681,11 +8691,6 @@ msgstr "Umožňuje načítání chráněných her bez informací o dílčím kan
 msgctxt "game_options"
 msgid "ALLOW BOOTING WITHOUT SBI FILE"
 msgstr "POVOLIT SPOUŠTĚNÍ BEZ SOUBORU SBI"
-
-#. TRANSLATION: duckstation, melonds
-msgctxt "game_options"
-msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
-msgstr "ZOBRAZIT ZPRÁVY NA DISPLEJI"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"

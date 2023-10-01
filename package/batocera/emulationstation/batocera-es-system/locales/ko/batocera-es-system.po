@@ -9465,6 +9465,17 @@ msgid "MEMORY MANAGEMENT UNIT"
 msgstr "메모리 관리 장치"
 
 #. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "Show on screen display messages (memory card saves..)."
+msgstr ""
+
+#. TRANSLATION: dolphin, duckstation, melonds
+#, fuzzy
+msgctxt "game_options"
+msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
+msgstr "화면 표시 메시지 표시"
+
+#. TRANSLATION: dolphin
 #, fuzzy
 msgctxt "game_options"
 msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
@@ -9841,12 +9852,6 @@ msgstr "하위 채널 정보 없이 보호된 게임을 로드할 수 있습니�
 msgctxt "game_options"
 msgid "ALLOW BOOTING WITHOUT SBI FILE"
 msgstr "SBI 파일없이 부팅 허용"
-
-#. TRANSLATION: duckstation, melonds
-#, fuzzy
-msgctxt "game_options"
-msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
-msgstr "화면 표시 메시지 표시"
 
 #. TRANSLATION: duckstation
 #, fuzzy

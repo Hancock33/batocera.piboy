@@ -8340,6 +8340,16 @@ msgstr "UNIT PENGELOLA MEMORI"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
+msgid "Show on screen display messages (memory card saves..)."
+msgstr ""
+
+#. TRANSLATION: dolphin, duckstation, melonds
+msgctxt "game_options"
+msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
+msgstr "TAMPILKAN PESAN LAYAR AKTIF"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
 msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
 msgstr "Emulasi pointer Wiiimote dengan DS4's gyroscope."
 
@@ -8692,11 +8702,6 @@ msgstr "Terima perlindungan membuat games tanpa informasi subchannel"
 msgctxt "game_options"
 msgid "ALLOW BOOTING WITHOUT SBI FILE"
 msgstr "TERIMA BOOTING TANPA FILE SBI"
-
-#. TRANSLATION: duckstation, melonds
-msgctxt "game_options"
-msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
-msgstr "TAMPILKAN PESAN LAYAR AKTIF"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
