@@ -8303,6 +8303,16 @@ msgstr "メモリ管理ユニット"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
+msgid "Show on screen display messages (memory card saves..)."
+msgstr ""
+
+#. TRANSLATION: dolphin, duckstation, melonds
+msgctxt "game_options"
+msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
+msgstr "オンスクリーンメッセージを表示"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
 msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
 msgstr "DS4のジャイロスコープでWiiポインターをエミュレートします"
 
@@ -8660,11 +8670,6 @@ msgstr "サブチャンネル情報ファイルなしで保護されたゲーム
 msgctxt "game_options"
 msgid "ALLOW BOOTING WITHOUT SBI FILE"
 msgstr "sbi ファイルなしで起動する"
-
-#. TRANSLATION: duckstation, melonds
-msgctxt "game_options"
-msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
-msgstr "オンスクリーンメッセージを表示"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"

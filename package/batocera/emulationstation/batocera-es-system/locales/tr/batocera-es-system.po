@@ -8341,6 +8341,16 @@ msgstr "BELLEK YÖNETİM BİRİMİ"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
+msgid "Show on screen display messages (memory card saves..)."
+msgstr ""
+
+#. TRANSLATION: dolphin, duckstation, melonds
+msgctxt "game_options"
+msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
+msgstr "EKRAN MESAJLARINI GÖSTER"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
 msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
 msgstr "Wiimote işaretçisini DS4'ün jiroskopuyla emüle et."
 
@@ -8693,11 +8703,6 @@ msgstr "Alt kanal bilgisi olmadan korumalı oyunların yüklenmesine izin ver."
 msgctxt "game_options"
 msgid "ALLOW BOOTING WITHOUT SBI FILE"
 msgstr "SBI DOSYASI OLMADAN AÇMAYA İZİN VER"
-
-#. TRANSLATION: duckstation, melonds
-msgctxt "game_options"
-msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
-msgstr "EKRAN MESAJLARINI GÖSTER"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"

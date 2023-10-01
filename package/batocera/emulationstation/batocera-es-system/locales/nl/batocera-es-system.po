@@ -8369,6 +8369,16 @@ msgstr "GEHEUGEN BEHEER UNIT"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
+msgid "Show on screen display messages (memory card saves..)."
+msgstr ""
+
+#. TRANSLATION: dolphin, duckstation, melonds
+msgctxt "game_options"
+msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
+msgstr "TOON BEELDSCHERMBERICHTEN"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
 msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
 msgstr "Emuleer de Wiimote pointer met een DS4 gyroscoop."
 
@@ -8732,11 +8742,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "ALLOW BOOTING WITHOUT SBI FILE"
 msgstr "LAAT OPSTARTEN ZONDER SBI-BESTAND TOE"
-
-#. TRANSLATION: duckstation, melonds
-msgctxt "game_options"
-msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
-msgstr "TOON BEELDSCHERMBERICHTEN"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"

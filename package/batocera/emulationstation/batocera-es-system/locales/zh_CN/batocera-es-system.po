@@ -8260,6 +8260,16 @@ msgstr "存储器管理单元"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
+msgid "Show on screen display messages (memory card saves..)."
+msgstr ""
+
+#. TRANSLATION: dolphin, duckstation, melonds
+msgctxt "game_options"
+msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
+msgstr "显示屏幕信息"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
 msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
 msgstr "用DS4的陀螺仪模拟Wiimote指针。"
 
@@ -8614,11 +8624,6 @@ msgstr "允许在没有子频道信息的情况下加载受保护的游戏."
 msgctxt "game_options"
 msgid "ALLOW BOOTING WITHOUT SBI FILE"
 msgstr "允许启动时没有SBI文件"
-
-#. TRANSLATION: duckstation, melonds
-msgctxt "game_options"
-msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
-msgstr "显示屏幕信息"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"

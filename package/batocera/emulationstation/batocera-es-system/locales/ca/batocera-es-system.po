@@ -8347,6 +8347,16 @@ msgstr "UNITAT DE GESTIÓ DE MEMÒRIA"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
+msgid "Show on screen display messages (memory card saves..)."
+msgstr ""
+
+#. TRANSLATION: dolphin, duckstation, melonds
+msgctxt "game_options"
+msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
+msgstr "MOSTRAR MISSATGES EN PANTALLA"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
 msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
 msgstr "Emular el cursor del Wiimote amb el giroscopi del DS4."
 
@@ -8701,11 +8711,6 @@ msgstr "Permet carregar jocs protegits sense informació de sub-canal."
 msgctxt "game_options"
 msgid "ALLOW BOOTING WITHOUT SBI FILE"
 msgstr "PERMETRE ARRENCAR SENSE ARXIU SBI"
-
-#. TRANSLATION: duckstation, melonds
-msgctxt "game_options"
-msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
-msgstr "MOSTRAR MISSATGES EN PANTALLA"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
