@@ -7369,6 +7369,13 @@ dolphin:
             choices:
                 "Off": 0
                 "On":  1
+        ShowDpMsg:
+            submenu: DISPLAY
+            prompt: SHOW ON-SCREEN DISPLAY MESSAGES
+            description: Show on screen display messages (memory card saves..).
+            choices:
+                "Off": 0
+                "On":  1
         dsmotion:
             submenu: CONTROLLERS
             prompt: DUALSHOCK MOTION CONTROL
@@ -8886,7 +8893,7 @@ ppsspp:
                 "On":  True
 pygame:
   features: [padtokeyboard]
-  shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns]
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_guns]
 reicast:
   shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 rpcs3:
