@@ -75,14 +75,7 @@ define PCSX2_TEXTURES
 	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/textures/ $(TARGET_DIR)/usr/bin/pcsx2/resources/
 endef
 
-# Download and copy PCSX2 patches.zip to BIOS folder
-define PCSX2_PATCHES
-        mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/pcsx2
-        $(HOST_DIR)/bin/curl -L https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip -o $(TARGET_DIR)/usr/share/batocera/datainit/bios/pcsx2/patches.zip
-endef
-
 PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_TEXTURES
-PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_PATCHES
 
 
 $(eval $(cmake-package))
