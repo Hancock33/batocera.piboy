@@ -27,9 +27,6 @@ flash:
 fmtowns:
   emulator: libretro
   core:     mame
-gamecube:
-  emulator: libretro
-  core:     dolphin
 jaguar:
   emulator: virtualjaguar
   core:     virtualjaguar
@@ -68,9 +65,18 @@ scummvm:
 sgb:
   emulator: libretro
   core:     mgba
+gamecube:
+  emulator: libretro
+  core:     dolphin
+  options:
+    videomode: max-480x240
 wii:
   emulator: libretro
   core:     dolphin
+  options:
+    videomode: max-480x240
 wiiware:
   emulator: libretro
   core:     dolphin
+  options:
+    videomode: max-480x240

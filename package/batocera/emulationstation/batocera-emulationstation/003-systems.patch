@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index 6d8ea976..d9ebffd3 100644
+index 9d75e21d..8bb6805a 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,185 +9,274 @@ namespace PlatformIds
+@@ -9,187 +9,276 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -320,10 +320,12 @@ index 6d8ea976..d9ebffd3 100644
 +		{ "prboom",					PRBOOM },
  		{ "tyrquake",				QUAKE },
 -		{ "mrboom",					MRBOOM },
+-		{ "sonicretro",				SONIC },
+-		{ "cannonball",				CANNONBALL },
 +		{ "megadrive",				SEGA_MEGA_DRIVE },
 +		{ "sg-1000",				SEGA_SG1000 },
- 		{ "sonicretro",				SONIC },
--		{ "cannonball",				CANNONBALL },
+ 		{ "multivision",			SEGA_SG1000 },
+ 		{ "socrates",			    VTECH_SOCRATES },
 -
 -		// windows specific systems & names
 -		{ "windows",				MOONLIGHT },
@@ -347,6 +349,7 @@ index 6d8ea976..d9ebffd3 100644
 -		{ "vic20",					VIC20 },
 -		{ "c20",					VIC20 },
 -		{ "ti99",					TI99 },
++		{ "sonicretro",				SONIC },
 +		{ "coco",					TANDY },
  		{ "ti99_4a",				TI99 },
 -		{ "pico8",					PICO8 },
@@ -411,10 +414,10 @@ index 6d8ea976..d9ebffd3 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index a00471c6..b9394762 100644
+index d0a1bd0c..b945f9b2 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
-@@ -11,160 +11,248 @@ namespace PlatformIds
+@@ -11,161 +11,249 @@ namespace PlatformIds
  	{
  		PLATFORM_UNKNOWN = 0,
  
@@ -655,6 +658,7 @@ index a00471c6..b9394762 100644
 -		MODEL3,
 -		IMAGEVIEWER,
 -		GP32,
+-		VTECH_SOCRATES,
 -
 -		// Windows Specific
 -		VISUALPINBALL,
@@ -727,6 +731,7 @@ index a00471c6..b9394762 100644
 +		VISCO,
 +		VISUALPINBALL,
  		VTECH_CREATIVISION,
++		VTECH_SOCRATES,
  		VTECH_VSMILE,
 +		WASM4,
 +		WATARA_SUPERVISION,
@@ -768,7 +773,7 @@ index a00471c6..b9394762 100644
  		PLATFORM_IGNORE, // do not allow scraping for this system
  		PLATFORM_COUNT
 diff --git a/es-app/src/scrapers/GamesDBJSONScraper.cpp b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-index 80c3b917..b2c6d701 100644
+index 7754fd5c..3fee637d 100644
 --- a/es-app/src/scrapers/GamesDBJSONScraper.cpp
 +++ b/es-app/src/scrapers/GamesDBJSONScraper.cpp
 @@ -38,7 +38,6 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
@@ -787,7 +792,7 @@ index 80c3b917..b2c6d701 100644
  	{ SEGA_SATURN, "17" },
  	{ SEGA_SG1000, "4949" },
  	{ PLAYSTATION, "10" },
-@@ -104,15 +102,14 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+@@ -104,17 +102,16 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ VIC20, "4945" },
  	{ CHANNELF, "4928" },
  	{ SAMCOUPE, "4979" },
@@ -803,10 +808,13 @@ index 80c3b917..b2c6d701 100644
  	{ WATARA_SUPERVISION, "4959" },
  	{ SONIC, "36,21" }, // Sega Mega Drive & Sega CD
 -	{ GP32, "5015"},
- 
++ 	{ GP32, "5015"},
+ 	{ VTECH_SOCRATES, "4998" },
+-
  	// 1 = PC
  	{ PC, "1" },
-@@ -139,7 +136,13 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+ 	{ MOONLIGHT, "1" },
+@@ -140,7 +137,13 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ GAMATE, "5004" },
  	{ CREATONIC_MEGA_DUCK, "4948" },
  	{ TOMY_TUTOR, "4960" },
@@ -822,7 +830,7 @@ index 80c3b917..b2c6d701 100644
  	/* Non existing systems
  	{ AMIGACDTV, "129" },
 diff --git a/es-app/src/scrapers/HfsDBScraper.cpp b/es-app/src/scrapers/HfsDBScraper.cpp
-index 91ffed30..6989553d 100644
+index 40348266..0f3f1465 100644
 --- a/es-app/src/scrapers/HfsDBScraper.cpp
 +++ b/es-app/src/scrapers/HfsDBScraper.cpp
 @@ -73,7 +73,6 @@ const std::map<PlatformId, std::string> hfsdb_platformids
@@ -1184,4 +1192,3 @@ index 6e03a8bb..ecc699d3 100644
 +	{ ARDUBOY, 263 },
  	{ GAMATE, 266 }
  };
- 

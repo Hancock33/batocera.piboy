@@ -7853,7 +7853,7 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Enable gamepad view for games that have interaction across two screens. Use "
-"L1+R1 to switch screens."
+"Hotkey+R2 to switch screens."
 msgstr ""
 
 #. TRANSLATION: cemu
@@ -13731,6 +13731,14 @@ msgstr ""
 #~ msgstr "A GZDOOM JOYSTICK KONFIGURÁCIÓJÁNAK HASZNÁLATA"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Játék újrakezdése"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Következő lemez (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Dolphin-triforce menü megnyitása"
 
@@ -13813,14 +13821,6 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Gyors előre"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Játék újrakezdése"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Következő lemez (m3u)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Aspect ratio correction on/off"

@@ -71,10 +71,10 @@ index e91bfd0b5..9e6573f97 100644
 +	int _njoy;
  };
 diff --git a/SDL/SDLMain.cpp b/SDL/SDLMain.cpp
-index 51247a79b..ccb624809 100644
+index acf25d960..06cda7414 100644
 --- a/SDL/SDLMain.cpp
 +++ b/SDL/SDLMain.cpp
-@@ -1168,6 +1168,7 @@ int main(int argc, char *argv[]) {
+@@ -1186,6 +1186,7 @@ int main(int argc, char *argv[]) {
  	bool set_ipad = false;
  	float set_dpi = 0.0f;
  	float set_scale = 1.0f;
@@ -82,7 +82,7 @@ index 51247a79b..ccb624809 100644
  
  	// Produce a new set of arguments with the ones we skip.
  	int remain_argc = 1;
-@@ -1186,6 +1187,8 @@ int main(int argc, char *argv[]) {
+@@ -1204,6 +1205,8 @@ int main(int argc, char *argv[]) {
  			set_dpi = parseFloat(argv[i]);
  		else if (set_scale == -2)
  			set_scale = parseFloat(argv[i]);
@@ -91,7 +91,7 @@ index 51247a79b..ccb624809 100644
  		else if (!strcmp(argv[i],"--xres"))
  			set_xres = -2;
  		else if (!strcmp(argv[i],"--yres"))
-@@ -1198,6 +1201,8 @@ int main(int argc, char *argv[]) {
+@@ -1216,6 +1219,8 @@ int main(int argc, char *argv[]) {
  			set_ipad = true;
  		else if (!strcmp(argv[i],"--portrait"))
  			portrait = true;
@@ -100,7 +100,7 @@ index 51247a79b..ccb624809 100644
  		else {
  			remain_argv[remain_argc++] = argv[i];
  		}
-@@ -1424,7 +1429,7 @@ int main(int argc, char *argv[]) {
+@@ -1437,7 +1442,7 @@ int main(int argc, char *argv[]) {
  	InitSDLAudioDevice();
  
  	if (joystick_enabled) {

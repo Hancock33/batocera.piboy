@@ -988,7 +988,7 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         if system.isOptSet('wii_osd'):
             coreSettings.save('dolphin_osd_enabled', '"' + system.config['wii_osd'] + '"')
         else:
-            coreSettings.save('dolphin_osd_enabled', '"disabled"')
+            coreSettings.save('dolphin_osd_enabled', '"enabled"')
         # Fast Disc
         if system.isOptSet('wii_fast_disc_speed'):
             coreSettings.save('dolphin_fast_disc_speed', system.config['wii_fast_disc_speed'])

@@ -38,7 +38,7 @@ index bcaf616c7..5de53bd0b 100644
  		delete[] mappingData;
  	} else {
 diff --git a/UI/NativeApp.cpp b/UI/NativeApp.cpp
-index 618c430d7..b7463cbe6 100644
+index fbcc24be0..046c6172d 100644
 --- a/UI/NativeApp.cpp
 +++ b/UI/NativeApp.cpp
 @@ -420,7 +420,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch

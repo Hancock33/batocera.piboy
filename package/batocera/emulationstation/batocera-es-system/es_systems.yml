@@ -6129,6 +6129,7 @@ multivision:
   release:              1983
   hardware:             console
   extensions:           [bin, sg, zip, 7z]
+  platform:             sg-1000
   theme:                multivision
   emulators:
     libretro:
