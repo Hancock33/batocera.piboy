@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-09-24 20:11+0200\n"
+"PO-Revision-Date: 2023-09-29 23:57+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -1128,7 +1128,7 @@ msgctxt "game_options"
 msgid "ANTI-ALIASING (MSAA)"
 msgstr "WYGŁADZANIE (MSAA)"
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra, drastic
+#. TRANSLATION: libretro/desmume, libretro/melonds, drastic
 msgctxt "game_options"
 msgid "Arrange the dual screen layout."
 msgstr "Rozmieść układ dwóch ekranów."
@@ -1138,32 +1138,32 @@ msgctxt "game_options"
 msgid "SCREEN LAYOUT"
 msgstr "UKŁAD EKRANU"
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "top/bottom"
 msgstr "góra/dół"
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "bottom/top"
 msgstr "dół/góra"
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "left/right"
 msgstr "lewo/prawo"
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "right/left"
 msgstr "prawo/lewo"
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "top only"
 msgstr "tylko góra"
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "bottom only"
 msgstr "tylko dół"
@@ -7927,13 +7927,55 @@ msgstr "WŁĄCZ WIDOK Z GAMEPADA"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
-msgid "hybrid top ratio 4"
-msgstr "hybryda góra współczynnik 4"
+msgid ""
+"Arrange the dual screen layout. Separate windows can be changed with "
+"Hotkey+R2."
+msgstr ""
 
 #. TRANSLATION: citra
 msgctxt "game_options"
-msgid "hybrid bottom ratio 4"
-msgstr "hybryda dół współczynnik 4"
+msgid "Top Only"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "Bottom Only"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "Large Top"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "Large Bottom"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "Left/Right"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "Right/Left"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "Separate Windows"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "Hybrid Screen Top"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "Hybrid Screen Bottom"
+msgstr ""
 
 #. TRANSLATION: citra, citra, citra, citra, citra, ...
 msgctxt "game_options"
@@ -9594,6 +9636,8 @@ msgstr "Proste 2x"
 msgctxt "game_options"
 msgid "Display on screen information like savestate, config warning etc..."
 msgstr ""
+"Wyświetlaj na ekranie informacje, takie jak stan zapisu, ostrzeżenie o "
+"konfiguracji itp."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -13554,6 +13598,11 @@ msgstr "Przełączanie limitu szybkości"
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
+msgid "Swap screens"
+msgstr ""
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Kliknięcie myszą"
 
@@ -14006,6 +14055,22 @@ msgstr ""
 #~ msgstr "AUTOMATYCZNA WYSOKOŚĆ"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable gamepad view for games that have interaction across two screens. "
+#~ "Use L1+R1 to switch screens."
+#~ msgstr ""
+#~ "Włącz widok z gamepada w grach, w których interakcja odbywa się na dwóch "
+#~ "ekranach. Użyj L1+R1, aby przełączyć ekrany."
+
+#~ msgctxt "game_options"
+#~ msgid "hybrid top ratio 4"
+#~ msgstr "hybryda góra współczynnik 4"
+
+#~ msgctxt "game_options"
+#~ msgid "hybrid bottom ratio 4"
+#~ msgstr "hybryda dół współczynnik 4"
+
+#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Pikselowo jest najdokładniejsze, ale też najbardziej wymagające."
 
@@ -14040,6 +14105,14 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "UŻYJ KONFIGURACJI JOYSTICKA W GZDOOM"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGL (x86 only)"
+#~ msgstr "OpenGL (tylko x86)"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (domyślnie)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Restart Game"
@@ -14156,14 +14229,6 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Przewijanie do przodu"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable gamepad view for games that have interaction across two screens. "
-#~ "Use L1+R1 to switch screens."
-#~ msgstr ""
-#~ "Włącz widok z gamepada w grach, w których interakcja odbywa się na dwóch "
-#~ "ekranach. Użyj L1+R1, aby przełączyć ekrany."
 
 #~ msgctxt "game_options"
 #~ msgid "Lynx 128k (Default)"
