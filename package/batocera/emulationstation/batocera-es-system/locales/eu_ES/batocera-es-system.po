@@ -13795,16 +13795,16 @@ msgstr ""
 #~ "erabiltzen ez den tokia bete."
 
 #~ msgctxt "game_options"
-#~ msgid "BBC Micro/Master ROM (Slot 2)"
-#~ msgstr "BBC Micro/Master ROM (2 Zirrikitua)"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Install the image reader card to read disk image files (Mac IIx only). "
 #~ "Minimum 4MB ram size recommended."
 #~ msgstr ""
 #~ "Instalatu irudi irakurle txartela disko irudi fitxategiak irakurtzeko(Mac "
 #~ "IIx only). Gutxienez 4MB-ko ram tamaina gomendatzen da."
+
+#~ msgctxt "game_options"
+#~ msgid "BBC Micro/Master ROM (Slot 2)"
+#~ msgstr "BBC Micro/Master ROM (2 Zirrikitua)"
 
 #~ msgctxt "game_options"
 #~ msgid "Green - \tLegendazko Super Saiyan"

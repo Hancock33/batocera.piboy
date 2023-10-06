@@ -15454,14 +15454,6 @@ msgstr ""
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "자동 높이"
 
-#~ msgctxt "game_options"
-#~ msgid "hybrid top ratio 4"
-#~ msgstr "하이브리드 상단 비율 4"
-
-#~ msgctxt "game_options"
-#~ msgid "hybrid bottom ratio 4"
-#~ msgstr "하이브리드 하단 비율 4"
-
 #, fuzzy
 #~ msgctxt "game_options"
 #~ msgid "Per Strip"
@@ -15495,6 +15487,14 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM 조이스틱 구성 사용"
+
+#~ msgctxt "game_options"
+#~ msgid "hybrid top ratio 4"
+#~ msgstr "하이브리드 상단 비율 4"
+
+#~ msgctxt "game_options"
+#~ msgid "hybrid bottom ratio 4"
+#~ msgstr "하이브리드 하단 비율 4"
 
 #, fuzzy
 #~ msgctxt "game_options"
