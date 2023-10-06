@@ -13917,14 +13917,6 @@ msgstr ""
 #~ msgstr "TINGGI OTOMATIS"
 
 #~ msgctxt "game_options"
-#~ msgid "hybrid top ratio 4"
-#~ msgstr "hybrid top ratio 4"
-
-#~ msgctxt "game_options"
-#~ msgid "hybrid bottom ratio 4"
-#~ msgstr "hybrid bottom ratio 4"
-
-#~ msgctxt "game_options"
 #~ msgid "Per Strip"
 #~ msgstr "Setiap Strip"
 
@@ -13951,6 +13943,14 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GUNAKAN KONFIGURASI JOYSTICK GZDOOM"
+
+#~ msgctxt "game_options"
+#~ msgid "hybrid top ratio 4"
+#~ msgstr "hybrid top ratio 4"
+
+#~ msgctxt "game_options"
+#~ msgid "hybrid bottom ratio 4"
+#~ msgstr "hybrid bottom ratio 4"
 
 #~ msgctxt "game_options"
 #~ msgid ""

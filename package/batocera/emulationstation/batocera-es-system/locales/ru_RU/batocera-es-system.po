@@ -13988,14 +13988,6 @@ msgstr ""
 #~ msgstr "АВТО ВЫСОТА"
 
 #~ msgctxt "game_options"
-#~ msgid "hybrid top ratio 4"
-#~ msgstr "hybrid top ratio 4"
-
-#~ msgctxt "game_options"
-#~ msgid "hybrid bottom ratio 4"
-#~ msgstr "hybrid bottom ratio 4"
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Попиксельно - является наиболее точным, но и самым требовательным."
 
@@ -14142,6 +14134,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Перемотка"
+
+#~ msgctxt "game_options"
+#~ msgid "hybrid top ratio 4"
+#~ msgstr "hybrid top ratio 4"
+
+#~ msgctxt "game_options"
+#~ msgid "hybrid bottom ratio 4"
+#~ msgstr "hybrid bottom ratio 4"
 
 #~ msgctxt "game_options"
 #~ msgid ""

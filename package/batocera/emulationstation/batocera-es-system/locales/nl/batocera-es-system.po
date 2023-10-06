@@ -14055,14 +14055,6 @@ msgstr ""
 #~ msgstr "AUTO HOOGTE"
 
 #~ msgctxt "game_options"
-#~ msgid "hybrid top ratio 4"
-#~ msgstr "hybride top ratio 4"
-
-#~ msgctxt "game_options"
-#~ msgid "hybrid bottom ratio 4"
-#~ msgstr "hybride bodem ratio 4"
-
-#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Per pixel is het meest nauwkeurig, maar ook het meest veeleisend."
 
@@ -14222,3 +14214,11 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Vooruitspoelen"
+
+#~ msgctxt "game_options"
+#~ msgid "hybrid top ratio 4"
+#~ msgstr "hybride top ratio 4"
+
+#~ msgctxt "game_options"
+#~ msgid "hybrid bottom ratio 4"
+#~ msgstr "hybride bodem ratio 4"
