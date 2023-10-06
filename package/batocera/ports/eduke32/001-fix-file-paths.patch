@@ -12,40 +12,40 @@ index a6b36170f..f868f57fa 100644
          // test unmolested filename first
          if (buildvfs_exists(fn))
 diff --git a/source/duke3d/src/common.cpp b/source/duke3d/src/common.cpp
-index 10d4b35fb..1fa16a4ee 100644
+index 5f3fcf114..93525bc80 100644
 --- a/source/duke3d/src/common.cpp
 +++ b/source/duke3d/src/common.cpp
-@@ -300,15 +300,7 @@ void G_ExtInit(void)
+@@ -271,15 +271,7 @@ void G_ExtPreInit(int32_t argc,char const * const * argv)
  
          if ((homedir = Bgethomedir()))
          {
 -            Bsnprintf(cwd, ARRAY_SIZE(cwd), "%s/"
 -#if defined(_WIN32)
--                      APPNAME
+-                APPNAME
 -#elif defined(GEKKO)
--                      "apps/" APPBASENAME
+-                "apps/" APPBASENAME
 -#else
--                      ".config/" APPBASENAME
+-                ".config/" APPBASENAME
 -#endif
--                      ,homedir);
+-                ,homedir);
 +            Bsnprintf(cwd, ARRAY_SIZE(cwd), "/userdata/saves/" APPBASENAME);
              asperr = addsearchpath(cwd);
              if (asperr == -2)
              {
 diff --git a/source/duke3d/src/game.cpp b/source/duke3d/src/game.cpp
-index 1a01ff905..7f9984aaa 100644
+index 4597ce81f..fcd7632b2 100644
 --- a/source/duke3d/src/game.cpp
 +++ b/source/duke3d/src/game.cpp
-@@ -6563,7 +6563,7 @@ static const char* dukeVerbosityCallback(loguru::Verbosity verbosity)
+@@ -6596,7 +6596,7 @@ int app_main(int argc, char const* const* argv)
  
- int app_main(int argc, char const* const* argv)
- {
+     G_ExtPreInit(argc, argv);
+ 
 -    engineSetLogFile(APPBASENAME ".log", LOG_GAME_MAX);
 +    engineSetLogFile("/userdata/system/logs/" APPBASENAME ".log", LOG_GAME_MAX);
      engineSetLogVerbosityCallback(dukeVerbosityCallback);
  
- #ifndef NETCODE_DISABLE
-@@ -6894,7 +6894,7 @@ int app_main(int argc, char const* const* argv)
+ #ifdef __APPLE__
+@@ -6907,7 +6907,7 @@ int app_main(int argc, char const* const* argv)
  
      CONFIG_ReadSettings();
  
@@ -55,10 +55,10 @@ index 1a01ff905..7f9984aaa 100644
      CONFIG_SetDefaultKeys(keydefaults, true);
  
 diff --git a/source/duke3d/src/startgtk.game.cpp b/source/duke3d/src/startgtk.game.cpp
-index 3eac47882..9e6aad913 100644
+index 6a7638300..f89fe8693 100644
 --- a/source/duke3d/src/startgtk.game.cpp
 +++ b/source/duke3d/src/startgtk.game.cpp
-@@ -282,7 +282,7 @@ static unsigned char GetModsDirNames(GtkListStore *list)
+@@ -286,7 +286,7 @@ static unsigned char GetModsDirNames(GtkListStore *list)
          if (buildvfs_exists("user_profiles_disabled"))
              buildvfs_getcwd(pdir, sizeof(pdir));
          else
