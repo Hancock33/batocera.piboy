@@ -20,17 +20,14 @@ LIBRETRO_HATARIB_CONF_ENV += \
 	ZLIB_INCLUDE="$(STAGING_DIR)/usr/include" \
 	ZLIB_LIB="$(STAGING_DIR)/usr/lib" \
 	ZLIB_LINK="$(STAGING_DIR)/usr/lib/libz.so" \
+	CMAKE="$(HOST_DIR)/bin/cmake" \
 	CC="$(TARGET_CC)" \
 	AR="$(TARGET_AR)" \
 	RANLIB="$(TARGET_RANLIB)"
 
-LIBRETRO_HATARIB_REPLACE_CCFG =-DCMAKE_TOOLCHAIN_FILE=$(HOST_DIR)/share/buildroot/toolchainfile.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_FLAGS_RELEASE="$(TARGET_OPTIMIZATION) -fPIC"
-
 define LIBRETRO_HATARIB_BUILD_CMDS
 	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/makefile
-	$(SED) 's|cmake |$(HOST_DIR)/bin/cmake |g' $(@D)/makefile
-	$(SED) 's:.. $$(CMAKEFLAGS):.. $(LIBRETRO_HATARIB_REPLACE_CCFG):g' $(@D)/makefile
-
+	CC="$(TARGET_CC)" AR="$(TARGET_AR)" RANLIB="$(TARGET_RANLIB)" \
 	cd $(@D) && $(MAKE) -f makefile \
 	$(LIBRETRO_HATARIB_CONF_ENV)
 endef
