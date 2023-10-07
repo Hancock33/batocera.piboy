@@ -290,7 +290,8 @@ class LibretroGenerator(Generator):
                 commandArray.extend(["--nick", system.config['netplay.nickname']])
 
         # Verbose logs
-        commandArray.extend(['--verbose'])
+        if (system.config['core'] != 'mrboom'):
+            commandArray.extend(['--verbose'])
 
         # Extension used by hypseus .daphne but lr-daphne starts with .zip
         if system.name == 'daphne':
