@@ -355,6 +355,9 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_PYTHON_GPIOZERO                      if  BR2_PACKAGE_BATOCERA_TARGET_BCM2835     || BR2_PACKAGE_BATOCERA_TARGET_BCM2836
     select BR2_PACKAGE_PYTHON_ADAFRUIT_CIRCUITPYTHON_WS2801 if  BR2_PACKAGE_BATOCERA_RPI_ANY
 
+    # GPIO kernel driver
+    select BR2_PACKAGE_LIBGPIOD if !BR2_PACKAGE_BATOCERA_RPI_ANY && !BR2_PACKAGE_BATOCERA_TARGET_BCM2835 && !BR2_PACKAGE_BATOCERA_TARGET_BCM2836 && BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_8
+
     # joy 2 pad
     select BR2_PACKAGE_EVMAPY
     select BR2_PACKAGE_EVMAPY_SYSTEM_CONFIG
@@ -566,7 +569,7 @@ config BR2_PACKAGE_BATOCERA_TOOLS
     select BR2_PACKAGE_NCDU                                 # Disk Usage
     select BR2_PACKAGE_FFMPEG_XCBGRAB                       if  BR2_PACKAGE_XORG7
     select BR2_PACKAGE_SWITCHRES                            if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835 && !BR2_PACKAGE_BATOCERA_WAYLAND # switchres 15kHz
-
+    select BR2_PACKAGE_LIBGPIOD_TOOLS                       if  BR2_PACKAGE_LIBGPIOD
     help
         System tools
 
@@ -722,7 +725,7 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_MAME2003_PLUS               # ALL
     select BR2_PACKAGE_LIBRETRO_IMAME                       if  BR2_PACKAGE_BATOCERA_TARGET_BCM2835       # IMAME
     select BR2_PACKAGE_LIBRETRO_MAME2010                    if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835      # MAME2010
-    select BR2_PACKAGE_LIBRETRO_MAME                        if  !BR2_riscv && !BR2_PACKAGE_BATOCERA_TARGET_BCM2835      && \
+    select BR2_PACKAGE_LIBRETRO_MAME                        if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835      && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H3           && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3128
 
@@ -889,9 +892,13 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # Super Mario War
     select BR2_PACKAGE_LIBRETRO_SUPERBROSWAR                if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
 
-    select BR2_PACKAGE_EDUKE32                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711 # Duke3D / Shadow Warrior / Ion fury
-    select BR2_PACKAGE_GZDOOM                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
-    select BR2_PACKAGE_RAZE                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
+    # EDuke32 requires OpenGL or GLES 3.0
+    select BR2_PACKAGE_EDUKE32                              if BR2_PACKAGE_BATOCERA_GLES3                   # Duke3D / Shadow Warrior / Ion fury
+    
+    # GZDoom and Raze require both 64-bit arch (x86,arm,riscv,....) AND OpenGL or GLES 3.0
+    select BR2_PACKAGE_GZDOOM                               if BR2_ARCH_IS_64 && BR2_PACKAGE_BATOCERA_GLES3
+    select BR2_PACKAGE_RAZE                                 if BR2_ARCH_IS_64 && BR2_PACKAGE_BATOCERA_GLES3
+
     # ZMusic: standalone library used by gzdoom and raze source ports
     select BR2_PACKAGE_ZMUSIC                               if  BR2_PACKAGE_GZDOOM || BR2_PACKAGE_RAZE
 

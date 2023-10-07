@@ -3,8 +3,8 @@
 # openjk
 #
 ################################################################################
-# Version: Commits on Sept 30, 2023
-OPENJK_VERSION = 26b871955051d6c4b12e583557b08153431df38e
+# Version: Commits on Oct 06, 2023
+OPENJK_VERSION = ffadf53bc93595454029d196bd0d2376aebe65e8
 OPENJK_SITE = $(call github,JACoders,OpenJK,$(OPENJK_VERSION))
 
 OPENJK_DEPENDENCIES = sdl2 openal
@@ -18,6 +18,7 @@ OPENJK_CONF_OPTS += -DBuildSPRdVanilla=ON
 OPENJK_CONF_OPTS += -DBuildJK2SPEngine=ON
 OPENJK_CONF_OPTS += -DBuildJK2SPGame=ON
 OPENJK_CONF_OPTS += -DBuildJK2SPRdVanilla=ON
+OPENJK_CONF_OPTS += -DBuildMPRend2=OFF
 #Multi player
 OPENJK_CONF_OPTS += -DBuildMPEngine=OFF
 OPENJK_CONF_OPTS += -DBuildMPRdVanilla=OFF

@@ -3,8 +3,8 @@
 # soniccd
 #
 ################################################################################
-# Version: Commits on Sept 26, 2023
-SONICCD_VERSION = b520af0bc06106110fd6dc1d1f09ab141d792f91
+# Version: Commits on Oct 07, 2023
+SONICCD_VERSION = 97a2c60381de9e18467d351e9f12fb00f75732b5
 SONICCD_SITE = https://github.com/Rubberduckycooly/Sonic-CD-11-Decompilation.git
 SONICCD_SITE_METHOD = git
 SONICCD_GIT_SUBMODULES = YES

@@ -1094,7 +1094,7 @@ msgctxt "game_options"
 msgid "ANTI-ALIASING (MSAA)"
 msgstr ""
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra, drastic
+#. TRANSLATION: libretro/desmume, libretro/melonds, drastic
 msgctxt "game_options"
 msgid "Arrange the dual screen layout."
 msgstr ""
@@ -1104,32 +1104,32 @@ msgctxt "game_options"
 msgid "SCREEN LAYOUT"
 msgstr ""
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "top/bottom"
 msgstr ""
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "bottom/top"
 msgstr ""
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "left/right"
 msgstr ""
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "right/left"
 msgstr ""
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "top only"
 msgstr ""
 
-#. TRANSLATION: libretro/desmume, libretro/melonds, citra
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "bottom only"
 msgstr ""
@@ -7822,12 +7822,54 @@ msgstr ""
 
 #. TRANSLATION: citra
 msgctxt "game_options"
-msgid "hybrid top ratio 4"
+msgid ""
+"Arrange the dual screen layout. Separate windows can be changed with "
+"Hotkey+R2."
 msgstr ""
 
 #. TRANSLATION: citra
 msgctxt "game_options"
-msgid "hybrid bottom ratio 4"
+msgid "Top Only"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "Bottom Only"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "Large Top"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "Large Bottom"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "Left/Right"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "Right/Left"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "Separate Windows"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "Hybrid Screen Top"
+msgstr ""
+
+#. TRANSLATION: citra
+msgctxt "game_options"
+msgid "Hybrid Screen Bottom"
 msgstr ""
 
 #. TRANSLATION: citra, citra, citra, citra, citra, ...
@@ -8254,6 +8296,16 @@ msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
+msgid "Show on screen display messages (memory card saves..)."
+msgstr ""
+
+#. TRANSLATION: dolphin, duckstation, melonds
+msgctxt "game_options"
+msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
+msgstr ""
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
 msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
 msgstr ""
 
@@ -8605,11 +8657,6 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "ALLOW BOOTING WITHOUT SBI FILE"
-msgstr ""
-
-#. TRANSLATION: duckstation, melonds
-msgctxt "game_options"
-msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
 msgstr ""
 
 #. TRANSLATION: duckstation
@@ -13268,6 +13315,11 @@ msgstr ""
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Toggle Speed Limit"
+msgstr ""
+
+#. TRANSLATION: 3ds.citra.keys
+msgctxt "keys_files"
+msgid "Swap screens"
 msgstr ""
 
 #. TRANSLATION: 3ds.citra.keys
