@@ -150,6 +150,9 @@ class DolphinGenerator(Generator):
         else:
             dolphinSettings.set("Core", "SkipIPL", "True")
 
+        # Set audio backend
+        dolphinSettings.set("DSP", "Backend", "Cubeb")
+
         # Save dolphin.ini
         with open(batoceraFiles.dolphinIni, 'w') as configfile:
             dolphinSettings.write(configfile)
