@@ -113,7 +113,7 @@ class DolphinTriforceGenerator(Generator):
         dolphinTriforceSettings.set("Core", "SIDevice0", "11")
 
         # Set audio backend
-        dolphinSettings.set("DSP", "Backend", "Cubeb")
+        dolphinTriforceSettings.set("DSP", "Backend", "Cubeb")
 
         # Save dolphin.ini
         with open(batoceraFiles.dolphinTriforceIni, 'w') as configfile:
