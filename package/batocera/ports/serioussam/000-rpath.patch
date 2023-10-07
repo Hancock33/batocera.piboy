@@ -1,17 +1,17 @@
 diff --git a/SamTFE/Sources/CMakeLists.txt b/SamTFE/Sources/CMakeLists.txt
-index 3220171..54a1b6d 100644
+index a6f00e6..372e4d3 100644
 --- a/SamTFE/Sources/CMakeLists.txt
 +++ b/SamTFE/Sources/CMakeLists.txt
-@@ -1240,7 +1240,7 @@ if(FREEBSD OR MACOSX)
- set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+@@ -1424,7 +1424,7 @@ if(FREEBSD OR MACOSX)
  else()
- target_link_libraries(${ENGINELIB} vulkan)
--set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
-+#set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
- endif()
- 
- add_executable(SeriousSam${MP}
-@@ -1335,14 +1335,14 @@ if(MACOSX)
+  if(USE_SYSTEM_VULKAN)
+    target_link_libraries(${ENGINELIB} vulkan)
+-   set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
++   #set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
+  else()
+    set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+  endif()
+@@ -1522,14 +1522,14 @@ if(MACOSX)
  endif()
  
  if(LINUX)
@@ -28,7 +28,7 @@ index 3220171..54a1b6d 100644
          target_link_libraries(DedicatedServer${MP} "m")
          target_link_libraries(DedicatedServer${MP} "dl")
          target_link_libraries(DedicatedServer${MP} "pthread")
-@@ -1350,7 +1350,7 @@ if(LINUX)
+@@ -1537,7 +1537,7 @@ if(LINUX)
          target_link_libraries(DedicatedServer${MP} ${ZLIB_LIBRARIES})
      endif()
      if(BUILD_MAKEFONT)
@@ -38,19 +38,19 @@ index 3220171..54a1b6d 100644
          target_link_libraries(MakeFONT${MP} "dl")
          target_link_libraries(MakeFONT${MP} "pthread")
 diff --git a/SamTSE/Sources/CMakeLists.txt b/SamTSE/Sources/CMakeLists.txt
-index a376f5e..b2742fa 100644
+index ed040ba..fa6a38e 100644
 --- a/SamTSE/Sources/CMakeLists.txt
 +++ b/SamTSE/Sources/CMakeLists.txt
-@@ -1240,7 +1240,7 @@ if(FREEBSD OR MACOSX)
- set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+@@ -1424,7 +1424,7 @@ if(FREEBSD OR MACOSX)
  else()
- target_link_libraries(${ENGINELIB} vulkan)
--set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
-+#set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
- endif()
- 
- add_executable(SeriousSam${MP}
-@@ -1335,14 +1335,14 @@ if(MACOSX)
+  if(USE_SYSTEM_VULKAN)
+    target_link_libraries(${ENGINELIB} vulkan)
+-   set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
++   #set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-lvulkan,-rpath,$ORIGIN")
+  else()
+    set_target_properties(${ENGINELIB} PROPERTIES ENABLE_EXPORTS ON LINK_FLAGS "-Wl,-rpath,$ORIGIN")
+  endif()
+@@ -1522,14 +1522,14 @@ if(MACOSX)
  endif()
  
  if(LINUX)
@@ -67,7 +67,7 @@ index a376f5e..b2742fa 100644
          target_link_libraries(DedicatedServer${MP} "m")
          target_link_libraries(DedicatedServer${MP} "dl")
          target_link_libraries(DedicatedServer${MP} "pthread")
-@@ -1350,7 +1350,7 @@ if(LINUX)
+@@ -1537,7 +1537,7 @@ if(LINUX)
          target_link_libraries(DedicatedServer${MP} ${ZLIB_LIBRARIES})
      endif()
      if(BUILD_MAKEFONT)
