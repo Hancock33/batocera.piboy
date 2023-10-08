@@ -4920,7 +4920,7 @@ msgstr ""
 "Полезно для контроллеров типа N64. Ограниченные хоткеи для контроллеров без "
 "отдельной под них кнопки."
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, mupen64plus, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, dolphin, ...
 msgctxt "game_options"
 msgid "CONTROLLER 1"
 msgstr "КОНТРОЛЛЕР 1"
@@ -4950,17 +4950,17 @@ msgctxt "game_options"
 msgid "Useful for N64 style controllers."
 msgstr "Полезно для контроллеров типа N64."
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus, mupen64plus, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, dolphin, dolphin, ...
 msgctxt "game_options"
 msgid "CONTROLLER 2"
 msgstr "КОНТРОЛЛЕР 2"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
 msgctxt "game_options"
 msgid "CONTROLLER 3"
 msgstr "КОНТРОЛЛЕР 3"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, mupen64plus, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
 msgctxt "game_options"
 msgid "CONTROLLER 4"
 msgstr "КОНТРОЛЛЕР 4"
@@ -8192,6 +8192,26 @@ msgctxt "game_options"
 msgid "Wiimote Sideway + Nunchuk"
 msgstr "Wiimote Sideway + Nunchuk"
 
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
+msgstr "Эмуляция указателя Wiimote с помощью гироскопа DS4."
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "DUALSHOCK MOTION CONTROL"
+msgstr "DUALSHOCK КОНТРОЛЬ ДВИЖЕНИЯ"
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Emulate the Wiimote pointer with a mouse."
+msgstr "Эмуляция указателя Wiimote с помощью мыши."
+
+#. TRANSLATION: dolphin/vitaquake3
+msgctxt "game_options"
+msgid "MOUSE AS WIIMOTE POINTER"
+msgstr "МЫШЬ КАК УКАЗАТЕЛЬ WIIMOTE"
+
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
 msgid "The final output image, unrelated to the Wii's emulated NAND setting."
@@ -8257,7 +8277,7 @@ msgctxt "game_options"
 msgid "USE PAD PROFILES"
 msgstr "ИСПОЛЬЗОВАТЬ ПРОФИЛИ КОНТРОЛЛЕРОВ"
 
-#. TRANSLATION: dolphin
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "Change what's plugged into the virtual GameCube ports."
 msgstr "Изменить то, что подключено к виртуальным портам GameCube."
@@ -8306,6 +8326,27 @@ msgstr "GAMECUBE ТИП ПОРТА 3"
 msgctxt "game_options"
 msgid "GAMECUBE PORT 4 TYPE"
 msgstr "GAMECUBE ТИП ПОРТА 4"
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+msgctxt "game_options"
+msgid ""
+"Use alternative input mappings. Only applies to Standard Controller type."
+msgstr ""
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+msgctxt "game_options"
+msgid "ALT INPUT MAPPING"
+msgstr ""
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+msgctxt "game_options"
+msgid "Face Buttons (CW)"
+msgstr ""
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+msgctxt "game_options"
+msgid "Face Buttons (CCW)"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -8396,26 +8437,6 @@ msgstr "ОТОБРАЖАТЬ СООБЩЕНИЯ НА ЭКРАНЕ"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
-msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
-msgstr "Эмуляция указателя Wiimote с помощью гироскопа DS4."
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "DUALSHOCK MOTION CONTROL"
-msgstr "DUALSHOCK КОНТРОЛЬ ДВИЖЕНИЯ"
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "Emulate the Wiimote pointer with a mouse."
-msgstr "Эмуляция указателя Wiimote с помощью мыши."
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
-msgid "MOUSE AS WIIMOTE POINTER"
-msgstr "МЫШЬ КАК УКАЗАТЕЛЬ WIIMOTE"
-
-#. TRANSLATION: dolphin
-msgctxt "game_options"
 msgid ""
 "Skips Vertical Blank Interrupts when lag is detected, allowing for smooth "
 "audio playback when emulation speed is not 100%."
@@ -8428,6 +8449,58 @@ msgstr ""
 msgctxt "game_options"
 msgid "VBI SKIP"
 msgstr "ПРОПУСК VBI"
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+msgctxt "game_options"
+msgid "Set joystick deadzone."
+msgstr ""
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, mupen64plus, ...
+msgctxt "game_options"
+msgid "DEADZONE"
+msgstr "МЁРТВАЯ ЗОНА"
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, mupen64plus, ...
+msgctxt "game_options"
+msgid "5% (Default)"
+msgstr "5% (по умолчанию)"
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+msgctxt "game_options"
+msgid ""
+"Set virtual joysticks gate size. Smaller increases sensitivity. Larger "
+"decreases it."
+msgstr ""
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+msgctxt "game_options"
+msgid "JOYSTICK GATE SIZE"
+msgstr ""
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+msgctxt "game_options"
+msgid "Smaller"
+msgstr ""
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+msgctxt "game_options"
+msgid "Normal (Default)"
+msgstr ""
+
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+msgctxt "game_options"
+msgid "Larger"
+msgstr ""
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "Enables Dolby Pro Logic II for surround sound. May impact performance."
+msgstr ""
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "DOLBY PRO LOGIC II"
+msgstr ""
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
@@ -9566,16 +9639,6 @@ msgstr "100% (по умолчанию)"
 msgctxt "game_options"
 msgid "Set the deadzone of the joystick analog sticks."
 msgstr "Устанавливает мертвую зону аналоговых стиков."
-
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
-msgctxt "game_options"
-msgid "DEADZONE"
-msgstr "МЁРТВАЯ ЗОНА"
-
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
-msgctxt "game_options"
-msgid "5% (Default)"
-msgstr "5% (по умолчанию)"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
