@@ -11989,6 +11989,9 @@ stalker:
       choices:
         "Skip": 1
         "Show (Default)": 0
+stella:
+  features: [padtokeyboard]
+  shared: [videomode]
 stk:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -11999,8 +12002,8 @@ supertux2:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 themehospital:
-  shared: [videomode, powersave]
   features: [padtokeyboard]
+  shared: [videomode, powersave]
   cfeatures:
     cth_new_graphics:
       prompt: USE NEW GRAPHICS
