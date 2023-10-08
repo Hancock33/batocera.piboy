@@ -439,6 +439,10 @@ def getGenerator(emulator):
         from generators.stalker.stalkerGenerator import StalkerGenerator
         return StalkerGenerator()
 
+    if emulator == 'stella':
+        from generators.stella.stellaGenerator import StellaGenerator
+        return StellaGenerator()
+
     if emulator == 'stk':
         from generators.stk.stkGenerator import StkGenerator
         return StkGenerator()
