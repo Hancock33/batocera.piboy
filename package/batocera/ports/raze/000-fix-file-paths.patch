@@ -1,5 +1,34 @@
+diff --git a/source/common/platform/posix/sdl/i_main.cpp b/source/common/platform/posix/sdl/i_main.cpp
+index 4f29bb76e..e780af5d2 100644
+--- a/source/common/platform/posix/sdl/i_main.cpp
++++ b/source/common/platform/posix/sdl/i_main.cpp
+@@ -176,23 +176,7 @@ int main (int argc, char **argv)
+ 
+ 	Args = new FArgs(argc, argv);
+ 
+-#ifdef PROGDIR
+-	progdir = PROGDIR;
+-#else
+-	char program[PATH_MAX];
+-	if (realpath (argv[0], program) == NULL)
+-		strcpy (program, argv[0]);
+-	char *slash = strrchr (program, '/');
+-	if (slash != NULL)
+-	{
+-		*(slash + 1) = '\0';
+-		progdir = program;
+-	}
+-	else
+-	{
+-		progdir = "./";
+-	}
+-#endif
++	progdir = "/usr/share/raze/";
+ 
+ 	I_StartupJoysticks();
+ 
 diff --git a/source/common/platform/posix/unix/i_specialpaths.cpp b/source/common/platform/posix/unix/i_specialpaths.cpp
-index 524f94c60..e216c92e8 100644
+index 112e92ee7..ff87cecfe 100644
 --- a/source/common/platform/posix/unix/i_specialpaths.cpp
 +++ b/source/common/platform/posix/unix/i_specialpaths.cpp
 @@ -45,59 +45,7 @@
@@ -11,15 +40,15 @@ index 524f94c60..e216c92e8 100644
 -
 -	path = NicePath("$HOME/" GAME_DIR "/");
 -
--	if (stat (path, &info) == -1)
+-	if (stat (path.GetChars(), &info) == -1)
 -	{
 -		struct stat extrainfo;
 -
 -		// Sanity check for $HOME/.config
 -		FString configPath = NicePath("$HOME/.config/");
--		if (stat (configPath, &extrainfo) == -1)
+-		if (stat (configPath.GetChars(), &extrainfo) == -1)
 -		{
--			if (mkdir (configPath, S_IRUSR | S_IWUSR | S_IXUSR) == -1)
+-			if (mkdir (configPath.GetChars(), S_IRUSR | S_IWUSR | S_IXUSR) == -1)
 -			{
 -				I_FatalError ("Failed to create $HOME/.config directory:\n%s", strerror(errno));
 -			}
@@ -33,9 +62,9 @@ index 524f94c60..e216c92e8 100644
 -		// Transfer the old zdoom directory to the new location
 -		bool moved = false;
 -		FString oldpath = NicePath("$HOME/." GAMENAMELOWERCASE "/");
--		if (stat (oldpath, &extrainfo) != -1)
+-		if (stat (oldpath.GetChars(), &extrainfo) != -1)
 -		{
--			if (rename(oldpath, path) == -1)
+-			if (rename(oldpath.GetChars(), path.GetChars()) == -1)
 -			{
 -				I_Error ("Failed to move old " GAMENAMELOWERCASE " directory (%s) to new location (%s).",
 -					oldpath.GetChars(), path.GetChars());
@@ -44,7 +73,7 @@ index 524f94c60..e216c92e8 100644
 -				moved = true;
 -		}
 -
--		if (!moved && mkdir (path, S_IRUSR | S_IWUSR | S_IXUSR) == -1)
+-		if (!moved && mkdir (path.GetChars(), S_IRUSR | S_IWUSR | S_IXUSR) == -1)
 -		{
 -			I_FatalError ("Failed to create %s directory:\n%s",
 -				path.GetChars(), strerror (errno));
@@ -71,7 +100,7 @@ index 524f94c60..e216c92e8 100644
 +	FString path = NicePath("/userdata/saves/raze");
  	if (create)
  	{
- 		CreatePath(path);
+ 		CreatePath(path.GetChars());
 @@ -132,7 +80,7 @@ FString M_GetCachePath(bool create)
  {
  	// Don't use GAME_DIR and such so that ZDoom and its child ports can
@@ -80,7 +109,7 @@ index 524f94c60..e216c92e8 100644
 +	FString path = NicePath("/userdata/saves/raze/cache");
  	if (create)
  	{
- 		CreatePath(path);
+ 		CreatePath(path.GetChars());
 @@ -150,7 +98,7 @@ FString M_GetCachePath(bool create)
  
  FString M_GetAutoexecPath()
@@ -112,7 +141,7 @@ index 524f94c60..e216c92e8 100644
  
  FString M_GetSavegamesPath()
  {
--	return NicePath("$HOME/" GAME_DIR "/");
+-	return NicePath("$HOME/" GAME_DIR "/savegames/");
 +	return FString("/userdata/saves/raze/");
  }
  
@@ -122,15 +151,15 @@ index 524f94c60..e216c92e8 100644
  FString M_GetDocumentsPath()
  {
 -	return NicePath("$HOME/" GAME_DIR "/");
-+	return M_GetSavegamesPath();
++	return FString("/userdata/saves/raze/");
  }
  
  //===========================================================================
 diff --git a/source/core/gameconfigfile.cpp b/source/core/gameconfigfile.cpp
-index 75d15d784..276b3b240 100644
+index a135419d7..0b735e7a5 100644
 --- a/source/core/gameconfigfile.cpp
 +++ b/source/core/gameconfigfile.cpp
-@@ -154,6 +154,7 @@ FGameConfigFile::FGameConfigFile ()
+@@ -156,6 +156,7 @@ FGameConfigFile::FGameConfigFile ()
  		SetValueForKey ("Path", "/usr/local/share/games/jfduke3d", true);
  		SetValueForKey ("Path", "/usr/local/share/games/eduke32", true);
  		SetValueForKey ("Path", "/usr/local/share/games/nblood", true);
@@ -139,10 +168,10 @@ index 75d15d784..276b3b240 100644
  	}
  
 diff --git a/source/core/gamecontrol.cpp b/source/core/gamecontrol.cpp
-index 633c6e578..7ea94bb4b 100644
+index db4a38fe7..35752abb4 100644
 --- a/source/core/gamecontrol.cpp
 +++ b/source/core/gamecontrol.cpp
-@@ -990,7 +990,7 @@ int RunGame()
+@@ -1037,7 +1037,7 @@ int RunGame()
  	FString logfile = Args->TakeValue("+logfile");
  
  	// As long as this engine is still in prerelease mode let's always write a log file.
