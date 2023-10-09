@@ -11,10 +11,18 @@
 - Retroarch to 1.16.0.3
 - GroovyMAME 0.259 - Switchres 2.002w
 - DosBox-X to 2023.10.6
+- Libretro-FBNeo to Oct 9, 2023
+- DevilutionX to 1.5.1
+- PPSSPP (standalone) and lr-ppsspp to 1.16.5
+- Libretro-MAME to 0.259 (Oct 4, 2023)
+- Libretro-picodrive to Aug 11, 2023
+- Libretro-Genesis-Plus-GX to Sep 11, 2023
+- Libretro-PCSX-ReARMed to Oct 9, 2023
 ### System
 - Linux kernel to 6.5.6
 - Mesa to 23.2.1
 - Proton to 8.0-4b
+- FAudio to 23.10
 
 # 2023/10/xx - batocera.linux 38 - Blue Moon
 ### Hardware
