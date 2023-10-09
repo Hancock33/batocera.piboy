@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Batocera\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-05 13:13+0100\n"
-"PO-Revision-Date: 2023-09-28 13:11+0200\n"
+"PO-Revision-Date: 2023-10-08 19:50+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak (Slovakia)\n"
 "Language: sk_SK\n"
@@ -7332,7 +7332,7 @@ msgstr "GLCore"
 #. TRANSLATION: libretro, libretro, libretro, libretro, rpcs3, ...
 msgctxt "game_options"
 msgid "SDL2"
-msgstr ""
+msgstr "SDL2"
 
 #. TRANSLATION: libretro, citra, daphne, dolphin, duckstation, ...
 msgctxt "game_options"
@@ -7352,17 +7352,17 @@ msgstr ""
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "ALSA"
-msgstr ""
+msgstr "ALSA"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "ALSAThread"
-msgstr ""
+msgstr "ALSAThread"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "TinyALSA"
-msgstr ""
+msgstr "TinyALSA"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -7879,6 +7879,8 @@ msgid ""
 "Enable gamepad view for games that have interaction across two screens. Use "
 "Hotkey+R2 to switch screens."
 msgstr ""
+"Povoľte zobrazenie gamepadu pre hry, ktoré majú interakciu na dvoch "
+"obrazovkách. Na prepínanie obrazoviek použite Hotkey+R2."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7891,51 +7893,53 @@ msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
 "Hotkey+R2."
 msgstr ""
+"Usporiadať rozloženie duálnej obrazovky. Oddelené okná sa dajú zmeniť cez "
+"Hotkey+R2."
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Top Only"
-msgstr ""
+msgstr "Iba hore"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Bottom Only"
-msgstr ""
+msgstr "Iba dolu"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Large Top"
-msgstr ""
+msgstr "Veľké hore"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Large Bottom"
-msgstr ""
+msgstr "Veľké tlačidlo"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Left/Right"
-msgstr ""
+msgstr "Vľavo/Vpravo"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Right/Left"
-msgstr ""
+msgstr "Vpravo/Vľavo"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Separate Windows"
-msgstr ""
+msgstr "Oddelené okná"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
-msgstr ""
+msgstr "Hybridná obrazovka hore"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
-msgstr ""
+msgstr "Hybridná obrazovka dolu"
 
 #. TRANSLATION: citra, citra, citra, citra, citra, ...
 msgctxt "game_options"
@@ -8419,7 +8423,7 @@ msgstr "Jednotka správy pamäte"
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Show on screen display messages (memory card saves..)."
-msgstr ""
+msgstr "Zobraziť správy na obrazovke (pamäťová karta uložená...)"
 
 #. TRANSLATION: dolphin, duckstation, melonds
 msgctxt "game_options"
@@ -13575,7 +13579,7 @@ msgstr "Prepnúť obmedzenie rýchlosti"
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap screens"
-msgstr ""
+msgstr "Vymeniť obrazovky"
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
@@ -14017,6 +14021,22 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to right analog stick)"
 #~ msgstr "Pre hry s podporou gyroskopu (viazané na pravú analógovú páčku)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Changing driver can improve audio performance and reduce distortion. "
+#~ "Alsathread is recommended for low-end systems."
+#~ msgstr ""
+#~ "Zmena ovládača vie zlepšiť výkon zvuku a znížiť skreslenie. Alsathread sa "
+#~ "odporúča pre pomalšie systémy."
+
+#~ msgctxt "game_options"
+#~ msgid "AUDIO DRIVER"
+#~ msgstr "Ovládač zvuku"
+
+#~ msgctxt "game_options"
+#~ msgid "Pulse (Default)"
+#~ msgstr "Pulse (predvolené)"
 
 #~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."

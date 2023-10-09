@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2023-09-30 18:13+0000\n"
+"PO-Revision-Date: 2023-10-06 11:58+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -7357,7 +7357,7 @@ msgstr "GLCore"
 #. TRANSLATION: libretro, libretro, libretro, libretro, rpcs3, ...
 msgctxt "game_options"
 msgid "SDL2"
-msgstr ""
+msgstr "SDL2"
 
 #. TRANSLATION: libretro, citra, daphne, dolphin, duckstation, ...
 msgctxt "game_options"
@@ -7377,17 +7377,17 @@ msgstr ""
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "ALSA"
-msgstr ""
+msgstr "ALSA"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "ALSAThread"
-msgstr ""
+msgstr "ALSAThread"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "TinyALSA"
-msgstr ""
+msgstr "TinyALSA"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -7919,51 +7919,53 @@ msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
 "Hotkey+R2."
 msgstr ""
+"Regel de dubbele schermindeling. Afzonderlijke vensters kunnen worden "
+"gewijzigd met Hotkey+R2."
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Top Only"
-msgstr ""
+msgstr "Alleen boven"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Bottom Only"
-msgstr ""
+msgstr "Alleen onderin"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Large Top"
-msgstr ""
+msgstr "Grote bovenkant"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Large Bottom"
-msgstr ""
+msgstr "Grote bodem"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Left/Right"
-msgstr ""
+msgstr "Links/Rechts"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Right/Left"
-msgstr ""
+msgstr "Rechts/Links"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Separate Windows"
-msgstr ""
+msgstr "Aparte Windows"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
-msgstr ""
+msgstr "Hybride scherm bovenaan"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
-msgstr ""
+msgstr "Hybride schermbodem"
 
 #. TRANSLATION: citra, citra, citra, citra, citra, ...
 msgctxt "game_options"
@@ -8455,7 +8457,7 @@ msgstr "GEHEUGEN BEHEER UNIT"
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Show on screen display messages (memory card saves..)."
-msgstr ""
+msgstr "Toon berichten op het scherm (geheugenkaart opgeslagen..)."
 
 #. TRANSLATION: dolphin, duckstation, melonds
 msgctxt "game_options"
@@ -13665,7 +13667,7 @@ msgstr "Schakel Snelheidslimiet in"
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
 msgid "Swap screens"
-msgstr ""
+msgstr "Verwissel schermen"
 
 #. TRANSLATION: 3ds.citra.keys
 msgctxt "keys_files"
@@ -14110,6 +14112,22 @@ msgstr ""
 #~ msgstr "Voor Gyro-enabled spellen (gebonden aan de rechter analoge stick)"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Changing driver can improve audio performance and reduce distortion. "
+#~ "Alsathread is recommended for low-end systems."
+#~ msgstr ""
+#~ "Het veranderen van driver kan de audioprestaties verbeteren en vervorming "
+#~ "verminderen. Alsathread wordt aanbevolen voor low-end systemen."
+
+#~ msgctxt "game_options"
+#~ msgid "AUDIO DRIVER"
+#~ msgstr "GELUIDSKAART DRIVER"
+
+#~ msgctxt "game_options"
+#~ msgid "Pulse (Default)"
+#~ msgstr "Puls (Standaard)"
+
+#~ msgctxt "game_options"
 #~ msgid "Resize automatically screen height."
 #~ msgstr "Automatisch scherm hoogte aanpassen."
 
@@ -14277,11 +14295,3 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Vooruitspoelen"
-
-#~ msgctxt "game_options"
-#~ msgid "hybrid top ratio 4"
-#~ msgstr "hybride top ratio 4"
-
-#~ msgctxt "game_options"
-#~ msgid "hybrid bottom ratio 4"
-#~ msgstr "hybride bodem ratio 4"
