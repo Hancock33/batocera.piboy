@@ -13,7 +13,6 @@ DEVILUTIONX_SUPPORTS_IN_SOURCE_BUILD = NO
 
 DEVILUTIONX_CONF_OPTS += -DBUILD_TESTING=OFF
 DEVILUTIONX_CONF_OPTS += -DUSE_LD_MOLD=ON
-DEVILUTIONX_CONF_OPTS += -DDEVILUTIONX_SYSTEM_LUA=OFF
 
  # Prefill the player name when creating a new character, in case the device does
 # not have a keyboard.
