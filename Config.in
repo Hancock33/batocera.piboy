@@ -478,6 +478,7 @@ menu "Ports"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/stuntcar/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/supertux2/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/tekwar/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/theforceengine/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/vcmi/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/wip/halflife2/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/wip/pemu/Config.in"
@@ -606,5 +607,10 @@ menu "Libraries"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/sdl12-compat/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/wildmidi/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/wxwidgets/Config.in"
+endmenu
+
+
+menu "Audio"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/rtmidi/Config.in"
 endmenu
 endmenu

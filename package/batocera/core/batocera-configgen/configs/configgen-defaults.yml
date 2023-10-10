@@ -964,6 +964,9 @@ tg-cd:
 themehospital:
   emulator: themehospital
   core:     themehospital
+theforceengine:
+  emulator: theforceengine
+  core:     theforceengine
 thextech:
   emulator: thextech
   core:     thextech
