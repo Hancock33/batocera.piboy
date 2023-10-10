@@ -924,6 +924,9 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # C-Dogs SDL
     select BR2_PACKAGE_CDOGS                                # ALL
 
+    # The Force Engine
+    select BR2_PACKAGE_THEFORCEENGINE       if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
     help
         Ports
 
