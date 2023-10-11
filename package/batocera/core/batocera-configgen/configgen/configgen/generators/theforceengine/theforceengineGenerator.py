@@ -4,13 +4,15 @@ from generators.Generator import Generator
 import controllersConfig
 import configparser
 import os
+import shutil
 import batoceraFiles
-
-from utils.logger import get_logger
-eslog = get_logger(__name__)
 
 forceConfigDir = batoceraFiles.CONF + "/theforceengine"
 forceModsDir = forceConfigDir + "/Mods"
+forcePatchDir = "/usr/share/TheForceEngine/Mods"
+forcePatchFile = "v3.zip" # current patch version
+forcePatchPath = forcePatchDir + "/" + forcePatchFile
+forceModFile = forceModsDir + "/" + forcePatchFile
 forceConfigFile = forceConfigDir + "/settings.ini"
 
 class TheForceEngineGenerator(Generator):
@@ -20,15 +22,27 @@ class TheForceEngineGenerator(Generator):
         # Check if the directories exist, if not create them
         if not os.path.exists(forceConfigDir):
             os.makedirs(forceConfigDir)
-        
         if not os.path.exists(forceModsDir):
             os.makedirs(forceModsDir)
         
-        # Open the .tfe rom file
+        mod_name = None
+        # use the patch file if available
+        if not os.path.exists(forceModFile):
+            if os.path.exists(forcePatchPath):
+                shutil.copy(forcePatchPath, forceModFile)
+                mod_name = forcePatchFile
+        else:
+            # use the patch file as the default mod
+            mod_name = forcePatchFile
+        
+        # Open the .tfe rom file for user mods
         with open(rom, 'r') as file:
-            # Read the first line and store it as 'mod_name'
-            mod_name = file.readline().strip()
-                
+            # Read the first line and store it as 'first_line'
+            first_line = file.readline().strip()
+            # use the first_line as mod if the file isn't empty
+            if first_line:
+                mod_name = first_line
+                        
         ## Configure
         forceConfig = configparser.ConfigParser()
         forceConfig.optionxform=str
@@ -62,37 +76,42 @@ class TheForceEngineGenerator(Generator):
         else:
             forceConfig.set("Graphics", "widescreen", "false")
         
-        if system.isOptSet("force_vsync") and system.getOptBoolean("force_vsync") == "0":
+        if system.isOptSet("force_vsync") and system.config["force_vsync"] == "0":
             forceConfig.set("Graphics", "vsync", "false")
         else:
             forceConfig.set("Graphics", "vsync", "true")
+        
+        if system.isOptSet("force_rate"):
+            forceConfig.set("Graphics", "frameRateLimit", system.config["force_rate"])
+        else:
+            forceConfig.set("Graphics", "frameRateLimit", "60")
         
         if system.isOptSet("force_api") and system.config["force_api"] == "Software":
             forceConfig.set("Graphics", "renderer", "0")
         else:
             forceConfig.set("Graphics", "renderer", "1")
         
-        if system.isOptSet("force_colour") and system.config["force_colour"]:
+        if system.isOptSet("force_colour") and system.getOptBoolean("force_colour"):
             forceConfig.set("Graphics", "colorMode", "1")
         else:
             forceConfig.set("Graphics", "colorMode", "0")
 
-        if system.isOptSet("force_bilinear") and system.config["force_bilinear"]:
+        if system.isOptSet("force_bilinear") and system.getOptBoolean("force_bilinear"):
             forceConfig.set("Graphics", "useBilinear", "true")
         else:
             forceConfig.set("Graphics", "useBilinear", "false")
 
-        if system.isOptSet("force_mipmapping") and system.config["force_mipmapping"]:
+        if system.isOptSet("force_mipmapping") and system.getOptBoolean("force_mipmapping"):
             forceConfig.set("Graphics", "useMipmapping", "true")
         else:
             forceConfig.set("Graphics", "useMipmapping", "false")
         
-        if system.isOptSet("force_crosshair") and system.config["force_crosshair"]:
+        if system.isOptSet("force_crosshair") and system.getOptBoolean("force_crosshair"):
             forceConfig.set("Graphics", "reticleEnable", "true")
         else:
             forceConfig.set("Graphics", "reticleEnable", "false")
         
-        if system.isOptSet("force_postfx") and system.config["force_postfx"]:
+        if system.isOptSet("force_postfx") and system.getOptBoolean("force_postfx"):
             forceConfig.set("Graphics", "bloomEnabled", "true")
         else:
             forceConfig.set("Graphics", "bloomEnabled", "false")
@@ -143,12 +162,12 @@ class TheForceEngineGenerator(Generator):
         else:
             forceConfig.set("Dark_Forces", "disableFightMusic", "false")
         
-        if system.isOptSet("force_auto_aim") and system.getOptBoolean("force_auto_aim") == "0":
+        if system.isOptSet("force_auto_aim") and system.config["force_auto_aim"] == "0":
             forceConfig.set("Dark_Forces", "enableAutoaim", "false")
         else:
             forceConfig.set("Dark_Forces", "enableAutoaim", "true")
         
-        if system.isOptSet("force_secret_msg") and system.getOptBoolean("force_secret_msg") == "0":
+        if system.isOptSet("force_secret_msg") and system.config["force_secret_msg"] == "0":
             forceConfig.set("Dark_Forces", "showSecretFoundMsg", "false")
         else:
             forceConfig.set("Dark_Forces", "showSecretFoundMsg", "true")
@@ -158,7 +177,7 @@ class TheForceEngineGenerator(Generator):
         else:
             forceConfig.set("Dark_Forces", "autorun", "false")
 
-        if system.isOptSet("force_bobba") and system.getOptBoolean("force_bobba"):
+        if system.isOptSet("force_boba") and system.getOptBoolean("force_boba"):
             forceConfig.set("Dark_Forces", "bobaFettFacePlayer", "true")
         else:
             forceConfig.set("Dark_Forces", "bobaFettFacePlayer", "false")
@@ -192,7 +211,7 @@ class TheForceEngineGenerator(Generator):
         elif system.isOptSet("force_skip_cutscenes") and system.getOptBoolean("force_skip_cutscenes") == "skip":
             commandArray.extend(["-c"])
         # Add mod zip file if necessary
-        if mod_name:
+        if mod_name is not None:
             commandArray.extend(["-u" + mod_name])
         
         # Run - only Dark Forces currently

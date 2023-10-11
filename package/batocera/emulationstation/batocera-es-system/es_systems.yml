@@ -1157,7 +1157,7 @@ atarist:
   manufacturer:         Atari
   release:              1985
   hardware:             computer
-  extensions:           [7z, dim, gemdos, hd, ipf, m3u, msa, stx, zip, st]
+  extensions:           [7z, dim, gem, gemdos, hd, ide, ipf, m3u, msa, stx, vhd, zip, st]
 
   emulators:
     libretro:
@@ -1185,7 +1185,7 @@ jaguar:
   platform:             atarijaguar
   emulators:
     libretro:
-      virtualjaguar:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VIRTUALJAGUAR] }
+      virtualjaguar:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VIRTUALJAGUAR], incompatible_extensions: [zip, 7z] }
     virtualjaguar:
       virtualjaguar:    { requireAnyOf: [BR2_PACKAGE_VIRTUALJAGUAR] }
     bigpemu:
