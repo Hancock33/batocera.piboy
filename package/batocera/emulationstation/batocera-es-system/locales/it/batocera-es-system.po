@@ -13122,47 +13122,47 @@ msgstr "960p"
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Set the desired maximum refresh rate when Vsync is off."
-msgstr ""
+msgstr "Imposta il refresh rate massimo desiderato quando Vsync e' disabilitato."
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "REFRESH RATE"
-msgstr ""
+msgstr "REFRESH RATE"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "30 fps"
-msgstr ""
+msgstr "30 fps"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "50 fps"
-msgstr ""
+msgstr "50 fps"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "60 fps (Default)"
-msgstr ""
+msgstr "60 fps (Default)"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "75 fps"
-msgstr ""
+msgstr "75 fps"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "120 fps"
-msgstr ""
+msgstr "120 fps"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "144 fps"
-msgstr ""
+msgstr "144 fps"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "240 fps"
-msgstr ""
+msgstr "240 fps"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -14238,7 +14238,7 @@ msgstr "Salvataggio Rapido"
 #. TRANSLATION: theforceengine.keys
 msgctxt "keys_files"
 msgid "Skip cutscene"
-msgstr ""
+msgstr "Salta intermezzo"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
