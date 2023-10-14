@@ -3,6 +3,7 @@
 - Initial support for the AYN Loki MiniPro (Speakers not working)
 ### Added
 - The Force Engine: Play Dark Forces with enhanced graphics.
+- IORTCW: Play Return to Castle Wolfenstein with enhanced graphics.
 ### Fixed
 
 ### Changed
@@ -43,6 +44,7 @@
 - Proton to 8.0-4b
 - FAudio to 23.10
 - Nvidia production driver to 535.113.01
+- SDL2 to 2.28.4
 
 # 2023/10/xx - batocera.linux 38 - Blue Moon
 ### Hardware
