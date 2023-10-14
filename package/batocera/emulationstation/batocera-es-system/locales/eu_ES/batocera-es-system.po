@@ -730,7 +730,7 @@ msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "HIZKUNTZA"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/yabasanshiro, redream, xenia, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/yabasanshiro, redream, rtcw, ...
 msgctxt "game_options"
 msgid "English (Default)"
 msgstr "Ingelesa (Defektuz)"
@@ -2068,7 +2068,7 @@ msgctxt "game_options"
 msgid "ENABLE GRAVIS ULTRASOUND"
 msgstr "GAITU GRAVIS ULTRASOUND"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/mame, libretro/mamevirtual, libretro/xrick, ...
+#. TRANSLATION: libretro/dosbox_pure, libretro/same_cdi, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
 msgid "Off (Default)"
 msgstr "Desgaituta (Defektuz)"
@@ -3384,15 +3384,15 @@ msgctxt "game_options"
 msgid "No Indicator"
 msgstr "Erakuslerik ez"
 
-#. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual, mame
+#. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
-msgid "Set system-wide controls via MAME menu"
-msgstr "Ezarri sistema guztiko kontrolak MAME-ren menuaren bitartez"
+msgid "Use a custom MAME config, do not overwrite config on launch."
+msgstr ""
 
-#. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual, mame
+#. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
-msgid "CUSTOM MAME CONFIG"
-msgstr "NEURRIRAKO MAME KONFIGURAZIOA"
+msgid "CUSTOM CONFIG"
+msgstr "NEURRIRAKO KONFIGURAZIOA"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
 msgctxt "game_options"
@@ -3838,7 +3838,7 @@ msgctxt "game_options"
 msgid "Select which joystick to emulate."
 msgstr "Aukeratu zein joystick emulatu nahi duzun."
 
-#. TRANSLATION: libretro/mame, cgenius, mame/vitaquake3
+#. TRANSLATION: libretro/mame, cgenius, mame/vitaquake3, rtcw
 msgctxt "game_options"
 msgid "None (Default)"
 msgstr "Batere ez (Defektuz)"
@@ -3977,11 +3977,6 @@ msgstr "BBC Master Kartutxoa (1 Zirrikitua)"
 msgctxt "game_options"
 msgid "BBC Master Cartridge (Slot 2)"
 msgstr "BBC Master Kartutxo (2 Zirrikitua)"
-
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3, ...
-msgctxt "game_options"
-msgid "CUSTOM CONFIG"
-msgstr "NEURRIRAKO KONFIGURAZIOA"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -8399,7 +8394,7 @@ msgctxt "game_options"
 msgid "GPU SYNC"
 msgstr "GPU SINKRONIZAZIOA"
 
-#. TRANSLATION: dolphin, dolphin_triforce, rpcs3
+#. TRANSLATION: dolphin, dolphin_triforce, rpcs3, rtcw
 msgctxt "game_options"
 msgid "ANTI-ALIASING"
 msgstr "ANTI-ALIAS-A"
@@ -11022,12 +11017,12 @@ msgctxt "game_options"
 msgid "Fit 4:3 Aspect Ratio"
 msgstr "Egokitu 4:3 Proportziora"
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, rtcw
 msgctxt "game_options"
 msgid "Choose your preferred renderer."
 msgstr "Aukeratu hobetsitako renderizatzailea."
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, rtcw
 msgctxt "game_options"
 msgid "RENDERER"
 msgstr "Renderizatzailea"
@@ -11573,6 +11568,16 @@ msgstr ""
 msgctxt "game_options"
 msgid "ARTWORK CROP"
 msgstr "MOZTU ARTELANA"
+
+#. TRANSLATION: mame
+msgctxt "game_options"
+msgid "Set system-wide controls via MAME menu"
+msgstr "Ezarri sistema guztiko kontrolak MAME-ren menuaren bitartez"
+
+#. TRANSLATION: mame
+msgctxt "game_options"
+msgid "CUSTOM MAME CONFIG"
+msgstr "NEURRIRAKO MAME KONFIGURAZIOA"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -13052,6 +13057,71 @@ msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr "256MB (Defektuz)"
 
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "Standard OpenGL (Default)"
+msgstr ""
+
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "Enhanced OpenGL"
+msgstr ""
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "Set the desired maximum refresh rate when Vsync is off."
+msgstr ""
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "REFRESH RATE"
+msgstr ""
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "30 fps"
+msgstr ""
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "50 fps"
+msgstr ""
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "60 fps (Default)"
+msgstr ""
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "75 fps"
+msgstr ""
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "120 fps"
+msgstr ""
+
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "2x (Default)"
+msgstr ""
+
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "Skip the initial intro video."
+msgstr ""
+
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "SKIP INTRO VIDEO"
+msgstr ""
+
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "Play (Default)"
+msgstr ""
+
 #. TRANSLATION: sm64
 msgctxt "game_options"
 msgid "Skips the Peach and Castle intro when starting a new game."
@@ -13140,41 +13210,6 @@ msgstr ""
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "960p"
-msgstr ""
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Set the desired maximum refresh rate when Vsync is off."
-msgstr ""
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "REFRESH RATE"
-msgstr ""
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "30 fps"
-msgstr ""
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "50 fps"
-msgstr ""
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "60 fps (Default)"
-msgstr ""
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "75 fps"
-msgstr ""
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "120 fps"
 msgstr ""
 
 #. TRANSLATION: theforceengine
@@ -14199,6 +14234,11 @@ msgctxt "keys_files"
 msgid "Manage Staff"
 msgstr "Kudeatu langileria"
 
+#. TRANSLATION: rtcw.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Skip cutscene"
+msgstr ""
+
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
 msgid "Quick Kick"
@@ -14257,11 +14297,6 @@ msgstr ""
 #. TRANSLATION: theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Save"
-msgstr ""
-
-#. TRANSLATION: theforceengine.keys
-msgctxt "keys_files"
-msgid "Skip cutscene"
 msgstr ""
 
 #~ msgctxt "game_options"
