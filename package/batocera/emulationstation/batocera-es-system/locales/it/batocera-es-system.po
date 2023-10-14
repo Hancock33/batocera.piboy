@@ -13122,7 +13122,8 @@ msgstr "960p"
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Set the desired maximum refresh rate when Vsync is off."
-msgstr "Imposta il refresh rate massimo desiderato quando Vsync e' disabilitato."
+msgstr ""
+"Imposta il refresh rate massimo desiderato quando Vsync e' disabilitato."
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
