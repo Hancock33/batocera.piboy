@@ -925,10 +925,10 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_CDOGS                                # ALL
 
     # The Force Engine
-    select BR2_PACKAGE_THEFORCEENGINE                       if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_THEFORCEENGINE                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Return to Castle Wolfenstein
-    select BR2_PACKAGE_IORTCW               if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_RTCW                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     help
         Ports
@@ -1317,7 +1317,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_PROTOTYPE                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Prototype (R-Type Clone)
     select BR2_PACKAGE_RAPTORCOTS                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Raptor Call of the Shadows
     select BR2_PACKAGE_ROTT                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Rise of the Triad Dark War
-    select BR2_PACKAGE_RTCW                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Return to Castle Wolfenstein
     select BR2_PACKAGE_SERIOUSSAM                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Serious Sam - The First / Second Encounter
     select BR2_PACKAGE_SM64PORT                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Super Mario 64
     select BR2_PACKAGE_SPACECADETPINBALL                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Space Cadet Pinball

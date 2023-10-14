@@ -5,35 +5,82 @@
 ################################################################################
 # Version: Commits on Aug 14, 2023
 RTCW_VERSION = 3babd7aa7cff9974fbc5b7507eadd3e30e669d87
-RTCW_SITE = $(call github,iortcw,iortcw,$(RTCW_VERSION))
+RTCW_SITE = https://github.com/iortcw/iortcw.git
+RTCW_SITE_METHOD = git
+RTCW_GIT_SUBMODULES=YES
+RTCW_LICENSE = GPL-3.0
+RTCW_LICENSE_FILE = COPYING
 
-RTCW_DEPENDENCIES = sdl2 sdl2_mixer openal
-RTCW_LICENSE = GPL-2.0
+RTCW_DEPENDENCIES = sdl2 openal
+
+# Common args
+RTCW_BUILD_ARGS += BUILD_SERVER=0
+RTCW_BUILD_ARGS += BUILD_CLIENT=1
+RTCW_BUILD_ARGS += BUILD_BASEGAME=1
+RTCW_BUILD_ARGS += BUILD_GAME_SO=1
+RTCW_BUILD_ARGS += BUILD_GAME_QVM=0
+RTCW_BUILD_ARGS += CROSS_COMPILING=1
+RTCW_BUILD_ARGS += USE_RENDERER_DLOPEN=1
+RTCW_BUILD_ARGS += USE_LOCAL_HEADERS=1
+RTCW_BUILD_ARGS += USE_INTERNAL_JPEG=1
+RTCW_BUILD_ARGS += USE_INTERNAL_OPUS=1
+RTCW_BUILD_ARGS += USE_INTERNAL_ZLIB=1
+RTCW_BUILD_ARGS += USE_XDG=1
+RTCW_BUILD_ARGS += USE_OPENAL=1
+RTCW_BUILD_ARGS += USE_OPENAL_DLOPEN=1
+RTCW_BUILD_ARGS += DEFAULT_BASEDIR=/userdata/roms/ports/rtcw
+
+# to be investigated
+RTCW_BUILD_ARGS += USE_CODEC_VORBIS=0
+RTCW_BUILD_ARGS += USE_CODEC_OPUS=0
+RTCW_BUILD_ARGS += USE_CURL=0
+RTCW_BUILD_ARGS += USE_CURL_DLOPEN=0
+RTCW_BUILD_ARGS += USE_VOIP=0
+RTCW_BUILD_ARGS += USE_BLOOM=0
+RTCW_BUILD_ARGS += USE_MUMBLE=0
+RTCW_BUILD_ARGS += BUILD_RENDERER_REND2=0
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
-	RTCW_COMPILE_ARCH += arm64
-	RTCW_COMPILE_ARCH += USE_OPENGLES=1
+	RTCW_ARCH = arm64
+	RTCW_BUILD_ARGS += USE_OPENGLES=1
 else
-	RTCW_COMPILE_ARCH=x86_64
+	RTCW_ARCH=x86_64
 endif
 
 define RTCW_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/SP -f Makefile \
-	DEFAULT_BASEDIR=/userdata/roms/ports/rtcw \
-	COMPILE_ARCH=$(RTCW_COMPILE_ARCH) \
-	USE_CODEC_VORBIS=0 USE_CODEC_OPUS=0 USE_CURL=0 USE_CURL_DLOPEN=0 USE_OPENAL=1 USE_OPENAL_DLOPEN=1 USE_RENDERER_DLOPEN=0 USE_VOIP=0 \
-	USE_LOCAL_HEADERS=1 USE_INTERNAL_JPEG=1 USE_INTERNAL_OPUS=1 USE_INTERNAL_ZLIB=1 USE_BLOOM=0 USE_MUMBLE=0 BUILD_GAME_SO=1 \
-	BUILD_RENDERER_REND2=0
+	# Single player
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) $(RTCW_BUILD_ARGS) COMPILE_ARCH=$(RTCW_COMPILE_ARCH) -C $(@D)/SP
+	# Multi player
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) $(RTCW_BUILD_ARGS) COMPILE_ARCH=$(RTCW_COMPILE_ARCH) -C $(@D)/MP
 endef
 
+RTCW_CONF_INIT = $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/rtcw/main
+
 define RTCW_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/game_assets/rtcw/main
-	cp -pvr $(@D)/SP/build/release-linux-*/iowolfsp.* $(TARGET_DIR)/usr/bin/iowolfsp
-	cp -pvr $(@D)/SP/build/release-linux-*/main/*.so  $(TARGET_DIR)/usr/share/game_assets/rtcw/main
-	cp -pvr $(@D)/SP/build/release-linux-*/main/vm	$(TARGET_DIR)/usr/share/game_assets/rtcw/main
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/rtcw/rtcw.keys $(TARGET_DIR)/usr/share/evmapy
+	mkdir -p $(TARGET_DIR)/usr/bin/rtcw
+	mkdir -p $(TARGET_DIR)/usr/bin/rtcw/main
+	# Single player
+	$(INSTALL) -D $(@D)/SP/build/release-linux-$(RTCW_ARCH)/iowolfsp.$(RTCW_ARCH)	$(TARGET_DIR)/usr/bin/rtcw/iowolfsp
+	$(INSTALL) -D $(@D)/SP/build/release-linux-$(RTCW_ARCH)/renderer_sp*.so 		$(TARGET_DIR)/usr/bin/rtcw/
+	$(INSTALL) -D $(@D)/SP/build/release-linux-$(RTCW_ARCH)/main/*.so 				$(TARGET_DIR)/usr/bin/rtcw/main/
+	# Multi player
+	$(INSTALL) -D $(@D)/MP/build/release-linux-$(RTCW_ARCH)/iowolfmp.$(RTCW_ARCH)	$(TARGET_DIR)/usr/bin/rtcw/iowolfmp
+	$(INSTALL) -D $(@D)/MP/build/release-linux-$(RTCW_ARCH)/renderer_mp*.so			$(TARGET_DIR)/usr/bin/rtcw/
+	$(INSTALL) -D $(@D)/MP/build/release-linux-$(RTCW_ARCH)/main/*.so				$(TARGET_DIR)/usr/bin/rtcw/main/
 endef
+
+# required to have fullscreen at 1st start
+define RTCW_CONFIG_FILE
+	mkdir -p $(RTCW_CONF_INIT)
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/rtcw/wolfconfig.cfg		$(RTCW_CONF_INIT)
+endef
+
+define RTCW_EVMAPY
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/rtcw/rtcw.keys			$(TARGET_DIR)/usr/share/evmapy
+endef
+
+RTCW_POST_INSTALL_TARGET_HOOKS += RTCW_CONFIG_FILE
+RTCW_POST_INSTALL_TARGET_HOOKS += RTCW_EVMAPY
 
 $(eval $(generic-package))
