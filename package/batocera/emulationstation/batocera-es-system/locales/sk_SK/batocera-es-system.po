@@ -729,7 +729,7 @@ msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "Jazyk"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/yabasanshiro, redream, xenia, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/yabasanshiro, redream, rtcw, ...
 msgctxt "game_options"
 msgid "English (Default)"
 msgstr "Angličtina (predvolené)"
@@ -2055,7 +2055,7 @@ msgctxt "game_options"
 msgid "ENABLE GRAVIS ULTRASOUND"
 msgstr "Povoliť Gravis Ultrasound"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/mame, libretro/mamevirtual, libretro/xrick, ...
+#. TRANSLATION: libretro/dosbox_pure, libretro/same_cdi, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
 msgid "Off (Default)"
 msgstr "Vypnuté (predvolené)"
@@ -3362,15 +3362,15 @@ msgctxt "game_options"
 msgid "No Indicator"
 msgstr "Žiadny indikátor"
 
-#. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual, mame
+#. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
-msgid "Set system-wide controls via MAME menu"
-msgstr "Nastavte ovládacie prvky pre celý systém prostredníctvom ponuky MAME"
+msgid "Use a custom MAME config, do not overwrite config on launch."
+msgstr ""
 
-#. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual, mame
+#. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
-msgid "CUSTOM MAME CONFIG"
-msgstr "Vlastné nastavenie MAME"
+msgid "CUSTOM CONFIG"
+msgstr "Vlastné nastavenie"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
 msgctxt "game_options"
@@ -3815,7 +3815,7 @@ msgctxt "game_options"
 msgid "Select which joystick to emulate."
 msgstr "Vyberte, ktorý joystick emulovať."
 
-#. TRANSLATION: libretro/mame, cgenius, mame/vitaquake3
+#. TRANSLATION: libretro/mame, cgenius, mame/vitaquake3, rtcw
 msgctxt "game_options"
 msgid "None (Default)"
 msgstr "Žiadne (predvolené)"
@@ -3954,11 +3954,6 @@ msgstr "BBC Master Cartridge (Slot 1)"
 msgctxt "game_options"
 msgid "BBC Master Cartridge (Slot 2)"
 msgstr "BBC Master Cartridge (Slot 2)"
-
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3, ...
-msgctxt "game_options"
-msgid "CUSTOM CONFIG"
-msgstr "Vlastné nastavenie"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -8362,7 +8357,7 @@ msgctxt "game_options"
 msgid "GPU SYNC"
 msgstr "GPU synchronizácia"
 
-#. TRANSLATION: dolphin, dolphin_triforce, rpcs3
+#. TRANSLATION: dolphin, dolphin_triforce, rpcs3, rtcw
 msgctxt "game_options"
 msgid "ANTI-ALIASING"
 msgstr "Anti aliasing"
@@ -10964,12 +10959,12 @@ msgctxt "game_options"
 msgid "Fit 4:3 Aspect Ratio"
 msgstr "Prispôsobiť pre 4:3"
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, rtcw
 msgctxt "game_options"
 msgid "Choose your preferred renderer."
 msgstr "Vyberte preferovaný vykresľovač."
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, rtcw
 msgctxt "game_options"
 msgid "RENDERER"
 msgstr "Vykresľovač"
@@ -11509,6 +11504,16 @@ msgstr "Orezávať grafiku len na nevyužitý priestor, aby bola hra čo najvä�
 msgctxt "game_options"
 msgid "ARTWORK CROP"
 msgstr "Orezanie grafiky"
+
+#. TRANSLATION: mame
+msgctxt "game_options"
+msgid "Set system-wide controls via MAME menu"
+msgstr "Nastavte ovládacie prvky pre celý systém prostredníctvom ponuky MAME"
+
+#. TRANSLATION: mame
+msgctxt "game_options"
+msgid "CUSTOM MAME CONFIG"
+msgstr "Vlastné nastavenie MAME"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -12979,6 +12984,73 @@ msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr "256MB (predvolené)"
 
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "Standard OpenGL (Default)"
+msgstr ""
+
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "Enhanced OpenGL"
+msgstr ""
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "Set the desired maximum refresh rate when Vsync is off."
+msgstr ""
+"Nastaviť požadovanú maximálnu obnovovaciu frekvenciu, keď je funkcia Vsync "
+"vypnutá."
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "REFRESH RATE"
+msgstr "Obnovovacia frekvencia"
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "30 fps"
+msgstr "30 fps"
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "50 fps"
+msgstr "50 fps"
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "60 fps (Default)"
+msgstr "60 fps (predvolené)"
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "75 fps"
+msgstr "75 fps"
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "120 fps"
+msgstr "120 fps"
+
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "2x (Default)"
+msgstr ""
+
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "Skip the initial intro video."
+msgstr ""
+
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "SKIP INTRO VIDEO"
+msgstr ""
+
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "Play (Default)"
+msgstr ""
+
 #. TRANSLATION: sm64
 msgctxt "game_options"
 msgid "Skips the Peach and Castle intro when starting a new game."
@@ -13068,43 +13140,6 @@ msgstr "800p"
 msgctxt "game_options"
 msgid "960p"
 msgstr "960p"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "Set the desired maximum refresh rate when Vsync is off."
-msgstr ""
-"Nastaviť požadovanú maximálnu obnovovaciu frekvenciu, keď je funkcia Vsync "
-"vypnutá."
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "REFRESH RATE"
-msgstr "Obnovovacia frekvencia"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "30 fps"
-msgstr "30 fps"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "50 fps"
-msgstr "50 fps"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "60 fps (Default)"
-msgstr "60 fps (predvolené)"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "75 fps"
-msgstr "75 fps"
-
-#. TRANSLATION: theforceengine
-msgctxt "game_options"
-msgid "120 fps"
-msgstr "120 fps"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -14127,6 +14162,11 @@ msgctxt "keys_files"
 msgid "Manage Staff"
 msgstr "Riadiť zamestnancov"
 
+#. TRANSLATION: rtcw.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Skip cutscene"
+msgstr "Preskočiť scénu"
+
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
 msgid "Quick Kick"
@@ -14186,11 +14226,6 @@ msgstr "Rýchle načítanie"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Rýchle uloženie"
-
-#. TRANSLATION: theforceengine.keys
-msgctxt "keys_files"
-msgid "Skip cutscene"
-msgstr "Preskočiť scénu"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
