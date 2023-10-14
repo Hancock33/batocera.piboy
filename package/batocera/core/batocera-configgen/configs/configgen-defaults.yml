@@ -671,8 +671,6 @@ openlara:
 opentyrian:
   emulator: opentyrian
   core:     opentyrian
-  options:
-    bezel: none
 
 # P-S
 
