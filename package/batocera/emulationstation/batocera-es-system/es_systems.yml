@@ -4275,7 +4275,7 @@ theforceengine:
   extensions:           [tfe]
   platform:             pc
   group:                ports
-  path:                 /usr/share/emulationstation/ports/theforceengine
+  path:                 /userdata/roms/ports/theforceengine
   emulators:
     theforceengine:
       theforceengine:   { requireAnyOf: [BR2_PACKAGE_THEFORCEENGINE] }
