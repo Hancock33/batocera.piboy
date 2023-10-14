@@ -3,13 +3,21 @@ import os
 import controllersConfig
 from generators.Generator import Generator
 from Command import Command
+import shutil
+from os import path
+import utils.videoMode as videoMode
 
-class IORTCWGenerator(Generator):
+rtcw_src = "/usr/bin/rtcw/main"
+rtcw_dst = "/userdata/roms/ports/rtcw/main"
+
+class RtcwGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
 
+        shutil.copytree(rtcw_src, rtcw_dst, dirs_exist_ok=True)
+
         # Config file path
-        config_file_path = "/userdata/roms/rtcw/main/wolfconfig.cfg"
+        config_file_path = "/userdata/roms/ports/rtcw/main/wolfconfig.cfg"
 
         # Define the options to add or modify
         options_to_set = {
@@ -115,7 +123,7 @@ class IORTCWGenerator(Generator):
         return Command(
             array=commandArray,
             env={
-                "XDG_DATA_HOME": "/userdata/roms",
+                "XDG_DATA_HOME": "/userdata/roms/ports",
                 "SDL_GAMECONTROLLERCONFIG": controllersConfig.generateSdlGameControllerConfig(playersControllers)
             }
         )
