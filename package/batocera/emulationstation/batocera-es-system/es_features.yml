@@ -11874,7 +11874,7 @@ omf2097:
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 opentyrian:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [videomode, powersave, hud, hud_corner]
 pcexhumed:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
