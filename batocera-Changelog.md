@@ -38,8 +38,9 @@
 - Xemu to v0.7.113
 - Xenia to v1.0.2808
 - Xenia Canary to d36b1b3 (October 13 build)
+- ECWolf to 1.5pre
 ### System
-- Linux kernel to 6.5.6
+- Linux kernel to 6.5.7
 - Mesa to 23.2.1
 - Proton to 8.0-4b
 - FAudio to 23.10
