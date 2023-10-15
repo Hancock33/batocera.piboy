@@ -4,8 +4,8 @@
 #
 ################################################################################
 # Version: Commits on Oct 13, 2023
-WINE_LUTRIS_WOW64_32_VERSION = $(WINE_LUTRIS_VERSION)
-WINE_LUTRIS_WOW64_32_STAGING_VERSION = $(WINE_LUTRIS_STAGING_VERSION)
+WINE_LUTRIS_WOW64_32_VERSION = 8.18
+WINE_LUTRIS_WOW64_32_STAGING_VERSION = $(WINE_LUTRIS_WOW64_32_VERSION)
 WINE_LUTRIS_WOW64_32_SOURCE = wine-$(WINE_LUTRIS_VERSION).tar.gz
 WINE_LUTRIS_WOW64_32_SITE = https://github.com/wine-mirror/wine/archive/refs/tags
 WINE_LUTRIS_WOW64_32_LICENSE = LGPL-2.1+
@@ -19,15 +19,15 @@ HOST_WINE_LUTRIS_WOW64_32_DOWNLOADS = https://github.com/wine-staging/wine-stagi
 # Configure Lutris
 define WINE_LUTRIS_WOW64_32_AUTOGEN
 	# Add Version
-	$(SED) "s|The Wine configuration|Wine-86-$(WINE_LUTRIS_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
+	$(SED) "s|The Wine configuration|Wine-86-$(WINE_LUTRIS_WOW64_32_VERSION) config|g" $(@D)/programs/wineboot/wineboot.rc
 	$(SED) "s|IDD_WAITDLG DIALOG 0, 0, 200, 50|IDD_WAITDLG DIALOG 0, 0, 300, 30|g" $(@D)/programs/wineboot/wineboot.rc
 	$(SED) "s|IDC_WAITTEXT, 40, 5, 150, 40|IDC_WAITTEXT, 40, 5, 250, 15|g" $(@D)/programs/wineboot/wineboot.rc
 	$(SED) "s|FONT 8,|FONT 14,|g" $(@D)/programs/wineboot/wineboot.rc
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/lutris
 	# Use Staging Patches
-	tar -xf $(WINE_LUTRIS_DL_DIR)/wine-staging-v$(WINE_LUTRIS_STAGING_VERSION).tar.gz -C $(@D)
-	cd $(@D); ./wine-staging-$(WINE_LUTRIS_STAGING_VERSION)/staging/patchinstall.py --all
+	tar -xf $(WINE_LUTRIS_DL_DIR)/wine-staging-v$(WINE_LUTRIS_WOW64_32_STAGING_VERSION).tar.gz -C $(@D)
+	cd $(@D); ./wine-staging-$(WINE_LUTRIS_WOW64_32_STAGING_VERSION)/staging/patchinstall.py --all
 	# Autotools generation
 	cd $(@D); autoreconf -fiv
 	cd $(@D); ./tools/make_requests
@@ -39,7 +39,7 @@ HOST_WINE_LUTRIS_WOW64_32_PRE_CONFIGURE_HOOKS += WINE_LUTRIS_WOW64_32_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_LUTRIS_WOW64_32_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
-	--with-wine-tools=../host-wine-lutris-$(WINE_LUTRIS_VERSION) \
+	--with-wine-tools=../host-wine-lutris-$(WINE_LUTRIS_WOW64_32_VERSION) \
 	--disable-tests \
 	--disable-win64 \
 	--without-capi \
