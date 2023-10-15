@@ -4090,7 +4090,7 @@ reminiscence:
   manufacturer:         Ports
   release:              1992
   hardware:             port
-  extensions:           [map, MAP, rem]
+  extensions:           [rem]
   platform:             pc
   group:                ports
   path:                 /userdata/roms/ports/reminiscence
