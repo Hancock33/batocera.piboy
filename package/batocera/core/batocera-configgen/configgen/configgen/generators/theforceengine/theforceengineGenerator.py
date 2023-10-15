@@ -148,7 +148,7 @@ class TheForceEngineGenerator(Generator):
         if not forceConfig.has_section("Dark_Forces"):
             forceConfig.add_section("Dark_Forces")
         # currently use this directory
-        forceConfig.set("Dark_Forces", "sourcePath", '"/userdata/roms/theforceengine/Star Wars - Dark Forces/"')
+        forceConfig.set("Dark_Forces", "sourcePath", '"/userdata/roms/ports/theforceengine/Star Wars - Dark Forces/"')
 
         if system.isOptSet("force_fight_music") and system.getOptBoolean("force_fight_music"):
             forceConfig.set("Dark_Forces", "disableFightMusic", "true")
