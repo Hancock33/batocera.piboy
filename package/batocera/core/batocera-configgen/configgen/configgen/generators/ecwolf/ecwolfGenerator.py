@@ -5,7 +5,6 @@ import batoceraFiles
 from generators.Generator import Generator
 import controllersConfig
 import os
-import shutil
 from os import path
 import codecs
 
@@ -70,7 +69,9 @@ class ECWolfGenerator(Generator):
             os.chdir(path.dirname(rom))
             fextension = (path.splitext(rom)[1]).lower()
 
-            if fextension == ".ecwolf":
+            if (rom.lower()).endswith('ecwolf'):
+                ecwolfArray += ["--file", path.basename(rom)]
+            elif fextension == ".ecwolf":
                 f = codecs.open(rom,"r")
                 ecwolfArray += (f.readline().split())
                 f.close()
