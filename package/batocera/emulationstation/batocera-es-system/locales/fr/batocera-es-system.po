@@ -13952,7 +13952,7 @@ msgctxt "keys_files"
 msgid "Slot +"
 msgstr "Emplacement +"
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr "Retour rapide"
@@ -13961,46 +13961,6 @@ msgstr "Retour rapide"
 msgctxt "keys_files"
 msgid "Fast Forward"
 msgstr "Avance rapide"
-
-#. TRANSLATION: pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Emulator menu"
-msgstr ""
-
-#. TRANSLATION: pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Quick save slot"
-msgstr ""
-
-#. TRANSLATION: pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Quick load slot"
-msgstr ""
-
-#. TRANSLATION: pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Select save slot number"
-msgstr ""
-
-#. TRANSLATION: pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Fast-forward"
-msgstr ""
-
-#. TRANSLATION: pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Rapid Fire"
-msgstr ""
-
-#. TRANSLATION: pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Enter on the menu"
-msgstr ""
-
-#. TRANSLATION: pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Back on the menu"
-msgstr ""
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
