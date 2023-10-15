@@ -1,86 +1,33 @@
 {
     "actions_player1": [
         {
-            "trigger": [
-                "hotkey",
-                "start"
-            ],
-            "type": "exec",
-            "target": "killall -9 iowolfsp && reset"
-        },
-        {
-            "trigger": "up",
+            "trigger": ["hotkey", "start"],
             "type": "key",
-            "target": "KEY_UP"
+            "target": [ "KEY_LEFTALT", "KEY_F4" ]
         },
         {
-            "trigger": "down",
+            "trigger": ["hotkey"],
             "type": "key",
-            "target": "KEY_DOWN"
+            "target": [ "KEY_ESC" ],
+            "description": "Skip cutscene"
         },
         {
-            "trigger": "left",
+            "trigger": ["hotkey", "y"],
             "type": "key",
-            "target": "KEY_LEFT"
+            "target": "KEY_F5",
+            "description": "Quick save"
         },
         {
-            "trigger": "right",
+            "trigger": ["hotkey", "x"],
             "type": "key",
-            "target": "KEY_RIGHT"
+            "target": "KEY_F9",
+            "description": "Quick load"
         },
         {
-            "trigger": "start",
+            "trigger": ["hotkey", "pageup"],
             "type": "key",
-            "target": "KEY_ENTER"
-        },
-        {
-            "trigger": "select",
-            "type": "key",
-            "target": "KEY_ESC"
-        },
-        {
-            "trigger": "joystick1",
-            "type": "mouse"
-        },
-        {
-            "trigger": "b",
-            "type": "key",
-            "target": "BTN_LEFT"
-        },
-        {
-            "trigger": "pageup",
-            "type": "key",
-            "target": "KEY_LEFTBRACE"
-        },
-        {
-            "trigger": "pagedown",
-            "type": "key",
-            "target": "KEY_RIGHTBRACE"
-        },
-        {
-            "trigger": "a",
-            "type": "key",
-            "target": "KEY_R"
-        },
-        {
-            "trigger": "x",
-            "type": "key",
-            "target": "KEY_C"
-        },
-        {
-            "trigger": "y",
-            "type": "key",
-            "target": "KEY_SPACE"
-        },
-        {
-            "trigger": "l2",
-            "type": "key",
-            "target": "KEY_A"
-        },
-        {
-            "trigger": "r2",
-            "type": "key",
-            "target": "KEY_D"
+            "target": "KEY_F11",
+            "description": "Screenshot"
         }
     ]
 }

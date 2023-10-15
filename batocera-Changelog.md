@@ -1,8 +1,9 @@
 # 202x/xx/xx - batocera.linux 39 - 
 ### Hardware
-
+- Initial support for the AYN Loki MiniPro (Speakers not working)
 ### Added
-
+- The Force Engine: Play Dark Forces with enhanced graphics.
+- IORTCW: Play Return to Castle Wolfenstein with enhanced graphics.
 ### Fixed
 
 ### Changed
@@ -11,13 +12,44 @@
 - Retroarch to 1.16.0.3
 - GroovyMAME 0.259 - Switchres 2.002w
 - DosBox-X to 2023.10.6
+- Libretro-FBNeo to Oct 9, 2023
+- DevilutionX to 1.5.1
+- PPSSPP (standalone) and lr-ppsspp to v1.16.6
+- Libretro-MAME to 0.259 (Oct 4, 2023)
+- Libretro-picodrive to Aug 11, 2023
+- Libretro-Genesis-Plus-GX to Sep 11, 2023
+- Libretro-PCSX-ReARMed to Oct 9, 2023
+- Fheroes2 to 1.0.9
+- BigPEmu to 1.092
+- Cemu to 2.0-55
+- Citra to nightly-2009
+- Dolphin to 5.0-20212
+- Flycast to Oct 12, 2023
+- Libretro-flycast to Oct 12, 2023
+- MelonDS to Oct 12, 2023
+- PCSX2 to v1.7.5105
+- Play! to Oct 13, 2023 build
+- Python Pygame2 to 2.5.2
+- Python Pyxel to v1.9.18
+- RPCS3 to Oct 12 build
+- Ruffle to nightly-2023-10-13
+- Solarus Engine to Oct 2, 2023
+- Vita3k to Oct 13 build
+- Xemu to v0.7.113
+- Xenia to v1.0.2808
+- Xenia Canary to d36b1b3 (October 13 build)
+- ECWolf to 1.5pre
 ### System
-- Linux kernel to 6.5.6
+- Linux kernel to 6.5.7
 - Mesa to 23.2.1
 - Proton to 8.0-4b
+- FAudio to 23.10
+- Nvidia production driver to 535.113.01
+- SDL2 to 2.28.4
 
 # 2023/10/xx - batocera.linux 38 - Blue Moon
 ### Hardware
+- Warning: Batocera is now set up to the default TV resolution on most systems. If you are running a Raspberry Pi4 or a low-end PC on a display capable of higher than 1080p and notice a performance problem, please adjust a one-time configuration option in SYSTEM SETTINGS -> FRONTEND DEVELOPER OPTIONS -> VIDEO MODE for EmulationStation. You can also still set the emulators resolution in GAME SETTINGS -> VIDEO MODE.
 - Added support for:
   - Orange Pi 5B
   - Orange Pi 3 LTS

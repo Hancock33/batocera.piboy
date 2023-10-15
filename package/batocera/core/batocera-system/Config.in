@@ -199,6 +199,8 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_UMTOOL                               # command line tool for configuring Ultimarc arcade hardware
     select BR2_PACKAGE_PYTHON_HIDAPI                        # Communication with USB HID devices via Python
     select BR2_PACKAGE_LEDSPICER                            # LED Manager for Linux
+    select BR2_PACKAGE_INNOEXTRACT                          # Extract InnoSetup files (useful for Wine and GOG games)
+    select BR2_PACKAGE_TREE                                 # recursive directory listing (useful for generating documentation on rom directory structure)
 
     # Python and SSL
     select BR2_PACKAGE_HOST_PYTHON3
@@ -922,6 +924,12 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # C-Dogs SDL
     select BR2_PACKAGE_CDOGS                                # ALL
 
+    # The Force Engine
+    select BR2_PACKAGE_THEFORCEENGINE                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
+    # Return to Castle Wolfenstein
+    select BR2_PACKAGE_RTCW                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_aarch64 && BR2_PACKAGE_BATOCERA_GLES3)
+
     help
         Ports
 
@@ -1309,7 +1317,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_PROTOTYPE                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Prototype (R-Type Clone)
     select BR2_PACKAGE_RAPTORCOTS                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Raptor Call of the Shadows
     select BR2_PACKAGE_ROTT                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Rise of the Triad Dark War
-    select BR2_PACKAGE_RTCW                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Return to Castle Wolfenstein
     select BR2_PACKAGE_SERIOUSSAM                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Serious Sam - The First / Second Encounter
     select BR2_PACKAGE_SM64PORT                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Super Mario 64
     select BR2_PACKAGE_SPACECADETPINBALL                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Space Cadet Pinball
@@ -1340,6 +1347,9 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
     # Standalone Stella
     select BR2_PACKAGE_BATOCERA_STELLA                      if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
+
+    # Standalone SNES9X (Qt6)
+    # select BR2_PACKAGE_SNES9X                             if  BR2_x86_64
 
     help
         Emulators under development (Experimental)
@@ -1518,6 +1528,38 @@ config BR2_PACKAGE_BATOCERA_WPA
     select BR2_PACKAGE_WPA_SUPPLICANT_K44_NL80211            if  BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # wpa_supplicant driver
     select BR2_PACKAGE_WPA_SUPPLICANT_K44_WEXT               if  BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # wpa_supplicant driver
 
+config BR2_PACKAGE_BATOCERA_QT6
+    bool "batocera.linux Qt6 stack"
+
+    select BR2_PACKAGE_QT6
+    select BR2_PACKAGE_QT6_VERSION_LATEST
+    select BR2_PACKAGE_QT6BASE
+    select BR2_PACKAGE_QT6BASE_CONCURRENT
+    select BR2_PACKAGE_QT6BASE_DBUS
+    select BR2_PACKAGE_QT6BASE_FONTCONFIG
+    select BR2_PACKAGE_QT6BASE_GIF
+    select BR2_PACKAGE_QT6BASE_GUI
+    select BR2_PACKAGE_QT6BASE_JPEG
+    select BR2_PACKAGE_QT6BASE_NETWORK
+    select BR2_PACKAGE_QT6BASE_PNG
+    select BR2_PACKAGE_QT6BASE_PRINTSUPPORT
+    select BR2_PACKAGE_QT6BASE_SQL
+    select BR2_PACKAGE_QT6BASE_TEST
+    select BR2_PACKAGE_QT6BASE_WIDGETS
+    select BR2_PACKAGE_QT6BASE_XML
+    select BR2_PACKAGE_QT6BASE_OPENGL                       if  BR2_PACKAGE_HAS_LIBGL
+    select BR2_PACKAGE_QT6BASE_OPENGL_DESKTOP               if  BR2_PACKAGE_HAS_LIBGL
+    select BR2_PACKAGE_QT6BASE_OPENGL_ES2                   if  BR2_PACKAGE_HAS_LIBGLES
+    select BR2_PACKAGE_QT6BASE_EGLFS                        if  BR2_PACKAGE_HAS_LIBEGL
+    select BR2_PACKAGE_QT6BASE_XCB                          if  BR2_PACKAGE_XORG7
+    #select BR2_PACKAGE_QT6DECLARATIVE
+    select BR2_PACKAGE_QT6MULTIMEDIA
+    select BR2_PACKAGE_QT6SHADERTOOLS
+    select BR2_PACKAGE_QT6SVG
+    select BR2_PACKAGE_QT6TOOLS
+    select BR2_PACKAGE_QT6TOOLS_LINGUIST_TOOLS
+    select BR2_PACKAGE_QT6WAYLAND                           if BR2_PACKAGE_BATOCERA_WAYLAND
+    select BR2_PACKAGE_QT6WEBSOCKETS
 
 config BR2_PACKAGE_BATOCERA_RPI_VCORE
     bool "batocera.linux support vcore RPI"

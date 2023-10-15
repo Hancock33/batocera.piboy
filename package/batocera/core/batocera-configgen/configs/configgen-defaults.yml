@@ -671,8 +671,6 @@ openlara:
 opentyrian:
   emulator: opentyrian
   core:     opentyrian
-  options:
-    bezel: none
 
 # P-S
 
@@ -964,6 +962,9 @@ tg-cd:
 themehospital:
   emulator: themehospital
   core:     themehospital
+theforceengine:
+  emulator: theforceengine
+  core:     theforceengine
 thextech:
   emulator: thextech
   core:     thextech
@@ -992,8 +993,6 @@ tutor:
 tyrian:
   emulator: tyrian
   core:     tyrian
-  options:
-    bezel: none
 tyrquake:
   emulator: libretro
   core:     tyrquake

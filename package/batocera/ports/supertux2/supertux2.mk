@@ -3,8 +3,8 @@
 # supertux2
 #
 ################################################################################
-# Version: Commits on Oct 07, 2023
-SUPERTUX2_VERSION = 90b4c1c86d00a13484c703ba64d60e7a64ce4361
+# Version: Commits on Oct 12, 2023
+SUPERTUX2_VERSION = b9d628b6c4cf5cbace8a38d2fcf3ce48b08ce25c
 SUPERTUX2_SITE = https://github.com/SuperTux/supertux.git
 SUPERTUX2_SITE_METHOD=git
 SUPERTUX2_GIT_SUBMODULES=YES
@@ -19,27 +19,10 @@ SUPERTUX2_DEPENDENCIES = host-pkgconf boost freetype libcurl \
 	libogg libpng libvorbis openal physfs sdl2 sdl2_image zlib
 
 SUPERTUX2_CONF_OPTS += \
-	-DCMAKE_BUILD_TYPE=Release \
-	-DCMAKE_CXX_FLAGS="$(TARGET_CXXFLAGS) -DGLEW_NO_GLU" \
-	-DENABLE_BOOST_STATIC_LIBS=OFF \
 	-DBUILD_DOCUMENTATION=OFF \
-	-DENABLE_OPENGL=ON \
-	-DGLBINDING_ENABLED=OFF \
 	-DINSTALL_SUBDIR_BIN="bin" \
 	-DINSTALL_SUBDIR_SHARE="share/supertux2" \
-	-DUSE_SYSTEM_PHYSFS=ON \
 	-DGIT_VERSION="$(shell echo $(SUPERTUX2_VERSION) | cut -c 1-7)"
-
-# Avoid incompatible posix_memalign declaration on x86 and x86_64 with
-# musl.
-# https://gcc.gnu.org/ml/gcc-patches/2015-05/msg01425.html
-ifeq ($(BR2_TOOLCHAIN_USES_MUSL):$(BR2_i386)$(BR2_x86_64),y:y)
-define SUPERTUX2_REMOVE_PEDANTIC
-	$(SED) 's% -pedantic%%' $(@D)/CMakeLists.txt
-	$(SED) 's%CHECK_CXX_FLAG(pedantic)%%' $(@D)/external/tinygettext/CMakeLists.txt
-endef
-SUPERTUX2_POST_PATCH_HOOKS += SUPERTUX2_REMOVE_PEDANTIC
-endif
 
 define SUPERTUX2_INSTALL_TARGET_CMDS
 	# install media

@@ -828,7 +828,7 @@ msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "언어"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/yabasanshiro, redream, xenia, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/yabasanshiro, redream, rtcw, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "English (Default)"
@@ -2339,7 +2339,7 @@ msgctxt "game_options"
 msgid "ENABLE GRAVIS ULTRASOUND"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, libretro/mame, libretro/mamevirtual, libretro/xrick, ...
+#. TRANSLATION: libretro/dosbox_pure, libretro/same_cdi, libretro/mame, libretro/mame, libretro/mame, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Off (Default)"
@@ -3817,17 +3817,16 @@ msgctxt "game_options"
 msgid "No Indicator"
 msgstr ""
 
-#. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual, mame
-#, fuzzy
+#. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
-msgid "Set system-wide controls via MAME menu"
-msgstr "MAME 메뉴를 통해 시스템 전체 컨트롤 설정"
+msgid "Use a custom MAME config, do not overwrite config on launch."
+msgstr ""
 
-#. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual, mame
+#. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 #, fuzzy
 msgctxt "game_options"
-msgid "CUSTOM MAME CONFIG"
-msgstr "사용자 지정 MAME 구성"
+msgid "CUSTOM CONFIG"
+msgstr "사용자 지정 구성"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
 #, fuzzy
@@ -4346,7 +4345,7 @@ msgctxt "game_options"
 msgid "Select which joystick to emulate."
 msgstr "에뮬레이트할 조이스틱을 선택합니다."
 
-#. TRANSLATION: libretro/mame, cgenius, mame/vitaquake3
+#. TRANSLATION: libretro/mame, cgenius, mame/vitaquake3, rtcw
 #, fuzzy
 msgctxt "game_options"
 msgid "None (Default)"
@@ -4503,12 +4502,6 @@ msgstr "BBC 마스터 카트리지(슬롯 1)"
 msgctxt "game_options"
 msgid "BBC Master Cartridge (Slot 2)"
 msgstr "BBC 마스터 카트리지(슬롯 2)"
-
-#. TRANSLATION: libretro/mame, libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3, ...
-#, fuzzy
-msgctxt "game_options"
-msgid "CUSTOM CONFIG"
-msgstr "사용자 지정 구성"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 #, fuzzy
@@ -8274,7 +8267,7 @@ msgctxt "game_options"
 msgid "EXPOSE MODE"
 msgstr "노출 모드"
 
-#. TRANSLATION: libretro/yabasanshiro, yabasanshiro
+#. TRANSLATION: libretro/yabasanshiro, theforceengine, yabasanshiro
 #, fuzzy
 msgctxt "game_options"
 msgid "720p"
@@ -9485,7 +9478,7 @@ msgctxt "game_options"
 msgid "GPU SYNC"
 msgstr "GPU 동기화"
 
-#. TRANSLATION: dolphin, dolphin_triforce, rpcs3
+#. TRANSLATION: dolphin, dolphin_triforce, rpcs3, rtcw
 #, fuzzy
 msgctxt "game_options"
 msgid "ANTI-ALIASING"
@@ -12241,12 +12234,12 @@ msgctxt "game_options"
 msgid "Fit 4:3 Aspect Ratio"
 msgstr ""
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, rtcw
 msgctxt "game_options"
 msgid "Choose your preferred renderer."
 msgstr ""
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, rtcw
 msgctxt "game_options"
 msgid "RENDERER"
 msgstr ""
@@ -12861,6 +12854,18 @@ msgstr "아트웍 자르기"
 #. TRANSLATION: mame
 #, fuzzy
 msgctxt "game_options"
+msgid "Set system-wide controls via MAME menu"
+msgstr "MAME 메뉴를 통해 시스템 전체 컨트롤 설정"
+
+#. TRANSLATION: mame
+#, fuzzy
+msgctxt "game_options"
+msgid "CUSTOM MAME CONFIG"
+msgstr "사용자 지정 MAME 구성"
+
+#. TRANSLATION: mame
+#, fuzzy
+msgctxt "game_options"
 msgid ""
 "Make game history, setup instructions, and special moves viewable in the menu"
 msgstr "게임 기록, 설정 지침 및 필살기를 메뉴에서 볼 수 있도록 설정"
@@ -13381,12 +13386,12 @@ msgctxt "game_options"
 msgid "Screen Resolution (Default)"
 msgstr ""
 
-#. TRANSLATION: model2emu, play
+#. TRANSLATION: model2emu, play, theforceengine
 msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr ""
 
-#. TRANSLATION: model2emu, play
+#. TRANSLATION: model2emu, play, theforceengine
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
 msgstr ""
@@ -14470,6 +14475,71 @@ msgctxt "game_options"
 msgid "256MB (Default)"
 msgstr ""
 
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "Standard OpenGL (Default)"
+msgstr ""
+
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "Enhanced OpenGL"
+msgstr ""
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "Set the desired maximum refresh rate when Vsync is off."
+msgstr ""
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "REFRESH RATE"
+msgstr ""
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "30 fps"
+msgstr ""
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "50 fps"
+msgstr ""
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "60 fps (Default)"
+msgstr ""
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "75 fps"
+msgstr ""
+
+#. TRANSLATION: rtcw, theforceengine
+msgctxt "game_options"
+msgid "120 fps"
+msgstr ""
+
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "2x (Default)"
+msgstr ""
+
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "Skip the initial intro video."
+msgstr ""
+
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "SKIP INTRO VIDEO"
+msgstr ""
+
+#. TRANSLATION: rtcw
+msgctxt "game_options"
+msgid "Play (Default)"
+msgstr ""
+
 #. TRANSLATION: sm64
 msgctxt "game_options"
 msgid "Skips the Peach and Castle intro when starting a new game."
@@ -14520,6 +14590,196 @@ msgstr ""
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "PLAY INTRO MOVIE"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "200p"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "400p"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "480p"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "600p"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "768p"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "800p"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "960p"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "144 fps"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "240 fps"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Choose which graphics renderer to use."
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "GRAPHICS RENDERER"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Classic Software"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "GPU / OpenGL (Default)"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "ENABLE TRUE COLOUR"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "ENABLE BILINEAR FILTER"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "ENABLE MIPMAPPING"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "ENABLE CROSSHAIR"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Choose to use Bloom post processing."
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "ENABLE BLOOM"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Enable / Disable sound in menus."
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "MENU SOUNDS"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Enable 16-channel iMuse Digital Audio."
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "DIGITAL AUDIO"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Enable / Disable fight music."
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "FIGHT MUSIC"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Enable / Disable automatic aiming."
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "AUTO AIM"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Enable / Disable showing secret found messages."
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "SHOW SECRET MESSAGES"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "AUTOMATICALLY RUN"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Bobba Fett Face Player Fix"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "BOBBA FETT FIX"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "SMOOTH VUES"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Choose to enable or disable cutscenes."
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "SKIP CUTSCENES"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Show All"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Skip Initial"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Skip All"
 msgstr ""
 
 #. TRANSLATION: thextech
@@ -14956,7 +15216,7 @@ msgctxt "keys_files"
 msgid "Graphics filtering on/off"
 msgstr ""
 
-#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys
+#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys, rtcw.keys
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr ""
@@ -15081,7 +15341,7 @@ msgctxt "keys_files"
 msgid "Slot +"
 msgstr ""
 
-#. TRANSLATION: psp.ppsspp.keys, pspmini.ppsspp.keys
+#. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Rewind"
 msgstr ""
@@ -15089,46 +15349,6 @@ msgstr ""
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Fast Forward"
-msgstr ""
-
-#. TRANSLATION: pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Emulator menu"
-msgstr ""
-
-#. TRANSLATION: pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Quick save slot"
-msgstr ""
-
-#. TRANSLATION: pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Quick load slot"
-msgstr ""
-
-#. TRANSLATION: pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Select save slot number"
-msgstr ""
-
-#. TRANSLATION: pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Fast-forward"
-msgstr ""
-
-#. TRANSLATION: pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Rapid Fire"
-msgstr ""
-
-#. TRANSLATION: pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Enter on the menu"
-msgstr ""
-
-#. TRANSLATION: pspmini.ppsspp.keys
-msgctxt "keys_files"
-msgid "Back on the menu"
 msgstr ""
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
@@ -15276,12 +15496,12 @@ msgctxt "keys_files"
 msgid "Select"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: corsixth.keys, rtcw.keys
 msgctxt "keys_files"
 msgid "Quick save"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: corsixth.keys, rtcw.keys
 msgctxt "keys_files"
 msgid "Quick load"
 msgstr ""
@@ -15381,6 +15601,11 @@ msgctxt "keys_files"
 msgid "Manage Staff"
 msgstr ""
 
+#. TRANSLATION: rtcw.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Skip cutscene"
+msgstr ""
+
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
 msgid "Quick Kick"
@@ -15429,6 +15654,16 @@ msgstr ""
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
 msgid "Open"
+msgstr ""
+
+#. TRANSLATION: theforceengine.keys
+msgctxt "keys_files"
+msgid "Quick Load"
+msgstr ""
+
+#. TRANSLATION: theforceengine.keys
+msgctxt "keys_files"
+msgid "Quick Save"
 msgstr ""
 
 #, fuzzy

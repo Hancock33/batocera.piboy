@@ -3,26 +3,28 @@
 # play
 #
 ################################################################################
-# Version: Commits on Oct 03, 2023
-PLAY_VERSION = e7f228080fb848e812f58817f7652bc879b83b9c
+# Version: Commits on Oct 13, 2023
+PLAY_VERSION = 1eec610c3ec5bb6bb4f9eb7c10b1939795454830
 PLAY_SITE = https://github.com/jpd002/Play-.git
 PLAY_SITE_METHOD = git
 PLAY_GIT_SUBMODULES = YES
 PLAY_LICENSE = BSD
-PLAY_DEPENDENCIES = openal sqlite qt6base
+PLAY_DEPENDENCIES = openal qt6base sqlite ecm
 
+PLAY_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 PLAY_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 PLAY_CONF_OPTS += -DINSTALL_STATIC_LIBS=ON
 PLAY_CONF_OPTS += -DBUILD_TESTS=OFF
 PLAY_CONF_OPTS += -DENABLE_AMAZON_S3=OFF
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
-	PLAY_DEPENDENCIES += xserver_xorg-server libglew
-	PLAY_CONF_OPTS += -DOpenGL_GL_PREFERENCE=GLVND
+    PLAY_DEPENDENCIES += xserver_xorg-server libglew
+    PLAY_CONF_OPTS += -DOpenGL_GL_PREFERENCE=GLVND
 else
-	# Force to use GLES on ARM
-	PLAY_CONF_OPTS += -DUSE_GLEW=OFF
-	PLAY_CONF_OPTS += -DUSE_GLES=ON
+    PLAY_DEPENDENCIES += qt6wayland
+    # Force to use GLES on ARM/Wayland
+    PLAY_CONF_OPTS += -DUSE_GLEW=OFF
+    PLAY_CONF_OPTS += -DUSE_GLES=ON
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)

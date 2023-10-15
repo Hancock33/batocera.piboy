@@ -3,8 +3,8 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on Oct 08, 2023
-PPSSPP_VERSION = d280495e636c7d09f9f3a37d972c4e8c9f3f7dd2
+# Version: Commits on Oct 15, 2023
+PPSSPP_VERSION = 5580d47d870c3a5809f58781053be8d09238737c
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
@@ -114,8 +114,8 @@ endef
 
 define PPSSPP_POST_PROCESS
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/psp.ppsspp.keys \
-		$(TARGET_DIR)/usr/share/evmapy
+	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/psp.ppsspp.keys	$(TARGET_DIR)/usr/share/evmapy
+	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/psp.ppsspp.keys	$(TARGET_DIR)/usr/share/evmapy/pspmini.ppsspp.keys
 endef
 
 PPSSPP_PRE_CONFIGURE_HOOKS += PPSSPP_UPDATE_INCLUDES
