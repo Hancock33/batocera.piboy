@@ -114,8 +114,8 @@ endef
 
 define PPSSPP_POST_PROCESS
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/psp.ppsspp.keys \
-		$(TARGET_DIR)/usr/share/evmapy
+	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/psp.ppsspp.keys	$(TARGET_DIR)/usr/share/evmapy
+	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/psp.ppsspp.keys	$(TARGET_DIR)/usr/share/evmapy/pspmini.ppsspp.keys
 endef
 
 PPSSPP_PRE_CONFIGURE_HOOKS += PPSSPP_UPDATE_INCLUDES
