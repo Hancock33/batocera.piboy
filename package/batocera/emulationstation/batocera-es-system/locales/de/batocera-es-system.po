@@ -13883,7 +13883,7 @@ msgctxt "keys_files"
 msgid "Graphics filtering on/off"
 msgstr "Grafikfilter Ein/Aus"
 
-#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys
+#. TRANSLATION: scummvm.keys, triforce.dolphin_triforce.keys, 3ds.citra.keys, psp.ppsspp.keys, rtcw.keys
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Bildschirmfoto"
@@ -14203,12 +14203,12 @@ msgctxt "keys_files"
 msgid "Select"
 msgstr "Auswählen"
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: corsixth.keys, rtcw.keys
 msgctxt "keys_files"
 msgid "Quick save"
 msgstr "Schnellspeichern"
 
-#. TRANSLATION: corsixth.keys
+#. TRANSLATION: corsixth.keys, rtcw.keys
 msgctxt "keys_files"
 msgid "Quick load"
 msgstr "Schnellladen"
