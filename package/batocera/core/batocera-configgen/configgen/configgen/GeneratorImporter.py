@@ -443,6 +443,10 @@ def getGenerator(emulator):
         from generators.stella.stellaGenerator import StellaGenerator
         return StellaGenerator()
 
+    if emulator == "theforceengine":
+        from generators.theforceengine.theforceengineGenerator import TheForceEngineGenerator
+        return TheForceEngineGenerator()
+
     if emulator == 'stk':
         from generators.stk.stkGenerator import StkGenerator
         return StkGenerator()

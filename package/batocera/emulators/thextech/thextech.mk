@@ -3,8 +3,8 @@
 # thextech
 #
 ################################################################################
-# Version: Commits on Oct 08, 2023
-THEXTECH_VERSION = 8e505698d59c198a3f4792e15a256f56011a6c04
+# Version: Commits on Oct 14, 2023
+THEXTECH_VERSION = 579e2212281626393e38d0dd08faf5e6fad1f267
 THEXTECH_SITE = https://github.com/Wohlstand/TheXTech
 THEXTECH_SITE_METHOD = git
 THEXTECH_GIT_SUBMODULES = YES

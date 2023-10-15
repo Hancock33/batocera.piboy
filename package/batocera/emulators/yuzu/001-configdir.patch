@@ -1,8 +1,8 @@
 diff --git a/src/common/fs/path_util.cpp b/src/common/fs/path_util.cpp
-index d71cfacc6..a9590f610 100644
+index 0abd81a45..4727c7938 100644
 --- a/src/common/fs/path_util.cpp
 +++ b/src/common/fs/path_util.cpp
-@@ -113,19 +113,19 @@ public:
+@@ -115,20 +115,20 @@ public:
          }
  #endif
  
@@ -15,10 +15,6 @@ index d71cfacc6..a9590f610 100644
 -        GenerateYuzuPath(YuzuPath::LoadDir, yuzu_path / LOAD_DIR);
 -        GenerateYuzuPath(YuzuPath::LogDir, yuzu_path / LOG_DIR);
 -        GenerateYuzuPath(YuzuPath::NANDDir, yuzu_path / NAND_DIR);
--        GenerateYuzuPath(YuzuPath::ScreenshotsDir, yuzu_path / SCREENSHOTS_DIR);
--        GenerateYuzuPath(YuzuPath::SDMCDir, yuzu_path / SDMC_DIR);
--        GenerateYuzuPath(YuzuPath::ShaderDir, yuzu_path / SHADER_DIR);
--        GenerateYuzuPath(YuzuPath::TASDir, yuzu_path / TAS_DIR);
 +        GenerateYuzuPath(YuzuPath::YuzuDir, "/userdata/saves/switch/yuzu");
 +        GenerateYuzuPath(YuzuPath::AmiiboDir, "/userdata/bios/switch/amiibo");
 +        GenerateYuzuPath(YuzuPath::CacheDir, "/userdata/system/cache/yuzu");
@@ -28,10 +24,15 @@ index d71cfacc6..a9590f610 100644
 +        GenerateYuzuPath(YuzuPath::LoadDir, "/userdata/saves/switch/yuzu/load");
 +        GenerateYuzuPath(YuzuPath::LogDir, "/userdata/system/logs");
 +        GenerateYuzuPath(YuzuPath::NANDDir, "/userdata/bios/switch/nand");
+         GenerateYuzuPath(YuzuPath::PlayTimeDir, yuzu_path / PLAY_TIME_DIR);
+-        GenerateYuzuPath(YuzuPath::ScreenshotsDir, yuzu_path / SCREENSHOTS_DIR);
+-        GenerateYuzuPath(YuzuPath::SDMCDir, yuzu_path / SDMC_DIR);
+-        GenerateYuzuPath(YuzuPath::ShaderDir, yuzu_path / SHADER_DIR);
+-        GenerateYuzuPath(YuzuPath::TASDir, yuzu_path / TAS_DIR);
 +        GenerateYuzuPath(YuzuPath::ScreenshotsDir, "/userdata/screenshots/switch");
 +        GenerateYuzuPath(YuzuPath::SDMCDir, "/userdata/bios/switch/sdmc");
 +        GenerateYuzuPath(YuzuPath::ShaderDir, "/userdata/saves/switch/yuzu/shaders");
 +        GenerateYuzuPath(YuzuPath::TASDir, "/userdata/saves/switch/yuzu/tas");
+         GenerateYuzuPath(YuzuPath::IconsDir, yuzu_path / ICONS_DIR);
      }
  
- private:

@@ -3,8 +3,8 @@
 # yuzu
 #
 ################################################################################
-# Version: Commits on Oct 07, 2023
-YUZU_VERSION = bd42bba71c09010c63853867c4d80573888bff81
+# Version: Commits on Oct 14, 2023
+YUZU_VERSION = 1a4abd184f8085f29a18453bdc4aabb3c038907a
 YUZU_SITE = https://github.com/yuzu-emu/yuzu.git
 YUZU_SITE_METHOD=git
 YUZU_GIT_SUBMODULES=YES
@@ -12,7 +12,7 @@ YUZU_LICENSE = GPLv2
 YUZU_DEPENDENCIES += fmt boost ffmpeg zstd zlib libzip lz4 catch2 sdl2 opus
 YUZU_DEPENDENCIES += qt6base qt6svg qt6tools
 YUZU_SUPPORTS_IN_SOURCE_BUILD = NO
-YUZU_TZDB_VERSION = 220816
+YUZU_TZDB_VERSION = 221202
 YUZU_EXTRA_DOWNLOADS = https://github.com/lat9nq/tzdb_to_nx/releases/download/$(YUZU_TZDB_VERSION)/$(YUZU_TZDB_VERSION).zip
 
 YUZU_CONF_ENV += LDFLAGS=-lpthread ARCHITECTURE_x86_64=1

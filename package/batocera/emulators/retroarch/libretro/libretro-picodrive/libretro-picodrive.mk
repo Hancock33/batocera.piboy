@@ -3,9 +3,9 @@
 # libretro-picodrive
 #
 ################################################################################
-# Version: Commits on Sept 01, 2023
-LIBRETRO_PICODRIVE_VERSION = 1a9da199e82e3bb60ba88de736aaecab0f5a1430
-LIBRETRO_PICODRIVE_SITE = https://github.com/irixxxx/picodrive.git
+# Version: Commits on Aug 11, 2023
+LIBRETRO_PICODRIVE_VERSION = 570319349588288f64c676123244acdb0be33881
+LIBRETRO_PICODRIVE_SITE = https://github.com/libretro/picodrive.git
 LIBRETRO_PICODRIVE_SITE_METHOD=git
 LIBRETRO_PICODRIVE_GIT_SUBMODULES=YES
 LIBRETRO_PICODRIVE_DEPENDENCIES = libpng
@@ -31,18 +31,19 @@ LIBRETRO_PICODRIVE_PLATFORM += armv neon hardfloat
 else ifeq ($(BR2_aarch64),y)
 LIBRETRO_PICODRIVE_PLATFORM = aarch64
 
+else ifeq ($(BR2_RISCV_64),y)
+LIBRETRO_PICODRIVE_PLATFORM = riscv64
+
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
 LIBRETRO_PICODRIVE_PLATFORM = unix
 endif
 
 define LIBRETRO_PICODRIVE_BUILD_CMDS
-	# forces full path in include path cause of compilation of the tool directory (for some boards like rpizero2)
-	$(SED) 's+-I platform/libretro/libretro-common/include+-I $(@D)/platform/libretro/libretro-common/include+' $(@D)/Makefile.libretro
-	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile.libretro
-	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile.libretro
 	$(MAKE) -C $(@D)/cpu/cyclone CONFIG_FILE=$(@D)/cpu/cyclone_config.h
-	cd $(@D) && $(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C  $(@D) -f Makefile.libretro platform="$(LIBRETRO_PICODRIVE_PLATFORM)" \
-		GIT_REVISION=" $(shell echo $(LIBRETRO_PICODRIVE_VERSION) | cut -c 1-7)"
+
+	# force -j 1 to avoid parallel issues in the makefile
+	cd $(@D) && $(TARGET_CONFIGURE_OPTS) $(MAKE) -j 1 CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C  $(@D) -f Makefile.libretro platform="$(LIBRETRO_PICODRIVE_PLATFORM)" \
+		GIT_VERSION=" $(shell echo $(LIBRETRO_PICODRIVE_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_PICODRIVE_INSTALL_TARGET_CMDS

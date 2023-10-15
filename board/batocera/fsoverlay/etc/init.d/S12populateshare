@@ -25,44 +25,6 @@ do
     fi
 done
 
-# directories / files to copy when initializing the user data
-#
-# NO UPDATE IS POSSIBLE ON THESE DIRECTORIES WHEN batocera.linux IS UPDATED
-#
-# there are almost empty, it's just for the structure
-# the user can delete the directory, it will recreate the structure
-# the user can delete files, files will not be recreated
-for FILE in music bios extractions kodi library saves screenshots splash \
-            system/.config/lirc/lircd.conf \
-            system/configs/emulationstation/es_input.cfg \
-            system/configs/emulationstation/es_settings.cfg \
-            system/.kodi \
-            system/configs/amiberry \
-            system/configs/cannonball \
-            system/configs/dosbox \
-            system/configs/mupen64 \
-            system/configs/ppsspp \
-            system/configs/shadersets \
-            system/configs/umtool \
-            system/configs/xarcade2jstick \
-            system/batocera.conf \
-            system/pacman/hooks/batocera-install.hook \
-            system/pacman/hooks/batocera-uninstall.hook \
-            system/pacman/pacman.conf \
-            bios/mame2003
-do
-    # not wanted for kodi
-    test -e "${IN}/${FILE}" && test ! -e "${OUT}/${FILE}" && mkdir -p $(dirname "${OUT}/${FILE}") && cp -r "${IN}/${FILE}" "${OUT}/${FILE}"
-done
-
-### specific directories
-# decorations - copy only the readme file
-mkdir -p "${OUT}/decorations"
-test -e "${OUT}/decorations/readme.txt" || cp -r "${IN}/decorations/readme.txt" "${OUT}/decorations/readme.txt"
-
-# themes
-mkdir -p "${OUT}/themes"
-
 # directories to force directories exists
 # files are linked
 #
@@ -87,6 +49,46 @@ do
 	    done
     fi
 done
+
+# directories / files to copy when initializing the user data
+#
+# NO UPDATE IS POSSIBLE ON THESE DIRECTORIES WHEN batocera.linux IS UPDATED
+#
+# there are almost empty, it's just for the structure
+# the user can delete the directory, it will recreate the structure
+# the user can delete files, files will not be recreated
+for FILE in music bios extractions kodi library saves screenshots splash \
+            system/.config/lirc/lircd.conf \
+            system/configs/emulationstation/es_input.cfg \
+            system/configs/emulationstation/es_settings.cfg \
+            system/.kodi \
+            system/configs/amiberry \
+            system/configs/cannonball \
+            system/configs/dosbox \
+            system/configs/mupen64 \
+            system/configs/ppsspp \
+            system/configs/shadersets \
+            system/configs/umtool \
+            system/configs/xarcade2jstick \
+            system/configs/theforceengine \
+            system/batocera.conf \
+            system/pacman/hooks/batocera-install.hook \
+            system/pacman/hooks/batocera-uninstall.hook \
+            system/pacman/pacman.conf \
+            bios/mame2003 \
+            roms/ports/rtcw
+do
+    # not wanted for kodi
+    test -e "${IN}/${FILE}" && test ! -e "${OUT}/${FILE}" && mkdir -p $(dirname "${OUT}/${FILE}") && cp -r "${IN}/${FILE}" "${OUT}/${FILE}"
+done
+
+### specific directories
+# decorations - copy only the readme file
+mkdir -p "${OUT}/decorations"
+test -e "${OUT}/decorations/readme.txt" || cp -r "${IN}/decorations/readme.txt" "${OUT}/decorations/readme.txt"
+
+# themes
+mkdir -p "${OUT}/themes"
 
 # ssh : create directory, but not keys because lack of entropy, dropbear will automatically generate key on client connection
 mkdir -p /userdata/system/ssh

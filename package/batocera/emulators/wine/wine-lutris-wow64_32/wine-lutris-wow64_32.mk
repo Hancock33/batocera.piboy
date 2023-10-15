@@ -3,7 +3,7 @@
 # wine-lutris-wow64_32
 #
 ################################################################################
-
+# Version: Commits on Oct 13, 2023
 WINE_LUTRIS_WOW64_32_VERSION = $(WINE_LUTRIS_VERSION)
 WINE_LUTRIS_WOW64_32_STAGING_VERSION = $(WINE_LUTRIS_STAGING_VERSION)
 WINE_LUTRIS_WOW64_32_SOURCE = wine-$(WINE_LUTRIS_VERSION).tar.gz
@@ -14,7 +14,6 @@ WINE_LUTRIS_WOW64_32_CPE_ID_VENDOR = winehq
 WINE_LUTRIS_WOW64_32_SELINUX_MODULES = wine
 WINE_LUTRIS_WOW64_32_DEPENDENCIES = host-bison host-flex host-wine-lutris
 HOST_WINE_LUTRIS_WOW64_32_DEPENDENCIES = host-bison host-flex host-clang host-lld
-WINE_LUTRIS_WOW64_32_STAGING = 8.17.1
 HOST_WINE_LUTRIS_WOW64_32_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/v$(WINE_LUTRIS_WOW64_32_STAGING_VERSION)/wine-staging-v$(WINE_LUTRIS_WOW64_32_STAGING_VERSION).tar.gz
 
 # Configure Lutris
@@ -27,8 +26,8 @@ define WINE_LUTRIS_WOW64_32_AUTOGEN
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/lutris
 	# Use Staging Patches
-	tar -xf $(WINE_LUTRIS_DL_DIR)/wine-staging-v$(WINE_LUTRIS_WOW64_32_STAGING_VERSION).tar.gz -C $(@D)
-	cd $(@D); ./wine-staging-$(WINE_LUTRIS_WOW64_32_STAGING_VERSION)/staging/patchinstall.py --all
+	tar -xf $(WINE_LUTRIS_DL_DIR)/wine-staging-v$(WINE_LUTRIS_STAGING_VERSION).tar.gz -C $(@D)
+	cd $(@D); ./wine-staging-$(WINE_LUTRIS_STAGING_VERSION)/staging/patchinstall.py --all
 	# Autotools generation
 	cd $(@D); autoreconf -fiv
 	cd $(@D); ./tools/make_requests

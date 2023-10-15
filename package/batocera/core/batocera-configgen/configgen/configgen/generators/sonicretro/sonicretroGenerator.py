@@ -7,6 +7,9 @@ from generators.Generator import Generator
 import controllersConfig
 import configparser
 
+sm_src = "/usr/share/game_assets/sonicmania/Game.so"
+sm_dst = "/userdata/roms/ports/sonicretro/Sonic Mania.som/Game.so"
+
 class SonicRetroGenerator(Generator):
     def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
 
@@ -15,6 +18,7 @@ class SonicRetroGenerator(Generator):
             iniFile = rom + '/settings.ini'
             emu = "sonic2013"
         elif (rom.lower()).endswith('som'):
+            shutil.copyfile(sm_src, sm_dst)
             iniFile = rom + '/Settings.ini'
             emu = 'sonicmania'
         elif (rom.lower()).endswith('snx'):

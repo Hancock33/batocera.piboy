@@ -3,8 +3,8 @@
 # dxx-rebirth
 #
 ################################################################################
-
-DXX_REBIRTH_VERSION = 5c900ca7a72398a9d9e46428cb1d684eba0a5cc5
+# Version: Commits on Oct 08, 2023
+DXX_REBIRTH_VERSION = 3ad507fad88f7475751e2ca94d911c97c62cbc65
 DXX_REBIRTH_SITE = https://github.com/dxx-rebirth/dxx-rebirth
 DXX_REBIRTH_SITE_METHOD=git
 DXX_REBIRTH_DEPENDENCIES = host-scons sdl2 sdl2_image sdl2_mixer libpng physfs

@@ -2536,13 +2536,6 @@ libretro:
                 choices:
                     "On":            1
                     "Off (Default)": 0
-            customcfg:
-                group: ADVANCED OPTIONS
-                prompt:      CUSTOM MAME CONFIG
-                description: Set system-wide controls via MAME menu
-                choices:
-                    "On":  1
-                    "Off": 0
     mame:
       features: [padtokeyboard, netplay]
       shared: [autosave]
@@ -2638,13 +2631,6 @@ libretro:
                 choices:
                     "On":            1
                     "Off (Default)": 0
-            customcfg:
-                group: ADVANCED OPTIONS
-                prompt:      CUSTOM MAME CONFIG
-                description: Set system-wide controls via MAME menu
-                choices:
-                    "On":  1
-                    "Off": 0
             offscreenreload:
                 group: LIGHT GUN
                 prompt:      OFF-SCREEN RELOAD BUTTON
@@ -3729,13 +3715,6 @@ libretro:
                 choices:
                     "On":            1
                     "Off (Default)": 0
-            customcfg:
-                group: ADVANCED OPTIONS
-                prompt:      CUSTOM MAME CONFIG
-                description: Set system-wide controls via MAME menu
-                choices:
-                    "On":  1
-                    "Off": 0
       systems:
         vgmplay:
               cfeatures:
@@ -11590,7 +11569,7 @@ ryujinx:
             "Enabled":  "true"
 samcoupe:
   features: [padtokeyboard]
-  shared: [videomode, powersave, hud, hud_corner]
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 hcl:
   features: [padtokeyboard]
   shared: [videomode, hud, hud_corner]
@@ -11895,7 +11874,7 @@ omf2097:
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 opentyrian:
   features: [padtokeyboard]
-  shared: [videomode, hud, hud_corner]
+  shared: [videomode, powersave, hud, hud_corner]
 pcexhumed:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -11949,6 +11928,65 @@ rott:
 rtcw:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+    iortcw_api:
+      submenu: GRAPHICS
+      prompt: RENDERER
+      description: Choose your preferred renderer.
+      choices:
+        "Standard OpenGL (Default)": "opengl1"
+        "Enhanced OpenGL":           "rend2"
+    iortcw_vsync:
+      submenu: GRAPHICS
+      prompt: VSYNC
+      description: Fix screen tearing.
+      choices:
+        "Disabled (Default)": 0
+        "Enabled":            1
+    iortcw_fps:
+      submenu: GRAPHICS
+      prompt: REFRESH RATE
+      description: Set the desired maximum refresh rate when Vsync is off.
+      choices:
+        "30 fps":           "30"
+        "50 fps":           "50"
+        "60 fps (Default)": "60"
+        "75 fps":           "75"
+        "120 fps":          "120"
+    iortcw_filtering:
+      submenu: GRAPHICS
+      prompt: ANISOTROPIC FILTERING
+      description: Improves clarity of distant textures.
+      choices:
+        "2x (Default)": "2"
+        "4x":           "4"
+        "8x":           "8"
+        "16x":          "16"
+    iortcw_aa:
+      submenu: GRAPHICS
+      prompt: ANTI-ALIASING
+      description: Enhancement. Smooth out jagged edges on 3D object polygons.
+      choices:
+        "None (Default)": "0"
+        "2x":             "2"
+        "4x":             "4"
+        "8x":             "8"
+        "16x":            "16"
+    iortcw_skip_video:
+      prompt: SKIP INTRO VIDEO
+      description: Skip the initial intro video.
+      choices:
+        "Play (Default)": 0
+        "Skip":           1
+    iortcw_language:
+      prompt: LANGUAGE
+      description: Change the game's language.
+      choices:
+        "English (Default)": 0
+        "French":            1
+        "German":            2
+        "Italian":           3
+        "Spanish":           4
 serioussam:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -12023,6 +12061,148 @@ themehospital:
       choices:
         "Enabled (Default)": "true"
         "Disabled": "false"
+theforceengine:
+  features: [padtokeyboard]
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+    force_render_res:
+      submenu: GRAPHICS
+      prompt: RENDERING RESOLUTION
+      description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
+      choices:
+        "200p":  200
+        "400p":  400
+        "480p":  480
+        "600p":  600
+        "720p":  720
+        "768p":  768
+        "800p":  800
+        "960p":  960
+        "1050p": 1050
+        "1080p": 1080
+        "1200p": 1200
+        "1392p": 1392
+        "1440p": 1440
+        "1536p": 1536
+        "2160p": 2160
+    force_widescreen:
+      submenu: GRAPHICS
+      prompt: ENABLE WIDESCREEN
+      description: Enable widescreen support.
+      choices:
+        "Disabled (Default)": 0
+        "Enabled":            1
+    force_vsync:
+      submenu: GRAPHICS
+      prompt: VSYNC
+      description: Fix screen tearing.
+      choices:
+        "Disabled":          0
+        "Enabled (Default)": 1
+    force_rate:
+      submenu: GRAPHICS
+      prompt: REFRESH RATE
+      description: Set the desired maximum refresh rate when Vsync is off.
+      choices:
+        "30 fps":           "30"
+        "50 fps":           "50"
+        "60 fps (Default)": "60"
+        "75 fps":           "75"
+        "120 fps":          "120"
+        "144 fps":          "144"
+        "240 fps":          "240"
+    force_api:
+      submenu: GRAPHICS
+      prompt: GRAPHICS RENDERER
+      description: Choose which graphics renderer to use.
+      choices:
+        "Classic Software":       0
+        "GPU / OpenGL (Default)": 1
+    force_colour:
+      submenu: GRAPHICS
+      prompt: ENABLE TRUE COLOUR
+      choices:
+        "Disabled (Default)": 0
+        "Enabled":            1
+    force_bilinear:
+      submenu: GRAPHICS
+      prompt: ENABLE BILINEAR FILTER
+      choices:
+        "Disabled (Default)": 0
+        "Enabled":            1
+    force_mipmapping:
+      submenu: GRAPHICS
+      prompt: ENABLE MIPMAPPING
+      choices:
+        "Disabled (Default)": 0
+        "Enabled":            1
+    force_crosshair:
+      submenu: GRAPHICS
+      prompt: ENABLE CROSSHAIR
+      choices:
+        "Disabled (Default)": 0
+        "Enabled":            1
+    force_postfx:
+      submenu: GRAPHICS
+      prompt: ENABLE BLOOM
+      description: Choose to use Bloom post processing.
+      choices:
+        "Disabled (Default)": 0
+        "Enabled":            1
+    force_menu_sound:
+      prompt: MENU SOUNDS
+      description: Enable / Disable sound in menus.
+      choices:
+        "Disabled":          0
+        "Enabled (Default)": 1
+    force_digital_audio:
+      prompt: DIGITAL AUDIO
+      description: Enable 16-channel iMuse Digital Audio.
+      choices:
+        "Disabled (Default)": 0
+        "Enabled":            1    
+    force_fight_music:
+      prompt: FIGHT MUSIC
+      description: Enable / Disable fight music.
+      choices:
+        "Disabled":          0
+        "Enabled (Default)": 1
+    force_auto_aim:
+      prompt: AUTO AIM
+      description: Enable / Disable automatic aiming.
+      choices:
+        "Disabled":          0
+        "Enabled (Default)": 1
+    force_secret_msg:
+      prompt: SHOW SECRET MESSAGES
+      description: Enable / Disable showing secret found messages.
+      choices:
+        "Disabled":          0
+        "Enabled (Default)": 1
+    force_auto_run:
+      prompt: AUTOMATICALLY RUN
+      choices:
+        "Disabled (Default)": 0
+        "Enabled":            1
+    force_boba:
+      prompt: BOBBA FETT FIX
+      description: Bobba Fett Face Player Fix
+      choices:
+        "Disabled (Default)": 0
+        "Enabled":            1
+    force_smooth_vues:
+      prompt: SMOOTH VUES
+      choices:
+        "Disabled (Default)": 0
+        "Enabled":            1    
+    force_skip_cutscenes:
+      group: ADVANCED OPTIONS
+      prompt: SKIP CUTSCENES
+      description: Choose to enable or disable cutscenes.
+      choices:
+        "Show All":     "show"
+        "Skip Initial": "initial"
+        "Skip All":     "skip"
 thextech:
   features: [padtokeyboard]
   shared: [videomode, powersave, hud, hud_corner]
