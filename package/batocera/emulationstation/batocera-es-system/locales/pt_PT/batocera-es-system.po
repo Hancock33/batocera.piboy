@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-09 21:35+0000\n"
-"PO-Revision-Date: 2023-10-09 21:47+0000\n"
+"PO-Revision-Date: 2023-10-11 12:21+0000\n"
 "Last-Translator: coiotato\n"
 "Language-Team: Portuguese (Portugal)\n"
 "Language: pt-PT\n"
@@ -11,7 +11,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"\n"
 "X-Loco-Source-Locale: en_PT\n"
 "X-Loco-Parser: loco_parse_po\n"
 "X-Generator: Loco https://localise.biz/\n"
@@ -4925,7 +4924,7 @@ msgstr ""
 "Útil para comandos no estilo da N64. Teclas de atalho limitadas para "
 "comandos sem tecla de atalho dedicada."
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, dolphin, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
 msgctxt "game_options"
 msgid "CONTROLLER 1"
 msgstr "COMANDO 1"
@@ -4955,7 +4954,7 @@ msgctxt "game_options"
 msgid "Useful for N64 style controllers."
 msgstr "Útil para comandos no estilo de N64."
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, dolphin, dolphin, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
 msgctxt "game_options"
 msgid "CONTROLLER 2"
 msgstr "COMANDO 2"
@@ -4974,11 +4973,6 @@ msgstr "COMANDO 4"
 msgctxt "game_options"
 msgid "Emulate a pak in the controller expansion port."
 msgstr "Emula um cartão de memória PAK na porta de expansão do comando."
-
-#. TRANSLATION: libretro/mupen64plus-next
-msgctxt "game_options"
-msgid "CONTOLLER 1"
-msgstr "COMANDO 1"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -5556,11 +5550,6 @@ msgstr "AUTOMÁTICO"
 msgctxt "game_options"
 msgid "N64 3-point"
 msgstr "N64 3-pontos"
-
-#. TRANSLATION: libretro/parallel_n64
-msgctxt "game_options"
-msgid "CONTOLLER 2"
-msgstr "COMANDO 2"
 
 #. TRANSLATION: libretro/pce, libretro/pce_fast
 msgctxt "game_options"
@@ -8840,8 +8829,8 @@ msgstr "NeGcon (Vibração)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Reduces wobbly polygongs & warping textures."
-msgstr "Reduz polígonos oscilantes e texturas deformadas."
+msgid "Reduces wobbly polygons & warping textures."
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -13073,13 +13062,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "Set the desired maximum refresh rate when Vsync is off."
 msgstr ""
-"Defina a taxa de atualização máxima desejada quando o Vsync estiver "
-"desligado."
+"Define a taxa de atualização máxima pretendida quando Vsync está desligado."
 
 #. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
 msgid "REFRESH RATE"
-msgstr "TAXA DE ATUALIZAÇÃO"
+msgstr "TAXA DE ACTUALIZAÇÃO"
 
 #. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
@@ -13094,7 +13082,7 @@ msgstr "50 fps"
 #. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
 msgid "60 fps (Default)"
-msgstr "60 fps (Default)"
+msgstr "60 fps (Predefinição)"
 
 #. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
@@ -13228,12 +13216,12 @@ msgstr "240 fps"
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Choose which graphics renderer to use."
-msgstr "Escolha qual renderizador gráfico a usar."
+msgstr "Escolha o renderizador de gráficos a utilizar."
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "GRAPHICS RENDERER"
-msgstr "RENDERIZADOR GRÁFICO"
+msgstr "RENDERIZADOR DE GRÁFICOS"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -13243,17 +13231,17 @@ msgstr "Software Clássico"
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "GPU / OpenGL (Default)"
-msgstr "GPU/OpenGL (Padrão)"
+msgstr "GPU / OpenGL (Predefinição)"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "ENABLE TRUE COLOUR"
-msgstr "ATIVAR COR VERDADEIRA"
+msgstr "ATIVAR TRUE COLOUR"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "ENABLE BILINEAR FILTER"
-msgstr "ATIVAR FILTRO BILINEAR"
+msgstr "ACTIVAR FILTRO BILINEAR"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -13263,12 +13251,12 @@ msgstr "ATIVAR MIPMAPPING"
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "ENABLE CROSSHAIR"
-msgstr "ATIVAR CRUZ"
+msgstr "ATIVAR MIRA"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Choose to use Bloom post processing."
-msgstr "Escolha usar o pós-processamento Bloom."
+msgstr "Escolha utilizar o pós-processamento Bloom."
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -13278,12 +13266,12 @@ msgstr "ATIVAR BLOOM"
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Enable / Disable sound in menus."
-msgstr "Ativar / Desativar som nos menus."
+msgstr "Ativar / desativar o som nos menus."
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "MENU SOUNDS"
-msgstr "SONS DO MENU"
+msgstr "SOMS DO MENU"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -13293,22 +13281,22 @@ msgstr "Ativar o áudio digital iMuse de 16 canais."
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "DIGITAL AUDIO"
-msgstr "ÁUDIO DIGITAL"
+msgstr "AUDIO DIGITAL"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Enable / Disable fight music."
-msgstr "Ativar / Desativar música de luta."
+msgstr "Ativar / Desativar a música de combate."
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "FIGHT MUSIC"
-msgstr "MÚSICA DE LUTA"
+msgstr "MÚSICA DE COMBATE"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Enable / Disable automatic aiming."
-msgstr "Ativar / Desativar mira automática."
+msgstr "Ativar / Desativar a mira automática."
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -13318,7 +13306,7 @@ msgstr "MIRA AUTOMÁTICA"
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Enable / Disable showing secret found messages."
-msgstr "Ativar / Desativar a exibição de mensagens secretas encontradas."
+msgstr "Ativar / Desativar mensagens de secredo encontrado."
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -13328,42 +13316,42 @@ msgstr "MOSTRAR MENSAGENS SECRETAS"
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "AUTOMATICALLY RUN"
-msgstr "EXECUTAR AUTOMATICAMENTE"
+msgstr "CORRER AUTOMATICAMENTE"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Bobba Fett Face Player Fix"
-msgstr "Correção do jogador facial de Bobba Fett"
+msgstr "Correção do rosto do Bobba Fett"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "BOBBA FETT FIX"
-msgstr "CORREÇÃO DE BOBBA FETT"
+msgstr "CORREÇÃO DO BOBBA FETT"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "SMOOTH VUES"
-msgstr "VISÕES SUAVES"
+msgstr "VUAS SUAVES"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Choose to enable or disable cutscenes."
-msgstr "Escolha ativar ou desativar cutscenes."
+msgstr "Escolha se quer ativar ou desativar as cutscenes."
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "SKIP CUTSCENES"
-msgstr "SALTAR CUTSCENES"
+msgstr "SALTAR CUTSCENE"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Show All"
-msgstr "Mostrar Tudo"
+msgstr "Mostrar tudo"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Skip Initial"
-msgstr "Saltar Inicial"
+msgstr "Saltar Início"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -14094,7 +14082,7 @@ msgstr "Select"
 #. TRANSLATION: corsixth.keys, rtcw.keys
 msgctxt "keys_files"
 msgid "Quick save"
-msgstr "Save rápido"
+msgstr "Guardar rápido"
 
 #. TRANSLATION: corsixth.keys, rtcw.keys
 msgctxt "keys_files"
@@ -14199,7 +14187,7 @@ msgstr "Gerir equipa"
 #. TRANSLATION: rtcw.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Skip cutscene"
-msgstr "Saltar Cutscenes"
+msgstr "Saltar cuscene"
 
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
@@ -14254,12 +14242,12 @@ msgstr ""
 #. TRANSLATION: theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Load"
-msgstr "CARREGAMENTO RÁPIDO"
+msgstr "Carregamento Rápido"
 
 #. TRANSLATION: theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Save"
-msgstr "SAVE RÁPIDO"
+msgstr "Guardar Rápido"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
@@ -14523,3 +14511,15 @@ msgstr "SAVE RÁPIDO"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTOLLER 2"
+#~ msgstr "COMANDO 2"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTOLLER 1"
+#~ msgstr "COMANDO 1"
+
+#~ msgctxt "game_options"
+#~ msgid "Reduces wobbly polygongs & warping textures."
+#~ msgstr "Reduz polígonos oscilantes e texturas deformadas."
