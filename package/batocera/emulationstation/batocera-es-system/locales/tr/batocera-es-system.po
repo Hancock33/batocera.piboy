@@ -4909,7 +4909,7 @@ msgid ""
 "dedicated hotkey."
 msgstr ""
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, dolphin, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
 msgctxt "game_options"
 msgid "CONTROLLER 1"
 msgstr ""
@@ -4939,7 +4939,7 @@ msgctxt "game_options"
 msgid "Useful for N64 style controllers."
 msgstr ""
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, dolphin, dolphin, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
 msgctxt "game_options"
 msgid "CONTROLLER 2"
 msgstr ""
@@ -4958,11 +4958,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Emulate a pak in the controller expansion port."
 msgstr "Kontrol aygıtı genişleme bağlantı noktasında pak emüle et."
-
-#. TRANSLATION: libretro/mupen64plus-next
-msgctxt "game_options"
-msgid "CONTROLLER 1"
-msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -5540,11 +5535,6 @@ msgstr "Otomatik"
 msgctxt "game_options"
 msgid "N64 3-point"
 msgstr "N64 3-nokta"
-
-#. TRANSLATION: libretro/parallel_n64
-msgctxt "game_options"
-msgid "CONTROLLER 2"
-msgstr ""
 
 #. TRANSLATION: libretro/pce, libretro/pce_fast
 msgctxt "game_options"
@@ -8796,8 +8786,8 @@ msgstr "NeGcon (Sarsıntı)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Reduces wobbly polygongs & warping textures."
-msgstr "Titreyen poligonları ve çarpık dokuları azaltır."
+msgid "Reduces wobbly polygons & warping textures."
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -14272,6 +14262,10 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "GZDOOM JOYSTICK YAPILANDIRMASINI KULLAN"
+
+#~ msgctxt "game_options"
+#~ msgid "Reduces wobbly polygongs & warping textures."
+#~ msgstr "Titreyen poligonları ve çarpık dokuları azaltır."
 
 #~ msgctxt "game_options"
 #~ msgid "hybrid top ratio 4"

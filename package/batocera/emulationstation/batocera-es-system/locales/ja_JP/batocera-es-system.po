@@ -4884,7 +4884,7 @@ msgstr ""
 "N64 スタイルのコントローラーで、ホットキー専用ボタンのない場合のホットキーは"
 "限定されます"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, dolphin, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
 msgctxt "game_options"
 msgid "CONTROLLER 1"
 msgstr "コントローラ 1"
@@ -4914,7 +4914,7 @@ msgctxt "game_options"
 msgid "Useful for N64 style controllers."
 msgstr "N64 スタイルのコントローラーに便利"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, dolphin, dolphin, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
 msgctxt "game_options"
 msgid "CONTROLLER 2"
 msgstr "コントローラ 2"
@@ -4933,11 +4933,6 @@ msgstr "コントローラ 4"
 msgctxt "game_options"
 msgid "Emulate a pak in the controller expansion port."
 msgstr "コントローラ拡張ポートで拡張パックをエミュレートします"
-
-#. TRANSLATION: libretro/mupen64plus-next
-msgctxt "game_options"
-msgid "CONTROLLER 1"
-msgstr "コントローラ 1"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -5513,11 +5508,6 @@ msgstr "自動"
 msgctxt "game_options"
 msgid "N64 3-point"
 msgstr "N64 3ポイントモード"
-
-#. TRANSLATION: libretro/parallel_n64
-msgctxt "game_options"
-msgid "CONTROLLER 2"
-msgstr "コントローラ 2"
 
 #. TRANSLATION: libretro/pce, libretro/pce_fast
 msgctxt "game_options"
@@ -8772,8 +8762,8 @@ msgstr "ネジコン(ナムコ)(振動有)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Reduces wobbly polygongs & warping textures."
-msgstr "ぐらついたポリゴンと反りのあるテクスチャを減らします"
+msgid "Reduces wobbly polygons & warping textures."
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -14382,6 +14372,18 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTOLLER 2"
+#~ msgstr "コントローラ 2"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTOLLER 1"
+#~ msgstr "コントローラ 1"
+
+#~ msgctxt "game_options"
+#~ msgid "Reduces wobbly polygongs & warping textures."
+#~ msgstr "ぐらついたポリゴンと反りのあるテクスチャを減らします"
 
 #~ msgctxt "game_options"
 #~ msgid "hybrid top ratio 4"
