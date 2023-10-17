@@ -17,6 +17,7 @@ ln -sf libmount.so.1                                     $DEST_DIR/usr/lib32/lib
 ln -sf libsmartcols.so.1                                 $DEST_DIR/usr/lib32/libsmartcols.so
 ln -sf libudev.so.1                                      $DEST_DIR/usr/lib32/libudev.so
 ln -sf libuuid.so.1                                      $DEST_DIR/usr/lib32/libuuid.so
+ln -sf /usr/lib32/pulseaudio/libpulsecommon-16.1.so      $DEST_DIR/usr/lib32/libpulsecommon-16.1.so
 ln -sf /usr/lib32                                        $DEST_DIR/lib32
 ln -sf /usr/lib32/ld-linux.so.2                          $DEST_DIR/lib/ld-linux.so.2
 
@@ -30,7 +31,9 @@ rm -rf $DEST_DIR/usr/lib32/{pcmanfm,python3.*,terminfo,udev,xorg,X11}
 rm -rf $DEST_DIR/usr/lib32/firmware
 rm -rf $DEST_DIR/usr/wine/proton/share
 rm -rf $DEST_DIR/usr/wine/lutris/share
+
 find $DEST_DIR/usr -type f -name "*.a" -exec rm {} \;
+
 cd $DEST_DIR && tar -cf $DEST_DIR.tar .
 xz -T0 -v $DEST_DIR.tar
 rm -r $DEST_DIR
