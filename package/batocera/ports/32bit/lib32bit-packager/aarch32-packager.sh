@@ -13,13 +13,18 @@ ln -sf libblkid.so.1                                     $DEST_DIR/lib32/libblki
 ln -sf libmount.so.1                                     $DEST_DIR/lib32/libmount.so
 ln -sf libsmartcols.so.1                                 $DEST_DIR/lib32/libsmartcols.so
 ln -sf libudev.so.1                                      $DEST_DIR/lib32/libudev.so
-rm -rf $DEST_DIR/lib32/{gconv,glslang,python3.*,terminfo,udev,xorg}
+ln -sf /usr/lib32/pulseaudio/libpulsecommon-16.1.so      $DEST_DIR/lib32/libpulsecommon-16.1.so
+
 mv $DEST_DIR/lib32/dri                                   $DEST_DIR/lib32/dri.old
 mkdir -p $DEST_DIR/lib32/dri
 mv $DEST_DIR/lib32/dri.old/{v3d_dri.so,vc4_dri.so}       $DEST_DIR/lib32/dri
-rm -r $DEST_DIR/lib32/dri.old
-rm -rf $DEST_DIR/usr/lib32/firmware
+
+rm -rf $DEST_DIR/lib32/dri.old
+rm -rf $DEST_DIR/lib32/firmware
+rm -rf $DEST_DIR/lib32/{gconv,glslang,python3.*,terminfo,udev,xorg}
+
 find $DEST_DIR -type f -name "*.a" -exec rm {} \;
+
 cd $DEST_DIR && tar -cf $DEST_DIR.tar .
 xz -T0 -v $DEST_DIR.tar
 rm -r $DEST_DIR
