@@ -1,14 +1,14 @@
 diff --git a/src/Makefile b/src/Makefile
-index 41cef2a17..748bb4c6c 100644
+index 539c2fa74..748bb4c6c 100644
 --- a/src/Makefile
 +++ b/src/Makefile
 @@ -141,9 +141,9 @@ endif
  
  OBJDUMP_OPTS?=--wide --source --line-numbers
  
--OBJCOPY:=$(call Prefix,objcopy)
--OBJDUMP:=$(call Prefix,objdump)
--WINDRES:=$(call Prefix,windres)
+-OBJCOPY?=$(call Prefix,objcopy)
+-OBJDUMP?=$(call Prefix,objdump)
+-WINDRES?=$(call Prefix,windres)
 +OBJCOPY:=$(OBJCOPY)
 +OBJDUMP:=$(OBJDUMP)
 +WINDRES:=$(WINDRES)
@@ -30,3 +30,4 @@ index a1bfa3303..58f5b6821 100644
 +SDL_LDFLAGS?= `pkg-config sdl2 --libs` 
  $(eval $(call Propogate_flags,SDL))
  endif
+ 
