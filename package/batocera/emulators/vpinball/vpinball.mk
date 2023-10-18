@@ -53,10 +53,10 @@ define VPINBALL_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/VPinballX_GL \
 		$(TARGET_DIR)/usr/bin/vpinball
 	# copy folders
-	cp -R $(@D)/buildroot-build/flexdmd $(TARGET_DIR)/usr/bin/vpinball/
-	cp -R $(@D)/buildroot-build/res $(TARGET_DIR)/usr/bin/vpinball/
-	cp -R $(@D)/buildroot-build/scripts $(TARGET_DIR)/usr/bin/vpinball/
-	cp -R $(@D)/buildroot-build/shader $(TARGET_DIR)/usr/bin/vpinball/
+	cp -R $(@D)/buildroot-build/flexdmd		$(TARGET_DIR)/usr/bin/vpinball/
+	cp -R $(@D)/buildroot-build/assets			$(TARGET_DIR)/usr/bin/vpinball/
+	cp -R $(@D)/buildroot-build/scripts		$(TARGET_DIR)/usr/bin/vpinball/
+	cp -R $(@D)/buildroot-build/shader		$(TARGET_DIR)/usr/bin/vpinball/
 endef
 
 define VPINBALL_EVMAPY
