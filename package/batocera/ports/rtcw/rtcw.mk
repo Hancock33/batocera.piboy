@@ -78,12 +78,14 @@ define RTCW_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/rtcw/main
 	# Single player
 	$(INSTALL) -D $(@D)/SP/build/release-linux-$(RTCW_ARCH)/iowolfsp.$(RTCW_ARCH)	$(TARGET_DIR)/usr/bin/rtcw/iowolfsp
-	$(INSTALL) -D $(@D)/SP/build/release-linux-$(RTCW_ARCH)/renderer_sp*.so 		$(TARGET_DIR)/usr/bin/rtcw/
 	$(INSTALL) -D $(@D)/SP/build/release-linux-$(RTCW_ARCH)/main/*.so 				$(TARGET_DIR)/usr/bin/rtcw/main/
 	# Multi player
 	$(INSTALL) -D $(@D)/MP/build/release-linux-$(RTCW_ARCH)/iowolfmp.$(RTCW_ARCH)	$(TARGET_DIR)/usr/bin/rtcw/iowolfmp
-	$(INSTALL) -D $(@D)/MP/build/release-linux-$(RTCW_ARCH)/renderer_mp*.so			$(TARGET_DIR)/usr/bin/rtcw/
 	$(INSTALL) -D $(@D)/MP/build/release-linux-$(RTCW_ARCH)/main/*.so				$(TARGET_DIR)/usr/bin/rtcw/main/
+	# Additions if x86_64
+	$(if $(BR2_x86_64),\
+		$(INSTALL) -D $(@D)/SP/build/release-linux-$(IORTCW_ARCH)/renderer_sp*.so	$(TARGET_DIR)/usr/bin/iortcw/; \
+		$(INSTALL) -D $(@D)/MP/build/release-linux-$(IORTCW_ARCH)/renderer_mp*.so	$(TARGET_DIR)/usr/bin/iortcw/;)
 endef
 
 # required to have fullscreen at 1st start
