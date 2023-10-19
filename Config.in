@@ -103,6 +103,7 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/r8168/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8812au/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8821au-morrownr/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8822cs/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl88x2bu/Config.in"
   endmenu
 

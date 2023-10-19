@@ -42,6 +42,16 @@
 - Xenia Canary to d36b1b3 (October 13 build)
 - ECWolf to 1.5pre
 - EDuke32 to Oct 07, 2023 build
+- Libretro-A5200 to Aug 18th build
+- Libretro-Atari800 to Aug 1st build
+- Libretro-Beetle-Lynx to Jul 22, 2023 build
+- Libretro-Beetle-PCE to Oct 6, 2023 build
+- Libretro-Beetle-PCE-Fast to Oct 6, 2023 build
+- Libretro-Beetle-PCFX to May 28, 2023 build
+- Libretro-Beetle-PSX to Oct 13, 2023 build
+- Libretro-Beetle-Saturn to May 28, 2023 build
+- Libretro-Beetle-Supergrafx to Oct 6, 2023 build
+- Libretro-Beetle-WSwan to May 27, 2023 build
 ### System
 - Linux kernel to 6.5.7
 - Mesa to 23.2.1
