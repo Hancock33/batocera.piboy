@@ -3,8 +3,8 @@
 # rpi-eeprom
 #
 ################################################################################
-# Version: Commits on Oct 18, 2023
-RPI_EEPROM_VERSION = a75b0368e094d86aaee000b917514b51cb0d2eee
+# Version: Commits on Oct 19, 2023
+RPI_EEPROM_VERSION = f13b5789f56f65112e2b8aa58be43ebfcbedfe1d
 RPI_EEPROM_SITE = $(call github,raspberrypi,rpi-eeprom,$(RPI_EEPROM_VERSION))
 RPI_EEPROM_DEPENDENCIES = rpi-userland-batocera
 
