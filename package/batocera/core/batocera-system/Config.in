@@ -1616,10 +1616,10 @@ config BR2_PACKAGE_BATOCERA_FREEDRENO_MESA3D
 config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
     bool "batocera.linux Firmware package selection"
 
-    select BR2_PACKAGE_ALLLINUXFIRMWARES                    if !BR2_PACKAGE_BATOCERA_LIB32
+    select BR2_PACKAGE_ALLLINUXFIRMWARES                    if  !BR2_PACKAGE_BATOCERA_LIB32
 
     # buildroot firmware
-    select BR2_PACKAGE_LINUX_FIRMWARE                       if  BR2_PACKAGE_BATOCERA_TARGET_RK3288
+    select BR2_PACKAGE_LINUX_FIRMWARE                       if  BR2_PACKAGE_BATOCERA_TARGET_RK3288 && !BR2_PACKAGE_BATOCERA_LIB32
 
     # common firmware
     select BR2_PACKAGE_UX500_FIRMWARE
