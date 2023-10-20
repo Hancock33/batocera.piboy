@@ -84,8 +84,8 @@ define RTCW_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/MP/build/release-linux-$(RTCW_ARCH)/main/*.so				$(TARGET_DIR)/usr/bin/rtcw/main/
 	# Additions if x86_64
 	$(if $(BR2_x86_64),\
-		$(INSTALL) -D $(@D)/SP/build/release-linux-$(IORTCW_ARCH)/renderer_sp*.so	$(TARGET_DIR)/usr/bin/iortcw/; \
-		$(INSTALL) -D $(@D)/MP/build/release-linux-$(IORTCW_ARCH)/renderer_mp*.so	$(TARGET_DIR)/usr/bin/iortcw/;)
+		$(INSTALL) -D $(@D)/SP/build/release-linux-$(RTCW_ARCH)/renderer_sp*.so		$(TARGET_DIR)/usr/bin/rtcw/; \
+		$(INSTALL) -D $(@D)/MP/build/release-linux-$(RTCW_ARCH)/renderer_mp*.so		$(TARGET_DIR)/usr/bin/rtcw/;)
 endef
 
 # required to have fullscreen at 1st start
