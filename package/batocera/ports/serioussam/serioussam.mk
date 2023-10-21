@@ -32,7 +32,6 @@ define SERIOUSSAM_INSTALL_TARGET_CMDS
 	cp -av $(SERIOUSSAM_BUILDDIR)/SamTFE/Sources/Debug/* $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
 	cp -av $(SERIOUSSAM_BUILDDIR)/SamTFE/Sources/{serioussam-ded,serioussam-mkfont,serioussam} $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
 	$(TARGET_STRIP) $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin/*
-	cp -av $(@D)/SamTFE/SE1_10b.gro										$(TARGET_DIR)/usr/share/game_assets/samtfe
 	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00.gro				$(TARGET_DIR)/usr/share/game_assets/samtfe
 	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00c.gro				$(TARGET_DIR)/usr/share/game_assets/samtfe
 	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00_ExtraTools.gro	$(TARGET_DIR)/usr/share/game_assets/samtfe
@@ -61,7 +60,6 @@ define SERIOUSSAM_INSTALL_TARGET_CMDS
 	ln -sf /usr/lib/libvorbisfile.so									$(TARGET_DIR)/usr/share/game_assets/samtse/Bin/libvorbisfile.so
 
 	# link game files
-	cp -av $(@D)/SamTSE/SE1_10b.gro										$(TARGET_DIR)/usr/share/game_assets/samtse
 	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00.gro			$(TARGET_DIR)/usr/share/game_assets/samtse
 	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_Extra.gro		$(TARGET_DIR)/usr/share/game_assets/samtse
 	ln -sf /userdata/roms/ports/serioussam/SamTSE/SE1_00_ExtraTools.gro $(TARGET_DIR)/usr/share/game_assets/samtse
