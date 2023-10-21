@@ -62,9 +62,13 @@ do
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/libretro-duckstation*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/scummvm-*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/adwaita-icon-theme-light*
+	# rpi
+	sudo rm -rf $HOME/build-dir/batocera.$i/build/lib32bit-*
 	# x86
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/syslinux*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/cemu*
+	sudo rm -rf $HOME/build-dir/batocera.$i/build/box-xcloud-client*
+	sudo rm -rf $HOME/build-dir/batocera.$i/build/wine-x86-*
 
 	echo "Building Batocera: "$i
 	cd $HOME/build-dir/batocera.$i
