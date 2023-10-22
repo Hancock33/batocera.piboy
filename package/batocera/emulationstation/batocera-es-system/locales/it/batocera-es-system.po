@@ -3382,6 +3382,7 @@ msgstr "Nessun Indicatore"
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
 msgstr ""
+"Usa un config MAME personalizzato, non sovrarscrivere il config all'avvio."
 
 #. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -4919,7 +4920,7 @@ msgstr ""
 "Utile per controllers stile N64. Hotkey limitati per controller senza hotkey "
 "dedicati."
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, dolphin, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
 msgctxt "game_options"
 msgid "CONTROLLER 1"
 msgstr "CONTROLLER 1"
@@ -4949,7 +4950,7 @@ msgctxt "game_options"
 msgid "Useful for N64 style controllers."
 msgstr "Utile per controller stile N64."
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, dolphin, dolphin, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
 msgctxt "game_options"
 msgid "CONTROLLER 2"
 msgstr "CONTROLLER 2"
@@ -4968,11 +4969,6 @@ msgstr "CONTROLLER 4"
 msgctxt "game_options"
 msgid "Emulate a pak in the controller expansion port."
 msgstr "Emula il pak nella porta di espansione del controller."
-
-#. TRANSLATION: libretro/mupen64plus-next
-msgctxt "game_options"
-msgid "CONTOLLER 1"
-msgstr "CONTOLLER 1"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -5549,11 +5545,6 @@ msgstr "Automatico"
 msgctxt "game_options"
 msgid "N64 3-point"
 msgstr "N64 3-punti"
-
-#. TRANSLATION: libretro/parallel_n64
-msgctxt "game_options"
-msgid "CONTOLLER 2"
-msgstr "CONTOLLER 2"
 
 #. TRANSLATION: libretro/pce, libretro/pce_fast
 msgctxt "game_options"
@@ -8829,8 +8820,8 @@ msgstr "NeGcon (Rumble)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Reduces wobbly polygongs & warping textures."
-msgstr "Riduce i poligoni traballanti & le textures sformate."
+msgid "Reduces wobbly polygons & warping textures."
+msgstr "Riduci i poligoni traballanti & textures deformate."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -13042,7 +13033,7 @@ msgstr ""
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Enhanced OpenGL"
-msgstr ""
+msgstr "OpenGL Enhanced"
 
 #. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
@@ -13083,22 +13074,22 @@ msgstr "120 fps"
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "2x (Default)"
-msgstr ""
+msgstr "2x (Default)"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Skip the initial intro video."
-msgstr ""
+msgstr "Salta il video della intro iniziale."
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "SKIP INTRO VIDEO"
-msgstr ""
+msgstr "SALTA VIDEO INTRO"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Play (Default)"
-msgstr ""
+msgstr "Play (Default)"
 
 #. TRANSLATION: sm64
 msgctxt "game_options"
@@ -14497,6 +14488,18 @@ msgstr "Salvataggio Rapido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "AvanzamentoRapido"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTOLLER 2"
+#~ msgstr "CONTOLLER 2"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTOLLER 1"
+#~ msgstr "CONTOLLER 1"
+
+#~ msgctxt "game_options"
+#~ msgid "Reduces wobbly polygongs & warping textures."
+#~ msgstr "Riduce i poligoni traballanti & le textures sformate."
 
 #~ msgctxt "game_options"
 #~ msgid "hybrid top ratio 4"

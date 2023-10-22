@@ -3,8 +3,8 @@
 # sm64port
 #
 ################################################################################
-# Version: Commits on Jul 01, 2023
-SM64PORT_VERSION = 54cd27ccee45a2403b45f07a00d6043c51149969
+# Version: Commits on Oct 16, 2023
+SM64PORT_VERSION = 98aa0fe3762df5d97e65f1986f15dfea33d098b5
 SM64PORT_SITE = $(call github,sm64pc,sm64ex,$(SM64PORT_VERSION))
 SM64PORT_DEPENDENCIES = sdl2
 

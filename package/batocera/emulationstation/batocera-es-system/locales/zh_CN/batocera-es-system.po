@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-10-13 01:38+0800\n"
+"PO-Revision-Date: 2023-10-15 12:11+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二\n"
 "Language: zh_CN\n"
@@ -3335,7 +3335,7 @@ msgstr "无指示器"
 #. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
-msgstr ""
+msgstr "使用自定义MAME配置文件, 不在启动时覆盖默认配置."
 
 #. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -4859,7 +4859,7 @@ msgid ""
 "dedicated hotkey."
 msgstr "适用于N64风格的控制器, 对于没有专门热键的控制器, 热键功能有限."
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, dolphin, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
 msgctxt "game_options"
 msgid "CONTROLLER 1"
 msgstr "控制器1"
@@ -4889,7 +4889,7 @@ msgctxt "game_options"
 msgid "Useful for N64 style controllers."
 msgstr "适用于N64控制器."
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, dolphin, dolphin, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
 msgctxt "game_options"
 msgid "CONTROLLER 2"
 msgstr "控制器2"
@@ -4908,11 +4908,6 @@ msgstr "控制器4"
 msgctxt "game_options"
 msgid "Emulate a pak in the controller expansion port."
 msgstr "在控制器扩展端口中模拟一个pak."
-
-#. TRANSLATION: libretro/mupen64plus-next
-msgctxt "game_options"
-msgid "CONTOLLER 1"
-msgstr "控制器1"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -5488,11 +5483,6 @@ msgstr "自动"
 msgctxt "game_options"
 msgid "N64 3-point"
 msgstr "N64 3-point"
-
-#. TRANSLATION: libretro/parallel_n64
-msgctxt "game_options"
-msgid "CONTOLLER 2"
-msgstr "控制器2"
 
 #. TRANSLATION: libretro/pce, libretro/pce_fast
 msgctxt "game_options"
@@ -8718,8 +8708,8 @@ msgstr "NeGcon (震动)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Reduces wobbly polygongs & warping textures."
-msgstr "减少不稳定的多边形和扭曲的纹理."
+msgid "Reduces wobbly polygons & warping textures."
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -12814,12 +12804,12 @@ msgstr "256MB (Default)"
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
-msgstr ""
+msgstr "标准OpenGL(默认)"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Enhanced OpenGL"
-msgstr ""
+msgstr "增强OpenGL"
 
 #. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
@@ -12859,22 +12849,22 @@ msgstr "120帧"
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "2x (Default)"
-msgstr ""
+msgstr "2x (默认)"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Skip the initial intro video."
-msgstr ""
+msgstr "跳过初始的介绍视频."
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "SKIP INTRO VIDEO"
-msgstr ""
+msgstr "跳过介绍视频"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Play (Default)"
-msgstr ""
+msgstr "播放(默认)"
 
 #. TRANSLATION: sm64
 msgctxt "game_options"
@@ -14257,6 +14247,18 @@ msgstr "快速保存"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTOLLER 2"
+#~ msgstr "控制器2"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTOLLER 1"
+#~ msgstr "控制器1"
+
+#~ msgctxt "game_options"
+#~ msgid "Reduces wobbly polygongs & warping textures."
+#~ msgstr "减少不稳定的多边形和扭曲的纹理."
 
 #~ msgctxt "game_options"
 #~ msgid "hybrid top ratio 4"

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v38beta(2023/10/10)\n"
+"Project-Id-Version: batocera-es v38beta(2023/10/15)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-10-10 13:02+0900\n"
+"PO-Revision-Date: 2023-10-15 12:55+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -3353,7 +3353,7 @@ msgstr "インジケーターなし"
 #. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
-msgstr ""
+msgstr "MAMEカスタム設定を使用する（起動時、構成を上書きしない）"
 
 #. TRANSLATION: libretro/same_cdi, libretro/mame, libretro/mame, libretro/mame, libretro/mame, ...
 msgctxt "game_options"
@@ -3413,7 +3413,7 @@ msgstr "回転式ジョイスティック（Q * Bert）"
 #. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
 msgctxt "game_options"
 msgid "Enable or disable high score saving"
-msgstr "HIGH SCOREの保存を有効または無効にします"
+msgstr "HIGH SCOREの保存を有効/無効にします"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
 msgctxt "game_options"
@@ -4344,7 +4344,7 @@ msgstr "エミュレートされたMacのRAM容量（MacIIxおよびMacLC 3の�
 #. TRANSLATION: libretro/mame
 msgctxt "game_options"
 msgid "Type of ROM file to load"
-msgstr "読み込むROMファイルのタイプ"
+msgstr "読み込むROMファイルの種類"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4709,7 +4709,7 @@ msgstr "Skynet"
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
 msgid "Enable or disable monsters in battle."
-msgstr "戦闘中のモンスターを有効または無効にします"
+msgstr "戦闘中のモンスターを有効/無効にします"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -4884,7 +4884,7 @@ msgstr ""
 "N64 スタイルのコントローラーで、ホットキー専用ボタンのない場合のホットキーは"
 "限定されます"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, dolphin, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
 msgctxt "game_options"
 msgid "CONTROLLER 1"
 msgstr "コントローラ 1"
@@ -4914,7 +4914,7 @@ msgctxt "game_options"
 msgid "Useful for N64 style controllers."
 msgstr "N64 スタイルのコントローラーに便利"
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, dolphin, dolphin, ...
+#. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
 msgctxt "game_options"
 msgid "CONTROLLER 2"
 msgstr "コントローラ 2"
@@ -4933,11 +4933,6 @@ msgstr "コントローラ 4"
 msgctxt "game_options"
 msgid "Emulate a pak in the controller expansion port."
 msgstr "コントローラ拡張ポートで拡張パックをエミュレートします"
-
-#. TRANSLATION: libretro/mupen64plus-next
-msgctxt "game_options"
-msgid "CONTOLLER 1"
-msgstr "コントローラ 1"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -5513,11 +5508,6 @@ msgstr "自動"
 msgctxt "game_options"
 msgid "N64 3-point"
 msgstr "N64 3ポイントモード"
-
-#. TRANSLATION: libretro/parallel_n64
-msgctxt "game_options"
-msgid "CONTOLLER 2"
-msgstr "コントローラ 2"
 
 #. TRANSLATION: libretro/pce, libretro/pce_fast
 msgctxt "game_options"
@@ -8005,7 +7995,7 @@ msgstr "画面の回転"
 #. TRANSLATION: daphne, flycast, melonds, moonlight
 msgctxt "game_options"
 msgid "0 degrees"
-msgstr "0 度"
+msgstr "回転しない"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
@@ -8772,8 +8762,8 @@ msgstr "ネジコン(ナムコ)(振動有)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Reduces wobbly polygongs & warping textures."
-msgstr "ぐらついたポリゴンと反りのあるテクスチャを減らします"
+msgid "Reduces wobbly polygons & warping textures."
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -11255,7 +11245,7 @@ msgstr "最良"
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
-msgstr "マウス カーソルを有効または無効にします。 CG のメニューに便利です"
+msgstr "マウス カーソルを有効/無効にします。 CG のメニューに便利です"
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
@@ -11456,7 +11446,7 @@ msgstr "MAMEメニューからシステム設定の変更を可能にします"
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "CUSTOM MAME CONFIG"
-msgstr "MAME カスタム構成"
+msgstr "MAME カスタム設定"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -12929,67 +12919,67 @@ msgstr "256MB (通常)"
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
-msgstr ""
+msgstr "標準 OpenGL (通常)"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Enhanced OpenGL"
-msgstr ""
+msgstr "Enhanced OpenGL"
 
 #. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
 msgid "Set the desired maximum refresh rate when Vsync is off."
-msgstr ""
+msgstr "Vsync がオフの場合に、希望の最大リフレッシュ レートを設定します"
 
 #. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
 msgid "REFRESH RATE"
-msgstr ""
+msgstr "リフレッシュレート"
 
 #. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
 msgid "30 fps"
-msgstr ""
+msgstr "30 fps"
 
 #. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
 msgid "50 fps"
-msgstr ""
+msgstr "50 fps"
 
 #. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
 msgid "60 fps (Default)"
-msgstr ""
+msgstr "60fps（通常）"
 
 #. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
 msgid "75 fps"
-msgstr ""
+msgstr "75 fps"
 
 #. TRANSLATION: rtcw, theforceengine
 msgctxt "game_options"
 msgid "120 fps"
-msgstr ""
+msgstr "120 fps"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "2x (Default)"
-msgstr ""
+msgstr "2x (通常)"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Skip the initial intro video."
-msgstr ""
+msgstr "最初のイントロ映像をスキップします"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "SKIP INTRO VIDEO"
-msgstr ""
+msgstr "イントロ映像をスキップ"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Play (Default)"
-msgstr ""
+msgstr "Play（標準）"
 
 #. TRANSLATION: sm64
 msgctxt "game_options"
@@ -13038,7 +13028,7 @@ msgstr "サンドボックスモードを有効"
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "Enable or Disable Intro movie (Enabled by default)."
-msgstr "イントロ 映像を有効または無効にします (通常は有効)"
+msgstr "イントロ 映像を有効/無効にします (通常は有効)"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
@@ -13048,192 +13038,192 @@ msgstr "イントロ映像を再生"
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "200p"
-msgstr ""
+msgstr "200p"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "400p"
-msgstr ""
+msgstr "400p"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "480p"
-msgstr ""
+msgstr "480p"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "600p"
-msgstr ""
+msgstr "600p"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "768p"
-msgstr ""
+msgstr "768p"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "800p"
-msgstr ""
+msgstr "800p"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "960p"
-msgstr ""
+msgstr "960p"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "144 fps"
-msgstr ""
+msgstr "144 fps"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "240 fps"
-msgstr ""
+msgstr "240 fps"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Choose which graphics renderer to use."
-msgstr ""
+msgstr "使用するグラフィックス レンダラーを選択します"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "GRAPHICS RENDERER"
-msgstr ""
+msgstr "グラフィック レンダラー"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Classic Software"
-msgstr ""
+msgstr "クラシック ソフトウェア"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "GPU / OpenGL (Default)"
-msgstr ""
+msgstr "GPU / OpenGL (通常)"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "ENABLE TRUE COLOUR"
-msgstr ""
+msgstr "トゥルーカラーを有効"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "ENABLE BILINEAR FILTER"
-msgstr ""
+msgstr "バイリニアフィルターを有効"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "ENABLE MIPMAPPING"
-msgstr ""
+msgstr "ミップマッピングを有効"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "ENABLE CROSSHAIR"
-msgstr ""
+msgstr "十字線(照準)を有効"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Choose to use Bloom post processing."
-msgstr ""
+msgstr "ブルーム後処理の使用を選択します"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "ENABLE BLOOM"
-msgstr ""
+msgstr "ブルームを有効"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Enable / Disable sound in menus."
-msgstr ""
+msgstr "メニューの音楽を有効/無効にします"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "MENU SOUNDS"
-msgstr ""
+msgstr "メニューサウンド"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Enable 16-channel iMuse Digital Audio."
-msgstr ""
+msgstr "16 チャンネル iMuse デジタル オーディオを有効にします"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "DIGITAL AUDIO"
-msgstr ""
+msgstr "デジタルオーディオ"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Enable / Disable fight music."
-msgstr ""
+msgstr "戦闘中の音楽を有効/無効にします"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "FIGHT MUSIC"
-msgstr ""
+msgstr "戦闘中の音楽"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Enable / Disable automatic aiming."
-msgstr ""
+msgstr "オートエイム(自動照準)を有効/無効にします"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "AUTO AIM"
-msgstr ""
+msgstr "オートエイム"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Enable / Disable showing secret found messages."
-msgstr ""
+msgstr "シークレット発見のメッセージ表示を有効/無効にします"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "SHOW SECRET MESSAGES"
-msgstr ""
+msgstr "シークレットメッセージを表示"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "AUTOMATICALLY RUN"
-msgstr ""
+msgstr "自動的に実行"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Bobba Fett Face Player Fix"
-msgstr ""
+msgstr "Bobba Fett プレーヤーの顔の修正"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "BOBBA FETT FIX"
-msgstr ""
+msgstr "BOBBA FETT 修正"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "SMOOTH VUES"
-msgstr ""
+msgstr "スムーズな映像"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Choose to enable or disable cutscenes."
-msgstr ""
+msgstr "カットシーンの有効/無効を選択します"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "SKIP CUTSCENES"
-msgstr ""
+msgstr "カットシーンをスキップ"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Show All"
-msgstr ""
+msgstr "すべて表示"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Skip Initial"
-msgstr ""
+msgstr "イニシャルをスキップ"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "Skip All"
-msgstr ""
+msgstr "すべてスキップ"
 
 #. TRANSLATION: thextech
 msgctxt "game_options"
@@ -13388,8 +13378,8 @@ msgid ""
 "Enable or disable Xenia patches. These patches can fix graphics problems in "
 "some games."
 msgstr ""
-"Xenia パッチを有効または無効にします。これらのパッチは、一部のゲームのグラ"
-"フィックスの問題を修正します"
+"Xenia パッチを有効/無効にします。これらのパッチは、一部のゲームのグラフィック"
+"スの問題を修正します"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -14064,7 +14054,7 @@ msgstr "スタッフ管理"
 #. TRANSLATION: rtcw.keys, theforceengine.keys
 msgctxt "keys_files"
 msgid "Skip cutscene"
-msgstr ""
+msgstr "カットシーンをスキップ"
 
 #. TRANSLATION: raze.keys
 msgctxt "keys_files"
@@ -14119,12 +14109,12 @@ msgstr ""
 #. TRANSLATION: theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Load"
-msgstr ""
+msgstr "クイック ロード"
 
 #. TRANSLATION: theforceengine.keys
 msgctxt "keys_files"
 msgid "Quick Save"
-msgstr ""
+msgstr "クイック セーブ"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
@@ -14137,7 +14127,7 @@ msgstr ""
 
 #~ msgctxt "game_options"
 #~ msgid "Enables or disable on screen messages."
-#~ msgstr "画面上のメッセージを有効または無効にします"
+#~ msgstr "画面上のメッセージを有効/無効にします"
 
 #~ msgctxt "game_options"
 #~ msgid "Optimized (auto)"
@@ -14382,6 +14372,18 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTOLLER 1"
+#~ msgstr "コントローラ 1"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTOLLER 2"
+#~ msgstr "コントローラ 2"
+
+#~ msgctxt "game_options"
+#~ msgid "Reduces wobbly polygongs & warping textures."
+#~ msgstr "ぐらついたポリゴンと反りのあるテクスチャを減らします"
 
 #~ msgctxt "game_options"
 #~ msgid "hybrid top ratio 4"

@@ -4143,7 +4143,7 @@ libretro:
                     "RetroPad (Default)": retropad
                     "N64": n64
             mupen64plus-pak1:
-                submenu:     CONTOLLER 1
+                submenu:     CONTROLLER 1
                 prompt:      CONTROLLER PAK
                 description: Emulate a pak in the controller expansion port.
                 choices:
@@ -4608,7 +4608,7 @@ libretro:
                     "N64": n64
                     "N64 (Limited Hotkeys)": n64limited
             parallel-n64-controller2:
-                submenu:     CONTOLLER 2
+                submenu:     CONTROLLER 2
                 prompt:      CONTROLLER TYPE
                 description: Useful for N64 style controllers.
                 choices:
@@ -7956,7 +7956,7 @@ duckstation:
         duckstation_pgxp:
             group: ADVANCED OPTIONS
             prompt: ENABLE PGXP CORRECTIONS
-            description: Reduces wobbly polygongs & warping textures.
+            description: Reduces wobbly polygons & warping textures.
             choices:
                 "Disabled":          "false"
                 "Enabled (Default)": "true"
