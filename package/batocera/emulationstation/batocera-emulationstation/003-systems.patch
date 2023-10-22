@@ -833,7 +833,7 @@ index 74c978fe..b090a885 100644
  	/* Non existing systems
  	{ AMIGACDTV, "129" },
 diff --git a/es-app/src/scrapers/HfsDBScraper.cpp b/es-app/src/scrapers/HfsDBScraper.cpp
-index d4e85ead..1bf8f903 100644
+index 091cb7d8..27c1bd4a 100644
 --- a/es-app/src/scrapers/HfsDBScraper.cpp
 +++ b/es-app/src/scrapers/HfsDBScraper.cpp
 @@ -74,7 +74,6 @@ const std::map<PlatformId, std::string> hfsdb_platformids

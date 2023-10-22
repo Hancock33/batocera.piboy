@@ -60,10 +60,10 @@ index bbaff22f..ef7f75c3 100644
  
  class InputConfig
 diff --git a/es-core/src/InputManager.cpp b/es-core/src/InputManager.cpp
-index 8012af2a..65556881 100644
+index ffc8c6a2..e457288e 100644
 --- a/es-core/src/InputManager.cpp
 +++ b/es-core/src/InputManager.cpp
-@@ -1223,6 +1223,7 @@ std::string InputManager::configureEmulators() {
+@@ -1220,6 +1220,7 @@ std::string InputManager::configureEmulators() {
        command << " -p" << player+1 << "nbbuttons "  << playerInputConfig->getDeviceNbButtons();
        command << " -p" << player+1 << "nbhats "     << playerInputConfig->getDeviceNbHats();
        command << " -p" << player+1 << "nbaxes "     << playerInputConfig->getDeviceNbAxes();
