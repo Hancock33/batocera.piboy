@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index 9d75e21d..8bb6805a 100644
+index 2bbe3840..8b131011 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,187 +9,276 @@ namespace PlatformIds
+@@ -9,190 +9,279 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -409,12 +409,15 @@ index 9d75e21d..8bb6805a 100644
 +		{ "crvision",				VTECH_CREATIVISION },
 +		{ "watara",					WATARA_SUPERVISION },
  
+ 		{ "pcarcade",				TEKNOPARROT },
+ 		{ "teknoparrot",			TEKNOPARROT },
+ 
 +		{ "unknown",				PLATFORM_UNKNOWN },
  		{ "ignore",					PLATFORM_IGNORE },
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index d0a1bd0c..b945f9b2 100644
+index 27417482..31dce7f6 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
 @@ -11,161 +11,249 @@ namespace PlatformIds
@@ -770,10 +773,10 @@ index d0a1bd0c..b945f9b2 100644
 -		EPOCH_GAMEPOCKET,
 -		WASM4,
  
- 		PLATFORM_IGNORE, // do not allow scraping for this system
- 		PLATFORM_COUNT
+ 		TEKNOPARROT,
+ 
 diff --git a/es-app/src/scrapers/GamesDBJSONScraper.cpp b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-index 7754fd5c..3fee637d 100644
+index 74c978fe..b090a885 100644
 --- a/es-app/src/scrapers/GamesDBJSONScraper.cpp
 +++ b/es-app/src/scrapers/GamesDBJSONScraper.cpp
 @@ -38,7 +38,6 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
@@ -814,7 +817,7 @@ index 7754fd5c..3fee637d 100644
  	// 1 = PC
  	{ PC, "1" },
  	{ MOONLIGHT, "1" },
-@@ -140,7 +137,13 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+@@ -141,7 +138,13 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ GAMATE, "5004" },
  	{ CREATONIC_MEGA_DUCK, "4948" },
  	{ TOMY_TUTOR, "4960" },
@@ -830,10 +833,10 @@ index 7754fd5c..3fee637d 100644
  	/* Non existing systems
  	{ AMIGACDTV, "129" },
 diff --git a/es-app/src/scrapers/HfsDBScraper.cpp b/es-app/src/scrapers/HfsDBScraper.cpp
-index 40348266..0f3f1465 100644
+index 091cb7d8..27c1bd4a 100644
 --- a/es-app/src/scrapers/HfsDBScraper.cpp
 +++ b/es-app/src/scrapers/HfsDBScraper.cpp
-@@ -73,7 +73,6 @@ const std::map<PlatformId, std::string> hfsdb_platformids
+@@ -74,7 +74,6 @@ const std::map<PlatformId, std::string> hfsdb_platformids
  	{ GX4000, "30250" },
  	{ INTELLIVISION, "84444" },
  	{ SEGA_MASTER_SYSTEM, "82166" },
@@ -842,10 +845,10 @@ index 40348266..0f3f1465 100644
  	{ MSX, "113089" },
  	{ NOKIA_NGAGE, "128704" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index 6e03a8bb..ecc699d3 100644
+index 84b832a5..3397c1ac 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -36,152 +36,233 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
+@@ -36,154 +36,234 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
@@ -1035,6 +1038,8 @@ index 6e03a8bb..ecc699d3 100644
 -	{ VISUALPINBALL, 198 },
 -	{ FUTUREPINBALL, 199 },
 -	
+-	{ TEKNOPARROT, 138 }, // Use "PC Windows", as it's the nearest
+-
 -	// Misc
 -	{ VIC20, 73 },
 +	{ SEGA_SG1000, 109 },
@@ -1067,6 +1072,7 @@ index 6e03a8bb..ecc699d3 100644
 +	{ WIN3, 136 },
 +	{ WIN95, 137 },
 +	{ MOONLIGHT, 138 },
++	{ TEKNOPARROT, 138 }, // Use "PC Windows", as it's the nearest
 +	{ AMIGACD32H, 139 },
  	{ THOMSON_TO_MO, 141 },
 +	{ NEOGEO, 142 },
@@ -1192,3 +1198,4 @@ index 6e03a8bb..ecc699d3 100644
 +	{ ARDUBOY, 263 },
  	{ GAMATE, 266 }
  };
+ 

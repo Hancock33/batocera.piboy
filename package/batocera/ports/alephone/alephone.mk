@@ -3,13 +3,12 @@
 # alephone
 #
 ################################################################################
-# Version: Commits on Oct 03, 2023
-ALEPHONE_VERSION = fbbb2d041955f590bf6e02fb244cc224e6c11714
+# Version: Commits on Oct 21, 2023
+ALEPHONE_VERSION = 2da0b7065a2e9485a6da97865bd53f368e0a5ae1
 ALEPHONE_SITE = $(call github,Aleph-One-Marathon,alephone,$(ALEPHONE_VERSION))
 
 ALEPHONE_DEPENDENCIES = boost sdl2 sdl2_image sdl2_ttf sdl2_net
 ALEPHONE_LICENSE = GPLv3
-#ALEPHONE_AUTORECONF = YES
 ALEPHONE_SUPPORTS_IN_SOURCE_BUILD = NO
 ALEPHONE_CONF_OPTS = \
 					--disable-sdltest \
@@ -18,6 +17,11 @@ ALEPHONE_CONF_OPTS = \
 					--with-boost-libdir="$(STAGING_DIR)/usr/lib" \
 					--prefix=/usr \
 					--without-miniupnpc
+
+define ALEPHONE_AUTOCONFIG
+	cd $(@D) && autoreconf -f -i
+endef
+ALEPHONE_PRE_CONFIGURE_HOOKS += ALEPHONE_AUTOCONFIG
 
 define ALEPHONE_INSTALL_TARGET_CMDS
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) STRIP=/bin/true DESTDIR=$(TARGET_DIR) install

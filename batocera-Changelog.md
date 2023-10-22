@@ -1,13 +1,16 @@
 # 202x/xx/xx - batocera.linux 39 - 
 ### Hardware
 - Initial support for the AYN Loki MiniPro (Speakers not working)
+- Initial support for the Anbernic RG353V
 ### Added
+- Additional ES controller settings for Dolphin.
+- DPLII/Surround Sound ES setting for Dolphin. Note there is a mild performance cost.
 - The Force Engine: Play Dark Forces with enhanced graphics.
 - IORTCW: Play Return to Castle Wolfenstein with enhanced graphics.
 ### Fixed
-
+- Dolphin bug that prevented full range of analog trigger axis being used.
 ### Changed
-
+- L|R activate in-game "Z" input in Dolphin for GC controllers/GC games if controller has L+R inputs mapped.
 ### Updated
 - Retroarch to 1.16.0.3
 - GroovyMAME 0.259 - Switchres 2.002w
@@ -39,15 +42,26 @@
 - Xenia to v1.0.2808
 - Xenia Canary to d36b1b3 (October 13 build)
 - ECWolf to 1.5pre
+- EDuke32 to Oct 07, 2023 build
+- Libretro-A5200 to Aug 18th build
+- Libretro-Atari800 to Aug 1st build
+- Libretro-Beetle-Lynx to Jul 22, 2023 build
+- Libretro-Beetle-PCE to Oct 6, 2023 build
+- Libretro-Beetle-PCE-Fast to Oct 6, 2023 build
+- Libretro-Beetle-PCFX to May 28, 2023 build
+- Libretro-Beetle-PSX to Oct 13, 2023 build
+- Libretro-Beetle-Saturn to May 28, 2023 build
+- Libretro-Beetle-Supergrafx to Oct 6, 2023 build
+- Libretro-Beetle-WSwan to May 27, 2023 build
 ### System
-- Linux kernel to 6.5.7
+- Linux kernel to 6.5.8
 - Mesa to 23.2.1
 - Proton to 8.0-4b
 - FAudio to 23.10
 - Nvidia production driver to 535.113.01
 - SDL2 to 2.28.4
 
-# 2023/10/xx - batocera.linux 38 - Blue Moon
+# 2023/10/16 - batocera.linux 38 - Blue Moon
 ### Hardware
 - Warning: Batocera is now set up to the default TV resolution on most systems. If you are running a Raspberry Pi4 or a low-end PC on a display capable of higher than 1080p and notice a performance problem, please adjust a one-time configuration option in SYSTEM SETTINGS -> FRONTEND DEVELOPER OPTIONS -> VIDEO MODE for EmulationStation. You can also still set the emulators resolution in GAME SETTINGS -> VIDEO MODE.
 - Added support for:
@@ -75,7 +89,7 @@
 - Play! PS2 emulator with support for Namco 246 & 256 systems
 - TheXTech game engine for Super Mario-like SMBX platform games
 - Tandy / Memorex Video Information System (VIS)
-- Visual Pinball X (Standalone) for X86_64, RPi4 & RK3588 boards
+- Visual Pinball X (Standalone) for X86_64 & RK3588 boards
 - Added Sega Pico system entry utilizing existing emulator cores
 - Added Hydra Castle Labyrinth, a 16-bit platformer game (through content downloader)
 - Added Hurrican, a Turrican clone (through content downloader)

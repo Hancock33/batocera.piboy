@@ -26,6 +26,7 @@ define ARCHIVE_ARM
 	ln -sf libsmartcols.so.1								$(DEST_DIR)/lib32/libsmartcols.so
 	ln -sf libudev.so.1										$(DEST_DIR)/lib32/libudev.so
 	ln -sf libuuid.so.1										$(DEST_DIR)/lib32/libuuid.so
+	ln -sf /usr/lib32/pulseaudio/libpulsecommon-16.1.so		$(DEST_DIR)/lib32/libpulsecommon-16.1.so
 	rm -rf $(DEST_DIR)/lib32/{gconv,glslang,python3.*,terminfo,udev,xorg}
 	mv $(DEST_DIR)/lib32/dri								$(DEST_DIR)/lib32/dri.old
 	mkdir -p $(DEST_DIR)/lib32/dri
