@@ -1,19 +1,19 @@
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
-index 02024860..174477dd 100644
+index 4aaebfe7..ad4d6441 100644
 --- a/es-core/src/utils/Platform.cpp
 +++ b/es-core/src/utils/Platform.cpp
-@@ -169,7 +169,7 @@ namespace Utils
- #ifdef WIN32 // windows
- 			return system("shutdown -s -t 0");
+@@ -173,7 +173,7 @@ namespace Utils
+ #elseif PIBOY
+ 	return system("/sbin/rmmod xpi_gamecon ; /sbin/rmmod xpi_gamecon_xrs shutdown -t1 now -h");
  #else // osx / linux	
 -			return system("shutdown -h now");
 +			return system("shutdown -t1 now -h");
  #endif
  		}
  
-@@ -178,7 +178,7 @@ namespace Utils
- #ifdef WIN32 // windows	
- 			return system("shutdown -r -t 0");
+@@ -184,7 +184,7 @@ namespace Utils
+ #elseif PIBOY
+ 	return system("reboot");
  #else // osx / linux	
 -			return system("shutdown -r now");
 +			return system("shutdown -t1 now -r");

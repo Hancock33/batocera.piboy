@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 1247627c..47b19f1f 100644
+index 8bb253bb..1866bc93 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -9,6 +9,8 @@ option(BCM "BCM host" OFF)
@@ -11,7 +11,7 @@ index 1247627c..47b19f1f 100644
  
  option(ENABLE_FILEMANAGER "Set to ON to enable f1 shortcut for filesystem" OFF)
  option(DISABLE_KODI "Set to ON to disable kodi in menu" OFF)
-@@ -96,6 +98,16 @@ if(RETROBAT)
+@@ -97,6 +99,16 @@ if(RETROBAT)
    add_definitions(-DRETROBAT)
  endif()
  
@@ -29,7 +29,7 @@ index 1247627c..47b19f1f 100644
  if(DISABLE_KODI)
    MESSAGE("Kodi disabled")
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 000a46aa..8b08b6b3 100644
+index a927925d..b32886b3 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -73,8 +73,15 @@
@@ -64,7 +64,7 @@ index 000a46aa..8b08b6b3 100644
  	}
  	else
  	{
-@@ -815,7 +825,11 @@ void GuiMenu::openDeveloperSettings()
+@@ -836,7 +846,11 @@ void GuiMenu::openDeveloperSettings()
  
  void GuiMenu::openUpdatesSettings()
  {
@@ -77,7 +77,7 @@ index 000a46aa..8b08b6b3 100644
  
  	updateGui->addGroup(_("DOWNLOADS"));
  
-@@ -856,6 +870,7 @@ void GuiMenu::openUpdatesSettings()
+@@ -877,6 +891,7 @@ void GuiMenu::openUpdatesSettings()
  
  	if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::UPGRADE))
  	{
@@ -85,7 +85,7 @@ index 000a46aa..8b08b6b3 100644
  		updateGui->addGroup(_("SOFTWARE UPDATES"));
  
  		// Enable updates
-@@ -871,11 +886,11 @@ void GuiMenu::openUpdatesSettings()
+@@ -892,11 +907,11 @@ void GuiMenu::openUpdatesSettings()
  
  		std::string updatesType = SystemConf::getInstance()->get("updates.type");
  
@@ -99,7 +99,7 @@ index 000a46aa..8b08b6b3 100644
  			if (updatesType.empty() || updatesType != BETA_NAME)
  				updatesType = "stable";
  
-@@ -904,6 +919,7 @@ void GuiMenu::openUpdatesSettings()
+@@ -925,6 +940,7 @@ void GuiMenu::openUpdatesSettings()
  				mWindow->pushGui(new GuiUpdate(mWindow));
  			}
  		});
@@ -108,10 +108,10 @@ index 000a46aa..8b08b6b3 100644
  
  	mWindow->pushGui(updateGui);
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
-index 02024860..a42f571b 100644
+index 0fc9cef7..4aaebfe7 100644
 --- a/es-core/src/utils/Platform.cpp
 +++ b/es-core/src/utils/Platform.cpp
-@@ -168,6 +168,8 @@ namespace Utils
+@@ -170,6 +170,8 @@ namespace Utils
  		{
  #ifdef WIN32 // windows
  			return system("shutdown -s -t 0");
@@ -120,7 +120,7 @@ index 02024860..a42f571b 100644
  #else // osx / linux	
  			return system("shutdown -h now");
  #endif
-@@ -177,6 +179,8 @@ namespace Utils
+@@ -179,6 +181,8 @@ namespace Utils
  		{
  #ifdef WIN32 // windows	
  			return system("shutdown -r -t 0");
@@ -129,7 +129,7 @@ index 02024860..a42f571b 100644
  #else // osx / linux	
  			return system("shutdown -r now");
  #endif
-@@ -398,9 +402,20 @@ namespace Utils
+@@ -399,9 +403,20 @@ namespace Utils
  				std::string fuelgaugeRootPath;
  				std::string chargerRootPath;
  
@@ -151,7 +151,7 @@ index 02024860..a42f571b 100644
  					if ((Utils::String::toLower(file).find("/bat") != std::string::npos) && (batteryRootPath.empty()))
  						batteryRootPath = file;
  
-@@ -409,7 +424,8 @@ namespace Utils
+@@ -410,7 +425,8 @@ namespace Utils
  
  					if ((Utils::String::toLower(file).find("charger") != std::string::npos) && (chargerRootPath.empty()))
  						chargerRootPath = file;
@@ -161,7 +161,7 @@ index 02024860..a42f571b 100644
  
  				// If there's no battery device, look for discrete charger and fuel gauge
  				if (batteryRootPath.empty())
-@@ -433,8 +449,13 @@ namespace Utils
+@@ -434,8 +450,13 @@ namespace Utils
  				}
  				else
  				{
@@ -177,7 +177,7 @@ index 02024860..a42f571b 100644
  				}
  			}
  
-@@ -447,9 +468,13 @@ namespace Utils
+@@ -448,9 +469,13 @@ namespace Utils
  			else
  			{
  				ret.hasBattery = true;
