@@ -14151,14 +14151,6 @@ msgstr "クイック セーブ"
 #~ "小 4MBメモリを推奨"
 
 #~ msgctxt "game_options"
-#~ msgid "CONTOLLER 1"
-#~ msgstr "コントローラ 1"
-
-#~ msgctxt "game_options"
-#~ msgid "CONTOLLER 2"
-#~ msgstr "コントローラ 2"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
 #~ "switches to Super-High when needed."
@@ -14220,10 +14212,6 @@ msgstr "クイック セーブ"
 #~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "高さを調整する"
-
-#~ msgctxt "game_options"
-#~ msgid "Reduces wobbly polygongs & warping textures."
-#~ msgstr "ぐらついたポリゴンと反りのあるテクスチャを減らします"
 
 #~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
@@ -14384,6 +14372,18 @@ msgstr "クイック セーブ"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTOLLER 1"
+#~ msgstr "コントローラ 1"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTOLLER 2"
+#~ msgstr "コントローラ 2"
+
+#~ msgctxt "game_options"
+#~ msgid "Reduces wobbly polygongs & warping textures."
+#~ msgstr "ぐらついたポリゴンと反りのあるテクスチャを減らします"
 
 #~ msgctxt "game_options"
 #~ msgid "hybrid top ratio 4"
