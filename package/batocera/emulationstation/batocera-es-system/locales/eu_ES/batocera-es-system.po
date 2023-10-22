@@ -14296,14 +14296,6 @@ msgstr "Gordetze Azkarra"
 #~ "IIx only). Gutxienez 4MB-ko ram tamaina gomendatzen da."
 
 #~ msgctxt "game_options"
-#~ msgid "CONTOLLER 1"
-#~ msgstr "1 KONTROLATZAILEA"
-
-#~ msgctxt "game_options"
-#~ msgid "CONTOLLER 2"
-#~ msgstr "2 KONTROLATZAILEA"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
 #~ "switches to Super-High when needed."
@@ -14370,11 +14362,6 @@ msgstr "Gordetze Azkarra"
 #~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "ALTUERA AUTOMATIKOA"
-
-#~ msgctxt "game_options"
-#~ msgid "Reduces wobbly polygongs & warping textures."
-#~ msgstr ""
-#~ "Mugitzen diren poligonoak gutxitzen ditu & deformatzen diren testurak"
 
 #~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
@@ -14535,6 +14522,19 @@ msgstr "Gordetze Azkarra"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Aurrera Azkar"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTOLLER 1"
+#~ msgstr "1 KONTROLATZAILEA"
+
+#~ msgctxt "game_options"
+#~ msgid "CONTOLLER 2"
+#~ msgstr "2 KONTROLATZAILEA"
+
+#~ msgctxt "game_options"
+#~ msgid "Reduces wobbly polygongs & warping textures."
+#~ msgstr ""
+#~ "Mugitzen diren poligonoak gutxitzen ditu & deformatzen diren testurak"
 
 #~ msgctxt "game_options"
 #~ msgid "BBC Micro/Master ROM (Slot 2)"
