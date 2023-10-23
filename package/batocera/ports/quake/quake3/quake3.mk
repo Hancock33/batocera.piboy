@@ -3,8 +3,8 @@
 # quake3
 #
 ################################################################################
-# Version: Commits on Aug 19, 2023
-QUAKE3_VERSION = b1e6ef14254fdcb77cbe2f602c22549d3fb0eb78
+# Version: Commits on Oct 23, 2023
+QUAKE3_VERSION = 78359180a447f1292787b8a8ebaa6405c6f87eed
 QUAKE3_SITE = $(call github,ioquake,ioq3,$(QUAKE3_VERSION))
 QUAKE3_LICENSE = GPL-2.0
 QUAKE3_LICENSE_FILE = COPYING.txt
