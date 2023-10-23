@@ -3,8 +3,8 @@
 # citra
 #
 ################################################################################
-# Version: Commits on Oct 21, 2023
-CITRA_VERSION = 4ac10c4a9d47e6aea5f05bcf0127cb72c659303f
+# Version: Commits on Oct 22, 2023
+CITRA_VERSION = 36146459f8efb2b11b6ca5dfb8333c76b5ff8f2a
 CITRA_SITE = https://github.com/citra-emu/citra.git
 
 CITRA_SITE_METHOD=git
