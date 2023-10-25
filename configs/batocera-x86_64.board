@@ -40,5 +40,4 @@ BR2_PACKAGE_BATOCERA_KODI=y
 
 # Batocera dev
 BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL=y
-BR2_STRIP_EXCLUDE_FILES="Ryujinx greenlight vpinball"
 BR2_CCACHE_DIR="$(HOME)/build-dir/ccache/x86_64"
