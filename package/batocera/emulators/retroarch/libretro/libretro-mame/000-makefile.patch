@@ -1,8 +1,8 @@
 diff --git a/makefile b/makefile
-index 46c78d04dc0..d95e3e6c3b0 100644
+index e17e8d4c829..3a433d00eb8 100644
 --- a/makefile
 +++ b/makefile
-@@ -383,14 +383,14 @@ ifndef FORCE_DRC_C_BACKEND
+@@ -387,14 +387,14 @@ ifndef FORCE_DRC_C_BACKEND
  endif
  endif
  
@@ -19,7 +19,7 @@ index 46c78d04dc0..d95e3e6c3b0 100644
  ARCHITECTURE :=
  ifndef FORCE_DRC_C_BACKEND
  	FORCE_DRC_C_BACKEND := 1
-@@ -406,7 +406,7 @@
+@@ -407,7 +407,7 @@ ifndef FORCE_DRC_C_BACKEND
  endif
  endif
  
