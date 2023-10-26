@@ -1,0 +1,66 @@
+diff --git a/src/character_editor.cc b/src/character_editor.cc
+index 70563ec..7870c45 100644
+--- a/src/character_editor.cc
++++ b/src/character_editor.cc
+@@ -4,7 +4,7 @@
+ #include <ctype.h>
+ #include <stdio.h>
+ #include <string.h>
+-
++#include <climits>
+ #include <algorithm>
+ #include <vector>
+ 
+diff --git a/src/input.cc b/src/input.cc
+index 1bf56ac..fa47ab3 100644
+--- a/src/input.cc
++++ b/src/input.cc
+@@ -1,6 +1,7 @@
+ #include "input.h"
+ 
+ #include <SDL.h>
++#include <climits>
+ 
+ #include "audio_engine.h"
+ #include "color.h"
+diff --git a/src/inventory.cc b/src/inventory.cc
+index 4b53126..76e48ba 100644
+--- a/src/inventory.cc
++++ b/src/inventory.cc
+@@ -3,7 +3,7 @@
+ #include <assert.h>
+ #include <stdio.h>
+ #include <string.h>
+-
++#include <climits>
+ #include <algorithm>
+ 
+ #include "actions.h"
+diff --git a/src/stat.cc b/src/stat.cc
+index 751a40a..be45b20 100644
+--- a/src/stat.cc
++++ b/src/stat.cc
+@@ -1,9 +1,9 @@
+ #include "stat.h"
+ 
+ #include <stdio.h>
+-
++#include <climits>
+ #include <algorithm>
+-
++#include <climits>
+ #include "art.h"
+ #include "combat.h"
+ #include "critter.h"
+diff --git a/src/word_wrap.cc b/src/word_wrap.cc
+index 9953418..a8b162f 100644
+--- a/src/word_wrap.cc
++++ b/src/word_wrap.cc
+@@ -3,6 +3,7 @@
+ #include <ctype.h>
+ #include <stddef.h>
+ #include <string.h>
++#include <climits>
+ 
+ #include "text_font.h"
+ 
