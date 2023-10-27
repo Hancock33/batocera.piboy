@@ -28,11 +28,10 @@ EKA2L1_CONF_OPTS += -DEKA2L1_UNIX_USE_WAYLAND=ON
 endif
 
 define EKA2L1_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/eka2l1
+    mkdir -p $(TARGET_DIR)/usr/bin/eka2l1
     $(TARGET_STRIP) $(@D)/buildroot-build/bin/eka2l1_qt
     cp -R $(@D)/buildroot-build/bin/* \
-                $(TARGET_DIR)/usr/eka2l1/
+                $(TARGET_DIR)/usr/bin/eka2l1/
 endef
-
 
 $(eval $(cmake-package))
