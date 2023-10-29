@@ -89,12 +89,15 @@ do_videostart ()
 	# --vf-add=sub : rotation of subtitles
         [[ $? -eq 0 ]] && mpv_video="--video-rotate=${video_rotation} --vf-add=sub"
     fi
+
     drm_mode="preferred"
     video_resize=$(batocera-settings-get-master splash.screen.resize)
     if [[ $? -eq 0 ]]; then
         resize=$(echo "${video_resize}" | sed "s/x/:/")
         mpv_video="${mpv_video} --vf=scale=${resize}"
+        drm_mode=$video_resize
     fi
+
     video_subtitle=$(batocera-settings-get splash.screen.subtitle)
     if [[ $? -eq 0 ]]; then
 	if test "${video_subtitle}" = 0
@@ -103,31 +106,55 @@ do_videostart ()
 	fi
     fi
 
-    # determine the display type & index
+    # determine the output display to use for MPV
+    # fixes splash video output where the user wants it
     if preferred_display=$(batocera-settings-get global.videooutput); then
         echo "Preferred display is $preferred_display" > $log
         display_type=$(echo "$preferred_display" | cut -d'-' -f1)
-        display_index=$(echo "$preferred_display" | cut -d '-' -f 2 | awk '{print $0+1}')
-        echo "Display Index = $display_index" >> $log
-    else
-        echo "No preferred display chosen, defaulting to index 1" > $log
-        display_index=1
-    fi  
-    # determine the DRM connector name based on type & index
-    drm_connector=$(mpv --drm-connector=help | grep "(connected)" | grep -i "$display_type" | awk -v idx=$display_index 'NR==idx')
-    if [ -z "$drm_connector" ]; then
-        echo "Error: No connected DRM connectors found for $display_type at index $display_index. Trying index 1" >> $log
-        drm_connector=$(mpv --drm-connector=help | grep "(connected)" | grep -i "$display_type" | awk 'NR==1')
-        if [ -z "$drm_connector" ]; then
-            echo "Error: No connected DRM connectors found for $display_type. Trying index 1 regardless" >> $log
-            drm_connector=$(mpv --drm-connector=help | grep "(connected)" | awk 'NR==1')
+        if [[ "$display_type" == "DisplayPort" ]]; then
+            # workaround some cards using DisplayPort as the xorg output name
+            display_type="DP"
         fi
+        echo "Display Type = $display_type" >> $log
+        display_index=1
+        for card_folder_path in /sys/class/drm/card*; do
+            card_id=$(basename "$card_folder_path")
+            if [ -d "$card_folder_path" ]; then
+                card_folder_name=$(basename "$card_folder_path")
+                if [[ "$card_folder_name" == card* ]]; then
+                    for sub_folder in "$card_folder_path"/*; do
+                        if [[ "$(basename "$sub_folder")" == "card"* ]]; then
+                            status_file="${sub_folder}/status"
+                            #echo "Trying for display index at path: $status_file" >> $log
+                            if [ -f "$status_file" ] && [ "$(cat "$status_file")" == "connected" ] && [[ "$status_file" == *"$display_type"* ]]; then
+                                echo "Display Type $display_type has a connection at $status_file" >> $log
+                                #echo "Display index = $display_index" >> $log
+                                drm_connector=$(echo "$status_file" | sed -n 's/.*\/card[0-9]\-\(.*\)\/status/\1/p')
+                                echo "Selected DRM connector: $drm_connector" >> $log
+                                card_number=$(echo "$card_id" | sed -n 's/card\([0-9]\+\).*/\1/p')
+                                card_path="/dev/dri/card$card_number"
+                                echo "DRM connected card path: $card_path" >> $log
+                                break 2  # we found a connected display, exit both loops
+                            fi
+                            #echo "Display index not found at $display_index. Trying next within $card_folder_path" >> $log
+                            display_index=$((display_index + 1))
+                        fi
+                    done
+                fi
+            fi
+            # reset display_index to 1 for the next card folder
+            #echo "Display index not found at $card_folder_path. Trying next" >> $log
+            display_index=1
+        done
+    else
+        echo "No preferred display chosen, letting MPV use default" > $log
     fi
-    drm_connector=$(echo "$drm_connector" | awk '{print $1}')
-    echo "Selected DRM connector: $drm_connector" >> $log
 
-    # it should be drm everywhere (including for x86_64 while it is on fb) -- only rpi doesn't use drm and it doesn't use this boot splash script
-	start-stop-daemon -S -b -q -m -p /var/run/user-splash.pid --exec /usr/bin/mpv -- --really-quiet --input-conf=/etc/mpv-splash.conf --input-gamepad --panscan=1.0 --drm-connector=$drm_connector $mpv_audio $mpv_video "$video"
+    if [ -n "$drm_connector" ] && [ -n "$card_path" ]; then
+        start-stop-daemon -S -b -q -m -p /var/run/user-splash.pid --exec /usr/bin/mpv -- --really-quiet --input-conf=/etc/mpv-splash.conf --input-gamepad --panscan=1.0 --drm-mode=$drm_mode --drm-connector=$drm_connector --drm-device=$card_path --log-file=/userdata/system/logs/mpv.log $mpv_audio $mpv_video "$video"
+    else
+        start-stop-daemon -S -b -q -m -p /var/run/user-splash.pid --exec /usr/bin/mpv -- --really-quiet --input-conf=/etc/mpv-splash.conf --input-gamepad --panscan=1.0 --drm-mode=$drm_mode --log-file=/userdata/system/logs/mpv.log $mpv_audio $mpv_video "$video"
+    fi
 }
 
 case "$1" in

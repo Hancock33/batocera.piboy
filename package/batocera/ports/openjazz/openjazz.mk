@@ -3,20 +3,15 @@
 # openjazz
 #
 ################################################################################
-# Version: Commits on Jun 27, 2022
-OPENJAZZ_VERSION = 46509817b8bbaf9b38854437717f0511f3af326a
+# Version: Commits on Oct 28, 2023
+OPENJAZZ_VERSION = 75323f72cbddb76e54be4d95294e28872a9575e4
 OPENJAZZ_SITE =  $(call github,AlisterT,openjazz,$(OPENJAZZ_VERSION))
 
-OPENJAZZ_DEPENDENCIES = sdl2
+OPENJAZZ_DEPENDENCIES = sdl2 sdl2_net
 OPENJAZZ_LICENSE = GPLv2
 
-define OPENJAZZ_BUILD_CMDS
-	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) \
-	CPP="$(TARGET_CPP)" CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
-	AS="$(TARGET_CC)" LD="$(TARGET_LD)" STRIP="$(TARGET_STRIP)" \
-	-C $(@D) -f Makefile
-endef
+OPENJAZZ_CONF_OPTS += -DDATAPATH=/userdata/roms/ports/openjazz
+OPENJAZZ_CONF_OPTS += -DNETWORK=ON
 
 define OPENJAZZ_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/OpenJazz $(TARGET_DIR)/usr/bin/OpenJazz
@@ -25,4 +20,4 @@ define OPENJAZZ_INSTALL_TARGET_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/openjazz/openjazz.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-$(eval $(generic-package))
+$(eval $(cmake-package))

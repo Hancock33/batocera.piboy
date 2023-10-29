@@ -55,7 +55,7 @@ do
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-gcc-final-*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-libopenssl*
 
-	echo "Building Subsystem: "$i
-	cd $HOME/build-dir/batocera.$i
-	make -j33 > /dev/null
+	#echo "Building Subsystem: "$i
+	#cd $HOME/build-dir/batocera.$i
+	#make -j33 > /dev/null
 done

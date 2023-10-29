@@ -67,10 +67,10 @@ do
 	# x86
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/syslinux*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/cemu*
-	sudo rm -rf $HOME/build-dir/batocera.$i/build/box-xcloud-client*
+	sudo rm -rf $HOME/build-dir/batocera.$i/build/xbox-xcloud-client*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/wine-x86-*
 
-	echo "Building Batocera: "$i
-	cd $HOME/build-dir/batocera.$i
-	make -j33 > /dev/null
+	#echo "Building Batocera: "$i
+	#cd $HOME/build-dir/batocera.$i
+	#make -j33 > /dev/null
 done

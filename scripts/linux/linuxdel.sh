@@ -3,39 +3,40 @@ delkern="linux-custom*
 linux-6.*
 linux-headers*
 *-nvidia*
-rtl*
-r8125*
+aelightgun*
+aimtrak-guns*
+ayn-platform-*
+batocera-gun-calibrator*
+db9_gpio_rpi*
+dolphinbar-guns*
+dolphinCrosshairsPack*
+fun-r1-gamepad*
+gamecon_gpio_rpi*
+gun4ir-guns*
+guncon*
+hid-nx*
+joycond*
+lightguns-games-precalibrations*
 pd-mapper*
 qrtr*
-rmtfs*
-tqftpserv*
-aelightgun*
-dolphinbar-guns*
-gun4ir-guns*
-lightguns-games-precalibrations*
-sinden-guns*
-wiimotes-rules*
-xpadneo*
-aimtrak-guns*
-dolphinCrosshairsPack*
-guncon*
 qtsixa*
-sinden-guns-libs*
-xarcade2jstick*
-xpad-noone*
-batocera-gun-calibrator*
-fun-r1-gamepad*
-hid-nx*
 qtsixa-shanwan*
-uinput-joystick*
-xone*
-xpi_gamecon_rpi*
-db9_gpio_rpi*
-gamecon_gpio_rpi*
-joycond*
+r81*
 retrogame*
+rmtfs*
+rtl*
+sinden-guns*
+sinden-guns-libs*
+tqftpserv*
+uinput-joystick*
 umtool*
-xow*"
+wiimotes-rules*
+xarcade2jstick*
+xone*
+xow*
+xpadneo*
+xpad-noone*
+xpi_gamecon_rpi*"
 
 read -p "Delete RPI Kerenl? (y/n)" yn
 case $yn in 
@@ -53,7 +54,7 @@ if [ $DEL_RPI4 = '1' ]; then
         sudo rm -r $HOME/build-dir/batocera.rpi4/build/$i
     done
 fi
-    
+
 read -p "Delete X86 Kerenl? (y/n)" yn
 case $yn in 
 	y )
