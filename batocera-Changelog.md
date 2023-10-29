@@ -9,6 +9,7 @@
 - IORTCW: Play Return to Castle Wolfenstein with enhanced graphics.
 ### Fixed
 - Dolphin bug that prevented full range of analog trigger axis being used.
+- Flycast per pixel sorting option if renderer not explicitly set
 ### Changed
 - L|R activate in-game "Z" input in Dolphin for GC controllers/GC games if controller has L+R inputs mapped.
 ### Updated
@@ -27,8 +28,8 @@
 - Cemu to 2.0-55
 - Citra to nightly-2009
 - Dolphin to 5.0-20212
-- Flycast to Oct 12, 2023
-- Libretro-flycast to Oct 12, 2023
+- Flycast to v2.2
+- Libretro-flycast to v2.2
 - MelonDS to Oct 12, 2023
 - PCSX2 to v1.7.5105
 - Play! to Oct 13, 2023 build
@@ -62,6 +63,27 @@
 - GZDoom to g4.11.3
 - Libretro-DosBox-Pure to Oct 24, 2023 build
 - Libretro-Ecwolf to Jul 18, 2023 build
+- Libretro-Fake08 to Oct 19, 2023 build
+- Libretro-Fceumm to Sep 17, 2023 build
+- Libretro-FMSX to Apr 18, 2023 build
+- Libretro-Freeintv to Apr 18, 2023 build
+- Libretro-Fuse to Jun 24, 2023 build
+- Libretro-Gambatte to Sep 29, 2023 build
+- Libretro-Gearsystem to Oct 23, 2023 build
+- Libretro-Genesisplusgx-Wide to Sep 16, 2023 build
+- Libretro-GPSP to Oct 7, 2023 build
+- Libretro-GW to May 28, 2023 build
+- Libretro-Handy to Aug 20, 2023 build
+- Libretro-Hatari to Sep 30, 2023 build
+- Libretro-iMame to Apr 26, 2023 build
+- Libretro-Kronos to Oct 27, 2023 build
+- Libretro-Lutro to May 30, 2023 build
+- Libretro-Mame2003-plus to Oct 23, 2023 build
+- Libretro-Mesen to May 21, 2023 build
+- Libretro-MGBA to Oct 26, 2023 build
+- Libretro-Minivmac to Dec 7, 2022 build
+- Libretro-MrBoom to v5.3
+- Libretro-NEOCD to Feb 22, 2023 build
 ### System
 - Linux kernel to 6.5.9
 - Mesa to 23.2.1
