@@ -31,6 +31,9 @@ case $yn in
         rm -r $HOME/build-dir/batocera.*/build/batocera-t* > /dev/null 2>&1
         rm -r $HOME/build-dir/batocera.*/build/batocera-w* > /dev/null 2>&1
         ;;
+	n )
+        echo "Moving on ..."
+        ;;
 esac
 
 # Variables
