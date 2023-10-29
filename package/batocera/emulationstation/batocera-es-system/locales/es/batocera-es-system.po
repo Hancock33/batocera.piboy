@@ -13999,7 +13999,7 @@ msgctxt "keys_files"
 msgid "Look"
 msgstr ""
 
-#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, raze.keys
+#. TRANSLATION: prboom.lzdoom.keys, prboom.gzdoom.keys, openjazz.keys, raze.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr ""
@@ -14208,6 +14208,56 @@ msgstr "Investigación"
 msgctxt "keys_files"
 msgid "Manage Staff"
 msgstr "Administraar personal"
+
+#. TRANSLATION: openjazz.keys
+msgctxt "keys_files"
+msgid "Start Game / Menu Select"
+msgstr ""
+
+#. TRANSLATION: openjazz.keys
+msgctxt "keys_files"
+msgid "Quit Game / Pause"
+msgstr ""
+
+#. TRANSLATION: openjazz.keys
+msgctxt "keys_files"
+msgid "Quit Game"
+msgstr ""
+
+#. TRANSLATION: openjazz.keys
+msgctxt "keys_files"
+msgid "Move Up"
+msgstr ""
+
+#. TRANSLATION: openjazz.keys
+msgctxt "keys_files"
+msgid "Move Down"
+msgstr ""
+
+#. TRANSLATION: openjazz.keys
+msgctxt "keys_files"
+msgid "Move Left"
+msgstr ""
+
+#. TRANSLATION: openjazz.keys
+msgctxt "keys_files"
+msgid "Move Right"
+msgstr ""
+
+#. TRANSLATION: openjazz.keys
+msgctxt "keys_files"
+msgid "Jump / Swim Up"
+msgstr ""
+
+#. TRANSLATION: openjazz.keys
+msgctxt "keys_files"
+msgid "Weapon Select"
+msgstr ""
+
+#. TRANSLATION: openjazz.keys
+msgctxt "keys_files"
+msgid "Stats"
+msgstr ""
 
 #. TRANSLATION: rtcw.keys, theforceengine.keys
 msgctxt "keys_files"
