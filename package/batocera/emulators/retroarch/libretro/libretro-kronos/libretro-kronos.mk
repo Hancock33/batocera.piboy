@@ -28,6 +28,8 @@ LIBRETRO_KRONOS_EXTRA_ARGS += FORCE_GLES=1
 endif
 
 define LIBRETRO_KRONOS_BUILD_CMDS
+	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/yabause/src/libretro/Makefile
+	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/yabause/src/libretro/Makefile
 	$(MAKE) -C $(@D)/yabause/src/libretro -f Makefile generate-files && \
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C \
 	    $(@D)/yabause/src/libretro -f Makefile \

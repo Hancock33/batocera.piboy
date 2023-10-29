@@ -97,7 +97,7 @@ do_videostart ()
         mpv_video="${mpv_video} --vf=scale=${resize}"
         drm_mode=$video_resize
     fi
-    
+
     video_subtitle=$(batocera-settings-get splash.screen.subtitle)
     if [[ $? -eq 0 ]]; then
 	if test "${video_subtitle}" = 0
@@ -120,7 +120,7 @@ do_videostart ()
         for card_folder_path in /sys/class/drm/card*; do
             card_id=$(basename "$card_folder_path")
             if [ -d "$card_folder_path" ]; then
-                card_folder_name=$(basename "$card_folder_path")  
+                card_folder_name=$(basename "$card_folder_path")
                 if [[ "$card_folder_name" == card* ]]; then
                     for sub_folder in "$card_folder_path"/*; do
                         if [[ "$(basename "$sub_folder")" == "card"* ]]; then
