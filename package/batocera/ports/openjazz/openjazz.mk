@@ -3,8 +3,8 @@
 # openjazz
 #
 ################################################################################
-# Version: Commits on Oct 26, 2023
-OPENJAZZ_VERSION = ea876810071c1385fd29269f301dd4182433b842
+# Version: Commits on Oct 28, 2023
+OPENJAZZ_VERSION = 75323f72cbddb76e54be4d95294e28872a9575e4
 OPENJAZZ_SITE =  $(call github,AlisterT,openjazz,$(OPENJAZZ_VERSION))
 
 OPENJAZZ_DEPENDENCIES = sdl2 sdl2_net

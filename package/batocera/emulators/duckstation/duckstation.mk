@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Oct 28, 2023
-DUCKSTATION_VERSION = 117cbeecaa9781cbf6cb671f0a37e2f6437d5919
+DUCKSTATION_VERSION = 3ee8159d8d80d5f677f2f89582e0f087f8ea2d8e
 DUCKSTATION_SITE = https://github.com/stenzek/duckstation.git
 DUCKSTATION_SITE_METHOD=git
 DUCKSTATION_GIT_SUBMODULES=YES
