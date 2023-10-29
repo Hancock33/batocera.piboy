@@ -9,6 +9,7 @@
 - IORTCW: Play Return to Castle Wolfenstein with enhanced graphics.
 ### Fixed
 - Dolphin bug that prevented full range of analog trigger axis being used.
+- Flycast per pixel sorting option if renderer not explicitly set
 ### Changed
 - L|R activate in-game "Z" input in Dolphin for GC controllers/GC games if controller has L+R inputs mapped.
 ### Updated
@@ -27,8 +28,8 @@
 - Cemu to 2.0-55
 - Citra to nightly-2009
 - Dolphin to 5.0-20212
-- Flycast to Oct 12, 2023
-- Libretro-flycast to Oct 12, 2023
+- Flycast to v2.2
+- Libretro-flycast to v2.2
 - MelonDS to Oct 12, 2023
 - PCSX2 to v1.7.5105
 - Play! to Oct 13, 2023 build
@@ -38,9 +39,9 @@
 - Ruffle to nightly-2023-10-13
 - Solarus Engine to Oct 2, 2023
 - Vita3k to Oct 13 build
-- Xemu to v0.7.113
+- Xemu to v0.7.116
 - Xenia to v1.0.2808
-- Xenia Canary to d36b1b3 (October 13 build)
+- Xenia Canary to a34944e (October 28 build)
 - ECWolf to 1.5pre
 - EDuke32 to Oct 07, 2023 build
 - Libretro-A5200 to Aug 18th build
@@ -53,8 +54,45 @@
 - Libretro-Beetle-Saturn to May 28, 2023 build
 - Libretro-Beetle-Supergrafx to Oct 6, 2023 build
 - Libretro-Beetle-WSwan to May 27, 2023 build
+- Libretro-Bluemsx to Apr 18, 2023 build
+- Libretro-Bsnes to Oct 20, 2023 build
+- Libretro-Cap32 to Jul 12, 2023 build
+- Libretro-ChaiLove to Sep 30, 2023 build
+- Libretro-Craft to May 28, 2023 build
+- Libretro-Desmume to Oct 6, 2023 build
+- GZDoom to g4.11.3
+- Libretro-DosBox-Pure to Oct 24, 2023 build
+- Libretro-Ecwolf to Jul 18, 2023 build
+- Libretro-Fake08 to Oct 19, 2023 build
+- Libretro-Fceumm to Sep 17, 2023 build
+- Libretro-FMSX to Apr 18, 2023 build
+- Libretro-Freeintv to Apr 18, 2023 build
+- Libretro-Fuse to Jun 24, 2023 build
+- Libretro-Gambatte to Sep 29, 2023 build
+- Libretro-Gearsystem to Oct 23, 2023 build
+- Libretro-Genesisplusgx-Wide to Sep 16, 2023 build
+- Libretro-GPSP to Oct 7, 2023 build
+- Libretro-GW to May 28, 2023 build
+- Libretro-Handy to Aug 20, 2023 build
+- Libretro-Hatari to Sep 30, 2023 build
+- Libretro-iMame to Apr 26, 2023 build
+- Libretro-Kronos to Oct 27, 2023 build
+- Libretro-Lutro to May 30, 2023 build
+- Libretro-Mame2003-plus to Oct 23, 2023 build
+- Libretro-Mesen to May 21, 2023 build
+- Libretro-MGBA to Oct 26, 2023 build
+- Libretro-Minivmac to Dec 7, 2022 build
+- Libretro-MrBoom to v5.3
+- Libretro-NEOCD to Feb 22, 2023 build
+- Libretro-Nestopia to May 28, 2023 build
+- Libretro-Opera to Jul 31, 2023 build
+- Libretro-ProSystem to Aug 18, 2023 build
+- Libretro-PUAE to Oct 15, 2023 build
+- Libretro-Scummvm to Oct 22, 2023 build
+- Libretro-Snes9x to Oct 13, 2023 build
+- Libretro-Stella to Oct 26, 2023 build
 ### System
-- Linux kernel to 6.5.8
+- Linux kernel to 6.5.9
 - Mesa to 23.2.1
 - Proton to 8.0-4b
 - FAudio to 23.10

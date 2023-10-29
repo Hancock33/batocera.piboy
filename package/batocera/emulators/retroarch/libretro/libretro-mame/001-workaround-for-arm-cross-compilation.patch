@@ -1,12 +1,12 @@
 diff --git a/3rdparty/bgfx/src/renderer_gl.h b/3rdparty/bgfx/src/renderer_gl.h
-index 4c2942a03b8..3b71774b57e 100644
+index 6d0346f3f8b..704f0030820 100644
 --- a/3rdparty/bgfx/src/renderer_gl.h
 +++ b/3rdparty/bgfx/src/renderer_gl.h
-@@ -13,10 +13,12 @@
- 	|| BX_PLATFORM_NX                                     \
- 	|| BX_PLATFORM_RPI                                    \
- 	|| BX_PLATFORM_WINDOWS                                \
-+	|| BX_PLATFORM_LINUX_NO_GL							  \
+@@ -12,10 +12,12 @@
+ 	|| BX_PLATFORM_LINUX                                                                    \
+ 	|| BX_PLATFORM_NX                                                                       \
+ 	|| BX_PLATFORM_RPI                                                                      \
++	|| BX_PLATFORM_LINUX_NO_GL 	                                                            \
  	) )
  
  #define BGFX_USE_HTML5 (BGFX_CONFIG_RENDERER_OPENGLES && (0 \
