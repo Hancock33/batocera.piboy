@@ -15,6 +15,8 @@ LIBRETRO_FBALPHA_PLATFORM = armv
 endif
 
 define LIBRETRO_FBALPHA_BUILD_CMDS
+	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/svn-current/trunk/makefile
+	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/svn-current/trunk/makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C \
 		$(@D)/svn-current/trunk/ -f makefile.libretro platform="$(LIBRETRO_FBALPHA_PLATFORM)" \
 		GIT_VERSION="-$(shell echo $(LIBRETRO_FBALPHA_VERSION) | cut -c 1-7)"

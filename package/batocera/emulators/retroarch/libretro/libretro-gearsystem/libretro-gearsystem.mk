@@ -9,6 +9,8 @@ LIBRETRO_GEARSYSTEM_SITE = $(call github,drhelius,Gearsystem,$(LIBRETRO_GEARSYST
 LIBRETRO_GEARSYSTEM_LICENSE = GPLv3
 
 define LIBRETRO_GEARSYSTEM_BUILD_CMDS
+	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/platforms/libretro/Makefile
+	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/platforms/libretro/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C \
 		$(@D)/platforms/libretro -f Makefile platform="unix"
 endef
