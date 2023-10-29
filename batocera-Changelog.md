@@ -39,9 +39,9 @@
 - Ruffle to nightly-2023-10-13
 - Solarus Engine to Oct 2, 2023
 - Vita3k to Oct 13 build
-- Xemu to v0.7.113
+- Xemu to v0.7.116
 - Xenia to v1.0.2808
-- Xenia Canary to d36b1b3 (October 13 build)
+- Xenia Canary to a34944e (October 28 build)
 - ECWolf to 1.5pre
 - EDuke32 to Oct 07, 2023 build
 - Libretro-A5200 to Aug 18th build
@@ -84,6 +84,7 @@
 - Libretro-Minivmac to Dec 7, 2022 build
 - Libretro-MrBoom to v5.3
 - Libretro-NEOCD to Feb 22, 2023 build
+- Libretro-Nestopia to May 28, 2023 build
 ### System
 - Linux kernel to 6.5.9
 - Mesa to 23.2.1
