@@ -23,6 +23,7 @@ LIBRETRO_HATARIB_CONF_ENV += \
 	CMAKE="$(HOST_DIR)/bin/cmake"
 
 define LIBRETRO_HATARIB_BUILD_CMDS
+	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/makefile
 	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/makefile
 	CC="$(TARGET_CC)" AR="$(TARGET_AR)" RANLIB="$(TARGET_RANLIB)" \
 	cd $(@D) && $(MAKE) -f makefile \

@@ -39,6 +39,8 @@ LIBRETRO_PICODRIVE_PLATFORM = unix
 endif
 
 define LIBRETRO_PICODRIVE_BUILD_CMDS
+	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile.libretro
+	$(SED) "s|-O3|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile.libretro
 	$(MAKE) -C $(@D)/cpu/cyclone CONFIG_FILE=$(@D)/cpu/cyclone_config.h
 
 	# force -j 1 to avoid parallel issues in the makefile
