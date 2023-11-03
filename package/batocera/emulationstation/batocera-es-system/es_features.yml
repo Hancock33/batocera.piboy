@@ -1104,13 +1104,6 @@ libretro:
                     "Tandy":                tandy
                     "Hercules":             hercules
                     "PCjr":                 pcjr
-            pure_select_onscreen_keyboard:
-                group: CONTROLLER SETTINGS
-                prompt: ON-SCREEN KEYBOARD BUTTON
-                description: Use the Select or Left Thumb Button to activate the on-screen keyboard.
-                choices:
-                    "Select Button (Default)": "true"
-                    "Left Thumb Button":       "false"
             pure_keyboard_layout:
                 group: CONTROLLER SETTINGS
                 prompt:      PHYSICAL KEYBOARD LAYOUT
