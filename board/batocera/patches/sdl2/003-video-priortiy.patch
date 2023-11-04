@@ -1,8 +1,8 @@
 diff --git a/src/video/SDL_video.c b/src/video/SDL_video.c
-index 84dfcc135..91e798434 100644
+index 8065a0b8c..6c03b43ec 100644
 --- a/src/video/SDL_video.c
 +++ b/src/video/SDL_video.c
-@@ -67,12 +67,12 @@ static VideoBootStrap *bootstrap[] = {
+@@ -68,12 +68,12 @@ static VideoBootStrap *bootstrap[] = {
  #if SDL_VIDEO_DRIVER_COCOA
      &COCOA_bootstrap,
  #endif
