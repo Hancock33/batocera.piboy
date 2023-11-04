@@ -272,6 +272,9 @@ dreamcast:
 droidports:
   emulator: droidports
   core:     droidports
+dxx-rebirth:
+  emulator: dxx-rebirth
+  core:     dxx-rebirth
 dynax:
   emulator: libretro
   core:     mame078plus
