@@ -26,7 +26,7 @@ dtparam=krnbt=on
 gpu_mem_1024=256
 dtoverlay=vc4-kms-v3d,cma-512
 
-[rpi4]
+[rpi5]
 # 64-bit mode
 arm_64bit=1
 start_file=start4.elf
