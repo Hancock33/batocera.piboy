@@ -16,4 +16,12 @@ define FALLOUT2_CE_INSTALL_TARGET_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/fallout2-ce/fallout2.keys $(TARGET_DIR)/usr/share/evmapy/fallout2.keys
 endef
 
+define FALLOUT2_CE_EVMAPY
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/fallout2-ce/fallout2-ce.keys \
+	    $(TARGET_DIR)/usr/share/evmapy
+endef
+
+FALLOUT2_CE_POST_INSTALL_TARGET_HOOKS += FALLOUT2_CE_EVMAPY
+
 $(eval $(cmake-package))

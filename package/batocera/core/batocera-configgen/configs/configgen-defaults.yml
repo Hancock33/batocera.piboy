@@ -304,12 +304,12 @@ exidy:
 f2bgl:
   emulator: f2bgl
   core:     f2bgl
-fallout1:
-  emulator: fallout2
-  core:     fallout2
-fallout2:
-  emulator: fallout2
-  core:     fallout2
+fallout1-ce:
+  emulator: fallout1-ce
+  core:     fallout1-ce
+fallout2-ce:
+  emulator: fallout2-ce
+  core:     fallout2-ce
 fbneo:
   emulator: libretro
   core:     fbneo

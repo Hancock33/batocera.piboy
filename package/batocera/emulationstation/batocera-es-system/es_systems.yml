@@ -3591,31 +3591,65 @@ f2bgl:
     f2bgl:
       f2bgl:            { requireAnyOf: [BR2_PACKAGE_F2BGL] }
 
-fallout1:
-  name:                 Fallout 1
+fallout1-ce:
+  name:                 Fallout Community Edition
   manufacturer:         Ports
   release:              1997
   hardware:             port
-  extensions:           [game]
+  extensions:           [f1ce, game]
   platform:             pc
   group:                ports
   path:                 /userdata/roms/ports/fallout1
   emulators:
-    fallout2:
-      fallout2:         { requireAnyOf: [BR2_PACKAGE_FALLOUT1_CE] }
+    fallout1-ce:
+      fallout1-ce:      { requireAnyOf: [ BR2_PACKAGE_FALLOUT1_CE ] }
+  comment_en:           |
+                        Fallout Community Edition is a fully working re-implementation of Fallout.
+                        It provides the same original gameplay, engine bugfixes, and some quality of life improvements.
 
-fallout2:
-  name:                 Fallout 2
+                        You must own the game to play. Purchase your copy on GOG or Steam.
+                        Copy the contents of your Fallout folder from your Windows installation to your roms folder:
+                        /userdata/roms/fallout1
+
+                        Create a blank file called `Fallout.game` this allows for scrapping & helps launch the game via EmulationStation.
+
+                        Note: This game currently requires a mouse and keyboard to play.
+
+                        For more info: https://wiki.batocera.org/systems:fallout1-ce
+  comment_fr:           |
+                        Trouvez la documentation ici: https://wiki.batocera.org/systems:fallout1-ce
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/systems:fallout1-ce
+
+fallout2-ce:
+  name:                 Fallout 2 Community Edition
   manufacturer:         Ports
   release:              1998
   hardware:             port
-  extensions:           [game]
+  extensions:           [f2ce, game]
   platform:             pc
   group:                ports
   path:                 /userdata/roms/ports/fallout2
   emulators:
-    fallout2:
-      fallout2:         { requireAnyOf: [BR2_PACKAGE_FALLOUT2_CE] }
+    fallout2-ce:
+      fallout2-ce:      { requireAnyOf: [ BR2_PACKAGE_FALLOUT2_CE ] }
+  comment_en:           |
+                        Fallout 2 Community Edition is a fully working re-implementation of Fallout 2.
+                        It provides the same original gameplay, engine bugfixes, and some quality of life improvements.
+
+                        You must own the game to play. Purchase your copy on GOG or Steam.
+                        Copy the contents of your Fallout 2 folder from your Windows installation to your roms folder:
+                        /userdata/roms/fallout2
+
+                        Create a blank file called `Fallout 2.game` this allows for scrapping & helps launch the game via EmulationStation.
+
+                        Note: This game currently requires a mouse and keyboard to play.
+
+                        For more info: https://wiki.batocera.org/systems:fallout2-ce
+  comment_fr:           |
+                        Trouvez la documentation ici: https://wiki.batocera.org/systems:fallout2-ce
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/systems:fallout2-ce
 
 flatpak:
   name:                 Applications
