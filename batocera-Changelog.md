@@ -7,6 +7,8 @@
 - DPLII/Surround Sound ES setting for Dolphin. Note there is a mild performance cost.
 - The Force Engine: Play Dark Forces with enhanced graphics.
 - IORTCW: Play Return to Castle Wolfenstein with enhanced graphics.
+- Fallout Community Edition: Play the original Fallout game.
+- Fallout 2 Community Edition: Play the original Fallout 2 game.
 ### Fixed
 - Dolphin bug that prevented full range of analog trigger axis being used.
 - Flycast per pixel sorting option if renderer not explicitly set
@@ -94,10 +96,10 @@
 - Libretro-MAME to 0.260
 ### System
 - Linux kernel to 6.6
-- Mesa to 23.2.1
+- Mesa to 23.3
 - Proton to 8.0-4b
 - FAudio to 23.10
-- Nvidia production driver to 535.113.01
+- Nvidia production driver to 545.29.02
 - SDL2 to 2.28.4
 
 # 2023/10/16 - batocera.linux 38 - Blue Moon

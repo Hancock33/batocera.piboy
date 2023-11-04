@@ -941,6 +941,12 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # Return to Castle Wolfenstein
     select BR2_PACKAGE_RTCW                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_aarch64 && BR2_PACKAGE_BATOCERA_GLES3)
 
+    # Fallout 1 open source engine
+    select BR2_PACKAGE_FALLOUT1_CE          # ALL
+
+    # Fallout 2 open source engine
+    select BR2_PACKAGE_FALLOUT2_CE          # ALL
+
     help
         Ports
 
@@ -1316,8 +1322,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_CORSIXTH                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Theme Hospital
     #select BR2_PACKAGE_DXX_REBIRTH                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                            # Descent 1 & 2 open source engine
     select BR2_PACKAGE_F2BGL                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Fade To Black
-    select BR2_PACKAGE_FALLOUT1_CE                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Fallout1
-    select BR2_PACKAGE_FALLOUT2_CE                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Fallout2
     select BR2_PACKAGE_FREEDROID                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Paradroid
     #select BR2_PACKAGE_HALFLIFE2                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Half-Life 2
     select BR2_PACKAGE_HODE                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Heart of Darkness
