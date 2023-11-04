@@ -22,7 +22,70 @@
             "trigger": ["hotkey", "x"],
             "type": "key",
             "target": "KEY_F7",
-            "description": "Quick load"
+            "description": "Quick load",
+        {
+            "trigger": "joystick1",
+            "type": "mouse"
+        },
+        {
+            "trigger": "a",
+            "type": "key",
+            "target": "BTN_RIGHT"
+        },
+        {
+            "trigger": "start",
+            "type": "key",
+            "target": "KEY_ENTER"
+        },
+        {
+            "trigger": "select",
+            "type": "key",
+            "target": "KEY_ESC"
+        },
+        {
+            "trigger": "b",
+            "type": "key",
+            "target": "BTN_LEFT"
+        },
+        {
+            "trigger": "up",
+            "type": "key",
+            "target": "KEY_UP"
+        },
+        {
+            "trigger": "down",
+            "type": "key",
+            "target": "KEY_DOWN"
+        },
+        {
+            "trigger": "left",
+            "type": "key",
+            "target": "KEY_LEFT"
+        },
+        {
+            "trigger": "right",
+            "type": "key",
+            "target": "KEY_RIGHT"
+        },
+        {
+            "trigger": "y",
+            "type": "key",
+            "target": "KEY_P"
+        },
+        {
+            "trigger": "x",
+            "type": "key",
+            "target": "KEY_I"
+        },
+        {
+            "trigger": "pagedown",
+            "type": "key",
+            "target": "KEY_A"
+        },
+        {
+            "trigger": "pageup",
+            "type": "key",
+            "target": "KEY_S"
         }
     ]
 }

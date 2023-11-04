@@ -3596,6 +3596,7 @@ fallout1-ce:
   manufacturer:         Ports
   release:              1997
   hardware:             port
+  theme:                fallout1
   extensions:           [f1ce, game]
   platform:             pc
   group:                ports
@@ -3626,6 +3627,7 @@ fallout2-ce:
   manufacturer:         Ports
   release:              1998
   hardware:             port
+  theme:                fallout2
   extensions:           [f2ce, game]
   platform:             pc
   group:                ports
