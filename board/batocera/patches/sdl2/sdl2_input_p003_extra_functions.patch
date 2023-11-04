@@ -49,10 +49,10 @@ index 8e1d36d06..ac92a19ad 100644
  SDL_DYNAPI_PROC(int,SDL_JoystickGetBall,(SDL_Joystick *a, int b, int *c, int *d),(a,b,c,d),return)
  SDL_DYNAPI_PROC(Uint8,SDL_JoystickGetButton,(SDL_Joystick *a, int b),(a,b),return)
 diff --git a/src/joystick/SDL_joystick.c b/src/joystick/SDL_joystick.c
-index 5e46bc15c..83579b744 100644
+index 1dbc61eca..49100ea50 100644
 --- a/src/joystick/SDL_joystick.c
 +++ b/src/joystick/SDL_joystick.c
-@@ -3006,6 +3006,27 @@ SDL_JoystickGUID SDL_JoystickGetGUIDFromString(const char *pchGUID)
+@@ -3118,6 +3118,27 @@ SDL_JoystickGUID SDL_JoystickGetGUIDFromString(const char *pchGUID)
      return SDL_GUIDFromString(pchGUID);
  }
  
@@ -81,10 +81,10 @@ index 5e46bc15c..83579b744 100644
  void SDL_PrivateJoystickBatteryLevel(SDL_Joystick *joystick, SDL_JoystickPowerLevel ePowerLevel)
  {
 diff --git a/src/joystick/SDL_sysjoystick.h b/src/joystick/SDL_sysjoystick.h
-index a93fa662c..102eacd78 100644
+index ffb4b63a7..c1336188d 100644
 --- a/src/joystick/SDL_sysjoystick.h
 +++ b/src/joystick/SDL_sysjoystick.h
-@@ -255,6 +255,11 @@ extern SDL_JoystickDriver SDL_N3DS_JoystickDriver;
+@@ -258,6 +258,11 @@ extern SDL_JoystickDriver SDL_N3DS_JoystickDriver;
  }
  #endif
  
@@ -97,10 +97,10 @@ index a93fa662c..102eacd78 100644
  
  /* vi: set ts=4 sw=4 expandtab: */
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
-index e6db86781..c840e1493 100644
+index b353b4073..2dc1c000d 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
-@@ -975,6 +975,16 @@ static void ConfigJoystick(SDL_Joystick *joystick, int fd)
+@@ -972,6 +972,16 @@ static void ConfigJoystick(SDL_Joystick *joystick, int fd)
  
      SDL_AssertJoysticksLocked();
  
