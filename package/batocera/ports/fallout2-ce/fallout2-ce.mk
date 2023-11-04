@@ -10,10 +10,6 @@ FALLOUT2_CE_DEPENDENCIES = sdl2
 
 define FALLOUT2_CE_INSTALL_TARGET_CMDS
 	cp $(@D)/fallout2-ce $(TARGET_DIR)/usr/bin/fallout2-ce
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/fallout2-ce/fallout2.keys $(TARGET_DIR)/usr/share/evmapy/fallout1.keys
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/fallout2-ce/fallout2.keys $(TARGET_DIR)/usr/share/evmapy/fallout2.keys
 endef
 
 define FALLOUT2_CE_EVMAPY

@@ -10,7 +10,7 @@ import batoceraFiles
 fout1ConfigDir = batoceraFiles.CONF + "/fallout1"
 fout1ConfigFile = fout1ConfigDir + "/fallout.cfg"
 fout1IniFile = fout1ConfigDir + "/f1_res.ini"
-fout1RomDir = "/userdata/roms/fallout1-ce"
+fout1RomDir = "/userdata/roms/ports/fallout1"
 fout1SrcConfig = fout1RomDir + "/fallout.cfg"
 fout1SrcIni = fout1RomDir + "/f1_res.ini"
 fout1ExeFile = fout1RomDir + "/fallout1-ce"
