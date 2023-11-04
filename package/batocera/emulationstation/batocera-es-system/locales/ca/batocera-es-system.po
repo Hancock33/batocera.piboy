@@ -4771,7 +4771,7 @@ msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D objects polygons."
 msgstr "Millora. Suavitza les dents de serra en polígons d’objectes 3D."
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, ppsspp, yuzu
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, ppsspp, yuzu, dxx-rebirth
 msgctxt "game_options"
 msgid "Smooth textures on 3D objects."
 msgstr "Suavitzar textures a objectes 3D."
@@ -12792,6 +12792,26 @@ msgctxt "game_options"
 msgid "EGA GRAPHICS MODE"
 msgstr ""
 
+#. TRANSLATION: dxx-rebirth
+msgctxt "game_options"
+msgid "Classic (Default)"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth
+msgctxt "game_options"
+msgid "Blocky Filtered"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth
+msgctxt "game_options"
+msgid "Smooth"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth
+msgctxt "game_options"
+msgid "4x MULTISAMPLING"
+msgstr ""
+
 #. TRANSLATION: eduke32, ionfury, raze
 msgctxt "game_options"
 msgid "Skip introduction animations and logos; default is show"
@@ -14125,7 +14145,7 @@ msgctxt "keys_files"
 msgid "Manage Staff"
 msgstr ""
 
-#. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys
+#. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr ""
