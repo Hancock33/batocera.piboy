@@ -22,7 +22,8 @@
             "trigger": ["hotkey", "x"],
             "type": "key",
             "target": "KEY_F7",
-            "description": "Quick load",
+            "description": "Quick load"
+        },
         {
             "trigger": "joystick1",
             "type": "mouse"
