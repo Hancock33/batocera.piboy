@@ -23,6 +23,7 @@ cp     "${BINARIES_DIR}/"*.dtb             "${BATOCERA_BINARIES_DIR}/boot/" || e
 cp     "${BOARD_DIR}/boot/config.txt"      "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
 cp     "${BOARD_DIR}/boot/config.txt"      "${BATOCERA_BINARIES_DIR}/boot/config_piboy.txt" || exit 1
 cp     "${BOARD_DIR}/boot/config_rpi4.txt" "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
+cp     "${BOARD_DIR}/boot/config_rpi5.txt" "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
 cp     "${BOARD_DIR}/boot/fan.piboy.ini"   "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
 cp     "${BOARD_DIR}/boot/fan.piboyxrs.ini" "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
 cp     "${BOARD_DIR}/boot/cmdline.txt"     "${BATOCERA_BINARIES_DIR}/boot/" || exit 1
