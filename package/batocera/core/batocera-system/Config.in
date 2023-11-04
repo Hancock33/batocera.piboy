@@ -129,7 +129,7 @@ config BR2_PACKAGE_BATOCERA_VULKAN
     select BR2_PACKAGE_MESA3D_VULKAN_DRIVER_INTEL           if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
     select BR2_PACKAGE_MESA3D_VULKAN_DRIVER_HASWELL         if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
     select BR2_PACKAGE_MESA3D_VULKAN_DRIVER_AMD             if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-    select BR2_PACKAGE_MESA3D_VULKAN_DRIVER_BROADCOM        if  BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_MESA3D_VULKAN_DRIVER_BROADCOM        if  BR2_PACKAGE_BATOCERA_TARGET_BCM2711  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
     select BR2_PACKAGE_MESA3D_VULKAN_DRIVER_PANFROST        if  BR2_PACKAGE_BATOCERA_PANFROST_MESA3D
     select BR2_PACKAGE_MESA3D_VULKAN_DRIVER_FREEDRENO       if  BR2_PACKAGE_BATOCERA_FREEDRENO_MESA3D
 
@@ -277,7 +277,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_RPIGPIOSWITCH                        if  BR2_PACKAGE_BATOCERA_RPI_ANY                                                    # gpio switches
     select BR2_PACKAGE_RETROGAME                            if  BR2_PACKAGE_BATOCERA_RPI_ANY                                                    # gpio pads
     select BR2_PACKAGE_ANBERNIC_GPIO_PAD                    if  BR2_PACKAGE_BATOCERA_TARGET_RK3568                                              # Anbernic RG353 controller support
-    select BR2_PACKAGE_DESKPIPRO_CASE                       if  BR2_PACKAGE_BATOCERA_TARGET_BCM27XX                                             # deskpi pro case rpi4/5 only
+    select BR2_PACKAGE_DESKPIPRO_CASE                       if  BR2_PACKAGE_BATOCERA_TARGET_BCM2711                                             # deskpi pro case rpi4 only
     select BR2_PACKAGE_PICADE                               if  BR2_PACKAGE_BATOCERA_RPI_ANY                                                    # picade arcade case
 
     # screens
@@ -294,7 +294,8 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 
     # vulkan
     select BR2_PACKAGE_BATOCERA_VULKAN                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM27XX     || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2711     || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RISCV
 
     # wireless drivers
@@ -426,7 +427,7 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     default "broadcom/bcm2711"                                                                                                                                                       if BR2_PACKAGE_BATOCERA_TARGET_BCM2711
     default "broadcom/bcm2712"                                                                                                                                                       if BR2_PACKAGE_BATOCERA_TARGET_BCM2712
     default "raspberrypi/piboy3"                                                                                                                                                     if BR2_PACKAGE_BATOCERA_TARGET_BCM2836 && BR2_PACKAGE_XPI_GAMECON_RPI
-    default "raspberrypi/piboy4"                                                                                                                                                     if BR2_PACKAGE_BATOCERA_TARGET_BCM27XX && BR2_PACKAGE_XPI_GAMECON_RPI
+    default "raspberrypi/piboy4"                                                                                                                                                     if BR2_PACKAGE_BATOCERA_TARGET_BCM2711 && BR2_PACKAGE_XPI_GAMECON_RPI
     default "rockchip/rk3326/rk3326 rockchip/rk3326/gameforce"                                                                                                                       if BR2_PACKAGE_BATOCERA_TARGET_RK3326
     default "rockchip/rk3328/rock64 rockchip/rk3328/roc-cc"                                                                                                                          if BR2_PACKAGE_BATOCERA_TARGET_RK3328
     default "rockchip/rk3288/tinkerboard rockchip/rk3288/miqi"                                                                                                                       if BR2_PACKAGE_BATOCERA_TARGET_RK3288
@@ -470,9 +471,6 @@ config BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
 config BR2_PACKAGE_BATOCERA_TARGET_BCM2712
     bool "bcm2712"
-
-config BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
-    bool "bcm2711 / bcm2712"
 
 # Rockchip
 # ---------------------------------------
@@ -700,9 +698,9 @@ config BR2_PACKAGE_BATOCERA_SEGADC
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H5         && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_X86
 
-    select BR2_PACKAGE_LIBRETRO_FLYCAST2021                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_LIBRETRO_FLYCAST2021                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
-    #select BR2_PACKAGE_REDREAM                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_PACKAGE_BATOCERA_TARGET_BCM27XX && !BR2_PACKAGE_BATOCERA_WAYLAND)
+    #select BR2_PACKAGE_REDREAM                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_PACKAGE_BATOCERA_TARGET_BCM2711 && !BR2_PACKAGE_BATOCERA_WAYLAND)
 
     help
         Sega Dreamcast and Naomi/Atomiswave emulation support
@@ -733,7 +731,7 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
 
     # Standalone Sega Model 3 emulator
     select BR2_PACKAGE_SUPERMODEL                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-    select BR2_PACKAGE_SUPERMODEL_LEGACY                    if  BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_SUPERMODEL_LEGACY                    if  BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     # RetroArch MAME derivatives
     select BR2_PACKAGE_LIBRETRO_MAME2003_PLUS               # ALL
@@ -743,10 +741,10 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H3           && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_RK3128
 
-    select BR2_PACKAGE_LIBRETRO_SAME_CDI                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY       || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_LIBRETRO_SAME_CDI                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY       || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     # Mainline MAME
-    select BR2_PACKAGE_MAME                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY    || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_MAME                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY    || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     help
         Arcade cores/emulators
@@ -770,6 +768,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_MELONDS                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_aarch64 && BR2_PACKAGE_BATOCERA_GLES3)
 
     select BR2_PACKAGE_DRASTIC                              if  BR2_PACKAGE_BATOCERA_RPI_MESA3D         || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
@@ -828,7 +827,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
 config BR2_PACKAGE_BATOCERA_MSDOS_SYSTEMS
     bool "batocera.linux MS/DOS emulation packages"
 
-    select BR2_PACKAGE_DOSBOX                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX # Need libGLEW
+    select BR2_PACKAGE_DOSBOX                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711 # Need libGLEW
 
     select BR2_PACKAGE_DOSBOX_X                             if  !BR2_PACKAGE_BATOCERA_TARGET_RK3326     && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_BCM2835    && \
@@ -882,26 +881,26 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_REMINISCENCE                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_aarch64 || BR2_riscv
 
     # Super Flappy Birds
-    select BR2_PACKAGE_LIBRETRO_SUPERFLAPPYBIRDS            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_LIBRETRO_SUPERFLAPPYBIRDS            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     # Zelda Classic
     select BR2_PACKAGE_LIBRETRO_ZC210                       # ALL
     select BR2_PACKAGE_LIBRETRO_ZC250X                      # ALL
 
     # Dinothwar
-    select BR2_PACKAGE_LIBRETRO_DINOTHAWR                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_LIBRETRO_DINOTHAWR                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     # Minecraft mini-clone
     select BR2_PACKAGE_LIBRETRO_CRAFT                       if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # ChaiScript engine
-    select BR2_PACKAGE_LIBRETRO_CHAILOVE                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_LIBRETRO_CHAILOVE                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
-    select BR2_PACKAGE_LIBRETRO_LOWRESNX                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_LIBRETRO_LOWRESNX                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
-    select BR2_PACKAGE_ABUSE                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_ABUSE                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
-    select BR2_PACKAGE_LIBRETRO_VITAQUAKE2                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_LIBRETRO_VITAQUAKE2                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     # Super Mario War
     select BR2_PACKAGE_LIBRETRO_SUPERBROSWAR                if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
@@ -1059,13 +1058,13 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H3         && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
 
-    select BR2_PACKAGE_LIBRETRO_DUCKSTATION                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_LIBRETRO_DUCKSTATION                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     select BR2_PACKAGE_LIBRETRO_PCSX                        # All
 
     select BR2_PACKAGE_LIBRETRO_BEETLE_PSX                  if  !BR2_PACKAGE_BATOCERA_RPI_ANY           && \
                                                                 !BR2_PACKAGE_BATOCERA_TARGET_H3         && \
-                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3326     || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3326     || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
 
     # Saturn
@@ -1076,11 +1075,12 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_YABASANSHIRO                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
                                                                 BR2_PACKAGE_BATOCERA_GLES3
 
-    select BR2_PACKAGE_YABASANSHIRO                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_YABASANSHIRO                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     # Gamecube / Wii
     select BR2_PACKAGE_DOLPHIN_EMU                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
     select BR2_PACKAGE_LIBRETRO_DOLPHIN                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
@@ -1106,8 +1106,8 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_PCSX2                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_LRPS2                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     #select BR2_PACKAGE_LIBRETRO_PCSX2                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-    select BR2_PACKAGE_PLAY                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-    select BR2_PACKAGE_LIBRETRO_PLAY                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_PLAY                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
+    select BR2_PACKAGE_LIBRETRO_PLAY                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
 
     # Sony PS3
     select BR2_PACKAGE_RPCS3                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
@@ -1136,7 +1136,8 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2712   || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     select BR2_PACKAGE_BIGPEMU                              if  BR2_PACKAGE_BATOCERA_WINE
 
@@ -1160,7 +1161,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     # Sega 8-bit/16-range (Mark III / Master System, Game Gear, Genesis / Megadrive, SegaCD / MegaCD, 32X)
     select BR2_PACKAGE_LIBRETRO_PICODRIVE                   # ALL
     select BR2_PACKAGE_LIBRETRO_GENESISPLUSGX               # ALL
-    select BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_WIDE          if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_WIDE          if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
     select BR2_PACKAGE_LIBRETRO_BLASTEM                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
     select BR2_PACKAGE_LIBRETRO_SMSPLUS_GX                  # ALL
     select BR2_PACKAGE_LIBRETRO_GEARSYSTEM                  # ALL
@@ -1191,16 +1192,16 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_NESTOPIA                    # ALL
     select BR2_PACKAGE_LIBRETRO_MESEN                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_RK3399   || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588      || BR2_PACKAGE_BATOCERA_TARGET_S905GEN3 || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX  || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3288
+                                                                BR2_PACKAGE_BATOCERA_TARGET_S922X       || BR2_PACKAGE_BATOCERA_TARGET_BCM2711  || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3288      || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
 
     # Super Nintendo / Super Famicom
     select BR2_PACKAGE_LIBRETRO_SNES9X                      if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
     select BR2_PACKAGE_LIBRETRO_SNES9X_NEXT                 if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
     select BR2_PACKAGE_LIBRETRO_POCKETSNES                  if  BR2_PACKAGE_BATOCERA_TARGET_BCM2835     || BR2_PACKAGE_BATOCERA_TARGET_H3       || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2836     || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2836     || BR2_PACKAGE_BATOCERA_TARGET_BCM2711  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
 
-    select BR2_PACKAGE_LIBRETRO_BSNES                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX  || \
+    select BR2_PACKAGE_LIBRETRO_BSNES                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712 || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588      || BR2_PACKAGE_BATOCERA_TARGET_S922X    || BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
     select BR2_PACKAGE_LIBRETRO_BSNES_HD                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_MESENS                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_S922X    || BR2_PACKAGE_BATOCERA_TARGET_BCM2712 || \
@@ -1274,10 +1275,10 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_LIBRETRO_2048
     select BR2_PACKAGE_LIBRETRO_BK_EMULATOR
     select BR2_PACKAGE_LIBRETRO_CANNONBALL
-    select BR2_PACKAGE_LIBRETRO_EP128EMU                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_LIBRETRO_EP128EMU                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
     #select BR2_PACKAGE_LIBRETRO_FFMPEG
-    select BR2_PACKAGE_LIBRETRO_FREEJ2ME                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
-    select BR2_PACKAGE_LIBRETRO_SQUIRRELJME                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_LIBRETRO_FREEJ2ME                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
+    select BR2_PACKAGE_LIBRETRO_SQUIRRELJME                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
     select BR2_PACKAGE_OPENJDK                              if  BR2_PACKAGE_LIBRETRO_FREEJ2ME
     select BR2_PACKAGE_LIBRETRO_GONG
     select BR2_PACKAGE_LIBRETRO_JAXE
@@ -1295,59 +1296,59 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_LIBRETRO_YABAUSE                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
     # Emulators
-    select BR2_PACKAGE_VIRTUALJAGUAR                        if  BR2_PACKAGE_BATOCERA_TARGET_BCM27XX     # Atari Jaguar
+    select BR2_PACKAGE_VIRTUALJAGUAR                        if  BR2_PACKAGE_BATOCERA_TARGET_BCM2711     # Atari Jaguar
 
     #Extra Ports
     #32bit Applications
-    #select BR2_SORR                                        if  BR2_PACKAGE_BATOCERA_TARGET_BCM27XX     # Streets of Rage Remake - 32bit Only
-    select BR2_PACKAGE_BOX64                                if  BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
-    select BR2_PACKAGE_LIB32BIT                             if  BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    #select BR2_SORR                                        if  BR2_PACKAGE_BATOCERA_TARGET_BCM2711     # Streets of Rage Remake - 32bit Only
+    select BR2_PACKAGE_BOX64                                if  BR2_PACKAGE_BATOCERA_TARGET_BCM2711
+    select BR2_PACKAGE_LIB32BIT                             if  BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     #Doom
-    select BR2_PACKAGE_DOOM3                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
-    select BR2_PACKAGE_DOOMRETRO                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_DOOM3                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
+    select BR2_PACKAGE_DOOMRETRO                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     #Quake
-    select BR2_PACKAGE_YQUAKE2                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_YQUAKE2                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
     select BR2_PACKAGE_YQUAKE2_REFVK                        if  BR2_PACKAGE_YQUAKE2
     select BR2_PACKAGE_YROGUE                               if  BR2_PACKAGE_YQUAKE2
     select BR2_PACKAGE_VKQUAKE                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_XATRIX                               if  BR2_PACKAGE_YQUAKE2
-    select BR2_PACKAGE_QUAKESPASM                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_QUAKESPASM                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
-    select BR2_PACKAGE_ALEPHONE                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Alephone
-    select BR2_PACKAGE_AVP                                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Alien vs Predator
-    select BR2_PACKAGE_AWGL                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Another World
-    select BR2_PACKAGE_BERMUDA                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Bermuda Syndrome
-    select BR2_PACKAGE_BLUES                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Blues Brothers / Prehistorik 2
-    select BR2_PACKAGE_BSTONE                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Blakestone
-    #select BR2_PACKAGE_CANDC                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Red Alert / Tiberian Dawn (WIP)
-    select BR2_PACKAGE_CORSIXTH                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Theme Hospital
+    select BR2_PACKAGE_ALEPHONE                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Alephone
+    select BR2_PACKAGE_AVP                                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Alien vs Predator
+    select BR2_PACKAGE_AWGL                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Another World
+    select BR2_PACKAGE_BERMUDA                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Bermuda Syndrome
+    select BR2_PACKAGE_BLUES                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Blues Brothers / Prehistorik 2
+    select BR2_PACKAGE_BSTONE                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Blakestone
+    #select BR2_PACKAGE_CANDC                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Red Alert / Tiberian Dawn (WIP)
+    select BR2_PACKAGE_CORSIXTH                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Theme Hospital
     #select BR2_PACKAGE_DXX_REBIRTH                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                            # Descent 1 & 2 open source engine
-    select BR2_PACKAGE_F2BGL                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Fade To Black
-    select BR2_PACKAGE_FREEDROID                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Paradroid
-    #select BR2_PACKAGE_HALFLIFE2                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Half-Life 2
-    select BR2_PACKAGE_HODE                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Heart of Darkness
-    select BR2_PACKAGE_NBLOOD                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # NBlood / Rednukem / PCExhumed / Witch Haven
-    select BR2_PACKAGE_NUKEM2                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Duke Nukem II
-    select BR2_PACKAGE_OMF2097                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # One Must Fall 2097
-    select BR2_PACKAGE_OPENCLAW                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Captain Claw
-    select BR2_PACKAGE_OPENJK                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # OpenJK: JediAcademy / Jedi Outcast
-    select BR2_PACKAGE_OPENLARA                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Tomb Raider
-    select BR2_PACKAGE_PROTOTYPE                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Prototype (R-Type Clone)
-    select BR2_PACKAGE_RAPTORCOTS                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Raptor Call of the Shadows
-    select BR2_PACKAGE_ROTT                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Rise of the Triad Dark War
-    select BR2_PACKAGE_SERIOUSSAM                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Serious Sam - The First / Second Encounter
-    select BR2_PACKAGE_SM64PORT                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Super Mario 64
-    select BR2_PACKAGE_SPACECADETPINBALL                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Space Cadet Pinball
-    select BR2_PACKAGE_SRB2                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Sonic Robo Blast 2
-    select BR2_PACKAGE_SRB2KART                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Sonic Robo Blast 2 Kart
+    select BR2_PACKAGE_F2BGL                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Fade To Black
+    select BR2_PACKAGE_FREEDROID                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Paradroid
+    #select BR2_PACKAGE_HALFLIFE2                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Half-Life 2
+    select BR2_PACKAGE_HODE                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Heart of Darkness
+    select BR2_PACKAGE_NBLOOD                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # NBlood / Rednukem / PCExhumed / Witch Haven
+    select BR2_PACKAGE_NUKEM2                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Duke Nukem II
+    select BR2_PACKAGE_OMF2097                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # One Must Fall 2097
+    select BR2_PACKAGE_OPENCLAW                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Captain Claw
+    select BR2_PACKAGE_OPENJK                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # OpenJK: JediAcademy / Jedi Outcast
+    select BR2_PACKAGE_OPENLARA                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Tomb Raider
+    select BR2_PACKAGE_PROTOTYPE                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Prototype (R-Type Clone)
+    select BR2_PACKAGE_RAPTORCOTS                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Raptor Call of the Shadows
+    select BR2_PACKAGE_ROTT                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Rise of the Triad Dark War
+    select BR2_PACKAGE_SERIOUSSAM                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Serious Sam - The First / Second Encounter
+    select BR2_PACKAGE_SM64PORT                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Super Mario 64
+    select BR2_PACKAGE_SPACECADETPINBALL                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Space Cadet Pinball
+    select BR2_PACKAGE_SRB2                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Sonic Robo Blast 2
+    select BR2_PACKAGE_SRB2KART                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Sonic Robo Blast 2 Kart
     select BR2_PACKAGE_STALKER                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                            # S.T.A.L.K.E.R.
-    select BR2_PACKAGE_STK                                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # SuperTuxKart
-    select BR2_PACKAGE_STUNTCAR                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Stunt Car Racer
-    select BR2_PACKAGE_SUPERTUX2                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Super Tux2 (Mario Land Clone)
-    select BR2_PACKAGE_TEKWAR                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Tekwar
-    select BR2_PACKAGE_VCMI                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX    # Heroes of Might and Magic III
+    select BR2_PACKAGE_STK                                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # SuperTuxKart
+    select BR2_PACKAGE_STUNTCAR                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Stunt Car Racer
+    select BR2_PACKAGE_SUPERTUX2                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Super Tux2 (Mario Land Clone)
+    select BR2_PACKAGE_TEKWAR                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Tekwar
+    select BR2_PACKAGE_VCMI                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711    # Heroes of Might and Magic III
     select BR2_PACKAGE_XBOX_XCLOUD_CLIENT                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                            # Xbox Cloud Gaming
 
     # Amstrad CPC emulator
@@ -1357,7 +1358,8 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_EKA2L1                               if !BR2_riscv && BR2_x86_64
 
     # Supermodel OpenGL ES port
-    #select BR2_PACKAGE_SUPERMODEL_ES                       if  BR2_PACKAGE_BATOCERA_TARGET_BCM27XX     || \
+    #select BR2_PACKAGE_SUPERMODEL_ES                       if  BR2_PACKAGE_BATOCERA_TARGET_BCM2711     || \
+    #                                                           BR2_PACKAGE_BATOCERA_TARGET_BCM2712 || \
     #                                                           BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
     #                                                           BR2_PACKAGE_BATOCERA_TARGET_RK3568      || \
     #                                                           BR2_PACKAGE_BATOCERA_TARGET_H616
@@ -1383,7 +1385,7 @@ config BR2_PACKAGE_BATOCERA_GUNS
     select BR2_PACKAGE_SINDEN_GUNS                          # sinden guns
     select BR2_PACKAGE_AELIGHTGUN                           # ae light gun
     select BR2_PACKAGE_GUN4IR_GUNS                          # gun4ir guns
-    select BR2_PACKAGE_GUNCON                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64 || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX || BR2_PACKAGE_BATOCERA_TARGET_BCM2837 # guncon
+    select BR2_PACKAGE_GUNCON                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64 || BR2_PACKAGE_BATOCERA_TARGET_BCM2711 || BR2_PACKAGE_BATOCERA_TARGET_BCM2837 # guncon
     select BR2_PACKAGE_GUNCON3                              if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # guncon3
     select BR2_PACKAGE_LIGHTGUNS_GAMES_PRECALIBRATIONS
     select BR2_PACKAGE_DOLPHINCROSSHAIRSPACK                if  BR2_PACKAGE_DOLPHIN_EMU
@@ -1655,8 +1657,8 @@ config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
     select BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI           if  BR2_PACKAGE_BATOCERA_RPI_ANY
     select BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI_BT        if  BR2_PACKAGE_BATOCERA_RPI_ANY
     select BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI_WIFI      if  BR2_PACKAGE_BATOCERA_RPI_ANY
-    select BR2_PACKAGE_RPI_USERLAND_BATOCERA                if  BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
-    select BR2_PACKAGE_RPI_EEPROM                           if  BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_RPI_USERLAND_BATOCERA                if  BR2_PACKAGE_BATOCERA_TARGET_BCM2711
+    select BR2_PACKAGE_RPI_EEPROM                           if  BR2_PACKAGE_BATOCERA_TARGET_BCM2711
 
     # RK3358
     select BR2_PACKAGE_FIRMWARE_RK3588                      if  BR2_PACKAGE_BATOCERA_TARGET_RK3588
@@ -1747,7 +1749,7 @@ config BR2_PACKAGE_BATOCERA_XORG
     select BR2_PACKAGE_XDRIVER_XF86_VIDEO_ATI               if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     && !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_XDRIVER_XF86_VIDEO_NOUVEAU           if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     && !BR2_PACKAGE_BATOCERA_LIB32
     # select BR2_PACKAGE_XDRIVER_XF86_VIDEO_INTEL           if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     && !BR2_PACKAGE_BATOCERA_LIB32
-    select BR2_PACKAGE_XDRIVER_XF86_VIDEO_FBDEV             if  BR2_PACKAGE_BATOCERA_TARGET_BCM27XX     && !BR2_PACKAGE_BATOCERA_LIB32
+    select BR2_PACKAGE_XDRIVER_XF86_VIDEO_FBDEV             if  BR2_PACKAGE_BATOCERA_TARGET_BCM2711     && !BR2_PACKAGE_BATOCERA_LIB32
 
     # nvidia xorg packages are selected by batocera-nvidia package
 
