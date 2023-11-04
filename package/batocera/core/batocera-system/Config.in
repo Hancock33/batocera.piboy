@@ -957,6 +957,9 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # Fallout 2 open source engine
     select BR2_PACKAGE_FALLOUT2_CE                          # ALL
 
+    # Descent 1 & 2 open source engine
+    select BR2_PACKAGE_DXX_REBIRTH                          if BR2_x86_64 
+
     help
         Ports
 
@@ -1326,7 +1329,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_BSTONE                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Blakestone
     #select BR2_PACKAGE_CANDC                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Red Alert / Tiberian Dawn (WIP)
     select BR2_PACKAGE_CORSIXTH                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Theme Hospital
-    #select BR2_PACKAGE_DXX_REBIRTH                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                     # Descent 1 & 2 open source engine
     select BR2_PACKAGE_F2BGL                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Fade To Black
     select BR2_PACKAGE_FREEDROID                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Paradroid
     #select BR2_PACKAGE_HALFLIFE2                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Half-Life 2
