@@ -938,7 +938,6 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_CDOGS                                # ALL
 
     # Turrican clone
-    select BR2_PACKAGE_LIBEPOXY
     select BR2_PACKAGE_HURRICAN                             # ALL
 
     # OpenTyrian (shmup game)
@@ -1752,7 +1751,6 @@ config BR2_PACKAGE_BATOCERA_XORG
     select BR2_PACKAGE_XDRIVER_XF86_VIDEO_ATI               if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     && !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_XDRIVER_XF86_VIDEO_NOUVEAU           if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     && !BR2_PACKAGE_BATOCERA_LIB32
     # select BR2_PACKAGE_XDRIVER_XF86_VIDEO_INTEL           if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     && !BR2_PACKAGE_BATOCERA_LIB32
-    select BR2_PACKAGE_XDRIVER_XF86_VIDEO_FBDEV             if  BR2_PACKAGE_BATOCERA_BCM27XX            && !BR2_PACKAGE_BATOCERA_LIB32
 
     # nvidia xorg packages are selected by batocera-nvidia package
 
