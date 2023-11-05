@@ -3,8 +3,8 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on Oct 28, 2023
-PPSSPP_VERSION = 8e43a9a20473a3b267804c033c617b5396ab0923
+# Version: Commits on Nov 05, 2023
+PPSSPP_VERSION = 949dc97e3a52e018210890e0cb850bebf949e3b0
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
@@ -87,6 +87,8 @@ endif
 # rpi4 vulkan support
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
     PPSSPP_CONF_OPTS += -DARM_NO_VULKAN=OFF
+else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+    PPSSPP_CONF_OPTS += -DARM_NO_VULKAN=ON
 else ifeq ($(BR2_arm)$(BR2_aarch64),y)
     PPSSPP_CONF_OPTS += -DARM_NO_VULKAN=ON
 endif

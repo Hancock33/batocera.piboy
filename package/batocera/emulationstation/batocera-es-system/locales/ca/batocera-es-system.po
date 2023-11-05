@@ -736,7 +736,7 @@ msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "IDIOMA"
 
-#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/yabasanshiro, redream, rtcw, ...
+#. TRANSLATION: libretro/cap32, libretro/melonds, libretro/yabasanshiro, redream, fallout1-ce, ...
 msgctxt "game_options"
 msgid "English (Default)"
 msgstr "Anglès (Per defecte)"
@@ -1763,26 +1763,6 @@ msgstr "Hercules"
 msgctxt "game_options"
 msgid "PCjr"
 msgstr "PCjr"
-
-#. TRANSLATION: libretro/dosbox_pure
-msgctxt "game_options"
-msgid "Use the Select or Left Thumb Button to activate the on-screen keyboard."
-msgstr ""
-
-#. TRANSLATION: libretro/dosbox_pure
-msgctxt "game_options"
-msgid "ON-SCREEN KEYBOARD BUTTON"
-msgstr ""
-
-#. TRANSLATION: libretro/dosbox_pure
-msgctxt "game_options"
-msgid "Select Button (Default)"
-msgstr ""
-
-#. TRANSLATION: libretro/dosbox_pure
-msgctxt "game_options"
-msgid "Left Thumb Button"
-msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -4791,7 +4771,7 @@ msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D objects polygons."
 msgstr "Millora. Suavitza les dents de serra en polígons d’objectes 3D."
 
-#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, ppsspp, yuzu
+#. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, ppsspp, yuzu, dxx-rebirth
 msgctxt "game_options"
 msgid "Smooth textures on 3D objects."
 msgstr "Suavitzar textures a objectes 3D."
@@ -8467,7 +8447,7 @@ msgctxt "game_options"
 msgid "Smaller"
 msgstr ""
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, fallout1-ce, ...
 msgctxt "game_options"
 msgid "Normal (Default)"
 msgstr ""
@@ -12722,12 +12702,12 @@ msgctxt "game_options"
 msgid "GAME DIFFICULTY"
 msgstr ""
 
-#. TRANSLATION: awgl
+#. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Easy"
 msgstr ""
 
-#. TRANSLATION: awgl
+#. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Hard"
 msgstr ""
@@ -12810,6 +12790,26 @@ msgstr ""
 #. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "EGA GRAPHICS MODE"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth
+msgctxt "game_options"
+msgid "Classic (Default)"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth
+msgctxt "game_options"
+msgid "Blocky Filtered"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth
+msgctxt "game_options"
+msgid "Smooth"
+msgstr ""
+
+#. TRANSLATION: dxx-rebirth
+msgctxt "game_options"
+msgid "4x MULTISAMPLING"
 msgstr ""
 
 #. TRANSLATION: eduke32, ionfury, raze
@@ -12897,7 +12897,7 @@ msgctxt "game_options"
 msgid "Display cutscene subtitles"
 msgstr ""
 
-#. TRANSLATION: f2bgl
+#. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "SUBTITLES"
 msgstr ""
@@ -12945,6 +12945,56 @@ msgstr ""
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "START LEVEL"
+msgstr ""
+
+#. TRANSLATION: fallout1-ce, fallout2-ce
+msgctxt "game_options"
+msgid "Choose the games difficulty."
+msgstr ""
+
+#. TRANSLATION: fallout1-ce, fallout2-ce
+msgctxt "game_options"
+msgid "GAME DIFFICULATY"
+msgstr ""
+
+#. TRANSLATION: fallout1-ce, fallout2-ce
+msgctxt "game_options"
+msgid "Choose the combat difficulty."
+msgstr ""
+
+#. TRANSLATION: fallout1-ce, fallout2-ce
+msgctxt "game_options"
+msgid "COMBAT DIFFICULATY"
+msgstr ""
+
+#. TRANSLATION: fallout1-ce, fallout2-ce
+msgctxt "game_options"
+msgid "Wimpy"
+msgstr ""
+
+#. TRANSLATION: fallout1-ce, fallout2-ce
+msgctxt "game_options"
+msgid "Rough"
+msgstr ""
+
+#. TRANSLATION: fallout1-ce, fallout2-ce
+msgctxt "game_options"
+msgid "Choose the preferred violence level."
+msgstr ""
+
+#. TRANSLATION: fallout1-ce, fallout2-ce
+msgctxt "game_options"
+msgid "VIOLENCE LEVEL"
+msgstr ""
+
+#. TRANSLATION: fallout1-ce, fallout2-ce
+msgctxt "game_options"
+msgid "Minimal"
+msgstr ""
+
+#. TRANSLATION: fallout1-ce, fallout2-ce
+msgctxt "game_options"
+msgid "Maximum Blood"
 msgstr ""
 
 #. TRANSLATION: quake3
@@ -13990,12 +14040,12 @@ msgctxt "keys_files"
 msgid "Select"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys, rtcw.keys
+#. TRANSLATION: corsixth.keys, fallout2-ce.keys, rtcw.keys, fallout1-ce.keys
 msgctxt "keys_files"
 msgid "Quick save"
 msgstr ""
 
-#. TRANSLATION: corsixth.keys, rtcw.keys
+#. TRANSLATION: corsixth.keys, fallout2-ce.keys, rtcw.keys, fallout1-ce.keys
 msgctxt "keys_files"
 msgid "Quick load"
 msgstr ""
@@ -14093,6 +14143,16 @@ msgstr ""
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Manage Staff"
+msgstr ""
+
+#. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "Exit game"
+msgstr ""
+
+#. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys
+msgctxt "keys_files"
+msgid "Bring up menu"
 msgstr ""
 
 #. TRANSLATION: openjazz.keys

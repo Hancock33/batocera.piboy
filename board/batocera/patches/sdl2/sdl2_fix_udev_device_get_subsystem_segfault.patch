@@ -1,5 +1,5 @@
 diff --git a/src/core/linux/SDL_udev.c b/src/core/linux/SDL_udev.c
-index 39368c7e0..0e9e5e58d 100644
+index 7eaa2b3eb..c6ea2d4ba 100644
 --- a/src/core/linux/SDL_udev.c
 +++ b/src/core/linux/SDL_udev.c
 @@ -408,6 +408,8 @@ static void device_event(SDL_UDEV_deviceevent type, struct udev_device *dev)

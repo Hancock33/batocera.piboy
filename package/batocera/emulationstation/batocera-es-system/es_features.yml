@@ -1104,13 +1104,6 @@ libretro:
                     "Tandy":                tandy
                     "Hercules":             hercules
                     "PCjr":                 pcjr
-            pure_select_onscreen_keyboard:
-                group: CONTROLLER SETTINGS
-                prompt: ON-SCREEN KEYBOARD BUTTON
-                description: Use the Select or Left Thumb Button to activate the on-screen keyboard.
-                choices:
-                    "Select Button (Default)": "true"
-                    "Left Thumb Button":       "false"
             pure_keyboard_layout:
                 group: CONTROLLER SETTINGS
                 prompt:      PHYSICAL KEYBOARD LAYOUT
@@ -9370,7 +9363,7 @@ scummvm:
               "SuperEagle":                          "supereagle"
               "Pixel-Perfect":                       "pm"
               "DotMatrix":                           "dotmatrix"
-              "TV2x CRT Television Filter":          "tv2x"
+              "TV2x CRT Television Filter":          "tv"
       scumm_stretch:
           prompt: STRETCH MODE
           description: Stretches the output to fill the display area.
@@ -11734,6 +11727,34 @@ doomretro:
 droidports:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+dxx-rebirth:
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  features: [padtokeyboard]
+  cfeatures:
+    rebirth_vsync:
+      prompt: VSYNC
+      description: Fix screen tearing.
+      choices:
+        "Disabled (Default)": 0
+        "Enabled":            1
+    rebirth_filtering:
+      prompt: TEXTURE FILTERING
+      description: Smooth textures on 3D objects.
+      choices:
+        "Classic (Default)": 0
+        "Blocky Filtered":   1
+        "Smooth":            2     
+    rebirth_anisotropy:
+      prompt: ANISOTROPIC FILTERING
+      description: Improves clarity of distant textures.
+      choices:
+        "Disabled (Default)": 0
+        "Enabled":            1
+    rebirth_multisample:
+      prompt: 4x MULTISAMPLING
+      choices:
+        "Disabled (Default)": 0
+        "Enabled":            1
 eduke32:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
@@ -11816,9 +11837,87 @@ f2bgl:
                 "12": 12
                 "13": 13
                 "14": 14
-fallout2:
-  features: [padtokeyboard]
+fallout1-ce:
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  features: [padtokeyboard]
+  cfeatures:
+    fout1_game_difficulty:
+      prompt: GAME DIFFICULATY
+      description: Choose the games difficulty.
+      choices:
+        "Easy":             0
+        "Normal (Default)": 1
+        "Hard":             2
+    fout1_combat_difficulty:
+      prompt: COMBAT DIFFICULATY
+      description: Choose the combat difficulty.
+      choices:
+        "Wimpy":            0
+        "Normal (Default)": 1
+        "Rough":            2
+    fout1_violence_level:
+      prompt: VIOLENCE LEVEL
+      description: Choose the preferred violence level.
+      choices:
+        "None":             0
+        "Minimal":          1
+        "Normal (Default)": 2  
+        "Maximum Blood":    3
+    fout1_subtitles:
+      prompt: SUBTITLES
+      choices:
+        "Off": 0
+        "On":  1
+    fout1_language:
+      prompt: LANGUAGE
+      description: Change the game's language.
+      choices:
+        "English (Default)": "english"
+        "French":            "french"
+        "German":            "german"
+        "Italian":           "italian"
+        "Spanish":           "spanish"
+
+fallout2-ce:
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  features: [padtokeyboard]
+  cfeatures:
+    fout2_game_difficulty:
+      prompt: GAME DIFFICULATY
+      description: Choose the games difficulty.
+      choices:
+        "Easy":             0
+        "Normal (Default)": 1
+        "Hard":             2
+    fout2_combat_difficulty:
+      prompt: COMBAT DIFFICULATY
+      description: Choose the combat difficulty.
+      choices:
+        "Wimpy":            0
+        "Normal (Default)": 1
+        "Rough":            2
+    fout2_violence_level:
+      prompt: VIOLENCE LEVEL
+      description: Choose the preferred violence level.
+      choices:
+        "None":             0
+        "Minimal":          1
+        "Normal (Default)": 2  
+        "Maximum Blood":    3
+    fout2_subtitles:
+      prompt: SUBTITLES
+      choices:
+        "Off": 0
+        "On":  1
+    fout2_language:
+      prompt: LANGUAGE
+      description: Change the game's language.
+      choices:
+        "English (Default)": "english"
+        "French":            "french"
+        "German":            "german"
+        "Italian":           "italian"
+        "Spanish":           "spanish"
 freedroid:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

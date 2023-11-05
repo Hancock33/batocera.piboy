@@ -123,6 +123,10 @@ def getGenerator(emulator):
         from generators.duckstation.duckstationGenerator import DuckstationGenerator
         return DuckstationGenerator()
 
+    if emulator == "dxx-rebirth":
+        from generators.dxx_rebirth.dxx_rebirthGenerator import DXX_RebirthGenerator
+        return DXX_RebirthGenerator()
+
     if emulator == 'easyrpg':
         from generators.easyrpg.easyrpgGenerator import EasyRPGGenerator
         return EasyRPGGenerator()
@@ -143,7 +147,11 @@ def getGenerator(emulator):
         from generators.f2bgl.f2bglGenerator import F2bglGenerator
         return F2bglGenerator()
 
-    if emulator == 'fallout2':
+    if emulator == "fallout1-ce":
+        from generators.fallout1.fallout1Generator import Fallout1Generator
+        return Fallout1Generator()
+
+    if emulator == "fallout2-ce":
         from generators.fallout2.fallout2Generator import Fallout2Generator
         return Fallout2Generator()
 

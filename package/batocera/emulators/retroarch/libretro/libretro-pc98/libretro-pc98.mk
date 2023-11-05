@@ -3,8 +3,8 @@
 # libretro-pc98
 #
 ################################################################################
-# Version: Commits on Oct 24, 2023
-LIBRETRO_PC98_VERSION = 9dbeaafa13e666cb7b87ffddb8bc4ad3343eb5cb
+# Version: Commits on Oct 30, 2023
+LIBRETRO_PC98_VERSION = d9501b220ff59279973bdf53e2ae26bbc27ed7fe
 LIBRETRO_PC98_SITE = $(call github,AZO234,NP2kai,$(LIBRETRO_PC98_VERSION))
 LIBRETRO_PC98_LICENSE = GPLv3
 
@@ -21,6 +21,9 @@ LIBRETRO_PC98_PLATFORM = rpi3-aarch64
 
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 LIBRETRO_PC98_PLATFORM = rpi4
+
+#else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+#LIBRETRO_PC98_PLATFORM = rpi5
 
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S922X),y)
 LIBRETRO_PC98_PLATFORM = CortexA73_G12B

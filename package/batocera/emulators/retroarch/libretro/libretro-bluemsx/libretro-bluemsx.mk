@@ -3,8 +3,8 @@
 # libretro-bluemsx
 #
 ################################################################################
-# Version: Commits on Apr 17, 2023
-LIBRETRO_BLUEMSX_VERSION = e21bf74bddb79ad1bbe20b4d964e7515269c669b
+# Version: Commits on Nov 01, 2023
+LIBRETRO_BLUEMSX_VERSION = ce9b5a8dd1661423226e1099e09cee1a4ae9eb2c
 LIBRETRO_BLUEMSX_SITE = $(call github,libretro,blueMSX-libretro,$(LIBRETRO_BLUEMSX_VERSION))
 LIBRETRO_BLUEMSX_LICENSE = GPLv2
 
@@ -21,6 +21,10 @@ LIBRETRO_BLUEMSX_PLATFORM = rpi3_64
 
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 LIBRETRO_BLUEMSX_PLATFORM = rpi4_64
+
+#else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+#LIBRETRO_BLUEMSX_PLATFORM = rpi5_64
+
 endif
 
 define LIBRETRO_BLUEMSX_BUILD_CMDS

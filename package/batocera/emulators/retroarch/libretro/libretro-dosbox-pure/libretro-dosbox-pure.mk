@@ -3,8 +3,8 @@
 # libretro-dosbox-pure
 #
 ################################################################################
-# Version: Commits on Oct 24, 2023
-LIBRETRO_DOSBOX_PURE_VERSION = a6ac7fdd94c9e8c8a7be8d9958174425a473ba06
+# Version: Commits on Nov 03, 2023
+LIBRETRO_DOSBOX_PURE_VERSION = 9ae8ca99094213406b22399fb0ce7ecb597333e3
 LIBRETRO_DOSBOX_PURE_SITE = $(call github,schellingb,dosbox-pure,$(LIBRETRO_DOSBOX_PURE_VERSION))
 LIBRETRO_DOSBOX_PURE_LICENSE = GPLv2
 
@@ -21,6 +21,10 @@ LIBRETRO_DOSBOX_PURE_PLATFORM = rpi3_64
 
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 LIBRETRO_DOSBOX_PURE_PLATFORM = rpi4
+
+#else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+#LIBRETRO_DOSBOX_PURE_PLATFORM = rpi5
+
 endif
 
 # x86

@@ -7,20 +7,24 @@
 - DPLII/Surround Sound ES setting for Dolphin. Note there is a mild performance cost.
 - The Force Engine: Play Dark Forces with enhanced graphics.
 - IORTCW: Play Return to Castle Wolfenstein with enhanced graphics.
+- Fallout Community Edition: Play the original Fallout game.
+- Fallout 2 Community Edition: Play the original Fallout 2 game.
+- DXX-Rebirth: Play Descent 1 & 2 with enhanced graphics.
 ### Fixed
 - Dolphin bug that prevented full range of analog trigger axis being used.
 - Flycast per pixel sorting option if renderer not explicitly set
 ### Changed
 - L|R activate in-game "Z" input in Dolphin for GC controllers/GC games if controller has L+R inputs mapped.
+- PS2 BIOS files should be put in /userdata/bios/ps2
 ### Updated
 - Retroarch to 1.16.0.3
-- GroovyMAME 0.259 - Switchres 2.002w
+- GroovyMAME 0.260 - Switchres 2.002w
 - DosBox-X to 2023.10.6
 - Libretro-FBNeo to Oct 9, 2023
 - DevilutionX to 1.5.1
 - PPSSPP (standalone) and lr-ppsspp to v1.16.6
 - Libretro-MAME to 0.259 (Oct 4, 2023)
-- Libretro-picodrive to Aug 11, 2023
+- Libretro-Picodrive to Aug 11, 2023
 - Libretro-Genesis-Plus-GX to Sep 11, 2023
 - Libretro-PCSX-ReARMed to Oct 9, 2023
 - Fheroes2 to 1.0.9
@@ -29,7 +33,7 @@
 - Citra to nightly-2009
 - Dolphin to 5.0-20212
 - Flycast to v2.2
-- Libretro-flycast to v2.2
+- Libretro-Flycast to v2.2
 - MelonDS to Oct 12, 2023
 - PCSX2 to v1.7.5105
 - Play! to Oct 13, 2023 build
@@ -91,12 +95,13 @@
 - Libretro-Scummvm to Oct 22, 2023 build
 - Libretro-Snes9x to Oct 13, 2023 build
 - Libretro-Stella to Oct 26, 2023 build
+- Libretro-MAME to 0.260
 ### System
-- Linux kernel to 6.5.9
-- Mesa to 23.2.1
+- Linux kernel to 6.6
+- Mesa to 23.3
 - Proton to 8.0-4b
 - FAudio to 23.10
-- Nvidia production driver to 535.113.01
+- Nvidia production driver to 545.29.02
 - SDL2 to 2.28.4
 
 # 2023/10/16 - batocera.linux 38 - Blue Moon

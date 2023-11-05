@@ -3,8 +3,8 @@
 # libretro-beetle-lynx
 #
 ################################################################################
-# Version: Commits on Jul 21, 2023
-LIBRETRO_BEETLE_LYNX_VERSION = fab3ac02d5622eb53a707bd392cc037282e9d8b4
+# Version: Commits on Nov 01, 2023
+LIBRETRO_BEETLE_LYNX_VERSION = 48909ddd1aba4de034d9c1da70c460b1724daa3b
 LIBRETRO_BEETLE_LYNX_SITE = $(call github,libretro,beetle-lynx-libretro,$(LIBRETRO_BEETLE_LYNX_VERSION))
 LIBRETRO_BEETLE_LYNX_LICENSE = GPLv2
 
@@ -21,6 +21,10 @@ LIBRETRO_BEETLE_LYNX_PLATFORM = rpi3_64
 
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 LIBRETRO_BEETLE_LYNX_PLATFORM = rpi4_64
+
+#else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+#LIBRETRO_BEETLE_LYNX_PLATFORM = rpi5_64
+
 endif
 
 define LIBRETRO_BEETLE_LYNX_BUILD_CMDS

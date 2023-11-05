@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Oct 29, 2023
-RETROARCH_VERSION = a6059473f6574df9605f911fd5fa7252c8f242a7
+# Version: Commits on Nov 05, 2023
+RETROARCH_VERSION = 3186b1dce3439753bfd69b7ae3c797922c34a011
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
@@ -239,4 +239,8 @@ endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 	LIBRETRO_PLATFORM += rpi4_64
+endif
+
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+    LIBRETRO_PLATFORM += rpi5_64
 endif

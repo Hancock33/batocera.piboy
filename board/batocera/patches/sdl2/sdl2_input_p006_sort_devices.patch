@@ -1,8 +1,8 @@
 diff --git a/src/core/linux/SDL_udev.c b/src/core/linux/SDL_udev.c
-index b416a53..70936a4 100644
+index c6ea2d4ba..42a4b9d2f 100644
 --- a/src/core/linux/SDL_udev.c
 +++ b/src/core/linux/SDL_udev.c
-@@ -60,6 +60,67 @@
+@@ -60,6 +60,67 @@ static SDL_bool SDL_UDEV_load_sym(const char *fn, void **addr)
      return SDL_TRUE;
  }
  
@@ -70,7 +70,7 @@ index b416a53..70936a4 100644
  static int SDL_UDEV_load_syms(void)
  {
  /* cast funcs to char* first, to please GCC's strict aliasing rules. */
-@@ -200,6 +260,10 @@ SDL_UDEV_Scan(void)
+@@ -194,6 +255,10 @@ void SDL_UDEV_Scan(void)
      struct udev_list_entry *devs = NULL;
      struct udev_list_entry *item = NULL;
  
@@ -81,7 +81,7 @@ index b416a53..70936a4 100644
      if (_this == NULL) {
          return;
      }
-@@ -220,11 +284,28 @@ SDL_UDEV_Scan(void)
+@@ -214,11 +279,28 @@ void SDL_UDEV_Scan(void)
          const char *path = _this->syms.udev_list_entry_get_name(item);
          struct udev_device *dev = _this->syms.udev_device_new_from_syspath(_this->udev, path);
          if (dev != NULL) {

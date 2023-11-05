@@ -3,8 +3,8 @@
 # libretro-beetle-wswan
 #
 ################################################################################
-# Version: Commits on May 26, 2023
-LIBRETRO_BEETLE_WSWAN_VERSION = a0ddcd3f084f5b4eb06acb6e03b8c4707a2f6123
+# Version: Commits on Nov 01, 2023
+LIBRETRO_BEETLE_WSWAN_VERSION = 32bf70a3032a138baa969c22445f4b7821632c30
 LIBRETRO_BEETLE_WSWAN_SITE = $(call github,libretro,beetle-wswan-libretro,$(LIBRETRO_BEETLE_WSWAN_VERSION))
 LIBRETRO_BEETLE_WSWAN_LICENSE = GPLv2
 
@@ -21,6 +21,10 @@ LIBRETRO_BEETLE_WSWAN_PLATFORM = rpi3_64
 
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 LIBRETRO_BEETLE_WSWAN_PLATFORM = rpi4
+
+#else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+#LIBRETRO_BEETLE_WSWAN_PLATFORM = rpi5
+
 endif
 
 define LIBRETRO_BEETLE_WSWAN_BUILD_CMDS

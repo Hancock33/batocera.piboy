@@ -3,8 +3,8 @@
 # libretro-mame2003-plus
 #
 ################################################################################
-# Version: Commits on Oct 23, 2023
-LIBRETRO_MAME2003_PLUS_VERSION = 79aee414b6f5ab70a6eb257f9273550423e11356
+# Version: Commits on Nov 02, 2023
+LIBRETRO_MAME2003_PLUS_VERSION = 156b3873fbf45a582283f376dd1e410c532b7c88
 LIBRETRO_MAME2003_PLUS_SITE = $(call github,libretro,mame2003-plus-libretro,$(LIBRETRO_MAME2003_PLUS_VERSION))
 LIBRETRO_MAME2003_PLUS_LICENSE = MAME
 
@@ -21,6 +21,9 @@ LIBRETRO_MAME2003_PLUS_PLATFORM = rpi3_64
 
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 LIBRETRO_MAME2003_PLUS_PLATFORM = rpi4_64
+
+#else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+#LIBRETRO_MAME2003_PLUS_PLATFORM = rpi5_64
 
 else ifeq ($(BR2_aarch64),y)
 LIBRETRO_MAME2003_PLUS_PLATFORM = unix
