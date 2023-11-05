@@ -3,8 +3,8 @@
 # libretro-stella
 #
 ################################################################################
-# Version: Commits on Oct 26, 2023
-LIBRETRO_STELLA_VERSION = 341c6d860cdb028f29caf8bb30e9acd3d8521ac1
+# Version: Commits on Nov 04, 2023
+LIBRETRO_STELLA_VERSION = d6224a8a6e30b4b323cde86ade2f05f75dcdfbec
 LIBRETRO_STELLA_SITE = $(call github,stella-emu,stella,$(LIBRETRO_STELLA_VERSION))
 LIBRETRO_STELLA_LICENSE = GPLv2
 
@@ -21,6 +21,10 @@ LIBRETRO_STELLA_PLATFORM = rpi3_64
 
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 LIBRETRO_STELLA_PLATFORM = rpi4
+
+#else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+#LIBRETRO_STELLA_PLATFORM = rpi5
+
 endif
 
 define LIBRETRO_STELLA_BUILD_CMDS

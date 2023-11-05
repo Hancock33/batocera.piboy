@@ -1,8 +1,8 @@
 diff --git a/src/video/kmsdrm/SDL_kmsdrmvideo.c b/src/video/kmsdrm/SDL_kmsdrmvideo.c
-index 7223a5a..0972cb9 100644
+index f7857ba2d..9e9895342 100644
 --- a/src/video/kmsdrm/SDL_kmsdrmvideo.c
 +++ b/src/video/kmsdrm/SDL_kmsdrmvideo.c
-@@ -78,6 +78,7 @@ get_driindex(void)
+@@ -77,6 +77,7 @@ static int get_driindex(void)
      int devindex = -1;
      DIR *folder;
      const char *hint;
@@ -10,7 +10,7 @@ index 7223a5a..0972cb9 100644
  
      hint = SDL_GetHint(SDL_HINT_KMSDRM_DEVICE_INDEX);
      if (hint && *hint) {
-@@ -118,13 +119,28 @@ get_driindex(void)
+@@ -117,13 +118,28 @@ static int get_driindex(void)
                                       resources->count_connectors,
                                       resources->count_encoders,
                                       resources->count_crtcs);
@@ -40,15 +40,15 @@ index 7223a5a..0972cb9 100644
                                      KMSDRM_drmModeGetConnector(
                                          drm_fd, resources->connectors[i]);
  
-@@ -753,6 +769,7 @@ KMSDRM_InitDisplays (_THIS) {
+@@ -911,6 +927,7 @@ static int KMSDRM_InitDisplays(_THIS)
      uint64_t async_pageflip = 0;
      int ret = 0;
      int i;
 +    int drmConn = 0;
  
      /* Open /dev/dri/cardNN (/dev/drmN if on OpenBSD version less than 6.9) */
-     SDL_snprintf(viddata->devpath, sizeof(viddata->devpath), "%s%d",
-@@ -950,11 +950,27 @@
+     (void)SDL_snprintf(viddata->devpath, sizeof(viddata->devpath), "%s%d",
+@@ -933,11 +950,27 @@ static int KMSDRM_InitDisplays(_THIS)
          goto cleanup;
      }
  

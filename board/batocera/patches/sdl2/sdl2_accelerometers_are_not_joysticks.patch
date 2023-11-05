@@ -1,8 +1,8 @@
 diff --git a/src/core/linux/SDL_udev.c b/src/core/linux/SDL_udev.c
-index 4c38b6e..b416a53 100644
+index 39368c7e0..7eaa2b3eb 100644
 --- a/src/core/linux/SDL_udev.c
 +++ b/src/core/linux/SDL_udev.c
-@@ -418,11 +418,11 @@
+@@ -418,11 +418,11 @@ static void device_event(SDL_UDEV_deviceevent type, struct udev_device *dev)
              devclass |= SDL_UDEV_DEVICE_JOYSTICK;
          }
  

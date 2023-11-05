@@ -3,8 +3,8 @@
 # libretro-scummvm
 #
 ################################################################################
-# Version: Commits on Oct 29, 2023
-LIBRETRO_SCUMMVM_VERSION = 3a2bc7a91ce814b3234ddb17214b9c3b699f01db
+# Version: Commits on Nov 05, 2023
+LIBRETRO_SCUMMVM_VERSION = 2e549c3692d8035f08fcd33327bf4348b76caa52
 LIBRETRO_SCUMMVM_SOURCE = scummvm-$(LIBRETRO_SCUMMVM_VERSION).tar.gz
 LIBRETRO_SCUMMVM_SITE = $(call github,scummvm,scummvm,$(LIBRETRO_SCUMMVM_VERSION))
 LIBRETRO_SCUMMVM_LICENSE = GPLv2
@@ -23,6 +23,9 @@ LIBRETRO_SCUMMVM_PLATFORM = rpi3_64
 
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 LIBRETRO_SCUMMVM_PLATFORM = rpi4_64
+
+#else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+#LIBRETRO_SCUMMVM_PLATFORM = rpi5_64
 
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S812),y)
 LIBRETRO_SCUMMVM_PLATFORM = armv cortexa9 neon hardfloat

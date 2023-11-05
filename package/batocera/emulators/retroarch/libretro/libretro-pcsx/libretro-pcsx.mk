@@ -3,8 +3,8 @@
 # libretro-pcsx
 #
 ################################################################################
-# Version: Commits on Oct 28, 2023
-LIBRETRO_PCSX_VERSION = b7f50ee7e6412032ed5bb4559fbc8b18e6ba0c72
+# Version: Commits on Nov 04, 2023
+LIBRETRO_PCSX_VERSION = c396a646b9ce3082bc6aee7da35219f6424c99b6
 LIBRETRO_PCSX_SITE = $(call github,libretro,pcsx_rearmed,$(LIBRETRO_PCSX_VERSION))
 LIBRETRO_PCSX_LICENSE = GPLv2
 
@@ -21,6 +21,8 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2837),y)
 LIBRETRO_PCSX_PLATFORM = rpi3_64
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 LIBRETRO_PCSX_PLATFORM = rpi4_64
+#else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+#LIBRETRO_PCSX_PLATFORM = rpi5_64
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3326),y)
 LIBRETRO_PCSX_PLATFORM = rk3326
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_LIBRETECH_H5),y)

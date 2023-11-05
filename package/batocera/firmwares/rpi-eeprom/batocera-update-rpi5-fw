@@ -1,0 +1,33 @@
+#!/bin/bash
+V=1980-01-01
+RED="\e[1;31m"
+GREEN="\e[1;32m"
+BLUE="\e[1;34m"
+ENDCOLOR="\e[0m"
+clear
+echo '-----------------------RPI5 Update----------------------'
+echo 'You are about to update the Raspberry Pi5 Firmware'
+echo 'This can be Dangerous and could potentially brick your'
+echo 'RPI if not done correctly'
+echo 
+echo 'Please enusre your RPI is connected to AC power before'
+echo 'proceeding with the update process.'
+echo -e '---------------------Current Version--------------------'${GREEN}
+vcgencmd bootloader_version &&
+echo -e ${ENDCOLOR}'---------------------Update Version---------------------'${BLUE}
+echo $V
+echo -e ${ENDCOLOR}'--------------------------------------------------------'${RED}
+read -p "Do you want to proceed? (yes/no)" yn
+echo -e ${ENDCOLOR}
+case $yn in 
+	yes ) echo Proceeding with the firmware update, please wait...;;
+	no ) echo NOT applying Firmware update
+		exit;;
+	* ) echo NOT applying Firmware update
+		exit 1;;
+esac
+mount -o remount,rw /boot
+rpi-eeprom-digest -i /lib/firmware/raspberrypi/bootloader-2712/default/pieeprom-$V.bin -o /boot/pieeprom.sig
+cp /lib/firmware/raspberrypi/bootloader-2712/default/pieeprom-$V.bin /boot/pieeprom.upd
+chmod -f go+r /boot/pieeprom.upd /boot/pieeprom.sig
+echo 'Please reboot your Raspberry Pi5'

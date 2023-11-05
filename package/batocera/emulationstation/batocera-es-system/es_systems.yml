@@ -2235,7 +2235,7 @@ msx1:
   release:              1983
   hardware:             computer
   extensions:           [dsk, mx1, rom, zip, 7z, cas, m3u, ogv, openmsx]
-  platform:             pc
+  platform:             msx
   emulators:
     libretro:
       bluemsx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BLUEMSX], incompatible_extensions: [ogv, openmsx] }
@@ -2333,7 +2333,7 @@ msx2:
   release:              1985
   hardware:             computer
   extensions:           [dsk, mx2, rom, zip, 7z, cas, m3u, openmsx]
-  platform:             pc
+  platform:             msx2
   emulators:
     libretro:
       bluemsx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BLUEMSX], incompatible_extensions: [openmsx] }
@@ -2431,7 +2431,7 @@ msx2+:
   release:              1988
   hardware:             computer
   extensions:           [dsk, mx2, rom, zip, 7z, cas, m3u, openmsx]
-  platform:             pc
+  platform:             msx2+
   emulators:
     libretro:
       bluemsx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BLUEMSX], incompatible_extensions: [openmsx] }
@@ -2529,7 +2529,7 @@ msxturbor:
   release:              1990
   hardware:             computer
   extensions:           [dsk, m3u, mx2, rom, zip, 7z, openmsx]
-  platform:             pc
+  platform:             msxturbor
   emulators:
     libretro:
       bluemsx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BLUEMSX], incompatible_extensions: [openmsx] }
@@ -3563,6 +3563,45 @@ droidports:
     droidports:
       droidports:       { requireAnyOf: [BR2_PACKAGE_LIB32BIT] }
 
+dxx-rebirth:
+  name:                 DXX Rebirth
+  manufacturer:         Ports
+  release:              1998
+  hardware:             port
+  extensions:           [d1x, d2x]
+  platform:             pc
+  group:                ports
+  path:                 /userdata/roms/ports/dxx-rebirth
+  emulators:
+    dxx-rebirth:
+      dxx-rebirth:      { requireAnyOf: [ BR2_PACKAGE_DXX_REBIRTH ] }
+  comment_en:           |
+                        DXX-Rebirth allows you to play Descent 1 & 2.
+
+                        DXX-Rebirth requires game data to play.
+                        You can get Descent 1 PC shareware data and Descent 2 PC demo data from the DXX-Rebirth website.
+                        https://www.dxx-rebirth.com/download/dxx/content/descent-pc-shareware.zip
+                        https://www.dxx-rebirth.com/download/dxx/content/descent2-pc-demo.zip
+
+                        Full game data is supported (and recommended), but is not freely available.
+                        You can buy full Descent 1 game data and/or buy full Descent 2 game data from GOG.com.
+                        DXX-Rebirth contains engines for both games.
+                        Each engine works for its respective game without the data from the other, so players who wish to purchase only one game may do so.
+
+                        Put your Descent data files in /userdata/roms/dxx-rebirth in it's own Descent directory.
+                        Then within that directory, /userdata/roms/dxx-rebirth/Descent add a blank file Descent.d1x.
+                        That file will launch the game and allow your to scrape game information via EmulationStation.
+
+                        Do the same for Descent 2 however using a blank file Descent2.d2x in /userdata/roms/dxx-rebirth/Descent2 accordingly.
+
+                        A mouse & keyboard is required initially but you can configure a controller per user.
+
+                        For more info: https://wiki.batocera.org/systems:dxx-rebirth
+  comment_fr:           |
+                        Trouvez la documentation ici: https://wiki.batocera.org/systems:dxx-rebirth
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/systems:dxx-rebirth
+
 ecwolf:
   name:                 Wolfenstein 3D
   manufacturer:         Ports
@@ -3591,31 +3630,67 @@ f2bgl:
     f2bgl:
       f2bgl:            { requireAnyOf: [BR2_PACKAGE_F2BGL] }
 
-fallout1:
-  name:                 Fallout 1
+fallout1-ce:
+  name:                 Fallout Community Edition
   manufacturer:         Ports
   release:              1997
   hardware:             port
-  extensions:           [game]
+  theme:                fallout1
+  extensions:           [f1ce, game]
   platform:             pc
   group:                ports
   path:                 /userdata/roms/ports/fallout1
   emulators:
-    fallout2:
-      fallout2:         { requireAnyOf: [BR2_PACKAGE_FALLOUT1_CE] }
+    fallout1-ce:
+      fallout1-ce:      { requireAnyOf: [ BR2_PACKAGE_FALLOUT1_CE ] }
+  comment_en:           |
+                        Fallout Community Edition is a fully working re-implementation of Fallout.
+                        It provides the same original gameplay, engine bugfixes, and some quality of life improvements.
 
-fallout2:
-  name:                 Fallout 2
+                        You must own the game to play. Purchase your copy on GOG or Steam.
+                        Copy the contents of your Fallout folder from your Windows installation to your roms folder:
+                        /userdata/roms/fallout1
+
+                        Create a blank file called `Fallout.game` this allows for scrapping & helps launch the game via EmulationStation.
+
+                        Note: This game currently requires a mouse and keyboard to play.
+
+                        For more info: https://wiki.batocera.org/systems:fallout1-ce
+  comment_fr:           |
+                        Trouvez la documentation ici: https://wiki.batocera.org/systems:fallout1-ce
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/systems:fallout1-ce
+
+fallout2-ce:
+  name:                 Fallout 2 Community Edition
   manufacturer:         Ports
   release:              1998
   hardware:             port
-  extensions:           [game]
+  theme:                fallout2
+  extensions:           [f2ce, game]
   platform:             pc
   group:                ports
   path:                 /userdata/roms/ports/fallout2
   emulators:
-    fallout2:
-      fallout2:         { requireAnyOf: [BR2_PACKAGE_FALLOUT2_CE] }
+    fallout2-ce:
+      fallout2-ce:      { requireAnyOf: [ BR2_PACKAGE_FALLOUT2_CE ] }
+  comment_en:           |
+                        Fallout 2 Community Edition is a fully working re-implementation of Fallout 2.
+                        It provides the same original gameplay, engine bugfixes, and some quality of life improvements.
+
+                        You must own the game to play. Purchase your copy on GOG or Steam.
+                        Copy the contents of your Fallout 2 folder from your Windows installation to your roms folder:
+                        /userdata/roms/fallout2
+
+                        Create a blank file called `Fallout 2.game` this allows for scrapping & helps launch the game via EmulationStation.
+
+                        Note: This game currently requires a mouse and keyboard to play.
+
+                        For more info: https://wiki.batocera.org/systems:fallout2-ce
+  comment_fr:           |
+                        Trouvez la documentation ici: https://wiki.batocera.org/systems:fallout2-ce
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/systems:fallout2-ce
 
 flatpak:
   name:                 Applications

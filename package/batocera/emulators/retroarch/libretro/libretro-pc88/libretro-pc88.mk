@@ -3,8 +3,8 @@
 # libretro-pc88
 #
 ################################################################################
-# Version: Commits on Jan 03, 2023
-LIBRETRO_PC88_VERSION = 7980f2484997055a9665837bb4c325d562acb04e
+# Version: Commits on Oct 31, 2023
+LIBRETRO_PC88_VERSION = e3d06c4f34c3643d3ea9248a47cdc6cf60c1e0b1
 LIBRETRO_PC88_SITE = $(call github,libretro,quasi88-libretro,$(LIBRETRO_PC88_VERSION))
 LIBRETRO_PC88_LICENSE = BSD 3-Clause
 
@@ -21,6 +21,10 @@ LIBRETRO_PC88_PLATFORM = unix-rpi3_64
 
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 LIBRETRO_PC88_PLATFORM = unix-rpi4
+
+#else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+#LIBRETRO_PC88_PLATFORM = unix-rpi5
+
 endif
 
 define LIBRETRO_PC88_BUILD_CMDS

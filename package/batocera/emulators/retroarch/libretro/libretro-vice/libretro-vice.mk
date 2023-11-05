@@ -3,8 +3,8 @@
 # libretro-vice
 #
 ################################################################################
-# Version: Commits on Oct 06, 2023
-LIBRETRO_VICE_VERSION = f3542eb9ce3ad7284e2bb69e68bbc10596774b40
+# Version: Commits on Nov 04, 2023
+LIBRETRO_VICE_VERSION = 29759d81dbe1086215a205d644a60c92905c4fb3
 LIBRETRO_VICE_SITE = $(call github,sonninnos,libretro-vice,$(LIBRETRO_VICE_VERSION))
 LIBRETRO_VICE_LICENSE = GPLv2
 
@@ -21,6 +21,9 @@ LIBRETRO_VICE_PLATFORM = rpi3_64
 
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 LIBRETRO_VICE_PLATFORM = rpi4_64
+
+#else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+#LIBRETRO_VICE_PLATFORM = rpi5_64
 
 else ifeq ($(BR2_arm),y)
 LIBRETRO_VICE_PLATFORM = armv neon

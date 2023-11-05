@@ -27,7 +27,7 @@ case $yn in
 		exit 1;;
 esac
 mount -o remount,rw /boot
-rpi-eeprom-digest -i /lib/firmware/raspberrypi/bootloader/default/pieeprom-$V.bin -o /boot/pieeprom.sig
-cp /lib/firmware/raspberrypi/bootloader/default/pieeprom-$V.bin /boot/pieeprom.upd
+rpi-eeprom-digest -i /lib/firmware/raspberrypi/bootloader-2711/default/pieeprom-$V.bin -o /boot/pieeprom.sig
+cp /lib/firmware/raspberrypi/bootloader-2711/default/pieeprom-$V.bin /boot/pieeprom.upd
 chmod -f go+r /boot/pieeprom.upd /boot/pieeprom.sig
 echo 'Please reboot your Raspberry Pi4'

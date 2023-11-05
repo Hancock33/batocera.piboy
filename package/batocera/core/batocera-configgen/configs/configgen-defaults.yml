@@ -272,6 +272,9 @@ dreamcast:
 droidports:
   emulator: droidports
   core:     droidports
+dxx-rebirth:
+  emulator: dxx-rebirth
+  core:     dxx-rebirth
 dynax:
   emulator: libretro
   core:     mame078plus
@@ -304,12 +307,12 @@ exidy:
 f2bgl:
   emulator: f2bgl
   core:     f2bgl
-fallout1:
-  emulator: fallout2
-  core:     fallout2
-fallout2:
-  emulator: fallout2
-  core:     fallout2
+fallout1-ce:
+  emulator: fallout1-ce
+  core:     fallout1-ce
+fallout2-ce:
+  emulator: fallout2-ce
+  core:     fallout2-ce
 fbneo:
   emulator: libretro
   core:     fbneo
@@ -519,6 +522,7 @@ model2:
   core:     model2emu
   options:
     powersave: '2'
+    videomode: max-1920x1080
     hud_support: false
 model3:
   emulator: supermodel

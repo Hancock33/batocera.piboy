@@ -3,8 +3,8 @@
 # stalker
 #
 ################################################################################
-# Version: Commits on Oct 29, 2023
-STALKER_VERSION = b061df52872feafd6f228e4470242687faa2d3e0
+# Version: Commits on Nov 04, 2023
+STALKER_VERSION = 777471bf2e76b1bbd1426388792e3f400e55b40f
 STALKER_SITE = https://github.com/OpenXRay/xray-16.git
 STALKER_SITE_METHOD=git
 STALKER_GIT_SUBMODULES=YES
@@ -13,6 +13,7 @@ STALKER_DEPENDENCIES = sdl2 sdl2_mixer
 STALKER_LICENSE = GPL-2.0
 
 STALKER_SUPPORTS_IN_SOURCE_BUILD = NO
+STALKER_CONF_OPTS += -DUSE_LTO=ON
 
 define STALKER_EVMAPY
 	# evmap config

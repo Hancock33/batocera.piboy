@@ -3,17 +3,21 @@
 # fallout2-ce
 #
 ################################################################################
-# Version: Commits on Oct 09, 2023
-FALLOUT2_CE_VERSION = 81fce5f4a29a51c983780225b9f0538573bea727
+# Version: Commits on Oct 31, 2023
+FALLOUT2_CE_VERSION = f411d75643211dce56772ff54c7a21494b6a1d9f
 FALLOUT2_CE_SITE = $(call github,alexbatalov,fallout2-ce,$(FALLOUT2_CE_VERSION))
 FALLOUT2_CE_DEPENDENCIES = sdl2
 
 define FALLOUT2_CE_INSTALL_TARGET_CMDS
 	cp $(@D)/fallout2-ce $(TARGET_DIR)/usr/bin/fallout2-ce
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/fallout2-ce/fallout2.keys $(TARGET_DIR)/usr/share/evmapy/fallout1.keys
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/fallout2-ce/fallout2.keys $(TARGET_DIR)/usr/share/evmapy/fallout2.keys
 endef
+
+define FALLOUT2_CE_EVMAPY
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/fallout2-ce/fallout2-ce.keys \
+	    $(TARGET_DIR)/usr/share/evmapy
+endef
+
+FALLOUT2_CE_POST_INSTALL_TARGET_HOOKS += FALLOUT2_CE_EVMAPY
 
 $(eval $(cmake-package))

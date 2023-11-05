@@ -3,8 +3,8 @@
 # openbor7142
 #
 ################################################################################
-# Version: Commits on Apr 22, 2022
-OPENBOR7142_VERSION = 7f6f17507078848be625e6d1c1b4f41823151387
+# Version: Commits on Nov 02, 2023
+OPENBOR7142_VERSION = b8303cce992a0db93c3a465df3c943942fe322f8
 OPENBOR7142_SITE = $(call github,DCurrent,openbor,$(OPENBOR7142_VERSION))
 OPENBOR7142_LICENSE = BSD
 

@@ -3,8 +3,8 @@
 # libretro-gambatte
 #
 ################################################################################
-# Version: Commits on Sept 29, 2023
-LIBRETRO_GAMBATTE_VERSION = 40d0d7ac4e11b5c2d1feac2ce96e4d824c248985
+# Version: Commits on Nov 03, 2023
+LIBRETRO_GAMBATTE_VERSION = 6aee06e9b23b4de7aa3bbe248ee521dfbd7b6836
 LIBRETRO_GAMBATTE_SITE = $(call github,libretro,gambatte-libretro,$(LIBRETRO_GAMBATTE_VERSION))
 LIBRETRO_GAMBATTE_LICENSE = GPLv2
 
@@ -21,6 +21,10 @@ LIBRETRO_GAMBATTE_PLATFORM = rpi3_64
 
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
 LIBRETRO_GAMBATTE_PLATFORM = rpi4_64
+
+#else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+#LIBRETRO_GAMBATTE_PLATFORM = rpi5_64
+
 endif
 
 define LIBRETRO_GAMBATTE_BUILD_CMDS
