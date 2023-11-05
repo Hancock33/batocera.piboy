@@ -522,6 +522,7 @@ model2:
   core:     model2emu
   options:
     powersave: '2'
+    videomode: max-1920x1080
     hud_support: false
 model3:
   emulator: supermodel
