@@ -17,7 +17,7 @@ index 0de1fe13a..67d14fe6e 100644
 -	si.SetStringValue("Folders", "Textures", "textures");
 -	si.SetStringValue("Folders", "InputProfiles", "inputprofiles");
 -	si.SetStringValue("Folders", "Videos", "videos");
-+	si.SetStringValue("Folders", "Bios", "/userdata/bios");
++	si.SetStringValue("Folders", "Bios", "/userdata/bios/ps2");
 +	si.SetStringValue("Folders", "Snapshots", "/userdata/screenshots/ps2");
 +	si.SetStringValue("Folders", "Savestates", "/userdata/saves/ps2");
 +	si.SetStringValue("Folders", "MemoryCards", "/userdata/saves/ps2");
@@ -43,7 +43,7 @@ index 0de1fe13a..67d14fe6e 100644
 -	Cheats = LoadPathFromSettings(si, DataRoot, "Cheats", "cheats");
 -	Patches = LoadPathFromSettings(si, DataRoot, "Patches", "patches");
 -	Covers = LoadPathFromSettings(si, DataRoot, "Covers", "covers");
-+	Bios = LoadPathFromSettings(si, DataRoot, "Bios", "/userdata/bios");
++	Bios = LoadPathFromSettings(si, DataRoot, "Bios", "/userdata/bios/ps2");
 +	Snapshots = LoadPathFromSettings(si, DataRoot, "Snapshots", "/userdata/screenshots/ps2");
 +	Savestates = LoadPathFromSettings(si, DataRoot, "Savestates", "/userdata/saves/ps2");
 +	MemoryCards = LoadPathFromSettings(si, DataRoot, "MemoryCards", "/userdata/saves/ps2");
