@@ -5,8 +5,8 @@ GREEN="\e[1;32m"
 BLUE="\e[1;34m"
 ENDCOLOR="\e[0m"
 clear
-echo '-----------------------RPI4 Update----------------------'
-echo 'You are about to update the Raspberry Pi4 Firmware'
+echo '-----------------------RPI5 Update----------------------'
+echo 'You are about to update the Raspberry Pi5 Firmware'
 echo 'This can be Dangerous and could potentially brick your'
 echo 'RPI if not done correctly'
 echo 
@@ -27,7 +27,7 @@ case $yn in
 		exit 1;;
 esac
 mount -o remount,rw /boot
-rpi-eeprom-digest -i /lib/firmware/raspberrypi/bootloader-2711/default/pieeprom-$V.bin -o /boot/pieeprom.sig
-cp /lib/firmware/raspberrypi/bootloader-2711/default/pieeprom-$V.bin /boot/pieeprom.upd
+rpi-eeprom-digest -i /lib/firmware/raspberrypi/bootloader-2712/default/pieeprom-$V.bin -o /boot/pieeprom.sig
+cp /lib/firmware/raspberrypi/bootloader-2712/default/pieeprom-$V.bin /boot/pieeprom.upd
 chmod -f go+r /boot/pieeprom.upd /boot/pieeprom.sig
-echo 'Please reboot your Raspberry Pi4'
+echo 'Please reboot your Raspberry Pi5'
