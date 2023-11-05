@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-10-22 01:13+0800\n"
+"PO-Revision-Date: 2023-11-04 14:19+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二\n"
 "Language: zh_CN\n"
@@ -12542,12 +12542,12 @@ msgstr ""
 #. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Easy"
-msgstr ""
+msgstr "简单"
 
 #. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Hard"
-msgstr ""
+msgstr "困难"
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -12737,7 +12737,7 @@ msgstr ""
 #. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "SUBTITLES"
-msgstr ""
+msgstr "字幕"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -12787,52 +12787,52 @@ msgstr ""
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Choose the games difficulty."
-msgstr ""
+msgstr "选择游戏难度."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "GAME DIFFICULATY"
-msgstr ""
+msgstr "游戏难度"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Choose the combat difficulty."
-msgstr ""
+msgstr "选择战斗难度."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "COMBAT DIFFICULATY"
-msgstr ""
+msgstr "战斗难度"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Wimpy"
-msgstr ""
+msgstr "胆怯"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Rough"
-msgstr ""
+msgstr "狂暴"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Choose the preferred violence level."
-msgstr ""
+msgstr "选择首选的暴力级别."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
-msgstr ""
+msgstr "暴力级别"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Minimal"
-msgstr ""
+msgstr "最小"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Maximum Blood"
-msgstr ""
+msgstr "最大血腥"
 
 #. TRANSLATION: quake3
 msgctxt "game_options"
@@ -13983,12 +13983,12 @@ msgstr "管理员工"
 #. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "Exit game"
-msgstr ""
+msgstr "退出游戏"
 
 #. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys
 msgctxt "keys_files"
 msgid "Bring up menu"
-msgstr ""
+msgstr "调出菜单"
 
 #. TRANSLATION: openjazz.keys
 msgctxt "keys_files"
