@@ -3,8 +3,8 @@
 # supermodel
 #
 ################################################################################
-# Version: Commits on Nov 05, 2023
-SUPERMODEL_VERSION = aecf61762e649c13298345c7973b625be379a652
+# Version: Commits on Nov 06, 2023
+SUPERMODEL_VERSION = a8976b51a2e3bdbe31dbdf2741115e42d00e9cda
 SUPERMODEL_SITE = $(call github,trzy,Supermodel,$(SUPERMODEL_VERSION))
 SUPERMODEL_DEPENDENCIES = sdl2 zlib libzip sdl2_net
 SUPERMODEL_LICENSE = GPLv3
