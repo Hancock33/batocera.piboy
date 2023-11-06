@@ -3,8 +3,8 @@
 # sound-open-firmware
 #
 ################################################################################
-
-SOUND_OPEN_FIRMWARE_VERSION = v2.2.6
+# Version: Commits on Nov 03, 2023
+SOUND_OPEN_FIRMWARE_VERSION = v2023.09.1
 SOUND_OPEN_FIRMWARE_SOURCE = sof-bin-$(SOUND_OPEN_FIRMWARE_VERSION).tar.gz
 SOUND_OPEN_FIRMWARE_SITE = https://github.com/thesofproject/sof-bin/releases/download/$(SOUND_OPEN_FIRMWARE_VERSION)
 SOUND_OPEN_FIRMWARE_LICENSE = BSD-3-Clause
