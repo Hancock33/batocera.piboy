@@ -3,8 +3,8 @@
 # wine-proton-wow64_32
 #
 ################################################################################
-# Version: Commits on Nov 02, 2023
-WINE_PROTON_WOW64_32_VERSION = experimental-wine-bleeding-edge-8.0-61892-20231103-p608505-w14c2a2-d2ed177-v5c4245
+# Version: Commits on Nov 06, 2023
+WINE_PROTON_WOW64_32_VERSION = experimental-wine-8.0-20231106c
 WINE_PROTON_WOW64_32_SOURCE = $(WINE_PROTON_WOW64_32_VERSION).tar.gz
 WINE_PROTON_WOW64_32_SITE = https://github.com/ValveSoftware/wine/archive/refs/tags
 WINE_PROTON_WOW64_32_LICENSE = LGPL-2.1+
