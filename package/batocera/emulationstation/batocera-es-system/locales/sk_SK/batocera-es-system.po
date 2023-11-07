@@ -12715,7 +12715,7 @@ msgctxt "game_options"
 msgid "GAME PLAY"
 msgstr ""
 
-#. TRANSLATION: awgl
+#. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "GAME DIFFICULTY"
 msgstr ""
@@ -12972,18 +12972,13 @@ msgstr "Vyberte obtiažnosť hry."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
-msgid "GAME DIFFICULATY"
-msgstr "Obtiažnosť hry"
-
-#. TRANSLATION: fallout1-ce, fallout2-ce
-msgctxt "game_options"
 msgid "Choose the combat difficulty."
 msgstr "Vyberte obtiažnosť zápasu."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
-msgid "COMBAT DIFFICULATY"
-msgstr "Obtiažnosť zápasu"
+msgid "COMBAT DIFFICULTY"
+msgstr ""
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -14296,6 +14291,14 @@ msgstr "Rýchle načítanie"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Rýchle uloženie"
+
+#~ msgctxt "game_options"
+#~ msgid "GAME DIFFICULATY"
+#~ msgstr "Obtiažnosť hry"
+
+#~ msgctxt "game_options"
+#~ msgid "COMBAT DIFFICULATY"
+#~ msgstr "Obtiažnosť zápasu"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."

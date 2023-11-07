@@ -12805,7 +12805,7 @@ msgctxt "game_options"
 msgid "GAME PLAY"
 msgstr ""
 
-#. TRANSLATION: awgl
+#. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "GAME DIFFICULTY"
 msgstr ""
@@ -13062,18 +13062,13 @@ msgstr "Kies de moeilijkheidsgraad van spellen."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
-msgid "GAME DIFFICULATY"
-msgstr "SPEL MOEILIJKHEIDSGRAAD"
-
-#. TRANSLATION: fallout1-ce, fallout2-ce
-msgctxt "game_options"
 msgid "Choose the combat difficulty."
 msgstr "Kies de moeilijkheidsgraad van vechten"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
-msgid "COMBAT DIFFICULATY"
-msgstr "GEVECHT MOEILIJKHEIDSGRAAD"
+msgid "COMBAT DIFFICULTY"
+msgstr ""
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -14388,6 +14383,14 @@ msgstr "Snel Laden"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Snel Opslaan"
+
+#~ msgctxt "game_options"
+#~ msgid "GAME DIFFICULATY"
+#~ msgstr "SPEL MOEILIJKHEIDSGRAAD"
+
+#~ msgctxt "game_options"
+#~ msgid "COMBAT DIFFICULATY"
+#~ msgstr "GEVECHT MOEILIJKHEIDSGRAAD"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
