@@ -7,7 +7,7 @@ index 37e633817..705bc581a 100644
  		const char* system = nullptr;
  		environ_cb(RETRO_ENVIRONMENT_GET_SYSTEM_DIRECTORY, &system);
 -		bios_dir = Path::Combine(system, "/pcsx2/bios");
-+		bios_dir = Path::Combine(system, "");
++		bios_dir = Path::Combine(system, "ps2");
  
  		FileSystem::FindResultsArray results;
  		if (FileSystem::FindFiles(bios_dir.c_str(), "*", FILESYSTEM_FIND_FILES, &results))
