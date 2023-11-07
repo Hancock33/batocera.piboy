@@ -3897,7 +3897,7 @@ msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "코인 사운드 플러그인"
 
-#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
+#. TRANSLATION: libretro/mame, libretro/mame, libretro/pcsx2, cemu, cemu, ...
 #, fuzzy
 msgctxt "game_options"
 msgid "Enabled"
@@ -6297,6 +6297,16 @@ msgstr "PCE 조이패드"
 msgctxt "game_options"
 msgid "PCE Mouse"
 msgstr "PCE 마우스"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "Skip the bios boot logo, may cause default language issues."
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "BIOS FAST BOOT"
+msgstr ""
 
 #. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar, virtualjaguar
 #, fuzzy
