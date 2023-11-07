@@ -26,7 +26,7 @@ rm -rf $DEST_DIR/lib32/{gconv,glslang,python3.*,terminfo,udev,xorg}
 find $DEST_DIR -type f -name "*.a" -exec rm {} \;
 
 cd $DEST_DIR && tar -cf $DEST_DIR.tar .
-xz -T0 -v $DEST_DIR.tar
+xz -T0 -7 -v $DEST_DIR.tar
 rm -r $DEST_DIR
 cp -av $DEST_DIR.tar.xz /mnt/smb
 mv $DEST_DIR.tar.xz  $HOME/dl/lib32bit
