@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2023-10-21 21:57+0000\n"
+"PO-Revision-Date: 2023-11-06 11:19+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -135,7 +135,7 @@ msgstr "Vergroot de afbeeldingsgrootte alleen in gehele veelvouden."
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "INTEGER SCALING (PIXEL PERFECT)"
-msgstr "INTEGER SCALING (PIXEL PERFECT)"
+msgstr "INTEGER SCHALING (PIXEL PERFECT)"
 
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
@@ -3454,7 +3454,7 @@ msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "MUNT GELUID PLUGIN"
 
-#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
+#. TRANSLATION: libretro/mame, libretro/mame, libretro/pcsx2, cemu, cemu, ...
 msgctxt "game_options"
 msgid "Enabled"
 msgstr "Ingeschakeld"
@@ -3812,7 +3812,7 @@ msgstr "Cartridge"
 #. TRANSLATION: libretro/mame, mame/vitaquake3, mame/vitaquake3
 msgctxt "game_options"
 msgid "Quickload"
-msgstr "Snallaad"
+msgstr "Snellaad"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -5547,6 +5547,16 @@ msgctxt "game_options"
 msgid "PCE Mouse"
 msgstr "PCE Muis"
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "Skip the bios boot logo, may cause default language issues."
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "BIOS FAST BOOT"
+msgstr ""
+
 #. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar, virtualjaguar
 msgctxt "game_options"
 msgid "Off is safer, On for specific games."
@@ -6531,7 +6541,7 @@ msgstr "De SNES CPU Overclocken (Gradius 3, Super R-Type)."
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Light (load times)"
-msgstr "Licht (laad tijd)"
+msgstr "Licht (laadtijd)"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -8070,7 +8080,7 @@ msgstr "ABSOLUTE MOUSE INPUT"
 #. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "Invert the vertical joystick axis on flight games."
-msgstr "Keer de verticale joystickas om in vliegspellen."
+msgstr "Keer de verticale joystick-as om in vliegspellen."
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
@@ -8620,7 +8630,7 @@ msgstr "Kan in sommige 2D-games resulteren in een scherper beeld."
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "INTEGER UPSCALING"
-msgstr "INTEGER UPSCALING"
+msgstr "INTEGER OPSCHALING"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -8630,7 +8640,7 @@ msgstr "Als u dit inschakelt, wordt het beeld vloeiender."
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "LINEAR UPSCALING"
-msgstr "LINEAR UPSCALING"
+msgstr "LINEAIR OPSCHALEN"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -8732,7 +8742,7 @@ msgstr "Uit (Noisy)"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Resampling (Pirch Shift)"
-msgstr "Resampling (Pirch Shift)"
+msgstr "Resampling (Pitch Shift)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9001,7 +9011,7 @@ msgstr "Forceer het spel om in deze beeldverhouding te renderen."
 #. TRANSLATION: flycast, rpcs3, cgenius, yabasanshiro
 msgctxt "game_options"
 msgid "RENDER RESOLUTION"
-msgstr "RENDER RESOLUTIE"
+msgstr "RENDERRESOLUTIE"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
@@ -10135,7 +10145,7 @@ msgstr ""
 #. TRANSLATION: ppsspp, thextech
 msgctxt "game_options"
 msgid "RENDERING MODE"
-msgstr "RENDER MODUS"
+msgstr "RENDERMODUS"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -11666,7 +11676,7 @@ msgstr "FPS LIMITER"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "INSTALL MEDIA FOUNDATION"
-msgstr "INSTALL MEDIA FOUNDATION"
+msgstr "INSTALLEER MEDIA FOUNDATION"
 
 #. TRANSLATION: wine, mugen
 msgctxt "game_options"
@@ -11953,7 +11963,7 @@ msgstr "Kan het beeld gladder maken."
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "Integer Scale"
-msgstr "Integer Scale"
+msgstr "Integer Schaal"
 
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
@@ -12803,12 +12813,12 @@ msgstr ""
 #. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Easy"
-msgstr ""
+msgstr "Makkelijk"
 
 #. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Hard"
-msgstr ""
+msgstr "Moeilijk"
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -12893,22 +12903,22 @@ msgstr ""
 #. TRANSLATION: dxx-rebirth
 msgctxt "game_options"
 msgid "Classic (Default)"
-msgstr ""
+msgstr "Klassiek (Standaard)"
 
 #. TRANSLATION: dxx-rebirth
 msgctxt "game_options"
 msgid "Blocky Filtered"
-msgstr ""
+msgstr "Blokkerig gefilterd"
 
 #. TRANSLATION: dxx-rebirth
 msgctxt "game_options"
 msgid "Smooth"
-msgstr ""
+msgstr "Glad"
 
 #. TRANSLATION: dxx-rebirth
 msgctxt "game_options"
 msgid "4x MULTISAMPLING"
-msgstr ""
+msgstr "4x MULTISAMPLING"
 
 #. TRANSLATION: eduke32, ionfury, raze
 msgctxt "game_options"
@@ -12998,7 +13008,7 @@ msgstr ""
 #. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "SUBTITLES"
-msgstr ""
+msgstr "ONDERTITELS"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -13048,52 +13058,52 @@ msgstr ""
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Choose the games difficulty."
-msgstr ""
+msgstr "Kies de moeilijkheidsgraad van spellen."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "GAME DIFFICULATY"
-msgstr ""
+msgstr "SPEL MOEILIJKHEIDSGRAAD"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Choose the combat difficulty."
-msgstr ""
+msgstr "Kies de moeilijkheidsgraad van vechten"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "COMBAT DIFFICULATY"
-msgstr ""
+msgstr "GEVECHT MOEILIJKHEIDSGRAAD"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Wimpy"
-msgstr ""
+msgstr "Scheiterd"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Rough"
-msgstr ""
+msgstr "Lastig"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Choose the preferred violence level."
-msgstr ""
+msgstr "Kies het gewenste niveau van geweld."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "VIOLENCE LEVEL"
-msgstr ""
+msgstr "GEWELD LEVEL"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Minimal"
-msgstr ""
+msgstr "Minimaal"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Maximum Blood"
-msgstr ""
+msgstr "Maximaal bloedig"
 
 #. TRANSLATION: quake3
 msgctxt "game_options"
@@ -14257,12 +14267,12 @@ msgstr "Beheer personeel"
 #. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "Exit game"
-msgstr ""
+msgstr "Stop spel"
 
 #. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys
 msgctxt "keys_files"
 msgid "Bring up menu"
-msgstr ""
+msgstr "Toon menu"
 
 #. TRANSLATION: openjazz.keys
 msgctxt "keys_files"
