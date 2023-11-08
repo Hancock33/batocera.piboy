@@ -55,11 +55,11 @@
  include/uapi/linux/inet_diag.h                  |   23 +
  include/uapi/linux/rtnetlink.h                  |    4 +-
  include/uapi/linux/tcp.h                        |    1 +
- init/Kconfig                                    |   61 +
+ init/Kconfig                                    |   62 +
  init/Makefile                                   |    2 +-
  kernel/fork.c                                   |   14 +
- kernel/sched/fair.c                             |   22 +-
- kernel/sched/sched.h                            |    3 +
+ kernel/sched/fair.c                             |   26 +-
+ kernel/sched/sched.h                            |    3 +-
  kernel/sys.c                                    |  147 ++
  kernel/sys_ni.c                                 |    3 +
  kernel/sysctl.c                                 |   12 +
@@ -80,7 +80,7 @@
  net/ipv4/tcp_output.c                           |   48 +-
  net/ipv4/tcp_rate.c                             |   30 +-
  net/ipv4/tcp_timer.c                            |    1 +
- 82 files changed, 5315 insertions(+), 605 deletions(-)
+ 82 files changed, 5319 insertions(+), 606 deletions(-)
 
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
 index 0a1731a0f0ef373421c0594886c065461ade1064..804092057541fa2e614f5ea1f2d8bf98d19648a5 100644
@@ -113,13 +113,13 @@ index 0a1731a0f0ef373421c0594886c065461ade1064..804092057541fa2e614f5ea1f2d8bf98
  				Safety option to keep boot IRQs enabled. This
  				should never be necessary.
 diff --git a/Makefile b/Makefile
-index 5c418efbe89b6ca12a9f6a916035a87dd64513ac..50eaf71649de6796ea6126bf87b447633a4913f4 100644
+index f8c14da7c7bc715ea4f8de0b6e555638fb9413e5..aebadb1cdc1cb6be395c22ae33ec124cd4be4fe8 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -2,8 +2,8 @@
  VERSION = 6
  PATCHLEVEL = 6
- SUBLEVEL = 0
+ SUBLEVEL = 1
 -EXTRAVERSION =
 -NAME = Hurr durr I'ma ninja sloth
 +EXTRAVERSION = -zen1
@@ -2629,10 +2629,10 @@ index 0000000000000000000000000000000000000000..e105e6f5cc91d1b99db4c9b1c79b500b
 +MODULE_AUTHOR("Daniel Drake <drake@endlessm.com>");
 +MODULE_LICENSE("GPL v2");
 diff --git a/drivers/pci/quirks.c b/drivers/pci/quirks.c
-index eeec1d6f90238ed981d1161cf563862050fbc934..a99b940d3c3e9568382b4021b527fa574822633f 100644
+index e3e915329510fbcc2aaff7ab6c75ac73cab20f14..d9775b291b779a02d344d214a614b7bd368a87f9 100644
 --- a/drivers/pci/quirks.c
 +++ b/drivers/pci/quirks.c
-@@ -3720,6 +3720,106 @@ static void quirk_no_bus_reset(struct pci_dev *dev)
+@@ -3722,6 +3722,106 @@ static void quirk_no_bus_reset(struct pci_dev *dev)
  	dev->dev_flags |= PCI_DEV_FLAGS_NO_BUS_RESET;
  }
  
@@ -2739,7 +2739,7 @@ index eeec1d6f90238ed981d1161cf563862050fbc934..a99b940d3c3e9568382b4021b527fa57
  /*
   * Some NVIDIA GPU devices do not work with bus reset, SBR needs to be
   * prevented for those affected devices.
-@@ -5114,6 +5214,7 @@ static const struct pci_dev_acs_enabled {
+@@ -5116,6 +5216,7 @@ static const struct pci_dev_acs_enabled {
  	{ PCI_VENDOR_ID_ZHAOXIN, PCI_ANY_ID, pci_quirk_zhaoxin_pcie_ports_acs },
  	/* Wangxun nics */
  	{ PCI_VENDOR_ID_WANGXUN, PCI_ANY_ID, pci_quirk_wangxun_nic_acs },
@@ -4342,10 +4342,10 @@ index 879eeb0a084b4da77a2a73c422cf65c9f8d9f4fb..77270053a5e3988a4643d05c441b0f81
  /*
   * Sender's congestion state indicating normal or abnormal situations
 diff --git a/init/Kconfig b/init/Kconfig
-index 6d35728b94b2b3b12bfb47c6fcea047dbf145be6..cb37aa793d316d3e7e6811361e562b3c6e7190d7 100644
+index 6d35728b94b2b3b12bfb47c6fcea047dbf145be6..ed49a5c585b4b7eccd527b7fac604fa87c9105cd 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
-@@ -123,6 +123,45 @@ config THREAD_INFO_IN_TASK
+@@ -123,6 +123,46 @@ config THREAD_INFO_IN_TASK
  
  menu "General setup"
  
@@ -4375,7 +4375,8 @@ index 6d35728b94b2b3b12bfb47c6fcea047dbf145be6..cb37aa793d316d3e7e6811361e562b3c
 +
 +	    Minimal granularity............:   0.75 ->   0.4  ms
 +	    Bandwidth slice size...........:   5    ->   3    ms
-+	    Task rebalancing threshold.....:  32    ->  64
++	    Task rebalancing threshold.....:  32    ->   8
++	    Migration cost.................:   0.5  ->   0.25 ms
 +
 +	  --- PDS/BMQ CPU Scheduler ------------------------------
 +
@@ -4391,7 +4392,7 @@ index 6d35728b94b2b3b12bfb47c6fcea047dbf145be6..cb37aa793d316d3e7e6811361e562b3c
  config BROKEN
  	bool
  
-@@ -1226,6 +1265,22 @@ config USER_NS
+@@ -1226,6 +1266,22 @@ config USER_NS
  
  	  If unsure, say N.
  
@@ -4414,7 +4415,7 @@ index 6d35728b94b2b3b12bfb47c6fcea047dbf145be6..cb37aa793d316d3e7e6811361e562b3c
  config PID_NS
  	bool "PID Namespaces"
  	default y
-@@ -1368,6 +1423,12 @@ config CC_OPTIMIZE_FOR_PERFORMANCE
+@@ -1368,6 +1424,12 @@ config CC_OPTIMIZE_FOR_PERFORMANCE
  	  with the "-O2" compiler flag for best performance and most
  	  helpful compile-time warnings.
  
@@ -4480,10 +4481,10 @@ index 3b6d20dfb9a85ea3305a892d20316524a2c70bb0..200a77738a803a7e2169b818ed89eb91
  	if (err)
  		goto bad_unshare_out;
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index df348aa55d3c7e049fba67b76e1ada8035e797f9..ea39abfe8b49a9f9cada76a05b9d6c386719a769 100644
+index df348aa55d3c7e049fba67b76e1ada8035e797f9..3b82e2c367464c2e1de8df89b34ad3e4f492aa05 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
-@@ -75,8 +75,13 @@ unsigned int sysctl_sched_tunable_scaling = SCHED_TUNABLESCALING_LOG;
+@@ -75,16 +75,25 @@ unsigned int sysctl_sched_tunable_scaling = SCHED_TUNABLESCALING_LOG;
   *
   * (default: 0.75 msec * (1 + ilog(ncpus)), units: nanoseconds)
   */
@@ -4497,7 +4498,19 @@ index df348aa55d3c7e049fba67b76e1ada8035e797f9..ea39abfe8b49a9f9cada76a05b9d6c38
  
  /*
   * After fork, child runs first. If set to 0 (default) then
-@@ -135,8 +140,12 @@ int __weak arch_asym_cpu_priority(int cpu)
+  * parent will (try to) run first.
+  */
+ unsigned int sysctl_sched_child_runs_first __read_mostly;
+ 
++#ifdef CONFIG_ZEN_INTERACTIVE
++const_debug unsigned int sysctl_sched_migration_cost	= 250000UL;
++#else
+ const_debug unsigned int sysctl_sched_migration_cost	= 500000UL;
++#endif
+ 
+ int sched_thermal_decay_shift;
+ static int __init setup_sched_thermal_decay_shift(char *str)
+@@ -135,8 +144,12 @@ int __weak arch_asym_cpu_priority(int cpu)
   *
   * (default: 5 msec, units: microseconds)
   */
@@ -4510,7 +4523,7 @@ index df348aa55d3c7e049fba67b76e1ada8035e797f9..ea39abfe8b49a9f9cada76a05b9d6c38
  
  #ifdef CONFIG_NUMA_BALANCING
  /* Restrict the NUMA promotion throughput (MB/s) for each target node. */
-@@ -3942,17 +3951,28 @@ static inline bool cfs_rq_is_decayed(struct cfs_rq *cfs_rq)
+@@ -3942,17 +3955,28 @@ static inline bool cfs_rq_is_decayed(struct cfs_rq *cfs_rq)
   */
  static inline void update_tg_load_avg(struct cfs_rq *cfs_rq)
  {
@@ -4541,7 +4554,7 @@ index df348aa55d3c7e049fba67b76e1ada8035e797f9..ea39abfe8b49a9f9cada76a05b9d6c38
  }
  
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 04846272409cc00f20f24d8cc6456554d67aba0a..accea98e86b1a1850ed5998d48270ce9941b4b21 100644
+index 04846272409cc00f20f24d8cc6456554d67aba0a..be2475f2b296a0b8320fcee88dfbc89077fe1658 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -594,6 +594,7 @@ struct cfs_rq {
@@ -4552,15 +4565,15 @@ index 04846272409cc00f20f24d8cc6456554d67aba0a..accea98e86b1a1850ed5998d48270ce9
  	unsigned long		tg_load_avg_contrib;
  	long			propagate;
  	long			prop_runnable_sum;
-@@ -2517,6 +2518,8 @@ extern void check_preempt_curr(struct rq *rq, struct task_struct *p, int flags);
+@@ -2515,7 +2516,7 @@ extern void deactivate_task(struct rq *rq, struct task_struct *p, int flags);
  
- #ifdef CONFIG_PREEMPT_RT
+ extern void check_preempt_curr(struct rq *rq, struct task_struct *p, int flags);
+ 
+-#ifdef CONFIG_PREEMPT_RT
++#ifdef defined(CONFIG_PREEMPT_RT) || defined(CONFIG_ZEN_INTERACTIVE)
  #define SCHED_NR_MIGRATE_BREAK 8
-+#elif defined(CONFIG_ZEN_INTERACTIVE)
-+#define SCHED_NR_MIGRATE_BREAK 64
  #else
  #define SCHED_NR_MIGRATE_BREAK 32
- #endif
 diff --git a/kernel/sys.c b/kernel/sys.c
 index 2410e3999ebe5c1f2cc40d0b028f0d78ce00f559..b0841a2dd2b7ae4627a9a57551886612a4a04ee8 100644
 --- a/kernel/sys.c
