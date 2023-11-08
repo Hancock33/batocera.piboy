@@ -251,10 +251,8 @@ msgstr "Zmeniť tetovanie"
 msgctxt "game_options"
 msgid ""
 "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
-"libretro cores."
+"Libretro cores."
 msgstr ""
-"Počas hry stlačte Hotkey + R1 na preloženie textu na obrazovke. Iba pre "
-"jadrá libretro."
 
 #. TRANSLATION: shared, shared, shared, shared
 msgctxt "game_options"
@@ -471,13 +469,13 @@ msgstr ""
 
 #. TRANSLATION: libretro/81
 msgctxt "game_options"
-msgid "Emulate Chroma 81 interface (colorization)."
-msgstr "Emulovať rozhranie Chroma 81 (zafarbenie)."
+msgid "Emulate Chroma 81 interface (colourisation)."
+msgstr ""
 
-#. TRANSLATION: libretro/81, libretro/gambatte
+#. TRANSLATION: libretro/81
 msgctxt "game_options"
-msgid "COLORIZATION"
-msgstr "Zafarbenie"
+msgid "COLORISATION"
+msgstr ""
 
 #. TRANSLATION: libretro/81, libretro/81, libretro/fceumm, libretro/fceumm, libretro/genesisplusgx, ...
 msgctxt "game_options"
@@ -531,8 +529,8 @@ msgstr "SIO akcelerácia"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
-msgid "Emulate NTSC quirks to show more colors in hi-res mode."
-msgstr "Emulovať NTSC finty na zobrazenie viac farieb v hi-res režime."
+msgid "Emulate NTSC quirks to show more colours in hi-res mode."
+msgstr ""
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -971,7 +969,7 @@ msgctxt "game_options"
 msgid "Enhancement. Remove the eight sprite per line limit."
 msgstr "Rozšírenie. Odstráni obmedzenie 8 spritov na riadok."
 
-#. TRANSLATION: libretro/mesen, libretro/potator, libretro/sameboy
+#. TRANSLATION: libretro/mesen
 msgctxt "game_options"
 msgid "COLOR PALETTE"
 msgstr "Farebná paleta"
@@ -1053,8 +1051,8 @@ msgstr "(FDS) Rýchle načítanie disku"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
-msgid "Useful for speedruns/glitches."
-msgstr "Užitočné pre speedruns/glitche."
+msgid "Useful for speed runs / glitches."
+msgstr ""
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -1418,38 +1416,38 @@ msgstr "WII TV režim"
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
-msgstr "Emulovať Wiimote Sideway s L2 pre Shake a Nunchuk na R-stick."
+msgid "Emulate a Wii Remote Sideway with L2 for Shake and Nunchuk on R-stick."
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "WiiMote"
-msgstr "WiiMote"
+msgid "Wii Remote"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "WiiMote Sideways"
-msgstr "WiiMote Sideways"
+msgid "Wii Remote Sideways"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "WiiMote + Nunchuk"
-msgstr "WiiMote + Nunchuk"
+msgid "Wii Remote + Nunchuk"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "WiiMote + Classic Controller"
-msgstr "WiiMote + klasický ovládač"
+msgid "Wii Remote + Classic Controller"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "WiiMote + Classic Controller Pro"
-msgstr "WiiMote + klasický ovládač Pro"
+msgid "Wii Remote + Classic Controller Pro"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "Real Wiimote"
-msgstr "Skutočné Wiimote"
+msgid "Real Wii Remote"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
@@ -1473,18 +1471,18 @@ msgstr "Režim CPU časovania (fps)"
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
-msgid "internal (fixed 60fps)"
-msgstr "vnútorné (fixné 60fps)"
+msgid "Internal (fixed 60fps)"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
-msgid "internal (variable fps)"
-msgstr "vnútorné (premenlivé fps)"
+msgid "Internal (variable fps)"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
-msgid "external (variable fps)"
-msgstr "externé (premenlivé fps)"
+msgid "External (variable fps)"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox, openbor, mame
 msgctxt "game_options"
@@ -1916,9 +1914,9 @@ msgctxt "game_options"
 msgid "On with game detection message"
 msgstr "HraZapnuté so správou o detekcii hry"
 
-#. TRANSLATION: libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure, mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
-msgid "Set the deadzone of the joystick analogue sticks."
+msgid "Set the dead zone of the joystick analogue sticks."
 msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
@@ -2204,13 +2202,13 @@ msgstr "Digitálny ovládač (gamepad)"
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/duckstation, libretro/duckstation
 msgctxt "game_options"
-msgid "Analog Controller (DualShock)"
-msgstr "Analógový ovládač (DualShock)"
+msgid "Analogue Controller (DualShock)"
+msgstr ""
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/puae, libretro/puae, libretro/puae, ...
 msgctxt "game_options"
-msgid "Analog Joystick"
-msgstr "Analógový joystick"
+msgid "Analogue Joystick"
+msgstr ""
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, ...
 msgctxt "game_options"
@@ -2234,8 +2232,8 @@ msgstr "Digitálny ovládač"
 
 #. TRANSLATION: libretro/duckstation, libretro/duckstation
 msgctxt "game_options"
-msgid "Analog Stick"
-msgstr "Analógová páčka"
+msgid "Analogue Stick"
+msgstr ""
 
 #. TRANSLATION: libretro/fbneo
 msgctxt "game_options"
@@ -2329,23 +2327,23 @@ msgstr "Obe"
 
 #. TRANSLATION: libretro/fceumm, libretro/nestopia, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, ...
 msgctxt "game_options"
-msgid "Can be used to simulate colors of particular displays."
-msgstr "Môže sa použiť na simuláciu farieb niektorých obrazoviek."
+msgid "Can be used to simulate colours of particular displays."
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/nestopia, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, ...
 msgctxt "game_options"
-msgid "COLOR FILTER"
-msgstr "Farebný filter"
+msgid "COLOUR FILTER"
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
-msgid "Composite (color bleeding + artifacts)"
-msgstr "Kompozit (krvácanie farieb + artefakty)"
+msgid "Composite (colour bleeding + artifacts)"
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
-msgid "SVideo (color bleeding only)"
-msgstr "SVideo (iba krvácanie farieb)"
+msgid "SVideo (colour bleeding only)"
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
@@ -2430,8 +2428,8 @@ msgstr "2.5x (1600x1200)"
 
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
-msgid "PLAYER 1 CROSSHAIR COLOR"
-msgstr "Farba nitkového kríža hráča 1"
+msgid "PLAYER 1 CROSSHAIR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -2455,18 +2453,18 @@ msgstr "Biela"
 
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
-msgid "PLAYER 2 CROSSHAIR COLOR"
-msgstr "Farba nitkového kríža hráča 2"
+msgid "PLAYER 2 CROSSHAIR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
-msgid "PLAYER 3 CROSSHAIR COLOR"
-msgstr "Farba nitkového kríža hráča 3"
+msgid "PLAYER 3 CROSSHAIR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
-msgid "PLAYER 4 CROSSHAIR COLOR"
-msgstr "Farba nitkového kríža hráča 4"
+msgid "PLAYER 4 CROSSHAIR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, mupen64plus
 msgctxt "game_options"
@@ -2478,7 +2476,7 @@ msgctxt "game_options"
 msgid "TEXTURE MIP-MAPPING (BLUR)"
 msgstr "Mip-mapping textúr (rozmazanie)"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, flycast
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Improves clarity of distant textures when mip-mapping is enabled."
 msgstr "Zlepšuje čistotu vzdialených textúr, ak je povolený mip-mapping."
@@ -2580,22 +2578,22 @@ msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "Left Analog (Auto)"
+msgid "Left Analogue (Auto)"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "Right Analog (Auto)"
+msgid "Right Analogue (Auto)"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "Left Analog (Forced)"
+msgid "Left Analogue (Forced)"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "Right Analog (Forced)"
+msgid "Right Analogue (Forced)"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
@@ -2610,22 +2608,27 @@ msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
-msgid "Target color for player 1."
+msgid "Target colour for player 1."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
-msgid "Target color for player 2."
+msgid "Target colour for player 2."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
-msgid "Target color for player 3."
+msgid "Target colour for player 3."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
-msgid "Target color for player 4."
+msgid "Target colour for player 4."
+msgstr ""
+
+#. TRANSLATION: libretro/flycast2021
+msgctxt "game_options"
+msgid "Improves clarity of distant textures when mipmapping is enabled."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
@@ -2815,18 +2818,23 @@ msgstr "LCD duchovia (rýchle)"
 
 #. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
 msgctxt "game_options"
-msgid "Simulate LCD color inaccuracy."
-msgstr "Simulovať nepresnosť farieb LCD."
+msgid "Simulate LCD colour inaccuracy."
+msgstr ""
 
 #. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/sameboy, libretro/vba-m, ...
 msgctxt "game_options"
-msgid "COLOR CORRECTION"
-msgstr "Farebná korekcia"
+msgid "COLOUR CORRECTION"
+msgstr ""
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
-msgid "Set the color palette to use."
-msgstr "Vyberte farebnú paletu na použitie."
+msgid "Set the colour palette to use."
+msgstr ""
+
+#. TRANSLATION: libretro/gambatte
+msgctxt "game_options"
+msgid "COLOURISATION"
+msgstr ""
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -3972,23 +3980,23 @@ msgstr "Philips CD-i CD-ROM"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "Tandy Radio Shack Color Computer cartridges"
-msgstr "Tandy Radio Shack Color Computer kartridže"
+msgid "Tandy Radio Shack Colour Computer cartridges"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "Tandy Radio Shack Color Computer disk images"
-msgstr "Tandy Radio Shack Color Computer obrazy disku"
+msgid "Tandy Radio Shack Colour Computer disk images"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "Select the model of Color Computer to emulate"
-msgstr "Vyberte model Color Computer na emuláciu"
+msgid "Select the model of Colour Computer to emulate"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "COLOR COMPUTER MODEL"
-msgstr "Model Color Computer"
+msgid "COLOUR COMPUTER MODEL"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4242,13 +4250,12 @@ msgctxt "game_options"
 msgid "Mac Harddisks"
 msgstr "Mac harddisky"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame
 msgctxt "game_options"
 msgid ""
 "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
-"Color)"
+"Colour)"
 msgstr ""
-"Vyberte model Macu (odporúčané sú Mac Plus pre B&W, Mac LC 3 pre farbu)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4495,10 +4502,10 @@ msgctxt "game_options"
 msgid "CONTROL MAPPING"
 msgstr "Mapovanie ovládania"
 
-#. TRANSLATION: libretro/mame078plus, yabasanshiro, yabasanshiro
+#. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
-msgid "Analog"
-msgstr "Analóg"
+msgid "Analogue"
+msgstr ""
 
 #. TRANSLATION: libretro/mame078plus, yabasanshiro, yabasanshiro
 msgctxt "game_options"
@@ -4622,8 +4629,8 @@ msgstr "Port 1+2"
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/pcsx_rearmed
 msgctxt "game_options"
-msgid "Analog Controller"
-msgstr "Analógový ovládača"
+msgid "Analogue Controller"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -4632,8 +4639,8 @@ msgstr "DualShock ovládač"
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx
 msgctxt "game_options"
-msgid "Analog Joystick (Flystick)"
-msgstr "Analógový joystick (Flystick)"
+msgid "Analogue Joystick (Flystick)"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_supergrafx, libretro/pce, libretro/pce_fast, libretro/pcfx
 msgctxt "game_options"
@@ -4682,8 +4689,8 @@ msgstr "Úroveň slnečného senzora"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
-msgid "TEAM COLOR MODE"
-msgstr "Tímový farebný režim"
+msgid "TEAM COLOUR MODE"
+msgstr ""
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -4930,8 +4937,8 @@ msgstr "Ovládač 4"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
-msgid "Emulate a pak in the controller expansion port."
-msgstr "Emulovať pak v rozširujúcom porte radiča."
+msgid "Emulate a Pak in the controller expansion port."
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -5571,8 +5578,8 @@ msgstr "Oprava hudby Diablo"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
-msgid "Lunar Ignore Brightness Color Fix"
-msgstr "Lunar Ignore Brightness Color Fix"
+msgid "Lunar Ignore Brightness Colour Fix"
+msgstr ""
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -5603,6 +5610,11 @@ msgstr "LCD filter"
 msgctxt "game_options"
 msgid "LCD GHOSTING EFFECTS"
 msgstr "LCD efekty Duchovia"
+
+#. TRANSLATION: libretro/potator, libretro/sameboy
+msgctxt "game_options"
+msgid "COLOUR PALETTE"
+msgstr ""
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -6061,7 +6073,7 @@ msgstr "Prechod klávesnicou"
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
-msgid "Hardcoded keymap to joyport mapping for Keyrah hardware."
+msgid "Hardcoded keymap to joy port mapping for Keyrah hardware."
 msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
@@ -6378,7 +6390,7 @@ msgstr "Emulovať PCG-8100"
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
-msgid "Select the color palette to use"
+msgid "Select the colour palette to use"
 msgstr ""
 
 #. TRANSLATION: libretro/sameboy
@@ -6403,7 +6415,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
-msgid "Simulate LCD color inaccuracy"
+msgid "Simulate LCD colour inaccuracy"
 msgstr ""
 
 #. TRANSLATION: libretro/sameboy
@@ -6423,7 +6435,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
-msgid "Correct Color Curves"
+msgid "Correct Colour Curves"
 msgstr ""
 
 #. TRANSLATION: libretro/sameboy
@@ -6763,8 +6775,8 @@ msgstr "Gamepad klasický Alt"
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
-msgid "COLOR PALETTE (2D)"
-msgstr "Farebná paleta (2D)"
+msgid "COLOUR PALETTE (2D)"
+msgstr ""
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
@@ -6803,8 +6815,8 @@ msgstr "čierna/žltá"
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
-msgid "Use your physical anaglypth 3D glasses!"
-msgstr "Použite svoje fyzické anaglypth 3D okuliare!"
+msgid "Use your physical anaglyph 3D glasses!"
+msgstr ""
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
@@ -6838,13 +6850,13 @@ msgstr "žltá/modrá"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
-msgid "Add color to Game Boy games."
-msgstr "Pridať farbu pre hry Game Boy."
+msgid "Add colour to Game Boy games."
+msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
-msgid "GB COLORIZATION"
-msgstr "GB zafarbenie"
+msgid "GB COLOURISATION"
+msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -6888,8 +6900,8 @@ msgstr "ružové sny"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
-msgid "weird colors"
-msgstr "divné farby"
+msgid "weird colours"
+msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -6965,6 +6977,11 @@ msgstr "C64 hry systému PAL"
 msgctxt "game_options"
 msgid "C64 Japanese NTSC"
 msgstr "C64 japonské NTSC"
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128
+msgctxt "game_options"
+msgid "community-colours"
+msgstr ""
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -7527,12 +7544,12 @@ msgstr "Odstrániť artefakty prekladania"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
-msgid "Centers the image screen. Disabled when using Auto Crop. AUTO = Full."
+msgid "Centres the image screen. Disabled when using Auto Crop. AUTO = Full."
 msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
-msgid "IMAGE CENTERING"
+msgid "IMAGE CENTRING"
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -7650,8 +7667,8 @@ msgstr "GamePad + 4 Pro Controller"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
-msgid "GamePad + 4 Sideway Wiimote"
-msgstr "GamePad + 4 Sideway Wiimote"
+msgid "GamePad + 4 Sideway Wii Remote"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7660,8 +7677,8 @@ msgstr "5 Pro Controller"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
-msgid "5 Sideway Wiimote"
-msgstr "5 Sideway Wiimote"
+msgid "5 Sideway Wii Remote"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -8101,11 +8118,9 @@ msgstr "Zobrazenie"
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid ""
-"Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
+"Enable GameCube boot animation and BIOS access (requires IPL.bin BIOS in "
 "appropriate user directory)."
 msgstr ""
-"Povoliť animáciu zavádzania Gamecube a prístup k systému BIOS (vyžaduje IPL."
-"bin BIOS v príslušnom používateľskom adresári)."
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
@@ -8114,8 +8129,8 @@ msgstr "Povoliť boot animáciu"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Map your controller to an emulated Wiimote."
-msgstr "Mapovať váš ovládač na emulovaný Wiimote."
+msgid "Map your controller to an emulated Wii Remote."
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
 msgctxt "game_options"
@@ -8124,13 +8139,13 @@ msgstr "Ovládače"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "EMULATE WIIMOTE"
-msgstr "Emulovať WiiMote"
+msgid "EMULATE WII REMOTE"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
-msgstr "Prispôsobiť emulovaný Wiimote a gamepad"
+msgid "CUSTOMIZE EMULATED WII REMOTE & GAMEPAD"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -8144,28 +8159,28 @@ msgstr "Klasický ovládač Pro"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Wiimote Sideway"
-msgstr "Wiimote Sideway"
+msgid "Wii Remote Sideway"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Wiimote Sideway + Swing"
-msgstr "Wiimote Sideway + Swing"
+msgid "Wii Remote Sideway + Swing"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Wiimote Sideway + Tilt"
-msgstr "Wiimote Sideway + Tilt"
+msgid "Wii Remote Sideway + Tilt"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Wiimote Sideway + Nunchuk"
-msgstr "Wiimote Sideway + Nunchuk"
+msgid "Wii Remote Sideway + Nunchuk"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
-msgstr "Emulovať ukazovateľ Wiimote pomocou gyroskopu DS4."
+msgid "Emulate the Wii Remote pointer with a DS4's gyroscope."
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
@@ -8174,13 +8189,13 @@ msgstr "Ovládanie pohybu DualShock"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Emulate the Wiimote pointer with a mouse."
-msgstr "Emulujte ukazovateľ Wiimote pomocou myši."
+msgid "Emulate the Wii Remote pointer with a mouse."
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
-msgid "MOUSE AS WIIMOTE POINTER"
-msgstr "Myš ako ukazovateľ Wiimote"
+msgid "MOUSE AS WII REMOTE POINTER"
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -8422,8 +8437,8 @@ msgstr "Preskočiť VBI"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid "Set joystick deadzone."
-msgstr "Nastavte mŕtvu zónu joysticku."
+msgid "Set joystick dead zone."
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin, mupen64plus, ...
 msgctxt "game_options"
@@ -8522,8 +8537,8 @@ msgstr "Zakázať správy na obrazovke"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Determines the speed and the runahead behaviour of the system."
-msgstr "Určuje rýchlosť a nábehové správanie systému."
+msgid "Determines the speed and the run ahead behaviour of the system."
+msgstr ""
 
 #. TRANSLATION: duckstation, duckstation, duckstation
 msgctxt "game_options"
@@ -8764,8 +8779,8 @@ msgstr "Digitálny ovládač PS1"
 
 #. TRANSLATION: duckstation, duckstation
 msgctxt "game_options"
-msgid "PS1 Analog Joystick"
-msgstr "PS1 analógový joystick"
+msgid "PS1 Analogue Joystick"
+msgstr ""
 
 #. TRANSLATION: duckstation, duckstation
 msgctxt "game_options"
@@ -8954,7 +8969,7 @@ msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "Digitálny zvukový procesor"
 
-#. TRANSLATION: flycast/vitaquake3, flycast, virtualjaguar
+#. TRANSLATION: flycast/vitaquake3, virtualjaguar
 msgctxt "game_options"
 msgid "Disbaled (Default)"
 msgstr "Zakázané (predvolené)"
@@ -9015,6 +9030,12 @@ msgid "Rotate the screen with the emulator."
 msgstr "Otočiť obrazovku s emulátorom."
 
 #. TRANSLATION: flycast
+msgctxt "game_options"
+msgid ""
+"Improves clarity of distant textures when anisotropic filtering is enabled."
+msgstr ""
+
+#. TRANSLATION: flycast
 #, c-format
 msgctxt "game_options"
 msgid "Fastest BIOS but not 100% compatible."
@@ -9027,8 +9048,8 @@ msgstr ""
 
 #. TRANSLATION: fpinball
 msgctxt "game_options"
-msgid "Allow mapping Future Pinabll with Pad to Keyboard."
-msgstr "Povolí mapovanie Future Pinballu pomocou Pad to Keyboard."
+msgid "Allow mapping Future Pinball with Pad to Keyboard."
+msgstr ""
 
 #. TRANSLATION: fpinball
 msgctxt "game_options"
@@ -9516,10 +9537,9 @@ msgstr "trilineárne"
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid ""
-"Enhancement. Improves clarity of distant textures when mip-mapping is "
-"enabled."
+"Enhancement. Improves clarity of distant textures when anisotropic filtering "
+"is enabled."
 msgstr ""
-"Rozšírenie. Zlepšuje jasnosť vzdialených textúr, keď je povolený mip-mapping."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -9592,8 +9612,8 @@ msgstr "Povoliť"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
-msgid "Set the sensitivity of the joystick analog sticks."
-msgstr "Nastaviť citlivosť analógových páčok joysticku."
+msgid "Set the sensitivity of the joystick analogue sticks."
+msgstr ""
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
@@ -9604,11 +9624,6 @@ msgstr "Citlivosť"
 msgctxt "game_options"
 msgid "100% (Default)"
 msgstr "100% (predvolené)"
-
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
-msgctxt "game_options"
-msgid "Set the deadzone of the joystick analog sticks."
-msgstr "Nastavte mŕtvu zónu analógových páčok joysticku."
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -9627,10 +9642,8 @@ msgstr "Jednoduché 2x"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Display on screen information like savestate, config warning etc..."
+msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
-"Zobrazenie informácií na obrazovke, ako je stav uloženia, varovanie "
-"konfigurácie atď."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9748,8 +9761,8 @@ msgstr "Povoliť širokouhlé záplaty"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Enable to improve bluriness."
-msgstr "Povoľte na zlepšenie rozmazania."
+msgid "Enable to improve blurriness."
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9914,8 +9927,8 @@ msgstr "Trilineárne (vynútené)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
-"Reduces banding between colours and improves the preceived colour depth."
-msgstr "Redukuje pruhy medzi farbami a zlepšuje vnímanú farebnú hĺbku."
+"Reduces banding between colours and improves the perceived colour depth."
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -10080,10 +10093,9 @@ msgstr "TIME CRISIS hack na hmlu"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid ""
-"Skip buffer disables auto frameskip and renders at display output resolution."
+"Skip buffer disables auto frame skip and renders at display output "
+"resolution."
 msgstr ""
-"Preskočiť vyrovnávaciu pamäť deaktivuje automatické preskakovanie snímok a "
-"vykresľuje vo výstupnom rozlíšení displeja."
 
 #. TRANSLATION: ppsspp, thextech
 msgctxt "game_options"
@@ -10107,8 +10119,8 @@ msgstr "8x 4K (3840x2176)"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "Automatically reduce frameskip if the system has spare overhead."
-msgstr "Automaticky znížiť preskakovanie snímok, ak má systém náhradnú réžiu."
+msgid "Automatically reduce frame skip if the system has spare overhead."
+msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -10393,8 +10405,9 @@ msgstr "Renderovanie"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "Most games already have an internal framelimit. Minor performance cost."
-msgstr "Väčšina hier už má interný framelimit. Menšie náklady na výkon."
+msgid ""
+"Most games already have an internal frame limit. Minor performance cost."
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10534,17 +10547,15 @@ msgstr "Môže opraviť chýbajúcu grafiku a nefunkčné osvetlenie za cenu vý
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "WRITE COLOR BUFFERS"
-msgstr "Zapísať farebné buffery"
+msgid "WRITE COLOUR BUFFERS"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
-"Straict API specification. Can resolve rare cases of missing graphics and "
+"Strict API specification. Can resolve rare cases of missing graphics and "
 "flickering."
 msgstr ""
-"Presná špecifikácia API. Dokáže vyriešiť zriedkavé prípady chýbajúcej "
-"grafiky a blikania."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10600,10 +10611,9 @@ msgstr "Viacvláknové RSX"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
-"Stream texture to GPU in parrallel. Can improve performance on more powerful "
+"Stream texture to GPU in parallel. Can improve performance on more powerful "
 "GPU's."
 msgstr ""
-"Streamuje textúru do GPU paralelne. Môže zlepšiť výkon na výkonnejších GPU."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10911,8 +10921,8 @@ msgstr "Roztiahne výstup tak, aby úplne vyplnil displej."
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Center (Default)"
-msgstr "Stred (predvolené)"
+msgid "Centre (Default)"
+msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -10991,8 +11001,8 @@ msgstr "Testovacia hra"
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
-msgid "Needed by some games that use special unicode characters."
-msgstr "Potrebné pre niektoré hry, ktoré používajú špeciálne Unicode znaky."
+msgid "Needed by some games that use special Unicode characters."
+msgstr ""
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
@@ -11071,8 +11081,8 @@ msgstr "4:3 (predvolené)"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
-msgid "Enable auto frameskipping for performance on lower-end systems."
-msgstr "Povoliť auto preskakovanie snímok pre výkon na slabších systémoch."
+msgid "Enable auto frame skipping for performance on lower-end systems."
+msgstr ""
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -11370,6 +11380,14 @@ msgstr "Používateľský disk"
 
 #. TRANSLATION: mame/vitaquake3
 msgctxt "game_options"
+msgid ""
+"Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
+"Color)"
+msgstr ""
+"Vyberte model Macu (odporúčané sú Mac Plus pre B&W, Mac LC 3 pre farbu)"
+
+#. TRANSLATION: mame/vitaquake3
+msgctxt "game_options"
 msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD, Image Reader)"
 msgstr "Mac IIx (2Mb RAM, farebný, 2 HD mechaniky/CD/HDD/čítačka obrazov)"
 
@@ -11401,8 +11419,8 @@ msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
-msgid "BGFX for post-processing, accel/opengl for raw image."
-msgstr "BGFX pre následné spracovanie, accel/opengl pre nespracovaný obrázok."
+msgid "BGFX for post-processing, Accel/OpenGL for raw image."
+msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -11456,8 +11474,8 @@ msgstr "CRT Geom Deluxe (komposit)"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
-msgid "Allows the use of switchres profiles if present."
-msgstr "Umožňuje použitie profilov prepínačov, ak sú k dispozícii."
+msgid "Allows the use of SwitchRes profiles if present."
+msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -11763,11 +11781,9 @@ msgstr "Typ preskočenia snímok"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid ""
-"When frameskip type is on automatic or manual, skip up to this many frames "
+"When frame skip type is on automatic or manual, skip up to this many frames "
 "consecutively."
 msgstr ""
-"Keď je typ preskakovania snímok zapnutý automaticky alebo manuálne, "
-"preskočiť až na tento počet snímok za sebou."
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
@@ -11965,8 +11981,8 @@ msgstr "Povoliť širokouhlú obrazovku"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
-msgid "Enable scanlines for roms that support it."
-msgstr "Povoliť sken riadky pre romy, ktoré to podporujú."
+msgid "Enable scanlines for games that support it."
+msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -12002,11 +12018,9 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid ""
-"Enables bilinear filtering on tilemaps. Looks good, but can cause some "
+"Enables bilinear filtering on tile maps. Looks good, but can cause some "
 "stretch artifacts."
 msgstr ""
-"Umožňuje bilineárne filtrovanie na mapách dlaždíc. Vyzerá dobre, ale môže "
-"spôsobiť natiahnutie."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -12025,8 +12039,8 @@ msgstr "Vynútiť spravované"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
-msgid "Enables Direct3D Automip-map generation."
-msgstr "Povolí generovanie Direct3D Automip-map."
+msgid "Enables Direct3D Auto mip-map generation."
+msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -12227,8 +12241,8 @@ msgstr "Taiwan"
 
 #. TRANSLATION: yuzu
 msgctxt "game_options"
-msgid "Choose your console timezone."
-msgstr "Vyberte časové pásmo vašej konzoly."
+msgid "Choose your console time zone."
+msgstr ""
 
 #. TRANSLATION: yuzu, ryujinx
 msgctxt "game_options"
@@ -12487,8 +12501,8 @@ msgstr "Americká angličtina"
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
-msgid "Choose your console UTC timezone."
-msgstr "Vyberte časové pásmo UTC vašej konzoly."
+msgid "Choose your console UTC time zone."
+msgstr ""
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
@@ -12622,7 +12636,7 @@ msgstr ""
 
 #. TRANSLATION: hurrican
 msgctxt "game_options"
-msgid "Play custom userlevel."
+msgid "Play custom user level."
 msgstr ""
 
 #. TRANSLATION: hurrican
@@ -12767,7 +12781,7 @@ msgstr ""
 
 #. TRANSLATION: awgl, bermuda
 msgctxt "game_options"
-msgid "Select fullscreen mode."
+msgid "Select full screen mode."
 msgstr ""
 
 #. TRANSLATION: awgl
@@ -13039,7 +13053,7 @@ msgctxt "game_options"
 msgid "Enhanced OpenGL"
 msgstr "Rozšírené OpenGL"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Set the desired maximum refresh rate when Vsync is off."
 msgstr ""
@@ -13185,6 +13199,11 @@ msgstr "800p"
 msgctxt "game_options"
 msgid "960p"
 msgstr "960p"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Set the desired maximum refresh rate when VSync is off."
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -13363,11 +13382,6 @@ msgstr "Vsync"
 
 #. TRANSLATION: virtualjaguar
 msgctxt "game_options"
-msgid "Skip (Default)"
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
 msgid "Enable the Digital Sound Processor."
 msgstr ""
 
@@ -13418,11 +13432,9 @@ msgstr "Anti-aliasing je technika na vyhladenie zubatých hrán."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid ""
-"This option enables the ability to play Xbox Live Arcacde games. May cause "
+"This option enables the ability to play Xbox Live Arcade games. May cause "
 "compatibility issues with non-XBLA games."
 msgstr ""
-"Táto možnosť umožňuje hrať hry Xbox Live Arcade. Môže spôsobiť problémy s "
-"kompatibilitou s hrami, ktoré nie sú XBLA."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -13521,6 +13533,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the controller 1 user mode."
 msgstr ""
+
+#. TRANSLATION: yabasanshiro, yabasanshiro
+msgctxt "game_options"
+msgid "Analog"
+msgstr "Analóg"
 
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
@@ -14291,6 +14308,384 @@ msgstr "Rýchle načítanie"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "Rýchle uloženie"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
+#~ "libretro cores."
+#~ msgstr ""
+#~ "Počas hry stlačte Hotkey + R1 na preloženie textu na obrazovke. Iba pre "
+#~ "jadrá libretro."
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate Chroma 81 interface (colorization)."
+#~ msgstr "Emulovať rozhranie Chroma 81 (zafarbenie)."
+
+#~ msgctxt "game_options"
+#~ msgid "COLORIZATION"
+#~ msgstr "Zafarbenie"
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate NTSC quirks to show more colors in hi-res mode."
+#~ msgstr "Emulovať NTSC finty na zobrazenie viac farieb v hi-res režime."
+
+#~ msgctxt "game_options"
+#~ msgid "Useful for speedruns/glitches."
+#~ msgstr "Užitočné pre speedruns/glitche."
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
+#~ msgstr "Emulovať Wiimote Sideway s L2 pre Shake a Nunchuk na R-stick."
+
+#~ msgctxt "game_options"
+#~ msgid "WiiMote"
+#~ msgstr "WiiMote"
+
+#~ msgctxt "game_options"
+#~ msgid "WiiMote Sideways"
+#~ msgstr "WiiMote Sideways"
+
+#~ msgctxt "game_options"
+#~ msgid "WiiMote + Nunchuk"
+#~ msgstr "WiiMote + Nunchuk"
+
+#~ msgctxt "game_options"
+#~ msgid "WiiMote + Classic Controller"
+#~ msgstr "WiiMote + klasický ovládač"
+
+#~ msgctxt "game_options"
+#~ msgid "WiiMote + Classic Controller Pro"
+#~ msgstr "WiiMote + klasický ovládač Pro"
+
+#~ msgctxt "game_options"
+#~ msgid "Real Wiimote"
+#~ msgstr "Skutočné Wiimote"
+
+#~ msgctxt "game_options"
+#~ msgid "internal (fixed 60fps)"
+#~ msgstr "vnútorné (fixné 60fps)"
+
+#~ msgctxt "game_options"
+#~ msgid "internal (variable fps)"
+#~ msgstr "vnútorné (premenlivé fps)"
+
+#~ msgctxt "game_options"
+#~ msgid "external (variable fps)"
+#~ msgstr "externé (premenlivé fps)"
+
+#~ msgctxt "game_options"
+#~ msgid "Analog Controller (DualShock)"
+#~ msgstr "Analógový ovládač (DualShock)"
+
+#~ msgctxt "game_options"
+#~ msgid "Analog Joystick"
+#~ msgstr "Analógový joystick"
+
+#~ msgctxt "game_options"
+#~ msgid "Analog Stick"
+#~ msgstr "Analógová páčka"
+
+#~ msgctxt "game_options"
+#~ msgid "Can be used to simulate colors of particular displays."
+#~ msgstr "Môže sa použiť na simuláciu farieb niektorých obrazoviek."
+
+#~ msgctxt "game_options"
+#~ msgid "COLOR FILTER"
+#~ msgstr "Farebný filter"
+
+#~ msgctxt "game_options"
+#~ msgid "Composite (color bleeding + artifacts)"
+#~ msgstr "Kompozit (krvácanie farieb + artefakty)"
+
+#~ msgctxt "game_options"
+#~ msgid "SVideo (color bleeding only)"
+#~ msgstr "SVideo (iba krvácanie farieb)"
+
+#~ msgctxt "game_options"
+#~ msgid "PLAYER 1 CROSSHAIR COLOR"
+#~ msgstr "Farba nitkového kríža hráča 1"
+
+#~ msgctxt "game_options"
+#~ msgid "PLAYER 2 CROSSHAIR COLOR"
+#~ msgstr "Farba nitkového kríža hráča 2"
+
+#~ msgctxt "game_options"
+#~ msgid "PLAYER 3 CROSSHAIR COLOR"
+#~ msgstr "Farba nitkového kríža hráča 3"
+
+#~ msgctxt "game_options"
+#~ msgid "PLAYER 4 CROSSHAIR COLOR"
+#~ msgstr "Farba nitkového kríža hráča 4"
+
+#~ msgctxt "game_options"
+#~ msgid "Simulate LCD color inaccuracy."
+#~ msgstr "Simulovať nepresnosť farieb LCD."
+
+#~ msgctxt "game_options"
+#~ msgid "COLOR CORRECTION"
+#~ msgstr "Farebná korekcia"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the color palette to use."
+#~ msgstr "Vyberte farebnú paletu na použitie."
+
+#~ msgctxt "game_options"
+#~ msgid "Tandy Radio Shack Color Computer cartridges"
+#~ msgstr "Tandy Radio Shack Color Computer kartridže"
+
+#~ msgctxt "game_options"
+#~ msgid "Tandy Radio Shack Color Computer disk images"
+#~ msgstr "Tandy Radio Shack Color Computer obrazy disku"
+
+#~ msgctxt "game_options"
+#~ msgid "Select the model of Color Computer to emulate"
+#~ msgstr "Vyberte model Color Computer na emuláciu"
+
+#~ msgctxt "game_options"
+#~ msgid "COLOR COMPUTER MODEL"
+#~ msgstr "Model Color Computer"
+
+#~ msgctxt "game_options"
+#~ msgid "Analog Controller"
+#~ msgstr "Analógový ovládača"
+
+#~ msgctxt "game_options"
+#~ msgid "Analog Joystick (Flystick)"
+#~ msgstr "Analógový joystick (Flystick)"
+
+#~ msgctxt "game_options"
+#~ msgid "TEAM COLOR MODE"
+#~ msgstr "Tímový farebný režim"
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate a pak in the controller expansion port."
+#~ msgstr "Emulovať pak v rozširujúcom porte radiča."
+
+#~ msgctxt "game_options"
+#~ msgid "Lunar Ignore Brightness Color Fix"
+#~ msgstr "Lunar Ignore Brightness Color Fix"
+
+#~ msgctxt "game_options"
+#~ msgid "COLOR PALETTE (2D)"
+#~ msgstr "Farebná paleta (2D)"
+
+#~ msgctxt "game_options"
+#~ msgid "Use your physical anaglypth 3D glasses!"
+#~ msgstr "Použite svoje fyzické anaglypth 3D okuliare!"
+
+#~ msgctxt "game_options"
+#~ msgid "Add color to Game Boy games."
+#~ msgstr "Pridať farbu pre hry Game Boy."
+
+#~ msgctxt "game_options"
+#~ msgid "GB COLORIZATION"
+#~ msgstr "GB zafarbenie"
+
+#~ msgctxt "game_options"
+#~ msgid "weird colors"
+#~ msgstr "divné farby"
+
+#~ msgctxt "game_options"
+#~ msgid "GamePad + 4 Sideway Wiimote"
+#~ msgstr "GamePad + 4 Sideway Wiimote"
+
+#~ msgctxt "game_options"
+#~ msgid "5 Sideway Wiimote"
+#~ msgstr "5 Sideway Wiimote"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
+#~ "appropriate user directory)."
+#~ msgstr ""
+#~ "Povoliť animáciu zavádzania Gamecube a prístup k systému BIOS (vyžaduje "
+#~ "IPL.bin BIOS v príslušnom používateľskom adresári)."
+
+#~ msgctxt "game_options"
+#~ msgid "Map your controller to an emulated Wiimote."
+#~ msgstr "Mapovať váš ovládač na emulovaný Wiimote."
+
+#~ msgctxt "game_options"
+#~ msgid "EMULATE WIIMOTE"
+#~ msgstr "Emulovať WiiMote"
+
+#~ msgctxt "game_options"
+#~ msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
+#~ msgstr "Prispôsobiť emulovaný Wiimote a gamepad"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway"
+#~ msgstr "Wiimote Sideway"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway + Swing"
+#~ msgstr "Wiimote Sideway + Swing"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway + Tilt"
+#~ msgstr "Wiimote Sideway + Tilt"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway + Nunchuk"
+#~ msgstr "Wiimote Sideway + Nunchuk"
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
+#~ msgstr "Emulovať ukazovateľ Wiimote pomocou gyroskopu DS4."
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate the Wiimote pointer with a mouse."
+#~ msgstr "Emulujte ukazovateľ Wiimote pomocou myši."
+
+#~ msgctxt "game_options"
+#~ msgid "MOUSE AS WIIMOTE POINTER"
+#~ msgstr "Myš ako ukazovateľ Wiimote"
+
+#~ msgctxt "game_options"
+#~ msgid "Set joystick deadzone."
+#~ msgstr "Nastavte mŕtvu zónu joysticku."
+
+#~ msgctxt "game_options"
+#~ msgid "Determines the speed and the runahead behaviour of the system."
+#~ msgstr "Určuje rýchlosť a nábehové správanie systému."
+
+#~ msgctxt "game_options"
+#~ msgid "PS1 Analog Joystick"
+#~ msgstr "PS1 analógový joystick"
+
+#~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
+#~ msgstr "Povolí mapovanie Future Pinballu pomocou Pad to Keyboard."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enhancement. Improves clarity of distant textures when mip-mapping is "
+#~ "enabled."
+#~ msgstr ""
+#~ "Rozšírenie. Zlepšuje jasnosť vzdialených textúr, keď je povolený mip-"
+#~ "mapping."
+
+#~ msgctxt "game_options"
+#~ msgid "Set the sensitivity of the joystick analog sticks."
+#~ msgstr "Nastaviť citlivosť analógových páčok joysticku."
+
+#~ msgctxt "game_options"
+#~ msgid "Set the deadzone of the joystick analog sticks."
+#~ msgstr "Nastavte mŕtvu zónu analógových páčok joysticku."
+
+#~ msgctxt "game_options"
+#~ msgid "Display on screen information like savestate, config warning etc..."
+#~ msgstr ""
+#~ "Zobrazenie informácií na obrazovke, ako je stav uloženia, varovanie "
+#~ "konfigurácie atď."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable to improve bluriness."
+#~ msgstr "Povoľte na zlepšenie rozmazania."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Reduces banding between colours and improves the preceived colour depth."
+#~ msgstr "Redukuje pruhy medzi farbami a zlepšuje vnímanú farebnú hĺbku."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Skip buffer disables auto frameskip and renders at display output "
+#~ "resolution."
+#~ msgstr ""
+#~ "Preskočiť vyrovnávaciu pamäť deaktivuje automatické preskakovanie snímok "
+#~ "a vykresľuje vo výstupnom rozlíšení displeja."
+
+#~ msgctxt "game_options"
+#~ msgid "Automatically reduce frameskip if the system has spare overhead."
+#~ msgstr ""
+#~ "Automaticky znížiť preskakovanie snímok, ak má systém náhradnú réžiu."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Most games already have an internal framelimit. Minor performance cost."
+#~ msgstr "Väčšina hier už má interný framelimit. Menšie náklady na výkon."
+
+#~ msgctxt "game_options"
+#~ msgid "WRITE COLOR BUFFERS"
+#~ msgstr "Zapísať farebné buffery"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Straict API specification. Can resolve rare cases of missing graphics and "
+#~ "flickering."
+#~ msgstr ""
+#~ "Presná špecifikácia API. Dokáže vyriešiť zriedkavé prípady chýbajúcej "
+#~ "grafiky a blikania."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's."
+#~ msgstr ""
+#~ "Streamuje textúru do GPU paralelne. Môže zlepšiť výkon na výkonnejších "
+#~ "GPU."
+
+#~ msgctxt "game_options"
+#~ msgid "Center (Default)"
+#~ msgstr "Stred (predvolené)"
+
+#~ msgctxt "game_options"
+#~ msgid "Needed by some games that use special unicode characters."
+#~ msgstr "Potrebné pre niektoré hry, ktoré používajú špeciálne Unicode znaky."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable auto frameskipping for performance on lower-end systems."
+#~ msgstr "Povoliť auto preskakovanie snímok pre výkon na slabších systémoch."
+
+#~ msgctxt "game_options"
+#~ msgid "BGFX for post-processing, accel/opengl for raw image."
+#~ msgstr ""
+#~ "BGFX pre následné spracovanie, accel/opengl pre nespracovaný obrázok."
+
+#~ msgctxt "game_options"
+#~ msgid "Allows the use of switchres profiles if present."
+#~ msgstr "Umožňuje použitie profilov prepínačov, ak sú k dispozícii."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "When frameskip type is on automatic or manual, skip up to this many "
+#~ "frames consecutively."
+#~ msgstr ""
+#~ "Keď je typ preskakovania snímok zapnutý automaticky alebo manuálne, "
+#~ "preskočiť až na tento počet snímok za sebou."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable scanlines for roms that support it."
+#~ msgstr "Povoliť sken riadky pre romy, ktoré to podporujú."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables bilinear filtering on tilemaps. Looks good, but can cause some "
+#~ "stretch artifacts."
+#~ msgstr ""
+#~ "Umožňuje bilineárne filtrovanie na mapách dlaždíc. Vyzerá dobre, ale môže "
+#~ "spôsobiť natiahnutie."
+
+#~ msgctxt "game_options"
+#~ msgid "Enables Direct3D Automip-map generation."
+#~ msgstr "Povolí generovanie Direct3D Automip-map."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your console timezone."
+#~ msgstr "Vyberte časové pásmo vašej konzoly."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your console UTC timezone."
+#~ msgstr "Vyberte časové pásmo UTC vašej konzoly."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "This option enables the ability to play Xbox Live Arcacde games. May "
+#~ "cause compatibility issues with non-XBLA games."
+#~ msgstr ""
+#~ "Táto možnosť umožňuje hrať hry Xbox Live Arcade. Môže spôsobiť problémy s "
+#~ "kompatibilitou s hrami, ktoré nie sú XBLA."
 
 #~ msgctxt "game_options"
 #~ msgid "GAME DIFFICULATY"

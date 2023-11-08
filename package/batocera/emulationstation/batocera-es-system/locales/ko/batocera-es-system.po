@@ -281,14 +281,11 @@ msgid "RESIZE TATTOO"
 msgstr "문신 크기 조정"
 
 #. TRANSLATION: shared
-#, fuzzy
 msgctxt "game_options"
 msgid ""
 "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
-"libretro cores."
+"Libretro cores."
 msgstr ""
-"게임 플레이 중에 단축키 + R1을 눌러 화면 텍스트를 번역합니다. 리브레트로 코어"
-"에서만."
 
 #. TRANSLATION: shared, shared, shared, shared
 #, fuzzy
@@ -534,16 +531,14 @@ msgid "No Saving"
 msgstr ""
 
 #. TRANSLATION: libretro/81
-#, fuzzy
 msgctxt "game_options"
-msgid "Emulate Chroma 81 interface (colorization)."
-msgstr "Chroma 81 인터페이스를 에뮬레이트합니다(색상화)."
+msgid "Emulate Chroma 81 interface (colourisation)."
+msgstr ""
 
-#. TRANSLATION: libretro/81, libretro/gambatte
-#, fuzzy
+#. TRANSLATION: libretro/81
 msgctxt "game_options"
-msgid "COLORIZATION"
-msgstr "색상화"
+msgid "COLORISATION"
+msgstr ""
 
 #. TRANSLATION: libretro/81, libretro/81, libretro/fceumm, libretro/fceumm, libretro/genesisplusgx, ...
 #, fuzzy
@@ -603,11 +598,9 @@ msgid "SIO ACCELERATION"
 msgstr "SIO 가속"
 
 #. TRANSLATION: libretro/atari800
-#, fuzzy
 msgctxt "game_options"
-msgid "Emulate NTSC quirks to show more colors in hi-res mode."
+msgid "Emulate NTSC quirks to show more colours in hi-res mode."
 msgstr ""
-"NTSC 쿼크를 에뮬레이트하여 고해상도 모드에서 더 많은 색상을 표시합니다."
 
 #. TRANSLATION: libretro/atari800
 #, fuzzy
@@ -1103,7 +1096,7 @@ msgctxt "game_options"
 msgid "Enhancement. Remove the eight sprite per line limit."
 msgstr "향상. 줄당 8개의 스프라이트 제한을 제거합니다."
 
-#. TRANSLATION: libretro/mesen, libretro/potator, libretro/sameboy
+#. TRANSLATION: libretro/mesen
 #, fuzzy
 msgctxt "game_options"
 msgid "COLOR PALETTE"
@@ -1200,10 +1193,9 @@ msgid "(FDS) FAST FORWARD DISK LOADING"
 msgstr "(FDS) 빨리 감기 디스크 로딩"
 
 #. TRANSLATION: libretro/mesen
-#, fuzzy
 msgctxt "game_options"
-msgid "Useful for speedruns/glitches."
-msgstr "스피드런/글리치에 유용합니다."
+msgid "Useful for speed runs / glitches."
+msgstr ""
 
 #. TRANSLATION: libretro/mesen
 #, fuzzy
@@ -1620,45 +1612,38 @@ msgstr "WII TV 모드"
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
+msgid "Emulate a Wii Remote Sideway with L2 for Shake and Nunchuk on R-stick."
 msgstr ""
-"흔들림을 위한 L2와 R-스틱의 NunChuk을 사용하여 Wiimote Sideway를 에뮬레이트합"
-"니다."
-
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
-#, fuzzy
-msgctxt "game_options"
-msgid "WiiMote"
-msgstr "위모트"
-
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
-#, fuzzy
-msgctxt "game_options"
-msgid "WiiMote Sideways"
-msgstr "위모트 사이드웨이즈"
-
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
-#, fuzzy
-msgctxt "game_options"
-msgid "WiiMote + Nunchuk"
-msgstr "WiiMote + Nunchuk"
-
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
-#, fuzzy
-msgctxt "game_options"
-msgid "WiiMote + Classic Controller"
-msgstr "WiiMote + 클래식 컨트롤러"
-
-#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
-#, fuzzy
-msgctxt "game_options"
-msgid "WiiMote + Classic Controller Pro"
-msgstr "WiiMote + 클래식 컨트롤러 프로"
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "Real Wiimote"
-msgstr "리얼 WiiMote"
+msgid "Wii Remote"
+msgstr ""
+
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+msgctxt "game_options"
+msgid "Wii Remote Sideways"
+msgstr ""
+
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+msgctxt "game_options"
+msgid "Wii Remote + Nunchuk"
+msgstr ""
+
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+msgctxt "game_options"
+msgid "Wii Remote + Classic Controller"
+msgstr ""
+
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+msgctxt "game_options"
+msgid "Wii Remote + Classic Controller Pro"
+msgstr ""
+
+#. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
+msgctxt "game_options"
+msgid "Real Wii Remote"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 #, fuzzy
@@ -1685,22 +1670,19 @@ msgid "CPU TIMING MODE (FPS)"
 msgstr "CPU 타이밍 모드 (FPS)"
 
 #. TRANSLATION: libretro/dosbox
-#, fuzzy
 msgctxt "game_options"
-msgid "internal (fixed 60fps)"
-msgstr "내부 (고정 60fps)"
+msgid "Internal (fixed 60fps)"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox
-#, fuzzy
 msgctxt "game_options"
-msgid "internal (variable fps)"
-msgstr "내부 (가변 FPS)"
+msgid "Internal (variable fps)"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox
-#, fuzzy
 msgctxt "game_options"
-msgid "external (variable fps)"
-msgstr "외부 (가변 FPS)"
+msgid "External (variable fps)"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox, openbor, mame
 #, fuzzy
@@ -2194,9 +2176,9 @@ msgctxt "game_options"
 msgid "On with game detection message"
 msgstr "게임 감지 메시지와 함께 켜짐"
 
-#. TRANSLATION: libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure, mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
-msgid "Set the deadzone of the joystick analogue sticks."
+msgid "Set the dead zone of the joystick analogue sticks."
 msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
@@ -2513,16 +2495,14 @@ msgid "Digital Controller (Gamepad)"
 msgstr ""
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/duckstation, libretro/duckstation
-#, fuzzy
 msgctxt "game_options"
-msgid "Analog Controller (DualShock)"
-msgstr "아날로그 컨트롤러 (듀얼쇼크)"
+msgid "Analogue Controller (DualShock)"
+msgstr ""
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/puae, libretro/puae, libretro/puae, ...
-#, fuzzy
 msgctxt "game_options"
-msgid "Analog Joystick"
-msgstr "아날로그 조이스틱"
+msgid "Analogue Joystick"
+msgstr ""
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, ...
 #, fuzzy
@@ -2549,10 +2529,9 @@ msgid "Digital Controller"
 msgstr "디지털 컨트롤러"
 
 #. TRANSLATION: libretro/duckstation, libretro/duckstation
-#, fuzzy
 msgctxt "game_options"
-msgid "Analog Stick"
-msgstr "아날로그 스틱"
+msgid "Analogue Stick"
+msgstr ""
 
 #. TRANSLATION: libretro/fbneo
 #, fuzzy
@@ -2663,28 +2642,24 @@ msgid "Both"
 msgstr "둘다"
 
 #. TRANSLATION: libretro/fceumm, libretro/nestopia, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, ...
-#, fuzzy
 msgctxt "game_options"
-msgid "Can be used to simulate colors of particular displays."
-msgstr "특정 디스플레이의 색상을 시뮬레이션하는 데 사용할 수 있습니다."
+msgid "Can be used to simulate colours of particular displays."
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/nestopia, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, ...
-#, fuzzy
 msgctxt "game_options"
-msgid "COLOR FILTER"
-msgstr "컬러 필터"
+msgid "COLOUR FILTER"
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
-#, fuzzy
 msgctxt "game_options"
-msgid "Composite (color bleeding + artifacts)"
-msgstr "합성(색상 번짐 + 아티팩트)"
+msgid "Composite (colour bleeding + artifacts)"
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
-#, fuzzy
 msgctxt "game_options"
-msgid "SVideo (color bleeding only)"
-msgstr "SVideo (색 번짐 만)"
+msgid "SVideo (colour bleeding only)"
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 #, fuzzy
@@ -2778,10 +2753,9 @@ msgid "2.5x (1600x1200)"
 msgstr "2.5x (1600x1200)"
 
 #. TRANSLATION: libretro/flycast
-#, fuzzy
 msgctxt "game_options"
-msgid "PLAYER 1 CROSSHAIR COLOR"
-msgstr "플레이어 1 십자선 색상"
+msgid "PLAYER 1 CROSSHAIR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -2805,22 +2779,19 @@ msgid "White"
 msgstr "하얀색"
 
 #. TRANSLATION: libretro/flycast
-#, fuzzy
 msgctxt "game_options"
-msgid "PLAYER 2 CROSSHAIR COLOR"
-msgstr "플레이어 2 십자선 색상"
+msgid "PLAYER 2 CROSSHAIR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast
-#, fuzzy
 msgctxt "game_options"
-msgid "PLAYER 3 CROSSHAIR COLOR"
-msgstr "플레이어 3 십자선 색상"
+msgid "PLAYER 3 CROSSHAIR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast
-#, fuzzy
 msgctxt "game_options"
-msgid "PLAYER 4 CROSSHAIR COLOR"
-msgstr "플레이어 4 십자선 색상"
+msgid "PLAYER 4 CROSSHAIR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, mupen64plus
 #, fuzzy
@@ -2834,7 +2805,7 @@ msgctxt "game_options"
 msgid "TEXTURE MIP-MAPPING (BLUR)"
 msgstr "텍스처 밉 매핑(흐림)"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, flycast
+#. TRANSLATION: libretro/flycast
 #, fuzzy
 msgctxt "game_options"
 msgid "Improves clarity of distant textures when mip-mapping is enabled."
@@ -2949,22 +2920,22 @@ msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "Left Analog (Auto)"
+msgid "Left Analogue (Auto)"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "Right Analog (Auto)"
+msgid "Right Analogue (Auto)"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "Left Analog (Forced)"
+msgid "Left Analogue (Forced)"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "Right Analog (Forced)"
+msgid "Right Analogue (Forced)"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
@@ -2979,22 +2950,27 @@ msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
-msgid "Target color for player 1."
+msgid "Target colour for player 1."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
-msgid "Target color for player 2."
+msgid "Target colour for player 2."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
-msgid "Target color for player 3."
+msgid "Target colour for player 3."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
-msgid "Target color for player 4."
+msgid "Target colour for player 4."
+msgstr ""
+
+#. TRANSLATION: libretro/flycast2021
+msgctxt "game_options"
+msgid "Improves clarity of distant textures when mipmapping is enabled."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
@@ -3218,22 +3194,24 @@ msgid "LCD Ghosting (Fast)"
 msgstr "LCD 고스팅(빠름)"
 
 #. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
-#, fuzzy
 msgctxt "game_options"
-msgid "Simulate LCD color inaccuracy."
-msgstr "LCD 색상 부정확성을 시뮬레이션합니다."
+msgid "Simulate LCD colour inaccuracy."
+msgstr ""
 
 #. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/sameboy, libretro/vba-m, ...
-#, fuzzy
 msgctxt "game_options"
-msgid "COLOR CORRECTION"
-msgstr "색상 보정"
+msgid "COLOUR CORRECTION"
+msgstr ""
 
 #. TRANSLATION: libretro/gambatte
-#, fuzzy
 msgctxt "game_options"
-msgid "Set the color palette to use."
-msgstr "사용할 색상 팔레트를 설정합니다."
+msgid "Set the colour palette to use."
+msgstr ""
+
+#. TRANSLATION: libretro/gambatte
+msgctxt "game_options"
+msgid "COLOURISATION"
+msgstr ""
 
 #. TRANSLATION: libretro/gambatte
 #, fuzzy
@@ -4521,28 +4499,24 @@ msgid "Philips CD-i CD-ROMs"
 msgstr "필립스 CD-i CD-ROM"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
-#, fuzzy
 msgctxt "game_options"
-msgid "Tandy Radio Shack Color Computer cartridges"
-msgstr "탠디 라디오 무전 컬러 컴퓨터 카트리지"
+msgid "Tandy Radio Shack Colour Computer cartridges"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
-#, fuzzy
 msgctxt "game_options"
-msgid "Tandy Radio Shack Color Computer disk images"
-msgstr "탠디 라디오 무전 컬러 컴퓨터 디스크 이미지"
+msgid "Tandy Radio Shack Colour Computer disk images"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
-#, fuzzy
 msgctxt "game_options"
-msgid "Select the model of Color Computer to emulate"
-msgstr "에뮬레이트할 컬러 컴퓨터 모델 선택"
+msgid "Select the model of Colour Computer to emulate"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
-#, fuzzy
 msgctxt "game_options"
-msgid "COLOR COMPUTER MODEL"
-msgstr "컬러 컴퓨터 모델"
+msgid "COLOUR COMPUTER MODEL"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 #, fuzzy
@@ -4841,13 +4815,12 @@ msgctxt "game_options"
 msgid "Mac Harddisks"
 msgstr "맥 하드 디스크"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
-#, fuzzy
+#. TRANSLATION: libretro/mame
 msgctxt "game_options"
 msgid ""
 "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
-"Color)"
-msgstr "Mac 모델 선택 (권장 사항은 B & W 용 Mac Plus, Mac LC 3 용 Color)"
+"Colour)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 #, fuzzy
@@ -5133,11 +5106,10 @@ msgctxt "game_options"
 msgid "CONTROL MAPPING"
 msgstr "컨트롤 매핑"
 
-#. TRANSLATION: libretro/mame078plus, yabasanshiro, yabasanshiro
-#, fuzzy
+#. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
-msgid "Analog"
-msgstr "아날로그"
+msgid "Analogue"
+msgstr ""
 
 #. TRANSLATION: libretro/mame078plus, yabasanshiro, yabasanshiro
 #, fuzzy
@@ -5280,10 +5252,9 @@ msgid "Port 1+2"
 msgstr "포트 1+2"
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/pcsx_rearmed
-#, fuzzy
 msgctxt "game_options"
-msgid "Analog Controller"
-msgstr "아날로그 컨트롤러"
+msgid "Analogue Controller"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/pcsx_rearmed
 #, fuzzy
@@ -5293,8 +5264,8 @@ msgstr "듀얼쇼크 컨트롤러"
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx
 msgctxt "game_options"
-msgid "Analog Joystick (Flystick)"
-msgstr "아날로그 조이스틱(비행조이스틱)"
+msgid "Analogue Joystick (Flystick)"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_supergrafx, libretro/pce, libretro/pce_fast, libretro/pcfx
 #, fuzzy
@@ -5349,10 +5320,9 @@ msgid "SOLAR SENSOR LEVEL"
 msgstr "태양 광 센서 레벨"
 
 #. TRANSLATION: libretro/mrboom
-#, fuzzy
 msgctxt "game_options"
-msgid "TEAM COLOR MODE"
-msgstr "팀 색상 모드"
+msgid "TEAM COLOUR MODE"
+msgstr ""
 
 #. TRANSLATION: libretro/mrboom
 #, fuzzy
@@ -5633,10 +5603,9 @@ msgid "CONTROLLER 4"
 msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
-#, fuzzy
 msgctxt "game_options"
-msgid "Emulate a pak in the controller expansion port."
-msgstr "컨트롤러 확장 포트에서 pak를 에뮬레이트합니다."
+msgid "Emulate a Pak in the controller expansion port."
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -6357,10 +6326,9 @@ msgid "Diablo Music Fix"
 msgstr "디아블로 음악 수정"
 
 #. TRANSLATION: libretro/pcsx_rearmed
-#, fuzzy
 msgctxt "game_options"
-msgid "Lunar Ignore Brightness Color Fix"
-msgstr "달의 밝기 무시 색상 수정"
+msgid "Lunar Ignore Brightness Colour Fix"
+msgstr ""
 
 #. TRANSLATION: libretro/pcsx_rearmed
 #, fuzzy
@@ -6396,6 +6364,11 @@ msgstr "액정 필터"
 msgctxt "game_options"
 msgid "LCD GHOSTING EFFECTS"
 msgstr "LCD 고스팅 효과"
+
+#. TRANSLATION: libretro/potator, libretro/sameboy
+msgctxt "game_options"
+msgid "COLOUR PALETTE"
+msgstr ""
 
 #. TRANSLATION: libretro/potator
 #, fuzzy
@@ -6925,7 +6898,7 @@ msgstr "키보드 패스스루"
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
-msgid "Hardcoded keymap to joyport mapping for Keyrah hardware."
+msgid "Hardcoded keymap to joy port mapping for Keyrah hardware."
 msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
@@ -7274,7 +7247,7 @@ msgstr "PCG-8100 에뮬레이트"
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
-msgid "Select the color palette to use"
+msgid "Select the colour palette to use"
 msgstr ""
 
 #. TRANSLATION: libretro/sameboy
@@ -7299,7 +7272,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
-msgid "Simulate LCD color inaccuracy"
+msgid "Simulate LCD colour inaccuracy"
 msgstr ""
 
 #. TRANSLATION: libretro/sameboy
@@ -7319,7 +7292,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
-msgid "Correct Color Curves"
+msgid "Correct Colour Curves"
 msgstr ""
 
 #. TRANSLATION: libretro/sameboy
@@ -7691,10 +7664,9 @@ msgid "Gamepad Classic Alt"
 msgstr "게임 패드 클래식 Alt"
 
 #. TRANSLATION: libretro/vb
-#, fuzzy
 msgctxt "game_options"
-msgid "COLOR PALETTE (2D)"
-msgstr "색상 팔레트(2D)"
+msgid "COLOUR PALETTE (2D)"
+msgstr ""
 
 #. TRANSLATION: libretro/vb
 #, fuzzy
@@ -7739,10 +7711,9 @@ msgid "black/yellow"
 msgstr "블랙/옐로우"
 
 #. TRANSLATION: libretro/vb
-#, fuzzy
 msgctxt "game_options"
-msgid "Use your physical anaglypth 3D glasses!"
-msgstr "실제 애너글립스 3D 안경을 사용하십시오!"
+msgid "Use your physical anaglyph 3D glasses!"
+msgstr ""
 
 #. TRANSLATION: libretro/vb
 #, fuzzy
@@ -7781,16 +7752,14 @@ msgid "yellow/blue"
 msgstr "옐로우/블루"
 
 #. TRANSLATION: libretro/vba-m
-#, fuzzy
 msgctxt "game_options"
-msgid "Add color to Game Boy games."
-msgstr "게임보이 게임에 색상을 추가합니다."
+msgid "Add colour to Game Boy games."
+msgstr ""
 
 #. TRANSLATION: libretro/vba-m
-#, fuzzy
 msgctxt "game_options"
-msgid "GB COLORIZATION"
-msgstr "GB 채색"
+msgid "GB COLOURISATION"
+msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 #, fuzzy
@@ -7840,10 +7809,9 @@ msgid "pink dreams"
 msgstr "핑크 드림"
 
 #. TRANSLATION: libretro/vba-m
-#, fuzzy
 msgctxt "game_options"
-msgid "weird colors"
-msgstr "이상한 색상"
+msgid "weird colours"
+msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 #, fuzzy
@@ -7931,6 +7899,11 @@ msgstr "C64 게임 시스템 PAL"
 msgctxt "game_options"
 msgid "C64 Japanese NTSC"
 msgstr "C64 일본어 NTSC"
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128
+msgctxt "game_options"
+msgid "community-colours"
+msgstr ""
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 #, fuzzy
@@ -8558,12 +8531,12 @@ msgstr "인터레이스 아티팩트 제거"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
-msgid "Centers the image screen. Disabled when using Auto Crop. AUTO = Full."
+msgid "Centres the image screen. Disabled when using Auto Crop. AUTO = Full."
 msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
-msgid "IMAGE CENTERING"
+msgid "IMAGE CENTRING"
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -8690,10 +8663,9 @@ msgid "GamePad + 4 Pro Controller"
 msgstr "게임 패드 + 4 프로 컨트롤러"
 
 #. TRANSLATION: cemu
-#, fuzzy
 msgctxt "game_options"
-msgid "GamePad + 4 Sideway Wiimote"
-msgstr "게임패드 + 4 사이드웨이 위모트"
+msgid "GamePad + 4 Sideway Wii Remote"
+msgstr ""
 
 #. TRANSLATION: cemu
 #, fuzzy
@@ -8703,8 +8675,8 @@ msgstr "5 프로 컨트롤러"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
-msgid "5 Sideway Wiimote"
-msgstr "5 사이드웨이 위모트"
+msgid "5 Sideway Wii Remote"
+msgstr ""
 
 #. TRANSLATION: cemu
 #, fuzzy
@@ -9194,7 +9166,7 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid ""
-"Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
+"Enable GameCube boot animation and BIOS access (requires IPL.bin BIOS in "
 "appropriate user directory)."
 msgstr ""
 
@@ -9204,10 +9176,9 @@ msgid "ENABLE BOOT ANIMATION"
 msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-#, fuzzy
 msgctxt "game_options"
-msgid "Map your controller to an emulated Wiimote."
-msgstr "컨트롤러를 에뮬레이트된 Wiimote에 매핑합니다."
+msgid "Map your controller to an emulated Wii Remote."
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
 msgctxt "game_options"
@@ -9215,16 +9186,14 @@ msgid "CONTROLLERS"
 msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-#, fuzzy
 msgctxt "game_options"
-msgid "EMULATE WIIMOTE"
-msgstr "에뮬레이트 위모트"
+msgid "EMULATE WII REMOTE"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-#, fuzzy
 msgctxt "game_options"
-msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
-msgstr "에뮬레이트 된 WIIMOTE & GAMEPAD 사용자 정의"
+msgid "CUSTOMIZE EMULATED WII REMOTE & GAMEPAD"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 #, fuzzy
@@ -9239,30 +9208,28 @@ msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Wiimote Sideway"
-msgstr "위모트 사이드웨이"
+msgid "Wii Remote Sideway"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Wiimote Sideway + Swing"
-msgstr "위모트 사이드웨이 + 스윙"
-
-#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
-#, fuzzy
-msgctxt "game_options"
-msgid "Wiimote Sideway + Tilt"
-msgstr "위모트 사이드웨이 + 틸트"
+msgid "Wii Remote Sideway + Swing"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Wiimote Sideway + Nunchuk"
-msgstr "위모트 사이드웨이 + 쌍절곤"
+msgid "Wii Remote Sideway + Tilt"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Wii Remote Sideway + Nunchuk"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
-#, fuzzy
 msgctxt "game_options"
-msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
-msgstr "Wiimote 포인터를 DS4의 자이로스코프와 에뮬레이트합니다."
+msgid "Emulate the Wii Remote pointer with a DS4's gyroscope."
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
 #, fuzzy
@@ -9271,15 +9238,14 @@ msgid "DUALSHOCK MOTION CONTROL"
 msgstr "듀얼쇼크 모션 컨트롤"
 
 #. TRANSLATION: dolphin/vitaquake3
-#, fuzzy
 msgctxt "game_options"
-msgid "Emulate the Wiimote pointer with a mouse."
-msgstr "Wiimote 포인터를 마우스로 에뮬레이트합니다."
+msgid "Emulate the Wii Remote pointer with a mouse."
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
-msgid "MOUSE AS WIIMOTE POINTER"
-msgstr "위모트 좌표를 마우스로"
+msgid "MOUSE AS WII REMOTE POINTER"
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin_triforce
 #, fuzzy
@@ -9548,7 +9514,7 @@ msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid "Set joystick deadzone."
+msgid "Set joystick dead zone."
 msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin, mupen64plus, ...
@@ -9647,7 +9613,7 @@ msgstr "화면 표시 메시지 비활성화"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Determines the speed and the runahead behaviour of the system."
+msgid "Determines the speed and the run ahead behaviour of the system."
 msgstr ""
 
 #. TRANSLATION: duckstation, duckstation, duckstation
@@ -9894,10 +9860,9 @@ msgid "PS1 Digital Controller"
 msgstr "PS1 디지털 컨트롤러"
 
 #. TRANSLATION: duckstation, duckstation
-#, fuzzy
 msgctxt "game_options"
-msgid "PS1 Analog Joystick"
-msgstr "PS1 아날로그 조이스틱"
+msgid "PS1 Analogue Joystick"
+msgstr ""
 
 #. TRANSLATION: duckstation, duckstation
 #, fuzzy
@@ -10111,7 +10076,7 @@ msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "디지털 음향처리기"
 
-#. TRANSLATION: flycast/vitaquake3, flycast, virtualjaguar
+#. TRANSLATION: flycast/vitaquake3, virtualjaguar
 #, fuzzy
 msgctxt "game_options"
 msgid "Disbaled (Default)"
@@ -10177,6 +10142,12 @@ msgid "Rotate the screen with the emulator."
 msgstr "에뮬레이터로 화면을 회전합니다."
 
 #. TRANSLATION: flycast
+msgctxt "game_options"
+msgid ""
+"Improves clarity of distant textures when anisotropic filtering is enabled."
+msgstr ""
+
+#. TRANSLATION: flycast
 #, c-format
 msgctxt "game_options"
 msgid "Fastest BIOS but not 100% compatible."
@@ -10189,7 +10160,7 @@ msgstr ""
 
 #. TRANSLATION: fpinball
 msgctxt "game_options"
-msgid "Allow mapping Future Pinabll with Pad to Keyboard."
+msgid "Allow mapping Future Pinball with Pad to Keyboard."
 msgstr ""
 
 #. TRANSLATION: fpinball
@@ -10739,14 +10710,11 @@ msgid "trilinear"
 msgstr "삼선형"
 
 #. TRANSLATION: mupen64plus
-#, fuzzy
 msgctxt "game_options"
 msgid ""
-"Enhancement. Improves clarity of distant textures when mip-mapping is "
-"enabled."
+"Enhancement. Improves clarity of distant textures when anisotropic filtering "
+"is enabled."
 msgstr ""
-"향상. 밉 매핑을 사용하도록 설정한 경우 멀리 있는 텍스처의 선명도를 개선합니"
-"다."
 
 #. TRANSLATION: mupen64plus
 #, fuzzy
@@ -10831,7 +10799,7 @@ msgstr "사용"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
-msgid "Set the sensitivity of the joystick analog sticks."
+msgid "Set the sensitivity of the joystick analogue sticks."
 msgstr ""
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
@@ -10843,12 +10811,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "100% (Default)"
 msgstr ""
-
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
-#, fuzzy
-msgctxt "game_options"
-msgid "Set the deadzone of the joystick analog sticks."
-msgstr "조이스틱 아날로그 스틱의 데드 존을 설정하십시오."
 
 #. TRANSLATION: openbor
 #, fuzzy
@@ -10870,7 +10832,7 @@ msgstr "단순성 2x"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Display on screen information like savestate, config warning etc..."
+msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
 
 #. TRANSLATION: pcsx2
@@ -10988,7 +10950,7 @@ msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Enable to improve bluriness."
+msgid "Enable to improve blurriness."
 msgstr ""
 
 #. TRANSLATION: pcsx2
@@ -11155,7 +11117,7 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
-"Reduces banding between colours and improves the preceived colour depth."
+"Reduces banding between colours and improves the perceived colour depth."
 msgstr ""
 
 #. TRANSLATION: pcsx2
@@ -11318,13 +11280,11 @@ msgid "TIME CRISIS FOG HACK"
 msgstr ""
 
 #. TRANSLATION: ppsspp
-#, fuzzy
 msgctxt "game_options"
 msgid ""
-"Skip buffer disables auto frameskip and renders at display output resolution."
+"Skip buffer disables auto frame skip and renders at display output "
+"resolution."
 msgstr ""
-"버퍼 건너뛰기는 자동 프레임건너뛰기를 비활성화하고 디스플레이 출력 해상도로 "
-"렌더링합니다."
 
 #. TRANSLATION: ppsspp, thextech
 #, fuzzy
@@ -11351,10 +11311,9 @@ msgid "8x 4K (3840x2176)"
 msgstr "8x 4K (3840x2176)"
 
 #. TRANSLATION: ppsspp
-#, fuzzy
 msgctxt "game_options"
-msgid "Automatically reduce frameskip if the system has spare overhead."
-msgstr "시스템에 예비 오버헤드가 있는 경우 프레임스킵을 자동으로 줄입니다."
+msgid "Automatically reduce frame skip if the system has spare overhead."
+msgstr ""
 
 #. TRANSLATION: ppsspp
 #, fuzzy
@@ -11662,10 +11621,10 @@ msgid "RENDER"
 msgstr ""
 
 #. TRANSLATION: rpcs3
-#, fuzzy
 msgctxt "game_options"
-msgid "Most games already have an internal framelimit. Minor performance cost."
-msgstr "대부분의 게임에는 이미 내부 프레임 제한이 있습니다. 사소한 성능 비용."
+msgid ""
+"Most games already have an internal frame limit. Minor performance cost."
+msgstr ""
 
 #. TRANSLATION: rpcs3
 #, fuzzy
@@ -11807,15 +11766,14 @@ msgid ""
 msgstr "성능 저하로 누락 된 그래픽 및 깨진 조명을 수정할 수 있습니다."
 
 #. TRANSLATION: rpcs3
-#, fuzzy
 msgctxt "game_options"
-msgid "WRITE COLOR BUFFERS"
-msgstr "색상 버퍼 쓰기"
+msgid "WRITE COLOUR BUFFERS"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
-"Straict API specification. Can resolve rare cases of missing graphics and "
+"Strict API specification. Can resolve rare cases of missing graphics and "
 "flickering."
 msgstr ""
 
@@ -11875,7 +11833,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
-"Stream texture to GPU in parrallel. Can improve performance on more powerful "
+"Stream texture to GPU in parallel. Can improve performance on more powerful "
 "GPU's."
 msgstr ""
 
@@ -12185,7 +12143,7 @@ msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Center (Default)"
+msgid "Centre (Default)"
 msgstr ""
 
 #. TRANSLATION: scummvm
@@ -12266,10 +12224,9 @@ msgid "TEST PLAY"
 msgstr "테스트 플레이"
 
 #. TRANSLATION: easyrpg
-#, fuzzy
 msgctxt "game_options"
-msgid "Needed by some games that use special unicode characters."
-msgstr "특수 유니 코드 문자를 사용하는 일부 게임에 필요합니다."
+msgid "Needed by some games that use special Unicode characters."
+msgstr ""
 
 #. TRANSLATION: easyrpg
 #, fuzzy
@@ -12359,10 +12316,9 @@ msgid "4:3 (Default)"
 msgstr "4:3 (기본값)"
 
 #. TRANSLATION: redream
-#, fuzzy
 msgctxt "game_options"
-msgid "Enable auto frameskipping for performance on lower-end systems."
-msgstr "저사양 시스템에서 성능을 위해 자동 프레임 건너뛰기를 활성화합니다."
+msgid "Enable auto frame skipping for performance on lower-end systems."
+msgstr ""
 
 #. TRANSLATION: redream
 #, fuzzy
@@ -12696,6 +12652,14 @@ msgid "USER DISK"
 msgstr "사용자 디스크"
 
 #. TRANSLATION: mame/vitaquake3
+#, fuzzy
+msgctxt "game_options"
+msgid ""
+"Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
+"Color)"
+msgstr "Mac 모델 선택 (권장 사항은 B & W 용 Mac Plus, Mac LC 3 용 Color)"
+
+#. TRANSLATION: mame/vitaquake3
 msgctxt "game_options"
 msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD, Image Reader)"
 msgstr "맥 IIx (2MB 램, 컬러, 2 HD 플로피 / CD / 하드 디스크, 이미지 리더)"
@@ -12731,10 +12695,9 @@ msgstr ""
 "스 입력 활성화"
 
 #. TRANSLATION: mame
-#, fuzzy
 msgctxt "game_options"
-msgid "BGFX for post-processing, accel/opengl for raw image."
-msgstr "후처리를 위한 BGFX, 원시 이미지의 경우 액셀/오픈GL."
+msgid "BGFX for post-processing, Accel/OpenGL for raw image."
+msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -12793,10 +12756,9 @@ msgid "CRT Geom Deluxe (Composite)"
 msgstr "CRT 지오 디럭스 (컴포지트)"
 
 #. TRANSLATION: mame
-#, fuzzy
 msgctxt "game_options"
-msgid "Allows the use of switchres profiles if present."
-msgstr "스위치 프로파일이 있는 경우 사용할 수 있습니다."
+msgid "Allows the use of SwitchRes profiles if present."
+msgstr ""
 
 #. TRANSLATION: mame
 #, fuzzy
@@ -13144,14 +13106,11 @@ msgid "FRAMESKIP TYPE"
 msgstr "프레임스킵 타입"
 
 #. TRANSLATION: drastic
-#, fuzzy
 msgctxt "game_options"
 msgid ""
-"When frameskip type is on automatic or manual, skip up to this many frames "
+"When frame skip type is on automatic or manual, skip up to this many frames "
 "consecutively."
 msgstr ""
-"프레임스킵 유형이 자동 또는 수동인 경우 이 많은 프레임까지 연속적으로 건너뜁"
-"니다."
 
 #. TRANSLATION: drastic
 #, fuzzy
@@ -13377,7 +13336,7 @@ msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
-msgid "Enable scanlines for roms that support it."
+msgid "Enable scanlines for games that support it."
 msgstr ""
 
 #. TRANSLATION: model2emu
@@ -13416,14 +13375,11 @@ msgstr ""
 "않습니다."
 
 #. TRANSLATION: model2emu
-#, fuzzy
 msgctxt "game_options"
 msgid ""
-"Enables bilinear filtering on tilemaps. Looks good, but can cause some "
+"Enables bilinear filtering on tile maps. Looks good, but can cause some "
 "stretch artifacts."
 msgstr ""
-"타일맵에서 쌍선형 필터링을 활성화합니다. 좋아 보이지만 일부 스트레치 아티팩트"
-"가 발생할 수 있습니다."
 
 #. TRANSLATION: model2emu
 #, fuzzy
@@ -13444,10 +13400,9 @@ msgid "FORCE MANAGED"
 msgstr "강제 관리"
 
 #. TRANSLATION: model2emu
-#, fuzzy
 msgctxt "game_options"
-msgid "Enables Direct3D Automip-map generation."
-msgstr "Direct3D 자동 맵 생성을 사용하도록 설정합니다."
+msgid "Enables Direct3D Auto mip-map generation."
+msgstr ""
 
 #. TRANSLATION: model2emu
 #, fuzzy
@@ -13667,10 +13622,9 @@ msgid "Taiwan"
 msgstr "대만"
 
 #. TRANSLATION: yuzu
-#, fuzzy
 msgctxt "game_options"
-msgid "Choose your console timezone."
-msgstr "본체 시간대를 선택합니다."
+msgid "Choose your console time zone."
+msgstr ""
 
 #. TRANSLATION: yuzu, ryujinx
 #, fuzzy
@@ -13951,10 +13905,9 @@ msgid "American English"
 msgstr "영어"
 
 #. TRANSLATION: ryujinx
-#, fuzzy
 msgctxt "game_options"
-msgid "Choose your console UTC timezone."
-msgstr "콘솔 UTC 시간대를 선택합니다."
+msgid "Choose your console UTC time zone."
+msgstr ""
 
 #. TRANSLATION: ryujinx
 #, fuzzy
@@ -14112,7 +14065,7 @@ msgstr ""
 
 #. TRANSLATION: hurrican
 msgctxt "game_options"
-msgid "Play custom userlevel."
+msgid "Play custom user level."
 msgstr ""
 
 #. TRANSLATION: hurrican
@@ -14257,7 +14210,7 @@ msgstr ""
 
 #. TRANSLATION: awgl, bermuda
 msgctxt "game_options"
-msgid "Select fullscreen mode."
+msgid "Select full screen mode."
 msgstr ""
 
 #. TRANSLATION: awgl
@@ -14529,7 +14482,7 @@ msgctxt "game_options"
 msgid "Enhanced OpenGL"
 msgstr ""
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Set the desired maximum refresh rate when Vsync is off."
 msgstr ""
@@ -14669,6 +14622,11 @@ msgstr ""
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "960p"
+msgstr ""
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Set the desired maximum refresh rate when VSync is off."
 msgstr ""
 
 #. TRANSLATION: theforceengine
@@ -14848,11 +14806,6 @@ msgstr ""
 
 #. TRANSLATION: virtualjaguar
 msgctxt "game_options"
-msgid "Skip (Default)"
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
 msgid "Enable the Digital Sound Processor."
 msgstr ""
 
@@ -14902,7 +14855,7 @@ msgstr "앤티앨리어싱은 들쭉날쭉한 가장자리를 매끄럽게 하�
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid ""
-"This option enables the ability to play Xbox Live Arcacde games. May cause "
+"This option enables the ability to play Xbox Live Arcade games. May cause "
 "compatibility issues with non-XBLA games."
 msgstr ""
 
@@ -14999,6 +14952,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the controller 1 user mode."
 msgstr ""
+
+#. TRANSLATION: yabasanshiro, yabasanshiro
+#, fuzzy
+msgctxt "game_options"
+msgid "Analog"
+msgstr "아날로그"
 
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
@@ -15769,6 +15728,378 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr ""
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
+#~ "libretro cores."
+#~ msgstr ""
+#~ "게임 플레이 중에 단축키 + R1을 눌러 화면 텍스트를 번역합니다. 리브레트로 "
+#~ "코어에서만."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Emulate Chroma 81 interface (colorization)."
+#~ msgstr "Chroma 81 인터페이스를 에뮬레이트합니다(색상화)."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "COLORIZATION"
+#~ msgstr "색상화"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Emulate NTSC quirks to show more colors in hi-res mode."
+#~ msgstr ""
+#~ "NTSC 쿼크를 에뮬레이트하여 고해상도 모드에서 더 많은 색상을 표시합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Useful for speedruns/glitches."
+#~ msgstr "스피드런/글리치에 유용합니다."
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
+#~ msgstr ""
+#~ "흔들림을 위한 L2와 R-스틱의 NunChuk을 사용하여 Wiimote Sideway를 에뮬레이"
+#~ "트합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "WiiMote"
+#~ msgstr "위모트"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "WiiMote Sideways"
+#~ msgstr "위모트 사이드웨이즈"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "WiiMote + Nunchuk"
+#~ msgstr "WiiMote + Nunchuk"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "WiiMote + Classic Controller"
+#~ msgstr "WiiMote + 클래식 컨트롤러"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "WiiMote + Classic Controller Pro"
+#~ msgstr "WiiMote + 클래식 컨트롤러 프로"
+
+#~ msgctxt "game_options"
+#~ msgid "Real Wiimote"
+#~ msgstr "리얼 WiiMote"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "internal (fixed 60fps)"
+#~ msgstr "내부 (고정 60fps)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "internal (variable fps)"
+#~ msgstr "내부 (가변 FPS)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "external (variable fps)"
+#~ msgstr "외부 (가변 FPS)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Analog Controller (DualShock)"
+#~ msgstr "아날로그 컨트롤러 (듀얼쇼크)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Analog Joystick"
+#~ msgstr "아날로그 조이스틱"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Analog Stick"
+#~ msgstr "아날로그 스틱"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Can be used to simulate colors of particular displays."
+#~ msgstr "특정 디스플레이의 색상을 시뮬레이션하는 데 사용할 수 있습니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "COLOR FILTER"
+#~ msgstr "컬러 필터"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Composite (color bleeding + artifacts)"
+#~ msgstr "합성(색상 번짐 + 아티팩트)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "SVideo (color bleeding only)"
+#~ msgstr "SVideo (색 번짐 만)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "PLAYER 1 CROSSHAIR COLOR"
+#~ msgstr "플레이어 1 십자선 색상"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "PLAYER 2 CROSSHAIR COLOR"
+#~ msgstr "플레이어 2 십자선 색상"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "PLAYER 3 CROSSHAIR COLOR"
+#~ msgstr "플레이어 3 십자선 색상"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "PLAYER 4 CROSSHAIR COLOR"
+#~ msgstr "플레이어 4 십자선 색상"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Simulate LCD color inaccuracy."
+#~ msgstr "LCD 색상 부정확성을 시뮬레이션합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "COLOR CORRECTION"
+#~ msgstr "색상 보정"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Set the color palette to use."
+#~ msgstr "사용할 색상 팔레트를 설정합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Tandy Radio Shack Color Computer cartridges"
+#~ msgstr "탠디 라디오 무전 컬러 컴퓨터 카트리지"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Tandy Radio Shack Color Computer disk images"
+#~ msgstr "탠디 라디오 무전 컬러 컴퓨터 디스크 이미지"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Select the model of Color Computer to emulate"
+#~ msgstr "에뮬레이트할 컬러 컴퓨터 모델 선택"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "COLOR COMPUTER MODEL"
+#~ msgstr "컬러 컴퓨터 모델"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Analog Controller"
+#~ msgstr "아날로그 컨트롤러"
+
+#~ msgctxt "game_options"
+#~ msgid "Analog Joystick (Flystick)"
+#~ msgstr "아날로그 조이스틱(비행조이스틱)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "TEAM COLOR MODE"
+#~ msgstr "팀 색상 모드"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Emulate a pak in the controller expansion port."
+#~ msgstr "컨트롤러 확장 포트에서 pak를 에뮬레이트합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Lunar Ignore Brightness Color Fix"
+#~ msgstr "달의 밝기 무시 색상 수정"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "COLOR PALETTE (2D)"
+#~ msgstr "색상 팔레트(2D)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Use your physical anaglypth 3D glasses!"
+#~ msgstr "실제 애너글립스 3D 안경을 사용하십시오!"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Add color to Game Boy games."
+#~ msgstr "게임보이 게임에 색상을 추가합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "GB COLORIZATION"
+#~ msgstr "GB 채색"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "weird colors"
+#~ msgstr "이상한 색상"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "GamePad + 4 Sideway Wiimote"
+#~ msgstr "게임패드 + 4 사이드웨이 위모트"
+
+#~ msgctxt "game_options"
+#~ msgid "5 Sideway Wiimote"
+#~ msgstr "5 사이드웨이 위모트"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Map your controller to an emulated Wiimote."
+#~ msgstr "컨트롤러를 에뮬레이트된 Wiimote에 매핑합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "EMULATE WIIMOTE"
+#~ msgstr "에뮬레이트 위모트"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
+#~ msgstr "에뮬레이트 된 WIIMOTE & GAMEPAD 사용자 정의"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway"
+#~ msgstr "위모트 사이드웨이"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway + Swing"
+#~ msgstr "위모트 사이드웨이 + 스윙"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway + Tilt"
+#~ msgstr "위모트 사이드웨이 + 틸트"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway + Nunchuk"
+#~ msgstr "위모트 사이드웨이 + 쌍절곤"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
+#~ msgstr "Wiimote 포인터를 DS4의 자이로스코프와 에뮬레이트합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Emulate the Wiimote pointer with a mouse."
+#~ msgstr "Wiimote 포인터를 마우스로 에뮬레이트합니다."
+
+#~ msgctxt "game_options"
+#~ msgid "MOUSE AS WIIMOTE POINTER"
+#~ msgstr "위모트 좌표를 마우스로"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "PS1 Analog Joystick"
+#~ msgstr "PS1 아날로그 조이스틱"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enhancement. Improves clarity of distant textures when mip-mapping is "
+#~ "enabled."
+#~ msgstr ""
+#~ "향상. 밉 매핑을 사용하도록 설정한 경우 멀리 있는 텍스처의 선명도를 개선합"
+#~ "니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Set the deadzone of the joystick analog sticks."
+#~ msgstr "조이스틱 아날로그 스틱의 데드 존을 설정하십시오."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Skip buffer disables auto frameskip and renders at display output "
+#~ "resolution."
+#~ msgstr ""
+#~ "버퍼 건너뛰기는 자동 프레임건너뛰기를 비활성화하고 디스플레이 출력 해상도"
+#~ "로 렌더링합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Automatically reduce frameskip if the system has spare overhead."
+#~ msgstr "시스템에 예비 오버헤드가 있는 경우 프레임스킵을 자동으로 줄입니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Most games already have an internal framelimit. Minor performance cost."
+#~ msgstr ""
+#~ "대부분의 게임에는 이미 내부 프레임 제한이 있습니다. 사소한 성능 비용."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "WRITE COLOR BUFFERS"
+#~ msgstr "색상 버퍼 쓰기"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Needed by some games that use special unicode characters."
+#~ msgstr "특수 유니 코드 문자를 사용하는 일부 게임에 필요합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Enable auto frameskipping for performance on lower-end systems."
+#~ msgstr "저사양 시스템에서 성능을 위해 자동 프레임 건너뛰기를 활성화합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "BGFX for post-processing, accel/opengl for raw image."
+#~ msgstr "후처리를 위한 BGFX, 원시 이미지의 경우 액셀/오픈GL."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Allows the use of switchres profiles if present."
+#~ msgstr "스위치 프로파일이 있는 경우 사용할 수 있습니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "When frameskip type is on automatic or manual, skip up to this many "
+#~ "frames consecutively."
+#~ msgstr ""
+#~ "프레임스킵 유형이 자동 또는 수동인 경우 이 많은 프레임까지 연속적으로 건너"
+#~ "뜁니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables bilinear filtering on tilemaps. Looks good, but can cause some "
+#~ "stretch artifacts."
+#~ msgstr ""
+#~ "타일맵에서 쌍선형 필터링을 활성화합니다. 좋아 보이지만 일부 스트레치 아티"
+#~ "팩트가 발생할 수 있습니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Enables Direct3D Automip-map generation."
+#~ msgstr "Direct3D 자동 맵 생성을 사용하도록 설정합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Choose your console timezone."
+#~ msgstr "본체 시간대를 선택합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Choose your console UTC timezone."
+#~ msgstr "콘솔 UTC 시간대를 선택합니다."
 
 #, fuzzy
 #~ msgctxt "game_options"

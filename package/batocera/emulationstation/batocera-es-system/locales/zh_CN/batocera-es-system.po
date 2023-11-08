@@ -246,8 +246,8 @@ msgstr "调整纹理大小"
 msgctxt "game_options"
 msgid ""
 "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
-"libretro cores."
-msgstr "在游戏过程中，按热键+R1可翻译屏幕上的文本.仅适用于libretro core核心."
+"Libretro cores."
+msgstr ""
 
 #. TRANSLATION: shared, shared, shared, shared
 msgctxt "game_options"
@@ -458,13 +458,13 @@ msgstr ""
 
 #. TRANSLATION: libretro/81
 msgctxt "game_options"
-msgid "Emulate Chroma 81 interface (colorization)."
-msgstr "模拟Chroma 81接口（彩色化）"
+msgid "Emulate Chroma 81 interface (colourisation)."
+msgstr ""
 
-#. TRANSLATION: libretro/81, libretro/gambatte
+#. TRANSLATION: libretro/81
 msgctxt "game_options"
-msgid "COLORIZATION"
-msgstr "彩色化"
+msgid "COLORISATION"
+msgstr ""
 
 #. TRANSLATION: libretro/81, libretro/81, libretro/fceumm, libretro/fceumm, libretro/genesisplusgx, ...
 msgctxt "game_options"
@@ -518,8 +518,8 @@ msgstr "SIO加速度"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
-msgid "Emulate NTSC quirks to show more colors in hi-res mode."
-msgstr "模拟NTSC怪异，以高分辨率模式显示更多颜色。"
+msgid "Emulate NTSC quirks to show more colours in hi-res mode."
+msgstr ""
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -950,7 +950,7 @@ msgctxt "game_options"
 msgid "Enhancement. Remove the eight sprite per line limit."
 msgstr "增强,移除每行8个精灵限制."
 
-#. TRANSLATION: libretro/mesen, libretro/potator, libretro/sameboy
+#. TRANSLATION: libretro/mesen
 msgctxt "game_options"
 msgid "COLOR PALETTE"
 msgstr "调色板"
@@ -1032,8 +1032,8 @@ msgstr "(FDS)快进磁盘加载"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
-msgid "Useful for speedruns/glitches."
-msgstr "适用于超速运行/故障。"
+msgid "Useful for speed runs / glitches."
+msgstr ""
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -1392,38 +1392,38 @@ msgstr "WII TV 模式"
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
-msgstr "用L2在右摇杆上模拟Wiimote Sideway的Shake和Nunchuk。"
+msgid "Emulate a Wii Remote Sideway with L2 for Shake and Nunchuk on R-stick."
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "WiiMote"
-msgstr "WiiMote"
+msgid "Wii Remote"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "WiiMote Sideways"
-msgstr "WIIMote 横持手柄"
+msgid "Wii Remote Sideways"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "WiiMote + Nunchuk"
-msgstr "Wii Mote控制器"
+msgid "Wii Remote + Nunchuk"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "WiiMote + Classic Controller"
-msgstr "WiiMote 经典手柄"
+msgid "Wii Remote + Classic Controller"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "WiiMote + Classic Controller Pro"
-msgstr "WiiMote 经典手柄Pro"
+msgid "Wii Remote + Classic Controller Pro"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "Real Wiimote"
-msgstr "WIIMOTE 枪设置"
+msgid "Real Wii Remote"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
@@ -1447,18 +1447,18 @@ msgstr "CPU定时模式(帧)"
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
-msgid "internal (fixed 60fps)"
-msgstr "内部（固定60帧）"
+msgid "Internal (fixed 60fps)"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
-msgid "internal (variable fps)"
-msgstr "内部（可变帧率）"
+msgid "Internal (variable fps)"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
-msgid "external (variable fps)"
-msgstr "外部（可变帧率 ）"
+msgid "External (variable fps)"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox, openbor, mame
 msgctxt "game_options"
@@ -1890,9 +1890,9 @@ msgctxt "game_options"
 msgid "On with game detection message"
 msgstr "开启游戏检测消息"
 
-#. TRANSLATION: libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure, mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
-msgid "Set the deadzone of the joystick analogue sticks."
+msgid "Set the dead zone of the joystick analogue sticks."
 msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
@@ -2177,13 +2177,13 @@ msgstr "数字控制器(游戏手柄)"
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/duckstation, libretro/duckstation
 msgctxt "game_options"
-msgid "Analog Controller (DualShock)"
-msgstr "模拟控制器(双震动)"
+msgid "Analogue Controller (DualShock)"
+msgstr ""
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/puae, libretro/puae, libretro/puae, ...
 msgctxt "game_options"
-msgid "Analog Joystick"
-msgstr "模拟操纵杆"
+msgid "Analogue Joystick"
+msgstr ""
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, ...
 msgctxt "game_options"
@@ -2207,8 +2207,8 @@ msgstr "数字控制器"
 
 #. TRANSLATION: libretro/duckstation, libretro/duckstation
 msgctxt "game_options"
-msgid "Analog Stick"
-msgstr "模拟操纵杆"
+msgid "Analogue Stick"
+msgstr ""
 
 #. TRANSLATION: libretro/fbneo
 msgctxt "game_options"
@@ -2302,23 +2302,23 @@ msgstr "两者"
 
 #. TRANSLATION: libretro/fceumm, libretro/nestopia, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, ...
 msgctxt "game_options"
-msgid "Can be used to simulate colors of particular displays."
-msgstr "可用于模拟特定显示器的颜色."
+msgid "Can be used to simulate colours of particular displays."
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/nestopia, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, ...
 msgctxt "game_options"
-msgid "COLOR FILTER"
-msgstr "彩色滤镜"
+msgid "COLOUR FILTER"
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
-msgid "Composite (color bleeding + artifacts)"
-msgstr "复合(彩色溢出+残影)"
+msgid "Composite (colour bleeding + artifacts)"
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
-msgid "SVideo (color bleeding only)"
-msgstr "S端子(仅限彩色溢出)"
+msgid "SVideo (colour bleeding only)"
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
@@ -2402,8 +2402,8 @@ msgstr "2.5x (1600x1200)"
 
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
-msgid "PLAYER 1 CROSSHAIR COLOR"
-msgstr "玩家1的光枪准星颜色"
+msgid "PLAYER 1 CROSSHAIR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -2427,18 +2427,18 @@ msgstr "白色"
 
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
-msgid "PLAYER 2 CROSSHAIR COLOR"
-msgstr "玩家2的光枪准星颜色"
+msgid "PLAYER 2 CROSSHAIR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
-msgid "PLAYER 3 CROSSHAIR COLOR"
-msgstr "玩家3的光枪准星颜色"
+msgid "PLAYER 3 CROSSHAIR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
-msgid "PLAYER 4 CROSSHAIR COLOR"
-msgstr "玩家4的光枪准星颜色"
+msgid "PLAYER 4 CROSSHAIR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, mupen64plus
 msgctxt "game_options"
@@ -2450,7 +2450,7 @@ msgctxt "game_options"
 msgid "TEXTURE MIP-MAPPING (BLUR)"
 msgstr "纹理MIP映射(模糊)"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, flycast
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Improves clarity of distant textures when mip-mapping is enabled."
 msgstr "当启用mip贴图时，提高了远处纹理的清晰度."
@@ -2552,22 +2552,22 @@ msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "Left Analog (Auto)"
+msgid "Left Analogue (Auto)"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "Right Analog (Auto)"
+msgid "Right Analogue (Auto)"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "Left Analog (Forced)"
+msgid "Left Analogue (Forced)"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "Right Analog (Forced)"
+msgid "Right Analogue (Forced)"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
@@ -2582,22 +2582,27 @@ msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
-msgid "Target color for player 1."
+msgid "Target colour for player 1."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
-msgid "Target color for player 2."
+msgid "Target colour for player 2."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
-msgid "Target color for player 3."
+msgid "Target colour for player 3."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
-msgid "Target color for player 4."
+msgid "Target colour for player 4."
+msgstr ""
+
+#. TRANSLATION: libretro/flycast2021
+msgctxt "game_options"
+msgid "Improves clarity of distant textures when mipmapping is enabled."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
@@ -2787,18 +2792,23 @@ msgstr "LCD重影 (快速)"
 
 #. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
 msgctxt "game_options"
-msgid "Simulate LCD color inaccuracy."
-msgstr "模拟LCD颜色不准确."
+msgid "Simulate LCD colour inaccuracy."
+msgstr ""
 
 #. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/sameboy, libretro/vba-m, ...
 msgctxt "game_options"
-msgid "COLOR CORRECTION"
-msgstr "颜色校正"
+msgid "COLOUR CORRECTION"
+msgstr ""
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
-msgid "Set the color palette to use."
-msgstr "调色板设置.将调色板设置为使用."
+msgid "Set the colour palette to use."
+msgstr ""
+
+#. TRANSLATION: libretro/gambatte
+msgctxt "game_options"
+msgid "COLOURISATION"
+msgstr ""
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -3937,23 +3947,23 @@ msgstr "飞利浦CD-i CD-ROM"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "Tandy Radio Shack Color Computer cartridges"
-msgstr "串联式Radio Shack彩色计算机盒式磁带"
+msgid "Tandy Radio Shack Colour Computer cartridges"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "Tandy Radio Shack Color Computer disk images"
-msgstr "Tandy Radio Shack彩色计算机磁盘映像"
+msgid "Tandy Radio Shack Colour Computer disk images"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "Select the model of Color Computer to emulate"
-msgstr "选择要模拟的彩色计算机的型号"
+msgid "Select the model of Colour Computer to emulate"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "COLOR COMPUTER MODEL"
-msgstr "彩色计算机机型"
+msgid "COLOUR COMPUTER MODEL"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4207,12 +4217,12 @@ msgctxt "game_options"
 msgid "Mac Harddisks"
 msgstr "Mac硬盘"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame
 msgctxt "game_options"
 msgid ""
 "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
-"Color)"
-msgstr "选择Mac型号（建议B&W使用Mac Plus，彩色使用Mac LC 3）"
+"Colour)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4455,10 +4465,10 @@ msgctxt "game_options"
 msgid "CONTROL MAPPING"
 msgstr "控制台映射"
 
-#. TRANSLATION: libretro/mame078plus, yabasanshiro, yabasanshiro
+#. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
-msgid "Analog"
-msgstr "模拟"
+msgid "Analogue"
+msgstr ""
 
 #. TRANSLATION: libretro/mame078plus, yabasanshiro, yabasanshiro
 msgctxt "game_options"
@@ -4582,8 +4592,8 @@ msgstr "端口1+2"
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/pcsx_rearmed
 msgctxt "game_options"
-msgid "Analog Controller"
-msgstr "模拟控制器"
+msgid "Analogue Controller"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -4592,8 +4602,8 @@ msgstr "双震动控制器"
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx
 msgctxt "game_options"
-msgid "Analog Joystick (Flystick)"
-msgstr "模拟操纵杆(飞行摇杆)"
+msgid "Analogue Joystick (Flystick)"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_supergrafx, libretro/pce, libretro/pce_fast, libretro/pcfx
 msgctxt "game_options"
@@ -4642,8 +4652,8 @@ msgstr "光线传感器等级"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
-msgid "TEAM COLOR MODE"
-msgstr "团队颜色模式"
+msgid "TEAM COLOUR MODE"
+msgstr ""
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -4886,8 +4896,8 @@ msgstr "控制器4"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
-msgid "Emulate a pak in the controller expansion port."
-msgstr "在控制器扩展端口中模拟一个pak."
+msgid "Emulate a Pak in the controller expansion port."
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -5526,8 +5536,8 @@ msgstr "暗黑破坏神音乐修复"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
-msgid "Lunar Ignore Brightness Color Fix"
-msgstr "露娜忽略亮度颜色修正"
+msgid "Lunar Ignore Brightness Colour Fix"
+msgstr ""
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -5558,6 +5568,11 @@ msgstr "LCD过滤"
 msgctxt "game_options"
 msgid "LCD GHOSTING EFFECTS"
 msgstr "LCD重影效应"
+
+#. TRANSLATION: libretro/potator, libretro/sameboy
+msgctxt "game_options"
+msgid "COLOUR PALETTE"
+msgstr ""
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -6016,7 +6031,7 @@ msgstr "键盘直通"
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
-msgid "Hardcoded keymap to joyport mapping for Keyrah hardware."
+msgid "Hardcoded keymap to joy port mapping for Keyrah hardware."
 msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
@@ -6331,7 +6346,7 @@ msgstr "模拟PCG-8100"
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
-msgid "Select the color palette to use"
+msgid "Select the colour palette to use"
 msgstr ""
 
 #. TRANSLATION: libretro/sameboy
@@ -6356,7 +6371,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
-msgid "Simulate LCD color inaccuracy"
+msgid "Simulate LCD colour inaccuracy"
 msgstr ""
 
 #. TRANSLATION: libretro/sameboy
@@ -6376,7 +6391,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
-msgid "Correct Color Curves"
+msgid "Correct Colour Curves"
 msgstr ""
 
 #. TRANSLATION: libretro/sameboy
@@ -6708,8 +6723,8 @@ msgstr "经典替代游戏手柄"
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
-msgid "COLOR PALETTE (2D)"
-msgstr "调色板 (2D)"
+msgid "COLOUR PALETTE (2D)"
+msgstr ""
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
@@ -6748,8 +6763,8 @@ msgstr "黑色/黄色"
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
-msgid "Use your physical anaglypth 3D glasses!"
-msgstr "使用您的立体立体眼镜！"
+msgid "Use your physical anaglyph 3D glasses!"
+msgstr ""
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
@@ -6783,13 +6798,13 @@ msgstr "黄色/蓝色"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
-msgid "Add color to Game Boy games."
-msgstr "添加颜色到Game Boy游戏."
+msgid "Add colour to Game Boy games."
+msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
-msgid "GB COLORIZATION"
-msgstr "GB彩色化"
+msgid "GB COLOURISATION"
+msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -6833,8 +6848,8 @@ msgstr "粉红色的梦"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
-msgid "weird colors"
-msgstr "奇怪的颜色"
+msgid "weird colours"
+msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -6910,6 +6925,11 @@ msgstr "C64 游戏系统 PAL"
 msgctxt "game_options"
 msgid "C64 Japanese NTSC"
 msgstr "C64 NTSC (日本)"
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128
+msgctxt "game_options"
+msgid "community-colours"
+msgstr ""
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -7469,12 +7489,12 @@ msgstr "移除隔行扫描伪影"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
-msgid "Centers the image screen. Disabled when using Auto Crop. AUTO = Full."
+msgid "Centres the image screen. Disabled when using Auto Crop. AUTO = Full."
 msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
-msgid "IMAGE CENTERING"
+msgid "IMAGE CENTRING"
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -7591,8 +7611,8 @@ msgstr "手柄+4 专业控制器"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
-msgid "GamePad + 4 Sideway Wiimote"
-msgstr "手柄+4 横向使用Wii遥控器"
+msgid "GamePad + 4 Sideway Wii Remote"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7601,8 +7621,8 @@ msgstr "5 Pro 控制器"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
-msgid "5 Sideway Wiimote"
-msgstr "5 Wii横持遥控器"
+msgid "5 Sideway Wii Remote"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -8028,9 +8048,9 @@ msgstr "显示"
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid ""
-"Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
+"Enable GameCube boot animation and BIOS access (requires IPL.bin BIOS in "
 "appropriate user directory)."
-msgstr "启用Gamecube引导动画和BIOS访问 (需要相应用户目录中的IPL.bin BIOS)."
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
@@ -8039,8 +8059,8 @@ msgstr "启用引导动画"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Map your controller to an emulated Wiimote."
-msgstr "将控制器映射到模拟Wiimote."
+msgid "Map your controller to an emulated Wii Remote."
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
 msgctxt "game_options"
@@ -8049,13 +8069,13 @@ msgstr "控制器"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "EMULATE WIIMOTE"
-msgstr "模拟Wii远程控制器"
+msgid "EMULATE WII REMOTE"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
-msgstr "自定义模拟WIIMOTE和游戏板"
+msgid "CUSTOMIZE EMULATED WII REMOTE & GAMEPAD"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -8069,28 +8089,28 @@ msgstr "经典控制器Pro"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Wiimote Sideway"
-msgstr "WIIMote 横持手柄"
+msgid "Wii Remote Sideway"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Wiimote Sideway + Swing"
-msgstr "Wii 远程控制器横向握持 + 挥动"
+msgid "Wii Remote Sideway + Swing"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Wiimote Sideway + Tilt"
-msgstr "Wii 远程控制器横向握持 + 倾斜"
+msgid "Wii Remote Sideway + Tilt"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Wiimote Sideway + Nunchuk"
-msgstr "Wii 远程控制器横向握持 + Nunchuk 手柄"
+msgid "Wii Remote Sideway + Nunchuk"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
-msgstr "用DS4的陀螺仪模拟Wiimote指针。"
+msgid "Emulate the Wii Remote pointer with a DS4's gyroscope."
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
@@ -8099,13 +8119,13 @@ msgstr "双震动手柄运动控制"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Emulate the Wiimote pointer with a mouse."
-msgstr "用鼠标模拟Wiimote指针."
+msgid "Emulate the Wii Remote pointer with a mouse."
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
-msgid "MOUSE AS WIIMOTE POINTER"
-msgstr "鼠标作为 WIIMOTE 指针"
+msgid "MOUSE AS WII REMOTE POINTER"
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -8342,8 +8362,8 @@ msgstr "垂直空白中断跳过"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid "Set joystick deadzone."
-msgstr "设置手柄死区."
+msgid "Set joystick dead zone."
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin, mupen64plus, ...
 msgctxt "game_options"
@@ -8440,8 +8460,8 @@ msgstr "禁用屏幕显示消息"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Determines the speed and the runahead behaviour of the system."
-msgstr "确定系统的速度和提前运行行为."
+msgid "Determines the speed and the run ahead behaviour of the system."
+msgstr ""
 
 #. TRANSLATION: duckstation, duckstation, duckstation
 msgctxt "game_options"
@@ -8678,8 +8698,8 @@ msgstr "PS1数字控制器"
 
 #. TRANSLATION: duckstation, duckstation
 msgctxt "game_options"
-msgid "PS1 Analog Joystick"
-msgstr "PS1 模拟操纵杆"
+msgid "PS1 Analogue Joystick"
+msgstr ""
 
 #. TRANSLATION: duckstation, duckstation
 msgctxt "game_options"
@@ -8865,7 +8885,7 @@ msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "数字音频处理器"
 
-#. TRANSLATION: flycast/vitaquake3, flycast, virtualjaguar
+#. TRANSLATION: flycast/vitaquake3, virtualjaguar
 msgctxt "game_options"
 msgid "Disbaled (Default)"
 msgstr "禁用(默认)"
@@ -8926,6 +8946,12 @@ msgid "Rotate the screen with the emulator."
 msgstr "使用模拟器旋转屏幕."
 
 #. TRANSLATION: flycast
+msgctxt "game_options"
+msgid ""
+"Improves clarity of distant textures when anisotropic filtering is enabled."
+msgstr ""
+
+#. TRANSLATION: flycast
 #, c-format
 msgctxt "game_options"
 msgid "Fastest BIOS but not 100% compatible."
@@ -8938,8 +8964,8 @@ msgstr ""
 
 #. TRANSLATION: fpinball
 msgctxt "game_options"
-msgid "Allow mapping Future Pinabll with Pad to Keyboard."
-msgstr "允许使用键盘将Future Pinabll映射到键盘."
+msgid "Allow mapping Future Pinball with Pad to Keyboard."
+msgstr ""
 
 #. TRANSLATION: fpinball
 msgctxt "game_options"
@@ -9418,9 +9444,9 @@ msgstr "三线性"
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid ""
-"Enhancement. Improves clarity of distant textures when mip-mapping is "
-"enabled."
-msgstr "增强.当启用mip贴图时，提高了远处纹理的清晰度."
+"Enhancement. Improves clarity of distant textures when anisotropic filtering "
+"is enabled."
+msgstr ""
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -9491,8 +9517,8 @@ msgstr "启用"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
-msgid "Set the sensitivity of the joystick analog sticks."
-msgstr "设置操纵手柄模拟操纵杆的灵敏度."
+msgid "Set the sensitivity of the joystick analogue sticks."
+msgstr ""
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
@@ -9503,11 +9529,6 @@ msgstr "灵敏度"
 msgctxt "game_options"
 msgid "100% (Default)"
 msgstr "100% (默认)"
-
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
-msgctxt "game_options"
-msgid "Set the deadzone of the joystick analog sticks."
-msgstr "设置操纵杆模拟棒的死区。"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -9526,8 +9547,8 @@ msgstr "简单 2x"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Display on screen information like savestate, config warning etc..."
-msgstr "在屏幕上显示保存状态、配置警告等信息..."
+msgid "Display on screen information like save state, config warning etc..."
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9643,8 +9664,8 @@ msgstr "启用宽屏补丁"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Enable to improve bluriness."
-msgstr "启用以改善模糊性."
+msgid "Enable to improve blurriness."
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9809,8 +9830,8 @@ msgstr "三线性 (强制)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
-"Reduces banding between colours and improves the preceived colour depth."
-msgstr "减少颜色之间的条纹，并提高预先设定的颜色深度."
+"Reduces banding between colours and improves the perceived colour depth."
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9968,8 +9989,9 @@ msgstr "《时空危机》雾霭变通解决方案"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid ""
-"Skip buffer disables auto frameskip and renders at display output resolution."
-msgstr "跳过缓冲区禁用自动跳帧并以显示输出分辨率渲染."
+"Skip buffer disables auto frame skip and renders at display output "
+"resolution."
+msgstr ""
 
 #. TRANSLATION: ppsspp, thextech
 msgctxt "game_options"
@@ -9993,8 +10015,8 @@ msgstr "8x 4K (3840x2176)"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "Automatically reduce frameskip if the system has spare overhead."
-msgstr "如果系统空闲，则自动减少跳帧."
+msgid "Automatically reduce frame skip if the system has spare overhead."
+msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -10269,8 +10291,9 @@ msgstr "渲染"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "Most games already have an internal framelimit. Minor performance cost."
-msgstr "大多数游戏已经有了内部框架限制。性能成本较小。"
+msgid ""
+"Most games already have an internal frame limit. Minor performance cost."
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10407,15 +10430,15 @@ msgstr "可能会以牺牲性能为代价修复丢失的图形和损坏的照明
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "WRITE COLOR BUFFERS"
-msgstr "写入颜色缓冲区"
+msgid "WRITE COLOUR BUFFERS"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
-"Straict API specification. Can resolve rare cases of missing graphics and "
+"Strict API specification. Can resolve rare cases of missing graphics and "
 "flickering."
-msgstr "严格的API规范。可以解决图形丢失和闪烁的罕见情况."
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10465,9 +10488,9 @@ msgstr "多线程RSX"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
-"Stream texture to GPU in parrallel. Can improve performance on more powerful "
+"Stream texture to GPU in parallel. Can improve performance on more powerful "
 "GPU's."
-msgstr "并行地将纹理流式传输到GPU。可以在更强大的GPU上提高性能."
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10769,8 +10792,8 @@ msgstr "拉伸输出以填充显示区域."
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Center (Default)"
-msgstr "居中 (默认)"
+msgid "Centre (Default)"
+msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -10849,8 +10872,8 @@ msgstr "试玩"
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
-msgid "Needed by some games that use special unicode characters."
-msgstr "一些使用特殊unicode字符的游戏需要."
+msgid "Needed by some games that use special Unicode characters."
+msgstr ""
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
@@ -10929,8 +10952,8 @@ msgstr "4:3 (默认)"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
-msgid "Enable auto frameskipping for performance on lower-end systems."
-msgstr "在低端系统上启用自动跳帧以提高性能。"
+msgid "Enable auto frame skipping for performance on lower-end systems."
+msgstr ""
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -11221,6 +11244,13 @@ msgstr "用户磁盘"
 
 #. TRANSLATION: mame/vitaquake3
 msgctxt "game_options"
+msgid ""
+"Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
+"Color)"
+msgstr "选择Mac型号（建议B&W使用Mac Plus，彩色使用Mac LC 3）"
+
+#. TRANSLATION: mame/vitaquake3
+msgctxt "game_options"
 msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD, Image Reader)"
 msgstr "Mac IIx（2Mb RAM，彩色，2个高清软盘/CD/HDD，图像读取器）"
 
@@ -11248,8 +11278,8 @@ msgstr "为轨迹球、旋转器、光枪(如果未连接枪)和类似控件启�
 
 #. TRANSLATION: mame
 msgctxt "game_options"
-msgid "BGFX for post-processing, accel/opengl for raw image."
-msgstr "BGFX用于后处理.accel/opengl用于原始图像."
+msgid "BGFX for post-processing, Accel/OpenGL for raw image."
+msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -11303,8 +11333,8 @@ msgstr "CRT Geom豪华型(复合)"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
-msgid "Allows the use of switchres profiles if present."
-msgstr "允许使用CRT低解配置文件(如果存在)."
+msgid "Allows the use of SwitchRes profiles if present."
+msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -11601,9 +11631,9 @@ msgstr "跳帧类型"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid ""
-"When frameskip type is on automatic or manual, skip up to this many frames "
+"When frame skip type is on automatic or manual, skip up to this many frames "
 "consecutively."
-msgstr "当帧跳过类型为自动或手动时，连续跳过这么多帧。"
+msgstr ""
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
@@ -11799,8 +11829,8 @@ msgstr "启用宽屏"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
-msgid "Enable scanlines for roms that support it."
-msgstr "为支持它的rom启用扫描线."
+msgid "Enable scanlines for games that support it."
+msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -11833,9 +11863,9 @@ msgstr "启用mipmap使用和三线性过滤。不适用于某些游戏。"
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid ""
-"Enables bilinear filtering on tilemaps. Looks good, but can cause some "
+"Enables bilinear filtering on tile maps. Looks good, but can cause some "
 "stretch artifacts."
-msgstr "在图块地图上启用双线性过滤。看起来不错，但可能会引起一些拉伸伪影。"
+msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -11854,8 +11884,8 @@ msgstr "强制管理"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
-msgid "Enables Direct3D Automip-map generation."
-msgstr "启用Direct3D自动映射生成。"
+msgid "Enables Direct3D Auto mip-map generation."
+msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -12056,8 +12086,8 @@ msgstr "台湾"
 
 #. TRANSLATION: yuzu
 msgctxt "game_options"
-msgid "Choose your console timezone."
-msgstr "选择你的控制台时区."
+msgid "Choose your console time zone."
+msgstr ""
 
 #. TRANSLATION: yuzu, ryujinx
 msgctxt "game_options"
@@ -12316,8 +12346,8 @@ msgstr "美式英语"
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
-msgid "Choose your console UTC timezone."
-msgstr "选择控制台UTC时区."
+msgid "Choose your console UTC time zone."
+msgstr ""
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
@@ -12451,7 +12481,7 @@ msgstr ""
 
 #. TRANSLATION: hurrican
 msgctxt "game_options"
-msgid "Play custom userlevel."
+msgid "Play custom user level."
 msgstr ""
 
 #. TRANSLATION: hurrican
@@ -12596,7 +12626,7 @@ msgstr ""
 
 #. TRANSLATION: awgl, bermuda
 msgctxt "game_options"
-msgid "Select fullscreen mode."
+msgid "Select full screen mode."
 msgstr ""
 
 #. TRANSLATION: awgl
@@ -12866,7 +12896,7 @@ msgctxt "game_options"
 msgid "Enhanced OpenGL"
 msgstr "增强OpenGL"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Set the desired maximum refresh rate when Vsync is off."
 msgstr "在Vsync关闭时设置所需的最大刷新率."
@@ -13009,6 +13039,11 @@ msgstr "800p"
 msgctxt "game_options"
 msgid "960p"
 msgstr "960p"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Set the desired maximum refresh rate when VSync is off."
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -13187,11 +13222,6 @@ msgstr "垂直同步"
 
 #. TRANSLATION: virtualjaguar
 msgctxt "game_options"
-msgid "Skip (Default)"
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
 msgid "Enable the Digital Sound Processor."
 msgstr ""
 
@@ -13241,10 +13271,9 @@ msgstr "锯齿是一种平滑锯齿边缘的技术."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid ""
-"This option enables the ability to play Xbox Live Arcacde games. May cause "
+"This option enables the ability to play Xbox Live Arcade games. May cause "
 "compatibility issues with non-XBLA games."
 msgstr ""
-"此选项使您能够玩Xbox Live街机游戏。可能会导致与非XBLA游戏的兼容性问题。"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -13339,6 +13368,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the controller 1 user mode."
 msgstr ""
+
+#. TRANSLATION: yabasanshiro, yabasanshiro
+msgctxt "game_options"
+msgid "Analog"
+msgstr "模拟"
 
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
@@ -14109,6 +14143,364 @@ msgstr "快速载入"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "快速保存"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
+#~ "libretro cores."
+#~ msgstr ""
+#~ "在游戏过程中，按热键+R1可翻译屏幕上的文本.仅适用于libretro core核心."
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate Chroma 81 interface (colorization)."
+#~ msgstr "模拟Chroma 81接口（彩色化）"
+
+#~ msgctxt "game_options"
+#~ msgid "COLORIZATION"
+#~ msgstr "彩色化"
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate NTSC quirks to show more colors in hi-res mode."
+#~ msgstr "模拟NTSC怪异，以高分辨率模式显示更多颜色。"
+
+#~ msgctxt "game_options"
+#~ msgid "Useful for speedruns/glitches."
+#~ msgstr "适用于超速运行/故障。"
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
+#~ msgstr "用L2在右摇杆上模拟Wiimote Sideway的Shake和Nunchuk。"
+
+#~ msgctxt "game_options"
+#~ msgid "WiiMote"
+#~ msgstr "WiiMote"
+
+#~ msgctxt "game_options"
+#~ msgid "WiiMote Sideways"
+#~ msgstr "WIIMote 横持手柄"
+
+#~ msgctxt "game_options"
+#~ msgid "WiiMote + Nunchuk"
+#~ msgstr "Wii Mote控制器"
+
+#~ msgctxt "game_options"
+#~ msgid "WiiMote + Classic Controller"
+#~ msgstr "WiiMote 经典手柄"
+
+#~ msgctxt "game_options"
+#~ msgid "WiiMote + Classic Controller Pro"
+#~ msgstr "WiiMote 经典手柄Pro"
+
+#~ msgctxt "game_options"
+#~ msgid "Real Wiimote"
+#~ msgstr "WIIMOTE 枪设置"
+
+#~ msgctxt "game_options"
+#~ msgid "internal (fixed 60fps)"
+#~ msgstr "内部（固定60帧）"
+
+#~ msgctxt "game_options"
+#~ msgid "internal (variable fps)"
+#~ msgstr "内部（可变帧率）"
+
+#~ msgctxt "game_options"
+#~ msgid "external (variable fps)"
+#~ msgstr "外部（可变帧率 ）"
+
+#~ msgctxt "game_options"
+#~ msgid "Analog Controller (DualShock)"
+#~ msgstr "模拟控制器(双震动)"
+
+#~ msgctxt "game_options"
+#~ msgid "Analog Joystick"
+#~ msgstr "模拟操纵杆"
+
+#~ msgctxt "game_options"
+#~ msgid "Analog Stick"
+#~ msgstr "模拟操纵杆"
+
+#~ msgctxt "game_options"
+#~ msgid "Can be used to simulate colors of particular displays."
+#~ msgstr "可用于模拟特定显示器的颜色."
+
+#~ msgctxt "game_options"
+#~ msgid "COLOR FILTER"
+#~ msgstr "彩色滤镜"
+
+#~ msgctxt "game_options"
+#~ msgid "Composite (color bleeding + artifacts)"
+#~ msgstr "复合(彩色溢出+残影)"
+
+#~ msgctxt "game_options"
+#~ msgid "SVideo (color bleeding only)"
+#~ msgstr "S端子(仅限彩色溢出)"
+
+#~ msgctxt "game_options"
+#~ msgid "PLAYER 1 CROSSHAIR COLOR"
+#~ msgstr "玩家1的光枪准星颜色"
+
+#~ msgctxt "game_options"
+#~ msgid "PLAYER 2 CROSSHAIR COLOR"
+#~ msgstr "玩家2的光枪准星颜色"
+
+#~ msgctxt "game_options"
+#~ msgid "PLAYER 3 CROSSHAIR COLOR"
+#~ msgstr "玩家3的光枪准星颜色"
+
+#~ msgctxt "game_options"
+#~ msgid "PLAYER 4 CROSSHAIR COLOR"
+#~ msgstr "玩家4的光枪准星颜色"
+
+#~ msgctxt "game_options"
+#~ msgid "Simulate LCD color inaccuracy."
+#~ msgstr "模拟LCD颜色不准确."
+
+#~ msgctxt "game_options"
+#~ msgid "COLOR CORRECTION"
+#~ msgstr "颜色校正"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the color palette to use."
+#~ msgstr "调色板设置.将调色板设置为使用."
+
+#~ msgctxt "game_options"
+#~ msgid "Tandy Radio Shack Color Computer cartridges"
+#~ msgstr "串联式Radio Shack彩色计算机盒式磁带"
+
+#~ msgctxt "game_options"
+#~ msgid "Tandy Radio Shack Color Computer disk images"
+#~ msgstr "Tandy Radio Shack彩色计算机磁盘映像"
+
+#~ msgctxt "game_options"
+#~ msgid "Select the model of Color Computer to emulate"
+#~ msgstr "选择要模拟的彩色计算机的型号"
+
+#~ msgctxt "game_options"
+#~ msgid "COLOR COMPUTER MODEL"
+#~ msgstr "彩色计算机机型"
+
+#~ msgctxt "game_options"
+#~ msgid "Analog Controller"
+#~ msgstr "模拟控制器"
+
+#~ msgctxt "game_options"
+#~ msgid "Analog Joystick (Flystick)"
+#~ msgstr "模拟操纵杆(飞行摇杆)"
+
+#~ msgctxt "game_options"
+#~ msgid "TEAM COLOR MODE"
+#~ msgstr "团队颜色模式"
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate a pak in the controller expansion port."
+#~ msgstr "在控制器扩展端口中模拟一个pak."
+
+#~ msgctxt "game_options"
+#~ msgid "Lunar Ignore Brightness Color Fix"
+#~ msgstr "露娜忽略亮度颜色修正"
+
+#~ msgctxt "game_options"
+#~ msgid "COLOR PALETTE (2D)"
+#~ msgstr "调色板 (2D)"
+
+#~ msgctxt "game_options"
+#~ msgid "Use your physical anaglypth 3D glasses!"
+#~ msgstr "使用您的立体立体眼镜！"
+
+#~ msgctxt "game_options"
+#~ msgid "Add color to Game Boy games."
+#~ msgstr "添加颜色到Game Boy游戏."
+
+#~ msgctxt "game_options"
+#~ msgid "GB COLORIZATION"
+#~ msgstr "GB彩色化"
+
+#~ msgctxt "game_options"
+#~ msgid "weird colors"
+#~ msgstr "奇怪的颜色"
+
+#~ msgctxt "game_options"
+#~ msgid "GamePad + 4 Sideway Wiimote"
+#~ msgstr "手柄+4 横向使用Wii遥控器"
+
+#~ msgctxt "game_options"
+#~ msgid "5 Sideway Wiimote"
+#~ msgstr "5 Wii横持遥控器"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
+#~ "appropriate user directory)."
+#~ msgstr "启用Gamecube引导动画和BIOS访问 (需要相应用户目录中的IPL.bin BIOS)."
+
+#~ msgctxt "game_options"
+#~ msgid "Map your controller to an emulated Wiimote."
+#~ msgstr "将控制器映射到模拟Wiimote."
+
+#~ msgctxt "game_options"
+#~ msgid "EMULATE WIIMOTE"
+#~ msgstr "模拟Wii远程控制器"
+
+#~ msgctxt "game_options"
+#~ msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
+#~ msgstr "自定义模拟WIIMOTE和游戏板"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway"
+#~ msgstr "WIIMote 横持手柄"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway + Swing"
+#~ msgstr "Wii 远程控制器横向握持 + 挥动"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway + Tilt"
+#~ msgstr "Wii 远程控制器横向握持 + 倾斜"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway + Nunchuk"
+#~ msgstr "Wii 远程控制器横向握持 + Nunchuk 手柄"
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
+#~ msgstr "用DS4的陀螺仪模拟Wiimote指针。"
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate the Wiimote pointer with a mouse."
+#~ msgstr "用鼠标模拟Wiimote指针."
+
+#~ msgctxt "game_options"
+#~ msgid "MOUSE AS WIIMOTE POINTER"
+#~ msgstr "鼠标作为 WIIMOTE 指针"
+
+#~ msgctxt "game_options"
+#~ msgid "Set joystick deadzone."
+#~ msgstr "设置手柄死区."
+
+#~ msgctxt "game_options"
+#~ msgid "Determines the speed and the runahead behaviour of the system."
+#~ msgstr "确定系统的速度和提前运行行为."
+
+#~ msgctxt "game_options"
+#~ msgid "PS1 Analog Joystick"
+#~ msgstr "PS1 模拟操纵杆"
+
+#~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
+#~ msgstr "允许使用键盘将Future Pinabll映射到键盘."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enhancement. Improves clarity of distant textures when mip-mapping is "
+#~ "enabled."
+#~ msgstr "增强.当启用mip贴图时，提高了远处纹理的清晰度."
+
+#~ msgctxt "game_options"
+#~ msgid "Set the sensitivity of the joystick analog sticks."
+#~ msgstr "设置操纵手柄模拟操纵杆的灵敏度."
+
+#~ msgctxt "game_options"
+#~ msgid "Set the deadzone of the joystick analog sticks."
+#~ msgstr "设置操纵杆模拟棒的死区。"
+
+#~ msgctxt "game_options"
+#~ msgid "Display on screen information like savestate, config warning etc..."
+#~ msgstr "在屏幕上显示保存状态、配置警告等信息..."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable to improve bluriness."
+#~ msgstr "启用以改善模糊性."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Reduces banding between colours and improves the preceived colour depth."
+#~ msgstr "减少颜色之间的条纹，并提高预先设定的颜色深度."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Skip buffer disables auto frameskip and renders at display output "
+#~ "resolution."
+#~ msgstr "跳过缓冲区禁用自动跳帧并以显示输出分辨率渲染."
+
+#~ msgctxt "game_options"
+#~ msgid "Automatically reduce frameskip if the system has spare overhead."
+#~ msgstr "如果系统空闲，则自动减少跳帧."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Most games already have an internal framelimit. Minor performance cost."
+#~ msgstr "大多数游戏已经有了内部框架限制。性能成本较小。"
+
+#~ msgctxt "game_options"
+#~ msgid "WRITE COLOR BUFFERS"
+#~ msgstr "写入颜色缓冲区"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Straict API specification. Can resolve rare cases of missing graphics and "
+#~ "flickering."
+#~ msgstr "严格的API规范。可以解决图形丢失和闪烁的罕见情况."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's."
+#~ msgstr "并行地将纹理流式传输到GPU。可以在更强大的GPU上提高性能."
+
+#~ msgctxt "game_options"
+#~ msgid "Center (Default)"
+#~ msgstr "居中 (默认)"
+
+#~ msgctxt "game_options"
+#~ msgid "Needed by some games that use special unicode characters."
+#~ msgstr "一些使用特殊unicode字符的游戏需要."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable auto frameskipping for performance on lower-end systems."
+#~ msgstr "在低端系统上启用自动跳帧以提高性能。"
+
+#~ msgctxt "game_options"
+#~ msgid "BGFX for post-processing, accel/opengl for raw image."
+#~ msgstr "BGFX用于后处理.accel/opengl用于原始图像."
+
+#~ msgctxt "game_options"
+#~ msgid "Allows the use of switchres profiles if present."
+#~ msgstr "允许使用CRT低解配置文件(如果存在)."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "When frameskip type is on automatic or manual, skip up to this many "
+#~ "frames consecutively."
+#~ msgstr "当帧跳过类型为自动或手动时，连续跳过这么多帧。"
+
+#~ msgctxt "game_options"
+#~ msgid "Enable scanlines for roms that support it."
+#~ msgstr "为支持它的rom启用扫描线."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables bilinear filtering on tilemaps. Looks good, but can cause some "
+#~ "stretch artifacts."
+#~ msgstr "在图块地图上启用双线性过滤。看起来不错，但可能会引起一些拉伸伪影。"
+
+#~ msgctxt "game_options"
+#~ msgid "Enables Direct3D Automip-map generation."
+#~ msgstr "启用Direct3D自动映射生成。"
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your console timezone."
+#~ msgstr "选择你的控制台时区."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your console UTC timezone."
+#~ msgstr "选择控制台UTC时区."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "This option enables the ability to play Xbox Live Arcacde games. May "
+#~ "cause compatibility issues with non-XBLA games."
+#~ msgstr ""
+#~ "此选项使您能够玩Xbox Live街机游戏。可能会导致与非XBLA游戏的兼容性问题。"
 
 #~ msgctxt "game_options"
 #~ msgid "GAME DIFFICULATY"
