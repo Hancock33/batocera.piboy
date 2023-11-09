@@ -40,7 +40,7 @@ class WineGenerator(Generator):
 
         raise Exception("invalid system " + system.name)
 
-    def getMouseMode(self, config):
+    def getMouseMode(self, config, rom):
         if "force_mouse" in config and config["force_mouse"] == "0":
             return False
         else:
