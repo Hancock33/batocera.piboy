@@ -12,7 +12,7 @@ ETLEGACY_LICENSE = GPL-3.0
 ETLEGACY_LICENSE_FILE = COPYING.txt
 
 ETLEGACY_DEPENDENCIES += freetype libcurl libglew libpng libtheora
-ETLEGACY_DEPENDENCIES += libvorbis lua openal openssl sdl2
+ETLEGACY_DEPENDENCIES += libvorbis luajit openal openssl sdl2
 
 ETLEGACY_SUPPORTS_IN_SOURCE_BUILD = NO
 
