@@ -11,6 +11,7 @@
 - Fallout 2 Community Edition: Play the original Fallout 2 game.
 - DXX-Rebirth: Play Descent 1 & 2 with enhanced graphics.
 - Added RetroAchievements for Uzebox
+- ETLegacy: play Wolfenstein: Enemy Territory online multiplayer game with enhanced graphics.
 ### Fixed
 - Dolphin bug that prevented full range of analog trigger axis being used.
 - Flycast per pixel sorting option if renderer not explicitly set
@@ -98,7 +99,7 @@
 - Libretro-Stella to Oct 26, 2023 build
 - Libretro-MAME to 0.260
 ### System
-- Linux kernel to 6.6
+- Linux kernel to 6.6.1
 - Mesa to 23.3
 - Proton to 8.0-4b
 - FAudio to 23.10
