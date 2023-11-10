@@ -10,7 +10,7 @@ class ETLegacyGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
 
-        etLegacyDir = "/userdata/roms/etlegacy/legacy"
+        etLegacyDir = "/userdata/roms/ports/etlegacy/legacy"
         etLegacyFile = "/legacy_2.81-dirty.pk3"
         etLegacySource = "/usr/share/etlegacy" + etLegacyFile
         etLegacyDest = etLegacyDir + etLegacyFile
