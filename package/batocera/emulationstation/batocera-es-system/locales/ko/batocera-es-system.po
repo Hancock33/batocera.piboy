@@ -12196,17 +12196,17 @@ msgctxt "game_options"
 msgid "Chinese (Mandarin)"
 msgstr ""
 
-#. TRANSLATION: scummvm, xenia, xenia-canary
+#. TRANSLATION: scummvm, etlegacy, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Swedish"
 msgstr ""
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, etlegacy
 msgctxt "game_options"
 msgid "Hebrew"
 msgstr ""
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, etlegacy
 msgctxt "game_options"
 msgid "Czech"
 msgstr ""
@@ -12276,13 +12276,13 @@ msgctxt "game_options"
 msgid "Chinese (Traditional) [Big5]"
 msgstr "중국어(번체자)[Big5]"
 
-#. TRANSLATION: easyrpg
+#. TRANSLATION: easyrpg, etlegacy
 #, fuzzy
 msgctxt "game_options"
 msgid "Greek"
 msgstr "그리스어"
 
-#. TRANSLATION: easyrpg, xenia, xenia-canary
+#. TRANSLATION: easyrpg, etlegacy, xenia, xenia-canary
 #, fuzzy
 msgctxt "game_options"
 msgid "Turkish"
@@ -14410,6 +14410,86 @@ msgctxt "game_options"
 msgid "START LEVEL"
 msgstr ""
 
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Afrikaans"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Albanian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Bulgarian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Catalan"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Danish"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Finnish"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Hungarian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Irish"
+msgstr ""
+
+#. TRANSLATION: etlegacy, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Norwegian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Punjabi"
+msgstr ""
+
+#. TRANSLATION: etlegacy, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Polish"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Romanian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Serbian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Slovak"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Slovenian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Ukrainian"
+msgstr ""
+
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Choose the games difficulty."
@@ -14897,16 +14977,6 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Disable UI prompts"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Polish"
-msgstr ""
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Norwegian"
 msgstr ""
 
 #. TRANSLATION: xenia-canary
@@ -15454,6 +15524,11 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "Exit game"
+msgstr ""
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera up"
@@ -15604,11 +15679,6 @@ msgctxt "keys_files"
 msgid "Manage Staff"
 msgstr ""
 
-#. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "Exit game"
-msgstr ""
-
 #. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys
 msgctxt "keys_files"
 msgid "Bring up menu"
@@ -15731,6 +15801,11 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "game_options"
+#~ msgid "Store past states to rewind to in realtime, if the core supports it."
+#~ msgstr "코어가 지원하는 경우 실시간으로 되감기할 과거 상태를 저장합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
 #~ "libretro cores."
@@ -15753,6 +15828,11 @@ msgstr ""
 #~ msgid "Emulate NTSC quirks to show more colors in hi-res mode."
 #~ msgstr ""
 #~ "NTSC 쿼크를 에뮬레이트하여 고해상도 모드에서 더 많은 색상을 표시합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Treats the right analog stick as the second joystick."
+#~ msgstr "오른쪽 아날로그 스틱을 두 번째 조이스틱으로 취급합니다."
 
 #, fuzzy
 #~ msgctxt "game_options"
@@ -15808,6 +15888,21 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
 #~ msgstr "외부 (가변 FPS)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Optimized (auto)"
+#~ msgstr "최적화(자동)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Set the deadzone of the joystick analog sticks."
+#~ msgstr "조이스틱 아날로그 스틱의 데드 존을 설정하십시오."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "ANALOG JOYSTICK DEADZONE"
+#~ msgstr "아날로그 조이스틱 데드존"
 
 #, fuzzy
 #~ msgctxt "game_options"
@@ -15881,6 +15976,13 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Crop MAME artwork to maximize the game screen and only fill unused space."
+#~ msgstr ""
+#~ "MAME 아트워크를 잘라 게임 화면을 최대화하고 사용하지 않는 공간만 채웁니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
 #~ msgstr "탠디 라디오 무전 컬러 컴퓨터 카트리지"
 
@@ -15925,6 +16027,45 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
+#~ "switches to Super-High when needed."
+#~ msgstr ""
+#~ "사용할 해상도를 수동으로 정의합니다.\n"
+#~ "자동은 기본적으로 높음으로 설정되고 필요한 경우 매우 높음으로 전환됩니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "JUMP ON B"
+#~ msgstr "점프 온 B"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Keypad to joyport mappings for 2 players."
+#~ msgstr "2인용 조이포트 매핑에 대한 키패드."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
+#~ msgstr "2P 게임패드 매핑(키라)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Passes all physical keyboard events for Pad2Key."
+#~ msgstr "Pad2Key에 대한 모든 물리적 키보드 이벤트를 전달합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "DISABLE EMULATOR JOYSTICK"
+#~ msgstr "에뮬레이터 조이스틱 비활성화"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "ANALOG DEADZONE"
+#~ msgstr "아날로그 데드존"
+
+#, fuzzy
+#~ msgctxt "game_options"
 #~ msgid "COLOR PALETTE (2D)"
 #~ msgstr "색상 팔레트(2D)"
 
@@ -15947,6 +16088,26 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "weird colors"
 #~ msgstr "이상한 색상"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "For Gyro-enabled games (bound to left analog stick)"
+#~ msgstr "자이로 지원 게임용(왼쪽 아날로그 스틱에 바인딩됨)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "For Gyro-enabled games (bound to right analog stick)"
+#~ msgstr "자이로 지원 게임용(오른쪽 아날로그 스틱에 바인딩됨)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Resize automatically screen height."
+#~ msgstr "화면 높이의 크기를 자동으로 조정합니다."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "AUTO HEIGHT"
+#~ msgstr "자동 높이"
 
 #, fuzzy
 #~ msgctxt "game_options"
@@ -16010,17 +16171,27 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "game_options"
+#~ msgid "Per Strip"
+#~ msgstr "스트립 당"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Per Triangle (Default)"
+#~ msgstr "삼각형당(기본값)"
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid "Per Pixel"
+#~ msgstr "픽셀당"
+
+#, fuzzy
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enhancement. Improves clarity of distant textures when mip-mapping is "
 #~ "enabled."
 #~ msgstr ""
 #~ "향상. 밉 매핑을 사용하도록 설정한 경우 멀리 있는 텍스처의 선명도를 개선합"
 #~ "니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Set the deadzone of the joystick analog sticks."
-#~ msgstr "조이스틱 아날로그 스틱의 데드 존을 설정하십시오."
 
 #, fuzzy
 #~ msgctxt "game_options"
@@ -16071,6 +16242,15 @@ msgstr ""
 #, fuzzy
 #~ msgctxt "game_options"
 #~ msgid ""
+#~ "Enable this mode if you have issue for run your game on NTFS storage (by "
+#~ "default is better to use LinuxFS)."
+#~ msgstr ""
+#~ "NTFS 저장소에서 게임을 실행하는 데 문제가있는 경우이 모드를 활성화하십시"
+#~ "오 (기본적으로 LinuxFS를 사용하는 것이 좋습니다)."
+
+#, fuzzy
+#~ msgctxt "game_options"
+#~ msgid ""
 #~ "When frameskip type is on automatic or manual, skip up to this many "
 #~ "frames consecutively."
 #~ msgstr ""
@@ -16100,116 +16280,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Choose your console UTC timezone."
 #~ msgstr "콘솔 UTC 시간대를 선택합니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Store past states to rewind to in realtime, if the core supports it."
-#~ msgstr "코어가 지원하는 경우 실시간으로 되감기할 과거 상태를 저장합니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Treats the right analog stick as the second joystick."
-#~ msgstr "오른쪽 아날로그 스틱을 두 번째 조이스틱으로 취급합니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Optimized (auto)"
-#~ msgstr "최적화(자동)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "ANALOG JOYSTICK DEADZONE"
-#~ msgstr "아날로그 조이스틱 데드존"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Crop MAME artwork to maximize the game screen and only fill unused space."
-#~ msgstr ""
-#~ "MAME 아트워크를 잘라 게임 화면을 최대화하고 사용하지 않는 공간만 채웁니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
-#~ "switches to Super-High when needed."
-#~ msgstr ""
-#~ "사용할 해상도를 수동으로 정의합니다.\n"
-#~ "자동은 기본적으로 높음으로 설정되고 필요한 경우 매우 높음으로 전환됩니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "JUMP ON B"
-#~ msgstr "점프 온 B"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Keypad to joyport mappings for 2 players."
-#~ msgstr "2인용 조이포트 매핑에 대한 키패드."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
-#~ msgstr "2P 게임패드 매핑(키라)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Passes all physical keyboard events for Pad2Key."
-#~ msgstr "Pad2Key에 대한 모든 물리적 키보드 이벤트를 전달합니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "DISABLE EMULATOR JOYSTICK"
-#~ msgstr "에뮬레이터 조이스틱 비활성화"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "ANALOG DEADZONE"
-#~ msgstr "아날로그 데드존"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "For Gyro-enabled games (bound to left analog stick)"
-#~ msgstr "자이로 지원 게임용(왼쪽 아날로그 스틱에 바인딩됨)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "For Gyro-enabled games (bound to right analog stick)"
-#~ msgstr "자이로 지원 게임용(오른쪽 아날로그 스틱에 바인딩됨)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Resize automatically screen height."
-#~ msgstr "화면 높이의 크기를 자동으로 조정합니다."
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "AUTO HEIGHT"
-#~ msgstr "자동 높이"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Per Strip"
-#~ msgstr "스트립 당"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Per Triangle (Default)"
-#~ msgstr "삼각형당(기본값)"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid "Per Pixel"
-#~ msgstr "픽셀당"
-
-#, fuzzy
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable this mode if you have issue for run your game on NTFS storage (by "
-#~ "default is better to use LinuxFS)."
-#~ msgstr ""
-#~ "NTFS 저장소에서 게임을 실행하는 데 문제가있는 경우이 모드를 활성화하십시"
-#~ "오 (기본적으로 LinuxFS를 사용하는 것이 좋습니다)."
 
 #, fuzzy
 #~ msgctxt "game_options"

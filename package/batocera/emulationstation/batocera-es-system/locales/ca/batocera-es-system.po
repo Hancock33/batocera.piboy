@@ -10951,17 +10951,17 @@ msgctxt "game_options"
 msgid "Chinese (Mandarin)"
 msgstr ""
 
-#. TRANSLATION: scummvm, xenia, xenia-canary
+#. TRANSLATION: scummvm, etlegacy, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Swedish"
 msgstr "Suec"
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, etlegacy
 msgctxt "game_options"
 msgid "Hebrew"
 msgstr ""
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, etlegacy
 msgctxt "game_options"
 msgid "Czech"
 msgstr ""
@@ -11021,12 +11021,12 @@ msgctxt "game_options"
 msgid "Chinese (Traditional) [Big5]"
 msgstr "Xinés (Tradicional) [Big5]"
 
-#. TRANSLATION: easyrpg
+#. TRANSLATION: easyrpg, etlegacy
 msgctxt "game_options"
 msgid "Greek"
 msgstr "Grec"
 
-#. TRANSLATION: easyrpg, xenia, xenia-canary
+#. TRANSLATION: easyrpg, etlegacy, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Turkish"
 msgstr "Turc"
@@ -12968,6 +12968,86 @@ msgctxt "game_options"
 msgid "START LEVEL"
 msgstr ""
 
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Afrikaans"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Albanian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Bulgarian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Catalan"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Danish"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Finnish"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Hungarian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Irish"
+msgstr ""
+
+#. TRANSLATION: etlegacy, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Norwegian"
+msgstr "Noruec"
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Punjabi"
+msgstr ""
+
+#. TRANSLATION: etlegacy, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Polish"
+msgstr "Polonès"
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Romanian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Serbian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Slovak"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Slovenian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Ukrainian"
+msgstr ""
+
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Choose the games difficulty."
@@ -13457,16 +13537,6 @@ msgstr "Habilitar les preguntes d'interfície d'usuari (Per defecte)"
 msgctxt "game_options"
 msgid "Disable UI prompts"
 msgstr "Deshabilitar preguntes d'interfície d'usuari"
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Polish"
-msgstr "Polonès"
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Norwegian"
-msgstr "Noruec"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -14014,6 +14084,11 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "Exit game"
+msgstr ""
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera up"
@@ -14164,11 +14239,6 @@ msgctxt "keys_files"
 msgid "Manage Staff"
 msgstr ""
 
-#. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "Exit game"
-msgstr ""
-
 #. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys
 msgctxt "keys_files"
 msgid "Bring up menu"
@@ -14290,6 +14360,12 @@ msgid "Quick Save"
 msgstr ""
 
 #~ msgctxt "game_options"
+#~ msgid "Store past states to rewind to in realtime, if the core supports it."
+#~ msgstr ""
+#~ "Emmagatzema estats passats al rebobinar en temps real, si el nucli ho "
+#~ "suporta."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
 #~ "libretro cores."
@@ -14310,6 +14386,10 @@ msgstr ""
 #~ msgstr ""
 #~ "Emular les peculiaritats de NTSC per a mostrar més colors al mode d’alta "
 #~ "resolució."
+
+#~ msgctxt "game_options"
+#~ msgid "Treats the right analog stick as the second joystick."
+#~ msgstr "Tracta la palanca analògica dreta com un segon comandament."
 
 #~ msgctxt "game_options"
 #~ msgid "Useful for speedruns/glitches."
@@ -14358,6 +14438,18 @@ msgstr ""
 #~ msgstr "extern (fps variable)"
 
 #~ msgctxt "game_options"
+#~ msgid "Optimized (auto)"
+#~ msgstr "Optimitzat (automàtic)"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the deadzone of the joystick analog sticks."
+#~ msgstr "Estableix la zona morta de la palanca analògica dels comandaments."
+
+#~ msgctxt "game_options"
+#~ msgid "ANALOG JOYSTICK DEADZONE"
+#~ msgstr "ZONA MORTA DE LA PALANCA ANALÒGICA"
+
+#~ msgctxt "game_options"
 #~ msgid "Analog Controller (DualShock)"
 #~ msgstr "Comandament analògic (DualShock)"
 
@@ -14402,22 +14494,6 @@ msgstr ""
 #~ msgstr "COLOR DE DIANA DEL JUGADOR 4"
 
 #~ msgctxt "game_options"
-#~ msgid "Target color for player 1."
-#~ msgstr "Color objectiu per al jugador 1."
-
-#~ msgctxt "game_options"
-#~ msgid "Target color for player 2."
-#~ msgstr "Color objectiu per al jugador 2."
-
-#~ msgctxt "game_options"
-#~ msgid "Target color for player 3."
-#~ msgstr "Color objectiu per al jugador 3."
-
-#~ msgctxt "game_options"
-#~ msgid "Target color for player 4."
-#~ msgstr "Color objectiu per al jugador 4."
-
-#~ msgctxt "game_options"
 #~ msgid "Simulate LCD color inaccuracy."
 #~ msgstr "Simular la imprecisió de l’LCD color."
 
@@ -14428,6 +14504,13 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Set the color palette to use."
 #~ msgstr "Estableix la paleta de color a usar."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Crop MAME artwork to maximize the game screen and only fill unused space."
+#~ msgstr ""
+#~ "Tallar artwork MAME per a maximitzar la pantalla de joc i omplir només "
+#~ "els espais buits."
 
 #~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
@@ -14444,6 +14527,14 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"
 #~ msgstr "MODEL DE COLOR COMPUTER"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Install the image reader card to read disk image files (Mac IIx only). "
+#~ "Minimum 4MB ram size recommended."
+#~ msgstr ""
+#~ "Instal·la la tarja lectora d'imatges per a llegir arxius d'imatge de "
+#~ "discs (Només Mac IIx). Mínim recomanat 4MB de RAM."
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Controller"
@@ -14466,6 +14557,38 @@ msgstr ""
 #~ msgstr "Ignorar la correcció de color de lluentor a Lunar"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
+#~ "switches to Super-High when needed."
+#~ msgstr ""
+#~ "Defineix manualment quina resolució usar.&#x0a;Alto per defecte i canvia "
+#~ "a super-alta quan cal."
+
+#~ msgctxt "game_options"
+#~ msgid "JUMP ON B"
+#~ msgstr "SALTAR AMB B"
+
+#~ msgctxt "game_options"
+#~ msgid "Keypad to joyport mappings for 2 players."
+#~ msgstr "Teclat a entrada de palanca per 2 jugadors."
+
+#~ msgctxt "game_options"
+#~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
+#~ msgstr "MAPATGE DE COMANDAMENTS 2P (KEYRAH)"
+
+#~ msgctxt "game_options"
+#~ msgid "Passes all physical keyboard events for Pad2Key."
+#~ msgstr "Passa tots els events del teclat físic a Pad2Key."
+
+#~ msgctxt "game_options"
+#~ msgid "DISABLE EMULATOR JOYSTICK"
+#~ msgstr "DESHABILITAR EMULADOR DE PALANCA"
+
+#~ msgctxt "game_options"
+#~ msgid "ANALOG DEADZONE"
+#~ msgstr "ZONA MORTA DE L’ANALÒGIC"
+
+#~ msgctxt "game_options"
 #~ msgid "COLOR PALETTE (2D)"
 #~ msgstr "PALETA DE COLOR (2D)"
 
@@ -14484,6 +14607,24 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "weird colors"
 #~ msgstr "colors estranys"
+
+#~ msgctxt "game_options"
+#~ msgid "For Gyro-enabled games (bound to left analog stick)"
+#~ msgstr ""
+#~ "Per a jocs que usen el giroscopi (enllaçat a la palancà analògica esquera)"
+
+#~ msgctxt "game_options"
+#~ msgid "For Gyro-enabled games (bound to right analog stick)"
+#~ msgstr ""
+#~ "Per a jocs que usen el giroscopi (enllaçat a la palancà analògica dreta)"
+
+#~ msgctxt "game_options"
+#~ msgid "Resize automatically screen height."
+#~ msgstr "Canvia l’alçada de pantalla automàticament."
+
+#~ msgctxt "game_options"
+#~ msgid "AUTO HEIGHT"
+#~ msgstr "ALTURA AUTOMÀTICA"
 
 #~ msgctxt "game_options"
 #~ msgid "GamePad + 4 Sideway Wiimote"
@@ -14538,6 +14679,22 @@ msgstr ""
 #~ msgstr "Palanca analògica PS1"
 
 #~ msgctxt "game_options"
+#~ msgid "Per pixel is the most accurate, but also the most demanding."
+#~ msgstr "Per píxel és el més precís, però també el més demandant."
+
+#~ msgctxt "game_options"
+#~ msgid "Per Strip"
+#~ msgstr "Per Franja"
+
+#~ msgctxt "game_options"
+#~ msgid "Per Triangle (Default)"
+#~ msgstr "Per Triangle (Per defecte)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per Pixel"
+#~ msgstr "Per Pixel"
+
+#~ msgctxt "game_options"
 #~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
 #~ msgstr "Permetre mapatge de Future Pinball amb fletxes del teclat."
 
@@ -14548,10 +14705,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Millora. Realça la claredat de les textures distants quan el mip-mapping "
 #~ "està habilitat."
-
-#~ msgctxt "game_options"
-#~ msgid "Set the deadzone of the joystick analog sticks."
-#~ msgstr "Estableix la zona morta de la palanca analògica dels comandaments."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -14597,6 +14750,14 @@ msgstr ""
 
 #~ msgctxt "game_options"
 #~ msgid ""
+#~ "Enable this mode if you have issue for run your game on NTFS storage (by "
+#~ "default is better to use LinuxFS)."
+#~ msgstr ""
+#~ "Estableixi aquest mode si té problemes al executar el joc en "
+#~ "emmagatzematge NTFS (per defecte ès millor usar LinuxFS)."
+
+#~ msgctxt "game_options"
+#~ msgid ""
 #~ "When frameskip type is on automatic or manual, skip up to this many "
 #~ "frames consecutively."
 #~ msgstr ""
@@ -14630,113 +14791,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Aquesta opció habilita la capacitat de jugar a jocs d'Xbox Live Arcade. "
 #~ "Pot causar causar problemes de compatibilitat amb jocs no-XBLA."
-
-#~ msgctxt "game_options"
-#~ msgid "Store past states to rewind to in realtime, if the core supports it."
-#~ msgstr ""
-#~ "Emmagatzema estats passats al rebobinar en temps real, si el nucli ho "
-#~ "suporta."
-
-#~ msgctxt "game_options"
-#~ msgid "Treats the right analog stick as the second joystick."
-#~ msgstr "Tracta la palanca analògica dreta com un segon comandament."
-
-#~ msgctxt "game_options"
-#~ msgid "Optimized (auto)"
-#~ msgstr "Optimitzat (automàtic)"
-
-#~ msgctxt "game_options"
-#~ msgid "ANALOG JOYSTICK DEADZONE"
-#~ msgstr "ZONA MORTA DE LA PALANCA ANALÒGICA"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Crop MAME artwork to maximize the game screen and only fill unused space."
-#~ msgstr ""
-#~ "Tallar artwork MAME per a maximitzar la pantalla de joc i omplir només "
-#~ "els espais buits."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Install the image reader card to read disk image files (Mac IIx only). "
-#~ "Minimum 4MB ram size recommended."
-#~ msgstr ""
-#~ "Instal·la la tarja lectora d'imatges per a llegir arxius d'imatge de "
-#~ "discs (Només Mac IIx). Mínim recomanat 4MB de RAM."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
-#~ "switches to Super-High when needed."
-#~ msgstr ""
-#~ "Defineix manualment quina resolució usar.&#x0a;Alto per defecte i canvia "
-#~ "a super-alta quan cal."
-
-#~ msgctxt "game_options"
-#~ msgid "JUMP ON B"
-#~ msgstr "SALTAR AMB B"
-
-#~ msgctxt "game_options"
-#~ msgid "Keypad to joyport mappings for 2 players."
-#~ msgstr "Teclat a entrada de palanca per 2 jugadors."
-
-#~ msgctxt "game_options"
-#~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
-#~ msgstr "MAPATGE DE COMANDAMENTS 2P (KEYRAH)"
-
-#~ msgctxt "game_options"
-#~ msgid "Passes all physical keyboard events for Pad2Key."
-#~ msgstr "Passa tots els events del teclat físic a Pad2Key."
-
-#~ msgctxt "game_options"
-#~ msgid "DISABLE EMULATOR JOYSTICK"
-#~ msgstr "DESHABILITAR EMULADOR DE PALANCA"
-
-#~ msgctxt "game_options"
-#~ msgid "ANALOG DEADZONE"
-#~ msgstr "ZONA MORTA DE L’ANALÒGIC"
-
-#~ msgctxt "game_options"
-#~ msgid "For Gyro-enabled games (bound to left analog stick)"
-#~ msgstr ""
-#~ "Per a jocs que usen el giroscopi (enllaçat a la palancà analògica esquera)"
-
-#~ msgctxt "game_options"
-#~ msgid "For Gyro-enabled games (bound to right analog stick)"
-#~ msgstr ""
-#~ "Per a jocs que usen el giroscopi (enllaçat a la palancà analògica dreta)"
-
-#~ msgctxt "game_options"
-#~ msgid "Resize automatically screen height."
-#~ msgstr "Canvia l’alçada de pantalla automàticament."
-
-#~ msgctxt "game_options"
-#~ msgid "AUTO HEIGHT"
-#~ msgstr "ALTURA AUTOMÀTICA"
-
-#~ msgctxt "game_options"
-#~ msgid "Per pixel is the most accurate, but also the most demanding."
-#~ msgstr "Per píxel és el més precís, però també el més demandant."
-
-#~ msgctxt "game_options"
-#~ msgid "Per Strip"
-#~ msgstr "Per Franja"
-
-#~ msgctxt "game_options"
-#~ msgid "Per Triangle (Default)"
-#~ msgstr "Per Triangle (Per defecte)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per Pixel"
-#~ msgstr "Per Pixel"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable this mode if you have issue for run your game on NTFS storage (by "
-#~ "default is better to use LinuxFS)."
-#~ msgstr ""
-#~ "Estableixi aquest mode si té problemes al executar el joc en "
-#~ "emmagatzematge NTFS (per defecte ès millor usar LinuxFS)."
 
 #~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
@@ -15291,6 +15345,22 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "CUSTOMIZE WIIMOTE & GAMEPAD"
 #~ msgstr "PERSONALITZAR WIIMOTE I COMANDAMENT"
+
+#~ msgctxt "game_options"
+#~ msgid "Target color for player 1."
+#~ msgstr "Color objectiu per al jugador 1."
+
+#~ msgctxt "game_options"
+#~ msgid "Target color for player 2."
+#~ msgstr "Color objectiu per al jugador 2."
+
+#~ msgctxt "game_options"
+#~ msgid "Target color for player 3."
+#~ msgstr "Color objectiu per al jugador 3."
+
+#~ msgctxt "game_options"
+#~ msgid "Target color for player 4."
+#~ msgstr "Color objectiu per al jugador 4."
 
 #~ msgctxt "game_options"
 #~ msgid "Always have 6 bullets, 6 dynamite, 6 lives."

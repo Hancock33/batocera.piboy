@@ -11031,17 +11031,17 @@ msgctxt "game_options"
 msgid "Chinese (Mandarin)"
 msgstr "Txinatarra (Mandarin-a)"
 
-#. TRANSLATION: scummvm, xenia, xenia-canary
+#. TRANSLATION: scummvm, etlegacy, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Swedish"
 msgstr "Suediarra"
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, etlegacy
 msgctxt "game_options"
 msgid "Hebrew"
 msgstr "Hebrearra"
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, etlegacy
 msgctxt "game_options"
 msgid "Czech"
 msgstr "Txekiera"
@@ -11101,12 +11101,12 @@ msgctxt "game_options"
 msgid "Chinese (Traditional) [Big5]"
 msgstr "Txinatarra (Tradizionala) [Big5]"
 
-#. TRANSLATION: easyrpg
+#. TRANSLATION: easyrpg, etlegacy
 msgctxt "game_options"
 msgid "Greek"
 msgstr "Greziarra"
 
-#. TRANSLATION: easyrpg, xenia, xenia-canary
+#. TRANSLATION: easyrpg, etlegacy, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Turkish"
 msgstr "Turkiarra"
@@ -13051,6 +13051,86 @@ msgctxt "game_options"
 msgid "START LEVEL"
 msgstr ""
 
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Afrikaans"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Albanian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Bulgarian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Catalan"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Danish"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Finnish"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Hungarian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Irish"
+msgstr ""
+
+#. TRANSLATION: etlegacy, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Norwegian"
+msgstr "Norwegiera"
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Punjabi"
+msgstr ""
+
+#. TRANSLATION: etlegacy, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Polish"
+msgstr "Poloniera"
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Romanian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Serbian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Slovak"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Slovenian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Ukrainian"
+msgstr ""
+
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Choose the games difficulty."
@@ -13547,16 +13627,6 @@ msgstr "Gaitutako UI prompt mezuak (Defektuzkoa)"
 msgctxt "game_options"
 msgid "Disable UI prompts"
 msgstr "Desgaitu UI promtp mezuak"
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Polish"
-msgstr "Poloniera"
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Norwegian"
-msgstr "Norwegiera"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -14106,6 +14176,11 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "Exit game"
+msgstr ""
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera up"
@@ -14256,11 +14331,6 @@ msgctxt "keys_files"
 msgid "Manage Staff"
 msgstr "Kudeatu langileria"
 
-#. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "Exit game"
-msgstr ""
-
 #. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys
 msgctxt "keys_files"
 msgid "Bring up menu"
@@ -14382,6 +14452,12 @@ msgid "Quick Save"
 msgstr "Gordetze Azkarra"
 
 #~ msgctxt "game_options"
+#~ msgid "Store past states to rewind to in realtime, if the core supports it."
+#~ msgstr ""
+#~ "Gorde iragandako egoerak denbora errealean atzera botatzeko, nukleoak "
+#~ "onartzen badu"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
 #~ "libretro cores."
@@ -14404,8 +14480,16 @@ msgstr "Gordetze Azkarra"
 #~ "erakusteko."
 
 #~ msgctxt "game_options"
+#~ msgid "Treats the right analog stick as the second joystick."
+#~ msgstr "Eskuineko stick analogikoa bigarren joystick bezala tratatzen da."
+
+#~ msgctxt "game_options"
 #~ msgid "Useful for speedruns/glitches."
 #~ msgstr "Erabilgarria jokatze azkarretan/arazoak"
+
+#~ msgctxt "game_options"
+#~ msgid "Enables or disable on screen messages."
+#~ msgstr "Pantailako mezuak gaitu edo desgaitzen ditu"
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
@@ -14446,6 +14530,18 @@ msgstr "Gordetze Azkarra"
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
 #~ msgstr "kanpokoa (aldagarria fps)"
+
+#~ msgctxt "game_options"
+#~ msgid "Optimized (auto)"
+#~ msgstr "Optimizatua (automatikoa)"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the deadzone of the joystick analog sticks."
+#~ msgstr "Ezarri hildako zona joystick-eko stick analogikoak"
+
+#~ msgctxt "game_options"
+#~ msgid "ANALOG JOYSTICK DEADZONE"
+#~ msgstr "JOYSTICK ANALOGIKOAREN HILDAKO ZONA"
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Controller (DualShock)"
@@ -14504,6 +14600,13 @@ msgstr "Gordetze Azkarra"
 #~ msgstr "Ezarri erabiliko den kolore paleta."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Crop MAME artwork to maximize the game screen and only fill unused space."
+#~ msgstr ""
+#~ "Moztu MAME artelanak jokoaren jokatze pantaila maximizatzeko eta "
+#~ "erabiltzen ez den tokia bete."
+
+#~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
 #~ msgstr "Tandy Radio Shack Color Computer kartutxoak"
 
@@ -14518,6 +14621,14 @@ msgstr "Gordetze Azkarra"
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"
 #~ msgstr "COLOR COMPUTER MODELOA"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Install the image reader card to read disk image files (Mac IIx only). "
+#~ "Minimum 4MB ram size recommended."
+#~ msgstr ""
+#~ "Instalatu irudi irakurle txartela disko irudi fitxategiak irakurtzeko(Mac "
+#~ "IIx only). Gutxienez 4MB-ko ram tamaina gomendatzen da."
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Controller"
@@ -14540,6 +14651,38 @@ msgstr "Gordetze Azkarra"
 #~ msgstr "Lunar Argitasun koloreari kasurik ez egin Konponketa"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
+#~ "switches to Super-High when needed."
+#~ msgstr ""
+#~ "Eskuz definitu zein bereizmen erabili nahi den.&#x0a;Auto defektuz Altua "
+#~ "da eta Super-Altua-ra aldatzen da behar denean."
+
+#~ msgctxt "game_options"
+#~ msgid "JUMP ON B"
+#~ msgstr "SALTATU B-REKIN"
+
+#~ msgctxt "game_options"
+#~ msgid "Keypad to joyport mappings for 2 players."
+#~ msgstr "Keypad joyportura mapeoa 2 jokalarientzat"
+
+#~ msgctxt "game_options"
+#~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
+#~ msgstr "2 JOKALARI GAMEPAD MAPEOA (KEYRAH)"
+
+#~ msgctxt "game_options"
+#~ msgid "Passes all physical keyboard events for Pad2Key."
+#~ msgstr "Pad2Key-i pasatzen dizkio teklatuko gertaera fisiko guztiak"
+
+#~ msgctxt "game_options"
+#~ msgid "DISABLE EMULATOR JOYSTICK"
+#~ msgstr "DESGAITU EMULADORE JOYSTICK-A\t"
+
+#~ msgctxt "game_options"
+#~ msgid "ANALOG DEADZONE"
+#~ msgstr "HILZONA ANALOGIKOA"
+
+#~ msgctxt "game_options"
 #~ msgid "COLOR PALETTE (2D)"
 #~ msgstr "KOLORE PALETA (2D)"
 
@@ -14558,6 +14701,42 @@ msgstr "Gordetze Azkarra"
 #~ msgctxt "game_options"
 #~ msgid "weird colors"
 #~ msgstr "kolore arraroak"
+
+#~ msgctxt "game_options"
+#~ msgid "For Gyro-enabled games (bound to left analog stick)"
+#~ msgstr ""
+#~ "Giroskopioa erabiltzen duten jokuetan (ezkerreko stick analogikoari "
+#~ "lotuta)"
+
+#~ msgctxt "game_options"
+#~ msgid "For Gyro-enabled games (bound to right analog stick)"
+#~ msgstr ""
+#~ "Giroskopioa erabiltzen duten jokuetarako (eskuin stick analogikoari "
+#~ "lotuta)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Changing driver can improve audio performance and reduce distortion. "
+#~ "Alsathread is recommended for low-end systems."
+#~ msgstr ""
+#~ "Kontrolatzailea aldatzeak audio eraginkortasuna eta distortsioa hobetu "
+#~ "dezake. Alsa haria gomendatzen da sistema eskasetan."
+
+#~ msgctxt "game_options"
+#~ msgid "AUDIO DRIVER"
+#~ msgstr "AUDIO KONTROLATZAILEA"
+
+#~ msgctxt "game_options"
+#~ msgid "Pulse (Default)"
+#~ msgstr "Puls (Defektuzkoa)"
+
+#~ msgctxt "game_options"
+#~ msgid "Resize automatically screen height."
+#~ msgstr "Berrezarri automatikoki pantaila altuera."
+
+#~ msgctxt "game_options"
+#~ msgid "AUTO HEIGHT"
+#~ msgstr "ALTUERA AUTOMATIKOA"
 
 #~ msgctxt "game_options"
 #~ msgid "GamePad + 4 Sideway Wiimote"
@@ -14628,6 +14807,22 @@ msgstr "Gordetze Azkarra"
 #~ msgstr "PS1 Joystick Analogikoa"
 
 #~ msgctxt "game_options"
+#~ msgid "Per pixel is the most accurate, but also the most demanding."
+#~ msgstr "Pixel bakoitzeko zehatzena da, baino gehien eskatzen duena ere."
+
+#~ msgctxt "game_options"
+#~ msgid "Per Strip"
+#~ msgstr "Zerrendako"
+
+#~ msgctxt "game_options"
+#~ msgid "Per Triangle (Default)"
+#~ msgstr "Hirukiko (Defektuz)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per Pixel"
+#~ msgstr "Pixel bakoitzeko"
+
+#~ msgctxt "game_options"
 #~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
 #~ msgstr "Onartu mapeoa Future Pinball-en Pad-etik Teklatura."
 
@@ -14642,10 +14837,6 @@ msgstr "Gordetze Azkarra"
 #~ msgctxt "game_options"
 #~ msgid "Set the sensitivity of the joystick analog sticks."
 #~ msgstr "Ezarri joystick-aren stick analogikoen sentikortasuna"
-
-#~ msgctxt "game_options"
-#~ msgid "Set the deadzone of the joystick analog sticks."
-#~ msgstr "Ezarri hildako zona joystick-eko stick analogikoak"
 
 #~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
@@ -14705,6 +14896,10 @@ msgstr "Gordetze Azkarra"
 #~ "GPU ahaltsuagoetan."
 
 #~ msgctxt "game_options"
+#~ msgid "Legacy Evdev"
+#~ msgstr "Evdev Legatua"
+
+#~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "Zentratu (Defektuz)"
 
@@ -14724,6 +14919,14 @@ msgstr "Gordetze Azkarra"
 #~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr "Bereizmen aldaketa profilen erabilera ahalbideratzen du badaude."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable this mode if you have issue for run your game on NTFS storage (by "
+#~ "default is better to use LinuxFS)."
+#~ msgstr ""
+#~ "Gaitu modu hau NTFS biltegiratzean exekutatzean araorik baduzu (defektuz, "
+#~ "LinuxFS erabiltzea hobea da)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -14764,139 +14967,6 @@ msgstr "Gordetze Azkarra"
 #~ msgstr ""
 #~ "Aukera honek Xbox Live Arcade jokuetan jolastea gaitzen du. XBLA "
 #~ "erabiltzen ez duten jokuekin arazoak sor ditzake."
-
-#~ msgctxt "game_options"
-#~ msgid "Store past states to rewind to in realtime, if the core supports it."
-#~ msgstr ""
-#~ "Gorde iragandako egoerak denbora errealean atzera botatzeko, nukleoak "
-#~ "onartzen badu"
-
-#~ msgctxt "game_options"
-#~ msgid "Treats the right analog stick as the second joystick."
-#~ msgstr "Eskuineko stick analogikoa bigarren joystick bezala tratatzen da."
-
-#~ msgctxt "game_options"
-#~ msgid "Enables or disable on screen messages."
-#~ msgstr "Pantailako mezuak gaitu edo desgaitzen ditu"
-
-#~ msgctxt "game_options"
-#~ msgid "Optimized (auto)"
-#~ msgstr "Optimizatua (automatikoa)"
-
-#~ msgctxt "game_options"
-#~ msgid "ANALOG JOYSTICK DEADZONE"
-#~ msgstr "JOYSTICK ANALOGIKOAREN HILDAKO ZONA"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Crop MAME artwork to maximize the game screen and only fill unused space."
-#~ msgstr ""
-#~ "Moztu MAME artelanak jokoaren jokatze pantaila maximizatzeko eta "
-#~ "erabiltzen ez den tokia bete."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Install the image reader card to read disk image files (Mac IIx only). "
-#~ "Minimum 4MB ram size recommended."
-#~ msgstr ""
-#~ "Instalatu irudi irakurle txartela disko irudi fitxategiak irakurtzeko(Mac "
-#~ "IIx only). Gutxienez 4MB-ko ram tamaina gomendatzen da."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
-#~ "switches to Super-High when needed."
-#~ msgstr ""
-#~ "Eskuz definitu zein bereizmen erabili nahi den.&#x0a;Auto defektuz Altua "
-#~ "da eta Super-Altua-ra aldatzen da behar denean."
-
-#~ msgctxt "game_options"
-#~ msgid "JUMP ON B"
-#~ msgstr "SALTATU B-REKIN"
-
-#~ msgctxt "game_options"
-#~ msgid "Keypad to joyport mappings for 2 players."
-#~ msgstr "Keypad joyportura mapeoa 2 jokalarientzat"
-
-#~ msgctxt "game_options"
-#~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
-#~ msgstr "2 JOKALARI GAMEPAD MAPEOA (KEYRAH)"
-
-#~ msgctxt "game_options"
-#~ msgid "Passes all physical keyboard events for Pad2Key."
-#~ msgstr "Pad2Key-i pasatzen dizkio teklatuko gertaera fisiko guztiak"
-
-#~ msgctxt "game_options"
-#~ msgid "DISABLE EMULATOR JOYSTICK"
-#~ msgstr "DESGAITU EMULADORE JOYSTICK-A\t"
-
-#~ msgctxt "game_options"
-#~ msgid "ANALOG DEADZONE"
-#~ msgstr "HILZONA ANALOGIKOA"
-
-#~ msgctxt "game_options"
-#~ msgid "For Gyro-enabled games (bound to left analog stick)"
-#~ msgstr ""
-#~ "Giroskopioa erabiltzen duten jokuetan (ezkerreko stick analogikoari "
-#~ "lotuta)"
-
-#~ msgctxt "game_options"
-#~ msgid "For Gyro-enabled games (bound to right analog stick)"
-#~ msgstr ""
-#~ "Giroskopioa erabiltzen duten jokuetarako (eskuin stick analogikoari "
-#~ "lotuta)"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Changing driver can improve audio performance and reduce distortion. "
-#~ "Alsathread is recommended for low-end systems."
-#~ msgstr ""
-#~ "Kontrolatzailea aldatzeak audio eraginkortasuna eta distortsioa hobetu "
-#~ "dezake. Alsa haria gomendatzen da sistema eskasetan."
-
-#~ msgctxt "game_options"
-#~ msgid "AUDIO DRIVER"
-#~ msgstr "AUDIO KONTROLATZAILEA"
-
-#~ msgctxt "game_options"
-#~ msgid "Pulse (Default)"
-#~ msgstr "Puls (Defektuzkoa)"
-
-#~ msgctxt "game_options"
-#~ msgid "Resize automatically screen height."
-#~ msgstr "Berrezarri automatikoki pantaila altuera."
-
-#~ msgctxt "game_options"
-#~ msgid "AUTO HEIGHT"
-#~ msgstr "ALTUERA AUTOMATIKOA"
-
-#~ msgctxt "game_options"
-#~ msgid "Per pixel is the most accurate, but also the most demanding."
-#~ msgstr "Pixel bakoitzeko zehatzena da, baino gehien eskatzen duena ere."
-
-#~ msgctxt "game_options"
-#~ msgid "Per Strip"
-#~ msgstr "Zerrendako"
-
-#~ msgctxt "game_options"
-#~ msgid "Per Triangle (Default)"
-#~ msgstr "Hirukiko (Defektuz)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per Pixel"
-#~ msgstr "Pixel bakoitzeko"
-
-#~ msgctxt "game_options"
-#~ msgid "Legacy Evdev"
-#~ msgstr "Evdev Legatua"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable this mode if you have issue for run your game on NTFS storage (by "
-#~ "default is better to use LinuxFS)."
-#~ msgstr ""
-#~ "Gaitu modu hau NTFS biltegiratzean exekutatzean araorik baduzu (defektuz, "
-#~ "LinuxFS erabiltzea hobea da)"
 
 #~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
