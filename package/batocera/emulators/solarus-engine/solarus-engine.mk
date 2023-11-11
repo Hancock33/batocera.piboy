@@ -15,8 +15,9 @@ SOLARUS_ENGINE_LICENSE_FILES = license.txt
 # Install libsolarus.so
 SOLARUS_ENGINE_INSTALL_STAGING = YES
 
-SOLARUS_ENGINE_DEPENDENCIES = glm libmodplug libogg libvorbis lpeg luajit openal physfs sdl2 sdl2_image sdl2_ttf
+SOLARUS_ENGINE_DEPENDENCIES = glm libmodplug libogg libvorbis batocera-luajit openal physfs sdl2 sdl2_image sdl2_ttf
 
+# Disable launcher GUI (requires Qt5)
 SOLARUS_ENGINE_CONF_OPTS = \
 	-DSOLARUS_GUI=OFF \
 	-DSOLARUS_TESTS=OFF
@@ -25,23 +26,5 @@ ifeq ($(BR2_PACKAGE_HAS_LIBGLES),y)
 SOLARUS_ENGINE_DEPENDENCIES += libgles
 SOLARUS_ENGINE_CONF_OPTS += -DSOLARUS_GL_ES=ON
 endif
-
-SOLARUS_ENGINE_CONF_OPTS += -DSOLARUS_BASE_WRITE_DIR=/userdata/saves
-SOLARUS_ENGINE_CONF_OPTS += -DSOLARUS_WRITE_DIR=solarus
-
-ifeq ($(BR2_PACKAGE_LUAJIT),y)
-SOLARUS_ENGINE_CONF_OPTS += -DSOLARUS_USE_LUAJIT=ON
-SOLARUS_ENGINE_DEPENDENCIES += luajit
-else
-SOLARUS_ENGINE_CONF_OPTS += -DSOLARUS_USE_LUAJIT=OFF
-SOLARUS_ENGINE_DEPENDENCIES += lua
-endif
-
-define SOLARUS_ENGINE_EVMAP
-	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/solarus-engine/solarus.keys $(TARGET_DIR)/usr/share/evmapy/solarus.keys
-endef
-SOLARUS_ENGINE_POST_INSTALL_TARGET_HOOKS += SOLARUS_ENGINE_EVMAP
 
 $(eval $(cmake-package))
