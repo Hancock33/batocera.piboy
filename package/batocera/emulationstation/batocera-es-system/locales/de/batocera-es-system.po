@@ -11078,17 +11078,17 @@ msgctxt "game_options"
 msgid "Chinese (Mandarin)"
 msgstr "Chinesisch (Mandarin)"
 
-#. TRANSLATION: scummvm, xenia, xenia-canary
+#. TRANSLATION: scummvm, etlegacy, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Swedish"
 msgstr "Schwedisch"
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, etlegacy
 msgctxt "game_options"
 msgid "Hebrew"
 msgstr "Hebräisch"
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, etlegacy
 msgctxt "game_options"
 msgid "Czech"
 msgstr "Tschechisch"
@@ -11148,12 +11148,12 @@ msgctxt "game_options"
 msgid "Chinese (Traditional) [Big5]"
 msgstr "Chinesisch (Traditionell) [Big5]"
 
-#. TRANSLATION: easyrpg
+#. TRANSLATION: easyrpg, etlegacy
 msgctxt "game_options"
 msgid "Greek"
 msgstr "Griechisch"
 
-#. TRANSLATION: easyrpg, xenia, xenia-canary
+#. TRANSLATION: easyrpg, etlegacy, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Turkish"
 msgstr "Türkisch"
@@ -13108,6 +13108,86 @@ msgctxt "game_options"
 msgid "START LEVEL"
 msgstr ""
 
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Afrikaans"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Albanian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Bulgarian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Catalan"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Danish"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Finnish"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Hungarian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Irish"
+msgstr ""
+
+#. TRANSLATION: etlegacy, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Norwegian"
+msgstr "Norwegisch"
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Punjabi"
+msgstr ""
+
+#. TRANSLATION: etlegacy, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Polish"
+msgstr "Polnisch"
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Romanian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Serbian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Slovak"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Slovenian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Ukrainian"
+msgstr ""
+
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Choose the games difficulty."
@@ -13605,16 +13685,6 @@ msgstr "UI-Meldungen aktivieren (Standard)"
 msgctxt "game_options"
 msgid "Disable UI prompts"
 msgstr "UI-Meldungen deaktivieren"
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Polish"
-msgstr "Polnisch"
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Norwegian"
-msgstr "Norwegisch"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -14164,6 +14234,11 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "Exit game"
+msgstr ""
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera up"
@@ -14314,11 +14389,6 @@ msgctxt "keys_files"
 msgid "Manage Staff"
 msgstr "Personal verwalten"
 
-#. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "Exit game"
-msgstr ""
-
 #. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys
 msgctxt "keys_files"
 msgid "Bring up menu"
@@ -14440,6 +14510,12 @@ msgid "Quick Save"
 msgstr ""
 
 #~ msgctxt "game_options"
+#~ msgid "Store past states to rewind to in realtime, if the core supports it."
+#~ msgstr ""
+#~ "Vergangene Speicherstände sichern, um in Echtzeit zurückzuspulen, wenn "
+#~ "das Core-System dies unterstützt."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
 #~ "libretro cores."
@@ -14462,8 +14538,16 @@ msgstr ""
 #~ "anzuzeigen."
 
 #~ msgctxt "game_options"
+#~ msgid "Treats the right analog stick as the second joystick."
+#~ msgstr "Behandelt den rechten Analogstick als zweiten Joystick."
+
+#~ msgctxt "game_options"
 #~ msgid "Useful for speedruns/glitches."
 #~ msgstr "Nützlich für Speedruns/Glitches."
+
+#~ msgctxt "game_options"
+#~ msgid "Enables or disable on screen messages."
+#~ msgstr "Aktiviert oder deaktiviert Bildschirmbenachrichtigung."
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
@@ -14506,6 +14590,18 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
 #~ msgstr "extern (variable FPS)"
+
+#~ msgctxt "game_options"
+#~ msgid "Optimized (auto)"
+#~ msgstr "Optimiert (Automatisch)"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the deadzone of the joystick analog sticks."
+#~ msgstr "Totzone der Analog-Sticks vom Joystick einstellen."
+
+#~ msgctxt "game_options"
+#~ msgid "ANALOG JOYSTICK DEADZONE"
+#~ msgstr "ANALOGE JOYSTICK-TOTZONE"
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Controller (DualShock)"
@@ -14564,6 +14660,13 @@ msgstr ""
 #~ msgstr "Festlegen der zu verwendenden Farbpalette."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Crop MAME artwork to maximize the game screen and only fill unused space."
+#~ msgstr ""
+#~ "Zuschneiden von MAME-Grafiken, um den Spielbildschirm zu maximieren und "
+#~ "nur ungenutzten Platz auszufüllen."
+
+#~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
 #~ msgstr "Tandy Radio Shack Color Computer Steckmodule"
 
@@ -14578,6 +14681,14 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"
 #~ msgstr "COLOR COMPUTER MODELL"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Install the image reader card to read disk image files (Mac IIx only). "
+#~ "Minimum 4MB ram size recommended."
+#~ msgstr ""
+#~ "Installieren Sie die Image-Reader-Karte, um Disk-Image-Dateien zu lesen "
+#~ "(nur Mac IIx). Mindestens 4 MB Speicherplatz empfohlen."
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Controller"
@@ -14600,6 +14711,38 @@ msgstr ""
 #~ msgstr "Lunar Ignorieren Helligkeit Farbe Fix"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
+#~ "switches to Super-High when needed."
+#~ msgstr ""
+#~ "Manuelles Festlegen der Auflösung; Auto ist standardmäßig auf Hoch "
+#~ "eingestellt und schaltet bei Bedarf auf Super-Hoch um."
+
+#~ msgctxt "game_options"
+#~ msgid "JUMP ON B"
+#~ msgstr "SPRINGEN MIT B"
+
+#~ msgctxt "game_options"
+#~ msgid "Keypad to joyport mappings for 2 players."
+#~ msgstr "Tastatur-zu-Joyport Tastbelegung für 2 Spieler."
+
+#~ msgctxt "game_options"
+#~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
+#~ msgstr "2P GAMEPAD ZUORDNUNG (KEYRAH)"
+
+#~ msgctxt "game_options"
+#~ msgid "Passes all physical keyboard events for Pad2Key."
+#~ msgstr "Übergibt alle physischen Tastaturereignisse für Pad2Key."
+
+#~ msgctxt "game_options"
+#~ msgid "DISABLE EMULATOR JOYSTICK"
+#~ msgstr "EMULATOR JOYSTICK DEAKTIVIEREN"
+
+#~ msgctxt "game_options"
+#~ msgid "ANALOG DEADZONE"
+#~ msgstr "ANALOGE TOTZONE"
+
+#~ msgctxt "game_options"
 #~ msgid "COLOR PALETTE (2D)"
 #~ msgstr "FARB PALETTE (2D)"
 
@@ -14618,6 +14761,22 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "weird colors"
 #~ msgstr "eigenartige Farben"
+
+#~ msgctxt "game_options"
+#~ msgid "For Gyro-enabled games (bound to left analog stick)"
+#~ msgstr "Für Gyro-aktivierte Spiele (an den linken Analogstick gebunden)"
+
+#~ msgctxt "game_options"
+#~ msgid "For Gyro-enabled games (bound to right analog stick)"
+#~ msgstr "Für Gyro-aktivierte Spiele (an den rechten Analogstick gebunden)"
+
+#~ msgctxt "game_options"
+#~ msgid "Resize automatically screen height."
+#~ msgstr "Bildschirmhöhe automatisch skalieren."
+
+#~ msgctxt "game_options"
+#~ msgid "AUTO HEIGHT"
+#~ msgstr "AUTOMATISCHE HÖHE"
 
 #~ msgctxt "game_options"
 #~ msgid "GamePad + 4 Sideway Wiimote"
@@ -14684,6 +14843,24 @@ msgstr ""
 #~ msgstr "PS1 Analog-Joystick"
 
 #~ msgctxt "game_options"
+#~ msgid "Per pixel is the most accurate, but also the most demanding."
+#~ msgstr ""
+#~ "Der \"Per-Pixel\"-Modus hat die höchste Genauigkeit, jedoch auch die "
+#~ "höchsten Anforderungen."
+
+#~ msgctxt "game_options"
+#~ msgid "Per Strip"
+#~ msgstr "Per-Strip"
+
+#~ msgctxt "game_options"
+#~ msgid "Per Triangle (Default)"
+#~ msgstr "Per-Triangle (Standard)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per Pixel"
+#~ msgstr "Per-Pixel"
+
+#~ msgctxt "game_options"
 #~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
 #~ msgstr "Tastenzuordnung von Pad zu Tastatur bei Future Pinball erlauben."
 
@@ -14698,10 +14875,6 @@ msgstr ""
 #~ msgctxt "game_options"
 #~ msgid "Set the sensitivity of the joystick analog sticks."
 #~ msgstr "Stellen Sie die Empfindlichkeit der Joystick-Analogsticks ein."
-
-#~ msgctxt "game_options"
-#~ msgid "Set the deadzone of the joystick analog sticks."
-#~ msgstr "Totzone der Analog-Sticks vom Joystick einstellen."
 
 #~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
@@ -14762,6 +14935,10 @@ msgstr ""
 #~ "Grafikprozessoren zu Leistungszuwächsen führen kann."
 
 #~ msgctxt "game_options"
+#~ msgid "Legacy Evdev"
+#~ msgstr "Legacy Evdev"
+
+#~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "Zentriert (Standard)"
 
@@ -14784,6 +14961,14 @@ msgstr ""
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr ""
 #~ "Erlaubt die Verwendung von Switchres-Profilen, wenn diese vorhanden sind."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable this mode if you have issue for run your game on NTFS storage (by "
+#~ "default is better to use LinuxFS)."
+#~ msgstr ""
+#~ "NTFS-Modus aktivieren falls Probleme beim Spielbetrieb auf einem NTFS-"
+#~ "Datenträger auftreten (Bessere Eignung als Standard ist LinuxFX)."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -14824,121 +15009,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Diese Option aktiviert die Möglichkeit XBOX Live Arcade-Spiele zu "
 #~ "spielen. Mit Non-XBLA-Spielen können Kompatiblitätsprobleme auftreten."
-
-#~ msgctxt "game_options"
-#~ msgid "Store past states to rewind to in realtime, if the core supports it."
-#~ msgstr ""
-#~ "Vergangene Speicherstände sichern, um in Echtzeit zurückzuspulen, wenn "
-#~ "das Core-System dies unterstützt."
-
-#~ msgctxt "game_options"
-#~ msgid "Treats the right analog stick as the second joystick."
-#~ msgstr "Behandelt den rechten Analogstick als zweiten Joystick."
-
-#~ msgctxt "game_options"
-#~ msgid "Enables or disable on screen messages."
-#~ msgstr "Aktiviert oder deaktiviert Bildschirmbenachrichtigung."
-
-#~ msgctxt "game_options"
-#~ msgid "Optimized (auto)"
-#~ msgstr "Optimiert (Automatisch)"
-
-#~ msgctxt "game_options"
-#~ msgid "ANALOG JOYSTICK DEADZONE"
-#~ msgstr "ANALOGE JOYSTICK-TOTZONE"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Crop MAME artwork to maximize the game screen and only fill unused space."
-#~ msgstr ""
-#~ "Zuschneiden von MAME-Grafiken, um den Spielbildschirm zu maximieren und "
-#~ "nur ungenutzten Platz auszufüllen."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Install the image reader card to read disk image files (Mac IIx only). "
-#~ "Minimum 4MB ram size recommended."
-#~ msgstr ""
-#~ "Installieren Sie die Image-Reader-Karte, um Disk-Image-Dateien zu lesen "
-#~ "(nur Mac IIx). Mindestens 4 MB Speicherplatz empfohlen."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
-#~ "switches to Super-High when needed."
-#~ msgstr ""
-#~ "Manuelles Festlegen der Auflösung; Auto ist standardmäßig auf Hoch "
-#~ "eingestellt und schaltet bei Bedarf auf Super-Hoch um."
-
-#~ msgctxt "game_options"
-#~ msgid "JUMP ON B"
-#~ msgstr "SPRINGEN MIT B"
-
-#~ msgctxt "game_options"
-#~ msgid "Keypad to joyport mappings for 2 players."
-#~ msgstr "Tastatur-zu-Joyport Tastbelegung für 2 Spieler."
-
-#~ msgctxt "game_options"
-#~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
-#~ msgstr "2P GAMEPAD ZUORDNUNG (KEYRAH)"
-
-#~ msgctxt "game_options"
-#~ msgid "Passes all physical keyboard events for Pad2Key."
-#~ msgstr "Übergibt alle physischen Tastaturereignisse für Pad2Key."
-
-#~ msgctxt "game_options"
-#~ msgid "DISABLE EMULATOR JOYSTICK"
-#~ msgstr "EMULATOR JOYSTICK DEAKTIVIEREN"
-
-#~ msgctxt "game_options"
-#~ msgid "ANALOG DEADZONE"
-#~ msgstr "ANALOGE TOTZONE"
-
-#~ msgctxt "game_options"
-#~ msgid "For Gyro-enabled games (bound to left analog stick)"
-#~ msgstr "Für Gyro-aktivierte Spiele (an den linken Analogstick gebunden)"
-
-#~ msgctxt "game_options"
-#~ msgid "For Gyro-enabled games (bound to right analog stick)"
-#~ msgstr "Für Gyro-aktivierte Spiele (an den rechten Analogstick gebunden)"
-
-#~ msgctxt "game_options"
-#~ msgid "Resize automatically screen height."
-#~ msgstr "Bildschirmhöhe automatisch skalieren."
-
-#~ msgctxt "game_options"
-#~ msgid "AUTO HEIGHT"
-#~ msgstr "AUTOMATISCHE HÖHE"
-
-#~ msgctxt "game_options"
-#~ msgid "Per pixel is the most accurate, but also the most demanding."
-#~ msgstr ""
-#~ "Der \"Per-Pixel\"-Modus hat die höchste Genauigkeit, jedoch auch die "
-#~ "höchsten Anforderungen."
-
-#~ msgctxt "game_options"
-#~ msgid "Per Strip"
-#~ msgstr "Per-Strip"
-
-#~ msgctxt "game_options"
-#~ msgid "Per Triangle (Default)"
-#~ msgstr "Per-Triangle (Standard)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per Pixel"
-#~ msgstr "Per-Pixel"
-
-#~ msgctxt "game_options"
-#~ msgid "Legacy Evdev"
-#~ msgstr "Legacy Evdev"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable this mode if you have issue for run your game on NTFS storage (by "
-#~ "default is better to use LinuxFS)."
-#~ msgstr ""
-#~ "NTFS-Modus aktivieren falls Probleme beim Spielbetrieb auf einem NTFS-"
-#~ "Datenträger auftreten (Bessere Eignung als Standard ist LinuxFX)."
 
 #~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."

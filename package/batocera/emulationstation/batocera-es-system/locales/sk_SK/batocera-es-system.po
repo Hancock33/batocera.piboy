@@ -10974,17 +10974,17 @@ msgctxt "game_options"
 msgid "Chinese (Mandarin)"
 msgstr "Čínština (mandarínska)"
 
-#. TRANSLATION: scummvm, xenia, xenia-canary
+#. TRANSLATION: scummvm, etlegacy, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Swedish"
 msgstr "Švédčina"
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, etlegacy
 msgctxt "game_options"
 msgid "Hebrew"
 msgstr "Hebrejčina"
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, etlegacy
 msgctxt "game_options"
 msgid "Czech"
 msgstr "Čeština"
@@ -11044,12 +11044,12 @@ msgctxt "game_options"
 msgid "Chinese (Traditional) [Big5]"
 msgstr "Čínština (tradičná) [Big5]"
 
-#. TRANSLATION: easyrpg
+#. TRANSLATION: easyrpg, etlegacy
 msgctxt "game_options"
 msgid "Greek"
 msgstr "Gréčtina"
 
-#. TRANSLATION: easyrpg, xenia, xenia-canary
+#. TRANSLATION: easyrpg, etlegacy, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Turkish"
 msgstr "Turečtina"
@@ -12979,6 +12979,86 @@ msgctxt "game_options"
 msgid "START LEVEL"
 msgstr ""
 
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Afrikaans"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Albanian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Bulgarian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Catalan"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Danish"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Finnish"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Hungarian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Irish"
+msgstr ""
+
+#. TRANSLATION: etlegacy, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Norwegian"
+msgstr "Nórčina"
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Punjabi"
+msgstr ""
+
+#. TRANSLATION: etlegacy, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Polish"
+msgstr "Poľština"
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Romanian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Serbian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Slovak"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Slovenian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Ukrainian"
+msgstr ""
+
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Choose the games difficulty."
@@ -13475,16 +13555,6 @@ msgstr "Povoliť UI výzvy (predvolené)"
 msgctxt "game_options"
 msgid "Disable UI prompts"
 msgstr "Zakázať UI výzvy"
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Polish"
-msgstr "Poľština"
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Norwegian"
-msgstr "Nórčina"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -14034,6 +14104,11 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "Exit game"
+msgstr "Ukončiť hru"
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera up"
@@ -14184,11 +14259,6 @@ msgctxt "keys_files"
 msgid "Manage Staff"
 msgstr "Riadiť zamestnancov"
 
-#. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "Exit game"
-msgstr "Ukončiť hru"
-
 #. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys
 msgctxt "keys_files"
 msgid "Bring up menu"
@@ -14310,6 +14380,11 @@ msgid "Quick Save"
 msgstr "Rýchle uloženie"
 
 #~ msgctxt "game_options"
+#~ msgid "Store past states to rewind to in realtime, if the core supports it."
+#~ msgstr ""
+#~ "Uložiť minulé stavy na pretočenie v reálnom čase, ak to jadro podporuje."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
 #~ "libretro cores."
@@ -14330,8 +14405,16 @@ msgstr "Rýchle uloženie"
 #~ msgstr "Emulovať NTSC finty na zobrazenie viac farieb v hi-res režime."
 
 #~ msgctxt "game_options"
+#~ msgid "Treats the right analog stick as the second joystick."
+#~ msgstr "Považuje pravú analógovú páčku za druhý joystick."
+
+#~ msgctxt "game_options"
 #~ msgid "Useful for speedruns/glitches."
 #~ msgstr "Užitočné pre speedruns/glitche."
+
+#~ msgctxt "game_options"
+#~ msgid "Enables or disable on screen messages."
+#~ msgstr "Povolí alebo zakáže správy na obrazovke."
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
@@ -14372,6 +14455,18 @@ msgstr "Rýchle uloženie"
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
 #~ msgstr "externé (premenlivé fps)"
+
+#~ msgctxt "game_options"
+#~ msgid "Optimized (auto)"
+#~ msgstr "Optimalizované (auto)"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the deadzone of the joystick analog sticks."
+#~ msgstr "Nastavte mŕtvu zónu analógových páčok joysticku."
+
+#~ msgctxt "game_options"
+#~ msgid "ANALOG JOYSTICK DEADZONE"
+#~ msgstr "Analógová mŕtva zóna"
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Controller (DualShock)"
@@ -14430,6 +14525,13 @@ msgstr "Rýchle uloženie"
 #~ msgstr "Vyberte farebnú paletu na použitie."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Crop MAME artwork to maximize the game screen and only fill unused space."
+#~ msgstr ""
+#~ "Orezať grafiku MAME, aby ste maximalizovali hernú obrazovku a zaplnili "
+#~ "nevyužitý priestor."
+
+#~ msgctxt "game_options"
 #~ msgid "Tandy Radio Shack Color Computer cartridges"
 #~ msgstr "Tandy Radio Shack Color Computer kartridže"
 
@@ -14444,6 +14546,14 @@ msgstr "Rýchle uloženie"
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"
 #~ msgstr "Model Color Computer"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Install the image reader card to read disk image files (Mac IIx only). "
+#~ "Minimum 4MB ram size recommended."
+#~ msgstr ""
+#~ "Nainštalovať čítačku obrazov kariet, aby ste mohli čítať obrazové súbory "
+#~ "disku (len Mac IIx). Odporúčaná minimálna veľkosť RAM 4 MB."
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Controller"
@@ -14466,6 +14576,38 @@ msgstr "Rýchle uloženie"
 #~ msgstr "Lunar Ignore Brightness Color Fix"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
+#~ "switches to Super-High when needed."
+#~ msgstr ""
+#~ "Manuálne definujte, ktoré rozlíšenie sa má použiť.&#x0a;Automaticky sa "
+#~ "predvolene nastaví na Vysoké a v prípade potreby sa prepne na Supervysoké."
+
+#~ msgctxt "game_options"
+#~ msgid "JUMP ON B"
+#~ msgstr "Skočiť na B"
+
+#~ msgctxt "game_options"
+#~ msgid "Keypad to joyport mappings for 2 players."
+#~ msgstr "Mapovania keypadu na joyport pre 2 hráčov."
+
+#~ msgctxt "game_options"
+#~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
+#~ msgstr "Mapovanie gamepadu 2. hráča (keyrah)"
+
+#~ msgctxt "game_options"
+#~ msgid "Passes all physical keyboard events for Pad2Key."
+#~ msgstr "Prejde všetky udalosti fyzickej klávesnice pre Pad2Key."
+
+#~ msgctxt "game_options"
+#~ msgid "DISABLE EMULATOR JOYSTICK"
+#~ msgstr "Zakázať joystick emulátora"
+
+#~ msgctxt "game_options"
+#~ msgid "ANALOG DEADZONE"
+#~ msgstr "Analógová mŕtva zóna"
+
+#~ msgctxt "game_options"
 #~ msgid "COLOR PALETTE (2D)"
 #~ msgstr "Farebná paleta (2D)"
 
@@ -14484,6 +14626,38 @@ msgstr "Rýchle uloženie"
 #~ msgctxt "game_options"
 #~ msgid "weird colors"
 #~ msgstr "divné farby"
+
+#~ msgctxt "game_options"
+#~ msgid "For Gyro-enabled games (bound to left analog stick)"
+#~ msgstr "Pre hry s podporou gyroskopu (viazané na ľavú analógovú páčku)"
+
+#~ msgctxt "game_options"
+#~ msgid "For Gyro-enabled games (bound to right analog stick)"
+#~ msgstr "Pre hry s podporou gyroskopu (viazané na pravú analógovú páčku)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Changing driver can improve audio performance and reduce distortion. "
+#~ "Alsathread is recommended for low-end systems."
+#~ msgstr ""
+#~ "Zmena ovládača vie zlepšiť výkon zvuku a znížiť skreslenie. Alsathread sa "
+#~ "odporúča pre pomalšie systémy."
+
+#~ msgctxt "game_options"
+#~ msgid "AUDIO DRIVER"
+#~ msgstr "Ovládač zvuku"
+
+#~ msgctxt "game_options"
+#~ msgid "Pulse (Default)"
+#~ msgstr "Pulse (predvolené)"
+
+#~ msgctxt "game_options"
+#~ msgid "Resize automatically screen height."
+#~ msgstr "Automaticky zmeniť výšku obrazovky."
+
+#~ msgctxt "game_options"
+#~ msgid "AUTO HEIGHT"
+#~ msgstr "Automatická výška"
 
 #~ msgctxt "game_options"
 #~ msgid "GamePad + 4 Sideway Wiimote"
@@ -14554,6 +14728,22 @@ msgstr "Rýchle uloženie"
 #~ msgstr "PS1 analógový joystick"
 
 #~ msgctxt "game_options"
+#~ msgid "Per pixel is the most accurate, but also the most demanding."
+#~ msgstr "Podľa bodu je najpresnejšie, ale aj najnáročnejšie."
+
+#~ msgctxt "game_options"
+#~ msgid "Per Strip"
+#~ msgstr "Na pásik"
+
+#~ msgctxt "game_options"
+#~ msgid "Per Triangle (Default)"
+#~ msgstr "Podľa trojuholníka (predvolené)"
+
+#~ msgctxt "game_options"
+#~ msgid "Per Pixel"
+#~ msgstr "Po bodoch"
+
+#~ msgctxt "game_options"
 #~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
 #~ msgstr "Povolí mapovanie Future Pinballu pomocou Pad to Keyboard."
 
@@ -14568,10 +14758,6 @@ msgstr "Rýchle uloženie"
 #~ msgctxt "game_options"
 #~ msgid "Set the sensitivity of the joystick analog sticks."
 #~ msgstr "Nastaviť citlivosť analógových páčok joysticku."
-
-#~ msgctxt "game_options"
-#~ msgid "Set the deadzone of the joystick analog sticks."
-#~ msgstr "Nastavte mŕtvu zónu analógových páčok joysticku."
 
 #~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
@@ -14627,6 +14813,10 @@ msgstr "Rýchle uloženie"
 #~ "GPU."
 
 #~ msgctxt "game_options"
+#~ msgid "Legacy Evdev"
+#~ msgstr "Staré Evdev"
+
+#~ msgctxt "game_options"
 #~ msgid "Center (Default)"
 #~ msgstr "Stred (predvolené)"
 
@@ -14646,6 +14836,14 @@ msgstr "Rýchle uloženie"
 #~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr "Umožňuje použitie profilov prepínačov, ak sú k dispozícii."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable this mode if you have issue for run your game on NTFS storage (by "
+#~ "default is better to use LinuxFS)."
+#~ msgstr ""
+#~ "Povoľte tento režim, ak máte problém so spustením hry na úložisku NTFS (v "
+#~ "predvolenom nastavení je lepšie použiť LinuxFS)."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -14686,142 +14884,6 @@ msgstr "Rýchle uloženie"
 #~ msgstr ""
 #~ "Táto možnosť umožňuje hrať hry Xbox Live Arcade. Môže spôsobiť problémy s "
 #~ "kompatibilitou s hrami, ktoré nie sú XBLA."
-
-#~ msgctxt "game_options"
-#~ msgid "GAME DIFFICULATY"
-#~ msgstr "Obtiažnosť hry"
-
-#~ msgctxt "game_options"
-#~ msgid "COMBAT DIFFICULATY"
-#~ msgstr "Obtiažnosť zápasu"
-
-#~ msgctxt "game_options"
-#~ msgid "Store past states to rewind to in realtime, if the core supports it."
-#~ msgstr ""
-#~ "Uložiť minulé stavy na pretočenie v reálnom čase, ak to jadro podporuje."
-
-#~ msgctxt "game_options"
-#~ msgid "Treats the right analog stick as the second joystick."
-#~ msgstr "Považuje pravú analógovú páčku za druhý joystick."
-
-#~ msgctxt "game_options"
-#~ msgid "Enables or disable on screen messages."
-#~ msgstr "Povolí alebo zakáže správy na obrazovke."
-
-#~ msgctxt "game_options"
-#~ msgid "Optimized (auto)"
-#~ msgstr "Optimalizované (auto)"
-
-#~ msgctxt "game_options"
-#~ msgid "ANALOG JOYSTICK DEADZONE"
-#~ msgstr "Analógová mŕtva zóna"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Crop MAME artwork to maximize the game screen and only fill unused space."
-#~ msgstr ""
-#~ "Orezať grafiku MAME, aby ste maximalizovali hernú obrazovku a zaplnili "
-#~ "nevyužitý priestor."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Install the image reader card to read disk image files (Mac IIx only). "
-#~ "Minimum 4MB ram size recommended."
-#~ msgstr ""
-#~ "Nainštalovať čítačku obrazov kariet, aby ste mohli čítať obrazové súbory "
-#~ "disku (len Mac IIx). Odporúčaná minimálna veľkosť RAM 4 MB."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
-#~ "switches to Super-High when needed."
-#~ msgstr ""
-#~ "Manuálne definujte, ktoré rozlíšenie sa má použiť.&#x0a;Automaticky sa "
-#~ "predvolene nastaví na Vysoké a v prípade potreby sa prepne na Supervysoké."
-
-#~ msgctxt "game_options"
-#~ msgid "JUMP ON B"
-#~ msgstr "Skočiť na B"
-
-#~ msgctxt "game_options"
-#~ msgid "Keypad to joyport mappings for 2 players."
-#~ msgstr "Mapovania keypadu na joyport pre 2 hráčov."
-
-#~ msgctxt "game_options"
-#~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
-#~ msgstr "Mapovanie gamepadu 2. hráča (keyrah)"
-
-#~ msgctxt "game_options"
-#~ msgid "Passes all physical keyboard events for Pad2Key."
-#~ msgstr "Prejde všetky udalosti fyzickej klávesnice pre Pad2Key."
-
-#~ msgctxt "game_options"
-#~ msgid "DISABLE EMULATOR JOYSTICK"
-#~ msgstr "Zakázať joystick emulátora"
-
-#~ msgctxt "game_options"
-#~ msgid "ANALOG DEADZONE"
-#~ msgstr "Analógová mŕtva zóna"
-
-#~ msgctxt "game_options"
-#~ msgid "For Gyro-enabled games (bound to left analog stick)"
-#~ msgstr "Pre hry s podporou gyroskopu (viazané na ľavú analógovú páčku)"
-
-#~ msgctxt "game_options"
-#~ msgid "For Gyro-enabled games (bound to right analog stick)"
-#~ msgstr "Pre hry s podporou gyroskopu (viazané na pravú analógovú páčku)"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Changing driver can improve audio performance and reduce distortion. "
-#~ "Alsathread is recommended for low-end systems."
-#~ msgstr ""
-#~ "Zmena ovládača vie zlepšiť výkon zvuku a znížiť skreslenie. Alsathread sa "
-#~ "odporúča pre pomalšie systémy."
-
-#~ msgctxt "game_options"
-#~ msgid "AUDIO DRIVER"
-#~ msgstr "Ovládač zvuku"
-
-#~ msgctxt "game_options"
-#~ msgid "Pulse (Default)"
-#~ msgstr "Pulse (predvolené)"
-
-#~ msgctxt "game_options"
-#~ msgid "Resize automatically screen height."
-#~ msgstr "Automaticky zmeniť výšku obrazovky."
-
-#~ msgctxt "game_options"
-#~ msgid "AUTO HEIGHT"
-#~ msgstr "Automatická výška"
-
-#~ msgctxt "game_options"
-#~ msgid "Per pixel is the most accurate, but also the most demanding."
-#~ msgstr "Podľa bodu je najpresnejšie, ale aj najnáročnejšie."
-
-#~ msgctxt "game_options"
-#~ msgid "Per Strip"
-#~ msgstr "Na pásik"
-
-#~ msgctxt "game_options"
-#~ msgid "Per Triangle (Default)"
-#~ msgstr "Podľa trojuholníka (predvolené)"
-
-#~ msgctxt "game_options"
-#~ msgid "Per Pixel"
-#~ msgstr "Po bodoch"
-
-#~ msgctxt "game_options"
-#~ msgid "Legacy Evdev"
-#~ msgstr "Staré Evdev"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Enable this mode if you have issue for run your game on NTFS storage (by "
-#~ "default is better to use LinuxFS)."
-#~ msgstr ""
-#~ "Povoľte tento režim, ak máte problém so spustením hry na úložisku NTFS (v "
-#~ "predvolenom nastavení je lepšie použiť LinuxFS)."
 
 #~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
@@ -14954,6 +15016,14 @@ msgstr "Rýchle uloženie"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rýchlo dopredu"
+
+#~ msgctxt "game_options"
+#~ msgid "GAME DIFFICULATY"
+#~ msgstr "Obtiažnosť hry"
+
+#~ msgctxt "game_options"
+#~ msgid "COMBAT DIFFICULATY"
+#~ msgstr "Obtiažnosť zápasu"
 
 #~ msgctxt "game_options"
 #~ msgid "CONTOLLER 2"

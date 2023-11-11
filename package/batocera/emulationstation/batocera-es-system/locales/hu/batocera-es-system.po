@@ -10882,17 +10882,17 @@ msgctxt "game_options"
 msgid "Chinese (Mandarin)"
 msgstr ""
 
-#. TRANSLATION: scummvm, xenia, xenia-canary
+#. TRANSLATION: scummvm, etlegacy, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Swedish"
 msgstr "Svéd"
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, etlegacy
 msgctxt "game_options"
 msgid "Hebrew"
 msgstr ""
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, etlegacy
 msgctxt "game_options"
 msgid "Czech"
 msgstr ""
@@ -10952,12 +10952,12 @@ msgctxt "game_options"
 msgid "Chinese (Traditional) [Big5]"
 msgstr "Kínai (hagyományos) [Big5]"
 
-#. TRANSLATION: easyrpg
+#. TRANSLATION: easyrpg, etlegacy
 msgctxt "game_options"
 msgid "Greek"
 msgstr "Görög"
 
-#. TRANSLATION: easyrpg, xenia, xenia-canary
+#. TRANSLATION: easyrpg, etlegacy, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Turkish"
 msgstr "Török"
@@ -12862,6 +12862,86 @@ msgctxt "game_options"
 msgid "START LEVEL"
 msgstr ""
 
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Afrikaans"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Albanian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Bulgarian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Catalan"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Danish"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Finnish"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Hungarian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Irish"
+msgstr ""
+
+#. TRANSLATION: etlegacy, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Norwegian"
+msgstr "Norvég"
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Punjabi"
+msgstr ""
+
+#. TRANSLATION: etlegacy, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Polish"
+msgstr "Lengyel"
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Romanian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Serbian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Slovak"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Slovenian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Ukrainian"
+msgstr ""
+
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "Choose the games difficulty."
@@ -13351,16 +13431,6 @@ msgstr "Engedélyezett felhasználói felület felszólítások (alapértelmezet
 msgctxt "game_options"
 msgid "Disable UI prompts"
 msgstr "Felhasználói felület felszólítások letiltása"
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Polish"
-msgstr "Lengyel"
-
-#. TRANSLATION: xenia, xenia-canary
-msgctxt "game_options"
-msgid "Norwegian"
-msgstr "Norvég"
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -13908,6 +13978,11 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "Exit game"
+msgstr "Kilépés a játékból"
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera up"
@@ -14058,11 +14133,6 @@ msgctxt "keys_files"
 msgid "Manage Staff"
 msgstr "Személyzet kezelése"
 
-#. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "Exit game"
-msgstr "Kilépés a játékból"
-
 #. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys
 msgctxt "keys_files"
 msgid "Bring up menu"
@@ -14184,6 +14254,12 @@ msgid "Quick Save"
 msgstr "Gyors mentés"
 
 #~ msgctxt "game_options"
+#~ msgid "Store past states to rewind to in realtime, if the core supports it."
+#~ msgstr ""
+#~ "Tárolja a múltbeli állapotokat a valós idejű visszatekeréshez, ha a mag "
+#~ "támogatja."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
 #~ "libretro cores."
@@ -14206,8 +14282,16 @@ msgstr "Gyors mentés"
 #~ "módban."
 
 #~ msgctxt "game_options"
+#~ msgid "Treats the right analog stick as the second joystick."
+#~ msgstr "A jobb analóg kart második joystickként kezeli."
+
+#~ msgctxt "game_options"
 #~ msgid "Useful for speedruns/glitches."
 #~ msgstr "Hasznos speedruns/glitches esetén."
+
+#~ msgctxt "game_options"
+#~ msgid "Enables or disable on screen messages."
+#~ msgstr "Engedélyezi vagy letiltja a képernyőn megjelenő üzeneteket."
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
@@ -14251,6 +14335,18 @@ msgstr "Gyors mentés"
 #~ msgstr "külső (változó fps)"
 
 #~ msgctxt "game_options"
+#~ msgid "Optimized (auto)"
+#~ msgstr "Optimalizált (automatikus)"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the deadzone of the joystick analog sticks."
+#~ msgstr "Állítsa be a joystick analóg karok holtterét."
+
+#~ msgctxt "game_options"
+#~ msgid "ANALOG JOYSTICK DEADZONE"
+#~ msgstr "ANALÓG JOYSTICK HOLTZÓNA"
+
+#~ msgctxt "game_options"
 #~ msgid "Analog Joystick"
 #~ msgstr "Analóg Joystick"
 
@@ -14287,56 +14383,6 @@ msgstr "Gyors mentés"
 #~ msgstr "Analóg Joystick (Flystick)"
 
 #~ msgctxt "game_options"
-#~ msgid "Add color to Game Boy games."
-#~ msgstr "Színt ad a Game Boy játékokhoz."
-
-#~ msgctxt "game_options"
-#~ msgid "weird colors"
-#~ msgstr "furcsa színek"
-
-#~ msgctxt "game_options"
-#~ msgid "5 Sideway Wiimote"
-#~ msgstr "5 Oldalirányú Wiimote"
-
-#~ msgctxt "game_options"
-#~ msgid "Set the deadzone of the joystick analog sticks."
-#~ msgstr "Állítsa be a joystick analóg karok holtterét."
-
-#~ msgctxt "game_options"
-#~ msgid "BGFX for post-processing, accel/opengl for raw image."
-#~ msgstr "BGFX az utólagos feldolgozáshoz, accel/opengl a nyers képhez."
-
-#~ msgctxt "game_options"
-#~ msgid "Choose your console timezone."
-#~ msgstr "Válassza ki a konzol időzónáját."
-
-#~ msgctxt "game_options"
-#~ msgid "Choose your console UTC timezone."
-#~ msgstr "Válassza ki a konzol UTC időzónáját."
-
-#~ msgctxt "game_options"
-#~ msgid "Store past states to rewind to in realtime, if the core supports it."
-#~ msgstr ""
-#~ "Tárolja a múltbeli állapotokat a valós idejű visszatekeréshez, ha a mag "
-#~ "támogatja."
-
-#~ msgctxt "game_options"
-#~ msgid "Treats the right analog stick as the second joystick."
-#~ msgstr "A jobb analóg kart második joystickként kezeli."
-
-#~ msgctxt "game_options"
-#~ msgid "Enables or disable on screen messages."
-#~ msgstr "Engedélyezi vagy letiltja a képernyőn megjelenő üzeneteket."
-
-#~ msgctxt "game_options"
-#~ msgid "Optimized (auto)"
-#~ msgstr "Optimalizált (automatikus)"
-
-#~ msgctxt "game_options"
-#~ msgid "ANALOG JOYSTICK DEADZONE"
-#~ msgstr "ANALÓG JOYSTICK HOLTZÓNA"
-
-#~ msgctxt "game_options"
 #~ msgid "JUMP ON B"
 #~ msgstr "B TŰHÖZ UGRÁS"
 
@@ -14353,12 +14399,36 @@ msgstr "Gyors mentés"
 #~ msgstr "ANALÓG HOLTZÓNA"
 
 #~ msgctxt "game_options"
+#~ msgid "Add color to Game Boy games."
+#~ msgstr "Színt ad a Game Boy játékokhoz."
+
+#~ msgctxt "game_options"
+#~ msgid "weird colors"
+#~ msgstr "furcsa színek"
+
+#~ msgctxt "game_options"
 #~ msgid "Pulse (Default)"
 #~ msgstr "Pulse (Alap)"
 
 #~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "AUTOMATA MAGASSÁG"
+
+#~ msgctxt "game_options"
+#~ msgid "5 Sideway Wiimote"
+#~ msgstr "5 Oldalirányú Wiimote"
+
+#~ msgctxt "game_options"
+#~ msgid "BGFX for post-processing, accel/opengl for raw image."
+#~ msgstr "BGFX az utólagos feldolgozáshoz, accel/opengl a nyers képhez."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your console timezone."
+#~ msgstr "Válassza ki a konzol időzónáját."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your console UTC timezone."
+#~ msgstr "Válassza ki a konzol UTC időzónáját."
 
 #~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
