@@ -12527,6 +12527,14 @@ xenia:
                 "Turkish":           14
                 "Norwegian":         15
                 "Dutch":             16
+        xeniawine:
+          group: ADVANCED OPTIONS
+          prompt: WINE EMULATOR
+          description: Select which version of wine to use
+          choices:
+            "WINE NATIVE":      "lutris"
+            "PROTON":           "proton"
+
 xenia-canary:
   features: [padtokeyboard]
   shared: [videomode, powersave]
@@ -12589,6 +12597,14 @@ xenia-canary:
             choices:
                 "Disabled (Default)": false
                 "Enabled": true
+        xeniawine:
+          group: ADVANCED OPTIONS
+          prompt: WINE EMULATOR
+          description: Select which version of wine to use
+          choices:
+            "WINE NATIVE":      "lutris"
+            "PROTON":           "proton"
+
 yabasanshiro:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

@@ -13640,6 +13640,26 @@ msgctxt "game_options"
 msgid "Disable UI prompts"
 msgstr "Desativar instruções de IU"
 
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
+msgid "Select which version of wine to use"
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
+msgid "WINE EMULATOR"
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
+msgid "WINE NATIVE"
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
+msgid "PROTON"
+msgstr ""
+
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid ""
