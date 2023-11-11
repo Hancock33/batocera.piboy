@@ -15,6 +15,7 @@ import re
 from utils.logger import get_logger
 
 eslog = get_logger(__name__)
+sWine = 'lutris'
 
 class XeniaGenerator(Generator):
 
@@ -182,30 +183,35 @@ class XeniaGenerator(Generator):
             else:
                 eslog.debug(f'No patch file found for {rom_name}')
 
+        if system.isOptSet('xeniawine'):
+            sWine = system.config['xeniawine']
+        else:
+            sWine = 'lutris'
+
         # now setup the command array for the emulator
         if rom == 'config':
             if core == 'xenia-canary':
-                commandArray = ['/usr/wine/proton/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe']
+                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe']
             else:
-                commandArray = ['/usr/wine/proton/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe']
+                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe']
         else:
             if core == 'xenia-canary':
-                commandArray = ['/usr/wine/proton/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe', 'z:' + rom]
+                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe', 'z:' + rom]
             else:
-                commandArray = ['/usr/wine/proton/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe', 'z:' + rom]
+                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe', 'z:' + rom]
 
         return Command.Command(
             array=commandArray,
             env={
                 'WINEPREFIX': wineprefix,
-                'LD_LIBRARY_PATH': '/usr/lib:/lib32:/usr/wine/proton/lib/wine',
+                'LD_LIBRARY_PATH': '/usr/lib:/usr/wine/' + sWine + '/lib/wine',
                 'LIBGL_DRIVERS_PATH': '/usr/lib/dri',
                 'WINEESYNC': '1',
                 'SDL_GAMECONTROLLERCONFIG': controllersConfig.generateSdlGameControllerConfig(playersControllers),
                 'SDL_JOYSTICK_HIDAPI': '0',
                 # hum pw 0.2 and 0.3 are hardcoded, not nice
-                'SPA_PLUGIN_DIR': '/usr/lib/spa-0.2:/lib32/spa-0.2',
-                'PIPEWIRE_MODULE_DIR': '/usr/lib/pipewire-0.3:/lib32/pipewire-0.3'
+                'SPA_PLUGIN_DIR': '/usr/lib/spa-0.2',
+                'PIPEWIRE_MODULE_DIR': '/usr/lib/pipewire-0.3'
             })
 
     # Show mouse on screen when needed
