@@ -1,6 +1,6 @@
 ROCKPRO64_BLOBS_VERSION = 2.0
 ROCKPRO64_BLOBS_SITE = https://github.com/batocera-linux/rockpro64-blobs.git
-ROCKPRO64_BLOBS_SITE_METHOD=git
+# rockpro64-blobs
 
 define ROCKPRO64_BLOBS_INSTALL_TARGET_CMDS
 	cp $(@D)/idbloader.img	$(BINARIES_DIR)/idbloader-rockpro64.img
