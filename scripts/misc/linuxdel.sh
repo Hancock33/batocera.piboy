@@ -1,4 +1,12 @@
 #!/bin/bash
+GREEN="\e[1;32m"
+RED="\e[1;31m"
+ENDCOLOR="\e[0m"
+STARTLINE="\e[1;44m--------------------------------------------------\n"
+ENDLINE="\n--------------------------------------------------"${ENDCOLOR}
+clear
+echo  ${STARTLINE}"Cleaning Batocera Linux Kernel                    "${ENDLINE}
+
 delkern="linux-custom*
 linux-6.*
 linux-headers*
@@ -50,7 +58,7 @@ if [ $DEL_RPI4 = '1' ]; then
     sudo rm -r $HOME/build-dir/batocera.rpi4/target/lib/modules/6.*
     for i in $delkern
     do
-        echo "Deleting: "$i
+        echo "Deleting: "${RED}$i${ENDCOLOR}
         sudo rm -r $HOME/build-dir/batocera.rpi4/build/$i
     done
 fi
@@ -67,7 +75,7 @@ if [ $DEL_X86 = '1' ]; then
     sudo rm -rf $HOME/build-dir/batocera.x86_64/target/lib/modules/6.*
     for i in $delkern
     do
-        echo "Deleting: "$i
+        echo "Deleting: "${RED}$i${ENDCOLOR}
         sudo rm -rf $HOME/build-dir/batocera.x86_64/build/$i
     done
 fi
