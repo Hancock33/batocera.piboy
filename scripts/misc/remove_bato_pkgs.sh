@@ -5,10 +5,10 @@ ENDCOLOR="\e[0m"
 STARTLINE="\e[1;44m--------------------------------------------------\n"
 ENDLINE="\n--------------------------------------------------"${ENDCOLOR}
 clear
-echo  ${STARTLINE}"Removing Batocera Packages                        "${ENDLINE}
+echo -e ${STARTLINE}"Removing Batocera Packages                        "${ENDLINE}
 
-batoports=( $(find $HOME/batocera.se/package/batocera/ports -type f -name "*.mk" ) )
-batoemus=( $(find $HOME/batocera.se/package/batocera/emulators -type f -name "*.mk" ) )
+batoports=( $(find $HOME/batocera.se/package/batocera/ports -type f -name "*.mk" | sort -k3 -k1 ) )
+batoemus=( $(find $HOME/batocera.se/package/batocera/emulators -type f -name "*.mk" | sort -k3 -k1 ) )
 
 # Variables
 BUILD_RPI=0
@@ -35,13 +35,13 @@ esac
 if [ $BUILD_RPI = '1' ]; then
 	for ((i=0; i<${#batoports[@]}; i++)); do
 		f=( $(basename "${batoports[$i]}" .mk ) )
-		echo "removing rpi4 package: "${RED}$f${ENDCOLOR}
+		echo -e "removing rpi4 package: "${RED}$f${ENDCOLOR}
 		rm -rf $HOME/build-dir/batocera.rpi4/build/$f-*
 		rm -rf $HOME/build-dir/batocera.rpi4/build/host-$f-*
 	done
 	for ((i=0; i<${#batoemus[@]}; i++)); do
 		f=( $(basename "${batoemus[$i]}" .mk ) )
-		echo "removing rpi4 package: "${RED}$f${ENDCOLOR}
+		echo -e "removing rpi4 package: "${RED}$f${ENDCOLOR}
 		rm -rf $HOME/build-dir/batocera.rpi4/build/$f-*
 		rm -rf $HOME/build-dir/batocera.rpi4/build/host-$f-*
 	done
@@ -50,13 +50,13 @@ fi
 if [ $BUILD_X86 = '1' ]; then
 	for ((i=0; i<${#batoports[@]}; i++)); do
 		f=( $(basename "${batoports[$i]}" .mk ) )
-		echo "removing x86_64 package: "${RED}$f${ENDCOLOR}
+		echo -e "removing x86_64 package: "${RED}$f${ENDCOLOR}
 		rm -rf $HOME/build-dir/batocera.x86_64/build/$f-*
 		rm -rf $HOME/build-dir/batocera.x86_64/build/host-$f-*
 	done
 	for ((i=0; i<${#batoemus[@]}; i++)); do
 		f=( $(basename "${batoemus[$i]}" .mk ) )
-		echo "removing x86_64 package: "${RED}$f${ENDCOLOR}
+		echo -e "removing x86_64 package: "${RED}$f${ENDCOLOR}
 		rm -rf $HOME/build-dir/batocera.x86_64/build/$f-*
 		rm -rf $HOME/build-dir/batocera.x86_64/build/host-$f-*
 	done
@@ -70,7 +70,7 @@ x86_64"
 
 for i in $cleanup
 do
-    echo "Cleaning: "${RED}$i${ENDCOLOR}
+    echo -e "Cleaning: "${RED}$i${ENDCOLOR}
 	find $HOME/build-dir/batocera.$i/build -maxdepth 1 -type d -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2
 	find $HOME/build-dir/batocera.$i/build -maxdepth 1 -type d -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | xargs rm -rf
 done
