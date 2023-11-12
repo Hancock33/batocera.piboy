@@ -1,5 +1,12 @@
 #!/bin/bash
-echo "Generating configurations"
+GREEN="\e[1;32m"
+RED="\e[1;31m"
+ENDCOLOR="\e[0m"
+STARTLINE="\e[1;44m--------------------------------------------------\n"
+ENDLINE="\n--------------------------------------------------"${ENDCOLOR}
+clear
+echo  ${STARTLINE}"Cleaning Batocera Image(s)                        "${ENDLINE}
+
 cd $HOME/batocera.se && 
 git pull
 git submodule init
@@ -41,16 +48,16 @@ fi
 # Build selected images
 for i in $make_bato
 do
-	echo "Removing Directories: "$i
+	echo "Removing Directories: "${RED}$i${ENDCOLOR}
 	sudo rm -rf $HOME/build-dir/batocera.$i/host
 	sudo rm -rf $HOME/build-dir/batocera.$i/images
 	sudo rm -rf $HOME/build-dir/batocera.$i/staging
 	sudo rm -rf $HOME/build-dir/batocera.$i/target
 
-	echo "Removing Installed Packages: "$i
+	echo "Removing Installed Packages: "${RED}$i${ENDCOLOR}
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/*/.stamp*_installed
 
-	echo "Removing Package Sources: "$i
+	echo "Removing Package Sources: "${RED}$i${ENDCOLOR}
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-skeleton*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-gcc-final-*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-libopenssl*
