@@ -2,6 +2,7 @@
 ### Hardware
 - Initial support for the AYN Loki MiniPro (Speakers not working)
 - Initial support for the Anbernic RG353V
+- Initial support for the Raspberry Pi 5
 ### Added
 - Additional ES controller settings for Dolphin.
 - DPLII/Surround Sound ES setting for Dolphin. Note there is a mild performance cost.
@@ -10,6 +11,10 @@
 - Fallout Community Edition: Play the original Fallout game.
 - Fallout 2 Community Edition: Play the original Fallout 2 game.
 - DXX-Rebirth: Play Descent 1 & 2 with enhanced graphics.
+- Added RetroAchievements for Uzebox
+- ETLegacy: play Wolfenstein: Enemy Territory online multiplayer game with enhanced graphics.
+- Konami Justifier / Hyper Blaster light gun in PCSX reARMed core
+  - Not compatible with nuvee GunCon patch, use clean ROM. 
 ### Fixed
 - Dolphin bug that prevented full range of analog trigger axis being used.
 - Flycast per pixel sorting option if renderer not explicitly set
@@ -97,12 +102,13 @@
 - Libretro-Stella to Oct 26, 2023 build
 - Libretro-MAME to 0.260
 ### System
-- Linux kernel to 6.6
+- Linux kernel to 6.6.1
 - Mesa to 23.3
 - Proton to 8.0-4b
 - FAudio to 23.10
 - Nvidia production driver to 545.29.02
 - SDL2 to 2.28.4
+- SOF Firmware to 2023.09.1
 
 # 2023/10/16 - batocera.linux 38 - Blue Moon
 ### Hardware

@@ -247,10 +247,8 @@ msgstr "TATUAIAREN TAMAINA ALDATU"
 msgctxt "game_options"
 msgid ""
 "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
-"libretro cores."
+"Libretro cores."
 msgstr ""
-"Jokatzen ari zaren bitartean , sakatu Hotkey + R1 pantailan agertzen den "
-"testua itzultzeko. Libretro nukleoetan bakarrik."
 
 #. TRANSLATION: shared, shared, shared, shared
 msgctxt "game_options"
@@ -468,13 +466,13 @@ msgstr ""
 
 #. TRANSLATION: libretro/81
 msgctxt "game_options"
-msgid "Emulate Chroma 81 interface (colorization)."
-msgstr "Emulatu Chroma 81 interfazea (koloreztatzea)."
+msgid "Emulate Chroma 81 interface (colourisation)."
+msgstr ""
 
-#. TRANSLATION: libretro/81, libretro/gambatte
+#. TRANSLATION: libretro/81
 msgctxt "game_options"
-msgid "COLORIZATION"
-msgstr "KOLOREZTATZEA"
+msgid "COLORISATION"
+msgstr ""
 
 #. TRANSLATION: libretro/81, libretro/81, libretro/fceumm, libretro/fceumm, libretro/genesisplusgx, ...
 msgctxt "game_options"
@@ -529,10 +527,8 @@ msgstr "SIO AZELERAZIOA"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
-msgid "Emulate NTSC quirks to show more colors in hi-res mode."
+msgid "Emulate NTSC quirks to show more colours in hi-res mode."
 msgstr ""
-"Emulatu NTSC bereizitasunak bereizmen altuko moduan kolore gehiago "
-"erakusteko."
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -979,7 +975,7 @@ msgctxt "game_options"
 msgid "Enhancement. Remove the eight sprite per line limit."
 msgstr "Hobekuntza. Kendu zortzi sprite lerroko muga."
 
-#. TRANSLATION: libretro/mesen, libretro/potator, libretro/sameboy
+#. TRANSLATION: libretro/mesen
 msgctxt "game_options"
 msgid "COLOR PALETTE"
 msgstr "KOLORE PALETA"
@@ -1061,8 +1057,8 @@ msgstr "(FDS) AURRERATZE AZKARRA DISKOA KARGATZEAN"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
-msgid "Useful for speedruns/glitches."
-msgstr "Erabilgarria jokatze azkarretan/arazoak"
+msgid "Useful for speed runs / glitches."
+msgstr ""
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -1431,38 +1427,38 @@ msgstr "WII TB MODUA"
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
-msgstr "Emulatu Wiimote Sideway L2 Mugitu eta Nunchuck Eskuin stick-arekin "
+msgid "Emulate a Wii Remote Sideway with L2 for Shake and Nunchuk on R-stick."
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "WiiMote"
-msgstr "WiiMote"
+msgid "Wii Remote"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "WiiMote Sideways"
-msgstr "WiiMote Sideways"
+msgid "Wii Remote Sideways"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "WiiMote + Nunchuk"
-msgstr "WiiMote + Nunchuk"
+msgid "Wii Remote + Nunchuk"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "WiiMote + Classic Controller"
-msgstr "WiiMote + Kontrolatzaile klasikoa"
+msgid "Wii Remote + Classic Controller"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "WiiMote + Classic Controller Pro"
-msgstr "WiiMote + Pro Kontrolatzaile klasikoa"
+msgid "Wii Remote + Classic Controller Pro"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
-msgid "Real Wiimote"
-msgstr "Benetazko Wiimote-a"
+msgid "Real Wii Remote"
+msgstr ""
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, libretro/dolphin, ...
 msgctxt "game_options"
@@ -1486,18 +1482,18 @@ msgstr "CPU-AREN DENBORA MODUA (FPS)"
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
-msgid "internal (fixed 60fps)"
-msgstr "barnekoa (ezarria 60fps)"
+msgid "Internal (fixed 60fps)"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
-msgid "internal (variable fps)"
-msgstr "barnekoa (aldagarrial 60fps)"
+msgid "Internal (variable fps)"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
-msgid "external (variable fps)"
-msgstr "kanpokoa (aldagarria fps)"
+msgid "External (variable fps)"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox, openbor, mame
 msgctxt "game_options"
@@ -1929,9 +1925,9 @@ msgctxt "game_options"
 msgid "On with game detection message"
 msgstr "Gaituta joku detekzio mezuarekon"
 
-#. TRANSLATION: libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure, mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
-msgid "Set the deadzone of the joystick analogue sticks."
+msgid "Set the dead zone of the joystick analogue sticks."
 msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
@@ -2222,13 +2218,13 @@ msgstr "Kontrolatzaile digitala (Pad-a)"
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/duckstation, libretro/duckstation
 msgctxt "game_options"
-msgid "Analog Controller (DualShock)"
-msgstr "Kontrolatzaile Analogikoa (DualShock)"
+msgid "Analogue Controller (DualShock)"
+msgstr ""
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/puae, libretro/puae, libretro/puae, ...
 msgctxt "game_options"
-msgid "Analog Joystick"
-msgstr "Joystick Analogikoa"
+msgid "Analogue Joystick"
+msgstr ""
 
 #. TRANSLATION: libretro/swanstation, libretro/swanstation, libretro/duckstation, libretro/duckstation, libretro/mednafen_psx, ...
 msgctxt "game_options"
@@ -2252,8 +2248,8 @@ msgstr "Kontrolatzaile digitala"
 
 #. TRANSLATION: libretro/duckstation, libretro/duckstation
 msgctxt "game_options"
-msgid "Analog Stick"
-msgstr "Stick analogikoa"
+msgid "Analogue Stick"
+msgstr ""
 
 #. TRANSLATION: libretro/fbneo
 msgctxt "game_options"
@@ -2347,23 +2343,23 @@ msgstr "Biak"
 
 #. TRANSLATION: libretro/fceumm, libretro/nestopia, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, ...
 msgctxt "game_options"
-msgid "Can be used to simulate colors of particular displays."
-msgstr "Pantaila berezien koloreak simulatzeko erabili daiteke"
+msgid "Can be used to simulate colours of particular displays."
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/nestopia, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, ...
 msgctxt "game_options"
-msgid "COLOR FILTER"
-msgstr "KOLORE FILTROA"
+msgid "COLOUR FILTER"
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
-msgid "Composite (color bleeding + artifacts)"
-msgstr "Composite (kolore zabaltzea + artefaktoak)"
+msgid "Composite (colour bleeding + artifacts)"
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
-msgid "SVideo (color bleeding only)"
-msgstr "SVideo (kolore zabaltzea bakarrik)"
+msgid "SVideo (colour bleeding only)"
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx, libretro/genesisplusgx, libretro/nestopia
 msgctxt "game_options"
@@ -2450,8 +2446,8 @@ msgstr "2.5x (1600x1200)"
 
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
-msgid "PLAYER 1 CROSSHAIR COLOR"
-msgstr "1. JOKALARIAREN JOPUNTU KOLOREA"
+msgid "PLAYER 1 CROSSHAIR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, ...
 msgctxt "game_options"
@@ -2475,18 +2471,18 @@ msgstr "Zuria"
 
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
-msgid "PLAYER 2 CROSSHAIR COLOR"
-msgstr "2. JOKALARIAREN JOPUNTU KOLOREA"
+msgid "PLAYER 2 CROSSHAIR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
-msgid "PLAYER 3 CROSSHAIR COLOR"
-msgstr "3. JOKALARIAREN JOPUNTU KOLOREA"
+msgid "PLAYER 3 CROSSHAIR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
-msgid "PLAYER 4 CROSSHAIR COLOR"
-msgstr "4. JOKALARIAREN JOPUNTU KOLOREA"
+msgid "PLAYER 4 CROSSHAIR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, mupen64plus
 msgctxt "game_options"
@@ -2499,7 +2495,7 @@ msgctxt "game_options"
 msgid "TEXTURE MIP-MAPPING (BLUR)"
 msgstr "TESTUREN MIP-MAPPING-A (LAUSOTZEA)"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, flycast
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Improves clarity of distant textures when mip-mapping is enabled."
 msgstr "Hobetu urruneko testuren argitasuna mip-mapping-a gaituta dagoenean."
@@ -2601,22 +2597,22 @@ msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "Left Analog (Auto)"
+msgid "Left Analogue (Auto)"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "Right Analog (Auto)"
+msgid "Right Analogue (Auto)"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "Left Analog (Forced)"
+msgid "Left Analogue (Forced)"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast, ...
 msgctxt "game_options"
-msgid "Right Analog (Forced)"
+msgid "Right Analogue (Forced)"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast, libretro/flycast, libretro/flycast2021, libretro/flycast2021, ...
@@ -2631,22 +2627,27 @@ msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
-msgid "Target color for player 1."
+msgid "Target colour for player 1."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
-msgid "Target color for player 2."
+msgid "Target colour for player 2."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
-msgid "Target color for player 3."
+msgid "Target colour for player 3."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
 msgctxt "game_options"
-msgid "Target color for player 4."
+msgid "Target colour for player 4."
+msgstr ""
+
+#. TRANSLATION: libretro/flycast2021
+msgctxt "game_options"
+msgid "Improves clarity of distant textures when mipmapping is enabled."
 msgstr ""
 
 #. TRANSLATION: libretro/flycast2021
@@ -2836,18 +2837,23 @@ msgstr "LCD Ghosting (Azkarra)"
 
 #. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
 msgctxt "game_options"
-msgid "Simulate LCD color inaccuracy."
-msgstr "Simulatu LCD kolore zehatzasun eza."
+msgid "Simulate LCD colour inaccuracy."
+msgstr ""
 
 #. TRANSLATION: libretro/gambatte, libretro/mgba, libretro/mgba, libretro/sameboy, libretro/vba-m, ...
 msgctxt "game_options"
-msgid "COLOR CORRECTION"
-msgstr "KOLORE ZUZENKETA"
+msgid "COLOUR CORRECTION"
+msgstr ""
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
-msgid "Set the color palette to use."
-msgstr "Ezarri erabiliko den kolore paleta."
+msgid "Set the colour palette to use."
+msgstr ""
+
+#. TRANSLATION: libretro/gambatte
+msgctxt "game_options"
+msgid "COLOURISATION"
+msgstr ""
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -3453,7 +3459,7 @@ msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "TXANPON SOINU PLUGIN-A"
 
-#. TRANSLATION: libretro/mame, libretro/mame, cemu, cemu, cemu, ...
+#. TRANSLATION: libretro/mame, libretro/mame, libretro/pcsx2, cemu, cemu, ...
 msgctxt "game_options"
 msgid "Enabled"
 msgstr "Gaituta"
@@ -3997,23 +4003,23 @@ msgstr "Philips CD-i CD-ROM-ak"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "Tandy Radio Shack Color Computer cartridges"
-msgstr "Tandy Radio Shack Color Computer kartutxoak"
+msgid "Tandy Radio Shack Colour Computer cartridges"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "Tandy Radio Shack Color Computer disk images"
-msgstr "Tandy Radio Shack Color Computer disko irudiak"
+msgid "Tandy Radio Shack Colour Computer disk images"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "Select the model of Color Computer to emulate"
-msgstr "Aukeratu emulatu nahi den Color Computer modeloa"
+msgid "Select the model of Colour Computer to emulate"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
-msgid "COLOR COMPUTER MODEL"
-msgstr "COLOR COMPUTER MODELOA"
+msgid "COLOUR COMPUTER MODEL"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4269,14 +4275,12 @@ msgctxt "game_options"
 msgid "Mac Harddisks"
 msgstr "Mac Disko gogorrak"
 
-#. TRANSLATION: libretro/mame, mame/vitaquake3
+#. TRANSLATION: libretro/mame
 msgctxt "game_options"
 msgid ""
 "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
-"Color)"
+"Colour)"
 msgstr ""
-"Aukeratu Mac modeloa (Mac Plus gomendatzen da Txuri&Beltzerako, Mac LC 3 "
-"Koloredunerako)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4523,10 +4527,10 @@ msgctxt "game_options"
 msgid "CONTROL MAPPING"
 msgstr "KONTROLATZAILE MAPEOA"
 
-#. TRANSLATION: libretro/mame078plus, yabasanshiro, yabasanshiro
+#. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
-msgid "Analog"
-msgstr "Analogoa"
+msgid "Analogue"
+msgstr ""
 
 #. TRANSLATION: libretro/mame078plus, yabasanshiro, yabasanshiro
 msgctxt "game_options"
@@ -4652,8 +4656,8 @@ msgstr "1+2 Portuak"
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/pcsx_rearmed
 msgctxt "game_options"
-msgid "Analog Controller"
-msgstr "Kontrolatzaile Analogikoa"
+msgid "Analogue Controller"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -4662,8 +4666,8 @@ msgstr "DualShock Kontrolatzailea"
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/mednafen_psx
 msgctxt "game_options"
-msgid "Analog Joystick (Flystick)"
-msgstr "Joystick Analogikoa (Flystick)"
+msgid "Analogue Joystick (Flystick)"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_supergrafx, libretro/pce, libretro/pce_fast, libretro/pcfx
 msgctxt "game_options"
@@ -4712,8 +4716,8 @@ msgstr "EGUZKO SENSORE MAILA"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
-msgid "TEAM COLOR MODE"
-msgstr "TALDE KOLORE MODUA"
+msgid "TEAM COLOUR MODE"
+msgstr ""
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -4960,8 +4964,8 @@ msgstr "4 KONTROLATZAILEA"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
-msgid "Emulate a pak in the controller expansion port."
-msgstr "Emulatu pak-a kontrolatzailearen hedapen portuan"
+msgid "Emulate a Pak in the controller expansion port."
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
@@ -5550,6 +5554,16 @@ msgctxt "game_options"
 msgid "PCE Mouse"
 msgstr "PCE Xagua"
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "Skip the bios boot logo, may cause default language issues."
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "BIOS FAST BOOT"
+msgstr ""
+
 #. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar, virtualjaguar
 msgctxt "game_options"
 msgid "Off is safer, On for specific games."
@@ -5592,8 +5606,8 @@ msgstr "Diablo Musika konponketa"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
-msgid "Lunar Ignore Brightness Color Fix"
-msgstr "Lunar Argitasun koloreari kasurik ez egin Konponketa"
+msgid "Lunar Ignore Brightness Colour Fix"
+msgstr ""
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -5624,6 +5638,11 @@ msgstr "LCD FILTROA"
 msgctxt "game_options"
 msgid "LCD GHOSTING EFFECTS"
 msgstr "LCD GHOSTING EFEKTUAK"
+
+#. TRANSLATION: libretro/potator, libretro/sameboy
+msgctxt "game_options"
+msgid "COLOUR PALETTE"
+msgstr ""
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -6083,7 +6102,7 @@ msgstr "TEKLATU ZEHARKATEA"
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
-msgid "Hardcoded keymap to joyport mapping for Keyrah hardware."
+msgid "Hardcoded keymap to joy port mapping for Keyrah hardware."
 msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
@@ -6400,7 +6419,7 @@ msgstr "EMULATU PCG-8100"
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
-msgid "Select the color palette to use"
+msgid "Select the colour palette to use"
 msgstr ""
 
 #. TRANSLATION: libretro/sameboy
@@ -6425,7 +6444,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
-msgid "Simulate LCD color inaccuracy"
+msgid "Simulate LCD colour inaccuracy"
 msgstr ""
 
 #. TRANSLATION: libretro/sameboy
@@ -6445,7 +6464,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
-msgid "Correct Color Curves"
+msgid "Correct Colour Curves"
 msgstr ""
 
 #. TRANSLATION: libretro/sameboy
@@ -6785,8 +6804,8 @@ msgstr "Gampad Klasikoa Alt"
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
-msgid "COLOR PALETTE (2D)"
-msgstr "KOLORE PALETA (2D)"
+msgid "COLOUR PALETTE (2D)"
+msgstr ""
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
@@ -6825,8 +6844,8 @@ msgstr "beltz/horia"
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
-msgid "Use your physical anaglypth 3D glasses!"
-msgstr "Erabili zure anaglypht 3D betaurreko fisikoak!"
+msgid "Use your physical anaglyph 3D glasses!"
+msgstr ""
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
@@ -6860,13 +6879,13 @@ msgstr "horia/urdina"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
-msgid "Add color to Game Boy games."
-msgstr "Gehitu kolorea Game Boy jokuei"
+msgid "Add colour to Game Boy games."
+msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
-msgid "GB COLORIZATION"
-msgstr "GB KOLORIZAZIOA"
+msgid "GB COLOURISATION"
+msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -6910,8 +6929,8 @@ msgstr "amets arrosak"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
-msgid "weird colors"
-msgstr "kolore arraroak"
+msgid "weird colours"
+msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -6987,6 +7006,11 @@ msgstr "C64 Games System PAL"
 msgctxt "game_options"
 msgid "C64 Japanese NTSC"
 msgstr "C64 Japanese NTSC"
+
+#. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128
+msgctxt "game_options"
+msgid "community-colours"
+msgstr ""
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -7549,12 +7573,12 @@ msgstr "KENDU TARTEKATUTAKO MARKO ARTEFAKTOAK"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
-msgid "Centers the image screen. Disabled when using Auto Crop. AUTO = Full."
+msgid "Centres the image screen. Disabled when using Auto Crop. AUTO = Full."
 msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
-msgid "IMAGE CENTERING"
+msgid "IMAGE CENTRING"
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -7675,8 +7699,8 @@ msgstr "GamePad + 4 Pro Kontrolatzailea"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
-msgid "GamePad + 4 Sideway Wiimote"
-msgstr "GamePad + 4 Alboratutako Wiimote"
+msgid "GamePad + 4 Sideway Wii Remote"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7685,8 +7709,8 @@ msgstr "5 Pro Kontrolatzailea"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
-msgid "5 Sideway Wiimote"
-msgstr "5 Alborako Wiimote"
+msgid "5 Sideway Wii Remote"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -8128,11 +8152,9 @@ msgstr "PANTAILA"
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid ""
-"Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
+"Enable GameCube boot animation and BIOS access (requires IPL.bin BIOS in "
 "appropriate user directory)."
 msgstr ""
-"Gaitu Gamecube abio animazioa eta BIOS atzitzea (IPL.bin BIOS behar du "
-"erabiltzaile direktorio egokian)"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
@@ -8141,8 +8163,8 @@ msgstr "GAITU ABIO ANIMAZIOA"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Map your controller to an emulated Wiimote."
-msgstr "Mapetau zure kontrolatzailea emulatutako Wiimote-ra."
+msgid "Map your controller to an emulated Wii Remote."
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, dolphin/vitaquake3, ...
 msgctxt "game_options"
@@ -8151,13 +8173,13 @@ msgstr "KONTROLATZAILEA"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "EMULATE WIIMOTE"
-msgstr "EMULATU WIIMOTE.A"
+msgid "EMULATE WII REMOTE"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
-msgstr "NEURRIRATU EMULATUTAKO WIIMOTE & GAMEPAD-A"
+msgid "CUSTOMIZE EMULATED WII REMOTE & GAMEPAD"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -8171,28 +8193,28 @@ msgstr "Pro Kontrolatzaile Klasikoa"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Wiimote Sideway"
-msgstr "Wiimote Alboratua"
+msgid "Wii Remote Sideway"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Wiimote Sideway + Swing"
-msgstr "Wiimote Alboratua + Swing-a"
+msgid "Wii Remote Sideway + Swing"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Wiimote Sideway + Tilt"
-msgstr "Wiimote Alboratua + inklinatzea"
+msgid "Wii Remote Sideway + Tilt"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Wiimote Sideway + Nunchuk"
-msgstr "Wiimote Alboratua + Nunchuk"
+msgid "Wii Remote Sideway + Nunchuk"
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
-msgstr "Emulatu Wiimote erakuslea DS4-ren giroskopioarekin."
+msgid "Emulate the Wii Remote pointer with a DS4's gyroscope."
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
@@ -8201,13 +8223,13 @@ msgstr "DUALSHOCK MUGIMENDU KONTROLA"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
-msgid "Emulate the Wiimote pointer with a mouse."
-msgstr "Emulatu Wiimote erakuslea xaguarekin"
+msgid "Emulate the Wii Remote pointer with a mouse."
+msgstr ""
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
-msgid "MOUSE AS WIIMOTE POINTER"
-msgstr "XAGUA WIIMOTE ERAKUSLE BEZALA"
+msgid "MOUSE AS WII REMOTE POINTER"
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -8453,8 +8475,8 @@ msgstr "VBI SALTATU"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
-msgid "Set joystick deadzone."
-msgstr "Ezarri joystick-aren hilzona"
+msgid "Set joystick dead zone."
+msgstr ""
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin, mupen64plus, ...
 msgctxt "game_options"
@@ -8554,8 +8576,8 @@ msgstr "DESGAITU PANTAILAN AGERTZEN DIREN MEZUAK"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Determines the speed and the runahead behaviour of the system."
-msgstr "Sistemako exekuzioAurratze portaeraren abiadura zehazten du."
+msgid "Determines the speed and the run ahead behaviour of the system."
+msgstr ""
 
 #. TRANSLATION: duckstation, duckstation, duckstation
 msgctxt "game_options"
@@ -8798,8 +8820,8 @@ msgstr "PS1 Kontrolatzaile digitala"
 
 #. TRANSLATION: duckstation, duckstation
 msgctxt "game_options"
-msgid "PS1 Analog Joystick"
-msgstr "PS1 Joystick Analogikoa"
+msgid "PS1 Analogue Joystick"
+msgstr ""
 
 #. TRANSLATION: duckstation, duckstation
 msgctxt "game_options"
@@ -8990,7 +9012,7 @@ msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "SOINU PROZESADORE DIGITALA"
 
-#. TRANSLATION: flycast/vitaquake3, flycast, virtualjaguar
+#. TRANSLATION: flycast/vitaquake3, virtualjaguar
 msgctxt "game_options"
 msgid "Disbaled (Default)"
 msgstr "Desgaituta (Defektuz)"
@@ -9051,6 +9073,12 @@ msgid "Rotate the screen with the emulator."
 msgstr "Biratu pantaila emulatzailearekin."
 
 #. TRANSLATION: flycast
+msgctxt "game_options"
+msgid ""
+"Improves clarity of distant textures when anisotropic filtering is enabled."
+msgstr ""
+
+#. TRANSLATION: flycast
 #, c-format
 msgctxt "game_options"
 msgid "Fastest BIOS but not 100% compatible."
@@ -9063,8 +9091,8 @@ msgstr ""
 
 #. TRANSLATION: fpinball
 msgctxt "game_options"
-msgid "Allow mapping Future Pinabll with Pad to Keyboard."
-msgstr "Onartu mapeoa Future Pinball-en Pad-etik Teklatura."
+msgid "Allow mapping Future Pinball with Pad to Keyboard."
+msgstr ""
 
 #. TRANSLATION: fpinball
 msgctxt "game_options"
@@ -9555,11 +9583,9 @@ msgstr "trilinearra"
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid ""
-"Enhancement. Improves clarity of distant textures when mip-mapping is "
-"enabled."
+"Enhancement. Improves clarity of distant textures when anisotropic filtering "
+"is enabled."
 msgstr ""
-"Hobekuntza. Urruneko testuren argitasuna hobetzen du, mip-mapping-a gaituta "
-"dagoenean."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -9632,8 +9658,8 @@ msgstr "Gaitu"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
-msgid "Set the sensitivity of the joystick analog sticks."
-msgstr "Ezarri joystick-aren stick analogikoen sentikortasuna"
+msgid "Set the sensitivity of the joystick analogue sticks."
+msgstr ""
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
@@ -9644,11 +9670,6 @@ msgstr "SENTIKORTASUNA"
 msgctxt "game_options"
 msgid "100% (Default)"
 msgstr "%100 (Defektuz)"
-
-#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
-msgctxt "game_options"
-msgid "Set the deadzone of the joystick analog sticks."
-msgstr "Ezarri hildako zona joystick-eko stick analogikoak"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -9667,10 +9688,8 @@ msgstr "Arrunta 2x"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Display on screen information like savestate, config warning etc..."
+msgid "Display on screen information like save state, config warning etc..."
 msgstr ""
-"Erakutsi pantaila informazioan gordetze egoerak bezala, konfigurazioa, "
-"oharrak, etabar..."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9788,8 +9807,8 @@ msgstr "GAITU PANTAILA ZABAL ADABAKIAK"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
-msgid "Enable to improve bluriness."
-msgstr "Gailtu lainotze hobetzea"
+msgid "Enable to improve blurriness."
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9954,10 +9973,8 @@ msgstr "Trilinearra (Behartua)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid ""
-"Reduces banding between colours and improves the preceived colour depth."
+"Reduces banding between colours and improves the perceived colour depth."
 msgstr ""
-"Bandak sortzea gutxitzen du kolore artean eta antzemandako kolore sakonera "
-"hobetzen du."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -10124,10 +10141,9 @@ msgstr "TIME CRISIS LAINO HACK-A"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid ""
-"Skip buffer disables auto frameskip and renders at display output resolution."
+"Skip buffer disables auto frame skip and renders at display output "
+"resolution."
 msgstr ""
-"Buffer saltoa, fotograma salto automatikoa desgaitzen du eta irteerako "
-"pantaila resoluzioan renderizatzen du."
 
 #. TRANSLATION: ppsspp, thextech
 msgctxt "game_options"
@@ -10151,9 +10167,8 @@ msgstr "8x 4K (3840x2176)"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "Automatically reduce frameskip if the system has spare overhead."
+msgid "Automatically reduce frame skip if the system has spare overhead."
 msgstr ""
-"Automatikoki gutxitu fotograma saltoak sistemak soberan baditu baliabideak."
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -10439,10 +10454,9 @@ msgstr "RENDERIZAZIOA"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "Most games already have an internal framelimit. Minor performance cost."
+msgid ""
+"Most games already have an internal frame limit. Minor performance cost."
 msgstr ""
-"Joko gehienek berez dute barne fotograma muga bat. Eraginkortasun kostu "
-"arbuiagarria."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10585,16 +10599,15 @@ msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
-msgid "WRITE COLOR BUFFERS"
-msgstr "IDATZI KOLORE BUFFER-AK"
+msgid "WRITE COLOUR BUFFERS"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
-"Straict API specification. Can resolve rare cases of missing graphics and "
+"Strict API specification. Can resolve rare cases of missing graphics and "
 "flickering."
 msgstr ""
-"API espezifikazio estriktoa. Grafikoen falta eta dardarak konpondu ditzake"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10652,11 +10665,9 @@ msgstr "HARI ANITZEKO RSX-A"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
-"Stream texture to GPU in parrallel. Can improve performance on more powerful "
+"Stream texture to GPU in parallel. Can improve performance on more powerful "
 "GPU's."
 msgstr ""
-"GPU-ra testurak jario paraleloetan bidali. Eraginkortasuna hobetu dezake GPU "
-"ahaltsuagoetan."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10967,8 +10978,8 @@ msgstr "Erakuste azalera betetzeko zabaltzen du irteera."
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
-msgid "Center (Default)"
-msgstr "Zentratu (Defektuz)"
+msgid "Centre (Default)"
+msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -11020,17 +11031,17 @@ msgctxt "game_options"
 msgid "Chinese (Mandarin)"
 msgstr "Txinatarra (Mandarin-a)"
 
-#. TRANSLATION: scummvm, xenia, xenia-canary
+#. TRANSLATION: scummvm, etlegacy, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Swedish"
 msgstr "Suediarra"
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, etlegacy
 msgctxt "game_options"
 msgid "Hebrew"
 msgstr "Hebrearra"
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: scummvm, etlegacy
 msgctxt "game_options"
 msgid "Czech"
 msgstr "Txekiera"
@@ -11047,8 +11058,8 @@ msgstr "FROGA JOKOA"
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
-msgid "Needed by some games that use special unicode characters."
-msgstr "Unicode karaktere bereziak dituzten joku batzuk behar dute,"
+msgid "Needed by some games that use special Unicode characters."
+msgstr ""
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
@@ -11090,12 +11101,12 @@ msgctxt "game_options"
 msgid "Chinese (Traditional) [Big5]"
 msgstr "Txinatarra (Tradizionala) [Big5]"
 
-#. TRANSLATION: easyrpg
+#. TRANSLATION: easyrpg, etlegacy
 msgctxt "game_options"
 msgid "Greek"
 msgstr "Greziarra"
 
-#. TRANSLATION: easyrpg, xenia, xenia-canary
+#. TRANSLATION: easyrpg, etlegacy, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Turkish"
 msgstr "Turkiarra"
@@ -11129,9 +11140,8 @@ msgstr "4:3 (Defektuz)"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
-msgid "Enable auto frameskipping for performance on lower-end systems."
+msgid "Enable auto frame skipping for performance on lower-end systems."
 msgstr ""
-"Gaitu fotograma saltatze automatikoa eraginkortasunerako sistema eskaxetan"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -11431,6 +11441,15 @@ msgstr "ERABILTZAILE DISKOA"
 
 #. TRANSLATION: mame/vitaquake3
 msgctxt "game_options"
+msgid ""
+"Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
+"Color)"
+msgstr ""
+"Aukeratu Mac modeloa (Mac Plus gomendatzen da Txuri&Beltzerako, Mac LC 3 "
+"Koloredunerako)"
+
+#. TRANSLATION: mame/vitaquake3
+msgctxt "game_options"
 msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD, Image Reader)"
 msgstr "Mac IIx (2Mb RAM, Colorea, 2 HD Floppies/CD/HDD, Irudi irakurlea)"
 
@@ -11462,8 +11481,8 @@ msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
-msgid "BGFX for post-processing, accel/opengl for raw image."
-msgstr "BGFX post-prozesatzerako, azeleratu/opengl irudi gordinentzat."
+msgid "BGFX for post-processing, Accel/OpenGL for raw image."
+msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -11517,8 +11536,8 @@ msgstr "CRT Geom Deluxe (Composite)"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
-msgid "Allows the use of switchres profiles if present."
-msgstr "Bereizmen aldaketa profilen erabilera ahalbideratzen du badaude."
+msgid "Allows the use of SwitchRes profiles if present."
+msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -11829,11 +11848,9 @@ msgstr "FOTOGRAMA SALTATZE MODUA"
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid ""
-"When frameskip type is on automatic or manual, skip up to this many frames "
+"When frame skip type is on automatic or manual, skip up to this many frames "
 "consecutively."
 msgstr ""
-"Fotogramak saltatzean mota automatiko edo eskuzkoan dago, zenbaki "
-"honerarteko fotogramak saktatu bata bestearen atzetik."
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
@@ -12031,8 +12048,8 @@ msgstr "GAITU PANTAILA ZABALA"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
-msgid "Enable scanlines for roms that support it."
-msgstr "Gaitu eskanlerroak euskarria duten rom-entzat."
+msgid "Enable scanlines for games that support it."
+msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -12069,11 +12086,9 @@ msgstr ""
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid ""
-"Enables bilinear filtering on tilemaps. Looks good, but can cause some "
+"Enables bilinear filtering on tile maps. Looks good, but can cause some "
 "stretch artifacts."
 msgstr ""
-"Filtro bilinearra gaitzen du mosaiko mapetan. Ondo ikusten da, baino "
-"zabaltze artefaktoak sor ditzake."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -12094,8 +12109,8 @@ msgstr "BEHARTU KUDEAKETA"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
-msgid "Enables Direct3D Automip-map generation."
-msgstr "Gaitu Direct3D Automip-map generazioa."
+msgid "Enables Direct3D Auto mip-map generation."
+msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -12298,8 +12313,8 @@ msgstr "Taiwan"
 
 #. TRANSLATION: yuzu
 msgctxt "game_options"
-msgid "Choose your console timezone."
-msgstr "Aukeratu zure kontsolaren ordu eremua."
+msgid "Choose your console time zone."
+msgstr ""
 
 #. TRANSLATION: yuzu, ryujinx
 msgctxt "game_options"
@@ -12558,8 +12573,8 @@ msgstr "Ingelera Amerikarra"
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
-msgid "Choose your console UTC timezone."
-msgstr "Aukeratu zure kontsolaren UTC ordu eremua."
+msgid "Choose your console UTC time zone."
+msgstr ""
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
@@ -12693,7 +12708,7 @@ msgstr ""
 
 #. TRANSLATION: hurrican
 msgctxt "game_options"
-msgid "Play custom userlevel."
+msgid "Play custom user level."
 msgstr ""
 
 #. TRANSLATION: hurrican
@@ -12786,7 +12801,7 @@ msgctxt "game_options"
 msgid "GAME PLAY"
 msgstr ""
 
-#. TRANSLATION: awgl
+#. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "GAME DIFFICULTY"
 msgstr ""
@@ -12838,7 +12853,7 @@ msgstr ""
 
 #. TRANSLATION: awgl, bermuda
 msgctxt "game_options"
-msgid "Select fullscreen mode."
+msgid "Select full screen mode."
 msgstr ""
 
 #. TRANSLATION: awgl
@@ -13036,14 +13051,89 @@ msgctxt "game_options"
 msgid "START LEVEL"
 msgstr ""
 
-#. TRANSLATION: fallout1-ce, fallout2-ce
+#. TRANSLATION: etlegacy
 msgctxt "game_options"
-msgid "Choose the games difficulty."
+msgid "Afrikaans"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Albanian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Bulgarian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Catalan"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Danish"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Finnish"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Hungarian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Irish"
+msgstr ""
+
+#. TRANSLATION: etlegacy, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Norwegian"
+msgstr "Norwegiera"
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Punjabi"
+msgstr ""
+
+#. TRANSLATION: etlegacy, xenia, xenia-canary
+msgctxt "game_options"
+msgid "Polish"
+msgstr "Poloniera"
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Romanian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Serbian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Slovak"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Slovenian"
+msgstr ""
+
+#. TRANSLATION: etlegacy
+msgctxt "game_options"
+msgid "Ukrainian"
 msgstr ""
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
-msgid "GAME DIFFICULATY"
+msgid "Choose the games difficulty."
 msgstr ""
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
@@ -13053,7 +13143,7 @@ msgstr ""
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
-msgid "COMBAT DIFFICULATY"
+msgid "COMBAT DIFFICULTY"
 msgstr ""
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
@@ -13115,7 +13205,7 @@ msgctxt "game_options"
 msgid "Enhanced OpenGL"
 msgstr "OpenGL Hobetua"
 
-#. TRANSLATION: rtcw, theforceengine
+#. TRANSLATION: rtcw
 msgctxt "game_options"
 msgid "Set the desired maximum refresh rate when Vsync is off."
 msgstr ""
@@ -13260,6 +13350,11 @@ msgstr "800p"
 msgctxt "game_options"
 msgid "960p"
 msgstr "960p"
+
+#. TRANSLATION: theforceengine
+msgctxt "game_options"
+msgid "Set the desired maximum refresh rate when VSync is off."
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -13438,11 +13533,6 @@ msgstr "Vsync"
 
 #. TRANSLATION: virtualjaguar
 msgctxt "game_options"
-msgid "Skip (Default)"
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
 msgid "Enable the Digital Sound Processor."
 msgstr ""
 
@@ -13494,11 +13584,9 @@ msgstr "Anti-aliasing-a ortzdun ertzak leuntzeko teknika bat da."
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid ""
-"This option enables the ability to play Xbox Live Arcacde games. May cause "
+"This option enables the ability to play Xbox Live Arcade games. May cause "
 "compatibility issues with non-XBLA games."
 msgstr ""
-"Aukera honek Xbox Live Arcade jokuetan jolastea gaitzen du. XBLA erabiltzen "
-"ez duten jokuekin arazoak sor ditzake."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -13542,13 +13630,23 @@ msgstr "Desgaitu UI promtp mezuak"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
-msgid "Polish"
-msgstr "Poloniera"
+msgid "Select which version of wine to use"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
-msgid "Norwegian"
-msgstr "Norwegiera"
+msgid "WINE EMULATOR"
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
+msgid "WINE NATIVE"
+msgstr ""
+
+#. TRANSLATION: xenia, xenia-canary
+msgctxt "game_options"
+msgid "PROTON"
+msgstr ""
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -13597,6 +13695,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the controller 1 user mode."
 msgstr ""
+
+#. TRANSLATION: yabasanshiro, yabasanshiro
+msgctxt "game_options"
+msgid "Analog"
+msgstr "Analogoa"
 
 #. TRANSLATION: yabasanshiro
 msgctxt "game_options"
@@ -13782,6 +13885,16 @@ msgstr "Ezker flipper-a"
 msgctxt "keys_files"
 msgid "Right flipper"
 msgstr "Eskuin flipper-a"
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Left magnasave"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Right magnasave"
+msgstr ""
 
 #. TRANSLATION: amigacd32.amiberry.keys, amiga500.amiberry.keys, amiga1200.amiberry.keys
 msgctxt "keys_files"
@@ -14093,6 +14206,11 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
+msgctxt "keys_files"
+msgid "Exit game"
+msgstr ""
+
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
 msgid "Move camera up"
@@ -14243,11 +14361,6 @@ msgctxt "keys_files"
 msgid "Manage Staff"
 msgstr "Kudeatu langileria"
 
-#. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
-msgctxt "keys_files"
-msgid "Exit game"
-msgstr ""
-
 #. TRANSLATION: fallout2-ce.keys, fallout1-ce.keys
 msgctxt "keys_files"
 msgid "Bring up menu"
@@ -14375,20 +14488,146 @@ msgstr "Gordetze Azkarra"
 #~ "onartzen badu"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
+#~ "libretro cores."
+#~ msgstr ""
+#~ "Jokatzen ari zaren bitartean , sakatu Hotkey + R1 pantailan agertzen den "
+#~ "testua itzultzeko. Libretro nukleoetan bakarrik."
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate Chroma 81 interface (colorization)."
+#~ msgstr "Emulatu Chroma 81 interfazea (koloreztatzea)."
+
+#~ msgctxt "game_options"
+#~ msgid "COLORIZATION"
+#~ msgstr "KOLOREZTATZEA"
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate NTSC quirks to show more colors in hi-res mode."
+#~ msgstr ""
+#~ "Emulatu NTSC bereizitasunak bereizmen altuko moduan kolore gehiago "
+#~ "erakusteko."
+
+#~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
 #~ msgstr "Eskuineko stick analogikoa bigarren joystick bezala tratatzen da."
+
+#~ msgctxt "game_options"
+#~ msgid "Useful for speedruns/glitches."
+#~ msgstr "Erabilgarria jokatze azkarretan/arazoak"
 
 #~ msgctxt "game_options"
 #~ msgid "Enables or disable on screen messages."
 #~ msgstr "Pantailako mezuak gaitu edo desgaitzen ditu"
 
 #~ msgctxt "game_options"
+#~ msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
+#~ msgstr "Emulatu Wiimote Sideway L2 Mugitu eta Nunchuck Eskuin stick-arekin "
+
+#~ msgctxt "game_options"
+#~ msgid "WiiMote"
+#~ msgstr "WiiMote"
+
+#~ msgctxt "game_options"
+#~ msgid "WiiMote Sideways"
+#~ msgstr "WiiMote Sideways"
+
+#~ msgctxt "game_options"
+#~ msgid "WiiMote + Nunchuk"
+#~ msgstr "WiiMote + Nunchuk"
+
+#~ msgctxt "game_options"
+#~ msgid "WiiMote + Classic Controller"
+#~ msgstr "WiiMote + Kontrolatzaile klasikoa"
+
+#~ msgctxt "game_options"
+#~ msgid "WiiMote + Classic Controller Pro"
+#~ msgstr "WiiMote + Pro Kontrolatzaile klasikoa"
+
+#~ msgctxt "game_options"
+#~ msgid "Real Wiimote"
+#~ msgstr "Benetazko Wiimote-a"
+
+#~ msgctxt "game_options"
+#~ msgid "internal (fixed 60fps)"
+#~ msgstr "barnekoa (ezarria 60fps)"
+
+#~ msgctxt "game_options"
+#~ msgid "internal (variable fps)"
+#~ msgstr "barnekoa (aldagarrial 60fps)"
+
+#~ msgctxt "game_options"
+#~ msgid "external (variable fps)"
+#~ msgstr "kanpokoa (aldagarria fps)"
+
+#~ msgctxt "game_options"
 #~ msgid "Optimized (auto)"
 #~ msgstr "Optimizatua (automatikoa)"
 
 #~ msgctxt "game_options"
+#~ msgid "Set the deadzone of the joystick analog sticks."
+#~ msgstr "Ezarri hildako zona joystick-eko stick analogikoak"
+
+#~ msgctxt "game_options"
 #~ msgid "ANALOG JOYSTICK DEADZONE"
 #~ msgstr "JOYSTICK ANALOGIKOAREN HILDAKO ZONA"
+
+#~ msgctxt "game_options"
+#~ msgid "Analog Controller (DualShock)"
+#~ msgstr "Kontrolatzaile Analogikoa (DualShock)"
+
+#~ msgctxt "game_options"
+#~ msgid "Analog Joystick"
+#~ msgstr "Joystick Analogikoa"
+
+#~ msgctxt "game_options"
+#~ msgid "Analog Stick"
+#~ msgstr "Stick analogikoa"
+
+#~ msgctxt "game_options"
+#~ msgid "Can be used to simulate colors of particular displays."
+#~ msgstr "Pantaila berezien koloreak simulatzeko erabili daiteke"
+
+#~ msgctxt "game_options"
+#~ msgid "COLOR FILTER"
+#~ msgstr "KOLORE FILTROA"
+
+#~ msgctxt "game_options"
+#~ msgid "Composite (color bleeding + artifacts)"
+#~ msgstr "Composite (kolore zabaltzea + artefaktoak)"
+
+#~ msgctxt "game_options"
+#~ msgid "SVideo (color bleeding only)"
+#~ msgstr "SVideo (kolore zabaltzea bakarrik)"
+
+#~ msgctxt "game_options"
+#~ msgid "PLAYER 1 CROSSHAIR COLOR"
+#~ msgstr "1. JOKALARIAREN JOPUNTU KOLOREA"
+
+#~ msgctxt "game_options"
+#~ msgid "PLAYER 2 CROSSHAIR COLOR"
+#~ msgstr "2. JOKALARIAREN JOPUNTU KOLOREA"
+
+#~ msgctxt "game_options"
+#~ msgid "PLAYER 3 CROSSHAIR COLOR"
+#~ msgstr "3. JOKALARIAREN JOPUNTU KOLOREA"
+
+#~ msgctxt "game_options"
+#~ msgid "PLAYER 4 CROSSHAIR COLOR"
+#~ msgstr "4. JOKALARIAREN JOPUNTU KOLOREA"
+
+#~ msgctxt "game_options"
+#~ msgid "Simulate LCD color inaccuracy."
+#~ msgstr "Simulatu LCD kolore zehatzasun eza."
+
+#~ msgctxt "game_options"
+#~ msgid "COLOR CORRECTION"
+#~ msgstr "KOLORE ZUZENKETA"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the color palette to use."
+#~ msgstr "Ezarri erabiliko den kolore paleta."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -14398,12 +14637,48 @@ msgstr "Gordetze Azkarra"
 #~ "erabiltzen ez den tokia bete."
 
 #~ msgctxt "game_options"
+#~ msgid "Tandy Radio Shack Color Computer cartridges"
+#~ msgstr "Tandy Radio Shack Color Computer kartutxoak"
+
+#~ msgctxt "game_options"
+#~ msgid "Tandy Radio Shack Color Computer disk images"
+#~ msgstr "Tandy Radio Shack Color Computer disko irudiak"
+
+#~ msgctxt "game_options"
+#~ msgid "Select the model of Color Computer to emulate"
+#~ msgstr "Aukeratu emulatu nahi den Color Computer modeloa"
+
+#~ msgctxt "game_options"
+#~ msgid "COLOR COMPUTER MODEL"
+#~ msgstr "COLOR COMPUTER MODELOA"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Install the image reader card to read disk image files (Mac IIx only). "
 #~ "Minimum 4MB ram size recommended."
 #~ msgstr ""
 #~ "Instalatu irudi irakurle txartela disko irudi fitxategiak irakurtzeko(Mac "
 #~ "IIx only). Gutxienez 4MB-ko ram tamaina gomendatzen da."
+
+#~ msgctxt "game_options"
+#~ msgid "Analog Controller"
+#~ msgstr "Kontrolatzaile Analogikoa"
+
+#~ msgctxt "game_options"
+#~ msgid "Analog Joystick (Flystick)"
+#~ msgstr "Joystick Analogikoa (Flystick)"
+
+#~ msgctxt "game_options"
+#~ msgid "TEAM COLOR MODE"
+#~ msgstr "TALDE KOLORE MODUA"
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate a pak in the controller expansion port."
+#~ msgstr "Emulatu pak-a kontrolatzailearen hedapen portuan"
+
+#~ msgctxt "game_options"
+#~ msgid "Lunar Ignore Brightness Color Fix"
+#~ msgstr "Lunar Argitasun koloreari kasurik ez egin Konponketa"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -14436,6 +14711,26 @@ msgstr "Gordetze Azkarra"
 #~ msgctxt "game_options"
 #~ msgid "ANALOG DEADZONE"
 #~ msgstr "HILZONA ANALOGIKOA"
+
+#~ msgctxt "game_options"
+#~ msgid "COLOR PALETTE (2D)"
+#~ msgstr "KOLORE PALETA (2D)"
+
+#~ msgctxt "game_options"
+#~ msgid "Use your physical anaglypth 3D glasses!"
+#~ msgstr "Erabili zure anaglypht 3D betaurreko fisikoak!"
+
+#~ msgctxt "game_options"
+#~ msgid "Add color to Game Boy games."
+#~ msgstr "Gehitu kolorea Game Boy jokuei"
+
+#~ msgctxt "game_options"
+#~ msgid "GB COLORIZATION"
+#~ msgstr "GB KOLORIZAZIOA"
+
+#~ msgctxt "game_options"
+#~ msgid "weird colors"
+#~ msgstr "kolore arraroak"
 
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
@@ -14474,6 +14769,74 @@ msgstr "Gordetze Azkarra"
 #~ msgstr "ALTUERA AUTOMATIKOA"
 
 #~ msgctxt "game_options"
+#~ msgid "GamePad + 4 Sideway Wiimote"
+#~ msgstr "GamePad + 4 Alboratutako Wiimote"
+
+#~ msgctxt "game_options"
+#~ msgid "5 Sideway Wiimote"
+#~ msgstr "5 Alborako Wiimote"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
+#~ "appropriate user directory)."
+#~ msgstr ""
+#~ "Gaitu Gamecube abio animazioa eta BIOS atzitzea (IPL.bin BIOS behar du "
+#~ "erabiltzaile direktorio egokian)"
+
+#~ msgctxt "game_options"
+#~ msgid "Map your controller to an emulated Wiimote."
+#~ msgstr "Mapetau zure kontrolatzailea emulatutako Wiimote-ra."
+
+#~ msgctxt "game_options"
+#~ msgid "EMULATE WIIMOTE"
+#~ msgstr "EMULATU WIIMOTE.A"
+
+#~ msgctxt "game_options"
+#~ msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
+#~ msgstr "NEURRIRATU EMULATUTAKO WIIMOTE & GAMEPAD-A"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway"
+#~ msgstr "Wiimote Alboratua"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway + Swing"
+#~ msgstr "Wiimote Alboratua + Swing-a"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway + Tilt"
+#~ msgstr "Wiimote Alboratua + inklinatzea"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway + Nunchuk"
+#~ msgstr "Wiimote Alboratua + Nunchuk"
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate the Wiimote pointer with a DS4's gyroscope."
+#~ msgstr "Emulatu Wiimote erakuslea DS4-ren giroskopioarekin."
+
+#~ msgctxt "game_options"
+#~ msgid "Emulate the Wiimote pointer with a mouse."
+#~ msgstr "Emulatu Wiimote erakuslea xaguarekin"
+
+#~ msgctxt "game_options"
+#~ msgid "MOUSE AS WIIMOTE POINTER"
+#~ msgstr "XAGUA WIIMOTE ERAKUSLE BEZALA"
+
+#~ msgctxt "game_options"
+#~ msgid "Set joystick deadzone."
+#~ msgstr "Ezarri joystick-aren hilzona"
+
+#~ msgctxt "game_options"
+#~ msgid "Determines the speed and the runahead behaviour of the system."
+#~ msgstr "Sistemako exekuzioAurratze portaeraren abiadura zehazten du."
+
+#~ msgctxt "game_options"
+#~ msgid "PS1 Analog Joystick"
+#~ msgstr "PS1 Joystick Analogikoa"
+
+#~ msgctxt "game_options"
 #~ msgid "Per pixel is the most accurate, but also the most demanding."
 #~ msgstr "Pixel bakoitzeko zehatzena da, baino gehien eskatzen duena ere."
 
@@ -14490,8 +14853,102 @@ msgstr "Gordetze Azkarra"
 #~ msgstr "Pixel bakoitzeko"
 
 #~ msgctxt "game_options"
+#~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
+#~ msgstr "Onartu mapeoa Future Pinball-en Pad-etik Teklatura."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enhancement. Improves clarity of distant textures when mip-mapping is "
+#~ "enabled."
+#~ msgstr ""
+#~ "Hobekuntza. Urruneko testuren argitasuna hobetzen du, mip-mapping-a "
+#~ "gaituta dagoenean."
+
+#~ msgctxt "game_options"
+#~ msgid "Set the sensitivity of the joystick analog sticks."
+#~ msgstr "Ezarri joystick-aren stick analogikoen sentikortasuna"
+
+#~ msgctxt "game_options"
+#~ msgid "Display on screen information like savestate, config warning etc..."
+#~ msgstr ""
+#~ "Erakutsi pantaila informazioan gordetze egoerak bezala, konfigurazioa, "
+#~ "oharrak, etabar..."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable to improve bluriness."
+#~ msgstr "Gailtu lainotze hobetzea"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Reduces banding between colours and improves the preceived colour depth."
+#~ msgstr ""
+#~ "Bandak sortzea gutxitzen du kolore artean eta antzemandako kolore "
+#~ "sakonera hobetzen du."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Skip buffer disables auto frameskip and renders at display output "
+#~ "resolution."
+#~ msgstr ""
+#~ "Buffer saltoa, fotograma salto automatikoa desgaitzen du eta irteerako "
+#~ "pantaila resoluzioan renderizatzen du."
+
+#~ msgctxt "game_options"
+#~ msgid "Automatically reduce frameskip if the system has spare overhead."
+#~ msgstr ""
+#~ "Automatikoki gutxitu fotograma saltoak sistemak soberan baditu "
+#~ "baliabideak."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Most games already have an internal framelimit. Minor performance cost."
+#~ msgstr ""
+#~ "Joko gehienek berez dute barne fotograma muga bat. Eraginkortasun kostu "
+#~ "arbuiagarria."
+
+#~ msgctxt "game_options"
+#~ msgid "WRITE COLOR BUFFERS"
+#~ msgstr "IDATZI KOLORE BUFFER-AK"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Straict API specification. Can resolve rare cases of missing graphics and "
+#~ "flickering."
+#~ msgstr ""
+#~ "API espezifikazio estriktoa. Grafikoen falta eta dardarak konpondu ditzake"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's."
+#~ msgstr ""
+#~ "GPU-ra testurak jario paraleloetan bidali. Eraginkortasuna hobetu dezake "
+#~ "GPU ahaltsuagoetan."
+
+#~ msgctxt "game_options"
 #~ msgid "Legacy Evdev"
 #~ msgstr "Evdev Legatua"
+
+#~ msgctxt "game_options"
+#~ msgid "Center (Default)"
+#~ msgstr "Zentratu (Defektuz)"
+
+#~ msgctxt "game_options"
+#~ msgid "Needed by some games that use special unicode characters."
+#~ msgstr "Unicode karaktere bereziak dituzten joku batzuk behar dute,"
+
+#~ msgctxt "game_options"
+#~ msgid "Enable auto frameskipping for performance on lower-end systems."
+#~ msgstr ""
+#~ "Gaitu fotograma saltatze automatikoa eraginkortasunerako sistema eskaxetan"
+
+#~ msgctxt "game_options"
+#~ msgid "BGFX for post-processing, accel/opengl for raw image."
+#~ msgstr "BGFX post-prozesatzerako, azeleratu/opengl irudi gordinentzat."
+
+#~ msgctxt "game_options"
+#~ msgid "Allows the use of switchres profiles if present."
+#~ msgstr "Bereizmen aldaketa profilen erabilera ahalbideratzen du badaude."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -14500,6 +14957,46 @@ msgstr "Gordetze Azkarra"
 #~ msgstr ""
 #~ "Gaitu modu hau NTFS biltegiratzean exekutatzean araorik baduzu (defektuz, "
 #~ "LinuxFS erabiltzea hobea da)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "When frameskip type is on automatic or manual, skip up to this many "
+#~ "frames consecutively."
+#~ msgstr ""
+#~ "Fotogramak saltatzean mota automatiko edo eskuzkoan dago, zenbaki "
+#~ "honerarteko fotogramak saktatu bata bestearen atzetik."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable scanlines for roms that support it."
+#~ msgstr "Gaitu eskanlerroak euskarria duten rom-entzat."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables bilinear filtering on tilemaps. Looks good, but can cause some "
+#~ "stretch artifacts."
+#~ msgstr ""
+#~ "Filtro bilinearra gaitzen du mosaiko mapetan. Ondo ikusten da, baino "
+#~ "zabaltze artefaktoak sor ditzake."
+
+#~ msgctxt "game_options"
+#~ msgid "Enables Direct3D Automip-map generation."
+#~ msgstr "Gaitu Direct3D Automip-map generazioa."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your console timezone."
+#~ msgstr "Aukeratu zure kontsolaren ordu eremua."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose your console UTC timezone."
+#~ msgstr "Aukeratu zure kontsolaren UTC ordu eremua."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "This option enables the ability to play Xbox Live Arcacde games. May "
+#~ "cause compatibility issues with non-XBLA games."
+#~ msgstr ""
+#~ "Aukera honek Xbox Live Arcade jokuetan jolastea gaitzen du. XBLA "
+#~ "erabiltzen ez duten jokuekin arazoak sor ditzake."
 
 #~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."

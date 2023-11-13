@@ -301,6 +301,9 @@ ep128emu:
 etekwar:
   emulator: etekwar
   core:     etekwar
+etlegacy:
+  emulator: etlegacy
+  core:     etlegacy
 exidy:
   emulator: libretro
   core:     mame078plus

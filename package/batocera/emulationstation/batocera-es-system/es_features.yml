@@ -135,7 +135,7 @@ shared:
     ai_service_enabled:
       group: GAME TRANSLATION
       prompt: ENABLE AI TRANSLATION SERVICE
-      description: During gameplay, press Hotkey + R1 to translate on-screen text. Only on libretro cores.
+      description: During gameplay, press Hotkey + R1 to translate on-screen text. Only on Libretro cores.
       submenu: AI GAME TRANSLATION
       preset: switch
     ai_target_lang:
@@ -381,8 +381,8 @@ libretro:
       shared: [autosave, rewind]
       cfeatures:
             81_chroma_81:
-                prompt:      COLORIZATION
-                description: Emulate Chroma 81 interface (colorization).
+                prompt:      COLORISATION
+                description: Emulate Chroma 81 interface (colourisation).
                 choices:
                     "Autodetect":  automatic
                     "Off":         disabled
@@ -423,7 +423,7 @@ libretro:
                             "On":      enabled
                     atari800_artifacting:
                         prompt:      HI-RES ARTIFACTING
-                        description: Emulate NTSC quirks to show more colors in hi-res mode.
+                        description: Emulate NTSC quirks to show more colours in hi-res mode.
                         choices:
                             "Off":     disabled
                             "On":      enabled
@@ -676,7 +676,7 @@ libretro:
             "On":  On
         mesen_ramstate:
           prompt:      DEFAULT POWER ON RAM STATE
-          description: Useful for speedruns/glitches.
+          description: Useful for speed runs / glitches.
           choices:
             "All 0s (Default)": All 0s (Default)
             "All 1s":           All 1s
@@ -892,50 +892,50 @@ libretro:
                     controller1_wii:
                         group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 1 TYPE
-                        description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
+                        description: Emulate a Wii Remote Sideway with L2 for Shake and Nunchuk on R-stick.
                         choices:
-                            "WiiMote":                           1
-                            "WiiMote Sideways":                  513
-                            "WiiMote + Nunchuk":                 769
-                            "WiiMote + Classic Controller":      1025
-                            "WiiMote + Classic Controller Pro":  1281
-                            "Real Wiimote":                      1536
+                            "Wii Remote":                           1
+                            "Wii Remote Sideways":                  513
+                            "Wii Remote + Nunchuk":                 769
+                            "Wii Remote + Classic Controller":      1025
+                            "Wii Remote + Classic Controller Pro":  1281
+                            "Real Wii Remote":                      1536
                             "GameCube Controller":               1281
                     controller2_wii:
                         group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 2 TYPE
-                        description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
+                        description: Emulate a Wii Remote Sideway with L2 for Shake and Nunchuk on R-stick.
                         choices:
-                            "WiiMote":                           1
-                            "WiiMote Sideways":                  513
-                            "WiiMote + Nunchuk":                 769
-                            "WiiMote + Classic Controller":      1025
-                            "WiiMote + Classic Controller Pro":  1281
-                            "Real Wiimote":                      1536
+                            "Wii Remote":                           1
+                            "Wii Remote Sideways":                  513
+                            "Wii Remote + Nunchuk":                 769
+                            "Wii Remote + Classic Controller":      1025
+                            "Wii Remote + Classic Controller Pro":  1281
+                            "Real Wii Remote":                      1536
                             "GameCube Controller":               1281
                     controller3_wii:
                         group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 3 TYPE
-                        description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
+                        description: Emulate a Wii Remote Sideway with L2 for Shake and Nunchuk on R-stick.
                         choices:
-                            "WiiMote":                           1
-                            "WiiMote Sideways":                  513
-                            "WiiMote + Nunchuk":                 769
-                            "WiiMote + Classic Controller":      1025
-                            "WiiMote + Classic Controller Pro":  1281
-                            "Real Wiimote":                      1536
+                            "Wii Remote":                           1
+                            "Wii Remote Sideways":                  513
+                            "Wii Remote + Nunchuk":                 769
+                            "Wii Remote + Classic Controller":      1025
+                            "Wii Remote + Classic Controller Pro":  1281
+                            "Real Wii Remote":                      1536
                             "GameCube Controller":               1281
                     controller4_wii:
                         group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 4 TYPE
-                        description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
+                        description: Emulate a Wii Remote Sideway with L2 for Shake and Nunchuk on R-stick.
                         choices:
-                            "WiiMote":                           1
-                            "WiiMote Sideways":                  513
-                            "WiiMote + Nunchuk":                 769
-                            "WiiMote + Classic Controller":      1025
-                            "WiiMote + Classic Controller Pro":  1281
-                            "Real Wiimote":                      1536
+                            "Wii Remote":                           1
+                            "Wii Remote Sideways":                  513
+                            "Wii Remote + Nunchuk":                 769
+                            "Wii Remote + Classic Controller":      1025
+                            "Wii Remote + Classic Controller Pro":  1281
+                            "Real Wii Remote":                      1536
                             "GameCube Controller":               1281
             wiiware:
                 cfeatures:
@@ -949,50 +949,50 @@ libretro:
                     controller1_wii:
                         group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 1 TYPE
-                        description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
+                        description: Emulate a Wii Remote Sideway with L2 for Shake and Nunchuk on R-stick.
                         choices:
-                            "WiiMote":                           1
-                            "WiiMote Sideways":                  513
-                            "WiiMote + Nunchuk":                 769
-                            "WiiMote + Classic Controller":      1025
-                            "WiiMote + Classic Controller Pro":  1281
-                            "Real Wiimote":                      1536
+                            "Wii Remote":                           1
+                            "Wii Remote Sideways":                  513
+                            "Wii Remote + Nunchuk":                 769
+                            "Wii Remote + Classic Controller":      1025
+                            "Wii Remote + Classic Controller Pro":  1281
+                            "Real Wii Remote":                      1536
                             "GameCube Controller":               1281
                     controller2_wii:
                         group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 2 TYPE
-                        description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
+                        description: Emulate a Wii Remote Sideway with L2 for Shake and Nunchuk on R-stick.
                         choices:
-                            "WiiMote":                           1
-                            "WiiMote Sideways":                  513
-                            "WiiMote + Nunchuk":                 769
-                            "WiiMote + Classic Controller":      1025
-                            "WiiMote + Classic Controller Pro":  1281
-                            "Real Wiimote":                      1536
+                            "Wii Remote":                           1
+                            "Wii Remote Sideways":                  513
+                            "Wii Remote + Nunchuk":                 769
+                            "Wii Remote + Classic Controller":      1025
+                            "Wii Remote + Classic Controller Pro":  1281
+                            "Real Wii Remote":                      1536
                             "GameCube Controller":               1281
                     controller3_wii:
                         group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 3 TYPE
-                        description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
+                        description: Emulate a Wii Remote Sideway with L2 for Shake and Nunchuk on R-stick.
                         choices:
-                            "WiiMote":                           1
-                            "WiiMote Sideways":                  513
-                            "WiiMote + Nunchuk":                 769
-                            "WiiMote + Classic Controller":      1025
-                            "WiiMote + Classic Controller Pro":  1281
-                            "Real Wiimote":                      1536
+                            "Wii Remote":                           1
+                            "Wii Remote Sideways":                  513
+                            "Wii Remote + Nunchuk":                 769
+                            "Wii Remote + Classic Controller":      1025
+                            "Wii Remote + Classic Controller Pro":  1281
+                            "Real Wii Remote":                      1536
                             "GameCube Controller":               1281
                     controller4_wii:
                         group: CONTROLLER SETTINGS
                         prompt:      CONTROLLER 4 TYPE
-                        description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
+                        description: Emulate a Wii Remote Sideway with L2 for Shake and Nunchuk on R-stick.
                         choices:
-                            "WiiMote":                           1
-                            "WiiMote Sideways":                  513
-                            "WiiMote + Nunchuk":                 769
-                            "WiiMote + Classic Controller":      1025
-                            "WiiMote + Classic Controller Pro":  1281
-                            "Real Wiimote":                      1536
+                            "Wii Remote":                           1
+                            "Wii Remote Sideways":                  513
+                            "Wii Remote + Nunchuk":                 769
+                            "Wii Remote + Classic Controller":      1025
+                            "Wii Remote + Classic Controller Pro":  1281
+                            "Real Wii Remote":                      1536
                             "GameCube Controller":               1281
     dosbox:
       features: [padtokeyboard]
@@ -1001,9 +1001,9 @@ libretro:
                 prompt:      CPU TIMING MODE (FPS)
                 description: Skip frames to improve performance, at the cost of choppy motion.
                 choices:
-                    "internal (fixed 60fps)":  internal_fixed
-                    "internal (variable fps)": internal_variable
-                    "external (variable fps)": external
+                    "Internal (fixed 60fps)":  internal_fixed
+                    "Internal (variable fps)": internal_variable
+                    "External (variable fps)": external
             filter:
                 prompt:      VIDEO FILTER
                 description: Apply a post-processing effect.
@@ -1152,7 +1152,7 @@ libretro:
             pure_joystick_analog_deadzone:
                 group: CONTROLLER SETTINGS
                 prompt:      ANALOGUE JOYSTICK DEADZONE
-                description: Set the deadzone of the joystick analogue sticks.
+                description: Set the dead zone of the joystick analogue sticks.
                 choices:
                     "0%":                  0
                     "5%":                  5
@@ -1293,8 +1293,8 @@ libretro:
                 choices:
                     "None":                          0
                     "Digital Controller (Gamepad)":  1
-                    "Analog Controller (DualShock)": 261
-                    "Analog Joystick":               517
+                    "Analogue Controller (DualShock)": 261
+                    "Analogue Joystick":               517
                     "NeGcon":                        773
                     "Namco GunCon":                  260
                     "PlayStation Mouse":             258
@@ -1305,8 +1305,8 @@ libretro:
                 choices:
                     "None":                          0
                     "Digital Controller (Gamepad)":  1
-                    "Analog Controller (DualShock)": 261
-                    "Analog Joystick":               517
+                    "Analogue Controller (DualShock)": 261
+                    "Analogue Joystick":               517
                     "NeGcon":                        773
                     "Namco GunCon":                  260
                     "PlayStation Mouse":             258
@@ -1383,8 +1383,8 @@ libretro:
                 choices:
                     "None":                          None
                     "Digital Controller":            1
-                    "Analog Controller (DualShock)": 5
-                    "Analog Stick":                  517
+                    "Analogue Controller (DualShock)": 5
+                    "Analogue Stick":                  517
                     "Namco GunCon":                  260
                     "PlayStation Mouse":             258
                     "NeGcon":                        773
@@ -1395,8 +1395,8 @@ libretro:
                 choices:
                     "None":                          None
                     "Digital Controller":            1
-                    "Analog Controller (DualShock)": 5
-                    "Analog Stick":                  517
+                    "Analogue Controller (DualShock)": 5
+                    "Analogue Stick":                  517
                     "Namco GunCon":                  260
                     "PlayStation Mouse":             258
                     "NeGcon":                        773
@@ -1487,8 +1487,8 @@ libretro:
                     "Vertical":             v
                     "Both":                 both
             fceumm_palette:
-                prompt:      COLOR FILTER
-                description: Can be used to simulate colors of particular displays.
+                prompt:      COLOUR FILTER
+                description: Can be used to simulate colours of particular displays.
                 choices:
                     "default":              default
                     "asqrealc":             asqrealc
@@ -1513,8 +1513,8 @@ libretro:
                 description: Core-powered video filter.
                 choices:
                     "Off":                                    disabled
-                    "Composite (color bleeding + artifacts)": composite
-                    "SVideo (color bleeding only)":           svideo
+                    "Composite (colour bleeding + artifacts)": composite
+                    "SVideo (colour bleeding only)":           svideo
                     "RGB (crisp image)":                      rgb
             fceumm_sndquality:
                 prompt:      SOUND QUALITY
@@ -1580,7 +1580,7 @@ libretro:
                     "12x (7680x5760)":   7680x5760
             reicast_lightgun1_crosshair:
                 group: LIGHT GUN
-                prompt:      PLAYER 1 CROSSHAIR COLOR
+                prompt:      PLAYER 1 CROSSHAIR COLOUR
                 choices:
                     Red: Red
                     Blue: Blue
@@ -1589,7 +1589,7 @@ libretro:
                     Disabled: disabled
             reicast_lightgun2_crosshair:
                 group: LIGHT GUN
-                prompt:      PLAYER 2 CROSSHAIR COLOR
+                prompt:      PLAYER 2 CROSSHAIR COLOUR
                 choices:
                     Red: Red
                     Blue: Blue
@@ -1598,7 +1598,7 @@ libretro:
                     Disabled: disabled
             reicast_lightgun3_crosshair:
                 group: LIGHT GUN
-                prompt:      PLAYER 3 CROSSHAIR COLOR
+                prompt:      PLAYER 3 CROSSHAIR COLOUR
                 choices:
                     Red: Red
                     Blue: Blue
@@ -1607,7 +1607,7 @@ libretro:
                     Disabled: disabled
             reicast_lightgun4_crosshair:
                 group: LIGHT GUN
-                prompt:      PLAYER 4 CROSSHAIR COLOR
+                prompt:      PLAYER 4 CROSSHAIR COLOUR
                 choices:
                     Red: Red
                     Blue: Blue
@@ -1725,19 +1725,19 @@ libretro:
                         prompt:      ANALOGUE TO D-PAD TYPE P1
                         description: Adds d-pad mapping to the analogue stick (Controller 1).
                         choices:
-                            "Left Analog (Auto)":    1
-                            "Right Analog (Auto)":   2
-                            "Left Analog (Forced)":  3
-                            "Right Analog (Forced)": 4
+                            "Left Analogue (Auto)":    1
+                            "Right Analogue (Auto)":   2
+                            "Left Analogue (Forced)":  3
+                            "Right Analogue (Forced)": 4
                     analog_to_dpad_atomiswave_p2:
                         group:       CONTROLLER SETTINGS
                         prompt:      ANALOGUE TO D-PAD TYPE P2
                         description: Adds d-pad mapping to the analogue stick (Controller 2).
                         choices:
-                            "Left Analog (Auto)":    1
-                            "Right Analog (Auto)":   2
-                            "Left Analog (Forced)":  3
-                            "Right Analog (Forced)": 4
+                            "Left Analogue (Auto)":    1
+                            "Right Analogue (Auto)":   2
+                            "Left Analogue (Forced)":  3
+                            "Right Analogue (Forced)": 4
             naomi:
                 cfeatures:
                     screen_rotation_naomi:
@@ -1751,19 +1751,19 @@ libretro:
                         prompt:      ANALOGUE TO D-PAD TYPE P1
                         description: Adds d-pad mapping to the analogue stick (Controller 1).
                         choices:
-                            "Left Analog (Auto)":    1
-                            "Right Analog (Auto)":   2
-                            "Left Analog (Forced)":  3
-                            "Right Analog (Forced)": 4
+                            "Left Analogue (Auto)":    1
+                            "Right Analogue (Auto)":   2
+                            "Left Analogue (Forced)":  3
+                            "Right Analogue (Forced)": 4
                     analog_to_dpad_naomi_p2:
                         group:       CONTROLLER SETTINGS
                         prompt:      ANALOGUE TO D-PAD TYPE P2
                         description: Adds d-pad mapping to the analogue stick (Controller 2).
                         choices:
-                            "Left Analog (Auto)":    1
-                            "Right Analog (Auto)":   2
-                            "Left Analog (Forced)":  3
-                            "Right Analog (Forced)": 4
+                            "Left Analogue (Auto)":    1
+                            "Right Analogue (Auto)":   2
+                            "Left Analogue (Forced)":  3
+                            "Right Analogue (Forced)": 4
             naomigd:
                 cfeatures:
                     screen_rotation_naomi:
@@ -1777,19 +1777,19 @@ libretro:
                         prompt:      ANALOGUE TO D-PAD TYPE P1
                         description: Adds d-pad mapping to the analogue stick (Controller 1).
                         choices:
-                            "Left Analog (Auto)":    1
-                            "Right Analog (Auto)":   2
-                            "Left Analog (Forced)":  3
-                            "Right Analog (Forced)": 4
+                            "Left Analogue (Auto)":    1
+                            "Right Analogue (Auto)":   2
+                            "Left Analogue (Forced)":  3
+                            "Right Analogue (Forced)": 4
                     analog_to_dpad_naomi_p2:
                         group:       CONTROLLER SETTINGS
                         prompt:      ANALOGUE TO D-PAD TYPE P2
                         description: Adds d-pad mapping to the analogue stick (Controller 2).
                         choices:
-                            "Left Analog (Auto)":    1
-                            "Right Analog (Auto)":   2
-                            "Left Analog (Forced)":  3
-                            "Right Analog (Forced)": 4
+                            "Left Analogue (Auto)":    1
+                            "Right Analogue (Auto)":   2
+                            "Left Analogue (Forced)":  3
+                            "Right Analogue (Forced)": 4
     flycast2021:
       features: [padtokeyboard, cheevos]
       shared: [autosave, use_guns]
@@ -1824,7 +1824,7 @@ libretro:
                     "12x (7680x5760)":   7680x5760
             reicast_lightgun1_crosshair:
                 group: LIGHT GUN
-                prompt:      Target color for player 1.
+                prompt:      Target colour for player 1.
                 choices:
                     Red: Red
                     Blue: Blue
@@ -1833,7 +1833,7 @@ libretro:
                     Disabled: disabled
             reicast_lightgun2_crosshair:
                 group: LIGHT GUN
-                prompt:      Target color for player 2.
+                prompt:      Target colour for player 2.
                 choices:
                     Red: Red
                     Blue: Blue
@@ -1842,7 +1842,7 @@ libretro:
                     Disabled: disabled
             reicast_lightgun3_crosshair:
                 group: LIGHT GUN
-                prompt:      Target color for player 3.
+                prompt:      Target colour for player 3.
                 choices:
                     Red: Red
                     Blue: Blue
@@ -1851,7 +1851,7 @@ libretro:
                     Disabled: disabled
             reicast_lightgun4_crosshair:
                 group: LIGHT GUN
-                prompt:      Target color for player 4.
+                prompt:      Target colour for player 4.
                 choices:
                     Red: Red
                     Blue: Blue
@@ -1866,7 +1866,7 @@ libretro:
                     "On":  enabled
             reicast_anisotropic_filtering:
                 prompt:      ANISOTROPIC FILTERING
-                description: Improves clarity of distant textures when mip-mapping is enabled.
+                description: Improves clarity of distant textures when mipmapping is enabled.
                 choices:
                     "Off": off
                     "2x":  2
@@ -1977,19 +1977,19 @@ libretro:
                         prompt:      ANALOGUE TO D-PAD TYPE P1
                         description: Adds d-pad mapping to the analogue stick (Controller 1).
                         choices:
-                            "Left Analog (Auto)":    1
-                            "Right Analog (Auto)":   2
-                            "Left Analog (Forced)":  3
-                            "Right Analog (Forced)": 4
+                            "Left Analogue (Auto)":    1
+                            "Right Analogue (Auto)":   2
+                            "Left Analogue (Forced)":  3
+                            "Right Analogue (Forced)": 4
                     analog_to_dpad_atomiswave_p2:
                         group:       CONTROLLER SETTINGS
                         prompt:      ANALOGUE TO D-PAD TYPE P2
                         description: Adds d-pad mapping to the analogue stick (Controller 2).
                         choices:
-                            "Left Analog (Auto)":    1
-                            "Right Analog (Auto)":   2
-                            "Left Analog (Forced)":  3
-                            "Right Analog (Forced)": 4
+                            "Left Analogue (Auto)":    1
+                            "Right Analogue (Auto)":   2
+                            "Left Analogue (Forced)":  3
+                            "Right Analogue (Forced)": 4
             naomi:
                 cfeatures:
                     screen_rotation_naomi:
@@ -2003,19 +2003,19 @@ libretro:
                         prompt:      ANALOGUE TO D-PAD TYPE P1
                         description: Adds d-pad mapping to the analogue stick (Controller 1).
                         choices:
-                            "Left Analog (Auto)":    1
-                            "Right Analog (Auto)":   2
-                            "Left Analog (Forced)":  3
-                            "Right Analog (Forced)": 4
+                            "Left Analogue (Auto)":    1
+                            "Right Analogue (Auto)":   2
+                            "Left Analogue (Forced)":  3
+                            "Right Analogue (Forced)": 4
                     analog_to_dpad_naomi_p2:
                         group:       CONTROLLER SETTINGS
                         prompt:      ANALOGUE TO D-PAD TYPE P2
                         description: Adds d-pad mapping to the analogue stick (Controller 2).
                         choices:
-                            "Left Analog (Auto)":    1
-                            "Right Analog (Auto)":   2
-                            "Left Analog (Forced)":  3
-                            "Right Analog (Forced)": 4
+                            "Left Analogue (Auto)":    1
+                            "Right Analogue (Auto)":   2
+                            "Left Analogue (Forced)":  3
+                            "Right Analogue (Forced)": 4
             naomigd:
                 cfeatures:
                     screen_rotation_naomi:
@@ -2029,19 +2029,19 @@ libretro:
                         prompt:      ANALOGUE TO D-PAD TYPE P1
                         description: Adds d-pad mapping to the analogue stick (Controller 1).
                         choices:
-                            "Left Analog (Auto)":    1
-                            "Right Analog (Auto)":   2
-                            "Left Analog (Forced)":  3
-                            "Right Analog (Forced)": 4
+                            "Left Analogue (Auto)":    1
+                            "Right Analogue (Auto)":   2
+                            "Left Analogue (Forced)":  3
+                            "Right Analogue (Forced)": 4
                     analog_to_dpad_naomi_p2:
                         group:       CONTROLLER SETTINGS
                         prompt:      ANALOGUE TO D-PAD TYPE P2
                         description: Adds d-pad mapping to the analogue stick (Controller 2).
                         choices:
-                            "Left Analog (Auto)":    1
-                            "Right Analog (Auto)":   2
-                            "Left Analog (Forced)":  3
-                            "Right Analog (Forced)": 4
+                            "Left Analogue (Auto)":    1
+                            "Right Analogue (Auto)":   2
+                            "Left Analogue (Forced)":  3
+                            "Right Analogue (Forced)": 4
     freeintv:
       features: [padtokeyboard, cheevos]
       shared: [autosave]
@@ -2132,16 +2132,16 @@ libretro:
             gbc:
                 cfeatures:
                     gbc_color_correction:
-                        prompt:      COLOR CORRECTION
-                        description: Simulate LCD color inaccuracy.
+                        prompt:      COLOUR CORRECTION
+                        description: Simulate LCD colour inaccuracy.
                         choices:
                             "Off":             disabled
                             "On":              always
             gb:
                 cfeatures:
                     gb_colorization:
-                        prompt:      COLORIZATION
-                        description: Set the color palette to use.
+                        prompt:      COLOURISATION
+                        description: Set the colour palette to use.
                         choices:
                             "Off":                              none
                             "GB - Smart Coloring":              GB - SmartColor
@@ -2229,9 +2229,9 @@ libretro:
                         description: Core-powered video filter.
                         choices:
                             "Off":                                    Off
-                            "Composite (color bleeding + artifacts)": composite
-                            "SVideo (color bleeding only)":           svideo
-                            "RGB (crisp image)":                      rgb
+                            "Composite (colour bleeding + artifacts)": composite
+                            "SVideo (colour bleeding only)":           svideo
+                            "RGB (crisp image)":                       rgb
                     gun_cursor_md:
                         group: LIGHT GUN
                         prompt:      SHOW LIGHT GUN CROSSHAIRS
@@ -2322,10 +2322,10 @@ libretro:
                         prompt:      BLARGG NTSC FILTER
                         description: Core-powered video filter.
                         choices:
-                            "Off":                                    Off
-                            "Composite (color bleeding + artifacts)": composite
-                            "SVideo (color bleeding only)":           svideo
-                            "RGB (crisp image)":                      rgb
+                            "Off":                                     Off
+                            "Composite (colour bleeding + artifacts)": composite
+                            "SVideo (colour bleeding only)":           svideo
+                            "RGB (crisp image)":                       rgb
                     ym2413:
                         prompt:      FM CHIP (YM2413)
                         description: Enhanced sound output support for compatible games.
@@ -3010,12 +3010,12 @@ libretro:
                       prompt:      SOFTWARE LIST
                       description: Use MAME software lists to identify ROM
                       choices:
-                          "Don't Use (Default)":                          none
-                          "Tandy Radio Shack Color Computer cartridges":  coco_cart
-                          "Tandy Radio Shack Color Computer disk images": coco_flop
+                          "Don't Use (Default)":                           none
+                          "Tandy Radio Shack Colour Computer cartridges":  coco_cart
+                          "Tandy Radio Shack Colour Computer disk images": coco_flop
                   altmodel:
-                      prompt:      COLOR COMPUTER MODEL
-                      description: Select the model of Color Computer to emulate
+                      prompt:      COLOUR COMPUTER MODEL
+                      description: Select the model of Colour Computer to emulate
                       choices:
                           "Color Computer":                    coco
                           "Color Computer 2":                  coco2
@@ -3334,7 +3334,7 @@ libretro:
                           "Mac Harddisks":                      mac_hdd
                   altmodel:
                       prompt:      MAC MODEL
-                      description: Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for Color)
+                      description: Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for Colour)
                       choices:
                           "Mac 128k (128kb RAM, 2 LD Floppies)":                         mac128k
                           "Mac 512k (512kb RAM, 2 LD Floppies)":                         mac512k
@@ -3735,7 +3735,7 @@ libretro:
                 group: CONTROLLER SETTINGS
                 prompt:      CONTROL MAPPING
                 choices:
-                    "Analog":       analog
+                    "Analogue":     analog
                     "Digital":      digital
             mame2003-plus_frameskip:
                 prompt:      FRAMESKIP
@@ -3874,9 +3874,9 @@ libretro:
                 choices:
                     #"None":                          0
                     "Digital Controller":            1
-                    "Analog Controller":             261
+                    "Analogue Controller":           261
                     "DualShock Controller":          517
-                    "Analog Joystick (Flystick)":    773
+                    "Analogue Joystick (Flystick)":  773
                     "Namco GunCon":                  260
                     "NeGcon":                        1029
                     #"Justifier":                     516
@@ -3888,9 +3888,9 @@ libretro:
                 choices:
                     #"None":                          0
                     "Digital Controller":            1
-                    "Analog Controller":             261
+                    "Analogue Controller":           261
                     "DualShock Controller":          517
-                    "Analog Joystick (Flystick)":    773
+                    "Analogue Joystick (Flystick)":  773
                     "Namco GunCon":                  260
                     "NeGcon":                        1029
                     #"Justifier":                     516
@@ -3937,8 +3937,8 @@ libretro:
                             "Off": OFF
                             "On":  ON
                     color_correction:
-                        prompt:      COLOR CORRECTION
-                        description: Simulate LCD color inaccuracy.
+                        prompt:      COLOUR CORRECTION
+                        description: Simulate LCD colour inaccuracy.
                         choices:
                             "Off": OFF
                             "On":  GBA
@@ -3951,8 +3951,8 @@ libretro:
                             "Off": OFF
                             "On":  ON
                     color_correction:
-                        prompt:      COLOR CORRECTION
-                        description: Simulate LCD color inaccuracy.
+                        prompt:      COLOUR CORRECTION
+                        description: Simulate LCD colour inaccuracy.
                         choices:
                             "Off": OFF
                             "On":  GBC
@@ -3993,7 +3993,7 @@ libretro:
       shared: [autosave, rewind]
       cfeatures:
             mrboom-aspect:
-                prompt:      TEAM COLOR MODE
+                prompt:      TEAM COLOUR MODE
                 choices:
                     "Selfie": Native
                     "Color":  Color
@@ -4138,7 +4138,7 @@ libretro:
             mupen64plus-pak1:
                 submenu:     CONTROLLER 1
                 prompt:      CONTROLLER PAK
-                description: Emulate a pak in the controller expansion port.
+                description: Emulate a Pak in the controller expansion port.
                 choices:
                     "Off":         none
                     "Memory Pak":  memory
@@ -4146,7 +4146,7 @@ libretro:
             mupen64plus-pak2:
                 submenu:     CONTROLLER 2
                 prompt:      CONTROLLER PAK
-                description: Emulate a pak in the controller expansion port.
+                description: Emulate a Pak in the controller expansion port.
                 choices:
                     "Off":         none
                     "Memory Pak":  memory
@@ -4154,7 +4154,7 @@ libretro:
             mupen64plus-pak3:
                 submenu:     CONTROLLER 3
                 prompt:      CONTROLLER PAK
-                description: Emulate a pak in the controller expansion port.
+                description: Emulate a Pak in the controller expansion port.
                 choices:
                     "Off":         none
                     "Memory Pak":  memory
@@ -4162,7 +4162,7 @@ libretro:
             mupen64plus-pak4:
                 submenu:     CONTROLLER 4
                 prompt:      CONTROLLER PAK
-                description: Emulate a pak in the controller expansion port.
+                description: Emulate a Pak in the controller expansion port.
                 choices:
                     "Off":         none
                     "Memory Pak":  memory
@@ -4231,8 +4231,8 @@ libretro:
                     "Vertical":             v
                     "Both":                 both
             nestopia_palette:
-                prompt:      COLOR FILTER
-                description: Can be used to simulate colors of particular displays.
+                prompt:      COLOUR FILTER
+                description: Can be used to simulate colours of particular displays.
                 choices:
                     "consumer":             consumer
                     "cxa2025as":            cxa2025as
@@ -4250,8 +4250,8 @@ libretro:
                 description: Core-powered video filter.
                 choices:
                     "Off":                                    disabled
-                    "Composite (color bleeding + artifacts)": composite
-                    "SVideo (color bleeding only)":           svideo
+                    "Composite (colour bleeding + artifacts)": composite
+                    "SVideo (colour bleeding only)":           svideo
                     "RGB (crisp image)":                      rgb
             nestopia_overclock:
                 prompt:      OVERCLOCK (UNSTABLE)
@@ -4624,7 +4624,7 @@ libretro:
             parallel-n64-pak1:
                 submenu:     CONTROLLER 1
                 prompt:      CONTROLLER PAK
-                description: Emulate a pak in the controller expansion port.
+                description: Emulate a Pak in the controller expansion port.
                 choices:
                     "Off":         none
                     "Memory Pak":  memory
@@ -4632,7 +4632,7 @@ libretro:
             parallel-n64-pak2:
                 submenu:     CONTROLLER 2
                 prompt:      CONTROLLER PAK
-                description: Emulate a pak in the controller expansion port.
+                description: Emulate a Pak in the controller expansion port.
                 choices:
                     "Off":         none
                     "Memory Pak":  memory
@@ -4640,7 +4640,7 @@ libretro:
             parallel-n64-pak3:
                 submenu:     CONTROLLER 3
                 prompt:      CONTROLLER PAK
-                description: Emulate a pak in the controller expansion port.
+                description: Emulate a Pak in the controller expansion port.
                 choices:
                     "Off":         none
                     "Memory Pak":  memory
@@ -4648,7 +4648,7 @@ libretro:
             parallel-n64-pak4:
                 submenu:     CONTROLLER 4
                 prompt:      CONTROLLER PAK
-                description: Emulate a pak in the controller expansion port.
+                description: Emulate a Pak in the controller expansion port.
                 choices:
                     "Off":         none
                     "Memory Pak":  memory
@@ -4695,6 +4695,14 @@ libretro:
                 choices:
                     "Off":        disabled
                     "On":         enabled
+    pcsx2:
+      cfeatures:
+            pcsx2_fast_boot:
+                prompt: BIOS FAST BOOT
+                description: Skip the bios boot logo, may cause default language issues.
+                choices:
+                    "Disabled": disabled
+                    "Enabled":  enabled
     pcsx_rearmed:
       features: [padtokeyboard, cheevos]
       shared: [autosave, use_guns]
@@ -4703,8 +4711,8 @@ libretro:
                 prompt:      SHOW BIOS BOOTLOGO
                 description: Off is safer, On for specific games.
                 choices:
-                    "Show":               enabled
-                    "Skip":               disabled
+                    "On":                enabled
+                    "Off":               disabled
             frameskip_pcsx:
                 prompt:      FRAMESKIP
                 description: Skip frames to improve performance, at the cost of choppy motion.
@@ -4730,7 +4738,7 @@ libretro:
                     "Chrono Chross Odd/Even Bit Hack":      Chrono_Chross
                     "Dark Forces Flat Tex Triangles Fix":   Dark_Forces
                     "Diablo Music Fix":                     Diablo_Music_Fix
-                    "Lunar Ignore Brightness Color Fix":    Lunar
+                    "Lunar Ignore Brightness Colour Fix":   Lunar
                     "InuYasha Sengoku Battle Fix":          InuYasha_Sengoku
                     "Pandemonium 2 Lazy Screen Update Fix": Pandemonium
                     "Parasite Eve 2/Vandal Hearts 1&2 Fix": Parasite_Eve
@@ -4741,7 +4749,7 @@ libretro:
                 choices:
                     #"None":                          0
                     "Digital Controller":            1
-                    "Analog Controller":             261
+                    "Analogue Controller":             261
                     "DualShock Controller":          517
                     "Namco GunCon":                  260
                     "NeGcon":                        773
@@ -4753,7 +4761,7 @@ libretro:
                 choices:
                     #"None":                          0
                     "Digital Controller":            1
-                    "Analog Controller":             261
+                    "Analogue Controller":             261
                     "DualShock Controller":          517
                     "Namco GunCon":                  260
                     "NeGcon":                        773
@@ -4810,7 +4818,7 @@ libretro:
       shared: [autosave, rewind]
       cfeatures:
             watara_palette:
-                prompt:      COLOR PALETTE
+                prompt:      COLOUR PALETTE
                 choices:
                      "Green - GameKing":               gameking
                      "GB - DMG":                       gb_dmg
@@ -5029,7 +5037,7 @@ libretro:
                     puae_keyrah_mapping:
                         group: CONTROLLER SETTINGS
                         prompt:      KEYRAH KEYPAD MAPPING
-                        description: Hardcoded keymap to joyport mapping for Keyrah hardware.
+                        description: Hardcoded keymap to joy port mapping for Keyrah hardware.
                         choices:
                             "Off":    disabled
                             "On":     enabled
@@ -5047,7 +5055,7 @@ libretro:
                         choices:
                             "Retropad":            1
                             "CD32 Pad":            517
-                            "Analog Joystick":     773
+                            "Analogue Joystick":     773
                             "Joystick":            261
                             "Keyboard":            259
                     controller2_puae:
@@ -5057,7 +5065,7 @@ libretro:
                         choices:
                             "Retropad":            1
                             "CD32 Pad":            517
-                            "Analog Joystick":     773
+                            "Analogue Joystick":     773
                             "Joystick":            261
                             "Keyboard":            259
                     puae_pinball_mode:
@@ -5092,7 +5100,7 @@ libretro:
                     puae_keyrah_mapping:
                         group: CONTROLLER SETTINGS
                         prompt:      KEYRAH KEYPAD MAPPING
-                        description: Hardcoded keymap to joyport mapping for Keyrah hardware.
+                        description: Hardcoded keymap to joy port mapping for Keyrah hardware.
                         choices:
                             "Off":    disabled
                             "On":     enabled
@@ -5110,7 +5118,7 @@ libretro:
                         choices:
                             "Retropad":            1
                             "CD32 Pad":            517
-                            "Analog Joystick":     773
+                            "Analogue Joystick":     773
                             "Joystick":            261
                             "Keyboard":            259
                     controller2_puae:
@@ -5120,7 +5128,7 @@ libretro:
                         choices:
                             "Retropad":            1
                             "CD32 Pad":            517
-                            "Analog Joystick":     773
+                            "Analogue Joystick":     773
                             "Joystick":            261
                             "Keyboard":            259
                     puae_pinball_mode:
@@ -5297,7 +5305,7 @@ libretro:
                     puae2021_keyrah_mapping:
                         group: CONTROLLER SETTINGS
                         prompt:      KEYRAH KEYPAD MAPPING
-                        description: Hardcoded keymap to joyport mapping for Keyrah hardware.
+                        description: Hardcoded keymap to joy port mapping for Keyrah hardware.
                         choices:
                             "Off":    disabled
                             "On":     enabled
@@ -5315,7 +5323,7 @@ libretro:
                         choices:
                             "Retropad":            1
                             "CD32 Pad":            517
-                            "Analog Joystick":     773
+                            "Analogue Joystick":     773
                             "Joystick":            261
                             "Keyboard":            259
                     controller2_puae2021:
@@ -5325,7 +5333,7 @@ libretro:
                         choices:
                             "Retropad":            1
                             "CD32 Pad":            517
-                            "Analog Joystick":     773
+                            "Analogue Joystick":     773
                             "Joystick":            261
                             "Keyboard":            259
                     puae2021_pinball_mode:
@@ -5360,7 +5368,7 @@ libretro:
                     puae2021_keyrah_mapping:
                         group: CONTROLLER SETTINGS
                         prompt:      KEYRAH KEYPAD MAPPING
-                        description: Hardcoded keymap to joyport mapping for Keyrah hardware.
+                        description: Hardcoded keymap to joy port mapping for Keyrah hardware.
                         choices:
                             "Off":    disabled
                             "On":     enabled
@@ -5378,7 +5386,7 @@ libretro:
                         choices:
                             "Retropad":            1
                             "CD32 Pad":            517
-                            "Analog Joystick":     773
+                            "Analogue Joystick":     773
                             "Joystick":            261
                             "Keyboard":            259
                     controller2_puae2021:
@@ -5388,7 +5396,7 @@ libretro:
                         choices:
                             "Retropad":            1
                             "CD32 Pad":            517
-                            "Analog Joystick":     773
+                            "Analogue Joystick":     773
                             "Joystick":            261
                             "Keyboard":            259
                     puae2021_pinball_mode:
@@ -5602,8 +5610,8 @@ libretro:
             gb:
                 cfeatures:
                     sameboy_gb_palette:
-                        prompt:      COLOR PALETTE
-                        description: Select the color palette to use
+                        prompt:      COLOUR PALETTE
+                        description: Select the colour palette to use
                         choices:
                             "Greyscale":                      greyscale
                             "Lime (Game Boy)":                lime
@@ -5612,14 +5620,14 @@ libretro:
             gbc:
                 cfeatures:
                     sameboy_gbc_color:
-                        prompt:      COLOR CORRECTION
-                        description: Simulate LCD color inaccuracy
+                        prompt:      COLOUR CORRECTION
+                        description: Simulate LCD colour inaccuracy
                         choices:
                             "Off":                            off
                             "Emulate Hardware":               emulate hardware
                             "Preserve Brightness":            preserve brightness
                             "Reduce Contrast":                reduce contrast
-                            "Correct Color Curves":           correct curves
+                            "Correct Colour Curves":          correct curves
                             "Harsh Reality (Low Contrast)":   harsh reality
             sgb:
                 cfeatures:
@@ -5887,7 +5895,7 @@ libretro:
       shared: [autosave, rewind]
       cfeatures:
             2d_color_mode:
-                prompt:      COLOR PALETTE (2D)
+                prompt:      COLOUR PALETTE (2D)
                 choices:
                     "original":            black & red
                     "black/white":         black & white
@@ -5899,7 +5907,7 @@ libretro:
                     "black/yellow":        black & yellow
             3d_color_mode:
                 prompt:      ANAGLYPH PRESET (3D)
-                description: Use your physical anaglypth 3D glasses!
+                description: Use your physical anaglyph 3D glasses!
                 choices:
                     "Off":                 disabled
                     "red/blue":            red & blue
@@ -5914,8 +5922,8 @@ libretro:
             gb:
                 cfeatures:
                     palettes:
-                        prompt:      GB COLORIZATION
-                        description: Add color to Game Boy games.
+                        prompt:      GB COLOURISATION
+                        description: Add colour to Game Boy games.
                         choices:
                             "original gameboy": original gameboy
                             "black and white":  black and white
@@ -5925,10 +5933,10 @@ libretro:
                             "green forest":     green forest
                             "hot desert":       hot desert
                             "pink dreams":      pink dreams
-                            "weird colors":     weird colors
+                            "weird colours":    weird colors
                     gbcoloroption_gb:
-                        prompt:      COLOR CORRECTION
-                        description: Simulate LCD color inaccuracy.
+                        prompt:      COLOUR CORRECTION
+                        description: Simulate LCD colour inaccuracy.
                         choices:
                             "Off":       disabled
                             "On":        enabled
@@ -5941,8 +5949,8 @@ libretro:
             gbc:
                 cfeatures:
                     gbcoloroption_gbc:
-                        prompt:      COLOR CORRECTION
-                        description: Simulate LCD color inaccuracy.
+                        prompt:      COLOUR CORRECTION
+                        description: Simulate LCD colour inaccuracy.
                         choices:
                             "Off":       disabled
                             "On":        enabled
@@ -6058,8 +6066,8 @@ libretro:
                     "C64 Games System PAL":     C64 GS PAL
                     "C64 Japanese NTSC":        C64 JAP NTSC
             vice_external_palette:
-                prompt:      COLOR FILTER
-                description: Can be used to simulate colors of particular displays.
+                prompt:      COLOUR FILTER
+                description: Can be used to simulate colours of particular displays.
                 choices:
                     "default":                  default
                     "colodore":                 colodore
@@ -6070,7 +6078,7 @@ libretro:
                     "c64hq":                    c64hq
                     "c64s":                     c64s
                     "ccs64":                    ccs64
-                    "community-colors":         community-colors
+                    "community-colours":         community-colors
                     "deekay":                   deekay
                     "frodo":                    frodo
                     "godot":                    godot
@@ -6152,8 +6160,8 @@ libretro:
                     "C64 Games System PAL":     C64 GS PAL
                     "C64 Japanese NTSC":        C64 JAP NTSC
             vice_external_palette:
-                prompt:      COLOR FILTER
-                description: Can be used to simulate colors of particular displays.
+                prompt:      COLOUR FILTER
+                description: Can be used to simulate colours of particular displays.
                 choices:
                     "default":                  default
                     "colodore":                 colodore
@@ -6164,7 +6172,7 @@ libretro:
                     "c64hq":                    c64hq
                     "c64s":                     c64s
                     "ccs64":                    ccs64
-                    "community-colors":         community-colors
+                    "community-colours":         community-colors
                     "deekay":                   deekay
                     "frodo":                    frodo
                     "godot":                    godot
@@ -6246,8 +6254,8 @@ libretro:
                     "C64 Games System PAL":     C64 GS PAL
                     "C64 Japanese NTSC":        C64 JAP NTSC
             vice_external_palette:
-                prompt:      COLOR FILTER
-                description: Can be used to simulate colors of particular displays.
+                prompt:      COLOUR FILTER
+                description: Can be used to simulate colours of particular displays.
                 choices:
                     "default":                  default
                     "colodore":                 colodore
@@ -6258,7 +6266,7 @@ libretro:
                     "c64hq":                    c64hq
                     "c64s":                     c64s
                     "ccs64":                    ccs64
-                    "community-colors":         community-colors
+                    "community-colours":         community-colors
                     "deekay":                   deekay
                     "frodo":                    frodo
                     "godot":                    godot
@@ -6329,8 +6337,8 @@ libretro:
                     "C128 DCR PAL":        C128 DCR PAL
                     "C128 DCR NTSC":       C128 DCR NTSC
             vice_external_palette:
-                prompt:      COLOR FILTER
-                description: Can be used to simulate colors of particular displays.
+                prompt:      COLOUR FILTER
+                description: Can be used to simulate colours of particular displays.
                 choices:
                     "default":                  default
                     "colodore":                 colodore
@@ -6341,7 +6349,7 @@ libretro:
                     "c64hq":                    c64hq
                     "c64s":                     c64s
                     "ccs64":                    ccs64
-                    "community-colors":         community-colors
+                    "community-colours":         community-colors
                     "deekay":                   deekay
                     "frodo":                    frodo
                     "godot":                    godot
@@ -6415,8 +6423,8 @@ libretro:
                     "V364 NTSC":            V364 NTSC
                     "232 NTSC":             232 NTSC
             vice_plus4_external_palette:
-                prompt:      COLOR FILTER
-                description: Can be used to simulate colors of particular displays.
+                prompt:      COLOUR FILTER
+                description: Can be used to simulate colours of particular displays.
                 choices:
                     "default":                  default
                     "colodore_ted":             colodore_ted
@@ -6488,8 +6496,8 @@ libretro:
                     "VIC20 NTSC":               VIC20 NTSC
                     "Super VIC (+16K) NTSC":    VIC21
             vice_vic20_external_palette:
-                prompt:      COLOR FILTER
-                description: Can be used to simulate colors of particular displays.
+                prompt:      COLOUR FILTER
+                description: Can be used to simulate colours of particular displays.
                 choices:
                     "default":                  default
                     "colodore_vic":             colodore_vic
@@ -6568,8 +6576,8 @@ libretro:
                     "8296":      8296
                     "SUPERPET":  SUPERPET
             vice_pet_external_palette:
-                prompt:      COLOR FILTER
-                description: Can be used to simulate colors of particular displays.
+                prompt:      COLOUR FILTER
+                description: Can be used to simulate colours of particular displays.
                 choices:
                     "default":       default
                     "green":         green
@@ -6641,8 +6649,8 @@ libretro:
                 prompt:      SHOW BIOS BOOTLOGO
                 description: Off is safer, On for specific games.
                 choices:
-                    "Show":       enabled
-                    "Skip":       disabled
+                    "On":       enabled
+                    "Off":       disabled
             doom_res_hack:
                 prompt:      DOOM RES HACK
                 description: Enable for Doom to run at its correct resolution.
@@ -6798,8 +6806,8 @@ amiberry:
                 "ON":                          enabled
                 "OFF":                         disabled
         amiberry_image_center:
-            prompt:      IMAGE CENTERING
-            description: Centers the image screen. Disabled when using Auto Crop. AUTO = Full.
+            prompt:      IMAGE CENTRING
+            description: Centres the image screen. Disabled when using Auto Crop. AUTO = Full.
             choices:
                 "FULL":                        all
                 "VERTICAL ONLY":               vertical
@@ -6854,7 +6862,7 @@ cannonball:
                 "Off": 0
                 "On":  1
 cemu:
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels]
   cfeatures:
         cemu_gfxbackend:
             prompt:      GRAPHICS API
@@ -6883,9 +6891,9 @@ cemu:
             description: Pro Controller required for games that require shake motions.
             choices:
                 "GamePad + 4 Pro Controller":  0
-                "GamePad + 4 Sideway Wiimote": 1
+                "GamePad + 4 Sideway Wii Remote": 1
                 "5 Pro Controller":            2
-                "5 Sideway Wiimote":           3
+                "5 Sideway Wii Remote":           3
                 "Wii U Classic Controller":    4
         cemu_console_language:
             group: ADVANCED OPTIONS
@@ -7151,7 +7159,7 @@ devilutionx:
   shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 dolphin:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels]
   cfeatures:
         dolphin_aspect_ratio:
             submenu: DISPLAY
@@ -7400,10 +7408,10 @@ dolphin:
         deadzone_1:
             submenu: CONTROLLER 1
             prompt: DEADZONE
-            description: Set joystick deadzone.
+            description: Set joystick dead zone.
             choices:
                 "0%":            0.0
-                "5% (Default)":  5.0        
+                "5% (Default)":  5.0
                 "10%":           10.0
                 "15%":           15.0
                 "20%":           20.0
@@ -7412,10 +7420,10 @@ dolphin:
         deadzone_2:
             submenu: CONTROLLER 2
             prompt: DEADZONE
-            description: Set joystick deadzone.
+            description: Set joystick dead zone.
             choices:
                 "0%":            0.0
-                "5% (Default)":  5.0        
+                "5% (Default)":  5.0
                 "10%":           10.0
                 "15%":           15.0
                 "20%":           20.0
@@ -7424,10 +7432,10 @@ dolphin:
         deadzone_3:
             submenu: CONTROLLER 3
             prompt: DEADZONE
-            description: Set joystick deadzone.
+            description: Set joystick dead zone.
             choices:
                 "0%":            0.0
-                "5% (Default)":  5.0        
+                "5% (Default)":  5.0
                 "10%":           10.0
                 "15%":           15.0
                 "20%":           20.0
@@ -7436,10 +7444,10 @@ dolphin:
         deadzone_4:
             submenu: CONTROLLER 4
             prompt: DEADZONE
-            description: Set joystick deadzone.
+            description: Set joystick dead zone.
             choices:
                 "0%":            0.0
-                "5% (Default)":  5.0        
+                "5% (Default)":  5.0
                 "10%":           10.0
                 "15%":           15.0
                 "20%":           20.0
@@ -7451,7 +7459,7 @@ dolphin:
             description: Set virtual joysticks gate size. Smaller increases sensitivity. Larger decreases it.
             choices:
                 "Smaller":          smaller
-                "Normal (Default)": normal        
+                "Normal (Default)": normal
                 "Larger":           larger
         jsgate_size_2:
             submenu: CONTROLLER 2
@@ -7459,7 +7467,7 @@ dolphin:
             description: Set virtual joysticks gate size. Smaller increases sensitivity. Larger decreases it.
             choices:
                 "Smaller":          smaller
-                "Normal (Default)": normal        
+                "Normal (Default)": normal
                 "Larger":           larger 
         jsgate_size_3:
             submenu: CONTROLLER 3
@@ -7467,7 +7475,7 @@ dolphin:
             description: Set virtual joysticks gate size. Smaller increases sensitivity. Larger decreases it.
             choices:
                 "Smaller":          smaller
-                "Normal (Default)": normal        
+                "Normal (Default)": normal
                 "Larger":           larger 
         jsgate_size_4:
             submenu: CONTROLLER 4
@@ -7475,7 +7483,7 @@ dolphin:
             description: Set virtual joysticks gate size. Smaller increases sensitivity. Larger decreases it.
             choices:
                 "Smaller":          smaller
-                "Normal (Default)": normal        
+                "Normal (Default)": normal
                 "Larger":           larger
         dplii:
             group: ADVANCED OPTIONS
@@ -7497,7 +7505,7 @@ dolphin:
                     "On":  1
             dolphin_SkipIPL:
                 prompt: ENABLE BOOT ANIMATION
-                description: Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in appropriate user directory).
+                description: Enable GameCube boot animation and BIOS access (requires IPL.bin BIOS in appropriate user directory).
                 choices:
                     "Off": 0
                     "On":  1
@@ -7513,34 +7521,34 @@ dolphin:
                     "16:9": 1
             emulatedwiimotes:
                 submenu: CONTROLLERS
-                prompt: EMULATE WIIMOTE
-                description: Map your controller to an emulated Wiimote.
+                prompt: EMULATE WII REMOTE
+                description: Map your controller to an emulated Wii Remote.
                 choices:
                     "Off": 0
                     "On":  1
             controller_mode:
                 submenu: CONTROLLERS
-                prompt: CUSTOMIZE EMULATED WIIMOTE & GAMEPAD
-                description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
+                prompt: CUSTOMIZE EMULATED WII REMOTE & GAMEPAD
+                description: Emulate a Wii Remote Sideway with L2 for Shake and Nunchuk on R-stick.
                 choices:
                     "Off":                       disabled
                     "Classic Controller":        cc
                     "Classic Controller Pro":    pro
-                    "Wiimote Sideway":           side
-                    "Wiimote Sideway + Swing":   is
-                    "Wiimote Sideway + Tilt":    it
-                    "Wiimote Sideway + Nunchuk": in
+                    "Wii Remote Sideway":           side
+                    "Wii Remote Sideway + Swing":   is
+                    "Wii Remote Sideway + Tilt":    it
+                    "Wii Remote Sideway + Nunchuk": in
             dsmotion:
                 submenu: CONTROLLERS
                 prompt: DUALSHOCK MOTION CONTROL
-                description: Emulate the Wiimote pointer with a DS4's gyroscope.
+                description: Emulate the Wii Remote pointer with a DS4's gyroscope.
                 choices:
                     "Off": 0
                     "On":  1
             mouseir:
                 submenu: CONTROLLERS
-                prompt: MOUSE AS WIIMOTE POINTER
-                description: Emulate the Wiimote pointer with a mouse.
+                prompt: MOUSE AS WII REMOTE POINTER
+                description: Emulate the Wii Remote pointer with a mouse.
                 choices:
                     "Off": 0
                     "On":  1
@@ -7562,22 +7570,22 @@ dolphin:
                     "16:9": 1
             emulatedwiimotes:
                 submenu: CONTROLLERS
-                prompt: EMULATE WIIMOTE
-                description: Map your controller to an emulated Wiimote.
+                prompt: EMULATE WII REMOTE
+                description: Map your controller to an emulated Wii Remote.
                 choices:
                     "Off": 0
                     "On":  1
             controller_mode:
                 submenu: CONTROLLERS
-                prompt: CUSTOMIZE EMULATED WIIMOTE & GAMEPAD
-                description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
+                prompt: CUSTOMIZE EMULATED WII REMOTE & GAMEPAD
+                description: Emulate a Wii Remote Sideway with L2 for Shake and Nunchuk on R-stick.
                 choices:
                     "Off":                       disabled
                     "Classic Controller":        cc
-                    "Wiimote Sideway":           side
-                    "Wiimote Sideway + Swing":   is
-                    "Wiimote Sideway + Tilt":    it
-                    "Wiimote Sideway + Nunchuk": in
+                    "Wii Remote Sideway":           side
+                    "Wii Remote Sideway + Swing":   is
+                    "Wii Remote Sideway + Tilt":    it
+                    "Wii Remote Sideway + Nunchuk": in
             dolphin-lightgun-hide-crosshair:
                 submenu: CONTROLLERS
                 group: LIGHT GUN
@@ -7702,7 +7710,7 @@ duckstation:
             submenu: EMULATION
             group: ADVANCED OPTIONS
             prompt: EMULATION SPEED
-            description: Determines the speed and the runahead behaviour of the system.
+            description: Determines the speed and the run ahead behaviour of the system.
             choices:
                 "Unlimited": "0"
                 "10%":       ".1"
@@ -7929,7 +7937,7 @@ duckstation:
             choices:
                 "Not Connected":          None
                 "PS1 Digital Controller": DigitalController
-                "PS1 Analog Joystick":    AnalogJoystick
+                "PS1 Analogue Joystick":    AnalogJoystick
                 "DualShock / Xbox Type":  AnalogController
                 "Namco GunCon (Rumble)":  NamcoGunCon
                 "PlayStation Mouse":      PlayStationMouse
@@ -7941,7 +7949,7 @@ duckstation:
             choices:
                 "Not Connected":          None
                 "PS1 Digital Controller": DigitalController
-                "PS1 Analog Joystick":    AnalogJoystick
+                "PS1 Analogue Joystick":    AnalogJoystick
                 "DualShock / Xbox Type":  AnalogController
                 "Namco GunCon (Rumble)":  NamcoGunCon
                 "PlayStation Mouse":      PlayStationMouse
@@ -8080,9 +8088,9 @@ flycast:
     flycast_anisotropic:
       group: VIDEO SETTINGS
       prompt:      ANISOTROPIC FILTERING
-      description: Improves clarity of distant textures when mip-mapping is enabled.
+      description: Improves clarity of distant textures when anisotropic filtering is enabled.
       choices:
-        "Disbaled (Default)": 1
+        "Disabled (Default)": 1
         "2x"                : 2
         "4x"                : 4
         "8x"                : 8
@@ -8178,7 +8186,7 @@ fpinball:
   cfeatures:
     fpcontroller:
       prompt: CONTROLLER CONFIGURATION
-      description: Allow mapping Future Pinabll with Pad to Keyboard.
+      description: Allow mapping Future Pinball with Pad to Keyboard.
       choices:
         "Disabled (Default)": false
         "Enabled":            true
@@ -8400,7 +8408,7 @@ moonlight:
                 "5.1": "5.1"
                 "7.1": "7.1"
 mupen64plus:
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels]
   cfeatures:
         mupen64plus_ratio:
             group: VIDEO SETTINGS
@@ -8444,7 +8452,7 @@ mupen64plus:
                 "trilinear":            3
         mupen64plus_Anisotropic:
             prompt:      ANISOTROPIC FILTERING
-            description: Enhancement. Improves clarity of distant textures when mip-mapping is enabled.
+            description: Enhancement. Improves clarity of distant textures when anisotropic filtering is enabled.
             choices:
                 "Off":                  0
                 "2x":                   2
@@ -8524,7 +8532,7 @@ mupen64plus:
         mupen64-sensitivity1:
             submenu: CONTROLLER 1
             prompt: SENSITIVITY
-            description: Set the sensitivity of the joystick analog sticks.
+            description: Set the sensitivity of the joystick analogue sticks.
             choices:
                 "50%": 50
                 "60%": 60
@@ -8540,7 +8548,7 @@ mupen64plus:
         mupen64-sensitivity2:
             submenu: CONTROLLER 2
             prompt: SENSITIVITY
-            description: Set the sensitivity of the joystick analog sticks.
+            description: Set the sensitivity of the joystick analogue sticks.
             choices:
                 "50%": 50
                 "60%": 60
@@ -8556,7 +8564,7 @@ mupen64plus:
         mupen64-sensitivity3:
             submenu: CONTROLLER 3
             prompt: SENSITIVITY
-            description: Set the sensitivity of the joystick analog sticks.
+            description: Set the sensitivity of the joystick analogue sticks.
             choices:
                 "50%": 50
                 "60%": 60
@@ -8572,7 +8580,7 @@ mupen64plus:
         mupen64-sensitivity4:
             submenu: CONTROLLER 4
             prompt: SENSITIVITY
-            description: Set the sensitivity of the joystick analog sticks.
+            description: Set the sensitivity of the joystick analogue sticks.
             choices:
                 "50%": 50
                 "60%": 60
@@ -8588,7 +8596,7 @@ mupen64plus:
         mupen64-deadzone1:
             submenu: CONTROLLER 1
             prompt: DEADZONE
-            description: Set the deadzone of the joystick analog sticks.
+            description: Set the dead zone of the joystick analogue sticks.
             choices:
                 "0%": 0
                 "5% (Default)": 5
@@ -8599,7 +8607,7 @@ mupen64plus:
         mupen64-deadzone2:
             submenu: CONTROLLER 2
             prompt: DEADZONE
-            description: Set the deadzone of the joystick analog sticks.
+            description: Set the dead zone of the joystick analogue sticks.
             choices:
                 "0%": 0
                 "5% (Default)": 5
@@ -8610,7 +8618,7 @@ mupen64plus:
         mupen64-deadzone3:
             submenu: CONTROLLER 3
             prompt: DEADZONE
-            description: Set the deadzone of the joystick analog sticks.
+            description: Set the dead zone of the joystick analogue sticks.
             choices:
                 "0%": 0
                 "5% (Default)": 5
@@ -8621,7 +8629,7 @@ mupen64plus:
         mupen64-deadzone4:
             submenu: CONTROLLER 4
             prompt: DEADZONE
-            description: Set the deadzone of the joystick analog sticks.
+            description: Set the dead zone of the joystick analogue sticks.
             choices:
                 "0%": 0
                 "5% (Default)": 5
@@ -8661,7 +8669,7 @@ pcsx2:
         pcsx2_osd_messages:
             submenu: DISPLAY
             prompt: OSD MESSAGES
-            description: Display on screen information like savestate, config warning etc...
+            description: Display on screen information like save state, config warning etc...
             choices:
                 "Enabled (Default)":  "true"
                 "Disabled": "false"
@@ -8715,7 +8723,7 @@ pcsx2:
         pcsx2_blur:
             submenu: DISPLAY
             prompt: ANTI-BLUR
-            description: Enable to improve bluriness.
+            description: Enable to improve blurriness.
             choices:
                 "Disabled": "false"
                 "Enabled":  "true"
@@ -8806,7 +8814,7 @@ pcsx2:
         pcsx2_dithering:
             submenu: RENDERING
             prompt: DITHERING
-            description: Reduces banding between colours and improves the preceived colour depth.
+            description: Reduces banding between colours and improves the perceived colour depth.
             choices:
                 "Off":                 0
                 "Unscaled (Default)":  1
@@ -8891,7 +8899,7 @@ ppsspp:
         rendering_mode:
             group: ADVANCED OPTIONS
             prompt: RENDERING MODE
-            description: Skip buffer disables auto frameskip and renders at display output resolution.
+            description: Skip buffer disables auto frame skip and renders at display output resolution.
             choices:
                 "Skip buffer effects": 0
                 "Buffered rendering":  1
@@ -8922,7 +8930,7 @@ ppsspp:
                 "5":   5
         autoframeskip:
             prompt: AUTO FRAMESKIP
-            description: Automatically reduce frameskip if the system has spare overhead.
+            description: Automatically reduce frame skip if the system has spare overhead.
             choices:
                 "Off": 0
                 "On":  1
@@ -9071,7 +9079,7 @@ rpcs3:
         rpcs3_framelimit:
             submenu: VIDEO
             prompt: ADDITIONAL FRAMELIMIT
-            description: Most games already have an internal framelimit. Minor performance cost.
+            description: Most games already have an internal frame limit. Minor performance cost.
             choices:
                 "Off (faster, unstable)": Off
                 "30":                     30
@@ -9164,7 +9172,7 @@ rpcs3:
                 "16": 16
         rpcs3_colorbuffers:
             submenu: RENDER
-            prompt: WRITE COLOR BUFFERS
+            prompt: WRITE COLOUR BUFFERS
             description: May fix missing graphics and broken lighting at the cost of performance.
             choices:
                 "Off (Default)": False
@@ -9172,7 +9180,7 @@ rpcs3:
         rpcs3_strict:
             submenu: RENDER
             prompt: STRICT RENDERING MODE
-            description: Straict API specification. Can resolve rare cases of missing graphics and flickering.
+            description: Strict API specification. Can resolve rare cases of missing graphics and flickering.
             choices:
                 "Off (Default)": False
                 "On":            True
@@ -9207,7 +9215,7 @@ rpcs3:
         rpcs3_async_texture:
             submenu: RENDER
             prompt: ASYNCHRONOUS TEXTURE STREAMING
-            description: Stream texture to GPU in parrallel. Can improve performance on more powerful GPU's.
+            description: Stream texture to GPU in parallel. Can improve performance on more powerful GPU's.
             choices:
                 "Off (Default)": False
                 "On":            True
@@ -9368,7 +9376,7 @@ scummvm:
           prompt: STRETCH MODE
           description: Stretches the output to fill the display area.
           choices:
-              "Center (Default)":     "centre"
+              "Centre (Default)":     "centre"
               "Pixel Perfect":        "pixel-perfect"
               "Even Pixels":          "even-pixels"
               "Fit resolution scale": "fit"
@@ -9411,7 +9419,7 @@ easyrpg:
                 "On":                            1
         encoding:
             prompt:      GAME REGION (ENCODING)
-            description: Needed by some games that use special unicode characters.
+            description: Needed by some games that use special Unicode characters.
             choices:
                 "Autodetect (Recommended)":      autodetect
                 "European (Western)":            1252
@@ -9447,7 +9455,7 @@ redream:
               "Stretch":       stretch
       redreamFrameSkip:
           prompt:      FRAMESKIP
-          description: Enable auto frameskipping for performance on lower-end systems.
+          description: Enable auto frame skipping for performance on lower-end systems.
           choices:
               "Off (Default)" : 0
               "On"            : 1
@@ -9643,7 +9651,7 @@ mame:
   cfeatures:
         video:
             prompt:      VIDEO MODE
-            description: BGFX for post-processing, accel/opengl for raw image.
+            description: BGFX for post-processing, Accel/OpenGL for raw image.
             choices:
                 "BGFX":            bgfx
                 "Accel":           accel
@@ -9682,7 +9690,7 @@ mame:
         switchres:
             group: ADVANCED OPTIONS
             prompt:      CRT SWITCHRES
-            description: Allows the use of switchres profiles if present.
+            description: Allows the use of SwitchRes profiles if present.
             choices:
                 "Off":             0
                 "On":              1
@@ -10048,12 +10056,12 @@ mame:
                     prompt:      SOFTWARE LIST
                     description: Use MAME software lists to identify ROM
                     choices:
-                        "Don't Use (Default)":                          none
-                        "Tandy Radio Shack Color Computer cartridges":  coco_cart
-                        "Tandy Radio Shack Color Computer disk images": coco_flop
+                        "Don't Use (Default)":                           none
+                        "Tandy Radio Shack Colour Computer cartridges":  coco_cart
+                        "Tandy Radio Shack Colour Computer disk images": coco_flop
                 altmodel:
-                    prompt:      COLOR COMPUTER MODEL
-                    description: Select the model of Color Computer to emulate
+                    prompt:      COLOUR COMPUTER MODEL
+                    description: Select the model of Colour Computer to emulate
                     choices:
                         "Color Computer":                    coco
                         "Color Computer 2":                  coco2
@@ -10922,7 +10930,7 @@ drastic:
         drastic_frameskip_value:
             group: VIDEO SETTINGS
             prompt:      FRAMESKIP VALUE
-            description: When frameskip type is on automatic or manual, skip up to this many frames consecutively.
+            description: When frame skip type is on automatic or manual, skip up to this many frames consecutively.
             choices:
                 "1": 1
                 "2": 2
@@ -11144,7 +11152,7 @@ model2emu:
                 "On":  true
         model2_scanlines:
             prompt: ENABLE SCANLINES
-            description: Enable scanlines for roms that support it.
+            description: Enable scanlines for games that support it.
             choices:
                 "Off": false
                 "On":  true
@@ -11178,7 +11186,7 @@ model2emu:
         model2_filterTilemaps:
             group: ADVANCED OPTIONS
             prompt:      FILTER TILEMAPS
-            description: Enables bilinear filtering on tilemaps. Looks good, but can cause some stretch artifacts.
+            description: Enables bilinear filtering on tile maps. Looks good, but can cause some stretch artifacts.
             choices:
                 "Off":      0
                 "On":       1
@@ -11192,7 +11200,7 @@ model2emu:
         model2_enableMIP:
             group: ADVANCED OPTIONS
             prompt:      ENABLE MIP-MAP
-            description: Enables Direct3D Automip-map generation.
+            description: Enables Direct3D Auto mip-map generation.
             choices:
                 "Off":      0
                 "On":       1
@@ -11364,7 +11372,7 @@ yuzu:
             "Taiwan":    6
         yuzu_timezone:
           prompt: CHOOSE CONSOLE TIMEZONE
-          description: Choose your console timezone.
+          description: Choose your console time zone.
           choices:
             "Default":   1
             "CET":       2
@@ -11526,7 +11534,7 @@ ryujinx:
             "Taiwan":    "Taiwan"
         ryujinx_timeoffset:
           prompt: CHOOSE CONSOLE TIMEZONE
-          description: Choose your console UTC timezone.
+          description: Choose your console UTC time zone.
           choices:
             "UTC-12": -12
             "UTC-11": -11
@@ -11578,7 +11586,7 @@ hurrican:
                 "On":       1
         hurrican_custlevel:
             prompt:      CUSTOM LEVELS
-            description: Play custom userlevel.
+            description: Play custom user level.
             choices:
                 "Original":       Original
                 "ChJees":         ChJees
@@ -11673,7 +11681,7 @@ awgl:
         awgl_fullscreen:
             group: VIDEO SETTINGS
             prompt:      FULLSCREEN MODE
-            description: Select fullscreen mode.
+            description: Select full screen mode.
             choices:
                 "Stretched (640x480)":      stretched
                 "Widescreen (16:10)":       wide
@@ -11696,7 +11704,7 @@ bermuda:
         bermuda_aspect:
             group: VIDEO SETTINGS
             prompt:      ASPECT RATIO
-            description: Select fullscreen mode.
+            description: Select full screen mode.
             choices:
                 "4:3 (Default)": 0
                 "16:9":          1
@@ -11837,19 +11845,58 @@ f2bgl:
                 "12": 12
                 "13": 13
                 "14": 14
+etlegacy:
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  features: [padtokeyboard]
+  cfeatures:
+    etlegacy_language:
+      prompt: LANGUAGE
+      description: Change the game's language.
+      choices:
+        "English":    "en"
+        "Afrikaans":  "af"
+        "Albanian":   "sq"
+        "Bulgarian":  "bg"
+        "Catalan":    "ca"
+        "Czech":      "cs"
+        "Danish":     "da"
+        "Dutch":      "nl"
+        "Finnish":    "fi"
+        "French":     "fr"
+        "German":     "de"
+        "Greek":      "el"
+        "Hebrew":     "he"
+        "Hungarian":  "hu"
+        "Irish":      "ga"
+        "Italian":    "it"
+        "Japanese":   "ja"
+        "Korean":     "ko"
+        "Norwegian":  "no"
+        "Punjabi":    "pa"
+        "Polish":     "pl"
+        "Portuguese": "pt"
+        "Romanian":   "ro"
+        "Russian":    "ru"
+        "Serbian":    "sr"
+        "Slovak":     "sk"
+        "Slovenian":  "sl"
+        "Spanish":    "es"
+        "Swedish":    "sv"
+        "Turkish":    "tr"
+        "Ukrainian":  "uk"
 fallout1-ce:
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   features: [padtokeyboard]
   cfeatures:
     fout1_game_difficulty:
-      prompt: GAME DIFFICULATY
+      prompt: GAME DIFFICULTY
       description: Choose the games difficulty.
       choices:
         "Easy":             0
         "Normal (Default)": 1
         "Hard":             2
     fout1_combat_difficulty:
-      prompt: COMBAT DIFFICULATY
+      prompt: COMBAT DIFFICULTY
       description: Choose the combat difficulty.
       choices:
         "Wimpy":            0
@@ -11877,20 +11924,19 @@ fallout1-ce:
         "German":            "german"
         "Italian":           "italian"
         "Spanish":           "spanish"
-
 fallout2-ce:
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   features: [padtokeyboard]
   cfeatures:
     fout2_game_difficulty:
-      prompt: GAME DIFFICULATY
+      prompt: GAME DIFFICULTY
       description: Choose the games difficulty.
       choices:
         "Easy":             0
         "Normal (Default)": 1
         "Hard":             2
     fout2_combat_difficulty:
-      prompt: COMBAT DIFFICULATY
+      prompt: COMBAT DIFFICULTY
       description: Choose the combat difficulty.
       choices:
         "Wimpy":            0
@@ -12201,7 +12247,7 @@ theforceengine:
     force_rate:
       submenu: GRAPHICS
       prompt: REFRESH RATE
-      description: Set the desired maximum refresh rate when Vsync is off.
+      description: Set the desired maximum refresh rate when VSync is off.
       choices:
         "30 fps":           "30"
         "50 fps":           "50"
@@ -12352,8 +12398,8 @@ virtualjaguar:
             prompt: SHOW BIOS BOOTLOGO
             description: Off is safer, On for specific games.
             choices:
-                "Show": 1
-                "Skip (Default)": 0
+                "On": 1
+                "Off (Default)": 0
         virtualjaguar_dsp:
           prompt:      DIGITAL SOUND PROCESSOR
           description: Enable the Digital Sound Processor.
@@ -12451,7 +12497,7 @@ xenia:
   cfeatures:
         xeniaLicense:
             prompt: XBOX LIVE ARCADE
-            description: This option enables the ability to play Xbox Live Arcacde games. May cause compatibility issues with non-XBLA games.
+            description: This option enables the ability to play Xbox Live Arcade games. May cause compatibility issues with non-XBLA games.
             choices:
                 "No licenses enabled":                     0
                 "XBLA license enabled (Default)":          1
@@ -12481,13 +12527,21 @@ xenia:
                 "Turkish":           14
                 "Norwegian":         15
                 "Dutch":             16
+        xeniawine:
+          group: ADVANCED OPTIONS
+          prompt: WINE EMULATOR
+          description: Select which version of wine to use
+          choices:
+            "WINE NATIVE":      "lutris"
+            "PROTON":           "proton"
+
 xenia-canary:
   features: [padtokeyboard]
   shared: [videomode, powersave]
   cfeatures:
         xeniaLicense:
             prompt: XBOX LIVE ARCADE
-            description: This option enables the ability to play Xbox Live Arcacde games. May cause compatibility issues with non-XBLA games.
+            description: This option enables the ability to play Xbox Live Arcade games. May cause compatibility issues with non-XBLA games.
             choices:
                 "No licenses enabled":                     0
                 "XBLA license enabled (Default)":          1
@@ -12543,6 +12597,14 @@ xenia-canary:
             choices:
                 "Disabled (Default)": false
                 "Enabled": true
+        xeniawine:
+          group: ADVANCED OPTIONS
+          prompt: WINE EMULATOR
+          description: Select which version of wine to use
+          choices:
+            "WINE NATIVE":      "lutris"
+            "PROTON":           "proton"
+
 yabasanshiro:
   features: [padtokeyboard]
   shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

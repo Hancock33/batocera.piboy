@@ -959,6 +959,9 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # Descent 1 & 2 open source engine
     # select BR2_PACKAGE_DXX_REBIRTH                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
+    # Wolfenstein: Enemy Territory
+    select BR2_PACKAGE_ETLEGACY                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
+
     help
         Ports
 

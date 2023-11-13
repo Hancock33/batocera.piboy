@@ -1,11 +1,10 @@
 ################################################################################
 #
-# luajit
+# batocera-luajit
 #
 ################################################################################
-
-# batocera, use OpenResty maintained LuaJIT2 fork
-BATOCERA_LUAJIT_VERSION = 107baafb0d389c31f64e85e5a4ad017fd903e2eb
+# Version: Commits on Oct 25, 2023
+BATOCERA_LUAJIT_VERSION = aa038d2599f3caec014ebf0ad98d9f8a68aefa2c
 BATOCERA_LUAJIT_SITE = $(call github,openresty,luajit2,$(BATOCERA_LUAJIT_VERSION))
 BATOCERA_LUAJIT_LICENSE = MIT
 BATOCERA_LUAJIT_LICENSE_FILES = COPYRIGHT

@@ -403,6 +403,10 @@ def getGenerator(emulator):
         from generators.vpinball.vpinballGenerator import VPinballGenerator
         return VPinballGenerator()
 
+    if emulator == "etlegacy":
+        from generators.etlegacy.etlegacyGenerator import ETLegacyGenerator
+        return ETLegacyGenerator()
+
     if emulator == 'sh':
         from generators.sh.shGenerator import ShGenerator
         return ShGenerator()
