@@ -2801,6 +2801,13 @@ def generateCoreSettings(coreSettings, system, rom, guns):
         else:
             coreSettings.save('duckstation_Display.CropMode', '"Overscan"')
 
+    if (system.config['core'] == 'pcsx2'):
+        # Fast Boot
+        if system.isOptSet('lr_pcsx2_fast_boot'):
+            coreSettings.save('pcsx2_fast_boot', '"' + system.config['lr_pcsx2_fast_boot'] + '"')
+        else:
+            coreSettings.save('pcsx2_fast_boot', '"disabled"')
+
     if (system.config['core'] == 'pcsx_rearmed'):
         # Display Games Hack Options
         coreSettings.save('pcsx_rearmed_show_gpu_peops_settings', '"enabled"')
@@ -2854,6 +2861,17 @@ def generateCoreSettings(coreSettings, system, rom, guns):
                 coreSettings.save('pcsx_rearmed_gpu_peops_lazy_screen_update',  '"enabled"')
             elif system.config['game_fixes_pcsx'] == 'Dark_Forces':
                 coreSettings.save('pcsx_rearmed_gpu_peops_repeated_triangles',  '"enabled"')
+        # gun cross
+        # Crossbar Colors
+        for player in [ {"id": 1, "color": "red"}, {"id": 2, "color": "blue"} ]:
+          if system.isOptSet('pcsx_rearmed_crosshair'+str(player["id"])):
+            coreSettings.save('pcsx_rearmed_crosshair'+str(player["id"]), '"' + system.config['pcsx_rearmed_crosshair'+str(player["id"])] + '"')
+          else:
+            if controllersConfig.gunsNeedCrosses(guns):
+                status = '"'+player["color"]+'"'
+            else:
+                status = '"disabled"'
+            coreSettings.save('pcsx_rearmed_crosshair'+str(player["id"]), status)
 
     # Thomson MO5 / TO7
     if (system.config['core'] == 'theodore'):

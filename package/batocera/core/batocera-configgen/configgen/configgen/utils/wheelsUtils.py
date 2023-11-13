@@ -24,6 +24,29 @@ emulatorMapping = {
         "x":  "x",
         "y":  "y"
     },
+    "n64": {
+        "l":     "pageup",
+        "r":     "pagedown",
+        "a":     "b",
+        "b":     "y",
+        "start": "start"
+    },
+    "wii": {
+        "lt": "l2",
+        "rt": "r2",
+        "a":  "a",
+        "b":  "b",
+        "x":  "x",
+        "y":  "y"
+    },
+    "wiiu": {
+        "a":      "a",
+        "b":      "b",
+        "x":      "x",
+        "y":      "y",
+        "start":  "start",
+        "select": "select"
+    },
     "ps2": {
         "cross":    "b",
         "square":   "y",
@@ -71,7 +94,22 @@ def reconfigureControllers(playersControllers, system, rom, deviceList):
                             else:
                                 eslog.info("wheel: unable to replace {} with {}".format(wantedkey, wheelkey))
         nplayer += 1
-    return playersControllers
+
+    # reorder players to priorize wheel pads
+    playersControllersNew = {}
+    nplayer = 1
+    for playercontroller, pad in sorted(playersControllers.items()):
+        if pad.dev in deviceList and deviceList[pad.dev]["isWheel"]:
+            pad.player = str(nplayer)
+            playersControllersNew[str(nplayer)] = pad
+            nplayer += 1
+    for playercontroller, pad in sorted(playersControllers.items()):
+        if not (pad.dev in deviceList and deviceList[pad.dev]["isWheel"]):
+            pad.player = str(nplayer)
+            playersControllersNew[str(nplayer)] = pad
+            nplayer += 1
+
+    return playersControllersNew
 
 def getWheelsFromDevicesInfos(deviceInfos):
     res = {}

@@ -3,8 +3,8 @@
 # guncon
 #
 ################################################################################
-# Version: Commits on Jun 03, 2023
-GUNCON_VERSION = a64185319a543bcab0fe6f5b1f8c2dab03e7cea5
+# Version: Commits on Sept 23, 2023
+GUNCON_VERSION = c5fa9fa19fe32c67b4e36eb9557d8fb06c9d200f
 GUNCON_SITE = $(call github,Redemp,guncon2,$(GUNCON_VERSION))
 
 define GUNCON_INSTALL_TARGET_CMDS

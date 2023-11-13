@@ -3,8 +3,8 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on Nov 05, 2023
-PCSX2_VERSION = cd5a916f997798ce29ed2c820d250b4629dfdbdb
+# Version: Commits on Nov 13, 2023
+PCSX2_VERSION = d37cd2e26d4885365d75d228a68156e6e770574d
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
@@ -70,9 +70,9 @@ endef
 PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_EVMAPY
 
 define PCSX2_TEXTURES
-	mkdir -p $(TARGET_DIR)/usr/pcsx2/bin/resources/textures
+	mkdir -p $(TARGET_DIR)/usr/bin/pcsx2/resources/textures
 	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/textures/ \
-		$(TARGET_DIR)/usr/pcsx2/bin/resources/
+		$(TARGET_DIR)/usr/bin/pcsx2/resources/
 endef
 
 # Download and copy PCSX2 patches.zip to BIOS folder
