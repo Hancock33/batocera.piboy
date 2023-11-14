@@ -15015,14 +15015,6 @@ msgstr "Gordetze Azkarra"
 #~ msgstr "OpenGLES (Defektuz)"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Jokoa berhasieratu"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Hurrengo diska (m3u)"
-
-#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Ireki Dolphin-triforce-aren menua"
 
@@ -15129,6 +15121,14 @@ msgstr "Gordetze Azkarra"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Aurrera Azkar"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Jokoa berhasieratu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Hurrengo diska (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "CONTOLLER 1"
