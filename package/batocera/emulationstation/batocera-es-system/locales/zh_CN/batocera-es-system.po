@@ -14740,14 +14740,6 @@ msgstr "快速保存"
 #~ msgstr "OpenGLES (默认)"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "重置游戏"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "下一个光盘（m3u）"
-
-#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "打开Dolphin triforce的菜单"
 
@@ -14854,6 +14846,14 @@ msgstr "快速保存"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快进"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "重置游戏"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "下一个光盘（m3u）"
 
 #~ msgctxt "game_options"
 #~ msgid "GAME DIFFICULATY"

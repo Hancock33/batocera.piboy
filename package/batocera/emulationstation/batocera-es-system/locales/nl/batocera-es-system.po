@@ -15024,14 +15024,6 @@ msgstr "Snel Opslaan"
 #~ msgstr "OpenGLES (Standaard)"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Herstart Spel"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Volgende Disk (m3u)"
-
-#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Open het menu van Dolphin-triforce"
 
@@ -15138,6 +15130,14 @@ msgstr "Snel Opslaan"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Vooruitspoelen"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Herstart Spel"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Volgende Disk (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "GAME DIFFICULATY"

@@ -15023,14 +15023,6 @@ msgstr "Szybkie zapisywanie"
 #~ msgstr "OpenGLES (domyślnie)"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Restart gry"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Następny dysk (m3u)"
-
-#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Otwarcie menu Dolphin-triforce"
 
@@ -15137,6 +15129,14 @@ msgstr "Szybkie zapisywanie"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Przewijanie do przodu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Restart gry"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Następny dysk (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "CONTOLLER 2"

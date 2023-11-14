@@ -15001,14 +15001,6 @@ msgstr ""
 #~ msgstr "OpenGLES (par défaut)"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Redémarrer le jeu"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Disque suivant (m3u)"
-
-#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Ouvrir le menu de Dolphin-triforce"
 
@@ -15115,6 +15107,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rapide"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Redémarrer le jeu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Disque suivant (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "CONTOLLER 2"

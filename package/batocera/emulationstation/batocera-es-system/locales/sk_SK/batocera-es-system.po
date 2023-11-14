@@ -14932,14 +14932,6 @@ msgstr "Rýchle uloženie"
 #~ msgstr "OpenGLES (predvolené)"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Reštartovať hru"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Ďalší disk (m3u)"
-
-#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Otvoriť ponuku Dolphin triforce"
 
@@ -15046,6 +15038,14 @@ msgstr "Rýchle uloženie"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rýchlo dopredu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Reštartovať hru"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Ďalší disk (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "GAME DIFFICULATY"
