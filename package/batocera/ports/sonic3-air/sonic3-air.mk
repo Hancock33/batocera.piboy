@@ -3,8 +3,8 @@
 # sonic3-air
 #
 ################################################################################
-
-SONIC3_AIR_VERSION = v23.11.12.1-test
+# Version: Commits on Nov 15, 2023
+SONIC3_AIR_VERSION = cf2f2a584dc70a6816e2e70df676db454aa68946
 SONIC3_AIR_SITE = https://github.com/Eukaryot/sonic3air.git
 SONIC3_AIR_SITE_METHOD = git
 SONIC3_AIR_GIT_SUBMODULES = YES
