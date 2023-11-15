@@ -4285,7 +4285,8 @@ sonic3-air:
   hardware:             port
   extensions:           [s3air]
   platform:             pc
-  group:                ports
+  group:                sonic
+  path:                 /userdata/roms/ports/sonic3-air
   emulators:
     sonic3-air:
       sonic3-air:       { requireAnyOf: [ BR2_PACKAGE_SONIC3_AIR ] }

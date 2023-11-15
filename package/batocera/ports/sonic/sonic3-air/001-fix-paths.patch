@@ -20,7 +20,7 @@ index a755b1ea..712e1957 100644
  		for (const GameProfile::RomInfo& romInfo : gameProfile.mRomInfos)
  		{
 -			romPath = romInfo.mSteamRomName;
-+			romPath = L"/userdata/roms/sonic3-air/Sonic_Knuckles_wSonic3.bin";
++			romPath = L"/userdata/roms/ports/sonic3-air/Sonic_Knuckles_wSonic3.bin";
  			loaded = loadRomFile(romPath, romInfo);
  			if (loaded)
  				break;
