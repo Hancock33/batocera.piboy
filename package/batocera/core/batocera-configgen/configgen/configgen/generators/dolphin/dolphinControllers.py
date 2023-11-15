@@ -543,17 +543,6 @@ def generateControllerConfig_any_auto(f, pad, anyMapping, anyReverseAxes, anyRep
                 f.write(f"Main Stick/Gate Size = 95.0\n")
                 f.write(f"C-Stick/Gate Size = 88.0\n")
 
-def generateControllerConfig_any_from_profiles(f, pad):
-    for profileFile in glob.glob("/userdata/system/configs/dolphin-emu/Profiles/GCPad/*.ini"):
-        try:
-            eslog.debug(f"Looking profile : {profileFile}")
-            profileConfig = configparser.ConfigParser(interpolation=None)
-            # To prevent ConfigParser from converting to lower case
-            profileConfig.optionxform = str
-            profileConfig.read(profileFile)
-            profileDevice = profileConfig.get("Profile","Device")
-            eslog.debug(f"Profile device : {profileDevice}")
-
 def generateControllerConfig_any_from_profiles(f, pad, system):
     if system.name == "gamecube":
         for profileFile in glob.glob("/userdata/system/configs/dolphin-emu/Profiles/GCPad/*.ini"):
@@ -596,8 +585,8 @@ def generateControllerConfig_any_from_profiles(f, pad, system):
                                 f.write(f"{key} = {val}\n")
                         return True
             except:
-                eslog.error(f"profile {profileFile} : FAILED")      
-    
+                eslog.error(f"profile {profileFile} : FAILED")
+
     return False
 
 def write_key(f, keyname, input_type, input_id, input_value, input_global_id, reverse, hotkey_id, gcz_ids):
