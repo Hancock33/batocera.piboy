@@ -3,8 +3,8 @@
 # batocera-stella
 #
 ################################################################################
-# Version: Commits on Nov 14, 2023
-BATOCERA_STELLA_VERSION = e788e55f53d80fcfbce3afe54352dc15cf44477e
+# Version: Commits on Nov 16, 2023
+BATOCERA_STELLA_VERSION = 78187876dbb7b3f0f93bff15307a11a373024dbe
 BATOCERA_STELLA_SITE = $(call github,stella-emu,stella,$(BATOCERA_STELLA_VERSION))
 BATOCERA_STELLA_LICENSE = GPL-2.0+
 BATOCERA_STELLA_LICENSE_FILES = Copyright.txt License.txt

@@ -3,8 +3,8 @@
 # ruffle
 #
 ################################################################################
-# Version: Commits on Nov 15, 2023
-RUFFLE_VERSION = ffdb248872c89b586a83aaefc5cca3c98b8e5e8c
+# Version: Commits on Nov 16, 2023
+RUFFLE_VERSION = 75923e5568afb4abdd50e097de608f3ad34fac21
 RUFFLE_SITE = $(call github,ruffle-rs,ruffle,$(RUFFLE_VERSION))
 RUFFLE_LICENSE = GPLv2
 RUFFLE_DEPENDENCIES = host-rustc host-rust-bin openssl
