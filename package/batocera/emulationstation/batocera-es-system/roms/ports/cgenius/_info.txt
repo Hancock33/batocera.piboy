@@ -1,0 +1,4 @@
+## SYSTEM COMMANDER GENIUS ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".zip"
+

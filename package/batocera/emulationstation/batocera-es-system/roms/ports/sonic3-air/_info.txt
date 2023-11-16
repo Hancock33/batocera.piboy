@@ -1,0 +1,15 @@
+## SYSTEM SONIC 3 A.I.R. ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".s3air"
+
+In this folder you need the Sonic_Knuckles_wSonic3.bin rom file to play Sonic 3 A.I.R. (Angel Island Revisited).
+It is important that the rom file matches this name exactly.
+Additionally, create a blank `Sonic 3 - Angel Island Revisited.s3air` file.
+This file will allow EMulationStation to launch Sonic 3 A.I.R. and scrape artwork etc.
+
+For more info: https://wiki.batocera.org/systems:sonic3-air
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".s3air"
+
+Trouvez la documentation ici: https://wiki.batocera.org/systems:sonic3-air
+

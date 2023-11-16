@@ -39,7 +39,7 @@ endef
 
 define SONIC3_AIR_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sonic3-air/sonic3-air.keys \
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sonic/sonic3-air/sonic3-air.keys \
 	    $(TARGET_DIR)/usr/share/evmapy
 endef
 
