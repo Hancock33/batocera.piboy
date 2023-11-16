@@ -66,6 +66,7 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-version						$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-wifi							$(TARGET_DIR)/usr/bin/
 	install -m 0644 $(BATOCERA_SCRIPTS_PATH)/rules/80-switch-screen.rules					$(TARGET_DIR)/etc/udev/rules.d
+	#install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-powermode					$(TARGET_DIR)/usr/share/batocera/configgen/scripts/
 endef
 
 define BATOCERA_SCRIPTS_INSTALL_GAMECON_RPI
