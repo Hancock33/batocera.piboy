@@ -5,12 +5,12 @@ echo 'the first been the source directory, the second been the target,'
 echo 'and the thrid been the build directory.'
 echo 'For example...'
 echo
-echo './watcher.sh $HOME/batocera.linux x86_64 $HOME/batocera.x86_64'
+echo './watcher.sh $HOME/batocera.linux x86_64 $HOME/build-dir/batocera.x86_64'
 echo
 
-srcdir="${1:-/home/lee/batocera.piboy}"
+srcdir="${1:-/home/lee/batocera.se}"
 board="${2:-x86_64}"
-outdir="${3:-/home/lee/batocera.$board}"
+outdir="${3:-/home/lee/build-dir/batocera.$board}"
 build_dir="$outdir/build"
 
 watch() {
