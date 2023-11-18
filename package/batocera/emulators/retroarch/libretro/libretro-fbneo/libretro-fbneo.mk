@@ -67,6 +67,8 @@ define LIBRETRO_FBNEO_INSTALL_TARGET_CMDS
 	# Need to think of another way to use these files.
 	# They take up a lot of space on tmpfs.
 	# --exclude light as those are for the n3ds build of fbneo, not used by Batocera at all
+	find $(@D)/dats -maxdepth 1 -iname "*.dat" -print0 | xargs -0 -I{} xz -9 {}
+	find $(@D)/dats -maxdepth 1 -iname "*.dat" -print0 | xargs -0 -I{} rm {}
 	rsync -a $(@D)/dats/* \
 		$(TARGET_DIR)/usr/share/batocera/datainit/bios/fbneo --exclude light
 endef
