@@ -3,8 +3,8 @@
 # pd-mapper
 #
 ################################################################################
-# Version: Commits on Apr 14, 2020
-PD_MAPPER_VERSION = 107104b20bccc1089ba46893e64b3bdcb98c6830
+# Version: Commits on Sept 01, 2023
+PD_MAPPER_VERSION = 10997ba7c43a3787a40b6b1b161408033e716374
 PD_MAPPER_SITE = $(call github,andersson,pd-mapper,$(PD_MAPPER_VERSION))
 PD_MAPPER_LICENSE_FILE = LICENSE
 PD_MAPPER_DEPENDENCIES = host-qrtr qrtr
