@@ -63,8 +63,9 @@ endef
 define LIBRETRO_MAME_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/mame_libretro.so \
 		$(TARGET_DIR)/usr/lib/libretro/mame_libretro.so
-	mkdir -p $(TARGET_DIR)/usr/share/lr-mame/hash
-	cp -av $(@D)/hash/* $(TARGET_DIR)/usr/share/lr-mame/hash
+	mkdir -p $(TARGET_DIR)/usr/share/lr-mame
+	#cp -av $(@D)/hash/* $(TARGET_DIR)/usr/share/lr-mame/hash
+    ln -sf /usr/bin/mame/hash $(TARGET_DIR)/usr/share/lr-mame/hash
 
 	mkdir -p $(TARGET_DIR)/usr/share/mame
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mame/blank.fmtowns $(TARGET_DIR)/usr/share/mame/blank.fmtowns
