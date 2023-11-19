@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Batocera\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-05 13:13+0100\n"
-"PO-Revision-Date: 2023-11-06 10:42+0100\n"
+"PO-Revision-Date: 2023-11-16 13:57+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak (Slovakia)\n"
 "Language: sk_SK\n"
@@ -380,7 +380,7 @@ msgctxt "game_options"
 msgid "Use wheels instead of pads if wheels are connected."
 msgstr "Použiť kolieska namiesto ovládačov, ak sú pripojené."
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, shared, shared, shared
 msgctxt "game_options"
 msgid "WHEELS"
 msgstr "Kolieska"
@@ -389,6 +389,38 @@ msgstr "Kolieska"
 msgctxt "game_options"
 msgid "USE WHEELS"
 msgstr "Použiť kolieska"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Maximum wheel rotation from left to right (in degrees)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEEL ROTATION"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Zone for which the game doesn't react to the wheel (in degrees)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEEL DEADZONE"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Reserve a non dead zone at the center of the wheel to go straight ahead (in "
+"degrees)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEEL MIDZONE"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -5529,12 +5561,12 @@ msgstr "PCE myš"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Skip the bios boot logo, may cause default language issues."
-msgstr ""
+msgstr "Preskočiť prvé logo biosu, môže spôsobiť chyby predvoleného jazyka."
 
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "BIOS FAST BOOT"
-msgstr ""
+msgstr "Bios rýchly štart"
 
 #. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar, virtualjaguar
 msgctxt "game_options"
@@ -12732,7 +12764,7 @@ msgstr ""
 #. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "GAME DIFFICULTY"
-msgstr ""
+msgstr "Obtiažnosť hry"
 
 #. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -12982,42 +13014,42 @@ msgstr ""
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Afrikaans"
-msgstr ""
+msgstr "Afrikánčina"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Albanian"
-msgstr ""
+msgstr "Albánčina"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Bulgarian"
-msgstr ""
+msgstr "Bulharčina"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Catalan"
-msgstr ""
+msgstr "Katalánčina"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Danish"
-msgstr ""
+msgstr "Dánčina"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Finnish"
-msgstr ""
+msgstr "Fínčina"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Hungarian"
-msgstr ""
+msgstr "Maďarčina"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Irish"
-msgstr ""
+msgstr "Írčina"
 
 #. TRANSLATION: etlegacy, xenia, xenia-canary
 msgctxt "game_options"
@@ -13027,7 +13059,7 @@ msgstr "Nórčina"
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Punjabi"
-msgstr ""
+msgstr "Pandžábčina"
 
 #. TRANSLATION: etlegacy, xenia, xenia-canary
 msgctxt "game_options"
@@ -13037,27 +13069,27 @@ msgstr "Poľština"
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Romanian"
-msgstr ""
+msgstr "Rumunčina"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Serbian"
-msgstr ""
+msgstr "Srbčina"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Slovak"
-msgstr ""
+msgstr "Slovenčina"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Slovenian"
-msgstr ""
+msgstr "Slovinčina"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Ukrainian"
-msgstr ""
+msgstr "Ukrajinčina"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -13072,7 +13104,7 @@ msgstr "Vyberte obtiažnosť zápasu."
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "COMBAT DIFFICULTY"
-msgstr ""
+msgstr "Obtiažnosť zápasu"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -13817,12 +13849,12 @@ msgstr "Pravá plutva"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left magnasave"
-msgstr ""
+msgstr "Ľavý magnasave"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Right magnasave"
-msgstr ""
+msgstr "Pravý magnasave"
 
 #. TRANSLATION: amigacd32.amiberry.keys, amiga500.amiberry.keys, amiga1200.amiberry.keys
 msgctxt "keys_files"
@@ -14134,7 +14166,7 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
-#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, fallout1-ce.keys, dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr "Ukončiť hru"
@@ -14932,14 +14964,6 @@ msgstr "Rýchle uloženie"
 #~ msgstr "OpenGLES (predvolené)"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Reštartovať hru"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Ďalší disk (m3u)"
-
-#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Otvoriť ponuku Dolphin triforce"
 
@@ -15046,6 +15070,14 @@ msgstr "Rýchle uloženie"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Rýchlo dopredu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Reštartovať hru"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Ďalší disk (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "GAME DIFFICULATY"

@@ -1,5 +1,5 @@
 diff --git a/SDL/SDLJoystick.cpp b/SDL/SDLJoystick.cpp
-index c93d62354..ea797e0b4 100644
+index adafc5028..c7e4882b5 100644
 --- a/SDL/SDLJoystick.cpp
 +++ b/SDL/SDLJoystick.cpp
 @@ -19,7 +19,7 @@ static int SDLJoystickEventHandlerWrapper(void* userdata, SDL_Event* event)
@@ -11,13 +11,12 @@ index c93d62354..ea797e0b4 100644
  	SDL_SetHint(SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "1");
  	if (init_SDL) {
  		SDL_Init(SDL_INIT_JOYSTICK | SDL_INIT_VIDEO | SDL_INIT_GAMECONTROLLER);
-@@ -41,16 +41,18 @@ SDLJoystick::SDLJoystick(bool init_SDL ) : registeredAsEventHandler(false) {
+@@ -41,17 +41,17 @@ SDLJoystick::SDLJoystick(bool init_SDL ) : registeredAsEventHandler(false) {
  		cout << "gamecontrollerdb.txt missing" << endl;
  	}
  	cout << "SUCCESS!" << endl;
 -	setUpControllers();
 +	_njoy = njoy;
-+	//setUpControllers(); // ADD are called automatically
  }
  
  void SDLJoystick::setUpControllers() {
@@ -27,16 +26,17 @@ index c93d62354..ea797e0b4 100644
 -	}
 -	if (controllers.size() > 0) {
 -		cout << "pad 1 has been assigned to control pad: " << SDL_JoystickNameForIndex(0) << endl;
-+
+-	}
 +	if(_njoy < numjoys) {
-+          setUpController(_njoy);
++		setUpController(_njoy);
 +	  if (controllers.size() > 0) {
 +		cout << "pad 1 has been assigned to control pad: " << SDL_JoystickNameForIndex(_njoy) << " (" << _njoy << ")" << endl;
 +	  }
- 	}
++ 	}
  }
  
-@@ -202,11 +204,9 @@ void SDLJoystick::ProcessInput(const SDL_Event &event){
+ void SDLJoystick::setUpController(int deviceIndex) {
+@@ -215,11 +215,9 @@ void SDLJoystick::ProcessInput(const SDL_Event &event){
  		}
  		break;
  	case SDL_CONTROLLERDEVICEADDED:
@@ -45,14 +45,14 @@ index c93d62354..ea797e0b4 100644
 -		setUpController(event.cdevice.which);
 -		if (prevNumControllers == 0 && controllers.size() > 0) {
 -                       cout << "pad 1 has been assigned to control pad: " << SDL_JoystickNameForIndex(0) << endl;
-+ 	        if(event.cdevice.which == _njoy) {
-+		  setUpController(_njoy);
-+                  cout << "pad 1 has been assigned to control pad: " << SDL_JoystickNameForIndex(_njoy) << endl;
++		if(event.cdevice.which == _njoy) {
++			setUpController(_njoy);
++			cout << "pad 1 has been assigned to control pad: " << SDL_JoystickNameForIndex(_njoy) << endl;
  		}
  		break;
  	}
 diff --git a/SDL/SDLJoystick.h b/SDL/SDLJoystick.h
-index e91bfd0b5..9e6573f97 100644
+index 50cc43c4c..9c287ade8 100644
 --- a/SDL/SDLJoystick.h
 +++ b/SDL/SDLJoystick.h
 @@ -16,7 +16,7 @@
@@ -64,17 +64,19 @@ index e91bfd0b5..9e6573f97 100644
  	~SDLJoystick();
  
  	void registerEventHandler();
-@@ -30,4 +30,5 @@ class SDLJoystick{
+@@ -31,6 +31,7 @@ class SDLJoystick{
  	bool registeredAsEventHandler;
  	std::vector<SDL_GameController *> controllers;
  	std::map<int, int> controllerDeviceMap;
 +	int _njoy;
- };
+ 
+ 	// Deduplicate axis events. Pair is device, axis.
+ 	std::map<std::pair<InputDeviceID, InputAxis>, float> prevAxisValue_;
 diff --git a/SDL/SDLMain.cpp b/SDL/SDLMain.cpp
-index acf25d960..06cda7414 100644
+index 7dccaf17a..4373b09ca 100644
 --- a/SDL/SDLMain.cpp
 +++ b/SDL/SDLMain.cpp
-@@ -1186,6 +1186,7 @@ int main(int argc, char *argv[]) {
+@@ -1192,6 +1192,7 @@ int main(int argc, char *argv[]) {
  	bool set_ipad = false;
  	float set_dpi = 0.0f;
  	float set_scale = 1.0f;
@@ -82,7 +84,7 @@ index acf25d960..06cda7414 100644
  
  	// Produce a new set of arguments with the ones we skip.
  	int remain_argc = 1;
-@@ -1204,6 +1205,8 @@ int main(int argc, char *argv[]) {
+@@ -1210,6 +1211,8 @@ int main(int argc, char *argv[]) {
  			set_dpi = parseFloat(argv[i]);
  		else if (set_scale == -2)
  			set_scale = parseFloat(argv[i]);
@@ -91,7 +93,7 @@ index acf25d960..06cda7414 100644
  		else if (!strcmp(argv[i],"--xres"))
  			set_xres = -2;
  		else if (!strcmp(argv[i],"--yres"))
-@@ -1216,6 +1219,8 @@ int main(int argc, char *argv[]) {
+@@ -1222,6 +1225,8 @@ int main(int argc, char *argv[]) {
  			set_ipad = true;
  		else if (!strcmp(argv[i],"--portrait"))
  			portrait = true;
@@ -100,7 +102,7 @@ index acf25d960..06cda7414 100644
  		else {
  			remain_argv[remain_argc++] = argv[i];
  		}
-@@ -1437,7 +1442,7 @@ int main(int argc, char *argv[]) {
+@@ -1443,7 +1448,7 @@ int main(int argc, char *argv[]) {
  	InitSDLAudioDevice();
  
  	if (joystick_enabled) {

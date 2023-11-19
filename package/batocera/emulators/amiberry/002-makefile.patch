@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 93ef3455..57f9e636 100644
+index 8f51fc7a..4fdff38c 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -23,11 +23,7 @@ export SDL_LDFLAGS := $(shell $(SDL_CONFIG) --libs)
@@ -14,7 +14,7 @@ index 93ef3455..57f9e636 100644
  LDFLAGS += -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -lpthread -lz -lpng -lrt -lFLAC -lmpg123 -ldl -lmpeg2convert -lmpeg2 -lstdc++fs
  
  ifdef USE_OPENGL
-@@ -193,12 +189,14 @@ else ifeq ($(PLATFORM),vero4k)
+@@ -209,12 +205,14 @@ else ifeq ($(PLATFORM),vero4k)
  	LDFLAGS += -L/opt/vero3/lib
  	HAVE_NEON = 1
  
@@ -33,7 +33,7 @@ index 93ef3455..57f9e636 100644
  	ifneq (,$(findstring AMLG12,$(PLATFORM)))
  	  ifneq (,$(findstring AMLG12B,$(PLATFORM)))
  		CPUFLAGS = -mcpu=cortex-a73
-@@ -209,6 +207,8 @@ else ifneq (,$(findstring AMLG,$(PLATFORM)))
+@@ -225,6 +223,8 @@ else ifneq (,$(findstring AMLG,$(PLATFORM)))
  	  CPUFLAGS = -mcpu=cortex-a53
  	  CPPFLAGS += -DUSE_RENDER_THREAD
  	endif

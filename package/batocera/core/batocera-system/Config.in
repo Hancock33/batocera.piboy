@@ -259,7 +259,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_SYNCTHING                            # sync files across multiple batocera systems
     select BR2_PACKAGE_RCLONE                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY      # sync files in the cloud (require x86_64)
     select BR2_PACKAGE_BTOP                                 # htop alternative
-    select BR2_PACKAGE_MOKUTIL                              if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY # mokutil machine owner key utility
+    select BR2_PACKAGE_MOKUTIL                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY      # mokutil machine owner key utility
 
     # Controllers
     select BR2_PACKAGE_XONE                                 if  !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # xbox receiver (require linux >= 4.15)
@@ -269,6 +269,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_WIIMOTES_RULES                                                                       # wiimotes
     select BR2_PACKAGE_XWIIMOTE                                                                             # a tool to analyse wiimote events (mainly to debug, but helps and is funny)
     select BR2_PACKAGE_BATOCERA_GUNS                        if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
+    select BR2_PACKAGE_BATOCERA_WHEEL_CALIBRATOR
     select BR2_PACKAGE_HID_NX                               if  !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # updated nintendo switch controller driver, requires kernel > 4.4
     select BR2_PACKAGE_JOYCOND                              if  BR2_PACKAGE_HID_NX                          # nintendo switch joycon daemon (requires hid-nx)
     select BR2_PACKAGE_JAMMASD
@@ -767,7 +768,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
     # NDS
     select BR2_PACKAGE_LIBRETRO_DESMUME                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
-    select BR2_PACKAGE_LIBRETRO_MELONDS                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_aarch64 && BR2_PACKAGE_BATOCERA_GLES3)
+    select BR2_PACKAGE_LIBRETRO_MELONDS                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_aarch64 && BR2_PACKAGE_BATOCERA_GLES3 && !BR2_PACKAGE_BATOCERA_TARGET_BCM2712)
 
     select BR2_PACKAGE_DRASTIC                              if  BR2_PACKAGE_BATOCERA_RPI_MESA3D         || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
@@ -893,7 +894,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_DINOTHAWR                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
     # Minecraft mini-clone
-    select BR2_PACKAGE_LIBRETRO_CRAFT                       if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_LIBRETRO_CRAFT                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # ChaiScript engine
     select BR2_PACKAGE_LIBRETRO_CHAILOVE                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
@@ -961,6 +962,9 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 
     # Wolfenstein: Enemy Territory
     select BR2_PACKAGE_ETLEGACY                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
+
+    # Sonic 3 A.I.R. (Angel Island Revisited)
+    select BR2_PACKAGE_SONIC3_AIR                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
     help
         Ports
@@ -1075,7 +1079,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 
 
     # Saturn
-    select BR2_PACKAGE_LIBRETRO_BEETLE_SATURN               if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_LIBRETRO_BEETLE_SATURN               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
 
     select BR2_PACKAGE_LIBRETRO_KRONOS                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 

@@ -3,8 +3,8 @@
 # libretro-fbneo
 #
 ################################################################################
-# Version: Commits on Nov 12, 2023
-LIBRETRO_FBNEO_VERSION = 367cea62fadaa2d227e8d8d3b391b20e7d4e8fd4
+# Version: Commits on Nov 17, 2023
+LIBRETRO_FBNEO_VERSION = 089013116d33f212b8dd49c007ac56afe3013f27
 LIBRETRO_FBNEO_SITE = $(call github,libretro,FBNeo,$(LIBRETRO_FBNEO_VERSION))
 LIBRETRO_FBNEO_LICENSE = Non-commercial
 
@@ -67,6 +67,8 @@ define LIBRETRO_FBNEO_INSTALL_TARGET_CMDS
 	# Need to think of another way to use these files.
 	# They take up a lot of space on tmpfs.
 	# --exclude light as those are for the n3ds build of fbneo, not used by Batocera at all
+	find $(@D)/dats -maxdepth 1 -iname "*.dat" -print0 | xargs -0 -I{} xz -9 {}
+	find $(@D)/dats -maxdepth 1 -iname "*.dat" -print0 | xargs -0 -I{} rm {}
 	rsync -a $(@D)/dats/* \
 		$(TARGET_DIR)/usr/share/batocera/datainit/bios/fbneo --exclude light
 endef

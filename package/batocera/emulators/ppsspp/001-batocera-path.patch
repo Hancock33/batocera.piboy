@@ -1,8 +1,8 @@
 diff --git a/Core/Config.cpp b/Core/Config.cpp
-index 7223678f0..d502d8786 100644
+index 2aca9cafc..9a6213863 100644
 --- a/Core/Config.cpp
 +++ b/Core/Config.cpp
-@@ -1029,10 +1029,10 @@ void Config::Reload() {
+@@ -1057,10 +1057,10 @@ void Config::Reload() {
  void Config::UpdateIniLocation(const char *iniFileName, const char *controllerIniFilename) {
  	const bool useIniFilename = iniFileName != nullptr && strlen(iniFileName) > 0;
  	const char *ppssppIniFilename = IsVREnabled() ? "ppssppvr.ini" : "ppsspp.ini";
@@ -16,7 +16,7 @@ index 7223678f0..d502d8786 100644
  
  bool Config::LoadAppendedConfig() {
 diff --git a/SDL/SDLJoystick.cpp b/SDL/SDLJoystick.cpp
-index bcaf616c7..5de53bd0b 100644
+index d9d064434..8150e8641 100644
 --- a/SDL/SDLJoystick.cpp
 +++ b/SDL/SDLJoystick.cpp
 @@ -25,7 +25,7 @@ SDLJoystick::SDLJoystick(bool init_SDL ) : registeredAsEventHandler(false) {
@@ -38,10 +38,10 @@ index bcaf616c7..5de53bd0b 100644
  		delete[] mappingData;
  	} else {
 diff --git a/UI/NativeApp.cpp b/UI/NativeApp.cpp
-index fbcc24be0..046c6172d 100644
+index 01e9dc027..c42803db9 100644
 --- a/UI/NativeApp.cpp
 +++ b/UI/NativeApp.cpp
-@@ -420,7 +420,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -424,7 +424,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	g_VFS.Register("", new DirectoryReader(File::GetExeDirectory()));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/ppsspp/assets")));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/games/ppsspp/assets")));
@@ -50,7 +50,7 @@ index fbcc24be0..046c6172d 100644
  	g_VFS.Register("", new DirectoryReader(Path("/usr/share/games/ppsspp/assets")));
  #endif
  
-@@ -525,7 +525,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -529,7 +529,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	else // Just in case
  		config = "./config";
  

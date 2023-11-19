@@ -14,13 +14,25 @@
 - Added RetroAchievements for Uzebox
 - ETLegacy: play Wolfenstein: Enemy Territory online multiplayer game with enhanced graphics.
 - Konami Justifier / Hyper Blaster light gun in PCSX reARMed core
-  - Not compatible with nuvee GunCon patch, use clean ROM. 
+ - Not compatible with nuvee GunCon patch, use clean ROM.
+- Sonic 3 A.I.R. (Angel Island Revisited) port.
+ - Not compatible with nuvee GunCon patch, use clean ROM.
+- wheel support:
+ - new supported wheels
+ - n64, gamecube, wii, playstation better support
+ - automatically set wheels on first players pads when playing wheel games
+ - add support for wheel deadzones / min and max rotation by game / system
 ### Fixed
 - Dolphin bug that prevented full range of analog trigger axis being used.
 - Flycast per pixel sorting option if renderer not explicitly set
+- Bug preventing scraping of msx-family systems
+- Missing mouse cursor for known iOS soniccd rom originally requiring touchscreen input
+- Bug preventing passing command line options to ES unless on xorg-based system
 ### Changed
 - L|R activate in-game "Z" input in Dolphin for GC controllers/GC games if controller has L+R inputs mapped.
 - PS2 BIOS files should be put in /userdata/bios/ps2
+- Migrated C-Dogs SDL (cdogs) assets to content downloader
+- Migrated Super Mario War (superbroswar) assets to content downloader
 ### Updated
 - Retroarch to 1.16.0.3
 - GroovyMAME 0.260 - Switchres 2.002w
@@ -104,11 +116,13 @@
 ### System
 - Linux kernel to 6.6.1
 - Mesa to 23.3
-- Proton to 8.0-4b
+- Proton to 8.0-4c
 - FAudio to 23.10
 - Nvidia production driver to 545.29.02
 - SDL2 to 2.28.4
 - SOF Firmware to 2023.09.1
+- Streamlined x86_64 Secure Boot support
+- Added tree(1) utility
 
 # 2023/10/16 - batocera.linux 38 - Blue Moon
 ### Hardware

@@ -405,7 +405,7 @@ msgctxt "game_options"
 msgid "Use wheels instead of pads if wheels are connected."
 msgstr "استخدام عجلة القيادة بدلا من الاتجاهات اذا كانت متصلة"
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, shared, shared, shared
 msgctxt "game_options"
 msgid "WHEELS"
 msgstr "عجلة القيادة"
@@ -414,6 +414,38 @@ msgstr "عجلة القيادة"
 msgctxt "game_options"
 msgid "USE WHEELS"
 msgstr "استخدم عجلة القيادة"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Maximum wheel rotation from left to right (in degrees)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEEL ROTATION"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Zone for which the game doesn't react to the wheel (in degrees)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEEL DEADZONE"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Reserve a non dead zone at the center of the wheel to go straight ahead (in "
+"degrees)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEEL MIDZONE"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -14046,7 +14078,7 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
-#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, fallout1-ce.keys, dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr ""
@@ -14411,10 +14443,6 @@ msgstr ""
 #~ msgstr "اختر المنطقة الزمنية لوحدة التحكم الخاصة بك بالتوقيت العالمي."
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "أعد تشغيل اللعبة"
-
-#~ msgctxt "keys_files"
 #~ msgid "Load State Slot 1"
 #~ msgstr "حمل الحالة من فتحة ١"
 
@@ -14473,6 +14501,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "تسريع إلى الأمام"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "أعد تشغيل اللعبة"
 
 #~ msgctxt "keys_files"
 #~ msgid "Aspect ratio correction on/off"
