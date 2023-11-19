@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-11-04 14:19+0800\n"
+"PO-Revision-Date: 2023-11-10 19:45+0800\n"
 "Last-Translator: wanger\n"
 "Language-Team: 王二\n"
 "Language: zh_CN\n"
@@ -369,7 +369,7 @@ msgctxt "game_options"
 msgid "Use wheels instead of pads if wheels are connected."
 msgstr "如果已连接方向盘, 请使用方向盘而不是手柄."
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, shared, shared, shared
 msgctxt "game_options"
 msgid "WHEELS"
 msgstr "方向盘"
@@ -378,6 +378,38 @@ msgstr "方向盘"
 msgctxt "game_options"
 msgid "USE WHEELS"
 msgstr "使用方向盘"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Maximum wheel rotation from left to right (in degrees)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEEL ROTATION"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Zone for which the game doesn't react to the wheel (in degrees)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEEL DEADZONE"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Reserve a non dead zone at the center of the wheel to go straight ahead (in "
+"degrees)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEEL MIDZONE"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -5487,12 +5519,12 @@ msgstr "PCE 鼠标"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Skip the bios boot logo, may cause default language issues."
-msgstr ""
+msgstr "跳过bios引导徽标, 可能会导致默认语言问题."
 
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "BIOS FAST BOOT"
-msgstr ""
+msgstr "BIOS快速启动"
 
 #. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar, virtualjaguar
 msgctxt "game_options"
@@ -12577,7 +12609,7 @@ msgstr ""
 #. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "GAME DIFFICULTY"
-msgstr ""
+msgstr "游戏难度"
 
 #. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -12672,22 +12704,22 @@ msgstr ""
 #. TRANSLATION: dxx-rebirth
 msgctxt "game_options"
 msgid "Classic (Default)"
-msgstr ""
+msgstr "经典 (默认)"
 
 #. TRANSLATION: dxx-rebirth
 msgctxt "game_options"
 msgid "Blocky Filtered"
-msgstr ""
+msgstr "块状过滤"
 
 #. TRANSLATION: dxx-rebirth
 msgctxt "game_options"
 msgid "Smooth"
-msgstr ""
+msgstr "平滑"
 
 #. TRANSLATION: dxx-rebirth
 msgctxt "game_options"
 msgid "4x MULTISAMPLING"
-msgstr ""
+msgstr "4倍多重采样"
 
 #. TRANSLATION: eduke32, ionfury, raze
 msgctxt "game_options"
@@ -12827,42 +12859,42 @@ msgstr ""
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Afrikaans"
-msgstr ""
+msgstr "阿非利堪斯"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Albanian"
-msgstr ""
+msgstr "阿尔巴尼亚"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Bulgarian"
-msgstr ""
+msgstr "保加利亚"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Catalan"
-msgstr ""
+msgstr "加泰罗尼亚"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Danish"
-msgstr ""
+msgstr "丹麦"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Finnish"
-msgstr ""
+msgstr "芬兰"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Hungarian"
-msgstr ""
+msgstr "匈牙利"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Irish"
-msgstr ""
+msgstr "爱尔兰"
 
 #. TRANSLATION: etlegacy, xenia, xenia-canary
 msgctxt "game_options"
@@ -12872,7 +12904,7 @@ msgstr "挪威"
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Punjabi"
-msgstr ""
+msgstr "旁遮普"
 
 #. TRANSLATION: etlegacy, xenia, xenia-canary
 msgctxt "game_options"
@@ -12882,27 +12914,27 @@ msgstr "波兰"
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Romanian"
-msgstr ""
+msgstr "罗马尼亚"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Serbian"
-msgstr ""
+msgstr "塞尔维亚"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Slovak"
-msgstr ""
+msgstr "斯洛伐克"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Slovenian"
-msgstr ""
+msgstr "斯洛文尼亚"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Ukrainian"
-msgstr ""
+msgstr "乌克兰"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -12917,7 +12949,7 @@ msgstr "选择战斗难度."
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "COMBAT DIFFICULTY"
-msgstr ""
+msgstr "战斗难度"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -13969,7 +14001,7 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
-#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, fallout1-ce.keys, dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr "退出游戏"

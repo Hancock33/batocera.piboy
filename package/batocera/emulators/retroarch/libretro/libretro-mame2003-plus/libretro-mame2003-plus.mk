@@ -3,8 +3,8 @@
 # libretro-mame2003-plus
 #
 ################################################################################
-# Version: Commits on Nov 10, 2023
-LIBRETRO_MAME2003_PLUS_VERSION = c05ce28cbaa113041634add4ee8cb43c0e8aa9b7
+# Version: Commits on Nov 16, 2023
+LIBRETRO_MAME2003_PLUS_VERSION = eddec6d603a21d5620ff6a2cb890ec90133cdb02
 LIBRETRO_MAME2003_PLUS_SITE = $(call github,libretro,mame2003-plus-libretro,$(LIBRETRO_MAME2003_PLUS_VERSION))
 LIBRETRO_MAME2003_PLUS_LICENSE = MAME
 
@@ -52,7 +52,7 @@ define LIBRETRO_MAME2003_PLUS_INSTALL_TARGET_CMDS
 	# Need to think of another way to use these files.
 	# They take up a lot of space on tmpfs.
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2003-plus/samples
-	find $(@D)/metadata -maxdepth 1 -iname "*.xml" -print0 | xargs -0 -I{} xz {}
+	find $(@D)/metadata -maxdepth 1 -iname "*.xml" -print0 | xargs -0 -I{} xz -9 {}
 	find $(@D)/metadata -maxdepth 1 -iname "*.xml" -print0 | xargs -0 -I{} rm {}
 	cp -r $(@D)/metadata/* \
 		$(TARGET_DIR)/usr/share/batocera/datainit/bios/mame2003-plus

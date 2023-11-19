@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2023-11-06 11:19+0000\n"
+"PO-Revision-Date: 2023-11-12 18:13+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -384,7 +384,7 @@ msgstr ""
 "Gebruik stuurwielen in plaats van joypads als er stuurwielen zijn "
 "aangesloten."
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, shared, shared, shared
 msgctxt "game_options"
 msgid "WHEELS"
 msgstr "STUURWIELEN"
@@ -393,6 +393,38 @@ msgstr "STUURWIELEN"
 msgctxt "game_options"
 msgid "USE WHEELS"
 msgstr "GEBRUIK STUURWIELEN"
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Maximum wheel rotation from left to right (in degrees)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEEL ROTATION"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Zone for which the game doesn't react to the wheel (in degrees)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEEL DEADZONE"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Reserve a non dead zone at the center of the wheel to go straight ahead (in "
+"degrees)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEEL MIDZONE"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -5555,11 +5587,12 @@ msgstr "PCE Muis"
 msgctxt "game_options"
 msgid "Skip the bios boot logo, may cause default language issues."
 msgstr ""
+"Sla het BIOS-opstartlogo over, dit kan standaard-taalproblemen veroorzaken."
 
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "BIOS FAST BOOT"
-msgstr ""
+msgstr "BIOS FAST BOOT"
 
 #. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar, virtualjaguar
 msgctxt "game_options"
@@ -12813,7 +12846,7 @@ msgstr ""
 #. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "GAME DIFFICULTY"
-msgstr ""
+msgstr "SPEL MOEILIJKHEIDSGRAAD"
 
 #. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -13063,42 +13096,42 @@ msgstr ""
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Afrikaans"
-msgstr ""
+msgstr "Afrikaans"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Albanian"
-msgstr ""
+msgstr "Albanees"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Bulgarian"
-msgstr ""
+msgstr "Bulgaars"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Catalan"
-msgstr ""
+msgstr "Catalaans"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Danish"
-msgstr ""
+msgstr "Deens"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Finnish"
-msgstr ""
+msgstr "Fins"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Hungarian"
-msgstr ""
+msgstr "Hongaars"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Irish"
-msgstr ""
+msgstr "Iers"
 
 #. TRANSLATION: etlegacy, xenia, xenia-canary
 msgctxt "game_options"
@@ -13108,7 +13141,7 @@ msgstr "Noors"
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Punjabi"
-msgstr ""
+msgstr "Punjabi"
 
 #. TRANSLATION: etlegacy, xenia, xenia-canary
 msgctxt "game_options"
@@ -13118,27 +13151,27 @@ msgstr "Pools"
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Romanian"
-msgstr ""
+msgstr "Roemeens"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Serbian"
-msgstr ""
+msgstr "Servisch"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Slovak"
-msgstr ""
+msgstr "Slowaaks"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Slovenian"
-msgstr ""
+msgstr "Sloveens"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Ukrainian"
-msgstr ""
+msgstr "Oekraïens"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -13153,7 +13186,7 @@ msgstr "Kies de moeilijkheidsgraad van vechten"
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "COMBAT DIFFICULTY"
-msgstr ""
+msgstr "GEVECHT MOEILIJKHEIDSGRAAD"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -14217,7 +14250,7 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
-#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, fallout1-ce.keys, dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr "Stop spel"
@@ -15138,11 +15171,3 @@ msgstr "Snel Opslaan"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Vooruitspoelen"
-
-#~ msgctxt "game_options"
-#~ msgid "GAME DIFFICULATY"
-#~ msgstr "SPEL MOEILIJKHEIDSGRAAD"
-
-#~ msgctxt "game_options"
-#~ msgid "COMBAT DIFFICULATY"
-#~ msgstr "GEVECHT MOEILIJKHEIDSGRAAD"

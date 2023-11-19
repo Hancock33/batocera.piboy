@@ -368,7 +368,7 @@ msgctxt "game_options"
 msgid "Use wheels instead of pads if wheels are connected."
 msgstr ""
 
-#. TRANSLATION: shared
+#. TRANSLATION: shared, shared, shared, shared
 msgctxt "game_options"
 msgid "WHEELS"
 msgstr ""
@@ -376,6 +376,38 @@ msgstr ""
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "USE WHEELS"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Maximum wheel rotation from left to right (in degrees)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEEL ROTATION"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "Zone for which the game doesn't react to the wheel (in degrees)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEEL DEADZONE"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid ""
+"Reserve a non dead zone at the center of the wheel to go straight ahead (in "
+"degrees)"
+msgstr ""
+
+#. TRANSLATION: shared
+msgctxt "game_options"
+msgid "WHEEL MIDZONE"
 msgstr ""
 
 #. TRANSLATION: shared
@@ -13951,7 +13983,7 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
-#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, fallout1-ce.keys, dxx-rebirth.keys
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, fallout1-ce.keys, dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr ""
@@ -14249,14 +14281,6 @@ msgstr ""
 #~ msgstr "將右邊的模擬搖桿視為第二個搖桿"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "重啟遊戲"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "下一個光盤(m3u)"
-
-#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "打開Dolphin-triforce的菜單"
 
@@ -14363,6 +14387,14 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "快進"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "重啟遊戲"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "下一個光盤(m3u)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Aspect ratio correction on/off"

@@ -888,6 +888,9 @@ socrates:
 solarus:
   emulator: solarus
   core:     solarus
+sonic3-air:
+  emulator: sonic3-air
+  core:     sonic3-air
 sonicretro:
   emulator: soniccd
   core:     soniccd

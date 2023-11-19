@@ -856,9 +856,10 @@ def createLibretroConfig(generator, system, controllers, guns, rom, bezel, shade
                 ragunconf = gun_mapping[system.config['core']]["default"]
             raguncoreconf = {}
 
+            gunsmetadata = controllersConfig.getGameGunsMetaData(system.name, rom)
+
             # overwrite configuration by gungames.xml
             if "gameDependant" in ragunconf:
-                gunsmetadata = controllersConfig.getGameGunsMetaData(system.name, rom)
                 for gd in ragunconf["gameDependant"]:
                     if gd["key"] in gunsmetadata and gunsmetadata[gd["key"]] == gd["value"] and "mapkey" in gd and "mapvalue" in gd:
                         ragunconf[gd["mapkey"]] = gd["mapvalue"]
@@ -924,7 +925,7 @@ def configureGunInputsForPlayer(n, gun, controllers, retroarchConfig, core, guns
     # custom mapping by core to match more with avaible gun batocera buttons
     # different mapping for ps1 which has only 3 buttons and maps on aux_a and aux_b not available on all guns
     if core == "pcsx_rearmed":
-        if gunsmetadata["gun"] == "justifier":
+        if "gun" in gunsmetadata and gunsmetada["gun"] == "justifier":
             retroarchConfig['input_player{}_gun_offscreen_shot_mbtn'.format(n)] = ''
             retroarchConfig['input_player{}_gun_aux_a_mbtn'         .format(n)] = 2
         else:

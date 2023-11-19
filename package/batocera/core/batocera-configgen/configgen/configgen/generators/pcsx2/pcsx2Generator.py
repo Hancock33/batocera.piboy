@@ -65,7 +65,7 @@ class Pcsx2Generator(Generator):
         if not os.path.exists(pcsx2BiosDir):
             os.makedirs(pcsx2BiosDir)
         if not os.path.exists(pcsx2Patches):
-            source_file = "/usr/share/batocera/datainit/bios/ps2/patches.zip"
+            source_file = "/usr/bin/pcsx2/resources/patches.zip"
             shutil.copy(source_file, pcsx2Patches)
         
         return Command.Command(
