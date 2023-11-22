@@ -4542,12 +4542,13 @@ vpinball:
                         -------
 
                         To use PinMAME roms, you need to add roms and / or nvram files into their respective folders at:
-                        /userdata/system/configs/vpinball/pinmame
+                        /userdata/system/configs/vpinball/pinmame. Note: If a PinMAME folder exists in the same directory as your vpx
+                        file, it will be used instead.
 
                         All Paths
                         ---------
 
-                        Your .vpx & and any associated .directb2s or .vbs files should be in the: /userdata/roms/vpinball folder.
+                        Your .vpx & and any associated .directb2s, .vbs, or .ini files should be in the: /userdata/roms/vpinball folder.
                         Any associated .UltraDMD folders should also be in the vpinball roms folders.
                         Note: .directb2s files should match the .vpx file name.
 
