@@ -3645,7 +3645,7 @@ etlegacy:
                                The set language only applies on initial boot. Any previous profiles will need to be changed manually.
                                You may have to create a user profile twice for it to save.
                                Batocera only provides the client with mods & NOT the server to host matches.
-    
+
                         For more info: https://wiki.batocera.org/systems:etlegacy
   comment_fr:           |
                         Trouvez la documentation ici: https://wiki.batocera.org/systems:etlegacy
@@ -4436,7 +4436,7 @@ theforceengine:
                         Update the games list and Batocera can now launch the mod directly.
 
                         A good source of missions to try are available here: https://df-21.net/downloads/levels/
-    
+
                         Notes:
 
                         It is important to use the exact directory name above.
