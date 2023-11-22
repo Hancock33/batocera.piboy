@@ -36,7 +36,7 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-encode						$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-es-swissknife					$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-es-thebezelproject			$(TARGET_DIR)/usr/bin/
-	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-format						$(TARGET_DIR)/usr/bin/
+	install -m 0755 $(BATOCERA_SCRIPTS_PTH)/scripts/batocera-format						$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-gameforce						$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-get-nvidia-list				$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-ikemen						$(TARGET_DIR)/usr/bin/
@@ -67,6 +67,7 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-wifi							$(TARGET_DIR)/usr/bin/
 	install -m 0644 $(BATOCERA_SCRIPTS_PATH)/rules/80-switch-screen.rules					$(TARGET_DIR)/etc/udev/rules.d
 	#install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-powermode					$(TARGET_DIR)/usr/share/batocera/configgen/scripts/
+	#ln -sf /usr/bin/batocera-powermode														$(TARGET_DIR)/usr/share/batocera/configgen/scripts/batocera-powermode
 endef
 
 define BATOCERA_SCRIPTS_INSTALL_GAMECON_RPI
