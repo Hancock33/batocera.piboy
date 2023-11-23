@@ -11,7 +11,7 @@
 - Fallout Community Edition: Play the original Fallout game.
 - Fallout 2 Community Edition: Play the original Fallout 2 game.
 - DXX-Rebirth: Play Descent 1 & 2 with enhanced graphics.
-- Added RetroAchievements for Uzebox
+- Added RetroAchievements for Uzebox and NeoGeo CD
 - ETLegacy: play Wolfenstein: Enemy Territory online multiplayer game with enhanced graphics.
 - Konami Justifier / Hyper Blaster light gun in PCSX reARMed core
  - Not compatible with nuvee GunCon patch, use clean ROM.
@@ -22,6 +22,9 @@
  - n64, gamecube, wii, playstation better support
  - automatically set wheels on first players pads when playing wheel games
  - add support for wheel deadzones / min and max rotation by game / system
+- spinner support:
+ - Atari Classic joystick: the rudder is seen as a spinner
+- Ayn Loki Zero: support for on-board LEDs (and light effect on retroachievements unlocked)
 ### Fixed
 - Dolphin bug that prevented full range of analog trigger axis being used.
 - Flycast per pixel sorting option if renderer not explicitly set
