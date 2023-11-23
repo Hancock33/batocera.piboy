@@ -53,6 +53,7 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-save-overlay					$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-services						$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-shutdown						$(TARGET_DIR)/usr/bin/
+    install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-spinner-calibrator			$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-store							$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-streaming						$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-support						$(TARGET_DIR)/usr/bin/
