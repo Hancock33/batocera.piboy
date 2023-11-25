@@ -60,10 +60,10 @@ index bbaff22f..ef7f75c3 100644
  
  class InputConfig
 diff --git a/es-core/src/InputManager.cpp b/es-core/src/InputManager.cpp
-index ffc8c6a2..e457288e 100644
+index 250143b7..044572f8 100644
 --- a/es-core/src/InputManager.cpp
 +++ b/es-core/src/InputManager.cpp
-@@ -1220,6 +1220,7 @@ std::string InputManager::configureEmulators() {
+@@ -1221,6 +1221,7 @@ std::string InputManager::configureEmulators() {
        command << " -p" << player+1 << "nbbuttons "  << playerInputConfig->getDeviceNbButtons();
        command << " -p" << player+1 << "nbhats "     << playerInputConfig->getDeviceNbHats();
        command << " -p" << player+1 << "nbaxes "     << playerInputConfig->getDeviceNbAxes();
@@ -72,10 +72,10 @@ index ffc8c6a2..e457288e 100644
      }
    }
 diff --git a/es-core/src/guis/GuiInputConfig.cpp b/es-core/src/guis/GuiInputConfig.cpp
-index 8fafeed3..ceede23f 100644
+index 7c6713e2..ddd77622 100644
 --- a/es-core/src/guis/GuiInputConfig.cpp
 +++ b/es-core/src/guis/GuiInputConfig.cpp
-@@ -396,6 +396,8 @@ bool GuiInputConfig::assign(Input input, int inputId)
+@@ -414,6 +414,8 @@ bool GuiInputConfig::assign(Input input, int inputId)
  	setAssignedTo(mMappings.at(inputId), input);
  	
  	input.configured = true;
