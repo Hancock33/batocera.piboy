@@ -26,8 +26,8 @@ define WINE_LUTRIS_WOW64_32_AUTOGEN
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/lutris
 	# Use Staging Patches
-	tar -xf $(WINE_LUTRIS_DL_DIR)/wine-staging-v$(WINE_LUTRIS_WOW64_32_STAGING_VERSION).tar.gz -C $(@D)
-	cd $(@D); ./wine-staging-$(WINE_LUTRIS_WOW64_32_STAGING_VERSION)/staging/patchinstall.py --all
+	#tar -xf $(WINE_LUTRIS_DL_DIR)/wine-staging-v$(WINE_LUTRIS_WOW64_32_STAGING_VERSION).tar.gz -C $(@D)
+	#cd $(@D); ./wine-staging-$(WINE_LUTRIS_WOW64_32_STAGING_VERSION)/staging/patchinstall.py --all
 	# Autotools generation
 	cd $(@D); autoreconf -fiv
 	cd $(@D); ./tools/make_requests
