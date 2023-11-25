@@ -43,7 +43,8 @@ RUN dpkg --add-architecture i386 && \
 		libgtest-dev \
 		spirv-tools \
 		gcc-multilib \
-		g++-multilib \
+		g++-multilib \ 
+		libgmock-dev \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 
