@@ -570,6 +570,16 @@ msgstr "内部分辨率"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
+msgid "Enable the BASIC interpreter. Some games need this."
+msgstr ""
+
+#. TRANSLATION: libretro/atari800
+msgctxt "game_options"
+msgid "INTERNAL BASIC INTERPRETER"
+msgstr ""
+
+#. TRANSLATION: libretro/atari800
+msgctxt "game_options"
 msgid "Treats the right analogue stick as the second joystick."
 msgstr ""
 
@@ -1922,7 +1932,7 @@ msgctxt "game_options"
 msgid "On with game detection message"
 msgstr "开启游戏检测消息"
 
-#. TRANSLATION: libretro/dosbox_pure, mupen64plus, mupen64plus, mupen64plus, mupen64plus
+#. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Set the dead zone of the joystick analogue sticks."
 msgstr ""
@@ -4976,7 +4986,7 @@ msgctxt "game_options"
 msgid "PARALLEL-RDP UPSCALER"
 msgstr "并行RDP升频器"
 
-#. TRANSLATION: libretro/mupen64plus-next
+#. TRANSLATION: libretro/mupen64plus-next, mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "1x (Default)"
 msgstr "1x (默认)"
@@ -8402,7 +8412,7 @@ msgctxt "game_options"
 msgid "DEADZONE"
 msgstr "死区"
 
-#. TRANSLATION: dolphin, dolphin, dolphin, dolphin, mupen64plus, ...
+#. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "5% (Default)"
 msgstr "5% (默认)"
@@ -9549,7 +9559,9 @@ msgstr "启用"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
-msgid "Set the sensitivity of the joystick analogue sticks."
+msgid ""
+"Apply a multiplier to the joystick's input to lower or increase "
+"responsiveness."
 msgstr ""
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
@@ -9559,8 +9571,65 @@ msgstr "灵敏度"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
-msgid "100% (Default)"
-msgstr "100% (默认)"
+msgid "0.5x"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "0.6x"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "0.7x"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "0.8x"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "0.9x"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "1.1x"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "1.2x"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "1.3x"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "1.4x"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "1.5x"
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid ""
+"The area around the joystick's neutral position where input is ignored. Can "
+"help reduce unintended inputs."
+msgstr ""
+
+#. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
+msgctxt "game_options"
+msgid "1% (Default)"
+msgstr ""
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -14275,6 +14344,10 @@ msgstr "快速载入"
 msgctxt "keys_files"
 msgid "Quick Save"
 msgstr "快速保存"
+
+#~ msgctxt "game_options"
+#~ msgid "100% (Default)"
+#~ msgstr "100% (默认)"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
