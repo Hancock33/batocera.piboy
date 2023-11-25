@@ -24,6 +24,7 @@ endif
 ###
 
 define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
+    mkdir -p $(TARGET_DIR)/etc/udev/rules.d
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/bluetooth/bluezutils.py				$(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/ # any variable ?
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/bluetooth/batocera-bluetooth			$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/bluetooth/batocera-bluetooth-agent		$(TARGET_DIR)/usr/bin/
@@ -36,7 +37,7 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-encode						$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-es-swissknife					$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-es-thebezelproject			$(TARGET_DIR)/usr/bin/
-	install -m 0755 $(BATOCERA_SCRIPTS_PTH)/scripts/batocera-format						$(TARGET_DIR)/usr/bin/
+	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-format				    	$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-gameforce						$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-get-nvidia-list				$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-ikemen						$(TARGET_DIR)/usr/bin/
