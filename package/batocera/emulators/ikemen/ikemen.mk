@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Nov 26, 2023
-IKEMEN_VERSION = 0ce2341106d3e1be17478ef2fae5b6dbff6d0720
+IKEMEN_VERSION = b0d38aeb471af747ff4421a371a92354864eb77b
 IKEMEN_SITE = https://github.com/ikemen-engine/Ikemen-GO
 IKEMEN_LICENSE = MIT
 IKEMEN_DEPENDENCIES = libgtk3 mesa3d openal libglfw
