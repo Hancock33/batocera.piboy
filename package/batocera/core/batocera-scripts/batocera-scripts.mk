@@ -24,9 +24,8 @@ endif
 ###
 
 define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
-	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/bluetooth/bluezutils.py				$(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/ # any variable ?
-	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/bluetooth/batocera-bluetooth			$(TARGET_DIR)/usr/bin/
-	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/bluetooth/batocera-bluetooth-agent		$(TARGET_DIR)/usr/bin/
+	mkdir -p $(TARGET_DIR)/etc/udev/rules.d
+	install -m 0644 $(BATOCERA_SCRIPTS_PATH)/rules/80-switch-screen.rules					$(TARGET_DIR)/etc/udev/rules.d
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-amd-tdp						$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-autologin						$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-brightness					$(TARGET_DIR)/usr/bin/
@@ -53,6 +52,7 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-save-overlay					$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-services						$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-shutdown						$(TARGET_DIR)/usr/bin/
+	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-spinner-calibrator			$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-store							$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-streaming						$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-support						$(TARGET_DIR)/usr/bin/
@@ -65,8 +65,9 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-usbmount						$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-version						$(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-wifi							$(TARGET_DIR)/usr/bin/
-	install -m 0644 $(BATOCERA_SCRIPTS_PATH)/rules/80-switch-screen.rules					$(TARGET_DIR)/etc/udev/rules.d
-	#install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/batocera-powermode					$(TARGET_DIR)/usr/share/batocera/configgen/scripts/
+	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/bluetooth/batocera-bluetooth			$(TARGET_DIR)/usr/bin/
+	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/bluetooth/batocera-bluetooth-agent		$(TARGET_DIR)/usr/bin/
+	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/bluetooth/bluezutils.py				$(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/ # any variable ?
 endef
 
 define BATOCERA_SCRIPTS_INSTALL_GAMECON_RPI

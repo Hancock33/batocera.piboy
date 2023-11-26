@@ -776,18 +776,21 @@ index 27417482..31dce7f6 100644
  		TEKNOPARROT,
  
 diff --git a/es-app/src/scrapers/GamesDBJSONScraper.cpp b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-index 74c978fe..b090a885 100644
+index d43377d5..b090a885 100644
 --- a/es-app/src/scrapers/GamesDBJSONScraper.cpp
 +++ b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-@@ -38,7 +38,6 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+@@ -38,10 +38,8 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ ATARI_LYNX, "4924" },
  	{ ATARI_ST, "4937" },
  	{ ATARI_XE, "30" },
 -	{ BBC_MICRO, "5013"},
  	{ COLECOVISION, "31" },	
  	{ COMMODORE_64, "40" },
+-	{ COMMODORE_PET, "5008" },
  	{ INTELLIVISION, "32" },
-@@ -69,7 +68,6 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+ 	{ MAC_OS, "37" },
+ 	{ XBOX, "14" },
+@@ -70,7 +68,6 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ SEGA_GENESIS, "18" },
  	{ SEGA_MASTER_SYSTEM, "35" },
  	{ SEGA_MEGA_DRIVE, "36" },
@@ -795,7 +798,7 @@ index 74c978fe..b090a885 100644
  	{ SEGA_SATURN, "17" },
  	{ SEGA_SG1000, "4949" },
  	{ PLAYSTATION, "10" },
-@@ -104,17 +102,16 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+@@ -105,17 +102,16 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ VIC20, "4945" },
  	{ CHANNELF, "4928" },
  	{ SAMCOUPE, "4979" },
@@ -817,7 +820,7 @@ index 74c978fe..b090a885 100644
  	// 1 = PC
  	{ PC, "1" },
  	{ MOONLIGHT, "1" },
-@@ -141,7 +138,13 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+@@ -142,7 +138,13 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ GAMATE, "5004" },
  	{ CREATONIC_MEGA_DUCK, "4948" },
  	{ TOMY_TUTOR, "4960" },
@@ -845,10 +848,10 @@ index 091cb7d8..27c1bd4a 100644
  	{ MSX, "113089" },
  	{ NOKIA_NGAGE, "128704" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index 84b832a5..3397c1ac 100644
+index e9db321e..3397c1ac 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -36,154 +36,234 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
+@@ -36,156 +36,235 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
@@ -1195,7 +1198,10 @@ index 84b832a5..3397c1ac 100644
 +	{ HIKARU, 258 },
 +	{ VG5000, 261 },
  	{ WASM4, 262 },
+-	{ GAMATE, 266 },
+-	{ ARDUBOY, 263 }
 +	{ ARDUBOY, 263 },
- 	{ GAMATE, 266 }
++	{ GAMATE, 266 }
  };
  
+ const std::set<Scraper::ScraperMediaSource>& ScreenScraperScraper::getSupportedMedias()

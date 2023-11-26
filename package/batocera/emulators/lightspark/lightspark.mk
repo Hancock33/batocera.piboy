@@ -3,14 +3,14 @@
 # lightspark
 #
 ################################################################################
-# Version: Commits on Nov 04, 2023
-LIGHTSPARK_VERSION = 6ddfec6209e08b23f0c192a84eee7f6be6edad3c
+# Version: Commits on Nov 14, 2023
+LIGHTSPARK_VERSION = 955f8f9eb687d36665b01a87b034857ab094aa0d
 LIGHTSPARK_SITE = $(call github,lightspark,lightspark,$(LIGHTSPARK_VERSION))
 LIGHTSPARK_LICENSE = LGPLv3
 LIGHTSPARK_DEPENDENCIES = sdl2 freetype pcre jpeg libpng cairo pango ffmpeg libcurl rtmpdump
 
 LIGHTSPARK_CONF_OPTS += -DCOMPILE_NPAPI_PLUGIN=FALSE -DCOMPILE_PPAPI_PLUGIN=FALSE
-ifneq ($(BR2_x86_64),y)
+ifeq ($(filter y,$(BR2_x86_64) $(BR2_PACKAGE_BATOCERA_BCM27XX)),)
 LIGHTSPARK_CONF_OPTS += -DENABLE_GLES2=TRUE -DCMAKE_C_FLAGS=-DEGL_NO_X11 -DCMAKE_CXX_FLAGS=-DEGL_NO_X11
 endif
 

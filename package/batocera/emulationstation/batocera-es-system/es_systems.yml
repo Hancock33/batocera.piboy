@@ -1610,7 +1610,7 @@ pet:
   release:              1977
   hardware:             computer
   extensions:           [a0, b0, crt, d64, d81, prg, tap, t64, m3u, zip, 7z]
-  platform:             c64
+  platform:             pet
   emulators:
     vice:
       xpet:             { requireAnyOf: [BR2_PACKAGE_VICE], incompatible_extensions: [m3u,7z] }
@@ -3645,7 +3645,7 @@ etlegacy:
                                The set language only applies on initial boot. Any previous profiles will need to be changed manually.
                                You may have to create a user profile twice for it to save.
                                Batocera only provides the client with mods & NOT the server to host matches.
-    
+
                         For more info: https://wiki.batocera.org/systems:etlegacy
   comment_fr:           |
                         Trouvez la documentation ici: https://wiki.batocera.org/systems:etlegacy
@@ -4436,7 +4436,7 @@ theforceengine:
                         Update the games list and Batocera can now launch the mod directly.
 
                         A good source of missions to try are available here: https://df-21.net/downloads/levels/
-    
+
                         Notes:
 
                         It is important to use the exact directory name above.
@@ -4542,12 +4542,13 @@ vpinball:
                         -------
 
                         To use PinMAME roms, you need to add roms and / or nvram files into their respective folders at:
-                        /userdata/system/configs/vpinball/pinmame
+                        /userdata/system/configs/vpinball/pinmame. Note: If a PinMAME folder exists in the same directory as your vpx
+                        file, it will be used instead.
 
                         All Paths
                         ---------
 
-                        Your .vpx & and any associated .directb2s or .vbs files should be in the: /userdata/roms/vpinball folder.
+                        Your .vpx & and any associated .directb2s, .vbs, or .ini files should be in the: /userdata/roms/vpinball folder.
                         Any associated .UltraDMD folders should also be in the vpinball roms folders.
                         Note: .directb2s files should match the .vpx file name.
 
