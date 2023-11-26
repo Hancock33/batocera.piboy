@@ -3,8 +3,8 @@
 # wine-lutris
 #
 ################################################################################
-# Version: Commits on Nov 10, 2023
-WINE_LUTRIS_VERSION = 8.20
+# Version: Commits on Nov 2, 2023
+WINE_LUTRIS_VERSION = 8.21
 WINE_LUTRIS_STAGING_VERSION = $(WINE_LUTRIS_VERSION)
 WINE_LUTRIS_SOURCE = wine-$(WINE_LUTRIS_VERSION).tar.gz
 WINE_LUTRIS_SITE = https://github.com/wine-mirror/wine/archive/refs/tags
@@ -26,8 +26,8 @@ define WINE_LUTRIS_AUTOGEN
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/lutris
 	# Use Staging Patches
-	tar -xf $(WINE_LUTRIS_DL_DIR)/wine-staging-v$(WINE_LUTRIS_STAGING_VERSION).tar.gz -C $(@D)
-	cd $(@D); ./wine-staging-$(WINE_LUTRIS_STAGING_VERSION)/staging/patchinstall.py --all
+	#tar -xf $(WINE_LUTRIS_DL_DIR)/wine-staging-v$(WINE_LUTRIS_STAGING_VERSION).tar.gz -C $(@D)
+	#cd $(@D); ./wine-staging-$(WINE_LUTRIS_STAGING_VERSION)/staging/patchinstall.py --all
 	# Autotools generation
 	cd $(@D); autoreconf -fiv
 	cd $(@D); ./tools/make_requests

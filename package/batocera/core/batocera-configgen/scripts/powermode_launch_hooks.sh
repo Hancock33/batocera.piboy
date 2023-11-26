@@ -62,6 +62,7 @@ handle_powermode() {
 
 # Check for events
 EVENT=$1
+SYSTEM_NAME=$2
 
 # Exit if the event is neither gameStart nor gameStop
 if [ "$EVENT" != "gameStart" ] && [ "$EVENT" != "gameStop" ]; then
@@ -93,7 +94,7 @@ fi
 
 # select powermode
 if ! [ -z "${POWER_MODE}" ]; then
-	handle_powermode "${POWER_MODE}" "$EVENT"
+	handle_powermode "${POWER_MODE}"
 fi
 
 
