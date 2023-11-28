@@ -3,8 +3,8 @@
 # libretro-puae2021
 #
 ################################################################################
-# Version: Commits on Nov 26, 2023 (branch@2.6.1)
-LIBRETRO_PUAE2021_VERSION = 2bbe7cd88588b7d43ff3568f661e185a44ad39ca
+# Version: Commits on Nov 28, 2023 (branch@2.6.1)
+LIBRETRO_PUAE2021_VERSION = 144987e45284b46b7775adb4c4da1fda8f61a641
 LIBRETRO_PUAE2021_SITE = $(call github,sonninnos,libretro-uae,$(LIBRETRO_PUAE2021_VERSION))
 LIBRETRO_PUAE2021_LICENSE = GPLv2
 
