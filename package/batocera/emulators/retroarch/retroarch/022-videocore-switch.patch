@@ -1,5 +1,5 @@
 diff --git a/gfx/video_crt_switch.c b/gfx/video_crt_switch.c
-index 7e51e0c0f4..6414764a72 100644
+index f4706c8396..ca8b8ca392 100644
 --- a/gfx/video_crt_switch.c
 +++ b/gfx/video_crt_switch.c
 @@ -33,10 +33,8 @@
