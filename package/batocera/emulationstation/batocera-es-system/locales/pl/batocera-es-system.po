@@ -13987,6 +13987,11 @@ msgstr "Pociągnij tłok"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
+msgid "Buy extraball for a credit"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
 msgid "Left flipper"
 msgstr "Lewy fliper"
 
@@ -14591,10 +14596,6 @@ msgid "Quick Save"
 msgstr "Szybkie zapisywanie"
 
 #~ msgctxt "game_options"
-#~ msgid "100% (Default)"
-#~ msgstr "100% (domyślnie)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Przechowuj poprzednie stany, aby przewinąć do nich w czasie rzeczywistym, "
@@ -14978,10 +14979,6 @@ msgstr "Szybkie zapisywanie"
 #~ "jest włączone."
 
 #~ msgctxt "game_options"
-#~ msgid "Set the sensitivity of the joystick analog sticks."
-#~ msgstr "Ustaw czułość drążków analogowych joysticka."
-
-#~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
 #~ msgstr ""
 #~ "Wyświetlaj na ekranie informacje, takie jak stan zapisu, ostrzeżenie o "
@@ -15128,6 +15125,14 @@ msgstr "Szybkie zapisywanie"
 #~ msgstr "OpenGLES (domyślnie)"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Restart gry"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Następny dysk (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Otwarcie menu Dolphin-triforce"
 
@@ -15235,13 +15240,13 @@ msgstr "Szybkie zapisywanie"
 #~ msgid "FastForward"
 #~ msgstr "Przewijanie do przodu"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Restart gry"
+#~ msgctxt "game_options"
+#~ msgid "Set the sensitivity of the joystick analog sticks."
+#~ msgstr "Ustaw czułość drążków analogowych joysticka."
 
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Następny dysk (m3u)"
+#~ msgctxt "game_options"
+#~ msgid "100% (Default)"
+#~ msgstr "100% (domyślnie)"
 
 #~ msgctxt "game_options"
 #~ msgid "CONTOLLER 2"

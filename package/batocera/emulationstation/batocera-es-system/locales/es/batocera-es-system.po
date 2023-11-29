@@ -2,8 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-07 00:00+0100\n"
-"Last-Translator: roliverosc <roliverosc@hotmail.com>, 2023\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: pajarorrojo\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +18,7 @@ msgctxt "game_options"
 msgid "Set the display's resolution. Does not affect the rendering resolution."
 msgstr ""
 "Establece la resolución de la pantalla. No afecta la resolución de "
-"renderizado"
+"renderizado."
 
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
 msgctxt "game_options"
@@ -116,13 +117,13 @@ msgid ""
 "Disabled if using a shader set or the output display matches the game's "
 "resolution."
 msgstr ""
-"Desactivar si se usa un conjunto de shaders o si la pantalla de salida "
+"Deshabilitado si se usa un set de shaders, o si la salida de la pantalla "
 "coincide con la resolución del juego."
 
 #. TRANSLATION: shared, daphne, play
 msgctxt "game_options"
 msgid "SMOOTH GAMES (BILINEAR FILTERING)"
-msgstr "JUEGOS SUAVES (FILTRADO BILINEAL)"
+msgstr "SUAVIZAR JUEGOS (FILTRADO BILINEAL)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -352,8 +353,7 @@ msgstr "FRECUENCIA DE ACTUALIZACIÓN VARIABLE"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Improves performance at the cost of latency and more video stuttering."
-msgstr ""
-"Mejora el rendimiento a costa de la latencia y más tartamudeo del vídeo."
+msgstr "Mejora el rendimiento a costa de la latencia y más tirones de vídeo."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -393,22 +393,22 @@ msgstr "USAR VOLANTES"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Maximum wheel rotation from left to right (in degrees)"
-msgstr ""
+msgstr "Rotación máxima del volante de izquierda a derecha (en grados)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "WHEEL ROTATION"
-msgstr ""
+msgstr "ROTACIÓN DEL VOLANTE"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
-msgstr ""
+msgstr "Zona en la que el juego no reacciona al volante (en grados)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "WHEEL DEADZONE"
-msgstr ""
+msgstr "ZONA MUERTA DEL VOLANTE"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -416,11 +416,13 @@ msgid ""
 "Reserve a non dead zone at the center of the wheel to go straight ahead (in "
 "degrees)"
 msgstr ""
+"Reserva una zona no muerta en el centro del volante para seguir recto (en "
+"grados)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "WHEEL MIDZONE"
-msgstr ""
+msgstr "ZONA MEDIA DEL VOLANTE"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -573,7 +575,7 @@ msgstr "HI-RES ARTIFACTING"
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
 msgid "Use an alternate resolution. Some games need this."
-msgstr "Usa una resolución alternativa. Algunos juegos necesitan esto."
+msgstr "Usa una resolución alternativa. Necesario en algunos juegos."
 
 #. TRANSLATION: libretro/atari800, libretro/uae4arm
 msgctxt "game_options"
@@ -633,7 +635,7 @@ msgstr "No todos los juegos son compatibles con el pad 3D."
 #. TRANSLATION: libretro/beetle-saturn, libretro/dolphin, libretro/dolphin, libretro/dosbox, libretro/dosbox_pure, ...
 msgctxt "game_options"
 msgid "CONTROLLER 1 TYPE"
-msgstr "MANDO TIPO 1"
+msgstr "TIPO DE MANDO 1"
 
 #. TRANSLATION: libretro/beetle-saturn, libretro/beetle-saturn, libretro/yabasanshiro, libretro/yabasanshiro
 msgctxt "game_options"
@@ -648,12 +650,13 @@ msgstr "Saturn Pad 3D"
 #. TRANSLATION: libretro/beetle-saturn, libretro/dolphin, libretro/dolphin, libretro/dosbox, libretro/dosbox_pure, ...
 msgctxt "game_options"
 msgid "CONTROLLER 2 TYPE"
-msgstr "MANDO TIPO 2"
+msgstr "TIPO DE MANDO 2"
 
 #. TRANSLATION: libretro/bluemsx, libretro/fuse, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, ...
 msgctxt "game_options"
 msgid "Hides borders on many games. Some games used the borders."
-msgstr "Oculta los bordes en muchos juegos. Algunos juegos usaban los bordes."
+msgstr ""
+"Oculta los bordes en muchos juegos. Algunos juegos utilizan los bordes."
 
 #. TRANSLATION: libretro/bluemsx, libretro/fuse, vice
 msgctxt "game_options"
@@ -938,7 +941,7 @@ msgstr "Después de NMI"
 #. TRANSLATION: libretro/mesens, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
-msgstr "Mejora. Reduce la desaceleración en los juegos de modo 7."
+msgstr "Mejora. Reduce la ralentización en los juegos de modo 7."
 
 #. TRANSLATION: libretro/mesens, libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -1085,7 +1088,7 @@ msgstr "Evita tener que cargar manualmente la cara A cada vez."
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
 msgid "(FDS) AUTOMATICALLY LOAD DISK SIDE A"
-msgstr "(FDS) CARGAR AUTOMÁTICAMENTE CARA A DEL DISCO"
+msgstr "(FDS) CARGAR AUTOMÁTICAMENTE LA CARA A DEL DISCO"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -1438,7 +1441,7 @@ msgstr "Omitir dibujado"
 #. TRANSLATION: libretro/dolphin, dolphin, dolphin_triforce, pcsx2, ppsspp, ...
 msgctxt "game_options"
 msgid "Improves clarity of distant textures."
-msgstr "Mejora la claridad de texturas distantes."
+msgstr "Mejora la claridad de texturas lejanas."
 
 #. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/flycast2021, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
@@ -1511,12 +1514,12 @@ msgstr "Mando de GameCube"
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/flycast2021, libretro/snes9x
 msgctxt "game_options"
 msgid "CONTROLLER 3 TYPE"
-msgstr "MANDO TIPO 3"
+msgstr "TIPO DE MANDO 3"
 
 #. TRANSLATION: libretro/dolphin, libretro/dolphin, libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "CONTROLLER 4 TYPE"
-msgstr "MANDO TIPO 4"
+msgstr "TIPO DE MANDO 4"
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
@@ -1646,7 +1649,7 @@ msgstr "RENDIMIENTO DE CPU EMULADA"
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "MAX (as many as possible)"
-msgstr "MÁX (tanto como sea posible)"
+msgstr "MAX (tanto como sea posible)"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -1951,7 +1954,7 @@ msgstr "GUARDAR/REBOBINAR"
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "On with rewind support"
-msgstr "Añadido soporte de rebobinado"
+msgstr "Habilitado con soporte de rebobinado"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -2298,7 +2301,7 @@ msgstr ""
 msgctxt "game_options"
 msgid "Can fix slowdown. Only works on some drivers."
 msgstr ""
-"Puede corregir la desaceleración. Solo funciona para algunos controladores."
+"Puede corregir la ralentización. Solo funciona para algunos controladores."
 
 #. TRANSLATION: libretro/fbneo, libretro/puae, libretro/puae2021, libretro/px68k, libretro/quasi88
 msgctxt "game_options"
@@ -2532,7 +2535,7 @@ msgstr ""
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, mupen64plus
 msgctxt "game_options"
 msgid "Smooth textures on distant 3D objects based on angle."
-msgstr "Texturas suaves en objetos 3D distantes según el ángulo."
+msgstr "Suavizar texturas en objetos 3D lejanos según el ángulo."
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, mupen64plus
 msgctxt "game_options"
@@ -2543,7 +2546,7 @@ msgstr "TEXTURE MIP-MAPPING (BLUR)"
 msgctxt "game_options"
 msgid "Improves clarity of distant textures when mip-mapping is enabled."
 msgstr ""
-"Mejora la claridad de las texturas distantes cuando el mip-mapping está "
+"Mejora la claridad de las texturas lejanas cuando el mip-mapping está "
 "activado."
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021
@@ -2554,7 +2557,7 @@ msgstr "Mejora. Mejora las texturas en pantalla (solo juegos 2D)"
 #. TRANSLATION: libretro/flycast, libretro/flycast2021, flycast
 msgctxt "game_options"
 msgid "ALPHA SORTING"
-msgstr "CLASIFICACIÓN ALFA"
+msgstr "ORDEN ALFABÉTICO"
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
@@ -2794,7 +2797,7 @@ msgstr "Mando Sinclair 1 configurado como AUTO."
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "CONTROLLER TYPE 1"
-msgstr "MANDO TIPO 1"
+msgstr "TIPO DE MANDO 1"
 
 #. TRANSLATION: libretro/fuse, libretro/fuse, libretro/mame078plus, libretro/puae, libretro/puae, ...
 msgctxt "game_options"
@@ -2844,7 +2847,7 @@ msgstr "Mando Sinclair 2 configurado como AUTO."
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "CONTROLLER TYPE 2"
-msgstr "MANDO TIPO 2"
+msgstr "TIPO DE MANDO 2"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -3302,7 +3305,7 @@ msgstr "Elija el monitor Atari que desea."
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "ATARI MONITOR TYPE"
-msgstr "TIPO MONITOR ATARI"
+msgstr "TIPO DE MONITOR ATARI"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -3396,7 +3399,7 @@ msgstr "Ayuda e información"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Floppy Disk List"
-msgstr "Lista de discos"
+msgstr "Lista de disquetes"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -3585,7 +3588,7 @@ msgstr "Coleco Adam Digital Data Packs"
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Coleco ADAM diskettes"
-msgstr "Coleco ADAM Diskettes"
+msgstr "Disquetes Coleco ADAM"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4620,8 +4623,7 @@ msgstr "100%(nativo)"
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Small performance increase (may drop frames)."
-msgstr ""
-"Pequeño aumento de rendimiento (puede ocasionar perdida de fotogramas)."
+msgstr "Pequeño aumento de rendimiento (puede ocasionar caída de fotogramas)."
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -4681,7 +4683,7 @@ msgstr "Permite hasta 5 u 8 controladores en juegos compatibles."
 #. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, pcsx2
 msgctxt "game_options"
 msgid "MULTITAP"
-msgstr "TOQUE MÚLTIPLE"
+msgstr "MULTITAP"
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, ...
 msgctxt "game_options"
@@ -4840,7 +4842,7 @@ msgstr "Mejora. Suaviza lo bordes irregulares en polígonos de objetos 3D."
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, ppsspp, yuzu, dxx-rebirth
 msgctxt "game_options"
 msgid "Smooth textures on 3D objects."
-msgstr "Texturas suaves en objetos 3D."
+msgstr "Suavizado de texturas en objetos 3D."
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -4958,8 +4960,8 @@ msgid ""
 "Useful for N64 style controllers. Limited hotkeys for controllers without "
 "dedicated hotkey."
 msgstr ""
-"Útil para mandos estilo N64. Teclas de acceso rápido limitadas para mandos "
-"sin tecla HOTKEY."
+"Útil para mandos estilo N64. Atajos de acceso rápido limitados para mandos "
+"sin botón HOTKEY."
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/mupen64plus-next, libretro/parallel_n64, libretro/parallel_n64, dolphin, ...
 msgctxt "game_options"
@@ -5604,11 +5606,13 @@ msgstr "PCE Mouse"
 msgctxt "game_options"
 msgid "Skip the bios boot logo, may cause default language issues."
 msgstr ""
+"Omite el logo de inicio de BIOS, puede causar problemas con el idioma "
+"predeterminado."
 
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "BIOS FAST BOOT"
-msgstr ""
+msgstr "ARRANQUE RÁPIDO DE BIOS"
 
 #. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar, virtualjaguar
 msgctxt "game_options"
@@ -5983,12 +5987,12 @@ msgstr " 3.54 MHz"
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid " 7.09 MHz (A500 speed)"
-msgstr " 7.09 MHz (velocidad A500)"
+msgstr " 7.09 MHz (velocidad del A500)"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "14.18 MHz (A1200 speed)"
-msgstr "14.18 MHz (velocidad A1200)"
+msgstr "14.18 MHz (velocidad del A1200)"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -6169,7 +6173,7 @@ msgstr "SALTO EN A"
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "Select controller type for Amiga P1."
-msgstr "Selecciona tipo de mando para P1 Amiga."
+msgstr "Selecciona el tipo de mando para P1 Amiga."
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
@@ -6184,7 +6188,7 @@ msgstr "Joystick"
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "Select controller type for Amiga P2."
-msgstr "Selecciona tipo de mando para P2 Amiga."
+msgstr "Selecciona el tipo de mando para P2 Amiga."
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
@@ -7373,7 +7377,7 @@ msgctxt "game_options"
 msgid ""
 "Choose which graphics API library to use. Vulkan may not work for every core."
 msgstr ""
-"Selecciona que biblioteca gráfica usar (API). Es posible que Vulkan no "
+"Selecciona que librería gráfica usar (API). Es posible que Vulkan no "
 "funcione para todos los núcleos."
 
 #. TRANSLATION: libretro, libretro, libretro, libretro, daphne, ...
@@ -8892,7 +8896,7 @@ msgstr "NeGcon (Vibración)"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Reduces wobbly polygons & warping textures."
-msgstr "Reduce el tambaleo de polígonos y texturas deformadas."
+msgstr "Reduce los temblores de polígonos y las texturas deformadas."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9431,7 +9435,7 @@ msgstr ""
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "VIDEO STREAM CODEC"
-msgstr "CÓDEC TRANSMISIÓN DE VÍDEO"
+msgstr "CÓDEC DE TRANSMISIÓN DE VÍDEO"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -9446,7 +9450,7 @@ msgstr "h265 (HEVC) (mayor calidad a tasas de bits más bajas)"
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "VIDEO STREAM RESOLUTION"
-msgstr "RESOLUCIÓN TRANSMISIÓN DE VÍDEO"
+msgstr "RESOLUCIÓN DE LA TRANSMISIÓN DE VÍDEO"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -9467,7 +9471,7 @@ msgstr "GIRAR"
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "VIDEO STREAM FRAME RATE"
-msgstr "TASA DE REFRESCO EN STREAM DE VÍDEO"
+msgstr "TASA DE REFRESCO DE LA TRANSMISIÓN DE VÍDEO"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -9488,13 +9492,12 @@ msgstr "120FPS"
 msgctxt "game_options"
 msgid "Higher number for higher picture quality, but requires more bandwidth."
 msgstr ""
-"Un número más alto para una mejor calidad de imagen, pero requiere más ancho "
-"de banda."
+"A mayor número mejor calidad de imagen, pero requiere más ancho de banda."
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
 msgid "VIDEO STREAM BITRATE"
-msgstr "BITRATE PARA STREAM DE VÍDEO"
+msgstr "BITRATE DE LA TRANSMISIÓN DE VÍDEO"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -10244,7 +10247,7 @@ msgid ""
 "Necessary for some guns to replace fog textures as a workaround in Time "
 "Crisis - Crisis Zone."
 msgstr ""
-"Necesario para que algunas armas remplaceen las texturas de niebla como "
+"Necesario para que algunas armas reemplacen las texturas de niebla como "
 "solución en Time Crisis - Crisis Zone."
 
 #. TRANSLATION: pcsx2
@@ -10446,8 +10449,8 @@ msgid ""
 "Limiting to 1 or 2 may fix audio stuttering on weaker CPUs in some games. "
 "Leave on automatic if slowdown occurs."
 msgstr ""
-"Limitar a 1 o 2 puede solucionar la tartamudez del audio en algunos juegos "
-"para CPU menos potentes. Déjelo en automático si produce desaceleración."
+"Limitar a 1 o 2 puede solucionar los cortes de audio en algunos juegos para "
+"CPU menos potentes. Déjelo en automático si produce ralentización."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10851,7 +10854,7 @@ msgid ""
 "Duration of audio buffer in milliseconds. Higher numbers may cause audio "
 "latency."
 msgstr ""
-"Duración del búfer de audio en milisegundos. Los números más altos pueden "
+"Duración del búfer de audio en milisegundos. Los valores más altos pueden "
 "causar latencia de audio."
 
 #. TRANSLATION: rpcs3
@@ -11863,7 +11866,7 @@ msgstr "MUCHO RETRASO DE LIBERACIÓN"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Force Nvidia GPUs to always be reported as AMD GPUs."
-msgstr "Fuerza a que las GPU de Nvidia se anuncien siempre como GPU de AMD."
+msgstr "Fuerza a que las GPU de Nvidia se notifiquen siempre como GPU de AMD."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -12910,7 +12913,7 @@ msgstr "TIPO DE DISCO"
 #. TRANSLATION: openmsx
 msgctxt "game_options"
 msgid "Floppy Disk Image"
-msgstr "Imagen de diskette"
+msgstr "Imagen de disquete"
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
@@ -12930,7 +12933,7 @@ msgstr ""
 #. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "GAME DIFFICULTY"
-msgstr ""
+msgstr "DIFICULTAD DEL JUEGO"
 
 #. TRANSLATION: awgl, fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -13180,42 +13183,42 @@ msgstr ""
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Afrikaans"
-msgstr ""
+msgstr "Afrikaans"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Albanian"
-msgstr ""
+msgstr "Albano"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Bulgarian"
-msgstr ""
+msgstr "Búgaro"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Catalan"
-msgstr ""
+msgstr "Catalán"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Danish"
-msgstr ""
+msgstr "Danés"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Finnish"
-msgstr ""
+msgstr "Finlandés"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Hungarian"
-msgstr ""
+msgstr "Húngaro"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Irish"
-msgstr ""
+msgstr "Irlandés"
 
 #. TRANSLATION: etlegacy, xenia, xenia-canary
 msgctxt "game_options"
@@ -13225,7 +13228,7 @@ msgstr "Noruego"
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Punjabi"
-msgstr ""
+msgstr "Punjabi"
 
 #. TRANSLATION: etlegacy, xenia, xenia-canary
 msgctxt "game_options"
@@ -13235,27 +13238,27 @@ msgstr "Polaco"
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Romanian"
-msgstr ""
+msgstr "Rumano"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Serbian"
-msgstr ""
+msgstr "Serbio"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Slovak"
-msgstr ""
+msgstr "Eslovaco"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Slovenian"
-msgstr ""
+msgstr "Esloveno"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Ukrainian"
-msgstr ""
+msgstr "Ucraniano"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -13270,7 +13273,7 @@ msgstr "Elige la dificultad del combate."
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
 msgid "COMBAT DIFFICULTY"
-msgstr ""
+msgstr "DIFICULTAD DE COMBATE"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -14009,6 +14012,11 @@ msgstr "Tirar del émbolo"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
+msgid "Buy extraball for a credit"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
 msgid "Left flipper"
 msgstr "Aleta izquierda"
 
@@ -14020,12 +14028,12 @@ msgstr "Aleta derecha"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left magnasave"
-msgstr ""
+msgstr "Magnasave izquierdo"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Right magnasave"
-msgstr ""
+msgstr "Magnasave derecho"
 
 #. TRANSLATION: amigacd32.amiberry.keys, amiga500.amiberry.keys, amiga1200.amiberry.keys
 msgctxt "keys_files"
@@ -14613,8 +14621,24 @@ msgid "Quick Save"
 msgstr "Guardado rápido"
 
 #~ msgctxt "game_options"
-#~ msgid "100% (Default)"
-#~ msgstr "100% (Defecto)"
+#~ msgid "Adjust the cpu power profile."
+#~ msgstr "Ajusta el perfil de energía de la CPU."
+
+#~ msgctxt "game_options"
+#~ msgid "POWER MODE"
+#~ msgstr "MODO DE ENERGÍA"
+
+#~ msgctxt "game_options"
+#~ msgid "High Performance"
+#~ msgstr "Alto Rendimiento"
+
+#~ msgctxt "game_options"
+#~ msgid "Balanced"
+#~ msgstr "Balanceado"
+
+#~ msgctxt "game_options"
+#~ msgid "Power Saver"
+#~ msgstr "Economizador de energía"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
@@ -14764,7 +14788,7 @@ msgstr "Guardado rápido"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the color palette to use."
-#~ msgstr "Establce la paleta de colores a utilizar."
+#~ msgstr "Establece la paleta de colores a utilizar."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -15003,7 +15027,11 @@ msgstr "Guardado rápido"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the sensitivity of the joystick analog sticks."
-#~ msgstr "Establce la sensibilidad de las palancas analógicas del joystick."
+#~ msgstr "Establece la sensibilidad de las palancas analógicas del joystick."
+
+#~ msgctxt "game_options"
+#~ msgid "100% (Default)"
+#~ msgstr "100% (Defecto)"
 
 #~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
@@ -15040,8 +15068,8 @@ msgstr "Guardado rápido"
 #~ msgid ""
 #~ "Most games already have an internal framelimit. Minor performance cost."
 #~ msgstr ""
-#~ "La mayoría de los juegos ya tienen un límite de fotogramas interno. Costo "
-#~ "de rendimiento menor."
+#~ "La mayoría de juegos ya tienen un límite de fotogramas interno. Coste de "
+#~ "rendimiento menor."
 
 #~ msgctxt "game_options"
 #~ msgid "WRITE COLOR BUFFERS"
@@ -15064,12 +15092,12 @@ msgstr "Guardado rápido"
 #~ "versiones más potentes de GPUs."
 
 #~ msgctxt "game_options"
-#~ msgid "DirectInput"
-#~ msgstr "DirectInput"
+#~ msgid "Legacy Evdev"
+#~ msgstr "Evdev heredado"
 
 #~ msgctxt "game_options"
 #~ msgid "Center (Default)"
-#~ msgstr "Center (Defecto)"
+#~ msgstr "Centro (Defecto)"
 
 #~ msgctxt "game_options"
 #~ msgid "Needed by some games that use special unicode characters."
@@ -15154,22 +15182,6 @@ msgstr "Guardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "OpenGLES (Default)"
 #~ msgstr "OpenGLES (Defecto)"
-
-#~ msgctxt "game_options"
-#~ msgid "GAME DIFFICULATY"
-#~ msgstr "DIFICULTAD DEL JUEGO"
-
-#~ msgctxt "game_options"
-#~ msgid "COMBAT DIFFICULATY"
-#~ msgstr "DIFICULTAD DE COMBATE"
-
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Reiniciar juego"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Siguiente disco (m3u)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
@@ -15278,3 +15290,15 @@ msgstr "Guardado rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Reiniciar juego"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Siguiente disco (m3u)"
+
+#~ msgctxt "game_options"
+#~ msgid "DirectInput"
+#~ msgstr "DirectInput"
