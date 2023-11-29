@@ -13979,6 +13979,11 @@ msgstr "Zapaltzea sakatu"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
+msgid "Buy extraball for a credit"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
 msgid "Left flipper"
 msgstr "Ezker flipper-a"
 
@@ -14583,10 +14588,6 @@ msgid "Quick Save"
 msgstr "Gordetze Azkarra"
 
 #~ msgctxt "game_options"
-#~ msgid "100% (Default)"
-#~ msgstr "%100 (Defektuz)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Gorde iragandako egoerak denbora errealean atzera botatzeko, nukleoak "
@@ -14970,10 +14971,6 @@ msgstr "Gordetze Azkarra"
 #~ "gaituta dagoenean."
 
 #~ msgctxt "game_options"
-#~ msgid "Set the sensitivity of the joystick analog sticks."
-#~ msgstr "Ezarri joystick-aren stick analogikoen sentikortasuna"
-
-#~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
 #~ msgstr ""
 #~ "Erakutsi pantaila informazioan gordetze egoerak bezala, konfigurazioa, "
@@ -15120,6 +15117,14 @@ msgstr "Gordetze Azkarra"
 #~ msgstr "OpenGLES (Defektuz)"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Jokoa berhasieratu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Hurrengo diska (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Ireki Dolphin-triforce-aren menua"
 
@@ -15227,13 +15232,13 @@ msgstr "Gordetze Azkarra"
 #~ msgid "FastForward"
 #~ msgstr "Aurrera Azkar"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Jokoa berhasieratu"
+#~ msgctxt "game_options"
+#~ msgid "Set the sensitivity of the joystick analog sticks."
+#~ msgstr "Ezarri joystick-aren stick analogikoen sentikortasuna"
 
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Hurrengo diska (m3u)"
+#~ msgctxt "game_options"
+#~ msgid "100% (Default)"
+#~ msgstr "%100 (Defektuz)"
 
 #~ msgctxt "game_options"
 #~ msgid "CONTOLLER 1"
