@@ -14664,10 +14664,6 @@ msgid "Quick Save"
 msgstr "Schnellspeichern"
 
 #~ msgctxt "game_options"
-#~ msgid "Adjust the cpu power profile."
-#~ msgstr "Anpassen des Leistungsprofil des Prozessors."
-
-#~ msgctxt "game_options"
 #~ msgid "POWER MODE"
 #~ msgstr "Leistungsmodus"
 
@@ -14945,14 +14941,6 @@ msgstr "Schnellspeichern"
 #~ msgstr "Für Gyro-aktivierte Spiele (an den rechten Analogstick gebunden)"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Changing driver can improve audio performance and reduce distortion."
-#~ "Alsathread is recommended for low-end systems."
-#~ msgstr ""
-#~ "Ein Wechsel vom Treiber kann die Audioleistung verbessern und "
-#~ "Verzerrungen verringern.Alsathread wird für Low-End-Systeme empfohlen."
-
-#~ msgctxt "game_options"
 #~ msgid "AUDIO DRIVER"
 #~ msgstr "AUDIO TREIBER"
 
@@ -15065,14 +15053,6 @@ msgstr "Schnellspeichern"
 #~ msgstr ""
 #~ "Schärfe von entfernten Texturen wird verbessert, wenn Mip-Mapping "
 #~ "aktiviert ist."
-
-#~ msgctxt "game_options"
-#~ msgid "Set the sensitivity of the joystick analog sticks."
-#~ msgstr "Stellen Sie die Empfindlichkeit der Joystick-Analogsticks ein."
-
-#~ msgctxt "game_options"
-#~ msgid "100% (Default)"
-#~ msgstr "100 % (Standard)"
 
 #~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
@@ -15226,6 +15206,14 @@ msgstr "Schnellspeichern"
 #~ msgstr "OpenGLES (Standard)"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Spiel neu starten"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Nächste Disc (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Dolphin-triforce Menü öffnen"
 
@@ -15333,13 +15321,25 @@ msgstr "Schnellspeichern"
 #~ msgid "FastForward"
 #~ msgstr "Schnelles Vorspulen"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Spiel neu starten"
+#~ msgctxt "game_options"
+#~ msgid "Adjust the cpu power profile."
+#~ msgstr "Anpassen des Leistungsprofil des Prozessors."
 
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Nächste Disc (m3u)"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Changing driver can improve audio performance and reduce distortion."
+#~ "Alsathread is recommended for low-end systems."
+#~ msgstr ""
+#~ "Ein Wechsel vom Treiber kann die Audioleistung verbessern und "
+#~ "Verzerrungen verringern.Alsathread wird für Low-End-Systeme empfohlen."
+
+#~ msgctxt "game_options"
+#~ msgid "Set the sensitivity of the joystick analog sticks."
+#~ msgstr "Stellen Sie die Empfindlichkeit der Joystick-Analogsticks ein."
+
+#~ msgctxt "game_options"
+#~ msgid "100% (Default)"
+#~ msgstr "100 % (Standard)"
 
 #~ msgctxt "game_options"
 #~ msgid "CONTOLLER 2"
