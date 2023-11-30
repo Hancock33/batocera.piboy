@@ -14799,14 +14799,6 @@ msgstr "Gyors mentés"
 #~ "engedélyezve van."
 
 #~ msgctxt "game_options"
-#~ msgid "Set the sensitivity of the joystick analog sticks."
-#~ msgstr "Állítsa be a joystick analóg karjainak érzékenységét."
-
-#~ msgctxt "game_options"
-#~ msgid "100% (Default)"
-#~ msgstr "100% (Alap)"
-
-#~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
 #~ msgstr ""
 #~ "Információk megjelenítése a képernyőn, például mentési állapot, "
@@ -14929,6 +14921,14 @@ msgstr "Gyors mentés"
 #~ msgstr "OpenGLES (Alap)"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Játék újrakezdése"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Következő lemez (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Dolphin-triforce menü megnyitása"
 
@@ -15036,13 +15036,13 @@ msgstr "Gyors mentés"
 #~ msgid "FastForward"
 #~ msgstr "Gyors előre"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Játék újrakezdése"
+#~ msgctxt "game_options"
+#~ msgid "Set the sensitivity of the joystick analog sticks."
+#~ msgstr "Állítsa be a joystick analóg karjainak érzékenységét."
 
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Következő lemez (m3u)"
+#~ msgctxt "game_options"
+#~ msgid "100% (Default)"
+#~ msgstr "100% (Alap)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Aspect ratio correction on/off"

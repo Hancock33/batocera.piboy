@@ -14621,10 +14621,6 @@ msgid "Quick Save"
 msgstr "Guardado rápido"
 
 #~ msgctxt "game_options"
-#~ msgid "Adjust the cpu power profile."
-#~ msgstr "Ajusta el perfil de energía de la CPU."
-
-#~ msgctxt "game_options"
 #~ msgid "POWER MODE"
 #~ msgstr "MODO DE ENERGÍA"
 
@@ -15026,14 +15022,6 @@ msgstr "Guardado rápido"
 #~ "mip-mapping."
 
 #~ msgctxt "game_options"
-#~ msgid "Set the sensitivity of the joystick analog sticks."
-#~ msgstr "Establece la sensibilidad de las palancas analógicas del joystick."
-
-#~ msgctxt "game_options"
-#~ msgid "100% (Default)"
-#~ msgstr "100% (Defecto)"
-
-#~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
 #~ msgstr ""
 #~ "Muestra información en pantalla como estados de guardado, advertencia de "
@@ -15184,6 +15172,14 @@ msgstr "Guardado rápido"
 #~ msgstr "OpenGLES (Defecto)"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Reiniciar juego"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Siguiente disco (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Abrir menú de Dolphin-triforce"
 
@@ -15291,13 +15287,17 @@ msgstr "Guardado rápido"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Reiniciar juego"
+#~ msgctxt "game_options"
+#~ msgid "Adjust the cpu power profile."
+#~ msgstr "Ajusta el perfil de energía de la CPU."
 
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Siguiente disco (m3u)"
+#~ msgctxt "game_options"
+#~ msgid "Set the sensitivity of the joystick analog sticks."
+#~ msgstr "Establece la sensibilidad de las palancas analógicas del joystick."
+
+#~ msgctxt "game_options"
+#~ msgid "100% (Default)"
+#~ msgstr "100% (Defecto)"
 
 #~ msgctxt "game_options"
 #~ msgid "DirectInput"
