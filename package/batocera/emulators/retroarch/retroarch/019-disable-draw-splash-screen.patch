@@ -1,8 +1,8 @@
 diff --git a/gfx/common/wayland_common.c b/gfx/common/wayland_common.c
-index ebee1cb42d..771455d8bb 100644
+index a0a2158d1a..e76f54de49 100644
 --- a/gfx/common/wayland_common.c
 +++ b/gfx/common/wayland_common.c
-@@ -733,8 +733,8 @@ bool gfx_ctx_wl_init_common(
+@@ -747,8 +747,8 @@ bool gfx_ctx_wl_init_common(
      *  which is usefull for HiDPI and auto selecting a display for fullscreen. */
     if (video_monitor_index == 0 && wl_list_length (&wl->all_outputs) > 1)
     {
@@ -13,7 +13,7 @@ index ebee1cb42d..771455d8bb 100644
  
        /* Make sure splash screen is on screen and sized */
  #ifdef HAVE_LIBDECOR_H
-@@ -745,14 +745,14 @@ bool gfx_ctx_wl_init_common(
+@@ -759,14 +759,14 @@ bool gfx_ctx_wl_init_common(
              if (wl->libdecor_dispatch(wl->libdecor_context, 0) < 0)
                 RARCH_ERR("[Wayland]: libdecor failed to dispatch\n");
        }

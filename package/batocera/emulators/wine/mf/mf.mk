@@ -3,7 +3,7 @@
 # mf
 #
 ################################################################################
-# Version: Commits on Oct 4, 2021
+# Version: Commits on Sept 07, 2023
 MF_VERSION = 680890e6f93d0b601a641c7fd69d5f124fd65538
 MF_SITE = $(call github,liberodark,mf-install,$(MF_VERSION))
 MF_LICENSE = zlib/libpng

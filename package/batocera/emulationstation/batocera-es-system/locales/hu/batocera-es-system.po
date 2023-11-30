@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-11-16 12:37+0100\n"
+"PO-Revision-Date: 2023-11-20 10:37+0100\n"
 "Last-Translator: Szoldán Albert\n"
 "Language-Team: \n"
 "Language: hu\n"
@@ -4184,7 +4184,7 @@ msgstr "FM Towns II UX"
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "How much RAM the emulated FM Towns will have installed"
-msgstr ""
+msgstr "Mennyi RAM lesz telepítve az emulált FM Towns-ban"
 
 #. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
 msgctxt "game_options"
@@ -4202,6 +4202,8 @@ msgid ""
 "Insert a disk into the floppy drive, a blank will be used if one doesn't "
 "exist"
 msgstr ""
+"Helyezzen be egy lemezt a hajlékonylemez-meghajtóba, ha nem létezik, akkor "
+"üres lesz"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4221,22 +4223,22 @@ msgstr "Fujitsu FM Towns cracked floppy disk images"
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Fujitsu FM Towns miscellaneous floppy disk images"
-msgstr ""
+msgstr "Fujitsu FM Towns különféle floppy lemezképek"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Fujitsu FM Towns original floppy disk images"
-msgstr ""
+msgstr "A Fujitsu FM Towns eredeti hajlékonylemezes képei"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Floppy Disk (Drive 1)"
-msgstr ""
+msgstr "Floppy Disk (Drive 1)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Floppy Disk (Drive 2 - Model 1/2 & II UX)"
-msgstr ""
+msgstr "Floppy Disk (Drive 2 - Model 1/2 & II UX)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4251,77 +4253,77 @@ msgstr "Merevlemez (II UX)"
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Bit Corp Gamate cartridges"
-msgstr ""
+msgstr "Bit Corp Gamate kazetták"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Tiger Game.com cartridges"
-msgstr ""
+msgstr "Tiger Game.com kezetták"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Epoch Game Pocket Computer cartridges"
-msgstr ""
+msgstr "Epoch Game Pocket Computer kazetták"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Hartung Game Master cartridges"
-msgstr ""
+msgstr "Hartung Game Master kazetták"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "GamePark GP32 SmartMedia cards"
-msgstr ""
+msgstr "GamePark GP32 SmartMedia kártya"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Dick Smith Electronics VZ-200/300 cassettes"
-msgstr ""
+msgstr "Dick Smith Electronics VZ-200/300 kazetták"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Dick Smith Electronics VZ-200/300 snapshots"
-msgstr ""
+msgstr "Dick Smith Electronics VZ-200/300 snapshots"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Choose hardware for the memory expansion slot"
-msgstr ""
+msgstr "Válasszon hardvert a memóriabővítéshez"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "MEMORY SLOT"
-msgstr ""
+msgstr "MEMÓRIA foglalat"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Laser 310/VZ-300 16k Memory"
-msgstr ""
+msgstr "Laser 310/VZ-300 16k Memory"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Laser/VZ 64k Memory (Default)"
-msgstr ""
+msgstr "Laser/VZ 64k Memory (Alap)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Snapshot"
-msgstr ""
+msgstr "Snapshot"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Macintosh 400K/800K Disk images"
-msgstr ""
+msgstr "Macintosh 400K/800K Disk images"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Macintosh High Density Disk images"
-msgstr ""
+msgstr "Macintosh High Density Disk images"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Mac Harddisks"
-msgstr ""
+msgstr "Mac Harddisks"
 
 #. TRANSLATION: libretro/mame
 msgctxt "game_options"
@@ -4338,42 +4340,42 @@ msgstr "MAC MODELL"
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Mac 128k (128kb RAM, 2 LD Floppies)"
-msgstr ""
+msgstr "Mac 128k (128kb RAM, 2 LD Floppies)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Mac 512k (512kb RAM, 2 LD Floppies)"
-msgstr ""
+msgstr "Mac 512k (512kb RAM, 2 LD Floppies)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Mac Plus (4Mb RAM, 2 LD Floppies/HDD)"
-msgstr ""
+msgstr "Mac Plus (4Mb RAM, 2 LD Floppies/HDD)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Mac SE (4Mb RAM, 2 LD Floppies/HDD)"
-msgstr ""
+msgstr "Mac SE (4Mb RAM, 2 LD Floppies/HDD)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Mac Classic (4Mb RAM, 2 HD Floppies/HDD)"
-msgstr ""
+msgstr "Mac Classic (4Mb RAM, 2 HD Floppies/HDD)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Mac II (2Mb RAM, Color, 2 HD Floppies/CD/HDD)"
-msgstr ""
+msgstr "Mac II (2Mb RAM, Color, 2 HD Floppies/CD/HDD)"
 
 #. TRANSLATION: libretro/mame
 msgctxt "game_options"
 msgid "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD/Image Reader)"
-msgstr ""
+msgstr "Mac IIx (2Mb RAM, Color, 2 HD Floppies/CD/HDD/Image Reader)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Mac LC 3 (Default) (4Mb RAM, Color, 2 HD Floppies/CD/HDD)"
-msgstr ""
+msgstr "Mac LC 3 (Default) (4Mb RAM, Color, 2 HD Floppies/CD/HDD)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4417,11 +4419,12 @@ msgctxt "game_options"
 msgid ""
 "How much RAM the emulated Mac will have installed (Mac IIx & Mac LC 3 only)"
 msgstr ""
+"How much RAM the emulated Mac will have installed (Mac IIx & Mac LC 3 only)"
 
 #. TRANSLATION: libretro/mame
 msgctxt "game_options"
 msgid "Type of ROM file to load"
-msgstr ""
+msgstr "A betöltendő ROM-fájl típusa"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4431,7 +4434,7 @@ msgstr "CD"
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Select a boot disk or hard drive if needed"
-msgstr ""
+msgstr "Ha szükséges, válasszon indítólemezt vagy merevlemezt"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4441,62 +4444,62 @@ msgstr "BOOT DISK"
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "System 3.0 (LD Floppy)"
-msgstr ""
+msgstr "System 3.0 (LD Floppy)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "System 6.0.8 (LD Floppy)"
-msgstr ""
+msgstr "System 6.0.8 (LD Floppy)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "System 7.0.1 (HD Floppy)"
-msgstr ""
+msgstr "System 7.0.1 (HD Floppy)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "System 7.5 (HD Floppy)"
-msgstr ""
+msgstr "System 7.5 (HD Floppy)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "System 6.0.8 (Hard Drive)"
-msgstr ""
+msgstr "System 6.0.8 (Hard Drive)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "System 7.0.1 (Hard Drive)"
-msgstr ""
+msgstr "System 7.0.1 (Hard Drive)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "System 7.5.5 (Hard Drive)"
-msgstr ""
+msgstr "System 7.5.5 (Hard Drive)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Creatronic Mega Duck cartridges"
-msgstr ""
+msgstr "Creatronic Mega Duck kazetta"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "PDP-1 Paper Tape Reader Images"
-msgstr ""
+msgstr "PDP-1 papír szalagolvasó képek"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Casio PV-1000 cartridges"
-msgstr ""
+msgstr "Casio PV-1000 kazetta"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Video Technology Socrates cartridges"
-msgstr ""
+msgstr "Video Technology Socrates kazetta"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Funtech Super A'Can cartridges"
-msgstr ""
+msgstr "Funtech Super A'Can kazetta"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4516,32 +4519,32 @@ msgstr "32K RAM BŐVÍTÉS"
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Speech module installed"
-msgstr ""
+msgstr "Beszédmodul telepítve"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "SPEECH MODULE"
-msgstr ""
+msgstr "BESZÉD MODUL"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
-msgstr ""
+msgstr "Tomy Tutor & Pyuuta kazetta"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "GCE Vectrex cartridges"
-msgstr ""
+msgstr "GCE Vectrex kazetta"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "VTech V.Smile cartridges"
-msgstr ""
+msgstr "VTech V.Smile kazetta"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "VTech V.Smile Motion cartridges"
-msgstr ""
+msgstr "VTech V.Smile Motion kazetta"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -4556,22 +4559,22 @@ msgstr "Atari 400 / 800 floppy lemezek"
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Disk (Drive 3)"
-msgstr ""
+msgstr "Disk (Drive 3)"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "Disk (Drive 4)"
-msgstr ""
+msgstr "Disk (Drive 4)"
 
 #. TRANSLATION: libretro/mamevirtual, mame/vitaquake3
 msgctxt "game_options"
 msgid "Video Game Music Files"
-msgstr ""
+msgstr "Videojáték zenei fájlok"
 
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "CONTROL MAPPING"
-msgstr ""
+msgstr "VEZÉRLŐ TÉRKÉPEK"
 
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
@@ -4586,7 +4589,7 @@ msgstr "Digitális"
 #. TRANSLATION: libretro/mame078plus, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, ...
 msgctxt "game_options"
 msgid "Keyboard shortcuts unavailable if passing through the keyboard."
-msgstr ""
+msgstr "A billentyűparancsok nem érhetők el, ha áthaladnak a billentyűzeten."
 
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
@@ -4596,22 +4599,22 @@ msgstr "BEMENETI FELÜLET"
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Keyboard passthrough"
-msgstr ""
+msgstr "Billentyűzet átjárás"
 
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Simultaneous"
-msgstr ""
+msgstr "Egyidejű"
 
 #. TRANSLATION: libretro/mame078plus, mame
 msgctxt "game_options"
 msgid "Rotates screen by 90 degrees. Intended for rotating displays."
-msgstr ""
+msgstr "90 fokkal elforgatja a képernyőt. Forgó kijelzőkhöz való."
 
 #. TRANSLATION: libretro/mame078plus, mame
 msgctxt "game_options"
 msgid "VERTICAL ROTATION (TATE)"
-msgstr ""
+msgstr "FÜGGŐLEGES FORGÁS (TATE)"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -4621,67 +4624,67 @@ msgstr "100%(natív)"
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Small performance increase (may drop frames)."
-msgstr ""
+msgstr "Kismértékű teljesítménynövekedés (a képkockák kieshetnek)."
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "FRAME DUPING (SPEED UP)"
-msgstr ""
+msgstr "KERET DUGULÁS (GYORSÍTÁS)"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Much faster than interpreter (but may have issues)."
-msgstr ""
+msgstr "Sokkal gyorsabb, mint a fordító (de lehetnek problémák)."
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "CPU DYNAREC (SPEED UP)"
-msgstr ""
+msgstr "CPU DYNAREC (GYORSABB)"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Disabled (Beatle Interpreter)"
-msgstr ""
+msgstr "Letiltva (Beatle Interpreter)"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Max Performance"
-msgstr ""
+msgstr "Max teljesítmény"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Cycle Timing Check"
-msgstr ""
+msgstr "Ciklusidőzítés ellenőrzése"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Lightrec Interpreter"
-msgstr ""
+msgstr "Lightrec fordító"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "DYNAREC CODE INVALIDATION"
-msgstr ""
+msgstr "DYNAREC KÓD ÉRVÉNYTELENÍTÉSE"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Full (more compatible)"
-msgstr ""
+msgstr "Teljes (kompatibilisebb)"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "DMA Only (Slightly Faster)"
-msgstr ""
+msgstr "Csak DMA (kissé gyorsabb)"
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Allows up to 5 or 8 controllers in supported games."
-msgstr ""
+msgstr "Legfeljebb 5 vagy 8 kontrollert tesz lehetővé a támogatott játékokban."
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/yabasanshiro, pcsx2
 msgctxt "game_options"
 msgid "MULTITAP"
-msgstr ""
+msgstr "MULTITAP"
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, ...
 msgctxt "game_options"
@@ -4716,7 +4719,7 @@ msgstr ""
 #. TRANSLATION: libretro/mednafen_supergrafx, libretro/pce, libretro/pce_fast, libretro/pcfx
 msgctxt "game_options"
 msgid "Enhancement. Remove the sixteen sprites per line limit."
-msgstr ""
+msgstr "Enhancement. Remove the sixteen sprites per line limit."
 
 #. TRANSLATION: libretro/mednafen_wswan, drastic
 msgctxt "game_options"
@@ -4736,27 +4739,27 @@ msgstr "Fekvő"
 #. TRANSLATION: libretro/mgba
 msgctxt "game_options"
 msgid "Requires BIOS file to be present."
-msgstr ""
+msgstr "BIOS-fájl megléte szükséges."
 
 #. TRANSLATION: libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
 msgctxt "game_options"
 msgid "Only for Super Game Boy enhanced games."
-msgstr ""
+msgstr "Csak Super Game Boy továbbfejlesztett játékokhoz."
 
 #. TRANSLATION: libretro/mgba, libretro/mgba, libretro/vba-m, libretro/vba-m
 msgctxt "game_options"
 msgid "SUPER GB BORDERS"
-msgstr ""
+msgstr "SUPER GB SZEGÉLYEK"
 
 #. TRANSLATION: libretro/mgba
 msgctxt "game_options"
 msgid "Value to use for the emulated solar sensor (Boktai)."
-msgstr ""
+msgstr "Az emulált szoláris érzékelőhöz használandó érték (Boktai)."
 
 #. TRANSLATION: libretro/mgba, libretro/vba-m
 msgctxt "game_options"
 msgid "SOLAR SENSOR LEVEL"
-msgstr ""
+msgstr "NAPSZENZOR SZINT"
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -5556,7 +5559,7 @@ msgstr "Glide64"
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
 msgid "Gln64"
-msgstr ""
+msgstr "Gln64"
 
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
@@ -5680,12 +5683,12 @@ msgstr "Tiszta LCD hatást produkál."
 #. TRANSLATION: libretro/pokemini
 msgctxt "game_options"
 msgid "LCD FILTER"
-msgstr ""
+msgstr "LCD FILTER"
 
 #. TRANSLATION: libretro/pokemini
 msgctxt "game_options"
 msgid "LCD GHOSTING EFFECTS"
-msgstr ""
+msgstr "LCD GHOSTING EFFECTS"
 
 #. TRANSLATION: libretro/potator, libretro/sameboy
 msgctxt "game_options"
@@ -5700,37 +5703,37 @@ msgstr "Zöld - GameKing"
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
 msgid "VB - Virtual Boy"
-msgstr ""
+msgstr "VB - Virtual Boy"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
 msgid "Potator - Orangish - Amber"
-msgstr ""
+msgstr "Potator - Narancssárga - Borostyán"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
 msgid "Potator - Green"
-msgstr ""
+msgstr "Potator - zöld"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
 msgid "Potator - Blue"
-msgstr ""
+msgstr "Potator - Kék"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
 msgid "Potator - Green - BGB"
-msgstr ""
+msgstr "Potator - zöld - BGB"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
 msgid "Potator - Green Wataroo"
-msgstr ""
+msgstr "Potator - zöld Wataroo"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
 msgid "Brownish - Travel Wood"
-msgstr ""
+msgstr "Brownish - Travel Wood"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -5775,22 +5778,22 @@ msgstr "Arany - Odyssey Gold"
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
 msgid "Grey - Greyscale"
-msgstr ""
+msgstr "Szürke – szürkeárnyalatos"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
 msgid "Grey - Digivice"
-msgstr ""
+msgstr "Szürke - Digivice"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
 msgid "Grey - Microvision"
-msgstr ""
+msgstr "Szürke - Microvision"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
 msgid "Green - Buttercup Green"
-msgstr ""
+msgstr "Zöld - Boglárka zöld"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -5820,7 +5823,7 @@ msgstr "Narancssárga - Hokage Orange"
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
 msgid "Pink - Blossom Pink"
-msgstr ""
+msgstr "Pink - Blossom Pink"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -5865,7 +5868,7 @@ msgstr "8 Képkocka"
 #. TRANSLATION: libretro/ppsspp
 msgctxt "game_options"
 msgid "480x272 (Default)"
-msgstr ""
+msgstr "480x272 (Alap)"
 
 #. TRANSLATION: libretro/prboom, libretro/tyrquake
 msgctxt "game_options"
@@ -5886,6 +5889,7 @@ msgstr "Gamepad Modern"
 msgctxt "game_options"
 msgid "Force a specific model and prevent tags detection."
 msgstr ""
+"Egy adott modell kényszerítése és a címkék észlelésének megakadályozása."
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
@@ -5945,7 +5949,7 @@ msgstr "CD32 (2MB Chip + 8MB gyors)"
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Help games which are too quick or that have bugs."
-msgstr ""
+msgstr "Segítség a túl gyors vagy hibákkal rendelkező játékoknak."
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -5970,7 +5974,7 @@ msgstr ""
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Works with 'Cycle-exact' mode and for a few games."
-msgstr ""
+msgstr "Működik a \"Cycle-Exact\" móddal és néhány játékhoz."
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -6015,7 +6019,7 @@ msgstr "56.75 MHz"
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Ignored with 'Cycle-exact'."
-msgstr ""
+msgstr "Figyelmen kívül hagyva a „Cycle-exact” beállítással."
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -6050,17 +6054,17 @@ msgstr "Magas 720p"
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Super-high 1440p"
-msgstr ""
+msgstr "Szupermagas 1440p"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Hides borders on many games. Some games use the borders."
-msgstr ""
+msgstr "Számos játék határait rejti el. Egyes játékok kereteket használnak."
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, ...
 msgctxt "game_options"
 msgid "ZOOM/CROP (HIDE BORDERS)"
-msgstr ""
+msgstr "NAGYÍTÁS/VÁGÁS (SZEGÉREK ELREJTÉSE)"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, ...
 msgctxt "game_options"
@@ -6121,21 +6125,22 @@ msgstr "eredeti"
 msgctxt "game_options"
 msgid "Removes loading but can add possible glitches/crashes."
 msgstr ""
+"Eltávolítja a betöltést, de lehetséges hibákat/összeomlásokat adhat hozzá."
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
 msgid "FLOPPY TURBO SPEED"
-msgstr ""
+msgstr "FLOPPY TURBO SEBESSÉG"
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
-msgstr ""
+msgstr "Az előre telepített WHDLoad telepítések elindításának engedélyezése."
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "WHDLOAD LAUNCHER"
-msgstr ""
+msgstr "WHDLOAD INDÍTÓ"
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
@@ -6160,7 +6165,7 @@ msgstr ""
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x64, ...
 msgctxt "game_options"
 msgid "Makes second fire button press up instead."
-msgstr ""
+msgstr "Ehelyett megnyomja a második tűzgombot."
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, ...
 msgctxt "game_options"
@@ -6170,7 +6175,7 @@ msgstr "A BETŰHÖZ UGRÁS"
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "Select controller type for Amiga P1."
-msgstr ""
+msgstr "Válassza ki az Amiga P1 vezérlő típusát."
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae, libretro/puae, libretro/puae2021, ...
 msgctxt "game_options"
@@ -6232,17 +6237,19 @@ msgstr "CD TURBÓ SEBESSÉG"
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Makes the blue button press up instead."
-msgstr ""
+msgstr "Ehelyett a kék gombot nyomja felfelé."
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Inserts CD during boot animation prevent loading fail."
 msgstr ""
+"Behelyezi a CD-t a rendszerindítási animáció során, megakadályozza a "
+"betöltés sikertelenségét."
 
 #. TRANSLATION: libretro/puae2021
 msgctxt "game_options"
 msgid "Cycle-exact"
-msgstr ""
+msgstr "Cycle-exact"
 
 #. TRANSLATION: libretro/uae4arm
 msgctxt "game_options"
@@ -6277,7 +6284,7 @@ msgstr ""
 #. TRANSLATION: libretro/px68k, libretro/quasi88
 msgctxt "game_options"
 msgid "Slow down or speed up games as appropriate."
-msgstr ""
+msgstr "Szükség szerint lassítsd vagy gyorsítsd fel a játékokat."
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -6347,7 +6354,7 @@ msgstr "12MB"
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
 msgid "Full Frame"
-msgstr ""
+msgstr "Teljes keret"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -6397,22 +6404,22 @@ msgstr "1/60 Képkocka"
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
 msgid "Auto Frame Skip"
-msgstr ""
+msgstr "Automatikus keret kihagyása"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
 msgid "Applies to both players."
-msgstr ""
+msgstr "Mindkét játékosra vonatkozik."
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
 msgid "JOYPAD TYPE"
-msgstr ""
+msgstr "JOYPAD TÍPUS"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
 msgid "Default (2 Buttons)"
-msgstr ""
+msgstr "Alapértelmezett (2 gomb)"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -6558,7 +6565,7 @@ msgstr ""
 #. TRANSLATION: libretro/scummvm
 msgctxt "game_options"
 msgid "GAMEPAD CURSOR SPEED"
-msgstr ""
+msgstr "GAMEPAD KURSZOR SEBESSÉGE"
 
 #. TRANSLATION: libretro/scummvm
 msgctxt "game_options"
@@ -6586,21 +6593,23 @@ msgid ""
 "Enhancement. Remove the thirty-two sprites per line limit. Crashes certain "
 "games."
 msgstr ""
+"Fokozás. Távolítsa el a harminckét sprite soronkénti korlátot. Összeomlik "
+"bizonyos játékok."
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
 msgid "REDUCE SPRITE FLICKERING (UNSTABLE)"
-msgstr ""
+msgstr "A SPRITE VILLOGÁSÁNAK CSÖKKENTÉSE (INSTABIL)"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Overclock the SNES CPU (Gradius 3, Super R-Type)."
-msgstr ""
+msgstr "Túlhajtja az SNES CPU-t (Gradius 3, Super R-Type)."
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Light (load times)"
-msgstr ""
+msgstr "Könnyű (betöltési idők)"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -6610,7 +6619,7 @@ msgstr "Kompatibilis"
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Max (demanding games)"
-msgstr ""
+msgstr "Max (igényes játékok)"
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
@@ -6618,11 +6627,13 @@ msgid ""
 "Enhancement. Reduces slowdown in mode 7 games. Can cause issues in certain "
 "games."
 msgstr ""
+"Fokozás. Csökkenti a lassulást a 7-es módú játékokban. Bizonyos játékokban "
+"problémákat okozhat."
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
 msgid "BLEND HIGH-RES MODE"
-msgstr ""
+msgstr "NAGYFELBONTÁSÚ MÓD KEVERÉSE"
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
@@ -6637,7 +6648,7 @@ msgstr "Elmosódás"
 #. TRANSLATION: libretro/snes9x, libretro/snes9x, libretro/snes9x, libretro/snes9x_next, libretro/snes9x_next
 msgctxt "game_options"
 msgid "SNES Gamepad"
-msgstr ""
+msgstr "SNES Gamepad"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x, libretro/snes9x_next, libretro/snes9x_next
 msgctxt "game_options"
@@ -6647,22 +6658,22 @@ msgstr "SNES egér"
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "SNES Multitap"
-msgstr ""
+msgstr "SNES Multitap"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Super Scope"
-msgstr ""
+msgstr "Super Scope"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Konami Justifier"
-msgstr ""
+msgstr "Konami Justifier"
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
 msgid "M.A.C.S. Rifle"
-msgstr ""
+msgstr "M.A.C.S. Rifle"
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
@@ -6670,21 +6681,23 @@ msgid ""
 "Konami Justifier P2 is daisy chained from controller 2, appears as port 3 to "
 "system."
 msgstr ""
+"A Konami Justifier P2 láncolva van a 2. vezérlőtől, és 3. portként jelenik "
+"meg a rendszer felé."
 
 #. TRANSLATION: libretro/snes9x
 msgctxt "game_options"
 msgid "Konami Justifier (P2)"
-msgstr ""
+msgstr "Konami Justifier (P2)"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Monochrome"
-msgstr ""
+msgstr "Monokróm"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "RF"
-msgstr ""
+msgstr "RF"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next, redream
 msgctxt "game_options"
@@ -6694,7 +6707,7 @@ msgstr "RGB"
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "S-Video"
-msgstr ""
+msgstr "S-Video"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next, redream
 msgctxt "game_options"
@@ -6764,18 +6777,20 @@ msgstr "40 MHz"
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
 msgid "Light guns/multitap."
-msgstr ""
+msgstr "Light guns/multitap."
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
 msgid "Dual Konami Justifiers"
-msgstr ""
+msgstr "Dual Konami Justifiers"
 
 #. TRANSLATION: libretro/tgbdual
 msgctxt "game_options"
 msgid ""
 "Sync GB2Player/GBC2Player saves with saves in \"saves/gb\" or \"saves/gbc\"."
 msgstr ""
+"A GB2Player/GBC2Player szinkronizálása „saves/gb” vagy „saves/gbc” "
+"mentésekkel."
 
 #. TRANSLATION: libretro/tgbdual
 msgctxt "game_options"
@@ -7090,17 +7105,17 @@ msgstr ""
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
 msgid "Mouse (1351)"
-msgstr ""
+msgstr "Mouse (1351)"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
 msgid "Trackball (Atari CX-22)"
-msgstr ""
+msgstr "Trackball (Atari CX-22)"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
 msgid "Koalapad"
-msgstr ""
+msgstr "Koalapad"
 
 #. TRANSLATION: libretro/vice_x128
 msgctxt "game_options"
@@ -7145,12 +7160,12 @@ msgstr "B = Tűz, A = Fel"
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xplus4, libretro/vice_xvic, libretro/vice_xpet
 msgctxt "game_options"
 msgid "Y = Fire"
-msgstr ""
+msgstr "Y = Fire"
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xplus4, libretro/vice_xvic, libretro/vice_xpet
 msgctxt "game_options"
 msgid "Y = Fire, B = Up"
-msgstr ""
+msgstr "Y = Fire, B = Up"
 
 #. TRANSLATION: libretro/vice_xplus4
 msgctxt "game_options"
@@ -7190,12 +7205,12 @@ msgstr ""
 #. TRANSLATION: libretro/vice_xplus4
 msgctxt "game_options"
 msgid "yape-pal"
-msgstr ""
+msgstr "yape-pal"
 
 #. TRANSLATION: libretro/vice_xplus4
 msgctxt "game_options"
 msgid "yape-ntsc"
-msgstr ""
+msgstr "yape-ntsc"
 
 #. TRANSLATION: libretro/vice_xvic
 msgctxt "game_options"
@@ -7225,17 +7240,17 @@ msgstr "Super VIC (+16K) NTSC"
 #. TRANSLATION: libretro/vice_xvic
 msgctxt "game_options"
 msgid "colodore_vic"
-msgstr ""
+msgstr "colodore_vic"
 
 #. TRANSLATION: libretro/vice_xvic
 msgctxt "game_options"
 msgid "mike-pal"
-msgstr ""
+msgstr "mike-pal"
 
 #. TRANSLATION: libretro/vice_xvic
 msgctxt "game_options"
 msgid "mike-ntsc"
-msgstr ""
+msgstr "mike-ntsc"
 
 #. TRANSLATION: libretro/vice_xpet
 msgctxt "game_options"
@@ -7350,7 +7365,7 @@ msgstr ""
 #. TRANSLATION: libretro/yabasanshiro, awgl
 msgctxt "game_options"
 msgid "Deutsch"
-msgstr ""
+msgstr "Deutsch"
 
 #. TRANSLATION: libretro/boom3, libretro/boom3_xp, libretro/vitaquake3
 msgctxt "game_options"
@@ -7698,7 +7713,7 @@ msgstr ""
 #. TRANSLATION: cemu, flycast
 msgctxt "game_options"
 msgid "Vulkan (Default)"
-msgstr ""
+msgstr "Vulkan (Alap)"
 
 #. TRANSLATION: cemu, yuzu
 msgctxt "game_options"
@@ -7778,12 +7793,12 @@ msgstr "Portugál"
 #. TRANSLATION: cemu, scummvm, sonic2013, play, yuzu, ...
 msgctxt "game_options"
 msgid "Russian"
-msgstr ""
+msgstr "Orosz"
 
 #. TRANSLATION: cemu, yuzu, ryujinx
 msgctxt "game_options"
 msgid "Taiwanese"
-msgstr ""
+msgstr "Tajván"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -8349,17 +8364,17 @@ msgstr ""
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GAMECUBE PORT 2 TYPE"
-msgstr ""
+msgstr "GAMECUBE PORT 2 TYPE"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GAMECUBE PORT 3 TYPE"
-msgstr ""
+msgstr "GAMECUBE PORT 3 TYPE"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "GAMECUBE PORT 4 TYPE"
-msgstr ""
+msgstr "GAMECUBE PORT 4 TYPE"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -8494,7 +8509,7 @@ msgstr ""
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
 msgid "5% (Default)"
-msgstr ""
+msgstr "5% (Alap)"
 
 #. TRANSLATION: dolphin, dolphin, dolphin, dolphin
 msgctxt "game_options"
@@ -9225,12 +9240,12 @@ msgstr ""
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "IDE (Default)"
-msgstr ""
+msgstr "IDE (Alap)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "ASCI"
-msgstr ""
+msgstr "ASCI"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -11475,6 +11490,8 @@ msgid ""
 "Select model of Mac (Recommendations are Mac Plus for B&W, Mac LC 3 for "
 "Color)"
 msgstr ""
+"Válasszon Mac modellt (ajánlott a Mac Plus a fekete-fehérhez, a Mac LC 3 a "
+"színeshez)"
 
 #. TRANSLATION: mame/vitaquake3
 msgctxt "game_options"
@@ -13912,6 +13929,11 @@ msgstr "Kilövés"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
+msgid "Buy extraball for a credit"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
 msgid "Left flipper"
 msgstr "Bal kar"
 
@@ -14516,10 +14538,6 @@ msgid "Quick Save"
 msgstr "Gyors mentés"
 
 #~ msgctxt "game_options"
-#~ msgid "100% (Default)"
-#~ msgstr "100% (Alap)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Tárolja a múltbeli állapotokat a valós idejű visszatekeréshez, ha a mag "
@@ -14676,12 +14694,40 @@ msgstr "Gyors mentés"
 #~ "a fel nem használt helyet töltse ki."
 
 #~ msgctxt "game_options"
+#~ msgid "Tandy Radio Shack Color Computer cartridges"
+#~ msgstr "Tandy Radio Shack Color Computer kazetta"
+
+#~ msgctxt "game_options"
+#~ msgid "Tandy Radio Shack Color Computer disk images"
+#~ msgstr "Tandy Radio Shack Color Computer lemezkép"
+
+#~ msgctxt "game_options"
+#~ msgid "Select the model of Color Computer to emulate"
+#~ msgstr "Válassza ki az emulálni kívánt színes számítógép modelljét"
+
+#~ msgctxt "game_options"
+#~ msgid "COLOR COMPUTER MODEL"
+#~ msgstr "SZÍNES SZÁMÍTÓGÉP MODELL"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Install the image reader card to read disk image files (Mac IIx only). "
+#~ "Minimum 4MB ram size recommended."
+#~ msgstr ""
+#~ "Telepítse a képolvasó kártyát a lemezképfájlok olvasásához (csak Mac IIx "
+#~ "esetén). Minimum 4 MB ram mérete ajánlott."
+
+#~ msgctxt "game_options"
 #~ msgid "Analog Controller"
 #~ msgstr "Analóg vezérlő"
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Joystick (Flystick)"
 #~ msgstr "Analóg Joystick (Flystick)"
+
+#~ msgctxt "game_options"
+#~ msgid "TEAM COLOR MODE"
+#~ msgstr "CSAPAT SZÍN MÓD"
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate a pak in the controller expansion port."
@@ -14692,12 +14738,29 @@ msgstr "Gyors mentés"
 #~ msgstr "Lunar Ignore Brightness Color Fix"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Manually define which resolution to use.&#x0a;Auto defaults to High and "
+#~ "switches to Super-High when needed."
+#~ msgstr ""
+#~ "Manuálisan határozza meg, hogy melyik felbontást használja.&#x0a;Az Auto "
+#~ "alapértelmezés szerint Magasra állítja, és szükség esetén Szupermagasra "
+#~ "vált."
+
+#~ msgctxt "game_options"
 #~ msgid "JUMP ON B"
 #~ msgstr "B TŰHÖZ UGRÁS"
 
 #~ msgctxt "game_options"
+#~ msgid "Keypad to joyport mappings for 2 players."
+#~ msgstr "Billentyűzet-joyport leképezések 2 játékos számára."
+
+#~ msgctxt "game_options"
 #~ msgid "2P GAMEPAD MAPPING (KEYRAH)"
 #~ msgstr "2P GAMEPAD LEKÉPEZÉS (KEYRAH)"
+
+#~ msgctxt "game_options"
+#~ msgid "Passes all physical keyboard events for Pad2Key."
+#~ msgstr "Átad minden fizikai billentyűzet eseményt a Pad2Key számára."
 
 #~ msgctxt "game_options"
 #~ msgid "DISABLE EMULATOR JOYSTICK"
@@ -14734,10 +14797,6 @@ msgstr "Gyors mentés"
 #~ msgstr ""
 #~ "Fokozás. Javítja a távoli textúrák tisztaságát, ha a mip-leképezés "
 #~ "engedélyezve van."
-
-#~ msgctxt "game_options"
-#~ msgid "Set the sensitivity of the joystick analog sticks."
-#~ msgstr "Állítsa be a joystick analóg karjainak érzékenységét."
 
 #~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
@@ -14862,6 +14921,14 @@ msgstr "Gyors mentés"
 #~ msgstr "OpenGLES (Alap)"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Játék újrakezdése"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Következő lemez (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Dolphin-triforce menü megnyitása"
 
@@ -14969,13 +15036,13 @@ msgstr "Gyors mentés"
 #~ msgid "FastForward"
 #~ msgstr "Gyors előre"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Játék újrakezdése"
+#~ msgctxt "game_options"
+#~ msgid "Set the sensitivity of the joystick analog sticks."
+#~ msgstr "Állítsa be a joystick analóg karjainak érzékenységét."
 
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Következő lemez (m3u)"
+#~ msgctxt "game_options"
+#~ msgid "100% (Default)"
+#~ msgstr "100% (Alap)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Aspect ratio correction on/off"

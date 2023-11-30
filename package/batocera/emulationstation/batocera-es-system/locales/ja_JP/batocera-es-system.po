@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v39beta(2023/11/11)\n"
+"Project-Id-Version: batocera-es v39beta(2023/11/18)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-11-11 14:55+0900\n"
+"PO-Revision-Date: 2023-11-19 08:43+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -383,34 +383,34 @@ msgstr "ホイール(ハンドル)を使用"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Maximum wheel rotation from left to right (in degrees)"
-msgstr ""
+msgstr "ステアリングの左から右への最大回転角度"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "WHEEL ROTATION"
-msgstr ""
+msgstr "ホイール(ハンドル) 回転角度"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
-msgstr ""
+msgstr "ゲームがステアリングに反応しない幅を設定 (度単位)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "WHEEL DEADZONE"
-msgstr ""
+msgstr "ホイール(ハンドル)遊び幅"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid ""
 "Reserve a non dead zone at the center of the wheel to go straight ahead (in "
 "degrees)"
-msgstr ""
+msgstr "直進のためにステアリングの中間幅を設定 (度単位)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "WHEEL MIDZONE"
-msgstr ""
+msgstr "ホイール(ハンドル)中間幅"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -4136,7 +4136,7 @@ msgstr "FM Towns II UX"
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "How much RAM the emulated FM Towns will have installed"
-msgstr "エミュレートされた FM Towns のRAM容量"
+msgstr "エミュレートする FM Towns のRAM容量"
 
 #. TRANSLATION: libretro/mame, libretro/mame, mame/vitaquake3, mame/vitaquake3
 msgctxt "game_options"
@@ -4598,7 +4598,7 @@ msgstr "無効 (Beatle インタープリター)"
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Max Performance"
-msgstr "最大"
+msgstr "最大パフォーマンス"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -10431,7 +10431,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "MAX POWER SAVING CPU-PREEMPTIONS"
-msgstr "最大省電力 CPU切り替え"
+msgstr "最大省電力 CPUプログラム(タスク) 切り替え"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -13813,7 +13813,7 @@ msgstr "GUI設定"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Reset the table, sometimes required for PinMame"
-msgstr "テーブルをリセットします。PinMame で必要になる場合があります"
+msgstr "リセット (PinMame)"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -13828,22 +13828,27 @@ msgstr "コイン投入"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Nudge up"
-msgstr "少し　上"
+msgstr "上ナッジ(上を叩く)"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Nudge left"
-msgstr "少し　左"
+msgstr "左ナッジ(左側を叩く)"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Nudge right"
-msgstr "少し　右"
+msgstr "右ナッジ(右側を叩く)"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Pull plunger"
-msgstr "レバー　引く"
+msgstr "レバーを引く"
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Buy extraball for a credit"
+msgstr ""
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -13858,12 +13863,12 @@ msgstr "右 フリッパー"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Left magnasave"
-msgstr ""
+msgstr "magnasave ボタン 左"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Right magnasave"
-msgstr ""
+msgstr "magnasave ボタン 右"
 
 #. TRANSLATION: amigacd32.amiberry.keys, amiga500.amiberry.keys, amiga1200.amiberry.keys
 msgctxt "keys_files"
@@ -14451,8 +14456,20 @@ msgid "Quick Save"
 msgstr "クイック セーブ"
 
 #~ msgctxt "game_options"
-#~ msgid "100% (Default)"
-#~ msgstr "100% (標準)"
+#~ msgid "POWER MODE"
+#~ msgstr "パワーモード"
+
+#~ msgctxt "game_options"
+#~ msgid "High Performance"
+#~ msgstr "ハイパフォーマンス"
+
+#~ msgctxt "game_options"
+#~ msgid "Balanced"
+#~ msgstr "バランス"
+
+#~ msgctxt "game_options"
+#~ msgid "Power Saver"
+#~ msgstr "パワーセーバー"
 
 #~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
@@ -14828,10 +14845,6 @@ msgstr "クイック セーブ"
 #~ "強化：ミップマッピングの有効時、離れたテクスチャの明瞭さを改善します"
 
 #~ msgctxt "game_options"
-#~ msgid "Set the sensitivity of the joystick analog sticks."
-#~ msgstr "アナログスティックの感度を設定します"
-
-#~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
 #~ msgstr "ステートセーブ、設定警告などの情報を画面に表示します"
 
@@ -15082,3 +15095,27 @@ msgstr "クイック セーブ"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
+
+#~ msgctxt "game_options"
+#~ msgid "Adjust the cpu power profile."
+#~ msgstr "CPUの電力プロファイルを調整します"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the sensitivity of the joystick analog sticks."
+#~ msgstr "アナログスティックの感度を設定します"
+
+#~ msgctxt "game_options"
+#~ msgid "100% (Default)"
+#~ msgstr "100% (標準)"
+
+#~ msgctxt "game_options"
+#~ msgid "disabled"
+#~ msgstr "使用しない"
+
+#~ msgctxt "game_options"
+#~ msgid "Force the emulator to run at this resolution."
+#~ msgstr "指定した解像度でエミュレーターを強制的に実行します"
+
+#~ msgctxt "game_options"
+#~ msgid "FM CHIP (YM2413)"
+#~ msgstr "FM音源チップ(YM2413)"

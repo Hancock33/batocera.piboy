@@ -1,0 +1,127 @@
+diff --git a/src/Makefile b/src/Makefile
+index c8a84065f..fa514f006 100644
+--- a/src/Makefile
++++ b/src/Makefile
+@@ -430,7 +430,7 @@ CClink = $(CC)
+ # NOTE: This may cause threading to be enabled, which has side effects (such
+ # as using different libraries and debugging becomes more difficult).
+ # For Python3 support make a symbolic link in /usr/local/bin:
+-#	ln -s python3 python3.1
++#	ln -sf python3 python3.1
+ # If both python2.x and python3.x are enabled then the linking will be via
+ # dlopen(), dlsym(), dlclose(), i.e. pythonX.Y.so must be available
+ # However, this may still cause problems, such as "import termios" failing.
+@@ -2189,7 +2189,7 @@ scripttests:
+ 		cd $(PODIR); $(MAKE) -f Makefile check VIM=../$(VIMTARGET); \
+ 	fi
+ 	-if test $(VIMTARGET) != vim -a ! -r vim; then \
+-		ln -s $(VIMTARGET) vim; \
++		ln -sf $(VIMTARGET) vim; \
+ 	fi
+ 	cd testdir; $(MAKE) -f Makefile $(GUI_TESTTARGET) VIMPROG=../$(VIMTARGET) $(GUI_TESTARG) SCRIPTSOURCE=../$(SCRIPTSOURCE)
+ 
+@@ -2690,40 +2690,40 @@ installvimdiff: $(DEST_BIN)/$(VIMDIFFTARGET)
+ installgvimdiff: $(DEST_BIN)/$(GVIMDIFFTARGET)
+ 
+ $(DEST_BIN)/$(EXTARGET): $(DEST_BIN)
+-	cd $(DEST_BIN); ln -s $(VIMTARGET) $(EXTARGET)
++	cd $(DEST_BIN); ln -sf $(VIMTARGET) $(EXTARGET)
+ 
+ $(DEST_BIN)/$(VIEWTARGET): $(DEST_BIN)
+-	cd $(DEST_BIN); ln -s $(VIMTARGET) $(VIEWTARGET)
++	cd $(DEST_BIN); ln -sf $(VIMTARGET) $(VIEWTARGET)
+ 
+ $(DEST_BIN)/$(GVIMTARGET): $(DEST_BIN)
+-	cd $(DEST_BIN); ln -s $(VIMTARGET) $(GVIMTARGET)
++	cd $(DEST_BIN); ln -sf $(VIMTARGET) $(GVIMTARGET)
+ 
+ $(DEST_BIN)/$(GVIEWTARGET): $(DEST_BIN)
+-	cd $(DEST_BIN); ln -s $(VIMTARGET) $(GVIEWTARGET)
++	cd $(DEST_BIN); ln -sf $(VIMTARGET) $(GVIEWTARGET)
+ 
+ $(DEST_BIN)/$(RVIMTARGET): $(DEST_BIN)
+-	cd $(DEST_BIN); ln -s $(VIMTARGET) $(RVIMTARGET)
++	cd $(DEST_BIN); ln -sf $(VIMTARGET) $(RVIMTARGET)
+ 
+ $(DEST_BIN)/$(RVIEWTARGET): $(DEST_BIN)
+-	cd $(DEST_BIN); ln -s $(VIMTARGET) $(RVIEWTARGET)
++	cd $(DEST_BIN); ln -sf $(VIMTARGET) $(RVIEWTARGET)
+ 
+ $(DEST_BIN)/$(RGVIMTARGET): $(DEST_BIN)
+-	cd $(DEST_BIN); ln -s $(VIMTARGET) $(RGVIMTARGET)
++	cd $(DEST_BIN); ln -sf $(VIMTARGET) $(RGVIMTARGET)
+ 
+ $(DEST_BIN)/$(RGVIEWTARGET): $(DEST_BIN)
+-	cd $(DEST_BIN); ln -s $(VIMTARGET) $(RGVIEWTARGET)
++	cd $(DEST_BIN); ln -sf $(VIMTARGET) $(RGVIEWTARGET)
+ 
+ $(DEST_BIN)/$(VIMDIFFTARGET): $(DEST_BIN)
+-	cd $(DEST_BIN); ln -s $(VIMTARGET) $(VIMDIFFTARGET)
++	cd $(DEST_BIN); ln -sf $(VIMTARGET) $(VIMDIFFTARGET)
+ 
+ $(DEST_BIN)/$(GVIMDIFFTARGET): $(DEST_BIN)
+-	cd $(DEST_BIN); ln -s $(VIMTARGET) $(GVIMDIFFTARGET)
++	cd $(DEST_BIN); ln -sf $(VIMTARGET) $(GVIMDIFFTARGET)
+ 
+ $(DEST_BIN)/$(EVIMTARGET): $(DEST_BIN)
+-	cd $(DEST_BIN); ln -s $(VIMTARGET) $(EVIMTARGET)
++	cd $(DEST_BIN); ln -sf $(VIMTARGET) $(EVIMTARGET)
+ 
+ $(DEST_BIN)/$(EVIEWTARGET): $(DEST_BIN)
+-	cd $(DEST_BIN); ln -s $(VIMTARGET) $(EVIEWTARGET)
++	cd $(DEST_BIN); ln -sf $(VIMTARGET) $(EVIEWTARGET)
+ 
+ # Create links for the manual pages with various names to vim.	This is only
+ # done when the links (or manpages with the same name) don't exist yet.
+@@ -2889,7 +2889,7 @@ clean celan: testclean
+ # another way.  When new source files are added use "shadowupdate":
+ #  % cd shadow
+ #  % rm Makefile
+-#  % ln -s ../Makefile .
++#  % ln -sf ../Makefile .
+ #  % ./configure {options}
+ #  % make
+ # And later:
+@@ -2903,22 +2903,22 @@ LINKEDFILES = ../*.[chm] ../*.cc ../*.in ../*.sh ../*.xs ../*.xbm ../gui_gtk_res
+ 
+ shadow:	runtime pixmaps
+ 	$(MKDIR_P) $(SHADOWDIR)
+-	cd $(SHADOWDIR); ln -s $(LINKEDFILES) .
++	cd $(SHADOWDIR); ln -sf $(LINKEDFILES) .
+ 	mkdir $(SHADOWDIR)/auto
+-	cd $(SHADOWDIR)/auto; ln -s ../../auto/configure .
++	cd $(SHADOWDIR)/auto; ln -sf ../../auto/configure .
+ 	$(MKDIR_P) $(SHADOWDIR)/po
+-	cd $(SHADOWDIR)/po; ln -s ../../po/*.po ../../po/*.mak ../../po/*.vim ../../po/*.in ../../po/Makefile ../../po/*.c .
++	cd $(SHADOWDIR)/po; ln -sf ../../po/*.po ../../po/*.mak ../../po/*.vim ../../po/*.in ../../po/Makefile ../../po/*.c .
+ 	cd $(SHADOWDIR); rm -f auto/link.sed
+ 	cp Makefile configure $(SHADOWDIR)
+ 	rm -f $(SHADOWDIR)/auto/config.mk $(SHADOWDIR)/config.mk.dist
+ 	cp config.mk.dist $(SHADOWDIR)/auto/config.mk
+ 	cp config.mk.dist $(SHADOWDIR)
+ 	$(MKDIR_P) $(SHADOWDIR)/xxd
+-	cd $(SHADOWDIR)/xxd; ln -s ../../xxd/*.[ch] ../../xxd/Make* .
++	cd $(SHADOWDIR)/xxd; ln -sf ../../xxd/*.[ch] ../../xxd/Make* .
+ 	$(MKDIR_P) $(SHADOWDIR)/xdiff
+-	cd $(SHADOWDIR)/xdiff; ln -s ../../xdiff/*.[ch] .
++	cd $(SHADOWDIR)/xdiff; ln -sf ../../xdiff/*.[ch] .
+ 	$(MKDIR_P) $(SHADOWDIR)/testdir
+-	cd $(SHADOWDIR)/testdir; ln -s ../../testdir/Makefile \
++	cd $(SHADOWDIR)/testdir; ln -sf ../../testdir/Makefile \
+ 				 ../../testdir/Make_all.mak \
+ 				 ../../testdir/README.txt \
+ 				 ../../testdir/*.in \
+@@ -2941,11 +2941,11 @@ shadowupdate:
+ 
+ # Link needed for doing "make install" in a shadow directory.
+ runtime:
+-	-ln -s ../runtime .
++	-ln -sf ../runtime .
+ 
+ # Link needed for doing "make" using GTK in a shadow directory.
+ pixmaps:
+-	-ln -s ../pixmaps .
++	-ln -sf ../pixmaps .
+ 
+ # Update the synmenu.vim file with the latest Syntax menu.
+ # This is only needed when runtime/makemenu.vim was changed.
