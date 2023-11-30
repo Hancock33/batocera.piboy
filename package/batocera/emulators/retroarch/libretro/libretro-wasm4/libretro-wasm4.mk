@@ -3,8 +3,8 @@
 # libretro-wasm4
 #
 ################################################################################
-# Version: Commits on Nov 25, 2023
-LIBRETRO_WASM4_VERSION = e2082b628844db5862de40e68780e564a25104fe
+# Version: Commits on Nov 29, 2023
+LIBRETRO_WASM4_VERSION = 030d27c56af172163077be8ea13b3bbaf18075c5
 LIBRETRO_WASM4_SITE = https://github.com/aduros/wasm4
 LIBRETRO_WASM4_SITE_METHOD = git
 LIBRETRO_WASM4_GIT_SUBMODULES = yes

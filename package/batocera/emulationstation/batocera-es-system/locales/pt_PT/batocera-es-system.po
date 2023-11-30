@@ -13974,6 +13974,11 @@ msgstr "Puxe o plunger"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
+msgid "Buy extraball for a credit"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
 msgid "Left flipper"
 msgstr "Flipper esquerdo"
 
@@ -14578,10 +14583,6 @@ msgid "Quick Save"
 msgstr "Guardar Rápido"
 
 #~ msgctxt "game_options"
-#~ msgid "100% (Default)"
-#~ msgstr "100% (Predefinição)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Armazenar savestates para rebobinar em tempo real, se o core suportar."
@@ -14964,10 +14965,6 @@ msgstr "Guardar Rápido"
 #~ "está ativo."
 
 #~ msgctxt "game_options"
-#~ msgid "Set the sensitivity of the joystick analog sticks."
-#~ msgstr "Define a sensibilidade dos sticks analógicos do joystick."
-
-#~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
 #~ msgstr ""
 #~ "Mostrar informção no ecrã como savestates, avisos de configuração, etc..."
@@ -15228,3 +15225,11 @@ msgstr "Guardar Rápido"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
+
+#~ msgctxt "game_options"
+#~ msgid "Set the sensitivity of the joystick analog sticks."
+#~ msgstr "Define a sensibilidade dos sticks analógicos do joystick."
+
+#~ msgctxt "game_options"
+#~ msgid "100% (Default)"
+#~ msgstr "100% (Predefinição)"

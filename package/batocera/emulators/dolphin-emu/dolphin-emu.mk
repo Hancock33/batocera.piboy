@@ -3,8 +3,8 @@
 # dolphin-emu
 #
 ################################################################################
-# Version: Commits on Nov 26, 2023
-DOLPHIN_EMU_VERSION = 3d5f95b298376874876143b287cf60f5efcf57dc
+# Version: Commits on Nov 30, 2023
+DOLPHIN_EMU_VERSION = 163acb5d2c9bfdd8dc0d8a4a63212e442e26b92c
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
 DOLPHIN_EMU_SITE_METHOD = git
 DOLPHIN_EMU_LICENSE = GPLv2+
@@ -23,6 +23,7 @@ DOLPHIN_EMU_CONF_OPTS += -DENABLE_TESTS=OFF
 DOLPHIN_EMU_CONF_OPTS += -DENABLE_AUTOUPDATE=OFF
 DOLPHIN_EMU_CONF_OPTS += -DENABLE_ANALYTICS=OFF
 DOLPHIN_EMU_CONF_OPTS += -DUSE_SYSTEM_LIBS=AUTO
+DOLPHIN_EMU_CONF_OPTS += -DENABLE_CLI_TOOL=OFF
 
 ifeq ($(BR2_PACKAGE_QT6),y)
 	DOLPHIN_EMU_DEPENDENCIES += qt6base qt6svg

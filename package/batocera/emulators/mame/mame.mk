@@ -3,8 +3,8 @@
 # mame
 #
 ################################################################################
-# Version: Release 0.260
-MAME_VERSION = mame0260
+# Version: Release 0.261
+MAME_VERSION = mame0261
 MAME_SITE = $(call github,mamedev,mame,$(MAME_VERSION))
 MAME_DEPENDENCIES = sdl2 sdl2_ttf zlib libpng fontconfig sqlite jpeg flac rapidjson expat glm
 MAME_LICENSE = MAME

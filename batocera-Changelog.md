@@ -118,15 +118,18 @@
 - Libretro-Stella to Oct 26, 2023 build
 - Libretro-MAME to 0.260
 ### System
-- Linux kernel to 6.6.1
+- Linux kernel to 6.6.2
 - Mesa to 23.3
 - Proton to 8.0-4c
 - FAudio to 23.10
-- Nvidia production driver to 545.29.02
+- Nvidia production driver to 545.29.06
 - SDL2 to 2.28.4
-- SOF Firmware to 2023.09.1
+- SOF Firmware to 2023.09.2
+- Bluez to 5.70
 - Streamlined x86_64 Secure Boot support
 - Added tree(1) utility
+- VKD3D-Proton to 2.11
+- Host-XA to 2.4.0
 
 # 2023/10/16 - batocera.linux 38 - Blue Moon
 ### Hardware

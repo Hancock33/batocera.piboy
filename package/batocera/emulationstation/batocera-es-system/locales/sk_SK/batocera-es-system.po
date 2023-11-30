@@ -13907,6 +13907,11 @@ msgstr "Vytiahnuť piest"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
+msgid "Buy extraball for a credit"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
 msgid "Left flipper"
 msgstr "Ľavá plutva"
 
@@ -14511,10 +14516,6 @@ msgid "Quick Save"
 msgstr "Rýchle uloženie"
 
 #~ msgctxt "game_options"
-#~ msgid "100% (Default)"
-#~ msgstr "100% (predvolené)"
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Uložiť minulé stavy na pretočenie v reálnom čase, ak to jadro podporuje."
@@ -14891,10 +14892,6 @@ msgstr "Rýchle uloženie"
 #~ "mapping."
 
 #~ msgctxt "game_options"
-#~ msgid "Set the sensitivity of the joystick analog sticks."
-#~ msgstr "Nastaviť citlivosť analógových páčok joysticku."
-
-#~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
 #~ msgstr ""
 #~ "Zobrazenie informácií na obrazovke, ako je stav uloženia, varovanie "
@@ -15037,6 +15034,14 @@ msgstr "Rýchle uloženie"
 #~ msgstr "OpenGLES (predvolené)"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Reštartovať hru"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Ďalší disk (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Otvoriť ponuku Dolphin triforce"
 
@@ -15144,13 +15149,13 @@ msgstr "Rýchle uloženie"
 #~ msgid "FastForward"
 #~ msgstr "Rýchlo dopredu"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Reštartovať hru"
+#~ msgctxt "game_options"
+#~ msgid "Set the sensitivity of the joystick analog sticks."
+#~ msgstr "Nastaviť citlivosť analógových páčok joysticku."
 
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Ďalší disk (m3u)"
+#~ msgctxt "game_options"
+#~ msgid "100% (Default)"
+#~ msgstr "100% (predvolené)"
 
 #~ msgctxt "game_options"
 #~ msgid "GAME DIFFICULATY"
