@@ -1,5 +1,5 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index 2bbe3840..8b131011 100644
+index 2bbe3840..af3b3d1f 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
 @@ -9,190 +9,279 @@ namespace PlatformIds
@@ -65,7 +65,7 @@ index 2bbe3840..8b131011 100644
  		{ "c64",					COMMODORE_64 },
 +		{ "cpet",					COMMODORE_PET },
 +		{ "coregrafx",				COREGRAFX },
-+		{ "cplus4",					CPLUS4 },
++		{ "cplus4",					COMMODORE_PLUS4 },
 +		{ "cps1",					CPS1 },
 +		{ "cps2",					CPS2 },
 +		{ "cps3",					CPS3 },
@@ -417,7 +417,7 @@ index 2bbe3840..8b131011 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index 27417482..31dce7f6 100644
+index 27417482..08174a30 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
 @@ -11,161 +11,249 @@ namespace PlatformIds
@@ -481,7 +481,7 @@ index 27417482..31dce7f6 100644
  		COMMODORE_64,
 +		COMMODORE_PET,
 +		COREGRAFX,
-+		CPLUS4,
++		COMMODORE_PLUS4,
 +		CPS1,
 +		CPS2,
 +		CPS3,
@@ -776,7 +776,7 @@ index 27417482..31dce7f6 100644
  		TEKNOPARROT,
  
 diff --git a/es-app/src/scrapers/GamesDBJSONScraper.cpp b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-index d43377d5..b090a885 100644
+index d43377d5..d12dc6d1 100644
 --- a/es-app/src/scrapers/GamesDBJSONScraper.cpp
 +++ b/es-app/src/scrapers/GamesDBJSONScraper.cpp
 @@ -38,10 +38,8 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
@@ -820,7 +820,7 @@ index d43377d5..b090a885 100644
  	// 1 = PC
  	{ PC, "1" },
  	{ MOONLIGHT, "1" },
-@@ -142,7 +138,13 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+@@ -142,7 +138,14 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ GAMATE, "5004" },
  	{ CREATONIC_MEGA_DUCK, "4948" },
  	{ TOMY_TUTOR, "4960" },
@@ -830,13 +830,14 @@ index d43377d5..b090a885 100644
 +	{ ACORN_BBC_MICRO, "5013" },
 +	{ ACTIONMAX, "4976" },
 +	{ COMMODORE_PET, "5008" },
++	{ COMMODORE_PLUS4, "5007" },
 +	{ GX4000, "4999" },
 +	{ NOKIA_NGAGE, "4938" }
  		
  	/* Non existing systems
  	{ AMIGACDTV, "129" },
 diff --git a/es-app/src/scrapers/HfsDBScraper.cpp b/es-app/src/scrapers/HfsDBScraper.cpp
-index 091cb7d8..27c1bd4a 100644
+index 091cb7d8..2e8045d4 100644
 --- a/es-app/src/scrapers/HfsDBScraper.cpp
 +++ b/es-app/src/scrapers/HfsDBScraper.cpp
 @@ -74,7 +74,6 @@ const std::map<PlatformId, std::string> hfsdb_platformids
@@ -847,8 +848,16 @@ index 091cb7d8..27c1bd4a 100644
  	{ THOMSON_TO_MO, "183673" },
  	{ MSX, "113089" },
  	{ NOKIA_NGAGE, "128704" },
+@@ -94,6 +93,7 @@ const std::map<PlatformId, std::string> hfsdb_platformids
+ 	{ TURBOGRAFX_16, "30273" },
+ 	{ TURBOGRAFX_CD, "138489" },
+ 	{ COMMODORE_PET, "240850" },
++	{ COMMODORE_PLUS4, "240851" },
+ 	{ PLAYSTATION_3, "91841" },
+ 	{ PLAYSTATION_2, "83494" },
+ 	{ PLAYSTATION_VITA, "91844" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index e9db321e..3397c1ac 100644
+index e9db321e..1d1f2711 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
 @@ -36,156 +36,235 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
@@ -1020,7 +1029,7 @@ index e9db321e..3397c1ac 100644
 +	{ EXL100, 96 },
 +	{ FUJITSU_FM7, 97 },
 +	{ CASLOOPY, 98 },
-+	{ CPLUS4, 99 },
++	{ COMMODORE_PLUS4, 99 },
 +	{ FUNTECH_SUPER_A_CAN, 100 },
 +	{ GP32, 101 },
 +	{ VECTREX, 102 },
