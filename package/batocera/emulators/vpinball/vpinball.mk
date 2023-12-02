@@ -3,8 +3,8 @@
 # vpinball
 #
 ################################################################################
-# Version: Commits on Nov 30, 2023 (branch@standalone)
-VPINBALL_VERSION = f88e95b382ab77a242c08eed0ffc84d34df3dfd8
+# Version: Commits on Dec 02, 2023 (branch@standalone)
+VPINBALL_VERSION = 1c41615db103653a22c884ac93b22ce29a9c5ce1
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
 VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
@@ -19,7 +19,7 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588),y)
 	ARCH = aarch64
 endif
 
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711)$(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
 	SOURCE = CMakeLists_gl-rpi-aarch64.txt
 	SOURCE_DIR = rpi
 	ARCH = aarch64

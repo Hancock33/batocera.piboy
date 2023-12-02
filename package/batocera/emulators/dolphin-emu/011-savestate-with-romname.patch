@@ -51,10 +51,10 @@ index 4c0eac3fe5..60fc668c9d 100644
    std::string m_gametdb_id;
    std::string m_title_name;
 diff --git a/Source/Core/Core/Core.cpp b/Source/Core/Core/Core.cpp
-index 5396c8439b..3822ff5cbd 100644
+index 536244869a..321dee2eff 100644
 --- a/Source/Core/Core/Core.cpp
 +++ b/Source/Core/Core/Core.cpp
-@@ -800,10 +800,14 @@ void SaveScreenShot()
+@@ -805,10 +805,14 @@ void SaveScreenShot()
    Core::RunAsCPUThread([] { g_frame_dumper->SaveScreenshot(GenerateScreenshotName()); });
  }
  
@@ -73,10 +73,10 @@ index 5396c8439b..3822ff5cbd 100644
  }
  
 diff --git a/Source/Core/Core/Core.h b/Source/Core/Core/Core.h
-index 0ff8c32b5c..2644be66ff 100644
+index d8c5c9a0da..7f7312f82a 100644
 --- a/Source/Core/Core/Core.h
 +++ b/Source/Core/Core/Core.h
-@@ -151,6 +151,7 @@ void SetState(State state);
+@@ -151,6 +151,7 @@ void SetState(State state, bool report_state_change = true);
  State GetState();
  
  void SaveScreenShot();
@@ -85,10 +85,10 @@ index 0ff8c32b5c..2644be66ff 100644
  
  // This displays messages in a user-visible way.
 diff --git a/Source/Core/Core/State.cpp b/Source/Core/Core/State.cpp
-index c298dd121e..e6d71f4c44 100644
+index 7879b84dda..bd0ef385ed 100644
 --- a/Source/Core/Core/State.cpp
 +++ b/Source/Core/Core/State.cpp
-@@ -327,7 +327,10 @@ static std::string SystemTimeAsDoubleToString(double time)
+@@ -285,7 +285,10 @@ static std::string SystemTimeAsDoubleToString(double time)
  #endif
  }
  
@@ -98,10 +98,10 @@ index c298dd121e..e6d71f4c44 100644
 +static std::string MakeStateFilename_partfileName(int number);
 +static std::string MakeStateFilename_partfileID(int number);
  
- // read state timestamps
- static std::map<double, int> GetSavedStates()
-@@ -336,7 +339,7 @@ static std::map<double, int> GetSavedStates()
-   std::map<double, int> m;
+ static std::vector<SlotWithTimestamp> GetUsedSlotsWithTimestamp()
+ {
+@@ -293,7 +296,7 @@ static std::vector<SlotWithTimestamp> GetUsedSlotsWithTimestamp()
+   StateHeader header;
    for (int i = 1; i <= (int)NUM_STATES; i++)
    {
 -    std::string filename = MakeStateFilename(i);
@@ -109,7 +109,7 @@ index c298dd121e..e6d71f4c44 100644
      if (File::Exists(filename))
      {
        if (ReadHeader(filename, header))
-@@ -536,7 +539,7 @@ bool ReadHeader(const std::string& filename, StateHeader& header)
+@@ -624,7 +627,7 @@ bool ReadHeader(const std::string& filename, StateHeader& header)
  
  std::string GetInfoStringOfSlot(int slot, bool translate)
  {
@@ -118,7 +118,7 @@ index c298dd121e..e6d71f4c44 100644
    if (!File::Exists(filename))
      return translate ? Common::GetStringT("Empty") : "Empty";
  
-@@ -550,7 +553,7 @@ std::string GetInfoStringOfSlot(int slot, bool translate)
+@@ -638,7 +641,7 @@ std::string GetInfoStringOfSlot(int slot, bool translate)
  u64 GetUnixTimeOfSlot(int slot)
  {
    State::StateHeader header;
@@ -127,7 +127,7 @@ index c298dd121e..e6d71f4c44 100644
      return 0;
  
    constexpr u64 MS_PER_SEC = 1000;
-@@ -751,20 +754,49 @@ void Shutdown()
+@@ -940,20 +943,49 @@ void Shutdown()
    }
  }
  

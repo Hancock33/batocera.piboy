@@ -30,7 +30,7 @@ define ARCHIVE_ARM
 	rm -rf $(DEST_DIR)/lib32/{gconv,glslang,python3.*,terminfo,udev,xorg}
 	mv $(DEST_DIR)/lib32/dri								$(DEST_DIR)/lib32/dri.old
 	mkdir -p $(DEST_DIR)/lib32/dri
-	mv $(DEST_DIR)/lib32/dri.old/{v3d_dri.so,vc4_dri.so}	$(DEST_DIR)/lib32/dri
+	mv $(DEST_DIR)/lib32/dri.old/{v3d_dri.so,vc4_dri.so,drm-rp*}	$(DEST_DIR)/lib32/dri
 	rm -r $(DEST_DIR)/lib32/dri.old
 	cd $(DEST_DIR) && tar -Jcf $(DEST_DIR).tar.xz .
 	rm -r $(DEST_DIR)

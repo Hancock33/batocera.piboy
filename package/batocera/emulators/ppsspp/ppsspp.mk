@@ -3,8 +3,8 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on Nov 28, 2023
-PPSSPP_VERSION = 737ec3e90b681c25ba55ef8baefdb8dbb12e8ead
+# Version: Commits on Dec 02, 2023
+PPSSPP_VERSION = d584162e069a1c38082f3db0c63fbb51381fff2f
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
@@ -88,7 +88,7 @@ endif
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
     PPSSPP_CONF_OPTS += -DARM_NO_VULKAN=OFF
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
-    PPSSPP_CONF_OPTS += -DARM_NO_VULKAN=ON
+    PPSSPP_CONF_OPTS += -DARM_NO_VULKAN=OFF
 else ifeq ($(BR2_arm)$(BR2_aarch64),y)
     PPSSPP_CONF_OPTS += -DARM_NO_VULKAN=ON
 endif

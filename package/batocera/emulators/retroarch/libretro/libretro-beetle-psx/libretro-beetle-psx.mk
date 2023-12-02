@@ -3,10 +3,18 @@
 # libretro-beetle-psx
 #
 ################################################################################
-# Version: Commits on Nov 10, 2023
-LIBRETRO_BEETLE_PSX_VERSION = 379b422449e21542f1c8dc67e5ef6a859e362e0b
+# Version: Commits on Dec 01, 2023
+LIBRETRO_BEETLE_PSX_VERSION = 2a3f2562bce0a367c4fd13dd29ed4b2241c40175
 LIBRETRO_BEETLE_PSX_SITE = $(call github,libretro,beetle-psx-libretro,$(LIBRETRO_BEETLE_PSX_VERSION))
 LIBRETRO_BEETLE_PSX_LICENSE = GPLv2
+
+LIBRETRO_BEETLE_PSX_PLATFORM = $(LIBRETRO_PLATFORM)
+
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
+LIBRETRO_BEETLE_PSX_PLATFORM = rpi4_64
+else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
+LIBRETRO_BEETLE_PSX_PLATFORM = rpi5_64
+endif
 
 LIBRETRO_BEETLE_PSX_EXTRAOPT=
 LIBRETRO_BEETLE_PSX_OUTFILE=mednafen_psx_libretro.so

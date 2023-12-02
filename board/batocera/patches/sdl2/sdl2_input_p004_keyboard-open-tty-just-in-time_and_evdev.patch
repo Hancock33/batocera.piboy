@@ -1,8 +1,8 @@
 diff --git a/src/core/linux/SDL_evdev.c b/src/core/linux/SDL_evdev.c
-index e997aae49..b299c4a36 100644
+index 9027c11c8..73123f26d 100644
 --- a/src/core/linux/SDL_evdev.c
 +++ b/src/core/linux/SDL_evdev.c
-@@ -336,6 +336,11 @@ void SDL_EVDEV_Poll(void)
+@@ -373,6 +373,11 @@ void SDL_EVDEV_Poll(void)
                              SDL_SendKeyboardKey(SDL_PRESSED, scan_code);
                          }
                      }

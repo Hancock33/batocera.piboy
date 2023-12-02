@@ -11,7 +11,7 @@ MOONLIGHT_EMBEDDED_SITE_METHOD = git
 MOONLIGHT_EMBEDDED_GIT_SUBMODULES=y
 MOONLIGHT_EMBEDDED_LICENSE = GPLv3
 MOONLIGHT_EMBEDDED_DEPENDENCIES = opus expat libevdev avahi alsa-lib udev \
-								  libcurl libcec ffmpeg sdl2 libenet
+								  libcurl libcec ffmpeg sdl2 enet
 
 MOONLIGHT_EMBEDDED_CONF_OPTS = "-DCMAKE_INSTALL_SYSCONFDIR=/etc"
 
