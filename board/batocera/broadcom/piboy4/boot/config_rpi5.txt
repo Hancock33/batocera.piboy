@@ -23,8 +23,7 @@ dtparam=audio=on
 dtparam=krnbt=on
 
 # Video settings
-gpu_mem_1024=256
-dtoverlay=vc4-kms-v3d,cma-512
+dtoverlay=vc4-kms-v3d-pi5
 
 [rpi5]
 # 64-bit mode

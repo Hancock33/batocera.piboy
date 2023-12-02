@@ -22,8 +22,7 @@ define LIBRETRO_MRBOOM_BUILD_CMDS
 endef
 
 define LIBRETRO_MRBOOM_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/mrboom_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/mrboom_libretro.so
+	$(INSTALL) -D $(@D)/mrboom_libretro.so $(TARGET_DIR)/usr/lib/libretro/mrboom_libretro.so
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/mrboom
 	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-mrboom/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/mrboom/
 endef

@@ -281,10 +281,10 @@ index da822ff1dd6d..2d9340db5fd6 100644
  EXPORT_SYMBOL(drm_connector_list_update);
  
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index 969313f8c5fc..afbd990157cc 100644
+index ebe140e8838f..0c868550db8e 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
-@@ -371,6 +371,23 @@ drm_helper_probe_detect_ctx(struct drm_connector *connector, bool force)
+@@ -374,6 +374,23 @@ drm_helper_probe_detect_ctx(struct drm_connector *connector, bool force)
  	return ret;
  }
  
@@ -308,7 +308,7 @@ index 969313f8c5fc..afbd990157cc 100644
  /**
   * drm_helper_probe_detect - probe connector status
   * @connector: connector to probe
-@@ -564,6 +581,8 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+@@ -567,6 +584,8 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
  
  	drm_modeset_acquire_init(&ctx, 0);
  
@@ -317,7 +317,7 @@ index 969313f8c5fc..afbd990157cc 100644
  	DRM_DEBUG_KMS("[CONNECTOR:%d:%s]\n", connector->base.id,
  			connector->name);
  
-@@ -581,6 +600,10 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+@@ -584,6 +603,10 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
  
  	old_status = connector->status;
  
@@ -328,7 +328,7 @@ index 969313f8c5fc..afbd990157cc 100644
  	if (connector->force) {
  		if (connector->force == DRM_FORCE_ON ||
  		    connector->force == DRM_FORCE_ON_DIGITAL)
-@@ -693,7 +716,13 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
+@@ -696,7 +719,13 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
  
  	drm_mode_sort(&connector->modes);
  

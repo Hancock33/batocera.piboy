@@ -1,8 +1,8 @@
 diff --git a/src/joystick/SDL_joystick.c b/src/joystick/SDL_joystick.c
-index 9cbf499bd..1dbc61eca 100644
+index 69dd289f1..47ad14f52 100644
 --- a/src/joystick/SDL_joystick.c
 +++ b/src/joystick/SDL_joystick.c
-@@ -1903,7 +1903,7 @@ void SDL_JoystickUpdate(void)
+@@ -1905,7 +1905,7 @@ void SDL_JoystickUpdate(void)
              if (joystick->delayed_guide_button) {
                  SDL_GameControllerHandleDelayedGuideButton(joystick);
              }
@@ -11,7 +11,7 @@ index 9cbf499bd..1dbc61eca 100644
  
          now = SDL_GetTicks();
          if (joystick->rumble_expiration &&
-@@ -1925,6 +1925,8 @@ void SDL_JoystickUpdate(void)
+@@ -1927,6 +1927,8 @@ void SDL_JoystickUpdate(void)
              SDL_TICKS_PASSED(now, joystick->trigger_rumble_expiration)) {
              SDL_JoystickRumbleTriggers(joystick, 0, 0, 0);
          }
