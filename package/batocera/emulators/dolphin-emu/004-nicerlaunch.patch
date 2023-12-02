@@ -1,8 +1,8 @@
 diff --git a/Source/Core/DolphinQt/MainWindow.cpp b/Source/Core/DolphinQt/MainWindow.cpp
-index 5e9bc67896..816a7aa629 100644
+index d9eda82bb1..24e1dde4ac 100644
 --- a/Source/Core/DolphinQt/MainWindow.cpp
 +++ b/Source/Core/DolphinQt/MainWindow.cpp
-@@ -2027,7 +2027,12 @@ void MainWindow::Show()
+@@ -2030,7 +2030,12 @@ void MainWindow::Show()
    // If the booting of a game was requested on start up, do that now
    if (m_pending_boot != nullptr)
    {
