@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/drm_panel_orientation_quirks.c b/drivers/gpu/drm/drm_panel_orientation_quirks.c
-index d5c15292ae93..8ddc5a4ae864 100644
+index 3d92f66e550c..8da0d90df673 100644
 --- a/drivers/gpu/drm/drm_panel_orientation_quirks.c
 +++ b/drivers/gpu/drm/drm_panel_orientation_quirks.c
 @@ -196,6 +196,12 @@ static const struct dmi_system_id orientation_data[] = {
