@@ -1,5 +1,5 @@
 diff --git a/src/core/linux/SDL_udev.c b/src/core/linux/SDL_udev.c
-index c6ea2d4ba..42a4b9d2f 100644
+index d04827bbd..9e01bace6 100644
 --- a/src/core/linux/SDL_udev.c
 +++ b/src/core/linux/SDL_udev.c
 @@ -60,6 +60,67 @@ static SDL_bool SDL_UDEV_load_sym(const char *fn, void **addr)
@@ -78,22 +78,22 @@ index c6ea2d4ba..42a4b9d2f 100644
 +    struct joypad_udev_entry sorted[64];
 +    int i;
 +
-     if (_this == NULL) {
+     if (!_this) {
          return;
      }
-@@ -214,11 +279,28 @@ void SDL_UDEV_Scan(void)
+@@ -214,11 +279,27 @@ void SDL_UDEV_Scan(void)
          const char *path = _this->syms.udev_list_entry_get_name(item);
          struct udev_device *dev = _this->syms.udev_device_new_from_syspath(_this->udev, path);
-         if (dev != NULL) {
+         if (dev) {
 -            device_event(SDL_UDEV_DEVICEADDED, dev);
 -            _this->syms.udev_device_unref(dev);
 +         const char* devnode = _this->syms.udev_device_get_devnode(dev);
-+         if(devnode != NULL) {
-+	    sorted[sorted_count].devnode = devnode;
-+	    sorted[sorted_count].dev     = dev;
-+	    sorted[sorted_count].item = item;
-+	    sorted_count++;
-+         }
++             if(devnode != NULL) {
++        	    sorted[sorted_count].devnode = devnode;
++        	    sorted[sorted_count].dev     = dev;
++        	    sorted[sorted_count].item = item;
++        	    sorted_count++;
++             }
          }
      }
  
@@ -107,7 +107,6 @@ index c6ea2d4ba..42a4b9d2f 100644
 +     device_event(SDL_UDEV_DEVICEADDED, sorted[i].dev);
 +     _this->syms.udev_device_unref(sorted[i].dev);
 +   }
-+
 +
      _this->syms.udev_enumerate_unref(enumerate);
  }

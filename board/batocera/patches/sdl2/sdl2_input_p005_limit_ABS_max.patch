@@ -1,8 +1,8 @@
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
-index 2dc1c000d..bc623430b 100644
+index e1a065161..957bce202 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
-@@ -1046,7 +1046,7 @@ static void ConfigJoystick(SDL_Joystick *joystick, int fd)
+@@ -1189,7 +1189,7 @@ static void ConfigJoystick(SDL_Joystick *joystick, int fd, int fd_sensor)
                  ++joystick->nhats;
              }
          }
@@ -11,7 +11,7 @@ index 2dc1c000d..bc623430b 100644
              /* Skip digital hats */
              if (i >= ABS_HAT0X && i <= ABS_HAT3Y && joystick->hwdata->has_hat[(i - ABS_HAT0X) / 2]) {
                  continue;
-@@ -1524,6 +1524,9 @@ static void HandleInputEvents(SDL_Joystick *joystick)
+@@ -1858,6 +1858,9 @@ static void HandleInputEvents(SDL_Joystick *joystick)
                                            events[i].value);
                  break;
              case EV_ABS:
