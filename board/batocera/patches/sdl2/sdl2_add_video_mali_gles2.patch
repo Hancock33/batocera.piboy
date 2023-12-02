@@ -1,8 +1,8 @@
 diff --git a/configure b/configure
-index 1acbcab16..7a67f47d2 100755
+index 966ba44e7..3d8a87dd4 100755
 --- a/configure
 +++ b/configure
-@@ -928,6 +928,7 @@ enable_render_metal
+@@ -929,6 +929,7 @@ enable_render_metal
  enable_video_directfb
  enable_directfb_shared
  enable_video_kmsdrm
@@ -10,7 +10,7 @@ index 1acbcab16..7a67f47d2 100755
  enable_kmsdrm_shared
  enable_video_dummy
  enable_video_offscreen
-@@ -25608,6 +25609,10 @@ fi
+@@ -25658,6 +25659,10 @@ fi
  
          video_kmsdrm=no
  
@@ -22,10 +22,10 @@ index 1acbcab16..7a67f47d2 100755
  pkg_failed=no
  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for libdrm >= 1.4.82" >&5
 diff --git a/configure.ac b/configure.ac
-index 558895859..b0b2365b7 100644
+index 0e13e7530..49c46fb93 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -2397,6 +2397,15 @@ CheckKMSDRM()
+@@ -2445,6 +2445,15 @@ CheckKMSDRM()
              video_kmsdrm=yes
          fi
  
@@ -41,7 +41,7 @@ index 558895859..b0b2365b7 100644
          if test x$video_kmsdrm = xyes; then
              AC_ARG_ENABLE(kmsdrm-shared,
  [AS_HELP_STRING([--enable-kmsdrm-shared], [dynamically load kmsdrm support [default=yes]])],
-@@ -2503,7 +2512,9 @@ CheckGLX()
+@@ -2551,7 +2560,9 @@ CheckGLX()
          AC_MSG_RESULT($video_opengl_glx)
          if test x$video_opengl_glx = xyes; then
              AC_DEFINE(SDL_VIDEO_OPENGL, 1, [ ])
@@ -53,10 +53,10 @@ index 558895859..b0b2365b7 100644
      fi
  }
 diff --git a/include/SDL_config.h.in b/include/SDL_config.h.in
-index d6460b783..6098e14bb 100644
+index 26e802317..863ab496e 100644
 --- a/include/SDL_config.h.in
 +++ b/include/SDL_config.h.in
-@@ -384,6 +384,7 @@
+@@ -383,6 +383,7 @@
  #undef SDL_VIDEO_DRIVER_WAYLAND_DYNAMIC_LIBDECOR
  #undef SDL_VIDEO_DRIVER_X11
  #undef SDL_VIDEO_DRIVER_RPI
@@ -65,7 +65,7 @@ index d6460b783..6098e14bb 100644
  #undef SDL_VIDEO_DRIVER_KMSDRM_DYNAMIC
  #undef SDL_VIDEO_DRIVER_KMSDRM_DYNAMIC_GBM
 diff --git a/src/video/SDL_egl.c b/src/video/SDL_egl.c
-index 8e5f165b5..58307380d 100644
+index fb01d42b8..26154c0d9 100644
 --- a/src/video/SDL_egl.c
 +++ b/src/video/SDL_egl.c
 @@ -516,6 +516,22 @@ int SDL_EGL_LoadLibrary(_THIS, const char *egl_path, NativeDisplayType native_di
@@ -101,14 +101,14 @@ index 8e5f165b5..58307380d 100644
  #endif
      /* Try the implementation-specific eglGetDisplay even if eglGetPlatformDisplay fails */
 diff --git a/src/video/kmsdrm/SDL_kmsdrmopengles.c b/src/video/kmsdrm/SDL_kmsdrmopengles.c
-index 8dc2bfdc6..c4c523ecd 100644
+index bb092708a..33fe2643f 100644
 --- a/src/video/kmsdrm/SDL_kmsdrmopengles.c
 +++ b/src/video/kmsdrm/SDL_kmsdrmopengles.c
-@@ -40,7 +40,7 @@ void KMSDRM_GLES_DefaultProfileConfig(_THIS, int *mask, int *major, int *minor)
+@@ -41,7 +41,7 @@ void KMSDRM_GLES_DefaultProfileConfig(_THIS, int *mask, int *major, int *minor)
  {
      /* if SDL was _also_ built with the Raspberry Pi driver (so we're
         definitely a Pi device), default to GLES2. */
--#if SDL_VIDEO_DRIVER_RPI
+-#ifdef SDL_VIDEO_DRIVER_RPI
 +#if defined(SDL_VIDEO_DRIVER_RPI) || defined(SDL_VIDEO_DRIVER_MALI)
      *mask = SDL_GL_CONTEXT_PROFILE_ES;
      *major = 2;

@@ -1,8 +1,8 @@
 diff --git a/src/joystick/linux/SDL_sysjoystick.c b/src/joystick/linux/SDL_sysjoystick.c
-index bc623430b..e73d641a4 100644
+index 957bce202..75cf4393f 100644
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
-@@ -992,16 +992,6 @@ static void ConfigJoystick(SDL_Joystick *joystick, int fd)
+@@ -1135,16 +1135,6 @@ static void ConfigJoystick(SDL_Joystick *joystick, int fd, int fd_sensor)
              if (test_bit(i, keybit)) {
  #ifdef DEBUG_INPUT_EVENTS
                  SDL_Log("Joystick has button: 0x%x\n", i);
