@@ -1,8 +1,8 @@
 diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
-index be901fe289..ddac678181 100644
+index 4a7470ada8..0505527bfb 100644
 --- a/Source/Core/Core/Config/MainSettings.cpp
 +++ b/Source/Core/Core/Config/MainSettings.cpp
-@@ -287,6 +287,7 @@ bool ShouldUseDPL2Decoder()
+@@ -288,6 +288,7 @@ bool ShouldUseDPL2Decoder()
  const Info<std::string> MAIN_DUMP_PATH{{System::Main, "General", "DumpPath"}, ""};
  const Info<std::string> MAIN_LOAD_PATH{{System::Main, "General", "LoadPath"}, ""};
  const Info<std::string> MAIN_RESOURCEPACK_PATH{{System::Main, "General", "ResourcePackPath"}, ""};
@@ -11,10 +11,10 @@ index be901fe289..ddac678181 100644
  const Info<std::string> MAIN_WII_SD_CARD_IMAGE_PATH{{System::Main, "General", "WiiSDCardPath"}, ""};
  const Info<std::string> MAIN_WII_SD_CARD_SYNC_FOLDER_PATH{
 diff --git a/Source/Core/Core/Config/MainSettings.h b/Source/Core/Core/Config/MainSettings.h
-index 0d591ee5db..cf553e999e 100644
+index b591a00de4..15460c65ac 100644
 --- a/Source/Core/Core/Config/MainSettings.h
 +++ b/Source/Core/Core/Config/MainSettings.h
-@@ -187,6 +187,7 @@ extern const Info<bool> MAIN_DISABLE_SCREENSAVER;
+@@ -188,6 +188,7 @@ extern const Info<bool> MAIN_DISABLE_SCREENSAVER;
  extern const Info<std::string> MAIN_DUMP_PATH;
  extern const Info<std::string> MAIN_LOAD_PATH;
  extern const Info<std::string> MAIN_RESOURCEPACK_PATH;
