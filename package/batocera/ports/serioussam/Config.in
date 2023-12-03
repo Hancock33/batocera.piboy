@@ -2,6 +2,7 @@ config BR2_PACKAGE_SERIOUSSAM
 	bool "serioussam"
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
+	select BR2_PACKAGE_IMAGEMAGICK
 	depends on BR2_INSTALL_LIBSTDCPP
 	help
 		Serious Sam Classic open source project based on https://github.com/Croteam-official/Serious-Engine
