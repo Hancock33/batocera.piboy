@@ -604,6 +604,7 @@ menu "Libraries"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/python-pyftdi/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/python-pyqt5-sip/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/python-sysv-ipc/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/sdl12-compat/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/wxwidgets/Config.in"
 endmenu
 
