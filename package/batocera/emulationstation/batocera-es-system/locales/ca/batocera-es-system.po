@@ -7359,7 +7359,7 @@ msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "API GRÀFICA"
 
-#. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
+#. TRANSLATION: libretro, daphne, dolphin, duckstation, flycast, ...
 msgctxt "game_options"
 msgid "OpenGL"
 msgstr "OpenGL"
@@ -7374,7 +7374,7 @@ msgctxt "game_options"
 msgid "SDL2"
 msgstr ""
 
-#. TRANSLATION: libretro, citra, daphne, dolphin, duckstation, ...
+#. TRANSLATION: libretro, cemu, citra, daphne, dolphin, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
@@ -7678,10 +7678,10 @@ msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "Triï quina llibreria d’API gràfica vol emprar."
 
-#. TRANSLATION: cemu, flycast
+#. TRANSLATION: cemu
 msgctxt "game_options"
-msgid "Vulkan (Default)"
-msgstr "Vulkan (Per defecte)"
+msgid "OpenGL  (Default)"
+msgstr ""
 
 #. TRANSLATION: cemu, yuzu
 msgctxt "game_options"
@@ -9038,6 +9038,11 @@ msgstr "4.5x (2880x2160)"
 msgctxt "game_options"
 msgid "Choose your graphics renderer."
 msgstr "Tria el renderitzador gràfic."
+
+#. TRANSLATION: flycast
+msgctxt "game_options"
+msgid "Vulkan (Default)"
+msgstr "Vulkan (Per defecte)"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
