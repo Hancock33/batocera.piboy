@@ -6904,8 +6904,8 @@ cemu:
             prompt:      GRAPHICS API
             description: Choose which graphics API library to use.
             choices:
-                "OpenGL":           0
-                "Vulkan (Default)": 1
+                "OpenGL  (Default)":  0
+                "Vulkan":             1
         cemu_async:
             group: ADVANCED OPTIONS
             prompt: ASYNC SHADER COMPILE (VULKAN ONLY)
@@ -7195,7 +7195,7 @@ devilutionx:
   shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
 dolphin:
   features: [padtokeyboard]
-  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, use_wheels]
+  shared: [videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         dolphin_aspect_ratio:
             submenu: DISPLAY
@@ -8929,7 +8929,7 @@ ppsspp:
   shared: [videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo, rewind]
   cfeatures:
         gfxbackend:
-            archs_include: [x86, x86_64, bcm2711, rk3326]
+            archs_include: [x86, x86_64, bcm2711, bcm2712, rk3326]
             group: DRIVERS
             prompt: GRAPHICS API
             description: Choose which graphics API library to use.

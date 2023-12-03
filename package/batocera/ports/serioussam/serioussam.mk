@@ -3,8 +3,8 @@
 # serioussam
 #
 ################################################################################
-# Version: Commits on Dec 02, 2023
-SERIOUSSAM_VERSION = ccafc35ca63dd2c73afef28f4f68578f692fdc6a
+# Version: Commits on Dec 03, 2023
+SERIOUSSAM_VERSION = e25751f549c9762014f13f7157dd44c4fcebde39
 SERIOUSSAM_SITE = https://github.com/tx00100xt/SeriousSamClassic-VK.git
 SERIOUSSAM_SITE_METHOD=git
 SERIOUSSAM_GIT_SUBMODULES=YES
@@ -12,13 +12,19 @@ SERIOUSSAM_SUPPORTS_IN_SOURCE_BUILD = NO
 SERIOUSSAM_DEPENDENCIES = sdl2 sdl2_mixer host-serioussam
 SERIOUSSAM_LICENSE = GPL-2.0
 
+
+define HOST_SERIOUSSAM_BUILD_CMDS
+	cd $(HOST_SERIOUSSAM_BUILDDIR) && ninja ecc
+	cd $(HOST_SERIOUSSAM_BUILDDIR) && ninja ecc-se
+endef
+
 define HOST_SERIOUSSAM_INSTALL_CMDS
 	cp -av $(HOST_SERIOUSSAM_BUILDDIR)/SamTFE/Sources/ecc	$(HOST_DIR)/bin
 	cp -av $(HOST_SERIOUSSAM_BUILDDIR)/SamTSE/Sources/ecc-se $(HOST_DIR)/bin
 endef
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
-SERIOUSSAM_CONF_OPTS += -DRPI4=ON
+SERIOUSSAM_CONF_OPTS += -DRPI4=ON -DUSE_ASM=OFF
 endif
 SERIOUSSAM_CONF_OPTS += -DImageMagick_EXECUTABLE_DIR=/usr/bin
 
