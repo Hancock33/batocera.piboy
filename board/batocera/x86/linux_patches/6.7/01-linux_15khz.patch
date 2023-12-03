@@ -1,7 +1,19 @@
-Index: linux-6.5/drivers/gpu/drm/drm_modes.c
-===================================================================
---- linux-6.5.orig/drivers/gpu/drm/drm_modes.c
-+++ linux-6.5/drivers/gpu/drm/drm_modes.c
+diff --git a/drivers/gpu/drm/Makefile b/drivers/gpu/drm/Makefile
+index 8e1bde059170..2ddf8b518923 100644
+--- a/drivers/gpu/drm/Makefile
++++ b/drivers/gpu/drm/Makefile
+@@ -30,6 +30,7 @@ drm-y := \
+ 	drm_ioctl.o \
+ 	drm_lease.o \
+ 	drm_managed.o \
++	drm_modes_low_dotclock.o \
+ 	drm_mm.o \
+ 	drm_mode_config.o \
+ 	drm_mode_object.o \
+diff --git a/drivers/gpu/drm/drm_modes.c b/drivers/gpu/drm/drm_modes.c
+index ac9a406250c5..da822ff1dd6d 100644
+--- a/drivers/gpu/drm/drm_modes.c
++++ b/drivers/gpu/drm/drm_modes.c
 @@ -48,6 +48,7 @@
  #include <drm/drm_print.h>
  
@@ -10,7 +22,7 @@ Index: linux-6.5/drivers/gpu/drm/drm_modes.c
  
  /**
   * drm_mode_debug_printmodeline - print a mode to dmesg
-@@ -2028,7 +2029,7 @@ static int drm_mode_parse_cmdline_res_mo
+@@ -2028,7 +2029,7 @@ static int drm_mode_parse_cmdline_res_mode(const char *str, unsigned int length,
  					   struct drm_cmdline_mode *mode)
  {
  	const char *str_start = str;
@@ -19,7 +31,7 @@ Index: linux-6.5/drivers/gpu/drm/drm_modes.c
  	int xres = 0, yres = 0;
  	int remaining, i;
  	char *end_ptr;
-@@ -2058,6 +2059,12 @@ static int drm_mode_parse_cmdline_res_mo
+@@ -2058,6 +2059,12 @@ static int drm_mode_parse_cmdline_res_mode(const char *str, unsigned int length,
  		case 'R':
  			rb = true;
  			break;
@@ -32,7 +44,7 @@ Index: linux-6.5/drivers/gpu/drm/drm_modes.c
  		default:
  			/*
  			 * Try to pass that to our extras parsing
-@@ -2082,6 +2089,7 @@ static int drm_mode_parse_cmdline_res_mo
+@@ -2082,6 +2089,7 @@ static int drm_mode_parse_cmdline_res_mode(const char *str, unsigned int length,
  	mode->yres = yres;
  	mode->cvt = cvt;
  	mode->rb = rb;
@@ -40,7 +52,7 @@ Index: linux-6.5/drivers/gpu/drm/drm_modes.c
  
  	return 0;
  }
-@@ -2545,7 +2553,11 @@ drm_mode_create_from_cmdline_mode(struct
+@@ -2545,7 +2553,11 @@ drm_mode_create_from_cmdline_mode(struct drm_device *dev,
  
  	if (strlen(cmd->name))
  		mode = drm_named_mode(dev, cmd);
@@ -53,10 +65,11 @@ Index: linux-6.5/drivers/gpu/drm/drm_modes.c
  		mode = drm_cvt_mode(dev,
  				    cmd->xres, cmd->yres,
  				    cmd->refresh_specified ? cmd->refresh : 60,
-Index: linux-6.5/drivers/gpu/drm/drm_modes_low_dotclock.c
-===================================================================
+diff --git a/drivers/gpu/drm/drm_modes_low_dotclock.c b/drivers/gpu/drm/drm_modes_low_dotclock.c
+new file mode 100644
+index 000000000000..a14f18f397c6
 --- /dev/null
-+++ linux-6.5/drivers/gpu/drm/drm_modes_low_dotclock.c
++++ b/drivers/gpu/drm/drm_modes_low_dotclock.c
 @@ -0,0 +1,155 @@
 +/*
 + * Permission is hereby granted, free of charge, to any person obtaining a
@@ -213,10 +226,11 @@ Index: linux-6.5/drivers/gpu/drm/drm_modes_low_dotclock.c
 +	return NULL;
 +}
 +EXPORT_SYMBOL(drm_mode_low_dotclock_res);
-Index: linux-6.5/drivers/gpu/drm/drm_modes_low_dotclock.h
-===================================================================
+diff --git a/drivers/gpu/drm/drm_modes_low_dotclock.h b/drivers/gpu/drm/drm_modes_low_dotclock.h
+new file mode 100644
+index 000000000000..84aa5106c8fa
 --- /dev/null
-+++ linux-6.5/drivers/gpu/drm/drm_modes_low_dotclock.h
++++ b/drivers/gpu/drm/drm_modes_low_dotclock.h
 @@ -0,0 +1,23 @@
 +/*
 + * Permission is hereby granted, free of charge, to any person obtaining a
@@ -241,11 +255,11 @@ Index: linux-6.5/drivers/gpu/drm/drm_modes_low_dotclock.h
 +
 +struct drm_display_mode *drm_mode_low_dotclock_res(struct drm_device *dev,
 +				int hsize, int vsize, bool interlace);
-Index: linux-6.5/drivers/gpu/drm/drm_probe_helper.c
-===================================================================
---- linux-6.5.orig/drivers/gpu/drm/drm_probe_helper.c
-+++ linux-6.5/drivers/gpu/drm/drm_probe_helper.c
-@@ -448,21 +448,26 @@ static int __drm_helper_update_and_valid
+diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
+index 3f479483d7d8..969313f8c5fc 100644
+--- a/drivers/gpu/drm/drm_probe_helper.c
++++ b/drivers/gpu/drm/drm_probe_helper.c
+@@ -448,21 +448,26 @@ static int __drm_helper_update_and_validate(struct drm_connector *connector,
  		mode_flags |= DRM_MODE_FLAG_3D_MASK;
  
  	list_for_each_entry(mode, &connector->modes, head) {
@@ -272,7 +286,7 @@ Index: linux-6.5/drivers/gpu/drm/drm_probe_helper.c
  		ret = drm_mode_validate_pipeline(mode, connector, ctx,
  						 &mode->status);
  		if (ret) {
-@@ -476,9 +481,11 @@ static int __drm_helper_update_and_valid
+@@ -476,9 +481,11 @@ static int __drm_helper_update_and_validate(struct drm_connector *connector,
  				return -EDEADLK;
  		}
  
@@ -284,7 +298,7 @@ Index: linux-6.5/drivers/gpu/drm/drm_probe_helper.c
  	}
  
  	return 0;
-@@ -548,6 +555,7 @@ int drm_helper_probe_single_connector_mo
+@@ -548,6 +555,7 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
  {
  	struct drm_device *dev = connector->dev;
  	struct drm_display_mode *mode;
@@ -292,7 +306,7 @@ Index: linux-6.5/drivers/gpu/drm/drm_probe_helper.c
  	int count = 0, ret;
  	enum drm_connector_status old_status;
  	struct drm_modeset_acquire_ctx ctx;
-@@ -630,10 +638,13 @@ retry:
+@@ -630,10 +638,13 @@ int drm_helper_probe_single_connector_modes(struct drm_connector *connector,
  		goto exit;
  	}
  
@@ -307,33 +321,21 @@ Index: linux-6.5/drivers/gpu/drm/drm_probe_helper.c
  		count = drm_add_modes_noedid(connector, 1024, 768);
  
  		/*
-Index: linux-6.5/include/drm/drm_connector.h
-===================================================================
---- linux-6.5.orig/include/drm/drm_connector.h
-+++ linux-6.5/include/drm/drm_connector.h
-@@ -1424,6 +1424,13 @@ struct drm_cmdline_mode {
+diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
+index fe88d7fc6b8f..ce1d94bf0f7c 100644
+--- a/include/drm/drm_connector.h
++++ b/include/drm/drm_connector.h
+@@ -1433,6 +1433,13 @@ struct drm_cmdline_mode {
+ 	 */
  	bool interlace;
  
- 	/**
++	/**
 +	 * @low_dotclock:
 +	 *
 +	 * Flag is enabled if a valid low dotclock resolution is defined.
 +	 */
 +	bool low_dotclock;
 +
-+	/**
+ 	/**
  	 * @cvt:
  	 *
- 	 * The timings will be calculated using the VESA Coordinated
-Index: linux-6.5/drivers/gpu/drm/Makefile
-===================================================================
---- linux-6.5.orig/drivers/gpu/drm/Makefile
-+++ linux-6.5/drivers/gpu/drm/Makefile
-@@ -30,6 +30,7 @@ drm-y := \
- 	drm_ioctl.o \
- 	drm_lease.o \
- 	drm_managed.o \
-+	drm_modes_low_dotclock.o \
- 	drm_mm.o \
- 	drm_mode_config.o \
- 	drm_mode_object.o \
