@@ -3,8 +3,8 @@
 # citra
 #
 ################################################################################
-# Version: Commits on Nov 30, 2023
-CITRA_VERSION = 59beeac4c714d3f34a479293faffd3197bea70ea
+# Version: Commits on Dec 03, 2023
+CITRA_VERSION = ea9f522c0c844e63fdd54e04da6d31eb64971b5f
 CITRA_SITE = https://github.com/citra-emu/citra.git
 
 CITRA_SITE_METHOD=git
@@ -25,8 +25,9 @@ CITRA_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 CITRA_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
 CITRA_CONF_OPTS += -DENABLE_COMPATIBILITY_LIST_DOWNLOAD=ON
 CITRA_CONF_OPTS += -DALSOFT_UPDATE_BUILD_VERSION=OFF
-CITRA_CONF_OPTS += -DENABLE_LTO=ON
+CITRA_CONF_OPTS += -DENABLE_LTO=OFF
 CITRA_CONF_OPTS += -DCITRA_WARNINGS_AS_ERRORS=OFF
+CITRA_CONF_OPTS += -DCITRA_ENABLE_BUNDLE_TARGET=OFF
 
 CITRA_CONF_ENV += LDFLAGS=-lpthread
 
@@ -43,6 +44,11 @@ define CITRA_EVMAP
 		$(TARGET_DIR)/usr/share/evmapy
 endef
 
+define NO_DL_EXTERNAL
+	sed -i '/(DownloadExternals)/d' $(@D)/CMakeLists.txt
+endef
+
 CITRA_POST_INSTALL_TARGET_HOOKS = CITRA_EVMAP
+CITRA_PRE_CONFIGURE_HOOKS += NO_DL_EXTERNAL
 
 $(eval $(cmake-package))
