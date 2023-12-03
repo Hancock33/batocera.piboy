@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Dec 03, 2023
-PPSSPP_VERSION = 1065e185218d2b045dec1c68d52919f3ccb79d92
+PPSSPP_VERSION = 0c760bae91ad45651acf9ac74c6b88036defdacb
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
@@ -92,7 +92,7 @@ else ifeq ($(BR2_arm)$(BR2_aarch64),y)
 	PPSSPP_CONF_OPTS += -DARM_NO_VULKAN=ON
 endif
 
-ifeq ($(BR2_PACKAGE_WAYLAND),y)
+ifeq ($(BR2_PACKAGE_WAYLAND)$(BR2_PACKAGE_BATOCERA_WAYLAND),yy)
     PPSSPP_CONF_OPTS += -DUSE_WAYLAND_WSI=ON
 else
     PPSSPP_CONF_OPTS += -DUSE_WAYLAND_WSI=OFF
