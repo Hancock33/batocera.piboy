@@ -1,0 +1,238 @@
+diff --git a/contrib/pagesize/posix_pagesize.c b/contrib/pagesize/posix_pagesize.c
+deleted file mode 100644
+index f78f5e57b..000000000
+--- a/contrib/pagesize/posix_pagesize.c
++++ /dev/null
+@@ -1,51 +0,0 @@
+-/*
+- *  SPDX-License-Identifier: GPL-2.0-or-later
+- *
+- *  Copyright (C) 2023-2023  The DOSBox Staging Team
+- *
+- *  This program is free software; you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation; either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  This program is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License along
+- *  with this program; if not, write to the Free Software Foundation, Inc.,
+- *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+- */
+-
+-// Get the memory page size on POSIX systems
+-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-//
+-// Ref: https://pubs.opengroup.org/onlinepubs/9699919799/
+-//
+-// Usage: ./posix_pagesize
+-//
+-// On success, prints the page size in bytes and return 0 to the shell.
+-// On failure, prints an error messages and return 1 to the shell.
+-//
+-#include <errno.h>
+-#include <stdio.h>
+-#include <string.h>
+-#include <unistd.h>
+-
+-int main(void) {
+-	// Try two queries
+-	long pagesize = sysconf(_SC_PAGESIZE);
+-	if (pagesize == -1) {
+-		pagesize = sysconf(_SC_PAGE_SIZE);
+-	}
+-
+-	// Print the results
+-	if (pagesize > 0) {
+-		printf("%ld\n", pagesize);
+-	} else {
+-		printf("Error getting page size: %s\n", strerror(errno));
+-	}
+-
+-	return (pagesize > 0) ? 0 : 1;
+-}
+diff --git a/contrib/pagesize/windows_pagesize.c b/contrib/pagesize/windows_pagesize.c
+deleted file mode 100644
+index f6d8757c2..000000000
+--- a/contrib/pagesize/windows_pagesize.c
++++ /dev/null
+@@ -1,62 +0,0 @@
+-/*
+- *  SPDX-License-Identifier: GPL-2.0-or-later
+- *
+- *  Copyright (C) 2023-2023  The DOSBox Staging Team
+- *
+- *  This program is free software; you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation; either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  This program is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License along
+- *  with this program; if not, write to the Free Software Foundation, Inc.,
+- *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+- */
+-
+-// Get the memory page size on Windows systems
+-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-//
+-// What are the page sizes used by Windows on various processors?
+-// For many processors, the page size is dictated by the processor,
+-// but some processors give you a choice.
+-//  -- Raymond Chen, May 10th, 2021
+-//
+-//                         Page size
+-// Processor               Normal  Large    Reasonable choices
+-// x86-32 without PAE      4KB     4MB      4KB only
+-// x86-32 with PAE         4KB     2MB      4KB only
+-// x86-64                  4KB     2MB      4KB only
+-// SH-4                    4KB      —       1KB, 4KB
+-// MIPS                    4KB      —       1KB, 4KB
+-// PowerPC                 4KB      —       4KB only
+-// Alpha AXP               8KB      —       8KB, 16KB, 32KB
+-// Alpha AXP 64            8KB      —       8KB, 16KB, 32KB
+-// Itanium                 8KB      —       4KB, 8KB
+-// ARM (AArch32)           4KB     N/A      1KB, 4KB
+-// ARM64 (AArch64)         4KB     2MB      4KB only
+-//
+-// Ref: https://devblogs.microsoft.com/oldnewthing/20210510-00/?p=105200
+-//
+-// Usage: ./windows_pagesize
+-//
+-// Prints the normal page size in bytes.
+-// Returns 0 to the shell.
+-//
+-#include <windows.h>
+-#include <sysinfoapi.h>
+-#include <stdio.h>
+-
+-int main(void) {
+-    SYSTEM_INFO system_info = {};
+-
+-    GetSystemInfo(&system_info);
+-
+-    printf("%u\n", system_info.dwPageSize);
+-
+-    return 0;
+-}
+diff --git a/meson.build b/meson.build
+index ed5330872..dfc43b0a7 100644
+--- a/meson.build
++++ b/meson.build
+@@ -279,6 +279,9 @@ conf_data.set10('C_TRACY', get_option('tracy'))
+ conf_data.set10('C_FPU', true)
+ conf_data.set10('C_FPU_X86', host_machine.cpu_family() in ['x86', 'x86_64'])
+ 
++# Default page size is 4K, but not on all platforms.
++pagesize = 4096
++
+ if get_option('enable_debugger') != 'none'
+     conf_data.set10('C_DEBUG', true)
+ endif
+@@ -383,37 +386,24 @@ if host_machine.endian() == 'big'
+     conf_data.set10('WORDS_BIGENDIAN', true)
+ endif
+ 
+-
+-# Get host page size
+-# ~~~~~~~~~~~~~~~~~~
+-# When detecting the page size, we use Meson's configured
+-# compiler to make a system call because Meson will build and run
+-# it via the cross compiler (if one is in use), which is
+-# particularly important we get the destiantion machine's page
+-# size as opposed to the local build machine's page size.
+-#
+-pagesize = 4096
+-pagesize_option = get_option('pagesize')
+-if pagesize_option > 0
+-    # User has provided the page size
+-    pagesize = pagesize_option
+-else
+-    # Detect the page size using a syscall via the cross compiler
+-    pagesize_api = os_family_name == 'WIN32' ? 'windows' : 'posix'
+-    pagesize_src = files('contrib/pagesize' / pagesize_api + '_pagesize.c')
+-    pagesize_cmd = cc.run(
+-        pagesize_src,
+-        name: 'Query host page size',
+-    )
+-    if pagesize_cmd.returncode() == 0
+-        pagesize = pagesize_cmd.stdout().strip().to_int()
++# 64-bit Power ISA can run with either 4K or 64K page size.
++# (32-bit Power ISA and PowerPC are always 4K.)
++if host_machine.cpu_family() in ['ppc64', 'ppc64le', 'powerpc64le']
++    pagesize_cmd = run_command('getconf', 'PAGESIZE', check: true)
++    if pagesize_cmd.returncode() != 0
++        error('''error executing getconf: unable to determine host architecture page size for ppc64 dynamic core''')
+     else
+-        error('''Unable to detect the host's page size''')
++        pagesize = pagesize_cmd.stdout().strip().to_int()
++        if pagesize < 4096
++            # unexpected; did getconf return an empty or bogus string?
++            error('''need at least 4096-byte pages, getconf PAGESIZE returned '''+pagesize_cmd.stdout())
++        else
++            if pagesize != 4096
++                conf_data.set('PAGESIZE', pagesize)
++            endif
++        endif
+     endif
+ endif
+-conf_data.set('PAGESIZE', pagesize)
+-summary('Host page size (bytes)', pagesize.to_string())
+-
+ 
+ set_prio_code = '''
+ #include <sys/resource.h>
+@@ -812,6 +802,17 @@ if host_machine.system() == 'darwin'
+         warning('''Core Services disabled because Frameworks is missing''')
+     endif
+     summary('CoreServices support', coreservices_dep.found())
++
++    # Apple Silicon has 16k pages
++    pagesize_cmd = run_command('pagesize', check: true)
++    if pagesize_cmd.returncode() != 0
++        error('''error executing pagesize''')
++    else
++        pagesize = pagesize_cmd.stdout().strip().to_int()
++        if pagesize != 4096
++            conf_data.set('PAGESIZE', pagesize)
++        endif
++    endif
+ endif
+ 
+ # Determine if system is capable of using ManyMouse library
+@@ -871,6 +872,10 @@ if host_machine.system() in ['windows', 'cygwin']
+     summary('Windows Multimedia support', winmm_dep.found())
+ endif
+ 
++# Display page size in use (and to alert the user this may be salient).
++summary('Host page size (bytes)', pagesize.to_string())
++
++
+ # Setup include directories
+ incdir = [
+     include_directories('include', '.'),
+diff --git a/meson_options.txt b/meson_options.txt
+index 8a5ed00e6..3101dbcc0 100644
+--- a/meson_options.txt
++++ b/meson_options.txt
+@@ -83,12 +83,6 @@ option(
+     description: 'Select the dynamic core implementation.',
+ )
+ 
+-option(
+-    'pagesize', type : 'integer',
+-    value : 0,
+-    description: 'Set host memory pagesize in bytes (skip detection)'
+-)
+-
+ # Per-page write-or-execute (W^X) permissions
+ # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ # This option lets packagers control if dynamic core memory pages are flagged
