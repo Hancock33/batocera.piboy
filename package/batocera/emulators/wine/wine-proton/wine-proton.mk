@@ -3,8 +3,8 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Dec 02, 2023
-WINE_PROTON_VERSION = experimental-wine-bleeding-edge-8.0-66716-20231202-pfd89ff-w76a315-d1b31aa-v286ec5
+# Version: Commits on Dec 07, 2023
+WINE_PROTON_VERSION = experimental-wine-8.0-20231207
 WINE_PROTON_SOURCE = $(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = https://github.com/ValveSoftware/wine/archive/refs/tags
 WINE_PROTON_LICENSE = LGPL-2.1+
