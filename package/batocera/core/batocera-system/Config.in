@@ -768,7 +768,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
     # NDS
     select BR2_PACKAGE_LIBRETRO_DESMUME                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
-    select BR2_PACKAGE_LIBRETRO_MELONDS                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_aarch64 && BR2_PACKAGE_BATOCERA_GLES3 && !BR2_PACKAGE_BATOCERA_TARGET_BCM2712)
+    select BR2_PACKAGE_LIBRETRO_MELONDS                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_aarch64 && BR2_PACKAGE_BATOCERA_GLES3)
 
     select BR2_PACKAGE_DRASTIC                              if  BR2_PACKAGE_BATOCERA_RPI_MESA3D         || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
@@ -781,7 +781,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H616        || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H6
 
-    select BR2_PACKAGE_MELONDS                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_MELONDS                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
 
     # 3DS
     select BR2_PACKAGE_CITRA                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
@@ -789,7 +789,6 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
 
     # PSP
     select BR2_PACKAGE_PPSSPP                               if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
-
     select BR2_PACKAGE_LIBRETRO_PPSSPP                      if  !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
 
     # Neo Geo Pocket
@@ -1022,7 +1021,7 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_XMIL                        # ALL
 
     # Fujistu FM-Towns computers range
-    select BR2_PACKAGE_TSUGARU                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  # FMTowns
+    select BR2_PACKAGE_TSUGARU                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
 
     # Macintosh
     select BR2_PACKAGE_LIBRETRO_MINIVMAC                    # ALL
