@@ -29,7 +29,7 @@ index 8bb253bb..1866bc93 100644
  if(DISABLE_KODI)
    MESSAGE("Kodi disabled")
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 8e9162c4..710ceeb5 100644
+index 7d15a156..fce8c56d 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -73,8 +73,15 @@
