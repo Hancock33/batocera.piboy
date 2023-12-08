@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index 2bbe3840..af3b3d1f 100644
+index 147dead9..9134bd6f 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,190 +9,279 @@ namespace PlatformIds
+@@ -9,191 +9,280 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -351,13 +351,22 @@ index 2bbe3840..af3b3d1f 100644
 -		{ "ti99",					TI99 },
 +		{ "sonicretro",				SONIC },
 +		{ "coco",					TANDY },
++		{ "vis",					TANDY_VIS },
  		{ "ti99_4a",				TI99 },
 -		{ "pico8",					PICO8 },
 -		{ "sgb",					SUPER_GAME_BOY },
 -
--		{ "watara",					WATARA_SUPERVISION },
++		{ "tutor",					TOMY_TUTOR },
++		{ "pcengine",				TURBOGRAFX_16 },
++		{ "pcenginecd",				TURBOGRAFX_CD },
++		{ "tg-cd",					TURBOGRAFX_CD },
++		{ "vic20",					VIC20 },
++		{ "videopac",				VIDEOPAC_ODYSSEY2 },
++		{ "odyssey2",				VIDEOPAC_ODYSSEY2 },
++		{ "crvision",				VTECH_CREATIVISION },
+ 		{ "watara",					WATARA_SUPERVISION },
 -		{ "supervision",			WATARA_SUPERVISION },
--
+ 
 -		{ "model3",					MODEL3 },
 -			
 -		{ "imageviewer",			IMAGEVIEWER },
@@ -395,20 +404,13 @@ index 2bbe3840..af3b3d1f 100644
 -		{ "gmaster",				HARTUNG_GAME_MASTER },
 -		{ "megaduck",				CREATONIC_MEGA_DUCK },
 -		{ "supracan",				FUNTECH_SUPER_A_CAN },
- 		{ "tutor",					TOMY_TUTOR },
+-		{ "tutor",					TOMY_TUTOR },
 -		{ "apfm1000",				APF_MP_1000 },
 -		{ "camplynx",				CAMPUTER_LYNX },
 -		{ "gamepock",				EPOCH_GAMEPOCKET },	
 -		{ "wasm4",					WASM4 },
-+		{ "pcengine",				TURBOGRAFX_16 },
-+		{ "pcenginecd",				TURBOGRAFX_CD },
-+		{ "tg-cd",					TURBOGRAFX_CD },
-+		{ "vic20",					VIC20 },
-+		{ "videopac",				VIDEOPAC_ODYSSEY2 },
-+		{ "odyssey2",				VIDEOPAC_ODYSSEY2 },
-+		{ "crvision",				VTECH_CREATIVISION },
-+		{ "watara",					WATARA_SUPERVISION },
- 
+-		{ "vis",					TANDY_VIS },
+-			
  		{ "pcarcade",				TEKNOPARROT },
  		{ "teknoparrot",			TEKNOPARROT },
  
@@ -417,10 +419,10 @@ index 2bbe3840..af3b3d1f 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index 27417482..08174a30 100644
+index c0ca8912..63e01ea6 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
-@@ -11,161 +11,249 @@ namespace PlatformIds
+@@ -11,162 +11,250 @@ namespace PlatformIds
  	{
  		PLATFORM_UNKNOWN = 0,
  
@@ -709,6 +711,7 @@ index 27417482..08174a30 100644
 -		CASIO_PV1000,
 +		SUPERGRAFX,
 +		TAITO,
++		TANDY_VIS,
 +		TECHNOS,
 +		TECMO,
 +		THOMSON_TO_MO,
@@ -772,11 +775,12 @@ index 27417482..08174a30 100644
 -		CAMPUTER_LYNX,
 -		EPOCH_GAMEPOCKET,
 -		WASM4,
+-		TANDY_VIS,
  
  		TEKNOPARROT,
  
 diff --git a/es-app/src/scrapers/GamesDBJSONScraper.cpp b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-index d43377d5..d12dc6d1 100644
+index 3e88fe3d..1390f3cb 100644
 --- a/es-app/src/scrapers/GamesDBJSONScraper.cpp
 +++ b/es-app/src/scrapers/GamesDBJSONScraper.cpp
 @@ -38,10 +38,8 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
@@ -798,7 +802,7 @@ index d43377d5..d12dc6d1 100644
  	{ SEGA_SATURN, "17" },
  	{ SEGA_SG1000, "4949" },
  	{ PLAYSTATION, "10" },
-@@ -105,17 +102,16 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+@@ -105,17 +102,17 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ VIC20, "4945" },
  	{ CHANNELF, "4928" },
  	{ SAMCOUPE, "4979" },
@@ -812,6 +816,7 @@ index d43377d5..d12dc6d1 100644
  	{ FMTOWNS, "4932" },
  	{ PHILIPS_CDI, "4917" },
  	{ WATARA_SUPERVISION, "4959" },
++	{ TANDY_VIS, "4982" },
  	{ SONIC, "36,21" }, // Sega Mega Drive & Sega CD
 -	{ GP32, "5015"},
 + 	{ GP32, "5015"},
@@ -820,12 +825,11 @@ index d43377d5..d12dc6d1 100644
  	// 1 = PC
  	{ PC, "1" },
  	{ MOONLIGHT, "1" },
-@@ -142,7 +138,14 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
- 	{ GAMATE, "5004" },
+@@ -143,7 +140,13 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ CREATONIC_MEGA_DUCK, "4948" },
  	{ TOMY_TUTOR, "4960" },
--	{ APF_MP_1000, "4969" }
-+	{ APF_MP_1000, "4969" },
+ 	{ APF_MP_1000, "4969" },
+-	{ TANDY_VIS, "4982" }
 +	{ ACORN_ATOM, "5014" },
 +	{ ACORN_BBC_MICRO, "5013" },
 +	{ ACTIONMAX, "4976" },
@@ -857,7 +861,7 @@ index 091cb7d8..2e8045d4 100644
  	{ PLAYSTATION_2, "83494" },
  	{ PLAYSTATION_VITA, "91844" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index e9db321e..1d1f2711 100644
+index d991e2aa..29f1acae 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
 @@ -36,156 +36,235 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
