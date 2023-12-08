@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Dec 08, 2023
-WINE_LUTRIS_WOW64_32_VERSION = wine-8.22
+WINE_LUTRIS_WOW64_32_VERSION = wine-9.0-rc1
 WINE_LUTRIS_WOW64_32_STAGING_VERSION = $(WINE_LUTRIS_WOW64_32_VERSION)
 WINE_LUTRIS_WOW64_32_SOURCE = wine-$(WINE_LUTRIS_WOW64_32_VERSION).tar.gz
 WINE_LUTRIS_WOW64_32_SITE = $(call github,wine-mirror,wine,$(WINE_LUTRIS_WOW64_32_VERSION))
