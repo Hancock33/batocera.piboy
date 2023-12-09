@@ -35,6 +35,7 @@ define VPINBALL_CMAKE_HACKS
 	## derived from standalone/linux/external.sh ##
 	# copy linux x64
 	cp $(@D)/standalone/cmake/$(SOURCE) $(@D)/CMakeLists.txt
+	sed -i -e s+" 3.26"+" 3.22"+ $(@D)/CMakeLists.txt
 	$(SED) 's:$${CMAKE_SOURCE_DIR}/standalone/$(SOURCE_DIR)/external/include:$(STAGING_DIR)/usr/include/:g' $(@D)/CMakeLists.txt
 	$(SED) 's:$${CMAKE_SOURCE_DIR}/standalone/$(SOURCE_DIR)/external/lib/:$(STAGING_DIR)/usr/lib/:g' $(@D)/CMakeLists.txt
 	# bass24 - this is ugly...
@@ -54,7 +55,7 @@ define VPINBALL_INSTALL_TARGET_CMDS
 		$(TARGET_DIR)/usr/bin/vpinball
 	# copy folders
 	cp -R $(@D)/buildroot-build/flexdmd		$(TARGET_DIR)/usr/bin/vpinball/
-	cp -R $(@D)/buildroot-build/assets			$(TARGET_DIR)/usr/bin/vpinball/
+	cp -R $(@D)/buildroot-build/assets		$(TARGET_DIR)/usr/bin/vpinball/
 	cp -R $(@D)/buildroot-build/scripts		$(TARGET_DIR)/usr/bin/vpinball/
 	cp -R $(@D)/buildroot-build/shader		$(TARGET_DIR)/usr/bin/vpinball/
 endef

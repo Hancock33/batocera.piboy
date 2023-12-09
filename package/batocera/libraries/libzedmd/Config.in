@@ -4,4 +4,3 @@ config BR2_PACKAGE_LIBZEDMD
       ZeDMD communication library.
 
       https://github.com/PPUC/libzedmd
-
