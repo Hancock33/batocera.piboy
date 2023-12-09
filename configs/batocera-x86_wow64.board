@@ -22,10 +22,11 @@ BR2_ZCAT="pigz -d -c"
 # required for utf-8
 BR2_TOOLCHAIN_GLIBC_GCONV_LIBS_COPY=y
 
-# Kernel 6.7
-BR2_KERNEL_HEADERS_CUSTOM_TARBALL=y
-BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$BR2_DL_DIR/linux/linux-6.7-rc4.tar.gz"
+# Kernel 6.7-rc5 pre
 BR2_LINUX_KERNEL=n
+BR2_KERNEL_HEADERS_CUSTOM_TARBALL=y
+BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/snapshot/linux-f2e8a57ee9036c7d5443382b6c3c09b51a92ec7e.tar.gz"
+#BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$BR2_DL_DIR/linux/linux-6.7-rc4.tar.gz"
 
 # BR2_TARGET_ROOTFS_TAR is not set
 BR2_ROOTFS_POST_BUILD_SCRIPT="$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/32bit/lib32bit-packager/x86_wow-packager.sh"
