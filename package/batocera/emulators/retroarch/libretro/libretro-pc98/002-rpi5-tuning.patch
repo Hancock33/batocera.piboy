@@ -1,8 +1,8 @@
-diff --git a/sdl2/Makefile.libretro b/sdl2/Makefile.libretro
-index 9f7ef79..8cd2871 100644
---- a/sdl2/Makefile.libretro
-+++ b/sdl2/Makefile.libretro
-@@ -90,6 +90,9 @@ else ifneq (,$(findstring rpi,$(platform)))
+diff --git a/sdl/Makefile.libretro b/sdl/Makefile.libretro
+index e149219..75a829e 100755
+--- a/sdl/Makefile.libretro
++++ b/sdl/Makefile.libretro
+@@ -107,6 +107,9 @@ else ifneq (,$(findstring rpi,$(platform)))
  	# Pi4
  	else ifneq (,$(findstring rpi4,$(platform)))
  		CFLAGS += -mcpu=cortex-a72 -fdata-sections -ffunction-sections -Wl,--gc-sections -fmerge-all-constants
