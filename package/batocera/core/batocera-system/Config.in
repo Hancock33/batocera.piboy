@@ -241,6 +241,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_AVAHI                                # service discovery on local network
     select BR2_PACKAGE_AVAHI_DAEMON                         # ping batocera.local
     select BR2_PACKAGE_AVAHI_LIBDNSSD_COMPATIBILITY         # bonjour
+    select BR2_PACKAGE_WSDD                                 # service discovery on local network (windows network neighborhood)
     select BR2_PACKAGE_NTP
     select BR2_PACKAGE_RSYNC
     select BR2_PACKAGE_SAMBA4                               # samba
@@ -784,7 +785,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
     select BR2_PACKAGE_MELONDS                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
 
     # 3DS
-    select BR2_PACKAGE_CITRA                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
+    select BR2_PACKAGE_CITRA                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     #select BR2_PACKAGE_LIBRETRO_CITRA                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY #disabled, build errors. not well maintained.
 
     # PSP
