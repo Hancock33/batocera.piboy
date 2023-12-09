@@ -27,6 +27,7 @@
 - spinner support:
  - Atari Classic joystick: the rudder is seen as a spinner
 - Ayn Loki Zero: support for on-board LEDs (and light effect on retroachievements unlocked)
+- Sonic Mania port.
 ### Fixed
 - Dolphin bug that prevented full range of analog trigger axis being used.
 - Flycast per pixel sorting option if renderer not explicitly set
@@ -52,7 +53,7 @@
 - Fheroes2 to 1.0.9
 - BigPEmu to 1.092
 - Cemu to 2.0-55
-- Citra to nightly-2009
+- Citra to nightly-2050
 - Dolphin to 5.0-20212
 - Flycast to v2.2
 - Libretro-Flycast to v2.2

@@ -1,0 +1,13 @@
+diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
+index fce8c56d..5833f67f 100644
+--- a/es-app/src/guis/GuiMenu.cpp
++++ b/es-app/src/guis/GuiMenu.cpp
+@@ -552,7 +552,7 @@ void GuiMenu::openDeveloperSettings()
+ 		// support
+ 		s->addEntry(_("CREATE A SUPPORT FILE"), true, [window] 
+ 		{
+-			window->pushGui(new GuiMsgBox(window, _("CREATE A SUPPORT FILE? THIS INCLUDES ALL DATA IN YOUR SYSTEM FOLDER."), _("YES"),
++			window->pushGui(new GuiMsgBox(window, _("CREATE A SUPPORT FILE? THIS INCLUDES ALL DATA IN YOUR SAVES FOLDER."), _("YES"),
+ 				[window] 
+ 				{
+ 					if (ApiSystem::getInstance()->generateSupportFile())

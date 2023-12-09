@@ -73,6 +73,8 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 			fi \
 		fi ; \
 	done
+
+	tar -xf $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/alllinuxfirmwares/steamdeck-oled-firmware.tar.xz -C $(TARGET_DIR)/lib/firmware
 endef
 
 # symlink BT firmware for RK3588 kernel
