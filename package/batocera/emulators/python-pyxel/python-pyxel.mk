@@ -3,8 +3,8 @@
 # python-pyxel
 #
 ################################################################################
-# Version: Commits on Dec 08, 2023
-PYTHON_PYXEL_VERSION = 28c715de0b8780d2559398951715a7a43c1e6683
+# Version: Commits on Jul 08, 2023
+PYTHON_PYXEL_VERSION = v1.9.18
 PYTHON_PYXEL_SITE =  $(call github,kitao,pyxel,$(PYTHON_PYXEL_VERSION))
 PYTHON_PYXEL_SETUP_TYPE = setuptools
 PYTHON_PYXEL_LICENSE = MIT
