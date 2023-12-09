@@ -316,7 +316,7 @@ libretro:
   cfeatures:
     gfxbackend:
       group: DRIVERS
-      archs_include: [x86, x86_64, bcm2711, rk3326]
+      archs_include: [x86, x86_64, bcm2711, bcm2712, rk3326]
       prompt:      GRAPHICS API
       description: Choose which graphics API library to use. Vulkan may not work for every core.
       choices:
@@ -7052,6 +7052,7 @@ citra:
                 "9x (3600x2160)":  9
                 "10x (4000x2400)": 10
         citra_graphics_api:
+            archs_include: [x86, x86_64]
             submenu: GRAPHICS
             prompt: GRAPHICS API
             description: Choose which graphics API library to use.
@@ -7108,7 +7109,7 @@ daphne:
   cfeatures:
         gfxbackend:
             group: DRIVERS
-            archs_include: [x86, x86_64, bcm2711, rk3326]
+            archs_include: [x86, x86_64, bcm2711, bcm2712, rk3326]
             prompt:      GRAPHICS API
             description: Choose which graphics API library to use. Vulkan may not work on all hardware.
             choices:
@@ -7206,7 +7207,7 @@ dolphin:
                 "Force 4:3":         2
                 "Stretch to window": 3
         gfxbackend:
-            archs_include: [x86, x86_64, bcm2711, rk3326]
+            archs_include: [x86, x86_64, bcm2711, bcm2712, rk3326]
             submenu: RENDERING
             prompt:  GRAPHICS API
             description: Choose which graphics API library to use.
@@ -7793,7 +7794,7 @@ duckstation:
         duckstation_gfxbackend:
             submenu: DISPLAY
             group: ADVANCED OPTIONS
-            archs_include: [x86, x86_64, bcm2711, rk3326]
+            archs_include: [x86, x86_64, bcm2711, bcm2712, rk3326]
             prompt: GRAPHICS API
             description: Choose which graphics API library to use.
             choices:
@@ -9703,7 +9704,7 @@ mame:
                 "Off (Default)": 0
                 "On":            1
         bgfxbackend:
-            archs_include: [x86, x86_64, bcm2711, rk3326]
+            archs_include: [x86, x86_64, bcm2711, bcm2712, rk3326]
             prompt:      BGFX GRAPHICS API
             description: Depends on video mode being set to BGFX.
             choices:

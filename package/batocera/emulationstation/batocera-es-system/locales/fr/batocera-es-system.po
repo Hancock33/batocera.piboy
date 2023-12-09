@@ -14238,6 +14238,11 @@ msgctxt "keys_files"
 msgid "Fast Forward"
 msgstr "Avance rapide"
 
+#. TRANSLATION: psp.ppsspp.keys
+msgctxt "keys_files"
+msgid "Pause / Menu"
+msgstr ""
+
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
 msgid "quicksave"
@@ -14338,7 +14343,7 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
-#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, fallout1-ce.keys, dxx-rebirth.keys
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, sonic-mania.keys, fallout1-ce.keys, ...
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr "Sortir du jeu"
@@ -15163,14 +15168,6 @@ msgstr "Sauvegarde rapide"
 #~ msgstr "OpenGLES (par défaut)"
 
 #~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Redémarrer le jeu"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Disque suivant (m3u)"
-
-#~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Ouvrir le menu de Dolphin-triforce"
 
@@ -15277,6 +15274,14 @@ msgstr "Sauvegarde rapide"
 #~ msgctxt "keys_files"
 #~ msgid "FastForward"
 #~ msgstr "Avance rapide"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Redémarrer le jeu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Disque suivant (m3u)"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the sensitivity of the joystick analog sticks."

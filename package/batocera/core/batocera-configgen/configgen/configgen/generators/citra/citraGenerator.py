@@ -15,8 +15,11 @@ class CitraGenerator(Generator):
     def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         CitraGenerator.writeCITRAConfig(batoceraFiles.CONF + "/citra-emu/qt-config.ini", system, playersControllers)
 
-        commandArray = ['/usr/bin/citra-qt', rom]
-        return Command.Command(array=commandArray, env={
+        if os.path.exists('/usr/bin/citra-qt'):
+            commandArray = ['/usr/bin/citra-qt', rom]
+        else:
+            commandArray = ['/usr/bin/citra', rom]
+        return Command.Command(array=commandArray, env={ 
             "XDG_CONFIG_HOME":batoceraFiles.CONF,
             "XDG_DATA_HOME":batoceraFiles.SAVES + "/3ds",
             "XDG_CACHE_HOME":batoceraFiles.CACHE,
@@ -141,6 +144,8 @@ class CitraGenerator(Generator):
             citraConfig.set("Renderer", "graphics_api", system.config["citra_graphics_api"])
         else:
             citraConfig.set("Renderer", "graphics_api", "1")
+        # first renderer device
+        citraConfig.set("Renderer", "physical_device", "0")
         # Use VSYNC
         if system.isOptSet('citra_use_vsync_new') and system.config["citra_use_vsync_new"] == '0':
             citraConfig.set("Renderer", "use_vsync_new", "false")
