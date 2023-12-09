@@ -8,9 +8,10 @@ SONICMANIA_VERSION = c417ccad32945075a283f74429a3a09cd501734d
 SONICMANIA_SITE = https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation.git
 SONICMANIA_SITE_METHOD = git
 SONICMANIA_GIT_SUBMODULES = YES
+SONICMANIA_LICENSE = Proprietary
+SONICMANIA_LICENSE_FILE = LICENSE.md
 
-SONICMANIA_DEPENDENCIES = sdl2 libogg libvorbis
-SONICMANIA_LICENSE = Custom
+SONICMANIA_DEPENDENCIES =  libglew libglfw libogg libtheora portaudio
 
 define SONICMANIA_BUILD_CMDS
 	$(SED) "s|-O3|$(TARGET_OPTIMIZATION) |g" $(@D)/dependencies/RSDKv5/Makefile
