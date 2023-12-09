@@ -3,8 +3,8 @@
 # hode
 #
 ################################################################################
-# Version: Commits on Mar 27, 2022
-HODE_VERSION = ee94cba13a9484be41dbb0c180a3759869e9b67c
+# Version: Commits on Dec 08, 2023
+HODE_VERSION = 59f3c466923c6b8d49e29176ff697a91165e7efc
 HODE_SITE = $(call github,usineur,hode,$(HODE_VERSION))
 
 HODE_DEPENDENCIES = sdl2 sdl2_mixer
