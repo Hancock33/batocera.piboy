@@ -13996,6 +13996,11 @@ msgstr "Puxar o êmbolo"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
+msgid "Lockbar Fire Button"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
 msgid "Buy extraball for a credit"
 msgstr ""
 
