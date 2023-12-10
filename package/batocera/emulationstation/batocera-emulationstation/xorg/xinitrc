@@ -20,16 +20,27 @@ ulimit -c unlimited
 ## Prime
 # nvidia
 if [ -f "/var/tmp/nvidia.prime" ]; then
-    echo "Setting Nvidia Prime environment variables" >> "$nvidia_log"
-    export __NV_PRIME_RENDER_OFFLOAD=1
-    export __VK_LAYER_NV_optimus=NVIDIA_only
-    export __GLX_VENDOR_LIBRARY_NAME=nvidia
+	echo "Setting Nvidia Prime environment variables" >> "$nvidia_log"
+	export __NV_PRIME_RENDER_OFFLOAD=1
+	export __VK_LAYER_NV_optimus=NVIDIA_only
+	export __GLX_VENDOR_LIBRARY_NAME=nvidia
 fi
 
 # amd
 if [ -f "/var/tmp/amd.prime" ]; then
-    echo "Setting AMD Prime environment variable" >> "$amd_log"
-    export DRI_PRIME=1
+	echo "Setting AMD Prime environment variable" >> "$amd_log"
+	export DRI_PRIME=1
+fi
+
+# steamdeck
+if [ -f /sys/devices/virtual/dmi/id/board_name ]; then
+	board=`cat /sys/devices/virtual/dmi/id/board_name`
+	if [ "$board" = "Galileo" ]; then
+		export LIBVA_DRIVER_NAME=radeonsi
+	fi
+	if [ "$board" = "Jupiter" ]; then
+		export LIBVA_DRIVER_NAME=radeonsi
+	fi
 fi
 
 xrdb -merge /etc/openbox/Xresources
