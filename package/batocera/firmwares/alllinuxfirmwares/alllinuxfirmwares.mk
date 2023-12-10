@@ -3,8 +3,8 @@
 # alllinuxfirmwares
 #
 ################################################################################
-# Version: Commits 28th November 2023 - AX101 testing
-ALLLINUXFIRMWARES_VERSION = aae60524be2d3585dbd2169cee66c4e91e842e03
+# Version: Commits 9th December 2023
+ALLLINUXFIRMWARES_VERSION = c004dbee5bec4d3abf64fced863a223827388c9e 
 ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.gz
 ALLLINUXFIRMWARES_SITE = https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot
 
@@ -76,17 +76,5 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 
 	tar -xf $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/alllinuxfirmwares/steamdeck-oled-firmware.tar.xz -C $(TARGET_DIR)/lib/firmware
 endef
-
-# symlink BT firmware for RK3588 kernel
-define ALLLINUXFIRMWARES_LINK_RTL_BT
-    ln -sf /lib/firmware/rtl_bt/rtl8852bu_fw.bin \
-        $(TARGET_DIR)/lib/firmware/rtl8852bu_fw
-    ln -sf /lib/firmware/rtl_bt/rtl8852bu_config.bin \
-        $(TARGET_DIR)/lib/firmware/rtl8852bu_config
-endef
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588),y)
-    ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS = ALLLINUXFIRMWARES_LINK_RTL_BT
-endif
 
 $(eval $(generic-package))

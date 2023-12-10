@@ -14002,6 +14002,11 @@ msgstr "Trek aan plunger"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
+msgid "Lockbar Fire Button"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
 msgid "Buy extraball for a credit"
 msgstr "Koop een extra bal voor één credit"
 
@@ -14340,7 +14345,7 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
-#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, sonic-mania.keys, fallout1-ce.keys, ...
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, fallout1-ce.keys, dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr "Stop spel"
