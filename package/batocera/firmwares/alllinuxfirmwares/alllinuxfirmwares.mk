@@ -77,34 +77,4 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 	tar -xf $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/alllinuxfirmwares/steamdeck-oled-firmware.tar.xz -C $(TARGET_DIR)/lib/firmware
 endef
 
-define ALLLINUXFIRMWARES_LINK_QCA_WIFI_BT
-    # wifi
-    mkdir -p $(TARGET_DIR)/lib/firmware/ath11k/WCN6855/hw2.1
-    mkdir -p $(TARGET_DIR)/lib/firmware/ath11k/QCA2066
-    cp -rf $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/alllinuxfirmwares/hw2.1/* \
-	    $(TARGET_DIR)/lib/firmware/ath11k/WCN6855/hw2.1
-    cp -rf $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/alllinuxfirmwares/QCA206X/* \
-	    $(TARGET_DIR)/lib/firmware/ath11k/QCA2066
-    # bluetooth
-    cp -rf $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/alllinuxfirmwares/qca/* \
-	    $(TARGET_DIR)/lib/firmware/qca
-endef
-
-# Copy Qualcomm firmware for Steam Deck OLED
-ifeq ($(BR2_x86_64),y)
-    ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS = ALLLINUXFIRMWARES_LINK_QCA_WIFI_BT
-endif
-
-# symlink BT firmware for RK3588 kernel
-define ALLLINUXFIRMWARES_LINK_RTL_BT
-    ln -sf /lib/firmware/rtl_bt/rtl8852bu_fw.bin \
-        $(TARGET_DIR)/lib/firmware/rtl8852bu_fw
-    ln -sf /lib/firmware/rtl_bt/rtl8852bu_config.bin \
-        $(TARGET_DIR)/lib/firmware/rtl8852bu_config
-endef
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588),y)
-    ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS = ALLLINUXFIRMWARES_LINK_RTL_BT
-endif
-
 $(eval $(generic-package))
