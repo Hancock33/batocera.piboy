@@ -21,7 +21,7 @@
 	{
             "trigger": ["hotkey", "b"],
             "type": "key",
-            "target": [ "KEY_ESC" ],
+            "target": [ "KEY_F7" ],
 	    "description": "Open DuckStation Quick Menu"
 	}
     ]
