@@ -68,8 +68,8 @@ define BATOCERA_AUDIO_INSTALL_TARGET_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/50-alsa-config.lua \
 		$(TARGET_DIR)/usr/share/wireplumber/main.lua.d/50-alsa-config.lua
 
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/pipewire.conf \
-		$(TARGET_DIR)/usr/share/pipewire/pipewire.conf
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/pipewire.conf       $(TARGET_DIR)/usr/share/pipewire/pipewire.conf
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/pipewire.confsdoled $(TARGET_DIR)/usr/share/pipewire/pipewire.confsdoled
 endef
 
 define BATOCERA_AUDIO_X86_INTEL_DSP
