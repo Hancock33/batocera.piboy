@@ -78,7 +78,8 @@ for FILE in music bios extractions kodi library saves screenshots splash \
             system/pacman/hooks/batocera-uninstall.hook \
             system/pacman/pacman.conf \
             bios/mame2003 \
-            roms/ports/rtcw
+            roms/ports/rtcw \
+            bios/dolphin-emu
 do
     # not wanted for kodi
     test -e "${IN}/${FILE}" && test ! -e "${OUT}/${FILE}" && mkdir -p $(dirname "${OUT}/${FILE}") && cp -r "${IN}/${FILE}" "${OUT}/${FILE}"

@@ -55,7 +55,7 @@
 - BigPEmu to 1.092
 - Cemu to 2.0-55
 - Citra to nightly-2050
-- Dolphin to 5.0-20212
+- Dolphin to 5.0-20619
 - Flycast to v2.2
 - Libretro-Flycast to v2.2
 - MelonDS to Oct 12, 2023
@@ -120,6 +120,8 @@
 - Libretro-Snes9x to Oct 13, 2023 build
 - Libretro-Stella to Oct 26, 2023 build
 - Libretro-MAME to 0.260
+- Sonic CD to Dec 2, 2023 build
+- Sonic 2013 to Dec 2, 2023 build
 ### System
 - Linux kernel to 6.6.5
 - Mesa to 23.3
