@@ -59,11 +59,6 @@ gamate:
 gamecom:
   emulator: mame
   core:     mame
-gamecube:
-  options:
-    ubershaders: asynchronous_ubershader
-    # causes issues on nvidia+dolphin
-    bezel: none
 gamepock:
   emulator: mame
   core:     mame
@@ -147,11 +142,6 @@ vgmplay:
 vsmile:
   emulator: mame
   core:     mame
-wii:
-  options:
-    ubershaders: asynchronous_ubershader
-    # causes issues on nvidia+dolphin
-    bezel: none
 xegs:
   emulator: mame
   core:     mame

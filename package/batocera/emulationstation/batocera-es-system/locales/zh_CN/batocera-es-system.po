@@ -6753,7 +6753,7 @@ msgctxt "game_options"
 msgid "160fps"
 msgstr "160帧"
 
-#. TRANSLATION: libretro/tyrquake, cemu, dolphin, dolphin_triforce, supermodel
+#. TRANSLATION: libretro/tyrquake, cemu, dolphin/uzem, dolphin_triforce, supermodel
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "震动反馈"
@@ -8167,6 +8167,11 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "MOUSE AS WII REMOTE POINTER"
+msgstr ""
+
+#. TRANSLATION: dolphin/uzem
+msgctxt "game_options"
+msgid "Enable controller rumble capabilities if supported by the controller."
 msgstr ""
 
 #. TRANSLATION: dolphin, dolphin_triforce
