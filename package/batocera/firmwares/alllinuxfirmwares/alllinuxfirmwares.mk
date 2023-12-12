@@ -3,8 +3,8 @@
 # alllinuxfirmwares
 #
 ################################################################################
-# Version: Commits 9th December 2023
-ALLLINUXFIRMWARES_VERSION = c004dbee5bec4d3abf64fced863a223827388c9e 
+# Version: Commits 11th December 2023
+ALLLINUXFIRMWARES_VERSION = 20231211
 ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.gz
 ALLLINUXFIRMWARES_SITE = https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot
 
@@ -73,8 +73,15 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 			fi \
 		fi ; \
 	done
+endef
 
+define BATOCERA_STEAM_DECK_OLED_FW
+	mkdir -p $(TARGET_DIR)/lib/firmware
 	tar -xf $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/alllinuxfirmwares/steamdeck-oled-firmware.tar.xz -C $(TARGET_DIR)/lib/firmware
 endef
+
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
+	ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += BATOCERA_STEAM_DECK_OLED_FW
+endif
 
 $(eval $(generic-package))
