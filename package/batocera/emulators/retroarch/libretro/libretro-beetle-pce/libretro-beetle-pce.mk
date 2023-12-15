@@ -3,8 +3,8 @@
 # libretro-beetle-pce
 #
 ################################################################################
-# Version: Commits on Dec 08, 2023
-LIBRETRO_BEETLE_PCE_VERSION = 65977d85040622d15e96b6aa6581e30e6c6829e8
+# Version: Commits on Dec 15, 2023
+LIBRETRO_BEETLE_PCE_VERSION = ae3159b15e303cb7156ca1274353fdf665b31a6d
 LIBRETRO_BEETLE_PCE_SITE = $(call github,libretro,beetle-pce-libretro,$(LIBRETRO_BEETLE_PCE_VERSION))
 LIBRETRO_BEETLE_PCE_LICENSE = GPLv2
 

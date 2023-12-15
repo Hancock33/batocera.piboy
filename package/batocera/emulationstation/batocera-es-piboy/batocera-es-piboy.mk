@@ -3,8 +3,8 @@
 # batocera-es-piboy
 #
 ################################################################################
-# Version: Commits on Dec 10, 2023
-BATOCERA_ES_PIBOY_VERSION = e28fde70299d26bd3583b39831cde4a1bf64c912
+# Version: Commits on Dec 15, 2023
+BATOCERA_ES_PIBOY_VERSION = 8a59c29821f3f4889930d74227cff6b375d36d5d
 BATOCERA_ES_PIBOY_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_ES_PIBOY_SITE_METHOD = git
 BATOCERA_ES_PIBOY_LICENSE = MIT
