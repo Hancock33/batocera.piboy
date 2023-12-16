@@ -29,7 +29,7 @@ index 8bb253bb..1866bc93 100644
  if(DISABLE_KODI)
    MESSAGE("Kodi disabled")
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 7d15a156..fce8c56d 100644
+index 8ed750c3..55b49edf 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -73,8 +73,15 @@
@@ -108,10 +108,19 @@ index 7d15a156..fce8c56d 100644
  
  	mWindow->pushGui(updateGui);
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
-index 0fc9cef7..4aaebfe7 100644
+index 0fc9cef7..6838af94 100644
 --- a/es-core/src/utils/Platform.cpp
 +++ b/es-core/src/utils/Platform.cpp
-@@ -170,6 +170,8 @@ namespace Utils
+@@ -21,6 +21,8 @@
+ #include "Log.h"
+ #include "Scripting.h"
+ #include "Paths.h"
++#include <fstream>
++#include <iostream>
+ 
+ // #define DEVTEST
+ 
+@@ -170,6 +172,8 @@ namespace Utils
  		{
  #ifdef WIN32 // windows
  			return system("shutdown -s -t 0");
@@ -120,7 +129,7 @@ index 0fc9cef7..4aaebfe7 100644
  #else // osx / linux	
  			return system("shutdown -h now");
  #endif
-@@ -179,6 +181,8 @@ namespace Utils
+@@ -179,6 +183,8 @@ namespace Utils
  		{
  #ifdef WIN32 // windows	
  			return system("shutdown -r -t 0");
@@ -129,7 +138,7 @@ index 0fc9cef7..4aaebfe7 100644
  #else // osx / linux	
  			return system("shutdown -r now");
  #endif
-@@ -399,9 +403,20 @@ namespace Utils
+@@ -399,9 +405,20 @@ namespace Utils
  				std::string fuelgaugeRootPath;
  				std::string chargerRootPath;
  
@@ -151,7 +160,7 @@ index 0fc9cef7..4aaebfe7 100644
  					if ((Utils::String::toLower(file).find("/bat") != std::string::npos) && (batteryRootPath.empty()))
  						batteryRootPath = file;
  
-@@ -410,7 +425,8 @@ namespace Utils
+@@ -410,7 +427,8 @@ namespace Utils
  
  					if ((Utils::String::toLower(file).find("charger") != std::string::npos) && (chargerRootPath.empty()))
  						chargerRootPath = file;
@@ -161,7 +170,7 @@ index 0fc9cef7..4aaebfe7 100644
  
  				// If there's no battery device, look for discrete charger and fuel gauge
  				if (batteryRootPath.empty())
-@@ -434,8 +450,13 @@ namespace Utils
+@@ -434,8 +452,13 @@ namespace Utils
  				}
  				else
  				{
@@ -177,12 +186,32 @@ index 0fc9cef7..4aaebfe7 100644
  				}
  			}
  
-@@ -448,9 +469,13 @@ namespace Utils
+@@ -448,9 +471,33 @@ namespace Utils
  			else
  			{
  				ret.hasBattery = true;
 +    		#if PIBOY
-+        	 	ret.isCharging = (stoi(Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "-", "")) < 950);
++        	 	std::string battlvl;
++        	 	std::string battsts;
++        	 	std::ifstream rfile;
++
++        	 	// Battery Charging
++        	 	rfile.open(batteryStatusPath);
++					if (std::getline(rfile, battsts)) LOG(LogDebug) << "Batt Charging: " + battsts;
++					int output = Utils::String::toInteger(battsts);
++	       	 	rfile.close();
++
++        	 	if (output < 0)
++				    ret.isCharging = false;
++				else
++				    ret.isCharging = true;
++
++        	 	// Battery Level
++        	 	rfile.open(batteryCapacityPath);
++					if (std::getline(rfile, battlvl)) LOG(LogDebug) << "Batt Lvl: " + battlvl;
++					int intBattLvl = Utils::String::toInteger(battlvl);
++        	 	rfile.close();
++        	 	ret.level = intBattLvl;
 +    		#else
  				std::string chargerStatus;
  				chargerStatus = Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "");
@@ -191,3 +220,14 @@ index 0fc9cef7..4aaebfe7 100644
  				// If reading from fuel gauge, we have to calculate remaining charge
  				if (batteryCapacityPath.length() <= 1)
  				{
+@@ -458,8 +505,8 @@ namespace Utils
+ 					float full = std::stof(Utils::FileSystem::readAllText(batteryMaxChargePath).c_str());
+ 					ret.level = int(round((now / full) * 100));
+ 				}
+-				else
+-					ret.level = Utils::String::toInteger(Utils::FileSystem::readAllText(batteryCapacityPath).c_str());
++				//else
++				//	ret.level = Utils::String::toInteger(Utils::FileSystem::readAllText(batteryCapacityPath).c_str());
+ 			}
+ 
+ 			return ret;
