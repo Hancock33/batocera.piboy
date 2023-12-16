@@ -6834,7 +6834,7 @@ msgctxt "game_options"
 msgid "160fps"
 msgstr "160fps"
 
-#. TRANSLATION: libretro/tyrquake, cemu, dolphin/uzem, dolphin_triforce, supermodel
+#. TRANSLATION: libretro/tyrquake, cemu, dolphin/vitaquake3, dolphin/vitaquake3, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "VIBRAÇÃO"
@@ -8273,10 +8273,10 @@ msgctxt "game_options"
 msgid "MOUSE AS WII REMOTE POINTER"
 msgstr ""
 
-#. TRANSLATION: dolphin/uzem
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Enable controller rumble capabilities if supported by the controller."
-msgstr ""
+msgstr "Ligar os recursos de vibração do comando, se suportados pelo comando."
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -10781,13 +10781,18 @@ msgstr "MULTITHREADED RSX"
 msgctxt "game_options"
 msgid ""
 "Stream texture to GPU in parallel. Can improve performance on more powerful "
-"GPU's."
+"GPU's that have spare headroom."
 msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ASYNCHRONOUS TEXTURE STREAMING"
 msgstr "FLUXO DE TEXTURA ASSÍNCRONO"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "On (Vulkan Only)"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -13991,7 +13996,7 @@ msgstr "Puxe o plunger"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Lockbar Fire Button"
-msgstr ""
+msgstr "Botão de disparo da Lockbar"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -14231,7 +14236,7 @@ msgstr "Avanço Rápido"
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Pause / Menu"
-msgstr ""
+msgstr "Pausa / Menu"
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
@@ -15058,14 +15063,6 @@ msgstr "Guardar Rápido"
 #~ "gráficos e intermitência."
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Stream texture to GPU in parrallel. Can improve performance on more "
-#~ "powerful GPU's."
-#~ msgstr ""
-#~ "Transmitir a textura para a GPU em paralelo. Pode melhorar o desempenho "
-#~ "em GPUs mais poderosos."
-
-#~ msgctxt "game_options"
 #~ msgid "Legacy Evdev"
 #~ msgstr "Legacy Evdev"
 
@@ -15156,6 +15153,14 @@ msgstr "Guardar Rápido"
 #~ msgid "OpenGLES (Default)"
 #~ msgstr "OpenGLES (Predefinição)"
 
+#~ msgctxt "game_options"
+#~ msgid "Enable triple buffering."
+#~ msgstr "Ativar o buffer triplo."
+
+#~ msgctxt "game_options"
+#~ msgid "TRIPLE BUFFERING"
+#~ msgstr "BUFFER TRIPLO"
+
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Abrir o menu do Dolphin-triforce"
@@ -15167,6 +15172,14 @@ msgstr "Guardar Rápido"
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Guardar Estado no Slot 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Reiniciar o Jogo"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Próximo Disco (m3u)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
@@ -15264,10 +15277,10 @@ msgstr "Guardar Rápido"
 #~ msgid "FastForward"
 #~ msgstr "Avanço Rápido"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Reiniciar o Jogo"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Próximo Disco (m3u)"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's."
+#~ msgstr ""
+#~ "Transmitir a textura para a GPU em paralelo. Pode melhorar o desempenho "
+#~ "em GPUs mais poderosos."

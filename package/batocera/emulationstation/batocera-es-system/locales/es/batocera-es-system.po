@@ -218,7 +218,7 @@ msgstr "NO"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "SYSTEM CONTROLLERS"
-msgstr "MANDOS DEL SISTEMA"
+msgstr "BOTONES DEL SISTEMA"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -299,7 +299,7 @@ msgid ""
 "Enables run-ahead. Doubles CPU requirements. High numbers can result in "
 "visible jitter."
 msgstr ""
-"Habilitar frames anticipados. Duplica los requisitos de CPU. Los números "
+"Habilitar anticipación de frames. Duplica los requisitos de CPU. Los valores "
 "elevados pueden provocar temblores visibles."
 
 #. TRANSLATION: shared, shared, shared, shared, shared, ...
@@ -310,18 +310,19 @@ msgstr "REDUCCIÓN DE LATENCIA"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "RUN-AHEAD FRAMES"
-msgstr "FRAMES ANTICIPADOS"
+msgstr "ANTICIPACIÓN DE FRAMES (RUN-AHEAD)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Can prevent audio skips on button presses when using run-ahead."
 msgstr ""
-"Puede evitar saltos de audio al presionar botones cuando se usa run-ahead."
+"Puede evitar saltos de audio al presionar botones cuando se usa la "
+"anticipación de frames."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "USE SECOND INSTANCE FOR RUN-AHEAD"
-msgstr "USAR SEGUNDA INSTANCIA PARA RUN-AHEAD"
+msgstr "USAR SEGUNDA INSTANCIA PARA LA ANTICIPACIÓN DE FRAMES"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -438,7 +439,7 @@ msgstr "NIVEL DE VIBRACIÓN"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Set game audio level gain in dB."
-msgstr "Estableece la ganancia del nivel de audio del juego en dB."
+msgstr "Establece la ganancia del nivel de audio del juego en dB."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -585,12 +586,12 @@ msgstr "RESOLUCIÓN INTERNA"
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
 msgid "Enable the BASIC interpreter. Some games need this."
-msgstr ""
+msgstr "Activa el intérprete de BASIC. Necesario para algunos juegos."
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
 msgid "INTERNAL BASIC INTERPRETER"
-msgstr ""
+msgstr "INTÉRPRETE INTERNO DE BASIC"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -2238,7 +2239,7 @@ msgstr ""
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, libretro/fceumm, libretro/nestopia, libretro/o2em, ...
 msgctxt "game_options"
 msgid "CROP OVERSCAN"
-msgstr "CROP OVERSCAN"
+msgstr "RECORTAR OVERSCAN"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
@@ -3974,7 +3975,7 @@ msgstr "Discos Olivetti Prodest PC 128S (BBC Master Compact)"
 #. TRANSLATION: libretro/mame
 msgctxt "game_options"
 msgid "BBC Micro/Master Cassette"
-msgstr "Casete BBC Micro/Master "
+msgstr "Casete BBC Micro/Master"
 
 #. TRANSLATION: libretro/mame
 msgctxt "game_options"
@@ -5350,7 +5351,7 @@ msgstr "INTERCAMBIAR MANDOS"
 #. TRANSLATION: libretro/o2em, libretro/picodrive
 msgctxt "game_options"
 msgid "Zooms in to hide black borders."
-msgstr "Acerca el zoom para ocultar los bordes negros."
+msgstr "Acercar para ocultar los bordes negros."
 
 #. TRANSLATION: libretro/o2em
 msgctxt "game_options"
@@ -6842,7 +6843,7 @@ msgctxt "game_options"
 msgid "160fps"
 msgstr "160fps"
 
-#. TRANSLATION: libretro/tyrquake, cemu, dolphin/uzem, dolphin_triforce, supermodel
+#. TRANSLATION: libretro/tyrquake, cemu, dolphin/vitaquake3, dolphin/vitaquake3, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "VIBRACIÓN"
@@ -8280,10 +8281,10 @@ msgctxt "game_options"
 msgid "MOUSE AS WII REMOTE POINTER"
 msgstr ""
 
-#. TRANSLATION: dolphin/uzem
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Enable controller rumble capabilities if supported by the controller."
-msgstr ""
+msgstr "Activar las capacidades de vibración del mando si el mando lo soporta."
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -8775,7 +8776,7 @@ msgstr "xBR (Muy lento, Sin combinar bordes)"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "24-bit, disables dithering."
-msgstr "24-bit, desactiva el dithering"
+msgstr "24-bit, desactiva el dithering."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -9726,6 +9727,8 @@ msgid ""
 "Apply a multiplier to the joystick's input to lower or increase "
 "responsiveness."
 msgstr ""
+"Ajusta la entrada del joystick con un multiplicador para disminuir o "
+"aumentar la sensibilidad."
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
@@ -9735,52 +9738,52 @@ msgstr "SENSIBILIDAD"
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "0.5x"
-msgstr ""
+msgstr "x0.5"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "0.6x"
-msgstr ""
+msgstr "x0.6"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "0.7x"
-msgstr ""
+msgstr "x0.7"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "0.8x"
-msgstr ""
+msgstr "x0.8"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "0.9x"
-msgstr ""
+msgstr "x0.9"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "1.1x"
-msgstr ""
+msgstr "x1.1"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "1.2x"
-msgstr ""
+msgstr "x1.2"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "1.3x"
-msgstr ""
+msgstr "x1.3"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "1.4x"
-msgstr ""
+msgstr "x1.4"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "1.5x"
-msgstr ""
+msgstr "x1.5"
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
@@ -9788,11 +9791,13 @@ msgid ""
 "The area around the joystick's neutral position where input is ignored. Can "
 "help reduce unintended inputs."
 msgstr ""
+"Área alrededor de la posición neutral del joystick sin respuesta. Puede "
+"ayudar a reducir movimientos no deseados."
 
 #. TRANSLATION: mupen64plus, mupen64plus, mupen64plus, mupen64plus
 msgctxt "game_options"
 msgid "1% (Default)"
-msgstr ""
+msgstr "1% (Defecto)"
 
 #. TRANSLATION: openbor
 msgctxt "game_options"
@@ -10528,7 +10533,7 @@ msgstr "TAMAÑO DE BLOQUE SPU"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Safe (Default)"
-msgstr "Seguro (Defecto) "
+msgstr "Seguro (Defecto)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10795,13 +10800,18 @@ msgstr "MULTIHILO RSX"
 msgctxt "game_options"
 msgid ""
 "Stream texture to GPU in parallel. Can improve performance on more powerful "
-"GPU's."
+"GPU's that have spare headroom."
 msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ASYNCHRONOUS TEXTURE STREAMING"
 msgstr "TRANSMISIÓN DE TEXTURAS ASÍNCRONA"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "On (Vulkan Only)"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10840,7 +10850,7 @@ msgid ""
 "use if you get no audio."
 msgstr ""
 "Utiliza muestras de audio de 16 bits para controladores de audio que no "
-"admitan 32 bits. Solo úselo si no obtiene audio"
+"admitan 32 bits. Solo úselo si no obtiene audio."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10870,7 +10880,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "AUDIO BUFFER DURATION"
-msgstr "DURACIÓN BÚFER DE AUDIO "
+msgstr "DURACIÓN DEL BÚFER DE AUDIO"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10957,7 +10967,7 @@ msgid ""
 "Buffer fill level (in percentage) below which time stretching will start."
 msgstr ""
 "Nivel de llenado del búfer (en porcentaje) por debajo del cual comenzará la "
-"ampliación del tiempo"
+"ampliación del tiempo."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10989,7 +10999,7 @@ msgid ""
 msgstr ""
 "El valor predeterminado utiliza SDL2, de lo contrario habilita las "
 "capacidades específicas del controlador. Sony DS no funciona con "
-"controladores clonados"
+"controladores clonados."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11485,12 +11495,12 @@ msgstr "CALIDAD DE VÍDEO"
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "linear"
-msgstr "Lineal"
+msgstr "lineal"
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "best"
-msgstr "Mejor"
+msgstr "mejor"
 
 #. TRANSLATION: cgenius
 msgctxt "game_options"
@@ -11719,7 +11729,7 @@ msgid ""
 "Make game history, setup instructions, and special moves viewable in the menu"
 msgstr ""
 "Hace que el historial de juego, las instrucciones de configuración y los "
-"movimientos especiales sean visibles en el menú."
+"movimientos especiales sean visibles en el menú"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -13424,7 +13434,7 @@ msgstr ""
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "Use new graphics created from CorsixTH project"
-msgstr "Utiliza nuevos gráficos creados a partir del projecto CorsixTH."
+msgstr "Utiliza nuevos gráficos creados a partir del proyecto CorsixTH"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
@@ -13617,7 +13627,7 @@ msgctxt "game_options"
 msgid "Bobba Fett Face Player Fix"
 msgstr ""
 "Correción Bobba Fett Face Player. Intenta que mire más a menudo al jugador "
-"cuando ataca."
+"cuando ataca"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -13765,12 +13775,12 @@ msgstr "INDICACIONES DE LA INTERFAZ DE USUARIO"
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Enabled UI prompts (Default)"
-msgstr "activadas (Defecto)"
+msgstr "Activadas (Defecto)"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "Disable UI prompts"
-msgstr "desactivadas"
+msgstr "Desactivadas"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -14028,7 +14038,7 @@ msgstr ""
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Buy extraball for a credit"
-msgstr ""
+msgstr "Compra una bola extra por un crédito"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -14263,7 +14273,7 @@ msgstr "Avance rápido"
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Pause / Menu"
-msgstr ""
+msgstr "Pausa / Menú"
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
@@ -14641,6 +14651,10 @@ msgid "Quick Save"
 msgstr "Guardado rápido"
 
 #~ msgctxt "game_options"
+#~ msgid "Adjust the cpu power profile while in-game."
+#~ msgstr "Ajusta el perfil de energía de la CPU mientras estás en el juego."
+
+#~ msgctxt "game_options"
 #~ msgid "POWER MODE"
 #~ msgstr "MODO DE ENERGÍA"
 
@@ -14668,7 +14682,7 @@ msgstr "Guardado rápido"
 #~ "libretro cores."
 #~ msgstr ""
 #~ "Durante el juego, presiona la tecla HOTKEY + R1 para traducir el texto en "
-#~ "pantalla. Solo en núcleos libretro"
+#~ "pantalla. Solo en núcleos libretro."
 
 #~ msgctxt "game_options"
 #~ msgid "Emulate Chroma 81 interface (colorization)."
@@ -15092,14 +15106,6 @@ msgstr "Guardado rápido"
 #~ "ausentes y parpadeos."
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Stream texture to GPU in parrallel. Can improve performance on more "
-#~ "powerful GPU's."
-#~ msgstr ""
-#~ "Transmite textura a la GPU en paralelo. Puede mejorar el rendimiento en "
-#~ "versiones más potentes de GPUs."
-
-#~ msgctxt "game_options"
 #~ msgid "Legacy Evdev"
 #~ msgstr "Evdev heredado"
 
@@ -15191,6 +15197,14 @@ msgstr "Guardado rápido"
 #~ msgid "OpenGLES (Default)"
 #~ msgstr "OpenGLES (Defecto)"
 
+#~ msgctxt "game_options"
+#~ msgid "Enable triple buffering."
+#~ msgstr "Activar triple almacenamiento en búfer."
+
+#~ msgctxt "game_options"
+#~ msgid "TRIPLE BUFFERING"
+#~ msgstr "TRIPLE ALMACENAMIENTO EN BÚFER"
+
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Abrir menú de Dolphin-triforce"
@@ -15202,6 +15216,14 @@ msgstr "Guardado rápido"
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Guardar estado slot 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Reiniciar juego"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Siguiente disco (m3u)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
@@ -15299,13 +15321,13 @@ msgstr "Guardado rápido"
 #~ msgid "FastForward"
 #~ msgstr "Avance rápido"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Reiniciar juego"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Siguiente disco (m3u)"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's."
+#~ msgstr ""
+#~ "Transmite textura a la GPU en paralelo. Puede mejorar el rendimiento en "
+#~ "versiones más potentes de GPUs."
 
 #~ msgctxt "game_options"
 #~ msgid "Adjust the cpu power profile."
