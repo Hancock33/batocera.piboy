@@ -1,20 +1,20 @@
 diff --git a/Makefile b/Makefile
-index 8f51fc7a..4fdff38c 100644
+index 4357043f..610abcaa 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -23,11 +23,7 @@ export SDL_LDFLAGS := $(shell $(SDL_CONFIG) --libs)
+@@ -45,11 +45,7 @@ export SDL_LDFLAGS := $(shell $(SDL_CONFIG) --libs)
  
- CPPFLAGS = -MD -MT $@ -MF $(@:%.o=%.d) $(SDL_CFLAGS) -Iexternal/libguisan/include -Isrc -Isrc/osdep -Isrc/threaddep -Isrc/include -Isrc/archivers -Isrc/floppybridge -DAMIBERRY -D_FILE_OFFSET_BITS=64
+ CPPFLAGS = -MD -MT $@ -MF $(@:%.o=%.d) $(SDL_CFLAGS) -Iexternal/libguisan/include -Isrc -Isrc/osdep -Isrc/threaddep -Isrc/include -Isrc/archivers -Isrc/floppybridge -Iexternal/mt32emu/src -D_FILE_OFFSET_BITS=64
  CFLAGS=-pipe -Wno-shift-overflow -Wno-narrowing
 -USE_LD ?= gold
- LDFLAGS = $(SDL_LDFLAGS) -lSDL2_image -lSDL2_ttf -lserialport -lguisan -Lexternal/libguisan/lib
+ LDFLAGS = $(SDL_LDFLAGS) -lSDL2_image -lSDL2_ttf -lserialport -lportmidi -lguisan -Lexternal/libguisan/lib -lmt32emu -Lexternal/mt32emu
 -ifneq ($(strip $(USE_LD)),)
 -	LDFLAGS += -fuse-ld=$(USE_LD)
 -endif
  LDFLAGS += -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -lpthread -lz -lpng -lrt -lFLAC -lmpg123 -ldl -lmpeg2convert -lmpeg2 -lstdc++fs
  
  ifdef USE_OPENGL
-@@ -209,12 +205,14 @@ else ifeq ($(PLATFORM),vero4k)
+@@ -250,12 +246,14 @@ else ifeq ($(PLATFORM),vero4k)
  	LDFLAGS += -L/opt/vero3/lib
  	HAVE_NEON = 1
  
@@ -33,7 +33,7 @@ index 8f51fc7a..4fdff38c 100644
  	ifneq (,$(findstring AMLG12,$(PLATFORM)))
  	  ifneq (,$(findstring AMLG12B,$(PLATFORM)))
  		CPUFLAGS = -mcpu=cortex-a73
-@@ -225,6 +223,8 @@ else ifneq (,$(findstring AMLG,$(PLATFORM)))
+@@ -266,6 +264,8 @@ else ifneq (,$(findstring AMLG,$(PLATFORM)))
  	  CPUFLAGS = -mcpu=cortex-a53
  	  CPPFLAGS += -DUSE_RENDER_THREAD
  	endif
