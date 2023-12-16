@@ -1,8 +1,8 @@
 diff --git a/src/duckstation-nogui/wayland_nogui_platform.cpp b/src/duckstation-nogui/wayland_nogui_platform.cpp
-index 52bf9672..b551b041 100644
+index 3c1e26d0..fa66b4b2 100644
 --- a/src/duckstation-nogui/wayland_nogui_platform.cpp
 +++ b/src/duckstation-nogui/wayland_nogui_platform.cpp
-@@ -137,7 +137,13 @@ bool WaylandNoGUIPlatform::CreatePlatformWindow(std::string title)
+@@ -136,7 +136,13 @@ bool WaylandNoGUIPlatform::CreatePlatformWindow(std::string title)
      if (m_toplevel_decoration)
        zxdg_toplevel_decoration_v1_set_mode(m_toplevel_decoration, ZXDG_TOPLEVEL_DECORATION_V1_MODE_SERVER_SIDE);
    }
@@ -17,7 +17,7 @@ index 52bf9672..b551b041 100644
    m_window_info.surface_width = static_cast<u32>(window_width);
    m_window_info.surface_height = static_cast<u32>(window_height);
    m_window_info.surface_scale = 1.0f;
-@@ -239,6 +245,11 @@ void WaylandNoGUIPlatform::GlobalRegistryHandler(void* data, wl_registry* regist
+@@ -238,6 +244,11 @@ void WaylandNoGUIPlatform::GlobalRegistryHandler(void* data, wl_registry* regist
      platform->m_decoration_manager = static_cast<zxdg_decoration_manager_v1*>(
        wl_registry_bind(platform->m_registry, id, &zxdg_decoration_manager_v1_interface, 1));
    }
