@@ -82,4 +82,15 @@ define DOSBOX_STAGING_INSTALL_TARGET_CMDS
 		$(INSTALL) -D $(@D)/build/dosbox $(TARGET_DIR)/usr/bin/dosbox-staging
 endef
 
+# this is a not nice workaround
+# i don't know why meson uses bad ssl certificates and doesn't manage to download them
+define DOSBOX_STAGING_DL_DEPENDENCIES
+	mkdir -p  $(DOSBOX_STAGING_DL_DIR)/sumodules
+	curl -L https://github.com/glennrp/libpng/archive/v1.6.40.tar.gz					-o $(DOSBOX_STAGING_DL_DIR)/sumodules/libpng-1.6.40.tar.gz
+	curl -L https://wrapdb.mesonbuild.com/v2/libpng_1.6.40-1/get_patch					-o $(DOSBOX_STAGING_DL_DIR)/sumodules/libpng_1.6.40-1_patch.zip
+	mkdir -p $(@D)/subprojects/packagecache
+	cp  $(DOSBOX_STAGING_DL_DIR)/sumodules/* $(@D)/subprojects/packagecache
+endef
+DOSBOX_STAGING_PRE_CONFIGURE_HOOKS += DOSBOX_STAGING_DL_DEPENDENCIES
+
 $(eval $(meson-package))
