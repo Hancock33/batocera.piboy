@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Batocera\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-05 13:13+0100\n"
-"PO-Revision-Date: 2023-12-04 11:11+0100\n"
+"PO-Revision-Date: 2023-12-14 09:52+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak (Slovakia)\n"
 "Language: sk_SK\n"
@@ -6806,7 +6806,7 @@ msgctxt "game_options"
 msgid "160fps"
 msgstr "160fps"
 
-#. TRANSLATION: libretro/tyrquake, cemu, dolphin/uzem, dolphin_triforce, supermodel
+#. TRANSLATION: libretro/tyrquake, cemu, dolphin/vitaquake3, dolphin/vitaquake3, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "Rachot"
@@ -8240,10 +8240,10 @@ msgctxt "game_options"
 msgid "MOUSE AS WII REMOTE POINTER"
 msgstr ""
 
-#. TRANSLATION: dolphin/uzem
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Enable controller rumble capabilities if supported by the controller."
-msgstr ""
+msgstr "Povoliť schopnosti vibrácií, ak ich podporuje ovládač."
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -10726,13 +10726,18 @@ msgstr "Viacvláknové RSX"
 msgctxt "game_options"
 msgid ""
 "Stream texture to GPU in parallel. Can improve performance on more powerful "
-"GPU's."
+"GPU's that have spare headroom."
 msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ASYNCHRONOUS TEXTURE STREAMING"
 msgstr "Asynchrónne streamovanie textúr"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "On (Vulkan Only)"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -13921,7 +13926,7 @@ msgstr "Vytiahnuť piest"
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Lockbar Fire Button"
-msgstr ""
+msgstr "Tlačidlo spúšte Lockbar"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -14161,7 +14166,7 @@ msgstr "Rýchlo dopredu"
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Pause / Menu"
-msgstr ""
+msgstr "Pozastaviť / Ponuka"
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
@@ -14980,14 +14985,6 @@ msgstr "Rýchle uloženie"
 #~ "grafiky a blikania."
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Stream texture to GPU in parrallel. Can improve performance on more "
-#~ "powerful GPU's."
-#~ msgstr ""
-#~ "Streamuje textúru do GPU paralelne. Môže zlepšiť výkon na výkonnejších "
-#~ "GPU."
-
-#~ msgctxt "game_options"
 #~ msgid "Legacy Evdev"
 #~ msgstr "Staré Evdev"
 
@@ -15076,6 +15073,14 @@ msgstr "Rýchle uloženie"
 #~ msgid "OpenGLES (Default)"
 #~ msgstr "OpenGLES (predvolené)"
 
+#~ msgctxt "game_options"
+#~ msgid "Enable triple buffering."
+#~ msgstr "Povoliť trojitý buffering"
+
+#~ msgctxt "game_options"
+#~ msgid "TRIPLE BUFFERING"
+#~ msgstr "Trojité bufferovanie"
+
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Otvoriť ponuku Dolphin triforce"
@@ -15087,6 +15092,14 @@ msgstr "Rýchle uloženie"
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Uložiť slot stavu 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Reštartovať hru"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Ďalší disk (m3u)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
@@ -15184,13 +15197,13 @@ msgstr "Rýchle uloženie"
 #~ msgid "FastForward"
 #~ msgstr "Rýchlo dopredu"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Reštartovať hru"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Ďalší disk (m3u)"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's."
+#~ msgstr ""
+#~ "Streamuje textúru do GPU paralelne. Môže zlepšiť výkon na výkonnejších "
+#~ "GPU."
 
 #~ msgctxt "game_options"
 #~ msgid "Set the sensitivity of the joystick analog sticks."

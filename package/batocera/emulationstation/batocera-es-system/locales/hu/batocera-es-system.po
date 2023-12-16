@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-11-20 10:37+0100\n"
+"PO-Revision-Date: 2023-12-15 10:36+0100\n"
 "Last-Translator: Szoldán Albert\n"
 "Language-Team: \n"
 "Language: hu\n"
@@ -396,22 +396,22 @@ msgstr "KORMÁNY HASZNÁLATA"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Maximum wheel rotation from left to right (in degrees)"
-msgstr ""
+msgstr "A kerék maximális forgása balról jobbra (fokban)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "WHEEL ROTATION"
-msgstr ""
+msgstr "KERÉKFORGÁS"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
-msgstr ""
+msgstr "Zóna, ahol a játék nem reagál a kerékre (fokban)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "WHEEL DEADZONE"
-msgstr ""
+msgstr "KERÉK HOLTZÓNA"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -419,11 +419,13 @@ msgid ""
 "Reserve a non dead zone at the center of the wheel to go straight ahead (in "
 "degrees)"
 msgstr ""
+"Foglaljon le egy nem holt zónát a kerék közepén, hogy egyenesen haladjon "
+"(fokban)"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "WHEEL MIDZONE"
-msgstr ""
+msgstr "KERÉKKÖZÉPZÓNA"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -586,12 +588,12 @@ msgstr "BELSŐ FELBONTÁS"
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
 msgid "Enable the BASIC interpreter. Some games need this."
-msgstr ""
+msgstr "Engedélyezze a BASIC fordítót. Néhány játéknak szüksége van erre."
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
 msgid "INTERNAL BASIC INTERPRETER"
-msgstr ""
+msgstr "BELSŐ ALAP FORDÍTÓ"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -6150,7 +6152,7 @@ msgstr ""
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021, libretro/vice_x64, ...
 msgctxt "game_options"
 msgid "KEYBOARD PASSTHROUGH"
-msgstr ""
+msgstr "BILLENTYŰZET ÁTENGEDÉS"
 
 #. TRANSLATION: libretro/puae, libretro/puae, libretro/puae2021, libretro/puae2021
 msgctxt "game_options"
@@ -6795,7 +6797,7 @@ msgstr ""
 #. TRANSLATION: libretro/tgbdual
 msgctxt "game_options"
 msgid "SYNC SAVE FILES"
-msgstr ""
+msgstr "MENTÉS FÁJLOK SZINKRONIZÁLÁSA"
 
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
@@ -6847,7 +6849,7 @@ msgctxt "game_options"
 msgid "160fps"
 msgstr "160fps"
 
-#. TRANSLATION: libretro/tyrquake, cemu, dolphin/uzem, dolphin_triforce, supermodel
+#. TRANSLATION: libretro/tyrquake, cemu, dolphin/vitaquake3, dolphin/vitaquake3, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "REZGŐ"
@@ -6855,7 +6857,7 @@ msgstr "REZGŐ"
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "Gamepad Classic Alt"
-msgstr ""
+msgstr "Gamepad Classic Alt"
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
@@ -6905,7 +6907,7 @@ msgstr ""
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
 msgid "ANAGLYPH PRESET (3D)"
-msgstr ""
+msgstr "ANAGLIF BEÁLLÍTÁS (3D)"
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
@@ -6945,12 +6947,12 @@ msgstr ""
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "original gameboy"
-msgstr ""
+msgstr "eredeti gameboy"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "black and white"
-msgstr ""
+msgstr "fekete és fehér"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -6965,17 +6967,17 @@ msgstr "kéktenger"
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "dark knight"
-msgstr ""
+msgstr "sötét lovag"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "green forest"
-msgstr ""
+msgstr "zöld erdő"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "hot desert"
-msgstr ""
+msgstr "forró sivatag"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -6990,7 +6992,7 @@ msgstr ""
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "Only for games that employed it (for Boktai)"
-msgstr ""
+msgstr "Csak azokhoz a játékokhoz, amelyek ezt alkalmazták (Boktai esetében)"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -7000,7 +7002,7 @@ msgstr ""
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "SENSOR SENSITIVITY (GYROSCOPE)"
-msgstr ""
+msgstr "SENSOR SENSITIVITY (GYROSCOPE)"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -7010,27 +7012,27 @@ msgstr ""
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "SENSOR SENSITIVITY (TILT)"
-msgstr ""
+msgstr "ÉRZÉKELŐ ÉRZÉKENYSÉGE (TILT)"
 
 #. TRANSLATION: libretro/vecx
 msgctxt "game_options"
 msgid "Resolution multipliers to smooth vectors"
-msgstr ""
+msgstr "Felbontási szorzók a vektorok simítására"
 
 #. TRANSLATION: libretro/vecx
 msgctxt "game_options"
 msgid "RESOLUTION MULTIPLIER"
-msgstr ""
+msgstr "FELBONTÁSSZORZÓ"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_xvic
 msgctxt "game_options"
 msgid "Automatic switches region per file path tags"
-msgstr ""
+msgstr "Automatikusan váltja a régiót fájl útvonalonkénti címkék között"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
 msgid "MODEL TYPE"
-msgstr ""
+msgstr "MODELLTÍPUS"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64
 msgctxt "game_options"
@@ -7070,7 +7072,7 @@ msgstr ""
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
 msgid "Change the output resolution ratio."
-msgstr ""
+msgstr "Módosítsa a kimeneti felbontás arányát."
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -7085,22 +7087,22 @@ msgstr "NTSC 492x262px"
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
 msgid "Auto-disable zoom"
-msgstr ""
+msgstr "A zoom automatikus letiltása"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
 msgid "Most games use port 2, some use port 1."
-msgstr ""
+msgstr "A legtöbb játék a 2-es portot használja, néhány az 1-es portot."
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
 msgid "CONTROLLER PORT"
-msgstr ""
+msgstr "VEZÉRLŐ PORT"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
 msgid "Paddles"
-msgstr ""
+msgstr "Lapátok"
 
 #. TRANSLATION: libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -7140,7 +7142,7 @@ msgstr "C128 DCR NTSC"
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xplus4, libretro/vice_xvic, libretro/vice_xpet
 msgctxt "game_options"
 msgid "RetroPad Face Button Options."
-msgstr ""
+msgstr "RetroPad Face gomb Opciók."
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_xplus4, libretro/vice_xvic, libretro/vice_xpet
 msgctxt "game_options"
@@ -7200,7 +7202,7 @@ msgstr "232 NTSC"
 #. TRANSLATION: libretro/vice_xplus4
 msgctxt "game_options"
 msgid "colodore_ted"
-msgstr ""
+msgstr "colodore_ted"
 
 #. TRANSLATION: libretro/vice_xplus4
 msgctxt "game_options"
@@ -7265,7 +7267,7 @@ msgstr "4032B"
 #. TRANSLATION: libretro/vice_xpet
 msgctxt "game_options"
 msgid "SUPERPET"
-msgstr ""
+msgstr "SUPERPET"
 
 #. TRANSLATION: libretro/vice_xpet
 msgctxt "game_options"
@@ -7285,62 +7287,62 @@ msgstr "fehér"
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
 msgid "For weak machines. Some games will not work with this."
-msgstr ""
+msgstr "Gyenge gépekhez. Egyes játékok nem működnek ezzel."
 
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
 msgid "FAST BLITTER (LESS COMPATIBLE)"
-msgstr ""
+msgstr "GYORS BLITTER (Kevésbé kompatibilis)"
 
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
 msgid "Enable for Doom to run at its correct resolution."
-msgstr ""
+msgstr "Engedélyezze, hogy a Doom a megfelelő felbontással fusson."
 
 #. TRANSLATION: libretro/virtualjaguar
 msgctxt "game_options"
 msgid "DOOM RES HACK"
-msgstr ""
+msgstr "DOOM RES HACK"
 
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "Remove the padding on the sides of the screen."
-msgstr ""
+msgstr "Távolítsa el a párnázást a képernyő oldalain."
 
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "CROP BORDER"
-msgstr ""
+msgstr "VÁGÁS SZEGÉLY"
 
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "Always have 6 bullets, 6 dynamite and 6 lives."
-msgstr ""
+msgstr "Mindig legyen 6 golyó, 6 dinamit és 6 élet."
 
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "TRAINER MODE"
-msgstr ""
+msgstr "EDZŐ MÓD"
 
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "Nothing can kill Rick, may break the game."
-msgstr ""
+msgstr "Semmi sem ölheti meg Ricket, megtörheti a játékot."
 
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "INVULNERABILITY MODE"
-msgstr ""
+msgstr "SÉRTETHETŐSÉGI MÓD"
 
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "Highlight all entities on the game map."
-msgstr ""
+msgstr "Jelölje ki az összes entitást a játéktérképen."
 
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "EXPOSE MODE"
-msgstr ""
+msgstr "EXPOZE MÓD"
 
 #. TRANSLATION: libretro/yabasanshiro, theforceengine, yabasanshiro
 msgctxt "game_options"
@@ -7356,11 +7358,12 @@ msgstr "4K"
 msgctxt "game_options"
 msgid "Allows up to 7 or 12 controllers in supported games."
 msgstr ""
+"Legfeljebb 7 vagy 12 kontrollert tesz lehetővé a támogatott játékokban."
 
 #. TRANSLATION: libretro/yabasanshiro
 msgctxt "game_options"
 msgid "Change the system's language."
-msgstr ""
+msgstr "Változtassa meg a rendszer nyelvét."
 
 #. TRANSLATION: libretro/yabasanshiro, awgl
 msgctxt "game_options"
@@ -7382,6 +7385,8 @@ msgctxt "game_options"
 msgid ""
 "Choose which graphics API library to use. Vulkan may not work for every core."
 msgstr ""
+"Válassza ki a használni kívánt grafikus API-könyvtárat. Lehet, hogy a Vulkan "
+"nem működik minden magnál."
 
 #. TRANSLATION: libretro, libretro, libretro, libretro, daphne, ...
 msgctxt "game_options"
@@ -7501,7 +7506,7 @@ msgstr ""
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "In milliseconds. Can reduce crackling/cutting out."
-msgstr ""
+msgstr "Ezredmásodpercben. Csökkentheti a recsegést/kivágást."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -7511,7 +7516,7 @@ msgstr "AUDIÓ KÉSLELTETÉS"
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Allow cores to set rotation."
-msgstr ""
+msgstr "Engedélyezze a magoknak a forgás beállítását."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -7521,12 +7526,12 @@ msgstr "ENGEDÉLYEZZE A FORGATÁST"
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Map controller inputs to light gun inputs."
-msgstr ""
+msgstr "A vezérlő bemeneteit leképezi a fénypuska bemeneteire."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "CONTROLLER TO LIGHT GUN"
-msgstr ""
+msgstr "VEZÉRLŐ A FÉNYPUSKÁHOZ"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -7566,62 +7571,64 @@ msgstr "A képernyővonal rajzolási módjának beállítása."
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "LINE MODE"
-msgstr ""
+msgstr "LINE MÓD"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "SINGLE"
-msgstr ""
+msgstr "EGYSZERES"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "DOUBLE"
-msgstr ""
+msgstr "DUPLA"
 
 #. TRANSLATION: amiberry, daphne
 msgctxt "game_options"
 msgid "SCANLINES"
-msgstr ""
+msgstr "SCANLINES"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Manually define which internal resolution to use. AUTO = High."
 msgstr ""
+"Manuálisan határozza meg, hogy melyik belső felbontást használja. AUTO = "
+"Magas."
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Super high"
-msgstr ""
+msgstr "Szuper magas"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Change pixel scaling and filtering method."
-msgstr ""
+msgstr "Módosítsa a pixelméretezési és szűrési módszert."
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "SCALING METHOD"
-msgstr ""
+msgstr "MÉRETEZÉSI MÓDSZER"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Pixelated (Nearest)"
-msgstr ""
+msgstr "Pixeles (legközelebbi)"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Smooth (Linear)"
-msgstr ""
+msgstr "Sima (lineáris)"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Fix flickering in a static screen like Workbench."
-msgstr ""
+msgstr "Javítsa ki a villogást egy statikus képernyőn, például a Workbenchben."
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "REMOVE INTERLACE ARTIFACTS"
-msgstr ""
+msgstr "TÁVOLÍTSA EL AZ INTERLACE MŰTERMÉKEKET"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -7699,16 +7706,18 @@ msgid ""
 "Improves both sprite scaling and road rendering. Does not affect the car "
 "sprite."
 msgstr ""
+"Javítja a sprite méretezést és az útleképezést egyaránt. Nincs hatással az "
+"autó sprite-ra."
 
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid "HIGH RESOLUTION MODE"
-msgstr ""
+msgstr "NAGY FELBONTÁSÚ MÓD"
 
 #. TRANSLATION: cemu, citra, dolphin, duckstation, melonds, ...
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
-msgstr ""
+msgstr "Válassza ki a használni kívánt grafikus API-könyvtárat."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7718,7 +7727,7 @@ msgstr ""
 #. TRANSLATION: cemu, yuzu
 msgctxt "game_options"
 msgid "Speed up shader compilation."
-msgstr ""
+msgstr "A shader összeállításának felgyorsítása."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7728,22 +7737,22 @@ msgstr "ASZINKRON SHADER FORDÍTÁS (CSAK VULKAN)"
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Set the controller rumble strength if supported."
-msgstr ""
+msgstr "Állítsa be a vezérlő dübörgés erősségét, ha támogatja."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Pro Controller required for games that require shake motions."
-msgstr ""
+msgstr "A Google díjmentesen használható szolgáltatása ..."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "CONTROLLER COMBINATION"
-msgstr ""
+msgstr "VEZÉRLŐ KOMBINÁCIÓ"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "GamePad + 4 Pro Controller"
-msgstr ""
+msgstr "GamePad + 4 Pro Controller"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7763,12 +7772,12 @@ msgstr ""
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Wii U Classic Controller"
-msgstr ""
+msgstr "Wii U Classic kontroller"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Not all games support all languages."
-msgstr ""
+msgstr "Nem minden játék támogatja az összes nyelvet."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7803,7 +7812,7 @@ msgstr "Tajván"
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Choose the audio output type."
-msgstr ""
+msgstr "Válassza ki a hangkimenet típusát."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7823,7 +7832,7 @@ msgstr "Térhatású"
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Have Batocera set the first audio output device."
-msgstr ""
+msgstr "A Batocera állítsa be az első hangkimeneti eszközt."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7833,7 +7842,7 @@ msgstr "AUDIO KIMENET"
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Set in Config - choose if no audio output"
-msgstr ""
+msgstr "Beállítás a Config-ban – válassza, ha nincs hangkimenet"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7843,7 +7852,7 @@ msgstr "Batocera beállítja az első audio eszközt (alapértelmezett)"
 #. TRANSLATION: cemu, sonic2013, play, yuzu, demul, ...
 msgctxt "game_options"
 msgid "Fix screen tearing."
-msgstr ""
+msgstr "Javítsa ki a képernyő szakadását."
 
 #. TRANSLATION: cemu, citra, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
@@ -7863,7 +7872,7 @@ msgstr "Háromszoros pufferelés"
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Choose upscaling method."
-msgstr ""
+msgstr "Válassza ki a felskálázási módot."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7878,22 +7887,22 @@ msgstr "Bikubikus"
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Hermite (Default)"
-msgstr ""
+msgstr "Hermite (alapértelmezett)"
 
 #. TRANSLATION: cemu, cemu, sonic2013, soniccd, yuzu
 msgctxt "game_options"
 msgid "Nearest Neighbour"
-msgstr ""
+msgstr "Legközelebbi szomszéd"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Choose downscaling method."
-msgstr ""
+msgstr "Válassza ki a csökkentési módszert."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "DOWNSCALE FILTER"
-msgstr ""
+msgstr "DOWNSCALE SZŰRŐ"
 
 #. TRANSLATION: cemu, rpcs3
 msgctxt "game_options"
@@ -7903,7 +7912,7 @@ msgstr "Bilineáris (alapértelmezett)"
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Hermite"
-msgstr ""
+msgstr "Hermite"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7928,22 +7937,22 @@ msgstr "EGERET ENGEDÉLYEZ"
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Enable Cemu's performance overlay."
-msgstr ""
+msgstr "Engedélyezze a Cemu teljesítményfedvényét."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "ENABLE PERFORMANCE OVERLAY"
-msgstr ""
+msgstr "TELJESÍTMÉNY FEDÉS ENGEDÉLYEZÉSE"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Enable notifications of cache, controller events etc."
-msgstr ""
+msgstr "Értesítések engedélyezése a gyorsítótárról, a vezérlő eseményekről stb"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "ENABLE NOTIFICATIONS"
-msgstr ""
+msgstr "ÉRTESÍTÉSEK ENGEDÉLYEZÉSE"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7951,11 +7960,14 @@ msgid ""
 "Enable gamepad view for games that have interaction across two screens. Use "
 "Hotkey+R2 to switch screens."
 msgstr ""
+"A játékvezérlő nézet engedélyezése olyan játékoknál, amelyek két képernyőn "
+"keresztül működnek együtt. A képernyők közötti váltáshoz használja a "
+"Hotkey+R2 gombot"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
-msgstr ""
+msgstr "A GAMEPAD NÉZET ENGEDÉLYEZÉSE"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
@@ -7963,56 +7975,58 @@ msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
 "Hotkey+R2."
 msgstr ""
+"Rendezze el a kétképernyős elrendezést. Külön ablakok a Hotkey+R "
+"billentyűkkel módosíthatók"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Top Only"
-msgstr ""
+msgstr "Csak felül"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Bottom Only"
-msgstr ""
+msgstr "Csak alul"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Large Top"
-msgstr ""
+msgstr "Nagy felső"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Large Bottom"
-msgstr ""
+msgstr "Nagy alsó"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Left/Right"
-msgstr ""
+msgstr "Bal/Jobb"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Right/Left"
-msgstr ""
+msgstr "Jobb/Bal"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Separate Windows"
-msgstr ""
+msgstr "Osztott Ablak"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Hybrid Screen Top"
-msgstr ""
+msgstr "Hybrid Screen Top"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Hybrid Screen Bottom"
-msgstr ""
+msgstr "Hybrid Screen Bottom"
 
 #. TRANSLATION: citra, citra, citra, citra, citra, ...
 msgctxt "game_options"
 msgid "GRAPHICS"
-msgstr ""
+msgstr "GRAFIKA"
 
 #. TRANSLATION: citra, duckstation, melonds, pcsx2, scummvm, ...
 msgctxt "game_options"
@@ -8027,7 +8041,7 @@ msgstr "OpenGL (alapértelmezett)"
 #. TRANSLATION: citra, dolphin, dolphin_triforce, duckstation, pcsx2
 msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
-msgstr ""
+msgstr "Javítsa ki a képernyő szakadását. CPU terhelő."
 
 #. TRANSLATION: citra
 msgctxt "game_options"
@@ -8042,12 +8056,12 @@ msgstr "KÉPKOCKA LIMIT"
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "Reduce stutter that happens when compiling shaders."
-msgstr ""
+msgstr "Csökkentse az árnyékolók összeállítása során előforduló dadogást."
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "DISK SHADER CACHE"
-msgstr ""
+msgstr "DISK SHADER GYORSÍTÓTÁR"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
@@ -8055,11 +8069,13 @@ msgid ""
 "Compile shaders using background threads to avoid shader compilation "
 "stutter. May cause graphical glitches."
 msgstr ""
+"Fordítsa le a shadereket háttérszálak segítségével, hogy elkerülje a shader "
+"fordítási akadozását. Grafikus hibákat okozhat."
 
 #. TRANSLATION: citra
 msgctxt "game_options"
 msgid "ENABLE ASYNC SHADER COMPILATION"
-msgstr ""
+msgstr "ASYNC SHADER ÖSSZEÁLLÍTÁS ENGEDÉLYEZÉSE"
 
 #. TRANSLATION: citra
 msgctxt "game_options"
@@ -8218,12 +8234,12 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Classic Controller"
-msgstr ""
+msgstr "Classic Controller"
 
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Classic Controller Pro"
-msgstr ""
+msgstr "Classic Controller Pro"
 
 #. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
@@ -8265,7 +8281,7 @@ msgctxt "game_options"
 msgid "MOUSE AS WII REMOTE POINTER"
 msgstr ""
 
-#. TRANSLATION: dolphin/uzem
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
 msgctxt "game_options"
 msgid "Enable controller rumble capabilities if supported by the controller."
 msgstr ""
@@ -10719,13 +10735,18 @@ msgstr "TÖBBSZÁLAS RSX"
 msgctxt "game_options"
 msgid ""
 "Stream texture to GPU in parallel. Can improve performance on more powerful "
-"GPU's."
+"GPU's that have spare headroom."
 msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ASYNCHRONOUS TEXTURE STREAMING"
 msgstr "ASZINKRON TEXTÚRA streamelés"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "On (Vulkan Only)"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -14558,6 +14579,26 @@ msgid "Quick Save"
 msgstr "Gyors mentés"
 
 #~ msgctxt "game_options"
+#~ msgid "Adjust the cpu power profile while in-game."
+#~ msgstr "Állítsa be a processzor teljesítményprofilját játék közben."
+
+#~ msgctxt "game_options"
+#~ msgid "POWER MODE"
+#~ msgstr "POWER MÓD"
+
+#~ msgctxt "game_options"
+#~ msgid "High Performance"
+#~ msgstr "Nagy teljesítményű"
+
+#~ msgctxt "game_options"
+#~ msgid "Balanced"
+#~ msgstr "Kiegyensúlyozott"
+
+#~ msgctxt "game_options"
+#~ msgid "Power Saver"
+#~ msgstr "Energiatakarékos"
+
+#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Tárolja a múltbeli állapotokat a valós idejű visszatekeréshez, ha a mag "
@@ -14791,24 +14832,81 @@ msgstr "Gyors mentés"
 #~ msgstr "ANALÓG HOLTZÓNA"
 
 #~ msgctxt "game_options"
+#~ msgid "COLOR PALETTE (2D)"
+#~ msgstr "SZÍNPALETTA (2D)"
+
+#~ msgctxt "game_options"
+#~ msgid "Use your physical anaglypth 3D glasses!"
+#~ msgstr "Használd fizikai anaglipt 3D szemüvegedet!"
+
+#~ msgctxt "game_options"
 #~ msgid "Add color to Game Boy games."
 #~ msgstr "Színt ad a Game Boy játékokhoz."
+
+#~ msgctxt "game_options"
+#~ msgid "GB COLORIZATION"
+#~ msgstr "GB SZÍNEZÉS"
 
 #~ msgctxt "game_options"
 #~ msgid "weird colors"
 #~ msgstr "furcsa színek"
 
 #~ msgctxt "game_options"
+#~ msgid "For Gyro-enabled games (bound to left analog stick)"
+#~ msgstr "Gyro-kompatibilis játékokhoz (bal oldali analóg karhoz kötve)"
+
+#~ msgctxt "game_options"
+#~ msgid "For Gyro-enabled games (bound to right analog stick)"
+#~ msgstr "For Gyro-enabled games (bound to right analog stick)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Changing driver can improve audio performance and reduce distortion. "
+#~ "Alsathread is recommended for low-end systems."
+#~ msgstr ""
+#~ "Az illesztőprogram megváltoztatása javíthatja a hangteljesítményt és "
+#~ "csökkentheti a torzítást. Az Alsathread az alacsony kategóriás "
+#~ "rendszerekhez ajánlott."
+
+#~ msgctxt "game_options"
+#~ msgid "AUDIO DRIVER"
+#~ msgstr "AUDIO DRIVER"
+
+#~ msgctxt "game_options"
 #~ msgid "Pulse (Default)"
 #~ msgstr "Pulse (Alap)"
+
+#~ msgctxt "game_options"
+#~ msgid "Resize automatically screen height."
+#~ msgstr "A képernyő magasságának automatikus átméretezése."
 
 #~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "AUTOMATA MAGASSÁG"
 
 #~ msgctxt "game_options"
+#~ msgid "GamePad + 4 Sideway Wiimote"
+#~ msgstr "GamePad + 4 Sideway Wiimote"
+
+#~ msgctxt "game_options"
 #~ msgid "5 Sideway Wiimote"
 #~ msgstr "5 Oldalirányú Wiimote"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway"
+#~ msgstr "Wiimote Sideway"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway + Swing"
+#~ msgstr "Wiimote Sideway + Swing"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway + Tilt"
+#~ msgstr "Wiimote Sideway + Tilt"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimote Sideway + Nunchuk"
+#~ msgstr "Wiimote Sideway + Nunchuk"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -14841,14 +14939,6 @@ msgstr "Gyors mentés"
 #~ msgstr ""
 #~ "Egyenes API specifikáció. Meg tudja oldani a hiányzó grafika és a "
 #~ "villogás ritka eseteit."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Stream texture to GPU in parrallel. Can improve performance on more "
-#~ "powerful GPU's."
-#~ msgstr ""
-#~ "Párhuzamosan streamelje a textúrát a GPU-ra. Javíthatja a teljesítményt "
-#~ "erősebb GPU-kon."
 
 #~ msgctxt "game_options"
 #~ msgid "Legacy Evdev"
@@ -14953,6 +15043,14 @@ msgstr "Gyors mentés"
 #~ msgstr "Állapot mentése Slot 1"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Játék újrakezdése"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Következő lemez (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad fel"
 
@@ -15048,13 +15146,13 @@ msgstr "Gyors mentés"
 #~ msgid "FastForward"
 #~ msgstr "Gyors előre"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Játék újrakezdése"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Következő lemez (m3u)"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's."
+#~ msgstr ""
+#~ "Párhuzamosan streamelje a textúrát a GPU-ra. Javíthatja a teljesítményt "
+#~ "erősebb GPU-kon."
 
 #~ msgctxt "game_options"
 #~ msgid "Set the sensitivity of the joystick analog sticks."
