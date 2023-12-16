@@ -9,9 +9,16 @@ SONIC2013_SITE = https://github.com/Rubberduckycooly/Sonic-1-2-2013-Decompilatio
 SONIC2013_SITE_METHOD = git
 SONIC2013_GIT_SUBMODULES = YES
 SONIC2013_SUPPORTS_IN_SOURCE_BUILD = NO
+SONIC2013_LICENSE = Custom
 
 SONIC2013_DEPENDENCIES = sdl2 libogg libvorbis
-SONIC2013_LICENSE = Custom
+
+# legacy version for systems that don't support libglew
+ifneq ($(BR2_PACKAGE_LIBGLEW),y)
+    SONIC2013_VERSION = f9718af
+else
+    SONIC2013_DEPENDENCIES += libglew
+endif
 
 SONIC2013_CONF_OPTS += -DRETRO_SDL_VERSION=2
 

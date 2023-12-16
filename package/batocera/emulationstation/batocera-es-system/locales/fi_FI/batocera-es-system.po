@@ -6761,7 +6761,7 @@ msgctxt "game_options"
 msgid "160fps"
 msgstr ""
 
-#. TRANSLATION: libretro/tyrquake, cemu, dolphin, dolphin_triforce, supermodel
+#. TRANSLATION: libretro/tyrquake, cemu, dolphin/vitaquake3, dolphin/vitaquake3, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr ""
@@ -8177,6 +8177,11 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "MOUSE AS WII REMOTE POINTER"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Enable controller rumble capabilities if supported by the controller."
 msgstr ""
 
 #. TRANSLATION: dolphin, dolphin_triforce
@@ -10601,12 +10606,17 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Stream texture to GPU in parallel. Can improve performance on more powerful "
-"GPU's."
+"GPU's that have spare headroom."
 msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ASYNCHRONOUS TEXTURE STREAMING"
+msgstr ""
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "On (Vulkan Only)"
 msgstr ""
 
 #. TRANSLATION: rpcs3

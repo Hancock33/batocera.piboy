@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-11-29 17:25+0100\n"
+"PO-Revision-Date: 2023-12-08 17:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: cz\n"
@@ -97,7 +97,7 @@ msgstr ""
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "AUTO SAVE/LOAD ON GAME LAUNCH"
-msgstr "Auto. ukládání/načítání při spuštění hry"
+msgstr "AUTO. UKLÁDÁNÍ/NAČÍTÁNÍ PŘI SPUŠTĚNÍ HRY"
 
 #. TRANSLATION: shared, shared, shared
 msgctxt "game_options"
@@ -253,7 +253,7 @@ msgstr ""
 #. TRANSLATION: shared, shared, shared, shared
 msgctxt "game_options"
 msgid "AI GAME TRANSLATION"
-msgstr "AI překlad hry"
+msgstr "AI PŘEKLAD HRY"
 
 #. TRANSLATION: shared, shared, shared, shared, sonic2013, ...
 msgctxt "game_options"
@@ -332,7 +332,7 @@ msgstr ""
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "AUTOMATIC FRAME DELAY"
-msgstr "Auto zpoždění snímku"
+msgstr "AUTOMATICKÉ ZPOŽDĚNÍ SNÍMKU"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -530,7 +530,7 @@ msgstr "WRX S VYSOKÝM ROZLIŠENÍM"
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
 msgid "ATARI SYSTEM"
-msgstr "Atari systém"
+msgstr "ATARI SYSTEM"
 
 #. TRANSLATION: libretro/atari800, libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -1078,7 +1078,7 @@ msgstr "Nemusíte tak pokaždé ručně načítat stranu A."
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
 msgid "(FDS) AUTOMATICALLY LOAD DISK SIDE A"
-msgstr "(FDS) Automaticky načte stranuu disku A"
+msgstr "(FDS) AUTOMATICKY NAČTE STRANU DISKU A"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -1088,7 +1088,7 @@ msgstr "Zkrácení doby načítání na úkor přesnosti."
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
 msgid "(FDS) FAST FORWARD DISK LOADING"
-msgstr "(FDS) Rychlé načítání disku vpřed"
+msgstr "(FDS) RYCHLÉ NAČÍTÁNÍ DISKU VPŘED"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -1155,7 +1155,7 @@ msgstr "Vylepšení. Vyhlazení zubatých hran polygonů 3D objektů."
 #. TRANSLATION: libretro/desmume, libretro/mupen64plus-next, mupen64plus
 msgctxt "game_options"
 msgid "ANTI-ALIASING (MSAA)"
-msgstr "Anti-Aliasing (MSAA)"
+msgstr "ANTI-ALIASING (MSAA)"
 
 #. TRANSLATION: libretro/desmume, libretro/melonds, drastic
 msgctxt "game_options"
@@ -1432,7 +1432,7 @@ msgstr "Zlepšuje zřetelnost vzdálených textur."
 #. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/flycast2021, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
-msgstr "Anizotropní filtrování"
+msgstr "ANIZOTROPNÍ FILTROVÁNÍ"
 
 #. TRANSLATION: libretro/dolphin, dolphin
 msgctxt "game_options"
@@ -1949,7 +1949,7 @@ msgstr "Použití profilu joy2key pro aktuální hru."
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "GAMEPAD AUTOMATIC MAPPING"
-msgstr "Auto. mapování Gamepadu"
+msgstr "AUTO. MAPOVÁNÍ GAMEPADU"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -2141,7 +2141,7 @@ msgstr "POUŽÍT VYKRESLOVACÍ SOFTWARE"
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
 msgid "ANTI-ALIASING (MSAA/SSAA)"
-msgstr "Anti-Aliasing (MSAA/SSAA)"
+msgstr "ANTI-ALIASING (MSAA/SSAA)"
 
 #. TRANSLATION: libretro/swanstation, libretro/duckstation, duckstation
 msgctxt "game_options"
@@ -3305,7 +3305,7 @@ msgstr "Zvolte požadovaný poměr stran pixelů."
 #. TRANSLATION: libretro/hatarib, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64, libretro/vice_x128, ...
 msgctxt "game_options"
 msgid "ASPECT RATIO"
-msgstr "Aspect Ratio"
+msgstr "ASPECT RATIO"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -3793,7 +3793,7 @@ msgstr "Vyberte model, který chcete napodobit"
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
 msgid "ARCHIMEDES MODEL"
-msgstr "Archimedes model"
+msgstr "ARCHIMEDES MODEL"
 
 #. TRANSLATION: libretro/mame, mame/vitaquake3
 msgctxt "game_options"
@@ -5101,7 +5101,7 @@ msgstr "Ručně aktivujte adaptér pro podporované hry."
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "4 PLAYER ADAPTER"
-msgstr "Adaptér pro 4 hráče"
+msgstr "ADAPTÉR PRO 4 HRÁČE"
 
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
@@ -6810,7 +6810,7 @@ msgctxt "game_options"
 msgid "160fps"
 msgstr "160fps"
 
-#. TRANSLATION: libretro/tyrquake, cemu, dolphin, dolphin_triforce, supermodel
+#. TRANSLATION: libretro/tyrquake, cemu, dolphin/vitaquake3, dolphin/vitaquake3, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "VIBRACE"
@@ -7356,7 +7356,7 @@ msgstr ""
 #. TRANSLATION: libretro, cemu, citra, daphne, dolphin, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
-msgstr "API Grafika"
+msgstr "API GRAFIKA"
 
 #. TRANSLATION: libretro, daphne, dolphin, duckstation, flycast, ...
 msgctxt "game_options"
@@ -7688,7 +7688,7 @@ msgstr "Zrychlení kompilace shaderů."
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "ASYNC SHADER COMPILE (VULKAN ONLY)"
-msgstr "Asynchronní kompilace Shaderu (pouze Vulcan)"
+msgstr "ASYNCHRONNÍ KOMPILACE SHADERŮ (POUZE VULKAN)"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -8107,7 +8107,7 @@ msgstr ""
 #. TRANSLATION: daphne
 msgctxt "game_options"
 msgid "ABSOLUTE MOUSE INPUT"
-msgstr "Absolutní vstup myši"
+msgstr "ABSOLUTNÍ VSTUP MYŠI"
 
 #. TRANSLATION: daphne
 msgctxt "game_options"
@@ -8242,6 +8242,11 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "MOUSE AS WII REMOTE POINTER"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Enable controller rumble capabilities if supported by the controller."
 msgstr ""
 
 #. TRANSLATION: dolphin, dolphin_triforce
@@ -8963,12 +8968,12 @@ msgstr "Výchozí nastavení hry"
 #. TRANSLATION: flycast/vitaquake3
 msgctxt "game_options"
 msgid "AUTO LOAD ON GAME LAUNCH"
-msgstr "Auto. načítání při spuštění hry"
+msgstr "AUTO. NAČÍTÁNÍ PŘI SPUŠTĚNÍ HRY"
 
 #. TRANSLATION: flycast/vitaquake3
 msgctxt "game_options"
 msgid "AUTO SAVE ON GAME EXIT"
-msgstr "Auto. ukládání při ukončení hry"
+msgstr "AUTO. UKLÁDÁNÍ PŘI UKONČENÍ HRY"
 
 #. TRANSLATION: flycast/vitaquake3, flycast/vitaquake3, flycast/vitaquake3, flycast/vitaquake3
 msgctxt "game_options"
@@ -8978,7 +8983,7 @@ msgstr "Zvolte druhý balíček funkcí pro ovladač."
 #. TRANSLATION: flycast/vitaquake3
 msgctxt "game_options"
 msgid "CONTROLLER 1 FEATURE PACK"
-msgstr "Balíček funkcí ovladače 1"
+msgstr "BALÍČEK FUNKCÍ OVLADAČE 1"
 
 #. TRANSLATION: flycast/vitaquake3, flycast/vitaquake3, flycast/vitaquake3, flycast/vitaquake3
 msgctxt "game_options"
@@ -8993,17 +8998,17 @@ msgstr "Purupuru balíček/Vibrační balíček"
 #. TRANSLATION: flycast/vitaquake3
 msgctxt "game_options"
 msgid "CONTROLLER 2 FEATURE PACK"
-msgstr "Balíček funkcí ovladače  2"
+msgstr "BALÍČEK FUNKCÍ OVLADAČE 2"
 
 #. TRANSLATION: flycast/vitaquake3
 msgctxt "game_options"
 msgid "CONTROLLER 3 FEATURE PACK"
-msgstr "Balíček funkcí ovladače  3"
+msgstr "BALÍČEK FUNKCÍ OVLADAČE  3"
 
 #. TRANSLATION: flycast/vitaquake3
 msgctxt "game_options"
 msgid "CONTROLLER 4 FEATURE PACK"
-msgstr "Balíček funkcí ovladače  4"
+msgstr "BALÍČEK FUNKCÍ OVLADAČE  4"
 
 #. TRANSLATION: flycast/vitaquake3
 msgctxt "game_options"
@@ -9885,7 +9890,7 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "ANTI-BLUR"
-msgstr "Anti-Blur"
+msgstr "ANTI-BLUR"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -10243,7 +10248,7 @@ msgstr ""
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "AUTO FRAMESKIP"
-msgstr "Auto. přeskočení snímku"
+msgstr "AUTO. PŘESKOČENÍ SNÍMKU"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -10542,7 +10547,7 @@ msgstr "Vypnout (rychlejší, nestabilní)"
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTER"
-msgstr "Anizotropní filtr"
+msgstr "ANIZOTROPNÍ FILTR"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10730,13 +10735,18 @@ msgstr "VÍCEVLÁKNOVÝ RSX"
 msgctxt "game_options"
 msgid ""
 "Stream texture to GPU in parallel. Can improve performance on more powerful "
-"GPU's."
+"GPU's that have spare headroom."
 msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ASYNCHRONOUS TEXTURE STREAMING"
-msgstr "Asynchronní streamování textur"
+msgstr "ASYNCHRONNÍ STREAMOVÁNÍ TEXTUR"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "On (Vulkan Only)"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11433,7 +11443,7 @@ msgstr "NE (VÝCHOZÍ)"
 #. TRANSLATION: vice, tsugaru
 msgctxt "game_options"
 msgid "YES"
-msgstr "Ano"
+msgstr "ANO"
 
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
@@ -11443,7 +11453,7 @@ msgstr "RYCHLOST CD-ROMU"
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
 msgid "AUTO (DEFAULT)"
-msgstr "Auto. (výchozí)"
+msgstr "AUTO. (VÝCHOZÍ)"
 
 #. TRANSLATION: tsugaru
 msgctxt "game_options"
@@ -12582,7 +12592,7 @@ msgstr "Mono"
 #. TRANSLATION: yuzu
 msgctxt "game_options"
 msgid "ASYNC SHADER COMPILE"
-msgstr "Asynchronní kompilace Shaderu"
+msgstr "ASYNCHRONNÍ KOMPILACE SHADERU"
 
 #. TRANSLATION: yuzu
 msgctxt "game_options"
@@ -13507,7 +13517,7 @@ msgstr "Povolení / zakázání automatického zaměřování."
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "AUTO AIM"
-msgstr "Auto. zaměření"
+msgstr "AUTO. CÍL"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -13522,7 +13532,7 @@ msgstr "ZOBRAZIT TAJNÉ ZPRÁVY"
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "AUTOMATICALLY RUN"
-msgstr "Automaticky spustit"
+msgstr "AUTO. SPUSTIT"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -13643,7 +13653,7 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "XBOX LIVE ARCADE"
-msgstr "Arkáda XBOX Live"
+msgstr "XBOX LIVE ARCADE"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -13936,7 +13946,7 @@ msgstr ""
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Buy extraball for a credit"
-msgstr ""
+msgstr "Koupit extraball za kredit"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -14171,7 +14181,7 @@ msgstr "Rychle vpřed"
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Pause / Menu"
-msgstr ""
+msgstr "Pauza / Menu"
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
@@ -14798,7 +14808,7 @@ msgstr "Rychlé uložení"
 
 #~ msgctxt "game_options"
 #~ msgid "ANALOG DEADZONE"
-#~ msgstr "Analogová mrtvá zóna"
+#~ msgstr "ANALOGOVÁ MRTVÁ ZÓNA"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR PALETTE (2D)"
@@ -14850,7 +14860,7 @@ msgstr "Rychlé uložení"
 
 #~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
-#~ msgstr "Auto. výška"
+#~ msgstr "AUTO. VÝŠKA"
 
 #~ msgctxt "game_options"
 #~ msgid "GamePad + 4 Sideway Wiimote"
@@ -14994,13 +15004,6 @@ msgstr "Rychlé uložení"
 #~ "blikání."
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Stream texture to GPU in parrallel. Can improve performance on more "
-#~ "powerful GPU's."
-#~ msgstr ""
-#~ "Přenos textur do GPU paralelně. Může zlepšit výkon na výkonnějších GPU."
-
-#~ msgctxt "game_options"
 #~ msgid "Legacy Evdev"
 #~ msgstr "Legacy Evdev"
 
@@ -15090,6 +15093,14 @@ msgstr "Rychlé uložení"
 #~ msgid "OpenGLES (Default)"
 #~ msgstr "OpenGLES (Výchozí)"
 
+#~ msgctxt "game_options"
+#~ msgid "Enable triple buffering."
+#~ msgstr "Povolit trojitý buffering."
+
+#~ msgctxt "game_options"
+#~ msgid "TRIPLE BUFFERING"
+#~ msgstr "TROJITÝ BUFFERING"
+
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Otevřít menu Dolphin-triforce"
@@ -15101,6 +15112,14 @@ msgstr "Rychlé uložení"
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Uložení pozice Slot 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Restart hry"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Další disk (m3u)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
@@ -15198,13 +15217,12 @@ msgstr "Rychlé uložení"
 #~ msgid "FastForward"
 #~ msgstr "Rychle vpřed"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Restart hry"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Další disk (m3u)"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's."
+#~ msgstr ""
+#~ "Přenos textur do GPU paralelně. Může zlepšit výkon na výkonnějších GPU."
 
 #~ msgctxt "game_options"
 #~ msgid "Set the sensitivity of the joystick analog sticks."

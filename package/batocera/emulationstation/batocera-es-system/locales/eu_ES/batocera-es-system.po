@@ -6834,7 +6834,7 @@ msgctxt "game_options"
 msgid "160fps"
 msgstr "160fps"
 
-#. TRANSLATION: libretro/tyrquake, cemu, dolphin, dolphin_triforce, supermodel
+#. TRANSLATION: libretro/tyrquake, cemu, dolphin/vitaquake3, dolphin/vitaquake3, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "RUMBLE"
@@ -8271,6 +8271,11 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "MOUSE AS WII REMOTE POINTER"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Enable controller rumble capabilities if supported by the controller."
 msgstr ""
 
 #. TRANSLATION: dolphin, dolphin_triforce
@@ -10772,13 +10777,18 @@ msgstr "HARI ANITZEKO RSX-A"
 msgctxt "game_options"
 msgid ""
 "Stream texture to GPU in parallel. Can improve performance on more powerful "
-"GPU's."
+"GPU's that have spare headroom."
 msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ASYNCHRONOUS TEXTURE STREAMING"
 msgstr "TESTUREN JARIO ASINKRONOA"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "On (Vulkan Only)"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -15035,14 +15045,6 @@ msgstr "Gordetze Azkarra"
 #~ "API espezifikazio estriktoa. Grafikoen falta eta dardarak konpondu ditzake"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Stream texture to GPU in parrallel. Can improve performance on more "
-#~ "powerful GPU's."
-#~ msgstr ""
-#~ "GPU-ra testurak jario paraleloetan bidali. Eraginkortasuna hobetu dezake "
-#~ "GPU ahaltsuagoetan."
-
-#~ msgctxt "game_options"
 #~ msgid "Legacy Evdev"
 #~ msgstr "Evdev Legatua"
 
@@ -15144,6 +15146,14 @@ msgstr "Gordetze Azkarra"
 #~ msgstr "Gorde 1 Egoera Zirrikitua"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Jokoa berhasieratu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Hurrengo diska (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad Gora"
 
@@ -15239,13 +15249,13 @@ msgstr "Gordetze Azkarra"
 #~ msgid "FastForward"
 #~ msgstr "Aurrera Azkar"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Jokoa berhasieratu"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Hurrengo diska (m3u)"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's."
+#~ msgstr ""
+#~ "GPU-ra testurak jario paraleloetan bidali. Eraginkortasuna hobetu dezake "
+#~ "GPU ahaltsuagoetan."
 
 #~ msgctxt "game_options"
 #~ msgid "Set the sensitivity of the joystick analog sticks."

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2023-12-04 18:00+0000\n"
+"PO-Revision-Date: 2023-12-10 00:13+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -6832,7 +6832,7 @@ msgctxt "game_options"
 msgid "160fps"
 msgstr "160fps"
 
-#. TRANSLATION: libretro/tyrquake, cemu, dolphin, dolphin_triforce, supermodel
+#. TRANSLATION: libretro/tyrquake, cemu, dolphin/vitaquake3, dolphin/vitaquake3, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "RUMBLE"
@@ -8270,6 +8270,11 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "MOUSE AS WII REMOTE POINTER"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Enable controller rumble capabilities if supported by the controller."
 msgstr ""
 
 #. TRANSLATION: dolphin, dolphin_triforce
@@ -10790,13 +10795,18 @@ msgstr "MULTITHREADED RSX"
 msgctxt "game_options"
 msgid ""
 "Stream texture to GPU in parallel. Can improve performance on more powerful "
-"GPU's."
+"GPU's that have spare headroom."
 msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ASYNCHRONOUS TEXTURE STREAMING"
 msgstr "ASYNCHRONE TEXTUURSTREAMING"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "On (Vulkan Only)"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -14243,7 +14253,7 @@ msgstr "Vooruitspoelen"
 #. TRANSLATION: psp.ppsspp.keys
 msgctxt "keys_files"
 msgid "Pause / Menu"
-msgstr ""
+msgstr "Pauze / Menu"
 
 #. TRANSLATION: ionfury.keys, prboom.lzdoom.keys, prboom.gzdoom.keys, eduke32.keys, raze.keys
 msgctxt "keys_files"
@@ -15069,14 +15079,6 @@ msgstr "Snel Opslaan"
 #~ "afbeeldingen en flikkeringen oplossen."
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Stream texture to GPU in parrallel. Can improve performance on more "
-#~ "powerful GPU's."
-#~ msgstr ""
-#~ "Stream textuur parallel naar GPU. Kan de prestaties verbeteren op "
-#~ "krachtigere GPU's."
-
-#~ msgctxt "game_options"
 #~ msgid "Legacy Evdev"
 #~ msgstr "Legacy Evdev"
 
@@ -15167,6 +15169,14 @@ msgstr "Snel Opslaan"
 #~ msgid "OpenGLES (Default)"
 #~ msgstr "OpenGLES (Standaard)"
 
+#~ msgctxt "game_options"
+#~ msgid "Enable triple buffering."
+#~ msgstr "Schakel drievoudige buffering in."
+
+#~ msgctxt "game_options"
+#~ msgid "TRIPLE BUFFERING"
+#~ msgstr "Drievoudige Buffering"
+
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Open het menu van Dolphin-triforce"
@@ -15178,6 +15188,14 @@ msgstr "Snel Opslaan"
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Save State Slot 1"
+
+#~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Herstart Spel"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Volgende Disk (m3u)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
@@ -15275,10 +15293,10 @@ msgstr "Snel Opslaan"
 #~ msgid "FastForward"
 #~ msgstr "Vooruitspoelen"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Herstart Spel"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Volgende Disk (m3u)"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's."
+#~ msgstr ""
+#~ "Stream textuur parallel naar GPU. Kan de prestaties verbeteren op "
+#~ "krachtigere GPU's."

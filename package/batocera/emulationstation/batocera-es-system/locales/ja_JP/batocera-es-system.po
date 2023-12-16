@@ -6782,7 +6782,7 @@ msgctxt "game_options"
 msgid "160fps"
 msgstr "160fps"
 
-#. TRANSLATION: libretro/tyrquake, cemu, dolphin, dolphin_triforce, supermodel
+#. TRANSLATION: libretro/tyrquake, cemu, dolphin/vitaquake3, dolphin/vitaquake3, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "振動機能"
@@ -8205,6 +8205,11 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "MOUSE AS WII REMOTE POINTER"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Enable controller rumble capabilities if supported by the controller."
 msgstr ""
 
 #. TRANSLATION: dolphin, dolphin_triforce
@@ -10673,13 +10678,18 @@ msgstr "マルチスレッド RSX"
 msgctxt "game_options"
 msgid ""
 "Stream texture to GPU in parallel. Can improve performance on more powerful "
-"GPU's."
+"GPU's that have spare headroom."
 msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ASYNCHRONOUS TEXTURE STREAMING"
 msgstr "非同期テクスチャ ストリーミング"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "On (Vulkan Only)"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -14906,14 +14916,6 @@ msgstr "クイック セーブ"
 #~ "厳密な API 仕様。グラフィックの欠落やちらつきのまれなケースを解決できます"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Stream texture to GPU in parrallel. Can improve performance on more "
-#~ "powerful GPU's."
-#~ msgstr ""
-#~ "テクスチャを並列で GPU にストリーミングします。より強力な GPU でを向上させ"
-#~ "ることができます"
-
-#~ msgctxt "game_options"
 #~ msgid "Legacy Evdev"
 #~ msgstr "レガシー Evdev"
 
@@ -15014,6 +15016,14 @@ msgstr "クイック セーブ"
 #~ msgstr "ステートセーブ - スロット  1"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "ゲームを再開"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "次のディスク (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Joy2Pad 上"
 
@@ -15109,13 +15119,13 @@ msgstr "クイック セーブ"
 #~ msgid "FastForward"
 #~ msgstr "早送り"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "ゲームを再開"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "次のディスク (m3u)"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's."
+#~ msgstr ""
+#~ "テクスチャを並列で GPU にストリーミングします。より強力な GPU でを向上させ"
+#~ "ることができます"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the sensitivity of the joystick analog sticks."

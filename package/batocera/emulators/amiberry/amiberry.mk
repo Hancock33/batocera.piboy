@@ -3,11 +3,11 @@
 # amiberry
 #
 ################################################################################
-# Version: Commits on Dec 10, 2023
-AMIBERRY_VERSION = f4fac4eb9c644c128d31941df1dc3a2f6e65be95
+# Version: Commits on Dec 16, 2023
+AMIBERRY_VERSION = d7d2bc8d5adca57ebf16bdc0a44414f2864ce311
 AMIBERRY_SITE = $(call github,BlitterStudio,amiberry,$(AMIBERRY_VERSION))
 AMIBERRY_LICENSE = GPLv3
-AMIBERRY_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf mpg123 libxml2 libmpeg2 flac libpng libserialport
+AMIBERRY_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf mpg123 libxml2 libmpeg2 flac libpng libserialport portmidi
 
 ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)
 	AMIBERRY_DEPENDENCIES += rpi-userland
@@ -66,26 +66,6 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RISCV),y)
 	AMIBERRY_BATOCERA_SYSTEM=riscv64
 endif
 
-define AMIBERRY_CONFIGURE_PI
-	sed -i "s+/opt/vc+$(STAGING_DIR)/usr+g" $(@D)/Makefile
-	sed -i "s+xml2-config+$(STAGING_DIR)/usr/bin/xml2-config+g" $(@D)/Makefile
-endef
-
-AMIBERRY_PRE_CONFIGURE_HOOKS += AMIBERRY_CONFIGURE_PI
-
-define AMIBERRY_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) \
-		CPP="$(TARGET_CPP)" \
-		CXX="$(TARGET_CXX)" \
-		CC="$(TARGET_CC)" \
-		AS="$(TARGET_CC)" \
-		LD="$(TARGET_LD)" \
-		STRIP="$(TARGET_STRIP)" \
-		SDL_CONFIG=$(STAGING_DIR)/usr/bin/sdl2-config \
-		-C $(@D) \
-		-f Makefile \
-		PLATFORM=$(AMIBERRY_BATOCERA_SYSTEM)
-endef
 
 define AMIBERRY_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/amiberry $(TARGET_DIR)/usr/bin/amiberry
@@ -112,4 +92,4 @@ endef
 
 AMIBERRY_POST_INSTALL_TARGET_HOOKS = AMIBERRY_EVMAP
 
-$(eval $(generic-package))
+$(eval $(cmake-package))
