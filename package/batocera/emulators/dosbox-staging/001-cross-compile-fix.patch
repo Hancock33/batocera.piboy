@@ -124,7 +124,7 @@ index f6d8757c2..000000000
 -    return 0;
 -}
 diff --git a/meson.build b/meson.build
-index df33d2e43..cf486b639 100644
+index 9f3520172..69d3aed62 100644
 --- a/meson.build
 +++ b/meson.build
 @@ -283,6 +283,9 @@ conf_data.set10('C_TRACY', get_option('tracy'))
@@ -190,7 +190,7 @@ index df33d2e43..cf486b639 100644
  
  set_prio_code = '''
  #include <sys/resource.h>
-@@ -921,6 +911,17 @@ if host_machine.system() == 'darwin'
+@@ -900,6 +890,17 @@ if host_machine.system() == 'darwin'
          warning('''Core Services disabled because Frameworks is missing''')
      endif
      summary('CoreServices support', coreservices_dep.found())
@@ -208,7 +208,7 @@ index df33d2e43..cf486b639 100644
  endif
  
  # Determine if system is capable of using ManyMouse library
-@@ -980,6 +981,10 @@ if host_machine.system() in ['windows', 'cygwin']
+@@ -959,6 +960,10 @@ if host_machine.system() in ['windows', 'cygwin']
      summary('Windows Multimedia support', winmm_dep.found())
  endif
  
