@@ -3,8 +3,8 @@
 # libretro-mrboom
 #
 ################################################################################
-# Version: Commits on Nov 15, 2023
-LIBRETRO_MRBOOM_VERSION = 87368124430174a501484bad8dbd4284859c0853
+# Version: Commits on Dec 16, 2023
+LIBRETRO_MRBOOM_VERSION = e47197ce6bf304567c7c332afe6b2044cf19b715
 LIBRETRO_MRBOOM_SITE = https://github.com/Javanaise/mrboom-libretro.git
 LIBRETRO_MRBOOM_SITE_METHOD=git
 LIBRETRO_MRBOOM_GIT_SUBMODULES=YES

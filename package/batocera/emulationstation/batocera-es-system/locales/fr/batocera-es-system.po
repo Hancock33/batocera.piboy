@@ -6837,7 +6837,7 @@ msgctxt "game_options"
 msgid "160fps"
 msgstr "160fps"
 
-#. TRANSLATION: libretro/tyrquake, cemu, dolphin, dolphin_triforce, supermodel
+#. TRANSLATION: libretro/tyrquake, cemu, dolphin/vitaquake3, dolphin/vitaquake3, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "VIBRATION"
@@ -8278,6 +8278,11 @@ msgstr ""
 #. TRANSLATION: dolphin/vitaquake3
 msgctxt "game_options"
 msgid "MOUSE AS WII REMOTE POINTER"
+msgstr ""
+
+#. TRANSLATION: dolphin/vitaquake3, dolphin/vitaquake3
+msgctxt "game_options"
+msgid "Enable controller rumble capabilities if supported by the controller."
 msgstr ""
 
 #. TRANSLATION: dolphin, dolphin_triforce
@@ -10791,13 +10796,18 @@ msgstr "RSX MULTI-THREADÉ"
 msgctxt "game_options"
 msgid ""
 "Stream texture to GPU in parallel. Can improve performance on more powerful "
-"GPU's."
+"GPU's that have spare headroom."
 msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ASYNCHRONOUS TEXTURE STREAMING"
 msgstr "ENVOI DE LA TEXTURE EN ASYNCHRONE"
+
+#. TRANSLATION: rpcs3
+msgctxt "game_options"
+msgid "On (Vulkan Only)"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -15073,14 +15083,6 @@ msgstr "Sauvegarde rapide"
 #~ "graphismes sont manquants ou scintillants."
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Stream texture to GPU in parrallel. Can improve performance on more "
-#~ "powerful GPU's."
-#~ msgstr ""
-#~ "Envoi de la texture au GPU en parallèle. Cela améliore les performances "
-#~ "sur les GPUs puissants."
-
-#~ msgctxt "game_options"
 #~ msgid "Legacy Evdev"
 #~ msgstr "Ancien Evdev"
 
@@ -15185,6 +15187,14 @@ msgstr "Sauvegarde rapide"
 #~ msgstr "Ecrire la sauvegarde d'état à l'emplacement 1"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restart Game"
+#~ msgstr "Redémarrer le jeu"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next Disc (m3u)"
+#~ msgstr "Disque suivant (m3u)"
+
+#~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Up"
 #~ msgstr "Haut Joy2Pad"
 
@@ -15280,13 +15290,13 @@ msgstr "Sauvegarde rapide"
 #~ msgid "FastForward"
 #~ msgstr "Avance rapide"
 
-#~ msgctxt "keys_files"
-#~ msgid "Restart Game"
-#~ msgstr "Redémarrer le jeu"
-
-#~ msgctxt "keys_files"
-#~ msgid "Next Disc (m3u)"
-#~ msgstr "Disque suivant (m3u)"
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's."
+#~ msgstr ""
+#~ "Envoi de la texture au GPU en parallèle. Cela améliore les performances "
+#~ "sur les GPUs puissants."
 
 #~ msgctxt "game_options"
 #~ msgid "Set the sensitivity of the joystick analog sticks."
