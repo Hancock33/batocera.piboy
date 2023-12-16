@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index 147dead9..9134bd6f 100644
+index 3071e948..9134bd6f 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,191 +9,280 @@ namespace PlatformIds
+@@ -9,192 +9,280 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -375,6 +375,7 @@ index 147dead9..9134bd6f 100644
 -		{ "easyrpg",				EASYRPG },			
 -		{ "pet",					COMMODORE_PET },
 -		{ "cpet",					COMMODORE_PET },
+-		{ "cplus4",					COMMODORE_PLUS4 },
 -		{ "atom",					ACORN_ATOM },
 -		{ "bbcmicro",				ACORN_BBC_MICRO },
 -		{ "bbc",					ACORN_BBC_MICRO },
@@ -419,10 +420,10 @@ index 147dead9..9134bd6f 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index c0ca8912..63e01ea6 100644
+index 1ca6fffd..63e01ea6 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
-@@ -11,162 +11,250 @@ namespace PlatformIds
+@@ -11,163 +11,250 @@ namespace PlatformIds
  	{
  		PLATFORM_UNKNOWN = 0,
  
@@ -695,6 +696,7 @@ index c0ca8912..63e01ea6 100644
  		SUPER_CASSETTE_VISION,
 -		EASYRPG,
 -		COMMODORE_PET,
+-		COMMODORE_PLUS4,
 -		ACORN_ATOM,
 -		ACORN_BBC_MICRO,
 -		ACORN_ELECTRON,		
@@ -780,10 +782,10 @@ index c0ca8912..63e01ea6 100644
  		TEKNOPARROT,
  
 diff --git a/es-app/src/scrapers/GamesDBJSONScraper.cpp b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-index 3e88fe3d..1390f3cb 100644
+index 66de7c31..1390f3cb 100644
 --- a/es-app/src/scrapers/GamesDBJSONScraper.cpp
 +++ b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-@@ -38,10 +38,8 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+@@ -38,11 +38,8 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ ATARI_LYNX, "4924" },
  	{ ATARI_ST, "4937" },
  	{ ATARI_XE, "30" },
@@ -791,10 +793,11 @@ index 3e88fe3d..1390f3cb 100644
  	{ COLECOVISION, "31" },	
  	{ COMMODORE_64, "40" },
 -	{ COMMODORE_PET, "5008" },
+-	{ COMMODORE_PLUS4, "5007" },
  	{ INTELLIVISION, "32" },
  	{ MAC_OS, "37" },
  	{ XBOX, "14" },
-@@ -70,7 +68,6 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+@@ -71,7 +68,6 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ SEGA_GENESIS, "18" },
  	{ SEGA_MASTER_SYSTEM, "35" },
  	{ SEGA_MEGA_DRIVE, "36" },
@@ -802,7 +805,7 @@ index 3e88fe3d..1390f3cb 100644
  	{ SEGA_SATURN, "17" },
  	{ SEGA_SG1000, "4949" },
  	{ PLAYSTATION, "10" },
-@@ -105,17 +102,17 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+@@ -106,17 +102,17 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ VIC20, "4945" },
  	{ CHANNELF, "4928" },
  	{ SAMCOUPE, "4979" },
@@ -825,7 +828,7 @@ index 3e88fe3d..1390f3cb 100644
  	// 1 = PC
  	{ PC, "1" },
  	{ MOONLIGHT, "1" },
-@@ -143,7 +140,13 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+@@ -144,7 +140,13 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ CREATONIC_MEGA_DUCK, "4948" },
  	{ TOMY_TUTOR, "4960" },
  	{ APF_MP_1000, "4969" },
@@ -841,7 +844,7 @@ index 3e88fe3d..1390f3cb 100644
  	/* Non existing systems
  	{ AMIGACDTV, "129" },
 diff --git a/es-app/src/scrapers/HfsDBScraper.cpp b/es-app/src/scrapers/HfsDBScraper.cpp
-index 091cb7d8..2e8045d4 100644
+index b3d1f138..2e8045d4 100644
 --- a/es-app/src/scrapers/HfsDBScraper.cpp
 +++ b/es-app/src/scrapers/HfsDBScraper.cpp
 @@ -74,7 +74,6 @@ const std::map<PlatformId, std::string> hfsdb_platformids
@@ -852,19 +855,11 @@ index 091cb7d8..2e8045d4 100644
  	{ THOMSON_TO_MO, "183673" },
  	{ MSX, "113089" },
  	{ NOKIA_NGAGE, "128704" },
-@@ -94,6 +93,7 @@ const std::map<PlatformId, std::string> hfsdb_platformids
- 	{ TURBOGRAFX_16, "30273" },
- 	{ TURBOGRAFX_CD, "138489" },
- 	{ COMMODORE_PET, "240850" },
-+	{ COMMODORE_PLUS4, "240851" },
- 	{ PLAYSTATION_3, "91841" },
- 	{ PLAYSTATION_2, "83494" },
- 	{ PLAYSTATION_VITA, "91844" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index d991e2aa..29f1acae 100644
+index 6d8b7120..29f1acae 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -36,156 +36,235 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
+@@ -36,157 +36,235 @@ std::string ScreenScraperRequest::ensureUrl(const std::string url)
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
@@ -1183,6 +1178,7 @@ index d991e2aa..29f1acae 100644
 +	{ PICO8, 234 },
 +	{ POCKCHALV2, 237 },
  	{ COMMODORE_PET, 240 },
+-	{ COMMODORE_PLUS4, 99 },
 -	{ ACORN_ATOM, 36 },
 -	{ NOKIA_NGAGE, 30 },
 -	{ ACORN_BBC_MICRO, 37 },

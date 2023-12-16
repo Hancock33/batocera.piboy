@@ -1,8 +1,8 @@
 diff --git a/es-core/src/InputConfig.cpp b/es-core/src/InputConfig.cpp
-index 2056a9e7..ad825625 100644
+index 94dea544..a173881d 100644
 --- a/es-core/src/InputConfig.cpp
 +++ b/es-core/src/InputConfig.cpp
-@@ -272,6 +272,10 @@ void InputConfig::writeToXML(pugi::xml_node& parent)
+@@ -304,6 +304,10 @@ void InputConfig::writeToXML(pugi::xml_node& parent)
  		input.append_attribute("type") = inputTypeToString(iterator->second.type).c_str();
  		input.append_attribute("id").set_value(iterator->second.id);
  		input.append_attribute("value").set_value(iterator->second.value);
@@ -14,7 +14,7 @@ index 2056a9e7..ad825625 100644
  }
  
 diff --git a/es-core/src/InputConfig.h b/es-core/src/InputConfig.h
-index bbaff22f..ef7f75c3 100644
+index dad3893e..fdc040ff 100644
 --- a/es-core/src/InputConfig.h
 +++ b/es-core/src/InputConfig.h
 @@ -42,6 +42,7 @@ public:
@@ -60,7 +60,7 @@ index bbaff22f..ef7f75c3 100644
  
  class InputConfig
 diff --git a/es-core/src/InputManager.cpp b/es-core/src/InputManager.cpp
-index 250143b7..044572f8 100644
+index 443947a1..6d8d26d5 100644
 --- a/es-core/src/InputManager.cpp
 +++ b/es-core/src/InputManager.cpp
 @@ -1221,6 +1221,7 @@ std::string InputManager::configureEmulators() {
