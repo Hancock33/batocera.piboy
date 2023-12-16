@@ -1,0 +1,1115 @@
+diff --git a/src/core/cpu_core.cpp b/src/core/cpu_core.cpp
+index 6b0f6e15..2f399feb 100644
+--- a/src/core/cpu_core.cpp
++++ b/src/core/cpu_core.cpp
+@@ -10,11 +10,11 @@
+ #include "cpu_code_cache_private.h"
+ #include "cpu_core_private.h"
+ #include "cpu_disasm.h"
+-#include "cpu_pgxp.h"
+ #include "cpu_recompiler_thunks.h"
+ #include "gte.h"
+ #include "host.h"
+ #include "pcdrv.h"
++#include "cpu_pgxp.h"
+ #include "settings.h"
+ #include "system.h"
+ #include "timing_event.h"
+@@ -920,250 +920,236 @@ restart_instruction:
+       {
+         case InstructionFunct::sll:
+         {
+-          const u32 rtVal = ReadReg(inst.r.rt);
+-          const u32 rdVal = rtVal << inst.r.shamt;
+-          WriteReg(inst.r.rd, rdVal);
+-
++          const u32 new_value = ReadReg(inst.r.rt) << inst.r.shamt;
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_SLL(inst.bits, rtVal);
++            PGXP::CPU_SLL(inst.bits, ReadReg(inst.r.rt));
++
++          WriteReg(inst.r.rd, new_value);
+         }
+         break;
+ 
+         case InstructionFunct::srl:
+         {
+-          const u32 rtVal = ReadReg(inst.r.rt);
+-          const u32 rdVal = rtVal >> inst.r.shamt;
+-          WriteReg(inst.r.rd, rdVal);
+-
++          const u32 new_value = ReadReg(inst.r.rt) >> inst.r.shamt;
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_SRL(inst.bits, rtVal);
++            PGXP::CPU_SRL(inst.bits, ReadReg(inst.r.rt));
++
++          WriteReg(inst.r.rd, new_value);
+         }
+         break;
+ 
+         case InstructionFunct::sra:
+         {
+-          const u32 rtVal = ReadReg(inst.r.rt);
+-          const u32 rdVal = static_cast<u32>(static_cast<s32>(rtVal) >> inst.r.shamt);
+-          WriteReg(inst.r.rd, rdVal);
+-
++          const u32 new_value = static_cast<u32>(static_cast<s32>(ReadReg(inst.r.rt)) >> inst.r.shamt);
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_SRA(inst.bits, rtVal);
++            PGXP::CPU_SRA(inst.bits, ReadReg(inst.r.rt));
++
++          WriteReg(inst.r.rd, new_value);
+         }
+         break;
+ 
+         case InstructionFunct::sllv:
+         {
+-          const u32 rtVal = ReadReg(inst.r.rt);
+-          const u32 shamt = ReadReg(inst.r.rs) & UINT32_C(0x1F);
+-          const u32 rdVal = rtVal << shamt;
++          const u32 shift_amount = ReadReg(inst.r.rs) & UINT32_C(0x1F);
++          const u32 new_value = ReadReg(inst.r.rt) << shift_amount;
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_SLLV(inst.bits, rtVal, shamt);
++            PGXP::CPU_SLLV(inst.bits, ReadReg(inst.r.rt), shift_amount);
+ 
+-          WriteReg(inst.r.rd, rdVal);
++          WriteReg(inst.r.rd, new_value);
+         }
+         break;
+ 
+         case InstructionFunct::srlv:
+         {
+-          const u32 rtVal = ReadReg(inst.r.rt);
+-          const u32 shamt = ReadReg(inst.r.rs) & UINT32_C(0x1F);
+-          const u32 rdVal = rtVal >> shamt;
+-          WriteReg(inst.r.rd, rdVal);
+-
++          const u32 shift_amount = ReadReg(inst.r.rs) & UINT32_C(0x1F);
++          const u32 new_value = ReadReg(inst.r.rt) >> shift_amount;
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_SRLV(inst.bits, rtVal, shamt);
++            PGXP::CPU_SRLV(inst.bits, ReadReg(inst.r.rt), shift_amount);
++
++          WriteReg(inst.r.rd, new_value);
+         }
+         break;
+ 
+         case InstructionFunct::srav:
+         {
+-          const u32 rtVal = ReadReg(inst.r.rt);
+-          const u32 shamt = ReadReg(inst.r.rs) & UINT32_C(0x1F);
+-          const u32 rdVal = static_cast<u32>(static_cast<s32>(rtVal) >> shamt);
+-          WriteReg(inst.r.rd, rdVal);
+-
++          const u32 shift_amount = ReadReg(inst.r.rs) & UINT32_C(0x1F);
++          const u32 new_value = static_cast<u32>(static_cast<s32>(ReadReg(inst.r.rt)) >> shift_amount);
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_SRAV(inst.bits, rtVal, shamt);
++            PGXP::CPU_SRAV(inst.bits, ReadReg(inst.r.rt), shift_amount);
++
++          WriteReg(inst.r.rd, new_value);
+         }
+         break;
+ 
+         case InstructionFunct::and_:
+         {
+-          const u32 rsVal = ReadReg(inst.r.rs);
+-          const u32 rtVal = ReadReg(inst.r.rt);
+-          const u32 new_value = rsVal & rtVal;
+-          WriteReg(inst.r.rd, new_value);
+-
++          const u32 new_value = ReadReg(inst.r.rs) & ReadReg(inst.r.rt);
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_AND_(inst.bits, rsVal, rtVal);
++            PGXP::CPU_AND_(inst.bits, ReadReg(inst.r.rs), ReadReg(inst.r.rt));
++
++          WriteReg(inst.r.rd, new_value);
+         }
+         break;
+ 
+         case InstructionFunct::or_:
+         {
+-          const u32 rsVal = ReadReg(inst.r.rs);
+-          const u32 rtVal = ReadReg(inst.r.rt);
+-          const u32 new_value = rsVal | rtVal;
+-          WriteReg(inst.r.rd, new_value);
+-
++          const u32 new_value = ReadReg(inst.r.rs) | ReadReg(inst.r.rt);
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_OR_(inst.bits, rsVal, rtVal);
+-          else if constexpr (pgxp_mode >= PGXPMode::Memory)
+-            PGXP::TryMove(inst.r.rd, inst.r.rs, inst.r.rt);
++            PGXP::CPU_OR_(inst.bits, ReadReg(inst.r.rs), ReadReg(inst.r.rt));
++
++          WriteReg(inst.r.rd, new_value);
+         }
+         break;
+ 
+         case InstructionFunct::xor_:
+         {
+-          const u32 rsVal = ReadReg(inst.r.rs);
+-          const u32 rtVal = ReadReg(inst.r.rt);
+-          const u32 new_value = rsVal ^ rtVal;
+-          WriteReg(inst.r.rd, new_value);
+-
++          const u32 new_value = ReadReg(inst.r.rs) ^ ReadReg(inst.r.rt);
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_XOR_(inst.bits, rsVal, rtVal);
+-          else if constexpr (pgxp_mode >= PGXPMode::Memory)
+-            PGXP::TryMove(inst.r.rd, inst.r.rs, inst.r.rt);
++            PGXP::CPU_XOR_(inst.bits, ReadReg(inst.r.rs), ReadReg(inst.r.rt));
++
++          WriteReg(inst.r.rd, new_value);
+         }
+         break;
+ 
+         case InstructionFunct::nor:
+         {
+-          const u32 rsVal = ReadReg(inst.r.rs);
+-          const u32 rtVal = ReadReg(inst.r.rt);
+-          const u32 new_value = ~(rsVal | rtVal);
+-          WriteReg(inst.r.rd, new_value);
+-
++          const u32 new_value = ~(ReadReg(inst.r.rs) | ReadReg(inst.r.rt));
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_NOR(inst.bits, rsVal, rtVal);
++            PGXP::CPU_NOR(inst.bits, ReadReg(inst.r.rs), ReadReg(inst.r.rt));
++
++          WriteReg(inst.r.rd, new_value);
+         }
+         break;
+ 
+         case InstructionFunct::add:
+         {
+-          const u32 rsVal = ReadReg(inst.r.rs);
+-          const u32 rtVal = ReadReg(inst.r.rt);
+-          const u32 rdVal = rsVal + rtVal;
+-          if (AddOverflow(rsVal, rtVal, rdVal))
++          const u32 old_value = ReadReg(inst.r.rs);
++          const u32 add_value = ReadReg(inst.r.rt);
++          const u32 new_value = old_value + add_value;
++          if (AddOverflow(old_value, add_value, new_value))
+           {
+             RaiseException(Exception::Ov);
+             return;
+           }
+ 
+-          WriteReg(inst.r.rd, rdVal);
+-
+           if constexpr (pgxp_mode == PGXPMode::CPU)
+-            PGXP::CPU_ADD(inst.bits, rsVal, rtVal);
++            PGXP::CPU_ADD(inst.bits, ReadReg(inst.r.rs), ReadReg(inst.r.rt));
+           else if constexpr (pgxp_mode >= PGXPMode::Memory)
+-            PGXP::TryMove(inst.r.rd, inst.r.rs, inst.r.rt);
++          {
++            if (add_value == 0)
++            {
++              PGXP::CPU_MOVE((static_cast<u32>(inst.r.rd.GetValue()) << 8) | static_cast<u32>(inst.r.rs.GetValue()),
++                             old_value);
++            }
++          }
++
++          WriteReg(inst.r.rd, new_value);
+         }
+         break;
+ 
+         case InstructionFunct::addu:
+         {
+-          const u32 rsVal = ReadReg(inst.r.rs);
+-          const u32 rtVal = ReadReg(inst.r.rt);
+-          const u32 rdVal = rsVal + rtVal;
+-          WriteReg(inst.r.rd, rdVal);
+-
++          const u32 old_value = ReadReg(inst.r.rs);
++          const u32 add_value = ReadReg(inst.r.rt);
++          const u32 new_value = old_value + add_value;
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_ADD(inst.bits, rsVal, rtVal);
++            PGXP::CPU_ADD(inst.bits, old_value, add_value);
+           else if constexpr (pgxp_mode >= PGXPMode::Memory)
+-            PGXP::TryMove(inst.r.rd, inst.r.rs, inst.r.rt);
++          {
++            if (add_value == 0)
++            {
++              PGXP::CPU_MOVE((static_cast<u32>(inst.r.rd.GetValue()) << 8) | static_cast<u32>(inst.r.rs.GetValue()),
++                             old_value);
++            }
++          }
++
++          WriteReg(inst.r.rd, new_value);
+         }
+         break;
+ 
+         case InstructionFunct::sub:
+         {
+-          const u32 rsVal = ReadReg(inst.r.rs);
+-          const u32 rtVal = ReadReg(inst.r.rt);
+-          const u32 rdVal = rsVal - rtVal;
+-          if (SubOverflow(rsVal, rtVal, rdVal))
++          const u32 old_value = ReadReg(inst.r.rs);
++          const u32 sub_value = ReadReg(inst.r.rt);
++          const u32 new_value = old_value - sub_value;
++          if (SubOverflow(old_value, sub_value, new_value))
+           {
+             RaiseException(Exception::Ov);
+             return;
+           }
+ 
+-          WriteReg(inst.r.rd, rdVal);
+-
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_SUB(inst.bits, rsVal, rtVal);
++            PGXP::CPU_SUB(inst.bits, ReadReg(inst.r.rs), ReadReg(inst.r.rt));
++
++          WriteReg(inst.r.rd, new_value);
+         }
+         break;
+ 
+         case InstructionFunct::subu:
+         {
+-          const u32 rsVal = ReadReg(inst.r.rs);
+-          const u32 rtVal = ReadReg(inst.r.rt);
+-          const u32 rdVal = rsVal - rtVal;
+-          WriteReg(inst.r.rd, rdVal);
+-
++          const u32 new_value = ReadReg(inst.r.rs) - ReadReg(inst.r.rt);
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_SUB(inst.bits, rsVal, rtVal);
++            PGXP::CPU_SUB(inst.bits, ReadReg(inst.r.rs), ReadReg(inst.r.rt));
++
++          WriteReg(inst.r.rd, new_value);
+         }
+         break;
+ 
+         case InstructionFunct::slt:
+         {
+-          const u32 rsVal = ReadReg(inst.r.rs);
+-          const u32 rtVal = ReadReg(inst.r.rt);
+-          const u32 result = BoolToUInt32(static_cast<s32>(rsVal) < static_cast<s32>(rtVal));
+-          WriteReg(inst.r.rd, result);
+-
++          const u32 result = BoolToUInt32(static_cast<s32>(ReadReg(inst.r.rs)) < static_cast<s32>(ReadReg(inst.r.rt)));
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_SLT(inst.bits, rsVal, rtVal);
++            PGXP::CPU_SLT(inst.bits, ReadReg(inst.r.rs), ReadReg(inst.r.rt));
++
++          WriteReg(inst.r.rd, result);
+         }
+         break;
+ 
+         case InstructionFunct::sltu:
+         {
+-          const u32 rsVal = ReadReg(inst.r.rs);
+-          const u32 rtVal = ReadReg(inst.r.rt);
+-          const u32 result = BoolToUInt32(rsVal < rtVal);
+-          WriteReg(inst.r.rd, result);
+-
++          const u32 result = BoolToUInt32(ReadReg(inst.r.rs) < ReadReg(inst.r.rt));
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_SLTU(inst.bits, rsVal, rtVal);
++            PGXP::CPU_SLTU(inst.bits, ReadReg(inst.r.rs), ReadReg(inst.r.rt));
++
++          WriteReg(inst.r.rd, result);
+         }
+         break;
+ 
+         case InstructionFunct::mfhi:
+         {
+-          const u32 value = g_state.regs.hi;
+-          WriteReg(inst.r.rd, value);
+-
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_MOVE(static_cast<u32>(inst.r.rd.GetValue()), static_cast<u32>(Reg::hi), value);
++            PGXP::CPU_MFHI(inst.bits, g_state.regs.hi);
++
++          WriteReg(inst.r.rd, g_state.regs.hi);
+         }
+         break;
+ 
+         case InstructionFunct::mthi:
+         {
+           const u32 value = ReadReg(inst.r.rs);
+-          g_state.regs.hi = value;
+-
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_MOVE(static_cast<u32>(Reg::hi), static_cast<u32>(inst.r.rs.GetValue()), value);
++            PGXP::CPU_MTHI(inst.bits, value);
++
++          g_state.regs.hi = value;
+         }
+         break;
+ 
+         case InstructionFunct::mflo:
+         {
+-          const u32 value = g_state.regs.lo;
+-          WriteReg(inst.r.rd, value);
+-
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+-            PGXP::CPU_MOVE(static_cast<u32>(inst.r.rd.GetValue()), static_cast<u32>(Reg::lo), value);
++            PGXP::CPU_MFLO(inst.bits, g_state.regs.lo);
++
++          WriteReg(inst.r.rd, g_state.regs.lo);
+         }
+         break;
+ 
+         case InstructionFunct::mtlo:
+         {
+           const u32 value = ReadReg(inst.r.rs);
+-          g_state.regs.lo = value;
+-
+           if constexpr (pgxp_mode == PGXPMode::CPU)
+-            PGXP::CPU_MOVE(static_cast<u32>(Reg::lo), static_cast<u32>(inst.r.rs.GetValue()), value);
++            PGXP::CPU_MTLO(inst.bits, value);
++
++          g_state.regs.lo = value;
+         }
+         break;
+ 
+@@ -1188,11 +1174,11 @@ restart_instruction:
+           const u32 rhs = ReadReg(inst.r.rt);
+           const u64 result = ZeroExtend64(lhs) * ZeroExtend64(rhs);
+ 
+-          g_state.regs.hi = Truncate32(result >> 32);
+-          g_state.regs.lo = Truncate32(result);
+-
+           if constexpr (pgxp_mode >= PGXPMode::CPU)
+             PGXP::CPU_MULTU(inst.bits, lhs, rhs);
++
++          g_state.regs.hi = Truncate32(result >> 32);
++          g_state.regs.lo = Truncate32(result);
+         }
+         break;
+ 
+@@ -1299,95 +1285,103 @@ restart_instruction:
+ 
+     case InstructionOp::andi:
+     {
+-      const u32 rsVal = ReadReg(inst.i.rs);
+-      const u32 new_value = rsVal & inst.i.imm_zext32();
+-      WriteReg(inst.i.rt, new_value);
++      const u32 new_value = ReadReg(inst.i.rs) & inst.i.imm_zext32();
+ 
+       if constexpr (pgxp_mode >= PGXPMode::CPU)
+-        PGXP::CPU_ANDI(inst.bits, rsVal);
++        PGXP::CPU_ANDI(inst.bits, ReadReg(inst.i.rs));
++
++      WriteReg(inst.i.rt, new_value);
+     }
+     break;
+ 
+     case InstructionOp::ori:
+     {
+-      const u32 rsVal = ReadReg(inst.i.rs);
+-      const u32 imm = inst.i.imm_zext32();
+-      const u32 rtVal = rsVal | imm;
+-      WriteReg(inst.i.rt, rtVal);
++      const u32 new_value = ReadReg(inst.i.rs) | inst.i.imm_zext32();
+ 
+       if constexpr (pgxp_mode >= PGXPMode::CPU)
+-        PGXP::CPU_ORI(inst.bits, rsVal);
+-      else if constexpr (pgxp_mode >= PGXPMode::Memory)
+-        PGXP::TryMoveImm(inst.r.rd, inst.r.rs, imm);
++        PGXP::CPU_ORI(inst.bits, ReadReg(inst.i.rs));
++
++      WriteReg(inst.i.rt, new_value);
+     }
+     break;
+ 
+     case InstructionOp::xori:
+     {
+-      const u32 rsVal = ReadReg(inst.i.rs);
+-      const u32 imm = inst.i.imm_zext32();
+-      const u32 new_value = ReadReg(inst.i.rs) ^ imm;
+-      WriteReg(inst.i.rt, new_value);
++      const u32 new_value = ReadReg(inst.i.rs) ^ inst.i.imm_zext32();
+ 
+       if constexpr (pgxp_mode >= PGXPMode::CPU)
+-        PGXP::CPU_XORI(inst.bits, rsVal);
+-      else if constexpr (pgxp_mode >= PGXPMode::Memory)
+-        PGXP::TryMoveImm(inst.r.rd, inst.r.rs, imm);
++        PGXP::CPU_XORI(inst.bits, ReadReg(inst.i.rs));
++
++      WriteReg(inst.i.rt, new_value);
+     }
+     break;
+ 
+     case InstructionOp::addi:
+     {
+-      const u32 rsVal = ReadReg(inst.i.rs);
+-      const u32 imm = inst.i.imm_sext32();
+-      const u32 rtVal = rsVal + imm;
+-      if (AddOverflow(rsVal, imm, rtVal))
++      const u32 old_value = ReadReg(inst.i.rs);
++      const u32 add_value = inst.i.imm_sext32();
++      const u32 new_value = old_value + add_value;
++      if (AddOverflow(old_value, add_value, new_value))
+       {
+         RaiseException(Exception::Ov);
+         return;
+       }
+ 
+-      WriteReg(inst.i.rt, rtVal);
+-
+       if constexpr (pgxp_mode >= PGXPMode::CPU)
+-        PGXP::CPU_ADDI(inst.bits, rsVal);
++        PGXP::CPU_ADDI(inst.bits, ReadReg(inst.i.rs));
+       else if constexpr (pgxp_mode >= PGXPMode::Memory)
+-        PGXP::TryMoveImm(inst.r.rd, inst.r.rs, imm);
++      {
++        if (add_value == 0)
++        {
++          PGXP::CPU_MOVE((static_cast<u32>(inst.i.rt.GetValue()) << 8) | static_cast<u32>(inst.i.rs.GetValue()),
++                         old_value);
++        }
++      }
++
++      WriteReg(inst.i.rt, new_value);
+     }
+     break;
+ 
+     case InstructionOp::addiu:
+     {
+-      const u32 rsVal = ReadReg(inst.i.rs);
+-      const u32 imm = inst.i.imm_sext32();
+-      const u32 rtVal = rsVal + imm;
+-      WriteReg(inst.i.rt, rtVal);
++      const u32 old_value = ReadReg(inst.i.rs);
++      const u32 add_value = inst.i.imm_sext32();
++      const u32 new_value = old_value + add_value;
+ 
+       if constexpr (pgxp_mode >= PGXPMode::CPU)
+-        PGXP::CPU_ADDI(inst.bits, rsVal);
++        PGXP::CPU_ADDI(inst.bits, ReadReg(inst.i.rs));
+       else if constexpr (pgxp_mode >= PGXPMode::Memory)
+-        PGXP::TryMoveImm(inst.r.rd, inst.r.rs, imm);
++      {
++        if (add_value == 0)
++        {
++          PGXP::CPU_MOVE((static_cast<u32>(inst.i.rt.GetValue()) << 8) | static_cast<u32>(inst.i.rs.GetValue()),
++                         old_value);
++        }
++      }
++
++      WriteReg(inst.i.rt, new_value);
+     }
+     break;
+ 
+     case InstructionOp::slti:
+     {
+-      const u32 rsVal = ReadReg(inst.i.rs);
+-      const u32 result = BoolToUInt32(static_cast<s32>(rsVal) < static_cast<s32>(inst.i.imm_sext32()));
+-      WriteReg(inst.i.rt, result);
++      const u32 result = BoolToUInt32(static_cast<s32>(ReadReg(inst.i.rs)) < static_cast<s32>(inst.i.imm_sext32()));
+ 
+       if constexpr (pgxp_mode >= PGXPMode::CPU)
+-        PGXP::CPU_SLTI(inst.bits, rsVal);
++        PGXP::CPU_SLTI(inst.bits, ReadReg(inst.i.rs));
++
++      WriteReg(inst.i.rt, result);
+     }
+     break;
+ 
+     case InstructionOp::sltiu:
+     {
+       const u32 result = BoolToUInt32(ReadReg(inst.i.rs) < inst.i.imm_sext32());
+-      WriteReg(inst.i.rt, result);
+ 
+       if constexpr (pgxp_mode >= PGXPMode::CPU)
+         PGXP::CPU_SLTIU(inst.bits, ReadReg(inst.i.rs));
++
++      WriteReg(inst.i.rt, result);
+     }
+     break;
+ 
+@@ -1677,20 +1671,20 @@ restart_instruction:
+           case CopCommonInstruction::mfcn:
+           {
+             const u32 value = ReadCop0Reg(static_cast<Cop0Reg>(inst.r.rd.GetValue()));
+-            WriteRegDelayed(inst.r.rt, value);
+ 
+             if constexpr (pgxp_mode == PGXPMode::CPU)
+               PGXP::CPU_MFC0(inst.bits, value);
++
++            WriteRegDelayed(inst.r.rt, value);
+           }
+           break;
+ 
+           case CopCommonInstruction::mtcn:
+           {
+-            const u32 rtVal = ReadReg(inst.r.rt);
+-            WriteCop0Reg(static_cast<Cop0Reg>(inst.r.rd.GetValue()), rtVal);
++            WriteCop0Reg(static_cast<Cop0Reg>(inst.r.rd.GetValue()), ReadReg(inst.r.rt));
+ 
+             if constexpr (pgxp_mode == PGXPMode::CPU)
+-              PGXP::CPU_MTC0(inst.bits, ReadCop0Reg(static_cast<Cop0Reg>(inst.r.rd.GetValue())), rtVal);
++              PGXP::CPU_MTC0(inst.bits, ReadCop0Reg(static_cast<Cop0Reg>(inst.r.rd.GetValue())), ReadReg(inst.i.rt));
+           }
+           break;
+ 
+@@ -2386,6 +2380,7 @@ void CPU::CodeCache::InterpretUncachedBlock()
+       break;
+     }
+ 
++
+     in_branch_delay_slot = branch;
+   }
+ }
+@@ -2935,7 +2930,8 @@ bool CPU::SafeWriteMemoryWord(VirtualMemoryAddress addr, u32 value)
+   if ((addr & 3) == 0)
+     return DoSafeMemoryAccess<MemoryAccessType::Write, MemoryAccessSize::Word>(addr, value);
+ 
+-  return SafeWriteMemoryHalfWord(addr, Truncate16(value)) && SafeWriteMemoryHalfWord(addr + 2, Truncate16(value >> 16));
++  return SafeWriteMemoryHalfWord(addr, Truncate16(value)) &&
++         SafeWriteMemoryHalfWord(addr + 2, Truncate16(value >> 16));
+ }
+ 
+ void* CPU::GetDirectReadMemoryPointer(VirtualMemoryAddress address, MemoryAccessSize size, TickCount* read_ticks)
+diff --git a/src/core/cpu_core.h b/src/core/cpu_core.h
+index f93ca9fd..8055c53a 100644
+--- a/src/core/cpu_core.h
++++ b/src/core/cpu_core.h
+@@ -52,13 +52,13 @@ struct PGXP_value
+   float x;
+   float y;
+   float z;
+-  u32 value;
+   union
+   {
+     u32 flags;
+     u8 compFlags[4];
+     u16 halfFlags[2];
+   };
++  u32 value;
+ };
+ 
+ struct State
+@@ -107,7 +107,9 @@ struct State
+ 
+   std::array<u8, SCRATCHPAD_SIZE> scratchpad = {};
+ 
+-  PGXP_value pgxp_gpr[static_cast<u8>(Reg::count)];
++  PGXP_value pgxp_gpr[32];
++  PGXP_value pgxp_hi;
++  PGXP_value pgxp_lo;
+   PGXP_value pgxp_cop0[32];
+   PGXP_value pgxp_gte[64];
+ 
+diff --git a/src/core/cpu_newrec_compiler.cpp b/src/core/cpu_newrec_compiler.cpp
+index 69f4fe4d..4bb6c82f 100644
+--- a/src/core/cpu_newrec_compiler.cpp
++++ b/src/core/cpu_newrec_compiler.cpp
+@@ -1728,8 +1728,8 @@ void CPU::NewRec::Compiler::CompileMoveRegTemplate(Reg dst, Reg src, bool pgxp_m
+   if (g_settings.gpu_pgxp_enable && pgxp_move)
+   {
+     // might've been renamed, so use dst here
+-    GeneratePGXPCallWithMIPSRegs(reinterpret_cast<const void*>(&PGXP::CPU_MOVE_Packed), PGXP::PackMoveArgs(dst, src),
+-                                 dst);
++    GeneratePGXPCallWithMIPSRegs(reinterpret_cast<const void*>(&PGXP::CPU_MOVE),
++                                 (static_cast<u32>(dst) << 8) | (static_cast<u32>(src)), dst);
+   }
+ }
+ 
+diff --git a/src/core/cpu_pgxp.cpp b/src/core/cpu_pgxp.cpp
+index f46198f3..81416682 100644
+--- a/src/core/cpu_pgxp.cpp
++++ b/src/core/cpu_pgxp.cpp
+@@ -79,8 +79,8 @@ static void CPU_BITWISE(u32 instr, u32 rdVal, u32 rsVal, u32 rtVal);
+ static void WriteMem(const PGXP_value* value, u32 addr);
+ static void WriteMem16(const PGXP_value* src, u32 addr);
+ 
+-static const PGXP_value PGXP_value_invalid = {0.f, 0.f, 0.f, 0, {0}};
+-static const PGXP_value PGXP_value_zero = {0.f, 0.f, 0.f, 0, {VALID_ALL}};
++static const PGXP_value PGXP_value_invalid = {0.f, 0.f, 0.f, {0}, 0};
++static const PGXP_value PGXP_value_zero = {0.f, 0.f, 0.f, {VALID_ALL}, 0};
+ 
+ static PGXP_value* s_mem = nullptr;
+ static PGXP_value* s_vertex_cache = nullptr;
+@@ -568,17 +568,11 @@ void CPU::PGXP::CPU_SW(u32 instr, u32 addr, u32 rtVal)
+   WriteMem(val, addr);
+ }
+ 
+-void CPU::PGXP::CPU_MOVE_Packed(u32 rd_and_rs, u32 rsVal)
++void CPU::PGXP::CPU_MOVE(u32 rd_and_rs, u32 rsVal)
+ {
+   const u32 Rs = (rd_and_rs & 0xFFu);
+-  const u32 Rd = (rd_and_rs >> 8);
+-  CPU_MOVE(Rd, Rs, rsVal);
+-}
+-
+-void CPU::PGXP::CPU_MOVE(u32 Rd, u32 Rs, u32 rsVal)
+-{
+   Validate(&g_state.pgxp_gpr[Rs], rsVal);
+-  g_state.pgxp_gpr[Rd] = g_state.pgxp_gpr[Rs];
++  g_state.pgxp_gpr[(rd_and_rs >> 8)] = g_state.pgxp_gpr[Rs];
+ }
+ 
+ void CPU::PGXP::CPU_ADDI(u32 instr, u32 rsVal)
+@@ -1037,9 +1031,9 @@ void CPU::PGXP::CPU_MULT(u32 instr, u32 rsVal, u32 rtVal)
+     MakeValid(&g_state.pgxp_gpr[rt(instr)], rtVal);
+   }
+ 
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)] = g_state.pgxp_gpr[static_cast<u8>(Reg::hi)] = g_state.pgxp_gpr[rs(instr)];
++  g_state.pgxp_lo = g_state.pgxp_hi = g_state.pgxp_gpr[rs(instr)];
+ 
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].halfFlags[0] = g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].halfFlags[0] =
++  g_state.pgxp_lo.halfFlags[0] = g_state.pgxp_hi.halfFlags[0] =
+     (g_state.pgxp_gpr[rs(instr)].halfFlags[0] & g_state.pgxp_gpr[rt(instr)].halfFlags[0]);
+ 
+   double xx, xy, yx, yy;
+@@ -1062,15 +1056,15 @@ void CPU::PGXP::CPU_MULT(u32 instr, u32 rsVal, u32 rtVal)
+ 
+   hy = f16Overflow(hx);
+ 
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].x = (float)f16Sign(lx);
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].y = (float)f16Sign(ly);
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].x = (float)f16Sign(hx);
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].y = (float)f16Sign(hy);
++  g_state.pgxp_lo.x = (float)f16Sign(lx);
++  g_state.pgxp_lo.y = (float)f16Sign(ly);
++  g_state.pgxp_hi.x = (float)f16Sign(hx);
++  g_state.pgxp_hi.y = (float)f16Sign(hy);
+ 
+   // compute PSX value
+   const u64 result = static_cast<u64>(static_cast<s64>(SignExtend64(rsVal)) * static_cast<s64>(SignExtend64(rtVal)));
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].value = Truncate32(result >> 32);
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].value = Truncate32(result);
++  g_state.pgxp_hi.value = Truncate32(result >> 32);
++  g_state.pgxp_lo.value = Truncate32(result);
+ }
+ 
+ void CPU::PGXP::CPU_MULTU(u32 instr, u32 rsVal, u32 rtVal)
+@@ -1087,9 +1081,9 @@ void CPU::PGXP::CPU_MULTU(u32 instr, u32 rsVal, u32 rtVal)
+     MakeValid(&g_state.pgxp_gpr[rt(instr)], rtVal);
+   }
+ 
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)] = g_state.pgxp_gpr[static_cast<u8>(Reg::hi)] = g_state.pgxp_gpr[rs(instr)];
++  g_state.pgxp_lo = g_state.pgxp_hi = g_state.pgxp_gpr[rs(instr)];
+ 
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].halfFlags[0] = g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].halfFlags[0] =
++  g_state.pgxp_lo.halfFlags[0] = g_state.pgxp_hi.halfFlags[0] =
+     (g_state.pgxp_gpr[rs(instr)].halfFlags[0] & g_state.pgxp_gpr[rt(instr)].halfFlags[0]);
+ 
+   double xx, xy, yx, yy;
+@@ -1112,15 +1106,15 @@ void CPU::PGXP::CPU_MULTU(u32 instr, u32 rsVal, u32 rtVal)
+ 
+   hy = f16Overflow(hx);
+ 
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].x = (float)f16Sign(lx);
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].y = (float)f16Sign(ly);
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].x = (float)f16Sign(hx);
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].y = (float)f16Sign(hy);
++  g_state.pgxp_lo.x = (float)f16Sign(lx);
++  g_state.pgxp_lo.y = (float)f16Sign(ly);
++  g_state.pgxp_hi.x = (float)f16Sign(hx);
++  g_state.pgxp_hi.y = (float)f16Sign(hy);
+ 
+   // compute PSX value
+   const u64 result = ZeroExtend64(rsVal) * ZeroExtend64(rtVal);
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].value = Truncate32(result >> 32);
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].value = Truncate32(result);
++  g_state.pgxp_hi.value = Truncate32(result >> 32);
++  g_state.pgxp_lo.value = Truncate32(result);
+ }
+ 
+ void CPU::PGXP::CPU_DIV(u32 instr, u32 rsVal, u32 rtVal)
+@@ -1138,42 +1132,39 @@ void CPU::PGXP::CPU_DIV(u32 instr, u32 rsVal, u32 rtVal)
+     MakeValid(&g_state.pgxp_gpr[rt(instr)], rtVal);
+   }
+ 
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)] = g_state.pgxp_gpr[static_cast<u8>(Reg::hi)] = g_state.pgxp_gpr[rs(instr)];
++  g_state.pgxp_lo = g_state.pgxp_hi = g_state.pgxp_gpr[rs(instr)];
+ 
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].halfFlags[0] = g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].halfFlags[0] =
++  g_state.pgxp_lo.halfFlags[0] = g_state.pgxp_hi.halfFlags[0] =
+     (g_state.pgxp_gpr[rs(instr)].halfFlags[0] & g_state.pgxp_gpr[rt(instr)].halfFlags[0]);
+ 
+   double vs = f16Unsign(g_state.pgxp_gpr[rs(instr)].x) + (g_state.pgxp_gpr[rs(instr)].y) * (double)(1 << 16);
+   double vt = f16Unsign(g_state.pgxp_gpr[rt(instr)].x) + (g_state.pgxp_gpr[rt(instr)].y) * (double)(1 << 16);
+ 
+   double lo = vs / vt;
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].y = (float)f16Sign(f16Overflow(lo));
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].x = (float)f16Sign(lo);
++  g_state.pgxp_lo.y = (float)f16Sign(f16Overflow(lo));
++  g_state.pgxp_lo.x = (float)f16Sign(lo);
+ 
+   double hi = fmod(vs, vt);
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].y = (float)f16Sign(f16Overflow(hi));
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].x = (float)f16Sign(hi);
++  g_state.pgxp_hi.y = (float)f16Sign(f16Overflow(hi));
++  g_state.pgxp_hi.x = (float)f16Sign(hi);
+ 
+   // compute PSX value
+   if (static_cast<s32>(rtVal) == 0)
+   {
+     // divide by zero
+-    g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].value =
+-      (static_cast<s32>(rsVal) >= 0) ? UINT32_C(0xFFFFFFFF) : UINT32_C(1);
+-    g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].value = static_cast<u32>(static_cast<s32>(rsVal));
++    g_state.pgxp_lo.value = (static_cast<s32>(rsVal) >= 0) ? UINT32_C(0xFFFFFFFF) : UINT32_C(1);
++    g_state.pgxp_hi.value = static_cast<u32>(static_cast<s32>(rsVal));
+   }
+   else if (rsVal == UINT32_C(0x80000000) && static_cast<s32>(rtVal) == -1)
+   {
+     // unrepresentable
+-    g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].value = UINT32_C(0x80000000);
+-    g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].value = 0;
++    g_state.pgxp_lo.value = UINT32_C(0x80000000);
++    g_state.pgxp_hi.value = 0;
+   }
+   else
+   {
+-    g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].value =
+-      static_cast<u32>(static_cast<s32>(rsVal) / static_cast<s32>(rtVal));
+-    g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].value =
+-      static_cast<u32>(static_cast<s32>(rsVal) % static_cast<s32>(rtVal));
++    g_state.pgxp_lo.value = static_cast<u32>(static_cast<s32>(rsVal) / static_cast<s32>(rtVal));
++    g_state.pgxp_hi.value = static_cast<u32>(static_cast<s32>(rsVal) % static_cast<s32>(rtVal));
+   }
+ }
+ 
+@@ -1192,32 +1183,32 @@ void CPU::PGXP::CPU_DIVU(u32 instr, u32 rsVal, u32 rtVal)
+     MakeValid(&g_state.pgxp_gpr[rt(instr)], rtVal);
+   }
+ 
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)] = g_state.pgxp_gpr[static_cast<u8>(Reg::hi)] = g_state.pgxp_gpr[rs(instr)];
++  g_state.pgxp_lo = g_state.pgxp_hi = g_state.pgxp_gpr[rs(instr)];
+ 
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].halfFlags[0] = g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].halfFlags[0] =
++  g_state.pgxp_lo.halfFlags[0] = g_state.pgxp_hi.halfFlags[0] =
+     (g_state.pgxp_gpr[rs(instr)].halfFlags[0] & g_state.pgxp_gpr[rt(instr)].halfFlags[0]);
+ 
+   double vs = f16Unsign(g_state.pgxp_gpr[rs(instr)].x) + f16Unsign(g_state.pgxp_gpr[rs(instr)].y) * (double)(1 << 16);
+   double vt = f16Unsign(g_state.pgxp_gpr[rt(instr)].x) + f16Unsign(g_state.pgxp_gpr[rt(instr)].y) * (double)(1 << 16);
+ 
+   double lo = vs / vt;
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].y = (float)f16Sign(f16Overflow(lo));
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].x = (float)f16Sign(lo);
++  g_state.pgxp_lo.y = (float)f16Sign(f16Overflow(lo));
++  g_state.pgxp_lo.x = (float)f16Sign(lo);
+ 
+   double hi = fmod(vs, vt);
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].y = (float)f16Sign(f16Overflow(hi));
+-  g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].x = (float)f16Sign(hi);
++  g_state.pgxp_hi.y = (float)f16Sign(f16Overflow(hi));
++  g_state.pgxp_hi.x = (float)f16Sign(hi);
+ 
+   if (rtVal == 0)
+   {
+     // divide by zero
+-    g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].value = UINT32_C(0xFFFFFFFF);
+-    g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].value = rsVal;
++    g_state.pgxp_lo.value = UINT32_C(0xFFFFFFFF);
++    g_state.pgxp_hi.value = rsVal;
+   }
+   else
+   {
+-    g_state.pgxp_gpr[static_cast<u8>(Reg::lo)].value = rsVal / rtVal;
+-    g_state.pgxp_gpr[static_cast<u8>(Reg::hi)].value = rsVal % rtVal;
++    g_state.pgxp_lo.value = rsVal / rtVal;
++    g_state.pgxp_hi.value = rsVal % rtVal;
+   }
+ }
+ 
+@@ -1584,6 +1575,38 @@ void CPU::PGXP::CPU_SRAV(u32 instr, u32 rtVal, u32 rsVal)
+   g_state.pgxp_gpr[rd(instr)] = ret;
+ }
+ 
++void CPU::PGXP::CPU_MFHI(u32 instr, u32 hiVal)
++{
++  // Rd = Hi
++  Validate(&g_state.pgxp_hi, hiVal);
++
++  g_state.pgxp_gpr[rd(instr)] = g_state.pgxp_hi;
++}
++
++void CPU::PGXP::CPU_MTHI(u32 instr, u32 rsVal)
++{
++  // Hi = Rd
++  Validate(&g_state.pgxp_gpr[rs(instr)], rsVal);
++
++  g_state.pgxp_hi = g_state.pgxp_gpr[rd(instr)];
++}
++
++void CPU::PGXP::CPU_MFLO(u32 instr, u32 loVal)
++{
++  // Rd = Lo
++  Validate(&g_state.pgxp_lo, loVal);
++
++  g_state.pgxp_gpr[rd(instr)] = g_state.pgxp_lo;
++}
++
++void CPU::PGXP::CPU_MTLO(u32 instr, u32 rsVal)
++{
++  // Lo = Rd
++  Validate(&g_state.pgxp_gpr[rs(instr)], rsVal);
++
++  g_state.pgxp_lo = g_state.pgxp_gpr[rd(instr)];
++}
++
+ void CPU::PGXP::CPU_MFC0(u32 instr, u32 rdVal)
+ {
+   // CPU[Rt] = CP0[Rd]
+diff --git a/src/core/cpu_pgxp.h b/src/core/cpu_pgxp.h
+index a8305a56..39d31505 100644
+--- a/src/core/cpu_pgxp.h
++++ b/src/core/cpu_pgxp.h
+@@ -2,7 +2,7 @@
+ // SPDX-License-Identifier: GPL-2.0+
+ 
+ #pragma once
+-#include "cpu_core.h"
++#include "types.h"
+ 
+ namespace CPU::PGXP {
+ 
+@@ -34,13 +34,7 @@ void CPU_LBx(u32 instr, u32 addr, u32 rtVal);
+ void CPU_SB(u32 instr, u32 addr, u32 rtVal);
+ void CPU_SH(u32 instr, u32 addr, u32 rtVal);
+ void CPU_SW(u32 instr, u32 addr, u32 rtVal);
+-void CPU_MOVE(u32 Rd, u32 Rs, u32 rsVal);
+-
+-ALWAYS_INLINE static u32 PackMoveArgs(Reg rd, Reg rs)
+-{
+-  return (static_cast<u32>(rd) << 8) | static_cast<u32>(rs);
+-}
+-void CPU_MOVE_Packed(u32 rd_and_rs, u32 rsVal);
++void CPU_MOVE(u32 rd_and_rs, u32 rsVal);
+ 
+ // Arithmetic with immediate value
+ void CPU_ADDI(u32 instr, u32 rsVal);
+@@ -79,30 +73,14 @@ void CPU_SLLV(u32 instr, u32 rtVal, u32 rsVal);
+ void CPU_SRLV(u32 instr, u32 rtVal, u32 rsVal);
+ void CPU_SRAV(u32 instr, u32 rtVal, u32 rsVal);
+ 
++// Move registers
++void CPU_MFHI(u32 instr, u32 hiVal);
++void CPU_MTHI(u32 instr, u32 rsVal);
++void CPU_MFLO(u32 instr, u32 loVal);
++void CPU_MTLO(u32 instr, u32 rsVal);
++
+ // CP0 Data transfer tracking
+ void CPU_MFC0(u32 instr, u32 rdVal);
+ void CPU_MTC0(u32 instr, u32 rdVal, u32 rtVal);
+ 
+-ALWAYS_INLINE void TryMove(Reg rd, Reg rs, Reg rt)
+-{
+-  u32 src;
+-  if (rs == Reg::zero)
+-    src = static_cast<u32>(rt);
+-  else if (rt == Reg::zero)
+-    src = static_cast<u32>(rs);
+-  else
+-    return;
+-
+-  CPU_MOVE(static_cast<u32>(rd), src, g_state.regs.r[src]);
+-}
+-
+-ALWAYS_INLINE void TryMoveImm(Reg rd, Reg rs, u32 imm)
+-{
+-  if (imm == 0)
+-  {
+-    const u32 src = static_cast<u32>(rs);
+-    CPU_MOVE(static_cast<u32>(rd), src, g_state.regs.r[src]);
+-  }
+-}
+-
+-} // namespace CPU::PGXP
+\ No newline at end of file
++} // namespace PGXP
+\ No newline at end of file
+diff --git a/src/core/cpu_recompiler_code_generator.cpp b/src/core/cpu_recompiler_code_generator.cpp
+index ee117eaa..6b3c923f 100644
+--- a/src/core/cpu_recompiler_code_generator.cpp
++++ b/src/core/cpu_recompiler_code_generator.cpp
+@@ -6,8 +6,8 @@
+ #include "cpu_core.h"
+ #include "cpu_core_private.h"
+ #include "cpu_disasm.h"
+-#include "cpu_pgxp.h"
+ #include "gte.h"
++#include "cpu_pgxp.h"
+ #include "settings.h"
+ Log_SetChannel(CPU::Recompiler);
+ 
+@@ -1269,13 +1269,6 @@ bool CodeGenerator::Compile_Bitwise(Instruction instruction, const CodeCache::In
+       result = OrValues(lhs, rhs);
+       if (spec_lhs && spec_rhs)
+         spec_value = *spec_lhs | *spec_rhs;
+-
+-      if (g_settings.gpu_pgxp_enable && !g_settings.gpu_pgxp_cpu && dest != Reg::zero &&
+-          instruction.i.rs != Reg::zero && dest != instruction.i.rs && rhs.HasConstantValue(0))
+-      {
+-        EmitFunctionCall(nullptr, &PGXP::CPU_MOVE_Packed,
+-                         Value::FromConstantU32(PGXP::PackMoveArgs(dest, instruction.i.rs)), lhs);
+-      }
+     }
+     break;
+ 
+@@ -1298,13 +1291,6 @@ bool CodeGenerator::Compile_Bitwise(Instruction instruction, const CodeCache::In
+       result = XorValues(lhs, rhs);
+       if (spec_lhs && spec_rhs)
+         spec_value = *spec_lhs ^ *spec_rhs;
+-
+-      if (g_settings.gpu_pgxp_enable && !g_settings.gpu_pgxp_cpu && dest != Reg::zero &&
+-          instruction.i.rs != Reg::zero && dest != instruction.i.rs && rhs.HasConstantValue(0))
+-      {
+-        EmitFunctionCall(nullptr, &PGXP::CPU_MOVE_Packed,
+-                         Value::FromConstantU32(PGXP::PackMoveArgs(dest, instruction.i.rs)), lhs);
+-      }
+     }
+     break;
+ 
+@@ -1320,16 +1306,6 @@ bool CodeGenerator::Compile_Bitwise(Instruction instruction, const CodeCache::In
+           result = OrValues(lhs, rhs);
+           if (spec_lhs && spec_rhs)
+             spec_value = *spec_lhs | *spec_rhs;
+-
+-          if (g_settings.gpu_pgxp_enable && !g_settings.gpu_pgxp_cpu && dest != Reg::zero &&
+-              ((lhs.HasConstantValue(0) && instruction.r.rt != Reg::zero && dest != instruction.r.rs) ||
+-               (rhs.HasConstantValue(0) && instruction.r.rs != Reg::zero && dest != instruction.r.rt)))
+-          {
+-            EmitFunctionCall(nullptr, &PGXP::CPU_MOVE_Packed,
+-                             Value::FromConstantU32(
+-                               PGXP::PackMoveArgs(dest, lhs.HasConstantValue(0) ? instruction.r.rt : instruction.r.rs)),
+-                             lhs.HasConstantValue(0) ? rhs : lhs);
+-          }
+         }
+         break;
+ 
+@@ -1352,16 +1328,6 @@ bool CodeGenerator::Compile_Bitwise(Instruction instruction, const CodeCache::In
+           result = XorValues(lhs, rhs);
+           if (spec_lhs && spec_rhs)
+             spec_value = *spec_lhs ^ *spec_rhs;
+-
+-          if (g_settings.gpu_pgxp_enable && !g_settings.gpu_pgxp_cpu && dest != Reg::zero &&
+-              ((lhs.HasConstantValue(0) && instruction.r.rt != Reg::zero && dest != instruction.r.rs) ||
+-               (rhs.HasConstantValue(0) && instruction.r.rs != Reg::zero && dest != instruction.r.rt)))
+-          {
+-            EmitFunctionCall(nullptr, &PGXP::CPU_MOVE_Packed,
+-                             Value::FromConstantU32(
+-                               PGXP::PackMoveArgs(dest, lhs.HasConstantValue(0) ? instruction.r.rt : instruction.r.rs)),
+-                             lhs.HasConstantValue(0) ? rhs : lhs);
+-          }
+         }
+         break;
+ 
+@@ -1821,10 +1787,7 @@ bool CodeGenerator::Compile_MoveHiLo(Instruction instruction, const CodeCache::I
+     {
+       Value hi = m_register_cache.ReadGuestRegister(Reg::hi);
+       if (g_settings.UsingPGXPCPUMode())
+-      {
+-        EmitFunctionCall(nullptr, &PGXP::CPU_MOVE_Packed,
+-                         Value::FromConstantU32(PGXP::PackMoveArgs(instruction.r.rd, Reg::hi)), hi);
+-      }
++        EmitFunctionCall(nullptr, &PGXP::CPU_MFHI, Value::FromConstantU32(instruction.bits), hi);
+ 
+       m_register_cache.WriteGuestRegister(instruction.r.rd, std::move(hi));
+       SpeculativeWriteReg(instruction.r.rd, std::nullopt);
+@@ -1835,10 +1798,7 @@ bool CodeGenerator::Compile_MoveHiLo(Instruction instruction, const CodeCache::I
+     {
+       Value rs = m_register_cache.ReadGuestRegister(instruction.r.rs);
+       if (g_settings.UsingPGXPCPUMode())
+-      {
+-        EmitFunctionCall(nullptr, &PGXP::CPU_MOVE_Packed,
+-                         Value::FromConstantU32(PGXP::PackMoveArgs(Reg::hi, instruction.r.rs)), rs);
+-      }
++        EmitFunctionCall(nullptr, &PGXP::CPU_MTHI, Value::FromConstantU32(instruction.bits), rs);
+ 
+       m_register_cache.WriteGuestRegister(Reg::hi, std::move(rs));
+     }
+@@ -1848,10 +1808,7 @@ bool CodeGenerator::Compile_MoveHiLo(Instruction instruction, const CodeCache::I
+     {
+       Value lo = m_register_cache.ReadGuestRegister(Reg::lo);
+       if (g_settings.UsingPGXPCPUMode())
+-      {
+-        EmitFunctionCall(nullptr, &PGXP::CPU_MOVE_Packed,
+-                         Value::FromConstantU32(PGXP::PackMoveArgs(instruction.r.rd, Reg::lo)), lo);
+-      }
++        EmitFunctionCall(nullptr, &PGXP::CPU_MFLO, Value::FromConstantU32(instruction.bits), lo);
+ 
+       m_register_cache.WriteGuestRegister(instruction.r.rd, std::move(lo));
+       SpeculativeWriteReg(instruction.r.rd, std::nullopt);
+@@ -1862,10 +1819,7 @@ bool CodeGenerator::Compile_MoveHiLo(Instruction instruction, const CodeCache::I
+     {
+       Value rs = m_register_cache.ReadGuestRegister(instruction.r.rs);
+       if (g_settings.UsingPGXPCPUMode())
+-      {
+-        EmitFunctionCall(nullptr, &PGXP::CPU_MOVE_Packed,
+-                         Value::FromConstantU32(PGXP::PackMoveArgs(Reg::lo, instruction.r.rs)), rs);
+-      }
++        EmitFunctionCall(nullptr, &PGXP::CPU_MTLO, Value::FromConstantU32(instruction.bits), rs);
+ 
+       m_register_cache.WriteGuestRegister(Reg::lo, std::move(rs));
+     }
+@@ -1888,6 +1842,7 @@ bool CodeGenerator::Compile_Add(Instruction instruction, const CodeCache::Instru
+                                                                          instruction.r.funct == InstructionFunct::add));
+ 
+   Value lhs, rhs;
++  Reg lhs_src;
+   SpeculativeValue lhs_spec, rhs_spec;
+   Reg dest;
+ 
+@@ -1898,6 +1853,7 @@ bool CodeGenerator::Compile_Add(Instruction instruction, const CodeCache::Instru
+     {
+       // rt <- rs + sext(imm)
+       dest = instruction.i.rt;
++      lhs_src = instruction.i.rs;
+       lhs = m_register_cache.ReadGuestRegister(instruction.i.rs);
+       rhs = Value::FromConstantU32(instruction.i.imm_sext32());
+ 
+@@ -1910,6 +1866,7 @@ bool CodeGenerator::Compile_Add(Instruction instruction, const CodeCache::Instru
+     {
+       Assert(instruction.r.funct == InstructionFunct::add || instruction.r.funct == InstructionFunct::addu);
+       dest = instruction.r.rd;
++      lhs_src = instruction.r.rs;
+       lhs = m_register_cache.ReadGuestRegister(instruction.r.rs);
+       rhs = m_register_cache.ReadGuestRegister(instruction.r.rt);
+       lhs_spec = SpeculativeReadReg(instruction.r.rs);
+@@ -1923,38 +1880,17 @@ bool CodeGenerator::Compile_Add(Instruction instruction, const CodeCache::Instru
+   }
+ 
+   // detect register moves and handle them for pgxp
+-  if (dest != Reg::zero && g_settings.gpu_pgxp_enable)
++  if (g_settings.gpu_pgxp_enable && rhs.HasConstantValue(0))
++  {
++    EmitFunctionCall(nullptr, &PGXP::CPU_MOVE,
++                     Value::FromConstantU32((static_cast<u32>(dest) << 8) | (static_cast<u32>(lhs_src))), lhs);
++  }
++  else if (g_settings.UsingPGXPCPUMode())
+   {
+-    bool handled = false;
+     if (instruction.op != InstructionOp::funct)
+-    {
+-      if (g_settings.gpu_pgxp_enable && !g_settings.gpu_pgxp_cpu && instruction.i.rs != Reg::zero &&
+-          dest != instruction.i.rs && rhs.HasConstantValue(0))
+-      {
+-        handled = true;
+-        EmitFunctionCall(nullptr, &PGXP::CPU_MOVE_Packed,
+-                         Value::FromConstantU32(PGXP::PackMoveArgs(dest, instruction.i.rs)), lhs);
+-      }
+-    }
++      EmitFunctionCall(nullptr, &PGXP::CPU_ADDI, Value::FromConstantU32(instruction.bits), lhs);
+     else
+-    {
+-      if (g_settings.gpu_pgxp_enable && !g_settings.gpu_pgxp_cpu &&
+-          ((lhs.HasConstantValue(0) && instruction.r.rt != Reg::zero && dest != instruction.r.rs) ||
+-           (rhs.HasConstantValue(0) && instruction.r.rs != Reg::zero && dest != instruction.r.rt)))
+-      {
+-        handled = true;
+-        EmitFunctionCall(nullptr, &PGXP::CPU_MOVE_Packed,
+-                         Value::FromConstantU32(PGXP::PackMoveArgs(dest, instruction.i.rs)), lhs);
+-      }
+-    }
+-
+-    if (g_settings.gpu_pgxp_cpu && !handled)
+-    {
+-      if (instruction.op != InstructionOp::funct)
+-        EmitFunctionCall(nullptr, &PGXP::CPU_ADDI, Value::FromConstantU32(instruction.bits), lhs);
+-      else
+-        EmitFunctionCall(nullptr, &PGXP::CPU_ADD, Value::FromConstantU32(instruction.bits), lhs, rhs);
+-    }
++      EmitFunctionCall(nullptr, &PGXP::CPU_ADD, Value::FromConstantU32(instruction.bits), lhs, rhs);
+   }
+ 
+   Value result = AddValues(lhs, rhs, check_overflow);
