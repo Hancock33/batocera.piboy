@@ -124,10 +124,10 @@ index f6d8757c2..000000000
 -    return 0;
 -}
 diff --git a/meson.build b/meson.build
-index ed5330872..dfc43b0a7 100644
+index df33d2e43..cf486b639 100644
 --- a/meson.build
 +++ b/meson.build
-@@ -279,6 +279,9 @@ conf_data.set10('C_TRACY', get_option('tracy'))
+@@ -283,6 +283,9 @@ conf_data.set10('C_TRACY', get_option('tracy'))
  conf_data.set10('C_FPU', true)
  conf_data.set10('C_FPU_X86', host_machine.cpu_family() in ['x86', 'x86_64'])
  
@@ -137,7 +137,7 @@ index ed5330872..dfc43b0a7 100644
  if get_option('enable_debugger') != 'none'
      conf_data.set10('C_DEBUG', true)
  endif
-@@ -383,37 +386,24 @@ if host_machine.endian() == 'big'
+@@ -387,37 +390,24 @@ if host_machine.endian() == 'big'
      conf_data.set10('WORDS_BIGENDIAN', true)
  endif
  
@@ -190,7 +190,7 @@ index ed5330872..dfc43b0a7 100644
  
  set_prio_code = '''
  #include <sys/resource.h>
-@@ -812,6 +802,17 @@ if host_machine.system() == 'darwin'
+@@ -921,6 +911,17 @@ if host_machine.system() == 'darwin'
          warning('''Core Services disabled because Frameworks is missing''')
      endif
      summary('CoreServices support', coreservices_dep.found())
@@ -208,7 +208,7 @@ index ed5330872..dfc43b0a7 100644
  endif
  
  # Determine if system is capable of using ManyMouse library
-@@ -871,6 +872,10 @@ if host_machine.system() in ['windows', 'cygwin']
+@@ -980,6 +981,10 @@ if host_machine.system() in ['windows', 'cygwin']
      summary('Windows Multimedia support', winmm_dep.found())
  endif
  
@@ -220,17 +220,18 @@ index ed5330872..dfc43b0a7 100644
  incdir = [
      include_directories('include', '.'),
 diff --git a/meson_options.txt b/meson_options.txt
-index 8a5ed00e6..3101dbcc0 100644
+index 4dab801f8..b931ec917 100644
 --- a/meson_options.txt
 +++ b/meson_options.txt
-@@ -83,12 +83,6 @@ option(
+@@ -175,13 +175,6 @@ option(
      description: 'Select the dynamic core implementation.',
  )
  
 -option(
--    'pagesize', type : 'integer',
--    value : 0,
--    description: 'Set host memory pagesize in bytes (skip detection)'
+-    'pagesize',
+-    type: 'integer',
+-    value: 0,
+-    description: 'Set host memory pagesize in bytes (skip detection)',
 -)
 -
  # Per-page write-or-execute (W^X) permissions
