@@ -19,6 +19,17 @@ sWine = 'lutris'
 
 class XeniaGenerator(Generator):
 
+    @staticmethod
+    def sync_directories(source_dir, dest_dir):
+        dcmp = filecmp.dircmp(source_dir, dest_dir)
+        # Files that are only in the source directory or are different
+        differing_files = dcmp.diff_files + dcmp.left_only
+        for file in differing_files:
+            src_path = os.path.join(source_dir, file)
+            dest_path = os.path.join(dest_dir, file)
+            # Copy and overwrite the files from source to destination
+            shutil.copy2(src_path, dest_path)
+
     def generate(self, system, rom, playersControllers, guns, wheels, gameResolution):
         wineprefix = batoceraFiles.SAVES + '/xenia-bottle'
         emupath = wineprefix + '/xenia'
@@ -50,6 +61,68 @@ class XeniaGenerator(Generator):
         if not os.path.exists(canarypath + '/portable.txt'):
             with open(canarypath + '/portable.txt', 'w') as fp:
                 pass
+
+        if system.isOptSet('xeniawine'):
+            sWine = system.config['xeniawine']
+        else:
+            sWine = 'lutris'
+
+        # now setup the command array for the emulator
+        if rom == 'config':
+            if core == 'xenia-canary':
+                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe']
+            else:
+                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe']
+        else:
+            if core == 'xenia-canary':
+                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe', 'z:' + rom]
+            else:
+                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe', 'z:' + rom]
+
+        if not os.path.exists(wineprefix + "/vkd3d.done"):
+            cmd = ["/usr/wine/winetricks", "-q", "vkd3d"]
+            env = {"LD_LIBRARY_PATH": "/usr/wine/" + sWine + "/lib/wine", "WINEPREFIX": wineprefix }
+            env.update(os.environ)
+            env["PATH"] = "/usr/wine/" + sWine + "/bin:/bin:/usr/bin"
+            eslog.debug(f"command: {str(cmd)}")
+            proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            out, err = proc.communicate()
+            exitcode = proc.returncode
+            eslog.debug(out.decode())
+            eslog.error(err.decode())
+            with open(wineprefix + "/vkd3d.done", "w") as f:
+                f.write("done")
+
+        if not os.path.exists(wineprefix + "/vcrun2019.done"):
+            cmd = ["/usr/wine/winetricks", "-q", "vcrun2019"]
+            env = {"LD_LIBRARY_PATH": "/usr/wine/" + sWine + "/lib/wine", "WINEPREFIX": wineprefix }
+            env.update(os.environ)
+            env["PATH"] = "/usr/wine/" + sWine + "/bin:/bin:/usr/bin"
+            eslog.debug(f"command: {str(cmd)}")
+            proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            out, err = proc.communicate()
+            exitcode = proc.returncode
+            eslog.debug(out.decode())
+            eslog.error(err.decode())
+            with open(wineprefix + "/vcrun2019.done", "w") as f:
+                f.write("done")
+
+        if not os.path.exists(wineprefix + "/dxvk.done"):
+            cmd = ["/usr/wine/winetricks", "-q", "dxvk"]
+            env = {"LD_LIBRARY_PATH": "/usr/wine/" + sWine + "/lib/wine", "WINEPREFIX": wineprefix }
+            env.update(os.environ)
+            env["PATH"] = "/usr/wine/" + sWine + "/bin:/bin:/usr/bin"
+            eslog.debug(f"command: {str(cmd)}")
+            proc = subprocess.Popen(cmd, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            out, err = proc.communicate()
+            exitcode = proc.returncode
+            eslog.debug(out.decode())
+            eslog.error(err.decode())
+            with open(wineprefix + "/dxvk.done", "w") as f:
+                f.write("done")
+
+        # check & copy newer dxvk files
+        self.sync_directories("/usr/wine/dxvk/x64", wineprefix + "/drive_c/windows/system32")
 
         # are we loading a digital title?
         if os.path.splitext(rom)[1] == '.xbox360':
@@ -93,6 +166,10 @@ class XeniaGenerator(Generator):
             config['Content'] = {'license_mask': int(system.config['xeniaLicense'])}
         else:
             config['Content'] = {'license_mask': 1}
+        # add node D3d12
+        if 'D3D12' not in config:
+            config['D3D12'] = {}
+        config['D3D12'] = {'d3d12_readback_resolve': True}
         # add node Display
         if 'Display' not in config:
             config['Display'] = {}
@@ -107,12 +184,32 @@ class XeniaGenerator(Generator):
         if 'GPU' not in config:
             config['GPU'] = {}
         # may be used to bypass fetch constant type errors in certain games.
-        # ensure we use vulkan
-        config['GPU'] = {
-            'depth_float24_convert_in_pixel_shader': True,
-            'gpu': 'vulkan',
-            'gpu_allow_invalid_fetch_constants': True,
-            'render_target_path_vulkan': 'any'}
+        # set the API to use
+        if system.isOptSet('xenia_api') and system.config['xenia_api'] == 'Vulkan':
+            config['GPU'] = {
+                'depth_float24_convert_in_pixel_shader': True,
+                'vsync': True,
+                'gpu': 'vulkan',
+                'gpu_allow_invalid_fetch_constants': True,
+                'render_target_path_vulkan': 'any',
+                'vsync_fps': 60
+            }
+        else:
+            config['GPU'] = {
+                'clear_memory_page_state': True,
+                'depth_float24_convert_in_pixel_shader': True,
+                'gpu_allow_invalid_fetch_constants': True,
+                'vsync': True,
+                'gpu': 'd3d12',
+                'render_target_path_d3d12': 'rtv',
+                'texture_cache_memory_limit_hard': 3072,
+                'texture_cache_memory_limit_render_to_texture': 96,
+                'texture_cache_memory_limit_soft': 1536,
+                'texture_cache_memory_limit_soft_lifetime': 120,
+                'vsync_fps': 60,
+                'query_occlusion_fake_sample_count': 0
+            }
+
         # add node General
         if 'General' not in config:
             config['General'] = {}
@@ -126,13 +223,19 @@ class XeniaGenerator(Generator):
         # add node HID
         if 'HID' not in config:
             config['HID'] = {}
-        # ensure we use sdl2 for controllers
-        config['HID'] = {'hid': 'sdl'}
+        # ensure we use xinput for controllers
+        config['HID'] = {'hid': 'xinput'}
         # add node Memory
         if 'Memory' not in config:
             config['Memory'] = {}
         # certain games require this to set be set to false to work around crashes.
         config['Memory'] = {'protect_zero': False}
+        # add node Storage
+        if 'Storage' not in config:
+            config['Storage'] = {}
+        # certain games require this to set be set to true to work around crashes.
+        config['Storage'] = {'mount_cache': True,
+            'mount_scratch': True}
         # add node UI
         if 'UI' not in config:
             config['UI'] = {}
@@ -183,23 +286,6 @@ class XeniaGenerator(Generator):
             else:
                 eslog.debug(f'No patch file found for {rom_name}')
 
-        if system.isOptSet('xeniawine'):
-            sWine = system.config['xeniawine']
-        else:
-            sWine = 'lutris'
-
-        # now setup the command array for the emulator
-        if rom == 'config':
-            if core == 'xenia-canary':
-                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe']
-            else:
-                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe']
-        else:
-            if core == 'xenia-canary':
-                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia-canary/xenia_canary.exe', 'z:' + rom]
-            else:
-                commandArray = ['/usr/wine/' + sWine + '/bin/wine64', '/userdata/saves/xenia-bottle/xenia/xenia.exe', 'z:' + rom]
-
         return Command.Command(
             array=commandArray,
             env={
@@ -212,7 +298,8 @@ class XeniaGenerator(Generator):
                 # hum pw 0.2 and 0.3 are hardcoded, not nice
                 'SPA_PLUGIN_DIR': '/usr/lib/spa-0.2',
                 'PIPEWIRE_MODULE_DIR': '/usr/lib/pipewire-0.3'
-            })
+            }
+        )
 
     # Show mouse on screen when needed
     # xenia auto-hides
