@@ -891,9 +891,12 @@ solarus:
 sonic3-air:
   emulator: sonic3-air
   core:     sonic3-air
-sonic-mania:
-  emulator: sonic-mania
-  core:     sonic-mania
+sonicmania:
+  emulator: sonicmania
+  core:     sonicmania
+sonicnexus:
+  emulator: sonicnexus
+  core:     sonicnexus
 sonicretro:
   emulator: soniccd
   core:     soniccd

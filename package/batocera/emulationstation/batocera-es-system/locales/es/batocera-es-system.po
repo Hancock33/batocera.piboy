@@ -764,7 +764,7 @@ msgctxt "game_options"
 msgid "24 bit (Default)"
 msgstr "24 bit (Defecto)"
 
-#. TRANSLATION: libretro/cap32, sonic2013, soniccd, play, yuzu, ...
+#. TRANSLATION: libretro/cap32, sonic2013, soniccd, sonicmania, play, ...
 msgctxt "game_options"
 msgid "Change the game's language."
 msgstr "Cambia el idioma del juego."
@@ -1376,12 +1376,12 @@ msgctxt "game_options"
 msgid "Dutch"
 msgstr "Holandés"
 
-#. TRANSLATION: libretro/dolphin, play, yuzu, ryujinx
+#. TRANSLATION: libretro/dolphin, sonicmania, play, yuzu, ryujinx
 msgctxt "game_options"
 msgid "Simplified Chinese"
 msgstr "Chino Simplificado"
 
-#. TRANSLATION: libretro/dolphin, play, yuzu, ryujinx
+#. TRANSLATION: libretro/dolphin, sonicmania, play, yuzu, ryujinx
 msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Chino Tradicional"
@@ -7840,7 +7840,7 @@ msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
 msgstr "Batocera selecciona el primer dispositivo de audio (Defecto)"
 
-#. TRANSLATION: cemu, sonic2013, play, yuzu, demul, ...
+#. TRANSLATION: cemu, sonic2013, sonicmania, play, yuzu, ...
 msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr "Soluciona fallos de imagen (screen tearing)."
@@ -12180,6 +12180,16 @@ msgctxt "game_options"
 msgid "Sonic CD (hold jump)"
 msgstr "Sonic CD (mantener salto)"
 
+#. TRANSLATION: sonicmania
+msgctxt "game_options"
+msgid "Enable triple buffering."
+msgstr "Activar triple almacenamiento en búfer."
+
+#. TRANSLATION: sonicmania
+msgctxt "game_options"
+msgid "TRIPLE BUFFERING"
+msgstr "TRIPLE ALMACENAMIENTO EN BÚFER"
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Screen Resolution (Default)"
@@ -14375,7 +14385,7 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
-#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, fallout1-ce.keys, dxx-rebirth.keys
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, sonicmania.keys, fallout1-ce.keys, ...
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr "Salir del juego"
@@ -15196,14 +15206,6 @@ msgstr "Guardado rápido"
 #~ msgctxt "game_options"
 #~ msgid "OpenGLES (Default)"
 #~ msgstr "OpenGLES (Defecto)"
-
-#~ msgctxt "game_options"
-#~ msgid "Enable triple buffering."
-#~ msgstr "Activar triple almacenamiento en búfer."
-
-#~ msgctxt "game_options"
-#~ msgid "TRIPLE BUFFERING"
-#~ msgstr "TRIPLE ALMACENAMIENTO EN BÚFER"
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"

@@ -768,7 +768,7 @@ msgctxt "game_options"
 msgid "24 bit (Default)"
 msgstr "24 bit (Standaard)"
 
-#. TRANSLATION: libretro/cap32, sonic2013, soniccd, play, yuzu, ...
+#. TRANSLATION: libretro/cap32, sonic2013, soniccd, sonicmania, play, ...
 msgctxt "game_options"
 msgid "Change the game's language."
 msgstr "Verander de taal van het spel."
@@ -1376,12 +1376,12 @@ msgctxt "game_options"
 msgid "Dutch"
 msgstr "Nederlands"
 
-#. TRANSLATION: libretro/dolphin, play, yuzu, ryujinx
+#. TRANSLATION: libretro/dolphin, sonicmania, play, yuzu, ryujinx
 msgctxt "game_options"
 msgid "Simplified Chinese"
 msgstr "Versimpeld Chinees"
 
-#. TRANSLATION: libretro/dolphin, play, yuzu, ryujinx
+#. TRANSLATION: libretro/dolphin, sonicmania, play, yuzu, ryujinx
 msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Traditioneel Chinees"
@@ -7830,7 +7830,7 @@ msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
 msgstr "Batocera stelt eerste audioapparaat in (Standaard)"
 
-#. TRANSLATION: cemu, sonic2013, play, yuzu, demul, ...
+#. TRANSLATION: cemu, sonic2013, sonicmania, play, yuzu, ...
 msgctxt "game_options"
 msgid "Fix screen tearing."
 msgstr "Fix screen tearing."
@@ -12162,6 +12162,16 @@ msgctxt "game_options"
 msgid "Sonic CD (hold jump)"
 msgstr "Sonic CD (spring ingedrukt houden)"
 
+#. TRANSLATION: sonicmania
+msgctxt "game_options"
+msgid "Enable triple buffering."
+msgstr "Schakel drievoudige buffering in."
+
+#. TRANSLATION: sonicmania
+msgctxt "game_options"
+msgid "TRIPLE BUFFERING"
+msgstr "Drievoudige Buffering"
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid "Screen Resolution (Default)"
@@ -14355,7 +14365,7 @@ msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
 
-#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, fallout1-ce.keys, dxx-rebirth.keys
+#. TRANSLATION: etlegacy.keys, fallout2-ce.keys, sonic3-air.keys, sonicmania.keys, fallout1-ce.keys, ...
 msgctxt "keys_files"
 msgid "Exit game"
 msgstr "Stop spel"
@@ -15168,14 +15178,6 @@ msgstr "Snel Opslaan"
 #~ msgctxt "game_options"
 #~ msgid "OpenGLES (Default)"
 #~ msgstr "OpenGLES (Standaard)"
-
-#~ msgctxt "game_options"
-#~ msgid "Enable triple buffering."
-#~ msgstr "Schakel drievoudige buffering in."
-
-#~ msgctxt "game_options"
-#~ msgid "TRIPLE BUFFERING"
-#~ msgstr "Drievoudige Buffering"
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
