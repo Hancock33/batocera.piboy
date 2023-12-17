@@ -1,4 +1,3 @@
-{
     "actions_player1": [
 		{
             "trigger": [ "hotkey", "start" ],
